@@ -1,61 +1,57 @@
-// Module ID: 16706
-// Function ID: 16707
+// Module ID: 16743
+// Function ID: 16744
 // Name: ThreadsScreen
-// Dependencies: [19, 17, 1957, 1074, 1113, 21, 4560, 576, 7269, 6981, 11227, 4571, 16707, 563, 1484, 2]
+// Dependencies: [19, 17, 1957, 1074, 1113, 21, 4574, 576, 7283, 6995, 11254, 4585, 16744, 563, 1484, 2]
 
-// Module 16706 (ThreadsScreen)
-import ThemesDefault from "Themes" /* 576 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6981 */;
-import ThreadListSectionDefault from "ThreadListSection" /* 16707 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import { SearchTypes } from "ME" /* 1074 */;
-import { OpenThreadAnalyticsLocations as closure_7 } from "AbortCodes" /* 1113 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16743 (ThreadsScreen)
+import nativeDefault from "native" /* 576 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6995 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 11254 */;
+import ThreadListDefault from "ThreadList" /* 16744 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-const require = arg1;
+require = fn;
 function ThreadsScreen(channel) {
   channel = channel.channel;
-  let obj = channel(7269);
-  const canStartThread = obj.useCanStartThread(channel);
+  const tmp = closure_9();
+  const canStartThread = channel(7283).useCanStartThread(channel);
   const items = [channel];
-  const callback = importAllResult.useCallback(() => {
-    const result = channel(closure_1_2[10]).navigateToThreadCreation(channel, "Thread Browser Empty State");
+  const callback = noop.useCallback(() => {
+    const result = navigateToThreadCreation.navigateToThreadCreation(channel, "Thread Browser Empty State");
   }, items);
-  obj = { style: items1, children: null };
-  items1 = [callback().container, channel.style];
-  const callback1 = importAllResult.useCallback((arg0) => {
+  let obj2 = { style: null, children: null };
+  const items1 = [tmp.container, channel.style];
+  obj2.style = items1;
+  const callback1 = noop.useCallback((arg0) => {
     channel = channel.getChannel(arg0);
     if (null != channel) {
-      let obj = channel(table[11]);
-      obj = { source: null };
-      obj[0] = constants.BROWSER;
-      obj.transitionToThread(channel, obj);
+      const obj2 = { source: constants.BROWSER };
+      channel(dependencyMap[11]).transitionToThread(channel, obj2);
+      const obj = channel(dependencyMap[11]);
     }
   }, []);
-  obj = { channel, onCreateThreadPress: null, onThreadPress: null, contentContainerStyle: null };
+  const obj3 = { channel, onCreateThreadPress: null, onThreadPress: null, contentContainerStyle: null };
   let tmp10;
-  const tmp = callback();
-  const tmp4 = importDefault;
-  const tmp8 = View;
+  let obj = channel(7283);
   if (canStartThread) {
     tmp10 = callback;
   }
-  obj[1] = tmp10;
-  obj[2] = callback1;
-  const tmp9 = ThreadListSectionDefault;
-  obj[3] = { paddingBottom: useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom + ThemesDefault.space.PX_16, paddingHorizontal: 16 };
-  obj[1] = <tmp9 channel={channel} onCreateThreadPress={null} onThreadPress={null} contentContainerStyle={null} />;
-  return <tmp8 channel={channel} onCreateThreadPress={null} onThreadPress={null} contentContainerStyle={null} />;
+  obj3.onCreateThreadPress = tmp10;
+  obj3.onThreadPress = callback1;
+  obj3.contentContainerStyle = { paddingBottom: useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom + nativeDefault.space.PX_16, paddingHorizontal: 16 };
+  obj2.children = <tmp9 channel={channel} onCreateThreadPress={null} onThreadPress={null} contentContainerStyle={null} />;
+  return <tmp8 style={null}>{null}</tmp8>;
 }
-let c3 = importAllResult;
-let obj = { container: { flex: 1 }, screen: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
-obj[1] = obj;
-let closure_9 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo((searchContext) => {
+const View = fn(17).View;
+const SearchTypes = fn(1074).SearchTypes;
+let closure_7 = fn(1113).OpenThreadAnalyticsLocations;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj = { container: { flex: 1 }, screen: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
+let closure_9 = createStyles.createStyles(obj);
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+const memoResult = noop.memo((searchContext) => {
   searchContext = searchContext.searchContext;
   let channelId;
   if (searchContext.type === SearchTypes.CHANNEL) {
@@ -63,32 +59,28 @@ const memoResult = importAllResult.memo((searchContext) => {
   } else {
     channelId = null;
   }
-  let obj = channelId(563);
-  const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getChannel(channelId));
+  const items = [ChannelStore];
+  const stateFromStores = channelId(563).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   let tmp4 = null;
   if (null != stateFromStores) {
-    obj = { channel: null };
-    obj[0] = stateFromStores;
-    tmp4 = <ThreadsScreen channel={null} />;
+    const obj2 = { channel: stateFromStores };
+    tmp4 = <ThreadsScreen channel={stateFromStores} />;
   }
   return tmp4;
 });
-const memoResult1 = importAllResult.memo(() => {
-  let obj = channelId(1484);
-  channelId = obj.useRoute().params.channelId;
-  const items = [closure_5];
-  const stateFromStores = channelId(563).useStateFromStores(items, () => closure_1_5.getChannel(channelId));
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/screens/ThreadsScreen.tsx");
+
+export default noop.memo(() => {
+  channelId = channelId(1484).useRoute().params.channelId;
+  const obj = channelId(1484);
+  const items = [ChannelStore];
+  const stateFromStores = channelId(563).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   let tmp3 = null;
   if (null != stateFromStores) {
-    obj = { style: null, channel: null };
-    obj[0] = tmp2.screen;
-    obj[1] = stateFromStores;
-    tmp3 = <ThreadsScreen style={null} channel={null} />;
+    const obj3 = { style: tmp2.screen, channel: stateFromStores };
+    tmp3 = <ThreadsScreen style={tmp2.screen} channel={stateFromStores} />;
   }
   return tmp3;
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/screens/ThreadsScreen.tsx");
-
-export default memoResult1;
 export const SearchTabsThreadScreen = memoResult;

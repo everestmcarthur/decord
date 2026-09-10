@@ -1,28 +1,29 @@
-// Module ID: 7087
-// Function ID: 7088
+// Module ID: 7101
+// Function ID: 7102
 // Name: useCharacterLimitAnnouncement
-// Dependencies: [19, 4272, 2]
+// Dependencies: [19, 4285, 2]
 // Exports: useCharacterLimitAnnouncement
 
-// Module 7087 (useCharacterLimitAnnouncement)
-import closure_2 from "noop" /* 19 */;
+// Module 7101 (useCharacterLimitAnnouncement)
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4285 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/AccessibilityAnnouncer/useCharacterLimitAnnouncement.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/AccessibilityAnnouncer/useCharacterLimitAnnouncement.tsx");
 
 export const useCharacterLimitAnnouncement = function useCharacterLimitAnnouncement(currentLength) {
   currentLength = currentLength.currentLength;
   const maxLength = currentLength.maxLength;
   const message = currentLength.message;
-  closure_3 = undefined;
-  closure_3 = message.useRef(false);
+  message.useRef(false);
   const items = [currentLength, maxLength, message];
   const effect = message.useEffect(() => {
     if (null != maxLength) {
       if (currentLength >= tmp) {
         if (!ref.current) {
           tmp4.current = true;
-          const AccessibilityAnnouncer = currentLength(maxLength[1]).AccessibilityAnnouncer;
+          const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
           AccessibilityAnnouncer.announce(message, "assertive");
         }
       }

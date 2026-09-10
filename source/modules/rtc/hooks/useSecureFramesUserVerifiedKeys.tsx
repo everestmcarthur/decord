@@ -1,26 +1,29 @@
-// Module ID: 15854
-// Function ID: 15855
+// Module ID: 15884
+// Function ID: 15885
 // Name: useSecureFramesUserVerifiedKeys
-// Dependencies: [9139, 504, 12, 2]
+// Dependencies: [9166, 504, 12, 2]
 // Exports: useSecureFramesUserVerifiedKeys
 
-// Module 15854 (useSecureFramesUserVerifiedKeys)
-import closure_3 from "initialize" /* 9139 */;
+// Module 15884 (useSecureFramesUserVerifiedKeys)
+import _modDef12 from "module_12" /* 12 */;
+import VerifiedKeyStore from "VerifiedKeyStore" /* 9166 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/rtc/hooks/useSecureFramesUserVerifiedKeys.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rtc/hooks/useSecureFramesUserVerifiedKeys.tsx");
 
 export const useSecureFramesUserVerifiedKeys = function useSecureFramesUserVerifiedKeys(userId) {
-  const _require = userId;
-  const items = [closure_3];
-  return _require(504).useStateFromStoresArray(items, () => {
-    const tmp = closure_1_1(closure_1_2[2]);
-    const entries = closure_1_1(closure_1_2[2])(closure_1_3.getUserVerifiedKeys(closure_0)).entries();
-    const mapped = entries.map((arg0) => {
-      [tmp, tmp2] = arg0;
+  _require = userId;
+  const items = [VerifiedKeyStore];
+  return require("initialize").useStateFromStoresArray(items, () => {
+    const entries = _modDef12(VerifiedKeyStore.getUserVerifiedKeys(closure_0)).entries();
+    const mapped = entries.map((item) => {
+      [tmp, tmp2] = item;
       return { verifiedKey, timestamp };
     });
-    const tmpResult = closure_1_1(closure_1_2[2])(closure_1_3.getUserVerifiedKeys(closure_0));
+    const tmpResult = _modDef12(VerifiedKeyStore.getUserVerifiedKeys(closure_0));
     return mapped.sortBy((timestamp) => -1 * timestamp.timestamp).value();
   });
 };

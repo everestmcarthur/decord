@@ -1,15 +1,17 @@
-// Module ID: 10633
-// Function ID: 10634
+// Module ID: 10660
+// Function ID: 10661
 // Name: ForumTagContextMenu
-// Dependencies: [21, 1935, 1114, 10634, 7190, 4258, 8671, 2]
+// Dependencies: [21, 1935, 1114, 10661, 7203, 4271, 8699, 2]
 // Exports: default
 
-// Module 10633 (ForumTagContextMenu)
-import set from "set" /* 2 */;
+// Module 10660 (ForumTagContextMenu)
 import jsxProd from "jsxProd" /* 21 */;
+import ToastUtils from "ToastUtils" /* 4271 */;
+import ClipboardUtils from "ClipboardUtils" /* 7203 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("modules/forums/native/ForumTagContextMenu.tsx");
+const result = size.fileFinishedImporting("modules/forums/native/ForumTagContextMenu.tsx");
 
 export default function ForumTagContextMenu(children) {
   const tagId = children.tagId;
@@ -17,13 +19,12 @@ export default function ForumTagContextMenu(children) {
   let obj = { label: null, IconComponent: null, action: null };
   const enabled = DeveloperMode.useSetting();
   const intl = tagId(1114).intl;
-  obj[0] = intl.string(tagId(1114).t["8VG6IY"]);
-  obj[1] = tagId(10634).IdIcon;
-  obj[2] = function action() {
-    tagId(closure_1_1[4]).copy(tagId);
-    const obj = tagId(closure_1_1[4]);
-    tagId(closure_1_1[5]).presentIdCopied();
+  obj.label = intl.string(tagId(1114).t["8VG6IY"]);
+  obj.IconComponent = tagId(10661).IdIcon;
+  obj.action = function action() {
+    ClipboardUtils.copy(tagId);
+    ToastUtils.presentIdCopied();
   };
   const items = [obj];
-  return jsx(tagId(8671).ContextMenu, { triggerOnLongPress: true, items, enabled, children: children.children });
+  return jsx(tagId(8699).ContextMenu, { triggerOnLongPress: true, items, enabled, children: children.children });
 };

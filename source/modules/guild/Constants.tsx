@@ -1,11 +1,11 @@
-// Module ID: 12655
-// Function ID: 12656
-// Name: GuildPrompts
+// Module ID: 12681
+// Function ID: 12682
+// Name: Constants
 // Dependencies: [2]
 
-// Module 12655 (GuildPrompts)
-import set from "set" /* 2 */;
+// Module 12681 (Constants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild/Constants.tsx");
+const result = size.fileFinishedImporting("modules/guild/Constants.tsx");
 
 export const GuildPrompts = { REAL_NAME_PROMPT: "REAL_NAME_PROMPT" };

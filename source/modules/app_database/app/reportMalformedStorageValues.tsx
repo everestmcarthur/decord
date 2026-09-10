@@ -1,18 +1,18 @@
-// Module ID: 17351
-// Function ID: 17352
+// Module ID: 17382
+// Function ID: 17383
 // Name: reportMalformedStorageValues
 // Dependencies: [1987, 1232, 2]
 // Exports: default
 
-// Module 17351 (reportMalformedStorageValues)
-import set from "set" /* 2 */;
-import _modDef1232 from "module_1232" /* 1232 */;
+// Module 17382 (reportMalformedStorageValues)
+import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import _mod1987 from "module_1987" /* 1987 */;
+import size from "module_2" /* 2 */;
 
 let c3 = false;
-const result = set.fileFinishedImporting("modules/app_database/app/reportMalformedStorageValues.tsx");
+const result = size.fileFinishedImporting("modules/app_database/app/reportMalformedStorageValues.tsx");
 
-export default function reportMalformedStorageValues(arg0) {
+export default function reportMalformedStorageValues(source) {
   if (!c3) {
     const Stats = _mod1987.Stats;
     const malformedValueCountResult = Stats.malformedValueCount();
@@ -20,15 +20,11 @@ export default function reportMalformedStorageValues(arg0) {
     const malformedEntryCountResult = Stats2.malformedEntryCount();
     if (!tmp5) {
       c3 = true;
-      let obj = _modDef1232;
-      obj = { extra: null, fingerprint: null };
-      obj = { malformed_value_count: null, malformed_entry_count: null, source: null };
-      obj[0] = malformedValueCountResult;
-      obj[1] = malformedEntryCountResult;
-      obj[2] = arg0;
-      obj[0] = obj;
-      obj[1] = ["kv-storage-omitted-undecodable-values"];
-      obj.captureMessage("kv-storage: omitted undecodable values", obj, "warning");
+      const obj2 = { extra: null, fingerprint: null };
+      const obj3 = { malformed_value_count: malformedValueCountResult, malformed_entry_count: malformedEntryCountResult, source };
+      obj2.extra = obj3;
+      obj2.fingerprint = ["kv-storage-omitted-undecodable-values"];
+      SentryUtilsDefault.captureMessage("kv-storage: omitted undecodable values", obj2, "warning");
     }
     tmp5 = 0 === malformedValueCountResult && 0 === malformedEntryCountResult;
   }

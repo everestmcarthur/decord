@@ -1,16 +1,17 @@
-// Module ID: 13492
-// Function ID: 13493
+// Module ID: 13515
+// Function ID: 13516
 // Name: usePremiumGroupMembership
-// Dependencies: [19, 13493, 504, 573, 2]
+// Dependencies: [19, 13516, 504, 573, 2]
 // Exports: default
 
-// Module 13492 (usePremiumGroupMembership)
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import closure_4 from "handleMutationStart" /* 13493 */;
+// Module 13515 (usePremiumGroupMembership)
+import _mod19 from "module_19" /* 19 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import PremiumGroupStore from "PremiumGroupStore" /* 13516 */;
+import size from "module_2" /* 2 */;
 
-const useEffect = noop.useEffect;
-const result = set.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupMembership.tsx");
+const useEffect = _mod19.useEffect;
+const result = size.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupMembership.tsx");
 
 export default function usePremiumGroupMembership() {
   let obj = arg0;
@@ -25,19 +26,18 @@ export default function usePremiumGroupMembership() {
   if (flag2 === undefined) {
     flag2 = true;
   }
-  const items = [closure_4];
-  const stateFromStoresObject = flag(504).useStateFromStoresObject(items, () => ({ premiumGroupMembership: closure_4.getMembership(), isFetchingMembership: closure_4.isFetchingMembership() }));
+  const items = [PremiumGroupStore];
+  const stateFromStoresObject = flag(504).useStateFromStoresObject(items, () => ({ premiumGroupMembership: PremiumGroupStore.getMembership(), isFetchingMembership: PremiumGroupStore.isFetchingMembership() }));
   const items1 = [flag2, flag];
   ({ premiumGroupMembership, isFetchingMembership } = stateFromStoresObject);
   useEffect(() => {
     if (flag2) {
       let hasFetchedMembershipResult = flag;
       if (flag) {
-        hasFetchedMembershipResult = closure_1_4.hasFetchedMembership();
+        hasFetchedMembershipResult = PremiumGroupStore.hasFetchedMembership();
       }
       if (!hasFetchedMembershipResult) {
-        flag2(closure_1_2[3]).dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_REQUEST" });
-        const obj = flag2(closure_1_2[3]);
+        DispatcherDefault.dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_REQUEST" });
       }
     }
   }, items1);

@@ -1,28 +1,31 @@
-// Module ID: 17544
-// Function ID: 17545
-// Name: withEqualityFn
-// Dependencies: [32, 5, 19, 11867, 1074, 1244, 17545, 1249, 11872, 4461, 4184, 2]
+// Module ID: 17575
+// Function ID: 17576
+// Name: AutomodStore
+// Dependencies: [32, 5, 19, 11893, 1074, 1244, 17576, 1249, 11898, 4475, 4197, 2]
 // Exports: getRuleCountByTriggerType, useAutomodRulesList, useSyncAutomodRules, useSyncAutomodRulesEffect
 
-// Module 17544 (withEqualityFn)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import { AutomodTriggerType } from "AutomodEventType" /* 11867 */;
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 1074 */;
-import identity from "identity" /* 1244 */;
+// Module 17575 (AutomodStore)
+import _mod4197 from "module_4197" /* 4197 */;
+import SystemRulesUtils from "SystemRulesUtils" /* 17576 */;
+import _slicedToArray from "module_32" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+const require = globalThis.__r;
+
+require = fn;
+const AutomodTriggerType = fn(11893).AutomodTriggerType;
+const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
 let closure_7 = {};
+const identity = fn(1244);
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
-  closure_1 = arg1;
+  dependencyMap = arg1;
   let obj = {
     rules: {},
     fetching: false,
     error: null,
     updateRule(guildId) {
-      const callback = guildId;
       guildId = guildId.guildId;
       ({ id: closure_2, triggerType } = guildId);
       const rules = guildId().rules;
@@ -35,7 +38,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         items = [];
       }
       const found = items.filter((id) => {
-        const isDefaultRuleIdResult = guildId(guildId2[6]).isDefaultRuleId(id.id);
+        const isDefaultRuleIdResult = SystemRulesUtils.isDefaultRuleId(id.id);
         let tmp2 = !isDefaultRuleIdResult;
         if (isDefaultRuleIdResult) {
           tmp2 = id.triggerType !== triggerType;
@@ -45,7 +48,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       if (someResult) {
         let mapped = found.map((id) => {
           let tmp = id;
-          if (id.id === closure_2) {
+          if (id.id === closure_1_2) {
             tmp = closure_0;
           }
           return tmp;
@@ -54,156 +57,147 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         mapped = [];
         mapped[HermesBuiltin.arraySpread(found, 0)] = guildId;
       }
-      someResult = items.some((id) => id.id === closure_2);
-      callback(1249).batchUpdates(() => {
+      someResult = items.some((id) => id.id === closure_1_2);
+      guildId(1249).batchUpdates(() => {
         obj = { rules: null, error: null };
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(rules);
-        obj = {};
+        const obj3 = {};
         const merged1 = Object.assign(obj);
-        obj[triggerType] = mapped;
-        obj[guildId] = obj;
-        obj[0] = obj;
+        obj3[triggerType] = mapped;
+        obj2[guildId] = obj3;
+        obj.rules = obj2;
         guildId(obj);
       });
     },
     removeRule(arg0, arg1) {
-      const callback = arg0;
+      closure_0 = arg0;
       dependencyMap = arg1;
       const rules = dependencyMap().rules;
       closure_3 = tmp;
       const keys = Object.keys(tmp);
-      closure_4 = keys.reduce((arg0, arg1) => {
-        const NumberResult = Number(arg1);
-        let items = table[NumberResult];
+      closure_4 = keys.reduce((acc, item) => {
+        const NumberResult = Number(item);
+        let items = closure_3[NumberResult];
         if (items == null) {
           items = [];
         }
-        arg0[NumberResult] = items.filter((id) => id.id !== closure_0);
-        return arg0;
+        acc[NumberResult] = items.filter((id) => id.id !== closure_1_0);
+        return acc;
       }, {});
-      callback(1249).batchUpdates(() => {
-        let obj = { rules: null, error: null };
-        obj = {};
+      closure_0(1249).batchUpdates(() => {
+        const obj = { rules: null, error: null };
+        const obj2 = {};
         const merged = Object.assign(rules);
-        obj[closure_1] = closure_4;
-        obj[0] = obj;
-        callback(obj);
+        obj2[closure_1] = closure_4;
+        obj.rules = obj2;
+        closure_0(obj);
       });
     },
     syncRules: null
   };
-  closure_2 = callback((arg0) => {
-    closure_0 = arg0;
-    c6 = 0;
-    c7 = 0;
-    c4 = 0;
-    return (function*(arg0) {
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+  closure_2 = asyncGeneratorStep(async (arg0, value) => {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj2 = { value, done: true };
+        return obj2;
       } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let aPIError = tmp3;
-              let rules = tmp7;
-              let callback2;
-              rules = undefined;
-              aPIError = undefined;
-              if ((function isSyncNeeded(closure_0) {
-                let num = table[closure_0];
-                const timestamp = Date.now();
-                if (num == null) {
-                  num = 0;
-                }
-                return timestamp - num > 20000;
-              })(callback)) {
-                const _Date = Date;
-                c7[tmp41] = Date.now();
-                c4 = 1;
-                callback2 = function convertToRulesByTriggerType(arr) {
-                  const obj = { [closure_5.KEYWORD]: [], [closure_5.ML_SPAM]: [], [closure_5.DEFAULT_KEYWORD_LIST]: [], [closure_5.MENTION_SPAM]: [], [closure_5.USER_PROFILE]: [], [closure_5.SERVER_POLICY]: [] };
-                  const item = arr.forEach((arg0) => {
-                    let arr = obj[arg0.triggerType];
-                    if (arr != null) {
-                      arr = arr.push(arg0);
-                    }
-                  });
-                  return obj;
-                };
-                c6 = 2;
-                c7 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = callback(closure_1_1[8]).fetchAutomodRules(tmp41);
-                return obj1;
-              }
-            }
-          } else {
-            if (1 === tmp7) {
-              c4 = 0;
-              c4 = closure_5;
-              aPIError = new callback(closure_1_1[9]).APIError(c4);
-              let obj2 = callback(closure_1_1[7]);
-              obj2.batchUpdates(() => {
-                callback({ error: aPIError });
-              });
-            } else if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              callback2 = callback2(arg1);
-              rules = callback2().rules;
-              obj = callback(closure_1_1[7]);
-              obj.batchUpdates(() => {
-                let obj = { rules: null, error: null };
-                obj = {};
-                const merged = Object.assign(rules);
-                obj[callback] = closure_1;
-                obj[0] = obj;
-                callback(obj);
-              });
-              c4 = 0;
-            }
-            c4 = 0;
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
             c7 = 3;
-            obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          }
-          c7 = 3;
-        } catch (tmp32) {
-          closure_5 = tmp32;
-          if (tmp4 === c4) {
-            c7 = tmp2;
-            throw tmp32;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
-            c6 = tmp;
+            const error = tmp3;
+            closure_2 = tmp7;
+            closure_130_0 = closure_0;
+            closure_130_1 = undefined;
+            let rules;
+            closure_130_3 = undefined;
+            if ((function isSyncNeeded(arg0) {
+              let num = closure_1_7[arg0];
+              const timestamp = Date.now();
+              if (num == null) {
+                num = 0;
+              }
+              return timestamp - num > 20000;
+            })(closure_0)) {
+              const _Date = Date;
+              c7[tmp40] = Date.now();
+              c4 = 1;
+              function convertToRulesByTriggerType(arr) {
+                const obj = { [closure_1_5.KEYWORD]: [], [closure_1_5.ML_SPAM]: [], [closure_1_5.DEFAULT_KEYWORD_LIST]: [], [closure_1_5.MENTION_SPAM]: [], [closure_1_5.USER_PROFILE]: [], [closure_1_5.SERVER_POLICY]: [] };
+                const item = arr.forEach((item) => {
+                  if (obj[item.triggerType] != null) {
+                    arr.push(item);
+                  }
+                });
+                return obj;
+              }
+              c6 = 2;
+              c7 = 1;
+              const obj6 = { value: closure_0(convertToRulesByTriggerType[8]).fetchAutomodRules(tmp40), done: false };
+              return obj6;
+            }
           }
+        } else {
+          if (1 === tmp7) {
+            c4 = 0;
+            closure_130_4 = closure_5;
+            const aPIError = new closure_0(convertToRulesByTriggerType[9]).APIError(closure_130_4);
+            closure_130_3 = aPIError;
+            closure_0(convertToRulesByTriggerType[7]).batchUpdates(() => {
+              closure_0({ error });
+            });
+            const obj3 = closure_0(convertToRulesByTriggerType[7]);
+          } else if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            closure_130_1 = convertToRulesByTriggerType(value);
+            rules = closure_131_1().rules;
+            closure_0(convertToRulesByTriggerType[7]).batchUpdates(() => {
+              const obj = { rules: null, error: null };
+              const obj2 = {};
+              const merged = Object.assign(closure_1_2);
+              obj2[closure_1_0] = convertToRulesByTriggerType;
+              obj.rules = obj2;
+              closure_0(obj);
+            });
+            c4 = 0;
+            let obj = closure_0(convertToRulesByTriggerType[7]);
+          }
+          c4 = 0;
+          c7 = 3;
+          const obj7 = { value, done: true };
+          return obj7;
+        }
+        c7 = 3;
+      } catch (tmp32) {
+        closure_5 = tmp32;
+        if (tmp4 === c4) {
+          c7 = tmp2;
+          throw tmp32;
+        } else {
+          c6 = tmp;
         }
       }
-    })();
+    }
   });
-  obj[5] = function() {
+  obj.syncRules = function() {
     const self = this;
     const apply = closure_2.apply;
     if (typeof apply === "unknown") {
@@ -215,14 +209,15 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/guild_automod/AutomodStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_automod/AutomodStore.tsx");
 
 export const useAutomodStore = withEqualityFn;
-export const getRuleCountByTriggerType = function getRuleCountByTriggerType(arg0, arg1) {
-  const tmp = withEqualityFn.getState().rules[arg0];
+export const getRuleCountByTriggerType = function getRuleCountByTriggerType(guildId, triggerType) {
+  const tmp = withEqualityFn.getState().rules[guildId];
   let items;
   if (tmp != null) {
-    items = tmp[arg1];
+    items = tmp[triggerType];
   }
   if (items == null) {
     items = [];
@@ -230,75 +225,71 @@ export const getRuleCountByTriggerType = function getRuleCountByTriggerType(arg0
   return items.length;
 };
 export const useSyncAutomodRules = function useSyncAutomodRules(arg0) {
-  const _require = arg0;
-  const tmp = first(React.useState(false), 2);
-  dependencyMap = tmp[1];
-  const tmp2 = first(withEqualityFn((arg0) => {
+  closure_0 = arg0;
+  const tmp = _slicedToArray(noop.useState(false), 2);
+  closure_1 = tmp[1];
+  const tmp2 = _slicedToArray(withEqualityFn((arg0) => {
     const items = [, ];
     ({ syncRules: arr[0], fetching: arr[1] } = arg0);
     return items;
-  }, _require(4184).shallow), 2);
-  first = tmp2[0];
-  const callback = tmp4;
+  }, _mod4197.shallow), 2);
+  const first = tmp2[0];
+  closure_3 = tmp4;
   const items = [tmp[0], ];
   const items1 = [arg0, tmp2[1], first];
-  items[1] = React.useCallback(callback(function*() {
+  items[1] = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
     if (c4 === 2) {
       c4 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
         c4 = 2;
-        if (0 === v0) {
+        if (0 === c1) {
           if (arg0 === 1) {
             c4 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_0 = tmp3;
-            if (!c3) {
-              if (null != closure_1_0) {
+            if (!closure_3) {
+              if (null != closure_0) {
                 c3 = 1;
-                v0(true);
-                v0 = 2;
+                v2(true);
+                c1 = 2;
                 c4 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_1_2(tmp20);
-                return obj1;
+                const obj4 = { value: first(tmp20), done: false };
+                return obj4;
               }
             }
             c4 = 3;
           }
         } else if (1 === tmp7) {
           c3 = 0;
-          v0(false);
+          closure_128_1(false);
           throw closure_2;
         } else if (arg0 === 1) {
           c4 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 !== 2) {
           c3 = 0;
-          v0(false);
+          closure_128_1(false);
         }
         c3 = 0;
-        v0(false);
+        closure_128_1(false);
         c4 = 3;
-        obj = { value: null, done: true };
-        obj[0] = arg1;
+        const obj = { value, done: true };
         return obj;
       } catch (tmp24) {
         closure_2 = tmp24;
@@ -306,7 +297,7 @@ export const useSyncAutomodRules = function useSyncAutomodRules(arg0) {
           c4 = tmp2;
           throw tmp24;
         } else {
-          v0 = tmp;
+          c1 = tmp;
         }
       }
     }
@@ -314,75 +305,71 @@ export const useSyncAutomodRules = function useSyncAutomodRules(arg0) {
   return items;
 };
 export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0) {
-  let _require = arg0;
-  const tmp = first(React.useState(false), 2);
+  _require = arg0;
+  const tmp = first(noop.useState(false), 2);
   dependencyMap = tmp[1];
   const tmp2 = first(withEqualityFn((arg0) => {
     const items = [, ];
     ({ syncRules: arr[0], fetching: arr[1] } = arg0);
     return items;
-  }, _require(4184).shallow), 2);
+  }, require("module_4197").shallow), 2);
   first = tmp2[0];
-  const callback = tmp4;
+  asyncGeneratorStep = tmp4;
   let items = [tmp[0], ];
   const items1 = [arg0, tmp2[1], first];
-  items[1] = React.useCallback(callback(function*() {
+  items[1] = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
     if (c4 === 2) {
       c4 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
         c4 = 2;
-        if (0 === v0) {
+        if (0 === c1) {
           if (arg0 === 1) {
             c4 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_0 = tmp3;
-            if (!c3) {
-              if (null != closure_1_0) {
+            if (!closure_3) {
+              if (null != closure_0) {
                 c3 = 1;
-                v0(true);
-                v0 = 2;
+                v2(true);
+                c1 = 2;
                 c4 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_1_2(tmp20);
-                return obj1;
+                const obj4 = { value: first(tmp20), done: false };
+                return obj4;
               }
             }
             c4 = 3;
           }
         } else if (1 === tmp7) {
           c3 = 0;
-          v0(false);
+          closure_128_1(false);
           throw closure_2;
         } else if (arg0 === 1) {
           c4 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 !== 2) {
           c3 = 0;
-          v0(false);
+          closure_128_1(false);
         }
         c3 = 0;
-        v0(false);
+        closure_128_1(false);
         c4 = 3;
-        obj = { value: null, done: true };
-        obj[0] = arg1;
+        const obj = { value, done: true };
         return obj;
       } catch (tmp24) {
         closure_2 = tmp24;
@@ -390,7 +377,7 @@ export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0
           c4 = tmp2;
           throw tmp24;
         } else {
-          v0 = tmp;
+          c1 = tmp;
         }
       }
     }
@@ -398,54 +385,50 @@ export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0
   const tmp5 = first(items, 2);
   _require = tmp6;
   const items2 = [arg0, tmp5[1]];
-  const effect = React.useEffect(() => {
-    callback(function*() {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
+  const effect = noop.useEffect(() => {
+    (async (arg0, value) => {
+      if (c0 === 2) {
+        c0 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
       } else {
         try {
-          v0 = 2;
+          c0 = 2;
           if (0 === c1) {
             if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
+              c0 = 3;
+              throw value;
             } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+              c0 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               c1 = 1;
-              v0 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = v0();
-              return obj1;
+              c0 = 1;
+              const obj4 = { value: closure_2_0(), done: false };
+              return obj4;
             }
           } else if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
+            c0 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            c0 = 3;
+            const obj = { value, done: true };
             return obj;
           } else {
-            v0 = 3;
+            c0 = 3;
             return { value: "HermesInternal", done: null };
           }
         } catch (tmp6) {
-          v0 = tmp;
+          c0 = tmp;
           throw tmp6;
         }
       }
@@ -455,17 +438,16 @@ export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0
   return items3;
 };
 export const useAutomodRulesList = function useAutomodRulesList(arg0) {
-  const _require = arg0;
+  _require = arg0;
   return withEqualityFn((updateRule) => {
     let tmp = closure_0;
     if (closure_0 == null) {
-      tmp = closure_1_6;
+      tmp = EMPTY_STRING_SNOWFLAKE_ID;
     }
     let obj = updateRule.rules[tmp];
     if (obj == null) {
       obj = {};
     }
-    obj = { rulesByTriggerType: obj, updateRule: updateRule.updateRule, removeRule: updateRule.removeRule };
-    return obj;
-  }, _require(4184).shallow);
+    return { rulesByTriggerType: obj, updateRule: updateRule.updateRule, removeRule: updateRule.removeRule };
+  }, require("module_4197").shallow);
 };

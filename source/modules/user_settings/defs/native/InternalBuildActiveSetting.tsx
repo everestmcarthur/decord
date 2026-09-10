@@ -1,28 +1,40 @@
-// Module ID: 15743
-// Function ID: 15744
-// Dependencies: [14397, 14845, 11473, 15562, 2]
+// Module ID: 15773
+// Function ID: 15774
+// Name: InternalBuildActiveSetting
+// Dependencies: [14422, 14871, 11500, 15592, 2]
 
-// Module 15743
-import useStaffOrDeveloperSettingPredicate from "useStaffOrDeveloperSettingPredicate" /* 14845 */;
-import closure_2 from "checkForNewerBuild" /* 14397 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15773 (InternalBuildActiveSetting)
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14871 */;
+import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 14422 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const SettingBuilders = fn(11500);
+const obj2 = {
   useTitle() {
     return "Internal Build Active";
   },
   parent: null,
-  IconComponent: require("MobilePhoneSettingsIcon").MobilePhoneSettingsIcon,
+  IconComponent: fn(15592).MobilePhoneSettingsIcon,
   useDescription: function useInternalBuildActiveDescription() {
     return "Build installed from builds.discord.tools";
   },
   usePredicate: function useHasCheckNativeUpdateSetting() {
-    const obj = useStaffOrDeveloperSettingPredicate;
-    return hasUpdatesConfigured.hasUpdatesConfigured && useStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
+    return MobileNativeUpdateStore.hasUpdatesConfigured && useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
   }
 };
-createToggle = createToggle.createStatic(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/InternalBuildActiveSetting.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/InternalBuildActiveSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders.createStatic({
+  useTitle() {
+    return "Internal Build Active";
+  },
+  parent: null,
+  IconComponent: fn(15592).MobilePhoneSettingsIcon,
+  useDescription: function useInternalBuildActiveDescription() {
+    return "Build installed from builds.discord.tools";
+  },
+  usePredicate: function useHasCheckNativeUpdateSetting() {
+    return MobileNativeUpdateStore.hasUpdatesConfigured && useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
+  }
+});

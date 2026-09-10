@@ -1,32 +1,30 @@
-// Module ID: 9045
-// Function ID: 9046
-// Name: RemediationsElement
-// Dependencies: [19, 17, 21, 4560, 576, 5687, 1114, 2]
+// Module ID: 9072
+// Function ID: 9073
+// Name: InAppReportsRemediationsElement
+// Dependencies: [19, 17, 21, 4574, 576, 5701, 1114, 2]
 // Exports: default
 
-// Module 9045 (RemediationsElement)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9072 (InAppReportsRemediationsElement)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import TableRowGroup from "TableRowGroup" /* 5701 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { container: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_32 };
-createCacheKey[0] = createCacheKey;
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsRemediationsElement.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_32 } };
+let closure_4 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsRemediationsElement.tsx");
 
 export default function RemediationsElement(children) {
-  let obj = { style: callback().container, children: null };
-  obj = { title: null, hasIcons: true, children: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["k+QA9N"]);
-  obj[2] = children.children;
-  obj[1] = jsx(TableRowGroupTitle.TableRowGroup, { title: null, hasIcons: true, children: null });
-  return <View title={null} hasIcons>{null}</View>;
+  const obj = { style: closure_4().container, children: null };
+  const obj2 = { title: null, hasIcons: true, children: null };
+  const intl = util.intl;
+  obj2.title = intl.string(util.t["k+QA9N"]);
+  obj2.children = children.children;
+  obj.children = jsx(TableRowGroup.TableRowGroup, { title: null, hasIcons: true, children: null });
+  return <View style={closure_4().container}>{null}</View>;
 };

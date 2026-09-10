@@ -1,56 +1,9 @@
 // Module ID: 10442
 // Function ID: 10443
-// Dependencies: []
+// Dependencies: [1122]
 
 // Module 10442
-arg5.Meridiem = undefined;
-arg5.Weekday = undefined;
-arg5.Month = undefined;
-let obj = {};
-arg5.Meridiem = obj;
-obj.AM = 0;
-obj[0] = "AM";
-obj.PM = 1;
-obj[1] = "PM";
-obj = {};
-arg5.Weekday = obj;
-obj.SUNDAY = 0;
-obj[0] = "SUNDAY";
-obj.MONDAY = 1;
-obj[1] = "MONDAY";
-obj.TUESDAY = 2;
-obj[2] = "TUESDAY";
-obj.WEDNESDAY = 3;
-obj[3] = "WEDNESDAY";
-obj.THURSDAY = 4;
-obj[4] = "THURSDAY";
-obj.FRIDAY = 5;
-obj[5] = "FRIDAY";
-obj.SATURDAY = 6;
-obj[6] = "SATURDAY";
-obj = {};
-arg5.Month = obj;
-obj.JANUARY = 1;
-obj[1] = "JANUARY";
-obj.FEBRUARY = 2;
-obj[2] = "FEBRUARY";
-obj.MARCH = 3;
-obj[3] = "MARCH";
-obj.APRIL = 4;
-obj[4] = "APRIL";
-obj.MAY = 5;
-obj[5] = "MAY";
-obj.JUNE = 6;
-obj[6] = "JUNE";
-obj.JULY = 7;
-obj[7] = "JULY";
-obj.AUGUST = 8;
-obj[8] = "AUGUST";
-obj.SEPTEMBER = 9;
-obj[9] = "SEPTEMBER";
-obj.OCTOBER = 10;
-obj[10] = "OCTOBER";
-obj.NOVEMBER = 11;
-obj[11] = "NOVEMBER";
-obj.DECEMBER = 12;
-obj[12] = "DECEMBER";
+import registerAsset from "module_1122" /* 1122 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/perks", width: 20, height: 20, scales: [2, 3], hash: "41b77a6677a2cd0322d1116c3e0298ad", name: "img_nitro_premium_guilds_20px", type: "png" });

@@ -1,17 +1,17 @@
-// Module ID: 6091
-// Function ID: 6092
+// Module ID: 6105
+// Function ID: 6106
 // Name: GameServerAbstractUI
-// Dependencies: [21, 5587, 6092, 2]
+// Dependencies: [21, 5601, 6106, 2]
 // Exports: GameServerAbstractUI
 
-// Module 6091 (GameServerAbstractUI)
-import set from "set" /* 2 */;
+// Module 6105 (GameServerAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 6092 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6106 from "module_6106" /* 6106 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GameServerAbstractUI.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/GameServerAbstractUI.native.tsx");
 
 export const GameServerAbstractUI = function GameServerAbstractUI(width) {
   let num = width.width;
@@ -27,14 +27,14 @@ export const GameServerAbstractUI = function GameServerAbstractUI(width) {
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
-  obj = { width: num * num3, height: num2 * num3 };
-  const items = [obj];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { width: num * num3, height: num2 * num3 });
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef6106 };
+  obj.source = obj2;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

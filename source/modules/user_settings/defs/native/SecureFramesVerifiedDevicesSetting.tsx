@@ -1,31 +1,31 @@
-// Module ID: 15856
-// Function ID: 15857
-// Name: route
-// Dependencies: [7975, 1074, 11473, 1114, 15857, 2]
+// Module ID: 15886
+// Function ID: 15887
+// Name: SecureFramesVerifiedDevicesSetting
+// Dependencies: [7989, 1074, 11500, 1114, 15887, 2]
 
-// Module 15856 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15886 (SecureFramesVerifiedDevicesSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const require = globalThis.__r;
+
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["5b3FNI"]);
+    const intl = util.intl;
+    return intl.string(util.t["5b3FNI"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.DATA_AND_PRIVACY,
+  parent: SettingsConstants.MobileUserSettings.DATA_AND_PRIVACY,
   unsearchable: true,
-  screen: obj
-};
-obj = {
-  route: ME.UserSettingsSections.SECURE_FRAMES_VERIFIED_DEVICES,
-  getComponent() {
-    return require(15857) /* VerificationListItem */.default;
+  screen: {
+    route: Constants.UserSettingsSections.SECURE_FRAMES_VERIFIED_DEVICES,
+    getComponent() {
+      return require("SettingsSecureFramesVerificationsScreen").default;
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/SecureFramesVerifiedDevicesSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/SecureFramesVerifiedDevicesSetting.tsx");
 
 export default route;

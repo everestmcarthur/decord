@@ -1,31 +1,29 @@
-// Module ID: 14986
-// Function ID: 14987
-// Name: PremiumScreen
-// Dependencies: [19, 21, 6994, 1483, 6990, 7413, 2]
+// Module ID: 15012
+// Function ID: 15013
+// Name: PremiumSettingScreen
+// Dependencies: [19, 21, 7008, 1483, 7004, 7427, 2]
 // Exports: default
 
-// Module 14986 (PremiumScreen)
-import noopAll from "noop" /* 19 */;
+// Module 15012 (PremiumSettingScreen)
 import useNavigation from "useNavigation" /* 1483 */;
-import dispatcherDefault from "dispatcher" /* 6990 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6994 */;
-import UserSettingsPremiumDefault from "UserSettingsPremium" /* 7413 */;
-import { jsx } from "jsxProd" /* 21 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7004 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7008 */;
+import UserSettingsPremiumDefault from "UserSettingsPremium" /* 7427 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/PremiumSettingScreen.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumSettingScreen.tsx");
 
 export default function PremiumScreen() {
-  let obj = useSettingNavigationRoute;
-  const settingNavigationRoute = obj.useSettingNavigationRoute();
+  const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
   const stackNavigation = useNavigation.useStackNavigation();
   let close;
   if (!stackNavigation.canGoBack()) {
-    close = dispatcherDefault.close;
+    close = UserSettingsModalActionCreatorsDefault.close;
   }
-  obj = { onClose: close };
-  const obj2 = useNavigation;
+  const obj3 = { onClose: close };
   const merged = Object.assign(settingNavigationRoute.params);
   return jsx(UserSettingsPremiumDefault, { onClose: close });
 };

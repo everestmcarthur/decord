@@ -1,26 +1,26 @@
-// Module ID: 12960
-// Function ID: 12961
+// Module ID: 12986
+// Function ID: 12987
 // Name: WindowLaunchIcon
-// Dependencies: [19, 21, 576, 4261, 12961, 2]
+// Dependencies: [19, 21, 576, 4274, 12987, 2]
 // Exports: WindowLaunchIcon
 
-// Module 12960 (WindowLaunchIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 12961 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 12986 (WindowLaunchIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod12987 from "module_12987" /* 12987 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/WindowLaunchIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/WindowLaunchIcon.tsx");
 
 export const WindowLaunchIcon = function WindowLaunchIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12987, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

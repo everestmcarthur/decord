@@ -1,31 +1,31 @@
-// Module ID: 14947
-// Function ID: 14948
+// Module ID: 14973
+// Function ID: 14974
 // Name: UserSettingsAuthedAppPermissions
-// Dependencies: [19, 17, 21, 4560, 9243, 8339, 1114, 4556, 4520, 576, 9245, 14941, 2]
+// Dependencies: [19, 17, 21, 4574, 9270, 8367, 1114, 4570, 4534, 576, 9272, 14967, 2]
 // Exports: default
 
-// Module 14947 (UserSettingsAuthedAppPermissions)
-import noopAll from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14973 (UserSettingsAuthedAppPermissions)
+import disclosures from "disclosures" /* 9272 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ ScrollView: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ container: { paddingHorizontal: 16, paddingVertical: 24 }, permissionContainer: { flexDirection: "row", marginTop: 8 }, permissionIcon: { marginTop: 1 }, permissionText: { flexShrink: 1, marginLeft: 12 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/authorized_apps/native/UserSettingsAuthedAppPermissions.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let closure_7 = createStyles.createStyles({ container: { paddingHorizontal: 16, paddingVertical: 24 }, permissionContainer: { flexDirection: "row", marginTop: 8 }, permissionIcon: { marginTop: 1 }, permissionText: { flexShrink: 1, marginLeft: 12 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/authorized_apps/native/UserSettingsAuthedAppPermissions.tsx");
 
 export default function UserSettingsAuthedAppPermissions(oauth2Token) {
-  closure_0 = undefined;
   c1 = undefined;
   c2 = undefined;
   c3 = undefined;
-  const tmp = callback2();
+  const tmp = closure_7();
   closure_0 = tmp;
   ({ application: c1, scopes: c2, disclosures: c3 } = oauth2Token.oauth2Token);
-  return callback(c3, {
+  return closure_5(c3, {
     contentContainerStyle: tmp.container,
     children: (() => {
       let items = [];
@@ -33,65 +33,42 @@ export default function UserSettingsAuthedAppPermissions(oauth2Token) {
       const nextResult = iter.next();
       while (iter !== undefined) {
         let push = items.push;
-        let tmp3 = callback;
-        let tmp4 = _undefined2;
-        let obj = callback(_undefined2[4]);
-        let tmp5 = _undefined2;
+        let obj = items(_undefined2[4]);
         let items1 = [];
-        let tmp6 = items1;
-        let num = 0;
         let arraySpreadResult = HermesBuiltin.arraySpread(obj.getScopeNames(nextResult, _undefined2), 0);
-        let tmp8 = push;
-        let tmp9 = items1;
-        let tmp10 = items;
         let applyResult = HermesBuiltin.apply(items1, items);
-        let tmp12 = callback;
-        let tmp13 = _undefined2;
-        if (nextResult === callback(_undefined2[5]).OAuth2Scopes.APPLICATIONS_COMMANDS) {
-          let tmp14 = callback;
-          let tmp15 = _undefined2;
-          let intl = callback(_undefined2[6]).intl;
-          let tmp16 = callback;
-          let tmp17 = _undefined2;
-          let arr = items.push(intl.string(callback(_undefined2[6]).t.Ls2XRq));
+        if (nextResult === items(_undefined2[5]).OAuth2Scopes.APPLICATIONS_COMMANDS) {
+          let intl = items(_undefined2[6]).intl;
+          let arr = items.push(intl.string(items(_undefined2[6]).t.Ls2XRq));
         }
         continue;
       }
-      obj = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: _undefined.name };
-      const children = [closure_1_5(callback(_undefined2[7]).Text, obj), , , ];
-      obj = { variant: "heading-sm/semibold", color: "text-default", children: null };
-      const intl2 = callback(_undefined2[6]).intl;
-      obj[2] = intl2.string(callback(_undefined2[6]).t.xrmhRX);
-      children[1] = closure_1_5(callback(_undefined2[7]).Text, obj);
-      children[2] = items.map((children) => {
-        let obj = { style: items.permissionContainer, children: null };
-        obj = { style: items.permissionIcon, size: "xs", color: closure_1_1(closure_1_2[9]).colors.STATUS_POSITIVE };
+      const children = [closure_1_5(items(_undefined2[7]).Text, { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: _undefined.name }), , , ];
+      let obj3 = { variant: "heading-sm/semibold", color: "text-default", children: null };
+      const intl2 = items(_undefined2[6]).intl;
+      obj3.children = intl2.string(items(_undefined2[6]).t.xrmhRX);
+      children[1] = closure_1_5(items(_undefined2[7]).Text, obj3);
+      children[2] = items.map((children, index) => {
+        const obj = { style: items.permissionContainer, children: null };
         items = [, ];
-        items[0] = closure_1_5(items(closure_1_2[8]).CircleCheckIcon, obj);
-        obj = { style: items.permissionText, variant: "text-sm/normal", color: "text-default", children };
-        items[1] = closure_1_5(items(closure_1_2[7]).Text, obj);
-        obj[1] = items;
-        return closure_1_6(closure_1_4, obj, arg1);
+        items[0] = closure_2_5(items(4534).CircleCheckIcon, { style: items.permissionIcon, size: "xs", color: c1(576).colors.STATUS_POSITIVE });
+        items[1] = closure_2_5(items(4570).Text, { style: items.permissionText, variant: "text-sm/normal", color: "text-default", children });
+        obj.children = items;
+        return closure_2_6(closure_2_4, obj, index);
       });
       let mapped;
       if (_undefined3 != null) {
-        mapped = _undefined3.map((toFixed) => {
-          let obj = items(table[10]);
-          const textForDisclosure = obj.getTextForDisclosure(toFixed);
+        mapped = _undefined3.map((disclosure, index) => {
+          const textForDisclosure = disclosures.getTextForDisclosure(disclosure);
           let tmp4 = null;
           if (null != textForDisclosure) {
-            obj = { style: null, children: null };
-            obj[0] = items.permissionContainer;
-            obj = { style: null, disclosure: null };
-            obj[0] = items.permissionIcon;
-            obj[1] = toFixed;
-            items = [closure_2_5(tmp(tmp2[11]).DisclosureIcon, obj), ];
-            obj1 = { style: null, variant: "text-sm/normal", children: null };
-            obj1[0] = items.permissionText;
-            obj1[2] = textForDisclosure;
-            items[1] = closure_2_5(tmp(tmp2[7]).Text, obj1);
-            obj[1] = items;
-            tmp4 = closure_2_6(closure_2_4, obj, arg1 + items.length);
+            const obj2 = { style: items.permissionContainer, children: null };
+            const obj3 = { style: items.permissionIcon, disclosure };
+            items = [hasOwnProperty(tmp(14967).DisclosureIcon, obj3), ];
+            const obj4 = { style: items.permissionText, variant: "text-sm/normal", children: textForDisclosure };
+            items[1] = hasOwnProperty(tmp(4570).Text, obj4);
+            obj2.children = items;
+            tmp4 = timestampProducer(React4, obj2, index + items.length);
           }
           return tmp4;
         });

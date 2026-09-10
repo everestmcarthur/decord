@@ -1,53 +1,51 @@
-// Module ID: 9464
-// Function ID: 9465
+// Module ID: 9491
+// Function ID: 9492
 // Name: InfoBox
-// Dependencies: [19, 17, 21, 4560, 576, 4515, 6610, 4556, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 4529, 6624, 4570, 2]
 // Exports: default
 
-// Module 9464 (InfoBox)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4515 */;
-import Text from "Text" /* 4556 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 6610 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9491 (InfoBox)
+import nativeDefault from "native" /* 576 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4529 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6624 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { infoBox: null, infoBoxWarning: null, infoText: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.xs, padding: 8, borderStyle: "solid", borderWidth: 1, borderColor: ThemesDefault.colors.TEXT_LINK, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_INFO, flexDirection: "row", alignItems: "center", gap: 8 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderColor: ThemesDefault.colors.ICON_FEEDBACK_WARNING, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_WARNING };
-createCacheKey[2] = { flex: 1 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { INFO: "info", WARNING: "warning" };
-let obj1 = { borderColor: ThemesDefault.colors.ICON_FEEDBACK_WARNING, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_WARNING };
-const result = require("set").fileFinishedImporting("modules/user_settings/authorized_apps/native/InfoBox.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { infoBox: { borderRadius: nativeDefault.radii.xs, padding: 8, borderStyle: "solid", borderWidth: 1, borderColor: nativeDefault.colors.TEXT_LINK, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, flexDirection: "row", alignItems: "center", gap: 8 }, infoBoxWarning: null, infoText: null };
+const obj3 = { borderRadius: nativeDefault.radii.xs, padding: 8, borderStyle: "solid", borderWidth: 1, borderColor: nativeDefault.colors.TEXT_LINK, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, flexDirection: "row", alignItems: "center", gap: 8 };
+obj2.infoBoxWarning = { borderColor: nativeDefault.colors.ICON_FEEDBACK_WARNING, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING };
+obj2.infoText = { flex: 1 };
+let closure_6 = createStyles.createStyles(obj2);
+let obj5 = { INFO: "info", WARNING: "warning" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/authorized_apps/native/InfoBox.tsx");
 
 export default function InfoBox(look) {
   let INFO = look.look;
   ({ children, style } = look);
   if (INFO === undefined) {
-    INFO = obj2.INFO;
+    INFO = obj5.INFO;
   }
-  const tmp2 = callback3();
+  const tmp2 = closure_6();
   const items = [tmp2.infoBox];
   const items1 = [, ];
   ({ infoBox: arr2[0], infoBoxWarning: arr2[1] } = tmp2);
-  let obj = {};
-  obj = { color: ThemesDefault.colors.TEXT_LINK };
-  obj[obj2.INFO] = callback(CircleInformationIcon.CircleInformationIcon, obj);
-  obj = { color: ThemesDefault.colors.ICON_FEEDBACK_WARNING };
-  obj[obj2.WARNING] = callback(CircleErrorIcon.CircleErrorIcon, obj);
-  obj1 = { style: items2, children: null };
-  items2 = [style, ...{ [closure_7.INFO]: items, [closure_7.WARNING]: items1 }[INFO]];
+  const obj = {};
+  obj[obj5.INFO] = React4(CircleInformationIcon.CircleInformationIcon, { color: nativeDefault.colors.TEXT_LINK });
+  const obj2 = { color: nativeDefault.colors.TEXT_LINK };
+  obj[obj5.WARNING] = React4(CircleErrorIcon.CircleErrorIcon, { color: nativeDefault.colors.ICON_FEEDBACK_WARNING });
+  const obj4 = { style: null, children: null };
+  const items2 = [style, ...{ [closure_1_7.INFO]: items, [closure_1_7.WARNING]: items1 }[INFO]];
+  obj4.style = items2;
   const items3 = [obj[INFO], ];
-  obj2 = { style: tmp2.infoText, variant: "text-sm/semibold", children };
-  items3[1] = callback(Text.Text, obj2);
-  obj1[1] = items3;
-  return callback2(View, obj1);
+  obj5 = { style: tmp2.infoText, variant: "text-sm/semibold", children };
+  items3[1] = React4(Text_Text.Text, obj5);
+  obj4.children = items3;
+  return hasOwnProperty(View, obj4);
 };
-export const InfoBoxLooks = obj2;
+export const InfoBoxLooks = obj5;

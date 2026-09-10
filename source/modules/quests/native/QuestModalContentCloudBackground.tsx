@@ -1,61 +1,61 @@
-// Module ID: 15130
-// Function ID: 15131
-// Name: items
-// Dependencies: [19, 17, 21, 4560, 4269, 4495, 4987, 5587, 15131, 15132, 2]
+// Module ID: 15157
+// Function ID: 15158
+// Name: QuestModalContentCloudBackground
+// Dependencies: [19, 17, 21, 4574, 4282, 4509, 5001, 5601, 15158, 15159, 2]
 // Exports: default
 
-// Module 15130 (items)
-import noopAll from "noop" /* 19 */;
-import isThemeLight from "isThemeLight" /* 4269 */;
-import useTheme from "useTheme" /* 4495 */;
-import LinearGradientDefault from "LinearGradient" /* 4987 */;
-import preloadDefault from "preload" /* 5587 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15157 (QuestModalContentCloudBackground)
+import themes from "themes" /* 4282 */;
+import useTheme from "useTheme" /* 4509 */;
+import LinearGradientDefault from "LinearGradient" /* 5001 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ View: c3, StyleSheet: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles((arg0) => {
-  let obj = {};
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let closure_7 = createStyles.createStyles((arg0) => {
+  const obj = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
-  obj = { wrapper: null, cloudsImage: null, cloudsImageLight: null, gradient: null, solidBackground: null };
-  const merged1 = Object.assign(arg0 ? { top: "Array" } : { bottom: "Array" });
+  const obj2 = { wrapper: null, cloudsImage: null, cloudsImageLight: null, gradient: null, solidBackground: null };
+  const merged1 = Object.assign(arg0 ? { top: "disabled" } : { bottom: "disabled" });
   obj.height = 380;
   obj.zIndex = 1;
-  obj[0] = obj;
-  obj = {};
-  const merged2 = Object.assign(tmp.absoluteFillObject);
-  const merged3 = Object.assign(arg0 ? { top: "Array" } : { bottom: "Array" });
-  if (arg0) {
-    obj1 = {};
-  } else {
-    obj1 = { transform: null };
-    items = [{ rotate: "180deg" }];
-    obj1[0] = items;
-  }
-  const merged4 = Object.assign(obj1);
-  obj.width = "100%";
-  obj[1] = obj;
-  const obj2 = {};
-  const merged5 = Object.assign(tmp.absoluteFillObject);
-  obj2.bottom = undefined;
-  obj2.width = "100%";
-  obj[2] = obj2;
+  obj2.wrapper = obj;
   const obj3 = {};
+  const merged2 = Object.assign(tmp.absoluteFillObject);
+  const merged3 = Object.assign(arg0 ? { top: "disabled" } : { bottom: "disabled" });
+  if (arg0) {
+    let obj4 = {};
+  } else {
+    obj4 = { transform: null };
+    items = [{ rotate: "180deg" }];
+    obj4.transform = items;
+  }
+  const merged4 = Object.assign(obj4);
+  obj3.width = "100%";
+  obj2.cloudsImage = obj3;
+  const obj5 = {};
+  const merged5 = Object.assign(tmp.absoluteFillObject);
+  obj5.bottom = undefined;
+  obj5.width = "100%";
+  obj2.cloudsImageLight = obj5;
+  const obj6 = {};
   const merged6 = Object.assign(tmp.absoluteFillObject);
-  obj3.opacity = 1;
-  obj[3] = obj3;
+  obj6.opacity = 1;
+  obj2.gradient = obj6;
   const merged7 = Object.assign(tmp.absoluteFillObject);
-  obj[4] = {};
-  return obj;
+  obj2.solidBackground = {};
+  return obj2;
 });
 let items = ["#292252FF", "#1E1F2200"];
 const substr = items.slice();
 let closure_9 = substr.reverse();
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestModalContentCloudBackground.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/QuestModalContentCloudBackground.tsx");
 
 export default function QuestModalContentCloudBackground(align) {
   align = align.align;
@@ -69,28 +69,25 @@ export default function QuestModalContentCloudBackground(align) {
   if (undefined !== resizeMode) {
     str2 = resizeMode;
   }
-  const tmp = callback("bottom" === str);
-  let obj = isThemeLight;
-  obj1 = useTheme;
-  const isThemeDarkResult = obj.isThemeDark(obj1.useTheme());
-  obj = { style: items, children: null };
+  const tmp = closure_7("bottom" === str);
+  const obj = themes;
+  const isThemeDarkResult = obj.isThemeDark(useTheme.useTheme());
+  const obj3 = { style: null, children: null };
   items = [tmp.wrapper, style];
+  obj3.style = items;
   if (isThemeDarkResult) {
-    obj = { colors: null, style: null };
-    obj[0] = "top" === str ? items : closure_9;
-    obj[1] = tmp.gradient;
-    tmp6(LinearGradientDefault, obj);
+    const obj4 = { colors: "top" === str ? items : closure_9, style: tmp.gradient };
+    tmp6(LinearGradientDefault, obj4);
   } else {
-    obj1 = { style: null };
-    obj1[0] = tmp.solidBackground;
-    const items1 = [tmp6(tmp5, obj1), ];
-    const obj2 = { style: null, source: null, resizeMode: null };
+    const obj5 = { style: tmp.solidBackground };
+    const items1 = [tmp6(tmp5, obj5), ];
+    const obj6 = { style: null, source: null, resizeMode: null };
     const items2 = [isThemeDarkResult ? tmp.cloudsImage : tmp.cloudsImageLight, imgStyle];
-    obj2[0] = items2;
-    obj2[1] = importDefault(isThemeDarkResult ? 15131 : 15132);
-    obj2[2] = str2;
-    items1[1] = tmp6(preloadDefault, obj2);
-    obj[1] = items1;
-    return tmp4(tmp5, obj);
+    obj6.style = items2;
+    obj6.source = importDefault(isThemeDarkResult ? 15158 : 15159);
+    obj6.resizeMode = str2;
+    items1[1] = tmp6(FastImageDefault, obj6);
+    obj3.children = items1;
+    return tmp4(tmp5, obj3);
   }
 };

@@ -1,33 +1,34 @@
-// Module ID: 16154
-// Function ID: 16155
+// Module ID: 16184
+// Function ID: 16185
 // Name: useFavoritesGuildHeaderAction
-// Dependencies: [19, 1074, 10229, 1100, 1114, 3225, 2]
+// Dependencies: [19, 1074, 10256, 1100, 1114, 3236, 2]
 // Exports: default
 
-// Module 16154 (useFavoritesGuildHeaderAction)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 3225 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 10229 */;
-import closure_3 from "noop" /* 19 */;
-import { Routes } from "ME" /* 1074 */;
+// Module 16184 (useFavoritesGuildHeaderAction)
+import router_utils from "router_utils" /* 1100 */;
+import util from "util" /* 1114 */;
+import _modDef3236 from "module_3236" /* 3236 */;
+import FavoritesHooks from "FavoritesHooks" /* 10256 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHeaderAction.tsx");
+require = fn;
+const Routes = fn(1074).Routes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHeaderAction.tsx");
 
 export default function useFavoritesGuildHeaderAction() {
-  let obj = useFavoritesAccess;
-  const hasAccess = obj.useFavoritesAccess().hasAccess;
-  obj = { isPreview: !hasAccess, label: null, exitPreview: null };
-  const callback = React.useCallback(() => {
-    callback(table[3]).transitionTo(constants.ME);
+  const hasAccess = FavoritesHooks.useFavoritesAccess().hasAccess;
+  const obj2 = { isPreview: !hasAccess, label: null, exitPreview: null };
+  const callback = noop.useCallback(() => {
+    router_utils.transitionTo(constants.ME);
   }, []);
-  const intl = getSystemLocale.intl;
+  const intl = util.intl;
   if (hasAccess) {
-    let ojM1xJ = messagesProxyDefault.G9fGlP;
+    let ojM1xJ = _modDef3236.G9fGlP;
   } else {
-    ojM1xJ = getSystemLocale.t.ojM1xJ;
+    ojM1xJ = util.t.ojM1xJ;
   }
-  obj[1] = intl.string(ojM1xJ);
-  obj[2] = callback;
-  return obj;
+  obj2.label = intl.string(ojM1xJ);
+  obj2.exitPreview = callback;
+  return obj2;
 };

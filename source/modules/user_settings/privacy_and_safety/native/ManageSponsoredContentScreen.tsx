@@ -1,22 +1,19 @@
-// Module ID: 15865
-// Function ID: 15866
-// Name: AdTopicRow
-// Dependencies: [19, 17, 1074, 21, 1187, 2070, 1935, 7201, 1114, 4560, 576, 5687, 2024, 2]
+// Module ID: 15895
+// Function ID: 15896
+// Name: ManageSponsoredContentScreen
+// Dependencies: [19, 17, 1074, 21, 1187, 2070, 1935, 7214, 1114, 4574, 576, 5701, 2024, 2]
 // Exports: default
 
-// Module 15865 (AdTopicRow)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import combinedDefault from "combined" /* 2024 */;
-import messagesProxyDefault from "messagesProxy" /* 2070 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { HelpdeskArticles } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15895 (ManageSponsoredContentScreen)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
+import _modDef2070 from "module_2070" /* 2070 */;
+import TableRowGroup from "TableRowGroup" /* 5701 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function AdTopicRow(adTopic) {
   adTopic = adTopic.adTopic;
   let AdTopicOptOuts = adTopic(1935).AdTopicOptOuts;
@@ -24,49 +21,51 @@ function AdTopicRow(adTopic) {
   const hasItem = setting.includes(adTopic);
   obj = { label: null, subLabel: null, value: null, onValueChange: null };
   const intl = adTopic(1114).intl;
-  obj[0] = intl.string(obj[adTopic]);
+  obj.label = intl.string(obj[adTopic]);
   const intl2 = adTopic(1114).intl;
-  const tmp3 = messagesProxyDefault;
-  obj[1] = intl2.string(hasItem ? tmp3.B9PPxE : tmp3.Y9ZOp8);
-  obj[2] = !hasItem;
-  obj[3] = function onValueChange(arg0) {
-    const AdTopicOptOuts = adTopic(closure_1_2[6]).AdTopicOptOuts;
+  const tmp3 = _modDef2070;
+  obj.subLabel = intl2.string(hasItem ? tmp3.B9PPxE : tmp3.Y9ZOp8);
+  obj.value = !hasItem;
+  obj.onValueChange = function onValueChange(arg0) {
+    const AdTopicOptOuts = UserSettings.AdTopicOptOuts;
     const set = new Set(AdTopicOptOuts.getSetting());
     if (arg0) {
       set.delete(adTopic);
     } else {
       set.add(adTopic);
     }
-    const AdTopicOptOuts2 = adTopic(closure_1_2[6]).AdTopicOptOuts;
+    const AdTopicOptOuts2 = UserSettings.AdTopicOptOuts;
     const items = [...set];
     AdTopicOptOuts2.updateSetting(items);
   };
-  return closure_5(adTopic(7201).TableSwitchRow, obj);
+  return closure_5(adTopic(7214).TableSwitchRow, obj);
 }
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
+const View = fn(17).View;
+const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = {};
-obj[require("create").AdTopic.REAL_MONEY_GAMING] = messagesProxyDefault.pmIitA;
+obj[fn(1187).AdTopic.REAL_MONEY_GAMING] = _modDef2070.pmIitA;
 const keys = Object.keys(obj);
 let closure_8 = keys.map(Number);
-obj = { content: null };
-obj = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
-obj[0] = obj;
-let closure_10 = createCacheKey.createStyles(obj);
-const result = require("set").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/ManageSponsoredContentScreen.tsx");
+const createStyles = fn(4574);
+let obj3 = { content: { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 } };
+let closure_10 = createStyles.createStyles(obj3);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/privacy_and_safety/native/ManageSponsoredContentScreen.tsx");
 
 export default function ManageSponsoredContentScreen() {
-  obj = { style: callback3().content, children: null };
-  obj = { hasIcons: false, description: null };
-  const intl = getSystemLocale.intl;
-  obj = { helpdeskArticle: combinedDefault.getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS) };
-  obj[1] = intl.format(messagesProxyDefault["z/MfaY"], obj);
-  const items = [callback(TableRowGroupTitle.TableRowGroup, obj), ];
-  obj1 = { hasIcons: false, title: null, children: null };
-  const intl2 = getSystemLocale.intl;
-  obj1[1] = intl2.string(messagesProxyDefault.OkmBx0);
-  obj1[2] = closure_8.map((adTopic) => callback(closure_9, { adTopic }, adTopic));
-  items[1] = callback(TableRowGroupTitle.TableRowGroup, obj1);
-  obj[1] = items;
-  return callback2(View, obj);
+  obj = { style: closure_10().content, children: null };
+  const obj2 = { hasIcons: false, description: null };
+  const intl = util.intl;
+  const obj3 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS) };
+  obj2.description = intl.format(_modDef2070["z/MfaY"], obj3);
+  const items = [hasOwnProperty(TableRowGroup.TableRowGroup, obj2), ];
+  const obj5 = { hasIcons: false, title: null, children: null };
+  const intl2 = util.intl;
+  obj5.title = intl2.string(_modDef2070.OkmBx0);
+  obj5.children = closure_8.map((adTopic) => closure_1_5(AdTopicRow, { adTopic }, adTopic));
+  items[1] = hasOwnProperty(TableRowGroup.TableRowGroup, obj5);
+  obj.children = items;
+  return timestampProducer(View, obj);
 };

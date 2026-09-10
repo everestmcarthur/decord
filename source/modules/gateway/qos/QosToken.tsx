@@ -1,38 +1,38 @@
 // Module ID: 500
 // Function ID: 501
-// Name: buildQosTokenFromDerivedData
-// Dependencies: [501, 3, 14198, 1224, 2]
+// Name: QosToken
+// Dependencies: [501, 3, 14223, 1224, 2]
 // Exports: buildQosToken
 
-// Module 500 (buildQosTokenFromDerivedData)
-import timestampDefault from "timestamp" /* 3 */;
-import defineProperty from "defineProperty" /* 14198 */;
-import closure_2 from "initialize" /* 501 */;
+// Module 500 (QosToken)
+import LoggerDefault from "Logger" /* 3 */;
+import ProtoUtils from "ProtoUtils" /* 1224 */;
+import qos_token from "qos_token" /* 14223 */;
+import DerivedQosDataStore from "DerivedQosDataStore" /* 501 */;
 
-require = arg1;
+require = fn;
 function buildQosTokenFromDerivedData(derivedQosData, isActive) {
   let derived;
-  const ClientProvidedQosData = defineProperty.ClientProvidedQosData;
-  let clientProvided = { isActive };
-  clientProvided = ClientProvidedQosData.create(clientProvided);
+  const ClientProvidedQosData = qos_token.ClientProvidedQosData;
   if (null != derivedQosData) {
     try {
-      let tmp2Result = tmp2(1224);
-      derived = tmp2Result.b64ToProto(tmp2(14198).DerivedQosData, derivedQosData);
+      derived = tmp2(1224).b64ToProto(tmp2(14223).DerivedQosData, derivedQosData);
+      const tmp2Result = tmp2(1224);
     } catch (tmp5) {
       const _HermesInternal = HermesInternal;
       logger.warn("Failed to decode derived QOS data: " + tmp5);
     }
   }
-  tmp2Result = tmp2(1224);
-  const QosToken = tmp2(14198).QosToken;
-  return tmp2Result.protoToB64(defineProperty.QosToken, QosToken.create({ clientProvided, derived }));
+  const obj = { isActive };
+  const obj2 = ClientProvidedQosData.create({ isActive });
+  const QosToken = tmp2(14223).QosToken;
+  return ProtoUtils.protoToB64(qos_token.QosToken, QosToken.create({ clientProvided: obj2, derived }));
 }
-let closure_3 = new timestampDefault("QOS");
-const tmp2 = new timestampDefault("QOS");
-const result = require("set").fileFinishedImporting("modules/gateway/qos/QosToken.tsx");
+const logger = new LoggerDefault("QOS");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/gateway/qos/QosToken.tsx");
 
 export { buildQosTokenFromDerivedData };
 export const buildQosToken = function buildQosToken(userId, isUserActive) {
-  return buildQosTokenFromDerivedData(forUser.getForUser(userId), isUserActive);
+  return buildQosTokenFromDerivedData(DerivedQosDataStore.getForUser(userId), isUserActive);
 };

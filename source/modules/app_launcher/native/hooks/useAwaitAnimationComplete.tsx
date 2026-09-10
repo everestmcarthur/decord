@@ -1,26 +1,26 @@
-// Module ID: 12166
-// Function ID: 12167
-// Name: AwaitAnimationContext
+// Module ID: 12192
+// Function ID: 12193
+// Name: useAwaitAnimationComplete
 // Dependencies: [19, 21, 2]
 // Exports: AwaitAnimationContext, useAwaitAnimationCompletion
 
-// Module 12166 (AwaitAnimationContext)
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 12192 (useAwaitAnimationComplete)
+import noop from "module_19" /* 19 */;
 
-let c0 = importAllResult;
-let context = importAllResult.createContext(null);
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/hooks/useAwaitAnimationComplete.tsx");
+const jsx = fn(21).jsx;
+const redux = noop.createContext(null);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/useAwaitAnimationComplete.tsx");
 
 export const AwaitAnimationContext = function AwaitAnimationContext(children) {
   const handleQueuedCallback = children.handleQueuedCallback;
   const items = [handleQueuedCallback];
-  return <redux.Provider value={handleQueuedCallback.useMemo(() => ({ handleQueuedCallback }), items)}>{arg0.children}</redux.Provider>;
+  return <redux.Provider value={noop.useMemo(() => ({ handleQueuedCallback }), items)}>{arg0.children}</redux.Provider>;
 };
 export const useAwaitAnimationCompletion = function useAwaitAnimationCompletion() {
-  const context = importAllResult.useContext(closure_2);
+  const context = noop.useContext(closure_2);
   if (null == context) {
-    let fn = (arg0) => arg0();
+    let fn = (fn) => fn();
   } else {
     fn = context.handleQueuedCallback;
   }

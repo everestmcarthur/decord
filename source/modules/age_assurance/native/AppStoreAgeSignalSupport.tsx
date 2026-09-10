@@ -1,16 +1,16 @@
-// Module ID: 8439
-// Function ID: 8440
-// Name: MIN_AGE_GATE
-// Dependencies: [1608, 4539, 1115, 2]
+// Module ID: 8467
+// Function ID: 8468
+// Name: AppStoreAgeSignalSupport
+// Dependencies: [1608, 4553, 1115, 2]
 // Exports: isAppStoreAgeSignalSupported
 
-// Module 8439 (MIN_AGE_GATE)
-import set from "set" /* 2 */;
-import isMetaQuest from "isMetaQuest" /* 1608 */;
+// Module 8467 (AppStoreAgeSignalSupport)
+import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
+import size from "module_2" /* 2 */;
 
 let c2 = 26;
 let c3 = 2;
-const result = set.fileFinishedImporting("modules/age_assurance/native/AppStoreAgeSignalSupport.tsx");
+const result = size.fileFinishedImporting("modules/age_assurance/native/AppStoreAgeSignalSupport.tsx");
 
 export const MIN_AGE_GATE = 13;
 export const ADULT_AGE_GATE = 18;
@@ -18,12 +18,11 @@ export const isAppStoreAgeSignalSupported = function isAppStoreAgeSignalSupporte
   if (obj.isMetaQuest()) {
     return false;
   } else {
-    let tmpResult = tmp(4539);
     if (tmpResult.getIsRunningOnSimulator()) {
       return false;
     } else {
-      tmpResult = tmp(4539);
-      const parts = tmpResult.getSystemVersion().split(".");
+      const tmpResult3 = tmp(4553);
+      const parts = tmp(4553).getSystemVersion().split(".");
       const _parseInt = parseInt;
       const parsed = parseInt(parts[0], 10);
       let str3 = parts[1];
@@ -31,8 +30,8 @@ export const isAppStoreAgeSignalSupported = function isAppStoreAgeSignalSupporte
         str3 = "0";
       }
       const parsed1 = parseInt(str3, 10);
-      const str = tmpResult.getSystemVersion();
-      if (tmpResult1.isIOS()) {
+      const str = tmp(4553).getSystemVersion();
+      if (tmpResult4.isIOS()) {
         let tmp9 = parsed > c2;
         if (!tmp9) {
           let tmp10 = parsed === c2;
@@ -47,6 +46,7 @@ export const isAppStoreAgeSignalSupported = function isAppStoreAgeSignalSupporte
       }
       return tmp8;
     }
+    tmpResult = tmp(4553);
   }
-  obj = isMetaQuest;
+  obj = MetaQuestUtils;
 };

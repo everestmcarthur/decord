@@ -1,27 +1,28 @@
-// Module ID: 8119
-// Function ID: 8120
-// Name: getInitialStringSelectOptions
-// Dependencies: [8113, 1894, 2]
+// Module ID: 8145
+// Function ID: 8146
+// Name: StringSelectActionComponentUtils
+// Dependencies: [8139, 1894, 2]
 // Exports: getInitialStringSelectOptions
 
-// Module 8119 (getInitialStringSelectOptions)
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1894 */;
-import closure_2 from "getInteractionComponentStates" /* 8113 */;
+// Module 8145 (StringSelectActionComponentUtils)
+import Server from "Server" /* 1894 */;
+import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8139 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/interaction_components/StringSelectActionComponentUtils.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/interaction_components/StringSelectActionComponentUtils.tsx");
 
 export const getInitialStringSelectOptions = function getInitialStringSelectOptions(selectionActionComponent, containerId) {
-  interactionComponentState = interactionComponentState.getInteractionComponentState(containerId, selectionActionComponent.id);
+  const interactionComponentState = LocalInteractionComponentStateStore.getInteractionComponentState(containerId, selectionActionComponent.id);
   let type;
   if (interactionComponentState != null) {
     type = interactionComponentState.type;
   }
-  if (type === PermissionOverwriteType.ComponentType.STRING_SELECT) {
+  if (type === Server.ComponentType.STRING_SELECT) {
     let mapped = interactionComponentState.values;
   } else {
     const options = selectionActionComponent.options;
-    const found = options.filter((arg0) => arg0.default);
+    const found = options.filter((item) => item.default);
     mapped = found.map((value) => value.value);
   }
   return mapped;

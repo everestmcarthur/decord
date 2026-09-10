@@ -1,53 +1,51 @@
-// Module ID: 16219
-// Function ID: 16220
+// Module ID: 16249
+// Function ID: 16250
 // Name: VibegrationsChannelRow
-// Dependencies: [19, 1074, 1964, 10123, 21, 4560, 576, 1100, 12383, 1114, 3547, 10158, 2]
+// Dependencies: [19, 1074, 1964, 10150, 21, 4574, 576, 1100, 12409, 1114, 3560, 10185, 2]
 // Exports: default
 
-// Module 16219 (VibegrationsChannelRow)
-import ThemesDefault from "Themes" /* 576 */;
-import messagesProxyDefault from "messagesProxy" /* 3547 */;
-import BaseChannelSubtitleDefault from "BaseChannelSubtitle" /* 12383 */;
-import closure_3 from "noop" /* 19 */;
-import { Routes } from "ME" /* 1074 */;
-import { StaticChannelRoute } from "set" /* 1964 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16249 (VibegrationsChannelRow)
+import nativeDefault from "native" /* 576 */;
+import router_utils from "router_utils" /* 1100 */;
+import _modDef3560 from "module_3560" /* 3560 */;
+import BaseChannelItemDefault from "BaseChannelItem" /* 12409 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-createCacheKey = { container: null };
-createCacheKey = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
-createCacheKey[0] = createCacheKey;
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/vibegrations/native/VibegrationsChannelRow.tsx");
+require = fn;
+const Routes = fn(1074).Routes;
+const StaticChannelRoute = fn(1964).StaticChannelRoute;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { container: { marginVertical: fn(10150).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/vibegrations/native/VibegrationsChannelRow.tsx");
 
 export default function VibegrationsChannelRow(selected) {
   selected = selected.selected;
-  let id;
-  id = selected.guild.id;
+  const id = selected.guild.id;
   const items = [id];
-  const callback = React.useCallback(() => {
-    id(closure_1_2[7]).transitionTo(closure_1_4.CHANNEL(id, closure_1_5.VIBEGRATIONS));
+  const callback = noop.useCallback(() => {
+    router_utils.transitionTo(Routes.CHANNEL(id, StaticChannelRoute.VIBEGRATIONS));
   }, items);
   if (true === selected) {
-    let DEFAULT = id(12383).ChannelModes.SELECTED;
+    let DEFAULT = id(12409).ChannelModes.SELECTED;
     let tmp5 = id;
   } else {
-    DEFAULT = id(12383).ChannelModes.DEFAULT;
+    DEFAULT = id(12409).ChannelModes.DEFAULT;
     tmp5 = id;
   }
-  let obj = { onPress: callback, style: callback().container, accessible: true, accessibilityLabel: null, accessibilityState: null, mode: null, name: null, icon: null };
-  const tmp = callback();
+  const obj = { onPress: callback, style: closure_7().container, accessible: true, accessibilityLabel: null, accessibilityState: null, mode: null, name: null, icon: null };
+  const tmp = closure_7();
   const intl = tmp5(1114).intl;
-  obj[3] = intl.string(messagesProxyDefault.Xmvb23);
-  obj[4] = { selected };
-  obj[5] = DEFAULT;
-  obj = { name: null, mode: null };
+  obj.accessibilityLabel = intl.string(_modDef3560.Xmvb23);
+  obj.accessibilityState = { selected };
+  obj.mode = DEFAULT;
+  const obj2 = { name: null, mode: null };
   const intl2 = tmp5(1114).intl;
-  obj[0] = intl2.string(messagesProxyDefault.Xmvb23);
-  obj[1] = DEFAULT;
-  obj[6] = jsx(tmp5(12383).BaseChannelName, { name: null, mode: null });
-  obj = { mode: DEFAULT, IconComponent: tmp5(10158).MagicWandIcon };
-  obj[7] = jsx(tmp5(12383).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(10158).MagicWandIcon });
-  return jsx(BaseChannelSubtitleDefault, { mode: DEFAULT, IconComponent: tmp5(10158).MagicWandIcon });
+  obj2.name = intl2.string(_modDef3560.Xmvb23);
+  obj2.mode = DEFAULT;
+  obj.name = jsx(tmp5(12409).BaseChannelName, { name: null, mode: null });
+  obj.icon = jsx(tmp5(12409).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(10185).MagicWandIcon });
+  return <tmp8 onPress={callback} style={closure_7().container} accessible accessibilityLabel={null} accessibilityState={null} mode={null} name={null} icon={null} />;
 };

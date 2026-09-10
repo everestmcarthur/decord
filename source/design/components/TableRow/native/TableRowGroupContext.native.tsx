@@ -1,13 +1,13 @@
-// Module ID: 5606
-// Function ID: 5607
-// Name: context
+// Module ID: 5620
+// Function ID: 5621
+// Name: TableRowGroupContext
 // Dependencies: [19, 2]
 
-// Module 5606 (context)
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
+// Module 5620 (TableRowGroupContext)
+import _mod19 from "module_19" /* 19 */;
+import size from "module_2" /* 2 */;
 
-const context = noop.createContext(false);
-const result = set.fileFinishedImporting("design/components/TableRow/native/TableRowGroupContext.native.tsx");
+const context = _mod19.createContext(false);
+const result = size.fileFinishedImporting("design/components/TableRow/native/TableRowGroupContext.native.tsx");
 
 export const TableRowGroupContext = context;

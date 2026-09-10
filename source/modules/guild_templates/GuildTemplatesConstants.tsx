@@ -1,12 +1,12 @@
-// Module ID: 7326
-// Function ID: 7327
-// Name: GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD
+// Module ID: 7340
+// Function ID: 7341
+// Name: GuildTemplatesConstants
 // Dependencies: [2]
 
-// Module 7326 (GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD)
-import set from "set" /* 2 */;
+// Module 7340 (GuildTemplatesConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_templates/GuildTemplatesConstants.tsx");
+const result = size.fileFinishedImporting("modules/guild_templates/GuildTemplatesConstants.tsx");
 
 export const GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD = 50;
 export const GuildTemplateStates = { RESOLVING: "RESOLVING", RESOLVED: "RESOLVED", EXPIRED: "EXPIRED", ACCEPTED: "ACCEPTED", ACCEPTING: "ACCEPTING" };

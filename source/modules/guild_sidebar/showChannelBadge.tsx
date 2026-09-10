@@ -1,13 +1,13 @@
-// Module ID: 16231
-// Function ID: 16232
+// Module ID: 16261
+// Function ID: 16262
 // Name: showChannelBadge
 // Dependencies: [2]
 // Exports: default
 
-// Module 16231 (showChannelBadge)
-import set from "set" /* 2 */;
+// Module 16261 (showChannelBadge)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_sidebar/showChannelBadge.tsx");
+const result = size.fileFinishedImporting("modules/guild_sidebar/showChannelBadge.tsx");
 
 export default function showChannelBadge(isNewChannel) {
   ({ mentionsCount, postsWithUnreadsCount, muted } = isNewChannel);

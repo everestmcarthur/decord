@@ -1,39 +1,41 @@
-// Module ID: 16004
-// Function ID: 16005
-// Name: usePortraitOrientationOnly
-// Dependencies: [19, 4539, 1608, 6944, 8332, 2]
+// Module ID: 16034
+// Function ID: 16035
+// Name: useOrientationLock
+// Dependencies: [19, 4553, 1608, 6958, 8360, 2]
 // Exports: default
 
-// Module 16004 (usePortraitOrientationOnly)
-import useWideAuthViewDefault from "useWideAuthView" /* 6944 */;
-import closure_3 from "noop" /* 19 */;
+// Module 16034 (useOrientationLock)
+import DeviceUtils from "DeviceUtils" /* 4553 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 6958 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/auth/native/useOrientationLock.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/native/useOrientationLock.tsx");
 
 export default function usePortraitOrientationOnly() {
   const tmp = useWideAuthViewDefault();
   closure_0 = tmp;
   const items = [tmp];
-  const effect = React.useEffect(() => {
-    const isIpadOSResult = callback(closure_1_2[1]).isIpadOS();
+  const effect = noop.useEffect(() => {
+    const isIpadOSResult = DeviceUtils.isIpadOS();
     let tmp4 = !isIpadOSResult;
     if (!isIpadOSResult) {
-      let tmpResult = tmp(tmp2[2]);
-      tmp4 = !tmpResult.isMetaQuest();
+      tmp4 = !tmp(1608).isMetaQuest();
+      const tmpResult = tmp(1608);
     }
     if (tmp4) {
-      tmp4 = !callback;
+      tmp4 = !closure_0;
     }
-    callback = tmp4;
+    closure_0 = tmp4;
     if (tmp4) {
-      tmpResult = tmp(tmp2[4]);
-      tmpResult.lockOrientation("PORTRAIT", false);
+      tmp(8360).lockOrientation("PORTRAIT", false);
+      const tmpResult2 = tmp(8360);
     }
     return () => {
-      if (callback) {
-        callback(closure_1_2[4]).unlockOrientation({ unlockAfterRotatingToPreviousLock: false });
-        const obj = callback(closure_1_2[4]);
+      if (closure_0) {
+        closure_0(dependencyMap[4]).unlockOrientation({ unlockAfterRotatingToPreviousLock: false });
+        const obj = closure_0(dependencyMap[4]);
       }
     };
   }, items);

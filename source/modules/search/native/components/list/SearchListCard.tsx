@@ -1,72 +1,63 @@
-// Module ID: 16670
-// Function ID: 16671
-// Name: SearchListContentAuthor
-// Dependencies: [19, 17, 21, 4560, 576, 1178, 4556, 4404, 4713, 10915, 5088, 1114, 5028, 5607, 2]
+// Module ID: 16707
+// Function ID: 16708
+// Name: SearchListCard
+// Dependencies: [19, 17, 21, 4574, 576, 1178, 4570, 4418, 4727, 10942, 5102, 1114, 5042, 5621, 2]
 // Exports: SearchListCardContainer, SearchListCardContent, SearchListCardFooter, SearchListCardThumbnail
 
-// Module 16670 (SearchListContentAuthor)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import nameFromUserDefault from "nameFromUser" /* 4404 */;
-import Text from "Text" /* 4556 */;
-import computeChannelNameDefault from "computeChannelName" /* 4713 */;
-import getChannelIcon from "getChannelIcon" /* 5028 */;
-import ForumIcon from "ForumIcon" /* 5088 */;
-import PressableCard from "PressableCard" /* 5607 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10915 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16707 (SearchListCard)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import UserUtilsDefault from "UserUtils" /* 4418 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import useChannelNameDefault from "useChannelName" /* 4727 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5042 */;
+import ForumIcon from "ForumIcon" /* 5102 */;
+import Card from "Card" /* 5621 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10942 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 class SearchListContentAuthor {
   constructor(arg0) {
     author = global.author;
     tmp = closure_7();
     obj = { style: tmp.author, children: null };
-    obj = { source: global.avatarSource, size: require("Button").AvatarSizes.SIZE_16, style: tmp.avatar, avatarDecoration: author.avatarDecoration };
+    obj1 = { source: global.avatarSource, size: closure_0(closure_2[5]).AvatarSizes.SIZE_16, style: tmp.avatar, avatarDecoration: author.avatarDecoration };
     items = [, ];
-    items[0] = jsx(require("Button").Avatar, obj);
-    obj1 = { style: tmp.authorName, variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: null };
-    obj4 = require("nameFromUser");
-    obj1[4] = obj4.getName(author);
-    items[1] = jsx(require("Text").Text, obj1);
-    obj[1] = items;
+    items[0] = jsx(closure_0(closure_2[5]).Avatar, obj1);
+    obj5 = { style: tmp.authorName, variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: null };
+    obj4 = closure_1(closure_2[7]);
+    obj5.children = obj4.getName(author);
+    items[1] = jsx(closure_0(closure_2[6]).Text, obj5);
+    obj.children = items;
     return jsxs(View, obj);
   }
 }
 function SearchListPrivateChannel(channel) {
   channel = channel.channel;
-  const tmp = callback3();
-  let obj = { style: null, children: null };
+  const tmp = closure_7();
+  const obj = { style: null, children: null };
   if (channel.isGroupDM()) {
-    obj[0] = tmp.channel;
-    obj = { style: null, children: null };
-    obj[0] = tmp.gdmIcon;
-    obj = { channel: null, size: null };
-    obj[0] = channel;
-    obj[1] = Button.AvatarSizes.SIZE_16;
-    obj[1] = callback(FacepileGroupDMAvatarDefault, obj);
-    const items = [callback(tmp6, obj), ];
-    obj1 = { style: null, variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: null };
-    obj1[0] = tmp.channelName;
-    obj1[4] = tmp4;
-    items[1] = callback(Text.Text, obj1);
-    obj[1] = items;
+    obj.style = tmp.channel;
+    const obj2 = { style: tmp.gdmIcon, children: null };
+    const obj3 = { channel, size: native.AvatarSizes.SIZE_16 };
+    obj2.children = hasOwnProperty(GroupDMAvatarDefault, obj3);
+    const items = [hasOwnProperty(tmp6, obj2), ];
+    const obj4 = { style: tmp.channelName, variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: tmp4 };
+    items[1] = hasOwnProperty(Text_Text.Text, obj4);
+    obj.children = items;
     let tmp5Result = tmp5(tmp6, obj);
-    const tmp2Result = FacepileGroupDMAvatarDefault;
+    const tmp2Result = GroupDMAvatarDefault;
   } else {
-    obj[0] = tmp.privateChannelIcon;
-    const obj2 = { style: null, size: "xs", color: "interactive-text-default" };
-    obj2[0] = tmp.icon;
-    const items1 = [callback(ForumIcon.ForumIcon, obj2), ];
-    const obj3 = { variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: null };
-    const intl = getSystemLocale.intl;
-    obj3[3] = intl.string(getSystemLocale.t.ACgJhM);
-    items1[1] = callback(Text.Text, obj3);
-    obj[1] = items1;
+    obj.style = tmp.privateChannelIcon;
+    const obj5 = { style: tmp.icon, size: "xs", color: "interactive-text-default" };
+    const items1 = [hasOwnProperty(ForumIcon.ForumIcon, obj5), ];
+    const obj6 = { variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: null };
+    const intl = util.intl;
+    obj6.children = intl.string(util.t.ACgJhM);
+    items1[1] = hasOwnProperty(Text_Text.Text, obj6);
+    obj.children = items1;
     tmp5Result = tmp5(tmp6, obj);
   }
   return tmp5Result;
@@ -75,89 +66,84 @@ class SearchListGuildChannel {
   constructor(arg0) {
     channel = global.channel;
     tmp = closure_7();
-    tmp2 = require("computeChannelName")(channel);
-    obj = require("getChannelIcon");
-    obj = { style: tmp.channel, children: null };
+    tmp2 = closure_1(closure_2[8])(channel);
+    obj = closure_0(closure_2[12]);
+    obj1 = { style: tmp.channel, children: null };
     channelIcon = obj.getChannelIcon(channel, { ignoreTraits: true });
-    obj1 = { size: require("Button").Icon.Sizes.REFRESH_SMALL_16, source: channelIcon, color: tmp.channelIcon.color };
+    obj5 = { size: closure_0(closure_2[5]).Icon.Sizes.REFRESH_SMALL_16, source: channelIcon, color: tmp.channelIcon.color };
     items = [, ];
-    items[0] = jsx(require("Button").Icon, obj1);
-    obj2 = { style: tmp.channelName, variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: tmp2 };
-    items[1] = jsx(require("Text").Text, obj2);
-    obj[1] = items;
-    return jsxs(View, obj);
+    items[0] = jsx(closure_0(closure_2[5]).Icon, obj5);
+    obj6 = { style: tmp.channelName, variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: tmp2 };
+    items[1] = jsx(closure_0(closure_2[6]).Text, obj6);
+    obj1.children = items;
+    return jsxs(View, obj1);
   }
 }
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { channelName: { flexShrink: 1, marginStart: 4 }, channelIcon: null, avatar: null, channel: null, author: null, authorName: null, container: null, content: null, footer: null, thumbnail: null, privateChannelIcon: null, icon: null, gdmIcon: null };
-createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { marginRight: 2 };
-createCacheKey[3] = { flexDirection: "row", alignItems: "center" };
-createCacheKey[4] = { flexDirection: "row", alignItems: "center" };
-createCacheKey[5] = { flexShrink: 1, marginStart: 2 };
-createCacheKey[6] = { flex: 1, padding: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
-createCacheKey[7] = { paddingTop: 12, paddingHorizontal: 12, paddingBottom: 4 };
-createCacheKey[8] = { flexDirection: "column", paddingTop: 4, paddingHorizontal: 12, paddingBottom: 12, gap: 4 };
-let obj1 = { flex: 1, padding: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
-createCacheKey[9] = { flex: 1, overflow: "hidden", borderTopRightRadius: ThemesDefault.radii.lg, borderTopLeftRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[10] = { flexDirection: "row", alignItems: "center" };
-createCacheKey[11] = { marginRight: 4 };
-createCacheKey[12] = { width: 18 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { flex: 1, overflow: "hidden", borderTopRightRadius: ThemesDefault.radii.lg, borderTopLeftRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
-const result = require("set").fileFinishedImporting("modules/search/native/components/list/SearchListCard.tsx");
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { channelName: { flexShrink: 1, marginStart: 4 }, channelIcon: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }, avatar: { marginRight: 2 }, channel: { flexDirection: "row", alignItems: "center" }, author: { flexDirection: "row", alignItems: "center" }, authorName: { flexShrink: 1, marginStart: 2 }, container: null, content: null, footer: null, thumbnail: null, privateChannelIcon: null, icon: null, gdmIcon: null };
+let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+obj2.container = { flex: 1, padding: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
+obj2.content = { paddingTop: 12, paddingHorizontal: 12, paddingBottom: 4 };
+obj2.footer = { flexDirection: "column", paddingTop: 4, paddingHorizontal: 12, paddingBottom: 12, gap: 4 };
+let obj4 = { flex: 1, padding: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
+obj2.thumbnail = { flex: 1, overflow: "hidden", borderTopRightRadius: nativeDefault.radii.lg, borderTopLeftRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.privateChannelIcon = { flexDirection: "row", alignItems: "center" };
+obj2.icon = { marginRight: 4 };
+obj2.gdmIcon = { width: 18 };
+const React5 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/list/SearchListCard.tsx");
 
 export { SearchListContentAuthor };
 export { SearchListGuildChannel };
 export const SearchListCardContainer = function SearchListCardContainer(arg0) {
   ({ children, onPress, containerStyle } = arg0);
-  const style = [callback3().container, containerStyle];
-  return callback(PressableCard.Card, { shadow: "low", border: "subtle", onPress, style, children });
+  const obj = { shadow: "low", border: "subtle", onPress, style: null, children };
+  const items = [closure_7().container, containerStyle];
+  obj.style = items;
+  return hasOwnProperty(Card.Card, obj);
 };
 export const SearchListCardThumbnail = function SearchListCardThumbnail(children) {
-  return callback(View, { style: callback3().thumbnail, children: children.thumbnail });
+  return hasOwnProperty(View, { style: closure_7().thumbnail, children: children.thumbnail });
 };
 export const SearchListCardContent = function SearchListCardContent(arg0) {
   ({ label, subLabel } = arg0);
-  let obj = { style: callback3().content, children: null };
+  const obj = { style: closure_7().content, children: null };
   let tmp3 = label;
   if (typeof label === "string") {
-    obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: null };
-    obj[3] = label;
-    tmp3 = callback(Text.Text, obj);
+    const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: label };
+    tmp3 = hasOwnProperty(Text_Text.Text, obj2);
   }
   const items = [tmp3, ];
   let tmp4 = subLabel;
   if (typeof subLabel === "string") {
-    obj = { variant: "text-sm/normal", color: "text-default", lineClamp: 1, children: null };
-    obj[3] = subLabel;
-    tmp4 = callback(Text.Text, obj);
+    const obj3 = { variant: "text-sm/normal", color: "text-default", lineClamp: 1, children: subLabel };
+    tmp4 = hasOwnProperty(Text_Text.Text, obj3);
   }
   items[1] = tmp4;
-  obj[1] = items;
-  return closure_6(View, obj);
+  obj.children = items;
+  return timestampProducer(View, obj);
 };
 export const SearchListCardFooter = function SearchListCardFooter(channel) {
   channel = channel.channel;
   ({ author, avatarSource } = channel);
   const items = [channel];
-  let obj = { style: callback3().footer, children: null };
-  const memo = React.useMemo(() => {
-    let obj = channel;
+  const obj = { style: closure_7().footer, children: null };
+  const memo = noop.useMemo(() => {
     if (null == channel) {
       return null;
     } else if (null == obj.getGuildId()) {
-      obj = { channel: null };
-      obj[0] = obj;
-      let tmp3 = closure_1_5(closure_1_9, obj);
+      const obj2 = { channel: obj };
+      let tmp3 = hasOwnProperty(SearchListPrivateChannel, obj2);
     } else {
-      obj = { channel: null };
-      obj[0] = obj;
-      tmp3 = closure_1_5(closure_1_10, obj);
+      const obj3 = { channel: obj };
+      tmp3 = hasOwnProperty(SearchListGuildChannel, obj3);
     }
   }, items);
-  const items1 = [callback(SearchListContentAuthor, { author, avatarSource }), memo];
-  obj[1] = items1;
-  return callback2(View, obj);
+  const items1 = [closure_5(SearchListContentAuthor, { author, avatarSource }), memo];
+  obj.children = items1;
+  return closure_6(View, obj);
 };

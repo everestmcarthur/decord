@@ -1,31 +1,32 @@
-// Module ID: 4783
-// Function ID: 4784
-// Name: createMinimalMessageRecord
-// Dependencies: [4784, 4210, 1385, 502, 4209, 1371, 1074, 4785, 4543, 4793, 11, 4798, 4799, 4896, 4153, 4897, 4899, 2]
+// Module ID: 4797
+// Function ID: 4798
+// Name: MessageRecordUtils
+// Dependencies: [4798, 4223, 1385, 502, 4222, 1371, 1074, 4799, 4557, 4807, 11, 4812, 4813, 4910, 4166, 4911, 4913, 2]
 // Exports: canEditMessageWithStickers, hasEphemeralAppearance, updateMessageRecord, updateServerMessage
 
-// Module 4783 (createMinimalMessageRecord)
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import hooksDefault from "hooks" /* 4153 */;
-import getPathsFromURLDefault from "getPathsFromURL" /* 4543 */;
-import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4793 */;
-import isMentionedDefault from "isMentioned" /* 4798 */;
-import _resolveGiftCode from "_resolveGiftCode" /* 4799 */;
-import transformMessagePollDefault from "transformMessagePoll" /* 4896 */;
-import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4899 */;
-import closure_3 from "createFromServer" /* 4784 */;
-import hasFlag from "hasFlag" /* 4210 */;
-import closure_6 from "hasFlag" /* 4210 */;
-import importDefaultResult from "createdAt" /* 1385 */;
-import closure_8 from "fetchFingerprint" /* 502 */;
-import closure_9 from "markAllUserIdListsStale" /* 4209 */;
-import closure_10 from "mergeGuildAvatar" /* 1371 */;
-import ME from "ME" /* 1074 */;
+// Module 4797 (MessageRecordUtils)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import _modDef4166 from "module_4166" /* 4166 */;
+import findCodedLinksDefault from "findCodedLinks" /* 4557 */;
+import useMessageAuthor from "useMessageAuthor" /* 4807 */;
+import isMessageMentioned from "isMessageMentioned" /* 4812 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 4813 */;
+import transformMessagPollDefault from "transformMessagPoll" /* 4910 */;
+import EmbedUtils from "EmbedUtils" /* 4911 */;
+import StickersUtils from "StickersUtils" /* 4913 */;
+import InteractionRecord from "InteractionRecord" /* 4798 */;
+import MessageRecord_mod from "MessageRecord" /* 4223 */;
+import UserRecord from "UserRecord" /* 1385 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+const require = globalThis.__r;
+const isMessageMentionedDefault = isMessageMentioned;
+
+require = fn;
 function createMinimalMessageRecord(timestamp) {
   const obj = {};
-  let tmp = closure_5;
   const merged = Object.assign(timestamp);
   obj.timestamp = new Date(timestamp.timestamp);
   let date1 = null;
@@ -39,39 +40,39 @@ function createMinimalMessageRecord(timestamp) {
     attachments = [];
   }
   obj.attachments = attachments;
-  const _require = timestamp;
+  _require = timestamp;
   if (null == timestamp.embeds) {
     let items = [];
   } else {
     const embeds = timestamp.embeds;
-    const mapped = embeds.map((footer) => message2(closure_1_2[15]).sanitizeEmbed(message2.channel_id, message2.id, footer));
-    items = _require(4897).mergeEmbedsOnURL(mapped);
-    const obj2 = _require(4897);
+    const mapped = embeds.map((item) => EmbedUtils.sanitizeEmbed(message2.channel_id, message2.id, item));
+    items = require("EmbedUtils").mergeEmbedsOnURL(mapped);
+    const obj2 = require("EmbedUtils");
   }
   obj.embeds = items;
   const date = new Date(timestamp.timestamp);
+  const tmp = closure_5;
   let components = timestamp.components;
   if (components == null) {
     components = [];
   }
-  obj.components = _require(4785).transformComponents(components);
+  obj.components = require("InteractionComponentUtils").transformComponents(components);
   const NON_PARSED = constants3.NON_PARSED;
   if (NON_PARSED.has(timestamp.type)) {
     let items1 = [];
   } else {
-    items1 = getPathsFromURLDefault(timestamp.content);
+    items1 = findCodedLinksDefault(timestamp.content);
   }
   obj.codedLinks = items1;
-  tmp = new tmp(obj);
-  return tmp;
+  const obj3 = require("InteractionComponentUtils");
+  return new tmp(obj);
 }
-function createMessageRecord(message, message) {
-  let obj = message;
-  if (message === undefined) {
+function createMessageRecord(message, arg1) {
+  let obj = arg1;
+  if (arg1 === undefined) {
     obj = {};
   }
   ({ reactions, interactionData } = obj);
-  obj1 = createMinimalMessageRecord(message);
   const mentions = message.mentions;
   let mapped;
   if (mentions != null) {
@@ -89,24 +90,23 @@ function createMessageRecord(message, message) {
     mention_channels = [];
   }
   if (null == message.author) {
-    let user = closure_14;
+    let user = importDefaultResult1;
   } else if (null != message.webhook_id) {
-    user = new closure_7(message.author);
+    user = new UserRecord(message.author);
   } else {
-    user = user.getUser(message.author.id);
+    user = UserStore.getUser(message.author.id);
     if (user == null) {
-      user = new closure_7(message.author);
+      user = new UserRecord(message.author);
     }
   }
-  let obj2 = useNullableMessageAuthor;
-  obj = { channel_id: message.channel_id, author: user };
-  const messageAuthor = obj2.getMessageAuthor(obj);
+  let obj2 = createMinimalMessageRecord(message);
+  const messageAuthor = useMessageAuthor.getMessageAuthor({ channel_id: message.channel_id, author: user });
   if (message != null) {
     const gift_info = message.gift_info;
   }
   let fromServer = null;
   if (null != message.interaction) {
-    fromServer = closure_3.createFromServer(message.interaction);
+    fromServer = InteractionRecord.createFromServer(message.interaction);
   }
   if (message.type === constants2.THREAD_STARTER_MESSAGE) {
     const referenced_message = message.referenced_message;
@@ -127,7 +127,7 @@ function createMessageRecord(message, message) {
     }
     str = "";
     tmp17 = content;
-    obj5 = DISCORD_EPOCHDefault;
+    obj5 = SnowflakeUtilsDefault;
   }
   let tmp20;
   if (message.type === constants2.PREMIUM_GROUP_INVITE) {
@@ -137,45 +137,46 @@ function createMessageRecord(message, message) {
     }
     str = "";
     tmp20 = content1;
-    obj6 = DISCORD_EPOCHDefault;
+    obj6 = SnowflakeUtilsDefault;
   }
-  obj = {};
-  let tmp23 = closure_6;
+  const obj9 = {};
   const merged = Object.assign(message);
   const merged1 = Object.assign(messageAuthor);
-  const merged2 = Object.assign(obj1.toJS());
-  obj.author = user;
-  obj.webhookId = message.webhook_id;
-  let isBlockedForMessageResult = blockedForMessage.isBlockedForMessage(message);
+  const merged2 = Object.assign(obj2.toJS());
+  obj9.author = user;
+  obj9.webhookId = message.webhook_id;
+  let isBlockedForMessageResult = RelationshipStore.isBlockedForMessage(message);
   if (!isBlockedForMessageResult) {
     isBlockedForMessageResult = null != tmp15 && obj8.isBlocked(tmp15);
     const tmp28 = null != tmp15 && obj8.isBlocked(tmp15);
   }
-  obj.blocked = isBlockedForMessageResult;
+  obj9.blocked = isBlockedForMessageResult;
   let isIgnoredForMessageResult = obj8.isIgnoredForMessage(message);
   if (!isIgnoredForMessageResult) {
     isIgnoredForMessageResult = null != tmp15 && obj8.isIgnored(tmp15);
     const tmp30 = null != tmp15 && obj8.isIgnored(tmp15);
   }
-  obj.ignored = isIgnoredForMessageResult;
-  obj.mentionEveryone = message.mention_everyone;
-  obj.mentions = mapped;
-  obj.mentionRoles = mention_roles;
-  obj.mentionChannels = mention_channels;
-  obj.messageReference = message.message_reference;
-  let tmp9Result = tmp9(4798);
-  obj1 = { userId: store.getId(), channelId: message.channel_id, mentionEveryone: null, mentionUsers: null, mentionRoles: null };
+  obj9.ignored = isIgnoredForMessageResult;
+  obj9.mentionEveryone = message.mention_everyone;
+  obj9.mentions = mapped;
+  obj9.mentionRoles = mention_roles;
+  obj9.mentionChannels = mention_channels;
+  obj9.messageReference = message.message_reference;
+  const obj4 = { channel_id: message.channel_id, author: user };
+  const tmp23 = MessageRecord;
+  const obj10 = { userId: AuthenticationStore.getId(), channelId: message.channel_id, mentionEveryone: null, mentionUsers: null, mentionRoles: null };
   let flag = message.mention_everyone;
   if (flag == null) {
     flag = false;
   }
-  obj1[2] = flag;
-  obj1[3] = mapped;
-  obj1[4] = mention_roles;
-  obj.mentioned = tmp9Result.isMentioned(obj1);
-  tmp9Result = tmp9(4799);
-  const isGiftCodeEmbedResult = tmp9Result.isGiftCodeEmbed(message);
-  const findGiftCodes = _resolveGiftCode.findGiftCodes;
+  obj10.mentionEveryone = flag;
+  obj10.mentionUsers = mapped;
+  obj10.mentionRoles = mention_roles;
+  obj9.mentioned = isMessageMentioned.isMentioned(obj10);
+  const tmp9Result = isMessageMentioned;
+  const tmp9Result3 = GiftCodeUtils;
+  const isGiftCodeEmbedResult = GiftCodeUtils.isGiftCodeEmbed(message);
+  const findGiftCodes = GiftCodeUtils.findGiftCodes;
   if (isGiftCodeEmbedResult) {
     let url;
     if (message != null) {
@@ -185,10 +186,10 @@ function createMessageRecord(message, message) {
   } else {
     findGiftCodesResult = findGiftCodes(message.content);
   }
-  obj.giftCodes = findGiftCodesResult;
-  obj.content = str;
-  obj.referralTrialOfferId = tmp17;
-  obj.premiumGroupInviteId = tmp20;
+  obj9.giftCodes = findGiftCodesResult;
+  obj9.content = str;
+  obj9.referralTrialOfferId = tmp17;
+  obj9.premiumGroupInviteId = tmp20;
   const call = message.call;
   let tmp36 = null;
   if (null != call) {
@@ -196,77 +197,71 @@ function createMessageRecord(message, message) {
     if (null != call.ended_timestamp) {
       const _Date = Date;
       const date = new Date(call.ended_timestamp);
-      tmp39Result = hooksDefault(date);
-      const tmp39 = hooksDefault;
+      tmp39Result = _modDef4166(date);
     }
     let durationResult = null;
     if (null != tmp39Result) {
-      durationResult = hooksDefault.duration(tmp39Result.diff(tmp35));
-      const obj12 = hooksDefault;
+      durationResult = _modDef4166.duration(tmp39Result.diff(tmp35));
     }
-    obj2 = { participants: null, endedTimestamp: null, duration: null };
-    obj2[0] = call.participants;
-    obj2[1] = tmp39Result;
-    obj2[2] = durationResult;
-    tmp36 = obj2;
+    const obj11 = { participants: call.participants, endedTimestamp: tmp39Result, duration: durationResult };
+    tmp36 = obj11;
   }
-  obj.call = tmp36;
+  obj9.call = tmp36;
   if (null == message.message_snapshots) {
     let items = [];
   } else {
     const message_snapshots = message.message_snapshots;
     items = message_snapshots.map((message) => {
-      const obj = { message: callback(message.message), moderator_report: message.moderator_report };
-      return new closure_4({ message: callback(message.message), moderator_report: message.moderator_report });
+      const obj = { message: createMinimalMessageRecord(message.message), moderator_report: message.moderator_report };
+      return new closure_1_4({ message: createMinimalMessageRecord(message.message), moderator_report: message.moderator_report });
     });
   }
-  obj.messageSnapshots = items;
+  obj9.messageSnapshots = items;
   if (reactions == null) {
     reactions = message.reactions;
   }
   const poll = message.poll;
   if (null == reactions) {
-    let results;
+    let results1;
     if (poll != null) {
-      results = poll.results;
+      results1 = poll.results;
     }
-    if (null == results) {
+    if (null == results1) {
       let items1 = [];
     }
-    obj.reactions = items1;
-    obj.interaction = fromServer;
+    obj9.reactions = items1;
+    obj9.interaction = fromServer;
     if (interactionData == null) {
       interactionData = message.interaction_data;
     }
-    obj.interactionData = interactionData;
+    obj9.interactionData = interactionData;
     ({ interaction_metadata: obj7.interactionMetadata, role_subscription_data: obj7.roleSubscriptionData, purchase_notification: obj7.purchaseNotification } = message);
     let tmp50;
     if (null != message.poll) {
-      tmp50 = transformMessagePollDefault(message.poll);
+      tmp50 = transformMessagPollDefault(message.poll);
     }
-    obj.poll = tmp50;
-    obj.sharedClientTheme = message.shared_client_theme;
+    obj9.poll = tmp50;
+    obj9.sharedClientTheme = message.shared_client_theme;
     let tmp52;
     if (null != gift_info) {
       tmp52 = gift_info;
     }
-    obj.giftInfo = tmp52;
-    obj.giftingPrompt = message.gifting_prompt;
-    obj.boostingPrompt = message.boosting_prompt;
-    tmp23 = new tmp23(obj);
-    return tmp23;
+    obj9.giftInfo = tmp52;
+    obj9.giftingPrompt = message.gifting_prompt;
+    obj9.boostingPrompt = message.boosting_prompt;
+    const tmp232 = new tmp23(obj9);
+    return tmp232;
   }
   let mapped1;
   if (poll != null) {
-    results = poll.results;
+    const results = poll.results;
     if (results != null) {
       const answer_counts = results.answer_counts;
-      mapped1 = answer_counts.map((me_vote) => {
-        obj = { count_details: obj, me_vote: me_vote.me_voted, emoji: null, me: false, me_burst: false, count: null, burst_count: 0 };
-        obj = { vote: me_vote.count };
-        obj = { id: str.toString(), name: "", animated: false };
-        obj[2] = obj;
-        obj[5] = me_vote.count;
+      mapped1 = answer_counts.map((vote) => {
+        const obj = { count_details: { vote: vote.count }, me_vote: vote.me_voted, emoji: null, me: false, me_burst: false, count: null, burst_count: 0 };
+        const obj2 = { id: vote.id.toString(), name: "", animated: false };
+        obj.emoji = obj2;
+        obj.count = vote.count;
         return obj;
       });
     }
@@ -279,9 +274,9 @@ function createMessageRecord(message, message) {
     mapped1 = [];
   }
   HermesBuiltin.arraySpread(mapped1, tmp48);
-  items1 = items2.map((arg0) => {
+  items1 = items2.map((item) => {
     const obj = {};
-    const merged = Object.assign(arg0);
+    const merged = Object.assign(item);
     if (null != obj.count_details) {
       let num = obj.count_details.burst;
       if (num == null) {
@@ -303,18 +298,22 @@ function createMessageRecord(message, message) {
     return obj;
   });
 }
-({ MessageSnapshotRecord: c4, MinimalMessageRecord: c5 } = hasFlag);
-const error = importDefaultResult;
-({ MessageFlags: unpackModuleId, MessageTypes: closure_12, MessageTypesSets: map1 } = ME);
-importDefaultResult = new importDefaultResult({ id: "???", username: "???" });
-let result = require("set").fileFinishedImporting("modules/messages/MessageRecordUtils.tsx");
+let MessageRecord = fn(4223);
+({ MessageSnapshotRecord: closure_4, MinimalMessageRecord: hasOwnProperty } = MessageRecord);
+let MessageRecord = MessageRecord_mod;
+const Constants = fn(1074);
+({ MessageFlags: closure_11, MessageTypes: closure_12, MessageTypesSets: map1 } = Constants);
+const importDefaultResult1 = new UserRecord({ id: "???", username: "???" });
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/messages/MessageRecordUtils.tsx");
 
 export { createMessageRecord };
 export const updateServerMessage = function updateServerMessage(message, message2) {
   if (null != message2.edited_timestamp) {
-    let obj = {};
+    const obj3 = {};
     const merged = Object.assign(message2);
     ({ reactions: obj2.reactions, interaction_data: obj2.interaction_data } = message);
+    let obj = obj3;
   } else {
     obj = {};
     const merged1 = Object.assign(message);
@@ -324,9 +323,8 @@ export const updateServerMessage = function updateServerMessage(message, message
 };
 export const updateMessageRecord = function updateMessageRecord(message, message2) {
   if (null != message2.edited_timestamp) {
-    let obj = { reactions: null, interactionData: null };
-    ({ reactions: obj21[0], interactionData: obj21[1] } = message);
-    return createMessageRecord(message2, obj);
+    ({ reactions: obj21.reactions, interactionData: obj21.interactionData } = message);
+    return createMessageRecord(message2, { reactions: null, interactionData: null });
   } else {
     let result = message;
     if (null != message2.call) {
@@ -337,19 +335,14 @@ export const updateMessageRecord = function updateMessageRecord(message, message
         if (null != call.ended_timestamp) {
           const _Date = Date;
           const date = new Date(call.ended_timestamp);
-          tmp = hooksDefault(date);
-          const tmp4 = hooksDefault;
+          tmp = _modDef4166(date);
         }
         let durationResult = null;
         if (null != tmp) {
-          obj = hooksDefault;
-          durationResult = obj.duration(tmp.diff(tmp46));
+          durationResult = _modDef4166.duration(tmp.diff(tmp46));
         }
-        obj = { participants: null, endedTimestamp: null, duration: null };
-        obj[0] = call.participants;
-        obj[1] = tmp;
-        obj[2] = durationResult;
-        tmp13 = obj;
+        const obj3 = { participants: call.participants, endedTimestamp: tmp, duration: durationResult };
+        tmp13 = obj3;
       }
       result = message.set("call", tmp13);
     }
@@ -381,7 +374,7 @@ export const updateMessageRecord = function updateMessageRecord(message, message
         }
         let result6 = result5;
         if (tmp21) {
-          const tmp25 = new closure_7(message2.author);
+          const tmp25 = new UserRecord(message2.author);
           result6 = result5.set("author", tmp25);
         }
         let result7 = result6;
@@ -390,8 +383,8 @@ export const updateMessageRecord = function updateMessageRecord(message, message
         }
         let result8 = result7;
         if (null != message2.components) {
-          result8 = result7.set("components", _require(4785).transformComponents(message2.components));
-          const obj14 = _require(4785);
+          result8 = result7.set("components", require("InteractionComponentUtils").transformComponents(message2.components));
+          const obj14 = require("InteractionComponentUtils");
         }
         let result9 = result8;
         if (null != message2.role_subscription_data) {
@@ -400,7 +393,7 @@ export const updateMessageRecord = function updateMessageRecord(message, message
         if (null == message2.reactions) {
           let result10 = result9;
           if (null != message2.poll) {
-            result10 = result9.set("poll", transformMessagePollDefault(message2.poll));
+            result10 = result9.set("poll", transformMessagPollDefault(message2.poll));
           }
           let flag = false;
           let result11 = result10;
@@ -421,11 +414,8 @@ export const updateMessageRecord = function updateMessageRecord(message, message
           }
           let result14 = result13;
           if (flag) {
-            obj1 = { message: null, userId: null };
-            obj1[0] = result13;
-            obj1[1] = store.getId();
-            result14 = result13.set("mentioned", isMentionedDefault(obj1));
-            const tmp43 = isMentionedDefault;
+            const obj4 = { message: result13, userId: AuthenticationStore.getId() };
+            result14 = result13.set("mentioned", isMessageMentionedDefault(obj4));
           }
           return result14;
         } else {
@@ -440,11 +430,11 @@ export const updateMessageRecord = function updateMessageRecord(message, message
               reactions = [];
             }
             const items1 = [];
-            let arraySpreadResult = HermesBuiltin.arraySpread(reactions, 0);
-            arraySpreadResult = HermesBuiltin.arraySpread([], arraySpreadResult);
-            items = items1.map((arg0) => {
+            const arraySpreadResult = HermesBuiltin.arraySpread(reactions, 0);
+            HermesBuiltin.arraySpread([], arraySpreadResult);
+            items = items1.map((item) => {
               const obj = {};
-              const merged = Object.assign(arg0);
+              const merged = Object.assign(item);
               if (null != obj.count_details) {
                 let num = obj.count_details.burst;
                 if (num == null) {
@@ -476,8 +466,8 @@ export const updateMessageRecord = function updateMessageRecord(message, message
         } else {
           const message_snapshots = message2.message_snapshots;
           items2 = message_snapshots.map((message) => {
-            const obj = { message: callback(message.message), moderator_report: message.moderator_report };
-            return new closure_4({ message: callback(message.message), moderator_report: message.moderator_report });
+            const obj = { message: createMinimalMessageRecord(message.message), moderator_report: message.moderator_report };
+            return new closure_1_4({ message: createMinimalMessageRecord(message.message), moderator_report: message.moderator_report });
           });
         }
         const result16 = result4.set("messageSnapshots", items2);
@@ -488,16 +478,16 @@ export const updateMessageRecord = function updateMessageRecord(message, message
         let items3 = [];
       } else {
         const embeds = message2.embeds;
-        const mapped = embeds.map((footer) => message2(closure_1_2[15]).sanitizeEmbed(message2.channel_id, message2.id, footer));
-        items3 = _require(4897).mergeEmbedsOnURL(mapped);
-        const obj9 = _require(4897);
+        const mapped = embeds.map((item) => EmbedUtils.sanitizeEmbed(message2.channel_id, message2.id, item));
+        items3 = require("EmbedUtils").mergeEmbedsOnURL(mapped);
+        const obj9 = require("EmbedUtils");
       }
       const result17 = result4.set("embeds", items3);
     }
   }
 };
 export const canEditMessageWithStickers = function canEditMessageWithStickers(content) {
-  let tmp = 0 === getStickerExtensionFromFormatType.getMessageStickers(content).length;
+  let tmp = 0 === StickersUtils.getMessageStickers(content).length;
   if (!tmp) {
     tmp = "" !== content.content;
   }

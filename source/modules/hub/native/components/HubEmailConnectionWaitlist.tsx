@@ -1,63 +1,58 @@
-// Module ID: 12738
-// Function ID: 12739
+// Module ID: 12764
+// Function ID: 12765
 // Name: HubEmailConnectionWaitlist
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 1483, 7377, 1114, 12739, 1178, 4556, 4975, 2]
+// Dependencies: [19, 17, 1074, 21, 4574, 576, 1483, 7391, 1114, 12765, 1178, 4570, 4989, 2]
 // Exports: default
 
-// Module 12738 (HubEmailConnectionWaitlist)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12764 (HubEmailConnectionWaitlist)
+import nativeDefault from "native" /* 576 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ View: c4, Image: c5 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: { flex: 1, alignItems: "center", justifyContent: "center" }, header: { marginBottom: 16 }, title: null, description: null, redesignButton: null };
-createCacheKey = { fontFamily: require("ME").Fonts.PRIMARY_BOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8 };
-createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { textAlign: "center", marginBottom: 16 };
-createCacheKey[4] = { paddingHorizontal: 16, width: "100%" };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/hub/native/components/HubEmailConnectionWaitlist.tsx");
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { flex: 1, alignItems: "center", justifyContent: "center" }, header: { marginBottom: 16 }, title: { fontFamily: fn(1074).Fonts.PRIMARY_BOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 16 }, redesignButton: { paddingHorizontal: 16, width: "100%" } };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/hub/native/components/HubEmailConnectionWaitlist.tsx");
 
 export default function HubEmailConnectionWaitlist(school) {
   const onClose = school.onClose;
-  let navigation;
-  const tmp = callback3();
-  let obj = onClose(1483);
-  navigation = obj.useNavigation();
+  const tmp = closure_8();
+  const navigation = onClose(1483).useNavigation();
   const items = [navigation, onClose];
-  const layoutEffect = React.useLayoutEffect(() => {
+  const layoutEffect = noop.useLayoutEffect(() => {
     navigation.setOptions({
       headerLeft() {
         const obj = { text: null, onPress: null };
-        const intl = closure_1_0(closure_1_2[8]).intl;
-        obj[0] = intl.string(closure_1_0(closure_1_2[8]).t.cpT0Cq);
-        obj[1] = closure_0;
-        return closure_1_6(closure_1_0(closure_1_2[7]).HeaderActionButton, obj);
+        const intl = onClose(1114).intl;
+        obj.text = intl.string(onClose(1114).t.cpT0Cq);
+        obj.onPress = onPress;
+        return closure_2_6(onClose(7391).HeaderActionButton, obj);
       }
     });
   }, items);
-  obj = { style: tmp.container, children: null };
-  obj = { source: navigation(12739), style: tmp.header };
-  const items1 = [callback(closure_5, obj), , , ];
-  obj1 = { style: tmp.title, accessibilityRole: "header", children: null };
+  const obj2 = { style: tmp.container, children: null };
+  let obj = onClose(1483);
+  const items1 = [closure_6(closure_5, { source: navigation(12765), style: tmp.header }), , , ];
+  const obj4 = { style: tmp.title, accessibilityRole: "header", children: null };
   let intl = onClose(1114).intl;
-  obj1[2] = intl.string(onClose(1114).t.OaloU5);
-  items1[1] = callback(onClose(1178).LegacyText, obj1);
-  const obj2 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  obj4.children = intl.string(onClose(1114).t.OaloU5);
+  items1[1] = closure_6(onClose(1178).LegacyText, obj4);
+  const obj5 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = onClose(1114).intl;
-  obj2[3] = intl2.format(onClose(1114).t.Rs7MXJ, { school: school.school });
-  items1[2] = callback(onClose(4556).Text, obj2);
-  const obj3 = { style: tmp.redesignButton, children: null };
-  const obj4 = { size: "lg", text: null, onPress: null };
+  obj5.children = intl2.format(onClose(1114).t.Rs7MXJ, { school: school.school });
+  items1[2] = closure_6(onClose(4570).Text, obj5);
+  const obj6 = { style: tmp.redesignButton, children: null };
+  const obj7 = { size: "lg", text: null, onPress: null };
   const intl3 = onClose(1114).intl;
-  obj4[1] = intl3.string(onClose(1114).t.i4jeWR);
-  obj4[2] = onClose;
-  obj3[1] = callback(onClose(4975).Button, obj4);
-  items1[3] = callback(closure_4, obj3);
-  obj[1] = items1;
-  return callback2(closure_4, obj);
+  obj7.text = intl3.string(onClose(1114).t.i4jeWR);
+  obj7.onPress = onClose;
+  obj6.children = closure_6(onClose(4989).Button, obj7);
+  items1[3] = closure_6(closure_4, obj6);
+  obj2.children = items1;
+  return closure_7(closure_4, obj2);
 };

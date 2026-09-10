@@ -1,17 +1,17 @@
-// Module ID: 5771
-// Function ID: 5772
+// Module ID: 5785
+// Function ID: 5786
 // Name: AvatarMoatmonsturrExample
-// Dependencies: [21, 5587, 5772, 2]
+// Dependencies: [21, 5601, 5786, 2]
 // Exports: AvatarMoatmonsturrExample
 
-// Module 5771 (AvatarMoatmonsturrExample)
-import set from "set" /* 2 */;
+// Module 5785 (AvatarMoatmonsturrExample)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 5772 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5786 from "module_5786" /* 5786 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/AvatarMoatmonsturrExample.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/AvatarMoatmonsturrExample.native.tsx");
 
 export const AvatarMoatmonsturrExample = function AvatarMoatmonsturrExample(width) {
   let num = width.width;
@@ -27,14 +27,14 @@ export const AvatarMoatmonsturrExample = function AvatarMoatmonsturrExample(widt
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
-  obj = { width: num * num3, height: num2 * num3 };
-  const items = [obj];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { width: num * num3, height: num2 * num3 });
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef5786 };
+  obj.source = obj2;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

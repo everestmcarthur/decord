@@ -1,28 +1,28 @@
-// Module ID: 9676
-// Function ID: 9677
-// Name: canManageResource
-// Dependencies: [32, 19, 4199, 1371, 9677, 1085, 1086, 1971, 504, 2]
+// Module ID: 9703
+// Function ID: 9704
+// Name: useManageResourcePermissions
+// Dependencies: [32, 19, 4212, 1371, 9704, 1085, 1086, 1971, 504, 2]
 // Exports: attachChannelPermissions, getManageResourcePermissions, useManageResourcePermissions
 
-// Module 9676 (canManageResource)
-import fromStringAll from "fromString" /* 1086 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_6 from "mergeGuildAvatar" /* 1371 */;
-import VIEW_CHANNEL from "VIEW_CHANNEL" /* 9677 */;
-import { Permissions } from "sum" /* 1085 */;
+// Module 9703 (useManageResourcePermissions)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-function canManageResource(arg0, arg1, arg2, arg3) {
+const require = globalThis.__r;
+
+const require = fn;
+function canManageResource(arg0, stateFromStores, canResult1, c0) {
   let creator_id = arg0;
   let tmp = null != arg0;
   if (tmp) {
-    if (arg2) {
+    if (canResult1) {
       tmp = tmp3;
     } else {
-      let id = arg1;
-      let tmp4 = arg3;
+      let id = stateFromStores;
+      let tmp4 = c0;
       if ("creator_id" in creator_id) {
         if (tmp4) {
           tmp4 = null != id;
@@ -51,11 +51,11 @@ function canManageResource(arg0, arg1, arg2, arg3) {
           }
           if (tmp6) {
             const user = creator_id.user;
-            id = undefined;
+            let id1;
             if (user != null) {
-              id = user.id;
+              id1 = user.id;
             }
-            tmp6 = id === id.id;
+            tmp6 = id1 === id.id;
           }
           tmp5 = tmp6;
         }
@@ -64,7 +64,9 @@ function canManageResource(arg0, arg1, arg2, arg3) {
   }
   return tmp;
 }
-({ CREATE_GUILD_EVENT_CORE_PERMISSIONS: error, CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: closure_8, CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: c9 } = VIEW_CHANNEL);
+const PermissionsConstants = fn(9704);
+({ CREATE_GUILD_EVENT_CORE_PERMISSIONS: closure_7, CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: closure_8, CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: closure_9 } = PermissionsConstants);
+const Permissions = fn(1085).Permissions;
 let closure_11 = {
   canCreateExpressions: false,
   canCreateGuildEvent: false,
@@ -77,7 +79,8 @@ let closure_11 = {
     return false;
   }
 };
-const result = require("set").fileFinishedImporting("modules/permissions/useManageResourcePermissions.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/permissions/useManageResourcePermissions.tsx");
 
 export const attachChannelPermissions = function attachChannelPermissions(channel) {
   if (null == channel) {
@@ -85,21 +88,19 @@ export const attachChannelPermissions = function attachChannelPermissions(channe
     ({ CREATE_EVENTS: arr2[0], MANAGE_EVENTS: arr2[1] } = Permissions);
     return items;
   } else {
-    let tmp = closure_7;
+    let tmp = React5;
     if (channel.isGuildStageVoice()) {
-      tmp = closure_8;
+      tmp = React6;
     } else if (channel.isGuildVoice()) {
-      tmp = closure_9;
+      tmp = React7;
     }
-    const items1 = [fromStringAll.combine(tmp, Permissions.CREATE_EVENTS), ];
-    const obj = fromStringAll;
-    items1[1] = fromStringAll.combine(tmp, Permissions.MANAGE_EVENTS);
+    const items1 = [BigFlagUtilsAll.combine(tmp, Permissions.CREATE_EVENTS), ];
+    items1[1] = BigFlagUtilsAll.combine(tmp, Permissions.MANAGE_EVENTS);
     return items1;
   }
 };
 export const useManageResourcePermissions = function useManageResourcePermissions(channel) {
-  const _require = channel;
-  let obj = _require(1971);
+  _require = channel;
   if (obj.isGuildRecord(channel)) {
     let items = [, ];
     ({ CREATE_EVENTS: arr3[0], MANAGE_EVENTS: arr3[1] } = Permissions);
@@ -115,51 +116,44 @@ export const useManageResourcePermissions = function useManageResourcePermission
     } else if (channel.isGuildVoice()) {
       tmp4 = closure_9;
     }
-    items2 = [fromStringAll.combine(tmp4, Permissions.CREATE_EVENTS), ];
-    const obj2 = fromStringAll;
-    items2[1] = fromStringAll.combine(tmp4, Permissions.MANAGE_EVENTS);
-    const obj3 = fromStringAll;
+    items2 = [BigFlagUtilsAll.combine(tmp4, Permissions.CREATE_EVENTS), ];
+    items2[1] = BigFlagUtilsAll.combine(tmp4, Permissions.MANAGE_EVENTS);
   }
-  [importAll, dependencyMap] = first(items2, 2);
-  let tmpResult = tmp(504);
+  obj = require("GuildRecordUtils");
+  [importAll, dependencyMap] = canCreateExpressions(items2, 2);
+  const tmp9 = canCreateExpressions(items2, 2);
   const items3 = [closure_5];
-  const tmp10 = first(tmpResult.useStateFromStoresArray(items3, () => {
-    const items = [closure_5.can(closure_1_10.CREATE_GUILD_EXPRESSIONS, closure_0), closure_5.can(closure_1_10.MANAGE_GUILD_EXPRESSIONS, closure_0), closure_5.can(closure_1, closure_0), closure_5.can(closure_2, closure_0)];
+  const tmp10 = canCreateExpressions(require("initialize").useStateFromStoresArray(items3, () => {
+    const items = [PermissionStore.can(Permissions.CREATE_GUILD_EXPRESSIONS, closure_0), PermissionStore.can(Permissions.MANAGE_GUILD_EXPRESSIONS, closure_0), PermissionStore.can(importAll, closure_0), PermissionStore.can(dependencyMap, closure_0)];
     return items;
   }), 4);
-  first = tmp10[0];
-  const React = tmp12;
+  canCreateExpressions = tmp10[0];
+  noop = tmp12;
   closure_5 = tmp13;
-  closure_6 = tmp14;
-  tmpResult = tmp(504);
-  const items4 = [closure_6];
-  stateFromStores = tmpResult.useStateFromStores(items4, () => currentUser.getCurrentUser());
-  const items5 = [first, tmp10[1], stateFromStores];
+  const currentUser = tmp14;
+  const tmpResult = require("initialize");
+  const items4 = [currentUser];
+  stateFromStores = require("initialize").useStateFromStores(items4, () => currentUser.getCurrentUser());
+  const items5 = [canCreateExpressions, tmp10[1], stateFromStores];
   const items6 = [tmp10[3], tmp10[2], stateFromStores];
-  const callback = React.useCallback((arg0) => closure_1_12(arg0, stateFromStores, closure_4, first), items5);
+  const callback = noop.useCallback((arg0) => canManageResource(arg0, stateFromStores, closure_4, first), items5);
   if (null == channel) {
-    obj = closure_11;
+    let obj4 = closure_11;
   } else {
-    obj = { canCreateExpressions: null, canCreateGuildEvent: null, canManageAllExpressions: null, canManageAllEvents: null, canManageGuildExpression: null, canManageGuildEvent: null };
-    obj[0] = first;
-    obj[1] = tmp13;
-    obj[2] = tmp12;
-    obj[3] = tmp14;
-    obj[4] = callback;
-    obj[5] = tmp17;
+    obj4 = { canCreateExpressions, canCreateGuildEvent: tmp13, canManageAllExpressions: tmp12, canManageAllEvents: tmp14, canManageGuildExpression: callback, canManageGuildEvent: tmp17 };
   }
-  return obj;
+  return obj4;
 };
-export const getManageResourcePermissions = function getManageResourcePermissions(guild, c6, closure_7) {
+export const getManageResourcePermissions = function getManageResourcePermissions(guild, c6, UserStore) {
   let obj = c6;
   if (c6 === undefined) {
-    obj = closure_5;
+    obj = PermissionStore;
   }
-  let obj2 = closure_7;
-  if (closure_7 === undefined) {
-    obj2 = closure_6;
+  let obj2 = UserStore;
+  if (UserStore === undefined) {
+    obj2 = UserStore;
   }
-  let _require;
+  _require = undefined;
   let canResult1;
   let canResult2;
   let canResult3;
@@ -187,7 +181,7 @@ export const getManageResourcePermissions = function getManageResourcePermission
     items2[1] = canResult1(tmp[6]).combine(tmp3, Permissions.MANAGE_EVENTS);
     const obj5 = canResult1(tmp[6]);
   }
-  obj3 = _require(canResult2[7]);
+  obj3 = require("GuildRecordUtils");
   [tmp9, tmp10] = canResult3(items2, 2);
   const canResult = obj.can(tmp5.CREATE_GUILD_EXPRESSIONS, guild);
   _require = canResult;
@@ -196,19 +190,20 @@ export const getManageResourcePermissions = function getManageResourcePermission
   canResult3 = obj.can(tmp10, guild);
   currentUser = obj2.getCurrentUser();
   if (null == guild) {
-    obj = closure_11;
+    let obj6 = closure_11;
   } else {
-    obj = { canCreateExpressions: null, canCreateGuildEvent: null, canManageAllExpressions: null, canManageAllEvents: null, canManageGuildExpression: null, canManageGuildEvent: null };
-    obj[0] = canResult;
-    obj[1] = canResult2;
-    obj[2] = canResult1;
-    obj[3] = canResult3;
-    obj[4] = function canManageGuildExpression(arg0) {
-      return closure_1_12(arg0, closure_4, canResult1, c0);
-    };
-    obj[5] = function canManageGuildEvent(arg0) {
-      return closure_1_12(arg0, closure_4, canResult3, canResult2);
+    obj6 = {
+      canCreateExpressions: canResult,
+      canCreateGuildEvent: canResult2,
+      canManageAllExpressions: canResult1,
+      canManageAllEvents: canResult3,
+      canManageGuildExpression(arg0) {
+          return canManageResource(arg0, closure_4, canResult1, c0);
+        },
+      canManageGuildEvent(arg0) {
+          return canManageResource(arg0, closure_4, canResult3, canResult2);
+        }
     };
   }
-  return obj;
+  return obj6;
 };

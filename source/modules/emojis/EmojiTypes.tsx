@@ -1,11 +1,11 @@
-// Module ID: 4216
-// Function ID: 4217
+// Module ID: 4229
+// Function ID: 4230
 // Name: EmojiTypes
 // Dependencies: [2]
 
-// Module 4216 (EmojiTypes)
-import set from "set" /* 2 */;
+// Module 4229 (EmojiTypes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/emojis/EmojiTypes.tsx");
+const result = size.fileFinishedImporting("modules/emojis/EmojiTypes.tsx");
 
 export const EmojiTypes = { UNICODE: 0, [0]: "UNICODE", GUILD: 1, [1]: "GUILD" };

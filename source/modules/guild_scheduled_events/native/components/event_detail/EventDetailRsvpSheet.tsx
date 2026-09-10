@@ -1,62 +1,60 @@
-// Module ID: 9806
-// Function ID: 9807
-// Name: EmptyDisplay
-// Dependencies: [19, 17, 4600, 1371, 1085, 21, 4560, 576, 5524, 8407, 9807, 4556, 1114, 8598, 5587, 7162, 504, 1178, 9808, 4404, 8179, 9809, 6627, 5577, 2]
+// Module ID: 9833
+// Function ID: 9834
+// Name: EventDetailRsvpSheet
+// Dependencies: [19, 17, 4614, 1371, 1085, 21, 4574, 576, 5538, 8435, 9834, 4570, 1114, 8626, 5601, 7176, 504, 1178, 9835, 4418, 8205, 9836, 6641, 5591, 2]
 
-// Module 9806 (EmptyDisplay)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import preloadDefault from "preload" /* 5587 */;
-import StageSparkleInnerDefault from "StageSparkleInner" /* 8407 */;
-import Form from "Form" /* 8598 */;
-import registerAssetDefault from "registerAsset" /* 9807 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "sortActivity" /* 4600 */;
-import closure_6 from "mergeGuildAvatar" /* 1371 */;
-import { Fonts } from "sum" /* 1085 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importDefaultResult from "createTextStyle" /* 5524 */;
+// Module 9833 (EventDetailRsvpSheet)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import BottomSheetModal from "BottomSheetModal" /* 6641 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8205 */;
+import StageSparkleDefault from "StageSparkle" /* 8435 */;
+import Form from "Form" /* 8626 */;
+import _modDef9834 from "module_9834" /* 9834 */;
+import noop from "module_19" /* 19 */;
+import PresenceStore from "PresenceStore" /* 4614 */;
+import UserStore from "UserStore" /* 1371 */;
+import TextStyles from "TextStyles" /* 5538 */;
 
-require = arg1;
+require = fn;
 function EmptyDisplay(arg0) {
   ({ children, style } = arg0);
-  let obj = { style: null, children: null };
-  const items = [callback3().emptyDisplayContainer, style];
-  obj[0] = items;
-  obj = { icon: registerAssetDefault };
-  const items1 = [callback(StageSparkleInnerDefault, obj), children];
-  obj[1] = items1;
-  return callback2(View, obj);
+  const obj = { style: null, children: null };
+  const items = [closure_9().emptyDisplayContainer, style];
+  obj.style = items;
+  const obj2 = { icon: _modDef9834 };
+  const items1 = [React5(StageSparkleDefault, obj2), children];
+  obj.children = items1;
+  return React6(View, obj);
 }
 function FetchErrorDisplay(style) {
-  let obj = { style: style.style, children: null };
-  obj = { style: callback3().emptyDisplayTitle, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.string(getSystemLocale.t.obChXk);
-  obj[1] = callback(Text.Text, obj);
-  return callback(EmptyDisplay, obj);
+  const obj = { style: style.style, children: null };
+  const obj2 = { style: closure_9().emptyDisplayTitle, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+  const intl = util.intl;
+  obj2.children = intl.string(util.t.obChXk);
+  obj.children = React5(Text_Text.Text, obj2);
+  return React5(EmptyDisplay, obj);
 }
 function NoUsersDisplay(style) {
-  let obj = { style: style.style, children: null };
-  obj = { style: callback3().emptyDisplayTitle, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.string(getSystemLocale.t.hW0mBR);
-  obj[1] = callback(Text.Text, obj);
-  return callback(EmptyDisplay, obj);
+  const obj = { style: style.style, children: null };
+  const obj2 = { style: closure_9().emptyDisplayTitle, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+  const intl = util.intl;
+  obj2.children = intl.string(util.t.hW0mBR);
+  obj.children = React5(Text_Text.Text, obj2);
+  return React5(EmptyDisplay, obj);
 }
 function RemainingUsersRow(remainingUsersGroup) {
-  const tmp = callback3();
-  let obj = { DEPRECATED_style: tmp.userListRow, leading: null, label: null };
-  obj = { style: tmp.remainingUsersIconContainer, children: null };
-  obj = { source: registerAssetDefault, style: tmp.remainingUsersIcon };
-  obj[1] = callback(preloadDefault, obj);
-  obj[1] = callback(View, obj);
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.formatToPlainString(getSystemLocale.t.BdQTfR, { userRemainCount: remainingUsersGroup.remainingUsersGroup.count });
-  return callback(Form.FormRow, obj, "userRemaining");
+  const tmp = closure_9();
+  const obj = { DEPRECATED_style: tmp.userListRow, leading: null, label: null };
+  const obj2 = { style: tmp.remainingUsersIconContainer, children: null };
+  const obj3 = { source: _modDef9834, style: tmp.remainingUsersIcon };
+  obj2.children = React5(FastImageDefault, obj3);
+  obj.leading = React5(View, obj2);
+  const intl = util.intl;
+  obj.label = intl.formatToPlainString(util.t.BdQTfR, { userRemainCount: remainingUsersGroup.remainingUsersGroup.count });
+  return React5(Form.FormRow, obj, "userRemaining");
 }
 function keyExtractor(count) {
   if (obj.isRemainingUsersGroup(count)) {
@@ -73,14 +71,16 @@ class EventDetailRsvpSheet {
     ({ contentHeight, safeBottomPadding } = global);
     class StaticMessageContainer {
       constructor(arg0) {
-        tmp = closure_1_9();
+        tmp = closure_9();
         obj = { style: tmp.staticMessageContentContainer, scrollEnabled: false, children: null };
+        obj1 = { style: null, children: global.children };
         items = [, ];
         items[0] = tmp.staticMessageContentContainer;
-        obj = { minHeight: contentHeight };
-        items[1] = obj;
-        obj[2] = closure_1_7(closure_1_4, { style: items, children: global.children });
-        return closure_1_7(require("BottomSheetModal").BottomSheetScrollView, obj);
+        obj4 = { minHeight: contentHeight };
+        items[1] = obj4;
+        obj1.style = items;
+        obj.children = jsx(View, obj1);
+        return jsx(closure_0(closure_2[22]).BottomSheetScrollView, obj);
       }
     }
     ({ loading, error } = global);
@@ -89,16 +89,12 @@ class EventDetailRsvpSheet {
     items[0] = guildId;
     callback = closure_3.useCallback((item) => {
       item = item.item;
-      let obj = guildId(closure_1_2[21]);
       if (obj.isRemainingUsersGroup(item)) {
-        obj = { remainingUsersGroup: null };
-        obj[0] = item;
-        let tmpResult = tmp(closure_1_13, obj);
+        const obj2 = { remainingUsersGroup: item };
+        let tmpResult = tmp(RemainingUsersRow, obj2);
       } else {
-        obj = { eventUser: null, guildId: null };
-        obj[0] = item;
-        obj[1] = guildId;
-        tmpResult = tmp(closure_1_14, obj);
+        const obj3 = { eventUser: item, guildId };
+        tmpResult = tmp(memoResult, obj3);
       }
       return tmpResult;
     }, items);
@@ -106,76 +102,82 @@ class EventDetailRsvpSheet {
       num = 0;
       if (0 === userListItems.length) {
         tmp13 = jsx;
-        obj = { children: null };
+        obj1 = { children: null };
         tmp14 = guildId;
         tmp15 = closure_2;
-        obj1 = { style: null };
+        obj8 = { style: null };
         items1 = [, ];
         class StaticMessageContainer {
           constructor(arg0) {
-            tmp = closure_1_9();
+            tmp = closure_9();
             obj = { style: tmp.staticMessageContentContainer, scrollEnabled: false, children: null };
+            obj1 = { style: null, children: global.children };
             items = [, ];
             items[0] = tmp.staticMessageContentContainer;
-            obj = { minHeight: contentHeight };
-            items[1] = obj;
-            obj[2] = closure_1_7(closure_1_4, { style: items, children: global.children });
-            return closure_1_7(require("BottomSheetModal").BottomSheetScrollView, obj);
+            obj4 = { minHeight: contentHeight };
+            items[1] = obj4;
+            obj1.style = items;
+            obj.children = jsx(View, obj1);
+            return jsx(closure_0(closure_2[22]).BottomSheetScrollView, obj);
           }
         }
         items1[1] = { paddingBottom: safeBottomPadding };
-        obj1[0] = items1;
-        obj[0] = jsx(require("ActivityIndicator").ActivityIndicator, obj1);
-        tmp8 = jsx(StaticMessageContainer, obj);
+        obj8.style = items1;
+        obj1.children = jsx(guildId(closure_2[23]).ActivityIndicator, obj8);
+        tmp8 = jsx(StaticMessageContainer, obj1);
       }
       return tmp8;
     }
     if (null != error) {
       tmp11 = jsx;
-      obj2 = { children: null };
+      obj9 = { children: null };
       tmp12 = FetchErrorDisplay;
-      obj3 = { style: null };
+      obj10 = { style: null };
       items2 = [, ];
       items2[0] = tmp.staticMessageContent;
       class StaticMessageContainer {
         constructor(arg0) {
-          tmp = closure_1_9();
+          tmp = closure_9();
           obj = { style: tmp.staticMessageContentContainer, scrollEnabled: false, children: null };
+          obj1 = { style: null, children: global.children };
           items = [, ];
           items[0] = tmp.staticMessageContentContainer;
-          obj = { minHeight: contentHeight };
-          items[1] = obj;
-          obj[2] = closure_1_7(closure_1_4, { style: items, children: global.children });
-          return closure_1_7(require("BottomSheetModal").BottomSheetScrollView, obj);
+          obj4 = { minHeight: contentHeight };
+          items[1] = obj4;
+          obj1.style = items;
+          obj.children = jsx(View, obj1);
+          return jsx(closure_0(closure_2[22]).BottomSheetScrollView, obj);
         }
       }
-      obj3[0] = items2;
-      obj2[0] = jsx(FetchErrorDisplay, obj3);
-      tmp8 = jsx(StaticMessageContainer, obj2);
+      obj10.style = items2;
+      obj9.children = jsx(FetchErrorDisplay, obj10);
+      tmp8 = jsx(StaticMessageContainer, obj9);
     } else {
       num2 = 0;
       if (0 === userListItems.length) {
         tmp9 = jsx;
-        obj4 = { children: null };
+        obj11 = { children: null };
         tmp10 = NoUsersDisplay;
-        obj5 = { style: null };
+        obj12 = { style: null };
         items3 = [, ];
         items3[0] = tmp.staticMessageContent;
         class StaticMessageContainer {
           constructor(arg0) {
-            tmp = closure_1_9();
+            tmp = closure_9();
             obj = { style: tmp.staticMessageContentContainer, scrollEnabled: false, children: null };
+            obj1 = { style: null, children: global.children };
             items = [, ];
             items[0] = tmp.staticMessageContentContainer;
-            obj = { minHeight: contentHeight };
-            items[1] = obj;
-            obj[2] = closure_1_7(closure_1_4, { style: items, children: global.children });
-            return closure_1_7(require("BottomSheetModal").BottomSheetScrollView, obj);
+            obj4 = { minHeight: contentHeight };
+            items[1] = obj4;
+            obj1.style = items;
+            obj.children = jsx(View, obj1);
+            return jsx(closure_0(closure_2[22]).BottomSheetScrollView, obj);
           }
         }
-        obj5[0] = items3;
-        obj4[0] = jsx(NoUsersDisplay, obj5);
-        tmp8 = jsx(StaticMessageContainer, obj4);
+        obj12.style = items3;
+        obj11.children = jsx(NoUsersDisplay, obj12);
+        tmp8 = jsx(StaticMessageContainer, obj11);
       } else {
         tmp3 = jsx;
         tmp4 = guildId;
@@ -185,93 +187,88 @@ class EventDetailRsvpSheet {
         items4[0] = tmp.userList;
         class StaticMessageContainer {
           constructor(arg0) {
-            tmp = closure_1_9();
+            tmp = closure_9();
             obj = { style: tmp.staticMessageContentContainer, scrollEnabled: false, children: null };
+            obj1 = { style: null, children: global.children };
             items = [, ];
             items[0] = tmp.staticMessageContentContainer;
-            obj = { minHeight: contentHeight };
-            items[1] = obj;
-            obj[2] = closure_1_7(closure_1_4, { style: items, children: global.children });
-            return closure_1_7(require("BottomSheetModal").BottomSheetScrollView, obj);
+            obj4 = { minHeight: contentHeight };
+            items[1] = obj4;
+            obj1.style = items;
+            obj.children = jsx(View, obj1);
+            return jsx(closure_0(closure_2[22]).BottomSheetScrollView, obj);
           }
         }
         tmp6[0] = safeBottomPadding;
         items4[1] = tmp6;
-        obj[0] = items4;
-        obj[1] = userListItems;
-        obj[2] = callback;
-        obj[3] = require("Form").FormDivider;
+        obj.contentContainerStyle = items4;
+        obj.data = userListItems;
+        obj.renderItem = callback;
+        obj.ItemSeparatorComponent = guildId(closure_2[13]).FormDivider;
         tmp7 = keyExtractor;
-        obj[4] = keyExtractor;
-        tmp8 = jsx(require("BottomSheetModal").BottomSheetFlatList, obj);
+        obj.keyExtractor = keyExtractor;
+        tmp8 = jsx(guildId(closure_2[22]).BottomSheetFlatList, obj);
       }
     }
     return;
   }
 }
-let c3 = importAllResult;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-let obj = { staticMessageContentContainer: { flex: 1, padding: 16 }, userList: { paddingTop: 16 }, userListRow: { paddingVertical: 8 }, userName: null, emptyDisplayContainer: null, staticMessageContent: null, emptyDisplayTitle: null, remainingUsersIcon: null, remainingUsersIconContainer: null };
-obj = { color: ThemesDefault.colors.TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_SEMIBOLD, fontSize: 16 };
-obj[3] = obj;
-obj[4] = { alignItems: "center", justifyContent: "center", minHeight: 200 };
-obj[5] = { height: "100%" };
-createCacheKey = { paddingTop: 24 };
-const merged = Object.assign(importDefaultResult(Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 20, { marginBottom: 8 }));
-createCacheKey.textAlign = "center";
-obj[6] = createCacheKey;
-obj[7] = { tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, height: 18, width: 18 };
-let obj2 = { tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, height: 18, width: 18 };
-obj[8] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: 16, height: 32, width: 32, alignItems: "center", justifyContent: "center" };
-let closure_9 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo((eventUser) => {
+const View = fn(17).View;
+const Fonts = fn(1085).Fonts;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+let obj = { staticMessageContentContainer: { flex: 1, padding: 16 }, userList: { paddingTop: 16 }, userListRow: { paddingVertical: 8 }, userName: { color: nativeDefault.colors.TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_SEMIBOLD, fontSize: 16 }, emptyDisplayContainer: { alignItems: "center", justifyContent: "center", minHeight: 200 }, staticMessageContent: { height: "100%" }, emptyDisplayTitle: null, remainingUsersIcon: null, remainingUsersIconContainer: null };
+let obj4 = { paddingTop: 24 };
+const merged = Object.assign(TextStyles(Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 20, { marginBottom: 8 }));
+obj4.textAlign = "center";
+obj.emptyDisplayTitle = obj4;
+let size = { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, height: 18, width: 18 };
+obj.remainingUsersIcon = size;
+const size1 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: 16, height: 32, width: 32, alignItems: "center", justifyContent: "center" };
+obj.remainingUsersIconContainer = size1;
+const React7 = createStyles.createStyles(obj);
+const memoResult = noop.memo((eventUser) => {
   eventUser = eventUser.eventUser;
   let analyticsLocations;
-  const tmp = callback3();
-  analyticsLocations = analyticsLocations(7162)().analyticsLocations;
-  let obj = eventUser(504);
-  const items = [closure_6];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getUser(eventUser.user_id));
-  obj1 = eventUser(504);
-  const items1 = [closure_5];
+  const tmp = closure_9();
+  analyticsLocations = analyticsLocations(7176)().analyticsLocations;
+  const items = [UserStore];
+  const stateFromStores = eventUser(504).useStateFromStores(items, () => UserStore.getUser(eventUser.user_id));
+  const obj = eventUser(504);
+  const items1 = [PresenceStore];
   const items2 = [eventUser.user_id];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items1, () => ({ isMobileOnline: closure_1_5.isMobileOnline(eventUser.user_id), isVROnline: closure_1_5.isVROnline(eventUser.user_id), status: closure_1_5.getStatus(eventUser.user_id) }), items2);
+  const stateFromStoresObject = eventUser(504).useStateFromStoresObject(items1, () => ({ isMobileOnline: PresenceStore.isMobileOnline(eventUser.user_id), isVROnline: PresenceStore.isVROnline(eventUser.user_id), status: PresenceStore.getStatus(eventUser.user_id) }), items2);
   ({ isMobileOnline, isVROnline, status } = stateFromStoresObject);
-  obj = { DEPRECATED_style: tmp.userListRow, leading: null, label: null, onPress: null };
+  const obj3 = { DEPRECATED_style: tmp.userListRow, leading: null, label: null, onPress: null };
   let tmp7Result = null;
   if (null != stateFromStores) {
-    obj = { user: null, guildId: null, isMobileOnline: null, isVROnline: null, status: null, size: null, autoStatusCutout: true };
-    obj[0] = stateFromStores;
-    obj[1] = eventUser.guildId;
-    obj[2] = isMobileOnline;
-    obj[3] = isVROnline;
-    obj[4] = status;
-    obj[5] = tmp4(1178).AvatarSizes.REFRESH_MEDIUM_32;
-    tmp7Result = tmp7(tmp4(1178).Avatar, obj);
+    const obj4 = { user: stateFromStores, guildId: eventUser.guildId, isMobileOnline, isVROnline, status, size: tmp4(1178).AvatarSizes.REFRESH_MEDIUM_32, autoStatusCutout: true };
+    tmp7Result = tmp7(tmp4(1178).Avatar, obj4);
   }
-  obj[1] = tmp7Result;
-  obj1 = { user: stateFromStores, nick: null, usernameStyle: null, nicknameStyle: null };
+  obj3.leading = tmp7Result;
+  const obj6 = { user: stateFromStores, nick: null, usernameStyle: null, nicknameStyle: null };
   const member = eventUser.member;
   let nick;
-  let tmp2Result = tmp2(9808);
+  const obj2 = eventUser(504);
   if (member != null) {
     nick = member.nick;
   }
   if (nick == null) {
-    tmp2Result = tmp2(4404);
-    nick = tmp2Result.getName(eventUser.user);
+    nick = tmp2(4418).getName(eventUser.user);
+    const tmp2Result2 = tmp2(4418);
   }
-  obj1[1] = nick;
-  ({ userName: obj5[2], userName: obj5[3] } = tmp);
-  obj[2] = closure_7(tmp2Result, obj1);
-  obj[3] = function onPress() {
-    analyticsLocations(closure_1_2[20])({ userId: eventUser.user_id, sourceAnalyticsLocations: analyticsLocations });
+  obj6.nick = nick;
+  ({ userName: obj5.usernameStyle, userName: obj5.nicknameStyle } = tmp);
+  obj3.label = closure_7(analyticsLocations(9835), obj6);
+  obj3.onPress = function onPress() {
+    showUserProfileActionSheetDefault({ userId: eventUser.user_id, sourceAnalyticsLocations: analyticsLocations });
   };
-  return closure_7(eventUser(8598).FormRow, obj, eventUser.user_id);
+  return closure_7(eventUser(8626).FormRow, obj3, eventUser.user_id);
 });
 EventDetailRsvpSheet.displayName = "EventDetailRsvpSheet";
-let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: 16, height: 32, width: 32, alignItems: "center", justifyContent: "center" };
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/event_detail/EventDetailRsvpSheet.tsx");
+size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/event_detail/EventDetailRsvpSheet.tsx");
 
 export default EventDetailRsvpSheet;
 export const UserRow = memoResult;

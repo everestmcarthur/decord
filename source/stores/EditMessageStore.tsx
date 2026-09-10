@@ -1,25 +1,25 @@
-// Module ID: 7681
-// Function ID: 7682
-// Name: initialize
-// Dependencies: [4781, 1935, 7682, 7686, 504, 573, 2]
+// Module ID: 7695
+// Function ID: 7696
+// Name: EditMessageStore
+// Dependencies: [4795, 1935, 7696, 7700, 504, 573, 2]
 
-// Module 7681 (initialize)
+// Module 7695 (EditMessageStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import rebuildDefault from "rebuild" /* 7682 */;
-import createEmptyState from "createEmptyState" /* 7686 */;
-import closure_3 from "reinjectEphemerals" /* 4781 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import MessageParserDefault from "MessageParser" /* 7696 */;
+import SlateUtils from "SlateUtils" /* 7700 */;
+import MessageStore from "MessageStore" /* 4795 */;
 
-require = arg1;
-let closure_4 = {};
+require = fn;
+const dependencyMap = {};
 let closure_5 = {};
 const Store = initializeDefault.Store;
 class EditMessageStore extends Store {
 }
 const prototype = EditMessageStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_3);
+  this.waitFor(MessageStore);
 };
 prototype["isEditing"] = function isEditing(arg0, arg1) {
   let messageId;
@@ -45,9 +45,9 @@ prototype["getEditingRichValue"] = function getEditingRichValue(arg0) {
   }
   return richValue;
 };
-prototype["getEditingMessageId"] = function getEditingMessageId(memo1) {
+prototype["getEditingMessageId"] = function getEditingMessageId(id) {
   let messageId;
-  if (dependencyMap[memo1] != null) {
+  if (dependencyMap[id] != null) {
     messageId = tmp.messageId;
   }
   return messageId;
@@ -57,29 +57,29 @@ prototype["getEditingMessage"] = function getEditingMessage(id) {
   if (null != dependencyMap[id]) {
     message = null;
     if (null != tmp.messageId) {
-      message = message.getMessage(id, tmp.messageId);
+      message = MessageStore.getMessage(id, tmp.messageId);
     }
   }
   return message;
 };
-prototype["getEditActionSource"] = function getEditActionSource(closure_1_0) {
-  return table[closure_1_0];
+prototype["getEditActionSource"] = function getEditActionSource(channel_id) {
+  return closure_5[channel_id];
 };
 EditMessageStore.displayName = "EditMessageStore";
-const editMessageStore = new EditMessageStore(dispatcherDefault, {
+const editMessageStore = new EditMessageStore(DispatcherDefault, {
   MESSAGE_START_EDIT: function handleMessageStartEdit(arg0) {
     ({ channelId, content } = arg0);
     ({ messageId, source } = arg0);
-    const UseLegacyChatInput = explicitContentFromProto.UseLegacyChatInput;
+    const UseLegacyChatInput = UserSettings.UseLegacyChatInput;
     const setting = UseLegacyChatInput.getSetting();
-    let obj = rebuildDefault;
-    const unparseResult = obj.unparse(content, channelId);
-    obj = { channelId, messageId, textValue: unparseResult, richValue: null };
+    const unparseResult = MessageParserDefault.unparse(content, channelId);
+    const obj2 = { channelId, messageId, textValue: unparseResult, richValue: null };
+    const tmp3 = closure_4;
     if (setting) {
       content = unparseResult;
     }
-    obj[3] = createEmptyState.toRichValue(content);
-    closure_4[channelId] = obj;
+    obj2.richValue = SlateUtils.toRichValue(content);
+    tmp3[channelId] = obj2;
     closure_5[channelId] = source;
   },
   MESSAGE_UPDATE_EDIT: function handleMessageUpdateEdit(channelId) {
@@ -119,6 +119,7 @@ const editMessageStore = new EditMessageStore(dispatcherDefault, {
     closure_5 = {};
   }
 });
-const result = require("set").fileFinishedImporting("stores/EditMessageStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/EditMessageStore.tsx");
 
 export default editMessageStore;

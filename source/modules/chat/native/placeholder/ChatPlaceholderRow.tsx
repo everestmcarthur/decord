@@ -1,65 +1,61 @@
-// Module ID: 12645
-// Function ID: 12646
-// Dependencies: [19, 17, 21, 1178, 4560, 576, 12644, 12341, 2]
+// Module ID: 12671
+// Function ID: 12672
+// Name: ChatPlaceholderRow
+// Dependencies: [19, 17, 21, 1178, 4574, 576, 12670, 12367, 2]
 
-// Module 12645
-import ThemesDefault from "Themes" /* 576 */;
-import getChatPlaceholderRowWidthDefault from "getChatPlaceholderRowWidth" /* 12341 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 12671 (ChatPlaceholderRow)
+import nativeDefault from "native" /* 576 */;
+import getChatPlaceholderRowWidthDefault from "getChatPlaceholderRowWidth" /* 12367 */;
+import noop from "module_19" /* 19 */;
 
-({ jsx: c3, jsxs: c4 } = jsxProd);
-const tmp3 = require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL];
-let obj = { row: null, rowInner: null, placeholderAvatar: null, placeholderText: null, placeholderBody: null };
-obj = { paddingLeft: ThemesDefault.space.PX_12, paddingTop: require("PX_24").CHAT_PLACEHOLDER_ROW_MARGIN_TOP, flexDirection: "row" };
-obj[0] = obj;
-createCacheKey = { marginHorizontal: ThemesDefault.space.PX_12, flex: 1 };
-obj[1] = createCacheKey;
-obj[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: tmp3, width: tmp3, borderRadius: ThemesDefault.radii.round };
-let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: tmp3, width: tmp3, borderRadius: ThemesDefault.radii.round };
-obj[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: require("PX_24").CHAT_PLACEHOLDER_ROW_LINE_HEIGHT, borderRadius: ThemesDefault.radii.sm };
-let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: require("PX_24").CHAT_PLACEHOLDER_ROW_LINE_HEIGHT, borderRadius: ThemesDefault.radii.sm };
-obj[4] = { marginTop: require("PX_24").CHAT_PLACEHOLDER_ROW_LINE_MARGIN_TOP, width: "100%" };
-let closure_5 = createCacheKey.createStyles(obj);
-const obj4 = { marginTop: require("PX_24").CHAT_PLACEHOLDER_ROW_LINE_MARGIN_TOP, width: "100%" };
-const memoResult = importAllResult.memo(function ChatPlaceholderRow(lines) {
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const tmp3 = fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.NORMAL];
+const createStyles = fn(4574);
+let obj = { row: { paddingLeft: nativeDefault.space.PX_12, paddingTop: fn(12670).CHAT_PLACEHOLDER_ROW_MARGIN_TOP, flexDirection: "row" }, rowInner: null, placeholderAvatar: null, placeholderText: null, placeholderBody: null };
+let obj3 = { paddingLeft: nativeDefault.space.PX_12, paddingTop: fn(12670).CHAT_PLACEHOLDER_ROW_MARGIN_TOP, flexDirection: "row" };
+obj.rowInner = { marginHorizontal: nativeDefault.space.PX_12, flex: 1 };
+let size = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, height: tmp3, width: tmp3, borderRadius: nativeDefault.radii.round };
+obj.placeholderAvatar = size;
+const obj4 = { marginHorizontal: nativeDefault.space.PX_12, flex: 1 };
+obj.placeholderText = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, height: fn(12670).CHAT_PLACEHOLDER_ROW_LINE_HEIGHT, borderRadius: nativeDefault.radii.sm };
+let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, height: fn(12670).CHAT_PLACEHOLDER_ROW_LINE_HEIGHT, borderRadius: nativeDefault.radii.sm };
+obj.placeholderBody = { marginTop: fn(12670).CHAT_PLACEHOLDER_ROW_LINE_MARGIN_TOP, width: "100%" };
+let closure_5 = createStyles.createStyles(obj);
+let obj6 = { marginTop: fn(12670).CHAT_PLACEHOLDER_ROW_LINE_MARGIN_TOP, width: "100%" };
+size = fn(2);
+const result = size.fileFinishedImporting("modules/chat/native/placeholder/ChatPlaceholderRow.tsx");
+
+export default noop.memo(function ChatPlaceholderRow(lines) {
   lines = lines.lines;
-  const tmp = callback3();
+  const tmp = closure_5();
   const rounded = Math.floor(10 * Math.random());
   const items = [];
   let num = 0;
   const sum = Math.floor(50 * Math.random()) + 10;
   if (0 < lines) {
     do {
-      let tmp4 = importDefault;
-      let tmp5 = dependencyMap;
-      let tmp6 = callback;
-      let tmp7 = View;
       let obj = { style: null };
       let items1 = [tmp.placeholderText, tmp.placeholderBody, ];
-      obj = { width: null };
+      let obj2 = { width: null };
       let _HermesInternal = HermesInternal;
-      obj[0] = "" + getChatPlaceholderRowWidthDefault(rounded + num) + "%";
-      items1[2] = obj;
-      obj[0] = items1;
-      let arr = items.push(callback(View, obj, num));
+      obj2.width = "" + getChatPlaceholderRowWidthDefault(rounded + num) + "%";
+      items1[2] = obj2;
+      obj.style = items1;
+      let arr = items.push(React3(View, obj, num));
       num = num + 1;
     } while (num < lines);
   }
-  obj = { style: tmp.row, children: null };
-  const items2 = [callback(View, { style: tmp.placeholderAvatar }), ];
-  const obj2 = { style: tmp.rowInner, children: null };
-  const obj3 = { style: null };
+  const obj3 = { style: tmp.row, children: null };
+  const items2 = [React3(View, { style: tmp.placeholderAvatar }), ];
+  const obj5 = { style: tmp.rowInner, children: null };
+  const obj6 = { style: null };
   const items3 = [tmp.placeholderText, { width: "" + sum + "%" }];
-  obj3[0] = items3;
-  const items4 = [callback(View, obj3), items];
-  obj2[1] = items4;
-  items2[1] = callback2(View, obj2);
-  obj[1] = items2;
-  return callback2(View, obj);
+  obj6.style = items3;
+  const items4 = [React3(View, obj6), items];
+  obj5.children = items4;
+  items2[1] = React4(View, obj5);
+  obj3.children = items2;
+  return React4(View, obj3);
 });
-const result = require("set").fileFinishedImporting("modules/chat/native/placeholder/ChatPlaceholderRow.tsx");
-
-export default memoResult;

@@ -1,28 +1,31 @@
-// Module ID: 9951
-// Function ID: 9952
+// Module ID: 9978
+// Function ID: 9979
 // Name: useHasVideoPermission
-// Dependencies: [1979, 4199, 504, 7726, 2]
+// Dependencies: [1979, 4212, 504, 7740, 2]
 // Exports: default, getVideoPermission
 
-// Module 9951 (useHasVideoPermission)
-import canStreamInChannel from "canStreamInChannel" /* 7726 */;
-import closure_2 from "createGuildRecordFromRust" /* 1979 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4199 */;
+// Module 9978 (useHasVideoPermission)
+import StreamPermissionUtils from "StreamPermissionUtils" /* 7740 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/video_calls/useHasVideoPermission.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/useHasVideoPermission.tsx");
 
 export default function useHasVideoPermission(arg0) {
-  const _require = arg0;
-  const items = [closure_2, closure_3];
+  _require = arg0;
+  const items = [GuildStore, PermissionStore];
   const items1 = [arg0];
-  return _require(504).useStateFromStores(items, () => {
-    let tmp = null != callback;
+  return require("initialize").useStateFromStores(items, () => {
+    let tmp = null != closure_0;
     if (tmp) {
       let isPrivateResult = obj.isPrivate();
       if (!isPrivateResult) {
-        const obj2 = callback(closure_1_1[3]);
-        isPrivateResult = obj2.canStreamInChannel(obj, closure_1_2, closure_1_3, false);
+        const obj2 = StreamPermissionUtils;
+        isPrivateResult = obj2.canStreamInChannel(obj, GuildStore, PermissionStore, false);
       }
       tmp = isPrivateResult;
     }
@@ -32,8 +35,8 @@ export default function useHasVideoPermission(arg0) {
 export const getVideoPermission = function getVideoPermission(channel) {
   let isPrivateResult = channel.isPrivate();
   if (!isPrivateResult) {
-    const obj = canStreamInChannel;
-    isPrivateResult = obj.canStreamInChannel(channel, closure_2, closure_3, false);
+    const obj = StreamPermissionUtils;
+    isPrivateResult = obj.canStreamInChannel(channel, GuildStore, PermissionStore, false);
   }
   return isPrivateResult;
 };

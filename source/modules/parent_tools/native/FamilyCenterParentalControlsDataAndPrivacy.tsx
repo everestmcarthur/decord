@@ -1,58 +1,59 @@
-// Module ID: 14934
-// Function ID: 14935
+// Module ID: 14960
+// Function ID: 14961
 // Name: FamilyCenterParentalControlsDataAndPrivacy
-// Dependencies: [19, 1074, 7975, 21, 1114, 2396, 2024, 11473, 14692, 2]
+// Dependencies: [19, 1074, 7989, 21, 1114, 2396, 2024, 11500, 14718, 2]
 // Exports: default
 
-// Module 14934 (FamilyCenterParentalControlsDataAndPrivacy)
-import _modDef14692 from "module_14692" /* 14692 */;
-import closure_3 from "noop" /* 19 */;
-import { HelpdeskArticles } from "ME" /* 1074 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 7975 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 14960 (FamilyCenterParentalControlsDataAndPrivacy)
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
+import _modDef2396 from "module_2396" /* 2396 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import SettingLayoutDefault from "SettingLayout" /* 14718 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsDataAndPrivacy.tsx");
+require = fn;
+const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const MobileUserSettings = fn(7989).MobileUserSettings;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsDataAndPrivacy.tsx");
 
 export default function FamilyCenterParentalControlsDataAndPrivacy() {
-  const memo = React.useMemo(() => {
-    let obj = { settings: items, subLabel: null };
-    items = [closure_5.PARENTAL_CONTROLS_DATA_USAGE_STATISTICS];
+  const memo = noop.useMemo(() => {
+    const obj = { settings: null, subLabel: null };
+    const items = [MobileUserSettings.PARENTAL_CONTROLS_DATA_USAGE_STATISTICS];
+    obj.settings = items;
     const intl = memo(1114).intl;
-    obj = { helpdeskArticle: null };
-    let obj2 = callback(2024);
-    obj[0] = obj2.getArticleURL(constants.DATA_PRIVACY_CONTROLS);
-    obj[1] = intl.format(callback(2396).Z5yJZy, obj);
+    const obj2 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(constants.DATA_PRIVACY_CONTROLS) };
+    obj.subLabel = intl.format(_modDef2396.Z5yJZy, obj2);
     const items1 = [obj, , , ];
-    obj = { settings: items2, subLabel: null };
-    items2 = [closure_5.PARENTAL_CONTROLS_DATA_USAGE_PERSONALIZATION];
+    const obj4 = { settings: null, subLabel: null };
+    const items2 = [MobileUserSettings.PARENTAL_CONTROLS_DATA_USAGE_PERSONALIZATION];
+    obj4.settings = items2;
     const intl2 = memo(1114).intl;
-    obj1 = { helpdeskArticle: null };
-    let obj5 = callback(2024);
-    obj1[0] = obj5.getArticleURL(constants.DATA_USED_FOR_RECOMMENDED);
-    obj[1] = intl2.format(callback(2396).Imp6Ns, obj1);
-    items1[1] = obj;
-    obj2 = { settings: items3, subLabel: null };
-    items3 = [closure_5.PARENTAL_CONTROLS_DATA_USAGE_QUESTS];
+    const obj5 = { helpdeskArticle: null };
+    obj5.helpdeskArticle = HelpdeskUtilsDefault.getArticleURL(constants.DATA_USED_FOR_RECOMMENDED);
+    obj4.subLabel = intl2.format(_modDef2396.Imp6Ns, obj5);
+    items1[1] = obj4;
+    const obj7 = { settings: null, subLabel: null };
+    const items3 = [MobileUserSettings.PARENTAL_CONTROLS_DATA_USAGE_QUESTS];
+    obj7.settings = items3;
     const intl3 = memo(1114).intl;
-    const obj3 = { helpdeskArticle: callback(2024).getArticleURL(constants.QUESTS_PRIVACY_CONTROLS) };
-    obj2[1] = intl3.format(callback(2396).cnCK6b, obj3);
-    items1[2] = obj2;
-    const obj4 = { settings: items4, subLabel: null };
-    items4 = [closure_5.PARENTAL_CONTROLS_DATA_USAGE_QUESTS_3P];
+    const obj8 = { helpdeskArticle: null };
+    obj8.helpdeskArticle = HelpdeskUtilsDefault.getArticleURL(constants.QUESTS_PRIVACY_CONTROLS);
+    obj7.subLabel = intl3.format(_modDef2396.cnCK6b, obj8);
+    items1[2] = obj7;
+    const obj10 = { settings: null, subLabel: null };
+    const items4 = [MobileUserSettings.PARENTAL_CONTROLS_DATA_USAGE_QUESTS_3P];
+    obj10.settings = items4;
     const intl4 = memo(1114).intl;
-    obj5 = { helpdeskArticle: null };
-    const obj9 = callback(2024);
-    obj5[0] = callback(2024).getArticleURL(constants.QUESTS_PRIVACY_CONTROLS);
-    obj4[1] = intl4.format(callback(2396)["6mK5Pz"], obj5);
-    items1[3] = obj4;
+    const obj11 = { helpdeskArticle: null };
+    obj11.helpdeskArticle = HelpdeskUtilsDefault.getArticleURL(constants.QUESTS_PRIVACY_CONTROLS);
+    obj10.subLabel = intl4.format(_modDef2396["6mK5Pz"], obj11);
+    items1[3] = obj10;
     return items1;
   }, []);
   let items = [memo];
-  const node = React.useMemo(() => {
-    let obj = memo(closure_1_2[7]);
-    obj = { sections: memo };
-    return obj.createList(obj);
-  }, items);
-  return jsx(_modDef14692, { node });
+  const node = noop.useMemo(() => SettingBuilders.createList({ sections: memo }), items);
+  return jsx(SettingLayoutDefault, { node });
 };

@@ -1,12 +1,12 @@
-// Module ID: 8292
-// Function ID: 8293
-// Name: THUMBNAIL_MARGIN
+// Module ID: 8320
+// Function ID: 8321
+// Name: Constants
 // Dependencies: [2]
 
-// Module 8292 (THUMBNAIL_MARGIN)
-import set from "set" /* 2 */;
+// Module 8320 (Constants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/media_viewer/native/Constants.tsx");
+const result = size.fileFinishedImporting("modules/media_viewer/native/Constants.tsx");
 
 export const THUMBNAIL_MARGIN = 2;
 export const THUMBNAIL_MIN_WIDTH = 24;

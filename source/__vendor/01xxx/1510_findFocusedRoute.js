@@ -2,9 +2,11 @@
 // Function ID: 1511
 // Name: findFocusedRoute
 // Dependencies: []
+// Exports: findFocusedRoute
 
 // Module 1510 (findFocusedRoute)
-arg5.findFocusedRoute = function findFocusedRoute(stateForPath) {
+
+export const findFocusedRoute = function findFocusedRoute(stateForPath) {
   let state2;
   let state;
   if (stateForPath != null) {
@@ -21,7 +23,6 @@ arg5.findFocusedRoute = function findFocusedRoute(stateForPath) {
   if (null != state) {
     do {
       let index2 = tmp3.index;
-      let tmp5 = tmp3;
       if (index2 == null) {
         index2 = tmp3.routes.length - 1;
       }
@@ -47,14 +48,14 @@ arg5.findFocusedRoute = function findFocusedRoute(stateForPath) {
   }
   let tmp10;
   if (tmp4 != null) {
-    index = undefined;
+    let index1;
     if (tmp4 != null) {
-      index = tmp4.index;
+      index1 = tmp4.index;
     }
-    if (index == null) {
-      index = tmp4.routes.length - 1;
+    if (index1 == null) {
+      index1 = tmp4.routes.length - 1;
     }
-    tmp10 = tmp4.routes[index];
+    tmp10 = tmp4.routes[index1];
   }
   return tmp10;
 };

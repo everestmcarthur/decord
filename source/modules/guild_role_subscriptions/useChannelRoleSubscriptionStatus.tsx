@@ -1,28 +1,29 @@
-// Module ID: 5007
-// Function ID: 5008
-// Name: getChannelRoleSubscriptionStatus
-// Dependencies: [2013, 1957, 4199, 1074, 504, 2]
+// Module ID: 5021
+// Function ID: 5022
+// Name: useChannelRoleSubscriptionStatus
+// Dependencies: [2013, 1957, 4212, 1074, 504, 2]
 // Exports: default
 
-// Module 5007 (getChannelRoleSubscriptionStatus)
-import closure_2 from "isSubscriptionGated" /* 2013 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4199 */;
-import { Permissions } from "ME" /* 1074 */;
+// Module 5021 (useChannelRoleSubscriptionStatus)
+import GatedChannelStore from "GatedChannelStore" /* 2013 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
 
-const require = arg1;
-function getChannelRoleSubscriptionStatus(id, closure_1_7, closure_1_6, closure_1_8) {
-  let obj = closure_1_7;
-  if (closure_1_7 === undefined) {
-    obj = closure_3;
+const require = globalThis.__r;
+
+const require = fn;
+function getChannelRoleSubscriptionStatus(id, ChannelStore, GatedChannelStore, PermissionStore) {
+  let obj = ChannelStore;
+  if (ChannelStore === undefined) {
+    obj = ChannelStore;
   }
-  let obj2 = closure_1_6;
-  if (closure_1_6 === undefined) {
-    obj2 = closure_2;
+  let obj2 = GatedChannelStore;
+  if (GatedChannelStore === undefined) {
+    obj2 = GatedChannelStore;
   }
-  let tmp = closure_1_8;
-  if (closure_1_8 === undefined) {
-    tmp = closure_4;
+  let tmp = PermissionStore;
+  if (PermissionStore === undefined) {
+    tmp = PermissionStore;
   }
   const channel = obj.getChannel(id);
   let result;
@@ -30,32 +31,33 @@ function getChannelRoleSubscriptionStatus(id, closure_1_7, closure_1_6, closure_
     result = channel.isRoleSubscriptionTemplatePreviewChannel();
   }
   if (result) {
-    obj = { isSubscriptionGated: true, needSubscriptionToAccess: true };
+    let obj3 = { isSubscriptionGated: true, needSubscriptionToAccess: true };
   } else {
     if (null != channel) {
       if (obj2.isChannelGated(channel.guild_id, channel.id)) {
         const can = tmp.can;
-        obj = Permissions;
+        let obj4 = Permissions;
         if (channel.isGuildVocal()) {
-          let tmp3 = !can(obj.CONNECT, channel);
+          let tmp3 = !can(obj4.CONNECT, channel);
         } else {
-          tmp3 = !can(obj.VIEW_CHANNEL, channel);
+          tmp3 = !can(obj4.VIEW_CHANNEL, channel);
         }
-        obj = { isSubscriptionGated: true, needSubscriptionToAccess: null };
-        obj[1] = tmp3;
+        obj4 = { isSubscriptionGated: true, needSubscriptionToAccess: tmp3 };
       }
     }
-    obj = closure_6;
+    obj3 = closure_6;
   }
-  return obj;
+  return obj3;
 }
+const Permissions = fn(1074).Permissions;
 let closure_6 = { needSubscriptionToAccess: false, isSubscriptionGated: false };
-let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx");
 
 export default function useChannelRoleSubscriptionStatus(arg0) {
-  const _require = arg0;
-  const items = [closure_3, closure_2, closure_4];
+  _require = arg0;
+  const items = [ChannelStore, GatedChannelStore, PermissionStore];
   const items1 = [arg0];
-  return _require(504).useStateFromStoresObject(items, () => closure_1_7(closure_0, closure_1_3, closure_1_2, closure_1_4), items1);
+  return require("initialize").useStateFromStoresObject(items, () => getChannelRoleSubscriptionStatus(closure_0, ChannelStore, GatedChannelStore, PermissionStore), items1);
 };
 export { getChannelRoleSubscriptionStatus };

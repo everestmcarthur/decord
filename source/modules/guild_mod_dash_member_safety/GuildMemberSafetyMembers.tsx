@@ -1,20 +1,20 @@
-// Module ID: 7496
-// Function ID: 7497
-// Name: getGuildMemberSecondaryIndexes
-// Dependencies: [1371, 4195, 7497, 7498, 7500, 7501, 7507, 4679, 2]
+// Module ID: 7510
+// Function ID: 7511
+// Name: GuildMemberSafetyMembers
+// Dependencies: [1371, 4208, 7511, 7512, 7514, 7515, 7521, 4693, 2]
 // Exports: hasUnusualDmActivity
 
-// Module 7496 (getGuildMemberSecondaryIndexes)
-import version from "version" /* 4195 */;
-import isEqualDefault from "isEqual" /* 4679 */;
-import result2 from "result" /* 7497 */;
-import getJoinedAtDateFormatter from "getJoinedAtDateFormatter" /* 7498 */;
-import getSortValueForMember from "getSortValueForMember" /* 7500 */;
-import hasMemberSupplemental from "hasMemberSupplemental" /* 7501 */;
-import isSpamSupported from "isSpamSupported" /* 7507 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
+// Module 7510 (GuildMemberSafetyMembers)
+import SecondaryIndexMap from "SecondaryIndexMap" /* 4208 */;
+import _modDef4693 from "module_4693" /* 4693 */;
+import MemberSafetyElasticSearchQueryTypes from "MemberSafetyElasticSearchQueryTypes" /* 7511 */;
+import guild_mod_dash_member_safety_DateUtils from "guild_mod_dash_member_safety/DateUtils" /* 7512 */;
+import SortUtils from "SortUtils" /* 7514 */;
+import MemberSafetyStoreSupplemental from "MemberSafetyStoreSupplemental" /* 7515 */;
+import isSpam from "isSpam" /* 7521 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+require = fn;
 function getGuildMemberSecondaryIndexes(isCurrentGuildMemberByTimestamp) {
   if (isCurrentGuildMemberByTimestamp.isCurrentGuildMemberByTimestamp) {
     let NEW_GUILD_MEMBER = tmp.CURRENT_GUILD_MEMBER;
@@ -33,23 +33,24 @@ function getGuildMemberSecondarySortBy(arg0) {
   return arg0.sort;
 }
 let closure_4 = Date.now();
-let obj = { NEW_GUILD_MEMBER: "NEW_GUILD_MEMBER", CURRENT_GUILD_MEMBER: "CURRENT_GUILD_MEMBER", INCLUDED_IN_SEARCH_RESULTS: "INCLUDED_IN_SEARCH_RESULTS" };
-let result = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetyMembers.tsx");
+const MemberSafetySecondaryIndex = { NEW_GUILD_MEMBER: "NEW_GUILD_MEMBER", CURRENT_GUILD_MEMBER: "CURRENT_GUILD_MEMBER", INCLUDED_IN_SEARCH_RESULTS: "INCLUDED_IN_SEARCH_RESULTS" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetyMembers.tsx");
 class GuildMemberSafetyMembers {
   constructor(arg0) {
-    obj = Object.create(new.target.prototype);
-    obj[0] = Date.now();
-    obj.guildId = global;
-    secondaryIndexMap = new require("version").SecondaryIndexMap(getGuildMemberSecondaryIndexes, getGuildMemberSecondarySortBy);
-    obj._membersMap = secondaryIndexMap;
-    return obj;
+    merged = Object.assign({ newMemberTimestamp: null });
+    merged[0] = Date.now();
+    merged.guildId = global;
+    secondaryIndexMap = new closure_0(closure_2[1]).SecondaryIndexMap(getGuildMemberSecondaryIndexes, getGuildMemberSecondarySortBy);
+    merged._membersMap = secondaryIndexMap;
+    return merged;
   }
 }
 const prototype = GuildMemberSafetyMembers.prototype;
 prototype["reset"] = function reset() {
   const _membersMap = this._membersMap;
   _membersMap.clear();
-  const secondaryIndexMap = new version.SecondaryIndexMap(getGuildMemberSecondaryIndexes, getGuildMemberSecondarySortBy);
+  const secondaryIndexMap = new SecondaryIndexMap.SecondaryIndexMap(getGuildMemberSecondaryIndexes, getGuildMemberSecondarySortBy);
   this._membersMap = secondaryIndexMap;
   const result = this.resetNewMemberTimestamp();
 };
@@ -57,120 +58,117 @@ prototype["resetNewMemberTimestamp"] = function resetNewMemberTimestamp() {
   this.newMemberTimestamp = Date.now();
 };
 prototype["enhanceNewMember"] = function enhanceNewMember(trueMember, searchState, isIncludedInSearchResults) {
-  obj = isIncludedInSearchResults;
+  let obj = isIncludedInSearchResults;
   if (isIncludedInSearchResults === undefined) {
     obj = {};
   }
-  const joinedAtTimestamp = getJoinedAtDateFormatter.getJoinedAtTimestamp(trueMember.joinedAt);
+  const joinedAtTimestamp = guild_mod_dash_member_safety_DateUtils.getJoinedAtTimestamp(trueMember.joinedAt);
   const result = this._computeMemberSupplementals(trueMember.userId, trueMember.unusualDMActivityUntil);
   ({ hasUnusualDmActivity, hasUnusualAccountActivity, sourceInviteCode, joinSourceType, inviterId, integrationType, joinSourceApplicationId, joinSourceChannelId } = result);
-  obj = { hasUnusualDmActivity, hasUnusualAccountActivity, sourceInviteCode, joinSourceType, inviterId, integrationType, joinSourceApplicationId, joinSourceChannelId };
-  user = user.getUser(trueMember.userId);
+  const obj3 = { hasUnusualDmActivity, hasUnusualAccountActivity, sourceInviteCode, joinSourceType, inviterId, integrationType, joinSourceApplicationId, joinSourceChannelId };
+  const user = UserStore.getUser(trueMember.userId);
   const merged = Object.assign(trueMember);
-  obj.isCurrentGuildMemberByTimestamp = joinedAtTimestamp <= this.newMemberTimestamp;
-  obj.isIncludedInSearchResults = false;
-  obj.user = user;
-  const obj2 = getJoinedAtDateFormatter;
-  const tmp = require;
+  obj3.isCurrentGuildMemberByTimestamp = joinedAtTimestamp <= this.newMemberTimestamp;
+  obj3.isIncludedInSearchResults = false;
+  obj3.user = user;
   let ORDER_BY_UNSPECIFIED = searchState.selectedSort;
   if (ORDER_BY_UNSPECIFIED == null) {
-    ORDER_BY_UNSPECIFIED = result2.OrderBy.ORDER_BY_UNSPECIFIED;
+    ORDER_BY_UNSPECIFIED = MemberSafetyElasticSearchQueryTypes.OrderBy.ORDER_BY_UNSPECIFIED;
   }
-  obj.sort = getSortValueForMember.getSortValueForMember(trueMember, ORDER_BY_UNSPECIFIED);
-  obj.joinedAtTimestamp = joinedAtTimestamp;
+  obj3.sort = SortUtils.getSortValueForMember(trueMember, ORDER_BY_UNSPECIFIED);
+  obj3.joinedAtTimestamp = joinedAtTimestamp;
   const merged1 = Object.assign(obj);
-  return obj;
+  return obj3;
 };
 prototype["_computeMemberSupplementals"] = function _computeMemberSupplementals(userId, unusualDMActivityUntil) {
-  obj = hasMemberSupplemental;
-  obj = obj.getMemberSupplementalByGuildId(this.guildId)[userId];
-  if (obj == null) {
-    obj = {};
+  let obj2 = MemberSafetyStoreSupplemental.getMemberSupplementalByGuildId(this.guildId)[userId];
+  if (obj2 == null) {
+    obj2 = {};
   }
-  let sourceInviteCode = obj.sourceInviteCode;
+  let sourceInviteCode = obj2.sourceInviteCode;
   if (sourceInviteCode == null) {
     sourceInviteCode = null;
   }
-  obj = { sourceInviteCode, joinSourceType: null, inviterId: null, integrationType: null, joinSourceApplicationId: null, joinSourceChannelId: null, hasUnusualDmActivity: null, hasUnusualAccountActivity: null };
-  let joinSourceType = obj.joinSourceType;
+  const obj3 = { sourceInviteCode, joinSourceType: null, inviterId: null, integrationType: null, joinSourceApplicationId: null, joinSourceChannelId: null, hasUnusualDmActivity: null, hasUnusualAccountActivity: null };
+  let joinSourceType = obj2.joinSourceType;
   if (joinSourceType == null) {
     joinSourceType = null;
   }
-  obj[1] = joinSourceType;
-  let inviterId = obj.inviterId;
+  obj3.joinSourceType = joinSourceType;
+  let inviterId = obj2.inviterId;
   if (inviterId == null) {
     inviterId = null;
   }
-  obj[2] = inviterId;
-  let integrationType = obj.integrationType;
+  obj3.inviterId = inviterId;
+  let integrationType = obj2.integrationType;
   if (integrationType == null) {
     integrationType = null;
   }
-  obj[3] = integrationType;
-  let prop = obj.joinSourceApplicationId;
+  obj3.integrationType = integrationType;
+  let prop = obj2.joinSourceApplicationId;
   if (prop == null) {
     prop = null;
   }
-  obj[4] = prop;
-  let joinSourceChannelId = obj.joinSourceChannelId;
+  obj3.joinSourceApplicationId = prop;
+  let joinSourceChannelId = obj2.joinSourceChannelId;
   if (joinSourceChannelId == null) {
     joinSourceChannelId = null;
   }
-  obj[5] = joinSourceChannelId;
+  obj3.joinSourceChannelId = joinSourceChannelId;
   let tmp9 = null != unusualDMActivityUntil;
   if (tmp9) {
     const _Date = Date;
     const date = new Date(unusualDMActivityUntil);
     const time = date.getTime();
-    tmp9 = time >= closure_4 - tmp(7497).UNUSUAL_DM_COMPARISON_DELTA;
+    tmp9 = time >= closure_4 - tmp(7511).UNUSUAL_DM_COMPARISON_DELTA;
   }
-  obj[6] = tmp9;
-  obj[7] = isSpamSupported.isSpammer(userId);
-  return obj;
+  obj3.hasUnusualDmActivity = tmp9;
+  obj3.hasUnusualAccountActivity = isSpam.isSpammer(userId);
+  return obj3;
 };
 prototype["createMember"] = function createMember(userId) {
   const _membersMap = this._membersMap;
   return _membersMap.set(userId.userId, userId);
 };
-prototype["updateMember"] = function updateMember(userId) {
+prototype["updateMember"] = function updateMember(userId, arg1) {
   const self = this;
   if (null == arg1) {
     const _membersMap2 = self._membersMap;
     return _membersMap2.set(userId.userId, userId);
   } else {
-    obj = {};
+    const obj = {};
     const merged = Object.assign(userId);
-    obj = {};
+    const obj2 = {};
     const merged1 = Object.assign(arg1);
-    let unusualDMActivityUntil = obj.unusualDMActivityUntil;
+    let unusualDMActivityUntil = obj2.unusualDMActivityUntil;
     if (unusualDMActivityUntil == null) {
       unusualDMActivityUntil = obj.unusualDMActivityUntil;
     }
     const result = self._computeMemberSupplementals(obj.userId, unusualDMActivityUntil);
     ({ sourceInviteCode, hasUnusualDmActivity, hasUnusualAccountActivity, joinSourceType, inviterId, integrationType, joinSourceApplicationId, joinSourceChannelId } = result);
     if (obj.sourceInviteCode !== sourceInviteCode) {
-      obj.sourceInviteCode = sourceInviteCode;
+      obj2.sourceInviteCode = sourceInviteCode;
     }
     if (obj.hasUnusualDmActivity !== hasUnusualDmActivity) {
-      obj.hasUnusualDmActivity = hasUnusualDmActivity;
+      obj2.hasUnusualDmActivity = hasUnusualDmActivity;
     }
     if (obj.hasUnusualAccountActivity !== hasUnusualAccountActivity) {
-      obj.hasUnusualAccountActivity = hasUnusualAccountActivity;
+      obj2.hasUnusualAccountActivity = hasUnusualAccountActivity;
     }
     if (obj.joinSourceType !== joinSourceType) {
-      obj.joinSourceType = joinSourceType;
+      obj2.joinSourceType = joinSourceType;
     }
     if (obj.joinSourceApplicationId !== joinSourceApplicationId) {
-      obj.joinSourceApplicationId = joinSourceApplicationId;
+      obj2.joinSourceApplicationId = joinSourceApplicationId;
     }
     if (obj.joinSourceChannelId !== joinSourceChannelId) {
-      obj.joinSourceChannelId = joinSourceChannelId;
+      obj2.joinSourceChannelId = joinSourceChannelId;
     }
     if (obj.inviterId !== inviterId) {
-      obj.inviterId = inviterId;
+      obj2.inviterId = inviterId;
     }
     if (obj.integrationType !== integrationType) {
-      obj.integrationType = integrationType;
+      obj2.integrationType = integrationType;
     }
     let flag = false;
     let flag2 = false;
@@ -178,11 +176,8 @@ prototype["updateMember"] = function updateMember(userId) {
     if (keys !== undefined) {
       flag2 = flag;
       while (keys[tmp] !== undefined) {
-        let tmp14 = tmp6;
-        let tmp15 = obj[tmp6];
-        let tmp16 = importDefault;
-        let tmp17 = dependencyMap;
-        if (isEqualDefault(tmp15, obj[tmp6])) {
+        let tmp15 = obj2[tmp6];
+        if (_modDef4693(tmp15, obj[tmp6])) {
           continue;
         } else {
           obj[tmp6] = tmp15;
@@ -219,14 +214,14 @@ Object.defineProperty(prototype, "version", {
   set: undefined
 });
 
-export const MemberSafetySecondaryIndex = obj;
+export { MemberSafetySecondaryIndex };
 export const hasUnusualDmActivity = function hasUnusualDmActivity(arg0) {
   let tmp = null != arg0;
   if (tmp) {
     const _Date = Date;
     const date = new Date(arg0);
     const time = date.getTime();
-    tmp = time >= closure_4 - result2.UNUSUAL_DM_COMPARISON_DELTA;
+    tmp = time >= closure_4 - MemberSafetyElasticSearchQueryTypes.UNUSUAL_DM_COMPARISON_DELTA;
   }
   return tmp;
 };

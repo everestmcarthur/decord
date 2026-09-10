@@ -1,54 +1,53 @@
-// Module ID: 9272
-// Function ID: 9273
+// Module ID: 9299
+// Function ID: 9300
 // Name: TwoWayLinkError
-// Dependencies: [19, 17, 21, 4560, 9231, 9273, 4556, 7123, 4973, 4975, 1114, 2]
+// Dependencies: [19, 17, 21, 4574, 9258, 9300, 4570, 7137, 4987, 4989, 1114, 2]
 // Exports: TwoWayLinkError
 
-// Module 9272 (TwoWayLinkError)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import Stack from "Stack" /* 4973 */;
-import Button from "Button" /* 4975 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
-import styles from "styles" /* 9231 */;
-import registerAssetDefault from "registerAsset" /* 9273 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9299 (TwoWayLinkError)
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Stack_Stack from "Stack/Stack" /* 4987 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7137 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9258 */;
+import _modDef9300 from "module_9300" /* 9300 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ Image: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ image: { width: 254, height: 127, marginBottom: 32 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkError.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: c3, View: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let closure_7 = createStyles.createStyles({ image: { width: 254, height: 127, marginBottom: 32 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkError.tsx");
 
 export const TwoWayLinkError = function TwoWayLinkError(arg0) {
   ({ onClose, title, body, onRetry } = arg0);
-  let obj = styles;
-  const twoWayLinkStyles = obj.useTwoWayLinkStyles();
-  obj = { style: twoWayLinkStyles.container, children: null };
-  obj = { style: twoWayLinkStyles.content, children: null };
-  const tmp = callback3();
-  const items = [callback(closure_3, { source: registerAssetDefault, style: callback3().image }), callback(Text.Text, { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: title }), callback(Text.Text, { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: body })];
-  obj[1] = items;
-  const items1 = [callback2(closure_4, obj), ];
-  const obj4 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: null };
-  const obj5 = { spacing: 8, direction: "vertical", style: twoWayLinkStyles.footerButton, children: null };
-  const obj6 = { size: "lg", variant: "primary", text: null, onPress: null };
-  const intl = getSystemLocale.intl;
-  obj6[2] = intl.string(getSystemLocale.t["5911Lb"]);
-  obj6[3] = onRetry;
-  const items2 = [callback(Button.Button, obj6), ];
-  const obj7 = { size: "lg", variant: "secondary", text: null, onPress: null };
-  const intl2 = getSystemLocale.intl;
-  obj7[2] = intl2.string(getSystemLocale.t["ETE/oC"]);
-  obj7[3] = onClose;
-  items2[1] = callback(Button.Button, obj7);
-  obj5[3] = items2;
-  obj4[2] = callback2(Stack.Stack, obj5);
-  items1[1] = callback(SafeAreaPaddingView.SafeAreaPaddingView, obj4);
-  obj[1] = items1;
-  return callback2(closure_4, obj);
+  const tmp = closure_7();
+  const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
+  const obj2 = { style: twoWayLinkStyles.container, children: null };
+  const obj3 = { style: twoWayLinkStyles.content, children: null };
+  const items = [hasOwnProperty(React3, { source: _modDef9300, style: tmp.image }), hasOwnProperty(Text_Text.Text, { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: title }), hasOwnProperty(Text_Text.Text, { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: body })];
+  obj3.children = items;
+  const items1 = [timestampProducer(React4, obj3), ];
+  const obj7 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: null };
+  const obj8 = { spacing: 8, direction: "vertical", style: twoWayLinkStyles.footerButton, children: null };
+  const obj9 = { size: "lg", variant: "primary", text: null, onPress: null };
+  const intl = util.intl;
+  obj9.text = intl.string(util.t["5911Lb"]);
+  obj9.onPress = onRetry;
+  const items2 = [hasOwnProperty(components_Button_Button.Button, obj9), ];
+  const obj10 = { size: "lg", variant: "secondary", text: null, onPress: null };
+  const intl2 = util.intl;
+  obj10.text = intl2.string(util.t["ETE/oC"]);
+  obj10.onPress = onClose;
+  items2[1] = hasOwnProperty(components_Button_Button.Button, obj10);
+  obj8.children = items2;
+  obj7.children = timestampProducer(Stack_Stack.Stack, obj8);
+  items1[1] = hasOwnProperty(common_SafeAreaView.SafeAreaPaddingView, obj7);
+  obj2.children = items1;
+  return timestampProducer(React4, obj2);
 };

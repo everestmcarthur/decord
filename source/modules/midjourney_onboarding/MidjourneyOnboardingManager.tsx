@@ -1,16 +1,15 @@
-// Module ID: 17807
-// Function ID: 17808
-// Name: handleChannelCreate
-// Dependencies: [5, 13863, 1074, 7118, 13862, 7244, 2]
+// Module ID: 17840
+// Function ID: 17841
+// Name: MidjourneyOnboardingManager
+// Dependencies: [5, 13886, 1074, 7132, 13885, 7261, 2]
 
-// Module 17807 (handleChannelCreate)
-import initializeDefault from "initialize" /* 7118 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { MIDJOURNEY_GUILD_ID } from "MIDJOURNEY_GUILD_ID" /* 13863 */;
-import { Routes } from "ME" /* 1074 */;
+// Module 17840 (MidjourneyOnboardingManager)
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-const require = arg1;
-initializeDefault;
+const require = fn;
+const MIDJOURNEY_GUILD_ID = fn(13886).MIDJOURNEY_GUILD_ID;
+const Routes = fn(1074).Routes;
 class MidjourneyOnboardingManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -20,56 +19,51 @@ class MidjourneyOnboardingManager extends tmp2 {
 }
 MidjourneyOnboardingManager.prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
   channel = channel.channel;
-  return callback(function*() {
+  return (async (arg0, value) => {
     if (dependencyMap === 2) {
       dependencyMap = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
         dependencyMap = 2;
-        if (0 === v0) {
+        if (0 === v1) {
           if (arg0 === 1) {
             dependencyMap = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             dependencyMap = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            const id = tmp2;
-            if (obj6.isEligibleForMidjourneyRedirect(closure_1_0)) {
-              v0 = 1;
+            if (obj6.isEligibleForMidjourneyRedirect(channel)) {
+              v1 = 1;
               dependencyMap = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = tmp22(13862).hasRedirectedToGuild(closure_1_4);
-              return obj1;
+              const obj4 = { value: tmp21(13885).hasRedirectedToGuild(MIDJOURNEY_GUILD_ID), done: false };
+              return obj4;
             } else {
               dependencyMap = 3;
             }
-            obj6 = closure_1_0(13862);
-            tmp22 = closure_1_0;
+            obj6 = tmp2(13885);
+            tmp21 = tmp2;
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 !== 2) {
-          v0(7244)(closure_1_5.CHANNEL(null, id.id));
-          const tmp9 = v0(7244);
+          v1(7261)(Routes.CHANNEL(null, closure_128_0.id));
+          const tmp9 = v1(7261);
         }
         dependencyMap = 3;
-        obj = { value: null, done: true };
-        obj[0] = arg1;
+        const obj = { value, done: true };
         return obj;
       } catch (tmp16) {
         dependencyMap = tmp;
@@ -79,6 +73,7 @@ MidjourneyOnboardingManager.prototype["handleChannelCreate"] = function handleCh
   })();
 };
 const midjourneyOnboardingManager = new MidjourneyOnboardingManager();
-const result = require("set").fileFinishedImporting("modules/midjourney_onboarding/MidjourneyOnboardingManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/midjourney_onboarding/MidjourneyOnboardingManager.tsx");
 
 export default midjourneyOnboardingManager;

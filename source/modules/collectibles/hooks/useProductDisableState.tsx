@@ -1,21 +1,21 @@
-// Module ID: 8874
-// Function ID: 8875
+// Module ID: 8901
+// Function ID: 8902
 // Name: useProductDisableState
-// Dependencies: [4224, 504, 1077, 1114, 2]
+// Dependencies: [4237, 504, 1077, 1114, 2]
 // Exports: useProductDisableState
 
-// Module 8874 (useProductDisableState)
+// Module 8901 (useProductDisableState)
 import initialize from "initialize" /* 504 */;
-import set from "set" /* 1077 */;
-import closure_2 from "reset" /* 4224 */;
+import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1077 */;
+import SubscriptionStore from "SubscriptionStore" /* 4237 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useProductDisableState.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useProductDisableState.tsx");
 
 export const useProductDisableState = function useProductDisableState(skuId) {
-  let obj = initialize;
-  const items = [closure_2];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const items = [SubscriptionStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => {
     premiumSubscription = premiumSubscription.getPremiumSubscription();
     let prop;
     if (premiumSubscription != null) {
@@ -23,18 +23,18 @@ export const useProductDisableState = function useProductDisableState(skuId) {
     }
     return true === prop;
   });
-  const ALL = set.FractionalPremiumSKUsSets.ALL;
+  const ALL = FractionalPremiumSKUs.FractionalPremiumSKUsSets.ALL;
   if (ALL.has(skuId)) {
-    obj = { isDisabled: null, disabledReason: null };
-    obj[0] = stateFromStores;
+    const obj2 = { isDisabled: stateFromStores, disabledReason: null };
     let stringResult = null;
     if (stateFromStores) {
       const intl = tmp(1114).intl;
       stringResult = intl.string(tmp(1114).t.NbveHD);
     }
-    obj[1] = stringResult;
+    obj2.disabledReason = stringResult;
+    let obj3 = obj2;
   } else {
-    obj = { isDisabled: false, disabledReason: null };
+    obj3 = { isDisabled: false, disabledReason: null };
   }
-  return obj;
+  return obj3;
 };

@@ -1,12 +1,12 @@
-// Module ID: 16493
-// Function ID: 16494
-// Name: ITEM_PADDING
+// Module ID: 16524
+// Function ID: 16525
+// Name: DesignConstants
 // Dependencies: [576, 2]
 
-// Module 16493 (ITEM_PADDING)
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 576 */;
+// Module 16524 (DesignConstants)
+import nativeDefault from "native" /* 576 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/icymi/native/DesignConstants.tsx");
+const result = size.fileFinishedImporting("modules/icymi/native/DesignConstants.tsx");
 
-export const ITEM_PADDING = ThemesDefault.space.PX_12;
+export const ITEM_PADDING = nativeDefault.space.PX_12;

@@ -1,18 +1,17 @@
-// Module ID: 7301
-// Function ID: 7302
-// Name: resolveGoreSettingWithDefaults
-// Dependencies: [19, 1371, 1074, 1187, 5423, 7299, 1935, 2]
+// Module ID: 7315
+// Function ID: 7316
+// Name: SensitiveMediaGoreRedactionSettingsUtils
+// Dependencies: [19, 1371, 1074, 1187, 5437, 7313, 1935, 2]
 // Exports: getGoreContentSettingOrDefault, resolveGoreSettingWithDefaultsForTeen, updateGoreContentSetting, useSensitiveContentFilterHelpArticle
 
-// Module 7301 (resolveGoreSettingWithDefaults)
-import create from "create" /* 1187 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 7299 */;
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
-import { HelpdeskArticles } from "ME" /* 1074 */;
+// Module 7315 (SensitiveMediaGoreRedactionSettingsUtils)
+import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 7313 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+require = fn;
 function resolveGoreSettingWithDefaults(isFriend) {
   ({ setting, isDm } = isFriend);
   if (isDm === undefined) {
@@ -23,11 +22,11 @@ function resolveGoreSettingWithDefaults(isFriend) {
     flag = false;
   }
   if (null != setting) {
-    if (setting !== create.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION) {
+    if (setting !== preloaded_user_settings.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION) {
       return setting;
     }
   }
-  currentUser = currentUser.getCurrentUser();
+  const currentUser = UserStore.getCurrentUser();
   let ExplicitContentRedaction = dependencyMap;
   if (obj.isSettingTeenByDefault(SettingsDefaultFeature.SettingsDefaultFeature.SENSITIVE_CONTENT)) {
     if (isDm === undefined) {
@@ -82,7 +81,9 @@ function resolveGoreSettingWithDefaults(isFriend) {
     }
   }
 }
-const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx");
+const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx");
 
 export { resolveGoreSettingWithDefaults };
 export const resolveGoreSettingWithDefaultsForTeen = function resolveGoreSettingWithDefaultsForTeen(isDm) {
@@ -96,17 +97,17 @@ export const resolveGoreSettingWithDefaultsForTeen = function resolveGoreSetting
   }
   if (flag) {
     if (flag2) {
-      let BLUR = create.ExplicitContentRedaction.BLUR;
+      let BLUR = preloaded_user_settings.ExplicitContentRedaction.BLUR;
     }
     return BLUR;
   }
-  const ExplicitContentRedaction = create.ExplicitContentRedaction;
+  const ExplicitContentRedaction = preloaded_user_settings.ExplicitContentRedaction;
   BLUR = flag ? ExplicitContentRedaction.BLOCK : ExplicitContentRedaction.BLUR;
 };
 export const getGoreContentSettingOrDefault = function getGoreContentSettingOrDefault(arg0) {
   let setting = arg0;
   if (arg0 == null) {
-    const GoreContentSettings = explicitContentFromProto.GoreContentSettings;
+    const GoreContentSettings = UserSettings.GoreContentSettings;
     setting = GoreContentSettings.getSetting();
   }
   let goreContentGuilds;
@@ -118,38 +119,37 @@ export const getGoreContentSettingOrDefault = function getGoreContentSettingOrDe
   if (setting != null) {
     prop = setting.goreContentNonFriendDm;
   }
-  obj[1] = resolveGoreSettingWithDefaults({ setting: prop, isDm: true });
+  obj.goreContentNonFriendDm = resolveGoreSettingWithDefaults({ setting: prop, isDm: true });
   let goreContentFriendDm;
   if (setting != null) {
     goreContentFriendDm = setting.goreContentFriendDm;
   }
-  obj[2] = resolveGoreSettingWithDefaults({ setting: goreContentFriendDm, isDm: true, isFriend: true });
+  obj.goreContentFriendDm = resolveGoreSettingWithDefaults({ setting: goreContentFriendDm, isDm: true, isFriend: true });
   return obj;
 };
 export const updateGoreContentSetting = function updateGoreContentSetting(arg0) {
-  const GoreContentSettings = explicitContentFromProto.GoreContentSettings;
+  const GoreContentSettings = UserSettings.GoreContentSettings;
   const setting = GoreContentSettings.getSetting();
   let goreContentGuilds;
   if (setting != null) {
     goreContentGuilds = setting.goreContentGuilds;
   }
-  let obj = { goreContentGuilds: tmp4({ setting: goreContentGuilds }), goreContentNonFriendDm: null, goreContentFriendDm: null };
+  const obj = { goreContentGuilds: resolveGoreSettingWithDefaults({ setting: goreContentGuilds }), goreContentNonFriendDm: null, goreContentFriendDm: null };
   let prop;
   if (setting != null) {
     prop = setting.goreContentNonFriendDm;
   }
-  obj[1] = resolveGoreSettingWithDefaults({ setting: prop, isDm: true });
+  obj.goreContentNonFriendDm = resolveGoreSettingWithDefaults({ setting: prop, isDm: true });
   let goreContentFriendDm;
   if (setting != null) {
     goreContentFriendDm = setting.goreContentFriendDm;
   }
-  obj[2] = resolveGoreSettingWithDefaults({ setting: goreContentFriendDm, isDm: true, isFriend: true });
-  const GoreContentSettings2 = explicitContentFromProto.GoreContentSettings;
-  obj = {};
+  obj.goreContentFriendDm = resolveGoreSettingWithDefaults({ setting: goreContentFriendDm, isDm: true, isFriend: true });
+  const GoreContentSettings2 = UserSettings.GoreContentSettings;
   const merged = Object.assign(obj);
   const merged1 = Object.assign(arg0);
-  GoreContentSettings2.updateSetting(obj);
+  GoreContentSettings2.updateSetting({});
 };
 export const useSensitiveContentFilterHelpArticle = function useSensitiveContentFilterHelpArticle() {
-  return React.useMemo(() => constants.EXPLICIT_MEDIA_REDACTION, []);
+  return noop.useMemo(() => constants.EXPLICIT_MEDIA_REDACTION, []);
 };

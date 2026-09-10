@@ -1,14 +1,14 @@
-// Module ID: 8064
-// Function ID: 8065
-// Name: isTwoWeekTrialOfferIngestAllowed
+// Module ID: 8079
+// Function ID: 8080
+// Name: TwoWeekTrialOfferGate
 // Dependencies: [2]
 // Exports: isTwoWeekTrialOfferIngestAllowed
 
-// Module 8064 (isTwoWeekTrialOfferIngestAllowed)
-import set from "set" /* 2 */;
+// Module 8079 (TwoWeekTrialOfferGate)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/premium/experiments/TwoWeekTrialOfferGate.tsx");
+const result = size.fileFinishedImporting("modules/premium/experiments/TwoWeekTrialOfferGate.tsx");
 
-export function isTwoWeekTrialOfferIngestAllowed(arg0) {
+export function isTwoWeekTrialOfferIngestAllowed() {
   return true;
 }

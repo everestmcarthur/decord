@@ -1,13 +1,13 @@
-// Module ID: 4715
-// Function ID: 4716
+// Module ID: 4729
+// Function ID: 4730
 // Name: sanitizeGuildTextChannelName
 // Dependencies: [2]
 // Exports: default
 
-// Module 4715 (sanitizeGuildTextChannelName)
-import set from "set" /* 2 */;
+// Module 4729 (sanitizeGuildTextChannelName)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/channel/sanitizeGuildTextChannelName.tsx");
+const result = size.fileFinishedImporting("modules/channel/sanitizeGuildTextChannelName.tsx");
 
 export default function sanitizeGuildTextChannelName(str) {
   str = str.replace(/[\s-~]+/g, "-");

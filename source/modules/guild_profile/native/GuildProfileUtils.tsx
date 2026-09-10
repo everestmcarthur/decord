@@ -1,36 +1,37 @@
-// Module ID: 9197
-// Function ID: 9198
-// Name: useProfilePrimaryColor
-// Dependencies: [32, 4552, 1396, 8132, 7552, 2]
+// Module ID: 9224
+// Function ID: 9225
+// Name: guild_profile/GuildProfileUtils
+// Dependencies: [32, 4566, 1396, 8158, 7566, 2]
 // Exports: getProfilePrimaryColor, useProfilePrimaryColor
 
-// Module 9197 (useProfilePrimaryColor)
-import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
-import hasFetchedColors from "hasFetchedColors" /* 8132 */;
-import hasFetchedColorsDefault from "hasFetchedColors" /* 8132 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+// Module 9224 (guild_profile/GuildProfileUtils)
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import useAvatarColor from "useAvatarColor" /* 8158 */;
+import _slicedToArray from "module_32" /* 32 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_profile/native/GuildProfileUtils.tsx");
+const useAvatarColorDefault = useAvatarColor;
+
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_profile/native/GuildProfileUtils.tsx");
 
 export const useProfilePrimaryColor = function useProfilePrimaryColor(guildProfile, token) {
   let guildIconURL = null;
   if (null != guildProfile) {
     guildIconURL = null;
     if (null == guildProfile.brandColorPrimary) {
-      let obj = getAvatarURLDefault;
-      obj = { id: null, icon: null, size: 64 };
-      ({ id: obj2[0], icon: obj2[1] } = guildProfile);
-      guildIconURL = obj.getGuildIconURL(obj);
+      ({ id: obj2.id, icon: obj2.icon } = guildProfile);
+      guildIconURL = AvatarUtilsDefault.getGuildIconURL({ id: null, icon: null, size: 64 });
+      const obj3 = { id: null, icon: null, size: 64 };
     }
   }
-  let brandColorPrimary = hasFetchedColorsDefault(guildIconURL, token);
-  brandColorPrimary = undefined;
+  let brandColorPrimary = useAvatarColorDefault(guildIconURL, token);
+  let brandColorPrimary1;
   if (guildProfile != null) {
-    brandColorPrimary = guildProfile.brandColorPrimary;
+    brandColorPrimary1 = guildProfile.brandColorPrimary;
   }
-  if (null != brandColorPrimary) {
+  if (null != brandColorPrimary1) {
     brandColorPrimary = guildProfile.brandColorPrimary;
   }
   return brandColorPrimary;
@@ -41,43 +42,35 @@ export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfi
   } else if (null != guildProfileFromInvite.brandColorPrimary) {
     return guildProfileFromInvite.brandColorPrimary;
   } else {
-    let obj = { id: null, icon: null, size: 64 };
-    ({ id: obj6[0], icon: obj6[1] } = guildProfileFromInvite);
-    const guildIconURL = getAvatarURLDefault.getGuildIconURL(obj);
+    ({ id: obj6.id, icon: obj6.icon } = guildProfileFromInvite);
+    const guildIconURL = AvatarUtilsDefault.getGuildIconURL({ id: null, icon: null, size: 64 });
     if (null == guildIconURL) {
       return null;
     } else {
-      hasFetchedColors.maybeFetchColors(guildIconURL);
-      const useColorStore = hasFetchedColors.useColorStore;
+      useAvatarColor.maybeFetchColors(guildIconURL);
+      const useColorStore = useAvatarColor.useColorStore;
       const tmp13 = useColorStore.getState().palette[guildIconURL];
       let first;
       if (tmp13 != null) {
         first = tmp13[0];
       }
       if (null != first) {
-        [tmp4, tmp5, tmp6] = callback(first, 3);
-        obj = { r: null, g: null, b: null };
-        obj[0] = tmp4;
-        obj[1] = tmp5;
-        obj[2] = tmp6;
-        const tmp3 = callback(first, 3);
-        const obj2 = tmp8(7552)(obj);
+        [tmp4, tmp5, tmp6] = first;
+        const obj = { r: tmp4, g: tmp5, b: tmp6 };
+        const tmp3 = _slicedToArray(first, 3);
+        const obj2 = tmp8(7566)(obj);
         let num2 = 1;
-        ({ h, s, l } = tmp8(7552)(obj).toHsl());
-        if (closure_4.desaturateUserColors) {
-          num2 = closure_4.saturation;
+        ({ h, s, l } = tmp8(7566)(obj).toHsl());
+        if (AccessibilityStore.desaturateUserColors) {
+          num2 = AccessibilityStore.saturation;
         }
-        obj = { h: null, s: null, l: null };
-        obj[0] = h;
-        obj[1] = s * num2;
-        obj[2] = l;
-        const toHslResult = tmp8(7552)(obj).toHsl();
-        return tmp8(7552)(obj).toHexString();
+        const obj9 = { h, s: s * num2, l };
+        const toHslResult = tmp8(7566)(obj).toHsl();
+        return tmp8(7566)(obj9).toHexString();
       } else {
         return null;
       }
-      const obj7 = hasFetchedColors;
     }
-    const obj5 = getAvatarURLDefault;
+    const obj3 = { id: null, icon: null, size: 64 };
   }
 };

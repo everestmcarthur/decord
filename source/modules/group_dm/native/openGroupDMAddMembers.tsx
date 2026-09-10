@@ -1,24 +1,24 @@
-// Module ID: 11595
-// Function ID: 11596
-// Name: getGroupDMAddMembersAction
-// Dependencies: [1957, 1371, 11596, 11597, 11599, 11600, 4258, 4417, 2]
+// Module ID: 11621
+// Function ID: 11622
+// Name: openGroupDMAddMembers
+// Dependencies: [1957, 1371, 11622, 11623, 11625, 11626, 4271, 4431, 2]
 // Exports: default, showGroupDMAddMembersRoadblock
 
-// Module 11595 (getGroupDMAddMembersAction)
-import presentAddedFriendToast from "presentAddedFriendToast" /* 4258 */;
-import coerceMainRoute from "coerceMainRoute" /* 4417 */;
-import GroupDMNitroAcquisitionStrategy from "GroupDMNitroAcquisitionStrategy" /* 11596 */;
-import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 11597 */;
-import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 11600 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
+// Module 11621 (openGroupDMAddMembers)
+import ToastUtils from "ToastUtils" /* 4271 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4431 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11622 */;
+import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 11623 */;
+import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 11626 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+require = fn;
 function getGroupDMAddMembersAction(id, CHANNEL_TEXT_AREA) {
-  channel = channel.getChannel(id);
+  const channel = ChannelStore.getChannel(id);
   if (null != channel) {
     if (channel.isGroupDM()) {
-      currentUser = currentUser.getCurrentUser();
+      const currentUser = UserStore.getCurrentUser();
       const recipients = channel.recipients;
       let num;
       if (recipients != null) {
@@ -27,11 +27,8 @@ function getGroupDMAddMembersAction(id, CHANNEL_TEXT_AREA) {
       if (num == null) {
         num = 0;
       }
-      let obj = { memberCount: null, recipientLimit: null, audience: null, showUpsell: null };
-      obj[0] = num + 1;
-      obj[1] = getGroupDMRecipientLimitDefault({ useNitroCapExperiment: true });
-      const obj3 = GroupDMNitroAcquisitionStrategy;
-      const tmp2 = require;
+      const obj = { memberCount: num + 1, recipientLimit: getGroupDMRecipientLimitDefault({ useNitroCapExperiment: true }), audience: null, showUpsell: null };
+      const obj3 = GroupDMNitroUpsellModel;
       const tmp4 = importDefault;
       let premiumType;
       if (currentUser != null) {
@@ -44,28 +41,26 @@ function getGroupDMAddMembersAction(id, CHANNEL_TEXT_AREA) {
       if (flag == null) {
         flag = false;
       }
-      obj[2] = GroupDMNitroAcquisitionStrategy.getGroupDMNitroAudience(premiumType, flag);
-      const tmp2Result = GroupDMNitroAcquisitionStrategy;
-      obj = { location: null };
-      obj[0] = CHANNEL_TEXT_AREA;
-      obj[3] = tmp4(11599).getConfig(obj).enabled;
+      obj.audience = GroupDMNitroUpsellModel.getGroupDMNitroAudience(premiumType, flag);
+      const tmp2Result = GroupDMNitroUpsellModel;
+      const obj2 = { location: CHANNEL_TEXT_AREA };
+      obj.showUpsell = tmp4(11625).getConfig(obj2).enabled;
       return obj3.getGroupDMAddMembersEntryAction(obj);
     }
   }
   return "open";
 }
-const result = require("set").fileFinishedImporting("modules/group_dm/native/openGroupDMAddMembers.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/group_dm/native/openGroupDMAddMembers.tsx");
 
-export default function openGroupDMAddMembers(id, CHANNEL_TEXT_AREA) {
-  const tmp = getGroupDMAddMembersAction(id, CHANNEL_TEXT_AREA);
+export default function openGroupDMAddMembers(channelId, locationPage) {
+  const tmp = getGroupDMAddMembersAction(channelId, locationPage);
   if ("open" === tmp) {
-    coerceMainRoute.navigateToNewGroupDM(id, CHANNEL_TEXT_AREA);
-    const obj2 = coerceMainRoute;
+    NavigationRouteUtils.navigateToNewGroupDM(channelId, locationPage);
   } else if ("upsell" === tmp) {
-    openGroupDMNitroCapLimitSheetDefault(CHANNEL_TEXT_AREA);
+    openGroupDMNitroCapLimitSheetDefault(locationPage);
   } else {
-    presentAddedFriendToast.showMaxGroupMembers();
-    const obj = presentAddedFriendToast;
+    ToastUtils.showMaxGroupMembers();
   }
 };
 export { getGroupDMAddMembersAction };
@@ -73,7 +68,6 @@ export const showGroupDMAddMembersRoadblock = function showGroupDMAddMembersRoad
   if ("upsell" === groupDMAddMembersAction) {
     openGroupDMNitroCapLimitSheetDefault(CHANNEL_TEXT_AREA);
   } else {
-    presentAddedFriendToast.showMaxGroupMembers();
-    const obj = presentAddedFriendToast;
+    ToastUtils.showMaxGroupMembers();
   }
 };

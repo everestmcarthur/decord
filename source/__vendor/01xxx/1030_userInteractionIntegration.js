@@ -2,75 +2,70 @@
 // Function ID: 1031
 // Name: userInteractionIntegration
 // Dependencies: [682, 1031, 1025, 1023, 1026]
+// Exports: startUserInteractionSpan, userInteractionIntegration
 
 // Module 1030 (userInteractionIntegration)
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 682 */;
+import _mod682 from "module_682" /* 682 */;
 
 require = arg1;
 const dependencyMap = arg6;
 const UserInteraction = "UserInteraction";
-arg5.userInteractionIntegration = () => ({ name: UserInteraction });
-arg5.startUserInteractionSpan = (arg0) => {
-  let obj = registerSpanErrorInstrumentation;
-  const client = obj.getClient();
+
+export () => ({ name: UserInteraction })
+export const startUserInteractionSpan = (arg0) => {
+  const client = _mod682.getClient();
   if (client) {
-    let tmpResult = tmp(1031);
-    const currentReactNativeTracingIntegration = tmpResult.getCurrentReactNativeTracingIntegration();
+    const currentReactNativeTracingIntegration = tmp(1031).getCurrentReactNativeTracingIntegration();
     if (currentReactNativeTracingIntegration) {
       ({ elementId, op } = arg0);
       if (client.getOptions().enableUserInteractionTracing) {
         if (elementId) {
-          tmpResult = tmp(682);
+          const tmpResult11 = tmp(682);
           if (currentReactNativeTracingIntegration.state.currentRoute) {
-            const activeSpan = tmpResult.getActiveSpan();
+            const activeSpan = tmpResult11.getActiveSpan();
             let tmp18 = activeSpan;
             if (activeSpan) {
               tmp18 = !tmp(1025).isSentryInteractionSpan(activeSpan);
-              const tmpResult1 = tmp(1025);
+              const tmpResult12 = tmp(1025);
             }
             if (activeSpan) {
               if (tmp18) {
                 const debug7 = tmp(682).debug;
                 const _HermesInternal8 = HermesInternal;
                 debug7.warn("[" + UserInteraction + "] Did not create " + op + " transaction because active transaction " + tmp(682).spanToJSON(activeSpan).description + " exists on the scope.");
-                const tmpResult2 = tmp(682);
+                const tmpResult13 = tmp(682);
               }
             }
             const _HermesInternal5 = HermesInternal;
             const combined = "" + currentReactNativeTracingIntegration.state.currentRoute + "." + elementId;
             if (activeSpan) {
-              if (tmpResult3.spanToJSON(activeSpan).description === combined) {
-                if (tmpResult4.spanToJSON(activeSpan).op === op) {
+              if (tmpResult14.spanToJSON(activeSpan).description === combined) {
+                if (tmpResult15.spanToJSON(activeSpan).op === op) {
                   const debug5 = tmp(682).debug;
                   const _HermesInternal6 = HermesInternal;
                   debug5.warn("[" + UserInteraction + "] Did not create " + op + " transaction because it the same transaction " + tmp(682).spanToJSON(activeSpan).description + " already exists on the scope.");
-                  const tmpResult5 = tmp(682);
+                  const tmpResult16 = tmp(682);
                 }
-                tmpResult4 = tmp(682);
+                tmpResult15 = tmp(682);
               }
-              tmpResult3 = tmp(682);
+              tmpResult14 = tmp(682);
             }
             const currentScope = tmp(682).getCurrentScope();
-            obj = { name: null, op: null, scope: null };
-            obj[0] = combined;
-            obj[1] = op;
-            obj[2] = currentScope;
-            const tmpResult6 = tmp(682);
+            const obj2 = { name: combined, op, scope: currentScope };
+            const tmpResult17 = tmp(682);
             const result = tmp(1025).clearActiveSpanFromScope(currentScope);
-            const tmpResult7 = tmp(1025);
-            obj = { idleTimeout: null, finalTimeout: null };
-            obj[0] = currentReactNativeTracingIntegration.options.idleTimeoutMs;
-            obj[1] = currentReactNativeTracingIntegration.options.finalTimeoutMs;
-            const startIdleSpanResult = tmp(1025).startIdleSpan(obj, obj);
+            const tmpResult18 = tmp(1025);
+            const obj3 = { idleTimeout: currentReactNativeTracingIntegration.options.idleTimeoutMs, finalTimeout: currentReactNativeTracingIntegration.options.finalTimeoutMs };
+            const startIdleSpanResult = tmp(1025).startIdleSpan(obj2, obj3);
             const attr = startIdleSpanResult.setAttribute(tmp(682).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, tmp(1023).SPAN_ORIGIN_MANUAL_INTERACTION);
-            const tmpResult8 = tmp(1025);
+            const tmpResult19 = tmp(1025);
             const result1 = tmp(1026).onlySampleIfChildSpans(client, startIdleSpanResult);
             const debug6 = tmp(682).debug;
             const _HermesInternal7 = HermesInternal;
             debug6.log("[" + UserInteraction + "] User Interaction Tracing Created " + op + " transaction " + combined + ".");
             return startIdleSpanResult;
           } else {
-            const debug4 = tmpResult.debug;
+            const debug4 = tmpResult11.debug;
             const _HermesInternal4 = HermesInternal;
             debug4.log("[" + UserInteraction + "] User Interaction Tracing can not create transaction without a current route.");
           }
@@ -89,5 +84,6 @@ arg5.startUserInteractionSpan = (arg0) => {
       const _HermesInternal = HermesInternal;
       debug.log("[" + UserInteraction + "] Tracing integration is not available. Can not start user interaction span.");
     }
+    const tmpResult = tmp(1031);
   }
 };

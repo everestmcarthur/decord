@@ -1,40 +1,40 @@
-// Module ID: 10180
-// Function ID: 10181
-// Name: useEnabledHarmTypesBitmaskForChannelAndAuthorId
-// Dependencies: [19, 1221, 1957, 4209, 1371, 7292, 504, 7300, 7295, 2]
+// Module ID: 10207
+// Function ID: 10208
+// Name: useContentHarmTypes
+// Dependencies: [19, 1221, 1957, 4222, 1371, 7306, 504, 7314, 7309, 2]
 // Exports: useEnabledHarmTypesBitmaskForMessage
 
-// Module 10180 (useEnabledHarmTypesBitmaskForChannelAndAuthorId)
-import getEligibleHarmTypesConfigsForContext from "getEligibleHarmTypesConfigsForContext" /* 7292 */;
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1221 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "markAllUserIdListsStale" /* 4209 */;
-import closure_6 from "mergeGuildAvatar" /* 1371 */;
+// Module 10207 (useContentHarmTypes)
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7306 */;
+import noop from "module_19" /* 19 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+require = fn;
 function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
-  const _require = channelId;
+  _require = channelId;
   dependencyMap = authorId;
-  const eligibleHarmTypesConfigsForContext = _require(7292).getEligibleHarmTypesConfigsForContext();
-  let obj = _require(7292);
-  let items = [closure_6];
-  const stateFromStores = _require(504).useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj2 = _require(504);
+  const eligibleHarmTypesConfigsForContext = require("ObscuredMediaUtils").getEligibleHarmTypesConfigsForContext();
+  let obj = require("ObscuredMediaUtils");
+  let items = [UserStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj2 = require("initialize");
   const items1 = [stateFromStores1, stateFromStores2];
-  stateFromStores1 = _require(504).useStateFromStores(items1, () => {
-    const items = [stateFromStores1, stateFromStores2];
-    return channelId(authorId[5]).getChannelTypeById(channelId, authorId, items);
+  stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
+    const items = [ChannelStore, RelationshipStore];
+    return ObscuredMediaUtils.getChannelTypeById(closure_0, closure_1, items);
   });
-  const obj3 = _require(504);
+  const obj3 = require("initialize");
   const items2 = [stateFromStores];
   const items3 = [eligibleHarmTypesConfigsForContext];
-  stateFromStores2 = _require(504).useStateFromStores(items2, () => eligibleHarmTypesConfigsForContext.reduce((arg0, harmType) => {
+  stateFromStores2 = require("initialize").useStateFromStores(items2, () => eligibleHarmTypesConfigsForContext.reduce((acc, harmType) => {
     const obj = {};
-    const merged = Object.assign(arg0);
+    const merged = Object.assign(acc);
     obj[harmType.harmType] = harmType.getProtoUserSettings(settings.settings);
     return obj;
-  }, {}), items3, _require(7300).areSettingsEqual);
+  }, {}), items3, require("SensitiveMediaRedactionSettingUtils").areSettingsEqual);
   const items4 = [stateFromStores1, eligibleHarmTypesConfigsForContext, stateFromStores2, authorId, stateFromStores];
   const memo = eligibleHarmTypesConfigsForContext.useMemo(() => {
     if (null != stateFromStores1) {
@@ -46,7 +46,7 @@ function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
         if (null != tmp2) {
           const mapped = eligibleHarmTypesConfigsForContext.map((harmType) => {
             let tmp3 = null;
-            if (null != closure_4) {
+            if (null != stateFromStores1) {
               tmp3 = harmType.getUserSettingsWithDefaults(tmp)[tmp2];
             }
             harmType = null;
@@ -55,7 +55,7 @@ function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
             }
             return harmType;
           });
-          const found = mapped.filter((arg0) => null != arg0);
+          const found = mapped.filter((item) => null != item);
         }
         return [];
       }
@@ -63,22 +63,22 @@ function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
     }
   }, items4);
   if (0 === memo.length) {
-    let NONE = tmp(7295).ContentHarmTypeBitMask.NONE;
+    let NONE = tmp(7309).ContentHarmTypeBitMask.NONE;
   } else {
-    NONE = tmp(7292).contentHarmTypesToFlags(memo);
-    const tmpResult = tmp(7292);
+    NONE = tmp(7306).contentHarmTypesToFlags(memo);
+    const tmpResult = tmp(7306);
   }
   return NONE;
 }
-const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/hooks/useContentHarmTypes.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/explicit_media_redaction/hooks/useContentHarmTypes.tsx");
 
 export { useEnabledHarmTypesBitmaskForChannelAndAuthorId };
 export const useEnabledHarmTypesBitmaskForMessage = function useEnabledHarmTypesBitmaskForMessage(stateFromStores) {
   if (null == stateFromStores) {
-    let channelIdAndAuthorIdFromMessage = {};
+    let obj2 = {};
   } else {
-    channelIdAndAuthorIdFromMessage = getEligibleHarmTypesConfigsForContext;
-    channelIdAndAuthorIdFromMessage = channelIdAndAuthorIdFromMessage.getChannelIdAndAuthorIdFromMessage(stateFromStores);
+    obj2 = ObscuredMediaUtils.getChannelIdAndAuthorIdFromMessage(stateFromStores);
   }
-  return useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelIdAndAuthorIdFromMessage.channelId, channelIdAndAuthorIdFromMessage.authorId);
+  return useEnabledHarmTypesBitmaskForChannelAndAuthorId(obj2.channelId, obj2.authorId);
 };

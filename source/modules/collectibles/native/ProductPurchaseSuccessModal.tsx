@@ -1,69 +1,73 @@
-// Module ID: 11083
-// Function ID: 11084
-// Name: CancelButton
-// Dependencies: [32, 718, 19, 17, 4552, 1074, 21, 4560, 576, 1889, 11082, 5631, 5680, 1114, 4296, 4974, 4561, 4528, 7552, 11084, 4262, 4987, 8178, 11086, 504, 11087, 11088, 8856, 8332, 11094, 8171, 7123, 11095, 8802, 8815, 11113, 11224, 11225, 4556, 7554, 4975, 2]
+// Module ID: 11110
+// Function ID: 11111
+// Name: ProductPurchaseSuccessModal
+// Dependencies: [32, 718, 19, 17, 4566, 1074, 21, 4574, 576, 1889, 11109, 5645, 5694, 1114, 4310, 4988, 4575, 4542, 7566, 11111, 4275, 5001, 8204, 11113, 504, 11114, 11115, 8883, 8360, 11121, 8197, 7137, 11122, 8831, 8844, 11140, 11251, 11252, 4570, 7568, 4989, 2]
 // Exports: default
 
-// Module 11083 (CancelButton)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 11110 (ProductPurchaseSuccessModal)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import Background from "Background" /* 5631 */;
-import tinycolorDefault from "tinycolor" /* 7552 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "_toArray" /* 718 */;
-import closure_5 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import ME from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import HapticUtils from "HapticUtils" /* 4542 */;
+import timing from "timing" /* 4575 */;
+import spring from "spring" /* 4988 */;
+import _mod5645 from "module_5645" /* 5645 */;
+import XSmallIcon from "XSmallIcon" /* 5694 */;
+import tinycolorDefault from "tinycolor" /* 7566 */;
+import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 11109 */;
+import _slicedToArray from "module_32" /* 32 */;
+import _toArray from "_toArray" /* 718 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-require = arg1;
+const require = globalThis.__r;
+
+require = fn;
 function CancelButton(arg0) {
   ({ tintColor: require, onCancel } = arg0);
-  dependencyMap = undefined;
-  dependencyMap = callback2();
-  const items = [onCancel];
-  const callback = React.useCallback(() => {
+  dependencyMap = closure_15();
+  let items = [onCancel];
+  const callback = noop.useCallback(() => {
     if (onCancel != null) {
       tmp();
     }
-    onCancel(closeButtonIcon[10]).close();
+    ProductPurchaseSuccessActionCreatorsDefault.close();
   }, items);
-  const obj = {
+  let obj = {
     onPress: callback,
     backImage() {
-      const style = [closeButtonIcon.closeButtonIcon, { tintColor: closure_0 }];
-      return closure_1_12(closure_1_0(closeButtonIcon[12]).XSmallIcon, { size: "lg", style });
+      const obj = { size: "lg", style: null };
+      const items = [closeButtonIcon.closeButtonIcon, { tintColor }];
+      obj.style = items;
+      return closure_2_12(XSmallIcon.XSmallIcon, obj);
     },
     accessibilityLabel: null,
     displayMode: "minimal"
   };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.cpT0Cq);
-  return callback(Background.HeaderBackButton, obj);
+  const intl = util.intl;
+  obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
+  return closure_12(_mod5645.HeaderBackButton, obj);
 }
 function ProductPurchaseGradientBackground(product) {
   product = product.product;
-  let backgroundColors;
   importDefault = undefined;
   let token;
   let token1;
-  backgroundColors = importDefault(token[19])(product.styles).backgroundColors;
+  const backgroundColors = require("useCollectiblesShopStyles")(product.styles).backgroundColors;
   let tertiary;
   if (backgroundColors != null) {
     tertiary = backgroundColors.tertiary;
   }
   importDefault = tmp5;
-  let obj = backgroundColors(tmp3[20]);
-  token = obj.useToken(tmp2(tmp3[8]).colors.BACKGROUND_BASE_LOW);
-  const tmp = callback3(product.type);
+  const tmp = closure_16(product.type);
+  token = backgroundColors(token[20]).useToken(tmp2(tmp3[8]).colors.BACKGROUND_BASE_LOW);
+  const obj = backgroundColors(token[20]);
   token1 = backgroundColors(token[20]).useToken(tmp2(tmp3[8]).colors.BACKGROUND_SURFACE_HIGH);
   let items = [backgroundColors, token, token1, null != tertiary];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     if (null == backgroundColors) {
-      const items = [token, token, token1, closure_1_22, closure_1_22];
+      const items = [token, token, token1, closure_22, closure_22];
       let items2 = items;
     } else {
       const primary2 = tmp.primary;
@@ -81,95 +85,88 @@ function ProductPurchaseGradientBackground(product) {
         items2[1] = primary.toHexString();
         const secondary = tmp.secondary;
         items2[2] = secondary.toHexString();
-        items2[3] = closure_1_22;
-        items2[4] = closure_1_22;
+        items2[3] = closure_22;
+        items2[4] = closure_22;
       }
     }
     return items2;
   }, items);
-  obj = { style: tmp.backdrop, start: constants.START, end: constants.END, locations: null != tertiary ? [0, 0.6, 0.85] : [0, 0.05, 0.6, 0.95, 1], colors: memo };
-  return callback(importDefault(token[21]), obj);
+  return closure_12(require("LinearGradient"), { style: tmp.backdrop, start: constants.START, end: constants.END, locations: null != tertiary ? [0, 0.6, 0.85] : [0, 0.05, 0.6, 0.95, 1], colors: memo });
 }
-({ Image: closure_6, ScrollView: error, View: closure_8 } = get_ActivityIndicator);
-({ Orientation: c10, VerticalGradient: unpackModuleId } = ME);
+get_ActivityIndicator = fn(17);
+({ Image: metroRequire, ScrollView: closure_7, View: closure_8 } = get_ActivityIndicator);
+const Constants = fn(1074);
+({ Orientation: c10, VerticalGradient: closure_11 } = Constants);
+const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-createCacheKey = { closeButtonIcon: null };
-createCacheKey = { tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-createCacheKey[0] = createCacheKey;
-let closure_15 = createCacheKey.createStyles(createCacheKey);
-let closure_16 = createCacheKey.createStyles((arg0) => {
+let createStyles = fn(4574);
+let obj2 = { closeButtonIcon: { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY } };
+let closure_15 = createStyles.createStyles(obj2);
+createStyles = fn(4574);
+let closure_16 = createStyles.createStyles((arg0) => {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = { root: null, header: null, headerLeading: null, imageBackground: null, backdrop: null, main: null, curtain: null, body: null, preview: null, previewBundle: null, messages: null, title: null, footer: null, cta: null };
-  obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-  obj[0] = obj;
-  obj = { flexDirection: "row", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16 };
-  obj[1] = obj;
-  obj[2] = { flex: 1, flexDirection: "row", alignItems: "center" };
-  obj[3] = { resizeMode: "cover", position: "absolute", top: 0, bottom: 0, left: 0, right: 0 };
-  obj[4] = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0 };
-  obj[5] = { flex: 1 };
-  obj[6] = { position: "absolute", backgroundColor: ThemesDefault.colors.BLACK, top: 0, bottom: 0, left: 0, right: 0 };
-  obj[7] = { flexGrow: 1, flexDirection: "column", justifyContent: "center" };
+  const obj = { root: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, header: null, headerLeading: null, imageBackground: null, backdrop: null, main: null, curtain: null, body: null, preview: null, previewBundle: null, messages: null, title: null, footer: null, cta: null };
+  const obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+  obj.header = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16 };
+  obj.headerLeading = { flex: 1, flexDirection: "row", alignItems: "center" };
+  obj.imageBackground = { resizeMode: "cover", position: "absolute", top: 0, bottom: 0, left: 0, right: 0 };
+  obj.backdrop = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0 };
+  obj.main = { flex: 1 };
+  const rect = { position: "absolute", backgroundColor: nativeDefault.colors.BLACK, top: 0, bottom: 0, left: 0, right: 0 };
+  obj.curtain = rect;
+  obj.body = { flexGrow: 1, flexDirection: "column", justifyContent: "center" };
   let num = 0;
   if (arg0 === CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION) {
     num = 1;
   }
-  const obj2 = { flexDirection: "row", justifyContent: "center", alignItems: "center", flex: num, marginTop: null, marginHorizontal: null };
+  const obj4 = { flexDirection: "row", justifyContent: "center", alignItems: "center", flex: num, marginTop: null, marginHorizontal: null };
   let str = 0;
   if (arg0 === CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION) {
     str = "20%";
   }
-  obj2[4] = str;
+  obj4.marginTop = str;
   let PX_32;
   if (arg0 === CollectiblesItemType.CollectiblesItemType.NAMEPLATE) {
     PX_32 = tmp(576).space.PX_32;
   }
-  obj2[5] = PX_32;
+  obj4.marginHorizontal = PX_32;
   if (flag) {
     if (arg0 === tmp3(1889).CollectiblesItemType.AVATAR_DECORATION) {
-      const obj3 = { shadowColor: null, shadowOffset: null, shadowOpacity: 1, shadowRadius: 60, elevation: 24 };
-      obj3[0] = tmp(576).unsafe_rawColors.PRIMARY_630;
-      obj3[1] = { width: 0, height: 0 };
-      let obj8 = obj3;
+      const obj5 = { shadowColor: tmp(576).unsafe_rawColors.PRIMARY_630, shadowOffset: { width: 0, height: 0 }, shadowOpacity: 1, shadowRadius: 60, elevation: 24 };
+      let obj10 = obj5;
     }
-    const merged = Object.assign(obj8);
-    obj[8] = obj2;
-    obj[9] = { flex: 1, justifyContent: "flex-start", alignItems: "center", minHeight: 250 };
-    const obj4 = { paddingTop: null, minHeight: null, flexDirection: "column", alignItems: "center", justifyContent: "flex-start", gap: null };
-    obj4[0] = tmp(576).space.PX_24;
+    const merged = Object.assign(obj10);
+    obj.preview = obj4;
+    obj.previewBundle = { flex: 1, justifyContent: "flex-start", alignItems: "center", minHeight: 250 };
+    const obj6 = { paddingTop: tmp(576).space.PX_24, minHeight: null, flexDirection: "column", alignItems: "center", justifyContent: "flex-start", gap: null };
     let str2;
     if (arg0 === tmp3(1889).CollectiblesItemType.AVATAR_DECORATION) {
       str2 = "32%";
     }
-    obj4[1] = str2;
-    obj4[5] = tmp(576).space.PX_16;
-    obj[10] = obj4;
-    const obj5 = { textAlign: "center", marginHorizontal: null };
-    obj5[1] = tmp(576).space.PX_32;
-    obj[11] = obj5;
-    const obj6 = { marginBottom: null };
-    obj6[0] = tmp(576).space.PX_16;
-    obj[12] = obj6;
-    const obj7 = { flexDirection: "row", gap: null, paddingVertical: null, marginHorizontal: null, borderRadius: null };
-    obj7[1] = tmp(576).space.PX_12;
-    obj7[2] = tmp(576).space.PX_16;
-    obj7[3] = tmp(576).space.PX_24;
-    obj7[4] = tmp(576).radii.round;
-    obj[13] = obj7;
+    obj6.minHeight = str2;
+    obj6.gap = tmp(576).space.PX_16;
+    obj.messages = obj6;
+    const obj7 = { textAlign: "center", marginHorizontal: tmp(576).space.PX_32 };
+    obj.title = obj7;
+    const obj8 = { marginBottom: tmp(576).space.PX_16 };
+    obj.footer = obj8;
+    const obj9 = { flexDirection: "row", gap: tmp(576).space.PX_12, paddingVertical: tmp(576).space.PX_16, marginHorizontal: tmp(576).space.PX_24, borderRadius: tmp(576).radii.round };
+    obj.cta = obj9;
     return obj;
   }
-  obj8 = {};
+  obj10 = {};
 });
-let closure_18 = { code: "function ProductPurchaseSuccessModalTsx1(){const{interpolate,springInput,isProfilePreview}=this.__closure;return{opacity:interpolate(springInput.get(),[0,1],[0.1,1]),transform:[{scale:interpolate(springInput.get(),[0,1],[isProfilePreview?0.6:0,1])}]};}" };
-let closure_19 = { code: "function ProductPurchaseSuccessModalTsx2(){const{interpolate,springInput}=this.__closure;return{opacity:interpolate(springInput.get(),[0,1],[0,1]),transform:[{scale:interpolate(springInput.get(),[0,1],[0.75,1])}]};}" };
-let closure_20 = { code: "function ProductPurchaseSuccessModalTsx3(){const{interpolate,linearInput}=this.__closure;return{opacity:interpolate(linearInput.get(),[0,1],[0.5,0])};}" };
+const __initData = { code: "function ProductPurchaseSuccessModalTsx1(){const{interpolate,springInput,isProfilePreview}=this.__closure;return{opacity:interpolate(springInput.get(),[0,1],[0.1,1]),transform:[{scale:interpolate(springInput.get(),[0,1],[isProfilePreview?0.6:0,1])}]};}" };
+const __initData2 = { code: "function ProductPurchaseSuccessModalTsx2(){const{interpolate,springInput}=this.__closure;return{opacity:interpolate(springInput.get(),[0,1],[0,1]),transform:[{scale:interpolate(springInput.get(),[0,1],[0.75,1])}]};}" };
+const __initData3 = { code: "function ProductPurchaseSuccessModalTsx3(){const{interpolate,linearInput}=this.__closure;return{opacity:interpolate(linearInput.get(),[0,1],[0.5,0])};}" };
 let closure_21 = [80, 79, 78, 75, 72, 50, 45, 35, 70];
+let obj3 = { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 let closure_22 = tinycolorDefault("black").toHexString();
-let obj5 = tinycolorDefault("black");
-let result = require("set").fileFinishedImporting("modules/collectibles/native/ProductPurchaseSuccessModal.tsx");
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/native/ProductPurchaseSuccessModal.tsx");
 
 export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEditProfile) {
   ({ product, useCategoryImage } = stageCollectibleChangeForEditProfile);
@@ -184,162 +181,156 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
   if (prop === undefined) {
     prop = null;
   }
-  let stateFromStores;
-  importDefault = undefined;
-  sharedValue = undefined;
-  let obj = stateFromStores(sharedValue[22]);
-  const currentUser = obj.useCurrentUser();
-  const backgroundColors = importDefault(sharedValue[19])(product.styles).backgroundColors;
+  _require = undefined;
+  let callback;
+  dependencyMap = undefined;
+  const currentUser = require("useCurrentUser").useCurrentUser();
+  const backgroundColors = callback(11111)(product.styles).backgroundColors;
   let tertiary;
   if (backgroundColors != null) {
     tertiary = backgroundColors.tertiary;
   }
-  const tmp6 = callback3(product.type, null != tertiary);
-  let tmp2Result = tmp2(tmp3[20]);
-  let obj3 = React;
-  const token = tmp2Result.useToken(tmp4(tmp3[8]).colors.INTERACTIVE_TEXT_ACTIVE);
-  stateFromStores = React.useRef(closure_21);
-  const callback = React.useCallback(() => {
-    const arr = closure_1_4(stateFromStores.current);
+  const tmp6 = closure_16(product.type, null != tertiary);
+  let obj = require("useCurrentUser");
+  const token = require("useToken").useToken(tmp4(576).colors.INTERACTIVE_TEXT_ACTIVE);
+  _require = noop.useRef(length);
+  callback = noop.useCallback(() => {
+    const arr = _toArray(ref.current);
     const first = arr[0];
     const substr = arr.slice(1);
     if (null != first) {
       if (0 === substr.length) {
-        const result = stateFromStores(sharedValue[17]).triggerHapticFeedback(stateFromStores(sharedValue[17]).HapticFeedbackTypes.IMPACT_HEAVY);
-        const obj3 = stateFromStores(sharedValue[17]);
+        const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_HEAVY);
       }
       if (null != first) {
         const _setTimeout = setTimeout;
-        const timerId = setTimeout(closure_1, first);
+        const timerId = setTimeout(callback, first);
       }
-      stateFromStores.current = substr;
+      ref.current = substr;
     }
-    if (substr.length >= closure_1_21.length / 2) {
-      const result1 = stateFromStores(sharedValue[17]).triggerHapticFeedback(stateFromStores(sharedValue[17]).HapticFeedbackTypes.IMPACT_LIGHT);
-      const obj2 = stateFromStores(sharedValue[17]);
+    if (substr.length >= length.length / 2) {
+      const result1 = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_LIGHT);
     } else {
-      const result2 = stateFromStores(sharedValue[17]).triggerHapticFeedback(stateFromStores(sharedValue[17]).HapticFeedbackTypes.IMPACT_MEDIUM);
-      const obj = stateFromStores(sharedValue[17]);
+      const result2 = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
     }
   }, []);
-  importDefault = callback;
   let items = [callback];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     callback();
     return () => {
-      closure_0.current = [];
+      ref.current = [];
     };
   }, items);
-  tmp2Result = tmp2(tmp3[23]);
-  const avatarDecorationPreviewSizes = tmp2Result.useAvatarDecorationPreviewSizes();
+  const tmp2Result = require("useToken");
+  const avatarDecorationPreviewSizes = require("useAvatarDecorationPreviewSizes").useAvatarDecorationPreviewSizes();
   ({ avatarSize, avatarDecorationSize } = avatarDecorationPreviewSizes);
-  let items1 = [closure_9];
-  stateFromStores = stateFromStores(sharedValue[24]).useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
-  let tmp12 = product.type === tmp2(tmp3[9]).CollectiblesItemType.PROFILE_EFFECT;
+  const tmp2Result14 = require("useAvatarDecorationPreviewSizes");
+  let items1 = [AccessibilityStore];
+  const stateFromStores = require("initialize").useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
+  let tmp12 = product.type === tmp2(1889).CollectiblesItemType.PROFILE_EFFECT;
   if (!tmp12) {
-    tmp12 = product.type === tmp2(tmp3[9]).CollectiblesItemType.PROFILE_FRAME;
+    tmp12 = product.type === tmp2(1889).CollectiblesItemType.PROFILE_FRAME;
   }
-  importDefault = tmp12;
-  const tmp2Result1 = stateFromStores(sharedValue[24]);
-  sharedValue = stateFromStores(sharedValue[14]).useSharedValue(0);
-  const tmp2Result2 = stateFromStores(sharedValue[14]);
-  const sharedValue1 = stateFromStores(sharedValue[14]).useSharedValue(0);
+  closure_129_0 = stateFromStores;
+  closure_129_1 = tmp12;
+  const tmp2Result15 = require("initialize");
+  const sharedValue = require("ReanimatedRexport").useSharedValue(0);
+  closure_129_2 = sharedValue;
+  const tmp2Result16 = require("ReanimatedRexport");
+  const sharedValue1 = require("ReanimatedRexport").useSharedValue(0);
+  closure_129_3 = sharedValue1;
   const items2 = [sharedValue, stateFromStores, sharedValue1];
-  const effect1 = obj3.useEffect(() => {
+  const effect1 = obj4.useEffect(() => {
     let num = 1;
-    if (!stateFromStores) {
-      const obj = stateFromStores(sharedValue[14]);
-      num = obj.withDelay(200, stateFromStores(sharedValue[15]).withSpring(1, { duration: 500, dampingRatio: 0.7 }));
-      const obj2 = stateFromStores(sharedValue[15]);
+    if (!closure_0) {
+      const obj = ReanimatedRexport;
+      num = obj.withDelay(200, spring.withSpring(1, { duration: 500, dampingRatio: 0.7 }));
     }
-    const result = sharedValue.set(num);
+    const result = _undefined.set(num);
     let num3 = 1;
-    if (!stateFromStores) {
-      const obj3 = stateFromStores(sharedValue[14]);
-      num3 = obj3.withDelay(200, stateFromStores(sharedValue[16]).withTiming(1, { duration: 200 }));
-      const obj4 = stateFromStores(sharedValue[16]);
+    if (!closure_0) {
+      const obj3 = ReanimatedRexport;
+      num3 = obj3.withDelay(200, timing.withTiming(1, { duration: 200 }));
     }
-    const result1 = sharedValue1.set(num3);
+    const result1 = _slicedToArray.set(num3);
   }, items2);
-  const tmp2Result3 = stateFromStores(sharedValue[14]);
+  const tmp2Result17 = require("ReanimatedRexport");
   const fn = function l() {
-    let obj = { opacity: stateFromStores(sharedValue[14]).interpolate(sharedValue.get(), [0, 1], [0.1, 1]), transform: null };
-    const obj2 = stateFromStores(sharedValue[14]);
+    const obj = { opacity: ReanimatedRexport.interpolate(_undefined.get(), [0, 1], [0.1, 1]), transform: null };
     let num = 0;
-    const value = sharedValue.get();
-    if (closure_1) {
+    value = _undefined.get();
+    if (callback) {
       num = 0.6;
     }
-    obj = { scale: stateFromStores(sharedValue[14]).interpolate(value, [0, 1], items) };
-    items = [num, 1];
-    const items1 = [obj];
-    obj[1] = items1;
+    const obj4 = { scale: null };
+    const items = [num, 1];
+    obj4.scale = ReanimatedRexport.interpolate(value, [0, 1], items);
+    const items1 = [obj4];
+    obj.transform = items1;
     return obj;
   };
-  obj = { interpolate: tmp2(tmp3[14]).interpolate, springInput: sharedValue, isProfilePreview: tmp12 };
-  fn.__closure = obj;
+  const tmp2Result18 = require("ReanimatedRexport");
+  fn.__closure = { interpolate: require("ReanimatedRexport").interpolate, springInput: sharedValue, isProfilePreview: tmp12 };
   fn.__workletHash = 15385317790278;
-  fn.__initData = closure_18;
-  const animatedStyle = stateFromStores(sharedValue[14]).useAnimatedStyle(fn);
-  const tmp2Result4 = stateFromStores(sharedValue[14]);
+  fn.__initData = __initData;
+  const animatedStyle = tmp2Result18.useAnimatedStyle(fn);
+  let obj2 = { interpolate: require("ReanimatedRexport").interpolate, springInput: sharedValue, isProfilePreview: tmp12 };
   const fn2 = function n() {
-    let obj = { opacity: stateFromStores(sharedValue[14]).interpolate(sharedValue.get(), [0, 1], [0, 1]), transform: null };
-    obj = { scale: null };
-    const obj2 = stateFromStores(sharedValue[14]);
-    obj[0] = stateFromStores(sharedValue[14]).interpolate(sharedValue.get(), [0, 1], [0.75, 1]);
-    const items = [obj];
-    obj[1] = items;
+    const obj = { opacity: ReanimatedRexport.interpolate(_undefined.get(), [0, 1], [0, 1]), transform: null };
+    const obj3 = { scale: null };
+    obj3.scale = ReanimatedRexport.interpolate(_undefined.get(), [0, 1], [0.75, 1]);
+    const items = [obj3];
+    obj.transform = items;
     return obj;
   };
-  obj = { interpolate: tmp2(tmp3[14]).interpolate, springInput: sharedValue };
-  fn2.__closure = obj;
+  const tmp2Result19 = require("ReanimatedRexport");
+  fn2.__closure = { interpolate: require("ReanimatedRexport").interpolate, springInput: sharedValue };
   fn2.__workletHash = 4517716462039;
-  fn2.__initData = closure_19;
-  const animatedStyle1 = stateFromStores(sharedValue[14]).useAnimatedStyle(fn2);
-  const tmp2Result5 = stateFromStores(sharedValue[14]);
+  fn2.__initData = __initData2;
+  const animatedStyle1 = tmp2Result19.useAnimatedStyle(fn2);
+  let obj3 = { interpolate: require("ReanimatedRexport").interpolate, springInput: sharedValue };
   const fn3 = function s() {
-    const obj = { opacity: stateFromStores(sharedValue[14]).interpolate(sharedValue1.get(), [0, 1], [0.5, 0]) };
+    const obj = { opacity: ReanimatedRexport.interpolate(_slicedToArray.get(), [0, 1], [0.5, 0]) };
     return obj;
   };
-  const tmp2Result6 = stateFromStores(sharedValue[14]);
-  fn3.__closure = { interpolate: stateFromStores(sharedValue[14]).interpolate, linearInput: sharedValue1 };
+  const tmp2Result20 = require("ReanimatedRexport");
+  fn3.__closure = { interpolate: require("ReanimatedRexport").interpolate, linearInput: sharedValue1 };
   fn3.__workletHash = 6018737312;
-  fn3.__initData = closure_20;
-  const animatedStyle2 = tmp2Result6.useAnimatedStyle(fn3);
-  obj1 = { interpolate: stateFromStores(sharedValue[14]).interpolate, linearInput: sharedValue1 };
-  const category = stateFromStores(sharedValue[25]).useFetchCollectiblesProductCategory(product.skuId).category;
+  fn3.__initData = __initData3;
+  const animatedStyle2 = tmp2Result20.useAnimatedStyle(fn3);
+  const obj5 = { interpolate: require("ReanimatedRexport").interpolate, linearInput: sharedValue1 };
+  const category = require("useFetchCollectiblesProductCategory").useFetchCollectiblesProductCategory(product.skuId).category;
   if (category != null) {
     const mobileBgUrl = category.mobileBgUrl;
   }
-  const tmp2Result7 = stateFromStores(sharedValue[25]);
-  handleUseNow = stateFromStores(sharedValue[26]).useHandleUseNow({ product, onSuccess, stageCollectibleChangeForEditProfile: stageCollectibleChangeForEditProfile.stageCollectibleChangeForEditProfile });
-  const isApplying = handleUseNow.isApplying;
-  ({ handleUseNow, canUseNow, handleEditProfile } = handleUseNow);
+  const tmp2Result21 = require("useFetchCollectiblesProductCategory");
+  const handleUseNow1 = require("useHandleUseNow").useHandleUseNow({ product, onSuccess, stageCollectibleChangeForEditProfile: stageCollectibleChangeForEditProfile.stageCollectibleChangeForEditProfile });
+  const isApplying = handleUseNow1.isApplying;
+  ({ handleUseNow, canUseNow, handleEditProfile } = handleUseNow1);
   const avatarSource = currentUser.getAvatarSource(undefined, false, avatarSize);
-  const tmp2Result8 = stateFromStores(sharedValue[26]);
-  const effect2 = obj3.useEffect(() => {
-    stateFromStores(sharedValue[28]).lockOrientation(constants.PORTRAIT);
+  const tmp2Result22 = require("useHandleUseNow");
+  const effect2 = obj4.useEffect(() => {
+    ref(_undefined[28]).lockOrientation(constants.PORTRAIT);
     return () => {
-      const result = callback(table[28]).restoreDefaultOrientation();
+      const result = ref(_undefined[28]).restoreDefaultOrientation();
     };
   }, []);
-  const tmp2Result9 = stateFromStores(sharedValue[27]);
-  const previewCollectibleProduct = stateFromStores(sharedValue[29]).usePreviewCollectibleProduct(product, true);
-  const tmp2Result10 = stateFromStores(sharedValue[29]);
-  const shopProductItems = stateFromStores(sharedValue[30]).useShopProductItems(product);
-  const tmp2Result11 = stateFromStores(sharedValue[30]);
-  [tmp25, sharedValue] = sharedValue1(obj3.useState(), 2);
-  let obj2 = { style: tmp6.root, id: product.skuId, children: null };
+  const tmp2Result23 = require("useFetchVirtualCurrencyBalance");
+  const previewCollectibleProduct = require("usePreviewCollectiblesProduct").usePreviewCollectibleProduct(product, true);
+  const tmp2Result24 = require("usePreviewCollectiblesProduct");
+  const shopProductItems = require("useShopProductItems").useShopProductItems(product);
+  const tmp2Result25 = require("useShopProductItems");
+  [tmp25, c2] = noop.useState();
+  const obj6 = { style: tmp6.root, id: product.skuId, children: null };
   if (useCategoryImage) {
     if (null != mobileBgUrl) {
-      obj3 = { source: null, style: null };
-      let obj4 = { uri: null };
-      obj4[0] = mobileBgUrl;
-      obj3[0] = obj4;
-      obj3[1] = tmp6.imageBackground;
-      let tmp29 = callback(closure_6, obj3);
-      let tmp30 = callback;
-      let tmp31 = callback;
+      const obj7 = { source: null, style: null };
+      const obj8 = { uri: mobileBgUrl };
+      obj7.source = obj8;
+      obj7.style = tmp6.imageBackground;
+      let tmp29 = closure_12(closure_6, obj7);
+      let tmp30 = closure_12;
+      let tmp31 = closure_12;
     }
     const items3 = [tmp29, , ];
     const items4 = [tmp6.main, ];
@@ -347,23 +338,18 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
     if (useCategoryImage) {
       str = "rgba(0, 0, 0, 0.3)";
     }
-    const obj5 = { style: null, top: true, bottom: true, left: true, right: true, children: null };
-    const obj6 = { backgroundColor: null };
-    obj6[0] = str;
-    items4[1] = obj6;
-    obj5[0] = items4;
-    const obj7 = { style: null, children: null };
-    obj7[0] = tmp6.header;
-    const obj8 = { style: null, children: null };
-    obj8[0] = tmp6.headerLeading;
+    const rect = { style: null, top: true, bottom: true, left: true, right: true, children: null };
+    const obj9 = { backgroundColor: str };
+    items4[1] = obj9;
+    rect.style = items4;
+    const obj10 = { style: tmp6.header, children: null };
+    const obj11 = { style: tmp6.headerLeading, children: null };
     if (showOrbBalancePill) {
-      const obj9 = { initialRenderedBalance: null, balance: null };
-      obj9[0] = prop;
-      obj9[1] = tmp2Result9.useFetchVirtualCurrencyBalance().balance;
-      showOrbBalancePill = tmp31(tmp2(tmp3[32]).BalanceWidgetPill, obj9);
+      const obj12 = { initialRenderedBalance: prop, balance: tmp2Result23.useFetchVirtualCurrencyBalance().balance };
+      showOrbBalancePill = tmp31(tmp2(11122).BalanceWidgetPill, obj12);
     }
-    obj8[1] = showOrbBalancePill;
-    const items5 = [tmp31(tmp28, obj8), ];
+    obj11.children = showOrbBalancePill;
+    const items5 = [tmp31(tmp28, obj11), ];
     let toHexStringResult;
     if (backgroundColors != null) {
       const label = backgroundColors.label;
@@ -372,132 +358,104 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
     if (toHexStringResult == null) {
       toHexStringResult = token;
     }
-    const obj10 = { tintColor: null, onCancel: null };
-    obj10[0] = toHexStringResult;
-    obj10[1] = onCancel;
-    items5[1] = tmp31(CancelButton, obj10);
-    obj7[1] = items5;
-    const items6 = [tmp27(tmp28, obj7), , ];
-    const obj11 = { style: null, contentContainerStyle: null, alwaysBounceVertical: false, children: null };
-    obj11[0] = { flex: 1 };
-    obj11[1] = tmp6.body;
-    const obj12 = { style: null, children: null };
+    const obj13 = { tintColor: toHexStringResult, onCancel };
+    items5[1] = tmp31(CancelButton, obj13);
+    obj10.children = items5;
+    const items6 = [tmp27(tmp28, obj10), , ];
+    const obj14 = { style: { flex: 1 }, contentContainerStyle: tmp6.body, alwaysBounceVertical: false, children: null };
+    const obj15 = { style: null, children: null };
     const items7 = [tmp6.preview, animatedStyle];
-    obj12[0] = items7;
+    obj15.style = items7;
     const type = product.type;
-    if (tmp2(tmp3[9]).CollectiblesItemType.BUNDLE === type) {
-      const obj13 = { style: null, onLayout: null, children: null };
-      obj13[0] = tmp6.previewBundle;
-      obj13[1] = tmp26;
+    if (tmp2(1889).CollectiblesItemType.BUNDLE === type) {
+      const obj16 = { style: tmp6.previewBundle, onLayout: tmp26, children: null };
       let tmp30Result = null != tmp25;
       if (tmp30Result) {
-        const obj14 = { deco: null, pfx: null, nameplate: null, previewAssets: null, disableStaticBackground: true, size: "large", targetSize: null };
-        ({ firstAvatarDecoration: obj35[0], firstProfileEffect: obj35[1], firstNameplate: obj35[2] } = shopProductItems);
-        obj14[3] = product.previewAssets;
-        obj14[6] = tmp25;
-        tmp30Result = tmp30(tmp4(tmp3[33]), obj14);
+        const obj17 = { deco: null, pfx: null, nameplate: null, previewAssets: null, disableStaticBackground: true, size: "large", targetSize: null };
+        ({ firstAvatarDecoration: obj35.deco, firstProfileEffect: obj35.pfx, firstNameplate: obj35.nameplate } = shopProductItems);
+        obj17.previewAssets = product.previewAssets;
+        obj17.targetSize = tmp25;
+        tmp30Result = tmp30(tmp4(8831), obj17);
       }
-      obj13[2] = tmp30Result;
-      tmp30Result = tmp30(tmp28, obj13);
-    } else if (tmp2(tmp3[9]).CollectiblesItemType.AVATAR_DECORATION === type) {
-      const obj15 = { item: null, size: null, avatarSource: null, animate: null };
-      obj15[0] = sharedValue1(product.items, 1)[0];
-      obj15[1] = avatarDecorationSize;
-      obj15[2] = avatarSource;
-      obj15[3] = !stateFromStores;
-      tmp30Result = tmp30(tmp4(tmp3[34]), obj15);
-    } else if (tmp2(tmp3[9]).CollectiblesItemType.PROFILE_EFFECT === type) {
-      const obj16 = { user: null, profileEffect: null };
-      obj16[0] = currentUser;
-      obj16[1] = product.items[0];
-      tmp30Result = tmp30(tmp4(tmp3[35]), obj16);
-    } else if (tmp2(tmp3[9]).CollectiblesItemType.PROFILE_FRAME === type) {
-      const obj17 = { user: null, profileFrame: null };
-      obj17[0] = currentUser;
-      obj17[1] = product.items[0];
-      tmp30Result = tmp30(tmp4(tmp3[36]), obj17);
+      obj16.children = tmp30Result;
+      let tmp30Result2 = tmp30(tmp28, obj16);
+    } else if (tmp2(1889).CollectiblesItemType.AVATAR_DECORATION === type) {
+      const obj18 = { item: _slicedToArray(product.items, 1)[0], size: avatarDecorationSize, avatarSource, animate: !stateFromStores };
+      tmp30Result2 = tmp30(tmp4(8844), obj18);
+    } else if (tmp2(1889).CollectiblesItemType.PROFILE_EFFECT === type) {
+      const obj19 = { user: currentUser, profileEffect: product.items[0] };
+      tmp30Result2 = tmp30(tmp4(11140), obj19);
+    } else if (tmp2(1889).CollectiblesItemType.PROFILE_FRAME === type) {
+      const obj20 = { user: currentUser, profileFrame: product.items[0] };
+      tmp30Result2 = tmp30(tmp4(11251), obj20);
     } else {
-      tmp30Result = null;
-      if (tmp2(tmp3[9]).CollectiblesItemType.NAMEPLATE === type) {
-        const obj18 = { user: null, nameplate: null, animate: true };
-        obj18[0] = currentUser;
-        obj18[1] = product.items[0];
-        tmp30Result = tmp30(tmp2(tmp3[37]).NameplatePreview, obj18);
+      tmp30Result2 = null;
+      if (tmp2(1889).CollectiblesItemType.NAMEPLATE === type) {
+        const obj21 = { user: currentUser, nameplate: product.items[0], animate: true };
+        tmp30Result2 = tmp30(tmp2(11252).NameplatePreview, obj21);
       }
     }
-    obj12[1] = tmp30Result;
-    const items8 = [tmp31(tmp4(tmp3[14]).View, obj12), ];
-    const obj19 = { style: null, children: null };
+    obj15.children = tmp30Result2;
+    const items8 = [tmp31(tmp4(4310).View, obj15), ];
+    const obj22 = { style: null, children: null };
     const items9 = [tmp6.messages, animatedStyle1];
-    obj19[0] = items9;
+    obj22.style = items9;
     if (null != renderMessages) {
       let renderMessagesResult = renderMessages();
     } else {
-      const obj20 = { variant: "heading-xl/bold", color: "text-overlay-light", style: null, children: null };
-      obj20[2] = tmp6.title;
-      const intl3 = tmp2(tmp3[13]).intl;
-      const obj21 = { itemName: null };
-      obj21[0] = product.name;
-      obj20[3] = intl3.format(tmp2(tmp3[13]).t.YNaxMp, obj21);
-      const items10 = [tmp31(tmp2(tmp3[38]).Text, obj20), ];
-      const obj22 = { variant: "text-md/medium", color: "text-overlay-light", style: null, children: null };
-      obj22[2] = tmp6.title;
-      let result = tmp2(tmp3[39]).isPremiumCollectiblesProduct(product);
-      const intl4 = tmp2(tmp3[13]).intl;
+      const obj23 = { variant: "heading-xl/bold", color: "text-overlay-light", style: tmp6.title, children: null };
+      const intl3 = tmp2(1114).intl;
+      const obj24 = { itemName: product.name };
+      obj23.children = intl3.format(tmp2(1114).t.YNaxMp, obj24);
+      const items10 = [tmp31(tmp2(4570).Text, obj23), ];
+      const obj25 = { variant: "text-md/medium", color: "text-overlay-light", style: tmp6.title, children: null };
+      let result = tmp2(7568).isPremiumCollectiblesProduct(product);
+      const intl4 = tmp2(1114).intl;
       const format = intl4.format;
-      const t = tmp2(tmp3[13]).t;
+      const t = tmp2(1114).t;
       if (result) {
-        const obj23 = { itemName: null };
-        obj23[0] = product.name;
-        let formatResult = format(t.nW6E3m, obj23);
+        const obj26 = { itemName: product.name };
+        let formatResult = format(t.nW6E3m, obj26);
       } else {
-        const obj24 = { itemName: null };
-        obj24[0] = product.name;
-        formatResult = format(t["4kp0AB"], obj24);
+        const obj27 = { itemName: product.name };
+        formatResult = format(t["4kp0AB"], obj27);
       }
-      const obj25 = { children: null };
-      obj22[3] = formatResult;
-      items10[1] = tmp31(tmp2(tmp3[38]).Text, obj22);
-      obj25[0] = items10;
-      renderMessagesResult = tmp27(closure_14, obj25);
-      const tmp2Result12 = tmp2(tmp3[39]);
-      const tmp41 = closure_14;
+      const obj28 = { children: null };
+      obj25.children = formatResult;
+      items10[1] = tmp31(tmp2(4570).Text, obj25);
+      obj28.children = items10;
+      renderMessagesResult = tmp27(closure_14, obj28);
+      const tmp2Result26 = tmp2(7568);
     }
-    obj19[1] = renderMessagesResult;
-    items8[1] = tmp31(tmp4(tmp3[14]).View, obj19);
-    obj11[3] = items8;
-    items6[1] = tmp27(closure_7, obj11);
-    const obj26 = { style: null, children: null };
-    obj26[0] = tmp6.footer;
-    const obj27 = { style: null, children: null };
-    obj27[0] = tmp6.cta;
+    obj22.children = renderMessagesResult;
+    items8[1] = tmp31(tmp4(4310).View, obj22);
+    obj14.children = items8;
+    items6[1] = tmp27(closure_7, obj14);
+    const obj29 = { style: tmp6.footer, children: null };
+    const obj30 = { style: tmp6.cta, children: null };
     if (canUseNow) {
-      const obj28 = { loading: null, disabled: null, onPress: null, text: null, size: "lg", grow: true };
-      obj28[0] = isApplying;
-      obj28[1] = isApplying;
-      obj28[2] = handleUseNow;
-      const intl2 = tmp2(tmp3[13]).intl;
-      obj28[3] = intl2.string(tmp2(tmp3[13]).t.MAS7uK);
-      let obj29 = obj28;
+      const obj31 = { loading: isApplying, disabled: isApplying, onPress: handleUseNow, text: null, size: "lg", grow: true };
+      const intl2 = tmp2(1114).intl;
+      obj31.text = intl2.string(tmp2(1114).t.MAS7uK);
+      let obj32 = obj31;
     } else {
-      obj29 = { onPress: null, text: null, size: "lg", grow: true };
-      obj29[0] = handleEditProfile;
-      const intl = tmp2(tmp3[13]).intl;
-      obj29[1] = intl.string(tmp2(tmp3[13]).t["2p2aYz"]);
+      obj32 = { onPress: handleEditProfile, text: null, size: "lg", grow: true };
+      const intl = tmp2(1114).intl;
+      obj32.text = intl.string(tmp2(1114).t["2p2aYz"]);
     }
-    obj27[1] = tmp31(tmp2(tmp3[40]).Button, obj29);
-    obj26[1] = tmp31(tmp28, obj27);
-    items6[2] = tmp31(tmp28, obj26);
-    obj5[5] = items6;
-    items3[1] = tmp27(tmp2(tmp3[31]).SafeAreaPaddingView, obj5);
-    const obj30 = { style: null, pointerEvents: "none" };
+    obj30.children = tmp31(tmp2(4989).Button, obj32);
+    obj29.children = tmp31(tmp28, obj30);
+    items6[2] = tmp31(tmp28, obj29);
+    rect.children = items6;
+    items3[1] = tmp27(tmp2(7137).SafeAreaPaddingView, rect);
+    const obj33 = { style: null, pointerEvents: "none" };
     const items11 = [tmp6.curtain, animatedStyle2];
-    obj30[0] = items11;
-    items3[2] = tmp31(tmp4(tmp3[14]).View, obj30);
-    obj2[2] = items3;
-    return tmp27(tmp28, obj2);
+    obj33.style = items11;
+    items3[2] = tmp31(tmp4(4310).View, obj33);
+    obj6.children = items3;
+    return tmp27(tmp28, obj6);
   }
-  tmp29 = callback(ProductPurchaseGradientBackground, { product });
-  tmp30 = callback;
-  tmp31 = callback;
+  tmp29 = closure_12(ProductPurchaseGradientBackground, { product });
+  tmp30 = closure_12;
+  tmp31 = closure_12;
 };

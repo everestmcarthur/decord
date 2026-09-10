@@ -1,11 +1,11 @@
-// Module ID: 9098
-// Function ID: 9099
+// Module ID: 9125
+// Function ID: 9126
 // Name: AudioSettingsDefaultVolumes
 // Dependencies: [2]
 
-// Module 9098 (AudioSettingsDefaultVolumes)
-import set from "set" /* 2 */;
+// Module 9125 (AudioSettingsDefaultVolumes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/AudioSettingsDefaultVolumes.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/AudioSettingsDefaultVolumes.tsx");
 
 export const AudioSettingsDefaultVolumes = { USER: 100, [100]: "USER", STREAM: 18, [18]: "STREAM" };

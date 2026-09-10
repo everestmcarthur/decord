@@ -1,21 +1,23 @@
-// Module ID: 15979
-// Function ID: 15980
-// Name: statesAreEqual
-// Dependencies: [19, 502, 21, 12, 1483, 6944, 504, 6593, 15669, 1116, 576, 2]
+// Module ID: 16009
+// Function ID: 16010
+// Name: components/MFA
+// Dependencies: [19, 502, 21, 12, 1483, 6958, 504, 6607, 15699, 1116, 576, 2]
 // Exports: default
 
-// Module 15979 (statesAreEqual)
-import applyDefault from "apply" /* 12 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "fetchFingerprint" /* 502 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16009 (components/MFA)
+import _modDef12 from "module_12" /* 12 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6607 */;
+import noop from "module_19" /* 19 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-const require = arg1;
+const require = fn;
 function statesAreEqual(arg0, arg1) {
-  return applyDefault.isEqual(arg0, arg1);
+  return _modDef12.isEqual(arg0, arg1);
 }
+const jsx = fn(21).jsx;
 let closure_7 = { flex: 1, position: "relative" };
-const result = require("set").fileFinishedImporting("modules/auth/native/components/MFA.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/native/components/MFA.tsx");
 
 export default function ConnectedMFA() {
   let obj = arg0;
@@ -23,54 +25,49 @@ export default function ConnectedMFA() {
     obj = {};
   }
   ({ inContainer, isMultiAccount } = obj);
-  let navigation;
-  navigation = isMultiAccount(1483).useNavigation();
+  const navigation = isMultiAccount(1483).useNavigation();
   if (inContainer) {
-    inContainer = navigation(6944)();
+    inContainer = navigation(6958)();
   }
-  let tmpResult = tmp(504);
-  const items = [closure_4];
+  const obj2 = isMultiAccount(1483);
+  const items = [AuthenticationStore];
   const items1 = [isMultiAccount];
-  const stateFromStores = tmpResult.useStateFromStores(items, () => ({ ticket: store.getMFATicket(), methods: store.getMFAMethods() }), [], statesAreEqual);
+  const stateFromStores = isMultiAccount(504).useStateFromStores(items, () => ({ ticket: AuthenticationStore.getMFATicket(), methods: AuthenticationStore.getMFAMethods() }), [], statesAreEqual);
   const items2 = [navigation];
-  const callback = React.useCallback((arg0) => {
+  const callback = noop.useCallback((arg0) => {
     ({ mfaType, data, ticket } = arg0);
-    let obj = navigation(closure_1_2[7]);
-    obj = { code: data, ticket, mfaType, isMultiAccount };
-    return obj.loginMFAv2(obj);
+    return AuthenticationActionCreatorsDefault.loginMFAv2({ code: data, ticket, mfaType, isMultiAccount });
   }, items1);
-  const callback1 = React.useCallback(() => {
+  const callback1 = noop.useCallback(() => {
     navigation.goBack();
   }, items2);
-  obj = { mfaChallenge: stateFromStores, finish: callback, handleOnClose: callback1, ignoreKeyboard: inContainer, containerStyle: null, headerStatusBarHeight: null, headerLeftContainerStyle: null, headerRightContainerStyle: null };
+  const obj3 = { mfaChallenge: stateFromStores, finish: callback, handleOnClose: callback1, ignoreKeyboard: inContainer, containerStyle: null, headerStatusBarHeight: null, headerLeftContainerStyle: null, headerRightContainerStyle: null };
   let tmp9;
   if (inContainer) {
     tmp9 = closure_7;
   }
-  obj[4] = tmp9;
+  obj3.containerStyle = tmp9;
   let num;
   if (inContainer) {
     num = 0;
   }
-  obj[5] = num;
+  obj3.headerStatusBarHeight = num;
   if (!inContainer) {
-    obj[6] = undefined;
+    obj3.headerLeftContainerStyle = undefined;
     let tmp13;
     if (inContainer) {
-      obj = { paddingRight: null, paddingTop: null, marginLeft: 0 };
-      obj[0] = tmp4(576).space.PX_16;
-      obj[1] = tmp4(576).space.PX_12;
-      tmp13 = obj;
+      const obj4 = { paddingRight: tmp4(576).space.PX_16, paddingTop: tmp4(576).space.PX_12, marginLeft: 0 };
+      tmp13 = obj4;
     }
-    obj[7] = tmp13;
-    return jsx(tmp(15669).MFAModal, obj);
+    obj3.headerRightContainerStyle = tmp13;
+    return jsx(tmp(15699).MFAModal, obj3);
   } else {
-    tmpResult = tmp(1116);
-    let space = tmp4(576).space;
-    const isAndroidResult = tmpResult.isAndroid();
-    space = { paddingLeft: null, paddingTop: null };
-    space[0] = tmpResult.isAndroid() ? space.PX_8 : space.PX_16;
-    space[1] = tmp4(576).space.PX_12;
-    const tmp11 = tmpResult.isAndroid() ? space.PX_8 : space.PX_16;
+    const tmpResult2 = tmp(1116);
+    tmp4(576).space;
+    const isAndroidResult = tmp(1116).isAndroid();
+    const space = { paddingLeft: null, paddingTop: null };
+    space.paddingLeft = tmp(1116).isAndroid() ? space.PX_8 : space.PX_16;
+    space.paddingTop = tmp4(576).space.PX_12;
+    const tmp11 = tmp(1116).isAndroid() ? space.PX_8 : space.PX_16;
   }
 };

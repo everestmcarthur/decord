@@ -1,36 +1,35 @@
-// Module ID: 16450
-// Function ID: 16451
+// Module ID: 16481
+// Function ID: 16482
 // Name: ForYouLoadMore
-// Dependencies: [19, 17, 7639, 21, 4560, 563, 4975, 1114, 2]
+// Dependencies: [19, 17, 7653, 21, 4574, 563, 4989, 1114, 2]
 // Exports: ForYouLoadMore
 
-// Module 16450 (ForYouLoadMore)
-import noopAll from "noop" /* 19 */;
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 563 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_4 from "_validate" /* 7639 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16481 (ForYouLoadMore)
+import noop from "module_19" /* 19 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 7653 */;
 
-require = arg1;
-noopAll;
-({ ActivityIndicator: obj1, View: c3 } = get_ActivityIndicator);
-let closure_6 = createCacheKey.createStyles({ container: { alignItems: "center", flexDirection: "row", justifyContent: "center", marginTop: 8, marginBottom: 24, marginHorizontal: 16, height: 42 } });
-const result = require("set").fileFinishedImporting("modules/notification_center/native/ForYouLoadMore.tsx");
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: c2, View: c3 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_6 = createStyles.createStyles({ container: { alignItems: "center", flexDirection: "row", justifyContent: "center", marginTop: 8, marginBottom: 24, marginHorizontal: 16, height: 42 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notification_center/native/ForYouLoadMore.tsx");
 
 export const ForYouLoadMore = function ForYouLoadMore(onPressLoad) {
-  let obj = defaultAreStatesEqual;
-  const items = [closure_4];
-  obj = { style: callback().container, children: null };
+  const tmp = closure_6();
+  const items = [NotificationCenterItemsStore];
+  const obj2 = { style: tmp.container, children: null };
   if (obj.useStateFromStores(items, () => loading.loading)) {
-    let tmp4Result = tmp4(closure_2, {});
+    let tmp4Result = tmp4(React2, {});
   } else {
-    obj = { variant: "secondary", grow: true, size: "md", text: null, onPress: null };
+    const obj3 = { variant: "secondary", grow: true, size: "md", text: null, onPress: null };
     const intl = tmp2(1114).intl;
-    obj[3] = intl.string(tmp2(1114).t["Q/LSXp"]);
-    obj[4] = onPressLoad.onPressLoad;
-    tmp4Result = tmp4(tmp2(4975).Button, obj);
+    obj3.text = intl.string(tmp2(1114).t["Q/LSXp"]);
+    obj3.onPress = onPressLoad.onPressLoad;
+    tmp4Result = tmp4(tmp2(4989).Button, obj3);
   }
-  obj[1] = tmp4Result;
-  return <closure_3 style={callback().container}>{null}</closure_3>;
+  obj2.children = tmp4Result;
+  return <React3 style={tmp.container}>{null}</React3>;
 };

@@ -1,19 +1,22 @@
-// Module ID: 11531
-// Function ID: 11532
+// Module ID: 8299
+// Function ID: 8300
 // Name: computeGlobalSpoilerDisplay
-// Dependencies: [4199, 1074, 563, 1935, 2]
+// Dependencies: [4212, 1074, 563, 1935, 2]
 // Exports: default, useShouldDisplaySpoilerObscurity
 
-// Module 11531 (computeGlobalSpoilerDisplay)
-import closure_2 from "getUncachedChannelPermissions" /* 4199 */;
-import ME from "ME" /* 1074 */;
+// Module 8299 (computeGlobalSpoilerDisplay)
+import PermissionStore from "PermissionStore" /* 4212 */;
 
-const require = arg1;
-({ Permissions: c3, SpoilerRenderSetting: c4 } = ME);
-const result = require("set").fileFinishedImporting("modules/messages/computeGlobalSpoilerDisplay.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const Constants = fn(1074);
+({ Permissions: c3, SpoilerRenderSetting: closure_4 } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/computeGlobalSpoilerDisplay.tsx");
 
 export default function computeGlobalSpoilerDisplay(arg0, arg1) {
-  if (constants.ALWAYS === arg0) {
+  if (constants2.ALWAYS === arg0) {
     return true;
   } else if (tmp.IF_MODERATOR === arg0) {
     return arg1;
@@ -22,14 +25,14 @@ export default function computeGlobalSpoilerDisplay(arg0, arg1) {
     return false;
   }
 };
-export const useShouldDisplaySpoilerObscurity = function useShouldDisplaySpoilerObscurity(channel) {
-  const _require = channel;
-  const items = [closure_2];
-  const stateFromStores = _require(563).useStateFromStores(items, () => closure_1_2.can(closure_1_3.MANAGE_MESSAGES, closure_0));
-  const RenderSpoilers = _require(1935).RenderSpoilers;
+export const useShouldDisplaySpoilerObscurity = function useShouldDisplaySpoilerObscurity(stateFromStores) {
+  _require = stateFromStores;
+  const items = [PermissionStore];
+  stateFromStores = require("useStateFromStores").useStateFromStores(items, () => PermissionStore.can(constants.MANAGE_MESSAGES, closure_0));
+  const RenderSpoilers = require("UserSettings").RenderSpoilers;
   const setting = RenderSpoilers.useSetting();
   let flag = true;
-  if (constants.ALWAYS !== setting) {
+  if (constants2.ALWAYS !== setting) {
     flag = stateFromStores;
     if (tmp3.IF_MODERATOR !== setting) {
       const ON_CLICK = tmp3.ON_CLICK;

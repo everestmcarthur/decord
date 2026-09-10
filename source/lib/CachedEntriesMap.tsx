@@ -1,35 +1,36 @@
 // Module ID: 1932
 // Function ID: 1933
-// Name: keys
+// Name: CachedEntriesMap
 // Dependencies: [1933, 2]
 
-// Module 1932 (keys)
-import set from "set" /* 2 */;
+// Module 1932 (CachedEntriesMap)
+import FunctionUtils from "FunctionUtils" /* 1933 */;
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("lib/CachedEntriesMap.tsx");
+let result = size.fileFinishedImporting("lib/CachedEntriesMap.tsx");
 class CachedEntriesMap {
   constructor() {
-    obj = Object.create(new.target.prototype);
-    closure_0 = obj;
-    obj.version = 0;
+    obj1 = Object.create(new.target.prototype);
+    closure_0 = obj1;
+    obj1.version = 0;
     map = new Map();
-    obj.data = map;
-    obj = require("areArraysShallowlyEqual");
-    obj.cachedValues = obj.cachedFunction(() => {
-      const data = obj.data;
+    obj1.data = map;
+    obj = closure_0(closure_1[0]);
+    obj1.cachedValues = obj.cachedFunction(() => {
+      const data = obj4.data;
       return Array.from(data.values());
     });
-    obj2 = require("areArraysShallowlyEqual");
-    obj.cachedKeys = obj2.cachedFunction(() => {
-      const data = obj.data;
+    obj2 = closure_0(closure_1[0]);
+    obj1.cachedKeys = obj2.cachedFunction(() => {
+      const data = obj4.data;
       return Array.from(data.keys());
     });
-    obj3 = require("areArraysShallowlyEqual");
-    obj.cachedEntries = obj3.cachedFunction(() => {
-      const data = obj.data;
+    obj3 = closure_0(closure_1[0]);
+    obj1.cachedEntries = obj3.cachedFunction(() => {
+      const data = obj4.data;
       return Array.from(data.entries());
     });
-    return obj;
+    return obj1;
   }
 }
 const prototype = CachedEntriesMap.prototype;

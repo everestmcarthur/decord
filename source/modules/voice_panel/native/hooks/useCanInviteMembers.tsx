@@ -1,29 +1,32 @@
-// Module ID: 17105
-// Function ID: 17106
+// Module ID: 17136
+// Function ID: 17137
 // Name: useCanInviteMembers
-// Dependencies: [1957, 4199, 1085, 563, 2]
+// Dependencies: [1957, 4212, 1085, 563, 2]
 // Exports: useCanInviteMembers
 
-// Module 17105 (useCanInviteMembers)
-import closure_2 from "ensureGuildLoaded" /* 1957 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4199 */;
-import { Permissions } from "sum" /* 1085 */;
+// Module 17136 (useCanInviteMembers)
+import ChannelStore from "ChannelStore" /* 1957 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useCanInviteMembers.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const Permissions = fn(1085).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useCanInviteMembers.tsx");
 
 export const useCanInviteMembers = function useCanInviteMembers(channelId) {
-  const _require = channelId;
-  const items = [closure_2, closure_3];
+  _require = channelId;
+  const items = [ChannelStore, PermissionStore];
   const items1 = [channelId];
-  return _require(563).useStateFromStores(items, () => {
-    const channel = closure_1_2.getChannel(closure_0);
+  return require("useStateFromStores").useStateFromStores(items, () => {
+    const channel = ChannelStore.getChannel(closure_0);
     let canResult = null != channel;
     if (canResult) {
-      canResult = closure_1_3.can(closure_1_4.CONNECT, channel);
+      canResult = PermissionStore.can(Permissions.CONNECT, channel);
     }
     if (canResult) {
-      canResult = closure_1_3.can(closure_1_4.CREATE_INSTANT_INVITE, channel);
+      canResult = PermissionStore.can(Permissions.CREATE_INSTANT_INVITE, channel);
     }
     return canResult;
   }, items1);

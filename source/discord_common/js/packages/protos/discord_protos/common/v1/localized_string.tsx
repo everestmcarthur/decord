@@ -1,37 +1,35 @@
-// Module ID: 10675
-// Function ID: 10676
-// Name: create
+// Module ID: 10702
+// Function ID: 10703
+// Name: localized_string
 // Dependencies: [32, 1188, 2]
 
-// Module 10675 (create)
+// Module 10702 (localized_string)
 import _mod1188 from "module_1188" /* 1188 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType, MessageType as MessageType2 } from "module_1188" /* 1188 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
+require = fn;
+const MessageType = fn(1188).MessageType;
 class LocalizedString$Type extends MessageType {
   constructor() {
     items = [, ];
     items[0] = { no: 1, name: "default", kind: "scalar", T: 9 };
     items[1] = { no: 2, name: "localizations", kind: "map", K: 9, V: { kind: "scalar", T: 9 } };
-    tmp = new tmp("discord_protos.common.v1.LocalizedString", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
-    return tmp;
+    tmp1 = new tmp("discord_protos.common.v1.LocalizedString", items, new.target);
+    return tmp1;
   }
 }
 const prototype = LocalizedString$Type.prototype;
 prototype["create"] = function create(arr) {
-  let obj = { default: "", localizations: {} };
+  const obj = { default: "", localizations: {} };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
     const result = _mod1188.reflectionMergePartial(this, obj, arr);
     const tmpResult = _mod1188;
   }
   return obj;
 };
-prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -40,8 +38,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         obj.default = pos.string();
@@ -56,25 +53,16 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -89,10 +77,8 @@ prototype["binaryReadMap2"] = function binaryReadMap2(arg0, pos) {
   let str2;
   if (pos.pos < sum) {
     while (true) {
-      let tmp4 = callback;
-      let tmp5 = callback(pos.tag(), 2);
+      let tmp5 = _slicedToArray(pos.tag(), 2);
       [tmp6, r10019] = tmp5;
-      let tmp7 = tmp2;
       let stringResult = tmp3;
       if (1 === tmp6) {
         stringResult = pos.string();
@@ -108,7 +94,7 @@ prototype["binaryReadMap2"] = function binaryReadMap2(arg0, pos) {
       str2 = stringResult;
     }
     const _globalThis = globalThis;
-    error = new Error("unknown map entry field for field discord_protos.common.v1.LocalizedString.localizations");
+    const error = new Error("unknown map entry field for field discord_protos.common.v1.LocalizedString.localizations");
     throw error;
   }
   if (str2 == null) {
@@ -128,8 +114,6 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(localizations, t
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp6 = require;
-    let tmp7 = dependencyMap;
     let tagResult1 = tag.tag(2, _mod1188.WireType.LengthDelimited);
     let forkResult = tagResult1.fork();
     let tagResult2 = forkResult.tag(1, _mod1188.WireType.LengthDelimited);
@@ -151,30 +135,28 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(localizations, t
 };
 let items = [{ no: 1, name: "default", kind: "scalar", T: 9 }, { no: 2, name: "localizations", kind: "map", K: 9, V: { kind: "scalar", T: 9 } }];
 const object = new Object("discord_protos.common.v1.LocalizedString", items, tmp2, "create", "internalBinaryRead", "binaryReadMap2", tmp, "internalBinaryWrite");
-// ThrowIfThisInitialized (0x7c)
+const MessageType2 = fn(1188).MessageType;
 class LocalizedSnowflake$Type extends MessageType2 {
   constructor() {
     items = [, ];
     items[0] = { no: 1, name: "default", kind: "scalar", T: 6 };
     items[1] = { no: 2, name: "localizations", kind: "map", K: 9, V: { kind: "scalar", T: 6 } };
-    tmp = new tmp("discord_protos.common.v1.LocalizedSnowflake", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
-    return tmp;
+    tmp1 = new tmp("discord_protos.common.v1.LocalizedSnowflake", items, new.target);
+    return tmp1;
   }
 }
 const prototype2 = LocalizedSnowflake$Type.prototype;
 prototype2["create"] = function create(arr) {
-  let obj = { default: "0", localizations: {} };
+  const obj = { default: "0", localizations: {} };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
     const result = _mod1188.reflectionMergePartial(this, obj, arr);
     const tmpResult = _mod1188;
   }
   return obj;
 };
-prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -183,8 +165,7 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         let str4 = pos.fixed64();
@@ -200,25 +181,16 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -233,26 +205,25 @@ prototype2["binaryReadMap2"] = function binaryReadMap2(arg0, pos) {
   let str2;
   if (pos.pos < sum) {
     while (true) {
-      let tmp4 = callback;
-      let tmp5 = callback(pos.tag(), 2);
+      let tmp5 = _slicedToArray(pos.tag(), 2);
       [tmp6, r10019] = tmp5;
-      let tmp7 = tmp2;
       let stringResult = tmp3;
       if (1 === tmp6) {
         stringResult = pos.string();
-        str = tmp2;
+        let str1 = tmp2;
       } else if (2 !== tmp6) {
         break;
       } else {
         let str4 = pos.fixed64();
-        str = str4.toString();
+        str1 = str4.toString();
       }
-      tmp2 = str;
+      tmp2 = str1;
       tmp3 = stringResult;
+      str = str1;
       str2 = stringResult;
     }
     const _globalThis = globalThis;
-    error = new Error("unknown map entry field for field discord_protos.common.v1.LocalizedSnowflake.localizations");
+    const error = new Error("unknown map entry field for field discord_protos.common.v1.LocalizedSnowflake.localizations");
     throw error;
   }
   if (str2 == null) {
@@ -272,8 +243,6 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(localizations, 
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp6 = require;
-    let tmp7 = dependencyMap;
     let tagResult1 = tag.tag(2, _mod1188.WireType.LengthDelimited);
     let forkResult = tagResult1.fork();
     let tagResult2 = forkResult.tag(1, _mod1188.WireType.LengthDelimited);
@@ -294,9 +263,8 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(localizations, 
   return tag;
 };
 const items1 = [{ no: 1, name: "default", kind: "scalar", T: 6 }, { no: 2, name: "localizations", kind: "map", K: 9, V: { kind: "scalar", T: 6 } }];
-// ThrowIfThisInitialized (0x7c)
-let tmp5 = new "internalBinaryWrite"("discord_protos.common.v1.LocalizedSnowflake", items1, tmp2, "create", "internalBinaryRead", "binaryReadMap2", LocalizedSnowflake$Type, "internalBinaryWrite", items1, undefined);
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/common/v1/localized_string.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/common/v1/localized_string.tsx");
 
 export const LocalizedString = object;
-export const LocalizedSnowflake = tmp5;
+export const LocalizedSnowflake = new "internalBinaryWrite"("discord_protos.common.v1.LocalizedSnowflake", items1, tmp2, "create", "internalBinaryRead", "binaryReadMap2", LocalizedSnowflake$Type, "internalBinaryWrite", items1, undefined);

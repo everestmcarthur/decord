@@ -1,13 +1,13 @@
-// Module ID: 11431
-// Function ID: 11432
-// Name: getMediaPostEmbed
+// Module ID: 11458
+// Function ID: 11459
+// Name: MediaPostEmbedStore
 // Dependencies: [504, 573, 2]
 
-// Module 11431 (getMediaPostEmbed)
+// Module 11458 (MediaPostEmbedStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
-let obj = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED", FAILED: 3, [3]: "FAILED" };
+const FetchState = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED", FAILED: 3, [3]: "FAILED" };
 let closure_1 = {};
 let closure_2 = {};
 const Store = initializeDefault.Store;
@@ -16,11 +16,11 @@ class MediaPostEmbedStore extends Store {
 const prototype = MediaPostEmbedStore.prototype;
 prototype["getMediaPostEmbed"] = function getMediaPostEmbed(mediaPostEmbedChannelId) {
   if (null != mediaPostEmbedChannelId) {
-    return table[mediaPostEmbedChannelId];
+    return closure_1[mediaPostEmbedChannelId];
   }
 };
 prototype["getEmbedFetchState"] = function getEmbedFetchState(mediaPostEmbedChannelId) {
-  let NOT_FETCHED = table2[mediaPostEmbedChannelId];
+  let NOT_FETCHED = closure_2[mediaPostEmbedChannelId];
   if (NOT_FETCHED == null) {
     NOT_FETCHED = obj.NOT_FETCHED;
   }
@@ -30,7 +30,7 @@ prototype["getMediaPostEmbeds"] = function getMediaPostEmbeds() {
   return closure_1;
 };
 MediaPostEmbedStore.displayName = "MediaPostEmbedStore";
-obj = {
+const mediaPostEmbedStore = new MediaPostEmbedStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     closure_1 = {};
     closure_2 = {};
@@ -40,9 +40,10 @@ obj = {
   },
   MEDIA_POST_EMBED_FETCH_SUCCESS: function handleFetchMediaPostEmbedSuccess(threadId) {
     threadId = threadId.threadId;
-    obj = {};
-    const merged = Object.assign(obj);
+    const obj = {};
+    const merged = Object.assign(closure_1);
     obj[threadId] = threadId.mediaPostEmbed;
+    closure_1 = obj;
     closure_2[threadId] = obj.FETCHED;
   },
   MEDIA_POST_EMBED_FETCH_FAILURE: function handleFetchMediaPostFailure(threadId) {
@@ -54,9 +55,9 @@ obj = {
       closure_2 = {};
     }
   }
-};
-const mediaPostEmbedStore = new MediaPostEmbedStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/media_channel/MediaPostEmbedStore.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_channel/MediaPostEmbedStore.tsx");
 
 export default mediaPostEmbedStore;
-export const FetchState = obj;
+export { FetchState };

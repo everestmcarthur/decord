@@ -1,26 +1,26 @@
-// Module ID: 15107
-// Function ID: 15108
+// Module ID: 15134
+// Function ID: 15135
 // Name: WreathIcon
-// Dependencies: [19, 21, 576, 4261, 15108, 2]
+// Dependencies: [19, 21, 576, 4274, 15135, 2]
 // Exports: default
 
-// Module 15107 (WreathIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 15108 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 15134 (WreathIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod15135 from "module_15135" /* 15135 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/WreathIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/QuestDock/WreathIcon.tsx");
 
 export default function WreathIcon(color) {
   let INTERACTIVE_TEXT_DEFAULT = color.color;
   if (INTERACTIVE_TEXT_DEFAULT === undefined) {
-    INTERACTIVE_TEXT_DEFAULT = ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT;
+    INTERACTIVE_TEXT_DEFAULT = nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_TEXT_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15135, color: INTERACTIVE_TEXT_DEFAULT, style: color.style });
 };

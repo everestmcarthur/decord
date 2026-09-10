@@ -1,22 +1,22 @@
-// Module ID: 9565
-// Function ID: 9566
+// Module ID: 9592
+// Function ID: 9593
 // Name: transformUser
 // Dependencies: [1881, 2]
 // Exports: default
 
-// Module 9565 (transformUser)
-import set from "set" /* 2 */;
-import parseAvatarDecorationData from "parseAvatarDecorationData" /* 1881 */;
+// Module 9592 (transformUser)
+import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1881 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/rpc/helpers/transformUser.tsx");
+const result = size.fileFinishedImporting("modules/rpc/helpers/transformUser.tsx");
 
 export default function transformUser(id) {
   let num = id.premiumType;
-  const obj = { id: id.id, username: id.username, discriminator: id.discriminator, global_name: id.globalName, avatar: id.avatar, avatar_decoration_data: parseAvatarDecorationData.parseAvatarDecorationData(avatarDecoration), bot, flags, premium_type: null };
+  const obj = { id: id.id, username: id.username, discriminator: id.discriminator, global_name: id.globalName, avatar: id.avatar, avatar_decoration_data: AvatarDecorationUtils.parseAvatarDecorationData(avatarDecoration), bot, flags, premium_type: null };
   ({ avatarDecoration, bot, flags } = id);
   if (num == null) {
     num = 0;
   }
-  obj[8] = num;
+  obj.premium_type = num;
   return obj;
 };

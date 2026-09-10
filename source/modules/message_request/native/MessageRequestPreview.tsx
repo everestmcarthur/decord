@@ -1,63 +1,66 @@
-// Module ID: 16881
-// Function ID: 16882
-// Dependencies: [19, 17, 4209, 1074, 21, 4560, 5524, 576, 12598, 504, 1242, 1114, 7888, 4899, 1178, 2]
+// Module ID: 16918
+// Function ID: 16919
+// Name: MessageRequestPreview
+// Dependencies: [19, 17, 4222, 1074, 21, 4574, 5538, 576, 12624, 504, 1242, 1114, 7902, 4913, 1178, 2]
 
-// Module 16881
-import ThemesDefault from "Themes" /* 576 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "markAllUserIdListsStale" /* 4209 */;
-import ME from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importDefaultResult from "createTextStyle" /* 5524 */;
+// Module 16918 (MessageRequestPreview)
+import nativeDefault from "native" /* 576 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import noop from "module_19" /* 19 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
+import TextStyles_mod from "TextStyles" /* 5538 */;
 
-const require = arg1;
-let c3 = importAllResult;
-({ Fonts, AnalyticEvents: closure_6, MessageFlags: error } = ME);
+const require = fn;
+const View = fn(17).View;
+const Constants = fn(1074);
+({ Fonts, AnalyticEvents: metroRequire, MessageFlags: closure_7 } = Constants);
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
 let obj = { systemContent: null, messageContent: null };
-obj = { fontStyle: "italic" };
-const merged = Object.assign(importDefaultResult(Fonts.PRIMARY_MEDIUM, ThemesDefault.colors.TEXT_DEFAULT, 12));
-obj.lineHeight = 16;
-obj[0] = obj;
-createCacheKey = {};
-const merged1 = Object.assign(importDefaultResult(Fonts.PRIMARY_MEDIUM, ThemesDefault.colors.TEXT_DEFAULT, 12));
-createCacheKey.lineHeight = 16;
-obj[1] = createCacheKey;
-let closure_9 = createCacheKey.createStyles(obj);
-const importDefaultResult1 = importDefaultResult;
-const memoResult = importAllResult.memo(function MessageRequestPreview(channel) {
+let obj3 = { fontStyle: "italic" };
+let TextStyles = TextStyles_mod;
+const merged = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.TEXT_DEFAULT, 12));
+obj3.lineHeight = 16;
+obj.systemContent = obj3;
+const obj4 = {};
+let TextStyles = TextStyles_mod;
+const merged1 = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.TEXT_DEFAULT, 12));
+obj4.lineHeight = 16;
+obj.messageContent = obj4;
+let closure_9 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/message_request/native/MessageRequestPreview.tsx");
+
+export default noop.memo(function MessageRequestPreview(channel) {
   channel = channel.channel;
-  let message;
-  const tmp = callback();
-  let obj = channel(12598);
-  const messageRequestPreview = obj.useMessageRequestPreview(channel);
-  message = messageRequestPreview.message;
+  const tmp = closure_9();
+  const messageRequestPreview = channel(12624).useMessageRequestPreview(channel);
+  const message = messageRequestPreview.message;
   ({ loaded, error } = messageRequestPreview);
-  const items = [closure_5];
+  let obj = channel(12624);
+  const items = [RelationshipStore];
   const items1 = [message];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => {
     let isBlockedForMessageResult = null != message;
     if (isBlockedForMessageResult) {
-      isBlockedForMessageResult = closure_1_5.isBlockedForMessage(tmp);
+      isBlockedForMessageResult = RelationshipStore.isBlockedForMessage(tmp);
     }
     const obj = { isBlocked: isBlockedForMessageResult, isIgnored: null };
     let isIgnoredForMessageResult = null != tmp;
     if (isIgnoredForMessageResult) {
-      isIgnoredForMessageResult = closure_1_5.isIgnoredForMessage(tmp);
+      isIgnoredForMessageResult = RelationshipStore.isIgnoredForMessage(tmp);
     }
-    obj[1] = isIgnoredForMessageResult;
+    obj.isIgnored = isIgnoredForMessageResult;
     return obj;
   }, items1);
   const items2 = [channel, message];
   ({ isBlocked, isIgnored } = stateFromStoresObject);
-  const effect = importAllResult.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (null != message) {
-      let obj = message(closure_1_2[10]);
-      obj = { is_spam: null, channel_id: null, other_user_id: null };
-      ({ isSpam: obj2[0], id: obj2[1] } = channel);
-      obj[2] = tmp.author.id;
-      obj.track(closure_1_6.MESSAGE_REQUEST_PREVIEW_VIEWED, obj);
+      const obj3 = { is_spam: null, channel_id: null, other_user_id: null };
+      ({ isSpam: obj2.is_spam, id: obj2.channel_id } = channel);
+      obj3.other_user_id = tmp.author.id;
+      AnalyticsUtilsDefault.track(constants.MESSAGE_REQUEST_PREVIEW_VIEWED, obj3);
     }
   }, items2);
   if (error) {
@@ -88,7 +91,7 @@ const memoResult = importAllResult.memo(function MessageRequestPreview(channel) 
       }
       if (null != content) {
         if ("" !== message.content) {
-          const content1 = message(7888)(message, { noStyleAndInteraction: true, allowGameMentions: true }).content;
+          const content1 = message(7902)(message, { noStyleAndInteraction: true, allowGameMentions: true }).content;
           const _Array = Array;
           if (!Array.isArray(content1)) {
             flag = true;
@@ -107,7 +110,7 @@ const memoResult = importAllResult.memo(function MessageRequestPreview(channel) 
           const intl4 = tmp2(1114).intl;
           stringResult1 = intl4.string(tmp2(1114).t["2v7kfl"]);
         } else {
-          if (message.hasFlag(constants.IS_VOICE_MESSAGE)) {
+          if (message.hasFlag(constants2.IS_VOICE_MESSAGE)) {
             const intl3 = tmp2(1114).intl;
             stringResult1 = intl3.string(tmp2(1114).t["6bhHrc"]);
           } else {
@@ -121,11 +124,11 @@ const memoResult = importAllResult.memo(function MessageRequestPreview(channel) 
             }
             hasFlagResult = message.hasFlag(tmp15.IS_COMPONENTS_V2);
           }
-          tmp15 = constants;
+          tmp15 = constants2;
         }
         stringResult = stringResult1;
         flag = false;
-        tmp2Result = tmp2(4899);
+        tmp2Result = tmp2(4913);
       } else {
         const intl = tmp2(1114).intl;
         stringResult = intl.string(tmp2(1114).t["0KfDxM"]);
@@ -133,9 +136,6 @@ const memoResult = importAllResult.memo(function MessageRequestPreview(channel) 
       }
     }
   }
-  obj = { style: channel.style, children: jsx(tmp2(1178).LegacyText, { style: tmp14, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult }) };
-  return <View style={arg0.style}>{jsx(tmp2(1178).LegacyText, { style: tmp14, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult })}</View>;
+  let obj3 = { style: channel.style, children: jsx(channel(1178).LegacyText, { style: flag ? tmp.messageContent : tmp.systemContent, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult }) };
+  return <View style={arg0.style}>{jsx(channel(1178).LegacyText, { style: flag ? tmp.messageContent : tmp.systemContent, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult })}</View>;
 });
-const result = require("set").fileFinishedImporting("modules/message_request/native/MessageRequestPreview.tsx");
-
-export default memoResult;

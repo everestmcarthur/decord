@@ -1,30 +1,35 @@
-// Module ID: 16215
-// Function ID: 16216
-// Name: useHubUnreadCount
-// Dependencies: [12316, 4575, 504, 11, 12308, 2]
+// Module ID: 16245
+// Function ID: 16246
+// Name: HubUnreadUtils
+// Dependencies: [12342, 4589, 504, 11, 12334, 2]
 // Exports: useHubUnreadCount
 
-// Module 16215 (useHubUnreadCount)
-import closure_3 from "isFetching" /* 12316 */;
-import closure_4 from "generateOldThreadCutoff" /* 4575 */;
+// Module 16245 (HubUnreadUtils)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import GuildDirectoryUtils from "GuildDirectoryUtils" /* 12334 */;
+import GuildDirectoryStore from "GuildDirectoryStore" /* 12342 */;
+import ReadStateStore from "ReadStateStore" /* 4589 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/hub/HubUnreadUtils.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/hub/HubUnreadUtils.tsx");
 
 export const useHubUnreadCount = function useHubUnreadCount(arg0) {
-  const _require = arg0;
-  const items = [closure_3, closure_4];
+  _require = arg0;
+  const items = [GuildDirectoryStore, ReadStateStore];
   const items1 = [arg0];
-  return _require(504).useStateFromStores(items, () => {
-    if (null == callback) {
+  return require("initialize").useStateFromStores(items, () => {
+    if (null == closure_0) {
       return 0;
     } else {
-      const ackMessageIdResult = closure_1_4.ackMessageId(tmp.id);
-      callback = ackMessageIdResult;
+      const ackMessageIdResult = ReadStateStore.ackMessageId(tmp.id);
+      closure_0 = ackMessageIdResult;
       if (null == ackMessageIdResult) {
         return 0;
       } else {
-        let directoryEntries = closure_1_3.getDirectoryEntries(tmp.id);
+        let directoryEntries = GuildDirectoryStore.getDirectoryEntries(tmp.id);
         if (directoryEntries == null) {
           directoryEntries = {};
         }
@@ -33,9 +38,9 @@ export const useHubUnreadCount = function useHubUnreadCount(arg0) {
         const found = values.filter((createdAt) => {
           const time = new Date(createdAt.createdAt).getTime();
           const date = new Date(createdAt.createdAt);
-          return time > closure_1_1(closure_1_2[3]).extractTimestamp(closure_0);
+          return time > SnowflakeUtilsDefault.extractTimestamp(ackMessageIdResult);
         });
-        return Math.min(callback(closure_1_2[4]).MAX_CATEGORY_SERVERS, found.length);
+        return Math.min(GuildDirectoryUtils.MAX_CATEGORY_SERVERS, found.length);
       }
     }
   }, items1);

@@ -1,27 +1,30 @@
-// Module ID: 10029
-// Function ID: 10030
+// Module ID: 10056
+// Function ID: 10057
 // Name: ScreenshareParticipant
-// Dependencies: [19, 17, 21, 4560, 576, 9597, 6655, 9598, 4556, 1114, 4975, 9956, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 9624, 6669, 9625, 4570, 1114, 4989, 9983, 2]
 // Exports: default
 
-// Module 10029 (ScreenshareParticipant)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10056 (ScreenshareParticipant)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6669 */;
+import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 9624 */;
+import _modDef9625 from "module_9625" /* 9625 */;
+import useScreenshareUtils from "useScreenshareUtils" /* 9983 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ View: c4, Image: c5 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, image: null, title: null, description: null };
-createCacheKey = { alignItems: "center", justifyContent: "center", flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginBottom: 12 };
-createCacheKey[2] = { textAlign: "center", marginBottom: 8 };
-createCacheKey[3] = { lineHeight: 18, textAlign: "center", marginBottom: 16 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/ScreenshareParticipant.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { alignItems: "center", justifyContent: "center", flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, image: { marginBottom: 12 }, title: { textAlign: "center", marginBottom: 8 }, description: { lineHeight: 18, textAlign: "center", marginBottom: 16 } };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/components/ScreenshareParticipant.tsx");
 
 export default function ScreenshareParticipant(participant) {
   participant = participant.participant;
@@ -29,40 +32,41 @@ export default function ScreenshareParticipant(participant) {
   const onDoubleTap = participant.onDoubleTap;
   const items = [onSingleTap, participant];
   const items1 = [onDoubleTap, participant];
-  const callback = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     let tmpResult;
     if (onSingleTap != null) {
       tmpResult = tmp(participant);
     }
     return tmpResult;
   }, items);
-  const callback1 = React.useCallback(() => {
+  const callback1 = noop.useCallback(() => {
     let tmpResult;
     if (onDoubleTap != null) {
       tmpResult = tmp(participant);
     }
     return tmpResult;
   }, items1);
-  const tmp4 = callback3();
-  let obj = { gesture: onSingleTap(onDoubleTap[5])({ onSingleTapStart: callback, onDoubleTapStart: callback1 }), children: null };
-  obj = { style: items2, children: null };
-  items2 = [tmp4.container, participant.containerStyle];
-  obj = { source: onSingleTap(onDoubleTap[7]), style: tmp4.image };
-  const items3 = [callback(closure_5, obj), , , ];
-  obj1 = { style: tmp4.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = participant(onDoubleTap[9]).intl;
-  obj1[4] = intl.string(participant(onDoubleTap[9]).t.gMOwov);
-  items3[1] = callback(participant(onDoubleTap[8]).Text, obj1);
-  const obj2 = { style: tmp4.description, variant: "text-sm/medium", color: "interactive-text-default", children: null };
-  const intl2 = participant(onDoubleTap[9]).intl;
-  obj2[3] = intl2.string(participant(onDoubleTap[9]).t.dKeLGt);
-  items3[2] = callback(participant(onDoubleTap[8]).Text, obj2);
-  const obj3 = { variant: "primary-overlay", text: null, onPress: null };
-  const intl3 = participant(onDoubleTap[9]).intl;
-  obj3[1] = intl3.string(participant(onDoubleTap[9]).t.CpkXwZ);
-  obj3[2] = participant(onDoubleTap[11]).stopScreenshare;
-  items3[3] = callback(participant(onDoubleTap[10]).Button, obj3);
-  obj[1] = items3;
-  obj[1] = callback2(closure_4, obj);
-  return callback(participant(onDoubleTap[6]).GestureDetector, obj);
+  const tmp4 = closure_8();
+  const obj = { gesture: useParticipantTileTapGestureDefault({ onSingleTapStart: callback, onDoubleTapStart: callback1 }), children: null };
+  const obj2 = { style: null, children: null };
+  const items2 = [tmp4.container, participant.containerStyle];
+  obj2.style = items2;
+  const tmp3 = useParticipantTileTapGestureDefault({ onSingleTapStart: callback, onDoubleTapStart: callback1 });
+  const items3 = [timestampProducer(hasOwnProperty, { source: _modDef9625, style: tmp4.image }), , , ];
+  const obj4 = { style: tmp4.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+  const intl = util.intl;
+  obj4.children = intl.string(util.t.gMOwov);
+  items3[1] = timestampProducer(Text_Text.Text, obj4);
+  const obj5 = { style: tmp4.description, variant: "text-sm/medium", color: "interactive-text-default", children: null };
+  const intl2 = util.intl;
+  obj5.children = intl2.string(util.t.dKeLGt);
+  items3[2] = timestampProducer(Text_Text.Text, obj5);
+  const obj6 = { variant: "primary-overlay", text: null, onPress: null };
+  const intl3 = util.intl;
+  obj6.text = intl3.string(util.t.CpkXwZ);
+  obj6.onPress = useScreenshareUtils.stopScreenshare;
+  items3[3] = timestampProducer(components_Button_Button.Button, obj6);
+  obj2.children = items3;
+  obj.children = React5(React4, obj2);
+  return timestampProducer(LegacyBaseButton.GestureDetector, obj);
 };

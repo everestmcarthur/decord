@@ -1,10 +1,10 @@
 // Module ID: 1386
 // Function ID: 1387
-// Name: toJS
+// Name: Record
 // Dependencies: [2]
 
-// Module 1386 (toJS)
-import set from "set" /* 2 */;
+// Module 1386 (Record)
+import size from "module_2" /* 2 */;
 
 let Record;
 class Record {
@@ -16,7 +16,6 @@ prototype["toJS"] = function toJS() {
 };
 prototype["set"] = function set(arg0, getTime) {
   const self = this;
-  let obj = this[arg0];
   if (getTime instanceof Date) {
     const _Date = Date;
     if (obj instanceof Date) {
@@ -26,11 +25,11 @@ prototype["set"] = function set(arg0, getTime) {
     return tmp2;
   }
   let constructor = self;
-  if (obj !== getTime) {
-    obj = {};
+  if (this[arg0] !== getTime) {
+    const obj2 = {};
     const merged = Object.assign(self);
-    obj[arg0] = getTime;
-    constructor = new self.constructor(obj);
+    obj2[arg0] = getTime;
+    constructor = new self.constructor(obj2);
   }
   tmp2 = constructor;
 };
@@ -42,7 +41,6 @@ prototype["merge"] = function merge(arg0) {
   if (keys !== undefined) {
     tmp3 = tmp2;
     while (keys[tmp] !== undefined) {
-      let tmp18 = tmp6;
       if (!arg0.hasOwnProperty(tmp6)) {
         continue;
       } else {
@@ -66,11 +64,9 @@ prototype["merge"] = function merge(arg0) {
           if (obj !== obj2) {
             let tmp10 = tmp5;
             if (null == tmp5) {
-              obj = {};
-              let tmp11 = obj;
-              let tmp12 = self;
+              let obj3 = {};
               let merged = Object.assign(self);
-              tmp10 = obj;
+              tmp10 = obj3;
             }
             tmp10[tmp6] = arg0[tmp6];
             tmp9 = tmp10;
@@ -106,19 +102,16 @@ prototype["update"] = function update(arg0, arg1, arg2) {
     if (tmp3 instanceof Array) {
       const items = [];
       HermesBuiltin.arraySpread(tmp3, 0);
-      let tmp6 = items;
     } else {
       const _Object = Object;
-      tmp6 = tmp3;
       if (tmp3 instanceof Object) {
         const obj = {};
         const merged = Object.assign(tmp3);
-        tmp6 = obj;
       }
     }
   }
 };
-const result = set.fileFinishedImporting("lib/Record.tsx");
+const result = size.fileFinishedImporting("lib/Record.tsx");
 class TypedRecord {
 }
 const prototype2 = TypedRecord.prototype;
@@ -137,7 +130,6 @@ prototype2["merge"] = function merge(arg0) {
   if (keys !== undefined) {
     tmp3 = tmp2;
     while (keys[tmp] !== undefined) {
-      let tmp12 = tmp6;
       if (!arg0.hasOwnProperty(tmp6)) {
         continue;
       } else {
@@ -164,27 +156,24 @@ prototype2["merge"] = function merge(arg0) {
   }
   return constructor;
 };
-prototype2["update"] = function update(arg0, arg1, arg2) {
+prototype2["update"] = function update(arg0, arg1, fn) {
   const self = this;
   let tmp2 = tmp;
   if (this[arg0] instanceof Record) {
     if (undefined === tmp2) {
       tmp2 = arg1;
     }
-    return self.set(arg0, arg2(tmp2));
+    return self.set(arg0, fn(tmp2));
   } else {
     const _Array = Array;
     if (tmp instanceof Array) {
       const items = [];
       HermesBuiltin.arraySpread(tmp, 0);
-      let tmp4 = items;
     } else {
       const _Object = Object;
-      tmp4 = tmp;
       if (tmp instanceof Object) {
         const obj = {};
         const merged = Object.assign(tmp);
-        tmp4 = obj;
       }
     }
   }

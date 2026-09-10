@@ -1,26 +1,26 @@
-// Module ID: 17769
-// Function ID: 17770
+// Module ID: 17802
+// Function ID: 17803
 // Name: GuildPremiumRoleSubscribeButton
-// Dependencies: [19, 21, 4560, 10305, 1114, 2]
+// Dependencies: [19, 21, 4574, 10332, 1114, 2]
 // Exports: GuildPremiumRoleSubscribeButton
 
-// Module 17769 (GuildPremiumRoleSubscribeButton)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import CreatorRevenueButton from "CreatorRevenueButton" /* 10305 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17802 (GuildPremiumRoleSubscribeButton)
+import util from "util" /* 1114 */;
+import CreatorRevenueButton from "CreatorRevenueButton" /* 10332 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-let closure_3 = createCacheKey.createStyles({ crButton: { marginVertical: 16 } });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildPremiumRoleSubscribeButton.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_3 = createStyles.createStyles({ crButton: { marginVertical: 16 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildPremiumRoleSubscribeButton.tsx");
 
 export const GuildPremiumRoleSubscribeButton = function GuildPremiumRoleSubscribeButton(onPress) {
   const obj = { text: null, onPress: null, style: null, disabled: true };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.BEeXib);
-  obj[1] = onPress.onPress;
-  obj[2] = callback().crButton;
+  const intl = util.intl;
+  obj.text = intl.string(util.t.BEeXib);
+  obj.onPress = onPress.onPress;
+  obj.style = closure_3().crButton;
   return jsx(CreatorRevenueButton.CreatorRevenueButton, { text: null, onPress: null, style: null, disabled: true });
 };

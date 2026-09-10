@@ -1,66 +1,56 @@
-// Module ID: 11367
-// Function ID: 11368
-// Name: ChatViewStickyHeaderAccountSafetyWarnings
-// Dependencies: [32, 19, 11368, 21, 11369, 10974, 11372, 11373, 11386, 11392, 11416, 11418, 11422, 11425, 2]
+// Module ID: 11394
+// Function ID: 11395
+// Name: ChatViewStickyHeader
+// Dependencies: [32, 19, 11395, 21, 11396, 11001, 11399, 11400, 11413, 11419, 11443, 11445, 11449, 11452, 2]
 
-// Module 11367 (ChatViewStickyHeaderAccountSafetyWarnings)
-import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 10974 */;
-import useStrangerDangerWarning from "useStrangerDangerWarning" /* 11369 */;
-import useLikelyAtoWarning from "useLikelyAtoWarning" /* 11372 */;
-import LikelyAtoWarningBannerDefault from "LikelyAtoWarningBanner" /* 11373 */;
-import StrangerDangerWarningBannerDefault from "StrangerDangerWarningBanner" /* 11386 */;
-import InappropriateConversationWarningBannerDefault from "InappropriateConversationWarningBanner" /* 11392 */;
-import useUnreadSettingNoticeDefault from "useUnreadSettingNotice" /* 11416 */;
-import OptInChannelBannerDefault from "OptInChannelBanner" /* 11425 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { LOCATION_CONTEXT_MOBILE } from "LOCATION_CONTEXT_MOBILE" /* 11368 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 11394 (ChatViewStickyHeader)
+import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 11001 */;
+import useStrangerDangerWarning from "useStrangerDangerWarning" /* 11396 */;
+import useLikelyAtoWarning from "useLikelyAtoWarning" /* 11399 */;
+import LikelyAtoWarningBannerDefault from "LikelyAtoWarningBanner" /* 11400 */;
+import StrangerDangerWarningBannerDefault from "StrangerDangerWarningBanner" /* 11413 */;
+import InappropriateConversationWarningBannerDefault from "InappropriateConversationWarningBanner" /* 11419 */;
+import useUnreadSettingNoticeDefault from "useUnreadSettingNotice" /* 11443 */;
+import ChatBannerDefault from "ChatBanner" /* 11452 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function ChatViewStickyHeaderAccountSafetyWarnings(arg0) {
   ({ channelId, senderId } = arg0);
-  let obj = useStrangerDangerWarning;
-  const strangerDangerWarning = obj.useStrangerDangerWarning(channelId);
-  obj1 = useInappropriateConversationBannerForChannel;
-  const inappropriateConversationBannerForChannel = obj1.useInappropriateConversationBannerForChannel(channelId, LOCATION_CONTEXT_MOBILE);
+  const strangerDangerWarning = useStrangerDangerWarning.useStrangerDangerWarning(channelId);
+  const inappropriateConversationBannerForChannel = useInappropriateConversationBannerForChannel.useInappropriateConversationBannerForChannel(channelId, LOCATION_CONTEXT_MOBILE);
   const likelyAtoWarning = useLikelyAtoWarning.useLikelyAtoWarning(channelId);
   if (null != likelyAtoWarning) {
-    obj = { channelId: null, warningId: null, senderId: null };
-    obj[0] = channelId;
-    obj[1] = likelyAtoWarning.id;
-    obj[2] = senderId;
-    let tmp5 = callback2(LikelyAtoWarningBannerDefault, obj);
+    const obj4 = { channelId, warningId: likelyAtoWarning.id, senderId };
+    let tmp5 = timestampProducer(LikelyAtoWarningBannerDefault, obj4);
   } else if (null != strangerDangerWarning) {
-    obj = { channelId: null, warningId: null, senderId: null };
-    obj[0] = channelId;
-    obj[1] = strangerDangerWarning.id;
-    obj[2] = senderId;
-    tmp5 = callback2(StrangerDangerWarningBannerDefault, obj);
+    const obj5 = { channelId, warningId: strangerDangerWarning.id, senderId };
+    tmp5 = timestampProducer(StrangerDangerWarningBannerDefault, obj5);
   } else {
     tmp5 = null;
     if (null != inappropriateConversationBannerForChannel) {
-      obj1 = { channelId: null, warningId: null, senderId: null };
-      obj1[0] = channelId;
-      obj1[1] = inappropriateConversationBannerForChannel.id;
-      obj1[2] = senderId;
-      tmp5 = callback2(InappropriateConversationWarningBannerDefault, obj1);
+      const obj6 = { channelId, warningId: inappropriateConversationBannerForChannel.id, senderId };
+      tmp5 = timestampProducer(InappropriateConversationWarningBannerDefault, obj6);
     }
   }
   return tmp5;
 }
-let c4 = importAllResult;
-({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
-const memoResult = importAllResult.memo(importAllResult.forwardRef((handleScrollToNewMessages, ref) => {
+const LOCATION_CONTEXT_MOBILE = fn(11395).LOCATION_CONTEXT_MOBILE;
+const jsxProd = fn(21);
+({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/chat/native/ChatViewStickyHeader.tsx");
+
+export default noop.memo(noop.forwardRef((handleScrollToNewMessages, ref) => {
   const channel = handleScrollToNewMessages.channel;
-  importDefault = undefined;
-  const tmp = callback(importAllResult.useState(false), 2);
-  importDefault = tmp[1];
+  const tmp = _slicedToArray(noop.useState(false), 2);
+  closure_1 = tmp[1];
   ({ showUnreadsNotice, clearUnreadsNotice } = useUnreadSettingNoticeDefault(channel));
-  const imperativeHandle = importAllResult.useImperativeHandle(ref, () => ({
+  const imperativeHandle = noop.useImperativeHandle(ref, () => ({
     onChatViewScrolled(isFirstMessageVisible) {
       if (forumPost.isForumPost()) {
-        callback(!isFirstMessageVisible.isFirstMessageVisible);
+        closure_1_1(!isFirstMessageVisible.isFirstMessageVisible);
       }
     }
   }));
@@ -68,33 +58,25 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((handleScroll
   if (channel.isForumPost()) {
     tmp8 = null;
     if (tmp[0]) {
-      let obj = { channel: null };
-      obj[0] = channel;
-      tmp8 = callback2(tmp2(11418), obj);
+      const obj = { channel };
+      tmp8 = timestampProducer(tmp2(11445), obj);
     }
   }
   const items = [tmp8, , , ];
   let tmp10 = null;
   if (channel.isDM()) {
-    obj = { channelId: null, senderId: null };
-    obj[0] = channel.id;
-    obj[1] = channel.getRecipientId();
-    tmp10 = callback2(ChatViewStickyHeaderAccountSafetyWarnings, obj);
+    const obj2 = { channelId: channel.id, senderId: channel.getRecipientId() };
+    tmp10 = timestampProducer(ChatViewStickyHeaderAccountSafetyWarnings, obj2);
   }
   items[1] = tmp10;
   let tmp13 = null;
   if (showUnreadsNotice) {
-    obj = { channel: null, clearUnreadsNotice: null };
-    obj[0] = channel;
-    obj[1] = clearUnreadsNotice;
-    tmp13 = callback2(tmp2(11422), obj);
+    const obj3 = { channel, clearUnreadsNotice };
+    tmp13 = timestampProducer(tmp2(11449), obj3);
   }
-  obj1 = { children: null };
+  const obj4 = { children: null };
   items[2] = tmp13;
-  items[3] = callback2(OptInChannelBannerDefault, { channel, handleScrollToNewMessages: handleScrollToNewMessages.scrollToNewMessages });
-  obj1[0] = items;
-  return closure_8(closure_7, obj1);
+  items[3] = timestampProducer(ChatBannerDefault, { channel, handleScrollToNewMessages: handleScrollToNewMessages.scrollToNewMessages });
+  obj4.children = items;
+  return React6(React5, obj4);
 }));
-const result = require("set").fileFinishedImporting("modules/chat/native/ChatViewStickyHeader.tsx");
-
-export default memoResult;

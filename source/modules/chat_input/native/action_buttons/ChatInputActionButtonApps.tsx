@@ -1,37 +1,37 @@
-// Module ID: 12245
-// Function ID: 12246
-// Dependencies: [19, 17, 11966, 21, 12047, 12103, 12246, 12243, 4971, 12248, 1114, 2]
+// Module ID: 12271
+// Function ID: 12272
+// Name: ChatInputActionButtonApps
+// Dependencies: [19, 17, 11992, 21, 12073, 12129, 12272, 12269, 4985, 12274, 1114, 2]
 
-// Module 12245
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { ChatInputActionType } from "TextAreaCta" /* 11966 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 12271 (ChatInputActionButtonApps)
+import setAccessibilityFocus from "setAccessibilityFocus" /* 4985 */;
+import AppLauncherOnboardingActionCreators from "AppLauncherOnboardingActionCreators" /* 12129 */;
+import AppLauncherOnboardingChatInputButtonAnimation from "AppLauncherOnboardingChatInputButtonAnimation" /* 12272 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-const memoResult = importAllResult.memo(function ChatInputActionButtonApps(onPress) {
+require = fn;
+const View = fn(17).View;
+const ChatInputActionType = fn(11992).ChatInputActionType;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/chat_input/native/action_buttons/ChatInputActionButtonApps.tsx");
+
+export default noop.memo(function ChatInputActionButtonApps(onPress) {
   ({ active, channel } = onPress);
   onPress = onPress.onPress;
-  let ref;
   canShowBotsBanner = undefined;
-  let canShowAppsOrActivitiesBanner;
-  let willShowGlobalSearchOnboarding;
   canShowOnboarding = undefined;
-  closure_7 = undefined;
-  let obj = canShowBotsBanner;
   ({ accessible, disabled, styleButton, styleActive, styleActiveIcon } = onPress);
-  ref = canShowBotsBanner.useRef(null);
-  obj = { channelId: channel.id };
-  const tmp4 = onPress(ref[4])(obj);
+  let ref = canShowBotsBanner.useRef(null);
+  const tmp4 = onPress(ref[4])({ channelId: channel.id });
   ({ canShowOnboarding, canShowBotsBanner } = tmp4);
-  canShowAppsOrActivitiesBanner = tmp4.canShowAppsOrActivitiesBanner;
-  willShowGlobalSearchOnboarding = tmp4.willShowGlobalSearchOnboarding;
+  const canShowAppsOrActivitiesBanner = tmp4.canShowAppsOrActivitiesBanner;
+  const willShowGlobalSearchOnboarding = tmp4.willShowGlobalSearchOnboarding;
   if (canShowOnboarding) {
     canShowOnboarding = !tmp4.fromTriggeredOnboarding;
   }
-  closure_7 = obj.useRef(-1);
+  ref = obj.useRef(-1);
   const items = [canShowOnboarding, canShowAppsOrActivitiesBanner, canShowBotsBanner, , , ];
   let guild_id;
   if (channel != null) {
@@ -43,54 +43,48 @@ const memoResult = importAllResult.memo(function ChatInputActionButtonApps(onPre
   const effect = obj.useEffect(() => {
     if (canShowOnboarding) {
       if (canShowBotsBanner) {
-        let obj = { channelId: null, timeMs: null, guildId: null, canShowBotsBanner: true, canShowAppsOrActivitiesBanner: false, willShowGlobalSearchOnboarding: null };
-        obj[0] = channel.id;
+        const obj2 = { channelId: channel.id, timeMs: null, guildId: null, canShowBotsBanner: true, canShowAppsOrActivitiesBanner: false, willShowGlobalSearchOnboarding: null };
         const _Date2 = Date;
-        obj[1] = Date.now();
+        obj2.timeMs = Date.now();
         let guild_id;
         if (channel != null) {
           guild_id = tmp13.guild_id;
         }
-        obj[2] = guild_id;
-        obj[5] = willShowGlobalSearchOnboarding;
-        const result = channel(ref[5]).setTriggeredOnboardingContentMetadata(obj);
-        const obj3 = channel(ref[5]);
+        obj2.guildId = guild_id;
+        obj2.willShowGlobalSearchOnboarding = willShowGlobalSearchOnboarding;
+        const result = AppLauncherOnboardingActionCreators.setTriggeredOnboardingContentMetadata(obj2);
         tmp13 = channel;
       } else if (canShowAppsOrActivitiesBanner) {
-        obj = channel(ref[5]);
-        obj = { channelId: null, timeMs: null, guildId: null, canShowBotsBanner: false, canShowAppsOrActivitiesBanner: true, willShowGlobalSearchOnboarding: null };
-        obj[0] = channel.id;
+        const obj4 = { channelId: channel.id, timeMs: null, guildId: null, canShowBotsBanner: false, canShowAppsOrActivitiesBanner: true, willShowGlobalSearchOnboarding: null };
         const _Date = Date;
-        obj[1] = Date.now();
+        obj4.timeMs = Date.now();
         let guild_id1;
         if (channel != null) {
           guild_id1 = tmp5.guild_id;
         }
-        obj[2] = guild_id1;
-        obj[5] = willShowGlobalSearchOnboarding;
-        const result1 = obj.setTriggeredOnboardingContentMetadata(obj);
+        obj4.guildId = guild_id1;
+        obj4.willShowGlobalSearchOnboarding = willShowGlobalSearchOnboarding;
+        const result1 = AppLauncherOnboardingActionCreators.setTriggeredOnboardingContentMetadata(obj4);
         tmp5 = channel;
       }
       if (willShowGlobalSearchOnboarding) {
-        obj1 = { channelId: null, timeMs: null, guildId: null, canShowAppsOrActivitiesBanner: null, canShowBotsBanner: null, willShowGlobalSearchOnboarding: true };
-        obj1[0] = channel.id;
+        const obj6 = { channelId: channel.id, timeMs: null, guildId: null, canShowAppsOrActivitiesBanner: null, canShowBotsBanner: null, willShowGlobalSearchOnboarding: true };
         const _Date3 = Date;
-        obj1[1] = Date.now();
+        obj6.timeMs = Date.now();
         let guild_id2;
         if (channel != null) {
           guild_id2 = tmp22.guild_id;
         }
-        obj1[2] = guild_id2;
-        obj1[3] = canShowAppsOrActivitiesBanner;
-        obj1[4] = tmp;
-        const result2 = channel(ref[5]).setTriggeredOnboardingContentMetadata(obj1);
-        const obj5 = channel(ref[5]);
+        obj6.guildId = guild_id2;
+        obj6.canShowAppsOrActivitiesBanner = canShowAppsOrActivitiesBanner;
+        obj6.canShowBotsBanner = tmp;
+        const result2 = AppLauncherOnboardingActionCreators.setTriggeredOnboardingContentMetadata(obj6);
         tmp22 = channel;
       }
       const _setTimeout = setTimeout;
       closure_7.current = setTimeout(() => {
-        callback(table[5]).setLastSeenTimeMs();
-      }, channel(ref[6]).APP_LAUNCHER_ONBOARDING_CHAT_INPUT_BUTTON_ANIMATION_DURATION_MS);
+        channel(ref[5]).setLastSeenTimeMs();
+      }, AppLauncherOnboardingChatInputButtonAnimation.APP_LAUNCHER_ONBOARDING_CHAT_INPUT_BUTTON_ANIMATION_DURATION_MS);
       tmp = canShowBotsBanner;
     }
   }, items);
@@ -98,14 +92,13 @@ const memoResult = importAllResult.memo(function ChatInputActionButtonApps(onPre
   if (canShowOnboarding) {
     tmp9 = null;
     if (!active) {
-      obj = { channelId: null };
-      obj[0] = channel.id;
-      tmp9 = canShowOnboarding(channel(tmp3[6]).AppLauncherOnboardingChatInputButtonAnimation, obj);
+      let obj3 = { channelId: channel.id };
+      tmp9 = canShowOnboarding(channel(tmp3[6]).AppLauncherOnboardingChatInputButtonAnimation, obj3);
     }
   }
-  obj1 = { children: null };
+  let obj4 = { children: null };
   const items1 = [tmp9, ];
-  const obj2 = {
+  let obj5 = {
     ref,
     accessible,
     style: styleButton,
@@ -115,22 +108,17 @@ const memoResult = importAllResult.memo(function ChatInputActionButtonApps(onPre
     activeStyle: styleActive,
     onPress(arg0) {
       clearTimeout(ref.current);
-      onPress(arg0, willShowGlobalSearchOnboarding.APPS, ref);
-      let obj = channel(ref[8]);
-      obj = { ref };
-      const result = obj.setAccessibilityFocus(obj);
+      onPress(arg0, ChatInputActionType.APPS, ref);
+      const result = setAccessibilityFocus.setAccessibilityFocus({ ref });
     },
     IconComponent: channel(ref[9]).AppLauncherButtonIcon,
     accessibilityLabel: null,
     accessibilityState: null
   };
   const intl = channel(tmp3[10]).intl;
-  obj2[9] = intl.string(channel(ref[10]).t.rugBPp);
-  obj2[10] = { expanded: active };
-  items1[1] = canShowOnboarding(onPress(ref[7]), obj2);
-  obj1[0] = items1;
-  return closure_7(canShowAppsOrActivitiesBanner, obj1);
+  obj5.accessibilityLabel = intl.string(channel(ref[10]).t.rugBPp);
+  obj5.accessibilityState = { expanded: active };
+  items1[1] = canShowOnboarding(onPress(ref[7]), obj5);
+  obj4.children = items1;
+  return ref(canShowAppsOrActivitiesBanner, obj4);
 });
-let result = require("set").fileFinishedImporting("modules/chat_input/native/action_buttons/ChatInputActionButtonApps.tsx");
-
-export default memoResult;

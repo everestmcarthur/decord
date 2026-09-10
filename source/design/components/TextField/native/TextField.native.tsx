@@ -1,39 +1,37 @@
-// Module ID: 6613
-// Function ID: 6614
+// Module ID: 6627
+// Function ID: 6628
 // Name: TextField
-// Dependencies: [19, 21, 6614, 6615, 6619, 6623, 2]
+// Dependencies: [19, 21, 6628, 6629, 6633, 6637, 2]
 
-// Module 6613 (TextField)
-import useTextFieldState from "useTextFieldState" /* 6614 */;
-import useInputClearButton from "useInputClearButton" /* 6615 */;
-import InputAttachmentContainer from "InputAttachmentContainer" /* 6619 */;
-import BaseTextField from "BaseTextField" /* 6623 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+// Module 6627 (TextField)
+import useTextField from "useTextField" /* 6628 */;
+import useInputClearButton from "useInputClearButton" /* 6629 */;
+import useInputAttachments from "useInputAttachments" /* 6633 */;
+import BaseTextField from "BaseTextField" /* 6637 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const forwardRefResult = importAllResult.forwardRef((onClear, ref) => {
-  let obj = useTextFieldState;
-  const textField = obj.useTextField(onClear, ref);
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/TextField/native/TextField.native.tsx");
+
+export const TextField = noop.forwardRef((onClear, ref) => {
+  const textField = useTextField.useTextField(onClear, ref);
   ({ inputProps, innerRef, state } = textField);
   const inputClearButtonConfig = useInputClearButton.useInputClearButtonConfig(onClear, state);
   let tmp5;
   if (null != inputClearButtonConfig) {
-    obj = { trailing: null, trailingPressableProps: null };
-    ({ content: obj3[0], pressableProps: obj3[1] } = inputClearButtonConfig);
-    tmp5 = obj;
+    ({ content: obj3.trailing, pressableProps: obj3.trailingPressableProps } = inputClearButtonConfig);
+    tmp5 = { trailing: null, trailingPressableProps: null };
+    const obj4 = { trailing: null, trailingPressableProps: null };
   }
-  const obj2 = useInputClearButton;
-  const inputAttachments = InputAttachmentContainer.useInputAttachments(onClear, tmp5);
+  const inputAttachments = useInputAttachments.useInputAttachments(onClear, tmp5);
   ({ leading, trailing, inputStyle } = inputAttachments);
-  obj = {};
+  const obj5 = {};
   const merged = Object.assign(inputProps);
-  obj.ref = innerRef;
-  obj.leading = leading;
-  obj.trailing = trailing;
-  obj.inputStyle = inputStyle;
+  obj5.ref = innerRef;
+  obj5.leading = leading;
+  obj5.trailing = trailing;
+  obj5.inputStyle = inputStyle;
   return jsx(BaseTextField.BaseTextField, {});
 });
-const result = require("set").fileFinishedImporting("design/components/TextField/native/TextField.native.tsx");
-
-export const TextField = forwardRefResult;

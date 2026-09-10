@@ -1,17 +1,17 @@
-// Module ID: 5855
-// Function ID: 5856
+// Module ID: 5869
+// Function ID: 5870
 // Name: ClydeCoinsSpotIllustration
-// Dependencies: [21, 5587, 5856, 2]
+// Dependencies: [21, 5601, 5870, 2]
 // Exports: ClydeCoinsSpotIllustration
 
-// Module 5855 (ClydeCoinsSpotIllustration)
-import set from "set" /* 2 */;
+// Module 5869 (ClydeCoinsSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 5856 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5870 from "module_5870" /* 5870 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ClydeCoinsSpotIllustration.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ClydeCoinsSpotIllustration.native.tsx");
 
 export const ClydeCoinsSpotIllustration = function ClydeCoinsSpotIllustration(width) {
   let num = width.width;
@@ -27,14 +27,14 @@ export const ClydeCoinsSpotIllustration = function ClydeCoinsSpotIllustration(wi
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
-  obj = { width: num * num3, height: num2 * num3 };
-  const items = [obj];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { width: num * num3, height: num2 * num3 });
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef5870 };
+  obj.source = obj2;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

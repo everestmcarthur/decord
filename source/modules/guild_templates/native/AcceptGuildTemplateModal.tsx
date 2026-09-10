@@ -1,45 +1,39 @@
-// Module ID: 11798
-// Function ID: 11799
-// Name: ConnectedAcceptGuildTemplate
-// Dependencies: [5, 32, 19, 7457, 1074, 21, 4560, 5682, 504, 5519, 11799, 7123, 11800, 5138, 11810, 11797, 5624, 7000, 2]
+// Module ID: 11824
+// Function ID: 11825
+// Name: AcceptGuildTemplateModal
+// Dependencies: [5, 32, 19, 7471, 1074, 21, 4574, 5696, 504, 5533, 11825, 7137, 11826, 5152, 11836, 11823, 5638, 7014, 2]
 // Exports: default
 
-// Module 11798 (ConnectedAcceptGuildTemplate)
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "noop" /* 19 */;
-import closure_7 from "handleGuildTemplateResolveSuccess" /* 7457 */;
-import { UPLOAD_MEDIUM_SIZE } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11824 (AcceptGuildTemplateModal)
+import NavigatorHeader from "NavigatorHeader" /* 5638 */;
+import AcceptGuildTemplateActionCreatorsDefault from "AcceptGuildTemplateActionCreators" /* 11836 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7471 */;
 
-const require = arg1;
+require = fn;
 function ConnectedAcceptGuildTemplate(code) {
   code = code.code;
-  let stateFromStores;
-  let first;
+  name = undefined;
   dependencyMap = undefined;
-  let first1;
-  let callback;
-  let React;
+  first1 = undefined;
+  _slicedToArray = undefined;
+  noop = undefined;
+  const tmp = closure_10();
+  const items = [GuildTemplateStore];
+  const stateFromStores = code(504).useStateFromStores(items, () => GuildTemplateStore.getGuildTemplate(code));
   let obj = code(504);
-  const items = [closure_7];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getGuildTemplate(code));
-  const tmp = callback2();
-  const tmp3 = callback(React.useState(first(5519).getGuildNameSuggestion()), 2);
-  first = tmp3[0];
-  dependencyMap = tmp3[1];
-  const tmp5 = callback(React.useState(null), 2);
-  first1 = tmp5[0];
-  callback = tmp5[1];
-  const tmp7 = callback(React.useState(null), 2);
-  React = tmp7[1];
-  stateFromStores(11799)(stateFromStores);
-  obj = { top: true, style: tmp.container, children: null };
-  obj = {
+  [name, dependencyMap] = noop.useState(name(5533).getGuildNameSuggestion());
+  [first1, _slicedToArray] = noop.useState(null);
+  const tmp7 = _slicedToArray(noop.useState(null), 2);
+  noop = tmp7[1];
+  stateFromStores(11825)(stateFromStores);
+  let obj3 = { top: true, style: tmp.container, children: null };
+  let obj4 = {
     code,
     guildTemplate: stateFromStores,
-    name: first,
+    name,
     setName(arg0) {
       return dependencyMap(arg0);
     },
@@ -48,79 +42,71 @@ function ConnectedAcceptGuildTemplate(code) {
     chooseIcon: null,
     createServer: null
   };
-  let obj2 = first(5519);
-  obj[6] = first1(function*() {
-    if (table === 2) {
-      table = 3;
-      HermesBuiltin.throwTypeError();
+  const obj2 = name(5533);
+  obj4.chooseIcon = first1(function*(arg0, value) {
+    if (dependencyMap === 2) {
+      dependencyMap = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        table = 2;
+        dependencyMap = 2;
         if (0 === c2) {
           if (arg0 === 1) {
-            table = 3;
-            throw arg1;
+            dependencyMap = 3;
+            throw value;
           } else if (arg0 === 2) {
-            table = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            dependencyMap = 3;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            closure_1 = tmp5;
-            let base64 = tmp2;
-            base64 = undefined;
-            obj1 = closure_1_1(table[13]);
-            obj1 = { size: null };
-            obj1[0] = closure_1_8;
+            closure_0 = tmp2;
+            let base64;
+            const obj5 = { size };
             c2 = 1;
-            table = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = obj1.openImagePicker(obj1);
-            return obj2;
+            dependencyMap = 1;
+            const obj6 = { value: tmp5(dependencyMap[13]).openImagePicker(obj5), done: false };
+            return obj6;
           }
         } else if (arg0 === 1) {
-          table = 3;
-          throw arg1;
+          dependencyMap = 3;
+          throw value;
         } else if (arg0 === 2) {
-          table = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          dependencyMap = 3;
+          const obj = { value, done: true };
           return obj;
         } else {
-          base64 = arg1.base64;
+          base64 = value.base64;
           if (null != base64) {
-            callback(base64);
+            closure_129_5(base64);
           }
-          table = 3;
+          dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }
       } catch (tmp17) {
-        table = tmp;
+        dependencyMap = tmp;
         throw tmp17;
       }
     }
   });
-  obj[7] = function createServer() {
+  obj4.createServer = function createServer() {
     if (null != stateFromStores) {
-      const obj = stateFromStores(11810);
-      stateFromStores(11810).acceptGuildTemplate(tmp.code, first, first1).then(() => callback(table[15]).hideModal(), (arg0) => callback2(arg0));
-      const acceptGuildTemplateResult = stateFromStores(11810).acceptGuildTemplate(tmp.code, first, first1);
+      AcceptGuildTemplateActionCreatorsDefault.acceptGuildTemplate(tmp.code, first, first1).then(() => stateFromStores(dependencyMap[15]).hideModal(), (arg0) => closure_1_6(arg0));
+      const acceptGuildTemplateResult = AcceptGuildTemplateActionCreatorsDefault.acceptGuildTemplate(tmp.code, first, first1);
     }
   };
-  obj[2] = jsx(stateFromStores(11800), {
+  obj3.children = jsx(stateFromStores(11826), {
     code,
     guildTemplate: stateFromStores,
-    name: first,
+    name,
     setName(arg0) {
       return dependencyMap(arg0);
     },
@@ -129,44 +115,35 @@ function ConnectedAcceptGuildTemplate(code) {
     chooseIcon: null,
     createServer: null
   });
-  return jsx(code(7123).SafeAreaPaddingView, {
-    code,
-    guildTemplate: stateFromStores,
-    name: first,
-    setName(arg0) {
-      return dependencyMap(arg0);
-    },
-    icon: first1,
-    errors: tmp7[0],
-    chooseIcon: null,
-    createServer: null
-  });
+  return jsx(code(7137).SafeAreaPaddingView, { top: true, style: tmp.container, children: null });
 }
-createCacheKey = { container: null };
-createCacheKey = { flex: 1, marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT };
-createCacheKey[0] = createCacheKey;
-let closure_10 = createCacheKey.createStyles(createCacheKey);
+const UPLOAD_MEDIUM_SIZE = fn(1074).UPLOAD_MEDIUM_SIZE;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { container: { flex: 1, marginTop: fn(5696).NAV_BAR_HEIGHT } };
+let closure_10 = createStyles.createStyles(obj2);
 const ACCEPT_GUILD_TEMPLATE = "ACCEPT_GUILD_TEMPLATE";
-const result = require("set").fileFinishedImporting("modules/guild_templates/native/AcceptGuildTemplateModal.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_templates/native/AcceptGuildTemplateModal.tsx");
 
 export default function AcceptGuildTemplateModal(code) {
   code = code.code;
   const items = [code];
-  const memo = React.useMemo(() => {
-    obj = { code: obj };
-    obj = {};
-    obj = {
+  const memo = noop.useMemo(() => {
+    let obj = { code };
+    const obj2 = {};
+    const obj3 = {
       title: "",
       fullscreen: true,
-      headerLeft: code(closure_1_3[16]).getHeaderCloseButton(() => callback(table[15]).hideModal()),
+      headerLeft: NavigatorHeader.getHeaderCloseButton(() => closure_1_1(closure_1_3[15]).hideModal()),
       render() {
         obj = {};
         const merged = Object.assign(obj);
-        return closure_1_9(closure_1_11, obj);
+        return <ConnectedAcceptGuildTemplate />;
       }
     };
-    obj[closure_1_12] = obj;
-    return obj;
+    obj2[ACCEPT_GUILD_TEMPLATE] = obj3;
+    return obj2;
   }, items);
-  return jsx(code(7000).Navigator, { initialRouteName: ACCEPT_GUILD_TEMPLATE, screens: memo });
+  return jsx(code(7014).Navigator, { initialRouteName: ACCEPT_GUILD_TEMPLATE, screens: memo });
 };

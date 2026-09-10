@@ -1,17 +1,19 @@
-// Module ID: 14573
-// Function ID: 14574
-// Name: usePlainTextExperiment
+// Module ID: 14598
+// Function ID: 14599
+// Name: PlainTextExperiment
 // Dependencies: [1433, 2]
 // Exports: usePlainTextExperiment
 
-// Module 14573 (usePlainTextExperiment)
-import set from "set" /* 2 */;
+// Module 14598 (PlainTextExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null };
-obj[1] = { enabled: true };
-let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-07-react-native-plain-text", kind: "user", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/design/PlainTextExperiment.tsx");
+const obj = { name: "2026-07-react-native-plain-text", kind: "user", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj.variations = obj2;
+let closure_0 = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/design/PlainTextExperiment.tsx");
 
 export const usePlainTextExperiment = function usePlainTextExperiment(RootThemeContextProvider) {
   return closure_0.useConfig({ location: RootThemeContextProvider }).enabled;

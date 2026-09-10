@@ -1,39 +1,32 @@
-// Module ID: 15711
-// Function ID: 15712
-// Name: toggle
-// Dependencies: [5627, 573, 2]
+// Module ID: 15741
+// Function ID: 15742
+// Name: DesignTogglesActions
+// Dependencies: [5641, 573, 2]
 // Exports: clearAll, toggle
 
-// Module 15711 (toggle)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_2 from "getUserAgnosticState" /* 5627 */;
+// Module 15741 (DesignTogglesActions)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import DesignTogglesStore from "DesignTogglesStore" /* 5641 */;
 
-const result = require("set").fileFinishedImporting("modules/devtools/design_toggles/DesignTogglesActions.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/design_toggles/DesignTogglesActions.tsx");
 
 export const toggle = function toggle(toggle, flag) {
   let tmp = flag;
   if (typeof flag !== "boolean") {
-    tmp = !store.get(toggle);
+    tmp = !DesignTogglesStore.get(toggle);
   }
-  let obj = dispatcherDefault;
-  obj = { type: "DEV_TOOLS_DESIGN_TOGGLE_SET", toggle, value: tmp };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "DEV_TOOLS_DESIGN_TOGGLE_SET", toggle, value: tmp });
 };
 export const clearAll = function clearAll() {
-  for (const key10005 in closure_2.all()) {
-    let tmp4 = key10005;
+  for (const key10005 in DesignTogglesStore.all()) {
     let flag = false;
     if (typeof false !== "boolean") {
-      let tmp5 = store;
-      flag = !store.get(key10005);
+      flag = !DesignTogglesStore.get(key10005);
     }
-    let tmp = importDefault;
-    let tmp2 = dependencyMap;
-    let obj = dispatcherDefault;
-    obj = { type: "DEV_TOOLS_DESIGN_TOGGLE_SET", toggle: null, value: null };
-    obj[1] = key10005;
-    obj[2] = flag;
-    let dispatchResult = obj.dispatch(obj);
+    let obj = DispatcherDefault;
+    let obj2 = { type: "DEV_TOOLS_DESIGN_TOGGLE_SET", toggle: key10005, value: flag };
+    let dispatchResult = obj.dispatch(obj2);
     continue;
   }
 };

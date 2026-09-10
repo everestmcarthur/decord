@@ -1,33 +1,28 @@
-// Module ID: 15264
-// Function ID: 15265
-// Name: useAppearanceSettingTrailing
-// Dependencies: [4379, 1186, 1074, 4495, 504, 1229, 7874, 1114, 2626, 11473, 13382, 15265, 2]
+// Module ID: 15293
+// Function ID: 15294
+// Name: AppearanceSetting
+// Dependencies: [4393, 1186, 1074, 4509, 504, 1229, 7888, 1114, 2626, 11500, 13405, 15294, 2]
 // Exports: useAppearanceSettingTrailing
 
-// Module 15264 (useAppearanceSettingTrailing)
+// Module 15293 (AppearanceSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import getThemeForColor from "getThemeForColor" /* 1229 */;
-import messagesProxyDefault from "messagesProxy" /* 2626 */;
-import useThemeDefault from "useTheme" /* 4495 */;
-import useActiveThemeType from "useActiveThemeType" /* 7874 */;
-import closure_3 from "reset" /* 4379 */;
-import { ActiveThemeType } from "SystemThemeState" /* 1186 */;
-import createToggle from "createToggle" /* 11473 */;
+import util from "util" /* 1114 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1229 */;
+import useThemeDefault from "useTheme" /* 4509 */;
+import useActiveTheme from "useActiveTheme" /* 7888 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4393 */;
 
-require = arg1;
+const _modDef2626 = tmp(2626);
+require = fn;
 function useAppearanceSettingTrailing() {
-  const tmp = importDefault;
   const tmp3 = useThemeDefault();
-  const items = [closure_3];
+  const items = [ClientThemesBackgroundStore];
   const stateFromStores = initialize.useStateFromStores(items, () => gradientPreset.gradientPreset);
-  const obj = initialize;
-  const themeName = getThemeForColor.getThemeName(tmp3);
-  const obj2 = getThemeForColor;
-  const activeThemeType = useActiveThemeType.useActiveThemeType();
+  const themeName = ClientThemesUtils.getThemeName(tmp3);
+  const activeThemeType = useActiveTheme.useActiveThemeType();
   if (ActiveThemeType.CUSTOM === activeThemeType) {
     const intl2 = tmp4(1114).intl;
-    return intl2.string(messagesProxyDefault.KSBBpC);
+    return intl2.string(_modDef2626.KSBBpC);
   } else if (tmp8.CLIENT === activeThemeType) {
     let name;
     if (stateFromStores != null) {
@@ -46,26 +41,26 @@ function useAppearanceSettingTrailing() {
   } else {
     return tmp8.DEFAULT === activeThemeType ? themeName : undefined;
   }
-  const obj3 = useActiveThemeType;
 }
-createToggle = {
+const ActiveThemeType = fn(1186).ActiveThemeType;
+const SettingBuilders = fn(11500);
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["iHH+ky"]);
+    const intl = util.intl;
+    return intl.string(util.t["iHH+ky"]);
   },
   parent: null,
-  IconComponent: require("PaintPaletteIcon").PaintPaletteIcon,
+  IconComponent: fn(13405).PaintPaletteIcon,
   useTrailing: useAppearanceSettingTrailing,
-  screen: createToggle
-};
-createToggle = {
-  route: require("ME").UserSettingsSections.APPEARANCE,
-  getComponent() {
-    return require(15265).default;
+  screen: {
+    route: fn(1074).UserSettingsSections.APPEARANCE,
+    getComponent() {
+      return require("SettingsAppearanceScreen").default;
+    }
   }
-};
-createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AppearanceSetting.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AppearanceSetting.tsx");
 
-export default createToggle;
+export default route;
 export { useAppearanceSettingTrailing };

@@ -4,7 +4,7 @@
 // Dependencies: [1246]
 
 // Module 1245 (is)
-import is from "is" /* 1246 */;
+import _mod1246 from "module_1246" /* 1246 */;
 
 
-export default is;
+export default _mod1246;

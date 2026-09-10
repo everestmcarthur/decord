@@ -1,32 +1,29 @@
-// Module ID: 11399
-// Function ID: 11400
-// Name: useSafetyToolsButtonTooltipForChannel
-// Dependencies: [10920, 1090, 11400, 10977, 11401, 11402, 2]
+// Module ID: 11426
+// Function ID: 11427
+// Name: useShouldShowSafetyToolsButtonTooltipForChannel
+// Dependencies: [10947, 1090, 11427, 11004, 11428, 11429, 2]
 // Exports: useSafetyToolsButtonTooltipForChannel
 
-// Module 11399 (useSafetyToolsButtonTooltipForChannel)
-import set from "set" /* 2 */;
-import setDefault from "set" /* 1090 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 10920 */;
-import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10977 */;
-import useInappropriateConversationSafetyToolsWarningForChannel from "useInappropriateConversationSafetyToolsWarningForChannel" /* 11400 */;
-import getSafetyAlertsSettingOrDefault from "getSafetyAlertsSettingOrDefault" /* 11402 */;
+// Module 11426 (useShouldShowSafetyToolsButtonTooltipForChannel)
+import DurationsDefault from "Durations" /* 1090 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10947 */;
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 11004 */;
+import useInappropriateConversationSafetyToolsWarningForChannel from "useInappropriateConversationSafetyToolsWarningForChannel" /* 11427 */;
+import size from "module_2" /* 2 */;
 
-const SafetyWarningTypes = handleConnectionOpen.SafetyWarningTypes;
-const HOUR = setDefault.Millis.HOUR;
-let closure_4 = 12 * setDefault.Millis.HOUR;
-const result = set.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useShouldShowSafetyToolsButtonTooltipForChannel.tsx");
+const InappropriateConversationUtils = tmp(11429);
+const SafetyWarningTypes = ChannelSafetyWarningsStore.SafetyWarningTypes;
+const HOUR = DurationsDefault.Millis.HOUR;
+let closure_4 = 12 * DurationsDefault.Millis.HOUR;
+const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useShouldShowSafetyToolsButtonTooltipForChannel.tsx");
 
 export const useSafetyToolsButtonTooltipForChannel = function useSafetyToolsButtonTooltipForChannel(channelId) {
   const inappropriateConversationSafetyToolsWarningForChannel = useInappropriateConversationSafetyToolsWarningForChannel.useInappropriateConversationSafetyToolsWarningForChannel(channelId);
-  const obj = useInappropriateConversationSafetyToolsWarningForChannel;
-  const tmp = require;
   const inappropriateConversationWarningsForChannel = useInappropriateConversationWarningsForChannel.useInappropriateConversationWarningsForChannel(channelId);
-  const obj2 = useInappropriateConversationWarningsForChannel;
   if (null != inappropriateConversationSafetyToolsWarningForChannel) {
     if (!obj3.useShouldShowInitialSafetyToolsButtonTooltip(channelId)) {
       if (!tmpResult.shouldShowTakeoverForWarnings(inappropriateConversationWarningsForChannel)) {
-        const someResult = inappropriateConversationWarningsForChannel.some((type) => type.type === closure_2.INAPPROPRIATE_CONVERSATION_TIER_1);
+        const someResult = inappropriateConversationWarningsForChannel.some((type) => type.type === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1);
         const found = inappropriateConversationWarningsForChannel.filter((dismiss_timestamp) => null != dismiss_timestamp.dismiss_timestamp);
         const sorted = found.sort((dismiss_timestamp, dismiss_timestamp2) => {
           let num = 1;
@@ -44,9 +41,9 @@ export const useSafetyToolsButtonTooltipForChannel = function useSafetyToolsButt
           if (null == dismiss_timestamp) {
             {
               const found1 = inappropriateConversationWarningsForChannel.filter((dismiss_timestamp) => null == dismiss_timestamp.dismiss_timestamp);
-              let findLastResult = found1.findLast((type) => type.type === closure_2.INAPPROPRIATE_CONVERSATION_TIER_1);
+              let findLastResult = found1.findLast((type) => type.type === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1);
               if (findLastResult == null) {
-                findLastResult = found1.findLast((type) => type.type === closure_2.INAPPROPRIATE_CONVERSATION_TIER_2);
+                findLastResult = found1.findLast((type) => type.type === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2);
               }
               return findLastResult;
             }
@@ -61,7 +58,7 @@ export const useSafetyToolsButtonTooltipForChannel = function useSafetyToolsButt
           }
         }
       }
-      tmpResult = getSafetyAlertsSettingOrDefault;
+      tmpResult = InappropriateConversationUtils;
     }
   }
 };

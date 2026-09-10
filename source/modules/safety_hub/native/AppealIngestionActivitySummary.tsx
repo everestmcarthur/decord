@@ -1,20 +1,20 @@
-// Module ID: 11894
-// Function ID: 11895
+// Module ID: 11920
+// Function ID: 11921
 // Name: AppealIngestionActivitySummary
-// Dependencies: [19, 17, 21, 4560, 11895, 2]
+// Dependencies: [19, 17, 21, 4574, 11921, 2]
 // Exports: default
 
-// Module 11894 (AppealIngestionActivitySummary)
-import noopAll from "noop" /* 19 */;
-import ClassificationEvidenceDefault from "ClassificationEvidence" /* 11895 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11920 (AppealIngestionActivitySummary)
+import ClassificationEvidenceDefault from "ClassificationEvidence" /* 11921 */;
+import noop from "module_19" /* 19 */;
 
-noopAll;
-let closure_4 = createCacheKey.createStyles({ activity: { marginBottom: 16 } });
-const result = require("set").fileFinishedImporting("modules/safety_hub/native/AppealIngestionActivitySummary.tsx");
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_4 = createStyles.createStyles({ activity: { marginBottom: 16 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionActivitySummary.tsx");
 
 export default function AppealIngestionActivitySummary(flaggedContent) {
-  return <View style={callback().activity}>{jsx(ClassificationEvidenceDefault, { flaggedContent: arg0.flaggedContent })}</View>;
+  return <View style={closure_4().activity}>{jsx(ClassificationEvidenceDefault, { flaggedContent: arg0.flaggedContent })}</View>;
 };

@@ -1,19 +1,19 @@
-// Module ID: 5433
-// Function ID: 5434
+// Module ID: 5447
+// Function ID: 5448
 // Name: ButtonGroup
-// Dependencies: [19, 21, 4560, 4973, 2]
+// Dependencies: [19, 21, 4574, 4987, 2]
 // Exports: ButtonGroup
 
-// Module 5433 (ButtonGroup)
-import noopAll from "noop" /* 19 */;
-import Stack from "Stack" /* 4973 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 5447 (ButtonGroup)
+import Stack_Stack from "Stack/Stack" /* 4987 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-let closure_3 = createCacheKey.createStyles({ container: { paddingVertical: 16 } });
-const result = require("set").fileFinishedImporting("design/components/ButtonGroup/native/ButtonGroup.native.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_3 = createStyles.createStyles({ container: { paddingVertical: 16 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/ButtonGroup/native/ButtonGroup.native.tsx");
 
 export const ButtonGroup = function ButtonGroup(size) {
   let str = size.size;
@@ -21,7 +21,7 @@ export const ButtonGroup = function ButtonGroup(size) {
     str = "md";
   }
   ({ children, style } = size);
-  const merged = Object.assign(size, Object.create(null));
+  const merged = Object.assign(size, Object.assign({ size: 0, children: 0, style: 0 }));
   let num = 8;
   if ("sm" === str) {
     num = 12;
@@ -29,8 +29,8 @@ export const ButtonGroup = function ButtonGroup(size) {
   const obj = {};
   const merged1 = Object.assign(merged);
   obj.spacing = num;
-  const items = [callback().container, style];
+  const items = [closure_3().container, style];
   obj.style = items;
   obj.children = children;
-  return jsx(Stack.Stack, {});
+  return jsx(Stack_Stack.Stack, {});
 };

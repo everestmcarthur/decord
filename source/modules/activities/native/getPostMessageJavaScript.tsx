@@ -1,13 +1,13 @@
-// Module ID: 9522
-// Function ID: 9523
+// Module ID: 9549
+// Function ID: 9550
 // Name: getPostMessageJavaScript
 // Dependencies: [2]
 // Exports: default
 
-// Module 9522 (getPostMessageJavaScript)
-import set from "set" /* 2 */;
+// Module 9549 (getPostMessageJavaScript)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/activities/native/getPostMessageJavaScript.tsx");
+const result = size.fileFinishedImporting("modules/activities/native/getPostMessageJavaScript.tsx");
 
 export default function getPostMessageJavaScript(arg0) {
   return "\n    (function() {\n      const iFrame = document.getElementById('activityFrame');\n      iFrame.contentWindow.postMessage(" + JSON.stringify(arg0) + ", '*');\n    })()\n  ";

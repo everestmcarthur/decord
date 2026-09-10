@@ -1,50 +1,54 @@
-// Module ID: 16348
-// Function ID: 16349
-// Dependencies: [19, 4382, 1975, 4381, 5438, 21, 4560, 576, 16297, 4262, 504, 5584, 16330, 16299, 4384, 5527, 16311, 16340, 16289, 4296, 16319, 5587, 2]
+// Module ID: 16379
+// Function ID: 16380
+// Name: GuildsBarPendingGuild
+// Dependencies: [19, 4396, 1975, 4395, 5452, 21, 4574, 576, 16327, 4275, 504, 5598, 16361, 16330, 4398, 5541, 16342, 16371, 16319, 4310, 16350, 5601, 2]
 
-// Module 16348
-import ThemesDefault from "Themes" /* 576 */;
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "handleGatewayJoinRequestUpdate" /* 4382 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1975 */;
-import closure_7 from "handleConnectionOpen" /* 4381 */;
-import closure_8 from "insertUnsortedGuilds" /* 5438 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16379 (GuildsBarPendingGuild)
+import nativeDefault from "native" /* 576 */;
+import GuildIcon from "GuildIcon" /* 5598 */;
+import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 16319 */;
+import noop from "module_19" /* 19 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4396 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
+import SortedGuildStore from "SortedGuildStore" /* 5452 */;
 
-const require = arg1;
-let c3 = importAllResult;
-({ getGuildIconSource: c5, getGuildIconURL: closure_6 } = GuildNSFWContentLevel);
+require = fn;
+const GuildRecord = fn(1975);
+({ getGuildIconSource: hasOwnProperty, getGuildIconURL: metroRequire } = GuildRecord);
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
 let obj = { guildIcon: null };
-obj = { width: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
-obj[0] = obj;
-let closure_10 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function GuildsBarPendingGuild(guildId) {
+let size = { width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
+obj.guildIcon = size;
+let closure_10 = createStyles.createStyles(obj);
+size = fn(2);
+let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarPendingGuild.tsx");
+
+export default noop.memo(function GuildsBarPendingGuild(guildId) {
   guildId = guildId.guildId;
   let token;
   let stateFromStores;
-  let stateFromStores1;
   let stateFromStores3;
+  const tmp = closure_10();
   let obj = guildId(stateFromStores[8]);
-  const tmp = callback();
-  obj1 = guildId(stateFromStores[9]);
-  token = obj1.useToken(token(stateFromStores[7]).modules.mobile.GUILD_BAR_ITEM_SIZE);
-  const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true });
-  const items = [closure_7];
+  const guildsBarAnimatedWrapperStyles = guildId(stateFromStores[8]).useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true });
+  token = guildId(stateFromStores[9]).useToken(token(stateFromStores[7]).modules.mobile.GUILD_BAR_ITEM_SIZE);
+  const obj2 = guildId(stateFromStores[9]);
+  const items = [SelectedGuildStore];
   const items1 = [guildId];
-  stateFromStores = guildId(stateFromStores[10]).useStateFromStores(items, () => closure_1_7.getGuildId() === guildId, items1);
+  stateFromStores = guildId(stateFromStores[10]).useStateFromStores(items, () => SelectedGuildStore.getGuildId() === guildId, items1);
   const obj3 = guildId(stateFromStores[10]);
   const items2 = [stateFromStores3];
   const items3 = [guildId];
-  stateFromStores1 = guildId(stateFromStores[10]).useStateFromStores(items2, () => stateFromStores3.getRequest(guildId), items3);
+  const stateFromStores1 = guildId(stateFromStores[10]).useStateFromStores(items2, () => UserGuildJoinRequestStore.getRequest(guildId), items3);
   const obj4 = guildId(stateFromStores[10]);
   const items4 = [stateFromStores3];
   const items5 = [guildId, token, stateFromStores];
   const stateFromStores2 = guildId(stateFromStores[10]).useStateFromStores(items4, () => {
-    const joinRequestGuild = stateFromStores3.getJoinRequestGuild(guildId);
+    const joinRequestGuild = UserGuildJoinRequestStore.getJoinRequestGuild(guildId);
     let tmp2;
     if (null != joinRequestGuild) {
-      tmp2 = closure_1_6(joinRequestGuild, token, stateFromStores);
+      tmp2 = timestampProducer(joinRequestGuild, token, stateFromStores);
     }
     let name;
     if (joinRequestGuild != null) {
@@ -54,10 +58,10 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuild(guildId) 
     let tmp7;
     if (null != tmp2) {
       if (null != joinRequestGuild) {
-        tmp7 = closure_1_5(joinRequestGuild, guildId(stateFromStores[11]).ImageSizes[guildId(undefined, stateFromStores[11]).GuildIconSizes.LARGE], stateFromStores);
+        tmp7 = hasOwnProperty(joinRequestGuild, GuildIcon.ImageSizes[GuildIcon.GuildIconSizes.LARGE], stateFromStores);
       }
     }
-    obj[2] = tmp7;
+    obj.asset = tmp7;
     return obj;
   }, items5, token(stateFromStores[12]));
   ({ guildName, asset, icon } = stateFromStores2);
@@ -76,37 +80,38 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuild(guildId) 
   items6[1] = applicationStatus1;
   const memo = stateFromStores1.useMemo(() => ({
     onPress() {
-      let applicationStatus;
+      applicationStatus = undefined;
       if (applicationStatus != null) {
         applicationStatus = applicationStatus.applicationStatus;
       }
-      if (closure_1_0(closure_1_2[14]).GuildJoinRequestApplicationStatuses.STARTED === applicationStatus) {
-        let tmp2Result = tmp2(tmp3[15]);
-        const result = tmp2Result.openMemberVerificationIncompleteAlert(closure_0);
+      if (guildId(stateFromStores[14]).GuildJoinRequestApplicationStatuses.STARTED === applicationStatus) {
+        const result = tmp2(tmp3[15]).openMemberVerificationIncompleteAlert(guildId);
+        const tmp2Result = tmp2(tmp3[15]);
       } else if (tmp2(tmp3[14]).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
-        tmp2Result = tmp2(tmp3[15]);
-        const result1 = tmp2Result.openMemberVerificationPendingAlert(closure_0);
+        const result1 = tmp2(tmp3[15]).openMemberVerificationPendingAlert(guildId);
+        const tmp2Result3 = tmp2(tmp3[15]);
       } else if (tmp2(tmp3[14]).GuildJoinRequestApplicationStatuses.APPROVED === applicationStatus) {
-        closure_1_1(tmp3[16])(closure_0);
+        token(tmp3[16])(guildId);
       } else if (tmp2(tmp3[14]).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
-        const obj = { guildId: null, canWithdraw: true };
-        obj[0] = closure_0;
+        const obj = { guildId, canWithdraw: true };
         const result2 = tmp2(tmp3[15]).openMemberVerificationRejectedAlert(obj);
-        const tmp2Result1 = tmp2(tmp3[15]);
+        const tmp2Result4 = tmp2(tmp3[15]);
       }
     }
   }), items6);
   const tmp15 = token(stateFromStores[17])(guildId, icon, asset);
-  let tmp2Result = tmp2(tmp3[10]);
-  const items7 = [closure_8];
-  stateFromStores3 = tmp2Result.useStateFromStores(items7, () => guildsTree.getGuildsTree().version);
+  const obj6 = stateFromStores1;
+  const tmp10Result = token(stateFromStores[13])({ mentionCount: 0, joinRequestState: applicationStatus });
+  const items7 = [SortedGuildStore];
+  stateFromStores3 = guildId(stateFromStores[10]).useStateFromStores(items7, () => guildsTree.getGuildsTree().version);
   const items8 = [guildId, stateFromStores3];
-  const memo1 = stateFromStores1.useMemo(() => {
-    arr = token(stateFromStores[18])(arr, stateFromStores3);
+  const memo1 = obj6.useMemo(() => {
+    const arr = getGuildsBarGuildMenuItemsDefault(guildId, stateFromStores3);
     return {
       accessibilityActions: arr.map((label) => ({ name: label.label, label: label.label })),
       onAccessibilityAction(arg0) {
-        const found = arg0.find((label) => label.label === nativeEvent.nativeEvent.actionName);
+        const nativeEvent = arg0;
+        const found = arr.find((label) => label.label === nativeEvent.nativeEvent.actionName);
         if (found != null) {
           const action = found.action;
           if (action != null) {
@@ -117,36 +122,27 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuild(guildId) 
     };
   }, items8);
   ({ accessibilityActions, onAccessibilityAction } = memo1);
-  tmp2Result = tmp2(tmp3[19]);
-  const sharedValue = tmp2Result.useSharedValue(guildId);
-  obj = { id: guildId, accessibilityActions, onAccessibilityAction, cutouts, selected: stateFromStores, sharedId: sharedValue, circle: !stateFromStores, overState: "PX_16", unread: null, label: null, config: null, styles: null, externalChildren: null, expandedChildren: null, children: "place" };
+  let tmp2Result = guildId(stateFromStores[10]);
+  const sharedValue = guildId(stateFromStores[19]).useSharedValue(guildId);
+  const obj7 = { id: guildId, accessibilityActions, onAccessibilityAction, cutouts, selected: stateFromStores, sharedId: sharedValue, circle: !stateFromStores, overState: "PX_16", unread: null, label: null, config: null, styles: null, externalChildren: null, expandedChildren: null, children: "climb" };
   let str = guildName;
-  let tmp5Result = tmp5(tmp3[8]);
+  const tmp2Result2 = guildId(stateFromStores[19]);
   if (guildName == null) {
     str = "";
   }
-  obj[9] = str;
-  obj[10] = memo;
-  obj[11] = guildsBarAnimatedWrapperStyles;
-  obj[12] = badge;
-  obj[13] = jsx(token(stateFromStores[20]), { guildId, disableSubtitle: true });
+  obj7.label = str;
+  obj7.config = memo;
+  obj7.styles = guildsBarAnimatedWrapperStyles;
+  obj7.externalChildren = badge;
+  obj7.expandedChildren = jsx(token(stateFromStores[20]), { guildId, disableSubtitle: true });
   if (null != tmp15) {
-    obj = { source: null, style: null };
-    obj[0] = tmp15;
-    obj[1] = tmp.guildIcon;
-    let tmp19Result = tmp19(tmp5(tmp3[21]), obj);
+    const obj8 = { source: tmp15, style: tmp.guildIcon };
+    let tmp19Result = tmp19(tmp5(tmp3[21]), obj8);
   } else {
-    obj1 = { value: null, selected: null, animate: null, size: null };
-    obj1[0] = guildName;
-    obj1[1] = stateFromStores;
-    obj1[2] = stateFromStores;
-    tmp5Result = tmp5(tmp3[11]);
-    obj1[3] = tmp2(tmp3[11]).GuildIconSizes.LARGE;
-    tmp19Result = tmp19(tmp5Result, obj1);
+    const obj9 = { value: guildName, selected: stateFromStores, animate: stateFromStores, size: tmp2(tmp3[11]).GuildIconSizes.LARGE };
+    tmp19Result = tmp19(tmp5(tmp3[11]), obj9);
+    const tmp5Result2 = tmp5(tmp3[11]);
   }
-  obj[14] = tmp19Result;
-  return <tmp5Result id={guildId} accessibilityActions={accessibilityActions} onAccessibilityAction={onAccessibilityAction} cutouts={cutouts} selected={stateFromStores} sharedId={sharedValue} circle={!stateFromStores} overState="PX_16" unread={null} label={null} config={null} styles={null} externalChildren={null} expandedChildren={null}>{"place"}</tmp5Result>;
+  obj7.children = tmp19Result;
+  return jsx(token(stateFromStores[8]), { id: guildId, accessibilityActions, onAccessibilityAction, cutouts, selected: stateFromStores, sharedId: sharedValue, circle: !stateFromStores, overState: "PX_16", unread: null, label: null, config: null, styles: null, externalChildren: null, expandedChildren: null, children: "climb" });
 });
-let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarPendingGuild.tsx");
-
-export default memoResult;

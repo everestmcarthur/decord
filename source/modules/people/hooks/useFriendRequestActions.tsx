@@ -1,13 +1,15 @@
-// Module ID: 13123
-// Function ID: 13124
+// Module ID: 13149
+// Function ID: 13150
 // Name: useFriendRequestActions
-// Dependencies: [19, 10875, 2]
+// Dependencies: [19, 10902, 2]
 // Exports: useFriendRequestActions
 
-// Module 13123 (useFriendRequestActions)
-import closure_2 from "noop" /* 19 */;
+// Module 13149 (useFriendRequestActions)
+import PeopleUtilsDefault from "PeopleUtils" /* 10902 */;
+import noop from "module_19" /* 19 */;
 
-let result = require("set").fileFinishedImporting("modules/people/hooks/useFriendRequestActions.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/people/hooks/useFriendRequestActions.tsx");
 
 export const useFriendRequestActions = function useFriendRequestActions(userId) {
   userId = userId.userId;
@@ -18,33 +20,31 @@ export const useFriendRequestActions = function useFriendRequestActions(userId) 
   const onCancel = userId.onCancel;
   const onFinally = userId.onFinally;
   const items = [applicationId, isGameRelationship, _location, userId];
-  let obj = { acceptFriendRequest: null, cancelFriendRequest: null };
+  const obj = { acceptFriendRequest: null, cancelFriendRequest: null };
   const items1 = [applicationId, isGameRelationship, _location, onCancel, onConfirm, onFinally, userId];
   const callback = isGameRelationship.useCallback(() => {
-    let obj = userId(applicationId[1]);
-    obj = { userId, applicationId: null, location: null };
+    const obj2 = { userId, applicationId: null, location: null };
     let tmp = null;
     if (isGameRelationship) {
       tmp = applicationId;
     }
-    obj[1] = tmp;
-    obj[2] = _location;
-    obj.cancelFriendRequest(obj);
+    obj2.applicationId = tmp;
+    obj2.location = _location;
+    PeopleUtilsDefault.cancelFriendRequest(obj2);
   }, items);
-  obj[0] = isGameRelationship.useCallback(() => {
-    let obj = userId(applicationId[1]);
-    obj = { userId, applicationId: null, location: null, onConfirm: null, onCancel: null, onFinally: null };
+  obj.acceptFriendRequest = isGameRelationship.useCallback(() => {
+    const obj2 = { userId, applicationId: null, location: null, onConfirm: null, onCancel: null, onFinally: null };
     let tmp = null;
     if (isGameRelationship) {
       tmp = applicationId;
     }
-    obj[1] = tmp;
-    obj[2] = _location;
-    obj[3] = onConfirm;
-    obj[4] = onCancel;
-    obj[5] = onFinally;
-    const result = obj.maybeConfirmFriendRequestAccept(obj);
+    obj2.applicationId = tmp;
+    obj2.location = _location;
+    obj2.onConfirm = onConfirm;
+    obj2.onCancel = onCancel;
+    obj2.onFinally = onFinally;
+    const result = PeopleUtilsDefault.maybeConfirmFriendRequestAccept(obj2);
   }, items1);
-  obj[1] = callback;
+  obj.cancelFriendRequest = callback;
   return obj;
 };

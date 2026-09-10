@@ -1,31 +1,34 @@
-// Module ID: 16276
-// Function ID: 16277
-// Name: FavoritesGuildSuggestionsLoaderInner
-// Dependencies: [19, 16205, 21, 16277, 2]
+// Module ID: 16306
+// Function ID: 16307
+// Name: FavoritesGuildSuggestionsLoader
+// Dependencies: [19, 16235, 21, 16307, 2]
 
-// Module 16276 (FavoritesGuildSuggestionsLoaderInner)
-import getAffineChannelIdDefault from "getAffineChannelId" /* 16277 */;
-import importAllResult from "noop" /* 19 */;
-import items from "items" /* 16205 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16306 (FavoritesGuildSuggestionsLoader)
+import useFavoritesGuildSuggestionCandidatesDefault from "useFavoritesGuildSuggestionCandidates" /* 16307 */;
+import noop from "module_19" /* 19 */;
 
 function FavoritesGuildSuggestionsLoaderInner() {
-  const tmp = getAffineChannelIdDefault(4);
+  const tmp = useFavoritesGuildSuggestionCandidatesDefault(4);
   importDefault = tmp;
   const items = [tmp];
-  const layoutEffect = importAllResult.useLayoutEffect(() => {
-    closure_1_4(closure_0);
+  const layoutEffect = noop.useLayoutEffect(() => {
+    React4(closure_0);
   }, items);
   return null;
 }
-({ NO_SUGGESTIONS: c3, setFavoritesGuildSuggestions: c4, useFavoritesGuildSuggestionsVisibility: c5 } = items);
-const memoResult = importAllResult.memo(function FavoritesGuildSuggestionsLoader() {
-  const tmp = callback();
+const FavoritesGuildSuggestionsStore = fn(16235);
+({ NO_SUGGESTIONS: c3, setFavoritesGuildSuggestions: closure_4, useFavoritesGuildSuggestionsVisibility: hasOwnProperty } = FavoritesGuildSuggestionsStore);
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/FavoritesGuildSuggestionsLoader.tsx");
+
+export default noop.memo(function FavoritesGuildSuggestionsLoader() {
+  const tmp = closure_5();
   const isEligible = tmp.isEligible;
   const isSelected = tmp.isSelected;
-  importAllResult = importAllResult.useRef(false);
+  noop = noop.useRef(false);
   const items = [isEligible, isSelected];
-  const layoutEffect = importAllResult.useLayoutEffect(() => {
+  const layoutEffect = noop.useLayoutEffect(() => {
     if (isSelected) {
       tmp.current = true;
     } else {
@@ -36,7 +39,7 @@ const memoResult = importAllResult.memo(function FavoritesGuildSuggestionsLoader
       }
       if (!tmp2) {
         tmp.current = false;
-        closure_1_4(closure_1_3);
+        React4(React3);
       }
     }
   }, items);
@@ -46,6 +49,3 @@ const memoResult = importAllResult.memo(function FavoritesGuildSuggestionsLoader
   }
   return tmp3;
 });
-const result = require("set").fileFinishedImporting("modules/favorites/FavoritesGuildSuggestionsLoader.tsx");
-
-export default memoResult;

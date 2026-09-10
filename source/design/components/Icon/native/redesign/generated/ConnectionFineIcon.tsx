@@ -1,26 +1,26 @@
-// Module ID: 16402
-// Function ID: 16403
+// Module ID: 16433
+// Function ID: 16434
 // Name: ConnectionFineIcon
-// Dependencies: [19, 21, 576, 4261, 16403, 2]
+// Dependencies: [19, 21, 576, 4274, 16434, 2]
 // Exports: ConnectionFineIcon
 
-// Module 16402 (ConnectionFineIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 16403 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16433 (ConnectionFineIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod16434 from "module_16434" /* 16434 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/ConnectionFineIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/ConnectionFineIcon.tsx");
 
 export const ConnectionFineIcon = function ConnectionFineIcon(color) {
   let ICON_FEEDBACK_POSITIVE = color.color;
   if (ICON_FEEDBACK_POSITIVE === undefined) {
-    ICON_FEEDBACK_POSITIVE = ThemesDefault.colors.ICON_FEEDBACK_POSITIVE;
+    ICON_FEEDBACK_POSITIVE = nativeDefault.colors.ICON_FEEDBACK_POSITIVE;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: ICON_FEEDBACK_POSITIVE, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16434, color: ICON_FEEDBACK_POSITIVE, style: color.style });
 };

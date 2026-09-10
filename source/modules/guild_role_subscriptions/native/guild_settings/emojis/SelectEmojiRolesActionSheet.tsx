@@ -1,60 +1,59 @@
-// Module ID: 17784
-// Function ID: 17785
+// Module ID: 17817
+// Function ID: 17818
 // Name: SelectEmojiRolesActionSheet
-// Dependencies: [32, 19, 17, 1182, 1085, 21, 4560, 576, 5524, 15215, 5123, 1178, 1114, 7149, 7198, 7072, 8598, 4556, 2]
+// Dependencies: [32, 19, 17, 1182, 1085, 21, 4574, 576, 5538, 15244, 5137, 1178, 1114, 7163, 7211, 7086, 8626, 4570, 2]
 // Exports: default
 
-// Module 17784 (SelectEmojiRolesActionSheet)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import PressableBase from "PressableBase" /* 5123 */;
-import ActionSheet from "ActionSheet" /* 7198 */;
-import useFetchListingsForGuild from "useFetchListingsForGuild" /* 15215 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { Fonts } from "sum" /* 1085 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importDefaultResult from "createTextStyle" /* 5524 */;
+// Module 17817 (SelectEmojiRolesActionSheet)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import Pressables from "Pressables" /* 5137 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7163 */;
+import ActionSheet from "ActionSheet" /* 7211 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15244 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import TextStyles_mod from "TextStyles" /* 5538 */;
 
-require = arg1;
-({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
-let closure_9 = require("semanticColor").FORM_ROW_VERTICAL_PADDING + 22;
-createCacheKey = { list: null, label: null, roleName: null, archivedBadge: null, archivedBadgeText: null, divider: null, saveButton: null, saveButtonDisabled: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, flexDirection: "row", alignItems: "center" };
-const merged = Object.assign(importDefaultResult(Fonts.PRIMARY_MEDIUM, ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, 16));
-createCacheKey[2] = { flexShrink: 1 };
-let obj1 = { flexShrink: 1 };
-createCacheKey[3] = { borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.unsafe_rawColors.RED_400, marginLeft: 8, paddingHorizontal: 4, height: 16 };
-let obj2 = { borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.unsafe_rawColors.RED_400, marginLeft: 8, paddingHorizontal: 4, height: 16 };
-const obj3 = {};
-const merged1 = Object.assign(importDefaultResult(Fonts.PRIMARY_BOLD, ThemesDefault.unsafe_rawColors.WHITE, 12, { uppercase: true }));
-createCacheKey[4] = obj3;
-const importDefaultResult1 = importDefaultResult;
-createCacheKey[5] = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-let obj4 = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-const obj5 = {};
-const merged2 = Object.assign(importDefaultResult(Fonts.PRIMARY_SEMIBOLD, ThemesDefault.colors.CONTROL_BRAND_FOREGROUND, 16));
-createCacheKey[6] = obj5;
-createCacheKey[7] = { opacity: 0.3 };
-let closure_10 = createCacheKey.createStyles(createCacheKey);
-const importDefaultResult2 = importDefaultResult;
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/emojis/SelectEmojiRolesActionSheet.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const View = fn(17).View;
+const Fonts = fn(1085).Fonts;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+const itemSize = fn(1182).FORM_ROW_VERTICAL_PADDING + 22;
+const createStyles = fn(4574);
+let obj2 = { list: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, label: { flex: 1, flexDirection: "row", alignItems: "center" }, roleName: null, archivedBadge: null, archivedBadgeText: null, divider: null, saveButton: null, saveButtonDisabled: null };
+let TextStyles = TextStyles_mod;
+const merged = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, 16));
+obj2.roleName = { flexShrink: 1 };
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+let obj4 = { flexShrink: 1 };
+obj2.archivedBadge = { borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.unsafe_rawColors.RED_400, marginLeft: 8, paddingHorizontal: 4, height: 16 };
+let TextStyles = TextStyles_mod;
+const merged1 = Object.assign(TextStyles(Fonts.PRIMARY_BOLD, nativeDefault.unsafe_rawColors.WHITE, 12, { uppercase: true }));
+obj2.archivedBadgeText = {};
+let obj5 = { borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.unsafe_rawColors.RED_400, marginLeft: 8, paddingHorizontal: 4, height: 16 };
+let obj6 = {};
+obj2.divider = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+let TextStyles = TextStyles_mod;
+const merged2 = Object.assign(TextStyles(Fonts.PRIMARY_SEMIBOLD, nativeDefault.colors.CONTROL_BRAND_FOREGROUND, 16));
+obj2.saveButton = {};
+obj2.saveButtonDisabled = { opacity: 0.3 };
+let closure_10 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/emojis/SelectEmojiRolesActionSheet.tsx");
 
 export default function SelectEmojiRolesActionSheet(arg0) {
   ({ onSave: require, emoji } = arg0);
-  dependencyMap = undefined;
   let first;
-  let React;
-  let subscriptionListingsForGuild;
+  noop = undefined;
   ({ guildId, onCancel } = arg0);
-  const tmp = callback();
+  const tmp = closure_10();
   dependencyMap = tmp;
-  const tmp2 = first(React.useState(() => {
+  const tmp2 = first(noop.useState(() => {
     let roles;
     if (emoji != null) {
       roles = emoji.roles;
@@ -65,23 +64,23 @@ export default function SelectEmojiRolesActionSheet(arg0) {
     return new Set(roles);
   }), 2);
   first = tmp2[0];
-  React = tmp2[1];
-  let obj = useFetchListingsForGuild;
-  subscriptionListingsForGuild = obj.useSubscriptionListingsForGuild(guildId, { includeSoftDeleted: true, sortDeletedListingsLast: true });
-  obj = {
+  noop = tmp2[1];
+  const subscriptionListingsForGuild = GuildRoleSubscriptionsHooks.useSubscriptionListingsForGuild(guildId, { includeSoftDeleted: true, sortDeletedListingsLast: true });
+  const obj2 = {
     onPress() {
-      callback(Array.from(first));
+      require(Array.from(first));
     },
-    disabled: saveButtonDisabled,
+    disabled: null,
     accessibilityRole: "button",
     children: null
   };
-  saveButtonDisabled = !tmp4;
+  let saveButtonDisabled = !tmp4;
+  obj2.disabled = saveButtonDisabled;
   let items = [tmp.saveButton, ];
   if (first.size <= 0) {
     saveButtonDisabled = tmp.saveButtonDisabled;
   }
-  obj = { style: items, children: null };
+  let obj3 = { style: items, children: null };
   items[1] = saveButtonDisabled;
   if (null == emoji) {
     const intl2 = tmp5(1114).intl;
@@ -90,16 +89,65 @@ export default function SelectEmojiRolesActionSheet(arg0) {
     let intl = tmp5(1114).intl;
     stringResult = intl.string(tmp5(1114).t["R3BPH+"]);
   }
-  obj[1] = stringResult;
-  obj[3] = closure_6(Button.LegacyText, obj);
-  let tmp7Result = tmp7(PressableBase.PressableOpacity, obj);
-  obj1 = { title: null, subtitle: null, trailing: null };
+  obj3.children = stringResult;
+  obj2.children = closure_6(native.LegacyText, obj3);
+  let obj4 = { title: null, subtitle: null, trailing: null };
   const intl3 = tmp5(1114).intl;
-  obj1[0] = intl3.string(getSystemLocale.t.JPU0EF);
+  obj4.title = intl3.string(util.t.JPU0EF);
   const intl4 = tmp5(1114).intl;
-  obj1[1] = intl4.string(getSystemLocale.t.MZusPv);
-  obj1[2] = tmp7Result;
-  tmp7Result = tmp7(tmp5(7149).BottomSheetTitleHeader, obj1);
+  obj4.subtitle = intl4.string(util.t.MZusPv);
+  obj4.trailing = closure_6(Pressables.PressableOpacity, obj2);
+  const tmp7Result = closure_6(Pressables.PressableOpacity, obj2);
+  let obj5 = { scrollable: true, header: closure_6(BottomSheetTitleHeader.BottomSheetTitleHeader, obj4), startExpanded: true, onDismiss: onCancel, children: null };
+  const obj6 = {
+    inActionSheet: true,
+    style: tmp.list,
+    itemSize,
+    sections: null,
+    renderItem(arg0, arg1) {
+      let role_id = tmp;
+      const diff = subscriptionListingsForGuild.length - 1;
+      const obj = { style: closure_2.label, children: null };
+      const items = [closure_1_6(require("Text/Text").Text, { style: closure_2.roleName, lineClamp: 1, variant: "text-md/medium", color: "interactive-text-active", children: subscriptionListingsForGuild[arg1].name }), ];
+      let archived = tmp.archived;
+      if (archived) {
+        const obj3 = { style: tmp9.archivedBadge, children: null };
+        const obj4 = { style: tmp9.archivedBadgeText, variant: "text-xs/bold", color: "text-overlay-light", children: null };
+        const intl = tmp6(tmp7[12]).intl;
+        obj4.children = intl.string(tmp6(tmp7[12]).t.HRtfn9);
+        obj3.children = tmp5(tmp6(tmp7[17]).Text, obj4);
+        archived = tmp5(tmp8, obj3);
+      }
+      const obj5 = {
+        label: closure_1_7(subscriptionListingsForGuild, obj),
+        onPress() {
+          role_id = role_id.role_id;
+          return closure_4((has) => {
+            const set = new Set(has);
+            if (has.has(role_id)) {
+              set.delete(tmp);
+            } else {
+              set.add(tmp);
+            }
+            return set;
+          });
+        },
+        trailing: closure_1_6(require("Form").FormRow.Checkbox, { selected: first.has(subscriptionListingsForGuild[arg1].role_id) })
+      };
+      items[1] = archived;
+      obj.children = items;
+      const children = [closure_1_6(require("Form").FormRow, obj5), ];
+      let tmp5Result = !tmp10;
+      if (arg1 !== diff) {
+        const obj7 = { style: tmp9.divider };
+        tmp5Result = tmp5(tmp6(tmp7[16]).FormDivider, obj7);
+      }
+      children[1] = tmp5Result;
+      return closure_1_7(closure_1_8, { children });
+    }
+  };
   const items1 = [subscriptionListingsForGuild.length];
-  return closure_6(ActionSheet.ActionSheet, { scrollable: true, header: tmp7Result, startExpanded: true, onDismiss: onCancel, children: closure_6(emoji(7072), obj3) });
+  obj6.sections = items1;
+  obj5.children = closure_6(emoji(7086), obj6);
+  return closure_6(ActionSheet.ActionSheet, obj5);
 };

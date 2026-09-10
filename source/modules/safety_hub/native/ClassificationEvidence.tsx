@@ -1,53 +1,50 @@
-// Module ID: 11895
-// Function ID: 11896
+// Module ID: 11921
+// Function ID: 11922
 // Name: ClassificationEvidence
-// Dependencies: [19, 17, 21, 4560, 1178, 576, 4556, 1114, 11896, 2]
+// Dependencies: [19, 17, 21, 4574, 1178, 576, 4570, 1114, 11922, 2]
 // Exports: default
 
-// Module 11895 (ClassificationEvidence)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import ClassificationEvidenceDefault from "ClassificationEvidence" /* 11896 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import Button from "Button" /* 1178 */;
+// Module 11921 (ClassificationEvidence)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import ClassificationMessageEvidenceDefault from "ClassificationMessageEvidence" /* 11922 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { cardShadow: null, flaggedContent: null, sectionContainer: null };
-createCacheKey[0] = Button.generateBoxShadowStyle(require("Button").FOUR_DP_ELEVATION_SHADOW_PARAMS);
-createCacheKey = { borderWidth: 1, borderRadius: ThemesDefault.radii.sm, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, backgroundColor: ThemesDefault.colors.CHANNELTEXTAREA_BACKGROUND, padding: 20 };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { display: "flex", gap: ThemesDefault.space.PX_8 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { display: "flex", gap: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/safety_hub/native/ClassificationEvidence.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { cardShadow: null, flaggedContent: null, sectionContainer: null };
+const native = fn(1178);
+obj2.cardShadow = native.generateBoxShadowStyle(fn(1178).FOUR_DP_ELEVATION_SHADOW_PARAMS);
+obj2.flaggedContent = { borderWidth: 1, borderRadius: nativeDefault.radii.sm, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, backgroundColor: nativeDefault.colors.CHANNELTEXTAREA_BACKGROUND, padding: 20 };
+let obj4 = { borderWidth: 1, borderRadius: nativeDefault.radii.sm, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, backgroundColor: nativeDefault.colors.CHANNELTEXTAREA_BACKGROUND, padding: 20 };
+obj2.sectionContainer = { display: "flex", gap: nativeDefault.space.PX_8 };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_hub/native/ClassificationEvidence.tsx");
 
 export default function ClassificationEvidence(flaggedContent) {
   flaggedContent = flaggedContent.flaggedContent;
-  const tmp = callback3();
+  const tmp = closure_6();
   let tmp2 = null;
   if (0 !== flaggedContent.length) {
-    let obj = { style: null, children: null };
-    obj[0] = tmp.sectionContainer;
-    obj = { variant: "eyebrow", color: "text-default", children: null };
-    const intl = getSystemLocale.intl;
-    obj[2] = intl.string(getSystemLocale.t.s64CMg);
-    const items = [callback(Text.Text, obj), ];
-    obj = { style: null, children: null };
+    const obj = { style: tmp.sectionContainer, children: null };
+    const obj2 = { variant: "eyebrow", color: "text-default", children: null };
+    const intl = util.intl;
+    obj2.children = intl.string(util.t.s64CMg);
+    const items = [React4(Text_Text.Text, obj2), ];
+    const obj3 = { style: null, children: null };
     const items1 = [, ];
     ({ flaggedContent: arr3[0], cardShadow: arr3[1] } = tmp);
-    obj[0] = items1;
-    obj1 = { flaggedContent: null };
-    obj1[0] = flaggedContent;
-    obj[1] = callback(ClassificationEvidenceDefault, obj1);
-    items[1] = callback(View, obj);
-    obj[1] = items;
-    tmp2 = callback2(View, obj);
+    obj3.style = items1;
+    const obj4 = { flaggedContent };
+    obj3.children = React4(ClassificationMessageEvidenceDefault, obj4);
+    items[1] = React4(View, obj3);
+    obj.children = items;
+    tmp2 = hasOwnProperty(View, obj);
   }
   return tmp2;
 };

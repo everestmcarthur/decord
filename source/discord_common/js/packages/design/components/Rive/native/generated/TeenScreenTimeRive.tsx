@@ -1,21 +1,21 @@
-// Module ID: 4372
-// Function ID: 4373
+// Module ID: 4386
+// Function ID: 4387
 // Name: TeenScreenTimeRive
-// Dependencies: [109, 19, 21, 4290, 4373, 4345, 2]
+// Dependencies: [109, 19, 21, 4304, 4387, 4359, 2]
 
-// Module 4372 (TeenScreenTimeRive)
-import BaseRive from "BaseRive" /* 4290 */;
-import getDerivedStateFromError from "getDerivedStateFromError" /* 4345 */;
-import metadataDefault from "metadata" /* 4373 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 4386 (TeenScreenTimeRive)
+import BaseRive from "BaseRive" /* 4304 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 4359 */;
+import _modDef4387 from "module_4387" /* 4387 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 let closure_3 = ["fallback", "artboard", "stateMachine", "defaultViewModelInstance"];
-let closure_6 = { "Teen Screen Time Illo": {}, "Gradient Vertical": {}, "RAW ILLO (Do not deploy)": {}, "Gradient Horizontal": {} };
-let closure_7 = { "Teen Screen Time Illo": [], "Gradient Vertical": [], "RAW ILLO (Do not deploy)": [], "Gradient Horizontal": [] };
-let closure_8 = importAllResult.forwardRef(function TeenScreenTimeRiveInner(defaultViewModelInstance, ref) {
+const jsx = fn(21).jsx;
+const artboardProperties = { "Teen Screen Time Illo": {}, "Gradient Vertical": {}, "RAW ILLO (Do not deploy)": {}, "Gradient Horizontal": {} };
+const artboardViewModelInstances = { "Teen Screen Time Illo": [], "Gradient Vertical": [], "RAW ILLO (Do not deploy)": [], "Gradient Horizontal": [] };
+let closure_8 = noop.forwardRef(function TeenScreenTimeRiveInner(defaultViewModelInstance, ref) {
   ({ fallback, artboard } = defaultViewModelInstance);
   let str = "Teen Screen Time Illo";
   if (undefined !== artboard) {
@@ -26,17 +26,16 @@ let closure_8 = importAllResult.forwardRef(function TeenScreenTimeRiveInner(defa
   if (undefined !== defaultViewModelInstance) {
     tmp = defaultViewModelInstance;
   }
-  const tmp2 = callback(defaultViewModelInstance, closure_3);
+  const tmp2 = _objectWithoutProperties(defaultViewModelInstance, closure_3);
   const merged = Object.assign(tmp2);
-  return jsx(BaseRive.BaseRive, { ref, src: metadataDefault, artboard: str, artboardProperties: closure_6, artboardViewModelInstances: closure_7, defaultViewModelInstance: tmp, stateMachine: defaultViewModelInstance.stateMachine });
+  return jsx(BaseRive.BaseRive, { ref, src: _modDef4387, artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: tmp, stateMachine: defaultViewModelInstance.stateMachine });
 });
-const forwardRefResult = importAllResult.forwardRef(function TeenScreenTimeRiveWithBoundary(fallback, ref) {
-  let obj = { fallback: fallback.fallback, children: null };
-  obj = { ref };
-  const merged = Object.assign(fallback);
-  obj[1] = <closure_8 ref={arg1} />;
-  return jsx(getDerivedStateFromError.RiveErrorBoundary, { ref });
-});
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/TeenScreenTimeRive.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/TeenScreenTimeRive.tsx");
 
-export const TeenScreenTimeRive = forwardRefResult;
+export const TeenScreenTimeRive = noop.forwardRef(function TeenScreenTimeRiveWithBoundary(fallback, ref) {
+  const obj = { fallback: fallback.fallback, children: null };
+  const merged = Object.assign(fallback);
+  obj.children = <closure_8 ref={arg1} />;
+  return jsx(RiveErrorBoundary.RiveErrorBoundary, { fallback: fallback.fallback, children: null });
+});

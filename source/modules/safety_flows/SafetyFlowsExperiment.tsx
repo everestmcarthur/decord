@@ -1,15 +1,16 @@
-// Module ID: 17510
-// Function ID: 17511
-// Name: isEligibleForSafetyFlowsExperiment
+// Module ID: 17541
+// Function ID: 17542
+// Name: SafetyFlowsExperiment
 // Dependencies: [1434, 2]
 // Exports: isEligibleForSafetyFlowsExperiment, useIsEligibleForSafetyFlowsExperiment
 
-// Module 17510 (isEligibleForSafetyFlowsExperiment)
-import getUnitIdDefault from "getUnitId" /* 1434 */;
+// Module 17541 (SafetyFlowsExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
 
-const tmp2 = getUnitIdDefault({ name: "2026-04-safety-flows", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
+const tmp2 = apex_ApexExperimentDefault({ name: "2026-04-safety-flows", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 let closure_0 = tmp2;
-const result = require("set").fileFinishedImporting("modules/safety_flows/SafetyFlowsExperiment.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_flows/SafetyFlowsExperiment.tsx");
 
 export default tmp2;
 export const isEligibleForSafetyFlowsExperiment = function isEligibleForSafetyFlowsExperiment(location) {

@@ -1,13 +1,12 @@
-// Module ID: 7659
-// Function ID: 7660
-// Name: recomputeAffinities
-// Dependencies: [4209, 7660, 504, 573, 2]
+// Module ID: 7673
+// Function ID: 7674
+// Name: UserAffinitiesV2Store
+// Dependencies: [4222, 7674, 504, 573, 2]
 
-// Module 7659 (recomputeAffinities)
+// Module 7673 (UserAffinitiesV2Store)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_0 from "markAllUserIdListsStale" /* 4209 */;
-import { USER_AFFINITY_TTL } from "result" /* 7660 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
 
 function recomputeAffinities() {
   const userAffinities = obj.userAffinities;
@@ -17,6 +16,7 @@ function recomputeAffinities() {
     return items;
   }));
 }
+const USER_AFFINITY_TTL = fn(7674).USER_AFFINITY_TTL;
 let map = new Map();
 let c3 = false;
 const frozen = Object.freeze({ userAffinities: [], lastFetched: 0 });
@@ -28,7 +28,7 @@ class UserAffinitiesV2Store extends PersistedStore {
 const prototype = UserAffinitiesV2Store.prototype;
 prototype["initialize"] = function initialize(userAffinities) {
   const self = this;
-  this.waitFor(closure_0);
+  this.waitFor(RelationshipStore);
   userAffinities = undefined;
   if (userAffinities != null) {
     userAffinities = userAffinities.userAffinities;
@@ -44,7 +44,7 @@ prototype["initialize"] = function initialize(userAffinities) {
       return items;
     }));
   }
-  const items = [closure_0];
+  const items = [RelationshipStore];
   self.syncWith(items, recomputeAffinities);
 };
 prototype["shouldFetch"] = function shouldFetch() {
@@ -63,7 +63,7 @@ prototype["getUserAffinitiesMap"] = function getUserAffinitiesMap() {
   return map;
 };
 prototype["compare"] = function compare(arg0, arg1) {
-  let value = map.get(arg1);
+  value = map.get(arg1);
   let num;
   if (value != null) {
     num = value.communicationProbability;
@@ -71,10 +71,10 @@ prototype["compare"] = function compare(arg0, arg1) {
   if (num == null) {
     num = 0;
   }
-  value = map.get(arg0);
+  value2 = map.get(arg0);
   let num2;
-  if (value != null) {
-    num2 = value.communicationProbability;
+  if (value2 != null) {
+    num2 = value2.communicationProbability;
   }
   if (num2 == null) {
     num2 = 0;
@@ -82,7 +82,7 @@ prototype["compare"] = function compare(arg0, arg1) {
   return num - num2;
 };
 prototype["compareByDmProbability"] = function compareByDmProbability(arg0, arg1) {
-  let value = map.get(arg1);
+  value = map.get(arg1);
   let num;
   if (value != null) {
     num = value.dmProbability;
@@ -90,10 +90,10 @@ prototype["compareByDmProbability"] = function compareByDmProbability(arg0, arg1
   if (num == null) {
     num = 0;
   }
-  value = map.get(arg0);
+  value2 = map.get(arg0);
   let num2;
-  if (value != null) {
-    num2 = value.dmProbability;
+  if (value2 != null) {
+    num2 = value2.dmProbability;
   }
   if (num2 == null) {
     num2 = 0;
@@ -107,7 +107,7 @@ prototype["getState"] = function getState() {
   return obj;
 };
 prototype["isHighlyAffinedVCUser"] = function isHighlyAffinedVCUser(arg0) {
-  const value = map.get(arg0);
+  value = map.get(arg0);
   let num;
   if (value != null) {
     num = value.vcProbability;
@@ -119,7 +119,7 @@ prototype["isHighlyAffinedVCUser"] = function isHighlyAffinedVCUser(arg0) {
 };
 UserAffinitiesV2Store.displayName = "UserAffinitiesV2Store";
 UserAffinitiesV2Store.persistKey = "UserAffinitiesStoreV2";
-obj = {
+const userAffinitiesV2Store = new UserAffinitiesV2Store(DispatcherDefault, {
   LOAD_USER_AFFINITIES_V2: function handleLoadUserAffinities() {
     c3 = true;
   },
@@ -143,8 +143,8 @@ obj = {
     map = new Map();
     c3 = false;
   }
-};
-const userAffinitiesV2Store = new UserAffinitiesV2Store(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/user_affinities/UserAffinitiesV2Store.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_affinities/UserAffinitiesV2Store.tsx");
 
 export default userAffinitiesV2Store;

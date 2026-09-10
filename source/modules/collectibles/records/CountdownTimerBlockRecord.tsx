@@ -1,14 +1,13 @@
-// Module ID: 7572
-// Function ID: 7573
-// Name: fromServer
-// Dependencies: [7573, 2]
+// Module ID: 7586
+// Function ID: 7587
+// Name: CountdownTimerBlockRecord
+// Dependencies: [7587, 2]
 
-// Module 7572 (fromServer)
-import set from "set" /* 2 */;
-import ShopBlockType from "ShopBlockType" /* 7573 */;
+// Module 7586 (CountdownTimerBlockRecord)
+import ShopBlockType from "ShopBlockType" /* 7587 */;
+import size from "module_2" /* 2 */;
 
-let prototype;
-prototype = function CountdownTimerBlockRecord(end_time) {
+const prototype = function CountdownTimerBlockRecord(end_time) {
   const obj = Object.create(new.target.prototype);
   obj.type = ShopBlockType.ShopBlockType.COUNTDOWN_TIMER;
   ({ title: tmp.title, body: tmp.body, banner_url: tmp.bannerUrl } = end_time);
@@ -17,16 +16,19 @@ prototype = function CountdownTimerBlockRecord(end_time) {
   return obj;
 }.prototype;
 prototype["fromServer"] = function fromServer(end_time) {
-  if (typeof prototype !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof prototype === "function") {
+    const obj = Object.create(tmp.prototype);
+    obj.type = ShopBlockType.ShopBlockType.COUNTDOWN_TIMER;
+    ({ title: tmp3.title, body: tmp3.body, banner_url: tmp3.bannerUrl } = end_time);
+    const _Date = Date;
+    const date = new Date(end_time.end_time);
+    obj.endTime = date;
+    obj.textColor = end_time.text_color;
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const obj = Object.create(prototype.prototype);
-  obj.type = ShopBlockType.ShopBlockType.COUNTDOWN_TIMER;
-  ({ title: tmp2.title, body: tmp2.body, banner_url: tmp2.bannerUrl } = end_time);
-  obj.endTime = new Date(end_time.end_time);
-  obj.textColor = end_time.text_color;
-  return obj;
 };
-const result = set.fileFinishedImporting("modules/collectibles/records/CountdownTimerBlockRecord.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/records/CountdownTimerBlockRecord.tsx");
 
 export const CountdownTimerBlockRecord = prototype;

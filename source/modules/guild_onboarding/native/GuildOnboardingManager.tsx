@@ -1,21 +1,21 @@
-// Module ID: 17375
-// Function ID: 17376
-// Name: prototype
-// Dependencies: [2021, 1979, 4381, 1074, 4187, 7118, 7095, 1384, 2]
+// Module ID: 17406
+// Function ID: 17407
+// Name: GuildOnboardingManager
+// Dependencies: [2021, 1979, 4395, 1074, 4200, 7132, 7109, 1384, 2]
 
-// Module 17375 (prototype)
-import initializeDefault from "initialize" /* 7118 */;
-import closure_3 from "trackCommunicationDisabled" /* 2021 */;
-import closure_4 from "createGuildRecordFromRust" /* 1979 */;
-import closure_5 from "handleConnectionOpen" /* 4381 */;
-import { GuildFeatures } from "ME" /* 1074 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4187 */;
+// Module 17406 (GuildOnboardingManager)
+import doGuildOnboardingDefault from "doGuildOnboarding" /* 7109 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-let require = arg1;
-let c8 = null;
-let c9 = null;
-initializeDefault;
-let prototype = function GuildOnboardingManager() {
+let require = fn;
+const GuildFeatures = fn(1074).GuildFeatures;
+const GuildMemberFlags = fn(4200).GuildMemberFlags;
+let guildId = null;
+const channelId = null;
+const prototype = function GuildOnboardingManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   applyArgumentsResult.actions = {
@@ -31,7 +31,7 @@ let prototype = function GuildOnboardingManager() {
   };
   applyArgumentsResult.handleConnectionOpen = function handleConnectionOpen() {
     if (guildId == null) {
-      guildId = closure_1_5.getGuildId();
+      guildId = SelectedGuildStore.getGuildId();
     }
     if (guildId == null) {
       guildId = null;
@@ -59,7 +59,7 @@ let prototype = function GuildOnboardingManager() {
     }
   };
   applyArgumentsResult.handleGuildDelete = function handleGuildDelete(guild) {
-    const result = applyArgumentsResult(7095).discardOnboardingPromise(guild.guild.id);
+    const result = applyArgumentsResult(7109).discardOnboardingPromise(guild.guild.id);
   };
   applyArgumentsResult._openOnboardingIfIncomplete = function _openOnboardingIfIncomplete(guildId) {
     guild = guild.getGuild(guildId);
@@ -69,12 +69,12 @@ let prototype = function GuildOnboardingManager() {
         selfMember = selfMember.getSelfMember(guildId);
         let hasFlagResult = null != selfMember;
         if (hasFlagResult) {
-          let obj = applyArgumentsResult(1384);
           let num = selfMember.flags;
           if (num == null) {
             num = 0;
           }
-          hasFlagResult = !obj.hasFlag(num, constants2.COMPLETED_ONBOARDING);
+          hasFlagResult = !applyArgumentsResult(1384).hasFlag(num, constants2.COMPLETED_ONBOARDING);
+          const obj = applyArgumentsResult(1384);
         }
         if (hasFlagResult) {
           let num2 = selfMember.flags;
@@ -85,9 +85,8 @@ let prototype = function GuildOnboardingManager() {
           const obj2 = applyArgumentsResult(1384);
         }
         if (hasFlagResult) {
-          obj = { guildId: null };
-          obj[0] = guildId;
-          callback(7095)(obj);
+          const obj3 = { guildId };
+          doGuildOnboardingDefault(obj3);
         }
       }
     }
@@ -96,7 +95,8 @@ let prototype = function GuildOnboardingManager() {
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
-let result = require("set").fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingManager.tsx");
+const prototype1 = new prototype();
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingManager.tsx");
 
-export default prototype;
+export default prototype1;

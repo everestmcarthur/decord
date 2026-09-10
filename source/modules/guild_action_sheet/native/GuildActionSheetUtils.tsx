@@ -1,29 +1,29 @@
-// Module ID: 13964
-// Function ID: 13965
-// Name: useGuildActionSheetPermissions
-// Dependencies: [4199, 1074, 504, 2]
+// Module ID: 13987
+// Function ID: 13988
+// Name: GuildActionSheetUtils
+// Dependencies: [4212, 1074, 504, 2]
 // Exports: useGuildActionSheetPermissions
 
-// Module 13964 (useGuildActionSheetPermissions)
-import closure_2 from "getUncachedChannelPermissions" /* 4199 */;
-import { Permissions } from "ME" /* 1074 */;
+// Module 13987 (GuildActionSheetUtils)
+import PermissionStore from "PermissionStore" /* 4212 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_action_sheet/native/GuildActionSheetUtils.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const Permissions = fn(1074).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_action_sheet/native/GuildActionSheetUtils.tsx");
 
 export const useGuildActionSheetPermissions = function useGuildActionSheetPermissions(guild) {
-  const _require = guild;
-  const items = [closure_2];
+  _require = guild;
+  const items = [PermissionStore];
   const items1 = [guild];
-  return _require(504).useStateFromStoresObject(items, () => {
+  return require("initialize").useStateFromStoresObject(items, () => {
     if (null == closure_0) {
       let obj = { canAccessSettings: false, canEditNickname: false, canManageChannels: false };
     } else {
-      obj = { canAccessSettings: null, canEditNickname: null, canManageChannels: null };
-      obj[0] = closure_1_2.canAccessGuildSettings(tmp);
-      obj[1] = closure_1_2.can(closure_1_3.CHANGE_NICKNAME, tmp) || closure_1_2.can(closure_1_3.MANAGE_NICKNAMES, tmp);
-      obj[2] = closure_1_2.can(closure_1_3.MANAGE_CHANNELS, tmp);
-      const tmp3 = closure_1_2.can(closure_1_3.CHANGE_NICKNAME, tmp) || closure_1_2.can(closure_1_3.MANAGE_NICKNAMES, tmp);
+      obj = { canAccessSettings: PermissionStore.canAccessGuildSettings(tmp), canEditNickname: PermissionStore.can(Permissions.CHANGE_NICKNAME, tmp) || PermissionStore.can(Permissions.MANAGE_NICKNAMES, tmp), canManageChannels: PermissionStore.can(Permissions.MANAGE_CHANNELS, tmp) };
+      const tmp3 = PermissionStore.can(Permissions.CHANGE_NICKNAME, tmp) || PermissionStore.can(Permissions.MANAGE_NICKNAMES, tmp);
     }
     return obj;
   }, items1);

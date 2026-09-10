@@ -1,38 +1,42 @@
-// Module ID: 9304
-// Function ID: 9305
-// Name: useTopCommands
-// Dependencies: [19, 9297, 1084, 1940, 504, 2]
+// Module ID: 9331
+// Function ID: 9332
+// Name: ApplicationCommandFrecencyHooks
+// Dependencies: [19, 9324, 1084, 1940, 504, 2]
 // Exports: useTopCommands, useTopRealCommands
 
-// Module 9304 (useTopCommands)
-import closure_2 from "noop" /* 19 */;
-import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange" /* 9297 */;
-import closure_5 from "handleUserSettingsProtoStoreChange" /* 9297 */;
-import { UserSettingsTypes } from "MAX_FAVORITES" /* 1084 */;
+// Module 9331 (ApplicationCommandFrecencyHooks)
+import noop from "module_19" /* 19 */;
+import ApplicationCommandFrecencyStore_mod from "ApplicationCommandFrecencyStore" /* 9324 */;
 
-const require = arg1;
-({ getFilteredTopCommands: c3, getTopRealCommands: c4 } = handleUserSettingsProtoStoreChange);
-const result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandFrecencyHooks.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+let ApplicationCommandFrecencyStore = fn(9324);
+({ getFilteredTopCommands: c3, getTopRealCommands: closure_4 } = ApplicationCommandFrecencyStore);
+let ApplicationCommandFrecencyStore = ApplicationCommandFrecencyStore_mod;
+const UserSettingsTypes = fn(1084).UserSettingsTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandFrecencyHooks.tsx");
 
 export const useTopCommands = function useTopCommands(commandContext) {
-  const _require = commandContext;
-  const effect = React.useEffect(() => {
+  _require = commandContext;
+  const effect = noop.useEffect(() => {
     const FrecencyUserSettingsActionCreators = commandContext(stateFromStores[3]).FrecencyUserSettingsActionCreators;
     const ifUncached = FrecencyUserSettingsActionCreators.loadIfUncached(constants.FRECENCY_AND_FAVORITES_SETTINGS);
   }, []);
-  const items = [closure_5];
-  stateFromStores = _require(stateFromStores[4]).useStateFromStores(items, () => topCommandsWithoutLoadingLatest.getTopCommandsWithoutLoadingLatest());
+  const items = [ApplicationCommandFrecencyStore];
+  stateFromStores = require("initialize").useStateFromStores(items, () => topCommandsWithoutLoadingLatest.getTopCommandsWithoutLoadingLatest());
   const items1 = [stateFromStores, commandContext];
-  return React.useMemo(() => closure_1_3(stateFromStores, closure_0), items1);
+  return noop.useMemo(() => React3(stateFromStores, closure_0), items1);
 };
 export const useTopRealCommands = function useTopRealCommands(arg0) {
-  const _require = arg0;
-  const effect = React.useEffect(() => {
-    const FrecencyUserSettingsActionCreators = callback(stateFromStores[3]).FrecencyUserSettingsActionCreators;
+  _require = arg0;
+  const effect = noop.useEffect(() => {
+    const FrecencyUserSettingsActionCreators = closure_0(stateFromStores[3]).FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }, []);
-  const items = [closure_5];
-  stateFromStores = _require(stateFromStores[4]).useStateFromStores(items, () => topCommandsWithoutLoadingLatest.getTopCommandsWithoutLoadingLatest());
+  const items = [ApplicationCommandFrecencyStore];
+  stateFromStores = require("initialize").useStateFromStores(items, () => topCommandsWithoutLoadingLatest.getTopCommandsWithoutLoadingLatest());
   const items1 = [stateFromStores, arg0];
-  return React.useMemo(() => closure_1_4(closure_1_3(stateFromStores, closure_0)), items1);
+  return noop.useMemo(() => React4(React3(stateFromStores, closure_0)), items1);
 };

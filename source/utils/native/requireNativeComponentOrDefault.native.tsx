@@ -1,37 +1,36 @@
-// Module ID: 4968
-// Function ID: 4969
-// Name: map
+// Module ID: 4982
+// Function ID: 4983
+// Name: requireNativeComponentOrDefault
 // Dependencies: [17, 3, 2]
 // Exports: default
 
-// Module 4968 (map)
-import set from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 4982 (requireNativeComponentOrDefault)
+import LoggerDefault from "Logger" /* 3 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
 
-({ requireNativeComponent: c0, UIManager: closure_1, View: obj1 } = get_ActivityIndicator);
-let closure_3 = new timestampDefault("RequireNativeComponentOrDefault");
+({ requireNativeComponent: closure_0, UIManager: closure_1, View: c2 } = get_ActivityIndicator);
+const logger = new LoggerDefault("RequireNativeComponentOrDefault");
 const map = new Map();
-const tmp3 = new timestampDefault("RequireNativeComponentOrDefault");
-let result = set.fileFinishedImporting("utils/native/requireNativeComponentOrDefault.native.tsx");
+let result = size.fileFinishedImporting("utils/native/requireNativeComponentOrDefault.native.tsx");
 
 export default function requireNativeComponentOrDefault(warnWhenMissing) {
   ({ componentName, componentFoundInstance, componentMissingFallbackInstance } = warnWhenMissing);
   if (componentMissingFallbackInstance === undefined) {
-    componentMissingFallbackInstance = closure_2;
+    componentMissingFallbackInstance = React2;
   }
   let flag = warnWhenMissing.warnWhenMissing;
   if (flag === undefined) {
     flag = true;
   }
-  if (closure_1.hasViewManagerConfig(componentName)) {
+  if (framebus.hasViewManagerConfig(componentName)) {
     if (!map.has(componentName)) {
       if (componentFoundInstance == null) {
-        componentFoundInstance = callback(componentName);
+        componentFoundInstance = React(componentName);
       }
       const result = obj.set(componentName, componentFoundInstance);
     }
-    let value = obj.get(componentName);
+    value = obj.get(componentName);
   } else {
     value = componentMissingFallbackInstance;
     if (flag) {

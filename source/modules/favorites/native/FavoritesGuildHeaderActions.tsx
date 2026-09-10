@@ -1,27 +1,27 @@
-// Module ID: 16153
-// Function ID: 16154
-// Name: FavoritesGuildHeaderActionButton
-// Dependencies: [19, 21, 16154, 8097, 5681, 12203, 16155, 2]
+// Module ID: 16183
+// Function ID: 16184
+// Name: FavoritesGuildHeaderActions
+// Dependencies: [19, 21, 16184, 8113, 5695, 12229, 16185, 2]
 // Exports: FavoritesGuildHeaderActionButton
 
-// Module 16153 (FavoritesGuildHeaderActionButton)
-import noopAll from "noop" /* 19 */;
-import IconButton from "IconButton" /* 8097 */;
-import useFavoritesGuildHeaderActionDefault from "useFavoritesGuildHeaderAction" /* 16154 */;
-import handleCreateCategory from "handleCreateCategory" /* 16155 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16183 (FavoritesGuildHeaderActions)
+import IconButton from "IconButton" /* 8113 */;
+import useFavoritesGuildHeaderActionDefault from "useFavoritesGuildHeaderAction" /* 16184 */;
+import FavoritesGuildAddActionSheet from "FavoritesGuildAddActionSheet" /* 16185 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/favorites/native/FavoritesGuildHeaderActions.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuildHeaderActions.tsx");
 
 export const FavoritesGuildHeaderActionButton = function FavoritesGuildHeaderActionButton() {
   ({ isPreview, exitPreview, label } = useFavoritesGuildHeaderActionDefault());
-  const obj = { variant: "secondary", size: "sm", icon: importDefault(isPreview ? 5681 : 12203), onPress: null, accessibilityLabel: null, maxFontSizeMultiplier: 1 };
+  const obj = { variant: "secondary", size: "sm", icon: importDefault(isPreview ? 5695 : 12229), onPress: null, accessibilityLabel: null, maxFontSizeMultiplier: 1 };
   if (!isPreview) {
-    exitPreview = handleCreateCategory.openFavoritesGuildAddActionSheet;
+    exitPreview = FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet;
   }
-  obj[3] = exitPreview;
-  obj[4] = label;
-  return jsx(IconButton.IconButton, { variant: "secondary", size: "sm", icon: importDefault(isPreview ? 5681 : 12203), onPress: null, accessibilityLabel: null, maxFontSizeMultiplier: 1 });
+  obj.onPress = exitPreview;
+  obj.accessibilityLabel = label;
+  return jsx(IconButton.IconButton, { variant: "secondary", size: "sm", icon: importDefault(isPreview ? 5695 : 12229), onPress: null, accessibilityLabel: null, maxFontSizeMultiplier: 1 });
 };

@@ -1,94 +1,87 @@
-// Module ID: 11021
-// Function ID: 11022
-// Name: PremiumGiftStyles
-// Dependencies: [19, 17, 1373, 11022, 21, 11023, 11024, 11025, 11026, 11027, 11028, 11029, 11030, 11031, 4560, 576, 1114, 2460, 5587, 2]
+// Module ID: 11048
+// Function ID: 11049
+// Name: PremiumGiftBackgroundSelectTile
+// Dependencies: [19, 17, 1373, 11049, 21, 11050, 11051, 11052, 11053, 11054, 11055, 11056, 11057, 11058, 4574, 576, 1114, 2460, 5601, 2]
 // Exports: default
 
-// Module 11021 (PremiumGiftStyles)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 2460 */;
-import preloadDefault from "preload" /* 5587 */;
-import registerAssetDefault from "registerAsset" /* 11023 */;
-import registerAssetDefault2 from "registerAsset" /* 11024 */;
-import registerAssetDefault3 from "registerAsset" /* 11025 */;
-import registerAssetDefault4 from "registerAsset" /* 11026 */;
-import metadataDefault from "metadata" /* 11027 */;
-import metadataDefault2 from "metadata" /* 11028 */;
-import metadataDefault3 from "metadata" /* 11029 */;
-import metadataDefault4 from "metadata" /* 11030 */;
-import metadataDefault5 from "metadata" /* 11031 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { PremiumGiftStyles } from "GuildFeatures" /* 1373 */;
-import { GIFT_STYLE_DESCRIPTIONS } from "GIFT_STYLE_DESCRIPTIONS" /* 11022 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11048 (PremiumGiftBackgroundSelectTile)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import _modDef2460 from "module_2460" /* 2460 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef11050 from "module_11050" /* 11050 */;
+import _modDef11051 from "module_11051" /* 11051 */;
+import _modDef11052 from "module_11052" /* 11052 */;
+import _modDef11053 from "module_11053" /* 11053 */;
+import _modDef11054 from "module_11054" /* 11054 */;
+import _modDef11055 from "module_11055" /* 11055 */;
+import _modDef11056 from "module_11056" /* 11056 */;
+import _modDef11057 from "module_11057" /* 11057 */;
+import _modDef11058 from "module_11058" /* 11058 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ View: c3, Pressable: c4 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let obj = { [STANDARD_BOX]: registerAssetDefault, [CAKE]: registerAssetDefault2, [CHEST]: registerAssetDefault3, [COFFEE]: registerAssetDefault4 };
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, Pressable: closure_4 } = get_ActivityIndicator);
+const PremiumGiftStyles = fn(1373).PremiumGiftStyles;
+const GIFT_STYLE_DESCRIPTIONS = fn(11049).GIFT_STYLE_DESCRIPTIONS;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const GIFT_STYLE_IMG = { [STANDARD_BOX]: _modDef11050, [CAKE]: _modDef11051, [CHEST]: _modDef11052, [COFFEE]: _modDef11053 };
 ({ STANDARD_BOX, CAKE, CHEST, COFFEE } = PremiumGiftStyles);
-obj = { uri: metadataDefault };
-obj[PremiumGiftStyles.NITROWEEN_STANDARD] = obj;
-obj[PremiumGiftStyles.SNOWGLOBE] = null;
-obj[PremiumGiftStyles.BOX] = null;
-obj[PremiumGiftStyles.CUP] = null;
-obj = { uri: metadataDefault2 };
-obj[PremiumGiftStyles.SEASONAL_CAKE] = obj;
-obj[PremiumGiftStyles.SEASONAL_CHEST] = { uri: metadataDefault3 };
-let obj1 = { uri: metadataDefault3 };
-obj[PremiumGiftStyles.SEASONAL_COFFEE] = { uri: metadataDefault4 };
-const obj2 = { uri: metadataDefault4 };
-obj[PremiumGiftStyles.SEASONAL_STANDARD_BOX] = { uri: metadataDefault5 };
-let closure_9 = createCacheKey.createStyles((arg0) => {
-  obj = { width: 78, height: 44, justifyContent: "center", marginEnd: ThemesDefault.space.PX_8, marginStart: null };
+GIFT_STYLE_IMG[PremiumGiftStyles.NITROWEEN_STANDARD] = { uri: _modDef11054 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SNOWGLOBE] = null;
+GIFT_STYLE_IMG[PremiumGiftStyles.BOX] = null;
+GIFT_STYLE_IMG[PremiumGiftStyles.CUP] = null;
+let obj2 = { uri: _modDef11054 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CAKE] = { uri: _modDef11055 };
+let obj3 = { uri: _modDef11055 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CHEST] = { uri: _modDef11056 };
+let obj4 = { uri: _modDef11056 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_COFFEE] = { uri: _modDef11057 };
+const obj5 = { uri: _modDef11057 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_STANDARD_BOX] = { uri: _modDef11058 };
+const createStyles = fn(4574);
+let closure_9 = createStyles.createStyles((arg0) => {
+  const size = { width: 78, height: 44, justifyContent: "center", marginEnd: nativeDefault.space.PX_8, marginStart: null };
   let num = 0;
   if (0 === arg0) {
     num = 20;
   }
-  obj = { container: obj, selected: null, image: null };
-  obj[4] = num;
-  obj = { position: "absolute", borderColor: tmp(576).colors.TEXT_BRAND, borderRadius: tmp(576).radii.sm, borderWidth: 2, flex: 1, width: 78, height: 44 };
-  obj[1] = obj;
-  obj[2] = { width: 72, height: 38, alignSelf: "center" };
+  const obj = { container: size, selected: null, image: null };
+  size.marginStart = num;
+  const size1 = { position: "absolute", borderColor: tmp(576).colors.TEXT_BRAND, borderRadius: tmp(576).radii.sm, borderWidth: 2, flex: 1, width: 78, height: 44 };
+  obj.selected = size1;
+  obj.image = { width: 72, height: 38, alignSelf: "center" };
   return obj;
 });
-const obj3 = { uri: metadataDefault5 };
-const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftBackgroundSelectTile.tsx");
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftBackgroundSelectTile.tsx");
 
 export default function GiftBackgroundSelectTile(index) {
   ({ selected, giftStyle } = index);
-  const tmp = callback2(index.index);
+  const tmp = closure_9(index.index);
   let tmp4Result = null;
   if (null != obj[giftStyle]) {
     obj = { "aria-label": null, "aria-selected": null, style: null, onPress: null, children: null };
-    const intl = getSystemLocale.intl;
-    obj = { giftStyle: null };
-    const intl2 = getSystemLocale.intl;
-    obj[0] = intl2.string(GIFT_STYLE_DESCRIPTIONS[giftStyle]);
-    obj[0] = intl.formatToPlainString(messagesProxyDefault["+utqaz"], obj);
-    obj[1] = selected;
-    obj[2] = tmp.container;
-    obj[3] = index.onPress;
+    const intl = util.intl;
+    const obj2 = { giftStyle: null };
+    const intl2 = util.intl;
+    obj2.giftStyle = intl2.string(GIFT_STYLE_DESCRIPTIONS[giftStyle]);
+    obj["aria-label"] = intl.formatToPlainString(_modDef2460["+utqaz"], obj2);
+    obj["aria-selected"] = selected;
+    obj.style = tmp.container;
+    obj.onPress = index.onPress;
     if (selected) {
-      obj = { style: null };
-      obj[0] = tmp.selected;
-      selected = callback(closure_3, obj);
+      const obj3 = { style: tmp.selected };
+      selected = timestampProducer(React3, obj3);
     }
     const items = [selected, ];
-    obj1 = { resizeMode: "contain", style: null, source: null };
-    obj1[1] = tmp.image;
-    obj1[2] = tmp2;
-    items[1] = callback(preloadDefault, obj1);
-    obj[4] = items;
-    tmp4Result = closure_7(closure_4, obj);
-    const tmp4 = closure_7;
-    const tmp5 = closure_4;
-    const tmp8 = importDefault;
+    const obj4 = { resizeMode: "contain", style: tmp.image, source: tmp2 };
+    items[1] = timestampProducer(FastImageDefault, obj4);
+    obj.children = items;
+    tmp4Result = React5(React4, obj);
   }
   return tmp4Result;
 };
-export const GIFT_STYLE_IMG = obj;
+export { GIFT_STYLE_IMG };

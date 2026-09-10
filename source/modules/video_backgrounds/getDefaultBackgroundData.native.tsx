@@ -1,40 +1,40 @@
-// Module ID: 9106
-// Function ID: 9107
-// Name: DefaultVideoBackground
-// Dependencies: [6987, 9107, 1114, 9108, 9109, 9110, 2]
+// Module ID: 9133
+// Function ID: 9134
+// Name: getDefaultBackgroundData
+// Dependencies: [7001, 9134, 1114, 9135, 9136, 9137, 2]
 // Exports: default
 
-// Module 9106 (DefaultVideoBackground)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import VideoFilterType from "VideoFilterType" /* 6987 */;
-import metadataDefault from "metadata" /* 9107 */;
-import metadataDefault2 from "metadata" /* 9108 */;
-import metadataDefault3 from "metadata" /* 9109 */;
-import metadataDefault4 from "metadata" /* 9110 */;
+// Module 9133 (getDefaultBackgroundData)
+import util from "util" /* 1114 */;
+import VideoBackgroundConstants from "VideoBackgroundConstants" /* 7001 */;
+import _modDef9134 from "module_9134" /* 9134 */;
+import _modDef9135 from "module_9135" /* 9135 */;
+import _modDef9136 from "module_9136" /* 9136 */;
+import _modDef9137 from "module_9137" /* 9137 */;
+import size from "module_2" /* 2 */;
 
-const DefaultVideoBackground = VideoFilterType.DefaultVideoBackground;
+const DefaultVideoBackground = VideoBackgroundConstants.DefaultVideoBackground;
 let closure_4 = { id: DefaultVideoBackground.OPTION_1, source: "", name: "" };
-const result = set.fileFinishedImporting("modules/video_backgrounds/getDefaultBackgroundData.native.tsx");
+const result = size.fileFinishedImporting("modules/video_backgrounds/getDefaultBackgroundData.native.tsx");
 
 export default function getDefaultBackgroundData() {
-  let obj = {};
-  obj = { id: DefaultVideoBackground.OPTION_1, source: metadataDefault, name: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.SHUTBj);
-  obj[DefaultVideoBackground.OPTION_1] = obj;
-  obj = { id: DefaultVideoBackground.OPTION_2, source: metadataDefault2, name: null };
-  const intl2 = getSystemLocale.intl;
-  obj[2] = intl2.string(getSystemLocale.t.UxTcIq);
-  obj[DefaultVideoBackground.OPTION_2] = obj;
-  obj1 = { id: DefaultVideoBackground.OPTION_3, source: metadataDefault3, name: null };
-  const intl3 = getSystemLocale.intl;
-  obj1[2] = intl3.string(getSystemLocale.t.HFBsc8);
-  obj[DefaultVideoBackground.OPTION_3] = obj1;
-  const obj2 = { id: DefaultVideoBackground.OPTION_4, source: metadataDefault4, name: null };
-  const intl4 = getSystemLocale.intl;
-  obj2[2] = intl4.string(getSystemLocale.t["/Dl3+Z"]);
-  obj[DefaultVideoBackground.OPTION_4] = obj2;
+  const obj = {};
+  const obj2 = { id: DefaultVideoBackground.OPTION_1, source: _modDef9134, name: null };
+  const intl = util.intl;
+  obj2.name = intl.string(util.t.SHUTBj);
+  obj[DefaultVideoBackground.OPTION_1] = obj2;
+  const obj3 = { id: DefaultVideoBackground.OPTION_2, source: _modDef9135, name: null };
+  const intl2 = util.intl;
+  obj3.name = intl2.string(util.t.UxTcIq);
+  obj[DefaultVideoBackground.OPTION_2] = obj3;
+  const obj4 = { id: DefaultVideoBackground.OPTION_3, source: _modDef9136, name: null };
+  const intl3 = util.intl;
+  obj4.name = intl3.string(util.t.HFBsc8);
+  obj[DefaultVideoBackground.OPTION_3] = obj4;
+  const obj5 = { id: DefaultVideoBackground.OPTION_4, source: _modDef9137, name: null };
+  const intl4 = util.intl;
+  obj5.name = intl4.string(util.t["/Dl3+Z"]);
+  obj[DefaultVideoBackground.OPTION_4] = obj5;
   obj[DefaultVideoBackground.OPTION_7] = closure_4;
   obj[DefaultVideoBackground.OPTION_8] = closure_4;
   obj[DefaultVideoBackground.OPTION_9] = closure_4;

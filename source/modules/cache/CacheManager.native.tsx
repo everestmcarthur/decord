@@ -1,23 +1,22 @@
-// Module ID: 17327
-// Function ID: 17328
-// Name: handleConnectionOpen
-// Dependencies: [5277, 7476, 3, 1090, 7118, 7654, 15573, 1115, 1093, 2]
+// Module ID: 17358
+// Function ID: 17359
+// Name: CacheManager
+// Dependencies: [5291, 7490, 3, 1090, 7132, 7668, 15603, 1115, 1093, 2]
 
-// Module 17327 (handleConnectionOpen)
-import timestampDefault from "timestamp" /* 3 */;
-import setDefault from "set" /* 1090 */;
-import keys from "keys" /* 1093 */;
-import set from "set" /* 1115 */;
-import initializeDefault from "initialize" /* 7118 */;
-import okAsyncDefault from "okAsync" /* 7654 */;
-import _writeCaches from "_writeCaches" /* 15573 */;
-import closure_3 from "_handleConnectionOpen" /* 5277 */;
-import closure_4 from "handleClearCaches" /* 7476 */;
+// Module 17358 (CacheManager)
+import LoggerDefault from "Logger" /* 3 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import ConstantsIOS from "ConstantsIOS" /* 1093 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import KvCacheVersionDefault from "KvCacheVersion" /* 7668 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5291 */;
+import CacheStore from "CacheStore" /* 7490 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-require = arg1;
-let closure_5 = new timestampDefault("CacheStore");
-let closure_6 = 15 * setDefault.Millis.MINUTE;
-initializeDefault;
+const CacheActionCreators = tmp(15603);
+require = fn;
+let closure_5 = new LoggerDefault("CacheStore");
+let closure_6 = 15 * DurationsDefault.Millis.MINUTE;
 class CacheManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -37,11 +36,10 @@ class CacheManager extends tmp3 {
 }
 const prototype = CacheManager.prototype;
 prototype["handleConnectionOpen"] = function handleConnectionOpen() {
-  const result = okAsyncDefault.doesDatabaseVersionMatchJsConstants();
-  result.then((arg0) => {
-    if (!arg0) {
-      callback(table[6]).writeCaches();
-      const obj = callback(table[6]);
+  const result = KvCacheVersionDefault.doesDatabaseVersionMatchJsConstants();
+  result.then((result) => {
+    if (!result) {
+      CacheActionCreators.writeCaches();
     }
   });
 };
@@ -49,26 +47,23 @@ prototype["handleConnectionClose"] = function handleConnectionClose() {
   return false;
 };
 prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
-  const obj = set;
-  const tmp = require;
-  const AppStates = keys.AppStates;
-  let isConnectedResult = (set.isAndroid() ? AppStates.BACKGROUND : AppStates.INACTIVE) === state.state;
+  const AppStates = ConstantsIOS.AppStates;
+  let isConnectedResult = (PlatformUtils.isAndroid() ? AppStates.BACKGROUND : AppStates.INACTIVE) === state.state;
   if (isConnectedResult) {
-    isConnectedResult = connected.isConnected();
+    isConnectedResult = GatewayConnectionStore.isConnected();
   }
   if (isConnectedResult) {
-    _writeCaches.writeCaches();
-    const tmpResult = _writeCaches;
+    CacheActionCreators.writeCaches();
+    const tmpResult = CacheActionCreators;
   }
   return false;
 };
 prototype["handleWindowFocus"] = function handleWindowFocus(focused) {
   if (!focused.focused) {
     const _Date = Date;
-    if (Date.now() - lastWriteTime.lastWriteTime > closure_6) {
+    if (Date.now() - CacheStore.lastWriteTime > closure_6) {
       closure_5.verbose("Writing cache from window unfocus");
-      _writeCaches.writeCaches();
-      const obj = _writeCaches;
+      CacheActionCreators.writeCaches();
     } else {
       closure_5.verbose("Not writing cache from window unfocus");
     }
@@ -76,7 +71,7 @@ prototype["handleWindowFocus"] = function handleWindowFocus(focused) {
   return false;
 };
 const cacheManager = new CacheManager();
-const tmp2 = new timestampDefault("CacheStore");
-let result = require("set").fileFinishedImporting("modules/cache/CacheManager.native.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/cache/CacheManager.native.tsx");
 
 export default cacheManager;

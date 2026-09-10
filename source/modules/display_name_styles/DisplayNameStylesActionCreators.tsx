@@ -1,28 +1,24 @@
-// Module ID: 15344
-// Function ID: 15345
-// Name: markDisplayNameStyleFontSeen
+// Module ID: 15373
+// Function ID: 15374
+// Name: DisplayNameStylesActionCreators
 // Dependencies: [573, 2]
 // Exports: markDisplayNameStyleEffectSeen, markDisplayNameStyleFontSeen, markDisplayNameStyleNewEffectsBadgeDismissed, markDisplayNameStyleNewFontsBadgeDismissed
 
-// Module 15344 (markDisplayNameStyleFontSeen)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 15373 (DisplayNameStylesActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesActionCreators.tsx");
 
 export const markDisplayNameStyleFontSeen = function markDisplayNameStyleFontSeen(fontId) {
-  let obj = dispatcherDefault;
-  obj = { type: "DISPLAY_NAME_STYLES_MARK_FONT_SEEN", fontId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "DISPLAY_NAME_STYLES_MARK_FONT_SEEN", fontId });
 };
 export const markDisplayNameStyleEffectSeen = function markDisplayNameStyleEffectSeen(effectId) {
-  let obj = dispatcherDefault;
-  obj = { type: "DISPLAY_NAME_STYLES_MARK_EFFECT_SEEN", effectId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "DISPLAY_NAME_STYLES_MARK_EFFECT_SEEN", effectId });
 };
 export const markDisplayNameStyleNewFontsBadgeDismissed = function markDisplayNameStyleNewFontsBadgeDismissed() {
-  dispatcherDefault.dispatch({ type: "DISPLAY_NAME_STYLES_MARK_NEW_FONTS_BADGE_DISMISSED" });
+  DispatcherDefault.dispatch({ type: "DISPLAY_NAME_STYLES_MARK_NEW_FONTS_BADGE_DISMISSED" });
 };
 export const markDisplayNameStyleNewEffectsBadgeDismissed = function markDisplayNameStyleNewEffectsBadgeDismissed() {
-  dispatcherDefault.dispatch({ type: "DISPLAY_NAME_STYLES_MARK_NEW_EFFECTS_BADGE_DISMISSED" });
+  DispatcherDefault.dispatch({ type: "DISPLAY_NAME_STYLES_MARK_NEW_EFFECTS_BADGE_DISMISSED" });
 };

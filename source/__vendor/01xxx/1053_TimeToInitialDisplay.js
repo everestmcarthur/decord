@@ -5,18 +5,20 @@
 // Exports: createTimeToFullDisplay, createTimeToInitialDisplay, updateInitialDisplaySpan
 
 // Module 1053 (TimeToInitialDisplay)
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 682 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 1054 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import { useState } from "noop" /* 19 */;
+import _mod682 from "module_682" /* 682 */;
+import _mod1021 from "module_1021" /* 1021 */;
+import _mod1054 from "module_1054" /* 1054 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+const require = globalThis.__r;
+
+require = fn;
 class TimeToInitialDisplay {
   constructor(arg0) {
     tmp = closure_0;
     tmp2 = closure_1;
-    obj = require("registerSpanErrorInstrumentation");
+    obj = closure_0(closure_1[2]);
     activeSpan = obj.getActiveSpan();
     if (activeSpan) {
       tmp4 = closure_6;
@@ -25,65 +27,59 @@ class TimeToInitialDisplay {
     }
     span_id = activeSpan;
     if (activeSpan) {
-      tmpResult = require("registerSpanErrorInstrumentation");
+      tmpResult = tmp(tmp2[2]);
       span_id = tmpResult.spanToJSON(activeSpan).span_id;
     }
-    obj = { initialDisplay: global.record, parentSpanId: span_id };
-    return closure_3.createElement(TimeToDisplay, obj, global.children);
+    obj1 = { initialDisplay: global.record, parentSpanId: span_id };
+    return closure_3.createElement(TimeToDisplay, obj1, global.children);
   }
 }
 class TimeToFullDisplay {
   constructor(arg0) {
     tmp = closure_0;
     tmp2 = closure_1;
-    obj = require("registerSpanErrorInstrumentation");
+    obj = closure_0(closure_1[2]);
     activeSpan = obj.getActiveSpan();
     span_id = activeSpan;
     if (activeSpan) {
-      tmpResult = require("registerSpanErrorInstrumentation");
+      tmpResult = tmp(tmp2[2]);
       span_id = tmpResult.spanToJSON(activeSpan).span_id;
     }
-    obj = { fullDisplay: global.record, parentSpanId: span_id };
-    return closure_3.createElement(TimeToDisplay, obj, global.children);
+    obj1 = { fullDisplay: global.record, parentSpanId: span_id };
+    return closure_3.createElement(TimeToDisplay, obj1, global.children);
   }
 }
 function TimeToDisplay(initialDisplay) {
-  let obj = _isNativeReflectConstruct;
-  obj = { initialDisplay: initialDisplay.initialDisplay, fullDisplay: initialDisplay.fullDisplay, parentSpanId: initialDisplay.parentSpanId };
-  return <>{React.createElement(obj.getRNSentryOnDrawReporter(), { initialDisplay: arg0.initialDisplay, fullDisplay: arg0.fullDisplay, parentSpanId: arg0.parentSpanId })}{arg0.children}</>;
+  return <>{noop.createElement(_mod1054.getRNSentryOnDrawReporter(), { initialDisplay: arg0.initialDisplay, fullDisplay: arg0.fullDisplay, parentSpanId: arg0.parentSpanId })}{arg0.children}</>;
 }
 function startTimeToInitialDisplaySpan(isAutoInstrumented) {
-  let obj = spanId(682);
-  const activeSpan = obj.getActiveSpan();
-  const obj2 = spanId(682);
+  const activeSpan = _mod682.getActiveSpan();
+  const obj2 = _mod682;
   if (activeSpan) {
     const spanDescendants = obj2.getSpanDescendants(activeSpan);
-    const found = spanDescendants.find((arg0) => "ui.load.initial_display" === spanId(table[2]).spanToJSON(arg0).op);
-    let tmpResult = tmp(682);
+    const found = spanDescendants.find((item) => "ui.load.initial_display" === startInactiveSpanResult(dependencyMap[2]).spanToJSON(item).op);
+    const tmpResult = tmp(682);
     if (found) {
       const debug2 = tmpResult.debug;
       debug2.log("[TimeToDisplay] Found existing ui.load.initial_display span.");
       return found;
     } else {
       const _Object = Object;
-      obj = { op: "ui.load.initial_display", name: "Time To Initial Display", startTime: null };
-      tmpResult = tmp(682);
-      obj[2] = tmpResult.spanToJSON(activeSpan).start_timestamp;
-      const startInactiveSpanResult = tmpResult.startInactiveSpan(Object.assign(obj, isAutoInstrumented));
-      spanId = startInactiveSpanResult;
+      const obj3 = { op: "ui.load.initial_display", name: "Time To Initial Display", startTime: tmp(682).spanToJSON(activeSpan).start_timestamp };
+      const startInactiveSpanResult = tmpResult.startInactiveSpan(Object.assign(obj3, isAutoInstrumented));
+      const require = startInactiveSpanResult;
       if (startInactiveSpanResult) {
-        spanId = startInactiveSpanResult.spanContext().spanId;
-        fn(undefined, undefined, undefined, function*() {
+        const spanId = startInactiveSpanResult.spanContext().spanId;
+        fn(undefined, undefined, undefined, function*(arg0, value) {
           if (c5 === 2) {
             c5 = 3;
-            HermesBuiltin.throwTypeError();
+            throw new TypeError("Generator functions may not be called on executing generators");
           } else if (tmp6 === 3) {
             if (arg0 === 1) {
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+              const obj2 = { value, done: true };
+              return obj2;
             } else {
               return { value: "HermesInternal", done: null };
             }
@@ -93,79 +89,73 @@ function startTimeToInitialDisplaySpan(isAutoInstrumented) {
               if (0 === c4) {
                 if (arg0 === 1) {
                   c5 = 3;
-                  throw arg1;
+                  throw value;
                 } else if (arg0 === 2) {
                   c5 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
+                  const obj3 = { value, done: true };
+                  return obj3;
                 } else {
-                  let timeout = tmp3;
                   closure_0 = tmp7;
-                  closure_0 = undefined;
-                  timeout = undefined;
-                  closure_2 = undefined;
-                  if (closure_1_0(closure_1_1[6]).NATIVE.enableNative) {
+                  closure_128_0 = undefined;
+                  let timeout;
+                  closure_128_2 = undefined;
+                  if (closure_0(tmp3[6]).NATIVE.enableNative) {
                     c3 = 1;
                     c4 = 2;
                     c5 = 1;
-                    obj1 = { value: null, done: false };
-                    obj1[0] = closure_1_15();
-                    return obj1;
+                    const obj4 = { value: fetchNativeFramesWithTimeout(), done: false };
+                    return obj4;
                   }
                 }
               } else {
                 if (1 === tmp7) {
                   c3 = 0;
-                  c3 = closure_2;
-                  const debug3 = closure_1_0(closure_1_1[2]).debug;
+                  closure_128_3 = closure_2;
+                  const debug3 = closure_0(tmp3[2]).debug;
                   const _HermesInternal3 = HermesInternal;
-                  debug3.log("[TimeToDisplay] Failed to capture start frames for span " + closure_1_0 + ".", c3);
+                  debug3.log("[TimeToDisplay] Failed to capture start frames for span " + closure_129_0 + ".", closure_128_3);
                 } else if (arg0 === 1) {
                   c5 = 3;
-                  throw arg1;
+                  throw value;
                 } else if (arg0 !== 2) {
-                  closure_0 = arg1;
+                  closure_128_0 = value;
                   const _setTimeout = setTimeout;
                   timeout = setTimeout(() => {
-                    if (closure_1_8.get(callback)) {
-                      closure_1_8.delete(tmp);
-                      const debug = callback(table[2]).debug;
+                    if (map.get(closure_1_0)) {
+                      map.delete(tmp);
+                      const debug = closure_0(closure_1[2]).debug;
                       const _HermesInternal = HermesInternal;
                       debug.log("[TimeToDisplay] Cleaned up stale frame data for span " + tmp + " after timeout.");
                     }
                   }, 60000);
-                  if (!closure_1_8.has(closure_0)) {
-                    obj = { startFrames: null, endFrames: null, cleanupTimeout: null };
-                    obj[2] = timeout;
-                    const result = closure_1_8.set(closure_0, obj);
+                  if (!map.has(closure_129_0)) {
+                    const obj = { startFrames: null, endFrames: null, cleanupTimeout: timeout };
+                    const result = map.set(closure_129_0, obj);
                   }
-                  closure_2 = closure_1_8.get(closure_1_0);
-                  if (closure_2) {
-                    closure_2.startFrames = closure_0;
-                    closure_2.cleanupTimeout = timeout;
-                    const debug2 = closure_1_0(closure_1_1[2]).debug;
+                  closure_128_2 = map.get(closure_129_0);
+                  if (closure_128_2) {
+                    closure_128_2.startFrames = closure_128_0;
+                    closure_128_2.cleanupTimeout = timeout;
+                    const debug2 = closure_0(tmp3[2]).debug;
                     const _HermesInternal2 = HermesInternal;
-                    debug2.log("[TimeToDisplay] Captured start frames for span " + closure_1_0 + ".", closure_0);
+                    debug2.log("[TimeToDisplay] Captured start frames for span " + closure_129_0 + ".", closure_128_0);
                     c3 = 0;
                   } else {
                     const _clearTimeout = clearTimeout;
                     clearTimeout(timeout);
-                    let debug = closure_1_0(closure_1_1[2]).debug;
+                    let debug = closure_0(tmp3[2]).debug;
                     let _HermesInternal = HermesInternal;
-                    debug.log("[TimeToDisplay] Span " + closure_1_0 + " already ended, discarding start frames.");
+                    debug.log("[TimeToDisplay] Span " + closure_129_0 + " already ended, discarding start frames.");
                     c3 = 0;
                     c5 = 3;
-                    const obj2 = { value: null, done: true };
-                    obj2[0] = undefined;
-                    return obj2;
+                    const obj5 = { value: undefined, done: true };
+                    return obj5;
                   }
                 }
                 c3 = 0;
                 c5 = 3;
-                const obj3 = { value: null, done: true };
-                obj3[0] = arg1;
-                return obj3;
+                const obj6 = { value, done: true };
+                return obj6;
               }
               c5 = 3;
             } catch (tmp48) {
@@ -178,9 +168,9 @@ function startTimeToInitialDisplaySpan(isAutoInstrumented) {
               }
             }
           }
-        }).catch((arg0) => {
-          const debug = spanId(closure_1_1[2]).debug;
-          debug.log("[TimeToDisplay] Failed to capture start frames for initial display span (" + spanId.spanContext().spanId + ").", arg0);
+        }).catch((error) => {
+          const debug = _mod682.debug;
+          debug.log("[TimeToDisplay] Failed to capture start frames for initial display span (" + startInactiveSpanResult.spanContext().spanId + ").", error);
         });
         isAutoInstrumented = undefined;
         if (null != isAutoInstrumented) {
@@ -194,6 +184,7 @@ function startTimeToInitialDisplaySpan(isAutoInstrumented) {
         }
         return startInactiveSpanResult;
       }
+      const tmpResult2 = tmp(682);
     }
   } else {
     let debug = obj2.debug;
@@ -205,42 +196,38 @@ function startTimeToFullDisplaySpan(arg0) {
   if (arg0 === undefined) {
     obj = { timeoutMs: 30000 };
   }
-  let spanId;
+  let found;
   dependencyMap = undefined;
   let timeout;
-  const activeSpan = spanId(682).getActiveSpan();
-  let obj3 = spanId(682);
+  const activeSpan = found(682).getActiveSpan();
+  let obj3 = found(682);
   if (activeSpan) {
     const spanDescendants = obj3.getSpanDescendants(activeSpan);
-    const found = spanDescendants.find((arg0) => "ui.load.initial_display" === spanId(_undefined[2]).spanToJSON(arg0).op);
-    spanId = found;
+    found = spanDescendants.find((item) => "ui.load.initial_display" === found(_undefined[2]).spanToJSON(item).op);
     if (found) {
-      const found1 = spanDescendants.find((arg0) => "ui.load.full_display" === spanId(_undefined[2]).spanToJSON(arg0).op);
-      let tmpResult = tmp(682);
+      const found1 = spanDescendants.find((item) => "ui.load.full_display" === found(_undefined[2]).spanToJSON(item).op);
+      const tmpResult = tmp(682);
       if (found1) {
         let debug3 = tmpResult.debug;
         debug3.log("[TimeToDisplay] Found existing ui.load.full_display span.");
         return found1;
       } else {
         const _Object = Object;
-        obj = { op: "ui.load.full_display", name: "Time To Full Display", startTime: null };
-        tmpResult = tmp(682);
-        obj[2] = tmpResult.spanToJSON(found).start_timestamp;
-        const startInactiveSpanResult = tmpResult.startInactiveSpan(Object.assign(obj, obj));
+        let obj4 = { op: "ui.load.full_display", name: "Time To Full Display", startTime: tmp(682).spanToJSON(found).start_timestamp };
+        const startInactiveSpanResult = tmpResult.startInactiveSpan(Object.assign(obj4, obj));
         dependencyMap = startInactiveSpanResult;
         if (startInactiveSpanResult) {
-          spanId = startInactiveSpanResult.spanContext().spanId;
-          fn(undefined, undefined, undefined, function*() {
+          let spanId = startInactiveSpanResult.spanContext().spanId;
+          fn(undefined, undefined, undefined, function*(arg0, value) {
             if (c5 === 2) {
               c5 = 3;
-              HermesBuiltin.throwTypeError();
+              throw new TypeError("Generator functions may not be called on executing generators");
             } else if (tmp6 === 3) {
               if (arg0 === 1) {
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
-                let obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
+                const obj2 = { value, done: true };
+                return obj2;
               } else {
                 return { value: "HermesInternal", done: null };
               }
@@ -250,79 +237,73 @@ function startTimeToFullDisplaySpan(arg0) {
                 if (0 === c4) {
                   if (arg0 === 1) {
                     c5 = 3;
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
                     c5 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
+                    const obj3 = { value, done: true };
+                    return obj3;
                   } else {
-                    let timeout = tmp3;
                     closure_0 = tmp7;
-                    closure_0 = undefined;
-                    timeout = undefined;
-                    closure_2 = undefined;
-                    if (closure_1_0(closure_1_1[6]).NATIVE.enableNative) {
+                    closure_128_0 = undefined;
+                    let timeout;
+                    closure_128_2 = undefined;
+                    if (closure_0(tmp3[6]).NATIVE.enableNative) {
                       c3 = 1;
                       c4 = 2;
                       c5 = 1;
-                      obj1 = { value: null, done: false };
-                      obj1[0] = closure_1_15();
-                      return obj1;
+                      const obj4 = { value: fetchNativeFramesWithTimeout(), done: false };
+                      return obj4;
                     }
                   }
                 } else {
                   if (1 === tmp7) {
                     c3 = 0;
-                    c3 = closure_2;
-                    const debug3 = closure_1_0(closure_1_1[2]).debug;
+                    closure_128_3 = closure_2;
+                    const debug3 = closure_0(tmp3[2]).debug;
                     const _HermesInternal3 = HermesInternal;
-                    debug3.log("[TimeToDisplay] Failed to capture start frames for span " + closure_1_0 + ".", c3);
+                    debug3.log("[TimeToDisplay] Failed to capture start frames for span " + closure_129_0 + ".", closure_128_3);
                   } else if (arg0 === 1) {
                     c5 = 3;
-                    throw arg1;
+                    throw value;
                   } else if (arg0 !== 2) {
-                    closure_0 = arg1;
+                    closure_128_0 = value;
                     const _setTimeout = setTimeout;
                     timeout = setTimeout(() => {
-                      if (closure_1_8.get(callback)) {
-                        closure_1_8.delete(tmp);
-                        const debug = callback(table[2]).debug;
+                      if (map.get(closure_1_0)) {
+                        map.delete(tmp);
+                        const debug = closure_0(closure_1[2]).debug;
                         const _HermesInternal = HermesInternal;
                         debug.log("[TimeToDisplay] Cleaned up stale frame data for span " + tmp + " after timeout.");
                       }
                     }, 60000);
-                    if (!closure_1_8.has(closure_0)) {
-                      obj = { startFrames: null, endFrames: null, cleanupTimeout: null };
-                      obj[2] = timeout;
-                      const result = closure_1_8.set(closure_0, obj);
+                    if (!map.has(closure_129_0)) {
+                      const obj = { startFrames: null, endFrames: null, cleanupTimeout: timeout };
+                      const result = map.set(closure_129_0, obj);
                     }
-                    closure_2 = closure_1_8.get(closure_1_0);
-                    if (closure_2) {
-                      closure_2.startFrames = closure_0;
-                      closure_2.cleanupTimeout = timeout;
-                      const debug2 = closure_1_0(closure_1_1[2]).debug;
+                    closure_128_2 = map.get(closure_129_0);
+                    if (closure_128_2) {
+                      closure_128_2.startFrames = closure_128_0;
+                      closure_128_2.cleanupTimeout = timeout;
+                      const debug2 = closure_0(tmp3[2]).debug;
                       const _HermesInternal2 = HermesInternal;
-                      debug2.log("[TimeToDisplay] Captured start frames for span " + closure_1_0 + ".", closure_0);
+                      debug2.log("[TimeToDisplay] Captured start frames for span " + closure_129_0 + ".", closure_128_0);
                       c3 = 0;
                     } else {
                       const _clearTimeout = clearTimeout;
                       clearTimeout(timeout);
-                      let debug = closure_1_0(closure_1_1[2]).debug;
+                      let debug = closure_0(tmp3[2]).debug;
                       let _HermesInternal = HermesInternal;
-                      debug.log("[TimeToDisplay] Span " + closure_1_0 + " already ended, discarding start frames.");
+                      debug.log("[TimeToDisplay] Span " + closure_129_0 + " already ended, discarding start frames.");
                       c3 = 0;
                       c5 = 3;
-                      const obj2 = { value: null, done: true };
-                      obj2[0] = undefined;
-                      return obj2;
+                      const obj5 = { value: undefined, done: true };
+                      return obj5;
                     }
                   }
                   c3 = 0;
                   c5 = 3;
-                  const obj3 = { value: null, done: true };
-                  obj3[0] = arg1;
-                  return obj3;
+                  const obj6 = { value, done: true };
+                  return obj6;
                 }
                 c5 = 3;
               } catch (tmp48) {
@@ -335,29 +316,26 @@ function startTimeToFullDisplaySpan(arg0) {
                 }
               }
             }
-          }).catch((arg0) => {
-            const debug = spanId(_undefined[2]).debug;
-            debug.log("[TimeToDisplay] Failed to capture start frames for full display span (" + _undefined.spanContext().spanId + ").", arg0);
+          }).catch((error) => {
+            const debug = _mod682.debug;
+            debug.log("[TimeToDisplay] Failed to capture start frames for full display span (" + _undefined.spanContext().spanId + ").", error);
           });
           let _setTimeout = setTimeout;
           timeout = setTimeout(() => {
-            let obj = spanId(_undefined[2]);
-            let obj2 = _undefined;
-            if (!obj.spanToJSON(_undefined).timestamp) {
-              obj = { code: null, message: "deadline_exceeded" };
-              obj[0] = tmp(tmp2[2]).SPAN_STATUS_ERROR;
-              obj2.setStatus(obj);
-              const promise = closure_1_5(undefined, undefined, undefined, function*() {
+            let obj2 = c1;
+            if (!obj.spanToJSON(c1).timestamp) {
+              let obj3 = { code: tmp(682).SPAN_STATUS_ERROR, message: "deadline_exceeded" };
+              obj2.setStatus(obj3);
+              const promise = fn(undefined, undefined, undefined, function*(arg0, value) {
                 if (c5 === 2) {
                   c5 = 3;
-                  HermesBuiltin.throwTypeError();
+                  throw new TypeError("Generator functions may not be called on executing generators");
                 } else if (tmp7 === 3) {
                   if (arg0 === 1) {
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
-                    let obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
+                    obj2 = { value, done: true };
+                    return obj2;
                   } else {
                     return { value: "HermesInternal", done: null };
                   }
@@ -367,22 +345,21 @@ function startTimeToFullDisplaySpan(arg0) {
                     if (0 === c4) {
                       if (arg0 === 1) {
                         c5 = 3;
-                        throw arg1;
+                        throw value;
                       } else if (arg0 === 2) {
                         c5 = 3;
-                        obj = { value: null, done: true };
-                        obj[0] = arg1;
-                        return obj;
+                        const obj3 = { value, done: true };
+                        return obj3;
                       } else {
-                        c1 = tmp4;
-                        spanId = tmp8;
-                        spanId = undefined;
-                        c1 = undefined;
-                        closure_2 = undefined;
-                        if (closure_1_0(closure_1_1[6]).NATIVE.enableNative) {
-                          spanId = closure_1_0.spanContext().spanId;
-                          const value = closure_1_8.get(spanId);
-                          c1 = value;
+                        obj2 = tmp8;
+                        closure_128_0 = undefined;
+                        closure_128_1 = undefined;
+                        closure_128_2 = undefined;
+                        if (obj2(tmp4[6]).NATIVE.enableNative) {
+                          const spanId = obj2.spanContext().spanId;
+                          closure_128_0 = spanId;
+                          value = map.get(spanId);
+                          closure_128_1 = value;
                           let startFrames;
                           if (null != value) {
                             startFrames = value.startFrames;
@@ -391,11 +368,10 @@ function startTimeToFullDisplaySpan(arg0) {
                             c3 = 2;
                             c4 = 3;
                             c5 = 1;
-                            obj1 = { value: null, done: false };
-                            obj1[0] = closure_1_15();
-                            return obj1;
+                            const obj4 = { value: closure_1_15(), done: false };
+                            return obj4;
                           } else {
-                            let debug2 = closure_1_0(closure_1_1[2]).debug;
+                            let debug2 = obj2(tmp4[2]).debug;
                             const _HermesInternal2 = HermesInternal;
                             debug2.log("[TimeToDisplay] No start frames found for span " + spanId + ", skipping frame data collection.");
                           }
@@ -405,64 +381,63 @@ function startTimeToFullDisplaySpan(arg0) {
                     } else if (1 !== tmp8) {
                       if (2 === tmp8) {
                         c3 = 1;
-                        c3 = closure_2;
-                        let debug = closure_1_0(closure_1_1[2]).debug;
+                        closure_128_3 = closure_2;
+                        let debug = obj2(tmp4[2]).debug;
                         let _HermesInternal = HermesInternal;
-                        debug.log("[TimeToDisplay] Failed to capture end frames for span " + spanId + ".", c3);
+                        debug.log("[TimeToDisplay] Failed to capture end frames for span " + closure_128_0 + ".", closure_128_3);
                       } else if (arg0 === 1) {
                         c5 = 3;
-                        throw arg1;
+                        throw value;
                       } else if (arg0 === 2) {
                         c3 = 0;
-                        if (c1.cleanupTimeout) {
+                        if (closure_128_1.cleanupTimeout) {
                           const _clearTimeout = clearTimeout;
-                          clearTimeout(c1.cleanupTimeout);
+                          clearTimeout(closure_128_1.cleanupTimeout);
                         }
-                        closure_1_8.delete(spanId);
+                        map.delete(closure_128_0);
                         c5 = 3;
-                        obj = { value: null, done: true };
-                        obj[0] = arg1;
+                        const obj = { value, done: true };
                         return obj;
                       } else {
-                        closure_2 = arg1;
-                        c1.endFrames = closure_2;
-                        (function attachFrameDataToSpan(spanId, startFrames, closure_2) {
-                          const diff = closure_2.totalFrames - startFrames.totalFrames;
-                          const diff1 = closure_2.slowFrames - startFrames.slowFrames;
-                          const diff2 = closure_2.frozenFrames - startFrames.frozenFrames;
+                        closure_128_2 = value;
+                        closure_128_1.endFrames = closure_128_2;
+                        (function attachFrameDataToSpan(spanContext, startFrames, totalFrames2) {
+                          const diff = totalFrames2.totalFrames - startFrames.totalFrames;
+                          const diff1 = totalFrames2.slowFrames - startFrames.slowFrames;
+                          const diff2 = totalFrames2.frozenFrames - startFrames.frozenFrames;
                           if (diff <= 0) {
                             if (diff1 <= 0) {
                               if (diff2 <= 0) {
-                                const debug2 = spanId(_undefined[2]).debug;
+                                const debug2 = closure_1_0(682).debug;
                                 const _HermesInternal = HermesInternal;
-                                debug2.warn("[TimeToDisplay] Detected zero slow or frozen frames. Not adding measurements to span (" + spanId.spanContext().spanId + ").");
+                                debug2.warn("[TimeToDisplay] Detected zero slow or frozen frames. Not adding measurements to span (" + spanContext.spanContext().spanId + ").");
                               }
                             }
                           }
-                          const attr = spanId.setAttribute("frames.total", diff);
-                          const attr1 = spanId.setAttribute("frames.slow", diff1);
-                          const attr2 = spanId.setAttribute("frames.frozen", diff2);
-                          const debug = spanId(_undefined[2]).debug;
-                          debug.log("[TimeToDisplay] Attached frame data to span.", { spanId: spanId.spanContext().spanId, frameData: { total: diff, slow: diff1, frozen: diff2 } });
-                        })(spanId, c1.startFrames, closure_2);
-                        const debug3 = closure_1_0(closure_1_1[2]).debug;
+                          const attr = spanContext.setAttribute("frames.total", diff);
+                          const attr1 = spanContext.setAttribute("frames.slow", diff1);
+                          const attr2 = spanContext.setAttribute("frames.frozen", diff2);
+                          const debug = closure_1_0(682).debug;
+                          debug.log("[TimeToDisplay] Attached frame data to span.", { spanId: spanContext.spanContext().spanId, frameData: { total: diff, slow: diff1, frozen: diff2 } });
+                        })(closure_129_0, closure_128_1.startFrames, closure_128_2);
+                        const debug3 = obj2(tmp4[2]).debug;
                         const _HermesInternal3 = HermesInternal;
-                        debug3.log("[TimeToDisplay] Captured and attached end frames for span " + spanId + ".", closure_2);
+                        debug3.log("[TimeToDisplay] Captured and attached end frames for span " + closure_128_0 + ".", closure_128_2);
                         c3 = 1;
                       }
                       c3 = 0;
-                      if (c1.cleanupTimeout) {
+                      if (closure_128_1.cleanupTimeout) {
                         const _clearTimeout2 = clearTimeout;
-                        clearTimeout(c1.cleanupTimeout);
+                        clearTimeout(closure_128_1.cleanupTimeout);
                       }
-                      closure_1_8.delete(spanId);
+                      map.delete(closure_128_0);
                     }
                     c3 = 0;
-                    if (closure_1_1.cleanupTimeout) {
+                    if (closure_128_1.cleanupTimeout) {
                       const _clearTimeout3 = clearTimeout;
-                      clearTimeout(closure_1_1.cleanupTimeout);
+                      clearTimeout(closure_128_1.cleanupTimeout);
                     }
-                    closure_1_8.delete(closure_1_0);
+                    map.delete(closure_128_0);
                     throw closure_2;
                   } catch (tmp58) {
                     closure_2 = tmp58;
@@ -477,17 +452,16 @@ function startTimeToFullDisplaySpan(arg0) {
                   }
                 }
               });
-              closure_1_5(undefined, undefined, undefined, function*() {
+              fn(undefined, undefined, undefined, function*(arg0, value) {
                 if (c5 === 2) {
                   c5 = 3;
-                  HermesBuiltin.throwTypeError();
+                  throw new TypeError("Generator functions may not be called on executing generators");
                 } else if (tmp7 === 3) {
                   if (arg0 === 1) {
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
-                    let obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
+                    obj2 = { value, done: true };
+                    return obj2;
                   } else {
                     return { value: "HermesInternal", done: null };
                   }
@@ -497,22 +471,21 @@ function startTimeToFullDisplaySpan(arg0) {
                     if (0 === c4) {
                       if (arg0 === 1) {
                         c5 = 3;
-                        throw arg1;
+                        throw value;
                       } else if (arg0 === 2) {
                         c5 = 3;
-                        obj = { value: null, done: true };
-                        obj[0] = arg1;
-                        return obj;
+                        const obj3 = { value, done: true };
+                        return obj3;
                       } else {
-                        c1 = tmp4;
-                        spanId = tmp8;
-                        spanId = undefined;
-                        c1 = undefined;
-                        closure_2 = undefined;
-                        if (closure_1_0(closure_1_1[6]).NATIVE.enableNative) {
-                          spanId = closure_1_0.spanContext().spanId;
-                          const value = closure_1_8.get(spanId);
-                          c1 = value;
+                        obj2 = tmp8;
+                        closure_128_0 = undefined;
+                        closure_128_1 = undefined;
+                        closure_128_2 = undefined;
+                        if (obj2(tmp4[6]).NATIVE.enableNative) {
+                          const spanId = obj2.spanContext().spanId;
+                          closure_128_0 = spanId;
+                          value = map.get(spanId);
+                          closure_128_1 = value;
                           let startFrames;
                           if (null != value) {
                             startFrames = value.startFrames;
@@ -521,11 +494,10 @@ function startTimeToFullDisplaySpan(arg0) {
                             c3 = 2;
                             c4 = 3;
                             c5 = 1;
-                            obj1 = { value: null, done: false };
-                            obj1[0] = closure_1_15();
-                            return obj1;
+                            const obj4 = { value: closure_1_15(), done: false };
+                            return obj4;
                           } else {
-                            let debug2 = closure_1_0(closure_1_1[2]).debug;
+                            let debug2 = obj2(tmp4[2]).debug;
                             const _HermesInternal2 = HermesInternal;
                             debug2.log("[TimeToDisplay] No start frames found for span " + spanId + ", skipping frame data collection.");
                           }
@@ -535,64 +507,63 @@ function startTimeToFullDisplaySpan(arg0) {
                     } else if (1 !== tmp8) {
                       if (2 === tmp8) {
                         c3 = 1;
-                        c3 = closure_2;
-                        let debug = closure_1_0(closure_1_1[2]).debug;
+                        closure_128_3 = closure_2;
+                        let debug = obj2(tmp4[2]).debug;
                         let _HermesInternal = HermesInternal;
-                        debug.log("[TimeToDisplay] Failed to capture end frames for span " + spanId + ".", c3);
+                        debug.log("[TimeToDisplay] Failed to capture end frames for span " + closure_128_0 + ".", closure_128_3);
                       } else if (arg0 === 1) {
                         c5 = 3;
-                        throw arg1;
+                        throw value;
                       } else if (arg0 === 2) {
                         c3 = 0;
-                        if (c1.cleanupTimeout) {
+                        if (closure_128_1.cleanupTimeout) {
                           const _clearTimeout = clearTimeout;
-                          clearTimeout(c1.cleanupTimeout);
+                          clearTimeout(closure_128_1.cleanupTimeout);
                         }
-                        closure_1_8.delete(spanId);
+                        map.delete(closure_128_0);
                         c5 = 3;
-                        obj = { value: null, done: true };
-                        obj[0] = arg1;
+                        const obj = { value, done: true };
                         return obj;
                       } else {
-                        closure_2 = arg1;
-                        c1.endFrames = closure_2;
-                        (function attachFrameDataToSpan(spanId, startFrames, closure_2) {
-                          const diff = closure_2.totalFrames - startFrames.totalFrames;
-                          const diff1 = closure_2.slowFrames - startFrames.slowFrames;
-                          const diff2 = closure_2.frozenFrames - startFrames.frozenFrames;
+                        closure_128_2 = value;
+                        closure_128_1.endFrames = closure_128_2;
+                        (function attachFrameDataToSpan(spanContext, startFrames, totalFrames2) {
+                          const diff = totalFrames2.totalFrames - startFrames.totalFrames;
+                          const diff1 = totalFrames2.slowFrames - startFrames.slowFrames;
+                          const diff2 = totalFrames2.frozenFrames - startFrames.frozenFrames;
                           if (diff <= 0) {
                             if (diff1 <= 0) {
                               if (diff2 <= 0) {
-                                const debug2 = spanId(_undefined[2]).debug;
+                                const debug2 = closure_1_0(682).debug;
                                 const _HermesInternal = HermesInternal;
-                                debug2.warn("[TimeToDisplay] Detected zero slow or frozen frames. Not adding measurements to span (" + spanId.spanContext().spanId + ").");
+                                debug2.warn("[TimeToDisplay] Detected zero slow or frozen frames. Not adding measurements to span (" + spanContext.spanContext().spanId + ").");
                               }
                             }
                           }
-                          const attr = spanId.setAttribute("frames.total", diff);
-                          const attr1 = spanId.setAttribute("frames.slow", diff1);
-                          const attr2 = spanId.setAttribute("frames.frozen", diff2);
-                          const debug = spanId(_undefined[2]).debug;
-                          debug.log("[TimeToDisplay] Attached frame data to span.", { spanId: spanId.spanContext().spanId, frameData: { total: diff, slow: diff1, frozen: diff2 } });
-                        })(spanId, c1.startFrames, closure_2);
-                        const debug3 = closure_1_0(closure_1_1[2]).debug;
+                          const attr = spanContext.setAttribute("frames.total", diff);
+                          const attr1 = spanContext.setAttribute("frames.slow", diff1);
+                          const attr2 = spanContext.setAttribute("frames.frozen", diff2);
+                          const debug = closure_1_0(682).debug;
+                          debug.log("[TimeToDisplay] Attached frame data to span.", { spanId: spanContext.spanContext().spanId, frameData: { total: diff, slow: diff1, frozen: diff2 } });
+                        })(closure_129_0, closure_128_1.startFrames, closure_128_2);
+                        const debug3 = obj2(tmp4[2]).debug;
                         const _HermesInternal3 = HermesInternal;
-                        debug3.log("[TimeToDisplay] Captured and attached end frames for span " + spanId + ".", closure_2);
+                        debug3.log("[TimeToDisplay] Captured and attached end frames for span " + closure_128_0 + ".", closure_128_2);
                         c3 = 1;
                       }
                       c3 = 0;
-                      if (c1.cleanupTimeout) {
+                      if (closure_128_1.cleanupTimeout) {
                         const _clearTimeout2 = clearTimeout;
-                        clearTimeout(c1.cleanupTimeout);
+                        clearTimeout(closure_128_1.cleanupTimeout);
                       }
-                      closure_1_8.delete(spanId);
+                      map.delete(closure_128_0);
                     }
                     c3 = 0;
-                    if (closure_1_1.cleanupTimeout) {
+                    if (closure_128_1.cleanupTimeout) {
                       const _clearTimeout3 = clearTimeout;
-                      clearTimeout(closure_1_1.cleanupTimeout);
+                      clearTimeout(closure_128_1.cleanupTimeout);
                     }
-                    closure_1_8.delete(closure_1_0);
+                    map.delete(closure_128_0);
                     throw closure_2;
                   } catch (tmp58) {
                     closure_2 = tmp58;
@@ -607,31 +578,30 @@ function startTimeToFullDisplaySpan(arg0) {
                   }
                 }
               }).then(() => {
-                const debug = obj2(closure_1_1[2]).debug;
-                debug.log("[TimeToDisplay] span " + closure_1.spanContext().spanId + " updated with frame data.");
-                closure_1.end(obj2(closure_1_1[2]).spanToJSON(obj2).timestamp);
-                obj2 = obj2(closure_1_1[5]);
-                const result = obj2.setSpanDurationAsMeasurement("time_to_full_display", closure_1);
+                const debug = found(dependencyMap[2]).debug;
+                debug.log("[TimeToDisplay] span " + _undefined.spanContext().spanId + " updated with frame data.");
+                _undefined.end(found(dependencyMap[2]).spanToJSON(obj2).timestamp);
+                obj2 = found(dependencyMap[5]);
+                const result = obj2.setSpanDurationAsMeasurement("time_to_full_display", _undefined);
               }).catch(() => {
-                const debug = obj2(closure_1_1[2]).debug;
-                debug.warn("[TimeToDisplay] Failed to capture end frames for full display span (" + closure_1.spanContext().spanId + ").");
-                closure_1.end(obj2(closure_1_1[2]).spanToJSON(obj2).timestamp);
-                obj2 = obj2(closure_1_1[5]);
-                const result = obj2.setSpanDurationAsMeasurement("time_to_full_display", closure_1);
+                const debug = found(dependencyMap[2]).debug;
+                debug.warn("[TimeToDisplay] Failed to capture end frames for full display span (" + _undefined.spanContext().spanId + ").");
+                _undefined.end(found(dependencyMap[2]).spanToJSON(obj2).timestamp);
+                obj2 = found(dependencyMap[5]);
+                const result = obj2.setSpanDurationAsMeasurement("time_to_full_display", _undefined);
               });
-              let debug = tmp(tmp2[2]).debug;
+              let debug = tmp(682).debug;
               debug.warn("[TimeToDisplay] Full display span deadline_exceeded.");
-              const nextPromise = closure_1_5(undefined, undefined, undefined, function*() {
+              const nextPromise = fn(undefined, undefined, undefined, function*(arg0, value) {
                 if (c5 === 2) {
                   c5 = 3;
-                  HermesBuiltin.throwTypeError();
+                  throw new TypeError("Generator functions may not be called on executing generators");
                 } else if (tmp7 === 3) {
                   if (arg0 === 1) {
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
-                    let obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
+                    obj2 = { value, done: true };
+                    return obj2;
                   } else {
                     return { value: "HermesInternal", done: null };
                   }
@@ -641,22 +611,21 @@ function startTimeToFullDisplaySpan(arg0) {
                     if (0 === c4) {
                       if (arg0 === 1) {
                         c5 = 3;
-                        throw arg1;
+                        throw value;
                       } else if (arg0 === 2) {
                         c5 = 3;
-                        obj = { value: null, done: true };
-                        obj[0] = arg1;
-                        return obj;
+                        const obj3 = { value, done: true };
+                        return obj3;
                       } else {
-                        c1 = tmp4;
-                        spanId = tmp8;
-                        spanId = undefined;
-                        c1 = undefined;
-                        closure_2 = undefined;
-                        if (closure_1_0(closure_1_1[6]).NATIVE.enableNative) {
-                          spanId = closure_1_0.spanContext().spanId;
-                          const value = closure_1_8.get(spanId);
-                          c1 = value;
+                        obj2 = tmp8;
+                        closure_128_0 = undefined;
+                        closure_128_1 = undefined;
+                        closure_128_2 = undefined;
+                        if (obj2(tmp4[6]).NATIVE.enableNative) {
+                          const spanId = obj2.spanContext().spanId;
+                          closure_128_0 = spanId;
+                          value = map.get(spanId);
+                          closure_128_1 = value;
                           let startFrames;
                           if (null != value) {
                             startFrames = value.startFrames;
@@ -665,11 +634,10 @@ function startTimeToFullDisplaySpan(arg0) {
                             c3 = 2;
                             c4 = 3;
                             c5 = 1;
-                            obj1 = { value: null, done: false };
-                            obj1[0] = closure_1_15();
-                            return obj1;
+                            const obj4 = { value: closure_1_15(), done: false };
+                            return obj4;
                           } else {
-                            let debug2 = closure_1_0(closure_1_1[2]).debug;
+                            let debug2 = obj2(tmp4[2]).debug;
                             const _HermesInternal2 = HermesInternal;
                             debug2.log("[TimeToDisplay] No start frames found for span " + spanId + ", skipping frame data collection.");
                           }
@@ -679,64 +647,63 @@ function startTimeToFullDisplaySpan(arg0) {
                     } else if (1 !== tmp8) {
                       if (2 === tmp8) {
                         c3 = 1;
-                        c3 = closure_2;
-                        let debug = closure_1_0(closure_1_1[2]).debug;
+                        closure_128_3 = closure_2;
+                        let debug = obj2(tmp4[2]).debug;
                         let _HermesInternal = HermesInternal;
-                        debug.log("[TimeToDisplay] Failed to capture end frames for span " + spanId + ".", c3);
+                        debug.log("[TimeToDisplay] Failed to capture end frames for span " + closure_128_0 + ".", closure_128_3);
                       } else if (arg0 === 1) {
                         c5 = 3;
-                        throw arg1;
+                        throw value;
                       } else if (arg0 === 2) {
                         c3 = 0;
-                        if (c1.cleanupTimeout) {
+                        if (closure_128_1.cleanupTimeout) {
                           const _clearTimeout = clearTimeout;
-                          clearTimeout(c1.cleanupTimeout);
+                          clearTimeout(closure_128_1.cleanupTimeout);
                         }
-                        closure_1_8.delete(spanId);
+                        map.delete(closure_128_0);
                         c5 = 3;
-                        obj = { value: null, done: true };
-                        obj[0] = arg1;
+                        const obj = { value, done: true };
                         return obj;
                       } else {
-                        closure_2 = arg1;
-                        c1.endFrames = closure_2;
-                        (function attachFrameDataToSpan(spanId, startFrames, closure_2) {
-                          const diff = closure_2.totalFrames - startFrames.totalFrames;
-                          const diff1 = closure_2.slowFrames - startFrames.slowFrames;
-                          const diff2 = closure_2.frozenFrames - startFrames.frozenFrames;
+                        closure_128_2 = value;
+                        closure_128_1.endFrames = closure_128_2;
+                        (function attachFrameDataToSpan(spanContext, startFrames, totalFrames2) {
+                          const diff = totalFrames2.totalFrames - startFrames.totalFrames;
+                          const diff1 = totalFrames2.slowFrames - startFrames.slowFrames;
+                          const diff2 = totalFrames2.frozenFrames - startFrames.frozenFrames;
                           if (diff <= 0) {
                             if (diff1 <= 0) {
                               if (diff2 <= 0) {
-                                const debug2 = spanId(_undefined[2]).debug;
+                                const debug2 = closure_1_0(682).debug;
                                 const _HermesInternal = HermesInternal;
-                                debug2.warn("[TimeToDisplay] Detected zero slow or frozen frames. Not adding measurements to span (" + spanId.spanContext().spanId + ").");
+                                debug2.warn("[TimeToDisplay] Detected zero slow or frozen frames. Not adding measurements to span (" + spanContext.spanContext().spanId + ").");
                               }
                             }
                           }
-                          const attr = spanId.setAttribute("frames.total", diff);
-                          const attr1 = spanId.setAttribute("frames.slow", diff1);
-                          const attr2 = spanId.setAttribute("frames.frozen", diff2);
-                          const debug = spanId(_undefined[2]).debug;
-                          debug.log("[TimeToDisplay] Attached frame data to span.", { spanId: spanId.spanContext().spanId, frameData: { total: diff, slow: diff1, frozen: diff2 } });
-                        })(spanId, c1.startFrames, closure_2);
-                        const debug3 = closure_1_0(closure_1_1[2]).debug;
+                          const attr = spanContext.setAttribute("frames.total", diff);
+                          const attr1 = spanContext.setAttribute("frames.slow", diff1);
+                          const attr2 = spanContext.setAttribute("frames.frozen", diff2);
+                          const debug = closure_1_0(682).debug;
+                          debug.log("[TimeToDisplay] Attached frame data to span.", { spanId: spanContext.spanContext().spanId, frameData: { total: diff, slow: diff1, frozen: diff2 } });
+                        })(closure_129_0, closure_128_1.startFrames, closure_128_2);
+                        const debug3 = obj2(tmp4[2]).debug;
                         const _HermesInternal3 = HermesInternal;
-                        debug3.log("[TimeToDisplay] Captured and attached end frames for span " + spanId + ".", closure_2);
+                        debug3.log("[TimeToDisplay] Captured and attached end frames for span " + closure_128_0 + ".", closure_128_2);
                         c3 = 1;
                       }
                       c3 = 0;
-                      if (c1.cleanupTimeout) {
+                      if (closure_128_1.cleanupTimeout) {
                         const _clearTimeout2 = clearTimeout;
-                        clearTimeout(c1.cleanupTimeout);
+                        clearTimeout(closure_128_1.cleanupTimeout);
                       }
-                      closure_1_8.delete(spanId);
+                      map.delete(closure_128_0);
                     }
                     c3 = 0;
-                    if (closure_1_1.cleanupTimeout) {
+                    if (closure_128_1.cleanupTimeout) {
                       const _clearTimeout3 = clearTimeout;
-                      clearTimeout(closure_1_1.cleanupTimeout);
+                      clearTimeout(closure_128_1.cleanupTimeout);
                     }
-                    closure_1_8.delete(closure_1_0);
+                    map.delete(closure_128_0);
                     throw closure_2;
                   } catch (tmp58) {
                     closure_2 = tmp58;
@@ -751,25 +718,24 @@ function startTimeToFullDisplaySpan(arg0) {
                   }
                 }
               }).then(() => {
-                const debug = obj2(closure_1_1[2]).debug;
-                debug.log("[TimeToDisplay] span " + closure_1.spanContext().spanId + " updated with frame data.");
-                closure_1.end(obj2(closure_1_1[2]).spanToJSON(obj2).timestamp);
-                obj2 = obj2(closure_1_1[5]);
-                const result = obj2.setSpanDurationAsMeasurement("time_to_full_display", closure_1);
+                const debug = found(dependencyMap[2]).debug;
+                debug.log("[TimeToDisplay] span " + _undefined.spanContext().spanId + " updated with frame data.");
+                _undefined.end(found(dependencyMap[2]).spanToJSON(obj2).timestamp);
+                obj2 = found(dependencyMap[5]);
+                const result = obj2.setSpanDurationAsMeasurement("time_to_full_display", _undefined);
               });
             }
           }, obj.timeoutMs);
-          let promise = fn(undefined, undefined, undefined, function*() {
+          let promise = fn(undefined, undefined, undefined, function*(arg0, value) {
             if (c5 === 2) {
               c5 = 3;
-              HermesBuiltin.throwTypeError();
+              throw new TypeError("Generator functions may not be called on executing generators");
             } else if (tmp6 === 3) {
               if (arg0 === 1) {
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
-                let obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
+                const obj2 = { value, done: true };
+                return obj2;
               } else {
                 return { value: "HermesInternal", done: null };
               }
@@ -779,79 +745,73 @@ function startTimeToFullDisplaySpan(arg0) {
                 if (0 === c4) {
                   if (arg0 === 1) {
                     c5 = 3;
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
                     c5 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
+                    const obj3 = { value, done: true };
+                    return obj3;
                   } else {
-                    let timeout = tmp3;
                     closure_0 = tmp7;
-                    closure_0 = undefined;
-                    timeout = undefined;
-                    closure_2 = undefined;
-                    if (closure_1_0(closure_1_1[6]).NATIVE.enableNative) {
+                    closure_128_0 = undefined;
+                    let timeout;
+                    closure_128_2 = undefined;
+                    if (closure_0(tmp3[6]).NATIVE.enableNative) {
                       c3 = 1;
                       c4 = 2;
                       c5 = 1;
-                      obj1 = { value: null, done: false };
-                      obj1[0] = closure_1_15();
-                      return obj1;
+                      const obj4 = { value: fetchNativeFramesWithTimeout(), done: false };
+                      return obj4;
                     }
                   }
                 } else {
                   if (1 === tmp7) {
                     c3 = 0;
-                    c3 = closure_2;
-                    const debug3 = closure_1_0(closure_1_1[2]).debug;
+                    closure_128_3 = closure_2;
+                    const debug3 = closure_0(tmp3[2]).debug;
                     const _HermesInternal3 = HermesInternal;
-                    debug3.log("[TimeToDisplay] Failed to capture start frames for span " + closure_1_0 + ".", c3);
+                    debug3.log("[TimeToDisplay] Failed to capture start frames for span " + closure_129_0 + ".", closure_128_3);
                   } else if (arg0 === 1) {
                     c5 = 3;
-                    throw arg1;
+                    throw value;
                   } else if (arg0 !== 2) {
-                    closure_0 = arg1;
+                    closure_128_0 = value;
                     const _setTimeout = setTimeout;
                     timeout = setTimeout(() => {
-                      if (closure_1_8.get(callback)) {
-                        closure_1_8.delete(tmp);
-                        const debug = callback(table[2]).debug;
+                      if (map.get(closure_1_0)) {
+                        map.delete(tmp);
+                        const debug = closure_0(closure_1[2]).debug;
                         const _HermesInternal = HermesInternal;
                         debug.log("[TimeToDisplay] Cleaned up stale frame data for span " + tmp + " after timeout.");
                       }
                     }, 60000);
-                    if (!closure_1_8.has(closure_0)) {
-                      obj = { startFrames: null, endFrames: null, cleanupTimeout: null };
-                      obj[2] = timeout;
-                      const result = closure_1_8.set(closure_0, obj);
+                    if (!map.has(closure_129_0)) {
+                      const obj = { startFrames: null, endFrames: null, cleanupTimeout: timeout };
+                      const result = map.set(closure_129_0, obj);
                     }
-                    closure_2 = closure_1_8.get(closure_1_0);
-                    if (closure_2) {
-                      closure_2.startFrames = closure_0;
-                      closure_2.cleanupTimeout = timeout;
-                      const debug2 = closure_1_0(closure_1_1[2]).debug;
+                    closure_128_2 = map.get(closure_129_0);
+                    if (closure_128_2) {
+                      closure_128_2.startFrames = closure_128_0;
+                      closure_128_2.cleanupTimeout = timeout;
+                      const debug2 = closure_0(tmp3[2]).debug;
                       const _HermesInternal2 = HermesInternal;
-                      debug2.log("[TimeToDisplay] Captured start frames for span " + closure_1_0 + ".", closure_0);
+                      debug2.log("[TimeToDisplay] Captured start frames for span " + closure_129_0 + ".", closure_128_0);
                       c3 = 0;
                     } else {
                       const _clearTimeout = clearTimeout;
                       clearTimeout(timeout);
-                      let debug = closure_1_0(closure_1_1[2]).debug;
+                      let debug = closure_0(tmp3[2]).debug;
                       let _HermesInternal = HermesInternal;
-                      debug.log("[TimeToDisplay] Span " + closure_1_0 + " already ended, discarding start frames.");
+                      debug.log("[TimeToDisplay] Span " + closure_129_0 + " already ended, discarding start frames.");
                       c3 = 0;
                       c5 = 3;
-                      const obj2 = { value: null, done: true };
-                      obj2[0] = undefined;
-                      return obj2;
+                      const obj5 = { value: undefined, done: true };
+                      return obj5;
                     }
                   }
                   c3 = 0;
                   c5 = 3;
-                  const obj3 = { value: null, done: true };
-                  obj3[0] = arg1;
-                  return obj3;
+                  const obj6 = { value, done: true };
+                  return obj6;
                 }
                 c5 = 3;
               } catch (tmp48) {
@@ -868,12 +828,12 @@ function startTimeToFullDisplaySpan(arg0) {
           tmp(682).fill(startInactiveSpanResult, "end", (arg0) => {
             closure_0 = arg0;
             return (arg0) => {
-              clearTimeout(closure_1_2);
+              clearTimeout(closure_2);
               const call = closure_0.call;
               if (typeof call === "unknown") {
                 closure_0(arg0);
               } else {
-                call(closure_1_1, arg0);
+                call(c1, arg0);
               }
             };
           });
@@ -883,14 +843,15 @@ function startTimeToFullDisplaySpan(arg0) {
           }
           const setAttribute = startInactiveSpanResult.setAttribute;
           const SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN = tmp(682).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN;
-          const tmpResult2 = tmp(1023);
+          const tmpResult6 = tmp(1023);
           if (isAutoInstrumented) {
-            let attr = setAttribute(SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, tmpResult2.SPAN_ORIGIN_AUTO_UI_TIME_TO_DISPLAY);
+            let attr = setAttribute(SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, tmpResult6.SPAN_ORIGIN_AUTO_UI_TIME_TO_DISPLAY);
           } else {
-            let attr1 = setAttribute(SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, tmpResult2.SPAN_ORIGIN_MANUAL_UI_TIME_TO_DISPLAY);
+            let attr1 = setAttribute(SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, tmpResult6.SPAN_ORIGIN_MANUAL_UI_TIME_TO_DISPLAY);
           }
           return startInactiveSpanResult;
         }
+        const tmpResult4 = tmp(682);
       }
     } else {
       let debug2 = tmp(682).debug;
@@ -901,45 +862,44 @@ function startTimeToFullDisplaySpan(arg0) {
     debug.warn("[TimeToDisplay] No active span found to attach ui.load.full_display to.");
   }
 }
-function updateFullDisplaySpan(arg0, arg1) {
-  let _require = arg0;
-  const activeSpan = _require(timestamp[2]).getActiveSpan();
+function updateFullDisplaySpan(arg0, span) {
+  _require = arg0;
+  const activeSpan = require("module_682").getActiveSpan();
   if (activeSpan) {
-    let found = arg1;
-    if (!arg1) {
-      let tmpResult = tmp(tmp2[2]);
-      const spanDescendants = tmpResult.getSpanDescendants(activeSpan);
-      found = spanDescendants.find((arg0) => "ui.load.initial_display" === callback(timestamp[2]).spanToJSON(arg0).op);
+    let found = span;
+    if (!span) {
+      const spanDescendants = tmp(tmp2[2]).getSpanDescendants(activeSpan);
+      found = spanDescendants.find((item) => "ui.load.initial_display" === closure_0(timestamp[2]).spanToJSON(item).op);
+      const tmpResult = tmp(tmp2[2]);
     }
     timestamp = found;
     if (found) {
-      tmpResult = tmp(tmp2[2]);
-      timestamp = tmpResult.spanToJSON(found).timestamp;
+      timestamp = tmp(tmp2[2]).spanToJSON(found).timestamp;
+      const tmpResult3 = tmp(tmp2[2]);
     }
     if (timestamp) {
       const tmp10 = startTimeToFullDisplaySpan({ isAutoInstrumented: true });
       closure_2 = tmp10;
-      const tmpResult1 = tmp(tmp2[2]);
+      const tmpResult4 = tmp(tmp2[2]);
       if (tmp10) {
-        const spanToJSONResult = tmpResult1.spanToJSON(tmp10);
-        closure_3 = spanToJSONResult;
+        const spanToJSONResult = tmpResult4.spanToJSON(tmp10);
+        noop = spanToJSONResult;
         if (spanToJSONResult.timestamp) {
           const debug4 = tmp(tmp2[2]).debug;
           const _HermesInternal2 = HermesInternal;
           debug4.warn("[TimeToDisplay] " + spanToJSONResult.description + " (" + spanToJSONResult.span_id + ") span already ended.");
         } else {
-          _require = tmp10;
-          const promise = fn(undefined, undefined, undefined, function*() {
+          closure_129_0 = tmp10;
+          const promise = fn(undefined, undefined, undefined, function*(arg0, value) {
             if (c5 === 2) {
               c5 = 3;
-              HermesBuiltin.throwTypeError();
+              throw new TypeError("Generator functions may not be called on executing generators");
             } else if (tmp7 === 3) {
               if (arg0 === 1) {
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
-                let obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
+                obj2 = { value, done: true };
+                return obj2;
               } else {
                 return { value: "HermesInternal", done: null };
               }
@@ -949,22 +909,21 @@ function updateFullDisplaySpan(arg0, arg1) {
                 if (0 === c4) {
                   if (arg0 === 1) {
                     c5 = 3;
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
                     c5 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
+                    const obj3 = { value, done: true };
+                    return obj3;
                   } else {
-                    c1 = tmp4;
-                    spanId = tmp8;
-                    spanId = undefined;
-                    c1 = undefined;
-                    closure_2 = undefined;
-                    if (closure_1_0(closure_1_1[6]).NATIVE.enableNative) {
-                      spanId = closure_1_0.spanContext().spanId;
-                      const value = closure_1_8.get(spanId);
-                      c1 = value;
+                    obj2 = tmp8;
+                    closure_128_0 = undefined;
+                    closure_128_1 = undefined;
+                    closure_128_2 = undefined;
+                    if (obj2(tmp4[6]).NATIVE.enableNative) {
+                      const spanId = obj2.spanContext().spanId;
+                      closure_128_0 = spanId;
+                      value = map.get(spanId);
+                      closure_128_1 = value;
                       let startFrames;
                       if (null != value) {
                         startFrames = value.startFrames;
@@ -973,11 +932,10 @@ function updateFullDisplaySpan(arg0, arg1) {
                         c3 = 2;
                         c4 = 3;
                         c5 = 1;
-                        obj1 = { value: null, done: false };
-                        obj1[0] = closure_1_15();
-                        return obj1;
+                        const obj4 = { value: closure_1_15(), done: false };
+                        return obj4;
                       } else {
-                        let debug2 = closure_1_0(closure_1_1[2]).debug;
+                        let debug2 = obj2(tmp4[2]).debug;
                         const _HermesInternal2 = HermesInternal;
                         debug2.log("[TimeToDisplay] No start frames found for span " + spanId + ", skipping frame data collection.");
                       }
@@ -987,64 +945,63 @@ function updateFullDisplaySpan(arg0, arg1) {
                 } else if (1 !== tmp8) {
                   if (2 === tmp8) {
                     c3 = 1;
-                    c3 = closure_2;
-                    let debug = closure_1_0(closure_1_1[2]).debug;
+                    closure_128_3 = closure_2;
+                    let debug = obj2(tmp4[2]).debug;
                     let _HermesInternal = HermesInternal;
-                    debug.log("[TimeToDisplay] Failed to capture end frames for span " + spanId + ".", c3);
+                    debug.log("[TimeToDisplay] Failed to capture end frames for span " + closure_128_0 + ".", closure_128_3);
                   } else if (arg0 === 1) {
                     c5 = 3;
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
                     c3 = 0;
-                    if (c1.cleanupTimeout) {
+                    if (closure_128_1.cleanupTimeout) {
                       const _clearTimeout = clearTimeout;
-                      clearTimeout(c1.cleanupTimeout);
+                      clearTimeout(closure_128_1.cleanupTimeout);
                     }
-                    closure_1_8.delete(spanId);
+                    map.delete(closure_128_0);
                     c5 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
+                    const obj = { value, done: true };
                     return obj;
                   } else {
-                    closure_2 = arg1;
-                    c1.endFrames = closure_2;
-                    (function attachFrameDataToSpan(spanId, startFrames, closure_2) {
-                      const diff = closure_2.totalFrames - startFrames.totalFrames;
-                      const diff1 = closure_2.slowFrames - startFrames.slowFrames;
-                      const diff2 = closure_2.frozenFrames - startFrames.frozenFrames;
+                    closure_128_2 = value;
+                    closure_128_1.endFrames = closure_128_2;
+                    (function attachFrameDataToSpan(spanContext, startFrames, totalFrames2) {
+                      const diff = totalFrames2.totalFrames - startFrames.totalFrames;
+                      const diff1 = totalFrames2.slowFrames - startFrames.slowFrames;
+                      const diff2 = totalFrames2.frozenFrames - startFrames.frozenFrames;
                       if (diff <= 0) {
                         if (diff1 <= 0) {
                           if (diff2 <= 0) {
-                            const debug2 = spanId(_undefined[2]).debug;
+                            const debug2 = closure_1_0(682).debug;
                             const _HermesInternal = HermesInternal;
-                            debug2.warn("[TimeToDisplay] Detected zero slow or frozen frames. Not adding measurements to span (" + spanId.spanContext().spanId + ").");
+                            debug2.warn("[TimeToDisplay] Detected zero slow or frozen frames. Not adding measurements to span (" + spanContext.spanContext().spanId + ").");
                           }
                         }
                       }
-                      const attr = spanId.setAttribute("frames.total", diff);
-                      const attr1 = spanId.setAttribute("frames.slow", diff1);
-                      const attr2 = spanId.setAttribute("frames.frozen", diff2);
-                      const debug = spanId(_undefined[2]).debug;
-                      debug.log("[TimeToDisplay] Attached frame data to span.", { spanId: spanId.spanContext().spanId, frameData: { total: diff, slow: diff1, frozen: diff2 } });
-                    })(spanId, c1.startFrames, closure_2);
-                    const debug3 = closure_1_0(closure_1_1[2]).debug;
+                      const attr = spanContext.setAttribute("frames.total", diff);
+                      const attr1 = spanContext.setAttribute("frames.slow", diff1);
+                      const attr2 = spanContext.setAttribute("frames.frozen", diff2);
+                      const debug = closure_1_0(682).debug;
+                      debug.log("[TimeToDisplay] Attached frame data to span.", { spanId: spanContext.spanContext().spanId, frameData: { total: diff, slow: diff1, frozen: diff2 } });
+                    })(closure_129_0, closure_128_1.startFrames, closure_128_2);
+                    const debug3 = obj2(tmp4[2]).debug;
                     const _HermesInternal3 = HermesInternal;
-                    debug3.log("[TimeToDisplay] Captured and attached end frames for span " + spanId + ".", closure_2);
+                    debug3.log("[TimeToDisplay] Captured and attached end frames for span " + closure_128_0 + ".", closure_128_2);
                     c3 = 1;
                   }
                   c3 = 0;
-                  if (c1.cleanupTimeout) {
+                  if (closure_128_1.cleanupTimeout) {
                     const _clearTimeout2 = clearTimeout;
-                    clearTimeout(c1.cleanupTimeout);
+                    clearTimeout(closure_128_1.cleanupTimeout);
                   }
-                  closure_1_8.delete(spanId);
+                  map.delete(closure_128_0);
                 }
                 c3 = 0;
-                if (closure_1_1.cleanupTimeout) {
+                if (closure_128_1.cleanupTimeout) {
                   const _clearTimeout3 = clearTimeout;
-                  clearTimeout(closure_1_1.cleanupTimeout);
+                  clearTimeout(closure_128_1.cleanupTimeout);
                 }
-                closure_1_8.delete(closure_1_0);
+                map.delete(closure_128_0);
                 throw closure_2;
               } catch (tmp58) {
                 closure_2 = tmp58;
@@ -1059,17 +1016,16 @@ function updateFullDisplaySpan(arg0, arg1) {
               }
             }
           });
-          fn(undefined, undefined, undefined, function*() {
+          fn(undefined, undefined, undefined, function*(arg0, value) {
             if (c5 === 2) {
               c5 = 3;
-              HermesBuiltin.throwTypeError();
+              throw new TypeError("Generator functions may not be called on executing generators");
             } else if (tmp7 === 3) {
               if (arg0 === 1) {
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
-                let obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
+                obj2 = { value, done: true };
+                return obj2;
               } else {
                 return { value: "HermesInternal", done: null };
               }
@@ -1079,22 +1035,21 @@ function updateFullDisplaySpan(arg0, arg1) {
                 if (0 === c4) {
                   if (arg0 === 1) {
                     c5 = 3;
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
                     c5 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
+                    const obj3 = { value, done: true };
+                    return obj3;
                   } else {
-                    c1 = tmp4;
-                    spanId = tmp8;
-                    spanId = undefined;
-                    c1 = undefined;
-                    closure_2 = undefined;
-                    if (closure_1_0(closure_1_1[6]).NATIVE.enableNative) {
-                      spanId = closure_1_0.spanContext().spanId;
-                      const value = closure_1_8.get(spanId);
-                      c1 = value;
+                    obj2 = tmp8;
+                    closure_128_0 = undefined;
+                    closure_128_1 = undefined;
+                    closure_128_2 = undefined;
+                    if (obj2(tmp4[6]).NATIVE.enableNative) {
+                      const spanId = obj2.spanContext().spanId;
+                      closure_128_0 = spanId;
+                      value = map.get(spanId);
+                      closure_128_1 = value;
                       let startFrames;
                       if (null != value) {
                         startFrames = value.startFrames;
@@ -1103,11 +1058,10 @@ function updateFullDisplaySpan(arg0, arg1) {
                         c3 = 2;
                         c4 = 3;
                         c5 = 1;
-                        obj1 = { value: null, done: false };
-                        obj1[0] = closure_1_15();
-                        return obj1;
+                        const obj4 = { value: closure_1_15(), done: false };
+                        return obj4;
                       } else {
-                        let debug2 = closure_1_0(closure_1_1[2]).debug;
+                        let debug2 = obj2(tmp4[2]).debug;
                         const _HermesInternal2 = HermesInternal;
                         debug2.log("[TimeToDisplay] No start frames found for span " + spanId + ", skipping frame data collection.");
                       }
@@ -1117,64 +1071,63 @@ function updateFullDisplaySpan(arg0, arg1) {
                 } else if (1 !== tmp8) {
                   if (2 === tmp8) {
                     c3 = 1;
-                    c3 = closure_2;
-                    let debug = closure_1_0(closure_1_1[2]).debug;
+                    closure_128_3 = closure_2;
+                    let debug = obj2(tmp4[2]).debug;
                     let _HermesInternal = HermesInternal;
-                    debug.log("[TimeToDisplay] Failed to capture end frames for span " + spanId + ".", c3);
+                    debug.log("[TimeToDisplay] Failed to capture end frames for span " + closure_128_0 + ".", closure_128_3);
                   } else if (arg0 === 1) {
                     c5 = 3;
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
                     c3 = 0;
-                    if (c1.cleanupTimeout) {
+                    if (closure_128_1.cleanupTimeout) {
                       const _clearTimeout = clearTimeout;
-                      clearTimeout(c1.cleanupTimeout);
+                      clearTimeout(closure_128_1.cleanupTimeout);
                     }
-                    closure_1_8.delete(spanId);
+                    map.delete(closure_128_0);
                     c5 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
+                    const obj = { value, done: true };
                     return obj;
                   } else {
-                    closure_2 = arg1;
-                    c1.endFrames = closure_2;
-                    (function attachFrameDataToSpan(spanId, startFrames, closure_2) {
-                      const diff = closure_2.totalFrames - startFrames.totalFrames;
-                      const diff1 = closure_2.slowFrames - startFrames.slowFrames;
-                      const diff2 = closure_2.frozenFrames - startFrames.frozenFrames;
+                    closure_128_2 = value;
+                    closure_128_1.endFrames = closure_128_2;
+                    (function attachFrameDataToSpan(spanContext, startFrames, totalFrames2) {
+                      const diff = totalFrames2.totalFrames - startFrames.totalFrames;
+                      const diff1 = totalFrames2.slowFrames - startFrames.slowFrames;
+                      const diff2 = totalFrames2.frozenFrames - startFrames.frozenFrames;
                       if (diff <= 0) {
                         if (diff1 <= 0) {
                           if (diff2 <= 0) {
-                            const debug2 = spanId(_undefined[2]).debug;
+                            const debug2 = closure_1_0(682).debug;
                             const _HermesInternal = HermesInternal;
-                            debug2.warn("[TimeToDisplay] Detected zero slow or frozen frames. Not adding measurements to span (" + spanId.spanContext().spanId + ").");
+                            debug2.warn("[TimeToDisplay] Detected zero slow or frozen frames. Not adding measurements to span (" + spanContext.spanContext().spanId + ").");
                           }
                         }
                       }
-                      const attr = spanId.setAttribute("frames.total", diff);
-                      const attr1 = spanId.setAttribute("frames.slow", diff1);
-                      const attr2 = spanId.setAttribute("frames.frozen", diff2);
-                      const debug = spanId(_undefined[2]).debug;
-                      debug.log("[TimeToDisplay] Attached frame data to span.", { spanId: spanId.spanContext().spanId, frameData: { total: diff, slow: diff1, frozen: diff2 } });
-                    })(spanId, c1.startFrames, closure_2);
-                    const debug3 = closure_1_0(closure_1_1[2]).debug;
+                      const attr = spanContext.setAttribute("frames.total", diff);
+                      const attr1 = spanContext.setAttribute("frames.slow", diff1);
+                      const attr2 = spanContext.setAttribute("frames.frozen", diff2);
+                      const debug = closure_1_0(682).debug;
+                      debug.log("[TimeToDisplay] Attached frame data to span.", { spanId: spanContext.spanContext().spanId, frameData: { total: diff, slow: diff1, frozen: diff2 } });
+                    })(closure_129_0, closure_128_1.startFrames, closure_128_2);
+                    const debug3 = obj2(tmp4[2]).debug;
                     const _HermesInternal3 = HermesInternal;
-                    debug3.log("[TimeToDisplay] Captured and attached end frames for span " + spanId + ".", closure_2);
+                    debug3.log("[TimeToDisplay] Captured and attached end frames for span " + closure_128_0 + ".", closure_128_2);
                     c3 = 1;
                   }
                   c3 = 0;
-                  if (c1.cleanupTimeout) {
+                  if (closure_128_1.cleanupTimeout) {
                     const _clearTimeout2 = clearTimeout;
-                    clearTimeout(c1.cleanupTimeout);
+                    clearTimeout(closure_128_1.cleanupTimeout);
                   }
-                  closure_1_8.delete(spanId);
+                  map.delete(closure_128_0);
                 }
                 c3 = 0;
-                if (closure_1_1.cleanupTimeout) {
+                if (closure_128_1.cleanupTimeout) {
                   const _clearTimeout3 = clearTimeout;
-                  clearTimeout(closure_1_1.cleanupTimeout);
+                  clearTimeout(closure_128_1.cleanupTimeout);
                 }
-                closure_1_8.delete(closure_1_0);
+                map.delete(closure_128_0);
                 throw closure_2;
               } catch (tmp58) {
                 closure_2 = tmp58;
@@ -1189,44 +1142,43 @@ function updateFullDisplaySpan(arg0, arg1) {
               }
             }
           }).then(() => {
-            let tmp3 = callback;
-            if (timestamp > callback) {
+            let tmp3 = closure_0;
+            if (timestamp > closure_0) {
               tmp3 = tmp;
             }
             if (timestamp > tmp2) {
-              const debug = callback(timestamp[2]).debug;
+              const debug = _mod682.debug;
               debug.warn("[TimeToDisplay] Using initial display end. Full display end frame timestamp is before initial display end.");
             }
-            store.end(tmp3);
-            store.setStatus({ code: callback(timestamp[2]).SPAN_STATUS_OK });
-            const debug2 = callback(timestamp[2]).debug;
+            closure_2.end(tmp3);
+            closure_2.setStatus({ code: _mod682.SPAN_STATUS_OK });
+            const debug2 = _mod682.debug;
             debug2.log("[TimeToDisplay] span " + spanToJSONResult.description + " (" + spanToJSONResult.span_id + ") updated with end timestamp and frame data.");
-            const obj = { code: callback(timestamp[2]).SPAN_STATUS_OK };
-            tmp2 = callback;
-            const result = callback(timestamp[5]).setSpanDurationAsMeasurement("time_to_full_display", store);
-          }).catch((arg0) => {
-            const debug = callback(timestamp[2]).debug;
-            debug.log("[TimeToDisplay] Failed to capture frame data for full display span.", arg0);
-            let tmp4 = callback;
-            if (timestamp > callback) {
+            const obj = { code: _mod682.SPAN_STATUS_OK };
+            tmp2 = closure_0;
+            const result = _mod1021.setSpanDurationAsMeasurement("time_to_full_display", closure_2);
+          }).catch((error) => {
+            const debug = _mod682.debug;
+            debug.log("[TimeToDisplay] Failed to capture frame data for full display span.", error);
+            let tmp4 = closure_0;
+            if (timestamp > closure_0) {
               tmp4 = timestamp;
             }
-            store.end(tmp4);
-            store.setStatus({ code: callback(timestamp[2]).SPAN_STATUS_OK });
-            const obj = { code: callback(timestamp[2]).SPAN_STATUS_OK };
-            const result = callback(timestamp[5]).setSpanDurationAsMeasurement("time_to_full_display", store);
+            closure_2.end(tmp4);
+            closure_2.setStatus({ code: _mod682.SPAN_STATUS_OK });
+            const obj = { code: _mod682.SPAN_STATUS_OK };
+            const result = _mod1021.setSpanDurationAsMeasurement("time_to_full_display", closure_2);
           });
-          const nextPromise = fn(undefined, undefined, undefined, function*() {
+          const nextPromise = fn(undefined, undefined, undefined, function*(arg0, value) {
             if (c5 === 2) {
               c5 = 3;
-              HermesBuiltin.throwTypeError();
+              throw new TypeError("Generator functions may not be called on executing generators");
             } else if (tmp7 === 3) {
               if (arg0 === 1) {
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
-                let obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
+                obj2 = { value, done: true };
+                return obj2;
               } else {
                 return { value: "HermesInternal", done: null };
               }
@@ -1236,22 +1188,21 @@ function updateFullDisplaySpan(arg0, arg1) {
                 if (0 === c4) {
                   if (arg0 === 1) {
                     c5 = 3;
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
                     c5 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
+                    const obj3 = { value, done: true };
+                    return obj3;
                   } else {
-                    c1 = tmp4;
-                    spanId = tmp8;
-                    spanId = undefined;
-                    c1 = undefined;
-                    closure_2 = undefined;
-                    if (closure_1_0(closure_1_1[6]).NATIVE.enableNative) {
-                      spanId = closure_1_0.spanContext().spanId;
-                      const value = closure_1_8.get(spanId);
-                      c1 = value;
+                    obj2 = tmp8;
+                    closure_128_0 = undefined;
+                    closure_128_1 = undefined;
+                    closure_128_2 = undefined;
+                    if (obj2(tmp4[6]).NATIVE.enableNative) {
+                      const spanId = obj2.spanContext().spanId;
+                      closure_128_0 = spanId;
+                      value = map.get(spanId);
+                      closure_128_1 = value;
                       let startFrames;
                       if (null != value) {
                         startFrames = value.startFrames;
@@ -1260,11 +1211,10 @@ function updateFullDisplaySpan(arg0, arg1) {
                         c3 = 2;
                         c4 = 3;
                         c5 = 1;
-                        obj1 = { value: null, done: false };
-                        obj1[0] = closure_1_15();
-                        return obj1;
+                        const obj4 = { value: closure_1_15(), done: false };
+                        return obj4;
                       } else {
-                        let debug2 = closure_1_0(closure_1_1[2]).debug;
+                        let debug2 = obj2(tmp4[2]).debug;
                         const _HermesInternal2 = HermesInternal;
                         debug2.log("[TimeToDisplay] No start frames found for span " + spanId + ", skipping frame data collection.");
                       }
@@ -1274,64 +1224,63 @@ function updateFullDisplaySpan(arg0, arg1) {
                 } else if (1 !== tmp8) {
                   if (2 === tmp8) {
                     c3 = 1;
-                    c3 = closure_2;
-                    let debug = closure_1_0(closure_1_1[2]).debug;
+                    closure_128_3 = closure_2;
+                    let debug = obj2(tmp4[2]).debug;
                     let _HermesInternal = HermesInternal;
-                    debug.log("[TimeToDisplay] Failed to capture end frames for span " + spanId + ".", c3);
+                    debug.log("[TimeToDisplay] Failed to capture end frames for span " + closure_128_0 + ".", closure_128_3);
                   } else if (arg0 === 1) {
                     c5 = 3;
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
                     c3 = 0;
-                    if (c1.cleanupTimeout) {
+                    if (closure_128_1.cleanupTimeout) {
                       const _clearTimeout = clearTimeout;
-                      clearTimeout(c1.cleanupTimeout);
+                      clearTimeout(closure_128_1.cleanupTimeout);
                     }
-                    closure_1_8.delete(spanId);
+                    map.delete(closure_128_0);
                     c5 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
+                    const obj = { value, done: true };
                     return obj;
                   } else {
-                    closure_2 = arg1;
-                    c1.endFrames = closure_2;
-                    (function attachFrameDataToSpan(spanId, startFrames, closure_2) {
-                      const diff = closure_2.totalFrames - startFrames.totalFrames;
-                      const diff1 = closure_2.slowFrames - startFrames.slowFrames;
-                      const diff2 = closure_2.frozenFrames - startFrames.frozenFrames;
+                    closure_128_2 = value;
+                    closure_128_1.endFrames = closure_128_2;
+                    (function attachFrameDataToSpan(spanContext, startFrames, totalFrames2) {
+                      const diff = totalFrames2.totalFrames - startFrames.totalFrames;
+                      const diff1 = totalFrames2.slowFrames - startFrames.slowFrames;
+                      const diff2 = totalFrames2.frozenFrames - startFrames.frozenFrames;
                       if (diff <= 0) {
                         if (diff1 <= 0) {
                           if (diff2 <= 0) {
-                            const debug2 = spanId(_undefined[2]).debug;
+                            const debug2 = closure_1_0(682).debug;
                             const _HermesInternal = HermesInternal;
-                            debug2.warn("[TimeToDisplay] Detected zero slow or frozen frames. Not adding measurements to span (" + spanId.spanContext().spanId + ").");
+                            debug2.warn("[TimeToDisplay] Detected zero slow or frozen frames. Not adding measurements to span (" + spanContext.spanContext().spanId + ").");
                           }
                         }
                       }
-                      const attr = spanId.setAttribute("frames.total", diff);
-                      const attr1 = spanId.setAttribute("frames.slow", diff1);
-                      const attr2 = spanId.setAttribute("frames.frozen", diff2);
-                      const debug = spanId(_undefined[2]).debug;
-                      debug.log("[TimeToDisplay] Attached frame data to span.", { spanId: spanId.spanContext().spanId, frameData: { total: diff, slow: diff1, frozen: diff2 } });
-                    })(spanId, c1.startFrames, closure_2);
-                    const debug3 = closure_1_0(closure_1_1[2]).debug;
+                      const attr = spanContext.setAttribute("frames.total", diff);
+                      const attr1 = spanContext.setAttribute("frames.slow", diff1);
+                      const attr2 = spanContext.setAttribute("frames.frozen", diff2);
+                      const debug = closure_1_0(682).debug;
+                      debug.log("[TimeToDisplay] Attached frame data to span.", { spanId: spanContext.spanContext().spanId, frameData: { total: diff, slow: diff1, frozen: diff2 } });
+                    })(closure_129_0, closure_128_1.startFrames, closure_128_2);
+                    const debug3 = obj2(tmp4[2]).debug;
                     const _HermesInternal3 = HermesInternal;
-                    debug3.log("[TimeToDisplay] Captured and attached end frames for span " + spanId + ".", closure_2);
+                    debug3.log("[TimeToDisplay] Captured and attached end frames for span " + closure_128_0 + ".", closure_128_2);
                     c3 = 1;
                   }
                   c3 = 0;
-                  if (c1.cleanupTimeout) {
+                  if (closure_128_1.cleanupTimeout) {
                     const _clearTimeout2 = clearTimeout;
-                    clearTimeout(c1.cleanupTimeout);
+                    clearTimeout(closure_128_1.cleanupTimeout);
                   }
-                  closure_1_8.delete(spanId);
+                  map.delete(closure_128_0);
                 }
                 c3 = 0;
-                if (closure_1_1.cleanupTimeout) {
+                if (closure_128_1.cleanupTimeout) {
                   const _clearTimeout3 = clearTimeout;
-                  clearTimeout(closure_1_1.cleanupTimeout);
+                  clearTimeout(closure_128_1.cleanupTimeout);
                 }
-                closure_1_8.delete(closure_1_0);
+                map.delete(closure_128_0);
                 throw closure_2;
               } catch (tmp58) {
                 closure_2 = tmp58;
@@ -1346,25 +1295,25 @@ function updateFullDisplaySpan(arg0, arg1) {
               }
             }
           }).then(() => {
-            let tmp3 = callback;
-            if (timestamp > callback) {
+            let tmp3 = closure_0;
+            if (timestamp > closure_0) {
               tmp3 = tmp;
             }
             if (timestamp > tmp2) {
-              const debug = callback(timestamp[2]).debug;
+              const debug = _mod682.debug;
               debug.warn("[TimeToDisplay] Using initial display end. Full display end frame timestamp is before initial display end.");
             }
-            store.end(tmp3);
-            store.setStatus({ code: callback(timestamp[2]).SPAN_STATUS_OK });
-            const debug2 = callback(timestamp[2]).debug;
+            closure_2.end(tmp3);
+            closure_2.setStatus({ code: _mod682.SPAN_STATUS_OK });
+            const debug2 = _mod682.debug;
             debug2.log("[TimeToDisplay] span " + spanToJSONResult.description + " (" + spanToJSONResult.span_id + ") updated with end timestamp and frame data.");
-            const obj = { code: callback(timestamp[2]).SPAN_STATUS_OK };
-            tmp2 = callback;
-            const result = callback(timestamp[5]).setSpanDurationAsMeasurement("time_to_full_display", store);
+            const obj = { code: _mod682.SPAN_STATUS_OK };
+            tmp2 = closure_0;
+            const result = _mod1021.setSpanDurationAsMeasurement("time_to_full_display", closure_2);
           });
         }
       } else {
-        const debug3 = tmpResult1.debug;
+        const debug3 = tmpResult4.debug;
         debug3.warn("[TimeToDisplay] No TimeToFullDisplay span found or created, possibly performance is disabled.");
       }
     } else {
@@ -1380,26 +1329,26 @@ function updateFullDisplaySpan(arg0, arg1) {
 }
 function fetchNativeFramesWithTimeout() {
   return new Promise((arg0, arg1) => {
-    const callback = arg0;
-    const table = arg1;
+    closure_0 = arg0;
+    closure_1 = arg1;
     c2 = false;
     const timeout = setTimeout(() => {
       if (!c2) {
         c2 = true;
-        callback2("Fetching native frames took too long. Dropping frames.");
+        closure_1("Fetching native frames took too long. Dropping frames.");
       }
     }, 2000);
-    const NATIVE = callback(table[6]).NATIVE;
+    const NATIVE = require("NativeModules").NATIVE;
     const nativeFrames = NATIVE.fetchNativeFrames();
-    nativeFrames.then((arg0) => {
+    nativeFrames.then((result) => {
       if (!c2) {
         const _clearTimeout = clearTimeout;
         clearTimeout(closure_3);
         c2 = true;
-        if (arg0) {
-          callback(arg0);
+        if (result) {
+          closure_0(result);
         } else {
-          callback2("Native frames response is null.");
+          closure_1("Native frames response is null.");
         }
       }
     }).then(undefined, (arg0) => {
@@ -1407,12 +1356,13 @@ function fetchNativeFramesWithTimeout() {
         const _clearTimeout = clearTimeout;
         clearTimeout(closure_3);
         c2 = true;
-        callback2(arg0);
+        closure_1(arg0);
       }
     });
   });
 }
-let fn = this;
+const useState = fn(19).useState;
+fn = this;
 if (this) {
   fn = this.__awaiter;
 }
@@ -1425,36 +1375,36 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((arg0, arg1) => {
-      closure_0 = arg0;
+    return new _Promise((fn, arg1) => {
+      closure_0 = fn;
       closure_1 = arg1;
-      function fulfilled(arg0) {
+      function fulfilled(result) {
         try {
-          step(iter.next(arg0));
+          step(iter.next(result));
         } catch (tmp5) {
-          callback2(tmp5);
+          closure_1(tmp5);
         }
       }
       function rejected(arg0) {
         try {
           step(iter.throw(arg0));
         } catch (tmp5) {
-          callback2(tmp5);
+          closure_1(tmp5);
         }
       }
       let iter = rejected;
       function step(done) {
         if (done.done) {
-          callback(done.value);
+          closure_0(done.value);
         } else {
-          let tmp = done.value;
-          callback = tmp;
-          if (!(tmp instanceof fulfilled)) {
-            tmp = new tmp((arg0) => {
-              arg0(closure_0);
+          let tmp1 = done.value;
+          closure_0 = tmp1;
+          if (!(tmp1 instanceof Promise)) {
+            tmp1 = new tmp((fn) => {
+              fn(value);
             });
           }
-          tmp.then(fulfilled, iter);
+          tmp1.then(fulfilled, iter);
         }
       }
       let items = closure_1;
@@ -1463,21 +1413,20 @@ if (!fn) {
       }
       iter = iter.apply(closure_0, items);
       const iter2 = iter.next();
-      const value = iter2.value;
+      value = iter2.value;
       if (iter2.done) {
-        arg0(value);
+        fn(value);
       } else {
         closure_0 = value;
-        let tmp3 = value;
+        let tmp32 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((arg0) => {
-            arg0(closure_0);
+          tmp32 = new tmp3((fn) => {
+            fn(value);
           });
         }
-        tmp3.then(fulfilled, rejected);
+        tmp32.then(fulfilled, rejected);
       }
     });
-    return _Promise;
   };
 }
 const weakMap = new WeakMap();
@@ -1490,43 +1439,41 @@ export { TimeToFullDisplay };
 export { startTimeToInitialDisplaySpan };
 export { startTimeToFullDisplaySpan };
 export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) {
-  let span = arg0;
+  _require = arg0;
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
   let activeSpan = obj.activeSpan;
   if (activeSpan === undefined) {
-    activeSpan = span(activeSpan[2]).getActiveSpan();
-    const obj2 = span(activeSpan[2]);
+    activeSpan = require("module_682").getActiveSpan();
+    let obj2 = require("module_682");
   }
-  span = obj.span;
+  let span = obj.span;
   if (span === undefined) {
     span = startTimeToInitialDisplaySpan();
   }
-  let obj3 = span(activeSpan[2]);
+  let obj3 = require("module_682");
   if (span) {
     if (activeSpan) {
-      let tmp4Result = tmp4(tmp5[2]);
       if (obj3.spanToJSON(span).parent_span_id === tmp4Result.spanToJSON(activeSpan).span_id) {
-        tmp4Result = tmp4(tmp5[2]);
-        if (tmp4Result.spanToJSON(span).timestamp) {
+        if (tmp4Result3.spanToJSON(span).timestamp) {
           const debug4 = tmp4(tmp5[2]).debug;
           let _HermesInternal = HermesInternal;
           debug4.warn("[TimeToDisplay] " + tmp4(tmp5[2]).spanToJSON(span).description + " span already ended.");
-          const tmp4Result1 = tmp4(tmp5[2]);
+          const tmp4Result4 = tmp4(tmp5[2]);
         } else {
-          const promise = fn(undefined, undefined, undefined, function*() {
+          closure_129_0 = span;
+          const promise = fn(undefined, undefined, undefined, function*(arg0, value) {
             if (c5 === 2) {
               c5 = 3;
-              HermesBuiltin.throwTypeError();
+              throw new TypeError("Generator functions may not be called on executing generators");
             } else if (tmp7 === 3) {
               if (arg0 === 1) {
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
-                let obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
+                obj2 = { value, done: true };
+                return obj2;
               } else {
                 return { value: "HermesInternal", done: null };
               }
@@ -1536,22 +1483,21 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
                 if (0 === c4) {
                   if (arg0 === 1) {
                     c5 = 3;
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
                     c5 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
+                    const obj3 = { value, done: true };
+                    return obj3;
                   } else {
-                    c1 = tmp4;
-                    spanId = tmp8;
-                    spanId = undefined;
-                    c1 = undefined;
-                    closure_2 = undefined;
-                    if (closure_1_0(closure_1_1[6]).NATIVE.enableNative) {
-                      spanId = closure_1_0.spanContext().spanId;
-                      const value = closure_1_8.get(spanId);
-                      c1 = value;
+                    obj2 = tmp8;
+                    closure_128_0 = undefined;
+                    closure_128_1 = undefined;
+                    closure_128_2 = undefined;
+                    if (obj2(tmp4[6]).NATIVE.enableNative) {
+                      const spanId = obj2.spanContext().spanId;
+                      closure_128_0 = spanId;
+                      value = map.get(spanId);
+                      closure_128_1 = value;
                       let startFrames;
                       if (null != value) {
                         startFrames = value.startFrames;
@@ -1560,11 +1506,10 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
                         c3 = 2;
                         c4 = 3;
                         c5 = 1;
-                        obj1 = { value: null, done: false };
-                        obj1[0] = closure_1_15();
-                        return obj1;
+                        const obj4 = { value: closure_1_15(), done: false };
+                        return obj4;
                       } else {
-                        let debug2 = closure_1_0(closure_1_1[2]).debug;
+                        let debug2 = obj2(tmp4[2]).debug;
                         const _HermesInternal2 = HermesInternal;
                         debug2.log("[TimeToDisplay] No start frames found for span " + spanId + ", skipping frame data collection.");
                       }
@@ -1574,64 +1519,63 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
                 } else if (1 !== tmp8) {
                   if (2 === tmp8) {
                     c3 = 1;
-                    c3 = closure_2;
-                    let debug = closure_1_0(closure_1_1[2]).debug;
+                    closure_128_3 = closure_2;
+                    let debug = obj2(tmp4[2]).debug;
                     let _HermesInternal = HermesInternal;
-                    debug.log("[TimeToDisplay] Failed to capture end frames for span " + spanId + ".", c3);
+                    debug.log("[TimeToDisplay] Failed to capture end frames for span " + closure_128_0 + ".", closure_128_3);
                   } else if (arg0 === 1) {
                     c5 = 3;
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
                     c3 = 0;
-                    if (c1.cleanupTimeout) {
+                    if (closure_128_1.cleanupTimeout) {
                       const _clearTimeout = clearTimeout;
-                      clearTimeout(c1.cleanupTimeout);
+                      clearTimeout(closure_128_1.cleanupTimeout);
                     }
-                    closure_1_8.delete(spanId);
+                    map.delete(closure_128_0);
                     c5 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
+                    const obj = { value, done: true };
                     return obj;
                   } else {
-                    closure_2 = arg1;
-                    c1.endFrames = closure_2;
-                    (function attachFrameDataToSpan(spanId, startFrames, closure_2) {
-                      const diff = closure_2.totalFrames - startFrames.totalFrames;
-                      const diff1 = closure_2.slowFrames - startFrames.slowFrames;
-                      const diff2 = closure_2.frozenFrames - startFrames.frozenFrames;
+                    closure_128_2 = value;
+                    closure_128_1.endFrames = closure_128_2;
+                    (function attachFrameDataToSpan(spanContext, startFrames, totalFrames2) {
+                      const diff = totalFrames2.totalFrames - startFrames.totalFrames;
+                      const diff1 = totalFrames2.slowFrames - startFrames.slowFrames;
+                      const diff2 = totalFrames2.frozenFrames - startFrames.frozenFrames;
                       if (diff <= 0) {
                         if (diff1 <= 0) {
                           if (diff2 <= 0) {
-                            const debug2 = spanId(_undefined[2]).debug;
+                            const debug2 = closure_1_0(682).debug;
                             const _HermesInternal = HermesInternal;
-                            debug2.warn("[TimeToDisplay] Detected zero slow or frozen frames. Not adding measurements to span (" + spanId.spanContext().spanId + ").");
+                            debug2.warn("[TimeToDisplay] Detected zero slow or frozen frames. Not adding measurements to span (" + spanContext.spanContext().spanId + ").");
                           }
                         }
                       }
-                      const attr = spanId.setAttribute("frames.total", diff);
-                      const attr1 = spanId.setAttribute("frames.slow", diff1);
-                      const attr2 = spanId.setAttribute("frames.frozen", diff2);
-                      const debug = spanId(_undefined[2]).debug;
-                      debug.log("[TimeToDisplay] Attached frame data to span.", { spanId: spanId.spanContext().spanId, frameData: { total: diff, slow: diff1, frozen: diff2 } });
-                    })(spanId, c1.startFrames, closure_2);
-                    const debug3 = closure_1_0(closure_1_1[2]).debug;
+                      const attr = spanContext.setAttribute("frames.total", diff);
+                      const attr1 = spanContext.setAttribute("frames.slow", diff1);
+                      const attr2 = spanContext.setAttribute("frames.frozen", diff2);
+                      const debug = closure_1_0(682).debug;
+                      debug.log("[TimeToDisplay] Attached frame data to span.", { spanId: spanContext.spanContext().spanId, frameData: { total: diff, slow: diff1, frozen: diff2 } });
+                    })(closure_129_0, closure_128_1.startFrames, closure_128_2);
+                    const debug3 = obj2(tmp4[2]).debug;
                     const _HermesInternal3 = HermesInternal;
-                    debug3.log("[TimeToDisplay] Captured and attached end frames for span " + spanId + ".", closure_2);
+                    debug3.log("[TimeToDisplay] Captured and attached end frames for span " + closure_128_0 + ".", closure_128_2);
                     c3 = 1;
                   }
                   c3 = 0;
-                  if (c1.cleanupTimeout) {
+                  if (closure_128_1.cleanupTimeout) {
                     const _clearTimeout2 = clearTimeout;
-                    clearTimeout(c1.cleanupTimeout);
+                    clearTimeout(closure_128_1.cleanupTimeout);
                   }
-                  closure_1_8.delete(spanId);
+                  map.delete(closure_128_0);
                 }
                 c3 = 0;
-                if (closure_1_1.cleanupTimeout) {
+                if (closure_128_1.cleanupTimeout) {
                   const _clearTimeout3 = clearTimeout;
-                  clearTimeout(closure_1_1.cleanupTimeout);
+                  clearTimeout(closure_128_1.cleanupTimeout);
                 }
-                closure_1_8.delete(closure_1_0);
+                map.delete(closure_128_0);
                 throw closure_2;
               } catch (tmp58) {
                 closure_2 = tmp58;
@@ -1646,17 +1590,16 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
               }
             }
           });
-          fn(undefined, undefined, undefined, function*() {
+          fn(undefined, undefined, undefined, function*(arg0, value) {
             if (c5 === 2) {
               c5 = 3;
-              HermesBuiltin.throwTypeError();
+              throw new TypeError("Generator functions may not be called on executing generators");
             } else if (tmp7 === 3) {
               if (arg0 === 1) {
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
-                let obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
+                obj2 = { value, done: true };
+                return obj2;
               } else {
                 return { value: "HermesInternal", done: null };
               }
@@ -1666,22 +1609,21 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
                 if (0 === c4) {
                   if (arg0 === 1) {
                     c5 = 3;
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
                     c5 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
+                    const obj3 = { value, done: true };
+                    return obj3;
                   } else {
-                    c1 = tmp4;
-                    spanId = tmp8;
-                    spanId = undefined;
-                    c1 = undefined;
-                    closure_2 = undefined;
-                    if (closure_1_0(closure_1_1[6]).NATIVE.enableNative) {
-                      spanId = closure_1_0.spanContext().spanId;
-                      const value = closure_1_8.get(spanId);
-                      c1 = value;
+                    obj2 = tmp8;
+                    closure_128_0 = undefined;
+                    closure_128_1 = undefined;
+                    closure_128_2 = undefined;
+                    if (obj2(tmp4[6]).NATIVE.enableNative) {
+                      const spanId = obj2.spanContext().spanId;
+                      closure_128_0 = spanId;
+                      value = map.get(spanId);
+                      closure_128_1 = value;
                       let startFrames;
                       if (null != value) {
                         startFrames = value.startFrames;
@@ -1690,11 +1632,10 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
                         c3 = 2;
                         c4 = 3;
                         c5 = 1;
-                        obj1 = { value: null, done: false };
-                        obj1[0] = closure_1_15();
-                        return obj1;
+                        const obj4 = { value: closure_1_15(), done: false };
+                        return obj4;
                       } else {
-                        let debug2 = closure_1_0(closure_1_1[2]).debug;
+                        let debug2 = obj2(tmp4[2]).debug;
                         const _HermesInternal2 = HermesInternal;
                         debug2.log("[TimeToDisplay] No start frames found for span " + spanId + ", skipping frame data collection.");
                       }
@@ -1704,64 +1645,63 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
                 } else if (1 !== tmp8) {
                   if (2 === tmp8) {
                     c3 = 1;
-                    c3 = closure_2;
-                    let debug = closure_1_0(closure_1_1[2]).debug;
+                    closure_128_3 = closure_2;
+                    let debug = obj2(tmp4[2]).debug;
                     let _HermesInternal = HermesInternal;
-                    debug.log("[TimeToDisplay] Failed to capture end frames for span " + spanId + ".", c3);
+                    debug.log("[TimeToDisplay] Failed to capture end frames for span " + closure_128_0 + ".", closure_128_3);
                   } else if (arg0 === 1) {
                     c5 = 3;
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
                     c3 = 0;
-                    if (c1.cleanupTimeout) {
+                    if (closure_128_1.cleanupTimeout) {
                       const _clearTimeout = clearTimeout;
-                      clearTimeout(c1.cleanupTimeout);
+                      clearTimeout(closure_128_1.cleanupTimeout);
                     }
-                    closure_1_8.delete(spanId);
+                    map.delete(closure_128_0);
                     c5 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
+                    const obj = { value, done: true };
                     return obj;
                   } else {
-                    closure_2 = arg1;
-                    c1.endFrames = closure_2;
-                    (function attachFrameDataToSpan(spanId, startFrames, closure_2) {
-                      const diff = closure_2.totalFrames - startFrames.totalFrames;
-                      const diff1 = closure_2.slowFrames - startFrames.slowFrames;
-                      const diff2 = closure_2.frozenFrames - startFrames.frozenFrames;
+                    closure_128_2 = value;
+                    closure_128_1.endFrames = closure_128_2;
+                    (function attachFrameDataToSpan(spanContext, startFrames, totalFrames2) {
+                      const diff = totalFrames2.totalFrames - startFrames.totalFrames;
+                      const diff1 = totalFrames2.slowFrames - startFrames.slowFrames;
+                      const diff2 = totalFrames2.frozenFrames - startFrames.frozenFrames;
                       if (diff <= 0) {
                         if (diff1 <= 0) {
                           if (diff2 <= 0) {
-                            const debug2 = spanId(_undefined[2]).debug;
+                            const debug2 = closure_1_0(682).debug;
                             const _HermesInternal = HermesInternal;
-                            debug2.warn("[TimeToDisplay] Detected zero slow or frozen frames. Not adding measurements to span (" + spanId.spanContext().spanId + ").");
+                            debug2.warn("[TimeToDisplay] Detected zero slow or frozen frames. Not adding measurements to span (" + spanContext.spanContext().spanId + ").");
                           }
                         }
                       }
-                      const attr = spanId.setAttribute("frames.total", diff);
-                      const attr1 = spanId.setAttribute("frames.slow", diff1);
-                      const attr2 = spanId.setAttribute("frames.frozen", diff2);
-                      const debug = spanId(_undefined[2]).debug;
-                      debug.log("[TimeToDisplay] Attached frame data to span.", { spanId: spanId.spanContext().spanId, frameData: { total: diff, slow: diff1, frozen: diff2 } });
-                    })(spanId, c1.startFrames, closure_2);
-                    const debug3 = closure_1_0(closure_1_1[2]).debug;
+                      const attr = spanContext.setAttribute("frames.total", diff);
+                      const attr1 = spanContext.setAttribute("frames.slow", diff1);
+                      const attr2 = spanContext.setAttribute("frames.frozen", diff2);
+                      const debug = closure_1_0(682).debug;
+                      debug.log("[TimeToDisplay] Attached frame data to span.", { spanId: spanContext.spanContext().spanId, frameData: { total: diff, slow: diff1, frozen: diff2 } });
+                    })(closure_129_0, closure_128_1.startFrames, closure_128_2);
+                    const debug3 = obj2(tmp4[2]).debug;
                     const _HermesInternal3 = HermesInternal;
-                    debug3.log("[TimeToDisplay] Captured and attached end frames for span " + spanId + ".", closure_2);
+                    debug3.log("[TimeToDisplay] Captured and attached end frames for span " + closure_128_0 + ".", closure_128_2);
                     c3 = 1;
                   }
                   c3 = 0;
-                  if (c1.cleanupTimeout) {
+                  if (closure_128_1.cleanupTimeout) {
                     const _clearTimeout2 = clearTimeout;
-                    clearTimeout(c1.cleanupTimeout);
+                    clearTimeout(closure_128_1.cleanupTimeout);
                   }
-                  closure_1_8.delete(spanId);
+                  map.delete(closure_128_0);
                 }
                 c3 = 0;
-                if (closure_1_1.cleanupTimeout) {
+                if (closure_128_1.cleanupTimeout) {
                   const _clearTimeout3 = clearTimeout;
-                  clearTimeout(closure_1_1.cleanupTimeout);
+                  clearTimeout(closure_128_1.cleanupTimeout);
                 }
-                closure_1_8.delete(closure_1_0);
+                map.delete(closure_128_0);
                 throw closure_2;
               } catch (tmp58) {
                 closure_2 = tmp58;
@@ -1776,50 +1716,48 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
               }
             }
           }).then(() => {
-            let obj = span;
-            span.end(span);
-            obj = { code: span(activeSpan[2]).SPAN_STATUS_OK };
-            span.setStatus(obj);
-            const debug = span(activeSpan[2]).debug;
-            debug.log("[TimeToDisplay] " + span(activeSpan[2]).spanToJSON(span).description + " span updated with end timestamp and frame data.");
-            if (closure_1_7.has(activeSpan)) {
+            span.end(closure_0);
+            span.setStatus({ code: _mod682.SPAN_STATUS_OK });
+            const debug = _mod682.debug;
+            const obj2 = { code: _mod682.SPAN_STATUS_OK };
+            const tmp = closure_0;
+            debug.log("[TimeToDisplay] " + _mod682.spanToJSON(span).description + " span updated with end timestamp and frame data.");
+            if (weakMap1.has(activeSpan)) {
               obj4.delete(tmp7);
-              const debug2 = tmp3(tmp4[2]).debug;
+              const debug2 = tmp3(682).debug;
               const _HermesInternal = HermesInternal;
               debug2.log("[TimeToDisplay] Updating full display with initial display (" + obj.spanContext().spanId + ") end.");
-              closure_1_14(tmp, obj);
+              updateFullDisplaySpan(tmp, obj);
             }
-            const obj3 = span(activeSpan[2]);
-            obj4 = closure_1_7;
-            tmp = span;
-            const result = span(activeSpan[5]).setSpanDurationAsMeasurementOnSpan("time_to_initial_display", obj, tmp7);
-          }).catch((arg0) => {
-            const debug = span(activeSpan[2]).debug;
-            debug.log("[TimeToDisplay] Failed to capture frame data for initial display span.", arg0);
-            let obj = span;
-            span.end(span);
-            obj = { code: span(activeSpan[2]).SPAN_STATUS_OK };
-            span.setStatus(obj);
-            if (closure_1_7.has(activeSpan)) {
-              closure_1_7.delete(tmp7);
-              const debug2 = tmp(tmp2[2]).debug;
+            obj4 = weakMap1;
+            const result = _mod1021.setSpanDurationAsMeasurementOnSpan("time_to_initial_display", obj, tmp7);
+          }).catch((error) => {
+            const debug = _mod682.debug;
+            debug.log("[TimeToDisplay] Failed to capture frame data for initial display span.", error);
+            span.end(closure_0);
+            span.setStatus({ code: _mod682.SPAN_STATUS_OK });
+            if (weakMap1.has(activeSpan)) {
+              obj3.delete(tmp7);
+              const debug2 = tmp(682).debug;
               const _HermesInternal = HermesInternal;
               debug2.log("[TimeToDisplay] Updating full display with initial display (" + obj.spanContext().spanId + ") end.");
-              closure_1_14(span, obj);
+              updateFullDisplaySpan(tmp4, obj);
             }
-            const result = span(activeSpan[5]).setSpanDurationAsMeasurementOnSpan("time_to_initial_display", obj, tmp7);
+            const obj2 = { code: _mod682.SPAN_STATUS_OK };
+            obj3 = weakMap1;
+            tmp4 = closure_0;
+            const result = _mod1021.setSpanDurationAsMeasurementOnSpan("time_to_initial_display", obj, tmp7);
           });
-          const nextPromise = fn(undefined, undefined, undefined, function*() {
+          const nextPromise = fn(undefined, undefined, undefined, function*(arg0, value) {
             if (c5 === 2) {
               c5 = 3;
-              HermesBuiltin.throwTypeError();
+              throw new TypeError("Generator functions may not be called on executing generators");
             } else if (tmp7 === 3) {
               if (arg0 === 1) {
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
-                let obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
+                obj2 = { value, done: true };
+                return obj2;
               } else {
                 return { value: "HermesInternal", done: null };
               }
@@ -1829,22 +1767,21 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
                 if (0 === c4) {
                   if (arg0 === 1) {
                     c5 = 3;
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
                     c5 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
+                    const obj3 = { value, done: true };
+                    return obj3;
                   } else {
-                    c1 = tmp4;
-                    spanId = tmp8;
-                    spanId = undefined;
-                    c1 = undefined;
-                    closure_2 = undefined;
-                    if (closure_1_0(closure_1_1[6]).NATIVE.enableNative) {
-                      spanId = closure_1_0.spanContext().spanId;
-                      const value = closure_1_8.get(spanId);
-                      c1 = value;
+                    obj2 = tmp8;
+                    closure_128_0 = undefined;
+                    closure_128_1 = undefined;
+                    closure_128_2 = undefined;
+                    if (obj2(tmp4[6]).NATIVE.enableNative) {
+                      const spanId = obj2.spanContext().spanId;
+                      closure_128_0 = spanId;
+                      value = map.get(spanId);
+                      closure_128_1 = value;
                       let startFrames;
                       if (null != value) {
                         startFrames = value.startFrames;
@@ -1853,11 +1790,10 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
                         c3 = 2;
                         c4 = 3;
                         c5 = 1;
-                        obj1 = { value: null, done: false };
-                        obj1[0] = closure_1_15();
-                        return obj1;
+                        const obj4 = { value: closure_1_15(), done: false };
+                        return obj4;
                       } else {
-                        let debug2 = closure_1_0(closure_1_1[2]).debug;
+                        let debug2 = obj2(tmp4[2]).debug;
                         const _HermesInternal2 = HermesInternal;
                         debug2.log("[TimeToDisplay] No start frames found for span " + spanId + ", skipping frame data collection.");
                       }
@@ -1867,64 +1803,63 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
                 } else if (1 !== tmp8) {
                   if (2 === tmp8) {
                     c3 = 1;
-                    c3 = closure_2;
-                    let debug = closure_1_0(closure_1_1[2]).debug;
+                    closure_128_3 = closure_2;
+                    let debug = obj2(tmp4[2]).debug;
                     let _HermesInternal = HermesInternal;
-                    debug.log("[TimeToDisplay] Failed to capture end frames for span " + spanId + ".", c3);
+                    debug.log("[TimeToDisplay] Failed to capture end frames for span " + closure_128_0 + ".", closure_128_3);
                   } else if (arg0 === 1) {
                     c5 = 3;
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
                     c3 = 0;
-                    if (c1.cleanupTimeout) {
+                    if (closure_128_1.cleanupTimeout) {
                       const _clearTimeout = clearTimeout;
-                      clearTimeout(c1.cleanupTimeout);
+                      clearTimeout(closure_128_1.cleanupTimeout);
                     }
-                    closure_1_8.delete(spanId);
+                    map.delete(closure_128_0);
                     c5 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
+                    const obj = { value, done: true };
                     return obj;
                   } else {
-                    closure_2 = arg1;
-                    c1.endFrames = closure_2;
-                    (function attachFrameDataToSpan(spanId, startFrames, closure_2) {
-                      const diff = closure_2.totalFrames - startFrames.totalFrames;
-                      const diff1 = closure_2.slowFrames - startFrames.slowFrames;
-                      const diff2 = closure_2.frozenFrames - startFrames.frozenFrames;
+                    closure_128_2 = value;
+                    closure_128_1.endFrames = closure_128_2;
+                    (function attachFrameDataToSpan(spanContext, startFrames, totalFrames2) {
+                      const diff = totalFrames2.totalFrames - startFrames.totalFrames;
+                      const diff1 = totalFrames2.slowFrames - startFrames.slowFrames;
+                      const diff2 = totalFrames2.frozenFrames - startFrames.frozenFrames;
                       if (diff <= 0) {
                         if (diff1 <= 0) {
                           if (diff2 <= 0) {
-                            const debug2 = spanId(_undefined[2]).debug;
+                            const debug2 = closure_1_0(682).debug;
                             const _HermesInternal = HermesInternal;
-                            debug2.warn("[TimeToDisplay] Detected zero slow or frozen frames. Not adding measurements to span (" + spanId.spanContext().spanId + ").");
+                            debug2.warn("[TimeToDisplay] Detected zero slow or frozen frames. Not adding measurements to span (" + spanContext.spanContext().spanId + ").");
                           }
                         }
                       }
-                      const attr = spanId.setAttribute("frames.total", diff);
-                      const attr1 = spanId.setAttribute("frames.slow", diff1);
-                      const attr2 = spanId.setAttribute("frames.frozen", diff2);
-                      const debug = spanId(_undefined[2]).debug;
-                      debug.log("[TimeToDisplay] Attached frame data to span.", { spanId: spanId.spanContext().spanId, frameData: { total: diff, slow: diff1, frozen: diff2 } });
-                    })(spanId, c1.startFrames, closure_2);
-                    const debug3 = closure_1_0(closure_1_1[2]).debug;
+                      const attr = spanContext.setAttribute("frames.total", diff);
+                      const attr1 = spanContext.setAttribute("frames.slow", diff1);
+                      const attr2 = spanContext.setAttribute("frames.frozen", diff2);
+                      const debug = closure_1_0(682).debug;
+                      debug.log("[TimeToDisplay] Attached frame data to span.", { spanId: spanContext.spanContext().spanId, frameData: { total: diff, slow: diff1, frozen: diff2 } });
+                    })(closure_129_0, closure_128_1.startFrames, closure_128_2);
+                    const debug3 = obj2(tmp4[2]).debug;
                     const _HermesInternal3 = HermesInternal;
-                    debug3.log("[TimeToDisplay] Captured and attached end frames for span " + spanId + ".", closure_2);
+                    debug3.log("[TimeToDisplay] Captured and attached end frames for span " + closure_128_0 + ".", closure_128_2);
                     c3 = 1;
                   }
                   c3 = 0;
-                  if (c1.cleanupTimeout) {
+                  if (closure_128_1.cleanupTimeout) {
                     const _clearTimeout2 = clearTimeout;
-                    clearTimeout(c1.cleanupTimeout);
+                    clearTimeout(closure_128_1.cleanupTimeout);
                   }
-                  closure_1_8.delete(spanId);
+                  map.delete(closure_128_0);
                 }
                 c3 = 0;
-                if (closure_1_1.cleanupTimeout) {
+                if (closure_128_1.cleanupTimeout) {
                   const _clearTimeout3 = clearTimeout;
-                  clearTimeout(closure_1_1.cleanupTimeout);
+                  clearTimeout(closure_128_1.cleanupTimeout);
                 }
-                closure_1_8.delete(closure_1_0);
+                map.delete(closure_128_0);
                 throw closure_2;
               } catch (tmp58) {
                 closure_2 = tmp58;
@@ -1939,29 +1874,29 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
               }
             }
           }).then(() => {
-            let obj = span;
-            span.end(span);
-            obj = { code: span(activeSpan[2]).SPAN_STATUS_OK };
-            span.setStatus(obj);
-            const debug = span(activeSpan[2]).debug;
-            debug.log("[TimeToDisplay] " + span(activeSpan[2]).spanToJSON(span).description + " span updated with end timestamp and frame data.");
-            if (closure_1_7.has(activeSpan)) {
+            span.end(closure_0);
+            span.setStatus({ code: _mod682.SPAN_STATUS_OK });
+            const debug = _mod682.debug;
+            const obj2 = { code: _mod682.SPAN_STATUS_OK };
+            const tmp = closure_0;
+            debug.log("[TimeToDisplay] " + _mod682.spanToJSON(span).description + " span updated with end timestamp and frame data.");
+            if (weakMap1.has(activeSpan)) {
               obj4.delete(tmp7);
-              const debug2 = tmp3(tmp4[2]).debug;
+              const debug2 = tmp3(682).debug;
               const _HermesInternal = HermesInternal;
               debug2.log("[TimeToDisplay] Updating full display with initial display (" + obj.spanContext().spanId + ") end.");
-              closure_1_14(tmp, obj);
+              updateFullDisplaySpan(tmp, obj);
             }
-            const obj3 = span(activeSpan[2]);
-            obj4 = closure_1_7;
-            tmp = span;
-            const result = span(activeSpan[5]).setSpanDurationAsMeasurementOnSpan("time_to_initial_display", obj, tmp7);
+            obj4 = weakMap1;
+            const result = _mod1021.setSpanDurationAsMeasurementOnSpan("time_to_initial_display", obj, tmp7);
           });
         }
+        tmp4Result3 = tmp4(tmp5[2]);
       } else {
         const debug3 = tmp4(tmp5[2]).debug;
         debug3.warn("[TimeToDisplay] Initial display span is not a child of current active span.");
       }
+      tmp4Result = tmp4(tmp5[2]);
     } else {
       let debug2 = obj3.debug;
       debug2.warn("[TimeToDisplay] No active span found to attach ui.load.initial_display to.");
@@ -1976,15 +1911,15 @@ export const createTimeToFullDisplay = function createTimeToFullDisplay(useFocus
   closure_1 = TimeToFullDisplay;
   class TimeToDisplayWrapper {
     constructor(arg0) {
-      tmp = closure_1_2(closure_1_4(false), 2);
+      tmp = closure_2(useState(false), 2);
       [record, closure_0] = tmp;
-      tmp2 = closure_0(() => { ... });
-      tmp3 = closure_1_3;
+      tmp2 = useFocusEffect(() => { ... });
+      tmp3 = closure_3;
       tmp4 = closure_1;
       if (record) {
         record = useFocusEffect.record;
       }
-      return closure_1_3.createElement(tmp4, Object.assign({}, useFocusEffect, { record }));
+      return closure_3.createElement(tmp4, Object.assign({}, useFocusEffect, { record }));
     }
   }
   TimeToDisplayWrapper.displayName = "TimeToDisplayWrapper";
@@ -1995,15 +1930,15 @@ export const createTimeToInitialDisplay = function createTimeToInitialDisplay(us
   closure_1 = TimeToInitialDisplay;
   class TimeToDisplayWrapper {
     constructor(arg0) {
-      tmp = closure_1_2(closure_1_4(false), 2);
+      tmp = closure_2(useState(false), 2);
       [record, closure_0] = tmp;
-      tmp2 = closure_0(() => { ... });
-      tmp3 = closure_1_3;
+      tmp2 = useFocusEffect(() => { ... });
+      tmp3 = closure_3;
       tmp4 = closure_1;
       if (record) {
         record = useFocusEffect.record;
       }
-      return closure_1_3.createElement(tmp4, Object.assign({}, useFocusEffect, { record }));
+      return closure_3.createElement(tmp4, Object.assign({}, useFocusEffect, { record }));
     }
   }
   TimeToDisplayWrapper.displayName = "TimeToDisplayWrapper";

@@ -1,35 +1,38 @@
-// Module ID: 17581
-// Function ID: 17582
+// Module ID: 17612
+// Function ID: 17613
 // Name: GuildSettingsStickerCreateModal
-// Dependencies: [19, 21, 10926, 10929, 1114, 17582, 2]
+// Dependencies: [19, 21, 10953, 10956, 1114, 17613, 2]
 // Exports: default
 
-// Module 17581 (GuildSettingsStickerCreateModal)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 17612 (GuildSettingsStickerCreateModal)
+import util from "util" /* 1114 */;
+import GuildSettingsStickerCreateDefault from "GuildSettingsStickerCreate" /* 17613 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/GuildSettingsStickerCreateModal.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/GuildSettingsStickerCreateModal.tsx");
 
 export default function GuildSettingsStickerCreateModal(arg0) {
   ({ guildId: require, stickerId } = arg0);
   dependencyMap = undefined;
   c3 = undefined;
-  ({ onGoBack: c2, ref: c3 } = stickerId(10926)());
-  const tmp2 = stickerId(10926)();
+  ({ onGoBack: c2, ref: c3 } = stickerId(10953)());
+  const tmp2 = stickerId(10953)();
   const tmp3 = c3;
-  const intl = getSystemLocale.intl;
+  const intl = util.intl;
   if (null != stickerId) {
+    let tdhW5b = tmp5(1114).t.tdhW5b;
   } else {
+    tdhW5b = tmp5(1114).t["3DzNjU"];
   }
-  const tmp4 = stickerId(10929);
+  const tmp4 = stickerId(10956);
   return tmp3(tmp4, {
     screenKey: "guild-settings-sticker-create",
-    title: intl.string(_3DzNjU),
+    title: intl.string(tdhW5b),
     render() {
-      return _undefined2(stickerId(_undefined[5]), { ref: _undefined2, guildId: closure_0, stickerId, onFinish: _undefined });
+      return jsx(GuildSettingsStickerCreateDefault, { ref, guildId, stickerId, onFinish });
     }
   });
 };

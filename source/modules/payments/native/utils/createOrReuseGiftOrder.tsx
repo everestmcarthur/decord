@@ -1,41 +1,38 @@
-// Module ID: 10751
-// Function ID: 10752
-// Name: useCreateOrReuseGiftOrder
-// Dependencies: [5, 19, 4542, 1373, 1085, 3, 7429, 1115, 4153, 4233, 2]
+// Module ID: 10778
+// Function ID: 10779
+// Name: createOrReuseGiftOrder
+// Dependencies: [5, 19, 4556, 1373, 1085, 3, 7443, 1115, 4166, 4246, 2]
 // Exports: useCreateOrReuseGiftOrder
 
-// Module 10751 (useCreateOrReuseGiftOrder)
-import timestampDefault from "timestamp" /* 3 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import { ItemPurchaseType } from "CustomCheckoutFlow" /* 4542 */;
-import { SubscriptionPlanInfo } from "GuildFeatures" /* 1373 */;
-import { PaymentGateways } from "sum" /* 1085 */;
+// Module 10778 (createOrReuseGiftOrder)
+import LoggerDefault from "Logger" /* 3 */;
+import _modDef4166 from "module_4166" /* 4166 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let closure_8 = new timestampDefault("createOrReuseGiftOrder");
-const tmp2 = new timestampDefault("createOrReuseGiftOrder");
-let result = require("set").fileFinishedImporting("modules/payments/native/utils/createOrReuseGiftOrder.tsx");
+const require = fn;
+const ItemPurchaseType = fn(4556).ItemPurchaseType;
+const SubscriptionPlanInfo = fn(1373).SubscriptionPlanInfo;
+const PaymentGateways = fn(1085).PaymentGateways;
+let closure_8 = new LoggerDefault("createOrReuseGiftOrder");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/payments/native/utils/createOrReuseGiftOrder.tsx");
 
 export const useCreateOrReuseGiftOrder = function useCreateOrReuseGiftOrder(GiftPurchaseButton) {
-  closure_0 = GiftPurchaseButton;
-  closure_0 = undefined;
-  closure_0 = callback((arg0) => {
-    closure_0 = arg0;
+  closure_0 = asyncGeneratorStep(async (_location) => {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (function*(arg0) {
+    const iter = (async (arg0, value) => {
       if (c6 === 2) {
         c6 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -45,21 +42,20 @@ export const useCreateOrReuseGiftOrder = function useCreateOrReuseGiftOrder(Gift
           if (0 === c5) {
             if (arg0 === 1) {
               c6 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
-              c2 = tmp3;
-              c1 = tmp7;
-              c0 = undefined;
-              c1 = undefined;
-              c2 = undefined;
-              ({ planId: c0, recipientUserId: c1, productId: c2 } = c0);
-              closure_3 = undefined;
-              c4 = undefined;
+              closure_2 = tmp3;
+              closure_1 = tmp7;
+              closure_129_0 = undefined;
+              closure_129_1 = undefined;
+              closure_129_2 = undefined;
+              ({ planId: closure_129_0, recipientUserId: closure_129_1, productId: closure_129_2 } = _location);
+              closure_129_3 = undefined;
+              let skuId;
               c5 = 1;
               c6 = 1;
               return { value: "PX_16", done: true };
@@ -67,83 +63,73 @@ export const useCreateOrReuseGiftOrder = function useCreateOrReuseGiftOrder(Gift
           } else if (1 === tmp7) {
             if (arg0 === 1) {
               c6 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c6 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
+              const obj5 = { value, done: true };
+              return obj5;
             } else {
-              closure_3 = closure_2_6[c0];
-              if (null == closure_3) {
+              closure_129_3 = SubscriptionPlanInfo[closure_129_0];
+              if (null == closure_129_3) {
                 const _Error = Error;
                 const _HermesInternal2 = HermesInternal;
-                error = new Error("Invalid plan id: " + c0);
+                const error = new Error("Invalid plan id: " + closure_129_0);
                 throw error;
               } else {
-                skuId = closure_2_3.skuId;
+                skuId = closure_129_3.skuId;
                 c4 = 1;
-                let getOrCreateOrder = callback(closure_2_2[6]).getOrCreateOrder;
-                const obj2 = { skuId: null, paymentGateway: null, recipientUserId: null, purchaseType: null, isGift: true, createdAfter: null, subscriptionPlanId: null, externalGatewayFacet: null };
-                obj2[0] = c4;
-                const tmp61 = callback(closure_2_2[6]);
-                let obj3 = closure_2_7;
+                let getOrCreateOrder = _location(7443).getOrCreateOrder;
+                const obj6 = { skuId, paymentGateway: null, recipientUserId: null, purchaseType: null, isGift: true, createdAfter: null, subscriptionPlanId: null, externalGatewayFacet: null };
+                const tmp60 = _location(7443);
+                let obj8 = PaymentGateways;
                 if (obj16.isAndroid()) {
-                  let APPLE = obj3.GOOGLE;
+                  let APPLE = obj8.GOOGLE;
                 } else {
-                  APPLE = obj3.APPLE;
+                  APPLE = obj8.APPLE;
                 }
-                obj2[1] = APPLE;
-                obj2[2] = c1;
-                obj2[3] = closure_2_5.ONE_TIME;
-                let obj6 = closure_2_1(closure_2_2[8])();
-                obj16 = callback(closure_2_2[7]);
-                const utcResult = obj6.utc();
-                obj2[5] = obj6.utc().subtract(callback(closure_2_2[6]).DRAFT_ORDER_LOOKBACK_DAYS, "days").toISOString();
-                obj2[6] = c0;
-                obj3 = { line_items: null };
-                const obj4 = { external_product_id: null };
-                obj4[0] = c2;
-                const items = [obj4];
-                obj3[0] = items;
-                obj2[7] = obj3;
-                getOrCreateOrder = getOrCreateOrder(obj2);
+                obj6.paymentGateway = APPLE;
+                obj6.recipientUserId = closure_129_1;
+                obj6.purchaseType = constants.ONE_TIME;
+                obj16 = _location(1115);
+                const obj7 = _modDef4166();
+                const utcResult = _modDef4166().utc();
+                obj6.createdAfter = _modDef4166().utc().subtract(_location(7443).DRAFT_ORDER_LOOKBACK_DAYS, "days").toISOString();
+                obj6.subscriptionPlanId = closure_129_0;
+                obj8 = { line_items: null };
+                const obj9 = { external_product_id: closure_129_2 };
+                const items = [obj9];
+                obj8.line_items = items;
+                obj6.externalGatewayFacet = obj8;
+                getOrCreateOrder = getOrCreateOrder(obj6);
                 c5 = 3;
                 c6 = 1;
-                const subtractResult = obj6.utc().subtract(callback(closure_2_2[6]).DRAFT_ORDER_LOOKBACK_DAYS, "days");
+                const subtractResult = _modDef4166().utc().subtract(_location(7443).DRAFT_ORDER_LOOKBACK_DAYS, "days");
               }
             }
           } else if (2 === tmp7) {
             c4 = 0;
-            c5 = closure_3;
-            const obj5 = { error: null, skuId: null, location: null };
-            obj5[0] = c5;
-            obj5[1] = c4;
-            obj5[2] = callback;
-            closure_2_8.error("Failed to create order for gift purchase", obj5);
-            obj3 = callback(closure_2_2[9]);
-            obj6 = { tags: null };
-            const obj7 = { skuId: null, source: null };
-            obj7[0] = c4;
+            closure_129_5 = closure_3;
+            const obj10 = { error: closure_129_5, skuId, location: _location };
+            logger.error("Failed to create order for gift purchase", obj10);
+            const obj11 = { tags: null };
+            const obj12 = { skuId, source: null };
             const _HermesInternal = HermesInternal;
-            obj7[1] = "" + callback + "_createOrder";
-            obj6[0] = obj7;
-            const result = obj3.captureBillingException(c5, obj6);
-            throw c5;
+            obj12.source = "" + _location + "_createOrder";
+            obj11.tags = obj12;
+            const result = _location(4246).captureBillingException(closure_129_5, obj11);
+            throw closure_129_5;
           } else if (arg0 === 1) {
             c6 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c4 = 0;
             c6 = 3;
-            const obj8 = { value: null, done: true };
-            obj8[0] = arg1;
-            return obj8;
+            const obj13 = { value, done: true };
+            return obj13;
           } else {
             c4 = 0;
             c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            const obj = { value, done: true };
             return obj;
           }
         } catch (tmp40) {
@@ -161,7 +147,7 @@ export const useCreateOrReuseGiftOrder = function useCreateOrReuseGiftOrder(Gift
     return iter;
   });
   let items = [GiftPurchaseButton];
-  return skuId.useCallback(function() {
+  return noop.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {

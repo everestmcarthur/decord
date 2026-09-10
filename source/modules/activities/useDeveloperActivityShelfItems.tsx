@@ -1,35 +1,36 @@
-// Module ID: 12046
-// Function ID: 12047
+// Module ID: 12072
+// Function ID: 12073
 // Name: useDeveloperActivityShelfItems
-// Dependencies: [19, 8860, 1920, 504, 2]
+// Dependencies: [19, 8887, 1920, 504, 2]
 // Exports: useDeveloperActivityShelfItems
 
-// Module 12046 (useDeveloperActivityShelfItems)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "initialize" /* 8860 */;
-import { DEFAULT_EMBEDDED_ACTIVITY_CONFIG as closure_4 } from "items3" /* 1920 */;
+// Module 12072 (useDeveloperActivityShelfItems)
+import noop from "module_19" /* 19 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 8887 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/useDeveloperActivityShelfItems.tsx");
+const require = fn;
+let closure_4 = fn(1920).DEFAULT_EMBEDDED_ACTIVITY_CONFIG;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/useDeveloperActivityShelfItems.tsx");
 
 export const useDeveloperActivityShelfItems = function useDeveloperActivityShelfItems() {
-  const items = [closure_3];
-  const stateFromStoresObject = isEnabled(lastUsedObject[3]).useStateFromStoresObject(items, () => ({ isEnabled: store.getIsEnabled(), lastUsedObject: store.getLastUsedObject() }), []);
+  const items = [DeveloperActivityShelfStore];
+  const stateFromStoresObject = isEnabled(lastUsedObject[3]).useStateFromStoresObject(items, () => ({ isEnabled: DeveloperActivityShelfStore.getIsEnabled(), lastUsedObject: DeveloperActivityShelfStore.getLastUsedObject() }), []);
   isEnabled = stateFromStoresObject.isEnabled;
   lastUsedObject = stateFromStoresObject.lastUsedObject;
   let obj = isEnabled(lastUsedObject[3]);
-  const items1 = [closure_3];
-  const stateFromStoresArray = isEnabled(lastUsedObject[3]).useStateFromStoresArray(items1, () => store.getDeveloperShelfItems(), []);
+  const items1 = [DeveloperActivityShelfStore];
+  const stateFromStoresArray = isEnabled(lastUsedObject[3]).useStateFromStoresArray(items1, () => DeveloperActivityShelfStore.getDeveloperShelfItems(), []);
   const items2 = [stateFromStoresArray, isEnabled, lastUsedObject];
   return stateFromStoresArray.useMemo(() => {
     if (isEnabled) {
       const mapped = stateFromStoresArray.map((application) => {
-        let obj = { application, activity: null };
-        obj = {};
-        const merged = Object.assign(closure_4);
+        const obj = { application, activity: null };
+        const obj2 = {};
+        const merged = Object.assign(closure_1_4);
         const merged1 = Object.assign(application.embeddedActivityConfig);
-        obj.application_id = application.id;
-        obj[1] = obj;
+        obj2.application_id = application.id;
+        obj.activity = obj2;
         return obj;
       });
       let sorted = mapped.sort((arg0, arg1) => {

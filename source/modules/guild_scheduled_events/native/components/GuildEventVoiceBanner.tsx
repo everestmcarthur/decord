@@ -1,39 +1,40 @@
-// Module ID: 13783
-// Function ID: 13784
-// Dependencies: [19, 17, 2011, 7526, 21, 4560, 576, 9667, 504, 9676, 9670, 4527, 9703, 4767, 9794, 5123, 9777, 4975, 1114, 2]
+// Module ID: 13806
+// Function ID: 13807
+// Name: GuildEventVoiceBanner
+// Dependencies: [19, 17, 2011, 7540, 21, 4574, 576, 9694, 504, 9703, 9697, 4541, 9730, 4781, 9821, 5137, 9804, 4989, 1114, 2]
 
-// Module 13783
-import ThemesDefault from "Themes" /* 576 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleConnectionOpen" /* 2011 */;
-import { isGuildScheduledEventActive as closure_6 } from "scheduledEventSort" /* 7526 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13806 (GuildEventVoiceBanner)
+import nativeDefault from "native" /* 576 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9730 */;
+import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 9821 */;
+import noop from "module_19" /* 19 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
-const require = arg1;
-let c3 = importAllResult;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-let obj = { header: null, descriptionContainerStyle: null, buttonContainer: null };
-obj = { margin: 12, padding: 12, borderRadius: ThemesDefault.radii.sm, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-obj[0] = obj;
-obj[1] = { paddingTop: 4 };
-obj[2] = { marginTop: 12 };
-let closure_9 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo((channel) => {
+require = fn;
+const View = fn(17).View;
+let closure_6 = fn(7540).isGuildScheduledEventActive;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+let obj = { header: { margin: 12, padding: 12, borderRadius: nativeDefault.radii.sm, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, descriptionContainerStyle: { paddingTop: 4 }, buttonContainer: { marginTop: 12 } };
+let closure_9 = createStyles.createStyles(obj);
+let obj3 = { margin: 12, padding: 12, borderRadius: nativeDefault.radii.sm, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventVoiceBanner.tsx");
+
+export default noop.memo((channel) => {
   channel = channel.channel;
-  let activeEvent;
   let first;
   let nextRecurrenceIdInEvent;
-  let tmp = callback3();
+  let tmp = closure_9();
+  const activeEvent = channel(first[7]).useActiveEvent(channel.id);
   let obj = channel(first[7]);
-  activeEvent = obj.useActiveEvent(channel.id);
-  obj1 = channel(first[7]);
-  const imminentUpcomingGuildEvents = obj1.useImminentUpcomingGuildEvents(channel.id);
-  let obj2 = channel(first[8]);
-  const items = [closure_5];
+  const imminentUpcomingGuildEvents = channel(first[7]).useImminentUpcomingGuildEvents(channel.id);
+  let obj2 = channel(first[7]);
+  const items = [SelectedChannelStore];
   let tmp7 = activeEvent;
-  const stateFromStores = obj2.useStateFromStores(items, () => voiceChannelId.getVoiceChannelId());
+  const stateFromStores = channel(first[8]).useStateFromStores(items, () => voiceChannelId.getVoiceChannelId());
   if (activeEvent == null) {
     first = undefined;
     if (imminentUpcomingGuildEvents != null) {
@@ -42,9 +43,10 @@ const memoResult = importAllResult.memo((channel) => {
     tmp7 = first;
   }
   first = tmp7;
-  let tmp2Result = tmp2(tmp3[9]);
-  tmp2Result = tmp2(tmp3[10]);
-  nextRecurrenceIdInEvent = tmp2Result.getNextRecurrenceIdInEvent(tmp7);
+  let obj3 = channel(first[8]);
+  const tmp2Result = channel(first[9]);
+  const canManageGuildEventResult = channel(first[9]).useManageResourcePermissions(channel).canManageGuildEvent(tmp7);
+  nextRecurrenceIdInEvent = channel(first[10]).getNextRecurrenceIdInEvent(tmp7);
   const items1 = [tmp7, channel, activeEvent, nextRecurrenceIdInEvent];
   [][0] = tmp7;
   const callback = nextRecurrenceIdInEvent.useCallback(() => {
@@ -53,29 +55,21 @@ const memoResult = importAllResult.memo((channel) => {
       tmp = null != first;
     }
     if (tmp) {
-      activeEvent(first[11]).hideActionSheet();
-      const obj = activeEvent(first[11]);
-      let result = channel(first[12]).openStartGuildEventModal(first, nextRecurrenceIdInEvent, () => {
-        const result = closure_1_0(closure_1_2[13]).openVoiceChannelActionSheet(closure_0);
+      ActionSheetActionCreatorsDefault.hideActionSheet();
+      let result = GuildScheduledEventModalActionCreators.openStartGuildEventModal(first, nextRecurrenceIdInEvent, () => {
+        const result = channel(first[13]).openVoiceChannelActionSheet(closure_1_0);
       });
-      const obj2 = channel(first[12]);
     }
   }, items1);
   if (null == tmp7) {
     return null;
   } else {
     let tmp18Result = stateFromStores === channel.id;
-    obj = { accessibilityRole: "button", onPress: null, style: null, children: null };
-    obj[1] = tmp12;
-    obj[2] = tmp.header;
-    obj = { event: null, showUserCount: false };
-    obj[0] = tmp7;
-    const items2 = [callback2(tmp2(tmp3[16]).GuildEventCardHeader, obj), , ];
-    obj1 = { event: null, descriptionContainerStyle: null, condensed: null };
-    obj1[0] = tmp7;
-    obj1[1] = tmp.descriptionContainerStyle;
-    obj1[2] = tmp18Result;
-    items2[1] = callback2(tmp2(tmp3[16]).GuildEventCardMetaInfo, obj1);
+    const obj4 = { accessibilityRole: "button", onPress: tmp12, style: tmp.header, children: null };
+    const obj5 = { event: tmp7, showUserCount: false };
+    const items2 = [closure_7(tmp2(tmp3[16]).GuildEventCardHeader, obj5), , ];
+    const obj6 = { event: tmp7, descriptionContainerStyle: tmp.descriptionContainerStyle, condensed: tmp18Result };
+    items2[1] = closure_7(tmp2(tmp3[16]).GuildEventCardMetaInfo, obj6);
     if (tmp18Result) {
       tmp18Result = canManageGuildEventResult;
     }
@@ -83,21 +77,17 @@ const memoResult = importAllResult.memo((channel) => {
       tmp18Result = !tmp16;
     }
     if (tmp18Result) {
-      obj2 = { style: null, children: null };
-      obj2[0] = tmp.buttonContainer;
-      const obj3 = { text: null, onPress: null, variant: "active", size: "sm", grow: true };
+      const obj7 = { style: tmp.buttonContainer, children: null };
+      const obj8 = { text: null, onPress: null, variant: "active", size: "sm", grow: true };
       const intl = tmp2(tmp3[18]).intl;
-      obj3[0] = intl.string(tmp2(tmp3[18]).t.cK1GGY);
-      obj3[1] = callback;
-      obj2[1] = tmp18(tmp2(tmp3[17]).Button, obj3);
-      tmp18Result = tmp18(View, obj2);
+      obj8.text = intl.string(tmp2(tmp3[18]).t.cK1GGY);
+      obj8.onPress = callback;
+      obj7.children = tmp18(tmp2(tmp3[17]).Button, obj8);
+      tmp18Result = tmp18(View, obj7);
     }
     items2[2] = tmp18Result;
-    obj[3] = items2;
-    return closure_8(tmp2(tmp3[15]).PressableOpacity, obj);
+    obj4.children = items2;
+    return closure_8(tmp2(tmp3[15]).PressableOpacity, obj4);
   }
-  canManageGuildEventResult = tmp2Result.useManageResourcePermissions(channel).canManageGuildEvent(tmp7);
+  const tmp2Result2 = channel(first[10]);
 });
-let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventVoiceBanner.tsx");
-
-export default memoResult;

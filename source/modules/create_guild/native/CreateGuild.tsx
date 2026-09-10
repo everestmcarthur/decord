@@ -1,29 +1,25 @@
-// Module ID: 12338
-// Function ID: 12339
+// Module ID: 12364
+// Function ID: 12365
 // Name: CreateGuild
-// Dependencies: [19, 17, 1371, 1074, 21, 4560, 576, 4962, 4971, 4973, 4556, 1114, 11803, 6606, 7201, 4975, 6941, 2]
+// Dependencies: [19, 17, 1371, 1074, 21, 4574, 576, 4976, 4985, 4987, 4570, 1114, 11829, 6620, 7214, 4989, 6955, 2]
 // Exports: default
 
-// Module 12338 (CreateGuild)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1371 */;
-import { MarketingURLs } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12364 (CreateGuild)
+import nativeDefault from "native" /* 576 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 4985 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { flex: { flex: 1 }, contentContainer: null, header: null, description: null, iconUploader: null, hint: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16, paddingBottom: 16 };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { textAlign: "center" };
-createCacheKey[3] = { lineHeight: 18, textAlign: "center", marginBottom: 24 };
-createCacheKey[4] = { alignSelf: "center", marginBottom: 4 };
-createCacheKey[5] = { marginBottom: 8 };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/create_guild/native/CreateGuild.tsx");
+require = fn;
+const ScrollView = fn(17).ScrollView;
+const MarketingURLs = fn(1074).MarketingURLs;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { flex: { flex: 1 }, contentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16, paddingBottom: 16 }, header: { textAlign: "center" }, description: { lineHeight: 18, textAlign: "center", marginBottom: 24 }, iconUploader: { alignSelf: "center", marginBottom: 4 }, hint: { marginBottom: 8 } };
+let closure_9 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/create_guild/native/CreateGuild.tsx");
 
 export default function CreateGuild(arg0) {
   ({ guild, error, customTitle, customDescription, customButtonLabel, autoFocus } = arg0);
@@ -33,112 +29,106 @@ export default function CreateGuild(arg0) {
   }
   let isScreenReaderEnabled;
   let ref;
-  let tmp = callback();
-  currentUser = currentUser.getCurrentUser();
+  let tmp = closure_9();
+  const currentUser = UserStore.getCurrentUser();
   let isStaffResult;
   if (currentUser != null) {
     isStaffResult = currentUser.isStaff();
   }
-  obj1 = isScreenReaderEnabled(4962);
-  isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
-  ref = React.useRef(null);
+  isScreenReaderEnabled = isScreenReaderEnabled(4976).useIsScreenReaderEnabled();
+  ref = noop.useRef(null);
   const items = [isScreenReaderEnabled];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let tmp = isScreenReaderEnabled;
     if (isScreenReaderEnabled) {
       tmp = null != ref.current;
     }
     if (tmp) {
-      let obj = isScreenReaderEnabled(closure_1_2[8]);
-      obj = { ref: null, delay: 100 };
-      obj[0] = ref;
-      const result = obj.setAccessibilityFocus(obj);
+      const obj2 = { ref, delay: 100 };
+      const result = setAccessibilityFocus.setAccessibilityFocus(obj2);
     }
   }, items);
   let obj = { style: tmp.flex, contentInset: { top: 0 }, automaticallyAdjustContentInsets: false, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, contentContainerStyle: tmp.contentContainer, children: null };
-  obj = { ref, style: tmp.header, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const obj3 = { ref, style: tmp.header, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   if (customTitle == null) {
     const intl = tmp4(1114).intl;
     customTitle = intl.string(tmp4(1114).t.XioBx6);
   }
-  obj[5] = customTitle;
-  const items1 = [closure_7(isScreenReaderEnabled(4556).Text, obj), , , , , , , ];
-  obj1 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  obj3.children = customTitle;
+  const items1 = [closure_7(isScreenReaderEnabled(4570).Text, obj3), , , , , , , ];
+  const obj4 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   if (customDescription == null) {
     const intl2 = tmp4(1114).intl;
     customDescription = intl2.string(tmp4(1114).t["/k/L/j"]);
   }
-  obj1[3] = customDescription;
-  items1[1] = closure_7(isScreenReaderEnabled(4556).Text, obj1);
-  items1[2] = closure_7(ref(11803), { iconBackgroundColor: tmp.contentContainer.backgroundColor, style: tmp.iconUploader, onPress: onIconPress, icon: guild.icon });
-  const obj3 = { isClearable: true, label: null, errorMessage: null, value: null, onChange: null, autoFocus: null, autoCorrect: false, returnKeyType: "done" };
+  obj4.children = customDescription;
+  items1[1] = closure_7(isScreenReaderEnabled(4570).Text, obj4);
+  items1[2] = closure_7(ref(11829), { iconBackgroundColor: tmp.contentContainer.backgroundColor, style: tmp.iconUploader, onPress: onIconPress, icon: guild.icon });
+  const obj6 = { isClearable: true, label: null, errorMessage: null, value: null, onChange: null, autoFocus: null, autoCorrect: false, returnKeyType: "done" };
   const intl3 = tmp4(1114).intl;
-  obj3[1] = intl3.string(isScreenReaderEnabled(1114).t.dBih7e);
+  obj6.label = intl3.string(isScreenReaderEnabled(1114).t.dBih7e);
   let firstFieldErrorMessage;
   if (error != null) {
     firstFieldErrorMessage = error.getFirstFieldErrorMessage("name");
   }
-  obj3[2] = firstFieldErrorMessage;
-  obj3[3] = guild.name;
-  obj3[4] = onNameChange;
+  obj6.errorMessage = firstFieldErrorMessage;
+  obj6.value = guild.name;
+  obj6.onChange = onNameChange;
   if (autoFocus) {
     autoFocus = !isScreenReaderEnabled;
   }
   let tmp9Result = !!isStaffResult;
-  obj3[5] = autoFocus;
-  items1[3] = closure_7(isScreenReaderEnabled(6606).TextInput, obj3);
+  obj6.autoFocus = autoFocus;
+  items1[3] = closure_7(isScreenReaderEnabled(6620).TextInput, obj6);
   if (tmp9Result) {
-    const obj4 = { onValueChange: null, value: null, start: true, end: true, label: "Staff Only", subLabel: null };
-    obj4[0] = onStaffOnlyChange;
-    obj4[1] = guild.staffOnly;
+    const obj7 = { onValueChange: onStaffOnlyChange, value: guild.staffOnly, start: true, end: true, label: "Staff Only", subLabel: null };
     const intl4 = tmp4(1114).intl;
-    obj4[5] = intl4.string(tmp4(1114).t.edQ5va);
-    tmp9Result = tmp9(tmp4(7201).TableSwitchRow, obj4);
+    obj7.subLabel = intl4.string(tmp4(1114).t.edQ5va);
+    tmp9Result = tmp9(tmp4(7214).TableSwitchRow, obj7);
   }
   items1[4] = tmp9Result;
-  const obj5 = { style: tmp.hint, variant: "text-xs/medium", color: "text-muted", children: null };
+  const obj8 = { style: tmp.hint, variant: "text-xs/medium", color: "text-muted", children: null };
   const intl5 = tmp4(1114).intl;
-  obj5[3] = intl5.format(isScreenReaderEnabled(1114).t["2bprXx"], { guidelinesURL: MarketingURLs.GUIDELINES });
-  items1[5] = closure_7(isScreenReaderEnabled(4556).Text, obj5);
-  const obj7 = { disabled: "" === guild.name, size: "md", grow: true, text: null, onPress: null, loading: null };
+  obj8.children = intl5.format(isScreenReaderEnabled(1114).t["2bprXx"], { guidelinesURL: MarketingURLs.GUIDELINES });
+  items1[5] = closure_7(isScreenReaderEnabled(4570).Text, obj8);
+  const obj10 = { disabled: "" === guild.name, size: "md", grow: true, text: null, onPress: null, loading: null };
   if (customButtonLabel == null) {
     const intl6 = tmp4(1114).intl;
     customButtonLabel = intl6.string(tmp4(1114).t["O0p/lS"]);
   }
-  obj7[3] = customButtonLabel;
-  obj7[4] = onCreate;
-  obj7[5] = submitting;
-  items1[6] = closure_7(isScreenReaderEnabled(4975).Button, obj7);
+  obj10.text = customButtonLabel;
+  obj10.onPress = onCreate;
+  obj10.loading = submitting;
+  items1[6] = closure_7(isScreenReaderEnabled(4989).Button, obj10);
   let firstFieldErrorMessage1;
   if (error != null) {
     firstFieldErrorMessage1 = error.getFirstFieldErrorMessage("name");
   }
-  tmp9Result = null;
+  let tmp9Result2 = null;
   if (null == firstFieldErrorMessage1) {
     let message;
     if (error != null) {
       message = error.message;
     }
-    tmp9Result = null;
+    tmp9Result2 = null;
     if (null != message) {
       let message1;
       if (error != null) {
         message1 = error.message;
       }
-      tmp9Result = null;
+      tmp9Result2 = null;
       if ("" !== message1) {
         let message2;
         if (error != null) {
           message2 = error.message;
         }
-        const obj8 = { children: null };
-        obj8[0] = message2;
-        tmp9Result = tmp9(ref(6941), obj8);
-        const tmp12Result = ref(6941);
+        const obj11 = { children: message2 };
+        tmp9Result2 = tmp9(ref(6955), obj11);
+        const tmp12Result = ref(6955);
       }
     }
   }
-  items1[7] = tmp9Result;
-  obj[6] = closure_8(isScreenReaderEnabled(4973).Stack, { children: items1 });
+  items1[7] = tmp9Result2;
+  obj.children = closure_8(isScreenReaderEnabled(4987).Stack, { children: items1 });
   return closure_7(ScrollView, obj);
 };

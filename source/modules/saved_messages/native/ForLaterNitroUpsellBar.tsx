@@ -1,43 +1,40 @@
-// Module ID: 13298
-// Function ID: 13299
+// Module ID: 13321
+// Function ID: 13322
 // Name: ForLaterNitroUpsellBar
-// Dependencies: [19, 1373, 7852, 21, 7162, 11711, 12225, 4218, 1114, 2]
+// Dependencies: [19, 1373, 7866, 21, 7176, 11737, 12251, 4231, 1114, 2]
 // Exports: default
 
-// Module 13298 (ForLaterNitroUpsellBar)
-import closure_3 from "noop" /* 19 */;
-import { PremiumTypes } from "GuildFeatures" /* 1373 */;
-import SAVED_BOOKMARKS_MAX from "SAVED_BOOKMARKS_MAX" /* 7852 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 13321 (ForLaterNitroUpsellBar)
+import openForLaterLimitUpsellDefault from "openForLaterLimitUpsell" /* 11737 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ SAVED_BOOKMARKS_MAX: c5, SAVED_REMINDERS_MAX: closure_6 } = SAVED_BOOKMARKS_MAX);
-const result = require("set").fileFinishedImporting("modules/saved_messages/native/ForLaterNitroUpsellBar.tsx");
+const require = fn;
+const PremiumTypes = fn(1373).PremiumTypes;
+const SavedMessagesConstants = fn(7866);
+({ SAVED_BOOKMARKS_MAX: hasOwnProperty, SAVED_REMINDERS_MAX: metroRequire } = SavedMessagesConstants);
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/saved_messages/native/ForLaterNitroUpsellBar.tsx");
 
 export default function ForLaterNitroUpsellBar(isReminder) {
   isReminder = isReminder.isReminder;
   const isAtLimit = isReminder.isAtLimit;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7162)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7176)().analyticsLocations;
   const items = [isReminder, analyticsLocations];
-  const callback = React.useCallback(() => analyticsLocations(closure_1_2[5])(isReminder, analyticsLocations), items);
-  let obj = isReminder(4218);
-  const premiumTypeDisplayName = obj.getPremiumTypeDisplayName(PremiumTypes.TIER_2);
+  const callback = noop.useCallback(() => openForLaterLimitUpsellDefault(isReminder, analyticsLocations), items);
+  const tmp2 = jsx;
+  const tmp3 = analyticsLocations(12251);
+  const premiumTypeDisplayName = isReminder(4231).getPremiumTypeDisplayName(PremiumTypes.TIER_2);
   const intl = isReminder(1114).intl;
   const formatToPlainString = intl.formatToPlainString;
   const t = isReminder(1114).t;
   if (isAtLimit) {
-    obj = { nitroTierName: null, premiumMax: null };
-    obj[0] = premiumTypeDisplayName;
-    obj[1] = isReminder ? closure_6 : closure_5;
-    formatToPlainString(isReminder ? t["E+mhMh"] : t["5VsCaT"], obj);
+    const obj2 = { nitroTierName: premiumTypeDisplayName, premiumMax: isReminder ? closure_6 : closure_5 };
+    formatToPlainString(isReminder ? t["E+mhMh"] : t["5VsCaT"], obj2);
   } else {
-    obj = { nitroTierName: null };
-    obj[0] = premiumTypeDisplayName;
-    obj1 = { text: null, isAtLimit: null, onPress: null };
-    obj1[0] = formatToPlainString(isReminder ? t["W+ZaoS"] : t["0hoV2D"], obj);
-    obj1[1] = isAtLimit;
-    obj1[2] = callback;
-    return <tmp3 text={null} isAtLimit={null} onPress={null} />;
+    const obj3 = { nitroTierName: premiumTypeDisplayName };
+    const obj4 = { text: formatToPlainString(isReminder ? t["W+ZaoS"] : t["0hoV2D"], obj3), isAtLimit, onPress: callback };
+    return tmp2(tmp3, obj4);
   }
 };

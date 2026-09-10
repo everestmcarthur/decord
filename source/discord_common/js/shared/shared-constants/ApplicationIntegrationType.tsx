@@ -1,11 +1,11 @@
-// Module ID: 9250
-// Function ID: 9251
+// Module ID: 9277
+// Function ID: 9278
 // Name: ApplicationIntegrationType
 // Dependencies: [2]
 
-// Module 9250 (ApplicationIntegrationType)
-import set from "set" /* 2 */;
+// Module 9277 (ApplicationIntegrationType)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx");
 
 export const ApplicationIntegrationType = { GUILD_INSTALL: 0, [0]: "GUILD_INSTALL", USER_INSTALL: 1, [1]: "USER_INSTALL" };

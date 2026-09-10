@@ -1,20 +1,21 @@
-// Module ID: 10754
-// Function ID: 10755
+// Module ID: 10781
+// Function ID: 10782
 // Name: GiftingBadgeIcon
 // Dependencies: [19, 17, 21, 2]
 // Exports: default
 
-// Module 10754 (GiftingBadgeIcon)
-import noopAll from "noop" /* 19 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 10781 (GiftingBadgeIcon)
+import noop from "module_19" /* 19 */;
 
-noopAll;
-const result = require("set").fileFinishedImporting("modules/premium/gifting/native/views/GiftingBadgeIcon.tsx");
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/gifting/native/views/GiftingBadgeIcon.tsx");
 
-export default function GiftingBadgeIcon(size) {
-  size = size.size;
-  const source = { uri: size.icon };
-  const style = [{ width: size, height: size }, size.style];
-  return <Image source={source} style={style} />;
+export default function GiftingBadgeIcon(uri) {
+  const size = uri.size;
+  const obj = { source: { uri: uri.icon }, style: null };
+  const items = [{ width: size, height: size }, uri.style];
+  obj.style = items;
+  return <Image source={{ uri: arg0.icon }} style={null} />;
 };

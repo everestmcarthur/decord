@@ -1,58 +1,57 @@
-// Module ID: 9189
-// Function ID: 9190
-// Name: memoResult1
-// Dependencies: [19, 17, 1371, 7944, 21, 4560, 576, 1115, 1114, 4556, 5123, 504, 8165, 4527, 9190, 1896, 2]
+// Module ID: 9216
+// Function ID: 9217
+// Name: GuildTag
+// Dependencies: [19, 17, 1371, 7958, 21, 4574, 576, 1115, 1114, 4570, 5137, 504, 8191, 4541, 9217, 1896, 2]
 
-// Module 9189 (memoResult1)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "mergeGuildAvatar" /* 1371 */;
-import { GuildTagBadgeSize } from "items" /* 7944 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import set from "set" /* 1115 */;
+// Module 9216 (GuildTag)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import GuildTagUtils from "GuildTagUtils" /* 8191 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-let c3 = importAllResult;
-({ Image: c4, View: c5 } = get_ActivityIndicator);
-({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
-let obj = { container: null, tag: null };
-obj = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 4, paddingHorizontal: 4, paddingVertical: 1, columnGap: 2 };
-obj[0] = obj;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const GuildTagBadgeSize = fn(7958).GuildTagBadgeSize;
+const jsxProd = fn(21);
+({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4574);
+let obj = { container: { flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 4, paddingHorizontal: 4, paddingVertical: 1, columnGap: 2 }, tag: null };
+let PlatformUtils = fn(1115);
 let num = 16;
-if (set.isAndroid()) {
+if (PlatformUtils.isAndroid()) {
   num = 14;
 }
-createCacheKey = { lineHeight: num, textAlignVertical: null, overflow: "hidden" };
+let obj4 = { lineHeight: num, textAlignVertical: null, overflow: "hidden" };
+PlatformUtils = fn(1115);
 let str;
-if (set.isAndroid()) {
+if (PlatformUtils.isAndroid()) {
   str = "center";
 }
-createCacheKey[1] = str;
-obj[1] = createCacheKey;
-let closure_11 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo((arg0) => {
+obj4.textAlignVertical = str;
+obj.tag = obj4;
+let closure_11 = createStyles.createStyles(obj);
+const memoResult = noop.memo((arg0) => {
   ({ source, size } = arg0);
   if (size === undefined) {
     size = GuildTagBadgeSize.SIZE_12;
   }
   let tmp2 = null;
   if (null != source) {
-    let obj = { source: null, alt: null, style: null };
-    obj[0] = source;
-    const intl = getSystemLocale.intl;
-    obj[1] = intl.string(getSystemLocale.t.HHYPgJ);
-    obj = { width: null, height: null };
-    obj[0] = size;
-    obj[1] = size;
-    obj[2] = obj;
-    tmp2 = callback(closure_4, obj);
+    const obj = { source, alt: null, style: null };
+    const intl = util.intl;
+    obj.alt = intl.string(util.t.HHYPgJ);
+    const size1 = { width: size, height: size };
+    obj.style = size1;
+    tmp2 = React6(React4, obj);
   }
   return tmp2;
 });
-const memoResult1 = importAllResult.memo((textVariant) => {
+const memoResult1 = noop.memo((textVariant) => {
   ({ containerStyles, guildTag: require, guildBadge: importDefault, onPress, disabled } = textVariant);
   if (disabled === undefined) {
     disabled = false;
@@ -69,52 +68,52 @@ const memoResult1 = importAllResult.memo((textVariant) => {
   if (badgeSize === undefined) {
     badgeSize = GuildTagBadgeSize.SIZE_12;
   }
-  closure_6 = undefined;
   function renderContent() {
-    let tmp4 = closure_1;
-    if (null != closure_1) {
+    let tmp4 = importDefault;
+    if (null != importDefault) {
       tmp4 = tmp3;
       if (typeof tmp3 === "string") {
-        let obj = { source: null, size: null };
-        obj = { uri: null };
-        obj[0] = tmp3;
-        obj[0] = obj;
-        obj[1] = badgeSize;
-        tmp4 = closure_1_8(closure_1_12, obj);
+        const obj2 = { source: null, size: null };
+        const obj3 = { uri: tmp3 };
+        obj2.source = obj3;
+        obj2.size = badgeSize;
+        tmp4 = React6(memoResult, obj2);
       }
     }
-    obj = { children: null };
+    const obj = { children: null };
     const items = [tmp4, ];
-    const items1 = [tag.tag, closure_4];
-    items[1] = closure_1_8(closure_1_0(str[9]).Text, { variant: str, color: str2, lineClamp: 1, ellipsizeMode: "tail", style: items1, children: closure_0 });
-    obj[0] = items;
-    return closure_1_10(closure_1_9, obj);
+    const obj4 = { variant: str, color: str2, lineClamp: 1, ellipsizeMode: "tail", style: null, children };
+    const items1 = [tag.tag, closure_1_4];
+    obj4.style = items1;
+    items[1] = React6(Text_Text.Text, obj4);
+    obj.children = items;
+    return closure_2_10(React7, obj);
   }
-  const tmp2 = callback2();
-  closure_6 = tmp2;
+  const tmp2 = closure_11();
+  const tag = tmp2;
   if (null != onPress) {
-    let obj = { onPress: null, style: null, disabled: null, accessibilityRole: "button", accessibilityState: null, children: null };
-    obj[0] = onPress;
+    let obj2 = { onPress, style: null, disabled: null, accessibilityRole: "button", accessibilityState: null, children: null };
     let items = [tmp2.container, containerStyles];
-    obj[1] = items;
-    obj[2] = disabled;
-    obj = { disabled: null };
-    obj[0] = disabled;
-    obj[4] = obj;
-    obj[5] = renderContent();
-    let tmp5 = callback(require(str[10]).PressableHighlight, obj);
+    obj2.style = items;
+    obj2.disabled = disabled;
+    let obj3 = { disabled };
+    obj2.accessibilityState = obj3;
+    obj2.children = renderContent();
+    let tmp5 = closure_8(require("Pressables").PressableHighlight, obj2);
   } else {
-    obj = { style: null, children: null };
+    let obj = { style: null, children: null };
     let items1 = [tmp2.container, containerStyles];
-    obj[0] = items1;
-    obj[1] = renderContent();
-    tmp5 = callback(badgeSize, obj);
+    obj.style = items1;
+    obj.children = renderContent();
+    tmp5 = closure_8(badgeSize, obj);
   }
   return tmp5;
 });
-const result = set.fileFinishedImporting("modules/guild_tag/native/GuildTag.tsx");
+let obj3 = { flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 4, paddingHorizontal: 4, paddingVertical: 1, columnGap: 2 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_tag/native/GuildTag.tsx");
 
-export default importAllResult.memo((primaryGuild) => {
+export default noop.memo((primaryGuild) => {
   primaryGuild = primaryGuild.primaryGuild;
   const userId = primaryGuild.userId;
   let flag = primaryGuild.disabledTooltip;
@@ -125,21 +124,18 @@ export default importAllResult.memo((primaryGuild) => {
   if (SIZE_12 === undefined) {
     SIZE_12 = GuildTagBadgeSize.SIZE_12;
   }
-  const merged = Object.assign(primaryGuild, Object.create(null));
+  const merged = Object.assign(primaryGuild, Object.assign({ primaryGuild: 0, userId: 0, disabledTooltip: 0, badgeSize: 0 }));
   guildId = undefined;
-  let obj = primaryGuild(guildId[11]);
-  const items = [closure_6];
+  const items = [UserStore];
   const items1 = [userId, primaryGuild];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    const user = closure_1_6.getUser(userId);
+  const stateFromStoresObject = primaryGuild(guildId[11]).useStateFromStoresObject(items, () => {
+    const user = UserStore.getUser(userId);
     primaryGuild = undefined;
     if (user != null) {
       primaryGuild = user.primaryGuild;
     }
-    let obj = primaryGuild(guildId[12]);
-    const userPrimaryGuild = obj.getUserPrimaryGuild(primaryGuild);
-    obj = { tag: userPrimaryGuild.tag, badge: userPrimaryGuild.badge, guildId: userPrimaryGuild.guildId };
-    return obj;
+    const userPrimaryGuild = GuildTagUtils.getUserPrimaryGuild(primaryGuild);
+    return { tag: userPrimaryGuild.tag, badge: userPrimaryGuild.badge, guildId: userPrimaryGuild.guildId };
   }, items1);
   ({ tag, guildId } = stateFromStoresObject);
   [][0] = guildId;
@@ -147,20 +143,15 @@ export default importAllResult.memo((primaryGuild) => {
   if (null != guildId) {
     tmp8Result = null;
     if (null != tag) {
-      obj = { guildTag: null, guildBadge: null, badgeSize: null };
-      obj[0] = tag;
-      obj[1] = primaryGuild(guildId[12]).getGuildTagBadgeUrl(guildId, stateFromStoresObject.badge, SIZE_12);
-      obj[2] = SIZE_12;
+      let obj2 = { guildTag: tag, guildBadge: primaryGuild(guildId[12]).getGuildTagBadgeUrl(guildId, stateFromStoresObject.badge, SIZE_12), badgeSize: SIZE_12 };
       const merged1 = Object.assign(merged);
       let tmp13;
       if (!flag) {
         tmp13 = tmp6;
       }
-      obj.onPress = tmp13;
-      tmp8Result = closure_8(memoResult1, obj);
+      obj2.onPress = tmp13;
+      tmp8Result = closure_8(memoResult1, obj2);
       const tmp3Result = primaryGuild(guildId[12]);
-      const tmp8 = closure_8;
-      const tmp9 = memoResult1;
     }
   }
   return tmp8Result;

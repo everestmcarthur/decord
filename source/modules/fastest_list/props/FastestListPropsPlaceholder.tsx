@@ -1,11 +1,11 @@
-// Module ID: 7062
-// Function ID: 7063
-// Name: FastestListPropsPlaceholderType
+// Module ID: 7076
+// Function ID: 7077
+// Name: FastestListPropsPlaceholder
 // Dependencies: [2]
 
-// Module 7062 (FastestListPropsPlaceholderType)
-import set from "set" /* 2 */;
+// Module 7076 (FastestListPropsPlaceholder)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/fastest_list/props/FastestListPropsPlaceholder.tsx");
+const result = size.fileFinishedImporting("modules/fastest_list/props/FastestListPropsPlaceholder.tsx");
 
 export const FastestListPropsPlaceholderType = { NONE: 0, [0]: "NONE", SHAPE: 1, [1]: "SHAPE", FEED_ITEM: 2, [2]: "FEED_ITEM" };

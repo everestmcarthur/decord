@@ -1,59 +1,55 @@
-// Module ID: 8661
-// Function ID: 8662
-// Name: UserPreview
-// Dependencies: [19, 17, 21, 4560, 576, 4409, 4556, 1114, 1178, 2]
+// Module ID: 8689
+// Function ID: 8690
+// Name: InAppReportsUserPreview
+// Dependencies: [19, 17, 21, 4574, 576, 4423, 4570, 1114, 1178, 2]
 // Exports: default
 
-// Module 8661 (UserPreview)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import hexToRgba from "hexToRgba" /* 4409 */;
-import Text from "Text" /* 4556 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 8689 (InAppReportsUserPreview)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import ColorUtils from "ColorUtils" /* 4423 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, borderColor: null, title: null, userContainer: null, userProfileInfo: null };
-createCacheKey = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { lineHeight: 16, marginBottom: 8 };
-createCacheKey[3] = { flexDirection: "row", alignItems: "center", justifyContent: "flex-start", minHeight: 40, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, padding: 12 };
-createCacheKey[4] = { marginLeft: 8 };
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flexDirection: "row", alignItems: "center", justifyContent: "flex-start", minHeight: 40, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, padding: 12 };
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsUserPreview.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, borderColor: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, title: { lineHeight: 16, marginBottom: 8 }, userContainer: null, userProfileInfo: null };
+let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+obj2.userContainer = { flexDirection: "row", alignItems: "center", justifyContent: "flex-start", minHeight: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 1, padding: 12 };
+obj2.userProfileInfo = { marginLeft: 8 };
+let closure_5 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsUserPreview.tsx");
 
 export default function UserPreview(user) {
   user = user.user;
-  const tmp = callback2();
-  let obj = hexToRgba;
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
-  const intl = getSystemLocale.intl;
-  const hexWithOpacityResult = obj.hexWithOpacity(tmp.borderColor.color, 0.08);
-  obj[3] = intl.string(getSystemLocale.t.Rsth7z).toUpperCase();
-  const items = [callback(Text.Text, obj), ];
-  obj1 = { style: items1, children: null };
-  items1 = [tmp.userContainer, { borderColor: hexWithOpacityResult }];
-  const str = intl.string(getSystemLocale.t.Rsth7z);
-  const items2 = [callback(Button.Avatar, { size: Button.AvatarSizes.LARGE_48, user, guildId: "Array" }), ];
-  const obj3 = { style: tmp.userProfileInfo, children: null };
+  const tmp = closure_5();
+  const obj2 = { style: tmp.container, children: null };
+  const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
+  const intl = util.intl;
+  const hexWithOpacityResult = ColorUtils.hexWithOpacity(tmp.borderColor.color, 0.08);
+  obj3.children = intl.string(util.t.Rsth7z).toUpperCase();
+  const items = [React3(Text_Text.Text, obj3), ];
+  const obj4 = { style: null, children: null };
+  const items1 = [tmp.userContainer, { borderColor: hexWithOpacityResult }];
+  obj4.style = items1;
+  const str = intl.string(util.t.Rsth7z);
+  const items2 = [React3(native.Avatar, { size: native.AvatarSizes.LARGE_48, user, guildId: "Array" }), ];
+  const obj6 = { style: tmp.userProfileInfo, children: null };
   let tmp7Result = null != user.globalName;
   if (tmp7Result) {
-    const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-    obj4[2] = user.globalName;
-    tmp7Result = tmp7(tmp2(4556).Text, obj4);
+    const obj7 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: user.globalName };
+    tmp7Result = tmp7(tmp2(4570).Text, obj7);
   }
-  const items3 = [tmp7Result, callback(Text.Text, { color: "text-default", variant: "text-sm/normal", children: user.username })];
-  obj3[1] = items3;
-  items2[1] = closure_4(View, obj3);
-  obj1[1] = items2;
-  items[1] = closure_4(View, obj1);
-  obj[1] = items;
-  return closure_4(View, obj);
+  const items3 = [tmp7Result, React3(Text_Text.Text, { color: "text-default", variant: "text-sm/normal", children: user.username })];
+  obj6.children = items3;
+  items2[1] = React4(View, obj6);
+  obj4.children = items2;
+  items[1] = React4(View, obj4);
+  obj2.children = items;
+  return React4(View, obj2);
 };

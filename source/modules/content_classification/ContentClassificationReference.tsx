@@ -1,14 +1,14 @@
-// Module ID: 9485
-// Function ID: 9486
-// Name: isAgeRestrictedClassificationReference
-// Dependencies: [5112, 2]
+// Module ID: 9512
+// Function ID: 9513
+// Name: ContentClassificationReference
+// Dependencies: [5126, 2]
 // Exports: isAgeRestrictedClassificationReference
 
-// Module 9485 (isAgeRestrictedClassificationReference)
-import set from "set" /* 2 */;
-import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 5112 */;
+// Module 9512 (ContentClassificationReference)
+import utils from "utils" /* 5126 */;
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("modules/content_classification/ContentClassificationReference.tsx");
+let result = size.fileFinishedImporting("modules/content_classification/ContentClassificationReference.tsx");
 
 export const isAgeRestrictedClassificationReference = function isAgeRestrictedClassificationReference(contentClassification) {
   let loaded;
@@ -17,8 +17,7 @@ export const isAgeRestrictedClassificationReference = function isAgeRestrictedCl
   }
   let result = !loaded;
   if (loaded) {
-    result = isAgeRestrictedContentClassification.isAgeRestrictedContentClassification(contentClassification.data);
-    const obj = isAgeRestrictedContentClassification;
+    result = utils.isAgeRestrictedContentClassification(contentClassification.data);
   }
   return result;
 };

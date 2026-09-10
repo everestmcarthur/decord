@@ -1,37 +1,44 @@
-// Module ID: 12408
-// Function ID: 12409
+// Module ID: 12434
+// Function ID: 12435
 // Name: DescriptionEllipsis
-// Dependencies: [19, 17, 21, 4560, 576, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 2]
 // Exports: default
 
-// Module 12408 (DescriptionEllipsis)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12434 (DescriptionEllipsis)
+import nativeDefault from "native" /* 576 */;
+import noop from "module_19" /* 19 */;
 
-noopAll;
-({ jsx: closure_1, jsxs: obj1 } = jsxProd);
-createCacheKey = { topicEllipsis: null, topicEllipsisDot: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, justifyContent: "center", alignItems: "center", flexDirection: "row", borderRadius: ThemesDefault.radii.xs, marginTop: 4, height: 12, width: 24 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: ThemesDefault.colors.TEXT_MUTED, borderRadius: 2, margin: 1, height: 4, width: 4 };
-let closure_3 = createCacheKey.createStyles(createCacheKey);
-obj1 = { backgroundColor: ThemesDefault.colors.TEXT_MUTED, borderRadius: 2, margin: 1, height: 4, width: 4 };
-const result = require("set").fileFinishedImporting("components_native/common/DescriptionEllipsis.tsx");
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_1, jsxs: c2 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { topicEllipsis: null, topicEllipsisDot: null };
+let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, justifyContent: "center", alignItems: "center", flexDirection: "row", borderRadius: nativeDefault.radii.xs, marginTop: 4, height: 12, width: 24 };
+obj2.topicEllipsis = size;
+const size1 = { backgroundColor: nativeDefault.colors.TEXT_MUTED, borderRadius: 2, margin: 1, height: 4, width: 4 };
+obj2.topicEllipsisDot = size1;
+let closure_3 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("components_native/common/DescriptionEllipsis.tsx");
 
 export default function DescriptionEllipsis(dotStyle) {
   dotStyle = dotStyle.dotStyle;
-  const tmp = callback3();
-  const obj = { style: items, children: null };
-  items = [tmp.topicEllipsis, dotStyle.style];
+  const tmp = closure_3();
+  const obj = { style: null, children: null };
+  const items = [tmp.topicEllipsis, dotStyle.style];
+  obj.style = items;
+  const obj2 = { style: null };
   const items1 = [tmp.topicEllipsisDot, dotStyle];
-  const items2 = [callback(View, { style: items1 }), , ];
+  obj2.style = items1;
+  const items2 = [framebus(View, obj2), , ];
+  const obj3 = { style: null };
   const items3 = [tmp.topicEllipsisDot, dotStyle];
-  items2[1] = callback(View, { style: items3 });
+  obj3.style = items3;
+  items2[1] = framebus(View, obj3);
+  const obj4 = { style: null };
   const items4 = [tmp.topicEllipsisDot, dotStyle];
-  items2[2] = callback(View, { style: items4 });
-  obj[1] = items2;
-  return callback2(View, obj);
+  obj4.style = items4;
+  items2[2] = framebus(View, obj4);
+  obj.children = items2;
+  return React2(View, obj);
 };

@@ -1,16 +1,17 @@
-// Module ID: 8056
-// Function ID: 8057
+// Module ID: 8071
+// Function ID: 8072
 // Name: useIsEligibleSenderForReferralProgram
-// Dependencies: [7452, 8057, 504, 2]
+// Dependencies: [7466, 8072, 504, 2]
 // Exports: useIsEligibleSenderForReferralProgram
 
-// Module 8056 (useIsEligibleSenderForReferralProgram)
+// Module 8071 (useIsEligibleSenderForReferralProgram)
 import initialize from "initialize" /* 504 */;
-import useMaybeFetchReferralsRemaining from "useMaybeFetchReferralsRemaining" /* 8057 */;
-import closure_2 from "emitChanges" /* 7452 */;
+import useMaybeFetchReferralsRemaining from "useMaybeFetchReferralsRemaining" /* 8072 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7466 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/referral_program/hooks/useIsEligibleSenderForReferralProgram.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/referral_program/hooks/useIsEligibleSenderForReferralProgram.tsx");
 
 export const useIsEligibleSenderForReferralProgram = function useIsEligibleSenderForReferralProgram(result) {
   let flag = result;
@@ -18,7 +19,6 @@ export const useIsEligibleSenderForReferralProgram = function useIsEligibleSende
     flag = false;
   }
   const maybeFetchReferralsRemaining = useMaybeFetchReferralsRemaining.useMaybeFetchReferralsRemaining(flag);
-  const obj = useMaybeFetchReferralsRemaining;
-  const items = [closure_2];
+  const items = [ReferralTrialStore];
   return initialize.useStateFromStores(items, () => isEligibleToSendReferrals.getIsEligibleToSendReferrals());
 };

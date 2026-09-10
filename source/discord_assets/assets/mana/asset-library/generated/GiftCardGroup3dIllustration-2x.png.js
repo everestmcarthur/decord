@@ -1,12 +1,11 @@
-// Module ID: 6136
-// Function ID: 6137
-// Name: metadata
+// Module ID: 6150
+// Function ID: 6151
 // Dependencies: [2]
 
-// Module 6136 (metadata)
-import set from "set" /* 2 */;
+// Module 6150
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GiftCardGroup3dIllustration-2x.png.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GiftCardGroup3dIllustration-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/4faa7b1a8a8d1f2271883c39ced9f8f07df1e6659a4469d55e0c7274b325bedf.png";
 export const metadata = { fileBytes: 145420 };

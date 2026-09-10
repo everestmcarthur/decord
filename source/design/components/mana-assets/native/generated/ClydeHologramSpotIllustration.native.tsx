@@ -1,17 +1,17 @@
-// Module ID: 5859
-// Function ID: 5860
+// Module ID: 5873
+// Function ID: 5874
 // Name: ClydeHologramSpotIllustration
-// Dependencies: [21, 5587, 5860, 2]
+// Dependencies: [21, 5601, 5874, 2]
 // Exports: ClydeHologramSpotIllustration
 
-// Module 5859 (ClydeHologramSpotIllustration)
-import set from "set" /* 2 */;
+// Module 5873 (ClydeHologramSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 5860 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5874 from "module_5874" /* 5874 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ClydeHologramSpotIllustration.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ClydeHologramSpotIllustration.native.tsx");
 
 export const ClydeHologramSpotIllustration = function ClydeHologramSpotIllustration(width) {
   let num = width.width;
@@ -27,14 +27,14 @@ export const ClydeHologramSpotIllustration = function ClydeHologramSpotIllustrat
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
-  obj = { width: num * num3, height: num2 * num3 };
-  const items = [obj];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { width: num * num3, height: num2 * num3 });
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef5874 };
+  obj.source = obj2;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

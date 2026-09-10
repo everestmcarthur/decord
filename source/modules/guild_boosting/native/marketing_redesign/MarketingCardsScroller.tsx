@@ -1,37 +1,40 @@
-// Module ID: 12568
-// Function ID: 12569
-// Name: items
-// Dependencies: [32, 19, 17, 4552, 21, 4560, 4409, 576, 504, 4962, 1114, 1116, 5123, 10380, 12372, 2]
+// Module ID: 12594
+// Function ID: 12595
+// Name: MarketingCardsScroller
+// Dependencies: [32, 19, 17, 4566, 21, 4574, 4423, 576, 504, 4976, 1114, 1116, 5137, 10407, 12398, 2]
 
-// Module 12568 (items)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import hexToRgba from "hexToRgba" /* 4409 */;
+// Module 12594 (MarketingCardsScroller)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-const require = arg1;
-let c4 = importAllResult;
-({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const previous = "previous";
 const next = "next";
+const createStyles = fn(4574);
 let obj = { wrapper: { position: "relative" }, navigationButton: null, navigationButtonPrevious: null, navigationButtonNext: null };
-obj = { alignItems: "center", backgroundColor: null, borderRadius: null, height: 44, justifyContent: "center", position: "absolute", top: "50%", transform: null, width: 44, zIndex: 1 };
-obj[1] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BLACK, 0.56);
-obj[2] = ThemesDefault.radii.round;
+let size = { alignItems: "center", backgroundColor: null, borderRadius: null, height: 44, justifyContent: "center", position: "absolute", top: "50%", transform: null, width: 44, zIndex: 1 };
+const ColorUtils = fn(4423);
+size.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.56);
+size.borderRadius = nativeDefault.radii.round;
 let items = [{ translateY: -22 }];
-obj[7] = items;
-obj[1] = obj;
-obj[2] = { left: 16 };
-obj[3] = { right: 16 };
-let closure_12 = createCacheKey.createStyles(obj);
-const forwardRefResult = importAllResult.forwardRef((initialIndex, ref) => {
+size.transform = items;
+obj.navigationButton = size;
+obj.navigationButtonPrevious = { left: 16 };
+obj.navigationButtonNext = { right: 16 };
+let closure_12 = createStyles.createStyles(obj);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/MarketingCardsScroller.tsx");
+
+export const MarketingCardsScroller = noop.forwardRef((initialIndex, ref) => {
   function handleScrollEnd(nativeEvent) {
-    lib(Math.max(0, Math.min(itemCount - 1, Math.round(nativeEvent.nativeEvent.contentOffset.x / closure_4))));
+    closure_7(Math.max(0, Math.min(itemCount - 1, Math.round(nativeEvent.nativeEvent.contentOffset.x / sum))));
     if (obj.isIOS()) {
       const velocity = nativeEvent.nativeEvent.velocity;
       let tmp3 = null == velocity;
@@ -54,46 +57,46 @@ const forwardRefResult = importAllResult.forwardRef((initialIndex, ref) => {
   }
   const itemCount = initialIndex.itemCount;
   const onScrollingChange = initialIndex.onScrollingChange;
-  const tmp = callback();
-  let obj = importAllResult;
-  ref = importAllResult.useRef(null);
+  const tmp = closure_12();
+  noop.useRef(null);
   const sum = cardWidth + cardMarginRight;
-  closure_5 = importAllResult.useRef(Math.max(0, Math.min(itemCount - 1, num)) * sum);
-  let tmp4 = ref(sum.useState(() => Math.max(0, Math.min(itemCount - 1, num))), 2);
+  noop = sum;
+  ref = noop.useRef(Math.max(0, Math.min(itemCount - 1, num)) * sum);
+  let tmp4 = ref(noop.useState(() => Math.max(0, Math.min(itemCount - 1, num))), 2);
   const first = tmp4[0];
   closure_7 = tmp4[1];
-  [tmp7, closure_8] = ref(sum.useState(0), 2);
-  const tmp6 = ref(sum.useState(0), 2);
-  [tmp9, closure_9] = ref(sum.useState(0), 2);
-  obj1 = num(onScrollingChange[8]);
+  [tmp7, closure_8] = ref(noop.useState(0), 2);
+  const tmp6 = ref(noop.useState(0), 2);
+  [tmp9, closure_9] = ref(noop.useState(0), 2);
+  const tmp8 = ref(noop.useState(0), 2);
   let items = [closure_7];
-  const stateFromStores = obj1.useStateFromStores(items, () => lib.useReducedMotion);
-  closure_11 = importAllResult.useRef(stateFromStores);
-  let obj2 = num(onScrollingChange[9]);
+  const stateFromStores = num(onScrollingChange[8]).useStateFromStores(items, () => closure_7.useReducedMotion);
+  noop.useRef(stateFromStores);
+  let obj2 = num(onScrollingChange[8]);
   let tmp14 = tmp9 > 0;
-  const isScreenReaderEnabled = obj2.useIsScreenReaderEnabled();
+  const isScreenReaderEnabled = num(onScrollingChange[9]).useIsScreenReaderEnabled();
   if (tmp14) {
     const _Math = Math;
     const _Math2 = Math;
     const rounded = Math.round(tmp7);
     tmp14 = rounded > Math.round(tmp9);
   }
-  callback = tmp14;
+  closure_12 = tmp14;
   let tmp25Result = tmp14;
   if (tmp14) {
     tmp25Result = first > 0;
   }
   closure_13 = tmp25Result;
-  tmp25Result = tmp14;
+  let tmp25Result2 = tmp14;
   if (tmp14) {
-    tmp25Result = first < itemCount - 1;
+    tmp25Result2 = first < itemCount - 1;
   }
-  closure_14 = tmp25Result;
+  closure_14 = tmp25Result2;
   const items1 = [itemCount, sum];
   const items2 = [stateFromStores];
   const memo = obj.useMemo(() => {
     const array = new Array(itemCount);
-    return array.fill(0).map((arg0, arg1) => arg1 * closure_4);
+    return array.fill(0).map((item, index) => index * closure_1_4);
   }, items1);
   const effect = obj.useEffect(() => {
     closure_11.current = stateFromStores;
@@ -103,45 +106,41 @@ const forwardRefResult = importAllResult.forwardRef((initialIndex, ref) => {
     if (0 !== current) {
       const current2 = ref.current;
       if (current2 != null) {
-        const obj = { x: null, animated: false };
-        obj[0] = current;
+        const obj = { x: current, animated: false };
         current2.scrollTo(obj);
       }
     }
   }, []);
   const items3 = [itemCount, sum];
-  callback = obj.useCallback((arg0) => {
+  const scrollToIndex = obj.useCallback((arg0) => {
     const bound = Math.max(0, Math.min(itemCount - 1, arg0));
-    lib(bound);
+    closure_7(bound);
     const current = ref.current;
     if (current != null) {
-      const obj = { x: null, animated: null };
-      obj[0] = bound * closure_4;
-      obj[1] = !ref2.current;
+      const obj = { x: bound * sum, animated: !ref2.current };
       current.scrollTo(obj);
     }
   }, items3);
-  const items4 = [callback];
-  const imperativeHandle = obj.useImperativeHandle(ref, () => ({ scrollToIndex: callback }), items4);
-  const items5 = [tmp25Result, tmp25Result];
-  obj = { style: items6, children: null };
-  items6 = [initialIndex.style, tmp.wrapper];
-  obj = {
-    accessibilityActions: obj.useMemo(() => {
+  const items4 = [scrollToIndex];
+  const imperativeHandle = obj.useImperativeHandle(ref, () => ({ scrollToIndex }), items4);
+  const items5 = [tmp25Result2, tmp25Result];
+  const obj4 = { style: null, children: null };
+  const items6 = [initialIndex.style, tmp.wrapper];
+  obj4.style = items6;
+  const obj5 = {
+    accessibilityActions: noop.useMemo(() => {
       const items = [];
       if (closure_13) {
-        let obj = { name: null, label: null };
-        obj[0] = stateFromStores;
-        const intl = num(onScrollingChange[10]).intl;
-        obj[1] = intl.string(num(onScrollingChange[10]).t.vgfxaA);
+        const obj = { name: previous, label: null };
+        const intl = util.intl;
+        obj.label = intl.string(util.t.vgfxaA);
         items.push(obj);
       }
       if (closure_14) {
-        obj = { name: null, label: null };
-        obj[0] = closure_11;
-        const intl2 = num(onScrollingChange[10]).intl;
-        obj[1] = intl2.string(num(onScrollingChange[10]).t.XiOHRX);
-        items.push(obj);
+        const obj2 = { name: next, label: null };
+        const intl2 = util.intl;
+        obj2.label = intl2.string(util.t.XiOHRX);
+        items.push(obj2);
       }
       return items;
     }, items5),
@@ -151,21 +150,21 @@ const forwardRefResult = importAllResult.forwardRef((initialIndex, ref) => {
     horizontal: true,
     onAccessibilityAction(nativeEvent) {
       const actionName = nativeEvent.nativeEvent.actionName;
-      if (stateFromStores === actionName) {
+      if (previous === actionName) {
         if (closure_13) {
           callback(first - 1);
         }
-      } else if (closure_11 === actionName) {
+      } else if (next === actionName) {
         if (closure_14) {
           callback(first + 1);
         }
       }
     },
     onContentSizeChange(arg0) {
-      callback(arg0);
+      closure_1_8(arg0);
     },
     onLayout(nativeEvent) {
-      callback2(nativeEvent.nativeEvent.layout.width);
+      closure_1_9(nativeEvent.nativeEvent.layout.width);
     },
     onMomentumScrollEnd(nativeEvent) {
       handleScrollEnd(nativeEvent);
@@ -187,10 +186,10 @@ const forwardRefResult = importAllResult.forwardRef((initialIndex, ref) => {
   if (tmp14) {
     tmp14 = !isScreenReaderEnabled;
   }
-  obj[12] = tmp14;
-  obj[13] = memo;
+  obj5.scrollEnabled = tmp14;
+  obj5.snapToOffsets = memo;
   const Children = obj.Children;
-  obj[14] = Children.map(children, (arg0, arg1) => {
+  obj5.children = Children.map(children, (children, arg1) => {
     let tmp4 = closure_12;
     if (closure_12) {
       tmp4 = arg1 !== first;
@@ -202,52 +201,47 @@ const forwardRefResult = importAllResult.forwardRef((initialIndex, ref) => {
         str = "no-hide-descendants";
       }
     }
-    obj[1] = str;
-    obj[2] = arg0;
-    return closure_1_8(first, obj);
+    obj.importantForAccessibility = str;
+    obj.children = children;
+    return React6(timestampProducer, obj);
   });
-  const items7 = [closure_8(closure_5, obj), , ];
+  const items7 = [closure_8(ref, obj5), , ];
   if (tmp25Result) {
     function handleNavigatePrevious() {
       if (closure_13) {
         callback(first - 1);
       }
     }
-    obj1 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, children: null };
+    const obj6 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, children: null };
     let intl = tmp10(tmp11[10]).intl;
-    obj1[0] = intl.string(tmp10(tmp11[10]).t.vgfxaA);
-    obj1[2] = handleNavigatePrevious;
+    obj6.accessibilityLabel = intl.string(tmp10(tmp11[10]).t.vgfxaA);
+    obj6.onPress = handleNavigatePrevious;
     const items8 = [, ];
     ({ navigationButton: arr10[0], navigationButtonPrevious: arr10[1] } = tmp);
-    obj1[3] = items8;
-    obj2 = { color: null, size: "sm" };
-    obj2[0] = itemCount(tmp11[7]).colors.WHITE;
-    obj1[4] = tmp25(tmp10(tmp11[13]).ChevronLargeLeftIcon, obj2);
-    tmp25Result = tmp25(tmp10(tmp11[12]).PressableOpacity, obj1);
+    obj6.style = items8;
+    const obj7 = { color: itemCount(tmp11[7]).colors.WHITE, size: "sm" };
+    obj6.children = tmp25(tmp10(tmp11[13]).ChevronLargeLeftIcon, obj7);
+    tmp25Result = tmp25(tmp10(tmp11[12]).PressableOpacity, obj6);
   }
   items7[1] = tmp25Result;
-  if (tmp25Result) {
+  if (tmp25Result2) {
     function handleNavigateNext() {
       if (closure_14) {
         callback(first + 1);
       }
     }
-    const obj3 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, children: null };
+    const obj8 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, children: null };
     let intl2 = tmp10(tmp11[10]).intl;
-    obj3[0] = intl2.string(tmp10(tmp11[10]).t.XiOHRX);
-    obj3[2] = handleNavigateNext;
+    obj8.accessibilityLabel = intl2.string(tmp10(tmp11[10]).t.XiOHRX);
+    obj8.onPress = handleNavigateNext;
     const items9 = [, ];
     ({ navigationButton: arr11[0], navigationButtonNext: arr11[1] } = tmp);
-    obj3[3] = items9;
-    const obj4 = { color: null, size: "sm" };
-    obj4[0] = itemCount(tmp11[7]).colors.WHITE;
-    obj3[4] = tmp25(tmp10(tmp11[14]).ChevronLargeRightIcon, obj4);
-    tmp25Result = tmp25(tmp10(tmp11[12]).PressableOpacity, obj3);
+    obj8.style = items9;
+    const obj9 = { color: itemCount(tmp11[7]).colors.WHITE, size: "sm" };
+    obj8.children = tmp25(tmp10(tmp11[14]).ChevronLargeRightIcon, obj9);
+    tmp25Result2 = tmp25(tmp10(tmp11[12]).PressableOpacity, obj8);
   }
-  items7[2] = tmp25Result;
-  obj[1] = items7;
-  return closure_9(first, obj);
+  items7[2] = tmp25Result2;
+  obj4.children = items7;
+  return closure_9(first, obj4);
 });
-const result = require("set").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/MarketingCardsScroller.tsx");
-
-export const MarketingCardsScroller = forwardRefResult;

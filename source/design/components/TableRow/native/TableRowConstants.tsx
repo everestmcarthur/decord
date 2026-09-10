@@ -1,12 +1,12 @@
-// Module ID: 5603
-// Function ID: 5604
-// Name: TABLE_ROW_HEIGHT
+// Module ID: 5617
+// Function ID: 5618
+// Name: TableRowConstants
 // Dependencies: [2]
 
-// Module 5603 (TABLE_ROW_HEIGHT)
-import set from "set" /* 2 */;
+// Module 5617 (TableRowConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("design/components/TableRow/native/TableRowConstants.tsx");
+const result = size.fileFinishedImporting("design/components/TableRow/native/TableRowConstants.tsx");
 
 export const TABLE_ROW_HEIGHT = 60;
 export const TABLE_ROW_CONTENT_HEIGHT = 36;

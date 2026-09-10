@@ -1,14 +1,14 @@
-// Module ID: 9652
-// Function ID: 9653
+// Module ID: 9679
+// Function ID: 9680
 // Name: getIFrameSandboxAttributes
 // Dependencies: [2]
 // Exports: default
 
-// Module 9652 (getIFrameSandboxAttributes)
-import set from "set" /* 2 */;
+// Module 9679 (getIFrameSandboxAttributes)
+import size from "module_2" /* 2 */;
 
 let closure_0 = ["allow-pointer-lock", "allow-scripts", "allow-same-origin", "allow-forms"];
-const result = set.fileFinishedImporting("modules/activities/utils/getIFrameSandboxAttributes.tsx");
+const result = size.fileFinishedImporting("modules/activities/utils/getIFrameSandboxAttributes.tsx");
 
 export default function getIFrameSandboxAttributes(allowPopups) {
   let obj = closure_0;

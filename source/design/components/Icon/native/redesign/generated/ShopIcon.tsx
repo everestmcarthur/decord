@@ -1,26 +1,26 @@
-// Module ID: 12142
-// Function ID: 12143
+// Module ID: 12168
+// Function ID: 12169
 // Name: ShopIcon
-// Dependencies: [19, 21, 576, 4261, 12143, 2]
+// Dependencies: [19, 21, 576, 4274, 12169, 2]
 // Exports: ShopIcon
 
-// Module 12142 (ShopIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 12143 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 12168 (ShopIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod12169 from "module_12169" /* 12169 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/ShopIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/ShopIcon.tsx");
 
 export const ShopIcon = function ShopIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12169, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

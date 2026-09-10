@@ -1,20 +1,26 @@
-// Module ID: 14611
-// Function ID: 14612
+// Module ID: 14636
+// Function ID: 14637
 // Name: EditUserProfileAvatar
-// Dependencies: [19, 4552, 21, 4560, 7162, 7182, 4218, 8159, 8169, 14612, 4527, 14613, 1896, 14614, 14614, 8157, 8166, 504, 4296, 4561, 8257, 5123, 1114, 14615, 1178, 2]
+// Dependencies: [19, 4566, 21, 4574, 7176, 7196, 4231, 8185, 8195, 14637, 4541, 14638, 1896, 14639, 14639, 8183, 8192, 504, 4310, 4575, 8283, 5137, 1114, 14640, 1178, 2]
 // Exports: default
 
-// Module 14611 (EditUserProfileAvatar)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14636 (EditUserProfileAvatar)
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import timing from "timing" /* 4575 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8192 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-const require = arg1;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ editIcon: { position: "absolute", right: -3 } });
-let closure_8 = { code: "function EditUserProfileAvatarTsx1(){const{rotation}=this.__closure;return{transform:[{rotateZ:rotation.get()+\"deg\"}]};}" };
-let result = require("set").fileFinishedImporting("modules/user_profile/native/EditUserProfileAvatar.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let closure_7 = createStyles.createStyles({ editIcon: { position: "absolute", right: -3 } });
+let __initData = { code: "function EditUserProfileAvatarTsx1(){const{rotation}=this.__closure;return{transform:[{rotateZ:rotation.get()+\"deg\"}]};}" };
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/user_profile/native/EditUserProfileAvatar.tsx");
 
 export default function EditUserProfileAvatar(user) {
   user = user.user;
@@ -32,69 +38,64 @@ export default function EditUserProfileAvatar(user) {
     flag3 = false;
   }
   const size = user.size;
-  let analyticsLocations;
-  closure_4 = undefined;
+  let showAnimatedAvatarUpsell;
   let pendingAvatar;
   setPendingAvatar = undefined;
   let avatarDecoration;
-  closure_8 = undefined;
-  let callback;
-  closure_10 = undefined;
+  __initData = undefined;
+  let onPress;
   let sharedValue;
   let tmp = avatarDecoration();
-  analyticsLocations = flag2(flag3[4])(flag2(flag3[5]).EDIT_AVATAR).analyticsLocations;
-  let obj = flag2(flag3[6]);
-  const canUseAnimatedAvatarResult = obj.canUseAnimatedAvatar(user);
+  const analyticsLocations = flag2(flag3[4])(flag2(flag3[5]).EDIT_AVATAR).analyticsLocations;
+  const tmp4 = flag2(flag3[4]);
+  const canUseAnimatedAvatarResult = flag2(flag3[6]).canUseAnimatedAvatar(user);
   let tmp6 = !canUseAnimatedAvatarResult;
   if (!canUseAnimatedAvatarResult) {
     tmp6 = !flag2;
   }
-  closure_4 = tmp6;
+  showAnimatedAvatarUpsell = tmp6;
   const tmp7 = flag2(flag3[7])({ isTryItOut: flag2, analyticsLocations });
   pendingAvatar = tmp7.pendingAvatar;
   ({ pendingAvatarDecoration, setPendingAvatar } = tmp7);
-  obj1 = user(tmp3[8]);
-  obj = { userId: user.id, image: pendingAvatar };
+  let obj = flag2(flag3[6]);
   avatarDecoration = pendingAvatarDecoration;
-  const pendingAvatarSrc = obj1.getPendingAvatarSrc(obj);
+  const pendingAvatarSrc = user(flag3[8]).getPendingAvatarSrc({ userId: user.id, image: pendingAvatar });
   if (undefined === pendingAvatarDecoration) {
     avatarDecoration = user.avatarDecoration;
   }
   const tmp10 = flag2(flag3[9])({ isTryItOut: flag2, analyticsLocations });
-  closure_8 = tmp10;
+  __initData = tmp10;
   let items = [user, analyticsLocations, pendingAvatar, setPendingAvatar, tmp10, tmp6, avatarDecoration, flag2];
-  callback = analyticsLocations.useCallback(() => {
-    let obj = flag2(flag3[10]);
-    obj = {
-      showAnimatedAvatarUpsell: closure_4,
+  onPress = analyticsLocations.useCallback(() => {
+    let obj2 = {
+      showAnimatedAvatarUpsell,
       handleRemoveAvatarSelect() {
-        closure_1_1(closure_1_2[10]).hideActionSheet();
-        callback(null);
+        flag2(flag3[10]).hideActionSheet();
+        setPendingAvatar(null);
       },
-      handleUploadAvatarSelect: closure_8,
+      handleUploadAvatarSelect,
       handleUploadGIFAvatarSelect() {
-        let obj = closure_1_1(closure_1_2[10]);
-        obj.hideActionSheet();
-        obj = { profileAssetType: null, selectionContext: null };
-        const obj2 = closure_1_1(closure_1_2[10]);
-        obj[0] = closure_1_0(closure_1_2[14]).ProfileAssetType.AVATAR;
-        const GIFSelectionContext = closure_1_0(closure_1_2[14]).GIFSelectionContext;
-        obj[1] = closure_1 ? GIFSelectionContext.PROFILE_TRY_IT_OUT : GIFSelectionContext.PROFILE_EDIT;
-        obj2.openLazy(closure_1_0(closure_1_2[12])(closure_1_2[13], closure_1_2.paths), "Select GIF Avatar", obj);
+        flag2(flag3[10]).hideActionSheet();
+        const obj = flag2(flag3[10]);
+        const obj3 = { profileAssetType: null, selectionContext: null };
+        const obj2 = flag2(flag3[10]);
+        obj3.profileAssetType = user(flag3[14]).ProfileAssetType.AVATAR;
+        const GIFSelectionContext = user(flag3[14]).GIFSelectionContext;
+        obj3.selectionContext = closure_1_1 ? GIFSelectionContext.PROFILE_TRY_IT_OUT : GIFSelectionContext.PROFILE_EDIT;
+        obj2.openLazy(user(flag3[12])(flag3[13], flag3.paths), "Select GIF Avatar", obj3);
       },
       handleEditAvatarDecorationSelect() {
-        let obj = closure_1_0(closure_1_2[15]);
-        obj = { user: closure_0, currentAvatarDecoration: closure_7, analyticsLocations: closure_3 };
-        const result = obj.openAvatarDecorationActionSheet(obj);
+        const result = user(flag3[15]).openAvatarDecorationActionSheet({ user, currentAvatarDecoration, analyticsLocations });
       },
       showRemoveAvatar: null
     };
-    const tmp = user(flag3[12])(flag3[11], flag3.paths);
-    obj[5] = user(flag3[16]).showRemoveAvatar(pendingAvatar, user.avatar);
-    obj.openLazy(tmp, "Change Avatar", obj);
+    let obj = ActionSheetActionCreatorsDefault;
+    const tmp = asyncRequireImpl(14638, dependencyMap.paths);
+    obj2.showRemoveAvatar = ProfileCustomizationUtils.showRemoveAvatar(pendingAvatar, user.avatar);
+    obj.openLazy(tmp, "Change Avatar", obj2);
   }, items);
-  closure_10 = analyticsLocations.useRef(false);
-  const items1 = [user, flag3, callback];
+  analyticsLocations.useRef(false);
+  const items1 = [user, flag3, onPress];
   const effect = analyticsLocations.useEffect(() => {
     let tmp = flag3;
     if (flag3) {
@@ -105,60 +106,59 @@ export default function EditUserProfileAvatar(user) {
       callback();
     }
   }, items1);
-  let tmp8Result = tmp8(tmp3[17]);
-  const items2 = [closure_4];
-  const stateFromStores = tmp8Result.useStateFromStores(items2, () => useReducedMotion.useReducedMotion);
-  tmp8Result = tmp8(tmp3[18]);
-  sharedValue = tmp8Result.useSharedValue(0);
-  const tmp4 = flag2(flag3[4]);
+  let obj2 = user(flag3[8]);
+  let obj3 = { userId: user.id, image: pendingAvatar };
+  const items2 = [showAnimatedAvatarUpsell];
+  const stateFromStores = user(flag3[17]).useStateFromStores(items2, () => showAnimatedAvatarUpsell.useReducedMotion);
+  const tmp8Result = user(flag3[17]);
+  sharedValue = user(flag3[18]).useSharedValue(0);
+  const tmp8Result3 = user(flag3[18]);
   const fn = function z() {
-    let obj = { transform: null };
-    obj = { rotateZ: "" + sharedValue.get() + "deg" };
-    const items = [obj];
-    obj[0] = items;
+    const obj = { transform: null };
+    const items = [{ rotateZ: "" + sharedValue.get() + "deg" }];
+    obj.transform = items;
     return obj;
   };
   fn.__closure = { rotation: sharedValue };
   fn.__workletHash = 13368223692459;
-  fn.__initData = closure_8;
+  fn.__initData = __initData;
   const items3 = [sharedValue];
   const animatedStyle = user(flag3[18]).useAnimatedStyle(fn);
   const effect1 = analyticsLocations.useEffect(() => {
-    let obj = user(flag3[18]);
-    obj = { duration: 3000, easing: null };
-    const Easing = user(flag3[18]).Easing;
-    obj[1] = Easing.inOut(user(flag3[18]).Easing.quad);
-    const result = sharedValue.set(obj.withRepeat(user(flag3[19]).withTiming(360, obj), -1));
-    return () => closure_1_0(closure_1_2[18]).cancelAnimation(closure_11);
+    const obj = ReanimatedRexport;
+    const obj3 = { duration: 3000, easing: null };
+    const Easing = ReanimatedRexport.Easing;
+    obj3.easing = Easing.inOut(ReanimatedRexport.Easing.quad);
+    const result = sharedValue.set(obj.withRepeat(timing.withTiming(360, obj3), -1));
+    return () => user(flag3[18]).cancelAnimation(sharedValue);
   }, items3);
   const tmp18 = pendingAvatar(flag2(flag3[20]), { style: avatarStyle, user, pendingAvatarSrc, pendingAvatarDecoration, statusStyle, disableStatus: flag, size });
-  obj = { style, disabled, onPress: callback, accessibilityRole: "button", accessibilityLabel: null, children: null };
+  const obj4 = { style, disabled, onPress, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl = tmp8(tmp3[22]).intl;
-  obj[4] = intl.string(user(flag3[22]).t.MUgHIN);
+  obj4.accessibilityLabel = intl.string(user(flag3[22]).t.MUgHIN);
   let tmp17Result = tmp18;
   if (flag2) {
     tmp17Result = tmp18;
     if (null == pendingAvatarDecoration) {
       tmp17Result = tmp18;
       if (!stateFromStores) {
-        obj1 = { style: null, children: null };
-        obj1[0] = animatedStyle;
-        obj1[1] = tmp18;
-        tmp17Result = tmp17(tmp2(tmp3[18]).View, obj1);
+        const obj5 = { style: animatedStyle, children: tmp18 };
+        tmp17Result = tmp17(tmp2(tmp3[18]).View, obj5);
       }
     }
   }
   const items4 = [tmp17Result, ];
-  let obj2 = { style: items5, size: null };
-  items5 = [tmp.editIcon, editIconStyle];
+  const obj6 = { style: null, size: null };
+  const items5 = [tmp.editIcon, editIconStyle];
+  obj6.style = items5;
   const tmp19 = setPendingAvatar;
-  const tmp8Result1 = user(flag3[18]);
+  const tmp8Result4 = user(flag3[18]);
   let str = "xs";
   if (size === user(flag3[24]).AvatarSizes.EDIT_AVATAR_DECORATION) {
     str = "sm";
   }
-  obj2[1] = str;
-  items4[1] = pendingAvatar(flag2(flag3[23]), obj2);
-  obj[5] = items4;
-  return tmp19(user(flag3[21]).PressableOpacity, obj);
+  obj6.size = str;
+  items4[1] = pendingAvatar(flag2(flag3[23]), obj6);
+  obj4.children = items4;
+  return tmp19(user(flag3[21]).PressableOpacity, obj4);
 };

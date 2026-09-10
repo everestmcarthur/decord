@@ -1,31 +1,40 @@
-// Module ID: 16426
-// Function ID: 16427
-// Name: focusChatInput
-// Dependencies: [5, 19, 17, 1957, 1371, 1074, 21, 4560, 1109, 4296, 4561, 4973, 4975, 1114, 4556, 563, 7976, 16047, 4540, 13853, 10875, 7640, 4573, 9047, 4259, 11674, 1242, 2]
+// Module ID: 16457
+// Function ID: 16458
+// Name: ForYouItemActionButtons
+// Dependencies: [5, 19, 17, 1957, 1371, 1074, 21, 4574, 1109, 4310, 4575, 4987, 4989, 1114, 4570, 563, 7990, 16077, 4554, 13876, 10902, 7654, 4587, 9074, 4272, 11700, 1242, 2]
 // Exports: ForYouItemActionButtons, useItemActionButtonPropsV2
 
-// Module 16426 (focusChatInput)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "ensureGuildLoaded" /* 1957 */;
-import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import ME from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16457 (ForYouItemActionButtons)
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import parseURLDefault from "parseURL" /* 4554 */;
+import timing from "timing" /* 4575 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4587 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7654 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9074 */;
+import PeopleUtilsDefault from "PeopleUtils" /* 10902 */;
+import handleSupportedURLDefault from "handleSupportedURL" /* 13876 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16077 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-function focusChatInput(arg0) {
+const require = globalThis.__r;
+
+require = fn;
+function focusChatInput(channelId) {
   let tmp;
-  if (null != arg0) {
-    let obj = { channelId: null };
-    obj[0] = arg0;
+  if (null != channelId) {
+    let obj = { channelId };
     tmp = obj;
   }
   obj = tmp;
   const timerId = setTimeout(() => {
-    const ComponentDispatch = obj(closure_1_2[8]).ComponentDispatch;
-    return ComponentDispatch.dispatch(closure_1_9.TEXTAREA_FOCUS, obj);
+    const ComponentDispatch = other_user(1109).ComponentDispatch;
+    return ComponentDispatch.dispatch(constants.TEXTAREA_FOCUS, obj);
   }, 0);
 }
 class IncomingFriendRequestActions {
@@ -40,88 +49,84 @@ class IncomingFriendRequestActions {
     tmp2 = pressed;
     tmp3 = closure_2;
     tmp = closure_14();
-    obj = require("module_4296");
-    sharedValue = require("module_0");
+    obj = pressed(closure_2[9]);
+    sharedValue = obj.useSharedValue(0);
     closure_1 = sharedValue;
-    obj2 = require("module_4296");
-    sharedValue1 = require("module_4294967295");
+    obj2 = pressed(closure_2[9]);
+    sharedValue1 = obj2.useSharedValue(-1);
     closure_2 = sharedValue1;
-    obj3 = require("module_4296");
-    sharedValue2 = require("module_4294967295");
+    obj3 = pressed(closure_2[9]);
+    sharedValue2 = obj3.useSharedValue(-1);
     closure_3 = sharedValue2;
-    obj4 = require("module_4296");
-    sharedValue3 = require("module_4294967295");
+    obj4 = pressed(closure_2[9]);
+    sharedValue3 = obj4.useSharedValue(-1);
     closure_4 = sharedValue3;
-    obj5 = require("module_4296");
+    obj5 = pressed(closure_2[9]);
     fn = function u() {
-      let obj = pressed(sharedValue1[10]);
       let num = 1;
       if (pressed.get()) {
         num = 0;
       }
-      obj = { opacity: obj.withTiming(num, { duration: 150 }), pointerEvents: null };
+      const obj3 = { opacity: timing.withTiming(num, { duration: 150 }), pointerEvents: null };
       let str = "auto";
       if (pressed.get()) {
         str = "none";
       }
-      obj[1] = str;
-      return obj;
+      obj3.pointerEvents = str;
+      return obj3;
     };
-    obj = { withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, pressed };
-    fn.__closure = obj;
+    obj1 = { withTiming: pressed(closure_2[10]).withTiming, pressed };
+    fn.__closure = obj1;
     fn.__workletHash = 100815030677;
     fn.__initData = closure_17;
     animatedStyle = obj5.useAnimatedStyle(fn);
-    obj7 = require("module_4296");
+    obj7 = pressed(closure_2[9]);
     fn2 = function _() {
-      let obj = pressed;
       let num = 1;
       if (!pressed.get()) {
-        let value = sharedValue.get();
+        value = sharedValue.get();
         num = value / sharedValue1.get();
       }
-      value = sharedValue1.get();
-      const diff = value - sharedValue1.get() * num;
+      value2 = sharedValue1.get();
+      const diff = value2 - sharedValue1.get() * num;
       let num2 = 0;
-      if (!obj.get()) {
+      if (!pressed.get()) {
         num2 = -diff / 2;
       }
-      obj = { transform: null, opacity: null, pointerEvents: null };
-      obj = { scaleX: pressed(sharedValue1[10]).withTiming(num) };
-      const items = [obj, ];
-      obj1 = { translateX: null };
-      const obj4 = pressed(sharedValue1[10]);
-      obj1[0] = pressed(sharedValue1[10]).withTiming(num2);
-      items[1] = obj1;
-      obj[0] = items;
-      const obj6 = pressed(sharedValue1[10]);
+      const obj2 = { transform: null, opacity: null, pointerEvents: null };
+      const obj3 = { scaleX: timing.withTiming(num) };
+      const items = [obj3, ];
+      const obj5 = { translateX: null };
+      obj5.translateX = timing.withTiming(num2);
+      items[1] = obj5;
+      obj2.transform = items;
       let num4 = 0;
-      if (obj.get()) {
+      if (pressed.get()) {
         num4 = 1;
       }
-      obj[1] = pressed(sharedValue1[10]).withTiming(num4);
+      obj2.opacity = timing.withTiming(num4);
       let str = "none";
-      if (obj.get()) {
+      if (pressed.get()) {
         str = "auto";
       }
-      obj[2] = str;
-      return obj;
+      obj2.pointerEvents = str;
+      return obj2;
     };
-    obj1 = { pressed, acceptButtonWidth: sharedValue, buttonWidth: sharedValue1, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming };
-    fn2.__closure = obj1;
+    obj23 = { pressed, acceptButtonWidth: sharedValue, buttonWidth: sharedValue1, withTiming: pressed(closure_2[10]).withTiming };
+    fn2.__closure = obj23;
     fn2.__workletHash = 12358515723480;
     fn2.__initData = closure_18;
     animatedStyle1 = obj7.useAnimatedStyle(fn2);
-    obj9 = require("module_4296");
+    obj9 = pressed(closure_2[9]);
     class E {
       constructor() {
         obj = { transform: null };
-        obj = { translateX: closure_3.get() / 2 };
+        obj1 = { translateX: closure_3.get() / 2 };
         items = [, ];
-        items[0] = obj;
-        obj1 = { translateY: closure_4.get() / 2 };
-        items[1] = obj1;
-        obj[0] = items;
+        items[0] = obj1;
+        obj4 = { translateY: closure_4.get() / 2 };
+        items[1] = obj4;
+        obj.transform = items;
         return obj;
       }
     }
@@ -129,42 +134,42 @@ class IncomingFriendRequestActions {
     E.__workletHash = 667441788226;
     E.__initData = closure_19;
     animatedStyle2 = obj9.useAnimatedStyle(E);
-    obj10 = require("module_4296");
+    obj10 = pressed(closure_2[9]);
     class I {
       constructor() {
-        tmp = pressed;
+        tmp = closure_0;
         tmp2 = closure_2;
-        obj = require("module_4296");
-        obj2 = require("module_4296");
-        obj3 = require("CONFIG_NEVER_ANIMATE_TIMING");
+        obj = closure_0(closure_2[9]);
+        obj2 = closure_0(closure_2[9]);
+        obj3 = closure_0(closure_2[10]);
         str = "-2deg";
         if (pressed.get()) {
           str = "8deg";
         }
-        obj = { transform: null };
-        obj1 = { rotateZ: null };
-        obj2 = { duration: 150, easing: null };
-        Easing = require("module_4296").Easing;
-        obj2[1] = Easing.inOut(require("module_4296").Easing.quad);
-        obj1[0] = require("module_450");
+        obj1 = { transform: null };
+        obj9 = { rotateZ: null };
+        obj10 = { duration: 150, easing: null };
+        Easing = tmp(tmp2[9]).Easing;
+        obj10.easing = Easing.inOut(tmp(tmp2[9]).Easing.quad);
+        obj9.rotateZ = obj.withDelay(450, obj2.withRepeat(obj3.withTiming(str, obj10), 4, true));
         items = [, , ];
-        items[0] = obj1;
-        obj3 = { translateX: -closure_3.get() / 2 };
-        items[1] = obj3;
-        obj4 = { translateY: -closure_4.get() / 2 };
-        items[2] = obj4;
-        obj[0] = items;
-        return obj;
+        items[0] = obj9;
+        obj11 = { translateX: -closure_3.get() / 2 };
+        items[1] = obj11;
+        obj12 = { translateY: -closure_4.get() / 2 };
+        items[2] = obj12;
+        obj1.transform = items;
+        return obj1;
       }
     }
-    obj2 = { withDelay: require("module_4296").withDelay, withRepeat: require("module_4296").withRepeat, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, pressed, Easing: require("module_4296").Easing, waveWidth: sharedValue2, waveHeight: sharedValue3 };
-    I.__closure = obj2;
+    obj24 = { withDelay: pressed(closure_2[9]).withDelay, withRepeat: pressed(closure_2[9]).withRepeat, withTiming: pressed(closure_2[10]).withTiming, pressed, Easing: pressed(closure_2[9]).Easing, waveWidth: sharedValue2, waveHeight: sharedValue3 };
+    I.__closure = obj24;
     I.__workletHash = 498167545082;
     I.__initData = closure_20;
     animatedStyle3 = obj10.useAnimatedStyle(I);
-    obj12 = require("module_4296");
+    obj12 = pressed(closure_2[9]);
     fn3 = function p() {
-      const value = pressed.get();
+      value = pressed.get();
       return { pointerEvents: "none" };
     };
     fn3.__closure = { pressed };
@@ -175,97 +180,103 @@ class IncomingFriendRequestActions {
     tmp14 = View;
     tmp15 = jsx;
     tmp16 = closure_1;
-    obj3 = { style: items, children: null };
+    obj25 = { style: null, children: null };
     items = [, ];
     items[0] = tmp.actionButtonsContainer;
     items[1] = animatedStyle;
-    obj4 = {
+    obj25.style = items;
+    obj26 = {
       onLayout(nativeEvent) {
             const result = sharedValue.set(nativeEvent.nativeEvent.layout.width);
           },
       children: null
     };
-    obj5 = { text: null, variant: "primary", size: null, onPress: null };
-    intl = require("getSystemLocale").intl;
-    obj5[0] = intl.string(require("getSystemLocale").t.zf5jU5);
+    obj27 = { text: null, variant: "primary", size: null, onPress: null };
+    intl = pressed(closure_2[13]).intl;
+    obj27.text = intl.string(pressed(closure_2[13]).t.zf5jU5);
     str = "md";
     str2 = "md";
     if (compactMode) {
       str2 = "sm";
     }
-    obj5[2] = str2;
-    obj5[3] = onAccept;
-    obj4[1] = tmp15(require("Button").Button, obj5, "accept_friend_request");
+    obj27.size = str2;
+    obj27.onPress = onAccept;
+    obj26.children = tmp15(pressed(closure_2[12]).Button, obj27, "accept_friend_request");
     items1 = [, ];
-    items1[0] = tmp15(tmp14, obj4);
-    obj6 = { text: null, variant: "secondary", size: null, onPress: null };
-    intl2 = require("getSystemLocale").intl;
-    obj6[0] = intl2.string(require("getSystemLocale").t.EBN847);
+    items1[0] = tmp15(tmp14, obj26);
+    obj28 = { text: null, variant: "secondary", size: null, onPress: null };
+    intl2 = tmp2(tmp3[13]).intl;
+    obj28.text = intl2.string(tmp2(tmp3[13]).t.EBN847);
     str3 = str;
     if (compactMode) {
       str3 = "sm";
     }
-    obj7 = { direction: "horizontal", spacing: 8, children: null };
-    obj6[2] = str3;
-    obj6[3] = onIgnore;
-    items1[1] = tmp15(require("Button").Button, obj6, "ignore_friend_request");
-    obj7[2] = items1;
-    obj3[1] = tmp13(require("Stack").Stack, obj7);
+    obj29 = { direction: "horizontal", spacing: 8, children: null };
+    obj28.size = str3;
+    obj28.onPress = onIgnore;
+    items1[1] = tmp15(tmp2(tmp3[12]).Button, obj28, "ignore_friend_request");
+    obj29.children = items1;
+    obj25.children = tmp13(pressed(closure_2[11]).Stack, obj29);
     items2 = [, ];
-    items2[0] = tmp15(require("module_4296").View, obj3);
-    obj8 = {
+    items2[0] = tmp15(closure_1(closure_2[9]).View, obj25);
+    obj30 = {
       style: animatedStyle1,
       onLayout(nativeEvent) {
             const result = sharedValue1.set(nativeEvent.nativeEvent.layout.width);
           }
     };
     merged = Object.assign(animatedProps);
-    obj9 = { variant: "secondary", text: null, icon: null, size: null, onPress: null };
-    intl3 = require("getSystemLocale").intl;
-    obj9[1] = intl3.string(require("getSystemLocale").t.n8nU4W);
-    obj10 = { style: animatedStyle2, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
-    obj11 = {
+    obj31 = { variant: "secondary", text: null, icon: null, size: null, onPress: null };
+    intl3 = tmp2(tmp3[13]).intl;
+    obj31.text = intl3.string(tmp2(tmp3[13]).t.n8nU4W);
+    obj32 = { style: animatedStyle2, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
+    obj33 = {
       style: animatedStyle3,
       onLayout(nativeEvent) {
             const result = sharedValue2.set(nativeEvent.nativeEvent.layout.width);
             const result1 = sharedValue3.set(nativeEvent.nativeEvent.layout.height);
           },
-      children: tmp15(require("Text").Text, { maxFontSizeMultiplier: 2, variant: "text-sm/normal", children: "\u{1F44B}" })
+      children: tmp15(tmp2(tmp3[14]).Text, { maxFontSizeMultiplier: 2, variant: "text-sm/normal", children: "\u{1F44B}" })
     };
-    obj10[3] = tmp15(require("module_4296").View, obj11);
-    obj9[2] = tmp15(require("module_4296").View, obj10);
+    obj32.children = tmp15(tmp16(tmp3[9]).View, obj33);
+    obj31.icon = tmp15(tmp16(tmp3[9]).View, obj32);
     if (compactMode) {
       str = "sm";
     }
-    obj12 = { children: null };
-    obj9[3] = str;
-    obj9[4] = onWavePress;
-    obj8.children = tmp15(require("Button").Button, obj9);
-    items2[1] = tmp15(require("module_4296").View, obj8);
-    obj12[0] = items2;
-    return tmp13(tmp14, obj12);
+    obj34 = { children: null };
+    obj31.size = str;
+    obj31.onPress = onWavePress;
+    obj30.children = tmp15(tmp2(tmp3[12]).Button, obj31);
+    items2[1] = tmp15(tmp16(tmp3[9]).View, obj30);
+    obj34.children = items2;
+    return tmp13(tmp14, obj34);
   }
 }
-({ AnalyticEvents: closure_8, ComponentActions: c9, EMPTY_STRING_SNOWFLAKE_ID: c10, MessageTypes: unpackModuleId } = ME);
+const View = fn(17).View;
+const Constants = fn(1074);
+({ AnalyticEvents: closure_8, ComponentActions: closure_9, EMPTY_STRING_SNOWFLAKE_ID: c10, MessageTypes: closure_11 } = Constants);
+const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let closure_14 = createCacheKey.createStyles({ buttonsContainer: { flexDirection: "row", marginTop: 8 }, actionButtonsContainer: { flexDirection: "row", position: "absolute", left: 0 } });
-let closure_15 = { ACCEPT: "accept", IGNORE: "ignore", WAVE: "wave", ACTION: "action" };
-let closure_17 = { code: "function ForYouItemActionButtonsTsx1(){const{withTiming,pressed}=this.__closure;return{opacity:withTiming(!pressed.get()?1:0,{duration:150}),pointerEvents:!pressed.get()?'auto':'none'};}" };
-let closure_18 = { code: "function ForYouItemActionButtonsTsx2(){const{pressed,acceptButtonWidth,buttonWidth,withTiming}=this.__closure;const scaleX=!pressed.get()?acceptButtonWidth.get()/buttonWidth.get():1;const scaledWidth=buttonWidth.get()-buttonWidth.get()*scaleX;const translateX=!pressed.get()?-scaledWidth/2:0;return{transform:[{scaleX:withTiming(scaleX)},{translateX:withTiming(translateX)}],opacity:withTiming(!pressed.get()?0:1),pointerEvents:!pressed.get()?'none':'auto'};}" };
-let closure_19 = { code: "function ForYouItemActionButtonsTsx3(){const{waveWidth,waveHeight}=this.__closure;return{transform:[{translateX:waveWidth.get()/2},{translateY:waveHeight.get()/2}]};}" };
-let closure_20 = { code: "function ForYouItemActionButtonsTsx4(){const{withDelay,withRepeat,withTiming,pressed,Easing,waveWidth,waveHeight}=this.__closure;return{transform:[{rotateZ:withDelay(450,withRepeat(withTiming(pressed.get()?'8deg':'-2deg',{duration:150,easing:Easing.inOut(Easing.quad)}),4,true))},{translateX:-waveWidth.get()/2},{translateY:-waveHeight.get()/2}]};}" };
-let closure_21 = { code: "function ForYouItemActionButtonsTsx5(){const{pressed}=this.__closure;return{pointerEvents:!pressed.get()?'none':'none'};}" };
-let result = require("set").fileFinishedImporting("modules/notification_center/native/ForYouItemActionButtons.tsx");
+const createStyles = fn(4574);
+let value = createStyles.createStyles({ buttonsContainer: { flexDirection: "row", marginTop: 8 }, actionButtonsContainer: { flexDirection: "row", position: "absolute", left: 0 } });
+const constants2 = { ACCEPT: "accept", IGNORE: "ignore", WAVE: "wave", ACTION: "action" };
+let __initData = { code: "function ForYouItemActionButtonsTsx1(){const{withTiming,pressed}=this.__closure;return{opacity:withTiming(!pressed.get()?1:0,{duration:150}),pointerEvents:!pressed.get()?'auto':'none'};}" };
+const collapsedCategories = { code: "function ForYouItemActionButtonsTsx2(){const{pressed,acceptButtonWidth,buttonWidth,withTiming}=this.__closure;const scaleX=!pressed.get()?acceptButtonWidth.get()/buttonWidth.get():1;const scaledWidth=buttonWidth.get()-buttonWidth.get()*scaleX;const translateX=!pressed.get()?-scaledWidth/2:0;return{transform:[{scaleX:withTiming(scaleX)},{translateX:withTiming(translateX)}],opacity:withTiming(!pressed.get()?0:1),pointerEvents:!pressed.get()?'none':'auto'};}" };
+const __initData3 = { code: "function ForYouItemActionButtonsTsx3(){const{waveWidth,waveHeight}=this.__closure;return{transform:[{translateX:waveWidth.get()/2},{translateY:waveHeight.get()/2}]};}" };
+const __initData4 = { code: "function ForYouItemActionButtonsTsx4(){const{withDelay,withRepeat,withTiming,pressed,Easing,waveWidth,waveHeight}=this.__closure;return{transform:[{rotateZ:withDelay(450,withRepeat(withTiming(pressed.get()?'8deg':'-2deg',{duration:150,easing:Easing.inOut(Easing.quad)}),4,true))},{translateX:-waveWidth.get()/2},{translateY:-waveHeight.get()/2}]};}" };
+__initData = { code: "function ForYouItemActionButtonsTsx5(){const{pressed}=this.__closure;return{pointerEvents:!pressed.get()?'none':'none'};}" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/notification_center/native/ForYouItemActionButtons.tsx");
 
 export { IncomingFriendRequestActions };
-export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(item, callback, navigation, forceHoistItem, isForceHoisted, onSoftAckItem, arg6, compactMode) {
-  const _require = item;
+export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(other_user, callback, navigation, forceHoistItem, isForceHoisted, onSoftAckItem, arg6, compactMode) {
+  _require = other_user;
   closure_1 = callback;
   dependencyMap = navigation;
-  callback = forceHoistItem;
-  const React = onSoftAckItem;
+  asyncGeneratorStep = forceHoistItem;
+  noop = onSoftAckItem;
   closure_5 = arg6;
-  const other_user = item.other_user;
+  other_user = other_user.other_user;
   let id;
   if (other_user != null) {
     id = other_user.id;
@@ -275,293 +286,270 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(it
   }
   const notification_center_v2 = "notification_center_v2";
   let tmp2 = _require;
-  let obj = _require(563);
   const items = [id];
-  const stateFromStores = obj.useStateFromStores(items, () => {
-    const message = item.message;
+  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
+    const message = other_user.message;
     let channel_id;
     if (message != null) {
       channel_id = message.channel_id;
     }
-    return id.getChannel(channel_id);
+    return ChannelStore.getChannel(channel_id);
   });
-  obj1 = _require(7976);
-  let message = item.message;
-  const canReplyToMessage = obj1.useCanReplyToMessage(stateFromStores, item.message);
+  let obj = require("useStateFromStores");
+  let message = other_user.message;
+  const canReplyToMessage = require("canReplyToMessage").useCanReplyToMessage(stateFromStores, other_user.message);
   if (message != null) {
     const type = message.type;
   }
-  const items1 = [id, onSoftAckItem, item];
-  callback = React.useCallback(() => {
-    let obj = item(navigation[17]);
-    obj.sendWave(id, false, "You Tab");
-    const dMFromUserId = id.getDMFromUserId(id);
+  const items1 = [id, onSoftAckItem, other_user];
+  callback = noop.useCallback(() => {
+    AddFriendsScreenUtils.sendWave(id, false, "You Tab");
+    const dMFromUserId = ChannelStore.getDMFromUserId(id);
     if (null != dMFromUserId) {
       const _HermesInternal = HermesInternal;
-      obj = { payload: null, safe: true, navigationReplace: false };
-      obj[0] = callback(tmp[18])("https://discord.com/channels/@me/" + dMFromUserId).payload;
-      callback(tmp[19])(obj);
-      const tmp5 = callback(tmp[18]);
+      const obj2 = { payload: parseURLDefault("https://discord.com/channels/@me/" + dMFromUserId).payload, safe: true, navigationReplace: false };
+      handleSupportedURLDefault(obj2);
     }
-    onSoftAckItem(item);
+    onSoftAckItem(closure_0);
   }, items1);
-  sharedValue = tmp2(4296).useSharedValue(false);
-  const items2 = [forceHoistItem, sharedValue, item, id, arg6];
-  const callback1 = React.useCallback(() => {
-    let obj = callback(navigation[20]);
-    obj = { userId: id, applicationId: null, location: null, onConfirm: null };
+  let obj2 = require("canReplyToMessage");
+  sharedValue = tmp2(4310).useSharedValue(false);
+  const items2 = [forceHoistItem, sharedValue, other_user, id, arg6];
+  const callback1 = noop.useCallback(() => {
+    const obj2 = { userId: id, applicationId: null, location: null, onConfirm: null };
     let applicationId;
-    if (item.type === item(navigation[21]).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS) {
-      applicationId = item.applicationId;
+    if (other_user.type === NotificationCenterItemsTypes.NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS) {
+      applicationId = other_user.applicationId;
     }
-    obj[1] = applicationId;
-    obj[2] = notification_center_v2;
-    obj[3] = function onConfirm() {
-      const user = closure_1_7.getUser(closure_6);
+    obj2.applicationId = applicationId;
+    obj2.location = notification_center_v2;
+    obj2.onConfirm = function onConfirm() {
+      const user = notification_center_v2.getUser(id);
       if (null != user) {
-        const intl = closure_1_0(closure_1_2[13]).intl;
+        const intl = closure_0(1114).intl;
         let username = user.globalName;
         if (username == null) {
           username = user.username;
         }
-        const obj = { username: null };
-        obj[0] = username;
-        closure_5(intl.format(closure_1_0(closure_1_2[13]).t["5Uzkdp"], obj));
-        const tmp2 = closure_5;
+        const obj = { username };
+        closure_1_5(intl.format(closure_0(1114).t["5Uzkdp"], obj));
       }
-      const result = closure_10.set(true);
-      closure_0.enableBadge = false;
-      callback(closure_0);
+      const result = sharedValue.set(true);
+      other_user.enableBadge = false;
+      forceHoistItem(other_user);
     };
-    let result = obj.maybeConfirmFriendRequestAccept(obj);
+    let result = PeopleUtilsDefault.maybeConfirmFriendRequestAccept(obj2);
   }, items2);
   const items3 = [, , ];
-  ({ applicationId: arr4[0], type: arr4[1] } = item);
+  ({ applicationId: arr4[0], type: arr4[1] } = other_user);
   items3[2] = id;
-  const callback2 = React.useCallback(() => {
-    let obj = callback(navigation[20]);
-    obj = { userId: id, applicationId: null, location: null };
+  const callback2 = noop.useCallback(() => {
+    const obj2 = { userId: id, applicationId: null, location: null };
     let applicationId;
-    if (item.type === item(navigation[21]).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS) {
-      applicationId = item.applicationId;
+    if (other_user.type === NotificationCenterItemsTypes.NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS) {
+      applicationId = other_user.applicationId;
     }
-    obj[1] = applicationId;
-    obj[2] = notification_center_v2;
-    obj.cancelFriendRequest(obj);
+    obj2.applicationId = applicationId;
+    obj2.location = notification_center_v2;
+    PeopleUtilsDefault.cancelFriendRequest(obj2);
   }, items3);
   const items4 = [navigation];
-  const callback3 = React.useCallback(() => {
-    if (closure_2 != null) {
-      closure_2.navigate("friends", { screen: "requests" });
+  const callback3 = noop.useCallback(() => {
+    if (navigation != null) {
+      navigation.navigate("friends", { screen: "requests" });
     }
   }, items4);
   const items5 = [id];
-  const callback4 = React.useCallback(() => {
-    const dMChannel = callback(navigation[22]).getDMChannel(id);
-    dMChannel.then((arg0) => {
-      callback(13853)({ payload: callback(4540)("https://discord.com/channels/@me/" + arg0).payload, safe: true, navigationReplace: false });
+  const callback4 = noop.useCallback(() => {
+    const dMChannel = ChannelActionCreatorsDefault.getDMChannel(id);
+    dMChannel.then((channelId) => {
+      closure_1(13876)({ payload: closure_1(4554)("https://discord.com/channels/@me/" + channelId).payload, safe: true, navigationReplace: false });
       let obj;
       let tmp3;
-      if (null != arg0) {
-        obj = { channelId: null };
-        obj[0] = arg0;
+      if (null != channelId) {
+        obj = { channelId };
         tmp3 = obj;
       }
       obj = tmp3;
       const timerId = setTimeout(() => {
-        const ComponentDispatch = obj(closure_1_2[8]).ComponentDispatch;
-        return ComponentDispatch.dispatch(closure_1_9.TEXTAREA_FOCUS, obj);
+        const ComponentDispatch = other_user(1109).ComponentDispatch;
+        return ComponentDispatch.dispatch(constants.TEXTAREA_FOCUS, obj);
       }, 0);
     });
   }, items5);
   const items6 = [id];
-  const callback5 = React.useCallback(() => {
-    let obj = callback(navigation[23]);
-    obj = { userId: id, context: obj };
-    obj = { location: notification_center_v2 };
-    obj.addRelationship(obj);
-    obj1 = { key: "NOTIF_CENTER_V2_ADD_FRIEND_TOAST", content: null };
-    const intl = item(navigation[13]).intl;
-    obj1[1] = intl.string(item(navigation[13]).t["7MAxkR"]);
-    callback(navigation[24]).open(obj1);
+  const callback5 = noop.useCallback(() => {
+    const obj2 = { userId: id, context: { location: notification_center_v2 } };
+    RelationshipActionCreatorsDefault.addRelationship(obj2);
+    const obj3 = { location: notification_center_v2 };
+    const obj5 = { key: "NOTIF_CENTER_V2_ADD_FRIEND_TOAST", content: null };
+    const intl = util.intl;
+    obj5.content = intl.string(util.t["7MAxkR"]);
+    ToastActionCreatorsDefault.open(obj5);
   }, items6);
   const items7 = [callback, stateFromStores, , ];
-  ({ message_id: arr8[2], message_channel_id: arr8[3] } = item);
-  const callback6 = React.useCallback(callback(function*() {
-    if (table === 2) {
-      table = 3;
-      HermesBuiltin.throwTypeError();
+  ({ message_id: arr8[2], message_channel_id: arr8[3] } = other_user);
+  const callback6 = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
+    if (navigation === 2) {
+      navigation = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        table = 2;
-        if (0 === v0) {
+        navigation = 2;
+        if (0 === c1) {
           if (arg0 === 1) {
-            table = 3;
-            throw arg1;
+            navigation = 3;
+            throw value;
           } else if (arg0 === 2) {
-            table = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            navigation = 3;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            const message_channel_id = tmp2;
-            let tmp7 = null != closure_1_0.message_id;
+            let tmp7 = null != tmp2.message_id;
             if (tmp7) {
-              tmp7 = null != closure_1_8;
+              tmp7 = null != stateFromStores;
             }
             if (tmp7) {
-              obj1 = closure_1_0(table[25]);
-              obj1 = { messageId: null, channel: null, shouldMention: true, showMentionToggle: true };
-              obj1[0] = closure_1_0.message_id;
-              obj1[1] = closure_1_8;
-              v0 = 1;
-              table = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = obj1.createShallowPendingReply(obj1);
-              return obj2;
+              const obj5 = { messageId: tmp2.message_id, channel: stateFromStores, shouldMention: true, showMentionToggle: true };
+              c1 = 1;
+              navigation = 1;
+              const obj6 = { value: tmp2(navigation[25]).createShallowPendingReply(obj5), done: false };
+              return obj6;
             }
           }
         } else if (arg0 === 1) {
-          table = 3;
-          throw arg1;
+          navigation = 3;
+          throw value;
         } else if (arg0 === 2) {
-          table = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          navigation = 3;
+          const obj = { value, done: true };
           return obj;
         }
-        v0();
-        closure_1_16(message_channel_id.message_channel_id);
-        table = 3;
+        closure_128_1();
+        focusChatInput(closure_128_0.message_channel_id);
+        navigation = 3;
         return { value: "HermesInternal", done: null };
       } catch (tmp18) {
-        table = tmp;
+        navigation = tmp;
         throw tmp18;
       }
     }
   }), items7);
-  const items8 = [callback, item.message_channel_id];
-  const callback7 = React.useCallback(() => {
-    callback();
-    const message_channel_id = obj.message_channel_id;
-    obj = undefined;
+  const items8 = [callback, other_user.message_channel_id];
+  const callback7 = noop.useCallback(() => {
+    closure_1();
+    const message_channel_id = other_user.message_channel_id;
+    let obj;
     let tmp2;
     if (null != message_channel_id) {
-      obj = { channelId: null };
-      obj[0] = message_channel_id;
+      obj = { channelId: message_channel_id };
       tmp2 = obj;
     }
     obj = tmp2;
     const timerId = setTimeout(() => {
-      const ComponentDispatch = obj(closure_1_2[8]).ComponentDispatch;
-      return ComponentDispatch.dispatch(closure_1_9.TEXTAREA_FOCUS, obj);
+      const ComponentDispatch = other_user(1109).ComponentDispatch;
+      return ComponentDispatch.dispatch(constants.TEXTAREA_FOCUS, obj);
     }, 0);
   }, items8);
-  if (item.disable_action) {
-    obj = { actionButtons: null };
-    obj[0] = [];
-    return obj;
+  if (other_user.disable_action) {
+    let obj3 = { actionButtons: [] };
+    return obj3;
   } else {
-    if (item.type !== tmp2(7640).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS) {
-      if (item.type !== tmp2(7640).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
-        if (item.type !== tmp2(7640).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS) {
-          if (item.type === tmp2(7640).NotificationCenterLocalItems.FRIEND_REQUESTS_GROUPED) {
-            obj = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
-            obj1 = { id: "view_friend_requests", text: null, variant: "secondary", size: "md", onPress: null };
+    if (other_user.type !== tmp2(7654).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS) {
+      if (other_user.type !== tmp2(7654).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
+        if (other_user.type !== tmp2(7654).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS) {
+          if (other_user.type === tmp2(7654).NotificationCenterLocalItems.FRIEND_REQUESTS_GROUPED) {
+            let obj4 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
+            let obj5 = { id: "view_friend_requests", text: null, variant: "secondary", size: "md", onPress: null };
             const intl14 = tmp2(1114).intl;
-            obj1[1] = intl14.string(tmp2(1114).t["lMR96+"]);
-            obj1[4] = callback3;
-            const items9 = [obj1];
-            obj[0] = items9;
-            let obj2 = { name: null, label: null };
-            obj2[0] = constants.ACTION;
+            obj5.text = intl14.string(tmp2(1114).t["lMR96+"]);
+            obj5.onPress = callback3;
+            const items9 = [obj5];
+            obj4.actionButtons = items9;
+            let obj6 = { name: constants2.ACTION, label: null };
             const intl15 = tmp2(1114).intl;
-            obj2[1] = intl15.string(tmp2(1114).t["lMR96+"]);
-            const items10 = [obj2];
-            obj[1] = items10;
-            obj[2] = callback3;
-            return obj;
-          } else if (item.type === tmp2(7640).NotificationCenterItems.GO_LIVE_PUSH) {
-            const obj3 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
-            const obj4 = { id: "join_stream", text: null, variant: "secondary", size: "md", onPress: null };
+            obj6.label = intl15.string(tmp2(1114).t["lMR96+"]);
+            const items10 = [obj6];
+            obj4.accessibilityActions = items10;
+            obj4.onAccessibilityAction = callback3;
+            return obj4;
+          } else if (other_user.type === tmp2(7654).NotificationCenterItems.GO_LIVE_PUSH) {
+            const obj7 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
+            const obj8 = { id: "join_stream", text: null, variant: "secondary", size: "md", onPress: null };
             const intl12 = tmp2(1114).intl;
-            obj4[1] = intl12.string(tmp2(1114).t["Pqj7h+"]);
-            obj4[4] = callback;
-            const items11 = [obj4];
-            obj3[0] = items11;
-            const obj5 = { name: null, label: null };
-            obj5[0] = constants.ACTION;
+            obj8.text = intl12.string(tmp2(1114).t["Pqj7h+"]);
+            obj8.onPress = callback;
+            const items11 = [obj8];
+            obj7.actionButtons = items11;
+            const obj9 = { name: constants2.ACTION, label: null };
             const intl13 = tmp2(1114).intl;
-            obj5[1] = intl13.string(tmp2(1114).t["Pqj7h+"]);
-            const items12 = [obj5];
-            obj3[1] = items12;
-            obj3[2] = callback;
-            return obj3;
+            obj9.label = intl13.string(tmp2(1114).t["Pqj7h+"]);
+            const items12 = [obj9];
+            obj7.accessibilityActions = items12;
+            obj7.onAccessibilityAction = callback;
+            return obj7;
           } else {
-            if (item.type !== tmp2(7640).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
-              if (item.type !== tmp2(7640).NotificationCenterItems.DM_FRIEND_NUDGE) {
-                if (item.type !== tmp2(7640).NotificationCenterItems.FRIEND_REQUEST_ACCEPTED) {
-                  if (item.type !== tmp2(7640).NotificationCenterItems.GAME_FRIEND_REQUEST_ACCEPTED) {
-                    if (item.type === tmp2(7640).NotificationCenterItems.FRIEND_SUGGESTION_CREATED) {
-                      const obj6 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
-                      const obj7 = { id: "add_friend", text: null, variant: "secondary", size: "md", onPress: null };
+            if (other_user.type !== tmp2(7654).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
+              if (other_user.type !== tmp2(7654).NotificationCenterItems.DM_FRIEND_NUDGE) {
+                if (other_user.type !== tmp2(7654).NotificationCenterItems.FRIEND_REQUEST_ACCEPTED) {
+                  if (other_user.type !== tmp2(7654).NotificationCenterItems.GAME_FRIEND_REQUEST_ACCEPTED) {
+                    if (other_user.type === tmp2(7654).NotificationCenterItems.FRIEND_SUGGESTION_CREATED) {
+                      const obj10 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
+                      const obj11 = { id: "add_friend", text: null, variant: "secondary", size: "md", onPress: null };
                       const intl8 = tmp2(1114).intl;
-                      obj7[1] = intl8.string(tmp2(1114).t["boL/YX"]);
-                      obj7[4] = callback5;
-                      const items13 = [obj7];
-                      obj6[0] = items13;
-                      const obj8 = { name: null, label: null };
-                      obj8[0] = constants.ACTION;
+                      obj11.text = intl8.string(tmp2(1114).t["boL/YX"]);
+                      obj11.onPress = callback5;
+                      const items13 = [obj11];
+                      obj10.actionButtons = items13;
+                      const obj12 = { name: constants2.ACTION, label: null };
                       const intl9 = tmp2(1114).intl;
-                      obj8[1] = intl9.string(tmp2(1114).t["boL/YX"]);
-                      const items14 = [obj8];
-                      obj6[1] = items14;
-                      obj6[2] = callback5;
-                      return obj6;
-                    } else if (item.type === tmp2(7640).NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED) {
-                      const obj9 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
-                      const obj10 = { id: "join_event", text: null, variant: "secondary", size: "md", onPress: null };
+                      obj12.label = intl9.string(tmp2(1114).t["boL/YX"]);
+                      const items14 = [obj12];
+                      obj10.accessibilityActions = items14;
+                      obj10.onAccessibilityAction = callback5;
+                      return obj10;
+                    } else if (other_user.type === tmp2(7654).NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED) {
+                      const obj13 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
+                      const obj14 = { id: "join_event", text: null, variant: "secondary", size: "md", onPress: null };
                       const intl6 = tmp2(1114).intl;
-                      obj10[1] = intl6.string(tmp2(1114).t.hRKdcn);
-                      obj10[4] = callback;
-                      const items15 = [obj10];
-                      obj9[0] = items15;
-                      const obj11 = { name: null, label: null };
-                      obj11[0] = constants.ACTION;
+                      obj14.text = intl6.string(tmp2(1114).t.hRKdcn);
+                      obj14.onPress = callback;
+                      const items15 = [obj14];
+                      obj13.actionButtons = items15;
+                      const obj15 = { name: constants2.ACTION, label: null };
                       const intl7 = tmp2(1114).intl;
-                      obj11[1] = intl7.string(tmp2(1114).t.hRKdcn);
-                      const items16 = [obj11];
-                      obj9[1] = items16;
-                      obj9[2] = callback;
-                      return obj9;
-                    } else if (item.type === tmp2(7640).NotificationCenterItems.LIFECYCLE_ITEM) {
-                      const item_enum = item.item_enum;
-                      if (tmp2(7640).ItemEnum.UPDATE_PROFILE === item_enum) {
+                      obj15.label = intl7.string(tmp2(1114).t.hRKdcn);
+                      const items16 = [obj15];
+                      obj13.accessibilityActions = items16;
+                      obj13.onAccessibilityAction = callback;
+                      return obj13;
+                    } else if (other_user.type === tmp2(7654).NotificationCenterItems.LIFECYCLE_ITEM) {
+                      const item_enum = other_user.item_enum;
+                      if (tmp2(7654).ItemEnum.UPDATE_PROFILE === item_enum) {
                         const intl5 = tmp2(1114).intl;
                         let stringResult = intl5.string(tmp2(1114).t.zMRcWL);
                         let str = "update_profile";
-                      } else if (tmp2(7640).ItemEnum.FIND_FRIENDS === item_enum) {
+                      } else if (tmp2(7654).ItemEnum.FIND_FRIENDS === item_enum) {
                         const intl4 = tmp2(1114).intl;
                         stringResult = intl4.string(tmp2(1114).t["vwL/4s"]);
                         str = "find_friends";
-                      } else if (tmp2(7640).ItemEnum.ADD_FRIEND === item_enum) {
+                      } else if (tmp2(7654).ItemEnum.ADD_FRIEND === item_enum) {
                         const intl3 = tmp2(1114).intl;
                         stringResult = intl3.string(tmp2(1114).t["boL/YX"]);
                         str = "add_friend";
                       } else {
                         str = null;
                         stringResult = null;
-                        if (tmp2(7640).ItemEnum.FIRST_MESSAGE === item_enum) {
+                        if (tmp2(7654).ItemEnum.FIRST_MESSAGE === item_enum) {
                           const intl19 = tmp2(1114).intl;
                           stringResult = intl19.string(tmp2(1114).t["GuUH7/"]);
                           str = "send_message";
@@ -569,127 +557,108 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(it
                       }
                       if (null != stringResult) {
                         if (null != str) {
-                          let obj12 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
-                          const obj13 = { id: null, text: null, variant: "secondary", size: "md", onPress: null };
-                          obj13[0] = str;
-                          obj13[1] = stringResult;
-                          obj13[4] = callback;
-                          const items17 = [obj13];
-                          obj12[0] = items17;
-                          const obj14 = { name: null, label: null };
-                          obj14[0] = constants.ACTION;
-                          obj14[1] = stringResult;
-                          const items18 = [obj14];
-                          obj12[1] = items18;
-                          obj12[2] = callback;
+                          let obj16 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
+                          const obj17 = { id: str, text: stringResult, variant: "secondary", size: "md", onPress: callback };
+                          const items17 = [obj17];
+                          obj16.actionButtons = items17;
+                          const obj18 = { name: constants2.ACTION, label: stringResult };
+                          const items18 = [obj18];
+                          obj16.accessibilityActions = items18;
+                          obj16.onAccessibilityAction = callback;
                         }
-                        return obj12;
+                        return obj16;
                       }
-                      const obj15 = { actionButtons: null };
-                      obj15[0] = [];
-                      obj12 = obj15;
+                      const obj19 = { actionButtons: [] };
+                      obj16 = obj19;
                     } else {
-                      if (item.type !== tmp2(7640).NotificationCenterItems.RECENT_MENTION) {
-                        if (item.type !== tmp2(7640).NotificationCenterItems.REPLY_MENTION) {
-                          if (item.type === tmp2(7640).NotificationCenterItems.TRENDING_CONTENT) {
-                            const obj16 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
-                            const obj17 = { id: "read_summary", text: null, variant: "secondary", size: "md", onPress: null };
+                      if (other_user.type !== tmp2(7654).NotificationCenterItems.RECENT_MENTION) {
+                        if (other_user.type !== tmp2(7654).NotificationCenterItems.REPLY_MENTION) {
+                          if (other_user.type === tmp2(7654).NotificationCenterItems.TRENDING_CONTENT) {
+                            const obj20 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
+                            const obj21 = { id: "read_summary", text: null, variant: "secondary", size: "md", onPress: null };
                             let intl = tmp2(1114).intl;
-                            obj17[1] = intl.string(tmp2(1114).t.k0Q31F);
-                            obj17[4] = callback7;
-                            const items19 = [obj17];
-                            obj16[0] = items19;
-                            const obj18 = { name: null, label: null };
-                            obj18[0] = constants.ACTION;
+                            obj21.text = intl.string(tmp2(1114).t.k0Q31F);
+                            obj21.onPress = callback7;
+                            const items19 = [obj21];
+                            obj20.actionButtons = items19;
+                            const obj22 = { name: constants2.ACTION, label: null };
                             const intl2 = tmp2(1114).intl;
-                            obj18[1] = intl2.string(tmp2(1114).t.k0Q31F);
-                            const items20 = [obj18];
-                            obj16[1] = items20;
-                            obj16[2] = callback7;
-                            let obj19 = obj16;
+                            obj22.label = intl2.string(tmp2(1114).t.k0Q31F);
+                            const items20 = [obj22];
+                            obj20.accessibilityActions = items20;
+                            obj20.onAccessibilityAction = callback7;
+                            let obj23 = obj20;
                           } else {
-                            obj19 = { actionButtons: null };
-                            obj19[0] = [];
+                            obj23 = { actionButtons: [] };
                           }
-                          return obj19;
+                          return obj23;
                         }
                       }
                       if (canReplyToMessage) {
                         if (type !== callback1.POLL_RESULT) {
-                          let obj20 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
-                          const obj21 = { id: "send_reply", text: null, variant: "secondary", size: "md", onPress: null };
+                          let obj24 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
+                          const obj25 = { id: "send_reply", text: null, variant: "secondary", size: "md", onPress: null };
                           const intl17 = tmp2(1114).intl;
-                          obj21[1] = intl17.string(tmp2(1114).t.vBq3iT);
-                          obj21[4] = callback6;
-                          const items21 = [obj21];
-                          obj20[0] = items21;
-                          const obj22 = { name: null, label: null };
-                          obj22[0] = constants.ACTION;
+                          obj25.text = intl17.string(tmp2(1114).t.vBq3iT);
+                          obj25.onPress = callback6;
+                          const items21 = [obj25];
+                          obj24.actionButtons = items21;
+                          const obj26 = { name: constants2.ACTION, label: null };
                           const intl18 = tmp2(1114).intl;
-                          obj22[1] = intl18.string(tmp2(1114).t.vBq3iT);
-                          const items22 = [obj22];
-                          obj20[1] = items22;
-                          obj20[2] = callback6;
+                          obj26.label = intl18.string(tmp2(1114).t.vBq3iT);
+                          const items22 = [obj26];
+                          obj24.accessibilityActions = items22;
+                          obj24.onAccessibilityAction = callback6;
                         }
                       }
-                      const obj23 = { actionButtons: null };
-                      obj23[0] = [];
-                      obj20 = obj23;
+                      const obj27 = { actionButtons: [] };
+                      obj24 = obj27;
                     }
                   }
                 }
               }
             }
-            const obj24 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
-            const obj25 = { id: "send_message", text: null, variant: "secondary", size: "md", onPress: null };
+            const obj28 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
+            const obj29 = { id: "send_message", text: null, variant: "secondary", size: "md", onPress: null };
             const intl10 = tmp2(1114).intl;
-            obj25[1] = intl10.string(tmp2(1114).t["GuUH7/"]);
-            obj25[4] = callback4;
-            const items23 = [obj25];
-            obj24[0] = items23;
-            const obj26 = { name: null, label: null };
-            obj26[0] = constants.ACTION;
+            obj29.text = intl10.string(tmp2(1114).t["GuUH7/"]);
+            obj29.onPress = callback4;
+            const items23 = [obj29];
+            obj28.actionButtons = items23;
+            const obj30 = { name: constants2.ACTION, label: null };
             const intl11 = tmp2(1114).intl;
-            obj26[1] = intl11.string(tmp2(1114).t["GuUH7/"]);
-            const items24 = [obj26];
-            obj24[1] = items24;
-            obj24[2] = callback4;
-            return obj24;
+            obj30.label = intl11.string(tmp2(1114).t["GuUH7/"]);
+            const items24 = [obj30];
+            obj28.accessibilityActions = items24;
+            obj28.onAccessibilityAction = callback4;
+            return obj28;
           }
         }
       }
     }
-    const obj27 = { actionsNode: null, accessibilityActions: null, onAccessibilityAction: null };
-    const obj28 = { onWavePress: null, onAccept: null, onIgnore: null, pressed: null, compactMode: null };
-    obj28[0] = callback;
-    obj28[1] = callback1;
-    obj28[2] = callback2;
-    obj28[3] = sharedValue;
-    obj28[4] = compactMode;
-    obj27[0] = callback2(IncomingFriendRequestActions, obj28);
-    if (item.type === tmp2(7640).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
-      const obj29 = { name: null, label: null };
-      obj29[0] = constants.WAVE;
+    const obj31 = { actionsNode: null, accessibilityActions: null, onAccessibilityAction: null };
+    const obj32 = { onWavePress: callback, onAccept: callback1, onIgnore: callback2, pressed: sharedValue, compactMode };
+    obj31.actionsNode = callback2(IncomingFriendRequestActions, obj32);
+    if (other_user.type === tmp2(7654).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
+      const obj33 = { name: constants2.WAVE, label: null };
       const intl16 = tmp2(1114).intl;
-      obj29[1] = intl16.string(tmp2(1114).t.n8nU4W);
-      const items25 = [obj29];
+      obj33.label = intl16.string(tmp2(1114).t.n8nU4W);
+      const items25 = [obj33];
       let items26 = items25;
     } else {
-      const obj30 = { name: null, label: null };
-      obj30[0] = constants.ACCEPT;
+      const obj34 = { name: constants2.ACCEPT, label: null };
       const intl20 = tmp2(1114).intl;
-      obj30[1] = intl20.string(tmp2(1114).t.zf5jU5);
-      items26 = [obj30, ];
-      const obj31 = { name: null, label: null };
-      obj31[0] = constants.IGNORE;
+      obj34.label = intl20.string(tmp2(1114).t.zf5jU5);
+      items26 = [obj34, ];
+      const obj35 = { name: constants2.IGNORE, label: null };
       const intl21 = tmp2(1114).intl;
-      obj31[1] = intl21.string(tmp2(1114).t.EBN847);
-      items26[1] = obj31;
+      obj35.label = intl21.string(tmp2(1114).t.EBN847);
+      items26[1] = obj35;
     }
-    obj27[1] = items26;
-    obj27[2] = function onAccessibilityAction(nativeEvent) {
+    obj31.accessibilityActions = items26;
+    obj31.onAccessibilityAction = function onAccessibilityAction(nativeEvent) {
       const actionName = nativeEvent.nativeEvent.actionName;
-      if (closure_1_15.WAVE === actionName) {
+      if (constants.WAVE === actionName) {
         callback();
       } else if (tmp.ACCEPT === actionName) {
         callback1();
@@ -697,25 +666,24 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(it
         callback2();
       }
     };
-    return obj27;
+    return obj31;
   }
-  const tmp2Result = tmp2(4296);
+  const tmp2Result = tmp2(4310);
 };
 export const ForYouItemActionButtons = function ForYouItemActionButtons(arg0) {
   ({ item: require, rowIndex: importDefault, onSoftAckItem: dependencyMap, actionButtons, actionsNode, compactMode } = arg0);
-  let merged = Object.assign(arg0, Object.create(null));
+  let merged = Object.assign(arg0, Object.assign({ item: 0, rowIndex: 0, onSoftAckItem: 0, actionButtons: 0, actionsNode: 0, compactMode: 0 }));
   let mapped = !compactMode;
   if (!compactMode) {
     mapped = null != actionButtons;
   }
   if (mapped) {
-    let obj = { style: null };
-    obj[0] = tmp2.buttonsContainer;
+    let obj = { style: tmp2.buttonsContainer };
     let merged1 = Object.assign(merged);
     if (mapped) {
-      mapped = actionButtons.map((id) => {
+      mapped = actionButtons.map((id, index) => {
         id = id.id;
-        const merged = Object.assign(id, Object.create(null));
+        const merged = Object.assign(id, Object.assign({ id: 0 }));
         let obj = {};
         const merged1 = Object.assign(merged);
         obj.onPress = function onPress(arg0) {
@@ -723,15 +691,14 @@ export const ForYouItemActionButtons = function ForYouItemActionButtons(arg0) {
           if (onPress != null) {
             onPress(arg0);
           }
-          closure_1_2(id);
-          let obj = closure_2_1(closure_2_2[26]);
-          obj = { action_type: closure_2_0(closure_2_2[21]).NotificationCenterActionTypes.ACTION_BUTTON, notification_center_id: id.id, item_type: id.type, acked: false, item_index: merged, deeplink: id.deeplink, action_button_id: id };
-          obj.track(closure_2_8.NOTIFICATION_CENTER_ACTION, obj);
+          dependencyMap(_require);
+          const obj = AnalyticsUtilsDefault;
+          obj.track(constants.NOTIFICATION_CENTER_ACTION, { action_type: NotificationCenterItemsTypes.NotificationCenterActionTypes.ACTION_BUTTON, notification_center_id: _require.id, item_type: _require.type, acked: false, item_index, deeplink: _require.deeplink, action_button_id: id });
         };
         if (id == null) {
-          id = arg1;
+          id = index;
         }
-        return closure_1_12(closure_1_0(closure_1_2[12]).Button, obj, id);
+        return closure_1_12(require("components/Button/Button").Button, obj, id);
       });
     }
     const items = [mapped, ];
@@ -742,8 +709,6 @@ export const ForYouItemActionButtons = function ForYouItemActionButtons(arg0) {
     items[1] = tmp11;
     obj.children = items;
     let tmp6Result = closure_13(View, obj);
-    const tmp6 = closure_13;
-    const tmp7 = View;
   } else {
     tmp6Result = null;
   }

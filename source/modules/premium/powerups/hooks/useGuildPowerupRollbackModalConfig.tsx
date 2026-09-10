@@ -1,29 +1,35 @@
-// Module ID: 12516
-// Function ID: 12517
+// Module ID: 12542
+// Function ID: 12543
 // Name: useGuildPowerupRollbackModalConfig
-// Dependencies: [19, 1979, 4449, 504, 12517, 4453, 12502, 12504, 1943, 1114, 2428, 2]
+// Dependencies: [19, 1979, 4463, 504, 12543, 4467, 12528, 12530, 1943, 1114, 2428, 2]
 // Exports: default
 
-// Module 12516 (useGuildPowerupRollbackModalConfig)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createGuildRecordFromRust" /* 1979 */;
-import closure_5 from "calculateAppliedBoosts" /* 4449 */;
+// Module 12542 (useGuildPowerupRollbackModalConfig)
+import util from "util" /* 1114 */;
+import dismissible_content from "dismissible_content" /* 1943 */;
+import _modDef2428 from "module_2428" /* 2428 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12530 */;
+import noop from "module_19" /* 19 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4463 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackModalConfig.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackModalConfig.tsx");
 
 export default function useGuildPowerupRollbackModalConfig(guildId, location) {
-  const _require = guildId;
-  let obj = _require(storeRemovalDate[3]);
-  let items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getGuild(closure_0));
-  let flag = importDefault(storeRemovalDate[4])(guildId);
+  _require = guildId;
+  let items = [GuildStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
+  let flag = require("useHasAllocateBoostPermission")(guildId);
   if (flag == null) {
     flag = false;
   }
-  let tmpResult = tmp(tmp2[3]);
-  const items1 = [closure_5];
-  const stateFromStores1 = tmpResult.useStateFromStores(items1, () => closure_1_5.getStateForGuild(closure_0));
+  let obj = require("initialize");
+  const items1 = [GuildPowerupsStore];
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => GuildPowerupsStore.getStateForGuild(closure_0));
   let tmp5;
   if (stateFromStores1 != null) {
     const allPowerups = stateFromStores1.allPowerups;
@@ -36,35 +42,32 @@ export default function useGuildPowerupRollbackModalConfig(guildId, location) {
   if (tmp5 != null) {
     storeRemovalDate = tmp5.storeRemovalDate;
   }
-  tmpResult = tmp(tmp2[6]);
+  const tmpResult = require("initialize");
   if (flag) {
-    flag = tmpResult.useShouldShowFileUploadRollback(guildId, location);
+    flag = tmpResult2.useShouldShowFileUploadRollback(guildId, location);
   }
   if (flag) {
     flag = null != stateFromStores;
   }
   const items2 = [flag, tmp5, storeRemovalDate];
-  obj = {
+  tmpResult2 = require("fileUpload");
+  return {
     shouldShow: flag,
     modalConfig: flag.useMemo(() => {
       if (flag) {
-        if (null != callback) {
+        if (null != closure_1) {
           if (null != storeRemovalDate) {
-            const tmp6 = callback(storeRemovalDate[7])(tmp3);
-            let obj = { dismissibleContent: null, header: null, bodies: null, hasCancelButton: false };
-            obj[0] = guildId(storeRemovalDate[8]).DismissibleContent.FILE_UPLOAD_POWERUP_ROLLBACK_MODAL;
-            const intl = guildId(storeRemovalDate[9]).intl;
-            obj = { dateString: null };
-            obj[0] = tmp6;
+            const tmp6 = getGuildPowerupFormattedDateStringDefault(tmp3);
+            const obj = { dismissibleContent: dismissible_content.DismissibleContent.FILE_UPLOAD_POWERUP_ROLLBACK_MODAL, header: null, bodies: null, hasCancelButton: false };
+            const intl = util.intl;
+            const obj2 = { dateString: tmp6 };
             const _HermesInternal = HermesInternal;
-            obj[1] = "" + tmp.title + " " + intl.formatToPlainString(callback(storeRemovalDate[10])["6e2ry1"], obj);
-            const intl2 = guildId(storeRemovalDate[9]).intl;
-            obj = { startDate: null, endDate: null, perkName: null, boostCount: null };
-            obj[0] = tmp6;
-            obj[1] = tmp6;
-            ({ title: obj3[2], cost: obj3[3] } = tmp);
-            const items = [intl2.formatToPlainString(callback(storeRemovalDate[10]).jd8fki, obj)];
-            obj[2] = items;
+            obj.header = "" + tmp.title + " " + intl.formatToPlainString(_modDef2428["6e2ry1"], obj2);
+            const intl2 = util.intl;
+            const obj5 = { startDate: tmp6, endDate: tmp6, perkName: null, boostCount: null };
+            ({ title: obj3.perkName, cost: obj3.boostCount } = tmp);
+            const items = [intl2.formatToPlainString(_modDef2428.jd8fki, obj5)];
+            obj.bodies = items;
             return obj;
           }
         }
@@ -72,5 +75,4 @@ export default function useGuildPowerupRollbackModalConfig(guildId, location) {
       return null;
     }, items2)
   };
-  return obj;
 };

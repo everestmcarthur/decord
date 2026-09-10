@@ -1,75 +1,72 @@
-// Module ID: 4413
-// Function ID: 4414
-// Name: getGuildThemeName
-// Dependencies: [19, 1183, 4379, 1114, 1231, 4414, 4416, 563, 4492, 2]
+// Module ID: 4427
+// Function ID: 4428
+// Name: useColorThemeBackground
+// Dependencies: [19, 1183, 4393, 1114, 1231, 4428, 4430, 563, 4506, 2]
 // Exports: default
 
-// Module 4413 (getGuildThemeName)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleThemeChange" /* 1183 */;
-import closure_5 from "reset" /* 4379 */;
+// Module 4427 (useColorThemeBackground)
+import util from "util" /* 1114 */;
+import ClientThemesTypes from "ClientThemesTypes" /* 1231 */;
+import GuildThemePresets from "GuildThemePresets" /* 4428 */;
+import noop from "module_19" /* 19 */;
+import ThemeStore from "ThemeStore" /* 1183 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4393 */;
 
-require = arg1;
+const require = globalThis.__r;
+
+require = fn;
 function getGuildThemeName() {
-  const intl = getSystemLocale.intl;
-  return intl.string(getSystemLocale.t.CFzDOG);
+  const intl = util.intl;
+  return intl.string(util.t.CFzDOG);
 }
-const result = require("set").fileFinishedImporting("modules/client_themes/native/useColorThemeBackground.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/client_themes/native/useColorThemeBackground.tsx");
 
 export default function useColorThemeBackground() {
-  const tmp = stateFromStores(4416)();
-  const _require = tmp;
-  let items = [closure_4];
-  stateFromStores = _require(563).useStateFromStores(items, () => theme.theme);
-  let obj = _require(563);
-  const items1 = [closure_5];
-  const stateFromStores1 = _require(563).useStateFromStores(items1, () => gradientPreset.gradientPreset);
-  const obj2 = _require(563);
+  const tmp = stateFromStores(4430)();
+  _require = tmp;
+  let items = [ThemeStore];
+  stateFromStores = require("useStateFromStores").useStateFromStores(items, () => theme.theme);
+  let obj = require("useStateFromStores");
+  const items1 = [ClientThemesBackgroundStore];
+  const stateFromStores1 = require("useStateFromStores").useStateFromStores(items1, () => gradientPreset.gradientPreset);
+  let obj2 = require("useStateFromStores");
   const items2 = [tmp, stateFromStores];
-  const customBackgroundGradient = _require(4492).useCustomBackgroundGradient();
-  let memo = React.useMemo(() => {
+  const customBackgroundGradient = require("MobileThemesUtils").useCustomBackgroundGradient();
+  let memo = noop.useMemo(() => {
     let tmp3 = null;
-    if (null != callback) {
+    if (null != closure_0) {
       if ("custom" === tmp.type) {
         const customUserThemeSettings = tmp.customUserThemeSettings;
-        let obj = { type: null, getName: null, theme: null, customThemeSettings: null };
-        obj[0] = callback(closure_1_2[4]).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT;
-        obj[1] = closure_1_6;
-        obj[2] = tmp2;
-        obj = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
+        const obj = { type: ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT, getName: getGuildThemeName, theme: tmp2, customThemeSettings: null };
+        const obj2 = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
         const items = [];
-        HermesBuiltin.arraySpread(callback(closure_1_2[5]).getSingleColorGuildThemeGradientColors(customUserThemeSettings.colors[0], tmp2), 0);
-        obj[0] = items;
-        obj[1] = [];
+        HermesBuiltin.arraySpread(GuildThemePresets.getSingleColorGuildThemeGradientColors(customUserThemeSettings.colors[0], tmp2), 0);
+        obj2.colors = items;
+        obj2.gradientColorStops = [];
         let num2 = customUserThemeSettings.gradientAngle;
         if (num2 == null) {
           num2 = 0;
         }
-        obj[2] = num2;
+        obj2.gradientAngle = num2;
         let GUILD_THEME_DEFAULT_BASE_MIX = customUserThemeSettings.baseMix;
         if (GUILD_THEME_DEFAULT_BASE_MIX == null) {
-          GUILD_THEME_DEFAULT_BASE_MIX = callback(closure_1_2[5]).GUILD_THEME_DEFAULT_BASE_MIX;
+          GUILD_THEME_DEFAULT_BASE_MIX = GuildThemePresets.GUILD_THEME_DEFAULT_BASE_MIX;
         }
-        obj[3] = GUILD_THEME_DEFAULT_BASE_MIX;
-        obj[3] = obj;
+        obj2.baseMix = GUILD_THEME_DEFAULT_BASE_MIX;
+        obj.customThemeSettings = obj2;
         tmp3 = obj;
-        const obj3 = callback(closure_1_2[5]);
       } else {
-        const guildThemePresetAppearance = callback(closure_1_2[5]).getGuildThemePresetAppearance(tmp.preset, tmp2);
-        obj = { type: null, getName: null, theme: null, customThemeSettings: null };
-        obj[0] = callback(closure_1_2[4]).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT;
-        obj[1] = closure_1_6;
-        obj[2] = tmp2;
-        obj1 = { colors: null, gradientAngle: null, gradientColorStops: null, baseMix: null };
-        colors = guildThemePresetAppearance.colors;
-        obj1[0] = colors.map((hex) => hex.hex);
-        ({ angle: obj6[1], colors } = guildThemePresetAppearance);
-        obj1[2] = colors.map((stop) => stop.stop);
-        obj1[3] = guildThemePresetAppearance.baseMix;
-        obj[3] = obj1;
-        tmp3 = obj;
-        const obj4 = callback(closure_1_2[5]);
+        const guildThemePresetAppearance = GuildThemePresets.getGuildThemePresetAppearance(tmp.preset, tmp2);
+        const obj5 = { type: ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT, getName: getGuildThemeName, theme: tmp2, customThemeSettings: null };
+        const obj9 = { colors: null, gradientAngle: null, gradientColorStops: null, baseMix: null };
+        const colors1 = guildThemePresetAppearance.colors;
+        obj9.colors = colors1.map((hex) => hex.hex);
+        ({ angle: obj6.gradientAngle, colors } = guildThemePresetAppearance);
+        obj9.gradientColorStops = colors.map((stop) => stop.stop);
+        obj9.baseMix = guildThemePresetAppearance.baseMix;
+        obj5.customThemeSettings = obj9;
+        tmp3 = obj5;
       }
     }
     return tmp3;

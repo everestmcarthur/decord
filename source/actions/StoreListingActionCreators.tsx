@@ -1,24 +1,27 @@
-// Module ID: 14500
-// Function ID: 14501
-// Name: fetchStoreListingsForApplications
-// Dependencies: [4788, 5510, 14501, 1074, 4802, 1272, 573, 8859, 2]
+// Module ID: 14525
+// Function ID: 14526
+// Name: StoreListingActionCreators
+// Dependencies: [4802, 5524, 14526, 1074, 4816, 1272, 573, 8886, 2]
 // Exports: fetchAllStoreListingsForApplication, fetchStoreListingForSku, fetchStoreListingsForApplications
 
-// Module 14500 (fetchStoreListingsForApplications)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import sendRequest from "sendRequest" /* 1272 */;
-import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4802 */;
-import closure_3 from "addApplication" /* 4788 */;
-import closure_4 from "addSku" /* 5510 */;
-import closure_5 from "addRegularStoreListing" /* 14501 */;
-import { Endpoints } from "ME" /* 1074 */;
+// Module 14525 (StoreListingActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import StoreUtils from "StoreUtils" /* 4816 */;
+import ApplicationStore from "ApplicationStore" /* 4802 */;
+import SKUStore from "SKUStore" /* 5524 */;
+import StoreListingStore from "StoreListingStore" /* 14526 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("actions/StoreListingActionCreators.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const Endpoints = fn(1074).Endpoints;
+const size = fn(2);
+let result = size.fileFinishedImporting("actions/StoreListingActionCreators.tsx");
 
 export const fetchStoreListingsForApplications = function fetchStoreListingsForApplications(arr) {
-  const found = arr.filter((arg0) => {
-    application = application.getApplication(arg0);
+  const found = arr.filter((item) => {
+    application = application.getApplication(item);
     if (null == application) {
       return true;
     } else {
@@ -33,82 +36,69 @@ export const fetchStoreListingsForApplications = function fetchStoreListingsForA
   if (0 === found.length) {
     let resolved = Promise.resolve();
   } else {
-    let obj = _httpGetWithCountryCodeQuery;
-    obj = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
-    obj[0] = Endpoints.STORE_PUBLISHED_LISTINGS_APPLICATIONS;
-    obj = { application_ids: null };
-    obj[0] = found;
-    obj[1] = obj;
-    obj[3] = sendRequest.rejectWithMigratedError();
-    const result = obj.httpGetWithCountryCodeQuery(obj);
+    const request = { url: Endpoints.STORE_PUBLISHED_LISTINGS_APPLICATIONS, query: null, oldFormErrors: true, rejectWithError: null };
+    const obj2 = { application_ids: found };
+    request.query = obj2;
+    const obj = StoreUtils;
+    request.rejectWithError = HTTPUtils.rejectWithMigratedError();
+    const result = obj.httpGetWithCountryCodeQuery(request);
     resolved = result.then((body) => {
-      let obj = callback(table[6]);
-      obj = { type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings: body.body };
-      obj.dispatch(obj);
+      DispatcherDefault.dispatch({ type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings: body.body });
     });
-    const obj4 = sendRequest;
   }
   return resolved;
 };
-export const fetchAllStoreListingsForApplication = function fetchAllStoreListingsForApplication(closure_1) {
-  let obj = _httpGetWithCountryCodeQuery;
-  obj = { url: Endpoints.STORE_PUBLISHED_LISTINGS_SKUS, query: obj, oldFormErrors: true, rejectWithError: null };
-  obj = { application_id: closure_1 };
-  obj[3] = sendRequest.rejectWithMigratedError();
-  const result = obj.httpGetWithCountryCodeQuery(obj);
+export const fetchAllStoreListingsForApplication = function fetchAllStoreListingsForApplication(application_id) {
+  const request = { url: Endpoints.STORE_PUBLISHED_LISTINGS_SKUS, query: { application_id }, oldFormErrors: true, rejectWithError: null };
+  let obj = StoreUtils;
+  let obj2 = { application_id };
+  request.rejectWithError = HTTPUtils.rejectWithMigratedError();
+  const result = obj.httpGetWithCountryCodeQuery(request);
   return result.then((body) => {
-    let obj = callback(table[6]);
-    obj = {
-      type: "STORE_LISTINGS_FETCH_SUCCESS",
-      storeListings: body.map((arg0) => {
-        const obj = {};
-        const merged = Object.assign(arg0);
-        obj.published = true;
-        return obj;
-      })
-    };
+    const obj2 = { type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings: null };
     body = body.body;
-    obj.dispatch(obj);
+    obj2.storeListings = body.map((item) => {
+      const obj = {};
+      const merged = Object.assign(item);
+      obj.published = true;
+      return obj;
+    });
+    DispatcherDefault.dispatch(obj2);
     return body.body;
   });
 };
 export const fetchStoreListingForSku = function fetchStoreListingForSku(skuId) {
-  const _require = skuId;
-  const value = closure_4.get(skuId);
+  _require = skuId;
+  value = SKUStore.get(skuId);
   let result = null != value;
   if (result) {
-    let obj = _require(8859);
-    result = obj.isTestModeForApplication(value.applicationId);
+    result = require("TestModeUtils").isTestModeForApplication(value.applicationId);
+    let obj = require("TestModeUtils");
   }
   importDefault = result;
-  obj = { type: "STORE_LISTINGS_FETCH_START", skuId };
-  dispatcherDefault.dispatch(obj);
-  const obj2 = dispatcherDefault;
+  DispatcherDefault.dispatch({ type: "STORE_LISTINGS_FETCH_START", skuId });
+  const obj3 = { type: "STORE_LISTINGS_FETCH_START", skuId };
   const tmp7 = _require;
   if (result) {
     let STORE_LISTINGS_SKUResult = obj5.STORE_LISTINGS_SKU(skuId);
   } else {
     STORE_LISTINGS_SKUResult = obj5.STORE_PUBLISHED_LISTINGS_SKU(skuId);
   }
-  obj = { url: STORE_LISTINGS_SKUResult, rejectWithError: null };
-  const obj4 = _require(4802);
-  obj[1] = tmp7(1272).rejectWithMigratedError();
-  const result1 = obj4.httpGetWithCountryCodeQuery(obj);
+  const obj6 = { url: STORE_LISTINGS_SKUResult, rejectWithError: null };
+  const obj4 = require("StoreUtils");
+  obj6.rejectWithError = tmp7(1272).rejectWithMigratedError();
+  const result1 = obj4.httpGetWithCountryCodeQuery(obj6);
   const tmp7Result = tmp7(1272);
   return result1.then((body) => {
-    const dispatch = result(closure_1_2[6]).dispatch;
-    if (closure_1) {
-      let obj = { type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings: null };
-      obj[1] = body.body;
-      dispatch(obj);
+    const dispatch = DispatcherDefault.dispatch;
+    if (result) {
+      const obj2 = { type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings: body.body };
+      dispatch(obj2);
     } else {
-      obj = { type: "STORE_LISTING_FETCH_SUCCESS", storeListing: null };
-      obj[1] = body.body;
+      const obj = { type: "STORE_LISTING_FETCH_SUCCESS", storeListing: body.body };
       dispatch(obj);
     }
   }).catch(() => {
-    let obj = result(closure_1_2[6]);
-    obj = { type: "SKU_FETCH_FAIL", skuId: closure_0 };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "SKU_FETCH_FAIL", skuId });
   });
 };

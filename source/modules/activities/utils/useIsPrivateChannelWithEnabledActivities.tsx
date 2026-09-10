@@ -1,19 +1,22 @@
-// Module ID: 9508
-// Function ID: 9509
+// Module ID: 9535
+// Function ID: 9536
 // Name: useIsPrivateChannelWithEnabledActivities
 // Dependencies: [1957, 563, 2]
 // Exports: default, isPrivateChannelWithEnabledActivities
 
-// Module 9508 (useIsPrivateChannelWithEnabledActivities)
-import closure_2 from "ensureGuildLoaded" /* 1957 */;
+// Module 9535 (useIsPrivateChannelWithEnabledActivities)
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/utils/useIsPrivateChannelWithEnabledActivities.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/utils/useIsPrivateChannelWithEnabledActivities.tsx");
 
 export default function useIsPrivateChannelWithEnabledActivities(arg0) {
-  const _require = arg0;
-  const items = [closure_2];
-  const stateFromStores = _require(563).useStateFromStores(items, () => closure_1_2.getChannel(closure_0));
+  _require = arg0;
+  const items = [ChannelStore];
+  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => ChannelStore.getChannel(closure_0));
   let flag;
   if (stateFromStores != null) {
     flag = stateFromStores.isPrivate();
@@ -27,7 +30,7 @@ export const isPrivateChannelWithEnabledActivities = function isPrivateChannelWi
   if (null == arg0) {
     return false;
   } else {
-    channel = channel.getChannel(arg0);
+    const channel = ChannelStore.getChannel(arg0);
     let flag;
     if (channel != null) {
       flag = channel.isPrivate();

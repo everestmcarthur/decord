@@ -1,34 +1,33 @@
-// Module ID: 5528
-// Function ID: 5529
+// Module ID: 5542
+// Function ID: 5543
 // Name: MemberVerificationAlertSuccess
-// Dependencies: [19, 17, 4552, 1979, 21, 4560, 504, 4994, 1114, 5529, 5535, 4556, 2]
+// Dependencies: [19, 17, 4566, 1979, 21, 4574, 504, 5008, 1114, 5543, 5549, 4570, 2]
 // Exports: default
 
-// Module 5528 (MemberVerificationAlertSuccess)
-import noopAll from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import closure_5 from "createGuildRecordFromRust" /* 1979 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 5542 (MemberVerificationAlertSuccess)
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-const require = arg1;
-noopAll;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ alert: { marginTop: 120 }, header: { marginTop: 40, textAlign: "center" }, text: { marginVertical: 8, lineHeight: 18, textAlign: "center" }, illustrationContainer: { position: "absolute", display: "flex", flexDirection: "column", alignItems: "center", left: 0, right: 0, top: -220 }, illustration: { height: 246, width: 240 } });
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertSuccess.tsx");
+const require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let closure_8 = createStyles.createStyles({ alert: { marginTop: 120 }, header: { marginTop: 40, textAlign: "center" }, text: { marginVertical: 8, lineHeight: 18, textAlign: "center" }, illustrationContainer: { position: "absolute", display: "flex", flexDirection: "column", alignItems: "center", left: 0, right: 0, top: -220 }, illustration: { height: 246, width: 240 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertSuccess.tsx");
 
 export default function MemberVerificationAlertSuccess(guildId) {
   guildId = guildId.guildId;
   const handleConfirmAndAck = guildId.handleConfirmAndAck;
-  const merged = Object.assign(guildId, Object.create(null));
-  const tmp2 = callback3();
-  let obj = guildId(merged[6]);
-  const items = [closure_5];
+  const merged = Object.assign(guildId, Object.assign({ guildId: 0, handleConfirmAndAck: 0 }));
+  const tmp2 = closure_8();
+  const items = [GuildStore];
   const items1 = [guildId];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getGuild(guildId), items1);
+  const stateFromStores = guildId(merged[6]).useStateFromStores(items, () => GuildStore.getGuild(guildId), items1);
   guildId(merged[6]);
-  [][0] = closure_4;
+  [][0] = AccessibilityStore;
   if (null == stateFromStores) {
     return null;
   } else {
@@ -39,35 +38,32 @@ export default function MemberVerificationAlertSuccess(guildId) {
         onClose();
       }
     }
-    obj = {};
+    const obj2 = {};
     const merged1 = Object.assign(merged);
     const intl = tmp3(tmp4[8]).intl;
-    obj.confirmText = intl.string(tmp3(tmp4[8]).t.NuzmOA);
-    obj.style = tmp2.alert;
-    obj.onCancel = onConfirm;
-    obj.onConfirm = onConfirm;
-    obj = { style: null, children: null };
-    obj[0] = tmp2.illustrationContainer;
-    obj1 = { source: null, autoPlay: null, style: null };
+    obj2.confirmText = intl.string(tmp3(tmp4[8]).t.NuzmOA);
+    obj2.style = tmp2.alert;
+    obj2.onCancel = onConfirm;
+    obj2.onConfirm = onConfirm;
+    const obj3 = { style: tmp2.illustrationContainer, children: null };
+    const obj4 = { source: null, autoPlay: null, style: null };
     const tmp10 = handleConfirmAndAck(tmp4[7]);
-    obj1[0] = tmp3(tmp4[10]);
-    obj1[1] = !tmp7;
-    obj1[2] = tmp2.illustration;
-    obj[1] = callback(handleConfirmAndAck(tmp4[9]), obj1);
-    const items2 = [callback(View, obj), , ];
-    const obj2 = { style: null, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
-    obj2[0] = tmp2.header;
+    obj4.source = tmp3(tmp4[10]);
+    obj4.autoPlay = !tmp7;
+    obj4.style = tmp2.illustration;
+    obj3.children = closure_6(handleConfirmAndAck(tmp4[9]), obj4);
+    const items2 = [closure_6(View, obj3), , ];
+    const obj5 = { style: tmp2.header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
     const intl2 = tmp3(tmp4[8]).intl;
-    const obj3 = { guildName: null };
-    obj3[0] = stateFromStores.name;
-    obj2[3] = intl2.format(tmp3(tmp4[8]).t["7hhNEn"], obj3);
-    items2[1] = callback(tmp3(tmp4[11]).Heading, obj2);
-    const obj4 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
-    obj4[0] = tmp2.text;
+    const obj6 = { guildName: stateFromStores.name };
+    obj5.children = intl2.format(tmp3(tmp4[8]).t["7hhNEn"], obj6);
+    items2[1] = closure_6(tmp3(tmp4[11]).Heading, obj5);
+    const obj7 = { style: tmp2.text, variant: "text-sm/medium", color: "text-default", children: null };
     const intl3 = tmp3(tmp4[8]).intl;
-    obj4[3] = intl3.string(tmp3(tmp4[8]).t.nwpqyc);
-    items2[2] = callback(tmp3(tmp4[11]).Text, obj4);
-    obj.children = items2;
-    return callback2(tmp10, obj);
+    obj7.children = intl3.string(tmp3(tmp4[8]).t.nwpqyc);
+    items2[2] = closure_6(tmp3(tmp4[11]).Text, obj7);
+    obj2.children = items2;
+    return closure_7(tmp10, obj2);
   }
+  const obj = guildId(merged[6]);
 };

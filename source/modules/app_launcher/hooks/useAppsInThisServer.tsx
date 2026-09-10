@@ -1,21 +1,25 @@
-// Module ID: 12126
-// Function ID: 12127
+// Module ID: 12152
+// Function ID: 12153
 // Name: useAppsInThisServer
-// Dependencies: [19, 9295, 1371, 4999, 504, 9421, 1894, 9305, 12125, 12, 9411, 2]
+// Dependencies: [19, 9322, 1371, 5013, 504, 9448, 1894, 9332, 12151, 12, 9438, 2]
 // Exports: default
 
-// Module 12126 (useAppsInThisServer)
-import closure_4 from "noop" /* 19 */;
-import { useGuildIndexState } from "getIndexKey" /* 9295 */;
-import closure_6 from "mergeGuildAvatar" /* 1371 */;
-import { DISCOVERY_COMMANDS_QUERY_LIMIT as closure_7 } from "TRUE_OPTION_NAME" /* 4999 */;
+// Module 12152 (useAppsInThisServer)
+import _modDef12 from "module_12" /* 12 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/app_launcher/hooks/useAppsInThisServer.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const useGuildIndexState = fn(9322).useGuildIndexState;
+const limit = fn(5013).DISCOVERY_COMMANDS_QUERY_LIMIT;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/app_launcher/hooks/useAppsInThisServer.tsx");
 
 export default function useAppsInThisServer(context) {
   context = context.context;
-  let _require;
+  _require = undefined;
   let stateFromStores;
   let commandsByActiveSection;
   let memo;
@@ -30,9 +34,8 @@ export default function useAppsInThisServer(context) {
   }
   const tmp2Result = useGuildIndexState(guild_id, true);
   _require = tmp2Result;
-  let obj = _require(memo[4]);
-  const items = [closure_6];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  const items = [UserStore];
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let nsfwAllowed;
     if (currentUser != null) {
@@ -40,15 +43,16 @@ export default function useAppsInThisServer(context) {
     }
     return nsfwAllowed;
   });
-  obj1 = commandsByActiveSection(memo[5]);
-  obj = { context, filters: null, options: null, allowFetch: true };
-  obj = { commandTypes: null };
-  const items1 = [_require(memo[6]).ApplicationCommandType.CHAT, _require(memo[6]).ApplicationCommandType.PRIMARY_ENTRY_POINT];
-  obj[0] = items1;
-  obj[1] = obj;
-  obj1 = { placeholderCount: 0, limit: closure_7, includeFrecency: true };
-  obj[2] = obj1;
-  const discovery = obj1.useDiscovery(obj);
+  let obj = require("initialize");
+  const tmp5 = _require;
+  const tmp6 = memo;
+  const obj3 = { context, filters: null, options: null, allowFetch: true };
+  const obj4 = { commandTypes: null };
+  const items1 = [require("Server").ApplicationCommandType.CHAT, require("Server").ApplicationCommandType.PRIMARY_ENTRY_POINT];
+  obj4.commandTypes = items1;
+  obj3.filters = obj4;
+  obj3.options = { placeholderCount: 0, limit, includeFrecency: true };
+  const discovery = commandsByActiveSection(memo[5]).useDiscovery(obj3);
   commandsByActiveSection = discovery.commandsByActiveSection;
   const items2 = [commandsByActiveSection];
   memo = sortApplicationsViaFrecency.useMemo(() => commandsByActiveSection.reduce((add, data) => {
@@ -75,32 +79,28 @@ export default function useAppsInThisServer(context) {
     const values = Object.values(sections);
     const mapped = values.map((descriptor) => descriptor.descriptor);
     return mapped.filter((id) => {
-      let hasItem = !(id.id in closure_1_0(closure_1_3[7]).BUILT_IN_SECTIONS);
+      let hasItem = !(id.id in closure_0(memo[7]).BUILT_IN_SECTIONS);
       if (hasItem) {
         hasItem = set.has(id.id);
       }
       return hasItem;
     });
   }, items3);
-  sortApplicationsViaFrecency = _require(memo[8]).useSortApplicationsViaFrecency(memo1);
+  const obj2 = commandsByActiveSection(memo[5]);
+  const obj5 = { placeholderCount: 0, limit, includeFrecency: true };
   const obj6 = sortApplicationsViaFrecency;
-  const tmp2 = useGuildIndexState;
-  const tmp5 = _require;
-  const tmp5Result = _require(memo[8]);
-  const tmp6 = memo;
+  sortApplicationsViaFrecency = tmp5(tmp6[8]).useSortApplicationsViaFrecency(memo1);
+  const obj7 = { appsInThisServer: null, isLoading: tmp2Result.fetchState.fetching || discovery.loading };
   const items4 = [stateFromStores, sortApplicationsViaFrecency];
-  return {
-    appsInThisServer: sortApplicationsViaFrecency.useMemo(() => {
-      const obj = stateFromStores(memo[9]);
-      const found = stateFromStores(memo[9]).compact(sortApplicationsViaFrecency.map((application) => application.application)).filter((id) => {
-        let tmp = false === closure_1;
-        if (tmp) {
-          tmp = closure_1_1(closure_1_3[10])(id.id);
-        }
-        return !tmp;
-      });
-      return found.map((application) => ({ application }));
-    }, items4),
-    isLoading: tmp13
-  };
+  obj7.appsInThisServer = obj6.useMemo(() => {
+    const found = _modDef12.compact(sortApplicationsViaFrecency.map((application) => application.application)).filter((id) => {
+      let tmp = false === closure_1_1;
+      if (tmp) {
+        tmp = stateFromStores(memo[10])(id.id);
+      }
+      return !tmp;
+    });
+    return found.map((application) => ({ application }));
+  }, items4);
+  return obj7;
 };

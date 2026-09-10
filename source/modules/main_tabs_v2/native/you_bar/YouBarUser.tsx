@@ -1,43 +1,47 @@
-// Module ID: 16388
-// Function ID: 16389
-// Dependencies: [19, 17, 1371, 15101, 21, 4560, 576, 504, 4296, 4974, 4404, 16389, 16390, 16391, 2]
+// Module ID: 16419
+// Function ID: 16420
+// Name: YouBarUser
+// Dependencies: [19, 17, 1371, 15128, 21, 4574, 576, 504, 4310, 4988, 4418, 16420, 16421, 16422, 2]
 
-// Module 16388
-import ThemesDefault from "Themes" /* 576 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1371 */;
-import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 15101 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16419 (YouBarUser)
+import nativeDefault from "native" /* 576 */;
+import spring from "spring" /* 4988 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-let c3 = importAllResult;
-({ YOU_BAR_SPRING_CONFIG: closure_6, YOU_BAR_LARGE_AVATAR_NAME_MARGIN: error, YOU_BAR_SMALL_AVATAR_NAME_MARGIN: closure_8 } = CONNECTION_BANNER_HEIGHT);
-({ jsx: c9, jsxs: c10 } = jsxProd);
-let obj = { youButton: null, userText: null, placeholder: null };
-obj = { flexDirection: "row", alignItems: "center", borderRadius: ThemesDefault.modules.mobile.YOU_BAR_BORDER_RADIUS };
-obj[0] = obj;
-obj[1] = { flexDirection: "column", justifyContent: "center", height: "100%", gap: 1 };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.round, height: 16, width: 80 };
-obj[2] = createCacheKey;
-let closure_11 = createCacheKey.createStyles(obj);
-let closure_12 = { code: "function YouBarUserTsx1(){const{nameMargin}=this.__closure;return{marginLeft:nameMargin.get()};}" };
-const memoResult = importAllResult.memo(function YouBarUser(isQuestRendered) {
+const require = globalThis.__r;
+
+require = fn;
+const View = fn(17).View;
+const YouBarConstants = fn(15128);
+({ YOU_BAR_SPRING_CONFIG: metroRequire, YOU_BAR_LARGE_AVATAR_NAME_MARGIN: closure_7, YOU_BAR_SMALL_AVATAR_NAME_MARGIN: closure_8 } = YouBarConstants);
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4574);
+let obj = { youButton: { flexDirection: "row", alignItems: "center", borderRadius: nativeDefault.modules.mobile.YOU_BAR_BORDER_RADIUS }, userText: { flexDirection: "column", justifyContent: "center", height: "100%", gap: 1 }, placeholder: null };
+let size = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.round, height: 16, width: 80 };
+obj.placeholder = size;
+let closure_11 = createStyles.createStyles(obj);
+const __initData = { code: "function YouBarUserTsx1(){const{nameMargin}=this.__closure;return{marginLeft:nameMargin.get()};}" };
+let obj3 = { flexDirection: "row", alignItems: "center", borderRadius: nativeDefault.modules.mobile.YOU_BAR_BORDER_RADIUS };
+size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarUser.tsx");
+
+export default noop.memo(function YouBarUser(isQuestRendered) {
   isQuestRendered = isQuestRendered.isQuestRendered;
-  let _require;
-  let sharedValue;
-  const tmp = callback2();
-  let obj = _require(504);
-  const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
+  _require = undefined;
+  const tmp = closure_11();
+  const items = [UserStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
   _require = tmp5;
-  obj1 = _require(4296);
-  sharedValue = obj1.useSharedValue(isQuestRendered ? closure_8 : closure_7);
+  const obj = require("initialize");
+  const tmp2 = _require;
+  const sharedValue = require("ReanimatedRexport").useSharedValue(isQuestRendered ? closure_8 : closure_7);
   const items1 = [!isQuestRendered, sharedValue];
-  const effect = importAllResult.useEffect(() => {
-    const result = sharedValue.set(callback(closure_1_2[9]).withSpring(callback ? closure_1_7 : closure_1_8, closure_1_6));
+  const effect = noop.useEffect(() => {
+    const result = sharedValue.set(spring.withSpring(closure_0 ? React5 : React6, timestampProducer));
   }, items1);
+  const obj2 = require("ReanimatedRexport");
   class S {
     constructor() {
       obj = { marginLeft: closure_1.get() };
@@ -46,40 +50,33 @@ const memoResult = importAllResult.memo(function YouBarUser(isQuestRendered) {
   }
   S.__closure = { nameMargin: sharedValue };
   S.__workletHash = 12063452832866;
-  S.__initData = closure_12;
-  const animatedStyle = _require(4296).useAnimatedStyle(S);
-  let obj3 = sharedValue(4404);
-  const name = obj3.useName(stateFromStores);
+  S.__initData = __initData;
+  const animatedStyle = tmp2(4310).useAnimatedStyle(S);
+  const tmp2Result = tmp2(4310);
+  const name = sharedValue(4418).useName(stateFromStores);
   if (null != stateFromStores) {
     if (null != name) {
-      obj = { style: null, children: null };
-      obj[0] = tmp.youButton;
-      obj = { isLargeAvatar: null, onPress: null };
-      obj[0] = tmp5;
-      obj[1] = isQuestRendered.onAvatarPress;
-      const items2 = [callback(tmp9(16390), obj), ];
-      obj1 = { style: null, children: null };
+      let obj3 = { style: tmp.youButton, children: null };
+      const obj5 = { isLargeAvatar: tmp5, onPress: isQuestRendered.onAvatarPress };
+      const items2 = [closure_9(tmp9(16421), obj5), ];
+      const obj6 = { style: null, children: null };
       const items3 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
-      obj1[0] = items3;
-      const obj2 = { userId: null, username: null };
-      obj2[0] = stateFromStores.id;
-      obj2[1] = name;
-      obj1[1] = callback(tmp9(16391), obj2);
-      items2[1] = callback(tmp9(4296).View, obj1);
-      obj[1] = items2;
+      obj6.style = items3;
+      const obj7 = { userId: stateFromStores.id, username: name };
+      obj6.children = closure_9(tmp9(16422), obj7);
+      items2[1] = closure_9(tmp9(4310).View, obj6);
+      obj3.children = items2;
     }
-    return tmp11(tmp12, obj);
+    return tmp11(tmp12, obj3);
   }
-  obj3 = { style: items4, children: null };
-  items4 = [tmp.youButton];
-  const items5 = [callback(sharedValue(16389), { isLarge: !isQuestRendered }), ];
-  const tmp2 = _require;
-  const tmp2Result = _require(4296);
+  const obj8 = { style: null, children: null };
+  const items4 = [tmp.youButton];
+  obj8.style = items4;
+  const items5 = [closure_9(sharedValue(16420), { isLarge: !isQuestRendered }), ];
+  const obj9 = { style: null, children: closure_9(View, { style: tmp.placeholder }) };
   const items6 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
-  items5[1] = callback(sharedValue(4296).View, { style: items6, children: callback(View, obj5) });
-  obj3[1] = items5;
-  obj = obj3;
+  obj9.style = items6;
+  items5[1] = closure_9(sharedValue(4310).View, obj9);
+  obj8.children = items5;
+  obj3 = obj8;
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarUser.tsx");
-
-export default memoResult;

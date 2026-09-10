@@ -1,17 +1,19 @@
-// Module ID: 12278
-// Function ID: 12279
-// Name: MIN_PAN_GESTURE_MOVE
+// Module ID: 12304
+// Function ID: 12305
+// Name: MorphablePanelConstants
 // Dependencies: [1115, 2]
 
-// Module 12278 (MIN_PAN_GESTURE_MOVE)
-import set from "set" /* 1115 */;
+// Module 12304 (MorphablePanelConstants)
+import PlatformUtils_mod from "PlatformUtils" /* 1115 */;
+import size from "module_2" /* 2 */;
 
-set = set.isIOS();
-const result = set.fileFinishedImporting("modules/panels/morphable/native/MorphablePanelConstants.tsx");
+let PlatformUtils = PlatformUtils_mod;
+PlatformUtils = PlatformUtils.isIOS();
+const result = size.fileFinishedImporting("modules/panels/morphable/native/MorphablePanelConstants.tsx");
 
 export const MIN_PAN_GESTURE_MOVE = 10;
 export const PANEL_TAP_GESTURE_MAX_DISTANCE = 30;
-export const IS_IOS = set;
+export const IS_IOS = PlatformUtils;
 export const PIP_POP_HEIGHT = 140;
 export const PIP_WINDOW_OFFSET = 16;
 export const MIN_PIP_TOSS_VELOCITY = 500;

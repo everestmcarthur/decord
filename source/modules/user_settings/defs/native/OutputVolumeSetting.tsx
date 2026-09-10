@@ -1,41 +1,41 @@
-// Module ID: 15254
-// Function ID: 15255
-// Name: volumeSlider
-// Dependencies: [1908, 7975, 504, 11473, 1114, 9094, 9987, 2]
+// Module ID: 15283
+// Function ID: 15284
+// Name: OutputVolumeSetting
+// Dependencies: [1908, 7989, 504, 11500, 1114, 9121, 10014, 2]
 
-// Module 15254 (volumeSlider)
+// Module 15283 (OutputVolumeSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import trackDeviceChangedDefault from "trackDeviceChanged" /* 9094 */;
-import apexExperimentDefault from "apexExperiment" /* 9987 */;
-import closure_3 from "_detectH265HardwareDecode" /* 1908 */;
-import createToggle from "createToggle" /* 11473 */;
+import util from "util" /* 1114 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9121 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 10014 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const SettingBuilders = fn(11500);
+const volumeSlider = SettingBuilders.createVolumeSlider({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.xPHVBs);
+    const intl = util.intl;
+    return intl.string(util.t.xPHVBs);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
+  parent: fn(7989).MobileUserSettings.VOICE,
   maximum: 200,
   useValue: function useOutputVolumeSettingValue() {
-    const items = [closure_3];
+    const items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => outputVolume.getOutputVolume());
   },
-  onValueChange: trackDeviceChangedDefault.setOutputVolume,
+  onValueChange: AudioActionCreatorsDefault.setOutputVolume,
   useSearchTerms() {
-    const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t["3182VD"]), ];
-    const intl2 = getSystemLocale.intl;
-    items[1] = intl2.string(getSystemLocale.t["DGq/PR"]);
+    const intl = util.intl;
+    const items = [intl.string(util.t["3182VD"]), ];
+    const intl2 = util.intl;
+    items[1] = intl2.string(util.t["DGq/PR"]);
     return items;
   },
   usePredicate() {
-    return apexExperimentDefault.useConfig({ location: "OutputVolumeSetting" }).audioOutputPresent;
+    return MobileAudioOutputExperimentDefault.useConfig({ location: "OutputVolumeSetting" }).audioOutputPresent;
   }
-};
-createToggle = createToggle.createVolumeSlider(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/OutputVolumeSetting.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/OutputVolumeSetting.tsx");
 
-export default createToggle;
+export default volumeSlider;

@@ -1,15 +1,16 @@
-// Module ID: 10927
-// Function ID: 10928
+// Module ID: 10954
+// Function ID: 10955
 // Name: useNavigatorBackHandler
 // Dependencies: [19, 1483, 1115, 2]
 // Exports: default
 
-// Module 10927 (useNavigatorBackHandler)
-import closure_2 from "noop" /* 19 */;
+// Module 10954 (useNavigatorBackHandler)
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+const require = fn;
 let closure_3 = {};
-const result = require("set").fileFinishedImporting("design/components/Navigator/native/useNavigatorBackHandler.native.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Navigator/native/useNavigatorBackHandler.native.tsx");
 
 export default function useNavigatorBackHandler() {
   let tmp = arg0;
@@ -18,12 +19,12 @@ export default function useNavigatorBackHandler() {
   }
   const onBeforeGoBack = tmp.onBeforeGoBack;
   let navigation;
-  let React;
+  noop = undefined;
   navigation = onBeforeGoBack(navigation[1]).useNavigation();
-  React = React.useRef(true);
+  noop = noop.useRef(true);
   const items = [navigation];
   const items1 = [navigation, onBeforeGoBack];
-  const onGoBack = React.useCallback(() => {
+  const onGoBack = noop.useCallback(() => {
     let flag = arg0;
     if (arg0 === undefined) {
       flag = false;
@@ -31,27 +32,28 @@ export default function useNavigatorBackHandler() {
     closure_2.current = flag;
     navigation.goBack();
   }, items);
-  const effect = React.useEffect(() => navigation.addListener("beforeRemove", (data) => {
-    closure_0 = data;
+  const effect = noop.useEffect(() => navigation.addListener("beforeRemove", (data) => {
     if (ref.current) {
       let isIOSResult = "POP" === data.data.action.type;
       if (isIOSResult) {
-        let obj = closure_1_0(closure_1_1[2]);
-        isIOSResult = obj.isIOS();
+        isIOSResult = onBeforeGoBack(navigation[2]).isIOS();
+        const obj = onBeforeGoBack(navigation[2]);
       }
-      if (closure_0 != null) {
+      if (data != null) {
         if (isIOSResult) {
-          obj = { preventable: false };
+          let obj2 = { preventable: false };
         } else {
-          obj = { preventable: true, preventDefault: null, goBack: null };
-          obj[1] = function preventDefault() {
-            return data.preventDefault();
-          };
-          obj[2] = function goBack() {
-            return navigation.goBack();
+          obj2 = {
+            preventable: true,
+            preventDefault() {
+                    return data.preventDefault();
+                  },
+            goBack() {
+                    return navigation.goBack();
+                  }
           };
         }
-        tmp4(obj);
+        tmp4(obj2);
       }
     }
   }), items1);

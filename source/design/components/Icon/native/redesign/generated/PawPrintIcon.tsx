@@ -1,26 +1,26 @@
-// Module ID: 15610
-// Function ID: 15611
+// Module ID: 15640
+// Function ID: 15641
 // Name: PawPrintIcon
-// Dependencies: [19, 21, 576, 4261, 15611, 2]
+// Dependencies: [19, 21, 576, 4274, 15641, 2]
 // Exports: PawPrintIcon
 
-// Module 15610 (PawPrintIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 15611 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 15640 (PawPrintIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod15641 from "module_15641" /* 15641 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/PawPrintIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/PawPrintIcon.tsx");
 
 export const PawPrintIcon = function PawPrintIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15641, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

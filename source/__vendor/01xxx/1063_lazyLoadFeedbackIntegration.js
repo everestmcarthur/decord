@@ -2,17 +2,19 @@
 // Function ID: 1064
 // Name: lazyLoadFeedbackIntegration
 // Dependencies: [682, 998]
+// Exports: lazyLoadAutoInjectFeedbackButtonIntegration, lazyLoadAutoInjectFeedbackIntegration, lazyLoadAutoInjectScreenshotButtonIntegration, lazyLoadFeedbackIntegration
 
 // Module 1063 (lazyLoadFeedbackIntegration)
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 682 */;
+import _mod682 from "module_682" /* 682 */;
 
 require = arg1;
 const dependencyMap = arg6;
 const AutoInjectMobileFeedback = "AutoInjectMobileFeedback";
 const AutoInjectMobileFeedbackButton = "AutoInjectMobileFeedbackButton";
 const AutoInjectMobileScreenshotButton = "AutoInjectMobileScreenshotButton";
-arg5.lazyLoadFeedbackIntegration = function lazyLoadFeedbackIntegration() {
-  const client = registerSpanErrorInstrumentation.getClient();
+
+export const lazyLoadFeedbackIntegration = function lazyLoadFeedbackIntegration() {
+  const client = _mod682.getClient();
   let integrationByName;
   if (null !== client) {
     if (undefined !== client) {
@@ -20,22 +22,21 @@ arg5.lazyLoadFeedbackIntegration = function lazyLoadFeedbackIntegration() {
     }
   }
   if (!integrationByName) {
-    let tmpResult = tmp(682);
-    const client1 = tmpResult.getClient();
+    const client1 = tmp(682).getClient();
     integrationByName = null === client1;
+    const tmpResult = tmp(682);
   }
   if (!integrationByName) {
     integrationByName = undefined === obj3;
   }
   if (!integrationByName) {
-    tmpResult = tmp(998);
-    obj3.addIntegration(tmpResult.feedbackIntegration());
+    obj3.addIntegration(tmp(998).feedbackIntegration());
+    const tmpResult2 = tmp(998);
   }
 };
-arg5.AUTO_INJECT_FEEDBACK_INTEGRATION_NAME = "AutoInjectMobileFeedback";
-arg5.lazyLoadAutoInjectFeedbackIntegration = function lazyLoadAutoInjectFeedbackIntegration() {
-  let obj = registerSpanErrorInstrumentation;
-  const client = obj.getClient();
+export const AUTO_INJECT_FEEDBACK_INTEGRATION_NAME = "AutoInjectMobileFeedback";
+export const lazyLoadAutoInjectFeedbackIntegration = function lazyLoadAutoInjectFeedbackIntegration() {
+  const client = _mod682.getClient();
   let integrationByName;
   if (null !== client) {
     if (undefined !== client) {
@@ -43,23 +44,21 @@ arg5.lazyLoadAutoInjectFeedbackIntegration = function lazyLoadAutoInjectFeedback
     }
   }
   if (!integrationByName) {
-    const client1 = registerSpanErrorInstrumentation.getClient();
+    const client1 = _mod682.getClient();
     integrationByName = null === client1;
-    const tmpResult = registerSpanErrorInstrumentation;
+    const tmpResult = _mod682;
   }
   if (!integrationByName) {
     integrationByName = undefined === obj3;
   }
   if (!integrationByName) {
-    obj = { name: null };
-    obj[0] = AutoInjectMobileFeedback;
-    obj3.addIntegration(obj);
+    const obj2 = { name: AutoInjectMobileFeedback };
+    obj3.addIntegration(obj2);
   }
 };
-arg5.AUTO_INJECT_FEEDBACK_BUTTON_INTEGRATION_NAME = "AutoInjectMobileFeedbackButton";
-arg5.lazyLoadAutoInjectFeedbackButtonIntegration = function lazyLoadAutoInjectFeedbackButtonIntegration() {
-  let obj = registerSpanErrorInstrumentation;
-  const client = obj.getClient();
+export const AUTO_INJECT_FEEDBACK_BUTTON_INTEGRATION_NAME = "AutoInjectMobileFeedbackButton";
+export const lazyLoadAutoInjectFeedbackButtonIntegration = function lazyLoadAutoInjectFeedbackButtonIntegration() {
+  const client = _mod682.getClient();
   let integrationByName;
   if (null !== client) {
     if (undefined !== client) {
@@ -67,23 +66,21 @@ arg5.lazyLoadAutoInjectFeedbackButtonIntegration = function lazyLoadAutoInjectFe
     }
   }
   if (!integrationByName) {
-    const client1 = registerSpanErrorInstrumentation.getClient();
+    const client1 = _mod682.getClient();
     integrationByName = null === client1;
-    const tmpResult = registerSpanErrorInstrumentation;
+    const tmpResult = _mod682;
   }
   if (!integrationByName) {
     integrationByName = undefined === obj3;
   }
   if (!integrationByName) {
-    obj = { name: null };
-    obj[0] = AutoInjectMobileFeedbackButton;
-    obj3.addIntegration(obj);
+    const obj2 = { name: AutoInjectMobileFeedbackButton };
+    obj3.addIntegration(obj2);
   }
 };
-arg5.AUTO_INJECT_SCREENSHOT_BUTTON_INTEGRATION_NAME = "AutoInjectMobileScreenshotButton";
-arg5.lazyLoadAutoInjectScreenshotButtonIntegration = function lazyLoadAutoInjectScreenshotButtonIntegration() {
-  let obj = registerSpanErrorInstrumentation;
-  const client = obj.getClient();
+export const AUTO_INJECT_SCREENSHOT_BUTTON_INTEGRATION_NAME = "AutoInjectMobileScreenshotButton";
+export const lazyLoadAutoInjectScreenshotButtonIntegration = function lazyLoadAutoInjectScreenshotButtonIntegration() {
+  const client = _mod682.getClient();
   let integrationByName;
   if (null !== client) {
     if (undefined !== client) {
@@ -91,16 +88,15 @@ arg5.lazyLoadAutoInjectScreenshotButtonIntegration = function lazyLoadAutoInject
     }
   }
   if (!integrationByName) {
-    const client1 = registerSpanErrorInstrumentation.getClient();
+    const client1 = _mod682.getClient();
     integrationByName = null === client1;
-    const tmpResult = registerSpanErrorInstrumentation;
+    const tmpResult = _mod682;
   }
   if (!integrationByName) {
     integrationByName = undefined === obj3;
   }
   if (!integrationByName) {
-    obj = { name: null };
-    obj[0] = AutoInjectMobileScreenshotButton;
-    obj3.addIntegration(obj);
+    const obj2 = { name: AutoInjectMobileScreenshotButton };
+    obj3.addIntegration(obj2);
   }
 };

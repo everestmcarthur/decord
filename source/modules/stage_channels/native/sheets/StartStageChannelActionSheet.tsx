@@ -1,154 +1,132 @@
-// Module ID: 8397
-// Function ID: 8398
-// Name: StartStageChannelEventActionSheet
-// Dependencies: [5, 32, 19, 17, 1962, 5414, 1074, 1963, 21, 4560, 576, 504, 5422, 4992, 1242, 1874, 8398, 4527, 4461, 8407, 4556, 1114, 7150, 7123, 6606, 8410, 4975, 2]
+// Module ID: 8425
+// Function ID: 8426
+// Name: StartStageChannelActionSheet
+// Dependencies: [5, 32, 19, 17, 1962, 5428, 1074, 1963, 21, 4574, 576, 504, 5436, 5006, 1242, 1874, 8426, 4541, 4475, 8435, 4570, 1114, 7164, 7137, 6620, 8438, 4989, 2]
 // Exports: default
 
-// Module 8397 (StartStageChannelEventActionSheet)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_8 from "handleStageInstanceCreateOrUpdate" /* 1962 */;
-import MAX_STAGE_TOPIC_LENGTH from "MAX_STAGE_TOPIC_LENGTH" /* 5414 */;
-import ME from "ME" /* 1074 */;
-import { GuildScheduledEventPrivacyLevel as closure_12 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1963 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 8425 (StartStageChannelActionSheet)
+import nativeDefault from "native" /* 576 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import StageInstanceStore from "StageInstanceStore" /* 1962 */;
 
-const require = arg1;
-({ MAX_STAGE_TOPIC_LENGTH: c9, START_STAGE_CHANNEL_EVENT_SHEET_KEY: c10 } = MAX_STAGE_TOPIC_LENGTH);
-({ AnalyticEvents: unpackModuleId, Fonts } = ME);
+const require = fn;
+const View = fn(17).View;
+const StageChannelsConstants = fn(5428);
+({ MAX_STAGE_TOPIC_LENGTH: closure_9, START_STAGE_CHANNEL_EVENT_SHEET_KEY: c10 } = StageChannelsConstants);
+const Constants = fn(1074);
+({ AnalyticEvents: closure_11, Fonts } = Constants);
+let closure_12 = fn(1963).GuildScheduledEventPrivacyLevel;
+const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-createCacheKey = { container: { padding: 16 }, header: { alignItems: "center", paddingBottom: 24 }, headerTitle: { marginTop: 16, marginBottom: 8 }, headerSubtitle: { textAlign: "center" }, startButton: { marginTop: 16 }, buttonSubtitle: { paddingTop: 8, textAlign: "center" }, ageVerificationNotice: null, error: null };
-createCacheKey = { marginBottom: ThemesDefault.space.PX_16 };
-createCacheKey[6] = createCacheKey;
-createCacheKey[7] = { paddingTop: 8, fontSize: 12, fontFamily: Fonts.PRIMARY_MEDIUM, color: ThemesDefault.unsafe_rawColors.RED_400 };
-let closure_15 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { paddingTop: 8, fontSize: 12, fontFamily: Fonts.PRIMARY_MEDIUM, color: ThemesDefault.unsafe_rawColors.RED_400 };
-let result = require("set").fileFinishedImporting("modules/stage_channels/native/sheets/StartStageChannelActionSheet.tsx");
+const createStyles = fn(4574);
+let obj2 = { container: { padding: 16 }, header: { alignItems: "center", paddingBottom: 24 }, headerTitle: { marginTop: 16, marginBottom: 8 }, headerSubtitle: { textAlign: "center" }, startButton: { marginTop: 16 }, buttonSubtitle: { paddingTop: 8, textAlign: "center" }, ageVerificationNotice: { marginBottom: nativeDefault.space.PX_16 }, error: null };
+let obj3 = { marginBottom: nativeDefault.space.PX_16 };
+obj2.error = { paddingTop: 8, fontSize: 12, fontFamily: Fonts.PRIMARY_MEDIUM, color: nativeDefault.unsafe_rawColors.RED_400 };
+let closure_15 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/stage_channels/native/sheets/StartStageChannelActionSheet.tsx");
 
 export default function StartStageChannelEventActionSheet(channel) {
   channel = channel.channel;
-  let stateFromStores;
-  let first;
+  value = undefined;
   dependencyMap = undefined;
   c4 = undefined;
-  function _handleSave(closure_6, arg1) {
-    const self = this;
-    const tmp = _undefined2(function*() {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+  _slicedToArray = async function _handleSave(noop, value) {
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (noop === 1) {
+        throw value;
+      } else if (noop === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
-        try {
-          c5 = 2;
-          if (0 === v0) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_1 = tmp3;
-              let aPIError = tmp7;
-              aPIError = undefined;
-              if ("" !== closure_1_2.trim()) {
-                dependencyMap(true);
-                v0(null);
-                let obj3 = closure_1_2(1874);
-                const result = obj3.dismissGlobalKeyboard();
-                dependencyMap = 1;
-                if (null != closure_1_1) {
-                  let tmp33Result = tmp33(8398);
-                  v0 = 3;
-                  c5 = 1;
-                  obj1 = { value: null, done: false };
-                  obj1[0] = tmp33Result.editStage(closure_1_0, tmp54, closure_1_12.GUILD_ONLY);
-                  return obj1;
-                } else {
-                  tmp33Result = tmp33(8398);
-                  v0 = 2;
-                  c5 = 1;
-                  const obj2 = { value: null, done: false };
-                  obj2[0] = tmp33Result.startStage(closure_1_0, tmp54, closure_1_12.GUILD_ONLY, false);
-                  return obj2;
-                }
-              }
-            }
-          } else {
-            if (1 === tmp7) {
-              dependencyMap = 0;
-              closure_1 = closure_2;
-              aPIError = new closure_1_0(4461).APIError(closure_1);
-              v0(aPIError);
-              dependencyMap(false);
-            } else {
-              if (2 === tmp7) {
-                if (arg0 === 1) {
-                  c5 = 3;
-                  throw arg1;
-                }
-              } else if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                dependencyMap = 0;
-                c5 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              }
-              obj1 = closure_1_1(4527);
-              obj1.hideActionSheet(closure_1_10);
-              dependencyMap = 0;
-            }
-            dependencyMap = 0;
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c5 = 2;
+        if (0 === c4) {
+          if (noop === 1) {
             c5 = 3;
-            obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          }
-          c5 = 3;
-        } catch (tmp45) {
-          closure_2 = tmp45;
-          if (tmp4 === dependencyMap) {
-            c5 = tmp2;
-            throw tmp45;
+            throw value;
+          } else if (noop === 2) {
+            c5 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
-            v0 = tmp;
+            channel = tmp7;
+            closure_128_0 = undefined;
+            if ("" !== importAll.trim()) {
+              _undefined(true);
+              asyncGeneratorStep(null);
+              const result = tmp45(1874).dismissGlobalKeyboard();
+              dependencyMap = 1;
+              if (null != stateFromStores) {
+                c4 = 3;
+                c5 = 1;
+                const obj6 = { value: tmp33(8426).editStage(channel, tmp53, constants.GUILD_ONLY), done: false };
+                return obj6;
+              } else {
+                const tmp33Result2 = tmp33(8426);
+                c4 = 2;
+                c5 = 1;
+                const obj7 = { value: tmp33Result2.startStage(channel, tmp53, constants.GUILD_ONLY, false), done: false };
+                return obj7;
+              }
+              const obj4 = tmp45(1874);
+            }
           }
+        } else {
+          if (1 === tmp7) {
+            dependencyMap = 0;
+            closure_128_1 = tmp45;
+            const aPIError = new channel(4475).APIError(closure_128_1);
+            closure_128_0 = aPIError;
+            closure_129_4(closure_128_0);
+            closure_129_3(false);
+          } else {
+            if (2 === tmp7) {
+              if (noop === 1) {
+                c5 = 3;
+                throw value;
+              }
+            } else if (noop === 1) {
+              c5 = 3;
+              throw value;
+            } else if (noop === 2) {
+              dependencyMap = 0;
+              c5 = 3;
+              const obj = { value, done: true };
+              return obj;
+            }
+            tmp3(4541).hideActionSheet(closure_1_10);
+            dependencyMap = 0;
+            const obj2 = tmp3(4541);
+          }
+          dependencyMap = 0;
+          c5 = 3;
+          const obj8 = { value, done: true };
+          return obj8;
+        }
+        c5 = 3;
+      } catch (tmp45) {
+        if (tmp4 === dependencyMap) {
+          c5 = tmp2;
+          throw tmp45;
+        } else {
+          c4 = tmp;
         }
       }
-    });
-    closure_5 = tmp;
-    const apply = tmp.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
     }
-    return applyArgumentsResult;
-  }
-  let tmp = callback2();
-  let obj = channel(504);
-  const items = [closure_8];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getStageInstanceByChannel(channel.id));
-  obj1 = React;
+  };
+  const tmp = closure_15();
+  const items = [StageInstanceStore];
+  const stateFromStores = channel(504).useStateFromStores(items, () => StageInstanceStore.getStageInstanceByChannel(channel.id));
   let str;
   if (stateFromStores != null) {
     str = stateFromStores.topic;
@@ -156,25 +134,23 @@ export default function StartStageChannelEventActionSheet(channel) {
   if (str == null) {
     str = "";
   }
-  const tmp5 = _handleSave(React.useState(str), 2);
-  first = tmp5[0];
-  [tmp8, c3] = _handleSave(obj1.useState(false), 2);
-  const tmp7 = _handleSave(obj1.useState(false), 2);
-  [obj3, c4] = _handleSave(obj1.useState(null), 2);
-  const tmp9 = _handleSave(obj1.useState(null), 2);
-  const shouldAgeVerifyToSpeakForCurrentUser = channel(5422).useShouldAgeVerifyToSpeakForCurrentUser(channel.id);
-  stateFromStores(4992)(() => {
-    let obj = stateFromStores(_undefined[14]);
+  [value, obj8.onChange] = noop.useState(str);
+  let obj = channel(504);
+  [tmp8, c3] = _slicedToArray(noop.useState(false), 2);
+  const tmp7 = _slicedToArray(noop.useState(false), 2);
+  [obj3, c4] = _slicedToArray(noop.useState(null), 2);
+  const tmp9 = _slicedToArray(noop.useState(null), 2);
+  const shouldAgeVerifyToSpeakForCurrentUser = channel(5436).useShouldAgeVerifyToSpeakForCurrentUser(channel.id);
+  stateFromStores(5006)(() => {
     let id;
     if (stateFromStores != null) {
       id = stateFromStores.id;
     }
-    obj = { stage_instance_id: id, can_start_public_stage: false, guild_id: channel.guild_id };
-    obj.track(closure_1_11.START_STAGE_OPENED, obj);
+    AnalyticsUtilsDefault.track(constants.START_STAGE_OPENED, { stage_instance_id: id, can_start_public_stage: false, guild_id: channel.guild_id });
   });
-  obj = { style: tmp.header, children: null };
-  const items1 = [callback(stateFromStores(8407), {}), , ];
-  obj = { style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  let obj4 = { style: tmp.header, children: null };
+  const items1 = [closure_13(stateFromStores(8435), {}), , ];
+  let obj5 = { style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   if (null == stateFromStores) {
     const intl2 = tmp2(1114).intl;
     let stringResult = intl2.string(tmp2(1114).t.DDF0cJ);
@@ -182,9 +158,9 @@ export default function StartStageChannelEventActionSheet(channel) {
     const intl = tmp2(1114).intl;
     stringResult = intl.string(tmp2(1114).t["5BKP4y"]);
   }
-  obj[4] = stringResult;
-  items1[1] = callback(channel(4556).Text, obj);
-  obj1 = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
+  obj5.children = stringResult;
+  items1[1] = closure_13(channel(4570).Text, obj5);
+  let obj6 = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
   if (null == stateFromStores) {
     const intl4 = tmp2(1114).intl;
     let stringResult1 = intl4.string(tmp2(1114).t.bqQIwa);
@@ -192,19 +168,19 @@ export default function StartStageChannelEventActionSheet(channel) {
     const intl3 = tmp2(1114).intl;
     stringResult1 = intl3.string(tmp2(1114).t["I+9bLx"]);
   }
-  obj1[3] = stringResult1;
-  items1[2] = callback(channel(4556).Text, obj1);
-  obj[1] = items1;
+  obj6.children = stringResult1;
+  items1[2] = closure_13(channel(4570).Text, obj6);
+  obj4.children = items1;
   let stringResult2;
   const tmp11 = stateFromStores;
-  const tmp2Result = channel(5422);
+  const tmp2Result = channel(5436);
   if (null == stateFromStores) {
     const intl5 = tmp2(1114).intl;
     stringResult2 = intl5.string(tmp2(1114).t.gR66jX);
   }
   function handleSave() {
     const self = this;
-    const apply = _handleSave.apply;
+    const apply = closure_5.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -212,34 +188,31 @@ export default function StartStageChannelEventActionSheet(channel) {
     }
     return applyArgumentsResult;
   }
-  let obj2 = { bottom: true, style: tmp.container, children: null };
-  const items2 = [closure_14(View, obj), , , , , ];
-  obj3 = { label: null, maxLength: null, value: null, placeholder: null, onChange: null, autoFocus: true, returnKeyType: "done", isClearable: true, onSubmitEditing: null };
+  let obj7 = { bottom: true, style: tmp.container, children: null };
+  const items2 = [closure_14(View, obj4), , , , , ];
+  let obj8 = { label: null, maxLength: null, value: null, placeholder: null, onChange: null, autoFocus: true, returnKeyType: "done", isClearable: true, onSubmitEditing: null };
   const intl6 = tmp2(1114).intl;
-  obj3[0] = intl6.string(channel(1114).t["5FPBOB"]);
-  obj3[1] = closure_9;
-  obj3[2] = first;
+  obj8.label = intl6.string(channel(1114).t["5FPBOB"]);
+  obj8.maxLength = maxLength;
+  obj8.value = value;
   const intl7 = tmp2(1114).intl;
-  obj3[3] = intl7.string(channel(1114).t.ZwWruY);
-  obj3[4] = tmp5[1];
-  obj3[8] = handleSave;
-  items2[1] = callback(channel(6606).TextInput, obj3);
-  items2[2] = callback(tmp11(8410), {
+  obj8.placeholder = intl7.string(channel(1114).t.ZwWruY);
+  obj8.onSubmitEditing = handleSave;
+  items2[1] = closure_13(channel(6620).TextInput, obj8);
+  items2[2] = closure_13(tmp11(8438), {
     onConfirmPress() {
-      return stateFromStores(_undefined[17]).hideActionSheet(closure_10);
+      return stateFromStores(_undefined[17]).hideActionSheet(closure_1_10);
     },
     style: tmp.ageVerificationNotice,
     channelId: channel.id
   });
   let tmp15Result = null;
-  if (null != obj2) {
-    const obj5 = { style: null, variant: "text-xs/medium", color: "text-feedback-critical", children: null };
-    obj5[0] = tmp.error;
-    obj5[3] = obj2.getAnyErrorMessage();
-    tmp15Result = tmp15(tmp2(4556).Text, obj5);
+  if (null != obj3) {
+    const obj10 = { style: tmp.error, variant: "text-xs/medium", color: "text-feedback-critical", children: obj3.getAnyErrorMessage() };
+    tmp15Result = tmp15(tmp2(4570).Text, obj10);
   }
   items2[3] = tmp15Result;
-  const obj6 = { style: tmp.startButton, children: null };
+  const obj11 = { style: tmp.startButton, children: null };
   if (null == stateFromStores) {
     const intl9 = tmp2(1114).intl;
     let stringResult3 = intl9.string(tmp2(1114).t.s8mM8A);
@@ -247,26 +220,25 @@ export default function StartStageChannelEventActionSheet(channel) {
     const intl8 = tmp2(1114).intl;
     stringResult3 = intl8.string(tmp2(1114).t.K344S7);
   }
-  obj6[1] = callback(channel(4975).Button, { text: stringResult3, onPress: handleSave, disabled: "" === first, loading: tmp8, accessibilityHint: stringResult2 });
-  items2[4] = callback(View, obj6);
-  tmp15Result = null != stringResult2 && !shouldAgeVerifyToSpeakForCurrentUser;
-  if (tmp15Result) {
-    const obj8 = { accessible: false, style: null, variant: "text-xs/medium", color: "text-default", children: null };
-    obj8[1] = tmp.buttonSubtitle;
+  obj11.children = closure_13(channel(4989).Button, { text: stringResult3, onPress: handleSave, disabled: "" === value, loading: tmp8, accessibilityHint: stringResult2 });
+  items2[4] = closure_13(View, obj11);
+  let tmp15Result2 = null != stringResult2 && !shouldAgeVerifyToSpeakForCurrentUser;
+  if (tmp15Result2) {
+    const obj13 = { accessible: false, style: tmp.buttonSubtitle, variant: "text-xs/medium", color: "text-default", children: null };
     const intl10 = tmp2(1114).intl;
-    obj8[4] = intl10.string(tmp2(1114).t.gR66jX);
-    tmp15Result = tmp15(tmp2(4556).Text, obj8);
+    obj13.children = intl10.string(tmp2(1114).t.gR66jX);
+    tmp15Result2 = tmp15(tmp2(4570).Text, obj13);
   }
-  const obj4 = {
+  const obj12 = { text: stringResult3, onPress: handleSave, disabled: "" === value, loading: tmp8, accessibilityHint: stringResult2 };
+  const obj9 = {
     onConfirmPress() {
-      return stateFromStores(_undefined[17]).hideActionSheet(closure_10);
+      return stateFromStores(_undefined[17]).hideActionSheet(closure_1_10);
     },
     style: tmp.ageVerificationNotice,
     channelId: channel.id
   };
-  const obj7 = { text: stringResult3, onPress: handleSave, disabled: "" === first, loading: tmp8, accessibilityHint: stringResult2 };
-  const tmp13Result = closure_14(View, obj);
-  items2[5] = tmp15Result;
-  obj2[2] = items2;
-  return callback(channel(7150).BottomSheet, { keyboardShouldPersistTaps: "always", children: closure_14(channel(7123).SafeAreaPaddingView, obj2) });
+  const tmp13Result = closure_14(View, obj4);
+  items2[5] = tmp15Result2;
+  obj7.children = items2;
+  return closure_13(channel(7164).BottomSheet, { keyboardShouldPersistTaps: "always", children: closure_14(channel(7137).SafeAreaPaddingView, obj7) });
 };

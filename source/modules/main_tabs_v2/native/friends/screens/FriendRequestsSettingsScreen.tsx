@@ -1,31 +1,29 @@
-// Module ID: 16778
-// Function ID: 16779
+// Module ID: 16815
+// Function ID: 16816
 // Name: FriendRequestsSettingsScreen
-// Dependencies: [19, 17, 21, 4560, 576, 5125, 16779, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 5139, 16816, 2]
 // Exports: default
 
-// Module 16778 (FriendRequestsSettingsScreen)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getMixedGradientColorDefault from "getMixedGradientColor" /* 5125 */;
-import UserSettingsFriendRequestsDefault from "UserSettingsFriendRequests" /* 16779 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16815 (FriendRequestsSettingsScreen)
+import nativeDefault from "native" /* 576 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5139 */;
+import UserSettingsFriendRequestsDefault from "UserSettingsFriendRequests" /* 16816 */;
+import noop from "module_19" /* 19 */;
 
-noopAll;
-({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, flex: 1, paddingTop: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/FriendRequestsSettingsScreen.tsx");
+const ScrollView = fn(17).ScrollView;
+const jsxProd = fn(21);
+({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+const obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1, paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 } };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/FriendRequestsSettingsScreen.tsx");
 
 export default function FriendRequestsSettingsScreen() {
-  let obj = { children: null };
-  const items = [callback(getMixedGradientColorDefault, { absolute: true }), ];
-  obj = { style: callback3().container, children: callback(UserSettingsFriendRequestsDefault, {}) };
-  items[1] = callback(ScrollView, obj);
-  obj[0] = items;
-  return callback2(closure_4, obj);
+  const obj = { children: null };
+  const items = [React3(ThemedGradientDefault, { absolute: true }), ];
+  const tmp = closure_6();
+  items[1] = React3(ScrollView, { style: closure_6().container, children: React3(UserSettingsFriendRequestsDefault, {}) });
+  obj.children = items;
+  return hasOwnProperty(React4, obj);
 };

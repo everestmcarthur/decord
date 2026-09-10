@@ -1,26 +1,26 @@
-// Module ID: 9083
-// Function ID: 9084
+// Module ID: 9110
+// Function ID: 9111
 // Name: LinkExternalMediumIcon
-// Dependencies: [19, 21, 576, 4261, 9084, 2]
+// Dependencies: [19, 21, 576, 4274, 9111, 2]
 // Exports: LinkExternalMediumIcon
 
-// Module 9083 (LinkExternalMediumIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 9084 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 9110 (LinkExternalMediumIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod9111 from "module_9111" /* 9111 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/LinkExternalMediumIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/LinkExternalMediumIcon.tsx");
 
 export const LinkExternalMediumIcon = function LinkExternalMediumIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9111, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

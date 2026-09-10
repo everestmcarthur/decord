@@ -1,14 +1,14 @@
-// Module ID: 17354
-// Function ID: 17355
-// Name: initialize
-// Dependencies: [17353, 504, 573, 2]
+// Module ID: 17385
+// Function ID: 17386
+// Name: FeedbackOverrideStore
+// Dependencies: [17384, 504, 573, 2]
 
-// Module 17354 (initialize)
+// Module 17385 (FeedbackOverrideStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import optOutEligibilityCheck from "optOutEligibilityCheck" /* 17353 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import feedback_FeedbackManager from "feedback/FeedbackManager" /* 17384 */;
 
-require = arg1;
+require = fn;
 let closure_2 = {};
 const Store = initializeDefault.Store;
 class HotspotStore extends Store {
@@ -18,16 +18,16 @@ prototype["initialize"] = function initialize() {
 
 };
 prototype["getFeedbackConfig"] = function getFeedbackConfig(ACTIVITY) {
-  return table[ACTIVITY];
+  return closure_2[ACTIVITY];
 };
 HotspotStore.displayName = "FeedbackOverrideStore";
 HotspotStore.persistKey = "feedbackOverrides";
-const hotspotStore = new HotspotStore(dispatcherDefault, {
+const hotspotStore = new HotspotStore(DispatcherDefault, {
   FEEDBACK_OVERRIDE_SET: function handleSetFeedbackOverride(feedbackType) {
     feedbackType = feedbackType.feedbackType;
     const obj = {};
     ({ cooldown, chance } = feedbackType);
-    const merged = Object.assign(optOutEligibilityCheck.FeedbackConfig[feedbackType]);
+    const merged = Object.assign(feedback_FeedbackManager.FeedbackConfig[feedbackType]);
     obj.cooldown = cooldown;
     obj.chance = chance;
     closure_2[feedbackType] = obj;
@@ -36,6 +36,7 @@ const hotspotStore = new HotspotStore(dispatcherDefault, {
     delete tmp[tmp2];
   }
 });
-const result = require("set").fileFinishedImporting("modules/feedback/FeedbackOverrideStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/feedback/FeedbackOverrideStore.tsx");
 
 export default hotspotStore;

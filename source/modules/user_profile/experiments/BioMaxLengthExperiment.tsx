@@ -1,17 +1,18 @@
-// Module ID: 8162
-// Function ID: 8163
-// Name: useBioMaxLength
+// Module ID: 8188
+// Function ID: 8189
+// Name: BioMaxLengthExperiment
 // Dependencies: [1074, 1433, 2]
 // Exports: getBioMaxLength, useBioMaxLength
 
-// Module 8162 (useBioMaxLength)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 8188 (BioMaxLengthExperiment)
+import Constants from "Constants" /* 1074 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-({ BIO_MAX_LENGTH, BIO_MAX_LENGTH_INCREASED } = ME);
-let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-08-user-bio-max-length", kind: "user", defaultConfig: { maxLength: BIO_MAX_LENGTH }, variations: { 0: { maxLength: BIO_MAX_LENGTH }, 1: { maxLength: BIO_MAX_LENGTH_INCREASED } } });
-const result = set.fileFinishedImporting("modules/user_profile/experiments/BioMaxLengthExperiment.tsx");
+({ BIO_MAX_LENGTH, BIO_MAX_LENGTH_INCREASED } = Constants);
+const obj = { name: "2026-08-user-bio-max-length", kind: "user", defaultConfig: { maxLength: BIO_MAX_LENGTH }, variations: { 0: { maxLength: BIO_MAX_LENGTH }, 1: { maxLength: BIO_MAX_LENGTH_INCREASED } } };
+let closure_0 = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/user_profile/experiments/BioMaxLengthExperiment.tsx");
 
 export const useBioMaxLength = function useBioMaxLength(location) {
   return closure_0.useConfig({ location: location.location }).maxLength;

@@ -1,40 +1,43 @@
-// Module ID: 8859
-// Function ID: 8860
-// Name: isTestModeForApplication
-// Dependencies: [8860, 8862, 504, 2]
+// Module ID: 8886
+// Function ID: 8887
+// Name: TestModeUtils
+// Dependencies: [8887, 8889, 504, 2]
 // Exports: isAnyApplicationInTestMode, isTestModeForApplication, useIsTestModeForApplication
 
-// Module 8859 (isTestModeForApplication)
-import closure_2 from "initialize" /* 8860 */;
-import closure_3 from "reset" /* 8862 */;
+// Module 8886 (TestModeUtils)
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 8887 */;
+import TestModeStore from "TestModeStore" /* 8889 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/game_store/TestModeUtils.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/game_store/TestModeUtils.tsx");
 
 export const isTestModeForApplication = function isTestModeForApplication(applicationId) {
-  let result = closure_3.inTestModeForApplication(applicationId);
+  let result = TestModeStore.inTestModeForApplication(applicationId);
   if (!result) {
-    result = closure_2.inDevModeForApplication(applicationId);
+    result = DeveloperActivityShelfStore.inDevModeForApplication(applicationId);
   }
   return result;
 };
 export const isAnyApplicationInTestMode = function isAnyApplicationInTestMode() {
-  let isEnabled = null != closure_3.getTestModeApplicationId();
+  let isEnabled = null != TestModeStore.getTestModeApplicationId();
   if (!isEnabled) {
-    isEnabled = closure_2.getIsEnabled();
+    isEnabled = DeveloperActivityShelfStore.getIsEnabled();
   }
   return isEnabled;
 };
 export const useIsTestModeForApplication = function useIsTestModeForApplication(id) {
-  const _require = id;
-  const items = [closure_3, closure_2];
+  _require = id;
+  const items = [TestModeStore, DeveloperActivityShelfStore];
   const items1 = [id];
-  return _require(504).useStateFromStores(items, () => {
+  return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      let result = closure_1_3.inTestModeForApplication(tmp);
+      let result = TestModeStore.inTestModeForApplication(tmp);
       if (!result) {
-        result = closure_1_2.inDevModeForApplication(tmp);
+        result = DeveloperActivityShelfStore.inDevModeForApplication(tmp);
       }
       tmp2 = result;
     }

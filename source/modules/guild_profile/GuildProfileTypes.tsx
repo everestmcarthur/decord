@@ -1,12 +1,12 @@
-// Module ID: 5550
-// Function ID: 5551
-// Name: GuildProfileVisibility
-// Dependencies: [2, 5551]
+// Module ID: 5564
+// Function ID: 5565
+// Name: GuildProfileTypes
+// Dependencies: [2, 5565]
 
-// Module 5550 (GuildProfileVisibility)
-import set from "set" /* 2 */;
-import set2 from "set" /* 5551 */;
+// Module 5564 (GuildProfileTypes)
+import GuildProfileVisibility from "GuildProfileVisibility" /* 5565 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_profile/GuildProfileTypes.tsx");
+const result = size.fileFinishedImporting("modules/guild_profile/GuildProfileTypes.tsx");
 
-export const GuildProfileVisibility = set2.GuildProfileVisibility;
+export const GuildProfileVisibility = GuildProfileVisibility.GuildProfileVisibility;

@@ -1,15 +1,15 @@
-// Module ID: 7325
-// Function ID: 7326
+// Module ID: 7339
+// Function ID: 7340
 // Name: createResolvedGuildTemplate
-// Dependencies: [7326, 2]
+// Dependencies: [7340, 2]
 // Exports: default
 
-// Module 7325 (createResolvedGuildTemplate)
-import set from "set" /* 2 */;
-import GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 7326 */;
+// Module 7339 (createResolvedGuildTemplate)
+import GuildTemplatesConstants from "GuildTemplatesConstants" /* 7340 */;
+import size from "module_2" /* 2 */;
 
-const GuildTemplateStates = GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD.GuildTemplateStates;
-const result = set.fileFinishedImporting("modules/guild_templates/createResolvedGuildTemplate.tsx");
+const GuildTemplateStates = GuildTemplatesConstants.GuildTemplateStates;
+const result = size.fileFinishedImporting("modules/guild_templates/createResolvedGuildTemplate.tsx");
 
 export default function createResolvedGuildTemplate(code) {
   const obj = { code: code.code, state: GuildTemplateStates.RESOLVED, name: code.name, description: null, creatorId: null, creator: null, createdAt: null, updatedAt: null, sourceGuildId: null, serializedSourceGuild: null, usageCount: null, isDirty: null };
@@ -17,7 +17,7 @@ export default function createResolvedGuildTemplate(code) {
   if (str == null) {
     str = "";
   }
-  obj[3] = str;
-  ({ creator_id: obj[4], creator: obj[5], created_at: obj[6], updated_at: obj[7], source_guild_id: obj[8], serialized_source_guild: obj[9], usage_count: obj[10], is_dirty: obj[11] } = code);
+  obj.description = str;
+  ({ creator_id: obj.creatorId, creator: obj.creator, created_at: obj.createdAt, updated_at: obj.updatedAt, source_guild_id: obj.sourceGuildId, serialized_source_guild: obj.serializedSourceGuild, usage_count: obj.usageCount, is_dirty: obj.isDirty } = code);
   return obj;
 };

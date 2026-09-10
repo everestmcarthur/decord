@@ -1,37 +1,36 @@
-// Module ID: 9097
-// Function ID: 9098
-// Name: snapVolumeToDefault
-// Dependencies: [1084, 4615, 9098, 5015, 2]
+// Module ID: 9124
+// Function ID: 9125
+// Name: AudioSettingsUtils
+// Dependencies: [1084, 4629, 9125, 5029, 2]
 // Exports: coerceAudioContextForProto, snapVolumeToDefault
 
-// Module 9097 (snapVolumeToDefault)
-import set from "set" /* 2 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 1084 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4615 */;
+// Module 9124 (AudioSettingsUtils)
+import UserSettingsConstants from "UserSettingsConstants" /* 1084 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4629 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5029 */;
+import size from "module_2" /* 2 */;
 
-let closure_2 = MAX_FAVORITES.ProtoAudioSettingsContextTypes;
-let result = set.fileFinishedImporting("modules/user_settings/voice/AudioSettingsUtils.tsx");
+const constants = UserSettingsConstants.ProtoAudioSettingsContextTypes;
+let result = size.fileFinishedImporting("modules/user_settings/voice/AudioSettingsUtils.tsx");
 
 export const snapVolumeToDefault = function snapVolumeToDefault(USER, DEFAULT) {
   if (DEFAULT === BaseConnectionEvent.MediaEngineContextTypes.STREAM) {
-    USER = tmp(9098).AudioSettingsDefaultVolumes.STREAM;
+    USER = tmp(9125).AudioSettingsDefaultVolumes.STREAM;
   } else {
-    USER = tmp(9098).AudioSettingsDefaultVolumes.USER;
+    USER = tmp(9125).AudioSettingsDefaultVolumes.USER;
   }
   let tmp3 = USER;
-  let tmpResult = tmp(5015);
-  const result = tmpResult.amplitudeToPerceptual(USER);
-  tmpResult = tmp(5015);
-  if (Math.abs(result - tmpResult.amplitudeToPerceptual(USER)) < 1) {
+  const result = PerceptualVolumeUtils.amplitudeToPerceptual(USER);
+  const tmpResult = PerceptualVolumeUtils;
+  if (Math.abs(result - tmpResult2.amplitudeToPerceptual(USER)) < 1) {
     tmp3 = USER;
   }
   return tmp3;
 };
-export const coerceAudioContextForProto = function coerceAudioContextForProto(first) {
-  if (BaseConnectionEvent.MediaEngineContextTypes.DEFAULT === first) {
+export const coerceAudioContextForProto = function coerceAudioContextForProto(arg0) {
+  if (BaseConnectionEvent.MediaEngineContextTypes.DEFAULT === arg0) {
     return constants.USER;
-  } else if (BaseConnectionEvent.MediaEngineContextTypes.STREAM === first) {
+  } else if (BaseConnectionEvent.MediaEngineContextTypes.STREAM === arg0) {
     return constants.STREAM;
   }
-  const tmp = require;
 };

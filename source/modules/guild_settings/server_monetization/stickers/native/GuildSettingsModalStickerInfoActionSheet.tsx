@@ -1,166 +1,146 @@
-// Module ID: 17587
-// Function ID: 17588
-// Dependencies: [5, 32, 19, 17, 5502, 21, 504, 10393, 4259, 6610, 1114, 7150, 7149, 576, 5687, 5605, 10255, 17580, 4518, 2]
+// Module ID: 17618
+// Function ID: 17619
+// Name: GuildSettingsModalStickerInfoActionSheet
+// Dependencies: [5, 32, 19, 17, 5516, 21, 504, 10420, 4272, 6624, 1114, 7164, 7163, 576, 5701, 5619, 10282, 17611, 4532, 2]
 
-// Module 17587
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "loadSavedGuildStickers" /* 5502 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 17618 (GuildSettingsModalStickerInfoActionSheet)
+import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 17611 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import StickersStore from "StickersStore" /* 5516 */;
 
-const require = arg1;
-let c5 = importAllResult;
-({ ActivityIndicator: closure_6, View: error } = get_ActivityIndicator);
-({ jsx: c9, jsxs: c10 } = jsxProd);
-const memoResult = importAllResult.memo(function GuildSettingsModalStickerInfoActionSheet(arg0) {
+const require = globalThis.__r;
+
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/GuildSettingsModalStickerInfoActionSheet.tsx");
+
+export default noop.memo(function GuildSettingsModalStickerInfoActionSheet(arg0) {
   ({ guildId: require, stickerId: importDefault, hideActionSheet } = arg0);
-  let stateFromStores;
-  let callback;
-  function _onDeleteSticker() {
-    const self = this;
-    const tmp = stateFromStores(function*() {
-      if (v02 === 2) {
-        v02 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+  _slicedToArray = undefined;
+  noop = async function _onDeleteSticker(arg0, value) {
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
-        try {
-          v02 = 2;
-          if (0 === v0) {
-            if (arg0 === 1) {
-              v02 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v02 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_0 = tmp4;
-              if (null != c3) {
-                v02(true);
-                c3 = 2;
-                v0 = 3;
-                v02 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_1_0(closure_1_2[7]).deleteGuildSticker(tmp34);
-                return obj1;
-              } else {
-                v02 = 3;
-              }
-            }
-          } else if (1 !== tmp8) {
-            if (2 === tmp8) {
-              c3 = 1;
-              obj1 = v0(closure_1_2[8]);
-              const obj2 = { key: "IMAGE_PICKER_ERROR", IconComponent: null, content: null };
-              obj2[1] = closure_1_0(closure_1_2[9]).CircleErrorIcon;
-              const intl = closure_1_0(closure_1_2[10]).intl;
-              obj2[2] = intl.string(closure_1_0(closure_1_2[10]).t["5NMPSS"]);
-              obj1.open(obj2);
-            } else if (arg0 === 1) {
-              v02 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 0;
-              v02(false);
-              v02 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              callback();
-              c3 = 1;
-            }
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c4 = 2;
+        if (0 === v3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else if (null != stateFromStores) {
+            _slicedToArray(true);
+            c3 = 2;
+            v3 = 3;
+            c4 = 1;
+            const obj6 = { value: tmp4(tmp39[7]).deleteGuildSticker(tmp34), done: false };
+            return obj6;
+          } else {
+            c4 = 3;
+          }
+        } else if (1 !== tmp8) {
+          if (2 === tmp8) {
+            c3 = 1;
+            const obj7 = { key: "IMAGE_PICKER_ERROR", IconComponent: tmp4(tmp39[9]).CircleErrorIcon, content: null };
+            const intl = tmp4(tmp39[10]).intl;
+            obj7.content = intl.string(tmp4(tmp39[10]).t["5NMPSS"]);
+            v3(tmp39[8]).open(obj7);
+            const obj2 = v3(tmp39[8]);
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
             c3 = 0;
-            v02(false);
+            closure_128_4(false);
+            c4 = 3;
+            const obj = { value, done: true };
+            return obj;
+          } else {
+            closure_128_2();
+            c3 = 1;
           }
           c3 = 0;
-          v02(false);
-          throw callback;
-        } catch (tmp39) {
-          callback = tmp39;
-          if (tmp5 === c3) {
-            v02 = tmp3;
-            throw tmp39;
-          } else if (tmp2 === tmp41) {
-            v0 = tmp2;
-          } else {
-            v0 = tmp;
-          }
+          closure_128_4(false);
+        }
+        c3 = 0;
+        closure_128_4(false);
+        throw tmp39;
+      } catch (tmp39) {
+        if (tmp5 === c3) {
+          c4 = tmp3;
+          throw tmp39;
+        } else if (tmp2 === tmp41) {
+          v3 = tmp2;
+        } else {
+          v3 = tmp;
         }
       }
-    });
-    closure_5 = tmp;
-    const apply = tmp.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
     }
-    return applyArgumentsResult;
-  }
-  let obj = require(hideActionSheet[6]);
-  const items = [closure_8];
-  stateFromStores = obj.useStateFromStores(items, () => {
-    const stickersByGuildId = closure_1_8.getStickersByGuildId(closure_0);
+  };
+  const items = [StickersStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
+    const stickersByGuildId = StickersStore.getStickersByGuildId(guildId);
     let found;
     if (stickersByGuildId != null) {
-      found = stickersByGuildId.find((id) => id.id === closure_1);
+      found = stickersByGuildId.find((id) => id.id === stickerId);
     }
     return found;
   });
-  [tmp5, c4] = callback(_onDeleteSticker.useState(false), 2);
+  let obj = require("initialize");
+  [tmp5, c4] = noop.useState(false);
   const items1 = [hideActionSheet, stateFromStores];
-  const effect = _onDeleteSticker.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (null == stateFromStores) {
       hideActionSheet();
     }
   }, items1);
-  let tmp8Result = null;
+  let tmp8Result2 = null;
   if (null != stateFromStores) {
-    obj = { header: null, children: null };
-    obj = { title: null, subtitle: null };
-    ({ name: obj3[0], description: obj3[1] } = stateFromStores);
-    obj[0] = callback2(tmp(tmp2[12]).BottomSheetTitleHeader, obj);
-    obj1 = { style: null, children: null };
-    let obj2 = { paddingHorizontal: null, paddingBottom: null };
-    obj2[0] = importDefault(tmp2[13]).space.PX_12;
-    obj2[1] = importDefault(tmp2[13]).space.PX_16;
-    obj1[0] = obj2;
-    const obj3 = { icon: null, label: null, onPress: null };
-    obj3[0] = callback2(tmp(tmp2[16]).PencilIcon, {});
+    let obj2 = { header: null, children: null };
+    ({ name: obj3.title, description: obj3.subtitle } = stateFromStores);
+    obj2.header = closure_9(tmp(tmp2[12]).BottomSheetTitleHeader, { title: null, subtitle: null });
+    let obj5 = { style: null, children: null };
+    let obj6 = { paddingHorizontal: require("native").space.PX_12, paddingBottom: require("native").space.PX_16 };
+    obj5.style = obj6;
+    let obj7 = { icon: closure_9(tmp(tmp2[16]).PencilIcon, {}), label: null, onPress: null };
     let intl = tmp(tmp2[10]).intl;
-    obj3[1] = intl.string(tmp(tmp2[10]).t.tdhW5b);
-    obj3[2] = function onPress() {
-      closure_1_1(hideActionSheet[17])({ guildId: closure_0, stickerId: closure_1 });
+    obj7.label = intl.string(tmp(tmp2[10]).t.tdhW5b);
+    obj7.onPress = function onPress() {
+      showGuildSettingsStickerCreateModalDefault({ guildId, stickerId });
     };
-    const items2 = [callback2(tmp(tmp2[15]).TableRow, obj3), ];
-    const obj4 = { icon: null, trailing: null, label: null, variant: "danger", disabled: null, onPress: null };
-    obj4[0] = callback2(tmp(tmp2[18]).TrashIcon, { color: "text-feedback-critical" });
-    tmp8Result = null;
+    const items2 = [closure_9(tmp(tmp2[15]).TableRow, obj7), ];
+    const obj8 = { icon: closure_9(tmp(tmp2[18]).TrashIcon, { color: "text-feedback-critical" }), trailing: null, label: null, variant: "danger", disabled: null, onPress: null };
+    let tmp8Result = null;
     if (tmp5) {
       tmp8Result = tmp8(closure_6, {});
     }
-    const obj5 = { hasIcons: true, children: null };
-    obj4[1] = tmp8Result;
+    const obj15 = { hasIcons: true, children: null };
+    obj8.trailing = tmp8Result;
     const intl2 = tmp(tmp2[10]).intl;
-    obj4[2] = intl2.string(tmp(tmp2[10]).t["+ZhGOk"]);
-    obj4[4] = tmp5;
-    obj4[5] = function onDeleteSticker() {
+    obj8.label = intl2.string(tmp(tmp2[10]).t["+ZhGOk"]);
+    obj8.disabled = tmp5;
+    obj8.onPress = function onDeleteSticker() {
       const self = this;
-      const apply = _onDeleteSticker.apply;
+      const apply = closure_5.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -168,16 +148,12 @@ const memoResult = importAllResult.memo(function GuildSettingsModalStickerInfoAc
       }
       return applyArgumentsResult;
     };
-    items2[1] = callback2(tmp(tmp2[15]).TableRow, obj4);
-    obj5[1] = items2;
-    obj1[1] = closure_10(tmp(tmp2[14]).TableRowGroup, obj5);
-    obj[1] = callback2(closure_7, obj1);
-    tmp8Result = tmp8(tmp(tmp2[11]).BottomSheet, obj);
-    const tmp11 = closure_10;
-    const tmp9 = closure_7;
+    items2[1] = closure_9(tmp(tmp2[15]).TableRow, obj8);
+    obj15.children = items2;
+    obj5.children = closure_10(tmp(tmp2[14]).TableRowGroup, obj15);
+    obj2.children = closure_9(closure_7, obj5);
+    tmp8Result2 = tmp8(tmp(tmp2[11]).BottomSheet, obj2);
+    const obj4 = { title: null, subtitle: null };
   }
-  return tmp8Result;
+  return tmp8Result2;
 });
-const result = require("set").fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/GuildSettingsModalStickerInfoActionSheet.tsx");
-
-export default memoResult;

@@ -1,16 +1,16 @@
-// Module ID: 12935
-// Function ID: 12936
-// Name: deferJoinActivityApplication
+// Module ID: 12961
+// Function ID: 12962
+// Name: deferJoinActivityInChannel
 // Dependencies: [573, 2]
 // Exports: default
 
-// Module 12935 (deferJoinActivityApplication)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 12961 (deferJoinActivityInChannel)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/activities/utils/deferJoinActivityInChannel.tsx");
+const result = size.fileFinishedImporting("modules/activities/utils/deferJoinActivityInChannel.tsx");
 
 export default function deferJoinActivityApplication(arg0) {
   ({ channelId, applicationId, intent, inviterUserId, analyticsLocations, commandOrigin } = arg0);
-  dispatcherDefault.dispatch({ type: "EMBEDDED_ACTIVITY_DEFERRED_OPEN", channelId, applicationId, intent, inviterUserId, analyticsLocations, commandOrigin });
+  DispatcherDefault.dispatch({ type: "EMBEDDED_ACTIVITY_DEFERRED_OPEN", channelId, applicationId, intent, inviterUserId, analyticsLocations, commandOrigin });
 };

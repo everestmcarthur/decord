@@ -1,13 +1,13 @@
-// Module ID: 14830
-// Function ID: 14831
-// Name: spendingLimitEqual
+// Module ID: 14856
+// Function ID: 14857
+// Name: SpendingLimitUtils
 // Dependencies: [2]
 // Exports: getCurrencySymbol, getNextRenewalDateLabel, sanitizeAmountInput, spendingLimitEqual
 
-// Module 14830 (spendingLimitEqual)
-import set from "set" /* 2 */;
+// Module 14856 (SpendingLimitUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/parent_tools/SpendingLimitUtils.tsx");
+const result = size.fileFinishedImporting("modules/parent_tools/SpendingLimitUtils.tsx");
 
 export const spendingLimitEqual = function spendingLimitEqual(amount, amount2) {
   let tmp = null == amount && null == amount2;
@@ -30,8 +30,7 @@ export const getNextRenewalDateLabel = function getNextRenewalDateLabel() {
 export const getCurrencySymbol = function getCurrencySymbol(formatted) {
   try {
     const _Intl = Intl;
-    const obj = { style: "currency", currency: null };
-    obj[1] = formatted.toUpperCase();
+    const obj = { style: "currency", currency: formatted.toUpperCase() };
     formatted = undefined;
     const numberFormat = new Intl.NumberFormat(undefined, obj);
     const iter = numberFormat.formatToParts(0).find((type) => "currency" === type.type);

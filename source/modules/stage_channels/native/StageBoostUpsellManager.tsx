@@ -1,21 +1,20 @@
-// Module ID: 17488
-// Function ID: 17489
-// Name: handleVoiceChannelSelect
-// Dependencies: [4251, 1957, 4199, 2011, 5414, 7118, 4527, 5417, 9093, 1965, 5430, 1896, 2]
+// Module ID: 17519
+// Function ID: 17520
+// Name: StageBoostUpsellManager
+// Dependencies: [4264, 1957, 4212, 2011, 5428, 7132, 4541, 5431, 9120, 1965, 5444, 1896, 2]
 
-// Module 17488 (handleVoiceChannelSelect)
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
-import useStageHasMedia from "useStageHasMedia" /* 5417 */;
-import initializeDefault from "initialize" /* 7118 */;
-import closure_3 from "setContent" /* 4251 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_6 from "handleConnectionOpen" /* 2011 */;
-import { STAGE_BOOSTING_SHEET_KEY } from "MAX_STAGE_TOPIC_LENGTH" /* 5414 */;
+// Module 17519 (StageBoostUpsellManager)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import StageMediaHooks from "StageMediaHooks" /* 5431 */;
+import ActionSheetStore from "ActionSheetStore" /* 4264 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-require = arg1;
+require = fn;
+const STAGE_BOOSTING_SHEET_KEY = fn(5428).STAGE_BOOSTING_SHEET_KEY;
 let c8 = false;
-initializeDefault;
 class StageBoostUpsellManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -27,37 +26,34 @@ const prototype = StageBoostUpsellManager.prototype;
 prototype["handleVoiceChannelSelect"] = function handleVoiceChannelSelect(channelId) {
   let tmp = null == channelId.channelId;
   if (tmp) {
-    tmp = key.getKey() === STAGE_BOOSTING_SHEET_KEY;
+    tmp = ActionSheetStore.getKey() === STAGE_BOOSTING_SHEET_KEY;
   }
   if (tmp) {
-    ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet(STAGE_BOOSTING_SHEET_KEY);
-    const obj = ACTION_SHEET_HEIGHT_HALFDefault;
+    ActionSheetActionCreatorsDefault.hideActionSheet(STAGE_BOOSTING_SHEET_KEY);
   }
 };
 prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates() {
   if (!c8) {
-    voiceChannelId = voiceChannelId.getVoiceChannelId();
+    const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
     if (null != voiceChannelId) {
-      channel = channel.getChannel(voiceChannelId);
+      const channel = ChannelStore.getChannel(voiceChannelId);
       if (null != channel) {
         let isGuildStageVoiceResult;
         if (channel != null) {
           isGuildStageVoiceResult = channel.isGuildStageVoice();
         }
         if (isGuildStageVoiceResult) {
-          let obj = useStageHasMedia;
           if (obj.getStageHasMedia(channel.id)) {
             if (tmp5Result.getChannelVideoLimit(channel).reachedLimit) {
-              if (closure_5.can(tmp5(1965).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel)) {
-                obj = { channel: null };
-                obj[0] = channel;
-                ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp5(1896)(5430, tmp6.paths), STAGE_BOOSTING_SHEET_KEY, obj);
+              if (PermissionStore.can(tmp5(1965).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel)) {
+                const obj2 = { channel };
+                ActionSheetActionCreatorsDefault.openLazy(tmp5(1896)(5444, tmp6.paths), STAGE_BOOSTING_SHEET_KEY, obj2);
                 c8 = true;
-                const obj3 = ACTION_SHEET_HEIGHT_HALFDefault;
               }
             }
-            tmp5Result = tmp5(9093);
+            tmp5Result = tmp5(9120);
           }
+          obj = StageMediaHooks;
           tmp6 = dependencyMap;
         }
       }
@@ -65,6 +61,7 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates() {
   }
 };
 const stageBoostUpsellManager = new StageBoostUpsellManager();
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/StageBoostUpsellManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/StageBoostUpsellManager.tsx");
 
 export default stageBoostUpsellManager;

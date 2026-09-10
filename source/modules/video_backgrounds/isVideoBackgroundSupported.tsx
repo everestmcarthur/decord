@@ -1,21 +1,22 @@
-// Module ID: 9112
-// Function ID: 9113
+// Module ID: 9139
+// Function ID: 9140
 // Name: isVideoBackgroundSupported
-// Dependencies: [1908, 4585, 1115, 9113, 2]
+// Dependencies: [1908, 4599, 1115, 9140, 2]
 // Exports: default
 
-// Module 9112 (isVideoBackgroundSupported)
-import apexExperimentDefault from "apexExperiment" /* 9113 */;
-import closure_3 from "_detectH265HardwareDecode" /* 1908 */;
-import { Features } from "DesktopSources" /* 4585 */;
+// Module 9139 (isVideoBackgroundSupported)
+import VirtualBackgroundsIosExperimentDefault from "VirtualBackgroundsIosExperiment" /* 9140 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/video_backgrounds/isVideoBackgroundSupported.tsx");
+const require = fn;
+const Features = fn(4599).Features;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_backgrounds/isVideoBackgroundSupported.tsx");
 
 export default function isVideoBackgroundSupported() {
   let obj = arg0;
   if (arg0 === undefined) {
-    obj = closure_3;
+    obj = MediaEngineStore;
   }
   let supportsResult = obj.supports(Features.VIDEO_BACKGROUND_FILTER);
   if (supportsResult) {
@@ -24,9 +25,8 @@ export default function isVideoBackgroundSupported() {
   }
   let tmp4 = supportsResult;
   if (obj2.isIOS()) {
-    const obj3 = apexExperimentDefault;
-    tmp4 = apexExperimentDefault.getConfig({ location: "isVideoBackgroundSupported" }).enabled && supportsResult;
-    const tmp6 = apexExperimentDefault.getConfig({ location: "isVideoBackgroundSupported" }).enabled && supportsResult;
+    tmp4 = VirtualBackgroundsIosExperimentDefault.getConfig({ location: "isVideoBackgroundSupported" }).enabled && supportsResult;
+    const tmp6 = VirtualBackgroundsIosExperimentDefault.getConfig({ location: "isVideoBackgroundSupported" }).enabled && supportsResult;
   }
   return tmp4;
 };

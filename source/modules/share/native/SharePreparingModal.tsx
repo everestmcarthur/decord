@@ -1,53 +1,58 @@
-// Module ID: 8367
-// Function ID: 8368
+// Module ID: 8395
+// Function ID: 8396
 // Name: SharePreparingModal
-// Dependencies: [19, 17, 21, 4560, 576, 4963, 8368, 8369, 1114, 5680, 5577, 4556, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 4977, 8396, 8397, 1114, 5694, 5591, 4570, 2]
 // Exports: default
 
-// Module 8367 (SharePreparingModal)
-import ThemesDefault from "Themes" /* 576 */;
-import _modDef8369 from "module_8369" /* 8369 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 8395 (SharePreparingModal)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Backdrop from "Backdrop" /* 4977 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5591 */;
+import XSmallIcon from "XSmallIcon" /* 5694 */;
+import MediaModalOverlayHeaderWrapper from "MediaModalOverlayHeaderWrapper" /* 8396 */;
+import MediaViewerOverlayButtonDefault from "MediaViewerOverlayButton" /* 8397 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ View: c4, StyleSheet } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { content: null, topBar: null, topBarEnd: null };
-createCacheKey = { flex: 1, alignItems: "center", justifyContent: "center", gap: ThemesDefault.space.PX_12 };
-createCacheKey[0] = createCacheKey;
-let obj1 = {};
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, StyleSheet } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { content: { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_12 }, topBar: null, topBarEnd: null };
+let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj1.bottom = undefined;
-createCacheKey[1] = obj1;
-createCacheKey[2] = { justifyContent: "flex-end" };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/share/native/SharePreparingModal.tsx");
+obj4.bottom = undefined;
+obj2.topBar = obj4;
+obj2.topBarEnd = { justifyContent: "flex-end" };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/share/native/SharePreparingModal.tsx");
 
 export default function SharePreparingModal(onCancel) {
   onCancel = onCancel.onCancel;
-  const tmp = callback3();
+  const tmp = closure_7();
   const items = [onCancel];
-  const effect = React.useEffect(() => () => callback(), items);
-  let obj = { style: tmp.content, children: null };
-  const items1 = [callback(onCancel(4963).Backdrop, { blur: "none", "aria-hidden": true }), , , ];
-  obj = { style: tmp.topBar, pointerEvents: "box-none", children: null };
-  obj = { style: tmp.topBarEnd, children: null };
-  obj1 = { accessibilityLabel: null, icon: null, onPress: null };
-  const intl = onCancel(1114).intl;
-  obj1[0] = intl.string(onCancel(1114).t.cpT0Cq);
-  obj1[1] = callback(onCancel(5680).XSmallIcon, { size: "md", color: "interactive-text-active" });
-  obj1[2] = onCancel;
-  obj[1] = callback(_modDef8369, obj1);
-  obj[2] = callback(onCancel(8368).MediaModalOverlayHeaderWrapper, obj);
-  items1[1] = callback(closure_4, obj);
-  items1[2] = callback(onCancel(5577).ActivityIndicator, {});
-  const obj2 = { variant: "text-sm/medium", color: "text-overlay-light", children: null };
-  const intl2 = onCancel(1114).intl;
-  obj2[2] = intl2.string(onCancel(1114).t.DwTQE5);
-  items1[3] = callback(onCancel(4556).Text, obj2);
-  obj[1] = items1;
-  return callback2(closure_4, obj);
+  const effect = noop.useEffect(() => () => onCancel(), items);
+  const obj = { style: tmp.content, children: null };
+  const items1 = [hasOwnProperty(Backdrop.Backdrop, { blur: "none", "aria-hidden": true }), , , ];
+  const obj2 = { style: tmp.topBar, pointerEvents: "box-none", children: null };
+  const obj3 = { style: tmp.topBarEnd, children: null };
+  const obj4 = { accessibilityLabel: null, icon: null, onPress: null };
+  const intl = util.intl;
+  obj4.accessibilityLabel = intl.string(util.t.cpT0Cq);
+  obj4.icon = hasOwnProperty(XSmallIcon.XSmallIcon, { size: "md", color: "interactive-text-active" });
+  obj4.onPress = onCancel;
+  obj3.children = hasOwnProperty(MediaViewerOverlayButtonDefault, obj4);
+  obj2.children = hasOwnProperty(MediaModalOverlayHeaderWrapper.MediaModalOverlayHeaderWrapper, obj3);
+  items1[1] = hasOwnProperty(React4, obj2);
+  items1[2] = hasOwnProperty(ActivityIndicator_ActivityIndicator.ActivityIndicator, {});
+  const obj5 = { variant: "text-sm/medium", color: "text-overlay-light", children: null };
+  const intl2 = util.intl;
+  obj5.children = intl2.string(util.t.DwTQE5);
+  items1[3] = hasOwnProperty(Text_Text.Text, obj5);
+  obj.children = items1;
+  return timestampProducer(React4, obj);
 };

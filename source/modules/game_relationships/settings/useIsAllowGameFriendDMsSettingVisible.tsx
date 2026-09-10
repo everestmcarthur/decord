@@ -1,17 +1,18 @@
-// Module ID: 15889
-// Function ID: 15890
+// Module ID: 15919
+// Function ID: 15920
 // Name: useIsAllowGameFriendDMsSettingVisible
-// Dependencies: [7658, 504, 2]
+// Dependencies: [7672, 504, 2]
 // Exports: useIsAllowGameFriendDMsSettingVisible
 
-// Module 15889 (useIsAllowGameFriendDMsSettingVisible)
+// Module 15919 (useIsAllowGameFriendDMsSettingVisible)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "recountRelationshipTypes" /* 7658 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7672 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/game_relationships/settings/useIsAllowGameFriendDMsSettingVisible.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_relationships/settings/useIsAllowGameFriendDMsSettingVisible.tsx");
 
 export const useIsAllowGameFriendDMsSettingVisible = function useIsAllowGameFriendDMsSettingVisible() {
-  const items = [closure_2];
+  const items = [GameRelationshipStore];
   return initialize.useStateFromStores(items, () => gameRelationshipCount.getGameRelationshipCount() > 0);
 };

@@ -1,120 +1,120 @@
-// Module ID: 14916
-// Function ID: 14917
-// Name: FamilyCenterLinkingBannerParentContent
-// Dependencies: [19, 17, 21, 4560, 576, 8651, 11924, 1114, 2396, 14917, 4556, 14879, 2]
+// Module ID: 14942
+// Function ID: 14943
+// Name: FamilyCenterLinkingBanner
+// Dependencies: [19, 17, 21, 4574, 576, 8679, 11950, 1114, 2396, 14943, 4570, 14905, 2]
 // Exports: default
 
-// Module 14916 (FamilyCenterLinkingBannerParentContent)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 2396 */;
-import Text from "Text" /* 4556 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8651 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11924 */;
-import FamilyCenterTeenQRCodeButtonInner from "FamilyCenterTeenQRCodeButtonInner" /* 14879 */;
-import registerAssetDefault from "registerAsset" /* 14917 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14942 (FamilyCenterLinkingBanner)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import _modDef2396 from "module_2396" /* 2396 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8679 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 11950 */;
+import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 14905 */;
+import _modDef14943 from "module_14943" /* 14943 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function FamilyCenterLinkingBannerParentContent() {
-  let obj = { style: callback4().container, children: null };
-  obj = { index: 1, header: null, description: null };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(messagesProxyDefault["7xxAni"]);
-  const intl2 = getSystemLocale.intl;
-  obj[2] = intl2.string(messagesProxyDefault["1M9So2"]);
-  const items = [callback(FamilyCenterLinkingInstructionsRow, obj), , , ];
-  obj = { index: 2, header: null, description: null };
-  const intl3 = getSystemLocale.intl;
-  obj[1] = intl3.string(messagesProxyDefault["AXgx+a"]);
-  const intl4 = getSystemLocale.intl;
-  obj[2] = intl4.string(messagesProxyDefault.GzMFnb);
-  items[1] = callback(FamilyCenterLinkingInstructionsRow, obj);
-  obj1 = { index: 3, header: null, description: null, isLast: true };
-  const intl5 = getSystemLocale.intl;
-  obj1[1] = intl5.string(messagesProxyDefault.MZn1tG);
-  const intl6 = getSystemLocale.intl;
-  obj1[2] = intl6.string(messagesProxyDefault["8rLBxD"]);
-  items[2] = callback(FamilyCenterLinkingInstructionsRow, obj1);
-  items[3] = callback(FamilyCenterTeenQRCodeButtonInner.FamilyCenterParentQRCodeButton, {});
-  obj[1] = items;
-  return callback2(closure_3, obj);
+  const obj = { style: closure_8().container, children: null };
+  const obj2 = { index: 1, header: null, description: null };
+  const intl = util.intl;
+  obj2.header = intl.string(_modDef2396["7xxAni"]);
+  const intl2 = util.intl;
+  obj2.description = intl2.string(_modDef2396["1M9So2"]);
+  const items = [hasOwnProperty(FamilyCenterLinkingInstructionsRow, obj2), , , ];
+  const obj3 = { index: 2, header: null, description: null };
+  const intl3 = util.intl;
+  obj3.header = intl3.string(_modDef2396["AXgx+a"]);
+  const intl4 = util.intl;
+  obj3.description = intl4.string(_modDef2396.GzMFnb);
+  items[1] = hasOwnProperty(FamilyCenterLinkingInstructionsRow, obj3);
+  const obj4 = { index: 3, header: null, description: null, isLast: true };
+  const intl5 = util.intl;
+  obj4.header = intl5.string(_modDef2396.MZn1tG);
+  const intl6 = util.intl;
+  obj4.description = intl6.string(_modDef2396["8rLBxD"]);
+  items[2] = hasOwnProperty(FamilyCenterLinkingInstructionsRow, obj4);
+  items[3] = hasOwnProperty(FamilyCenterBannerButton.FamilyCenterParentQRCodeButton, {});
+  obj.children = items;
+  return timestampProducer(React3, obj);
 }
 function FamilyCenterLinkingBannerTeenContent() {
-  return callback(closure_3, { style: callback5().container, children: callback(FamilyCenterTeenQRCodeButtonInner.FamilyCenterTeenQRCodeButton, {}) });
+  return hasOwnProperty(React3, { style: closure_10().container, children: hasOwnProperty(FamilyCenterBannerButton.FamilyCenterTeenQRCodeButton, {}) });
 }
 function FamilyCenterLinkingInstructionsRow(arg0) {
   ({ header, description, index, isLast } = arg0);
-  const tmp = callback6();
-  let obj = { style: tmp.row, children: null };
-  obj = { style: tmp.circle, children: callback(Text.Text, { variant: "heading-md/semibold", color: "text-brand", children: index }) };
-  const items = [callback(closure_3, obj), ];
+  const tmp = closure_12();
+  const obj = { style: tmp.row, children: null };
+  const items = [hasOwnProperty(React3, { style: tmp.circle, children: hasOwnProperty(Text_Text.Text, { variant: "heading-md/semibold", color: "text-brand", children: index }) }), ];
   const items1 = [tmp.rowContent, ];
   let gap = null;
   if (!isLast) {
     gap = tmp.gap;
   }
-  obj = { style: items1, children: null };
+  const obj3 = { style: items1, children: null };
   items1[1] = gap;
-  const items2 = [callback(Text.Text, { variant: "heading-sm/bold", children: header }), callback(Text.Text, { variant: "text-sm/medium", color: "text-muted", children: description })];
-  obj[1] = items2;
-  items[1] = closure_6(closure_3, obj);
-  obj[1] = items;
-  return closure_6(closure_3, obj);
+  const items2 = [hasOwnProperty(Text_Text.Text, { variant: "heading-sm/bold", children: header }), hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: description })];
+  obj3.children = items2;
+  items[1] = timestampProducer(React3, obj3);
+  obj.children = items;
+  return timestampProducer(React3, obj);
 }
-noopAll;
-({ View: c3, Image: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: null, content: null, art: null, header: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, marginTop: ThemesDefault.space.PX_16, paddingTop: 0, paddingBottom: ThemesDefault.space.PX_16, alignItems: "center", borderRadius: ThemesDefault.radii.md, elevation: 2, overflow: "hidden" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { padding: ThemesDefault.space.PX_16 };
-let obj1 = { padding: ThemesDefault.space.PX_16 };
-createCacheKey[2] = { width: "100%", height: 175, marginBottom: ThemesDefault.space.PX_12 };
-const obj2 = { width: "100%", height: 175, marginBottom: ThemesDefault.space.PX_12 };
-createCacheKey[3] = { marginBottom: ThemesDefault.space.PX_8 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const obj4 = { container: null };
-const obj3 = { marginBottom: ThemesDefault.space.PX_8 };
-obj4[0] = { marginTop: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16, width: "100%" };
-let closure_8 = createCacheKey.createStyles(obj4);
-createCacheKey = { container: null };
-const obj5 = { marginTop: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16, width: "100%" };
-createCacheKey[0] = { width: "100%", paddingHorizontal: ThemesDefault.space.PX_16 };
-let closure_10 = createCacheKey.createStyles(createCacheKey);
-const obj8 = { row: { display: "flex", flexDirection: "row", alignItems: "flex-start" }, gap: { marginBottom: 12 }, circle: null, rowContent: null };
-createCacheKey = { display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", overflow: "hidden", width: 32, height: 32, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
-obj8[2] = createCacheKey;
-obj8[3] = { marginLeft: 12, flex: 1 };
-let closure_12 = createCacheKey.createStyles(obj8);
-const obj7 = { width: "100%", paddingHorizontal: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterLinkingBanner.tsx");
+get_ActivityIndicator = fn(17);
+({ View: c3, Image: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+let createStyles = fn(4574);
+let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: nativeDefault.space.PX_16, paddingTop: 0, paddingBottom: nativeDefault.space.PX_16, alignItems: "center", borderRadius: nativeDefault.radii.md, elevation: 2, overflow: "hidden" }, content: null, art: null, header: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: nativeDefault.space.PX_16, paddingTop: 0, paddingBottom: nativeDefault.space.PX_16, alignItems: "center", borderRadius: nativeDefault.radii.md, elevation: 2, overflow: "hidden" };
+obj2.content = { padding: nativeDefault.space.PX_16 };
+let size = { width: "100%", height: 175, marginBottom: nativeDefault.space.PX_12 };
+obj2.art = size;
+let obj4 = { padding: nativeDefault.space.PX_16 };
+obj2.header = { marginBottom: nativeDefault.space.PX_8 };
+let closure_7 = createStyles.createStyles(obj2);
+createStyles = fn(4574);
+const obj6 = { container: null };
+let obj5 = { marginBottom: nativeDefault.space.PX_8 };
+obj6.container = { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };
+let closure_8 = createStyles.createStyles(obj6);
+createStyles = fn(4574);
+const obj9 = { container: null };
+const obj8 = { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };
+obj9.container = { width: "100%", paddingHorizontal: nativeDefault.space.PX_16 };
+let closure_10 = createStyles.createStyles(obj9);
+createStyles = fn(4574);
+const obj12 = { row: { display: "flex", flexDirection: "row", alignItems: "flex-start" }, gap: { marginBottom: 12 }, circle: null, rowContent: null };
+const size1 = { display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", overflow: "hidden", width: 32, height: 32, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
+obj12.circle = size1;
+obj12.rowContent = { marginLeft: 12, flex: 1 };
+let closure_12 = createStyles.createStyles(obj12);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterLinkingBanner.tsx");
 
 export default function FamilyCenterLinkingBanner() {
-  const tmp = callback3();
-  let obj = useAgeSpecificText;
-  const intl = getSystemLocale.intl;
+  const tmp = closure_7();
   const tmp2 = useIsInAdultAgeGroupDefault();
-  const intl2 = getSystemLocale.intl;
-  const ageSpecificText = obj.useAgeSpecificText(intl.string(messagesProxyDefault.zUCWEL), intl2.string(messagesProxyDefault.B0NPbp));
-  obj1 = useAgeSpecificText;
-  const intl3 = getSystemLocale.intl;
-  const stringResult = intl.string(messagesProxyDefault.zUCWEL);
-  const intl4 = getSystemLocale.intl;
-  obj = { style: tmp.container, children: null };
-  obj = { source: null, style: null, resizeMethod: "resize" };
-  const ageSpecificText1 = obj1.useAgeSpecificText(intl3.format(messagesProxyDefault.yMnoDl, { link: "https://support.discord.com/hc/articles/14155060633623" }), intl4.string(messagesProxyDefault.JsAEDi));
-  obj[0] = registerAssetDefault;
-  obj[1] = tmp.art;
-  const items = [callback(closure_4, obj), , ];
-  obj1 = { style: tmp.content, children: null };
-  const items1 = [callback(Text.Text, { style: tmp.header, variant: "heading-lg/semibold", children: ageSpecificText }), callback(Text.Text, { variant: "text-sm/medium", color: "text-muted", children: ageSpecificText1 })];
-  obj1[1] = items1;
-  items[1] = callback2(closure_3, obj1);
-  items[2] = callback(tmp2 ? FamilyCenterLinkingBannerParentContent : FamilyCenterLinkingBannerTeenContent, {});
-  obj[1] = items;
-  return callback2(closure_3, obj);
+  const intl = util.intl;
+  const obj = useAgeSpecificText;
+  const intl2 = util.intl;
+  const ageSpecificText = obj.useAgeSpecificText(intl.string(_modDef2396.zUCWEL), intl2.string(_modDef2396.B0NPbp));
+  const stringResult = intl.string(_modDef2396.zUCWEL);
+  const intl3 = util.intl;
+  const obj2 = useAgeSpecificText;
+  const intl4 = util.intl;
+  const obj3 = { style: tmp.container, children: null };
+  const obj4 = { source: null, style: null, resizeMethod: "resize" };
+  const ageSpecificText1 = obj2.useAgeSpecificText(intl3.format(_modDef2396.yMnoDl, { link: "https://support.discord.com/hc/articles/14155060633623" }), intl4.string(_modDef2396.JsAEDi));
+  obj4.source = _modDef14943;
+  obj4.style = tmp.art;
+  const items = [hasOwnProperty(React4, obj4), , ];
+  const obj5 = { style: tmp.content, children: null };
+  const items1 = [hasOwnProperty(Text_Text.Text, { style: tmp.header, variant: "heading-lg/semibold", children: ageSpecificText }), hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: ageSpecificText1 })];
+  obj5.children = items1;
+  items[1] = timestampProducer(React3, obj5);
+  items[2] = hasOwnProperty(tmp2 ? FamilyCenterLinkingBannerParentContent : FamilyCenterLinkingBannerTeenContent, {});
+  obj3.children = items;
+  return timestampProducer(React3, obj3);
 };

@@ -1,163 +1,144 @@
-// Module ID: 9756
-// Function ID: 9757
-// Name: RemoveIcon
-// Dependencies: [19, 17, 1371, 8401, 21, 4560, 4910, 1114, 4573, 4258, 5123, 6616, 5605, 9757, 9743, 4556, 1178, 9758, 9759, 4277, 5617, 2]
+// Module ID: 9783
+// Function ID: 9784
+// Name: ChannelOverwritesItem
+// Dependencies: [19, 17, 1371, 8429, 21, 4574, 4924, 1114, 4587, 4271, 5137, 6630, 5619, 9784, 9770, 4570, 1178, 9785, 9786, 4292, 5631, 2]
 // Exports: ChannelOverwritesCheckboxItem
 
-// Module 9756 (RemoveIcon)
-import noopAll from "noop" /* 19 */;
-import Button from "Button" /* 1178 */;
-import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4277 */;
-import Text from "Text" /* 4556 */;
-import TableRowInner from "TableRowInner" /* 5605 */;
-import FormCheckbox from "FormCheckbox" /* 5617 */;
-import getRoleRowDataAll from "getRoleRowData" /* 9743 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 9757 */;
-import registerAssetDefault from "registerAsset" /* 9758 */;
-import registerAssetDefault2 from "registerAsset" /* 9759 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1371 */;
-import { RowType } from "RowType" /* 8401 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9783 (ChannelOverwritesItem)
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4292 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import AlertModal from "AlertModal" /* 4924 */;
+import TableRow from "TableRow" /* 5619 */;
+import FormCheckbox from "FormCheckbox" /* 5631 */;
+import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 9770 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9784 */;
+import _modDef9785 from "module_9785" /* 9785 */;
+import _modDef9786 from "module_9786" /* 9786 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+require = fn;
 function RemoveIcon(item) {
   item = item.item;
   const channelId = item.channelId;
   const onRemove = item.onRemove;
   let tmp3Result = null;
   if (null != channelId) {
-    let obj = { disabled: null, accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
-    obj[0] = item.disabled;
+    const obj = { disabled: item.disabled, accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
     let intl = item(1114).intl;
-    obj[2] = intl.string(item(1114).t.N86XcP);
-    obj[3] = function onPress() {
-      if (null != closure_2) {
-        return tmp(id);
+    obj.accessibilityLabel = intl.string(item(1114).t.N86XcP);
+    obj.onPress = function onPress() {
+      if (null != onRemove) {
+        return tmp(item);
       } else {
-        ({ id, name } = id);
-        closure_2 = name;
-        let obj = item(closure_1_3[6]);
-        obj = { key: null, title: null, content: null, confirmText: null, onConfirm: null };
+        ({ id, name } = item);
+        closure_2 = channelId;
+        const obj2 = { key: null, title: null, content: null, confirmText: null, onConfirm: null };
         const _HermesInternal = HermesInternal;
-        obj[0] = "remove-channel-overwrite-" + id;
-        const intl = item(closure_1_3[7]).intl;
-        obj[1] = intl.string(item(closure_1_3[7]).t.GuPYQB);
-        const intl2 = item(closure_1_3[7]).intl;
-        obj = { name: null };
-        obj[0] = name;
-        obj[2] = intl2.format(item(closure_1_3[7]).t.xERCnZ, obj);
-        const intl3 = item(closure_1_3[7]).intl;
-        obj[3] = intl3.string(item(closure_1_3[7]).t.fKxYb0);
-        obj[4] = function onConfirm() {
-          let result = name(closure_1_3[8]).clearPermissionOverwrite(closure_2, id);
+        obj2.key = "remove-channel-overwrite-" + id;
+        const intl = util.intl;
+        obj2.title = intl.string(util.t.GuPYQB);
+        const intl2 = util.intl;
+        const obj3 = { name };
+        obj2.content = intl2.format(util.t.xERCnZ, obj3);
+        const intl3 = util.intl;
+        obj2.confirmText = intl3.string(util.t.fKxYb0);
+        obj2.onConfirm = function onConfirm() {
+          let result = channelId(dependencyMap[8]).clearPermissionOverwrite(closure_2, id);
           result.then(() => {
-            const result = closure_1_0(closure_1_3[9]).memberOrRoleRemovedToast(closure_1);
+            const result = id(closure_2_3[9]).memberOrRoleRemovedToast(name);
           });
         };
-        obj.showConfirmModal(obj);
+        AlertModal.showConfirmModal(obj2);
       }
     };
     let prop;
     if (item.disabled) {
       prop = tmp.rowRemoveIconDisabled;
     }
-    obj = { style: null };
-    obj[0] = prop;
-    obj[4] = closure_7(item(6616).CircleXIcon, obj);
-    tmp3Result = tmp3(item(5123).PressableOpacity, obj);
+    let obj2 = { style: prop };
+    obj.children = closure_7(item(6630).CircleXIcon, obj2);
+    tmp3Result = tmp3(item(5137).PressableOpacity, obj);
   }
   return tmp3Result;
 }
 function RoleItem(arg0) {
   ({ item, subLabel, trailing } = arg0);
   ({ disabled, channelId, showType, showRemove, start, end, onPress, accessibilityRole, accessibilityState, accessible } = arg0);
-  let obj = { icon: null, label: null, subLabel: null, start: null, end: null, trailing: null, onPress: null, disabled: null, accessibilityRole: null, accessibilityState: null, accessible: null };
-  obj = { size: "lg", color: item.colorString };
-  obj[0] = callback(ShieldUserIcon.ShieldUserIcon, obj);
-  obj[1] = item.name;
+  const obj = { icon: React5(ShieldUserIcon.ShieldUserIcon, { size: "lg", color: item.colorString }), label: item.name, subLabel: null, start: null, end: null, trailing: null, onPress: null, disabled: null, accessibilityRole: null, accessibilityState: null, accessible: null };
   if (showType) {
-    subLabel = getRoleRowDataAll.getRowTypeLabel(item.rowType);
-    const obj3 = getRoleRowDataAll;
+    subLabel = ChannelPermissionsUtilsAll.getRowTypeLabel(item.rowType);
   }
-  obj[2] = subLabel;
-  obj[3] = start;
-  obj[4] = end;
+  obj.subLabel = subLabel;
+  obj.start = start;
+  obj.end = end;
   if (showRemove) {
-    obj = { item: null, channelId: null };
-    obj[0] = item;
-    obj[1] = channelId;
-    trailing = tmp(RemoveIcon, obj);
+    const obj4 = { item, channelId };
+    trailing = tmp(RemoveIcon, obj4);
   }
-  obj[5] = trailing;
-  obj[6] = onPress;
-  obj[7] = disabled;
-  obj[8] = accessibilityRole;
-  obj[9] = accessibilityState;
-  obj[10] = accessible;
-  return callback(TableRowInner.TableRow, obj);
+  obj.trailing = trailing;
+  obj.onPress = onPress;
+  obj.disabled = disabled;
+  obj.accessibilityRole = accessibilityRole;
+  obj.accessibilityState = accessibilityState;
+  obj.accessible = accessible;
+  return React5(TableRow.TableRow, obj);
 }
 function MemberItem(arg0) {
   ({ item, trailing } = arg0);
   ({ channelId, showRemove, onRemove, guildId, start, end, onPress, disabled, accessibilityRole, accessibilityState, accessible } = arg0);
-  const tmp = callback2();
-  let obj = { style: tmp.nameWrapper, children: null };
-  obj = { style: items, lineClamp: 1, variant: "text-md/semibold", color: "interactive-text-active", children: item.name };
-  items = [, ];
+  const tmp = closure_9();
+  const obj = { style: tmp.nameWrapper, children: null };
+  const obj2 = { style: null, lineClamp: 1, variant: "text-md/semibold", color: "interactive-text-active", children: item.name };
+  const items = [, ];
   ({ name: arr[0], memberName: arr[1] } = tmp);
-  const items1 = [callback(Text.Text, obj), ];
+  obj2.style = items;
+  const items1 = [React5(Text_Text.Text, obj2), ];
   let tmp4Result = null;
   if (item.rowType === RowType.OWNER) {
-    obj = { size: null, source: null, disableColor: true, style: null };
-    obj[0] = tmp5(1178).Icon.Sizes.REFRESH_SMALL_16;
-    obj[1] = registerAssetDefault;
-    obj[3] = tmp.ownerIcon;
-    tmp4Result = tmp4(tmp5(1178).Icon, obj);
+    const obj3 = { size: tmp5(1178).Icon.Sizes.REFRESH_SMALL_16, source: _modDef9785, disableColor: true, style: tmp.ownerIcon };
+    tmp4Result = tmp4(tmp5(1178).Icon, obj3);
   }
   items1[1] = tmp4Result;
-  obj[1] = items1;
-  user = user.getUser(item.id);
+  obj.children = items1;
+  const user = UserStore.getUser(item.id);
   let avatarSource;
   if (user != null) {
     avatarSource = user.getAvatarSource(guildId);
   }
-  obj1 = { icon: null, label: null, subLabel: null, start: null, end: null, trailing: null, onPress: null, disabled: null, accessibilityRole: null, accessibilityState: null, accessible: null };
-  const tmp2 = closure_8;
-  const tmp2Result = closure_8(View, obj);
-  const tmp3 = View;
-  obj1[0] = callback(Button.Avatar, { source: avatarSource, size: Button.AvatarSizes.SMALL });
-  obj1[1] = tmp2Result;
-  obj1[2] = item.username;
-  obj1[3] = start;
-  obj1[4] = end;
+  const obj4 = { icon: null, label: null, subLabel: null, start: null, end: null, trailing: null, onPress: null, disabled: null, accessibilityRole: null, accessibilityState: null, accessible: null };
+  const tmp2Result = React6(View, obj);
+  obj4.icon = React5(native.Avatar, { source: avatarSource, size: native.AvatarSizes.SMALL });
+  obj4.label = tmp2Result;
+  obj4.subLabel = item.username;
+  obj4.start = start;
+  obj4.end = end;
   if (showRemove) {
-    const obj3 = { item: null, channelId: null, onRemove: null };
-    obj3[0] = item;
-    obj3[1] = channelId;
-    obj3[2] = onRemove;
-    trailing = tmp4(RemoveIcon, obj3);
+    const obj6 = { item, channelId, onRemove };
+    trailing = tmp4(RemoveIcon, obj6);
   }
-  obj1[5] = trailing;
-  obj1[6] = onPress;
-  obj1[7] = disabled;
-  obj1[8] = accessibilityRole;
-  obj1[9] = accessibilityState;
-  obj1[10] = accessible;
-  return callback(TableRowInner.TableRow, obj1);
+  obj4.trailing = trailing;
+  obj4.onPress = onPress;
+  obj4.disabled = disabled;
+  obj4.accessibilityRole = accessibilityRole;
+  obj4.accessibilityState = accessibilityState;
+  obj4.accessible = accessible;
+  return React5(TableRow.TableRow, obj4);
 }
 function EmptyRoleItem(item) {
   item = item.item;
-  let obj = { icon: null, label: null };
-  obj = { source: registerAssetDefault2, color: item.colorString, size: Button.IconSizes.MEDIUM, style: callback2().roleIcon };
-  obj[0] = callback(Button.Icon, obj);
-  obj[1] = item.name;
-  return callback(TableRowInner.TableRow, obj);
+  const obj = { icon: null, label: null };
+  const tmp = closure_9();
+  obj.icon = React5(native.Icon, { source: _modDef9786, color: item.colorString, size: native.IconSizes.MEDIUM, style: closure_9().roleIcon });
+  obj.label = item.name;
+  return React5(TableRow.TableRow, obj);
 }
 class ChannelOverwritesItem {
   constructor(arg0) {
     item = global.item;
-    merged = Object.assign(global, Object.create(null));
+    merged = Object.assign(global, Object.assign({ item: 0 }));
     rowType = item.rowType;
     tmp2 = RowType;
     if (RowType.ADMINISTRATOR !== rowType) {
@@ -169,7 +150,7 @@ class ChannelOverwritesItem {
                 tmp3 = jsx;
                 tmp4 = EmptyRoleItem;
                 obj = { item: null };
-                obj[0] = item;
+                obj.item = item;
                 tmp5 = obj;
                 tmp6 = merged;
                 merged1 = Object.assign(merged);
@@ -182,36 +163,39 @@ class ChannelOverwritesItem {
         }
         tmp8 = jsx;
         tmp9 = MemberItem;
-        obj = { item: null };
-        obj[0] = item;
-        tmp10 = obj;
+        obj1 = { item: null };
+        obj1.item = item;
+        tmp10 = obj1;
         tmp11 = merged;
         merged2 = Object.assign(merged);
-        return jsx(MemberItem, obj);
+        return jsx(MemberItem, obj1);
       }
     }
-    obj1 = { item };
+    obj4 = { item };
     merged3 = Object.assign(merged);
-    return jsx(RoleItem, obj1);
+    return jsx(RoleItem, obj4);
   }
 }
-noopAll;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-let closure_9 = createCacheKey.createStyles({ nameWrapper: { flexDirection: "row", alignItems: "flex-end", marginRight: 16 }, name: { paddingRight: 4 }, memberName: { flexShrink: 1 }, ownerIcon: { alignSelf: "center" }, roleIcon: { height: 30, width: 30 }, rowRemoveIconDisabled: { opacity: 0.3 } });
-let result = require("set").fileFinishedImporting("modules/channel_permissions/native/components/ChannelOverwritesItem.tsx");
+const View = fn(17).View;
+const RowType = fn(8429).RowType;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+let closure_9 = createStyles.createStyles({ nameWrapper: { flexDirection: "row", alignItems: "flex-end", marginRight: 16 }, name: { paddingRight: 4 }, memberName: { flexShrink: 1 }, ownerIcon: { alignSelf: "center" }, roleIcon: { height: 30, width: 30 }, rowRemoveIconDisabled: { opacity: 0.3 } });
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/channel_permissions/native/components/ChannelOverwritesItem.tsx");
 
 export default ChannelOverwritesItem;
 export const ChannelOverwritesCheckboxItem = function ChannelOverwritesCheckboxItem(checked) {
   checked = checked.checked;
-  const merged = Object.assign(checked, Object.create(null));
-  let obj = useCheckboxA11yNative;
-  const checkboxA11yNative = obj.useCheckboxA11yNative({ checked });
-  obj = {};
+  const merged = Object.assign(checked, Object.assign({ checked: 0 }));
+  const checkboxA11yNative = useA11yRolesNative.useCheckboxA11yNative({ checked });
+  const obj2 = {};
   ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
   const merged1 = Object.assign(merged);
-  obj.accessible = true;
-  obj.accessibilityRole = accessibilityRole;
-  obj.accessibilityState = accessibilityState;
-  obj.trailing = callback(FormCheckbox.FormCheckbox, { checked });
-  return callback(ChannelOverwritesItem, obj);
+  obj2.accessible = true;
+  obj2.accessibilityRole = accessibilityRole;
+  obj2.accessibilityState = accessibilityState;
+  obj2.trailing = React5(FormCheckbox.FormCheckbox, { checked });
+  return React5(ChannelOverwritesItem, obj2);
 };

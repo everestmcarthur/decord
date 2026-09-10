@@ -1,27 +1,29 @@
-// Module ID: 15081
-// Function ID: 15082
+// Module ID: 15108
+// Function ID: 15109
 // Name: useIsCarouselInView
 // Dependencies: [32, 19, 1477, 2]
 // Exports: default
 
-// Module 15081 (useIsCarouselInView)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+// Module 15108 (useIsCarouselInView)
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/quests/native/useIsCarouselInView.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/useIsCarouselInView.tsx");
 
 export default function useIsCarouselInView() {
-  const containerRef = React.useRef(null);
-  height = containerRef(height[2])().height;
-  const callback = React.useRef(height);
+  const containerRef = noop.useRef(null);
+  const height = useWindowDimensionsDefault().height;
+  closure_2 = noop.useRef(height);
   const items = [height];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     closure_2.current = height;
   }, items);
-  [tmp4, closure_3] = callback(React.useState(true), 2);
-  closure_4 = React.useRef(isInView);
-  const effect1 = React.useEffect(() => {
-    const interval = setInterval(() => {
+  [tmp4, noop] = noop.useState(true);
+  closure_4 = noop.useRef(isInView);
+  const effect1 = noop.useEffect(() => {
+    setInterval(() => {
       if (null != ref.current) {
         const current = ref.current;
         current.measure((arg0, arg1, arg2, arg3, arg4, arg5) => {
@@ -32,7 +34,7 @@ export default function useIsCarouselInView() {
           }
           if (tmp2 !== ref2.current) {
             ref2.current = tmp2;
-            callback(tmp2);
+            closure_1_3(tmp2);
           }
         });
       }

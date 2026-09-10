@@ -1,10 +1,10 @@
-// Module ID: 7555
-// Function ID: 7556
-// Name: fromServer
+// Module ID: 7569
+// Function ID: 7570
+// Name: ShopAssetConfigRecord
 // Dependencies: [2]
 
-// Module 7555 (fromServer)
-import set from "set" /* 2 */;
+// Module 7569 (ShopAssetConfigRecord)
+import size from "module_2" /* 2 */;
 
 let AssetDisplayConfigRecord;
 class AssetDisplayConfigRecord {
@@ -16,11 +16,12 @@ class AssetDisplayConfigRecord {
 }
 const prototype = AssetDisplayConfigRecord.prototype;
 AssetDisplayConfigRecord["fromServer"] = function fromServer(arg0) {
-  if (typeof AssetDisplayConfigRecord !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof AssetDisplayConfigRecord === "function") {
+    ({ desktop_max_height: tmp3.desktopMaxHeight, mobile_max_height: tmp3.mobileMaxHeight, responsive: tmp3.responsive, background_style: tmp3.backgroundStyle } = arg0);
+    return Object.create(tmp.prototype);
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  ({ desktop_max_height: tmp2.desktopMaxHeight, mobile_max_height: tmp2.mobileMaxHeight, responsive: tmp2.responsive, background_style: tmp2.backgroundStyle } = arg0);
-  return Object.create(AssetDisplayConfigRecord.prototype);
 };
 prototype["toDesktopStyles"] = function toDesktopStyles() {
   const self = this;
@@ -52,6 +53,6 @@ prototype["toMobileStyles"] = function toMobileStyles() {
   }
   return tmp;
 };
-const result = set.fileFinishedImporting("modules/collectibles/records/ShopAssetConfigRecord.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/records/ShopAssetConfigRecord.tsx");
 
 export { AssetDisplayConfigRecord };

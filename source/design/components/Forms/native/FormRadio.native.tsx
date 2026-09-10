@@ -1,61 +1,58 @@
-// Module ID: 5689
-// Function ID: 5690
+// Module ID: 5703
+// Function ID: 5704
 // Name: FormRadio
-// Dependencies: [19, 21, 4560, 576, 4279, 4296, 4974, 4978, 2]
+// Dependencies: [19, 21, 4574, 576, 4294, 4310, 4988, 4992, 2]
 // Exports: FormRadio
 
-// Module 5689 (FormRadio)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 5703 (FormRadio)
+import nativeDefault from "native" /* 576 */;
+import spring from "spring" /* 4988 */;
+import springPresets from "springPresets" /* 4992 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let closure_5 = createCacheKey.createStyles(() => {
-  const CONTROL_RADIO_ICON_SIZE_DEFAULT = ThemesDefault.modules.mobile.CONTROL_RADIO_ICON_SIZE_DEFAULT;
-  const CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT = ThemesDefault.modules.mobile.CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT;
-  let obj = { radio: null, unselected: null, selected: null, dot: null };
-  obj = { width: CONTROL_RADIO_ICON_SIZE_DEFAULT, height: CONTROL_RADIO_ICON_SIZE_DEFAULT, flexGrow: 0, flexShrink: 0, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round, borderWidth: ThemesDefault.modules.mobile.CONTROL_RADIO_ICON_BORDER_WIDTH, borderColor: ThemesDefault.colors.RADIO_BORDER_DEFAULT };
-  obj[0] = obj;
-  obj = { backgroundColor: "transparent", borderColor: ThemesDefault.colors.RADIO_BORDER_DEFAULT };
-  obj[1] = obj;
-  obj[2] = { borderColor: ThemesDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED, backgroundColor: ThemesDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
-  obj1 = { borderColor: ThemesDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED, backgroundColor: ThemesDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
-  obj[3] = { width: CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT, height: CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT, backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.round };
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_5 = createStyles.createStyles(() => {
+  const CONTROL_RADIO_ICON_SIZE_DEFAULT = nativeDefault.modules.mobile.CONTROL_RADIO_ICON_SIZE_DEFAULT;
+  const CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT = nativeDefault.modules.mobile.CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT;
+  const obj = { radio: null, unselected: null, selected: null, dot: null };
+  const size = { width: CONTROL_RADIO_ICON_SIZE_DEFAULT, height: CONTROL_RADIO_ICON_SIZE_DEFAULT, flexGrow: 0, flexShrink: 0, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round, borderWidth: nativeDefault.modules.mobile.CONTROL_RADIO_ICON_BORDER_WIDTH, borderColor: nativeDefault.colors.RADIO_BORDER_DEFAULT };
+  obj.radio = size;
+  obj.unselected = { backgroundColor: "transparent", borderColor: nativeDefault.colors.RADIO_BORDER_DEFAULT };
+  const obj2 = { backgroundColor: "transparent", borderColor: nativeDefault.colors.RADIO_BORDER_DEFAULT };
+  obj.selected = { borderColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED, backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
+  const size1 = { width: CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT, height: CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT, backgroundColor: nativeDefault.colors.WHITE, borderRadius: nativeDefault.radii.round };
+  obj.dot = size1;
   return obj;
 });
-let closure_6 = { code: "function FormRadioNativeTsx1(){const{withSpring,selectedShared,selectedStyles,unselectedStyles,SUBTLE_SPRING}=this.__closure;return withSpring(selectedShared.get()?selectedStyles.borderColor:unselectedStyles.borderColor,SUBTLE_SPRING,'animate-always');}" };
-let closure_7 = { code: "function FormRadioNativeTsx2(){const{withSpring,selectedShared,selectedStyles,unselectedStyles,SUBTLE_SPRING}=this.__closure;return withSpring(selectedShared.get()?selectedStyles.backgroundColor:unselectedStyles.backgroundColor,SUBTLE_SPRING,'animate-always');}" };
-let closure_8 = { code: "function FormRadioNativeTsx3(){const{borderColor,backgroundColor}=this.__closure;return{borderColor:borderColor.get(),backgroundColor:backgroundColor.get()};}" };
-let closure_9 = { code: "function FormRadioNativeTsx4(){const{useReducedMotion,withSpring,selected,SUBTLE_SPRING}=this.__closure;const unselectedScale=useReducedMotion?1:0.5;return{opacity:withSpring(selected?1:0,SUBTLE_SPRING,'animate-always'),transform:[{scale:withSpring(selected?1:unselectedScale,SUBTLE_SPRING)}]};}" };
-let result = require("set").fileFinishedImporting("design/components/Forms/native/FormRadio.native.tsx");
+const __initData = { code: "function FormRadioNativeTsx1(){const{withSpring,selectedShared,selectedStyles,unselectedStyles,SUBTLE_SPRING}=this.__closure;return withSpring(selectedShared.get()?selectedStyles.borderColor:unselectedStyles.borderColor,SUBTLE_SPRING,'animate-always');}" };
+const __initData2 = { code: "function FormRadioNativeTsx2(){const{withSpring,selectedShared,selectedStyles,unselectedStyles,SUBTLE_SPRING}=this.__closure;return withSpring(selectedShared.get()?selectedStyles.backgroundColor:unselectedStyles.backgroundColor,SUBTLE_SPRING,'animate-always');}" };
+const __initData3 = { code: "function FormRadioNativeTsx3(){const{borderColor,backgroundColor}=this.__closure;return{borderColor:borderColor.get(),backgroundColor:backgroundColor.get()};}" };
+const __initData4 = { code: "function FormRadioNativeTsx4(){const{useReducedMotion,withSpring,selected,SUBTLE_SPRING}=this.__closure;const unselectedScale=useReducedMotion?1:0.5;return{opacity:withSpring(selected?1:0,SUBTLE_SPRING,'animate-always'),transform:[{scale:withSpring(selected?1:unselectedScale,SUBTLE_SPRING)}]};}" };
+let size = fn(2);
+let result = size.fileFinishedImporting("design/components/Forms/native/FormRadio.native.tsx");
 
 export const FormRadio = function FormRadio(selected) {
   selected = selected.selected;
   const tmp = derivedValue1();
-  enabled = sharedValue.useContext(enabled(unselected[4]).AccessibilityPreferencesContext).reducedMotion.enabled;
-  enabled = selected;
-  selected = undefined;
-  unselected = undefined;
-  sharedValue = undefined;
+  const enabled = sharedValue.useContext(selected(unselected[4]).AccessibilityPreferencesContext).reducedMotion.enabled;
   let derivedValue;
   derivedValue1 = undefined;
   const tmp2 = derivedValue1();
   const selected2 = tmp2.selected;
-  selected = selected2;
   unselected = tmp2.unselected;
-  let obj = enabled(unselected[5]);
-  sharedValue = obj.useSharedValue(selected);
+  sharedValue = selected(unselected[5]).useSharedValue(selected);
   let items = [selected, sharedValue];
   const effect = sharedValue.useEffect(() => {
-    const result = sharedValue.set(enabled);
+    const result = sharedValue.set(selected);
   }, items);
-  obj1 = enabled(unselected[5]);
+  let obj = selected(unselected[5]);
   class T {
     constructor() {
-      tmp = enabled;
-      tmp2 = unselected;
-      obj = enabled(unselected[6]);
+      tmp = closure_0;
+      tmp2 = closure_2;
+      obj = closure_0(closure_2[6]);
       if (closure_3.get()) {
         tmp4 = selected;
         borderColor = selected.borderColor;
@@ -66,16 +63,17 @@ export const FormRadio = function FormRadio(selected) {
       return obj.withSpring(borderColor, tmp(tmp2[7]).SUBTLE_SPRING, "animate-always");
     }
   }
-  obj = { withSpring: enabled(unselected[6]).withSpring, selectedShared: sharedValue, selectedStyles: selected2, unselectedStyles: unselected, SUBTLE_SPRING: enabled(unselected[7]).SUBTLE_SPRING };
-  T.__closure = obj;
+  let obj2 = selected(unselected[5]);
+  T.__closure = { withSpring: selected(unselected[6]).withSpring, selectedShared: sharedValue, selectedStyles: selected2, unselectedStyles: unselected, SUBTLE_SPRING: selected(unselected[7]).SUBTLE_SPRING };
   T.__workletHash = 12275577765341;
-  T.__initData = closure_6;
-  derivedValue = obj1.useDerivedValue(T);
+  T.__initData = __initData;
+  derivedValue = obj2.useDerivedValue(T);
+  const obj3 = { withSpring: selected(unselected[6]).withSpring, selectedShared: sharedValue, selectedStyles: selected2, unselectedStyles: unselected, SUBTLE_SPRING: selected(unselected[7]).SUBTLE_SPRING };
   class C {
     constructor() {
-      tmp = enabled;
-      tmp2 = unselected;
-      obj = enabled(unselected[6]);
+      tmp = closure_0;
+      tmp2 = closure_2;
+      obj = closure_0(closure_2[6]);
       if (closure_3.get()) {
         tmp4 = selected;
         backgroundColor = selected.backgroundColor;
@@ -86,47 +84,53 @@ export const FormRadio = function FormRadio(selected) {
       return obj.withSpring(backgroundColor, tmp(tmp2[7]).SUBTLE_SPRING, "animate-always");
     }
   }
-  obj = { withSpring: enabled(unselected[6]).withSpring, selectedShared: sharedValue, selectedStyles: selected2, unselectedStyles: unselected, SUBTLE_SPRING: enabled(unselected[7]).SUBTLE_SPRING };
-  C.__closure = obj;
+  const obj4 = selected(unselected[5]);
+  C.__closure = { withSpring: selected(unselected[6]).withSpring, selectedShared: sharedValue, selectedStyles: selected2, unselectedStyles: unselected, SUBTLE_SPRING: selected(unselected[7]).SUBTLE_SPRING };
   C.__workletHash = 7732795836606;
-  C.__initData = closure_7;
-  derivedValue1 = enabled(unselected[5]).useDerivedValue(C);
-  const obj4 = enabled(unselected[5]);
+  C.__initData = __initData2;
+  derivedValue1 = obj4.useDerivedValue(C);
+  const obj5 = { withSpring: selected(unselected[6]).withSpring, selectedShared: sharedValue, selectedStyles: selected2, unselectedStyles: unselected, SUBTLE_SPRING: selected(unselected[7]).SUBTLE_SPRING };
   const fn = function b() {
     return { borderColor: derivedValue.get(), backgroundColor: derivedValue1.get() };
   };
   fn.__closure = { borderColor: derivedValue, backgroundColor: derivedValue1 };
   fn.__workletHash = 5670342272321;
-  fn.__initData = closure_8;
-  const animatedStyle = enabled(unselected[5]).useAnimatedStyle(fn);
-  const obj6 = enabled(unselected[5]);
+  fn.__initData = __initData3;
+  closure_129_0 = enabled;
+  closure_129_1 = selected;
+  const animatedStyle = selected(unselected[5]).useAnimatedStyle(fn);
+  const obj6 = selected(unselected[5]);
   const fn2 = function s() {
     let num = 0.5;
-    if (enabled) {
+    if (selected) {
       num = 1;
     }
-    let obj = enabled(unselected[6]);
     let num2 = 0;
-    if (selected) {
+    if (selected2) {
       num2 = 1;
     }
-    obj = { opacity: obj.withSpring(num2, tmp(tmp2[7]).SUBTLE_SPRING, "animate-always"), transform: null };
+    const obj2 = { opacity: spring.withSpring(num2, springPresets.SUBTLE_SPRING, "animate-always"), transform: null };
+    const tmp3 = selected2;
     let num3 = 1;
-    if (!selected) {
+    if (!tmp3) {
       num3 = num;
     }
-    obj = { scale: enabled(unselected[6]).withSpring(num3, tmp(tmp2[7]).SUBTLE_SPRING) };
-    const items = [obj];
-    obj[1] = items;
-    return obj;
+    const tmpResult = spring;
+    const items = [{ scale: spring.withSpring(num3, springPresets.SUBTLE_SPRING) }];
+    obj2.transform = items;
+    return obj2;
   };
-  obj1 = { useReducedMotion: enabled, withSpring: enabled(unselected[6]).withSpring, selected, SUBTLE_SPRING: enabled(unselected[7]).SUBTLE_SPRING };
-  fn2.__closure = obj1;
+  const obj7 = selected(unselected[5]);
+  fn2.__closure = { useReducedMotion: enabled, withSpring: selected(unselected[6]).withSpring, selected, SUBTLE_SPRING: selected(unselected[7]).SUBTLE_SPRING };
   fn2.__workletHash = 15209729079449;
-  fn2.__initData = closure_9;
-  const animatedStyle1 = enabled(unselected[5]).useAnimatedStyle(fn2);
-  const obj7 = enabled(unselected[5]);
+  fn2.__initData = __initData4;
+  const animatedStyle1 = obj7.useAnimatedStyle(fn2);
+  const obj9 = { style: null, children: null };
   const items1 = [tmp.radio, animatedStyle];
+  obj9.style = items1;
+  const obj10 = { style: null };
   const items2 = [tmp.dot, animatedStyle1];
-  return derivedValue(selected(unselected[5]).View, { style: items1, children: derivedValue(selected(unselected[5]).View, { style: items2 }) });
+  obj10.style = items2;
+  obj9.children = derivedValue(selected2(unselected[5]).View, obj10);
+  return derivedValue(selected2(unselected[5]).View, obj9);
 };

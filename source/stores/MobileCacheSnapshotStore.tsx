@@ -1,41 +1,40 @@
 // Module ID: 1073
 // Function ID: 1074
-// Name: clearAll
+// Name: MobileCacheSnapshotStore
 // Dependencies: [504, 573, 38, 510, 2]
 
-// Module 1073 (clearAll)
+// Module 1073 (MobileCacheSnapshotStore)
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
-require = arg1;
+require = fn;
 let MobileCacheSnapshotStore;
 const Store = initializeDefault.Store;
 class MobileCacheSnapshotStore extends Store {
   constructor(arg0, arg1) {
     closure_0 = undefined;
-    tmp3 = require("dispatcher");
+    tmp3 = closure_1(closure_2[1]);
     obj = {};
     merged = Object.assign(global);
     obj.CLEAR_CACHES = function CLEAR_CACHES() {
-      obj.clear();
+      closure_0.clear();
       return false;
     };
     obj.WRITE_CACHES = function WRITE_CACHES() {
-      obj.save();
+      closure_0.save();
       return false;
     };
-    tmp2 = new tmp2(tmp3, obj, arg1, new.target, tmp2, tmp3, obj, new.target, undefined, tmp, global, closure_1);
-    // ThrowIfThisInitialized (0x7c)
-    closure_0 = tmp2;
-    tmp5 = require("module_38");
-    tmp5Result = tmp5(null != tmp2.getClass().displayName, "Snapshot stores need a display name");
-    tmp7 = require("module_38")(!("CLEAR_CACHES" in global), "MobileCacheSnapshotStores cannot use the 'CLEAR_CACHES' action");
-    tmp8 = require("module_38")(!("WRITE_CACHES" in global), "MobileCacheSnapshotStores cannot use the 'WRITE_CACHES' action");
+    tmp21 = new tmp2(tmp3, obj, fn, new.target, tmp2, tmp3, obj, new.target, undefined, tmp, global, closure_1);
+    closure_0 = tmp21;
+    tmp5 = closure_1(closure_2[2]);
+    tmp5Result = tmp5(null != tmp21.getClass().displayName, "Snapshot stores need a display name");
+    tmp7 = closure_1(closure_2[2])(!("CLEAR_CACHES" in global), "MobileCacheSnapshotStores cannot use the 'CLEAR_CACHES' action");
+    tmp8 = closure_1(closure_2[2])(!("WRITE_CACHES" in global), "MobileCacheSnapshotStores cannot use the 'WRITE_CACHES' action");
     allStores = MobileCacheSnapshotStore.allStores;
-    arr = allStores.push(tmp2);
-    return tmp2;
+    arr1 = allStores.push(tmp21);
+    return tmp21;
   }
 }
 const prototype = MobileCacheSnapshotStore.prototype;
@@ -59,7 +58,7 @@ prototype["save"] = function save() {
 };
 prototype["readSnapshot"] = function readSnapshot(LATEST_SNAPSHOT_VERSION) {
   const Storage = Storage2.Storage;
-  const value = Storage.get(this.persistKey);
+  value = Storage.get(this.persistKey);
   let data = null;
   if (null != value) {
     data = null;
@@ -73,6 +72,7 @@ prototype["getClass"] = function getClass() {
   return this.constructor;
 };
 MobileCacheSnapshotStore.allStores = [];
-let result = require("set").fileFinishedImporting("stores/MobileCacheSnapshotStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("stores/MobileCacheSnapshotStore.tsx");
 
 export default MobileCacheSnapshotStore;

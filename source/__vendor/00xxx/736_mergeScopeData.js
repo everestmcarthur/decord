@@ -2,29 +2,25 @@
 // Function ID: 737
 // Name: mergeScopeData
 // Dependencies: [711, 713, 684, 722]
+// Exports: applyScopeDataToEvent, getCombinedScopeData, mergeAndOverwriteScopeData
 
 // Module 736 (mergeScopeData)
 import spanToJSON from "spanToJSON" /* 684 */;
-import merge from "merge" /* 711 */;
-import getClient from "getClient" /* 713 */;
-import getDynamicSamplingContextFromSpan from "getDynamicSamplingContextFromSpan" /* 722 */;
+import _mod711 from "module_711" /* 711 */;
+import _mod713 from "module_713" /* 713 */;
+import _mod722 from "module_722" /* 722 */;
 
 require = arg1;
 const dependencyMap = arg6;
-function mergeScopeData(extra) {
+function mergeScopeData(extra, arg1) {
   ({ level, breadcrumbs, fingerprint, eventProcessors, attachments, propagationContext, transactionName, span } = arg1);
   ({ extra, tags, attributes, user, contexts, sdkProcessingMetadata } = arg1);
-  let obj = merge;
-  extra.extra = obj.merge(extra.extra, extra, 1);
-  extra.tags = merge.merge(extra.tags, tags, 1);
-  const obj2 = merge;
-  extra.attributes = merge.merge(extra.attributes, attributes, 1);
-  const obj3 = merge;
-  extra.user = merge.merge(extra.user, user, 1);
-  const obj4 = merge;
-  extra.contexts = merge.merge(extra.contexts, contexts, 1);
-  const obj5 = merge;
-  extra.sdkProcessingMetadata = merge.merge(extra.sdkProcessingMetadata, sdkProcessingMetadata, 2);
+  extra.extra = _mod711.merge(extra.extra, extra, 1);
+  extra.tags = _mod711.merge(extra.tags, tags, 1);
+  extra.attributes = _mod711.merge(extra.attributes, attributes, 1);
+  extra.user = _mod711.merge(extra.user, user, 1);
+  extra.contexts = _mod711.merge(extra.contexts, contexts, 1);
+  extra.sdkProcessingMetadata = _mod711.merge(extra.sdkProcessingMetadata, sdkProcessingMetadata, 2);
   if (level) {
     extra.level = level;
   }
@@ -54,37 +50,37 @@ function mergeScopeData(extra) {
     HermesBuiltin.arraySpread(attachments, HermesBuiltin.arraySpread(extra.attachments, 0));
     extra.attachments = items3;
   }
-  obj = {};
   const merged = Object.assign(extra.propagationContext);
   const merged1 = Object.assign(propagationContext);
-  extra.propagationContext = obj;
+  extra.propagationContext = {};
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {
+
+export const applyScopeDataToEvent = function applyScopeDataToEvent(extra, arg1) {
   ({ fingerprint, span, breadcrumbs, sdkProcessingMetadata, extra, tags, user, contexts, level, transactionName } = arg1);
   if (Object.keys(extra).length) {
-    let obj = {};
+    const obj = {};
     const merged = Object.assign(extra);
     const merged1 = Object.assign(extra.extra);
     extra.extra = obj;
   }
   if (Object.keys(tags).length) {
-    obj = {};
+    const obj2 = {};
     const merged2 = Object.assign(tags);
     const merged3 = Object.assign(extra.tags);
-    extra.tags = obj;
+    extra.tags = obj2;
   }
   if (Object.keys(user).length) {
-    obj = {};
+    const obj3 = {};
     const merged4 = Object.assign(user);
     const merged5 = Object.assign(extra.user);
-    extra.user = obj;
+    extra.user = obj3;
   }
   if (Object.keys(contexts).length) {
-    obj1 = {};
+    const obj4 = {};
     const merged6 = Object.assign(contexts);
     const merged7 = Object.assign(extra.contexts);
-    extra.contexts = obj1;
+    extra.contexts = obj4;
   }
   if (level) {
     extra.level = level;
@@ -97,18 +93,14 @@ arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {
     extra.transaction = transactionName;
   }
   if (span) {
-    const obj2 = { trace: null };
-    obj2[0] = spanToJSON.spanToTraceContext(span);
+    const obj5 = { trace: spanToJSON.spanToTraceContext(span) };
     const merged8 = Object.assign(extra.contexts);
-    extra.contexts = obj2;
-    const obj3 = { dynamicSamplingContext: null };
-    const obj6 = spanToJSON;
-    obj3[0] = getDynamicSamplingContextFromSpan.getDynamicSamplingContextFromSpan(span);
+    extra.contexts = obj5;
+    const obj7 = { dynamicSamplingContext: null };
+    obj7.dynamicSamplingContext = _mod722.getDynamicSamplingContextFromSpan(span);
     const merged9 = Object.assign(extra.sdkProcessingMetadata);
-    extra.sdkProcessingMetadata = obj3;
-    const obj8 = getDynamicSamplingContextFromSpan;
+    extra.sdkProcessingMetadata = obj7;
     const rootSpan = spanToJSON.getRootSpan(span);
-    const obj9 = spanToJSON;
     const description = spanToJSON.spanToJSON(rootSpan).description;
     let tmp31 = description;
     if (description) {
@@ -120,7 +112,6 @@ arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {
     if (tmp31) {
       extra.transaction = description;
     }
-    const obj10 = spanToJSON;
   }
   if (extra.fingerprint) {
     const _Array = Array;
@@ -147,14 +138,14 @@ arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {
       tmp39 = items1;
     }
     extra.breadcrumbs = tmp39;
-    const obj4 = {};
+    const obj11 = {};
     const merged10 = Object.assign(extra.sdkProcessingMetadata);
     const merged11 = Object.assign(sdkProcessingMetadata);
-    extra.sdkProcessingMetadata = obj4;
+    extra.sdkProcessingMetadata = obj11;
   }
 };
-arg5.getCombinedScopeData = function getCombinedScopeData(isolationScope, currentScope) {
-  const globalScope = getClient.getGlobalScope();
+export const getCombinedScopeData = function getCombinedScopeData(isolationScope, currentScope) {
+  const globalScope = _mod713.getGlobalScope();
   const scopeData = globalScope.getScopeData();
   if (isolationScope) {
     mergeScopeData(scopeData, isolationScope.getScopeData());
@@ -164,7 +155,7 @@ arg5.getCombinedScopeData = function getCombinedScopeData(isolationScope, curren
   }
   return scopeData;
 };
-arg5.mergeAndOverwriteScopeData = function mergeAndOverwriteScopeData(arg0, arg1, arg2) {
-  arg0[arg1] = merge.merge(arg0[arg1], arg2, 1);
+export const mergeAndOverwriteScopeData = function mergeAndOverwriteScopeData(arg0, arg1, arg2) {
+  arg0[arg1] = _mod711.merge(arg0[arg1], arg2, 1);
 };
-arg5.mergeScopeData = mergeScopeData;
+export { mergeScopeData };

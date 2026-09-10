@@ -1,39 +1,45 @@
-// Module ID: 10648
-// Function ID: 10649
-// Name: NativeModules
-// Dependencies: [32, 19, 17, 1478, 1607, 7151, 4770, 21, 4560, 576, 4296, 10649, 10652, 1480, 1611, 1477, 5682, 6627, 9500, 5151, 12, 10653, 10660, 10662, 10326, 10663, 5147, 7072, 1114, 2]
+// Module ID: 10675
+// Function ID: 10676
+// Name: MediaKeyboardList
+// Dependencies: [32, 19, 17, 1478, 1607, 7165, 4784, 21, 4574, 576, 4310, 10676, 10679, 1480, 1611, 1477, 5696, 6641, 9527, 5165, 12, 10680, 10687, 10689, 10353, 10690, 5161, 7086, 1114, 2]
 
-// Module 10648 (NativeModules)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getDimensionsStoreStateForEntry" /* 1478 */;
-import { InAppCameraUsedCameraPreviewTypes as closure_7 } from "DRAG_HANDLE" /* 1607 */;
-import { ACTION_SHEET_START_HEIGHT_RATIO as closure_8 } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 7151 */;
-import { NativePermissionStatus } from "NativePermissionStatus" /* 4770 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10675 (MediaKeyboardList)
+import _modDef12 from "module_12" /* 12 */;
+import nativeDefault from "native" /* 576 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import DeviceMediaDefault from "DeviceMedia" /* 10676 */;
+import MediaKeyboardItem from "MediaKeyboardItem" /* 10680 */;
+import MediaKeyboardFooterDefault from "MediaKeyboardFooter" /* 10687 */;
+import MediaKeyboardLimitedPickerNoticeDefault from "MediaKeyboardLimitedPickerNotice" /* 10689 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import DimensionsStore from "DimensionsStore" /* 1478 */;
 
-const require = arg1;
-let c4 = importAllResult;
+const MediaKeyboardItemDefault = MediaKeyboardItem;
+
+require = fn;
+get_ActivityIndicator = fn(17);
 const NativeModules = get_ActivityIndicator.NativeModules;
+let closure_7 = fn(1607).InAppCameraUsedCameraPreviewTypes;
+let closure_8 = fn(7165).ACTION_SHEET_START_HEIGHT_RATIO;
+const NativePermissionStatus = fn(4784).NativePermissionStatus;
+const jsx = fn(21).jsx;
 const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(NativeModules.PhotoLibraryHelper);
-let obj = { listContainer: null };
-obj = { backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, marginTop: 8, paddingTop: 8 };
-obj[0] = obj;
-let closure_12 = createCacheKey.createStyles(obj);
+const createStyles = fn(4574);
+let obj = { listContainer: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, marginTop: 8, paddingTop: 8 } };
+let closure_12 = createStyles.createStyles(obj);
 let closure_13 = { code: "function MediaKeyboardListTsx1(){const{animatedIndex}=this.__closure;return animatedIndex.get();}" };
 let closure_14 = { code: "function MediaKeyboardListTsx2(currentIndex){const{latch,runOnJS,setIsExpanded}=this.__closure;if(currentIndex>0.1&&!latch.get()){latch.set(true);runOnJS(setIsExpanded)(true);}}" };
-let closure_15 = { code: "function MediaKeyboardListTsx3(){const{animatedSnapPoints}=this.__closure;return animatedSnapPoints.get();}" };
+let __initData = { code: "function MediaKeyboardListTsx3(){const{animatedSnapPoints}=this.__closure;return animatedSnapPoints.get();}" };
 let closure_16 = { code: "function MediaKeyboardListTsx4(snapPoints,previous){const{cheapWorkletArrayShallowEqual,runOnJS,setBottomSheetState,windowHeight,computedStartHeight,maxDynamicContentSize}=this.__closure;var _snapPoints$,_snapPoints;if(cheapWorkletArrayShallowEqual(snapPoints,previous!==null&&previous!==void 0?previous:undefined))return;runOnJS(setBottomSheetState)({minimum:windowHeight-((_snapPoints$=snapPoints[0])!==null&&_snapPoints$!==void 0?_snapPoints$:computedStartHeight),maximum:windowHeight-((_snapPoints=snapPoints[snapPoints.length-1])!==null&&_snapPoints!==void 0?_snapPoints:maxDynamicContentSize)});}" };
-const memoResult = importAllResult.memo(function MediaKeyboardList(channel) {
+let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, marginTop: 8, paddingTop: 8 };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardList.tsx");
+
+export default noop.memo(function MediaKeyboardList(channel) {
   channel = channel.channel;
-  let animatedIndex = channel;
   const draftType = channel.draftType;
-  importDefault = draftType;
   const onPressCamera = channel.onPressCamera;
-  let sharedValue = onPressCamera;
   const onAttachPress = channel.onAttachPress;
   const onPressItem = channel.onPressItem;
   const onLongPressItem = channel.onLongPressItem;
@@ -51,87 +57,69 @@ const memoResult = importAllResult.memo(function MediaKeyboardList(channel) {
   }
   const uploadLimit = channel.uploadLimit;
   const disableWhenReachedLimit = channel.disableWhenReachedLimit;
-  let ref;
-  let first;
-  closure_15 = undefined;
-  let assets;
-  let itemsPerRow;
-  let itemsPageSizeRef;
-  closure_19 = undefined;
-  let height;
-  c21 = undefined;
-  c22 = undefined;
-  let animatedSnapPoints;
-  closure_24 = undefined;
   flag = undefined;
   c26 = undefined;
   let memo;
   let callback1;
   let width;
-  let maximum;
-  closure_31 = undefined;
-  let obj = onPressItem;
-  ref = onPressItem.useRef(true);
+  let onHeightChange;
+  const ref = onPressItem.useRef(true);
   let items = [ref];
   const callback = onPressItem.useCallback((nativeEvent) => {
     ref.current = nativeEvent.nativeEvent.contentOffset.y < 100;
   }, items);
   const tmp4 = onAttachPress(onPressItem.useState(null), 2);
-  first = tmp4[0];
-  closure_15 = tmp4[1];
-  obj1 = importDefault(sharedValue[11]);
-  assets = obj1.useAssets();
-  let obj2 = animatedIndex(sharedValue[12]);
-  const mediaKeyboardItemsPerRow = obj2.useMediaKeyboardItemsPerRow();
-  itemsPerRow = mediaKeyboardItemsPerRow.itemsPerRow;
-  itemsPageSizeRef = mediaKeyboardItemsPerRow.itemsPageSizeRef;
+  const photoPermissionStatus = tmp4[0];
+  __initData = tmp4[1];
+  const assets = draftType(onPressCamera[11]).useAssets();
+  let obj2 = draftType(onPressCamera[11]);
+  const tmp3 = onAttachPress;
+  const mediaKeyboardItemsPerRow = channel(onPressCamera[12]).useMediaKeyboardItemsPerRow();
+  const itemsPerRow = mediaKeyboardItemsPerRow.itemsPerRow;
+  const itemsPageSizeRef = mediaKeyboardItemsPerRow.itemsPageSizeRef;
   const effect = onPressItem.useEffect(() => {
-    const NativePermissionManager = onLongPressItem.NativePermissionManager;
+    const NativePermissionManager = NativeModules.NativePermissionManager;
     const photoAuthorization = NativePermissionManager.requestPhotoAuthorization();
-    photoAuthorization.then((arg0) => {
-      callback(arg0);
+    photoAuthorization.then((result) => {
+      closure_1_15(result);
     });
   }, []);
-  let items1 = [first, itemsPageSizeRef, extensions];
+  let items1 = [photoPermissionStatus, itemsPageSizeRef, extensions];
   const effect1 = onPressItem.useEffect(() => {
-    let obj = _undefined(sharedValue[11]);
-    obj = { batchSize: itemsPageSizeRef.current, extensions };
-    obj.refreshAssets(obj);
+    draftType(onPressCamera[11]).refreshAssets({ batchSize: itemsPageSizeRef.current, extensions });
     let addListenerResult;
     if (uploadLimit != null) {
       addListenerResult = uploadLimit.addListener("photoLibraryChanged", () => {
         if (ref.current) {
-          let obj = closure_1_1(closure_1_2[11]);
-          obj = { batchSize: null, extensions: null };
-          obj[0] = ref2.current;
-          obj[1] = closure_9;
-          obj.refreshAssets(obj);
+          const obj2 = { batchSize: ref2.current, extensions };
+          draftType(onPressCamera[11]).refreshAssets(obj2);
+          const obj = draftType(onPressCamera[11]);
         }
       });
     }
-    animatedIndex = addListenerResult;
+    channel = addListenerResult;
     return () => {
-      if (closure_0 != null) {
-        closure_0.remove();
+      if (addListenerResult != null) {
+        addListenerResult.remove();
       }
     };
   }, items1);
-  closure_19 = animatedIndex(sharedValue[13]).useAppEntryKey();
-  height = importDefault(sharedValue[15])({ ignoreKeyboard: true }).height;
+  let obj3 = channel(onPressCamera[12]);
+  closure_19 = channel(onPressCamera[13]).useAppEntryKey();
+  const height = draftType(onPressCamera[15])({ ignoreKeyboard: true }).height;
   let result = height * includedUploadIds;
   c21 = result;
-  const diff = height - animatedIndex(sharedValue[16]).NAV_BAR_HEIGHT_MULTILINE - importDefault(sharedValue[14])().top;
+  const diff = height - channel(onPressCamera[16]).NAV_BAR_HEIGHT_MULTILINE - draftType(onPressCamera[14])().top;
   c22 = diff;
-  const obj4 = animatedIndex(sharedValue[13]);
-  const tmp3 = onAttachPress;
-  const bottomSheetInternal = animatedIndex(sharedValue[17]).useBottomSheetInternal();
-  animatedSnapPoints = bottomSheetInternal.animatedSnapPoints;
-  animatedIndex = bottomSheetInternal.animatedIndex;
+  const obj4 = channel(onPressCamera[13]);
+  const bottomSheetInternal = channel(onPressCamera[17]).useBottomSheetInternal();
+  const animatedSnapPoints = bottomSheetInternal.animatedSnapPoints;
+  const animatedIndex = bottomSheetInternal.animatedIndex;
   const tmp16 = onAttachPress(onPressItem.useState({ minimum: result, maximum: diff }), 2);
   const first1 = tmp16[0];
-  maximum = first1.minimum;
+  let maximum = first1.minimum;
   closure_24 = tmp18;
-  const obj5 = animatedIndex(sharedValue[17]);
+  const obj5 = channel(onPressCamera[17]);
   class G {
     constructor() {
       return animatedSnapPoints.get();
@@ -139,41 +127,39 @@ const memoResult = importAllResult.memo(function MediaKeyboardList(channel) {
   }
   G.__closure = { animatedSnapPoints };
   G.__workletHash = 7279123713809;
-  G.__initData = closure_15;
-  const fn = function $(activeIndex) {
-    let obj = animatedIndex(sharedValue[18]);
-    if (!obj.cheapWorkletArrayShallowEqual(activeIndex, arg1)) {
-      first = activeIndex[0];
-      const tmp2Result = animatedIndex(sharedValue[10]);
+  G.__initData = __initData;
+  const fn = function $(arg0, arg1) {
+    if (!obj.cheapWorkletArrayShallowEqual(arg0, arg1)) {
+      first = arg0[0];
+      const tmp2Result = ReanimatedRexport;
       if (first == null) {
         first = c21;
       }
-      obj = { minimum: null, maximum: null };
-      obj[0] = height - first;
-      let tmp8 = activeIndex[activeIndex.length - 1];
+      const obj2 = { minimum: height - first, maximum: null };
+      let tmp8 = arg0[arg0.length - 1];
       if (tmp8 == null) {
         tmp8 = c22;
       }
-      obj[1] = height - tmp8;
-      animatedIndex(sharedValue[10]).runOnJS(closure_24)(obj);
-      const runOnJSResult = animatedIndex(sharedValue[10]).runOnJS(closure_24);
+      obj2.maximum = height - tmp8;
+      ReanimatedRexport.runOnJS(closure_24)(obj2);
+      const runOnJSResult = ReanimatedRexport.runOnJS(closure_24);
     }
   };
-  obj = { cheapWorkletArrayShallowEqual: animatedIndex(sharedValue[18]).cheapWorkletArrayShallowEqual, runOnJS: animatedIndex(sharedValue[10]).runOnJS, setBottomSheetState: tmp18, windowHeight: height, computedStartHeight: result, maxDynamicContentSize: diff };
-  fn.__closure = obj;
+  const obj6 = channel(onPressCamera[10]);
+  fn.__closure = { cheapWorkletArrayShallowEqual: channel(onPressCamera[18]).cheapWorkletArrayShallowEqual, runOnJS: channel(onPressCamera[10]).runOnJS, setBottomSheetState: tmp16[1], windowHeight: height, computedStartHeight: result, maxDynamicContentSize: diff };
   fn.__workletHash = 4619753074319;
   fn.__initData = assets;
-  const animatedReaction = animatedIndex(sharedValue[10]).useAnimatedReaction(G, fn);
-  importDefault = undefined;
-  sharedValue = undefined;
-  const obj6 = animatedIndex(sharedValue[10]);
+  const animatedReaction = obj6.useAnimatedReaction(G, fn);
+  closure_129_0 = animatedIndex;
+  const obj7 = { cheapWorkletArrayShallowEqual: channel(onPressCamera[18]).cheapWorkletArrayShallowEqual, runOnJS: channel(onPressCamera[10]).runOnJS, setBottomSheetState: tmp16[1], windowHeight: height, computedStartHeight: result, maxDynamicContentSize: diff };
   [tmp21, tmp22] = onAttachPress(onPressItem.useState(false), 2);
-  importDefault = tmp22;
+  closure_129_1 = tmp22;
   const tmp20 = onAttachPress(onPressItem.useState(false), 2);
-  sharedValue = animatedIndex(sharedValue[10]).useSharedValue(false);
-  const obj8 = animatedIndex(sharedValue[10]);
+  const sharedValue = channel(onPressCamera[10]).useSharedValue(false);
+  closure_129_2 = sharedValue;
+  const obj8 = channel(onPressCamera[10]);
   const fn2 = function i() {
-    return animatedIndex.get();
+    return channel.get();
   };
   fn2.__closure = { animatedIndex };
   fn2.__workletHash = 8982138292467;
@@ -181,23 +167,22 @@ const memoResult = importAllResult.memo(function MediaKeyboardList(channel) {
   const fn3 = function s(arg0) {
     let tmp = arg0 > 0.1;
     if (tmp) {
-      tmp = !sharedValue.get();
+      tmp = !onPressCamera.get();
     }
     if (tmp) {
-      const result = sharedValue.set(true);
-      animatedIndex(sharedValue[10]).runOnJS(c1)(true);
-      const obj = animatedIndex(sharedValue[10]);
+      const result = onPressCamera.set(true);
+      ReanimatedRexport.runOnJS(draftType)(true);
     }
   };
-  obj = { latch: sharedValue, runOnJS: animatedIndex(sharedValue[10]).runOnJS, setIsExpanded: tmp22 };
-  fn3.__closure = obj;
+  const obj9 = channel(onPressCamera[10]);
+  fn3.__closure = { latch: sharedValue, runOnJS: channel(onPressCamera[10]).runOnJS, setIsExpanded: tmp22 };
   fn3.__workletHash = 7990574449734;
-  fn3.__initData = first;
-  const animatedReaction1 = animatedIndex(sharedValue[10]).useAnimatedReaction(fn2, fn3);
-  const obj9 = animatedIndex(sharedValue[10]);
+  fn3.__initData = photoPermissionStatus;
+  const animatedReaction1 = obj9.useAnimatedReaction(fn2, fn3);
+  const obj10 = { latch: sharedValue, runOnJS: channel(onPressCamera[10]).runOnJS, setIsExpanded: tmp22 };
   if (flag) {
-    let tmp9Result = tmp9(tmp7[19]);
-    flag = tmp9Result.isImageCaptureIntentSupported();
+    flag = tmp9(tmp7[19]).isImageCaptureIntentSupported();
+    const tmp9Result = tmp9(tmp7[19]);
   }
   let num;
   if (assets != null) {
@@ -223,10 +208,10 @@ const memoResult = importAllResult.memo(function MediaKeyboardList(channel) {
     if (null == assets) {
       const items2 = [];
       const _Array = Array;
-      let arraySpreadResult = HermesBuiltin.arraySpread(items1, 0);
-      arraySpreadResult = HermesBuiltin.arraySpread(Array(3 * itemsPerRow - items1.length).fill(null), arraySpreadResult);
+      const arraySpreadResult = HermesBuiltin.arraySpread(items1, 0);
+      HermesBuiltin.arraySpread(Array(3 * itemsPerRow - items1.length).fill(null), arraySpreadResult);
       const ArrayResult = Array(3 * itemsPerRow - items1.length);
-      return _undefined(sharedValue[20]).chunk(items2, itemsPerRow);
+      return _modDef12.chunk(items2, itemsPerRow);
     } else {
       let edges;
       if (tmp != null) {
@@ -237,116 +222,109 @@ const memoResult = importAllResult.memo(function MediaKeyboardList(channel) {
       }
       const items3 = [];
       HermesBuiltin.arraySpread(edges, HermesBuiltin.arraySpread(items1, 0));
-      return _undefined(sharedValue[20]).chunk(items3, itemsPerRow);
+      return _modDef12.chunk(items3, itemsPerRow);
     }
   }, items2);
   let items3 = [onPressCamera];
   callback1 = obj.useCallback(() => {
-    sharedValue(onManageLimited.CAMERA_BUTTON);
+    onPressCamera(onManageLimited.CAMERA_BUTTON);
   }, items3);
   const items4 = [itemsPageSizeRef, extensions];
   const items5 = [channel, draftType, callback1, onViewAll, onAttachPress, itemsPerRow, onPressItem, onLongPressItem, memo, includedUploadIds, flag2, uploadLimit, disableWhenReachedLimit, sum];
   const callback2 = obj.useCallback(() => {
-    let obj = _undefined(sharedValue[11]);
-    obj = { batchSize: itemsPageSizeRef.current, extensions };
-    const nextAssetPage = obj.getNextAssetPage(obj);
+    const nextAssetPage = DeviceMediaDefault.getNextAssetPage({ batchSize: itemsPageSizeRef.current, extensions });
   }, items4);
-  const callback3 = obj.useCallback((arg0, rowIndex) => flag2(_undefined(sharedValue[21]), { draftType: _undefined, rowIndex, totalNumItems: c26, channel: animatedIndex, numPerRow: itemsPerRow, items: memo[rowIndex], onPressItem, onLongPressItem, includedUploadIds, uploadLimit, disableWhenReachedLimit, handleCameraPress: callback1, handleAttachPress: onAttachPress, handleViewAllPhotosPress: onViewAll, disabled: flag2 }, memo[rowIndex].reduce((arg0, node) => {
+  const callback3 = obj.useCallback((arg0, rowIndex) => jsx(MediaKeyboardItemDefault, { draftType, rowIndex, totalNumItems, channel, numPerRow: itemsPerRow, items: memo[rowIndex], onPressItem, onLongPressItem, includedUploadIds, uploadLimit, disableWhenReachedLimit, handleCameraPress: callback1, handleAttachPress: onAttachPress, handleViewAllPhotosPress: onViewAll, disabled: flag2 }, memo[rowIndex].reduce((acc, node) => {
     if (null == node) {
-      return arg0;
+      return acc;
     } else {
       if (obj3.isMediaCameraNode(node)) {
         const _HermesInternal4 = HermesInternal;
-        let combined = "" + arg0 + "-camera";
+        let combined = "" + acc + "-camera";
       } else {
-        let tmp6Result = tmp6(tmp7[21]);
         if (tmp6Result.isAttachFilesNode(node)) {
           const _HermesInternal3 = HermesInternal;
-          combined = "" + arg0 + "-attach";
+          combined = "" + acc + "-attach";
         } else {
-          tmp6Result = tmp6(tmp7[21]);
-          if (tmp6Result.isViewAllPhotosNode(node)) {
+          if (tmp6Result2.isViewAllPhotosNode(node)) {
             const _HermesInternal2 = HermesInternal;
-            combined = "" + arg0 + "-view-all";
+            combined = "" + acc + "-view-all";
           } else {
             const _HermesInternal = HermesInternal;
-            combined = "" + arg0 + "-" + node.node.image.uri;
+            combined = "" + acc + "-" + node.node.image.uri;
           }
+          tmp6Result2 = tmp6(tmp7[21]);
         }
+        tmp6Result = tmp6(tmp7[21]);
       }
-      obj3 = callback(table[21]);
+      obj3 = channel(onPressCamera[21]);
     }
   }, rowIndex.toString())), items5);
   width = tmp6(tmp7[15])().width;
   const items6 = [width, itemsPerRow];
   const items7 = [onViewAll, flag2];
   const memo1 = obj.useMemo(() => {
-    const result = (width - (animatedIndex(sharedValue[21]).PARENT_PADDING + animatedIndex(sharedValue[21]).CHILD_PADDING * (itemsPerRow - 1))) / itemsPerRow;
-    return result + animatedIndex(sharedValue[21]).SEPARATOR_SIZE;
+    const result = (width - (MediaKeyboardItem.PARENT_PADDING + MediaKeyboardItem.CHILD_PADDING * (itemsPerRow - 1))) / itemsPerRow;
+    return result + MediaKeyboardItem.SEPARATOR_SIZE;
   }, items6);
-  const callback4 = obj.useCallback(() => flag2(_undefined(sharedValue[22]), { disabled: flag2, onViewAll }), items7);
+  const callback4 = obj.useCallback(() => jsx(MediaKeyboardFooterDefault, { disabled: flag2, onViewAll }), items7);
   if (tmp21) {
     maximum = first1.maximum;
   }
   const items8 = [maximum];
   const memo2 = obj.useMemo(() => ({ height: maximum }), items8);
-  const tmp3Result = tmp3(obj.useState(() => 32 + 36 * onViewAll.getState().byAppEntry[closure_19].fontScale), 2);
-  closure_31 = tmp3Result[1];
+  const tmp3Result = tmp3(onPressItem.useState(() => 32 + 36 * DimensionsStore.getState().byAppEntry[closure_19].fontScale), 2);
+  onHeightChange = tmp3Result[1];
   const items9 = [onManageLimited];
-  const callback5 = obj.useCallback(() => flag2(_undefined(sharedValue[23]), { onPress: onManageLimited, onHeightChange: closure_31 }), items9);
-  tmp9Result = tmp9(tmp7[24]);
-  const modalDismissGuardRefreshControl = tmp9Result.useModalDismissGuardRefreshControl();
+  const callback5 = obj.useCallback(() => jsx(MediaKeyboardLimitedPickerNoticeDefault, { onPress: onManageLimited, onHeightChange }), items9);
   const tmp25 = disableWhenReachedLimit();
-  obj1 = { photoPermissionStatus: first, photosEmpty: null, showCameraButton: null, onPressCamera: null, onManageLimited: null, onPressPrivacySettings: null };
+  const modalDismissGuardRefreshControl = channel(onPressCamera[24]).useModalDismissGuardRefreshControl();
+  const tmp9Result3 = channel(onPressCamera[24]);
+  const obj11 = { photoPermissionStatus, photosEmpty: null, showCameraButton: null, onPressCamera: null, onManageLimited: null, onPressPrivacySettings: null };
   let tmp36 = null != assets;
   if (tmp36) {
     tmp36 = 0 === assets.edges.length;
   }
-  obj1[1] = tmp36;
-  obj1[2] = flag;
-  obj1[3] = function onPressCamera() {
-    return sharedValue(onManageLimited.TAKE_A_PHOTO_BUTTON);
+  obj11.photosEmpty = tmp36;
+  obj11.showCameraButton = flag;
+  obj11.onPressCamera = function onPressCamera() {
+    return onPressCamera(onManageLimited.TAKE_A_PHOTO_BUTTON);
   };
-  obj1[4] = onManageLimited;
-  obj1[5] = importDefault(sharedValue[26]);
-  let mediaEmptyStateComponentOrNull = animatedIndex(sharedValue[25]).getMediaEmptyStateComponentOrNull(obj1);
+  obj11.onManageLimited = onManageLimited;
+  obj11.onPressPrivacySettings = draftType(onPressCamera[26]);
+  let mediaEmptyStateComponentOrNull = channel(onPressCamera[25]).getMediaEmptyStateComponentOrNull(obj11);
   if (null == mediaEmptyStateComponentOrNull) {
     let tmp38;
-    if (first === extensions.LIMITED) {
+    if (photoPermissionStatus === extensions.LIMITED) {
       tmp38 = callback5;
     }
-    obj2 = { renderHeader: null, headerSize: null, style: null, renderItem: null, sections: null, itemSize: null, inActionSheet: true, refreshControl: null, preserveScrollMomentum: true, automaticallyAdjustsScrollIndicatorInsets: false, keyboardDismissMode: "none", onEndReached: null, onScroll: null, endReachedThreshold: 400, accessibilityRole: "list", accessibilityLabel: null, showsVerticalScrollIndicator: false, footerSize: null, renderFooter: null, chunkBase: null, batchesToRender: null };
-    obj2[0] = tmp38;
+    const obj12 = { renderHeader: tmp38, headerSize: null, style: null, renderItem: null, sections: null, itemSize: null, inActionSheet: true, refreshControl: null, preserveScrollMomentum: true, automaticallyAdjustsScrollIndicatorInsets: false, keyboardDismissMode: "none", onEndReached: null, onScroll: null, endReachedThreshold: 400, accessibilityRole: "list", accessibilityLabel: null, showsVerticalScrollIndicator: false, footerSize: null, renderFooter: null, chunkBase: null, batchesToRender: null };
     let num3 = 0;
-    if (first === extensions.LIMITED) {
+    if (photoPermissionStatus === extensions.LIMITED) {
       num3 = tmp3Result[0];
     }
-    obj2[1] = num3;
+    obj12.headerSize = num3;
     const items10 = [memo2, tmp25.listContainer];
-    obj2[2] = items10;
-    obj2[3] = callback3;
+    obj12.style = items10;
+    obj12.renderItem = callback3;
     const items11 = [memo.length];
-    obj2[4] = items11;
-    obj2[5] = memo1;
-    obj2[7] = modalDismissGuardRefreshControl;
-    obj2[11] = callback2;
-    obj2[12] = callback;
+    obj12.sections = items11;
+    obj12.itemSize = memo1;
+    obj12.refreshControl = modalDismissGuardRefreshControl;
+    obj12.onEndReached = callback2;
+    obj12.onScroll = callback;
     const intl = tmp9(tmp7[28]).intl;
-    obj2[15] = intl.string(tmp9(tmp7[28]).t.XONG6A);
-    obj2[17] = tmp9(tmp7[22]).FOOTER_HEIGHT;
-    obj2[18] = callback4;
-    obj2[19] = maximum;
+    obj12.accessibilityLabel = intl.string(tmp9(tmp7[28]).t.XONG6A);
+    obj12.footerSize = tmp9(tmp7[22]).FOOTER_HEIGHT;
+    obj12.renderFooter = callback4;
+    obj12.chunkBase = maximum;
     let prop;
     if (!tmp21) {
       prop = tmp9(tmp7[27]).MINIMUM_BATCHES_TO_RENDER;
     }
-    obj2[20] = prop;
-    mediaEmptyStateComponentOrNull = flag2(tmp6(tmp7[27]), obj2);
-    const tmp41 = flag2;
+    obj12.batchesToRender = prop;
+    mediaEmptyStateComponentOrNull = flag2(tmp6(tmp7[27]), obj12);
     let tmp6Result = tmp6(tmp7[27]);
   }
   return mediaEmptyStateComponentOrNull;
 });
-let result = require("set").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardList.tsx");
-
-export default memoResult;

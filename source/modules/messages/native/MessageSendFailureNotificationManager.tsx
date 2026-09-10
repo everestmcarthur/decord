@@ -1,55 +1,49 @@
-// Module ID: 17819
-// Function ID: 17820
-// Name: handleMessageSendFailure
-// Dependencies: [2011, 4381, 1371, 1895, 1074, 13720, 10099, 10101, 9692, 1114, 7118, 2]
+// Module ID: 17852
+// Function ID: 17853
+// Name: MessageSendFailureNotificationManager
+// Dependencies: [2011, 4395, 1371, 1895, 1074, 13743, 10126, 10128, 9719, 1114, 7132, 2]
 
-// Module 17819 (handleMessageSendFailure)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import initializeDefault from "initialize" /* 7118 */;
-import NativeModulesDefault from "NativeModules" /* 9692 */;
-import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10099 */;
-import dispatcherDefault from "dispatcher" /* 10101 */;
-import closure_3 from "handleConnectionOpen" /* 2011 */;
-import closure_4 from "handleConnectionOpen" /* 4381 */;
-import closure_5 from "mergeGuildAvatar" /* 1371 */;
-import closure_6 from "getState" /* 1895 */;
-import ME from "ME" /* 1074 */;
-import { LocalNotificationTypes } from "LocalNotificationTypes" /* 13720 */;
+// Module 17852 (MessageSendFailureNotificationManager)
+import util from "util" /* 1114 */;
+import PushNotificationDefault from "PushNotification" /* 9719 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 10126 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 10128 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
+import UserStore from "UserStore" /* 1371 */;
+import AppStateStore from "AppStateStore" /* 1895 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-require = arg1;
+require = fn;
 function handleMessageSendFailure(shouldNotify) {
   ({ channelId, messageId } = shouldNotify);
   if (shouldNotify.shouldNotify) {
-    if ("active" !== state.getState()) {
-      let obj = NativeModulesDefault;
-      obj = { category: "local", alertTitle: null, alertBody: null, userInfo: null };
-      const intl = getSystemLocale.intl;
-      obj[1] = intl.string(getSystemLocale.t.LdlH2M);
-      const intl2 = getSystemLocale.intl;
-      obj[2] = intl2.string(getSystemLocale.t.xxRPOT);
-      obj = { channelId: null, messageId: null, type: null };
-      obj[0] = channelId;
-      obj[1] = messageId;
-      obj[2] = LocalNotificationTypes.MESSAGE_SEND_FAILED;
-      obj[3] = obj;
-      const result = obj.presentLocalNotification(obj);
-    } else if (channelId !== channelId.getChannelId(guildId.getGuildId())) {
+    if ("active" !== AppStateStore.getState()) {
+      const obj2 = { category: "local", alertTitle: null, alertBody: null, userInfo: null };
+      const intl = util.intl;
+      obj2.alertTitle = intl.string(util.t.LdlH2M);
+      const intl2 = util.intl;
+      obj2.alertBody = intl2.string(util.t.xxRPOT);
+      const obj3 = { channelId, messageId, type: LocalNotificationTypes.MESSAGE_SEND_FAILED };
+      obj2.userInfo = obj3;
+      const result = PushNotificationDefault.presentLocalNotification(obj2);
+    } else if (channelId !== SelectedChannelStore.getChannelId(SelectedGuildStore.getGuildId())) {
       const MESSAGE_FAILED_TO_SEND = constants.MESSAGE_FAILED_TO_SEND;
-      const notificationDuration = isReactionMilestoneNotification.getNotificationDuration(MESSAGE_FAILED_TO_SEND);
-      const obj4 = isReactionMilestoneNotification;
-      obj1 = { type: null, channelId: null, messageId: null, key: null, duration: null, onDismiss: null, inAppNotificationId: null };
-      obj1[0] = MESSAGE_FAILED_TO_SEND;
-      obj1[1] = channelId;
-      obj1[2] = messageId;
-      obj1[3] = `${channelId}-${messageId}`;
-      obj1[4] = notificationDuration;
-      obj1[5] = function onDismiss() {
-        callback(table[7]).clearNotification();
+      const notificationDuration = InAppNotificationUtils.getNotificationDuration(MESSAGE_FAILED_TO_SEND);
+      const obj6 = {
+        type: MESSAGE_FAILED_TO_SEND,
+        channelId,
+        messageId,
+        key: `${channelId}-${messageId}`,
+        duration: notificationDuration,
+        onDismiss() {
+              InAppNotificationActionCreatorsDefault.clearNotification();
+            },
+        inAppNotificationId: null
       };
-      const obj5 = dispatcherDefault;
-      obj1[6] = isReactionMilestoneNotification.generateInAppNotificationId();
-      obj5.enqueueNotification(obj1);
-      const obj7 = isReactionMilestoneNotification;
+      const obj5 = InAppNotificationActionCreatorsDefault;
+      obj6.inAppNotificationId = InAppNotificationUtils.generateInAppNotificationId();
+      obj5.enqueueNotification(obj6);
     }
   }
 }
@@ -64,7 +58,7 @@ function handleMessageCreate(message) {
     prop = message.state === constants2.SEND_FAILED;
   }
   if (prop) {
-    currentUser = currentUser.getCurrentUser();
+    const currentUser = UserStore.getCurrentUser();
     let id;
     if (currentUser != null) {
       id = currentUser.id;
@@ -79,20 +73,22 @@ function handleMessageCreate(message) {
   if (prop) {
     const _setTimeout = setTimeout;
     const timerId = setTimeout(() => {
-      closure_1_10({ channelId: message.channel_id, messageId: message.id, shouldNotify: true });
+      handleMessageSendFailure({ channelId: message.channel_id, messageId: message.id, shouldNotify: true });
     }, 3000);
   }
 }
-({ InAppNotificationTypes: error, MessageStates: closure_8 } = ME);
-initializeDefault;
-let prototype = function MessageSendFailureNotificationManager() {
+const Constants = fn(1074);
+({ InAppNotificationTypes: closure_7, MessageStates: closure_8 } = Constants);
+const LocalNotificationTypes = fn(13743).LocalNotificationTypes;
+const prototype = function MessageSendFailureNotificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { MESSAGE_CREATE: handleMessageCreate, MESSAGE_SEND_FAILED: handleMessageSendFailure };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp3 {
 }
-prototype = new prototype();
-let result = require("set").fileFinishedImporting("modules/messages/native/MessageSendFailureNotificationManager.tsx");
+const prototype1 = new prototype();
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/messages/native/MessageSendFailureNotificationManager.tsx");
 
-export default prototype;
+export default prototype1;

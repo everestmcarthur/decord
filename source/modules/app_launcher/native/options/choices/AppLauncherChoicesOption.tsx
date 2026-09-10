@@ -1,30 +1,30 @@
-// Module ID: 12168
-// Function ID: 12169
+// Module ID: 12194
+// Function ID: 12195
 // Name: AppLauncherChoicesOption
-// Dependencies: [32, 19, 21, 4560, 576, 1874, 4527, 12169, 1896, 12173, 8598, 4556, 2]
+// Dependencies: [32, 19, 21, 4574, 576, 1874, 4541, 12195, 1896, 12199, 8626, 4570, 2]
 // Exports: default
 
-// Module 12168 (AppLauncherChoicesOption)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12194 (AppLauncherChoicesOption)
+import nativeDefault from "native" /* 576 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-createCacheKey = { container: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, alignItems: "center", padding: 12 };
-createCacheKey[0] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/app_launcher/native/options/choices/AppLauncherChoicesOption.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, alignItems: "center", padding: 12 } };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/app_launcher/native/options/choices/AppLauncherChoicesOption.tsx");
 
 export default function AppLauncherChoicesOption(option) {
   option = option.option;
   ({ initialValue: importDefault, onSelect } = option);
   const onOpenChoicesSheet = option.onOpenChoicesSheet;
   const onDismissChoicesSheet = option.onDismissChoicesSheet;
-  let first;
-  let callback;
   ({ style, autoFocus, hasError } = option);
   const tmp3 = onOpenChoicesSheet(onDismissChoicesSheet.useState(() => {
     if (null != type) {
@@ -35,66 +35,64 @@ export default function AppLauncherChoicesOption(option) {
           found = choices.find((displayName) => displayName.displayName === text.text);
         }
         if (null != found) {
-          const obj = { choice: null, index: null };
-          obj[0] = found;
+          const obj = { choice: found, index: null };
           const choices1 = tmp.choices;
-          obj[1] = choices1.indexOf(found);
+          obj.index = choices1.indexOf(found);
           return obj;
         }
         tmp = option;
       }
     }
   }), 2);
-  first = tmp3[0];
-  callback = tmp3[1];
+  const first = tmp3[0];
+  closure_6 = tmp3[1];
   const items = [onDismissChoicesSheet, onOpenChoicesSheet, onSelect, option, ];
   let index;
   if (first != null) {
     index = first.index;
   }
   items[4] = index;
-  callback = onDismissChoicesSheet.useCallback(() => {
+  const callback = onDismissChoicesSheet.useCallback(() => {
     onOpenChoicesSheet();
-    let obj = option(onSelect[5]);
-    const result = obj.dismissGlobalKeyboard();
-    obj = { option, initChoiceIndex: null, onChoiceSelect: null, onDismiss: null };
+    const result = KeyboardManagerUtils.dismissGlobalKeyboard();
+    const obj3 = { option, initChoiceIndex: null, onChoiceSelect: null, onDismiss: null };
     let index;
-    const obj2 = closure_1_1(onSelect[6]);
+    const obj2 = ActionSheetActionCreatorsDefault;
     if (first != null) {
       index = first.index;
     }
-    obj[1] = index;
-    obj[2] = function onChoiceSelect(choice, index) {
-      callback2({ choice, index });
-      callback(choice);
+    obj3.initChoiceIndex = index;
+    obj3.onChoiceSelect = function onChoiceSelect(choice, index) {
+      closure_1_6({ choice, index });
+      onSelect(choice);
     };
-    obj[3] = onDismissChoicesSheet;
-    obj2.openLazy(option(onSelect[8])(onSelect[7], onSelect.paths), "AppLauncherChoicesActionSheet", obj);
+    obj3.onDismiss = onDismissChoicesSheet;
+    obj2.openLazy(asyncRequireImpl(12195, dependencyMap.paths), "AppLauncherChoicesActionSheet", obj3);
   }, items);
-  let obj = option(onSelect[9]);
-  const animationDelayedAutoFocus = obj.useAnimationDelayedAutoFocus(autoFocus, callback);
-  obj = { start: true, end: true, style: items1, hasError, label: null, subLabel: null, trailing: null, onPress: null };
-  items1 = [callback().container, style];
+  let tmp = closure_6();
+  const animationDelayedAutoFocus = option(onSelect[9]).useAnimationDelayedAutoFocus(autoFocus, callback);
+  let obj2 = { start: true, end: true, style: null, hasError, label: null, subLabel: null, trailing: null, onPress: null };
+  const items1 = [tmp.container, style];
+  obj2.style = items1;
   let str = "text-sm/medium";
   if (null == first) {
     str = "text-md/medium";
   }
-  obj = { variant: str, color: null, lineClamp: 1, children: null };
+  let obj3 = { variant: str, color: null, lineClamp: 1, children: null };
   let str2 = "interactive-text-default";
   if (null == first) {
     str2 = "text-default";
   }
-  obj[1] = str2;
-  obj[3] = option.displayName;
-  obj[4] = first(option(onSelect[11]).Text, obj);
+  obj3.color = str2;
+  obj3.children = option.displayName;
+  obj2.label = first(option(onSelect[11]).Text, obj3);
   let tmp10Result = null;
   if (null != first) {
-    obj1 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
-    obj1[3] = first.choice.displayName;
-    tmp10Result = tmp10(tmp7(tmp8[11]).Text, obj1);
+    const obj4 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: first.choice.displayName };
+    tmp10Result = tmp10(tmp7(tmp8[11]).Text, obj4);
   }
-  obj[5] = tmp10Result;
-  obj[6] = first(option(onSelect[10]).FormArrow, {});
-  obj[7] = callback;
-  return first(option(onSelect[10]).FormRow, obj);
+  obj2.subLabel = tmp10Result;
+  obj2.trailing = first(option(onSelect[10]).FormArrow, {});
+  obj2.onPress = callback;
+  return first(option(onSelect[10]).FormRow, obj2);
 };

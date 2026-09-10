@@ -1,35 +1,35 @@
-// Module ID: 15173
-// Function ID: 15174
-// Name: route
-// Dependencies: [1074, 11473, 1114, 11488, 14997, 15174, 2]
+// Module ID: 15200
+// Function ID: 15201
+// Name: QuestPreviewToolSetting
+// Dependencies: [1074, 11500, 1114, 11515, 15023, 15201, 2]
 
-// Module 15173 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import useQuests from "useQuests" /* 11488 */;
-import QuestsIcon from "QuestsIcon" /* 14997 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15200 (QuestPreviewToolSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 11515 */;
+import QuestsIcon from "QuestsIcon" /* 15023 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const require = globalThis.__r;
+
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.BDUDau);
+    const intl = util.intl;
+    return intl.string(util.t.BDUDau);
   },
   usePredicate() {
-    return useQuests.useIsPreviewerOnAnyQuest();
+    return hooks_QuestHooks.useIsPreviewerOnAnyQuest();
   },
   parent: null,
   IconComponent: QuestsIcon.QuestsIcon,
-  screen: obj
-};
-obj = {
-  route: ME.UserSettingsSections.QUEST_PREVIEW_TOOL_2,
-  getComponent() {
-    return require(15174) /* SettingsQuestPreviewScreen */.default;
+  screen: {
+    route: Constants.UserSettingsSections.QUEST_PREVIEW_TOOL_2,
+    getComponent() {
+      return require("SettingsQuestPreviewScreen").default;
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/QuestPreviewToolSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/QuestPreviewToolSetting.tsx");
 
 export default route;

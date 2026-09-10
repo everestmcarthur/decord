@@ -1,13 +1,16 @@
-// Module ID: 8680
-// Function ID: 8681
+// Module ID: 8708
+// Function ID: 8709
 // Name: useOpenGameProfileModal
-// Dependencies: [8681, 8685, 2]
+// Dependencies: [8709, 8713, 2]
 // Exports: default
 
-// Module 8680 (useOpenGameProfileModal)
-import set from "set" /* 2 */;
+// Module 8708 (useOpenGameProfileModal)
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8713 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/game_profile/hooks/useOpenGameProfileModal.tsx");
+const require = globalThis.__r;
+
+const result = size.fileFinishedImporting("modules/game_profile/hooks/useOpenGameProfileModal.tsx");
 
 export default function useOpenGameProfileModal(arg0) {
   importDefault = arg0;
@@ -16,11 +19,9 @@ export default function useOpenGameProfileModal(arg0) {
     obj = {};
   }
   const onOpened = obj.onOpened;
-  closure_2 = undefined;
-  let gameId;
-  const tmp = importDefault(onOpened[0])(arg0);
-  closure_2 = tmp;
-  gameId = tmp.gameId;
+  const tmp = require("useShouldOpenGameProfileModal")(arg0);
+  const gameProfileModalChecks = tmp;
+  const gameId = tmp.gameId;
   let fn;
   if (tmp.shouldOpenGameProfile) {
     if (null != gameId) {
@@ -31,12 +32,11 @@ export default function useOpenGameProfileModal(arg0) {
         if (stopPropagation != null) {
           stopPropagation.preventDefault();
         }
-        let obj = callback(onOpened[1]);
-        obj = {};
-        const merged = Object.assign(callback);
-        obj.gameId = gameId;
-        obj.gameProfileModalChecks = closure_2;
-        obj.openGameProfileModal(obj);
+        const obj2 = {};
+        const merged = Object.assign(closure_0);
+        obj2.gameId = gameId;
+        obj2.gameProfileModalChecks = gameProfileModalChecks;
+        GameProfileActionCreatorsDefault.openGameProfileModal(obj2);
         if (onOpened != null) {
           onOpened();
         }

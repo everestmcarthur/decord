@@ -1,38 +1,115 @@
-// Module ID: 16614
-// Function ID: 16615
+// Module ID: 16646
+// Function ID: 16647
 // Name: VibegrationsSettingsSheet
-// Dependencies: [5, 32, 19, 17, 16589, 16592, 16590, 21, 4560, 576, 6981, 504, 1114, 3547, 9797, 13258, 4527, 5685, 5688, 5604, 6606, 4556, 4975, 7198, 7149, 9798, 2]
+// Dependencies: [5, 32, 19, 17, 2012, 1979, 4222, 1371, 16620, 16623, 16621, 21, 4574, 576, 6995, 504, 1114, 3560, 9824, 13281, 4541, 5699, 5702, 5618, 6620, 4570, 4989, 7211, 7163, 9825, 7258, 5619, 5628, 4727, 11362, 2]
 // Exports: default
 
-// Module 16614 (VibegrationsSettingsSheet)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "newMessage" /* 16589 */;
-import rejectPendingPublish from "rejectPendingPublish" /* 16592 */;
-import closure_11 from "rejectPendingPublish" /* 16592 */;
-import closure_12 from "isProjectOwner" /* 16590 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16646 (VibegrationsSettingsSheet)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import _modDef3560 from "module_3560" /* 3560 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4541 */;
+import VibegrationsUtils from "VibegrationsUtils" /* 7258 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11362 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import GuildChannelStore from "GuildChannelStore" /* 2012 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
+import UserStore from "UserStore" /* 1371 */;
+import VibegrationsChatStore from "VibegrationsChatStore" /* 16620 */;
+import VibegrationsConnectionStore_mod from "VibegrationsConnectionStore" /* 16623 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16621 */;
 
-const require = arg1;
-({ requestProjectRebuild: closure_8, sendUserMessage: c9, submitProjectSettings: c10 } = rejectPendingPublish);
-({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
+require = fn;
+function VibegrationsChannelSettingRow(projectId) {
+  projectId = projectId.projectId;
+  const isPreview = projectId.isPreview;
+  const def = projectId.def;
+  ({ value: asyncGeneratorStep, onChange: _slicedToArray } = projectId);
+  c6 = undefined;
+  let found;
+  ({ hint, disabled, fallback } = projectId);
+  const items = [VibegrationsProjectStore];
+  const items1 = [isPreview, projectId];
+  const stateFromStores = projectId(def[15]).useStateFromStores(items, () => VibegrationsUtils.vibegrationsSettingsGuildId(VibegrationsProjectStore.getProject(projectId), isPreview), items1);
+  let obj = projectId(def[15]);
+  const items2 = [found];
+  const items3 = [stateFromStores];
+  const stateFromStores1 = projectId(def[15]).useStateFromStores(items2, () => {
+    channels = null;
+    if (null != stateFromStores) {
+      channels = GuildChannelStore.getChannels(tmp);
+    }
+    return channels;
+  }, items3);
+  if (null != stateFromStores) {
+    if (null != stateFromStores1) {
+      const result = tmp(tmp2[30]).vibegrationsSettingChannels(stateFromStores1, def.channel_filter);
+      c6 = result;
+      found = result.find((id) => id.id === asyncGeneratorStep);
+      if (found == null) {
+        found = null;
+      }
+      let obj3 = { label: def.label, subLabel: hint, arrow: true, disabled, trailing: null, onPress: null };
+      if (null != found) {
+        const tmpResult2 = tmp(tmp2[33]);
+        let channelName = tmpResult2.computeChannelName(found, UserStore, RelationshipStore, true);
+      } else {
+        let intl = tmp(tmp2[16]).intl;
+        channelName = intl.string(isPreview(tmp2[17]).grukkJ);
+      }
+      let obj4 = { text: channelName };
+      obj3.trailing = closure_17(tmp(tmp2[32]).TableRowTrailingText, obj4);
+      obj3.onPress = function onPress() {
+        const obj2 = { content: null, key: "VibegrationsSettingsChannelSheet", stackingBehavior: "stack" };
+        const obj3 = { header: { title: def.label }, guild: null, channels: null, selectedChannel: null, noChannelOptionLabel: null, onSelect: null };
+        const obj = ActionSheetActionCreators;
+        const obj4 = { title: def.label };
+        obj3.guild = GuildStore.getGuild(stateFromStores);
+        obj3.channels = channels;
+        obj3.selectedChannel = found;
+        const intl = util.intl;
+        obj3.noChannelOptionLabel = intl.string(_modDef3560.aO4AM6);
+        obj3.onSelect = function onSelect(id) {
+          let str;
+          if (id != null) {
+            str = id.id;
+          }
+          if (str == null) {
+            str = "";
+          }
+          return closure_1_4(str);
+        };
+        obj2.content = closure_2_17(ChannelPickerActionSheetDefault, obj3);
+        obj.showActionSheet(obj2);
+      };
+      return closure_17(tmp(tmp2[31]).TableRow, obj3);
+    }
+  }
+  return fallback;
+}
+const View = fn(17).View;
+let VibegrationsConnectionStore = fn(16623);
+({ requestProjectRebuild: closure_12, sendUserMessage: map1, submitProjectSettings: closure_14 } = VibegrationsConnectionStore);
+let VibegrationsConnectionStore = VibegrationsConnectionStore_mod;
+const jsxProd = fn(21);
+({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
 const VibegrationsSettingsSheet = "VibegrationsSettingsSheet";
-let closure_17 = createCacheKey.createStyles((paddingBottom) => {
-  let obj = { container: null, section: null, secretRow: null, secretRowInfo: null };
-  obj = { gap: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom };
-  obj[0] = obj;
-  obj = { gap: ThemesDefault.space.PX_16 };
-  obj[1] = obj;
-  obj[2] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: ThemesDefault.space.PX_8 };
-  obj1 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: ThemesDefault.space.PX_8 };
-  obj[3] = { flex: 1, gap: ThemesDefault.space.PX_4 };
+const createStyles = fn(4574);
+let closure_21 = createStyles.createStyles((paddingBottom) => {
+  const obj = { container: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom }, section: null, secretRow: null, secretRowInfo: null };
+  const obj2 = { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom };
+  obj.section = { gap: nativeDefault.space.PX_16 };
+  const obj3 = { gap: nativeDefault.space.PX_16 };
+  obj.secretRow = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8 };
+  const obj4 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8 };
+  obj.secretRowInfo = { flex: 1, gap: nativeDefault.space.PX_4 };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/vibegrations/native/VibegrationsSettingsSheet.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/vibegrations/native/VibegrationsSettingsSheet.tsx");
 
 export default function VibegrationsSettingsSheet(projectId) {
   projectId = projectId.projectId;
@@ -40,27 +117,19 @@ export default function VibegrationsSettingsSheet(projectId) {
   if (notifyAgent === undefined) {
     notifyAgent = false;
   }
-  dependencyMap = undefined;
-  let stateFromStores;
+  let flag = projectId.isPreview;
+  if (flag === undefined) {
+    flag = false;
+  }
   let first;
-  let React;
-  let first1;
-  closure_7 = undefined;
-  c8 = undefined;
   c9 = undefined;
-  let first2;
-  closure_11 = undefined;
-  closure_12 = undefined;
-  let memo;
+  c10 = undefined;
   let memo1;
-  let memo2;
-  let found;
-  let map;
-  c18 = undefined;
+  c19 = undefined;
   let memo4;
-  closure_20 = undefined;
+  closure_21 = undefined;
   function renderValueSetting(found) {
-    closure_0 = found;
+    projectId = found;
     let hint;
     if (found != null) {
       hint = found.hint;
@@ -78,87 +147,132 @@ export default function VibegrationsSettingsSheet(projectId) {
     }
     let stringResult;
     if (true === requires_rebuild) {
-      const intl = projectId(closure_2[12]).intl;
-      stringResult = intl.string(notifyAgent(closure_2[13]).xPxvYa);
+      const intl = projectId(flag[16]).intl;
+      stringResult = intl.string(notifyAgent(flag[17]).xPxvYa);
     }
     items[1] = stringResult;
-    found = items.filter((arg0) => null != arg0);
+    found = items.filter((item) => null != item);
     if (0 !== found.length) {
       const joined = found.join(" ");
     }
     if ("select" === found.type) {
-      let tmp24 = first[found.key];
-      if (tmp24 == null) {
-        tmp24 = memo1[found.key];
+      let tmp38 = first[found.key];
+      if (tmp38 == null) {
+        tmp38 = memo1[found.key];
       }
-      let tmp29;
-      if (typeof tmp24 === "string") {
-        tmp29 = tmp24;
+      let tmp43;
+      if (typeof tmp38 === "string") {
+        tmp43 = tmp38;
       }
-      let obj = { hasIcons: false, defaultValue: null, onChange: null, title: null, accessibilityLabel: null, children: null };
-      obj[1] = tmp29;
-      obj[2] = function onChange(arg0) {
-        closure_0 = arg0;
-        closure_1_12(false);
-        closure_1_5((arg0) => {
-          const obj = {};
-          const merged = Object.assign(arg0);
-          obj[key.key] = key;
-          return obj;
-        });
+      const obj2 = {
+        hasIcons: false,
+        defaultValue: tmp43,
+        onChange(arg0) {
+            closure_1_13(false);
+            closure_1_6((arg0) => {
+              const obj = {};
+              const merged = Object.assign(arg0);
+              obj[key.key] = key;
+              return obj;
+            });
+          },
+        title: null,
+        accessibilityLabel: null,
+        children: null
       };
-      ({ label: obj3[3], label: obj3[4], options } = found);
+      ({ label: obj5.title, label: obj5.accessibilityLabel, options } = found);
       if (options == null) {
         options = [];
       }
-      obj[5] = options.map((label) => callback2(callback(table[18]).TableRadioRow, { label: label.label, value: label.value }, label.value));
-      return memo(projectId(closure_2[17]).TableRadioGroup, obj, found.key);
+      obj2.children = options.map((label) => found(closure_0(flag[22]).TableRadioRow, { label: label.label, value: label.value }, label.value));
+      return found(projectId(flag[21]).TableRadioGroup, obj2, found.key);
     } else if ("checkbox" === found.type) {
-      let tmp17 = first[found.key];
-      if (tmp17 == null) {
-        tmp17 = memo1[found.key];
+      let tmp31 = first[found.key];
+      if (tmp31 == null) {
+        tmp31 = memo1[found.key];
       }
-      obj = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
-      obj[0] = found.label;
-      obj[1] = joined;
-      obj[2] = true === tmp17;
-      obj[3] = first2;
-      obj[4] = function onPress(arg0) {
-        closure_0 = arg0;
-        closure_1_12(false);
-        closure_1_5((arg0) => {
-          const obj = {};
-          const merged = Object.assign(arg0);
-          obj[key.key] = key;
-          return obj;
-        });
+      const obj3 = {
+        label: found.label,
+        subLabel: joined,
+        checked: true === tmp31,
+        disabled: first2,
+        onPress(arg0) {
+            closure_1_13(false);
+            closure_1_6((arg0) => {
+              const obj = {};
+              const merged = Object.assign(arg0);
+              obj[key.key] = key;
+              return obj;
+            });
+          }
       };
-      return memo(projectId(closure_2[19]).TableCheckboxRow, obj, found.key);
+      return found(projectId(flag[23]).TableCheckboxRow, obj3, found.key);
     } else {
-      let tmp11 = first[found.key];
-      if (tmp11 == null) {
-        tmp11 = memo1[found.key];
+      if ("channel" === found.type) {
+        const obj4 = { projectId, isPreview: flag, def: found, hint: joined, value: null, disabled: null, onChange: null, fallback: null };
+        let tmp22 = first[found.key];
+        if (tmp22 == null) {
+          tmp22 = memo1[found.key];
+        }
+        obj4.value = tmp22;
+        obj4.disabled = first2;
+        obj4.onChange = function onChange(arg0) {
+          closure_1_13(false);
+          closure_1_6((arg0) => {
+            const obj = {};
+            const merged = Object.assign(arg0);
+            obj[key.key] = key;
+            return obj;
+          });
+        };
+        closure_130_0 = found;
+        let tmp25 = first[found.key];
+        if (tmp25 == null) {
+          tmp25 = memo1[found.key];
+        }
+        const obj9 = { label: found.label, description: joined, autoComplete: "off", autoCapitalize: "none", autoCorrect: false, value: null, onChange: null, isDisabled: null };
+        let str4 = "";
+        if (typeof tmp25 === "string") {
+          str4 = tmp25;
+        }
+        obj9.value = str4;
+        obj9.onChange = function onChange(arg0) {
+          closure_1_13(false);
+          closure_1_6((arg0) => {
+            const obj = {};
+            const merged = Object.assign(arg0);
+            obj[key.key] = key;
+            return obj;
+          });
+        };
+        obj9.isDisabled = first2;
+        obj4.fallback = found(projectId(flag[24]).TextInput, obj9, found.key);
+        let tmp12Result = found(renderValueSetting, obj4, found.key);
+      } else {
+        closure_129_0 = found;
+        let tmp11 = first[found.key];
+        if (tmp11 == null) {
+          tmp11 = memo1[found.key];
+        }
+        let obj = { label: found.label, description: joined, autoComplete: "off", autoCapitalize: "none", autoCorrect: false, value: null, onChange: null, isDisabled: null };
+        let str3 = "";
+        if (typeof tmp11 === "string") {
+          str3 = tmp11;
+        }
+        obj.value = str3;
+        obj.onChange = function onChange(arg0) {
+          closure_1_13(false);
+          closure_1_6((arg0) => {
+            const obj = {};
+            const merged = Object.assign(arg0);
+            obj[key.key] = key;
+            return obj;
+          });
+        };
+        obj.isDisabled = first2;
+        tmp12Result = found(projectId(flag[24]).TextInput, obj, found.key);
       }
-      obj = { label: null, description: null, autoComplete: "off", autoCapitalize: "none", autoCorrect: false, value: null, onChange: null, isDisabled: null };
-      obj[0] = found.label;
-      obj[1] = joined;
-      let str3 = "";
-      if (typeof tmp11 === "string") {
-        str3 = tmp11;
-      }
-      obj[5] = str3;
-      obj[6] = function onChange(arg0) {
-        closure_0 = arg0;
-        closure_1_12(false);
-        closure_1_5((arg0) => {
-          const obj = {};
-          const merged = Object.assign(arg0);
-          obj[key.key] = key;
-          return obj;
-        });
-      };
-      obj[7] = first2;
-      return memo(projectId(closure_2[20]).TextInput, obj, found.key);
+      return tmp12Result;
     }
   }
   function renderSecret(value) {
@@ -189,99 +303,93 @@ export default function VibegrationsSettingsSheet(projectId) {
     }
     let stringResult;
     if (true === requires_rebuild) {
-      const intl = projectId(closure_2[12]).intl;
-      stringResult = intl.string(notifyAgent(closure_2[13]).xPxvYa);
+      const intl = projectId(flag[16]).intl;
+      stringResult = intl.string(notifyAgent(flag[17]).xPxvYa);
     }
     items[1] = stringResult;
-    found = items.filter((arg0) => null != arg0);
+    found = items.filter((item) => null != item);
     let joined;
     if (0 !== found.length) {
       joined = found.join(" ");
     }
     if (value.set) {
       if (true !== _undefined[value.name]) {
-        let obj = { style: null, children: null };
-        obj[0] = closure_2.secretRow;
-        obj = { style: null, children: null };
-        obj[0] = closure_2.secretRowInfo;
-        obj1 = { variant: "text-sm/medium", color: "text-default", children: null };
-        obj1[2] = label;
-        const items1 = [memo(projectId(closure_2[21]).Text, obj1), memo(projectId(closure_2[21]).Text, { variant: "text-sm/normal", color: "text-muted", children: "\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022" }), ];
+        const obj2 = { style: closure_3.secretRow, children: null };
+        const obj3 = { style: closure_3.secretRowInfo, children: null };
+        const obj4 = { variant: "text-sm/medium", color: "text-default", children: label };
+        const items1 = [found(projectId(flag[25]).Text, obj4), found(projectId(flag[25]).Text, { variant: "text-sm/normal", color: "text-muted", children: "\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022" }), ];
         let tmp23 = null;
         if (null != joined) {
-          const obj2 = { variant: "text-xs/normal", color: "text-muted", children: null };
-          obj2[2] = joined;
-          tmp23 = memo(projectId(closure_2[21]).Text, obj2);
+          const obj5 = { variant: "text-xs/normal", color: "text-muted", children: joined };
+          tmp23 = found(projectId(flag[25]).Text, obj5);
         }
         items1[2] = tmp23;
-        obj[1] = items1;
-        const items2 = [memo1(first1, obj), ];
-        const obj3 = { variant: "secondary", size: "sm", text: null, accessibilityLabel: null, disabled: null, onPress: null };
-        const intl2 = projectId(closure_2[12]).intl;
-        obj3[2] = intl2.string(notifyAgent(closure_2[13]).j6itec);
-        const intl3 = projectId(closure_2[12]).intl;
-        const obj4 = { label: null };
-        obj4[0] = label;
-        obj3[3] = intl3.formatToPlainString(notifyAgent(closure_2[13]).cTofe2, obj4);
-        obj3[4] = first2;
-        obj3[5] = function onPress() {
-          return closure_1_9((arg0) => {
+        obj3.children = items1;
+        const items2 = [map(closure_6, obj3), ];
+        const obj6 = { variant: "secondary", size: "sm", text: null, accessibilityLabel: null, disabled: null, onPress: null };
+        const intl2 = projectId(flag[16]).intl;
+        obj6.text = intl2.string(notifyAgent(flag[17]).j6itec);
+        const intl3 = projectId(flag[16]).intl;
+        const obj7 = { label };
+        obj6.accessibilityLabel = intl3.formatToPlainString(notifyAgent(flag[17]).cTofe2, obj7);
+        obj6.disabled = first2;
+        obj6.onPress = function onPress() {
+          return c10((arg0) => {
             const obj = {};
             const merged = Object.assign(arg0);
             obj[name.name] = true;
             return obj;
           });
         };
-        items2[1] = memo(projectId(closure_2[22]).Button, obj3);
-        obj[1] = items2;
-        let tmp12Result = tmp14(tmp15, obj, value.name);
+        items2[1] = found(projectId(flag[26]).Button, obj6);
+        obj2.children = items2;
+        let tmp12Result = tmp14(tmp15, obj2, value.name);
       }
       return tmp12Result;
     }
-    obj = { label, description: joined, placeholder: null, secureTextEntry: true, autoComplete: "off", autoCapitalize: "none", autoCorrect: false, value: null, onChange: null, isDisabled: null };
+    let obj = { label, description: joined, placeholder: null, secureTextEntry: true, autoComplete: "off", autoCapitalize: "none", autoCorrect: false, value: null, onChange: null, isDisabled: null };
     let str3;
     if (value.set) {
       str3 = "\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022";
     }
-    obj[2] = str3;
+    obj.placeholder = str3;
     let str4 = first1[value.name];
     if (str4 == null) {
       str4 = "";
     }
-    obj[7] = str4;
-    obj[8] = function onChange(arg0) {
-      closure_0 = arg0;
-      closure_1_12(false);
-      closure_1_7((arg0) => {
+    obj.value = str4;
+    obj.onChange = function onChange(arg0) {
+      const name = arg0;
+      closure_1_13(false);
+      closure_1_8((arg0) => {
         const obj = {};
         const merged = Object.assign(arg0);
         obj[name.name] = name;
         return obj;
       });
     };
-    obj[9] = first2;
-    tmp12Result = memo(projectId(closure_2[20]).TextInput, obj, value.name);
+    obj.isDisabled = first2;
+    tmp12Result = found(projectId(flag[24]).TextInput, obj, value.name);
   }
-  let tmp3 = map(notifyAgent(6981)({ includeKeyboardHeight: true }).insets.bottom);
-  dependencyMap = tmp3;
-  let obj = projectId(504);
-  let items = [closure_11];
-  stateFromStores = obj.useStateFromStores(items, () => settings.getSettings(projectId));
-  obj1 = React;
-  const tmp7 = first(React.useState({}), 2);
+  let tmp3 = closure_21(notifyAgent(flag[14])({ includeKeyboardHeight: true }).insets.bottom);
+  asyncGeneratorStep = tmp3;
+  let items = [memo1];
+  const stateFromStores = projectId(flag[15]).useStateFromStores(items, () => VibegrationsConnectionStore.getSettings(projectId));
+  const tmp7 = stateFromStores(first.useState({}), 2);
   first = tmp7[0];
-  React = tmp7[1];
-  const tmp9 = first(React.useState({}), 2);
-  first1 = tmp9[0];
-  closure_7 = tmp9[1];
-  [c8, c9] = first(React.useState({}), 2);
-  const tmp12 = first(React.useState(false), 2);
-  first2 = tmp12[0];
-  closure_11 = tmp12[1];
-  let tmp14 = first(React.useState(false), 2);
-  closure_12 = tmp14[1];
+  closure_6 = tmp7[1];
+  const tmp9 = stateFromStores(first.useState({}), 2);
+  const first1 = tmp9[0];
+  closure_8 = tmp9[1];
+  let obj = projectId(flag[15]);
+  [c9, c10] = stateFromStores(first.useState({}), 2);
+  let tmp12 = stateFromStores(first.useState(false), 2);
+  const first2 = tmp12[0];
+  closure_12 = tmp12[1];
+  let tmp14 = stateFromStores(first.useState(false), 2);
+  closure_13 = tmp14[1];
   let items1 = [stateFromStores];
-  memo = React.useMemo(() => {
+  const memo = first.useMemo(() => {
     let schema;
     if (stateFromStores != null) {
       schema = stateFromStores.schema;
@@ -292,7 +400,7 @@ export default function VibegrationsSettingsSheet(projectId) {
     return schema;
   }, items1);
   let items2 = [stateFromStores];
-  memo1 = React.useMemo(() => {
+  memo1 = first.useMemo(() => {
     let obj;
     if (stateFromStores != null) {
       obj = stateFromStores.values;
@@ -303,7 +411,7 @@ export default function VibegrationsSettingsSheet(projectId) {
     return obj;
   }, items2);
   const items3 = [memo, stateFromStores];
-  memo2 = React.useMemo(() => {
+  const memo2 = first.useMemo(() => {
     let secrets;
     if (stateFromStores != null) {
       secrets = stateFromStores.secrets;
@@ -311,12 +419,11 @@ export default function VibegrationsSettingsSheet(projectId) {
     if (secrets == null) {
       secrets = [];
     }
-    return secrets.map((arg0) => {
-      closure_0 = arg0;
+    return secrets.map((item) => {
       const obj = {};
-      const merged = Object.assign(arg0);
-      obj.def = closure_13.find((key) => {
-        let tmp = key.key === name.name;
+      const merged = Object.assign(item);
+      obj.def = memo.find((key) => {
+        let tmp = key.key === item.name;
         if (tmp) {
           tmp = "secret" === key.type;
         }
@@ -325,24 +432,24 @@ export default function VibegrationsSettingsSheet(projectId) {
       return obj;
     });
   }, items3);
-  found = memo.filter((type) => "secret" !== type.type);
-  map = new Map(memo2.map((name) => {
+  let found = memo.filter((type) => "secret" !== type.type);
+  const map = new Map(memo2.map((name) => {
     const items = [name.name, name];
     return items;
   }));
   if (scopeKeys == null) {
     scopeKeys = [];
   }
-  const found1 = scopeKeys.filter((arg0) => {
-    closure_0 = arg0;
+  const found1 = scopeKeys.filter((item) => {
+    closure_0 = item;
     let someResult = found.some((key) => key.key === closure_0);
     if (!someResult) {
-      someResult = map.has(arg0);
+      someResult = map.has(item);
     }
     return someResult;
   });
   let tmp19 = !tmp17;
-  let tmp11 = first(React.useState({}), 2);
+  let tmp11 = stateFromStores(first.useState({}), 2);
   if (found1.length <= 0) {
     tmp19 = found.length > 0;
   }
@@ -353,42 +460,42 @@ export default function VibegrationsSettingsSheet(projectId) {
   if (0 === found.length) {
     num = 1;
   }
-  let tmp6Result = tmp6(obj1.useState(num), 2);
-  [tmp21, tmp22] = tmp6Result;
-  tmp6Result = tmp6(obj1.useState(0), 2);
-  [tmp24, c18] = tmp6Result;
+  let someResult = found1.some((item) => map.has(item));
+  [tmp21, tmp22] = stateFromStores(first.useState(num), 2);
+  const tmp6Result = stateFromStores(first.useState(num), 2);
+  [tmp24, c19] = stateFromStores(first.useState(0), 2);
   const items4 = [memo2.length, found.length];
-  const callback = obj1.useCallback((nativeEvent) => {
+  const callback = obj2.useCallback((nativeEvent) => {
     _undefined2(nativeEvent.nativeEvent.layout.width);
   }, []);
-  const memo3 = obj1.useMemo(() => {
-    let obj = { id: "settings", label: null, count: null, page: null };
-    const intl = projectId(closure_2[12]).intl;
-    obj[1] = intl.string(notifyAgent(closure_2[13]).jczqxT);
-    obj[2] = found.length;
+  const memo3 = obj2.useMemo(() => {
+    const obj = { id: "settings", label: null, count: null, page: null };
+    const intl = util.intl;
+    obj.label = intl.string(_modDef3560.jczqxT);
+    obj.count = found.length;
     const items = [obj, ];
-    obj = { id: "secrets", label: null, count: null, page: null };
-    const intl2 = projectId(closure_2[12]).intl;
-    obj[1] = intl2.string(notifyAgent(closure_2[13]).iD7xfZ);
-    obj[2] = memo2.length;
-    items[1] = obj;
+    const obj2 = { id: "secrets", label: null, count: null, page: null };
+    const intl2 = util.intl;
+    obj2.label = intl2.string(_modDef3560.iD7xfZ);
+    obj2.count = memo2.length;
+    items[1] = obj2;
     return items;
   }, items4);
-  let someResult = found1.some((arg0) => map.has(arg0));
-  const segmentedControlState = projectId(9797).useSegmentedControlState({ items: memo3, pageWidth: tmp24, defaultIndex: num, onSetActiveIndex: tmp22 });
+  const tmp6Result2 = stateFromStores(first.useState(0), 2);
+  const segmentedControlState = projectId(flag[18]).useSegmentedControlState({ items: memo3, pageWidth: tmp24, defaultIndex: num, onSetActiveIndex: tmp22 });
   if (tmp19) {
     let tmp28 = 1 === tmp21;
   } else {
     tmp28 = 0 === found.length;
   }
   const items5 = [memo, first1, memo1, first];
-  memo4 = obj1.useMemo(() => {
-    let obj = {};
+  memo4 = obj2.useMemo(() => {
+    const values = {};
     function _loop(arg0) {
       closure_0 = arg0;
-      found = closure_1_13.find((key) => key.key === closure_0);
+      found = memo.find((key) => key.key === closure_0);
       if (null != found) {
-        let tmp3 = closure_1_14[arg0];
+        let tmp3 = memo1[arg0];
         if (tmp3 == null) {
           tmp3 = "checkbox" !== found.type && "";
           const tmp4 = "checkbox" !== found.type && "";
@@ -399,65 +506,58 @@ export default function VibegrationsSettingsSheet(projectId) {
           } else {
             tmp6 = null;
           }
-          closure_0[arg0] = tmp6;
+          obj[arg0] = tmp6;
         }
       }
       return 1;
     }
     const entries = Object.entries(first);
     while (tmp2 !== undefined) {
-      let tmp4 = first;
-      let tmp5 = first(tmp3, 2);
+      let tmp5 = stateFromStores(tmp3, 2);
       closure_1 = tmp5[1];
       let _loopResult = _loop(tmp5[0]);
       continue;
     }
-    obj = {};
+    const obj2 = {};
     const entries1 = Object.entries(first1);
     tmp2 = entries[Symbol.iterator]();
     while (tmp8 !== undefined) {
-      let tmp10 = first;
-      let tmp11 = first(tmp9, 2);
+      let tmp11 = stateFromStores(tmp9, 2);
       [tmp12, str] = tmp11;
       let str2 = str;
       if ("" !== str.trim()) {
-        let tmp13 = tmp12;
-        let tmp14 = str;
-        obj[tmp12] = str2.trim();
+        obj2[tmp12] = str2.trim();
       }
       continue;
     }
-    if (Object.keys(obj).length > 0) {
-      obj = { values: null };
-      obj[0] = obj;
-      obj1 = obj;
-    } else {
-      obj1 = {};
-    }
-    const merged = Object.assign(obj1);
-    if (Object.keys(obj).length > 0) {
-      const obj3 = { secrets: null };
-      obj3[0] = obj;
+    if (Object.keys(values).length > 0) {
+      const obj3 = { values };
       let obj4 = obj3;
     } else {
       obj4 = {};
     }
-    const merged1 = Object.assign(obj4);
+    const merged = Object.assign(obj4);
+    if (Object.keys(obj2).length > 0) {
+      const obj6 = { secrets: obj2 };
+      let obj7 = obj6;
+    } else {
+      obj7 = {};
+    }
+    const merged1 = Object.assign(obj7);
     return {};
   }, items5);
-  closure_20 = tmp30;
+  closure_21 = tmp30;
   const items6 = [null != memo4.values || null != memo4.secrets, notifyAgent, projectId, first2, memo4];
-  const callback1 = obj1.useCallback(stateFromStores(function*() {
+  const callback1 = obj2.useCallback(asyncGeneratorStep(async (arg0, value) => {
     if (c7 === 2) {
       c7 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp7 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -467,27 +567,25 @@ export default function VibegrationsSettingsSheet(projectId) {
         if (0 === c6) {
           if (arg0 === 1) {
             c7 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_3 = tmp4;
-            closure_2 = tmp8;
+            dependencyMap = tmp8;
             let rebuildRequired;
-            let project;
-            if (closure_1_20) {
-              if (!closure_1_10) {
-                closure_1_11(true);
-                closure_1_12(false);
+            let project2;
+            if (closure_21) {
+              if (!first2) {
+                closure_12(true);
+                closure_13(false);
                 c5 = 2;
                 c6 = 3;
                 c7 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_1_10(closure_1_0, closure_1_19);
-                return obj1;
+                const obj4 = { value: memo(projectId, memo4), done: false };
+                return obj4;
               }
             }
             c7 = 3;
@@ -495,59 +593,58 @@ export default function VibegrationsSettingsSheet(projectId) {
         } else if (1 !== tmp8) {
           if (2 === tmp8) {
             c5 = 1;
-            closure_1_12(true);
+            closure_131_13(true);
           } else if (arg0 === 1) {
             c7 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c5 = 0;
-            closure_1_11(false);
+            closure_131_12(false);
             c7 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
-            rebuildRequired = arg1.rebuildRequired;
-            if (!project) {
-              if (!c7.hasPendingSettingsRequest(rebuildRequired)) {
+            rebuildRequired = value.rebuildRequired;
+            if (!closure_131_1) {
+              if (!closure_1_11.hasPendingSettingsRequest(closure_131_0)) {
                 if (rebuildRequired) {
-                  closure_1_8(rebuildRequired);
+                  closure_1_12(closure_131_0);
                 } else {
-                  project = closure_1_12.getProject(rebuildRequired);
+                  project2 = project.getProject(closure_131_0);
                   let application_id;
-                  if (project != null) {
-                    application_id = project.application_id;
+                  if (project2 != null) {
+                    application_id = project2.application_id;
                   }
-                  rebuildRequired = application_id;
+                  let _null = application_id;
                   if (application_id == null) {
-                    rebuildRequired = null;
+                    _null = null;
                   }
-                  closure_1_1(closure_1_2[15])(rebuildRequired);
+                  _null2(13281)(_null);
                   let prop;
-                  const tmp19 = closure_1_1(closure_1_2[15]);
-                  if (project != null) {
-                    prop = project.preview_application_id;
+                  const tmp19 = _null2(13281);
+                  if (project2 != null) {
+                    prop = project2.preview_application_id;
                   }
-                  project = prop;
+                  _null2 = prop;
                   if (prop == null) {
-                    project = null;
+                    _null2 = null;
                   }
-                  closure_1_1(closure_1_2[15])(project);
-                  const tmp27 = closure_1_1(closure_1_2[15]);
+                  _null2(13281)(_null2);
+                  const tmp27 = _null2(13281);
                 }
               }
-              obj = closure_1_1(closure_1_2[16]);
-              obj.hideActionSheet(closure_1_16);
+              _null2(4541).hideActionSheet(closure_1_20);
               c5 = 1;
+              const obj = _null2(4541);
             }
-            const intl = closure_1_0(closure_1_2[12]).intl;
-            closure_1_9(closure_1_0, intl.string(closure_1_1(closure_1_2[13]).gqJFu0));
+            const intl = _null(1114).intl;
+            closure_1_13(closure_131_0, intl.string(_null2(3560).gqJFu0));
           }
           c5 = 0;
-          closure_1_11(false);
+          closure_131_12(false);
         }
         c5 = 0;
-        closure_1_11(false);
+        closure_131_12(false);
         throw closure_4;
       } catch (tmp69) {
         closure_4 = tmp69;
@@ -562,48 +659,46 @@ export default function VibegrationsSettingsSheet(projectId) {
       }
     }
   }), items6);
-  obj = { startExpanded: true, header: null, children: null };
-  obj = { title: null };
-  let intl = tmp4(1114).intl;
-  obj[0] = intl.string(notifyAgent(3547).gTMvzD);
-  obj[1] = memo(projectId(7149).BottomSheetTitleHeader, obj);
-  obj1 = { style: tmp3.container, children: null };
+  let obj3 = { startExpanded: true, header: null, children: null };
+  let obj4 = { title: null };
+  let intl = tmp4(tmp2[16]).intl;
+  obj4.title = intl.string(notifyAgent(flag[17]).gTMvzD);
+  obj3.header = found(projectId(flag[28]).BottomSheetTitleHeader, obj4);
+  let obj5 = { style: tmp3.container, children: null };
   let tmp32Result = null;
   if (null != note) {
     tmp32Result = null;
     if ("" !== note) {
-      let obj2 = { variant: "text-sm/normal", color: "text-default", children: null };
-      obj2[2] = note;
-      tmp32Result = tmp32(tmp4(4556).Text, obj2);
+      let obj6 = { variant: "text-sm/normal", color: "text-default", children: note };
+      tmp32Result = tmp32(tmp4(tmp2[25]).Text, obj6);
     }
   }
   const items7 = [tmp32Result, , , , ];
-  tmp32Result = null;
+  let tmp32Result5 = null;
   if (0 === found.length) {
-    tmp32Result = null;
+    tmp32Result5 = null;
     if (0 === memo2.length) {
-      let obj3 = { variant: "text-sm/normal", color: "text-muted", children: null };
-      let intl2 = tmp4(1114).intl;
-      obj3[2] = intl2.string(tmp(3547).URnN4B);
-      tmp32Result = tmp32(tmp4(4556).Text, obj3);
+      let obj7 = { variant: "text-sm/normal", color: "text-muted", children: null };
+      let intl2 = tmp4(tmp2[16]).intl;
+      obj7.children = intl2.string(tmp(tmp2[17]).URnN4B);
+      tmp32Result5 = tmp32(tmp4(tmp2[25]).Text, obj7);
     }
   }
-  items7[1] = tmp32Result;
+  items7[1] = tmp32Result5;
   if (found1.length > 0) {
-    let obj4 = { style: null, children: null };
-    obj4[0] = tmp3.section;
-    let tmp32Result1 = null;
+    const obj8 = { style: tmp3.section, children: null };
+    let tmp32Result6 = null;
     if (someResult) {
-      const obj5 = { variant: "text-xs/normal", color: "text-muted", children: null };
-      const intl4 = tmp4(1114).intl;
-      obj5[2] = intl4.string(tmp(3547)["Hl+eu7"]);
-      tmp32Result1 = tmp32(tmp4(4556).Text, obj5);
+      let obj9 = { variant: "text-xs/normal", color: "text-muted", children: null };
+      const intl4 = tmp4(tmp2[16]).intl;
+      obj9.children = intl4.string(tmp(tmp2[17])["Hl+eu7"]);
+      tmp32Result6 = tmp32(tmp4(tmp2[25]).Text, obj9);
     }
     const items8 = [
-      tmp32Result1,
-      found1.map(function renderScoped(arg0) {
-          closure_0 = arg0;
-          const value = map.get(arg0);
+      tmp32Result6,
+      found1.map(function renderScoped(item) {
+          closure_0 = item;
+          value = map.get(item);
           if (null != value) {
             return renderSecret(value);
           } else {
@@ -616,56 +711,52 @@ export default function VibegrationsSettingsSheet(projectId) {
           }
         })
     ];
-    obj4[1] = items8;
-    let tmp33Result = tmp33(tmp34, obj4);
+    obj8.children = items8;
+    let tmp33Result = tmp33(tmp34, obj8);
   } else {
-    let tmp32Result2 = null;
+    let tmp32Result7 = null;
     if (tmp19) {
-      const obj6 = { onLayout: null, children: null };
-      obj6[0] = callback;
-      const obj7 = { state: null };
-      obj7[0] = segmentedControlState;
-      obj6[1] = tmp32(tmp4(9798).SegmentedControl, obj7);
-      tmp32Result2 = tmp32(tmp34, obj6);
+      const obj10 = { onLayout: callback, children: null };
+      const obj11 = { state: segmentedControlState };
+      obj10.children = tmp32(tmp4(tmp2[29]).SegmentedControl, obj11);
+      tmp32Result7 = tmp32(tmp34, obj10);
     }
-    const items9 = [tmp32Result2, ];
-    const obj8 = { style: null, children: null };
-    obj8[0] = tmp3.section;
+    const items9 = [tmp32Result7, ];
+    const obj12 = { style: tmp3.section, children: null };
     if (tmp28) {
-      const obj9 = { variant: "text-xs/normal", color: "text-muted", children: null };
-      let intl3 = tmp4(1114).intl;
-      obj9[2] = intl3.string(tmp(3547)["Hl+eu7"]);
-      const items10 = [tmp32(tmp4(4556).Text, obj9), memo2.map(renderSecret)];
-      obj8[1] = items10;
-      tmp33Result = tmp33(tmp34, obj8);
+      const obj13 = { variant: "text-xs/normal", color: "text-muted", children: null };
+      let intl3 = tmp4(tmp2[16]).intl;
+      obj13.children = intl3.string(tmp(tmp2[17])["Hl+eu7"]);
+      const items10 = [tmp32(tmp4(tmp2[25]).Text, obj13), memo2.map(renderSecret)];
+      obj12.children = items10;
+      let tmp33Result2 = tmp33(tmp34, obj12);
     } else {
-      obj8[1] = found.map(renderValueSetting);
-      tmp33Result = tmp32(tmp34, obj8);
+      obj12.children = found.map(renderValueSetting);
+      tmp33Result2 = tmp32(tmp34, obj12);
     }
-    const obj10 = { children: null };
-    items9[1] = tmp33Result;
-    obj10[0] = items9;
-    tmp33Result = tmp33(memo2, obj10);
-    const tmp37 = memo2;
+    const obj14 = { children: null };
+    items9[1] = tmp33Result2;
+    obj14.children = items9;
+    tmp33Result = tmp33(c19, obj14);
   }
   items7[2] = tmp33Result;
-  let tmp32Result3 = null;
+  let tmp32Result8 = null;
   if (tmp14[0]) {
-    const obj11 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
-    const intl5 = tmp4(1114).intl;
-    obj11[2] = intl5.string(tmp(3547).n02OEo);
-    tmp32Result3 = tmp32(tmp4(4556).Text, obj11);
+    const obj15 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
+    const intl5 = tmp4(tmp2[16]).intl;
+    obj15.children = intl5.string(tmp(tmp2[17]).n02OEo);
+    tmp32Result8 = tmp32(tmp4(tmp2[25]).Text, obj15);
   }
-  items7[3] = tmp32Result3;
-  const obj12 = { text: null, variant: "primary", loading: null, disabled: null, onPress: null };
-  const intl6 = tmp4(1114).intl;
-  obj12[0] = intl6.string(notifyAgent(3547).Tuz9vw);
-  obj12[2] = first2;
-  obj12[3] = !(null != memo4.values || null != memo4.secrets);
-  obj12[4] = callback1;
-  items7[4] = memo(projectId(4975).Button, obj12);
-  obj1[1] = items7;
-  obj[2] = memo1(first1, obj1);
-  return memo(projectId(7198).ActionSheet, obj);
+  items7[3] = tmp32Result8;
+  const obj16 = { text: null, variant: "primary", loading: null, disabled: null, onPress: null };
+  const intl6 = tmp4(tmp2[16]).intl;
+  obj16.text = intl6.string(notifyAgent(flag[17]).Tuz9vw);
+  obj16.loading = first2;
+  obj16.disabled = !(null != memo4.values || null != memo4.secrets);
+  obj16.onPress = callback1;
+  items7[4] = found(projectId(flag[26]).Button, obj16);
+  obj5.children = items7;
+  obj3.children = map(closure_6, obj5);
+  return found(projectId(flag[27]).ActionSheet, obj3);
 };
 export const VIBEGRATIONS_SETTINGS_SHEET_KEY = "VibegrationsSettingsSheet";

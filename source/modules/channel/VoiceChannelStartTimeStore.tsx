@@ -1,19 +1,18 @@
-// Module ID: 11313
-// Function ID: 11314
-// Name: _toTimestampMs
-// Dependencies: [5277, 1090, 504, 1094, 573, 2]
+// Module ID: 11340
+// Function ID: 11341
+// Name: VoiceChannelStartTimeStore
+// Dependencies: [5291, 1090, 504, 1094, 573, 2]
 
-// Module 11313 (_toTimestampMs)
+// Module 11340 (VoiceChannelStartTimeStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import setDefault from "set" /* 1090 */;
-import set2 from "set" /* 1094 */;
-import closure_3 from "_handleConnectionOpen" /* 5277 */;
-import set from "set" /* 2 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import ChannelTypes from "ChannelTypes" /* 1094 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5291 */;
 
-require = arg1;
+require = fn;
 function _toTimestampMs(arg0) {
-  return new Date(arg0 * setDefault.Millis.SECOND).getTime();
+  return new Date(arg0 * DurationsDefault.Millis.SECOND).getTime();
 }
 function handleConnectionReset() {
   set.clear();
@@ -21,19 +20,19 @@ function handleConnectionReset() {
 function handleGuildReset(guild) {
   set.delete(guild.guild.id);
 }
-let set = new Set();
-let closure_5 = {};
+const set = new Set();
+const dependencyMap = {};
 const Store = initializeDefault.Store;
 class VoiceChannelStartTimeStore extends Store {
 }
 const prototype = VoiceChannelStartTimeStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_3);
+  this.waitFor(GatewayConnectionStore);
 };
 prototype["getStartTime"] = function getStartTime(guild_id) {
   if (null != guild_id) {
     if (null != guild_id.guild_id) {
-      if (guild_id.type === set2.ChannelTypes.GUILD_VOICE) {
+      if (guild_id.type === ChannelTypes.ChannelTypes.GUILD_VOICE) {
         let tmp5;
         if (dependencyMap[guild_id.guild_id] != null) {
           tmp5 = tmp4[guild_id.id];
@@ -47,7 +46,7 @@ prototype["hasRequestedStartTimes"] = function hasRequestedStartTimes(guild_id) 
   return set.has(guild_id);
 };
 VoiceChannelStartTimeStore.displayName = "VoiceChannelStartTimeStore";
-const voiceChannelStartTimeStore = new VoiceChannelStartTimeStore(dispatcherDefault, {
+const voiceChannelStartTimeStore = new VoiceChannelStartTimeStore(DispatcherDefault, {
   GUILD_CREATE: handleGuildReset,
   GUILD_DELETE: handleGuildReset,
   CONNECTION_RESUMED: handleConnectionReset,
@@ -60,7 +59,7 @@ const voiceChannelStartTimeStore = new VoiceChannelStartTimeStore(dispatcherDefa
     let time;
     if (null != voiceStartTime) {
       const _Date = Date;
-      const date = new Date(voiceStartTime * setDefault.Millis.SECOND);
+      const date = new Date(voiceStartTime * DurationsDefault.Millis.SECOND);
       time = date.getTime();
     }
     dependencyMap[guildId][id.id] = time;
@@ -72,11 +71,8 @@ const voiceChannelStartTimeStore = new VoiceChannelStartTimeStore(dispatcherDefa
     const nextResult = iter.next();
     while (iter !== undefined) {
       let voiceStartTime = nextResult.voiceStartTime;
-      let tmp3 = dependencyMap;
       let tmp4;
       if (null != voiceStartTime) {
-        let tmp5 = _toTimestampMs;
-        let tmp6 = voiceStartTime;
         tmp4 = _toTimestampMs(tmp2);
       }
       dependencyMap[guildId][nextResult.id] = tmp4;
@@ -87,6 +83,7 @@ const voiceChannelStartTimeStore = new VoiceChannelStartTimeStore(dispatcherDefa
     set.add(guildId.guildId);
   }
 });
-const result = set.fileFinishedImporting("modules/channel/VoiceChannelStartTimeStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel/VoiceChannelStartTimeStore.tsx");
 
 export default voiceChannelStartTimeStore;

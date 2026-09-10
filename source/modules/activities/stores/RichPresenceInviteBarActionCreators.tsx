@@ -1,22 +1,18 @@
-// Module ID: 11479
-// Function ID: 11480
-// Name: markChannelInvited
+// Module ID: 11506
+// Function ID: 11507
+// Name: RichPresenceInviteBarActionCreators
 // Dependencies: [573, 2]
 // Exports: dismissSession, markChannelInvited
 
-// Module 11479 (markChannelInvited)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 11506 (RichPresenceInviteBarActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/activities/stores/RichPresenceInviteBarActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/activities/stores/RichPresenceInviteBarActionCreators.tsx");
 
 export const markChannelInvited = function markChannelInvited(activitySessionKey, id) {
-  let obj = dispatcherDefault;
-  obj = { type: "RICH_PRESENCE_INVITE_BAR_CHANNEL_INVITED", sessionKey: activitySessionKey, channelId: id };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "RICH_PRESENCE_INVITE_BAR_CHANNEL_INVITED", sessionKey: activitySessionKey, channelId: id });
 };
 export const dismissSession = function dismissSession(sessionKey) {
-  let obj = dispatcherDefault;
-  obj = { type: "RICH_PRESENCE_INVITE_BAR_SESSION_DISMISSED", sessionKey };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "RICH_PRESENCE_INVITE_BAR_SESSION_DISMISSED", sessionKey });
 };

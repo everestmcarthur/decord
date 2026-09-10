@@ -1,36 +1,35 @@
-// Module ID: 13266
-// Function ID: 13267
+// Module ID: 13289
+// Function ID: 13290
 // Name: VoicePanelVideoGuardErrorAlert
-// Dependencies: [19, 21, 4910, 4910, 1114, 4556, 13264, 2]
+// Dependencies: [19, 21, 4924, 4924, 1114, 4570, 13287, 2]
 // Exports: default
 
-// Module 13266 (VoicePanelVideoGuardErrorAlert)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4910 */;
-import VIDEO_GUARD_BLOG_POST_URL from "VIDEO_GUARD_BLOG_POST_URL" /* 13264 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 13289 (VoicePanelVideoGuardErrorAlert)
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import AlertModal from "AlertModal" /* 4924 */;
+import VideoGuardExperiment from "VideoGuardExperiment" /* 13287 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelVideoGuardErrorAlert.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelVideoGuardErrorAlert.tsx");
 
 export default function VoicePanelVideoGuardErrorAlert(title) {
-  let obj = getAlertModalItemKey;
-  obj = { title: title.title, content: null, extraContent: null, actions: null };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t.UoW002);
-  obj = { variant: "text-sm/normal", color: "text-subtle", children: null };
-  const intl2 = getSystemLocale.intl;
-  const dismissModalCallback = obj.useDismissModalCallback();
-  obj[2] = intl2.format(getSystemLocale.t.BPDKoA, { helpdeskArticle: VIDEO_GUARD_BLOG_POST_URL.VIDEO_GUARD_BLOG_POST_URL });
-  obj[2] = jsx(Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: null });
-  const obj2 = { variant: "secondary", text: null, onPress: null };
-  const intl3 = getSystemLocale.intl;
-  obj2[1] = intl3.string(getSystemLocale.t["NX+WJN"]);
-  obj2[2] = dismissModalCallback;
-  obj[3] = jsx(getAlertModalItemKey.AlertActionButton, { variant: "secondary", text: null, onPress: null });
-  return jsx(getAlertModalItemKey.AlertModal, { variant: "text-sm/normal", color: "text-subtle", children: null });
+  const obj2 = { title: title.title, content: null, extraContent: null, actions: null };
+  const intl = util.intl;
+  obj2.content = intl.string(util.t.UoW002);
+  const obj3 = { variant: "text-sm/normal", color: "text-subtle", children: null };
+  const intl2 = util.intl;
+  const dismissModalCallback = AlertModal.useDismissModalCallback();
+  obj3.children = intl2.format(util.t.BPDKoA, { helpdeskArticle: VideoGuardExperiment.VIDEO_GUARD_BLOG_POST_URL });
+  obj2.extraContent = jsx(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: null });
+  const obj5 = { variant: "secondary", text: null, onPress: null };
+  const intl3 = util.intl;
+  obj5.text = intl3.string(util.t["NX+WJN"]);
+  obj5.onPress = dismissModalCallback;
+  obj2.actions = jsx(AlertModal.AlertActionButton, { variant: "secondary", text: null, onPress: null });
+  return jsx(AlertModal.AlertModal, { title: title.title, content: null, extraContent: null, actions: null });
 };
 export const VOICE_PANEL_VIDEO_GUARD_ERROR_KEY = "voice-panel-video-guard-error";

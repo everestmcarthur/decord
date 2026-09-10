@@ -1,15 +1,15 @@
-// Module ID: 11764
-// Function ID: 11765
+// Module ID: 11790
+// Function ID: 11791
 // Name: getIsAskToJoin
 // Dependencies: [1074, 2]
 // Exports: getIsAskToJoin
 
-// Module 11764 (getIsAskToJoin)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 11790 (getIsAskToJoin)
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const ActivityActionTypes = ME.ActivityActionTypes;
-const result = set.fileFinishedImporting("modules/activities/utils/getIsAskToJoin.tsx");
+const ActivityActionTypes = Constants.ActivityActionTypes;
+const result = size.fileFinishedImporting("modules/activities/utils/getIsAskToJoin.tsx");
 
 export const getIsAskToJoin = function getIsAskToJoin(message) {
   const activity = message.activity;

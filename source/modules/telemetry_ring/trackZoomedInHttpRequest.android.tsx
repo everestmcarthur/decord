@@ -1,24 +1,23 @@
-// Module ID: 17288
-// Function ID: 17289
+// Module ID: 17319
+// Function ID: 17320
 // Name: trackZoomedInHttpRequest
 // Dependencies: [1074, 1899, 2]
 // Exports: default
 
-// Module 17288 (trackZoomedInHttpRequest)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import shouldRunDefault from "shouldRun" /* 1899 */;
+// Module 17319 (trackZoomedInHttpRequest)
+import Constants from "Constants" /* 1074 */;
+import ZoomedInTelemetryDefault from "ZoomedInTelemetry" /* 1899 */;
+import size from "module_2" /* 2 */;
 
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/telemetry_ring/trackZoomedInHttpRequest.android.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/telemetry_ring/trackZoomedInHttpRequest.android.tsx");
 
 export default function trackZoomedInHttpRequest(arg0) {
   try {
-    let obj = shouldRunDefault;
-    obj = {};
+    const obj2 = {};
     const merged = Object.assign(arg0);
-    obj.source = "zoomed_in";
-    obj.append(AnalyticEvents.HTTP_REQUEST, obj);
+    obj2.source = "zoomed_in";
+    ZoomedInTelemetryDefault.append(AnalyticEvents.HTTP_REQUEST, obj2);
   } catch (err) {
   }
 };

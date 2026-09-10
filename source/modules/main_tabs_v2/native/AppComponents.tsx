@@ -1,51 +1,75 @@
-// Module ID: 17002
-// Function ID: 17003
-// Name: jsx
-// Dependencies: [21, 16759, 1115, 4417, 16525, 16911, 4431, 16927, 10083, 14170, 4910, 4273, 17003, 17009, 17042, 17051, 17224, 2]
+// Module ID: 17033
+// Function ID: 17034
+// Name: AppComponents
+// Dependencies: [21, 16796, 1115, 4431, 16556, 16948, 4445, 16964, 10110, 14195, 4924, 4286, 17034, 17040, 17073, 17082, 17255, 2]
 
-// Module 17002 (jsx)
-import updateAccessibilityAnnouncerLiveRegionMessage from "updateAccessibilityAnnouncerLiveRegionMessage" /* 4273 */;
-import PortalKeyboardState from "PortalKeyboardState" /* 4431 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4910 */;
-import NotificationsDefault from "Notifications" /* 10083 */;
-import getItemKey from "getItemKey" /* 14170 */;
-import transitionGroupGetItemKey from "transitionGroupGetItemKey" /* 16759 */;
-import BurstReactionAnimationContainer from "BurstReactionAnimationContainer" /* 16911 */;
-import trackActionSheetImpressionDefault from "trackActionSheetImpression" /* 16927 */;
-import FreezeAfterLayoutPipViewDefault from "FreezeAfterLayoutPipView" /* 17003 */;
-import _modDef17009 from "module_17009" /* 17009 */;
-import _modDef17042 from "module_17042" /* 17042 */;
-import VoicePanelDefault from "VoicePanel" /* 17051 */;
-import _modDef17224 from "module_17224" /* 17224 */;
+// Module 17033 (AppComponents)
+import AccessibilityAnnouncerLiveRegion from "AccessibilityAnnouncerLiveRegion" /* 4286 */;
+import PortalKeyboard from "PortalKeyboard" /* 4445 */;
+import AlertModal from "AlertModal" /* 4924 */;
+import common_NotificationsDefault from "common/Notifications" /* 10110 */;
+import ContextMenuContainer from "ContextMenuContainer" /* 14195 */;
+import PortalKeyboardRenderer from "PortalKeyboardRenderer" /* 16796 */;
+import MainShared from "MainShared" /* 16948 */;
+import MainViewTooltipActionSheetsV2Default from "MainViewTooltipActionSheetsV2" /* 16964 */;
+import ExternalPipViewDefault from "ExternalPipView" /* 17034 */;
+import ActivityPanelContainerDefault from "ActivityPanelContainer" /* 17040 */;
+import FramePanelContainerDefault from "FramePanelContainer" /* 17073 */;
+import VoicePanelContainerDefault from "VoicePanelContainer" /* 17082 */;
+import MediaPlaybackPanelContainerDefault from "MediaPlaybackPanelContainer" /* 17255 */;
 import jsxProd from "jsxProd" /* 21 */;
-import set from "set" /* 1115 */;
-import importDefaultResult from "jsx" /* 16525 */;
+import PlatformUtils_mod from "PlatformUtils" /* 1115 */;
+import AppFreezer_mod from "AppFreezer" /* 16556 */;
+import size from "module_2" /* 2 */;
 
 ({ jsx, jsxs } = jsxProd);
-let closure_2 = jsx(transitionGroupGetItemKey.PortalKeyboardRenderer, {});
-let obj = { lockKeys: ["external-pip"], children: null };
-const tmp3 = set.isIOS() ? (() => {
+let closure_2 = jsx(PortalKeyboardRenderer.PortalKeyboardRenderer, {});
+let PlatformUtils = PlatformUtils_mod;
+const obj = { lockKeys: ["external-pip"], children: null };
+let AppFreezer = AppFreezer_mod;
+const items = [
+  jsx(MainShared.PictureInPictureGlobalContainer, {}),
+  jsx(MainShared.BurstReactionAnimationContainer, {}),
+  jsx(MainShared.MenuContainer, {}),
+  jsx(PortalKeyboard.PortalKeyboardHost, {}),
+  jsx(PlatformUtils.isIOS() ? (() => {
+    let tmp = null;
+    if (!obj.useIsModalOpen()) {
+      tmp = closure_2;
+    }
+    return tmp;
+  }) : (() => closure_2), {}),
+  jsx(MainShared.ActionSheetContainer, { appEntryKey: "main" }),
+  jsx(MainShared.Alerts, {}),
+  jsx(MainShared.SoundPlayer, {}),
+  jsx(MainViewTooltipActionSheetsV2Default, {}),
+  jsx(common_NotificationsDefault, {}),
+  jsx(ContextMenuContainer.ContextMenuContainer, {}),
+  jsx(AlertModal.AlertModalContainer, {}),
+  jsx(MainShared.ToastContainer, {})
+];
+obj.children = items;
+const tmp3 = PlatformUtils.isIOS() ? (() => {
   let tmp = null;
   if (!obj.useIsModalOpen()) {
     tmp = closure_2;
   }
   return tmp;
 }) : (() => closure_2);
-const items = [jsx(BurstReactionAnimationContainer.PictureInPictureGlobalContainer, {}), jsx(BurstReactionAnimationContainer.BurstReactionAnimationContainer, {}), jsx(BurstReactionAnimationContainer.MenuContainer, {}), jsx(PortalKeyboardState.PortalKeyboardHost, {}), <tmp3 />, jsx(BurstReactionAnimationContainer.ActionSheetContainer, { appEntryKey: "main" }), jsx(BurstReactionAnimationContainer.Alerts, {}), jsx(BurstReactionAnimationContainer.SoundPlayer, {}), jsx(trackActionSheetImpressionDefault, {}), jsx(NotificationsDefault, {}), jsx(getItemKey.ContextMenuContainer, {}), jsx(getAlertModalItemKey.AlertModalContainer, {}), jsx(BurstReactionAnimationContainer.ToastContainer, {})];
-obj[1] = items;
+let PlatformUtils = PlatformUtils_mod;
 let jsxResult = null;
-if (set.isAndroid()) {
-  jsxResult = jsx(updateAccessibilityAnnouncerLiveRegionMessage.AccessibilityAnnouncerLiveRegion, {});
+if (PlatformUtils.isAndroid()) {
+  jsxResult = jsx(AccessibilityAnnouncerLiveRegion.AccessibilityAnnouncerLiveRegion, {});
 }
-const jsxsResult = jsxs(importDefaultResult, { lockKeys: ["external-pip"], children: null });
-obj = { lockKeys: ["external-pip"], children: null };
-const jsxResult1 = jsx(FreezeAfterLayoutPipViewDefault, {});
-const items1 = [jsx(_modDef17009, {}), jsx(_modDef17042, {}), jsx(VoicePanelDefault, {}), jsx(_modDef17224, {})];
-obj[1] = items1;
-const importDefaultResult1 = importDefaultResult;
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/AppComponents.tsx");
+const jsxsResult = <AppFreezer lockKeys={["external-pip"]}>{null}</AppFreezer>;
+const obj2 = { lockKeys: ["external-pip"], children: null };
+let AppFreezer = AppFreezer_mod;
+const items1 = [jsx(ActivityPanelContainerDefault, {}), jsx(FramePanelContainerDefault, {}), jsx(VoicePanelContainerDefault, {}), jsx(MediaPlaybackPanelContainerDefault, {})];
+obj2.children = items1;
+const jsxResult1 = jsx(ExternalPipViewDefault, {});
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/AppComponents.tsx");
 
 export const APP_EXTRA_COMPONENTS = jsxsResult;
 export const APP_EXTRA_COMPONENTS_NEVER_FREEZE = jsxResult;
 export const APP_EXTRA_COMPONENTS_EXTERNAL_PIP = jsxResult1;
-export const APP_EXTRA_COMPONENTS_VOICE_AND_VIDEO = jsxs(importDefaultResult, { lockKeys: ["external-pip"], children: null });
+export const APP_EXTRA_COMPONENTS_VOICE_AND_VIDEO = <AppFreezer lockKeys={["external-pip"]}>{null}</AppFreezer>;

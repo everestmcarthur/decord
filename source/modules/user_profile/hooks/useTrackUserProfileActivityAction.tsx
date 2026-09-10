@@ -1,16 +1,19 @@
-// Module ID: 13024
-// Function ID: 13025
+// Module ID: 13050
+// Function ID: 13051
 // Name: useTrackUserProfileActivityAction
-// Dependencies: [19, 8796, 8190, 7162, 504, 8191, 2]
+// Dependencies: [19, 8825, 8216, 7176, 504, 8217, 2]
 // Exports: default
 
-// Module 13024 (useTrackUserProfileActivityAction)
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import closure_4 from "map" /* 8796 */;
+// Module 13050 (useTrackUserProfileActivityAction)
+import _mod19 from "module_19" /* 19 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8217 */;
+import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8825 */;
+import size from "module_2" /* 2 */;
 
-noop.useCallback;
-let result = set.fileFinishedImporting("modules/user_profile/hooks/useTrackUserProfileActivityAction.tsx");
+const require = globalThis.__r;
+
+_mod19.useCallback;
+let result = size.fileFinishedImporting("modules/user_profile/hooks/useTrackUserProfileActivityAction.tsx");
 
 export default function useTrackUserProfileActivityAction(activity) {
   ({ user: require, display } = activity);
@@ -18,29 +21,22 @@ export default function useTrackUserProfileActivityAction(activity) {
   const entry = activity.entry;
   const stream = activity.stream;
   const voiceChannelId = activity.voiceChannelId;
-  let analyticsLocations = activity.analyticsLocations;
-  let context;
-  let trackUserProfileAction;
-  analyticsLocations = undefined;
+  let analyticsLocations;
   let stateFromStores;
-  const userProfileAnalyticsContext = require(activity[2]).useUserProfileAnalyticsContext();
-  context = userProfileAnalyticsContext.context;
-  trackUserProfileAction = userProfileAnalyticsContext.trackUserProfileAction;
+  const userProfileAnalyticsContext = require("UserProfileAnalyticsContext").useUserProfileAnalyticsContext();
+  const context = userProfileAnalyticsContext.context;
+  const trackUserProfileAction = userProfileAnalyticsContext.trackUserProfileAction;
   if (analyticsLocations == null) {
     analyticsLocations = display(activity[3])().analyticsLocations;
   }
-  let obj = require(activity[2]);
-  const tmp = require;
-  const tmp2 = activity;
+  const obj = require("UserProfileAnalyticsContext");
   const items = [stream];
-  stateFromStores = require(activity[4]).useStateFromStores(items, () => stream.getUserOutbox(id.id));
+  stateFromStores = require("initialize").useStateFromStores(items, () => ContentInventoryOutboxStore.getUserOutbox(id.id));
   const items1 = [trackUserProfileAction, context, display, activity, stream, entry, stateFromStores, voiceChannelId, analyticsLocations];
   return entry((action) => {
     action = action.action;
-    let obj = { action, analyticsLocations };
-    trackUserProfileAction(obj);
-    obj = { action, display, activity, entry, stream, outbox: stateFromStores, voiceChannelId, analyticsLocations };
+    trackUserProfileAction({ action, analyticsLocations });
     const merged = Object.assign(context);
-    const result = closure_1_0(activity[5]).trackUserProfileActivityAction(obj);
+    const result = UserProfileAnalyticsUtils.trackUserProfileActivityAction({ action, display, activity, entry, stream, outbox: stateFromStores, voiceChannelId, analyticsLocations });
   }, items1);
 };

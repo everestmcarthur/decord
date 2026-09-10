@@ -1,91 +1,88 @@
-// Module ID: 17687
-// Function ID: 17688
-// Name: useCreateCreatorMonetizationAcceptTermsRequest
-// Dependencies: [5, 32, 19, 1975, 1979, 1371, 504, 7261, 17688, 4462, 2]
+// Module ID: 17720
+// Function ID: 17721
+// Name: useCreatorMonetizationAcceptTerms
+// Dependencies: [5, 32, 19, 1975, 1979, 1371, 504, 7275, 17721, 4476, 2]
 // Exports: default
 
-// Module 17687 (useCreateCreatorMonetizationAcceptTermsRequest)
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "noop" /* 19 */;
-import { isGuildOwner } from "GuildNSFWContentLevel" /* 1975 */;
-import closure_8 from "createGuildRecordFromRust" /* 1979 */;
-import closure_9 from "mergeGuildAvatar" /* 1371 */;
+// Module 17720 (useCreatorMonetizationAcceptTerms)
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/useCreatorMonetizationAcceptTerms.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const isGuildOwner = fn(1975).isGuildOwner;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/useCreatorMonetizationAcceptTerms.tsx");
 
 export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   closure_1 = arg1;
-  let obj = _require(504);
-  const items = [closure_8];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getGuild(closure_0));
-  const tmp2 = isExpeditedOnboardingGuild(React.useState(), 2);
+  const items = [GuildStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
+  const tmp2 = isExpeditedOnboardingGuild(noop.useState(), 2);
   dependencyMap = tmp2[1];
-  [tmp4, closure_4] = isExpeditedOnboardingGuild(React.useState(false), 2);
-  let tmp3 = isExpeditedOnboardingGuild(React.useState(false), 2);
-  isExpeditedOnboardingGuild = _require(7261).useIsExpeditedOnboardingGuild(stateFromStores);
-  obj = { canSubmitAcceptance: null, error: null, loading: null, submitAcceptTermsRequest: null };
-  let obj2 = _require(7261);
-  const items1 = [closure_9];
+  let obj = require("initialize");
+  [tmp4, asyncGeneratorStep] = isExpeditedOnboardingGuild(noop.useState(false), 2);
+  let tmp3 = isExpeditedOnboardingGuild(noop.useState(false), 2);
+  isExpeditedOnboardingGuild = require("CreatorMonetizationEligibilityExperimentUtils").useIsExpeditedOnboardingGuild(stateFromStores);
+  const obj3 = { canSubmitAcceptance: null, error: null, loading: null, submitAcceptTermsRequest: null };
+  let obj2 = require("CreatorMonetizationEligibilityExperimentUtils");
+  const items1 = [UserStore];
   const items2 = [stateFromStores];
-  obj[0] = _require(504).useStateFromStores(items1, () => {
+  obj3.canSubmitAcceptance = require("initialize").useStateFromStores(items1, () => {
     let tmp3 = null != stateFromStores;
     if (tmp3) {
-      tmp3 = closure_1_7(tmp2, tmp);
+      tmp3 = isGuildOwner(tmp2, tmp);
     }
     return tmp3;
   }, items2);
-  obj[1] = tmp2[0];
-  obj[2] = tmp4;
+  obj3.error = tmp2[0];
+  obj3.loading = tmp4;
   const items3 = [arg0, arg1, isExpeditedOnboardingGuild];
-  obj[3] = React.useCallback(callback(function*() {
+  obj3.submitAcceptTermsRequest = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
     if (c5 === 2) {
       c5 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp7 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
         c5 = 2;
-        if (0 === v0) {
+        if (0 === c4) {
           if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            closure_1 = tmp4;
             closure_0 = tmp8;
-            if (null != closure_1_0) {
-              v0(true);
+            if (null != closure_0) {
+              asyncGeneratorStep(true);
               dependencyMap(undefined);
               dependencyMap = 2;
-              if (null != closure_1_1) {
-                v0 = 4;
+              if (null != tmp4) {
+                c4 = 4;
                 c5 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_1_2(17688).acceptCreatorMonetizationTerms(tmp56, tmp42);
-                return obj1;
+                const obj6 = { value: tmp47(17721).acceptCreatorMonetizationTerms(tmp55, tmp42), done: false };
+                return obj6;
               } else {
-                let obj2 = closure_1_2(17688);
-                v0 = 3;
+                c4 = 3;
                 c5 = 1;
-                obj2 = { value: null, done: false };
-                obj2[0] = obj2.acceptCreatorMonetizationTermsV2(tmp56);
-                return obj2;
+                const obj7 = { value: tmp47(17721).acceptCreatorMonetizationTermsV2(tmp55), done: false };
+                return obj7;
               }
             }
             c5 = 3;
@@ -93,53 +90,50 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
         } else if (1 !== tmp8) {
           if (2 === tmp8) {
             dependencyMap = 1;
-            closure_0 = closure_2;
-            const tmp25 = new closure_1_1(4462)(closure_0);
-            dependencyMap(tmp25);
+            closure_128_0 = tmp47;
+            const tmp25 = new tmp4(4476)(closure_128_0);
+            closure_129_3(tmp25);
           } else {
             if (3 === tmp8) {
               if (arg0 === 1) {
                 c5 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 dependencyMap = 0;
-                v0(false);
+                closure_129_4(false);
                 c5 = 3;
-                const obj3 = { value: null, done: true };
-                obj3[0] = arg1;
-                return obj3;
+                const obj8 = { value, done: true };
+                return obj8;
               }
             } else if (arg0 === 1) {
               c5 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               dependencyMap = 0;
-              v0(false);
+              closure_129_4(false);
               c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              const obj = { value, done: true };
               return obj;
             }
             dependencyMap = 1;
           }
           dependencyMap = 0;
-          v0(false);
+          closure_129_4(false);
         }
         dependencyMap = 0;
-        v0(false);
-        throw closure_2;
+        closure_129_4(false);
+        throw tmp47;
       } catch (tmp47) {
-        closure_2 = tmp47;
         if (tmp5 === dependencyMap) {
           c5 = tmp3;
           throw tmp47;
         } else if (tmp2 === tmp49) {
-          v0 = tmp2;
+          c4 = tmp2;
         } else {
-          v0 = tmp;
+          c4 = tmp;
         }
       }
     }
   }), items3);
-  return obj;
+  return obj3;
 };

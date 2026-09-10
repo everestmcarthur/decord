@@ -4,7 +4,9 @@
 // Dependencies: [274]
 
 // Module 273 (get Version)
-const module = arg2;
+const require = globalThis.__r;
+
+const importDefault = arg2;
 const dependencyMap = arg6;
 let obj = { __constants: null, OS: "android" };
 Object.defineProperty(obj, "Version", {
@@ -17,8 +19,8 @@ Object.defineProperty(obj, "constants", {
   get: function() {
     const self = this;
     if (null == this.__constants) {
-      self.__constants = module(274).getConstants();
-      const obj = module(274);
+      self.__constants = require("PlatformConstants").getConstants();
+      const obj = require("PlatformConstants");
     }
     return self.__constants;
   },
@@ -50,4 +52,5 @@ obj.select = function select(android) {
   }
   return android;
 };
-arg5.default = obj;
+
+export default obj;

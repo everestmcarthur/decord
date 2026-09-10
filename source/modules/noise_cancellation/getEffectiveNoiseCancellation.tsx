@@ -1,19 +1,18 @@
-// Module ID: 10000
-// Function ID: 10001
-// Name: set
-// Dependencies: [1115, 10001, 2]
+// Module ID: 10027
+// Function ID: 10028
+// Name: getEffectiveNoiseCancellation
+// Dependencies: [1115, 10028, 2]
 // Exports: default
 
-// Module 10000 (set)
-import set from "set" /* 2 */;
+// Module 10027 (getEffectiveNoiseCancellation)
+import size from "module_2" /* 2 */;
 
 const deep_noise_suppression = "deep_noise_suppression";
-let set = new Set(["voice_isolation", "wide_spectrum"]);
-const result = set.fileFinishedImporting("modules/noise_cancellation/getEffectiveNoiseCancellation.tsx");
+const set = new Set(["voice_isolation", "wide_spectrum"]);
+const result = size.fileFinishedImporting("modules/noise_cancellation/getEffectiveNoiseCancellation.tsx");
 
 export default function getEffectiveNoiseCancellation(arg0, arg1) {
   if (!obj.isIOS()) {
-    let tmpResult = tmp(1115);
     if (!tmpResult.isMac()) {
       let tmp3 = arg0;
       if (arg0) {
@@ -22,15 +21,15 @@ export default function getEffectiveNoiseCancellation(arg0, arg1) {
           tmp5 = "" === arg1;
         }
         if (!tmp5) {
-          tmpResult = tmp(1115);
-          tmp5 = !tmpResult.isWindows();
+          tmp5 = !tmp(1115).isWindows();
+          const tmpResult3 = tmp(1115);
         }
         if (!tmp5) {
           tmp5 = arg1 !== deep_noise_suppression;
         }
         if (!tmp5) {
-          tmp5 = !tmp(10001).getWindowsAudioEffectsExperimentConfig({ location: "setNoiseCancellation" }).preferSystemEffects;
-          const tmpResult1 = tmp(10001);
+          tmp5 = !tmp(10028).getWindowsAudioEffectsExperimentConfig({ location: "setNoiseCancellation" }).preferSystemEffects;
+          const tmpResult4 = tmp(10028);
         }
         if (tmp5) {
           tmp5 = arg0;

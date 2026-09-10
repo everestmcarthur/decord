@@ -1,44 +1,30 @@
-// Module ID: 14596
-// Function ID: 14597
-// Name: createPendingImage
-// Dependencies: [6989, 1369, 2]
+// Module ID: 14621
+// Function ID: 14622
+// Name: ProfilePendingImageUtils
+// Dependencies: [7003, 1369, 2]
 // Exports: createPendingImage
 
-// Module 14596 (createPendingImage)
-import set from "set" /* 2 */;
-import AssetOriginTypes from "AssetOriginTypes" /* 6989 */;
+// Module 14621 (ProfilePendingImageUtils)
+import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7003 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/profile_customization/ProfilePendingImageUtils.tsx");
+const result = size.fileFinishedImporting("modules/profile_customization/ProfilePendingImageUtils.tsx");
 
 export const createPendingImage = function createPendingImage(assetOrigin) {
   let NEW_ASSET = assetOrigin.assetOrigin;
   if (NEW_ASSET === undefined) {
-    NEW_ASSET = AssetOriginTypes.AssetOriginTypes.NEW_ASSET;
+    NEW_ASSET = ProfilePendingImageTypes.AssetOriginTypes.NEW_ASSET;
   }
   ({ imageUri, staticImageUri, description, originalAsset, originalMd5 } = assetOrigin);
-  if (AssetOriginTypes.AssetOriginTypes.NEW_ASSET === NEW_ASSET) {
-    let obj = { assetOrigin: null, imageUri: null, staticImageUri: null, description: null, originalAsset: "Array", originalMd5: "dollar" };
-    obj[0] = NEW_ASSET;
-    obj[1] = imageUri;
-    obj[2] = staticImageUri;
-    obj[3] = description;
-    obj[5] = originalMd5;
+  if (ProfilePendingImageTypes.AssetOriginTypes.NEW_ASSET === NEW_ASSET) {
+    const obj = { assetOrigin: NEW_ASSET, imageUri, staticImageUri, description, originalAsset: "Array", originalMd5 };
     return obj;
-  } else if (tmp3(6989).AssetOriginTypes.EDITED_ARCHIVED_ASSET === NEW_ASSET) {
-    obj = { assetOrigin: null, imageUri: null, staticImageUri: null, description: null, originalAsset: null, originalMd5: null };
-    obj[0] = NEW_ASSET;
-    obj[1] = imageUri;
-    obj[2] = staticImageUri;
-    obj[3] = description;
-    obj[4] = originalAsset;
-    obj[5] = originalMd5;
-    return obj;
-  } else if (tmp3(6989).AssetOriginTypes.ARCHIVED_ASSET === NEW_ASSET) {
-    obj1 = { assetOrigin: null, imageUri: null, description: "Array", originalAsset: true };
-    obj1[0] = NEW_ASSET;
-    obj1[1] = imageUri;
-    obj1[3] = originalAsset;
-    return obj1;
+  } else if (tmp3(7003).AssetOriginTypes.EDITED_ARCHIVED_ASSET === NEW_ASSET) {
+    const obj2 = { assetOrigin: NEW_ASSET, imageUri, staticImageUri, description, originalAsset, originalMd5 };
+    return obj2;
+  } else if (tmp3(7003).AssetOriginTypes.ARCHIVED_ASSET === NEW_ASSET) {
+    const obj3 = { assetOrigin: NEW_ASSET, imageUri, description: "Array", originalAsset };
+    return obj3;
   } else {
     tmp3(1369).assertNever(NEW_ASSET);
   }

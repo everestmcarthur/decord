@@ -1,16 +1,16 @@
-// Module ID: 5507
-// Function ID: 5508
-// Name: handleThreadCreateOrUpdate
+// Module ID: 5521
+// Function ID: 5522
+// Name: ActiveThreadsStore
 // Dependencies: [1961, 1957, 12, 504, 11, 573, 2]
 
-// Module 5507 (handleThreadCreateOrUpdate)
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import applyDefault from "apply" /* 12 */;
+// Module 5521 (ActiveThreadsStore)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import createChannelRecord from "createChannelRecord" /* 1961 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import set from "set" /* 2 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import ChannelRecord from "ChannelRecord" /* 1961 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import size from "module_2" /* 2 */;
 
 function handleThreadCreateOrUpdate(channel) {
   channel = channel.channel;
@@ -27,14 +27,14 @@ function handleThreadCreateOrUpdate(channel) {
       if (obj == null) {
         obj = {};
       }
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(obj);
-      obj = {};
+      const obj3 = {};
       const merged1 = Object.assign(obj[channel.parent_id]);
-      ({ id: obj4[0], parent_id: obj4[1] } = channel);
-      obj[channel.id] = { id: null, parentId: null };
-      obj[channel.parent_id] = obj;
-      dependencyMap[channel.guild_id] = obj;
+      ({ id: obj4.id, parent_id: obj4.parentId } = channel);
+      obj3[channel.id] = { id: null, parentId: null };
+      obj2[channel.parent_id] = obj3;
+      dependencyMap[channel.guild_id] = obj2;
     }
   } else {
     return false;
@@ -52,17 +52,17 @@ function deleteThread(channel) {
       let tmp9 = parent_id in dependencyMap[guild_id];
       if (tmp9) {
         if (channel.id in dependencyMap[guild_id][parent_id]) {
-          let obj = {};
+          const obj = {};
           const merged = Object.assign(dependencyMap[guild_id]);
-          obj = {};
+          const obj2 = {};
           const merged1 = Object.assign(dependencyMap[guild_id][parent_id]);
-          obj[parent_id] = obj;
+          obj[parent_id] = obj2;
           dependencyMap[guild_id] = obj;
           delete tmp[tmp4];
           if (obj3.isEmpty(dependencyMap[guild_id][parent_id])) {
             delete tmp2[tmp3];
           }
-          obj3 = applyDefault;
+          obj3 = _modDef12;
         }
         tmp9 = tmp11;
       }
@@ -72,18 +72,18 @@ function deleteThread(channel) {
   }
   return tmp5;
 }
-({ ALL_CHANNEL_TYPES: obj1, THREAD_CHANNEL_TYPES: c3 } = createChannelRecord);
-let closure_5 = {};
-let set = new Set();
+({ ALL_CHANNEL_TYPES: c2, THREAD_CHANNEL_TYPES: c3 } = ChannelRecord);
+let dependencyMap = {};
+const set = new Set();
 let closure_8 = {};
 const Store = initializeDefault.Store;
 class ActiveThreadsStore extends Store {
 }
 const prototype = ActiveThreadsStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_4);
+  this.waitFor(ChannelStore);
 };
-prototype["isActive"] = function isActive(guild_id, id) {
+prototype["isActive"] = function isActive(guild_id, id, arg2) {
   let tmp = null != guild_id;
   if (tmp) {
     const self = this;
@@ -91,8 +91,8 @@ prototype["isActive"] = function isActive(guild_id, id) {
   }
   return tmp;
 };
-prototype["getThreadsForGuild"] = function getThreadsForGuild(closure_0) {
-  let tmp = dependencyMap[closure_0];
+prototype["getThreadsForGuild"] = function getThreadsForGuild(guildId) {
+  let tmp = dependencyMap[guildId];
   if (tmp == null) {
     tmp = closure_8;
   }
@@ -106,26 +106,25 @@ prototype["getThreadsForParent"] = function getThreadsForParent(guild_id, id) {
   return tmp;
 };
 prototype["hasThreadsForChannel"] = function hasThreadsForChannel(guild_id, id) {
-  return !applyDefault.isEmpty(this.getThreadsForParent(guild_id, id));
+  return !_modDef12.isEmpty(this.getThreadsForParent(guild_id, id));
 };
 prototype["forEachGuild"] = function forEachGuild(arg0) {
   importDefault = arg0;
-  const keys = DISCORD_EPOCHDefault.keys(closure_5);
-  const item = keys.forEach((arg0) => {
-    callback(arg0, closure_1_5[arg0]);
+  const keys = SnowflakeUtilsDefault.keys(closure_5);
+  const item = keys.forEach((item) => {
+    closure_0(item, closure_5[item]);
   });
 };
 prototype["hasLoaded"] = function hasLoaded(arg0) {
   return set.has(arg0);
 };
 ActiveThreadsStore.displayName = "ActiveThreadsStore";
-const activeThreadsStore = new ActiveThreadsStore(dispatcherDefault, {
+const activeThreadsStore = new ActiveThreadsStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(guilds) {
-    closure_5 = {};
+    dependencyMap = {};
     set.clear();
     guilds = guilds.guilds;
     let item = guilds.forEach((threads) => {
-      closure_0 = threads;
       let tmp = null != threads.threads;
       if (tmp) {
         tmp = threads.threads.length > 0;
@@ -137,10 +136,10 @@ const activeThreadsStore = new ActiveThreadsStore(dispatcherDefault, {
         const item = found.forEach((id) => {
           id = threads.id;
           const parent_id = id.parent_id;
-          if (!(parent_id in closure_1_5[id])) {
+          if (!(parent_id in dependencyMap[id])) {
             tmp[parent_id] = {};
           }
-          closure_1_5[id][parent_id][id.id] = { id: id.id, parentId: id.parent_id };
+          dependencyMap[id][parent_id][id.id] = { id: id.id, parentId: id.parent_id };
         });
       }
       if (threads.hasThreadsSubscription) {
@@ -149,18 +148,18 @@ const activeThreadsStore = new ActiveThreadsStore(dispatcherDefault, {
     });
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(channels) {
-    closure_5 = {};
-    const found = applyDefault(channels.channels).filter((type) => set.has(type.type));
-    const arr = applyDefault(channels.channels);
-    let item = found.groupBy("guild_id").forEach((arr) => {
-      closure_0 = arg1;
-      closure_5[arg1] = {};
+    dependencyMap = {};
+    const found = _modDef12(channels.channels).filter((type) => set.has(type.type));
+    const arr = _modDef12(channels.channels);
+    let item = found.groupBy("guild_id").forEach((arr, index) => {
+      closure_0 = index;
+      closure_5[index] = {};
       const item = arr.forEach((id) => {
         const parent_id = id.parent_id;
-        if (!(parent_id in closure_1_5[closure_0])) {
+        if (!(parent_id in dependencyMap[closure_0])) {
           tmp2[parent_id] = {};
         }
-        closure_1_5[closure_0][parent_id][id.id] = { id: id.id, parentId: id.parent_id };
+        dependencyMap[closure_0][parent_id][id.id] = { id: id.id, parentId: id.parent_id };
       });
     });
   },
@@ -180,10 +179,10 @@ const activeThreadsStore = new ActiveThreadsStore(dispatcherDefault, {
       const item = found.forEach((id) => {
         id = threads.id;
         const parent_id = id.parent_id;
-        if (!(parent_id in closure_1_5[id])) {
+        if (!(parent_id in dependencyMap[id])) {
           tmp[parent_id] = {};
         }
-        closure_1_5[id][parent_id][id.id] = { id: id.id, parentId: id.parent_id };
+        dependencyMap[id][parent_id][id.id] = { id: id.id, parentId: id.parent_id };
       });
     }
     if (guild.hasThreadsSubscription) {
@@ -203,25 +202,20 @@ const activeThreadsStore = new ActiveThreadsStore(dispatcherDefault, {
     if (null == guildId.channelIds) {
       set.add(guildId);
     }
-    let obj = {};
     const merged = Object.assign(dependencyMap[guildId]);
-    dependencyMap[guildId] = obj;
+    dependencyMap[guildId] = {};
     for (const key10016 in closure_5[guildId]) {
-      let tmp5 = key10016;
-      let tmp6 = dependencyMap;
-      obj = {};
-      let tmp7 = dependencyMap;
-      let tmp8 = obj;
+      let obj2 = {};
       let merged1 = Object.assign(dependencyMap[guildId][key10016]);
-      dependencyMap[guildId][key10016] = obj;
+      dependencyMap[guildId][key10016] = obj2;
       continue;
     }
     const item = threads.forEach((id) => {
       const parent_id = id.parent_id;
-      if (!(parent_id in closure_1_5[guildId])) {
+      if (!(parent_id in dependencyMap[guildId])) {
         tmp2[parent_id] = {};
       }
-      closure_1_5[guildId][parent_id][id.id] = { id: id.id, parentId: id.parent_id };
+      dependencyMap[guildId][parent_id][id.id] = { id: id.id, parentId: id.parent_id };
     });
   },
   THREAD_DELETE: function handleThreadDelete(channel) {
@@ -241,6 +235,6 @@ const activeThreadsStore = new ActiveThreadsStore(dispatcherDefault, {
     return false;
   }
 });
-const result = set.fileFinishedImporting("modules/threads/ActiveThreadsStore.tsx");
+const result = size.fileFinishedImporting("modules/threads/ActiveThreadsStore.tsx");
 
 export default activeThreadsStore;

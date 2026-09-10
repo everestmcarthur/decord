@@ -1,45 +1,42 @@
-// Module ID: 13981
-// Function ID: 13982
+// Module ID: 14004
+// Function ID: 14005
 // Name: RowGroup
-// Dependencies: [19, 17, 21, 4560, 576, 4973, 5687, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 4987, 5701, 2]
 // Exports: RowGroup
 
-// Module 13981 (RowGroup)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Stack from "Stack" /* 4973 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14004 (RowGroup)
+import nativeDefault from "native" /* 576 */;
+import Stack_Stack from "Stack/Stack" /* 4987 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { container: { overflow: "hidden" }, content: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.TABLEROW_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, padding: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
-createCacheKey[1] = createCacheKey;
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("design/components/RowGroup/native/RowGroup.native.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { overflow: "hidden" }, content: { backgroundColor: nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT, borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING } };
+let closure_5 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/RowGroup/native/RowGroup.native.tsx");
 
 export const RowGroup = function RowGroup(children) {
   ({ title, trailing } = children);
-  const tmp = callback2();
-  let obj = { style: tmp.container, children: null };
+  const tmp = closure_5();
+  const obj = { style: tmp.container, children: null };
   let tmp2Result = null != title || null != trailing;
   if (tmp2Result) {
     let tmp7 = null != title;
     if (tmp7) {
-      obj = { title: null };
-      obj[0] = title;
-      tmp7 = callback(tmp5(5687).TableRowGroupTitle, obj);
+      const obj2 = { title };
+      tmp7 = React3(tmp5(5701).TableRowGroupTitle, obj2);
     }
-    obj = { direction: "horizontal", spacing: 4, children: null };
+    const obj3 = { direction: "horizontal", spacing: 4, children: null };
     const items = [tmp7, trailing];
-    obj[2] = items;
-    tmp2Result = tmp2(Stack.Stack, obj);
+    obj3.children = items;
+    tmp2Result = tmp2(Stack_Stack.Stack, obj3);
     tmp5 = require;
   }
-  const items1 = [tmp2Result, callback(View, { style: tmp.content, children: children.children })];
-  obj[1] = items1;
-  return closure_4(View, obj);
+  const items1 = [tmp2Result, React3(View, { style: tmp.content, children: children.children })];
+  obj.children = items1;
+  return React4(View, obj);
 };

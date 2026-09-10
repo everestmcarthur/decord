@@ -1,15 +1,19 @@
-// Module ID: 15339
-// Function ID: 15340
+// Module ID: 15368
+// Function ID: 15369
 // Name: useDisplayNameStylesHandleApply
-// Dependencies: [19, 1074, 1390, 8167, 8164, 1242, 1391, 2]
+// Dependencies: [19, 1074, 1390, 8193, 8190, 1242, 1391, 2]
 // Exports: useDisplayNameStylesHandleApply
 
-// Module 15339 (useDisplayNameStylesHandleApply)
-import closure_3 from "noop" /* 19 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
+// Module 15368 (useDisplayNameStylesHandleApply)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import DisplayNameEffect from "DisplayNameEffect" /* 1390 */;
+import DisplayNameFont from "DisplayNameFont" /* 1391 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesHandleApply.tsx");
+require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesHandleApply.tsx");
 
 export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHandleApply(hasChanges) {
   hasChanges = hasChanges.hasChanges;
@@ -23,7 +27,7 @@ export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHand
   let items = [hasChanges, selectedFontId, selectedEffectId, selectedColors, defaultColor, onClose, guildId, isTryItOut];
   return selectedColors.useCallback(() => {
     if (hasChanges) {
-      let tmp4 = selectedEffectId === hasChanges(selectedEffectId[2]).DisplayNameEffect.SOLID;
+      let tmp4 = selectedEffectId === DisplayNameEffect.DisplayNameEffect.SOLID;
       if (tmp4) {
         tmp4 = arr.length > 0;
       }
@@ -34,30 +38,20 @@ export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHand
       if (tmp4) {
         items = [];
       }
-      let obj = { fontId: null, effectId: null, colors: null };
-      obj[0] = selectedFontId;
-      obj[1] = selectedEffectId;
-      obj[2] = items;
+      const obj = { fontId: selectedFontId, effectId: selectedEffectId, colors: items };
       if (isTryItOut) {
-        let tmp2Result = tmp2(tmp3[3]);
-        const result = tmp2Result.setTryItOutDisplayNameStyles(obj);
+        const result = tmp2(8193).setTryItOutDisplayNameStyles(obj);
+        const tmp2Result = tmp2(8193);
       } else {
-        tmp2Result = tmp2(tmp3[4]);
-        obj = { guildId: null, displayNameStyles: null };
-        obj[0] = guildId;
-        obj[1] = obj;
-        tmp2Result.setPendingChanges(obj);
+        const obj2 = { guildId, displayNameStyles: obj };
+        tmp2(8190).setPendingChanges(obj2);
+        const tmp2Result2 = tmp2(8190);
       }
-      obj = { font_name: null, effect_name: null, colors: null };
-      obj[0] = hasChanges(selectedEffectId[6]).DisplayNameFont[selectedFontId];
-      obj[1] = hasChanges(selectedEffectId[2]).DisplayNameEffect[selectedEffectId];
-      obj[2] = selectedColors;
-      selectedFontId(selectedEffectId[5]).track(defaultColor.DISPLAY_NAME_STYLES_APPLIED, obj);
+      const obj3 = { font_name: DisplayNameFont.DisplayNameFont[selectedFontId], effect_name: DisplayNameEffect.DisplayNameEffect[selectedEffectId], colors: selectedColors };
+      AnalyticsUtilsDefault.track(AnalyticEvents.DISPLAY_NAME_STYLES_APPLIED, obj3);
       if (onClose != null) {
         onClose();
       }
-      const obj5 = selectedFontId(selectedEffectId[5]);
-      const tmp6 = selectedFontId;
     }
   }, items);
 };

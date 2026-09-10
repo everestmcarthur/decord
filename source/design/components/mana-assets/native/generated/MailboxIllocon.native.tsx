@@ -1,17 +1,17 @@
-// Module ID: 6231
-// Function ID: 6232
+// Module ID: 6245
+// Function ID: 6246
 // Name: MailboxIllocon
-// Dependencies: [21, 5587, 6232, 2]
+// Dependencies: [21, 5601, 6246, 2]
 // Exports: MailboxIllocon
 
-// Module 6231 (MailboxIllocon)
-import set from "set" /* 2 */;
+// Module 6245 (MailboxIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 6232 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6246 from "module_6246" /* 6246 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/MailboxIllocon.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/MailboxIllocon.native.tsx");
 
 export const MailboxIllocon = function MailboxIllocon(size) {
   let num = size.size;
@@ -19,13 +19,13 @@ export const MailboxIllocon = function MailboxIllocon(size) {
   if (num === undefined) {
     num = 64;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef6246 };
+  obj.source = obj2;
   const items = [{ width: num, height: num }];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { uri: metadataDefault });
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

@@ -4,7 +4,7 @@
 // Dependencies: [600]
 
 // Module 610 (hashSet)
-import getNative from "getNative" /* 600 */;
+import _mod600 from "module_600" /* 600 */;
 
 
 export default function hashSet(arg0, arg1) {
@@ -15,7 +15,7 @@ export default function hashSet(arg0, arg1) {
     num = 0;
   }
   self.size = size + num;
-  if (!getNative) {
+  if (!_mod600) {
     let str = arg1;
   } else {
     str = "__lodash_hash_undefined__";

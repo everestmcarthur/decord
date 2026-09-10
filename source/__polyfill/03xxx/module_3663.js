@@ -1,37 +1,78 @@
 // Module ID: 3663
 // Function ID: 3664
-// Dependencies: [2035, 2036]
+// Dependencies: [3664]
+// Exports: default
 
 // Module 3663
-import buildMatchFn from "buildMatchFn" /* 2035 */;
-import buildMatchPatternFn from "buildMatchPatternFn" /* 2036 */;
+import requiredArgs_mod from "requiredArgs" /* 3664 */;
 
-if (!buildMatchFn) {
-  let obj = { default: null };
-  obj[0] = buildMatchFn;
-} else {
-  obj = buildMatchFn;
-}
-if (!buildMatchPatternFn) {
-  obj = { default: null };
-  obj[0] = buildMatchPatternFn;
-  let obj2 = obj;
-} else {
-  obj2 = buildMatchPatternFn;
-}
-obj2 = {
-  matchPattern: /^(\d+)\.?/i,
-  parsePattern: /\d+/i,
-  valueCallback(joined) {
-    return parseInt(joined, 10);
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      _typeof = function _typeof(arg0) {
+        return typeof arg0;
+      };
+    }
+    return _typeof(arg0);
   }
-};
-const items = [/^p[řr]/i, /^(po|n)/i];
-const items1 = [/1/i, /2/i, /3/i, /4/i];
-const items2 = [/^l/i, /^[úu]/i, /^b/i, /^d/i, /^k/i, /^[čc]/i, /^[čc]/i, /^s/i, /^z/i, /^[řr]/i, /^l/i, /^p/i];
-const items3 = [/^led/i, /^[úu]n/i, /^b[řr]e/i, /^dub/i, /^kv[ěe]/i, /^[čc]vn|[čc]erven(?!\w)|[čc]ervna/i, /^[čc]vc|[čc]erven(ec|ce)/i, /^srp/i, /^z[áa][řr]/i, /^[řr][íi]j/i, /^lis/i, /^pro/i];
-const items4 = [/^n/i, /^p/i, /^[úu]/i, /^s/i, /^[čc]/i, /^p/i, /^s/i];
-const items5 = [/^ne/i, /^po/i, /^[úu]t/i, /^st/i, /^[čc]t/i, /^p[áa]/i, /^so/i];
+  _typeof = function _typeof(arg0) {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
+        }
+        return str;
+      }
+    }
+    str = typeof arg0;
+  };
+}
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj = { default: requiredArgs };
+  let tmp3 = obj;
+} else {
+  tmp3 = requiredArgs;
+}
+requiredArgs = tmp3;
 
-export default { ordinalNumber: obj2.default(obj2), era: obj.default({ matchPatterns: obj3, defaultMatchWidth: "wide", parsePatterns: { any: items }, defaultParseWidth: "any" }), quarter: obj.default(obj4), month: obj.default({ matchPatterns: obj6, defaultMatchWidth: "wide", parsePatterns: { narrow: items2, any: items3 }, defaultParseWidth: "any" }), day: obj.default({ matchPatterns: obj7, defaultMatchWidth: "wide", parsePatterns: { narrow: items4, any: items5 }, defaultParseWidth: "any" }), dayPeriod: obj.default({ matchPatterns: obj8, defaultMatchWidth: "any", parsePatterns: { any: obj9 }, defaultParseWidth: "any" }) };
+export default function toDate(getTime) {
+  requiredArgs.default(1, arguments);
+  const call = toString.call;
+  const tmp2 = typeof call === "unknown" ? toString() : call(getTime);
+  if (!(getTime instanceof Date)) {
+    if ("object" === _typeof(getTime)) {
+      return date;
+    }
+    if (typeof getTime !== "number") {
+      if ("[object Number]" !== tmp2) {
+        let tmp4 = typeof getTime !== "string";
+        if (typeof getTime !== "string") {
+          tmp4 = "[object String]" !== tmp2;
+        }
+        if (!tmp4) {
+          const _console = console;
+          tmp4 = typeof console === "undefined";
+        }
+        if (!tmp4) {
+          const _console2 = console;
+          console.warn("Starting with v2.0.0-beta.1 date-fns doesn't accept strings as date arguments. Please use `parseISO` to parse strings. See: https://github.com/date-fns/date-fns/blob/master/docs/upgradeGuide.md#string-arguments");
+          const _console3 = console;
+          const _Error = Error;
+          const error = new Error();
+          console.warn(error.stack);
+        }
+        const _Date = Date;
+        date = new Date(NaN);
+      }
+    }
+    const _Date2 = Date;
+    date = new Date(getTime);
+  }
+  date = new Date(getTime.getTime());
+};
 export default exports.default;

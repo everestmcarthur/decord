@@ -1,23 +1,25 @@
-// Module ID: 12122
-// Function ID: 12123
+// Module ID: 12148
+// Function ID: 12149
 // Name: useFetchDeveloperActivityShelfItems
-// Dependencies: [19, 8860, 9507, 1935, 504, 9509, 2]
+// Dependencies: [19, 8887, 9534, 1935, 504, 9536, 2]
 // Exports: useFetchDeveloperActivityShelfItems
 
-// Module 12122 (useFetchDeveloperActivityShelfItems)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "initialize" /* 8860 */;
-import { DevShelfFetchState } from "initialize" /* 8860 */;
+// Module 12148 (useFetchDeveloperActivityShelfItems)
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9536 */;
+import noop from "module_19" /* 19 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 8887 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/useFetchDeveloperActivityShelfItems.tsx");
+require = fn;
+const DevShelfFetchState = fn(8887).DevShelfFetchState;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/useFetchDeveloperActivityShelfItems.tsx");
 
 export const useFetchDeveloperActivityShelfItems = function useFetchDeveloperActivityShelfItems() {
   isActivitiesEnabledForCurrentPlatform = isActivitiesEnabledForCurrentPlatform(setting[2]).useIsActivitiesEnabledForCurrentPlatform();
   const DeveloperMode = isActivitiesEnabledForCurrentPlatform(setting[3]).DeveloperMode;
   setting = DeveloperMode.getSetting();
   let obj = isActivitiesEnabledForCurrentPlatform(setting[2]);
-  const items = [closure_3];
+  const items = [DeveloperActivityShelfStore];
   const stateFromStores = isActivitiesEnabledForCurrentPlatform(setting[4]).useStateFromStores(items, () => fetchState.getFetchState(), []);
   const items1 = [isActivitiesEnabledForCurrentPlatform, stateFromStores, setting];
   const effect = stateFromStores.useEffect(() => {
@@ -26,11 +28,10 @@ export const useFetchDeveloperActivityShelfItems = function useFetchDeveloperAct
       tmp = setting;
     }
     if (tmp) {
-      tmp = stateFromStores === closure_1_4.INITIALIZED;
+      tmp = stateFromStores === DevShelfFetchState.INITIALIZED;
     }
     if (tmp) {
-      const developerApplications = isActivitiesEnabledForCurrentPlatform(setting[5]).fetchDeveloperApplications();
-      const obj = isActivitiesEnabledForCurrentPlatform(setting[5]);
+      const developerApplications = EmbeddedActivitiesActionCreators.fetchDeveloperApplications();
     }
   }, items1);
   return null;

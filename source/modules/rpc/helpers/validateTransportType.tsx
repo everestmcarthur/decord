@@ -1,25 +1,24 @@
-// Module ID: 14499
-// Function ID: 14500
+// Module ID: 14524
+// Function ID: 14525
 // Name: validateTransportType
-// Dependencies: [4465, 1074, 9559, 2]
+// Dependencies: [4479, 1074, 9586, 2]
 // Exports: validateTransportType
 
-// Module 14499 (validateTransportType)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4465 */;
-import prototypeDefault from "prototype" /* 9559 */;
+// Module 14524 (validateTransportType)
+import Constants from "Constants" /* 1074 */;
+import Constants2 from "Constants" /* 4479 */;
+import RPCErrorDefault from "RPCError" /* 9586 */;
+import size from "module_2" /* 2 */;
 
-const TransportTypes = RPC_SCOPE_CONFIG.TransportTypes;
-const RPCErrors = ME.RPCErrors;
-const result = set.fileFinishedImporting("modules/rpc/helpers/validateTransportType.tsx");
+const TransportTypes = Constants2.TransportTypes;
+const RPCErrors = Constants.RPCErrors;
+const result = size.fileFinishedImporting("modules/rpc/helpers/validateTransportType.tsx");
 
 export const validateTransportType = function validateTransportType(transport) {
   if (TransportTypes.IPC !== transport) {
     if (TransportTypes.POST_MESSAGE !== transport) {
-      const obj = { errorCode: null };
-      obj[0] = RPCErrors.INVALID_COMMAND;
-      const tmp7 = new prototypeDefault(obj, "Invalid transport.");
+      const obj = { errorCode: RPCErrors.INVALID_COMMAND };
+      const tmp7 = new RPCErrorDefault(obj, "Invalid transport.");
       throw tmp7;
     }
   }

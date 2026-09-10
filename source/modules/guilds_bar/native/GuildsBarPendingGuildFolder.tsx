@@ -1,40 +1,42 @@
-// Module ID: 16309
-// Function ID: 16310
-// Dependencies: [19, 4381, 1074, 21, 16297, 9211, 504, 16290, 4296, 4528, 5520, 1114, 16296, 9035, 2]
+// Module ID: 16340
+// Function ID: 16341
+// Name: GuildsBarPendingGuildFolder
+// Dependencies: [19, 4395, 1074, 21, 16327, 9238, 504, 16320, 4310, 4542, 5534, 1114, 16326, 9062, 2]
 
-// Module 16309
-import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 9211 */;
-import UnreadIndicatorDefault from "UnreadIndicator" /* 16297 */;
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "handleConnectionOpen" /* 4381 */;
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16340 (GuildsBarPendingGuildFolder)
+import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 9238 */;
+import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems" /* 16320 */;
+import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 16327 */;
+import noop from "module_19" /* 19 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
 
-const require = arg1;
-let c3 = importAllResult;
-const memoResult = importAllResult.memo(function GuildsBarPendingGuildFolder(id) {
+require = fn;
+const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarPendingGuildFolder.tsx");
+
+export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   id = id.id;
-  importDefault = undefined;
   ({ expanded, childNodes } = id);
-  let obj = id(16297);
+  let obj = id(16327);
   importDefault = usePendingFolderGuildIdsDefault();
-  const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: false });
-  const items = [closure_4];
+  const guildsBarAnimatedWrapperStyles = id(16327).useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: false });
+  const items = [SelectedGuildStore];
   const items1 = [id];
   const stateFromStores = id(504).useStateFromStores(items, () => {
-    let guildId = closure_1_4.getGuildId();
+    let guildId = SelectedGuildStore.getGuildId();
     if (guildId == null) {
-      guildId = closure_1_5;
+      guildId = EMPTY_STRING_SNOWFLAKE_ID;
     }
     return closure_1.includes(guildId);
   });
-  const memo = importAllResult.useMemo(() => {
-    let obj = id(closure_1_2[7]);
-    guildFolderMenuItems = obj.getGuildFolderMenuItems(guildFolderMenuItems);
-    obj = {
+  const memo = noop.useMemo(() => {
+    const guildFolderMenuItems = GuildsBarFolderMenuItems.getGuildFolderMenuItems(id);
+    return {
       accessibilityActions: guildFolderMenuItems.map((label) => ({ name: label.label, label: label.label })),
       onAccessibilityAction(arg0) {
-        guildFolderMenuItems = arg0;
+        const nativeEvent = arg0;
         const found = guildFolderMenuItems.find((label) => label.label === nativeEvent.nativeEvent.actionName);
         if (found != null) {
           const action = found.action;
@@ -44,41 +46,35 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuildFolder(id)
         }
       }
     };
-    return obj;
   }, items1);
   ({ accessibilityActions, onAccessibilityAction } = memo);
   const obj2 = id(504);
   const items2 = [id];
-  const sharedValue = id(4296).useSharedValue("" + id);
-  const memo1 = importAllResult.useMemo(() => ({
+  const sharedValue = id(4310).useSharedValue("" + id);
+  const memo1 = noop.useMemo(() => ({
     onPress() {
-      const result = closure_1_0(closure_1_2[9]).triggerHapticFeedback(closure_1_0(closure_1_2[9]).HapticFeedbackTypes.IMPACT_LIGHT);
-      const obj = closure_1_0(closure_1_2[9]);
-      const result1 = closure_1_1(closure_1_2[10]).toggleGuildFolderExpand(closure_0);
+      const result = id(4542).triggerHapticFeedback(id(4542).HapticFeedbackTypes.IMPACT_LIGHT);
+      const obj = id(4542);
+      const result1 = closure_1(5534).toggleGuildFolderExpand(closure_1_0);
     }
   }), items2);
-  obj = { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "channel", config: false, externalChildren: false, children: false };
-  const obj3 = id(4296);
-  obj[0] = "" + id;
-  obj[1] = accessibilityActions;
-  obj[2] = onAccessibilityAction;
-  obj[3] = stateFromStores;
-  obj[6] = guildsBarAnimatedWrapperStyles;
+  const obj4 = { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "channel", config: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002381585255623383, externalChildren: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003159312213772056, children: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002716281932771814 };
+  const obj3 = id(4310);
+  obj4.id = "" + id;
+  obj4.accessibilityActions = accessibilityActions;
+  obj4.onAccessibilityAction = onAccessibilityAction;
+  obj4.selected = stateFromStores;
+  obj4.styles = guildsBarAnimatedWrapperStyles;
   const intl = id(1114).intl;
-  obj[7] = intl.string(id(1114).t["scsU+l"]);
-  obj[8] = sharedValue;
-  obj[11] = memo1;
+  obj4.label = intl.string(id(1114).t["scsU+l"]);
+  obj4.sharedId = sharedValue;
+  obj4.config = memo1;
   let tmp8Result = null;
   if (expanded) {
-    obj = { folderId: null, totalItems: null };
-    obj[0] = id;
-    obj[1] = childNodes.length;
-    tmp8Result = tmp8(tmp(16296).GuildsBarGuildFolderBG, obj);
+    const obj5 = { folderId: id, totalItems: childNodes.length };
+    tmp8Result = tmp8(tmp(16326).GuildsBarGuildFolderBG, obj5);
   }
-  obj[12] = tmp8Result;
-  obj[13] = jsx(id(9035).HourglassIcon, {});
-  return jsx(UnreadIndicatorDefault, { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "channel", config: false, externalChildren: false, children: false });
+  obj4.externalChildren = tmp8Result;
+  obj4.children = jsx(id(9062).HourglassIcon, {});
+  return jsx(GuildsBarAnimatedItemWrapperDefault, { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "channel", config: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002381585255623383, externalChildren: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003159312213772056, children: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002716281932771814 });
 });
-let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarPendingGuildFolder.tsx");
-
-export default memoResult;

@@ -1,28 +1,29 @@
-// Module ID: 13152
-// Function ID: 13153
+// Module ID: 13177
+// Function ID: 13178
 // Name: useOpenNitroSubscribeActionSheet
-// Dependencies: [19, 1074, 1373, 7162, 7422, 2]
+// Dependencies: [19, 1074, 1373, 7176, 7436, 2]
 // Exports: default
 
-// Module 13152 (useOpenNitroSubscribeActionSheet)
-import closure_2 from "noop" /* 19 */;
-import ME from "ME" /* 1074 */;
-import { PremiumTypes } from "GuildFeatures" /* 1373 */;
+// Module 13177 (useOpenNitroSubscribeActionSheet)
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7436 */;
+import noop from "module_19" /* 19 */;
 
-({ AnalyticsPages: c3, AnalyticsSections: c4 } = ME);
-const result = require("set").fileFinishedImporting("modules/collectibles/native/useOpenNitroSubscribeActionSheet.tsx");
+const Constants = fn(1074);
+({ AnalyticsPages: c3, AnalyticsSections: closure_4 } = Constants);
+const PremiumTypes = fn(1373).PremiumTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/useOpenNitroSubscribeActionSheet.tsx");
 
 export default function useOpenNitroSubscribeActionSheet() {
   let COLLECTIBLES_SHOP = arg0;
   if (arg0 === undefined) {
-    COLLECTIBLES_SHOP = constants.COLLECTIBLES_SHOP;
+    COLLECTIBLES_SHOP = constants2.COLLECTIBLES_SHOP;
   }
   let analyticsLocations;
   analyticsLocations = COLLECTIBLES_SHOP(analyticsLocations[3])().analyticsLocations;
   const items = [analyticsLocations, COLLECTIBLES_SHOP];
-  return React.useCallback(() => {
-    obj = { analyticsLocation: obj, analyticsLocations, premiumType: closure_1_5.TIER_2 };
-    obj = { page: closure_1_3.COLLECTIBLES_SHOP, section: COLLECTIBLES_SHOP };
-    COLLECTIBLES_SHOP(analyticsLocations[4])(obj);
+  return noop.useCallback(() => {
+    const obj = { analyticsLocation: { page: constants.COLLECTIBLES_SHOP, section: COLLECTIBLES_SHOP }, analyticsLocations, premiumType: PremiumTypes.TIER_2 };
+    openPremiumPlanSelectionActionSheetDefault(obj);
   }, items);
 };

@@ -1,26 +1,29 @@
-// Module ID: 9385
-// Function ID: 9386
+// Module ID: 9412
+// Function ID: 9413
 // Name: useDiscountedPremiumPlan
-// Dependencies: [19, 7237, 504, 2]
+// Dependencies: [19, 7251, 504, 2]
 // Exports: useDiscountedPremiumPlan
 
-// Module 9385 (useDiscountedPremiumPlan)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "updateProduct" /* 7237 */;
+// Module 9412 (useDiscountedPremiumPlan)
+import noop from "module_19" /* 19 */;
+import IAPStore from "IAPStore" /* 7251 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/native/hooks/useDiscountedPremiumPlan.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/hooks/useDiscountedPremiumPlan.tsx");
 
 export const useDiscountedPremiumPlan = function useDiscountedPremiumPlan(premiumDiscountOffer, items3) {
-  const _require = premiumDiscountOffer;
+  _require = premiumDiscountOffer;
   dependencyMap = items3;
   const items = [premiumDiscountOffer, items3];
   memo = memo.useMemo(() => {
-    if (null == planIds) {
+    if (null == closure_0) {
       return null;
     } else {
       const discount = tmp.discount;
-      planIds = undefined;
+      let planIds;
       if (discount != null) {
         planIds = discount.planIds;
       }
@@ -30,18 +33,17 @@ export const useDiscountedPremiumPlan = function useDiscountedPremiumPlan(premiu
       return items3.find((basePlanId) => planIds.includes(basePlanId.basePlanId));
     }
   }, items);
-  let obj = _require(504);
-  const items1 = [closure_3];
+  const items1 = [IAPStore];
   const items2 = [memo];
-  obj = {
+  const obj = require("initialize");
+  return {
     discountedPlan: memo,
-    discountedProduct: obj.useStateFromStores(items1, () => {
+    discountedProduct: require("initialize").useStateFromStores(items1, () => {
       let product = null;
       if (null != memo) {
-        product = closure_1_3.getProduct(tmp.productId);
+        product = IAPStore.getProduct(tmp.productId);
       }
       return product;
     }, items2)
   };
-  return obj;
 };

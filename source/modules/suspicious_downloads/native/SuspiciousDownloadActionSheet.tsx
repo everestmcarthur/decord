@@ -1,64 +1,63 @@
-// Module ID: 12951
-// Function ID: 12952
+// Module ID: 12977
+// Function ID: 12978
 // Name: SuspiciousDownloadActionSheet
-// Dependencies: [19, 21, 4560, 576, 1611, 7150, 4973, 5692, 4556, 1114, 4975, 4527, 4249, 2]
+// Dependencies: [19, 21, 4574, 576, 1611, 7164, 4987, 5706, 4570, 1114, 4989, 4541, 4262, 2]
 // Exports: default
 
-// Module 12951 (SuspiciousDownloadActionSheet)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
+// Module 12977 (SuspiciousDownloadActionSheet)
+import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import openURLDefault from "openURL" /* 4262 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { container: null, title: null, body: null };
-createCacheKey = { padding: ThemesDefault.space.PX_12 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { textAlign: "center" };
-createCacheKey[2] = { textAlign: "center" };
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/suspicious_downloads/native/SuspiciousDownloadActionSheet.tsx");
+const require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { padding: nativeDefault.space.PX_12 }, title: { textAlign: "center" }, body: { textAlign: "center" } };
+let closure_5 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/suspicious_downloads/native/SuspiciousDownloadActionSheet.tsx");
 
 export default function SuspiciousDownloadActionSheet(href) {
   href = href.href;
-  const tmp = callback3();
-  let obj = { startExpanded: true, children: null };
-  obj = { spacing: 16, justify: "center", align: "center", style: items, children: null };
-  items = [tmp.container, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
-  obj = { spacing: 8, justify: "center", align: "center", children: null };
-  const items1 = [callback(href(5692).TrafficConeSpotIllustration, {}), , ];
-  obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+  const tmp = closure_5();
+  const obj = { startExpanded: true, children: null };
+  const obj2 = { spacing: 16, justify: "center", align: "center", style: null, children: null };
+  const items = [tmp.container, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
+  obj2.style = items;
+  const obj3 = { spacing: 8, justify: "center", align: "center", children: null };
+  const items1 = [closure_3(href(5706).TrafficConeSpotIllustration, {}), , ];
+  const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = href(1114).intl;
-  obj1[4] = intl.string(href(1114).t.XtDo9Z);
-  items1[1] = callback(href(4556).Text, obj1);
-  const obj2 = { style: tmp.body, variant: "text-md/medium", children: null };
+  obj4.children = intl.string(href(1114).t.XtDo9Z);
+  items1[1] = closure_3(href(4570).Text, obj4);
+  const obj5 = { style: tmp.body, variant: "text-md/medium", children: null };
   const intl2 = href(1114).intl;
-  obj2[2] = intl2.string(href(1114).t.L9yFko);
-  items1[2] = callback(href(4556).Text, obj2);
-  obj[3] = items1;
-  const items2 = [callback2(href(4973).Stack, obj), ];
-  const obj3 = { spacing: 8, children: null };
-  const obj4 = { text: null, onPress: null };
+  obj5.children = intl2.string(href(1114).t.L9yFko);
+  items1[2] = closure_3(href(4570).Text, obj5);
+  obj3.children = items1;
+  const items2 = [closure_4(href(4987).Stack, obj3), ];
+  const obj6 = { spacing: 8, children: null };
+  const obj7 = { text: null, onPress: null };
   const intl3 = href(1114).intl;
-  obj4[0] = intl3.string(href(1114).t.j7Vi2i);
-  obj4[1] = function onPress() {
-    return callback(table[11]).hideActionSheet();
+  obj7.text = intl3.string(href(1114).t.j7Vi2i);
+  obj7.onPress = function onPress() {
+    return ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  const items3 = [callback(href(4975).Button, obj4), ];
-  const obj5 = { text: null, onPress: null, variant: "secondary" };
+  const items3 = [closure_3(href(4989).Button, obj7), ];
+  const obj8 = { text: null, onPress: null, variant: "secondary" };
   const intl4 = href(1114).intl;
-  obj5[0] = intl4.string(href(1114).t["/bHu89"]);
-  obj5[1] = function onPress() {
-    closure_1_1(closure_1_2[11]).hideActionSheet();
-    closure_1_1(closure_1_2[12])(href, true);
+  obj8.text = intl4.string(href(1114).t["/bHu89"]);
+  obj8.onPress = function onPress() {
+    ActionSheetActionCreatorsDefault.hideActionSheet();
+    openURLDefault(href, true);
   };
-  items3[1] = callback(href(4975).Button, obj5);
-  obj3[1] = items3;
-  items2[1] = callback2(href(4973).Stack, obj3);
-  obj[4] = items2;
-  obj[1] = callback2(href(4973).Stack, obj);
-  return callback(href(7150).BottomSheet, obj);
+  items3[1] = closure_3(href(4989).Button, obj8);
+  obj6.children = items3;
+  items2[1] = closure_4(href(4987).Stack, obj6);
+  obj2.children = items2;
+  obj.children = closure_4(href(4987).Stack, obj2);
+  return closure_3(href(7164).BottomSheet, obj);
 };

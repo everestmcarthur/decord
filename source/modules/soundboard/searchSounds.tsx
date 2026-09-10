@@ -1,61 +1,58 @@
-// Module ID: 7343
-// Function ID: 7344
-// Name: trackSearchStart
-// Dependencies: [5459, 1074, 551, 1242, 4213, 5517, 7344, 2]
+// Module ID: 7357
+// Function ID: 7358
+// Name: searchSounds
+// Dependencies: [5473, 1074, 551, 1242, 4226, 5531, 7358, 2]
 // Exports: searchSounds, trackSearchResultViewed, trackSearchStart
 
-// Module 7343 (trackSearchStart)
+// Module 7357 (searchSounds)
 import debounceDefault from "debounce" /* 551 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import closure_3 from "getEmojiToGroupId" /* 5459 */;
-import ME from "ME" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4226 */;
+import SoundboardUtils from "SoundboardUtils" /* 7358 */;
+import EmojiStore from "EmojiStore" /* 5473 */;
 
-const require = arg1;
+require = fn;
 function trackSearchStart(location_stack, channel_id) {
-  let obj = expandEventPropertiesDefault;
-  obj = { channel_id, search_type: constants2.SOUNDBOARD, location_stack };
-  obj.track(constants.SEARCH_STARTED, obj);
+  AnalyticsUtilsDefault.track(constants.SEARCH_STARTED, { channel_id, search_type: constants2.SOUNDBOARD, location_stack });
 }
 function trackSearchResultViewed(total_results, location_stack, channel_id, query) {
-  let obj = expandEventPropertiesDefault;
-  obj = { search_type: constants2.SOUNDBOARD, channel_id, query, total_results: total_results.length, location_stack };
-  obj.track(constants.SEARCH_RESULT_VIEWED, obj);
+  AnalyticsUtilsDefault.track(constants.SEARCH_RESULT_VIEWED, { search_type: constants2.SOUNDBOARD, channel_id, query, total_results: total_results.length, location_stack });
 }
-({ AnalyticEvents: c4, SearchTypes: c5 } = ME);
+const Constants = fn(1074);
+({ AnalyticEvents: closure_4, SearchTypes: hasOwnProperty } = Constants);
 let closure_6 = debounceDefault(trackSearchStart, 350);
 let closure_7 = debounceDefault(trackSearchResultViewed, 350);
-let result = require("set").fileFinishedImporting("modules/soundboard/searchSounds.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/soundboard/searchSounds.tsx");
 
 export { trackSearchStart };
 export { trackSearchResultViewed };
-export const searchSounds = function searchSounds(arg0, availableSounds, stateFromStores, channel) {
+export const searchSounds = function searchSounds(arg0, availableSounds, stateFromStores, channel, arg4) {
   closure_0 = arg0;
   closure_1 = stateFromStores;
   closure_2 = channel;
   closure_3 = arg4;
-  closure_4 = availableSounds.reduce((arg0, name) => {
+  dependencyMap = availableSounds.reduce((acc, name) => {
     let id;
-    if (dependencyMap != null) {
+    if (closure_2 != null) {
       id = tmp3.id;
     }
-    closure_1_6(customEmojiById, id);
-    const toLocaleLowerCaseResult = lib.toLocaleLowerCase();
-    lib = toLocaleLowerCaseResult;
+    closure_6(closure_3, id);
+    const toLocaleLowerCaseResult = closure_0.toLocaleLowerCase();
+    closure_0 = toLocaleLowerCaseResult;
     name = name.name;
     const toLocaleLowerCaseResult1 = name.toLocaleLowerCase();
-    customEmojiById = null;
+    let customEmojiById = null;
     if (null != name.emojiId) {
-      customEmojiById = customEmojiById.getCustomEmojiById(name.emojiId);
+      customEmojiById = EmojiStore.getCustomEmojiById(name.emojiId);
     }
     let result = null;
     if (null != name.emojiName) {
-      result = stateFromStores(4213).convertSurrogateToName(name.emojiName, false);
-      const obj2 = stateFromStores(4213);
+      result = UnicodeEmojisDefault.convertSurrogateToName(name.emojiName, false);
     }
     let byName = null;
     if (null != result) {
-      byName = stateFromStores(4213).getByName(result);
-      const obj3 = stateFromStores(4213);
+      byName = UnicodeEmojisDefault.getByName(result);
     }
     if (null != customEmojiById) {
       const items = [customEmojiById.name];
@@ -82,7 +79,7 @@ export const searchSounds = function searchSounds(arg0, availableSounds, stateFr
       sum1 = sum + 6;
     }
     let sum2 = sum1;
-    if (names.some((str) => str.startsWith(closure_0))) {
+    if (names.some((item) => item.startsWith(toLocaleLowerCaseResult))) {
       sum2 = sum1 + 5;
     }
     let sum3 = sum2;
@@ -90,7 +87,7 @@ export const searchSounds = function searchSounds(arg0, availableSounds, stateFr
       sum3 = sum2 + 4;
     }
     let sum4 = sum3;
-    if (names.some((str) => str.endsWith(closure_0))) {
+    if (names.some((item) => item.endsWith(toLocaleLowerCaseResult))) {
       sum4 = sum3 + 3;
     }
     const name2 = name.name;
@@ -99,23 +96,22 @@ export const searchSounds = function searchSounds(arg0, availableSounds, stateFr
       sum5 = sum4 + 2;
     }
     let sum6 = sum5;
-    if (names.some((arg0) => closure_1_1(closure_1_2[5])(closure_0, arg0))) {
+    if (names.some((item) => closure_1(closure_2[5])(toLocaleLowerCaseResult, item))) {
       sum6 = sum5 + 1;
     }
     let result1 = sum6 > 0;
     if (0 < sum6) {
-      result1 = lib(7344).canUseSoundboardSound(stateFromStores, name, tmp3);
-      const obj4 = lib(7344);
+      result1 = SoundboardUtils.canUseSoundboardSound(closure_1, name, tmp3);
     }
     let sum7 = sum6;
     if (result1) {
       sum7 = sum6 + 100;
     }
-    arg0[name.soundId] = sum7;
-    return arg0;
+    acc[name.soundId] = sum7;
+    return acc;
   }, {});
-  const found = availableSounds.filter((arg0) => dependencyMap2[arg0.soundId] > 0);
-  const sorted = found.sort((arg0, arg1) => dependencyMap2[arg1.soundId] - dependencyMap2[arg0.soundId]);
+  const found = availableSounds.filter((item) => dependencyMap[item.soundId] > 0);
+  const sorted = found.sort((arg0, arg1) => dependencyMap[arg1.soundId] - dependencyMap[arg0.soundId]);
   let id;
   if (channel != null) {
     id = channel.id;

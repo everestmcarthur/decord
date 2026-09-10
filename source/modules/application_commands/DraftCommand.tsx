@@ -1,21 +1,21 @@
-// Module ID: 4903
-// Function ID: 4904
-// Name: isDraftCommandValidForText
+// Module ID: 4917
+// Function ID: 4918
+// Name: DraftCommand
 // Dependencies: [2]
 // Exports: isDraftCommandValidForText
 
-// Module 4903 (isDraftCommandValidForText)
-import set from "set" /* 2 */;
+// Module 4917 (DraftCommand)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/application_commands/DraftCommand.tsx");
+const result = size.fileFinishedImporting("modules/application_commands/DraftCommand.tsx");
 
-export const isDraftCommandValidForText = function isDraftCommandValidForText(command, substr) {
-  let tmp = null != command;
+export const isDraftCommandValidForText = function isDraftCommandValidForText(command1, substr) {
+  let tmp = null != command1;
   if (tmp) {
-    let startsWithResult = substr === command.commandText;
+    let startsWithResult = substr === command1.commandText;
     if (!startsWithResult) {
       const _HermesInternal = HermesInternal;
-      startsWithResult = substr.startsWith("" + command.commandText + " ");
+      startsWithResult = substr.startsWith("" + command1.commandText + " ");
     }
     tmp = startsWithResult;
   }

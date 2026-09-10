@@ -1,18 +1,20 @@
-// Module ID: 14720
-// Function ID: 14721
-// Name: isTinyBroncoAnnouncementCountry
-// Dependencies: [19, 4775, 14686, 14687, 5423, 4773, 504, 10964, 2]
+// Module ID: 14746
+// Function ID: 14747
+// Name: TinyBroncoAccountStatusVisibility
+// Dependencies: [19, 4789, 14712, 14713, 5437, 4787, 504, 10991, 2]
 // Exports: isTinyBroncoAnnouncementCountry, shouldShowTinyBroncoAccountStatus, useShouldShowTinyBroncoAccountStatus
 
-// Module 14720 (isTinyBroncoAnnouncementCountry)
-import useIsTinyBroncoEnabled from "useIsTinyBroncoEnabled" /* 14687 */;
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "getRegionalFeatureConfig" /* 4775 */;
-import TINY_BRONCO_BLOG_URL from "TINY_BRONCO_BLOG_URL" /* 14686 */;
+// Module 14746 (TinyBroncoAccountStatusVisibility)
+import MessageRequestActionCreators from "MessageRequestActionCreators" /* 10991 */;
+import TinyBroncoExperiment from "TinyBroncoExperiment" /* 14713 */;
+import noop from "module_19" /* 19 */;
+import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 4789 */;
 
-require = arg1;
-({ TINY_BRONCO_ANNOUNCEMENT_EXCLUDED_COUNTRIES: c4, TINY_BRONCO_SETTINGS_LOCATION: c5 } = TINY_BRONCO_BLOG_URL);
-const result = require("set").fileFinishedImporting("modules/tiny_bronco/TinyBroncoAccountStatusVisibility.tsx");
+require = fn;
+const TinyBroncoConstants = fn(14712);
+({ TINY_BRONCO_ANNOUNCEMENT_EXCLUDED_COUNTRIES: closure_4, TINY_BRONCO_SETTINGS_LOCATION: hasOwnProperty } = TinyBroncoConstants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/tiny_bronco/TinyBroncoAccountStatusVisibility.tsx");
 
 export const isTinyBroncoAnnouncementCountry = function isTinyBroncoAnnouncementCountry(alpha2) {
   let tmp = null != alpha2;
@@ -22,25 +24,25 @@ export const isTinyBroncoAnnouncementCountry = function isTinyBroncoAnnouncement
   return tmp;
 };
 export const shouldShowTinyBroncoAccountStatus = function shouldShowTinyBroncoAccountStatus() {
-  let isTinyBroncoEnabledResult = useIsTinyBroncoEnabled.isTinyBroncoEnabled(closure_5);
+  let isTinyBroncoEnabledResult = TinyBroncoExperiment.isTinyBroncoEnabled(hasOwnProperty);
   if (isTinyBroncoEnabledResult) {
-    userCountryCode = userCountryCode.getUserCountryCode();
+    const userCountryCode = RegionalFeatureConfigStore.getUserCountryCode();
     let hasAgeGatedFeaturesResult = null != userCountryCode;
     if (hasAgeGatedFeaturesResult) {
       hasAgeGatedFeaturesResult = !set.has(userCountryCode.alpha2);
     }
     if (hasAgeGatedFeaturesResult) {
-      let tmpResult = tmp(5423);
-      hasAgeGatedFeaturesResult = tmpResult.hasAgeGatedFeatures();
+      hasAgeGatedFeaturesResult = tmp(5437).hasAgeGatedFeatures();
+      const tmpResult = tmp(5437);
     }
     if (hasAgeGatedFeaturesResult) {
-      tmpResult = tmp(4773);
-      let isAssignedByDiscordResult = tmpResult.isAssignedByDiscord();
+      let isAssignedByDiscordResult = tmp(4787).isAssignedByDiscord();
       if (!isAssignedByDiscordResult) {
-        isAssignedByDiscordResult = !tmp(4773).isAgeVerified();
-        const tmpResult1 = tmp(4773);
+        isAssignedByDiscordResult = !tmp(4787).isAgeVerified();
+        const tmpResult4 = tmp(4787);
       }
       hasAgeGatedFeaturesResult = isAssignedByDiscordResult;
+      const tmpResult3 = tmp(4787);
     }
     isTinyBroncoEnabledResult = hasAgeGatedFeaturesResult;
   }
@@ -55,17 +57,16 @@ export const useShouldShowTinyBroncoAccountStatus = function useShouldShowTinyBr
   const tmp3 = !isTinyBroncoEnabled(stateFromStores[5]).useIsAgeVerified();
   const hasAgeGatedFeatures = isTinyBroncoEnabled(stateFromStores[4]).useHasAgeGatedFeatures();
   const obj4 = isTinyBroncoEnabled(stateFromStores[4]);
-  const items = [closure_3];
+  const items = [RegionalFeatureConfigStore];
   stateFromStores = isTinyBroncoEnabled(stateFromStores[6]).useStateFromStores(items, () => userCountryCode.getUserCountryCode());
   const items1 = [isTinyBroncoEnabled, stateFromStores];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let tmp = isTinyBroncoEnabled;
     if (isTinyBroncoEnabled) {
       tmp = null == stateFromStores;
     }
     if (tmp) {
-      const userCountryCode = isTinyBroncoEnabled(stateFromStores[7]).fetchUserCountryCode();
-      const obj = isTinyBroncoEnabled(stateFromStores[7]);
+      userCountryCode = MessageRequestActionCreators.fetchUserCountryCode();
     }
   }, items1);
   let tmp7 = isTinyBroncoEnabled;

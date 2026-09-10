@@ -1,26 +1,26 @@
-// Module ID: 14975
-// Function ID: 14976
+// Module ID: 15001
+// Function ID: 15002
 // Name: ClipsIcon
-// Dependencies: [19, 21, 576, 4261, 14976, 2]
+// Dependencies: [19, 21, 576, 4274, 15002, 2]
 // Exports: ClipsIcon
 
-// Module 14975 (ClipsIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 14976 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 15001 (ClipsIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod15002 from "module_15002" /* 15002 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/ClipsIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/ClipsIcon.tsx");
 
 export const ClipsIcon = function ClipsIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15002, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

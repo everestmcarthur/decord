@@ -1,25 +1,27 @@
-// Module ID: 17934
-// Function ID: 17935
-// Name: promise
-// Dependencies: [1957, 17935, 9087, 2]
+// Module ID: 17967
+// Function ID: 17968
+// Name: Disconnect
+// Dependencies: [1957, 17968, 9114, 2]
 
-// Module 17934 (promise)
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
+// Module 17967 (Disconnect)
+import CallsUtils from "CallsUtils" /* 9114 */;
+import HeadlessTaskUtilsDefault from "HeadlessTaskUtils" /* 17968 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/headless_tasks/android/Disconnect.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/headless_tasks/android/Disconnect.tsx");
 
 export default (channelId) => {
   channelId = channelId.channelId;
   return new Promise((arg0) => {
     closure_0 = arg0;
-    closure_1_1(closure_1_2[1]).awaitStorage(() => {
-      const channel = closure_2_3.getChannel(callback);
+    HeadlessTaskUtilsDefault.awaitStorage(() => {
+      const channel = ChannelStore.getChannel(channelId);
       if (null != channel) {
-        channelId(closure_2_2[2]).handleDisconnect(channel);
-        const obj = channelId(closure_2_2[2]);
+        CallsUtils.handleDisconnect(channel);
       }
-      callback(true);
+      closure_0(true);
     });
   });
 };

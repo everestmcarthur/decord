@@ -1,30 +1,32 @@
-// Module ID: 10337
-// Function ID: 10338
+// Module ID: 10364
+// Function ID: 10365
 // Name: useTrackOpenPopout
-// Dependencies: [19, 1957, 2011, 1374, 1074, 4740, 4992, 10338, 1242, 2]
+// Dependencies: [19, 1957, 2011, 1374, 1074, 4754, 5006, 10365, 1242, 2]
 // Exports: useTrackOpenPopout
 
-// Module 10337 (useTrackOpenPopout)
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4992 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "handleConnectionOpen" /* 2011 */;
-import { EmojiInteractionPoint } from "set" /* 1374 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
+// Module 10364 (useTrackOpenPopout)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4754 */;
+import useMountEffectDefault from "useMountEffect" /* 5006 */;
+import emojis_EmojiActionCreators from "emojis/EmojiActionCreators" /* 10365 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/emojis/useTrackOpenPopout.tsx");
+require = fn;
+const EmojiInteractionPoint = fn(1374).EmojiInteractionPoint;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/emojis/useTrackOpenPopout.tsx");
 
 export const useTrackOpenPopout = (emojiId) => {
   ({ currentGuildId, popoutData: require, nonce: importDefault, demoMode: dependencyMap } = emojiId);
   let current;
-  let merged = Object.assign(collectGuildAnalyticsMetadata.collectChannelAnalyticsMetadata(channel.getChannel(channelId.getChannelId(currentGuildId))));
+  let merged = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(ChannelStore.getChannel(SelectedChannelStore.getChannelId(currentGuildId))));
   current = current.useRef({ guild_id: currentGuildId, emoji_id: emojiId.emojiId }).current;
-  useMountLayoutEffectDefault(() => {
-    let obj = closure_1_0(closure_1_2[7]);
-    const result = obj.initiateEmojiInteraction(closure_1_6.TrackOpenPopoutUsed);
-    if (!closure_2) {
+  useMountEffectDefault(() => {
+    const result = emojis_EmojiActionCreators.initiateEmojiInteraction(EmojiInteractionPoint.TrackOpenPopoutUsed);
+    if (!dependencyMap) {
       let str;
       if (analyticsType != null) {
         str = analyticsType.analyticsType;
@@ -32,12 +34,9 @@ export const useTrackOpenPopout = (emojiId) => {
       if (str == null) {
         str = "Standard Emoji Popout";
       }
-      obj = { type: null, nonce: null };
-      obj[0] = str;
-      obj[1] = closure_1;
+      const obj3 = { type: str, nonce };
       const merged = Object.assign(current);
-      closure_1_1(closure_1_2[8]).track(closure_1_7.OPEN_POPOUT, obj);
-      const obj2 = closure_1_1(closure_1_2[8]);
+      AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, obj3);
     }
   });
   return current;

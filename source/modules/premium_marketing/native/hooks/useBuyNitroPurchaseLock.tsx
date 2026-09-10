@@ -1,44 +1,20 @@
-// Module ID: 13360
-// Function ID: 13361
-// Name: useIsBuyNitroPurchaseBlocked
-// Dependencies: [7237, 560, 504, 2]
+// Module ID: 13383
+// Function ID: 13384
+// Name: useBuyNitroPurchaseLock
+// Dependencies: [7251, 560, 504, 2]
 // Exports: useIsBuyNitroPurchaseBlocked
 
-// Module 13360 (useIsBuyNitroPurchaseBlocked)
-import closure_2 from "updateProduct" /* 7237 */;
-import keys from "keys" /* 560 */;
+// Module 13383 (useBuyNitroPurchaseLock)
+import IAPStore from "IAPStore" /* 7251 */;
 
-const require = arg1;
-let closure_3 = keys.create(() => ({ isLocked: false, hasCompletedInitialLoad: false }));
-keys = {
-  begin(TableRowGroup, arg1) {
-    const state = store.getState();
-    const hasCompletedInitialLoad = state.hasCompletedInitialLoad;
-    let isLocked = !hasCompletedInitialLoad;
-    if (hasCompletedInitialLoad) {
-      isLocked = state.isLocked;
-    }
-    if (!isLocked) {
-      isLocked = busy.isBusy();
-    }
-    let flag = !isLocked;
-    if (!isLocked) {
-      store.setState({ isLocked: true });
-      flag = true;
-    }
-    return flag;
-  },
-  end() {
-    store.setState({ isLocked: false });
-  },
-  setInitialLoadComplete(promotionMarketingComponent) {
-    store.setState({ hasCompletedInitialLoad: promotionMarketingComponent });
-  }
-};
-const result = require("set").fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroPurchaseLock.tsx");
+const require = fn;
+const module_560 = fn(560);
+let closure_3 = module_560.create(() => ({ isLocked: false, hasCompletedInitialLoad: false }));
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroPurchaseLock.tsx");
 
 export const useIsBuyNitroPurchaseBlocked = function useIsBuyNitroPurchaseBlocked() {
-  let stateFromStores = store((hasCompletedInitialLoad) => {
+  let stateFromStores = closure_3((hasCompletedInitialLoad) => {
     hasCompletedInitialLoad = hasCompletedInitialLoad.hasCompletedInitialLoad;
     let isLocked = !hasCompletedInitialLoad;
     if (hasCompletedInitialLoad) {
@@ -46,10 +22,34 @@ export const useIsBuyNitroPurchaseBlocked = function useIsBuyNitroPurchaseBlocke
     }
     return isLocked;
   });
-  const items = [closure_2];
+  const items = [IAPStore];
   if (!stateFromStores) {
     stateFromStores = obj.useStateFromStores(items, () => busy.isBusy());
   }
   return stateFromStores;
 };
-export const BuyNitroPurchaseLock = keys;
+export const BuyNitroPurchaseLock = {
+  begin() {
+    const state = closure_3.getState();
+    const hasCompletedInitialLoad = state.hasCompletedInitialLoad;
+    let isLocked = !hasCompletedInitialLoad;
+    if (hasCompletedInitialLoad) {
+      isLocked = state.isLocked;
+    }
+    if (!isLocked) {
+      isLocked = IAPStore.isBusy();
+    }
+    let flag = !isLocked;
+    if (!isLocked) {
+      closure_3.setState({ isLocked: true });
+      flag = true;
+    }
+    return flag;
+  },
+  end() {
+    closure_3.setState({ isLocked: false });
+  },
+  setInitialLoadComplete(hasCompletedInitialLoad) {
+    closure_3.setState({ hasCompletedInitialLoad });
+  }
+};

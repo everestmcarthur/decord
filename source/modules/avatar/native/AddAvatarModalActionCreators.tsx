@@ -1,74 +1,68 @@
-// Module ID: 17436
-// Function ID: 17437
-// Name: handlePressNext
-// Dependencies: [17437, 1074, 1242, 6984, 4904, 1114, 8164, 8166, 4763, 17438, 1896, 12708, 2]
+// Module ID: 17467
+// Function ID: 17468
+// Name: AddAvatarModalActionCreators
+// Dependencies: [17468, 1074, 1242, 6998, 4918, 1114, 8190, 8192, 4777, 17469, 1896, 12734, 2]
 // Exports: handlePressNext, openAddAvatarModal, showSkipAvatarModal
 
-// Module 17436 (handlePressNext)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+// Module 17467 (AddAvatarModalActionCreators)
+import Constants from "Constants" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import _modDef4763 from "module_4763" /* 4763 */;
-import setDefault from "set" /* 4904 */;
-import saveProfileAndAccountRequest from "saveProfileAndAccountRequest" /* 6984 */;
-import _startContactSyncForDiscoverability from "_startContactSyncForDiscoverability" /* 12708 */;
-import ADD_AVATAR_MODAL_KEY2 from "ADD_AVATAR_MODAL_KEY" /* 17437 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
+import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 6998 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8190 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8192 */;
+import NUFActionCreators from "NUFActionCreators" /* 12734 */;
+import AddAvatarModalConstants from "AddAvatarModalConstants" /* 17468 */;
+import size from "module_2" /* 2 */;
 
-const ADD_AVATAR_MODAL_KEY = ADD_AVATAR_MODAL_KEY2.ADD_AVATAR_MODAL_KEY;
-const AnalyticEvents = ME.AnalyticEvents;
-let result = set.fileFinishedImporting("modules/avatar/native/AddAvatarModalActionCreators.tsx");
+const require = globalThis.__r;
 
-export const handlePressNext = function handlePressNext(pendingImage, first, fn) {
+const ADD_AVATAR_MODAL_KEY = AddAvatarModalConstants.ADD_AVATAR_MODAL_KEY;
+const AnalyticEvents = Constants.AnalyticEvents;
+let result = size.fileFinishedImporting("modules/avatar/native/AddAvatarModalActionCreators.tsx");
+
+export const handlePressNext = function handlePressNext(pendingImage, default_avatar_selected, fn) {
   if (null != pendingImage) {
-    let obj = { default_avatar_selected: null, is_guild_profile: false, location: null };
-    obj[0] = first;
-    obj[2] = { page: "Onboarding" };
-    expandEventPropertiesDefault.track(AnalyticEvents.USER_AVATAR_UPDATED, obj);
-    const obj3 = expandEventPropertiesDefault;
-    obj = { avatar: null, avatar_description: null };
-    ({ imageUri: obj6[0], description: obj6[1] } = pendingImage);
-    const result = saveProfileAndAccountRequest.saveProfileAndAccountRequest(obj);
-    const obj5 = saveProfileAndAccountRequest;
+    const obj4 = { default_avatar_selected, is_guild_profile: false, location: { page: "Onboarding" } };
+    AnalyticsUtilsDefault.track(AnalyticEvents.USER_AVATAR_UPDATED, obj4);
+    ({ imageUri: obj6.avatar, description: obj6.avatar_description } = pendingImage);
+    const result = UserSettingsAccountActionCreators.saveProfileAndAccountRequest({ avatar: null, avatar_description: null });
+    const obj8 = { avatar: null, avatar_description: null };
   }
   if (null != fn) {
     fn();
   } else {
-    obj = _modDef4763;
-    obj.popWithKey(ADD_AVATAR_MODAL_KEY);
-    _startContactSyncForDiscoverability.nextOnboardingStep({ skip: false });
-    const obj2 = _startContactSyncForDiscoverability;
+    ModalActionCreatorsDefault.popWithKey(ADD_AVATAR_MODAL_KEY);
+    NUFActionCreators.nextOnboardingStep({ skip: false });
   }
 };
 export const showSkipAvatarModal = function showSkipAvatarModal(arg0) {
-  const _require = arg0;
-  let obj = expandEventPropertiesDefault;
-  obj.track(AnalyticEvents.NUO_TRANSITION, { flow_type: "Mobile NUX Post Reg", from_step: "Skip avatar modal", skip_attempt: true });
-  obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, hideActionSheet: false };
-  const intl = _require(1114).intl;
-  obj[0] = intl.string(_require(1114).t.DnKHuV);
-  const intl2 = _require(1114).intl;
-  obj[1] = intl2.string(_require(1114).t["1EPySE"]);
-  const intl3 = _require(1114).intl;
-  obj[2] = intl3.string(_require(1114).t["7eZ3ji"]);
-  const intl4 = _require(1114).intl;
-  obj[3] = intl4.string(_require(1114).t.nhJ8OC);
-  obj[4] = function onConfirm() {
-    callback(closure_1_2[6]).setPendingChanges({ avatar: null });
-    const obj = callback(closure_1_2[6]);
-    const tmp = callback;
-    const result = callback(closure_1_2[7]).announcePendingAvatarChange("remove");
-    if (null != callback) {
+  _require = arg0;
+  AnalyticsUtilsDefault.track(AnalyticEvents.NUO_TRANSITION, { flow_type: "Mobile NUX Post Reg", from_step: "Skip avatar modal", skip_attempt: true });
+  let obj3 = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, hideActionSheet: false };
+  const intl = require("util").intl;
+  obj3.title = intl.string(require("util").t.DnKHuV);
+  const intl2 = require("util").intl;
+  obj3.body = intl2.string(require("util").t["1EPySE"]);
+  const intl3 = require("util").intl;
+  obj3.cancelText = intl3.string(require("util").t["7eZ3ji"]);
+  const intl4 = require("util").intl;
+  obj3.confirmText = intl4.string(require("util").t.nhJ8OC);
+  obj3.onConfirm = function onConfirm() {
+    UserProfileSettingsActionCreators.setPendingChanges({ avatar: null });
+    const result = ProfileCustomizationUtils.announcePendingAvatarChange("remove");
+    if (null != closure_0) {
       tmp5(true);
     } else {
-      closure_1_1(tmp2[8]).popWithKey(closure_1_3);
-      const obj3 = closure_1_1(tmp2[8]);
-      tmp(tmp2[11]).nextOnboardingStep({ skip: true });
-      const tmpResult = tmp(tmp2[11]);
+      ModalActionCreatorsDefault.popWithKey(ADD_AVATAR_MODAL_KEY);
+      NUFActionCreators.nextOnboardingStep({ skip: true });
+      const tmpResult = NUFActionCreators;
     }
   };
-  setDefault.show(obj);
+  AlertActionCreatorsDefault.show(obj3);
 };
 export const openAddAvatarModal = function openAddAvatarModal() {
-  _modDef4763.pushLazy(asyncRequireImpl(17438, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17469, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
 };

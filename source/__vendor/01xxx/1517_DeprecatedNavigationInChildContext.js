@@ -4,7 +4,7 @@
 // Dependencies: [19]
 
 // Module 1517 (DeprecatedNavigationInChildContext)
-import noopAll from "noop" /* 19 */;
+import noop from "module_19" /* 19 */;
 
 
-export const DeprecatedNavigationInChildContext = noopAll.createContext(false);
+export const DeprecatedNavigationInChildContext = noop.createContext(false);

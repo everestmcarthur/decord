@@ -4,13 +4,13 @@
 // Dependencies: [42, 41]
 
 // Module 437 (VirtualArray)
-import _createClassDefault from "_createClass" /* 42 */;
-import closure_0 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 class VirtualArray {
   constructor(arg0) {
     self = this;
-    tmp = closure_0(this, self);
+    tmp = closure_0(this, VirtualArray);
     items = [...global];
     closure_0 = items;
     this.size = items.length;
@@ -27,4 +27,4 @@ class VirtualArray {
   }
 }
 
-export const VirtualArray = _createClassDefault(VirtualArray);
+export const VirtualArray = _createClass(VirtualArray);

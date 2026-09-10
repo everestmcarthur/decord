@@ -1,6 +1,17 @@
 // Module ID: 6663
 // Function ID: 6664
 // Dependencies: []
+// Exports: noop, workletNoop
 
 // Module 6663
-arg5.TouchEventType = { UNDETERMINED: 0, TOUCHES_DOWN: 1, TOUCHES_MOVE: 2, TOUCHES_UP: 3, TOUCHES_CANCEL: 4 };
+const fn = function o() {
+
+};
+fn.__closure = {};
+fn.__workletHash = 16791771801238;
+fn.__initData = { code: "function pnpm_noopTs1(){}" };
+
+export () => {
+
+}
+export const workletNoop = fn;

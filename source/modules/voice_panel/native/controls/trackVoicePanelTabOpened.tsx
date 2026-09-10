@@ -1,23 +1,22 @@
-// Module ID: 17174
-// Function ID: 17175
+// Module ID: 17205
+// Function ID: 17206
 // Name: trackVoicePanelTabOpened
-// Dependencies: [4575, 1074, 1242, 2]
+// Dependencies: [4589, 1074, 1242, 2]
 // Exports: default
 
-// Module 17174 (trackVoicePanelTabOpened)
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import closure_2 from "generateOldThreadCutoff" /* 4575 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
+// Module 17205 (trackVoicePanelTabOpened)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import ReadStateStore from "ReadStateStore" /* 4589 */;
 
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/trackVoicePanelTabOpened.tsx");
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/controls/trackVoicePanelTabOpened.tsx");
 
 export default function trackVoicePanelTabOpened(arg0, tab, source) {
-  let obj = closure_2;
-  let hasUnreadResult = closure_2.hasUnread(arg0);
+  let hasUnreadResult = ReadStateStore.hasUnread(arg0);
   if (!hasUnreadResult) {
-    hasUnreadResult = obj.getMentionCount(arg0) > 0;
+    hasUnreadResult = ReadStateStore.getMentionCount(arg0) > 0;
   }
-  obj = { tab, source, is_chat_badged: hasUnreadResult };
-  expandEventPropertiesDefault.track(AnalyticEvents.VOICE_PANEL_TAB_OPENED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.VOICE_PANEL_TAB_OPENED, { tab, source, is_chat_badged: hasUnreadResult });
 };
 export const VoicePanelTabAnalyticsSources = { STORE: "store", GESTURE: "gesture", PREJOIN_BUTTON: "prejoin button", CONNECTED_BUTTON: "connected button", VOICE_CONTROLS: "voice controls", HEADER_BUTTON: "header button" };

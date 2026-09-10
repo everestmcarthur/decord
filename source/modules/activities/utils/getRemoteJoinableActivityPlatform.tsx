@@ -1,18 +1,19 @@
-// Module ID: 11765
-// Function ID: 11766
+// Module ID: 11791
+// Function ID: 11792
 // Name: getRemoteJoinableActivityPlatform
-// Dependencies: [7108, 4578, 1074, 1116, 1384, 11467, 2]
+// Dependencies: [7122, 4592, 1074, 1116, 1384, 11494, 2]
 // Exports: getRemoteJoinableActivityPlatform
 
-// Module 11765 (getRemoteJoinableActivityPlatform)
-import hasFlag from "hasFlag" /* 1384 */;
-import closure_2 from "isConnected" /* 7108 */;
-import closure_3 from "handleUpdate" /* 4578 */;
-import ME from "ME" /* 1074 */;
+// Module 11791 (getRemoteJoinableActivityPlatform)
+import FlagUtils from "FlagUtils" /* 1384 */;
+import ConnectedAppsStore from "ConnectedAppsStore" /* 7122 */;
+import SessionsStore from "SessionsStore" /* 4592 */;
 
-require = arg1;
-({ ActivityFlags: c4, ActivityGamePlatforms: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/activities/utils/getRemoteJoinableActivityPlatform.tsx");
+require = fn;
+const Constants = fn(1074);
+({ ActivityFlags: closure_4, ActivityGamePlatforms: hasOwnProperty } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/utils/getRemoteJoinableActivityPlatform.tsx");
 
 export const getRemoteJoinableActivityPlatform = function getRemoteJoinableActivityPlatform(presenceActivity) {
   if (null == presenceActivity) {
@@ -25,49 +26,49 @@ export const getRemoteJoinableActivityPlatform = function getRemoteJoinableActiv
         num = 0;
       }
       if (obj5.hasFlag(num, constants.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN)) {
-        remoteApplicationActivity = remoteApplicationActivity.getRemoteApplicationActivity(application_id);
+        const remoteApplicationActivity = SessionsStore.getRemoteApplicationActivity(application_id);
         let tmp4 = null;
         if (null != remoteApplicationActivity) {
-          let tmp11Result = tmp11(11467);
           tmp4 = null;
           if (!tmp11Result.isContextlessEmbeddedActivity(remoteApplicationActivity)) {
             if (null == remoteApplicationActivity.application_id) {
-              tmp11Result = tmp11(1384);
               let num2 = remoteApplicationActivity.flags;
               if (num2 == null) {
                 num2 = 0;
               }
               let tmp9 = null;
-              if (tmp11Result.hasFlag(num2, tmp.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN)) {
-                let platform = remoteApplicationActivity.platform;
-                if (platform == null) {
-                  platform = null;
+              if (tmp11Result4.hasFlag(num2, tmp.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN)) {
+                let platform1 = remoteApplicationActivity.platform;
+                if (platform1 == null) {
+                  platform1 = null;
                 }
-                tmp9 = platform;
+                tmp9 = platform1;
               }
               tmp4 = tmp9;
+              tmp11Result4 = tmp11(1384);
             } else {
               tmp4 = null;
-              if (!connected.isConnected(remoteApplicationActivity.application_id)) {
-                platform = remoteApplicationActivity.platform;
-                if (tmp11Result1.isAndroid()) {
+              if (!ConnectedAppsStore.isConnected(remoteApplicationActivity.application_id)) {
+                const platform = remoteApplicationActivity.platform;
+                if (tmp11Result5.isAndroid()) {
                   let isIOSResult = platform === constants2.ANDROID;
                 } else {
                   isIOSResult = tmp11(1116).isIOS();
                   if (isIOSResult) {
                     isIOSResult = platform === constants2.IOS;
                   }
-                  const tmp11Result2 = tmp11(1116);
+                  const tmp11Result6 = tmp11(1116);
                 }
                 tmp4 = null;
-                tmp11Result1 = tmp11(1116);
+                tmp11Result5 = tmp11(1116);
               }
             }
           }
+          tmp11Result = tmp11(11494);
         }
         return tmp4;
       }
-      obj5 = hasFlag;
+      obj5 = FlagUtils;
       tmp = constants;
     }
     return null;

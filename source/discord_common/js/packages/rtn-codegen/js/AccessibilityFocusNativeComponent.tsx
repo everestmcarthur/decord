@@ -1,19 +1,18 @@
-// Module ID: 14120
-// Function ID: 14121
-// Name: __INTERNAL_VIEW_CONFIG
+// Module ID: 14143
+// Function ID: 14144
+// Name: AccessibilityFocusNativeComponent
 // Dependencies: [106, 65, 2]
 
-// Module 14120 (__INTERNAL_VIEW_CONFIG)
-import set from "set" /* 2 */;
+// Module 14143 (AccessibilityFocusNativeComponent)
 import weakSet from "weakSet" /* 106 */;
-import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
+import module_65 from "module_65" /* 65 */;
+import size from "module_2" /* 2 */;
 
-let obj = { uiViewClassName: "AccessibilityFocusView", directEventTypes: { topAccessibilityFocus: { registrationName: "onAccessibilityFocus" }, topAccessibilityBlur: { registrationName: "onAccessibilityBlur" } }, validAttributes: null };
-obj = {};
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "AccessibilityFocusView", directEventTypes: { topAccessibilityFocus: { registrationName: "onAccessibilityFocus" }, topAccessibilityBlur: { registrationName: "onAccessibilityBlur" } }, validAttributes: null };
 const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onAccessibilityFocus: true, onAccessibilityBlur: true }));
-obj[2] = obj;
-const value = setRuntimeConfigProvider.get("AccessibilityFocusView", () => obj);
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/AccessibilityFocusNativeComponent.tsx");
+__INTERNAL_VIEW_CONFIG.validAttributes = {};
+const value = module_65.get("AccessibilityFocusView", () => obj);
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/AccessibilityFocusNativeComponent.tsx");
 
 export default value;
-export const __INTERNAL_VIEW_CONFIG = obj;
+export { __INTERNAL_VIEW_CONFIG };

@@ -1,23 +1,22 @@
-// Module ID: 15149
-// Function ID: 15150
-// Name: prototype
+// Module ID: 15176
+// Function ID: 15177
+// Name: VttParser
 // Dependencies: [2]
 // Exports: parseVtt
 
-// Module 15149 (prototype)
-import set from "set" /* 2 */;
+// Module 15176 (VttParser)
+import size from "module_2" /* 2 */;
 
 const prototype = function VttParserError(arg0, error) {
-  tmp = new tmp(arg0, new.target);
-  // ThrowIfThisInitialized (0x7c)
-  tmp.error = error;
-  tmp.name = "ParserError";
-  return tmp;
+  const tmp2 = new tmp(arg0, new.target);
+  tmp2.error = error;
+  tmp2.name = "ParserError";
+  return tmp2;
 }.prototype;
 class prototype extends Error {
 }
 const re1 = /([0-9]+)?:?([0-9]{2}):([0-9]{2}\.[0-9]{2,3})/;
-let result = set.fileFinishedImporting("modules/quests/native/VideoQuestModal/captions/VttParser.tsx");
+let result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/captions/VttParser.tsx");
 
 export const VttParserError = prototype;
 export const parseVtt = function parseVtt(text) {
@@ -28,7 +27,6 @@ export const parseVtt = function parseVtt(text) {
   const meta = obj.meta;
   let tmp4 = undefined !== meta && meta;
   const strict = obj.strict;
-  let tmp5 = undefined === strict || strict;
   let str = text.trim();
   const str2 = text.trim().replace(/\r\n/g, "\n");
   let parts = text.trim().replace(/\r\n/g, "\n").replace(/\r/g, "\n").split("\n\n");
@@ -42,46 +40,43 @@ export const parseVtt = function parseVtt(text) {
       str9 = " ";
       if (" " !== first) {
         if ("\t" !== replaced[0]) {
-          if (typeof obj !== "function") {
-            HermesBuiltin.throwTypeError();
+          if (typeof obj3 === "function") {
+            const tmp52 = new tmp5("Header comment must start with space or tab", tmp3, parts1, tmp2, tmp, first);
+            tmp52.error = undefined;
+            tmp52.name = "ParserError";
+            throw tmp52;
+          } else {
+            throw new TypeError("Trying to call a non-function");
           }
-          tmp5 = new tmp5("Header comment must start with space or tab", tmp3, parts1, tmp2, tmp, first);
-          // ThrowIfThisInitialized (0x7c)
-          tmp5.error = undefined;
-          tmp5.name = "ParserError";
-          throw tmp5;
         }
       }
     }
     if (0 === parts.length) {
       if (1 === parts1.length) {
-        obj = { valid: true, strict: null, cues: null, errors: null };
-        obj[1] = tmp5;
-        obj[2] = [];
-        obj[3] = [];
-        return obj;
+        let obj2 = { valid: true, strict: tmp5, cues: [], errors: [] };
+        return obj2;
       }
     }
     if (!tmp4) {
       if (parts1.length > 1) {
         if ("" !== parts1[1]) {
-          if (typeof obj !== "function") {
-            HermesBuiltin.throwTypeError();
+          if (typeof obj3 === "function") {
+            const str91 = new str9("Missing blank line after signature", tmp3, parts1, tmp2, tmp, tmp14, parts, str9, tmp4, new.target);
+            str91.error = undefined;
+            str91.name = "ParserError";
+            throw str91;
+          } else {
+            throw new TypeError("Trying to call a non-function");
           }
-          str9 = new str9("Missing blank line after signature", tmp3, parts1, tmp2, tmp, obj, parts, str9, tmp4, new.target);
-          // ThrowIfThisInitialized (0x7c)
-          str9.error = undefined;
-          str9.name = "ParserError";
-          throw str9;
         }
       }
     }
-    obj = tmp5;
+    obj3 = tmp5;
     const items = [];
-    const mapped = parts.map((arg0, arg1) => {
+    const mapped = parts.map((item, index) => {
       try {
-        return (function parseCue(str, arg1, arg2) {
-          const parts = str.split("\n");
+        return (function parseCue(item, index, arg2) {
+          const parts = item.split("\n");
           const found = parts.filter(Boolean);
           let length = found.length;
           if (length > 0) {
@@ -90,21 +85,21 @@ export const parseVtt = function parseVtt(text) {
             if (length) {
               return null;
             }
-            str = found[0];
           }
           if (1 === found.length) {
             const first = found[0];
             if (!first.includes("-->")) {
               const _HermesInternal = HermesInternal;
-              const combined = "Cue identifier cannot be standalone (cue #" + arg1 + ")";
-              if (typeof closure_0 !== "function") {
-                HermesBuiltin.throwTypeError();
+              const combined = "Cue identifier cannot be standalone (cue #" + index + ")";
+              if (typeof obj3 === "function") {
+                const tmp14 = new closure_1_2(combined, tmp6, tmp5, tmp4, tmp3, tmp2, "\n", tmp, tmp7, combined, 0, index);
+                tmp14.error = undefined;
+                tmp14.name = "ParserError";
+                throw tmp14;
+              } else {
+                throw new TypeError("Trying to call a non-function");
               }
-              const tmp14 = new closure_2(combined, tmp6, tmp5, tmp4, tmp3, tmp2, "\n", tmp, closure_0, combined, 0, arg1);
-              // ThrowIfThisInitialized (0x7c)
-              tmp14.error = undefined;
-              tmp14.name = "ParserError";
-              throw tmp14;
+              tmp7 = obj3;
             }
           }
           if (found.length > 1) {
@@ -112,15 +107,16 @@ export const parseVtt = function parseVtt(text) {
             if (!first1.includes("-->")) {
               if (!obj2.includes("-->")) {
                 const _HermesInternal2 = HermesInternal;
-                const combined1 = "Cue identifier needs to be followed by timestamp (cue #" + arg1 + ")";
-                if (typeof closure_0 !== "function") {
-                  HermesBuiltin.throwTypeError();
+                const combined1 = "Cue identifier needs to be followed by timestamp (cue #" + index + ")";
+                if (typeof obj3 === "function") {
+                  const tmp23 = new closure_1_2(combined1, tmp6, tmp5, tmp4, tmp3, tmp2, "\n", tmp, tmp16, combined1, 0, index);
+                  tmp23.error = undefined;
+                  tmp23.name = "ParserError";
+                  throw tmp23;
+                } else {
+                  throw new TypeError("Trying to call a non-function");
                 }
-                const tmp23 = new closure_2(combined1, tmp6, tmp5, tmp4, tmp3, tmp2, "\n", tmp, closure_0, combined1, 0, arg1);
-                // ThrowIfThisInitialized (0x7c)
-                tmp23.error = undefined;
-                tmp23.name = "ParserError";
-                throw tmp23;
+                tmp16 = obj3;
               }
               obj2 = found[1];
             }
@@ -128,7 +124,7 @@ export const parseVtt = function parseVtt(text) {
           let hasItem = found.length > 1;
           if (hasItem) {
             hasItem = found[1].includes("-->");
-            const obj3 = found[1];
+            obj3 = found[1];
           }
           let str10 = "";
           if (hasItem) {
@@ -168,40 +164,41 @@ export const parseVtt = function parseVtt(text) {
                 if (arg2) {
                   if (num > num3) {
                     const _HermesInternal5 = HermesInternal;
-                    const combined2 = "Start timestamp greater than end (cue #" + arg1 + ")";
-                    if (typeof closure_0 !== "function") {
-                      HermesBuiltin.throwTypeError();
+                    const combined2 = "Start timestamp greater than end (cue #" + index + ")";
+                    if (typeof obj3 === "function") {
+                      const tmp62 = new closure_1_2(combined2, tmp6, tmp5, _parseFloat, str14, obj7, "\n", "", str10, num);
+                      tmp62.error = undefined;
+                      tmp62.name = "ParserError";
+                      throw tmp62;
+                    } else {
+                      throw new TypeError("Trying to call a non-function");
                     }
-                    const tmp62 = new closure_2(combined2, tmp6, tmp5, _parseFloat, str14, obj7, "\n", "", str10, num);
-                    // ThrowIfThisInitialized (0x7c)
-                    tmp62.error = undefined;
-                    tmp62.name = "ParserError";
-                    throw tmp62;
                   } else if (num3 <= num) {
                     const _HermesInternal4 = HermesInternal;
-                    const combined3 = "End must be greater than start (cue #" + arg1 + ")";
-                    if (typeof closure_0 !== "function") {
-                      HermesBuiltin.throwTypeError();
+                    const combined3 = "End must be greater than start (cue #" + index + ")";
+                    if (typeof obj3 === "function") {
+                      const tmp53 = new closure_1_2(combined3, tmp6, tmp5, _parseFloat, str14, obj7, "\n", "", str10, num);
+                      tmp53.error = undefined;
+                      tmp53.name = "ParserError";
+                      throw tmp53;
+                    } else {
+                      throw new TypeError("Trying to call a non-function");
                     }
-                    const tmp53 = new closure_2(combined3, tmp6, tmp5, _parseFloat, str14, obj7, "\n", "", str10, num);
-                    // ThrowIfThisInitialized (0x7c)
-                    tmp53.error = undefined;
-                    tmp53.name = "ParserError";
-                    throw tmp53;
                   }
                 }
                 if (!arg2) {
                   if (num3 < num) {
                     const _HermesInternal3 = HermesInternal;
-                    const combined4 = "End must be greater or equal to start when not strict (cue #" + arg1 + ")";
-                    if (typeof closure_0 !== "function") {
-                      HermesBuiltin.throwTypeError();
+                    const combined4 = "End must be greater or equal to start when not strict (cue #" + index + ")";
+                    if (typeof obj3 === "function") {
+                      const tmp42 = new closure_1_2(combined4, tmp6, tmp35, combined4, new.target, obj7, "\n", "", str10, num, num3, index, found, closure_1_2, parts1, globalThis, length, tmp31);
+                      tmp42.error = undefined;
+                      tmp42.name = "ParserError";
+                      throw tmp42;
+                    } else {
+                      throw new TypeError("Trying to call a non-function");
                     }
-                    const tmp42 = new closure_2(combined4, tmp6, closure_0, combined4, new.target, obj7, "\n", "", str10, num, num3, arg1, found, closure_2, parts1, globalThis, length, tmp31);
-                    // ThrowIfThisInitialized (0x7c)
-                    tmp42.error = undefined;
-                    tmp42.name = "ParserError";
-                    throw tmp42;
+                    tmp35 = obj3;
                   }
                 }
                 const trimmed1 = parts1[1].replace(obj7, "").trim();
@@ -210,39 +207,32 @@ export const parseVtt = function parseVtt(text) {
                 if ("" === str21.trim()) {
                   return false;
                 } else {
-                  obj = { identifier: null, start: null, end: null, text: null, styles: null };
-                  obj[0] = str10;
-                  obj[1] = num;
-                  obj[2] = num3;
-                  obj[3] = str21;
-                  obj[4] = trimmed1;
+                  const obj = { identifier: str10, start: num, end: num3, text: str21, styles: trimmed1 };
                   return obj;
                 }
-                const str12 = parts1[0];
-                const str19 = parts1[1];
                 const str20 = parts1[1].replace(obj7, "");
               }
             }
           }
-          const combined5 = "Invalid cue timestamp (cue #" + arg1 + ")";
-          if (typeof closure_0 !== "function") {
-            HermesBuiltin.throwTypeError();
+          const combined5 = "Invalid cue timestamp (cue #" + index + ")";
+          if (typeof obj3 === "function") {
+            const tmp69 = new closure_1_2(combined5, tmp6, tmp5, tmp4, tmp3, obj7, "\n");
+            tmp69.error = undefined;
+            tmp69.name = "ParserError";
+            throw tmp69;
+          } else {
+            throw new TypeError("Trying to call a non-function");
           }
-          const tmp65 = new closure_2(combined5, tmp6, tmp5, tmp4, tmp3, obj7, "\n");
-          // ThrowIfThisInitialized (0x7c)
-          tmp65.error = undefined;
-          tmp65.name = "ParserError";
-          throw tmp65;
-        })(arg0, arg1, obj);
+        })(item, index, obj3);
       } catch (tmp4) {
         items.push(tmp4);
         return null;
       }
     });
-    let found = mapped.filter((arg0) => {
-      let tmp = null !== arg0;
+    let found = mapped.filter((item) => {
+      let tmp = null !== item;
       if (tmp) {
-        tmp = false !== arg0;
+        tmp = false !== item;
       }
       return tmp;
     });
@@ -253,42 +243,35 @@ export const parseVtt = function parseVtt(text) {
     }
     let tmp22 = null;
     if (tmp4) {
-      obj = {};
+      obj3 = {};
       const substr = parts1.slice(1);
       const item = substr.forEach((arr) => {
         const index = arr.indexOf(":");
         const trimmed = arr.slice(0, index).trim();
         const str = arr.slice(0, index);
-        obj[trimmed] = arr.slice(index + 1).trim();
+        obj3[trimmed] = arr.slice(index + 1).trim();
       });
       const _Object = Object;
       let tmp25 = null;
-      if (Object.keys(obj).length > 0) {
-        tmp25 = obj;
+      if (Object.keys(obj3).length > 0) {
+        tmp25 = obj3;
       }
       tmp22 = tmp25;
     }
-    obj1 = { valid: null, strict: null, cues: null, errors: null };
-    obj1[0] = 0 === items.length;
-    obj1[1] = tmp5;
-    obj1[2] = found;
-    obj1[3] = items;
+    const obj4 = { valid: 0 === items.length, strict: tmp5, cues: found, errors: items };
     if (tmp4) {
-      let obj2 = { meta: null };
-      obj2[0] = tmp22;
-      tmp4 = obj2;
+      const obj5 = { meta: tmp22 };
+      tmp4 = obj5;
     }
     const merged = Object.assign(tmp4);
-    return obj1;
+    return obj4;
+  } else if (typeof obj3 === "function") {
+    const tmp21 = new tmp2("Must start with \"WEBVTT\"", tmp3, tmp6, tmp2, new.target, "WEBVTT", parts, "\n", tmp4, str4, tmp5, prototype, strict);
+    tmp21.error = undefined;
+    tmp21.name = "ParserError";
+    throw tmp21;
   } else {
-    if (typeof obj !== "function") {
-      HermesBuiltin.throwTypeError();
-    }
-    tmp2 = new tmp2("Must start with \"WEBVTT\"", tmp3, obj, tmp2, new.target, "WEBVTT", parts, "\n", tmp4, str4, tmp5, prototype, strict);
-    // ThrowIfThisInitialized (0x7c)
-    tmp2.error = undefined;
-    tmp2.name = "ParserError";
-    throw tmp2;
+    throw new TypeError("Trying to call a non-function");
   }
   const str3 = text.trim().replace(/\r\n/g, "\n").replace(/\r/g, "\n");
 };

@@ -1,35 +1,34 @@
-// Module ID: 13269
-// Function ID: 13270
-// Dependencies: [19, 17, 21, 4560, 576, 1178, 12781, 4556, 1114, 2]
+// Module ID: 13292
+// Function ID: 13293
+// Name: HomeChannelHeader
+// Dependencies: [19, 17, 21, 4574, 576, 1178, 12807, 4570, 1114, 2]
 
-// Module 13269
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import Text from "Text" /* 4556 */;
-import registerAssetDefault from "registerAsset" /* 12781 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 13292 (HomeChannelHeader)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import _modDef12807 from "module_12807" /* 12807 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let obj = { container: null };
-obj = { flex: 1, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
-obj[0] = obj;
-let closure_6 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function HomeChannelHeader() {
-  let obj = { style: callback3().container, children: null };
-  obj = { source: registerAssetDefault, size: Button.Icon.Sizes.MEDIUM, disableColor: true };
-  const items = [callback(Button.Icon, obj), ];
-  obj = { variant: "heading-lg/extrabold", color: "interactive-text-active", children: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.Ym2Ri6);
-  items[1] = callback(Text.Text, obj);
-  obj[1] = items;
-  return callback2(View, obj);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj = { container: { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 } };
+let closure_6 = createStyles.createStyles(obj);
+let obj3 = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/header/HomeChannelHeader.tsx");
+
+export default noop.memo(function HomeChannelHeader() {
+  const obj = { style: closure_6().container, children: null };
+  const items = [React4(native.Icon, { source: _modDef12807, size: native.Icon.Sizes.MEDIUM, disableColor: true }), ];
+  const obj3 = { variant: "heading-lg/extrabold", color: "interactive-text-active", children: null };
+  const intl = util.intl;
+  obj3.children = intl.string(util.t.Ym2Ri6);
+  items[1] = React4(Text_Text.Text, obj3);
+  obj.children = items;
+  return hasOwnProperty(View, obj);
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/header/HomeChannelHeader.tsx");
-
-export default memoResult;

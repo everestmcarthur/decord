@@ -1,17 +1,18 @@
-// Module ID: 13965
-// Function ID: 13966
+// Module ID: 13988
+// Function ID: 13989
 // Name: LeaveServerAlert
-// Dependencies: [1074, 21, 4910, 1114, 4910, 9068, 2]
+// Dependencies: [1074, 21, 4924, 1114, 4924, 9095, 2]
 // Exports: default
 
-// Module 13965 (LeaveServerAlert)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 13988 (LeaveServerAlert)
+import Constants from "Constants" /* 1074 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9095 */;
 import jsxProd from "jsxProd" /* 21 */;
+import size from "module_2" /* 2 */;
 
-const GuildFeatures = ME.GuildFeatures;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-const result = set.fileFinishedImporting("modules/guild_action_sheet/native/components/LeaveServerAlert.tsx");
+const GuildFeatures = Constants.GuildFeatures;
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const result = size.fileFinishedImporting("modules/guild_action_sheet/native/components/LeaveServerAlert.tsx");
 
 export default function LeaveServerAlert(guild) {
   guild = guild.guild;
@@ -25,26 +26,25 @@ export default function LeaveServerAlert(guild) {
   } else {
     stringResult = string(t.J2TBi3);
   }
-  let obj = { title: stringResult, content: null, actions: null };
+  const obj = { title: stringResult, content: null, actions: null };
   const intl2 = tmp2(1114).intl;
-  obj = { name: guild.name };
-  obj[1] = intl2.formatToPlainString(guild(1114).t.TB1og8, obj);
-  obj = { children: null };
-  obj1 = {
+  obj.content = intl2.formatToPlainString(guild(1114).t.TB1og8, { name: guild.name });
+  const obj3 = { children: null };
+  const obj4 = {
     variant: "destructive",
     onPress() {
-      return closure_1_1(closure_1_2[5]).leaveGuild(guild.id);
+      return GuildSettingsActionCreatorsDefault.leaveGuild(guild.id);
     },
     text: null
   };
   const intl3 = tmp2(1114).intl;
-  obj1[2] = intl3.string(guild(1114).t.p89ACt);
-  const items = [closure_4(guild(4910).AlertActionButton, obj1, "confirm"), ];
-  const obj2 = { variant: "secondary", text: null };
+  obj4.text = intl3.string(guild(1114).t.p89ACt);
+  const items = [closure_4(guild(4924).AlertActionButton, obj4, "confirm"), ];
+  const obj5 = { variant: "secondary", text: null };
   const intl4 = tmp2(1114).intl;
-  obj2[1] = intl4.string(guild(1114).t.gm1Vej);
-  items[1] = closure_4(guild(4910).AlertActionButton, obj2, "cancel");
-  obj[0] = items;
-  obj[2] = callback(guild(4910).AlertActions, obj);
-  return closure_4(guild(4910).AlertModal, obj);
+  obj5.text = intl4.string(guild(1114).t.gm1Vej);
+  items[1] = closure_4(guild(4924).AlertActionButton, obj5, "cancel");
+  obj3.children = items;
+  obj.actions = closure_5(guild(4924).AlertActions, obj3);
+  return closure_4(guild(4924).AlertModal, obj);
 };

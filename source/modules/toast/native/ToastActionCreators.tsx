@@ -1,24 +1,20 @@
-// Module ID: 4259
-// Function ID: 4260
-// Name: dispatcher
+// Module ID: 4272
+// Function ID: 4273
+// Name: ToastActionCreators
 // Dependencies: [573, 2]
 
-// Module 4259 (dispatcher)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 4272 (ToastActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/toast/native/ToastActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/toast/native/ToastActionCreators.tsx");
 
 export default {
-  open(arg0) {
-    importDefault = arg0;
-    dispatcherDefault.wait(() => {
-      let obj = callback(closure_1_1[0]);
-      obj = { type: "TOAST_OPEN", toastProps: callback };
-      return obj.dispatch(obj);
-    });
+  open(toastProps) {
+    importDefault = toastProps;
+    DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "TOAST_OPEN", toastProps }));
   },
   close() {
-    dispatcherDefault.wait(() => callback(table[0]).dispatch({ type: "TOAST_CLOSE" }));
+    DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "TOAST_CLOSE" }));
   }
 };

@@ -1,12 +1,12 @@
-// Module ID: 11726
-// Function ID: 11727
-// Name: NativeShadowType
+// Module ID: 11752
+// Function ID: 11753
+// Name: PollMessageChatDataTypes
 // Dependencies: [2]
 
-// Module 11726 (NativeShadowType)
-import set from "set" /* 2 */;
+// Module 11752 (PollMessageChatDataTypes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/polls/chat/PollMessageChatDataTypes.tsx");
+const result = size.fileFinishedImporting("modules/polls/chat/PollMessageChatDataTypes.tsx");
 
 export const NativeShadowType = { NONE: 0, [0]: "NONE", LOW: 1, [1]: "LOW", HIGH: 2, [2]: "HIGH" };
 export const PollRadioStyle = { NONE: 0, [0]: "NONE", HOLLOW: 1, [1]: "HOLLOW", FILLED: 2, [2]: "FILLED", CHECKMARK: 3, [3]: "CHECKMARK" };

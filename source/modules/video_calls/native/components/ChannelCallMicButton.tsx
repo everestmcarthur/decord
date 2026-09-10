@@ -1,18 +1,20 @@
-// Module ID: 10007
-// Function ID: 10008
+// Module ID: 10034
+// Function ID: 10035
 // Name: ChannelCallMicButton
-// Dependencies: [19, 4577, 21, 7345, 504, 10008, 10009, 9502, 1114, 10012, 10013, 576, 2]
+// Dependencies: [19, 4591, 21, 7359, 504, 10035, 10036, 9529, 1114, 10039, 10040, 576, 2]
 // Exports: ChannelCallMicButton
 
-// Module 10007 (ChannelCallMicButton)
-import getMuteStatesDefault from "getMuteStates" /* 7345 */;
-import ActionButtonAll from "ActionButton" /* 9502 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "set" /* 4577 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 10034 (ChannelCallMicButton)
+import useMuteStatesDefault from "useMuteStates" /* 7359 */;
+import CallBarActionAll from "CallBarAction" /* 9529 */;
+import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 10036 */;
+import noop from "module_19" /* 19 */;
+import GameConsoleStore from "GameConsoleStore" /* 4591 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/ChannelCallMicButton.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/components/ChannelCallMicButton.tsx");
 
 export const ChannelCallMicButton = function ChannelCallMicButton(disableTint) {
   let flag = disableTint.disableTint;
@@ -21,29 +23,29 @@ export const ChannelCallMicButton = function ChannelCallMicButton(disableTint) {
     flag = false;
   }
   let mute;
-  let obj = mute(504);
-  const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
-  const tmp3 = getMuteStatesDefault(channel);
-  const muteHandler = mute(10008).createMuteHandler(tmp3, stateFromStores);
+  const tmp3 = useMuteStatesDefault(channel);
+  const items = [GameConsoleStore];
+  const stateFromStores = mute(504).useStateFromStores(items, () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
+  const obj = mute(504);
+  const muteHandler = mute(10035).createMuteHandler(tmp3, stateFromStores);
   mute = muteHandler.mute;
   const items1 = [mute];
-  const memo = React.useMemo(() => closure_1_6(mute(closure_1_3[6]).VoicePanelRiveMicButton, { muted: mute }), items1);
-  obj = { appearsDisabled: stateFromStores, accessibilityLabel: null, onPress: null, source: null, isActive: null, isSmallSize: null, lottieComponent: null, tintColor: null };
+  const memo = noop.useMemo(() => jsx(VoicePanelRiveMicButton.VoicePanelRiveMicButton, { muted: mute }), items1);
+  const obj3 = { appearsDisabled: stateFromStores, accessibilityLabel: null, onPress: null, source: null, isActive: null, isSmallSize: null, lottieComponent: null, tintColor: null };
   const intl = mute(1114).intl;
-  obj[1] = intl.string(mute(1114).t.B3zz0G);
-  obj[2] = muteHandler.onPress;
-  obj[3] = importDefault(mute ? 10012 : 10013);
+  obj3.accessibilityLabel = intl.string(mute(1114).t.B3zz0G);
+  obj3.onPress = muteHandler.onPress;
+  obj3.source = importDefault(mute ? 10039 : 10040);
   if (!flag) {
     flag = mute;
   }
-  obj[4] = flag;
-  obj[5] = isSmallSize;
-  obj[6] = memo;
+  obj3.isActive = flag;
+  obj3.isSmallSize = isSmallSize;
+  obj3.lottieComponent = memo;
   let RED_400;
   if (mute) {
     RED_400 = tmp(576).unsafe_rawColors.RED_400;
   }
-  obj[7] = RED_400;
-  return jsx(ActionButtonAll.ToggledActionButton, { appearsDisabled: stateFromStores, accessibilityLabel: null, onPress: null, source: null, isActive: null, isSmallSize: null, lottieComponent: null, tintColor: null });
+  obj3.tintColor = RED_400;
+  return jsx(CallBarActionAll.ToggledActionButton, { appearsDisabled: stateFromStores, accessibilityLabel: null, onPress: null, source: null, isActive: null, isSmallSize: null, lottieComponent: null, tintColor: null });
 };

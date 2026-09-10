@@ -1,17 +1,17 @@
-// Module ID: 5863
-// Function ID: 5864
+// Module ID: 5877
+// Function ID: 5878
 // Name: CoinBagSpotIllustration
-// Dependencies: [21, 5587, 5864, 2]
+// Dependencies: [21, 5601, 5878, 2]
 // Exports: CoinBagSpotIllustration
 
-// Module 5863 (CoinBagSpotIllustration)
-import set from "set" /* 2 */;
+// Module 5877 (CoinBagSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 5864 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5878 from "module_5878" /* 5878 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/CoinBagSpotIllustration.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/CoinBagSpotIllustration.native.tsx");
 
 export const CoinBagSpotIllustration = function CoinBagSpotIllustration(width) {
   let num = width.width;
@@ -27,14 +27,14 @@ export const CoinBagSpotIllustration = function CoinBagSpotIllustration(width) {
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
-  obj = { width: num * num3, height: num2 * num3 };
-  const items = [obj];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { width: num * num3, height: num2 * num3 });
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef5878 };
+  obj.source = obj2;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

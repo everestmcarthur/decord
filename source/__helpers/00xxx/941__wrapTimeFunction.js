@@ -4,31 +4,34 @@
 // Dependencies: [682, 893]
 
 // Module 941 (_wrapTimeFunction)
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 682 */;
+import ignoreNextOnError from "ignoreNextOnError" /* 893 */;
+import registerSpanErrorInstrumentation from "module_682" /* 682 */;
 
 function _wrapTimeFunction(arg0) {
   closure_0 = arg0;
   return function() {
     const items = [...arguments];
-    let obj = callback(closure_1_1[1]);
-    obj = { mechanism: null };
-    obj = { handled: false, type: "auto.browser.browserapierrors." + callback(closure_1_1[0]).getFunctionName(callback) };
-    obj[0] = obj;
-    items[0] = obj.wrap(items[0], obj);
-    return callback.apply(this, items);
+    const obj2 = { mechanism: null };
+    const obj3 = { handled: false, type: null };
+    const obj = ignoreNextOnError;
+    obj3.type = "auto.browser.browserapierrors." + registerSpanErrorInstrumentation.getFunctionName(closure_0);
+    obj2.mechanism = obj3;
+    items[0] = obj.wrap(items[0], obj2);
+    return closure_0.apply(this, items);
   };
 }
 function _wrapRAF(arg0) {
   closure_0 = arg0;
   return function(arg0) {
-    let obj = callback(closure_1_1[1]);
-    obj = { mechanism: null };
-    obj = { data: null, handled: false, type: "auto.browser.browserapierrors.requestAnimationFrame" };
-    obj1 = { handler: callback(closure_1_1[0]).getFunctionName(callback) };
-    obj[0] = obj1;
-    obj[0] = obj;
-    const items = [obj.wrap(arg0, obj)];
-    return callback.apply(this, items);
+    const obj2 = { mechanism: null };
+    const obj3 = { data: null, handled: false, type: "auto.browser.browserapierrors.requestAnimationFrame" };
+    const obj4 = { handler: null };
+    const obj = ignoreNextOnError;
+    obj4.handler = registerSpanErrorInstrumentation.getFunctionName(closure_0);
+    obj3.data = obj4;
+    obj2.mechanism = obj3;
+    const items = [obj.wrap(arg0, obj2)];
+    return closure_0.apply(this, items);
   };
 }
 function _wrapXHR(arg0) {
@@ -37,29 +40,29 @@ function _wrapXHR(arg0) {
     const self = this;
     const items = ["onload", "onerror", "onprogress", "onreadystatechange"];
     const items1 = [...arguments];
-    const item = items.forEach((arg0) => {
-      closure_0 = arg0;
+    const item = items.forEach((item) => {
+      _self = item;
       if (tmp2) {
-        self(closure_1_1[0]).fill(tmp, arg0, (arg0) => {
-          let obj = { mechanism: null };
-          obj = { data: null, handled: false, type: null };
-          obj = { handler: callback(closure_1_1[0]).getFunctionName(arg0) };
-          obj[0] = obj;
-          obj[2] = "auto.browser.browserapierrors.xhr." + callback;
-          obj[0] = obj;
-          const obj4 = callback(closure_1_1[0]);
-          const originalFunction = callback(closure_1_1[0]).getOriginalFunction(arg0);
+        _self(dependencyMap[0]).fill(tmp, item, (arg0) => {
+          const obj = { mechanism: null };
+          const obj2 = { data: null, handled: false, type: null };
+          const obj3 = { handler: self(682).getFunctionName(arg0) };
+          obj2.data = obj3;
+          obj2.type = "auto.browser.browserapierrors.xhr." + closure_0;
+          obj.mechanism = obj2;
+          const obj4 = self(682);
+          const originalFunction = self(682).getOriginalFunction(arg0);
           if (originalFunction) {
-            let tmpResult = tmp(tmp2[0]);
-            obj.mechanism.data.handler = tmpResult.getFunctionName(originalFunction);
+            obj.mechanism.data.handler = tmp(682).getFunctionName(originalFunction);
+            const tmpResult = tmp(682);
           }
-          tmpResult = tmp(tmp2[1]);
-          return tmpResult.wrap(arg0, obj);
+          const obj5 = self(682);
+          return self(893).wrap(arg0, obj);
         });
-        let obj = self(closure_1_1[0]);
+        let obj = _self(dependencyMap[0]);
       }
     });
-    return self.apply(this, items1);
+    return _self.apply(this, items1);
   };
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -70,96 +73,88 @@ export const browserApiErrorsIntegration = registerSpanErrorInstrumentation.defi
   if (arg0 === undefined) {
     obj = {};
   }
-  obj = undefined;
-  obj = { XMLHttpRequest: true, eventTarget: true, requestAnimationFrame: true, setInterval: true, setTimeout: true, unregisterOriginalCallbacks: false };
+  let obj2 = { XMLHttpRequest: true, eventTarget: true, requestAnimationFrame: true, setInterval: true, setTimeout: true, unregisterOriginalCallbacks: false };
   const merged = Object.assign(obj);
-  obj = {
+  return {
     name: "BrowserApiErrors",
     setupOnce() {
-      if (obj.setTimeout) {
-        obj = obj(closure_1_1[0]);
-        obj.fill(obj(closure_1_1[1]).WINDOW, "setTimeout", closure_1_3);
+      if (obj2.setTimeout) {
+        registerSpanErrorInstrumentation.fill(ignoreNextOnError.WINDOW, "setTimeout", _wrapTimeFunction);
       }
-      if (obj.setInterval) {
-        obj(closure_1_1[0]).fill(obj(closure_1_1[1]).WINDOW, "setInterval", closure_1_3);
-        let obj2 = obj(closure_1_1[0]);
+      if (obj2.setInterval) {
+        obj2 = registerSpanErrorInstrumentation;
+        obj2.fill(ignoreNextOnError.WINDOW, "setInterval", _wrapTimeFunction);
       }
-      if (obj.requestAnimationFrame) {
-        obj(closure_1_1[0]).fill(obj(closure_1_1[1]).WINDOW, "requestAnimationFrame", closure_1_4);
-        let obj3 = obj(closure_1_1[0]);
+      if (obj2.requestAnimationFrame) {
+        registerSpanErrorInstrumentation.fill(ignoreNextOnError.WINDOW, "requestAnimationFrame", _wrapRAF);
       }
       let _XMLHttpRequest = tmp.XMLHttpRequest;
       if (_XMLHttpRequest) {
-        _XMLHttpRequest = "XMLHttpRequest" in obj(closure_1_1[1]).WINDOW;
+        _XMLHttpRequest = "XMLHttpRequest" in ignoreNextOnError.WINDOW;
       }
       if (_XMLHttpRequest) {
         const _XMLHttpRequest2 = XMLHttpRequest;
-        obj(closure_1_1[0]).fill(XMLHttpRequest.prototype, "send", closure_1_5);
-        let obj4 = obj(closure_1_1[0]);
+        registerSpanErrorInstrumentation.fill(XMLHttpRequest.prototype, "send", _wrapXHR);
       }
       let eventTarget = tmp.eventTarget;
       if (eventTarget) {
         const _Array = Array;
         if (!Array.isArray(eventTarget)) {
-          eventTarget = closure_1_2;
+          eventTarget = closure_2;
         }
-        const item = eventTarget.forEach((arg0) => {
-          closure_0 = arg0;
-          closure_1 = closure_0;
-          const tmp3 = closure_1_0(closure_1_1[1]).WINDOW[arg0];
+        const item = eventTarget.forEach((item) => {
+          closure_0 = item;
+          closure_1 = closure_1_0;
+          const tmp3 = obj2(dependencyMap[1]).WINDOW[item];
           let prototype;
           if (tmp3 != null) {
             prototype = tmp3.prototype;
           }
           let hasOwnPropertyResult;
           if (prototype != null) {
-            const hasOwnProperty = prototype.hasOwnProperty;
+            hasOwnProperty = prototype.hasOwnProperty;
             if (hasOwnProperty != null) {
               hasOwnPropertyResult = hasOwnProperty("addEventListener");
             }
           }
           if (hasOwnPropertyResult) {
-            let tmpResult = tmp(tmp2[0]);
-            tmpResult.fill(prototype, "addEventListener", (arg0) => {
-              closure_0 = arg0;
-              return function(arg0, handleEvent) {
-                try {
-                  if ((function isEventListenerObject() { ... })(handleEvent)) {
-                    obj = callback(893);
-                    obj = { mechanism: null };
-                    obj = { data: null, handled: false, type: "auto.browser.browserapierrors.handleEvent" };
-                    obj1 = { handler: null, target: null };
-                    let obj4 = callback(682);
-                    obj1[0] = obj4.getFunctionName(handleEvent);
-                    obj1[1] = callback;
-                    obj[0] = obj1;
-                    obj[0] = obj;
-                    handleEvent.handleEvent = obj.wrap(handleEvent.handleEvent, obj);
-                  }
-                  const self = this;
-                  if (closure_1_1.unregisterOriginalCallbacks) {
-                    (function unregisterOriginalCallback() { ... })(self, arg0, handleEvent);
-                  }
-                  const items = [arg0, , ];
-                  const obj2 = { mechanism: null };
-                  const obj3 = { data: null, handled: false, type: "auto.browser.browserapierrors.addEventListener" };
-                  obj4 = { handler: null, target: null };
-                  const obj6 = callback(893);
-                  obj4[0] = callback(682).getFunctionName(handleEvent);
-                  obj4[1] = callback;
-                  obj3[0] = obj4;
-                  obj2[0] = obj3;
-                  items[1] = obj6.wrap(handleEvent, obj2);
-                  items[2] = arg2;
-                  return callback.apply(self, items);
-                } catch (err) {
+            tmp(tmp2[0]).fill(prototype, "addEventListener", (target) => function(arg0, handleEvent, arg2) {
+              try {
+                if ((function isEventListenerObject() { ... })(handleEvent)) {
+                  obj2 = { mechanism: null };
+                  const obj3 = { data: null, handled: false, type: "auto.browser.browserapierrors.handleEvent" };
+                  const obj4 = { handler: null, target: null };
+                  const obj = closure_3_0(893);
+                  obj4.handler = closure_3_0(682).getFunctionName(handleEvent);
+                  obj4.target = target;
+                  obj3.data = obj4;
+                  obj2.mechanism = obj3;
+                  handleEvent.handleEvent = obj.wrap(handleEvent.handleEvent, obj2);
+                  const obj5 = closure_3_0(682);
                 }
-              };
+                const self = this;
+                if (closure_1.unregisterOriginalCallbacks) {
+                  (function unregisterOriginalCallback() { ... })(self, arg0, handleEvent);
+                }
+                const items = [arg0, , ];
+                const obj7 = { mechanism: null };
+                const obj8 = { data: null, handled: false, type: "auto.browser.browserapierrors.addEventListener" };
+                const obj9 = { handler: null, target: null };
+                const obj6 = closure_3_0(893);
+                obj9.handler = closure_3_0(682).getFunctionName(handleEvent);
+                obj9.target = target;
+                obj8.data = obj9;
+                obj7.mechanism = obj8;
+                items[1] = obj6.wrap(handleEvent, obj7);
+                items[2] = arg2;
+                return target.apply(self, items);
+              } catch (err) {
+              }
             });
-            tmpResult = tmp(tmp2[0]);
-            tmpResult.fill(prototype, "removeEventListener", (arg0) => {
+            const tmpResult = tmp(tmp2[0]);
+            tmp(tmp2[0]).fill(prototype, "removeEventListener", (arg0) => {
               closure_0 = arg0;
-              return function(arg0, __sentry_wrapped__) {
+              return function(arg0, __sentry_wrapped__, arg2) {
                 const self = this;
                 try {
                   __sentry_wrapped__ = __sentry_wrapped__.__sentry_wrapped__;
@@ -182,10 +177,10 @@ export const browserApiErrorsIntegration = registerSpanErrorInstrumentation.defi
                 }
               };
             });
+            const tmpResult2 = tmp(tmp2[0]);
           }
         });
       }
     }
   };
-  return obj;
 });

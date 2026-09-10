@@ -1,96 +1,56 @@
-// Module ID: 14822
-// Function ID: 14823
-// Name: pressable
-// Dependencies: [7975, 14823, 7600, 7298, 1114, 14824, 11473, 14826, 2]
+// Module ID: 14848
+// Function ID: 14849
+// Name: ExplicitMediaFiltersFriendsDMsSetting
+// Dependencies: [7989, 14849, 7614, 7312, 1114, 14850, 11500, 14852, 2]
 
-// Module 14822 (pressable)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import resolveExplicitContentSettingWithDefaults from "resolveExplicitContentSettingWithDefaults" /* 7298 */;
-import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 7600 */;
-import MobileUserSettings2 from "MobileUserSettings" /* 7975 */;
-import useExplicitContentSettingOrDefault from "useExplicitContentSettingOrDefault" /* 14823 */;
-import handleSensitiveMediaFilterPress from "handleSensitiveMediaFilterPress" /* 14824 */;
-import useSensitiveMediaSettingDisabled from "useSensitiveMediaSettingDisabled" /* 14826 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 14848 (ExplicitMediaFiltersFriendsDMsSetting)
+import util from "util" /* 1114 */;
+import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 7312 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7614 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 14849 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14850 */;
+import useSensitiveMediaSettingDisabled from "useSensitiveMediaSettingDisabled" /* 14852 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-const MobileUserSettings = MobileUserSettings2.MobileUserSettings;
-const pressable = createToggle.createPressable({
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+const pressable = SettingBuilders.createPressable({
   useTitle: function getTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["+uI23H"]);
+    const intl = util.intl;
+    return intl.string(util.t["+uI23H"]);
   },
   parent() {
     return MobileUserSettings.SENSITIVE_CONTENT_FILTERS;
   },
   useTrailing: function useObscuredContentFriendsDmSettingValue() {
-    const obj = useExplicitContentSettingOrDefault;
-    return redactionSettingToRenderedString.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentFriendDm)();
+    const obj = useExplicitContentSettingsOrDefault;
+    return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentFriendDm)();
   },
   onPress: function onObscuredContentFriendsDmOnPress() {
-    let obj = resolveExplicitContentSettingWithDefaults;
-    const intl = getSystemLocale.intl;
-    const stringResult = intl.string(getSystemLocale.t.GYpoAq);
-    obj = { title: stringResult, subtitle: null, handlePress: null, currentValue: null };
-    const intl2 = getSystemLocale.intl;
-    obj[1] = intl2.string(getSystemLocale.t["+uI23H"]);
-    obj[2] = function handlePress(explicitContentFriendDm) {
-      let obj = callback(table[3]);
-      obj = { explicitContentFriendDm };
-      return obj.updateExplicitContentSetting(obj);
+    const intl = util.intl;
+    const obj = SensitiveMediaExplicitRedactionSettingsUtils;
+    const stringResult = intl.string(util.t.GYpoAq);
+    const obj3 = { title: stringResult, subtitle: null, handlePress: null, currentValue: null };
+    const intl2 = util.intl;
+    obj3.subtitle = intl2.string(util.t["+uI23H"]);
+    obj3.handlePress = function handlePress(explicitContentFriendDm) {
+      return SensitiveMediaExplicitRedactionSettingsUtils.updateExplicitContentSetting({ explicitContentFriendDm });
     };
-    obj[3] = obj.getExplicitContentSettingOrDefault().explicitContentFriendDm;
-    const result = handleSensitiveMediaFilterPress.handleSensitiveMediaFilterPress(obj);
+    obj3.currentValue = obj.getExplicitContentSettingOrDefault().explicitContentFriendDm;
+    const result = ExplicitMediaRedactionNativeUtils.handleSensitiveMediaFilterPress(obj3);
   },
   useSearchTerms: function getSearchTerms() {
-    const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t["N/oRI+"]), , ];
-    const intl2 = getSystemLocale.intl;
-    items[1] = intl2.string(getSystemLocale.t.QVdYsK);
-    const intl3 = getSystemLocale.intl;
-    items[2] = intl3.string(getSystemLocale.t["5mnTa7"]);
+    const intl = util.intl;
+    const items = [intl.string(util.t["N/oRI+"]), , ];
+    const intl2 = util.intl;
+    items[1] = intl2.string(util.t.QVdYsK);
+    const intl3 = util.intl;
+    items[2] = intl3.string(util.t["5mnTa7"]);
     return items;
   },
   useIsDisabled: useSensitiveMediaSettingDisabled.useSensitiveMediaSettingDisabled
 });
-let obj = {
-  useTitle: function getTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["+uI23H"]);
-  },
-  parent() {
-    return MobileUserSettings.SENSITIVE_CONTENT_FILTERS;
-  },
-  useTrailing: function useObscuredContentFriendsDmSettingValue() {
-    const obj = useExplicitContentSettingOrDefault;
-    return redactionSettingToRenderedString.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentFriendDm)();
-  },
-  onPress: function onObscuredContentFriendsDmOnPress() {
-    let obj = resolveExplicitContentSettingWithDefaults;
-    const intl = getSystemLocale.intl;
-    const stringResult = intl.string(getSystemLocale.t.GYpoAq);
-    obj = { title: stringResult, subtitle: null, handlePress: null, currentValue: null };
-    const intl2 = getSystemLocale.intl;
-    obj[1] = intl2.string(getSystemLocale.t["+uI23H"]);
-    obj[2] = function handlePress(explicitContentFriendDm) {
-      let obj = callback(table[3]);
-      obj = { explicitContentFriendDm };
-      return obj.updateExplicitContentSetting(obj);
-    };
-    obj[3] = obj.getExplicitContentSettingOrDefault().explicitContentFriendDm;
-    const result = handleSensitiveMediaFilterPress.handleSensitiveMediaFilterPress(obj);
-  },
-  useSearchTerms: function getSearchTerms() {
-    const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t["N/oRI+"]), , ];
-    const intl2 = getSystemLocale.intl;
-    items[1] = intl2.string(getSystemLocale.t.QVdYsK);
-    const intl3 = getSystemLocale.intl;
-    items[2] = intl3.string(getSystemLocale.t["5mnTa7"]);
-    return items;
-  },
-  useIsDisabled: useSensitiveMediaSettingDisabled.useSensitiveMediaSettingDisabled
-};
-let result = set.fileFinishedImporting("modules/user_settings/defs/native/ExplicitMediaFiltersFriendsDMsSetting.tsx");
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/ExplicitMediaFiltersFriendsDMsSetting.tsx");
 
 export default pressable;

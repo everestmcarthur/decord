@@ -1,90 +1,82 @@
-// Module ID: 10835
-// Function ID: 10836
+// Module ID: 10862
+// Function ID: 10863
 // Name: PremiumGiftBackgroundAnimation
-// Dependencies: [32, 19, 17, 4552, 21, 4560, 504, 8082, 10836, 5529, 2]
+// Dependencies: [32, 19, 17, 4566, 21, 4574, 504, 8097, 10863, 5543, 2]
 // Exports: default
 
-// Module 10835 (PremiumGiftBackgroundAnimation)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10862 (PremiumGiftBackgroundAnimation)
+import PremiumGiftingUtils from "PremiumGiftingUtils" /* 8097 */;
+import GiftAnimationData from "GiftAnimationData" /* 10863 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-const require = arg1;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-let closure_9 = createCacheKey.createStyles({ container: { display: "flex", alignItems: "flex-end", justifyContent: "center", flexDirection: "row" }, consistentHeight: { height: 300 }, animation: { maxWidth: 375, width: "100%", height: "auto" }, baseAnimation: { position: "absolute", bottom: 0 }, lottie: { height: 275 } });
-const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftBackgroundAnimation.android.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+let closure_9 = createStyles.createStyles({ container: { display: "flex", alignItems: "flex-end", justifyContent: "center", flexDirection: "row" }, consistentHeight: { height: 300 }, animation: { maxWidth: 375, width: "100%", height: "auto" }, baseAnimation: { position: "absolute", bottom: 0 }, lottie: { height: 275 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftBackgroundAnimation.android.tsx");
 
 export default function PremiumGiftBackgroundAnimation(giftStyle) {
   giftStyle = giftStyle.giftStyle;
   let consistentHeight = giftStyle.withConsistentHeight;
-  let stateFromStores;
   let ref;
-  let ref1;
   let first;
-  closure_5 = undefined;
   let first1;
-  closure_7 = undefined;
-  let first2;
-  let callback;
-  let first3;
-  closure_11 = undefined;
-  const tmp = callback();
-  let obj = giftStyle(ref[6]);
+  closure_9 = undefined;
+  const tmp = closure_9();
   const items = [first1];
-  stateFromStores = obj.useStateFromStores(items, () => first1.useReducedMotion);
+  const stateFromStores = giftStyle(ref[6]).useStateFromStores(items, () => first1.useReducedMotion);
   ref = first.useRef(null);
-  ref1 = first.useRef(null);
-  let tmp7 = ref1(first.useState(giftStyle(ref[7]).AnimationState.ACTION), 2);
+  const ref1 = first.useRef(null);
+  const tmp7 = ref1(first.useState(giftStyle(ref[7]).AnimationState.ACTION), 2);
   first = tmp7[0];
   closure_5 = tmp7[1];
   const tmp9 = ref1(first.useState(undefined), 2);
   first1 = tmp9[0];
   closure_7 = tmp9[1];
   const tmp11 = ref1(first.useState(undefined), 2);
-  first2 = tmp11[0];
-  callback = tmp11[1];
+  const first2 = tmp11[0];
+  closure_9 = tmp11[1];
   const tmp13 = ref1(first.useState(false), 2);
-  first3 = tmp13[0];
+  const first3 = tmp13[0];
   closure_11 = tmp13[1];
   const items1 = [giftStyle];
   const items2 = [giftStyle];
-  const memo = first.useMemo(() => giftStyle(ref[8]).getGiftAnimationData(giftStyle, giftStyle(ref[7]).AnimationState.ACTION), items1);
-  const memo1 = first.useMemo(() => giftStyle(ref[8]).getGiftAnimationData(giftStyle, giftStyle(ref[7]).AnimationState.LOOP), items2);
-  obj1 = giftStyle(ref[8]);
-  const lottieType = obj1.getLottieType(giftStyle);
+  const memo = first.useMemo(() => GiftAnimationData.getGiftAnimationData(giftStyle, PremiumGiftingUtils.AnimationState.ACTION), items1);
+  const memo1 = first.useMemo(() => GiftAnimationData.getGiftAnimationData(giftStyle, PremiumGiftingUtils.AnimationState.LOOP), items2);
+  const obj = giftStyle(ref[6]);
+  const lottieType = giftStyle(ref[8]).getLottieType(giftStyle);
   const items3 = [first2, first1, giftStyle, first];
   const memo2 = first.useMemo(() => {
     if (first1 !== giftStyle) {
-      callback2(tmp);
-      let tmp8 = first !== giftStyle(ref[7]).AnimationState.LOOP;
+      closure_7(tmp);
+      let tmp8 = first !== PremiumGiftingUtils.AnimationState.LOOP;
       if (tmp8) {
         tmp8 = null != first2;
       }
       closure_11(tmp8);
-      callback(giftStyle(ref[7]).AnimationState.ACTION);
-      const tmp4 = closure_11;
-      const tmp6 = giftStyle;
-      const tmp7 = ref;
+      closure_5(PremiumGiftingUtils.AnimationState.ACTION);
     }
   }, items3);
   const items4 = [first, first3];
   const items5 = [first];
-  callback = first.useCallback((arg0) => {
+  const callback = first.useCallback((arg0) => {
     if (first3) {
-      callback4(false);
+      closure_11(false);
     } else {
       if (!tmp4) {
-        callback3(tmp2(tmp3[7]).AnimationState.ACTION);
-        callback(tmp2(tmp3[7]).AnimationState.LOOP);
+        closure_9(tmp2(8097).AnimationState.ACTION);
+        closure_5(tmp2(8097).AnimationState.LOOP);
       }
-      tmp4 = first === giftStyle(ref[7]).AnimationState.LOOP || arg0;
+      tmp4 = first === PremiumGiftingUtils.AnimationState.LOOP || arg0;
     }
   }, items4);
   const effect = first.useEffect(() => {
-    if (first === giftStyle(ref[7]).AnimationState.LOOP) {
+    if (first === PremiumGiftingUtils.AnimationState.LOOP) {
       const current2 = ref.current;
       if (current2 != null) {
         current2.reset();
@@ -109,10 +101,11 @@ export default function PremiumGiftBackgroundAnimation(giftStyle) {
   if (consistentHeight) {
     consistentHeight = tmp.consistentHeight;
   }
-  obj = { style: items7, children: null };
+  const obj3 = { style: items7, children: null };
   items7[1] = consistentHeight;
   const items8 = [, , , ];
   ({ baseAnimation: arr9[0], animation: arr9[1] } = tmp);
+  const obj2 = giftStyle(ref[8]);
   const tmp22 = first2;
   const tmp23 = closure_5;
   const tmp25 = stateFromStores;
@@ -125,11 +118,11 @@ export default function PremiumGiftBackgroundAnimation(giftStyle) {
       num = 1;
     }
   }
-  obj = { style: items8, hardwareAccelerationAndroid: lottieType === tmp2(tmp3[8]).LottieType.LOTTIE, ref, source: memo, autoPlay: !stateFromStores, onAnimationFinish: callback, loop: false };
-  items8[3] = { opacity: num };
-  const items9 = [closure_7(tmp26, obj), ];
-  const items10 = [tmp.animation, , ];
   const tmp27 = lottieType === giftStyle(ref[8]).LottieType.LOTTIE && tmp.lottie;
+  items8[3] = { opacity: num };
+  const items9 = [closure_7(tmp26, { style: items8, hardwareAccelerationAndroid: lottieType === giftStyle(ref[8]).LottieType.LOTTIE, ref, source: memo, autoPlay: !stateFromStores, onAnimationFinish: callback, loop: false }), ];
+  const items10 = [tmp.animation, , ];
+  const obj4 = { style: items8, hardwareAccelerationAndroid: lottieType === giftStyle(ref[8]).LottieType.LOTTIE, ref, source: memo, autoPlay: !stateFromStores, onAnimationFinish: callback, loop: false };
   const tmp25Result = tmp25(ref[9]);
   items10[1] = lottieType === giftStyle(ref[8]).LottieType.LOTTIE && tmp.lottie;
   let num2 = 0;
@@ -139,14 +132,14 @@ export default function PremiumGiftBackgroundAnimation(giftStyle) {
       num2 = 1;
     }
   }
-  obj1 = { style: items10, hardwareAccelerationAndroid: lottieType === tmp2(tmp3[8]).LottieType.LOTTIE, ref: ref1, source: memo1, autoPlay: null, loop: true };
+  const obj5 = { style: items10, hardwareAccelerationAndroid: lottieType === giftStyle(ref[8]).LottieType.LOTTIE, ref: ref1, source: memo1, autoPlay: null, loop: true };
   items10[2] = { opacity: num2 };
   let tmp31 = !stateFromStores;
   if (!stateFromStores) {
     tmp31 = first === tmp2(tmp3[7]).AnimationState.LOOP;
   }
-  obj1[4] = tmp31;
-  items9[1] = closure_7(tmp25Result, obj1);
-  obj[1] = items9;
-  return tmp22(tmp23, obj);
+  obj5.autoPlay = tmp31;
+  items9[1] = closure_7(tmp25Result, obj5);
+  obj3.children = items9;
+  return tmp22(tmp23, obj3);
 };

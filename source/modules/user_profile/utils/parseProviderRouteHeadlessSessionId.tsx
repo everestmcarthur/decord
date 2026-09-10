@@ -1,23 +1,24 @@
-// Module ID: 13019
-// Function ID: 13020
+// Module ID: 13045
+// Function ID: 13046
 // Name: parseProviderRouteHeadlessSessionId
-// Dependencies: [32, 5283, 2]
+// Dependencies: [32, 5297, 2]
 // Exports: default
 
-// Module 13019 (parseProviderRouteHeadlessSessionId)
-import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5283 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+// Module 13045 (parseProviderRouteHeadlessSessionId)
+import PlatformsDefault from "Platforms" /* 5297 */;
+import _slicedToArray from "module_32" /* 32 */;
 
 let c3 = "h:";
-const result = require("set").fileFinishedImporting("modules/user_profile/utils/parseProviderRouteHeadlessSessionId.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/utils/parseProviderRouteHeadlessSessionId.tsx");
 
 export default function parseProviderRouteHeadlessSessionId(str) {
   if (null != str) {
     if (str.startsWith(c3)) {
-      const first = callback(str.slice(2).split(","), 1)[0];
+      const first = _slicedToArray(str.slice(2).split(","), 1)[0];
       if (null != first) {
         if (0 !== first.length) {
-          const value = getPlatformUserUrlDefault.get(first);
+          value = PlatformsDefault.get(first);
           let tmp5 = null;
           if (null != value) {
             tmp5 = null;

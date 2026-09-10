@@ -2,11 +2,11 @@
 // Function ID: 1190
 // Name: typeofJsonValue
 // Dependencies: []
+// Exports: isJsonObject, typeofJsonValue
 
 // Module 1189 (typeofJsonValue)
-arg5.typeofJsonValue = undefined;
-arg5.isJsonObject = undefined;
-arg5.typeofJsonValue = function typeofJsonValue(obj) {
+
+export const typeofJsonValue = function typeofJsonValue(obj) {
   if (typeof obj === "object") {
     const _Array = Array;
     if (Array.isArray(obj)) {
@@ -17,7 +17,7 @@ arg5.typeofJsonValue = function typeofJsonValue(obj) {
   }
   return typeof obj;
 };
-arg5.isJsonObject = function isJsonObject(obj) {
+export const isJsonObject = function isJsonObject(obj) {
   let tmp = null !== obj && typeof obj === "object";
   if (tmp) {
     const _Array = Array;

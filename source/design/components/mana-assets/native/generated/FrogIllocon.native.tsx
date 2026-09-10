@@ -1,17 +1,17 @@
-// Module ID: 6005
-// Function ID: 6006
+// Module ID: 6019
+// Function ID: 6020
 // Name: FrogIllocon
-// Dependencies: [21, 5587, 6006, 2]
+// Dependencies: [21, 5601, 6020, 2]
 // Exports: FrogIllocon
 
-// Module 6005 (FrogIllocon)
-import set from "set" /* 2 */;
+// Module 6019 (FrogIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 6006 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6020 from "module_6020" /* 6020 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/FrogIllocon.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/FrogIllocon.native.tsx");
 
 export const FrogIllocon = function FrogIllocon(size) {
   let num = size.size;
@@ -19,13 +19,13 @@ export const FrogIllocon = function FrogIllocon(size) {
   if (num === undefined) {
     num = 64;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef6020 };
+  obj.source = obj2;
   const items = [{ width: num, height: num }];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { uri: metadataDefault });
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

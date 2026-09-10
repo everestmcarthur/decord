@@ -1,22 +1,23 @@
-// Module ID: 7066
-// Function ID: 7067
+// Module ID: 7080
+// Function ID: 7081
 // Name: useFastestListPropsScrollReporting
-// Dependencies: [4296, 2]
+// Dependencies: [4310, 2]
 // Exports: default
 
-// Module 7066 (useFastestListPropsScrollReporting)
-import set from "set" /* 2 */;
+// Module 7080 (useFastestListPropsScrollReporting)
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import size from "module_2" /* 2 */;
 
-let closure_2 = { code: "function useFastestListPropsScrollReportingNativeTsx1(event){const{scrollPosition,horizontal}=this.__closure;if(scrollPosition!=null){scrollPosition.set(horizontal?event.contentOffset.x:event.contentOffset.y);}}" };
-let result = set.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsScrollReporting.native.tsx");
+const __initData = { code: "function useFastestListPropsScrollReportingNativeTsx1(event){const{scrollPosition,horizontal}=this.__closure;if(scrollPosition!=null){scrollPosition.set(horizontal?event.contentOffset.x:event.contentOffset.y);}}" };
+let result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsScrollReporting.native.tsx");
 
 export default function useFastestListPropsScrollReporting(scrollReporting, horizontal) {
-  const _require = horizontal;
+  closure_0 = horizontal;
   let scrollPosition;
   if ("animatedScrollPosition" === scrollReporting.scrollReporting) {
     scrollPosition = scrollReporting.scrollPosition;
   }
-  _require(scrollPosition[0]);
+  ReanimatedRexport;
   const fn = function n(contentOffset) {
     if (null != scrollPosition) {
       contentOffset = contentOffset.contentOffset;
@@ -25,19 +26,18 @@ export default function useFastestListPropsScrollReporting(scrollReporting, hori
   };
   fn.__closure = { scrollPosition, horizontal };
   fn.__workletHash = 14196294214838;
-  fn.__initData = closure_2;
+  fn.__initData = __initData;
+  { onScroll: null }.onScroll = fn;
   scrollReporting = scrollReporting.scrollReporting;
   if ("animatedScrollPosition" === scrollReporting) {
-    let obj = { onScroll: null };
-    obj[0] = tmp3;
-    return obj;
+    const obj2 = { onScroll: tmp3 };
+    return obj2;
   } else if ("animatedCallbacks" === scrollReporting) {
-    obj = { onScroll: null };
-    obj[0] = scrollReporting.scrollHandlerAnimated;
-    return obj;
+    const obj3 = { onScroll: scrollReporting.scrollHandlerAnimated };
+    return obj3;
   } else {
-    obj = { onScroll: null, onScrollBeginDrag: null, onScrollEndDrag: null };
-    ({ onScroll: obj[0], onScrollBeginDrag: obj[1], onScrollEndDrag: obj[2] } = scrollReporting);
+    const obj = { onScroll: null, onScrollBeginDrag: null, onScrollEndDrag: null };
+    ({ onScroll: obj.onScroll, onScrollBeginDrag: obj.onScrollBeginDrag, onScrollEndDrag: obj.onScrollEndDrag } = scrollReporting);
     return obj;
   }
 };

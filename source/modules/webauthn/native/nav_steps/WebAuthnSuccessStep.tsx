@@ -1,32 +1,35 @@
-// Module ID: 14681
-// Function ID: 14682
+// Module ID: 14707
+// Function ID: 14708
 // Name: WebAuthnSuccessStep
-// Dependencies: [19, 21, 1483, 5624, 14666, 14682, 1114, 2]
+// Dependencies: [19, 21, 1483, 5638, 14692, 14708, 1114, 2]
 // Exports: default
 
-// Module 14681 (WebAuthnSuccessStep)
-import CodeRowDefault from "CodeRow" /* 14682 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 14707 (WebAuthnSuccessStep)
+import NavigatorHeader from "NavigatorHeader" /* 5638 */;
+import PasskeyUpsellActionCreatorsDefault from "PasskeyUpsellActionCreators" /* 14692 */;
+import UserSettingsAccountBackupCodesDefault from "UserSettingsAccountBackupCodes" /* 14708 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnSuccessStep.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnSuccessStep.tsx");
 
 export default function WebAuthnSuccessStep() {
-  let obj = navigation(1483);
-  navigation = obj.useNavigation();
+  navigation = navigation(1483).useNavigation();
   const items = [navigation];
-  const layoutEffect = React.useLayoutEffect(() => {
+  const layoutEffect = noop.useLayoutEffect(() => {
     const obj = {
-      headerLeft: navigation(closure_1_2[3]).getHeaderCloseButton(() => {
-        closure_0.popToTop();
-        const result = closure_1_1(closure_1_2[4]).closePasskeyUpsellModal();
+      headerLeft: NavigatorHeader.getHeaderCloseButton(() => {
+        navigation.popToTop();
+        const result = PasskeyUpsellActionCreatorsDefault.closePasskeyUpsellModal();
       })
     };
     navigation.setOptions(obj);
   }, items);
-  obj = { onGenerate: null, headerLabel: null };
+  const obj2 = { onGenerate: null, headerLabel: null };
+  let obj = navigation(1483);
   const intl = navigation(1114).intl;
-  obj[1] = intl.format(navigation(1114).t.iVTs6i, {});
-  return jsx(CodeRowDefault, { onGenerate: null, headerLabel: null });
+  obj2.headerLabel = intl.format(navigation(1114).t.iVTs6i, {});
+  return jsx(UserSettingsAccountBackupCodesDefault, { onGenerate: null, headerLabel: null });
 };

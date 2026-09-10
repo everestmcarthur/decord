@@ -1,18 +1,17 @@
-// Module ID: 11953
-// Function ID: 11954
-// Name: handleSharedClientThemeViewed
-// Dependencies: [8773, 1250, 2]
+// Module ID: 11979
+// Function ID: 11980
+// Name: sharedClientThemeViewed
+// Dependencies: [8801, 1250, 2]
 // Exports: handleSharedClientThemeViewed
 
-// Module 11953 (handleSharedClientThemeViewed)
-import set from "set" /* 2 */;
-import encodeProperties from "encodeProperties" /* 1250 */;
-import trackImpression from "trackImpression" /* 8773 */;
+// Module 11979 (sharedClientThemeViewed)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import useTrackImpression from "useTrackImpression" /* 8801 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/client_themes/native/chat/sharedClientThemeViewed.tsx");
+const result = size.fileFinishedImporting("modules/client_themes/native/chat/sharedClientThemeViewed.tsx");
 
 export const handleSharedClientThemeViewed = function handleSharedClientThemeViewed() {
-  let obj = trackImpression;
-  obj = { type: encodeProperties.ImpressionTypes.VIEW, name: encodeProperties.ImpressionNames.CUSTOM_THEME_SHARE, properties: {} };
-  obj.trackImpression(obj);
+  const obj = useTrackImpression;
+  obj.trackImpression({ type: discord_common_AnalyticsUtils.ImpressionTypes.VIEW, name: discord_common_AnalyticsUtils.ImpressionNames.CUSTOM_THEME_SHARE, properties: {} });
 };

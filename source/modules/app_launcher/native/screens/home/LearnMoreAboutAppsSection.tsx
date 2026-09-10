@@ -1,62 +1,61 @@
-// Module ID: 12099
-// Function ID: 12100
+// Module ID: 12125
+// Function ID: 12126
 // Name: LearnMoreAboutAppsSection
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 4255, 2024, 1114, 12100, 9414, 4556, 5123, 2]
+// Dependencies: [19, 17, 1074, 21, 4574, 576, 4268, 2024, 1114, 12126, 9441, 4570, 5137, 2]
 // Exports: default
 
-// Module 12099 (LearnMoreAboutAppsSection)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import PressableBase from "PressableBase" /* 5123 */;
-import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 9414 */;
-import TrackSectionHeaderDefault from "TrackSectionHeader" /* 12100 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { HelpdeskArticles } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12125 (LearnMoreAboutAppsSection)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
+import LinkingDefault from "Linking" /* 4268 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Pressables from "Pressables" /* 5137 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9441 */;
+import TrackSectionHeaderDefault from "TrackSectionHeader" /* 12126 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, body: null, divider: null, linkButton: null };
-createCacheKey = { marginTop: ThemesDefault.space.PX_32, borderRadius: ThemesDefault.radii.lg, alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, paddingHorizontal: ThemesDefault.space.PX_64 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { textAlign: "center" };
-createCacheKey[2] = { height: ThemesDefault.space.PX_16 };
-const obj1 = { height: ThemesDefault.space.PX_16 };
-const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
-createCacheKey[3] = { borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, paddingVertical: 12, paddingHorizontal: 16, minHeight: 48, justifyContent: "center", alignItems: "center" };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const obj2 = { borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, paddingVertical: 12, paddingHorizontal: 16, minHeight: 48, justifyContent: "center", alignItems: "center" };
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/LearnMoreAboutAppsSection.tsx");
+require = fn;
+const View = fn(17).View;
+const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { marginTop: nativeDefault.space.PX_32, borderRadius: nativeDefault.radii.lg, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, paddingHorizontal: nativeDefault.space.PX_64 }, body: { textAlign: "center" }, divider: null, linkButton: null };
+const obj3 = { marginTop: nativeDefault.space.PX_32, borderRadius: nativeDefault.radii.lg, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, paddingHorizontal: nativeDefault.space.PX_64 };
+obj2.divider = { height: nativeDefault.space.PX_16 };
+const obj4 = { height: nativeDefault.space.PX_16 };
+const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
+obj2.linkButton = { borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, paddingVertical: 12, paddingHorizontal: 16, minHeight: 48, justifyContent: "center", alignItems: "center" };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/LearnMoreAboutAppsSection.tsx");
 
 export default function LearnMoreAboutAppsSection(visible) {
-  const tmp = callback3();
-  const callback = React.useCallback(() => {
-    const obj = callback(4255);
-    obj.openURL(callback(2024).getAppsSupportURL(constants.APPS_LEARN_MORE));
+  const tmp = closure_8();
+  const callback = noop.useCallback(() => {
+    const obj = LinkingDefault;
+    obj.openURL(HelpdeskUtilsDefault.getAppsSupportURL(constants.APPS_LEARN_MORE));
   }, []);
-  const intl = getSystemLocale.intl;
-  const stringResult = intl.string(getSystemLocale.t["kw8/Ec"]);
-  const intl2 = getSystemLocale.intl;
-  const stringResult1 = intl2.string(getSystemLocale.t.GZoV1O);
-  const intl3 = getSystemLocale.intl;
+  const intl = util.intl;
+  const stringResult = intl.string(util.t["kw8/Ec"]);
+  const intl2 = util.intl;
+  const stringResult1 = intl2.string(util.t.GZoV1O);
+  const intl3 = util.intl;
   let obj = { sectionName: null, numItems: 1, numVisibleItems: 1, viewed: null, children: null };
-  const formatToPlainStringResult = intl3.formatToPlainString(getSystemLocale.t.xx5Sug, { sectionTitle: stringResult, sectionBody: stringResult1 });
-  obj[0] = AppLauncherEntrypoint.AppLauncherSectionName.NEW_TO_APPS;
-  obj[3] = visible.visible;
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.divider };
-  const items = [callback(View, obj), callback(Text.Text, { accessibilityRole: "header", variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: stringResult }), callback(Text.Text, { variant: "text-xs/normal", color: "text-default", style: tmp.body, children: stringResult1 }), callback(View, { style: tmp.divider }), , ];
-  const obj3 = { style: tmp.linkButton, onPress: callback, accessibilityRole: "link", accessibilityLabel: formatToPlainStringResult, children: null };
-  const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl4 = getSystemLocale.intl;
-  obj4[2] = intl4.string(getSystemLocale.t.Ye51oT);
-  obj3[4] = callback(Text.Text, obj4);
-  items[4] = callback(PressableBase.PressableHighlight, obj3);
-  items[5] = callback(View, { style: tmp.divider });
-  obj[1] = items;
-  obj[4] = callback2(View, obj);
-  return callback(TrackSectionHeaderDefault, obj);
+  const formatToPlainStringResult = intl3.formatToPlainString(util.t.xx5Sug, { sectionTitle: stringResult, sectionBody: stringResult1 });
+  obj.sectionName = AppLauncherTypes.AppLauncherSectionName.NEW_TO_APPS;
+  obj.viewed = visible.visible;
+  const obj2 = { style: tmp.container, children: null };
+  const items = [timestampProducer(View, { style: tmp.divider }), timestampProducer(Text_Text.Text, { accessibilityRole: "header", variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: stringResult }), timestampProducer(Text_Text.Text, { variant: "text-xs/normal", color: "text-default", style: tmp.body, children: stringResult1 }), timestampProducer(View, { style: tmp.divider }), , ];
+  const obj6 = { style: tmp.linkButton, onPress: callback, accessibilityRole: "link", accessibilityLabel: formatToPlainStringResult, children: null };
+  const obj7 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+  const intl4 = util.intl;
+  obj7.children = intl4.string(util.t.Ye51oT);
+  obj6.children = timestampProducer(Text_Text.Text, obj7);
+  items[4] = timestampProducer(Pressables.PressableHighlight, obj6);
+  items[5] = timestampProducer(View, { style: tmp.divider });
+  obj2.children = items;
+  obj.children = React5(View, obj2);
+  return timestampProducer(TrackSectionHeaderDefault, obj);
 };

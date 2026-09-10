@@ -3,7 +3,8 @@
 // Dependencies: []
 
 // Module 1464
-arg5.default = {
+
+export default {
   reachabilityUrl: "https://clients3.google.com/generate_204",
   reachabilityMethod: "HEAD",
   reachabilityHeaders: {},

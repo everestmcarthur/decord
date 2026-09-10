@@ -1,33 +1,36 @@
-// Module ID: 14187
-// Function ID: 14188
-// Name: IntlLink
-// Dependencies: [19, 21, 4560, 576, 4279, 4255, 4257, 1178, 2]
+// Module ID: 14212
+// Function ID: 14213
+// Name: migration
+// Dependencies: [19, 21, 4574, 576, 4294, 4268, 4270, 1178, 2]
 // Exports: IntlLink
 
-// Module 14187 (IntlLink)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14212 (migration)
+import nativeDefault from "native" /* 576 */;
+import LinkingDefault from "Linking" /* 4268 */;
+import _modDef4270 from "module_4270" /* 4270 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let closure_5 = createCacheKey.createStyles((arg0) => {
-  const link = { color: ThemesDefault.colors.TEXT_LINK, textDecorationLine: null };
+const require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_5 = createStyles.createStyles((arg0) => {
+  const link = { color: nativeDefault.colors.TEXT_LINK, textDecorationLine: null };
   let str = "none";
   if (arg0) {
     str = "underline";
   }
-  link[1] = str;
+  link.textDecorationLine = str;
   return { link };
 });
-const result = require("set").fileFinishedImporting("intl/native/migration.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("intl/native/migration.tsx");
 
 export const IntlLink = function IntlLink(children) {
   const target = children.target;
   if (typeof target === "string") {
     let fn = () => {
-      const obj = closure_1_1(closure_1_2[5]);
-      return obj.openURL(closure_1_1(closure_1_2[6]).sanitizeUrl(target));
+      const obj = LinkingDefault;
+      return obj.openURL(_modDef4270.sanitizeUrl(target));
     };
   } else {
     fn = target;
@@ -39,6 +42,6 @@ export const IntlLink = function IntlLink(children) {
     }
   }
   const tmp = target;
-  const tmp3 = callback(React.useContext(target(4279).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
-  return jsx(tmp(1178).LegacyText, { accessible: true, accessibilityRole: "link", onPress: fn, style: callback(React.useContext(target(4279).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link, children: children.children });
+  const tmp3 = closure_5(noop.useContext(target(4294).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
+  return jsx(tmp(1178).LegacyText, { accessible: true, accessibilityRole: "link", onPress: fn, style: closure_5(noop.useContext(target(4294).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link, children: children.children });
 };

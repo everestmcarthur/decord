@@ -1,15 +1,15 @@
-// Module ID: 4601
-// Function ID: 4602
+// Module ID: 4615
+// Function ID: 4616
 // Name: hasRichActivity
 // Dependencies: [1074, 2]
 // Exports: default
 
-// Module 4601 (hasRichActivity)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 4615 (hasRichActivity)
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const ActivityTypes = ME.ActivityTypes;
-const result = set.fileFinishedImporting("modules/activities/utils/hasRichActivity.tsx");
+const ActivityTypes = Constants.ActivityTypes;
+const result = size.fileFinishedImporting("modules/activities/utils/hasRichActivity.tsx");
 
 export default function hasRichActivity(type) {
   let tmp = null != type;

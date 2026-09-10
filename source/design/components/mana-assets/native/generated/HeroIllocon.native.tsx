@@ -1,17 +1,17 @@
-// Module ID: 6201
-// Function ID: 6202
+// Module ID: 6215
+// Function ID: 6216
 // Name: HeroIllocon
-// Dependencies: [21, 5587, 6202, 2]
+// Dependencies: [21, 5601, 6216, 2]
 // Exports: HeroIllocon
 
-// Module 6201 (HeroIllocon)
-import set from "set" /* 2 */;
+// Module 6215 (HeroIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 6202 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6216 from "module_6216" /* 6216 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/HeroIllocon.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/HeroIllocon.native.tsx");
 
 export const HeroIllocon = function HeroIllocon(size) {
   let num = size.size;
@@ -19,13 +19,13 @@ export const HeroIllocon = function HeroIllocon(size) {
   if (num === undefined) {
     num = 64;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef6216 };
+  obj.source = obj2;
   const items = [{ width: num, height: num }];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { uri: metadataDefault });
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

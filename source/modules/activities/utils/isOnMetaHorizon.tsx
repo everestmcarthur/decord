@@ -1,17 +1,17 @@
-// Module ID: 13022
-// Function ID: 13023
+// Module ID: 13048
+// Function ID: 13049
 // Name: isOnMetaHorizon
 // Dependencies: [1920, 1074, 2]
 // Exports: default
 
-// Module 13022 (isOnMetaHorizon)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import items3 from "items3" /* 1920 */;
+// Module 13048 (isOnMetaHorizon)
+import Constants from "Constants" /* 1074 */;
+import Constants2 from "Constants" /* 1920 */;
+import size from "module_2" /* 2 */;
 
-let closure_0 = items3.META_PRESENCE_APPLICATION_ID;
-const ActivityGamePlatforms = ME.ActivityGamePlatforms;
-const result = set.fileFinishedImporting("modules/activities/utils/isOnMetaHorizon.tsx");
+let closure_0 = Constants2.META_PRESENCE_APPLICATION_ID;
+const ActivityGamePlatforms = Constants.ActivityGamePlatforms;
+const result = size.fileFinishedImporting("modules/activities/utils/isOnMetaHorizon.tsx");
 
 export default function isOnMetaHorizon(application_id) {
   application_id = undefined;

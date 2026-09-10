@@ -1,26 +1,25 @@
-// Module ID: 12500
-// Function ID: 12501
+// Module ID: 12526
+// Function ID: 12527
 // Name: useGuildPowerupRollbackEnabled
-// Dependencies: [4487, 4453, 2]
+// Dependencies: [4501, 4467, 2]
 // Exports: default, isGuildPowerupRollbackEnabled
 
-// Module 12500 (useGuildPowerupRollbackEnabled)
-import set from "set" /* 2 */;
-import VANITY_URL_POWERUP_SKU_ID from "VANITY_URL_POWERUP_SKU_ID" /* 4453 */;
-import experiment from "experiment" /* 4487 */;
+// Module 12526 (useGuildPowerupRollbackEnabled)
+import Powerups from "Powerups" /* 4467 */;
+import FileUpload250MbPowerupExperiment from "FileUpload250MbPowerupExperiment" /* 4501 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackEnabled.tsx");
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackEnabled.tsx");
 
 export default function useGuildPowerupRollbackEnabled(guildId, skuId, location) {
-  const fileUpload250MbPowerupRollbackEnabled = experiment.useFileUpload250MbPowerupRollbackEnabled(guildId, location);
-  const obj = experiment;
-  return skuId.skuId === VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID && fileUpload250MbPowerupRollbackEnabled;
+  const fileUpload250MbPowerupRollbackEnabled = FileUpload250MbPowerupExperiment.useFileUpload250MbPowerupRollbackEnabled(guildId, location);
+  return skuId.skuId === Powerups.GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID && fileUpload250MbPowerupRollbackEnabled;
 };
-export const isGuildPowerupRollbackEnabled = function isGuildPowerupRollbackEnabled(closure_0, skuId, maybeGetPerkPurchaseablePopoutDCF) {
-  let fileUpload250MbPowerupRollbackEnabled = skuId.skuId === VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID;
+export const isGuildPowerupRollbackEnabled = function isGuildPowerupRollbackEnabled(guildId, skuId, maybeGetPerkPurchaseablePopoutDCF) {
+  let fileUpload250MbPowerupRollbackEnabled = skuId.skuId === Powerups.GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID;
   if (fileUpload250MbPowerupRollbackEnabled) {
-    fileUpload250MbPowerupRollbackEnabled = experiment.getFileUpload250MbPowerupRollbackEnabled(closure_0, maybeGetPerkPurchaseablePopoutDCF);
-    const tmpResult = experiment;
+    fileUpload250MbPowerupRollbackEnabled = FileUpload250MbPowerupExperiment.getFileUpload250MbPowerupRollbackEnabled(guildId, maybeGetPerkPurchaseablePopoutDCF);
+    const tmpResult = FileUpload250MbPowerupExperiment;
   }
   return fileUpload250MbPowerupRollbackEnabled;
 };

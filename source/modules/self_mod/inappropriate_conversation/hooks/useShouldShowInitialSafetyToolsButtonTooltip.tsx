@@ -1,20 +1,23 @@
-// Module ID: 11401
-// Function ID: 11402
+// Module ID: 11428
+// Function ID: 11429
 // Name: useShouldShowInitialSafetyToolsButtonTooltip
-// Dependencies: [10920, 11400, 504, 2]
+// Dependencies: [10947, 11427, 504, 2]
 // Exports: useShouldShowInitialSafetyToolsButtonTooltip
 
-// Module 11401 (useShouldShowInitialSafetyToolsButtonTooltip)
-import closure_2 from "handleConnectionOpen" /* 10920 */;
+// Module 11428 (useShouldShowInitialSafetyToolsButtonTooltip)
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10947 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useShouldShowInitialSafetyToolsButtonTooltip.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useShouldShowInitialSafetyToolsButtonTooltip.tsx");
 
 export const useShouldShowInitialSafetyToolsButtonTooltip = function useShouldShowInitialSafetyToolsButtonTooltip(channelId) {
-  const _require = channelId;
-  const inappropriateConversationSafetyToolsWarningForChannel = _require(11400).useInappropriateConversationSafetyToolsWarningForChannel(channelId);
-  const obj = _require(11400);
-  const items = [closure_2];
-  const obj2 = _require(504);
-  return null != inappropriateConversationSafetyToolsWarningForChannel && !_require(504).useStateFromStores(items, () => closure_1_2.hasShownInitialTooltipForChannel(closure_0));
+  _require = channelId;
+  const inappropriateConversationSafetyToolsWarningForChannel = require("useInappropriateConversationSafetyToolsWarningForChannel").useInappropriateConversationSafetyToolsWarningForChannel(channelId);
+  const obj = require("useInappropriateConversationSafetyToolsWarningForChannel");
+  const items = [ChannelSafetyWarningsStore];
+  const obj2 = require("initialize");
+  return null != inappropriateConversationSafetyToolsWarningForChannel && !require("initialize").useStateFromStores(items, () => ChannelSafetyWarningsStore.hasShownInitialTooltipForChannel(closure_0));
 };

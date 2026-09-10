@@ -1,24 +1,24 @@
-// Module ID: 7635
-// Function ID: 7636
+// Module ID: 7649
+// Function ID: 7650
 // Name: parseUserProfileCollectibles
 // Dependencies: [1889, 2]
 // Exports: default
 
-// Module 7635 (parseUserProfileCollectibles)
-import set from "set" /* 2 */;
+// Module 7649 (parseUserProfileCollectibles)
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/user_profile/utils/parseUserProfileCollectibles.tsx");
+const result = size.fileFinishedImporting("modules/user_profile/utils/parseUserProfileCollectibles.tsx");
 
 export default function parseUserProfileCollectibles(collectibles) {
   let tmp;
   let tmp2;
-  collectibles = undefined;
+  let collectibles1;
   if (collectibles != null) {
-    collectibles = collectibles.collectibles;
+    collectibles1 = collectibles.collectibles;
   }
-  if (null == collectibles) {
-    return { collectibles: "Array", profileEffect: "padding", profileFrame: "now" };
+  if (null == collectibles1) {
+    return { collectibles: "Array", profileEffect: "call", profileFrame: "default" };
   } else {
     const items = [];
     collectibles = collectibles.collectibles;
@@ -27,62 +27,48 @@ export default function parseUserProfileCollectibles(collectibles) {
     while (iter !== undefined) {
       let tmp7 = nextResult;
       let obj = { skuId: null, type: null, expiresAt: null };
-      ({ sku_id: obj[0], type: obj[1] } = nextResult);
+      ({ sku_id: obj.skuId, type: obj.type } = nextResult);
       let date;
       if (null != nextResult.expires_at) {
         let _Date = Date;
-        let tmp9 = nextResult;
         let tmp10 = new.target;
         let tmp11 = new.target;
         date = new Date(tmp7.expires_at);
       }
-      obj[2] = date;
+      obj.expiresAt = date;
       let arr = items.push(obj);
-      let tmp13 = nextResult;
       let tmp14 = require;
-      let tmp15 = dependencyMap;
       if (tmp7.type === CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT) {
-        obj = { skuId: null, expiresAt: null };
-        let tmp20 = nextResult;
-        obj[0] = tmp7.sku_id;
+        let obj2 = { skuId: null, expiresAt: null };
+        obj2.skuId = tmp7.sku_id;
         let rounded;
         if (null != tmp7.expires_at) {
           let _Math = Math;
           let _Date3 = Date;
-          let tmp22 = nextResult;
           let tmp23 = new.target;
           let tmp24 = new.target;
           let date1 = new Date(tmp7.expires_at);
-          let tmp25 = date1;
           rounded = Math.floor(date1.getTime() / 1000);
         }
-        obj[1] = rounded;
-        tmp = obj;
-      } else {
-        let tmp28 = nextResult;
-        if (tmp7.type === tmp14(1889).CollectiblesItemType.PROFILE_FRAME) {
-          obj = { skuId: null, type: null, expiresAt: null };
-          let tmp29 = nextResult;
-          obj[0] = tmp7.sku_id;
-          obj[1] = tmp14(1889).CollectiblesItemType.PROFILE_FRAME;
-          let date2;
-          if (null != tmp7.expires_at) {
-            let _Date2 = Date;
-            let tmp16 = nextResult;
-            let tmp17 = new.target;
-            let tmp18 = new.target;
-            date2 = new Date(tmp7.expires_at);
-          }
-          obj[2] = date2;
-          tmp2 = obj;
+        obj2.expiresAt = rounded;
+        tmp = obj2;
+      } else if (tmp7.type === tmp14(1889).CollectiblesItemType.PROFILE_FRAME) {
+        let obj3 = { skuId: null, type: null, expiresAt: null };
+        obj3.skuId = tmp7.sku_id;
+        obj3.type = tmp14(1889).CollectiblesItemType.PROFILE_FRAME;
+        let date2;
+        if (null != tmp7.expires_at) {
+          let _Date2 = Date;
+          let tmp17 = new.target;
+          let tmp18 = new.target;
+          date2 = new Date(tmp7.expires_at);
         }
+        obj3.expiresAt = date2;
+        tmp2 = obj3;
       }
       continue;
     }
-    obj1 = { collectibles: null, profileEffect: null, profileFrame: null };
-    obj1[0] = items;
-    obj1[1] = tmp;
-    obj1[2] = tmp2;
-    return obj1;
+    const obj4 = { collectibles: items, profileEffect: tmp, profileFrame: tmp2 };
+    return obj4;
   }
 };

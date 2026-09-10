@@ -1,31 +1,23 @@
-// Module ID: 12481
-// Function ID: 12482
-// Name: dispatcher
+// Module ID: 12507
+// Function ID: 12508
+// Name: GuildProgressActionCreators
 // Dependencies: [573, 2]
 
-// Module 12481 (dispatcher)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 12507 (GuildProgressActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_progress/GuildProgressActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/guild_progress/GuildProgressActionCreators.tsx");
 
 export default {
   createProgress(id) {
-    let obj = dispatcherDefault;
-    obj = { type: "GUILD_PROGRESS_INITIALIZE", guildId: id };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "GUILD_PROGRESS_INITIALIZE", guildId: id });
   },
   markCompletedProgressSeen(id) {
     importDefault = id;
-    dispatcherDefault.wait(() => {
-      let obj = id(closure_1_1[0]);
-      obj = { type: "GUILD_PROGRESS_COMPLETED_SEEN", guildId: id };
-      return obj.dispatch(obj);
-    });
+    DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "GUILD_PROGRESS_COMPLETED_SEEN", guildId }));
   },
   dismissProgress(id) {
-    let obj = dispatcherDefault;
-    obj = { type: "GUILD_PROGRESS_DISMISS", guildId: id };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "GUILD_PROGRESS_DISMISS", guildId: id });
   }
 };

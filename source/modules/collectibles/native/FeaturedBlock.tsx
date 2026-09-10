@@ -1,40 +1,41 @@
-// Module ID: 15830
-// Function ID: 15831
-// Name: Subblocks
-// Dependencies: [19, 17, 21, 576, 4560, 8772, 15831, 7162, 7182, 2]
+// Module ID: 15860
+// Function ID: 15861
+// Name: FeaturedBlock
+// Dependencies: [19, 17, 21, 576, 4574, 8800, 15861, 7176, 7196, 2]
 // Exports: default
 
-// Module 15830 (Subblocks)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import context from "context" /* 7162 */;
-import contextDefault from "context" /* 7162 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7182 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15860 (FeaturedBlock)
+import nativeDefault from "native" /* 576 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7176 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8800 */;
+import FeaturedCategorySubblockDefault from "FeaturedCategorySubblock" /* 15861 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+const useAnalyticsLocationsDefault = useAnalyticsLocations;
+
+require = fn;
 function Subblocks(style) {
   style = style.style;
   const subblocks = style.featuredBlock.subblocks;
   return subblocks.map((subblock, tilePosition) => {
-    obj = { newValue: obj, children: null };
-    obj = { tilePosition };
-    obj = { style, children: closure_1_4(closure_1_1(closure_1_2[6]), obj1) };
-    obj[1] = closure_1_4(closure_1_3, obj);
-    return closure_1_4(style(closure_1_2[5]).CollectiblesAnalyticsProvider, obj, tilePosition);
+    const obj = { newValue: { tilePosition }, children: null };
+    const obj2 = { style, children: jsx(FeaturedCategorySubblockDefault, { subblock }) };
+    obj.children = <View style={style}>{jsx(FeaturedCategorySubblockDefault, { subblock: arg0 })}</View>;
+    return jsx(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, { newValue: { tilePosition }, children: null }, tilePosition);
   });
 }
-noopAll;
-let closure_5 = createCacheKey.createStyles({ container: { display: "flex", width: "100%", flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 }, featuredSubblock: { flex: 1, flexBasis: 400, maxWidth: "100%" } });
-const result = require("set").fileFinishedImporting("modules/collectibles/native/FeaturedBlock.tsx");
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_5 = createStyles.createStyles({ container: { display: "flex", width: "100%", flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 }, featuredSubblock: { flex: 1, flexBasis: 400, maxWidth: "100%" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/FeaturedBlock.tsx");
 
 export default function FeaturedBlock(featuredBlock) {
-  const tmp = callback();
-  let obj = { value: contextDefault(QUICK_SWITCHERDefault.COLLECTIBLES_SHOP_FEATURED_BLOCK).analyticsLocations, children: null };
-  obj = { style: tmp.container, children: <Subblocks value={contextDefault(QUICK_SWITCHERDefault.COLLECTIBLES_SHOP_FEATURED_BLOCK).analyticsLocations}>{null}</Subblocks> };
-  obj = { featuredBlock: featuredBlock.featuredBlock, style: tmp.featuredSubblock };
-  obj[1] = <View featuredBlock={arg0.featuredBlock} style={tmp.featuredSubblock} />;
-  return jsx(context.AnalyticsLocationProvider, { featuredBlock: featuredBlock.featuredBlock, style: tmp.featuredSubblock });
+  const tmp = closure_5();
+  const obj = { value: useAnalyticsLocationsDefault(AnalyticsLocationDefault.COLLECTIBLES_SHOP_FEATURED_BLOCK).analyticsLocations, children: null };
+  const obj2 = { style: tmp.container, children: <Subblocks featuredBlock={arg0.featuredBlock} style={tmp.featuredSubblock} /> };
+  obj.children = <View style={tmp.container}><Subblocks featuredBlock={arg0.featuredBlock} style={tmp.featuredSubblock} /></View>;
+  return jsx(useAnalyticsLocations.AnalyticsLocationProvider, { value: useAnalyticsLocationsDefault(AnalyticsLocationDefault.COLLECTIBLES_SHOP_FEATURED_BLOCK).analyticsLocations, children: null });
 };

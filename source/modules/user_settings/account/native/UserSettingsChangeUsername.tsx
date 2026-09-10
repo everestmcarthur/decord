@@ -1,68 +1,64 @@
-// Module ID: 14708
-// Function ID: 14709
-// Name: UsernameStatusMessage
-// Dependencies: [5, 32, 19, 17, 1371, 1074, 21, 4560, 576, 4745, 14709, 4556, 1114, 1483, 504, 4218, 14710, 6990, 6984, 1272, 1484, 7863, 6606, 6998, 6938, 2]
+// Module ID: 14734
+// Function ID: 14735
+// Name: UserSettingsChangeUsername
+// Dependencies: [5, 32, 19, 17, 1371, 1074, 21, 4574, 576, 4759, 14735, 4570, 1114, 1483, 504, 4231, 14736, 7004, 6998, 1272, 1484, 7877, 6620, 7012, 6952, 2]
 // Exports: default
 
-// Module 14708 (UsernameStatusMessage)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "mergeGuildAvatar" /* 1371 */;
-import { UserSettingsSections } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14734 (UserSettingsChangeUsername)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
+require = fn;
 function UsernameStatusMessage(showHint) {
   showHint = showHint.showHint;
-  const match = showHint(4745).match(showHint.usernameStatus);
-  let obj = { type: showHint(14709).NameValidationState.ERROR, message: null };
-  const P = showHint(4745).P;
-  obj[1] = P.select();
-  const str = showHint(4745);
-  obj = { type: showHint(14709).NameValidationState.AVAILABLE, message: null };
-  const P2 = showHint(4745).P;
-  obj[1] = P2.select();
-  const withResult = match.with(obj, (children) => callback(showHint(4556).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }));
-  return match.with(obj, (children) => callback(showHint(4556).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children })).with(obj, (children) => callback(showHint(4556).Text, { variant: "text-xs/medium", color: "text-feedback-positive", children })).otherwise(() => {
+  const match = showHint(4759).match(showHint.usernameStatus);
+  let obj = { type: showHint(14735).NameValidationState.ERROR, message: null };
+  const P = showHint(4759).P;
+  obj.message = P.select();
+  const str = showHint(4759);
+  const obj2 = { type: showHint(14735).NameValidationState.AVAILABLE, message: null };
+  const P2 = showHint(4759).P;
+  obj2.message = P2.select();
+  const withResult = match.with(obj, (children) => closure_1_11(showHint(4570).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }));
+  return match.with(obj, (children) => closure_1_11(showHint(4570).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children })).with(obj2, (children) => closure_1_11(showHint(4570).Text, { variant: "text-xs/medium", color: "text-feedback-positive", children })).otherwise(() => {
     let tmp = null;
     if (showHint) {
       const obj = { variant: "text-xs/medium", color: "text-default", children: null };
-      const intl = showHint(closure_1_3[12]).intl;
-      obj[2] = intl.string(showHint(closure_1_3[12]).t.z7c4bP);
-      tmp = closure_1_11(showHint(closure_1_3[11]).Text, obj);
+      const intl = util.intl;
+      obj.children = intl.string(util.t.z7c4bP);
+      tmp = closure_2_11(Text_Text.Text, obj);
     }
     return tmp;
   });
 }
-({ View: error, ScrollView: closure_8 } = get_ActivityIndicator);
-({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { background: null, container: null, inputs: null, username: null, discriminator: null, divider: null, dividerInner: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { padding: 16 };
-createCacheKey[2] = { flex: 1, flexDirection: "row", marginTop: 8 };
-createCacheKey[3] = { flex: 2 };
-createCacheKey[4] = { flex: 1 };
-createCacheKey[5] = { width: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 8 };
-let obj1 = { width: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 8 };
-createCacheKey[6] = { flex: 1, marginVertical: 12, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_SELECTED };
-let closure_13 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { flex: 1, marginVertical: 12, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_SELECTED };
-const result = require("set").fileFinishedImporting("modules/user_settings/account/native/UserSettingsChangeUsername.tsx");
+get_ActivityIndicator = fn(17);
+({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
+const UserSettingsSections = fn(1074).UserSettingsSections;
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { padding: 16 }, inputs: { flex: 1, flexDirection: "row", marginTop: 8 }, username: { flex: 2 }, discriminator: { flex: 1 }, divider: null, dividerInner: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj2.divider = { width: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 8 };
+let obj4 = { width: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 8 };
+obj2.dividerInner = { flex: 1, marginVertical: 12, backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_SELECTED };
+let closure_13 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/account/native/UserSettingsChangeUsername.tsx");
 
 export default function UserSettingsChangeUsername() {
-  let tmp = callback();
-  let obj = navigation(first[13]);
-  navigation = obj.useNavigation();
-  obj1 = navigation(first[14]);
-  const items = [callback];
-  const stateFromStores = obj1.useStateFromStores(items, () => callback.getCurrentUser());
-  let obj3 = stateFromStores(first[15]);
-  let canEditDiscriminatorResult = obj3.canEditDiscriminator(stateFromStores);
+  let tmp = closure_13();
+  navigation = navigation(value[13]).useNavigation();
+  let obj = navigation(value[13]);
+  const items = [onSubmitEditing];
+  const stateFromStores = navigation(value[14]).useStateFromStores(items, () => callback.getCurrentUser());
+  let obj2 = navigation(value[14]);
+  let canEditDiscriminatorResult = stateFromStores(value[15]).canEditDiscriminator(stateFromStores);
   if (canEditDiscriminatorResult) {
     let hasUniqueUsernameResult;
     if (stateFromStores != null) {
@@ -71,7 +67,6 @@ export default function UserSettingsChangeUsername() {
     canEditDiscriminatorResult = !hasUniqueUsernameResult;
   }
   importAll = canEditDiscriminatorResult;
-  let obj4 = React;
   let str;
   if (stateFromStores != null) {
     str = stateFromStores.username;
@@ -79,8 +74,8 @@ export default function UserSettingsChangeUsername() {
   if (str == null) {
     str = "";
   }
-  const tmp10 = first1(React.useState(str), 2);
-  first = tmp10[0];
+  const tmp10 = first1(noop.useState(str), 2);
+  value = tmp10[0];
   closure_4 = tmp10[1];
   let str2;
   if (stateFromStores != null) {
@@ -89,10 +84,11 @@ export default function UserSettingsChangeUsername() {
   if (str2 == null) {
     str2 = "";
   }
-  let tmp9Result = tmp9(obj4.useState(str2), 2);
+  const tmp9Result = first1(noop.useState(str2), 2);
   first1 = tmp9Result[0];
-  tmp9Result = tmp9(obj4.useState(null), 2);
-  [obj6, closure_6] = tmp9Result;
+  const obj4 = stateFromStores(value[15]);
+  [obj6, noop] = first1(noop.useState(null), 2);
+  const tmp9Result2 = first1(noop.useState(null), 2);
   let hasUniqueUsernameResult1;
   if (stateFromStores != null) {
     hasUniqueUsernameResult1 = stateFromStores.hasUniqueUsername();
@@ -101,13 +97,13 @@ export default function UserSettingsChangeUsername() {
   if (stateFromStores != null) {
     username = stateFromStores.username;
   }
-  const usernameStatus = navigation(first[16]).useUsernameStatus(first, !!hasUniqueUsernameResult1, false, username);
-  const ref = obj4.useRef(null);
+  const usernameStatus = navigation(value[16]).useUsernameStatus(value, !!hasUniqueUsernameResult1, false, username);
+  const ref = obj5.useRef(null);
   let username1;
   if (stateFromStores != null) {
     username1 = stateFromStores.username;
   }
-  let tmp21 = first !== username1;
+  let tmp21 = value !== username1;
   if (!tmp21) {
     let discriminator;
     if (stateFromStores != null) {
@@ -118,55 +114,47 @@ export default function UserSettingsChangeUsername() {
   if (tmp21) {
     let tmp23 = !canEditDiscriminatorResult;
     if (canEditDiscriminatorResult) {
-      let obj7 = /^\d+$/;
-      let isMatch = obj7.test(first1);
+      let isMatch = /^\d+$/.test(first1);
       if (isMatch) {
         const _parseInt = parseInt;
         isMatch = parseInt(first1) > 0;
       }
       tmp23 = isMatch;
+      const obj8 = /^\d+$/;
     }
     tmp21 = tmp23;
   }
   isMatch = tmp21;
-  const items1 = [tmp21, canEditDiscriminatorResult, first1, navigation, stateFromStores, first];
-  callback = obj4.useCallback(() => {
+  const items1 = [tmp21, canEditDiscriminatorResult, first1, navigation, stateFromStores, value];
+  onSubmitEditing = obj5.useCallback(() => {
     if (isMatch) {
-      let obj = stateFromStores(first[17]);
-      obj.setSection(closure_1_10.ACCOUNT_CONFIRM_PASSWORD);
-      obj = { onSubmit: null, onSuccess: null };
-      navigation = callback((arg0) => {
-        closure_0 = arg0;
-        c3 = 0;
-        c4 = 0;
-        return (function*(arg0) {
-          closure_2 = tmp5;
-          let v6OrEarlierAPIError = tmp2;
-          if (null == closure_1_1) {
-            return null;
-          }
-          closure_1_6(null);
-          obj1 = { username: null, password: null, discriminator: null };
-          obj1[0] = c3;
-          obj1[1] = tmp45;
-          if (closure_1_2) {
-            const tmp34 = closure_1_5;
-          }
-          obj1[2] = tmp34;
-          const obj3 = closure_2_2(closure_2_3[18]);
-          const lib = yield obj3.saveAccountChanges(obj1, { close: false });
-          if (!lib.ok) {
-            v6OrEarlierAPIError = new lib(closure_2_3[19]).V6OrEarlierAPIError(lib);
-            const CommonActions = lib(closure_2_3[20]).CommonActions;
-            lib.dispatch(CommonActions.navigate(closure_2_10.ACCOUNT_CHANGE_USERNAME));
-            closure_1_6(v6OrEarlierAPIError);
-            c4 = 3;
-            return { value: null, done: true };
-          }
-          return lib;
-        })();
+      stateFromStores(first[17]).setSection(constants.ACCOUNT_CONFIRM_PASSWORD);
+      const obj2 = { onSubmit: null, onSuccess: null };
+      navigation = closure_4(function*(arg0) {
+        closure_2 = tmp5;
+        closure_1 = tmp2;
+        if (null == closure_1) {
+          return null;
+        }
+        closure_1_6(null);
+        const user = { username, password: tmp44, discriminator: null };
+        if (closure_2) {
+          const tmp34 = first1;
+        }
+        user.discriminator = tmp34;
+        closure_129_0 = yield closure_2_2(6998).saveAccountChanges(user, { close: false });
+        if (!closure_129_0.ok) {
+          const v6OrEarlierAPIError = new closure_0(1272).V6OrEarlierAPIError(closure_129_0);
+          closure_129_1 = v6OrEarlierAPIError;
+          const CommonActions = closure_0(1484).CommonActions;
+          closure_0.dispatch(CommonActions.navigate(constants.ACCOUNT_CHANGE_USERNAME));
+          closure_1_6(closure_129_1);
+          c4 = 3;
+          return { value: null, done: true };
+        }
+        return closure_129_0;
       });
-      obj[0] = function() {
+      obj2.onSubmit = function() {
         const self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -176,17 +164,18 @@ export default function UserSettingsChangeUsername() {
         }
         return applyArgumentsResult;
       };
-      obj[1] = function onSuccess() {
-        const CommonActions = lib(closure_1_3[20]).CommonActions;
-        lib.dispatch(CommonActions.navigate(closure_1_10.ACCOUNT));
+      obj2.onSuccess = function onSuccess() {
+        const CommonActions = navigation(first[20]).CommonActions;
+        closure_0.dispatch(CommonActions.navigate(constants.ACCOUNT));
       };
-      navigation.push(closure_1_10.ACCOUNT_CONFIRM_PASSWORD, obj);
+      navigation.push(constants.ACCOUNT_CONFIRM_PASSWORD, obj2);
+      const obj = stateFromStores(first[17]);
     }
   }, items1);
-  const items2 = [canEditDiscriminatorResult, callback];
-  const items3 = [tmp21, callback, navigation];
-  const callback1 = obj4.useCallback(() => {
-    if (closure_2) {
+  const items2 = [canEditDiscriminatorResult, onSubmitEditing];
+  const items3 = [tmp21, onSubmitEditing, navigation];
+  const callback1 = obj5.useCallback(() => {
+    if (canEditDiscriminatorResult) {
       const current = ref.current;
       if (current != null) {
         current.focus();
@@ -195,17 +184,17 @@ export default function UserSettingsChangeUsername() {
       callback();
     }
   }, items2);
-  const layoutEffect = obj4.useLayoutEffect(() => {
+  const layoutEffect = obj5.useLayoutEffect(() => {
     navigation.setOptions({
       headerRight(arg0) {
         let tmp = null;
-        if (closure_8) {
+        if (isMatch) {
           const obj = {};
           const merged = Object.assign(arg0);
-          obj.onPress = closure_9;
-          const intl = closure_1_0(closure_1_3[12]).intl;
-          obj.label = intl.string(closure_1_0(closure_1_3[12]).t["R3BPH+"]);
-          tmp = closure_1_11(closure_1_0(closure_1_3[21]).HeaderTextButton, obj);
+          obj.onPress = onPress;
+          const intl = navigation(first[12]).intl;
+          obj.label = intl.string(navigation(first[12]).t["R3BPH+"]);
+          tmp = closure_2_11(navigation(first[21]).HeaderTextButton, obj);
         }
         return tmp;
       }
@@ -215,102 +204,92 @@ export default function UserSettingsChangeUsername() {
     return null;
   } else {
     let fieldMessage;
-    if (obj5 != null) {
-      fieldMessage = obj5.getFieldMessage("username");
+    if (obj6 != null) {
+      fieldMessage = obj6.getFieldMessage("username");
     }
     if (fieldMessage == null) {
       let fieldMessage1;
-      if (obj5 != null) {
-        fieldMessage1 = obj5.getFieldMessage("discriminator");
+      if (obj6 != null) {
+        fieldMessage1 = obj6.getFieldMessage("discriminator");
       }
       fieldMessage = fieldMessage1;
     }
     let tmp31 = usernameStatus;
     if (null != fieldMessage) {
-      obj = { type: null, message: null };
-      obj[0] = tmp2(tmp3[10]).NameValidationState.ERROR;
-      obj[1] = fieldMessage;
-      tmp31 = obj;
+      const obj3 = { type: tmp2(tmp3[10]).NameValidationState.ERROR, message: fieldMessage };
+      tmp31 = obj3;
     }
     if (canEditDiscriminatorResult) {
-      obj = { ref: null, containerStyle: null, keyboardType: "numeric", value: null, onChange: null, onSubmitEditing: null, placeholder: "1337", returnKeyType: "done", autoCapitalize: "none", isClearable: true, leadingText: "#", maxLength: 4 };
-      obj[0] = ref;
-      obj[1] = tmp.discriminator;
-      obj[3] = first1;
-      obj[4] = tmp9Result[1];
-      obj[5] = callback;
-      obj1 = obj;
+      const obj7 = { ref, containerStyle: tmp.discriminator, keyboardType: "numeric", value: first1, onChange: tmp9Result[1], onSubmitEditing, placeholder: "1337", returnKeyType: "done", autoCapitalize: "none", isClearable: true, leadingText: "#", maxLength: 4 };
+      let obj9 = obj7;
     } else {
-      obj1 = { ref: null, containerStyle: null, value: null, isClearable: false, isDisabled: true };
-      obj1[0] = ref;
-      obj1[1] = tmp.discriminator;
-      obj1[2] = `#${tmp13}`;
+      obj9 = { ref, containerStyle: tmp.discriminator, value: `#${tmp13}`, isClearable: false, isDisabled: true };
     }
-    const obj2 = { style: null, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
-    obj2[0] = tmp.background;
-    let tmp32Result = tmp32(tmp2(tmp3[22]).TextInput, obj1);
+    const obj10 = { style: tmp.background, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
     const items4 = [closure_11(tmp5(tmp3[23]), {}), ];
-    obj3 = { style: null, children: null };
-    obj3[0] = tmp.container;
-    obj4 = { children: null };
+    const obj11 = { style: tmp.container, children: null };
+    const obj12 = { children: null };
+    const tmp32Result = closure_11(tmp2(tmp3[22]).TextInput, obj9);
+    const tmp35 = isMatch;
     let intl = tmp2(tmp3[12]).intl;
-    obj4[0] = intl.string(tmp2(tmp3[12]).t.IEpCBQ);
-    const items5 = [closure_11(tmp5(tmp3[24]), obj4), , ];
-    obj5 = { style: null, children: null };
-    obj5[0] = tmp.inputs;
-    obj6 = { containerStyle: null, textContentType: "username", value: null, enableAndroidSanitizedInputWorkaround: null, onChange: null, onSubmitEditing: null, placeholder: null, returnKeyType: null, autoCapitalize: "none", autoFocus: true };
-    obj6[0] = tmp.username;
-    obj6[2] = first;
-    obj6[3] = stateFromStores.hasUniqueUsername();
-    obj6[4] = function onChange(str) {
-      let hasUniqueUsernameResult;
-      if (stateFromStores != null) {
-        hasUniqueUsernameResult = stateFromStores.hasUniqueUsername();
-      }
-      let formatted = str;
-      if (hasUniqueUsernameResult) {
-        formatted = str.toLowerCase();
-      }
-      callback(formatted);
-      callback2(null);
+    obj12.children = intl.string(tmp2(tmp3[12]).t.IEpCBQ);
+    const items5 = [closure_11(tmp5(tmp3[24]), obj12), , ];
+    const obj13 = { style: tmp.inputs, children: null };
+    const obj14 = {
+      containerStyle: tmp.username,
+      textContentType: "username",
+      value,
+      enableAndroidSanitizedInputWorkaround: stateFromStores.hasUniqueUsername(),
+      onChange(str) {
+          let hasUniqueUsernameResult;
+          if (stateFromStores != null) {
+            hasUniqueUsernameResult = stateFromStores.hasUniqueUsername();
+          }
+          let formatted = str;
+          if (hasUniqueUsernameResult) {
+            formatted = str.toLowerCase();
+          }
+          closure_4(formatted);
+          noop(null);
+        },
+      onSubmitEditing: callback1,
+      placeholder: null,
+      returnKeyType: null,
+      autoCapitalize: "none",
+      autoFocus: true
     };
-    obj6[5] = callback1;
     const intl2 = tmp2(tmp3[12]).intl;
-    obj6[6] = intl2.string(tmp2(tmp3[12]).t.IEpCBQ);
+    obj14.placeholder = intl2.string(tmp2(tmp3[12]).t.IEpCBQ);
     let str6 = "done";
     if (canEditDiscriminatorResult) {
       str6 = "next";
     }
-    obj6[7] = str6;
-    const items6 = [closure_11(tmp2(tmp3[22]).TextInput, obj6), , ];
+    obj14.returnKeyType = str6;
+    const items6 = [closure_11(tmp2(tmp3[22]).TextInput, obj14), , ];
     const hasUniqueUsernameResult2 = stateFromStores.hasUniqueUsername();
-    tmp32Result = !hasUniqueUsernameResult2;
+    let tmp32Result2 = !hasUniqueUsernameResult2;
     if (!hasUniqueUsernameResult2) {
-      obj7 = { style: null, children: null };
-      obj7[0] = tmp.divider;
-      const obj8 = { style: null };
-      obj8[0] = tmp.dividerInner;
-      obj7[1] = tmp32(tmp36, obj8);
-      tmp32Result = tmp32(tmp36, obj7);
+      const obj15 = { style: tmp.divider, children: null };
+      const obj16 = { style: tmp.dividerInner };
+      obj15.children = tmp32(tmp36, obj16);
+      tmp32Result2 = tmp32(tmp36, obj15);
     }
-    items6[1] = tmp32Result;
+    items6[1] = tmp32Result2;
     const hasUniqueUsernameResult3 = stateFromStores.hasUniqueUsername();
     let tmp41 = !hasUniqueUsernameResult3;
     if (!hasUniqueUsernameResult3) {
       tmp41 = tmp32Result;
     }
     items6[2] = tmp41;
-    obj5[1] = items6;
-    items5[1] = closure_12(ref, obj5);
-    const obj9 = { usernameStatus: null, showHint: null };
-    obj9[0] = tmp31;
-    obj9[1] = stateFromStores.hasUniqueUsername();
-    items5[2] = closure_11(UsernameStatusMessage, obj9);
-    obj3[1] = items5;
-    items4[1] = closure_12(ref, obj3);
-    obj2[3] = items4;
-    return closure_12(isMatch, obj2);
+    obj13.children = items6;
+    items5[1] = closure_12(ref, obj13);
+    const obj17 = { usernameStatus: tmp31, showHint: stateFromStores.hasUniqueUsername() };
+    items5[2] = closure_11(UsernameStatusMessage, obj17);
+    obj11.children = items5;
+    items4[1] = closure_12(ref, obj11);
+    obj10.children = items4;
+    return closure_12(tmp35, obj10);
   }
   const tmp16 = !hasUniqueUsernameResult1;
-  const tmp2Result = navigation(first[16]);
+  const tmp2Result = navigation(value[16]);
 };

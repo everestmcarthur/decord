@@ -1,27 +1,28 @@
-// Module ID: 8218
-// Function ID: 8219
+// Module ID: 8244
+// Function ID: 8245
 // Name: useNameplate
 // Dependencies: [19, 2021, 504, 1886, 2]
 // Exports: useNameplate
 
-// Module 8218 (useNameplate)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "trackCommunicationDisabled" /* 2021 */;
+// Module 8244 (useNameplate)
+import utils from "utils" /* 1886 */;
+import noop from "module_19" /* 19 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/nameplates/hooks/useNameplate.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/nameplates/hooks/useNameplate.tsx");
 
 export const useNameplate = function useNameplate(user) {
   user = user.user;
   const guildId = user.guildId;
-  let stateFromStores;
-  const items = [closure_3];
-  stateFromStores = user(guildId[2]).useStateFromStores(items, () => {
+  const items = [GuildMemberStore];
+  const stateFromStores = user(guildId[2]).useStateFromStores(items, () => {
     let member = null;
     if (null != guildId) {
       member = null;
       if (null != user) {
-        member = closure_1_3.getMember(tmp, tmp3.id);
+        member = GuildMemberStore.getMember(tmp, tmp3.id);
       }
     }
     return member;
@@ -29,14 +30,14 @@ export const useNameplate = function useNameplate(user) {
   const items1 = [stateFromStores, user];
   return stateFromStores.useMemo(() => {
     if (null != user) {
-      let nameplate;
+      let nameplate1;
       if (stateFromStores != null) {
         const collectibles = stateFromStores.collectibles;
         if (collectibles != null) {
-          nameplate = collectibles.nameplate;
+          nameplate1 = collectibles.nameplate;
         }
       }
-      nameplate = user(guildId[3]).getNameplateData(nameplate);
+      let nameplate = utils.getNameplateData(nameplate1);
       if (nameplate == null) {
         nameplate = tmp.nameplate;
       }

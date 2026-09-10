@@ -1,33 +1,35 @@
-// Module ID: 10631
-// Function ID: 10632
+// Module ID: 10658
+// Function ID: 10659
 // Name: DismissibleActionSheet
-// Dependencies: [19, 4992, 4527, 2]
+// Dependencies: [19, 5006, 4541, 2]
 // Exports: DismissibleActionSheet
 
-// Module 10631 (DismissibleActionSheet)
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4992 */;
-import closure_2 from "noop" /* 19 */;
+// Module 10658 (DismissibleActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import useMountEffectDefault from "useMountEffect" /* 5006 */;
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/dismissible_content/native/DismissibleActionSheet.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/dismissible_content/native/DismissibleActionSheet.tsx");
 
 export const DismissibleActionSheet = function DismissibleActionSheet(arg0) {
   importDefault = arg0;
-  useMountLayoutEffectDefault(() => {
-    let obj = lib(closure_1_1[2]);
-    obj = {};
-    const merged = Object.assign(lib);
-    obj.markAsDismissed = function markAsDismissed(arg0) {
-      closure_1_0(closure_1_1[2]).hideActionSheet(closure_0.actionSheetKey);
-      closure_0.markAsDismissed(arg0);
+  useMountEffectDefault(() => {
+    const obj2 = {};
+    const obj = ActionSheetActionCreatorsDefault;
+    const merged = Object.assign(closure_0);
+    obj2.markAsDismissed = function markAsDismissed(arg0) {
+      closure_0(4541).hideActionSheet(closure_1_0.actionSheetKey);
+      closure_1_0.markAsDismissed(arg0);
     };
-    obj.openLazy(lib.importer(), lib.actionSheetKey, obj);
+    obj.openLazy(closure_0.importer(), closure_0.actionSheetKey, obj2);
   });
   const items = [, ];
   ({ actionSheetKey: arr[0], hideSheetOnUnmount: arr[1] } = arg0);
-  const effect = React.useEffect(() => () => {
+  const effect = noop.useEffect(() => () => {
     if (tmp2) {
-      closure_1_0(closure_1_1[2]).hideActionSheet(tmp.actionSheetKey);
-      const obj = closure_1_0(closure_1_1[2]);
+      closure_0(4541).hideActionSheet(tmp.actionSheetKey);
+      const obj = closure_0(4541);
     }
   }, items);
   return null;

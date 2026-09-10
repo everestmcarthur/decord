@@ -1,19 +1,19 @@
-// Module ID: 14463
-// Function ID: 14464
-// Name: isFramePooled
+// Module ID: 14488
+// Function ID: 14489
+// Name: FrameVisibilityStore
 // Dependencies: [2]
 
-// Module 14463 (isFramePooled)
-import set from "set" /* 2 */;
+// Module 14488 (FrameVisibilityStore)
+import size from "module_2" /* 2 */;
 
 class FrameVisibilityStore {
   constructor() {
-    obj = Object.create(new.target.prototype);
+    merged = Object.assign({ visibility: null, listeners: null });
     map = new Map();
-    obj[0] = map;
+    merged[0] = map;
     set = new Set();
-    obj[1] = set;
-    return obj;
+    merged[1] = set;
+    return merged;
   }
 }
 const prototype = FrameVisibilityStore.prototype;
@@ -57,10 +57,10 @@ prototype["emit"] = function emit() {
     continue;
   }
 };
-let obj = Object.create(FrameVisibilityStore.prototype);
-obj[0] = new Map();
-let set = new Set();
-obj[1] = set;
-let result = set.fileFinishedImporting("modules/frames/FrameVisibilityStore.tsx");
+let merged = Object.assign({ visibility: null, listeners: null });
+merged[0] = new Map();
+let map = new Map();
+merged[1] = new Set();
+let result = size.fileFinishedImporting("modules/frames/FrameVisibilityStore.tsx");
 
-export default obj;
+export default merged;

@@ -1,37 +1,35 @@
-// Module ID: 13734
-// Function ID: 13735
-// Name: PremiumRewardsOrbsTreatment
+// Module ID: 13757
+// Function ID: 13758
+// Name: PremiumRewardsOrbsExperiment
 // Dependencies: [1434, 2]
 // Exports: getPremiumRewardsOrbsExperiment, usePremiumRewardsOrbsExperiment
 
-// Module 13734 (PremiumRewardsOrbsTreatment)
-import getUnitIdDefault from "getUnitId" /* 1434 */;
+// Module 13757 (PremiumRewardsOrbsExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
 
-let obj = { CONTROL: "control", TREATMENT_A: "treatment_a", TREATMENT_B: "treatment_b", TREATMENT_C: "treatment_c", TREATMENT_D: "treatment_d" };
-let closure_1 = { [obj.CONTROL]: 0, [obj.TREATMENT_A]: 250, [obj.TREATMENT_B]: 500, [obj.TREATMENT_C]: 250, [obj.TREATMENT_D]: 500 };
-obj = { treatment: obj.CONTROL };
-obj = { treatment: obj.CONTROL };
-const tmp2 = getUnitIdDefault({ name: "2025-12-nitro-s-rewards", kind: "user", defaultConfig: obj, variations: { 0: obj, 1: { treatment: obj.TREATMENT_A }, 2: { treatment: obj.TREATMENT_B }, 3: { treatment: obj.TREATMENT_C }, 4: { treatment: obj.TREATMENT_D } } });
+const PremiumRewardsOrbsTreatment = { CONTROL: "control", TREATMENT_A: "treatment_a", TREATMENT_B: "treatment_b", TREATMENT_C: "treatment_c", TREATMENT_D: "treatment_d" };
+const dependencyMap = { [PremiumRewardsOrbsTreatment.CONTROL]: 0, [PremiumRewardsOrbsTreatment.TREATMENT_A]: 250, [PremiumRewardsOrbsTreatment.TREATMENT_B]: 500, [PremiumRewardsOrbsTreatment.TREATMENT_C]: 250, [PremiumRewardsOrbsTreatment.TREATMENT_D]: 500 };
+const obj2 = { name: "2025-12-nitro-s-rewards", kind: "user", defaultConfig: { treatment: PremiumRewardsOrbsTreatment.CONTROL }, variations: { 0: { treatment: PremiumRewardsOrbsTreatment.CONTROL }, 1: { treatment: PremiumRewardsOrbsTreatment.TREATMENT_A }, 2: { treatment: PremiumRewardsOrbsTreatment.TREATMENT_B }, 3: { treatment: PremiumRewardsOrbsTreatment.TREATMENT_C }, 4: { treatment: PremiumRewardsOrbsTreatment.TREATMENT_D } } };
+const tmp2 = apex_ApexExperimentDefault(obj2);
 let closure_2 = tmp2;
-const result = require("set").fileFinishedImporting("modules/premium/tenure_reward/experiments/PremiumRewardsOrbsExperiment.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/tenure_reward/experiments/PremiumRewardsOrbsExperiment.tsx");
 
 export default tmp2;
-export const PremiumRewardsOrbsTreatment = obj;
-export const usePremiumRewardsOrbsExperiment = function usePremiumRewardsOrbsExperiment(location) {
-  obj = { location };
+export { PremiumRewardsOrbsTreatment };
+export const usePremiumRewardsOrbsExperiment = function usePremiumRewardsOrbsExperiment(ProgramRewardsUtils) {
+  const obj = { location: ProgramRewardsUtils };
   let CONTROL = closure_2.useConfig(obj).treatment;
   if (CONTROL == null) {
     CONTROL = obj.CONTROL;
   }
-  obj = { treatment: CONTROL, isInTreatment: CONTROL !== obj.CONTROL, orbsRewardAmount: dependencyMap[CONTROL] };
-  return obj;
+  return { treatment: CONTROL, isInTreatment: CONTROL !== obj.CONTROL, orbsRewardAmount: dependencyMap[CONTROL] };
 };
-export const getPremiumRewardsOrbsExperiment = function getPremiumRewardsOrbsExperiment(location) {
-  obj = { location };
+export const getPremiumRewardsOrbsExperiment = function getPremiumRewardsOrbsExperiment(ProgramRewardsUtils) {
+  const obj = { location: ProgramRewardsUtils };
   let CONTROL = closure_2.getConfig(obj).treatment;
   if (CONTROL == null) {
     CONTROL = obj.CONTROL;
   }
-  obj = { treatment: CONTROL, isInTreatment: CONTROL !== obj.CONTROL, orbsRewardAmount: dependencyMap[CONTROL] };
-  return obj;
+  return { treatment: CONTROL, isInTreatment: CONTROL !== obj.CONTROL, orbsRewardAmount: dependencyMap[CONTROL] };
 };

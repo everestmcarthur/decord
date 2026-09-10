@@ -1,89 +1,90 @@
-// Module ID: 16369
-// Function ID: 16370
+// Module ID: 16400
+// Function ID: 16401
 // Name: useYouBarAccessibilityLabel
-// Dependencies: [4582, 1957, 4199, 4600, 4209, 5279, 4579, 1074, 4404, 16370, 16371, 1935, 10885, 8165, 504, 10883, 10884, 10891, 1114, 10893, 2]
+// Dependencies: [4596, 1957, 4212, 4614, 4222, 5293, 4593, 1074, 4418, 16401, 16402, 1935, 10912, 8191, 504, 10910, 10911, 10918, 1114, 10920, 2]
 // Exports: useYouBarAccessibilityLabel
 
-// Module 16369 (useYouBarAccessibilityLabel)
-import closure_3 from "reset" /* 4582 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_6 from "sortActivity" /* 4600 */;
-import closure_7 from "markAllUserIdListsStale" /* 4209 */;
-import closure_8 from "filterPlayingActivities" /* 5279 */;
-import closure_9 from "updateVoiceState" /* 4579 */;
-import ME from "ME" /* 1074 */;
+// Module 16400 (useYouBarAccessibilityLabel)
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10910 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 10911 */;
+import isGameActivityDefault from "isGameActivity" /* 10918 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 10920 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4596 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
+import PresenceStore from "PresenceStore" /* 4614 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5293 */;
+import VoiceStateStore from "VoiceStateStore" /* 4593 */;
 
-const require = arg1;
-({ ActivityTypes: c10, StatusTypes: unpackModuleId } = ME);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarAccessibilityLabel.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const Constants = fn(1074);
+({ ActivityTypes: c10, StatusTypes: closure_11 } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarAccessibilityLabel.tsx");
 
 export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(stateFromStores) {
-  const _require = id(4404).useName(stateFromStores);
+  _require = id(4418).useName(stateFromStores);
   id = undefined;
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  let obj = id(4404);
-  dependencyMap = _require(16370).useYouBarActivityStatusEnabled("YouBar");
-  const obj2 = _require(16370);
-  const isYouBarGuildTagEnabled = _require(16371).useIsYouBarGuildTagEnabled("YouBar");
-  const CustomStatusSetting = _require(1935).CustomStatusSetting;
+  let obj = id(4418);
+  dependencyMap = require("YouBarActivityStatusExperiment").useYouBarActivityStatusEnabled("YouBar");
+  const obj2 = require("YouBarActivityStatusExperiment");
+  const isYouBarGuildTagEnabled = require("YouBarGuildTagExperiment").useIsYouBarGuildTagEnabled("YouBar");
+  const CustomStatusSetting = require("UserSettings").CustomStatusSetting;
   const setting = CustomStatusSetting.useSetting();
   let text;
   if (setting != null) {
     text = setting.text;
   }
-  let tmp3Result = tmp3(10885);
+  let obj3 = require("YouBarGuildTagExperiment");
   let tmp7 = null;
   if ("" !== text) {
     tmp7 = text;
   }
-  closure_3 = tmp3Result.useGameMentionsAsPlainText(tmp7);
+  closure_3 = require("useGameMentionsAsPlainText").useGameMentionsAsPlainText(tmp7);
   let tmp8;
   if (isYouBarGuildTagEnabled) {
-    tmp3Result = tmp3(8165);
     let primaryGuild;
     if (stateFromStores != null) {
       primaryGuild = stateFromStores.primaryGuild;
     }
-    const userPrimaryGuild = tmp3Result.getUserPrimaryGuild(primaryGuild);
+    const userPrimaryGuild = tmp3(8191).getUserPrimaryGuild(primaryGuild);
     let tag;
     if (userPrimaryGuild != null) {
       tag = userPrimaryGuild.tag;
     }
     tmp8 = tag;
+    const tmp3Result3 = tmp3(8191);
   }
   tag = tmp8;
-  const obj3 = _require(16371);
-  let items = [closure_8, closure_3, closure_7, tag, closure_5, closure_9, closure_6];
-  return _require(504).useStateFromStores(items, () => {
-    if (null != callback) {
-      const status = closure_1_8.getStatus();
-      let obj = callback(10883);
-      const items = [closure_3, closure_1_7];
-      const discoverableApplicationStream = obj.getDiscoverableApplicationStream(id, items);
-      obj1 = callback(10884);
-      obj = { userId: null };
-      obj[0] = id;
-      obj = { ChannelStore: null, PermissionStore: null, VoiceStateStore: null };
-      obj[0] = tag;
-      obj[1] = closure_1_5;
-      obj[2] = closure_1_9;
-      const voiceChannel = obj1.getVisibleUserVoiceActivity(obj, obj).voiceChannel;
+  const tmp3Result = require("useGameMentionsAsPlainText");
+  let items = [SelfPresenceStore, closure_3, RelationshipStore, tag, PermissionStore, VoiceStateStore, PresenceStore];
+  return require("initialize").useStateFromStores(items, () => {
+    if (null != closure_0) {
+      const status = SelfPresenceStore.getStatus();
+      const items = [ApplicationStreamingStore, RelationshipStore];
+      const discoverableApplicationStream = useDiscoverableApplicationStream.getDiscoverableApplicationStream(id, items);
+      const obj3 = { userId: id };
+      const obj4 = { ChannelStore, PermissionStore, VoiceStateStore };
+      const voiceChannel = useUserVoiceActivity.getVisibleUserVoiceActivity(obj3, obj4).voiceChannel;
       let text = null;
-      if (dependencyMap) {
+      if (closure_2) {
         text = null;
         if (null != tmp6) {
           text = null;
-          if (status !== closure_1_11.OFFLINE) {
+          if (status !== constants.OFFLINE) {
             text = null;
-            if (status !== closure_1_11.INVISIBLE) {
-              const activities = closure_1_6.getActivities(tmp6);
+            if (status !== constants.INVISIBLE) {
+              const activities = PresenceStore.getActivities(tmp6);
               if (null != discoverableApplicationStream) {
                 let name;
                 if (activities != null) {
-                  const found = activities.find(id(10891));
+                  const found = activities.find(isGameActivityDefault);
                   if (found != null) {
                     name = found.name;
                   }
@@ -93,9 +94,8 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
                   let stringResult = intl3.string(tmp4(1114).t.eXan7B);
                 }
                 const intl4 = tmp4(1114).intl;
-                obj1 = { name: null };
-                obj1[0] = name;
-                stringResult = intl4.formatToPlainString(tmp4(1114).t["0wJXSh"], obj1);
+                const obj5 = { name };
+                stringResult = intl4.formatToPlainString(tmp4(1114).t["0wJXSh"], obj5);
               } else {
                 let found1;
                 if (activities != null) {
@@ -105,7 +105,7 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
                   });
                 }
                 if (null != found1) {
-                  text = id(10893)(found1, true).text;
+                  text = getActivityStatusTextDefault(found1, true).text;
                 } else {
                   text = null;
                   if (null != voiceChannel) {
@@ -136,11 +136,11 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
         text = closure_3;
       }
       if (text == null) {
-        text = tmp4(4404).humanizeStatus(status);
-        const tmp4Result = tmp4(4404);
+        text = tmp4(4418).humanizeStatus(status);
+        const tmp4Result = tmp4(4418);
       }
       const items1 = [tmp, tag, text];
-      const found2 = items1.filter((arg0) => null != arg0);
+      const found2 = items1.filter((item) => null != item);
       return found2.join(", ");
     }
   });

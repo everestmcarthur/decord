@@ -1,212 +1,198 @@
-// Module ID: 13066
-// Function ID: 13067
-// Name: GameFriendApplicationRow
-// Dependencies: [5, 32, 19, 17, 4209, 1074, 21, 4560, 576, 12624, 7200, 5680, 1178, 4556, 13067, 7168, 4712, 9047, 4258, 4527, 7198, 7149, 1114, 2]
+// Module ID: 13092
+// Function ID: 13093
+// Name: UserProfileGameFriendActionSheet
+// Dependencies: [5, 32, 19, 17, 4222, 1074, 21, 4574, 576, 12650, 7213, 5694, 1178, 4570, 13093, 7182, 4726, 9074, 4271, 4541, 7211, 7163, 1114, 2]
 // Exports: default
 
-// Module 13066 (GameFriendApplicationRow)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "markAllUserIdListsStale" /* 4209 */;
-import { RelationshipTypes } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13092 (UserProfileGameFriendActionSheet)
+import nativeDefault from "native" /* 576 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12650 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
 
-const require = arg1;
+require = fn;
 function GameFriendApplicationRow(application) {
   application = application.application;
   const userId = application.userId;
   const userDisplayName = application.userDisplayName;
-  const tmp = callback4();
+  const tmp = closure_12();
   const items = [, , , ];
   ({ id: arr[0], name: arr[1] } = application);
   items[2] = userDisplayName;
   items[3] = userId;
-  const callback = React.useCallback(() => {
-    let obj = application(userDisplayName[9]);
-    obj = { userDisplayName, userId, applicationId: application.id, gameName: application.name };
-    const result = obj.confirmRemoveGameFriend(obj);
+  const callback = noop.useCallback(() => {
+    const result = UserProfileAlertUtils.confirmRemoveGameFriend({ userDisplayName, userId, applicationId: application.id, gameName: application.name });
   }, items);
-  let obj = { trailing: callback3(application(userDisplayName[11]).XSmallIcon, { size: "md", color: "redesign-button-tertiary-text" }), label: null, onPress: null };
-  obj = { style: tmp.applicationNameWrapper, children: null };
-  obj = { style: tmp.gameIcon, resizeMode: "contain", source: null, disableColor: true };
+  const obj = { trailing: closure_10(application(userDisplayName[11]).XSmallIcon, { size: "md", color: "redesign-button-tertiary-text" }), label: null, onPress: null };
+  const obj2 = { style: tmp.applicationNameWrapper, children: null };
+  const obj3 = { style: tmp.gameIcon, resizeMode: "contain", source: null, disableColor: true };
   let str = application.getIconURL(32);
   if (str == null) {
     str = "";
   }
-  obj[2] = { uri: str };
-  const items1 = [callback3(application(userDisplayName[12]).Icon, obj, application.id), callback3(application(userDisplayName[13]).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: application.name })];
-  obj[1] = items1;
-  obj[1] = closure_11(closure_7, obj);
-  obj[2] = callback;
-  return callback3(application(userDisplayName[10]).ActionSheetRow, obj, application.id);
+  obj3.source = { uri: str };
+  const items1 = [closure_10(application(userDisplayName[12]).Icon, obj3, application.id), closure_10(application(userDisplayName[13]).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: application.name })];
+  obj2.children = items1;
+  obj.label = closure_11(closure_7, obj2);
+  obj.onPress = callback;
+  return closure_10(application(userDisplayName[10]).ActionSheetRow, obj, application.id);
 }
-({ ActivityIndicator: closure_6, View: error } = get_ActivityIndicator);
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { applicationNameWrapper: { flexDirection: "row", justifyContent: "flex-start", alignItems: "center", gap: 12 }, gameIcon: null };
-createCacheKey = { width: 32, height: 32, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[1] = createCacheKey;
-let closure_12 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileGameFriendActionSheet.tsx");
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
+const RelationshipTypes = fn(1074).RelationshipTypes;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { applicationNameWrapper: { flexDirection: "row", justifyContent: "flex-start", alignItems: "center", gap: 12 }, gameIcon: null };
+let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.sm };
+obj2.gameIcon = size;
+let closure_12 = createStyles.createStyles(obj2);
+size = fn(2);
+let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileGameFriendActionSheet.tsx");
 
 export default function UserProfileGameFriendActionSheet(user) {
   user = user.user;
-  let gameFriendsForUser;
   let memo;
-  let callback;
-  let callback2;
-  let React;
+  _slicedToArray = undefined;
+  noop = undefined;
   ({ guildId, channelId } = user);
-  let obj = user(memo[14]);
-  gameFriendsForUser = obj.useGameFriendsForUser(user.id);
+  const gameFriendsForUser = user(memo[14]).useGameFriendsForUser(user.id);
   const items = [gameFriendsForUser];
-  memo = React.useMemo(() => gameFriendsForUser.map((applicationId) => applicationId.applicationId), items);
-  obj1 = gameFriendsForUser(memo[16]);
-  callback = obj1.useName(guildId, channelId, user);
-  let first = callback2(React.useState(() => {
-    if (!closure_1_8.isFriend(user.id)) {
+  memo = noop.useMemo(() => gameFriendsForUser.map((applicationId) => applicationId.applicationId), items);
+  let obj = user(memo[14]);
+  const arr2 = gameFriendsForUser(memo[15])(memo);
+  asyncGeneratorStep = gameFriendsForUser(memo[16]).useName(guildId, channelId, user);
+  let first = _slicedToArray(noop.useState(() => {
+    if (!RelationshipStore.isFriend(user.id)) {
       if (!obj.isBlockedOrIgnored(tmp.id)) {
         const relationshipType = obj.getRelationshipType(tmp.id);
-        return relationshipType !== closure_1_9.PENDING_OUTGOING && relationshipType !== closure_1_9.PENDING_INCOMING;
+        return relationshipType !== RelationshipTypes.PENDING_OUTGOING && relationshipType !== RelationshipTypes.PENDING_INCOMING;
       }
     }
     return false;
   }), 1)[0];
-  const arr2 = gameFriendsForUser(memo[15])(memo);
-  [tmp7, c4] = callback2(React.useState(false), 2);
-  const tmp8 = callback2(React.useState(false), 2);
-  React = tmp8[1];
+  let obj2 = gameFriendsForUser(memo[16]);
+  [tmp7, c4] = noop.useState(false);
+  const tmp8 = _slicedToArray(noop.useState(false), 2);
+  noop = tmp8[1];
   const items1 = [user.id];
   const items2 = [memo];
-  callback = React.useCallback(callback(function*() {
-    if (v02 === 2) {
-      v02 = 3;
-      HermesBuiltin.throwTypeError();
+  const callback = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
+    if (v32 === 2) {
+      v32 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp7 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        v02 = 2;
-        if (0 === v0) {
+        v32 = 2;
+        if (0 === v3) {
           if (arg0 === 1) {
-            v02 = 3;
-            throw arg1;
+            v32 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            v02 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            v32 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            closure_0 = tmp4;
-            v02(true);
-            closure_1_5(true);
+            v32(true);
+            closure_5(true);
             c3 = 2;
-            let obj2 = v0(closure_1_2[17]);
-            obj1 = { userId: null, context: null };
-            obj1[0] = closure_1_0.id;
-            obj1[1] = { location: "User Profile Action Sheet" };
-            v0 = 3;
-            v02 = 1;
-            obj2 = { value: null, done: false };
-            obj2[0] = obj2.addRelationship(obj1);
-            return obj2;
+            const obj5 = { userId: user.id, context: { location: "User Profile Action Sheet" } };
+            v3 = 3;
+            v32 = 1;
+            const obj6 = { value: v3(tmp34[17]).addRelationship(obj5), done: false };
+            return obj6;
           }
         } else if (1 === tmp8) {
           c3 = 0;
-          callback(false);
-          throw closure_2;
+          closure_128_5(false);
+          throw tmp34;
         } else {
           if (2 === tmp8) {
             c3 = 1;
-            v02(false);
+            closure_128_4(false);
             c3 = 0;
-            closure_1_5(false);
-            v02 = 3;
+            closure_128_5(false);
+            v32 = 3;
           } else if (arg0 === 1) {
-            v02 = 3;
-            throw arg1;
+            v32 = 3;
+            throw value;
           } else if (arg0 !== 2) {
-            obj = closure_1_0(closure_1_2[18]);
-            const result = obj.presentAddedFriendToast();
+            const result = tmp4(tmp34[18]).presentAddedFriendToast();
             c3 = 1;
+            const obj = tmp4(tmp34[18]);
           }
           c3 = 0;
-          closure_1_5(false);
-          v02 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
-          return obj3;
+          closure_128_5(false);
+          v32 = 3;
+          const obj7 = { value, done: true };
+          return obj7;
         }
       } catch (tmp34) {
-        closure_2 = tmp34;
         if (tmp5 === c3) {
-          v02 = tmp3;
+          v32 = tmp3;
           throw tmp34;
         } else if (tmp2 === tmp36) {
-          v0 = tmp2;
+          v3 = tmp2;
         } else {
-          v0 = tmp;
+          v3 = tmp;
         }
       }
     }
   }), items1);
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (0 === memo.length) {
-      gameFriendsForUser(memo[19]).hideActionSheet();
-      const obj = gameFriendsForUser(memo[19]);
+      ActionSheetActionCreatorsDefault.hideActionSheet();
     }
   }, items2);
-  obj = { header: null, children: null };
-  obj = { title: null };
+  const obj3 = { header: null, children: null };
+  let obj4 = { title: null };
   const intl = user(memo[22]).intl;
-  obj[0] = intl.string(user(memo[22]).t["Uv/eTx"]);
-  obj[0] = callback3(user(memo[21]).BottomSheetTitleHeader, obj);
-  obj1 = { title: null, hasIcons: false, children: null };
+  obj4.title = intl.string(user(memo[22]).t["Uv/eTx"]);
+  obj3.header = closure_10(user(memo[21]).BottomSheetTitleHeader, obj4);
+  let obj5 = { title: null, hasIcons: false, children: null };
   const intl2 = user(memo[22]).intl;
-  obj1[0] = intl2.string(user(memo[22]).t.YpCiMt);
-  obj1[2] = arr2.map((id) => {
-    let tmp = null != id;
+  obj5.title = intl2.string(user(memo[22]).t.YpCiMt);
+  obj5.children = arr2.map((application) => {
+    let tmp = null != application;
     if (tmp) {
-      const obj = { application: null, userDisplayName: null, userId: null };
-      obj[0] = id;
-      obj[1] = closure_3;
-      obj[2] = user.id;
-      tmp = closure_1_10(closure_1_13, obj, id.id);
+      const obj = { application, userDisplayName, userId: user.id };
+      tmp = closure_2_10(GameFriendApplicationRow, obj, application.id);
     }
     return tmp;
   });
-  const items3 = [callback3(user(memo[10]).ActionSheetRow.Group, obj1), ];
+  const items3 = [closure_10(user(memo[10]).ActionSheetRow.Group, obj5), ];
   if (first) {
-    let obj2 = { title: null, hasIcons: false, children: null };
+    let obj6 = { title: null, hasIcons: false, children: null };
     const intl3 = tmp(tmp2[22]).intl;
-    obj2[0] = intl3.string(tmp(tmp2[22]).t.GbsGCp);
-    let obj3 = { label: null, subLabel: null, onPress: null, disabled: null, trailing: null };
+    obj6.title = intl3.string(tmp(tmp2[22]).t.GbsGCp);
+    let obj7 = { label: null, subLabel: null, onPress: null, disabled: null, trailing: null };
     const intl4 = tmp(tmp2[22]).intl;
-    obj3[0] = intl4.string(tmp(tmp2[22]).t.LAcY7m);
+    obj7.label = intl4.string(tmp(tmp2[22]).t.LAcY7m);
     const intl5 = tmp(tmp2[22]).intl;
-    obj3[1] = intl5.string(tmp(tmp2[22]).t.YTvOUx);
-    obj3[2] = callback;
-    obj3[3] = tmp7;
+    obj7.subLabel = intl5.string(tmp(tmp2[22]).t.YTvOUx);
+    obj7.onPress = callback;
+    obj7.disabled = tmp7;
     let tmp12Result = null;
     if (tmp8[0]) {
       tmp12Result = tmp12(closure_6, {});
     }
-    obj3[4] = tmp12Result;
-    obj2[2] = tmp12(tmp(tmp2[10]).ActionSheetRow, obj3);
-    first = tmp12(tmp(tmp2[10]).ActionSheetRow.Group, obj2);
+    obj7.trailing = tmp12Result;
+    obj6.children = tmp12(tmp(tmp2[10]).ActionSheetRow, obj7);
+    first = tmp12(tmp(tmp2[10]).ActionSheetRow.Group, obj6);
   }
   items3[1] = first;
-  obj[1] = items3;
-  return closure_11(user(memo[20]).ActionSheet, obj);
+  obj3.children = items3;
+  return closure_11(user(memo[20]).ActionSheet, obj3);
 };

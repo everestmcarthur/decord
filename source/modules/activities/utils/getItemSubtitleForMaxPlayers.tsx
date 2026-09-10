@@ -1,24 +1,23 @@
-// Module ID: 12150
-// Function ID: 12151
+// Module ID: 12176
+// Function ID: 12177
 // Name: getItemSubtitleForMaxPlayers
 // Dependencies: [1114, 2]
 // Exports: default, getItemSubtitleForMaxPlayersShort, getItemSubtitleForMaxPlayersShorter
 
-// Module 12150 (getItemSubtitleForMaxPlayers)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 12176 (getItemSubtitleForMaxPlayers)
+import util from "util" /* 1114 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/activities/utils/getItemSubtitleForMaxPlayers.tsx");
+const result = size.fileFinishedImporting("modules/activities/utils/getItemSubtitleForMaxPlayers.tsx");
 
-export default function getItemSubtitleForMaxPlayers(arg0) {
-  if (arg0 > 0) {
-    const intl2 = getSystemLocale.intl;
-    const obj = { count: null };
-    obj[0] = arg0;
-    let formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale.t["p/YmkR"], obj);
+export default function getItemSubtitleForMaxPlayers(count) {
+  if (count > 0) {
+    const intl2 = util.intl;
+    const obj = { count };
+    let formatToPlainStringResult = intl2.formatToPlainString(util.t["p/YmkR"], obj);
   } else {
-    const intl = getSystemLocale.intl;
-    formatToPlainStringResult = intl.string(getSystemLocale.t.s1vQIL);
+    const intl = util.intl;
+    formatToPlainStringResult = intl.string(util.t.s1vQIL);
   }
   return formatToPlainStringResult;
 };
@@ -27,8 +26,8 @@ export const getItemSubtitleForMaxPlayersShort = function getItemSubtitleForMaxP
     const _HermesInternal = HermesInternal;
     let combined = "1 - " + arg0;
   } else {
-    const intl = getSystemLocale.intl;
-    combined = intl.string(getSystemLocale.t.zMNEiF);
+    const intl = util.intl;
+    combined = intl.string(util.t.zMNEiF);
   }
   return combined;
 };
@@ -37,8 +36,8 @@ export const getItemSubtitleForMaxPlayersShorter = function getItemSubtitleForMa
     const _HermesInternal = HermesInternal;
     let combined = "1-" + arg0;
   } else {
-    const intl = getSystemLocale.intl;
-    combined = intl.string(getSystemLocale.t.zMNEiF);
+    const intl = util.intl;
+    combined = intl.string(util.t.zMNEiF);
   }
   return combined;
 };

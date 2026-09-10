@@ -1,40 +1,42 @@
-// Module ID: 14527
-// Function ID: 14528
-// Name: createVoiceSettingsEventHandlers
-// Dependencies: [4465, 1074, 8339, 12, 2]
+// Module ID: 14552
+// Function ID: 14553
+// Name: VoiceSettingsEventsFactory
+// Dependencies: [4479, 1074, 8367, 12, 2]
 // Exports: default
 
-// Module 14527 (createVoiceSettingsEventHandlers)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4465 */;
+// Module 14552 (VoiceSettingsEventsFactory)
+import Constants2 from "Constants" /* 1074 */;
+import Constants from "Constants" /* 4479 */;
+import size from "module_2" /* 2 */;
 
-({ RPC_SCOPE_CONFIG: c3, RPC_LOCAL_SCOPE: c4 } = RPC_SCOPE_CONFIG);
-const RPCEvents = ME.RPCEvents;
-const result = set.fileFinishedImporting("modules/rpc/server/events/VoiceSettingsEventsFactory.tsx");
+const require = globalThis.__r;
+
+({ RPC_SCOPE_CONFIG: c3, RPC_LOCAL_SCOPE: closure_4 } = Constants);
+const RPCEvents = Constants2.RPCEvents;
+const result = size.fileFinishedImporting("modules/rpc/server/events/VoiceSettingsEventsFactory.tsx");
 
 export default function createVoiceSettingsEventHandlers(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   closure_1 = arg1;
-  let obj = {};
-  obj = { scope: null, handler: null };
-  obj = {};
-  const items = [_require(8339).OAuth2Scopes.RPC, _require(8339).OAuth2Scopes.RPC_VOICE_READ];
-  obj[constants.ANY] = items;
-  obj[0] = obj;
-  obj[1] = function handler() {
+  const obj = {};
+  const obj2 = { scope: null, handler: null };
+  const obj3 = {};
+  const items = [require("OAuth2Scopes").OAuth2Scopes.RPC, require("OAuth2Scopes").OAuth2Scopes.RPC_VOICE_READ];
+  obj3[constants.ANY] = items;
+  obj2.scope = obj3;
+  obj2.handler = function handler() {
     return (arg0) => {
       ({ prevState, dispatch } = arg0);
-      const tmp = callback();
+      const tmp = closure_1_0();
       if (!obj.isEqual(tmp, prevState)) {
         dispatch(tmp);
       }
       return tmp;
     };
   };
-  obj[RPCEvents.VOICE_SETTINGS_UPDATE] = obj;
+  obj[RPCEvents.VOICE_SETTINGS_UPDATE] = obj2;
   obj[RPCEvents.VOICE_SETTINGS_UPDATE_2] = {
-    scope: closure_4,
+    scope,
     handler(socket) {
       socket = socket.socket;
       return (prevState) => {
@@ -42,7 +44,7 @@ export default function createVoiceSettingsEventHandlers(arg0, arg1) {
         if (null == socket.application.id) {
           return prevState;
         } else {
-          const tmp4 = closure_1_1(tmp2.application.id);
+          const tmp4 = closure_1(tmp2.application.id);
           if (!obj.isEqual(tmp4, prevState)) {
             tmp(tmp4);
           }

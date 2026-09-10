@@ -1,14 +1,17 @@
-// Module ID: 9663
-// Function ID: 9664
+// Module ID: 9690
+// Function ID: 9691
+// Name: SafeAreaDisabledStore
 // Dependencies: [560, 1249, 2]
 
-// Module 9663
-import set2 from "set" /* 2 */;
-import keys from "keys" /* 560 */;
+// Module 9690 (SafeAreaDisabledStore)
+import module_560 from "module_560" /* 560 */;
+import size from "module_2" /* 2 */;
 
-let obj = keys.create((arg0, arg1) => {
+const result = size.fileFinishedImporting("modules/panels/morphable/native/SafeAreaDisabledStore.tsx");
+
+export default module_560.create((arg0, arg1) => {
   closure_0 = arg0;
-  closure_1 = arg1;
+  dependencyMap = arg1;
   let obj = {
     lockKeys: new Set(),
     shouldDisableSafeAreas() {
@@ -16,14 +19,14 @@ let obj = keys.create((arg0, arg1) => {
     },
     requestSafeAreaDisableLock(arg0) {
       ({ key: closure_0, lockEnabled: closure_1 } = arg0);
-      callback(1249).batchUpdates(() => {
-        closure_1_0((lockKeys) => {
+      closure_0(1249).batchUpdates(() => {
+        closure_0((lockKeys) => {
           lockKeys = lockKeys.lockKeys;
-          const hasItem = lockKeys.has(closure_0);
-          if (closure_1) {
+          const hasItem = lockKeys.has(closure_1_0);
+          if (closure_1_1) {
             let tmp12 = lockKeys;
             if (!hasItem) {
-              let obj = {};
+              const obj = {};
               const merged = Object.assign(lockKeys);
               const _Set2 = Set;
               const items = [tmp];
@@ -38,10 +41,10 @@ let obj = keys.create((arg0, arg1) => {
             const _Set = Set;
             const set1 = new Set(lockKeys);
             set1.delete(tmp);
-            obj = {};
+            const obj2 = {};
             const merged1 = Object.assign(lockKeys);
-            obj.lockKeys = set1;
-            return obj;
+            obj2.lockKeys = set1;
+            return obj2;
           } else {
             return lockKeys;
           }
@@ -51,6 +54,3 @@ let obj = keys.create((arg0, arg1) => {
   };
   return obj;
 });
-const result = set2.fileFinishedImporting("modules/panels/morphable/native/SafeAreaDisabledStore.tsx");
-
-export default obj;

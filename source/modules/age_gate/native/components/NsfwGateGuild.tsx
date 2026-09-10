@@ -1,86 +1,79 @@
-// Module ID: 10300
-// Function ID: 10301
+// Module ID: 10327
+// Function ID: 10328
 // Name: NsfwGateGuild
-// Dependencies: [19, 17, 2021, 1371, 10301, 1074, 21, 4560, 576, 1114, 2024, 1242, 9301, 6975, 10302, 4556, 4975, 2]
+// Dependencies: [19, 17, 2021, 1371, 10328, 1074, 21, 4574, 576, 1114, 2024, 1242, 9328, 6989, 10329, 4570, 4989, 2]
 // Exports: default
 
-// Module 10300 (NsfwGateGuild)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "trackCommunicationDisabled" /* 2021 */;
-import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import { NsfwGateSource } from "NsfwGateSource" /* 10301 */;
-import ME from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10327 (NsfwGateGuild)
+import nativeDefault from "native" /* 576 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 9328 */;
+import noop from "module_19" /* 19 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-({ View: c4, Image: c5 } = get_ActivityIndicator);
-({ AnalyticEvents: c9, HelpdeskArticles: c10 } = ME);
-({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { container: null, header: null, description: null, image: null };
-createCacheKey = { flex: 1, alignItems: "center", justifyContent: "center", padding: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { textAlign: "center", marginBottom: 8 };
-createCacheKey[2] = { textAlign: "center", marginBottom: 16 };
-createCacheKey[3] = { marginBottom: 16 };
-let closure_13 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/age_gate/native/components/NsfwGateGuild.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
+const NsfwGateSource = fn(10328).NsfwGateSource;
+const Constants = fn(1074);
+({ AnalyticEvents: closure_9, HelpdeskArticles: c10 } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { flex: 1, alignItems: "center", justifyContent: "center", padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, header: { textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 16 }, image: { marginBottom: 16 } };
+let closure_13 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/age_gate/native/components/NsfwGateGuild.tsx");
 
 export default function NsfwGateGuild(guildId) {
   guildId = guildId.guildId;
   let currentUser;
-  const tmp = callback3();
+  const tmp = closure_13();
   const intl = guildId(1114).intl;
   const intl2 = guildId(1114).intl;
   const stringResult = intl.string(guildId(1114).t.vAymlG);
   const intl3 = guildId(1114).intl;
-  let obj = { helpURL: null };
-  obj1 = currentUser(2024);
-  obj[0] = obj1.getArticleURL(constants.NSFW_GUILD_GUIDELINES);
+  const obj = { helpURL: null };
   const stringResult1 = intl2.string(guildId(1114).t.Crj6eC);
-  currentUser = currentUser.getCurrentUser();
+  obj.helpURL = currentUser(2024).getArticleURL(constants2.NSFW_GUILD_GUIDELINES);
+  let obj2 = currentUser(2024);
+  currentUser = UserStore.getCurrentUser();
   const items = [guildId, currentUser];
-  const effect = React.useEffect(() => {
-    let obj = currentUser(closure_1_2[11]);
-    obj = { guild_id: guildId, user_id: null, is_member: null, is_user_opted_in_to_age_restricted_servers: null, source: null };
+  const effect = noop.useEffect(() => {
+    const obj2 = { guild_id: guildId, user_id: null, is_member: null, is_user_opted_in_to_age_restricted_servers: null, source: null };
     let id;
     if (currentUser != null) {
       id = tmp3.id;
     }
-    obj[1] = id;
+    obj2.user_id = id;
     let id1;
     if (currentUser != null) {
       id1 = tmp3.id;
     }
-    obj[2] = closure_1_6.isMember(guildId, id1);
+    obj2.is_member = GuildMemberStore.isMember(guildId, id1);
     let nsfwAllowed;
     if (currentUser != null) {
       nsfwAllowed = tmp3.nsfwAllowed;
     }
     if (nsfwAllowed) {
-      nsfwAllowed = guildId(closure_1_2[12]).getViewNsfwGuildsOrDefault();
-      const obj3 = guildId(closure_1_2[12]);
+      nsfwAllowed = AgeRestrictedContentSettingsUtils.getViewNsfwGuildsOrDefault();
     }
-    obj[3] = nsfwAllowed;
-    obj[4] = closure_1_8.MODAL;
-    obj.track(closure_1_9.GUILD_NSFW_GATE_VIEWED, obj);
+    obj2.is_user_opted_in_to_age_restricted_servers = nsfwAllowed;
+    obj2.source = NsfwGateSource.MODAL;
+    AnalyticsUtilsDefault.track(constants.GUILD_NSFW_GATE_VIEWED, obj2);
   }, items);
-  obj = { style: tmp.container, children: null };
-  const items1 = [callback(currentUser(6975), {}), , , , , ];
-  obj = { source: currentUser(10302), style: tmp.image };
-  items1[1] = callback(closure_5, obj);
-  obj1 = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stringResult };
-  items1[2] = callback(guildId(4556).Text, obj1);
-  items1[3] = callback(guildId(4556).Text, { style: tmp.description, variant: "text-md/normal", color: "text-default", children: stringResult1 });
+  let obj3 = { style: tmp.container, children: null };
+  const items1 = [closure_11(currentUser(6989), {}), , , , , ];
   const formatResult = intl3.format(guildId(1114).t.Z12LNW, obj);
-  const obj2 = { style: tmp.description, variant: "text-md/normal", color: "text-default", children: stringResult1 };
-  items1[4] = callback(guildId(4556).Text, { style: tmp.description, variant: "text-md/normal", color: "text-default", children: intl3.format(guildId(1114).t.Z12LNW, obj) });
-  const obj4 = { onPress: guildId.onClose, size: "md", text: null };
+  items1[1] = closure_11(closure_5, { source: currentUser(10329), style: tmp.image });
+  items1[2] = closure_11(guildId(4570).Text, { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stringResult });
+  items1[3] = closure_11(guildId(4570).Text, { style: tmp.description, variant: "text-md/normal", color: "text-default", children: stringResult1 });
+  items1[4] = closure_11(guildId(4570).Text, { style: tmp.description, variant: "text-md/normal", color: "text-default", children: formatResult });
+  const obj8 = { onPress: guildId.onClose, size: "md", text: null };
   const intl4 = guildId(1114).intl;
-  obj4[2] = intl4.string(guildId(1114).t.gRqiWV);
-  items1[5] = callback(guildId(4975).Button, obj4);
-  obj[1] = items1;
-  return callback2(closure_4, obj);
+  obj8.text = intl4.string(guildId(1114).t.gRqiWV);
+  items1[5] = closure_11(guildId(4989).Button, obj8);
+  obj3.children = items1;
+  return closure_12(closure_4, obj3);
 };

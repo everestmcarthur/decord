@@ -1,19 +1,20 @@
-// Module ID: 4376
-// Function ID: 4377
-// Name: WCAGContrastRatios
+// Module ID: 4390
+// Function ID: 4391
+// Name: Colors
 // Dependencies: [32, 672, 2]
 // Exports: brightenColor, darkenColor, getContrastingColor, setColorOpacity
 
-// Module 4376 (WCAGContrastRatios)
-import nDefault from "n" /* 672 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+// Module 4390 (Colors)
+import _modDef672 from "module_672" /* 672 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-let obj = { NonText: 3, Text: 4.5, HighContrastText: 7 };
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Colors/shared/Colors.tsx");
+const WCAGContrastRatios = { NonText: 3, Text: 4.5, HighContrastText: 7 };
+const size = fn(2);
+const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Colors/shared/Colors.tsx");
 
-export const WCAGContrastRatios = obj;
-export const getContrastingColor = function getContrastingColor(arg0, arg1) {
-  obj = arg1;
+export { WCAGContrastRatios };
+export const getContrastingColor = function getContrastingColor(memo, arg1) {
+  let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
@@ -27,26 +28,22 @@ export const getContrastingColor = function getContrastingColor(arg0, arg1) {
   }
   let base = obj.base;
   if (base == null) {
-    base = arg0;
+    base = memo;
   }
-  const tmp4Result = nDefault(base);
-  let obj3 = tmp2(672)(arg0);
-  const tmp4 = nDefault;
+  const tmp4Result = _modDef672(base);
+  let obj3 = tmp2(672)(memo);
   const luminanceResult = tmp4Result.luminance();
-  let contrastResult = nDefault.contrast(tmp4Result, obj3);
+  let contrastResult = _modDef672.contrast(tmp4Result, obj3);
   let num2 = 99;
   while (true) {
     let tmp7 = contrastResult < NonText;
     let tmp8 = contrastResult > NonText + num;
-    let tmp10 = obj3;
     if (tmp7) {
       let tmp11 = obj3.luminance() > luminanceResult;
       if (!tmp8) {
         if (!tmp7) {
           let brightenResult = obj3.brighten();
-          let tmp13 = importDefault;
-          let tmp14 = dependencyMap;
-          let obj6 = nDefault;
+          let obj6 = _modDef672;
           contrastResult = obj6.contrast(tmp4Result, brightenResult);
           num2 = num2 - 1;
           obj3 = brightenResult;
@@ -63,9 +60,7 @@ export const getContrastingColor = function getContrastingColor(arg0, arg1) {
         break;
       }
     }
-    let tmp15 = callback;
-    let num3 = 4;
-    let tmp16 = callback(obj5.rgba(), 4);
+    let tmp16 = _slicedToArray(obj5.rgba(), 4);
     let tmp17 = globalThis;
     let _HermesInternal = HermesInternal;
     let str = ")";
@@ -78,17 +73,17 @@ export const getContrastingColor = function getContrastingColor(arg0, arg1) {
   }
 };
 export const darkenColor = function darkenColor(contrastingColor, arg1) {
-  obj = nDefault(contrastingColor);
-  const tmp = callback(nDefault(contrastingColor).darken(arg1).rgba(), 4);
+  const obj = _modDef672(contrastingColor);
+  const tmp = _slicedToArray(_modDef672(contrastingColor).darken(arg1).rgba(), 4);
   return "rgba(" + tmp[0] + ", " + tmp[1] + ", " + tmp[2] + ", " + tmp[3] + ")";
 };
 export const brightenColor = function brightenColor(profilePrimaryColor, arg1) {
-  obj = nDefault(profilePrimaryColor);
-  const tmp = callback(nDefault(profilePrimaryColor).brighten(arg1).rgba(), 4);
+  const obj = _modDef672(profilePrimaryColor);
+  const tmp = _slicedToArray(_modDef672(profilePrimaryColor).brighten(arg1).rgba(), 4);
   return "rgba(" + tmp[0] + ", " + tmp[1] + ", " + tmp[2] + ", " + tmp[3] + ")";
 };
 export const setColorOpacity = function setColorOpacity(white, alphaResult) {
-  obj = nDefault(white);
-  const tmp = callback(nDefault(white).alpha(alphaResult).rgba(), 4);
+  const obj = _modDef672(white);
+  const tmp = _slicedToArray(_modDef672(white).alpha(alphaResult).rgba(), 4);
   return "rgba(" + tmp[0] + ", " + tmp[1] + ", " + tmp[2] + ", " + tmp[3] + ")";
 };

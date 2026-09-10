@@ -1,22 +1,22 @@
-// Module ID: 4561
-// Function ID: 4562
-// Name: CONFIG_NEVER_ANIMATE_TIMING
-// Dependencies: [4562, 4563, 4296, 2]
+// Module ID: 4575
+// Function ID: 4576
+// Name: timing
+// Dependencies: [4576, 4577, 4310, 2]
 // Exports: withTiming
 
-// Module 4561 (CONFIG_NEVER_ANIMATE_TIMING)
-import set from "set" /* 2 */;
-import _mod4296 from "module_4296" /* 4296 */;
-import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4562 */;
-import mutable from "mutable" /* 4563 */;
+// Module 4575 (timing)
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import ReanimatedConstants from "ReanimatedConstants" /* 4576 */;
+import reanimated_AccessibilityPreferencesSharedValue from "reanimated/AccessibilityPreferencesSharedValue" /* 4577 */;
+import size from "module_2" /* 2 */;
 
-const CONFIG_NEVER_ANIMATE_TIMING = CONFIG_NEVER_ANIMATE.CONFIG_NEVER_ANIMATE_TIMING;
+const CONFIG_NEVER_ANIMATE_TIMING = ReanimatedConstants.CONFIG_NEVER_ANIMATE_TIMING;
 function withTiming(value, timingStandard, fn, fn2) {
   let str = fn;
   if (fn === undefined) {
     str = "respect-motion-settings";
   }
-  const accessibilityPreferencesSharedValue = mutable.accessibilityPreferencesSharedValue;
+  const accessibilityPreferencesSharedValue = reanimated_AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue;
   if ("animate-always" === str) {
     let tmp7 = timingStandard;
     if (tmp4) {
@@ -24,21 +24,20 @@ function withTiming(value, timingStandard, fn, fn2) {
       if (timingStandard == null) {
         obj = {};
       }
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(obj);
-      obj.reduceMotion = tmp(4296).ReduceMotion.Never;
-      tmp7 = obj;
+      obj2.reduceMotion = tmp(4310).ReduceMotion.Never;
+      tmp7 = obj2;
     }
     let tmp5 = tmp7;
   } else {
     tmp5 = CONFIG_NEVER_ANIMATE_TIMING;
   }
-  return _mod4296.withTiming(value, tmp5, fn2);
+  return ReanimatedRexport.withTiming(value, tmp5, fn2);
 }
-withTiming.__closure = { accessibilityPreferencesSharedValue: mutable.accessibilityPreferencesSharedValue, CONFIG_NEVER_ANIMATE_TIMING, ReduceMotion: _mod4296.ReduceMotion, REAwithTiming: _mod4296.withTiming };
+withTiming.__closure = { accessibilityPreferencesSharedValue: reanimated_AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, CONFIG_NEVER_ANIMATE_TIMING, ReduceMotion: ReanimatedRexport.ReduceMotion, REAwithTiming: ReanimatedRexport.withTiming };
 withTiming.__workletHash = 6710776253444;
 withTiming.__initData = { code: "function withTiming_timingTsx1(toValue,config,shouldAnimate='respect-motion-settings',callback){const{accessibilityPreferencesSharedValue,CONFIG_NEVER_ANIMATE_TIMING,ReduceMotion,REAwithTiming}=this.__closure;const reducedMotionEnabled=accessibilityPreferencesSharedValue.get().reduceMotion;const animate=shouldAnimate==='animate-always'||shouldAnimate==='respect-motion-settings'&&!reducedMotionEnabled;const configForRea=!animate?CONFIG_NEVER_ANIMATE_TIMING:shouldAnimate==='animate-always'?{...(config!==null&&config!==void 0?config:{}),reduceMotion:ReduceMotion.Never}:config;return REAwithTiming(toValue,configForRea,callback);}" };
-let obj = { accessibilityPreferencesSharedValue: mutable.accessibilityPreferencesSharedValue, CONFIG_NEVER_ANIMATE_TIMING, ReduceMotion: _mod4296.ReduceMotion, REAwithTiming: _mod4296.withTiming };
-const result = set.fileFinishedImporting("design/animation/reanimated/timing/timing.tsx");
+const result = size.fileFinishedImporting("design/animation/reanimated/timing/timing.tsx");
 
 export { withTiming };

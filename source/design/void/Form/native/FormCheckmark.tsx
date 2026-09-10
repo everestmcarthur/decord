@@ -1,25 +1,24 @@
-// Module ID: 7147
-// Function ID: 7148
-// Name: RowCheckmark
-// Dependencies: [19, 21, 7133, 576, 2]
+// Module ID: 7161
+// Function ID: 7162
+// Name: FormCheckmark
+// Dependencies: [19, 21, 7147, 576, 2]
 // Exports: default
 
-// Module 7147 (RowCheckmark)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7133 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 7161 (FormCheckmark)
+import nativeDefault from "native" /* 576 */;
+import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7147 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/void/Form/native/FormCheckmark.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/Form/native/FormCheckmark.tsx");
 
 export default function RowCheckmark(selected) {
   let tmp = null;
   if (selected.selected) {
-    const obj = { color: null };
-    obj[0] = ThemesDefault.unsafe_rawColors.BRAND_500;
-    tmp = jsx(CheckmarkSmallIcon.CheckmarkSmallIcon, { color: null });
+    const obj = { color: nativeDefault.unsafe_rawColors.BRAND_500 };
+    tmp = jsx(CheckmarkSmallIcon.CheckmarkSmallIcon, { color: nativeDefault.unsafe_rawColors.BRAND_500 });
   }
   return tmp;
 };

@@ -1,12 +1,12 @@
 // Module ID: 1938
 // Function ID: 1939
-// Name: STICKER_PICKER_TAB_PANEL_ID
+// Name: StickersConstants
 // Dependencies: [2]
 
-// Module 1938 (STICKER_PICKER_TAB_PANEL_ID)
-import set from "set" /* 2 */;
+// Module 1938 (StickersConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/stickers/StickersConstants.tsx");
+const result = size.fileFinishedImporting("modules/stickers/StickersConstants.tsx");
 
 export const STICKER_PICKER_TAB_PANEL_ID = "sticker-picker-tab-panel";
 export const STICKER_PICKER_TAB_ID = "sticker-picker-tab";

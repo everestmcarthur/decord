@@ -1,14 +1,14 @@
-// Module ID: 11934
-// Function ID: 11935
+// Module ID: 11960
+// Function ID: 11961
 // Name: jumpToReferencedMessage
-// Dependencies: [7456, 2]
+// Dependencies: [7470, 2]
 // Exports: default
 
-// Module 11934 (jumpToReferencedMessage)
-import set from "set" /* 2 */;
-import trackInviteDefault from "trackInvite" /* 7456 */;
+// Module 11960 (jumpToReferencedMessage)
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7470 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/messages/native/jumpToReferencedMessage.tsx");
+const result = size.fileFinishedImporting("modules/messages/native/jumpToReferencedMessage.tsx");
 
 export default function jumpToReferencedMessage(messageReference) {
   messageReference = messageReference.messageReference;
@@ -17,10 +17,9 @@ export default function jumpToReferencedMessage(messageReference) {
     channel_id = messageReference.channel_id;
   }
   if (tmp2) {
-    let obj = trackInviteDefault;
-    obj = { channelId: null, messageId: null, flash: true, returnMessageId: null };
-    ({ channel_id: obj2[0], message_id: obj2[1] } = messageReference);
-    obj[3] = messageReference.id;
-    obj.jumpToMessage(obj);
+    const obj3 = { channelId: null, messageId: null, flash: true, returnMessageId: null };
+    ({ channel_id: obj2.channelId, message_id: obj2.messageId } = messageReference);
+    obj3.returnMessageId = messageReference.id;
+    MessageActionCreatorsDefault.jumpToMessage(obj3);
   }
 };

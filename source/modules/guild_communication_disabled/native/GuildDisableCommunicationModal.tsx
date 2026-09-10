@@ -1,30 +1,31 @@
-// Module ID: 11845
-// Function ID: 11846
+// Module ID: 11871
+// Function ID: 11872
 // Name: GuildDisableCommunicationModal
-// Dependencies: [19, 21, 10927, 10929, 1114, 4712, 11846, 2]
+// Dependencies: [19, 21, 10954, 10956, 1114, 4726, 11872, 2]
 // Exports: default
 
-// Module 11845 (GuildDisableCommunicationModal)
-import noopAll from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 11871 (GuildDisableCommunicationModal)
+import GuildDisableCommunicationDefault from "GuildDisableCommunication" /* 11872 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_communication_disabled/native/GuildDisableCommunicationModal.tsx");
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_communication_disabled/native/GuildDisableCommunicationModal.tsx");
 
 export default function GuildDisableCommunicationModal(onBeforeGoBack) {
   const guildId = onBeforeGoBack.guildId;
   const user = onBeforeGoBack.user;
   let onGoBack;
   onGoBack = user(onGoBack[2])({ onBeforeGoBack: onBeforeGoBack.cancelButtonCallback }).onGoBack;
-  let obj = { screenKey: "disableCommunication", title: null, render: null };
+  const obj = { screenKey: "disableCommunication", title: null, render: null };
   const intl = guildId(onGoBack[4]).intl;
-  obj = { user: null };
+  const obj2 = { user: null };
   const tmp = user(onGoBack[3]);
-  obj[0] = user(onGoBack[5]).getName(guildId, null, user);
-  obj[1] = intl.formatToPlainString(guildId(onGoBack[4]).t.FN7NIS, obj);
-  obj[2] = function render() {
-    return closure_1_3(user(onGoBack[6]), { user, guildId, onClose: onGoBack });
+  obj2.user = user(onGoBack[5]).getName(guildId, null, user);
+  obj.title = intl.formatToPlainString(guildId(onGoBack[4]).t.FN7NIS, obj2);
+  obj.render = function render() {
+    return jsx(GuildDisableCommunicationDefault, { user, guildId, onClose: onGoBack });
   };
-  return <tmp user={null} />;
+  return <tmp screenKey="disableCommunication" title={null} render={null} />;
 };

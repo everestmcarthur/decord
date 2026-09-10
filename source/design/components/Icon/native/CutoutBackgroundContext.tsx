@@ -1,28 +1,28 @@
-// Module ID: 8819
-// Function ID: 8820
-// Name: useCutoutBackgroundColor
-// Dependencies: [19, 21, 672, 8820, 576, 4262, 2]
+// Module ID: 8848
+// Function ID: 8849
+// Name: CutoutBackgroundContext
+// Dependencies: [19, 21, 672, 8849, 576, 4275, 2]
 // Exports: CutoutBackgroundProvider, useCutoutBackgroundColor
 
-// Module 8819 (useCutoutBackgroundColor)
-import ThemesDefault from "Themes" /* 576 */;
-import nDefault from "n" /* 672 */;
-import flattenColorOverOpaqueBackground from "flattenColorOverOpaqueBackground" /* 8820 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 8848 (CutoutBackgroundContext)
+import nativeDefault from "native" /* 576 */;
+import _modDef672 from "module_672" /* 672 */;
+import shared_colors from "shared/colors" /* 8849 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let c3 = importAllResult;
-let context = importAllResult.createContext(undefined);
-const result = require("set").fileFinishedImporting("design/components/Icon/native/CutoutBackgroundContext.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+let context = noop.createContext(undefined);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/CutoutBackgroundContext.tsx");
 
 export const useCutoutBackgroundColor = function useCutoutBackgroundColor() {
-  return importAllResult.useContext(closure_5);
+  return noop.useContext(closure_5);
 };
 export const CutoutBackgroundProvider = function CutoutBackgroundProvider(children) {
   const backgroundColor = children.backgroundColor;
-  const context = importAllResult.useContext(closure_5);
-  const internal = ThemesDefault.internal;
+  const context = noop.useContext(closure_5);
+  const internal = nativeDefault.internal;
   if (internal.isSemanticColor(backgroundColor)) {
     const tmp5 = backgroundColor;
   }
@@ -34,14 +34,14 @@ export const CutoutBackgroundProvider = function CutoutBackgroundProvider(childr
     }
   }
   if (null != token) {
-    let value = token;
+    value = token;
     if (1 !== obj2.alpha()) {
       if (null != context) {
-        value = flattenColorOverOpaqueBackground.flattenColorOverOpaqueBackground(token, context);
-        const tmp6Result = flattenColorOverOpaqueBackground;
+        value = shared_colors.flattenColorOverOpaqueBackground(token, context);
+        const tmp6Result = shared_colors;
       }
     }
-    obj2 = nDefault(token);
+    obj2 = _modDef672(token);
   } else if (undefined === token) {
     value = context;
   }

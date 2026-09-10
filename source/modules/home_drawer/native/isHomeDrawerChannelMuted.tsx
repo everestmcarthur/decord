@@ -1,22 +1,23 @@
-// Module ID: 16320
-// Function ID: 16321
-// Name: useIsHomeDrawerChannelMuted
-// Dependencies: [4201, 1961, 4741, 504, 2]
+// Module ID: 16351
+// Function ID: 16352
+// Name: isHomeDrawerChannelMuted
+// Dependencies: [4214, 1961, 4755, 504, 2]
 // Exports: useIsHomeDrawerChannelMuted
 
-// Module 16320 (useIsHomeDrawerChannelMuted)
+// Module 16351 (isHomeDrawerChannelMuted)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "storeThread" /* 4201 */;
-import { isThread } from "createChannelRecord" /* 1961 */;
-import closure_4 from "updateUserGuildSettingsInternal" /* 4741 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4214 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4755 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/home_drawer/native/isHomeDrawerChannelMuted.tsx");
+require = fn;
+const isThread = fn(1961).isThread;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/home_drawer/native/isHomeDrawerChannelMuted.tsx");
 
 export const useIsHomeDrawerChannelMuted = function useIsHomeDrawerChannelMuted() {
-  const items = [closure_2, closure_4];
+  const items = [JoinedThreadsStore, UserGuildSettingsStore];
   return initialize.useStateFromStores(items, () => (type) => {
-    const tmp = callback(type.type);
+    const tmp = closure_1_3(type.type);
     if (tmp) {
       if (muted.isMuted(type.id)) {
         return true;

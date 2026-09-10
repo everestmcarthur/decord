@@ -1,35 +1,32 @@
 // Module ID: 3731
 // Function ID: 3732
-// Dependencies: [2035, 2036]
+// Dependencies: [2033]
 
 // Module 3731
-import buildMatchFn from "buildMatchFn" /* 2035 */;
-import buildMatchPatternFn from "buildMatchPatternFn" /* 2036 */;
+import module_2033 from "module_2033" /* 2033 */;
 
-if (!buildMatchFn) {
-  let obj = { default: null };
-  obj[0] = buildMatchFn;
+if (!module_2033) {
+  const obj2 = { default: module_2033 };
+  let obj = obj2;
 } else {
-  obj = buildMatchFn;
+  obj = module_2033;
 }
-if (!buildMatchPatternFn) {
-  obj = { default: null };
-  obj[0] = buildMatchPatternFn;
-  let obj2 = obj;
-} else {
-  obj2 = buildMatchPatternFn;
-}
-obj2 = {
-  matchPattern: /^(\d+)(일|번째)?/i,
-  parsePattern: /\d+/i,
-  valueCallback(joined) {
-    return parseInt(joined, 10);
-  }
+const date = {
+  ordinalNumber(arg0, arg1) {
+    return String(Number(arg0));
+  },
+  era: obj.default({ values: { narrow: ["aC", "dC"], abbreviated: ["a.C.", "d.C."], wide: ["avanti Cristo", "dopo Cristo"] }, defaultWidth: "wide" }),
+  quarter: obj.default({
+    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["T1", "T2", "T3", "T4"], wide: ["1\u00BA trimestre", "2\u00BA trimestre", "3\u00BA trimestre", "4\u00BA trimestre"] },
+    defaultWidth: "wide",
+    argumentCallback(arg0) {
+      return arg0 - 1;
+    }
+  }),
+  month: obj.default({ values: { narrow: ["G", "F", "M", "A", "M", "G", "L", "A", "S", "O", "N", "D"], abbreviated: ["gen", "feb", "mar", "apr", "mag", "giu", "lug", "ago", "set", "ott", "nov", "dic"], wide: ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"] }, defaultWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["D", "L", "M", "M", "G", "V", "S"], short: ["dom", "lun", "mar", "mer", "gio", "ven", "sab"], abbreviated: ["dom", "lun", "mar", "mer", "gio", "ven", "sab"], wide: ["domenica", "luned\u00EC", "marted\u00EC", "mercoled\u00EC", "gioved\u00EC", "venerd\u00EC", "sabato"] }, defaultWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "m.", pm: "p.", midnight: "mezzanotte", noon: "mezzogiorno", morning: "mattina", afternoon: "pomeriggio", evening: "sera", night: "notte" }, abbreviated: { am: "AM", pm: "PM", midnight: "mezzanotte", noon: "mezzogiorno", morning: "mattina", afternoon: "pomeriggio", evening: "sera", night: "notte" }, wide: { am: "AM", pm: "PM", midnight: "mezzanotte", noon: "mezzogiorno", morning: "mattina", afternoon: "pomeriggio", evening: "sera", night: "notte" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "m.", pm: "p.", midnight: "mezzanotte", noon: "mezzogiorno", morning: "di mattina", afternoon: "del pomeriggio", evening: "di sera", night: "di notte" }, abbreviated: { am: "AM", pm: "PM", midnight: "mezzanotte", noon: "mezzogiorno", morning: "di mattina", afternoon: "del pomeriggio", evening: "di sera", night: "di notte" }, wide: { am: "AM", pm: "PM", midnight: "mezzanotte", noon: "mezzogiorno", morning: "di mattina", afternoon: "del pomeriggio", evening: "di sera", night: "di notte" } }, defaultFormattingWidth: "wide" })
 };
-const items = [/^(bc|기원전)/i, /^(ad|서기)/i];
-const items1 = [/1/i, /2/i, /3/i, /4/i];
-const items2 = [/^1월?$/, /^2/, /^3/, /^4/, /^5/, /^6/, /^7/, /^8/, /^9/, /^10/, /^11/, /^12/];
-const items3 = [/^일/, /^월/, /^화/, /^수/, /^목/, /^금/, /^토/];
 
-export default { ordinalNumber: obj2.default(obj2), era: obj.default({ matchPatterns: obj3, defaultMatchWidth: "wide", parsePatterns: { any: items }, defaultParseWidth: "any" }), quarter: obj.default(obj4), month: obj.default({ matchPatterns: obj6, defaultMatchWidth: "wide", parsePatterns: { any: items2 }, defaultParseWidth: "any" }), day: obj.default({ matchPatterns: obj7, defaultMatchWidth: "wide", parsePatterns: { any: items3 }, defaultParseWidth: "any" }), dayPeriod: obj.default({ matchPatterns: obj8, defaultMatchWidth: "any", parsePatterns: { any: obj9 }, defaultParseWidth: "any" }) };
+export default date;
 export default exports.default;

@@ -1,17 +1,17 @@
-// Module ID: 6537
-// Function ID: 6538
+// Module ID: 6551
+// Function ID: 6552
 // Name: TabletSpotIllustration
-// Dependencies: [21, 5587, 6538, 2]
+// Dependencies: [21, 5601, 6552, 2]
 // Exports: TabletSpotIllustration
 
-// Module 6537 (TabletSpotIllustration)
-import set from "set" /* 2 */;
+// Module 6551 (TabletSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 6538 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6552 from "module_6552" /* 6552 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/TabletSpotIllustration.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/TabletSpotIllustration.native.tsx");
 
 export const TabletSpotIllustration = function TabletSpotIllustration(width) {
   let num = width.width;
@@ -27,14 +27,14 @@ export const TabletSpotIllustration = function TabletSpotIllustration(width) {
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
-  obj = { width: num * num3, height: num2 * num3 };
-  const items = [obj];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { width: num * num3, height: num2 * num3 });
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef6552 };
+  obj.source = obj2;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

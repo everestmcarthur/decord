@@ -1,20 +1,22 @@
-// Module ID: 10819
-// Function ID: 10820
+// Module ID: 10846
+// Function ID: 10847
 // Name: useMobileSocialLayerPurchaseSKU
-// Dependencies: [19, 1074, 9372, 10820, 2]
+// Dependencies: [19, 1074, 9399, 10847, 2]
 // Exports: default
 
-// Module 10819 (useMobileSocialLayerPurchaseSKU)
-import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 10820 */;
-import closure_3 from "noop" /* 19 */;
-import { PriceSetAssignmentPurchaseTypes as closure_4 } from "ME" /* 1074 */;
+// Module 10846 (useMobileSocialLayerPurchaseSKU)
+import GPlayActionCreators from "GPlayActionCreators" /* 9399 */;
+import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 10847 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/slayer_storefront/native/hooks/useMobileSocialLayerPurchaseSKU.android.tsx");
+require = fn;
+const constants = fn(1074).PriceSetAssignmentPurchaseTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/slayer_storefront/native/hooks/useMobileSocialLayerPurchaseSKU.android.tsx");
 
 export default function useMobileSocialLayerPurchaseSKU(sku) {
   sku = sku.sku;
-  const merged = Object.assign(sku, Object.create(null));
+  const merged = Object.assign(sku, Object.assign({ sku: 0 }));
   c0 = undefined;
   const giftParams = merged.giftParams;
   let isGift;
@@ -38,11 +40,10 @@ export default function useMobileSocialLayerPurchaseSKU(sku) {
     }
     c0 = tmp4;
     let items = [tmp4];
-    const effect = React.useEffect(() => {
-      if (null != _null) {
+    const effect = noop.useEffect(() => {
+      if (null != c0) {
         const items = [tmp];
-        const inAppSkus = _null(closure_1_2[2]).loadInAppSkus(items);
-        const obj = _null(closure_1_2[2]);
+        const inAppSkus = GPlayActionCreators.loadInAppSkus(items);
       }
     }, items);
     let obj = {};

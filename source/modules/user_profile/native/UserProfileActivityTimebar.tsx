@@ -1,51 +1,51 @@
-// Module ID: 13026
-// Function ID: 13027
+// Module ID: 13052
+// Function ID: 13053
 // Name: UserProfileActivityTimebar
-// Dependencies: [19, 17, 21, 4560, 576, 13027, 4556, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 13053, 4570, 2]
 // Exports: default
 
-// Module 13026 (UserProfileActivityTimebar)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Text from "Text" /* 4556 */;
-import useActivityTimer from "useActivityTimer" /* 13027 */;
-import useActivityTimerDefault from "useActivityTimer" /* 13027 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13052 (UserProfileActivityTimebar)
+import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import useActivityTimer from "useActivityTimer" /* 13053 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { bar: null, progress: null, textRow: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.xs, height: 4, marginBottom: 4 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: ThemesDefault.colors.ACTIVITY_TIMEBAR_PROGRESS_BACKGROUND, borderRadius: ThemesDefault.radii.xs, height: "100%", minWidth: 4 };
-createCacheKey[2] = { flexDirection: "row", justifyContent: "space-between" };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { backgroundColor: ThemesDefault.colors.ACTIVITY_TIMEBAR_PROGRESS_BACKGROUND, borderRadius: ThemesDefault.radii.xs, height: "100%", minWidth: 4 };
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileActivityTimebar.tsx");
+const useActivityTimerDefault = useActivityTimer;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { bar: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.xs, height: 4, marginBottom: 4 }, progress: null, textRow: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.xs, height: 4, marginBottom: 4 };
+obj2.progress = { backgroundColor: nativeDefault.colors.ACTIVITY_TIMEBAR_PROGRESS_BACKGROUND, borderRadius: nativeDefault.radii.xs, height: "100%", minWidth: 4 };
+obj2.textRow = { flexDirection: "row", justifyContent: "space-between" };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActivityTimebar.tsx");
 
 export default function UserProfileActivityTimebar(arg0) {
   ({ start, end, style } = arg0);
-  const tmp = callback3();
+  const tmp = closure_6();
   const tmp2 = useActivityTimerDefault({ start, end });
-  let obj = { style, children: null };
-  obj = { style: tmp.bar, children: callback(View, { style: items }) };
-  items = [tmp.progress, ];
-  obj = { width: `${100 * tmp2.percentage}%` };
-  items[1] = obj;
+  const obj = { style, children: null };
+  const obj2 = { style: tmp.bar, children: null };
+  const obj3 = { style: null };
+  const items = [tmp.progress, { width: `${100 * tmp2.percentage}%` }];
+  obj3.style = items;
   ({ elapsed, duration } = tmp2);
-  const items1 = [callback(View, obj), ];
-  obj1 = { style: tmp.textRow, children: null };
-  const obj2 = { variant: "text-xs/normal", tabularNumbers: true, color: "text-subtle", children: useActivityTimer.formatTime(elapsed) };
-  const items2 = [callback(Text.Text, obj2), ];
-  const obj3 = { variant: "text-xs/normal", tabularNumbers: true, color: "text-subtle", children: null };
-  const obj6 = useActivityTimer;
-  obj3[3] = useActivityTimer.formatTime(duration);
-  items2[1] = callback(Text.Text, obj3);
-  obj1[1] = items2;
-  items1[1] = callback2(View, obj1);
-  obj[1] = items1;
-  return callback2(View, obj);
+  obj2.children = React4(View, obj3);
+  const items1 = [React4(View, obj2), ];
+  const obj5 = { style: tmp.textRow, children: null };
+  const obj6 = { variant: "text-xs/normal", tabularNumbers: true, color: "text-subtle", children: useActivityTimer.formatTime(elapsed) };
+  const items2 = [React4(Text_Text.Text, obj6), ];
+  const obj8 = { variant: "text-xs/normal", tabularNumbers: true, color: "text-subtle", children: null };
+  const obj4 = { width: `${100 * tmp2.percentage}%` };
+  obj8.children = useActivityTimer.formatTime(duration);
+  items2[1] = React4(Text_Text.Text, obj8);
+  obj5.children = items2;
+  items1[1] = hasOwnProperty(View, obj5);
+  obj.children = items1;
+  return hasOwnProperty(View, obj);
 };

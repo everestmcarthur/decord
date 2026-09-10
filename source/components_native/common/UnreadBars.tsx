@@ -1,39 +1,42 @@
-// Module ID: 16358
-// Function ID: 16359
-// Name: componentWillEnter
-// Dependencies: [19, 17, 4552, 1074, 21, 4560, 5524, 576, 4409, 4271, 4528, 4529, 1178, 1114, 504, 12427, 2]
+// Module ID: 16389
+// Function ID: 16390
+// Name: UnreadBars
+// Dependencies: [19, 17, 4566, 1074, 21, 4574, 5538, 576, 4423, 4284, 4542, 4543, 1178, 1114, 504, 12453, 2]
 // Exports: default
 
-// Module 16358 (componentWillEnter)
+// Module 16389 (UnreadBars)
 import initialize from "initialize" /* 504 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import _toPropertyKey from "_toPropertyKey" /* 12427 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import hexToRgba from "hexToRgba" /* 4409 */;
-import importDefaultResult from "createTextStyle" /* 5524 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import HapticUtils from "HapticUtils" /* 4542 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4543 */;
+import TransitionGroup from "TransitionGroup" /* 12453 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import TextStyles from "TextStyles" /* 5538 */;
 
-require = arg1;
-let c3 = importAllResult;
-({ View: c4, Animated: c5, TouchableWithoutFeedback: closure_6 } = get_ActivityIndicator);
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { unreadText: null, unread: null, mention: null };
-createCacheKey = {};
-let merged = Object.assign(importDefaultResult(require("ME").Fonts.DISPLAY_SEMIBOLD, ThemesDefault.unsafe_rawColors.WHITE, 12, { uppercase: true }));
-createCacheKey[0] = createCacheKey;
-let obj1 = { margin: 8, height: 24, justifyContent: "center", alignItems: "center", borderRadius: ThemesDefault.radii.md, backgroundColor: null };
-obj1[5] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.PRIMARY_400, 0.9);
-createCacheKey[1] = obj1;
-const obj2 = { backgroundColor: null };
-obj2[0] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.RED_400, 0.9);
-createCacheKey[2] = obj2;
-let closure_10 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
-const PureComponent = importAllResult.PureComponent;
+const require = globalThis.__r;
+
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, Animated: hasOwnProperty, TouchableWithoutFeedback: metroRequire } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { unreadText: null, unread: null, mention: null };
+let merged = Object.assign(TextStyles(fn(1074).Fonts.DISPLAY_SEMIBOLD, nativeDefault.unsafe_rawColors.WHITE, 12, { uppercase: true }));
+obj2.unreadText = {};
+let obj4 = { margin: 8, height: 24, justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.md, backgroundColor: null };
+let ColorUtils = fn(4423);
+obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_400, 0.9);
+obj2.unread = obj4;
+const obj6 = { backgroundColor: null };
+ColorUtils = fn(4423);
+obj6.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.RED_400, 0.9);
+obj2.mention = obj6;
+let closure_10 = createStyles.createLegacyClassComponentStyles(obj2);
+const PureComponent = noop.PureComponent;
 class UnreadBar extends PureComponent {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -43,7 +46,7 @@ class UnreadBar extends PureComponent {
     applyArgumentsResult.animation = value;
     applyArgumentsResult.handlePress = function handlePress() {
       ({ item, onPress } = applyArgumentsResult.props);
-      const result = applyArgumentsResult(closure_1_2[10]).triggerHapticFeedback(closure_1_1(closure_1_2[11]).IMPACT_LIGHT);
+      const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
       applyArgumentsResult.hide();
       onPress(item);
     };
@@ -77,12 +80,12 @@ prototype["getAnimatedStyle"] = function getAnimatedStyle() {
   if (num == null) {
     num = 0;
   }
-  let obj = { position: "absolute", left: num, right: null };
+  const rect = { position: "absolute", left: num, right: null };
   let num2 = contentInset.right;
   if (num2 == null) {
     num2 = 0;
   }
-  obj[2] = num2;
+  rect.right = num2;
   let str = "top";
   if (bottom) {
     str = "bottom";
@@ -99,16 +102,15 @@ prototype["getAnimatedStyle"] = function getAnimatedStyle() {
       num3 = 0;
     }
   }
-  obj[str] = num3;
-  obj = {};
-  const merged = Object.assign(obj);
+  rect[str] = num3;
+  const obj = {};
+  const merged = Object.assign(rect);
   obj.opacity = self.animation;
   if (props.useReducedMotion) {
     let tmp2 = obj;
   } else {
     const animation = self.animation;
-    obj = { inputRange: null, outputRange: null };
-    obj[0] = [0, 1];
+    const obj2 = { inputRange: [0, 1], outputRange: null };
     let num5 = -72;
     if (bottom) {
       num5 = 72;
@@ -118,33 +120,33 @@ prototype["getAnimatedStyle"] = function getAnimatedStyle() {
     if (this.state.active) {
       num6 = 1;
     }
-    obj1 = { translateY: null };
+    const obj3 = { translateY: null };
     items[1] = num6;
-    obj[1] = items;
-    obj1[0] = animation.interpolate(obj);
-    const items1 = [obj1];
+    obj2.outputRange = items;
+    obj3.translateY = animation.interpolate(obj2);
+    const items1 = [obj3];
     obj.transform = items1;
     tmp2 = obj;
   }
   return tmp2;
 };
 prototype["render"] = function render() {
-  const tmp = callback2(this.context);
+  const tmp = closure_10(this.context);
   const props = this.props;
   ({ mention, section } = props.item);
-  let obj = { accessibilityRole: "button", onPress: this.handlePress, onPressIn: this.handlePressIn, onPressOut: this.handlePressOut, testID: "unread-bar-touchable-" + mention + "-" + section, children: null };
-  obj = { style: this.getAnimatedStyle(), nativeID: "unread-bar-animated-view-" + mention + "-" + section, children: null };
+  const obj = { accessibilityRole: "button", onPress: this.handlePress, onPressIn: this.handlePressIn, onPressOut: this.handlePressOut, testID: "unread-bar-touchable-" + mention + "-" + section, children: null };
+  const obj2 = { style: this.getAnimatedStyle(), nativeID: "unread-bar-animated-view-" + mention + "-" + section, children: null };
   const items = [tmp.unread, ];
-  mention = undefined;
+  let mention1;
   if (mention) {
-    mention = tmp.mention;
+    mention1 = tmp.mention;
   }
-  obj = { style: items, nativeID: "unread-bar-view-" + mention + "-" + section, children: null };
-  items[1] = mention;
-  obj1 = { style: tmp.unreadText, maxFontSizeMultiplier: 1.5, children: null };
-  const intl = getSystemLocale.intl;
+  const obj3 = { style: items, nativeID: "unread-bar-view-" + mention + "-" + section, children: null };
+  items[1] = mention1;
+  const obj4 = { style: tmp.unreadText, maxFontSizeMultiplier: 1.5, children: null };
+  const intl = util.intl;
   const string = intl.string;
-  const t = getSystemLocale.t;
+  const t = util.t;
   if (props.compact) {
     let stringResult = string(t.y2b7CA);
   } else if (mention) {
@@ -152,15 +154,16 @@ prototype["render"] = function render() {
   } else {
     stringResult = string(t.FCRiT3);
   }
-  obj1[2] = stringResult;
-  obj[2] = closure_8(Button.LegacyText, obj1);
-  obj[2] = closure_8(closure_4, obj);
-  obj[5] = closure_8(RN.View, obj);
-  return closure_8(closure_6, obj);
+  obj4.children = stringResult;
+  obj3.children = React6(native.LegacyText, obj4);
+  obj2.children = React6(React4, obj3);
+  obj.children = React6(RN.View, obj2);
+  return React6(timestampProducer, obj);
 };
 UnreadBar.defaultProps = { bottom: false };
-UnreadBar.contextType = require("ManaContext").ThemeContext;
-let result = require("set").fileFinishedImporting("components_native/common/UnreadBars.tsx");
+UnreadBar.contextType = fn(4284).ThemeContext;
+const size = fn(2);
+let result = size.fileFinishedImporting("components_native/common/UnreadBars.tsx");
 
 export default function UnreadBars(contentInset) {
   ({ scrollToLocation: require, beforeItem, afterItem, compact } = contentInset);
@@ -172,34 +175,23 @@ export default function UnreadBars(contentInset) {
     contentInset = { top: 0, left: 0, right: 0, bottom: 0 };
   }
   function handlePress(section) {
-    callback({ section: section.section, item: section.row, animated: true });
+    require({ section: section.section, item: section.row, animated: true });
   }
-  obj1 = initialize;
-  const items = [closure_7];
-  const stateFromStores = obj1.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let obj = { component: importAllResult.Fragment, children: null };
+  const items = [AccessibilityStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const obj = { component: noop.Fragment, children: null };
   let tmp3 = null;
   if (null != beforeItem) {
-    obj = { compact: null, item: null, onPress: null, contentInset: null, useReducedMotion: null };
-    obj[0] = compact;
-    obj[1] = beforeItem;
-    obj[2] = handlePress;
-    obj[3] = contentInset;
-    obj[4] = stateFromStores;
-    tmp3 = callback(UnreadBar, obj, "BEFORE");
+    const obj3 = { compact, item: beforeItem, onPress: handlePress, contentInset, useReducedMotion: stateFromStores };
+    tmp3 = closure_8(UnreadBar, obj3, "BEFORE");
   }
   const items1 = [tmp3, ];
   let tmp6 = null;
   if (null != afterItem) {
-    obj1 = { compact: null, item: null, onPress: null, contentInset: null, bottom: true, useReducedMotion: null };
-    obj1[0] = compact;
-    obj1[1] = afterItem;
-    obj1[2] = handlePress;
-    obj1[3] = contentInset;
-    obj1[5] = stateFromStores;
-    tmp6 = callback(UnreadBar, obj1, "AFTER");
+    const obj4 = { compact, item: afterItem, onPress: handlePress, contentInset, bottom: true, useReducedMotion: stateFromStores };
+    tmp6 = closure_8(UnreadBar, obj4, "AFTER");
   }
   items1[1] = tmp6;
-  obj[1] = items1;
-  return closure_9(_toPropertyKey.TransitionGroup, obj);
+  obj.children = items1;
+  return closure_9(TransitionGroup.TransitionGroup, obj);
 };

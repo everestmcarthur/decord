@@ -1,16 +1,15 @@
-// Module ID: 17382
-// Function ID: 17383
-// Name: handleMessageCreate
-// Dependencies: [1074, 7118, 1242, 2]
+// Module ID: 17413
+// Function ID: 17414
+// Name: MessageSessionMetadataManager
+// Dependencies: [1074, 7132, 1242, 2]
 
-// Module 17382 (handleMessageCreate)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import initializeDefault from "initialize" /* 7118 */;
+// Module 17413 (MessageSessionMetadataManager)
+import Constants from "Constants" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
+import size from "module_2" /* 2 */;
 
-const AnalyticEvents = ME.AnalyticEvents;
-initializeDefault;
+const AnalyticEvents = Constants.AnalyticEvents;
 class MessageSessionMetadataManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -42,20 +41,19 @@ prototype["_getAuthorizedApplicationIds"] = function _getAuthorizedApplicationId
 };
 prototype["_trackIfSessionMetadataExists"] = function _trackIfSessionMetadataExists(message) {
   if (null != message.session_metadata) {
-    let obj = expandEventPropertiesDefault;
-    obj = { message_id: null, channel_id: null, author_id: null, authorized_application_ids: null };
-    ({ id: obj2[0], channel_id: obj2[1], author } = message);
+    const obj3 = { message_id: null, channel_id: null, author_id: null, authorized_application_ids: null };
+    ({ id: obj2.message_id, channel_id: obj2.channel_id, author } = message);
     let id;
     if (author != null) {
       id = author.id;
     }
     const self = this;
-    obj[2] = id;
-    obj[3] = this._getAuthorizedApplicationIds(message.session_metadata);
-    obj.track(AnalyticEvents.MESSAGE_DISPATCH_SESSION_METADATA_FOUND, obj);
+    obj3.author_id = id;
+    obj3.authorized_application_ids = this._getAuthorizedApplicationIds(message.session_metadata);
+    AnalyticsUtilsDefault.track(AnalyticEvents.MESSAGE_DISPATCH_SESSION_METADATA_FOUND, obj3);
   }
 };
 const messageSessionMetadataManager = new MessageSessionMetadataManager();
-let result = set.fileFinishedImporting("modules/provisional_accounts/MessageSessionMetadataManager.tsx");
+let result = size.fileFinishedImporting("modules/provisional_accounts/MessageSessionMetadataManager.tsx");
 
 export default messageSessionMetadataManager;

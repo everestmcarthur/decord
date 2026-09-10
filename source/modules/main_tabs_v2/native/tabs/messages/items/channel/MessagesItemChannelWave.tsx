@@ -1,32 +1,33 @@
-// Module ID: 16042
-// Function ID: 16043
-// Dependencies: [19, 21, 4975, 1114, 4556, 2]
+// Module ID: 16072
+// Function ID: 16073
+// Name: MessagesItemChannelWave
+// Dependencies: [19, 21, 4989, 1114, 4570, 2]
 
-// Module 16042
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import Button from "Button" /* 4975 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+// Module 16072 (MessagesItemChannelWave)
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const memoResult = importAllResult.memo(function MessagesItemChannelWave(hasNameplate) {
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelWave.tsx");
+
+export default noop.memo(function MessagesItemChannelWave(hasNameplate) {
   let flag = hasNameplate.hasNameplate;
   if (flag === undefined) {
     flag = false;
   }
   const obj = { text: null, icon: null, variant: null, size: "sm", onPress: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.n8nU4W);
-  obj[1] = jsx(Text.Text, { style: { marginTop: 3 }, variant: "text-sm/semibold", "aria-hidden": true, children: "\u{1F44B}" });
+  const intl = util.intl;
+  obj.text = intl.string(util.t.n8nU4W);
+  obj.icon = jsx(Text_Text.Text, { style: { marginTop: 3 }, variant: "text-sm/semibold", "aria-hidden": true, children: "\u{1F44B}" });
   let str = "secondary";
   if (flag) {
     str = "secondary-overlay";
   }
-  obj[2] = str;
-  obj[4] = hasNameplate.wavePressed;
-  return jsx(Button.Button, { text: null, icon: null, variant: null, size: "sm", onPress: null });
+  obj.variant = str;
+  obj.onPress = hasNameplate.wavePressed;
+  return jsx(components_Button_Button.Button, { text: null, icon: null, variant: null, size: "sm", onPress: null });
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelWave.tsx");
-
-export default memoResult;

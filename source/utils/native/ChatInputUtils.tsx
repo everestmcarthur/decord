@@ -1,14 +1,16 @@
-// Module ID: 4425
-// Function ID: 4426
-// Name: getBestActiveInput
-// Dependencies: [4426, 1874, 4427, 1609, 1481, 4428, 2]
+// Module ID: 4439
+// Function ID: 4440
+// Name: ChatInputUtils
+// Dependencies: [4440, 1874, 4441, 1609, 1481, 4442, 2]
 // Exports: createInputRefTracker, dismissKeyboard, getBestActiveInputForChannelId, getChatInputRef, getHighestActiveScreenIndex
 
-// Module 4425 (getBestActiveInput)
-import set from "set" /* 2 */;
+// Module 4439 (ChatInputUtils)
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
-import dismissGlobalKeyboard from "dismissGlobalKeyboard" /* 1874 */;
-import zustandStore from "zustandStore" /* 4428 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
+import ScreenIndexFrozen from "ScreenIndexFrozen" /* 4440 */;
+import useKeyboardType from "useKeyboardType" /* 4441 */;
+import PortalKeyboardUIStore from "PortalKeyboardUIStore" /* 4442 */;
+import size from "module_2" /* 2 */;
 
 function getBestActiveInput() {
   let str;
@@ -20,11 +22,10 @@ function getBestActiveInput() {
         str = "new-message";
         if (!obj.has("new-message")) {
           const _Array = Array;
-          const found = Array.from(obj.keys()).filter((num) => {
-            let tmp = typeof num === "number";
-            if (typeof num === "number") {
-              tmp = !callback(table[0]).isScreenIndexFrozen(num);
-              const obj = callback(table[0]);
+          const found = Array.from(obj.keys()).filter((item) => {
+            let tmp = typeof item === "number";
+            if (typeof item === "number") {
+              tmp = !ScreenIndexFrozen.isScreenIndexFrozen(item);
             }
             return tmp;
           });
@@ -40,7 +41,7 @@ function getBestActiveInput() {
       }
     }
   }
-  let value;
+  value = undefined;
   if (null != str) {
     value = obj.get(str);
   }
@@ -52,89 +53,85 @@ function getBestActiveInput() {
 }
 const map = new Map();
 const map1 = new Map();
-let result = set.fileFinishedImporting("utils/native/ChatInputUtils.tsx");
+let result = size.fileFinishedImporting("utils/native/ChatInputUtils.tsx");
 
 export function createInputRefTracker(id, screenIndex) {
   closure_0 = screenIndex;
-  c1 = null;
   let obj = { current: id };
-  obj = {
+  return {
     handleRef(current, id) {
       obj.current = id;
       if (null == current) {
         if (null != obj) {
-          let value = obj.get(id);
+          value = map.get(id);
           if (null != value) {
             value.delete(tmp16);
             if (0 === value.size) {
-              obj.delete(id);
+              map.delete(id);
             }
-            closure_1_3.delete(tmp16);
+            map1.delete(tmp16);
           }
           obj = null;
         }
       } else if (null == obj) {
-        obj = { current: null };
-        obj[0] = current;
-        value = obj.get(id);
-        if (value == null) {
+        obj = { current };
+        value2 = map.get(id);
+        if (value2 == null) {
           const _Map = Map;
-          value = new Map();
+          value2 = new Map();
         }
-        const result = value.set(tmp2, obj);
-        const result1 = obj.set(id, value);
-        const result2 = closure_1_3.set(tmp2, obj);
+        const result = value2.set(tmp2, obj);
+        const result1 = map.set(id, value2);
+        const result2 = map1.set(tmp2, obj);
         const _process = process;
         if ("development" === process.env.DEVELOPMENT) {
-          const hasItem = closure_1_3.has(tmp2);
+          const hasItem = map1.has(tmp2);
         }
       } else {
         obj.current = current;
       }
     },
     register() {
-      if (null != c1) {
+      if (null != obj) {
         const current2 = obj.current;
-        let value = obj.get(current2);
+        value = map.get(current2);
         if (null != value) {
           value.delete(tmp15);
           if (0 === value.size) {
             obj3.delete(current2);
           }
-          closure_1_3.delete(tmp15);
+          map1.delete(tmp15);
         }
         const current = obj.current;
-        value = obj3.get(current);
-        if (value == null) {
+        value2 = obj3.get(current);
+        if (value2 == null) {
           const _Map = Map;
-          value = new Map();
+          value2 = new Map();
         }
-        const result = value.set(tmp15, tmp5);
-        const result1 = obj3.set(current, value);
-        const result2 = closure_1_3.set(tmp15, tmp5);
+        const result = value2.set(tmp15, tmp5);
+        const result1 = obj3.set(current, value2);
+        const result2 = map1.set(tmp15, tmp5);
         const _process = process;
         if ("development" === process.env.DEVELOPMENT) {
           const hasItem = obj2.has(tmp15);
         }
-        obj2 = closure_1_3;
-        const tmp14 = obj;
+        obj2 = map1;
       }
     },
     unregister() {
-      if (null != c1) {
+      if (null != obj) {
         const current = obj.current;
-        const value = obj.get(current);
+        value = map.get(current);
         if (null != value) {
           value.delete(tmp2);
           if (0 === value.size) {
             obj.delete(current);
           }
-          closure_1_3.delete(tmp2);
+          map1.delete(tmp2);
         }
       }
     }
   };
-  return obj;
 }
 export const getHighestActiveScreenIndex = function getHighestActiveScreenIndex() {
   let obj = arg0;
@@ -150,11 +147,10 @@ export const getHighestActiveScreenIndex = function getHighestActiveScreenIndex(
       return "new-message";
     } else {
       const _Array = Array;
-      const found = Array.from(obj.keys()).filter((num) => {
-        let tmp = typeof num === "number";
-        if (typeof num === "number") {
-          tmp = !callback(table[0]).isScreenIndexFrozen(num);
-          const obj = callback(table[0]);
+      const found = Array.from(obj.keys()).filter((item) => {
+        let tmp = typeof item === "number";
+        if (typeof item === "number") {
+          tmp = !ScreenIndexFrozen.isScreenIndexFrozen(item);
         }
         return tmp;
       });
@@ -171,12 +167,12 @@ export const getHighestActiveScreenIndex = function getHighestActiveScreenIndex(
 };
 export const getChatInputRef = function getChatInputRef(id, screenIndex) {
   if (null != id) {
-    let value = map.get(id);
+    value = map.get(id);
     let current;
     if (value != null) {
-      value = value.get(screenIndex);
-      if (value != null) {
-        current = value.current;
+      value2 = value.get(screenIndex);
+      if (value2 != null) {
+        current = value2.current;
       }
     }
     return current;
@@ -184,7 +180,7 @@ export const getChatInputRef = function getChatInputRef(id, screenIndex) {
 };
 export const getBestActiveInputForChannelId = function getBestActiveInputForChannelId(channelId) {
   if (null != channelId) {
-    let value = map.get(channelId);
+    value = map.get(channelId);
     if (null != value) {
       let obj2 = value;
       if (value === undefined) {
@@ -199,11 +195,10 @@ export const getBestActiveInputForChannelId = function getBestActiveInputForChan
             str = "new-message";
             if (!obj2.has("new-message")) {
               const _Array = Array;
-              const found = Array.from(obj2.keys()).filter((num) => {
-                let tmp = typeof num === "number";
-                if (typeof num === "number") {
-                  tmp = !callback(table[0]).isScreenIndexFrozen(num);
-                  const obj = callback(table[0]);
+              const found = Array.from(obj2.keys()).filter((item) => {
+                let tmp = typeof item === "number";
+                if (typeof item === "number") {
+                  tmp = !ScreenIndexFrozen.isScreenIndexFrozen(item);
                 }
                 return tmp;
               });
@@ -219,13 +214,13 @@ export const getBestActiveInputForChannelId = function getBestActiveInputForChan
           }
         }
       }
-      value = undefined;
+      value2 = undefined;
       if (null != str) {
-        value = value.get(str);
+        value2 = value.get(str);
       }
       let current;
-      if (value != null) {
-        current = value.current;
+      if (value2 != null) {
+        current = value2.current;
       }
       return current;
     }
@@ -233,19 +228,17 @@ export const getBestActiveInputForChannelId = function getBestActiveInputForChan
 };
 export { getBestActiveInput };
 export const dismissKeyboard = function dismissKeyboard() {
-  let obj = dismissGlobalKeyboard;
-  const result = obj.dismissGlobalKeyboard();
+  const result = KeyboardManagerUtils.dismissGlobalKeyboard();
   const obj2 = getBestActiveInput();
   if (null != obj2) {
     obj2.closeCustomKeyboard();
   }
-  let tmpResult = tmp(4427);
-  const keyboardType = tmpResult.getKeyboardType();
+  const keyboardType = useKeyboardType.getKeyboardType();
   if (keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM) {
-    tmpResult = tmp(1481);
-    obj = { type: null };
-    obj[0] = tmp(1609).KeyboardTypes.SYSTEM;
-    tmpResult.setKeyboardType(obj);
+    const obj3 = { type: tmp(1609).KeyboardTypes.SYSTEM };
+    tmp(1481).setKeyboardType(obj3);
+    const tmpResult3 = tmp(1481);
   }
-  const result1 = zustandStore.closePortalKeyboardRequest();
+  const tmpResult = useKeyboardType;
+  const result1 = PortalKeyboardUIStore.closePortalKeyboardRequest();
 };

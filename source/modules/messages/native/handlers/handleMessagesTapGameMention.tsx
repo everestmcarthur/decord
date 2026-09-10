@@ -1,19 +1,18 @@
-// Module ID: 11618
-// Function ID: 11619
+// Module ID: 11644
+// Function ID: 11645
 // Name: handleMessagesTapGameMention
-// Dependencies: [8685, 8691, 2]
+// Dependencies: [8713, 8719, 2]
 // Exports: handleMessagesTapGameMention
 
-// Module 11618 (handleMessagesTapGameMention)
-import set from "set" /* 2 */;
-import _modDef8685 from "module_8685" /* 8685 */;
-import GameProfileEmbedAction from "GameProfileEmbedAction" /* 8691 */;
+// Module 11644 (handleMessagesTapGameMention)
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8713 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8719 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapGameMention.tsx");
+const result = size.fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapGameMention.tsx");
 
 export const handleMessagesTapGameMention = function handleMessagesTapGameMention(gameId) {
   gameId = gameId.gameId;
-  let obj = _modDef8685;
-  obj = { gameId, gameProfileModalChecks: { shouldOpenGameProfile: true, gameId }, source: GameProfileEmbedAction.GameProfileSources.GameMention };
-  obj.openGameProfileModal(obj);
+  const obj = GameProfileActionCreatorsDefault;
+  obj.openGameProfileModal({ gameId, gameProfileModalChecks: { shouldOpenGameProfile: true, gameId }, source: GameProfileAnalyticUtils.GameProfileSources.GameMention });
 };

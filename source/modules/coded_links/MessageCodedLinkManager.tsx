@@ -1,78 +1,72 @@
-// Module ID: 17418
-// Function ID: 17419
-// Name: resolveMessageCodedLinks
-// Dependencies: [5, 7457, 1957, 4544, 4543, 4548, 17419, 8378, 7324, 12075, 7118, 17426, 2]
+// Module ID: 17449
+// Function ID: 17450
+// Name: MessageCodedLinkManager
+// Dependencies: [5, 7471, 1957, 4558, 4557, 4562, 17450, 8406, 7338, 12101, 7132, 17457, 2]
 
-// Module 17418 (resolveMessageCodedLinks)
-import ensureGuildLoadedDefault from "ensureGuildLoaded" /* 1957 */;
-import getPathsFromURLDefault from "getPathsFromURL" /* 4543 */;
-import initializeDefault from "initialize" /* 7118 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 17426 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleGuildTemplateResolveSuccess" /* 7457 */;
-import closure_5 from "updateInvite" /* 4544 */;
+// Module 17449 (MessageCodedLinkManager)
+import findCodedLinksDefault from "findCodedLinks" /* 4557 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 17457 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7471 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import InviteStore from "InviteStore" /* 4558 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-const require = arg1;
+const require = fn;
 function resolveMessageCodedLinks(content) {
   closure_0 = content;
   content = content.content;
   if (content == null) {
     content = null;
   }
-  let arr = getPathsFromURLDefault(content);
+  let arr = findCodedLinksDefault(content);
   let tmp2 = null != arr;
   if (tmp2) {
     tmp2 = 0 !== arr.length;
   }
   if (tmp2) {
-    let item = arr.forEach((arg0) => {
-      ({ type, code } = arg0);
-      if (code(table[5]).CodedLinkType.INVITE === type) {
-        let tmpResult = tmp(tmp2[6]);
-        const result = tmpResult.queueMessageLinkFetch(callback(function*() {
+    let item = arr.forEach((item) => {
+      ({ type, code } = item);
+      if (code(dependencyMap[5]).CodedLinkType.INVITE === type) {
+        const result = tmp(tmp2[6]).queueMessageLinkFetch(closure_3(function*(arg0, value) {
           if (c0 === 2) {
             c0 = 3;
-            HermesBuiltin.throwTypeError();
+            throw new TypeError("Generator functions may not be called on executing generators");
           } else if (tmp3 === 3) {
             if (arg0 === 1) {
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               return { value: "HermesInternal", done: null };
             }
           } else {
             try {
               c0 = 2;
-              if (0 === v0) {
+              if (0 === v1) {
                 if (arg0 === 1) {
                   c0 = 3;
-                  throw arg1;
+                  throw value;
                 } else if (arg0 === 2) {
                   c0 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
+                  const obj4 = { value, done: true };
+                  return obj4;
                 } else {
-                  if (null == closure_1_5.getInvite(c0)) {
-                    obj1 = v0(closure_1_2[7]);
-                    v0 = 1;
+                  if (null == invite.getInvite(code)) {
+                    v1 = 1;
                     c0 = 1;
-                    obj1 = { value: null, done: false };
-                    obj1[0] = obj1.resolveInvite(tmp6);
-                    return obj1;
+                    const obj5 = { value: v1(dependencyMap[7]).resolveInvite(tmp6), done: false };
+                    return obj5;
                   }
-                  tmp6 = c0;
+                  tmp6 = code;
                 }
               } else if (arg0 === 1) {
                 c0 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 c0 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
+                const obj = { value, done: true };
                 return obj;
               }
               c0 = 3;
@@ -83,52 +77,47 @@ function resolveMessageCodedLinks(content) {
             }
           }
         }));
+        const tmpResult = tmp(tmp2[6]);
       } else if (tmp(tmp2[5]).CodedLinkType.TEMPLATE === type) {
-        tmpResult = tmp(tmp2[6]);
-        const result1 = tmpResult.queueMessageLinkFetch(callback(function*() {
+        const result1 = tmp(tmp2[6]).queueMessageLinkFetch(closure_3(function*(arg0, value) {
           if (c0 === 2) {
             c0 = 3;
-            HermesBuiltin.throwTypeError();
+            throw new TypeError("Generator functions may not be called on executing generators");
           } else if (tmp3 === 3) {
             if (arg0 === 1) {
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               return { value: "HermesInternal", done: null };
             }
           } else {
             try {
               c0 = 2;
-              if (0 === v0) {
+              if (0 === v1) {
                 if (arg0 === 1) {
                   c0 = 3;
-                  throw arg1;
+                  throw value;
                 } else if (arg0 === 2) {
                   c0 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
+                  const obj4 = { value, done: true };
+                  return obj4;
                 } else {
-                  if (null == closure_1_4.getGuildTemplate(c0)) {
-                    obj1 = v0(closure_1_2[8]);
-                    v0 = 1;
+                  if (null == guildTemplate.getGuildTemplate(code)) {
+                    v1 = 1;
                     c0 = 1;
-                    obj1 = { value: null, done: false };
-                    obj1[0] = obj1.resolveGuildTemplate(tmp6);
-                    return obj1;
+                    const obj5 = { value: v1(dependencyMap[8]).resolveGuildTemplate(tmp6), done: false };
+                    return obj5;
                   }
-                  tmp6 = c0;
+                  tmp6 = code;
                 }
               } else if (arg0 === 1) {
                 c0 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 c0 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
+                const obj = { value, done: true };
                 return obj;
               }
               c0 = 3;
@@ -139,6 +128,7 @@ function resolveMessageCodedLinks(content) {
             }
           }
         }));
+        const tmpResult3 = tmp(tmp2[6]);
       } else if (tmp(tmp2[5]).CodedLinkType.BUILD_OVERRIDE !== type) {
         if (tmp(tmp2[5]).CodedLinkType.MANUAL_BUILD_OVERRIDE !== type) {
           if (tmp(tmp2[5]).CodedLinkType.EVENT !== type) {
@@ -160,7 +150,7 @@ function resolveMessageCodedLinks(content) {
                                           if (tmp(tmp2[5]).CodedLinkType.USER_PROFILE !== type) {
                                             if (tmp(tmp2[5]).CodedLinkType.APP_DIRECTORY_PROFILE === type) {
                                               const embedApplication = tmp(tmp2[9]).getEmbedApplication(code);
-                                              const tmpResult1 = tmp(tmp2[9]);
+                                              const tmpResult4 = tmp(tmp2[9]);
                                             } else {
                                               const _Error = Error;
                                               const _HermesInternal = HermesInternal;
@@ -190,60 +180,54 @@ function resolveMessageCodedLinks(content) {
   const message_snapshots = content.message_snapshots;
   if (message_snapshots != null) {
     const item1 = message_snapshots.forEach((message) => {
-      const arr = closure_1_1(closure_1_2[4])(message.message.content);
+      const arr = findCodedLinksDefault(message.message.content);
       let tmp = null != arr;
       if (tmp) {
         tmp = 0 !== arr.length;
       }
       if (tmp) {
-        const item = arr.forEach((arg0) => {
-          ({ type, code } = arg0);
-          if (code(table[5]).CodedLinkType.INVITE === type) {
-            let tmpResult = tmp(tmp2[6]);
-            const result = tmpResult.queueMessageLinkFetch(callback(function*() {
+        const item = arr.forEach((item) => {
+          ({ type, code } = item);
+          if (code(dependencyMap[5]).CodedLinkType.INVITE === type) {
+            const result = tmp(tmp2[6]).queueMessageLinkFetch(closure_3(function*(arg0, value) {
               if (c0 === 2) {
                 c0 = 3;
-                HermesBuiltin.throwTypeError();
+                throw new TypeError("Generator functions may not be called on executing generators");
               } else if (tmp3 === 3) {
                 if (arg0 === 1) {
-                  throw arg1;
+                  throw value;
                 } else if (arg0 === 2) {
-                  let obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
+                  const obj3 = { value, done: true };
+                  return obj3;
                 } else {
                   return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
                   c0 = 2;
-                  if (0 === v0) {
+                  if (0 === v1) {
                     if (arg0 === 1) {
                       c0 = 3;
-                      throw arg1;
+                      throw value;
                     } else if (arg0 === 2) {
                       c0 = 3;
-                      obj = { value: null, done: true };
-                      obj[0] = arg1;
-                      return obj;
+                      const obj4 = { value, done: true };
+                      return obj4;
                     } else {
-                      if (null == closure_1_5.getInvite(c0)) {
-                        obj1 = v0(closure_1_2[7]);
-                        v0 = 1;
+                      if (null == invite.getInvite(code)) {
+                        v1 = 1;
                         c0 = 1;
-                        obj1 = { value: null, done: false };
-                        obj1[0] = obj1.resolveInvite(tmp6);
-                        return obj1;
+                        const obj5 = { value: v1(dependencyMap[7]).resolveInvite(tmp6), done: false };
+                        return obj5;
                       }
-                      tmp6 = c0;
+                      tmp6 = code;
                     }
                   } else if (arg0 === 1) {
                     c0 = 3;
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
                     c0 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
+                    const obj = { value, done: true };
                     return obj;
                   }
                   c0 = 3;
@@ -254,52 +238,47 @@ function resolveMessageCodedLinks(content) {
                 }
               }
             }));
+            const tmpResult = tmp(tmp2[6]);
           } else if (tmp(tmp2[5]).CodedLinkType.TEMPLATE === type) {
-            tmpResult = tmp(tmp2[6]);
-            const result1 = tmpResult.queueMessageLinkFetch(callback(function*() {
+            const result1 = tmp(tmp2[6]).queueMessageLinkFetch(closure_3(function*(arg0, value) {
               if (c0 === 2) {
                 c0 = 3;
-                HermesBuiltin.throwTypeError();
+                throw new TypeError("Generator functions may not be called on executing generators");
               } else if (tmp3 === 3) {
                 if (arg0 === 1) {
-                  throw arg1;
+                  throw value;
                 } else if (arg0 === 2) {
-                  let obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
+                  const obj3 = { value, done: true };
+                  return obj3;
                 } else {
                   return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
                   c0 = 2;
-                  if (0 === v0) {
+                  if (0 === v1) {
                     if (arg0 === 1) {
                       c0 = 3;
-                      throw arg1;
+                      throw value;
                     } else if (arg0 === 2) {
                       c0 = 3;
-                      obj = { value: null, done: true };
-                      obj[0] = arg1;
-                      return obj;
+                      const obj4 = { value, done: true };
+                      return obj4;
                     } else {
-                      if (null == closure_1_4.getGuildTemplate(c0)) {
-                        obj1 = v0(closure_1_2[8]);
-                        v0 = 1;
+                      if (null == guildTemplate.getGuildTemplate(code)) {
+                        v1 = 1;
                         c0 = 1;
-                        obj1 = { value: null, done: false };
-                        obj1[0] = obj1.resolveGuildTemplate(tmp6);
-                        return obj1;
+                        const obj5 = { value: v1(dependencyMap[8]).resolveGuildTemplate(tmp6), done: false };
+                        return obj5;
                       }
-                      tmp6 = c0;
+                      tmp6 = code;
                     }
                   } else if (arg0 === 1) {
                     c0 = 3;
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
                     c0 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
+                    const obj = { value, done: true };
                     return obj;
                   }
                   c0 = 3;
@@ -310,6 +289,7 @@ function resolveMessageCodedLinks(content) {
                 }
               }
             }));
+            const tmpResult3 = tmp(tmp2[6]);
           } else if (tmp(tmp2[5]).CodedLinkType.BUILD_OVERRIDE !== type) {
             if (tmp(tmp2[5]).CodedLinkType.MANUAL_BUILD_OVERRIDE !== type) {
               if (tmp(tmp2[5]).CodedLinkType.EVENT !== type) {
@@ -331,7 +311,7 @@ function resolveMessageCodedLinks(content) {
                                               if (tmp(tmp2[5]).CodedLinkType.USER_PROFILE !== type) {
                                                 if (tmp(tmp2[5]).CodedLinkType.APP_DIRECTORY_PROFILE === type) {
                                                   const embedApplication = tmp(tmp2[9]).getEmbedApplication(code);
-                                                  const tmpResult1 = tmp(tmp2[9]);
+                                                  const tmpResult4 = tmp(tmp2[9]);
                                                 } else {
                                                   const _Error = Error;
                                                   const _HermesInternal = HermesInternal;
@@ -361,19 +341,16 @@ function resolveMessageCodedLinks(content) {
     });
   }
 }
-ensureGuildLoadedDefault;
-initializeDefault;
 class MessageCodedLinkManager extends tmp7 {
   constructor() {
     tmp3 = new MessageCodedLinkManager(tmp2, tmp, new.target);
-    // ThrowIfThisInitialized (0x7c)
-    tmp4 = require("setupLoadFromMessageManagerHandlers")(tmp3, resolveMessageCodedLinks);
+    tmp4 = closure_1(closure_2[11])(tmp3, resolveMessageCodedLinks);
     return tmp3;
   }
 }
-tmp = new tmp(tmp4, tmp3, tmp2, Object, defineProperty, MessageCodedLinkManager, importDefault);
-// ThrowIfThisInitialized (0x7c)
-setupLoadFromMessageManagerHandlersDefault(tmp, resolveMessageCodedLinks);
-let result = require("set").fileFinishedImporting("modules/coded_links/MessageCodedLinkManager.tsx");
+const tmp5 = new tmp(tmp4, tmp3, tmp2, Object, defineProperty, MessageCodedLinkManager, importDefault);
+setupLoadFromMessageManagerHandlersDefault(tmp5, resolveMessageCodedLinks);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/coded_links/MessageCodedLinkManager.tsx");
 
-export default tmp;
+export default tmp5;

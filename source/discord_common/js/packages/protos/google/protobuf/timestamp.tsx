@@ -1,25 +1,24 @@
 // Module ID: 1217
 // Function ID: 1218
-// Name: now
+// Name: timestamp
 // Dependencies: [32, 1188, 2]
 
-// Module 1217 (now)
+// Module 1217 (timestamp)
 import _mod1188 from "module_1188" /* 1188 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType } from "module_1188" /* 1188 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
+require = fn;
+const MessageType = fn(1188).MessageType;
 class Timestamp$Type extends MessageType {
   constructor() {
     items = [, ];
     items[0] = { no: 1, name: "seconds", kind: "scalar", T: 3 };
     items[1] = { no: 2, name: "nanos", kind: "scalar", T: 5 };
-    tmp = new tmp("google.protobuf.Timestamp", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
-    return tmp;
+    tmp1 = new tmp("google.protobuf.Timestamp", items, new.target);
+    return tmp1;
   }
 }
-let prototype = Timestamp$Type.prototype;
+const prototype = Timestamp$Type.prototype;
 prototype["now"] = function now() {
   const obj = this.create();
   const timestamp = Date.now();
@@ -50,7 +49,7 @@ prototype["internalJsonWrite"] = function internalJsonWrite(seconds) {
     if (result <= Date.parse("9999-12-31T23:59:59Z")) {
       if (seconds.nanos < 0) {
         const _Error = Error;
-        error = new Error("Unable to encode invalid Timestamp to JSON. Nanos must not be negative.");
+        const error = new Error("Unable to encode invalid Timestamp to JSON. Nanos must not be negative.");
         throw error;
       } else if (seconds.nanos <= 0) {
         const _Date = Date;
@@ -74,11 +73,10 @@ prototype["internalJsonWrite"] = function internalJsonWrite(seconds) {
   const error1 = new Error("Unable to encode Timestamp to JSON. Must be from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z inclusive.");
   throw error1;
 };
-prototype["internalJsonRead"] = function internalJsonRead(str) {
+prototype["internalJsonRead"] = function internalJsonRead(str, arg1, arg2) {
   if (typeof str !== "string") {
     const _Error3 = Error;
-    let obj = _mod1188;
-    error = new Error("Unable to parse Timestamp from JSON " + obj.typeofJsonValue(str) + ".");
+    const error = new Error("Unable to parse Timestamp from JSON " + _mod1188.typeofJsonValue(str) + ".");
     throw error;
   } else {
     const match = str.match(/^([0-9]{4})-([0-9]{2})-([0-9]{2})T([0-9]{2}):([0-9]{2}):([0-9]{2})(?:Z|\.([0-9]{3,9})Z|([+-][0-9][0-9]:[0-9][0-9]))$/);
@@ -99,21 +97,21 @@ prototype["internalJsonRead"] = function internalJsonRead(str) {
         if (parsed >= Date.parse("0001-01-01T00:00:00Z")) {
           const _Date2 = Date;
           if (parsed <= Date.parse("9999-12-31T23:59:59Z")) {
-            obj = arg2;
+            let obj2 = arg2;
             if (!arg2) {
               const self = this;
-              obj = this.create();
+              obj2 = this.create();
             }
             const PbLong = _mod1188.PbLong;
-            obj.seconds = PbLong.from(parsed / 1000).toString();
-            obj.nanos = 0;
+            obj2.seconds = PbLong.from(parsed / 1000).toString();
+            obj2.nanos = 0;
             if (match[7]) {
               const _parseInt = parseInt;
               const repeat = "0".repeat;
               const text1 = `1${tmp26[7]}`;
-              obj.nanos = parseInt(`1${tmp26[7]}` + "0".repeat(9 - match[7].length)) - 1000000000;
+              obj2.nanos = parseInt(`1${tmp26[7]}` + "0".repeat(9 - match[7].length)) - 1000000000;
             }
-            return obj;
+            return obj2;
           }
         }
         const _globalThis = globalThis;
@@ -128,17 +126,16 @@ prototype["internalJsonRead"] = function internalJsonRead(str) {
   }
 };
 prototype["create"] = function create(arr) {
-  let obj = { seconds: "0", nanos: 0 };
+  const obj = { seconds: "0", nanos: 0 };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
     const result = _mod1188.reflectionMergePartial(this, obj, arr);
     const tmpResult = _mod1188;
   }
   return obj;
 };
-prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -147,8 +144,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         let str4 = pos.int64();
@@ -164,25 +160,16 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -211,8 +198,8 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(seconds, tag, wr
   return tag;
 };
 let items = [{ no: 1, name: "seconds", kind: "scalar", T: 3 }, { no: 2, name: "nanos", kind: "scalar", T: 5 }];
-prototype = new prototype("google.protobuf.Timestamp", items, tmp, Timestamp$Type, prototype, items, arg1);
-// ThrowIfThisInitialized (0x7c)
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/google/protobuf/timestamp.tsx");
+const prototype1 = new prototype("google.protobuf.Timestamp", items, tmp, Timestamp$Type, prototype, items, fn);
+const size = fn(2);
+let result = size.fileFinishedImporting("../discord_common/js/packages/protos/google/protobuf/timestamp.tsx");
 
-export const Timestamp = prototype;
+export const Timestamp = prototype1;

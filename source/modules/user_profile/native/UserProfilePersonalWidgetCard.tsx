@@ -1,52 +1,45 @@
-// Module ID: 8663
-// Function ID: 8664
-// Name: PersonalWidgetText
-// Dependencies: [32, 19, 17, 502, 1074, 21, 4560, 576, 8664, 8665, 4556, 1114, 1935, 8666, 4271, 5587, 4987, 8255, 504, 7207, 8667, 8668, 2]
+// Module ID: 8691
+// Function ID: 8692
+// Name: UserProfilePersonalWidgetCard
+// Dependencies: [32, 19, 17, 502, 1074, 21, 4574, 576, 8692, 8693, 4570, 1114, 1935, 8694, 4284, 5601, 5001, 8281, 504, 7221, 8695, 8696, 2]
 // Exports: default
 
-// Module 8663 (PersonalWidgetText)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import ManaContext from "ManaContext" /* 4271 */;
-import preloadDefault from "preload" /* 5587 */;
-import GifTagDefault from "GifTag" /* 8255 */;
-import PersonalWidgetExpandCollapseProvider from "PersonalWidgetExpandCollapseProvider" /* 8664 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "fetchFingerprint" /* 502 */;
-import { ThemeTypes } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 8691 (UserProfilePersonalWidgetCard)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 4284 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import GifTagDefault from "GifTag" /* 8281 */;
+import PersonalWidgetExpandCollapseContext from "PersonalWidgetExpandCollapseContext" /* 8692 */;
+import PersonalWidgetMarkupUtils from "PersonalWidgetMarkupUtils" /* 8693 */;
+import WidgetAssetUtils from "WidgetAssetUtils" /* 8694 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-require = arg1;
+require = fn;
 function PersonalWidgetText(variant) {
   variant = variant.variant;
   const color = variant.color;
-  let children = variant.children;
+  const children = variant.children;
   const personalWidgetFieldClamp = variant(children[8]).usePersonalWidgetFieldClamp(variant.maxLines, children);
   const items = [children, variant, color];
   ({ lineClamp, onTextLayout } = personalWidgetFieldClamp);
-  children = React.useMemo(() => {
-    let obj = variant(children[9]);
-    obj = { textVariant: variant, linkVariant: variant, textColor: color };
-    return obj.parsePersonalWidgetReact(children, undefined, obj);
-  }, items);
-  return callback2(variant(children[10]).Text, { variant, color, lineClamp, onTextLayout, children });
+  const children1 = noop.useMemo(() => PersonalWidgetMarkupUtils.parsePersonalWidgetReact(children, undefined, { textVariant: variant, linkVariant: variant, textColor: color }), items);
+  return closure_10(variant(children[10]).Text, { variant, color, lineClamp, onTextLayout, children: children1 });
 }
 function PersonalWidgetShowMoreButton() {
-  let obj = PersonalWidgetExpandCollapseProvider;
-  const personalWidgetExpandCollapse = obj.usePersonalWidgetExpandCollapse();
+  const personalWidgetExpandCollapse = PersonalWidgetExpandCollapseContext.usePersonalWidgetExpandCollapse();
   ({ isExpanded, setIsExpanded: require } = personalWidgetExpandCollapse);
   if (!personalWidgetExpandCollapse.isAnyFieldClipped) {
     if (!isExpanded) {
       return null;
     }
   }
-  obj = {
-    hitSlop: closure_14,
+  const obj2 = {
+    hitSlop,
     onPress() {
-      return callback((arg0) => !arg0);
+      return _require((arg0) => !arg0);
     },
     accessibilityRole: "button",
     accessibilityState: { expanded: isExpanded },
@@ -54,17 +47,16 @@ function PersonalWidgetShowMoreButton() {
   };
   const intl = tmp(1114).intl;
   let t = tmp(1114).t;
-  obj = { variant: "text-sm/medium", color: "text-subtle", children: intl.string(isExpanded ? t["6MwJo/"] : t.lBeKY2) };
-  t = tmp5(tmp(4556).Text, obj);
-  obj[4] = t;
-  closure_10(closure_5, obj);
+  const tmp6 = hasOwnProperty;
+  t = tmp5(tmp(4570).Text, { variant: "text-sm/medium", color: "text-subtle", children: intl.string(isExpanded ? t["6MwJo/"] : t.lBeKY2) });
+  obj2.children = t;
+  closure_1_10(tmp6, obj2);
 }
 function useWidgetImage(userId, image, disableInteraction) {
-  const _require = userId;
-  const GifAutoPlay = _require(first[12]).GifAutoPlay;
+  _require = userId;
+  const GifAutoPlay = require("UserSettings").GifAutoPlay;
   const setting = GifAutoPlay.useSetting();
-  let obj = React;
-  let tmp2 = callback(React.useState(false), 2);
+  let tmp2 = _slicedToArray(noop.useState(false), 2);
   closure_1 = tmp2[1];
   first = setting;
   if (!setting) {
@@ -77,28 +69,25 @@ function useWidgetImage(userId, image, disableInteraction) {
       tmp4 = image;
     }
   }
-  callback = tmp4;
+  _slicedToArray = tmp4;
   const items = [userId, tmp4, first];
   const memo = obj.useMemo(() => {
     let tmp2 = null;
     if (null != closure_3) {
-      let obj = userId(first[13]);
       let isAnimated = tmp.isAnimated;
       if (isAnimated) {
         isAnimated = first;
       }
-      obj = { uri: null };
-      obj = { animated: null };
-      obj[0] = isAnimated;
-      obj[0] = obj.getWidgetAssetURL(userId, tmp.fileId, obj);
-      tmp2 = obj;
-      const tmp5 = userId;
+      const obj2 = { uri: null };
+      const obj3 = { animated: isAnimated };
+      obj2.uri = WidgetAssetUtils.getWidgetAssetURL(closure_0, tmp.fileId, obj3);
+      tmp2 = obj2;
     }
     return tmp2;
   }, items);
-  obj = { source: memo, showGifTag: null, canToggleAnimation: null, toggleAnimation: null };
+  let obj2 = { source: memo, showGifTag: null, canToggleAnimation: null, toggleAnimation: null };
   let isAnimated = null != tmp4;
-  callback = obj.useCallback(() => callback((arg0) => !arg0), []);
+  const callback = obj.useCallback(() => closure_1((arg0) => !arg0), []);
   if (isAnimated) {
     isAnimated = tmp4.isAnimated;
   }
@@ -108,15 +97,15 @@ function useWidgetImage(userId, image, disableInteraction) {
   if (isAnimated) {
     isAnimated = !disableInteraction;
   }
-  obj[1] = isAnimated;
-  obj[2] = null != tmp4 && tmp4.isAnimated && !setting && !disableInteraction;
-  obj[3] = callback;
-  return obj;
+  obj2.showGifTag = isAnimated;
+  obj2.canToggleAnimation = null != tmp4 && tmp4.isAnimated && !setting && !disableInteraction;
+  obj2.toggleAnimation = callback;
+  return obj2;
 }
 function CoverSection(section) {
   section = section.section;
   ({ userId, disableInteraction } = section);
-  const tmp = callback3();
+  const tmp = closure_15();
   const tmp2 = useWidgetImage(userId, section.image, disableInteraction);
   const source = tmp2.source;
   const items = [tmp.coverContent, ];
@@ -125,145 +114,124 @@ function CoverSection(section) {
   if (null != source) {
     prop = tmp.coverContentWithImage;
   }
-  let obj = { style: items, pointerEvents: "box-none", children: null };
+  const obj = { style: items, pointerEvents: "box-none", children: null };
   items[1] = prop;
   let tmp6 = null;
   if ("" !== section.title) {
-    obj = { variant: "heading-xl/semibold", color: "text-strong", maxLines: 2, children: null };
-    obj[3] = section.title;
-    tmp6 = callback2(PersonalWidgetText, obj);
+    const obj2 = { variant: "heading-xl/semibold", color: "text-strong", maxLines: 2, children: section.title };
+    tmp6 = closure_1_10(PersonalWidgetText, obj2);
   }
   const items1 = [tmp6, ];
   let tmp9 = null;
   if ("" !== section.subtitle) {
-    obj = { variant: "text-sm/medium", color: "text-default", maxLines: 3, children: null };
-    obj[3] = section.subtitle;
-    tmp9 = callback2(PersonalWidgetText, obj);
+    const obj3 = { variant: "text-sm/medium", color: "text-default", maxLines: 3, children: section.subtitle };
+    tmp9 = closure_1_10(PersonalWidgetText, obj3);
   }
   items1[1] = tmp9;
-  obj[2] = items1;
-  const tmp3Result = closure_11(closure_7, obj);
-  let tmp24Result2 = tmp3Result;
+  obj.children = items1;
+  const tmp3Result = closure_1_11(React5, obj);
+  let tmp24Result6 = tmp3Result;
   if (null != source) {
-    obj1 = { theme: null, primaryColor: null, secondaryColor: null, children: null };
-    obj1[0] = ThemeTypes.DARK;
-    const obj2 = { style: null, children: null };
-    obj2[0] = tmp.coverContainer;
+    const obj4 = { theme: ThemeTypes.DARK, primaryColor: null, secondaryColor: null, children: null };
+    const obj5 = { style: tmp.coverContainer, children: null };
     if (canToggleAnimation) {
-      const obj3 = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
-      obj3[0] = closure_6.absoluteFill;
-      obj3[1] = toggleAnimation;
+      const obj6 = { style: timestampProducer.absoluteFill, onPress: toggleAnimation, accessibilityRole: "button", accessibilityLabel: null, children: null };
       const intl = tmp25(1114).intl;
-      obj3[3] = intl.string(tmp25(1114).t.MxXgrL);
-      const obj4 = { source: null, style: null, resizeMode: "cover" };
-      obj4[0] = source;
-      obj4[1] = closure_6.absoluteFill;
-      obj3[4] = tmp24(preloadDefault, obj4);
-      let tmp24Result = tmp24(closure_5, obj3);
-      let tmp15 = closure_6;
+      obj6.accessibilityLabel = intl.string(tmp25(1114).t.MxXgrL);
+      const obj7 = { source, style: timestampProducer.absoluteFill, resizeMode: "cover" };
+      obj6.children = tmp24(FastImageDefault, obj7);
+      let tmp24Result = tmp24(hasOwnProperty, obj6);
+      let tmp15 = timestampProducer;
       let tmp14 = importDefault;
     } else {
       tmp14 = importDefault;
-      const obj5 = { source: null, style: null, resizeMode: "cover" };
-      obj5[0] = source;
-      tmp15 = closure_6;
-      obj5[1] = closure_6.absoluteFill;
-      tmp24Result = tmp24(preloadDefault, obj5);
+      const obj8 = { source, style: null, resizeMode: "cover" };
+      tmp15 = timestampProducer;
+      obj8.style = timestampProducer.absoluteFill;
+      tmp24Result = tmp24(FastImageDefault, obj8);
     }
     const items2 = [tmp24Result, , , ];
-    tmp24Result = null;
+    let tmp24Result4 = null;
     if (null != source) {
       if ("" !== section.title) {
-        const obj6 = { colors: null, locations: null, style: null, pointerEvents: "none" };
-        obj6[0] = closure_12;
-        obj6[1] = closure_13;
-        obj6[2] = tmp15.absoluteFill;
-        tmp24Result = tmp24(tmp14(4987), obj6);
+        const obj9 = { colors, locations, style: tmp15.absoluteFill, pointerEvents: "none" };
+        tmp24Result4 = tmp24(tmp14(5001), obj9);
       } else {
-        tmp24Result = null;
+        tmp24Result4 = null;
       }
     }
-    items2[1] = tmp24Result;
+    items2[1] = tmp24Result4;
     items2[2] = tmp3Result;
-    let tmp24Result1 = null;
+    let tmp24Result5 = null;
     if (showGifTag) {
-      const obj7 = { style: null };
-      obj7[0] = tmp.gifTag;
-      tmp24Result1 = tmp24(tmp14(8255), obj7);
+      const obj10 = { style: tmp.gifTag };
+      tmp24Result5 = tmp24(tmp14(8281), obj10);
     }
-    items2[3] = tmp24Result1;
-    obj2[1] = items2;
-    obj1[3] = tmp3(tmp4, obj2);
-    tmp24Result2 = tmp24(ManaContext.ThemeContextProvider, obj1);
+    items2[3] = tmp24Result5;
+    obj5.children = items2;
+    obj4.children = tmp3(tmp4, obj5);
+    tmp24Result6 = tmp24(native.ThemeContextProvider, obj4);
   }
-  return tmp24Result2;
+  return tmp24Result6;
 }
 function FieldRow(field) {
   field = field.field;
   ({ userId, disableInteraction } = field);
-  const tmp = callback3();
+  const tmp = closure_15();
   const tmp2 = useWidgetImage(userId, field.image, disableInteraction);
   const source = tmp2.source;
   let tmp3 = null;
   ({ showGifTag, canToggleAnimation, toggleAnimation } = tmp2);
   if (null != source) {
-    let obj = { source: null, style: null, resizeMode: "cover" };
-    obj[0] = source;
-    obj[1] = tmp.fieldImage;
-    tmp3 = callback2(preloadDefault, obj);
+    const obj = { source, style: tmp.fieldImage, resizeMode: "cover" };
+    tmp3 = closure_1_10(FastImageDefault, obj);
   }
-  obj = { style: tmp.fieldRow, children: null };
+  const obj2 = { style: tmp.fieldRow, children: null };
   let tmp7Result = tmp3;
   if (null != tmp3) {
     tmp7Result = tmp3;
     if (canToggleAnimation) {
-      obj = { onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
-      obj[0] = toggleAnimation;
-      const intl = getSystemLocale.intl;
-      obj[2] = intl.string(getSystemLocale.t.MxXgrL);
+      const obj3 = { onPress: toggleAnimation, accessibilityRole: "button", accessibilityLabel: null, children: null };
+      const intl = util.intl;
+      obj3.accessibilityLabel = intl.string(util.t.MxXgrL);
       const items = [tmp3, ];
       let tmp13 = null;
       if (showGifTag) {
-        obj1 = { style: null };
-        obj1[0] = tmp.gifTagSmall;
-        tmp13 = callback2(GifTagDefault, obj1);
+        const obj4 = { style: tmp.gifTagSmall };
+        tmp13 = closure_1_10(GifTagDefault, obj4);
       }
       items[1] = tmp13;
-      obj[3] = items;
-      tmp7Result = tmp7(closure_5, obj);
-      const tmp10 = closure_5;
+      obj3.children = items;
+      tmp7Result = tmp7(hasOwnProperty, obj3);
     }
   }
   const items1 = [tmp7Result, ];
-  const obj2 = { style: tmp.fieldContent, children: null };
+  const obj5 = { style: tmp.fieldContent, children: null };
   let tmp16 = null;
   if ("" !== field.title) {
-    const obj3 = { variant: "text-sm/medium", color: "text-default", maxLines: 2, children: null };
-    obj3[3] = field.title;
-    tmp16 = callback2(PersonalWidgetText, obj3);
+    const obj6 = { variant: "text-sm/medium", color: "text-default", maxLines: 2, children: field.title };
+    tmp16 = closure_1_10(PersonalWidgetText, obj6);
   }
   const items2 = [tmp16, ];
   let tmp19 = null;
   if ("" !== field.description) {
-    const obj4 = { variant: "text-xs/medium", color: "text-subtle", maxLines: 4, children: null };
-    obj4[3] = field.description;
-    tmp19 = callback2(PersonalWidgetText, obj4);
+    const obj7 = { variant: "text-xs/medium", color: "text-subtle", maxLines: 4, children: field.description };
+    tmp19 = closure_1_10(PersonalWidgetText, obj7);
   }
   items2[1] = tmp19;
-  obj2[1] = items2;
-  items1[1] = closure_11(closure_7, obj2);
-  obj[1] = items1;
-  return closure_11(closure_7, obj);
+  obj5.children = items2;
+  items1[1] = closure_1_11(React5, obj5);
+  obj2.children = items1;
+  return closure_1_11(React5, obj2);
 }
 function FieldsSection(arg0) {
   ({ userId: require, section, disableInteraction: importDefault } = arg0);
   let tmp2 = null;
   if (0 !== section.fields.length) {
-    const obj = { style: null, children: null };
-    obj[0] = tmp.fieldsContainer;
+    const obj = { style: tmp.fieldsContainer, children: null };
     const fields = section.fields;
-    obj[1] = fields.map((field) => closure_1_10(closure_1_20, { userId: closure_0, field, disableInteraction: closure_1 }, field.key));
-    tmp2 = callback2(closure_7, obj);
+    obj.children = fields.map((field) => closure_2_10(FieldRow, { userId, field, disableInteraction }, field.key));
+    tmp2 = closure_10(closure_7, obj);
   }
   return tmp2;
 }
@@ -273,89 +241,83 @@ function UserProfilePersonalWidgetCardContent(style) {
   if (disableInteraction === undefined) {
     disableInteraction = false;
   }
+  const tmp = closure_15();
+  const items = [AuthenticationStore];
+  const stateFromStores = userId(504).useStateFromStores(items, () => AuthenticationStore.getId() === userId);
+  let obj2 = { style: style.cardStyle, titleLeadingIcon: null, title: null, trailingAction: null, children: null };
   let obj = userId(504);
-  const items = [closure_8];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getId() === userId);
-  obj = { style: style.cardStyle, titleLeadingIcon: null, title: null, trailingAction: null, children: null };
-  const tmp = callback3();
   const tmp5 = disableInteraction;
-  obj[1] = callback2(userId(8667).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
-  obj[2] = widget.header;
+  obj2.titleLeadingIcon = closure_10(userId(8695).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
+  obj2.title = widget.header;
   let tmp4Result = !stateFromStores;
   if (!stateFromStores) {
     tmp4Result = !disableInteraction;
   }
   if (tmp4Result) {
-    obj = { userId: null, widget: null };
-    obj[0] = userId;
-    obj[1] = widget;
-    tmp4Result = tmp4(tmp5(8668), obj);
+    const obj3 = { userId, widget };
+    tmp4Result = tmp4(tmp5(8696), obj3);
   }
-  obj[3] = tmp4Result;
-  obj1 = { style: tmp.sectionsContainer, children: null };
+  obj2.trailingAction = tmp4Result;
+  const obj4 = { style: tmp.sectionsContainer, children: null };
   const sections = widget.sections;
   const items1 = [
-    sections.map((type) => {
+    sections.map((type, index) => {
       type = type.type;
       if ("cover" === type) {
-        let obj = { userId: null, section: null, disableInteraction: null };
-        obj[0] = userId;
-        obj[1] = type;
-        obj[2] = disableInteraction;
-        return closure_1_10(closure_1_19, obj, arg1);
+        const obj2 = { userId, section: type, disableInteraction };
+        return closure_2_10(CoverSection, obj2, index);
       } else if ("fields" === type) {
-        obj = { userId: null, section: null, disableInteraction: null };
-        obj[0] = userId;
-        obj[1] = type;
-        obj[2] = disableInteraction;
-        return closure_1_10(closure_1_21, obj, arg1);
+        const obj = { userId, section: type, disableInteraction };
+        return closure_2_10(FieldsSection, obj, index);
       } else {
         return null;
       }
     }),
 
   ];
-  tmp4Result = null;
+  let tmp4Result2 = null;
   if (!disableInteraction) {
-    tmp4Result = tmp4(PersonalWidgetShowMoreButton, {});
+    tmp4Result2 = tmp4(PersonalWidgetShowMoreButton, {});
   }
-  items1[1] = tmp4Result;
-  obj1[1] = items1;
-  obj[4] = closure_11(closure_7, obj1);
-  return callback2(disableInteraction(7207), obj);
+  items1[1] = tmp4Result2;
+  obj4.children = items1;
+  obj2.children = closure_11(closure_7, obj4);
+  return closure_10(disableInteraction(7221), obj2);
 }
-({ Pressable: c5, StyleSheet: closure_6, View: error } = get_ActivityIndicator);
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let closure_12 = ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 0.5)", "#000"];
-let closure_13 = [0, 0.4, 1];
-let closure_14 = { top: 8, bottom: 8, left: 8, right: 8 };
-createCacheKey = { coverContainer: null, coverContent: null, coverContentWithImage: null, sectionsContainer: null, fieldsContainer: null, fieldRow: null, fieldImage: null, fieldContent: null, gifTag: null, gifTagSmall: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.md, overflow: "hidden", justifyContent: "flex-end" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { gap: ThemesDefault.space.PX_4 };
-let obj1 = { gap: ThemesDefault.space.PX_4 };
-createCacheKey[2] = { padding: ThemesDefault.space.PX_16, marginTop: 56 };
-let obj2 = { padding: ThemesDefault.space.PX_16, marginTop: 56 };
-createCacheKey[3] = { gap: ThemesDefault.space.PX_12 };
-let obj3 = { gap: ThemesDefault.space.PX_12 };
-createCacheKey[4] = { gap: ThemesDefault.space.PX_12 };
-let obj4 = { gap: ThemesDefault.space.PX_12 };
-createCacheKey[5] = { flexDirection: "row", alignItems: "flex-start", gap: ThemesDefault.space.PX_12 };
-let obj5 = { flexDirection: "row", alignItems: "flex-start", gap: ThemesDefault.space.PX_12 };
-createCacheKey[6] = { width: ThemesDefault.space.PX_48, height: ThemesDefault.space.PX_48, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[7] = { flex: 1 };
-let obj6 = { width: ThemesDefault.space.PX_48, height: ThemesDefault.space.PX_48, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[8] = { position: "absolute", top: ThemesDefault.space.PX_8, left: ThemesDefault.space.PX_8 };
-let obj7 = { position: "absolute", top: ThemesDefault.space.PX_8, left: ThemesDefault.space.PX_8 };
-createCacheKey[9] = { position: "absolute", top: ThemesDefault.space.PX_4, left: ThemesDefault.space.PX_4 };
-let closure_15 = createCacheKey.createStyles(createCacheKey);
-const obj8 = { position: "absolute", top: ThemesDefault.space.PX_4, left: ThemesDefault.space.PX_4 };
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfilePersonalWidgetCard.tsx");
+get_ActivityIndicator = fn(17);
+({ Pressable: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
+const ThemeTypes = fn(1074).ThemeTypes;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const colors = ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 0.5)", "#000"];
+const locations = [0, 0.4, 1];
+const hitSlop = { top: 8, bottom: 8, left: 8, right: 8 };
+const createStyles = fn(4574);
+let obj2 = { coverContainer: { borderRadius: nativeDefault.radii.md, overflow: "hidden", justifyContent: "flex-end" }, coverContent: null, coverContentWithImage: null, sectionsContainer: null, fieldsContainer: null, fieldRow: null, fieldImage: null, fieldContent: null, gifTag: null, gifTagSmall: null };
+let obj3 = { borderRadius: nativeDefault.radii.md, overflow: "hidden", justifyContent: "flex-end" };
+obj2.coverContent = { gap: nativeDefault.space.PX_4 };
+let obj4 = { gap: nativeDefault.space.PX_4 };
+obj2.coverContentWithImage = { padding: nativeDefault.space.PX_16, marginTop: 56 };
+let obj5 = { padding: nativeDefault.space.PX_16, marginTop: 56 };
+obj2.sectionsContainer = { gap: nativeDefault.space.PX_12 };
+let obj6 = { gap: nativeDefault.space.PX_12 };
+obj2.fieldsContainer = { gap: nativeDefault.space.PX_12 };
+let obj7 = { gap: nativeDefault.space.PX_12 };
+obj2.fieldRow = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_12 };
+let size = { width: nativeDefault.space.PX_48, height: nativeDefault.space.PX_48, borderRadius: nativeDefault.radii.sm };
+obj2.fieldImage = size;
+obj2.fieldContent = { flex: 1 };
+const rect = { position: "absolute", top: nativeDefault.space.PX_8, left: nativeDefault.space.PX_8 };
+obj2.gifTag = rect;
+const rect1 = { position: "absolute", top: nativeDefault.space.PX_4, left: nativeDefault.space.PX_4 };
+obj2.gifTagSmall = rect1;
+let closure_15 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfilePersonalWidgetCard.tsx");
 
 export default function UserProfilePersonalWidgetCard(arg0) {
-  let obj = { children: null };
-  obj = {};
+  const obj = { children: null };
   const merged = Object.assign(arg0);
-  obj[0] = callback2(UserProfilePersonalWidgetCardContent, obj);
-  return callback2(PersonalWidgetExpandCollapseProvider.PersonalWidgetExpandCollapseProvider, obj);
+  obj.children = closure_1_10(UserProfilePersonalWidgetCardContent, {});
+  return closure_1_10(PersonalWidgetExpandCollapseContext.PersonalWidgetExpandCollapseProvider, obj);
 };

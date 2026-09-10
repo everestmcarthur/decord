@@ -1,25 +1,24 @@
-// Module ID: 13038
-// Function ID: 13039
+// Module ID: 13064
+// Function ID: 13065
 // Name: getActivityJoinability
-// Dependencies: [1074, 11766, 11763, 9536, 9507, 7313, 13039, 1115, 11760, 11761, 11762, 2]
+// Dependencies: [1074, 11792, 11789, 9563, 9534, 7327, 13065, 1115, 11786, 11787, 11788, 2]
 // Exports: default
 
-// Module 13038 (getActivityJoinability)
-import set from "set" /* 2 */;
-import set2 from "set" /* 1115 */;
-import hasFlagDefault from "hasFlag" /* 7313 */;
-import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 9507 */;
-import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 9536 */;
-import getEmbeddedActivityJoinabilityDefault from "getEmbeddedActivityJoinability" /* 9536 */;
-import getPartySize from "getPartySize" /* 11760 */;
-import getIsInParty from "getIsInParty" /* 11763 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11766 */;
-import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 13039 */;
-import ME from "ME" /* 1074 */;
+// Module 13064 (getActivityJoinability)
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import hasFlagDefault from "hasFlag" /* 7327 */;
+import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 9534 */;
+import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 9563 */;
+import getPartySize from "getPartySize" /* 11786 */;
+import getIsInParty from "getIsInParty" /* 11789 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11792 */;
+import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 13065 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-({ ActivityFlags: c3, ChannelTypes: c4, GuildFeatures: c5 } = ME);
-let obj = { CAN_JOIN: "can_join", CANNOT_JOIN: "cannot_join", JOINED: "joined" };
-const result = set.fileFinishedImporting("modules/activities/utils/getActivityJoinability.tsx");
+({ ActivityFlags: c3, ChannelTypes: closure_4, GuildFeatures: hasOwnProperty } = Constants);
+const ActivityJoinability = { CAN_JOIN: "can_join", CANNOT_JOIN: "cannot_join", JOINED: "joined" };
+const result = size.fileFinishedImporting("modules/activities/utils/getActivityJoinability.tsx");
 
 export default function getActivityJoinability(arg0) {
   ({ user, activity, channelId, isEmbedded, ChannelStore, GuildStore, GuildMemberCountStore, RelationshipStore, SelectedChannelStore, VoiceStateStore, EmbeddedActivitiesStore } = arg0);
@@ -40,19 +39,12 @@ export default function getActivityJoinability(arg0) {
     } else {
       if (isEmbedded) {
         if (null != channelId) {
-          obj = { userId: null, activity: null, channelId: null, currentUser: null, application: null, isActivitiesEnabledForCurrentPlatform: null, ChannelStore: null, VoiceStateStore: null, PermissionStore: null, GuildStore: null };
-          obj[0] = user.id;
-          obj[1] = activity;
-          obj[2] = channelId;
-          obj[3] = tmp2;
-          obj[4] = tmp;
-          const tmp45 = getEmbeddedActivityJoinabilityDefault;
-          obj[5] = useIsActivitiesEnabledForCurrentPlatform.getIsActivitiesEnabledForCurrentPlatform();
-          obj[6] = ChannelStore;
-          obj[7] = VoiceStateStore;
-          obj[8] = tmp3;
-          obj[9] = GuildStore;
-          const obj8 = useIsActivitiesEnabledForCurrentPlatform;
+          const obj5 = { userId: user.id, activity, channelId, currentUser: tmp2, application: tmp, isActivitiesEnabledForCurrentPlatform: null, ChannelStore: null, VoiceStateStore: null, PermissionStore: null, GuildStore: null };
+          obj5.isActivitiesEnabledForCurrentPlatform = useIsActivitiesEnabledForCurrentPlatform.getIsActivitiesEnabledForCurrentPlatform();
+          obj5.ChannelStore = ChannelStore;
+          obj5.VoiceStateStore = VoiceStateStore;
+          obj5.PermissionStore = tmp3;
+          obj5.GuildStore = GuildStore;
           if (tmp45Result === getEmbeddedActivityJoinability.EmbeddedActivityJoinability.CAN_JOIN) {
             let CANNOT_JOIN2 = obj.CAN_JOIN;
           } else {
@@ -69,13 +61,9 @@ export default function getActivityJoinability(arg0) {
         }
       }
       if (!isEmbedded) {
-        if (isActivityJoinableOnCurrentPlatformDefault(activity)) {
-          const obj2 = set2;
-        }
         return obj.CANNOT_JOIN;
       }
       const partySize = getPartySize.getPartySize(activity);
-      const obj3 = getPartySize;
       const tmp27 = require;
       if (obj4.hasPartySize(partySize)) {
         if (!tmp27Result.isPartyFull(partySize)) {
@@ -84,7 +72,7 @@ export default function getActivityJoinability(arg0) {
               return obj.CAN_JOIN;
             }
           }
-          if (tmp30(7313)(activity, tmp31.PARTY_PRIVACY_VOICE_CHANNEL)) {
+          if (tmp30(7327)(activity, tmp31.PARTY_PRIVACY_VOICE_CHANNEL)) {
             const channel = ChannelStore.getChannel(SelectedChannelStore.getVoiceChannelId());
             if (null != channel) {
               if (VoiceStateStore.isInChannel(channel.id, user.id)) {
@@ -118,7 +106,7 @@ export default function getActivityJoinability(arg0) {
           tmp30 = importDefault;
           tmp31 = constants;
         }
-        tmp27Result = tmp27(11762);
+        tmp27Result = tmp27(11788);
       }
       return obj.CANNOT_JOIN;
     }
@@ -133,8 +121,7 @@ export default function getActivityJoinability(arg0) {
       obj = getIsInParty;
       isInParty = obj.getIsInParty(tmp8Result, activity);
     }
-    const tmp8 = getCurrentUserPresenceActivityDefault;
   }
   return obj.JOINED;
 };
-export const ActivityJoinability = obj;
+export { ActivityJoinability };

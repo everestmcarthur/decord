@@ -1,38 +1,39 @@
-// Module ID: 17678
-// Function ID: 17679
+// Module ID: 17711
+// Function ID: 17712
 // Name: CommunityRequirementSatisfiedForm
-// Dependencies: [19, 17, 21, 4258, 17668, 5123, 2]
+// Dependencies: [19, 17, 21, 4271, 17701, 5137, 2]
 // Exports: default
 
-// Module 17678 (CommunityRequirementSatisfiedForm)
-import noopAll from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 17711 (CommunityRequirementSatisfiedForm)
+import ToastUtils from "ToastUtils" /* 4271 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-let result = require("set").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/CommunityRequirementSatisfiedForm.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/CommunityRequirementSatisfiedForm.tsx");
 
 export default function CommunityRequirementSatisfiedForm(formSwitchDisabled) {
   formSwitchDisabled = formSwitchDisabled.formSwitchDisabled;
-  let obj = formSwitchDisabled(17668);
-  const enableCommunitySharedStyles = obj.useEnableCommunitySharedStyles();
-  obj = { style: enableCommunitySharedStyles.communityRequirementSatisfiedFormWrapper, children: null };
+  const enableCommunitySharedStyles = formSwitchDisabled(17701).useEnableCommunitySharedStyles();
+  const obj2 = { style: enableCommunitySharedStyles.communityRequirementSatisfiedFormWrapper, children: null };
   const items = [formSwitchDisabled.children, ];
   let tmp6 = null;
   if (formSwitchDisabled) {
-    obj = { accessibilityRole: "button", style: null, onPress: null };
-    obj[1] = enableCommunitySharedStyles.communityRequirementSatisfiedFormPressable;
-    obj[2] = function onPress() {
-      if (formSwitchDisabled) {
-        const result = formSwitchDisabled(closure_1_1[3]).communityRequirementSatisfied();
-        const obj = formSwitchDisabled(closure_1_1[3]);
-      }
+    const obj3 = {
+      accessibilityRole: "button",
+      style: enableCommunitySharedStyles.communityRequirementSatisfiedFormPressable,
+      onPress() {
+          if (formSwitchDisabled) {
+            const result = ToastUtils.communityRequirementSatisfied();
+          }
+        }
     };
-    tmp6 = callback(formSwitchDisabled(5123).PressableOpacity, obj);
+    tmp6 = closure_3(formSwitchDisabled(5137).PressableOpacity, obj3);
   }
   items[1] = tmp6;
-  obj[1] = items;
-  return closure_4(View, obj);
+  obj2.children = items;
+  return closure_4(View, obj2);
 };

@@ -1,73 +1,79 @@
-// Module ID: 16571
-// Function ID: 16572
+// Module ID: 16602
+// Function ID: 16603
 // Name: StandaloneMembersView
-// Dependencies: [19, 21, 1483, 1611, 9068, 5624, 1114, 16572, 11841, 11854, 11856, 7000, 2]
+// Dependencies: [19, 21, 1483, 1611, 9095, 5638, 1114, 16603, 11867, 11880, 11882, 7014, 2]
 // Exports: default
 
-// Module 16571 (StandaloneMembersView)
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16602 (StandaloneMembersView)
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9095 */;
+import GuildSettingsModalMemberEdit from "GuildSettingsModalMemberEdit" /* 11867 */;
+import KickConfirmDefault from "KickConfirm" /* 11880 */;
+import BanConfirmDefault from "BanConfirm" /* 11882 */;
+import GuildSettingsModalMembersWithTabsDefault from "GuildSettingsModalMembersWithTabs" /* 16603 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let closure_5 = { MAIN: "MAIN", MEMBER_EDIT: "MEMBER_EDIT", MEMBER_KICK: "MEMBER_KICK", MEMBER_BAN: "MEMBER_BAN" };
-const result = require("set").fileFinishedImporting("modules/guild_settings/native/StandaloneMembersView.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const jsx = fn(21).jsx;
+const constants = { MAIN: "MAIN", MEMBER_EDIT: "MEMBER_EDIT", MEMBER_KICK: "MEMBER_KICK", MEMBER_BAN: "MEMBER_BAN" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/native/StandaloneMembersView.tsx");
 
 export default function StandaloneMembersView(guildId) {
   guildId = guildId.guildId;
-  importDefault = undefined;
-  dependencyMap = undefined;
-  let obj = guildId(1483);
-  importDefault = obj.useNavigation();
+  let obj2;
+  importDefault = guildId(obj2[2]).useNavigation();
   const items = [guildId];
-  const effect = React.useEffect(() => {
-    navigation(9068).init(guildId);
+  const effect = noop.useEffect(() => {
+    GuildSettingsActionCreatorsDefault.init(guildId);
   }, items);
-  obj = { paddingBottom: 16 + useSafeAreaInsetsDefault().bottom };
-  dependencyMap = { contentContainerStyle: obj };
-  obj = {};
-  obj1 = {
-    headerLeft: guildId(5624).getHeaderCloseButton(() => navigation.goBack()),
-    headerTitle() {
-      const obj = { title: null };
-      const intl = guildId(1114).intl;
-      obj[0] = intl.string(guildId(1114).t["9Oq93m"]);
-      return callback(guildId(5624).NavigatorHeader, obj);
-    },
-    render() {
-      return closure_1_4(navigation(16572), { guildId });
-    }
+  obj2 = { contentContainerStyle: null };
+  let obj = guildId(obj2[2]);
+  obj2.contentContainerStyle = { paddingBottom: 16 + require("useSafeAreaInsets")().bottom };
+  const obj4 = {};
+  const obj5 = { headerLeft: null, headerTitle: null, render: null };
+  const obj3 = { paddingBottom: 16 + require("useSafeAreaInsets")().bottom };
+  obj5.headerLeft = guildId(obj2[5]).getHeaderCloseButton(() => navigation.goBack());
+  obj5.headerTitle = function headerTitle() {
+    const obj = { title: null };
+    const intl = guildId(obj2[6]).intl;
+    obj.title = intl.string(guildId(obj2[6]).t["9Oq93m"]);
+    return jsx(guildId(obj2[5]).NavigatorHeader, { title: null });
   };
-  obj[constants.MAIN] = obj1;
-  obj[constants.MEMBER_EDIT] = {
+  obj5.render = function render() {
+    return jsx(GuildSettingsModalMembersWithTabsDefault, { guildId });
+  };
+  obj4[constants.MAIN] = obj5;
+  obj4[constants.MEMBER_EDIT] = {
     render(arg0) {
       const merged = Object.assign(arg0);
-      const merged1 = Object.assign(dependencyMap);
-      return closure_1_4(guildId(11841).GuildSettingsModalMemberEditScene, { guildId });
+      const merged1 = Object.assign(obj2);
+      return jsx(GuildSettingsModalMemberEdit.GuildSettingsModalMemberEditScene, { guildId });
     }
   };
-  obj[constants.MEMBER_KICK] = {
-    headerTitle() {
-      return null;
-    },
-    render(arg0) {
-      const merged = Object.assign(arg0);
-      const merged1 = Object.assign(dependencyMap);
-      return closure_1_4(navigation(11854), { guildId });
-    }
-  };
-  obj[constants.MEMBER_BAN] = {
+  obj4[constants.MEMBER_KICK] = {
     headerTitle() {
       return null;
     },
     render(arg0) {
       const merged = Object.assign(arg0);
-      const merged1 = Object.assign(dependencyMap);
-      return closure_1_4(navigation(11856), { guildId });
+      const merged1 = Object.assign(obj2);
+      return jsx(KickConfirmDefault, { guildId });
     }
   };
-  const obj2 = { screens: obj, initialRouteName: constants.MAIN, headerBackTitle: null };
-  let intl = guildId(1114).intl;
-  obj2[2] = intl.string(guildId(1114).t["13/7kX"]);
-  return jsx(guildId(7000).Navigator, { screens: obj, initialRouteName: constants.MAIN, headerBackTitle: null });
+  obj4[constants.MEMBER_BAN] = {
+    headerTitle() {
+      return null;
+    },
+    render(arg0) {
+      const merged = Object.assign(arg0);
+      const merged1 = Object.assign(obj2);
+      return jsx(BanConfirmDefault, { guildId });
+    }
+  };
+  const obj7 = { screens: obj4, initialRouteName: constants.MAIN, headerBackTitle: null };
+  let intl = guildId(obj2[6]).intl;
+  obj7.headerBackTitle = intl.string(guildId(obj2[6]).t["13/7kX"]);
+  return jsx(guildId(obj2[11]).Navigator, { screens: obj4, initialRouteName: constants.MAIN, headerBackTitle: null });
 };

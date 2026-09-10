@@ -1,24 +1,24 @@
-// Module ID: 17879
-// Function ID: 17880
+// Module ID: 17912
+// Function ID: 17913
 // Name: SafetyFlowTaskScreen
-// Dependencies: [19, 21, 4560, 8421, 8422, 4973, 4556, 11931, 17877, 11001, 2]
+// Dependencies: [19, 21, 4574, 8449, 8450, 4987, 4570, 11957, 17910, 11028, 2]
 // Exports: default
 
-// Module 17879 (SafetyFlowTaskScreen)
-import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4556 */;
-import Stack from "Stack" /* 4973 */;
-import ModalScreen from "ModalScreen" /* 8421 */;
-import ModalContent from "ModalContent" /* 8422 */;
-import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 17877 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17912 (SafetyFlowTaskScreen)
+import Text_Text from "Text/Text" /* 4570 */;
+import Stack_Stack from "Stack/Stack" /* 4987 */;
+import ModalScreen from "ModalScreen" /* 8449 */;
+import ModalContent from "ModalContent" /* 8450 */;
+import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 17910 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = createCacheKey.createStyles({ header: { textAlign: "center" } });
-const result = require("set").fileFinishedImporting("modules/safety_flows/native/SafetyFlowTaskScreen.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4574);
+let closure_5 = createStyles.createStyles({ header: { textAlign: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_flows/native/SafetyFlowTaskScreen.tsx");
 
 export default function SafetyFlowTaskScreen(action) {
   ({ ImageComponent, subtitle, subtitleColor } = action);
@@ -33,45 +33,37 @@ export default function SafetyFlowTaskScreen(action) {
   if (withLogout === undefined) {
     withLogout = true;
   }
-  const tmp2 = callback2();
+  const tmp2 = closure_5();
   let tmp6 = null != ImageComponent;
   if (tmp6) {
     tmp6 = ImageComponent;
   }
-  const items = [tmp6, , ];
-  let obj = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp2.header, children: action.title };
-  items[1] = callback(Text.Text, obj);
+  const items = [tmp6, React3(Text_Text.Text, { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp2.header, children: action.title }), ];
   let tmp7Result = null != subtitle;
   if (tmp7Result) {
-    obj = { variant: "text-md/medium", color: null, style: null, children: null };
-    obj[1] = subtitleColor;
-    obj[2] = tmp2.header;
-    obj[3] = subtitle;
-    tmp7Result = tmp7(tmp4(4556).Text, obj);
+    const obj2 = { variant: "text-md/medium", color: subtitleColor, style: tmp2.header, children: subtitle };
+    tmp7Result = tmp7(tmp4(4570).Text, obj2);
   }
-  obj = { children: null };
+  const obj3 = { children: null };
   items[2] = tmp7Result;
-  const items1 = [closure_4(Stack.Stack, { align: "center", justify: "center", spacing: 8, children: items }), children];
-  obj[0] = items1;
-  children = [closure_4(ModalContent.ModalContent, obj), ];
+  const items1 = [React4(Stack_Stack.Stack, { align: "center", justify: "center", spacing: 8, children: items }), children];
+  obj3.children = items1;
+  const children1 = [React4(ModalContent.ModalContent, obj3), ];
   if (undefined === footer) {
     if (withLogout) {
       withLogout = tmp7(LogOutDisclaimerDefault, {});
     }
     const items3 = [withLogout, ];
-    tmp7Result = null != action;
-    if (tmp7Result) {
-      obj1 = { variant: "primary", text: null, onPress: null, loading: null };
-      obj1[1] = action;
-      obj1[2] = onAction;
-      obj1[3] = submitting;
-      tmp7Result = tmp7(tmp4(11001).ModalActionButton, obj1);
+    let tmp7Result2 = null != action;
+    if (tmp7Result2) {
+      const obj4 = { variant: "primary", text: action, onPress: onAction, loading: submitting };
+      tmp7Result2 = tmp7(tmp4(11028).ModalActionButton, obj4);
     }
-    const obj2 = { children: null };
-    items3[1] = tmp7Result;
-    obj2[0] = items3;
-    footer = tmp3(tmp4(11931).ModalFooter, obj2);
+    const obj5 = { children: null };
+    items3[1] = tmp7Result2;
+    obj5.children = items3;
+    footer = tmp3(tmp4(11957).ModalFooter, obj5);
   }
-  children[1] = footer;
-  return closure_4(ModalScreen.ModalScreen, { children });
+  children1[1] = footer;
+  return React4(ModalScreen.ModalScreen, { children: children1 });
 };

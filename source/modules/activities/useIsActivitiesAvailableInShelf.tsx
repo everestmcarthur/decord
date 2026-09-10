@@ -1,38 +1,40 @@
-// Module ID: 9506
-// Function ID: 9507
+// Module ID: 9533
+// Function ID: 9534
 // Name: useIsActivitiesAvailableInShelf
-// Dependencies: [19, 9507, 9508, 9509, 2]
+// Dependencies: [19, 9534, 9535, 9536, 2]
 // Exports: default
 
-// Module 9506 (useIsActivitiesAvailableInShelf)
-import closure_3 from "noop" /* 19 */;
+// Module 9533 (useIsActivitiesAvailableInShelf)
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9536 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/useIsActivitiesAvailableInShelf.tsx");
+const require = globalThis.__r;
 
-export default function useIsActivitiesAvailableInShelf(arg0, arg1) {
-  const _require = arg0;
-  const isActivitiesEnabledForCurrentPlatform = _require(9507).useIsActivitiesEnabledForCurrentPlatform();
-  let tmp3 = null != arg0;
-  let obj = _require(9507);
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/useIsActivitiesAvailableInShelf.tsx");
+
+export default function useIsActivitiesAvailableInShelf(guildId, arg1) {
+  _require = guildId;
+  const isActivitiesEnabledForCurrentPlatform = require("useIsActivitiesEnabledForCurrentPlatform").useIsActivitiesEnabledForCurrentPlatform();
+  let tmp3 = null != guildId;
+  let obj = require("useIsActivitiesEnabledForCurrentPlatform");
   if (tmp3) {
-    tmp3 = "" !== arg0;
+    tmp3 = "" !== guildId;
   }
   if (!tmp3) {
     tmp3 = tmp2;
   }
   dependencyMap = tmp3;
-  const items = [arg0, isActivitiesEnabledForCurrentPlatform, tmp3];
-  const effect = React.useEffect(() => {
-    let tmp = table;
-    if (table) {
+  const items = [guildId, isActivitiesEnabledForCurrentPlatform, tmp3];
+  const effect = noop.useEffect(() => {
+    let tmp = closure_2;
+    if (closure_2) {
       tmp = isActivitiesEnabledForCurrentPlatform;
     }
     if (tmp) {
-      let obj = callback(table[3]);
-      obj = { guildId: null };
-      obj[0] = callback;
-      const shelf = obj.fetchShelf(obj);
+      const obj2 = { guildId };
+      const shelf = EmbeddedActivitiesActionCreators.fetchShelf(obj2);
     }
   }, items);
   if (tmp3) {

@@ -1,72 +1,60 @@
-// Module ID: 17633
-// Function ID: 17634
+// Module ID: 17666
+// Function ID: 17667
 // Name: InRolePromptNotice
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 1384, 17634, 1178, 9630, 4556, 1114, 2]
+// Dependencies: [19, 17, 1074, 21, 4574, 576, 1384, 17667, 1178, 9657, 4570, 1114, 2]
 // Exports: default
 
-// Module 17633 (InRolePromptNotice)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import hasFlag from "hasFlag" /* 1384 */;
-import registerAssetDefault from "registerAsset" /* 9630 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { RoleFlags } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17666 (InRolePromptNotice)
+import nativeDefault from "native" /* 576 */;
+import _modDef9657 from "module_9657" /* 9657 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { promptRow: null, promptText: null, icon: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_4, flexDirection: "row", alignItems: "center" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginLeft: ThemesDefault.space.PX_4 };
-createCacheKey[2] = { height: 16, width: 16 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { marginLeft: ThemesDefault.space.PX_4 };
-const result = require("set").fileFinishedImporting("modules/guild_settings/roles/native/InRolePromptNotice.tsx");
+const require = fn;
+const View = fn(17).View;
+const RoleFlags = fn(1074).RoleFlags;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { promptRow: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center" }, promptText: null, icon: null };
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center" };
+obj2.promptText = { marginLeft: nativeDefault.space.PX_4 };
+obj2.icon = { height: 16, width: 16 };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/roles/native/InRolePromptNotice.tsx");
 
 export default function InRolePromptNotice(role) {
   role = role.role;
-  let string = callback();
+  let string = closure_7();
   let stringResult = dependencyMap;
-  let obj = hasFlag;
   if (!obj.hasFlag(role.flags, RoleFlags.IN_PROMPT)) {
     return null;
   } else {
-    obj = { style: null, children: null };
-    obj[0] = string.promptRow;
-    const tmpResult = tmp(17634);
+    const obj2 = { style: string.promptRow, children: null };
+    const tmpResult = tmp(17667);
     let Icon = tmp(1178).Icon;
     if (isRolePowerfulResult) {
-      obj = { style: null, source: null, color: null };
-      obj[0] = string.icon;
-      obj[1] = registerAssetDefault;
-      obj[2] = ThemesDefault.unsafe_rawColors.YELLOW_300;
-      const items = [tmp6(Icon, obj), ];
-      obj1 = { style: null, variant: "text-sm/medium", children: null };
-      obj1[0] = string.promptText;
+      const obj3 = { style: string.icon, source: _modDef9657, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
+      const items = [tmp6(Icon, obj3), ];
+      const obj4 = { style: string.promptText, variant: "text-sm/medium", children: null };
       const intl2 = tmp(1114).intl;
       string = intl2.string;
       stringResult = string(tmp(1114).t.YRbgXz);
-      obj1[2] = stringResult;
-      Icon = tmp6(tmp(4556).Text, obj1);
+      obj4.children = stringResult;
+      Icon = tmp6(tmp(4570).Text, obj4);
       items[1] = Icon;
-      obj[1] = items;
-      let tmp4Result = tmp4(tmp5, obj);
+      obj2.children = items;
+      let tmp4Result = tmp4(tmp5, obj2);
     } else {
-      const obj2 = { style: null, source: null };
-      obj2[0] = string.icon;
-      obj2[1] = registerAssetDefault;
-      const items1 = [tmp6(Icon, obj2), ];
-      const obj3 = { style: null, variant: "text-sm/medium", children: null };
-      obj3[0] = string.promptText;
+      const obj5 = { style: string.icon, source: _modDef9657 };
+      const items1 = [tmp6(Icon, obj5), ];
+      const obj6 = { style: string.promptText, variant: "text-sm/medium", children: null };
       const intl = tmp(1114).intl;
-      obj3[2] = intl.string(tmp(1114).t.mqeO2v);
-      items1[1] = tmp6(tmp(4556).Text, obj3);
-      obj[1] = items1;
-      tmp4Result = tmp4(tmp5, obj);
+      obj6.children = intl.string(tmp(1114).t.mqeO2v);
+      items1[1] = tmp6(tmp(4570).Text, obj6);
+      obj2.children = items1;
+      tmp4Result = tmp4(tmp5, obj2);
     }
-    isRolePowerfulResult = tmp(17634).isRolePowerful(role);
+    isRolePowerfulResult = tmp(17667).isRolePowerful(role);
   }
 };

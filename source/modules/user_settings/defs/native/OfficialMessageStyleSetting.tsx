@@ -1,60 +1,60 @@
-// Module ID: 15335
-// Function ID: 15336
-// Name: useOfficialMessageStyleSettingValue
-// Dependencies: [19, 4552, 7975, 504, 14440, 1114, 11473, 2]
+// Module ID: 15364
+// Function ID: 15365
+// Name: OfficialMessageStyleSetting
+// Dependencies: [19, 4566, 7989, 504, 14465, 1114, 11500, 2]
 // Exports: onOfficialMessageStyleSettingValueChange, useOfficialMessageStyleSettingOptions, useOfficialMessageStyleSettingValue
 
-// Module 15335 (useOfficialMessageStyleSettingValue)
+// Module 15364 (OfficialMessageStyleSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import setFontSize from "setFontSize" /* 14440 */;
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import createToggle from "createToggle" /* 11473 */;
+import util from "util" /* 1114 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14465 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-require = arg1;
+require = fn;
 function useOfficialMessageStyleSettingValue() {
-  const items = [closure_3];
+  const items = [AccessibilityStore];
   return initialize.useStateFromStores(items, () => officialMessageStyle.officialMessageStyle);
 }
 function onOfficialMessageStyleSettingValueChange(officialMessageStyle) {
-  const result = setFontSize.setOfficialMessageStyle(officialMessageStyle);
+  const result = AccessibilityActionCreators.setOfficialMessageStyle(officialMessageStyle);
 }
 function useOfficialMessageStyleSettingOptions() {
-  return React.useMemo(() => {
-    let obj = { label: null, value: "default" };
-    const intl = callback(1114).intl;
-    obj[0] = intl.string(callback(1114).t.ERaS6f);
+  return noop.useMemo(() => {
+    const obj = { label: null, value: "default" };
+    const intl = util.intl;
+    obj.label = intl.string(util.t.ERaS6f);
     const items = [obj, , , ];
-    obj = { label: null, value: "no_text_color" };
-    const intl2 = callback(1114).intl;
-    obj[0] = intl2.string(callback(1114).t.JKfipk);
-    items[1] = obj;
-    obj = { label: null, value: "no_gradient" };
-    const intl3 = callback(1114).intl;
-    obj[0] = intl3.string(callback(1114).t.O2vBoY);
-    items[2] = obj;
-    obj1 = { label: null, value: "hidden" };
-    const intl4 = callback(1114).intl;
-    obj1[0] = intl4.string(callback(1114).t["+loyQl"]);
-    items[3] = obj1;
+    const obj2 = { label: null, value: "no_text_color" };
+    const intl2 = util.intl;
+    obj2.label = intl2.string(util.t.JKfipk);
+    items[1] = obj2;
+    const obj3 = { label: null, value: "no_gradient" };
+    const intl3 = util.intl;
+    obj3.label = intl3.string(util.t.O2vBoY);
+    items[2] = obj3;
+    const obj4 = { label: null, value: "hidden" };
+    const intl4 = util.intl;
+    obj4.label = intl4.string(util.t["+loyQl"]);
+    items[3] = obj4;
     return items;
   }, []);
 }
-createToggle = {
+const SettingBuilders = fn(11500);
+const radio = SettingBuilders.createRadio({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.nC2XBl);
+    const intl = util.intl;
+    return intl.string(util.t.nC2XBl);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7989).MobileUserSettings.ACCESSIBILITY,
   useValue: useOfficialMessageStyleSettingValue,
   onValueChange: onOfficialMessageStyleSettingValueChange,
   useOptions: useOfficialMessageStyleSettingOptions
-};
-createToggle = createToggle.createRadio(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/OfficialMessageStyleSetting.tsx");
+});
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/OfficialMessageStyleSetting.tsx");
 
-export default createToggle;
+export default radio;
 export { useOfficialMessageStyleSettingValue };
 export { onOfficialMessageStyleSettingValueChange };
 export { useOfficialMessageStyleSettingOptions };

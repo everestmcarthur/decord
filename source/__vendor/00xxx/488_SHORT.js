@@ -4,23 +4,24 @@
 // Dependencies: [489]
 
 // Module 488 (SHORT)
-import ToastAndroidDefault from "ToastAndroid" /* 489 */;
+import ToastAndroid_mod from "ToastAndroid" /* 489 */;
 
-const constants = ToastAndroidDefault.getConstants();
+let ToastAndroid = ToastAndroid_mod;
+ToastAndroid = ToastAndroid.getConstants();
 
 export default {
-  SHORT: constants.SHORT,
-  LONG: constants.LONG,
-  TOP: constants.TOP,
-  BOTTOM: constants.BOTTOM,
-  CENTER: constants.CENTER,
+  SHORT: ToastAndroid.SHORT,
+  LONG: ToastAndroid.LONG,
+  TOP: ToastAndroid.TOP,
+  BOTTOM: ToastAndroid.BOTTOM,
+  CENTER: ToastAndroid.CENTER,
   show(arg0, arg1) {
-    ToastAndroidDefault.show(arg0, arg1);
+    ToastAndroid.show(arg0, arg1);
   },
   showWithGravity(arg0, arg1, arg2) {
-    ToastAndroidDefault.showWithGravity(arg0, arg1, arg2);
+    ToastAndroid.showWithGravity(arg0, arg1, arg2);
   },
   showWithGravityAndOffset(arg0, arg1, arg2, arg3, arg4) {
-    const result = ToastAndroidDefault.showWithGravityAndOffset(arg0, arg1, arg2, arg3, arg4);
+    const result = ToastAndroid.showWithGravityAndOffset(arg0, arg1, arg2, arg3, arg4);
   }
 };

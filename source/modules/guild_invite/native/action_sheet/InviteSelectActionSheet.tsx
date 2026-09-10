@@ -1,55 +1,41 @@
-// Module ID: 17802
-// Function ID: 17803
+// Module ID: 17835
+// Function ID: 17836
 // Name: InviteSelectActionSheet
-// Dependencies: [19, 21, 4560, 576, 7150, 7149, 5685, 4527, 5688, 2]
+// Dependencies: [19, 21, 4574, 576, 7164, 7163, 5699, 4541, 5702, 2]
 // Exports: default
 
-// Module 17802 (InviteSelectActionSheet)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import context from "context" /* 5685 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 7149 */;
-import Background from "Background" /* 7150 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17835 (InviteSelectActionSheet)
+import nativeDefault from "native" /* 576 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import TableRadioGroup from "TableRadioGroup" /* 5699 */;
+import TableRadioRow from "TableRadioRow" /* 5702 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7163 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7164 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { content: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_invite/native/action_sheet/InviteSelectActionSheet.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+const obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 } };
+let closure_4 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_invite/native/action_sheet/InviteSelectActionSheet.tsx");
 
 export default function InviteSelectActionSheet(arg0) {
   ({ options, onChange: require } = arg0);
   ({ title, value } = arg0);
-  let obj = { contentStyles: callback().content, header: jsx(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title }), children: null };
-  obj = {
+  const obj = { contentStyles: closure_4().content, header: jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title }), children: null };
+  const tmp = closure_4();
+  obj.children = jsx(TableRadioGroup.TableRadioGroup, {
     value,
     onChange(arg0) {
-      callback(arg0);
-      closure_1_1(closure_1_2[7]).hideActionSheet();
+      require(arg0);
+      ActionSheetActionCreatorsDefault.hideActionSheet();
     },
     hasIcons: false,
-    children: options.map((value) => callback2(callback(table[8]).TableRadioRow, { value: value.value, label: value.label, accessibilityHint: value.descriptiveLabel }, "" + value.value))
-  };
-  obj[2] = jsx(context.TableRadioGroup, {
-    value,
-    onChange(arg0) {
-      callback(arg0);
-      closure_1_1(closure_1_2[7]).hideActionSheet();
-    },
-    hasIcons: false,
-    children: options.map((value) => callback2(callback(table[8]).TableRadioRow, { value: value.value, label: value.label, accessibilityHint: value.descriptiveLabel }, "" + value.value))
+    children: options.map((value) => jsx(TableRadioRow.TableRadioRow, { value: value.value, label: value.label, accessibilityHint: value.descriptiveLabel }, "" + value.value))
   });
-  return jsx(Background.BottomSheet, {
-    value,
-    onChange(arg0) {
-      callback(arg0);
-      closure_1_1(closure_1_2[7]).hideActionSheet();
-    },
-    hasIcons: false,
-    children: options.map((value) => callback2(callback(table[8]).TableRadioRow, { value: value.value, label: value.label, accessibilityHint: value.descriptiveLabel }, "" + value.value))
-  });
+  return jsx(Sheet_BottomSheet.BottomSheet, { contentStyles: closure_4().content, header: jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title }), children: null });
 };

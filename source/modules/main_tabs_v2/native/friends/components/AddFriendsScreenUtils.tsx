@@ -1,197 +1,163 @@
-// Module ID: 16047
-// Function ID: 16048
-// Name: _sendWave
-// Dependencies: [5, 1957, 1074, 4553, 10875, 4573, 4258, 1114, 12269, 7456, 9047, 2]
+// Module ID: 16077
+// Function ID: 16078
+// Name: AddFriendsScreenUtils
+// Dependencies: [5, 1957, 1074, 4567, 10902, 4587, 4271, 1114, 12295, 7470, 9074, 2]
 // Exports: acceptIncomingRequest, addContactSuggestion, dismissIncomingRequest, sendWave
 
-// Module 16047 (_sendWave)
-import handleRelationshipAddErrorDefault from "handleRelationshipAddError" /* 9047 */;
-import _modDef10875 from "module_10875" /* 10875 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import { AnalyticsSections } from "ME" /* 1074 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4553 */;
+// Module 16077 (AddFriendsScreenUtils)
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9074 */;
+import PeopleUtilsDefault from "PeopleUtils" /* 10902 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-const require = arg1;
-function _sendWave() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c7 = 0;
-    c8 = 0;
-    c6 = 0;
-    const iter = (function*(arg0) {
-      if (c8 === 2) {
-        c8 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
+const require = fn;
+let closure_7 = async function _sendWave(arg0, value) {
+  if (c8 === 2) {
+    c8 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp7 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c8 = 2;
+      if (0 === c7) {
         if (arg0 === 1) {
-          throw arg1;
+          c8 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          c8 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_4 = tmp4;
+          closure_3 = tmp8;
+          closure_131_1 = undefined;
+          closure_131_2 = undefined;
+          closure_131_0 = closure_0;
+          let flag = closure_1;
+          if (closure_1 === undefined) {
+            flag = true;
+          }
+          closure_131_1 = flag;
+          closure_131_2 = closure_2;
+          let dMFromUserId;
+          c7 = 1;
+          c8 = 1;
+          return { value: "PX_16", done: true };
         }
       } else {
-        try {
-          c8 = 2;
-          if (0 === c7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const dMFromUserId = tmp4;
-              let dMFromUserId2 = tmp8;
-              let flag;
-              dependencyMap = undefined;
-              if (flag === undefined) {
-                flag = true;
-              }
-              dMFromUserId2 = undefined;
-              c7 = 1;
-              c8 = 1;
-              return { value: "PX_16", done: true };
-            }
+        if (1 === tmp8) {
+          if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c8 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            if (1 === tmp8) {
+            dMFromUserId = closure_132_4.getDMFromUserId(closure_131_0);
+            if (null == dMFromUserId) {
+              c6 = 1;
+              c7 = 4;
+              c8 = 1;
+              const obj7 = { value: closure_132_1(closure_132_2[5]).getDMChannel(closure_131_0), done: false };
+              return obj7;
+            } else {
+              c6 = 2;
+              if (null != dMFromUserId) {
+                const obj9 = { channelId: dMFromUserId, source: closure_131_2 };
+                closure_132_0(closure_132_2[8]).trackWaveCtaClicked(obj9);
+                const obj10 = closure_132_1(closure_132_2[9]);
+                const obj11 = { location: closure_132_6.SEND_WAVE };
+                c7 = 5;
+                c8 = 1;
+                const obj12 = { value: obj10.sendStickers(dMFromUserId, ["749054660769218631"], "", obj11), done: false };
+                return obj12;
+              } else {
+                c6 = 0;
+              }
+            }
+          }
+        } else {
+          if (2 !== tmp8) {
+            if (3 === tmp8) {
+              c6 = 0;
+              const intl = closure_132_0(closure_132_2[7]).intl;
+              closure_132_0(closure_132_2[6]).presentError(intl.string(closure_132_0(closure_132_2[7]).t.iufib1));
+              c8 = 3;
+              const obj5 = closure_132_0(closure_132_2[6]);
+            } else if (4 === tmp8) {
               if (arg0 === 1) {
                 c8 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
+                c6 = 0;
                 c8 = 3;
-                obj1 = { value: null, done: true };
-                obj1[0] = arg1;
-                return obj1;
+                const obj14 = { value, done: true };
+                return obj14;
               } else {
-                dMFromUserId2 = dMFromUserId.getDMFromUserId(callback);
-                if (null == dMFromUserId2) {
-                  let constants = 1;
-                  c7 = 4;
-                  c8 = 1;
-                  const obj2 = { value: null, done: false };
-                  obj2[0] = flag(4573).getDMChannel(callback);
-                  return obj2;
-                } else {
-                  constants = 2;
-                  if (null != dMFromUserId2) {
-                    let obj7 = callback(12269);
-                    const obj3 = { channelId: null, source: null };
-                    obj3[0] = dMFromUserId2;
-                    obj3[1] = dependencyMap;
-                    obj7.trackWaveCtaClicked(obj3);
-                    let obj9 = flag(7456);
-                    let obj4 = { location: null };
-                    obj4[0] = constants.SEND_WAVE;
-                    c7 = 5;
-                    c8 = 1;
-                    let obj5 = { value: null, done: false };
-                    obj5[0] = obj9.sendStickers(dMFromUserId2, ["749054660769218631"], "", obj4);
-                    return obj5;
-                  } else {
-                    constants = 0;
-                  }
-                }
+                dMFromUserId = value;
+                c6 = 0;
               }
-            } else {
-              if (2 !== tmp8) {
-                if (3 === tmp8) {
-                  constants = 0;
-                  obj4 = callback(4258);
-                  const intl = callback(1114).intl;
-                  obj4.presentError(intl.string(callback(1114).t.iufib1));
-                  c8 = 3;
-                } else if (4 === tmp8) {
-                  if (arg0 === 1) {
-                    c8 = 3;
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    constants = 0;
-                    c8 = 3;
-                    const obj6 = { value: null, done: true };
-                    obj6[0] = arg1;
-                    return obj6;
-                  } else {
-                    dMFromUserId2 = arg1;
-                    constants = 0;
-                  }
-                } else if (arg0 === 1) {
-                  c8 = 3;
-                  throw arg1;
-                } else if (arg0 !== 2) {
-                  if (flag) {
-                    obj = flag(4573);
-                    obj7 = { recipientIds: null };
-                    obj7[0] = callback;
-                    obj.openPrivateChannel(obj7);
-                  }
-                }
-              }
-              constants = 0;
-              obj5 = callback(4258);
-              const intl2 = callback(1114).intl;
-              obj5.presentError(intl2.string(callback(1114).t.iufib1));
+            } else if (arg0 === 1) {
               c8 = 3;
-              const obj8 = { value: null, done: true };
-              obj8[0] = undefined;
-              return obj8;
+              throw value;
+            } else if (arg0 !== 2) {
+              if (closure_131_1) {
+                const obj15 = { recipientIds: closure_131_0 };
+                closure_132_1(closure_132_2[5]).openPrivateChannel(obj15);
+                const obj = closure_132_1(closure_132_2[5]);
+              }
             }
-            constants = 0;
-            c8 = 3;
-            obj9 = { value: null, done: true };
-            obj9[0] = arg1;
-            return obj9;
           }
-        } catch (tmp57) {
-          closure_5 = tmp57;
-          if (tmp5 === constants) {
-            c8 = tmp3;
-            throw tmp57;
-          } else if (tmp2 === tmp59) {
-            c7 = tmp;
-          } else {
-            c7 = tmp3;
-          }
+          c6 = 0;
+          const intl2 = closure_132_0(closure_132_2[7]).intl;
+          closure_132_0(closure_132_2[6]).presentError(intl2.string(closure_132_0(closure_132_2[7]).t.iufib1));
+          c8 = 3;
+          const obj16 = { value: undefined, done: true };
+          return obj16;
         }
+        c6 = 0;
+        c8 = 3;
+        const obj17 = { value, done: true };
+        return obj17;
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_7 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp57) {
+      closure_5 = tmp57;
+      if (tmp5 === c6) {
+        c8 = tmp3;
+        throw tmp57;
+      } else if (tmp2 === tmp59) {
+        c7 = tmp;
+      } else {
+        c7 = tmp3;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/AddFriendsScreenUtils.tsx");
+};
+const AnalyticsSections = fn(1074).AnalyticsSections;
+const MessageSendLocation = fn(4567).MessageSendLocation;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/AddFriendsScreenUtils.tsx");
 
 export const dismissIncomingRequest = function dismissIncomingRequest(arg0) {
   ({ userId, applicationId } = arg0);
-  let obj = _modDef10875;
-  obj = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
-  obj.cancelFriendRequest(obj);
+  PeopleUtilsDefault.cancelFriendRequest({ userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL });
 };
 export const acceptIncomingRequest = function acceptIncomingRequest(arg0) {
   ({ userId, applicationId } = arg0);
-  let obj = _modDef10875;
-  obj = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
-  const result = obj.maybeConfirmFriendRequestAccept(obj);
+  const result = PeopleUtilsDefault.maybeConfirmFriendRequestAccept({ userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL });
 };
-export const sendWave = function sendWave(id, arg1, arg2) {
+export const sendWave = function sendWave() {
   const self = this;
-  const apply = _sendWave.apply;
+  const apply = closure_7.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -200,8 +166,6 @@ export const sendWave = function sendWave(id, arg1, arg2) {
   return applyArgumentsResult;
 };
 export const addContactSuggestion = function addContactSuggestion(user) {
-  let obj = handleRelationshipAddErrorDefault;
-  obj = { userId: user.id, context: obj, type: "HermesInternal", fromFriendSuggestion: null };
-  obj = { location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
-  obj.addRelationship(obj);
+  const obj2 = { userId: user.id, context: { location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL }, type: "HermesInternal", fromFriendSuggestion: null };
+  RelationshipActionCreatorsDefault.addRelationship(obj2);
 };

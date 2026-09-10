@@ -1,15 +1,14 @@
-// Module ID: 8796
-// Function ID: 8797
-// Name: map
-// Dependencies: [504, 8337, 573, 2]
+// Module ID: 8825
+// Function ID: 8826
+// Name: ContentInventoryOutboxStore
+// Dependencies: [504, 8365, 573, 2]
 
-// Module 8796 (map)
+// Module 8825 (ContentInventoryOutboxStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import isMatchingListeningActivity from "isMatchingListeningActivity" /* 8337 */;
-import set from "set" /* 2 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import matchUtils from "matchUtils" /* 8365 */;
 
-require = arg1;
+require = fn;
 let map = new Map();
 let set = new Set();
 let c4 = null;
@@ -21,18 +20,18 @@ class ContentInventoryOutboxStore extends Store {
 const prototype = ContentInventoryOutboxStore.prototype;
 prototype["getMatchingOutboxEntry"] = function getMatchingOutboxEntry(activity) {
   activity = activity.activity;
-  const value = map.get(activity.userId);
+  value = map.get(activity.userId);
   if (null != value) {
     if (null != activity) {
-      return isMatchingListeningActivity.findMatchingEntry(value.entries, activity);
+      return matchUtils.findMatchingEntry(value.entries, activity);
     }
   }
 };
-prototype["getUserOutbox"] = function getUserOutbox(closure_0) {
-  return map.get(closure_0);
+prototype["getUserOutbox"] = function getUserOutbox(id) {
+  return map.get(id);
 };
-prototype["isFetchingUserOutbox"] = function isFetchingUserOutbox(closure_0) {
-  return set.has(closure_0);
+prototype["isFetchingUserOutbox"] = function isFetchingUserOutbox(arg0) {
+  return set.has(arg0);
 };
 Object.defineProperty(prototype, "deleteOutboxEntryError", {
   get: function deleteOutboxEntryError() {
@@ -53,7 +52,7 @@ Object.defineProperty(prototype, "hasInitialized", {
   set: undefined
 });
 ContentInventoryOutboxStore.displayName = "ContentInventoryOutboxStore";
-const contentInventoryOutboxStore = new ContentInventoryOutboxStore(dispatcherDefault, {
+const contentInventoryOutboxStore = new ContentInventoryOutboxStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     map = new Map();
     set = new Set();
@@ -88,7 +87,7 @@ const contentInventoryOutboxStore = new ContentInventoryOutboxStore(dispatcherDe
   CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_SUCCESS: function handleDeleteOutboxEntrySuccess(arg0) {
     ({ entry: require, userId } = arg0);
     c4 = null;
-    const value = map.get(userId);
+    value = map.get(userId);
     if (null == value) {
       return false;
     } else {
@@ -110,6 +109,7 @@ const contentInventoryOutboxStore = new ContentInventoryOutboxStore(dispatcherDe
     c5 = false;
   }
 });
-let result = set.fileFinishedImporting("modules/content_inventory/ContentInventoryOutboxStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/content_inventory/ContentInventoryOutboxStore.tsx");
 
 export default contentInventoryOutboxStore;

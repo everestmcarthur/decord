@@ -1,24 +1,26 @@
-// Module ID: 16256
-// Function ID: 16257
+// Module ID: 16286
+// Function ID: 16287
 // Name: useIsEligibleForTierTemplateUpsell
-// Dependencies: [1979, 1074, 504, 13896, 7260, 2]
+// Dependencies: [1979, 1074, 504, 13919, 7274, 2]
 // Exports: default
 
-// Module 16256 (useIsEligibleForTierTemplateUpsell)
-import closure_2 from "createGuildRecordFromRust" /* 1979 */;
-import { GuildFeatures } from "ME" /* 1074 */;
+// Module 16286 (useIsEligibleForTierTemplateUpsell)
+import GuildStore from "GuildStore" /* 1979 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/useIsEligibleForTierTemplateUpsell.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const GuildFeatures = fn(1074).GuildFeatures;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/useIsEligibleForTierTemplateUpsell.tsx");
 
 export default function useIsEligibleForTierTemplateUpsell(guildId) {
-  const _require = guildId;
-  const items = [closure_2];
-  const stateFromStores = _require(504).useStateFromStores(items, () => closure_1_2.getGuild(closure_0));
-  const obj = _require(504);
-  const tmp = _require;
+  _require = guildId;
+  const items = [GuildStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
+  const obj = require("initialize");
   let hasItem;
-  const guildEligibleForTierTemplates = _require(13896).useGuildEligibleForTierTemplates(guildId);
+  const guildEligibleForTierTemplates = require("GuildRoleSubscriptionsExperimentUtils").useGuildEligibleForTierTemplates(guildId);
   if (stateFromStores != null) {
     const features = stateFromStores.features;
     hasItem = features.has(GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED);
@@ -32,7 +34,7 @@ export default function useIsEligibleForTierTemplateUpsell(guildId) {
     }
     result = false === hasItem1;
   }
-  const obj2 = _require(13896);
+  const obj2 = require("GuildRoleSubscriptionsExperimentUtils");
   if (result) {
     result = tmpResult.canManageGuildRoleSubscriptions(stateFromStores);
   }

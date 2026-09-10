@@ -1,12 +1,12 @@
-// Module ID: 7598
-// Function ID: 7599
-// Name: CONVERSATION_COLORS
+// Module ID: 7612
+// Function ID: 7613
+// Name: ConversationConstants
 // Dependencies: [2]
 
-// Module 7598 (CONVERSATION_COLORS)
-import set from "set" /* 2 */;
+// Module 7612 (ConversationConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/conversations/ConversationConstants.tsx");
+const result = size.fileFinishedImporting("modules/conversations/ConversationConstants.tsx");
 
 export const CONVERSATION_COLORS = ["rgba(237, 66, 69, 0.12)", "rgba(230, 126, 34, 0.12)", "rgba(254, 231, 92, 0.12)", "rgba(87, 242, 135, 0.12)", "rgba(52, 152, 219, 0.12)", "rgba(88, 101, 242, 0.12)", "rgba(155, 89, 182, 0.12)"];
 export const FETCH_LIMIT = 25;

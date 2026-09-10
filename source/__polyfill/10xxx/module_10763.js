@@ -1,28 +1,9 @@
 // Module ID: 10763
 // Function ID: 10764
-// Dependencies: [19, 21, 10764, 10767, 10771, 10772, 10773]
+// Dependencies: [1122]
 
 // Module 10763
-import noopDefault from "noop" /* 19 */;
-import useInitProps from "useInitProps" /* 10764 */;
-import useCommonVariables from "useCommonVariables" /* 10767 */;
-import usePropsErrorBoundary from "usePropsErrorBoundary" /* 10771 */;
-import context from "context" /* 10772 */;
-import CarouselLayout from "CarouselLayout" /* 10773 */;
-import { jsx } from "jsxProd" /* 21 */;
+import registerAsset from "module_1122" /* 1122 */;
 
-require = arg1;
 
-export default noopDefault.forwardRef((defaultIndex, ref) => {
-  let obj = useInitProps;
-  const initProps = obj.useInitProps(defaultIndex);
-  obj1 = useCommonVariables;
-  const commonVariables = obj1.useCommonVariables(initProps);
-  obj = {};
-  const merged = Object.assign(initProps);
-  obj.dataLength = initProps.dataLength;
-  const propsErrorBoundary = usePropsErrorBoundary.usePropsErrorBoundary(obj);
-  obj = { value: { props: initProps, common: commonVariables }, children: jsx(CarouselLayout.CarouselLayout, obj1) };
-  obj1 = { ref };
-  return jsx(context.GlobalStateProvider, { value: { props: initProps, common: commonVariables }, children: jsx(CarouselLayout.CarouselLayout, { ref }) });
-});
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 101, height: 19, scales: [2, 3], hash: "dc1cee3a8f17b01e1093a161d78cdfbe", name: "img_logo_plus_boost", type: "png" });

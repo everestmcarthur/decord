@@ -1,27 +1,26 @@
-// Module ID: 8125
-// Function ID: 8126
-// Name: getAttachmentObscurityProps
-// Dependencies: [1074, 1384, 7292, 7297, 4773, 1114, 2]
+// Module ID: 8151
+// Function ID: 8152
+// Name: ExplicitMediaUtils
+// Dependencies: [1074, 1384, 7306, 7311, 4787, 1114, 2]
 // Exports: getAttachmentObscurityDefaults, getAttachmentObscurityProps, getUnfurledMediaItemObscurityProps
 
-// Module 8125 (getAttachmentObscurityProps)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import hasFlag from "hasFlag" /* 1384 */;
-import getEligibleHarmTypesConfigsForContext from "getEligibleHarmTypesConfigsForContext" /* 7292 */;
-import ContentHarmTypeChannel from "ContentHarmTypeChannel" /* 7297 */;
+// Module 8151 (ExplicitMediaUtils)
+import Constants from "Constants" /* 1074 */;
+import FlagUtils from "FlagUtils" /* 1384 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7306 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7311 */;
+import size from "module_2" /* 2 */;
 
-const MessageAttachmentFlags = ME.MessageAttachmentFlags;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/ExplicitMediaUtils.tsx");
+const MessageAttachmentFlags = Constants.MessageAttachmentFlags;
+const result = size.fileFinishedImporting("modules/messages/native/renderer/ExplicitMediaUtils.tsx");
 
 export const getAttachmentObscurityProps = function getAttachmentObscurityProps(shouldAgeVerify) {
   ({ attachment, shouldObscureSpoiler, enabledContentHarmTypeFlags } = shouldAgeVerify);
-  let obj = hasFlag;
   let num = attachment.flags;
   if (num == null) {
     num = 0;
   }
-  const hasFlagResult = obj.hasFlag(num, MessageAttachmentFlags.IS_SPOILER);
+  const hasFlagResult = FlagUtils.hasFlag(num, MessageAttachmentFlags.IS_SPOILER);
   if (undefined !== attachment.content_scan_version) {
     let num2 = attachment.content_scan_version;
   } else if (undefined !== attachment.contentScanVersion) {
@@ -30,27 +29,27 @@ export const getAttachmentObscurityProps = function getAttachmentObscurityProps(
   if (num2 == null) {
     num2 = 0;
   }
-  obj = { contentScanVersion: num2, flags: null };
+  const obj2 = { contentScanVersion: num2, flags: null };
   let num3 = attachment.flags;
   if (num3 == null) {
     num3 = 0;
   }
-  obj[1] = num3;
-  let tmpResult = tmp(7292);
-  obj = { type: tmp(7297).ObscuredMediaTypes.Attachment, media: obj };
-  const mediaObscuredReasonFromBitmask = tmpResult.getMediaObscuredReasonFromBitmask(obj, enabledContentHarmTypeFlags);
-  tmpResult = tmp(7292);
+  obj2.flags = num3;
+  const tmpResult = ObscuredMediaUtils;
+  const mediaObscuredReasonFromBitmask = tmpResult.getMediaObscuredReasonFromBitmask({ type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Attachment, media: obj2 }, enabledContentHarmTypeFlags);
+  const obj3 = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Attachment, media: obj2 };
+  const tmpResult3 = ObscuredMediaUtils;
   let isVerifiedTeenResult = tmp5;
-  obj1 = { type: ContentHarmTypeChannel.ObscuredMediaTypes.Attachment, media: obj };
+  const obj4 = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Attachment, media: obj2 };
   if (mediaObscuredReasonFromBitmask.length > 0) {
-    isVerifiedTeenResult = tmp(4773).isVerifiedTeen();
-    const tmpResult1 = tmp(4773);
+    isVerifiedTeenResult = tmp(4787).isVerifiedTeen();
+    const tmpResult4 = tmp(4787);
   }
   let tmp7 = shouldObscureSpoiler;
   if (shouldObscureSpoiler) {
     tmp7 = hasFlagResult;
   }
-  const obj2 = { isSpoiler: tmp7, spoiler: null, obscure: null, obscureDescription: null, obscureAwaitingScan: null, verifyAge: null, obscureHideControls: null, obscureIsOpaque: null };
+  const obj5 = { isSpoiler: tmp7, spoiler: null, obscure: null, obscureDescription: null, obscureAwaitingScan: null, verifyAge: null, obscureHideControls: null, obscureIsOpaque: null };
   let str = "";
   let str2 = "";
   if (shouldObscureSpoiler) {
@@ -61,64 +60,61 @@ export const getAttachmentObscurityProps = function getAttachmentObscurityProps(
       const str3 = intl.string(tmp(1114).t["F+x38C"]);
     }
   }
-  obj2[1] = str2;
-  obj2[2] = mediaObscuredReasonFromBitmask.length > 0;
+  obj5.spoiler = str2;
+  obj5.obscure = mediaObscuredReasonFromBitmask.length > 0;
   if (mediaObscuredReasonFromBitmask.length > 0) {
     const intl2 = tmp(1114).intl;
     str = intl2.string(tmp(1114).t.SpxcUR);
   }
-  obj2[3] = str;
-  obj2[4] = tmpResult.isMediaScanPending({ type: ContentHarmTypeChannel.ObscuredMediaTypes.Attachment, media: obj }, enabledContentHarmTypeFlags);
+  obj5.obscureDescription = str;
+  obj5.obscureAwaitingScan = tmpResult3.isMediaScanPending({ type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Attachment, media: obj2 }, enabledContentHarmTypeFlags);
   shouldAgeVerify = tmp5;
   if (mediaObscuredReasonFromBitmask.length > 0) {
     shouldAgeVerify = shouldAgeVerify.shouldAgeVerify;
   }
-  obj2[5] = shouldAgeVerify;
-  obj2[6] = isVerifiedTeenResult;
-  obj2[7] = mediaObscuredReasonFromBitmask.length > 0;
-  return obj2;
+  obj5.verifyAge = shouldAgeVerify;
+  obj5.obscureHideControls = isVerifiedTeenResult;
+  obj5.obscureIsOpaque = mediaObscuredReasonFromBitmask.length > 0;
+  return obj5;
 };
 export const getUnfurledMediaItemObscurityProps = function getUnfurledMediaItemObscurityProps(arg0) {
   ({ type, mediaItem, isSpoilered, isAuthorBot, enabledContentHarmTypeFlags } = arg0);
   ({ shouldObscureSpoiler, shouldAgeVerify } = arg0);
-  let obj = getEligibleHarmTypesConfigsForContext;
-  obj = { type: ContentHarmTypeChannel.ObscuredMediaTypes.GenericMedia, media: mediaItem };
+  const obj = ObscuredMediaUtils;
   let isMediaScanPendingResult = !isAuthorBot;
-  const mediaObscuredReasonFromBitmask = obj.getMediaObscuredReasonFromBitmask(obj, enabledContentHarmTypeFlags);
+  const mediaObscuredReasonFromBitmask = obj.getMediaObscuredReasonFromBitmask({ type: ExplicitMediaRedactionModels.ObscuredMediaTypes.GenericMedia, media: mediaItem }, enabledContentHarmTypeFlags);
   if (!isAuthorBot) {
-    let tmpResult = tmp(7292);
-    obj = { type: null, media: null };
-    obj[0] = tmp(7297).ObscuredMediaTypes.GenericMedia;
-    obj[1] = mediaItem;
-    isMediaScanPendingResult = tmpResult.isMediaScanPending(obj, enabledContentHarmTypeFlags);
+    const obj3 = { type: tmp(7311).ObscuredMediaTypes.GenericMedia, media: mediaItem };
+    isMediaScanPendingResult = tmp(7306).isMediaScanPending(obj3, enabledContentHarmTypeFlags);
+    const tmpResult = tmp(7306);
   }
   if (isSpoilered) {
     isSpoilered = shouldObscureSpoiler;
   }
   let isVerifiedTeenResult = tmp4;
   if (mediaObscuredReasonFromBitmask.length > 0) {
-    tmpResult = tmp(4773);
-    isVerifiedTeenResult = tmpResult.isVerifiedTeen();
+    isVerifiedTeenResult = tmp(4787).isVerifiedTeen();
+    const tmpResult2 = tmp(4787);
   }
-  obj1 = { isSpoiler: isSpoilered, spoilerDescription: null, isObscured: null, obscureDescription: null, obscureAwaitingScan: null, verifyAge: null, obscureHideControls: null, obscureIsOpaque: null };
+  const obj4 = { isSpoiler: isSpoilered, spoilerDescription: null, isObscured: null, obscureDescription: null, obscureAwaitingScan: null, verifyAge: null, obscureHideControls: null, obscureIsOpaque: null };
   if (!isSpoilered) {
-    obj1[1] = null;
-    obj1[2] = tmp4;
+    obj4.spoilerDescription = null;
+    obj4.isObscured = tmp4;
     let stringResult = null;
     if (tmp4) {
       const intl4 = tmp(1114).intl;
       stringResult = intl4.string(tmp(1114).t.SpxcUR);
     }
-    obj1[3] = stringResult;
-    obj1[4] = isMediaScanPendingResult;
+    obj4.obscureDescription = stringResult;
+    obj4.obscureAwaitingScan = isMediaScanPendingResult;
     let tmp9 = tmp4;
     if (tmp4) {
       tmp9 = shouldAgeVerify;
     }
-    obj1[5] = tmp9;
-    obj1[6] = isVerifiedTeenResult;
-    obj1[7] = tmp4;
-    return obj1;
+    obj4.verifyAge = tmp9;
+    obj4.obscureHideControls = isVerifiedTeenResult;
+    obj4.obscureIsOpaque = tmp4;
+    return obj4;
   } else if ("image" === type) {
     const intl3 = tmp(1114).intl;
     let stringResult1 = intl3.string(tmp(1114).t.sb2W2J);

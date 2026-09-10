@@ -1,61 +1,48 @@
-// Module ID: 7211
-// Function ID: 7212
-// Name: openAgeGateModal
-// Dependencies: [1098, 1074, 1242, 573, 6593, 1100, 2]
+// Module ID: 7225
+// Function ID: 7226
+// Name: AgeGateModalActionCreators
+// Dependencies: [1098, 1074, 1242, 573, 6607, 1100, 2]
 // Exports: closeAgeGateModal, closeFailedAgeGate, openAgeGateModal, openFailureAgeGateModal, openSuccessAgeGateModal
 
-// Module 7211 (openAgeGateModal)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import result2 from "result" /* 1098 */;
-import transitionTo from "transitionTo" /* 1100 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import handleLogoutDefault from "handleLogout" /* 6593 */;
-import ME from "ME" /* 1074 */;
+// Module 7225 (AgeGateModalActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import AgeGateConstants from "AgeGateConstants" /* 1098 */;
+import router_utils from "router_utils" /* 1100 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6607 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const AgeGateAnalyticAction = result2.AgeGateAnalyticAction;
-({ Routes: c4, AnalyticEvents: c5 } = ME);
-const result = set.fileFinishedImporting("modules/age_gate/AgeGateModalActionCreators.tsx");
+const AgeGateAnalyticAction = AgeGateConstants.AgeGateAnalyticAction;
+({ Routes: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
+const result = size.fileFinishedImporting("modules/age_gate/AgeGateModalActionCreators.tsx");
 
 export const openAgeGateModal = function openAgeGateModal(JOIN_LARGE_GUILD_UNDERAGE) {
-  let obj = expandEventPropertiesDefault;
-  obj = { section: JOIN_LARGE_GUILD_UNDERAGE };
-  obj.track(constants2.OPEN_MODAL, { type: "Enter Your Birthday", source: obj });
-  obj = { type: "AGE_GATE_MODAL_OPEN", source: JOIN_LARGE_GUILD_UNDERAGE };
-  dispatcherDefault.dispatch(obj);
+  AnalyticsUtilsDefault.track(constants2.OPEN_MODAL, { type: "Enter Your Birthday", source: { section: JOIN_LARGE_GUILD_UNDERAGE } });
+  const obj2 = { type: "Enter Your Birthday", source: { section: JOIN_LARGE_GUILD_UNDERAGE } };
+  DispatcherDefault.dispatch({ type: "AGE_GATE_MODAL_OPEN", source: JOIN_LARGE_GUILD_UNDERAGE });
 };
-export const closeAgeGateModal = function closeAgeGateModal(closure_0) {
-  let obj = dispatcherDefault;
-  obj.wait(() => callback(table[3]).dispatch({ type: "AGE_GATE_MODAL_CLOSE" }));
-  if (undefined !== closure_0) {
-    obj = { source: null, action: null };
-    obj[0] = closure_0;
-    obj[1] = AgeGateAnalyticAction.AGE_GATE_CLOSE;
-    expandEventPropertiesDefault.track(constants2.AGE_GATE_ACTION, obj);
-    const tmpResult = expandEventPropertiesDefault;
+export const closeAgeGateModal = function closeAgeGateModal(source) {
+  DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "AGE_GATE_MODAL_CLOSE" }));
+  if (undefined !== source) {
+    const obj2 = { source, action: AgeGateAnalyticAction.AGE_GATE_CLOSE };
+    AnalyticsUtilsDefault.track(constants2.AGE_GATE_ACTION, obj2);
+    const tmpResult = AnalyticsUtilsDefault;
   }
 };
 export const openSuccessAgeGateModal = function openSuccessAgeGateModal(source) {
-  let obj = dispatcherDefault;
-  obj.wait(() => {
-    callback(table[3]).dispatch({ type: "AGE_GATE_SUCCESS_MODAL_OPEN" });
+  DispatcherDefault.wait(() => {
+    DispatcherDefault.dispatch({ type: "AGE_GATE_SUCCESS_MODAL_OPEN" });
   });
-  obj = { source, action: AgeGateAnalyticAction.AGE_GATE_SUCCESS };
-  expandEventPropertiesDefault.track(constants2.AGE_GATE_ACTION, obj);
+  AnalyticsUtilsDefault.track(constants2.AGE_GATE_ACTION, { source, action: AgeGateAnalyticAction.AGE_GATE_SUCCESS });
 };
-export const openFailureAgeGateModal = function openFailureAgeGateModal(source) {
-  closure_0 = arg1;
-  let obj = dispatcherDefault;
-  obj.wait(() => {
-    let obj = closure_1_1(closure_1_2[3]);
-    obj = { type: "AGE_GATE_FAILURE_MODAL_OPEN", underageMessage: closure_0 };
-    obj.dispatch(obj);
+export const openFailureAgeGateModal = function openFailureAgeGateModal(source, underageMessage) {
+  DispatcherDefault.wait(() => {
+    DispatcherDefault.dispatch({ type: "AGE_GATE_FAILURE_MODAL_OPEN", underageMessage });
   });
-  obj = { source, action: AgeGateAnalyticAction.AGE_GATE_FAILURE };
-  expandEventPropertiesDefault.track(constants2.AGE_GATE_ACTION, obj);
+  AnalyticsUtilsDefault.track(constants2.AGE_GATE_ACTION, { source, action: AgeGateAnalyticAction.AGE_GATE_FAILURE });
 };
 export const closeFailedAgeGate = function closeFailedAgeGate() {
-  handleLogoutDefault.logoutInternal();
-  const obj = handleLogoutDefault;
-  transitionTo.transitionTo(constants.LOGIN, { source: "age_gate_modal" });
+  AuthenticationActionCreatorsDefault.logoutInternal();
+  router_utils.transitionTo(constants.LOGIN, { source: "age_gate_modal" });
 };

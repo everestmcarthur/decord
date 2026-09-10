@@ -1,23 +1,25 @@
-// Module ID: 12973
-// Function ID: 12974
-// Dependencies: [19, 21, 4560, 576, 1611, 1935, 5123, 11540, 4556, 1114, 2]
+// Module ID: 12999
+// Function ID: 13000
+// Name: MediaModalOverlayAltText
+// Dependencies: [19, 21, 4574, 576, 1611, 1935, 5137, 11566, 4570, 1114, 2]
 
-// Module 12973
-import ThemesDefault from "Themes" /* 576 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 12999 (MediaModalOverlayAltText)
+import nativeDefault from "native" /* 576 */;
+import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11566 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let closure_4 = createCacheKey.createStyles((arg0) => {
-  let obj = { container: null };
-  obj = { backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE, marginVertical: ThemesDefault.space.PX_8, marginHorizontal: ThemesDefault.space.PX_8, marginRight: ThemesDefault.space.PX_8 + arg0, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.sm, alignSelf: "flex-end" };
-  obj[0] = obj;
+const require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_4 = createStyles.createStyles((arg0) => {
+  const obj = { container: { backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE, marginVertical: nativeDefault.space.PX_8, marginHorizontal: nativeDefault.space.PX_8, marginRight: nativeDefault.space.PX_8 + arg0, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm, alignSelf: "flex-end" } };
   return obj;
 });
-const memoResult = importAllResult.memo(function MediaModalOverlayAltTextButton(description) {
-  let str = description.description;
-  str = undefined;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayAltText.tsx");
+
+export default noop.memo(function MediaModalOverlayAltTextButton(description) {
+  let str;
   if (str == null) {
     str = "";
   }
@@ -26,24 +28,33 @@ const memoResult = importAllResult.memo(function MediaModalOverlayAltTextButton(
   if (ViewImageDescriptions.useSetting()) {
     tmp4 = null;
     if (0 !== str.length) {
-      let obj = { style: null, onPress: null, hitSlop: null, children: null };
-      obj[0] = tmp2.container;
-      obj[1] = function onPress() {
-        if (str == null) {
-          str = "";
-        }
-        closure_1_1(closure_1_2[7])({ description: str });
+      const obj = {
+        style: tmp2.container,
+        onPress() {
+              if (str == null) {
+                str = "";
+              }
+              openMediaModalOverlayAltTextSheetDefault({ description: str });
+            },
+        hitSlop: { top: 6, bottom: 6, left: 6, right: 6 },
+        children: null
       };
-      obj[2] = { top: 6, bottom: 6, left: 6, right: 6 };
-      obj = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
+      const obj2 = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
       const intl = tmp3(1114).intl;
-      obj[2] = intl.string(tmp3(1114).t.Q5VqrN);
-      obj[3] = jsx(tmp3(4556).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
-      tmp4 = jsx(tmp3(5123).PressableOpacity, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
+      obj2.children = intl.string(tmp3(1114).t.Q5VqrN);
+      obj.children = jsx(tmp3(4570).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
+      tmp4 = jsx(tmp3(5137).PressableOpacity, {
+        style: tmp2.container,
+        onPress() {
+              if (str == null) {
+                str = "";
+              }
+              openMediaModalOverlayAltTextSheetDefault({ description: str });
+            },
+        hitSlop: { top: 6, bottom: 6, left: 6, right: 6 },
+        children: null
+      });
     }
   }
   return tmp4;
 });
-const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayAltText.tsx");
-
-export default memoResult;

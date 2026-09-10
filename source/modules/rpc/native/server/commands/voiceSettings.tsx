@@ -1,25 +1,25 @@
-// Module ID: 14519
-// Function ID: 14520
-// Name: items
-// Dependencies: [4465, 1074, 8339, 9563, 2]
+// Module ID: 14544
+// Function ID: 14545
+// Name: voiceSettings
+// Dependencies: [4479, 1074, 8367, 9590, 2]
 
-// Module 14519 (items)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4465 */;
-import set2 from "set" /* 8339 */;
-import validateSocketClient from "validateSocketClient" /* 9563 */;
+// Module 14544 (voiceSettings)
+import Constants from "Constants" /* 1074 */;
+import Constants2 from "Constants" /* 4479 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8367 */;
+import NativeRPCHelpers from "NativeRPCHelpers" /* 9590 */;
+import size from "module_2" /* 2 */;
 
-let obj = {};
-obj = { scope: null, handler: null };
-obj = {};
-const items = [set2.OAuth2Scopes.RPC, set2.OAuth2Scopes.RPC_VOICE_READ];
-obj[RPC_SCOPE_CONFIG.RPC_SCOPE_CONFIG.ANY] = items;
-obj[0] = obj;
-obj[1] = function handler() {
-  return validateSocketClient.getDeprecatedVoiceSettings();
+const obj = {};
+const obj2 = { scope: null, handler: null };
+const obj3 = {};
+const items = [OAuth2Scopes.OAuth2Scopes.RPC, OAuth2Scopes.OAuth2Scopes.RPC_VOICE_READ];
+obj3[Constants2.RPC_SCOPE_CONFIG.ANY] = items;
+obj2.scope = obj3;
+obj2.handler = function handler() {
+  return NativeRPCHelpers.getDeprecatedVoiceSettings();
 };
-obj[ME.RPCCommands.GET_VOICE_SETTINGS] = obj;
-const result = set.fileFinishedImporting("modules/rpc/native/server/commands/voiceSettings.tsx");
+obj[Constants.RPCCommands.GET_VOICE_SETTINGS] = obj2;
+const result = size.fileFinishedImporting("modules/rpc/native/server/commands/voiceSettings.tsx");
 
 export default obj;

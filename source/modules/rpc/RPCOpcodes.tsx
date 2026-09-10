@@ -1,11 +1,11 @@
-// Module ID: 9558
-// Function ID: 9559
-// Name: HANDSHAKE
+// Module ID: 9585
+// Function ID: 9586
+// Name: RPCOpcodes
 // Dependencies: [2]
 
-// Module 9558 (HANDSHAKE)
-import set from "set" /* 2 */;
+// Module 9585 (RPCOpcodes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/rpc/RPCOpcodes.tsx");
+const result = size.fileFinishedImporting("modules/rpc/RPCOpcodes.tsx");
 
 export default { HANDSHAKE: 0, FRAME: 1, CLOSE: 2, HELLO: 3 };

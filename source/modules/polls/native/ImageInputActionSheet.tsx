@@ -1,73 +1,70 @@
-// Module ID: 12231
-// Function ID: 12232
-// Name: ImageInputAnswerActionSheet
-// Dependencies: [19, 17, 7829, 21, 4560, 576, 12230, 4425, 4527, 7198, 4556, 1178, 7200, 1114, 12232, 2]
+// Module ID: 12257
+// Function ID: 12258
+// Name: ImageInputActionSheet
+// Dependencies: [19, 17, 7843, 21, 4574, 576, 12256, 4439, 4541, 7211, 4570, 1178, 7213, 1114, 12258, 2]
 // Exports: default
 
-// Module 12231 (ImageInputAnswerActionSheet)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY as closure_5 } from "POLL_ATTACHMENT_FOLDER" /* 7829 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12257 (ImageInputActionSheet)
+import nativeDefault from "native" /* 576 */;
+import EditPollCreationImageAltTextModalActionCreators from "EditPollCreationImageAltTextModalActionCreators" /* 12258 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { emojiContainer: { flexDirection: "row", alignItems: "center", marginHorizontal: 24 }, emojiIcon: null };
-createCacheKey = { marginRight: 12, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[1] = createCacheKey;
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/polls/native/ImageInputActionSheet.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const View = fn(17).View;
+let closure_5 = fn(7843).POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { emojiContainer: { flexDirection: "row", alignItems: "center", marginHorizontal: 24 }, emojiIcon: { marginRight: 12, borderRadius: nativeDefault.radii.sm } };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/polls/native/ImageInputActionSheet.tsx");
 
 export default function ImageInputAnswerActionSheet(channelId) {
   channelId = channelId.channelId;
   ({ index: importDefault, answer } = channelId);
-  ({ onSaveAltText: closure_3, onRemoveAnswerImage: View, openExpressionPicker: closure_5 } = channelId);
-  let callback;
-  const tmp = callback2();
-  const tmp3 = importDefault(answer[6])(channelId, answer.localCreationAnswerId, answer.image, 40, 40);
+  ({ onSaveAltText: noop, onRemoveAnswerImage: View, openExpressionPicker: closure_5 } = channelId);
+  closure_6 = undefined;
+  const tmp = closure_8();
+  const tmp3 = require("useRenderPollAnswerImage")(channelId, answer.localCreationAnswerId, answer.image, 40, 40);
   const upload = tmp3.upload;
   let tmp4 = null != upload;
   if (!tmp4) {
     const image = answer.image;
-    let emoji;
+    let emoji1;
     if (image != null) {
-      emoji = image.emoji;
+      emoji1 = image.emoji;
     }
-    tmp4 = null != emoji;
+    tmp4 = null != emoji1;
   }
-  callback = React.useCallback(() => {
+  closure_6 = noop.useCallback(() => {
     channelId(answer[7]).dismissKeyboard();
     const obj = channelId(answer[7]);
-    callback(answer[8]).hideActionSheet(closure_5);
+    index(answer[8]).hideActionSheet(closure_1_5);
   }, []);
   let tmp6Result = tmp4;
   if (tmp4) {
-    let obj = { style: null, children: null };
-    obj[0] = tmp.emojiContainer;
-    obj = { style: null, children: null };
-    obj[0] = tmp.emojiIcon;
-    obj[1] = tmp3.renderImage;
-    const items = [callback(View, obj), ];
+    let obj = { style: tmp.emojiContainer, children: null };
+    const obj2 = { style: tmp.emojiIcon, children: tmp3.renderImage };
+    const items = [closure_6(View, obj2), ];
     const image2 = answer.image;
     let name;
     if (image2 != null) {
-      emoji = image2.emoji;
+      const emoji = image2.emoji;
       if (emoji != null) {
         name = emoji.name;
       }
     }
-    obj = { variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
+    const obj3 = { variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
     const _HermesInternal = HermesInternal;
-    obj[2] = ":" + name + ":";
-    items[1] = callback(tmp7(tmp2[10]).Text, obj);
-    obj[1] = items;
+    obj3.children = ":" + name + ":";
+    items[1] = closure_6(tmp7(tmp2[10]).Text, obj3);
+    obj.children = items;
     tmp6Result = tmp6(View, obj);
-    const tmp10 = callback;
-    const tmp9 = View;
   }
-  const items1 = [tmp6Result, callback(channelId(answer[11]).Spacer, { size: 21 }), ];
+  const items1 = [tmp6Result, closure_6(channelId(answer[11]).Spacer, { size: 21 }), ];
   const intl = tmp7(tmp2[13]).intl;
   const string = intl.string;
   const t = tmp7(tmp2[13]).t;
@@ -77,11 +74,11 @@ export default function ImageInputAnswerActionSheet(channelId) {
     stringResult = string(t.dzcU1Q);
   }
   const items2 = [
-    callback(channelId(answer[12]).ActionSheetRow, {
+    closure_6(channelId(answer[12]).ActionSheetRow, {
       label: stringResult,
       onPress() {
-        callback4();
-        callback3();
+        closure_6();
+        closure_1_5();
       }
     }),
   ,
@@ -89,32 +86,30 @@ export default function ImageInputAnswerActionSheet(channelId) {
   ];
   let tmp13Result = null;
   if (null != upload) {
-    const obj2 = { label: null, onPress: null };
+    const obj5 = { label: null, onPress: null };
     const intl2 = tmp7(tmp2[13]).intl;
-    obj2[0] = intl2.string(tmp7(tmp2[13]).t.w7x2t4);
-    obj2[1] = function onPress() {
-      callback4();
-      let obj = channelId(answer[14]);
-      obj = { channelId, answer, index: closure_1, onSave: closure_3, imageSize: 40 };
-      const result = obj.openEditPollCreationImageAltTextModal(obj);
+    obj5.label = intl2.string(tmp7(tmp2[13]).t.w7x2t4);
+    obj5.onPress = function onPress() {
+      closure_6();
+      const result = EditPollCreationImageAltTextModalActionCreators.openEditPollCreationImageAltTextModal({ channelId, answer, index, onSave, imageSize: 40 });
     };
-    tmp13Result = tmp13(tmp7(tmp2[12]).ActionSheetRow, obj2);
+    tmp13Result = tmp13(tmp7(tmp2[12]).ActionSheetRow, obj5);
   }
   items2[1] = tmp13Result;
-  tmp13Result = null;
+  let tmp13Result2 = null;
   if (tmp4) {
-    const obj3 = { label: null, onPress: null };
+    const obj6 = { label: null, onPress: null };
     const intl3 = tmp7(tmp2[13]).intl;
-    obj3[0] = intl3.string(tmp7(tmp2[13]).t.IhMxgu);
-    obj3[1] = function onPress() {
-      callback2(closure_1);
-      callback4();
+    obj6.label = intl3.string(tmp7(tmp2[13]).t.IhMxgu);
+    obj6.onPress = function onPress() {
+      View(index);
+      closure_6();
     };
-    tmp13Result = tmp13(tmp7(tmp2[12]).ActionSheetRow, obj3);
+    tmp13Result2 = tmp13(tmp7(tmp2[12]).ActionSheetRow, obj6);
   }
-  const obj4 = { startExpanded: true, children: null };
-  items2[2] = tmp13Result;
+  const obj7 = { startExpanded: true, children: null };
+  items2[2] = tmp13Result2;
   items1[2] = closure_7(channelId(answer[12]).ActionSheetRow.Group, { hasIcons: false, children: items2 });
-  obj4[1] = items1;
-  return closure_7(channelId(answer[9]).ActionSheet, obj4);
+  obj7.children = items1;
+  return closure_7(channelId(answer[9]).ActionSheet, obj7);
 };

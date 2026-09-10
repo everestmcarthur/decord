@@ -1,48 +1,46 @@
-// Module ID: 17319
-// Function ID: 17320
-// Name: handleAVAudioSessionMode
-// Dependencies: [17, 1956, 5421, 4582, 502, 1957, 1908, 2011, 4579, 1895, 1074, 1115, 17320, 7118, 2]
+// Module ID: 17350
+// Function ID: 17351
+// Name: AudioSessionModeManager
+// Dependencies: [17, 1956, 5435, 4596, 502, 1957, 1908, 2011, 4593, 1895, 1074, 1115, 17351, 7132, 2]
 
-// Module 17319 (handleAVAudioSessionMode)
-import initializeDefault from "initialize" /* 7118 */;
-import handleVoiceChannelSelect from "handleVoiceChannelSelect" /* 17320 */;
-import closure_2 from "participantFromServer" /* 1956 */;
-import closure_3 from "buildStageChannelUserRoles" /* 5421 */;
-import closure_4 from "reset" /* 4582 */;
-import closure_5 from "fetchFingerprint" /* 502 */;
-import closure_6 from "ensureGuildLoaded" /* 1957 */;
-import closure_7 from "_detectH265HardwareDecode" /* 1908 */;
-import closure_8 from "handleConnectionOpen" /* 2011 */;
-import closure_9 from "updateVoiceState" /* 4579 */;
-import closure_10 from "getState" /* 1895 */;
-import { AppStates } from "ME" /* 1074 */;
-import set from "set" /* 1115 */;
+// Module 17350 (AudioSessionModeManager)
+import VoicePermissionManager from "VoicePermissionManager" /* 17351 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5435 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4596 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import VoiceStateStore from "VoiceStateStore" /* 4593 */;
+import AppStateStore from "AppStateStore" /* 1895 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-require = arg1;
+require = fn;
 function handleAVAudioSessionMode() {
-  channel = channel.getChannel(voiceChannelId.getVoiceChannelId());
+  const channel = ChannelStore.getChannel(SelectedChannelStore.getVoiceChannelId());
   if (null == channel) {
-    let VIDEO = VoiceEngine.AVAudioSessionMode.DEFAULT;
+    VIDEO = VoiceEngine.AVAudioSessionMode.DEFAULT;
     let obj2 = VoiceEngine;
   } else {
-    let hasVideoResult = allActiveStreams.getAllActiveStreams().length > 0;
+    let hasVideoResult = ApplicationStreamingStore.getAllActiveStreams().length > 0;
     if (!hasVideoResult) {
-      hasVideoResult = closure_9.hasVideo(channel.id);
+      hasVideoResult = VoiceStateStore.hasVideo(channel.id);
     }
     if (!hasVideoResult) {
-      hasVideoResult = videoEnabled.isVideoEnabled();
+      hasVideoResult = MediaEngineStore.isVideoEnabled();
     }
     if (!hasVideoResult) {
-      if (null == currentEmbeddedActivity.getCurrentEmbeddedActivity()) {
+      if (null == EmbeddedActivitiesStore.getCurrentEmbeddedActivity()) {
         const AVAudioSessionMode = VoiceEngine.AVAudioSessionMode;
-        if (obj.shouldImmediatelyRequestVoicePermissions(id.getId(), channel.id)) {
+        if (obj.shouldImmediatelyRequestVoicePermissions(AuthenticationStore.getId(), channel.id)) {
           VIDEO = AVAudioSessionMode.VOICE;
           obj2 = tmp9;
         } else {
           VIDEO = AVAudioSessionMode.LISTEN;
           obj2 = tmp9;
         }
-        obj = handleVoiceChannelSelect;
+        obj = VoicePermissionManager;
       }
     }
     VIDEO = VoiceEngine.AVAudioSessionMode.VIDEO;
@@ -50,36 +48,39 @@ function handleAVAudioSessionMode() {
   }
   let tmp12 = VIDEO !== VIDEO;
   if (tmp12) {
-    tmp12 = state.getState() === AppStates.ACTIVE;
+    tmp12 = AppStateStore.getState() === AppStates.ACTIVE;
   }
   if (tmp12) {
     const result = obj2.setAVAudioSessionMode(VIDEO);
   }
 }
-if (set.isAndroid()) {
-  set = { setAVAudioSessionMode: null, AVAudioSessionMode: null };
-  set[0] = function setAVAudioSessionMode(VIDEO) {
+const AppStates = fn(1074).AppStates;
+const PlatformUtils = fn(1115);
+if (PlatformUtils.isAndroid()) {
+  let obj2 = {
+    setAVAudioSessionMode() {
 
+      },
+    AVAudioSessionMode: { VOICE: "AVAudioSessionModeVoiceChat", VIDEO: "AVAudioSessionModeVideoChat", LISTEN: "AVAudioSessionModeSpokenAudio", DEFAULT: "AVAudioSessionModeDefault" }
   };
-  set[1] = { VOICE: "AVAudioSessionModeVoiceChat", VIDEO: "AVAudioSessionModeVideoChat", LISTEN: "AVAudioSessionModeSpokenAudio", DEFAULT: "AVAudioSessionModeDefault" };
-  let VoiceEngine = set;
+  let VoiceEngine = obj2;
 } else {
-  VoiceEngine = require("get ActivityIndicator").NativeModules.VoiceEngine;
+  VoiceEngine = fn(17).NativeModules.VoiceEngine;
 }
-const VOICE = VoiceEngine.AVAudioSessionMode.VOICE;
-initializeDefault;
-let prototype = function AudioSessionModeManager() {
+let VIDEO = VoiceEngine.AVAudioSessionMode.VOICE;
+const prototype = function AudioSessionModeManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  const result = new Map().set(closure_4, handleAVAudioSessionMode);
-  const result1 = result.set(closure_9, handleAVAudioSessionMode);
-  const result2 = result1.set(closure_7, handleAVAudioSessionMode);
-  const result3 = result2.set(closure_3, handleAVAudioSessionMode);
-  applyArgumentsResult.stores = result3.set(closure_2, handleAVAudioSessionMode);
+  const result = new Map().set(ApplicationStreamingStore, handleAVAudioSessionMode);
+  const result1 = result.set(VoiceStateStore, handleAVAudioSessionMode);
+  const result2 = result1.set(MediaEngineStore, handleAVAudioSessionMode);
+  const result3 = result2.set(StageChannelRoleStore, handleAVAudioSessionMode);
+  applyArgumentsResult.stores = result3.set(EmbeddedActivitiesStore, handleAVAudioSessionMode);
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
-let result = set.fileFinishedImporting("modules/voice_calls/native/AudioSessionModeManager.tsx");
+const prototype1 = new prototype();
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/voice_calls/native/AudioSessionModeManager.tsx");
 
-export default prototype;
+export default prototype1;

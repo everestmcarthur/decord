@@ -1,40 +1,43 @@
-// Module ID: 9201
-// Function ID: 9202
-// Name: styles
-// Dependencies: [19, 17, 21, 4560, 576, 1396, 9202, 5123, 9203, 2]
+// Module ID: 9228
+// Function ID: 9229
+// Name: components/GameIcon
+// Dependencies: [19, 17, 21, 4574, 576, 1396, 9229, 5137, 9230, 2]
 // Exports: default
 
-// Module 9201 (styles)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9228 (components/GameIcon)
+import nativeDefault from "native" /* 576 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ View: c4, Image: c5 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { gameIcon: { width: 32, height: 32 }, gameIconImage: null, gameIconMask: null, fireIcon: null };
-createCacheKey = { width: 32, height: 32, borderRadius: ThemesDefault.radii.xs, borderWidth: 1, borderStyle: "solid", borderColor: ThemesDefault.colors.BORDER_STRONG };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { position: "absolute", top: -4, right: -4, display: "flex", justifyContent: "center", alignItems: "center", padding: 2, width: 18, height: 18, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[3] = { marginTop: -1, width: 14, height: 14 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { position: "absolute", top: -4, right: -4, display: "flex", justifyContent: "center", alignItems: "center", padding: 2, width: 18, height: 18, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: ThemesDefault.radii.sm };
-const result = require("set").fileFinishedImporting("modules/guild_profile/native/components/GameIcon.tsx");
+const Pressables = FireIcon(5137);
+const FireIcon2 = FireIcon(9230);
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { gameIcon: { width: 32, height: 32 }, gameIconImage: null, gameIconMask: null, fireIcon: null };
+let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.xs, borderWidth: 1, borderStyle: "solid", borderColor: nativeDefault.colors.BORDER_STRONG };
+obj2.gameIconImage = size;
+const size1 = { position: "absolute", top: -4, right: -4, display: "flex", justifyContent: "center", alignItems: "center", padding: 2, width: 18, height: 18, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: nativeDefault.radii.sm };
+obj2.gameIconMask = size1;
+obj2.fireIcon = { marginTop: -1, width: 14, height: 14 };
+const styles = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_profile/native/components/GameIcon.tsx");
 
 export default function GameIcon(arg0) {
   ({ style, game } = arg0);
   ({ activityLevel, onPress } = arg0);
-  let fireIcon = createCacheKey();
+  let fireIcon = styles();
   const iconURL = game.getIconURL(24);
   let source = null;
   if (null != iconURL) {
-    let obj = onPress(1396);
-    source = obj.makeSource(iconURL);
+    source = AvatarUtilsDefault.makeSource(iconURL);
   }
   const items = [game, onPress];
-  let callback = React.useCallback(() => {
+  let callback = noop.useCallback(() => {
     if (onPress != null) {
       tmp(game);
     }
@@ -42,63 +45,52 @@ export default function GameIcon(arg0) {
   if (activityLevel != null) {
     const level = activityLevel.level;
   }
-  let FireIcon = game;
+  let FireIcon = require;
   let ORANGE_260 = dependencyMap;
   if (null == source) {
     return null;
   } else {
-    style = level === tmp5;
+    let style1 = level === tmp5;
     if (null != onPress) {
-      obj = { style: null, onPress: null, children: null };
+      const obj2 = { style: null, onPress: null, children: null };
       const items1 = [style, fireIcon.gameIcon];
-      obj[0] = items1;
-      obj[1] = callback;
-      style = callback;
-      obj = { style: null, source: null };
-      obj[0] = fireIcon.gameIconImage;
-      obj[1] = source;
-      callback = [, ];
-      callback[0] = callback(closure_5, obj);
-      if (style) {
-        source = closure_4;
-        obj1 = { style: null, children: null };
-        obj1[0] = fireIcon.gameIconMask;
-        FireIcon = FireIcon(9203).FireIcon;
-        const obj2 = { style: null, color: null };
+      obj2.style = items1;
+      obj2.onPress = callback;
+      style = timestampProducer;
+      const obj3 = { style: fireIcon.gameIconImage, source };
+      callback = [timestampProducer(hasOwnProperty, obj3), ];
+      if (style1) {
+        source = React4;
+        const obj4 = { style: fireIcon.gameIconMask, children: null };
+        FireIcon = FireIcon2.FireIcon;
+        const obj5 = { style: null, color: null };
         fireIcon = fireIcon.fireIcon;
-        obj2[0] = fireIcon;
-        ORANGE_260 = onPress(576).unsafe_rawColors.ORANGE_260;
-        obj2[1] = ORANGE_260;
-        obj1[1] = style(FireIcon, obj2);
-        style = style(closure_4, obj1);
+        obj5.style = fireIcon;
+        ORANGE_260 = nativeDefault.unsafe_rawColors.ORANGE_260;
+        obj5.color = ORANGE_260;
+        obj4.children = style(FireIcon, obj5);
+        style1 = style(React4, obj4);
       }
-      callback[1] = style;
-      obj[2] = callback;
-      let tmp14Result = closure_7(FireIcon(5123).PressableHighlight, obj);
-      const tmp10 = closure_7;
+      callback[1] = style1;
+      obj2.children = callback;
+      let tmp14Result = React5(Pressables.PressableHighlight, obj2);
     } else {
-      const obj3 = { style: null, children: null };
+      const obj6 = { style: null, children: null };
       const items2 = [style, fireIcon.gameIcon];
-      obj3[0] = items2;
-      const obj4 = { style: null, source: null };
-      obj4[0] = fireIcon.gameIconImage;
-      obj4[1] = source;
-      const items3 = [callback(closure_5, obj4), ];
-      let tmp16Result = style;
-      if (style) {
-        const obj5 = { style: null, children: null };
-        obj5[0] = fireIcon.gameIconMask;
-        const obj6 = { style: null, color: null };
-        obj6[0] = fireIcon.fireIcon;
-        obj6[1] = onPress(576).unsafe_rawColors.ORANGE_330;
-        obj5[1] = tmp16(FireIcon(9203).FireIcon, obj6);
-        tmp16Result = tmp16(tmp15, obj5);
+      obj6.style = items2;
+      const obj7 = { style: fireIcon.gameIconImage, source };
+      const items3 = [timestampProducer(hasOwnProperty, obj7), ];
+      let tmp16Result = style1;
+      if (style1) {
+        const obj8 = { style: fireIcon.gameIconMask, children: null };
+        const obj9 = { style: fireIcon.fireIcon, color: nativeDefault.unsafe_rawColors.ORANGE_330 };
+        obj8.children = tmp16(FireIcon2.FireIcon, obj9);
+        tmp16Result = tmp16(tmp15, obj8);
       }
       items3[1] = tmp16Result;
-      obj3[1] = items3;
-      tmp14Result = closure_7(tmp15, obj3);
-      const tmp14 = closure_7;
+      obj6.children = items3;
+      tmp14Result = React5(tmp15, obj6);
     }
   }
 };
-export const useStyles = createCacheKey;
+export const useStyles = styles;

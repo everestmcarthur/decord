@@ -2,22 +2,23 @@
 // Function ID: 927
 // Name: _sendStandaloneLcpSpan
 // Dependencies: [924, 899, 900, 682]
+// Exports: trackLcpAsStandaloneSpan
 
 // Module 926 (_sendStandaloneLcpSpan)
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 682 */;
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 900 */;
+import _mod682 from "module_682" /* 682 */;
+import _mod900 from "module_900" /* 900 */;
 import extractNetworkProtocol from "extractNetworkProtocol" /* 924 */;
 
 require = arg1;
 let dependencyMap = arg6;
-function _sendStandaloneLcpSpan(arg0, startTime, sentry_pageload_span_id, sentry_report_event) {
-  if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+function _sendStandaloneLcpSpan(c1, startTime, sentry_pageload_span_id, sentry_report_event) {
+  if (_mod900.DEBUG_BUILD) {
     const debug = tmp(682).debug;
     const _HermesInternal = HermesInternal;
-    debug.log("Sending LCP span (" + arg0 + ")");
+    debug.log("Sending LCP span (" + c1 + ")");
   }
-  let tmpResult = tmp(924);
-  tmpResult = tmp(682);
+  const tmpResult = extractNetworkProtocol;
+  const tmpResult6 = _mod682;
   let num;
   if (startTime != null) {
     num = startTime.startTime;
@@ -25,19 +26,19 @@ function _sendStandaloneLcpSpan(arg0, startTime, sentry_pageload_span_id, sentry
   if (!num) {
     num = 0;
   }
-  const msToSecResult = tmpResult.msToSec((tmpResult.browserPerformanceTimeOrigin() || 0) + num);
-  const tmp5 = tmpResult.browserPerformanceTimeOrigin() || 0;
-  const currentScope = registerSpanErrorInstrumentation.getCurrentScope();
+  const msToSecResult = tmpResult.msToSec((_mod682.browserPerformanceTimeOrigin() || 0) + num);
+  const tmp5 = _mod682.browserPerformanceTimeOrigin() || 0;
+  const currentScope = _mod682.getCurrentScope();
   let str3 = "Largest contentful paint";
   if (startTime) {
     str3 = tmp(682).htmlTreeAsString(startTime.element);
-    const tmpResult2 = tmp(682);
+    const tmpResult8 = tmp(682);
   }
-  let obj = { [tmp(682).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.http.browser.lcp", [tmp(682).SEMANTIC_ATTRIBUTE_SENTRY_OP]: "ui.webvital.lcp", [tmp(682).SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME]: 0, sentry.pageload.span_id, sentry.report_event };
+  const obj = { [_mod682.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.http.browser.lcp", [_mod682.SEMANTIC_ATTRIBUTE_SENTRY_OP]: "ui.webvital.lcp", [_mod682.SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME]: 0, sentry.pageload.span_id, sentry.report_event };
   if (startTime) {
     if (startTime.element) {
       obj["lcp.element"] = tmp(682).htmlTreeAsString(startTime.element);
-      const tmpResult3 = tmp(682);
+      const tmpResult9 = tmp(682);
     }
     if (startTime.id) {
       obj["lcp.id"] = startTime.id;
@@ -55,33 +56,34 @@ function _sendStandaloneLcpSpan(arg0, startTime, sentry_pageload_span_id, sentry
       obj["lcp.size"] = startTime.size;
     }
   }
-  const tmpResult1 = registerSpanErrorInstrumentation;
+  const tmpResult7 = _mod682;
   const result = extractNetworkProtocol.startStandaloneWebVitalSpan({ name: str3, transaction: currentScope.getScopeData().transactionName, attributes: obj, startTime: msToSecResult });
   if (result) {
-    obj = {};
-    obj[tmp(682).SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = "millisecond";
-    obj[tmp(682).SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = arg0;
-    result.addEvent("lcp", obj);
+    const obj2 = {};
+    obj2[tmp(682).SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = "millisecond";
+    obj2[tmp(682).SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = c1;
+    result.addEvent("lcp", obj2);
     result.end(msToSecResult);
   }
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5._sendStandaloneLcpSpan = _sendStandaloneLcpSpan;
-arg5.trackLcpAsStandaloneSpan = function trackLcpAsStandaloneSpan(client) {
+
+export { _sendStandaloneLcpSpan };
+export const trackLcpAsStandaloneSpan = function trackLcpAsStandaloneSpan(client) {
   dependencyMap = 0;
   if (obj.supportsWebVital("largest-contentful-paint")) {
-    let tmpResult = tmp(899);
-    closure_2 = tmpResult.addLcpInstrumentationHandler((metric) => {
+    closure_2 = tmp(899).addLcpInstrumentationHandler((metric) => {
       const tmp = metric.metric.entries[metric.metric.entries.length - 1];
       if (tmp) {
-        const value = iter.value;
+        value = iter.value;
         closure_0 = tmp;
       }
     }, true);
-    tmpResult = tmp(924);
-    const result = tmpResult.listenForWebVitalReportEvents(client, (arg0, arg1) => {
-      callback(c1, closure_0, arg1, arg0);
-      callback();
+    const tmpResult = tmp(899);
+    const result = tmp(924).listenForWebVitalReportEvents(client, (sentry_report_event, sentry_pageload_span_id) => {
+      _sendStandaloneLcpSpan(c1, closure_0, sentry_pageload_span_id, sentry_report_event);
+      closure_2();
     });
+    const tmpResult2 = tmp(924);
   }
 };

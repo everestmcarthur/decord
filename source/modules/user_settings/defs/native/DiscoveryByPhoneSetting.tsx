@@ -1,67 +1,41 @@
-// Module ID: 14850
-// Function ID: 14851
-// Name: toggle
-// Dependencies: [7975, 1074, 1114, 1935, 1384, 12688, 11473, 2]
+// Module ID: 14876
+// Function ID: 14877
+// Name: DiscoveryByPhoneSetting
+// Dependencies: [7989, 1074, 1114, 1935, 1384, 12714, 11500, 2]
 
-// Module 14850 (toggle)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import hasFlag from "hasFlag" /* 1384 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import _updateDiscoverabilityDefault from "_updateDiscoverability" /* 12688 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 14876 (DiscoveryByPhoneSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import FlagUtils from "FlagUtils" /* 1384 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12714 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-const FriendDiscoveryFlags = ME.FriendDiscoveryFlags;
-const toggle = createToggle.createToggle({
+const FriendDiscoveryFlags = Constants.FriendDiscoveryFlags;
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.dEYpSt);
+    const intl = util.intl;
+    return intl.string(util.t.dEYpSt);
   },
-  parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: SettingsConstants.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useDescription: function useDiscoveryByPhoneSettingDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.X7pIKN);
+    const intl = util.intl;
+    return intl.string(util.t.X7pIKN);
   },
   useValue: function useDiscoveryByPhoneSettingValue() {
-    const FriendDiscoverySettings = explicitContentFromProto.FriendDiscoverySettings;
+    const FriendDiscoverySettings = UserSettings.FriendDiscoverySettings;
     const setting = FriendDiscoverySettings.useSetting();
-    return hasFlag.hasFlag(setting, FriendDiscoveryFlags.FIND_BY_PHONE);
+    return FlagUtils.hasFlag(setting, FriendDiscoveryFlags.FIND_BY_PHONE);
   },
   onValueChange: function onDiscoveryByPhoneSettingValueChange(phone) {
-    const FriendDiscoverySettings = explicitContentFromProto.FriendDiscoverySettings;
+    const FriendDiscoverySettings = UserSettings.FriendDiscoverySettings;
     const setting = FriendDiscoverySettings.getSetting();
-    let obj = hasFlag;
-    const hasFlagResult = obj.hasFlag(setting, FriendDiscoveryFlags.FIND_BY_EMAIL);
-    obj = { phone, email: hasFlagResult };
-    const result = _updateDiscoverabilityDefault.updateDiscoverability(obj);
+    const hasFlagResult = FlagUtils.hasFlag(setting, FriendDiscoveryFlags.FIND_BY_EMAIL);
+    const result = ContactSyncActionCreatorsDefault.updateDiscoverability({ phone, email: hasFlagResult });
   }
 });
-let obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.dEYpSt);
-  },
-  parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  useDescription: function useDiscoveryByPhoneSettingDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.X7pIKN);
-  },
-  useValue: function useDiscoveryByPhoneSettingValue() {
-    const FriendDiscoverySettings = explicitContentFromProto.FriendDiscoverySettings;
-    const setting = FriendDiscoverySettings.useSetting();
-    return hasFlag.hasFlag(setting, FriendDiscoveryFlags.FIND_BY_PHONE);
-  },
-  onValueChange: function onDiscoveryByPhoneSettingValueChange(phone) {
-    const FriendDiscoverySettings = explicitContentFromProto.FriendDiscoverySettings;
-    const setting = FriendDiscoverySettings.getSetting();
-    let obj = hasFlag;
-    const hasFlagResult = obj.hasFlag(setting, FriendDiscoveryFlags.FIND_BY_EMAIL);
-    obj = { phone, email: hasFlagResult };
-    const result = _updateDiscoverabilityDefault.updateDiscoverability(obj);
-  }
-};
-let result = set.fileFinishedImporting("modules/user_settings/defs/native/DiscoveryByPhoneSetting.tsx");
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/DiscoveryByPhoneSetting.tsx");
 
 export default toggle;

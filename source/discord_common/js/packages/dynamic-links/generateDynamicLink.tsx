@@ -1,27 +1,27 @@
-// Module ID: 12941
-// Function ID: 12942
+// Module ID: 12967
+// Function ID: 12968
 // Name: generateDynamicLink
-// Dependencies: [109, 32, 1341, 1256, 12942, 2]
+// Dependencies: [109, 32, 1341, 1256, 12968, 2]
 // Exports: default, generateAttemptId, parseDynamicLink
 
-// Module 12941 (generateDynamicLink)
+// Module 12967 (generateDynamicLink)
 import v1 from "v1" /* 1256 */;
 import formatDefault from "format" /* 1341 */;
-import setDefault from "set" /* 12942 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "_slicedToArray" /* 32 */;
+import getDescriptionDefault from "getDescription" /* 12968 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
+require = fn;
 let closure_3 = ["utmSource", "androidFallbackLink", "iosFallbackLink"];
 let c6 = "https://discordapp.onelink.me";
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/dynamic-links/generateDynamicLink.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("../discord_common/js/packages/dynamic-links/generateDynamicLink.tsx");
 
 export default function generateDynamicLink(arg0, arg1) {
   ({ utmSource, androidFallbackLink, iosFallbackLink } = arg1);
-  const tmp = callback(arg1, closure_3);
+  const tmp = _objectWithoutProperties(arg1, closure_3);
   const str = new URL(arg0);
   for (const key10018 in tmp) {
-    let tmp24 = key10018;
     let tmp25 = tmp[key10018];
     if (null == tmp25) {
       continue;
@@ -43,15 +43,15 @@ export default function generateDynamicLink(arg0, arg1) {
       match = str2.match(regExp);
     }
   }
-  let tmp5Result = tmp5(1341);
+  const tmp5Result = formatDefault;
   let name;
   if (tmp5Result != null) {
     name = tmp5Result.name;
   }
-  tmp5Result = tmp5(1341);
+  const tmp5Result2 = formatDefault;
   let family;
-  if (tmp5Result != null) {
-    const os = tmp5Result.os;
+  if (tmp5Result2 != null) {
+    const os = tmp5Result2.os;
     if (os != null) {
       family = os.family;
     }
@@ -70,7 +70,7 @@ export default function generateDynamicLink(arg0, arg1) {
     const _encodeURIComponent2 = encodeURIComponent;
     encodeURIComponentResult4 = encodeURIComponent(iosFallbackLink);
   }
-  const combined = "" + c6 + "/Hs5r/?deep_link_value=" + encodeURIComponentResult + "&pid=" + utmSource + "&af_force_deeplink=" + str3 + "&af_og_description=" + encodeURIComponent(setDefault()) + "&af_dp=" + encodeURIComponentResult1;
+  const combined = "" + c6 + "/Hs5r/?deep_link_value=" + encodeURIComponentResult + "&pid=" + utmSource + "&af_force_deeplink=" + str3 + "&af_og_description=" + encodeURIComponent(getDescriptionDefault()) + "&af_dp=" + encodeURIComponentResult1;
   let sum = combined;
   if (null != encodeURIComponentResult3) {
     const _HermesInternal = HermesInternal;
@@ -92,8 +92,7 @@ export const parseDynamicLink = function parseDynamicLink(str) {
       const _URL = URL;
       const uRL = new URL(str);
       const searchParams = uRL.searchParams;
-      let obj = searchParams;
-      let value = searchParams.get("deep_link_value");
+      value = searchParams.get("deep_link_value");
       if (null == value) {
         return null;
       } else {
@@ -101,20 +100,17 @@ export const parseDynamicLink = function parseDynamicLink(str) {
         const _URL2 = URL;
         const uRL1 = new URL(decodeURIComponent(value));
         const searchParams2 = uRL1.searchParams;
-        value = obj.get("pid");
-        obj = { utmSource: null };
-        obj[0] = value;
+        value2 = obj.get("pid");
+        const obj2 = { utmSource: value2 };
         const entries = searchParams2.entries();
         const tmp16 = entries[Symbol.iterator]();
         while (tmp16 !== undefined) {
-          let tmp20 = callback2;
-          let tmp21 = callback2(tmp18, 2);
-          let tmp22 = obj;
-          obj[tmp21[0]] = tmp21[1];
+          [, obj2[tmp21[0]]] = tmp18;
           continue;
         }
-        return obj;
+        return obj2;
       }
+      obj = searchParams;
     } catch (err) {
       return null;
     }

@@ -1,159 +1,137 @@
-// Module ID: 9817
-// Function ID: 9818
-// Name: _navigateToEvent
-// Dependencies: [5, 1957, 4583, 4381, 1963, 1074, 38, 8393, 8398, 5411, 1100, 2]
+// Module ID: 9844
+// Function ID: 9845
+// Name: StartEventPlatformUtils
+// Dependencies: [5, 1957, 4597, 4395, 1963, 1074, 38, 8421, 8426, 5425, 1100, 2]
 // Exports: navigateToEvent, postStartActions
 
-// Module 9817 (_navigateToEvent)
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import closure_6 from "createRTCConnection" /* 4583 */;
-import closure_7 from "handleConnectionOpen" /* 4381 */;
-import { GuildScheduledEventEntityTypes as closure_8 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1963 */;
-import { Routes } from "ME" /* 1074 */;
+// Module 9844 (StartEventPlatformUtils)
+import _modDef38 from "module_38" /* 38 */;
+import router_utils from "router_utils" /* 1100 */;
+import StageChannelModalActionCreatorsAll from "StageChannelModalActionCreators" /* 8421 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
 
-const require = arg1;
-function _navigateToEvent() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c4 = 0;
-    c5 = 0;
-    return (function*(arg0, arg1) {
-      if (store === 2) {
-        store = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+require = fn;
+let closure_10 = async function _navigateToEvent(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj3 = { value, done: true };
+      return obj3;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
         if (arg0 === 1) {
-          throw arg1;
+          c5 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          c5 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          store = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              store = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              store = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              dependencyMap = tmp5;
-              const callback3 = tmp2;
-              let tmp27 = channel;
-              const callback = channel;
-              channel = undefined;
-              ({ entity_type, guild_id } = callback);
-              if (closure_1_8.STAGE_INSTANCE === entity_type) {
-                const channelId = closure_1_6.getChannelId();
-                channel = store.getChannel(tmp53.channel_id);
-                callback2(closure_1_3[6])(null != channel, "could not find channel");
-                if (channelId !== channel.id) {
-                  c4 = 1;
-                  store = 1;
-                  obj1 = { value: null, done: false };
-                  obj1[0] = closure_1_2(closure_1_3[7]).connectToStage(channel, true);
-                  return obj1;
-                }
-              } else {
-                if (tmp54.VOICE === entity_type) {
-                  const channelId1 = closure_1_6.getChannelId();
-                  const channel1 = store.getChannel(tmp53.channel_id);
-                  callback2(closure_1_3[6])(null != channel1, "could not find channel");
-                  if (channelId1 !== channel1.id) {
-                    const voiceChannel = tmp21(closure_1_3[9]).selectVoiceChannel(channel1.id);
-                    const tmp21Result = tmp21(closure_1_3[9]);
-                  }
-                  if (tmp27 != null) {
-                    tmp27 = tmp27();
-                  }
-                  tmp21 = callback2;
-                } else if (tmp54.EXTERNAL === entity_type) {
-                  if (closure_1_7.getGuildId() !== guild_id) {
-                    let obj5 = callback(closure_1_3[10]);
-                    obj5.transitionTo(closure_1_9.CHANNEL(guild_id));
-                  }
-                  if (tmp27 != null) {
-                    tmp27();
-                  }
-                }
-                store = 3;
+          closure_3 = tmp5;
+          closure_2 = tmp2;
+          let tmp27 = closure_1;
+          closure_130_0 = closure_1;
+          closure_130_1 = undefined;
+          ({ entity_type, guild_id } = closure_0);
+          if (constants.STAGE_INSTANCE === entity_type) {
+            const channelId = RTCConnectionStore.getChannelId();
+            const channel = ChannelStore.getChannel(tmp52.channel_id);
+            closure_130_1 = channel;
+            _modDef38(null != channel, "could not find channel");
+            if (channelId !== channel.id) {
+              c4 = 1;
+              c5 = 1;
+              const obj5 = { value: StageChannelModalActionCreatorsAll.connectToStage(channel, true), done: false };
+              return obj5;
+            }
+          } else {
+            if (tmp53.VOICE === entity_type) {
+              const channelId1 = RTCConnectionStore.getChannelId();
+              const channel1 = ChannelStore.getChannel(tmp52.channel_id);
+              _modDef38(null != channel1, "could not find channel");
+              if (channelId1 !== channel1.id) {
+                const voiceChannel = tmp21(5425).selectVoiceChannel(channel1.id);
+                const tmp21Result = tmp21(5425);
+              }
+              if (tmp27 != null) {
+                tmp27 = tmp27();
+              }
+              tmp21 = importDefault;
+            } else if (tmp53.EXTERNAL === entity_type) {
+              if (guildId.getGuildId() !== guild_id) {
+                router_utils.transitionTo(Routes.CHANNEL(guild_id));
+              }
+              if (tmp27 != null) {
+                tmp27();
               }
             }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              store = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              store = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            }
-          } else if (2 === tmp5) {
-            if (arg0 === 1) {
-              store = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              store = 3;
-              const obj3 = { value: null, done: true };
-              obj3[0] = arg1;
-              return obj3;
-            } else {
-              obj1 = callback(8398);
-              c4 = 3;
-              store = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = obj1.audienceAckRequestToSpeak(channel, false);
-              return obj4;
-            }
-          } else if (arg0 === 1) {
-            store = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            store = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            c5 = 3;
           }
-          if (callback != null) {
-            tmp37();
-          }
-          c4 = 2;
-          store = 1;
-          obj5 = { value: null, done: false };
-          obj5[0] = callback3(8393).navigateToStage(channel, null);
-          return obj5;
-        } catch (tmp47) {
-          store = tmp;
-          throw tmp47;
         }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj7 = { value, done: true };
+          return obj7;
+        }
+      } else if (2 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj9 = { value, done: true };
+          return obj9;
+        } else {
+          c4 = 3;
+          c5 = 1;
+          const obj11 = { value: closure_131_0(closure_131_3[8]).audienceAckRequestToSpeak(closure_130_1, false), done: false };
+          return obj11;
+        }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        const obj = { value, done: true };
+        return obj;
       }
-    })();
-  });
-  closure_10 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+      if (closure_130_0 != null) {
+        tmp37();
+      }
+      c4 = 2;
+      c5 = 1;
+      const obj12 = { value: closure_131_2(closure_131_3[7]).navigateToStage(closure_130_1, null), done: false };
+      return obj12;
+    } catch (tmp47) {
+      c5 = tmp;
+      throw tmp47;
+    }
   }
-  return applyArgumentsResult;
-}
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/StartEventPlatformUtils.native.tsx");
+};
+let closure_8 = fn(1963).GuildScheduledEventEntityTypes;
+const Routes = fn(1074).Routes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/StartEventPlatformUtils.native.tsx");
 
-export const navigateToEvent = function navigateToEvent(closure_0, onSuccess) {
+export const navigateToEvent = function navigateToEvent() {
   const self = this;
-  const apply = _navigateToEvent.apply;
+  const apply = closure_10.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -161,6 +139,6 @@ export const navigateToEvent = function navigateToEvent(closure_0, onSuccess) {
   }
   return applyArgumentsResult;
 };
-export const postStartActions = function postStartActions(closure_0, onSuccess) {
+export const postStartActions = function postStartActions() {
   return Promise.resolve();
 };

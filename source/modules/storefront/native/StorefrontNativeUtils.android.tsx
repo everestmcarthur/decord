@@ -1,18 +1,23 @@
-// Module ID: 10807
-// Function ID: 10808
-// Name: useFormattedSKUPrice
-// Dependencies: [19, 9372, 504, 7237, 2]
+// Module ID: 10834
+// Function ID: 10835
+// Name: StorefrontNativeUtils
+// Dependencies: [19, 9399, 504, 7251, 2]
 // Exports: useFormattedSKUPrice
 
-// Module 10807 (useFormattedSKUPrice)
-import closure_3 from "noop" /* 19 */;
+// Module 10834 (StorefrontNativeUtils)
+import IAPStoreDefault from "IAPStore" /* 7251 */;
+import GPlayActionCreators from "GPlayActionCreators" /* 9399 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/storefront/native/StorefrontNativeUtils.android.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/storefront/native/StorefrontNativeUtils.android.tsx");
 
 export const useFormattedSKUPrice = function useFormattedSKUPrice(sku) {
   sku = sku.sku;
-  let _require;
+  _require = undefined;
   let stateFromStores;
   let tmp2;
   if (sku != null) {
@@ -26,32 +31,31 @@ export const useFormattedSKUPrice = function useFormattedSKUPrice(sku) {
   }
   _require = tmp2;
   let items = [tmp2];
-  const effect = React.useEffect(() => {
-    if (null != _null) {
+  const effect = noop.useEffect(() => {
+    if (null != c0) {
       const items = [tmp];
-      const inAppSkus = _null(closure_1_2[1]).loadInAppSkus(items);
-      const obj = _null(closure_1_2[1]);
+      const inAppSkus = GPlayActionCreators.loadInAppSkus(items);
     }
   }, items);
-  const items1 = [stateFromStores(7237)];
+  const items1 = [stateFromStores(7251)];
   const items2 = [tmp2];
-  stateFromStores = _require(504).useStateFromStores(items1, () => {
+  stateFromStores = require("initialize").useStateFromStores(items1, () => {
     let product = null;
     if (null != c0) {
-      product = stateFromStores(closure_1_2[3]).getProduct(tmp);
-      const obj = stateFromStores(closure_1_2[3]);
+      product = IAPStoreDefault.getProduct(tmp);
     }
     return product;
   }, items2);
   const items3 = [stateFromStores];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     let priceString;
     if (stateFromStores != null) {
       priceString = tmp.priceString;
     }
     if (null != priceString) {
+      ({ priceString: obj2.normalPrice, priceString: obj2.userPrice } = tmp);
       let obj = { normalPrice: null, discountedPrice: null, discountPercent: null, userPrice: null };
-      ({ priceString: obj2[0], priceString: obj2[3] } = tmp);
+      const obj3 = { normalPrice: null, discountedPrice: null, discountPercent: null, userPrice: null };
     } else {
       obj = { normalPrice: null, discountedPrice: null, discountPercent: null, userPrice: null };
     }

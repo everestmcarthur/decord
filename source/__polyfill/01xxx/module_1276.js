@@ -4,8 +4,7 @@
 
 // Module 1276
 const re1 = /%20/g;
-
-export default {
+const obj = {
   default: "RFC3986",
   formatters: {
     RFC1738(arg0) {
@@ -24,3 +23,5 @@ export default {
   RFC1738: "RFC1738",
   RFC3986: "RFC3986"
 };
+
+export default obj;

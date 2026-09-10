@@ -1,24 +1,24 @@
-// Module ID: 10887
-// Function ID: 10888
+// Module ID: 10914
+// Function ID: 10915
 // Name: ActivityStatusIcon
-// Dependencies: [19, 21, 4560, 2]
+// Dependencies: [19, 21, 4574, 2]
 // Exports: default
 
-// Module 10887 (ActivityStatusIcon)
-import noopAll from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10914 (ActivityStatusIcon)
+import noop from "module_19" /* 19 */;
 
-noopAll;
-let closure_1 = createCacheKey.createStyles({ icon: { flexShrink: 0 } });
-const result = require("set").fileFinishedImporting("modules/activity_status/native/ActivityStatusIcon.tsx");
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_1 = createStyles.createStyles({ icon: { flexShrink: 0 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activity_status/native/ActivityStatusIcon.tsx");
 
 export default function ActivityStatusIcon(arg0) {
   ({ icon, style } = arg0);
-  const merged = Object.assign(arg0, Object.create(null));
+  const merged = Object.assign(arg0, Object.assign({ icon: 0, style: 0 }));
   const obj = { size: "xxs", style: null, color: "status-positive" };
-  const items = [callback().icon, style];
-  obj[1] = items;
+  const items = [closure_1().icon, style];
+  obj.style = items;
   const merged1 = Object.assign(merged);
   return <icon size="xxs" style={null} color="status-positive" />;
 };

@@ -1,18 +1,18 @@
-// Module ID: 12097
-// Function ID: 12098
+// Module ID: 12123
+// Function ID: 12124
 // Name: RecommendationAppRow
-// Dependencies: [19, 21, 1396, 12087, 2]
+// Dependencies: [19, 21, 1396, 12113, 2]
 // Exports: default
 
-// Module 12097 (RecommendationAppRow)
-import noopAll from "noop" /* 19 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
-import AppRowLabel from "AppRowLabel" /* 12087 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 12123 (RecommendationAppRow)
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import AppLauncherHomeScreen from "AppLauncherHomeScreen" /* 12113 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/base_components/RecommendationAppRow.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/RecommendationAppRow.tsx");
 
 export default function RecommendationAppRow(onPress) {
   ({ application, isFirstRow } = onPress);
@@ -27,8 +27,6 @@ export default function RecommendationAppRow(onPress) {
   if (showsPromoted === undefined) {
     showsPromoted = false;
   }
-  let obj = getAvatarURLDefault;
-  obj = { id: application.id, icon: application.icon, bot: application.bot, botIconFirst: true };
-  const iconSource = obj.getApplicationIconSource(obj);
-  return jsx(AppRowLabel.BaseAppRow, { application, iconSource, onPress: onPress.onPress, isFirstRow, isLastRow, showsPromoted });
+  const iconSource = AvatarUtilsDefault.getApplicationIconSource({ id: application.id, icon: application.icon, bot: application.bot, botIconFirst: true });
+  return jsx(AppLauncherHomeScreen.BaseAppRow, { application, iconSource, onPress: onPress.onPress, isFirstRow, isLastRow, showsPromoted });
 };

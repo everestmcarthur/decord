@@ -1,34 +1,35 @@
-// Module ID: 12699
-// Function ID: 12700
+// Module ID: 12725
+// Function ID: 12726
 // Name: useBackHandlerSkipPhoneScreens
-// Dependencies: [17, 12682, 5630, 2]
+// Dependencies: [17, 12708, 5644, 2]
 // Exports: default, useBackHandlerMinimizeApp
 
-// Module 12699 (useBackHandlerSkipPhoneScreens)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 5630 */;
-import ContactSyncLandingPage from "ContactSyncLandingPage" /* 12682 */;
+// Module 12725 (useBackHandlerSkipPhoneScreens)
+import _mod17 from "module_17" /* 17 */;
+import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 5644 */;
+import ContactSyncConstants from "ContactSyncConstants" /* 12708 */;
+import size from "module_2" /* 2 */;
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-const ContactSyncScenes = ContactSyncLandingPage.ContactSyncScenes;
-const result = set.fileFinishedImporting("modules/contact_sync/native/components/useBackHandlerSkipPhoneScreens.tsx");
+const require = globalThis.__r;
+
+const NativeModules = _mod17.NativeModules;
+const ContactSyncScenes = ContactSyncConstants.ContactSyncScenes;
+const result = size.fileFinishedImporting("modules/contact_sync/native/components/useBackHandlerSkipPhoneScreens.tsx");
 
 export default function useBackHandlerSkipPhoneScreens(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   dependencyMap = arg1;
-  _require(5630).useNavigatorBackPressHandler(() => {
+  require("useNavigatorBackPressHandler").useNavigatorBackPressHandler(() => {
     if (null != closure_1) {
       tmp();
     } else {
-      let arr = state;
       const items = [, , ];
-      ({ ADD_PHONE: arr2[0], VERIFY_PHONE: arr2[1], VERIFY_PASSWORD: arr2[2] } = closure_1_3);
+      ({ ADD_PHONE: arr2[0], VERIFY_PHONE: arr2[1], VERIFY_PASSWORD: arr2[2] } = ContactSyncScenes);
       const routes = state.getState().routes;
       if (routes.length <= 2) {
-        arr = arr.pop();
+        arr.pop();
       } else if (items.includes(routes[routes.length - 2].name)) {
-        arr = arr.pop(routes.length - 1);
+        arr.pop(routes.length - 1);
       }
     }
     return true;

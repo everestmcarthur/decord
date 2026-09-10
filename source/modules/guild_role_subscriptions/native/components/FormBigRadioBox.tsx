@@ -1,37 +1,35 @@
-// Module ID: 17729
-// Function ID: 17730
+// Module ID: 17762
+// Function ID: 17763
 // Name: FormBigRadioBox
-// Dependencies: [19, 17, 21, 4560, 576, 4277, 9055, 1178, 4556, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 4292, 9082, 1178, 4570, 2]
 // Exports: default
 
-// Module 17729 (FormBigRadioBox)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 1178 */;
-import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4277 */;
-import Text from "Text" /* 4556 */;
-import renderDefault from "render" /* 9055 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17762 (FormBigRadioBox)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4292 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9082 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: null, containerSelected: null, indicator: null, iconContainer: null, iconContainerSelected: null, title: null, disabled: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm, alignSelf: "stretch", alignItems: "flex-start", padding: 16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 1, borderColor: ThemesDefault.colors.BACKGROUND_BRAND };
-createCacheKey[2] = { position: "absolute", right: 18, top: 18 };
-const obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 1, borderColor: ThemesDefault.colors.BACKGROUND_BRAND };
-createCacheKey[3] = { height: 40, width: 40, alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: 20, justifyContent: "center", marginBottom: 16 };
-const obj2 = { height: 40, width: 40, alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: 20, justifyContent: "center", marginBottom: 16 };
-createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[5] = { marginBottom: 2 };
-createCacheKey[6] = { opacity: 0.5 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormBigRadioBox.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, alignSelf: "stretch", alignItems: "flex-start", padding: 16 }, containerSelected: null, indicator: null, iconContainer: null, iconContainerSelected: null, title: null, disabled: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, alignSelf: "stretch", alignItems: "flex-start", padding: 16 };
+obj2.containerSelected = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_BRAND };
+obj2.indicator = { position: "absolute", right: 18, top: 18 };
+let size = { height: 40, width: 40, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: 20, justifyContent: "center", marginBottom: 16 };
+obj2.iconContainer = size;
+const obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_BRAND };
+obj2.iconContainerSelected = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj2.title = { marginBottom: 2 };
+obj2.disabled = { opacity: 0.5 };
+let closure_6 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormBigRadioBox.tsx");
 
 export default function FormBigRadioBox(arg0) {
   ({ selected, disabled } = arg0);
@@ -39,12 +37,12 @@ export default function FormBigRadioBox(arg0) {
   if (disabled === undefined) {
     disabled = false;
   }
-  const tmp = callback2();
-  let obj = useCheckboxA11yNative;
-  const radioA11yNative = obj.useRadioA11yNative({ selected, disabled });
+  const tmp = closure_6();
+  const radioA11yNative = useA11yRolesNative.useRadioA11yNative({ selected, disabled });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   const items = [tmp.container, , , ];
   let containerSelected = selected;
+  const tmp5 = hasOwnProperty;
   if (selected) {
     containerSelected = tmp.containerSelected;
   }
@@ -53,27 +51,26 @@ export default function FormBigRadioBox(arg0) {
   if (disabled) {
     disabled2 = tmp.disabled;
   }
-  obj = { style: items, accessibilityRole, accessibilityState, onPress: null, children: null };
+  const obj2 = { style: items, accessibilityRole, accessibilityState, onPress: null, children: null };
   items[2] = disabled2;
   items[3] = style;
   let tmp7;
   if (!disabled) {
     tmp7 = onPress;
   }
-  obj[3] = tmp7;
-  obj = { style: tmp.indicator, active: selected };
-  const items1 = [callback(Button.RadioIndicator, obj), , , ];
+  obj2.onPress = tmp7;
+  const items1 = [React4(native.RadioIndicator, { style: tmp.indicator, active: selected }), , , ];
   const items2 = [tmp.iconContainer, ];
   if (selected) {
     selected = tmp.iconContainerSelected;
   }
-  const tmp5 = closure_5;
-  const tmp6 = renderDefault;
+  const obj3 = { style: tmp.indicator, active: selected };
+  const tmp6 = TouchableHitBoxDefault;
   const tmp9 = View;
   items2[1] = selected;
-  items1[1] = callback(tmp9, { style: items2, children: callback(Button.Icon, { source: icon }) });
-  items1[2] = callback(Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "text-md/semibold", color: "interactive-text-default", children: title });
-  items1[3] = callback(Text.Text, { variant: "text-sm/medium", color: "interactive-text-default", children: description });
-  obj[4] = items1;
-  return tmp5(tmp6, obj);
+  items1[1] = React4(tmp9, { style: items2, children: React4(native.Icon, { source: icon }) });
+  items1[2] = React4(Text_Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "text-md/semibold", color: "interactive-text-default", children: title });
+  items1[3] = React4(Text_Text.Text, { variant: "text-sm/medium", color: "interactive-text-default", children: description });
+  obj2.children = items1;
+  return tmp5(tmp6, obj2);
 };

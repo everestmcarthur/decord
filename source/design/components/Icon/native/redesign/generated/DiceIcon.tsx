@@ -1,26 +1,26 @@
-// Module ID: 8839
-// Function ID: 8840
+// Module ID: 8866
+// Function ID: 8867
 // Name: DiceIcon
-// Dependencies: [19, 21, 576, 4261, 8840, 2]
+// Dependencies: [19, 21, 576, 4274, 8867, 2]
 // Exports: DiceIcon
 
-// Module 8839 (DiceIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 8840 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 8866 (DiceIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod8867 from "module_8867" /* 8867 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/DiceIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/DiceIcon.tsx");
 
 export const DiceIcon = function DiceIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8867, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

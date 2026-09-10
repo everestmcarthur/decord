@@ -1,16 +1,16 @@
-// Module ID: 5000
-// Function ID: 5001
-// Name: regExp
+// Module ID: 5014
+// Function ID: 5015
+// Name: ChannelAutocompleteConstants
 // Dependencies: [2]
 // Exports: extractGameMentionIds, formatGameMentionRaw, formatGameMentionToken
 
-// Module 5000 (regExp)
-import set from "set" /* 2 */;
+// Module 5014 (ChannelAutocompleteConstants)
+import size from "module_2" /* 2 */;
 
 let closure_0 = [];
 const tmp2 = /^<@\$(\d+)>/;
 const regExp = new RegExp(tmp2.source.replace(/^\^/, ""), "g");
-const result = set.fileFinishedImporting("modules/channel_autocomplete/ChannelAutocompleteConstants.tsx");
+const result = size.fileFinishedImporting("modules/channel_autocomplete/ChannelAutocompleteConstants.tsx");
 
 export const MENTION_SENTINEL = "@";
 export const GAME_MENTION_SENTINEL = "$";
@@ -33,7 +33,7 @@ export const extractGameMentionIds = function extractGameMentionIds(arr) {
   if (arr.includes("<@$")) {
     const items = [];
     HermesBuiltin.arraySpread(arr.matchAll(regExp), 0);
-    let mapped = items.map((arg0) => arg0[1]);
+    let mapped = items.map((item) => item[1]);
     if (mapped.length <= 0) {
       mapped = closure_0;
     }

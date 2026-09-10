@@ -1,24 +1,24 @@
-// Module ID: 5529
-// Function ID: 5530
-// Name: play
-// Dependencies: [109, 19, 17, 21, 5530, 2]
+// Module ID: 5543
+// Function ID: 5544
+// Name: LottieAnimationView
+// Dependencies: [109, 19, 17, 21, 5544, 2]
 
-// Module 5529 (play)
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 5530 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+// Module 5543 (LottieAnimationView)
+import _modDef5544 from "module_5544" /* 5544 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "module_19" /* 19 */;
 
 let closure_2 = ["source", "style", "collapsable"];
-const PureComponent = importAllResult.PureComponent;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const PureComponent = noop.PureComponent;
 class LottieAnimationView extends PureComponent {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.animation = null;
     applyArgumentsResult.setRef = function setRef(animation) {
-      closure_0.animation = animation;
+      applyArgumentsResult.animation = animation;
     };
     return applyArgumentsResult;
   }
@@ -60,20 +60,22 @@ prototype["render"] = function render() {
   }
   let tmp4;
   if (undefined !== json) {
-    let obj = { aspectRatio: null };
-    obj[0] = source.w / source.h;
+    const obj = { aspectRatio: source.w / source.h };
     tmp4 = obj;
   }
-  obj = { style: items, collapsable: props.collapsable, children: null };
-  items = [tmp4, style];
-  obj = { ref: this.setRef, source, style: items1 };
-  items1 = [tmp4, style];
-  const tmp = callback(props, closure_2);
+  const obj2 = { style: null, collapsable: props.collapsable, children: null };
+  const items = [tmp4, style];
+  obj2.style = items;
+  const obj3 = { ref: this.setRef, source, style: null };
+  const items1 = [tmp4, style];
+  obj3.style = items1;
+  const tmp = _objectWithoutProperties(props, closure_2);
   const merged = Object.assign(tmp);
-  obj[2] = jsx(_isNativeReflectConstructDefault, { ref: this.setRef, source, style: items1 });
-  return <View ref={this.setRef} source={source} style={items1} />;
+  obj2.children = jsx(_modDef5544, { ref: this.setRef, source, style: null });
+  return <View style={null} collapsable={props.collapsable}>{null}</View>;
 };
 LottieAnimationView.defaultProps = { autoPlay: true, loop: true, collapsable: false };
-const result = require("set").fileFinishedImporting("components_native/common/LottieAnimationView.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/common/LottieAnimationView.tsx");
 
 export default LottieAnimationView;

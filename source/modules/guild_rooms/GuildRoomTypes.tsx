@@ -1,11 +1,11 @@
-// Module ID: 4719
-// Function ID: 4720
-// Name: GuildRoomObjectTypes
+// Module ID: 4733
+// Function ID: 4734
+// Name: GuildRoomTypes
 // Dependencies: [2]
 
-// Module 4719 (GuildRoomObjectTypes)
-import set from "set" /* 2 */;
+// Module 4733 (GuildRoomTypes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_rooms/GuildRoomTypes.tsx");
+const result = size.fileFinishedImporting("modules/guild_rooms/GuildRoomTypes.tsx");
 
 export const GuildRoomObjectTypes = { NOTE: 1, [1]: "NOTE", PLANT: 2, [2]: "PLANT" };

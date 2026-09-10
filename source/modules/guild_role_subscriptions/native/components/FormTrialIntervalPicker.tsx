@@ -1,18 +1,23 @@
-// Module ID: 17750
-// Function ID: 17751
+// Module ID: 17783
+// Function ID: 17784
 // Name: FormTrialIntervalPicker
-// Dependencies: [19, 21, 13899, 1114, 15234, 4527, 9431, 1896, 2]
+// Dependencies: [19, 21, 13922, 1114, 15263, 4541, 9458, 1896, 2]
 // Exports: default
 
-// Module 17750 (FormTrialIntervalPicker)
-import noopAll from "noop" /* 19 */;
-import LockedIconDefault from "LockedIcon" /* 13899 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 17783 (FormTrialIntervalPicker)
+import util from "util" /* 1114 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import FormDropdownDefault from "FormDropdown" /* 13922 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
+const require = globalThis.__r;
+
+require = fn;
+const jsx = fn(21).jsx;
 const GuildRoleSubscriptionTrialIntervalSelect = "GuildRoleSubscriptionTrialIntervalSelect";
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormTrialIntervalPicker.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormTrialIntervalPicker.tsx");
 
 export default function FormTrialIntervalPicker(disabled) {
   const interval = disabled.interval;
@@ -21,52 +26,29 @@ export default function FormTrialIntervalPicker(disabled) {
     let intl = interval(1114).intl;
     let stringResult = intl.string(interval(1114).t.WZG1BU);
   } else {
-    let obj = interval(15234);
-    stringResult = obj.formatPlanIntervalDuration(interval);
+    stringResult = interval(15263).formatPlanIntervalDuration(interval);
+    let obj = interval(15263);
   }
-  obj = {
+  return jsx(FormDropdownDefault, {
     label: stringResult,
     onPress() {
-      let obj = closure_1_1(closure_1_2[5]);
-      obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
-      const intl = interval(closure_1_2[3]).intl;
-      obj[0] = intl.string(interval(closure_1_2[3]).t.m1KuWd);
-      obj[1] = closure_2;
-      obj[2] = function onItemSelect(arg0) {
-        if (closure_1 != null) {
+      const obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+      const obj = ActionSheetActionCreatorsDefault;
+      const intl = util.intl;
+      obj2.title = intl.string(util.t.m1KuWd);
+      obj2.items = items;
+      obj2.onItemSelect = function onItemSelect(arg0) {
+        if (closure_1_1 != null) {
           tmp(arg0);
         }
-        closure_1_1(closure_1_2[5]).hideActionSheet(closure_1_4);
+        require("ActionSheetActionCreators").hideActionSheet(GuildRoleSubscriptionTrialIntervalSelect);
       };
       let tmp3 = interval;
       if (interval == null) {
         tmp3 = null;
       }
-      obj[3] = tmp3;
-      obj.openLazy(interval(closure_1_2[7])(closure_1_2[6], closure_1_2.paths), closure_1_4, obj);
-    },
-    disabled: disabled.disabled
-  };
-  return jsx(LockedIconDefault, {
-    label: stringResult,
-    onPress() {
-      let obj = closure_1_1(closure_1_2[5]);
-      obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
-      const intl = interval(closure_1_2[3]).intl;
-      obj[0] = intl.string(interval(closure_1_2[3]).t.m1KuWd);
-      obj[1] = closure_2;
-      obj[2] = function onItemSelect(arg0) {
-        if (closure_1 != null) {
-          tmp(arg0);
-        }
-        closure_1_1(closure_1_2[5]).hideActionSheet(closure_1_4);
-      };
-      let tmp3 = interval;
-      if (interval == null) {
-        tmp3 = null;
-      }
-      obj[3] = tmp3;
-      obj.openLazy(interval(closure_1_2[7])(closure_1_2[6], closure_1_2.paths), closure_1_4, obj);
+      obj2.selectedItem = tmp3;
+      obj.openLazy(asyncRequireImpl(9458, dependencyMap.paths), GuildRoleSubscriptionTrialIntervalSelect, obj2);
     },
     disabled: disabled.disabled
   });

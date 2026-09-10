@@ -1,57 +1,62 @@
-// Module ID: 12546
-// Function ID: 12547
+// Module ID: 12572
+// Function ID: 12573
 // Name: useDeactivateWarningText
-// Dependencies: [19, 4480, 2015, 1979, 504, 7127, 4453, 1114, 2428, 2]
+// Dependencies: [19, 4494, 2015, 1979, 504, 7141, 4467, 1114, 2428, 2]
 // Exports: default
 
-// Module 12546 (useDeactivateWarningText)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleInviteData" /* 4480 */;
-import closure_5 from "createGuildRoleRecordFromRust" /* 2015 */;
-import closure_6 from "createGuildRecordFromRust" /* 1979 */;
+// Module 12572 (useDeactivateWarningText)
+import _modDef2428 from "module_2428" /* 2428 */;
+import Powerups from "Powerups" /* 4467 */;
+import noop from "module_19" /* 19 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4494 */;
+import GuildRoleStore from "GuildRoleStore" /* 2015 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useDeactivateWarningText.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useDeactivateWarningText.tsx");
 
 export default function useDeactivateWarningText(arg0, skuId) {
-  const _require = arg0;
+  _require = arg0;
   importDefault = skuId;
   let items = [stateFromStores1];
-  stateFromStores = _require(stateFromStores[4]).useStateFromStores(items, () => stateFromStores1.getMemberCount(closure_0));
-  const tmp2 = importDefault(stateFromStores[5])(arg0);
-  const React = tmp2;
-  let obj = _require(stateFromStores[4]);
-  const items1 = [closure_6];
-  stateFromStores1 = _require(stateFromStores[4]).useStateFromStores(items1, () => {
-    const guild = closure_1_6.getGuild(closure_0);
+  stateFromStores = require("initialize").useStateFromStores(items, () => GuildMemberCountStore.getMemberCount(closure_0));
+  const tmp2 = require("useGuildRoleMemberCounts")(arg0);
+  noop = tmp2;
+  let obj = require("initialize");
+  const items1 = [GuildStore];
+  stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
+    const guild = GuildStore.getGuild(closure_0);
     let vanityURLCode;
     if (guild != null) {
       vanityURLCode = guild.vanityURLCode;
     }
     return null != vanityURLCode;
   });
-  let obj2 = _require(stateFromStores[4]);
+  let obj2 = require("initialize");
   const items2 = [stateFromStores2];
   const items3 = [arg0, skuId.skuId, tmp2];
-  stateFromStores2 = _require(stateFromStores[4]).useStateFromStores(items2, () => {
+  stateFromStores2 = require("initialize").useStateFromStores(items2, () => {
     let num = 0;
-    if (skuId.skuId === callback(stateFromStores[6]).GUILD_POWERUP_ROLE_COLOR_SKU_ID) {
+    if (skuId.skuId === Powerups.GUILD_POWERUP_ROLE_COLOR_SKU_ID) {
       num = 0;
       if (null != closure_3) {
-        const sortedRoles = stateFromStores2.getSortedRoles(callback);
-        num = sortedRoles.reduce((arg0, colorStrings) => {
+        const sortedRoles = GuildRoleStore.getSortedRoles(closure_0);
+        num = sortedRoles.reduce((acc, colorStrings) => {
           colorStrings = colorStrings.colorStrings;
           let secondaryColor;
           if (colorStrings != null) {
             secondaryColor = colorStrings.secondaryColor;
           }
-          let sum = arg0;
+          let sum = acc;
           if (null != secondaryColor) {
-            let num = table[colorStrings.id];
+            let num = closure_1_3[colorStrings.id];
             if (num == null) {
               num = 0;
             }
-            sum = arg0 + num;
+            sum = acc + num;
           }
           return sum;
         }, 0);
@@ -60,28 +65,23 @@ export default function useDeactivateWarningText(arg0, skuId) {
     return num;
   }, items3);
   const items4 = [skuId, stateFromStores2, stateFromStores, stateFromStores1];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     skuId = skuId.skuId;
-    if (callback(stateFromStores[6]).GUILD_POWERUP_ROLE_COLOR_SKU_ID === skuId) {
+    if (Powerups.GUILD_POWERUP_ROLE_COLOR_SKU_ID === skuId) {
       if (stateFromStores2 > 0) {
-        const intl5 = tmp2(tmp3[7]).intl;
-        let obj = { perk: null, memberCount: null };
-        obj[0] = tmp.title;
-        obj[1] = tmp14;
-        let formatToPlainStringResult = intl5.formatToPlainString(skuId(tmp3[8])["4jSvr1"], obj);
-        let tmp15 = skuId;
+        const intl5 = tmp2(1114).intl;
+        const obj2 = { perk: tmp.title, memberCount: tmp14 };
+        let formatToPlainStringResult = intl5.formatToPlainString(_modDef2428["4jSvr1"], obj2);
       } else {
-        const intl4 = tmp2(tmp3[7]).intl;
-        tmp15 = skuId;
-        obj = { perk: null };
-        obj[0] = tmp.title;
-        formatToPlainStringResult = intl4.formatToPlainString(skuId(tmp3[8]).cavtEo, obj);
+        const intl4 = tmp2(1114).intl;
+        const obj3 = { perk: tmp.title };
+        formatToPlainStringResult = intl4.formatToPlainString(_modDef2428.cavtEo, obj3);
       }
     } else {
-      if (tmp2(tmp3[6]).VANITY_URL_POWERUP_SKU_ID === skuId) {
-        const intl3 = tmp2(tmp3[7]).intl;
+      if (tmp2(4467).VANITY_URL_POWERUP_SKU_ID === skuId) {
+        const intl3 = tmp2(1114).intl;
         const string = intl3.string;
-        const tmp11 = skuId(tmp3[8]);
+        const tmp11 = _modDef2428;
         if (stateFromStores1) {
           let stringResult = string(tmp11.hN75yb);
           let tmp13 = tmp10;
@@ -92,42 +92,38 @@ export default function useDeactivateWarningText(arg0, skuId) {
         let tmp7 = tmp13;
         let formatToPlainStringResult1 = stringResult;
       } else {
-        if (tmp2(tmp3[6]).GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID !== skuId) {
-          if (tmp2(tmp3[6]).GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID !== skuId) {
-            if (tmp2(tmp3[6]).GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID !== skuId) {
-              if (tmp2(tmp3[6]).GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID !== skuId) {
-                const intl = tmp2(tmp3[7]).intl;
-                obj = { perk: null, memberCount: null };
-                obj[0] = tmp.title;
+        if (tmp2(4467).GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID !== skuId) {
+          if (tmp2(4467).GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID !== skuId) {
+            if (tmp2(4467).GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID !== skuId) {
+              if (tmp2(4467).GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID !== skuId) {
+                const intl = tmp2(1114).intl;
+                const obj = { perk: tmp.title, memberCount: null };
                 let num = stateFromStores;
                 if (stateFromStores == null) {
                   num = 0;
                 }
-                obj[1] = num;
-                formatToPlainStringResult1 = intl.formatToPlainString(skuId(tmp3[8])["4jSvr1"], obj);
-                tmp7 = skuId;
-                const tmp4 = skuId;
+                obj.memberCount = num;
+                formatToPlainStringResult1 = intl.formatToPlainString(_modDef2428["4jSvr1"], obj);
+                tmp7 = importDefault;
               }
             }
           }
         }
-        const intl2 = tmp2(tmp3[7]).intl;
-        formatToPlainStringResult1 = intl2.string(skuId(tmp3[8]).Vf2ZcR);
-        tmp7 = skuId;
+        const intl2 = tmp2(1114).intl;
+        formatToPlainStringResult1 = intl2.string(_modDef2428.Vf2ZcR);
+        tmp7 = importDefault;
       }
-      obj1 = { text: null, critical: null };
-      obj1[0] = formatToPlainStringResult1;
-      obj1[1] = tmp.skuId === tmp2(tmp3[6]).VANITY_URL_POWERUP_SKU_ID;
-      const items = [obj1];
+      const obj4 = { text: formatToPlainStringResult1, critical: tmp.skuId === tmp2(4467).VANITY_URL_POWERUP_SKU_ID };
+      const items = [obj4];
       let tmp20 = stateFromStores1;
       if (stateFromStores1) {
-        tmp20 = tmp.skuId === tmp2(tmp3[6]).GUILD_POWERUP_LEVEL_3_SKU_ID;
+        tmp20 = tmp.skuId === tmp2(4467).GUILD_POWERUP_LEVEL_3_SKU_ID;
       }
       if (tmp20) {
-        const obj2 = { text: null, critical: true };
-        const intl6 = tmp2(tmp3[7]).intl;
-        obj2[0] = intl6.string(tmp7(tmp3[8]).M4XL5n);
-        items.push(obj2);
+        const obj5 = { text: null, critical: true };
+        const intl6 = tmp2(1114).intl;
+        obj5.text = intl6.string(tmp7(2428).M4XL5n);
+        items.push(obj5);
       }
       return items;
     }

@@ -1,36 +1,32 @@
-// Module ID: 4241
-// Function ID: 4242
-// Name: prototype
+// Module ID: 4254
+// Function ID: 4255
+// Name: errors/V6OrEarlierAPIError
 // Dependencies: [1074, 1272, 1114, 2]
 
-// Module 4241 (prototype)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import sendRequest from "sendRequest" /* 1272 */;
+// Module 4254 (errors/V6OrEarlierAPIError)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import size from "module_2" /* 2 */;
 
-const Links = ME.Links;
-const V6OrEarlierAPIError = sendRequest.V6OrEarlierAPIError;
+const Links = Constants.Links;
+const V6OrEarlierAPIError = HTTPUtils.V6OrEarlierAPIError;
 const prototype = function APIErrorWithDefaultMessage(arg0, arg1) {
   if (null != arg1) {
-    const intl2 = getSystemLocale.intl;
-    let obj = { statusPageURL: null, details: null };
-    obj[0] = Links.STATUS;
+    const intl2 = util.intl;
+    const obj2 = { statusPageURL: Links.STATUS, details: null };
     const _HermesInternal = HermesInternal;
-    obj[1] = "" + arg1;
-    intl2.formatToPlainString(getSystemLocale.t.aKRa0Q, obj);
+    obj2.details = "" + arg1;
+    intl2.formatToPlainString(util.t.aKRa0Q, obj2);
   } else {
-    const intl = getSystemLocale.intl;
-    obj = { statusPageURL: null };
-    obj[0] = Links.STATUS;
-    intl.formatToPlainString(getSystemLocale.t.aTVNes, obj);
+    const intl = util.intl;
+    const obj = { statusPageURL: Links.STATUS };
+    intl.formatToPlainString(util.t.aTVNes, obj);
   }
-  tmp = new tmp();
-  // ThrowIfThisInitialized (0x7c)
-  return tmp;
+  return new tmp();
 }.prototype;
 class prototype extends V6OrEarlierAPIError {
 }
-const result = set.fileFinishedImporting("errors/V6OrEarlierAPIError.tsx");
+const result = size.fileFinishedImporting("errors/V6OrEarlierAPIError.tsx");
 
 export default prototype;

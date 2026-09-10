@@ -1,83 +1,75 @@
-// Module ID: 8074
-// Function ID: 8075
-// Name: createFriendRequestAcceptedSystemMessage
-// Dependencies: [1957, 1371, 7960, 7962, 4560, 576, 1114, 7946, 8075, 7964, 2]
+// Module ID: 8089
+// Function ID: 8090
+// Name: FriendRequestAcceptedSystemMessage
+// Dependencies: [1957, 1371, 7974, 7976, 4574, 576, 1114, 7960, 8090, 7978, 2]
 // Exports: createFriendRequestAcceptedSystemMessage
 
-// Module 8074 (createFriendRequestAcceptedSystemMessage)
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7960 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7962 */;
-import registerAssetDefault from "registerAsset" /* 8075 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
+// Module 8089 (FriendRequestAcceptedSystemMessage)
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7960 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7974 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7976 */;
+import _modDef8090 from "module_8090" /* 8090 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/FriendRequestAcceptedSystemMessage.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/FriendRequestAcceptedSystemMessage.tsx");
 
 export const createFriendRequestAcceptedSystemMessage = function createFriendRequestAcceptedSystemMessage(message) {
   message = message.message;
-  channel = channel.getChannel(message.channel_id);
+  const channel = ChannelStore.getChannel(message.channel_id);
   if (null != channel) {
     if (channel.isDM()) {
       const recipientId = channel.getRecipientId();
-      const user = authStore.getUser(recipientId);
-      const currentUser = authStore.getCurrentUser();
+      const user = UserStore.getUser(recipientId);
+      const currentUser = UserStore.getCurrentUser();
       if (null != user) {
         if (null != currentUser) {
-          let colorString = getMessageAuthorWithProcessedColor.getUserAuthorWithProcessedColor(user, channel);
-          let obj = { userId: null, message: null, author: null, roleStyle: null };
-          obj[0] = recipientId;
-          obj[1] = message;
-          obj[2] = colorString;
-          obj[3] = message.roleStyle;
-          obj = { username: null, usernameOnClick: null };
-          obj[0] = colorString.nick;
-          obj[1] = formatUsernameOnClickDefault(obj);
+          let colorString = useAuthorWithProcessedColor.getUserAuthorWithProcessedColor(user, channel);
+          const obj = { userId: recipientId, message, author: colorString, roleStyle: message.roleStyle };
+          let obj2 = { username: colorString.nick, usernameOnClick: formatUsernameOnClickDefault(obj) };
           let content = message.content;
           if (null != content) {
             if ("" !== content) {
-              let tmp15Result = tmp15(4560);
-              obj1 = { baseTextColor: null };
-              obj1[0] = tmp17(576).colors.TEXT_SUBTLE;
+              const obj3 = { baseTextColor: tmp17(576).colors.TEXT_SUBTLE };
               const intl2 = tmp15(1114).intl;
               const formatToParts2 = intl2.formatToParts;
-              let t = tmp15(1114).t;
+              let t1 = tmp15(1114).t;
               if (tmp18) {
-                t = {};
-                obj = Object.assign(obj);
-                t.note = content;
+                t1 = {};
+                obj2 = Object.assign(obj2);
+                t1.note = content;
                 content = { colorString: null };
                 colorString = colorString.colorString;
-                content[0] = colorString;
-                t.formattedNote = content;
-                let formatToParts2Result = formatToParts2(t["6pQebO"], t);
+                content.colorString = colorString;
+                t1.formattedNote = content;
+                let formatToParts2Result = formatToParts2(t1["6pQebO"], t1);
               } else {
-                const obj2 = {};
-                const merged = Object.assign(obj);
-                obj2.note = content;
-                const obj3 = { colorString: null };
-                obj3[0] = colorString.colorString;
-                obj2.formattedNote = obj3;
-                formatToParts2Result = formatToParts2(t.bNrwDM, obj2);
+                const obj4 = {};
+                const merged = Object.assign(obj2);
+                obj4.note = content;
+                const obj5 = { colorString: colorString.colorString };
+                obj4.formattedNote = obj5;
+                formatToParts2Result = formatToParts2(t1.bNrwDM, obj4);
               }
-              const baseTextColor = tmp15Result.createNativeStyleProperties(obj1)(message.theme).baseTextColor;
+              const baseTextColor = tmp15(4574).createNativeStyleProperties(obj3)(message.theme).baseTextColor;
+              const tmp15Result = tmp15(4574);
             }
           }
           const intl = tmp15(1114).intl;
           const formatToParts = intl.formatToParts;
-          t = tmp15(1114).t;
+          const t = tmp15(1114).t;
           if (message.author.id === currentUser.id) {
-            let formatToPartsResult = formatToParts(t.REfFZs, obj);
+            let formatToPartsResult = formatToParts(t.REfFZs, obj2);
           } else {
-            formatToPartsResult = formatToParts(t.hyPOTm, obj);
+            formatToPartsResult = formatToParts(t.hyPOTm, obj2);
           }
-          const obj4 = { content: null, iconUrl: null, textColor: null };
-          obj4[0] = formatToPartsResult;
-          tmp15Result = tmp15(7946);
-          obj4[1] = tmp15Result.getAssetUriForEmbed(registerAssetDefault);
-          obj4[2] = undefined;
-          const merged1 = Object.assign(tmp17(7964)(message));
-          return obj4;
+          const obj6 = { content: formatToPartsResult, iconUrl: null, textColor: null };
+          obj6.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8090);
+          obj6.textColor = undefined;
+          const merged1 = Object.assign(tmp17(7978)(message));
+          return obj6;
         }
       }
       return null;

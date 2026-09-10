@@ -1,19 +1,21 @@
-// Module ID: 5139
-// Function ID: 5140
-// Name: NativePermissionsRequestOptions
-// Dependencies: [5140, 5141, 5142, 5146, 2, 5143]
+// Module ID: 5153
+// Function ID: 5154
+// Name: NativePermissionUtils
+// Dependencies: [5154, 5155, 5156, 5160, 2, 5157]
 
-// Module 5139 (NativePermissionsRequestOptions)
-import { ProcessArgs } from "get" /* 5141 */;
-import importDefaultResult from "isEnabled" /* 5140 */;
+// Module 5153 (NativePermissionUtils)
+import NativePermissionManager_mod from "NativePermissionManager" /* 5154 */;
 
-importDefaultResult.initialize();
+let NativePermissionManager = NativePermissionManager_mod;
+NativePermissionManager = NativePermissionManager.initialize();
+const ProcessArgs = fn(5155).ProcessArgs;
 if (ProcessArgs.isDiscordTestSet()) {
-  let _default = require("requestPermissionCore").default;
+  let _default = fn(5156).default;
 } else {
-  _default = require("combineStatuses").default;
+  _default = fn(5160).default;
 }
-const result = require("set").fileFinishedImporting("modules/native_permissions/NativePermissionUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/native_permissions/NativePermissionUtils.tsx");
 
 export default _default;
-export const NativePermissionsRequestOptions = require("requestAuthorization").NativePermissionsRequestOptions;
+export const NativePermissionsRequestOptions = fn(5157).NativePermissionsRequestOptions;

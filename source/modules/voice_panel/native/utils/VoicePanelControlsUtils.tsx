@@ -1,18 +1,18 @@
-// Module ID: 12283
-// Function ID: 12284
-// Name: VOICE_PANEL_DRAWER_MAX_WIDTH
-// Dependencies: [12277, 12280, 12275, 2]
+// Module ID: 12309
+// Function ID: 12310
+// Name: VoicePanelControlsUtils
+// Dependencies: [12303, 12306, 12301, 2]
 // Exports: getControlsDefaultWidth, getControlsDrawerOpenWidth
 
-// Module 12283 (VOICE_PANEL_DRAWER_MAX_WIDTH)
-import set from "set" /* 2 */;
-import VoicePanelControlsModes from "VoicePanelControlsModes" /* 12275 */;
-import VoicePanelModes from "VoicePanelModes" /* 12277 */;
-import CARD_SIZE from "CARD_SIZE" /* 12280 */;
+// Module 12309 (VoicePanelControlsUtils)
+import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 12301 */;
+import VoicePanelConstants from "VoicePanelConstants" /* 12303 */;
+import VoicePanelCardConstants from "VoicePanelCardConstants" /* 12306 */;
+import size from "module_2" /* 2 */;
 
-const VOICE_PANEL_DRAWER_MAX_WIDTH = VoicePanelModes.VOICE_PANEL_DRAWER_MAX_WIDTH;
-const EDGE_GUTTER = CARD_SIZE.EDGE_GUTTER;
-const CONTROLS_MAX_WIDTH = VoicePanelControlsModes.CONTROLS_MAX_WIDTH;
+const VOICE_PANEL_DRAWER_MAX_WIDTH = VoicePanelConstants.VOICE_PANEL_DRAWER_MAX_WIDTH;
+const EDGE_GUTTER = VoicePanelCardConstants.EDGE_GUTTER;
+const CONTROLS_MAX_WIDTH = VoicePanelControlsConstants.CONTROLS_MAX_WIDTH;
 function getControlsDefaultWidth(width, left, right) {
   const bound = Math.max(left, EDGE_GUTTER);
   return Math.min(width - bound - Math.max(right, EDGE_GUTTER), CONTROLS_MAX_WIDTH);
@@ -26,7 +26,7 @@ function getControlsDrawerOpenWidth(width, left, right) {
 getControlsDrawerOpenWidth.__closure = { VOICE_PANEL_DRAWER_MAX_WIDTH };
 getControlsDrawerOpenWidth.__workletHash = 10795739180192;
 getControlsDrawerOpenWidth.__initData = { code: "function getControlsDrawerOpenWidth_VoicePanelControlsUtilsTsx2(windowWidth,safeAreaLeft,safeAreaRight){const{VOICE_PANEL_DRAWER_MAX_WIDTH}=this.__closure;return Math.min(windowWidth-safeAreaLeft-safeAreaRight,VOICE_PANEL_DRAWER_MAX_WIDTH);}" };
-const result = set.fileFinishedImporting("modules/voice_panel/native/utils/VoicePanelControlsUtils.tsx");
+const result = size.fileFinishedImporting("modules/voice_panel/native/utils/VoicePanelControlsUtils.tsx");
 
 export { getControlsDefaultWidth };
 export { getControlsDrawerOpenWidth };

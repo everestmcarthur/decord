@@ -1,45 +1,42 @@
-// Module ID: 12667
-// Function ID: 12668
+// Module ID: 12693
+// Function ID: 12694
 // Name: NsfwGateChat
-// Dependencies: [19, 17, 21, 4560, 576, 12668, 4556, 1114, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 12694, 4570, 1114, 2]
 // Exports: default
 
-// Module 12667 (NsfwGateChat)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import registerAssetDefault from "registerAsset" /* 12668 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12693 (NsfwGateChat)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import _modDef12694 from "module_12694" /* 12694 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ View: c3, Image: c4, StyleSheet } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
-createCacheKey = { container: null, border: null, description: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { height: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-createCacheKey[2] = { marginTop: 16, textAlign: "center" };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { height: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-const result = require("set").fileFinishedImporting("modules/age_gate/native/components/NsfwGateChat.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, Image: closure_4, StyleSheet } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+const obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" }, border: null, description: null };
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };
+obj2.border = { height: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+obj2.description = { marginTop: 16, textAlign: "center" };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/age_gate/native/components/NsfwGateChat.tsx");
 
 export default function NsfwGateChat() {
-  const tmp = callback3();
-  let obj = { children: null };
-  obj = { style: tmp.border };
-  const items = [callback(closure_3, obj), ];
-  obj = { style: tmp.container, children: null };
-  const items1 = [callback(closure_4, { source: registerAssetDefault }), ];
-  const obj2 = { style: tmp.description, variant: "text-md/medium", color: "text-muted", children: null };
-  const intl = getSystemLocale.intl;
-  obj2[3] = intl.string(getSystemLocale.t.W4Qyxr);
-  items1[1] = callback(Text.Text, obj2);
-  obj[1] = items1;
-  items[1] = callback2(closure_3, obj);
-  obj[0] = items;
-  return callback2(closure_7, obj);
+  const tmp = closure_8();
+  const obj = { children: null };
+  const items = [hasOwnProperty(React3, { style: tmp.border }), ];
+  const obj3 = { style: tmp.container, children: null };
+  const items1 = [hasOwnProperty(React4, { source: _modDef12694 }), ];
+  const obj5 = { style: tmp.description, variant: "text-md/medium", color: "text-muted", children: null };
+  const intl = util.intl;
+  obj5.children = intl.string(util.t.W4Qyxr);
+  items1[1] = hasOwnProperty(Text_Text.Text, obj5);
+  obj3.children = items1;
+  items[1] = timestampProducer(React3, obj3);
+  obj.children = items;
+  return timestampProducer(React5, obj);
 };

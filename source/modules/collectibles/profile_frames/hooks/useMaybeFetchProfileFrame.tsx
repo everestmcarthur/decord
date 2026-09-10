@@ -1,28 +1,31 @@
-// Module ID: 8201
-// Function ID: 8202
+// Module ID: 8227
+// Function ID: 8228
 // Name: useMaybeFetchProfileFrame
-// Dependencies: [19, 8202, 8212, 8213, 7541, 2]
+// Dependencies: [19, 8228, 8238, 8239, 7555, 2]
 // Exports: default
 
-// Module 8201 (useMaybeFetchProfileFrame)
-import useFramePreviewOverrideFrameDefault from "useFramePreviewOverrideFrame" /* 8202 */;
-import useProfileFrameDefault from "useProfileFrame" /* 8213 */;
-import closure_3 from "noop" /* 19 */;
+// Module 8227 (useMaybeFetchProfileFrame)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7555 */;
+import useFramePreviewOverrideFrameDefault from "useFramePreviewOverrideFrame" /* 8228 */;
+import useProfileFrameDefault from "useProfileFrame" /* 8239 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/collectibles/profile_frames/hooks/useMaybeFetchProfileFrame.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/profile_frames/hooks/useMaybeFetchProfileFrame.tsx");
 
 export default function useMaybeFetchProfileFrame(arg0, location) {
-  const _require = arg0;
+  _require = arg0;
   let tmp = useFramePreviewOverrideFrameDefault();
-  const isProfileFramesEnabled = _require(8212).useIsProfileFramesEnabled(location);
+  const isProfileFramesEnabled = require("CollectiblesProfileFramesExperiment").useIsProfileFramesEnabled(location);
   const tmp3 = useProfileFrameDefault(arg0);
   importDefault = tmp4;
   const items = [null == tmp && isProfileFramesEnabled && null != arg0 && null == tmp3, arg0];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (closure_1) {
-      const result = callback(closure_1_2[4]).maybeFetchCollectiblesProduct(callback);
-      const obj = callback(closure_1_2[4]);
+      const result = CollectiblesActionCreators.maybeFetchCollectiblesProduct(closure_0);
     }
   }, items);
   if (tmp == null) {

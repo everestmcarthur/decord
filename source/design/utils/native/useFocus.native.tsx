@@ -1,25 +1,26 @@
-// Module ID: 4268
-// Function ID: 4269
+// Module ID: 4281
+// Function ID: 4282
 // Name: useFocus
 // Dependencies: [32, 19, 2]
 // Exports: useFocus
 
-// Module 4268 (useFocus)
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "noop" /* 19 */;
+// Module 4281 (useFocus)
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("design/utils/native/useFocus.native.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("design/utils/native/useFocus.native.tsx");
 
 export const useFocus = function useFocus() {
-  const tmp = callback(React.useState(false), 2);
-  callback = tmp[1];
+  const tmp = _slicedToArray(noop.useState(false), 2);
+  closure_0 = tmp[1];
   return {
-    focusProps: React.useMemo(() => ({
+    focusProps: noop.useMemo(() => ({
       onFocus() {
-        return callback(true);
+        return closure_1_0(true);
       },
       onBlur() {
-        return callback(false);
+        return closure_1_0(false);
       }
     }), []),
     isFocused: tmp[0]

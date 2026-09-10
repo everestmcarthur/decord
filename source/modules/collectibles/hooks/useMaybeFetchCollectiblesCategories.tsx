@@ -1,12 +1,12 @@
-// Module ID: 10740
-// Function ID: 10741
-// Name: set
-// Dependencies: [2, 10741]
+// Module ID: 10767
+// Function ID: 10768
+// Name: useMaybeFetchCollectiblesCategories
+// Dependencies: [2, 10768]
 
-// Module 10740 (set)
-import set from "set" /* 2 */;
-import useMaybeFetchCollectiblesCategoriesDefault from "useMaybeFetchCollectiblesCategories" /* 10741 */;
+// Module 10767 (useMaybeFetchCollectiblesCategories)
+import _modDef10768 from "module_10768" /* 10768 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesCategories.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesCategories.tsx");
 
-export default useMaybeFetchCollectiblesCategoriesDefault;
+export default _modDef10768;

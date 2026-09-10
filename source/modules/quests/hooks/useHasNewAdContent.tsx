@@ -1,31 +1,32 @@
-// Module ID: 16794
-// Function ID: 16795
+// Module ID: 16831
+// Function ID: 16832
 // Name: useHasNewAdContent
-// Dependencies: [32, 15083, 7703, 5444, 1090, 11494, 504, 7699, 5451, 7388, 1943, 2]
+// Dependencies: [32, 15110, 7717, 5458, 1090, 11521, 504, 7713, 5465, 7402, 1943, 2]
 // Exports: default
 
-// Module 16794 (useHasNewAdContent)
-import setDefault from "set" /* 1090 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "getOrCreateSet" /* 15083 */;
-import closure_4 from "initializeState" /* 7703 */;
-import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 5444 */;
+// Module 16831 (useHasNewAdContent)
+import DurationsDefault from "Durations" /* 1090 */;
+import AdCreativeType from "AdCreativeType" /* 5465 */;
+import _slicedToArray from "module_32" /* 32 */;
+import AdContentSeenStore from "AdContentSeenStore" /* 15110 */;
+import QuestStore from "QuestStore" /* 7717 */;
 
-const require = arg1;
-const DAY = setDefault.Millis.DAY;
-const result = require("set").fileFinishedImporting("modules/quests/hooks/useHasNewAdContent.tsx");
+require = fn;
+const QuestsExperimentLocations = fn(5458).QuestsExperimentLocations;
+const DAY = DurationsDefault.Millis.DAY;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/hooks/useHasNewAdContent.tsx");
 
 export default function useHasNewAdContent() {
   const MobileQuestHomeRedDotNotificationExperiment = enabled(stateFromStoresArray[5]).MobileQuestHomeRedDotNotificationExperiment;
-  let obj = { location: QuestsExperimentLocations.YOU_TAB_PROFILE_HEADER };
-  enabled = MobileQuestHomeRedDotNotificationExperiment.useConfig(obj).enabled;
-  const items = [closure_4];
+  enabled = MobileQuestHomeRedDotNotificationExperiment.useConfig({ location: QuestsExperimentLocations.YOU_TAB_PROFILE_HEADER }).enabled;
+  const items = [QuestStore];
   const items1 = [enabled];
   stateFromStoresArray = enabled(stateFromStoresArray[6]).useStateFromStoresArray(items, () => {
     if (enabled) {
       const _Array = Array;
-      const quests = closure_1_4.quests;
-      const found = Array.from(quests.values()).filter((arg0) => !callback(table[7]).isQuestExpired(arg0));
+      const quests = QuestStore.quests;
+      const found = Array.from(quests.values()).filter((item) => !enabled(stateFromStoresArray[7]).isQuestExpired(item));
       let mapped = found.map((id) => id.id);
       const arr = Array.from(quests.values());
     } else {
@@ -33,20 +34,17 @@ export default function useHasNewAdContent() {
     }
     return mapped;
   }, items1);
+  const obj = { location: QuestsExperimentLocations.YOU_TAB_PROFILE_HEADER };
   const obj2 = enabled(stateFromStoresArray[6]);
   let tmp = enabled;
   let tmp2 = stateFromStoresArray;
-  const items2 = [closure_3];
+  const items2 = [AdContentSeenStore];
   const items3 = [stateFromStoresArray];
   const stateFromStores = enabled(stateFromStoresArray[6]).useStateFromStores(items2, () => {
     for (const item10005 of stateFromStoresArray) {
-      let tmp = closure_1_3;
-      let tmp2 = enabled;
-      let tmp3 = stateFromStoresArray;
-      if (closure_1_3.hasSeen(enabled(stateFromStoresArray[8]).AdCreativeType.QUEST, item10005)) {
+      if (AdContentSeenStore.hasSeen(AdCreativeType.AdCreativeType.QUEST, item10005)) {
         continue;
       } else {
-        let tmp4 = obj;
         obj.return();
         let flag = true;
         return true;
@@ -62,8 +60,6 @@ export default function useHasNewAdContent() {
       prop = tmp(tmp2[10]).DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE;
     }
   }
-  obj = { cooldownDurationMs: DAY };
-  const tmp6 = callback(enabled(stateFromStoresArray[9]).useSelectedTimeRecurringDismissibleContent(prop, obj, undefined, true), 2);
-  obj = { showBadge: null != tmp6[0], dismissBadge: tmp6[1] };
-  return obj;
+  const tmp6 = _slicedToArray(enabled(stateFromStoresArray[9]).useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: DAY }, undefined, true), 2);
+  return { showBadge: null != tmp6[0], dismissBadge: tmp6[1] };
 };

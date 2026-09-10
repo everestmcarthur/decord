@@ -1,22 +1,21 @@
-// Module ID: 10346
-// Function ID: 10347
-// Name: handleJoinGuild
-// Dependencies: [5520, 2]
+// Module ID: 10373
+// Function ID: 10374
+// Name: guild/GuildUtils
+// Dependencies: [5534, 2]
 // Exports: handleJoinGuild
 
-// Module 10346 (handleJoinGuild)
-import set from "set" /* 2 */;
-import showTooManyUserGuildsAlertDefault from "showTooManyUserGuildsAlert" /* 5520 */;
+// Module 10373 (guild/GuildUtils)
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5534 */;
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("modules/guild/GuildUtils.tsx");
+let result = size.fileFinishedImporting("modules/guild/GuildUtils.tsx");
 
-export const handleJoinGuild = function handleJoinGuild(closure_0) {
-  importDefault = closure_0;
-  if (null != closure_0) {
-    const obj = showTooManyUserGuildsAlertDefault;
-    showTooManyUserGuildsAlertDefault.joinGuild(closure_0).then(() => {
-      const result = callback(closure_1_1[0]).transitionToGuildSync(callback);
+export const handleJoinGuild = function handleJoinGuild(guildId) {
+  importDefault = guildId;
+  if (null != guildId) {
+    GuildActionCreatorsDefault.joinGuild(guildId).then(() => {
+      const result = GuildActionCreatorsDefault.transitionToGuildSync(closure_0);
     });
-    const joinGuildResult = showTooManyUserGuildsAlertDefault.joinGuild(closure_0);
+    const joinGuildResult = GuildActionCreatorsDefault.joinGuild(guildId);
   }
 };

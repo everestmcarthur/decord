@@ -1,77 +1,77 @@
-// Module ID: 17460
-// Function ID: 17461
+// Module ID: 17491
+// Function ID: 17492
 // Name: NotificationReactivationActionSheet
-// Dependencies: [19, 17, 12414, 1074, 21, 4560, 576, 1242, 12415, 4527, 7150, 17461, 4556, 1114, 5433, 4975, 2]
+// Dependencies: [19, 17, 12440, 1074, 21, 4574, 576, 1242, 12441, 4541, 7164, 17492, 4570, 1114, 5447, 4989, 2]
 // Exports: default
 
-// Module 17460 (NotificationReactivationActionSheet)
-import ThemesDefault from "Themes" /* 576 */;
-import registerAssetDefault from "registerAsset" /* 17461 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { EventActionType } from "EventActionType" /* 12414 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17491 (NotificationReactivationActionSheet)
+import nativeDefault from "native" /* 576 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12441 */;
+import _modDef17492 from "module_17492" /* 17492 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ View: c4, Image: c5 } = get_ActivityIndicator);
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: null, image: null, title: null, subtitle: null, buttons: null };
-createCacheKey = { marginHorizontal: ThemesDefault.space.PX_24, alignItems: "center" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginVertical: ThemesDefault.space.PX_24, height: 120 };
-createCacheKey[2] = { textAlign: "center" };
-let obj1 = { marginVertical: ThemesDefault.space.PX_24, height: 120 };
-createCacheKey[3] = { textAlign: "center", marginTop: ThemesDefault.space.PX_8 };
-let obj2 = { textAlign: "center", marginTop: ThemesDefault.space.PX_8 };
-createCacheKey[4] = { marginTop: ThemesDefault.space.PX_8 };
-let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { marginTop: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/nuf/native/components/notification/NotificationReactivationActionSheet.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
+const EventActionType = fn(12440).EventActionType;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { marginHorizontal: nativeDefault.space.PX_24, alignItems: "center" }, image: null, title: null, subtitle: null, buttons: null };
+const obj3 = { marginHorizontal: nativeDefault.space.PX_24, alignItems: "center" };
+obj2.image = { marginVertical: nativeDefault.space.PX_24, height: 120 };
+obj2.title = { textAlign: "center" };
+let obj4 = { marginVertical: nativeDefault.space.PX_24, height: 120 };
+obj2.subtitle = { textAlign: "center", marginTop: nativeDefault.space.PX_8 };
+let obj5 = { textAlign: "center", marginTop: nativeDefault.space.PX_8 };
+obj2.buttons = { marginTop: nativeDefault.space.PX_8 };
+let closure_10 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/nuf/native/components/notification/NotificationReactivationActionSheet.tsx");
 
 export default function NotificationReactivationActionSheet(location) {
   const _location = location.location;
-  const tmp = callback3();
+  const tmp = closure_10();
   const items = [_location];
   const items1 = [_location];
-  const callback = React.useCallback(() => {
-    const pushNotificationPermission = _location(closure_1_2[8]).requestPushNotificationPermission(closure_1_6.ALLOW_TO_REQUEST, _location, () => {
-      callback(table[9]).hideActionSheet();
+  const callback = noop.useCallback(() => {
+    const pushNotificationPermission = NotificationPermissionUtil.requestPushNotificationPermission(EventActionType.ALLOW_TO_REQUEST, _location, () => {
+      closure_1_1(closure_1_2[9]).hideActionSheet();
     });
   }, items);
-  const callback1 = React.useCallback(() => {
-    let obj = closure_1_1(closure_1_2[7]);
-    obj = { action_type: closure_1_6.SKIP_STEP, action_location: _location, permission_granted: "Array" };
-    obj.track(closure_1_7.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj);
-    closure_1_1(closure_1_2[9]).hideActionSheet();
+  const callback1 = noop.useCallback(() => {
+    AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, { action_type: EventActionType.SKIP_STEP, action_location: _location, permission_granted: "Array" });
+    const obj2 = { action_type: EventActionType.SKIP_STEP, action_location: _location, permission_granted: "Array" };
+    ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items1);
   let obj = { children: null };
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.image, source: registerAssetDefault, resizeMode: "contain" };
-  const items2 = [callback(closure_5, obj), , , ];
-  obj1 = { style: tmp.title, variant: "heading-xl/bold", accessibilityRole: "header", children: null };
+  let obj2 = { style: tmp.container, children: null };
+  const items2 = [closure_8(closure_5, { style: tmp.image, source: _modDef17492, resizeMode: "contain" }), , , ];
+  const obj4 = { style: tmp.title, variant: "heading-xl/bold", accessibilityRole: "header", children: null };
   const intl = _location(1114).intl;
-  obj1[3] = intl.string(_location(1114).t.a4bgO0);
-  items2[1] = callback(_location(4556).Text, obj1);
-  const obj2 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
+  obj4.children = intl.string(_location(1114).t.a4bgO0);
+  items2[1] = closure_8(_location(4570).Text, obj4);
+  const obj5 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = _location(1114).intl;
-  obj2[3] = intl2.string(_location(1114).t["rW5gw/"]);
-  items2[2] = callback(_location(4556).Text, obj2);
-  const obj3 = { style: tmp.buttons, children: null };
-  const obj4 = { text: null, onPress: null };
+  obj5.children = intl2.string(_location(1114).t["rW5gw/"]);
+  items2[2] = closure_8(_location(4570).Text, obj5);
+  const obj6 = { style: tmp.buttons, children: null };
+  const obj7 = { text: null, onPress: null };
   const intl3 = _location(1114).intl;
-  obj4[0] = intl3.string(_location(1114).t.a4bgO0);
-  obj4[1] = callback;
-  const items3 = [callback(_location(4975).Button, obj4), ];
-  const obj5 = { text: null, onPress: null, variant: "secondary" };
+  obj7.text = intl3.string(_location(1114).t.a4bgO0);
+  obj7.onPress = callback;
+  const items3 = [closure_8(_location(4989).Button, obj7), ];
+  const obj8 = { text: null, onPress: null, variant: "secondary" };
   const intl4 = _location(1114).intl;
-  obj5[0] = intl4.string(_location(1114).t["/L3kom"]);
-  obj5[1] = callback1;
-  items3[1] = callback(_location(4975).Button, obj5);
-  obj3[1] = items3;
-  items2[3] = callback2(_location(5433).ButtonGroup, obj3);
-  obj[1] = items2;
-  obj[0] = callback2(closure_4, obj);
-  return callback(_location(7150).BottomSheet, obj);
+  obj8.text = intl4.string(_location(1114).t["/L3kom"]);
+  obj8.onPress = callback1;
+  items3[1] = closure_8(_location(4989).Button, obj8);
+  obj6.children = items3;
+  items2[3] = closure_9(_location(5447).ButtonGroup, obj6);
+  obj2.children = items2;
+  obj.children = closure_9(closure_4, obj2);
+  return closure_8(_location(7164).BottomSheet, obj);
 };

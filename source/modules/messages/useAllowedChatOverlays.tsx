@@ -1,23 +1,24 @@
-// Module ID: 11428
-// Function ID: 11429
-// Name: ChatOverlays
-// Dependencies: [1956, 1957, 11426, 9510, 563, 4189, 9531, 2]
+// Module ID: 11455
+// Function ID: 11456
+// Name: useAllowedChatOverlays
+// Dependencies: [1956, 1957, 11453, 9537, 563, 4202, 9560, 2]
 // Exports: default
 
-// Module 11428 (ChatOverlays)
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 563 */;
-import getEmbeddedActivityLocationChannelId from "getEmbeddedActivityLocationChannelId" /* 4189 */;
-import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 9531 */;
-import closure_3 from "participantFromServer" /* 1956 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import { ChatOverlays } from "ChatOverlays" /* 11426 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 9510 */;
+// Module 11455 (useAllowedChatOverlays)
+import useStateFromStores from "useStateFromStores" /* 563 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4202 */;
+import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 9560 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-require = arg1;
+require = fn;
+const ChatOverlays = fn(11453).ChatOverlays;
+const ActivityPanelModes = fn(9537).ActivityPanelModes;
 const no_text_activity = "no_text_activity";
-let obj = { no_text_activity: items };
-items = [, , ];
+let obj = { no_text_activity: null };
+let items = [, , ];
 ({ NEW_MESSAGES: arr[0], OPT_IN_CHANNEL: arr[1], SUMMARIES: arr[2] } = ChatOverlays);
+obj.no_text_activity = items;
 let items1 = [, , ];
 ({ NEW_MESSAGES: arr2[0], OPT_IN_CHANNEL: arr2[1], SUMMARIES: arr2[2] } = ChatOverlays);
 obj[ActivityPanelModes.DISCONNECTED] = items1;
@@ -31,20 +32,21 @@ obj[ActivityPanelModes.PIP] = items3;
 const items4 = [, , ];
 ({ NEW_MESSAGES: arr5[0], OPT_IN_CHANNEL: arr5[1], SUMMARIES: arr5[2] } = ChatOverlays);
 obj[ActivityPanelModes.ACTIVITY_POPOUT_WINDOW] = items4;
-const result = require("set").fileFinishedImporting("modules/messages/useAllowedChatOverlays.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/useAllowedChatOverlays.tsx");
 
 export default function useAllowedChatOverlays() {
-  obj = defaultAreStatesEqual;
-  const items = [closure_3];
-  const stateFromStores = obj.useStateFromStores(items, () => store.getCurrentEmbeddedActivity());
-  const items1 = [closure_3];
-  const stateFromStores1 = defaultAreStatesEqual.useStateFromStores(items1, () => store.getActivityPanelMode());
-  getEmbeddedActivityLocationChannelId;
+  obj = useStateFromStores;
+  const items = [EmbeddedActivitiesStore];
+  const stateFromStores = obj.useStateFromStores(items, () => EmbeddedActivitiesStore.getCurrentEmbeddedActivity());
+  const items1 = [EmbeddedActivitiesStore];
+  const stateFromStores1 = useStateFromStores.useStateFromStores(items1, () => EmbeddedActivitiesStore.getActivityPanelMode());
+  embeddedActivityLocationUtils;
   if (stateFromStores != null) {
     const _location = stateFromStores.location;
   }
   if (undefined !== stateFromStores) {
-    if (!isVoiceEmbeddedActivityDefault(tmp5, closure_4)) {
+    if (!isVoiceEmbeddedActivityDefault(tmp5, ChannelStore)) {
       let tmp9 = obj[stateFromStores1];
     }
     return tmp9;

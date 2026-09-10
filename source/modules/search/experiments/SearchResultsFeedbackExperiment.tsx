@@ -1,17 +1,19 @@
-// Module ID: 17355
-// Function ID: 17356
-// Name: useIsSearchResultsFeedbackExperimentEnabled
+// Module ID: 17386
+// Function ID: 17387
+// Name: SearchResultsFeedbackExperiment
 // Dependencies: [1433, 2]
 // Exports: getIsSearchResultsFeedbackExperimentEnabled, useIsSearchResultsFeedbackExperimentEnabled
 
-// Module 17355 (useIsSearchResultsFeedbackExperimentEnabled)
-import set from "set" /* 2 */;
+// Module 17386 (SearchResultsFeedbackExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null };
-obj[1] = { enabled: true };
-let closure_0 = ApexExperiment.createApexExperiment({ name: "2025-05-search-results-feedback", kind: "user", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/search/experiments/SearchResultsFeedbackExperiment.tsx");
+const obj = { name: "2025-05-search-results-feedback", kind: "user", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj.variations = obj2;
+let closure_0 = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/search/experiments/SearchResultsFeedbackExperiment.tsx");
 
 export const useIsSearchResultsFeedbackExperimentEnabled = function useIsSearchResultsFeedbackExperimentEnabled(location) {
   return closure_0.useConfig({ location: location.location }).enabled;

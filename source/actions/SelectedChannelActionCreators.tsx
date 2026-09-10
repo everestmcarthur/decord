@@ -1,40 +1,41 @@
-// Module ID: 5411
-// Function ID: 5412
-// Dependencies: [4577, 1957, 1908, 1074, 5412, 573, 1100, 9453, 2]
+// Module ID: 5425
+// Function ID: 5426
+// Name: SelectedChannelActionCreators
+// Dependencies: [4591, 1957, 1908, 1074, 5426, 573, 1100, 9480, 2]
 
-// Module 5411
-import dispatcherDefault from "dispatcher" /* 573 */;
-import transitionTo from "transitionTo" /* 1100 */;
-import getChannelSelectionOrigin from "getChannelSelectionOrigin" /* 5412 */;
-import disconnectRemoteAll from "disconnectRemote" /* 9453 */;
-import closure_4 from "set" /* 4577 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import closure_6 from "_detectH265HardwareDecode" /* 1908 */;
-import ME from "ME" /* 1074 */;
+// Module 5425 (SelectedChannelActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import router_utils from "router_utils" /* 1100 */;
+import SelectedChannelActionCreatorsAdditional from "SelectedChannelActionCreatorsAdditional" /* 5426 */;
+import GameConsoleActionCreatorsAll from "GameConsoleActionCreators" /* 9480 */;
+import GameConsoleStore from "GameConsoleStore" /* 4591 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
-require = arg1;
-({ ME: error, PopoutWindowKeys, Routes: closure_8 } = ME);
-const result = require("set").fileFinishedImporting("actions/SelectedChannelActionCreators.tsx");
+require = fn;
+const Constants = fn(1074);
+({ ME: closure_7, PopoutWindowKeys, Routes: closure_8 } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("actions/SelectedChannelActionCreators.tsx");
 
 export default {
   selectChannel(guildId) {
     guildId = guildId.guildId;
     ({ channelId, messageId, jumpType, source, skipMessageFetch, opensChannel } = guildId);
-    const channelSelectionOrigin = getChannelSelectionOrigin.getChannelSelectionOrigin();
+    const channelSelectionOrigin = SelectedChannelActionCreatorsAdditional.getChannelSelectionOrigin();
     ({ fromGuildId, fromChannelId } = channelSelectionOrigin);
-    const obj = getChannelSelectionOrigin;
     let tmp2 = null;
-    if (guildId !== closure_7) {
+    if (guildId !== React5) {
       tmp2 = guildId;
     }
-    dispatcherDefault.dispatch({ type: "CHANNEL_SELECT", guildId: tmp2, channelId, fromGuildId, fromChannelId, messageId, jumpType, source, skipMessageFetch, opensChannel });
+    DispatcherDefault.dispatch({ type: "CHANNEL_SELECT", guildId: tmp2, channelId, fromGuildId, fromChannelId, messageId, jumpType, source, skipMessageFetch, opensChannel });
   },
   selectPrivateChannel(id) {
-    transitionTo.transitionTo(closure_8.CHANNEL(closure_7, id));
+    router_utils.transitionTo(React6.CHANNEL(React5, id));
   },
-  selectVoiceChannel(id, c1, flag2) {
-    let flag = c1;
-    if (c1 === undefined) {
+  selectVoiceChannel(id, MediaEngineStore, flag2) {
+    let flag = MediaEngineStore;
+    if (MediaEngineStore === undefined) {
       flag = false;
     }
     if (flag2 === undefined) {
@@ -44,24 +45,23 @@ export default {
     if (arg3 === undefined) {
       obj = {};
     }
-    channel = channel.getChannel(id);
+    const channel = ChannelStore.getChannel(id);
     if (channel != null) {
       const guildId = channel.getGuildId();
     }
-    if (supported.isSupported()) {
+    if (MediaEngineStore.isSupported()) {
       if (null != id) {
-        const mediaEngine = supported.getMediaEngine();
+        const mediaEngine = MediaEngineStore.getMediaEngine();
         mediaEngine.interact();
       }
-      const obj5 = getChannelSelectionOrigin;
+      const obj5 = SelectedChannelActionCreatorsAdditional;
       const voiceChannelAdditional = obj5.selectVoiceChannelAdditional(id, guildId, flag, flag2, obj);
     }
   },
   disconnect() {
-    remoteSessionId = remoteSessionId.getRemoteSessionId();
+    const remoteSessionId = GameConsoleStore.getRemoteSessionId();
     if (null != remoteSessionId) {
-      disconnectRemoteAll.remoteDisconnect(remoteSessionId);
-      const obj = disconnectRemoteAll;
+      GameConsoleActionCreatorsAll.remoteDisconnect(remoteSessionId);
     }
     const voiceChannel = this.selectVoiceChannel(null);
   }

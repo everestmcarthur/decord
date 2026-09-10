@@ -1,23 +1,21 @@
-// Module ID: 16112
-// Function ID: 16113
+// Module ID: 16142
+// Function ID: 16143
 // Name: openFavoritesGuildCategoryActionSheet
-// Dependencies: [4527, 16113, 1896, 2]
+// Dependencies: [4541, 16143, 1896, 2]
 // Exports: default
 
-// Module 16112 (openFavoritesGuildCategoryActionSheet)
-import set from "set" /* 2 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
+// Module 16142 (openFavoritesGuildCategoryActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/favorites/native/openFavoritesGuildCategoryActionSheet.tsx");
+const result = size.fileFinishedImporting("modules/favorites/native/openFavoritesGuildCategoryActionSheet.tsx");
 
 export default function openFavoritesGuildCategoryActionSheet(categoryId) {
   const combined = "FavoritesGuildCategoryLongPress-" + categoryId;
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = {
+  ActionSheetActionCreatorsDefault.openLazy(combined(1896)(16143, dependencyMap.paths), combined, {
     categoryId,
     onClose() {
-      closure_1_1(closure_1_2[0]).hideActionSheet(combined);
+      ActionSheetActionCreatorsDefault.hideActionSheet(combined);
     }
-  };
-  obj.openLazy(combined(1896)(16113, dependencyMap.paths), combined, obj);
+  });
 };

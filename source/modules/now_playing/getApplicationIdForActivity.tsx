@@ -1,24 +1,24 @@
-// Module ID: 13752
-// Function ID: 13753
+// Module ID: 13775
+// Function ID: 13776
 // Name: getApplicationIdForActivity
-// Dependencies: [13232, 13753, 13754, 1920, 10896, 8259, 13006, 2]
+// Dependencies: [13255, 13776, 13777, 1920, 10923, 8285, 13032, 2]
 // Exports: default
 
-// Module 13752 (getApplicationIdForActivity)
-import set from "set" /* 2 */;
-import items3 from "items3" /* 1920 */;
-import _isStreamingDefault from "_isStreaming" /* 8259 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10896 */;
-import isOnXboxDefault from "isOnXbox" /* 13006 */;
-import getIconURL from "getIconURL" /* 13232 */;
-import getIconURL2 from "getIconURL" /* 13753 */;
-import getIconURL3 from "getIconURL" /* 13754 */;
+// Module 13775 (getApplicationIdForActivity)
+import Constants from "Constants" /* 1920 */;
+import isStreamingDefault from "isStreaming" /* 8285 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10923 */;
+import isOnXboxDefault from "isOnXbox" /* 13032 */;
+import SpotifyApplicationRecord from "SpotifyApplicationRecord" /* 13255 */;
+import TwitchApplicationRecord from "TwitchApplicationRecord" /* 13776 */;
+import XboxApplicationRecord from "XboxApplicationRecord" /* 13777 */;
+import size from "module_2" /* 2 */;
 
-const SpotifyApplication = getIconURL.SpotifyApplication;
-let closure_3 = getIconURL2.TWITCH_APPLICATION_ID_PREFIX;
-let closure_4 = getIconURL3.XBOX_APPLICATION_ID_PREFIX;
-let closure_5 = items3.XBOX_ACTIVITY_APPLICATION_ID;
-const result = set.fileFinishedImporting("modules/now_playing/getApplicationIdForActivity.tsx");
+const SpotifyApplication = SpotifyApplicationRecord.SpotifyApplication;
+let closure_3 = TwitchApplicationRecord.TWITCH_APPLICATION_ID_PREFIX;
+let closure_4 = XboxApplicationRecord.XBOX_APPLICATION_ID_PREFIX;
+let closure_5 = Constants.XBOX_ACTIVITY_APPLICATION_ID;
+const result = size.fileFinishedImporting("modules/now_playing/getApplicationIdForActivity.tsx");
 
 export default function getApplicationIdForActivity(party) {
   if (isListeningOnSpotifyDefault(party)) {
@@ -29,7 +29,7 @@ export default function getApplicationIdForActivity(party) {
       return id;
     }
   }
-  if (_isStreamingDefault(party)) {
+  if (isStreamingDefault(party)) {
     if (null != party.url) {
       id = closure_3 + party.url;
     }

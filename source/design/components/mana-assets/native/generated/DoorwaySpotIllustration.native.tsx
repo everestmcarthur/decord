@@ -1,17 +1,17 @@
-// Module ID: 5933
-// Function ID: 5934
+// Module ID: 5947
+// Function ID: 5948
 // Name: DoorwaySpotIllustration
-// Dependencies: [21, 5587, 5934, 2]
+// Dependencies: [21, 5601, 5948, 2]
 // Exports: DoorwaySpotIllustration
 
-// Module 5933 (DoorwaySpotIllustration)
-import set from "set" /* 2 */;
+// Module 5947 (DoorwaySpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 5934 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5948 from "module_5948" /* 5948 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/DoorwaySpotIllustration.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/DoorwaySpotIllustration.native.tsx");
 
 export const DoorwaySpotIllustration = function DoorwaySpotIllustration(width) {
   let num = width.width;
@@ -27,14 +27,14 @@ export const DoorwaySpotIllustration = function DoorwaySpotIllustration(width) {
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
-  obj = { width: num * num3, height: num2 * num3 };
-  const items = [obj];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { width: num * num3, height: num2 * num3 });
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef5948 };
+  obj.source = obj2;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

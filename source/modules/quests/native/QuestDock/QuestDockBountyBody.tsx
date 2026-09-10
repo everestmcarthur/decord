@@ -1,51 +1,62 @@
-// Module ID: 15206
-// Function ID: 15207
-// Dependencies: [19, 21, 15185, 15105, 15095, 15203, 11302, 1114, 2]
+// Module ID: 15234
+// Function ID: 15235
+// Name: QuestDockBountyBody
+// Dependencies: [19, 5458, 21, 15212, 15132, 15122, 15129, 11518, 11225, 11229, 5465, 7742, 5461, 15031, 15033, 15230, 11329, 1114, 2]
 
-// Module 15206
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import metadataDefault from "metadata" /* 11302 */;
-import useIsQuestDockExpanded from "useIsQuestDockExpanded" /* 15095 */;
-import getCreativeAnalyticsParams from "getCreativeAnalyticsParams" /* 15105 */;
-import contextDefault from "context" /* 15185 */;
-import QUEST_DOCK_EXPANDED_PADDING_BOTTOM from "QUEST_DOCK_EXPANDED_PADDING_BOTTOM" /* 15203 */;
-import QUEST_DOCK_EXPANDED_PADDING_BOTTOMDefault from "QUEST_DOCK_EXPANDED_PADDING_BOTTOM" /* 15203 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 15234 (QuestDockBountyBody)
+import QuestTypes from "QuestTypes" /* 5461 */;
+import AdCreativeType from "AdCreativeType" /* 5465 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7742 */;
+import captureAdUserAction from "captureAdUserAction" /* 11225 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11229 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 15031 */;
+import BountiesModalTypes from "BountiesModalTypes" /* 15033 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let c3 = importAllResult;
-const memoResult = importAllResult.memo(function QuestDockBountyBody() {
-  const isRendered = importAllResult.useContext(contextDefault).isRendered;
-  let obj = getCreativeAnalyticsParams;
-  const questDockBounty = obj.useQuestDockBounty();
-  let isQuestDockExpanded = useIsQuestDockExpanded.useIsQuestDockExpanded();
-  const callback = importAllResult.useCallback(() => {
+require = fn;
+const QuestDockMode = fn(5458).QuestDockMode;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBountyBody.tsx");
 
-  }, []);
-  const obj2 = useIsQuestDockExpanded;
-  obj = { assetUrl: metadataDefault, isAnimatedAsset: true, paused: null, withAnimation: null };
-  let tmp8 = !isQuestDockExpanded;
+export default noop.memo(function QuestDockBountyBody() {
+  const isRendered = noop.useContext(setRestingQuestDockMode(getQuestImpressionId[3])).isRendered;
+  questDockBounty = questDockBounty(getQuestImpressionId[4]).useQuestDockBounty();
+  let obj = questDockBounty(getQuestImpressionId[4]);
+  let isQuestDockExpanded = questDockBounty(getQuestImpressionId[5]).useIsQuestDockExpanded();
+  setRestingQuestDockMode = noop.useContext(questDockBounty(getQuestImpressionId[6]).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
+  let obj2 = questDockBounty(getQuestImpressionId[5]);
+  getQuestImpressionId = questDockBounty(getQuestImpressionId[7]).useGetQuestImpressionId();
+  const items = [questDockBounty, getQuestImpressionId, setRestingQuestDockMode];
+  const callback = noop.useCallback(() => {
+    const obj = captureAdUserAction;
+    obj.captureAdUserAction({ type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL, adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, adCreativeId: questDockBounty.id, questContentCTA: AnalyticsTypes.QuestContentCTA.START_BOUNTY, surfaceId: QuestTypes.QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE, impressionId: getQuestImpressionId() });
+    const obj2 = { type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL, adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, adCreativeId: questDockBounty.id, questContentCTA: AnalyticsTypes.QuestContentCTA.START_BOUNTY, surfaceId: QuestTypes.QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE, impressionId: getQuestImpressionId() };
+    const obj3 = BountiesModalActionCreatorsDefault;
+    obj3.showModal({ bountyId: questDockBounty.id, variant: BountiesModalTypes.BountiesModalVariant.SINGLE_VIDEO, sourceQuestContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE });
+    setRestingQuestDockMode(QuestDockMode.COLLAPSED);
+  }, items);
+  let obj3 = questDockBounty(getQuestImpressionId[7]);
+  const obj4 = { assetUrl: setRestingQuestDockMode(getQuestImpressionId[16]), isAnimatedAsset: true, paused: null, withAnimation: null };
+  let tmp9 = !isQuestDockExpanded;
   if (isQuestDockExpanded) {
-    tmp8 = !isRendered;
+    tmp9 = !isRendered;
   }
-  obj[2] = tmp8;
+  obj4.paused = tmp9;
   if (isQuestDockExpanded) {
     isQuestDockExpanded = isRendered;
   }
-  obj = { rewardTile: tmp6(QUEST_DOCK_EXPANDED_PADDING_BOTTOM.QuestDockBodyRewardTile, obj), title: null, description: null, ctaText: isQuestDockExpanded, onCtaPress: null };
+  const obj5 = { rewardTile: jsx(questDockBounty(getQuestImpressionId[15]).QuestDockBodyRewardTile, { assetUrl: setRestingQuestDockMode(getQuestImpressionId[16]), isAnimatedAsset: true, paused: null, withAnimation: null }), title: null, description: null, ctaText: null, onCtaPress: null };
+  obj4.withAnimation = isQuestDockExpanded;
   let str = questDockBounty.productName;
   if (str == null) {
     str = "";
   }
-  obj[1] = str;
-  const intl = tmp2(1114).intl;
-  obj[2] = intl.string(getSystemLocale.t["1uzE2S"]);
-  const intl2 = tmp2(1114).intl;
-  obj[3] = intl2.string(getSystemLocale.t["1IPUq9"]);
-  obj[4] = callback;
-  return jsx(QUEST_DOCK_EXPANDED_PADDING_BOTTOMDefault, { rewardTile: tmp6(QUEST_DOCK_EXPANDED_PADDING_BOTTOM.QuestDockBodyRewardTile, obj), title: null, description: null, ctaText: isQuestDockExpanded, onCtaPress: null });
+  obj5.title = str;
+  const intl = tmp2(tmp[17]).intl;
+  obj5.description = intl.string(questDockBounty(getQuestImpressionId[17]).t["1uzE2S"]);
+  const intl2 = tmp2(tmp[17]).intl;
+  obj5.ctaText = intl2.string(questDockBounty(getQuestImpressionId[17]).t["1IPUq9"]);
+  obj5.onCtaPress = callback;
+  return jsx(setRestingQuestDockMode(getQuestImpressionId[15]), { rewardTile: jsx(questDockBounty(getQuestImpressionId[15]).QuestDockBodyRewardTile, { assetUrl: setRestingQuestDockMode(getQuestImpressionId[16]), isAnimatedAsset: true, paused: null, withAnimation: null }), title: null, description: null, ctaText: null, onCtaPress: null });
 });
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBountyBody.tsx");
-
-export default memoResult;

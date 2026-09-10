@@ -1,14 +1,13 @@
-// Module ID: 17507
-// Function ID: 17508
-// Name: prototype
-// Dependencies: [7118, 4258, 2]
+// Module ID: 17538
+// Function ID: 17539
+// Name: VoiceProcessingErrorManager
+// Dependencies: [7132, 4271, 2]
 
-// Module 17507 (prototype)
-import initializeDefault from "initialize" /* 7118 */;
+// Module 17538 (VoiceProcessingErrorManager)
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-let require = arg1;
-initializeDefault;
-let prototype = function VoiceProcessingErrorManager() {
+let require = fn;
+const prototype = function VoiceProcessingErrorManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   applyArgumentsResult.actions = {
@@ -20,16 +19,17 @@ let prototype = function VoiceProcessingErrorManager() {
     }
   };
   applyArgumentsResult.handleNoiseCancellationError = function handleNoiseCancellationError() {
-    const result = applyArgumentsResult(4258).presentNoiseCancellationError();
+    const result = applyArgumentsResult(4271).presentNoiseCancellationError();
   };
   applyArgumentsResult.handleVoiceActivityDetectionError = function handleVoiceActivityDetectionError() {
-    const result = applyArgumentsResult(4258).presentVoiceActivityDetectionError();
+    const result = applyArgumentsResult(4271).presentVoiceActivityDetectionError();
   };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
-let result = require("set").fileFinishedImporting("modules/media_engine/native/VoiceProcessingErrorManager.tsx");
+const prototype1 = new prototype();
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/media_engine/native/VoiceProcessingErrorManager.tsx");
 
-export default prototype;
+export default prototype1;

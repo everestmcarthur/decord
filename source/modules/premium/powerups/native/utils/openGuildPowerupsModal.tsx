@@ -1,19 +1,19 @@
-// Module ID: 12483
-// Function ID: 12484
+// Module ID: 12509
+// Function ID: 12510
 // Name: openGuildPowerupsModal
-// Dependencies: [4763, 12484, 1896, 2]
+// Dependencies: [4777, 12510, 1896, 2]
 // Exports: default
 
-// Module 12483 (openGuildPowerupsModal)
-import set from "set" /* 2 */;
+// Module 12509 (openGuildPowerupsModal)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import _modDef4763 from "module_4763" /* 4763 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import size from "module_2" /* 2 */;
 
 let c3 = 0;
-const result = set.fileFinishedImporting("modules/premium/powerups/native/utils/openGuildPowerupsModal.tsx");
+const result = size.fileFinishedImporting("modules/premium/powerups/native/utils/openGuildPowerupsModal.tsx");
 
 export default function openGuildPowerupsModal(navigationParams) {
-  const merged = Object.assign(navigationParams, Object.create(null));
+  const merged = Object.assign(navigationParams, Object.assign({ navigationParams: 0 }));
   let tmp2 = merged;
   if (null != merged.autoOpenPerkId) {
     const obj = {};
@@ -23,5 +23,5 @@ export default function openGuildPowerupsModal(navigationParams) {
     obj.autoOpenRequestId = sum;
     tmp2 = obj;
   }
-  _modDef4763.pushLazy(asyncRequireImpl(12484, dependencyMap.paths), tmp2, "guild_powerups_modal_key", navigationParams.navigationParams);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12510, dependencyMap.paths), tmp2, "guild_powerups_modal_key", navigationParams.navigationParams);
 };

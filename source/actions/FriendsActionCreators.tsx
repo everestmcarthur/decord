@@ -1,16 +1,17 @@
-// Module ID: 17478
-// Function ID: 17479
-// Dependencies: [1074, 573, 1100, 16755, 2]
+// Module ID: 17509
+// Function ID: 17510
+// Name: FriendsActionCreators
+// Dependencies: [1074, 573, 1100, 16792, 2]
 
-// Module 17478
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import ME from "ME" /* 1074 */;
-import transitionTo from "transitionTo" /* 1100 */;
-import trackFriendsListClickedDefault from "trackFriendsListClicked" /* 16755 */;
+// Module 17509 (FriendsActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const Routes = ME.Routes;
-const result = set.fileFinishedImporting("actions/FriendsActionCreators.tsx");
+const router_utils = tmp(1100);
+const trackFriendListClickedDefault = tmp5(16792);
+const Routes = Constants.Routes;
+const result = size.fileFinishedImporting("actions/FriendsActionCreators.tsx");
 
 export default {
   transitionToSection(PENDING, arg1) {
@@ -23,28 +24,20 @@ export default {
       flag = false;
     }
     if (obj2.getHistory().location.pathname !== Routes.FRIENDS) {
-      transitionTo.transitionTo(tmp3.FRIENDS);
-      const tmpResult = transitionTo;
+      router_utils.transitionTo(tmp3.FRIENDS);
+      const tmpResult = router_utils;
     }
-    obj2 = transitionTo;
-    const tmp = require;
-    const tmp5 = importDefault;
-    obj = { type: "FRIENDS_SET_SECTION", section: PENDING };
-    dispatcherDefault.dispatch(obj);
+    obj2 = router_utils;
+    DispatcherDefault.dispatch({ type: "FRIENDS_SET_SECTION", section: PENDING });
     if (flag) {
-      obj = { tab_opened: null };
-      obj[0] = PENDING;
-      trackFriendsListClickedDefault(obj);
+      const obj5 = { tab_opened: PENDING };
+      trackFriendListClickedDefault(obj5);
     }
   },
   setSection(section) {
-    let obj = dispatcherDefault;
-    obj = { type: "FRIENDS_SET_SECTION", section };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "FRIENDS_SET_SECTION", section });
   },
   setInitialSection(section) {
-    let obj = dispatcherDefault;
-    obj = { type: "FRIENDS_SET_INITIAL_SECTION", section };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "FRIENDS_SET_INITIAL_SECTION", section });
   }
 };

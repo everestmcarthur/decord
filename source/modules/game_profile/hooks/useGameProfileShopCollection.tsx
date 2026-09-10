@@ -1,44 +1,46 @@
-// Module ID: 8877
-// Function ID: 8878
+// Module ID: 8904
+// Function ID: 8905
 // Name: useGameProfileShopCollection
-// Dependencies: [19, 8687, 504, 8765, 2]
+// Dependencies: [19, 8715, 504, 8793, 2]
 // Exports: useGameProfileShopCollection
 
-// Module 8877 (useGameProfileShopCollection)
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import closure_3 from "getSimilarGames" /* 8687 */;
+// Module 8904 (useGameProfileShopCollection)
+import _mod19 from "module_19" /* 19 */;
+import GameProfileHttpUtils from "GameProfileHttpUtils" /* 8793 */;
+import GameProfileStore from "GameProfileStore" /* 8715 */;
+import size from "module_2" /* 2 */;
 
-const useEffect = noop.useEffect;
-let result = set.fileFinishedImporting("modules/game_profile/hooks/useGameProfileShopCollection.tsx");
+const require = globalThis.__r;
+
+const useEffect = _mod19.useEffect;
+let result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileShopCollection.tsx");
 
 export const useGameProfileShopCollection = function useGameProfileShopCollection(collectionId) {
-  const _require = collectionId;
-  const items = [closure_3];
-  const stateFromStoresObject = _require(hasFetched[2]).useStateFromStoresObject(items, () => {
+  _require = collectionId;
+  const items = [GameProfileStore];
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     let result = null != closure_0;
     if (result) {
-      result = closure_1_3.hasShopCollectionBeenFetched(tmp);
+      result = GameProfileStore.hasShopCollectionBeenFetched(tmp);
     }
     const obj = { hasFetched: result, skuIds: null };
     let shopCollectionSkuIds;
     if (null != closure_0) {
-      shopCollectionSkuIds = closure_1_3.getShopCollectionSkuIds(tmp);
+      shopCollectionSkuIds = GameProfileStore.getShopCollectionSkuIds(tmp);
     }
-    obj[1] = shopCollectionSkuIds;
+    obj.skuIds = shopCollectionSkuIds;
     return obj;
   });
   hasFetched = stateFromStoresObject.hasFetched;
   let skuIds = stateFromStoresObject.skuIds;
   const items1 = [collectionId, hasFetched];
   useEffect(() => {
-    let result = null == collectionId || hasFetched;
+    let result = null == closure_0 || hasFetched;
     if (!result) {
-      result = closure_1_3.isShopCollectionFetching(tmp);
+      result = GameProfileStore.isShopCollectionFetching(tmp);
     }
     if (!result) {
-      const shopCollection = collectionId(hasFetched[3]).getShopCollection(tmp);
-      const obj = collectionId(hasFetched[3]);
+      const shopCollection = GameProfileHttpUtils.getShopCollection(tmp);
     }
   }, items1);
   if (skuIds == null) {

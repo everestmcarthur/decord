@@ -1,58 +1,57 @@
-// Module ID: 9239
-// Function ID: 9240
+// Module ID: 9266
+// Function ID: 9267
 // Name: TwoWayLinkDiscordConsent
-// Dependencies: [5, 32, 19, 17, 21, 3, 4560, 9231, 5406, 9240, 38, 5578, 7123, 4975, 1114, 2]
+// Dependencies: [5, 32, 19, 17, 21, 3, 4574, 9258, 5420, 9267, 38, 5592, 7137, 4989, 1114, 2]
 // Exports: TwoWayLinkDiscordConsent
 
-// Module 9239 (TwoWayLinkDiscordConsent)
-import timestampDefault from "timestamp" /* 3 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9266 (TwoWayLinkDiscordConsent)
+import LoggerDefault from "Logger" /* 3 */;
+import _modDef38 from "module_38" /* 38 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
-({ jsxs: closure_8, jsx: c9 } = jsxProd);
-let closure_10 = new timestampDefault("TwoWayLinkDiscordConsentNative");
-let closure_11 = createCacheKey.createStyles({ scroller: { alignSelf: "stretch", flexShrink: 1 }, flex: { flex: 1 } });
-const tmp4 = new timestampDefault("TwoWayLinkDiscordConsentNative");
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkDiscordConsent.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsxs: closure_8, jsx: closure_9 } = jsxProd);
+let closure_10 = new LoggerDefault("TwoWayLinkDiscordConsentNative");
+const createStyles = fn(4574);
+let closure_11 = createStyles.createStyles({ scroller: { alignSelf: "stretch", flexShrink: 1 }, flex: { flex: 1 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkDiscordConsent.tsx");
 
 export const TwoWayLinkDiscordConsent = function TwoWayLinkDiscordConsent(callbackCode) {
   callbackCode = callbackCode.callbackCode;
-  let _require = callbackCode;
+  _require = callbackCode;
   const callbackState = callbackCode.callbackState;
   const platformType = callbackCode.platformType;
   const onNext = callbackCode.onNext;
   const onError = callbackCode.onError;
-  let React;
-  let sendAuthorize;
+  noop = undefined;
   ({ clientId, scopes, redirectUri } = callbackCode);
-  const tmp = callback2();
-  let obj = _require(platformType[7]);
-  const twoWayLinkStyles = obj.useTwoWayLinkStyles();
-  const tmp5 = onError(React.useState(false), 2);
-  React = tmp5[1];
-  _require = undefined;
+  const tmp = closure_11();
+  const twoWayLinkStyles = require("TwoWayLinkStyles").useTwoWayLinkStyles();
+  const tmp5 = onError(noop.useState(false), 2);
+  noop = tmp5[1];
   _require = onNext((arg0) => {
-    closure_0 = arg0;
+    const _location = arg0;
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function*(arg0) {
+    return (function*(arg0, value) {
       if (c6 === 2) {
         c6 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp7 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -62,58 +61,55 @@ export const TwoWayLinkDiscordConsent = function TwoWayLinkDiscordConsent(callba
           if (0 === c5) {
             if (arg0 === 1) {
               c6 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
-              let body = tmp3;
-              let code = tmp5;
-              let _location;
-              code = undefined;
-              let v0 = 1;
-              obj1 = callbackState(platformType[8]);
+              closure_2 = tmp3;
+              closure_1 = tmp5;
+              closure_129_0 = undefined;
+              closure_129_1 = undefined;
+              v0 = 1;
+              const obj2 = callbackState(platformType[8]);
               c5 = 2;
               c6 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj1.completeTwoWayLink(closure_1_2, _location.location, _location, closure_1_1);
-              return obj1;
+              const obj5 = { value: obj2.completeTwoWayLink(closure_2, _location.location, _location, closure_1), done: false };
+              return obj5;
             }
           } else {
             if (1 === tmp8) {
               v0 = 0;
-              body = closure_3;
+              closure_129_2 = tmp38;
               const _HermesInternal = HermesInternal;
-              closure_2_10.error("" + closure_1_2 + " link error:", body);
-              body = body.body;
-              code = undefined;
+              logger.error("" + closure_2 + " link error:", closure_129_2);
+              const body = closure_129_2.body;
+              let code;
               if (body != null) {
                 code = body.code;
               }
+              closure_129_1 = code;
             } else if (arg0 === 1) {
               c6 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               v0 = 0;
               c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              const obj = { value, done: true };
               return obj;
             } else {
-              _location = arg1;
+              closure_129_0 = value;
               v0 = 0;
             }
-            if (null != _location) {
-              closure_1_3();
+            if (null != closure_129_0) {
+              tmp38();
             } else {
-              v0(code);
+              v0(closure_129_1);
             }
             c6 = 3;
           }
         } catch (tmp38) {
-          closure_3 = tmp38;
           if (tmp4 === v0) {
             c6 = tmp2;
             throw tmp38;
@@ -125,7 +121,7 @@ export const TwoWayLinkDiscordConsent = function TwoWayLinkDiscordConsent(callba
     })();
   });
   const items = [callbackCode, callbackState, platformType, onNext, onError];
-  const callback = React.useCallback(function() {
+  const callback = noop.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -136,40 +132,42 @@ export const TwoWayLinkDiscordConsent = function TwoWayLinkDiscordConsent(callba
     return applyArgumentsResult;
   }, items);
   const tmp7 = callbackState(platformType[9])({ clientId, scopes, responseType: "code", callback, isTrustedName: true, isEmbeddedFlow: true, redirectUri, withBackPressHandler: false });
-  sendAuthorize = tmp7.sendAuthorize;
+  const sendAuthorize = tmp7.sendAuthorize;
   const items1 = [sendAuthorize];
   ({ header, body, appDetails } = tmp7);
-  obj = { style: twoWayLinkStyles.container, children: null };
-  const callback1 = React.useCallback(() => {
-    callbackState(platformType[10])(null != sendAuthorize, "sendAuthorize not available");
-    callback(true);
+  let obj2 = { style: twoWayLinkStyles.container, children: null };
+  const callback1 = noop.useCallback(() => {
+    _modDef38(null != sendAuthorize, "sendAuthorize not available");
+    closure_5(true);
     sendAuthorize({ isAuthorized: true });
   }, items1);
-  obj = { style: tmp.flex, children: null };
-  obj1 = { style: tmp.scroller, children: null };
-  const obj2 = { style: twoWayLinkStyles.body, children: null };
+  let obj3 = { style: tmp.flex, children: null };
+  let obj4 = { style: tmp.scroller, children: null };
+  let obj5 = { style: twoWayLinkStyles.body, children: null };
   const items2 = [header, ];
+  const obj6 = { style: twoWayLinkStyles.bodyContent, children: null };
   const items3 = [body, appDetails];
-  items2[1] = callback(sendAuthorize, { style: twoWayLinkStyles.bodyContent, children: items3 });
-  obj2[1] = items2;
-  const items4 = [callback(sendAuthorize, obj2), ];
-  const obj4 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: null };
+  obj6.children = items3;
+  let obj = require("TwoWayLinkStyles");
+  items2[1] = closure_8(sendAuthorize, obj6);
+  obj5.children = items2;
+  const items4 = [closure_8(sendAuthorize, obj5), ];
+  const obj7 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: null };
   let tmp9Result = null != sendAuthorize;
   if (tmp9Result) {
-    const obj5 = { style: null, children: null };
-    obj5[0] = twoWayLinkStyles.footerButton;
-    const obj6 = { size: "lg", variant: "primary", text: null, onPress: null, loading: null };
+    const obj8 = { style: twoWayLinkStyles.footerButton, children: null };
+    const obj9 = { size: "lg", variant: "primary", text: null, onPress: null, loading: null };
     const intl = tmp2(tmp3[14]).intl;
-    obj6[2] = intl.string(tmp2(tmp3[14]).t.ZN4hkc);
-    obj6[3] = callback1;
-    obj6[4] = tmp5[0];
-    obj5[1] = tmp9(tmp2(tmp3[13]).Button, obj6);
-    tmp9Result = tmp9(tmp10, obj5);
+    obj9.text = intl.string(tmp2(tmp3[14]).t.ZN4hkc);
+    obj9.onPress = callback1;
+    obj9.loading = tmp5[0];
+    obj8.children = tmp9(tmp2(tmp3[13]).Button, obj9);
+    tmp9Result = tmp9(tmp10, obj8);
   }
-  obj4[2] = tmp9Result;
-  items4[1] = closure_9(_require(platformType[12]).SafeAreaPaddingView, obj4);
-  obj1[1] = items4;
-  obj[1] = callback(closure_7, obj1);
-  obj[1] = closure_9(callbackState(platformType[11]), obj);
-  return closure_9(sendAuthorize, obj);
+  obj7.children = tmp9Result;
+  items4[1] = closure_9(require("common/SafeAreaView").SafeAreaPaddingView, obj7);
+  obj4.children = items4;
+  obj3.children = closure_8(closure_7, obj4);
+  obj2.children = closure_9(callbackState(platformType[11]), obj3);
+  return closure_9(sendAuthorize, obj2);
 };

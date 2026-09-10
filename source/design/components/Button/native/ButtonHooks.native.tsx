@@ -1,192 +1,299 @@
-// Module ID: 4981
-// Function ID: 4982
-// Name: styleProperties
-// Dependencies: [19, 4560, 4271, 576, 4411, 4262, 4296, 4974, 4978, 4980, 4982, 4977, 4556, 1115, 2]
+// Module ID: 4995
+// Function ID: 4996
+// Name: ButtonHooks
+// Dependencies: [19, 4574, 4284, 576, 4425, 4275, 4310, 4988, 4992, 4994, 4996, 4991, 4570, 1115, 2]
 // Exports: useButtonPillStyles, useButtonPressAnimationProps, useButtonScaleStyles, useButtonTextColorStyles, useForegroundColor, useGradientPillStyles, useIconSizeStyles, useIconTintStyles, useProfileThemedButtonStyles
 
-// Module 4981 (styleProperties)
-import ThemesDefault from "Themes" /* 576 */;
-import map from "map" /* 4262 */;
-import closure_3 from "noop" /* 19 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 4995 (ButtonHooks)
+import nativeDefault from "native" /* 576 */;
+import useToken from "useToken" /* 4275 */;
+import native from "native" /* 4284 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import shared from "shared" /* 4425 */;
+import spring from "spring" /* 4988 */;
+import Icon from "Icon" /* 4991 */;
+import springPresets from "springPresets" /* 4992 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+const require = globalThis.__r;
+
+require = fn;
+function getButtonColorTokens(variant) {
+  switch (variant) {
+    case "primary":
+      const obj2 = { foregroundInactive: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT, foregroundPressed: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT, backgroundInactive: nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT, backgroundPressed: nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_ACTIVE, borderInactive: nativeDefault.colors.CONTROL_PRIMARY_BORDER_DEFAULT, borderPressed: nativeDefault.colors.CONTROL_PRIMARY_BORDER_ACTIVE };
+      return obj2;
+    case "secondary":
+      const obj3 = { foregroundInactive: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, foregroundPressed: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, backgroundInactive: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, backgroundPressed: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_ACTIVE, borderInactive: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT, borderPressed: nativeDefault.colors.CONTROL_SECONDARY_BORDER_ACTIVE };
+      return obj3;
+    case "toggle-off":
+      const obj4 = { foregroundInactive: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, foregroundPressed: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, backgroundInactive: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, backgroundPressed: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_ACTIVE, borderInactive: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT, borderPressed: nativeDefault.colors.TOGGLEBUTTON_BORDER_SELECTED };
+      return obj4;
+    case "toggle-on":
+      const obj5 = { foregroundInactive: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, foregroundPressed: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, backgroundInactive: nativeDefault.colors.TOGGLEBUTTON_BACKGROUND_SELECTED, backgroundPressed: nativeDefault.colors.TOGGLEBUTTON_BACKGROUND_SELECTED_ACTIVE, borderInactive: nativeDefault.colors.TOGGLEBUTTON_BORDER_SELECTED, borderPressed: nativeDefault.colors.TOGGLEBUTTON_BORDER_SELECTED };
+      return obj5;
+    case "toggle-icon-default-off":
+      const obj6 = { foregroundInactive: nativeDefault.colors.TOGGLEBUTTON_ICON_DEFAULT, foregroundPressed: nativeDefault.colors.TOGGLEBUTTON_ICON_ACTIVE, backgroundInactive: rgba0000001, backgroundPressed: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_ACTIVE, borderInactive: rgba0000001, borderPressed: nativeDefault.colors.TOGGLEBUTTON_BORDER_ACTIVE };
+      return obj6;
+    case "toggle-icon-default-on":
+      const obj7 = { foregroundInactive: nativeDefault.colors.TOGGLEBUTTON_ICON_SELECTED, foregroundPressed: nativeDefault.colors.TOGGLEBUTTON_ICON_ACTIVE, backgroundInactive: nativeDefault.colors.TOGGLEBUTTON_BACKGROUND_SELECTED, backgroundPressed: nativeDefault.colors.TOGGLEBUTTON_BACKGROUND_SELECTED_HOVER, borderInactive: nativeDefault.colors.TOGGLEBUTTON_BORDER_SELECTED, borderPressed: nativeDefault.colors.TOGGLEBUTTON_BORDER_ACTIVE };
+      return obj7;
+    case "toggle-icon-critical-off":
+      const obj8 = { foregroundInactive: nativeDefault.colors.TOGGLEBUTTON_CRITICAL_ICON_DEFAULT, foregroundPressed: nativeDefault.colors.TOGGLEBUTTON_CRITICAL_ICON_ACTIVE, backgroundInactive: rgba0000001, backgroundPressed: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_ACTIVE, borderInactive: rgba0000001, borderPressed: nativeDefault.colors.TOGGLEBUTTON_CRITICAL_BORDER_ACTIVE };
+      return obj8;
+    case "toggle-icon-critical-on":
+      const obj9 = { foregroundInactive: nativeDefault.colors.TOGGLEBUTTON_CRITICAL_ICON_SELECTED, foregroundPressed: nativeDefault.colors.TOGGLEBUTTON_CRITICAL_ICON_ACTIVE, backgroundInactive: nativeDefault.colors.TOGGLEBUTTON_CRITICAL_BACKGROUND_SELECTED, backgroundPressed: nativeDefault.colors.TOGGLEBUTTON_CRITICAL_BACKGROUND_SELECTED_HOVER, borderInactive: rgba0000001, borderPressed: nativeDefault.colors.TOGGLEBUTTON_CRITICAL_BORDER_ACTIVE };
+      return obj9;
+    case "toggle-icon-only-off":
+      const obj10 = { foregroundInactive: nativeDefault.colors.TOGGLEBUTTON_ICON_ONLY_ICON_DEFAULT, foregroundPressed: nativeDefault.colors.TOGGLEBUTTON_ICON_ONLY_ICON_ACTIVE, backgroundInactive: rgba0000001, backgroundPressed: nativeDefault.colors.CONTROL_ICON_ONLY_BACKGROUND_ACTIVE, borderInactive: rgba0000001, borderPressed: nativeDefault.colors.CONTROL_ICON_ONLY_BORDER_ACTIVE };
+      return obj10;
+    case "toggle-icon-only-on":
+      const obj11 = { foregroundInactive: nativeDefault.colors.TOGGLEBUTTON_ICON_ONLY_ICON_SELECTED, foregroundPressed: nativeDefault.colors.TOGGLEBUTTON_ICON_ONLY_ICON_ACTIVE, backgroundInactive: rgba0000001, backgroundPressed: nativeDefault.colors.CONTROL_ICON_ONLY_BACKGROUND_ACTIVE, borderInactive: rgba0000001, borderPressed: nativeDefault.colors.CONTROL_ICON_ONLY_BORDER_ACTIVE };
+      return obj11;
+    case "tertiary":
+      const obj12 = { foregroundInactive: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT, foregroundPressed: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT, backgroundInactive: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, backgroundPressed: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_PRESSED_BACKGROUND, borderInactive: rgba0000001, borderPressed: rgba0000001 };
+      return obj12;
+    case "critical-primary":
+      let obj13 = { foregroundInactive: null, foregroundPressed: null, backgroundInactive: null, backgroundPressed: null, borderInactive: null, borderPressed: null };
+      let tmp33 = nativeDefault;
+      obj13.foregroundInactive = tmp33.colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT;
+      let tmp34 = nativeDefault;
+      obj13.foregroundPressed = tmp34.colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT;
+      let tmp35 = nativeDefault;
+      obj13.backgroundInactive = tmp35.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT;
+      let tmp36 = nativeDefault;
+      obj13.backgroundPressed = tmp36.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_ACTIVE;
+      let tmp37 = nativeDefault;
+      obj13.borderInactive = tmp37.colors.CONTROL_CRITICAL_PRIMARY_BORDER_DEFAULT;
+      let tmp38 = nativeDefault;
+      obj13.borderPressed = tmp38.colors.CONTROL_CRITICAL_PRIMARY_BORDER_ACTIVE;
+      return obj13;
+    case "destructive":
+      obj13 = { foregroundInactive: null, foregroundPressed: null, backgroundInactive: null, backgroundPressed: null, borderInactive: null, borderPressed: null };
+      tmp33 = nativeDefault;
+      obj13.foregroundInactive = tmp33.colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT;
+      tmp34 = nativeDefault;
+      obj13.foregroundPressed = tmp34.colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT;
+      tmp35 = nativeDefault;
+      obj13.backgroundInactive = tmp35.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT;
+      tmp36 = nativeDefault;
+      obj13.backgroundPressed = tmp36.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_ACTIVE;
+      tmp37 = nativeDefault;
+      obj13.borderInactive = tmp37.colors.CONTROL_CRITICAL_PRIMARY_BORDER_DEFAULT;
+      tmp38 = nativeDefault;
+      obj13.borderPressed = tmp38.colors.CONTROL_CRITICAL_PRIMARY_BORDER_ACTIVE;
+      return obj13;
+    case "critical-secondary":
+      const obj14 = { foregroundInactive: nativeDefault.colors.CONTROL_CRITICAL_SECONDARY_TEXT_DEFAULT, foregroundPressed: nativeDefault.colors.CONTROL_CRITICAL_SECONDARY_TEXT_DEFAULT, backgroundInactive: nativeDefault.colors.CONTROL_CRITICAL_SECONDARY_BACKGROUND_DEFAULT, backgroundPressed: nativeDefault.colors.CONTROL_CRITICAL_SECONDARY_BACKGROUND_ACTIVE, borderInactive: nativeDefault.colors.CONTROL_CRITICAL_SECONDARY_BORDER_DEFAULT, borderPressed: nativeDefault.colors.CONTROL_CRITICAL_SECONDARY_BORDER_ACTIVE };
+      return obj14;
+    case "active":
+      const obj15 = { foregroundInactive: nativeDefault.colors.CONTROL_CONNECTED_TEXT_DEFAULT, foregroundPressed: nativeDefault.colors.CONTROL_CONNECTED_TEXT_DEFAULT, backgroundInactive: nativeDefault.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT, backgroundPressed: nativeDefault.colors.CONTROL_CONNECTED_BACKGROUND_ACTIVE, borderInactive: nativeDefault.colors.CONTROL_CONNECTED_BORDER_DEFAULT, borderPressed: nativeDefault.colors.CONTROL_CONNECTED_BORDER_ACTIVE };
+      return obj15;
+    case "experimental_premium-secondary":
+      const obj16 = { foregroundInactive: nativeDefault.colors.TEXT_BRAND, foregroundPressed: nativeDefault.colors.TEXT_BRAND, backgroundInactive: nativeDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT, backgroundPressed: nativeDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_ACTIVE, borderInactive: rgba0000001, borderPressed: rgba0000001 };
+      return obj16;
+    case "primary-overlay":
+      const obj17 = { foregroundInactive: nativeDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT, foregroundPressed: nativeDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT, backgroundInactive: nativeDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT, backgroundPressed: nativeDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_ACTIVE, borderInactive: rgba0000001, borderPressed: rgba0000001 };
+      return obj17;
+    case "secondary-overlay":
+      const obj18 = { foregroundInactive: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, foregroundPressed: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, backgroundInactive: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, backgroundPressed: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE, borderInactive: rgba0000001, borderPressed: rgba0000001 };
+      return obj18;
+    case "experimental_welcome-secondary":
+      const obj19 = { foregroundInactive: nativeDefault.unsafe_rawColors.WHITE, foregroundPressed: nativeDefault.unsafe_rawColors.WHITE, backgroundInactive, backgroundPressed, borderInactive: rgba0000001, borderPressed: rgba0000001 };
+      return obj19;
+    case "experimental_premium-primary":
+      let obj20 = { foregroundInactive: null, foregroundPressed: null, backgroundInactive: null, backgroundPressed: null, borderInactive: null, borderPressed: null };
+      let tmp9 = nativeDefault;
+      obj20.foregroundInactive = tmp9.colors.WHITE;
+      let tmp10 = nativeDefault;
+      obj20.foregroundPressed = tmp10.colors.WHITE;
+      obj20.backgroundInactive = rgba0000001;
+      let tmp12 = nativeDefault;
+      obj20.backgroundPressed = tmp12.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PRESSED_BACKGROUND;
+      obj20.borderInactive = rgba0000001;
+      obj20.borderPressed = rgba0000001;
+      return obj20;
+    case "experimental_premium-basic":
+      obj20 = { foregroundInactive: null, foregroundPressed: null, backgroundInactive: null, backgroundPressed: null, borderInactive: null, borderPressed: null };
+      tmp9 = nativeDefault;
+      obj20.foregroundInactive = tmp9.colors.WHITE;
+      tmp10 = nativeDefault;
+      obj20.foregroundPressed = tmp10.colors.WHITE;
+      obj20.backgroundInactive = rgba0000001;
+      tmp12 = nativeDefault;
+      obj20.backgroundPressed = tmp12.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PRESSED_BACKGROUND;
+      obj20.borderInactive = rgba0000001;
+      obj20.borderPressed = rgba0000001;
+      return obj20;
+    case "icon-only":
+      const obj21 = { foregroundInactive: nativeDefault.colors.CONTROL_ICON_ONLY_ICON_DEFAULT, foregroundPressed: nativeDefault.colors.CONTROL_ICON_ONLY_ICON_DEFAULT, backgroundInactive: rgba0000001, backgroundPressed: nativeDefault.colors.CONTROL_ICON_ONLY_BACKGROUND_ACTIVE, borderInactive: rgba0000001, borderPressed: rgba0000001 };
+      return obj21;
+    case "expressive":
+      const obj = { foregroundInactive: nativeDefault.colors.CONTROL_EXPRESSIVE_TEXT_DEFAULT, foregroundPressed: nativeDefault.colors.CONTROL_EXPRESSIVE_TEXT_DEFAULT, backgroundInactive: rgba0000001, backgroundPressed: rgba0000001, borderInactive: rgba0000001, borderPressed: rgba0000001 };
+      return obj;
+    default:
+  }
+}
 let c4 = "rgba(0,0,0,0.001)";
-let closure_5 = createCacheKey.experimental_createToken(() => "#161CBB");
-let closure_6 = createCacheKey.experimental_createToken(() => "#1318A0");
-createCacheKey = { primary: ThemesDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT, "experimental_welcome-secondary": ThemesDefault.unsafe_rawColors.WHITE, secondary: ThemesDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, tertiary: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT, destructive: ThemesDefault.colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT, "critical-primary": ThemesDefault.colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT, "critical-secondary": ThemesDefault.colors.CONTROL_CRITICAL_SECONDARY_TEXT_DEFAULT, active: ThemesDefault.colors.CONTROL_CONNECTED_TEXT_DEFAULT, "primary-overlay": ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT, "secondary-overlay": ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, "experimental_premium-primary": ThemesDefault.colors.WHITE, "experimental_premium-basic": ThemesDefault.colors.WHITE, "experimental_premium-secondary": ThemesDefault.colors.TEXT_BRAND, "icon-only": ThemesDefault.colors.CONTROL_ICON_ONLY_ICON_DEFAULT, expressive: ThemesDefault.colors.CONTROL_EXPRESSIVE_TEXT_DEFAULT };
-const styleProperties = createCacheKey.createStyleProperties((arg0) => ({ backgroundInactive: c4, backgroundPressed: c4, borderInactive: c4, borderPressed: c4 }));
-let closure_9 = { code: "function ButtonHooksNativeTsx1(){const{themedStyles,colors,interpolateColor,pressed}=this.__closure;var _themedStyles$backgro,_themedStyles,_themedStyles$borderC,_themedStyles2;const backgroundColor=(_themedStyles$backgro=(_themedStyles=themedStyles)===null||_themedStyles===void 0?void 0:_themedStyles.backgroundColor)!==null&&_themedStyles$backgro!==void 0?_themedStyles$backgro:[colors.backgroundInactive,colors.backgroundPressed];const borderColor=(_themedStyles$borderC=(_themedStyles2=themedStyles)===null||_themedStyles2===void 0?void 0:_themedStyles2.borderColor)!==null&&_themedStyles$borderC!==void 0?_themedStyles$borderC:[colors.borderInactive,colors.borderPressed];return{backgroundColor:interpolateColor(pressed.get(),[0,1],backgroundColor),borderColor:interpolateColor(pressed.get(),[0,1],borderColor)};}" };
-let closure_10 = { code: "function ButtonHooksNativeTsx2(){const{width,scaleAmountInPx,withSpring,interpolate,pressed,ON_PRESS_SPRING}=this.__closure;const scale=width.get()>0?(width.get()-scaleAmountInPx)/width.get():1;return{transform:[{scale:withSpring(interpolate(pressed.get(),[0,1],[1,scale]),ON_PRESS_SPRING,'animate-always')}]};}" };
-let result = require("set").fileFinishedImporting("design/components/Button/native/ButtonHooks.native.tsx");
+let createStyles = fn(4574);
+const backgroundInactive = createStyles.experimental_createToken(() => "#161CBB");
+createStyles = fn(4574);
+const backgroundPressed = createStyles.experimental_createToken(() => "#1318A0");
+createStyles = fn(4574);
+const styleProperties = createStyles.createStyleProperties(getButtonColorTokens);
+const __initData = { code: "function ButtonHooksNativeTsx1(){const{interpolateColor,pressed,inactiveColor,pressedColor}=this.__closure;return{tintColor:interpolateColor(pressed.get(),[0,1],[inactiveColor,pressedColor])};}" };
+const __initData2 = { code: "function ButtonHooksNativeTsx2(){const{themedStyles,colors,interpolateColor,pressed}=this.__closure;var _themedStyles$backgro,_themedStyles,_themedStyles$borderC,_themedStyles2;const backgroundColor=(_themedStyles$backgro=(_themedStyles=themedStyles)===null||_themedStyles===void 0?void 0:_themedStyles.backgroundColor)!==null&&_themedStyles$backgro!==void 0?_themedStyles$backgro:[colors.backgroundInactive,colors.backgroundPressed];const borderColor=(_themedStyles$borderC=(_themedStyles2=themedStyles)===null||_themedStyles2===void 0?void 0:_themedStyles2.borderColor)!==null&&_themedStyles$borderC!==void 0?_themedStyles$borderC:[colors.borderInactive,colors.borderPressed];return{backgroundColor:interpolateColor(pressed.get(),[0,1],backgroundColor),borderColor:interpolateColor(pressed.get(),[0,1],borderColor)};}" };
+const __initData3 = { code: "function ButtonHooksNativeTsx3(){const{width,scaleAmountInPx,withSpring,interpolate,pressed,ON_PRESS_SPRING}=this.__closure;const scale=width.get()>0?(width.get()-scaleAmountInPx)/width.get():1;return{transform:[{scale:withSpring(interpolate(pressed.get(),[0,1],[1,scale]),ON_PRESS_SPRING,'animate-always')}]};}" };
+const size = fn(2);
+let result = size.fileFinishedImporting("design/components/Button/native/ButtonHooks.native.tsx");
 
 export const SAFE_TRANSPARENT_COLOR = "rgba(0,0,0,0.001)";
 export const useProfileThemedButtonStyles = function useProfileThemedButtonStyles(arg0) {
-  const _require = arg0;
-  const themeContext = _require(theme[2]).useThemeContext();
+  _require = arg0;
+  const themeContext = require("native").useThemeContext();
   const primaryColor = themeContext.primaryColor;
   theme = themeContext.theme;
   const items = [theme, primaryColor, arg0];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     if (null == memo) {
       return null;
-    } else if ("primary" === variant) {
-      const WHITE = memo(576).unsafe_rawColors.WHITE;
-      let obj = { base: null, contrastRatio: null };
-      obj[0] = WHITE;
-      obj[1] = variant(4271).WCAGContrastRatios.HighContrastText;
-      const contrastingColor = variant(4271).getContrastingColor(tmp, obj);
-      const obj8 = variant(4271);
-      const darkenColorResult = variant(4271).darkenColor(contrastingColor, 0.5);
-      obj = { backgroundColor: null, borderColor: null, color: null };
+    } else if ("primary" === closure_0) {
+      const WHITE = nativeDefault.unsafe_rawColors.WHITE;
+      const obj4 = { base: WHITE, contrastRatio: native.WCAGContrastRatios.HighContrastText };
+      const contrastingColor = native.getContrastingColor(tmp, obj4);
+      const darkenColorResult = native.darkenColor(contrastingColor, 0.5);
+      const obj7 = { backgroundColor: null, borderColor: null, color: null };
       const items = [contrastingColor, darkenColorResult];
-      obj[0] = items;
+      obj7.backgroundColor = items;
       const items1 = [contrastingColor, darkenColorResult];
-      obj[1] = items1;
-      obj[2] = WHITE;
-      return obj;
+      obj7.borderColor = items1;
+      obj7.color = WHITE;
+      return obj7;
     } else if ("secondary" === tmp45) {
-      const obj5 = variant(4411);
-      const tmp20 = dependencyMap;
-      const isThemeLightResult = variant(4411).isThemeLight(dependencyMap);
-      const setColorOpacity2 = variant(4271).setColorOpacity;
+      const tmp20 = closure_2;
+      const isThemeLightResult = shared.isThemeLight(closure_2);
+      const setColorOpacity2 = native.setColorOpacity;
       if (isThemeLightResult) {
         let setColorOpacity2Result = setColorOpacity2("white", 0.72);
       } else {
         setColorOpacity2Result = setColorOpacity2("white", 0.24);
       }
       const items2 = [setColorOpacity2Result, ];
-      const tmp24 = variant(4271);
-      const obj6 = variant(4411);
-      const isThemeLightResult1 = variant(4411).isThemeLight(tmp20);
-      const setColorOpacity3 = variant(4271).setColorOpacity;
+      const isThemeLightResult1 = shared.isThemeLight(tmp20);
+      const setColorOpacity3 = native.setColorOpacity;
       if (isThemeLightResult1) {
         let setColorOpacity3Result = setColorOpacity3("white", 0.62);
       } else {
         setColorOpacity3Result = setColorOpacity3("white", 0.34);
       }
-      obj1 = { backgroundColor: null, borderColor: null, color: "Array" };
+      const obj9 = { backgroundColor: null, borderColor: null, color: "Array" };
       items2[1] = setColorOpacity3Result;
-      obj1[0] = items2;
-      const items3 = [closure_1_4, closure_1_4];
-      obj1[1] = items3;
-      return obj1;
+      obj9.backgroundColor = items2;
+      const items3 = [c4, c4];
+      obj9.borderColor = items3;
+      return obj9;
     } else if ("tertiary" === tmp45) {
-      obj = variant(4411);
-      const isThemeLightResult2 = obj.isThemeLight(dependencyMap);
-      const tmp4 = dependencyMap;
-      const setColorOpacity = variant(4271).setColorOpacity;
+      const isThemeLightResult2 = shared.isThemeLight(closure_2);
+      const setColorOpacity = native.setColorOpacity;
       if (isThemeLightResult2) {
         let setColorOpacityResult = setColorOpacity(tmp, 0.4);
       } else {
         setColorOpacityResult = setColorOpacity("white", 0.1);
       }
       const items4 = [setColorOpacityResult, ];
-      obj1 = variant(4411);
-      const tmp8 = variant(4271);
-      let obj2 = variant(4271);
+      const obj3 = native;
       if (isThemeLightResult3) {
-        let darkenColorResult1 = obj2.darkenColor(setColorOpacityResult, 0.3);
+        let darkenColorResult1 = obj3.darkenColor(setColorOpacityResult, 0.3);
       } else {
-        darkenColorResult1 = obj2.setColorOpacity("white", 0.2);
+        darkenColorResult1 = obj3.setColorOpacity("white", 0.2);
       }
-      obj2 = { backgroundColor: null, borderColor: null, color: "Array" };
+      const obj11 = { backgroundColor: null, borderColor: null, color: "Array" };
       items4[1] = darkenColorResult1;
-      obj2[0] = items4;
-      const items5 = [closure_1_4, closure_1_4];
-      obj2[1] = items5;
-      return obj2;
+      obj11.backgroundColor = items4;
+      const items5 = [c4, c4];
+      obj11.borderColor = items5;
+      return obj11;
     } else {
       return null;
     }
   }, items);
 };
 export const useForegroundColor = function useForegroundColor(variant) {
-  return map.useToken(createCacheKey[variant]);
+  return useToken.useToken(getButtonColorTokens(variant).foregroundInactive);
 };
 export const useButtonColorStyles = styleProperties;
-export const useButtonTextColorStyles = function useButtonTextColorStyles(style) {
-  const _require = style;
-  const themeContext = _require(theme[2]).useThemeContext();
+export const useButtonTextColorStyles = function useButtonTextColorStyles(active) {
+  _require = active;
+  const themeContext = require("native").useThemeContext();
   const primaryColor = themeContext.primaryColor;
   theme = themeContext.theme;
-  const items = [theme, primaryColor, style];
-  const memo = React.useMemo(() => {
+  const items = [theme, primaryColor, active];
+  const memo = noop.useMemo(() => {
     if (null == memo) {
       return null;
-    } else if ("primary" === variant) {
-      const WHITE = memo(576).unsafe_rawColors.WHITE;
-      let obj = { base: null, contrastRatio: null };
-      obj[0] = WHITE;
-      obj[1] = variant(4271).WCAGContrastRatios.HighContrastText;
-      const contrastingColor = variant(4271).getContrastingColor(tmp, obj);
-      const obj8 = variant(4271);
-      const darkenColorResult = variant(4271).darkenColor(contrastingColor, 0.5);
-      obj = { backgroundColor: null, borderColor: null, color: null };
+    } else if ("primary" === closure_0) {
+      const WHITE = nativeDefault.unsafe_rawColors.WHITE;
+      const obj4 = { base: WHITE, contrastRatio: native.WCAGContrastRatios.HighContrastText };
+      const contrastingColor = native.getContrastingColor(tmp, obj4);
+      const darkenColorResult = native.darkenColor(contrastingColor, 0.5);
+      const obj7 = { backgroundColor: null, borderColor: null, color: null };
       const items = [contrastingColor, darkenColorResult];
-      obj[0] = items;
+      obj7.backgroundColor = items;
       const items1 = [contrastingColor, darkenColorResult];
-      obj[1] = items1;
-      obj[2] = WHITE;
-      return obj;
+      obj7.borderColor = items1;
+      obj7.color = WHITE;
+      return obj7;
     } else if ("secondary" === tmp45) {
-      const obj5 = variant(4411);
-      const tmp20 = dependencyMap;
-      const isThemeLightResult = variant(4411).isThemeLight(dependencyMap);
-      const setColorOpacity2 = variant(4271).setColorOpacity;
+      const tmp20 = closure_2;
+      const isThemeLightResult = shared.isThemeLight(closure_2);
+      const setColorOpacity2 = native.setColorOpacity;
       if (isThemeLightResult) {
         let setColorOpacity2Result = setColorOpacity2("white", 0.72);
       } else {
         setColorOpacity2Result = setColorOpacity2("white", 0.24);
       }
       const items2 = [setColorOpacity2Result, ];
-      const tmp24 = variant(4271);
-      const obj6 = variant(4411);
-      const isThemeLightResult1 = variant(4411).isThemeLight(tmp20);
-      const setColorOpacity3 = variant(4271).setColorOpacity;
+      const isThemeLightResult1 = shared.isThemeLight(tmp20);
+      const setColorOpacity3 = native.setColorOpacity;
       if (isThemeLightResult1) {
         let setColorOpacity3Result = setColorOpacity3("white", 0.62);
       } else {
         setColorOpacity3Result = setColorOpacity3("white", 0.34);
       }
-      obj1 = { backgroundColor: null, borderColor: null, color: "Array" };
+      const obj9 = { backgroundColor: null, borderColor: null, color: "Array" };
       items2[1] = setColorOpacity3Result;
-      obj1[0] = items2;
-      const items3 = [closure_1_4, closure_1_4];
-      obj1[1] = items3;
-      return obj1;
+      obj9.backgroundColor = items2;
+      const items3 = [c4, c4];
+      obj9.borderColor = items3;
+      return obj9;
     } else if ("tertiary" === tmp45) {
-      obj = variant(4411);
-      const isThemeLightResult2 = obj.isThemeLight(dependencyMap);
-      const tmp4 = dependencyMap;
-      const setColorOpacity = variant(4271).setColorOpacity;
+      const isThemeLightResult2 = shared.isThemeLight(closure_2);
+      const setColorOpacity = native.setColorOpacity;
       if (isThemeLightResult2) {
         let setColorOpacityResult = setColorOpacity(tmp, 0.4);
       } else {
         setColorOpacityResult = setColorOpacity("white", 0.1);
       }
       const items4 = [setColorOpacityResult, ];
-      obj1 = variant(4411);
-      const tmp8 = variant(4271);
-      let obj2 = variant(4271);
+      const obj3 = native;
       if (isThemeLightResult3) {
-        let darkenColorResult1 = obj2.darkenColor(setColorOpacityResult, 0.3);
+        let darkenColorResult1 = obj3.darkenColor(setColorOpacityResult, 0.3);
       } else {
-        darkenColorResult1 = obj2.setColorOpacity("white", 0.2);
+        darkenColorResult1 = obj3.setColorOpacity("white", 0.2);
       }
-      obj2 = { backgroundColor: null, borderColor: null, color: "Array" };
+      const obj11 = { backgroundColor: null, borderColor: null, color: "Array" };
       items4[1] = darkenColorResult1;
-      obj2[0] = items4;
-      const items5 = [closure_1_4, closure_1_4];
-      obj2[1] = items5;
-      return obj2;
+      obj11.backgroundColor = items4;
+      const items5 = [c4, c4];
+      obj11.borderColor = items5;
+      return obj11;
     } else {
       return null;
     }
   }, items);
-  const obj = _require(theme[2]);
+  const obj = require("native");
   let color;
-  const token = _require(theme[5]).useToken(createCacheKey[style]);
+  const token = require("useToken").useToken(getButtonColorTokens(active).foregroundInactive);
   if (memo != null) {
     color = memo.color;
   }
@@ -195,191 +302,189 @@ export const useButtonTextColorStyles = function useButtonTextColorStyles(style)
   }
   return { color };
 };
-export const useIconTintStyles = function useIconTintStyles(arg0) {
-  const _require = arg0;
-  const themeContext = _require(theme[2]).useThemeContext();
+export const useIconTintStyles = function useIconTintStyles(variant, sharedValue) {
+  _require = sharedValue;
+  closure_129_0 = variant;
+  const themeContext = require("native").useThemeContext();
   const primaryColor = themeContext.primaryColor;
-  theme = themeContext.theme;
-  const items = [theme, primaryColor, arg0];
-  const memo = React.useMemo(() => {
+  closure_129_1 = primaryColor;
+  const theme = themeContext.theme;
+  closure_129_2 = theme;
+  let items = [theme, primaryColor, variant];
+  const memo = noop.useMemo(() => {
     if (null == memo) {
       return null;
-    } else if ("primary" === variant) {
-      const WHITE = memo(576).unsafe_rawColors.WHITE;
-      let obj = { base: null, contrastRatio: null };
-      obj[0] = WHITE;
-      obj[1] = variant(4271).WCAGContrastRatios.HighContrastText;
-      const contrastingColor = variant(4271).getContrastingColor(tmp, obj);
-      const obj8 = variant(4271);
-      const darkenColorResult = variant(4271).darkenColor(contrastingColor, 0.5);
-      obj = { backgroundColor: null, borderColor: null, color: null };
+    } else if ("primary" === closure_0) {
+      const WHITE = nativeDefault.unsafe_rawColors.WHITE;
+      const obj4 = { base: WHITE, contrastRatio: native.WCAGContrastRatios.HighContrastText };
+      const contrastingColor = native.getContrastingColor(tmp, obj4);
+      const darkenColorResult = native.darkenColor(contrastingColor, 0.5);
+      const obj7 = { backgroundColor: null, borderColor: null, color: null };
       const items = [contrastingColor, darkenColorResult];
-      obj[0] = items;
+      obj7.backgroundColor = items;
       const items1 = [contrastingColor, darkenColorResult];
-      obj[1] = items1;
-      obj[2] = WHITE;
-      return obj;
+      obj7.borderColor = items1;
+      obj7.color = WHITE;
+      return obj7;
     } else if ("secondary" === tmp45) {
-      const obj5 = variant(4411);
-      const tmp20 = dependencyMap;
-      const isThemeLightResult = variant(4411).isThemeLight(dependencyMap);
-      const setColorOpacity2 = variant(4271).setColorOpacity;
+      const tmp20 = closure_2;
+      const isThemeLightResult = shared.isThemeLight(closure_2);
+      const setColorOpacity2 = native.setColorOpacity;
       if (isThemeLightResult) {
         let setColorOpacity2Result = setColorOpacity2("white", 0.72);
       } else {
         setColorOpacity2Result = setColorOpacity2("white", 0.24);
       }
       const items2 = [setColorOpacity2Result, ];
-      const tmp24 = variant(4271);
-      const obj6 = variant(4411);
-      const isThemeLightResult1 = variant(4411).isThemeLight(tmp20);
-      const setColorOpacity3 = variant(4271).setColorOpacity;
+      const isThemeLightResult1 = shared.isThemeLight(tmp20);
+      const setColorOpacity3 = native.setColorOpacity;
       if (isThemeLightResult1) {
         let setColorOpacity3Result = setColorOpacity3("white", 0.62);
       } else {
         setColorOpacity3Result = setColorOpacity3("white", 0.34);
       }
-      obj1 = { backgroundColor: null, borderColor: null, color: "Array" };
+      const obj9 = { backgroundColor: null, borderColor: null, color: "Array" };
       items2[1] = setColorOpacity3Result;
-      obj1[0] = items2;
-      const items3 = [closure_1_4, closure_1_4];
-      obj1[1] = items3;
-      return obj1;
+      obj9.backgroundColor = items2;
+      const items3 = [c4, c4];
+      obj9.borderColor = items3;
+      return obj9;
     } else if ("tertiary" === tmp45) {
-      obj = variant(4411);
-      const isThemeLightResult2 = obj.isThemeLight(dependencyMap);
-      const tmp4 = dependencyMap;
-      const setColorOpacity = variant(4271).setColorOpacity;
+      const isThemeLightResult2 = shared.isThemeLight(closure_2);
+      const setColorOpacity = native.setColorOpacity;
       if (isThemeLightResult2) {
         let setColorOpacityResult = setColorOpacity(tmp, 0.4);
       } else {
         setColorOpacityResult = setColorOpacity("white", 0.1);
       }
       const items4 = [setColorOpacityResult, ];
-      obj1 = variant(4411);
-      const tmp8 = variant(4271);
-      let obj2 = variant(4271);
+      const obj3 = native;
       if (isThemeLightResult3) {
-        let darkenColorResult1 = obj2.darkenColor(setColorOpacityResult, 0.3);
+        let darkenColorResult1 = obj3.darkenColor(setColorOpacityResult, 0.3);
       } else {
-        darkenColorResult1 = obj2.setColorOpacity("white", 0.2);
+        darkenColorResult1 = obj3.setColorOpacity("white", 0.2);
       }
-      obj2 = { backgroundColor: null, borderColor: null, color: "Array" };
+      const obj11 = { backgroundColor: null, borderColor: null, color: "Array" };
       items4[1] = darkenColorResult1;
-      obj2[0] = items4;
-      const items5 = [closure_1_4, closure_1_4];
-      obj2[1] = items5;
-      return obj2;
+      obj11.backgroundColor = items4;
+      const items5 = [c4, c4];
+      obj11.borderColor = items5;
+      return obj11;
     } else {
       return null;
     }
   }, items);
-  const obj = _require(theme[2]);
-  let tintColor;
-  const token = _require(theme[5]).useToken(createCacheKey[arg0]);
+  let obj = require("native");
+  let color;
+  const token = require("useToken").useToken(getButtonColorTokens(variant).foregroundInactive);
   if (memo != null) {
-    tintColor = memo.color;
+    color = memo.color;
   }
-  if (tintColor == null) {
-    tintColor = token;
+  if (color == null) {
+    color = token;
   }
-  return { tintColor };
+  const obj2 = require("useToken");
+  const tmp5 = getButtonColorTokens;
+  token1 = require("useToken").useToken(tmp5(variant).foregroundPressed);
+  const tmpResult = require("useToken");
+  const fn = function t() {
+    const obj = { tintColor: null };
+    const items = [color, token1];
+    obj.tintColor = ReanimatedRexport.interpolateColor(sharedValue.get(), [0, 1], items);
+    return obj;
+  };
+  const tmpResult2 = require("ReanimatedRexport");
+  fn.__closure = { interpolateColor: require("ReanimatedRexport").interpolateColor, pressed: sharedValue, inactiveColor: color, pressedColor: token1 };
+  fn.__workletHash = 10122935395765;
+  fn.__initData = __initData;
+  return tmpResult2.useAnimatedStyle(fn);
 };
 export const useGradientPillStyles = function useGradientPillStyles(variant) {
   return { borderColor: styleProperties(variant).borderInactive };
 };
 export const useButtonPillStyles = function useButtonPillStyles(variant, pressed) {
-  const _require = variant;
-  let obj = _require(4271);
-  const themeContext = obj.useThemeContext();
+  _require = pressed;
+  closure_129_0 = variant;
+  const themeContext = require("native").useThemeContext();
   const primaryColor = themeContext.primaryColor;
-  let memo = primaryColor;
+  closure_129_1 = primaryColor;
   const theme = themeContext.theme;
-  dependencyMap = theme;
+  closure_129_2 = theme;
   let items = [theme, primaryColor, variant];
-  memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     if (null == memo) {
       return null;
-    } else if ("primary" === variant) {
-      const WHITE = memo(576).unsafe_rawColors.WHITE;
-      let obj = { base: null, contrastRatio: null };
-      obj[0] = WHITE;
-      obj[1] = variant(4271).WCAGContrastRatios.HighContrastText;
-      const contrastingColor = variant(4271).getContrastingColor(tmp, obj);
-      const obj8 = variant(4271);
-      const darkenColorResult = variant(4271).darkenColor(contrastingColor, 0.5);
-      obj = { backgroundColor: null, borderColor: null, color: null };
+    } else if ("primary" === closure_0) {
+      const WHITE = nativeDefault.unsafe_rawColors.WHITE;
+      const obj4 = { base: WHITE, contrastRatio: native.WCAGContrastRatios.HighContrastText };
+      const contrastingColor = native.getContrastingColor(tmp, obj4);
+      const darkenColorResult = native.darkenColor(contrastingColor, 0.5);
+      const obj7 = { backgroundColor: null, borderColor: null, color: null };
       const items = [contrastingColor, darkenColorResult];
-      obj[0] = items;
+      obj7.backgroundColor = items;
       const items1 = [contrastingColor, darkenColorResult];
-      obj[1] = items1;
-      obj[2] = WHITE;
-      return obj;
+      obj7.borderColor = items1;
+      obj7.color = WHITE;
+      return obj7;
     } else if ("secondary" === tmp45) {
-      const obj5 = variant(4411);
-      const tmp20 = dependencyMap;
-      const isThemeLightResult = variant(4411).isThemeLight(dependencyMap);
-      const setColorOpacity2 = variant(4271).setColorOpacity;
+      const tmp20 = closure_2;
+      const isThemeLightResult = shared.isThemeLight(closure_2);
+      const setColorOpacity2 = native.setColorOpacity;
       if (isThemeLightResult) {
         let setColorOpacity2Result = setColorOpacity2("white", 0.72);
       } else {
         setColorOpacity2Result = setColorOpacity2("white", 0.24);
       }
       const items2 = [setColorOpacity2Result, ];
-      const tmp24 = variant(4271);
-      const obj6 = variant(4411);
-      const isThemeLightResult1 = variant(4411).isThemeLight(tmp20);
-      const setColorOpacity3 = variant(4271).setColorOpacity;
+      const isThemeLightResult1 = shared.isThemeLight(tmp20);
+      const setColorOpacity3 = native.setColorOpacity;
       if (isThemeLightResult1) {
         let setColorOpacity3Result = setColorOpacity3("white", 0.62);
       } else {
         setColorOpacity3Result = setColorOpacity3("white", 0.34);
       }
-      obj1 = { backgroundColor: null, borderColor: null, color: "Array" };
+      const obj9 = { backgroundColor: null, borderColor: null, color: "Array" };
       items2[1] = setColorOpacity3Result;
-      obj1[0] = items2;
-      const items3 = [closure_1_4, closure_1_4];
-      obj1[1] = items3;
-      return obj1;
+      obj9.backgroundColor = items2;
+      const items3 = [c4, c4];
+      obj9.borderColor = items3;
+      return obj9;
     } else if ("tertiary" === tmp45) {
-      obj = variant(4411);
-      const isThemeLightResult2 = obj.isThemeLight(dependencyMap);
-      const tmp4 = dependencyMap;
-      const setColorOpacity = variant(4271).setColorOpacity;
+      const isThemeLightResult2 = shared.isThemeLight(closure_2);
+      const setColorOpacity = native.setColorOpacity;
       if (isThemeLightResult2) {
         let setColorOpacityResult = setColorOpacity(tmp, 0.4);
       } else {
         setColorOpacityResult = setColorOpacity("white", 0.1);
       }
       const items4 = [setColorOpacityResult, ];
-      obj1 = variant(4411);
-      const tmp8 = variant(4271);
-      let obj2 = variant(4271);
+      const obj3 = native;
       if (isThemeLightResult3) {
-        let darkenColorResult1 = obj2.darkenColor(setColorOpacityResult, 0.3);
+        let darkenColorResult1 = obj3.darkenColor(setColorOpacityResult, 0.3);
       } else {
-        darkenColorResult1 = obj2.setColorOpacity("white", 0.2);
+        darkenColorResult1 = obj3.setColorOpacity("white", 0.2);
       }
-      obj2 = { backgroundColor: null, borderColor: null, color: "Array" };
+      const obj11 = { backgroundColor: null, borderColor: null, color: "Array" };
       items4[1] = darkenColorResult1;
-      obj2[0] = items4;
-      const items5 = [closure_1_4, closure_1_4];
-      obj2[1] = items5;
-      return obj2;
+      obj11.backgroundColor = items4;
+      const items5 = [c4, c4];
+      obj11.borderColor = items5;
+      return obj11;
     } else {
       return null;
     }
   }, items);
   const tmp3 = styleProperties(variant);
   dependencyMap = tmp3;
-  const fn = function s() {
+  let obj = require("native");
+  const fn = function t() {
     let backgroundColor;
     if (memo != null) {
       backgroundColor = tmp.backgroundColor;
     }
     if (backgroundColor == null) {
       const items = [, ];
-      ({ backgroundInactive: arr[0], backgroundPressed: arr[1] } = dependencyMap);
+      ({ backgroundInactive: arr[0], backgroundPressed: arr[1] } = closure_2);
       backgroundColor = items;
     }
     let borderColor;
@@ -388,46 +493,42 @@ export const useButtonPillStyles = function useButtonPillStyles(variant, pressed
     }
     if (borderColor == null) {
       const items1 = [, ];
-      ({ borderInactive: arr2[0], borderPressed: arr2[1] } = dependencyMap);
+      ({ borderInactive: arr2[0], borderPressed: arr2[1] } = closure_2);
       borderColor = items1;
     }
-    const obj = { backgroundColor: variant(4296).interpolateColor(variant.get(), [0, 1], backgroundColor), borderColor: null };
-    const obj2 = variant(4296);
-    obj[1] = variant(4296).interpolateColor(variant.get(), [0, 1], borderColor);
+    const obj = { backgroundColor: ReanimatedRexport.interpolateColor(pressed.get(), [0, 1], backgroundColor), borderColor: null };
+    obj.borderColor = ReanimatedRexport.interpolateColor(pressed.get(), [0, 1], borderColor);
     return obj;
   };
-  obj = { themedStyles: memo, colors: tmp3, interpolateColor: _require(4296).interpolateColor, pressed };
-  fn.__closure = obj;
-  fn.__workletHash = 2383933325137;
-  fn.__initData = closure_9;
-  return _require(4296).useAnimatedStyle(fn);
+  let obj2 = require("ReanimatedRexport");
+  fn.__closure = { themedStyles: memo, colors: tmp3, interpolateColor: require("ReanimatedRexport").interpolateColor, pressed };
+  fn.__workletHash = 6773022706866;
+  fn.__initData = __initData2;
+  return obj2.useAnimatedStyle(fn);
 };
 export const useButtonScaleStyles = function useButtonScaleStyles(pressed, width, scaleAmountInPx) {
-  const _require = pressed;
+  _require = pressed;
   closure_1 = width;
   dependencyMap = scaleAmountInPx;
-  let obj = _require(4296);
   const fn = function n() {
-    let obj = sharedValue1;
     num = 1;
     if (sharedValue1.get() > 0) {
       const diff = obj.get() - num;
       num = diff / obj.get();
     }
-    obj = { transform: null };
-    obj = { scale: null };
-    const obj4 = sharedValue(num[7]);
+    const obj2 = { transform: null };
+    const obj3 = { scale: null };
+    const obj4 = spring;
     const items = [1, num];
-    const obj5 = sharedValue(num[6]);
-    obj[0] = obj4.withSpring(sharedValue(num[6]).interpolate(sharedValue.get(), [0, 1], items), sharedValue(num[8]).ON_PRESS_SPRING, "animate-always");
-    const items1 = [obj];
-    obj[0] = items1;
-    return obj;
+    obj3.scale = obj4.withSpring(ReanimatedRexport.interpolate(sharedValue.get(), [0, 1], items), springPresets.ON_PRESS_SPRING, "animate-always");
+    const items1 = [obj3];
+    obj2.transform = items1;
+    return obj2;
   };
-  obj = { width, scaleAmountInPx, withSpring: _require(4974).withSpring, interpolate: _require(4296).interpolate, pressed, ON_PRESS_SPRING: _require(4978).ON_PRESS_SPRING };
-  fn.__closure = obj;
-  fn.__workletHash = 17256006845494;
-  fn.__initData = closure_10;
+  const obj = require("ReanimatedRexport");
+  fn.__closure = { width, scaleAmountInPx, withSpring: require("spring").withSpring, interpolate: require("ReanimatedRexport").interpolate, pressed, ON_PRESS_SPRING: require("springPresets").ON_PRESS_SPRING };
+  fn.__workletHash = 11512187496215;
+  fn.__initData = __initData3;
   return obj.useAnimatedStyle(fn);
 };
 export const useButtonPressAnimationProps = function useButtonPressAnimationProps(sharedValue, scaleAmountInPx, onLayout, onPressIn, onPressOut) {
@@ -435,96 +536,87 @@ export const useButtonPressAnimationProps = function useButtonPressAnimationProp
   if (scaleAmountInPx === undefined) {
     num = 8;
   }
-  sharedValue = onLayout;
-  let sharedValue1 = onPressIn;
   num = onPressOut;
   sharedValue = undefined;
-  sharedValue1 = undefined;
-  let obj = sharedValue(4296);
-  sharedValue = obj.useSharedValue(0);
-  let tmpResult = tmp(4296);
-  sharedValue1 = tmpResult.useSharedValue(0);
-  obj = {
-    onPressIn: sharedValue.useCallback((arg0) => {
-      const result = sharedValue.set(1);
-      if (sharedValue1 != null) {
-        tmp2(arg0);
-      }
-    }, items),
-    onPressOut: sharedValue.useCallback((arg0) => {
-      const result = sharedValue.set(0);
-      if (num != null) {
-        tmp2(arg0);
-      }
-    }, items1),
-    onLayout: sharedValue.useCallback((nativeEvent) => {
-      const result = sharedValue1.set(nativeEvent.nativeEvent.layout.width);
-      if (sharedValue != null) {
-        tmp2(nativeEvent);
-      }
-    }, items2),
-    style: null
-  };
-  items = [sharedValue, onPressIn];
-  items1 = [sharedValue, onPressOut];
-  items2 = [sharedValue1, onLayout];
-  tmpResult = tmp(4296);
+  sharedValue = sharedValue(num[6]).useSharedValue(0);
+  const obj = sharedValue(num[6]);
+  const sharedValue1 = sharedValue(num[6]).useSharedValue(0);
+  let obj2 = { onPressIn: null, onPressOut: null, onLayout: null, style: null };
+  let items = [sharedValue, onPressIn];
+  obj2.onPressIn = sharedValue.useCallback((arg0) => {
+    const result = sharedValue.set(1);
+    if (sharedValue1 != null) {
+      tmp2(arg0);
+    }
+  }, items);
+  let items1 = [sharedValue, onPressOut];
+  obj2.onPressOut = sharedValue.useCallback((arg0) => {
+    const result = sharedValue.set(0);
+    if (num != null) {
+      tmp2(arg0);
+    }
+  }, items1);
+  const items2 = [sharedValue1, onLayout];
+  obj2.onLayout = sharedValue.useCallback((nativeEvent) => {
+    const result = sharedValue1.set(nativeEvent.nativeEvent.layout.width);
+    if (sharedValue != null) {
+      tmp2(nativeEvent);
+    }
+  }, items2);
+  const tmpResult = sharedValue(num[6]);
   const fn = function n() {
-    let obj = sharedValue1;
     num = 1;
     if (sharedValue1.get() > 0) {
       const diff = obj.get() - num;
       num = diff / obj.get();
     }
-    obj = { transform: null };
-    obj = { scale: null };
-    const obj4 = sharedValue(num[7]);
+    const obj2 = { transform: null };
+    const obj3 = { scale: null };
+    const obj4 = spring;
     const items = [1, num];
-    const obj5 = sharedValue(num[6]);
-    obj[0] = obj4.withSpring(sharedValue(num[6]).interpolate(sharedValue.get(), [0, 1], items), sharedValue(num[8]).ON_PRESS_SPRING, "animate-always");
-    const items1 = [obj];
-    obj[0] = items1;
-    return obj;
+    obj3.scale = obj4.withSpring(ReanimatedRexport.interpolate(sharedValue.get(), [0, 1], items), springPresets.ON_PRESS_SPRING, "animate-always");
+    const items1 = [obj3];
+    obj2.transform = items1;
+    return obj2;
   };
-  obj = { width: sharedValue1, scaleAmountInPx: num, withSpring: tmp(4974).withSpring, interpolate: tmp(4296).interpolate, pressed: sharedValue, ON_PRESS_SPRING: tmp(4978).ON_PRESS_SPRING };
-  fn.__closure = obj;
-  fn.__workletHash = 17256006845494;
-  fn.__initData = closure_10;
-  obj[3] = tmpResult.useAnimatedStyle(fn);
-  return obj;
+  const tmpResult2 = sharedValue(num[6]);
+  fn.__closure = { width: sharedValue1, scaleAmountInPx: num, withSpring: sharedValue(num[7]).withSpring, interpolate: sharedValue(num[6]).interpolate, pressed: sharedValue, ON_PRESS_SPRING: sharedValue(num[8]).ON_PRESS_SPRING };
+  fn.__workletHash = 11512187496215;
+  fn.__initData = __initData3;
+  obj2.style = tmpResult2.useAnimatedStyle(fn);
+  return obj2;
 };
 export const useIconSizeStyles = (arg0) => {
-  const _require = arg0;
+  _require = arg0;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
   let BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER = arg2;
   if (arg2 === undefined) {
-    BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER = _require(BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER[9]).BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER;
+    BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER = require("ButtonConstants").BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER;
   }
-  let fontScale;
-  fontScale = _require(BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER[10]).useFontScale();
+  const fontScale = require("useFontScale").useFontScale();
   const items = [arg0, flag, BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER, fontScale];
   return fontScale.useMemo(() => {
-    callback(BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER[11]);
-    if ("sm" === callback) {
-      let tmpResult = tmp(tmp2[11]);
-      let iconSize = tmpResult.getIconSize(tmp(tmp2[9]).SMALL_BUTTON_ICON_SIZE);
+    Icon;
+    if ("sm" === closure_0) {
+      let iconSize = tmp(4991).getIconSize(tmp(4994).SMALL_BUTTON_ICON_SIZE);
+      const tmpResult = tmp(4991);
     } else {
       iconSize = tmp4;
       if ("lg" === tmp5) {
-        tmpResult = tmp(tmp2[11]);
-        iconSize = tmpResult.getIconSize(tmp(tmp2[9]).LARGE_BUTTON_ICON_SIZE);
+        iconSize = tmp(4991).getIconSize(tmp(4994).LARGE_BUTTON_ICON_SIZE);
+        const tmpResult4 = tmp(4991);
       }
     }
     let width = iconSize;
     if (flag) {
       width = iconSize;
       if (fontScale > 1) {
-        const tmpResult1 = tmp(tmp2[9]);
-        const tmp13 = tmp(tmp2[12]).TextStyleSheet[tmpResult1.getButtonDefaultTextVariant(tmpResult1, tmp5)];
-        const tmp9 = tmp(tmp2[13]).isAndroid() ? tmp13.fontSize : tmp13.lineHeight;
+        const tmpResult5 = tmp(4994);
+        const tmp13 = tmp(4570).TextStyleSheet[tmpResult5.getButtonDefaultTextVariant(tmpResult5, tmp5)];
+        const tmp9 = tmp(1115).isAndroid() ? tmp13.fontSize : tmp13.lineHeight;
         width = iconSize;
         if (null != iconSize) {
           width = iconSize;
@@ -534,7 +626,7 @@ export const useIconSizeStyles = (arg0) => {
             width = Math.max(iconSize, tmp9 * Math.min(tmp8, BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER));
           }
         }
-        const tmpResult2 = tmp(tmp2[13]);
+        const tmpResult6 = tmp(1115);
       }
     }
     return { width, height: width };

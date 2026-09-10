@@ -1,16 +1,19 @@
-// Module ID: 14662
-// Function ID: 14663
+// Module ID: 14688
+// Function ID: 14689
 // Name: UserSettingsWebAuthn
-// Dependencies: [19, 14660, 21, 14663, 7000, 2]
+// Dependencies: [19, 14686, 21, 14689, 7014, 2]
 // Exports: default
 
-// Module 14662 (UserSettingsWebAuthn)
-import closure_2 from "noop" /* 19 */;
-import { WebAuthnScreens } from "WebAuthnScreens" /* 14660 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 14688 (UserSettingsWebAuthn)
+import Navigator from "Navigator" /* 7014 */;
+import WebAuthnScreens2 from "WebAuthnScreens" /* 14689 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/webauthn/native/UserSettingsWebAuthn.tsx");
+require = fn;
+const WebAuthnScreens = fn(14686).WebAuthnScreens;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/webauthn/native/UserSettingsWebAuthn.tsx");
 
 export default function UserSettingsWebAuthn(showNav) {
   ({ navigation: require, initialRouteName } = showNav);
@@ -21,10 +24,12 @@ export default function UserSettingsWebAuthn(showNav) {
   if (flag === undefined) {
     flag = false;
   }
-  const screens = require(flag[3]).getScreens({ isModal: false });
-  const layoutEffect = React.useLayoutEffect(() => {
+  const screens = WebAuthnScreens2.getScreens({ isModal: false });
+  const layoutEffect = noop.useLayoutEffect(() => {
     options.setOptions({ headerShown: flag });
   });
-  const initialRouteStack = [{ name: initialRouteName }];
-  return jsx(require(flag[4]).Navigator, { screens, initialRouteName, initialRouteStack, useContainer: false });
+  const obj2 = { screens, initialRouteName, initialRouteStack: null, useContainer: false };
+  const items = [{ name: initialRouteName }];
+  obj2.initialRouteStack = items;
+  return jsx(Navigator.Navigator, { screens, initialRouteName, initialRouteStack: null, useContainer: false });
 };

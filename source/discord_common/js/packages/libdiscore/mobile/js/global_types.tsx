@@ -1,11 +1,11 @@
 // Module ID: 1353
 // Function ID: 1354
-// Name: typedGlobal
+// Name: global_types
 // Dependencies: [2]
 
-// Module 1353 (typedGlobal)
-import set from "set" /* 2 */;
+// Module 1353 (global_types)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/libdiscore/mobile/js/global_types.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/libdiscore/mobile/js/global_types.tsx");
 
 export const typedGlobal = global;

@@ -1,40 +1,37 @@
-// Module ID: 10134
-// Function ID: 10135
+// Module ID: 10161
+// Function ID: 10162
 // Name: Timestamp
-// Dependencies: [19, 21, 4560, 576, 10135, 1178, 4259, 2]
+// Dependencies: [19, 21, 4574, 576, 10162, 1178, 4272, 2]
 // Exports: default
 
-// Module 10134 (Timestamp)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import itemsDefault from "items" /* 10135 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10161 (Timestamp)
+import nativeDefault from "native" /* 576 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
+import useFormattedTimestampDefault from "useFormattedTimestamp" /* 10162 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-createCacheKey = { timestamp: null };
-createCacheKey = { color: ThemesDefault.colors.TEXT_DEFAULT, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[0] = createCacheKey;
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/markup/Timestamp.native.tsx");
+const require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+const obj2 = { timestamp: { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
+let closure_4 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/markup/Timestamp.native.tsx");
 
 export default function Timestamp(node) {
   node = node.node;
-  const tmp = callback();
+  const tmp = closure_4();
   let style = tmp.timestamp;
   if (style == null) {
     style = node.style;
   }
-  const tmp2 = itemsDefault(node);
+  const tmp2 = useFormattedTimestampDefault(node);
   const tmp3 = jsx;
   return tmp3(node(1178).LegacyText, {
     style,
     onPress() {
-      let obj = closure_1_1(closure_1_2[6]);
-      obj = { key: "TIMESTAMP", content: node.full };
-      obj.open(obj);
+      ToastActionCreatorsDefault.open({ key: "TIMESTAMP", content: node.full });
     },
-    children: itemsDefault(node)
+    children: useFormattedTimestampDefault(node)
   });
 };

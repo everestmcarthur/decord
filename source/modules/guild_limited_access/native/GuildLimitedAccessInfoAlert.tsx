@@ -1,56 +1,54 @@
-// Module ID: 13834
-// Function ID: 13835
+// Module ID: 13857
+// Function ID: 13858
 // Name: GuildLimitedAccessInfoAlert
-// Dependencies: [19, 1979, 13835, 1074, 21, 4560, 5524, 576, 1114, 4994, 1178, 4556, 2]
+// Dependencies: [19, 1979, 13858, 1074, 21, 4574, 5538, 576, 1114, 5008, 1178, 4570, 2]
 // Exports: default
 
-// Module 13834 (GuildLimitedAccessInfoAlert)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import Text from "Text" /* 4556 */;
-import componentDidMountDefault from "componentDidMount" /* 4994 */;
-import closure_3 from "createGuildRecordFromRust" /* 1979 */;
-import { GUILD_LIMITED_ACCESS_HC_LINK as closure_4 } from "GUILD_LIMITED_ACCESS_HC_LINK" /* 13835 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importDefaultResult from "createTextStyle" /* 5524 */;
+// Module 13857 (GuildLimitedAccessInfoAlert)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import common_AlertDefault from "common/Alert" /* 5008 */;
+import noop from "module_19" /* 19 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import TextStyles from "TextStyles" /* 5538 */;
 
-require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { header: null, text: null };
-createCacheKey = {};
-const merged = Object.assign(importDefaultResult(require("ME").Fonts.PRIMARY_BOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
-createCacheKey.textAlign = "center";
-createCacheKey.marginVertical = 12;
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { textAlign: "center", marginVertical: 8 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_limited_access/native/GuildLimitedAccessInfoAlert.tsx");
+require = fn;
+const helpdeskArticle = fn(13858).GUILD_LIMITED_ACCESS_HC_LINK;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { header: null, text: null };
+let obj3 = {};
+const merged = Object.assign(TextStyles(fn(1074).Fonts.PRIMARY_BOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
+obj3.textAlign = "center";
+obj3.marginVertical = 12;
+obj2.header = obj3;
+obj2.text = { textAlign: "center", marginVertical: 8 };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_limited_access/native/GuildLimitedAccessInfoAlert.tsx");
 
 export default function GuildLimitedAccessInfoAlert(arg0) {
   ({ guildId, onClose } = arg0);
-  const tmp = callback3();
-  const intl = getSystemLocale.intl;
-  let obj = { helpdeskArticle: closure_4 };
-  guild = guild.getGuild(guildId);
-  let formatResult1 = intl.format(getSystemLocale.t.ZqkXsC, obj);
+  const tmp = closure_7();
+  const intl = util.intl;
+  const guild = GuildStore.getGuild(guildId);
+  let formatResult1 = intl.format(util.t.ZqkXsC, { helpdeskArticle });
   if (null != guild) {
     const intl2 = tmp2(1114).intl;
-    obj = { guildName: null, helpdeskArticle: null };
-    obj[0] = guild.name;
-    obj[1] = tmp4;
-    formatResult1 = intl2.format(tmp2(1114).t.jn0Xyx, obj);
+    const obj2 = { guildName: guild.name, helpdeskArticle: tmp4 };
+    formatResult1 = intl2.format(tmp2(1114).t.jn0Xyx, obj2);
   }
-  obj = { onClose, children: null };
-  const formatResult = intl.format(getSystemLocale.t.ZqkXsC, obj);
-  tmp4 = closure_4;
-  obj1 = { style: tmp.header, children: null };
+  const obj3 = { onClose, children: null };
+  const formatResult = intl.format(util.t.ZqkXsC, { helpdeskArticle });
+  const obj = { helpdeskArticle };
+  tmp4 = helpdeskArticle;
+  const obj4 = { style: tmp.header, children: null };
   const intl3 = tmp2(1114).intl;
-  obj1[1] = intl3.string(getSystemLocale.t.kJwpBW);
-  const items = [callback(Button.LegacyText, obj1), callback(Text.Text, { style: tmp.text, variant: "text-md/medium", children: formatResult1 })];
-  obj[1] = items;
-  return callback2(componentDidMountDefault, obj);
+  obj4.children = intl3.string(util.t.kJwpBW);
+  const items = [hasOwnProperty(native.LegacyText, obj4), hasOwnProperty(Text_Text.Text, { style: tmp.text, variant: "text-md/medium", children: formatResult1 })];
+  obj3.children = items;
+  return timestampProducer(common_AlertDefault, obj3);
 };

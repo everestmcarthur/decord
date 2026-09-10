@@ -1,19 +1,19 @@
-// Module ID: 10890
-// Function ID: 10891
+// Module ID: 10917
+// Function ID: 10918
 // Name: ActivityStatusText
-// Dependencies: [19, 21, 4560, 4556, 2]
+// Dependencies: [19, 21, 4574, 4570, 2]
 // Exports: default
 
-// Module 10890 (ActivityStatusText)
-import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4556 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10917 (ActivityStatusText)
+import Text_Text from "Text/Text" /* 4570 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-let closure_3 = createCacheKey.createStyles({ text: { flexShrink: 1 } });
-const result = require("set").fileFinishedImporting("modules/activity_status/native/ActivityStatusText.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_3 = createStyles.createStyles({ text: { flexShrink: 1 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activity_status/native/ActivityStatusText.tsx");
 
 export default function ActivityStatusText(variant) {
   let str = variant.variant;
@@ -21,10 +21,11 @@ export default function ActivityStatusText(variant) {
   if (str === undefined) {
     str = "text-xs/medium";
   }
-  const merged = Object.assign(variant, Object.create(null));
-  const obj = { variant: str, color: "text-muted", style: items, lineClamp: 1 };
-  items = [callback().text, style];
+  const merged = Object.assign(variant, Object.assign({ children: 0, style: 0, variant: 0 }));
+  const obj = { variant: str, color: "text-muted", style: null, lineClamp: 1 };
+  const items = [closure_3().text, style];
+  obj.style = items;
   const merged1 = Object.assign(merged);
   obj.children = children;
-  return jsx(Text.Text, { variant: str, color: "text-muted", style: items, lineClamp: 1 });
+  return jsx(Text_Text.Text, { variant: str, color: "text-muted", style: null, lineClamp: 1 });
 };

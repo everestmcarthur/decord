@@ -1,16 +1,18 @@
-// Module ID: 12993
-// Function ID: 12994
-// Name: experiment
-// Dependencies: [4474, 2]
+// Module ID: 13019
+// Function ID: 13020
+// Name: SafetyExperienceIarUserReportingExperiment
+// Dependencies: [4488, 2]
 // Exports: isIarUserReportingEnabled, useIsIarUserReportingEnabled
 
-// Module 12993 (experiment)
-import set from "set" /* 2 */;
-import createExperiment from "createExperiment" /* 4474 */;
+// Module 13019 (SafetyExperienceIarUserReportingExperiment)
+import createExperiment from "module_4488" /* 4488 */;
+import size from "module_2" /* 2 */;
 
+const obj = { kind: "user", id: "2023-09_iar_user_reporting", label: "Safety Experience IAR User Reporting", defaultConfig: { enabled: false }, treatments: null };
 const items = [{ id: 1, label: "Enabled", config: { enabled: true } }];
-const experiment = createExperiment.createExperiment({ kind: "user", id: "2023-09_iar_user_reporting", label: "Safety Experience IAR User Reporting", defaultConfig: { enabled: false }, treatments: items });
-const result = set.fileFinishedImporting("modules/in_app_reports/SafetyExperienceIarUserReportingExperiment.tsx");
+obj.treatments = items;
+const experiment = createExperiment.createExperiment(obj);
+const result = size.fileFinishedImporting("modules/in_app_reports/SafetyExperienceIarUserReportingExperiment.tsx");
 
 export default experiment;
 export const useIsIarUserReportingEnabled = function useIsIarUserReportingEnabled(location) {

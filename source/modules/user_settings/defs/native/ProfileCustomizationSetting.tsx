@@ -1,30 +1,30 @@
-// Module ID: 14588
-// Function ID: 14589
-// Name: route
-// Dependencies: [1074, 11473, 1114, 14589, 2]
+// Module ID: 14613
+// Function ID: 14614
+// Name: ProfileCustomizationSetting
+// Dependencies: [1074, 11500, 1114, 14614, 2]
 
-// Module 14588 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 14613 (ProfileCustomizationSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const require = globalThis.__r;
+
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.LYju5J);
+    const intl = util.intl;
+    return intl.string(util.t.LYju5J);
   },
   parent: null,
   unsearchable: true,
-  screen: obj
-};
-obj = {
-  route: ME.UserSettingsSections.PROFILE_CUSTOMIZATION,
-  getComponent() {
-    return require(14589) /* ProfileCustomizationSubsection */.default;
+  screen: {
+    route: Constants.UserSettingsSections.PROFILE_CUSTOMIZATION,
+    getComponent() {
+      return require("ProfileCustomizationSettingScreen").default;
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/ProfileCustomizationSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ProfileCustomizationSetting.tsx");
 
 export default route;

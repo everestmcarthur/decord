@@ -1,15 +1,19 @@
-// Module ID: 7123
-// Function ID: 7124
-// Name: SafeAreaPaddingView
-// Dependencies: [19, 17, 21, 1611, 5586, 1332, 2]
+// Module ID: 7137
+// Function ID: 7138
+// Name: common/SafeAreaView
+// Dependencies: [19, 17, 21, 1611, 5600, 1332, 2]
 // Exports: SafeAreaPaddingView
 
-// Module 7123 (SafeAreaPaddingView)
-import closure_2 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 7137 (common/SafeAreaView)
+import _modDef1332 from "module_1332" /* 1332 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
+import useRefValueDefault from "useRefValue" /* 5600 */;
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("components_native/common/SafeAreaView.tsx");
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/common/SafeAreaView.tsx");
 
 export const SafeAreaPaddingView = function SafeAreaPaddingView(top) {
   let flag = top.top;
@@ -29,56 +33,50 @@ export const SafeAreaPaddingView = function SafeAreaPaddingView(top) {
     flag4 = false;
   }
   let style = top.style;
-  const merged = Object.assign(top, Object.create(null));
-  let ref;
-  dependencyMap = undefined;
-  let React;
-  const rect = ref(1611)();
-  obj1 = React;
-  ref = React.useRef(null);
+  const merged = Object.assign(top, Object.assign({ top: 0, bottom: 0, left: 0, right: 0, style: 0 }));
+  let current;
+  closure_2 = undefined;
+  const rect = useSafeAreaInsetsDefault();
+  const ref = noop.useRef(null);
   if (style == null) {
     style = {};
   }
   let items = [style, , , , ];
   let tmp9;
   if (flag) {
-    let obj = { paddingTop: null };
-    obj[0] = rect.top + tmp5;
+    const obj = { paddingTop: rect.top + tmp5 };
     tmp9 = obj;
   }
   items[1] = tmp9;
   let tmp10;
   if (flag2) {
-    obj = { paddingBottom: null };
-    obj[0] = rect.bottom + tmp6;
-    tmp10 = obj;
+    const obj3 = { paddingBottom: rect.bottom + tmp6 };
+    tmp10 = obj3;
   }
   items[2] = tmp10;
   let tmp11;
   if (flag3) {
-    obj1 = { paddingLeft: null };
-    obj1[0] = rect.left + tmp7;
-    tmp11 = obj1;
+    const obj4 = { paddingLeft: rect.left + tmp7 };
+    tmp11 = obj4;
   }
   items[3] = tmp11;
   let tmp12;
   if (flag4) {
-    const obj2 = { paddingRight: null };
-    obj2[0] = rect.right + tmp8;
-    tmp12 = obj2;
+    const obj5 = { paddingRight: rect.right + tmp8 };
+    tmp12 = obj5;
   }
   items[4] = tmp12;
-  dependencyMap = items;
-  const tmp13 = ref(5586)(ref);
-  const tmp14 = ref(1332)(items, tmp13);
-  React = tmp14;
+  current = items;
+  const tmp13 = useRefValueDefault(ref);
+  const tmp14 = _modDef1332(items, tmp13);
+  closure_2 = tmp14;
   if (tmp14) {
-    dependencyMap = tmp13;
+    current = tmp13;
     items = tmp13;
   }
-  const insertionEffect = obj1.useInsertionEffect(() => {
+  const insertionEffect = noop.useInsertionEffect(() => {
     if (!closure_2) {
-      ref.current = closure_1;
+      ref.current = current;
     }
   });
   const merged1 = Object.assign(merged);

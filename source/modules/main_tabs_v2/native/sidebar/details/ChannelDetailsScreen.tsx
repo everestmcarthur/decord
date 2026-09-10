@@ -1,26 +1,25 @@
-// Module ID: 16862
-// Function ID: 16863
-// Dependencies: [19, 21, 1484, 4422, 16627, 2]
+// Module ID: 16899
+// Function ID: 16900
+// Name: ChannelDetailsScreen
+// Dependencies: [19, 21, 1484, 4436, 16659, 2]
 
-// Module 16862
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4422 */;
-import PX_8Default from "PX_8" /* 16627 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16899 (ChannelDetailsScreen)
+import Link from "Link" /* 1484 */;
+import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4436 */;
+import ChannelDetailsDefault from "ChannelDetails" /* 16659 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
-const memoResult = importAllResult.memo((navigation) => {
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsScreen.tsx");
+
+export default noop.memo((navigation) => {
   navigation = navigation.navigation;
-  let obj = navigation(1484);
-  const route = obj.useRoute();
+  const route = Link.useRoute();
   const items = [navigation];
-  const callback = importAllResult.useCallback(() => {
+  const callback = noop.useCallback(() => {
     navigation.goBack();
   }, items);
-  obj = { channelId: route.params.channelId, isSearchLocked: true === route.params.search, onBackPress: callback, componentWidth: useBaseAppContainerDimensionsDefault().width, onChannelDeleted: callback, expandTopic: true === route.params.expandTopic };
-  return jsx(PX_8Default, { channelId: route.params.channelId, isSearchLocked: true === route.params.search, onBackPress: callback, componentWidth: useBaseAppContainerDimensionsDefault().width, onChannelDeleted: callback, expandTopic: true === route.params.expandTopic });
+  return jsx(ChannelDetailsDefault, { channelId: route.params.channelId, isSearchLocked: true === route.params.search, onBackPress: callback, componentWidth: useBaseAppContainerDimensionsDefault().width, onChannelDeleted: callback, expandTopic: true === route.params.expandTopic });
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsScreen.tsx");
-
-export default memoResult;

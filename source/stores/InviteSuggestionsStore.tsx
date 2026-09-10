@@ -1,148 +1,139 @@
-// Module ID: 9838
-// Function ID: 9839
-// Name: compareRowsByMatchScore
-// Dependencies: [9839, 7659, 1957, 4199, 4209, 1074, 7736, 9827, 5518, 1369, 504, 573, 2]
+// Module ID: 9865
+// Function ID: 9866
+// Name: InviteSuggestionsStore
+// Dependencies: [9866, 7673, 1957, 4212, 4222, 1074, 7750, 9854, 5532, 1369, 504, 573, 2]
 
-// Module 9838 (compareRowsByMatchScore)
+// Module 9865 (InviteSuggestionsStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import sortByMatchScoreDefault from "sortByMatchScore" /* 5518 */;
-import isGuildMember from "isGuildMember" /* 9827 */;
-import closure_9 from "handleConnectionOpen" /* 9839 */;
-import closure_10 from "recomputeAffinities" /* 7659 */;
-import closure_11 from "ensureGuildLoaded" /* 1957 */;
-import closure_12 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_13 from "markAllUserIdListsStale" /* 4209 */;
-import ME from "ME" /* 1074 */;
-import { InviteTargetTypes } from "InviteSendStates" /* 7736 */;
-import set from "set" /* 2 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 5532 */;
+import InstantInviteUtils from "InstantInviteUtils" /* 9854 */;
+import QuickSwitcherStore from "QuickSwitcherStore" /* 9866 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7673 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
 
-require = arg1;
+require = fn;
 function compareRowsByMatchScore(score, score2) {
   let num = 0;
   if (null != score.score) {
     num = 0;
     if (null != score2.score) {
-      let obj = { score: null };
-      obj[0] = score.score;
-      obj = { score: null };
-      obj[0] = score2.score;
-      num = sortByMatchScoreDefault(obj, obj);
+      const obj = { score: score.score };
+      const obj2 = { score: score2.score };
+      num = autocompleter_sortByMatchScoreDefault(obj, obj2);
     }
   }
   return num;
 }
 function _computeRows(query) {
   set = new Set();
-  if (type != null) {
-    type = type.type;
+  if (channel != null) {
+    const type = channel.type;
   }
-  let tmp = null == id;
+  let tmp = null == guild;
   if (!tmp) {
-    tmp = closure_8 === InviteTargetTypes.EMBEDDED_APPLICATION;
+    tmp = inviteTargetType === InviteTargetTypes.EMBEDDED_APPLICATION;
   }
   if (!tmp) {
     tmp = type === constants.GUILD_VOICE;
   }
-  id = null;
+  let id = null;
   if (!tmp) {
-    id = id.id;
+    id = guild.id;
   }
-  const mostRecentDMedUser = set1(9827).getMostRecentDMedUser(set, id);
+  const mostRecentDMedUser = set1(9854).getMostRecentDMedUser(set, id);
   let isBlockedOrIgnoredResult = null == mostRecentDMedUser;
   if (!isBlockedOrIgnoredResult) {
-    isBlockedOrIgnoredResult = closure_13.isBlockedOrIgnored(mostRecentDMedUser.id);
+    isBlockedOrIgnoredResult = RelationshipStore.isBlockedOrIgnored(mostRecentDMedUser.id);
   }
   if (!isBlockedOrIgnoredResult) {
     set.add(mostRecentDMedUser.id);
   }
-  const userAffinities = authStore.getUserAffinities();
+  const userAffinities = UserAffinitiesV2Store.getUserAffinities();
   for (const item10040 of userAffinities) {
     let addResult1 = set.add(item10040.otherUserId);
     continue;
   }
   set1 = new Set();
-  if (closure_8 === InviteTargetTypes.EMBEDDED_APPLICATION) {
-    channelHistory = channelHistory.getChannelHistory();
-    const mapped = channelHistory.map((arg0) => channel.getChannel(arg0));
+  if (inviteTargetType === InviteTargetTypes.EMBEDDED_APPLICATION) {
+    const channelHistory = QuickSwitcherStore.getChannelHistory();
+    const mapped = channelHistory.map((item) => channel.getChannel(item));
     const found = mapped.filter(set1(1369).isNotNullish);
     const found1 = found.filter((type) => type.type === constants.GUILD_TEXT);
-    const found2 = found1.filter((arg0) => closure_12.can(constants2.SEND_MESSAGES, arg0));
+    const found2 = found1.filter((item) => PermissionStore.can(constants2.SEND_MESSAGES, item));
     const substr = found2.slice(0, 3);
     const item = substr.forEach((id) => set1.add(id.id));
   }
-  const obj2 = set1(9827);
-  return set1(9827).generateRowsForQuery({ query, omitUserIds: set, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: id, suggestedChannelIds: set1, inviteTargetType: closure_8 });
+  const obj2 = set1(9854);
+  return set1(9854).generateRowsForQuery({ query, omitUserIds: set, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: id, suggestedChannelIds: set1, inviteTargetType });
 }
-({ ChannelTypes: closure_14, Permissions: closure_15 } = ME);
+const Constants = fn(1074);
+({ ChannelTypes: closure_14, Permissions: closure_15 } = Constants);
+const InviteTargetTypes = fn(7750).InviteTargetTypes;
 let set = new Set();
-let closure_18 = [];
+let rows = [];
 let map = new Map();
-let closure_20 = { numFriends: 0, numDms: 0, numGroupDms: 0, numChannels: 0 };
+let counts = { numFriends: 0, numDms: 0, numGroupDms: 0, numChannels: 0 };
 const Store = initializeDefault.Store;
 class InviteSuggestionsStore extends Store {
 }
 const prototype = InviteSuggestionsStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_11, closure_12, closure_9, closure_13, closure_10);
+  this.waitFor(ChannelStore, PermissionStore, QuickSwitcherStore, RelationshipStore, UserAffinitiesV2Store);
 };
 prototype["getInviteSuggestionRows"] = function getInviteSuggestionRows() {
-  return closure_18;
+  return rows;
 };
 prototype["getTotalSuggestionsCount"] = function getTotalSuggestionsCount() {
-  return closure_3;
+  return length;
 };
 prototype["getInitialCounts"] = function getInitialCounts() {
-  return closure_20;
+  return counts;
 };
-prototype["getSelectedInviteMetadata"] = function getSelectedInviteMetadata(isSuggested) {
-  const value = map.get(isSuggested);
-  const userAffinities = authStore.getUserAffinities();
+prototype["getSelectedInviteMetadata"] = function getSelectedInviteMetadata(row) {
+  value = map.get(row);
+  const userAffinities = UserAffinitiesV2Store.getUserAffinities();
   if (null != value) {
-    const obj = { rowNum: null, isAffinitySuggestion: null, numTotal: null, numAffinityConnections: null, isFiltered: null };
-    obj[0] = value.index;
-    obj[1] = isSuggested.isSuggested;
-    obj[2] = length.length;
-    obj[3] = arr.length;
-    obj[4] = closure_4;
+    const obj = { rowNum: value.index, isAffinitySuggestion: row.isSuggested, numTotal: rows.length, numAffinityConnections: arr.length, isFiltered };
     return obj;
   }
 };
 InviteSuggestionsStore.displayName = "InviteSuggestionsStore";
-const inviteSuggestionsStore = new InviteSuggestionsStore(dispatcherDefault, {
+const inviteSuggestionsStore = new InviteSuggestionsStore(DispatcherDefault, {
   LOAD_INVITE_SUGGESTIONS: function refreshInviteSuggestions(guild) {
     ({ omitUserIds, channel, inviteTargetType } = guild);
     guild = null;
     if (null != channel) {
       guild = guild.guild;
     }
-    const applicationId = guild.applicationId;
-    const blockedOrIgnoredIDs = closure_13.getBlockedOrIgnoredIDs();
-    let obj = isGuildMember;
-    obj = { channel, applicationId, inviteTargetType };
-    const usersAlreadyJoined = obj.getUsersAlreadyJoined(obj);
+    applicationId = guild.applicationId;
+    const blockedOrIgnoredIDs = RelationshipStore.getBlockedOrIgnoredIDs();
+    const usersAlreadyJoined = InstantInviteUtils.getUsersAlreadyJoined({ channel, applicationId, inviteTargetType });
     const items = [...usersAlreadyJoined];
     set = new Set(items);
-    c4 = false;
+    closure_4 = false;
     const tmp5 = _computeRows("");
-    const rows = tmp5.rows;
+    rows = tmp5.rows;
     map = new Map();
-    const item = rows.forEach((arg0, index) => {
-      const result = map.set(arg0, { index });
+    const item = rows.forEach((item, index) => {
+      const result = map.set(item, { index });
     });
-    const counts = tmp5.counts;
+    counts = tmp5.counts;
   },
   INVITE_SUGGESTIONS_SEARCH: function handleSearch(query) {
     query = query.query;
     closure_4 = "" !== query;
-    const rows = _computeRows(query).rows;
+    rows = _computeRows(query).rows;
     const sorted = rows.sort(compareRowsByMatchScore);
     map = new Map();
-    const item = rows.forEach((arg0, index) => {
-      const result = map.set(arg0, { index });
+    const item = rows.forEach((item, index) => {
+      const result = map.set(item, { index });
     });
   }
 });
-let result = set.fileFinishedImporting("stores/InviteSuggestionsStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("stores/InviteSuggestionsStore.tsx");
 
 export default inviteSuggestionsStore;

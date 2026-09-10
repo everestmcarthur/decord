@@ -1,15 +1,17 @@
-// Module ID: 12121
-// Function ID: 12122
-// Name: apexExperiment
+// Module ID: 12147
+// Function ID: 12148
+// Name: AllowNonStaffToPreviewAppCollectionsExperiment
 // Dependencies: [1433, 2]
 
-// Module 12121 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 12147 (AllowNonStaffToPreviewAppCollectionsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null };
-obj[1] = { enabled: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2025-01-allow-nonstaff-to-preview-app-collections", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/global_discovery_apps/AllowNonStaffToPreviewAppCollectionsExperiment.tsx");
+const obj = { kind: "user", name: "2025-01-allow-nonstaff-to-preview-app-collections", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj.variations = obj2;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/global_discovery_apps/AllowNonStaffToPreviewAppCollectionsExperiment.tsx");
 
 export default apexExperiment;

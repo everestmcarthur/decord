@@ -5,18 +5,16 @@
 // Exports: getDataFromUri, getRNSentryModule
 
 // Module 866 (NativeModules)
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 682 */;
+import _mod682 from "module_682" /* 682 */;
 import TurboModuleRegistry2 from "TurboModuleRegistry" /* 862 */;
 import convertToNormalizedObject from "convertToNormalizedObject" /* 879 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import isHermesEnabled from "isHermesEnabled" /* 867 */;
-import encodeUTF8 from "encodeUTF8" /* 869 */;
+import _slicedToArray from "module_32" /* 32 */;
 
 let self = this;
-require = arg1;
+require = fn;
+get_ActivityIndicator = fn(17);
 const NativeModules = get_ActivityIndicator.NativeModules;
-let fn = this;
+fn = this;
 if (this) {
   fn = self.__awaiter;
 }
@@ -29,36 +27,36 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((arg0, arg1) => {
-      closure_0 = arg0;
+    return new _Promise((fn, arg1) => {
+      closure_0 = fn;
       closure_1 = arg1;
-      function fulfilled(arg0) {
+      function fulfilled(result) {
         try {
-          step(iter.next(arg0));
+          step(iter.next(result));
         } catch (tmp5) {
-          callback2(tmp5);
+          closure_1(tmp5);
         }
       }
       function rejected(arg0) {
         try {
           step(iter.throw(arg0));
         } catch (tmp5) {
-          callback2(tmp5);
+          closure_1(tmp5);
         }
       }
       let iter = rejected;
       function step(done) {
         if (done.done) {
-          callback(done.value);
+          closure_0(done.value);
         } else {
-          let tmp = done.value;
-          callback = tmp;
-          if (!(tmp instanceof fulfilled)) {
-            tmp = new tmp((arg0) => {
-              arg0(closure_0);
+          let tmp1 = done.value;
+          closure_0 = tmp1;
+          if (!(tmp1 instanceof Promise)) {
+            tmp1 = new tmp((fn) => {
+              fn(value);
             });
           }
-          tmp.then(fulfilled, iter);
+          tmp1.then(fulfilled, iter);
         }
       }
       let items = closure_1;
@@ -67,21 +65,20 @@ if (!fn) {
       }
       iter = iter.apply(closure_0, items);
       const iter2 = iter.next();
-      const value = iter2.value;
+      value = iter2.value;
       if (iter2.done) {
-        arg0(value);
+        fn(value);
       } else {
         closure_0 = value;
-        let tmp3 = value;
+        let tmp32 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((arg0) => {
-            arg0(closure_0);
+          tmp32 = new tmp3((fn) => {
+            fn(value);
           });
         }
-        tmp3.then(fulfilled, rejected);
+        tmp32.then(fulfilled, rejected);
       }
     });
-    return _Promise;
   };
 }
 let fn2 = self;
@@ -92,8 +89,8 @@ if (!fn2) {
   fn2 = (obj, arr) => {
     obj = {};
     for (const key10007 in arg0) {
-      let tmp6 = key10007;
       let _Object2 = Object;
+      hasOwnProperty = Object.prototype.hasOwnProperty;
       let call2 = hasOwnProperty.call;
       if (typeof call2 === "unknown") {
         let hasOwnPropertyResult = hasOwnProperty(key10007);
@@ -134,8 +131,9 @@ if (!fn2) {
     return obj;
   };
 }
-if (isHermesEnabled.isTurboModuleEnabled()) {
-  let TurboModuleRegistry = require("TurboModuleRegistry").ReactNativeLibraries.TurboModuleRegistry;
+const module_867 = fn(867);
+if (module_867.isTurboModuleEnabled()) {
+  let TurboModuleRegistry = fn(862).ReactNativeLibraries.TurboModuleRegistry;
   let value;
   if (null !== TurboModuleRegistry) {
     if (undefined !== TurboModuleRegistry) {
@@ -149,7 +147,7 @@ if (isHermesEnabled.isTurboModuleEnabled()) {
 function getRNSentryModule() {
   if (obj.isTurboModuleEnabled()) {
     const TurboModuleRegistry = TurboModuleRegistry2.ReactNativeLibraries.TurboModuleRegistry;
-    let value;
+    value = undefined;
     if (null !== TurboModuleRegistry) {
       if (undefined !== TurboModuleRegistry) {
         value = TurboModuleRegistry.get("RNSentry");
@@ -161,24 +159,24 @@ function getRNSentryModule() {
   }
   return RNSentry;
 }
+const encodeUTF8 = fn(869);
 let closure_7 = encodeUTF8.encodeUTF8("\n");
-isHermesEnabled = {
+let obj3 = {
   fetchModules() {
     return fn(this, undefined, undefined, function() {
       const self = this;
       c2 = 0;
       c3 = 0;
-      return (function*() {
+      return (function*(arg0, value) {
         if (c3 === 2) {
           c3 = 3;
-          HermesBuiltin.throwTypeError();
+          throw new TypeError("Generator functions may not be called on executing generators");
         } else if (tmp4 === 3) {
           if (arg0 === 1) {
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -188,49 +186,44 @@ isHermesEnabled = {
             if (0 === c2) {
               if (arg0 === 1) {
                 c3 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 c3 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
+                const obj5 = { value, done: true };
+                return obj5;
               } else {
-                let obj2 = _self;
                 closure_1 = tmp2;
-                _self = undefined;
-                if (_self.enableNative) {
-                  if (obj2._isModuleLoaded(closure_1_6)) {
+                closure_129_0 = undefined;
+                if (self.enableNative) {
+                  if (obj3._isModuleLoaded(RNSentry)) {
                     c2 = 1;
                     c3 = 1;
-                    obj1 = { value: null, done: false };
-                    obj1[0] = obj4.fetchModules();
-                    return obj1;
+                    const obj6 = { value: obj4.fetchModules(), done: false };
+                    return obj6;
                   } else {
-                    throw obj2._NativeClientError;
+                    throw obj3._NativeClientError;
                   }
-                  obj4 = closure_1_6;
+                  obj4 = RNSentry;
                 } else {
-                  throw obj2._DisabledNativeError;
+                  throw obj3._DisabledNativeError;
                 }
               }
             } else if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
+              const obj7 = { value, done: true };
+              return obj7;
             } else {
-              _self = arg1;
+              closure_129_0 = value;
               let parsed = null;
-              if (_self) {
+              if (closure_129_0) {
                 const _JSON = JSON;
-                parsed = JSON.parse(_self);
+                parsed = JSON.parse(closure_129_0);
               }
               c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = parsed;
+              const obj = { value: parsed, done: true };
               return obj;
             }
           } catch (tmp11) {
@@ -248,52 +241,41 @@ isHermesEnabled = {
       c4 = 0;
       c3 = 0;
       c6 = 0;
-      return (function*() {
+      return (function*(arg0, value) {
         if (c3 === 2) {
           c3 = 3;
-          HermesBuiltin.throwTypeError();
+          throw new TypeError("Generator functions may not be called on executing generators");
         } else if (tmp2 === 3) {
           if (arg0 === 1) {
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            obj3 = { value, done: true };
+            return obj3;
           } else {
             return { value: "HermesInternal", done: null };
           }
         } else {
           while (true) {
-            let num = 2;
             c3 = 2;
             if (0 === c4) {
               if (arg0 === 1) {
-                let num7 = 3;
                 c3 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
-                let num6 = 3;
                 c3 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
+                let obj8 = { value, done: true };
+                return obj8;
               } else {
                 let obj14 = self;
                 if (self.enableNative) {
-                  let tmp10 = c6;
                   if (obj14._isModuleLoaded(c6)) {
-                    let tmp11 = closure_1_2;
-                    let tmp12 = self;
-                    let tmp13 = closure_1_2(self, 2);
+                    let tmp13 = closure_2(closure_0, 2);
                     let tmp14 = tmp13[1];
                     let _JSON = JSON;
-                    let tmp16 = self;
-                    let tmp17 = closure_1_1;
                     let json = JSON.stringify(tmp13[0]);
-                    obj1 = self(closure_1_1[4]);
-                    let encodeUTF8Result = obj1.encodeUTF8(json);
+                    let obj2 = self(closure_1[4]);
+                    let encodeUTF8Result = obj2.encodeUTF8(json);
                     let _Uint8Array = Uint8Array;
-                    let tmp18 = closure_1_7;
                     let tmp19 = new.target;
                     let tmp20 = new.target;
                     let uint8Array = new Uint8Array(encodeUTF8Result.length + closure_1_7.length);
@@ -301,70 +283,53 @@ isHermesEnabled = {
                     let result = uint8Array.set(encodeUTF8Result);
                     let result1 = uint8Array.set(closure_1_7, encodeUTF8Result.length);
                     closure_2 = tmp14;
-                    let tmp23 = tmp14;
-                    closure_2 = tmp14;
                     closure_1 = tmp14[Symbol.iterator]();
                     let flag = false;
-                    let tmp24 = closure_2;
-                    let tmp25 = closure_1;
-                    let tmp27 = flag;
-                    let tmp28 = arr2;
                     while (closure_1 !== undefined) {
                       c6 = 1;
-                      let tmp56 = closure_1_2;
-                      let tmp57 = closure_1_2(obj14._processItem(tmp26), 2);
-                      [tmp58, tmp59] = tmp57;
-                      if (typeof tmp59 === "string") {
-                        let tmp34 = self;
-                        let tmp35 = closure_1_1;
-                        let obj6 = self(closure_1_1[4]);
-                        let encodeUTF8Result1 = obj6.encodeUTF8(tmp59);
+                      let tmp56 = closure_2(obj14._processItem(tmp26), 2);
+                      [tmp57, tmp58] = tmp56;
+                      if (typeof tmp58 === "string") {
+                        let obj6 = self(closure_1[4]);
+                        let encodeUTF8Result1 = obj6.encodeUTF8(tmp58);
                         let str = "text/plain";
                         let isHardCrashResult = flag;
                       } else {
                         let _Uint8Array3 = Uint8Array;
-                        let content_type = tmp58.content_type;
-                        if (tmp59 instanceof Uint8Array) {
+                        let content_type = tmp57.content_type;
+                        if (tmp58 instanceof Uint8Array) {
                           let str2 = "application/octet-stream";
                           if (typeof content_type === "string") {
-                            str2 = tmp58.content_type;
+                            str2 = tmp57.content_type;
                           }
                           str = str2;
-                          encodeUTF8Result1 = tmp59;
+                          encodeUTF8Result1 = tmp58;
                           isHardCrashResult = flag;
                         } else {
                           str = "application/json";
                           if (typeof content_type === "string") {
-                            str = tmp58.content_type;
+                            str = tmp57.content_type;
                           }
-                          let tmp29 = self;
-                          let tmp30 = closure_1_1;
-                          let obj4 = self(closure_1_1[4]);
+                          let obj4 = self(closure_1[4]);
                           let _JSON2 = JSON;
-                          encodeUTF8Result1 = obj4.encodeUTF8(JSON.stringify(tmp59));
+                          encodeUTF8Result1 = obj4.encodeUTF8(JSON.stringify(tmp58));
                           isHardCrashResult = flag;
                           if (!flag) {
-                            let tmp32 = self;
-                            let tmp33 = closure_1_1;
-                            let obj5 = self(closure_1_1[6]);
-                            isHardCrashResult = obj5.isHardCrash(tmp59);
+                            let obj5 = self(closure_1[6]);
+                            isHardCrashResult = obj5.isHardCrash(tmp58);
                           }
                         }
                       }
-                      tmp58.content_type = str;
-                      tmp58.length = encodeUTF8Result1.length;
+                      tmp57.content_type = str;
+                      tmp57.length = encodeUTF8Result1.length;
                       let _JSON3 = JSON;
-                      let tmp37 = self;
-                      let tmp38 = closure_1_1;
-                      let json1 = JSON.stringify(tmp58);
-                      let obj7 = self(closure_1_1[4]);
+                      let json1 = JSON.stringify(tmp57);
+                      let obj7 = self(closure_1[4]);
                       let encodeUTF8Result2 = obj7.encodeUTF8(json1);
                       let _Uint8Array2 = Uint8Array;
-                      let tmp39 = closure_1_7;
                       let tmp40 = new.target;
                       let tmp41 = new.target;
                       let uint8Array1 = new Uint8Array(arr2.length + encodeUTF8Result2.length + closure_1_7.length + encodeUTF8Result1.length + closure_1_7.length);
-                      let tmp42 = uint8Array1;
                       let result2 = uint8Array1.set(arr2);
                       let result3 = uint8Array1.set(encodeUTF8Result2, arr2.length);
                       let result4 = uint8Array1.set(closure_1_7, arr2.length + encodeUTF8Result2.length);
@@ -375,47 +340,32 @@ isHermesEnabled = {
                       arr2 = uint8Array1;
                       continue;
                     }
-                    let tmp48 = c6;
-                    let tmp49 = self;
-                    let tmp50 = closure_1_1;
-                    let obj9 = self(closure_1_1[7]);
-                    obj1 = { hardCrashed: null };
-                    obj1[0] = flag;
+                    let obj9 = self(closure_1[7]);
+                    let obj10 = { hardCrashed: flag };
                     c4 = 2;
-                    let num5 = 1;
                     c3 = 1;
-                    let obj2 = { value: null, done: false };
-                    obj2[0] = c6.captureEnvelope(obj9.base64StringFromByteArray(arr2), obj1);
-                    return obj2;
+                    let obj11 = { value: c6.captureEnvelope(obj9.base64StringFromByteArray(arr2), obj10), done: false };
+                    return obj11;
                   } else {
                     throw obj14._NativeClientError;
                   }
                 } else {
-                  let tmp7 = self;
-                  let tmp8 = closure_1_1;
-                  let debug = self(closure_1_1[5]).debug;
+                  let debug = self(closure_1[5]).debug;
                   let warnResult = debug.warn("Event was skipped as native SDK is not enabled.");
                 }
               }
             } else if (1 === tmp3) {
-              let tmp4 = closure_5;
-              let tmp5 = closure_5;
               c6 = 0;
-              let tmp6 = closure_1;
               closure_1.return();
-              throw closure_5;
+              throw closure_1_5;
             } else if (arg0 === 1) {
-              let num3 = 3;
               c3 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
-              let num2 = 3;
               c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              let obj = { value, done: true };
               return obj;
             }
-            let num4 = 3;
             c3 = 3;
             return { value: "HermesInternal", done: null };
           }
@@ -429,89 +379,141 @@ isHermesEnabled = {
       const self = this;
       c3 = 0;
       c4 = 0;
-      return (function*() {
-        closure_2 = closure_0;
-        closure_1 = tmp2;
-        const _Object3 = Object;
-        const merged = Object.assign({ enableNative: true, autoInitializeNativeSdk: true }, self);
-        if (undefined !== self.enableLogs) {
-          let enableLogs = tmp33.enableLogs;
-          if (enableLogs) {
-            enableLogs = "js" !== tmp33.logsOrigin;
+      return (function*(arg0, value) {
+        if (c4 === 2) {
+          c4 = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp4 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            return { value: "HermesInternal", done: null };
           }
-          obj1 = { enableLogs: null };
-          obj1[0] = enableLogs;
-          let obj2 = obj1;
         } else {
-          obj2 = {};
-        }
-        const merged1 = Object.assign(merged, obj2);
-        if (!merged1.enableNative) {
-          if (merged1.enableNativeNagger) {
-            const debug = self(closure_1_1[5]).debug;
-            debug.warn("Note: Native Sentry SDK is disabled.");
+          try {
+            c4 = 2;
+            if (0 === c3) {
+              if (arg0 === 1) {
+                c4 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c4 = 3;
+                obj3 = { value, done: true };
+                return obj3;
+              } else {
+                closure_2 = self;
+                closure_129_0 = undefined;
+                const _Object3 = Object;
+                const merged = Object.assign({ enableNative: true, autoInitializeNativeSdk: true }, _self);
+                if (undefined !== _self.enableLogs) {
+                  let enableLogs = tmp32.enableLogs;
+                  if (enableLogs) {
+                    enableLogs = "js" !== tmp32.logsOrigin;
+                  }
+                  const obj4 = { enableLogs };
+                  let obj6 = obj4;
+                } else {
+                  obj6 = {};
+                }
+                const merged1 = Object.assign(merged, obj6);
+                if (merged1.enableNative) {
+                  if (merged1.autoInitializeNativeSdk) {
+                    if (merged1.dsn) {
+                      if (obj10._isModuleLoaded(closure_1_6)) {
+                        const ignoreErrors1 = merged1.ignoreErrors;
+                        let found;
+                        if (null !== ignoreErrors1) {
+                          if (undefined !== ignoreErrors1) {
+                            found = ignoreErrors1.filter((item) => typeof item === "string");
+                          }
+                        }
+                        const ignoreErrors2 = merged1.ignoreErrors;
+                        let mapped;
+                        if (null !== ignoreErrors2) {
+                          if (undefined !== ignoreErrors2) {
+                            const found1 = ignoreErrors2.filter((item) => item instanceof RegExp);
+                            mapped = found1.map((source) => source.source);
+                          }
+                        }
+                        let tmp22 = found;
+                        if (found) {
+                          tmp22 = found.length > 0;
+                        }
+                        if (tmp22) {
+                          merged1.ignoreErrorsStr = found;
+                        }
+                        let tmp23 = mapped;
+                        if (mapped) {
+                          tmp23 = mapped.length > 0;
+                        }
+                        if (tmp23) {
+                          merged1.ignoreErrorsRegex = mapped;
+                        }
+                        ({ beforeSend, beforeBreadcrumb, beforeSendTransaction, beforeSendMetric, integrations, ignoreErrors, logsOrigin, androidProfilingOptions } = merged1);
+                        const tmp25 = closure_1_5(merged1, ["beforeSend", "beforeBreadcrumb", "beforeSendTransaction", "beforeSendMetric", "integrations", "ignoreErrors", "logsOrigin", "androidProfilingOptions"]);
+                        if (androidProfilingOptions) {
+                          const _Object = Object;
+                          const _Object2 = Object;
+                          const obj7 = { androidProfilingOptions };
+                          tmp25._experiments = Object.assign(Object.assign({}, tmp25._experiments), obj7);
+                        }
+                        c3 = 1;
+                        c4 = 1;
+                        const obj8 = { value: obj5.initNativeSdk(tmp25), done: false };
+                        return obj8;
+                      } else {
+                        throw obj10._NativeClientError;
+                      }
+                      obj5 = closure_1_6;
+                    } else {
+                      const debug3 = self(tmp2[5]).debug;
+                      debug3.warn("Warning: No DSN was provided. The Sentry SDK will be disabled. Native SDK will also not be initalized.");
+                      obj10.enableNative = false;
+                      c4 = 3;
+                      return { value: false, done: true };
+                    }
+                  } else {
+                    if (merged1.enableNativeNagger) {
+                      const debug2 = self(tmp2[5]).debug;
+                      debug2.warn("Note: Native Sentry SDK was not initialized automatically, you will need to initialize it manually. If you wish to disable the native SDK and get rid of this warning, pass enableNative: false");
+                    }
+                    obj10.enableNative = true;
+                    c4 = 3;
+                    return { value: false, done: true };
+                  }
+                } else {
+                  if (merged1.enableNativeNagger) {
+                    const debug = self(tmp2[5]).debug;
+                    debug.warn("Note: Native Sentry SDK is disabled.");
+                  }
+                  obj10.enableNative = false;
+                  c4 = 3;
+                  return { value: false, done: true };
+                }
+              }
+            } else if (arg0 === 1) {
+              c4 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj9 = { value, done: true };
+              return obj9;
+            } else {
+              closure_129_0 = value;
+              closure_2.nativeIsReady = closure_129_0;
+              closure_2.enableNative = true;
+              c4 = 3;
+              const obj = { value: closure_129_0, done: true };
+              return obj;
+            }
+          } catch (tmp26) {
+            c4 = tmp;
+            throw tmp26;
           }
-          obj10.enableNative = false;
-          return false;
         }
-        if (!merged1.autoInitializeNativeSdk) {
-          if (merged1.enableNativeNagger) {
-            const debug2 = self(closure_1_1[5]).debug;
-            debug2.warn("Note: Native Sentry SDK was not initialized automatically, you will need to initialize it manually. If you wish to disable the native SDK and get rid of this warning, pass enableNative: false");
-          }
-          obj10.enableNative = true;
-          return false;
-        }
-        if (!merged1.dsn) {
-          const debug3 = self(closure_1_1[5]).debug;
-          debug3.warn("Warning: No DSN was provided. The Sentry SDK will be disabled. Native SDK will also not be initalized.");
-          obj10.enableNative = false;
-          return false;
-        }
-        const obj4 = closure_1_6;
-        if (!obj10._isModuleLoaded(closure_1_6)) {
-          throw obj10._NativeClientError;
-        }
-        ignoreErrors = merged1.ignoreErrors;
-        if (null !== ignoreErrors) {
-          if (undefined !== ignoreErrors) {
-            const found = ignoreErrors.filter((str) => typeof str === "string");
-          }
-        }
-        const ignoreErrors1 = merged1.ignoreErrors;
-        if (null !== ignoreErrors1) {
-          if (undefined !== ignoreErrors1) {
-            const found1 = ignoreErrors1.filter((arg0) => arg0 instanceof RegExp);
-            const mapped = found1.map((source) => source.source);
-          }
-        }
-        let tmp22 = found;
-        if (found) {
-          tmp22 = found.length > 0;
-        }
-        if (tmp22) {
-          merged1.ignoreErrorsStr = found;
-        }
-        let tmp23 = mapped;
-        if (mapped) {
-          tmp23 = mapped.length > 0;
-        }
-        if (tmp23) {
-          merged1.ignoreErrorsRegex = mapped;
-        }
-        ({ beforeSend, beforeBreadcrumb, beforeSendTransaction, beforeSendMetric, integrations, ignoreErrors, logsOrigin, androidProfilingOptions } = merged1);
-        const tmp25 = closure_1_5(merged1, ["beforeSend", "beforeBreadcrumb", "beforeSendTransaction", "beforeSendMetric", "integrations", "ignoreErrors", "logsOrigin", "androidProfilingOptions"]);
-        if (androidProfilingOptions) {
-          const _Object = Object;
-          const _Object2 = Object;
-          const obj3 = { androidProfilingOptions: null };
-          obj3[0] = androidProfilingOptions;
-          tmp25._experiments = Object.assign(Object.assign({}, tmp25._experiments), obj3);
-        }
-        closure_0 = yield obj4.initNativeSdk(tmp25);
-        closure_2.nativeIsReady = closure_0;
-        closure_2.enableNative = true;
-        return closure_0;
       })();
     });
   },
@@ -519,17 +521,16 @@ isHermesEnabled = {
     return fn(this, undefined, undefined, function() {
       const self = this;
       c1 = 0;
-      return (function*() {
+      return (function*(arg0, value) {
         if (c1 === 2) {
           c1 = 3;
-          HermesBuiltin.throwTypeError();
+          throw new TypeError("Generator functions may not be called on executing generators");
         } else if (tmp3 === 3) {
           if (arg0 === 1) {
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            obj3 = { value, done: true };
+            return obj3;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -538,27 +539,22 @@ isHermesEnabled = {
             c1 = 2;
             if (arg0 === 1) {
               c1 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c1 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              obj = self;
-              if (self.enableNative) {
-                obj1 = closure_1_6;
-                if (obj._isModuleLoaded(closure_1_6)) {
-                  c1 = 3;
-                  obj1 = { value: null, done: true };
-                  obj1[0] = obj1.fetchNativeLogAttributes();
-                  return obj1;
-                } else {
-                  throw obj._NativeClientError;
-                }
+              const obj4 = { value, done: true };
+              return obj4;
+            } else if (self.enableNative) {
+              if (obj._isModuleLoaded(RNSentry)) {
+                c1 = 3;
+                const obj5 = { value: obj2.fetchNativeLogAttributes(), done: true };
+                return obj5;
               } else {
-                throw obj._DisabledNativeError;
+                throw obj._NativeClientError;
               }
+              obj2 = RNSentry;
+            } else {
+              throw obj._DisabledNativeError;
             }
           } catch (tmp4) {
             c1 = tmp;
@@ -572,17 +568,16 @@ isHermesEnabled = {
     return fn(this, undefined, undefined, function() {
       const self = this;
       c1 = 0;
-      return (function*() {
+      return (function*(arg0, value) {
         if (c1 === 2) {
           c1 = 3;
-          HermesBuiltin.throwTypeError();
+          throw new TypeError("Generator functions may not be called on executing generators");
         } else if (tmp3 === 3) {
           if (arg0 === 1) {
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            obj3 = { value, done: true };
+            return obj3;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -591,27 +586,22 @@ isHermesEnabled = {
             c1 = 2;
             if (arg0 === 1) {
               c1 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c1 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              obj = self;
-              if (self.enableNative) {
-                obj1 = closure_1_6;
-                if (obj._isModuleLoaded(closure_1_6)) {
-                  c1 = 3;
-                  obj1 = { value: null, done: true };
-                  obj1[0] = obj1.fetchNativeRelease();
-                  return obj1;
-                } else {
-                  throw obj._NativeClientError;
-                }
+              const obj4 = { value, done: true };
+              return obj4;
+            } else if (self.enableNative) {
+              if (obj._isModuleLoaded(RNSentry)) {
+                c1 = 3;
+                const obj5 = { value: obj2.fetchNativeRelease(), done: true };
+                return obj5;
               } else {
-                throw obj._DisabledNativeError;
+                throw obj._NativeClientError;
               }
+              obj2 = RNSentry;
+            } else {
+              throw obj._DisabledNativeError;
             }
           } catch (tmp4) {
             c1 = tmp;
@@ -625,17 +615,16 @@ isHermesEnabled = {
     return fn(this, undefined, undefined, function() {
       const self = this;
       c1 = 0;
-      return (function*() {
+      return (function*(arg0, value) {
         if (c1 === 2) {
           c1 = 3;
-          HermesBuiltin.throwTypeError();
+          throw new TypeError("Generator functions may not be called on executing generators");
         } else if (tmp3 === 3) {
           if (arg0 === 1) {
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            obj3 = { value, done: true };
+            return obj3;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -644,27 +633,22 @@ isHermesEnabled = {
             c1 = 2;
             if (arg0 === 1) {
               c1 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c1 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              obj = self;
-              if (self.enableNative) {
-                obj1 = closure_1_6;
-                if (obj._isModuleLoaded(closure_1_6)) {
-                  c1 = 3;
-                  obj1 = { value: null, done: true };
-                  obj1[0] = obj1.fetchNativeSdkInfo();
-                  return obj1;
-                } else {
-                  throw obj._NativeClientError;
-                }
+              const obj4 = { value, done: true };
+              return obj4;
+            } else if (self.enableNative) {
+              if (obj._isModuleLoaded(RNSentry)) {
+                c1 = 3;
+                const obj5 = { value: obj2.fetchNativeSdkInfo(), done: true };
+                return obj5;
               } else {
-                throw obj._DisabledNativeError;
+                throw obj._NativeClientError;
               }
+              obj2 = RNSentry;
+            } else {
+              throw obj._DisabledNativeError;
             }
           } catch (tmp4) {
             c1 = tmp;
@@ -678,17 +662,16 @@ isHermesEnabled = {
     return fn(this, undefined, undefined, function() {
       const self = this;
       c1 = 0;
-      return (function*() {
+      return (function*(arg0, value) {
         if (c1 === 2) {
           c1 = 3;
-          HermesBuiltin.throwTypeError();
+          throw new TypeError("Generator functions may not be called on executing generators");
         } else if (tmp3 === 3) {
           if (arg0 === 1) {
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            obj3 = { value, done: true };
+            return obj3;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -697,27 +680,22 @@ isHermesEnabled = {
             c1 = 2;
             if (arg0 === 1) {
               c1 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c1 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              obj = self;
-              if (self.enableNative) {
-                obj1 = closure_1_6;
-                if (obj._isModuleLoaded(closure_1_6)) {
-                  c1 = 3;
-                  obj1 = { value: null, done: true };
-                  obj1[0] = obj1.fetchNativeDeviceContexts();
-                  return obj1;
-                } else {
-                  throw obj._NativeClientError;
-                }
+              const obj4 = { value, done: true };
+              return obj4;
+            } else if (self.enableNative) {
+              if (obj._isModuleLoaded(RNSentry)) {
+                c1 = 3;
+                const obj5 = { value: obj2.fetchNativeDeviceContexts(), done: true };
+                return obj5;
               } else {
-                throw obj._DisabledNativeError;
+                throw obj._NativeClientError;
               }
+              obj2 = RNSentry;
+            } else {
+              throw obj._DisabledNativeError;
             }
           } catch (tmp4) {
             c1 = tmp;
@@ -731,48 +709,46 @@ isHermesEnabled = {
     return fn(this, undefined, undefined, function() {
       const self = this;
       c1 = 0;
-      return (function*() {
-        if (dependencyMap === 2) {
-          dependencyMap = 3;
-          HermesBuiltin.throwTypeError();
+      return (function*(arg0, value) {
+        if (c1 === 2) {
+          c1 = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
         } else if (tmp3 === 3) {
           if (arg0 === 1) {
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
         } else {
           try {
-            dependencyMap = 2;
+            c1 = 2;
             if (arg0 === 1) {
-              dependencyMap = 3;
-              throw arg1;
+              c1 = 3;
+              throw value;
             } else if (arg0 === 2) {
-              dependencyMap = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+              c1 = 3;
+              obj3 = { value, done: true };
+              return obj3;
             } else {
               if (!self.enableNative) {
-                const debug = self(682).debug;
+                const debug = _mod682.debug;
                 debug.warn(obj4._DisabledNativeError);
-                dependencyMap = 3;
+                c1 = 3;
               }
-              obj = closure_1_6;
-              if (self._isModuleLoaded(closure_1_6)) {
+              if (self._isModuleLoaded(RNSentry)) {
                 let nativeAppStart = obj.fetchNativeAppStart();
               } else {
-                const debug2 = self(682).debug;
+                const debug2 = _mod682.debug;
                 debug2.error(obj4._NativeClientError);
                 nativeAppStart = null;
               }
+              obj = RNSentry;
             }
           } catch (tmp13) {
-            dependencyMap = tmp;
+            c1 = tmp;
             throw tmp13;
           }
         }
@@ -783,17 +759,16 @@ isHermesEnabled = {
     return fn(this, undefined, undefined, function() {
       const self = this;
       c1 = 0;
-      return (function*() {
+      return (function*(arg0, value) {
         if (c1 === 2) {
           c1 = 3;
-          HermesBuiltin.throwTypeError();
+          throw new TypeError("Generator functions may not be called on executing generators");
         } else if (tmp3 === 3) {
           if (arg0 === 1) {
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            obj3 = { value, done: true };
+            return obj3;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -802,27 +777,22 @@ isHermesEnabled = {
             c1 = 2;
             if (arg0 === 1) {
               c1 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c1 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              obj = self;
-              if (self.enableNative) {
-                obj1 = closure_1_6;
-                if (obj._isModuleLoaded(closure_1_6)) {
-                  c1 = 3;
-                  obj1 = { value: null, done: true };
-                  obj1[0] = obj1.fetchNativeFrames();
-                  return obj1;
-                } else {
-                  throw obj._NativeClientError;
-                }
+              const obj4 = { value, done: true };
+              return obj4;
+            } else if (self.enableNative) {
+              if (obj._isModuleLoaded(RNSentry)) {
+                c1 = 3;
+                const obj5 = { value: obj2.fetchNativeFrames(), done: true };
+                return obj5;
               } else {
-                throw obj._DisabledNativeError;
+                throw obj._NativeClientError;
               }
+              obj2 = RNSentry;
+            } else {
+              throw obj._DisabledNativeError;
             }
           } catch (tmp4) {
             c1 = tmp;
@@ -846,19 +816,13 @@ isHermesEnabled = {
   setUser(arg0) {
     const self = this;
     if (this.enableNative) {
-      let obj = RNSentry;
       if (self._isModuleLoaded(RNSentry)) {
         let _serializeObjectResult1 = null;
         let _serializeObjectResult = null;
         if (arg0) {
           ({ id, ip_address, email, username, geo } = arg0);
-          obj = { id: null, ip_address: null, email: null, username: null, geo: null };
-          obj[0] = id;
-          obj[1] = ip_address;
-          obj[2] = email;
-          obj[3] = username;
-          obj[4] = geo;
-          _serializeObjectResult = self._serializeObject(obj);
+          const user = { id, ip_address, email, username, geo };
+          _serializeObjectResult = self._serializeObject(user);
           _serializeObjectResult1 = self._serializeObject(fn2(arg0, ["id", "ip_address", "email", "username", "geo"]));
           const tmp5 = fn2(arg0, ["id", "ip_address", "email", "username", "geo"]);
         }
@@ -866,6 +830,7 @@ isHermesEnabled = {
       } else {
         throw self._NativeClientError;
       }
+      obj = RNSentry;
     }
   },
   setTag(arg0, str) {
@@ -894,8 +859,9 @@ isHermesEnabled = {
           return obj.setExtra(arg0, "undefined");
         } else {
           try {
+            const normalizer = _mod682;
             const _JSON = JSON;
-            const json = JSON.stringify(registerSpanErrorInstrumentation.normalize(str));
+            const json = JSON.stringify(normalizer.normalize(str));
             if (typeof json === "string") {
               let setExtraResult = obj.setExtra(arg0, json);
             } else {
@@ -903,7 +869,7 @@ isHermesEnabled = {
             }
             return setExtraResult;
           } catch (tmp8) {
-            const debug = registerSpanErrorInstrumentation.debug;
+            const debug = _mod682.debug;
             debug.error("Extra for key ${key} not passed to native SDK, because it contains non-stringifiable values", tmp8);
           }
         }
@@ -915,7 +881,6 @@ isHermesEnabled = {
   addBreadcrumb(level) {
     const self = this;
     if (this.enableNative) {
-      let obj = RNSentry;
       if (self._isModuleLoaded(RNSentry)) {
         const _Object = Object;
         let _processLevelResult;
@@ -923,12 +888,12 @@ isHermesEnabled = {
         if (level.level) {
           _processLevelResult = self._processLevel(level.level);
         }
-        obj = { level: null };
-        obj[0] = _processLevelResult;
-        obj.addBreadcrumb(Object.assign(merged, obj));
+        const obj2 = { level: _processLevelResult };
+        obj.addBreadcrumb(Object.assign(merged, obj2));
       } else {
         throw self._NativeClientError;
       }
+      obj = RNSentry;
     }
   },
   clearBreadcrumbs() {
@@ -957,9 +922,8 @@ isHermesEnabled = {
             } else {
               setContext(arg0, { error: "**non-serializable**" });
             }
-            const obj2 = convertToNormalizedObject;
           } catch (tmp8) {
-            const debug = registerSpanErrorInstrumentation.debug;
+            const debug = _mod682.debug;
             debug.error("Context for key ${key} not passed to native SDK, because it contains non-serializable values", tmp8);
           }
         }
@@ -972,17 +936,16 @@ isHermesEnabled = {
     return fn(this, undefined, undefined, function() {
       const self = this;
       c1 = 0;
-      return (function*() {
+      return (function*(arg0, value) {
         if (c1 === 2) {
           c1 = 3;
-          HermesBuiltin.throwTypeError();
+          throw new TypeError("Generator functions may not be called on executing generators");
         } else if (tmp3 === 3) {
           if (arg0 === 1) {
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            obj3 = { value, done: true };
+            return obj3;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -991,24 +954,25 @@ isHermesEnabled = {
             c1 = 2;
             if (arg0 === 1) {
               c1 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c1 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
-              obj = _self;
-              if (_self.enableNative) {
-                obj1 = closure_1_6;
-                if (obj._isModuleLoaded(closure_1_6)) {
+              closure_0 = self;
+              if (self.enableNative) {
+                if (self._isModuleLoaded(RNSentry)) {
                   c1 = 3;
-                  obj1 = { value: null, done: true };
-                  obj1[0] = obj1.closeNativeSdk().then(() => {
-                    closure_0.enableNative = false;
-                  });
-                  return obj1;
+                  const obj5 = {
+                    value: obj2.closeNativeSdk().then(() => {
+                                closure_0.enableNative = false;
+                              }),
+                    done: true
+                  };
+                  return obj5;
                 }
+                obj2 = RNSentry;
               }
               c1 = 3;
               return { value: "HermesInternal", done: null };
@@ -1050,50 +1014,97 @@ isHermesEnabled = {
       c5 = 0;
       c6 = 0;
       c4 = 0;
-      return (function*() {
-        closure_2 = tmp3;
-        let table = tmp5;
-        if (!_self.enableNative) {
-          const debug2 = self(closure_1_1[5]).debug;
-          debug2.warn(obj7._DisabledNativeError);
-          return null;
-        }
-        if (!obj7._isModuleLoaded(c6)) {
-          const debug3 = self(closure_1_1[5]).debug;
-          debug3.error(obj7._NativeClientError);
-          return null;
-        }
-        c4 = 1;
-        yield obj2.captureScreenshot();
-        if (1 === tmp8) {
-          c4 = 0;
-          table = closure_3;
-          const debug = _self(table[5]).debug;
-          debug.warn("Failed to capture screenshot", table);
-        } else if (arg0 === 1) {
+      return (function*(arg0, value) {
+        if (c6 === 2) {
           c6 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c4 = 0;
-          c6 = 3;
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp7 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            return { value: "HermesInternal", done: null };
+          }
         } else {
-          _self = arg1;
-          c4 = 0;
+          try {
+            c6 = 2;
+            if (0 === c5) {
+              if (arg0 === 1) {
+                c6 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c6 = 3;
+                const obj4 = { value, done: true };
+                return obj4;
+              } else {
+                closure_2 = tmp3;
+                closure_1 = tmp5;
+                closure_129_0 = undefined;
+                if (self.enableNative) {
+                  if (obj7._isModuleLoaded(RNSentry)) {
+                    c4 = 1;
+                    c5 = 2;
+                    c6 = 1;
+                    const obj5 = { value: obj3.captureScreenshot(), done: false };
+                    return obj5;
+                  } else {
+                    const debug3 = _mod682.debug;
+                    debug3.error(obj7._NativeClientError);
+                    c6 = 3;
+                    return { value: null, done: true };
+                  }
+                  obj3 = RNSentry;
+                } else {
+                  const debug2 = _mod682.debug;
+                  debug2.warn(obj7._DisabledNativeError);
+                  c6 = 3;
+                  return { value: null, done: true };
+                }
+              }
+            } else {
+              if (1 === tmp8) {
+                c4 = 0;
+                closure_129_1 = closure_3;
+                const debug = closure_130_0(closure_130_1[5]).debug;
+                debug.warn("Failed to capture screenshot", closure_129_1);
+              } else if (arg0 === 1) {
+                c6 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c4 = 0;
+                c6 = 3;
+                let obj = { value, done: true };
+                return obj;
+              } else {
+                closure_129_0 = value;
+                c4 = 0;
+              }
+              let mapped = null;
+              if (closure_129_0) {
+                mapped = closure_129_0.map((data) => {
+                  const obj = { data: null };
+                  const merged = Object.assign({}, data);
+                  const uint8Array = new Uint8Array(data.data);
+                  obj.data = uint8Array;
+                  return Object.assign(merged, obj);
+                });
+              }
+              c6 = 3;
+              const obj6 = { value: mapped, done: true };
+              return obj6;
+            }
+          } catch (tmp28) {
+            closure_3 = tmp28;
+            if (tmp4 === c4) {
+              c6 = tmp2;
+              throw tmp28;
+            } else {
+              c5 = tmp;
+            }
+          }
         }
-        let mapped = null;
-        if (_self) {
-          mapped = _self.map((data) => {
-            const obj = { data: null };
-            const merged = Object.assign({}, data);
-            const uint8Array = new Uint8Array(data.data);
-            obj[0] = uint8Array;
-            return Object.assign(merged, obj);
-          });
-        }
-        return mapped;
       })();
     });
   },
@@ -1102,17 +1113,16 @@ isHermesEnabled = {
       const self = this;
       c2 = 0;
       c3 = 0;
-      return (function*() {
+      return (function*(arg0, value) {
         if (c3 === 2) {
           c3 = 3;
-          HermesBuiltin.throwTypeError();
+          throw new TypeError("Generator functions may not be called on executing generators");
         } else if (tmp4 === 3) {
           if (arg0 === 1) {
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -1122,49 +1132,44 @@ isHermesEnabled = {
             if (0 === c2) {
               if (arg0 === 1) {
                 c3 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 c3 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
+                const obj5 = { value, done: true };
+                return obj5;
               } else {
-                let obj2 = _self;
                 closure_1 = tmp2;
-                _self = undefined;
-                if (_self.enableNative) {
-                  if (obj2._isModuleLoaded(closure_1_6)) {
+                closure_129_0 = undefined;
+                if (self.enableNative) {
+                  if (obj3._isModuleLoaded(RNSentry)) {
                     c2 = 1;
                     c3 = 1;
-                    obj1 = { value: null, done: false };
-                    obj1[0] = obj4.fetchViewHierarchy();
-                    return obj1;
+                    const obj6 = { value: obj4.fetchViewHierarchy(), done: false };
+                    return obj6;
                   } else {
-                    throw obj2._NativeClientError;
+                    throw obj3._NativeClientError;
                   }
-                  obj4 = closure_1_6;
+                  obj4 = RNSentry;
                 } else {
-                  throw obj2._DisabledNativeError;
+                  throw obj3._DisabledNativeError;
                 }
               }
             } else if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
+              const obj7 = { value, done: true };
+              return obj7;
             } else {
-              _self = arg1;
+              closure_129_0 = value;
               let uint8Array = null;
-              if (_self) {
+              if (closure_129_0) {
                 const _Uint8Array = Uint8Array;
-                uint8Array = new Uint8Array(_self);
+                uint8Array = new Uint8Array(closure_129_0);
               }
               c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = uint8Array;
+              const obj = { value: uint8Array, done: true };
               return obj;
             }
           } catch (tmp13) {
@@ -1181,7 +1186,7 @@ isHermesEnabled = {
       if (self._isModuleLoaded(RNSentry)) {
         const startProfilingResult = obj.startProfiling(arg0);
         const started = startProfilingResult.started;
-        const debug = registerSpanErrorInstrumentation.debug;
+        const debug = _mod682.debug;
         if (started) {
           debug.log("[NATIVE] Start Profiling");
         } else {
@@ -1199,35 +1204,35 @@ isHermesEnabled = {
   stopProfiling() {
     const self = this;
     if (this.enableNative) {
-      let obj = RNSentry;
       if (self._isModuleLoaded(RNSentry)) {
         ({ profile, androidProfile, error } = obj.stopProfiling());
         if (profile) {
           if (!error) {
             if (!androidProfile) {
-              const debug = registerSpanErrorInstrumentation.debug;
+              const debug = _mod682.debug;
               debug.warn("[NATIVE] Stop Profiling Failed: No Android Profile");
             }
             try {
-              obj = { hermesProfile: null, nativeProfile: null, androidProfile: null };
+              const obj2 = { hermesProfile: null, nativeProfile: null, androidProfile: null };
               const _JSON = JSON;
-              obj[0] = JSON.parse(profile);
-              obj[1] = tmp2;
-              obj[2] = androidProfile;
-              return obj;
+              obj2.hermesProfile = JSON.parse(profile);
+              obj2.nativeProfile = tmp2;
+              obj2.androidProfile = androidProfile;
+              return obj2;
             } catch (tmp7) {
-              const debug2 = registerSpanErrorInstrumentation.debug;
+              const debug2 = _mod682.debug;
               debug2.error("[NATIVE] Failed to parse Hermes Profile JSON", tmp7);
               return null;
             }
           }
         }
-        const debug3 = registerSpanErrorInstrumentation.debug;
+        const debug3 = _mod682.debug;
         debug3.error("[NATIVE] Stop Profiling Failed", error);
         return null;
       } else {
         throw self._NativeClientError;
       }
+      obj = RNSentry;
     } else {
       throw self._DisabledNativeError;
     }
@@ -1264,17 +1269,16 @@ isHermesEnabled = {
     return fn(this, undefined, undefined, function() {
       const self = this;
       c1 = 0;
-      return (function*() {
+      return (function*(arg0, value) {
         if (c1 === 2) {
           c1 = 3;
-          HermesBuiltin.throwTypeError();
+          throw new TypeError("Generator functions may not be called on executing generators");
         } else if (tmp3 === 3) {
           if (arg0 === 1) {
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            obj3 = { value, done: true };
+            return obj3;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -1283,22 +1287,19 @@ isHermesEnabled = {
             c1 = 2;
             if (arg0 === 1) {
               c1 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c1 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
-              obj = self;
               if (self.enableNative) {
-                obj1 = closure_1_6;
-                if (obj._isModuleLoaded(closure_1_6)) {
+                if (self._isModuleLoaded(RNSentry)) {
                   c1 = 3;
-                  obj1 = { value: null, done: true };
-                  obj1[0] = obj1.initNativeReactNavigationNewFrameTracking();
-                  return obj1;
+                  const obj5 = { value: obj2.initNativeReactNavigationNewFrameTracking(), done: true };
+                  return obj5;
                 }
+                obj2 = RNSentry;
               }
               c1 = 3;
               return { value: "HermesInternal", done: null };
@@ -1317,17 +1318,16 @@ isHermesEnabled = {
       const self = this;
       c2 = 0;
       c1 = 0;
-      return (function*() {
+      return (function*(arg0, value) {
         if (dependencyMap === 2) {
           dependencyMap = 3;
-          HermesBuiltin.throwTypeError();
+          throw new TypeError("Generator functions may not be called on executing generators");
         } else if (tmp3 === 3) {
           if (arg0 === 1) {
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            obj3 = { value, done: true };
+            return obj3;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -1337,12 +1337,11 @@ isHermesEnabled = {
             if (0 === c2) {
               if (arg0 === 1) {
                 dependencyMap = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 dependencyMap = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
+                const obj4 = { value, done: true };
+                return obj4;
               } else {
                 if (!self.enableNative) {
                   const debug = self(682).debug;
@@ -1351,32 +1350,30 @@ isHermesEnabled = {
                   const resolved = Promise.resolve(null);
                   dependencyMap = 3;
                 }
-                obj1 = closure_1_6;
                 if (self._isModuleLoaded(closure_1_6)) {
                   c2 = 1;
                   dependencyMap = 1;
-                  obj1 = { value: null, done: false };
-                  obj1[0] = obj1.captureReplay(self);
-                  return obj1;
+                  const obj5 = { value: obj2.captureReplay(closure_0), done: false };
+                  return obj5;
                 } else {
                   const debug2 = self(682).debug;
                   const _HermesInternal2 = HermesInternal;
                   debug2.warn("[NATIVE] `" + obj6.captureReplay.name + "` is not available when native is not available.");
                   let resolved1 = Promise.resolve(null);
                 }
+                obj2 = closure_1_6;
               }
             } else if (arg0 === 1) {
               dependencyMap = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 !== 2) {
-              resolved1 = arg1;
-              if (!arg1) {
+              resolved1 = value;
+              if (!value) {
                 resolved1 = null;
               }
             }
             dependencyMap = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            const obj = { value, done: true };
             return obj;
           } catch (tmp19) {
             dependencyMap = tmp;
@@ -1390,17 +1387,16 @@ isHermesEnabled = {
     const self = this;
     if (this.enableNative) {
       if (self._isModuleLoaded(RNSentry)) {
-        let tmp10 = obj.getCurrentReplayId() || null;
+        const tmp10 = obj.getCurrentReplayId() || null;
         const tmp11 = obj.getCurrentReplayId() || null;
       } else {
-        const debug2 = registerSpanErrorInstrumentation.debug;
+        const debug2 = _mod682.debug;
         const _HermesInternal2 = HermesInternal;
         debug2.warn("[NATIVE] `" + self.getCurrentReplayId.name + "` is not available when native is not available.");
-        tmp10 = null;
       }
       obj = RNSentry;
     } else {
-      const debug = registerSpanErrorInstrumentation.debug;
+      const debug = _mod682.debug;
       const _HermesInternal = HermesInternal;
       debug.warn("[NATIVE] `" + self.getCurrentReplayId.name + "` is not available when native is disabled.");
       return null;
@@ -1411,17 +1407,16 @@ isHermesEnabled = {
       const self = this;
       c2 = 0;
       c3 = 0;
-      return (function*() {
+      return (function*(arg0, value) {
         if (c3 === 2) {
           c3 = 3;
-          HermesBuiltin.throwTypeError();
+          throw new TypeError("Generator functions may not be called on executing generators");
         } else if (tmp4 === 3) {
           if (arg0 === 1) {
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -1431,50 +1426,46 @@ isHermesEnabled = {
             if (0 === c2) {
               if (arg0 === 1) {
                 c3 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 c3 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
+                const obj4 = { value, done: true };
+                return obj4;
               } else {
                 closure_1 = tmp2;
-                let _self;
-                if (_self.enableNative) {
-                  let obj2 = closure_1_6;
-                  if (obj7._isModuleLoaded(closure_1_6)) {
+                closure_129_0 = undefined;
+                if (self.enableNative) {
+                  if (obj7._isModuleLoaded(RNSentry)) {
                     c2 = 1;
                     c3 = 1;
-                    obj1 = { value: null, done: false };
-                    obj1[0] = obj2.crashedLastRun();
-                    return obj1;
+                    const obj5 = { value: obj3.crashedLastRun(), done: false };
+                    return obj5;
                   } else {
                     c3 = 3;
                     return { value: null, done: true };
                   }
+                  obj3 = RNSentry;
                 } else {
                   c3 = 3;
                   return { value: null, done: true };
                 }
-                obj7 = _self;
+                obj7 = self;
               }
             } else if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
+              const obj6 = { value, done: true };
+              return obj6;
             } else {
-              _self = arg1;
+              closure_129_0 = value;
               let tmp8 = null;
-              if (typeof _self === "boolean") {
-                tmp8 = _self;
+              if (typeof closure_129_0 === "boolean") {
+                tmp8 = closure_129_0;
               }
               c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = tmp8;
+              const obj = { value: tmp8, done: true };
               return obj;
             }
           } catch (tmp9) {
@@ -1502,17 +1493,16 @@ isHermesEnabled = {
       c5 = 0;
       c6 = 0;
       c4 = 0;
-      return (function*() {
+      return (function*(arg0, value) {
         if (c6 === 2) {
           c6 = 3;
-          HermesBuiltin.throwTypeError();
+          throw new TypeError("Generator functions may not be called on executing generators");
         } else if (tmp6 === 3) {
           if (arg0 === 1) {
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -1522,25 +1512,22 @@ isHermesEnabled = {
             if (0 === c5) {
               if (arg0 === 1) {
                 c6 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 c6 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
+                const obj5 = { value, done: true };
+                return obj5;
               } else {
-                let obj2 = _self;
                 closure_2 = tmp3;
                 closure_1 = tmp7;
-                _self = undefined;
-                if (_self.enableNative) {
-                  if (obj2._isModuleLoaded(c6)) {
+                closure_129_0 = undefined;
+                if (self.enableNative) {
+                  if (self._isModuleLoaded(c6)) {
                     c4 = 1;
                     c5 = 2;
                     c6 = 1;
-                    obj1 = { value: null, done: false };
-                    obj1[0] = obj4.getDataFromUri(self);
-                    return obj1;
+                    const obj6 = { value: obj4.getDataFromUri(closure_0), done: false };
+                    return obj6;
                   }
                   obj4 = c6;
                 }
@@ -1549,28 +1536,26 @@ isHermesEnabled = {
               }
             } else if (1 === tmp7) {
               c4 = 0;
-              closure_1 = closure_3;
-              const debug = self(closure_1_1[5]).debug;
-              debug.error("Error:", closure_1);
+              closure_129_1 = closure_3;
+              const debug = self(closure_1[5]).debug;
+              debug.error("Error:", closure_129_1);
               c6 = 3;
               return { value: null, done: true };
             } else if (arg0 === 1) {
               c6 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c4 = 0;
               c6 = 3;
-              obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
+              const obj7 = { value, done: true };
+              return obj7;
             } else {
-              _self = arg1;
+              closure_129_0 = value;
               const _Uint8Array = Uint8Array;
-              const uint8Array = new Uint8Array(_self);
+              const uint8Array = new Uint8Array(closure_129_0);
               c4 = 0;
               c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = uint8Array;
+              const obj = { value: uint8Array, done: true };
               return obj;
             }
           } catch (tmp23) {
@@ -1593,7 +1578,7 @@ isHermesEnabled = {
         try {
           return obj.popTimeToDisplayFor(arg0);
         } catch (tmp2) {
-          const debug = registerSpanErrorInstrumentation.debug;
+          const debug = _mod682.debug;
           debug.error("Error:", tmp2);
           return Promise.resolve(null);
         }
@@ -1609,7 +1594,7 @@ isHermesEnabled = {
         try {
           obj.setActiveSpanId(spanId);
         } catch (tmp3) {
-          const debug = registerSpanErrorInstrumentation.debug;
+          const debug = _mod682.debug;
           debug.error("Error:", tmp3);
         }
       }
@@ -1623,17 +1608,16 @@ isHermesEnabled = {
       c5 = 0;
       c6 = 0;
       c4 = 0;
-      return (function*() {
+      return (function*(arg0, value) {
         if (c6 === 2) {
           c6 = 3;
-          HermesBuiltin.throwTypeError();
+          throw new TypeError("Generator functions may not be called on executing generators");
         } else if (tmp6 === 3) {
           if (arg0 === 1) {
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -1643,59 +1627,53 @@ isHermesEnabled = {
             if (0 === c5) {
               if (arg0 === 1) {
                 c6 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 c6 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
+                obj3 = { value, done: true };
+                return obj3;
               } else {
                 closure_2 = tmp3;
                 closure_1 = tmp7;
-                if (_self.enableNative) {
-                  let obj3 = c6;
-                  if (_self._isModuleLoaded(c6)) {
+                if (self.enableNative) {
+                  if (self._isModuleLoaded(c6)) {
                     c4 = 1;
                     const _Array = Array;
                     c5 = 2;
                     c6 = 1;
-                    obj1 = { value: null, done: false };
-                    obj1[0] = obj3.encodeToBase64(Array.from(self));
-                    return obj1;
+                    const obj5 = { value: obj4.encodeToBase64(Array.from(closure_0)), done: false };
+                    return obj5;
                   }
+                  obj4 = c6;
                 }
                 c6 = 3;
-                const obj2 = { value: null, done: true };
-                obj2[0] = Promise.resolve(null);
-                return obj2;
+                const obj6 = { value: Promise.resolve(null), done: true };
+                return obj6;
               }
             } else if (1 === tmp7) {
               c4 = 0;
-              _self = closure_3;
-              const debug = self(closure_1_1[5]).debug;
-              debug.error("Error:", _self);
+              closure_129_0 = closure_3;
+              const debug = self(closure_1[5]).debug;
+              debug.error("Error:", closure_129_0);
               c6 = 3;
-              obj3 = { value: null, done: true };
-              obj3[0] = Promise.resolve(null);
-              return obj3;
+              const obj7 = { value: Promise.resolve(null), done: true };
+              return obj7;
             } else if (arg0 === 1) {
               c6 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c4 = 0;
               c6 = 3;
-              const obj4 = { value: null, done: true };
-              obj4[0] = arg1;
-              return obj4;
+              const obj8 = { value, done: true };
+              return obj8;
             } else {
-              let tmp8 = arg1;
-              if (!arg1) {
+              let tmp8 = value;
+              if (!value) {
                 tmp8 = null;
               }
               c4 = 0;
               c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = tmp8;
+              const obj = { value: tmp8, done: true };
               return obj;
             }
           } catch (tmp18) {
@@ -1715,7 +1693,7 @@ isHermesEnabled = {
     return arg0;
   },
   _processItem(arg0) {
-    const tmp = callback(arg0, 2);
+    const tmp = _slicedToArray(arg0, 2);
     const first = tmp[0];
     if ("event" != first.type) {
       if ("transaction" != first.type) {
@@ -1723,35 +1701,32 @@ isHermesEnabled = {
       }
     }
     const _processLevelsResult = this._processLevels(tmp[1]);
-    let tmp4 = "android" === isHermesEnabled.platform;
+    let tmp4 = "android" === obj3.platform;
     if (tmp4) {
       tmp4 = "message" in _processLevelsResult;
     }
     if (tmp4) {
-      const obj = { message: null };
-      obj[0] = _processLevelsResult.message;
+      const obj = { message: _processLevelsResult.message };
       _processLevelsResult.message = obj;
     }
     const items = [first, _processLevelsResult];
     return items;
   },
-  _serializeObject(arg0) {
-    closure_0 = arg0;
+  _serializeObject(user) {
     const obj = {};
-    const keys = Object.keys(arg0);
-    const item = keys.forEach((arg0) => {
+    const keys = Object.keys(user);
+    const item = keys.forEach((item) => {
       let json = tmp;
-      if (typeof table[arg0] !== "string") {
+      if (typeof user[item] !== "string") {
         const _JSON = JSON;
         json = JSON.stringify(tmp);
       }
-      obj[arg0] = json;
+      obj[item] = json;
     });
     return obj;
   },
   _processLevels(level) {
-    let self = this;
-    self = this;
+    const self = this;
     let _processLevelResult;
     let merged = Object.assign({}, level);
     if (level.level) {
@@ -1772,7 +1747,7 @@ isHermesEnabled = {
         });
       }
     }
-    obj[1] = mapped;
+    obj.breadcrumbs = mapped;
     return Object.assign(merged, obj);
   },
   _processLevel(level) {
@@ -1794,26 +1769,25 @@ isHermesEnabled = {
   nativeIsReady: false,
   platform: "android"
 };
-const sentryError = new require("registerSpanErrorInstrumentation").SentryError("Native is disabled");
-isHermesEnabled[42] = sentryError;
-const sentryError1 = new require("registerSpanErrorInstrumentation").SentryError("Native Client is not available, can't start on native.");
-isHermesEnabled[43] = sentryError1;
+const sentryError = new fn(682).SentryError("Native is disabled");
+obj3._DisabledNativeError = sentryError;
+const sentryError1 = new fn(682).SentryError("Native Client is not available, can't start on native.");
+obj3._NativeClientError = sentryError1;
 
 export { getRNSentryModule };
-export const NATIVE = isHermesEnabled;
+export const NATIVE = obj3;
 export const getDataFromUri = function getDataFromUri(arg0) {
   closure_0 = arg0;
-  return fn(this, undefined, undefined, function*() {
+  return fn(this, undefined, undefined, function*(arg0, value) {
     if (c0 === 2) {
       c0 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -1822,16 +1796,14 @@ export const getDataFromUri = function getDataFromUri(arg0) {
         c0 = 2;
         if (arg0 === 1) {
           c0 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          obj3 = { value, done: true };
+          return obj3;
         } else {
           c0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = closure_1_8.getDataFromUri(c0);
+          const obj = { value: dataFromUri.getDataFromUri(closure_0), done: true };
           return obj;
         }
       } catch (tmp6) {

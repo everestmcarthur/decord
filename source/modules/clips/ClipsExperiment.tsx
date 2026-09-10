@@ -1,33 +1,36 @@
-// Module ID: 13679
-// Function ID: 13680
-// Name: apexExperiment
-// Dependencies: [1908, 1371, 1373, 1433, 13680, 504, 4218, 2]
+// Module ID: 13702
+// Function ID: 13703
+// Name: ClipsExperiment
+// Dependencies: [1908, 1371, 1373, 1433, 13703, 504, 4231, 2]
 // Exports: areClipsAvailable, isScreenshotKeybindEnabled, isUserPremiumTypeForClipsEarlyAccess, useIsClipsAvailable, useScreenshotKeybindEnabled
 
-// Module 13679 (apexExperiment)
+// Module 13702 (ClipsExperiment)
 import initialize from "initialize" /* 504 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4218 */;
-import isClientClipsCapableDefault from "isClientClipsCapable" /* 13680 */;
-import closure_3 from "_detectH265HardwareDecode" /* 1908 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import { PremiumTypes } from "GuildFeatures" /* 1373 */;
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4231 */;
+import isClientClipsCapableDefault from "isClientClipsCapable" /* 13703 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-ApexExperiment = { 1: null, 2: { enableClips: true, ignorePlatformRestriction: false } };
-ApexExperiment[2] = { enableClips: true, ignorePlatformRestriction: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-03-clips-experiment", defaultConfig: { enableClips: false, ignorePlatformRestriction: false }, variations: ApexExperiment });
-const result = require("set").fileFinishedImporting("modules/clips/ClipsExperiment.tsx");
+require = fn;
+const PremiumTypes = fn(1373).PremiumTypes;
+const ApexExperiment = fn(1433);
+const obj2 = { kind: "user", name: "2026-03-clips-experiment", defaultConfig: { enableClips: false, ignorePlatformRestriction: false }, variations: null };
+const obj3 = { 1: null, 2: { enableClips: true, ignorePlatformRestriction: false } };
+obj3[2] = { enableClips: true, ignorePlatformRestriction: true };
+obj2.variations = obj3;
+const apexExperiment = ApexExperiment.createApexExperiment(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/clips/ClipsExperiment.tsx");
 
 export const ClipsExperiment = apexExperiment;
 export const areClipsAvailable = function areClipsAvailable() {
-  if (isClientClipsCapableDefault(closure_3)) {
-    currentUser = currentUser.getCurrentUser();
+  if (isClientClipsCapableDefault(MediaEngineStore)) {
+    const currentUser = UserStore.getCurrentUser();
     let premiumType;
     if (currentUser != null) {
       premiumType = currentUser.premiumType;
     }
-    let enableClips = getPremiumPlanItemDefault.isPremiumAtLeast(premiumType, PremiumTypes.TIER_2);
+    let enableClips = PremiumUtilsDefault.isPremiumAtLeast(premiumType, PremiumTypes.TIER_2);
     if (!enableClips) {
       enableClips = apexExperiment.getConfig({ location: "areClipsEnabled" }).enableClips;
     }
@@ -35,20 +38,18 @@ export const areClipsAvailable = function areClipsAvailable() {
   } else {
     return false;
   }
-  const tmp = importDefault;
 };
 export const useIsClipsAvailable = function useIsClipsAvailable() {
-  const tmp = isClientClipsCapableDefault(closure_3);
-  const items = [closure_4];
+  const tmp = isClientClipsCapableDefault(MediaEngineStore);
+  const items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let premiumType;
     if (currentUser != null) {
       premiumType = currentUser.premiumType;
     }
-    return callback(table[6]).isPremiumAtLeast(premiumType, TIER_2.TIER_2);
+    return PremiumUtilsDefault.isPremiumAtLeast(premiumType, TIER_2.TIER_2);
   });
-  const obj = initialize;
   return (apexExperiment.getConfig({ location: "useEnableClips" }).enableClips || stateFromStores) && tmp;
 };
 export const isUserPremiumTypeForClipsEarlyAccess = function isUserPremiumTypeForClipsEarlyAccess(premiumType) {
@@ -56,7 +57,7 @@ export const isUserPremiumTypeForClipsEarlyAccess = function isUserPremiumTypeFo
   if (premiumType != null) {
     premiumType = premiumType.premiumType;
   }
-  return getPremiumPlanItemDefault.isPremiumAtLeast(premiumType, PremiumTypes.TIER_2);
+  return PremiumUtilsDefault.isPremiumAtLeast(premiumType, PremiumTypes.TIER_2);
 };
 export function isScreenshotKeybindEnabled() {
   return false;

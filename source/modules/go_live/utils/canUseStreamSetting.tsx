@@ -1,29 +1,27 @@
-// Module ID: 9962
-// Function ID: 9963
+// Module ID: 9989
+// Function ID: 9990
 // Name: canUseStreamSetting
-// Dependencies: [1373, 4218, 4454, 2]
+// Dependencies: [1373, 4231, 4468, 2]
 // Exports: default
 
-// Module 9962 (canUseStreamSetting)
-import set from "set" /* 2 */;
-import GuildFeatures from "GuildFeatures" /* 1373 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4218 */;
-import getGuildTierFromGuild from "getGuildTierFromGuild" /* 4454 */;
+// Module 9989 (canUseStreamSetting)
+import PremiumConstants from "PremiumConstants" /* 1373 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4231 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 4468 */;
+import size from "module_2" /* 2 */;
 
-const StreamQualities = GuildFeatures.StreamQualities;
-let result = set.fileFinishedImporting("modules/go_live/utils/canUseStreamSetting.tsx");
+const StreamQualities = PremiumConstants.StreamQualities;
+let result = size.fileFinishedImporting("modules/go_live/utils/canUseStreamSetting.tsx");
 
-export default function canUseStreamSetting(quality, currentUser) {
+export default function canUseStreamSetting(quality, currentUser, arg2) {
   if (null != quality) {
     let flag = false;
     if (null != quality.quality) {
       quality = quality.quality;
       if (StreamQualities.HIGH_STREAMING_QUALITY === quality) {
-        flag = getPremiumPlanItemDefault.canStreamQuality(getPremiumPlanItemDefault.StreamQuality.HIGH, currentUser);
-        const obj2 = getPremiumPlanItemDefault;
+        flag = PremiumUtilsDefault.canStreamQuality(PremiumUtilsDefault.StreamQuality.HIGH, currentUser);
       } else if (tmp2.MID_STREAMING_QUALITY === quality) {
-        flag = getPremiumPlanItemDefault.canStreamQuality(getPremiumPlanItemDefault.StreamQuality.MID, currentUser);
-        const obj = getPremiumPlanItemDefault;
+        flag = PremiumUtilsDefault.canStreamQuality(PremiumUtilsDefault.StreamQuality.MID, currentUser);
       } else {
         const quality2 = quality.quality;
         flag = false;
@@ -33,8 +31,7 @@ export default function canUseStreamSetting(quality, currentUser) {
     if (null != quality.guildPremiumTier) {
       let result = flag;
       if (!flag) {
-        result = getGuildTierFromGuild.isGuildBoostedAtLeast(arg2, quality.guildPremiumTier);
-        const obj3 = getGuildTierFromGuild;
+        result = GuildBoostingUtils.isGuildBoostedAtLeast(arg2, quality.guildPremiumTier);
       }
       tmp7 = result;
     }

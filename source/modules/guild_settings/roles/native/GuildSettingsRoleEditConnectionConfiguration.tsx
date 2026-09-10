@@ -1,57 +1,55 @@
-// Module ID: 17639
-// Function ID: 17640
-// Name: Header
-// Dependencies: [32, 19, 17, 1074, 5408, 21, 4560, 576, 4495, 11568, 1178, 1396, 4411, 5605, 1114, 5123, 5680, 7201, 17640, 1115, 4556, 5283, 5687, 2]
+// Module ID: 17672
+// Function ID: 17673
+// Name: GuildSettingsRoleEditConnectionConfiguration
+// Dependencies: [32, 19, 17, 1074, 5422, 21, 4574, 576, 4509, 11594, 1178, 1396, 4425, 5619, 1114, 5137, 5694, 7214, 17673, 1115, 4570, 5297, 5701, 2]
 // Exports: default
 
-// Module 17639 (Header)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import PressableBase from "PressableBase" /* 5123 */;
-import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5283 */;
-import TableRowInner from "TableRowInner" /* 5605 */;
-import XSmallIcon from "XSmallIcon" /* 5680 */;
-import request from "request" /* 11568 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { PlatformTypes } from "ME" /* 1074 */;
-import OperatorTypes from "OperatorTypes" /* 5408 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17672 (GuildSettingsRoleEditConnectionConfiguration)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import useThemeDefault from "useTheme" /* 4509 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Pressables from "Pressables" /* 5137 */;
+import PlatformsDefault from "Platforms" /* 5297 */;
+import TableRow from "TableRow" /* 5619 */;
+import XSmallIcon from "XSmallIcon" /* 5694 */;
+import TableRowGroup from "TableRowGroup" /* 5701 */;
+import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11594 */;
+import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 17673 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function Header(arg0) {
   ({ platform, integration, applicationId } = arg0);
   ({ onRemove, locked } = arg0);
-  let obj = request;
-  let application;
-  if (integration != null) {
-    application = integration.application;
-  }
-  let tmp5;
-  if (null == application) {
-    tmp5 = applicationId;
-  }
-  const getOrFetchApplicationBatched = obj.useGetOrFetchApplicationBatched(tmp5);
+  const tmp2 = useThemeDefault();
   let application1;
   if (integration != null) {
     application1 = integration.application;
   }
-  if (null != application1) {
-    obj = { size: null, user: null, guildId: "Array" };
-    obj[0] = tmp3(1178).AvatarSizes.XSMALL;
+  let tmp5;
+  if (null == application1) {
+    tmp5 = applicationId;
+  }
+  const getOrFetchApplicationBatched = useGetOrFetchApplicationBatched.useGetOrFetchApplicationBatched(tmp5);
+  let application2;
+  if (integration != null) {
+    application2 = integration.application;
+  }
+  if (null != application2) {
+    const obj2 = { size: tmp3(1178).AvatarSizes.XSMALL, user: null, guildId: "Array" };
     let bot;
     if (integration != null) {
-      application = integration.application;
+      const application = integration.application;
       if (application != null) {
         bot = application.bot;
       }
     }
-    obj[1] = bot;
-    let tmp8Result = callback2(tmp3(1178).Avatar, obj);
+    obj2.user = bot;
+    let tmp8Result = closure_1_12(tmp3(1178).Avatar, obj2);
     let name = integration.application.name;
-    const tmp14 = callback2;
   } else if (null != applicationId) {
     if (undefined === getOrFetchApplicationBatched) {
       return null;
@@ -62,76 +60,70 @@ function Header(arg0) {
       }
       let tmp11;
       if (null != bot1) {
-        obj = { size: null, user: null, guildId: "Array" };
-        obj[0] = tmp3(1178).AvatarSizes.XSMALL;
-        obj[1] = getOrFetchApplicationBatched.bot;
-        tmp11 = callback2(tmp3(1178).Avatar, obj);
+        const obj3 = { size: tmp3(1178).AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "Array" };
+        tmp11 = closure_1_12(tmp3(1178).Avatar, obj3);
       }
-      name = undefined;
+      let name1;
       if (getOrFetchApplicationBatched != null) {
-        name = getOrFetchApplicationBatched.name;
+        name1 = getOrFetchApplicationBatched.name;
       }
+      name = name1;
       tmp8Result = tmp11;
     }
   } else if (null != platform) {
-    let tmp3Result = tmp3(1396);
-    tmp3Result = tmp3(4411);
+    const tmp3Result = tmp3(1396);
+    const tmp8 = closure_1_12;
     const icon = platform.icon;
-    obj1 = { source: null, disableColor: true };
-    obj1[0] = tmp3Result.makeSource(tmp3Result.isThemeDark(tmp2) ? icon.darkPNG : icon.lightPNG);
-    tmp8Result = callback2(tmp3(1178).Icon, obj1);
-    const tmp8 = callback2;
+    const obj4 = { source: tmp3Result.makeSource(tmp3(4425).isThemeDark(tmp2) ? icon.darkPNG : icon.lightPNG), disableColor: true };
+    tmp8Result = tmp8(tmp3(1178).Icon, obj4);
+    const tmp3Result2 = tmp3(4425);
   }
-  const obj2 = { icon: tmp8Result, label: null, trailing: null };
+  const obj5 = { icon: tmp8Result, label: null, trailing: null };
   const intl = tmp3(1114).intl;
-  let name1;
+  let name2;
   if (platform != null) {
-    name1 = platform.name;
+    name2 = platform.name;
   }
-  if (name1 == null) {
-    name1 = name;
+  if (name2 == null) {
+    name2 = name;
   }
-  obj2[1] = intl.format(getSystemLocale.t.Nj0a3j, { platformName: name1 });
-  const obj3 = { "aria-label": null, onPress: null, disabled: null, children: null };
+  obj5.label = intl.format(util.t.Nj0a3j, { platformName: name2 });
+  const obj6 = { "aria-label": null, onPress: null, disabled: null, children: null };
   const intl2 = tmp3(1114).intl;
-  obj3[0] = intl2.string(getSystemLocale.t.N86XcP);
-  obj3[1] = onRemove;
-  obj3[2] = locked;
-  obj3[3] = callback2(XSmallIcon.XSmallIcon, {});
-  obj2[2] = callback2(PressableBase.PressableOpacity, obj3);
-  return callback2(TableRowInner.TableRow, obj2);
+  obj6["aria-label"] = intl2.string(util.t.N86XcP);
+  obj6.onPress = onRemove;
+  obj6.disabled = locked;
+  obj6.children = closure_1_12(XSmallIcon.XSmallIcon, {});
+  obj5.trailing = closure_1_12(Pressables.PressableOpacity, obj6);
+  return closure_1_12(TableRow.TableRow, obj5);
 }
 function BooleanConfigRule(metadataField) {
   metadataField = metadataField.metadataField;
   const existingPendingConfiguration = metadataField.existingPendingConfiguration;
-  ({ platform: dependencyMap, onConfigurationChange: closure_3, applicationId: closure_4, operator } = metadataField);
+  ({ platform: dependencyMap, onConfigurationChange: _slicedToArray, applicationId: noop, operator } = metadataField);
   operator = undefined;
   ({ fieldText, locked } = metadataField);
   if (operator == null) {
     operator = constants.EQUAL;
   }
   let obj = { label: fieldText, value: null, disabled: null, onValueChange: null };
-  let value;
+  value = undefined;
   if (existingPendingConfiguration != null) {
     value = existingPendingConfiguration.configuration.value;
   }
-  obj[1] = "1" === value;
-  obj[2] = locked;
-  obj[3] = function onValueChange(arg0) {
+  obj.value = "1" === value;
+  obj.disabled = locked;
+  obj.onValueChange = function onValueChange(arg0) {
     let tmp = null;
     if (arg0) {
-      let type;
+      type = undefined;
       if (type != null) {
         type = type.type;
       }
       if (type == null) {
-        type = closure_1_10;
+        type = closure_2_10;
       }
-      const obj = { connectionType: null, applicationId: null, connectionMetadataField: null, operator: null, value: "1" };
-      obj[0] = type;
-      obj[1] = closure_4;
-      obj[2] = metadataField;
-      obj[3] = operator;
+      const obj = { connectionType: type, applicationId, connectionMetadataField: metadataField, operator, value: "1" };
       tmp = obj;
     }
     let num;
@@ -141,24 +133,22 @@ function BooleanConfigRule(metadataField) {
     if (num == null) {
       num = -1;
     }
-    closure_3(tmp, num);
+    _slicedToArray(tmp, num);
   };
-  return closure_12(metadataField(7201).TableSwitchRow, obj, metadataField);
+  return closure_12(metadataField(7214).TableSwitchRow, obj, metadataField);
 }
 function NumericalConfigRule(existingPendingConfiguration) {
   ({ fieldText, fieldTextHook, metadataField } = existingPendingConfiguration);
   existingPendingConfiguration = existingPendingConfiguration.existingPendingConfiguration;
-  ({ platform: dependencyMap, onConfigurationChange: closure_3, locked, applicationId: closure_4 } = existingPendingConfiguration);
-  let map;
-  let num;
+  ({ platform: dependencyMap, onConfigurationChange: _slicedToArray, locked, applicationId: noop } = existingPendingConfiguration);
   c7 = undefined;
-  let str;
-  let first;
+  let str1;
+  value = undefined;
   closure_10 = undefined;
   closure_11 = undefined;
   closure_13 = undefined;
-  function onInputValueChange(TableSwitchRow, arg1, metadataField) {
-    callback(TableSwitchRow);
+  function onInputValueChange(TableSwitchRow) {
+    closure_10(TableSwitchRow);
     let isFiniteResult = null != existingPendingConfiguration;
     if (isFiniteResult) {
       isFiniteResult = "" !== TableSwitchRow;
@@ -170,56 +160,47 @@ function NumericalConfigRule(existingPendingConfiguration) {
     }
     if (isFiniteResult) {
       let type;
-      if (closure_2 != null) {
-        type = closure_2.type;
+      if (dependencyMap != null) {
+        type = dependencyMap.type;
       }
       if (type == null) {
-        type = callback;
+        type = closure_2_10;
       }
-      const obj = { connectionType: null, applicationId: null, connectionMetadataField: null, operator: null, value: null };
-      obj[0] = type;
-      obj[1] = closure_4;
-      obj[2] = metadataField;
-      obj[3] = c7;
-      obj[4] = metadataField(closure_1_2[18]).storedValueFor(TableSwitchRow, c7);
-      closure_3(obj, num);
-      const obj2 = metadataField(closure_1_2[18]);
-      const tmp4 = closure_3;
+      const obj = { connectionType: type, applicationId, connectionMetadataField: metadataField, operator, value: RoleConnectionRequirementUtils.storedValueFor(TableSwitchRow, operator) };
+      _slicedToArray(obj, num);
     }
   }
-  map = callback4();
-  num = undefined;
+  let map = closure_15();
+  let num;
   if (existingPendingConfiguration != null) {
     num = existingPendingConfiguration.index;
   }
   if (num == null) {
     num = -1;
   }
-  let obj = metadataField(17640);
-  const realizedOperatorForResult = obj.realizedOperatorFor(existingPendingConfiguration.operator);
+  const realizedOperatorForResult = metadataField(17673).realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
-  let value;
+  value = undefined;
   if (existingPendingConfiguration != null) {
     if (existingPendingConfiguration.configuration != null) {
       value = iter.value;
     }
   }
-  let tmpResult = tmp(17640);
-  str = tmpResult.displayedValueFor(value, realizedOperatorForResult);
-  str = str.toString();
-  let mapped = React;
-  const tmp7 = callback(React.useState(str), 2);
-  first = tmp7[0];
+  let obj = metadataField(17673);
+  const tmpResult = metadataField(17673);
+  str1 = metadataField(17673).displayedValueFor(value, realizedOperatorForResult).toString();
+  let mapped = noop;
+  [value] = noop.useState(str1);
   closure_10 = tmp9;
   let tmp10 = null != value;
   if (tmp10) {
-    tmp10 = "" !== first;
+    tmp10 = "" !== value;
   }
   if (tmp10) {
-    tmp10 = first !== str;
+    tmp10 = value !== str1;
   }
   if (tmp10) {
-    tmp9(str);
+    tmp9(str1);
   }
   let configuration;
   if (existingPendingConfiguration != null) {
@@ -231,245 +212,232 @@ function NumericalConfigRule(existingPendingConfiguration) {
   }
   closure_11 = tmp14;
   if (undefined !== fieldTextHook) {
-    tmpResult = tmp(1115);
-    closure_13 = tmpResult.isIOS() ? map.numericalInputContainerIOSInline : map.numericalInputContainerAndroidInline;
+    closure_13 = tmp(1115).isIOS() ? map.numericalInputContainerIOSInline : map.numericalInputContainerAndroidInline;
     const intl = tmp(1114).intl;
-    obj = { metadataHook: null };
-    obj[0] = function metadataHook() {
-      let obj = { style: items, children: null };
-      items = [closure_13, map.numericalInputContainerBase];
-      const items1 = [map.numericalInput, ];
-      let numericalInputDisabled = closure_11;
-      if (closure_11) {
-        numericalInputDisabled = map.numericalInputDisabled;
-      }
-      obj = { keyboardType: "number-pad", style: items1, editable: !closure_11, value: first, onChangeText: onInputValueChange, hitSlop: 8 };
-      items1[1] = numericalInputDisabled;
-      obj[1] = onInputValueChange(metadataField(closure_1_2[10]).TextInput, obj, metadataField);
-      return onInputValueChange(map, obj, "_numericalInputContainer");
+    let obj2 = {
+      metadataHook() {
+          const obj = { style: null, children: null };
+          const items = [closure_13, map.numericalInputContainerBase];
+          obj.style = items;
+          const items1 = [map.numericalInput, ];
+          let numericalInputDisabled = closure_11;
+          if (closure_11) {
+            numericalInputDisabled = map.numericalInputDisabled;
+          }
+          items1[1] = numericalInputDisabled;
+          obj.children = closure_2_12(native.TextInput, { keyboardType: "number-pad", style: items1, editable: !closure_11, value, onChangeText: onInputValueChange, hitSlop: 8 }, metadataField);
+          return closure_2_12(View, obj, "_numericalInputContainer");
+        }
     };
-    obj = { style: null, children: null };
-    obj[0] = map.metadataRow;
+    const obj3 = { style: map.metadataRow, children: null };
+    const tmpResult2 = tmp(1115);
     fieldTextHook = mapped.Children;
     map = fieldTextHook.map;
-    mapped = map(intl.format(fieldTextHook, obj), (str) => {
-      let tmp = str;
-      if (typeof str === "string") {
-        const obj = { variant: "text-md/semibold", style: null, children: null };
-        obj[1] = map.metadataRowText;
-        obj[2] = str;
+    mapped = map(intl.format(fieldTextHook, obj2), (children, arg1) => {
+      let tmp = children;
+      if (typeof children === "string") {
+        const obj = { variant: "text-md/semibold", style: map.metadataRowText, children };
         const _HermesInternal = HermesInternal;
-        tmp = onInputValueChange(metadataField(closure_1_2[20]).Text, obj, "t-" + arg1);
+        tmp = closure_2_12(Text_Text.Text, obj, "t-" + arg1);
       }
       return tmp;
     });
-    obj[1] = mapped;
-    onInputValueChange(map, obj);
-    const formatResult = intl.format(fieldTextHook, obj);
+    obj3.children = mapped;
+    onInputValueChange(map, obj3);
+    const formatResult = intl.format(fieldTextHook, obj2);
   } else {
     let tmp21Result;
     if (undefined !== fieldText) {
-      obj1 = { style: null, children: null };
-      obj1[0] = map.appNumericalInputContainer;
+      const obj4 = { style: map.appNumericalInputContainer, children: null };
       let items = [map.appNumericalInput, ];
       let numericalInputDisabled = tmp14;
       if (tmp14) {
         numericalInputDisabled = map.numericalInputDisabled;
       }
-      let obj2 = { children: null };
-      const obj3 = { keyboardType: "number-pad", style: null, editable: null, value: null, onChangeText: null };
+      const obj5 = { children: null };
+      const obj6 = { keyboardType: "number-pad", style: null, editable: null, value: null, onChangeText: null };
       items[1] = numericalInputDisabled;
-      obj3[1] = items;
-      obj3[2] = !tmp14;
-      obj3[3] = first;
-      obj3[4] = onInputValueChange;
-      obj2[0] = onInputValueChange(tmp(1178).TextInput, obj3, metadataField);
-      let items1 = [onInputValueChange(map, obj2, "_numericalInputContainer"), ];
-      const obj4 = { variant: "text-md/semibold", style: null, children: null };
-      obj4[1] = map.appNumericalInputText;
-      obj4[2] = fieldText;
-      items1[1] = onInputValueChange(tmp(4556).Text, obj4);
-      obj1[1] = items1;
-      tmp21Result = closure_13(tmp22, obj1);
-      const tmp21 = closure_13;
+      obj6.style = items;
+      obj6.editable = !tmp14;
+      obj6.value = value;
+      obj6.onChangeText = onInputValueChange;
+      obj5.children = onInputValueChange(tmp(1178).TextInput, obj6, metadataField);
+      let items1 = [onInputValueChange(map, obj5, "_numericalInputContainer"), ];
+      const obj7 = { variant: "text-md/semibold", style: map.appNumericalInputText, children: fieldText };
+      items1[1] = onInputValueChange(tmp(4570).Text, obj7);
+      obj4.children = items1;
+      tmp21Result = closure_13(tmp22, obj4);
     }
-    const obj5 = { label: null, value: null, disabled: null, onValueChange: null };
-    obj5[0] = tmp21Result;
-    obj5[1] = tmp13;
-    obj5[2] = locked;
-    obj5[3] = function onValueChange(arg0) {
-      let tmp = first;
-      if ("" === first) {
-        tmp = str;
-      }
-      callback(tmp);
-      let tmp3 = null;
-      if (arg0) {
-        let type;
-        if (closure_2 != null) {
-          type = closure_2.type;
+    const obj8 = {
+      label: tmp21Result,
+      value: tmp13,
+      disabled: locked,
+      onValueChange(arg0) {
+          let tmp = first;
+          if ("" === first) {
+            tmp = str1;
+          }
+          closure_10(tmp);
+          let tmp3 = null;
+          if (arg0) {
+            let type;
+            if (dependencyMap != null) {
+              type = dependencyMap.type;
+            }
+            if (type == null) {
+              type = closure_2_10;
+            }
+            const obj = { connectionType: type, applicationId, connectionMetadataField: metadataField, operator, value: RoleConnectionRequirementUtils.storedValueFor(tmp, operator) };
+            tmp3 = obj;
+          }
+          num = undefined;
+          if (existingPendingConfiguration != null) {
+            num = existingPendingConfiguration.index;
+          }
+          if (num == null) {
+            num = -1;
+          }
+          _slicedToArray(tmp3, num);
         }
-        if (type == null) {
-          type = callback;
-        }
-        const obj = { connectionType: null, applicationId: null, connectionMetadataField: null, operator: null, value: null };
-        obj[0] = type;
-        obj[1] = closure_4;
-        obj[2] = metadataField;
-        obj[3] = c7;
-        obj[4] = metadataField(closure_1_2[18]).storedValueFor(tmp, c7);
-        tmp3 = obj;
-        const obj2 = metadataField(closure_1_2[18]);
-      }
-      num = undefined;
-      if (existingPendingConfiguration != null) {
-        num = existingPendingConfiguration.index;
-      }
-      if (num == null) {
-        num = -1;
-      }
-      closure_3(tmp3, num);
     };
-    return onInputValueChange(tmp(7201).TableSwitchRow, obj5, metadataField);
+    return onInputValueChange(tmp(7214).TableSwitchRow, obj8, metadataField);
   }
 }
 function BlueskyMetadataRules(arg0) {
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
-  let obj = getPlatformUserUrlDefault;
-  const value = obj.get(PlatformTypes.BLUESKY);
-  obj = { children: null };
-  obj = { fieldTextHook: getSystemLocale.t["REyUZ/"], metadataField: closure_7.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(closure_7.CREATED_AT), platform: value, onConfigurationChange, locked };
-  const items = [callback2(NumericalConfigRule, obj), callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale.t["/w/EYk"], metadataField: closure_7.BLUESKY_FOLLOWERS_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.BLUESKY_FOLLOWERS_COUNT), platform: value, onConfigurationChange, locked }), ];
-  obj1 = { fieldTextHook: getSystemLocale.t["/w/EYk"], metadataField: closure_7.BLUESKY_FOLLOWERS_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.BLUESKY_FOLLOWERS_COUNT), platform: value, onConfigurationChange, locked };
-  items[2] = callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale.t["5I4mVS"], metadataField: closure_7.BLUESKY_STATUSES_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.BLUESKY_STATUSES_COUNT), platform: value, onConfigurationChange, locked });
-  obj[0] = items;
-  return callback3(closure_14, obj);
+  value = PlatformsDefault.get(PlatformTypes.BLUESKY);
+  const obj2 = { children: null };
+  const items = [closure_1_12(NumericalConfigRule, { fieldTextHook: util.t["REyUZ/"], metadataField: React5.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(React5.CREATED_AT), platform: value, onConfigurationChange, locked }), , ];
+  const obj3 = { fieldTextHook: util.t["REyUZ/"], metadataField: React5.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(React5.CREATED_AT), platform: value, onConfigurationChange, locked };
+  items[1] = closure_1_12(NumericalConfigRule, { fieldTextHook: util.t["/w/EYk"], metadataField: React5.BLUESKY_FOLLOWERS_COUNT, existingPendingConfiguration: configMetadataMap.get(React5.BLUESKY_FOLLOWERS_COUNT), platform: value, onConfigurationChange, locked });
+  const obj4 = { fieldTextHook: util.t["/w/EYk"], metadataField: React5.BLUESKY_FOLLOWERS_COUNT, existingPendingConfiguration: configMetadataMap.get(React5.BLUESKY_FOLLOWERS_COUNT), platform: value, onConfigurationChange, locked };
+  items[2] = closure_1_12(NumericalConfigRule, { fieldTextHook: util.t["5I4mVS"], metadataField: React5.BLUESKY_STATUSES_COUNT, existingPendingConfiguration: configMetadataMap.get(React5.BLUESKY_STATUSES_COUNT), platform: value, onConfigurationChange, locked });
+  obj2.children = items;
+  return map1(closure_1_14, obj2);
 }
 function SteamMetadataRules(arg0) {
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
-  let obj = getPlatformUserUrlDefault;
-  const value = obj.get(PlatformTypes.STEAM);
-  obj = { children: null };
-  obj = { fieldTextHook: getSystemLocale.t["REyUZ/"], metadataField: closure_7.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(closure_7.CREATED_AT), platform: value, onConfigurationChange, locked };
-  const items = [callback2(NumericalConfigRule, obj), callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale.t.zVJxqj, metadataField: closure_7.STEAM_GAME_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.STEAM_GAME_COUNT), platform: value, onConfigurationChange, locked }), , ];
-  obj1 = { fieldTextHook: getSystemLocale.t.zVJxqj, metadataField: closure_7.STEAM_GAME_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.STEAM_GAME_COUNT), platform: value, onConfigurationChange, locked };
-  items[2] = callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale.t["ZCNdD/"], metadataField: closure_7.STEAM_ITEM_COUNT_DOTA2, existingPendingConfiguration: configMetadataMap.get(closure_7.STEAM_ITEM_COUNT_DOTA2), platform: value, onConfigurationChange, locked });
-  const obj2 = { fieldTextHook: getSystemLocale.t["ZCNdD/"], metadataField: closure_7.STEAM_ITEM_COUNT_DOTA2, existingPendingConfiguration: configMetadataMap.get(closure_7.STEAM_ITEM_COUNT_DOTA2), platform: value, onConfigurationChange, locked };
-  items[3] = callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale.t["MCHnK+"], metadataField: closure_7.STEAM_ITEM_COUNT_TF2, existingPendingConfiguration: configMetadataMap.get(closure_7.STEAM_ITEM_COUNT_TF2), platform: value, onConfigurationChange, locked });
-  obj[0] = items;
-  return callback3(closure_14, obj);
+  value = PlatformsDefault.get(PlatformTypes.STEAM);
+  const obj2 = { children: null };
+  const items = [closure_1_12(NumericalConfigRule, { fieldTextHook: util.t["REyUZ/"], metadataField: React5.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(React5.CREATED_AT), platform: value, onConfigurationChange, locked }), , , ];
+  const obj3 = { fieldTextHook: util.t["REyUZ/"], metadataField: React5.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(React5.CREATED_AT), platform: value, onConfigurationChange, locked };
+  items[1] = closure_1_12(NumericalConfigRule, { fieldTextHook: util.t.zVJxqj, metadataField: React5.STEAM_GAME_COUNT, existingPendingConfiguration: configMetadataMap.get(React5.STEAM_GAME_COUNT), platform: value, onConfigurationChange, locked });
+  const obj4 = { fieldTextHook: util.t.zVJxqj, metadataField: React5.STEAM_GAME_COUNT, existingPendingConfiguration: configMetadataMap.get(React5.STEAM_GAME_COUNT), platform: value, onConfigurationChange, locked };
+  items[2] = closure_1_12(NumericalConfigRule, { fieldTextHook: util.t["ZCNdD/"], metadataField: React5.STEAM_ITEM_COUNT_DOTA2, existingPendingConfiguration: configMetadataMap.get(React5.STEAM_ITEM_COUNT_DOTA2), platform: value, onConfigurationChange, locked });
+  const obj5 = { fieldTextHook: util.t["ZCNdD/"], metadataField: React5.STEAM_ITEM_COUNT_DOTA2, existingPendingConfiguration: configMetadataMap.get(React5.STEAM_ITEM_COUNT_DOTA2), platform: value, onConfigurationChange, locked };
+  items[3] = closure_1_12(NumericalConfigRule, { fieldTextHook: util.t["MCHnK+"], metadataField: React5.STEAM_ITEM_COUNT_TF2, existingPendingConfiguration: configMetadataMap.get(React5.STEAM_ITEM_COUNT_TF2), platform: value, onConfigurationChange, locked });
+  obj2.children = items;
+  return map1(closure_1_14, obj2);
 }
 function TwitterMetadataRules(arg0) {
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
-  let obj = getPlatformUserUrlDefault;
-  const value = obj.get(PlatformTypes.TWITTER);
-  obj = { children: null };
-  obj = { fieldTextHook: getSystemLocale.t["REyUZ/"], metadataField: closure_7.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(closure_7.CREATED_AT), platform: value, onConfigurationChange, locked };
-  const items = [callback2(NumericalConfigRule, obj), callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale.t["/w/EYk"], metadataField: closure_7.TWITTER_FOLLOWERS_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.TWITTER_FOLLOWERS_COUNT), platform: value, onConfigurationChange, locked }), , ];
-  obj1 = { fieldTextHook: getSystemLocale.t["/w/EYk"], metadataField: closure_7.TWITTER_FOLLOWERS_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.TWITTER_FOLLOWERS_COUNT), platform: value, onConfigurationChange, locked };
-  items[2] = callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale.t["+NFH7k"], metadataField: closure_7.TWITTER_STATUSES_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.TWITTER_STATUSES_COUNT), platform: value, onConfigurationChange, locked });
-  const obj3 = { fieldText: null, metadataField: null, existingPendingConfiguration: null, platform: null, onConfigurationChange: null, locked: null };
-  const intl = getSystemLocale.intl;
-  obj3[0] = intl.string(getSystemLocale.t.E2iT8K);
-  obj3[1] = closure_7.TWITTER_VERIFIED;
-  obj3[2] = configMetadataMap.get(closure_7.TWITTER_VERIFIED);
-  obj3[3] = value;
-  obj3[4] = onConfigurationChange;
-  obj3[5] = locked;
-  items[3] = callback2(BooleanConfigRule, obj3);
-  obj[0] = items;
-  return callback3(closure_14, obj);
+  value = PlatformsDefault.get(PlatformTypes.TWITTER);
+  const obj2 = { children: null };
+  const items = [closure_1_12(NumericalConfigRule, { fieldTextHook: util.t["REyUZ/"], metadataField: React5.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(React5.CREATED_AT), platform: value, onConfigurationChange, locked }), , , ];
+  const obj3 = { fieldTextHook: util.t["REyUZ/"], metadataField: React5.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(React5.CREATED_AT), platform: value, onConfigurationChange, locked };
+  items[1] = closure_1_12(NumericalConfigRule, { fieldTextHook: util.t["/w/EYk"], metadataField: React5.TWITTER_FOLLOWERS_COUNT, existingPendingConfiguration: configMetadataMap.get(React5.TWITTER_FOLLOWERS_COUNT), platform: value, onConfigurationChange, locked });
+  const obj4 = { fieldTextHook: util.t["/w/EYk"], metadataField: React5.TWITTER_FOLLOWERS_COUNT, existingPendingConfiguration: configMetadataMap.get(React5.TWITTER_FOLLOWERS_COUNT), platform: value, onConfigurationChange, locked };
+  items[2] = closure_1_12(NumericalConfigRule, { fieldTextHook: util.t["+NFH7k"], metadataField: React5.TWITTER_STATUSES_COUNT, existingPendingConfiguration: configMetadataMap.get(React5.TWITTER_STATUSES_COUNT), platform: value, onConfigurationChange, locked });
+  const obj6 = { fieldText: null, metadataField: null, existingPendingConfiguration: null, platform: null, onConfigurationChange: null, locked: null };
+  const intl = util.intl;
+  obj6.fieldText = intl.string(util.t.E2iT8K);
+  obj6.metadataField = React5.TWITTER_VERIFIED;
+  obj6.existingPendingConfiguration = configMetadataMap.get(React5.TWITTER_VERIFIED);
+  obj6.platform = value;
+  obj6.onConfigurationChange = onConfigurationChange;
+  obj6.locked = locked;
+  items[3] = closure_1_12(BooleanConfigRule, obj6);
+  obj2.children = items;
+  return map1(closure_1_14, obj2);
 }
 function RedditMetadataRules(arg0) {
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
-  let obj = getPlatformUserUrlDefault;
-  const value = obj.get(PlatformTypes.REDDIT);
-  obj = { children: null };
-  obj = { fieldTextHook: getSystemLocale.t["REyUZ/"], metadataField: closure_7.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(closure_7.CREATED_AT), platform: value, onConfigurationChange, locked };
-  const items = [callback2(NumericalConfigRule, obj), callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale.t.TLgZhv, metadataField: closure_7.REDDIT_TOTAL_KARMA, existingPendingConfiguration: configMetadataMap.get(closure_7.REDDIT_TOTAL_KARMA), platform: value, onConfigurationChange, locked }), , ];
-  const obj2 = { fieldText: null, metadataField: null, existingPendingConfiguration: null, platform: null, onConfigurationChange: null, locked: null };
-  const intl = getSystemLocale.intl;
-  obj2[0] = intl.string(getSystemLocale.t["0cKdka"]);
-  obj2[1] = closure_7.REDDIT_MOD;
-  obj2[2] = configMetadataMap.get(closure_7.REDDIT_MOD);
-  obj2[3] = value;
-  obj2[4] = onConfigurationChange;
-  obj2[5] = locked;
-  items[2] = callback2(BooleanConfigRule, obj2);
-  const obj3 = { fieldText: null, metadataField: null, existingPendingConfiguration: null, platform: null, onConfigurationChange: null, locked: null };
-  const intl2 = getSystemLocale.intl;
-  obj3[0] = intl2.string(getSystemLocale.t.kCAN58);
-  obj3[1] = closure_7.REDDIT_GOLD;
-  obj3[2] = configMetadataMap.get(closure_7.REDDIT_GOLD);
-  obj3[3] = value;
-  obj3[4] = onConfigurationChange;
-  obj3[5] = locked;
-  items[3] = callback2(BooleanConfigRule, obj3);
-  obj[0] = items;
-  return callback3(closure_14, obj);
+  value = PlatformsDefault.get(PlatformTypes.REDDIT);
+  const obj2 = { children: null };
+  const items = [closure_1_12(NumericalConfigRule, { fieldTextHook: util.t["REyUZ/"], metadataField: React5.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(React5.CREATED_AT), platform: value, onConfigurationChange, locked }), , , ];
+  const obj3 = { fieldTextHook: util.t["REyUZ/"], metadataField: React5.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(React5.CREATED_AT), platform: value, onConfigurationChange, locked };
+  items[1] = closure_1_12(NumericalConfigRule, { fieldTextHook: util.t.TLgZhv, metadataField: React5.REDDIT_TOTAL_KARMA, existingPendingConfiguration: configMetadataMap.get(React5.REDDIT_TOTAL_KARMA), platform: value, onConfigurationChange, locked });
+  const obj5 = { fieldText: null, metadataField: null, existingPendingConfiguration: null, platform: null, onConfigurationChange: null, locked: null };
+  const intl = util.intl;
+  obj5.fieldText = intl.string(util.t["0cKdka"]);
+  obj5.metadataField = React5.REDDIT_MOD;
+  obj5.existingPendingConfiguration = configMetadataMap.get(React5.REDDIT_MOD);
+  obj5.platform = value;
+  obj5.onConfigurationChange = onConfigurationChange;
+  obj5.locked = locked;
+  items[2] = closure_1_12(BooleanConfigRule, obj5);
+  const obj6 = { fieldText: null, metadataField: null, existingPendingConfiguration: null, platform: null, onConfigurationChange: null, locked: null };
+  const intl2 = util.intl;
+  obj6.fieldText = intl2.string(util.t.kCAN58);
+  obj6.metadataField = React5.REDDIT_GOLD;
+  obj6.existingPendingConfiguration = configMetadataMap.get(React5.REDDIT_GOLD);
+  obj6.platform = value;
+  obj6.onConfigurationChange = onConfigurationChange;
+  obj6.locked = locked;
+  items[3] = closure_1_12(BooleanConfigRule, obj6);
+  obj2.children = items;
+  return map1(closure_1_14, obj2);
 }
 function PaypalMetadataRules(arg0) {
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
-  let obj = getPlatformUserUrlDefault;
-  const value = obj.get(PlatformTypes.PAYPAL);
-  obj = { children: null };
-  obj = { fieldTextHook: getSystemLocale.t["REyUZ/"], metadataField: closure_7.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(closure_7.CREATED_AT), platform: value, onConfigurationChange, locked };
-  const items = [callback2(NumericalConfigRule, obj), ];
-  obj1 = { fieldText: null, metadataField: null, existingPendingConfiguration: null, platform: null, onConfigurationChange: null, locked: null };
-  const intl = getSystemLocale.intl;
-  obj1[0] = intl.string(getSystemLocale.t["0JyE8I"]);
-  obj1[1] = closure_7.PAYPAL_VERIFIED;
-  obj1[2] = configMetadataMap.get(closure_7.PAYPAL_VERIFIED);
-  obj1[3] = value;
-  obj1[4] = onConfigurationChange;
-  obj1[5] = locked;
-  items[1] = callback2(BooleanConfigRule, obj1);
-  obj[0] = items;
-  return callback3(closure_14, obj);
+  value = PlatformsDefault.get(PlatformTypes.PAYPAL);
+  const obj2 = { children: null };
+  const items = [closure_1_12(NumericalConfigRule, { fieldTextHook: util.t["REyUZ/"], metadataField: React5.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(React5.CREATED_AT), platform: value, onConfigurationChange, locked }), ];
+  const obj4 = { fieldText: null, metadataField: null, existingPendingConfiguration: null, platform: null, onConfigurationChange: null, locked: null };
+  const intl = util.intl;
+  obj4.fieldText = intl.string(util.t["0JyE8I"]);
+  obj4.metadataField = React5.PAYPAL_VERIFIED;
+  obj4.existingPendingConfiguration = configMetadataMap.get(React5.PAYPAL_VERIFIED);
+  obj4.platform = value;
+  obj4.onConfigurationChange = onConfigurationChange;
+  obj4.locked = locked;
+  items[1] = closure_1_12(BooleanConfigRule, obj4);
+  obj2.children = items;
+  return map1(closure_1_14, obj2);
 }
 function EbayMetadataRules(arg0) {
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
-  let obj = getPlatformUserUrlDefault;
-  const value = obj.get(PlatformTypes.EBAY);
-  obj = { children: null };
-  obj = { fieldTextHook: getSystemLocale.t["REyUZ/"], metadataField: closure_7.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(closure_7.CREATED_AT), platform: value, onConfigurationChange, locked };
-  const items = [callback2(NumericalConfigRule, obj), callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale.t.oTFOe5, metadataField: closure_7.EBAY_POSITIVE_FEEDBACK_PERCENTAGE, existingPendingConfiguration: configMetadataMap.get(closure_7.EBAY_POSITIVE_FEEDBACK_PERCENTAGE), platform: value, onConfigurationChange, locked }), , , ];
-  obj1 = { fieldTextHook: getSystemLocale.t.oTFOe5, metadataField: closure_7.EBAY_POSITIVE_FEEDBACK_PERCENTAGE, existingPendingConfiguration: configMetadataMap.get(closure_7.EBAY_POSITIVE_FEEDBACK_PERCENTAGE), platform: value, onConfigurationChange, locked };
-  items[2] = callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale.t["v5a2+Q"], metadataField: closure_7.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT), platform: value, onConfigurationChange, locked });
-  const obj2 = { fieldTextHook: getSystemLocale.t["v5a2+Q"], metadataField: closure_7.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT), platform: value, onConfigurationChange, locked };
-  items[3] = callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale.t.yYbR2r, metadataField: closure_7.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT), platform: value, onConfigurationChange, locked, operator: constants.LESS_THAN });
-  const obj4 = { fieldText: null, metadataField: null, existingPendingConfiguration: null, platform: null, onConfigurationChange: null, locked: null };
-  const intl = getSystemLocale.intl;
-  obj4[0] = intl.string(getSystemLocale.t["39wASN"]);
-  obj4[1] = closure_7.EBAY_TOP_RATED_SELLER;
-  obj4[2] = configMetadataMap.get(closure_7.EBAY_TOP_RATED_SELLER);
-  obj4[3] = value;
-  obj4[4] = onConfigurationChange;
-  obj4[5] = locked;
-  items[4] = callback2(BooleanConfigRule, obj4);
-  obj[0] = items;
-  return callback3(closure_14, obj);
+  value = PlatformsDefault.get(PlatformTypes.EBAY);
+  const obj2 = { children: null };
+  const items = [closure_1_12(NumericalConfigRule, { fieldTextHook: util.t["REyUZ/"], metadataField: React5.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(React5.CREATED_AT), platform: value, onConfigurationChange, locked }), , , , ];
+  const obj3 = { fieldTextHook: util.t["REyUZ/"], metadataField: React5.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(React5.CREATED_AT), platform: value, onConfigurationChange, locked };
+  items[1] = closure_1_12(NumericalConfigRule, { fieldTextHook: util.t.oTFOe5, metadataField: React5.EBAY_POSITIVE_FEEDBACK_PERCENTAGE, existingPendingConfiguration: configMetadataMap.get(React5.EBAY_POSITIVE_FEEDBACK_PERCENTAGE), platform: value, onConfigurationChange, locked });
+  const obj4 = { fieldTextHook: util.t.oTFOe5, metadataField: React5.EBAY_POSITIVE_FEEDBACK_PERCENTAGE, existingPendingConfiguration: configMetadataMap.get(React5.EBAY_POSITIVE_FEEDBACK_PERCENTAGE), platform: value, onConfigurationChange, locked };
+  items[2] = closure_1_12(NumericalConfigRule, { fieldTextHook: util.t["v5a2+Q"], metadataField: React5.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT, existingPendingConfiguration: configMetadataMap.get(React5.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT), platform: value, onConfigurationChange, locked });
+  const obj5 = { fieldTextHook: util.t["v5a2+Q"], metadataField: React5.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT, existingPendingConfiguration: configMetadataMap.get(React5.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT), platform: value, onConfigurationChange, locked };
+  items[3] = closure_1_12(NumericalConfigRule, { fieldTextHook: util.t.yYbR2r, metadataField: React5.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT, existingPendingConfiguration: configMetadataMap.get(React5.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT), platform: value, onConfigurationChange, locked, operator: constants.LESS_THAN });
+  const obj7 = { fieldText: null, metadataField: null, existingPendingConfiguration: null, platform: null, onConfigurationChange: null, locked: null };
+  const intl = util.intl;
+  obj7.fieldText = intl.string(util.t["39wASN"]);
+  obj7.metadataField = React5.EBAY_TOP_RATED_SELLER;
+  obj7.existingPendingConfiguration = configMetadataMap.get(React5.EBAY_TOP_RATED_SELLER);
+  obj7.platform = value;
+  obj7.onConfigurationChange = onConfigurationChange;
+  obj7.locked = locked;
+  items[4] = closure_1_12(BooleanConfigRule, obj7);
+  obj2.children = items;
+  return map1(closure_1_14, obj2);
 }
 function TikTokMetadataRules(arg0) {
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
-  let obj = getPlatformUserUrlDefault;
-  const value = obj.get(PlatformTypes.TIKTOK);
-  obj = { children: null };
-  obj = { fieldText: null, metadataField: null, existingPendingConfiguration: null, platform: null, onConfigurationChange: null, locked: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.E2iT8K);
-  obj[1] = closure_7.TIKTOK_VERIFIED;
-  obj[2] = configMetadataMap.get(closure_7.TIKTOK_VERIFIED);
-  obj[3] = value;
-  obj[4] = onConfigurationChange;
-  obj[5] = locked;
-  const items = [callback2(BooleanConfigRule, obj), callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale.t["/w/EYk"], metadataField: closure_7.TIKTOK_FOLLOWER_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.TIKTOK_FOLLOWER_COUNT), platform: value, onConfigurationChange, locked }), , ];
-  obj1 = { fieldTextHook: getSystemLocale.t["/w/EYk"], metadataField: closure_7.TIKTOK_FOLLOWER_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.TIKTOK_FOLLOWER_COUNT), platform: value, onConfigurationChange, locked };
-  items[2] = callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale.t.JHEsYw, metadataField: closure_7.TIKTOK_FOLLOWING_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.TIKTOK_FOLLOWING_COUNT), platform: value, onConfigurationChange, locked });
-  const obj2 = { fieldTextHook: getSystemLocale.t.JHEsYw, metadataField: closure_7.TIKTOK_FOLLOWING_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.TIKTOK_FOLLOWING_COUNT), platform: value, onConfigurationChange, locked };
-  items[3] = callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale.t.tEFCYA, metadataField: closure_7.TIKTOK_LIKES_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.TIKTOK_LIKES_COUNT), platform: value, onConfigurationChange, locked });
-  obj[0] = items;
-  return callback3(closure_14, obj);
+  value = PlatformsDefault.get(PlatformTypes.TIKTOK);
+  const obj2 = { children: null };
+  const obj3 = { fieldText: null, metadataField: null, existingPendingConfiguration: null, platform: null, onConfigurationChange: null, locked: null };
+  const intl = util.intl;
+  obj3.fieldText = intl.string(util.t.E2iT8K);
+  obj3.metadataField = React5.TIKTOK_VERIFIED;
+  obj3.existingPendingConfiguration = configMetadataMap.get(React5.TIKTOK_VERIFIED);
+  obj3.platform = value;
+  obj3.onConfigurationChange = onConfigurationChange;
+  obj3.locked = locked;
+  const items = [closure_1_12(BooleanConfigRule, obj3), , , ];
+  items[1] = closure_1_12(NumericalConfigRule, { fieldTextHook: util.t["/w/EYk"], metadataField: React5.TIKTOK_FOLLOWER_COUNT, existingPendingConfiguration: configMetadataMap.get(React5.TIKTOK_FOLLOWER_COUNT), platform: value, onConfigurationChange, locked });
+  const obj4 = { fieldTextHook: util.t["/w/EYk"], metadataField: React5.TIKTOK_FOLLOWER_COUNT, existingPendingConfiguration: configMetadataMap.get(React5.TIKTOK_FOLLOWER_COUNT), platform: value, onConfigurationChange, locked };
+  items[2] = closure_1_12(NumericalConfigRule, { fieldTextHook: util.t.JHEsYw, metadataField: React5.TIKTOK_FOLLOWING_COUNT, existingPendingConfiguration: configMetadataMap.get(React5.TIKTOK_FOLLOWING_COUNT), platform: value, onConfigurationChange, locked });
+  const obj5 = { fieldTextHook: util.t.JHEsYw, metadataField: React5.TIKTOK_FOLLOWING_COUNT, existingPendingConfiguration: configMetadataMap.get(React5.TIKTOK_FOLLOWING_COUNT), platform: value, onConfigurationChange, locked };
+  items[3] = closure_1_12(NumericalConfigRule, { fieldTextHook: util.t.tEFCYA, metadataField: React5.TIKTOK_LIKES_COUNT, existingPendingConfiguration: configMetadataMap.get(React5.TIKTOK_LIKES_COUNT), platform: value, onConfigurationChange, locked });
+  obj2.children = items;
+  return map1(closure_1_14, obj2);
 }
 function ApplicationMetadataRules(arg0) {
   ({ configMetadataMap: require, onConfigurationChange: importDefault, locked: dependencyMap, integration } = arg0);
@@ -480,7 +448,7 @@ function ApplicationMetadataRules(arg0) {
       const prop = integration.role_connections_metadata;
       mapped = prop.map((type) => {
         type = type.type;
-        if (closure_1_9.INTEGER_LESS_THAN_EQUAL !== type) {
+        if (constants2.INTEGER_LESS_THAN_EQUAL !== type) {
           if (tmp.DATETIME_LESS_THAN_EQUAL !== type) {
             if (tmp.INTEGER_GREATER_THAN_EQUAL !== type) {
               if (tmp.DATETIME_GREATER_THAN_EQUAL !== type) {
@@ -491,13 +459,13 @@ function ApplicationMetadataRules(arg0) {
                         return null;
                       }
                     }
-                    let LESS_THAN = closure_1_8.NOT_EQUAL;
+                    let LESS_THAN = constants.NOT_EQUAL;
                   }
                 }
-                LESS_THAN = closure_1_8.EQUAL;
+                LESS_THAN = constants.EQUAL;
               }
             }
-            LESS_THAN = closure_1_8.GREATER_THAN;
+            LESS_THAN = constants.GREATER_THAN;
           }
           const type2 = type.type;
           if (tmp.INTEGER_LESS_THAN_EQUAL !== type2) {
@@ -506,70 +474,77 @@ function ApplicationMetadataRules(arg0) {
                 if (tmp.INTEGER_NOT_EQUAL !== type2) {
                   if (tmp.DATETIME_LESS_THAN_EQUAL !== type2) {
                     if (tmp.DATETIME_GREATER_THAN_EQUAL !== type2) {
-                      let obj = { fieldText: null, metadataField: null, existingPendingConfiguration: null, platform: null, onConfigurationChange: null, locked: null, operator: null, applicationId: null };
-                      ({ description: obj[0], key: obj[1] } = type);
-                      obj[2] = store.get(type.key);
-                      obj[4] = closure_1;
-                      obj[5] = closure_2;
-                      obj[6] = LESS_THAN;
+                      const obj = { fieldText: null, metadataField: null, existingPendingConfiguration: null, platform: null, onConfigurationChange: null, locked: null, operator: null, applicationId: null };
+                      ({ description: obj.fieldText, key: obj.metadataField } = type);
+                      obj.existingPendingConfiguration = require.get(type.key);
+                      obj.onConfigurationChange = onConfigurationChange;
+                      obj.locked = locked;
+                      obj.operator = LESS_THAN;
                       const application = integration.application;
                       let id;
                       if (application != null) {
                         id = application.id;
                       }
-                      obj[7] = id;
-                      return closure_1_12(closure_1_17, obj, type.key);
+                      obj.applicationId = id;
+                      return closure_2_12(BooleanConfigRule, obj, type.key);
                     }
                   }
                 }
               }
             }
           }
-          obj = { fieldText: null, metadataField: null, existingPendingConfiguration: null, platform: null, onConfigurationChange: null, locked: null, operator: null, applicationId: null };
-          ({ description: obj2[0], key: obj2[1] } = type);
-          obj[2] = store.get(type.key);
-          obj[4] = closure_1;
-          obj[5] = closure_2;
-          obj[6] = LESS_THAN;
+          const obj3 = { fieldText: null, metadataField: null, existingPendingConfiguration: null, platform: null, onConfigurationChange: null, locked: null, operator: null, applicationId: null };
+          ({ description: obj2.fieldText, key: obj2.metadataField } = type);
+          obj3.existingPendingConfiguration = require.get(type.key);
+          obj3.onConfigurationChange = onConfigurationChange;
+          obj3.locked = locked;
+          obj3.operator = LESS_THAN;
           const application2 = integration.application;
           let id1;
           if (application2 != null) {
             id1 = application2.id;
           }
-          obj[7] = id1;
-          return closure_1_12(closure_1_18, obj, type.key);
+          obj3.applicationId = id1;
+          return closure_2_12(NumericalConfigRule, obj3, type.key);
         }
-        LESS_THAN = closure_1_8.LESS_THAN;
+        LESS_THAN = constants.LESS_THAN;
       });
     }
   }
   return mapped;
 }
-({ MetadataFields: error, OperatorTypes: closure_8, MetadataItemTypes: c9, GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: c10, GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: unpackModuleId } = OperatorTypes);
+const View = fn(17).View;
+const PlatformTypes = fn(1074).PlatformTypes;
+const Constants = fn(5422);
+({ MetadataFields: closure_7, OperatorTypes: closure_8, MetadataItemTypes: closure_9, GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: c10, GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: closure_11 } = Constants);
+const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-createCacheKey = { numericalInputContainerIOSInline: { marginTop: -2 }, numericalInputContainerAndroidInline: { transform: items }, numericalInputContainerBase: null, numericalInput: null, appNumericalInput: null, appNumericalInputContainer: null, appNumericalInputText: null, numericalInputDisabled: null, metadataRow: null, metadataRowText: null };
-items = [{ translateY: 10 }];
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { width: 54, height: 32, borderRadius: ThemesDefault.radii.xs, paddingHorizontal: 4, paddingVertical: 0, marginTop: -4 };
-let obj1 = { width: 54, height: 32, borderRadius: ThemesDefault.radii.xs, paddingHorizontal: 4, paddingVertical: 0, marginTop: -4 };
-createCacheKey[4] = { width: 54, height: 32, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs, paddingHorizontal: 8, paddingVertical: 0, marginRight: 8 };
-createCacheKey[5] = { flexDirection: "row", alignItems: "center" };
-createCacheKey[6] = { flexShrink: 1 };
-let obj2 = { width: 54, height: 32, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs, paddingHorizontal: 8, paddingVertical: 0, marginRight: 8 };
-createCacheKey[7] = { color: ThemesDefault.colors.TEXT_MUTED };
-createCacheKey[8] = { flexDirection: "row", flexWrap: "wrap", alignItems: "center" };
-createCacheKey[9] = { lineHeight: 32 };
-let closure_15 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { color: ThemesDefault.colors.TEXT_MUTED };
-let result = require("set").fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleEditConnectionConfiguration.tsx");
+const createStyles = fn(4574);
+let obj2 = { numericalInputContainerIOSInline: { marginTop: -2 }, numericalInputContainerAndroidInline: null, numericalInputContainerBase: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.sm }, numericalInput: null, appNumericalInput: null, appNumericalInputContainer: null, appNumericalInputText: null, numericalInputDisabled: null, metadataRow: null, metadataRowText: null };
+let obj3 = { transform: null };
+let items = [{ translateY: 10 }];
+obj3.transform = items;
+obj2.numericalInputContainerAndroidInline = obj3;
+let size = { width: 54, height: 32, borderRadius: nativeDefault.radii.xs, paddingHorizontal: 4, paddingVertical: 0, marginTop: -4 };
+obj2.numericalInput = size;
+const size1 = { width: 54, height: 32, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, paddingHorizontal: 8, paddingVertical: 0, marginRight: 8 };
+obj2.appNumericalInput = size1;
+obj2.appNumericalInputContainer = { flexDirection: "row", alignItems: "center" };
+obj2.appNumericalInputText = { flexShrink: 1 };
+let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.sm };
+obj2.numericalInputDisabled = { color: nativeDefault.colors.TEXT_MUTED };
+obj2.metadataRow = { flexDirection: "row", flexWrap: "wrap", alignItems: "center" };
+obj2.metadataRowText = { lineHeight: 32 };
+let closure_15 = createStyles.createStyles(obj2);
+size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleEditConnectionConfiguration.tsx");
 
 export default function GuildSettingsRoleEditConnectionConfiguration(configurationItems) {
   configurationItems = configurationItems.configurationItems;
   const onConfigurationChange = configurationItems.onConfigurationChange;
   ({ locked, integrations } = configurationItems);
   let applicationId;
-  c3 = undefined;
+  let index;
   let map;
   if (configurationItems.length < 1) {
     return null;
@@ -597,20 +572,22 @@ export default function GuildSettingsRoleEditConnectionConfiguration(configurati
         }
       }
     }
-    if (configurationItems[0].configuration.connectionType === closure_11) {
-      let obj = { hasIcons: true, children: null };
-      obj = { platform: null, integration: "a", applicationId: 12800, onRemove: 12801, locked: 12804 };
-      obj[2] = applicationId;
-      obj[3] = function onRemove() {
-        return onConfigurationChange(null, configurationItems[0].index);
+    if (configurationItems[0].configuration.connectionType === closure_1_11) {
+      const obj2 = { hasIcons: true, children: null };
+      const obj3 = {
+        platform: null,
+        integration: "a",
+        applicationId,
+        onRemove() {
+              return onConfigurationChange(null, configurationItems[0].index);
+            },
+        locked
       };
-      obj[4] = locked;
-      obj[1] = callback2(Header, obj);
-      return callback2(configurationItems(applicationId[22]).TableRowGroup, obj);
+      obj2.children = closure_1_12(Header, obj3);
+      return closure_1_12(TableRowGroup.TableRowGroup, obj2);
     } else {
       try {
-        obj = onConfigurationChange(applicationId[21]);
-        const value = obj.get(configurationItems[0].configuration.connectionType);
+        value = PlatformsDefault.get(configurationItems[0].configuration.connectionType);
         const _Map = Map;
         map = new Map();
         const item = configurationItems.forEach((configuration) => {
@@ -623,67 +600,65 @@ export default function GuildSettingsRoleEditConnectionConfiguration(configurati
             tmp = null == configuration.configuration.value && null == configuration.configuration.operator;
           }
         });
-        obj1 = { configMetadataMap: null, onConfigurationChange: null, locked: null };
-        obj1[0] = map;
-        obj1[1] = onConfigurationChange;
-        obj1[2] = locked;
+        const obj4 = { configMetadataMap: map, onConfigurationChange, locked };
         let type;
         if (value != null) {
           type = value.type;
         }
         if (PlatformTypes.STEAM === type) {
-          const obj2 = {};
-          const merged = Object.assign(obj1);
-          let tmp21 = callback2(SteamMetadataRules, obj2);
-          let tmp22 = callback2;
-        } else if (tmp15.TWITTER === type) {
-          const obj3 = {};
-          const merged1 = Object.assign(obj1);
-          tmp21 = callback2(TwitterMetadataRules, obj3);
-          tmp22 = callback2;
-        } else if (tmp15.REDDIT === type) {
-          const obj4 = {};
-          const merged2 = Object.assign(obj1);
-          tmp21 = callback2(RedditMetadataRules, obj4);
-          tmp22 = callback2;
-        } else if (tmp15.BLUESKY === type) {
           const obj5 = {};
-          const merged3 = Object.assign(obj1);
-          tmp21 = callback2(BlueskyMetadataRules, obj5);
-          tmp22 = callback2;
-        } else if (tmp15.PAYPAL === type) {
+          const merged = Object.assign(obj4);
+          let tmp21 = closure_1_12(SteamMetadataRules, obj5);
+          let tmp22 = closure_1_12;
+        } else if (tmp15.TWITTER === type) {
           const obj6 = {};
-          const merged4 = Object.assign(obj1);
-          tmp21 = callback2(PaypalMetadataRules, obj6);
-          tmp22 = callback2;
-        } else if (tmp15.EBAY === type) {
+          const merged1 = Object.assign(obj4);
+          tmp21 = closure_1_12(TwitterMetadataRules, obj6);
+          tmp22 = closure_1_12;
+        } else if (tmp15.REDDIT === type) {
           const obj7 = {};
-          const merged5 = Object.assign(obj1);
-          tmp21 = callback2(EbayMetadataRules, obj7);
-          tmp22 = callback2;
-        } else if (tmp15.TIKTOK === type) {
+          const merged2 = Object.assign(obj4);
+          tmp21 = closure_1_12(RedditMetadataRules, obj7);
+          tmp22 = closure_1_12;
+        } else if (tmp15.BLUESKY === type) {
           const obj8 = {};
-          const merged6 = Object.assign(obj1);
-          tmp21 = callback2(TikTokMetadataRules, obj8);
-          tmp22 = callback2;
-        } else {
+          const merged3 = Object.assign(obj4);
+          tmp21 = closure_1_12(BlueskyMetadataRules, obj8);
+          tmp22 = closure_1_12;
+        } else if (tmp15.PAYPAL === type) {
           const obj9 = {};
-          const merged7 = Object.assign(obj1);
-          obj9.integration = tmp;
-          tmp21 = callback2(ApplicationMetadataRules, obj9);
-          tmp22 = callback2;
+          const merged4 = Object.assign(obj4);
+          tmp21 = closure_1_12(PaypalMetadataRules, obj9);
+          tmp22 = closure_1_12;
+        } else if (tmp15.EBAY === type) {
+          const obj10 = {};
+          const merged5 = Object.assign(obj4);
+          tmp21 = closure_1_12(EbayMetadataRules, obj10);
+          tmp22 = closure_1_12;
+        } else if (tmp15.TIKTOK === type) {
+          const obj11 = {};
+          const merged6 = Object.assign(obj4);
+          tmp21 = closure_1_12(TikTokMetadataRules, obj11);
+          tmp22 = closure_1_12;
+        } else {
+          const obj12 = {};
+          const merged7 = Object.assign(obj4);
+          obj12.integration = tmp;
+          tmp21 = closure_1_12(ApplicationMetadataRules, obj12);
+          tmp22 = closure_1_12;
         }
-        const obj10 = { hasIcons: true, children: null };
-        const obj11 = { platform: null, integration: null, onRemove: null, locked: null };
-        obj11[0] = value;
-        obj11[1] = tmp;
-        obj11[2] = function onRemove() {
-          return onConfigurationChange(null, _undefined.index);
+        const obj13 = { hasIcons: true, children: null };
+        const obj14 = {
+          platform: value,
+          integration: tmp,
+          onRemove() {
+                  return onConfigurationChange(null, index.index);
+                },
+          locked
         };
-        obj11[3] = locked;
-        const items = [tmp22(Header, obj11), tmp21];
-        obj10[1] = items;
-        return callback3(configurationItems(applicationId[22]).TableRowGroup, obj10);
+        const items = [tmp22(Header, obj14), tmp21];
+        obj13.children = items;
+        return map1(TableRowGroup.TableRowGroup, obj13);
       } catch (err) {
       }
     }

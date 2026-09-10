@@ -1,78 +1,81 @@
-// Module ID: 12603
-// Function ID: 12604
-// Name: MuteAppDMActionSheet
-// Dependencies: [19, 17, 21, 4560, 576, 7150, 9781, 4556, 1114, 4975, 7119, 7114, 4527, 4259, 1178, 7949, 2]
+// Module ID: 12629
+// Function ID: 12630
+// Name: MuteAppDmActionSheet
+// Dependencies: [19, 17, 21, 4574, 576, 7164, 9808, 4570, 1114, 4989, 7133, 7128, 4541, 4272, 1178, 7963, 2]
 // Exports: default
 
-// Module 12603 (MuteAppDMActionSheet)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12629 (MuteAppDmActionSheet)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7128 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7133 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { iconContainer: { alignItems: "center", marginBottom: 8 }, iconBackground: null, content: null, headerText: null, infoText: null, dismissButtonContainer: null, mutedNotificationContainer: null, mutedNotification: null };
-createCacheKey = { width: 48, height: 48, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, alignItems: "center", justifyContent: "center" };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { padding: 16 };
-createCacheKey[3] = { textAlign: "center", marginBottom: 8, paddingHorizontal: 16 };
-createCacheKey[4] = { textAlign: "center", marginBottom: 16, paddingHorizontal: 16 };
-createCacheKey[5] = { marginTop: 8 };
-createCacheKey[6] = { borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION, height: 24, width: 24, padding: 4, alignContent: "center" };
-createCacheKey[7] = { width: 16, height: 16 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION, height: 24, width: 24, padding: 4, alignContent: "center" };
-let result = require("set").fileFinishedImporting("modules/notifications/settings/native/MuteAppDmActionSheet.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { iconContainer: { alignItems: "center", marginBottom: 8 }, iconBackground: null, content: null, headerText: null, infoText: null, dismissButtonContainer: null, mutedNotificationContainer: null, mutedNotification: null };
+let size = { width: 48, height: 48, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, alignItems: "center", justifyContent: "center" };
+obj2.iconBackground = size;
+obj2.content = { padding: 16 };
+obj2.headerText = { textAlign: "center", marginBottom: 8, paddingHorizontal: 16 };
+obj2.infoText = { textAlign: "center", marginBottom: 16, paddingHorizontal: 16 };
+obj2.dismissButtonContainer = { marginTop: 8 };
+const size1 = { borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION, height: 24, width: 24, padding: 4, alignContent: "center" };
+obj2.mutedNotificationContainer = size1;
+obj2.mutedNotification = { width: 16, height: 16 };
+let closure_6 = createStyles.createStyles(obj2);
+size = fn(2);
+let result = size.fileFinishedImporting("modules/notifications/settings/native/MuteAppDmActionSheet.tsx");
 
 export default function MuteAppDMActionSheet(channel) {
-  const tmp = callback3();
-  const _require = tmp;
+  const tmp = closure_6();
+  _require = tmp;
   channel = channel.channel;
   let obj = { startExpanded: true, children: null };
-  obj = { style: tmp.content, children: null };
-  obj = { style: tmp.iconContainer, children: callback(View, { style: tmp.iconBackground, "aria-hidden": true, children: callback(_require(9781).BellIcon, { size: "md", color: "interactive-text-default" }) }) };
-  const items = [callback(View, obj), , , , ];
-  let obj2 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.headerText, children: null };
-  let intl = _require(1114).intl;
-  obj2[3] = intl.string(_require(1114).t.uAmAiL);
-  items[1] = callback(_require(4556).Text, obj2);
-  const obj3 = { variant: "text-md/normal", color: "text-default", style: tmp.infoText, children: null };
-  const intl2 = _require(1114).intl;
-  obj3[3] = intl2.string(_require(1114).t.mscFJU);
-  items[2] = callback(_require(4556).Text, obj3);
-  const obj4 = { variant: "destructive", text: null, onPress: null };
-  const intl3 = _require(1114).intl;
-  obj4[1] = intl3.string(_require(1114).t.uAmAiL);
-  obj4[2] = function onPress() {
-    let obj = channel(closure_1_2[10]);
-    const result = obj.updateChannelOverrideSettings(null, channel.id, { muted: true }, callback(closure_1_2[11]).NotificationLabels.Muted);
-    channel(closure_1_2[12]).hideActionSheet();
-    const obj2 = channel(closure_1_2[12]);
-    obj = { key: "NOTIFICATIONS_MUTED", content: null, icon: null };
-    const intl = callback(closure_1_2[8]).intl;
-    obj[1] = intl.string(callback(closure_1_2[8]).t.EgGpkx);
-    obj[2] = function icon() {
-      let obj = { style: closure_0.mutedNotificationContainer, children: null };
-      obj = { source: closure_1_1(closure_1_2[15]), color: closure_1_1(closure_1_2[4]).unsafe_rawColors.WHITE, style: closure_0.mutedNotification };
-      obj[1] = closure_1_4(closure_1_0(closure_1_2[14]).Icon, obj);
-      return closure_1_4(closure_1_3, obj);
+  let obj2 = { style: tmp.content, children: null };
+  const obj3 = { style: tmp.iconContainer, children: closure_4(View, { style: tmp.iconBackground, "aria-hidden": true, children: closure_4(require("BellIcon").BellIcon, { size: "md", color: "interactive-text-default" }) }) };
+  const items = [closure_4(View, obj3), , , , ];
+  const obj5 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.headerText, children: null };
+  let intl = require("util").intl;
+  obj5.children = intl.string(require("util").t.uAmAiL);
+  items[1] = closure_4(require("Text/Text").Text, obj5);
+  const obj6 = { variant: "text-md/normal", color: "text-default", style: tmp.infoText, children: null };
+  const intl2 = require("util").intl;
+  obj6.children = intl2.string(require("util").t.mscFJU);
+  items[2] = closure_4(require("Text/Text").Text, obj6);
+  const obj7 = { variant: "destructive", text: null, onPress: null };
+  const intl3 = require("util").intl;
+  obj7.text = intl3.string(require("util").t.uAmAiL);
+  obj7.onPress = function onPress() {
+    const result = NotificationSettingsModalActionCreatorsDefault.updateChannelOverrideSettings(null, channel.id, { muted: true }, NotificationSettingsUtils.NotificationLabels.Muted);
+    ActionSheetActionCreatorsDefault.hideActionSheet();
+    const obj4 = { key: "NOTIFICATIONS_MUTED", content: null, icon: null };
+    const intl = util.intl;
+    obj4.content = intl.string(util.t.EgGpkx);
+    obj4.icon = function icon() {
+      const obj = { style: closure_1_0.mutedNotificationContainer, children: closure_2_4(closure_0(1178).Icon, { source: channel(7963), color: channel(576).unsafe_rawColors.WHITE, style: closure_1_0.mutedNotification }) };
+      return closure_2_4(View, obj);
     };
-    channel(closure_1_2[13]).open(obj);
+    ToastActionCreatorsDefault.open(obj4);
   };
-  items[3] = callback(_require(4975).Button, obj4);
-  const obj5 = { style: tmp.dismissButtonContainer, children: null };
-  const obj6 = { variant: "secondary", text: null, onPress: null };
-  const intl4 = _require(1114).intl;
-  obj6[1] = intl4.string(_require(1114).t.WAI6xu);
-  obj6[2] = function onPress() {
-    channel(table[12]).hideActionSheet();
+  items[3] = closure_4(require("components/Button/Button").Button, obj7);
+  const obj8 = { style: tmp.dismissButtonContainer, children: null };
+  const obj9 = { variant: "secondary", text: null, onPress: null };
+  const intl4 = require("util").intl;
+  obj9.text = intl4.string(require("util").t.WAI6xu);
+  obj9.onPress = function onPress() {
+    channel(4541).hideActionSheet();
   };
-  obj5[1] = callback(_require(4975).Button, obj6);
-  items[4] = callback(View, obj5);
-  obj[1] = items;
-  obj[1] = callback2(View, obj);
-  return callback(_require(7150).BottomSheet, obj);
+  obj8.children = closure_4(require("components/Button/Button").Button, obj9);
+  items[4] = closure_4(View, obj8);
+  obj2.children = items;
+  obj.children = closure_5(View, obj2);
+  return closure_4(require("Sheet/BottomSheet").BottomSheet, obj);
 };

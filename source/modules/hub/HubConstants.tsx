@@ -1,12 +1,12 @@
-// Module ID: 12723
-// Function ID: 12724
-// Name: HubEmailConnectionSteps
+// Module ID: 12749
+// Function ID: 12750
+// Name: HubConstants
 // Dependencies: [2]
 
-// Module 12723 (HubEmailConnectionSteps)
-import set from "set" /* 2 */;
+// Module 12749 (HubConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/hub/HubConstants.tsx");
+const result = size.fileFinishedImporting("modules/hub/HubConstants.tsx");
 
 export const HubEmailConnectionSteps = { STUDENT_PROMPT: "STUDENT_PROMPT", VERIFY_EMAIL: "VERIFY_EMAIL", VERIFY_PIN: "VERIFY_PIN", SELECT_SCHOOL: "SELECT_SCHOOL", SELECT_SCHOOL_SEARCH: "SELECT_SCHOOL_SEARCH", SUBMIT_SCHOOL: "SUBMIT_SCHOOL", EMAIL_CONFIRMATION: "EMAIL_CONFIRMATION", EMAIL_WAITLIST: "EMAIL_WAITLIST" };
 export const INVITE_ROUTING_HUB_GUILD_ID = "884924873015689226";

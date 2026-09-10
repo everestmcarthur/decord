@@ -1,69 +1,67 @@
-// Module ID: 17630
-// Function ID: 17631
+// Module ID: 17663
+// Function ID: 17664
 // Name: RoleGradientPickerActionSheet
-// Dependencies: [32, 19, 17, 17615, 21, 4560, 576, 2018, 1369, 4527, 14598, 7150, 7149, 1114, 4975, 4987, 15353, 5123, 1091, 2]
+// Dependencies: [32, 19, 17, 17646, 21, 4574, 576, 2018, 1369, 4541, 14623, 7164, 7163, 1114, 4989, 5001, 15382, 5137, 1091, 2]
 // Exports: default
 
-// Module 17630 (RoleGradientPickerActionSheet)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import HOLOGRAPHIC_ROLE_COLORS from "HOLOGRAPHIC_ROLE_COLORS" /* 17615 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17663 (RoleGradientPickerActionSheet)
+import nativeDefault from "native" /* 576 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14623 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ View: c5, Pressable: closure_6 } = get_ActivityIndicator);
-({ DEFAULT_GRADIENT_ROLE_COLORS: error, GRADIENT_PRESETS: closure_8 } = HOLOGRAPHIC_ROLE_COLORS);
-({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { body: null, gradientContainer: null, dropperContainer: null, dropper: null, gradient: null, optionContainer: null, pressable: null, selected: null, option: null };
-createCacheKey = { paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_12, flexGrow: 1, justifyContent: "center", alignItems: "center", gap: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_8 };
-let obj1 = { display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_8 };
-createCacheKey[2] = { left: ThemesDefault.space.PX_24, right: ThemesDefault.space.PX_24, position: "absolute", display: "flex", flexDirection: "row", justifyContent: "space-between" };
-let obj2 = { left: ThemesDefault.space.PX_24, right: ThemesDefault.space.PX_24, position: "absolute", display: "flex", flexDirection: "row", justifyContent: "space-between" };
-createCacheKey[3] = { borderColor: "white", tintColor: "white", padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.round, borderWidth: 1 };
-let obj3 = { borderColor: "white", tintColor: "white", padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.round, borderWidth: 1 };
-createCacheKey[4] = { height: 50, width: "100%", borderRadius: ThemesDefault.radii.sm };
-const obj4 = { height: 50, width: "100%", borderRadius: ThemesDefault.radii.sm };
-createCacheKey[5] = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_8, flexWrap: "wrap", alignItems: "center", justifyContent: "center" };
-let obj5 = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_8, flexWrap: "wrap", alignItems: "center", justifyContent: "center" };
-createCacheKey[6] = { width: 80, height: 50, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", padding: 2 };
-let obj6 = { width: 80, height: 50, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", padding: 2 };
-createCacheKey[7] = { borderWidth: 2, borderColor: ThemesDefault.colors.BACKGROUND_BRAND };
-let obj7 = { borderWidth: 2, borderColor: ThemesDefault.colors.BACKGROUND_BRAND };
-createCacheKey[8] = { flex: 1, borderRadius: ThemesDefault.radii.sm };
-let closure_11 = createCacheKey.createStyles(createCacheKey);
-const obj8 = { flex: 1, borderRadius: ThemesDefault.radii.sm };
-const result = require("set").fileFinishedImporting("modules/premium/powerups/native/RoleGradientPickerActionSheet.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
+const EnhancedRoleColorConstants = fn(17646);
+({ DEFAULT_GRADIENT_ROLE_COLORS: closure_7, GRADIENT_PRESETS: closure_8 } = EnhancedRoleColorConstants);
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { body: { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12, flexGrow: 1, justifyContent: "center", alignItems: "center", gap: nativeDefault.space.PX_16 }, gradientContainer: null, dropperContainer: null, dropper: null, gradient: null, optionContainer: null, pressable: null, selected: null, option: null };
+let obj3 = { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12, flexGrow: 1, justifyContent: "center", alignItems: "center", gap: nativeDefault.space.PX_16 };
+obj2.gradientContainer = { display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_8 };
+const rect = { left: nativeDefault.space.PX_24, right: nativeDefault.space.PX_24, position: "absolute", display: "flex", flexDirection: "row", justifyContent: "space-between" };
+obj2.dropperContainer = rect;
+let obj4 = { display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_8 };
+obj2.dropper = { borderColor: "white", tintColor: "white", padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.round, borderWidth: 1 };
+let size = { height: 50, width: "100%", borderRadius: nativeDefault.radii.sm };
+obj2.gradient = size;
+let obj5 = { borderColor: "white", tintColor: "white", padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.round, borderWidth: 1 };
+obj2.optionContainer = { display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_8, flexWrap: "wrap", alignItems: "center", justifyContent: "center" };
+const size1 = { width: 80, height: 50, borderRadius: nativeDefault.radii.sm, overflow: "hidden", padding: 2 };
+obj2.pressable = size1;
+let obj6 = { display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_8, flexWrap: "wrap", alignItems: "center", justifyContent: "center" };
+obj2.selected = { borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BRAND };
+let obj7 = { borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BRAND };
+obj2.option = { flex: 1, borderRadius: nativeDefault.radii.sm };
+let closure_11 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/RoleGradientPickerActionSheet.tsx");
 
 export default function RoleGradientPickerActionSheet(arg0) {
   ({ colors, onSelect } = arg0);
-  importDefault = undefined;
-  let first;
-  let callback;
+  first = undefined;
+  _slicedToArray = undefined;
   let callback1;
-  let tmp = callback4();
+  let tmp = closure_11();
   importDefault = tmp;
-  let obj = callback1;
   if (null == colors) {
     colors = closure_7;
   }
-  const tmp2 = callback(callback1.useState(colors), 2);
-  first = tmp2[0];
-  callback = tmp2[1];
-  obj1 = onSelect(first[7]);
-  const values = Object.values(obj1.extractColorStringsFromServerColors(first));
+  [first, _slicedToArray] = callback1.useState(colors);
+  const values = Object.values(onSelect(first[7]).extractColorStringsFromServerColors(first));
   let items = [first, onSelect];
   const found = values.filter(onSelect(first[8]).isNotNullish);
-  callback = obj.useCallback(() => {
+  const callback = obj.useCallback(() => {
     onSelect(first);
-    lib(first[9]).hideActionSheet();
+    ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items);
   callback1 = obj.useCallback((arg0) => {
-    callback(arg0);
+    closure_3(arg0);
   }, []);
   let items1 = [first, callback1];
   const items2 = [first, callback1];
@@ -75,13 +73,13 @@ export default function RoleGradientPickerActionSheet(arg0) {
     if (num == null) {
       num = 0;
     }
-    lib(first[10])({
+    showCustomColorPickerActionSheetDefault({
       color: num,
       onSelect(primary_color) {
         const obj = {};
-        const merged = Object.assign(closure_2);
+        const merged = Object.assign(first);
         obj.primary_color = primary_color;
-        return callback(obj);
+        return callback1(obj);
       }
     }, "stack");
   }, items1);
@@ -93,93 +91,92 @@ export default function RoleGradientPickerActionSheet(arg0) {
     if (num == null) {
       num = 0;
     }
-    lib(first[10])({
+    showCustomColorPickerActionSheetDefault({
       color: num,
       onSelect(secondary_color) {
         const obj = {};
-        const merged = Object.assign(closure_2);
+        const merged = Object.assign(first);
         obj.secondary_color = secondary_color;
-        return callback(obj);
+        return callback1(obj);
       }
     }, "stack");
   }, items2);
-  obj = { header: null, children: null };
-  obj = { title: null, trailing: null };
+  const obj3 = { header: null, children: null };
+  const obj4 = { title: null, trailing: null };
   const intl = onSelect(first[13]).intl;
-  obj[0] = intl.string(onSelect(first[13]).t.XpWmJz);
-  obj1 = { variant: "secondary", size: "sm", text: null, onPress: null };
+  obj4.title = intl.string(onSelect(first[13]).t.XpWmJz);
+  const obj5 = { variant: "secondary", size: "sm", text: null, onPress: null };
   const intl2 = onSelect(first[13]).intl;
-  obj1[2] = intl2.string(onSelect(first[13]).t["R3BPH+"]);
-  obj1[3] = callback;
-  obj[1] = callback2(onSelect(first[14]).Button, obj1);
-  obj[0] = callback2(onSelect(first[12]).BottomSheetTitleHeader, obj);
-  const obj2 = { style: tmp.body, children: null };
-  const obj3 = { style: tmp.gradientContainer, children: null };
-  const items3 = [callback2(importDefault(first[15]), { style: tmp.gradient, colors: found, start: { x: 0, y: 0 }, end: { x: 1, y: 0 } }), ];
-  const obj5 = { style: tmp.dropperContainer, children: null };
-  const obj6 = { style: tmp.dropper, onPress: callback2, accessibilityLabel: null, accessibilityRole: "button", children: null };
+  obj5.text = intl2.string(onSelect(first[13]).t["R3BPH+"]);
+  obj5.onPress = callback;
+  obj4.trailing = closure_9(onSelect(first[14]).Button, obj5);
+  obj3.header = closure_9(onSelect(first[12]).BottomSheetTitleHeader, obj4);
+  const obj6 = { style: tmp.body, children: null };
+  const obj7 = { style: tmp.gradientContainer, children: null };
+  const items3 = [closure_9(require("LinearGradient"), { style: tmp.gradient, colors: found, start: { x: 0, y: 0 }, end: { x: 1, y: 0 } }), ];
+  const obj9 = { style: tmp.dropperContainer, children: null };
+  const obj10 = { style: tmp.dropper, onPress: callback2, accessibilityLabel: null, accessibilityRole: "button", children: null };
   const intl3 = onSelect(first[13]).intl;
-  obj6[2] = intl3.string(onSelect(first[13]).t.QPqIEx);
-  obj6[4] = callback2(onSelect(first[16]).EyeDropperIcon, { color: "white", size: "sm" });
-  const items4 = [callback2(closure_6, obj6), ];
-  const obj7 = { style: tmp.dropper, onPress: callback3, accessibilityLabel: null, accessibilityRole: "button", children: null };
+  obj10.accessibilityLabel = intl3.string(onSelect(first[13]).t.QPqIEx);
+  obj10.children = closure_9(onSelect(first[16]).EyeDropperIcon, { color: "white", size: "sm" });
+  const items4 = [closure_9(closure_6, obj10), ];
+  const obj11 = { style: tmp.dropper, onPress: callback3, accessibilityLabel: null, accessibilityRole: "button", children: null };
   const intl4 = onSelect(first[13]).intl;
-  obj7[2] = intl4.string(onSelect(first[13]).t.fLMusI);
-  obj7[4] = callback2(onSelect(first[16]).EyeDropperIcon, { color: "white", size: "sm" });
-  items4[1] = callback2(closure_6, obj7);
-  obj5[1] = items4;
-  items3[1] = callback3(closure_5, obj5);
-  obj3[1] = items3;
-  const items5 = [
-    callback3(closure_5, obj3),
-    callback2(closure_5, {
-      style: tmp.optionContainer,
-      children: closure_8.map((colors) => {
-        const tmp = callback(colors.colors, 2);
-        first = tmp[0];
-        const lib = tmp3;
-        const items = [lib.pressable, ];
-        let selected = first === first.primary_color;
-        if (selected) {
-          selected = tmp3 === first.secondary_color;
-        }
-        if (selected) {
-          selected = tmp7.selected;
-        }
-        let obj = {
-          style: items,
-          onPress() {
-            const obj = {};
-            const merged = Object.assign(closure_1_2);
-            obj.primary_color = first;
-            obj.secondary_color = closure_1;
-            return closure_1_4(obj);
-          },
-          children: null
-        };
-        items[1] = selected;
-        obj = { style: tmp7.option, colors: null, start: null, end: null };
-        let tmp5Result = tmp5(tmp6[18]);
-        const items1 = [tmp5Result.int2hex(first), ];
-        tmp5Result = tmp5(tmp6[18]);
-        items1[1] = tmp5Result.int2hex(tmp[1]);
-        obj[1] = items1;
-        obj[2] = { x: 0, y: 0 };
-        obj[3] = { x: 1, y: 0 };
-        obj[2] = closure_1_9(lib(first[15]), obj);
-        return closure_1_9(onSelect(first[17]).PressableOpacity, obj, colors.name);
-      })
-    }),
-
-  ];
-  const obj9 = { text: null, onPress: null };
+  obj11.accessibilityLabel = intl4.string(onSelect(first[13]).t.fLMusI);
+  obj11.children = closure_9(onSelect(first[16]).EyeDropperIcon, { color: "white", size: "sm" });
+  items4[1] = closure_9(closure_6, obj11);
+  obj9.children = items4;
+  items3[1] = closure_10(closure_5, obj9);
+  obj7.children = items3;
+  const items5 = [closure_10(closure_5, obj7), , ];
+  let obj2 = onSelect(first[7]);
+  const obj8 = { style: tmp.gradient, colors: found, start: { x: 0, y: 0 }, end: { x: 1, y: 0 } };
+  items5[1] = closure_9(closure_5, {
+    style: tmp.optionContainer,
+    children: closure_8.map((colors) => {
+      const tmp = closure_3(colors.colors, 2);
+      const primary_color = tmp[0];
+      const secondary_color = tmp3;
+      const items = [secondary_color.pressable, ];
+      let selected = primary_color === primary_color.primary_color;
+      if (selected) {
+        selected = tmp3 === primary_color.secondary_color;
+      }
+      if (selected) {
+        selected = tmp7.selected;
+      }
+      let obj = {
+        style: items,
+        onPress() {
+          const obj = {};
+          const merged = Object.assign(primary_color);
+          obj.primary_color = primary_color;
+          obj.secondary_color = secondary_color;
+          return callback1(obj);
+        },
+        children: null
+      };
+      items[1] = selected;
+      const obj2 = { style: secondary_color.option, colors: null, start: null, end: null };
+      const tmp8 = secondary_color(primary_color[15]);
+      const items1 = [onSelect(primary_color[18]).int2hex(primary_color), ];
+      const tmp5Result = onSelect(primary_color[18]);
+      items1[1] = onSelect(primary_color[18]).int2hex(tmp[1]);
+      obj2.colors = items1;
+      obj2.start = { x: 0, y: 0 };
+      obj2.end = { x: 1, y: 0 };
+      obj.children = closure_1_9(tmp8, obj2);
+      return closure_1_9(onSelect(primary_color[17]).PressableOpacity, obj, colors.name);
+    })
+  });
+  const obj13 = { text: null, onPress: null };
   const intl5 = onSelect(first[13]).intl;
-  obj9[0] = intl5.string(onSelect(first[13]).t.yBZMsQ);
-  obj9[1] = function onPress() {
-    callback(closure_1_7);
+  obj13.text = intl5.string(onSelect(first[13]).t.yBZMsQ);
+  obj13.onPress = function onPress() {
+    closure_3(React5);
   };
-  items5[2] = callback2(onSelect(first[14]).Button, obj9);
-  obj2[1] = items5;
-  obj[1] = callback3(closure_5, obj2);
-  return callback2(onSelect(first[11]).BottomSheet, obj);
+  items5[2] = closure_9(onSelect(first[14]).Button, obj13);
+  obj6.children = items5;
+  obj3.children = closure_10(closure_5, obj6);
+  return closure_9(onSelect(first[11]).BottomSheet, obj3);
 };

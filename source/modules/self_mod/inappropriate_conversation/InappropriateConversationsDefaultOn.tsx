@@ -1,15 +1,16 @@
-// Module ID: 10976
-// Function ID: 10977
+// Module ID: 11003
+// Function ID: 11004
 // Name: InappropriateConversationsDefaultOn
 // Dependencies: [1434, 2]
 // Exports: isEligibleForInappropriateConversationDefaultOn, useIsEligibleForInappropriateConversationDefaultOn
 
-// Module 10976 (InappropriateConversationsDefaultOn)
-import getUnitIdDefault from "getUnitId" /* 1434 */;
+// Module 11003 (InappropriateConversationsDefaultOn)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
 
-const tmp2 = getUnitIdDefault({ name: "2026-04-inappropriate-conversations-default-on", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
+const tmp2 = apex_ApexExperimentDefault({ name: "2026-04-inappropriate-conversations-default-on", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 let closure_0 = tmp2;
-const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationsDefaultOn.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationsDefaultOn.tsx");
 
 export const InappropriateConversationsDefaultOn = tmp2;
 export const isEligibleForInappropriateConversationDefaultOn = function isEligibleForInappropriateConversationDefaultOn(location) {

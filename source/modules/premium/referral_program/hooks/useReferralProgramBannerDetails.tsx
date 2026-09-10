@@ -1,36 +1,37 @@
-// Module ID: 13449
-// Function ID: 13450
-// Name: MAX_REFERRALS_SENT
-// Dependencies: [19, 1371, 7452, 504, 8181, 2]
+// Module ID: 13472
+// Function ID: 13473
+// Name: useReferralProgramBannerDetails
+// Dependencies: [19, 1371, 7466, 504, 8207, 2]
 // Exports: useReferralProgramBannerDetails
 
-// Module 13449 (MAX_REFERRALS_SENT)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
-import closure_4 from "emitChanges" /* 7452 */;
+// Module 13472 (useReferralProgramBannerDetails)
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7466 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/referral_program/hooks/useReferralProgramBannerDetails.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/referral_program/hooks/useReferralProgramBannerDetails.tsx");
 
 export const MAX_REFERRALS_SENT = 3;
 export const useReferralProgramBannerDetails = function useReferralProgramBannerDetails() {
-  let obj = stateFromStoresArray(504);
-  const items = [closure_4];
-  stateFromStoresArray = obj.useStateFromStoresArray(items, () => authStore.getSentUserIds());
-  const items1 = [closure_3];
+  const items = [ReferralTrialStore];
+  stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(items, () => authStore.getSentUserIds());
+  const obj = stateFromStoresArray(504);
+  const items1 = [UserStore];
   const items2 = [stateFromStoresArray];
   const stateFromStoresArray1 = stateFromStoresArray(504).useStateFromStoresArray(items1, () => {
-    const mapped = stateFromStoresArray.map((arg0) => user.getUser(arg0));
-    return mapped.filter((arg0) => null != arg0);
+    const mapped = stateFromStoresArray.map((item) => user.getUser(item));
+    return mapped.filter((item) => null != item);
   });
-  const effect = React.useEffect(() => {
-    const item = stateFromStoresArray.forEach((arg0) => {
-      const user = callback(table[4]).getUser(arg0);
+  const effect = noop.useEffect(() => {
+    const item = stateFromStoresArray.forEach((item) => {
+      const user = stateFromStoresArray(closure_1_1[4]).getUser(item);
     });
   }, items2);
-  obj = { referralSentUsers: stateFromStoresArray1, hasSentAllReferrals: 3 === stateFromStoresArray.length, refreshAt: null };
+  const obj3 = { referralSentUsers: stateFromStoresArray1, hasSentAllReferrals: 3 === stateFromStoresArray.length, refreshAt: null };
   const obj2 = stateFromStoresArray(504);
-  const items3 = [closure_4];
-  obj[2] = stateFromStoresArray(504).useStateFromStores(items3, () => authStore.getRefreshAt());
-  return obj;
+  const items3 = [ReferralTrialStore];
+  obj3.refreshAt = stateFromStoresArray(504).useStateFromStores(items3, () => authStore.getRefreshAt());
+  return obj3;
 };

@@ -2,16 +2,18 @@
 // Function ID: 1049
 // Name: safeFactory
 // Dependencies: [682]
+// Exports: safeFactory, safeTracesSampler
 
 // Module 1048 (safeFactory)
-const require = arg1;
+import _mod682 from "module_682" /* 682 */;
+
+require = arg1;
 const dependencyMap = arg6;
-arg5.safeFactory = function safeFactory(beforeBreadcrumb, arg1) {
+
+export const safeFactory = function safeFactory(beforeBreadcrumb, arg1) {
   let fn = beforeBreadcrumb;
-  closure_0 = beforeBreadcrumb;
-  let obj = arg1;
   if (arg1 === undefined) {
-    obj = {};
+    const obj = {};
   }
   if (typeof fn === "function") {
     fn = () => {
@@ -21,7 +23,7 @@ arg5.safeFactory = function safeFactory(beforeBreadcrumb, arg1) {
         HermesBuiltin.arraySpread(items, 0);
         return HermesBuiltin.apply(items1, undefined);
       } catch (tmp8) {
-        const debug = beforeBreadcrumb(obj[0]).debug;
+        const debug = _mod682.debug;
         if (obj.loggerMessage) {
           let loggerMessage = obj.loggerMessage;
         } else {
@@ -35,7 +37,7 @@ arg5.safeFactory = function safeFactory(beforeBreadcrumb, arg1) {
   }
   return fn;
 };
-arg5.safeTracesSampler = function safeTracesSampler(tracesSampler) {
+export function safeTracesSampler(tracesSampler) {
   let fn = tracesSampler;
   closure_0 = tracesSampler;
   if (tracesSampler) {
@@ -46,11 +48,11 @@ arg5.safeTracesSampler = function safeTracesSampler(tracesSampler) {
         HermesBuiltin.arraySpread(items, 0);
         return HermesBuiltin.apply(items1, undefined);
       } catch (tmp8) {
-        const debug = tracesSampler(closure_1_1[0]).debug;
+        const debug = _mod682.debug;
         debug.error("The tracesSampler callback threw an error", tmp8);
         return tmp;
       }
     };
   }
   return fn;
-};
+}

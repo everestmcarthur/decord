@@ -1,12 +1,11 @@
-// Module ID: 8357
-// Function ID: 8358
-// Name: set
+// Module ID: 8385
+// Function ID: 8386
+// Name: ICYMIItemTypes
 // Dependencies: [2]
 
-// Module 8357 (set)
-import set from "set" /* 2 */;
+// Module 8385 (ICYMIItemTypes)
+import size from "module_2" /* 2 */;
 
-let set = new Set(["end", "loading", "bottomLoading", "icymiHeader", "recommendedGuilds"]);
-const result = set.fileFinishedImporting("modules/icymi/ICYMIItemTypes.tsx");
+const result = size.fileFinishedImporting("modules/icymi/ICYMIItemTypes.tsx");
 
-export const NON_ELIGIBLE_SCROLL_ITEMS = set;
+export const NON_ELIGIBLE_SCROLL_ITEMS = new Set(["end", "loading", "bottomLoading", "icymiHeader", "recommendedGuilds"]);

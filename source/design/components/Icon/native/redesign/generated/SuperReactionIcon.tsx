@@ -1,26 +1,26 @@
-// Module ID: 9378
-// Function ID: 9379
+// Module ID: 9405
+// Function ID: 9406
 // Name: SuperReactionIcon
-// Dependencies: [19, 21, 576, 4261, 9379, 2]
+// Dependencies: [19, 21, 576, 4274, 9406, 2]
 // Exports: SuperReactionIcon
 
-// Module 9378 (SuperReactionIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 9379 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 9405 (SuperReactionIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod9406 from "module_9406" /* 9406 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/SuperReactionIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/SuperReactionIcon.tsx");
 
 export const SuperReactionIcon = function SuperReactionIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9406, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

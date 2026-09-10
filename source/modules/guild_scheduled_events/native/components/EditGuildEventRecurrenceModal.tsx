@@ -1,113 +1,100 @@
-// Module ID: 9705
-// Function ID: 9706
+// Module ID: 9732
+// Function ID: 9733
 // Name: EditGuildEventRecurrenceModal
-// Dependencies: [5, 32, 19, 17, 21, 4560, 576, 1611, 9674, 9670, 9706, 1874, 9707, 4975, 1114, 9712, 9709, 9713, 9714, 4556, 7000, 2]
+// Dependencies: [5, 32, 19, 17, 21, 4574, 576, 1611, 9701, 9697, 9733, 1874, 9734, 4989, 1114, 9739, 9736, 9740, 9741, 4570, 7014, 2]
 // Exports: default
 
-// Module 9705 (EditGuildEventRecurrenceModal)
-import ThemesDefault from "Themes" /* 576 */;
+// Module 9732 (EditGuildEventRecurrenceModal)
+import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import useEventExceptionDefault from "useEventException" /* 9674 */;
-import useLazyAPIPromiseDefault from "useLazyAPIPromise" /* 9706 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1874 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import useEventExceptionDefault from "useEventException" /* 9701 */;
+import LazyAPIPromiseDefault from "LazyAPIPromise" /* 9733 */;
+import saveGuildEventRecurrenceDefault from "saveGuildEventRecurrence" /* 9734 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 9736 */;
+import EditGuildEventModalNavbarDefault from "EditGuildEventModalNavbar" /* 9739 */;
+import EditGuildEventStepContainerDefault from "EditGuildEventStepContainer" /* 9740 */;
+import GuildEventScheduleDefault from "GuildEventSchedule" /* 9741 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: null, cardStyle: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-let closure_10 = createCacheKey.createStyles(createCacheKey);
-let closure_11 = { TIME: "TIME" };
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventRecurrenceModal.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, cardStyle: null };
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj2.cardStyle = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+let closure_10 = createStyles.createStyles(obj2);
+let constants = { TIME: "TIME" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventRecurrenceModal.tsx");
 
 export default function EditGuildEventRecurrenceModal(guildEvent) {
   guildEvent = guildEvent.guildEvent;
   ({ onCloseModal: importDefault, recurrenceId } = guildEvent);
-  dependencyMap = undefined;
-  let scheduleForRecurrenceWithException;
-  let callback;
-  let React;
-  let first;
-  let callback2;
-  closure_9 = undefined;
-  error = undefined;
-  closure_13 = undefined;
-  function _handleSave() {
-    const self = this;
-    const tmp = scheduleForRecurrenceWithException(function*() {
-      if (c2 === 2) {
-        c2 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+  _slicedToArray = undefined;
+  noop = undefined;
+  first = undefined;
+  closure_8 = undefined;
+  let error;
+  constants = async function _handleSave(arg0, value) {
+    if (c2 === 2) {
+      c2 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
-        try {
-          c2 = 2;
-          if (0 === v0) {
-            if (arg0 === 1) {
-              c2 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c2 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              c0 = 0;
-              obj1 = closure_1_0(closure_1_3[9]);
-              if (obj1.areSchedulesIdentical(closure_1_5, closure_1_4)) {
-                v0();
-                c2 = 3;
-              } else {
-                v0 = 1;
-                c2 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_1_9();
-                return obj1;
-              }
-            }
-          } else if (arg0 === 1) {
-            c2 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            if (null != arg1) {
-              v0();
-            }
-          }
-          c2 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } catch (tmp13) {
-          c2 = tmp;
-          throw tmp13;
-        }
+        return { value: "HermesInternal", done: null };
       }
-    });
-    closure_11 = tmp;
-    const apply = tmp.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
-      applyArgumentsResult = apply(self, arguments);
+      try {
+        c2 = 2;
+        if (0 === c1) {
+          if (arg0 === 1) {
+            c2 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c2 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            const v0 = 0;
+            if (obj2.areSchedulesIdentical(schedule, scheduleForRecurrenceWithException)) {
+              onClose();
+              c2 = 3;
+            } else {
+              c1 = 1;
+              c2 = 1;
+              const obj5 = { value: React7(), done: false };
+              return obj5;
+            }
+            obj2 = v0(closure_1_3[9]);
+          }
+        } else if (arg0 === 1) {
+          c2 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          if (null != value) {
+            closure_128_1();
+          }
+        }
+        c2 = 3;
+        const obj = { value, done: true };
+        return obj;
+      } catch (tmp13) {
+        c2 = tmp;
+        throw tmp13;
+      }
     }
-    return applyArgumentsResult;
-  }
+  };
   function handleScheduleChange(arg0) {
     ({ startDate, endDate } = arg0);
     let addResult = endDate;
@@ -116,29 +103,27 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
       const cloneResult = startDate.clone();
     }
     _undefined({ startDate, endDate: addResult });
-    callback(null);
+    closure_8(null);
   }
-  let tmp = error();
+  const tmp = error();
   ({ left, right } = useSafeAreaInsetsDefault());
   const tmp3 = useEventExceptionDefault(recurrenceId, guildEvent.id);
   dependencyMap = tmp3;
-  let obj = guildEvent(9670);
-  const baseScheduleForRecurrence = obj.getBaseScheduleForRecurrence(recurrenceId, guildEvent);
-  obj1 = guildEvent(9670);
-  scheduleForRecurrenceWithException = obj1.getScheduleForRecurrenceWithException(baseScheduleForRecurrence, tmp3);
   const tmp2 = useSafeAreaInsetsDefault();
-  [c5, c6] = callback(React.useState(scheduleForRecurrenceWithException), 2);
-  const tmp7 = callback(React.useState(null), 2);
-  first = tmp7[0];
-  callback2 = tmp7[1];
-  const tmp9 = callback(useLazyAPIPromiseDefault(() => {
-    const result = recurrenceId(1874).dismissGlobalKeyboard();
-    return closure_1_1(9707)(guildEvent, recurrenceId, c5, dependencyMap);
+  const baseScheduleForRecurrence = guildEvent(9697).getBaseScheduleForRecurrence(recurrenceId, guildEvent);
+  let obj = guildEvent(9697);
+  const scheduleForRecurrenceWithException = guildEvent(9697).getScheduleForRecurrenceWithException(baseScheduleForRecurrence, tmp3);
+  let obj2 = guildEvent(9697);
+  [c5, c6] = noop.useState(scheduleForRecurrenceWithException);
+  [first, closure_8] = noop.useState(null);
+  const tmp9 = _slicedToArray(LazyAPIPromiseDefault(() => {
+    const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
+    return saveGuildEventRecurrenceDefault(guildEvent, recurrenceId, c5, closure_3);
   }), 2);
   closure_9 = tmp9[0];
   error = tmp9[1].error;
   let items = [error];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let anyErrorMessage;
     if (error != null) {
       anyErrorMessage = error.getAnyErrorMessage();
@@ -148,12 +133,12 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
     }
     closure_8(anyErrorMessage);
   }, items);
-  obj = { size: "md", text: null, onPress: null, disabled: null };
+  let obj3 = { size: "md", text: null, onPress: null, disabled: null };
   const intl = guildEvent(1114).intl;
-  obj[1] = intl.string(guildEvent(1114).t["R3BPH+"]);
-  obj[2] = function handleSave() {
+  obj3.text = intl.string(guildEvent(1114).t["R3BPH+"]);
+  obj3.onPress = function handleSave() {
     const self = this;
-    const apply = _handleSave.apply;
+    const apply = closure_11.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -161,34 +146,43 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
     }
     return applyArgumentsResult;
   };
-  obj[3] = null != first;
-  closure_13 = callback2(guildEvent(4975).Button, obj);
-  obj = {
-    title: "",
-    customNavbar() {
-      const obj = { screen: guildEvent(9709).EditGuildEventScreens.DETAILS, onClose: closure_1 };
-      return callback(closure_1_1(9712), obj);
-    },
-    headerLeft() {
-      return null;
-    },
-    render() {
-      let obj = { action: closure_13, children: null };
-      obj = { guildEvent, recurrenceId, schedule: c5, onChange: handleScheduleChange };
-      const items = [callback(closure_1_1(9714), obj), ];
-      let tmp4Result = null;
-      if (null != first) {
-        obj = { variant: "text-md/normal", color: "text-feedback-critical", children: null };
-        obj[2] = tmp5;
-        tmp4Result = callback(guildEvent(4556).Text, obj);
-      }
-      items[1] = tmp4Result;
-      obj[1] = items;
-      return closure_9(closure_1_1(9713), obj);
-    },
-    fullscreen: true
+  obj3.disabled = null != first;
+  const action = closure_8(guildEvent(4989).Button, obj3);
+  let obj5 = {
+    style: null,
+    children: closure_8(guildEvent(7014).Navigator, {
+      screens: {
+        [closure_11.TIME]: {
+          title: "",
+          customNavbar() {
+            const obj = { screen: EditGuildEventUtils.EditGuildEventScreens.DETAILS, onClose };
+            return React6(EditGuildEventModalNavbarDefault, obj);
+          },
+          headerLeft() {
+            return null;
+          },
+          render() {
+            const obj = { action, children: null };
+            const items = [React6(GuildEventScheduleDefault, { guildEvent, recurrenceId, schedule, onChange: handleScheduleChange }), ];
+            let tmp4Result = null;
+            if (null != first) {
+              const obj3 = { variant: "text-md/normal", color: "text-feedback-critical", children: tmp5 };
+              tmp4Result = React6(Text_Text.Text, obj3);
+            }
+            items[1] = tmp4Result;
+            obj.children = items;
+            return React7(EditGuildEventStepContainerDefault, obj);
+          },
+          fullscreen: true
+        }
+      },
+      initialRouteName: constants.TIME,
+      cardShadowEnabled: false,
+      cardOverlayEnabled: false,
+      cardStyle: tmp.cardStyle
+    })
   };
-  obj1 = { style: items1, children: callback2(guildEvent(7000).Navigator, obj2) };
-  items1 = [tmp.container, { paddingLeft: left, paddingRight: right }];
-  return callback2(first, obj1);
+  const items1 = [tmp.container, { paddingLeft: left, paddingRight: right }];
+  obj5.style = items1;
+  return closure_8(first, obj5);
 };

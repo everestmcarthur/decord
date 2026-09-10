@@ -1,15 +1,16 @@
-// Module ID: 7902
-// Function ID: 7903
-// Name: getIsWindowSmall
-// Dependencies: [4421, 2]
+// Module ID: 7916
+// Function ID: 7917
+// Name: useIsWindowSmall
+// Dependencies: [4435, 2]
 // Exports: default, useIsWindowSmall
 
-// Module 7902 (getIsWindowSmall)
-import set from "set" /* 2 */;
-import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4421 */;
-import useWindowSizeClassifierDefault from "useWindowSizeClassifier" /* 4421 */;
+// Module 7916 (useIsWindowSmall)
+import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4435 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/screen/native/useIsWindowSmall.tsx");
+const useWindowSizeClassifierDefault = useWindowSizeClassifier;
+
+const result = size.fileFinishedImporting("modules/screen/native/useIsWindowSmall.tsx");
 
 export default function getIsWindowSmall() {
   const windowSizeClassifier = useWindowSizeClassifier.getWindowSizeClassifier();

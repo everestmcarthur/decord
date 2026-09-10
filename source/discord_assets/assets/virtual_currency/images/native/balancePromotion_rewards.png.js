@@ -1,12 +1,11 @@
-// Module ID: 11109
-// Function ID: 11110
-// Name: metadata
+// Module ID: 11136
+// Function ID: 11137
 // Dependencies: [2]
 
-// Module 11109 (metadata)
-import set from "set" /* 2 */;
+// Module 11136
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/virtual_currency/images/native/balancePromotion_rewards.png.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/virtual_currency/images/native/balancePromotion_rewards.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/ceab4c9a5362f7edab9b43346ebde520fa728c332cf2a8177ebdf6e89341ae61.png";
 export const metadata = { fileBytes: 47283 };

@@ -1,65 +1,66 @@
-// Module ID: 16868
-// Function ID: 16869
+// Module ID: 16905
+// Function ID: 16906
 // Name: SearchNavigatorScreen
-// Dependencies: [19, 17, 21, 4560, 576, 16628, 4422, 16869, 5123, 1114, 5628, 5125, 16364, 16630, 16639, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 16660, 4436, 16906, 5137, 1114, 5642, 5139, 16395, 16662, 16671, 2]
 // Exports: default
 
-// Module 16868 (SearchNavigatorScreen)
-import ThemesDefault from "Themes" /* 576 */;
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4422 */;
-import getMixedGradientColorDefault from "getMixedGradientColor" /* 5125 */;
-import _modDef16630 from "module_16630" /* 16630 */;
-import SearchFreezeContainerDefault from "SearchFreezeContainer" /* 16639 */;
-import useSearchLayoutInsetTopDefault from "useSearchLayoutInsetTop" /* 16869 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16905 (SearchNavigatorScreen)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4436 */;
+import Pressables from "Pressables" /* 5137 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5139 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5642 */;
+import SearchScreenSearchBarDefault from "SearchScreenSearchBar" /* 16662 */;
+import SearchScreenLayoutDefault from "SearchScreenLayout" /* 16671 */;
+import useSearchLayoutInsetTopDefault from "useSearchLayoutInsetTop" /* 16906 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
-createCacheKey = { wrapper: null, tabs: null, back: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, marginTop: ThemesDefault.space.PX_16 };
-let obj1 = { flex: 1, marginTop: ThemesDefault.space.PX_16 };
-createCacheKey[2] = { marginLeft: ThemesDefault.space.PX_16, marginRight: ThemesDefault.space.PX_12 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const obj2 = { marginLeft: ThemesDefault.space.PX_16, marginRight: ThemesDefault.space.PX_12 };
-const result = require("set").fileFinishedImporting("modules/search/native/components/navigator/SearchNavigatorScreen.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, tabs: null, back: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+obj2.tabs = { flex: 1, marginTop: nativeDefault.space.PX_16 };
+let obj4 = { flex: 1, marginTop: nativeDefault.space.PX_16 };
+obj2.back = { marginLeft: nativeDefault.space.PX_16, marginRight: nativeDefault.space.PX_12 };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/navigator/SearchNavigatorScreen.tsx");
 
 export default function SearchNavigatorScreen(navigation) {
   navigation = navigation.navigation;
   const searchContext = navigation.route.params.searchContext;
-  importDefault = undefined;
-  const tmp = callback3();
+  const tmp = closure_8();
   importDefault = tmp;
-  let obj = navigation(16628);
-  const searchSuggestionsGesture = obj.useSearchSuggestionsGesture(searchContext);
+  const searchSuggestionsGesture = navigation(16660).useSearchSuggestionsGesture(searchContext);
   ({ gesture, dismissed, setDismissed, onLayoutMeasure } = searchSuggestionsGesture);
   const items = [navigation.goBack, tmp.back];
-  obj = { children: null };
-  const memo = React.useMemo(() => {
-    let obj = { children: null };
-    obj = { style: lib.back, accessibilityLabel: null, accessibilityRole: "button", onPress: null, children: null };
-    const intl = navigation(closure_1_2[9]).intl;
-    obj[1] = intl.string(navigation(closure_1_2[9]).t["13/7kX"]);
-    obj[3] = navigation.goBack;
-    obj = { color: lib(closure_1_2[4]).colors.INTERACTIVE_TEXT_DEFAULT };
-    obj[4] = closure_1_5(navigation(closure_1_2[10]).ArrowLargeLeftIcon, obj);
-    obj[0] = closure_1_5(navigation(closure_1_2[8]).PressableOpacity, obj);
-    return closure_1_5(closure_1_4, obj);
+  let obj = navigation(16660);
+  let obj2 = { children: null };
+  const memo = noop.useMemo(() => {
+    const obj = { children: null };
+    const obj2 = { style: back.back, accessibilityLabel: null, accessibilityRole: "button", onPress: null, children: null };
+    const intl = util.intl;
+    obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
+    obj2.onPress = navigation.goBack;
+    obj2.children = hasOwnProperty(ArrowLargeLeftIcon.ArrowLargeLeftIcon, { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT });
+    obj.children = hasOwnProperty(Pressables.PressableOpacity, obj2);
+    return hasOwnProperty(View, obj);
   }, items);
-  const items1 = [callback(getMixedGradientColorDefault, { absolute: true, wide: true, tall: true }), ];
-  obj = { gesture, children: null };
-  obj1 = { style: items2, children: null };
-  items2 = [tmp.wrapper, { paddingTop: useSearchLayoutInsetTopDefault() }];
-  const items3 = [callback(_modDef16630, { searchContext, suggestionsDismissed: dismissed, setSuggestionsDismissed: setDismissed, onSuggestionsLayoutMesure: onLayoutMeasure, backButton: memo }), ];
+  const items1 = [closure_5(ThemedGradientDefault, { absolute: true, wide: true, tall: true }), ];
+  const obj3 = { gesture, children: null };
+  const obj4 = { style: null, children: null };
+  const items2 = [tmp.wrapper, { paddingTop: useSearchLayoutInsetTopDefault() }];
+  obj4.style = items2;
+  const items3 = [closure_5(SearchScreenSearchBarDefault, { searchContext, suggestionsDismissed: dismissed, setSuggestionsDismissed: setDismissed, onSuggestionsLayoutMesure: onLayoutMeasure, backButton: memo }), ];
   const tmp3 = useSearchLayoutInsetTopDefault();
-  items3[1] = callback(View, { style: tmp.tabs, children: callback(SearchFreezeContainerDefault, { searchContext, width: useBaseAppContainerDimensionsDefault().width }) });
-  obj1[1] = items3;
-  obj[1] = callback2(View, obj1);
-  items1[1] = callback(navigation(16364).NonCollapsableGestureDetector, obj);
-  obj[0] = items1;
-  return callback2(closure_7, obj);
+  items3[1] = closure_5(View, { style: tmp.tabs, children: closure_5(SearchScreenLayoutDefault, { searchContext, width: useBaseAppContainerDimensionsDefault().width }) });
+  obj4.children = items3;
+  obj3.children = closure_6(View, obj4);
+  items1[1] = closure_5(navigation(16395).NonCollapsableGestureDetector, obj3);
+  obj2.children = items1;
+  return closure_6(closure_7, obj2);
 };

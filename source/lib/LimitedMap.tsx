@@ -1,15 +1,14 @@
-// Module ID: 8114
-// Function ID: 8115
+// Module ID: 8140
+// Function ID: 8141
 // Name: LimitedMap
 // Dependencies: [2]
 
-// Module 8114 (LimitedMap)
-import set from "set" /* 2 */;
+// Module 8140 (LimitedMap)
+import size from "module_2" /* 2 */;
 
 class LimitedMap extends Map {
   constructor(arg0) {
     tmp = new LimitedMap(new.target);
-    // ThrowIfThisInitialized (0x7c)
     tmp.maxSize = global;
     return tmp;
   }
@@ -23,6 +22,6 @@ class LimitedMap extends Map {
   }
 }
 let closure_0 = LimitedMap.prototype;
-const result = set.fileFinishedImporting("lib/LimitedMap.tsx");
+const result = size.fileFinishedImporting("lib/LimitedMap.tsx");
 
 export default LimitedMap;

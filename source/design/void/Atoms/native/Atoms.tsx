@@ -1,17 +1,17 @@
-// Module ID: 14130
-// Function ID: 14131
-// Name: RNTextInput
-// Dependencies: [17, 2, 8617, 14131]
+// Module ID: 14153
+// Function ID: 14154
+// Name: Atoms
+// Dependencies: [17, 2, 8645, 14154]
 
-// Module 14130 (RNTextInput)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import _modDef8617 from "module_8617" /* 8617 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 14131 */;
+// Module 14153 (Atoms)
+import _mod17 from "module_17" /* 17 */;
+import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8645 */;
+import native from "native" /* 14154 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("design/void/Atoms/native/Atoms.tsx");
+const result = size.fileFinishedImporting("design/void/Atoms/native/Atoms.tsx");
 
-export const RNTextInput = get_ActivityIndicator.TextInput;
-export const TextInputProps = get_ActivityIndicator.TextInputProps;
-export const LegacyText = _modDef8617;
-export const Text = AccessibilityAnnouncer.Text;
+export const RNTextInput = _mod17.TextInput;
+export const TextInputProps = _mod17.TextInputProps;
+export const LegacyText = LegacyText_LegacyTextDefault;
+export const Text = native.Text;

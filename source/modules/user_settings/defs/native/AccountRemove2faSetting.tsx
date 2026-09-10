@@ -1,69 +1,43 @@
-// Module ID: 14796
-// Function ID: 14797
-// Name: pressable
-// Dependencies: [7975, 14797, 4904, 1114, 14683, 11473, 14684, 2]
+// Module ID: 14822
+// Function ID: 14823
+// Name: AccountRemove2faSetting
+// Dependencies: [7989, 14823, 4918, 1114, 14709, 11500, 14710, 2]
 
-// Module 14796 (pressable)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import setDefault from "set" /* 4904 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import useIs2FAEnabled from "useIs2FAEnabled" /* 14684 */;
-import getSMSBackupDisabledMessage from "getSMSBackupDisabledMessage" /* 14797 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 14822 (AccountRemove2faSetting)
+import util from "util" /* 1114 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import MFAActionCreatorsDefault from "MFAActionCreators" /* 14709 */;
+import SettingsAccountUtils from "SettingsAccountUtils" /* 14710 */;
+import account_MFAUtils from "account/MFAUtils" /* 14823 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-const pressable = createToggle.createPressable({
+const pressable = SettingBuilders.createPressable({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["D+aE7g"]);
+    const intl = util.intl;
+    return intl.string(util.t["D+aE7g"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
+  parent: SettingsConstants.MobileUserSettings.ACCOUNT,
   onPress: function remove2FA() {
-    let obj = setDefault;
-    obj = { title: null, body: null, cancelText: null, onConfirm: null };
-    const intl = getSystemLocale.intl;
-    obj[0] = intl.string(getSystemLocale.t["D+aE7g"]);
-    const intl2 = getSystemLocale.intl;
-    obj[1] = intl2.string(getSystemLocale.t.EA4ZEk);
-    const intl3 = getSystemLocale.intl;
-    obj[2] = intl3.string(getSystemLocale.t["ETE/oC"]);
-    obj[3] = function onConfirm() {
-      return callback(table[4]).disable();
+    const obj2 = { title: null, body: null, cancelText: null, onConfirm: null };
+    const intl = util.intl;
+    obj2.title = intl.string(util.t["D+aE7g"]);
+    const intl2 = util.intl;
+    obj2.body = intl2.string(util.t.EA4ZEk);
+    const intl3 = util.intl;
+    obj2.cancelText = intl3.string(util.t["ETE/oC"]);
+    obj2.onConfirm = function onConfirm() {
+      return MFAActionCreatorsDefault.disable();
     };
-    obj.show(obj);
+    AlertActionCreatorsDefault.show(obj2);
   },
   useIsDisabled() {
-    return null !== getSMSBackupDisabledMessage.use2FARemoveDisableReason();
+    return null !== account_MFAUtils.use2FARemoveDisableReason();
   },
-  useDescription: getSMSBackupDisabledMessage.use2FARemoveDisableReason,
-  usePredicate: useIs2FAEnabled.useIsTOTPEnabled
+  useDescription: account_MFAUtils.use2FARemoveDisableReason,
+  usePredicate: SettingsAccountUtils.useIsTOTPEnabled
 });
-let obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["D+aE7g"]);
-  },
-  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
-  onPress: function remove2FA() {
-    let obj = setDefault;
-    obj = { title: null, body: null, cancelText: null, onConfirm: null };
-    const intl = getSystemLocale.intl;
-    obj[0] = intl.string(getSystemLocale.t["D+aE7g"]);
-    const intl2 = getSystemLocale.intl;
-    obj[1] = intl2.string(getSystemLocale.t.EA4ZEk);
-    const intl3 = getSystemLocale.intl;
-    obj[2] = intl3.string(getSystemLocale.t["ETE/oC"]);
-    obj[3] = function onConfirm() {
-      return callback(table[4]).disable();
-    };
-    obj.show(obj);
-  },
-  useIsDisabled() {
-    return null !== getSMSBackupDisabledMessage.use2FARemoveDisableReason();
-  },
-  useDescription: getSMSBackupDisabledMessage.use2FARemoveDisableReason,
-  usePredicate: useIs2FAEnabled.useIsTOTPEnabled
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountRemove2faSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountRemove2faSetting.tsx");
 
 export default pressable;

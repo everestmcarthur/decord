@@ -1,96 +1,88 @@
-// Module ID: 14903
-// Function ID: 14904
-// Name: memoResult1
-// Dependencies: [19, 17, 1371, 7537, 7538, 1074, 21, 4560, 576, 1178, 38, 563, 11, 4556, 4404, 7593, 5584, 5590, 1114, 2396, 14904, 14907, 14908, 2]
+// Module ID: 14929
+// Function ID: 14930
+// Name: FamilyCenterActivityRow
+// Dependencies: [19, 17, 1371, 7551, 7552, 1074, 21, 4574, 576, 1178, 38, 563, 11, 4570, 4418, 7607, 5598, 5604, 1114, 2396, 14930, 14933, 14934, 2]
 // Exports: default
 
-// Module 14903 (memoResult1)
+// Module 14929 (FamilyCenterActivityRow)
 import _modDef38 from "module_38" /* 38 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 7593 */;
-import FamilyCenterActivityPurchaseRowDefault from "FamilyCenterActivityPurchaseRow" /* 14904 */;
-import FamilyCenterActivityGiftRowDefault from "FamilyCenterActivityGiftRow" /* 14908 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import closure_5 from "freshTeenActivityWithMap" /* 7537 */;
-import { ACTION_TO_TEXT } from "items" /* 7538 */;
-import { GuildFeatures } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 7607 */;
+import FamilyCenterActivityPurchaseRowDefault from "FamilyCenterActivityPurchaseRow" /* 14930 */;
+import FamilyCenterActivityGiftRowDefault from "FamilyCenterActivityGiftRow" /* 14934 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7551 */;
 
-require = arg1;
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let obj = { container: null, avatar: null, avatarContainer: null, textContainer: null, text: null };
-obj = { display: "flex", flexDirection: "row", borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
-obj[0] = obj;
-createCacheKey = { borderRadius: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL] / 2, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-obj[1] = createCacheKey;
-obj[2] = { marginRight: 12, alignItems: "flex-start" };
-obj[3] = { display: "flex", flexDirection: "column", flexShrink: 1 };
-obj[4] = { display: "flex", flexDirection: "row", flexShrink: 1 };
-let closure_10 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo((action) => {
+require = fn;
+const View = fn(17).View;
+const ACTION_TO_TEXT = fn(7552).ACTION_TO_TEXT;
+const GuildFeatures = fn(1074).GuildFeatures;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+let createStyles = fn(4574);
+let obj = { container: { display: "flex", flexDirection: "row", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 }, avatar: null, avatarContainer: null, textContainer: null, text: null };
+let obj3 = { display: "flex", flexDirection: "row", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
+obj.avatar = { borderRadius: fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj.avatarContainer = { marginRight: 12, alignItems: "flex-start" };
+obj.textContainer = { display: "flex", flexDirection: "column", flexShrink: 1 };
+obj.text = { display: "flex", flexDirection: "row", flexShrink: 1 };
+let closure_10 = createStyles.createStyles(obj);
+const memoResult = noop.memo((action) => {
   action = action.action;
-  const tmp = callback3();
-  const value = ACTION_TO_TEXT.get(action.display_type);
+  const tmp = closure_10();
+  value = ACTION_TO_TEXT.get(action.display_type);
   _modDef38(null != value, "No text for action type");
-  let obj = action(563);
-  const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getUser(action.entity_id));
+  const items = [UserStore];
+  const stateFromStores = action(563).useStateFromStores(items, () => UserStore.getUser(action.entity_id));
   if (null == stateFromStores) {
     return null;
   } else {
-    let tmp3Result = tmp3(11);
-    const extractTimestampResult = tmp3Result.extractTimestamp(action.event_id);
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
-    obj = { style: null, children: null };
-    obj[0] = tmp.avatarContainer;
-    obj1 = { avatarStyle: null, user: null, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: "Warning" };
-    obj1[0] = tmp.avatar;
-    obj1[1] = stateFromStores;
-    obj1[4] = stateFromStores.avatarDecoration;
-    obj[1] = callback(tmp6(1178).Avatar, obj1);
-    const items1 = [callback(View, obj), ];
-    const obj2 = { style: null, children: null };
-    obj2[0] = tmp.textContainer;
-    const obj3 = { style: null, variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: null };
-    obj3[0] = tmp.text;
-    tmp3Result = tmp3(4404);
-    obj3[5] = tmp3Result.getName(stateFromStores);
-    const items2 = [callback(tmp6(4556).Text, obj3), ];
-    const obj4 = { variant: "text-xs/medium", color: "channels-default", children: null };
+    const extractTimestampResult = tmp3(11).extractTimestamp(action.event_id);
+    const obj2 = { style: tmp.container, children: null };
+    const obj3 = { style: tmp.avatarContainer, children: null };
+    const obj4 = { avatarStyle: tmp.avatar, user: stateFromStores, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: stateFromStores.avatarDecoration };
+    obj3.children = closure_8(tmp6(1178).Avatar, obj4);
+    const items1 = [closure_8(View, obj3), ];
+    const obj5 = { style: tmp.textContainer, children: null };
+    const obj6 = { style: tmp.text, variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: null };
+    const tmp3Result = tmp3(11);
+    obj6.children = tmp3(4418).getName(stateFromStores);
+    const items2 = [closure_8(tmp6(4570).Text, obj6), ];
+    const obj7 = { variant: "text-xs/medium", color: "channels-default", children: null };
+    const tmp3Result2 = tmp3(4418);
     const _Date = Date;
     const date = new Date(extractTimestampResult);
-    obj4[2] = tmp6(7593).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
-    items2[1] = callback(tmp6(4556).Text, obj4);
-    obj2[1] = items2;
-    items1[1] = callback2(View, obj2);
-    obj[1] = items1;
-    return callback2(View, obj);
+    obj7.children = tmp6(7607).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
+    items2[1] = closure_8(tmp6(4570).Text, obj7);
+    obj5.children = items2;
+    items1[1] = closure_9(View, obj5);
+    obj2.children = items1;
+    return closure_9(View, obj2);
   }
+  const obj = action(563);
 });
-const unpackModuleId = memoResult;
 memoResult.displayName = "FamilyCenterActivityRowUser";
-let obj2 = { container: { display: "flex", alignItems: "center", flexDirection: "row", borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 }, avatar: null, avatarText: null, text: null, headerContainer: null, badge: null, header: null, headerAndIconContainer: null };
-let obj3 = { display: "flex", alignItems: "center", flexDirection: "row", borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
-obj2[1] = { borderRadius: ThemesDefault.radii.md, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, height: 40, width: 40, margin: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, marginRight: 12 };
-createCacheKey = { color: ThemesDefault.colors.TEXT_DEFAULT };
-obj2[2] = createCacheKey;
-obj2[3] = { display: "flex", flexDirection: "column", flexShrink: 1 };
-obj2[4] = { display: "flex", flexDirection: "row" };
-obj2[5] = { marginRight: 4 };
-obj2[6] = { paddingRight: 16 };
-obj2[7] = { display: "flex", flexDirection: "row", alignItems: "center" };
-let closure_12 = createCacheKey.createStyles(obj2);
-const memoResult1 = importAllResult.memo((action) => {
+createStyles = fn(4574);
+let obj5 = { container: null, avatar: null, avatarText: null, text: null, headerContainer: null, badge: null, header: null, headerAndIconContainer: null };
+let obj4 = { borderRadius: fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj5.container = { display: "flex", alignItems: "center", flexDirection: "row", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
+let size = { borderRadius: nativeDefault.radii.md, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: 40, width: 40, margin: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, marginRight: 12 };
+obj5.avatar = size;
+let obj7 = { display: "flex", alignItems: "center", flexDirection: "row", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
+obj5.avatarText = { color: nativeDefault.colors.TEXT_DEFAULT };
+obj5.text = { display: "flex", flexDirection: "column", flexShrink: 1 };
+obj5.headerContainer = { display: "flex", flexDirection: "row" };
+obj5.badge = { marginRight: 4 };
+obj5.header = { paddingRight: 16 };
+obj5.headerAndIconContainer = { display: "flex", flexDirection: "row", alignItems: "center" };
+let closure_12 = createStyles.createStyles(obj5);
+const memoResult1 = noop.memo((action) => {
   action = action.action;
-  const tmp = callback4();
-  let obj = action(563);
-  const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getGuild(action.entity_id));
-  const value = ACTION_TO_TEXT.get(action.display_type);
+  const tmp = closure_12();
+  const items = [FamilyCenterStore];
+  const stateFromStores = action(563).useStateFromStores(items, () => FamilyCenterStore.getGuild(action.entity_id));
+  value = ACTION_TO_TEXT.get(action.display_type);
   _modDef38(null != value, "No text for action type");
   if (undefined === stateFromStores) {
     return null;
@@ -101,114 +93,94 @@ const memoResult1 = importAllResult.memo((action) => {
       const features = stateFromStores.features;
       hasItem = features.has(GuildFeatures.PARTNERED);
     }
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
-    obj = { style: null, textStyle: null, guild: null, size: null, animate: true };
-    ({ avatar: obj3[0], avatarText: obj3[1] } = tmp);
-    obj[2] = stateFromStores;
-    let tmp6Result = tmp6(5584);
-    obj[3] = tmp2(5584).GuildIconSizes.NORMAL;
-    const items1 = [callback(tmp6Result, obj), ];
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.text;
-    const obj2 = { style: null, children: null };
-    obj2[0] = tmp.headerContainer;
-    const obj3 = { style: null, children: null };
-    obj3[0] = tmp.headerAndIconContainer;
+    const obj2 = { style: tmp.container, children: null };
+    const obj4 = { style: null, textStyle: null, guild: null, size: null, animate: true };
+    ({ avatar: obj3.style, avatarText: obj3.textStyle } = tmp);
+    obj4.guild = stateFromStores;
+    obj4.size = tmp2(5598).GuildIconSizes.NORMAL;
+    const items1 = [closure_8(tmp6(5598), obj4), ];
+    const obj5 = { style: tmp.text, children: null };
+    const obj6 = { style: tmp.headerContainer, children: null };
+    const obj7 = { style: tmp.headerAndIconContainer, children: null };
     let tmp11Result = null;
     if (hasItem) {
-      const obj4 = { style: null, guild: null, size: null, disableColor: true };
-      obj4[0] = tmp.badge;
-      obj4[1] = stateFromStores;
-      tmp6Result = tmp6(5590);
-      obj4[2] = tmp6(5590).Sizes.SMALL;
-      tmp11Result = tmp11(tmp6Result, obj4);
+      const obj8 = { style: tmp.badge, guild: stateFromStores, size: tmp6(5604).Sizes.SMALL, disableColor: true };
+      tmp11Result = tmp11(tmp6(5604), obj8);
+      const tmp6Result2 = tmp6(5604);
     }
     const items2 = [tmp11Result, ];
-    const obj5 = { style: null, variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: null };
-    obj5[0] = tmp.header;
-    obj5[5] = stateFromStores.name;
-    items2[1] = callback(tmp2(4556).Text, obj5);
-    obj3[1] = items2;
-    obj2[1] = closure_9(View, obj3);
-    const items3 = [callback(View, obj2), ];
-    tmp11Result = null;
+    const obj9 = { style: tmp.header, variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: stateFromStores.name };
+    items2[1] = closure_8(tmp2(4570).Text, obj9);
+    obj7.children = items2;
+    obj6.children = closure_9(View, obj7);
+    const items3 = [closure_8(View, obj6), ];
+    let tmp11Result2 = null;
     if (undefined !== stateFromStores.approximateMemberCount) {
-      const obj6 = { variant: "text-xs/medium", color: "channels-default", children: null };
+      const obj10 = { variant: "text-xs/medium", color: "channels-default", children: null };
       const intl = tmp2(1114).intl;
-      const obj7 = { members: null };
-      obj7[0] = stateFromStores.approximateMemberCount;
-      obj6[2] = intl.format(tmp6(2396)["5JmNgg"], obj7);
-      tmp11Result = tmp11(tmp2(4556).Text, obj6);
+      const obj19 = { members: stateFromStores.approximateMemberCount };
+      obj10.children = intl.format(tmp6(2396)["5JmNgg"], obj19);
+      tmp11Result2 = tmp11(tmp2(4570).Text, obj10);
     }
-    items3[1] = tmp11Result;
-    obj1[1] = items3;
-    items1[1] = closure_9(View, obj1);
-    obj[1] = items1;
-    return closure_9(View, obj);
+    items3[1] = tmp11Result2;
+    obj5.children = items3;
+    items1[1] = closure_9(View, obj5);
+    obj2.children = items1;
+    return closure_9(View, obj2);
   }
+  const obj = action(563);
 });
 memoResult1.displayName = "FamilyCenterActivityRowGuild";
-let obj4 = { borderRadius: ThemesDefault.radii.md, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, height: 40, width: 40, margin: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, marginRight: 12 };
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityRow.tsx");
+size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityRow.tsx");
 
 export default function FamilyCenterActivityRow(action) {
   action = action.action;
-  let obj = getEmptyActivityFormatter;
   if (!obj.isUserAction(action)) {
-    let tmpResult = tmp(7593);
     if (!tmpResult.isGuildAction(action)) {
-      tmpResult = tmp(7593);
-      if (!tmpResult.isPurchase(action)) {
-        if (!tmpResult1.isGift(action)) {
+      if (!tmpResult7.isPurchase(action)) {
+        if (!tmpResult8.isGift(action)) {
           return null;
         }
-        tmpResult1 = tmp(7593);
+        tmpResult8 = tmp(7607);
       }
+      tmpResult7 = tmp(7607);
     }
+    tmpResult = tmp(7607);
   }
-  if (tmpResult2.isPurchase(action)) {
-    const purchaseInfo = store.getPurchaseInfo(action.entity_id);
+  obj = FamilyCenterUtils;
+  if (tmpResult9.isPurchase(action)) {
+    const purchaseInfo = FamilyCenterStore.getPurchaseInfo(action.entity_id);
     let tmp14 = null;
     if (null != purchaseInfo) {
-      obj = { skuId: null, subscriptionPlanId: null, total: null, currency: null };
-      ({ sku_id: obj11[0], subscription_plan_id: obj11[1], total: obj11[2], currency: obj11[3] } = purchaseInfo);
-      tmp14 = callback(FamilyCenterActivityPurchaseRowDefault, obj);
+      ({ sku_id: obj11.skuId, subscription_plan_id: obj11.subscriptionPlanId, total: obj11.total, currency: obj11.currency } = purchaseInfo);
+      tmp14 = React6(FamilyCenterActivityPurchaseRowDefault, { skuId: null, subscriptionPlanId: null, total: null, currency: null });
+      const obj2 = { skuId: null, subscriptionPlanId: null, total: null, currency: null };
     }
     return tmp14;
   } else {
-    if (tmpResult3.isGift(action)) {
-      const giftInfo = store.getGiftInfo(action.entity_id);
+    if (tmpResult10.isGift(action)) {
+      const giftInfo = FamilyCenterStore.getGiftInfo(action.entity_id);
       if (null == giftInfo) {
         return null;
       } else {
-        const giftRowDisplayInfo = tmp(14907).getGiftRowDisplayInfo(giftInfo);
+        const giftRowDisplayInfo = tmp(14933).getGiftRowDisplayInfo(giftInfo);
         ({ skuId, subscriptionPlanId, price, gifterUserId, claimed, offeredAt, claimedAt } = giftRowDisplayInfo);
-        obj = { skuId: null, subscriptionPlanId: null, price: null, gifterUserId: null, claimed: null, offeredAt: null, claimedAt: null };
-        obj[0] = skuId;
-        obj[1] = subscriptionPlanId;
-        obj[2] = price;
-        obj[3] = gifterUserId;
-        obj[4] = claimed;
-        obj[5] = offeredAt;
-        obj[6] = claimedAt;
-        return callback(FamilyCenterActivityGiftRowDefault, obj);
+        const obj3 = { skuId, subscriptionPlanId, price, gifterUserId, claimed, offeredAt, claimedAt };
+        return React6(FamilyCenterActivityGiftRowDefault, obj3);
       }
     } else {
-      if (tmpResult5.isUserAction(action)) {
-        obj1 = { action: null };
-        obj1[0] = action;
-        let tmp4Result = tmp4(closure_11, obj1);
+      if (tmpResult12.isUserAction(action)) {
+        const obj4 = { action };
+        let tmp4Result = tmp4(memoResult, obj4);
       } else {
-        const obj2 = { action: null };
-        obj2[0] = action;
-        tmp4Result = tmp4(memoResult1, obj2);
+        const obj5 = { action };
+        tmp4Result = tmp4(memoResult1, obj5);
       }
-      const obj3 = { children: null };
-      obj3[0] = tmp4Result;
-      return callback(View, obj3);
+      const obj6 = { children: tmp4Result };
+      return React6(View, obj6);
     }
-    tmpResult3 = tmp(7593);
+    tmpResult10 = tmp(7607);
   }
-  tmpResult2 = getEmptyActivityFormatter;
+  tmpResult9 = FamilyCenterUtils;
 };

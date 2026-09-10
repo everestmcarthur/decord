@@ -1,41 +1,29 @@
-// Module ID: 15543
-// Function ID: 15544
-// Name: pressable
-// Dependencies: [1074, 4255, 11473, 1114, 4515, 2]
+// Module ID: 15573
+// Function ID: 15574
+// Name: AcknowledgementsSetting
+// Dependencies: [1074, 4268, 11500, 1114, 4529, 2]
 
-// Module 15543 (pressable)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import _modDef4255 from "module_4255" /* 4255 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4515 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15573 (AcknowledgementsSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import LinkingDefault from "Linking" /* 4268 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4529 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-const MarketingURLs = ME.MarketingURLs;
-const pressable = createToggle.createPressable({
+const MarketingURLs = Constants.MarketingURLs;
+const pressable = SettingBuilders.createPressable({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["0nUKy3"]);
+    const intl = util.intl;
+    return intl.string(util.t["0nUKy3"]);
   },
   parent: null,
   IconComponent: CircleInformationIcon.CircleInformationIcon,
   onPress: function handleAcknowledgementsSettingPress() {
-    _modDef4255.openURL(MarketingURLs.ACKNOWLEDGEMENTS);
+    LinkingDefault.openURL(MarketingURLs.ACKNOWLEDGEMENTS);
   },
   withArrow: true
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["0nUKy3"]);
-  },
-  parent: null,
-  IconComponent: CircleInformationIcon.CircleInformationIcon,
-  onPress: function handleAcknowledgementsSettingPress() {
-    _modDef4255.openURL(MarketingURLs.ACKNOWLEDGEMENTS);
-  },
-  withArrow: true
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AcknowledgementsSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AcknowledgementsSetting.tsx");
 
 export default pressable;

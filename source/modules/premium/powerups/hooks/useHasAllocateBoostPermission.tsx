@@ -1,38 +1,41 @@
-// Module ID: 12517
-// Function ID: 12518
+// Module ID: 12543
+// Function ID: 12544
 // Name: useHasAllocateBoostPermission
-// Dependencies: [1979, 4199, 1085, 504, 2]
+// Dependencies: [1979, 4212, 1085, 504, 2]
 // Exports: default, getHasAllocateBoostPermission
 
-// Module 12517 (useHasAllocateBoostPermission)
-import closure_2 from "createGuildRecordFromRust" /* 1979 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4199 */;
-import { Permissions } from "sum" /* 1085 */;
+// Module 12543 (useHasAllocateBoostPermission)
+import GuildStore from "GuildStore" /* 1979 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useHasAllocateBoostPermission.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const Permissions = fn(1085).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useHasAllocateBoostPermission.tsx");
 
 export default function useHasAllocateBoostPermission(arg0) {
-  const _require = arg0;
-  const items = [closure_3, closure_2];
-  return _require(504).useStateFromStores(items, () => {
-    const guild = closure_1_2.getGuild(closure_0);
+  _require = arg0;
+  const items = [PermissionStore, GuildStore];
+  return require("initialize").useStateFromStores(items, () => {
+    const guild = GuildStore.getGuild(closure_0);
     let canResult = null;
     if (null != guild) {
       canResult = null;
       if (null != obj.getGuildPermissions(guild)) {
-        canResult = obj.can(closure_1_4.ADMINISTRATOR, guild);
+        canResult = obj.can(Permissions.ADMINISTRATOR, guild);
       }
     }
     return canResult;
   });
 };
-export const getHasAllocateBoostPermission = function getHasAllocateBoostPermission(closure_4, guild) {
+export const getHasAllocateBoostPermission = function getHasAllocateBoostPermission(PermissionStore, guild) {
   let canResult = null;
   if (null != guild) {
     canResult = null;
-    if (null != closure_4.getGuildPermissions(guild)) {
-      canResult = closure_4.can(Permissions.ADMINISTRATOR, guild);
+    if (null != PermissionStore.getGuildPermissions(guild)) {
+      canResult = PermissionStore.can(Permissions.ADMINISTRATOR, guild);
     }
   }
   return canResult;

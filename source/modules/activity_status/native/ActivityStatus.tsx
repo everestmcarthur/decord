@@ -1,24 +1,25 @@
-// Module ID: 10881
-// Function ID: 10882
+// Module ID: 10908
+// Function ID: 10909
 // Name: ActivityStatus
-// Dependencies: [19, 17, 4600, 4209, 1371, 10882, 1074, 21, 4560, 504, 10883, 10884, 10885, 10886, 10891, 10892, 10898, 10900, 10890, 2]
+// Dependencies: [19, 17, 4614, 4222, 1371, 10909, 1074, 21, 4574, 504, 10910, 10911, 10912, 10913, 10918, 10919, 10925, 10927, 10917, 2]
 // Exports: default
 
-// Module 10881 (ActivityStatus)
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "sortActivity" /* 4600 */;
-import closure_6 from "markAllUserIdListsStale" /* 4209 */;
-import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import { DOT_UNICODE } from "TOOLTIP_DELAY_MS" /* 10882 */;
-import { ActivityTypes } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10908 (ActivityStatus)
+import noop from "module_19" /* 19 */;
+import PresenceStore from "PresenceStore" /* 4614 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
-let closure_13 = createCacheKey.createStyles({ container: { flexDirection: "row", alignItems: "center", gap: 4 }, icon: { marginTop: 1 }, emoji: { marginRight: 0 } });
-const result = require("set").fileFinishedImporting("modules/activity_status/native/ActivityStatus.tsx");
+const require = fn;
+const View = fn(17).View;
+const DOT_UNICODE = fn(10909).DOT_UNICODE;
+const ActivityTypes = fn(1074).ActivityTypes;
+const jsxProd = fn(21);
+({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4574);
+let closure_13 = createStyles.createStyles({ container: { flexDirection: "row", alignItems: "center", gap: 4 }, icon: { marginTop: 1 }, emoji: { marginRight: 0 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activity_status/native/ActivityStatus.tsx");
 
 export default function ActivityStatus(guildId) {
   const userId = guildId.userId;
@@ -34,17 +35,17 @@ export default function ActivityStatus(guildId) {
   if (flag === undefined) {
     flag = false;
   }
-  let stateFromStores1;
-  const tmp = callback2();
-  let obj = userId(504);
-  const items = [closure_7];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getUser(userId));
-  obj1 = userId(504);
-  const items1 = [closure_5];
-  stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_5.getActivities(userId));
-  const voiceChannel = stateFromStores1(10884)({ userId, guildId: guildId.guildId }).voiceChannel;
+  const tmp = closure_13();
+  const items = [UserStore];
+  const stateFromStores = userId(504).useStateFromStores(items, () => UserStore.getUser(userId));
+  const obj = userId(504);
+  const tmp2 = userId;
+  const items1 = [PresenceStore];
+  const stateFromStores1 = userId(504).useStateFromStores(items1, () => PresenceStore.getActivities(userId));
+  const obj2 = userId(504);
+  const voiceChannel = stateFromStores1(10911)({ userId, guildId: guildId.guildId }).voiceChannel;
   const items2 = [stateFromStores1];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     let found;
     if (stateFromStores1 != null) {
       found = arr.find((type) => type.type === constants.CUSTOM_STATUS);
@@ -72,16 +73,15 @@ export default function ActivityStatus(guildId) {
     }
     arr = stateFromStores1;
   }, items2);
-  let obj2 = userId(10885);
+  const tmp6 = stateFromStores1(10910)(userId);
   let state;
   if (memo != null) {
     state = memo.state;
   }
-  const gameMentionsAsPlainText = obj2.useGameMentionsAsPlainText(state);
-  const tmp2 = userId;
-  const tmp6 = stateFromStores1(10883)(userId);
-  const items3 = [closure_6];
-  if (tmp2Result.useStateFromStores(items3, () => closure_1_6.isBlockedOrIgnored(userId))) {
+  const gameMentionsAsPlainText = userId(10912).useGameMentionsAsPlainText(state);
+  const obj3 = userId(10912);
+  const items3 = [RelationshipStore];
+  if (tmp2Result.useStateFromStores(items3, () => RelationshipStore.isBlockedOrIgnored(userId))) {
     return null;
   } else {
     let bot;
@@ -95,19 +95,17 @@ export default function ActivityStatus(guildId) {
     if (null != tmp6) {
       let found;
       if (stateFromStores1 != null) {
-        found = stateFromStores1.find(tmp5(10891));
+        found = stateFromStores1.find(tmp5(10918));
       }
-      obj = { game: null, iconStyle: null, textStyle: null, maxFontSizeMultiplier: null, hideIcon: null, hideText: null };
-      obj[0] = found;
+      const obj4 = { game: found, iconStyle: null, textStyle: null, maxFontSizeMultiplier: null, hideIcon: null, hideText: null };
       const items4 = [tmp.icon, iconStyle];
-      obj[1] = items4;
-      obj[2] = textStyle;
-      obj[3] = maxFontSizeMultiplier;
-      obj[4] = tmp12;
-      obj[5] = tmp13;
-      let tmp18Result = callback(tmp5(10886), obj);
-      const tmp18 = callback;
-      const tmp5Result = tmp5(10886);
+      obj4.iconStyle = items4;
+      obj4.textStyle = textStyle;
+      obj4.maxFontSizeMultiplier = maxFontSizeMultiplier;
+      obj4.hideIcon = tmp12;
+      obj4.hideText = tmp13;
+      let tmp18Result = closure_10(tmp5(10913), obj4);
+      const tmp5Result = tmp5(10913);
     } else {
       let found1;
       if (stateFromStores1 != null) {
@@ -117,27 +115,25 @@ export default function ActivityStatus(guildId) {
         });
       }
       if (null != found1) {
-        obj = { activity: null, iconStyle: null, textStyle: null, maxFontSizeMultiplier: null, hideIcon: null, hideText: null };
-        obj[0] = found1;
+        const obj5 = { activity: found1, iconStyle: null, textStyle: null, maxFontSizeMultiplier: null, hideIcon: null, hideText: null };
         const items5 = [tmp.icon, iconStyle];
-        obj[1] = items5;
-        obj[2] = textStyle;
-        obj[3] = maxFontSizeMultiplier;
-        obj[4] = tmp12;
-        obj[5] = tmp13;
-        tmp18Result = callback(tmp5(10892), obj);
+        obj5.iconStyle = items5;
+        obj5.textStyle = textStyle;
+        obj5.maxFontSizeMultiplier = maxFontSizeMultiplier;
+        obj5.hideIcon = tmp12;
+        obj5.hideText = tmp13;
+        tmp18Result = closure_10(tmp5(10919), obj5);
       } else {
         tmp18Result = null;
         if (null != voiceChannel) {
-          obj1 = { channel: null, iconStyle: null, textStyle: null, maxFontSizeMultiplier: null, hideIcon: null, hideText: null };
-          obj1[0] = voiceChannel;
+          const obj6 = { channel: voiceChannel, iconStyle: null, textStyle: null, maxFontSizeMultiplier: null, hideIcon: null, hideText: null };
           const items6 = [tmp.icon, iconStyle];
-          obj1[1] = items6;
-          obj1[2] = textStyle;
-          obj1[3] = maxFontSizeMultiplier;
-          obj1[4] = tmp12;
-          obj1[5] = tmp13;
-          tmp18Result = callback(tmp5(10898), obj1);
+          obj6.iconStyle = items6;
+          obj6.textStyle = textStyle;
+          obj6.maxFontSizeMultiplier = maxFontSizeMultiplier;
+          obj6.hideIcon = tmp12;
+          obj6.hideText = tmp13;
+          tmp18Result = closure_10(tmp5(10925), obj6);
         }
       }
     }
@@ -150,49 +146,36 @@ export default function ActivityStatus(guildId) {
           tmp25 = !flag;
         }
         if (tmp25) {
-          obj2 = { emoji: null, size: null, animate: null, style: null };
-          obj2[0] = memo.emoji;
-          obj2[1] = emojiSize;
-          obj2[2] = animate;
-          obj2[3] = tmp.emoji;
-          tmp25 = callback(tmp5(10900), obj2);
+          const obj7 = { emoji: memo.emoji, size: emojiSize, animate, style: tmp.emoji };
+          tmp25 = closure_10(tmp5(10927), obj7);
         }
         const items7 = [tmp25, ];
         let tmp27 = null != memo.state;
         if (tmp27) {
-          const obj3 = { variant: "text-xs/normal", style: null, maxFontSizeMultiplier: null, children: null };
-          obj3[1] = textStyle;
-          obj3[2] = maxFontSizeMultiplier;
-          obj3[3] = gameMentionsAsPlainText;
-          tmp27 = callback(tmp5(10890), obj3);
+          const obj8 = { variant: "text-xs/normal", style: textStyle, maxFontSizeMultiplier, children: gameMentionsAsPlainText };
+          tmp27 = closure_10(tmp5(10917), obj8);
         }
-        const obj4 = { children: null };
+        const obj9 = { children: null };
         items7[1] = tmp27;
-        obj4[0] = items7;
-        tmp23Result = closure_12(closure_11, obj4);
-        const tmp23 = closure_12;
-        const tmp24 = closure_11;
+        obj9.children = items7;
+        tmp23Result = closure_12(closure_11, obj9);
       }
       tmp21 = tmp23Result;
     }
-    const obj5 = { style: null, children: null };
-    obj5[0] = tmp.container;
+    const obj10 = { style: tmp.container, children: null };
     const items8 = [tmp18Result, , ];
     let tmp31 = null != tmp18Result;
     if (tmp31) {
       tmp31 = null != tmp21;
     }
     if (tmp31) {
-      const obj6 = { variant: "text-xs/normal", style: null, maxFontSizeMultiplier: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
-      obj6[1] = textStyle;
-      obj6[2] = maxFontSizeMultiplier;
-      obj6[5] = DOT_UNICODE;
-      tmp31 = callback(tmp5(10890), obj6);
+      const obj11 = { variant: "text-xs/normal", style: textStyle, maxFontSizeMultiplier, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: DOT_UNICODE };
+      tmp31 = closure_10(tmp5(10917), obj11);
     }
     items8[1] = tmp31;
     items8[2] = tmp21;
-    obj5[1] = items8;
-    return closure_12(View, obj5);
+    obj10.children = items8;
+    return closure_12(View, obj10);
   }
-  tmp2Result = userId(504);
+  tmp2Result = tmp2(504);
 };

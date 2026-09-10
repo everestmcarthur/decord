@@ -1,37 +1,33 @@
-// Module ID: 16653
-// Function ID: 16654
-// Name: keyExtractor
-// Dependencies: [19, 17, 7878, 21, 4560, 16654, 16656, 16657, 16667, 16650, 16669, 16671, 16666, 16658, 16672, 16676, 16677, 16680, 16681, 16682, 16683, 16684, 1611, 16641, 1114, 8879, 2]
+// Module ID: 16685
+// Function ID: 16686
+// Name: SearchList
+// Dependencies: [19, 17, 7892, 21, 4574, 16686, 16688, 16689, 16704, 16682, 16706, 16708, 16703, 16690, 16709, 16713, 16714, 16717, 16718, 16719, 16720, 16721, 1611, 16673, 1114, 8906, 2]
 
-// Module 16653 (keyExtractor)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 16685 (SearchList)
+import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import noop from "noop" /* 8879 */;
-import _modDef16641 from "module_16641" /* 16641 */;
-import MediaGridPlaceholderItemDefault from "MediaGridPlaceholderItem" /* 16650 */;
-import FriendPresenceDefault from "FriendPresence" /* 16654 */;
-import GroupDMRowDefault from "GroupDMRow" /* 16656 */;
-import SearchHistoryRemoveIconDefault from "SearchHistoryRemoveIcon" /* 16657 */;
-import GuildVoiceChannelSubtitleDefault from "GuildVoiceChannelSubtitle" /* 16658 */;
-import _modDef16666 from "module_16666" /* 16666 */;
-import _modDef16667 from "module_16667" /* 16667 */;
-import FileOrLinkGridPlaceholderItemDefault from "FileOrLinkGridPlaceholderItem" /* 16669 */;
-import MediaGridDefault from "MediaGrid" /* 16671 */;
-import GuildChannelMessageRowHeaderDefault from "GuildChannelMessageRowHeader" /* 16672 */;
-import FormRowPlaceholderItemDefault from "FormRowPlaceholderItem" /* 16676 */;
-import getLinkNodeAtIndexDefault from "getLinkNodeAtIndex" /* 16677 */;
-import _modDef16680 from "module_16680" /* 16680 */;
-import GuildChannelMemberRowDefault from "GuildChannelMemberRow" /* 16681 */;
-import MemberRowPlaceholderItemDefault from "MemberRowPlaceholderItem" /* 16682 */;
-import _modDef16683 from "module_16683" /* 16683 */;
-import _modDef16684 from "module_16684" /* 16684 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 7878 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import _mod8906 from "module_8906" /* 8906 */;
+import MediaGridPlaceholderDefault from "MediaGridPlaceholder" /* 16682 */;
+import DMRowDefault from "DMRow" /* 16686 */;
+import rows_GroupDMRowDefault from "rows/GroupDMRow" /* 16688 */;
+import SearchHistoryRowDefault from "SearchHistoryRow" /* 16689 */;
+import GuildVoiceOrStageChannelRowDefault from "GuildVoiceOrStageChannelRow" /* 16690 */;
+import GuildTextChannelRowDefault from "GuildTextChannelRow" /* 16703 */;
+import MediaGridItemDefault from "MediaGridItem" /* 16704 */;
+import FileOrLinkGridPlaceholderDefault from "FileOrLinkGridPlaceholder" /* 16706 */;
+import MediaGridDefault from "MediaGrid" /* 16708 */;
+import MessageRowDefault from "MessageRow" /* 16709 */;
+import FormRowPlaceholderDefault from "FormRowPlaceholder" /* 16713 */;
+import LinkGridItemDefault from "LinkGridItem" /* 16714 */;
+import FileGridItemDefault from "FileGridItem" /* 16717 */;
+import GuildChannelMemberRowDefault from "GuildChannelMemberRow" /* 16718 */;
+import MemberRowPlaceholderDefault from "MemberRowPlaceholder" /* 16719 */;
+import GenericTextRowDefault from "GenericTextRow" /* 16720 */;
+import SearchListSectionDefault from "SearchListSection" /* 16721 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+const pages_ErrorScreenDefault = tmp3(16673);
+require = fn;
 function keyExtractor(type) {
   type = type.type;
   if (constants2.DM === type) {
@@ -121,82 +117,88 @@ function renderItem(item) {
   item = item.item;
   const type = item.type;
   if (constants2.DM === type) {
-    let obj = {};
-    const merged = Object.assign(item.props);
-    return callback(FriendPresenceDefault, obj);
-  } else if (tmp.GROUP_DM === type) {
-    obj = {};
-    const merged1 = Object.assign(item.props);
-    return callback(GroupDMRowDefault, obj);
-  } else if (tmp.SEARCH_HISTORY_ITEM === type) {
-    obj1 = {};
-    const merged2 = Object.assign(item.props);
-    return callback(SearchHistoryRemoveIconDefault, obj1);
-  } else if (tmp.MEDIA === type) {
     const obj2 = {};
-    const merged3 = Object.assign(item.props);
-    return callback(_modDef16667, obj2);
-  } else if (tmp.MEDIA_PLACEHOLDER === type) {
+    const merged = Object.assign(item.props);
+    return React6(DMRowDefault, obj2);
+  } else if (tmp.GROUP_DM === type) {
     const obj3 = {};
-    const merged4 = Object.assign(item.props);
-    return callback(MediaGridPlaceholderItemDefault, obj3);
-  } else if (tmp.FILE_OR_LINK_PLACEHOLDER === type) {
+    const merged1 = Object.assign(item.props);
+    return React6(rows_GroupDMRowDefault, obj3);
+  } else if (tmp.SEARCH_HISTORY_ITEM === type) {
     const obj4 = {};
-    const merged5 = Object.assign(item.props);
-    return callback(FileOrLinkGridPlaceholderItemDefault, obj4);
-  } else if (tmp.MEDIA_GRID === type) {
+    const merged2 = Object.assign(item.props);
+    return React6(SearchHistoryRowDefault, obj4);
+  } else if (tmp.MEDIA === type) {
     const obj5 = {};
-    const merged6 = Object.assign(item.props);
-    return callback(MediaGridDefault, obj5);
-  } else if (tmp.GUILD_TEXT_CHANNEL === type) {
+    const merged3 = Object.assign(item.props);
+    return React6(MediaGridItemDefault, obj5);
+  } else if (tmp.MEDIA_PLACEHOLDER === type) {
     const obj6 = {};
-    const merged7 = Object.assign(item.props);
-    return callback(_modDef16666, obj6);
-  } else if (tmp.GUILD_VOICE_CHANNEL === type) {
+    const merged4 = Object.assign(item.props);
+    return React6(MediaGridPlaceholderDefault, obj6);
+  } else if (tmp.FILE_OR_LINK_PLACEHOLDER === type) {
     const obj7 = {};
-    const merged8 = Object.assign(item.props);
-    return callback(GuildVoiceChannelSubtitleDefault, obj7);
-  } else if (tmp.MESSAGE === type) {
+    const merged5 = Object.assign(item.props);
+    return React6(FileOrLinkGridPlaceholderDefault, obj7);
+  } else if (tmp.MEDIA_GRID === type) {
     const obj8 = {};
-    const merged9 = Object.assign(item.props);
-    return callback(GuildChannelMessageRowHeaderDefault, obj8);
-  } else if (tmp.MESSAGE_PLACEHOLDER === type) {
-    return callback(FormRowPlaceholderItemDefault, {});
-  } else if (tmp.LINK === type) {
+    const merged6 = Object.assign(item.props);
+    return React6(MediaGridDefault, obj8);
+  } else if (tmp.GUILD_TEXT_CHANNEL === type) {
     const obj9 = {};
-    const merged10 = Object.assign(item.props);
-    return callback(getLinkNodeAtIndexDefault, obj9);
-  } else if (tmp.FILE === type) {
+    const merged7 = Object.assign(item.props);
+    return React6(GuildTextChannelRowDefault, obj9);
+  } else if (tmp.GUILD_VOICE_CHANNEL === type) {
     const obj10 = {};
-    const merged11 = Object.assign(item.props);
-    return callback(_modDef16680, obj10);
-  } else if (tmp.GUILD_CHANNEL_MEMBER === type) {
+    const merged8 = Object.assign(item.props);
+    return React6(GuildVoiceOrStageChannelRowDefault, obj10);
+  } else if (tmp.MESSAGE === type) {
     const obj11 = {};
-    const merged12 = Object.assign(item.props);
-    return callback(GuildChannelMemberRowDefault, obj11);
-  } else if (tmp.GUILD_CHANNEL_MEMBER_PLACEHOLDER === type) {
-    return callback(MemberRowPlaceholderItemDefault, {});
-  } else if (tmp.GENERIC === type) {
+    const merged9 = Object.assign(item.props);
+    return React6(MessageRowDefault, obj11);
+  } else if (tmp.MESSAGE_PLACEHOLDER === type) {
+    return React6(FormRowPlaceholderDefault, {});
+  } else if (tmp.LINK === type) {
     const obj12 = {};
+    const merged10 = Object.assign(item.props);
+    return React6(LinkGridItemDefault, obj12);
+  } else if (tmp.FILE === type) {
+    const obj13 = {};
+    const merged11 = Object.assign(item.props);
+    return React6(FileGridItemDefault, obj13);
+  } else if (tmp.GUILD_CHANNEL_MEMBER === type) {
+    const obj14 = {};
+    const merged12 = Object.assign(item.props);
+    return React6(GuildChannelMemberRowDefault, obj14);
+  } else if (tmp.GUILD_CHANNEL_MEMBER_PLACEHOLDER === type) {
+    return React6(MemberRowPlaceholderDefault, {});
+  } else if (tmp.GENERIC === type) {
+    const obj15 = {};
     const merged13 = Object.assign(item.props);
-    return callback(_modDef16683, obj12);
+    return React6(GenericTextRowDefault, obj15);
   } else if (tmp.SECTION === type) {
-    obj = {};
+    const obj = {};
     const merged14 = Object.assign(item.props);
-    return callback(_modDef16684, obj);
+    return React6(SearchListSectionDefault, obj);
   } else {
     return null;
   }
 }
-let c3 = importAllResult;
-({ View: c4, StyleSheet: c5 } = get_ActivityIndicator);
-({ SearchHistoryItemTypes: closure_6, SearchListItemTypes: error } = MessageEmbedTypes);
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles({ container: { flex: 1 } });
-const memoResult = importAllResult.memo(function SearchList(arg0) {
+get_ActivityIndicator = fn(17);
+({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
+const SearchConstants = fn(7892);
+({ SearchHistoryItemTypes: metroRequire, SearchListItemTypes: closure_7 } = SearchConstants);
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4574);
+let closure_10 = createStyles.createStyles({ container: { flex: 1 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/list/SearchList.tsx");
+
+export default noop.memo(function SearchList(arg0) {
   ({ contentContainerStyle, data, ListHeaderComponent, ListFooterComponent, numColumns } = arg0);
   ({ onEndReached, ItemSeparatorComponent } = arg0);
-  const ref = importAllResult.useRef(null);
+  const ref = noop.useRef(null);
   let num = 0.5;
   if (null != numColumns) {
     num = 0.5;
@@ -209,45 +211,40 @@ const memoResult = importAllResult.memo(function SearchList(arg0) {
       }
     }
   }
-  let obj = { style: callback2().container, children: null };
+  const obj = { style: closure_10().container, children: null };
   let tmp8 = tmp5;
   if (0 === data.length && null == ListFooterComponent && null == ListHeaderComponent) {
-    obj = { style: null, children: null };
-    obj[0] = absoluteFill.absoluteFill;
-    obj = { text: null };
-    const intl = getSystemLocale.intl;
-    obj[0] = intl.string(getSystemLocale.t.V6nAfF);
-    obj[1] = callback(_modDef16641, obj);
-    tmp8 = callback(tmp7, obj);
-    const tmp3Result = _modDef16641;
+    const obj2 = { style: absoluteFill.absoluteFill, children: null };
+    const obj3 = { text: null };
+    const intl = util.intl;
+    obj3.text = intl.string(util.t.V6nAfF);
+    obj2.children = React6(pages_ErrorScreenDefault, obj3);
+    tmp8 = React6(tmp7, obj2);
+    const tmp3Result = pages_ErrorScreenDefault;
   }
   const items = [tmp8, ];
-  obj1 = { ref, overrideProps: null, keyboardDismissMode: "on-drag", keyboardShouldPersistTaps: "handled", data: null, renderItem: null, onEndReachedThreshold: null, onEndReached: null, scrollsToTop: true, contentContainerStyle: null, keyExtractor: null, getItemType: null, ListHeaderComponent: null, ListFooterComponent: null, ItemSeparatorComponent: null, numColumns: null };
-  let obj2;
+  const obj4 = { ref, overrideProps: null, keyboardDismissMode: "on-drag", keyboardShouldPersistTaps: "handled", data: null, renderItem: null, onEndReachedThreshold: null, onEndReached: null, scrollsToTop: true, contentContainerStyle: null, keyExtractor: null, getItemType: null, ListHeaderComponent: null, ListFooterComponent: null, ItemSeparatorComponent: null, numColumns: null };
+  let obj5;
   if (0 === data.length && null == ListFooterComponent && null == ListHeaderComponent) {
-    obj2 = { importantForAccessibility: "no", scrollEnabled: false };
+    obj5 = { importantForAccessibility: "no", scrollEnabled: false };
   }
-  obj1[1] = obj2;
-  obj1[4] = data;
-  obj1[5] = renderItem;
-  obj1[6] = num;
-  obj1[7] = onEndReached;
-  const tmp13 = callback;
-  const tmp2 = callback2();
-  const tmp3 = importDefault;
-  const tmp6 = closure_9;
+  obj4.overrideProps = obj5;
+  obj4.data = data;
+  obj4.renderItem = renderItem;
+  obj4.onEndReachedThreshold = num;
+  obj4.onEndReached = onEndReached;
+  const tmp13 = React6;
+  const tmp2 = closure_10();
+  const tmp6 = React7;
   const merged = Object.assign(contentContainerStyle);
-  obj1[9] = { paddingBottom: 16 + useSafeAreaInsetsDefault().bottom };
-  obj1[10] = keyExtractor;
-  obj1[11] = getItemType;
-  obj1[12] = ListHeaderComponent;
-  obj1[13] = ListFooterComponent;
-  obj1[14] = ItemSeparatorComponent;
-  obj1[15] = numColumns;
-  items[1] = tmp13(noop.AnimatedFlashList, obj1);
-  obj[1] = items;
-  return tmp6(closure_4, obj);
+  obj4.contentContainerStyle = { paddingBottom: 16 + useSafeAreaInsetsDefault().bottom };
+  obj4.keyExtractor = keyExtractor;
+  obj4.getItemType = getItemType;
+  obj4.ListHeaderComponent = ListHeaderComponent;
+  obj4.ListFooterComponent = ListFooterComponent;
+  obj4.ItemSeparatorComponent = ItemSeparatorComponent;
+  obj4.numColumns = numColumns;
+  items[1] = tmp13(_mod8906.AnimatedFlashList, obj4);
+  obj.children = items;
+  return tmp6(React4, obj);
 });
-const result = require("set").fileFinishedImporting("modules/search/native/components/list/SearchList.tsx");
-
-export default memoResult;

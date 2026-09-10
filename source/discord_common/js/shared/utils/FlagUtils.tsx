@@ -1,13 +1,13 @@
 // Module ID: 1384
 // Function ID: 1385
-// Name: hasFlag
+// Name: FlagUtils
 // Dependencies: [2]
 // Exports: addFlag, hasAnyFlag, hasFlag, removeFlag, removeFlags, setFlag, toggleFlag
 
-// Module 1384 (hasFlag)
-import set from "set" /* 2 */;
+// Module 1384 (FlagUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/utils/FlagUtils.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/utils/FlagUtils.tsx");
 
 export const hasFlag = function hasFlag(arg0, arg1) {
   return (arg0 & arg1) === arg1;
@@ -21,9 +21,9 @@ export const addFlag = function addFlag(setting, SUPPRESS_NOTIFICATIONS) {
 export const removeFlag = function removeFlag(flags, OBFUSCATED) {
   return flags & ~OBFUSCATED;
 };
-export const removeFlags = function removeFlags(setting, UNREADS_ALL_MESSAGES, NO_RELATION) {
+export const removeFlags = function removeFlags(setting) {
   const substr = [...arguments].slice();
-  return substr.reduce((arg0, arg1) => arg0 & ~arg1, setting);
+  return substr.reduce((acc, item) => acc & ~item, setting);
 };
 export const setFlag = function setFlag(arg0, arg1, arg2) {
   if (arg2) {

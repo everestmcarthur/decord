@@ -1,87 +1,81 @@
-// Module ID: 13289
-// Function ID: 13290
+// Module ID: 13312
+// Function ID: 13313
 // Name: validateJumpWithAlert
-// Dependencies: [1957, 4199, 4209, 1074, 4904, 1114, 7507, 2]
+// Dependencies: [1957, 4212, 4222, 1074, 4918, 1114, 7521, 2]
 // Exports: default
 
-// Module 13289 (validateJumpWithAlert)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import setDefault from "set" /* 4904 */;
-import isSpamSupported from "isSpamSupported" /* 7507 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_5 from "markAllUserIdListsStale" /* 4209 */;
-import { Permissions } from "ME" /* 1074 */;
+// Module 13312 (validateJumpWithAlert)
+import util from "util" /* 1114 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
+import isSpam from "isSpam" /* 7521 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/validateJumpWithAlert.tsx");
+require = fn;
+const Permissions = fn(1074).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/validateJumpWithAlert.tsx");
 
-export default function validateJumpWithAlert(author) {
-  let obj = blockedForMessage;
-  if (blockedForMessage.isBlockedForMessage(author)) {
-    obj = { title: null, body: null, confirmText: null };
-    const intl11 = getSystemLocale.intl;
-    obj[0] = intl11.string(getSystemLocale.t["j7eA/g"]);
-    const intl12 = getSystemLocale.intl;
-    obj = { name: null };
-    obj[0] = author.author.username;
-    obj[1] = intl12.formatToPlainString(getSystemLocale.t.dTNNgr, obj);
-    const intl13 = getSystemLocale.intl;
-    obj[2] = intl13.string(getSystemLocale.t.BddRzS);
-    setDefault.show(obj);
+export default function validateJumpWithAlert(author, onConfirm) {
+  if (RelationshipStore.isBlockedForMessage(author)) {
+    const obj3 = { title: null, body: null, confirmText: null };
+    const intl11 = util.intl;
+    obj3.title = intl11.string(util.t["j7eA/g"]);
+    const intl12 = util.intl;
+    const obj5 = { name: author.author.username };
+    obj3.body = intl12.formatToPlainString(util.t.dTNNgr, obj5);
+    const intl13 = util.intl;
+    obj3.confirmText = intl13.string(util.t.BddRzS);
+    AlertActionCreatorsDefault.show(obj3);
     return false;
-  } else if (obj.isIgnoredForMessage(author)) {
-    obj1 = { title: null, body: null, confirmText: null };
-    const intl8 = getSystemLocale.intl;
-    obj1[0] = intl8.string(getSystemLocale.t.XyWoKV);
-    const intl9 = getSystemLocale.intl;
-    const obj2 = { name: null };
-    obj2[0] = author.author.username;
-    obj1[1] = intl9.formatToPlainString(getSystemLocale.t["8t8doK"], obj2);
-    const intl10 = getSystemLocale.intl;
-    obj1[2] = intl10.string(getSystemLocale.t.BddRzS);
-    setDefault.show(obj1);
+  } else if (RelationshipStore.isIgnoredForMessage(author)) {
+    const obj6 = { title: null, body: null, confirmText: null };
+    const intl8 = util.intl;
+    obj6.title = intl8.string(util.t.XyWoKV);
+    const intl9 = util.intl;
+    const obj8 = { name: author.author.username };
+    obj6.body = intl9.formatToPlainString(util.t["8t8doK"], obj8);
+    const intl10 = util.intl;
+    obj6.confirmText = intl10.string(util.t.BddRzS);
+    AlertActionCreatorsDefault.show(obj6);
     return false;
   } else {
-    obj1 = isSpamSupported;
-    if (obj1.isSpam(author)) {
-      channel = channel.getChannel(author.channel_id);
+    if (obj2.isSpam(author)) {
+      const channel = ChannelStore.getChannel(author.channel_id);
       let isPrivateResult;
       if (channel != null) {
         isPrivateResult = channel.isPrivate();
       }
       if (!isPrivateResult) {
-        if (!closure_4.can(Permissions.MODERATE_MEMBERS, channel)) {
-          let obj3 = setDefault;
-          obj3 = { title: null, body: null, confirmText: null };
+        if (!PermissionStore.can(Permissions.MODERATE_MEMBERS, channel)) {
+          const obj9 = { title: null, body: null, confirmText: null };
           const intl = tmp(1114).intl;
-          obj3[0] = intl.string(tmp(1114).t["6vJKFk"]);
+          obj9.title = intl.string(tmp(1114).t["6vJKFk"]);
           const intl2 = tmp(1114).intl;
-          const obj4 = { name: null };
-          obj4[0] = author.author.username;
-          obj3[1] = intl2.formatToPlainString(tmp(1114).t.zKNgPF, obj4);
+          const obj11 = { name: author.author.username };
+          obj9.body = intl2.formatToPlainString(tmp(1114).t.zKNgPF, obj11);
           const intl3 = tmp(1114).intl;
-          obj3[2] = intl3.string(tmp(1114).t.BddRzS);
-          obj3.show(obj3);
+          obj9.confirmText = intl3.string(tmp(1114).t.BddRzS);
+          AlertActionCreatorsDefault.show(obj9);
         }
         return false;
       }
-      let obj6 = setDefault;
-      const obj5 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
+      const obj12 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
       const intl4 = tmp(1114).intl;
-      obj5[0] = intl4.string(tmp(1114).t["cZcG+P"]);
+      obj12.title = intl4.string(tmp(1114).t["cZcG+P"]);
       const intl5 = tmp(1114).intl;
-      obj6 = { name: null };
-      obj6[0] = author.author.username;
-      obj5[1] = intl5.formatToPlainString(tmp(1114).t["1YTWty"], obj6);
+      const obj14 = { name: author.author.username };
+      obj12.body = intl5.formatToPlainString(tmp(1114).t["1YTWty"], obj14);
       const intl6 = tmp(1114).intl;
-      obj5[2] = intl6.string(tmp(1114).t["+TSRGD"]);
+      obj12.confirmText = intl6.string(tmp(1114).t["+TSRGD"]);
       const intl7 = tmp(1114).intl;
-      obj5[3] = intl7.string(tmp(1114).t["ETE/oC"]);
-      obj5[4] = arg1;
-      obj6.show(obj5);
+      obj12.cancelText = intl7.string(tmp(1114).t["ETE/oC"]);
+      obj12.onConfirm = onConfirm;
+      AlertActionCreatorsDefault.show(obj12);
     } else {
       return true;
     }
+    obj2 = isSpam;
   }
 };

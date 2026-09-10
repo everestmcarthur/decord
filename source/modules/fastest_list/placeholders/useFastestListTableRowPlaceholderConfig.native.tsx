@@ -1,56 +1,56 @@
-// Module ID: 10872
-// Function ID: 10873
-// Name: styles
-// Dependencies: [19, 4560, 576, 1178, 5441, 7062, 2]
+// Module ID: 10899
+// Function ID: 10900
+// Name: useFastestListTableRowPlaceholderConfig
+// Dependencies: [19, 4574, 576, 1178, 5455, 7076, 2]
 // Exports: default
 
-// Module 10872 (styles)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10899 (useFastestListTableRowPlaceholderConfig)
+import nativeDefault from "native" /* 576 */;
+import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7076 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-createCacheKey = { placeholder: null, placeholderAvatar: null, placeholderUsername: null, placeholderDivider: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { width: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.REFRESH_MEDIUM_32], height: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.REFRESH_MEDIUM_32], borderRadius: ThemesDefault.radii.xl, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-const obj1 = { width: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.REFRESH_MEDIUM_32], height: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.REFRESH_MEDIUM_32], borderRadius: ThemesDefault.radii.xl, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-createCacheKey[2] = { height: 20, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-const obj2 = { height: 20, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-createCacheKey[3] = { backgroundColor: require("result").DIVIDER_BACKGROUND };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj3 = { backgroundColor: require("result").DIVIDER_BACKGROUND };
-const result = require("set").fileFinishedImporting("modules/fastest_list/placeholders/useFastestListTableRowPlaceholderConfig.native.tsx");
+require = fn;
+const createStyles = fn(4574);
+let obj2 = { placeholder: { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT }, placeholderAvatar: null, placeholderUsername: null, placeholderDivider: null };
+let size = { width: fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.REFRESH_MEDIUM_32], height: fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.REFRESH_MEDIUM_32], borderRadius: nativeDefault.radii.xl, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+obj2.placeholderAvatar = size;
+let obj3 = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT };
+obj2.placeholderUsername = { height: 20, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+const obj4 = { height: 20, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+obj2.placeholderDivider = { backgroundColor: fn(5455).DIVIDER_BACKGROUND };
+const styles = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/fastest_list/placeholders/useFastestListTableRowPlaceholderConfig.native.tsx");
 
 export default function useFastestListTableRowPlaceholderConfig() {
-  const tmp = createCacheKey();
+  const tmp = styles();
   closure_0 = tmp;
   const items = [tmp];
-  return React.useMemo(() => {
-    let obj = { type: lib(closure_1_2[5]).FastestListPropsPlaceholderType.FEED_ITEM, shape: "circle", backgroundColorHex: lib.placeholder.backgroundColor, colorHex: lib.placeholderAvatar.backgroundColor, labelPadding: closure_1_1(closure_1_2[2]).space.PX_16, labelPaddingInnerRatio: 0, labelSize: lib.placeholderUsername.height, padding: closure_1_1(closure_1_2[2]).space.PX_12, shapeSize: lib.placeholderAvatar.width };
-    obj = { divider: true, dividerColorHex: lib.placeholderDivider.backgroundColor, dividerPaddingLeft: null };
-    const sum = closure_1_1(closure_1_2[2]).space.PX_12 + lib.placeholderAvatar.width;
-    obj[2] = sum + closure_1_1(closure_1_2[2]).space.PX_16;
-    obj = { sectionHeader: { type: lib(closure_1_2[5]).FastestListPropsPlaceholderType.SHAPE, shape: "rect", colorHex: lib.placeholder.backgroundColor, paddingVertical: closure_1_1(closure_1_2[2]).space.PX_16, borderRadius: closure_1_1(closure_1_2[2]).radii.md, width: closure_1_1(closure_1_2[2]).space.PX_96 }, sectionItem: null, sectionItemAtFront: null, sectionItemAtRear: null, sectionItemSingleton: null };
+  return noop.useMemo(() => {
+    const obj = { type: FastestListPropsPlaceholder.FastestListPropsPlaceholderType.FEED_ITEM, shape: "circle", backgroundColorHex: closure_0.placeholder.backgroundColor, colorHex: closure_0.placeholderAvatar.backgroundColor, labelPadding: nativeDefault.space.PX_16, labelPaddingInnerRatio: 0, labelSize: closure_0.placeholderUsername.height, padding: nativeDefault.space.PX_12, shapeSize: closure_0.placeholderAvatar.width };
+    const obj2 = { divider: true, dividerColorHex: closure_0.placeholderDivider.backgroundColor, dividerPaddingLeft: null };
+    const sum = nativeDefault.space.PX_12 + closure_0.placeholderAvatar.width;
+    obj2.dividerPaddingLeft = sum + nativeDefault.space.PX_16;
+    const obj3 = { sectionHeader: { type: FastestListPropsPlaceholder.FastestListPropsPlaceholderType.SHAPE, shape: "rect", colorHex: closure_0.placeholder.backgroundColor, paddingVertical: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md, width: nativeDefault.space.PX_96 }, sectionItem: null, sectionItemAtFront: null, sectionItemAtRear: null, sectionItemSingleton: null };
     const merged = Object.assign(obj);
-    const merged1 = Object.assign(obj);
-    obj[1] = {};
-    const obj3 = {};
+    const merged1 = Object.assign(obj2);
+    obj3.sectionItem = {};
+    const obj6 = {};
     const merged2 = Object.assign(obj);
-    const merged3 = Object.assign(obj);
-    obj3.borderTopLeftRadius = closure_1_1(closure_1_2[2]).radii.lg;
-    obj3.borderTopRightRadius = closure_1_1(closure_1_2[2]).radii.lg;
-    obj[2] = obj3;
-    const obj4 = {};
+    const merged3 = Object.assign(obj2);
+    obj6.borderTopLeftRadius = nativeDefault.radii.lg;
+    obj6.borderTopRightRadius = nativeDefault.radii.lg;
+    obj3.sectionItemAtFront = obj6;
+    const obj7 = {};
     const merged4 = Object.assign(obj);
-    obj4.borderBottomLeftRadius = closure_1_1(closure_1_2[2]).radii.lg;
-    obj4.borderBottomRightRadius = closure_1_1(closure_1_2[2]).radii.lg;
-    obj[3] = obj4;
-    const obj5 = {};
+    obj7.borderBottomLeftRadius = nativeDefault.radii.lg;
+    obj7.borderBottomRightRadius = nativeDefault.radii.lg;
+    obj3.sectionItemAtRear = obj7;
+    const obj8 = {};
     const merged5 = Object.assign(obj);
-    obj5.borderRadius = closure_1_1(closure_1_2[2]).radii.lg;
-    obj[4] = obj5;
-    return obj;
+    obj8.borderRadius = nativeDefault.radii.lg;
+    obj3.sectionItemSingleton = obj8;
+    return obj3;
   }, items);
 };
-export const useFastestListTableRowPlaceholderStyles = createCacheKey;
+export const useFastestListTableRowPlaceholderStyles = styles;

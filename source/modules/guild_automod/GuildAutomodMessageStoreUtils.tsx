@@ -1,14 +1,14 @@
-// Module ID: 13766
-// Function ID: 13767
-// Name: isNotAutomodEmbed
+// Module ID: 13789
+// Function ID: 13790
+// Name: GuildAutomodMessageStoreUtils
 // Dependencies: [1095, 2]
 // Exports: isNotAutomodEmbed
 
-// Module 13766 (isNotAutomodEmbed)
-import set from "set" /* 2 */;
+// Module 13789 (GuildAutomodMessageStoreUtils)
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1095 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_automod/GuildAutomodMessageStoreUtils.tsx");
+const result = size.fileFinishedImporting("modules/guild_automod/GuildAutomodMessageStoreUtils.tsx");
 
 export const isNotAutomodEmbed = function isNotAutomodEmbed(type) {
   type = type.type;

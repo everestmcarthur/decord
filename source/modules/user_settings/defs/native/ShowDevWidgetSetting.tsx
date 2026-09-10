@@ -1,33 +1,31 @@
-// Module ID: 15576
-// Function ID: 15577
-// Name: toggle
-// Dependencies: [7719, 15577, 504, 11473, 15578, 14845, 2]
+// Module ID: 15606
+// Function ID: 15607
+// Name: ShowDevWidgetSetting
+// Dependencies: [7733, 15607, 504, 11500, 15608, 14871, 2]
 
-// Module 15576 (toggle)
+// Module 15606 (ShowDevWidgetSetting)
 import initialize from "initialize" /* 504 */;
-import updateDevToolsSettings from "updateDevToolsSettings" /* 15577 */;
-import closure_2 from "initialize" /* 7719 */;
-import createToggle from "createToggle" /* 11473 */;
+import DevToolsActionCreators from "DevToolsActionCreators" /* 15607 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7733 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const SettingBuilders = fn(11500);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     return "Show Dev Tools Widget";
   },
   parent: null,
-  IconComponent: require("StaffBadgeIcon").StaffBadgeIcon,
+  IconComponent: fn(15608).StaffBadgeIcon,
   onValueChange: function handleShowDevWidgetSettingToggle(showDevWidget) {
-    let obj = updateDevToolsSettings;
-    obj = { showDevWidget };
-    const result = obj.updateDevToolsSettings(obj);
+    const result = DevToolsActionCreators.updateDevToolsSettings({ showDevWidget });
   },
   useValue: function useShowDevWidgetSettingToggleValue() {
-    const items = [closure_2];
+    const items = [DevToolsSettingsStore];
     return initialize.useStateFromStores(items, () => showDevWidget.showDevWidget);
   },
-  usePredicate: require("useStaffOrDeveloperSettingPredicate").useStaffOrDeveloperSettingPredicate
-};
-createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ShowDevWidgetSetting.tsx");
+  usePredicate: fn(14871).useStaffOrDeveloperSettingPredicate
+});
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/ShowDevWidgetSetting.tsx");
 
-export default createToggle;
+export default toggle;

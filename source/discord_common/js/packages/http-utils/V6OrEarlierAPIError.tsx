@@ -1,12 +1,12 @@
 // Module ID: 1329
 // Function ID: 1330
-// Name: getFieldMessage
+// Name: discord_common/V6OrEarlierAPIError
 // Dependencies: [2]
 
-// Module 1329 (getFieldMessage)
-import set from "set" /* 2 */;
+// Module 1329 (discord_common/V6OrEarlierAPIError)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/http-utils/V6OrEarlierAPIError.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/http-utils/V6OrEarlierAPIError.tsx");
 class APIError {
   constructor(arg0, arg1) {
     str = importDefault;
@@ -15,9 +15,10 @@ class APIError {
     }
     if (typeof global === "string") {
       tmp4 = require;
-      obj = { message: null, code: null };
-      obj[0] = global;
-      obj[1] = require;
+      obj1 = { message: null, code: null };
+      obj1.message = global;
+      obj1.code = require;
+      obj = obj1;
     } else {
       tmp8 = null;
       if (null != global.body) {
@@ -28,12 +29,12 @@ class APIError {
             if (null != global.body.code) {
               _Array = Array;
             }
-            obj1 = { message: null, code: null, retryAfter: null, status: null };
-            obj1[0] = global.body.message;
-            obj1[1] = global.body.code;
-            obj1[2] = global.body.retry_after;
-            obj1[3] = global.status;
-            obj = obj1;
+            obj5 = { message: null, code: null, retryAfter: null, status: null };
+            obj5.message = global.body.message;
+            obj5.code = global.body.code;
+            obj5.retryAfter = global.body.retry_after;
+            obj5.status = global.status;
+            obj = obj5;
           }
         }
         body = global.body;
@@ -47,14 +48,14 @@ class APIError {
         if (null != first) {
           first1 = first[0];
         }
-        obj2 = { message: null, fields: null, status: null };
-        obj2[0] = first1;
-        obj2[1] = body;
-        obj2[2] = global.status;
-        obj = obj2;
+        obj6 = { message: null, fields: null, status: null };
+        obj6.message = first1;
+        obj6.fields = body;
+        obj6.status = global.status;
+        obj = obj6;
       } else {
         obj = { status: null };
-        obj[0] = global.status;
+        obj.status = global.status;
       }
     }
     ({ message, code, fields } = obj);
@@ -63,21 +64,21 @@ class APIError {
     if (!message) {
       tmp5 = str;
     }
-    obj3 = Object.create(new.target.prototype);
-    obj3.message = tmp5;
-    obj3.retryAfter = retryAfter;
+    obj7 = Object.create(new.target.prototype);
+    obj7.message = tmp5;
+    obj7.retryAfter = retryAfter;
     if (!code) {
       code = -1;
     }
-    obj3.code = code;
+    obj7.code = code;
     if (!fields) {
       fields = {};
     }
-    obj3.fields = fields;
-    obj3.status = status;
+    obj7.fields = fields;
+    obj7.status = status;
     error = new Error(message);
-    obj3.error = error;
-    return obj3;
+    obj7.error = error;
+    return obj7;
   }
 }
 APIError.prototype["getFieldMessage"] = function getFieldMessage(discriminator) {

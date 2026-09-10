@@ -1,21 +1,25 @@
-// Module ID: 16455
-// Function ID: 16456
+// Module ID: 16486
+// Function ID: 16487
 // Name: createICYMIStyles
-// Dependencies: [19, 4560, 16456, 2]
+// Dependencies: [19, 4574, 16487, 2]
 // Exports: createICYMIStyles
 
-// Module 16455 (createICYMIStyles)
-import closure_2 from "noop" /* 19 */;
+// Module 16486 (createICYMIStyles)
+import ICYMIContext from "ICYMIContext" /* 16487 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/icymi/native/createICYMIStyles.tsx");
+const require = globalThis.__r;
 
-export const createICYMIStyles = function createICYMIStyles(createCacheKey) {
-  _require = _require(4560).createStyles(createCacheKey);
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/icymi/native/createICYMIStyles.tsx");
+
+export const createICYMIStyles = function createICYMIStyles(rect) {
+  _require = require("createStyles").createStyles(rect);
   return () => {
     const items = [...arguments];
-    const useContext = closure_1_2.useContext;
-    const items1 = [useContext(callback(closure_1_1[2]).ICYMIContext), ...items];
-    return callback(...items);
+    const useContext = noop.useContext;
+    const items1 = [useContext(ICYMIContext.ICYMIContext), ...items];
+    return closure_0(...items);
   };
 };

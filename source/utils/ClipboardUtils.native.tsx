@@ -1,92 +1,71 @@
-// Module ID: 7190
-// Function ID: 7191
-// Name: _copy
-// Dependencies: [5, 7191, 2]
+// Module ID: 7203
+// Function ID: 7204
+// Name: ClipboardUtils
+// Dependencies: [5, 7204, 2]
 // Exports: copy, getString
 
-// Module 7190 (_copy)
-import useClipboardDefault from "useClipboard" /* 7191 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+// Module 7203 (ClipboardUtils)
+import _modDef7204 from "module_7204" /* 7204 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-function _copy() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c3 = 0;
-    c2 = 0;
-    return (function*(arg0, arg1) {
-      if (c2 === 2) {
-        c2 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c2 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c2 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c2 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              obj1 = callback(table[1]);
-              obj1.setString(callback);
-              if (table != null) {
-                table();
-              }
-              c3 = 1;
-              c2 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = Promise.resolve();
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c2 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c2 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            c2 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp13) {
-          c2 = tmp;
-          throw tmp13;
-        }
-      }
-    })();
-  });
-  closure_3 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+let closure_3 = async function _copy(arg0, value) {
+  if (c2 === 2) {
+    c2 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj3 = { value, done: true };
+      return obj3;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    applyArgumentsResult = apply(self, arguments);
+    try {
+      c2 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c2 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c2 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          _modDef7204.setString(closure_0);
+          if (dependencyMap != null) {
+            dependencyMap();
+          }
+          c3 = 1;
+          c2 = 1;
+          const obj5 = { value: Promise.resolve(), done: false };
+          return obj5;
+        }
+      } else if (arg0 === 1) {
+        c2 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c2 = 3;
+        const obj = { value, done: true };
+        return obj;
+      } else {
+        c2 = 3;
+        return { value: "HermesInternal", done: null };
+      }
+    } catch (tmp13) {
+      c2 = tmp;
+      throw tmp13;
+    }
   }
-  return applyArgumentsResult;
-}
-const result = require("set").fileFinishedImporting("utils/ClipboardUtils.native.tsx");
+};
+const size = fn(2);
+const result = size.fileFinishedImporting("utils/ClipboardUtils.native.tsx");
 
 export const SUPPORTS_COPY = true;
 export const copy = function copy() {
   const self = this;
-  const apply = _copy.apply;
+  const apply = closure_3.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -95,5 +74,5 @@ export const copy = function copy() {
   return applyArgumentsResult;
 };
 export const getString = function getString() {
-  return useClipboardDefault.getString();
+  return _modDef7204.getString();
 };

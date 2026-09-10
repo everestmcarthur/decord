@@ -1,15 +1,15 @@
-// Module ID: 10996
-// Function ID: 10997
-// Name: apexExperiment
+// Module ID: 11023
+// Function ID: 11024
+// Name: TabsExperiment
 // Dependencies: [1433, 2]
 
-// Module 10996 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 11023 (TabsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
 const obj = { CONTROL: 0, [0]: "CONTROL", ENABLED: 1, [1]: "ENABLED" };
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-07-desktop-channel-tabs", kind: "user", defaultConfig: { enabled: false }, variations: { [obj.ENABLED]: { enabled: true } } });
-const result = set.fileFinishedImporting("modules/tabs/TabsExperiment.tsx");
+const result = size.fileFinishedImporting("modules/tabs/TabsExperiment.tsx");
 
 export default apexExperiment;
 export const TabsVariant = obj;

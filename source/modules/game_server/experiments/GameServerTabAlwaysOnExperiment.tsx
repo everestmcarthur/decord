@@ -1,17 +1,19 @@
-// Module ID: 16261
-// Function ID: 16262
-// Name: useIsGameServerTabAlwaysOnEnabled
+// Module ID: 16291
+// Function ID: 16292
+// Name: GameServerTabAlwaysOnExperiment
 // Dependencies: [1433, 2]
 // Exports: useIsGameServerTabAlwaysOnEnabled
 
-// Module 16261 (useIsGameServerTabAlwaysOnEnabled)
-import set from "set" /* 2 */;
+// Module 16291 (GameServerTabAlwaysOnExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null };
-obj[1] = { enabled: true };
-let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-02-game-server-tab-always-on", kind: "user", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/game_server/experiments/GameServerTabAlwaysOnExperiment.tsx");
+const obj = { name: "2026-02-game-server-tab-always-on", kind: "user", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj.variations = obj2;
+let closure_0 = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/game_server/experiments/GameServerTabAlwaysOnExperiment.tsx");
 
 export const useIsGameServerTabAlwaysOnEnabled = function useIsGameServerTabAlwaysOnEnabled(useGuildActionRows) {
   return closure_0.useConfig({ location: useGuildActionRows }).enabled;

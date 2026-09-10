@@ -1,21 +1,21 @@
-// Module ID: 8109
-// Function ID: 8110
-// Name: isContentInventoryFallbackEmbed
+// Module ID: 8135
+// Function ID: 8136
+// Name: utils
 // Dependencies: [1074, 1384, 2]
 // Exports: isContentInventoryFallbackEmbed
 
-// Module 8109 (isContentInventoryFallbackEmbed)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import hasFlag from "hasFlag" /* 1384 */;
+// Module 8135 (utils)
+import Constants from "Constants" /* 1074 */;
+import FlagUtils from "FlagUtils" /* 1384 */;
+import size from "module_2" /* 2 */;
 
-const MessageEmbedFlags = ME.MessageEmbedFlags;
-const result = set.fileFinishedImporting("modules/interaction_components/content_inventory_entry/utils.tsx");
+const MessageEmbedFlags = Constants.MessageEmbedFlags;
+const result = size.fileFinishedImporting("modules/interaction_components/content_inventory_entry/utils.tsx");
 
 export const isContentInventoryFallbackEmbed = function isContentInventoryFallbackEmbed(flags) {
   let num = flags.flags;
   if (num == null) {
     num = 0;
   }
-  return hasFlag.hasFlag(num, MessageEmbedFlags.IS_CONTENT_INVENTORY_ENTRY);
+  return FlagUtils.hasFlag(num, MessageEmbedFlags.IS_CONTENT_INVENTORY_ENTRY);
 };

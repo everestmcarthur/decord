@@ -1,65 +1,59 @@
-// Module ID: 13282
-// Function ID: 13283
+// Module ID: 13305
+// Function ID: 13306
 // Name: SafetyToolsButton
-// Dependencies: [32, 19, 17, 21, 4560, 576, 11399, 11401, 1114, 11375, 4992, 11376, 11396, 11133, 13257, 9406, 2]
+// Dependencies: [32, 19, 17, 21, 4574, 576, 11426, 11428, 1114, 11402, 5006, 11403, 11423, 11160, 13280, 9433, 2]
 // Exports: SafetyToolsButton
 
-// Module 13282 (SafetyToolsButton)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13305 (SafetyToolsButton)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11402 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11403 */;
+import SafetyToolsActionCreators from "SafetyToolsActionCreators" /* 11423 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-createCacheKey = { safetyToolsButton: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
-createCacheKey[0] = createCacheKey;
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/SafetyToolsButton.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { safetyToolsButton: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND } };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/SafetyToolsButton.tsx");
 
 export const SafetyToolsButton = function SafetyToolsButton(channelId) {
   channelId = channelId.channelId;
   const recipientId = channelId.recipientId;
   const warningId = channelId.warningId;
   const warningType = channelId.warningType;
-  let safetyToolsButtonTooltipForChannel;
-  let shouldShowInitialSafetyToolsButtonTooltip;
-  let first;
-  let callback;
-  callback = undefined;
-  let first1;
-  closure_10 = undefined;
-  let memo;
-  let callback1;
-  let callback2;
+  closure_7 = undefined;
+  let tmp = closure_7();
+  const safetyToolsButtonTooltipForChannel = channelId(warningId[6]).useSafetyToolsButtonTooltipForChannel(channelId);
   let obj = channelId(warningId[6]);
-  safetyToolsButtonTooltipForChannel = obj.useSafetyToolsButtonTooltipForChannel(channelId);
-  let tmp = callback();
-  shouldShowInitialSafetyToolsButtonTooltip = channelId(warningId[7]).useShouldShowInitialSafetyToolsButtonTooltip(channelId);
+  const shouldShowInitialSafetyToolsButtonTooltip = channelId(warningId[7]).useShouldShowInitialSafetyToolsButtonTooltip(channelId);
   let tmp4 = warningType(safetyToolsButtonTooltipForChannel.useState(false), 2);
-  first = tmp4[0];
-  callback = tmp4[1];
+  const first = tmp4[0];
+  closure_7 = tmp4[1];
   let items = [shouldShowInitialSafetyToolsButtonTooltip, safetyToolsButtonTooltipForChannel];
-  callback = safetyToolsButtonTooltipForChannel.useCallback(() => {
+  const callback = safetyToolsButtonTooltipForChannel.useCallback(() => {
     if (shouldShowInitialSafetyToolsButtonTooltip) {
-      const intl2 = channelId(warningId[8]).intl;
-      let stringResult = intl2.string(channelId(warningId[8]).t["16QyDv"]);
+      const intl2 = util.intl;
+      let stringResult = intl2.string(util.t["16QyDv"]);
     } else {
       stringResult = null;
       if (null != safetyToolsButtonTooltipForChannel) {
-        const intl = channelId(warningId[8]).intl;
-        stringResult = intl.string(channelId(warningId[8]).t.kCN9i0);
+        const intl = util.intl;
+        stringResult = intl.string(util.t.kCN9i0);
       }
     }
     return stringResult;
   }, items);
   let tmp7 = warningType(safetyToolsButtonTooltipForChannel.useState(callback()), 2);
-  first1 = tmp7[0];
+  const first1 = tmp7[0];
   closure_10 = tmp7[1];
   const items1 = [first, safetyToolsButtonTooltipForChannel, shouldShowInitialSafetyToolsButtonTooltip];
-  memo = safetyToolsButtonTooltipForChannel.useMemo(() => {
+  const memo = safetyToolsButtonTooltipForChannel.useMemo(() => {
     let tmp = first;
     if (first) {
       tmp = null != safetyToolsButtonTooltipForChannel || shouldShowInitialSafetyToolsButtonTooltip;
@@ -68,18 +62,16 @@ export const SafetyToolsButton = function SafetyToolsButton(channelId) {
     return tmp;
   }, items1);
   const items2 = [channelId, warningId, warningType, recipientId, safetyToolsButtonTooltipForChannel];
-  callback1 = safetyToolsButtonTooltipForChannel.useCallback((viewName) => {
-    let obj = channelId(warningId[9]);
-    obj = { channelId, warningId, warningType, senderId: recipientId, viewName, isNudgeWarning: null != safetyToolsButtonTooltipForChannel };
-    obj.trackNamedViewEvent(obj);
+  const callback1 = safetyToolsButtonTooltipForChannel.useCallback((viewName) => {
+    SafetyWarningUtils.trackNamedViewEvent({ channelId, warningId, warningType, senderId: recipientId, viewName, isNudgeWarning: null != safetyToolsButtonTooltipForChannel });
   }, items2);
   const effect = safetyToolsButtonTooltipForChannel.useEffect(() => {
     const timerId = setTimeout(() => {
-      callback(true);
+      closure_1_7(true);
     }, 5);
   }, []);
   recipientId(warningId[10])(() => {
-    callback1(channelId(warningId[9]).ViewNameTypes.SAFETY_TOOLS_BUTTON);
+    callback1(SafetyWarningUtils.ViewNameTypes.SAFETY_TOOLS_BUTTON);
   });
   const items3 = [callback, memo, shouldShowInitialSafetyToolsButtonTooltip, callback1];
   const effect1 = safetyToolsButtonTooltipForChannel.useEffect(() => {
@@ -88,40 +80,31 @@ export const SafetyToolsButton = function SafetyToolsButton(channelId) {
       tmp = !shouldShowInitialSafetyToolsButtonTooltip;
     }
     if (tmp) {
-      callback1(channelId(warningId[9]).ViewNameTypes.SAFETY_TOOLS_NUDGE_TOOLTIP);
+      callback1(SafetyWarningUtils.ViewNameTypes.SAFETY_TOOLS_NUDGE_TOOLTIP);
     }
     const tmp7 = callback();
     if (null != tmp7) {
-      callback(tmp7);
+      closure_10(tmp7);
     }
   }, items3);
   const items4 = [channelId, safetyToolsButtonTooltipForChannel, shouldShowInitialSafetyToolsButtonTooltip];
-  callback2 = safetyToolsButtonTooltipForChannel.useCallback(() => {
+  const callback2 = safetyToolsButtonTooltipForChannel.useCallback(() => {
     if (shouldShowInitialSafetyToolsButtonTooltip) {
-      const result = channelId(warningId[11]).acknowledgeChannelSafetyWarningTooltip(channelId);
-      const obj = channelId(warningId[11]);
+      const result = ChannelSafetyWarningsActionCreators.acknowledgeChannelSafetyWarningTooltip(channelId);
     }
     if (null != safetyToolsButtonTooltipForChannel) {
       const items = [tmp5.id];
-      const result1 = channelId(warningId[11]).dismissChannelSafetyWarnings(channelId, items);
-      const obj2 = channelId(warningId[11]);
+      const result1 = ChannelSafetyWarningsActionCreators.dismissChannelSafetyWarnings(channelId, items);
     }
   }, items4);
   const items5 = [recipientId, callback2, channelId, warningId, warningType, safetyToolsButtonTooltipForChannel];
   const callback3 = safetyToolsButtonTooltipForChannel.useCallback(() => {
     if (null != recipientId) {
       callback2();
-      let obj = channelId(warningId[12]);
+      const obj = SafetyToolsActionCreators;
       const result = obj.openSafetyToolsActionSheet(channelId, tmp, warningId, warningType);
-      obj = { channelId: null, senderId: null, warningId: null, warningType: null, cta: null, isNudgeWarning: null };
-      obj[0] = channelId;
-      obj[1] = tmp;
-      obj[2] = warningId;
-      obj[3] = warningType;
-      obj[4] = channelId(warningId[9]).CtaEventTypes.USER_SAFETY_TOOLS_BUTTON_CLICK;
-      obj[5] = null != safetyToolsButtonTooltipForChannel;
-      channelId(warningId[9]).trackCtaEvent(obj);
-      const obj2 = channelId(warningId[9]);
+      const obj3 = { channelId, senderId: tmp, warningId, warningType, cta: SafetyWarningUtils.CtaEventTypes.USER_SAFETY_TOOLS_BUTTON_CLICK, isNudgeWarning: null != safetyToolsButtonTooltipForChannel };
+      SafetyWarningUtils.trackCtaEvent(obj3);
     }
   }, items5);
   const ref = safetyToolsButtonTooltipForChannel.useRef(null);
@@ -136,21 +119,21 @@ export const SafetyToolsButton = function SafetyToolsButton(channelId) {
       label: str,
       visible: memo,
       onPress() {
-        return callback();
+        return callback2();
       }
     };
   }, items6);
   let obj2 = channelId(warningId[7]);
   const tooltip = channelId(warningId[13]).useTooltip(ref, memo1);
-  obj = { ref, children: null };
-  obj = { noMargin: true, color: null, source: null, onPress: null, accessibilityLabel: null, style: null };
-  const obj3 = channelId(warningId[13]);
-  obj[1] = recipientId(warningId[5]).unsafe_rawColors.WHITE;
-  obj[2] = recipientId(warningId[15]);
-  obj[3] = callback3;
+  const obj4 = { ref, children: null };
+  const obj5 = { noMargin: true, color: null, source: null, onPress: null, accessibilityLabel: null, style: null };
+  let obj3 = channelId(warningId[13]);
+  obj5.color = recipientId(warningId[5]).unsafe_rawColors.WHITE;
+  obj5.source = recipientId(warningId[15]);
+  obj5.onPress = callback3;
   let intl = channelId(warningId[8]).intl;
-  obj[4] = intl.string(channelId(warningId[8]).t.rpc2qv);
-  obj[5] = tmp.safetyToolsButton;
-  obj[1] = first(recipientId(warningId[14]), obj);
-  return first(shouldShowInitialSafetyToolsButtonTooltip, obj);
+  obj5.accessibilityLabel = intl.string(channelId(warningId[8]).t.rpc2qv);
+  obj5.style = tmp.safetyToolsButton;
+  obj4.children = first(recipientId(warningId[14]), obj5);
+  return first(shouldShowInitialSafetyToolsButtonTooltip, obj4);
 };

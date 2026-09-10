@@ -1,35 +1,32 @@
-// Module ID: 10404
-// Function ID: 10405
+// Module ID: 10431
+// Function ID: 10432
 // Name: StickerPackBanner
-// Dependencies: [19, 17, 21, 4899, 2]
+// Dependencies: [19, 17, 21, 4913, 2]
 // Exports: default
 
-// Module 10404 (StickerPackBanner)
-import noopAll from "noop" /* 19 */;
-import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4899 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 10431 (StickerPackBanner)
+import StickersUtils from "StickersUtils" /* 4913 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ Image: obj1, View: c3 } = get_ActivityIndicator);
-const result = require("set").fileFinishedImporting("modules/stickers/native/StickerPackBanner.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: c2, View: c3 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stickers/native/StickerPackBanner.tsx");
 
 export default function StickerPackBanner(arg0) {
   ({ containerStyle, style, stickerPack } = arg0);
-  let obj = getStickerExtensionFromFormatType;
-  const stickerPackBannerAssetUrl = obj.getStickerPackBannerAssetUrl(stickerPack, 1024);
+  const stickerPackBannerAssetUrl = StickersUtils.getStickerPackBannerAssetUrl(stickerPack, 1024);
   let tmp2 = null;
   if (null != stickerPackBannerAssetUrl) {
-    obj = { style: null, children: null };
-    obj[0] = containerStyle;
-    obj = { source: null, style: null, resizeMode: "contain" };
-    obj1 = { uri: null };
-    obj1[0] = stickerPackBannerAssetUrl;
-    obj[0] = obj1;
-    obj[1] = style;
-    obj[1] = <closure_2 source={null} style={null} resizeMode="contain" />;
-    tmp2 = <closure_3 source={null} style={null} resizeMode="contain" />;
+    const obj2 = { style: containerStyle, children: null };
+    const obj3 = { source: null, style: null, resizeMode: "contain" };
+    const obj4 = { uri: stickerPackBannerAssetUrl };
+    obj3.source = obj4;
+    obj3.style = style;
+    obj2.children = <React2 source={null} style={null} resizeMode="contain" />;
+    tmp2 = <React3 style={containerStyle}>{null}</React3>;
   }
   return tmp2;
 };

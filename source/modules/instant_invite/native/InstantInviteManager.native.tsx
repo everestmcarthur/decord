@@ -1,14 +1,14 @@
-// Module ID: 17410
-// Function ID: 17411
-// Name: prototype
-// Dependencies: [7118, 4259, 1114, 2]
+// Module ID: 17441
+// Function ID: 17442
+// Name: InstantInviteManager
+// Dependencies: [7132, 4272, 1114, 2]
 
-// Module 17410 (prototype)
-import initializeDefault from "initialize" /* 7118 */;
+// Module 17441 (InstantInviteManager)
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-let require = arg1;
-initializeDefault;
-let prototype = function InstantInviteManager() {
+let require = fn;
+const prototype = function InstantInviteManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   applyArgumentsResult.actions = {
@@ -17,17 +17,17 @@ let prototype = function InstantInviteManager() {
     }
   };
   applyArgumentsResult.shareInviteFailed = function shareInviteFailed() {
-    let obj = callback(4259);
-    obj = { key: "GROUP_DM_ADD_ERROR", content: null };
+    const obj2 = { key: "GROUP_DM_ADD_ERROR", content: null };
     const intl = applyArgumentsResult(1114).intl;
-    obj[1] = intl.string(applyArgumentsResult(1114).t["N/9OFy"]);
-    obj.open(obj);
+    obj2.content = intl.string(applyArgumentsResult(1114).t["N/9OFy"]);
+    ToastActionCreatorsDefault.open(obj2);
   };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
-const result = require("set").fileFinishedImporting("modules/instant_invite/native/InstantInviteManager.native.tsx");
+const prototype1 = new prototype();
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/instant_invite/native/InstantInviteManager.native.tsx");
 
-export default prototype;
+export default prototype1;

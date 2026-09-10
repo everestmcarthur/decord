@@ -1,73 +1,70 @@
-// Module ID: 8407
-// Function ID: 8408
-// Name: StageSparkleInner
-// Dependencies: [19, 17, 21, 4560, 576, 8408, 5587, 8409, 4271, 2]
+// Module ID: 8435
+// Function ID: 8436
+// Name: StageSparkle
+// Dependencies: [19, 17, 21, 4574, 576, 8436, 5601, 8437, 4284, 2]
 // Exports: default
 
-// Module 8407 (StageSparkleInner)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import ManaContext from "ManaContext" /* 4271 */;
-import preloadDefault from "preload" /* 5587 */;
-import registerAssetDefault from "registerAsset" /* 8408 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 8435 (StageSparkle)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 4284 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef8436 from "module_8436" /* 8436 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function StageSparkleInner(style) {
   ({ IconComponent, icon } = style);
   if (icon === undefined) {
-    icon = registerAssetDefault;
+    icon = _modDef8436;
   }
-  const tmp3 = callback2();
-  let obj = { style: items, children: null };
-  items = [tmp3.container, style.style];
-  obj = { style: tmp3.iconContainer, children: null };
+  const tmp3 = closure_6();
+  const obj = { style: null, children: null };
+  const items = [tmp3.container, style.style];
+  obj.style = items;
+  const obj2 = { style: tmp3.iconContainer, children: null };
   if (null != IconComponent) {
-    obj = { size: "lg", color: null };
-    obj[1] = ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
-    let tmp6Result = tmp6(IconComponent, obj);
+    const obj3 = { size: "lg", color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+    let tmp6Result = tmp6(IconComponent, obj3);
     let tmp10 = importDefault;
   } else {
-    obj1 = { source: null, style: null };
-    obj1[0] = icon;
-    obj1[1] = tmp3.iconStyle;
-    tmp6Result = tmp6(preloadDefault, obj1);
+    const obj4 = { source: icon, style: tmp3.iconStyle };
+    tmp6Result = tmp6(FastImageDefault, obj4);
     tmp10 = importDefault;
   }
-  obj[1] = tmp6Result;
-  const items1 = [closure_4(View, obj), ];
-  const obj2 = { style: tmp3.sparkles, source: tmp10(8409) };
-  items1[1] = closure_4(tmp10(5587), obj2);
-  obj[1] = items1;
-  return closure_5(View, obj);
+  obj2.children = tmp6Result;
+  const items1 = [React4(View, obj2), ];
+  const obj5 = { style: tmp3.sparkles, source: tmp10(8437) };
+  items1[1] = React4(tmp10(5601), obj5);
+  obj.children = items1;
+  return hasOwnProperty(View, obj);
 }
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { width: 88, height: 88, alignItems: "center", justifyContent: "center" }, iconContainer: null, iconStyle: null, sparkles: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: 28, height: 56, width: 56, alignItems: "center", justifyContent: "center" };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, height: 32, width: 32 };
-createCacheKey[3] = { position: "absolute", top: 0 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, height: 32, width: 32 };
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/StageSparkle.tsx");
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { width: 88, height: 88, alignItems: "center", justifyContent: "center" }, iconContainer: null, iconStyle: null, sparkles: null };
+let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: 28, height: 56, width: 56, alignItems: "center", justifyContent: "center" };
+obj2.iconContainer = size;
+const size1 = { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, height: 32, width: 32 };
+obj2.iconStyle = size1;
+obj2.sparkles = { position: "absolute", top: 0 };
+let closure_6 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageSparkle.tsx");
 
 export default function StageSparkle(theme) {
   theme = theme.theme;
-  const merged = Object.assign(theme, Object.create(null));
+  const merged = Object.assign(theme, Object.assign({ theme: 0 }));
   if (null != theme) {
-    let obj = { theme: null, children: null };
-    obj[0] = theme;
-    obj = {};
+    const obj2 = { theme, children: null };
+    const obj3 = {};
     const merged1 = Object.assign(merged);
-    obj[1] = callback(StageSparkleInner, obj);
-    let tmp7 = callback(ManaContext.ThemeContextProvider, obj);
+    obj2.children = React4(StageSparkleInner, obj3);
+    let tmp7 = React4(native.ThemeContextProvider, obj2);
   } else {
-    obj = {};
+    const obj = {};
     const merged2 = Object.assign(merged);
-    tmp7 = callback(StageSparkleInner, obj);
+    tmp7 = React4(StageSparkleInner, obj);
   }
   return tmp7;
 };

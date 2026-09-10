@@ -1,56 +1,60 @@
-// Module ID: 11356
-// Function ID: 11357
+// Module ID: 11383
+// Function ID: 11384
 // Name: ChatViewWrapperAnimatedKeyboard
-// Dependencies: [19, 17, 21, 4296, 4564, 11357, 4561, 5579, 11362, 11364, 7156, 11365, 2]
+// Dependencies: [19, 17, 21, 4310, 4578, 11384, 4575, 5593, 11389, 11391, 7170, 11392, 2]
 // Exports: default
 
-// Module 11356 (ChatViewWrapperAnimatedKeyboard)
-import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5579 */;
-import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 11362 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import { Easing } from "module_4296" /* 4296 */;
+// Module 11383 (ChatViewWrapperAnimatedKeyboard)
+import timing from "timing" /* 4575 */;
+import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5593 */;
+import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 11389 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let obj = { duration: require("timingNone").timingStandardDuration, easing: Easing.bezier(0.2, 0, 0, 1) };
-let closure_8 = { code: "function ChatViewWrapperAnimatedKeyboardTsx1(){const{animatedHeight}=this.__closure;return animatedHeight.get();}" };
-let closure_9 = { code: "function ChatViewWrapperAnimatedKeyboardTsx2(height,heightPrev){const{animatedAdjustedMargin,animatedAdjustedMarginPending}=this.__closure;if(heightPrev==null){return;}if(height<heightPrev){animatedAdjustedMargin.set(height);animatedAdjustedMarginPending.set(-1);}else{animatedAdjustedMarginPending.set(height);}}" };
-let closure_10 = { code: "function ChatViewWrapperAnimatedKeyboardTsx3(){const{animatedAdjustedMargin,withTiming,animatedHeight,INSET_ANIMATION_CONFIG2,animatedAdjustedMarginPending}=this.__closure;return{flex:1,marginTop:animatedAdjustedMargin.get(),transform:[{translateY:withTiming(-animatedHeight.get(),INSET_ANIMATION_CONFIG2,'respect-motion-settings',function(finished){if(!finished){return;}if(animatedAdjustedMarginPending.get()!==-1){animatedAdjustedMargin.set(animatedAdjustedMarginPending.get());animatedAdjustedMarginPending.set(-1);}})}]};}" };
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const Easing = fn(4310).Easing;
+let obj = { duration: fn(4578).timingStandardDuration, easing: Easing.bezier(0.2, 0, 0, 1) };
+const __initData = { code: "function ChatViewWrapperAnimatedKeyboardTsx1(){const{animatedHeight}=this.__closure;return animatedHeight.get();}" };
+const __initData2 = { code: "function ChatViewWrapperAnimatedKeyboardTsx2(height,heightPrev){const{animatedAdjustedMargin,animatedAdjustedMarginPending}=this.__closure;if(heightPrev==null){return;}if(height<heightPrev){animatedAdjustedMargin.set(height);animatedAdjustedMarginPending.set(-1);}else{animatedAdjustedMarginPending.set(height);}}" };
+const __initData3 = { code: "function ChatViewWrapperAnimatedKeyboardTsx3(){const{animatedAdjustedMargin,withTiming,animatedHeight,INSET_ANIMATION_CONFIG2,animatedAdjustedMarginPending}=this.__closure;return{flex:1,marginTop:animatedAdjustedMargin.get(),transform:[{translateY:withTiming(-animatedHeight.get(),INSET_ANIMATION_CONFIG2,'respect-motion-settings',function(finished){if(!finished){return;}if(animatedAdjustedMarginPending.get()!==-1){animatedAdjustedMargin.set(animatedAdjustedMarginPending.get());animatedAdjustedMarginPending.set(-1);}})}]};}" };
 let closure_11 = { code: "function ChatViewWrapperAnimatedKeyboardTsx4(finished){const{animatedAdjustedMarginPending,animatedAdjustedMargin}=this.__closure;if(!finished){return;}if(animatedAdjustedMarginPending.get()!==-1){animatedAdjustedMargin.set(animatedAdjustedMarginPending.get());animatedAdjustedMarginPending.set(-1);}}" };
-let closure_12 = importAllResult.memo((channelId) => {
-  closure_0 = undefined;
+let closure_12 = noop.memo((channelId) => {
   const tmp = useCustomKeyboardHeightDefault();
-  closure_0 = tmp;
+  const height = tmp;
   const items = [tmp];
   obj = { style: null };
-  const items1 = [useChannelSafeAreaBottomStylesDefault(channelId.channelId), importAllResult.useMemo(() => ({ position: "absolute", bottom: -closure_0, height: closure_0, right: 0, left: 0 }), items)];
-  obj[0] = items1;
-  return callback(View, obj);
+  const items1 = [
+    useChannelSafeAreaBottomStylesDefault(channelId.channelId),
+    noop.useMemo(() => {
+      const rect = { position: "absolute", bottom: -height, height, right: 0, left: 0 };
+      return rect;
+    }, items)
+  ];
+  obj.style = items1;
+  return hasOwnProperty(View, obj);
 });
-const bezierResult = Easing.bezier(0.2, 0, 0, 1);
-let result = require("set").fileFinishedImporting("modules/chat/native/ChatViewWrapperAnimatedKeyboard.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/chat/native/ChatViewWrapperAnimatedKeyboard.tsx");
 
 export default function ChatViewWrapperAnimatedKeyboard(arg0) {
   ({ channelId, style } = arg0);
   ({ children, stickyHeader } = arg0);
-  obj = undefined;
   let sharedValue;
   let sharedValue1;
-  obj = sharedValue(sharedValue1[5])();
-  obj1 = obj(sharedValue1[3]);
-  sharedValue = obj1.useSharedValue(obj.get());
-  let obj2 = obj(sharedValue1[3]);
-  sharedValue1 = obj2.useSharedValue(-1);
+  const INSET_ANIMATION_CONFIG2 = sharedValue(sharedValue1[5])();
   let tmp = sharedValue(sharedValue1[9])(channelId);
+  sharedValue = INSET_ANIMATION_CONFIG2(sharedValue1[3]).useSharedValue(INSET_ANIMATION_CONFIG2.get());
+  let obj2 = INSET_ANIMATION_CONFIG2(sharedValue1[3]);
+  sharedValue1 = INSET_ANIMATION_CONFIG2(sharedValue1[3]).useSharedValue(-1);
+  const obj3 = INSET_ANIMATION_CONFIG2(sharedValue1[3]);
   let fn = function n() {
     return obj.get();
   };
-  fn.__closure = { animatedHeight: obj };
+  fn.__closure = { animatedHeight: INSET_ANIMATION_CONFIG2 };
   fn.__workletHash = 9219066704490;
-  fn.__initData = closure_8;
+  fn.__initData = __initData;
   const fn2 = function t(arg0, arg1) {
     if (null != arg1) {
       if (arg0 < arg1) {
@@ -63,42 +67,41 @@ export default function ChatViewWrapperAnimatedKeyboard(arg0) {
   };
   fn2.__closure = { animatedAdjustedMargin: sharedValue, animatedAdjustedMarginPending: sharedValue1 };
   fn2.__workletHash = 15141457454312;
-  fn2.__initData = closure_9;
-  const animatedReaction = obj(sharedValue1[3]).useAnimatedReaction(fn, fn2);
-  const obj4 = obj(sharedValue1[3]);
+  fn2.__initData = __initData2;
+  const animatedReaction = INSET_ANIMATION_CONFIG2(sharedValue1[3]).useAnimatedReaction(fn, fn2);
+  const obj4 = INSET_ANIMATION_CONFIG2(sharedValue1[3]);
   const fn3 = function s() {
     obj = { flex: 1, marginTop: sharedValue.get(), transform: null };
-    obj = { translateY: null };
+    const obj2 = { translateY: null };
     const fn = function t(arg0) {
       let tmp = arg0;
       if (arg0) {
-        tmp = -1 !== store.get();
+        tmp = -1 !== sharedValue1.get();
       }
       if (tmp) {
-        const result = closure_1.set(store.get());
-        const result1 = store.set(-1);
+        const result = sharedValue.set(sharedValue1.get());
+        const result1 = sharedValue1.set(-1);
       }
     };
-    obj = { animatedAdjustedMarginPending: sharedValue1, animatedAdjustedMargin: sharedValue };
-    fn.__closure = obj;
+    fn.__closure = { animatedAdjustedMarginPending: sharedValue1, animatedAdjustedMargin: sharedValue };
     fn.__workletHash = 16224255032954;
-    fn.__initData = closure_1_11;
-    obj[0] = obj(sharedValue1[6]).withTiming(-obj.get(), closure_1_7, "respect-motion-settings", fn);
-    const items = [obj];
-    obj[2] = items;
+    fn.__initData = __initData;
+    obj2.translateY = timing.withTiming(-obj.get(), obj, "respect-motion-settings", fn);
+    const items = [obj2];
+    obj.transform = items;
     return obj;
   };
-  obj = { animatedAdjustedMargin: sharedValue, withTiming: obj(sharedValue1[6]).withTiming, animatedHeight: obj, INSET_ANIMATION_CONFIG2: obj, animatedAdjustedMarginPending: sharedValue1 };
-  fn3.__closure = obj;
+  const obj5 = INSET_ANIMATION_CONFIG2(sharedValue1[3]);
+  fn3.__closure = { animatedAdjustedMargin: sharedValue, withTiming: INSET_ANIMATION_CONFIG2(sharedValue1[6]).withTiming, animatedHeight: INSET_ANIMATION_CONFIG2, INSET_ANIMATION_CONFIG2, animatedAdjustedMarginPending: sharedValue1 };
   fn3.__workletHash = 7205645695043;
-  fn3.__initData = closure_10;
-  const animatedStyle = obj(sharedValue1[3]).useAnimatedStyle(fn3);
-  obj = { children: null };
-  obj1 = { header: stickyHeader, style, pointerEvents: tmp, children: null };
-  obj2 = { style: animatedStyle, children: null };
-  let items = [callback(View, { style, children }), callback(closure_12, { channelId })];
-  obj2[1] = items;
-  obj1[3] = callback2(sharedValue(sharedValue1[3]).View, obj2);
-  obj[0] = callback(obj(sharedValue1[11]).StickyWrapper, obj1);
-  return callback(obj(sharedValue1[10]).LayerScope, obj);
+  fn3.__initData = __initData3;
+  const animatedStyle = obj5.useAnimatedStyle(fn3);
+  const obj7 = { children: null };
+  const obj8 = { header: stickyHeader, style, pointerEvents: tmp, children: null };
+  const obj9 = { style: animatedStyle, children: null };
+  let items = [closure_5(View, { style, children }), closure_5(closure_12, { channelId })];
+  obj9.children = items;
+  obj8.children = closure_6(sharedValue(sharedValue1[3]).View, obj9);
+  obj7.children = closure_5(INSET_ANIMATION_CONFIG2(sharedValue1[11]).StickyWrapper, obj8);
+  return closure_5(INSET_ANIMATION_CONFIG2(sharedValue1[10]).LayerScope, obj7);
 };

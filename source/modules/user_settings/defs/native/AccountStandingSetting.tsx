@@ -1,32 +1,32 @@
-// Module ID: 14766
-// Function ID: 14767
-// Name: route
-// Dependencies: [7975, 1074, 11473, 1114, 14767, 14770, 2]
+// Module ID: 14792
+// Function ID: 14793
+// Name: AccountStandingSetting
+// Dependencies: [7989, 1074, 11500, 1114, 14793, 14796, 2]
 
-// Module 14766 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import useAccountStandingStatusLabel from "useAccountStandingStatusLabel" /* 14767 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 14792 (AccountStandingSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import useAccountStandingStatusLabel from "useAccountStandingStatusLabel" /* 14793 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const require = globalThis.__r;
+
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["16r9jm"]);
+    const intl = util.intl;
+    return intl.string(util.t["16r9jm"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
+  parent: SettingsConstants.MobileUserSettings.ACCOUNT,
   useTrailing: useAccountStandingStatusLabel.useAccountStandingStatusLabel,
-  screen: obj
-};
-obj = {
-  route: ME.UserSettingsSections.ACCOUNT_STANDING,
-  getComponent() {
-    return require(14770) /* SettingsAccountStandingScreen */.default;
+  screen: {
+    route: Constants.UserSettingsSections.ACCOUNT_STANDING,
+    getComponent() {
+      return require("SettingsAccountStandingScreen").default;
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountStandingSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountStandingSetting.tsx");
 
 export default route;

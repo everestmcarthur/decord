@@ -1,22 +1,21 @@
-// Module ID: 13232
-// Function ID: 13233
-// Name: getIconURL
-// Dependencies: [1918, 5283, 2]
+// Module ID: 13255
+// Function ID: 13256
+// Name: SpotifyApplicationRecord
+// Dependencies: [1918, 5297, 2]
 
-// Module 13232 (getIconURL)
-import createExecutableDefault from "createExecutable" /* 1918 */;
-import importDefaultResult1 from "getPlatformUserUrl" /* 5283 */;
+// Module 13255 (SpotifyApplicationRecord)
+import ApplicationRecord from "ApplicationRecord" /* 1918 */;
+import Platforms from "Platforms" /* 5297 */;
 
-createExecutableDefault;
 const spotify = "spotify";
-const value = importDefaultResult1.get("spotify");
+const value = Platforms.get("spotify");
+let closure_1 = value;
 class SpotifyApplicationRecord extends tmp4 {
   constructor() {
-    tmp = new tmp({}, new.target, tmp);
-    // ThrowIfThisInitialized (0x7c)
-    tmp.id = spotify;
-    tmp.name = closure_1.name;
-    return tmp;
+    tmp1 = new tmp({}, new.target, tmp);
+    tmp1.id = spotify;
+    tmp1.name = closure_1.name;
+    return tmp1;
   }
 }
 const prototype = SpotifyApplicationRecord.prototype;
@@ -27,10 +26,10 @@ prototype["getWhiteIconURL"] = function getWhiteIconURL() {
   return value.icon.whitePNG;
 };
 const tmp6 = new "getWhiteIconURL"({}, tmp2, tmp);
-// ThrowIfThisInitialized (0x7c)
 tmp6.id = "spotify";
 tmp6.name = value.name;
-const result = require("set").fileFinishedImporting("records/SpotifyApplicationRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("records/SpotifyApplicationRecord.tsx");
 
 export default SpotifyApplicationRecord;
 export const SPOTIFY_APPLICATION_ID = "spotify";

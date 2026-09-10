@@ -1,32 +1,31 @@
-// Module ID: 13574
-// Function ID: 13575
-// Name: GiftingBadgeIntro
-// Dependencies: [32, 19, 17, 8192, 21, 4560, 576, 7162, 7182, 504, 8184, 4556, 1114, 2492, 10754, 4975, 11035, 10666, 13575, 13577, 11158, 2]
+// Module ID: 13597
+// Function ID: 13598
+// Name: UserSettingsGiftingBadgeProgress
+// Dependencies: [32, 19, 17, 8218, 21, 4574, 576, 7176, 7196, 504, 8210, 4570, 1114, 2492, 10781, 4989, 11062, 10693, 13598, 13600, 11185, 2]
 // Exports: default
 
-// Module 13574 (GiftingBadgeIntro)
-import ThemesDefault from "Themes" /* 576 */;
-import contextDefault from "context" /* 7162 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7182 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "initialize" /* 8192 */;
-import { getSingleRequirementThreshold as closure_8 } from "initialize" /* 8192 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13597 (UserSettingsGiftingBadgeProgress)
+import nativeDefault from "native" /* 576 */;
+import _modDef2492 from "module_2492" /* 2492 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7176 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 10693 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10781 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8218 */;
 
-const require = arg1;
+require = fn;
 function GiftingBadgeIntro(analyticsLocation) {
   analyticsLocation = analyticsLocation.analyticsLocation;
-  importDefault = undefined;
   let analyticsLocations;
-  const tmp = callback4();
+  const tmp = closure_12();
   importDefault = tmp;
-  analyticsLocations = importDefault(analyticsLocations[7])(importDefault(analyticsLocations[8]).USER_SETTINGS_GIFT_INVENTORY).analyticsLocations;
-  let obj = analyticsLocation(analyticsLocations[9]);
-  let items = [closure_7];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  analyticsLocations = require("useAnalyticsLocations")(require("AnalyticsLocation").USER_SETTINGS_GIFT_INVENTORY).analyticsLocations;
+  let tmp4 = require("useAnalyticsLocations");
+  let items = [BadgeDirectoryStore];
+  const stateFromStores = analyticsLocation(analyticsLocations[9]).useStateFromStores(items, () => {
     badgeById = badgeById.getBadgeById(analyticsLocation(analyticsLocations[10]).BadgeId.GIFTING);
     let tiers;
     if (badgeById != null) {
@@ -36,113 +35,110 @@ function GiftingBadgeIntro(analyticsLocation) {
   });
   let tmp6 = null;
   if (null != stateFromStores) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.wrapper;
-    obj = { style: null, children: null };
-    obj[0] = tmp.introContent;
-    obj1 = { variant: "text-xs/normal", color: "text-muted", children: null };
+    let obj2 = { style: tmp.wrapper, children: null };
+    let obj3 = { style: tmp.introContent, children: null };
+    let obj4 = { variant: "text-xs/normal", color: "text-muted", children: null };
     let intl = tmp5(tmp3[12]).intl;
-    obj1[2] = intl.string(tmp2(tmp3[13])["4Yp0mI"]);
-    obj[1] = callback2(tmp5(tmp3[11]).Text, obj1);
-    let items1 = [callback2(closure_6, obj), , ];
-    const obj2 = { style: null, children: null };
-    obj2[0] = tmp.introGrid;
-    obj2[1] = stateFromStores.map((simple_icon_url) => {
-      let obj = { style: lib.introGridItem, children: null };
-      let tmp4 = null != simple_icon_url.simple_icon_url;
-      if (tmp4) {
-        obj = { icon: null, size: 44 };
-        obj[0] = simple_icon_url.simple_icon_url;
-        tmp4 = closure_1_9(lib(analyticsLocations[14]), obj);
-      }
-      const items = [tmp4, ];
-      obj = { style: lib.badgeCopy, children: null };
-      let str = simple_icon_url.name;
-      if (str == null) {
-        str = "";
-      }
-      const items1 = [closure_1_9(analyticsLocation(analyticsLocations[11]).Text, { variant: "text-sm/semibold", color: "text-subtle", children: str }), ];
-      obj1 = { variant: "text-xs/normal", color: "text-muted", children: null };
-      const intl = tmp9(tmp10[12]).intl;
-      obj1[2] = intl.format(lib(analyticsLocations[13]).qvx9E4, { count: closure_1_8(simple_icon_url) });
-      items1[1] = closure_1_9(analyticsLocation(analyticsLocations[11]).Text, obj1);
-      obj[1] = items1;
-      items[1] = closure_1_10(closure_1_6, obj);
-      obj[1] = items;
-      return closure_1_10(closure_1_6, obj, simple_icon_url.key);
-    });
-    items1[1] = callback2(closure_6, obj2);
-    const obj3 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
-    const obj4 = { size: "sm", color: null };
-    obj4[1] = tmp2(tmp3[6]).unsafe_rawColors.WHITE;
-    obj3[1] = callback2(tmp5(tmp3[16]).GiftIcon, obj4);
-    const intl2 = tmp5(tmp3[12]).intl;
-    obj3[2] = intl2.string(tmp2(tmp3[13]).DZnomS);
-    obj3[3] = function onPress() {
-      let obj = analyticsLocation(analyticsLocations[17]);
-      obj = { analyticsLocation, analyticsLocations };
-      obj.openGiftModal(obj);
+    obj4.children = intl.string(tmp2(tmp3[13])["4Yp0mI"]);
+    obj3.children = closure_9(tmp5(tmp3[11]).Text, obj4);
+    let items1 = [closure_9(closure_6, obj3), , ];
+    const obj5 = {
+      style: tmp.introGrid,
+      children: stateFromStores.map((simple_icon_url) => {
+          const obj = { style: introGridItem.introGridItem, children: null };
+          let tmp4 = null != simple_icon_url.simple_icon_url;
+          if (tmp4) {
+            const obj2 = { icon: simple_icon_url.simple_icon_url, size: 44 };
+            tmp4 = React7(GiftingBadgeIconDefault, obj2);
+          }
+          const items = [tmp4, ];
+          const obj3 = { style: introGridItem.badgeCopy, children: null };
+          let str = simple_icon_url.name;
+          if (str == null) {
+            str = "";
+          }
+          const items1 = [React7(Text_Text.Text, { variant: "text-sm/semibold", color: "text-subtle", children: str }), ];
+          const obj4 = { variant: "text-xs/normal", color: "text-muted", children: null };
+          const intl = tmp9(1114).intl;
+          obj4.children = intl.format(_modDef2492.qvx9E4, { count: closure_8(simple_icon_url) });
+          items1[1] = React7(Text_Text.Text, obj4);
+          obj3.children = items1;
+          items[1] = closure_2_10(timestampProducer, obj3);
+          obj.children = items;
+          return closure_2_10(timestampProducer, obj, simple_icon_url.key);
+        })
     };
-    items1[2] = callback2(tmp5(tmp3[15]).Button, obj3);
-    obj[1] = items1;
-    tmp6 = callback3(closure_6, obj);
+    items1[1] = closure_9(closure_6, obj5);
+    const obj6 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
+    const obj7 = { size: "sm", color: tmp2(tmp3[6]).unsafe_rawColors.WHITE };
+    obj6.icon = closure_9(tmp5(tmp3[16]).GiftIcon, obj7);
+    const intl2 = tmp5(tmp3[12]).intl;
+    obj6.text = intl2.string(tmp2(tmp3[13]).DZnomS);
+    obj6.onPress = function onPress() {
+      utils_openGiftModal.openGiftModal({ analyticsLocation, analyticsLocations });
+    };
+    items1[2] = closure_9(tmp5(tmp3[15]).Button, obj6);
+    obj2.children = items1;
+    tmp6 = closure_10(closure_6, obj2);
   }
   return tmp6;
 }
-({ Pressable: c5, View: closure_6 } = get_ActivityIndicator);
-({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
-let closure_12 = createCacheKey.createStyles(() => {
-  let obj = { wrapper: null, progressContainer: null, progressRow: null, progressTitleText: null, progressBarContainer: null, progressBarTrack: null, progressBarFill: null, progressLabels: null, divider: null, dropdownRow: null, badgesRow: null, badgeItem: null, badgeItemActive: null, badgeCopy: null, footerText: null, introContent: null, introGrid: null, introGridItem: null };
-  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.md, padding: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
-  obj[0] = obj;
-  obj = { gap: ThemesDefault.space.PX_8 };
-  obj[1] = obj;
-  obj[2] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
-  obj[3] = { flex: 1 };
-  obj1 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
-  obj[4] = { paddingHorizontal: ThemesDefault.space.PX_8 };
-  const obj2 = { paddingHorizontal: ThemesDefault.space.PX_8 };
-  obj[5] = { height: 6, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, overflow: "hidden" };
-  const obj3 = { height: 6, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, overflow: "hidden" };
-  obj[6] = { height: 6, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.unsafe_rawColors.BRAND_500 };
-  const obj4 = { height: 6, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.unsafe_rawColors.BRAND_500 };
-  obj[7] = { flexDirection: "row", justifyContent: "flex-end", alignItems: "center", minHeight: ThemesDefault.space.PX_16, marginTop: ThemesDefault.space.PX_4 };
-  const obj5 = { flexDirection: "row", justifyContent: "flex-end", alignItems: "center", minHeight: ThemesDefault.space.PX_16, marginTop: ThemesDefault.space.PX_4 };
-  obj[8] = { height: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
-  obj[9] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
-  const obj6 = { height: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
-  obj[10] = { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", paddingVertical: ThemesDefault.space.PX_4 };
-  const obj7 = { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", paddingVertical: ThemesDefault.space.PX_4 };
-  obj[11] = { width: "33.33%", alignItems: "center", justifyContent: "center", padding: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_8 };
-  const obj8 = { width: "33.33%", alignItems: "center", justifyContent: "center", padding: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_8 };
-  obj[12] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.md, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED };
-  obj[13] = { alignItems: "center", gap: 2 };
-  const obj9 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.md, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED };
-  obj[14] = { textAlign: "center", marginBottom: ThemesDefault.space.PX_16 };
-  const obj10 = { textAlign: "center", marginBottom: ThemesDefault.space.PX_16 };
-  obj[15] = { paddingHorizontal: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_4 };
-  const obj11 = { paddingHorizontal: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_4 };
-  obj[16] = { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", paddingVertical: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_16 };
-  const obj12 = { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", paddingVertical: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_16 };
-  obj[17] = { width: "33.33%", alignItems: "center", justifyContent: "center", padding: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_8 };
+get_ActivityIndicator = fn(17);
+({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+let closure_8 = fn(8218).getSingleRequirementThreshold;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
+const createStyles = fn(4574);
+let closure_12 = createStyles.createStyles(() => {
+  const obj = { wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 }, progressContainer: null, progressRow: null, progressTitleText: null, progressBarContainer: null, progressBarTrack: null, progressBarFill: null, progressLabels: null, divider: null, dropdownRow: null, badgesRow: null, badgeItem: null, badgeItemActive: null, badgeCopy: null, footerText: null, introContent: null, introGrid: null, introGridItem: null };
+  const obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
+  obj.progressContainer = { gap: nativeDefault.space.PX_8 };
+  const obj3 = { gap: nativeDefault.space.PX_8 };
+  obj.progressRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+  obj.progressTitleText = { flex: 1 };
+  const obj4 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+  obj.progressBarContainer = { paddingHorizontal: nativeDefault.space.PX_8 };
+  const obj5 = { paddingHorizontal: nativeDefault.space.PX_8 };
+  obj.progressBarTrack = { height: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, overflow: "hidden" };
+  const obj6 = { height: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, overflow: "hidden" };
+  obj.progressBarFill = { height: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.unsafe_rawColors.BRAND_500 };
+  const obj7 = { height: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.unsafe_rawColors.BRAND_500 };
+  obj.progressLabels = { flexDirection: "row", justifyContent: "flex-end", alignItems: "center", minHeight: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_4 };
+  const obj8 = { flexDirection: "row", justifyContent: "flex-end", alignItems: "center", minHeight: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_4 };
+  obj.divider = { height: 1, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
+  obj.dropdownRow = { flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
+  const obj9 = { height: 1, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
+  obj.badgesRow = { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", paddingVertical: nativeDefault.space.PX_4 };
+  const obj10 = { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", paddingVertical: nativeDefault.space.PX_4 };
+  obj.badgeItem = { width: "33.33%", alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
+  const obj11 = { width: "33.33%", alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
+  obj.badgeItemActive = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.md, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };
+  obj.badgeCopy = { alignItems: "center", gap: 2 };
+  const obj12 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.md, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };
+  obj.footerText = { textAlign: "center", marginBottom: nativeDefault.space.PX_16 };
+  const obj13 = { textAlign: "center", marginBottom: nativeDefault.space.PX_16 };
+  obj.introContent = { paddingHorizontal: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_4 };
+  const obj14 = { paddingHorizontal: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_4 };
+  obj.introGrid = { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16 };
+  const obj15 = { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16 };
+  obj.introGridItem = { width: "33.33%", alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/UserSettingsGiftingBadgeProgress.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/premium/native/UserSettingsGiftingBadgeProgress.tsx");
 
 export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
   analyticsLocation = analyticsLocation.analyticsLocation;
-  importDefault = undefined;
   dependencyMap = undefined;
   let analyticsLocations;
   currentTier = undefined;
-  const tmp = callback4();
+  const tmp = closure_12();
   importDefault = tmp;
   [tmp3, c2] = analyticsLocations(currentTier.useState(false), 2);
   const tmp2 = analyticsLocations(currentTier.useState(false), 2);
-  analyticsLocations = contextDefault(QUICK_SWITCHERDefault.USER_SETTINGS_GIFT_INVENTORY).analyticsLocations;
-  let obj = analyticsLocation(504);
-  let items = [closure_7];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
+  analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.USER_SETTINGS_GIFT_INVENTORY).analyticsLocations;
+  let items = [BadgeDirectoryStore];
+  const stateFromStoresObject = analyticsLocation(504).useStateFromStoresObject(items, () => {
     singleRequirementProgress = singleRequirementProgress.getSingleRequirementProgress(analyticsLocation(_undefined[10]).BadgeId.GIFTING);
     let num;
     if (singleRequirementProgress != null) {
@@ -151,9 +147,8 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     if (num == null) {
       num = 0;
     }
-    const obj = { badgeProgress: num, currentTier: getCurrentTier(analyticsLocation(_undefined[10]).BadgeId.GIFTING), nextTier: getNextTier(analyticsLocation(_undefined[10]).BadgeId.GIFTING), giftsRemaining: getRemainingToNextTier(analyticsLocation(_undefined[10]).BadgeId.GIFTING), tiers: null };
-    ({ getCurrentTier, getNextTier, getRemainingToNextTier, getBadgeById } = singleRequirementProgress);
-    const badgeById = getBadgeById(tmp2(tmp3[10]).BadgeId.GIFTING);
+    const obj2 = { badgeProgress: num, currentTier: singleRequirementProgress.getCurrentTier(analyticsLocation(_undefined[10]).BadgeId.GIFTING), nextTier: singleRequirementProgress.getNextTier(analyticsLocation(_undefined[10]).BadgeId.GIFTING), giftsRemaining: singleRequirementProgress.getRemainingToNextTier(analyticsLocation(_undefined[10]).BadgeId.GIFTING), tiers: null };
+    const badgeById = obj.getBadgeById(tmp(tmp2[10]).BadgeId.GIFTING);
     let tiers;
     if (badgeById != null) {
       tiers = badgeById.tiers;
@@ -161,23 +156,21 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     if (tiers == null) {
       tiers = [];
     }
-    obj[4] = tiers;
-    return obj;
+    obj2.tiers = tiers;
+    return obj2;
   });
   ({ badgeProgress, currentTier } = stateFromStoresObject);
   ({ nextTier, tiers } = stateFromStoresObject);
   if (0 === badgeProgress) {
-    obj = { analyticsLocation: null };
-    obj[0] = analyticsLocation;
-    return callback2(GiftingBadgeIntro, obj);
+    let obj2 = { analyticsLocation };
+    return closure_9(GiftingBadgeIntro, obj2);
   } else {
-    let tmp21 = callback(currentTier);
-    const tmp27 = callback(nextTier);
-    const giftingBadgeProgressPercent = tmp7(13575).getGiftingBadgeProgressPercent(badgeProgress, currentTier, nextTier);
+    let tmp21 = closure_8(currentTier);
+    const tmp27 = closure_8(nextTier);
+    const giftingBadgeProgressPercent = tmp7(13598).getGiftingBadgeProgressPercent(badgeProgress, currentTier, nextTier);
     if (null != nextTier) {
       const intl2 = tmp7(1114).intl;
-      obj = { count: null, nextTier: null };
-      obj[0] = tmp9;
+      let obj3 = { count: tmp9, nextTier: null };
       let str2;
       if (nextTier != null) {
         str2 = nextTier.name;
@@ -185,8 +178,8 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
       if (str2 == null) {
         str2 = "";
       }
-      obj[1] = str2;
-      let formatToPlainStringResult = intl2.formatToPlainString(tmp4(2492).XTX3OO, obj);
+      obj3.nextTier = str2;
+      let formatToPlainStringResult = intl2.formatToPlainString(tmp4(2492).XTX3OO, obj3);
     } else {
       let intl = tmp7(1114).intl;
       let str;
@@ -196,160 +189,142 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
       if (str == null) {
         str = "";
       }
-      obj1 = { currentTier: null };
-      obj1[0] = str;
-      formatToPlainStringResult = intl.formatToPlainString(tmp4(2492).LnsdbK, obj1);
+      let obj4 = { currentTier: str };
+      formatToPlainStringResult = intl.formatToPlainString(tmp4(2492).LnsdbK, obj4);
     }
-    const obj2 = { style: null, children: null };
-    obj2[0] = tmp.wrapper;
-    const obj3 = { style: null, children: null };
-    obj3[0] = tmp.progressContainer;
-    const obj4 = { style: null, children: null };
-    obj4[0] = tmp.progressRow;
+    const obj5 = { style: tmp.wrapper, children: null };
+    const obj6 = { style: tmp.progressContainer, children: null };
+    const obj7 = { style: tmp.progressRow, children: null };
     let simple_icon_url;
     if (currentTier != null) {
       simple_icon_url = currentTier.simple_icon_url;
     }
     let tmp14 = null != simple_icon_url;
     if (tmp14) {
-      const obj5 = { icon: null, size: 36, style: null };
-      obj5[0] = currentTier.simple_icon_url;
-      obj5[2] = { margin: 4 };
-      tmp14 = callback2(tmp4(10754), obj5);
+      const obj8 = { icon: currentTier.simple_icon_url, size: 36, style: { margin: 4 } };
+      tmp14 = closure_9(tmp4(10781), obj8);
     }
     let items1 = [tmp14, , ];
-    const obj6 = { style: null, variant: "text-md/medium", color: "text-strong", children: null };
-    obj6[0] = tmp.progressTitleText;
-    obj6[3] = formatToPlainStringResult;
-    items1[1] = callback2(tmp7(4556).Text, obj6);
+    const obj9 = { style: tmp.progressTitleText, variant: "text-md/medium", color: "text-strong", children: formatToPlainStringResult };
+    items1[1] = closure_9(tmp7(4570).Text, obj9);
     let simple_icon_url1;
     if (nextTier != null) {
       simple_icon_url1 = nextTier.simple_icon_url;
     }
     let tmp16Result = null != simple_icon_url1;
     if (tmp16Result) {
-      const obj7 = { icon: null, size: 36, style: null };
-      obj7[0] = nextTier.simple_icon_url;
-      obj7[2] = { margin: 4 };
-      tmp16Result = tmp16(tmp4(10754), obj7);
+      const obj10 = { icon: nextTier.simple_icon_url, size: 36, style: { margin: 4 } };
+      tmp16Result = tmp16(tmp4(10781), obj10);
     }
     items1[2] = tmp16Result;
-    obj4[1] = items1;
-    let items2 = [closure_10(closure_6, obj4), ];
-    const obj8 = { style: null, children: null };
-    obj8[0] = tmp.progressBarContainer;
-    const obj9 = { style: null, children: null };
-    obj9[0] = tmp.progressBarTrack;
-    const obj10 = { style: null };
+    obj7.children = items1;
+    let items2 = [closure_10(closure_6, obj7), ];
+    const obj11 = { style: tmp.progressBarContainer, children: null };
+    const obj12 = { style: tmp.progressBarTrack, children: null };
+    const obj13 = { style: null };
     const items3 = [tmp.progressBarFill, ];
-    const obj11 = { width: null };
+    const obj14 = { width: null };
     const _HermesInternal = HermesInternal;
-    obj11[0] = "" + giftingBadgeProgressPercent + "%";
-    items3[1] = obj11;
-    obj10[0] = items3;
-    obj9[1] = callback2(closure_6, obj10);
-    const items4 = [callback2(closure_6, obj9), ];
-    const obj12 = { style: null, children: null };
-    obj12[0] = tmp.progressLabels;
+    obj14.width = "" + giftingBadgeProgressPercent + "%";
+    items3[1] = obj14;
+    obj13.style = items3;
+    obj12.children = closure_9(closure_6, obj13);
+    const items4 = [closure_9(closure_6, obj12), ];
+    const obj15 = { style: tmp.progressLabels, children: null };
     const intl3 = tmp7(1114).intl;
     let tmp20 = tmp21;
     if (null != nextTier) {
       tmp20 = tmp27;
     }
-    const obj13 = { threshold: null, count: null };
-    obj13[0] = tmp20;
+    const obj16 = { threshold: tmp20, count: null };
     if (null != nextTier) {
       tmp21 = badgeProgress;
     }
-    const obj14 = { variant: "text-xs/normal", color: "text-subtle", children: null };
-    obj13[1] = tmp21;
-    obj14[2] = intl3.format(tmp4(2492).iIpfQe, obj13);
-    obj12[1] = callback2(tmp7(4556).Text, obj14);
-    items4[1] = callback2(closure_6, obj12);
-    obj8[1] = items4;
-    items2[1] = closure_10(closure_6, obj8);
-    obj3[1] = items2;
-    const items5 = [closure_10(closure_6, obj3), , , , ];
-    const obj15 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
-    const obj16 = { size: "sm", color: null };
-    obj16[1] = tmp4(576).unsafe_rawColors.WHITE;
-    obj15[1] = callback2(tmp7(11035).GiftIcon, obj16);
+    const obj17 = { variant: "text-xs/normal", color: "text-subtle", children: null };
+    obj16.count = tmp21;
+    obj17.children = intl3.format(tmp4(2492).iIpfQe, obj16);
+    obj15.children = closure_9(tmp7(4570).Text, obj17);
+    items4[1] = closure_9(closure_6, obj15);
+    obj11.children = items4;
+    items2[1] = closure_10(closure_6, obj11);
+    obj6.children = items2;
+    const items5 = [closure_10(closure_6, obj6), , , , ];
+    const obj18 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
+    const obj19 = { size: "sm", color: tmp4(576).unsafe_rawColors.WHITE };
+    obj18.icon = closure_9(tmp7(11062).GiftIcon, obj19);
     const intl4 = tmp7(1114).intl;
-    obj15[2] = intl4.string(tmp4(2492).DZnomS);
-    obj15[3] = function onPress() {
-      let obj = analyticsLocation(_undefined[17]);
-      obj = { analyticsLocation, analyticsLocations };
-      obj.openGiftModal(obj);
+    obj18.text = intl4.string(tmp4(2492).DZnomS);
+    obj18.onPress = function onPress() {
+      utils_openGiftModal.openGiftModal({ analyticsLocation, analyticsLocations });
     };
-    items5[1] = callback2(tmp7(4975).Button, obj15);
-    const obj17 = { style: null };
-    obj17[0] = tmp.divider;
-    items5[2] = callback2(closure_6, obj17);
-    const obj18 = { style: null, onPress: null, children: null };
-    obj18[0] = tmp.dropdownRow;
-    obj18[1] = function onPress() {
-      return _undefined((arg0) => !arg0);
+    items5[1] = closure_9(tmp7(4989).Button, obj18);
+    const obj20 = { style: tmp.divider };
+    items5[2] = closure_9(closure_6, obj20);
+    const obj21 = {
+      style: tmp.dropdownRow,
+      onPress() {
+          return _undefined((arg0) => !arg0);
+        },
+      children: null
     };
-    const obj19 = { variant: "text-sm/medium", color: "text-strong", children: null };
+    const obj22 = { variant: "text-sm/medium", color: "text-strong", children: null };
     const intl5 = tmp7(1114).intl;
-    obj19[2] = intl5.string(tmp4(2492).WZ4cXA);
-    const items6 = [callback2(tmp7(4556).Text, obj19), ];
+    obj22.children = intl5.string(tmp4(2492).WZ4cXA);
+    const items6 = [closure_9(tmp7(4570).Text, obj22), ];
     if (tmp11Result) {
-      let ChevronSmallDownIcon = tmp7(13577).ChevronSmallUpIcon;
+      let ChevronSmallDownIcon = tmp7(13600).ChevronSmallUpIcon;
     } else {
-      ChevronSmallDownIcon = tmp7(11158).ChevronSmallDownIcon;
+      ChevronSmallDownIcon = tmp7(11185).ChevronSmallDownIcon;
     }
-    const obj20 = { color: null };
-    obj20[0] = tmp4(576).colors.INTERACTIVE_ICON_DEFAULT;
-    items6[1] = callback2(ChevronSmallDownIcon, obj20);
-    obj18[2] = items6;
-    items5[3] = closure_10(closure_5, obj18);
+    const obj23 = { color: tmp4(576).colors.INTERACTIVE_ICON_DEFAULT };
+    items6[1] = closure_9(ChevronSmallDownIcon, obj23);
+    obj21.children = items6;
+    items5[3] = closure_10(closure_5, obj21);
     if (tmp11Result) {
-      const obj21 = { children: null };
-      const obj22 = { style: null, children: null };
-      obj22[0] = tmp.badgesRow;
-      obj22[1] = tiers.map((key) => {
-        const items = [lib.badgeItem, ];
-        key = undefined;
-        if (currentTier != null) {
-          key = currentTier.key;
-        }
-        let obj = { style: items, children: null };
-        items[1] = key.key === key && lib.badgeItemActive;
-        let tmp6 = null != key.simple_icon_url;
-        if (tmp6) {
-          obj = { icon: null, size: 36 };
-          obj[0] = key.simple_icon_url;
-          tmp6 = closure_1_9(lib(_undefined[14]), obj);
-        }
-        const items1 = [tmp6, ];
-        obj = { style: tmp3.badgeCopy, children: null };
-        let str = key.name;
-        if (str == null) {
-          str = "";
-        }
-        const items2 = [closure_1_9(analyticsLocation(_undefined[11]).Text, { variant: "text-sm/semibold", color: "text-strong", children: str }), ];
-        obj1 = { variant: "text-xs/normal", color: "text-subtle", children: null };
-        const intl = tmp11(tmp12[12]).intl;
-        obj1[2] = intl.format(lib(_undefined[13]).qvx9E4, { count: closure_1_8(key) });
-        items2[1] = closure_1_9(analyticsLocation(_undefined[11]).Text, obj1);
-        obj[1] = items2;
-        items1[1] = closure_1_10(closure_1_6, obj);
-        obj[1] = items1;
-        return closure_1_10(closure_1_6, obj, key.key);
-      });
-      const items7 = [tmp16(tmp12, obj22), ];
-      const obj23 = { style: null, variant: "text-xs/normal", color: "text-muted", children: null };
-      obj23[0] = tmp.footerText;
+      const obj24 = { children: null };
+      const obj25 = {
+        style: tmp.badgesRow,
+        children: tiers.map((key) => {
+              const items = [badgeItem.badgeItem, ];
+              key = undefined;
+              if (currentTier != null) {
+                key = currentTier.key;
+              }
+              const obj = { style: items, children: null };
+              items[1] = key.key === key && badgeItem.badgeItemActive;
+              let tmp6 = null != key.simple_icon_url;
+              if (tmp6) {
+                const obj2 = { icon: key.simple_icon_url, size: 36 };
+                tmp6 = React7(GiftingBadgeIconDefault, obj2);
+              }
+              const items1 = [tmp6, ];
+              const obj3 = { style: badgeItem.badgeCopy, children: null };
+              let str = key.name;
+              if (str == null) {
+                str = "";
+              }
+              const items2 = [React7(Text_Text.Text, { variant: "text-sm/semibold", color: "text-strong", children: str }), ];
+              const obj4 = { variant: "text-xs/normal", color: "text-subtle", children: null };
+              const intl = tmp11(1114).intl;
+              obj4.children = intl.format(_modDef2492.qvx9E4, { count: closure_8(key) });
+              items2[1] = React7(Text_Text.Text, obj4);
+              obj3.children = items2;
+              items1[1] = closure_2_10(timestampProducer, obj3);
+              obj.children = items1;
+              return closure_2_10(timestampProducer, obj, key.key);
+            })
+      };
+      const items7 = [tmp16(tmp12, obj25), ];
+      const obj26 = { style: tmp.footerText, variant: "text-xs/normal", color: "text-muted", children: null };
       const intl6 = tmp7(1114).intl;
-      obj23[3] = intl6.string(tmp4(2492)["4Yp0mI"]);
-      items7[1] = tmp16(tmp7(4556).Text, obj23);
-      obj21[0] = items7;
-      tmp11Result = tmp11(closure_11, obj21);
+      obj26.children = intl6.string(tmp4(2492)["4Yp0mI"]);
+      items7[1] = tmp16(tmp7(4570).Text, obj26);
+      obj24.children = items7;
+      tmp11Result = tmp11(closure_11, obj24);
     }
     items5[4] = tmp11Result;
-    obj2[1] = items5;
-    return closure_10(closure_6, obj2);
+    obj5.children = items5;
+    return closure_10(closure_6, obj5);
   }
-  let tmp6 = contextDefault;
+  let obj = analyticsLocation(504);
 };

@@ -1,58 +1,50 @@
-// Module ID: 16360
-// Function ID: 16361
+// Module ID: 16391
+// Function ID: 16392
 // Name: useGuildsBarCreatePendingFolderNode
-// Dependencies: [19, 4382, 5439, 504, 9211, 16361, 5541, 5440, 1114, 2]
+// Dependencies: [19, 4396, 5453, 504, 9238, 16392, 5555, 5454, 1114, 2]
 // Exports: default
 
-// Module 16360 (useGuildsBarCreatePendingFolderNode)
-import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 9211 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleGatewayJoinRequestUpdate" /* 4382 */;
-import closure_5 from "set" /* 5439 */;
+// Module 16391 (useGuildsBarCreatePendingFolderNode)
+import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 5555 */;
+import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 9238 */;
+import noop from "module_19" /* 19 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4396 */;
+import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 5453 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarCreatePendingFolderNode.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarCreatePendingFolderNode.tsx");
 
 export default function useGuildsBarCreatePendingFolderNode() {
-  let obj = stateFromStores(504);
-  const items = [closure_4];
-  stateFromStores = obj.useStateFromStores(items, () => obj.hasFetchedRequestToJoinGuilds);
+  const items = [UserGuildJoinRequestStore];
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => UserGuildJoinRequestStore.hasFetchedRequestToJoinGuilds);
   const arr2 = usePendingFolderGuildIdsDefault();
-  const items1 = [closure_5];
-  const stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () => folderExpanded.isFolderExpanded(stateFromStores(table[5]).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER));
+  let obj = stateFromStores(504);
+  const items1 = [ExpandedGuildFolderStore];
+  const stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () => folderExpanded.isFolderExpanded(stateFromStores(dependencyMap[5]).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER));
   const items2 = [stateFromStores];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (!stateFromStores) {
-      const requestToJoinGuilds = closure_1_1(closure_1_2[6]).fetchRequestToJoinGuilds();
-      const obj = closure_1_1(closure_1_2[6]);
+      const requestToJoinGuilds = GuildJoinRequestActionCreatorsDefault.fetchRequestToJoinGuilds();
     }
   }, items2);
   if (arr2.length > 0) {
-    obj = { folderId: null, folderName: null, expanded: null, guildIds: null };
-    obj[0] = tmp2(16361).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER;
+    const obj3 = { folderId: tmp2(16392).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER, folderName: null, expanded: null, guildIds: null };
     const intl = tmp2(1114).intl;
-    obj[1] = intl.string(tmp2(1114).t["scsU+l"]);
-    obj[2] = stateFromStores1;
-    obj[3] = arr2;
-    const folderNode = tmp2(5440).createFolderNode(obj);
+    obj3.folderName = intl.string(tmp2(1114).t["scsU+l"]);
+    obj3.expanded = stateFromStores1;
+    obj3.guildIds = arr2;
+    const folderNode = tmp2(5454).createFolderNode(obj3);
     for (const item10054 of arr2) {
       let children = folderNode.children;
-      let tmp13 = stateFromStores;
-      let tmp14 = stateFromStores;
-      let tmp15 = dependencyMap;
-      let tmp16 = dependencyMap;
-      let obj5 = stateFromStores(5440);
+      let obj5 = stateFromStores(5454);
       let arr = children.push(obj5.createGuildNode(item10054, folderNode.id));
       continue;
     }
-    obj = { expanded: null, pendingFolderNode: null };
-    obj[0] = stateFromStores1;
-    obj[1] = folderNode;
-    return obj;
+    const obj4 = { expanded: stateFromStores1, pendingFolderNode: folderNode };
+    return obj4;
   } else {
     return { expanded: false, pendingFolderNode: null };
   }
   const obj2 = stateFromStores(504);
-  const tmp = stateFromStores;
-  const tmp3 = dependencyMap;
 };

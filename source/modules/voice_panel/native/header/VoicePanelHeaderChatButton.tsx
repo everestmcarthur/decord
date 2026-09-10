@@ -1,58 +1,58 @@
-// Module ID: 17132
-// Function ID: 17133
+// Module ID: 17163
+// Function ID: 17164
 // Name: VoicePanelHeaderChatButton
-// Dependencies: [19, 1074, 21, 4560, 576, 1109, 17133, 5589, 17038, 5071, 1114, 2]
+// Dependencies: [19, 1074, 21, 4574, 576, 1109, 17164, 5603, 17069, 5085, 1114, 2]
 // Exports: default
 
-// Module 17132 (VoicePanelHeaderChatButton)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import ChatIcon from "ChatIcon" /* 5071 */;
-import setDefault from "set" /* 5589 */;
-import _modDef17038 from "module_17038" /* 17038 */;
-import useChatBadgeDefault from "useChatBadge" /* 17133 */;
-import closure_3 from "noop" /* 19 */;
-import { ComponentActions } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17163 (VoicePanelHeaderChatButton)
+import nativeDefault from "native" /* 576 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
+import util from "util" /* 1114 */;
+import ChatIcon from "ChatIcon" /* 5085 */;
+import NativeViewDefault from "NativeView" /* 5603 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 17069 */;
+import useChatBadgeDefault from "useChatBadge" /* 17164 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { badgeContainer: { position: "absolute", top: -2, right: -2 }, badge: null, notificationBadge: null };
-createCacheKey = { width: 8, height: 8, borderRadius: ThemesDefault.radii.round };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/header/VoicePanelHeaderChatButton.tsx");
+require = fn;
+const ComponentActions = fn(1074).ComponentActions;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+const obj2 = { badgeContainer: { position: "absolute", top: -2, right: -2 }, badge: null, notificationBadge: null };
+let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.round };
+obj2.badge = size;
+obj2.notificationBadge = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
+let closure_7 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/header/VoicePanelHeaderChatButton.tsx");
 
 export default function VoicePanelHeaderChatButton(channelId) {
-  const tmp = callback2();
-  const callback = React.useCallback(() => {
-    const ComponentDispatch = callback(table[5]).ComponentDispatch;
+  const tmp = closure_7();
+  const callback = noop.useCallback(() => {
+    const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
     ComponentDispatch.dispatch(constants.VOICE_PANEL_OPEN_CHAT_TAB);
   }, []);
   const tmp5 = useChatBadgeDefault(channelId.channelId);
-  const tmp6 = closure_6;
-  let obj = { icon: null, accessibilityLabel: null, onPress: null };
-  const tmp7 = setDefault;
-  obj = { color: ThemesDefault.colors.WHITE, size: "sm" };
-  obj[0] = callback(ChatIcon.ChatIcon, obj);
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t["5KxXrK"]);
-  obj[2] = callback;
-  const children = [callback(_modDef17038, obj), ];
+  const tmp6 = timestampProducer;
+  const obj = { icon: null, accessibilityLabel: null, onPress: null };
+  const tmp7 = NativeViewDefault;
+  const tmp9 = VoicePanelIconButtonDefault;
+  obj.icon = hasOwnProperty(ChatIcon.ChatIcon, { color: nativeDefault.colors.WHITE, size: "sm" });
+  const intl = util.intl;
+  obj.accessibilityLabel = intl.string(util.t["5KxXrK"]);
+  obj.onPress = callback;
+  const children = [hasOwnProperty(tmp9, obj), ];
   let tmp8Result = null != tmp5;
   if (tmp8Result) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.badgeContainer;
-    obj1 = { style: null };
+    const obj3 = { style: tmp.badgeContainer, children: null };
+    const obj4 = { style: null };
     const items1 = [, ];
     ({ badge: arr2[0], notificationBadge: arr2[1] } = tmp);
-    obj1[0] = items1;
-    obj[1] = tmp8(tmp3(5589), obj1);
-    tmp8Result = tmp8(tmp3(5589), obj);
-    const tmp3Result = tmp3(5589);
+    obj4.style = items1;
+    obj3.children = tmp8(tmp3(5603), obj4);
+    tmp8Result = tmp8(tmp3(5603), obj3);
+    const tmp3Result = tmp3(5603);
   }
   children[1] = tmp8Result;
   return tmp6(tmp7, { children });

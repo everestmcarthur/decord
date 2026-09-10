@@ -1,20 +1,20 @@
-// Module ID: 7036
-// Function ID: 7037
-// Name: designConfig
+// Module ID: 7050
+// Function ID: 7051
+// Name: config
 // Dependencies: [2]
 // Exports: setDesignConfig
 
-// Module 7036 (designConfig)
-import set from "set" /* 2 */;
+// Module 7050 (config)
+import size from "module_2" /* 2 */;
 
-const obj = {
+const designConfig = {
   useTrackNavigatorScreenImpression() {
 
   }
 };
-const result = set.fileFinishedImporting("design/config.tsx");
+const result = size.fileFinishedImporting("design/config.tsx");
 
-export const designConfig = obj;
+export { designConfig };
 export const setDesignConfig = function setDesignConfig(arg0) {
   const merged = Object.assign(obj, arg0);
 };

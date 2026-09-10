@@ -1,42 +1,43 @@
-// Module ID: 15069
-// Function ID: 15070
+// Module ID: 15096
+// Function ID: 15097
 // Name: BountiesNuxPromoSheet
-// Dependencies: [19, 17, 21, 4560, 576, 4527, 15068, 10235, 1114, 5807, 4975, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 4541, 15095, 10262, 1114, 5821, 4989, 2]
 // Exports: default
 
-// Module 15069 (BountiesNuxPromoSheet)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 4975 */;
-import BountiesPosterSpotIllustration from "BountiesPosterSpotIllustration" /* 5807 */;
-import PromoSheet from "PromoSheet" /* 10235 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15096 (BountiesNuxPromoSheet)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import BountiesPosterSpotIllustration from "BountiesPosterSpotIllustration" /* 5821 */;
+import PromoSheet from "PromoSheet" /* 10262 */;
+import openBountiesNuxPromoSheet from "openBountiesNuxPromoSheet" /* 15095 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-createCacheKey = { illustrationContainer: null };
-createCacheKey = { paddingTop: ThemesDefault.space.PX_12 };
-createCacheKey[0] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/quests/native/BountiesNuxPromoSheet.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+const obj2 = { illustrationContainer: { paddingTop: nativeDefault.space.PX_12 } };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/BountiesNuxPromoSheet.tsx");
 
 export default function BountiesNuxPromoSheet() {
-  const callback = React.useCallback(() => {
-    callback2(4527).hideActionSheet(callback(15068).PROMO_SHEET_KEY);
+  const callback = noop.useCallback(() => {
+    ActionSheetActionCreatorsDefault.hideActionSheet(openBountiesNuxPromoSheet.PROMO_SHEET_KEY);
   }, []);
-  let obj = { gradientColor: "purple", title: null, description: null, illustration: null, actions: null };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t.DDpHZG);
-  const intl2 = getSystemLocale.intl;
-  obj[2] = intl2.string(getSystemLocale.t["LY+igv"]);
-  obj = { style: callback().illustrationContainer, children: jsx(BountiesPosterSpotIllustration.BountiesPosterSpotIllustration, { width: 273, height: 205 }) };
-  obj[3] = <View style={callback().illustrationContainer}>{jsx(BountiesPosterSpotIllustration.BountiesPosterSpotIllustration, { width: 273, height: 205 })}</View>;
-  obj = { grow: true, size: "lg", variant: "primary", text: null, onPress: null };
-  const intl3 = getSystemLocale.intl;
-  obj[3] = intl3.string(getSystemLocale.t.cpT0Cq);
-  obj[4] = callback;
-  obj[4] = jsx(Button.Button, { grow: true, size: "lg", variant: "primary", text: null, onPress: null });
-  return jsx(PromoSheet.PromoSheet, { grow: true, size: "lg", variant: "primary", text: null, onPress: null });
+  const obj = { gradientColor: "purple", title: null, description: null, illustration: null, actions: null };
+  const intl = util.intl;
+  obj.title = intl.string(util.t.DDpHZG);
+  const intl2 = util.intl;
+  obj.description = intl2.string(util.t["LY+igv"]);
+  const tmp = closure_6();
+  obj.illustration = <View style={closure_6().illustrationContainer}>{jsx(BountiesPosterSpotIllustration.BountiesPosterSpotIllustration, { width: 273, height: 205 })}</View>;
+  const obj3 = { grow: true, size: "lg", variant: "primary", text: null, onPress: null };
+  const intl3 = util.intl;
+  obj3.text = intl3.string(util.t.cpT0Cq);
+  obj3.onPress = callback;
+  obj.actions = jsx(components_Button_Button.Button, { grow: true, size: "lg", variant: "primary", text: null, onPress: null });
+  return jsx(PromoSheet.PromoSheet, { gradientColor: "purple", title: null, description: null, illustration: null, actions: null });
 };

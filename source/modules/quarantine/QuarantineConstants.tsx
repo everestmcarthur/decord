@@ -1,11 +1,11 @@
-// Module ID: 12456
-// Function ID: 12457
-// Name: QUARANTINE_APPEAL_LINK
+// Module ID: 12482
+// Function ID: 12483
+// Name: QuarantineConstants
 // Dependencies: [2]
 
-// Module 12456 (QUARANTINE_APPEAL_LINK)
-import set from "set" /* 2 */;
+// Module 12482 (QuarantineConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/quarantine/QuarantineConstants.tsx");
+const result = size.fileFinishedImporting("modules/quarantine/QuarantineConstants.tsx");
 
 export const QUARANTINE_APPEAL_LINK = "https://dis.gd/appeal";

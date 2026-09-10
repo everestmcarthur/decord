@@ -1,11 +1,11 @@
-// Module ID: 8295
-// Function ID: 8296
+// Module ID: 8323
+// Function ID: 8324
 // Name: resolveSelectedIndex
 // Dependencies: [2]
 // Exports: resolveSelectedIndex
 
-// Module 8295 (resolveSelectedIndex)
-import set from "set" /* 2 */;
+// Module 8323 (resolveSelectedIndex)
+import size from "module_2" /* 2 */;
 
 function resolveSelectedIndex(arg0) {
   ({ offsetX, pageSize, maxIndex } = arg0);
@@ -31,7 +31,7 @@ function resolveSelectedIndex(arg0) {
 resolveSelectedIndex.__closure = { VIEWER_SETTLED_EPSILON_PX: 1 };
 resolveSelectedIndex.__workletHash = 17187138168161;
 resolveSelectedIndex.__initData = { code: "function resolveSelectedIndex_resolveSelectedIndexTsx1({offsetX:offsetX,pageSize:pageSize,maxIndex:maxIndex}){const{VIEWER_SETTLED_EPSILON_PX}=this.__closure;if(pageSize<=0||!Number.isFinite(offsetX)||maxIndex<0){return null;}const nearest=Math.max(0,Math.min(Math.round(offsetX/pageSize),maxIndex));if(Math.abs(offsetX-nearest*pageSize)>VIEWER_SETTLED_EPSILON_PX){return null;}return nearest;}" };
-const result = set.fileFinishedImporting("modules/media_viewer/native/resolveSelectedIndex.tsx");
+const result = size.fileFinishedImporting("modules/media_viewer/native/resolveSelectedIndex.tsx");
 
 export const VIEWER_SETTLED_EPSILON_PX = 1;
 export { resolveSelectedIndex };

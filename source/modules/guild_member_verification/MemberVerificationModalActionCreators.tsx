@@ -1,14 +1,14 @@
-// Module ID: 5569
-// Function ID: 5570
-// Name: openMemberVerificationModal
-// Dependencies: [5570, 2]
+// Module ID: 5583
+// Function ID: 5584
+// Name: MemberVerificationModalActionCreators
+// Dependencies: [5584, 2]
 
-// Module 5569 (openMemberVerificationModal)
-import set from "set" /* 2 */;
-import _mod5570 from "module_5570" /* 5570 */;
+// Module 5583 (MemberVerificationModalActionCreators)
+import guild_member_verification_MemberVerificationModalActionCreators from "guild_member_verification/MemberVerificationModalActionCreators" /* 5584 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_member_verification/MemberVerificationModalActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/guild_member_verification/MemberVerificationModalActionCreators.tsx");
 
-export default _mod5570.default;
-export const openMemberVerificationModal = _mod5570.default.openMemberVerificationModal;
-export const closeMemberVerificationModal = _mod5570.default.closeMemberVerificationModal;
+export default guild_member_verification_MemberVerificationModalActionCreators.default;
+export const openMemberVerificationModal = guild_member_verification_MemberVerificationModalActionCreators.default.openMemberVerificationModal;
+export const closeMemberVerificationModal = guild_member_verification_MemberVerificationModalActionCreators.default.closeMemberVerificationModal;

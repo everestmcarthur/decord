@@ -1,19 +1,20 @@
-// Module ID: 14862
-// Function ID: 14863
-// Name: harvestDisabled
-// Dependencies: [32, 19, 1371, 13714, 14863, 504, 2]
+// Module ID: 14888
+// Function ID: 14889
+// Name: HarvesterUtils
+// Dependencies: [32, 19, 1371, 13737, 14889, 504, 2]
 // Exports: harvestDisabled, useRequestHarvestStatus
 
-// Module 14862 (harvestDisabled)
+// Module 14888 (HarvesterUtils)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import closure_5 from "harvestType" /* 13714 */;
-import { REQUEST_DATA_LIMIT_MS } from "REQUEST_DATA_LIMIT_DAYS" /* 14863 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
+import DataHarvestStore from "DataHarvestStore" /* 13737 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/harvester/HarvesterUtils.tsx");
+require = fn;
+const REQUEST_DATA_LIMIT_MS = fn(14889).REQUEST_DATA_LIMIT_MS;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/harvester/HarvesterUtils.tsx");
 
 export const harvestDisabled = function harvestDisabled(created_at, stateFromStores) {
   const verified = stateFromStores.verified;
@@ -36,13 +37,11 @@ export const harvestDisabled = function harvestDisabled(created_at, stateFromSto
   return tmp;
 };
 export const useRequestHarvestStatus = function useRequestHarvestStatus() {
-  let obj = initialize;
-  const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const items1 = [closure_5];
+  const items = [UserStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const items1 = [DataHarvestStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => harvestType.harvestType);
-  const obj3 = initialize;
-  [tmp3, require] = callback(React.useState(() => Date.now()), 2);
+  [tmp3, require] = noop.useState(() => Date.now());
   let sum = tmp3;
   if (null != stateFromStores1) {
     const _Date = Date;
@@ -50,14 +49,14 @@ export const useRequestHarvestStatus = function useRequestHarvestStatus() {
     sum = date.getTime() + REQUEST_DATA_LIMIT_MS;
   }
   dependencyMap = sum;
-  callback = obj4.useRef(null);
+  _slicedToArray = obj4.useRef(null);
   const items2 = [sum];
   const effect = obj4.useEffect(() => {
-    const diff = closure_1 - Date.now();
+    const diff = sum - Date.now();
     if (diff > 0) {
       const _setTimeout = setTimeout;
       const _clearTimeout = clearTimeout;
-      const timerId = setTimeout(() => callback(Date.now()), diff);
+      const timerId = setTimeout(() => closure_1_0(Date.now()), diff);
       clearTimeout(ref.current);
       ref.current = timerId;
     }
@@ -69,16 +68,16 @@ export const useRequestHarvestStatus = function useRequestHarvestStatus() {
   }
   if (verified) {
     if (stateFromStores.isStaff()) {
-      obj = { allowed: false, reason: "staff" };
+      let obj2 = { allowed: false, reason: "staff" };
     } else if (null == stateFromStores1) {
-      obj = { allowed: true };
+      obj2 = { allowed: true };
     } else if (sum > tmp3) {
-      obj = { allowed: false, reason: "rate_limited", nextAllowed: null };
+      const obj5 = { allowed: false, reason: "rate_limited", nextAllowed: null };
       const _Date2 = Date;
       const date1 = new Date(sum);
-      obj[2] = date1;
+      obj5.nextAllowed = date1;
     } else {
-      obj = { allowed: true };
+      obj2 = { allowed: true };
     }
   } else {
     return { allowed: false, reason: "not_verified" };

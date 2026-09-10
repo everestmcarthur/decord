@@ -1,23 +1,21 @@
 // Module ID: 570
 // Function ID: 571
-// Name: u
 // Dependencies: [2]
 
-// Module 570 (u)
-import set from "set" /* 2 */;
+// Module 570
+import size from "module_2" /* 2 */;
 
 let _Date = Date;
 if (Date.now) {
   let nowResult = _Date.now();
 } else {
-  _Date = new _Date();
-  nowResult = +_Date;
+  let _Date1 = new _Date();
+  nowResult = +_Date1;
 }
-let c0 = nowResult;
 let tmp6 = global.performance || {};
 let closure_1 = tmp6;
 let closure_2 = [];
-let closure_3 = {};
+const dependencyMap = {};
 function u(arg0, arg1) {
 
 }
@@ -26,24 +24,25 @@ function f(arg0, arg1) {
 }
 if (!tmp6.now) {
   tmp6.now = tmp6.webkitNow || tmp6.mozNow || tmp6.msNow || (() => {
-    let _Date = Date;
+    const _Date = Date;
     if (Date.now) {
       nowResult = _Date.now();
     } else {
-      _Date = new _Date();
-      nowResult = +_Date;
+      const _Date1 = new _Date();
+      nowResult = +_Date1;
     }
-    return nowResult - closure_0;
+    return nowResult - nowResult;
   });
 }
 if (!tmp6.mark) {
   tmp6.mark = tmp6.webkitMark || ((name) => {
     const obj = { name, entryType: "mark", startTime: closure_1.now(), duration: 0 };
+    closure_2.push(obj);
     closure_3[name] = obj;
   });
 }
 if (!tmp6.measure) {
-  tmp6.measure = tmp6.webkitMeasure || ((name) => {
+  tmp6.measure = tmp6.webkitMeasure || ((name, arg1, arg2) => {
     if (undefined !== arg2) {
       if (undefined === dependencyMap[arg2]) {
         const _SyntaxError2 = SyntaxError;
@@ -67,91 +66,102 @@ if (!tmp6.measure) {
     } else {
       startTime = closure_1.now();
     }
+    closure_2.push({ name, entryType: "measure", startTime: num, duration: startTime - num });
   });
 }
 if (!tmp6.getEntriesByType) {
   tmp6.getEntriesByType = tmp6.webkitGetEntriesByType || ((arg0) => {
-    if (typeof u !== "function") {
-      HermesBuiltin.throwTypeError();
-    }
-    const items = [];
-    for (let num = 0; num < length; num = num + 1) {
-      let tmp2 = num;
-      if (arr[num].entryType == arg0) {
-        arr = items.push(tmp[num]);
+    if (typeof u === "function") {
+      const items = [];
+      let num = 0;
+      if (0 < closure_2.length) {
+        do {
+          if (closure_2[num].entryType == arg0) {
+            let arr = items.push(tmp2[num]);
+          }
+          num = num + 1;
+        } while (num < length);
       }
+      return items;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    return items;
   });
 }
 if (!tmp6.getEntriesByName) {
   tmp6.getEntriesByName = tmp6.webkitGetEntriesByName || ((arg0) => {
-    if (typeof u !== "function") {
-      HermesBuiltin.throwTypeError();
-    }
-    const items = [];
-    for (let num = 0; num < length; num = num + 1) {
-      let tmp2 = num;
-      if (arr[num].name == arg0) {
-        arr = items.push(tmp[num]);
+    if (typeof u === "function") {
+      const items = [];
+      let num = 0;
+      if (0 < closure_2.length) {
+        do {
+          if (closure_2[num].name == arg0) {
+            let arr = items.push(tmp2[num]);
+          }
+          num = num + 1;
+        } while (num < length);
       }
+      return items;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    return items;
   });
 }
 if (!tmp6.clearMarks) {
   tmp6.clearMarks = tmp6.webkitClearMarks || ((arg0) => {
-    let tmp9;
-    if (typeof f !== "function") {
-      HermesBuiltin.throwTypeError();
-    }
-    let diff = tmp - 1;
-    if (+arr.length) {
-      do {
-        let tmp4 = arr[diff];
-        let tmp5 = tmp4.entryType != "mark";
-        let tmp6 = diff;
-        if (!tmp5) {
-          let tmp7 = tmp3;
-          if (tmp3) {
-            tmp7 = tmp4.name != arg0;
+    let tmp10;
+    if (typeof f === "function") {
+      let diff = tmp2 - 1;
+      if (+closure_2.length) {
+        do {
+          let arr = closure_2;
+          let tmp5 = closure_2[diff];
+          let tmp6 = tmp5.entryType != "mark";
+          if (!tmp6) {
+            let tmp8 = tmp4;
+            if (tmp4) {
+              tmp8 = tmp5.name != arg0;
+            }
+            tmp6 = tmp8;
           }
-          tmp5 = tmp7;
-        }
-        if (!tmp5) {
-          let spliceResult = arr.splice(diff, 1);
-        }
-        tmp9 = +diff;
-        diff = tmp9 - 1;
-      } while (tmp9);
+          if (!tmp6) {
+            let spliceResult = arr.splice(diff, 1);
+          }
+          tmp10 = +diff;
+          diff = tmp10 - 1;
+        } while (tmp10);
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
   });
 }
 if (!tmp6.clearMeasures) {
   tmp6.clearMeasures = tmp6.webkitClearMeasures || ((arg0) => {
-    let tmp9;
-    if (typeof f !== "function") {
-      HermesBuiltin.throwTypeError();
-    }
-    let diff = tmp - 1;
-    if (+arr.length) {
-      do {
-        let tmp4 = arr[diff];
-        let tmp5 = tmp4.entryType != "measure";
-        let tmp6 = diff;
-        if (!tmp5) {
-          let tmp7 = tmp3;
-          if (tmp3) {
-            tmp7 = tmp4.name != arg0;
+    let tmp10;
+    if (typeof f === "function") {
+      let diff = tmp2 - 1;
+      if (+closure_2.length) {
+        do {
+          let arr = closure_2;
+          let tmp5 = closure_2[diff];
+          let tmp6 = tmp5.entryType != "measure";
+          if (!tmp6) {
+            let tmp8 = tmp4;
+            if (tmp4) {
+              tmp8 = tmp5.name != arg0;
+            }
+            tmp6 = tmp8;
           }
-          tmp5 = tmp7;
-        }
-        if (!tmp5) {
-          let spliceResult = arr.splice(diff, 1);
-        }
-        tmp9 = +diff;
-        diff = tmp9 - 1;
-      } while (tmp9);
+          if (!tmp6) {
+            let spliceResult = arr.splice(diff, 1);
+          }
+          tmp10 = +diff;
+          diff = tmp10 - 1;
+        } while (tmp10);
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
   });
 }
@@ -167,4 +177,4 @@ if (typeof globalThis.define === "function") {
 if (tmp7) {
   globalThis.define("performance", [], () => closure_1);
 }
-const result = set.fileFinishedImporting("../discord_common/js/packages/performance-utils/performance-polyfill.js");
+const result = size.fileFinishedImporting("../discord_common/js/packages/performance-utils/performance-polyfill.js");

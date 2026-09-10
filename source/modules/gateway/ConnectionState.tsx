@@ -1,11 +1,11 @@
-// Module ID: 13649
-// Function ID: 13650
-// Name: CLOSED
+// Module ID: 13672
+// Function ID: 13673
+// Name: ConnectionState
 // Dependencies: [2]
 
-// Module 13649 (CLOSED)
-import set from "set" /* 2 */;
+// Module 13672 (ConnectionState)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/gateway/ConnectionState.tsx");
+const result = size.fileFinishedImporting("modules/gateway/ConnectionState.tsx");
 
 export default { CLOSED: "CLOSED", WILL_RECONNECT: "WILL_RECONNECT", CONNECTING: "CONNECTING", IDENTIFYING: "IDENTIFYING", RESUMING: "RESUMING", SESSION_ESTABLISHED: "SESSION_ESTABLISHED" };

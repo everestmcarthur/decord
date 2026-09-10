@@ -1,24 +1,23 @@
-// Module ID: 8925
-// Function ID: 8926
+// Module ID: 8952
+// Function ID: 8953
 // Name: useGameNameAndCoverImage
-// Dependencies: [7309, 1114, 2]
+// Dependencies: [7323, 1114, 2]
 // Exports: default
 
-// Module 8925 (useGameNameAndCoverImage)
-import set from "set" /* 2 */;
-import importDefaultResult1 from "importDefaultResult1" /* 7309 */;
+// Module 8952 (useGameNameAndCoverImage)
+import useGame from "useGame" /* 7323 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/games/hooks/useGameNameAndCoverImage.tsx");
+const result = size.fileFinishedImporting("modules/games/hooks/useGameNameAndCoverImage.tsx");
 
 export default function useGameNameAndCoverImage(arg0, arg1, size) {
-  let obj = importDefaultResult1;
-  const game = obj.useGame(arg0);
+  const game = useGame.useGame(arg0);
   const data = game.data;
   let coverURL;
   if (data != null) {
     coverURL = data.getCoverURL(size);
   }
-  obj = { coverImageUrl: coverURL, gameName: null, isLoading: null };
+  const obj2 = { coverImageUrl: coverURL, gameName: null, isLoading: null };
   let name;
   if (data != null) {
     name = data.name;
@@ -30,7 +29,7 @@ export default function useGameNameAndCoverImage(arg0, arg1, size) {
     const intl = tmp(1114).intl;
     name = intl.string(tmp(1114).t.GIWFlF);
   }
-  obj[1] = name;
-  obj[2] = game.isLoading;
-  return obj;
+  obj2.gameName = name;
+  obj2.isLoading = game.isLoading;
+  return obj2;
 };

@@ -1,22 +1,21 @@
-// Module ID: 9537
-// Function ID: 9538
+// Module ID: 9564
+// Function ID: 9565
 // Name: showActivitiesInvalidPermissionsAlert
-// Dependencies: [4904, 1114, 2]
+// Dependencies: [4918, 1114, 2]
 // Exports: showActivitiesInvalidPermissionsAlert
 
-// Module 9537 (showActivitiesInvalidPermissionsAlert)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import setDefault from "set" /* 4904 */;
+// Module 9564 (showActivitiesInvalidPermissionsAlert)
+import util from "util" /* 1114 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/voice_calls/showActivitiesInvalidPermissionsAlert.tsx");
+const result = size.fileFinishedImporting("modules/voice_calls/showActivitiesInvalidPermissionsAlert.tsx");
 
 export const showActivitiesInvalidPermissionsAlert = function showActivitiesInvalidPermissionsAlert() {
-  let obj = setDefault;
-  obj = { title: null, body: null, hideActionSheet: false };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.otsg2R);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(getSystemLocale.t["/Yx5qX"]);
-  obj.show(obj);
+  const obj2 = { title: null, body: null, hideActionSheet: false };
+  const intl = util.intl;
+  obj2.title = intl.string(util.t.otsg2R);
+  const intl2 = util.intl;
+  obj2.body = intl2.string(util.t["/Yx5qX"]);
+  AlertActionCreatorsDefault.show(obj2);
 };

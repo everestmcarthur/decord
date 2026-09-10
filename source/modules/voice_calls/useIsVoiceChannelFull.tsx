@@ -1,31 +1,35 @@
-// Module ID: 9942
-// Function ID: 9943
+// Module ID: 9969
+// Function ID: 9970
 // Name: useIsVoiceChannelFull
-// Dependencies: [1979, 4199, 4579, 1085, 504, 4705, 2]
+// Dependencies: [1979, 4212, 4593, 1085, 504, 4719, 2]
 // Exports: default, useIsVoiceChannelLocked
 
-// Module 9942 (useIsVoiceChannelFull)
-import closure_2 from "createGuildRecordFromRust" /* 1979 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_4 from "updateVoiceState" /* 4579 */;
-import { Permissions } from "sum" /* 1085 */;
+// Module 9969 (useIsVoiceChannelFull)
+import ChannelUtils from "ChannelUtils" /* 4719 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
+import VoiceStateStore from "VoiceStateStore" /* 4593 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/voice_calls/useIsVoiceChannelFull.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const Permissions = fn(1085).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_calls/useIsVoiceChannelFull.tsx");
 
 export default function useIsVoiceChannelFull(arg0) {
-  const _require = arg0;
-  const items = [closure_4, closure_2];
-  return _require(504).useStateFromStores(items, () => callback(closure_1_1[5]).isChannelFull(callback, closure_1_4, closure_1_2));
+  _require = arg0;
+  const items = [VoiceStateStore, GuildStore];
+  return require("initialize").useStateFromStores(items, () => ChannelUtils.isChannelFull(closure_0, VoiceStateStore, GuildStore));
 };
 export const useIsVoiceChannelLocked = function useIsVoiceChannelLocked(channel) {
-  const _require = channel;
-  const items = [closure_3];
+  _require = channel;
+  const items = [PermissionStore];
   const items1 = [channel];
-  return _require(504).useStateFromStores(items, () => {
+  return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null == closure_0;
     if (!tmp2) {
-      tmp2 = !closure_1_3.can(closure_1_5.CONNECT, tmp);
+      tmp2 = !PermissionStore.can(Permissions.CONNECT, tmp);
     }
     return tmp2;
   }, items1);

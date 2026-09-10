@@ -1,34 +1,37 @@
-// Module ID: 10428
-// Function ID: 10429
-// Name: getAutocompleteOptions
-// Dependencies: [7779, 7780, 5108, 5502, 1957, 2021, 1979, 1074, 4999, 5000, 10429, 1374, 12, 9416, 5442, 1935, 9846, 7334, 10430, 10393, 7337, 1396, 1114, 2]
+// Module ID: 10455
+// Function ID: 10456
+// Name: AutocompleteOptions
+// Dependencies: [7793, 7794, 5122, 5516, 1957, 2021, 1979, 1074, 5013, 5014, 10456, 1374, 12, 9443, 5456, 1935, 9873, 7348, 10457, 10420, 7351, 1396, 1114, 2]
 // Exports: getAutocompleteOptions
 
-// Module 10428 (getAutocompleteOptions)
-import applyDefault from "apply" /* 12 */;
-import _executeCommandDefault from "_executeCommand" /* 9416 */;
-import closure_3 from "handleInit" /* 7779 */;
-import closure_4 from "handleInit" /* 7780 */;
-import closure_5 from "set" /* 5108 */;
-import closure_6 from "loadSavedGuildStickers" /* 5502 */;
-import closure_7 from "ensureGuildLoaded" /* 1957 */;
-import closure_8 from "trackCommunicationDisabled" /* 2021 */;
-import closure_9 from "createGuildRecordFromRust" /* 1979 */;
-import ME from "ME" /* 1074 */;
-import regExp from "regExp" /* 5000 */;
-import { AutocompleteTypes } from "AutocompleteTypes" /* 10429 */;
-import set from "set" /* 1374 */;
+// Module 10455 (AutocompleteOptions)
+import util from "util" /* 1114 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5456 */;
+import executeCommandDefault from "executeCommand" /* 9443 */;
+import StickersActionCreators from "StickersActionCreators" /* 10420 */;
+import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7793 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 7794 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 5122 */;
+import StickersStore from "StickersStore" /* 5516 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import apply from "module_12" /* 12 */;
 
-const require = arg1;
-({ AutoCompleteResultTypes: c10, MAX_AUTOCOMPLETE_RESULTS: unpackModuleId } = ME);
-({ MENTION_SENTINEL: closure_12, EMOJI_SENTINEL: map1, CHANNEL_SENTINEL: closure_14, COMMAND_SENTINEL: closure_15 } = regExp);
-({ EmojiIntention: closure_17, EMOJI_MAX_LENGTH: closure_18, EMOJI_URL_BASE_SIZE: closure_19 } = set);
+require = fn;
+const Constants = fn(1074);
+({ AutoCompleteResultTypes: c10, MAX_AUTOCOMPLETE_RESULTS: closure_11 } = Constants);
+const ChannelAutocompleteConstants = fn(5014);
+({ MENTION_SENTINEL: closure_12, EMOJI_SENTINEL: map1, CHANNEL_SENTINEL: closure_14, COMMAND_SENTINEL: closure_15 } = ChannelAutocompleteConstants);
+const AutocompleteTypes = fn(10456).AutocompleteTypes;
+const EmojiConstants = fn(1374);
+({ EmojiIntention: closure_17, EMOJI_MAX_LENGTH: closure_18, EMOJI_URL_BASE_SIZE: closure_19 } = EmojiConstants);
 let c20 = false;
-let closure_21 = applyDefault.debounce(_executeCommandDefault, require("TRUE_OPTION_NAME").AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, { leading: true, trailing: true });
-let result = set.fileFinishedImporting("modules/autocompleter/native/AutocompleteOptions.tsx");
+const executeCommand = apply.debounce(executeCommandDefault, fn(5013).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, { leading: true, trailing: true });
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/autocompleter/native/AutocompleteOptions.tsx");
 
 export const getAutocompleteOptions = function getAutocompleteOptions(channel, arg1, setting) {
-  closure_0 = channel;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -38,80 +41,78 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
     flag2 = true;
   }
   let obj = {
-    stores: items,
-    queryResults(query, canMentionEveryone) {
-      let obj = flag(flag2[14]);
-      obj = { query, channel: closure_0, canMentionEveryone: null, canMentionHere: null, canMentionUsers: null, canMentionRoles: null, includeAllGuildUsers: null, includeNonMentionableRoles: null, request: null };
+    stores: null,
+    queryResults(query, canMentionEveryone, request) {
+      const obj2 = { query, channel, canMentionEveryone: null, canMentionHere: null, canMentionUsers: null, canMentionRoles: null, includeAllGuildUsers: null, includeNonMentionableRoles: null, request: null };
       canMentionEveryone = undefined;
       if (canMentionEveryone != null) {
         canMentionEveryone = canMentionEveryone.canMentionEveryone;
       }
-      obj[2] = canMentionEveryone;
+      obj2.canMentionEveryone = canMentionEveryone;
       let canMentionHere;
       if (canMentionEveryone != null) {
         canMentionHere = canMentionEveryone.canMentionHere;
       }
-      obj[3] = canMentionHere;
+      obj2.canMentionHere = canMentionHere;
       let canMentionUsers;
       if (canMentionEveryone != null) {
         canMentionUsers = canMentionEveryone.canMentionUsers;
       }
-      obj[4] = canMentionUsers;
+      obj2.canMentionUsers = canMentionUsers;
       let canMentionRoles;
       if (canMentionEveryone != null) {
         canMentionRoles = canMentionEveryone.canMentionRoles;
       }
-      obj[5] = canMentionRoles;
+      obj2.canMentionRoles = canMentionRoles;
       let prop;
       if (canMentionEveryone != null) {
         prop = canMentionEveryone.canMentionAnyGuildUser;
       }
-      obj[6] = prop;
+      obj2.includeAllGuildUsers = prop;
       let prop1;
       if (canMentionEveryone != null) {
         prop1 = canMentionEveryone.canMentionNonMentionableRoles;
       }
-      obj[7] = prop1;
-      obj[8] = arg2;
-      ({ users, globals, roles } = obj.queryMentionResults(obj));
-      const queryMentionResultsResult = obj.queryMentionResults(obj);
-      const tmp = flag;
-      const tmp2 = flag2;
+      obj2.includeNonMentionableRoles = prop1;
+      obj2.request = request;
+      ({ users, globals, roles } = AutocompleteUtilsDefault.queryMentionResults(obj2));
+      const queryMentionResultsResult = AutocompleteUtilsDefault.queryMentionResults(obj2);
       const items = [
-        ...users.map((arg0) => {
-          const merged = Object.assign(arg0);
+        ...users.map((item) => {
+          const merged = Object.assign(item);
           return { type: constants.USER };
         }),
-        ...globals.map((arg0) => {
-          const merged = Object.assign(arg0);
+        ...globals.map((item) => {
+          const merged = Object.assign(item);
           return { type: constants.GLOBAL };
         }),
-        ...roles.map((arg0) => {
-          const merged = Object.assign(arg0);
+        ...roles.map((item) => {
+          const merged = Object.assign(item);
           return { type: constants.ROLE };
         })
       ];
-      const tmpResult = flag(flag2[12]);
-      return flag(flag2[12])(items).value();
+      const tmpResult = apply;
+      return apply(items).value();
     },
     matches(arg0, arg1) {
-      return flag(flag2[14]).matchSentinel(arg0, arg1, closure_12);
+      return flag(flag2[14]).matchSentinel(arg0, arg1, closure_1_12);
     }
   };
-  items = [closure_8, closure_5];
-  obj = {
-    stores: items1,
+  let items = [GuildMemberStore, GameAutocompleteStore];
+  obj.stores = items;
+  let obj2 = {
+    stores: null,
     queryResults(query) {
-      const IncludeGameMentionsInAutocomplete = _private(flag2[15]).IncludeGameMentionsInAutocomplete;
+      const IncludeGameMentionsInAutocomplete = channel(flag2[15]).IncludeGameMentionsInAutocomplete;
       if (IncludeGameMentionsInAutocomplete.getSetting()) {
         if (0 !== query.length) {
-          let result = _private(flag2[16]).queryGamesAutocomplete(query);
+          let result = channel(flag2[16]).queryGamesAutocomplete(query);
           if (result == null) {
             result = [];
           }
-          const substr = result.slice(0, closure_11);
+          const substr = result.slice(0, closure_1_11);
           const mapped = substr.map((game) => ({ type: constants.GAME_MENTION, game }));
-          const tmpResult = _private(flag2[16]);
+          const tmpResult = channel(flag2[16]);
         }
         return [];
       }
@@ -120,45 +121,108 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
       return false;
     }
   };
-  items1 = [closure_5];
-  obj = {
-    queryResults(str) {
-      const TimestampAutocompleteMobileExperiment = _private(flag2[17]).TimestampAutocompleteMobileExperiment;
-      const items = [];
-      if (TimestampAutocompleteMobileExperiment.getConfig({ location: "timestamps autocomplete" }).enabled) {
-        const result = tmp(tmp2[18]).queryTimestampSuggestions(str.trim());
-        const iter = result[Symbol.iterator]();
-        const nextResult = iter.next();
-        while (iter !== undefined) {
-          let tmp10 = nextResult;
-          if (null != nextResult.mention) {
-            let obj = { type: null, mention: null, description: null };
-            let tmp11 = constants;
-            obj[0] = constants.TIMESTAMP_MENTION;
-            let tmp12 = nextResult;
-            ({ mention: obj2[1], description: obj2[2] } = tmp10);
-            let arr = items.push(obj);
-          }
-          continue;
+  let items1 = [GameAutocompleteStore];
+  obj2.stores = items1;
+  let obj8 = {
+    stores: null,
+    queryResults(query, option) {
+      let autocomplete;
+      if (option != null) {
+        option = option.option;
+        if (option != null) {
+          autocomplete = option.autocomplete;
         }
-        return items;
-      } else {
-        return items;
       }
-      tmp = _private;
-      tmp2 = flag2;
+      if (autocomplete) {
+        let activeCommand;
+        if (option != null) {
+          activeCommand = option.activeCommand;
+        }
+        if (null != activeCommand) {
+          let optionValues;
+          if (option != null) {
+            optionValues = option.optionValues;
+          }
+          if (null != optionValues) {
+            const obj2 = { command: null, optionValues: null, context: null };
+            ({ activeCommand: obj3.command, optionValues: obj3.optionValues } = option);
+            const obj4 = { channel, guild: GuildStore.getGuild(channel.guild_id), autocomplete: null };
+            const obj5 = { name: option.option.name, query };
+            obj4.autocomplete = obj5;
+            obj2.context = obj4;
+            executeCommand(obj2);
+            const autocompleteChoices = ApplicationCommandAutocompleteStore.getAutocompleteChoices(channel.id, option.option.name, query);
+            if (null == autocompleteChoices) {
+              const _Array = Array;
+              const array = new Array(4);
+              const obj6 = { type: constants.CHOICE_LOADING };
+              let fillResult = array.fill(obj6);
+            } else if (0 === autocompleteChoices.length) {
+              const obj7 = { type: constants.LABEL, label: null };
+              const intl = util.intl;
+              obj7.label = intl.string(util.t["41014u"]);
+              const items = [obj7];
+              fillResult = items;
+            } else {
+              fillResult = autocompleteChoices.map((choice) => ({ type: constants.CHOICE, choice }));
+            }
+            return fillResult;
+          }
+        }
+      }
+      let choices;
+      if (option != null) {
+        choices = option.choices;
+      }
+      if (null == choices) {
+        let items1 = [];
+      } else {
+        const obj8 = { query, choices };
+        const choices1 = AutocompleteUtilsDefault.queryChoiceResults(obj8).choices;
+        items1 = choices1.map((choice) => ({ type: constants.CHOICE, choice }));
+      }
+      return items1;
     },
     matches() {
       return false;
     }
   };
-  let items2 = [closure_4, closure_3];
+  let items2 = [ApplicationCommandStore, ApplicationCommandAutocompleteStore];
+  obj8.stores = items2;
   return {
     [closure_16.MENTIONS]: obj,
-    [closure_16.GAME_MENTIONS]: obj,
-    [closure_16.TIMESTAMPS]: obj,
+    [closure_16.GAME_MENTIONS]: obj2,
+    [closure_16.TIMESTAMPS]: {
+      queryResults(str) {
+        const TimestampAutocompleteMobileExperiment = channel(flag2[17]).TimestampAutocompleteMobileExperiment;
+        const items = [];
+        if (TimestampAutocompleteMobileExperiment.getConfig({ location: "timestamps autocomplete" }).enabled) {
+          const result = tmp(tmp2[18]).queryTimestampSuggestions(str.trim());
+          const iter = result[Symbol.iterator]();
+          const nextResult = iter.next();
+          while (iter !== undefined) {
+            let tmp10 = nextResult;
+            if (null != nextResult.mention) {
+              let obj = { type: null, mention: null, description: null };
+              obj.type = constants.TIMESTAMP_MENTION;
+              ({ mention: obj2.mention, description: obj2.description } = tmp10);
+              let arr = items.push(obj);
+            }
+            continue;
+          }
+          return items;
+        } else {
+          return items;
+        }
+        tmp = channel;
+        tmp2 = flag2;
+      },
+      matches() {
+        return false;
+      }
+    },
     [closure_16.CHANNELS]: {
-      queryResults(arg0, channelTypes) {
+      queryResults(query, channelTypes) {
         if (channelTypes != null) {
           channelTypes = channelTypes.channelTypes;
         }
@@ -166,28 +230,22 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
         if (channelTypes != null) {
           prop = channelTypes.isActiveApplicationCommand;
         }
-        let obj = flag(flag2[14]);
+        const obj = AutocompleteUtilsDefault;
         if (prop) {
-          obj = { query: null, channel: null, channelTypes: null };
-          obj[0] = arg0;
-          obj[1] = closure_0;
-          obj[2] = channelTypes;
-          let result = obj.queryApplicationCommandChannelResults(obj);
+          const obj2 = { query, channel, channelTypes };
+          let result = obj.queryApplicationCommandChannelResults(obj2);
         } else {
-          obj = { query: null, channel: null };
-          obj[0] = arg0;
-          obj[1] = closure_0;
-          result = obj.queryChannelResults(obj);
+          const obj3 = { query, channel };
+          result = obj.queryChannelResults(obj3);
         }
         const channels = result.channels;
         return channels.map((channel) => ({ type: constants.CHANNEL, channel, category: channel.getChannel(channel.parent_id) }));
       },
       matches(arg0, arg1) {
-        const isPrivateResult = _private.isPrivate();
+        const isPrivateResult = channel.isPrivate();
         let matchSentinelResult = !isPrivateResult;
         if (!isPrivateResult) {
-          matchSentinelResult = flag(flag2[14]).matchSentinel(arg0, arg1, closure_1_14);
-          const obj = flag(flag2[14]);
+          matchSentinelResult = AutocompleteUtilsDefault.matchSentinel(arg0, arg1, closure_2_14);
         }
         return matchSentinelResult;
       }
@@ -198,9 +256,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
         if (flag2) {
           num = 0;
         }
-        let obj = flag(flag2[14]);
-        obj = { query, channel: _private, intention: closure_1_17.CHAT, maxCount: closure_1_11 + num };
-        const queryEmojiResultsResult = obj.queryEmojiResults(obj);
+        const queryEmojiResultsResult = AutocompleteUtilsDefault.queryEmojiResults({ query, channel, intention: constants2.CHAT, maxCount: closure_2_11 + num });
         let prop;
         if (includeEmojiPremiumUpsell != null) {
           prop = includeEmojiPremiumUpsell.includeEmojiPremiumUpsell;
@@ -208,64 +264,60 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
         if (prop) {
           if (queryEmojiResultsResult.emojis.locked.length > 0) {
             if (queryEmojiResultsResult.emojis.unlocked.length < 4) {
-              obj = { type: null, results: null };
-              obj[0] = closure_1_10.EMOJI_PREMIUM_UPSELL;
-              obj[1] = queryEmojiResultsResult.emojis.locked;
-              const items = [obj];
+              const obj3 = { type: constants.EMOJI_PREMIUM_UPSELL, results: queryEmojiResultsResult.emojis.locked };
+              const items = [obj3];
               let items5 = items;
             }
             let items1 = [];
             if (flag2) {
               let hasLoadedStickerPacks = c20;
               if (!c20) {
-                hasLoadedStickerPacks = closure_1_6.hasLoadedStickerPacks;
+                hasLoadedStickerPacks = StickersStore.hasLoadedStickerPacks;
               }
               if (!hasLoadedStickerPacks) {
                 c20 = true;
-                const stickerPacks = _private(tmp3[19]).fetchStickerPacks();
-                const obj4 = _private(tmp3[19]);
+                const stickerPacks = StickersActionCreators.fetchStickerPacks();
               }
               const items2 = [query];
-              const items3 = [_private, (arg0, arg1) => arg1 === callback(7337).StickerSendability.SENDABLE];
-              items1 = flag(tmp3[14]).queryStickers(items2, true, items3);
-              const tmp2Result = flag(tmp3[14]);
+              const items3 = [channel, (arg0, arg1) => arg1 === channel(7351).StickerSendability.SENDABLE];
+              items1 = AutocompleteUtilsDefault.queryStickers(items2, true, items3);
+              const tmp2Result = AutocompleteUtilsDefault;
             }
             const items4 = [];
             const unlocked = queryEmojiResultsResult.emojis.unlocked;
-            let arraySpreadResult = HermesBuiltin.arraySpread(items1.map((sticker) => {
-              sticker = sticker.sticker;
-              return { type: constants.STICKER, name: sticker.name, sticker };
-            }), 0);
-            arraySpreadResult = HermesBuiltin.arraySpread(items5, HermesBuiltin.arraySpread(unlocked.map((name) => {
-              let obj = { type: constants.EMOJI, name: name.name, url: null, surrogates: null };
+            HermesBuiltin.arraySpread(items5, HermesBuiltin.arraySpread(unlocked.map((name) => {
+              const obj = { type: constants.EMOJI, name: name.name, url: null, surrogates: null };
               if (null != name.id) {
-                obj = { id: null, animated: null, size: null };
-                ({ id: obj3[0], animated: obj3[1] } = name);
-                obj[2] = closure_19;
-                let url = callback2(1396).getEmojiURL(obj);
-                const obj2 = callback2(1396);
+                const obj4 = { id: null, animated: null, size: null };
+                ({ id: obj3.id, animated: obj3.animated } = name);
+                obj4.size = size;
+                let url = flag(1396).getEmojiURL(obj4);
+                const obj2 = flag(1396);
               } else {
                 url = name.url;
               }
-              obj[2] = url;
+              obj.url = url;
               let surrogates;
               if (null == name.id) {
                 surrogates = name.surrogates;
               }
-              obj[3] = surrogates;
+              obj.surrogates = surrogates;
               return obj;
-            }), arraySpreadResult));
+            }), HermesBuiltin.arraySpread(items1.map((sticker) => {
+              sticker = sticker.sticker;
+              return { type: constants.STICKER, name: sticker.name, sticker };
+            }), 0)));
             return items4;
           }
         }
         items5 = [];
       },
       matches(arg0, arr) {
-        let tmp2 = arg0 === closure_13;
+        let tmp2 = arg0 === closure_1_13;
         if (tmp2) {
           let tmp4 = arr.length < 2;
           if (!tmp4) {
-            tmp4 = arr.length > closure_18;
+            tmp4 = arr.length > closure_1_18;
           }
           let tmp6 = !tmp4;
           if (!tmp4) {
@@ -283,7 +335,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
       matches(arg0, arg1, arg2) {
         let tmp = 0 === arg2;
         if (tmp) {
-          tmp = arg0 === closure_1_15;
+          tmp = arg0 === __initData;
         }
         if (tmp) {
           let tmp4 = flag;
@@ -305,7 +357,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
           tmp = 0 === arg2;
         }
         if (tmp) {
-          tmp = arg0 === closure_1_15;
+          tmp = arg0 === __initData;
         }
         if (tmp) {
           tmp = 0 === arg1.length;
@@ -313,78 +365,6 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
         return tmp;
       }
     },
-    [closure_16.CHOICES]: {
-      stores: items2,
-      queryResults(first, option) {
-        let autocomplete;
-        if (option != null) {
-          option = option.option;
-          if (option != null) {
-            autocomplete = option.autocomplete;
-          }
-        }
-        if (autocomplete) {
-          let activeCommand;
-          if (option != null) {
-            activeCommand = option.activeCommand;
-          }
-          if (null != activeCommand) {
-            let optionValues;
-            if (option != null) {
-              optionValues = option.optionValues;
-            }
-            if (null != optionValues) {
-              let obj = { command: null, optionValues: null, context: null };
-              ({ activeCommand: obj3[0], optionValues: obj3[1] } = option);
-              obj = { channel: null, guild: null, autocomplete: null };
-              obj[0] = _private;
-              obj[1] = closure_1_9.getGuild(_private.guild_id);
-              obj1 = { name: null, query: null };
-              obj1[0] = option.option.name;
-              obj1[1] = first;
-              obj[2] = obj1;
-              obj[2] = obj;
-              closure_1_21(obj);
-              const autocompleteChoices = closure_1_3.getAutocompleteChoices(_private.id, option.option.name, first);
-              if (null == autocompleteChoices) {
-                const _Array = Array;
-                const array = new Array(4);
-                const obj2 = { type: null };
-                obj2[0] = closure_1_10.CHOICE_LOADING;
-                let fillResult = array.fill(obj2);
-              } else if (0 === autocompleteChoices.length) {
-                const obj3 = { type: null, label: null };
-                obj3[0] = closure_1_10.LABEL;
-                const intl = _private(flag2[22]).intl;
-                obj3[1] = intl.string(_private(flag2[22]).t["41014u"]);
-                const items = [obj3];
-                fillResult = items;
-              } else {
-                fillResult = autocompleteChoices.map((choice) => ({ type: constants.CHOICE, choice }));
-              }
-              return fillResult;
-            }
-          }
-        }
-        let choices;
-        if (option != null) {
-          choices = option.choices;
-        }
-        if (null == choices) {
-          let items1 = [];
-        } else {
-          obj = flag(flag2[14]);
-          const obj4 = { query: null, choices: null };
-          obj4[0] = first;
-          obj4[1] = choices;
-          const choices1 = obj.queryChoiceResults(obj4).choices;
-          items1 = choices1.map((choice) => ({ type: constants.CHOICE, choice }));
-        }
-        return items1;
-      },
-      matches() {
-        return false;
-      }
-    }
+    [closure_16.CHOICES]: obj8
   };
 };

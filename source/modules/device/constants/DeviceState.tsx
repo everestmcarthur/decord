@@ -1,14 +1,13 @@
-// Module ID: 7751
-// Function ID: 7752
-// Name: ThermalState
+// Module ID: 7765
+// Function ID: 7766
+// Name: constants/DeviceState
 // Dependencies: [2]
 
-// Module 7751 (ThermalState)
-import set from "set" /* 2 */;
+// Module 7765 (constants/DeviceState)
+import size from "module_2" /* 2 */;
 
-let obj = { NOMINAL: "NOMINAL", FAIR: "FAIR", SERIOUS: "SERIOUS", CRITICAL: "CRITICAL", UNKNOWN: "UNKNOWN" };
-obj = { thermalState: obj.UNKNOWN, batteryLevel: 1, isLowPowerMode: false };
-const result = set.fileFinishedImporting("modules/device/constants/DeviceState.tsx");
+const obj = { NOMINAL: "NOMINAL", FAIR: "FAIR", SERIOUS: "SERIOUS", CRITICAL: "CRITICAL", UNKNOWN: "UNKNOWN" };
+const result = size.fileFinishedImporting("modules/device/constants/DeviceState.tsx");
 
 export const ThermalState = obj;
-export const DEFAULT_DEVICE_STATE = obj;
+export const DEFAULT_DEVICE_STATE = { thermalState: obj.UNKNOWN, batteryLevel: 1, isLowPowerMode: false };

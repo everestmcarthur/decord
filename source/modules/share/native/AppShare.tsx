@@ -1,63 +1,68 @@
-// Module ID: 17930
-// Function ID: 17931
+// Module ID: 17963
+// Function ID: 17964
 // Name: AppShare
-// Dependencies: [32, 19, 17, 7460, 14398, 502, 1074, 12418, 21, 504, 6593, 1115, 14437, 12421, 7475, 1242, 4992, 14557, 13903, 1608, 8362, 7039, 16911, 16957, 4910, 2]
+// Dependencies: [32, 19, 17, 7474, 14423, 502, 1074, 12444, 21, 504, 6607, 1115, 14462, 12447, 7489, 1242, 5006, 14582, 13926, 1608, 8390, 7053, 16948, 16994, 4924, 2]
 // Exports: default
 
-// Module 17930 (AppShare)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import result from "result" /* 7460 */;
-import handleTokenUpdated from "handleTokenUpdated" /* 14398 */;
-import closure_7 from "fetchFingerprint" /* 502 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import { MultiAccountSwitchLocation as closure_9 } from "MAX_ACCOUNTS" /* 12418 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 17963 (AppShare)
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import useMountEffectDefault from "useMountEffect" /* 5006 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6607 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7489 */;
+import AccessibilityManagerDefault from "AccessibilityManager" /* 14462 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-const require = arg1;
-({ BackHandler: c5, NativeModules: closure_6 } = get_ActivityIndicator);
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
+const require = globalThis.__r;
+
+require = fn;
+get_ActivityIndicator = fn(17);
+({ BackHandler: hasOwnProperty, NativeModules: metroRequire } = get_ActivityIndicator);
+const AnalyticsTrackingStore = fn(7474);
+const ShareStore = fn(14423);
+const AnalyticEvents = fn(1074).AnalyticEvents;
+let closure_9 = fn(12444).MultiAccountSwitchLocation;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const share = "share";
-result = require("set").fileFinishedImporting("modules/share/native/AppShare.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/share/native/AppShare.tsx");
 
 export default function AppShare(targetUserId) {
-  let stateFromStores = targetUserId;
+  _require = targetUserId;
   targetUserId = targetUserId.targetUserId;
-  stateFromStores = targetUserId;
-  let first;
-  dependencyMap = undefined;
-  let callback;
-  let obj = React;
-  let tmp2 = callback(React.useState(false), 2);
-  first = tmp2[0];
-  dependencyMap = tmp2[1];
+  closure_129_0 = targetUserId;
+  closure_129_2 = undefined;
+  closure_129_3 = undefined;
+  [first, closure_129_2] = noop.useState(false);
+  closure_129_1 = first;
   let tmp4 = null == targetUserId;
   if (!tmp4) {
-    tmp4 = id.getId() === targetUserId;
+    tmp4 = AuthenticationStore.getId() === targetUserId;
   }
-  const tmpResult = callback(React.useState(tmp4), 2);
-  callback = tmpResult[1];
+  const tmpResult = _slicedToArray(noop.useState(tmp4), 2);
+  closure_129_3 = tmpResult[1];
   const items = [first];
   const effect = obj.useEffect(() => {
-    if (!first) {
-      first(14437).init();
+    if (!closure_1_1) {
+      AccessibilityManagerDefault.init();
       dependencyMap(true);
-      const obj = first(14437);
     }
   }, items);
   const items1 = [targetUserId];
   const effect1 = obj.useEffect(() => {
-    let tmp2 = null != stateFromStores;
+    let tmp2 = null != closure_0;
     if (tmp2) {
-      tmp2 = closure_1_7.getId() !== tmp;
+      tmp2 = AuthenticationStore.getId() !== tmp;
     }
     if (tmp2) {
       const _setTimeout = setTimeout;
       const timerId = setTimeout(() => {
-        const obj = closure_1_0(closure_1_2[13]);
-        closure_1_0(closure_1_2[13]).switchAccount(closure_0, false, closure_1_9.SHARE_EXTENSION).then(() => {
-          callback(true);
+        const obj = closure_0(12447);
+        closure_0(12447).switchAccount(targetUserId, false, constants.SHARE_EXTENSION).then(() => {
+          closure_1_3(true);
         });
       }, 18);
     }
@@ -65,33 +70,30 @@ export default function AppShare(targetUserId) {
   if (first) {
     first = tmpResult[0];
   }
-  obj1 = stateFromStores(504);
-  const items2 = [id];
-  stateFromStores = obj1.useStateFromStores(items2, () => authenticated.isAuthenticated());
+  const items2 = [AuthenticationStore];
+  const stateFromStores = require("initialize").useStateFromStores(items2, () => authenticated.isAuthenticated());
+  closure_130_0 = stateFromStores;
   const items3 = [stateFromStores];
   const effect2 = obj.useEffect(() => {
-    if (stateFromStores) {
-      first(6593).startSession(closure_1_7.getToken());
-      const obj = first(6593);
+    if (closure_0) {
+      AuthenticationActionCreatorsDefault.startSession(AuthenticationStore.getToken());
       if (obj2.isAndroid()) {
-        const NativePermissionManager = closure_1_6.NativePermissionManager;
+        const NativePermissionManager = timestampProducer.NativePermissionManager;
         const notificationAuthorization = NativePermissionManager.requestNotificationAuthorization();
       }
-      obj2 = stateFromStores(1115);
+      obj2 = PlatformUtils;
     }
   }, items3);
   const items4 = [targetUserId.attachments.length, targetUserId.text];
   const effect3 = obj.useEffect(() => {
-    let obj = first(1242);
-    let tmp2 = null != stateFromStores.text;
+    let tmp2 = null != targetUserId.text;
     if (tmp2) {
       tmp2 = tmp.text.length > 0;
     }
-    obj = { has_content: tmp2, has_attachment: tmp.attachments.length > 0 };
-    obj.track(closure_1_8.EXTERNAL_SHARE_OPENED, obj);
+    AnalyticsUtilsDefault.track(AnalyticEvents.EXTERNAL_SHARE_OPENED, { has_content: tmp2, has_attachment: targetUserId.attachments.length > 0 });
   }, items4);
-  first(4992)(() => {
-    const attachments = stateFromStores.attachments;
+  useMountEffectDefault(() => {
+    const attachments = targetUserId.attachments;
     const mapped = attachments.map((mimeType) => {
       let str = mimeType.mimeType;
       if (str == null) {
@@ -99,30 +101,27 @@ export default function AppShare(targetUserId) {
       }
       return str;
     });
-    stateFromStores(7475).trackAppUIViewed("share", { share_num_attachments: stateFromStores.attachments.length, share_attachment_mimetypes: mapped });
+    TTIAnalyticsUtils.trackAppUIViewed("share", { share_num_attachments: targetUserId.attachments.length, share_attachment_mimetypes: mapped });
   });
-  obj = { appEntryKey: share, children: null };
+  const obj3 = { appEntryKey: share, children: null };
   if (first) {
-    obj = { appEntryKey: null, sharedContent: null, onClose: null };
-    obj[0] = tmp18;
-    obj[1] = targetUserId;
-    const tmp14Result = tmp14(13903);
+    const obj4 = { appEntryKey: tmp18, sharedContent: targetUserId, onClose: null };
+    const tmp14Result = tmp14(13926);
     if (tmp9Result.isMetaQuest()) {
-      let exitApp = tmp14(8362).close;
+      exitApp = tmp14(8390).close;
     } else {
       exitApp = exitApp.exitApp;
     }
-    obj[2] = exitApp;
-    tmp19(tmp14Result, obj);
+    obj4.onClose = exitApp;
+    tmp19(tmp14Result, obj4);
     tmp9Result = tmp9(1608);
   } else {
-    const items5 = [tmp19(tmp9(7039).SceneLoadingIndicator, {}), , , ];
-    obj1 = { appEntryKey: null };
-    obj1[0] = tmp18;
-    items5[1] = tmp19(tmp9(16911).ActionSheetContainer, obj1);
-    items5[2] = tmp19(tmp14(16957), {});
-    items5[3] = tmp19(tmp9(4910).AlertModalContainer, {});
-    obj[1] = items5;
-    return closure_11(tmp17, obj);
+    const items5 = [tmp19(tmp9(7053).SceneLoadingIndicator, {}), , , ];
+    const obj5 = { appEntryKey: tmp18 };
+    items5[1] = tmp19(tmp9(16948).ActionSheetContainer, obj5);
+    items5[2] = tmp19(tmp14(16994), {});
+    items5[3] = tmp19(tmp9(4924).AlertModalContainer, {});
+    obj3.children = items5;
+    return closure_11(tmp17, obj3);
   }
 };

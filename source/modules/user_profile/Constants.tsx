@@ -1,25 +1,25 @@
-// Module ID: 8183
-// Function ID: 8184
-// Name: USER_PROFILE_TOOLTIP_DELAY
-// Dependencies: [1074, 8184, 2]
+// Module ID: 8209
+// Function ID: 8210
+// Name: Constants
+// Dependencies: [1074, 8210, 2]
 // Exports: getBadgeAssetFromCDN, getBadgeName
 
-// Module 8183 (USER_PROFILE_TOOLTIP_DELAY)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import BadgeId from "BadgeId" /* 8184 */;
+// Module 8209 (Constants)
+import Constants from "Constants" /* 1074 */;
+import BadgeId from "BadgeId" /* 8210 */;
+import size from "module_2" /* 2 */;
 
-const Endpoints = ME.Endpoints;
-const result = set.fileFinishedImporting("modules/user_profile/Constants.tsx");
+const Endpoints = Constants.Endpoints;
+const result = size.fileFinishedImporting("modules/user_profile/Constants.tsx");
 
 export const USER_PROFILE_TOOLTIP_DELAY = 300;
-export const getBadgeName = function getBadgeName(ORB_PROFILE) {
-  const str = BadgeId.BadgeId[ORB_PROFILE];
+export const getBadgeName = function getBadgeName(GIFTING) {
+  const str = BadgeId.BadgeId[GIFTING];
   if (null != str) {
     let formatted = str.toLowerCase();
   } else {
     const _String = String;
-    formatted = String(ORB_PROFILE);
+    formatted = String(GIFTING);
   }
   return formatted;
 };

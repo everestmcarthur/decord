@@ -1,21 +1,21 @@
-// Module ID: 12038
-// Function ID: 12039
+// Module ID: 12064
+// Function ID: 12065
 // Name: subscribeToWindowDimensions
 // Dependencies: [1478, 2]
 // Exports: default
 
-// Module 12038 (subscribeToWindowDimensions)
-import closure_0 from "getDimensionsStoreStateForEntry" /* 1478 */;
+// Module 12064 (subscribeToWindowDimensions)
+import DimensionsStore from "DimensionsStore" /* 1478 */;
 
-const result = require("set").fileFinishedImporting("modules/screen/subscribeToWindowDimensions.native.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/screen/subscribeToWindowDimensions.native.tsx");
 
 export default function subscribeToWindowDimensions(arg0) {
   closure_0 = arg0;
-  let str = arg1;
   if (arg1 === undefined) {
-    str = "main";
+    const str = "main";
   }
-  return closure_0.subscribe((arg0) => {
-    callback(arg0.byAppEntry[str].windowDimensions, arg0.byAppEntry[str].windowDimensionsIgnoringKeyboard);
+  return DimensionsStore.subscribe((arg0) => {
+    closure_0(arg0.byAppEntry[str].windowDimensions, arg0.byAppEntry[str].windowDimensionsIgnoringKeyboard);
   });
 };

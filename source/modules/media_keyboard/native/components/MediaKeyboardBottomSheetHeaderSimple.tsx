@@ -1,23 +1,23 @@
-// Module ID: 10645
-// Function ID: 10646
-// Dependencies: [19, 17, 1607, 21, 4560, 576, 10646, 2]
+// Module ID: 10672
+// Function ID: 10673
+// Name: MediaKeyboardBottomSheetHeaderSimple
+// Dependencies: [19, 17, 1607, 21, 4574, 576, 10673, 2]
 
-// Module 10645
-import ThemesDefault from "Themes" /* 576 */;
-import _modDef10646 from "module_10646" /* 10646 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 10672 (MediaKeyboardBottomSheetHeaderSimple)
+import nativeDefault from "native" /* 576 */;
+import MediaKeyboardBottomSheetHandleDefault from "MediaKeyboardBottomSheetHandle" /* 10673 */;
+import noop from "module_19" /* 19 */;
 
-let obj = { headerHandleOnlyWrap: null };
-obj = { height: require("DRAG_HANDLE").HEADER_HANDLE_HEIGHT, paddingBottom: ThemesDefault.space.PX_4 };
-obj[0] = obj;
-let closure_4 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetHeaderSimple(arg0) {
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+const obj = { headerHandleOnlyWrap: { height: fn(1607).HEADER_HANDLE_HEIGHT, paddingBottom: nativeDefault.space.PX_4 } };
+let closure_4 = createStyles.createStyles(obj);
+const obj3 = { height: fn(1607).HEADER_HANDLE_HEIGHT, paddingBottom: nativeDefault.space.PX_4 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardBottomSheetHeaderSimple.tsx");
+
+export default noop.memo(function MediaKeyboardBottomSheetHeaderSimple(arg0) {
   ({ animatedIndex, onPress } = arg0);
-  return <View style={callback().headerHandleOnlyWrap}>{jsx(_modDef10646, { animatedIndex, onPress })}</View>;
+  return <View style={closure_4().headerHandleOnlyWrap}>{jsx(MediaKeyboardBottomSheetHandleDefault, { animatedIndex, onPress })}</View>;
 });
-const result = require("set").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardBottomSheetHeaderSimple.tsx");
-
-export default memoResult;

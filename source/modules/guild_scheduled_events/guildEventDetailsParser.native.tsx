@@ -1,13 +1,13 @@
-// Module ID: 9776
-// Function ID: 9777
+// Module ID: 9803
+// Function ID: 9804
 // Name: guildEventDetailsParser
-// Dependencies: [4550, 2]
+// Dependencies: [4564, 2]
 
-// Module 9776 (guildEventDetailsParser)
-import importDefaultResult from "get defaultRules" /* 4550 */;
+// Module 9803 (guildEventDetailsParser)
+import MarkupUtils from "MarkupUtils" /* 4564 */;
 
-const reactParserForResult = importDefaultResult.reactParserFor(importDefaultResult.guildEventLocationRules);
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/guildEventDetailsParser.native.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/guildEventDetailsParser.native.tsx");
 
-export const guildEventDetailsParser = importDefaultResult.parseGuildEventDescription;
-export const guildEventLocationParser = reactParserForResult;
+export const guildEventDetailsParser = MarkupUtils.parseGuildEventDescription;
+export const guildEventLocationParser = MarkupUtils.reactParserFor(MarkupUtils.guildEventLocationRules);

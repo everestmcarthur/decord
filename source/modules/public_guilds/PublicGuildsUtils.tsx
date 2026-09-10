@@ -1,41 +1,43 @@
-// Module ID: 8034
-// Function ID: 8035
-// Name: isPublicSystemMessage
-// Dependencies: [8035, 1074, 8036, 8037, 1242, 4740, 2]
+// Module ID: 8049
+// Function ID: 8050
+// Name: PublicGuildsUtils
+// Dependencies: [8050, 1074, 8051, 8052, 1242, 4754, 2]
 // Exports: getPublicSystemMessageAvatar, isPublicSystemMessage, trackEnableCommunityFlow
 
-// Module 8034 (isPublicSystemMessage)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
-import isCrosspostDefault from "isCrosspost" /* 8036 */;
-import PUBLIC_SUCCESS_MODAL_SEEN_KEY from "PUBLIC_SUCCESS_MODAL_SEEN_KEY" /* 8035 */;
+// Module 8049 (PublicGuildsUtils)
+import Constants from "Constants" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4754 */;
+import isCrosspostDefault from "isCrosspost" /* 8051 */;
+import PublicGuildsConstants from "PublicGuildsConstants" /* 8050 */;
+import size from "module_2" /* 2 */;
 
-({ PUBLIC_GUILD_ANNOUNCEMENTS_GUILD_ID: c3, PUBLIC_GUILD_UPDATES_WEBHOOK_USER_ID: c4, ENABLE_COMMUNITY_FLOW_MODAL_KEY: c5 } = PUBLIC_SUCCESS_MODAL_SEEN_KEY);
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/public_guilds/PublicGuildsUtils.tsx");
+const require = globalThis.__r;
+
+({ PUBLIC_GUILD_ANNOUNCEMENTS_GUILD_ID: c3, PUBLIC_GUILD_UPDATES_WEBHOOK_USER_ID: closure_4, ENABLE_COMMUNITY_FLOW_MODAL_KEY: hasOwnProperty } = PublicGuildsConstants);
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/public_guilds/PublicGuildsUtils.tsx");
 
 export const isPublicSystemMessage = function isPublicSystemMessage(message) {
   let tmp = isCrosspostDefault(message);
   if (tmp) {
-    tmp = message.messageReference.guild_id === closure_3;
+    tmp = message.messageReference.guild_id === React3;
   }
   if (!tmp) {
     let tmp4 = null != message.author;
     if (tmp4) {
-      tmp4 = message.author.id === closure_4;
+      tmp4 = message.author.id === React4;
     }
     tmp = tmp4;
   }
   return tmp;
 };
 export const getPublicSystemMessageAvatar = function getPublicSystemMessageAvatar() {
-  return importDefault(8037);
+  return require("module_8052");
 };
 export const trackEnableCommunityFlow = function trackEnableCommunityFlow(fromStep) {
-  let obj = expandEventPropertiesDefault;
-  obj = { flow_type: closure_5, from_step: fromStep.fromStep, to_step: fromStep.toStep };
-  const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(fromStep.guildId));
-  obj.track(AnalyticEvents.USER_FLOW_TRANSITION, obj);
+  const obj = AnalyticsUtilsDefault;
+  const obj2 = { flow_type, from_step: fromStep.fromStep, to_step: fromStep.toStep };
+  const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(fromStep.guildId));
+  obj.track(AnalyticEvents.USER_FLOW_TRANSITION, obj2);
 };

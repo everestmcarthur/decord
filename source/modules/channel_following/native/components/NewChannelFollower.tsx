@@ -1,78 +1,81 @@
-// Module ID: 11331
-// Function ID: 11332
-// Name: canFollowIntoChannel
-// Dependencies: [32, 19, 17, 1961, 1957, 2012, 1979, 4199, 5438, 1074, 21, 4560, 576, 8170, 4495, 504, 4713, 4992, 4411, 11332, 11333, 7150, 6627, 5584, 1178, 5028, 4556, 1114, 4973, 5687, 5605, 4527, 9431, 1896, 11334, 8598, 5433, 4975, 11337, 7154, 2]
+// Module ID: 11358
+// Function ID: 11359
+// Name: NewChannelFollower
+// Dependencies: [32, 19, 17, 1961, 1957, 2012, 1979, 4212, 5452, 1074, 21, 4574, 576, 8196, 4509, 504, 4727, 5006, 4425, 11359, 11360, 7164, 6641, 5598, 1178, 5042, 4570, 1114, 4987, 5701, 5619, 4541, 9458, 1896, 11361, 8626, 5447, 4989, 11364, 7168, 2]
 // Exports: default
 
-// Module 11331 (canFollowIntoChannel)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES as closure_7 } from "createChannelRecord" /* 1961 */;
-import closure_8 from "ensureGuildLoaded" /* 1957 */;
-import closure_9 from "comparator" /* 2012 */;
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_10 } from "comparator" /* 2012 */;
-import closure_11 from "createGuildRecordFromRust" /* 1979 */;
-import closure_12 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_13 from "insertUnsortedGuilds" /* 5438 */;
-import ME from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11358 (NewChannelFollower)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import openChannelPickerDefault from "openChannelPicker" /* 11361 */;
+import ChannelFollowerActionCreatorsDefault from "ChannelFollowerActionCreators" /* 11364 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildChannelStore from "GuildChannelStore" /* 2012 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
+import SortedGuildStore from "SortedGuildStore" /* 5452 */;
 
-const require = arg1;
+const require = globalThis.__r;
+
+require = fn;
 function canFollowIntoChannel(channel) {
   channel = channel.channel;
   let hasItem = set.has(channel.type);
   if (hasItem) {
-    hasItem = closure_12.can(constants.MANAGE_WEBHOOKS, channel);
+    hasItem = PermissionStore.can(constants.MANAGE_WEBHOOKS, channel);
   }
   return hasItem;
 }
-({ View: c5, ImageBackground: closure_6 } = get_ActivityIndicator);
-({ AbortCodes: closure_14, Permissions: closure_15 } = ME);
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, ImageBackground: metroRequire } = get_ActivityIndicator);
+fn(1961).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
+let closure_10 = fn(2012).GUILD_SELECTABLE_CHANNELS_KEY;
+const Constants = fn(1074);
+({ AbortCodes: closure_14, Permissions: closure_15 } = Constants);
+const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-createCacheKey = { container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 16, paddingVertical: 24 }, header: { flex: 1, flexDirection: "row", justifyContent: "center", alignItems: "center", height: 96 }, headerGuildIcon: { width: 40, marginRight: 16 }, headerChannelContainer: null, headerChannel: null, headerChannelIcon: null, ctaHeader: null, ctaSubhead: null, channelIcon: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, height: 32 };
-createCacheKey[3] = createCacheKey;
-createCacheKey[4] = { flex: 1, flexDirection: "row", minWidth: 160, paddingHorizontal: 8, paddingVertical: 6, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_SELECTED };
-createCacheKey[5] = { height: 20, width: 20, marginRight: 8, opacity: 0.6 };
-createCacheKey[6] = { flex: 1, textAlign: "center", marginBottom: 8 };
-createCacheKey[7] = { flex: 1, textAlign: "center", marginBottom: 8 };
-createCacheKey[8] = { height: 16, width: 16, opacity: 0.6 };
-let closure_18 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flex: 1, flexDirection: "row", minWidth: 160, paddingHorizontal: 8, paddingVertical: 6, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_SELECTED };
-const result = require("set").fileFinishedImporting("modules/channel_following/native/components/NewChannelFollower.tsx");
+const createStyles = fn(4574);
+let obj2 = { container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 16, paddingVertical: 24 }, header: { flex: 1, flexDirection: "row", justifyContent: "center", alignItems: "center", height: 96 }, headerGuildIcon: { width: 40, marginRight: 16 }, headerChannelContainer: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, height: 32 }, headerChannel: null, headerChannelIcon: null, ctaHeader: null, ctaSubhead: null, channelIcon: null };
+let obj3 = { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, height: 32 };
+obj2.headerChannel = { flex: 1, flexDirection: "row", minWidth: 160, paddingHorizontal: 8, paddingVertical: 6, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_SELECTED };
+obj2.headerChannelIcon = { height: 20, width: 20, marginRight: 8, opacity: 0.6 };
+obj2.ctaHeader = { flex: 1, textAlign: "center", marginBottom: 8 };
+obj2.ctaSubhead = { flex: 1, textAlign: "center", marginBottom: 8 };
+obj2.channelIcon = { height: 16, width: 16, opacity: 0.6 };
+let closure_18 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel_following/native/components/NewChannelFollower.tsx");
 
 export default function NewChannelFollower(targetChannelId) {
   ({ sourceGuildId: require, sourceChannelId: importDefault, targetGuildId } = targetChannelId);
   targetChannelId = targetChannelId.targetChannelId;
-  ({ reopenActionSheetWithTarget: closure_4, onSuccess: closure_5 } = targetChannelId);
-  closure_6 = undefined;
+  ({ reopenActionSheetWithTarget: noop, onSuccess: closure_5 } = targetChannelId);
   c7 = undefined;
-  let bottomSheetRef;
   targetChannel = undefined;
-  closure_10 = undefined;
-  const tmp = callback2();
-  const tmp2 = targetChannelId(React.useState(false), 2);
+  const tmp = closure_18();
+  const tmp2 = targetChannelId(noop.useState(false), 2);
   closure_6 = tmp2[1];
-  [tmp4, c7] = targetChannelId(React.useState(null), 2);
-  let obj = require(targetGuildId[13]);
-  bottomSheetRef = obj.useBottomSheetRef();
-  bottomSheetRef = bottomSheetRef.bottomSheetRef;
-  const tmp3 = targetChannelId(React.useState(null), 2);
-  obj1 = require(targetGuildId[15]);
-  const items = [closure_11];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({ sourceGuild: closure_1_11.getGuild(closure_0), targetGuild: closure_1_11.getGuild(targetGuildId) }));
+  [tmp4, c7] = targetChannelId(noop.useState(null), 2);
+  const tmp3 = targetChannelId(noop.useState(null), 2);
+  const bottomSheetRef1 = require("useBottomSheetRef").useBottomSheetRef();
+  const bottomSheetRef = bottomSheetRef1.bottomSheetRef;
+  let obj = require("useBottomSheetRef");
+  const tmp9 = require("useTheme")();
+  const items = [GuildStore];
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({ sourceGuild: GuildStore.getGuild(require), targetGuild: GuildStore.getGuild(targetGuildId) }));
   ({ targetGuild, sourceGuild } = stateFromStoresObject);
-  let obj2 = require(targetGuildId[15]);
+  let obj2 = require("initialize");
   const items1 = [bottomSheetRef];
-  const stateFromStoresObject1 = obj2.useStateFromStoresObject(items1, () => ({ sourceChannel: bottomSheetRef.getChannel(closure_1), targetChannel: bottomSheetRef.getChannel(targetChannelId) }));
+  const stateFromStoresObject1 = require("initialize").useStateFromStoresObject(items1, () => ({ sourceChannel: ChannelStore.getChannel(importDefault), targetChannel: ChannelStore.getChannel(targetChannelId) }));
   ({ sourceChannel, targetChannel } = stateFromStoresObject1);
-  const tmp9 = importDefault(targetGuildId[14])();
-  const tmp13 = importDefault(targetGuildId[16])(targetChannel);
-  closure_10 = tmp14;
-  importDefault(targetGuildId[17])(() => {
+  const obj3 = require("initialize");
+  const tmp13 = require("useChannelName")(targetChannel);
+  const channelType = tmp14;
+  require("useMountEffect")(() => {
     if (closure_10) {
       const current = bottomSheetRef.current;
       if (current != null) {
@@ -80,191 +83,181 @@ export default function NewChannelFollower(targetChannelId) {
       }
     }
   });
-  let tmp5Result = tmp5(tmp6[18]);
+  const tmp12 = require("useChannelName")(sourceChannel);
   if (tmp5Result.isThemeDark(tmp9)) {
     let tmp8Result = tmp8(tmp6[19]);
   } else {
     tmp8Result = tmp8(tmp6[20]);
   }
-  obj = { handleDisabled: true, startExpanded: true, scrollable: true, ref: bottomSheetRef, children: null };
-  obj = { source: tmp8Result, style: tmp.header, children: null };
-  obj1 = { style: tmp.header, children: null };
-  obj2 = { style: tmp.headerGuildIcon, guild: sourceGuild };
-  const items2 = [callback(importDefault(targetGuildId[23]), obj2), ];
-  const obj3 = { style: tmp.headerChannelContainer, children: null };
-  const obj4 = { style: tmp.headerChannel, children: null };
-  const obj5 = { size: require(targetGuildId[24]).Icon.Sizes.CUSTOM, source: null, style: null };
+  const obj4 = { handleDisabled: true, startExpanded: true, scrollable: true, ref: bottomSheetRef, children: null };
+  const obj5 = { source: tmp8Result, style: tmp.header, children: null };
+  const obj6 = { style: tmp.header, children: null };
+  const items2 = [closure_16(require("GuildIcon"), { style: tmp.headerGuildIcon, guild: sourceGuild }), ];
+  const obj8 = { style: tmp.headerChannelContainer, children: null };
+  const obj9 = { style: tmp.headerChannel, children: null };
+  const obj10 = { size: require("native").Icon.Sizes.CUSTOM, source: null, style: null };
   let channelIcon = null;
   if (null != sourceChannel) {
-    tmp5Result = tmp5(tmp6[25]);
-    channelIcon = tmp5Result.getChannelIcon(sourceChannel);
+    channelIcon = tmp5(tmp6[25]).getChannelIcon(sourceChannel);
+    const tmp5Result3 = tmp5(tmp6[25]);
   }
-  obj5[1] = channelIcon;
-  obj5[2] = tmp.headerChannelIcon;
-  const items3 = [callback(require(targetGuildId[24]).Icon, obj5), callback(require(targetGuildId[26]).Text, { lineClamp: 1, variant: "text-sm/medium", children: importDefault(targetGuildId[16])(sourceChannel) })];
-  obj4[1] = items3;
-  obj3[1] = closure_17(closure_5, obj4);
-  items2[1] = callback(closure_5, obj3);
-  obj1[1] = items2;
-  obj[2] = closure_17(closure_5, obj1);
-  const items4 = [callback(closure_6, obj), ];
-  const obj6 = { style: tmp.container, children: null };
-  const obj7 = { style: tmp.ctaHeader, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  obj10.source = channelIcon;
+  obj10.style = tmp.headerChannelIcon;
+  const items3 = [closure_16(require("native").Icon, obj10), closure_16(require("Text/Text").Text, { lineClamp: 1, variant: "text-sm/medium", children: tmp12 })];
+  obj9.children = items3;
+  obj8.children = closure_17(closure_5, obj9);
+  items2[1] = closure_16(closure_5, obj8);
+  obj6.children = items2;
+  obj5.children = closure_17(closure_5, obj6);
+  const items4 = [closure_16(closure_6, obj5), ];
+  const obj11 = { style: tmp.container, children: null };
+  const obj12 = { style: tmp.ctaHeader, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = tmp5(tmp6[27]).intl;
-  obj7[3] = intl.string(require(targetGuildId[27]).t.mvPFbA);
-  const items5 = [callback(require(targetGuildId[26]).Text, obj7), , , , , ];
-  const obj8 = { style: tmp.ctaSubhead, variant: "text-sm/medium", color: "text-default", children: null };
+  obj12.children = intl.string(require("util").t.mvPFbA);
+  const items5 = [closure_16(require("Text/Text").Text, obj12), , , , , ];
+  const obj13 = { style: tmp.ctaSubhead, variant: "text-sm/medium", color: "text-default", children: null };
   let intl2 = tmp5(tmp6[27]).intl;
-  obj8[3] = intl2.string(require(targetGuildId[27]).t.kbpkxJ);
-  items5[1] = callback(require(targetGuildId[26]).Text, obj8);
-  const obj9 = { title: null, hasIcons: true, children: null };
+  obj13.children = intl2.string(require("util").t.kbpkxJ);
+  items5[1] = closure_16(require("Text/Text").Text, obj13);
+  const obj14 = { title: null, hasIcons: true, children: null };
   const intl3 = tmp5(tmp6[27]).intl;
-  obj9[0] = intl3.string(require(targetGuildId[27]).t.xFn72s);
+  obj14.title = intl3.string(require("util").t.xFn72s);
   if (null != targetGuild) {
     let name = targetGuild.name;
   } else {
     const intl4 = tmp5(tmp6[27]).intl;
     name = intl4.string(tmp5(tmp6[27]).t.XqMe3N);
   }
-  const obj10 = { label: name, icon: null, arrow: true, onPress: null };
+  const obj15 = { label: name, icon: null, arrow: true, onPress: null };
   let tmp18Result = null;
   if (null != targetGuild) {
-    const obj11 = { guild: null, size: null };
-    obj11[0] = targetGuild;
-    tmp8Result = tmp8(tmp6[23]);
-    obj11[1] = tmp5(tmp6[23]).GuildIconSizes.XSMALL;
-    tmp18Result = tmp18(tmp8Result, obj11);
+    const obj16 = { guild: targetGuild, size: tmp5(tmp6[23]).GuildIconSizes.XSMALL };
+    tmp18Result = tmp18(tmp8(tmp6[23]), obj16);
+    const tmp8Result2 = tmp8(tmp6[23]);
   }
-  obj10[1] = tmp18Result;
-  obj10[3] = function onPress() {
-    let obj = closure_1_1(targetGuildId[31]);
-    obj = { title: null, items: null, selectedItem: null, onItemSelect: null, onClose: null, hasIcons: false };
-    const intl = closure_1_0(targetGuildId[27]).intl;
-    obj[0] = intl.string(closure_1_0(targetGuildId[27]).t.etZ9tX);
-    const flattenedGuildIds = closure_1_13.getFlattenedGuildIds();
+  obj15.icon = tmp18Result;
+  obj15.onPress = function onPress() {
+    const obj2 = { title: null, items: null, selectedItem: null, onItemSelect: null, onClose: null, hasIcons: false };
+    let obj = ActionSheetActionCreatorsDefault;
+    const intl = util.intl;
+    obj2.title = intl.string(util.t.etZ9tX);
+    const flattenedGuildIds = SortedGuildStore.getFlattenedGuildIds();
     const array = new Array();
-    obj[1] = flattenedGuildIds.reduce((arr) => {
-      guild = guild.getGuild(arg1);
+    obj2.items = flattenedGuildIds.reduce((arr, item) => {
+      guild = guild.getGuild(item);
       let canResult = null != guild;
       if (canResult) {
-        canResult = closure_12.can(constants.MANAGE_WEBHOOKS, guild);
+        canResult = closure_1_12.can(constants.MANAGE_WEBHOOKS, guild);
       }
       if (canResult) {
         const obj = { label: null, value: null };
-        ({ name: obj[0], id: obj[1] } = guild);
+        ({ name: obj.label, id: obj.value } = guild);
         arr.push(obj);
       }
       return arr;
     }, array);
-    obj[2] = targetGuildId;
-    obj[3] = function onItemSelect(arg0) {
-      const firstChannelOfType = closure_1_9.getFirstChannelOfType(arg0, closure_1_19, closure_1_10);
+    obj2.selectedItem = targetGuildId;
+    obj2.onItemSelect = function onItemSelect(arg0) {
+      const firstChannelOfType = targetChannel.getFirstChannelOfType(arg0, canFollowIntoChannel, closure_10);
       let id;
       if (firstChannelOfType != null) {
         id = firstChannelOfType.id;
       }
-      closure_4(arg0, id);
+      closure_1_4(arg0, id);
     };
-    obj[4] = function onClose() {
-      callback(closure_2, closure_3);
+    obj2.onClose = function onClose() {
+      closure_1_4(targetGuildId, targetChannelId);
     };
-    obj.openLazy(closure_1_0(targetGuildId[33])(targetGuildId[32], targetGuildId.paths), "NewChannelFollowerGuildPicker", obj);
+    obj.openLazy(asyncRequireImpl(9458, dependencyMap.paths), "NewChannelFollowerGuildPicker", obj2);
   };
-  obj9[2] = callback(require(targetGuildId[30]).TableRow, obj10);
-  const items6 = [callback(require(targetGuildId[29]).TableRowGroup, obj9), ];
-  const obj12 = { title: null, hasIcons: true, children: null };
+  obj14.children = closure_16(require("TableRow").TableRow, obj15);
+  const items6 = [closure_16(require("TableRowGroup").TableRowGroup, obj14), ];
+  const obj17 = { title: null, hasIcons: true, children: null };
   const intl5 = tmp5(tmp6[27]).intl;
-  obj12[0] = intl5.string(require(targetGuildId[27]).t.PDn2fR);
+  obj17.title = intl5.string(require("util").t.PDn2fR);
   let stringResult = tmp13;
   if (tmp13 == null) {
     const intl6 = tmp5(tmp6[27]).intl;
     stringResult = intl6.string(tmp5(tmp6[27]).t.XqMe3N);
   }
-  const obj13 = { label: stringResult, disabled: null == targetGuildId, icon: null, arrow: true, onPress: null };
-  tmp18Result = null;
+  const obj18 = { label: stringResult, disabled: null == targetGuildId, icon: null, arrow: true, onPress: null };
+  let tmp18Result3 = null;
   if (null != targetChannel) {
-    const obj14 = { size: null, source: null, style: null };
-    obj14[0] = tmp5(tmp6[24]).Icon.Sizes.CUSTOM;
-    obj14[1] = tmp5(tmp6[25]).getChannelIcon(targetChannel);
-    obj14[2] = tmp.channelIcon;
-    tmp18Result = tmp18(tmp5(tmp6[24]).Icon, obj14);
-    const tmp5Result1 = tmp5(tmp6[25]);
+    const obj19 = { size: tmp5(tmp6[24]).Icon.Sizes.CUSTOM, source: tmp5(tmp6[25]).getChannelIcon(targetChannel), style: tmp.channelIcon };
+    tmp18Result3 = tmp18(tmp5(tmp6[24]).Icon, obj19);
+    const tmp5Result4 = tmp5(tmp6[25]);
   }
-  const obj15 = { spacing: 16, children: null };
-  obj13[2] = tmp18Result;
-  obj13[4] = function onPress() {
+  const obj20 = { spacing: 16, children: null };
+  obj18.icon = tmp18Result3;
+  obj18.onPress = function onPress() {
     if (null != targetGuildId) {
-      const obj = { guildId: null, selectedChannel: null, channelType: null, filterFn: null, onSelect: null, onClose: null };
-      obj[0] = tmp;
+      const obj = { guildId: tmp, selectedChannel: null, channelType: null, filterFn: null, onSelect: null, onClose: null };
       let tmp5 = targetChannel;
       if (targetChannel == null) {
         tmp5 = null;
       }
-      obj[1] = tmp5;
-      obj[2] = closure_10;
-      obj[3] = closure_1_19;
-      obj[4] = function onSelect(id) {
-        callback(closure_2, id.id);
+      obj.selectedChannel = tmp5;
+      obj.channelType = channelType;
+      obj.filterFn = canFollowIntoChannel;
+      obj.onSelect = function onSelect(id) {
+        closure_1_4(targetGuildId, id.id);
       };
-      obj[5] = function onClose() {
-        callback(closure_2, closure_3);
+      obj.onClose = function onClose() {
+        closure_1_4(targetGuildId, targetChannelId);
       };
-      closure_1_1(targetGuildId[34])(obj);
-      const tmp4 = closure_1_1(targetGuildId[34]);
+      openChannelPickerDefault(obj);
     }
   };
-  obj12[2] = callback(require(targetGuildId[30]).TableRow, obj13);
-  items6[1] = callback(require(targetGuildId[29]).TableRowGroup, obj12);
-  obj15[1] = items6;
-  items5[2] = closure_17(require(targetGuildId[28]).Stack, obj15);
-  const obj16 = { inset: true, children: null };
+  obj17.children = closure_16(require("TableRow").TableRow, obj18);
+  items6[1] = closure_16(require("TableRowGroup").TableRowGroup, obj17);
+  obj20.children = items6;
+  items5[2] = closure_17(require("Stack/Stack").Stack, obj20);
+  const obj21 = { inset: true, children: null };
   const intl7 = tmp5(tmp6[27]).intl;
-  obj16[1] = intl7.string(require(targetGuildId[27]).t.Z0quyN);
-  items5[3] = callback(require(targetGuildId[35]).FormHint, obj16);
-  let tmp18Result1 = null;
+  obj21.children = intl7.string(require("util").t.Z0quyN);
+  items5[3] = closure_16(require("Form").FormHint, obj21);
+  let tmp18Result4 = null;
   if (null != tmp4) {
-    const obj17 = { inset: true, children: null };
-    obj17[1] = tmp4;
-    tmp18Result1 = tmp18(tmp5(tmp6[35]).FormHint, obj17);
+    const obj22 = { inset: true, children: tmp4 };
+    tmp18Result4 = tmp18(tmp5(tmp6[35]).FormHint, obj22);
   }
-  const obj18 = { children: null };
-  items5[4] = tmp18Result1;
-  const obj19 = { children: null };
-  const obj20 = { text: null, disabled: null, loading: null, onPress: null };
+  const obj23 = { children: null };
+  items5[4] = tmp18Result4;
+  const obj24 = { children: null };
+  const obj25 = { text: null, disabled: null, loading: null, onPress: null };
   const intl8 = tmp5(tmp6[27]).intl;
-  obj20[0] = intl8.string(require(targetGuildId[27]).t["3aOv+h"]);
-  obj20[1] = !(null != targetGuildId && null != targetChannelId);
-  obj20[2] = tmp2[0];
-  obj20[3] = function onPress() {
+  obj25.text = intl8.string(require("util").t["3aOv+h"]);
+  obj25.disabled = !(null != targetGuildId && null != targetChannelId);
+  obj25.loading = tmp2[0];
+  obj25.onPress = function onPress() {
     if (null != targetChannelId) {
-      callback(true);
-      const channelFollower = closure_1_1(targetGuildId[38]).createChannelFollower(tmp, closure_1);
-      const obj = closure_1_1(targetGuildId[38]);
-      channelFollower.then(closure_5).catch((body) => {
-        callback(false);
-        if (body.body.code === closure_1_14.TOO_MANY_WEBHOOKS) {
-          const intl2 = closure_1_0(closure_1_2[27]).intl;
-          callback2(intl2.string(closure_1_0(closure_1_2[27]).t["1eZ4aB"]));
+      closure_6(true);
+      const channelFollower = ChannelFollowerActionCreatorsDefault.createChannelFollower(tmp, closure_1_1);
+      channelFollower.then(closure_1_5).catch((error) => {
+        closure_1_6(false);
+        if (error.body.code === constants.TOO_MANY_WEBHOOKS) {
+          const intl2 = require("util").intl;
+          closure_1_7(intl2.string(require("util").t["1eZ4aB"]));
         } else {
-          const intl = closure_1_0(closure_1_2[27]).intl;
-          callback2(intl.string(closure_1_0(closure_1_2[27]).t.LgwhuN));
+          const intl = require("util").intl;
+          closure_1_7(intl.string(require("util").t.LgwhuN));
         }
       });
-      const nextPromise = channelFollower.then(closure_5);
+      const nextPromise = channelFollower.then(closure_1_5);
     }
   };
-  const items7 = [callback(require(targetGuildId[37]).Button, obj20), ];
-  const obj21 = { text: null, variant: "secondary", onPress: null };
+  const items7 = [closure_16(require("components/Button/Button").Button, obj25), ];
+  const obj26 = { text: null, variant: "secondary", onPress: null };
   const intl9 = tmp5(tmp6[27]).intl;
-  obj21[0] = intl9.string(require(targetGuildId[27]).t["ETE/oC"]);
-  obj21[2] = targetChannelId.onCancel;
-  items7[1] = callback(require(targetGuildId[37]).Button, obj21);
-  obj19[0] = items7;
-  items5[5] = closure_17(require(targetGuildId[36]).ButtonGroup, obj19);
-  obj6[1] = items5;
-  items4[1] = closure_17(closure_5, obj6);
-  obj18[0] = items4;
-  const items8 = [closure_17(require(targetGuildId[22]).BottomSheetScrollView, obj18), callback(require(targetGuildId[39]).ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetRef.bottomSheetClose })];
-  obj[4] = items8;
-  return closure_17(require(targetGuildId[21]).BottomSheet, obj);
+  obj26.text = intl9.string(require("util").t["ETE/oC"]);
+  obj26.onPress = targetChannelId.onCancel;
+  items7[1] = closure_16(require("components/Button/Button").Button, obj26);
+  obj24.children = items7;
+  items5[5] = closure_17(require("ButtonGroup").ButtonGroup, obj24);
+  obj11.children = items5;
+  items4[1] = closure_17(closure_5, obj11);
+  obj23.children = items4;
+  const items8 = [closure_17(require("BottomSheetModal").BottomSheetScrollView, obj23), closure_16(require("ActionSheetHeaderBar").ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetRef1.bottomSheetClose })];
+  obj4.children = items8;
+  return closure_17(require("Sheet/BottomSheet").BottomSheet, obj4);
 };

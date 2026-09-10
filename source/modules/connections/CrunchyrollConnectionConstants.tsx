@@ -1,14 +1,14 @@
-// Module ID: 8338
-// Function ID: 8339
-// Name: CRUNCHYROLL_LINK_DEST_ORIGIN
-// Dependencies: [8339, 2]
+// Module ID: 8366
+// Function ID: 8367
+// Name: CrunchyrollConnectionConstants
+// Dependencies: [8367, 2]
 
-// Module 8338 (CRUNCHYROLL_LINK_DEST_ORIGIN)
-import set from "set" /* 2 */;
-import set2 from "set" /* 8339 */;
+// Module 8366 (CrunchyrollConnectionConstants)
+import OAuth2Scopes from "OAuth2Scopes" /* 8367 */;
+import size from "module_2" /* 2 */;
 
-const items = [set2.OAuth2Scopes.ACTIVITIES_WRITE, set2.OAuth2Scopes.EMAIL, set2.OAuth2Scopes.IDENTIFY];
-const result = set.fileFinishedImporting("modules/connections/CrunchyrollConnectionConstants.tsx");
+const items = [OAuth2Scopes.OAuth2Scopes.ACTIVITIES_WRITE, OAuth2Scopes.OAuth2Scopes.EMAIL, OAuth2Scopes.OAuth2Scopes.IDENTIFY];
+const result = size.fileFinishedImporting("modules/connections/CrunchyrollConnectionConstants.tsx");
 
 export const CRUNCHYROLL_LINK_DEST_ORIGIN = "https://crunchyroll.com";
 export const CRUNCHYROLL_CLIENT_ID = "981509069309354054";

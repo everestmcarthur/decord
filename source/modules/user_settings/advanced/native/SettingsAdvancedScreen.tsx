@@ -1,46 +1,50 @@
-// Module ID: 15531
-// Function ID: 15532
-// Dependencies: [19, 7975, 1074, 21, 1114, 11473, 14692, 2]
+// Module ID: 15561
+// Function ID: 15562
+// Name: SettingsAdvancedScreen
+// Dependencies: [19, 7989, 1074, 21, 1114, 11500, 14718, 2]
 
-// Module 15531
-import _modDef14692 from "module_14692" /* 14692 */;
-import importAllResult from "noop" /* 19 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 7975 */;
-import { MarketingURLs } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 15561 (SettingsAdvancedScreen)
+import util from "util" /* 1114 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import SettingLayoutDefault from "SettingLayout" /* 14718 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
-const memoResult = importAllResult.memo(() => {
-  const node = importAllResult.useMemo(() => {
-    let obj = callback(11473);
-    obj = { sections: null };
-    obj = { label: null, settings: null, subLabel: null };
-    const intl = callback(1114).intl;
-    obj[0] = intl.string(callback(1114).t["+U02+i"]);
+require = fn;
+const MobileUserSettings = fn(7989).MobileUserSettings;
+const MarketingURLs = fn(1074).MarketingURLs;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/advanced/native/SettingsAdvancedScreen.tsx");
+
+export default noop.memo(() => {
+  const node = noop.useMemo(() => {
+    const obj2 = { sections: null };
+    const obj3 = { label: null, settings: null, subLabel: null };
+    const intl = util.intl;
+    obj3.label = intl.string(util.t["+U02+i"]);
     const items = [constants.DEVELOPER_MODE];
-    obj[1] = items;
-    const intl2 = callback(1114).intl;
-    obj[2] = intl2.format(callback(1114).t["CY6q/Q"], { apiDocsUrl: constants2.API_DOCS });
-    const items1 = [obj, , , ];
-    const obj2 = { settings: items2, subLabel: null };
-    items2 = [constants.LAUNCHPAD];
-    const intl3 = callback(1114).intl;
-    obj2[1] = intl3.string(callback(1114).t.gI2GEL);
-    items1[1] = obj2;
+    obj3.settings = items;
+    const intl2 = util.intl;
+    obj3.subLabel = intl2.format(util.t["CY6q/Q"], { apiDocsUrl: constants2.API_DOCS });
+    const items1 = [obj3, , , ];
+    const obj5 = { settings: null, subLabel: null };
+    const items2 = [constants.LAUNCHPAD];
+    obj5.settings = items2;
+    const intl3 = util.intl;
+    obj5.subLabel = intl3.string(util.t.gI2GEL);
+    items1[1] = obj5;
+    const obj6 = { settings: null };
     const items3 = [constants.CHANNEL_LIST_LAYOUT];
-    items1[2] = { settings: items3 };
-    const obj3 = { label: null, settings: null };
-    const intl4 = callback(1114).intl;
-    obj3[0] = intl4.string(callback(1114).t["jnXV/V"]);
+    obj6.settings = items3;
+    items1[2] = obj6;
+    const obj7 = { label: null, settings: null };
+    const intl4 = util.intl;
+    obj7.label = intl4.string(util.t["jnXV/V"]);
     const items4 = [constants.ICYMI_TAB];
-    obj3[1] = items4;
-    items1[3] = obj3;
-    obj[0] = items1;
-    return obj.createList(obj);
+    obj7.settings = items4;
+    items1[3] = obj7;
+    obj2.sections = items1;
+    return SettingBuilders.createList(obj2);
   }, []);
-  return jsx(_modDef14692, { node });
+  return jsx(SettingLayoutDefault, { node });
 });
-const result = require("set").fileFinishedImporting("modules/user_settings/advanced/native/SettingsAdvancedScreen.tsx");
-
-export default memoResult;

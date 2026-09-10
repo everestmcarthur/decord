@@ -1,23 +1,28 @@
-// Module ID: 17304
-// Function ID: 17305
-// Name: prototype
-// Dependencies: [502, 1957, 2021, 1979, 4544, 4199, 7671, 1074, 7735, 1100, 4527, 4763, 17305, 1896, 7118, 17306, 573, 8743, 2]
+// Module ID: 17335
+// Function ID: 17336
+// Name: AcceptInviteManager
+// Dependencies: [502, 1957, 2021, 1979, 4558, 4212, 7685, 1074, 7749, 1100, 4541, 4777, 17336, 1896, 7132, 17337, 573, 8771, 2]
 
-// Module 17304 (prototype)
-import initializeDefault from "initialize" /* 7118 */;
-import closure_3 from "fetchFingerprint" /* 502 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "trackCommunicationDisabled" /* 2021 */;
-import closure_6 from "createGuildRecordFromRust" /* 1979 */;
-import closure_7 from "updateInvite" /* 4544 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4199 */;
-import { ACCEPT_INVITE_MODAL_KEY } from "ACCEPT_INVITE_MODAL_KEY" /* 7671 */;
-import ME from "ME" /* 1074 */;
+// Module 17335 (AcceptInviteManager)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7749 */;
+import FriendInviteUtils from "FriendInviteUtils" /* 17337 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import InviteStore from "InviteStore" /* 4558 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-let require = arg1;
-({ InviteStates: c10, Permissions: unpackModuleId, Routes: closure_12 } = ME);
-initializeDefault;
-let prototype = function AcceptInviteManager() {
+require = fn;
+const ACCEPT_INVITE_MODAL_KEY = fn(7685).ACCEPT_INVITE_MODAL_KEY;
+const Constants = fn(1074);
+({ InviteStates: c10, Permissions: closure_11, Routes: closure_12 } = Constants);
+const prototype = function AcceptInviteManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   applyArgumentsResult._isRegistration = false;
@@ -38,16 +43,16 @@ let prototype = function AcceptInviteManager() {
   applyArgumentsResult._handleShowInvite = function _handleShowInvite(code) {
     code = code.code;
     ({ deeplinkAttemptId, invite_instance_id } = code);
-    if (closure_1_3.isAuthenticated()) {
+    if (AuthenticationStore.isAuthenticated()) {
       obj._handleInvite(code, deeplinkAttemptId, invite_instance_id);
     } else {
       obj._deferredCode = code;
     }
   };
   applyArgumentsResult._handleClearInvite = function _handleClearInvite() {
-    closure_0._deferredCode = null;
-    closure_0._isRegistration = false;
-    closure_1_1(closure_1_2[11]).popWithKey(closure_1_9);
+    applyArgumentsResult._deferredCode = null;
+    applyArgumentsResult._isRegistration = false;
+    ModalActionCreatorsDefault.popWithKey(ACCEPT_INVITE_MODAL_KEY);
   };
   applyArgumentsResult._handleShowDeferredInvite = function _handleShowDeferredInvite() {
     if (null != applyArgumentsResult._deferredCode) {
@@ -56,37 +61,32 @@ let prototype = function AcceptInviteManager() {
     }
   };
   applyArgumentsResult._handleInvite = function _handleInvite(_deferredCode, deeplinkAttemptId, invite_instance_id) {
-    closure_0 = _deferredCode;
-    closure_1 = deeplinkAttemptId;
-    closure_2 = invite_instance_id;
-    const result = closure_1_7.addConditionalChangeListener(() => {
-      const invite = closure_2_7.getInvite(set);
+    const code = _deferredCode;
+    const inviteInstanceId = invite_instance_id;
+    const result = InviteStore.addConditionalChangeListener(() => {
+      const invite = InviteStore.getInvite(code);
       let flag = null == invite;
       if (!flag) {
-        flag = invite.state !== closure_2_10.RESOLVED && invite.state !== closure_2_10.EXPIRED && invite.state !== closure_2_10.BANNED && invite.state !== closure_2_10.ERROR;
-        const tmp4 = invite.state !== closure_2_10.RESOLVED && invite.state !== closure_2_10.EXPIRED && invite.state !== closure_2_10.BANNED && invite.state !== closure_2_10.ERROR;
+        flag = invite.state !== constants.RESOLVED && invite.state !== constants.EXPIRED && invite.state !== constants.BANNED && invite.state !== constants.ERROR;
+        const tmp4 = invite.state !== constants.RESOLVED && invite.state !== constants.EXPIRED && invite.state !== constants.BANNED && invite.state !== constants.ERROR;
       }
       if (!flag) {
         if (null == invite.channel) {
           if (null == invite.guild) {
             if (null != invite.inviter) {
               let str = "Accept Invite";
-              if (null != closure_1) {
+              if (null != deeplinkAttemptId) {
                 str = "Deep Link";
               }
-              let obj = { location: null };
-              obj[0] = str;
-              applyArgumentsResult(closure_2_2[15]).acceptFriendInvite(invite, obj);
-              const obj6 = applyArgumentsResult(closure_2_2[15]);
-              const tmp34 = closure_2_2;
-              closure_2_1(closure_2_2[16]).wait(() => set(8743).clearDisplayedInvite());
+              const obj = { location: str };
+              FriendInviteUtils.acceptFriendInvite(invite, obj);
+              DispatcherDefault.wait(() => set(8771).clearDisplayedInvite());
               flag = false;
-              const obj8 = closure_2_1(closure_2_2[16]);
             }
           }
         }
         let flag2 = false;
-        if (invite.state === closure_2_10.RESOLVED) {
+        if (invite.state === constants.RESOLVED) {
           flag2 = false;
           if (!obj9.isStreamInvite(invite)) {
             const guild = invite.guild;
@@ -100,66 +100,59 @@ let prototype = function AcceptInviteManager() {
               flag2 = false;
               if (null != target_channel_id) {
                 flag2 = false;
-                if (null != closure_2_6.getGuild(id)) {
+                if (null != GuildStore.getGuild(id)) {
                   if (null != invite.roles) {
                     if (invite.roles.length > 0) {
-                      const selfMember = closure_2_5.getSelfMember(id);
-                      let roles;
+                      const selfMember = GuildMemberStore.getSelfMember(id);
+                      let roles1;
                       if (selfMember != null) {
-                        roles = selfMember.roles;
+                        roles1 = selfMember.roles;
                       }
-                      if (roles == null) {
-                        roles = [];
+                      if (roles1 == null) {
+                        roles1 = [];
                       }
-                      set = new Set(roles);
-                      roles = invite.roles;
+                      const set = new Set(roles1);
+                      const roles = invite.roles;
                       flag2 = false;
                     }
                   }
-                  let flag3 = closure_2_8.can(closure_2_11.VIEW_CHANNEL, closure_2_4.getChannel(target_channel_id));
+                  let flag3 = PermissionStore.can(constants2.VIEW_CHANNEL, ChannelStore.getChannel(target_channel_id));
                   if (flag3) {
                     const target_message_id = invite.target_message_id;
-                    tmp39(tmp40[9]).transitionTo(closure_2_12.CHANNEL(id, target_channel_id, target_message_id), { navigationReplace: true, openChannel: true });
+                    tmp39(1100).transitionTo(closure_3_12.CHANNEL(id, target_channel_id, target_message_id), { navigationReplace: true, openChannel: true });
                     flag3 = true;
-                    const tmp39Result = tmp39(tmp40[9]);
+                    const tmp39Result = tmp39(1100);
                   }
                   flag2 = flag3;
                 }
               }
             }
           }
-          obj9 = applyArgumentsResult(closure_2_2[8]);
-          tmp39 = applyArgumentsResult;
-          tmp40 = closure_2_2;
+          obj9 = InviteTypeUtils;
+          tmp39 = require;
         }
         if (flag2) {
-          closure_2_1(closure_2_2[16]).wait(() => set(8743).clearDisplayedInvite());
+          DispatcherDefault.wait(() => set(8771).clearDisplayedInvite());
           flag = false;
-          const obj5 = closure_2_1(closure_2_2[16]);
         } else {
-          closure_2_1(closure_2_2[10]).hideActionSheet();
-          const obj2 = closure_2_1(closure_2_2[10]);
-          obj = { code: null, isRegistration: null, deeplinkAttemptId: null, inviteInstanceId: null };
-          obj[0] = set;
-          obj[1] = _isRegistration._isRegistration;
-          obj[2] = closure_1;
-          obj[3] = closure_2;
-          closure_2_1(closure_2_2[11]).pushLazy(applyArgumentsResult(closure_2_2[13])(closure_2_2[12], closure_2_2.paths), obj, closure_2_9);
+          ActionSheetActionCreatorsDefault.hideActionSheet();
+          const obj4 = { code, isRegistration: applyArgumentsResult._isRegistration, deeplinkAttemptId, inviteInstanceId };
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17336, dependencyMap.paths), obj4, ACCEPT_INVITE_MODAL_KEY);
           flag = false;
-          const obj3 = closure_2_1(closure_2_2[11]);
         }
       }
       return flag;
     });
   };
   applyArgumentsResult._handleRegisterSuccess = function _handleRegisterSuccess() {
-    closure_0._isRegistration = true;
+    applyArgumentsResult._isRegistration = true;
   };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp3 {
 }
-prototype = new prototype();
-let result = require("set").fileFinishedImporting("modules/accept_invite/native/AcceptInviteManager.tsx");
+const prototype1 = new prototype();
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/accept_invite/native/AcceptInviteManager.tsx");
 
-export default prototype;
+export default prototype1;

@@ -1,44 +1,44 @@
-// Module ID: 15165
-// Function ID: 15166
+// Module ID: 15192
+// Function ID: 15193
 // Name: QuestBottomSheetTaskSelect
-// Dependencies: [19, 5444, 21, 5687, 5605, 8884, 1114, 9228, 2]
+// Dependencies: [19, 5458, 21, 5701, 5619, 8911, 1114, 9255, 2]
 // Exports: default
 
-// Module 15165 (QuestBottomSheetTaskSelect)
-import noopAll from "noop" /* 19 */;
-import { QuestTaskPlatform } from "QuestsExperimentLocations" /* 5444 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 15192 (QuestBottomSheetTaskSelect)
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestBottomSheet/QuestBottomSheetTaskSelect.tsx");
+const require = fn;
+const QuestTaskPlatform = fn(5458).QuestTaskPlatform;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/QuestBottomSheet/QuestBottomSheetTaskSelect.tsx");
 
 export default function QuestBottomSheetTaskSelect(onTaskSelect) {
   onTaskSelect = onTaskSelect.onTaskSelect;
-  let obj = { hasIcons: true, children: null };
-  obj = { arrow: true, icon: callback(onTaskSelect(8884).ScreenIcon, {}), label: null, onPress: null };
+  const obj = { hasIcons: true, children: null };
+  const obj2 = { arrow: true, icon: closure_3(onTaskSelect(8911).ScreenIcon, {}), label: null, onPress: null };
   const intl = onTaskSelect(1114).intl;
-  obj[2] = intl.string(onTaskSelect(1114).t["QXc01+"]);
-  obj[3] = function onPress() {
+  obj2.label = intl.string(onTaskSelect(1114).t["QXc01+"]);
+  obj2.onPress = function onPress() {
     let tmpResult;
     if (onTaskSelect != null) {
-      tmpResult = tmp(closure_1_2.DESKTOP);
+      tmpResult = tmp(QuestTaskPlatform.DESKTOP);
     }
     return tmpResult;
   };
-  const items = [callback(onTaskSelect(5605).TableRow, obj), ];
-  obj = { arrow: true, icon: callback(onTaskSelect(9228).GameControllerIcon, {}), label: null, onPress: null };
+  const items = [closure_3(onTaskSelect(5619).TableRow, obj2), ];
+  const obj3 = { arrow: true, icon: closure_3(onTaskSelect(9255).GameControllerIcon, {}), label: null, onPress: null };
   const intl2 = onTaskSelect(1114).intl;
-  obj[2] = intl2.string(onTaskSelect(1114).t["8lAfuB"]);
-  obj[3] = function onPress() {
+  obj3.label = intl2.string(onTaskSelect(1114).t["8lAfuB"]);
+  obj3.onPress = function onPress() {
     let tmpResult;
     if (onTaskSelect != null) {
-      tmpResult = tmp(closure_1_2.CONSOLE);
+      tmpResult = tmp(QuestTaskPlatform.CONSOLE);
     }
     return tmpResult;
   };
-  items[1] = callback(onTaskSelect(5605).TableRow, obj);
-  obj[1] = items;
-  return callback2(onTaskSelect(5687).TableRowGroup, obj);
+  items[1] = closure_3(onTaskSelect(5619).TableRow, obj3);
+  obj.children = items;
+  return closure_4(onTaskSelect(5701).TableRowGroup, obj);
 };

@@ -1,31 +1,31 @@
-// Module ID: 13271
-// Function ID: 13272
-// Name: openLoadingIndicatorDebugBody
-// Dependencies: [32, 19, 17, 4552, 5277, 4781, 2011, 1371, 1895, 1074, 21, 4560, 576, 4905, 4994, 1896, 504, 4556, 13272, 4296, 4561, 1114, 5123, 2]
+// Module ID: 13294
+// Function ID: 13295
+// Name: ChatLoadingIndicator
+// Dependencies: [32, 19, 17, 4566, 5291, 4795, 2011, 1371, 1895, 1074, 21, 4574, 576, 4919, 5008, 1896, 504, 4570, 13295, 4310, 4575, 1114, 5137, 2]
 // Exports: ChannelHeaderLoadingIndicator, useShouldChannelShowLoadingIndicator
 
-// Module 13271 (openLoadingIndicatorDebugBody)
+// Module 13294 (ChatLoadingIndicator)
 import initialize from "initialize" /* 504 */;
-import ThemesDefault from "Themes" /* 576 */;
-import _modDef4296 from "module_4296" /* 4296 */;
-import Text from "Text" /* 4556 */;
-import _modDef4905 from "module_4905" /* 4905 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import closure_7 from "_handleConnectionOpen" /* 5277 */;
-import closure_8 from "reinjectEphemerals" /* 4781 */;
-import closure_9 from "handleConnectionOpen" /* 2011 */;
-import closure_10 from "mergeGuildAvatar" /* 1371 */;
-import closure_11 from "getState" /* 1895 */;
-import { AppStates } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import timing from "timing" /* 4575 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4919 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5291 */;
+import MessageStore from "MessageStore" /* 4795 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import UserStore from "UserStore" /* 1371 */;
+import AppStateStore from "AppStateStore" /* 1895 */;
 
-require = arg1;
+const require = globalThis.__r;
+const ReanimatedRexportDefault = ReanimatedRexport;
+
+require = fn;
 function openLoadingIndicatorDebugBody() {
-  currentUser = currentUser.getCurrentUser();
+  const currentUser = UserStore.getCurrentUser();
   let isStaffResult;
   if (currentUser != null) {
     isStaffResult = currentUser.isStaff();
@@ -38,44 +38,46 @@ function openLoadingIndicatorDebugBody() {
     isStaffResult = isStaffPersonalResult;
   }
   if (isStaffResult) {
-    let obj = { importer: null, isDismissable: true };
-    obj[0] = function importer() {
-      return callback(paths[15])(paths[14], paths.paths).then((arg0) => {
-        closure_0 = arg0.default;
-        return (arg0) => {
-          const obj = {};
-          const merged = Object.assign(arg0);
-          obj.title = "Chat Loading indicator";
-          obj.children = closure_1_13(closure_1_18, {});
-          return closure_1_13(closure_0, obj);
-        };
-      });
+    let obj = {
+      importer() {
+          return require("asyncRequireImpl")(paths[14], paths.paths).then((result) => {
+            closure_0 = result.default;
+            return (arg0) => {
+              const obj = {};
+              const merged = Object.assign(arg0);
+              obj.title = "Chat Loading indicator";
+              obj.children = closure_2_13(closure_2_18, {});
+              return closure_2_13(closure_0, obj);
+            };
+          });
+        },
+      isDismissable: true
     };
-    _modDef4905.openLazy(obj);
-    const obj2 = _modDef4905;
+    actions_AlertActionCreatorsDefault.openLazy(obj);
   }
 }
-let c4 = importAllResult;
+const View = fn(17).View;
+const AppStates = fn(1074).AppStates;
+const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
+const createStyles = fn(4574);
 let obj = { container: { flexDirection: "row", alignItems: "center", gap: 4 }, pulse: null };
-obj = { height: 8, width: 8, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
-obj[1] = obj;
-let closure_16 = createCacheKey.createStyles(obj);
-let closure_18 = importAllResult.memo(() => {
-  let obj = initialize;
-  const items = [closure_8, closure_7, closure_9];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
+let size = { height: 8, width: 8, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
+obj.pulse = size;
+let closure_16 = createStyles.createStyles(obj);
+let closure_18 = noop.memo(() => {
+  const items = [MessageStore, GatewayConnectionStore, SelectedChannelStore];
+  const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => {
     channelId = channelId.getChannelId();
     const isConnectedResult = connected.isConnected();
     if (null == channelId) {
-      let obj = { messagesCached: false, messagesReady: false, connected: null };
-      obj[2] = isConnectedResult;
-      return obj;
+      const obj2 = { messagesCached: false, messagesReady: false, connected: isConnectedResult };
+      return obj2;
     } else {
       messages = messages.getMessages(channelId);
-      obj = { messagesCached: null, messagesReady: null, connected: null };
-      ({ cached: obj[0], ready: obj[1] } = messages);
-      obj[2] = isConnectedResult;
+      const obj = { messagesCached: null, messagesReady: null, connected: null };
+      ({ cached: obj.messagesCached, ready: obj.messagesReady } = messages);
+      obj.connected = isConnectedResult;
       return obj;
     }
   });
@@ -86,66 +88,66 @@ let closure_18 = importAllResult.memo(() => {
   if (messagesCached) {
     str2 = "text-feedback-positive";
   }
-  obj = { variant: "text-md/normal", color: str2, children: null };
+  let obj2 = { variant: "text-md/normal", color: str2, children: null };
   let str3 = "false";
   let str4 = "false";
   if (messagesCached) {
     str4 = "true";
   }
-  obj[2] = str4;
-  items1[3] = closure_13(Text.Text, obj);
+  obj2.children = str4;
+  items1[3] = map1(Text_Text.Text, obj2);
   let tmp4Result = null;
   if (messagesCached !== false) {
-    obj = { variant: "text-md/normal", color: "text-muted", children: null };
+    const obj3 = { variant: "text-md/normal", color: "text-muted", children: null };
     const items2 = [" ", "(should be ", str3, " to hide loading indicator)"];
-    obj[2] = items2;
-    tmp4Result = tmp4(tmp(4556).Text, obj);
+    obj3.children = items2;
+    tmp4Result = tmp4(tmp(4570).Text, obj3);
   }
   items1[4] = tmp4Result;
-  const items3 = [closure_14(closure_15, { children: items1 }), "\n", , , , , ];
+  const items3 = [closure_1_14(__initData, { children: items1 }), "\n", , , , , ];
   const items4 = ["messages.ready", ":", " ", , ];
   let str6 = str;
   if (messagesReady) {
     str6 = "text-feedback-positive";
   }
-  obj1 = { variant: "text-md/normal", color: str6, children: null };
+  const obj4 = { variant: "text-md/normal", color: str6, children: null };
   let str7 = str3;
   if (messagesReady) {
     str7 = "true";
   }
-  obj1[2] = str7;
-  items4[3] = closure_13(Text.Text, obj1);
-  tmp4Result = null;
+  obj4.children = str7;
+  items4[3] = map1(Text_Text.Text, obj4);
+  let tmp4Result3 = null;
   if (messagesReady !== true) {
-    const obj2 = { variant: "text-md/normal", color: "text-muted", children: null };
+    const obj5 = { variant: "text-md/normal", color: "text-muted", children: null };
     const items5 = [" ", "(should be ", "true", " to hide loading indicator)"];
-    obj2[2] = items5;
-    tmp4Result = tmp4(tmp(4556).Text, obj2);
+    obj5.children = items5;
+    tmp4Result3 = tmp4(tmp(4570).Text, obj5);
   }
-  items4[4] = tmp4Result;
-  items3[2] = closure_14(closure_15, { children: items4 });
+  items4[4] = tmp4Result3;
+  items3[2] = closure_1_14(__initData, { children: items4 });
   items3[3] = "\n";
   const items6 = ["connected", ":", " ", , ];
   let str10 = str;
   if (connected) {
     str10 = "text-feedback-positive";
   }
-  const obj3 = { variant: "text-md/normal", color: str10, children: null };
+  const obj6 = { variant: "text-md/normal", color: str10, children: null };
   let str11 = str3;
   if (connected) {
     str11 = "true";
   }
-  obj3[2] = str11;
-  items6[3] = closure_13(Text.Text, obj3);
-  let tmp4Result1 = null;
+  obj6.children = str11;
+  items6[3] = map1(Text_Text.Text, obj6);
+  let tmp4Result4 = null;
   if (connected !== true) {
-    const obj4 = { variant: "text-md/normal", color: "text-muted", children: null };
+    const obj7 = { variant: "text-md/normal", color: "text-muted", children: null };
     const items7 = [" ", "(should be ", "true", " to hide loading indicator)"];
-    obj4[2] = items7;
-    tmp4Result1 = tmp4(tmp(4556).Text, obj4);
+    obj7.children = items7;
+    tmp4Result4 = tmp4(tmp(4570).Text, obj7);
   }
-  items6[4] = tmp4Result1;
-  items3[4] = closure_14(closure_15, { children: items6 });
+  items6[4] = tmp4Result4;
+  items3[4] = closure_1_14(__initData, { children: items6 });
   items3[5] = "\n";
   if (!messagesCached) {
     messagesCached = !messagesReady;
@@ -157,34 +159,35 @@ let closure_18 = importAllResult.memo(() => {
   if (messagesCached) {
     str = "text-feedback-positive";
   }
-  const obj5 = { variant: "text-md/normal", color: str, children: null };
+  const obj8 = { variant: "text-md/normal", color: str, children: null };
   if (messagesCached) {
     str3 = "true";
   }
-  obj5[2] = str3;
-  items8[3] = closure_13(Text.Text, obj5);
-  const obj6 = { variant: "text-md/normal", color: "text-default", children: null };
+  obj8.children = str3;
+  items8[3] = map1(Text_Text.Text, obj8);
+  const obj9 = { variant: "text-md/normal", color: "text-default", children: null };
   items8[4] = null;
-  items3[6] = closure_14(closure_15, { children: items8 });
-  obj6[2] = items3;
-  return closure_14(Text.Text, obj6);
+  items3[6] = closure_1_14(__initData, { children: items8 });
+  obj9.children = items3;
+  return closure_1_14(Text_Text.Text, obj9);
 });
-let closure_19 = { code: "function ChatLoadingIndicatorTsx1(){const{useReducedMotion,withRepeat,withSequence,withTiming,Easing}=this.__closure;if(useReducedMotion){return{transform:[]};}return{transform:[{scale:withRepeat(withSequence(withTiming(1,{duration:0}),withTiming(0.5,{duration:1500,easing:Easing.bezier(0.4,0,0.2,1)}),withTiming(1,{duration:1500,easing:Easing.bezier(0.4,0,0.2,1)})),-1)}]};}" };
-const result = require("set").fileFinishedImporting("modules/chat/native/ChatLoadingIndicator.tsx");
+const __initData = { code: "function ChatLoadingIndicatorTsx1(){const{useReducedMotion,withRepeat,withSequence,withTiming,Easing}=this.__closure;if(useReducedMotion){return{transform:[]};}return{transform:[{scale:withRepeat(withSequence(withTiming(1,{duration:0}),withTiming(0.5,{duration:1500,easing:Easing.bezier(0.4,0,0.2,1)}),withTiming(1,{duration:1500,easing:Easing.bezier(0.4,0,0.2,1)})),-1)}]};}" };
+size = fn(2);
+const result = size.fileFinishedImporting("modules/chat/native/ChatLoadingIndicator.tsx");
 
 export const useShouldChannelShowLoadingIndicator = function useShouldChannelShowLoadingIndicator(channelId) {
-  const _require = channelId;
-  const ChatLoadingIndicatorExperiment = _require(stateFromStores[18]).ChatLoadingIndicatorExperiment;
+  _require = channelId;
+  const ChatLoadingIndicatorExperiment = require("ChatLoadingIndicatorExperiment").ChatLoadingIndicatorExperiment;
   const enabled = ChatLoadingIndicatorExperiment.useConfig({ location: "ChatLoadingIndicatorGuard" }).enabled;
-  const items = [closure_8, closure_7, closure_11];
-  stateFromStores = _require(stateFromStores[16]).useStateFromStores(items, () => {
+  const items = [MessageStore, GatewayConnectionStore, AppStateStore];
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
     if (enabled) {
       if (null == closure_0) {
         return false;
-      } else if (closure_1_11.getState() !== closure_1_12.ACTIVE) {
+      } else if (AppStateStore.getState() !== AppStates.ACTIVE) {
         return false;
       } else {
-        const messages = closure_1_8.getMessages(tmp);
+        const messages = MessageStore.getMessages(tmp);
         let cached = messages.cached;
         if (!cached) {
           cached = !messages.ready;
@@ -198,32 +201,32 @@ export const useShouldChannelShowLoadingIndicator = function useShouldChannelSho
       return false;
     }
   });
-  const tmp2 = callback(importAllResult.useState(false), 2);
-  callback = tmp2[1];
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
+  _slicedToArray = tmp2[1];
   const items1 = [stateFromStores];
-  const effect = importAllResult.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (stateFromStores) {
       const _setTimeout = setTimeout;
       const timeout = setTimeout(() => {
-        callback(true);
+        closure_1_3(true);
       }, 3000);
       return () => {
         clearTimeout(closure_0);
       };
     } else {
-      callback(false);
+      closure_3(false);
     }
   }, items1);
   return tmp2[0];
 };
 export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndicator() {
-  const tmp = callback4();
+  const tmp = closure_16();
+  let items = [AccessibilityStore];
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let obj = stateFromStores(504);
-  let items = [closure_6];
-  stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  obj1 = stateFromStores(504);
-  const items1 = [closure_10];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => {
+  const tmp2 = stateFromStores;
+  const items1 = [UserStore];
+  const stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () => {
     currentUser = currentUser.getCurrentUser();
     let isStaffResult;
     if (currentUser != null) {
@@ -238,54 +241,51 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
     }
     return isStaffResult;
   });
-  let obj2 = stateFromStores(4296);
+  let obj2 = stateFromStores(504);
   const fn = function t() {
-    let obj = { transform: null };
+    const obj = { transform: null };
     if (stateFromStores) {
-      obj[0] = [];
+      obj.transform = [];
       let tmp7 = obj;
     } else {
-      obj = { scale: null };
-      const obj3 = stateFromStores(closure_1_2[19]);
-      const obj4 = stateFromStores(closure_1_2[19]);
-      const obj5 = stateFromStores(closure_1_2[20]);
-      const withTimingResult = stateFromStores(closure_1_2[20]).withTiming(1, { duration: 0 });
-      obj = { duration: 1500, easing: null };
-      const Easing = stateFromStores(closure_1_2[19]).Easing;
-      obj[1] = Easing.bezier(0.4, 0, 0.2, 1);
-      const obj6 = stateFromStores(closure_1_2[20]);
-      const withTimingResult1 = stateFromStores(closure_1_2[20]).withTiming(0.5, obj);
-      obj1 = { duration: 1500, easing: null };
-      const Easing2 = stateFromStores(closure_1_2[19]).Easing;
-      obj1[1] = Easing2.bezier(0.4, 0, 0.2, 1);
-      obj[0] = obj3.withRepeat(obj4.withSequence(withTimingResult, withTimingResult1, stateFromStores(closure_1_2[20]).withTiming(1, obj1)), -1);
-      const items = [obj];
-      obj[0] = items;
+      const obj2 = { scale: null };
+      const obj3 = ReanimatedRexport;
+      const obj4 = ReanimatedRexport;
+      const withTimingResult = timing.withTiming(1, { duration: 0 });
+      const obj7 = { duration: 1500, easing: null };
+      const Easing = ReanimatedRexport.Easing;
+      obj7.easing = Easing.bezier(0.4, 0, 0.2, 1);
+      const withTimingResult1 = timing.withTiming(0.5, obj7);
+      const obj9 = { duration: 1500, easing: null };
+      const Easing2 = ReanimatedRexport.Easing;
+      obj9.easing = Easing2.bezier(0.4, 0, 0.2, 1);
+      obj2.scale = obj3.withRepeat(obj4.withSequence(withTimingResult, withTimingResult1, timing.withTiming(1, obj9)), -1);
+      const items = [obj2];
+      obj.transform = items;
       tmp7 = obj;
-      const obj8 = stateFromStores(closure_1_2[20]);
     }
     return tmp7;
   };
-  obj = { useReducedMotion: stateFromStores, withRepeat: stateFromStores(4296).withRepeat, withSequence: stateFromStores(4296).withSequence, withTiming: stateFromStores(4561).withTiming, Easing: stateFromStores(4296).Easing };
-  fn.__closure = obj;
+  let obj3 = stateFromStores(4310);
+  fn.__closure = { useReducedMotion: stateFromStores, withRepeat: stateFromStores(4310).withRepeat, withSequence: stateFromStores(4310).withSequence, withTiming: stateFromStores(4575).withTiming, Easing: stateFromStores(4310).Easing };
   fn.__workletHash = 17454673879926;
-  fn.__initData = closure_19;
-  obj = { style: tmp.container, children: null };
-  const animatedStyle = obj2.useAnimatedStyle(fn);
+  fn.__initData = __initData;
+  let obj5 = { style: tmp.container, children: null };
+  const animatedStyle = obj3.useAnimatedStyle(fn);
+  let obj6 = { style: null };
   const items2 = [tmp.pulse, animatedStyle];
-  const items3 = [callback2(_modDef4296.View, { style: items2 }), ];
-  obj1 = { variant: "text-xs/medium", color: "text-muted", children: null };
+  obj6.style = items2;
+  const items3 = [closure_13(ReanimatedRexportDefault.View, obj6), ];
+  let obj7 = { variant: "text-xs/medium", color: "text-muted", children: null };
   const intl = stateFromStores(1114).intl;
-  obj1[2] = intl.string(stateFromStores(1114).t.JwIJMV);
-  items3[1] = callback2(stateFromStores(4556).Text, obj1);
-  obj[1] = items3;
-  const tmp8 = callback3(View, obj);
+  obj7.children = intl.string(stateFromStores(1114).t.JwIJMV);
+  items3[1] = closure_13(stateFromStores(4570).Text, obj7);
+  obj5.children = items3;
+  const tmp8 = closure_14(View, obj5);
   let tmp7Result = tmp8;
   if (stateFromStores1) {
-    obj2 = { onPress: null, children: null };
-    obj2[0] = openLoadingIndicatorDebugBody;
-    obj2[1] = tmp8;
-    tmp7Result = callback2(stateFromStores(5123).PressableOpacity, obj2);
+    let obj8 = { onPress: openLoadingIndicatorDebugBody, children: tmp8 };
+    tmp7Result = closure_13(tmp2(5137).PressableOpacity, obj8);
   }
   return tmp7Result;
 };

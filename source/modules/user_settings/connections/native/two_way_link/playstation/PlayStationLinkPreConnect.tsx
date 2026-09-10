@@ -1,36 +1,38 @@
-// Module ID: 9263
-// Function ID: 9264
+// Module ID: 9290
+// Function ID: 9291
 // Name: PlayStationLinkPreConnect
-// Dependencies: [19, 9260, 21, 4560, 1483, 9264, 9235, 1114, 2]
+// Dependencies: [19, 9287, 21, 4574, 1483, 9291, 9262, 1114, 2]
 // Exports: PlayStationLinkPreConnect
 
-// Module 9263 (PlayStationLinkPreConnect)
-import closure_3 from "noop" /* 19 */;
-import { PlayStationLinkModalScenes as closure_4 } from "PlayStationLinkModalScenes" /* 9260 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9290 (PlayStationLinkPreConnect)
+import _modDef9291 from "module_9291" /* 9291 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let closure_6 = createCacheKey.createStyles({ image: { width: 231, height: 160 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkPreConnect.tsx");
+const require = fn;
+let closure_4 = fn(9287).PlayStationLinkModalScenes;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_6 = createStyles.createStyles({ image: { width: 231, height: 160 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkPreConnect.tsx");
 
 export const PlayStationLinkPreConnect = function PlayStationLinkPreConnect(platformType) {
   let navigation;
-  let obj = navigation(1483);
-  navigation = obj.useNavigation();
+  const tmp = closure_6();
+  navigation = navigation(1483).useNavigation();
   const items = [navigation];
   const items1 = [navigation];
-  const callback = React.useCallback((arg0) => {
-    navigation.push(closure_1_4.DISCORD_CONSENT, arg0);
+  const callback = noop.useCallback((arg0) => {
+    navigation.push(constants.DISCORD_CONSENT, arg0);
   }, items);
-  const callback1 = React.useCallback(() => {
-    navigation.push(closure_1_4.ERROR, {});
+  const callback1 = noop.useCallback(() => {
+    navigation.push(constants.ERROR, {});
   }, items1);
-  const memo = React.useMemo(() => ({ uri: callback(table[5]) }), []);
-  obj = { platformType: platformType.platformType, onError: callback1, onNext: callback, img: memo, imgStyle: callback().image, title: null, body: null };
+  const memo = noop.useMemo(() => ({ uri: _modDef9291 }), []);
+  const obj2 = { platformType: platformType.platformType, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null };
   const intl = navigation(1114).intl;
-  obj[5] = intl.string(navigation(1114).t["6n+UPR"]);
+  obj2.title = intl.string(navigation(1114).t["6n+UPR"]);
   const intl2 = navigation(1114).intl;
-  obj[6] = intl2.string(navigation(1114).t.JaaqIf);
-  return jsx(navigation(9235).TwoWayLinkPreConnect, { platformType: platformType.platformType, onError: callback1, onNext: callback, img: memo, imgStyle: callback().image, title: null, body: null });
+  obj2.body = intl2.string(navigation(1114).t.JaaqIf);
+  return jsx(navigation(9262).TwoWayLinkPreConnect, { platformType: platformType.platformType, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null });
 };

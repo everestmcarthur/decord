@@ -1,109 +1,109 @@
-// Module ID: 11601
-// Function ID: 11602
+// Module ID: 11627
+// Function ID: 11628
 // Name: GroupDMNitroCapLimitSheet
-// Dependencies: [19, 17, 4552, 11598, 1074, 21, 4560, 576, 504, 11596, 1242, 4527, 11602, 9972, 11603, 7150, 4556, 1114, 4975, 8667, 2]
+// Dependencies: [19, 17, 4566, 11624, 1074, 21, 4574, 576, 504, 11622, 1242, 4541, 11628, 9999, 11629, 7164, 4570, 1114, 4989, 8695, 2]
 // Exports: default
 
-// Module 11601 (GroupDMNitroCapLimitSheet)
-import ThemesDefault from "Themes" /* 576 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9972 */;
-import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction" /* 11603 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import { MAX_GROUP_DM_NITRO_PARTICIPANTS as closure_6 } from "MAX_GROUP_DM_NITRO_PARTICIPANTS" /* 11598 */;
-import ME from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11627 (GroupDMNitroCapLimitSheet)
+import nativeDefault from "native" /* 576 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9999 */;
+import PremiumMarketingUtil from "PremiumMarketingUtil" /* 11628 */;
+import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction" /* 11629 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-const require = arg1;
-({ AnalyticEvents: error, AnalyticsObjects: closure_8, AnalyticsPages: c9, MAX_GROUP_DM_PARTICIPANTS: c10 } = ME);
-({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { container: null, title: null, body: null, buttons: null, nitroWheelIcon: null };
-createCacheKey = { alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
-let obj1 = { marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
-createCacheKey[2] = { marginTop: ThemesDefault.space.PX_4, textAlign: "center" };
-let obj2 = { marginTop: ThemesDefault.space.PX_4, textAlign: "center" };
-createCacheKey[3] = { width: "100%", gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_24 };
-createCacheKey[4] = { bottom: -1, width: 22, height: 16 };
-let closure_13 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { width: "100%", gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_24 };
-let result = require("set").fileFinishedImporting("modules/group_dm/native/GroupDMNitroCapLimitSheet.tsx");
+require = fn;
+const View = fn(17).View;
+const number = fn(11624).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const Constants = fn(1074);
+({ AnalyticEvents: closure_7, AnalyticsObjects: closure_8, AnalyticsPages: closure_9, MAX_GROUP_DM_PARTICIPANTS: c10 } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, title: null, body: null, buttons: null, nitroWheelIcon: null };
+let obj3 = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
+obj2.title = { marginTop: nativeDefault.space.PX_8, textAlign: "center" };
+let obj4 = { marginTop: nativeDefault.space.PX_8, textAlign: "center" };
+obj2.body = { marginTop: nativeDefault.space.PX_4, textAlign: "center" };
+let obj5 = { marginTop: nativeDefault.space.PX_4, textAlign: "center" };
+obj2.buttons = { width: "100%", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_24 };
+obj2.nitroWheelIcon = { bottom: -1, width: 22, height: 16 };
+let closure_13 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/group_dm/native/GroupDMNitroCapLimitSheet.tsx");
 
 export default function GroupDMNitroCapLimitSheet(location) {
   const _location = location.location;
-  importDefault = undefined;
   dependencyMap = undefined;
-  const tmp = callback2();
+  const tmp = closure_13();
+  const items = [AccessibilityStore];
+  const stateFromStores = _location(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let obj = _location(504);
-  const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  obj1 = _location(11596);
-  const groupDMNitroAudience = obj1.useGroupDMNitroAudience();
+  const groupDMNitroAudience = _location(11622).useGroupDMNitroAudience();
   importDefault = tmp6;
-  let obj2 = React;
   const items1 = [_location];
-  const callback = React.useCallback(() => {
-    let obj = callback(1242);
-    obj = { location: _location, location_object: closure_1_8.BUTTON_CTA };
-    obj.track(closure_1_7.PREMIUM_PROMOTION_OPENED, obj);
-    callback(4527).hideActionSheet();
-    const obj3 = callback(4527);
-    const result = _location(11602).navigateToPremiumHomePage();
+  const callback = noop.useCallback(() => {
+    AnalyticsUtilsDefault.track(constants.PREMIUM_PROMOTION_OPENED, { location: _location, location_object: constants2.BUTTON_CTA });
+    const obj2 = { location: _location, location_object: constants2.BUTTON_CTA };
+    ActionSheetActionCreatorsDefault.hideActionSheet();
+    const result = PremiumMarketingUtil.navigateToPremiumHomePage();
   }, items1);
-  const tmp9 = usePremiumFeatureUpsellGetNitroDefault(false, callback, constants.IN_APP);
+  const tmp9 = usePremiumFeatureUpsellGetNitroDefault(false, callback, constants3.IN_APP);
   let loading = "acquire" === groupDMNitroAudience;
   if (loading) {
     loading = tmp9.loading;
   }
-  obj = { audience: groupDMNitroAudience, location: _location, acquisitionStrategy: _location(11596).GroupDMNitroAcquisitionStrategy.CHECKOUT, onCheckout: tmp9.onPress };
-  const tmp8ResultResult = useGroupDMNitroUpsellActionDefault(obj);
+  const obj4 = { audience: groupDMNitroAudience, location: _location, acquisitionStrategy: null, onCheckout: null };
+  let obj2 = _location(11622);
+  let obj3 = noop;
+  obj4.acquisitionStrategy = _location(11622).GroupDMNitroAcquisitionStrategy.CHECKOUT;
+  obj4.onCheckout = tmp9.onPress;
+  const tmp8ResultResult = useGroupDMNitroUpsellActionDefault(obj4);
   dependencyMap = tmp8ResultResult;
   const items2 = ["upgrade" === groupDMNitroAudience, tmp8ResultResult];
-  const callback1 = obj2.useCallback(() => {
-    if (callback) {
-      callback(4527).hideActionSheet();
-      const obj = callback(4527);
+  const callback1 = obj3.useCallback(() => {
+    if (closure_1) {
+      ActionSheetActionCreatorsDefault.hideActionSheet();
     }
-    dependencyMap();
+    closure_2();
   }, items2);
-  obj = { style: tmp.container, children: null };
-  obj1 = { style: tmp.title, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+  const obj5 = { style: tmp.container, children: null };
+  const obj6 = { style: tmp.title, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = tmp2(1114).intl;
-  obj2 = { number: closure_10 };
-  obj1[3] = intl.formatToPlainString(_location(1114).t.IyBYPN, obj2);
-  const items3 = [callback(_location(4556).Text, obj1), , ];
-  let obj3 = { style: tmp.body, variant: "text-md/medium", color: "text-subtle", children: null };
+  obj6.children = intl.formatToPlainString(_location(1114).t.IyBYPN, { number: number2 });
+  const items3 = [closure_11(_location(4570).Text, obj6), , ];
+  const obj8 = { style: tmp.body, variant: "text-md/medium", color: "text-subtle", children: null };
   const intl2 = tmp2(1114).intl;
-  obj3[3] = intl2.formatToPlainString(_location(1114).t["Ae97n/"], { number: closure_6 });
-  items3[1] = callback(_location(4556).Text, obj3);
-  const obj5 = { style: tmp.buttons, children: null };
-  const obj6 = { text: null, size: "lg", variant: "experimental_premium-primary", icon: null, iconPosition: "start", shiny: null, loading: null, onPress: null, grow: true };
+  obj8.children = intl2.formatToPlainString(_location(1114).t["Ae97n/"], { number });
+  items3[1] = closure_11(_location(4570).Text, obj8);
+  const obj10 = { style: tmp.buttons, children: null };
+  const obj11 = { text: null, size: "lg", variant: "experimental_premium-primary", icon: null, iconPosition: "start", shiny: null, loading: null, onPress: null, grow: true };
   const intl3 = tmp2(1114).intl;
-  const obj4 = { number: closure_6 };
+  const obj7 = { number: number2 };
+  const obj9 = { number };
   const tmp8Result = useGroupDMNitroUpsellActionDefault;
-  obj6[0] = intl3.string(_location(11596).getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
-  const tmp2Result = _location(11596);
-  obj6[3] = callback(_location(8667).NitroWheelIcon, { style: tmp.nitroWheelIcon, color: ThemesDefault.unsafe_rawColors.WHITE, size: "custom" });
-  obj6[5] = !stateFromStores;
-  obj6[6] = loading;
+  obj11.text = intl3.string(_location(11622).getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
+  const tmp2Result = _location(11622);
+  obj11.icon = closure_11(_location(8695).NitroWheelIcon, { style: tmp.nitroWheelIcon, color: nativeDefault.unsafe_rawColors.WHITE, size: "custom" });
+  obj11.shiny = !stateFromStores;
+  obj11.loading = loading;
   let tmp16 = null;
   if (!loading) {
     tmp16 = callback1;
   }
-  const obj8 = { children: null };
-  obj6[7] = tmp16;
-  const items4 = [callback(_location(4975).Button, obj6), ];
-  const obj9 = { text: null, size: "lg", variant: "secondary", onPress: null, grow: true };
+  const obj13 = { children: null };
+  obj11.onPress = tmp16;
+  const items4 = [closure_11(_location(4989).Button, obj11), ];
+  const obj14 = { text: null, size: "lg", variant: "secondary", onPress: null, grow: true };
   const intl4 = tmp2(1114).intl;
-  obj9[0] = intl4.string(_location(1114).t.PUZmk4);
-  obj9[3] = callback;
-  items4[1] = callback(_location(4975).Button, obj9);
-  obj5[1] = items4;
-  items3[2] = closure_12(View, obj5);
-  obj[1] = items3;
-  obj8[0] = closure_12(View, obj);
-  return callback(_location(7150).BottomSheet, obj8);
+  obj14.text = intl4.string(_location(1114).t.PUZmk4);
+  obj14.onPress = callback;
+  items4[1] = closure_11(_location(4989).Button, obj14);
+  obj10.children = items4;
+  items3[2] = closure_12(View, obj10);
+  obj5.children = items3;
+  obj13.children = closure_12(View, obj5);
+  return closure_11(_location(7164).BottomSheet, obj13);
 };

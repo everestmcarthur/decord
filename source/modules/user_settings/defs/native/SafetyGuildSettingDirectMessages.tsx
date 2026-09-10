@@ -1,29 +1,29 @@
-// Module ID: 15878
-// Function ID: 15879
-// Name: toggle
-// Dependencies: [1979, 15872, 7975, 11474, 14827, 15879, 1935, 4904, 1114, 4994, 6995, 15880, 11473, 2]
+// Module ID: 15908
+// Function ID: 15909
+// Name: SafetyGuildSettingDirectMessages
+// Dependencies: [1979, 15902, 7989, 11501, 14853, 15909, 1935, 4918, 1114, 5008, 7009, 15910, 11500, 2]
 
-// Module 15878 (toggle)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import setDefault from "set" /* 4904 */;
-import componentDidMountDefault from "componentDidMount" /* 4994 */;
-import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14827 */;
-import useDefaultGuildsRestricted from "useDefaultGuildsRestricted" /* 15879 */;
-import useAllowFriendsFromMutualGuildsOnly from "useAllowFriendsFromMutualGuildsOnly" /* 15880 */;
-import closure_3 from "createGuildRecordFromRust" /* 1979 */;
-import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 15872 */;
-import { GUILD_SELECT_ALL_SERVERS_OPTION_ID as closure_6 } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 11474 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15908 (SafetyGuildSettingDirectMessages)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
+import common_AlertDefault from "common/Alert" /* 5008 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14853 */;
+import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 15909 */;
+import useAllowFriendsFromMutualGuildsOnly from "useAllowFriendsFromMutualGuildsOnly" /* 15910 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-require = arg1;
-({ getSelectedGuildId: c4, useUserSafetySettingsSelectedGuildStore: c5 } = GUILD_SELECT_ALL_SERVERS_OPTION_ID);
-createToggle = {
+require = fn;
+const UserSettingsSafetySelectedGuildStore = fn(15902);
+({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } = UserSettingsSafetySelectedGuildStore);
+let closure_6 = fn(11501).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
+const SettingBuilders = fn(11500);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const allowFriendsFromMutualGuildsOnly = useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
-    const intl = getSystemLocale.intl;
+    const intl = util.intl;
     const string = intl.string;
-    const t = getSystemLocale.t;
+    const t = util.t;
     if (allowFriendsFromMutualGuildsOnly) {
       let stringResult = string(t.PMsfcH);
     } else {
@@ -33,7 +33,7 @@ createToggle = {
   },
   useDescription() {
     const allowFriendsFromMutualGuildsOnly = useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
-    if (callback2().selectedGuildId === closure_6) {
+    if (hasOwnProperty().selectedGuildId === closure_6) {
       const intl2 = tmp(1114).intl;
       const string2 = intl2.string;
       let XXGmuB = tmp(1114).t;
@@ -55,11 +55,10 @@ createToggle = {
       return stringResult;
     }
   },
-  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(7989).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue() {
-    const selectedGuildId = callback2().selectedGuildId;
-    const obj = useDefaultGuildsRestricted;
-    const RestrictedGuildIds = explicitContentFromProto.RestrictedGuildIds;
+    const selectedGuildId = hasOwnProperty().selectedGuildId;
+    const RestrictedGuildIds = UserSettings.RestrictedGuildIds;
     const setting = RestrictedGuildIds.useSetting();
     let tmp2 = !setting.includes(selectedGuildId);
     if (selectedGuildId === closure_6) {
@@ -68,59 +67,57 @@ createToggle = {
     return tmp2;
   },
   onValueChange: function onAllowDirectMessagesFromServerMembersValueChange(arg0) {
-    const tmp = callback();
+    const tmp = closure_4();
     if (tmp === closure_6) {
-      const _require = !arg0;
-      let obj = { title: null, body: null, confirmText: null, cancelText: null, confirmColor: null, onConfirm: null, onCancel: null };
-      const intl = _require(1114).intl;
-      obj[0] = intl.string(_require(1114).t.Hq4ApA);
-      const intl2 = _require(1114).intl;
-      obj[1] = intl2.string(_require(1114).t.qTCYun);
-      const intl3 = _require(1114).intl;
-      obj[2] = intl3.string(_require(1114).t.p89ACt);
-      const intl4 = _require(1114).intl;
-      obj[3] = intl4.string(_require(1114).t.gm1Vej);
-      obj[4] = componentDidMountDefault.Colors.RED;
-      obj[5] = function onConfirm() {
-        const DefaultGuildsRestrictedV2 = callback(closure_1_2[6]).DefaultGuildsRestrictedV2;
-        DefaultGuildsRestrictedV2.updateSetting(callback);
-        const RestrictedGuildIds = callback(closure_1_2[6]).RestrictedGuildIds;
-        if (callback) {
-          let guildIds = closure_1_3.getGuildIds();
+      _require = !arg0;
+      const obj2 = { title: null, body: null, confirmText: null, cancelText: null, confirmColor: null, onConfirm: null, onCancel: null };
+      const intl = require("util").intl;
+      obj2.title = intl.string(require("util").t.Hq4ApA);
+      const intl2 = require("util").intl;
+      obj2.body = intl2.string(require("util").t.qTCYun);
+      const intl3 = require("util").intl;
+      obj2.confirmText = intl3.string(require("util").t.p89ACt);
+      const intl4 = require("util").intl;
+      obj2.cancelText = intl4.string(require("util").t.gm1Vej);
+      obj2.confirmColor = common_AlertDefault.Colors.RED;
+      obj2.onConfirm = function onConfirm() {
+        const DefaultGuildsRestrictedV2 = UserSettings.DefaultGuildsRestrictedV2;
+        DefaultGuildsRestrictedV2.updateSetting(closure_0);
+        const RestrictedGuildIds = UserSettings.RestrictedGuildIds;
+        if (closure_0) {
+          let guildIds = GuildStore.getGuildIds();
         } else {
           guildIds = [];
         }
         RestrictedGuildIds.updateSetting(guildIds);
       };
-      obj[6] = function onCancel() {
-        const DefaultGuildsRestrictedV2 = callback(closure_1_2[6]).DefaultGuildsRestrictedV2;
-        DefaultGuildsRestrictedV2.updateSetting(callback);
+      obj2.onCancel = function onCancel() {
+        const DefaultGuildsRestrictedV2 = UserSettings.DefaultGuildsRestrictedV2;
+        DefaultGuildsRestrictedV2.updateSetting(closure_0);
       };
-      setDefault.show(obj);
-      const obj3 = setDefault;
+      AlertActionCreatorsDefault.show(obj2);
     } else {
-      obj = _require(6995);
-      const sanitizedRestrictedGuilds = obj.getSanitizedRestrictedGuilds();
+      const sanitizedRestrictedGuilds = require("UserSettingsUtils").getSanitizedRestrictedGuilds();
       if (arg0) {
         sanitizedRestrictedGuilds.delete(tmp);
       } else {
         sanitizedRestrictedGuilds.add(tmp);
       }
-      let RestrictedGuildIds = _require(1935).RestrictedGuildIds;
+      let RestrictedGuildIds = require("UserSettings").RestrictedGuildIds;
       const _Array = Array;
       RestrictedGuildIds.updateSetting(Array.from(sanitizedRestrictedGuilds));
-      const tmp2 = _require;
+      const obj = require("UserSettingsUtils");
     }
   },
   useIsDisabled() {
-    let isParentallyControlled = useParentalControlledExplicitContentSettings.useIsParentallyControlled();
+    let isParentallyControlled = useParentalControlSettings.useIsParentallyControlled();
     if (isParentallyControlled) {
       isParentallyControlled = tmp2 === closure_6;
     }
     return isParentallyControlled;
   }
-};
-createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SafetyGuildSettingDirectMessages.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/SafetyGuildSettingDirectMessages.tsx");
 
-export default createToggle;
+export default toggle;

@@ -1,30 +1,29 @@
-// Module ID: 16875
-// Function ID: 16876
-// Name: OAUTH2_AUTHORIZE_MODAL_KEY
-// Dependencies: [1074, 9579, 8364, 4767, 2]
+// Module ID: 16912
+// Function ID: 16913
+// Name: shouldExcludeSafeAreaForModalKey
+// Dependencies: [1074, 9606, 8392, 4781, 2]
 // Exports: shouldExcludeSafeAreaForModalKey
 
-// Module 16875 (OAUTH2_AUTHORIZE_MODAL_KEY)
-import ME from "ME" /* 1074 */;
-import openChannelCallModal from "openChannelCallModal" /* 4767 */;
-import SHARE_PREPARING_MODAL_KEY from "SHARE_PREPARING_MODAL_KEY" /* 8364 */;
-import OAUTH2_AUTHORIZE_MODAL_KEY from "OAUTH2_AUTHORIZE_MODAL_KEY" /* 9579 */;
-import set from "set" /* 2 */;
+// Module 16912 (shouldExcludeSafeAreaForModalKey)
+import Constants2 from "Constants" /* 1074 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4781 */;
+import SharePreparingModalConstants from "SharePreparingModalConstants" /* 8392 */;
+import Constants from "Constants" /* 9606 */;
+import size from "module_2" /* 2 */;
 
-({ OAUTH2_AUTHORIZE_MODAL_KEY, OAUTH2_ERROR_RESULT_MODAL_KEY, OAUTH2_SUCCESS_RESULT_MODAL_KEY } = OAUTH2_AUTHORIZE_MODAL_KEY);
-const items = [ME.MEDIA_MODAL_KEY, OAUTH2_AUTHORIZE_MODAL_KEY, OAUTH2_SUCCESS_RESULT_MODAL_KEY, OAUTH2_ERROR_RESULT_MODAL_KEY, SHARE_PREPARING_MODAL_KEY.SHARE_PREPARING_MODAL_KEY];
-let set = new Set(items);
-const result = set.fileFinishedImporting("modules/safe_area/shouldExcludeSafeAreaForModalKey.native.tsx");
+({ OAUTH2_AUTHORIZE_MODAL_KEY, OAUTH2_ERROR_RESULT_MODAL_KEY, OAUTH2_SUCCESS_RESULT_MODAL_KEY } = Constants);
+const items = [Constants2.MEDIA_MODAL_KEY, OAUTH2_AUTHORIZE_MODAL_KEY, OAUTH2_SUCCESS_RESULT_MODAL_KEY, OAUTH2_ERROR_RESULT_MODAL_KEY, SharePreparingModalConstants.SHARE_PREPARING_MODAL_KEY];
+const set = new Set(items);
+const result = size.fileFinishedImporting("modules/safe_area/shouldExcludeSafeAreaForModalKey.native.tsx");
 
 export const shouldExcludeSafeAreaForModalKey = function shouldExcludeSafeAreaForModalKey(key) {
   let tmp = null != key;
   if (tmp) {
-    let hasItem = openChannelCallModal.isVoiceChannelModalKey(key);
+    let hasItem = PrivateChannelCallUtils.isVoiceChannelModalKey(key);
     if (!hasItem) {
       hasItem = set.has(key);
     }
     tmp = hasItem;
-    const obj = openChannelCallModal;
   }
   return tmp;
 };

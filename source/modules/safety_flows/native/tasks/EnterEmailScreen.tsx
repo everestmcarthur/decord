@@ -1,33 +1,36 @@
-// Module ID: 17878
-// Function ID: 17879
+// Module ID: 17911
+// Function ID: 17912
 // Name: EnterEmailScreen
-// Dependencies: [32, 19, 21, 1483, 17879, 1114, 2690, 17870, 4973, 6606, 2]
+// Dependencies: [32, 19, 21, 1483, 17912, 1114, 2690, 17903, 4987, 6620, 2]
 // Exports: default
 
-// Module 17878 (EnterEmailScreen)
-import messagesProxyDefault from "messagesProxy" /* 2690 */;
-import SafetyFlowTaskScreenDefault from "SafetyFlowTaskScreen" /* 17879 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 17911 (EnterEmailScreen)
+import _modDef2690 from "module_2690" /* 2690 */;
+import types from "types" /* 17903 */;
+import SafetyFlowTaskScreenDefault from "SafetyFlowTaskScreen" /* 17912 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/safety_flows/native/tasks/EnterEmailScreen.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_flows/native/tasks/EnterEmailScreen.tsx");
 
 export default function EnterEmailScreen() {
-  let obj = _require(1483);
-  _require = obj.useNavigation();
-  [tmp2, tmp3] = callback(React.useState(""), 2);
-  obj = { title: null, action: null, onAction: null, children: null };
-  const tmp = callback(React.useState(""), 2);
-  const intl = _require(1114).intl;
-  obj[0] = intl.string(messagesProxyDefault.bFbsV6);
-  const intl2 = _require(1114).intl;
-  obj[1] = intl2.string(messagesProxyDefault.RRBNpv);
-  obj[2] = function onAction() {
-    arr = arr.push(arr(closure_1_2[7]).SafetyFlowScreens.VERIFY_EMAIL);
+  _require = require("useNavigation").useNavigation();
+  const obj = require("useNavigation");
+  [tmp2, tmp3] = noop.useState("");
+  const obj2 = { title: null, action: null, onAction: null, children: null };
+  const tmp = _slicedToArray(noop.useState(""), 2);
+  const intl = require("util").intl;
+  obj2.title = intl.string(_modDef2690.bFbsV6);
+  const intl2 = require("util").intl;
+  obj2.action = intl2.string(_modDef2690.RRBNpv);
+  obj2.onAction = function onAction() {
+    closure_0.push(types.SafetyFlowScreens.VERIFY_EMAIL);
   };
-  obj = { children: jsx(_require(6606).TextInput, { label: "Email", value: tmp2, onChange: tmp3 }) };
-  obj[3] = jsx(_require(4973).Stack, { children: jsx(_require(6606).TextInput, { label: "Email", value: tmp2, onChange: tmp3 }) });
-  return jsx(SafetyFlowTaskScreenDefault, { children: jsx(_require(6606).TextInput, { label: "Email", value: tmp2, onChange: tmp3 }) });
+  obj2.children = jsx(require("Stack/Stack").Stack, { children: jsx(require("TextInput").TextInput, { label: "Email", value: tmp2, onChange: tmp3 }) });
+  return <tmp4 title={null} action={null} onAction={null}>{null}</tmp4>;
 };

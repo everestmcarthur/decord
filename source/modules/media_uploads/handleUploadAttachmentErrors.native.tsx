@@ -1,79 +1,72 @@
-// Module ID: 9314
-// Function ID: 9315
-// Name: handleUploadMessageAttachmentsErrors
-// Dependencies: [1074, 5179, 5134, 9315, 4904, 1114, 9398, 2]
+// Module ID: 9341
+// Function ID: 9342
+// Name: handleUploadAttachmentErrors
+// Dependencies: [1074, 5193, 5148, 9342, 4918, 1114, 9425, 2]
 // Exports: handleUploadMessageAttachmentsErrors
 
-// Module 9314 (handleUploadMessageAttachmentsErrors)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import setDefault from "set" /* 4904 */;
-import getUploadFileSizeSum from "getUploadFileSizeSum" /* 5134 */;
-import KESTREL_GA_UPLOAD_LIMIT_MB from "KESTREL_GA_UPLOAD_LIMIT_MB" /* 5179 */;
-import showUploadFileSizeErrorDefault from "showUploadFileSizeError" /* 9315 */;
-import getAttachmentUploadAbortAlertContent from "getAttachmentUploadAbortAlertContent" /* 9398 */;
-import ME from "ME" /* 1074 */;
+// Module 9341 (handleUploadAttachmentErrors)
+import util from "util" /* 1114 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
+import FileUtils from "FileUtils" /* 5148 */;
+import KestrelExperiment from "KestrelExperiment" /* 5193 */;
+import showUploadFileSizeErrorDefault from "showUploadFileSizeError" /* 9342 */;
+import getAttachmentUploadAbortAlert from "getAttachmentUploadAbortAlert" /* 9425 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-({ AbortCodes: c3, MAX_UPLOAD_COUNT: c4 } = ME);
-const result = set.fileFinishedImporting("modules/media_uploads/handleUploadAttachmentErrors.native.tsx");
+({ AbortCodes: c3, MAX_UPLOAD_COUNT: closure_4 } = Constants);
+const result = size.fileFinishedImporting("modules/media_uploads/handleUploadAttachmentErrors.native.tsx");
 
 export const handleUploadMessageAttachmentsErrors = function handleUploadMessageAttachmentsErrors(arg0) {
   ({ guildId, code, reason } = arg0);
   if (undefined === code) {
     return false;
   } else if (code === constants.ENTITY_TOO_LARGE) {
-    const kestrelConfig = KESTREL_GA_UPLOAD_LIMIT_MB.getKestrelConfig({ location: "native.handleUploadMessageAttachmentsErrors" });
-    const obj10 = KESTREL_GA_UPLOAD_LIMIT_MB;
-    const maxFileSizeResult = getUploadFileSizeSum.maxFileSize(guildId);
-    let obj = { file: null, maxSize: null, baseMaxSize: null, guildId: null, analyticsLocations: null, errorReason: null };
-    obj[0] = tmp;
-    const obj11 = getUploadFileSizeSum;
+    const kestrelConfig = KestrelExperiment.getKestrelConfig({ location: "native.handleUploadMessageAttachmentsErrors" });
+    const maxFileSizeResult = FileUtils.maxFileSize(guildId);
+    const obj4 = { file: tmp, maxSize: null, baseMaxSize: null, guildId: null, analyticsLocations: null, errorReason: null };
     const tmp27 = showUploadFileSizeErrorDefault;
-    obj[1] = KESTREL_GA_UPLOAD_LIMIT_MB.getEffectiveKestrelLimit(kestrelConfig, maxFileSizeResult);
-    obj[2] = maxFileSizeResult;
-    obj[3] = guildId;
-    obj[4] = tmp2;
+    obj4.maxSize = KestrelExperiment.getEffectiveKestrelLimit(kestrelConfig, maxFileSizeResult);
+    obj4.baseMaxSize = maxFileSizeResult;
+    obj4.guildId = guildId;
+    obj4.analyticsLocations = tmp2;
     let type;
     if (reason != null) {
       type = reason.type;
     }
-    obj[5] = type;
-    tmp27(obj);
+    obj4.errorReason = type;
+    tmp27(obj4);
     return true;
   } else if (code === tmp31.TOO_MANY_ATTACHMENTS) {
-    obj = { title: null, body: null };
-    const intl5 = getSystemLocale.intl;
-    obj[0] = intl5.string(getSystemLocale.t.wOr6hB);
-    const intl6 = getSystemLocale.intl;
-    obj1 = { limit: null };
-    obj1[0] = closure_4;
-    obj[1] = intl6.formatToPlainString(getSystemLocale.t["qqyp/e"], obj1);
-    setDefault.show(obj);
+    const obj6 = { title: null, body: null };
+    const intl5 = util.intl;
+    obj6.title = intl5.string(util.t.wOr6hB);
+    const intl6 = util.intl;
+    const obj8 = { limit };
+    obj6.body = intl6.formatToPlainString(util.t["qqyp/e"], obj8);
+    AlertActionCreatorsDefault.show(obj6);
     return true;
   } else if (code === tmp31.ENTITY_EMPTY) {
-    let obj2 = { title: null, body: null };
-    const intl3 = getSystemLocale.intl;
-    obj2[0] = intl3.string(getSystemLocale.t.B3vFdU);
-    const intl4 = getSystemLocale.intl;
-    obj2[1] = intl4.string(getSystemLocale.t["9ZpT2C"]);
-    setDefault.show(obj2);
+    const obj9 = { title: null, body: null };
+    const intl3 = util.intl;
+    obj9.title = intl3.string(util.t.B3vFdU);
+    const intl4 = util.intl;
+    obj9.body = intl4.string(util.t["9ZpT2C"]);
+    AlertActionCreatorsDefault.show(obj9);
     return true;
   } else if (code === tmp31.INVALID_FILE_ASSET) {
-    obj2 = setDefault;
-    const obj3 = { title: null, body: null };
-    const intl = getSystemLocale.intl;
-    obj3[0] = intl.string(getSystemLocale.t.B3vFdU);
-    const intl2 = getSystemLocale.intl;
-    obj3[1] = intl2.string(getSystemLocale.t.zMEjJg);
-    obj2.show(obj3);
+    const obj12 = { title: null, body: null };
+    const intl = util.intl;
+    obj12.title = intl.string(util.t.B3vFdU);
+    const intl2 = util.intl;
+    obj12.body = intl2.string(util.t.zMEjJg);
+    AlertActionCreatorsDefault.show(obj12);
     return true;
   } else {
-    obj = getAttachmentUploadAbortAlertContent;
-    const attachmentUploadAbortAlertContent = obj.getAttachmentUploadAbortAlertContent(code);
+    const attachmentUploadAbortAlertContent = getAttachmentUploadAbortAlert.getAttachmentUploadAbortAlertContent(code);
     let flag = null != attachmentUploadAbortAlertContent;
     if (flag) {
-      obj1 = setDefault;
-      obj1.show(attachmentUploadAbortAlertContent);
+      AlertActionCreatorsDefault.show(attachmentUploadAbortAlertContent);
       flag = true;
     }
     return flag;

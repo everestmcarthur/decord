@@ -1,29 +1,27 @@
-// Module ID: 11678
-// Function ID: 11679
+// Module ID: 11704
+// Function ID: 11705
 // Name: LongPressMessageChatItemPreview
-// Dependencies: [21, 4560, 576, 7932, 8657, 2]
+// Dependencies: [21, 4574, 576, 7946, 8685, 2]
 // Exports: default
 
-// Module 11678 (LongPressMessageChatItemPreview)
-import set from "set" /* 2 */;
+// Module 11704 (LongPressMessageChatItemPreview)
 import jsxProd from "jsxProd" /* 21 */;
-import ThemesDefault from "Themes" /* 576 */;
-import setOptionsDefault from "setOptions" /* 7932 */;
-import DCDChatItemDefault from "DCDChatItem" /* 8657 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import RowGeneratorDefault from "RowGenerator" /* 7946 */;
+import ChatItemDefault from "ChatItem" /* 8685 */;
+import createStyles from "createStyles" /* 4574 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-let obj = { chatItem: null };
-obj = { maxHeight: 2 * ThemesDefault.space.PX_80 };
-obj[0] = obj;
-let closure_3 = createCacheKey.createStyles(obj);
-let closure_4 = new setOptionsDefault();
-const tmp2 = new setOptionsDefault();
-const result = set.fileFinishedImporting("modules/messages/native/long_press/LongPressMessageChatItemPreview.tsx");
+let obj = { chatItem: { maxHeight: 2 * nativeDefault.space.PX_80 } };
+let closure_3 = createStyles.createStyles(obj);
+const obj2 = { maxHeight: 2 * nativeDefault.space.PX_80 };
+const rowGenerator = new RowGeneratorDefault();
+const result = size.fileFinishedImporting("modules/messages/native/long_press/LongPressMessageChatItemPreview.tsx");
 
 export default function LongPressMessageChatItemPreview(message) {
-  const obj = { rowGenerator: closure_4, message: message.message, maxHeight: callback().chatItem.maxHeight, backgroundColor: null, pointerEvents: "none" };
-  const tmp = callback();
-  obj[3] = ThemesDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT;
-  return jsx(DCDChatItemDefault, { rowGenerator: closure_4, message: message.message, maxHeight: callback().chatItem.maxHeight, backgroundColor: null, pointerEvents: "none" });
+  const obj = { rowGenerator, message: message.message, maxHeight: closure_3().chatItem.maxHeight, backgroundColor: null, pointerEvents: "none" };
+  const tmp = closure_3();
+  obj.backgroundColor = nativeDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT;
+  return jsx(ChatItemDefault, { rowGenerator, message: message.message, maxHeight: closure_3().chatItem.maxHeight, backgroundColor: null, pointerEvents: "none" });
 };

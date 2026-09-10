@@ -1,22 +1,25 @@
-// Module ID: 14700
-// Function ID: 14701
-// Name: useAutoScrollToSearchResultSetting
-// Dependencies: [19, 14694, 11474, 14587, 14696, 1483, 2]
+// Module ID: 14726
+// Function ID: 14727
+// Name: useAutoScrollToSetting
+// Dependencies: [19, 14720, 11501, 14612, 14722, 1483, 2]
 // Exports: useAutoScrollToSearchResultSetting
 
-// Module 14700 (useAutoScrollToSearchResultSetting)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "zustandStore" /* 14694 */;
-import { NodeType } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 11474 */;
+// Module 14726 (useAutoScrollToSetting)
+import noop from "module_19" /* 19 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14720 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/settings/native/renderer/hooks/useAutoScrollToSetting.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const NodeType = fn(11501).NodeType;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/settings/native/renderer/hooks/useAutoScrollToSetting.tsx");
 
 export const useAutoScrollToSearchResultSetting = function useAutoScrollToSearchResultSetting(ref, memo, scrollTarget) {
-  const _require = ref;
+  _require = ref;
   dependencyMap = memo;
   let current = ref.useField("selected");
-  const navigation = _require(1483).useNavigation();
+  const navigation = require("useNavigation").useNavigation();
   ref = navigation.useRef(scrollTarget);
   if (current == null) {
     current = ref.current;
@@ -24,39 +27,38 @@ export const useAutoScrollToSearchResultSetting = function useAutoScrollToSearch
   let flag = false;
   if (null != current) {
     flag = false;
-    if (tmp(14587).SETTING_RENDERER_CONFIG[current].type !== current.ROUTE) {
-      let initialScrollIndex = tmp(14696).getInitialScrollIndex(current, memo);
+    if (tmp(14612).SETTING_RENDERER_CONFIG[current].type !== current.ROUTE) {
+      let initialScrollIndex = tmp(14722).getInitialScrollIndex(current, memo);
       let tmp7 = 0 !== initialScrollIndex;
       if (tmp7) {
         tmp7 = 1 !== initialScrollIndex;
       }
       flag = tmp7;
-      const tmpResult = tmp(14696);
+      const tmpResult = tmp(14722);
     }
   }
   const items = [memo, flag, ref, navigation, current];
   const effect = navigation.useEffect(() => {
-    closure_0 = navigation.addListener("transitionEnd", () => {
-      if (closure_5) {
-        let obj = ref(closure_1_1[4]);
-        const initialScrollIndex = obj.getInitialScrollIndex(closure_4, closure_1);
+    navigation.addListener("transitionEnd", () => {
+      if (flag) {
+        const initialScrollIndex = ref(dependencyMap[4]).getInitialScrollIndex(closure_1_4, memo);
         if (null != initialScrollIndex) {
           if (ref != null) {
             current = ref.current;
             if (current != null) {
-              obj = { index: null, animated: false, viewOffset: 300 };
-              obj[0] = initialScrollIndex;
-              current.scrollToIndex(obj);
+              const obj2 = { index: initialScrollIndex, animated: false, viewOffset: 300 };
+              current.scrollToIndex(obj2);
             }
           }
         }
+        const obj = ref(dependencyMap[4]);
       }
-      closure_3.current = undefined;
+      closure_1_3.current = undefined;
     });
     return () => {
       ref();
-      ref.setState({ selected: null });
-      closure_1_3.current = undefined;
+      UserSettingSearchStore.setState({ selected: null });
+      ref.current = undefined;
     };
   }, items);
 };

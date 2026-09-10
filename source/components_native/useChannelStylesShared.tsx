@@ -1,32 +1,36 @@
-// Module ID: 11328
-// Function ID: 11329
-// Name: styles
-// Dependencies: [4560, 576, 2]
+// Module ID: 11355
+// Function ID: 11356
+// Name: useChannelStylesShared
+// Dependencies: [4574, 576, 2]
 
-// Module 11328 (styles)
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 576 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11355 (useChannelStylesShared)
+import nativeDefault from "native" /* 576 */;
+import createStyles_mod from "createStyles" /* 4574 */;
+import size from "module_2" /* 2 */;
 
-let obj = { container: { flex: 1 }, background: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-obj[1] = obj;
-const styles = createCacheKey.createStyles(obj);
-const obj1 = { flex: { flex: 1 }, scene: { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW }, callPTTButton: { flexGrow: 0 }, header: { shadowColor: "transparent" }, forumChannelStyles: null, headerLeftContainer: null, headerTitleContainer: null, headerRightContainer: null };
-const obj2 = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-obj1[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderBottomColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-obj1[5] = { position: "relative" };
-obj1[6] = { position: "relative", marginLeft: 0, marginRight: 0, left: 0, right: 0, flex: 1 };
-obj1[7] = { position: "relative", flexBasis: "auto", flexGrow: 0, flexShrink: 0 };
-const styles1 = createCacheKey.createStyles(obj1);
-const obj4 = { navbarLeft: { marginLeft: 4, marginRight: 4 }, menuIcon: { marginHorizontal: 2 }, mentionBadge: null, mentionBadgeAlternate: null };
-const obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderBottomColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-obj4[2] = { bottom: 5, right: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-const obj5 = { bottom: 5, right: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-obj4[3] = { bottom: 5, right: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-const styles2 = createCacheKey.createStyles(obj4);
-const obj6 = { bottom: 5, right: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-const result = set.fileFinishedImporting("components_native/useChannelStylesShared.tsx");
+let createStyles = createStyles_mod;
+const obj = { container: { flex: 1 }, background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
+const styles = createStyles.createStyles(obj);
+let createStyles = createStyles_mod;
+const obj3 = { flex: { flex: 1 }, scene: null, callPTTButton: null, header: null, forumChannelStyles: null, headerLeftContainer: null, headerTitleContainer: null, headerRightContainer: null };
+const obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj3.scene = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj3.callPTTButton = { flexGrow: 0 };
+obj3.header = { shadowColor: "transparent" };
+const obj4 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj3.forumChannelStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderBottomColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj3.headerLeftContainer = { position: "relative" };
+obj3.headerTitleContainer = { position: "relative", marginLeft: 0, marginRight: 0, left: 0, right: 0, flex: 1 };
+obj3.headerRightContainer = { position: "relative", flexBasis: "auto", flexGrow: 0, flexShrink: 0 };
+const styles1 = createStyles.createStyles(obj3);
+let createStyles = createStyles_mod;
+const obj6 = { navbarLeft: { marginLeft: 4, marginRight: 4 }, menuIcon: { marginHorizontal: 2 }, mentionBadge: null, mentionBadgeAlternate: null };
+const rect = { bottom: 5, right: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj6.mentionBadge = rect;
+const rect1 = { bottom: 5, right: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj6.mentionBadgeAlternate = rect1;
+const styles2 = createStyles.createStyles(obj6);
+const result = size.fileFinishedImporting("components_native/useChannelStylesShared.tsx");
 
 export const useChannelStylesShared = styles;
 export const useChannelStyles = styles1;

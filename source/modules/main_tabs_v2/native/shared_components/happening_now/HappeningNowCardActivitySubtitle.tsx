@@ -1,43 +1,41 @@
-// Module ID: 16082
-// Function ID: 16083
-// Name: HappeningNowVoiceCardSubtitle
-// Dependencies: [19, 17, 1957, 1074, 21, 4560, 504, 4713, 15298, 9775, 1114, 8259, 10896, 2]
+// Module ID: 16112
+// Function ID: 16113
+// Name: HappeningNowCardActivitySubtitle
+// Dependencies: [19, 17, 1957, 1074, 21, 4574, 504, 4727, 15327, 9802, 1114, 8285, 10923, 2]
 // Exports: HappeningNowActivityCardSubtitle, HappeningNowVoiceCardSubtitle
 
-// Module 16082 (HappeningNowVoiceCardSubtitle)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import computeChannelNameDefault from "computeChannelName" /* 4713 */;
-import _isStreamingDefault from "_isStreaming" /* 8259 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9775 */;
-import HAPPENING_NOW_CARD_MARGIN_RIGHT from "HAPPENING_NOW_CARD_MARGIN_RIGHT" /* 15298 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import { ActivityTypes } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16112 (HappeningNowCardActivitySubtitle)
+import util from "util" /* 1114 */;
+import useChannelNameDefault from "useChannelName" /* 4727 */;
+import isStreamingDefault from "isStreaming" /* 8285 */;
+import HappeningNowCard from "HappeningNowCard" /* 15327 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-require = arg1;
-noopAll;
-let closure_7 = createCacheKey.createStyles({ cardDetails: { marginTop: 2, flexDirection: "row", alignItems: "center" } });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivitySubtitle.tsx");
+const getChannelA11yLabelDefault = tmp4(9802);
+require = fn;
+const View = fn(17).View;
+const ActivityTypes = fn(1074).ActivityTypes;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_7 = createStyles.createStyles({ cardDetails: { marginTop: 2, flexDirection: "row", alignItems: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivitySubtitle.tsx");
 
 export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubtitle(voiceState) {
   voiceState = voiceState.voiceState;
-  let obj = voiceState(504);
-  const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getChannel(voiceState.channelId));
-  obj = { style: callback().cardDetails, children: null };
-  const tmp = callback();
-  const tmp4 = importDefault;
+  const tmp = closure_7();
+  const items = [ChannelStore];
+  const stateFromStores = voiceState(504).useStateFromStores(items, () => ChannelStore.getChannel(voiceState.channelId));
+  const obj2 = { style: tmp.cardDetails, children: null };
+  const obj = voiceState(504);
   let tmp8;
   if (null != stateFromStores) {
-    obj = { channel: null };
-    obj[0] = stateFromStores;
-    tmp8 = getChannelA11yLabelDefault(obj);
+    const obj3 = { channel: stateFromStores };
+    tmp8 = getChannelA11yLabelDefault(obj3);
   }
-  obj[1] = jsx(voiceState(15298).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: computeChannelNameDefault(stateFromStores) });
-  return <View style={callback().cardDetails}>{null}</View>;
+  obj2.children = jsx(voiceState(15327).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: useChannelNameDefault(stateFromStores) });
+  return <View style={tmp.cardDetails}>{null}</View>;
 };
 export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCardSubtitle(activity) {
   activity = activity.activity;
@@ -46,13 +44,11 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
       let trimmed = null;
       if (null != activity.state) {
         trimmed = activity.state.trim();
-        const str4 = activity.state;
       }
       let tmp3 = trimmed;
     }
-    const obj = { lineClamp: 1, children: null };
-    obj[1] = tmp3;
-    return jsx(HAPPENING_NOW_CARD_MARGIN_RIGHT.HappeningNowCardSubtitle, { lineClamp: 1, children: null });
+    const obj = { lineClamp: 1, children: tmp3 };
+    return jsx(HappeningNowCard.HappeningNowCardSubtitle, { lineClamp: 1, children: tmp3 });
   }
   if (null != activity.stream) {
     if (null != activity) {
@@ -60,21 +56,21 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
         let name3 = activity.name;
       }
     }
-    const intl = getSystemLocale.intl;
-    name3 = intl.string(getSystemLocale.t.eXan7B);
+    const intl = util.intl;
+    name3 = intl.string(util.t.eXan7B);
   } else {
-    let name;
+    let name1;
     if (activity != null) {
-      name = activity.name;
+      name1 = activity.name;
     }
     tmp3 = null;
-    if (null != name) {
-      if (!_isStreamingDefault(activity)) {
-        if (tmp4(10896)(activity)) {
+    if (null != name1) {
+      if (!isStreamingDefault(activity)) {
+        if (tmp4(10923)(activity)) {
           if (null != activity.details) {
             if (null != activity.state) {
               const _HermesInternal = HermesInternal;
-              name = "" + activity.details + " - " + activity.state;
+              let name = "" + activity.details + " - " + activity.state;
             }
           }
         }

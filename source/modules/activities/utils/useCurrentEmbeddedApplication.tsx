@@ -1,15 +1,16 @@
-// Module ID: 9637
-// Function ID: 9638
+// Module ID: 9664
+// Function ID: 9665
 // Name: useCurrentEmbeddedApplication
-// Dependencies: [32, 9638, 7168, 2]
+// Dependencies: [32, 9665, 7182, 2]
 // Exports: default
 
-// Module 9637 (useCurrentEmbeddedApplication)
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7168 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 9638 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+// Module 9664 (useCurrentEmbeddedApplication)
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7182 */;
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 9665 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-const result = require("set").fileFinishedImporting("modules/activities/utils/useCurrentEmbeddedApplication.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/utils/useCurrentEmbeddedApplication.tsx");
 
 export default function useCurrentEmbeddedApplication() {
   let obj = arg0;
@@ -26,6 +27,6 @@ export default function useCurrentEmbeddedApplication() {
   } else {
     items = [tmp.applicationId];
   }
-  const first = callback(useGetOrFetchApplicationsDefault(items, flag), 1)[0];
+  const first = _slicedToArray(useGetOrFetchApplicationsDefault(items, flag), 1)[0];
   return first;
 };

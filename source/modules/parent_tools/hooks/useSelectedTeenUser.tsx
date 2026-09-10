@@ -1,51 +1,54 @@
-// Module ID: 14896
-// Function ID: 14897
+// Module ID: 14922
+// Function ID: 14923
 // Name: useSelectedTeenUser
-// Dependencies: [1371, 7540, 7537, 8651, 563, 2]
+// Dependencies: [1371, 7554, 7551, 8679, 563, 2]
 // Exports: useSelectedTeenUser, useShouldLoadSettingsForSelectedTeenUser, useTeenUserForId
 
-// Module 14896 (useSelectedTeenUser)
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8651 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
-import closure_4 from "getSettings" /* 7540 */;
-import closure_5 from "freshTeenActivityWithMap" /* 7537 */;
+// Module 14922 (useSelectedTeenUser)
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8679 */;
+import UserStore from "UserStore" /* 1371 */;
+import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7554 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7551 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useSelectedTeenUser.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useSelectedTeenUser.tsx");
 
 export const useSelectedTeenUser = function useSelectedTeenUser() {
-  const _require = useIsInAdultAgeGroupDefault();
-  const items = [closure_5, closure_3];
-  return _require(563).useStateFromStores(items, () => {
+  _require = useIsInAdultAgeGroupDefault();
+  const items = [FamilyCenterStore, UserStore];
+  return require("useStateFromStores").useStateFromStores(items, () => {
     if (true !== closure_0) {
-      return closure_1_3.getCurrentUser();
+      return UserStore.getCurrentUser();
     } else {
-      const selectedTeenId = closure_1_5.getSelectedTeenId();
+      const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
       let user;
       if (null !== selectedTeenId) {
-        user = closure_1_3.getUser(selectedTeenId);
+        user = UserStore.getUser(selectedTeenId);
       }
       return user;
     }
   });
 };
 export const useTeenUserForId = function useTeenUserForId(gifterUserId) {
-  const _require = gifterUserId;
-  const items = [closure_3];
-  return _require(563).useStateFromStores(items, () => {
-    const user = closure_1_3.getUser(closure_0);
+  _require = gifterUserId;
+  const items = [UserStore];
+  return require("useStateFromStores").useStateFromStores(items, () => {
+    const user = UserStore.getUser(closure_0);
     return null != user ? user : undefined;
   });
 };
 export const useShouldLoadSettingsForSelectedTeenUser = function useShouldLoadSettingsForSelectedTeenUser() {
-  selectedTeenId = selectedTeenId.getSelectedTeenId();
-  const items = [closure_4];
+  const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
+  const items = [FamilyCenterControlledSettingsStore];
   const stateFromStoresObject = selectedTeenId(563).useStateFromStoresObject(items, () => {
     let hasSettingsForUserResult = null != selectedTeenId;
     if (hasSettingsForUserResult) {
-      hasSettingsForUserResult = closure_1_4.hasSettingsForUser(tmp);
+      hasSettingsForUserResult = FamilyCenterControlledSettingsStore.hasSettingsForUser(tmp);
     }
-    return { hasLoadedSettings: hasSettingsForUserResult, isLoading: closure_1_4.isLoading };
+    return { hasLoadedSettings: hasSettingsForUserResult, isLoading: FamilyCenterControlledSettingsStore.isLoading };
   });
   const hasLoadedSettings = stateFromStoresObject.hasLoadedSettings;
   let tmp4 = null !== selectedTeenId;

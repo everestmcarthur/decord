@@ -1,56 +1,56 @@
-// Module ID: 12101
-// Function ID: 12102
-// Name: usePinnedSearchBarBottomBorder
-// Dependencies: [19, 21, 4560, 576, 4296, 4974, 4978, 2]
+// Module ID: 12127
+// Function ID: 12128
+// Name: SearchBarBottomBorder
+// Dependencies: [19, 21, 4574, 576, 4310, 4988, 4992, 2]
 // Exports: usePinnedSearchBarBottomBorder
 
-// Module 12101 (usePinnedSearchBarBottomBorder)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12127 (SearchBarBottomBorder)
+import nativeDefault from "native" /* 576 */;
+import spring from "spring" /* 4988 */;
+import springPresets from "springPresets" /* 4992 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-createCacheKey = { border: null };
-createCacheKey = { borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 };
-createCacheKey[0] = createCacheKey;
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-let closure_6 = { code: "function SearchBarBottomBorderTsx1(){const{withSpring,scrollPosition,triggerScrollHeight,springStandard}=this.__closure;return{opacity:withSpring(scrollPosition.get()>triggerScrollHeight?1:0,springStandard)};}" };
-let result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/search/SearchBarBottomBorder.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { border: { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 } };
+let closure_5 = createStyles.createStyles(obj2);
+const __initData = { code: "function SearchBarBottomBorderTsx1(){const{withSpring,scrollPosition,triggerScrollHeight,springStandard}=this.__closure;return{opacity:withSpring(scrollPosition.get()>triggerScrollHeight?1:0,springStandard)};}" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/app_launcher/native/screens/search/SearchBarBottomBorder.tsx");
 
 export const usePinnedSearchBarBottomBorder = function usePinnedSearchBarBottomBorder(arg0) {
   ({ key, triggerScrollHeight } = arg0);
   if (triggerScrollHeight === undefined) {
     triggerScrollHeight = 1;
   }
-  let sharedValue;
-  let obj = triggerScrollHeight(4296);
-  sharedValue = obj.useSharedValue(0);
+  let tmp = closure_5();
+  const sharedValue = triggerScrollHeight(4310).useSharedValue(0);
   const items = [key, sharedValue];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     const result = sharedValue.set(0);
   }, items);
   const items1 = [sharedValue];
-  const callback = React.useCallback((offset) => {
+  const callback = noop.useCallback((offset) => {
     const result = sharedValue.set(offset.offset);
   }, items1);
-  const tmp = callback();
+  let obj = triggerScrollHeight(4310);
   const fn = function u() {
-    let obj = triggerScrollHeight(closure_1_2[5]);
     let num = 0;
     if (sharedValue.get() > triggerScrollHeight) {
       num = 1;
     }
-    obj = { opacity: obj.withSpring(num, triggerScrollHeight(closure_1_2[6]).springStandard) };
-    return obj;
+    return { opacity: spring.withSpring(num, springPresets.springStandard) };
   };
-  obj = { withSpring: triggerScrollHeight(4974).withSpring, scrollPosition: sharedValue, triggerScrollHeight, springStandard: triggerScrollHeight(4978).springStandard };
-  fn.__closure = obj;
+  const obj2 = triggerScrollHeight(4310);
+  fn.__closure = { withSpring: triggerScrollHeight(4988).withSpring, scrollPosition: sharedValue, triggerScrollHeight, springStandard: triggerScrollHeight(4992).springStandard };
   fn.__workletHash = 5466161440826;
-  fn.__initData = closure_6;
-  obj = { scrollHandler: callback, bottomBorderComponent: null };
-  const animatedStyle = triggerScrollHeight(4296).useAnimatedStyle(fn);
+  fn.__initData = __initData;
+  const obj4 = { scrollHandler: callback, bottomBorderComponent: null };
+  const animatedStyle = obj2.useAnimatedStyle(fn);
+  const obj5 = { style: null };
   const items2 = [tmp.border, animatedStyle];
-  obj[1] = jsx(sharedValue(4296).View, { style: items2 }, key);
-  return obj;
+  obj5.style = items2;
+  obj4.bottomBorderComponent = jsx(sharedValue(4310).View, { style: null }, key);
+  return obj4;
 };

@@ -1,65 +1,60 @@
-// Module ID: 12557
-// Function ID: 12558
+// Module ID: 12583
+// Function ID: 12584
 // Name: GuildPowerupsBoostInfo
-// Dependencies: [17, 4450, 21, 4560, 576, 8095, 12558, 9380, 4556, 2]
+// Dependencies: [17, 4464, 21, 4574, 576, 8111, 12584, 9407, 4570, 2]
 // Exports: default
 
-// Module 12557 (GuildPowerupsBoostInfo)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4450 */;
-import Text from "Text" /* 4556 */;
-import apexExperiment from "apexExperiment" /* 8095 */;
-import BoostGemIcon from "BoostGemIcon" /* 9380 */;
-import getGuildPowerupsBoostInfoText from "getGuildPowerupsBoostInfoText" /* 12558 */;
+// Module 12583 (GuildPowerupsBoostInfo)
+import _mod17 from "module_17" /* 17 */;
+import nativeDefault from "native" /* 576 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4464 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 8111 */;
+import BoostGemIcon from "BoostGemIcon" /* 9407 */;
+import getGuildPowerupsBoostInfoText from "getGuildPowerupsBoostInfoText" /* 12584 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import createStyles from "createStyles" /* 4574 */;
+import size from "module_2" /* 2 */;
 
-const View = get_ActivityIndicator.View;
-const BoostInfoType = BoostedGuildTiers.BoostInfoType;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let obj = { container: null, headerContainer: null };
-obj = { flex: 1, alignItems: "center", justifyContent: "center", paddingVertical: ThemesDefault.space.PX_12 };
-obj[0] = obj;
-obj[1] = { flexDirection: "row", alignItems: "center", justifyContent: "center", display: "flex" };
-let closure_7 = createCacheKey.createStyles(obj);
-const result = set.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsBoostInfo.tsx");
+const View = _mod17.View;
+const BoostInfoType = GuildPowerupsConstants.BoostInfoType;
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+let obj = { container: { flex: 1, alignItems: "center", justifyContent: "center", paddingVertical: nativeDefault.space.PX_12 }, headerContainer: { flexDirection: "row", alignItems: "center", justifyContent: "center", display: "flex" } };
+let closure_7 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsBoostInfo.tsx");
 
 export default function GuildPowerupsBoostInfo(arg0) {
   ({ count, type } = arg0);
-  const tmp = callback();
-  let obj = apexExperiment;
-  const manaTypeConsolidationExperiment = obj.useManaTypeConsolidationExperiment("GuildPowerupsBoostInfo");
-  obj1 = getGuildPowerupsBoostInfoText;
-  const guildPowerupsBoostInfoText = obj1.getGuildPowerupsBoostInfoText(count, type);
-  obj = { style: tmp.container, accessible: true, accessibilityLabel: "" + count + ", " + guildPowerupsBoostInfoText, children: null };
-  obj = { style: tmp.headerContainer, importantForAccessibility: "no-hide-descendants", accessible: false, children: null };
+  const tmp = closure_7();
+  const manaTypeConsolidationExperiment = ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("GuildPowerupsBoostInfo");
+  const guildPowerupsBoostInfoText = getGuildPowerupsBoostInfoText.getGuildPowerupsBoostInfoText(count, type);
+  const obj3 = { style: tmp.container, accessible: true, accessibilityLabel: "" + count + ", " + guildPowerupsBoostInfoText, children: null };
+  const obj4 = { style: tmp.headerContainer, importantForAccessibility: "no-hide-descendants", accessible: false, children: null };
   if (type === BoostInfoType.AVAILABLE) {
-    let TEXT_MUTED = ThemesDefault.unsafe_rawColors.GUILD_BOOSTING_PINK;
+    let TEXT_MUTED = nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK;
   } else {
-    TEXT_MUTED = ThemesDefault.colors.TEXT_MUTED;
+    TEXT_MUTED = nativeDefault.colors.TEXT_MUTED;
   }
-  const items = [closure_5(BoostGemIcon.BoostGemIcon, { size: "sm", color: TEXT_MUTED }), ];
+  const items = [hasOwnProperty(BoostGemIcon.BoostGemIcon, { size: "sm", color: TEXT_MUTED }), ];
   let str = "text-lg/medium";
   if (manaTypeConsolidationExperiment) {
     str = "experimental/body-lg/semibold";
   }
-  obj1 = { variant: str, color: null, importantForAccessibility: "no-hide-descendants", children: null };
+  const obj5 = { variant: str, color: null, importantForAccessibility: "no-hide-descendants", children: null };
   let str2 = "text-subtle";
   if (type === BoostInfoType.AVAILABLE) {
     str2 = "text-strong";
   }
-  obj1[1] = str2;
-  obj1[3] = count;
-  items[1] = closure_5(Text.Text, obj1);
-  obj[3] = items;
-  const items1 = [closure_6(View, obj), ];
+  obj5.color = str2;
+  obj5.children = count;
+  items[1] = hasOwnProperty(Text_Text.Text, obj5);
+  obj4.children = items;
+  const items1 = [timestampProducer(View, obj4), ];
   let str3 = "text-md/normal";
   if (manaTypeConsolidationExperiment) {
     str3 = "text-sm/normal";
   }
-  items1[1] = closure_5(Text.Text, { variant: str3, color: "text-subtle", importantForAccessibility: "no-hide-descendants", children: guildPowerupsBoostInfoText });
-  obj[3] = items1;
-  return closure_6(View, obj);
+  items1[1] = hasOwnProperty(Text_Text.Text, { variant: str3, color: "text-subtle", importantForAccessibility: "no-hide-descendants", children: guildPowerupsBoostInfoText });
+  obj3.children = items1;
+  return timestampProducer(View, obj3);
 };

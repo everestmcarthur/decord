@@ -1,17 +1,19 @@
-// Module ID: 14935
-// Function ID: 14936
-// Name: ScheduleRuleRow
-// Dependencies: [17, 1074, 21, 4560, 576, 10088, 5605, 4556, 1114, 2396, 14896, 1483, 5687, 2]
+// Module ID: 14961
+// Function ID: 14962
+// Name: FamilyCenterParentalControlsScreenTime
+// Dependencies: [17, 1074, 21, 4574, 576, 10115, 5619, 4570, 1114, 2396, 14922, 1483, 5701, 2]
 // Exports: default
 
-// Module 14935 (ScheduleRuleRow)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 576 */;
-import ME from "ME" /* 1074 */;
-import messagesProxyDefault from "messagesProxy" /* 2396 */;
+// Module 14961 (FamilyCenterParentalControlsScreenTime)
+import _mod17 from "module_17" /* 17 */;
+import nativeDefault from "native" /* 576 */;
+import Constants from "Constants" /* 1074 */;
+import _modDef2396 from "module_2396" /* 2396 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import createStyles from "createStyles" /* 4574 */;
+import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 function ScheduleRuleRow(rule) {
   rule = rule.rule;
@@ -19,56 +21,51 @@ function ScheduleRuleRow(rule) {
   if (readOnly === undefined) {
     readOnly = false;
   }
-  let obj = rule(10088);
-  const scheduleRuleDateRange = obj.getScheduleRuleDateRange(rule);
-  const obj2 = rule(10088);
-  obj = { label: scheduleRuleDateRange, subLabel: rule(10088).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
+  const scheduleRuleDateRange = rule(10115).getScheduleRuleDateRange(rule);
+  let obj = rule(10115);
+  const obj2 = rule(10115);
+  const obj3 = { label: scheduleRuleDateRange, subLabel: rule(10115).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
   const intl = rule(1114).intl;
   const string = intl.string;
-  const tmp4 = messagesProxyDefault;
+  const tmp4 = _modDef2396;
   if (rule.enabled) {
     let stringResult = string(tmp4["8vDHRq"]);
   } else {
     stringResult = string(tmp4["4z9fN+"]);
   }
-  obj[2] = closure_5(rule(4556).Text, { variant: "text-sm/medium", color: "text-subtle", children: stringResult });
-  obj[3] = !readOnly;
+  obj3.trailing = closure_5(rule(4570).Text, { variant: "text-sm/medium", color: "text-subtle", children: stringResult });
+  obj3.arrow = !readOnly;
   let fn;
   if (!readOnly) {
     fn = () => {
-      let obj = { teenId: closure_1, rule: null };
-      obj = {};
+      const obj = { teenId, rule: null };
       const merged = Object.assign(rule);
-      obj[1] = obj;
-      return navigation.navigate(closure_1_4.FAMILY_CENTER_SCHEDULE_DOWNTIME, obj);
+      obj.rule = {};
+      return navigation.navigate(UserSettingsSections.FAMILY_CENTER_SCHEDULE_DOWNTIME, obj);
     };
   }
-  obj[4] = fn;
-  return closure_5(rule(5605).TableRow, obj);
+  obj3.onPress = fn;
+  return closure_5(rule(5619).TableRow, obj3);
 }
-const View = get_ActivityIndicator.View;
-const UserSettingsSections = ME.UserSettingsSections;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let obj = { header: null, container: null };
-obj = { paddingTop: ThemesDefault.space.PX_24 };
-obj[0] = obj;
-obj[1] = { paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
-let closure_7 = createCacheKey.createStyles(obj);
-let obj1 = { paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
-const result = set.fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsScreenTime.tsx");
+const View = _mod17.View;
+const UserSettingsSections = Constants.UserSettingsSections;
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+let obj = { header: { paddingTop: nativeDefault.space.PX_24 }, container: null };
+let obj2 = { paddingTop: nativeDefault.space.PX_24 };
+obj.container = { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
+let closure_7 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsScreenTime.tsx");
 
 export default function FamilyCenterParentalControlsScreenTime(readOnly) {
   let flag = readOnly.readOnly;
   if (flag === undefined) {
     flag = false;
   }
-  importDefault = undefined;
   let id;
-  const tmp = callback3();
-  let obj = flag(id[10]);
-  const selectedTeenUser = obj.useSelectedTeenUser();
-  obj1 = flag(id[11]);
-  importDefault = obj1.useNavigation();
+  const tmp = closure_7();
+  const selectedTeenUser = flag(id[10]).useSelectedTeenUser();
+  const obj = flag(id[10]);
+  importDefault = flag(id[11]).useNavigation();
   id = undefined;
   if (selectedTeenUser != null) {
     id = selectedTeenUser.id;
@@ -83,21 +80,19 @@ export default function FamilyCenterParentalControlsScreenTime(readOnly) {
   if (rules == null) {
     rules = [];
   }
+  const obj2 = flag(id[11]);
   const tmp2Result = flag(id[5]);
   let tmp6 = null;
   if (null != id) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
-    obj = { variant: "text-sm/semibold", color: "text-subtle", style: null, children: null };
-    obj[2] = tmp.header;
+    const obj3 = { style: tmp.container, children: null };
+    const obj4 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.header, children: null };
     const intl = tmp2(tmp3[8]).intl;
-    obj[3] = intl.string(importDefault(tmp3[9])["72CmJd"]);
-    const items = [callback(tmp2(tmp3[7]).Text, obj), ];
-    obj1 = { hasIcons: false, children: null };
-    obj1[1] = sortRulesByStartTimeResult.map((rule) => closure_1_5(closure_1_8, { rule, teenId: id, navigation: closure_1, readOnly: flag }, rule.ruleId));
-    items[1] = callback(tmp2(tmp3[12]).TableRowGroup, obj1);
-    obj[1] = items;
-    tmp6 = callback2(View, obj);
+    obj4.children = intl.string(require("module_2396")["72CmJd"]);
+    const items = [closure_5(tmp2(tmp3[7]).Text, obj4), ];
+    const obj5 = { hasIcons: false, children: sortRulesByStartTimeResult.map((rule) => hasOwnProperty(ScheduleRuleRow, { rule, teenId: id, navigation, readOnly: flag }, rule.ruleId)) };
+    items[1] = closure_5(tmp2(tmp3[12]).TableRowGroup, obj5);
+    obj3.children = items;
+    tmp6 = closure_6(View, obj3);
   }
   return tmp6;
 };

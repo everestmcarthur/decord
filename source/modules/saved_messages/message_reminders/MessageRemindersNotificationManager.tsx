@@ -1,21 +1,22 @@
-// Module ID: 17483
-// Function ID: 17484
-// Name: scheduleNextNotification
-// Dependencies: [11665, 7855, 573, 1090, 7118, 2]
+// Module ID: 17514
+// Function ID: 17515
+// Name: MessageRemindersNotificationManager
+// Dependencies: [11691, 7869, 573, 1090, 7132, 2]
 
-// Module 17483 (scheduleNextNotification)
-import setDefault from "set" /* 1090 */;
-import initializeDefault from "initialize" /* 7118 */;
-import closure_3 from "getTimeSafe" /* 11665 */;
+// Module 17514 (MessageRemindersNotificationManager)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11691 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-let require = arg1;
+let require = fn;
 function scheduleNextNotification() {
   if (obj.isForLaterExperimentOn("MessageRemindersNotificationManager")) {
     if (null != timeout) {
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
     }
-    messageReminders = messageReminders.getMessageReminders();
+    const messageReminders = SavedMessagesStore.getMessageReminders();
     const found = messageReminders.find((saveData) => {
       let tmp = null != saveData.saveData.dueAt;
       if (tmp) {
@@ -25,31 +26,28 @@ function scheduleNextNotification() {
       }
       return tmp;
     });
-    let dueAt;
+    let dueAt1;
     if (found != null) {
       const saveData = found.saveData;
       if (saveData != null) {
-        dueAt = saveData.dueAt;
+        dueAt1 = saveData.dueAt;
       }
     }
-    if (null != dueAt) {
+    if (null != dueAt1) {
       let _Date = Date;
       const timestamp = Date.now();
-      dueAt = found.saveData.dueAt;
-      const sum = timestamp + setDefault.Millis.WEEK;
+      const dueAt = found.saveData.dueAt;
+      const sum = timestamp + DurationsDefault.Millis.WEEK;
       if (dueAt.getTime() <= sum) {
         const dueAt2 = found.saveData.dueAt;
         const _Date2 = Date;
         const time = dueAt2.getTime();
         const _setTimeout = setTimeout;
         timeout = setTimeout(() => {
-          let obj = found(closure_1_2[1]);
           if (obj.isForLaterExperimentOn("MessageRemindersNotificationManager")) {
-            obj = { type: "MESSAGE_REMINDER_DUE", savedMessage: null };
-            obj[1] = found;
-            closure_1_1(closure_1_2[2]).dispatch(obj);
-            closure_1_5();
-            const obj2 = closure_1_1(closure_1_2[2]);
+            const obj3 = { type: "MESSAGE_REMINDER_DUE", savedMessage: found };
+            DispatcherDefault.dispatch(obj3);
+            scheduleNextNotification();
           }
         }, time - Date.now());
       }
@@ -59,8 +57,7 @@ function scheduleNextNotification() {
   }
 }
 let c4 = null;
-initializeDefault;
-let prototype = function MessageRemindersNotificationManager() {
+const prototype = function MessageRemindersNotificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   applyArgumentsResult.actions = {
@@ -75,13 +72,14 @@ let prototype = function MessageRemindersNotificationManager() {
     }
   };
   applyArgumentsResult.handleUpdates = function handleUpdates() {
-    callback();
+    scheduleNextNotification();
   };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
-const result = require("set").fileFinishedImporting("modules/saved_messages/message_reminders/MessageRemindersNotificationManager.tsx");
+const prototype1 = new prototype();
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/saved_messages/message_reminders/MessageRemindersNotificationManager.tsx");
 
-export default prototype;
+export default prototype1;

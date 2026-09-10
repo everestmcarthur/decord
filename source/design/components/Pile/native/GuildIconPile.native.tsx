@@ -1,44 +1,42 @@
-// Module ID: 12622
-// Function ID: 12623
+// Module ID: 12648
+// Function ID: 12649
 // Name: GuildIconPile
-// Dependencies: [19, 21, 5584, 11005, 12623, 8818, 11006, 2]
+// Dependencies: [19, 21, 5598, 11032, 12649, 8847, 11033, 2]
 // Exports: GuildIconPile
 
-// Module 12622 (GuildIconPile)
-import GuildIconSizes from "GuildIconSizes" /* 5584 */;
-import SolidCutout from "SolidCutout" /* 8818 */;
-import Pile from "Pile" /* 11005 */;
-import map from "map" /* 11006 */;
-import getListSummaryLabel from "getListSummaryLabel" /* 12623 */;
-import closure_2 from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 12648 (GuildIconPile)
+import GuildIcon from "GuildIcon" /* 5598 */;
+import ClipView from "ClipView" /* 8847 */;
+import Pile from "Pile" /* 11032 */;
+import PileOverflow from "PileOverflow" /* 11033 */;
+import ListUtils from "ListUtils" /* 12649 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("set").fileFinishedImporting("design/components/Pile/native/GuildIconPile.native.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Pile/native/GuildIconPile.native.tsx");
 
 export const GuildIconPile = function GuildIconPile(arg0) {
   ({ totalCount, children } = arg0);
-  const Children = React.Children;
+  const Children = noop.Children;
   ({ size, names } = arg0);
   const countResult = Children.count(children);
-  const tmp4 = GuildIconSizes.ImageSizes[size];
-  let obj = { "aria-label": getListSummaryLabel.getListSummaryLabel(names, totalCount), shape: SolidCutout.CutoutShape.RoundedRect, size: tmp4, gap: null, depthX: 0.25, children: null };
+  const tmp4 = GuildIcon.ImageSizes[size];
+  const obj = { "aria-label": ListUtils.getListSummaryLabel(names, totalCount), shape: ClipView.CutoutShape.RoundedRect, size: tmp4, gap: null, depthX: 0.25, children: null };
   let num = 3;
   if (tmp4 <= 40) {
     num = 2;
   }
-  obj[3] = num;
+  obj.gap = num;
   const items = [children, ];
   let tmp6 = null != totalCount && countResult < totalCount;
   if (tmp6) {
-    obj = { size: null, borderRadius: null, value: null };
-    obj[0] = tmp4;
-    obj[1] = tmp4 / 3;
-    obj[2] = totalCount - countResult;
-    tmp6 = callback(map.PileOverflow, obj);
+    const obj3 = { size: tmp4, borderRadius: tmp4 / 3, value: totalCount - countResult };
+    tmp6 = React3(PileOverflow.PileOverflow, obj3);
   }
   items[1] = tmp6;
-  obj[5] = items;
-  return closure_4(Pile.Pile, obj);
+  obj.children = items;
+  return React4(Pile.Pile, obj);
 };

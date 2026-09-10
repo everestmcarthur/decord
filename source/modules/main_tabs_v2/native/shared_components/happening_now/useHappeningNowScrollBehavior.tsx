@@ -1,25 +1,26 @@
-// Module ID: 16071
-// Function ID: 16072
+// Module ID: 16101
+// Function ID: 16102
 // Name: useHappeningNowScrollBehavior
 // Dependencies: [32, 19, 2]
 // Exports: default, useHappeningNowScrollSnapping
 
-// Module 16071 (useHappeningNowScrollBehavior)
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "noop" /* 19 */;
+// Module 16101 (useHappeningNowScrollBehavior)
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/useHappeningNowScrollBehavior.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/useHappeningNowScrollBehavior.tsx");
 
 export default function useHappeningNowScrollBehavior(arg0, arg1) {
-  const callback = arg0;
-  const React = arg1;
-  const tmp = callback(React.useState(false), 2);
+  closure_0 = arg0;
+  closure_1 = arg1;
+  const tmp = _slicedToArray(noop.useState(false), 2);
   closure_2 = tmp[1];
   const items = [arg0, arg1];
   const items1 = [
-    React.useCallback((nativeEvent) => {
-      callback2(nativeEvent.nativeEvent.contentOffset.x < closure_0);
-      callback(nativeEvent.nativeEvent.contentOffset.x, nativeEvent.nativeEvent.layoutMeasurement.width);
+    noop.useCallback((nativeEvent) => {
+      closure_2(nativeEvent.nativeEvent.contentOffset.x < closure_0);
+      closure_1(nativeEvent.nativeEvent.contentOffset.x, nativeEvent.nativeEvent.layoutMeasurement.width);
     }, items),
     tmp[0]
   ];
@@ -46,8 +47,6 @@ export const useHappeningNowScrollSnapping = function useHappeningNowScrollSnapp
   if (0 < num) {
     do {
       let current2 = listRef.current;
-      let tmp = num2;
-      let tmp2 = num3;
       let num4;
       if (current2 != null) {
         let layout = current2.getLayout(num2);

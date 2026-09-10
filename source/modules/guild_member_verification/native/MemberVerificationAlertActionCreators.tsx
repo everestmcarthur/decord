@@ -1,222 +1,217 @@
-// Module ID: 5527
-// Function ID: 5528
-// Name: openMemberVerificationSuccessAlert
-// Dependencies: [19, 21, 1874, 4905, 5528, 1896, 5536, 5540, 4975, 1114, 5544, 7090, 7092, 2]
+// Module ID: 5541
+// Function ID: 5542
+// Name: MemberVerificationAlertActionCreators
+// Dependencies: [19, 21, 1874, 4919, 5542, 1896, 5550, 5554, 4989, 1114, 5558, 7104, 7106, 2]
 // Exports: closeMemberVerificationAlert, openMemberVerificationCancelPendingAlert, openMemberVerificationIncompleteAlert, openMemberVerificationPendingAlert, openMemberVerificationRejectedAlert, openMemberVerificationSuccessAlert, openMemberVerificationUpdateAlert
 
-// Module 5527 (openMemberVerificationSuccessAlert)
-import noopAll from "noop" /* 19 */;
-import dismissGlobalKeyboardAll from "dismissGlobalKeyboard" /* 1874 */;
-import _modDef4905 from "module_4905" /* 4905 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 5541 (MemberVerificationAlertActionCreators)
+import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1874 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4919 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-let result = require("set").fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationAlertActionCreators.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationAlertActionCreators.tsx");
 
 export const openMemberVerificationSuccessAlert = function openMemberVerificationSuccessAlert(guildId, arg1) {
   closure_0 = guildId;
   importDefault = arg1;
-  let obj = dismissGlobalKeyboardAll;
-  const result = obj.dismissGlobalKeyboard();
-  obj = {
+  const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
+  actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return guildId(closure_1_3[5])(closure_1_3[4], closure_1_3.paths).then((arg0) => {
-        closure_0 = arg0.default;
+      return asyncRequireImpl(5542, dependencyMap.paths).then((result) => {
+        closure_0 = result.default;
         return (arg0) => {
           const obj = {};
           const merged = Object.assign(arg0);
-          obj.guildId = closure_0;
-          obj.handleConfirmAndAck = closure_1_1;
-          return closure_2_4(closure_0, obj);
+          obj.guildId = guildId;
+          obj.handleConfirmAndAck = handleConfirmAndAck;
+          return <closure_0 />;
         };
       });
     }
-  };
-  _modDef4905.openLazy(obj);
+  });
 };
-export const openMemberVerificationPendingAlert = function openMemberVerificationPendingAlert(guildId) {
+export const openMemberVerificationPendingAlert = function openMemberVerificationPendingAlert(guildId, arg1) {
   closure_0 = guildId;
   importDefault = arg1;
-  let obj = dismissGlobalKeyboardAll;
-  const result = obj.dismissGlobalKeyboard();
-  obj = {
+  const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
+  actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return guildId(closure_1_3[5])(closure_1_3[6], closure_1_3.paths).then((arg0) => {
-        closure_0 = arg0.default;
+      return asyncRequireImpl(5550, dependencyMap.paths).then((result) => {
+        closure_0 = result.default;
         return (arg0) => {
           const obj = {};
           const merged = Object.assign(arg0);
-          obj.guildId = closure_0;
-          closure_0 = closure_1_1;
-          obj.onClose = (arg0) => {
-            closure_1_1(closure_1_3[3]).close();
-            if (callback != null) {
-              callback();
+          obj.guildId = guildId;
+          closure_0 = closure_2_1;
+          obj.onClose = () => {
+            closure_2_1(closure_2_3[3]).close();
+            if (closure_0 != null) {
+              closure_0();
             }
           };
-          return closure_2_4(closure_0, obj);
+          return <closure_0 />;
         };
       });
     }
-  };
-  _modDef4905.openLazy(obj);
+  });
 };
 export const openMemberVerificationCancelPendingAlert = function openMemberVerificationCancelPendingAlert(arg0) {
   ({ guildId: require, confirmText: importDefault, subtitleText: importAll, onClose: dependencyMap } = arg0);
-  let obj = dismissGlobalKeyboardAll;
-  const result = obj.dismissGlobalKeyboard();
-  obj = {
+  const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
+  actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return closure_1_0(closure_1_3[5])(closure_1_3[7], closure_1_3.paths).then((arg0) => {
-        closure_0 = arg0.default;
+      return guildId(paths[5])(paths[7], paths.paths).then((result) => {
+        closure_0 = result.default;
         return (arg0) => {
           const obj = {};
           const merged = Object.assign(arg0);
-          obj.guildId = closure_0;
-          obj.confirmText = closure_1_1;
-          obj.subtitleText = closure_1_2;
-          closure_0 = closure_1_3;
-          obj.onClose = (arg0) => {
-            closure_1_1(closure_1_3[3]).close();
-            if (callback != null) {
-              callback();
+          obj.guildId = guildId;
+          obj.confirmText = confirmText;
+          obj.subtitleText = subtitleText;
+          closure_0 = paths;
+          obj.onClose = () => {
+            closure_2_1(closure_2_3[3]).close();
+            if (closure_0 != null) {
+              closure_0();
             }
           };
-          return closure_2_4(closure_0, obj);
+          return closure_3_4(closure_0, obj);
         };
       });
     }
-  };
-  _modDef4905.openLazy(obj);
+  });
 };
 export const openMemberVerificationRejectedAlert = function openMemberVerificationRejectedAlert(canWithdraw) {
-  ({ guildId: onClose, onClose } = canWithdraw);
+  ({ guildId: require, onClose } = canWithdraw);
   dependencyMap = undefined;
-  const fn = (arg0) => {
-    closure_1_1(closure_1_3[3]).close();
-    if (callback != null) {
-      callback();
+  closure_129_0 = onClose;
+  const onPress = () => {
+    closure_2_1(closure_2_3[3]).close();
+    if (closure_0 != null) {
+      closure_0();
     }
   };
   if (canWithdraw.canWithdraw) {
-    let obj = { text: null, variant: "destructive", onPress: null };
+    let obj2 = { text: null, variant: "destructive", onPress: null };
     const intl2 = tmp2(1114).intl;
-    obj[0] = intl2.string(tmp2(1114).t.g9tK0o);
-    obj[2] = function onPress() {
-      if (typeof fn !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      let obj = onClose(paths[3]);
-      obj.close();
-      if (onClose != null) {
-        onClose();
-      }
-      obj = { guildId: onClose };
-      ({ guildId: onClose, confirmText: onClose, subtitleText: fn, onClose: closure_3 } = obj);
-      const result = fn(paths[2]).dismissGlobalKeyboard();
-      const obj3 = fn(paths[2]);
-      obj = {
-        importer() {
-          return closure_1_0(closure_1_3[5])(closure_1_3[7], closure_1_3.paths).then((arg0) => {
-            closure_0 = arg0.default;
-            return (arg0) => {
-              const obj = {};
-              const merged = Object.assign(arg0);
-              obj.guildId = closure_0;
-              obj.confirmText = closure_1_1;
-              obj.subtitleText = closure_1_2;
-              closure_0 = closure_1_3;
-              obj.onClose = function onClose() { ... };
-              return closure_2_4(closure_0, obj);
-            };
-          });
+    obj2.text = intl2.string(tmp2(1114).t.g9tK0o);
+    obj2.onPress = function onPress() {
+      if (typeof fn === "function") {
+        onClose(paths[3]).close();
+        if (closure_130_0 != null) {
+          closure_130_0();
         }
-      };
-      onClose(paths[3]).openLazy(obj);
+        const obj2 = { guildId };
+        ({ guildId: closure_0, confirmText: onClose, subtitleText: fn, onClose: closure_3 } = obj2);
+        let obj = onClose(paths[3]);
+        const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
+        const obj5 = {
+          importer() {
+              return guildId(paths[5])(paths[7], paths.paths).then((result) => {
+                closure_0 = result.default;
+                return (arg0) => {
+                  const obj = {};
+                  const merged = Object.assign(arg0);
+                  obj.guildId = guildId;
+                  obj.confirmText = confirmText;
+                  obj.subtitleText = subtitleText;
+                  closure_0 = paths;
+                  obj.onClose = function onClose() { ... };
+                  return closure_3_4(closure_0, obj);
+                };
+              });
+            }
+        };
+        actions_AlertActionCreatorsDefault.openLazy(obj5);
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
     };
+    let obj = obj2;
   } else {
     obj = { text: null, onPress: null };
     const intl = tmp2(1114).intl;
-    obj[0] = intl.string(tmp2(1114).t.BddRzS);
-    obj[1] = fn;
+    obj.text = intl.string(tmp2(1114).t.BddRzS);
+    obj.onPress = onPress;
   }
-  dependencyMap = jsx(onClose(4975).Button, obj);
-  let result = fn(1874).dismissGlobalKeyboard();
-  let obj3 = fn(1874);
-  const tmp = jsx;
-  obj = {
+  dependencyMap = jsx(components_Button_Button.Button, obj);
+  let result = onPress(1874).dismissGlobalKeyboard();
+  let obj3 = onPress(1874);
+  onClose(4919).openLazy({
     importer() {
-      return onClose(paths[5])(paths[10], paths.paths).then((arg0) => {
-        closure_0 = arg0.default;
+      return asyncRequireImpl(5558, dependencyMap.paths).then((result) => {
+        closure_0 = result.default;
         return (arg0) => {
           const obj = {};
           const merged = Object.assign(arg0);
-          obj.guildId = closure_0;
-          closure_0 = closure_1_1;
-          obj.onClose = (arg0) => {
-            closure_1_1(closure_1_3[3]).close();
-            if (callback != null) {
-              callback();
+          obj.guildId = guildId;
+          closure_0 = onClose;
+          obj.onClose = () => {
+            closure_2_1(closure_2_3[3]).close();
+            if (closure_0 != null) {
+              closure_0();
             }
           };
-          obj.secondaryButton = closure_1_3;
-          return closure_2_4(closure_0, obj);
+          obj.secondaryButton = secondaryButton;
+          return <closure_0 />;
         };
       });
     }
-  };
-  onClose(4905).openLazy(obj);
+  });
 };
 export const openMemberVerificationUpdateAlert = function openMemberVerificationUpdateAlert() {
-  let obj = dismissGlobalKeyboardAll;
-  const result = obj.dismissGlobalKeyboard();
-  obj = {
+  const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
+  actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return callback(paths[5])(paths[11], paths.paths).then((arg0) => {
-        closure_0 = arg0.default;
+      return require("asyncRequireImpl")(paths[11], paths.paths).then((result) => {
+        closure_0 = result.default;
         return (arg0) => {
           const merged = Object.assign(arg0);
-          return closure_1_4(closure_0, {});
+          return closure_2_4(closure_0, {});
         };
       });
     }
-  };
-  _modDef4905.openLazy(obj);
+  });
 };
 export function closeMemberVerificationAlert(arg0) {
   closure_0 = arg0;
-  return (arg0) => {
-    closure_1_1(closure_1_3[3]).close();
-    if (callback != null) {
-      callback();
+  return () => {
+    closure_2_1(closure_2_3[3]).close();
+    if (closure_0 != null) {
+      closure_0();
     }
   };
 }
-export const openMemberVerificationIncompleteAlert = function openMemberVerificationIncompleteAlert(closure_0) {
+export const openMemberVerificationIncompleteAlert = function openMemberVerificationIncompleteAlert(guildId, arg1) {
+  closure_0 = guildId;
   importDefault = arg1;
-  let obj = dismissGlobalKeyboardAll;
-  const result = obj.dismissGlobalKeyboard();
-  obj = {
+  const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
+  actions_AlertActionCreatorsDefault.openLazy({
     isDismissable: true,
     importer() {
-      return callback(closure_1_3[5])(closure_1_3[12], closure_1_3.paths).then((arg0) => {
-        closure_0 = arg0.default;
+      return asyncRequireImpl(7106, dependencyMap.paths).then((result) => {
+        closure_0 = result.default;
         return (arg0) => {
           const obj = {};
           const merged = Object.assign(arg0);
-          obj.guildId = closure_0;
-          closure_0 = closure_1_1;
-          obj.onClose = (arg0) => {
-            closure_1_1(closure_1_3[3]).close();
-            if (callback != null) {
-              callback();
+          obj.guildId = guildId;
+          closure_0 = closure_2_1;
+          obj.onClose = () => {
+            closure_2_1(closure_2_3[3]).close();
+            if (closure_0 != null) {
+              closure_0();
             }
           };
-          return closure_2_4(closure_0, obj);
+          return <closure_0 />;
         };
       });
     }
-  };
-  _modDef4905.openLazy(obj);
+  });
 };

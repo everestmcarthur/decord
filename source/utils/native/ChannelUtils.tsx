@@ -1,108 +1,107 @@
-// Module ID: 5028
-// Function ID: 5029
-// Name: getChannelIcon
-// Dependencies: [1957, 2021, 1979, 1371, 1074, 5029, 5030, 5031, 5032, 5033, 5034, 5035, 5036, 5037, 5038, 5039, 5040, 5041, 5042, 5043, 5044, 5045, 5046, 5047, 5048, 5049, 5050, 5051, 5052, 5053, 5054, 5055, 5056, 5057, 5060, 5061, 5062, 5063, 5064, 5065, 5066, 5067, 5068, 5069, 5070, 5071, 5072, 5073, 5074, 5075, 5076, 5077, 5078, 5079, 5080, 5081, 5082, 5083, 5084, 5085, 5086, 5087, 5088, 5089, 5090, 5091, 5092, 5093, 5094, 5095, 5096, 5097, 5098, 5099, 5100, 5101, 5102, 5103, 5104, 5105, 5106, 2]
+// Module ID: 5042
+// Function ID: 5043
+// Name: utils/ChannelUtils
+// Dependencies: [1957, 2021, 1979, 1371, 1074, 5043, 5044, 5045, 5046, 5047, 5048, 5049, 5050, 5051, 5052, 5053, 5054, 5055, 5056, 5057, 5058, 5059, 5060, 5061, 5062, 5063, 5064, 5065, 5066, 5067, 5068, 5069, 5070, 5071, 5074, 5075, 5076, 5077, 5078, 5079, 5080, 5081, 5082, 5083, 5084, 5085, 5086, 5087, 5088, 5089, 5090, 5091, 5092, 5093, 5094, 5095, 5096, 5097, 5098, 5099, 5100, 5101, 5102, 5103, 5104, 5105, 5106, 5107, 5108, 5109, 5110, 5111, 5112, 5113, 5114, 5115, 5116, 5117, 5118, 5119, 5120, 2]
 // Exports: getChannelIconComponentWithGuild, getChannelIconWithGuild, getChannelMentionIcon, getSimpleChannelIcon, getSimpleChannelIconComponent, getThreadChannelIcon
 
-// Module 5028 (getChannelIcon)
-import registerAssetDefault from "registerAsset" /* 5029 */;
-import registerAssetDefault2 from "registerAsset" /* 5030 */;
-import registerAssetDefault3 from "registerAsset" /* 5031 */;
-import registerAssetDefault4 from "registerAsset" /* 5032 */;
-import registerAssetDefault5 from "registerAsset" /* 5033 */;
-import registerAssetDefault6 from "registerAsset" /* 5034 */;
-import registerAssetDefault7 from "registerAsset" /* 5035 */;
-import registerAssetDefault8 from "registerAsset" /* 5036 */;
-import registerAssetDefault9 from "registerAsset" /* 5037 */;
-import registerAssetDefault10 from "registerAsset" /* 5038 */;
-import registerAssetDefault11 from "registerAsset" /* 5039 */;
-import registerAssetDefault12 from "registerAsset" /* 5040 */;
-import registerAssetDefault13 from "registerAsset" /* 5041 */;
-import registerAssetDefault14 from "registerAsset" /* 5042 */;
-import registerAssetDefault15 from "registerAsset" /* 5043 */;
-import registerAssetDefault16 from "registerAsset" /* 5044 */;
-import registerAssetDefault17 from "registerAsset" /* 5045 */;
-import registerAssetDefault18 from "registerAsset" /* 5046 */;
-import registerAssetDefault19 from "registerAsset" /* 5047 */;
-import registerAssetDefault20 from "registerAsset" /* 5048 */;
-import registerAssetDefault21 from "registerAsset" /* 5049 */;
-import registerAssetDefault22 from "registerAsset" /* 5050 */;
-import registerAssetDefault23 from "registerAsset" /* 5051 */;
-import registerAssetDefault24 from "registerAsset" /* 5052 */;
-import registerAssetDefault25 from "registerAsset" /* 5053 */;
-import registerAssetDefault26 from "registerAsset" /* 5054 */;
-import registerAssetDefault27 from "registerAsset" /* 5055 */;
-import registerAssetDefault28 from "registerAsset" /* 5056 */;
-import shouldShowMembershipVerificationGate from "shouldShowMembershipVerificationGate" /* 5057 */;
-import registerAssetDefault29 from "registerAsset" /* 5060 */;
-import registerAssetDefault30 from "registerAsset" /* 5061 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 5062 */;
-import registerAssetDefault31 from "registerAsset" /* 5068 */;
-import ExperimentalLfgIcon from "ExperimentalLfgIcon" /* 5070 */;
-import ChatIcon2 from "ChatIcon" /* 5071 */;
-import ThreadLockIcon from "ThreadLockIcon" /* 5072 */;
-import ThreadIcon2 from "ThreadIcon" /* 5073 */;
-import FolderIcon from "FolderIcon" /* 5074 */;
-import BookCheckIcon from "BookCheckIcon" /* 5075 */;
-import TextWarningIcon2 from "TextWarningIcon" /* 5076 */;
-import TextSpoilerIcon2 from "TextSpoilerIcon" /* 5077 */;
-import TextLockIcon2 from "TextLockIcon" /* 5078 */;
-import TextControllerIcon from "TextControllerIcon" /* 5079 */;
-import TextIcon2 from "TextIcon" /* 5080 */;
-import ImageWarningIcon2 from "ImageWarningIcon" /* 5081 */;
-import ForumWarningIcon2 from "ForumWarningIcon" /* 5082 */;
-import ForumSpoilerIcon3 from "ForumSpoilerIcon" /* 5083 */;
-import ExperimentalLfgLockIcon from "ExperimentalLfgLockIcon" /* 5084 */;
-import ImageLockIcon from "ImageLockIcon" /* 5085 */;
-import ForumLockIcon2 from "ForumLockIcon" /* 5086 */;
-import ImageIcon2 from "ImageIcon" /* 5087 */;
-import ForumIcon2 from "ForumIcon" /* 5088 */;
-import GroupIcon from "GroupIcon" /* 5089 */;
-import AtIcon from "AtIcon" /* 5090 */;
-import AnnouncementsWarningIcon2 from "AnnouncementsWarningIcon" /* 5091 */;
-import AnnouncementsSpoilerIcon2 from "AnnouncementsSpoilerIcon" /* 5092 */;
-import AnnouncementsLockIcon from "AnnouncementsLockIcon" /* 5093 */;
-import AnnouncementsIcon2 from "AnnouncementsIcon" /* 5094 */;
-import LockIcon3 from "LockIcon" /* 5095 */;
-import StageLockIcon2 from "StageLockIcon" /* 5096 */;
-import StageIcon2 from "StageIcon" /* 5097 */;
-import VoiceLockIcon3 from "VoiceLockIcon" /* 5098 */;
-import VoiceWarningIcon2 from "VoiceWarningIcon" /* 5099 */;
-import VoiceNormalSpoilerIcon from "VoiceNormalSpoilerIcon" /* 5100 */;
-import VoiceNormalIcon2 from "VoiceNormalIcon" /* 5101 */;
-import HubIcon from "HubIcon" /* 5102 */;
-import AppsWarningIcon from "AppsWarningIcon" /* 5103 */;
-import AppsSpoilerIcon2 from "AppsSpoilerIcon" /* 5104 */;
-import AppsLockIcon from "AppsLockIcon" /* 5105 */;
-import AppsIcon2 from "AppsIcon" /* 5106 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import closure_4 from "trackCommunicationDisabled" /* 2021 */;
-import closure_5 from "createGuildRecordFromRust" /* 1979 */;
-import closure_6 from "mergeGuildAvatar" /* 1371 */;
-import { ChannelTypes } from "ME" /* 1074 */;
+// Module 5042 (utils/ChannelUtils)
+import _modDef5043 from "module_5043" /* 5043 */;
+import _modDef5044 from "module_5044" /* 5044 */;
+import _modDef5045 from "module_5045" /* 5045 */;
+import _modDef5046 from "module_5046" /* 5046 */;
+import _modDef5047 from "module_5047" /* 5047 */;
+import _modDef5048 from "module_5048" /* 5048 */;
+import _modDef5049 from "module_5049" /* 5049 */;
+import _modDef5050 from "module_5050" /* 5050 */;
+import _modDef5051 from "module_5051" /* 5051 */;
+import _modDef5052 from "module_5052" /* 5052 */;
+import _modDef5053 from "module_5053" /* 5053 */;
+import _modDef5054 from "module_5054" /* 5054 */;
+import _modDef5055 from "module_5055" /* 5055 */;
+import _modDef5056 from "module_5056" /* 5056 */;
+import _modDef5057 from "module_5057" /* 5057 */;
+import _modDef5058 from "module_5058" /* 5058 */;
+import _modDef5059 from "module_5059" /* 5059 */;
+import _modDef5060 from "module_5060" /* 5060 */;
+import _modDef5061 from "module_5061" /* 5061 */;
+import _modDef5062 from "module_5062" /* 5062 */;
+import _modDef5063 from "module_5063" /* 5063 */;
+import _modDef5064 from "module_5064" /* 5064 */;
+import _modDef5065 from "module_5065" /* 5065 */;
+import _modDef5066 from "module_5066" /* 5066 */;
+import _modDef5067 from "module_5067" /* 5067 */;
+import _modDef5068 from "module_5068" /* 5068 */;
+import _modDef5069 from "module_5069" /* 5069 */;
+import _modDef5070 from "module_5070" /* 5070 */;
+import useShowMemberVerificationGate from "useShowMemberVerificationGate" /* 5071 */;
+import _modDef5074 from "module_5074" /* 5074 */;
+import _modDef5075 from "module_5075" /* 5075 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 5076 */;
+import _modDef5082 from "module_5082" /* 5082 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+const ExperimentalLfgIcon = tmp(5084);
+const ChatIcon2 = tmp(5085);
+const ThreadLockIcon = tmp(5086);
+const ThreadIcon2 = tmp(5087);
+const FolderIcon = tmp(5088);
+const BookCheckIcon = tmp(5089);
+const TextWarningIcon2 = tmp(5090);
+const TextSpoilerIcon2 = tmp(5091);
+const TextLockIcon2 = tmp(5092);
+const TextControllerIcon = tmp(5093);
+const TextIcon2 = tmp(5094);
+const ImageWarningIcon2 = tmp(5095);
+const ForumWarningIcon2 = tmp(5096);
+const ForumSpoilerIcon3 = tmp(5097);
+const ExperimentalLfgLockIcon = tmp(5098);
+const ImageLockIcon = tmp(5099);
+const ForumLockIcon2 = tmp(5100);
+const ImageIcon2 = tmp(5101);
+const ForumIcon2 = tmp(5102);
+const GroupIcon = tmp(5103);
+const AtIcon = tmp(5104);
+const AnnouncementsWarningIcon2 = tmp(5105);
+const AnnouncementsSpoilerIcon2 = tmp(5106);
+const AnnouncementsLockIcon = tmp(5107);
+const AnnouncementsIcon2 = tmp(5108);
+const LockIcon3 = tmp(5109);
+const StageLockIcon2 = tmp(5110);
+const StageIcon2 = tmp(5111);
+const VoiceLockIcon3 = tmp(5112);
+const VoiceWarningIcon2 = tmp(5113);
+const VoiceNormalSpoilerIcon = tmp(5114);
+const VoiceNormalIcon2 = tmp(5115);
+const HubIcon = tmp(5116);
+const AppsWarningIcon = tmp(5117);
+const AppsSpoilerIcon2 = tmp(5118);
+const AppsLockIcon = tmp(5119);
+const AppsIcon2 = tmp(5120);
+require = fn;
 function getChannelIcon(channel, ignoreTraits) {
   let obj = ignoreTraits;
   if (ignoreTraits == null) {
     obj = {};
   }
   ({ isRulesChannel, locked } = obj);
-  const items = [closure_5, closure_6, closure_4];
-  const result = shouldShowMembershipVerificationGate.shouldShowMembershipVerificationGate(channel.guild_id, items);
+  const items = [GuildStore, UserStore, GuildMemberStore];
+  const result = useShowMemberVerificationGate.shouldShowMembershipVerificationGate(channel.guild_id, items);
   if (channel.isForumPost()) {
     channel = null;
     if (null != channel.parent_id) {
-      channel = store.getChannel(channel.parent_id);
+      channel = ChannelStore.getChannel(channel.parent_id);
     }
     let isGameInvitesChannelResult;
     if (channel != null) {
       isGameInvitesChannelResult = channel.isGameInvitesChannel();
     }
     if (true === isGameInvitesChannelResult) {
-      let tmp97 = registerAssetDefault29;
+      let tmp97 = _modDef5074;
     } else {
-      tmp97 = registerAssetDefault20;
+      tmp97 = _modDef5062;
     }
     return tmp97;
   } else {
@@ -114,10 +113,10 @@ function getChannelIcon(channel, ignoreTraits) {
         if (tmp5.PUBLIC_THREAD !== type) {
           if (tmp5.MEDIA_THREAD !== type) {
             if (tmp5.GUILD_CATEGORY === type) {
-              return registerAssetDefault3;
+              return _modDef5045;
             } else if (tmp5.GUILD_TEXT === type) {
               if (isRulesChannel) {
-                let tmp79 = registerAssetDefault30;
+                let tmp79 = _modDef5075;
               } else {
                 if (isNSFWResult) {
                   ignoreTraits = undefined;
@@ -125,7 +124,7 @@ function getChannelIcon(channel, ignoreTraits) {
                     ignoreTraits = ignoreTraits.ignoreTraits;
                   }
                   if (!ignoreTraits) {
-                    tmp79 = registerAssetDefault16;
+                    tmp79 = _modDef5058;
                   }
                 }
                 if (channel.isSpoilerChannel()) {
@@ -134,7 +133,7 @@ function getChannelIcon(channel, ignoreTraits) {
                     ignoreTraits1 = ignoreTraits.ignoreTraits;
                   }
                   if (!ignoreTraits1) {
-                    registerAssetDefault17;
+                    _modDef5059;
                   }
                 }
                 if (isRoleRequiredDefault(channel)) {
@@ -143,19 +142,19 @@ function getChannelIcon(channel, ignoreTraits) {
                     ignoreTraits2 = ignoreTraits.ignoreTraits;
                   }
                   if (!ignoreTraits2) {
-                    let tmp82Result = tmp82(5054);
+                    tmp82(5068);
                   }
                 }
                 if (null != channel.linkedLobby) {
-                  tmp82Result = tmp82(5063);
+                  let tmp82Result2 = tmp82(5077);
                 } else {
-                  tmp82Result = tmp82(5032);
+                  tmp82Result2 = tmp82(5046);
                 }
               }
               return tmp79;
             } else if (tmp5.GUILD_FORUM === type) {
               if (isRulesChannel) {
-                let tmp66 = registerAssetDefault30;
+                let tmp66 = _modDef5075;
               } else {
                 if (isNSFWResult) {
                   let ignoreTraits3;
@@ -163,7 +162,7 @@ function getChannelIcon(channel, ignoreTraits) {
                     ignoreTraits3 = ignoreTraits.ignoreTraits;
                   }
                   if (!ignoreTraits3) {
-                    tmp66 = importDefault(isMediaChannelResult ? 5053 : 5050);
+                    tmp66 = importDefault(isMediaChannelResult ? 5067 : 5064);
                   }
                 }
                 if (channel.isSpoilerChannel()) {
@@ -172,7 +171,7 @@ function getChannelIcon(channel, ignoreTraits) {
                     ignoreTraits4 = ignoreTraits.ignoreTraits;
                   }
                   if (!ignoreTraits4) {
-                    registerAssetDefault23;
+                    _modDef5065;
                   }
                 }
                 if (isRoleRequiredDefault(channel)) {
@@ -182,22 +181,22 @@ function getChannelIcon(channel, ignoreTraits) {
                   }
                   if (!ignoreTraits5) {
                     if (channel.isGameInvitesChannel()) {
-                      let tmp69Result = tmp69(5064);
+                      let tmp69Result = tmp69(5078);
                     } else {
-                      tmp69Result = tmp69(isMediaChannelResult ? 5065 : 5066);
+                      tmp69Result = tmp69(isMediaChannelResult ? 5079 : 5080);
                     }
                   }
                 }
                 if (channel.isGameInvitesChannel()) {
-                  tmp69Result = tmp69(5060);
+                  let tmp69Result2 = tmp69(5074);
                 } else {
-                  tmp69Result = tmp69(isMediaChannelResult ? 5052 : 5049);
+                  tmp69Result2 = tmp69(isMediaChannelResult ? 5066 : 5063);
                 }
               }
               return tmp66;
             } else if (tmp5.GUILD_MEDIA === type) {
               if (isRulesChannel) {
-                let tmp56 = registerAssetDefault30;
+                let tmp56 = _modDef5075;
               } else {
                 if (isNSFWResult) {
                   let ignoreTraits6;
@@ -205,7 +204,7 @@ function getChannelIcon(channel, ignoreTraits) {
                     ignoreTraits6 = ignoreTraits.ignoreTraits;
                   }
                   if (!ignoreTraits6) {
-                    tmp56 = registerAssetDefault25;
+                    tmp56 = _modDef5067;
                   }
                 }
                 if (channel.isSpoilerChannel()) {
@@ -214,7 +213,7 @@ function getChannelIcon(channel, ignoreTraits) {
                     ignoreTraits7 = ignoreTraits.ignoreTraits;
                   }
                   if (!ignoreTraits7) {
-                    registerAssetDefault23;
+                    _modDef5065;
                   }
                 }
                 if (isRoleRequiredDefault(channel)) {
@@ -223,19 +222,19 @@ function getChannelIcon(channel, ignoreTraits) {
                     ignoreTraits8 = ignoreTraits.ignoreTraits;
                   }
                   if (!ignoreTraits8) {
-                    let tmp59Result = tmp59(5065);
+                    let tmp59Result = tmp59(5079);
                   }
                 }
-                tmp59Result = tmp59(5052);
+                tmp59Result = tmp59(5066);
               }
               return tmp56;
             } else if (tmp5.GROUP_DM === type) {
-              return registerAssetDefault6;
+              return _modDef5048;
             } else if (tmp5.DM === type) {
-              return registerAssetDefault7;
+              return _modDef5049;
             } else if (tmp5.GUILD_ANNOUNCEMENT === type) {
               if (isRulesChannel) {
-                let tmp43 = registerAssetDefault30;
+                let tmp43 = _modDef5075;
               } else {
                 if (isNSFWResult) {
                   let ignoreTraits9;
@@ -243,7 +242,7 @@ function getChannelIcon(channel, ignoreTraits) {
                     ignoreTraits9 = ignoreTraits.ignoreTraits;
                   }
                   if (!ignoreTraits9) {
-                    tmp43 = registerAssetDefault18;
+                    tmp43 = _modDef5060;
                   }
                 }
                 if (channel.isSpoilerChannel()) {
@@ -252,7 +251,7 @@ function getChannelIcon(channel, ignoreTraits) {
                     ignoreTraits10 = ignoreTraits.ignoreTraits;
                   }
                   if (!ignoreTraits10) {
-                    registerAssetDefault19;
+                    _modDef5061;
                   }
                 }
                 if (isRoleRequiredDefault(channel)) {
@@ -261,10 +260,10 @@ function getChannelIcon(channel, ignoreTraits) {
                     ignoreTraits11 = ignoreTraits.ignoreTraits;
                   }
                   if (!ignoreTraits11) {
-                    let tmp46Result = tmp46(5067);
+                    let tmp46Result = tmp46(5081);
                   }
                 }
-                tmp46Result = tmp46(5036);
+                tmp46Result = tmp46(5050);
               }
               return tmp43;
             } else if (tmp5.GUILD_STAGE_VOICE === type) {
@@ -275,9 +274,9 @@ function getChannelIcon(channel, ignoreTraits) {
                 }
                 if (!ignoreTraits12) {
                   if (isRoleRequiredDefault(channel)) {
-                    let tmp32Result = tmp32(5068);
+                    let tmp32Result = tmp32(5082);
                   } else {
-                    tmp32Result = tmp32(5043);
+                    tmp32Result = tmp32(5057);
                   }
                   return tmp32Result;
                 }
@@ -288,7 +287,7 @@ function getChannelIcon(channel, ignoreTraits) {
                   ignoreTraits13 = ignoreTraits.ignoreTraits;
                 }
                 if (!ignoreTraits13) {
-                  registerAssetDefault31;
+                  _modDef5082;
                 }
               }
               if (isRoleRequiredDefault(channel)) {
@@ -297,13 +296,13 @@ function getChannelIcon(channel, ignoreTraits) {
                   ignoreTraits14 = ignoreTraits.ignoreTraits;
                 }
                 if (!ignoreTraits14) {
-                  let tmp36Result = tmp36(5043);
+                  let tmp36Result = tmp36(5057);
                 }
               }
-              tmp36Result = tmp36(5037);
+              tmp36Result = tmp36(5051);
             } else if (tmp5.GUILD_VOICE === type) {
               if (obj.textFocused) {
-                let tmp17Result = registerAssetDefault20;
+                let tmp17Result = _modDef5062;
               } else {
                 if (result) {
                   let ignoreTraits15;
@@ -312,9 +311,9 @@ function getChannelIcon(channel, ignoreTraits) {
                   }
                   if (!ignoreTraits15) {
                     if (isRoleRequiredDefault(channel)) {
-                      tmp17Result = tmp17(5068);
+                      tmp17Result = tmp17(5082);
                     } else {
-                      tmp17Result = tmp17(5040);
+                      tmp17Result = tmp17(5054);
                     }
                   }
                 }
@@ -324,7 +323,7 @@ function getChannelIcon(channel, ignoreTraits) {
                     ignoreTraits16 = ignoreTraits.ignoreTraits;
                   }
                   if (!ignoreTraits16) {
-                    registerAssetDefault31;
+                    _modDef5082;
                   }
                 }
                 if (isRoleRequiredDefault(channel)) {
@@ -333,7 +332,7 @@ function getChannelIcon(channel, ignoreTraits) {
                     ignoreTraits17 = ignoreTraits.ignoreTraits;
                   }
                   if (!ignoreTraits17) {
-                    tmp21(5040);
+                    tmp21(5054);
                   }
                 }
                 if (isNSFWResult) {
@@ -342,7 +341,7 @@ function getChannelIcon(channel, ignoreTraits) {
                     ignoreTraits18 = ignoreTraits.ignoreTraits;
                   }
                   if (!ignoreTraits18) {
-                    tmp21(5041);
+                    tmp21(5055);
                   }
                 }
                 if (channel.isSpoilerChannel()) {
@@ -351,14 +350,14 @@ function getChannelIcon(channel, ignoreTraits) {
                     ignoreTraits19 = ignoreTraits.ignoreTraits;
                   }
                   if (!ignoreTraits19) {
-                    let tmp21Result1 = tmp21(5042);
+                    let tmp21Result4 = tmp21(5056);
                   }
                 }
-                tmp21Result1 = tmp21(5038);
+                tmp21Result4 = tmp21(5052);
               }
               return tmp17Result;
             } else if (tmp5.GUILD_DIRECTORY === type) {
-              return registerAssetDefault11;
+              return _modDef5053;
             } else if (tmp5.GUILD_APP === type) {
               if (isNSFWResult) {
                 let ignoreTraits20;
@@ -366,7 +365,7 @@ function getChannelIcon(channel, ignoreTraits) {
                   ignoreTraits20 = ignoreTraits.ignoreTraits;
                 }
                 if (!ignoreTraits20) {
-                  return registerAssetDefault27;
+                  return _modDef5069;
                 }
               }
               if (channel.isSpoilerChannel()) {
@@ -375,7 +374,7 @@ function getChannelIcon(channel, ignoreTraits) {
                   ignoreTraits21 = ignoreTraits.ignoreTraits;
                 }
                 if (!ignoreTraits21) {
-                  registerAssetDefault28;
+                  _modDef5070;
                 }
               }
               if (isRoleRequiredDefault(channel)) {
@@ -384,10 +383,10 @@ function getChannelIcon(channel, ignoreTraits) {
                   ignoreTraits22 = ignoreTraits.ignoreTraits;
                 }
                 if (!ignoreTraits22) {
-                  let tmp10Result = tmp10(5069);
+                  let tmp10Result = tmp10(5083);
                 }
               }
-              tmp10Result = tmp10(5033);
+              tmp10Result = tmp10(5047);
             } else {
               if (tmp5.GUILD_STORE !== type) {
                 if (tmp5.GUILD_SPACE !== type) {
@@ -402,18 +401,17 @@ function getChannelIcon(channel, ignoreTraits) {
     }
     const type2 = channel.type;
     if (ChannelTypes.PRIVATE_THREAD === type2) {
-      let tmp90 = registerAssetDefault;
+      let tmp90 = _modDef5043;
     } else {
       if (tmp5.ANNOUNCEMENT_THREAD !== type2) {
         if (tmp5.PUBLIC_THREAD !== type2) {
           tmp90 = null;
         }
       }
-      tmp90 = registerAssetDefault2;
+      tmp90 = _modDef5044;
     }
     return tmp90;
   }
-  const obj2 = shouldShowMembershipVerificationGate;
 }
 function getChannelIconComponent(channel, ignoreTraits) {
   let obj = ignoreTraits;
@@ -421,13 +419,12 @@ function getChannelIconComponent(channel, ignoreTraits) {
     obj = {};
   }
   ({ isRulesChannel, locked } = obj);
-  const tmp = require;
-  const items = [closure_5, closure_6, closure_4];
-  const result = shouldShowMembershipVerificationGate.shouldShowMembershipVerificationGate(channel.guild_id, items);
+  const items = [GuildStore, UserStore, GuildMemberStore];
+  const result = useShowMemberVerificationGate.shouldShowMembershipVerificationGate(channel.guild_id, items);
   if (channel.isForumPost()) {
     channel = null;
     if (null != channel.parent_id) {
-      channel = store.getChannel(channel.parent_id);
+      channel = ChannelStore.getChannel(channel.parent_id);
     }
     let isGameInvitesChannelResult;
     if (channel != null) {
@@ -739,13 +736,14 @@ function getChannelIconComponent(channel, ignoreTraits) {
       return ThreadIcon2.ThreadIcon;
     }
   }
-  const obj2 = shouldShowMembershipVerificationGate;
 }
-let result = require("set").fileFinishedImporting("utils/native/ChannelUtils.tsx");
+const ChannelTypes = fn(1074).ChannelTypes;
+const size = fn(2);
+let result = size.fileFinishedImporting("utils/native/ChannelUtils.tsx");
 
 export const getThreadChannelIcon = function getThreadChannelIcon(arg0) {
   if (ChannelTypes.PRIVATE_THREAD === arg0) {
-    return registerAssetDefault;
+    return _modDef5043;
   } else {
     if (tmp.ANNOUNCEMENT_THREAD !== arg0) {
       if (tmp.PUBLIC_THREAD !== arg0) {
@@ -754,7 +752,7 @@ export const getThreadChannelIcon = function getThreadChannelIcon(arg0) {
         }
       }
     }
-    return registerAssetDefault2;
+    return _modDef5044;
   }
 };
 export const getSimpleChannelIcon = function getSimpleChannelIcon(channel) {
@@ -764,25 +762,25 @@ export const getSimpleChannelIcon = function getSimpleChannelIcon(channel) {
       if (tmp.PUBLIC_THREAD !== type) {
         if (tmp.MEDIA_THREAD !== type) {
           if (tmp.GUILD_CATEGORY === type) {
-            return registerAssetDefault3;
+            return _modDef5045;
           } else {
             if (tmp.GUILD_TEXT !== type) {
               if (tmp.GUILD_FORUM !== type) {
                 if (tmp.GUILD_MEDIA !== type) {
                   if (tmp.GUILD_APP === type) {
-                    return registerAssetDefault5;
+                    return _modDef5047;
                   } else if (tmp.GROUP_DM === type) {
-                    return registerAssetDefault6;
+                    return _modDef5048;
                   } else if (tmp.DM === type) {
-                    return registerAssetDefault7;
+                    return _modDef5049;
                   } else if (tmp.GUILD_ANNOUNCEMENT === type) {
-                    return registerAssetDefault8;
+                    return _modDef5050;
                   } else if (tmp.GUILD_STAGE_VOICE === type) {
-                    return registerAssetDefault9;
+                    return _modDef5051;
                   } else if (tmp.GUILD_VOICE === type) {
-                    return registerAssetDefault10;
+                    return _modDef5052;
                   } else if (tmp.GUILD_DIRECTORY === type) {
-                    return registerAssetDefault11;
+                    return _modDef5053;
                   } else {
                     if (tmp.GUILD_STORE !== type) {
                       if (tmp.GUILD_SPACE !== type) {
@@ -794,7 +792,7 @@ export const getSimpleChannelIcon = function getSimpleChannelIcon(channel) {
                 }
               }
             }
-            return registerAssetDefault4;
+            return _modDef5046;
           }
         }
       }
@@ -802,14 +800,14 @@ export const getSimpleChannelIcon = function getSimpleChannelIcon(channel) {
   }
   const type2 = channel.type;
   if (ChannelTypes.PRIVATE_THREAD === type2) {
-    let tmp21 = registerAssetDefault;
+    let tmp21 = _modDef5043;
   } else {
     if (tmp.ANNOUNCEMENT_THREAD !== type2) {
       if (tmp.PUBLIC_THREAD !== type2) {
         tmp21 = null;
       }
     }
-    tmp21 = registerAssetDefault2;
+    tmp21 = _modDef5044;
   }
   return tmp21;
 };
@@ -822,1020 +820,56 @@ export const getChannelIconWithGuild = function getChannelIconWithGuild(channel,
 };
 export const getChannelMentionIcon = function getChannelMentionIcon(iconType) {
   switch (iconType) {
-    case "i":
-    break;
-    case "it":
-    break;
-    case "d":
-    break;
-    case "Map":
-    break;
-    case "Math":
-    break;
-    case "h":
-    break;
-    case "Number":
-    break;
-    case "Object":
-    break;
-    case "ct":
-    break;
-    case "PX_16":
-    break;
-    case "flex":
-    break;
-    case "flexDirection":
-    break;
-    case "PX_8":
-    break;
-    case "Path":
-    break;
-    case "Promise":
-    break;
-    case "s":
-    break;
-    case "Reflect":
-    break;
-    case "Set":
-    break;
-    case "format":
-    break;
-    case "formatToPlainString":
-    break;
-    case "String":
-    break;
-    case "Symbol":
-    break;
-    case "Text":
-    break;
-    case "x":
-    break;
-    case "View":
-    break;
-    case "w":
-    break;
-    case "WireType":
-    break;
-    case "__closure":
-    break;
-    case "__d":
-    break;
-    case "__esModule":
-    break;
-    case "__initData":
-    break;
-    case "filter":
-    break;
-    case "__packager_asset":
-    break;
-    case "k":
-    break;
-    case "set":
-    break;
-    case "__workletHash":
-    break;
-    case "_desired":
-    break;
-    case "_distance":
-    break;
-    case "st":
-    break;
-    case "accessibilityLabel":
-    break;
-    case "accessibilityRole":
-    break;
-    case "accessible":
-    break;
-    case "padding":
-    break;
-    case "paddingHorizontal":
-    break;
-    case "add":
-    break;
-    case "alignItems":
-    break;
-    case "ao":
-    break;
-    case "applicationId":
-    break;
-    case "ti":
-    break;
-    case "apply":
-    break;
-    case "assign":
-    break;
-    case "backgroundColor":
-    break;
-    case "round":
-    break;
-    case "bm":
-    break;
-    case "body":
-    break;
-    case "borderRadius":
-    break;
-    case "bottom":
-    break;
-    case "call":
-    break;
-    case "channel":
-    break;
-    case "channelId":
-    break;
-    case "channel_id":
-    break;
-    case "id":
-    break;
-    case "children":
-    break;
-    case "cix":
-    break;
-    case "ix":
-    break;
-    case "unicodeVersion":
-    break;
-    case "code":
-    break;
-    case "color":
-    break;
-    case "colors":
-    break;
-    case "concat":
-    break;
-    case "construct":
-    break;
-    case "constructor":
-    break;
-    case "container":
-    break;
-    case "content":
-    break;
-    case "context":
-    break;
+    case "voice":
+      return _modDef5052;
+    case "voice-locked":
+      return _modDef5054;
+    case "voice-nsfw":
+      return _modDef5055;
+    case "voice-spoiler":
+      return _modDef5056;
+    case "stage":
+      return _modDef5051;
+    case "stage-locked":
+      return _modDef5057;
     case "text":
-    break;
-    case "count":
-    break;
-    case "create":
-    break;
-    case "createStyles":
-    break;
-    case "ty":
-    break;
-    case "current":
-    break;
-    case "cursor":
-    break;
-    case "data":
-    break;
-    case "ddd":
-    break;
-    case "default":
-    break;
-    case "defineProperty":
-    break;
-    case "op":
-    break;
-    case "delete":
-    break;
-    case "description":
-    break;
-    case "ip":
-    break;
-    case "disabled":
-    break;
-    case "sa":
-    break;
-    case "dispatch":
-    break;
-    case "displayName":
-    break;
-    case "diversity":
-    break;
-    case "v":
-    break;
-    case "done":
-    break;
-    case "duration":
-    break;
-    case "enabled":
-    break;
-    case "end":
-    break;
-    case "enumerable":
-    break;
-    case "error":
-    break;
-    case "exports":
-    break;
-    case "fileFinishedImporting":
-    break;
-    case "fill":
-    break;
-    case "find":
-    break;
-    case "ind":
-    break;
-    case "flags":
-    break;
-    case "forEach":
-    break;
-    case "gap":
-    break;
-    case "get":
-    break;
-    case "getChannel":
-    break;
-    case "getCurrentUser":
-    break;
-    case "guild":
-    break;
-    case "guildId":
-    break;
-    case "guild_id":
-    break;
-    case "has":
-    break;
-    case "hasDiversityParent":
-    break;
-    case "hash":
-    break;
-    case "hd":
-    break;
-    case "header":
-    break;
-    case "height":
-    break;
-    case "httpServerLocation":
-    break;
-    case "icon":
-      return registerAssetDefault10;
-    case "includes":
-    break;
-    case "index":
-      return registerAssetDefault12;
-    case "indexOf":
-    break;
-    case "intl":
-      return registerAssetDefault13;
-    case "items":
-    break;
-    case "join":
-      return registerAssetDefault14;
-    case "jsx":
-    break;
-    case "jsxs":
-      return registerAssetDefault9;
-    case "justifyContent":
-    break;
-    case "key":
-      return registerAssetDefault15;
-    case "keys":
-    break;
-    case "kind":
-      return registerAssetDefault4;
-    case "ks":
-    break;
-    case "space":
-      return registerAssetDefault16;
-    case "label":
-    break;
-    case "lc":
-      return registerAssetDefault17;
-    case "left":
-    break;
-    case "length":
-      return registerAssetDefault8;
-    case "lj":
-    break;
-    case "loadJsonAsset":
-      return registerAssetDefault18;
-    case "location":
-    break;
-    case "map":
-      return registerAssetDefault19;
-    case "marginTop":
-    break;
-    case "marginBottom":
-      let tmp23 = registerAssetDefault2;
-      return tmp23;
-    case "match":
-    break;
-    case "max":
-      let tmp20 = registerAssetDefault20;
-      return tmp20;
-    case "memo":
-    break;
+      return _modDef5046;
+    case "text-nsfw":
+      return _modDef5058;
+    case "text-spoiler":
+      return _modDef5059;
+    case "announcement":
+      return _modDef5050;
+    case "announcement-nsfw":
+      return _modDef5060;
+    case "announcement-spoiler":
+      return _modDef5061;
+    case "thread":
+      return _modDef5044;
+    case "post":
+      let tmp21 = _modDef5062;
+      return tmp21;
     case "message":
-      tmp20 = registerAssetDefault20;
-      return tmp20;
-    case "messageId":
-    break;
-    case "method":
-      return registerAssetDefault21;
-    case "methodobject":
-    break;
-    case "withTiming":
-      return registerAssetDefault22;
-    case "min":
-    break;
-    case "mn":
-      return registerAssetDefault23;
-    case "mode":
-    break;
-    case "name":
-      return registerAssetDefault24;
-    case "names":
-    break;
-    case "next":
-      return registerAssetDefault25;
-    case "nm":
-    break;
-    case "no":
-      return registerAssetDefault26;
-    case "now":
-    break;
-    case "np":
-      return registerAssetDefault5;
-    case "onPress":
-    break;
-    case "opacity":
-      return registerAssetDefault27;
-    case "options":
-    break;
-    case "parent":
-      return registerAssetDefault28;
-    case "paths":
-    break;
-    case "pos":
-    break;
-    case "position":
-    break;
-    case "props":
-    break;
-    case "prototype":
-    break;
-    case "type":
-    break;
-    case "push":
-    break;
-    case "radii":
-    break;
-    case "raw":
-    break;
-    case "ref":
-    break;
-    case "registerAsset":
-    break;
-    case "rejectWithError":
-    break;
-    case "replace":
-    break;
-    case "resizeMode":
-    break;
-    case "size":
-    break;
-    case "resolve":
-    break;
-    case "result":
-    break;
-    case "right":
-    break;
-    case "runOnJS":
-    break;
-    case "scales":
-    break;
-    case "shapes":
-    break;
-    case "sk":
-    break;
-    case "skuId":
-    break;
-    case "slice":
-    break;
-    case "source":
-    break;
-    case "split":
-    break;
-    case "spriteIndex":
-    break;
-    case "sr":
-    break;
-    case "start":
-    break;
-    case "state":
-    break;
-    case "status":
-    break;
-    case "substring_i":
-    break;
-    case "string":
-    break;
-    case "style":
-    break;
-    case "surrogates":
-    break;
-    case "tag":
-    break;
-    case "test":
-    break;
-    case "then":
-    break;
-    case "title":
-    break;
-    case "toCharArray$esjava$1":
-    break;
-    case "toLowerCase":
-    break;
-    case "toString":
-    break;
-    case "top":
-    break;
-    case "track":
-    break;
-    case "transform":
-    break;
-    case "uri":
-    break;
-    case "url":
-    break;
-    case "useCallback":
-    break;
-    case "useEffect":
-    break;
-    case "useMemo":
-    break;
-    case "useRef":
-    break;
-    case "useState":
-    break;
-    case "useStateFromStores":
-    break;
-    case "user":
-    break;
-    case "userId":
-    break;
-    case "value":
-    break;
-    case "values":
-    break;
-    case "variant":
-    break;
-    case "width":
-    break;
-    case "window":
-    break;
-    case "withSpring":
-    break;
-    case "":
-    break;
-    case "isArrayBuffer":
-    break;
-    case "A":
-    break;
-    case "ay":
-    break;
-    case "guild_metadata":
-    break;
-    case "metadataRefreshing":
-    break;
-    case "getIsLoading":
-    break;
-    case "getIsLoadingAgeVerification":
-    break;
-    case "AgeVerificationDmCta":
-    break;
-    case "tapImageData":
-    break;
-    case "person_standing_tone5":
-    break;
-    case "extraBottomHeight":
-    break;
-    case "$ZodBoolean":
-    break;
-    case "ZodBoolean":
-    break;
-    case "B":
-    break;
-    case "le":
-    break;
-    case "an":
-    break;
-    case "n":
-    break;
-    case "ActionBarPrimaryButton":
-    break;
-    case "u":
-    break;
-    case "tt":
-    break;
-    case "on":
-    break;
-    case "$ZodDate":
-    break;
-    case "ZodDate":
-    break;
-    case "D":
-    break;
-    case "DateToSystemTimezoneSetter":
-    break;
-    case "at":
-    break;
-    case "te":
-    break;
-    case "mez":
-    break;
-    case "Setter":
-    break;
-    case "useDefaultThreadName":
-    break;
-    case "MarkupParserNodeTypeError":
-    break;
-    case "E":
-    break;
-    case "Err":
-    break;
-    case "ro":
-    break;
-    case "or":
-    break;
-    case "khr":
-    break;
-    case "BOT_HTTP_INTERACTIONS":
-    break;
-    case "H":
-    break;
-    case "HT":
-    break;
-    case "TP":
-    break;
-    case "P":
-    break;
-    case "INTERACTIONS":
-    break;
-    case "NSFW_SPACE_WARNING_MODAL_CLICKED":
-    break;
-    case "rm":
-    break;
-    case "m":
-    break;
-    case "me":
-    break;
-    case "mes":
-    break;
-    case "I":
-    break;
-    case "InternalCard":
-    break;
-    case "ter":
-    break;
-    case "na":
-    break;
-    case "al":
-    break;
-    case "CardA11yWrapper":
-    break;
-    case "perGuildMaxCount":
-    break;
-    case "PREMIUM_MARKETING_MOMENT_DESKTOP_ANNOUNCEMENT_MODAL":
-    break;
-    case "paymentGatewayPlanId":
-    break;
-    case "integrationOwner":
-    break;
-    case "integrationOwnerHook":
-    break;
-    case "setScrollDirection":
-    break;
-    case "closeSuspendedUser":
-    break;
-    case "getChannelIcon":
-    break;
-    case "getChannelIconComponent":
-    break;
-    case "getChannelIconComponentWithGuild":
-    break;
-    case "co":
-    break;
-    case "C":
-    break;
-    case "Component":
-    break;
-    case "om":
-    break;
-    case "mp":
-    break;
-    case "po":
-    break;
-    case "pon":
-    break;
-    case "one":
-    break;
-    case "ne":
-    break;
-    case "en":
-    break;
-    case "$ZodCheckMaxLength":
-    break;
-    case "kMaxLength":
-    break;
-    case "L":
-    break;
-    case "eng":
-    break;
-    case "ng":
-    break;
-    case "el":
-    break;
-    case "li":
-    break;
-    case "lim":
-    break;
-    case "limited":
-    break;
-    case "limitedTimeBadge":
-    break;
-    case "mi":
-    break;
-    case "mit":
-    break;
-    case "getAppUIViewed":
-    break;
-    case "wedding":
-    break;
-    case "getMediaPostEmbedChannelId":
-    break;
-    case "createGuildReportRaidSystemMessage":
-    break;
-    case "$ZodMap":
-    break;
-    case "ZodMap":
-    break;
-    case "M":
-    break;
-    case "ap":
-    break;
-    case "unit_type":
-    break;
-    case "ToIntlMathematicalValue":
-    break;
-    case "th":
-    break;
-    case "ValueSetter":
-    break;
-    case "$ZodCheckNumberFormat":
-    break;
-    case "N":
-    break;
-    case "NumberFormat":
-    break;
-    case "um":
-    break;
-    case "b":
-    break;
-    case "be":
-    break;
-    case "activeTabId":
-    break;
-    case "disableEarlyViewCommandExecution":
-    break;
-    case "threshold_met":
-    break;
-    case "meetsServerAgeRequirement":
-    break;
-    case "$ZodObject":
-    break;
-    case "$ZodObjectJIT":
-    break;
-    case "ZodObject":
-    break;
-    case "O":
-    break;
-    case "j":
-    break;
-    case "je":
-    break;
-    case "IT":
-    break;
-    case "xdays":
-    break;
-    case "MEDIA_PICKER_SEND_BUTTON_SPRING":
-    break;
-    case "marginHorizontal":
-    break;
-    case "Direction":
-    break;
-    case "rect":
-    break;
-    case "PX_80":
-    break;
-    case "_":
-    break;
-    case "getTrendingType":
-    break;
-    case "TrendingType":
-    break;
-    case "beforeItem":
-    break;
-    case "tempBanned":
-    break;
-    case "AUTO_MODERATION_REMOVE_REGEX_PATTERNS":
-    break;
-    case "RNSVGClipPath":
-    break;
-    case "ClipPath":
-    break;
-    case "lip":
-    break;
-    case "$ZodPromise":
-    break;
-    case "ZodPromise":
-    break;
-    case "PromiseDeduper":
-    break;
-    case "is":
-    break;
-    case "se":
-    break;
-    case "dup":
-    break;
-    case "perUserFpsWindow":
-    break;
-    case "woman_and_man_holding_hands_medium_skin_tone_medium_dark_skin_tone":
-    break;
-    case "useGameInvitesChannelOfficialApplication":
-    break;
-    case "invalidEmojis":
-    break;
-    case "isAVI":
-    break;
-    case "isAVIF":
-    break;
-    case "IFD_TYPE_GPS":
-    break;
-    case "GPSAltitude":
-    break;
-    case "GPSAltitudeRef":
-    break;
-    case "Altitude":
-    break;
-    case "R":
-    break;
-    case "ReflectionBinaryReader":
-    break;
-    case "ef":
-    break;
-    case "f":
-    break;
-    case "BinaryReader":
-    break;
-    case "file_cabinet":
-    break;
-    case "cab":
-    break;
-    case "$ZodSet":
-    break;
-    case "ZodSet":
-    break;
-    case "S":
-    break;
-    case "et":
-    break;
-    case "canUseEmojisEverywhere":
-    break;
-    case "postformat":
-    break;
-    case "form":
-    break;
-    case "orm":
-    break;
-    case "ma":
-    break;
-    case "mat":
-    break;
-    case "lai":
-    break;
-    case "StringBuilder":
-    break;
-    case "tr":
-    break;
-    case "tri":
-    break;
-    case "ring":
-    break;
-    case "in":
-    break;
-    case "ing":
-    break;
-    case "g":
-    break;
-    case "$ZodSymbol":
-    break;
-    case "ZodSymbol":
-    break;
-    case "SymbolLock":
-    break;
-    case "bo":
-    break;
-    case "bol":
-    break;
-    case "QUEST_BAR_MOBILE":
-    break;
-    case "QUEST_BAR_MOBILE_TIME_TO_FIRST_PAINT":
-    break;
-    case "INTERACTIVE_MUTED":
-    break;
-    case "baseCost":
-    break;
-    case "cachedPrimarySuffix":
-    break;
-    case "unlocked":
-    break;
-    case "unlockedEmojis":
-    break;
-    case "lockedEmojis":
-    break;
-    case "isActionPickSupported":
-    break;
-    case "buttonLabel":
-    break;
-    case "generateNewAnimationId":
-    break;
-    case "ActionSheetHeaderPressableText":
-    break;
-    case "Pressable":
-    break;
-    case "ex":
-    break;
-    case "ext":
-    break;
-    case "isRenewableEndDateSortEnabled":
-    break;
-    case "AccessibilityFocusView":
-    break;
-    case "V":
-    break;
-    case "W":
-    break;
-    case "ir":
-    break;
-    case "re":
-      tmp23 = registerAssetDefault2;
-      return tmp23;
-    case "reType":
-    break;
-    case "pe":
-    break;
-    case "_clientPromise":
-    break;
-    case "maxDynamicContentSize":
-    break;
-    case "ACTION_SHEET_START_HEIGHT_RATIO":
-    break;
-    case "STAR":
-    break;
-    case "START":
-    break;
-    case "IO":
-    break;
-    case "__":
-    break;
-    case "__c":
-    break;
-    case "cl":
-    break;
-    case "clo":
-    break;
-    case "lo":
-    break;
-    case "los":
-    break;
-    case "os":
-    break;
-    case "su":
-    break;
-    case "sur":
-    break;
-    case "ur":
-    break;
-    case "isExpanded":
-    break;
-    case "__data__":
-    break;
-    case "_d":
-    break;
-    case "_data":
-    break;
-    case "__REMOTEDEV__":
-    break;
-    case "__DISCORD_WINDOW_ID":
-    break;
-    case "__iteratees__":
-    break;
-    case "_iter":
-    break;
-    case "_iterate":
-    break;
-    case "iteratee":
-    break;
-    case "tee":
-    break;
-    case "__SENTRY_RELEASE__":
-    break;
-    case "SENTRY_RELEASE":
-    break;
-    case "__INTERNAL_SLOT_MAP__":
-    break;
-    case "__BUNDLE_START_TIME__":
-    break;
-    case "__e":
-    break;
-    case "Mo":
-    break;
-    case "ModuleNotFoundError":
-    break;
-    case "du":
-    break;
-    case "__i":
-    break;
-    case "__init":
-    break;
-    case "_i":
-    break;
-    case "_init":
-    break;
-    case "init":
-    break;
-    case "ni":
-    break;
-    case "nit":
-    break;
-    case "ta":
-    break;
-    case "__filtered__":
-    break;
-    case "lte":
-    break;
-    case "__SENTRY_DEBUG__":
-    break;
-    case "__FORMATJS_LISTFORMAT_DATA__":
-    break;
-    case "TJS":
-    break;
-    case "pa":
-    break;
-    case "pack":
-    break;
-    case "package":
-    break;
-    case "ack":
-    break;
-    case "ka":
-    break;
-    case "age":
-    break;
-    case "ge":
-    break;
-    case "ger":
-    break;
-    case "_a":
-    break;
-    case "as":
-    break;
-    case "ass":
-    break;
-    case "asset":
-    break;
-    case "assetContainer":
-    break;
-    case "ss":
-    break;
-    case "isDeaf":
-    break;
-    case "_w":
-    break;
-    case "wo":
-    break;
-    case "work":
-    break;
-    case "worklet":
-    break;
-    case "kl":
-    break;
-    case "let":
-    break;
-    case "Hash":
-    break;
-    case "sh":
-    break;
-    case "isIosWKWebview":
-    break;
-    case "viewHierarchyIntegration":
-    break;
-    case "allowWithinModal":
-    break;
-    case "ModalFloatingAction":
-    break;
+      tmp21 = _modDef5062;
+      return tmp21;
+    case "forum":
+      return _modDef5063;
+    case "forum-nsfw":
+      return _modDef5064;
+    case "forum-spoiler":
+      return _modDef5065;
+    case "media":
+      return _modDef5066;
+    case "media-nsfw":
+      return _modDef5067;
+    case "locked":
+      return _modDef5068;
+    case "app":
+      return _modDef5047;
+    case "app-nsfw":
+      return _modDef5069;
+    case "app-spoiler":
+      return _modDef5070;
     default:
       return null;
   }
@@ -1890,9 +924,9 @@ export const getSimpleChannelIconComponent = function getSimpleChannelIconCompon
     }
   }
   if (channel.isForumPost()) {
-    let ThreadIcon = tmp25(5071).ChatIcon;
+    let ThreadIcon = tmp25(5085).ChatIcon;
   } else {
-    ThreadIcon = tmp25(5073).ThreadIcon;
+    ThreadIcon = tmp25(5087).ThreadIcon;
   }
   return ThreadIcon;
 };

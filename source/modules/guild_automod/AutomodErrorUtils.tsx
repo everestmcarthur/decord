@@ -1,16 +1,14 @@
-// Module ID: 7939
-// Function ID: 7940
-// Name: getAutomodErrorMessageFromErrorResponse
-// Dependencies: [1957, 1074, 1114, 7834, 2]
+// Module ID: 7953
+// Function ID: 7954
+// Name: AutomodErrorUtils
+// Dependencies: [1957, 1074, 1114, 7848, 2]
 // Exports: getAutomodErrorMessage
 
-// Module 7939 (getAutomodErrorMessageFromErrorResponse)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_2 from "ensureGuildLoaded" /* 1957 */;
-import { AbortCodes } from "ME" /* 1074 */;
-import set from "set" /* 2 */;
+// Module 7953 (AutomodErrorUtils)
+import util from "util" /* 1114 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-require = arg1;
+require = fn;
 function getAutomodErrorMessageFromErrorResponse(errorResponseBody, id) {
   if (null == errorResponseBody) {
     return null;
@@ -22,14 +20,14 @@ function getAutomodErrorMessageFromErrorResponse(errorResponseBody, id) {
       } else if (null == id) {
         return null;
       } else {
-        const channel = store.getChannel(id);
+        const channel = ChannelStore.getChannel(id);
         let isThreadResult;
         if (channel != null) {
           isThreadResult = channel.isThread();
         }
         if (isThreadResult) {
-          const intl3 = getSystemLocale.intl;
-          return intl3.string(getSystemLocale.t.DVdG9E);
+          const intl3 = util.intl;
+          return intl3.string(util.t.DVdG9E);
         } else {
           let isForumPostResult;
           if (channel != null) {
@@ -37,11 +35,11 @@ function getAutomodErrorMessageFromErrorResponse(errorResponseBody, id) {
           }
           if (isForumPostResult) {
             if (code === AbortCodes.AUTOMOD_TITLE_BLOCKED) {
-              const intl2 = getSystemLocale.intl;
-              return intl2.string(getSystemLocale.t.ipgKDg);
+              const intl2 = util.intl;
+              return intl2.string(util.t.ipgKDg);
             } else if (code === tmp4.AUTOMOD_MESSAGE_BLOCKED) {
-              const intl = getSystemLocale.intl;
-              return intl.string(getSystemLocale.t.ipgKDg);
+              const intl = util.intl;
+              return intl.string(util.t.ipgKDg);
             }
           } else {
             let isForumLikeChannelResult;
@@ -58,7 +56,7 @@ function getAutomodErrorMessageFromErrorResponse(errorResponseBody, id) {
   }
 }
 function getAutomodErrorMessageFromMessageData(message) {
-  const channel = store.getChannel(message.message.channelId);
+  const channel = ChannelStore.getChannel(message.message.channelId);
   if (obj2.isMessageDataEdit(message)) {
     const intl4 = tmp(1114).intl;
     let stringResult = intl4.string(tmp(1114).t.bU6o0z);
@@ -91,17 +89,19 @@ function getAutomodErrorMessageFromMessageData(message) {
   }
   return stringResult;
 }
+const AbortCodes = fn(1074).AbortCodes;
 class InvalidKeywordError extends Error {
 }
-const prototype = function InvalidRegexPatternError(intl) {
+const prototype = function InvalidRegexPatternError() {
   return HermesBuiltin.applyArguments(new.target, new.target);
 }.prototype;
 class prototype extends Error {
 }
 const items = [, , ];
 ({ AUTOMOD_MESSAGE_BLOCKED: arr[0], AUTOMOD_TITLE_BLOCKED: arr[1], AUTOMOD_INVALID_RUST_SERVICE_RESPONSE: arr[2] } = AbortCodes);
-let set = new Set(items);
-const result = set.fileFinishedImporting("modules/guild_automod/AutomodErrorUtils.tsx");
+const set = new Set(items);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_automod/AutomodErrorUtils.tsx");
 
 export { InvalidKeywordError };
 export const InvalidRegexPatternError = prototype;
@@ -113,8 +113,8 @@ export const getAutomodErrorMessage = function getAutomodErrorMessage(messageDat
   if (null != tmp) {
     return tmp;
   } else if (null == messageData) {
-    const intl = getSystemLocale.intl;
-    let stringResult = intl.string(getSystemLocale.t.zQ69pv);
+    const intl = util.intl;
+    let stringResult = intl.string(util.t.zQ69pv);
   } else {
     stringResult = getAutomodErrorMessageFromMessageData(messageData);
   }

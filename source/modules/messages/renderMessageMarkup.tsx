@@ -1,109 +1,106 @@
-// Module ID: 7888
-// Function ID: 7889
-// Name: getInitialParserState
-// Dependencies: [7889, 4550, 2]
-// Exports: default, getInitialParserStateFromMessage, renderAutomodMessageMarkup, renderAutomodMessageMarkupToAST, renderMessageContentMarkup, renderMessageMarkupToAST, renderMessageMarkupWithParser
+// Module ID: 7902
+// Function ID: 7903
+// Name: renderMessageMarkup
+// Dependencies: [7903, 4564, 2]
+// Exports: default, getInitialParserStateFromMessage, renderAutomodMessageMarkup, renderAutomodMessageMarkupToAST, renderMessageContentMarkup, renderMessageMarkupToAST, renderMessageMarkupToASTWithParser, renderMessageMarkupWithParser
 
-// Module 7888 (getInitialParserState)
-import set from "set" /* 2 */;
-import get_defaultRulesDefault from "get defaultRules" /* 4550 */;
+// Module 7902 (renderMessageMarkup)
+import MarkupUtilsDefault from "MarkupUtils" /* 4564 */;
+import MarkupPostProcessors from "MarkupPostProcessors" /* 7903 */;
+import size from "module_2" /* 2 */;
 
 function getInitialParserState(channelId) {
   const renderOptions = channelId.renderOptions;
   return { channelId: channelId.channelId, messageId: channelId.messageId, authorId: channelId.authorId, allowLinks: Boolean(renderOptions.allowLinks), allowDevLinks: Boolean(renderOptions.allowDevLinks), allowGameMentions: Boolean(renderOptions.allowGameMentions), allowTimeMentionInput: Boolean(renderOptions.allowTimeMentionInput), formatInline: Boolean(renderOptions.formatInline), noStyleAndInteraction: Boolean(renderOptions.noStyleAndInteraction), allowHeading: Boolean(renderOptions.allowHeading), allowList: Boolean(renderOptions.allowList), previewLinkTarget: Boolean(renderOptions.previewLinkTarget), disableAnimatedEmoji: Boolean(renderOptions.disableAnimatedEmoji), allowEmojiLinks: false, disableAutoBlockNewlines: true, mentionChannels: [], soundboardSounds: [], muted: false, unknownUserMentionPlaceholder: true, viewingChannelId: renderOptions.viewingChannelId, forceWhite: Boolean(renderOptions.forceWhite), textColor: renderOptions.textColor, disablePressableChannelMention: Boolean(renderOptions.disablePressableChannelMention) };
 }
-function render(arg0, channelId, toAST) {
-  closure_0 = channelId;
+function render(fn, channelId, toAST) {
+  const message = channelId;
   toAST = toAST.toAST;
-  closure_1 = undefined !== toAST && toAST;
-  const hideSimpleEmbedContent = toAST.hideSimpleEmbedContent;
-  closure_2 = undefined === hideSimpleEmbedContent || hideSimpleEmbedContent;
-  const formatInline = toAST.formatInline;
-  closure_3 = undefined !== formatInline && formatInline;
+  toAST = undefined !== toAST && toAST;
+  let hideSimpleEmbedContent = toAST.hideSimpleEmbedContent;
+  hideSimpleEmbedContent = undefined === hideSimpleEmbedContent || hideSimpleEmbedContent;
+  let formatInline = toAST.formatInline;
+  formatInline = undefined !== formatInline && formatInline;
   ({ postProcessor: render, contentMessage } = toAST);
-  c6 = false;
-  c7 = false;
+  hasSpoilerEmbeds = false;
   if (contentMessage == null) {
     contentMessage = channelId;
   }
   const content = contentMessage.content;
-  let obj = { channelId: channelId.channel_id, messageId: channelId.id, authorId: null, renderOptions: null };
+  const obj = { channelId: channelId.channel_id, messageId: channelId.id, authorId: null, renderOptions: null };
   const author = channelId.author;
   let id;
   if (author != null) {
     id = author.id;
   }
-  obj[2] = id;
-  obj[3] = toAST;
-  const tmpResult = closure_3(obj);
-  obj = {};
+  obj.authorId = id;
+  obj.renderOptions = toAST;
+  const tmpResult = formatInline(obj);
+  const obj3 = {};
   const merged = Object.assign(tmpResult);
   let allowLinks = tmp4;
   if (null == channelId.webhookId) {
     allowLinks = tmpResult.allowLinks;
   }
-  obj.allowLinks = allowLinks;
-  obj.allowEmojiLinks = null != channelId.webhookId;
+  obj3.allowLinks = allowLinks;
+  obj3.allowEmojiLinks = null != channelId.webhookId;
   ({ mentionChannels: obj2.mentionChannels, soundboardSounds } = channelId);
   if (soundboardSounds == null) {
     soundboardSounds = [];
   }
-  obj.soundboardSounds = soundboardSounds;
-  obj = {
-    hasSpoilerEmbeds: c6,
-    hasBailedAst: c7,
-    content: arg0(content, true, obj, (ast, inline) => {
-      let flag = arg2;
+  obj3.soundboardSounds = soundboardSounds;
+  return {
+    hasSpoilerEmbeds,
+    hasBailedAst: false,
+    content: fn(content, true, obj3, (ast, inline, arg2) => {
+      flag = arg2;
       if (arg2 == null) {
         flag = false;
       }
-      let obj = channelId(table[0]);
-      obj = { ast, inline, hasBailedAst: flag, message: channelId, contentMessage, messageContent: content, hideSimpleEmbedContent: table, formatInline: closure_3, toAST: closure_1 };
-      const result = obj.runMessageMarkupPostProcessors(obj);
+      const result = MarkupPostProcessors.runMessageMarkupPostProcessors({ ast, inline, hasBailedAst: flag, message, contentMessage, messageContent: content, hideSimpleEmbedContent, formatInline, toAST });
       ({ ast, hasSpoilerEmbeds: c6 } = result);
       let tmp2 = ast;
-      if (null != callback) {
-        tmp2 = callback(ast, inline);
+      if (null != render) {
+        tmp2 = render(ast, inline);
       }
       return tmp2;
     })
   };
-  return obj;
 }
-let result = set.fileFinishedImporting("modules/messages/renderMessageMarkup.tsx");
+let result = size.fileFinishedImporting("modules/messages/renderMessageMarkup.tsx");
 
 export default function renderMessageMarkup(arg0) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
-  const tmp2 = get_defaultRulesDefault;
+  const tmp2 = MarkupUtilsDefault;
   return render(obj.formatInline ? tmp2.parseInlineReply : tmp2.parse, arg0, obj);
 };
-export const getInitialParserStateFromMessage = function getInitialParserStateFromMessage(message, closure_7) {
-  let obj = { channelId: message.channel_id, messageId: message.id, authorId: null, renderOptions: null };
+export const getInitialParserStateFromMessage = function getInitialParserStateFromMessage(message, renderOptions) {
+  const obj = { channelId: message.channel_id, messageId: message.id, authorId: null, renderOptions: null };
   const author = message.author;
   let id;
   if (author != null) {
     id = author.id;
   }
-  obj[2] = id;
-  obj[3] = closure_7;
+  obj.authorId = id;
+  obj.renderOptions = renderOptions;
   const tmpResult = getInitialParserState(obj);
-  obj = {};
+  const obj3 = {};
   const merged = Object.assign(tmpResult);
   let allowLinks = tmp4;
   if (null == message.webhookId) {
     allowLinks = tmpResult.allowLinks;
   }
-  obj.allowLinks = allowLinks;
-  obj.allowEmojiLinks = null != message.webhookId;
+  obj3.allowLinks = allowLinks;
+  obj3.allowEmojiLinks = null != message.webhookId;
   ({ mentionChannels: obj2.mentionChannels, soundboardSounds } = message);
   if (soundboardSounds == null) {
     soundboardSounds = [];
   }
-  obj.soundboardSounds = soundboardSounds;
-  return obj;
+  obj3.soundboardSounds = soundboardSounds;
+  return obj3;
 };
 export { getInitialParserState };
 export const renderMessageMarkupWithParser = function renderMessageMarkupWithParser(NativeSearchResultLinkPreviewParser, arg1, arg2) {
@@ -113,16 +110,26 @@ export const renderMessageMarkupWithParser = function renderMessageMarkupWithPar
   }
   return render(NativeSearchResultLinkPreviewParser, arg1, obj);
 };
-export const renderMessageMarkupToAST = function renderMessageMarkupToAST(message, result) {
-  let obj = result;
-  if (result === undefined) {
+export const renderMessageMarkupToAST = function renderMessageMarkupToAST(arg0, arg1) {
+  let obj = arg1;
+  if (arg1 === undefined) {
     obj = {};
   }
-  const tmp2 = get_defaultRulesDefault;
-  obj = {};
+  const tmp2 = MarkupUtilsDefault;
+  const obj2 = {};
   const merged = Object.assign(obj);
-  obj.toAST = true;
-  return render(obj.formatInline ? tmp2.parseInlineReplyToAST : tmp2.parseToAST, message, obj);
+  obj2.toAST = true;
+  return render(obj.formatInline ? tmp2.parseInlineReplyToAST : tmp2.parseToAST, arg0, obj2);
+};
+export const renderMessageMarkupToASTWithParser = function renderMessageMarkupToASTWithParser(arg0, arg1, arg2) {
+  let obj = arg2;
+  if (arg2 === undefined) {
+    obj = {};
+  }
+  const obj2 = {};
+  const merged = Object.assign(obj);
+  obj2.toAST = true;
+  return render(arg0, arg1, obj2);
 };
 export const renderMessageContentMarkup = function renderMessageContentMarkup(notifCenterV2MessagePreviewParser, guildId, arg2) {
   let obj = arg2;
@@ -132,8 +139,7 @@ export const renderMessageContentMarkup = function renderMessageContentMarkup(no
   if (obj === undefined) {
     obj = {};
   }
-  obj = { allowLinks: false, allowDevLinks: false, allowEmojiLinks: false, allowGameMentions: false, mentionChannels: [], soundboardSounds: [], formatInline: true, noStyleAndInteraction: false, allowHeading: false, allowList: false, disableAutoBlockNewlines: true, previewLinkTarget: false, disableAnimatedEmoji: true, guildId: guildId.guildId, channelId: guildId.channelId, messageId: guildId.messageId, authorId: guildId.authorId, muted: false, disablePressableChannelMention: true, textColor: obj.textColor };
-  return notifCenterV2MessagePreviewParser(guildId.content, true, obj, (arg0) => {
+  return notifCenterV2MessagePreviewParser(guildId.content, true, { allowLinks: false, allowDevLinks: false, allowEmojiLinks: false, allowGameMentions: false, mentionChannels: [], soundboardSounds: [], formatInline: true, noStyleAndInteraction: false, allowHeading: false, allowList: false, disableAutoBlockNewlines: true, previewLinkTarget: false, disableAnimatedEmoji: true, guildId: guildId.guildId, channelId: guildId.channelId, messageId: guildId.messageId, authorId: guildId.authorId, muted: false, disablePressableChannelMention: true, textColor: obj.textColor }, (arg0) => {
     let tmp = arg0;
     if (!Array.isArray(arg0)) {
       const items = [arg0];
@@ -143,7 +149,7 @@ export const renderMessageContentMarkup = function renderMessageContentMarkup(no
   });
 };
 export const renderAutomodMessageMarkup = function renderAutomodMessageMarkup(arg0, highlightWord, channelId) {
-  return get_defaultRulesDefault.parseAutoModerationSystemMessage(arg0, true, { allowLinks: false, allowDevLinks: false, allowEmojiLinks: false, allowGameMentions: false, mentionChannels: [], soundboardSounds: [], formatInline: false, noStyleAndInteraction: false, allowHeading: false, allowList: false, disableAutoBlockNewlines: true, highlightWord, disableAnimatedEmoji: false, channelId, muted: false }, (arg0) => {
+  return MarkupUtilsDefault.parseAutoModerationSystemMessage(arg0, true, { allowLinks: false, allowDevLinks: false, allowEmojiLinks: false, allowGameMentions: false, mentionChannels: [], soundboardSounds: [], formatInline: false, noStyleAndInteraction: false, allowHeading: false, allowList: false, disableAutoBlockNewlines: true, highlightWord, disableAnimatedEmoji: false, channelId, muted: false }, (arg0) => {
     let tmp = arg0;
     if (!Array.isArray(arg0)) {
       const items = [arg0];
@@ -153,7 +159,7 @@ export const renderAutomodMessageMarkup = function renderAutomodMessageMarkup(ar
   });
 };
 export const renderAutomodMessageMarkupToAST = function renderAutomodMessageMarkupToAST(arg0, highlightWord, channelId) {
-  return get_defaultRulesDefault.parseAutoModerationSystemMessageToAST(arg0, true, { allowLinks: false, allowDevLinks: false, allowEmojiLinks: false, allowGameMentions: false, mentionChannels: [], soundboardSounds: [], formatInline: false, noStyleAndInteraction: false, allowHeading: false, allowList: false, disableAutoBlockNewlines: true, highlightWord, disableAnimatedEmoji: false, channelId, muted: false }, (arg0) => {
+  return MarkupUtilsDefault.parseAutoModerationSystemMessageToAST(arg0, true, { allowLinks: false, allowDevLinks: false, allowEmojiLinks: false, allowGameMentions: false, mentionChannels: [], soundboardSounds: [], formatInline: false, noStyleAndInteraction: false, allowHeading: false, allowList: false, disableAutoBlockNewlines: true, highlightWord, disableAnimatedEmoji: false, channelId, muted: false }, (arg0) => {
     let tmp = arg0;
     if (!Array.isArray(arg0)) {
       const items = [arg0];

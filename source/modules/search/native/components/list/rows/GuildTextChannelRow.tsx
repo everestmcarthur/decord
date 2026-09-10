@@ -1,52 +1,50 @@
-// Module ID: 16666
-// Function ID: 16667
-// Dependencies: [19, 7878, 21, 11, 16659, 12344, 16662, 2]
+// Module ID: 16703
+// Function ID: 16704
+// Name: GuildTextChannelRow
+// Dependencies: [19, 7892, 21, 11, 16691, 12370, 16694, 2]
 
-// Module 16666
-import importAllResult from "noop" /* 19 */;
-import { CHANNEL_LIST_SEARCH_LAYOUT as closure_4 } from "MessageEmbedTypes" /* 7878 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16703 (GuildTextChannelRow)
+import SearchUtils from "SearchUtils" /* 12370 */;
+import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 16691 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
-const memoResult = importAllResult.memo(function GuildTextChannelRow(channel) {
+require = fn;
+let closure_4 = fn(7892).CHANNEL_LIST_SEARCH_LAYOUT;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/list/rows/GuildTextChannelRow.tsx");
+
+export default noop.memo(function GuildTextChannelRow(channel) {
   channel = channel.channel;
   ({ lastMessageId, onPress } = channel);
   let extractTimestampResult = null;
-  const merged = Object.assign(channel, Object.create(null));
-  let id;
-  let guild_id;
+  const merged = Object.assign(channel, Object.assign({ channel: 0, trailing: 0, lastMessageId: 0, onPress: 0 }));
   c4 = undefined;
-  id = channel.id;
-  guild_id = channel.guild_id;
+  const id = channel.id;
+  const guild_id = channel.guild_id;
   if (null != lastMessageId) {
-    let obj = onPress(id[3]);
-    extractTimestampResult = obj.extractTimestamp(lastMessageId);
+    extractTimestampResult = onPress(id[3]).extractTimestamp(lastMessageId);
+    const obj = onPress(id[3]);
   }
   c4 = extractTimestampResult;
   const items = [id, guild_id, extractTimestampResult];
   const items1 = [channel.id, onPress];
   const memo = guild_id.useMemo(() => {
-    let obj = channel(id[4]);
     let channelActiveAgoTimestamp = null;
     if (null != c4) {
-      channelActiveAgoTimestamp = channel(id[5]).getChannelActiveAgoTimestamp(tmp3);
-      const tmpResult = channel(id[5]);
+      channelActiveAgoTimestamp = SearchUtils.getChannelActiveAgoTimestamp(tmp3);
+      const tmpResult = SearchUtils;
     }
-    obj = { subtitle: channelActiveAgoTimestamp, layout: c4, channelId: id, guildId: guild_id };
-    return obj.renderChannelSubtitle(obj);
+    return guild_channels_ChannelSubtitle.renderChannelSubtitle({ subtitle: channelActiveAgoTimestamp, layout, channelId: id, guildId: guild_id });
   }, items);
   const callback = guild_id.useCallback(() => {
     onPress(channel.id);
   }, items1);
-  obj = {};
+  const obj2 = {};
   const merged1 = Object.assign(merged);
-  obj.subtitle = memo;
-  obj.channel = channel;
-  obj.trailing = channel.trailing;
-  obj.onPress = callback;
+  obj2.subtitle = memo;
+  obj2.channel = channel;
+  obj2.trailing = channel.trailing;
+  obj2.onPress = callback;
   return jsx(onPress(id[6]), {});
 });
-const result = require("set").fileFinishedImporting("modules/search/native/components/list/rows/GuildTextChannelRow.tsx");
-
-export default memoResult;

@@ -1,19 +1,16 @@
 // Module ID: 6687
 // Function ID: 6688
-// Dependencies: []
+// Dependencies: [19, 17, 6688]
+// Exports: useEnsureGestureHandlerRootView
 
 // Module 6687
-if (typeof setImmediate === "function") {
-  const _setImmediate = setImmediate;
-  let bindResult = setImmediate.bind(null);
-} else {
-  const _requestAnimationFrame2 = requestAnimationFrame;
-  if (typeof requestAnimationFrame === "function") {
-    const _requestAnimationFrame = requestAnimationFrame;
-    bindResult = requestAnimationFrame.bind(null);
-  } else {
-    const _queueMicrotask = queueMicrotask;
-    bindResult = queueMicrotask.bind(null);
-  }
-}
-arg5.ghQueueMicrotask = bindResult;
+import _mod17 from "module_17" /* 17 */;
+import _mod19 from "module_19" /* 19 */;
+import _modDef6688 from "module_6688" /* 6688 */;
+
+const use = _mod19.use;
+const Platform = _mod17.Platform;
+
+export const useEnsureGestureHandlerRootView = function useEnsureGestureHandlerRootView() {
+  use(_modDef6688);
+};

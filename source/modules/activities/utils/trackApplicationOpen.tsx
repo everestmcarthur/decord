@@ -1,21 +1,20 @@
-// Module ID: 9575
-// Function ID: 9576
+// Module ID: 9602
+// Function ID: 9603
 // Name: trackApplicationOpen
 // Dependencies: [1074, 1242, 2]
 // Exports: default
 
-// Module 9575 (trackApplicationOpen)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+// Module 9602 (trackApplicationOpen)
+import Constants from "Constants" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import size from "module_2" /* 2 */;
 
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/activities/utils/trackApplicationOpen.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/activities/utils/trackApplicationOpen.tsx");
 
 export default function trackApplicationOpen(partyId) {
   partyId = partyId.partyId;
   ({ type, source, userId, guildId, channelId, channelType, applicationId, messageId, locationObject, analyticsLocations, referrerId, inviterUserId, remoteJoinPlatform } = partyId);
-  let obj = expandEventPropertiesDefault;
-  obj = { type, source, guild_id: guildId, channel_id: channelId, channel_type: channelType, application_id: applicationId, party_id: partyId, other_user_id: userId, message_id: messageId, location: locationObject, location_stack: analyticsLocations, referrer_id: referrerId, invite_inviter_id: inviterUserId, remote_join_platform: remoteJoinPlatform };
-  obj.track(AnalyticEvents.APPLICATION_OPENED, obj);
+  const obj2 = { type, source, guild_id: guildId, channel_id: channelId, channel_type: channelType, application_id: applicationId, party_id: partyId, other_user_id: userId, message_id: messageId, location: locationObject, location_stack: analyticsLocations, referrer_id: referrerId, invite_inviter_id: inviterUserId, remote_join_platform: remoteJoinPlatform };
+  AnalyticsUtilsDefault.track(AnalyticEvents.APPLICATION_OPENED, obj2);
 };

@@ -1,16 +1,17 @@
-// Module ID: 16043
-// Function ID: 16044
-// Dependencies: [19, 21, 9834, 2]
+// Module ID: 16073
+// Function ID: 16074
+// Name: MessagesItemPlaceholder
+// Dependencies: [19, 21, 9861, 2]
 
-// Module 16043
-import _modDef9834 from "module_9834" /* 9834 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+// Module 16073 (MessagesItemPlaceholder)
+import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9861 */;
+import noop from "module_19" /* 19 */;
 
-const memoResult = importAllResult.memo(function MessagesItemPlaceholder(arg0) {
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemPlaceholder.tsx");
+
+export default noop.memo(function MessagesItemPlaceholder(arg0) {
   ({ row, height } = arg0);
-  return jsx(_modDef9834, { row, height });
+  return jsx(UserPlaceholderRowDefault, { row, height });
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemPlaceholder.tsx");
-
-export default memoResult;

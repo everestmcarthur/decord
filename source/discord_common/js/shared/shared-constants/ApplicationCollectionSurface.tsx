@@ -1,11 +1,11 @@
-// Module ID: 12081
-// Function ID: 12082
+// Module ID: 12107
+// Function ID: 12108
 // Name: ApplicationCollectionSurface
 // Dependencies: [2]
 
-// Module 12081 (ApplicationCollectionSurface)
-import set from "set" /* 2 */;
+// Module 12107 (ApplicationCollectionSurface)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationCollectionSurface.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationCollectionSurface.tsx");
 
 export const ApplicationCollectionSurface = { APPLICATION_DIRECTORY: 1, [1]: "APPLICATION_DIRECTORY", APP_LAUNCHER_IN_TEXT: 2, [2]: "APP_LAUNCHER_IN_TEXT", APP_LAUNCHER_IN_VOICE_BANNER: 3, [3]: "APP_LAUNCHER_IN_VOICE_BANNER" };

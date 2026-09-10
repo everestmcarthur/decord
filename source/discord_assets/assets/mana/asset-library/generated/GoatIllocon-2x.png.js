@@ -1,12 +1,11 @@
-// Module ID: 6178
-// Function ID: 6179
-// Name: metadata
+// Module ID: 6192
+// Function ID: 6193
 // Dependencies: [2]
 
-// Module 6178 (metadata)
-import set from "set" /* 2 */;
+// Module 6192
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GoatIllocon-2x.png.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GoatIllocon-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/df594db44bafcfa35f3073ba733dfc7a0cc20588255b779a46ffb8a62e57ce93.png";
 export const metadata = { fileBytes: 666 };

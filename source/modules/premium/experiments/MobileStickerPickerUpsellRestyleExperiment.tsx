@@ -1,16 +1,16 @@
-// Module ID: 9326
-// Function ID: 9327
-// Name: apexExperiment
-// Dependencies: [1433, 7853, 2]
+// Module ID: 9353
+// Function ID: 9354
+// Name: MobileStickerPickerUpsellRestyleExperiment
+// Dependencies: [1433, 7867, 2]
 // Exports: getMobileStickerPickerUpsellRestyleEnabled, getMobileStickerPickerUpsellRestyleEnabledForFeature, useMobileStickerPickerUpsellRestyleEnabled
 
-// Module 9326 (apexExperiment)
-import set from "set" /* 2 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7853 */;
+// Module 9353 (MobileStickerPickerUpsellRestyleExperiment)
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7867 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-09-mobile-sticker-picker-upsell-restyle", kind: "user", defaultConfig: false, variations: { 0: false, 1: true } });
-const result = set.fileFinishedImporting("modules/premium/experiments/MobileStickerPickerUpsellRestyleExperiment.tsx");
+const result = size.fileFinishedImporting("modules/premium/experiments/MobileStickerPickerUpsellRestyleExperiment.tsx");
 
 export const MobileStickerPickerUpsellRestyleExperiment = apexExperiment;
 export const useMobileStickerPickerUpsellRestyleEnabled = function useMobileStickerPickerUpsellRestyleEnabled(location) {
@@ -19,11 +19,10 @@ export const useMobileStickerPickerUpsellRestyleEnabled = function useMobileStic
 export const getMobileStickerPickerUpsellRestyleEnabled = function getMobileStickerPickerUpsellRestyleEnabled(location) {
   return apexExperiment.getConfig({ location });
 };
-export const getMobileStickerPickerUpsellRestyleEnabledForFeature = function getMobileStickerPickerUpsellRestyleEnabledForFeature(featureName, arg1) {
+export const getMobileStickerPickerUpsellRestyleEnabledForFeature = function getMobileStickerPickerUpsellRestyleEnabledForFeature(featureName, location) {
   let config = featureName === EntitlementFeatureNames.EntitlementFeatureNames.STICKERS_EVERYWHERE;
   if (config) {
-    const obj = { location: null };
-    obj[0] = arg1;
+    const obj = { location };
     config = apexExperiment.getConfig(obj);
   }
   return config;

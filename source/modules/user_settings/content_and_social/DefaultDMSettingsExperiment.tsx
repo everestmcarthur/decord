@@ -1,20 +1,18 @@
-// Module ID: 15882
-// Function ID: 15883
-// Name: shouldAgeVerifyForDMDefaultOff
-// Dependencies: [5423, 5424, 4773, 2]
+// Module ID: 15912
+// Function ID: 15913
+// Name: DefaultDMSettingsExperiment
+// Dependencies: [5437, 5438, 4787, 2]
 // Exports: shouldAgeVerifyForDMDefaultOff
 
-// Module 15882 (shouldAgeVerifyForDMDefaultOff)
-import set from "set" /* 2 */;
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4773 */;
-import isFeatureAgeGated from "isFeatureAgeGated" /* 5423 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5424 */;
+// Module 15912 (DefaultDMSettingsExperiment)
+import AgeVerificationUtils from "AgeVerificationUtils" /* 4787 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5437 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 5438 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/user_settings/content_and_social/DefaultDMSettingsExperiment.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/content_and_social/DefaultDMSettingsExperiment.tsx");
 
 export const shouldAgeVerifyForDMDefaultOff = function shouldAgeVerifyForDMDefaultOff() {
-  const obj = isFeatureAgeGated;
-  const isFeatureAgeGatedResult = isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.DM_PRIVACY_SETTINGS);
-  const obj2 = useAgeVerificationRunner;
-  return useAgeVerificationRunner.shouldShowTiggerPawtect() && isFeatureAgeGatedResult;
+  const isFeatureAgeGatedResult = RegionalFeatureConfigUtils.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.DM_PRIVACY_SETTINGS);
+  return AgeVerificationUtils.shouldShowTiggerPawtect() && isFeatureAgeGatedResult;
 };

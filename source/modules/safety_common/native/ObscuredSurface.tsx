@@ -1,70 +1,59 @@
-// Module ID: 8716
-// Function ID: 8717
+// Module ID: 8744
+// Function ID: 8745
 // Name: ObscuredSurface
-// Dependencies: [19, 17, 21, 4560, 576, 8717, 5081, 4556, 1114, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 8745, 5095, 4570, 1114, 2]
 // Exports: default
 
-// Module 8716 (ObscuredSurface)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Text from "Text" /* 4556 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 5081 */;
-import context from "context" /* 8717 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 8744 (ObscuredSurface)
+import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 5095 */;
+import ObscuredSurfaceContext from "ObscuredSurfaceContext" /* 8745 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { position: "relative", overflow: "hidden" }, content: { pointerEvents: "none", userSelect: "none" }, cover: null, warning: null };
-createCacheKey = { position: "absolute", inset: 0, zIndex: 1, backgroundColor: ThemesDefault.colors.SPOILER_HIDDEN_BACKGROUND };
-createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { position: "absolute", insetInlineStart: "50%", top: "50%", transform: "translate(-50%, -50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_8, textAlign: "center", userSelect: "none", zIndex: 2 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { position: "absolute", insetInlineStart: "50%", top: "50%", transform: "translate(-50%, -50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_8, textAlign: "center", userSelect: "none", zIndex: 2 };
-const result = require("set").fileFinishedImporting("modules/safety_common/native/ObscuredSurface.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { position: "relative", overflow: "hidden" }, content: { pointerEvents: "none", userSelect: "none" }, cover: { position: "absolute", inset: 0, zIndex: 1, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND }, warning: null };
+let obj3 = { position: "absolute", inset: 0, zIndex: 1, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND };
+obj2.warning = { position: "absolute", insetInlineStart: "50%", top: "50%", transform: "translate(-50%, -50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_8, textAlign: "center", userSelect: "none", zIndex: 2 };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_common/native/ObscuredSurface.tsx");
 
 export default function ObscuredSurface(obscured) {
   ({ heading, description, children } = obscured);
-  const tmp = callback2();
+  const tmp = closure_6();
   let tmp3Result = children;
   if (obscured.obscured) {
-    let obj = { value: null, children: null };
-    obj[0] = context.OBSCURED_VALUE;
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
-    obj = { style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", accessible: false, "aria-hidden": true, children: null };
-    obj[0] = tmp.content;
-    obj[5] = children;
-    const items = [callback(View, obj), , ];
-    obj1 = { style: null };
-    obj1[0] = tmp.cover;
-    items[1] = callback(View, obj1);
-    const obj2 = { style: null, children: null };
-    obj2[0] = tmp.warning;
-    const obj3 = { size: "lg", color: null };
-    obj3[1] = ThemesDefault.colors.TEXT_DEFAULT;
-    const items1 = [callback(ImageWarningIcon.ImageWarningIcon, obj3), , ];
+    const obj = { value: ObscuredSurfaceContext.OBSCURED_VALUE, children: null };
+    const obj2 = { style: tmp.container, children: null };
+    const obj3 = { style: tmp.content, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", accessible: false, "aria-hidden": true, children };
+    const items = [React4(View, obj3), , ];
+    const obj4 = { style: tmp.cover };
+    items[1] = React4(View, obj4);
+    const obj5 = { style: tmp.warning, children: null };
+    const obj6 = { size: "lg", color: nativeDefault.colors.TEXT_DEFAULT };
+    const items1 = [React4(ImageWarningIcon.ImageWarningIcon, obj6), , ];
     if (heading == null) {
       const intl = tmp4(1114).intl;
       heading = intl.string(tmp4(1114).t.xC8Saf);
     }
-    const obj4 = { variant: "heading-md/semibold", color: "text-strong", children: null };
-    obj4[2] = heading;
-    items1[1] = callback(Text.Text, obj4);
+    const obj7 = { variant: "heading-md/semibold", color: "text-strong", children: heading };
+    items1[1] = React4(Text_Text.Text, obj7);
     if (description == null) {
       const intl2 = tmp4(1114).intl;
       description = intl2.string(tmp4(1114).t["0fc/DG"]);
     }
-    const obj5 = { variant: "text-sm/normal", color: "text-muted", children: null };
-    obj5[2] = description;
-    items1[2] = callback(Text.Text, obj5);
-    obj2[1] = items1;
-    items[2] = closure_5(View, obj2);
-    obj[1] = items;
-    obj[1] = closure_5(View, obj);
-    tmp3Result = tmp3(context.ObscuredSurfaceContext.Provider, obj);
+    const obj8 = { variant: "text-sm/normal", color: "text-muted", children: description };
+    items1[2] = React4(Text_Text.Text, obj8);
+    obj5.children = items1;
+    items[2] = hasOwnProperty(View, obj5);
+    obj2.children = items;
+    obj.children = hasOwnProperty(View, obj2);
+    tmp3Result = tmp3(ObscuredSurfaceContext.ObscuredSurfaceContext.Provider, obj);
   }
   return tmp3Result;
 };

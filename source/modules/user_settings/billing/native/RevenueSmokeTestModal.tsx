@@ -1,75 +1,61 @@
-// Module ID: 15701
-// Function ID: 15702
-// Dependencies: [19, 21, 7913, 7000, 10827, 7863, 10930, 15702, 2]
+// Module ID: 15731
+// Function ID: 15732
+// Name: RevenueSmokeTestModal
+// Dependencies: [19, 21, 7927, 7014, 10854, 7877, 10957, 15732, 2]
 
-// Module 15701
-import _modDef15702 from "module_15702" /* 15702 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 7913 */;
-import importAllResult from "noop" /* 19 */;
+// Module 15731 (RevenueSmokeTestModal)
+import HeaderShared from "HeaderShared" /* 7877 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10957 */;
+import BillingFlowsDefault from "BillingFlows" /* 15732 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let closure_4 = createNativeStackNavigator.createNativeStackNavigator();
-const memoResult = importAllResult.memo(function RevenueSmokeTestModal() {
-  let obj = _require(7000);
-  _require = obj.useAccessibilityNativeStackOptions();
-  obj = { skuIDs: [], activeSubscription: null, children: null };
-  obj = {
+const require = globalThis.__r;
+
+require = fn;
+const jsx = fn(21).jsx;
+const NativeStackNavigator = fn(7927);
+let closure_4 = NativeStackNavigator.createNativeStackNavigator();
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/billing/native/RevenueSmokeTestModal.tsx");
+
+export default noop.memo(function RevenueSmokeTestModal() {
+  _require = require("Navigator").useAccessibilityNativeStackOptions();
+  const obj2 = { skuIDs: [], activeSubscription: null, children: null };
+  const obj3 = {
     screenOptions(navigation) {
       const obj = {
         headerTitle(children) {
-          const merged = Object.assign(children, Object.create(null));
+          const merged = Object.assign(children, Object.assign({ children: 0 }));
           const merged1 = Object.assign(merged);
-          return callback2(callback(table[5]).GenericHeaderTitle, { title: children.children });
+          return closure_1_3(closure_1_0(closure_1_2[5]).GenericHeaderTitle, { title: children.children });
         },
-        headerLeft: callback(closure_1_2[5]).getRenderModalCloseImage(navigation.navigation),
+        headerLeft: HeaderShared.getRenderModalCloseImage(navigation.navigation),
         headerTitleAlign: "center"
       };
-      let merged = Object.assign(callback);
-      let merged1 = Object.assign(closure_1_1(closure_1_2[6])());
+      let merged = Object.assign(closure_0);
+      let merged1 = Object.assign(getNavigationModalPresentationDefault());
       return obj;
     },
-    children: <Screen name="RunAllFlows" options={function options() {
-      return { title: "Run All Payment Flows" };
-    }} component={_modDef15702.RunAllFlows} />
+    children: null
   };
+  let obj = require("Navigator");
   ({ Navigator, Screen } = closure_4);
-  obj[2] = <Navigator screenOptions={function screenOptions(navigation) {
+  obj3.children = <Screen name="RunAllFlows" options={function options() {
+    return { title: "Run All Payment Flows" };
+  }} component={BillingFlowsDefault.RunAllFlows} />;
+  obj2.children = <Navigator screenOptions={function screenOptions(navigation) {
     const obj = {
       headerTitle(children) {
-        const merged = Object.assign(children, Object.create(null));
+        const merged = Object.assign(children, Object.assign({ children: 0 }));
         const merged1 = Object.assign(merged);
-        return callback2(callback(table[5]).GenericHeaderTitle, { title: children.children });
+        return closure_1_3(closure_1_0(closure_1_2[5]).GenericHeaderTitle, { title: children.children });
       },
-      headerLeft: callback(closure_1_2[5]).getRenderModalCloseImage(navigation.navigation),
+      headerLeft: HeaderShared.getRenderModalCloseImage(navigation.navigation),
       headerTitleAlign: "center"
     };
-    let merged = Object.assign(callback);
-    let merged1 = Object.assign(closure_1_1(closure_1_2[6])());
+    let merged = Object.assign(closure_0);
+    let merged1 = Object.assign(getNavigationModalPresentationDefault());
     return obj;
-  }}><Screen name="RunAllFlows" options={function options() {
-    return { title: "Run All Payment Flows" };
-  }} component={_modDef15702.RunAllFlows} /></Navigator>;
-  return jsx(_require(10827).NativePaymentContextProvider, {
-    screenOptions(navigation) {
-      const obj = {
-        headerTitle(children) {
-          const merged = Object.assign(children, Object.create(null));
-          const merged1 = Object.assign(merged);
-          return callback2(callback(table[5]).GenericHeaderTitle, { title: children.children });
-        },
-        headerLeft: callback(closure_1_2[5]).getRenderModalCloseImage(navigation.navigation),
-        headerTitleAlign: "center"
-      };
-      let merged = Object.assign(callback);
-      let merged1 = Object.assign(closure_1_1(closure_1_2[6])());
-      return obj;
-    },
-    children: <Screen name="RunAllFlows" options={function options() {
-      return { title: "Run All Payment Flows" };
-    }} component={_modDef15702.RunAllFlows} />
-  });
+  }}>{null}</Navigator>;
+  return jsx(require("NativePaymentContext").NativePaymentContextProvider, { skuIDs: [], activeSubscription: null, children: null });
 });
-const result = require("set").fileFinishedImporting("modules/user_settings/billing/native/RevenueSmokeTestModal.tsx");
-
-export default memoResult;

@@ -1,28 +1,28 @@
-// Module ID: 8709
-// Function ID: 8710
+// Module ID: 8737
+// Function ID: 8738
 // Name: MinecraftNeutralIcon
-// Dependencies: [19, 17, 21, 576, 4261, 8710, 8711, 8712, 2]
+// Dependencies: [19, 17, 21, 576, 4274, 8738, 8739, 8740, 2]
 // Exports: MinecraftNeutralIcon
 
-// Module 8709 (MinecraftNeutralIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 8710 */;
-import registerAsset2 from "registerAsset" /* 8711 */;
-import registerAsset3 from "registerAsset" /* 8712 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 8737 (MinecraftNeutralIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod8738 from "module_8738" /* 8738 */;
+import _mod8739 from "module_8739" /* 8739 */;
+import _mod8740 from "module_8740" /* 8740 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/MinecraftNeutralIcon.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/MinecraftNeutralIcon.tsx");
 
 export const MinecraftNeutralIcon = function MinecraftNeutralIcon(secondaryColor) {
   ({ style, color } = secondaryColor);
   if (color === undefined) {
-    color = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    color = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   let str = secondaryColor.secondaryColor;
   if (str === undefined) {
@@ -32,22 +32,24 @@ export const MinecraftNeutralIcon = function MinecraftNeutralIcon(secondaryColor
   if (str2 === undefined) {
     str2 = "#fff";
   }
-  const merged = Object.assign(secondaryColor, Object.create(null));
-  let obj = { children: null };
-  obj = { source: registerAsset, color, style };
+  const merged = Object.assign(secondaryColor, Object.assign({ style: 0, color: 0, secondaryColor: 0, tertiaryColor: 0 }));
+  const obj = { children: null };
   const merged1 = Object.assign(merged);
-  const items = [callback(BaseIconImage.BaseIconImage, obj), , ];
-  obj = { source: registerAsset2, color: str, style: items2 };
+  const items = [React4(BaseIconImage.BaseIconImage, { source: _mod8738, color, style }), , ];
+  const obj3 = { source: _mod8739, color: str, style: null };
   const items1 = [style];
-  items2 = [];
+  const items2 = [];
   items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };
+  obj3.style = items2;
   const merged2 = Object.assign(merged);
-  items[1] = callback(BaseIconImage.BaseIconImage, obj);
+  items[1] = React4(BaseIconImage.BaseIconImage, obj3);
+  const obj4 = { source: _mod8740, color: str2, style: null };
   const items3 = [style];
   const items4 = [];
   items4[HermesBuiltin.arraySpread(items3.flat(), 0)] = { position: "absolute", top: 0 };
+  obj4.style = items4;
   const merged3 = Object.assign(merged);
-  items[2] = callback(BaseIconImage.BaseIconImage, { source: registerAsset3, color: str2, style: items4 });
-  obj[0] = items;
-  return callback2(View, obj);
+  items[2] = React4(BaseIconImage.BaseIconImage, obj4);
+  obj.children = items;
+  return hasOwnProperty(View, obj);
 };

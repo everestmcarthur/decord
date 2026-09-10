@@ -1,26 +1,23 @@
 // Module ID: 1272
 // Function ID: 1273
-// Name: sendRequest
+// Name: HTTPUtils
 // Dependencies: [4, 1273, 559, 1326, 1327, 2, 1328, 1329]
 // Exports: getAPIBaseURL, getRateLimitFloorMs, isRateLimitedStatus, makeRateLimitedResponse, parseRetryAfter, rejectWithMigratedError, setAwaitOnline, setRejectWithMigratedError, setRequestPatch
 
-// Module 1272 (sendRequest)
-import log from "log" /* 4 */;
-import failsDefault from "fails" /* 559 */;
+// Module 1272 (HTTPUtils)
+import logger_Logger from "logger/Logger" /* 4 */;
+import BackoffDefault from "Backoff" /* 559 */;
 import _createForOfIteratorHelperDefault from "_createForOfIteratorHelper" /* 1273 */;
-import convertStringArrayToSkemaErrorItems from "convertStringArrayToSkemaErrorItems" /* 1326 */;
+import V8APIError from "V8APIError" /* 1326 */;
 import convertSkemaError from "convertSkemaError" /* 1327 */;
 import stringifyErrors from "stringifyErrors" /* 1328 */;
-import getFieldMessage from "getFieldMessage" /* 1329 */;
-import set from "set" /* 2 */;
+import discord_common_V6OrEarlierAPIError from "discord_common/V6OrEarlierAPIError" /* 1329 */;
+import size from "module_2" /* 2 */;
 
-function sendRequest(arg0, signal) {
-  closure_0 = arg0;
+function sendRequest(method, signal, arg2, fn, fn2, cause) {
   importDefault = signal;
   dependencyMap = arg2;
-  closure_3 = arg3;
-  closure_4 = arg4;
-  closure_5 = arg5;
+  closure_3 = fn;
   signal = signal.signal;
   let aborted;
   if (signal != null) {
@@ -29,38 +26,36 @@ function sendRequest(arg0, signal) {
   if (aborted) {
     const _Object = Object;
     const _Error = Error;
-    let obj = { cause: null };
-    obj[0] = arg5;
-    error = new Error("Request aborted", obj);
+    let obj = { cause };
+    const error = new Error("Request aborted", obj);
     let merged = Object.assign(error, { code: "ABORTED" });
     cleanupRequestEntry(signal);
-    arg3(merged);
-    if (null != arg4) {
-      obj = { ok: false, hasErr: true, err: null };
-      obj[2] = merged;
-      arg4(obj);
+    fn(merged);
+    if (null != fn2) {
+      const obj2 = { ok: false, hasErr: true, err: merged };
+      fn2(obj2);
     }
   } else {
-    const promise = _createForOfIteratorHelperDefault[arg0](signal.url);
+    const promise = _createForOfIteratorHelperDefault[method](signal.url);
     if (null != signal.onRequestCreated) {
       signal.onRequestCreated(promise);
     }
     if (null != signal.query) {
-      let query = signal.query;
+      const query = signal.query;
       let tmp6 = query;
       if (typeof query === "object") {
-        obj = {};
+        const obj3 = {};
         let merged1 = Object.assign(query);
         const _Object2 = Object;
-        const keys = Object.keys(obj);
-        const mapped = keys.map((arg0) => {
-          if (null == obj[arg0]) {
+        const keys = Object.keys(obj3);
+        const mapped = keys.map((item) => {
+          if (null == obj3[item]) {
             delete tmp[tmp2];
           }
         });
-        tmp6 = obj;
+        tmp6 = obj3;
       }
-      query = promise.query(tmp6);
+      const query1 = promise.query(tmp6);
     }
     if (signal.body) {
       promise.send(signal.body);
@@ -123,8 +118,8 @@ function sendRequest(arg0, signal) {
 
     }
     let prepareRequestResult;
-    if (c10 != null) {
-      const prepareRequest = c10.prepareRequest;
+    if (global != null) {
+      const prepareRequest = global.prepareRequest;
       if (prepareRequest != null) {
         prepareRequestResult = prepareRequest(promise);
       }
@@ -136,26 +131,27 @@ function sendRequest(arg0, signal) {
         tmp.retries = +tmp.retries - 1;
         if (+tmp.retries > 0) {
           if (set.has(ok.status)) {
-            if (typeof retry !== "function") {
-              HermesBuiltin.throwTypeError();
-            }
-            if (null != tmp.backoff) {
-              let backoff = tmp.backoff;
+            if (typeof retry === "function") {
+              if (null != tmp.backoff) {
+                let backoff = tmp.backoff;
+              } else {
+                backoff = new signal(559)();
+              }
+              tmp.backoff = backoff;
+              let num5 = 0;
+              if (null != tmp.retried) {
+                num5 = tmp.retried;
+              }
+              tmp.retried = num5 + 1;
+              const backoff2 = tmp.backoff;
+              backoff2.fail(() => global(url.url).then(() => obj3(closure_1_0, url, closure_1_2, closure_1_3, closure_1_4, closure_1_5)));
             } else {
-              backoff = new signal(559)();
+              throw new TypeError("Trying to call a non-function");
             }
-            tmp.backoff = backoff;
-            let num5 = 0;
-            if (null != tmp.retried) {
-              num5 = tmp.retried;
-            }
-            tmp.retried = num5 + 1;
-            const backoff2 = tmp.backoff;
-            backoff2.fail(() => closure_1_11(url.url).then(() => closure_1_7(closure_0, closure_1, closure_2, closure_3, closure_4, closure_5)));
           }
         }
       }
-      obj = { ok: ok.ok, headers: ok.headers, body: ok.body, text: ok.text, status: ok.status, retryAfter: null };
+      const response = { ok: ok.ok, headers: ok.headers, body: ok.body, text: ok.text, status: ok.status, retryAfter: null };
       ({ headers, body } = ok);
       let prop;
       if (headers != null) {
@@ -172,26 +168,24 @@ function sendRequest(arg0, signal) {
         const _parseInt = parseInt;
         let parsed = parseInt(prop, 10);
         const _Number = Number;
-        obj[5] = parsed;
-        prepareRequestResult(tmp, obj);
-        c0 = false;
+        response.retryAfter = parsed;
+        prepareRequestResult(tmp, response);
+        method = false;
         function interceptRetry(arg0, interceptResponse) {
-          obj = {};
-          const merged = Object.assign(closure_1_1);
-          obj = {};
-          const merged1 = Object.assign(closure_1_1.headers);
+          const obj = {};
+          const merged = Object.assign(headers);
+          const merged1 = Object.assign(headers.headers);
           const merged2 = Object.assign(arg0);
-          obj.headers = obj;
+          obj.headers = {};
           obj.interceptResponse = interceptResponse;
           c0 = true;
-          obj(c0, obj, closure_1_2, closure_1_3, closure_1_4, closure_1_5);
+          sendRequest(closure_0, obj, closure_2, closure_3, closure_4, closure_5);
         }
-        function interceptCancel(arg0) {
+        function interceptCancel(err) {
           if (!c0) {
-            closure_1_3(arg0);
-            if (closure_1_4 != null) {
-              obj = { ok: false, hasErr: true, err: null };
-              obj[2] = arg0;
+            closure_3(err);
+            if (closure_4 != null) {
+              const obj = { ok: false, hasErr: true, err };
               tmp4(obj);
             }
           }
@@ -205,7 +199,7 @@ function sendRequest(arg0, signal) {
         }
         if (true !== interceptResponseResult) {
           let interceptResponse2Result;
-          if (closure_1_10 != null) {
+          if (global != null) {
             const interceptResponse2 = tmp44.interceptResponse;
             if (interceptResponse2 != null) {
               interceptResponse2Result = interceptResponse2(ok, interceptRetry, interceptCancel, closure_9);
@@ -213,40 +207,38 @@ function sendRequest(arg0, signal) {
           }
           if (true !== interceptResponse2Result) {
             if (ok.ok) {
-              dependencyMap(obj);
+              dependencyMap(response);
             } else {
               if (tmp.oldFormErrors) {
-                const body2 = obj.body;
+                const body2 = response.body;
                 let code;
                 if (body2 != null) {
                   code = body2.code;
                 }
-                if (code === callback(1326).INVALID_FORM_BODY_ERROR_CODE) {
-                  const errors = obj.body.errors;
+                if (code === method(1326).INVALID_FORM_BODY_ERROR_CODE) {
+                  const errors = response.body.errors;
                   if (null != errors) {
-                    obj.body = tmp17(1327).convertSkemaError(errors);
+                    response.body = tmp17(1327).convertSkemaError(errors);
                     const tmp17Result = tmp17(1327);
                   }
                 }
-                tmp17 = callback;
+                tmp17 = method;
               }
               if (tmp.rejectWithError) {
-                obj = { method: null, url: null, status: null, body: null, text: null, headers: null, retryAfter: null };
-                obj[0] = c0;
-                obj[1] = tmp.url;
-                ({ status: obj3[2], body: obj3[3], text: obj3[4], headers: obj3[5], retryAfter: obj3[6] } = obj);
-                const tmp26 = new promise(obj);
-                if (null != closure_5) {
-                  tmp26.cause = closure_5;
+                const response1 = { method, url: tmp.url, status: null, body: null, text: null, headers: null, retryAfter: null };
+                ({ status: obj3.status, body: obj3.body, text: obj3.text, headers: obj3.headers, retryAfter: obj3.retryAfter } = response);
+                const tmp26 = new promise(response1);
+                if (null != cause) {
+                  tmp26.cause = cause;
                 }
-                callback2(tmp26);
+                closure_3(tmp26);
               } else {
-                callback2(obj);
+                closure_3(response);
               }
             }
             if (null != set) {
-              obj = { hasErr: false };
-              let merged = Object.assign(obj);
+              let obj = { hasErr: false };
+              let merged = Object.assign(response);
               tmp31(obj);
             }
           }
@@ -270,37 +262,37 @@ function sendRequest(arg0, signal) {
         tmp.retries = +tmp.retries - 1;
         if (+tmp.retries > 0) {
           if ("ABORTED" !== code.code) {
-            if (typeof retry !== "function") {
-              HermesBuiltin.throwTypeError();
-            }
-            if (null != tmp.backoff) {
-              let backoff = tmp.backoff;
+            if (typeof retry === "function") {
+              if (null != tmp.backoff) {
+                let backoff = tmp.backoff;
+              } else {
+                backoff = new BackoffDefault();
+              }
+              tmp.backoff = backoff;
+              let num2 = 0;
+              if (null != tmp.retried) {
+                num2 = tmp.retried;
+              }
+              tmp.retried = num2 + 1;
+              const backoff2 = tmp.backoff;
+              backoff2.fail(() => global(url.url).then(() => obj3(closure_1_0, url, closure_1_2, closure_1_3, closure_1_4, closure_1_5)));
             } else {
-              backoff = new signal(559)();
+              throw new TypeError("Trying to call a non-function");
             }
-            tmp.backoff = backoff;
-            let num2 = 0;
-            if (null != tmp.retried) {
-              num2 = tmp.retried;
-            }
-            tmp.retried = num2 + 1;
-            const backoff2 = tmp.backoff;
-            backoff2.fail(() => closure_1_11(url.url).then(() => closure_1_7(closure_0, closure_1, closure_2, closure_3, closure_4, closure_5)));
           }
         }
       }
-      prepareRequestResult(signal);
-      let tmp5 = null != closure_5;
+      cleanupRequestEntry(signal);
+      let tmp5 = null != cause;
       if (tmp5) {
         tmp5 = null == code.cause;
       }
       if (tmp5) {
-        code.cause = closure_5;
+        code.cause = cause;
       }
-      callback2(code);
+      closure_3(code);
       if (null != closure_4) {
-        obj = { ok: false, hasErr: true, err: null };
-        obj[2] = code;
+        const obj = { ok: false, hasErr: true, err: code };
         tmp7(obj);
       }
     });
@@ -319,10 +311,8 @@ function sendRequest(arg0, signal) {
     }
   }
 }
-function cleanupRequestEntry(url) {
-  closure_0 = url;
-  let obj = map;
-  let value = map.get(url.url);
+function cleanupRequestEntry(url, arg1) {
+  value = map.get(url.url);
   if (null != arg1) {
     if (set1.has(arg1.status)) {
       let backoff;
@@ -330,7 +320,7 @@ function cleanupRequestEntry(url) {
         backoff = value.backoff;
       }
       if (backoff == null) {
-        backoff = new failsDefault(1000, 60000);
+        backoff = new BackoffDefault(1000, 60000);
       }
       ({ headers, body } = arg1);
       let prop;
@@ -370,19 +360,19 @@ function cleanupRequestEntry(url) {
         let queue;
         const timerId = setTimeout(() => {
           url = url.url;
-          const value = closure_1_8.get(url);
+          value = map.get(url);
           if (null != value) {
             const queue = value.queue;
             const arr = queue.shift();
             if (null == arr) {
-              closure_1_3.verbose("rateLimitExpirationHandler: removing key for", url);
-              closure_1_8.delete(url);
+              logger.verbose("rateLimitExpirationHandler: removing key for", url);
+              map.delete(url);
             } else {
-              closure_1_3.verbose("rateLimitExpirationHandler: moving to next record for ", url);
+              logger.verbose("rateLimitExpirationHandler: moving to next record for ", url);
               arr();
             }
           } else {
-            closure_1_3.verbose("rateLimitExpirationHandler: rate limit for", url, "expired, but record was already removed");
+            logger.verbose("rateLimitExpirationHandler: rate limit for", url, "expired, but record was already removed");
           }
         }, failResult);
         if (value != null) {
@@ -391,19 +381,17 @@ function cleanupRequestEntry(url) {
         if (queue == null) {
           queue = [];
         }
-        obj = { queue: null, retryAfterTimestamp: null, latestErrorMessage: null, status: null, timeoutId: null, backoff: null };
-        obj[0] = queue;
-        obj[1] = sum;
+        const obj3 = { queue, retryAfterTimestamp: sum, latestErrorMessage: null, status: null, timeoutId: null, backoff: null };
         const body2 = arg1.body;
         let message;
         if (body2 != null) {
           message = body2.message;
         }
-        obj[2] = String(message);
-        obj[3] = arg1.status;
-        obj[4] = timerId;
-        obj[5] = backoff;
-        const result = obj.set(url.url, obj);
+        obj3.latestErrorMessage = String(message);
+        obj3.status = arg1.status;
+        obj3.timeoutId = timerId;
+        obj3.backoff = backoff;
+        const result = obj.set(url.url, obj3);
       }
       if (null != body) {
         if (typeof body === "object") {
@@ -428,9 +416,9 @@ function cleanupRequestEntry(url) {
   if (tmp3) {
     logger.verbose("cleanupRequestEntry: rate limit for ", url.url, "expired");
     url = url.url;
-    value = obj.get(url);
-    if (null != value) {
-      const queue1 = value.queue;
+    value2 = obj.get(url);
+    if (null != value2) {
+      const queue1 = value2.queue;
       let arr = queue1.shift();
       if (null == arr) {
         obj2.verbose("rateLimitExpirationHandler: removing key for", url);
@@ -444,42 +432,37 @@ function cleanupRequestEntry(url) {
     }
   }
 }
-function makeRequest(str) {
+function makeRequest(str, arg1, arg2) {
   closure_0 = str;
-  closure_1 = arg1;
   closure_2 = arg2;
-  error = new Error("HTTP " + str.toUpperCase() + " initiated here");
-  return new Promise((serializer, bindResult) => {
-    if (typeof obj === "string") {
-      obj = { url: null, rejectWithError: false };
-      obj[0] = tmp;
+  const error = new Error("HTTP " + str.toUpperCase() + " initiated here");
+  return new Promise((serializer, fn) => {
+    if (typeof obj2 === "string") {
+      obj2 = { url: tmp, rejectWithError: false };
     }
-    const value = closure_1_8.get(obj.url);
+    value = map.get(obj2.url);
     if (null != value) {
-      if (obj.failImmediatelyWhenRateLimited) {
+      if (obj2.failImmediatelyWhenRateLimited) {
         const _Date = Date;
         const _Math = Math;
-        obj = { status: null, body: null };
-        obj[0] = value.status;
-        obj = { message: null, retry_after: null };
-        obj[0] = value.latestErrorMessage;
-        obj[1] = Math.round((value.retryAfterTimestamp - Date.now()) / 1000);
-        obj[1] = obj;
-        bindResult(obj);
+        const obj = { status: value.status, body: null };
+        const obj4 = { message: value.latestErrorMessage, retry_after: Math.round((value.retryAfterTimestamp - Date.now()) / 1000) };
+        obj.body = obj4;
+        fn(obj);
         if (null != closure_2) {
-          obj1 = { ok: true, hasErr: false, status: null, body: null, text: "", headers: null };
-          ({ status: obj3[2], body: obj3[3] } = obj);
-          obj1[5] = {};
-          closure_2(obj1);
+          const response = { ok: true, hasErr: false, status: null, body: null, text: "", headers: null };
+          ({ status: obj3.status, body: obj3.body } = obj);
+          response.headers = {};
+          closure_2(response);
         }
       }
     }
     if (null != value) {
-      error.verbose("makeRequest: queueing request for ", obj.url);
+      logger.verbose("makeRequest: queueing request for ", obj2.url);
       const queue = value.queue;
-      queue.push(closure_1_7.bind(null, closure_0, obj, serializer, bindResult, closure_2, error));
+      queue.push(sendRequest.bind(null, closure_0, obj2, serializer, fn, closure_2, error));
     } else {
-      closure_1_7(closure_0, obj, serializer, bindResult, closure_2, error);
+      sendRequest(closure_0, obj2, serializer, fn, closure_2, error);
     }
   });
 }
@@ -492,8 +475,8 @@ function encodeProperties(arg0) {
     return null;
   }
 }
-const logger = new log.Logger("HTTPUtils");
-let set = new Set([502, 504, 507, 598, 599, 522, 523, 524]);
+const logger = new logger_Logger.Logger("HTTPUtils");
+const set = new Set([502, 504, 507, 598, 599, 522, 523, 524]);
 const set1 = new Set([429, 503]);
 class HTTPResponseError extends Error {
   constructor(arg0) {
@@ -503,7 +486,6 @@ class HTTPResponseError extends Error {
     replaced = url.replace(/\d+/g, "xxx");
     items = ["" + method.toUpperCase() + " " + replaced + " [" + status + "]", ...substr];
     applyWithNewTargetResult = HermesBuiltin.applyWithNewTarget(items, new.target, new.target);
-    // ThrowIfThisInitialized (0x7c)
     applyWithNewTargetResult.name = "HTTPResponseError";
     applyWithNewTargetResult.method = method;
     applyWithNewTargetResult.url = url;
@@ -531,17 +513,16 @@ if (global.isServerRendering) {
   bindResult1 = noop;
   bindResult = noop;
 }
-let c10 = null;
-function awaitOnline() {
+global = function awaitOnline() {
   return Promise.resolve();
-}
-function migratedRejectEnabled() {
+};
+global = function migratedRejectEnabled() {
   return true;
-}
+};
 function isRateLimitedStatus(arg0) {
   return set1.has(arg0);
 }
-function parseRetryAfter(retry_after, obj) {
+function parseRetryAfter(retry_after, retry_after) {
   let prop;
   if (retry_after != null) {
     prop = retry_after["retry-after"];
@@ -563,9 +544,9 @@ function parseRetryAfter(retry_after, obj) {
       }
     }
   }
-  if (null != obj) {
-    if (typeof obj === "object") {
-      retry_after = obj.retry_after;
+  if (null != retry_after) {
+    if (typeof retry_after === "object") {
+      retry_after = retry_after.retry_after;
       if (typeof retry_after === "number") {
         const _Number2 = Number;
         if (Number.isFinite(retry_after)) {
@@ -577,7 +558,7 @@ function parseRetryAfter(retry_after, obj) {
     }
   }
 }
-function getRateLimitFloorMs(retry_after, obj) {
+function getRateLimitFloorMs(retry_after, retry_after) {
   let prop;
   if (retry_after != null) {
     prop = retry_after["retry-after"];
@@ -598,9 +579,9 @@ function getRateLimitFloorMs(retry_after, obj) {
     }
     return 1000 * num2;
   }
-  if (null != obj) {
-    if (typeof obj === "object") {
-      retry_after = obj.retry_after;
+  if (null != retry_after) {
+    if (typeof retry_after === "object") {
+      retry_after = retry_after.retry_after;
       if (typeof retry_after === "number") {
         const _Number2 = Number;
         if (Number.isFinite(retry_after)) {
@@ -613,17 +594,16 @@ function getRateLimitFloorMs(retry_after, obj) {
   }
 }
 function makeRateLimitedResponse(status, message, retry_after) {
-  obj = { status, body: obj };
-  obj = { message, retry_after };
+  const obj = { status, body: { message, retry_after } };
   return obj;
 }
-let result = set.fileFinishedImporting("../discord_common/js/packages/http-utils/HTTPUtils.tsx");
+let result = size.fileFinishedImporting("../discord_common/js/packages/http-utils/HTTPUtils.tsx");
 
-export const INVALID_FORM_BODY_ERROR_CODE = convertStringArrayToSkemaErrorItems.INVALID_FORM_BODY_ERROR_CODE;
+export const INVALID_FORM_BODY_ERROR_CODE = V8APIError.INVALID_FORM_BODY_ERROR_CODE;
 export const convertSkemaError = convertSkemaError.convertSkemaError;
 export const stringifyErrors = stringifyErrors.stringifyErrors;
-export const V6OrEarlierAPIError = getFieldMessage.APIError;
-export const V8APIError = convertStringArrayToSkemaErrorItems.APIError;
+export const V6OrEarlierAPIError = discord_common_V6OrEarlierAPIError.APIError;
+export const V8APIError = V8APIError.APIError;
 export { isRateLimitedStatus };
 export const DEFAULT_RATE_LIMIT_RETRY_AFTER_SECS = 5;
 export { HTTPResponseError };
@@ -650,16 +630,16 @@ export const getAPIBaseURL = function getAPIBaseURL(arg0) {
   }
   return text + str;
 };
-export function setRequestPatch(ApexExperiment) {
-  closure_10 = ApexExperiment;
+export function setRequestPatch(arg0) {
+  global = arg0;
 }
 export function setAwaitOnline(arg0) {
-  closure_11 = arg0;
+  global = arg0;
 }
 export function setRejectWithMigratedError(arg0) {
-  closure_12 = arg0;
+  global = arg0;
 }
 export const rejectWithMigratedError = function rejectWithMigratedError() {
-  return migratedRejectEnabled();
+  return global();
 };
 export { encodeProperties };

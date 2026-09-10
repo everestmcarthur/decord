@@ -1,21 +1,20 @@
-// Module ID: 13211
-// Function ID: 13212
+// Module ID: 13234
+// Function ID: 13235
 // Name: createActivityMessageEmbed
-// Dependencies: [11944, 12944, 2]
+// Dependencies: [11970, 12970, 2]
 // Exports: createActivityMessageEmbed
 
-// Module 13211 (createActivityMessageEmbed)
-import set from "set" /* 2 */;
-import createAppMessageEmbed from "createAppMessageEmbed" /* 11944 */;
-import fetchCustomActivityLink from "fetchCustomActivityLink" /* 12944 */;
+// Module 13234 (createActivityMessageEmbed)
+import createAppMessageEmbed from "createAppMessageEmbed" /* 11970 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/applications/message_embed/native/createActivityMessageEmbed.tsx");
+const CustomActivityLinkUtils = tmp(12970);
+const result = size.fileFinishedImporting("modules/applications/message_embed/native/createActivityMessageEmbed.tsx");
 
 export const createActivityMessageEmbed = function createActivityMessageEmbed(app) {
   app = app.app;
   ({ theme, embedUrl, message, params } = app);
-  let obj = createAppMessageEmbed;
-  const appMessageEmbed = obj.createAppMessageEmbed({ theme, embedUrl, message, app });
+  const appMessageEmbed = createAppMessageEmbed.createAppMessageEmbed({ theme, embedUrl, message, app });
   if (null == appMessageEmbed) {
     return null;
   } else {
@@ -23,24 +22,23 @@ export const createActivityMessageEmbed = function createActivityMessageEmbed(ap
     if (null == linkId) {
       return appMessageEmbed;
     } else {
-      const orFetchCustomActivityLink = fetchCustomActivityLink.getOrFetchCustomActivityLink(app.id, linkId);
+      const orFetchCustomActivityLink = CustomActivityLinkUtils.getOrFetchCustomActivityLink(app.id, linkId);
       let tmp8 = null;
       if (null != orFetchCustomActivityLink) {
-        obj = {};
+        const obj3 = {};
         const merged = Object.assign(appMessageEmbed);
-        obj.title = app.name;
+        obj3.title = app.name;
         ({ title: obj2.header, description: obj2.info } = orFetchCustomActivityLink);
-        obj.bannerRatio = "bot";
+        obj3.bannerRatio = "bot";
         let assetURL = orFetchCustomActivityLink.getAssetURL();
         if (assetURL == null) {
           assetURL = null;
         }
-        obj.staticBannerSrc = assetURL;
-        obj.tagline = null;
-        tmp8 = obj;
+        obj3.staticBannerSrc = assetURL;
+        obj3.tagline = null;
+        tmp8 = obj3;
       }
       return tmp8;
     }
   }
-  const tmp = require;
 };

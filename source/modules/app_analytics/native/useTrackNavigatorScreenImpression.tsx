@@ -1,15 +1,15 @@
-// Module ID: 14560
-// Function ID: 14561
+// Module ID: 14585
+// Function ID: 14586
 // Name: useTrackNavigatorScreenImpression
-// Dependencies: [8773, 1250, 2]
+// Dependencies: [8801, 1250, 2]
 // Exports: useTrackNavigatorScreenImpression
 
-// Module 14560 (useTrackNavigatorScreenImpression)
-import set from "set" /* 2 */;
-import encodeProperties from "encodeProperties" /* 1250 */;
-import trackImpressionDefault from "trackImpression" /* 8773 */;
+// Module 14585 (useTrackNavigatorScreenImpression)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8801 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/app_analytics/native/useTrackNavigatorScreenImpression.tsx");
+const result = size.fileFinishedImporting("modules/app_analytics/native/useTrackNavigatorScreenImpression.tsx");
 
 export const useTrackNavigatorScreenImpression = function useTrackNavigatorScreenImpression(impressionProperties, params) {
   impressionProperties = impressionProperties.impressionProperties;
@@ -17,6 +17,6 @@ export const useTrackNavigatorScreenImpression = function useTrackNavigatorScree
   if (typeof impressionProperties === "function") {
     impressionPropertiesResult = impressionProperties(params.params);
   }
-  const obj = { type: encodeProperties.ImpressionTypes.PAGE, name: impressionProperties.impressionName, properties: impressionPropertiesResult };
-  trackImpressionDefault(obj);
+  const obj = { type: discord_common_AnalyticsUtils.ImpressionTypes.PAGE, name: impressionProperties.impressionName, properties: impressionPropertiesResult };
+  useTrackImpressionDefault(obj);
 };

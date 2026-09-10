@@ -1,15 +1,15 @@
-// Module ID: 7470
-// Function ID: 7471
+// Module ID: 7484
+// Function ID: 7485
 // Name: sampleWithUserId
 // Dependencies: [1241, 2]
 // Exports: sampleWithUserId
 
-// Module 7470 (sampleWithUserId)
-import set from "set" /* 2 */;
+// Module 7484 (sampleWithUserId)
 import MurmurHashV3Default from "MurmurHashV3" /* 1241 */;
+import size from "module_2" /* 2 */;
 
 let c2 = 2147483647;
-const result = set.fileFinishedImporting("modules/app_analytics/sampleWithUserId.tsx");
+const result = size.fileFinishedImporting("modules/app_analytics/sampleWithUserId.tsx");
 
 export const sampleWithUserId = function sampleWithUserId(id, arg1) {
   const v3Result = MurmurHashV3Default.v3(String(id));

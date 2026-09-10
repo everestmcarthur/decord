@@ -1,43 +1,42 @@
-// Module ID: 12576
-// Function ID: 12577
+// Module ID: 12602
+// Function ID: 12603
 // Name: GuildPowerupsMultiPerkCard
-// Dependencies: [19, 4552, 21, 12553, 504, 12577, 12550, 12575, 2]
+// Dependencies: [19, 4566, 21, 12579, 504, 12603, 12576, 12601, 2]
 // Exports: default
 
-// Module 12576 (GuildPowerupsMultiPerkCard)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 12602 (GuildPowerupsMultiPerkCard)
+import openGuildPowerupsMultiPerkBottomSheetDefault from "openGuildPowerupsMultiPerkBottomSheet" /* 12576 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsMultiPerkCard.tsx");
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsMultiPerkCard.tsx");
 
 export default function GuildPowerupsMultiPerkCard(guildId) {
   guildId = guildId.guildId;
   const listing = guildId.listing;
-  let badge = listing(12553)(guildId, listing);
-  let obj = guildId(504);
-  const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  obj = { guildId, powerups: listing.powerups };
-  costDecorator = listing(12577)(obj);
+  let badge = listing(12579)(guildId, listing);
+  const items = [AccessibilityStore];
+  const stateFromStores = guildId(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  costDecorator = listing(12603)({ guildId, powerups: listing.powerups });
   const items1 = [guildId, listing];
   let tmp5 = null;
   if (null != costDecorator) {
     tmp5 = null;
     if (null != badge) {
-      obj = { title: null, description: null, cost: null, imageUrl: null, status: null, costDecorator: null, onPress: null, badge: null };
-      ({ title: obj3[0], description: obj3[1] } = badge);
-      obj[2] = costDecorator.cost;
+      const obj5 = { title: null, description: null, cost: null, imageUrl: null, status: null, costDecorator: null, onPress: null, badge: null };
+      ({ title: obj3.title, description: obj3.description } = badge);
+      obj5.cost = costDecorator.cost;
       const image = badge.image;
-      obj[3] = stateFromStores ? image.staticUrl : image.animatedUrl;
-      ({ status: obj3[4], costDecorator } = costDecorator);
-      obj[5] = costDecorator;
-      obj[6] = tmp4;
+      obj5.imageUrl = stateFromStores ? image.staticUrl : image.animatedUrl;
+      ({ status: obj3.status, costDecorator } = costDecorator);
+      obj5.costDecorator = costDecorator;
+      obj5.onPress = tmp4;
       badge = badge.badge;
-      obj[7] = badge;
-      jsx(listing(12575), { title: null, description: null, cost: null, imageUrl: null, status: null, costDecorator: null, onPress: null, badge: null });
-      const tmp6 = jsx;
+      obj5.badge = badge;
+      jsx(listing(12601), { title: null, description: null, cost: null, imageUrl: null, status: null, costDecorator: null, onPress: null, badge: null });
     }
   }
   return tmp5;

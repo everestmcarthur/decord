@@ -1,15 +1,11 @@
-// Module ID: 5587
-// Function ID: 5588
-// Name: preload
-// Dependencies: [19, 17, 21, 4560, 5588, 1115, 2]
+// Module ID: 5601
+// Function ID: 5602
+// Name: FastImage
+// Dependencies: [19, 17, 21, 4574, 5602, 1115, 2]
 
-// Module 5587 (preload)
-import noopAll from "noop" /* 19 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 5588 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import set from "set" /* 1115 */;
+// Module 5601 (FastImage)
+import FastImageNativeComponentDefault from "FastImageNativeComponent" /* 5602 */;
+import noop from "module_19" /* 19 */;
 
 class FastImageAndroid {
   constructor(arg0) {
@@ -20,9 +16,12 @@ class FastImageAndroid {
     return jsx(Image, obj);
   }
 }
-({ Image: obj1, NativeModules: c3 } = get_ActivityIndicator);
-let closure_5 = createCacheKey.createStyles({ base: { overflow: "hidden" } });
-let merged = Object.assign(noopAll.memo((fade) => {
+get_ActivityIndicator = fn(17);
+({ Image: c2, NativeModules: c3 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_5 = createStyles.createStyles({ base: { overflow: "hidden" } });
+let merged = Object.assign(noop.memo((fade) => {
   ({ placeholder, enableAnimation } = fade);
   let tmp2 = undefined === enableAnimation;
   ({ source, style } = fade);
@@ -37,15 +36,15 @@ let merged = Object.assign(noopAll.memo((fade) => {
   }
   const usesSmallCache = fade.usesSmallCache;
   if (typeof source === "number") {
-    let obj = {};
+    const obj2 = {};
     const merged = Object.assign(fade);
-    return <closure_2 />;
+    return <React2 />;
   } else {
     let assetSource = null;
     if (null != placeholder) {
-      assetSource = closure_2.resolveAssetSource(placeholder);
+      assetSource = React2.resolveAssetSource(placeholder);
     }
-    obj = {};
+    const obj = {};
     const merged1 = Object.assign(fade);
     const items = [tmp.base, style];
     obj.style = items;
@@ -59,30 +58,31 @@ let merged = Object.assign(noopAll.memo((fade) => {
     obj.manualPlayback = manualPlayback;
     obj.fade = tmp3;
     obj.usesSmallCache = tmp4;
-    return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
+    return jsx(FastImageNativeComponentDefault, {});
   }
-  tmp = callback();
+  tmp = closure_5();
   tmp4 = undefined !== usesSmallCache && usesSmallCache;
 }), {
   preload(arg0) {
     closure_0 = arg0;
-    let num = arg1;
-    if (arg1 === undefined) {
-      num = 2000;
-    }
-    let promise = new Promise((arg0) => {
-      const ImageManager = closure_1_3.ImageManager;
+    const items = [
+      new Promise((arg0) => {
+        ImageManager = ImageManager.ImageManager;
+        ImageManager.preload(closure_0, arg0);
+      }),
+
+    ];
+    const promise = new Promise((arg0) => {
+      ImageManager = ImageManager.ImageManager;
       ImageManager.preload(closure_0, arg0);
     });
-    const items = [promise, ];
-    promise = new Promise((arg0) => setTimeout(arg0, num));
-    items[1] = promise;
+    items[1] = new Promise((arg0) => setTimeout(arg0, num));
     return Promise.race(items);
   }
 });
-FastImageAndroid.preload = (closure_0) => {
+FastImageAndroid.preload = (arg0, arg1) => {
   closure_0 = arg1;
-  const catchPromise = closure_2.prefetch(closure_0).catch(() => {
+  const catchPromise = React2.prefetch(arg0).catch(() => {
 
   });
   let racePromise = catchPromise;
@@ -94,9 +94,11 @@ FastImageAndroid.preload = (closure_0) => {
   }
   return racePromise;
 };
-if (set.isAndroid()) {
+const PlatformUtils = fn(1115);
+if (PlatformUtils.isAndroid()) {
   merged = FastImageAndroid;
 }
-const result = set.fileFinishedImporting("components_native/common/FastImage.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/common/FastImage.tsx");
 
 export default merged;

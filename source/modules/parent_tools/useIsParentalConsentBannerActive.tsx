@@ -1,15 +1,15 @@
-// Module ID: 14868
-// Function ID: 14869
+// Module ID: 14894
+// Function ID: 14895
 // Name: useIsParentalConsentBannerActive
-// Dependencies: [14869, 14871, 2]
+// Dependencies: [14895, 14897, 2]
 // Exports: useIsParentalConsentBannerActive
 
-// Module 14868 (useIsParentalConsentBannerActive)
-import set from "set" /* 2 */;
-import useParentalConsentWarning from "useParentalConsentWarning" /* 14869 */;
-import frozen from "frozen" /* 14871 */;
+// Module 14894 (useIsParentalConsentBannerActive)
+import useParentalConsentWarning from "useParentalConsentWarning" /* 14895 */;
+import ParentalConsentWarningTypes from "ParentalConsentWarningTypes" /* 14897 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/parent_tools/useIsParentalConsentBannerActive.tsx");
+const result = size.fileFinishedImporting("modules/parent_tools/useIsParentalConsentBannerActive.tsx");
 
 export const useIsParentalConsentBannerActive = function useIsParentalConsentBannerActive() {
   const parentalConsentWarning = useParentalConsentWarning.useParentalConsentWarning();
@@ -17,7 +17,7 @@ export const useIsParentalConsentBannerActive = function useIsParentalConsentBan
   if (parentalConsentWarning != null) {
     const surfaces = parentalConsentWarning.surfaces;
     if (surfaces != null) {
-      hasItem = surfaces.includes(frozen.ParentalConsentWarningSurface.BANNER);
+      hasItem = surfaces.includes(ParentalConsentWarningTypes.ParentalConsentWarningSurface.BANNER);
     }
   }
   return true === hasItem;

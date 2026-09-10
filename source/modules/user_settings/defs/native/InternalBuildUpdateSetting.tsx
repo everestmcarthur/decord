@@ -1,45 +1,44 @@
-// Module ID: 15744
-// Function ID: 15745
-// Name: pressable
-// Dependencies: [14397, 21, 13909, 504, 4153, 14845, 4509, 15161, 11473, 2]
+// Module ID: 15774
+// Function ID: 15775
+// Name: InternalBuildUpdateSetting
+// Dependencies: [14422, 21, 13932, 504, 4166, 14871, 4523, 15188, 11500, 2]
 
-// Module 15744 (pressable)
+// Module 15774 (InternalBuildUpdateSetting)
 import initialize from "initialize" /* 504 */;
-import hooksDefault from "hooks" /* 4153 */;
-import _checkForNewerBuildAll from "_checkForNewerBuild" /* 13909 */;
-import useStaffOrDeveloperSettingPredicate from "useStaffOrDeveloperSettingPredicate" /* 14845 */;
-import closure_4 from "checkForNewerBuild" /* 14397 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 11473 */;
+import _modDef4166 from "module_4166" /* 4166 */;
+import MobileNativeUpdateUtilsAll from "MobileNativeUpdateUtils" /* 13932 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14871 */;
+import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 14422 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const jsx = fn(21).jsx;
+const SettingBuilders = fn(11500);
+const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "Internal Build Update";
   },
   parent: null,
   IconComponent: function InstallNativeUpdateIcon() {
-    const items = [closure_4];
-    if (obj.useStateFromStores(items, () => null !== closure_4.latestFetchedBuild().newBuild)) {
-      let RefreshIcon = tmp(4509).DownloadIcon;
+    const items = [MobileNativeUpdateStore];
+    if (obj.useStateFromStores(items, () => null !== MobileNativeUpdateStore.latestFetchedBuild().newBuild)) {
+      let RefreshIcon = tmp(4523).DownloadIcon;
     } else {
-      RefreshIcon = tmp(15161).RefreshIcon;
+      RefreshIcon = tmp(15188).RefreshIcon;
     }
     return <RefreshIcon />;
   },
   useDescription: function useInternalBuildUpdateDescription() {
-    const items = [closure_4];
+    const items = [MobileNativeUpdateStore];
     const stateFromStores = initialize.useStateFromStores(items, () => {
-      const newBuild = closure_4.latestFetchedBuild().newBuild;
+      const newBuild = MobileNativeUpdateStore.latestFetchedBuild().newBuild;
       let build;
       if (newBuild != null) {
         build = newBuild.build;
       }
       return build;
     });
-    const obj = initialize;
-    const items1 = [closure_4];
-    const stateFromStores1 = initialize.useStateFromStores(items1, () => closure_4.latestFetchedBuild().lastCheck);
+    const items1 = [MobileNativeUpdateStore];
+    const stateFromStores1 = initialize.useStateFromStores(items1, () => MobileNativeUpdateStore.latestFetchedBuild().lastCheck);
     if (null != stateFromStores) {
       const _HermesInternal2 = HermesInternal;
       let str = "Open build " + stateFromStores + " installer in a browser";
@@ -47,28 +46,26 @@ createToggle = {
       str = "Never refreshed";
       if (null != stateFromStores1) {
         const _HermesInternal = HermesInternal;
-        str = "Last refreshed " + hooksDefault(stateFromStores1).fromNow();
-        const obj3 = hooksDefault(stateFromStores1);
+        str = "Last refreshed " + _modDef4166(stateFromStores1).fromNow();
+        const obj3 = _modDef4166(stateFromStores1);
       }
     }
     return str;
   },
   usePredicate: function useHasInternalBuildUpdateSetting() {
-    const obj = useStaffOrDeveloperSettingPredicate;
-    return closure_4.hasUpdatesConfigured && useStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
+    return MobileNativeUpdateStore.hasUpdatesConfigured && useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
   },
   onPress: function handleInstallNativeUpdateSettingPress() {
-    const newBuild = closure_4.latestFetchedBuild().newBuild;
+    const newBuild = MobileNativeUpdateStore.latestFetchedBuild().newBuild;
     if (null !== newBuild) {
-      _checkForNewerBuildAll.openBuildInstaller(newBuild);
-      const obj2 = _checkForNewerBuildAll;
+      MobileNativeUpdateUtilsAll.openBuildInstaller(newBuild);
     } else {
-      closure_4.checkForNewerBuild();
+      MobileNativeUpdateStore.checkForNewerBuild();
     }
   },
   withArrow: true
-};
-createToggle = createToggle.createPressable(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/InternalBuildUpdateSetting.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/InternalBuildUpdateSetting.tsx");
 
-export default createToggle;
+export default pressable;

@@ -4,9 +4,9 @@
 // Dependencies: [17]
 
 // Module 1747 (JEST_WORKER_ID)
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import _mod17 from "module_17" /* 17 */;
 
-const Platform = get_ActivityIndicator.Platform;
+const Platform = _mod17.Platform;
 let flag = JEST_WORKER_ID;
 if (!JEST_WORKER_ID) {
   flag = false;

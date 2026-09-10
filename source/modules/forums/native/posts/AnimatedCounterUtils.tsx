@@ -1,13 +1,13 @@
-// Module ID: 11322
-// Function ID: 11323
-// Name: defaultFormatter
+// Module ID: 11349
+// Function ID: 11350
+// Name: AnimatedCounterUtils
 // Dependencies: [2]
 // Exports: defaultFormatter
 
-// Module 11322 (defaultFormatter)
-import set from "set" /* 2 */;
+// Module 11349 (AnimatedCounterUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/forums/native/posts/AnimatedCounterUtils.tsx");
+const result = size.fileFinishedImporting("modules/forums/native/posts/AnimatedCounterUtils.tsx");
 
 export const defaultFormatter = function defaultFormatter(arg0) {
   return "" + arg0;

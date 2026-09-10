@@ -1,22 +1,19 @@
-// Module ID: 5605
-// Function ID: 5606
-// Name: TableRowInner
-// Dependencies: [19, 17, 21, 4560, 576, 5606, 4262, 5607, 5602, 5611, 5612, 5614, 4982, 1115, 5615, 4556, 2]
+// Module ID: 5619
+// Function ID: 5620
+// Name: TableRow
+// Dependencies: [19, 17, 21, 4574, 576, 5620, 4275, 5621, 5616, 5625, 5626, 5628, 4996, 1115, 5629, 4570, 2]
 
-// Module 5605 (TableRowInner)
-import ThemesDefault from "Themes" /* 576 */;
-import set from "set" /* 1115 */;
-import map from "map" /* 4262 */;
-import getFontScale from "getFontScale" /* 4982 */;
-import context2 from "context" /* 5606 */;
-import PressableCard from "PressableCard" /* 5607 */;
-import TableRowTrailingText from "TableRowTrailingText" /* 5614 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 5619 (TableRow)
+import nativeDefault from "native" /* 576 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import useToken from "useToken" /* 4275 */;
+import useFontScale from "useFontScale" /* 4996 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 5620 */;
+import Card from "Card" /* 5621 */;
+import TableRowTrailingText from "TableRowTrailingText" /* 5628 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 class TableRow {
   constructor(arg0) {
     ({ icon, disabled } = global);
@@ -29,46 +26,46 @@ class TableRow {
       variant = "default";
     }
     ({ draggable, dragHandlePressableProps, height } = global);
-    merged = Object.assign(global, Object.create(null));
+    merged = Object.assign(global, Object.assign({ label: 0, subLabel: 0, icon: 0, trailing: 0, arrow: 0, onPress: 0, disabled: 0, start: 0, end: 0, labelLineClamp: 0, subLabelLineClamp: 0, variant: 0, draggable: 0, dragHandlePressableProps: 0, height: 0 }));
     tmp2 = closure_0;
     tmp3 = closure_2;
-    context = closure_3.useContext(require("context").TableRowGroupContext);
+    context = closure_3.useContext(closure_0(closure_2[5]).TableRowGroupContext);
     tmp5 = !context;
     if (!context) {
       flag = true;
       tmp5 = true === end;
     }
-    tmp2Result = require("map");
+    tmp2Result = tmp2(tmp3[6]);
     tmp7 = jsx;
-    token = tmp2Result.useToken(require("Themes").modules.mobile.TABLE_ROW_BORDER_RADIUS);
-    obj = { radius: token, shadow: "none", border: "none", variant: "muted", start: null, end: null, onPress: null, disabled: null, style: null };
+    token = tmp2Result.useToken(closure_1(tmp3[4]).modules.mobile.TABLE_ROW_BORDER_RADIUS);
+    obj1 = { radius: token, shadow: "none", border: "none", variant: "muted", start: null, end: null, onPress: null, disabled: null, style: null };
     tmp8 = !context;
     if (!context) {
       flag2 = true;
       tmp8 = true === start;
     }
-    obj[4] = tmp8;
-    obj[5] = tmp5;
-    obj[6] = onPress;
-    obj[7] = disabled;
-    obj[8] = closure_9;
+    obj1.start = tmp8;
+    obj1.end = tmp5;
+    obj1.onPress = onPress;
+    obj1.disabled = disabled;
+    obj1.style = closure_9;
     merged1 = Object.assign(merged);
-    obj.children = tmp7(TableRowInner, { height, label, subLabel, icon, trailing, arrow, disabled, labelLineClamp, subLabelLineClamp, variant, draggable, dragHandlePressableProps });
-    tmp7Result = tmp7(require("PressableCard").InternalCard, obj);
+    obj1.children = tmp7(TableRowInner, { height, label, subLabel, icon, trailing, arrow, disabled, labelLineClamp, subLabelLineClamp, variant, draggable, dragHandlePressableProps });
+    tmp7Result = tmp7(tmp2(tmp3[7]).InternalCard, obj1);
     tmp11 = tmp7Result;
     if (!context) {
       tmp11 = tmp7Result;
       if (!tmp5) {
         tmp12 = jsxs;
         tmp13 = Fragment;
-        obj1 = { children: null };
+        obj5 = { children: null };
         items = [, ];
         items[0] = tmp7Result;
-        obj2 = { adjustSpacingForIcon: null };
-        obj2[0] = null != icon;
-        items[1] = tmp7(require("TableRowDivider").TableRowDivider, obj2);
-        obj1[0] = items;
-        tmp11 = jsxs(Fragment, obj1);
+        obj6 = { adjustSpacingForIcon: null };
+        obj6.adjustSpacingForIcon = null != icon;
+        items[1] = tmp7(tmp2(tmp3[8]).TableRowDivider, obj6);
+        obj5.children = items;
+        tmp11 = jsxs(Fragment, obj5);
       }
     }
     return tmp11;
@@ -92,15 +89,15 @@ class TableRowInner {
     if (closure_3.isValidElement(trailing)) {
       tmp2 = closure_0;
       tmp3 = closure_2;
-      if (trailing.type === require("TableRowTrailingText").TableRowTrailingText) {
+      if (trailing.type === closure_0(closure_2[11]).TableRowTrailingText) {
         tmp = trailing;
       }
     }
     tmp4 = closure_0;
     tmp5 = closure_2;
-    obj2 = require("getFontScale");
+    obj2 = closure_0(closure_2[12]);
     fontScale = obj2.useFontScale();
-    obj3 = require("set");
+    obj3 = closure_0(closure_2[13]);
     if (obj3.isAndroid()) {
       num2 = 1.2;
       tmp7 = fontScale > 1.2;
@@ -109,63 +106,64 @@ class TableRowInner {
       tmp7 = fontScale > 1.5;
     }
     tmp8 = closure_10(true === disabled, null != tmp, tmp7);
-    tmp4Result = require("map");
-    token = tmp4Result.useToken(require("Themes").modules.mobile.TABLE_ROW_LABEL_TEXT_STYLE);
-    tmp4Result1 = require("map");
+    tmp4Result = tmp4(tmp5[6]);
+    token = tmp4Result.useToken(closure_1(tmp5[4]).modules.mobile.TABLE_ROW_LABEL_TEXT_STYLE);
+    tmp4Result1 = tmp4(tmp5[6]);
     tmp11 = jsxs;
     tmp12 = View;
-    obj = { style: items, children: null };
+    obj1 = { style: null, children: null };
     items = [, ];
     items[0] = tmp8.row;
     items[1] = { borderRadius, height };
+    obj1.style = items;
     tmp13 = flag;
-    token1 = tmp4Result1.useToken(require("Themes").modules.mobile.TABLE_ROW_LABEL_COLOR);
+    token1 = tmp4Result1.useToken(closure_1(tmp5[4]).modules.mobile.TABLE_ROW_LABEL_COLOR);
     if (flag) {
       tmp14 = jsx;
       tmp15 = Pressable;
-      obj1 = {};
-      tmp16 = obj1;
+      obj16 = {};
+      tmp16 = obj16;
       tmp17 = dragHandlePressableProps;
       merged = Object.assign(dragHandlePressableProps);
-      obj2 = { size: "xs", style: null };
-      obj2[1] = tmp8.dragHandle;
-      obj1.children = jsx(require("DragIcon").DragIcon, obj2);
-      tmp13 = jsx(Pressable, obj1);
+      obj17 = { size: "xs", style: null };
+      obj17.style = tmp8.dragHandle;
+      obj16.children = jsx(tmp4(tmp5[14]).DragIcon, obj17);
+      tmp13 = jsx(Pressable, obj16);
     }
     items1 = [, , , , ];
     items1[0] = tmp13;
     tmp19 = null != icon;
     if (tmp19) {
       tmp20 = jsx;
-      obj3 = { style: null, children: null };
-      obj3[0] = tmp8.iconContainer;
-      obj3[1] = icon;
-      tmp19 = jsx(tmp12, obj3);
+      obj18 = { style: null, children: null };
+      obj18.style = tmp8.iconContainer;
+      obj18.children = icon;
+      tmp19 = jsx(tmp12, obj18);
     }
     items1[1] = tmp19;
-    obj4 = { style: tmp8.content, children: null };
-    obj5 = { style: tmp8.labels, accessible: null, accessibilityRole: null, children: null };
+    obj19 = { style: tmp8.content, children: null };
+    obj20 = { style: tmp8.labels, accessible: null, accessibilityRole: null, children: null };
     tmp21 = flag;
-    obj5[1] = tmp21;
+    obj20.accessible = tmp21;
     str = undefined;
     if (flag) {
       str = "text";
     }
-    obj5[2] = str;
+    obj20.accessibilityRole = str;
     tmp23Result = label;
     if (!obj.isValidElement(label)) {
       tmp23 = jsx;
-      obj6 = { variant: null, color: null, lineClamp: null, includeFontPadding: true, children: null };
-      obj6[0] = token;
+      obj21 = { variant: null, color: null, lineClamp: null, includeFontPadding: true, children: null };
+      obj21.variant = token;
       str2 = "text-feedback-critical";
       str3 = "danger";
       if ("danger" !== variant) {
         str2 = token1;
       }
-      obj6[1] = str2;
-      obj6[2] = labelLineClamp;
-      obj6[4] = label;
-      tmp23Result = tmp23(require("Text").Text, obj6);
+      obj21.color = str2;
+      obj21.lineClamp = labelLineClamp;
+      obj21.children = label;
+      tmp23Result = tmp23(tmp4(tmp5[15]).Text, obj21);
     }
     items2 = [, ];
     items2[0] = tmp23Result;
@@ -179,110 +177,116 @@ class TableRowInner {
         if ("danger" === variant) {
           str4 = "text-feedback-critical";
         }
-        obj7 = { variant: "text-xs/medium", color: null, lineClamp: null, includeFontPadding: true, children: null };
-        obj7[1] = str4;
-        obj7[2] = subLabelLineClamp;
-        obj7[4] = subLabel;
-        tmp26Result = tmp26(require("Text").Text, obj7);
+        obj22 = { variant: "text-xs/medium", color: null, lineClamp: null, includeFontPadding: true, children: null };
+        obj22.color = str4;
+        obj22.lineClamp = subLabelLineClamp;
+        obj22.children = subLabel;
+        tmp26Result = tmp26(tmp4(tmp5[15]).Text, obj22);
       }
       tmp24 = tmp26Result;
     }
     items2[1] = tmp24;
-    obj5[3] = items2;
+    obj20.children = items2;
     items3 = [, ];
-    items3[0] = tmp11(tmp12, obj5);
+    items3[0] = tmp11(tmp12, obj20);
     tmp27 = null != tmp;
     if (tmp27) {
       tmp28 = jsx;
-      obj8 = { style: null, children: null };
+      obj23 = { style: null, children: null };
       items4 = [, ];
       ({ trailing: arr5[0], trailingText: arr5[1] } = tmp8);
-      obj8[0] = items4;
-      obj8[1] = tmp;
-      tmp27 = jsx(tmp12, obj8);
+      obj23.style = items4;
+      obj23.children = tmp;
+      tmp27 = jsx(tmp12, obj23);
     }
     items3[1] = tmp27;
-    obj4[1] = items3;
-    items1[2] = tmp11(tmp12, obj4);
+    obj19.children = items3;
+    items1[2] = tmp11(tmp12, obj19);
     tmp29 = null != trailing && null == tmp;
     if (tmp29) {
       tmp30 = jsx;
-      obj9 = { style: null, children: null };
-      obj9[0] = tmp8.trailing;
-      obj9[1] = trailing;
-      tmp29 = jsx(tmp12, obj9);
+      obj24 = { style: null, children: null };
+      obj24.style = tmp8.trailing;
+      obj24.children = trailing;
+      tmp29 = jsx(tmp12, obj24);
     }
     items1[3] = tmp29;
     if (arrow) {
       tmp31 = jsx;
-      arrow = jsx(require("TableRowArrow").TableRowArrow, {});
+      arrow = jsx(tmp4(tmp5[10]).TableRowArrow, {});
     }
     items1[4] = arrow;
-    obj[1] = items1;
-    return tmp11(tmp12, obj);
+    obj1.children = items1;
+    return tmp11(tmp12, obj1);
   }
 }
-({ Pressable: c4, View: c5 } = get_ActivityIndicator);
-({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
-let closure_9 = { padding: 0 };
-let closure_10 = createCacheKey.createStyles((arg0, arg1, arg2) => {
-  let obj = { padding: ThemesDefault.modules.mobile.TABLE_ROW_PADDING, minHeight: ThemesDefault.modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", opacity: null, borderRadius: null };
+get_ActivityIndicator = fn(17);
+({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+const React7 = { padding: 0 };
+const createStyles = fn(4574);
+let closure_10 = createStyles.createStyles((arg0, arg1, arg2) => {
+  const obj = { padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING, minHeight: nativeDefault.modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", opacity: null, borderRadius: null };
   let num = 1;
   if (arg0) {
     num = 0.5;
   }
-  obj = { row: obj, iconContainer: null, trailing: null, content: null, labels: num, trailingText: tmp(576).radii.md, dragHandle: null };
-  obj = { minWidth: tmp(576).modules.mobile.TABLE_ROW_ICON_SIZE, marginEnd: tmp(576).modules.mobile.TABLE_ROW_PADDING, alignItems: "center", justifyContent: "center" };
-  obj[1] = obj;
-  obj[2] = { marginStart: 18 };
+  const obj2 = { row: null, iconContainer: null, trailing: null, content: null, labels: null, trailingText: null, dragHandle: null };
+  obj.opacity = num;
+  obj.borderRadius = nativeDefault.radii.md;
+  obj2.row = obj;
+  obj2.iconContainer = { minWidth: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, marginEnd: nativeDefault.modules.mobile.TABLE_ROW_PADDING, alignItems: "center", justifyContent: "center" };
+  obj2.trailing = { marginStart: 18 };
   let str = "row";
   if (arg2) {
     str = "column";
   }
-  obj1 = { flexShrink: 1, flexGrow: 1, flexDirection: str, alignItems: null, justifyContent: "space-between" };
+  const obj4 = { flexShrink: 1, flexGrow: 1, flexDirection: str, alignItems: null, justifyContent: "space-between" };
   let str2 = "center";
   if (arg2) {
     str2 = "stretch";
   }
-  obj1[3] = str2;
-  obj[3] = obj1;
+  obj4.alignItems = str2;
+  obj2.content = obj4;
   let str3 = "100%";
   if (arg1) {
     str3 = "100%";
   }
-  const obj2 = { width: str3, flexGrow: null, flexShrink: null, maxWidth: null };
+  const obj5 = { width: str3, flexGrow: null, flexShrink: null, maxWidth: null };
   let num2;
   if (arg1) {
     if (!arg2) {
       num2 = 1;
     }
   }
-  obj2[1] = num2;
+  obj5.flexGrow = num2;
   let num3 = 1;
   if (arg1) {
     num3 = 1;
   }
-  obj2[2] = num3;
+  obj5.flexShrink = num3;
   let str4;
   if (arg1) {
     if (!arg2) {
       str4 = "70%";
     }
   }
-  obj2[3] = str4;
-  obj[4] = obj2;
+  obj5.maxWidth = str4;
+  obj2.labels = obj5;
   let num4 = 18;
   if (arg2) {
     num4 = 0;
   }
-  obj[5] = { flexShrink: 1, marginStart: num4 };
-  obj[6] = { marginEnd: 8 };
-  return obj;
+  obj2.trailingText = { flexShrink: 1, marginStart: num4 };
+  obj2.dragHandle = { marginEnd: 8 };
+  return obj2;
 });
-TableRow.Icon = require("TableRowIcon").TableRowIcon;
-TableRow.Arrow = require("TableRowArrow").TableRowArrow;
-TableRow.TrailingText = require("TableRowTrailingText").TableRowTrailingText;
-const result = require("set").fileFinishedImporting("design/components/TableRow/native/TableRow.native.tsx");
+TableRow.Icon = fn(5625).TableRowIcon;
+TableRow.Arrow = fn(5626).TableRowArrow;
+TableRow.TrailingText = fn(5628).TableRowTrailingText;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/TableRow/native/TableRow.native.tsx");
 
 export { TableRow };
 export { TableRowInner };

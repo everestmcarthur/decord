@@ -1,39 +1,41 @@
-// Module ID: 13833
-// Function ID: 13834
+// Module ID: 13856
+// Function ID: 13857
 // Name: openGuildLimitedAccessInfoModal
-// Dependencies: [19, 17, 21, 4425, 4905, 13834, 1896, 2]
+// Dependencies: [19, 17, 21, 4439, 4919, 13857, 1896, 2]
 // Exports: default
 
-// Module 13833 (openGuildLimitedAccessInfoModal)
-import noopAll from "noop" /* 19 */;
-import _modDef4905 from "module_4905" /* 4905 */;
-import { Keyboard } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 13856 (openGuildLimitedAccessInfoModal)
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4919 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_limited_access/openGuildLimitedAccessInfoModal.native.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const Keyboard = fn(17).Keyboard;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_limited_access/openGuildLimitedAccessInfoModal.native.tsx");
 
 export default function openGuildLimitedAccessInfoModal(arg0) {
-  const _require = arg0;
+  _require = arg0;
   Keyboard.dismiss();
-  let obj = _require(4425);
-  const bestActiveInput = obj.getBestActiveInput();
+  const bestActiveInput = require("ChatInputUtils").getBestActiveInput();
   if (bestActiveInput != null) {
     bestActiveInput.blur();
   }
-  obj = {
+  let obj = require("ChatInputUtils");
+  actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return callback(closure_1_2[6])(closure_1_2[5], closure_1_2.paths).then((arg0) => {
-        closure_0 = arg0.default;
+      return asyncRequireImpl(13857, dependencyMap.paths).then((result) => {
+        closure_0 = result.default;
         return (arg0) => {
           const obj = {};
           const merged = Object.assign(arg0);
-          obj.guildId = closure_0;
-          return closure_2_4(closure_0, obj);
+          obj.guildId = guildId;
+          return <closure_0 />;
         };
       });
     }
-  };
-  _modDef4905.openLazy(obj);
+  });
 };

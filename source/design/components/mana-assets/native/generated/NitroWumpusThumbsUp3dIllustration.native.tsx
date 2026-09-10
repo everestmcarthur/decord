@@ -1,17 +1,17 @@
-// Module ID: 6327
-// Function ID: 6328
+// Module ID: 6341
+// Function ID: 6342
 // Name: NitroWumpusThumbsUp3dIllustration
-// Dependencies: [21, 5587, 6328, 2]
+// Dependencies: [21, 5601, 6342, 2]
 // Exports: NitroWumpusThumbsUp3dIllustration
 
-// Module 6327 (NitroWumpusThumbsUp3dIllustration)
-import set from "set" /* 2 */;
+// Module 6341 (NitroWumpusThumbsUp3dIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 6328 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6342 from "module_6342" /* 6342 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/NitroWumpusThumbsUp3dIllustration.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/NitroWumpusThumbsUp3dIllustration.native.tsx");
 
 export const NitroWumpusThumbsUp3dIllustration = function NitroWumpusThumbsUp3dIllustration(width) {
   let num = width.width;
@@ -27,14 +27,14 @@ export const NitroWumpusThumbsUp3dIllustration = function NitroWumpusThumbsUp3dI
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
-  obj = { width: num * num3, height: num2 * num3 };
-  const items = [obj];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { width: num * num3, height: num2 * num3 });
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef6342 };
+  obj.source = obj2;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

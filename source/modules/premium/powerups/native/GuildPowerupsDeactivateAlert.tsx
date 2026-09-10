@@ -1,61 +1,60 @@
-// Module ID: 12544
-// Function ID: 12545
+// Module ID: 12570
+// Function ID: 12571
 // Name: GuildPowerupsDeactivateAlert
-// Dependencies: [17, 21, 4560, 576, 12545, 12546, 12547, 4910, 6610, 1114, 2428, 4910, 4556, 2]
+// Dependencies: [17, 21, 4574, 576, 12571, 12572, 12573, 4924, 6624, 1114, 2428, 4924, 4570, 2]
 // Exports: default
 
-// Module 12544 (GuildPowerupsDeactivateAlert)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 576 */;
-import messagesProxyDefault from "messagesProxy" /* 2428 */;
-import useGuildPowerupOnDeactivateDefault from "useGuildPowerupOnDeactivate" /* 12545 */;
-import useDeactivateWarningTextDefault from "useDeactivateWarningText" /* 12546 */;
+// Module 12570 (GuildPowerupsDeactivateAlert)
+import _mod17 from "module_17" /* 17 */;
+import nativeDefault from "native" /* 576 */;
+import _modDef2428 from "module_2428" /* 2428 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import useGuildPowerupOnDeactivateDefault from "useGuildPowerupOnDeactivate" /* 12571 */;
+import useDeactivateWarningTextDefault from "useDeactivateWarningText" /* 12572 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import createStyles from "createStyles" /* 4574 */;
+import size_mod from "module_2" /* 2 */;
 
-const View = get_ActivityIndicator.View;
-({ jsx: c4, jsxs: c5 } = jsxProd);
+const require = globalThis.__r;
+
+const View = _mod17.View;
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let obj = { headerContainer: null, extraContentContainer: null, warningText: null };
-obj = { width: 64, height: 64, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, alignSelf: "center" };
-obj[0] = obj;
-obj[1] = { paddingHorizontal: ThemesDefault.space.PX_12 };
-obj[2] = { textAlign: "center" };
-let closure_6 = createCacheKey.createStyles(obj);
-let obj1 = { paddingHorizontal: ThemesDefault.space.PX_12 };
-const result = set.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsDeactivateAlert.tsx");
+let size = { width: 64, height: 64, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, alignSelf: "center" };
+obj.headerContainer = size;
+obj.extraContentContainer = { paddingHorizontal: nativeDefault.space.PX_12 };
+obj.warningText = { textAlign: "center" };
+let closure_6 = createStyles.createStyles(obj);
+let size = size_mod;
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsDeactivateAlert.tsx");
 
 export default function GuildPowerupsDeactivateAlert(arg0) {
   ({ guildId, powerup } = arg0);
-  let _require;
   importDefault = undefined;
-  const tmp = callback2();
+  const tmp = closure_6();
   _require = tmp;
   ({ onDeactivate: c1, error } = useGuildPowerupOnDeactivateDefault(guildId, powerup));
-  const tmp2 = importDefault;
   const tmp4 = useGuildPowerupOnDeactivateDefault(guildId, powerup);
-  let obj = _require(12547);
-  const logPowerupModalOpened = obj.useLogPowerupModalOpened(guildId, powerup, _require(12547).ModalType.DEACTIVATE);
-  obj = { header: null, title: null, content: null, actions: null, extraContent: null };
-  obj = { style: tmp.headerContainer, children: null };
   const arr = useDeactivateWarningTextDefault(guildId, powerup);
+  const logPowerupModalOpened = require("GuildPowerupAnalytics").useLogPowerupModalOpened(guildId, powerup, require("GuildPowerupAnalytics").ModalType.DEACTIVATE);
+  const obj2 = { header: null, title: null, content: null, actions: null, extraContent: null };
+  const obj3 = { style: tmp.headerContainer, children: null };
+  let obj = require("GuildPowerupAnalytics");
   const tmp8 = View;
-  obj[1] = callback(_require(6610).CircleErrorIcon, { color: ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "custom", style: { width: 40, height: 40 } });
-  obj[0] = callback(View, obj);
-  const intl = _require(1114).intl;
-  obj[1] = intl.formatToPlainString(messagesProxyDefault.iEBw1M, { perk: powerup.title });
-  const intl2 = _require(1114).intl;
-  obj[2] = intl2.formatToPlainString(messagesProxyDefault["7o0K+2"], { perk: powerup.title });
+  obj3.children = closure_4(require("CircleErrorIcon").CircleErrorIcon, { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "custom", style: { width: 40, height: 40 } });
+  obj2.header = closure_4(View, obj3);
+  const intl = require("util").intl;
+  obj2.title = intl.formatToPlainString(_modDef2428.iEBw1M, { perk: powerup.title });
+  const intl2 = require("util").intl;
+  obj2.content = intl2.formatToPlainString(_modDef2428["7o0K+2"], { perk: powerup.title });
   let tmp7Result = null != error;
   if (tmp7Result) {
-    const obj4 = { style: null, variant: "text-xs/semibold", color: "text-feedback-critical", children: null };
-    obj4[0] = tmp.warningText;
-    obj4[3] = error;
-    tmp7Result = tmp7(tmp5(4556).Text, obj4);
+    const obj7 = { style: tmp.warningText, variant: "text-xs/semibold", color: "text-feedback-critical", children: error };
+    tmp7Result = tmp7(tmp5(4570).Text, obj7);
   }
-  const obj5 = { children: null };
+  const obj8 = { children: null };
   const items = [tmp7Result, , ];
-  const obj6 = {
+  const obj9 = {
     variant: "destructive",
     onPress(stopPropagation) {
       stopPropagation.stopPropagation();
@@ -64,9 +63,9 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
     text: null
   };
   const intl3 = tmp5(1114).intl;
-  obj6[2] = intl3.string(messagesProxyDefault.PYPdl4);
-  items[1] = callback(_require(4910).AlertActionButton, obj6, "deactivate");
-  const obj7 = {
+  obj9.text = intl3.string(_modDef2428.PYPdl4);
+  items[1] = closure_4(require("AlertModal").AlertActionButton, obj9, "deactivate");
+  const obj10 = {
     onPress() {
 
     },
@@ -74,31 +73,30 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
     text: null
   };
   const intl4 = tmp5(1114).intl;
-  obj7[2] = intl4.string(_require(1114).t["ETE/oC"]);
-  items[2] = callback(_require(4910).AlertActionButton, obj7, "cancel");
-  obj5[0] = items;
-  obj[3] = closure_5(_require(4910).AlertActions, obj5);
-  obj1 = { color: ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "custom", style: { width: 40, height: 40 } };
-  const obj2 = { perk: powerup.title };
-  const obj3 = { perk: powerup.title };
-  const tmp9 = closure_5;
-  obj[4] = callback(tmp8, {
+  obj10.text = intl4.string(require("util").t["ETE/oC"]);
+  items[2] = closure_4(require("AlertModal").AlertActionButton, obj10, "cancel");
+  obj8.children = items;
+  obj2.actions = closure_5(require("AlertModal").AlertActions, obj8);
+  const obj4 = { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "custom", style: { width: 40, height: 40 } };
+  const obj5 = { perk: powerup.title };
+  const obj6 = { perk: powerup.title };
+  obj2.extraContent = closure_4(tmp8, {
     style: tmp.extraContentContainer,
-    children: arr.map((critical) => {
-      const obj = { style: lib.warningText, variant: null, color: null, children: null };
+    children: arr.map((critical, index) => {
+      const obj = { style: warningText.warningText, variant: null, color: null, children: null };
       let str = "text-sm/medium";
       if (critical.critical) {
         str = "text-sm/semibold";
       }
-      obj[1] = str;
+      obj.variant = str;
       let str2;
       if (critical.critical) {
         str2 = "text-feedback-critical";
       }
-      obj[2] = str2;
-      obj[3] = critical.text;
-      return closure_1_4(lib(closure_1_2[12]).Text, obj, arg1);
+      obj.color = str2;
+      obj.children = critical.text;
+      return React4(Text_Text.Text, obj, index);
     })
   });
-  return callback(_require(4910).AlertModal, obj);
+  return closure_4(require("AlertModal").AlertModal, obj2);
 };

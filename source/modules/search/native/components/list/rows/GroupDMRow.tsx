@@ -1,47 +1,51 @@
-// Module ID: 16656
-// Function ID: 16657
-// Name: GroupDMRow
-// Dependencies: [19, 21, 4713, 10915, 1178, 10916, 4556, 16655, 2]
+// Module ID: 16688
+// Function ID: 16689
+// Name: rows/GroupDMRow
+// Dependencies: [19, 21, 4727, 10942, 1178, 10943, 4570, 16687, 2]
 // Exports: default
 
-// Module 16656 (GroupDMRow)
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16688 (rows/GroupDMRow)
+import native from "native" /* 1178 */;
+import useChannelNameDefault from "useChannelName" /* 4727 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10942 */;
+import useRecipientsLabel from "useRecipientsLabel" /* 10943 */;
+import SearchListRow from "SearchListRow" /* 16687 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/search/native/components/list/rows/GroupDMRow.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/list/rows/GroupDMRow.tsx");
 
 export default function GroupDMRow(channel) {
   channel = channel.channel;
   const onPress = channel.onPress;
   ({ trailing, onAccessibilityAction, accessibilityActions } = channel);
-  let str = onPress(4713)(channel);
+  let str = useChannelNameDefault(channel);
   const items = [channel.id, onPress];
-  const callback = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     onPress(channel.id);
   }, items);
-  let obj = { size: channel(1178).AvatarSizes.LARGE_48, channel };
-  const tmp4 = onPress(10915);
-  const tmp6 = jsx(onPress(10915), { size: channel(1178).AvatarSizes.LARGE_48, channel });
-  const recipientsLabel = channel(10916).useRecipientsLabel(channel);
+  const obj = { size: native.AvatarSizes.LARGE_48, channel };
+  const tmp6 = jsx(GroupDMAvatarDefault, { size: native.AvatarSizes.LARGE_48, channel });
+  const recipientsLabel = useRecipientsLabel.useRecipientsLabel(channel);
   let tmp3Result;
   if (null != recipientsLabel) {
-    obj = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: null };
-    obj[3] = recipientsLabel;
-    tmp3Result = tmp3(tmp5(4556).Text, obj);
+    const obj3 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel };
+    tmp3Result = tmp3(tmp5(4570).Text, obj3);
   }
   let str2 = str;
   if (str == null) {
     str2 = "";
   }
-  obj = { label: str2, icon: tmp6, onPress: callback, accessibilityLabel: null, subLabel: null, trailing: null, accessibilityActions: null, onAccessibilityAction: null };
+  const obj4 = { label: str2, icon: tmp6, onPress: callback, accessibilityLabel: null, subLabel: null, trailing: null, accessibilityActions: null, onAccessibilityAction: null };
   if (str == null) {
     str = "";
   }
-  obj[3] = str;
-  obj[4] = tmp3Result;
-  obj[5] = trailing;
-  obj[6] = accessibilityActions;
-  obj[7] = onAccessibilityAction;
-  return jsx(channel(16655).SearchListRow, { label: str2, icon: tmp6, onPress: callback, accessibilityLabel: null, subLabel: null, trailing: null, accessibilityActions: null, onAccessibilityAction: null });
+  obj4.accessibilityLabel = str;
+  obj4.subLabel = tmp3Result;
+  obj4.trailing = trailing;
+  obj4.accessibilityActions = accessibilityActions;
+  obj4.onAccessibilityAction = onAccessibilityAction;
+  return jsx(SearchListRow.SearchListRow, { label: str2, icon: tmp6, onPress: callback, accessibilityLabel: null, subLabel: null, trailing: null, accessibilityActions: null, onAccessibilityAction: null });
 };

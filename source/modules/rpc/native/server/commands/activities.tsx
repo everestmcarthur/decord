@@ -1,192 +1,171 @@
-// Module ID: 14516
-// Function ID: 14517
-// Name: RPC_LOCAL_SCOPE
-// Dependencies: [5, 4465, 1074, 4770, 8339, 14483, 9559, 9825, 14471, 5139, 5150, 9509, 4462, 2]
+// Module ID: 14541
+// Function ID: 14542
+// Name: commands/activities
+// Dependencies: [5, 4479, 1074, 4784, 8367, 14508, 9586, 9852, 14496, 5153, 5164, 9536, 4476, 2]
 
-// Module 14516 (RPC_LOCAL_SCOPE)
-import prototypeDefault from "prototype" /* 9559 */;
-import showInstantInviteActionSheet from "showInstantInviteActionSheet" /* 9825 */;
-import validateOpenInviteDialog from "validateOpenInviteDialog" /* 14483 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4465 */;
-import ME from "ME" /* 1074 */;
-import { NativePermissionTypes } from "NativePermissionStatus" /* 4770 */;
+// Module 14541 (commands/activities)
+import RPCErrorDefault from "RPCError" /* 9586 */;
+import validateOpenInviteDialog from "validateOpenInviteDialog" /* 14508 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-require = arg1;
-({ RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = RPC_SCOPE_CONFIG);
-({ InstantInviteSources: c4, RPCCommands, RPCErrors: c5 } = ME);
+const instant_invite_InstantInviteUtils = tmp(9852);
+require = fn;
+let Constants = fn(4479);
+({ RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = Constants);
+Constants = fn(1074);
+({ InstantInviteSources: closure_4, RPCCommands, RPCErrors: hasOwnProperty } = Constants);
+const NativePermissionTypes = fn(4784).NativePermissionTypes;
 let obj = {};
-obj = { scope: null, handler: null };
-obj = {};
-const items = [require("set").OAuth2Scopes.RPC, RPC_LOCAL_SCOPE, RPC_AUTHENTICATED_SCOPE];
-obj[RPC_SCOPE_CONFIG.ANY] = items;
-obj[0] = obj;
-obj[1] = function handler(socket) {
+let obj2 = { scope: null, handler: null };
+let obj3 = {};
+const items = [fn(8367).OAuth2Scopes.RPC, RPC_LOCAL_SCOPE, RPC_AUTHENTICATED_SCOPE];
+obj3[RPC_SCOPE_CONFIG.ANY] = items;
+obj2.scope = obj3;
+obj2.handler = function handler(socket) {
   socket = socket.socket;
-  let obj = validateOpenInviteDialog;
-  const result = obj.validateOpenInviteDialog(socket);
+  const result = validateOpenInviteDialog.validateOpenInviteDialog(socket);
   if (null != result.frame) {
-    obj = { errorCode: null };
-    obj[0] = constants2.UNKNOWN_ERROR;
-    const tmp12 = new prototypeDefault(obj, "Cannot support frames (yet)");
+    const obj2 = { errorCode: constants2.UNKNOWN_ERROR };
+    const tmp12 = new RPCErrorDefault(obj2, "Cannot support frames (yet)");
     throw tmp12;
   } else {
-    obj = { source: null, targetApplicationId: null };
-    obj[0] = constants.ACTIVITY_INVITE;
+    const obj3 = { source: constants.ACTIVITY_INVITE, targetApplicationId: null };
     const id = socket.application.id;
-    obj[1] = id;
-    const result1 = showInstantInviteActionSheet.showInstantInviteActionSheet(tmp4, obj);
+    obj3.targetApplicationId = id;
+    const result1 = instant_invite_InstantInviteUtils.showInstantInviteActionSheet(tmp4, obj3);
   }
-  const tmp = require;
 };
-obj[RPCCommands.OPEN_INVITE_DIALOG] = obj;
-let obj1 = { scope: null, handler: null };
-let obj2 = {};
-const items1 = [require("set").OAuth2Scopes.RPC, RPC_LOCAL_SCOPE, RPC_AUTHENTICATED_SCOPE];
-obj2[RPC_SCOPE_CONFIG.ANY] = items1;
-obj1[0] = obj2;
-obj1[1] = function handler(socket) {
+obj[RPCCommands.OPEN_INVITE_DIALOG] = obj2;
+let obj4 = { scope: null, handler: null };
+let obj5 = {};
+const items1 = [fn(8367).OAuth2Scopes.RPC, RPC_LOCAL_SCOPE, RPC_AUTHENTICATED_SCOPE];
+obj5[RPC_SCOPE_CONFIG.ANY] = items1;
+obj4.scope = obj5;
+obj4.handler = function handler(socket) {
   socket = socket.socket;
-  return callback(function*() {
+  return (async (arg0, value) => {
     if (c3 === 2) {
       c3 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp5 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
         c3 = 2;
-        if (0 === c2) {
+        if (0 === dependencyMap) {
           if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            let id = tmp2;
-            id = tmp3;
-            id = undefined;
-            id = undefined;
-            c2 = undefined;
-            c3 = undefined;
-            id = closure_1_0.application.id;
+            closure_128_0 = undefined;
+            closure_128_1 = undefined;
+            closure_128_2 = undefined;
+            closure_128_3 = undefined;
+            const id = socket.application.id;
+            closure_128_0 = id;
             if (null == id) {
-              obj1 = { errorCode: null };
-              obj1[0] = closure_1_5.INVALID_COMMAND;
-              const tmp62 = new closure_1_1(closure_2[6])(obj1, "No application.");
+              const obj4 = { errorCode: constants.INVALID_COMMAND };
+              const tmp62 = new tmp2(9586)(obj4, "No application.");
               throw tmp62;
             } else {
-              const tmp92 = closure_1_1(closure_2[8])();
-              id = undefined;
-              if (tmp92 != null) {
-                id = tmp92.id;
+              const tmp91 = tmp2(14496)();
+              let id1;
+              if (tmp91 != null) {
+                id1 = tmp91.id;
               }
-              if (null == id) {
-                const obj2 = { errorCode: null };
-                obj2[0] = closure_1_5.UNKNOWN_ERROR;
-                const tmp54 = new closure_1_1(closure_2[6])(obj2, "Unable to find selected channel");
+              closure_128_1 = id1;
+              if (null == id1) {
+                const obj5 = { errorCode: constants.UNKNOWN_ERROR };
+                const tmp54 = new tmp2(9586)(obj5, "Unable to find selected channel");
                 throw tmp54;
               } else {
-                let obj11 = closure_1_1(closure_2[9]);
-                const permission = obj11.requestPermission(closure_1_6.PHOTOS);
-                c2 = 1;
+                const permission = tmp2(5153).requestPermission(constants2.PHOTOS);
+                dependencyMap = 1;
                 c3 = 1;
-                const obj3 = { value: null, done: false };
-                obj3[0] = permission.catch(() => {
-                  throw new id(table[6])({ errorCode: constants.UNKNOWN_ERROR }, "Failed requesting photo permissions");
-                });
-                return obj3;
+                const obj6 = {
+                  value: permission.catch(() => {
+                                throw new closure_1_1(dependencyMap[6])({ errorCode: constants.UNKNOWN_ERROR }, "Failed requesting photo permissions");
+                              }),
+                  done: false
+                };
+                return obj6;
               }
             }
           }
         } else if (1 === tmp6) {
           if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else if (arg1) {
-            c2 = 2;
+            const obj7 = { value, done: true };
+            return obj7;
+          } else if (value) {
+            dependencyMap = 2;
             c3 = 1;
-            const obj5 = { value: null, done: false };
-            obj5[0] = tmp86(tmp87[10]).launchImageLibraryAsync({ mediaType: "photo", includeBase64: false, selectionLimit: 1 });
-            return obj5;
+            const obj8 = { value: tmp85(5164).launchImageLibraryAsync({ mediaType: "photo", includeBase64: false, selectionLimit: 1 }), done: false };
+            return obj8;
           } else {
-            const obj6 = { errorCode: null };
-            obj6[0] = closure_1_5.UNKNOWN_ERROR;
-            const tmp42 = new tmp86(tmp87[6])(obj6, "Missing photo permissions");
+            const obj9 = { errorCode: constants.UNKNOWN_ERROR };
+            const tmp42 = new tmp85(9586)(obj9, "Missing photo permissions");
             throw tmp42;
           }
         } else if (2 === tmp6) {
           if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            const obj7 = { value: null, done: true };
-            obj7[0] = arg1;
-            return obj7;
+            const obj10 = { value, done: true };
+            return obj10;
           } else {
-            closure_2 = arg1.assets[0];
-            if (null == closure_2) {
-              const obj8 = { errorCode: null };
-              obj8[0] = closure_1_5.UNKNOWN_ERROR;
-              const tmp36 = new closure_1_1(closure_2[6])(obj8, "No image selected");
+            closure_128_2 = value.assets[0];
+            if (null == closure_128_2) {
+              const obj11 = { errorCode: constants.UNKNOWN_ERROR };
+              const tmp36 = new tmp2(9586)(obj11, "No image selected");
               throw tmp36;
             } else {
-              const obj9 = { name: null, type: null, uri: null };
-              obj9[0] = c2.fileName;
-              obj9[1] = c2.type;
-              obj9[2] = c2.uri;
-              c2 = 3;
+              const obj13 = { name: closure_128_2.fileName, type: closure_128_2.type, uri: closure_128_2.uri };
+              dependencyMap = 3;
               c3 = 1;
-              const obj10 = { value: null, done: false };
-              obj10[0] = closure_1_0(closure_2[11]).uploadImageAttachment(id, id, obj9);
-              return obj10;
+              const obj14 = { value: tmp3(9536).uploadImageAttachment(closure_128_0, closure_128_1, obj13), done: false };
+              return obj14;
             }
           }
         } else if (arg0 === 1) {
           c3 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj11 = { value: null, done: true };
-          obj11[0] = arg1;
-          return obj11;
+          const obj15 = { value, done: true };
+          return obj15;
         } else {
-          c3 = arg1;
-          if (null != c3) {
-            if (null != c3.url) {
-              if (!(c3 instanceof closure_1_1(closure_2[12]))) {
-                obj = { image_url: null };
-                obj[0] = c3.url;
+          closure_128_3 = value;
+          if (null != closure_128_3) {
+            if (null != closure_128_3.url) {
+              if (!(closure_128_3 instanceof tmp2(4476))) {
+                const obj = { image_url: closure_128_3.url };
                 c3 = 3;
-                const obj12 = { value: null, done: true };
-                obj12[0] = obj;
-                return obj12;
+                const obj16 = { value: obj, done: true };
+                return obj16;
               }
             }
           }
-          const obj13 = { errorCode: null };
-          obj13[0] = closure_1_5.UNKNOWN_ERROR;
+          const obj17 = { errorCode: constants.UNKNOWN_ERROR };
           const _JSON = JSON;
-          let tmp20 = closure_1_1(closure_2[6]);
-          tmp20 = new tmp20(obj13, JSON.stringify(c3));
-          throw tmp20;
+          const tmp202 = new tmp2(9586)(obj17, JSON.stringify(closure_128_3));
+          throw tmp202;
         }
       } catch (tmp64) {
         c3 = tmp;
@@ -195,7 +174,8 @@ obj1[1] = function handler(socket) {
     }
   })();
 };
-obj[RPCCommands.INITIATE_IMAGE_UPLOAD] = obj1;
-let result = require("set").fileFinishedImporting("modules/rpc/native/server/commands/activities.tsx");
+obj[RPCCommands.INITIATE_IMAGE_UPLOAD] = obj4;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/rpc/native/server/commands/activities.tsx");
 
 export default obj;

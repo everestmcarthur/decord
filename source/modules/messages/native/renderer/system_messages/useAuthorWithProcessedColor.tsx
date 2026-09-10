@@ -1,45 +1,43 @@
-// Module ID: 7960
-// Function ID: 7961
-// Name: getMessageAuthorWithProcessedColor
-// Dependencies: [17, 4793, 7961, 2]
+// Module ID: 7974
+// Function ID: 7975
+// Name: useAuthorWithProcessedColor
+// Dependencies: [17, 4807, 7975, 2]
 // Exports: getMessageAuthorWithProcessedColor, getUserAuthorWithProcessedColor
 
-// Module 7960 (getMessageAuthorWithProcessedColor)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4793 */;
-import processColorStrings from "processColorStrings" /* 7961 */;
+// Module 7974 (useAuthorWithProcessedColor)
+import _mod17 from "module_17" /* 17 */;
+import useMessageAuthor from "useMessageAuthor" /* 4807 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7975 */;
+import size from "module_2" /* 2 */;
 
-const processColor = get_ActivityIndicator.processColor;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/useAuthorWithProcessedColor.tsx");
+const processColor = _mod17.processColor;
+const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/useAuthorWithProcessedColor.tsx");
 
 export const getMessageAuthorWithProcessedColor = function getMessageAuthorWithProcessedColor(message) {
-  let obj = useNullableMessageAuthor;
-  const messageAuthor = obj.getMessageAuthor(message);
+  const messageAuthor = useMessageAuthor.getMessageAuthor(message);
   const colorString = messageAuthor.colorString;
-  obj = { nick: messageAuthor.nick, colorString: null, colorStrings: null, guildId: null };
+  const obj2 = { nick: messageAuthor.nick, colorString: null, colorStrings: null, guildId: null };
   let tmp4;
   ({ colorStrings, guildId } = messageAuthor);
   if (null != colorString) {
     tmp4 = processColor(colorString);
   }
-  obj[1] = tmp4;
-  obj[2] = processColorStrings.processColorStrings(colorStrings);
-  obj[3] = guildId;
-  return obj;
+  obj2.colorString = tmp4;
+  obj2.colorStrings = enhanced_role_colors_EnhancedRoleColorUtils.processColorStrings(colorStrings);
+  obj2.guildId = guildId;
+  return obj2;
 };
 export const getUserAuthorWithProcessedColor = function getUserAuthorWithProcessedColor(user, channel) {
-  let obj = useNullableMessageAuthor;
-  const userAuthor = obj.getUserAuthor(user, channel);
+  const userAuthor = useMessageAuthor.getUserAuthor(user, channel);
   const colorString = userAuthor.colorString;
-  obj = { nick: userAuthor.nick, colorString: null, colorStrings: null, guildId: null };
+  const obj2 = { nick: userAuthor.nick, colorString: null, colorStrings: null, guildId: null };
   let tmp4;
   ({ colorStrings, guildId } = userAuthor);
   if (null != colorString) {
     tmp4 = processColor(colorString);
   }
-  obj[1] = tmp4;
-  obj[2] = processColorStrings.processColorStrings(colorStrings);
-  obj[3] = guildId;
-  return obj;
+  obj2.colorString = tmp4;
+  obj2.colorStrings = enhanced_role_colors_EnhancedRoleColorUtils.processColorStrings(colorStrings);
+  obj2.guildId = guildId;
+  return obj2;
 };

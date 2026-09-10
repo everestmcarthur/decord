@@ -1,17 +1,17 @@
-// Module ID: 5877
-// Function ID: 5878
+// Module ID: 5891
+// Function ID: 5892
 // Name: CouchSpotIllustration
-// Dependencies: [21, 5587, 5878, 2]
+// Dependencies: [21, 5601, 5892, 2]
 // Exports: CouchSpotIllustration
 
-// Module 5877 (CouchSpotIllustration)
-import set from "set" /* 2 */;
+// Module 5891 (CouchSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 5878 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5892 from "module_5892" /* 5892 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/CouchSpotIllustration.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/CouchSpotIllustration.native.tsx");
 
 export const CouchSpotIllustration = function CouchSpotIllustration(width) {
   let num = width.width;
@@ -27,14 +27,14 @@ export const CouchSpotIllustration = function CouchSpotIllustration(width) {
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
-  obj = { width: num * num3, height: num2 * num3 };
-  const items = [obj];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { width: num * num3, height: num2 * num3 });
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef5892 };
+  obj.source = obj2;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

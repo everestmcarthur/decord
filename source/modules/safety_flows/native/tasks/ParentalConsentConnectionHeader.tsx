@@ -1,38 +1,36 @@
-// Module ID: 17884
-// Function ID: 17885
-// Name: ParentalConsentConnectionNavbar
-// Dependencies: [19, 17, 1371, 21, 4560, 5682, 576, 1611, 504, 4556, 6593, 1114, 2690, 2]
+// Module ID: 17917
+// Function ID: 17918
+// Name: ParentalConsentConnectionHeader
+// Dependencies: [19, 17, 1371, 21, 4574, 5696, 576, 1611, 504, 4570, 6607, 1114, 2690, 2]
 // Exports: ParentalConsentConnectionNavbar
 
-// Module 17884 (ParentalConsentConnectionNavbar)
-import noopAll from "noop" /* 19 */;
+// Module 17917 (ParentalConsentConnectionHeader)
 import initialize from "initialize" /* 504 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import messagesProxyDefault from "messagesProxy" /* 2690 */;
-import Text from "Text" /* 4556 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import _modDef2690 from "module_2690" /* 2690 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6607 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { row: null, logOut: null };
-createCacheKey = { height: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { position: "absolute", left: ThemesDefault.space.PX_16 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { position: "absolute", left: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/safety_flows/native/tasks/ParentalConsentConnectionHeader.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { row: { height: fn(5696).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 }, logOut: null };
+let obj3 = { height: fn(5696).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.logOut = { position: "absolute", left: nativeDefault.space.PX_16 };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_flows/native/tasks/ParentalConsentConnectionHeader.tsx");
 
 export const ParentalConsentConnectionNavbar = function ParentalConsentConnectionNavbar() {
-  const tmp = callback2();
-  let obj = initialize;
-  const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const tmp = closure_7();
+  const items = [UserStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let username;
     if (currentUser != null) {
@@ -40,29 +38,28 @@ export const ParentalConsentConnectionNavbar = function ParentalConsentConnectio
     }
     return username;
   });
-  obj = { style: { paddingTop: useSafeAreaInsetsDefault().top }, children: null };
-  obj = { style: tmp.row, children: null };
-  obj1 = {
+  const obj2 = { style: { paddingTop: useSafeAreaInsetsDefault().top }, children: null };
+  const obj3 = { style: tmp.row, children: null };
+  const obj4 = {
     accessibilityRole: "button",
     variant: "text-md/medium",
     color: "text-link",
     style: tmp.logOut,
     onPress() {
-      return callback(table[10]).logout("safety_flows_parental_consent_connection");
+      return AuthenticationActionCreatorsDefault.logout("safety_flows_parental_consent_connection");
     },
     children: null
   };
-  const intl = getSystemLocale.intl;
-  obj1[5] = intl.string(messagesProxyDefault["3HuGuY"]);
-  const items1 = [callback(Text.Text, obj1), ];
+  const intl = util.intl;
+  obj4.children = intl.string(_modDef2690["3HuGuY"]);
+  const items1 = [hasOwnProperty(Text_Text.Text, obj4), ];
   let tmp5Result = null != stateFromStores;
   if (tmp5Result) {
-    const obj2 = { accessibilityRole: "header", variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-    obj2[3] = stateFromStores;
-    tmp5Result = tmp5(Text.Text, obj2);
+    const obj5 = { accessibilityRole: "header", variant: "text-md/semibold", color: "mobile-text-heading-primary", children: stateFromStores };
+    tmp5Result = tmp5(Text_Text.Text, obj5);
   }
   items1[1] = tmp5Result;
-  obj[1] = items1;
-  obj[1] = closure_6(View, obj);
-  return callback(View, obj);
+  obj3.children = items1;
+  obj2.children = timestampProducer(View, obj3);
+  return hasOwnProperty(View, obj2);
 };

@@ -1,12 +1,11 @@
-// Module ID: 6406
-// Function ID: 6407
-// Name: metadata
+// Module ID: 6420
+// Function ID: 6421
 // Dependencies: [2]
 
-// Module 6406 (metadata)
-import set from "set" /* 2 */;
+// Module 6420
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SafetyShieldRight3dIllustration-2x.png.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SafetyShieldRight3dIllustration-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/e2e52e0ae009d71a780dfb171f80a178cde67aadcbcbc99fe4546a72562902ef.png";
 export const metadata = { fileBytes: 144961 };

@@ -1,30 +1,31 @@
-// Module ID: 17038
-// Function ID: 17039
-// Dependencies: [19, 21, 7073, 8097, 2]
+// Module ID: 17069
+// Function ID: 17070
+// Name: VoicePanelIconButton
+// Dependencies: [19, 21, 7087, 8113, 2]
 
-// Module 17038
-import setDefault from "set" /* 7073 */;
-import IconButton from "IconButton" /* 8097 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 17069 (VoicePanelIconButton)
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7087 */;
+import IconButton from "IconButton" /* 8113 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const memoResult = importAllResult.memo(importAllResult.forwardRef((overrideVariant, ref) => {
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelIconButton.tsx");
+
+export default noop.memo(noop.forwardRef((overrideVariant, ref) => {
   let str = overrideVariant.overrideVariant;
   ({ style, layout } = overrideVariant);
-  const merged = Object.assign(overrideVariant, Object.create(null));
-  let obj = { ref, style, layout, children: null };
-  obj = {};
+  const merged = Object.assign(overrideVariant, Object.assign({ style: 0, overrideVariant: 0, layout: 0 }));
+  const obj = { ref, style, layout, children: null };
+  const obj2 = {};
   const merged1 = Object.assign(merged);
-  obj.size = "sm";
+  obj2.size = "sm";
   if (str == null) {
     str = "secondary-overlay";
   }
-  obj.variant = str;
-  obj.maxFontSizeMultiplier = 2;
-  obj[3] = jsx(IconButton.IconButton, {});
-  return jsx(setDefault, {});
+  obj2.variant = str;
+  obj2.maxFontSizeMultiplier = 2;
+  obj.children = jsx(IconButton.IconButton, {});
+  return jsx(ReanimatedNativeViewDefault, { ref, style, layout, children: null });
 }));
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelIconButton.tsx");
-
-export default memoResult;

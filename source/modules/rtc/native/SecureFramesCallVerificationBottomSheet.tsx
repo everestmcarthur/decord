@@ -1,25 +1,27 @@
-// Module ID: 17116
-// Function ID: 17117
+// Module ID: 17147
+// Function ID: 17148
 // Name: SecureFramesCallVerificationBottomSheet
-// Dependencies: [19, 4583, 1074, 21, 504, 9166, 8361, 9172, 1114, 9155, 2]
+// Dependencies: [19, 4597, 1074, 21, 504, 9193, 8389, 9199, 1114, 9182, 2]
 // Exports: default
 
-// Module 17116 (SecureFramesCallVerificationBottomSheet)
-import SecureFramesVerificationBottomSheetDefault from "SecureFramesVerificationBottomSheet" /* 9172 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createRTCConnection" /* 4583 */;
-import { AnalyticsSections } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 17147 (SecureFramesCallVerificationBottomSheet)
+import showShareActionSheet from "showShareActionSheet" /* 8389 */;
+import SecureFramesTracking from "SecureFramesTracking" /* 9193 */;
+import SecureFramesVerificationBottomSheetDefault from "SecureFramesVerificationBottomSheet" /* 9199 */;
+import noop from "module_19" /* 19 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/rtc/native/SecureFramesCallVerificationBottomSheet.tsx");
+require = fn;
+const AnalyticsSections = fn(1074).AnalyticsSections;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/rtc/native/SecureFramesCallVerificationBottomSheet.tsx");
 
 export default function SecureFramesCallVerificationBottomSheet(channelId) {
   channelId = channelId.channelId;
-  let obj = channelId(504);
-  const items = [closure_4];
+  const items = [RTCConnectionStore];
   const items1 = [channelId];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = channelId(504).useStateFromStores(items, () => {
     secureFramesState = secureFramesState.getSecureFramesState();
     let epochAuthenticator;
     if (secureFramesState != null) {
@@ -27,24 +29,22 @@ export default function SecureFramesCallVerificationBottomSheet(channelId) {
     }
     return epochAuthenticator;
   });
-  const callback = React.useCallback((message) => {
-    let obj = channelId(closure_1_2[5]);
-    obj = { channelId };
-    const result = obj.trackE2EECallVerificationShareClicked(obj);
-    obj = { message };
-    channelId(closure_1_2[6]).showShareActionSheet(obj, closure_1_5.SECURE_FRAMES_STREAM_BOTTOM_SHEET);
+  const callback = noop.useCallback((message) => {
+    const result = SecureFramesTracking.trackE2EECallVerificationShareClicked({ channelId });
+    const obj2 = { channelId };
+    showShareActionSheet.showShareActionSheet({ message }, AnalyticsSections.SECURE_FRAMES_STREAM_BOTTOM_SHEET);
   }, items1);
-  obj = { title: null, subtitle: null, footer: null, epochAuthenticator: null, onShareClick: null };
+  let obj2 = { title: null, subtitle: null, footer: null, epochAuthenticator: null, onShareClick: null };
+  let obj = channelId(504);
   const intl = channelId(1114).intl;
-  obj[0] = intl.string(channelId(1114).t.cTQI5t);
+  obj2.title = intl.string(channelId(1114).t.cTQI5t);
   const intl2 = channelId(1114).intl;
-  obj[1] = intl2.string(channelId(1114).t["MPp7+C"]);
+  obj2.subtitle = intl2.string(channelId(1114).t["MPp7+C"]);
   const intl3 = channelId(1114).intl;
-  obj = { helpArticle: null };
-  const tmp3 = SecureFramesVerificationBottomSheetDefault;
-  obj[0] = channelId(9155).getSecureFramesHelpdeskArticle();
-  obj[2] = intl3.format(channelId(1114).t.wKxADe, obj);
-  obj[3] = stateFromStores;
-  obj[4] = callback;
-  return <tmp3 helpArticle={null} />;
+  const obj3 = { helpArticle: null };
+  obj3.helpArticle = channelId(9182).getSecureFramesHelpdeskArticle();
+  obj2.footer = intl3.format(channelId(1114).t.wKxADe, obj3);
+  obj2.epochAuthenticator = stateFromStores;
+  obj2.onShareClick = callback;
+  return <tmp3 title={null} subtitle={null} footer={null} epochAuthenticator={null} onShareClick={null} />;
 };

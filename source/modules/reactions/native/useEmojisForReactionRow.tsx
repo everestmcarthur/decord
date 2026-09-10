@@ -1,33 +1,31 @@
-// Module ID: 11736
-// Function ID: 11737
+// Module ID: 11762
+// Function ID: 11763
 // Name: useEmojisForReactionRow
-// Dependencies: [19, 1374, 10290, 1477, 4217, 2]
+// Dependencies: [19, 1374, 10317, 1477, 4230, 2]
 // Exports: useEmojisForReactionRow
 
-// Module 11736 (useEmojisForReactionRow)
-import closure_3 from "noop" /* 19 */;
-import { EmojiIntention } from "set" /* 1374 */;
+// Module 11762 (useEmojisForReactionRow)
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/reactions/native/useEmojisForReactionRow.tsx");
+const require = globalThis.__r;
 
-export const useEmojisForReactionRow = function useEmojisForReactionRow(channel, closure_4, arg2) {
-  const _require = channel;
+const require = fn;
+const EmojiIntention = fn(1374).EmojiIntention;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/reactions/native/useEmojisForReactionRow.tsx");
+
+export const useEmojisForReactionRow = function useEmojisForReactionRow(channel, arg1, arg2) {
+  _require = channel;
   const guildId = channel.getGuildId();
-  const frequentlyUsedReactionEmojis = _require(rounded[2]).useFrequentlyUsedReactionEmojis(guildId);
-  rounded = Math.floor(Math.min(frequentlyUsedReactionEmojis(rounded[3])().width, closure_4) / arg2);
+  const frequentlyUsedReactionEmojis = require("EmojiPickerUtils").useFrequentlyUsedReactionEmojis(guildId);
+  rounded = Math.floor(Math.min(frequentlyUsedReactionEmojis(rounded[3])().width, arg1) / arg2);
   const items = [frequentlyUsedReactionEmojis, channel, rounded];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     let length;
-    const found = frequentlyUsedReactionEmojis.filter((emoji) => {
-      let obj = closure_1_1(closure_1_2[4]);
-      obj = { emoji, channel: closure_0, intention: closure_1_4.REACTION };
-      return !obj.isEmojiFilteredOrLocked(obj);
-    });
+    const found = frequentlyUsedReactionEmojis.filter((emoji) => !frequentlyUsedReactionEmojis(rounded[4]).isEmojiFilteredOrLocked({ emoji, channel, intention: constants.REACTION }));
     if (found.length < rounded) {
       do {
         let arr = found.push(null);
-        let tmp2 = rounded;
         length = found.length;
       } while (length < rounded);
     }

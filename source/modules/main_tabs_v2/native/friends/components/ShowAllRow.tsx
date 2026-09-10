@@ -1,46 +1,44 @@
-// Module ID: 16771
-// Function ID: 16772
+// Module ID: 16808
+// Function ID: 16809
 // Name: ShowAllRow
-// Dependencies: [19, 17, 21, 4560, 576, 5605, 14180, 1178, 4556, 1114, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 5619, 14205, 1178, 4570, 1114, 2]
 // Exports: default
 
-// Module 16771 (ShowAllRow)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import Text from "Text" /* 4556 */;
-import TableRowInner from "TableRowInner" /* 5605 */;
-import AvatarDuoPile from "AvatarDuoPile" /* 14180 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16808 (ShowAllRow)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import TableRow from "TableRow" /* 5619 */;
+import AvatarDuoPile from "AvatarDuoPile" /* 14205 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { labelContainer: { flexDirection: "row", alignItems: "center" }, showAllText: null };
-createCacheKey = { marginLeft: ThemesDefault.space.PX_12 };
-createCacheKey[1] = createCacheKey;
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ShowAllRow.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { labelContainer: { flexDirection: "row", alignItems: "center" }, showAllText: { marginLeft: nativeDefault.space.PX_12 } };
+let closure_5 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ShowAllRow.tsx");
 
 export default function ShowAllRow(users) {
   users = users.users;
   ({ onPress, count } = users);
-  const tmp = callback3();
-  let obj = { onPress, end: true, height: "100%", label: null, trailing: null };
-  obj = { style: tmp.labelContainer, children: null };
-  obj = { size: Button.AvatarSizes.XSMALL_20, "aria-label": "", children: null };
+  const tmp = closure_5();
+  const obj = { onPress, end: true, height: "100%", label: null, trailing: null };
+  const obj2 = { style: tmp.labelContainer, children: null };
+  const obj3 = { size: native.AvatarSizes.XSMALL_20, "aria-label": "", children: null };
   const substr = users.slice(0, 2);
-  obj[2] = substr.map((getAvatarSource) => callback2(callback(1178).Avatar, { source: getAvatarSource.getAvatarSource(null, false, callback(1178).AVATAR_SIZE_MAP[callback(undefined, 1178).AvatarSizes.XSMALL]), size: callback(1178).AvatarSizes.XSMALL_20 }, arg1));
-  const items = [callback(AvatarDuoPile.AvatarDuoPile, obj), ];
-  obj1 = { style: tmp.showAllText, variant: "text-md/semibold", color: "text-brand", children: null };
-  const intl = getSystemLocale.intl;
-  obj1[3] = intl.format(getSystemLocale.t.NrzztX, { count });
-  items[1] = callback(Text.Text, obj1);
-  obj[1] = items;
-  obj[3] = callback2(View, obj);
-  obj[4] = callback(TableRowInner.TableRow.Arrow, {});
-  return callback(TableRowInner.TableRow, obj);
+  obj3.children = substr.map((getAvatarSource, index) => closure_1_3(native.Avatar, { source: getAvatarSource.getAvatarSource(null, false, native.AVATAR_SIZE_MAP[native.AvatarSizes.XSMALL]), size: native.AvatarSizes.XSMALL_20 }, index));
+  const items = [React3(AvatarDuoPile.AvatarDuoPile, obj3), ];
+  const obj4 = { style: tmp.showAllText, variant: "text-md/semibold", color: "text-brand", children: null };
+  const intl = util.intl;
+  obj4.children = intl.format(util.t.NrzztX, { count });
+  items[1] = React3(Text_Text.Text, obj4);
+  obj2.children = items;
+  obj.label = React4(View, obj2);
+  obj.trailing = React3(TableRow.TableRow.Arrow, {});
+  return React3(TableRow.TableRow, obj);
 };

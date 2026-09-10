@@ -1,26 +1,26 @@
-// Module ID: 13048
-// Function ID: 13049
+// Module ID: 13074
+// Function ID: 13075
 // Name: SoundboardSlashIcon
-// Dependencies: [19, 21, 576, 4261, 13049, 2]
+// Dependencies: [19, 21, 576, 4274, 13075, 2]
 // Exports: SoundboardSlashIcon
 
-// Module 13048 (SoundboardSlashIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 13049 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 13074 (SoundboardSlashIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod13075 from "module_13075" /* 13075 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/SoundboardSlashIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/SoundboardSlashIcon.tsx");
 
 export const SoundboardSlashIcon = function SoundboardSlashIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13075, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

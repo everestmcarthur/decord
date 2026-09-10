@@ -1,27 +1,25 @@
-// Module ID: 7198
-// Function ID: 7199
+// Module ID: 7211
+// Function ID: 7212
 // Name: ActionSheet
-// Dependencies: [19, 21, 4560, 576, 7150, 2]
+// Dependencies: [19, 21, 4574, 576, 7164, 2]
 
-// Module 7198 (ActionSheet)
-import ThemesDefault from "Themes" /* 576 */;
-import Background from "Background" /* 7150 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 7211 (ActionSheet)
+import nativeDefault from "native" /* 576 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7164 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let obj = { content: null, body: null };
-obj = { paddingHorizontal: ThemesDefault.space.PX_16 };
-obj[0] = obj;
-obj[1] = { gap: 24 };
-let closure_3 = createCacheKey.createStyles(obj);
-const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, body: { gap: 24 } };
+let closure_3 = createStyles.createStyles(obj);
+const obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Sheet/native/ActionSheet.native.tsx");
+
+export const ActionSheet = noop.forwardRef((arg0, ref) => {
   const obj = { ref };
   const merged = Object.assign(arg0);
-  ({ content: obj.contentStyles, body: obj.bodyStyles } = callback());
-  return jsx(Background.BottomSheet, { ref });
+  ({ content: obj.contentStyles, body: obj.bodyStyles } = closure_3());
+  return jsx(Sheet_BottomSheet.BottomSheet, { ref });
 });
-const result = require("set").fileFinishedImporting("design/components/Sheet/native/ActionSheet.native.tsx");
-
-export const ActionSheet = forwardRefResult;

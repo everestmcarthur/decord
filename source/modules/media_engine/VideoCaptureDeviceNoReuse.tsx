@@ -1,15 +1,17 @@
-// Module ID: 14080
-// Function ID: 14081
-// Name: apexExperiment
+// Module ID: 14103
+// Function ID: 14104
+// Name: VideoCaptureDeviceNoReuse
 // Dependencies: [1433, 2]
 
-// Module 14080 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 14103 (VideoCaptureDeviceNoReuse)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null };
-obj[1] = { overrideDeviceReuse: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-03-video-capture-device-no-reuse", kind: "user", defaultConfig: { overrideDeviceReuse: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/media_engine/VideoCaptureDeviceNoReuse.tsx");
+const obj = { name: "2026-03-video-capture-device-no-reuse", kind: "user", defaultConfig: { overrideDeviceReuse: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { overrideDeviceReuse: true };
+obj.variations = obj2;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/media_engine/VideoCaptureDeviceNoReuse.tsx");
 
 export const VideoCaptureDeviceNoReuseExperiment = apexExperiment;

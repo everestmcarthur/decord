@@ -1,45 +1,45 @@
-// Module ID: 16904
-// Function ID: 16905
+// Module ID: 16941
+// Function ID: 16942
 // Name: RestrictedBlockedMessageGroup
-// Dependencies: [32, 19, 17, 21, 4560, 16902, 576, 5123, 4556, 1114, 2]
+// Dependencies: [32, 19, 17, 21, 4574, 16939, 576, 5137, 4570, 1114, 2]
 // Exports: default
 
-// Module 16904 (RestrictedBlockedMessageGroup)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import PressableBase from "PressableBase" /* 5123 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16941 (RestrictedBlockedMessageGroup)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Pressables from "Pressables" /* 5137 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { toggle: null };
-createCacheKey = { marginLeft: require("RESTRICTED_AVATAR_SIZE").RESTRICTED_CONTENT_INSET, marginVertical: ThemesDefault.space.PX_8 };
-createCacheKey[0] = createCacheKey;
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/message_request/native/RestrictedBlockedMessageGroup.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { toggle: { marginLeft: fn(16939).RESTRICTED_CONTENT_INSET, marginVertical: nativeDefault.space.PX_8 } };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/message_request/native/RestrictedBlockedMessageGroup.tsx");
 
 export default function RestrictedBlockedMessageGroup(arg0) {
   ({ messages, renderMessage: require } = arg0);
   dependencyMap = undefined;
-  const tmp = callback3();
-  [tmp3, c1] = callback(React.useState(false), 2);
-  callback = React.useCallback(() => {
+  const tmp = closure_7();
+  [tmp3, c1] = noop.useState(false);
+  const callback = noop.useCallback(() => {
     _undefined((arg0) => !arg0);
   }, []);
-  let obj = { style: tmp.toggle, accessibilityRole: "button", accessibilityState: { expanded: mapped }, onPress: callback, children: null };
-  obj = { variant: "text-sm/medium", color: "text-muted", children: null };
-  const intl = getSystemLocale.intl;
-  obj = { count: messages.length };
-  obj[2] = intl.format(getSystemLocale.t["+FcYM/"], obj);
-  obj[4] = callback2(Text.Text, obj);
-  const children = [callback2(PressableBase.PressableOpacity, obj), ];
+  const obj = { style: tmp.toggle, accessibilityRole: "button", accessibilityState: { expanded: mapped }, onPress: callback, children: null };
+  const obj2 = { variant: "text-sm/medium", color: "text-muted", children: null };
+  const intl = util.intl;
+  obj2.children = intl.format(util.t["+FcYM/"], { count: messages.length });
+  obj.children = closure_5(Text_Text.Text, obj2);
+  const children = [closure_5(Pressables.PressableOpacity, obj), ];
   if (mapped) {
-    mapped = messages.map((id) => closure_1_5(closure_1_4, { children: callback(id) }, id.id));
+    mapped = messages.map((id) => hasOwnProperty(View, { children: require(id) }, id.id));
   }
   children[1] = mapped;
   return closure_6(View, { children });

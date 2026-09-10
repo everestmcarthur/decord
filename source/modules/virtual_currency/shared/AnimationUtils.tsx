@@ -1,36 +1,34 @@
-// Module ID: 11104
-// Function ID: 11105
-// Name: EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS
+// Module ID: 11131
+// Function ID: 11132
+// Name: AnimationUtils
 // Dependencies: [2]
 // Exports: getOrbBalanceCounterAnimationConfigs
 
-// Module 11104 (EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS)
-import set from "set" /* 2 */;
+// Module 11131 (AnimationUtils)
+import size from "module_2" /* 2 */;
 
-let obj = { EARN: 0.25, SPEND: 0.3 };
-let result = set.fileFinishedImporting("modules/virtual_currency/shared/AnimationUtils.tsx");
+const ORB_LOTTIE_COUNTER_ANIMATION_FACTORS = { EARN: 0.25, SPEND: 0.3 };
+let result = size.fileFinishedImporting("modules/virtual_currency/shared/AnimationUtils.tsx");
 
 export const EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS = 3000;
-export const ORB_LOTTIE_COUNTER_ANIMATION_FACTORS = obj;
+export { ORB_LOTTIE_COUNTER_ANIMATION_FACTORS };
 export const getOrbBalanceCounterAnimationConfigs = function getOrbBalanceCounterAnimationConfigs(diff, targetTime) {
   targetTime = targetTime.targetTime;
   if (targetTime.isRenderedWithoutLottieAnimation) {
-    obj = { duration: null, delay: 0 };
-    obj[0] = targetTime;
-    return obj;
+    const obj2 = { duration: targetTime, delay: 0 };
+    return obj2;
   } else {
     let str = "SPEND";
     if (diff > 0) {
       str = "EARN";
     }
     const result = targetTime * obj[str];
-    obj = { duration: null, delay: null };
-    obj[0] = result;
+    obj = { duration: result, delay: null };
     let num2 = 0;
     if (diff > 0) {
       num2 = targetTime - result;
     }
-    obj[1] = num2;
+    obj.delay = num2;
     return obj;
   }
 };

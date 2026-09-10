@@ -1,29 +1,26 @@
-// Module ID: 15808
-// Function ID: 15809
+// Module ID: 15838
+// Function ID: 15839
 // Name: CollectiblesShopScreen
-// Dependencies: [19, 1076, 21, 6994, 15809, 7385, 15810, 7182, 2]
+// Dependencies: [19, 1076, 21, 7008, 15839, 7399, 15840, 7196, 2]
 // Exports: default
 
-// Module 15808 (CollectiblesShopScreen)
-import noopAll from "noop" /* 19 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6994 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7182 */;
-import useGiftCardMobileConsumptionHalfsheet from "useGiftCardMobileConsumptionHalfsheet" /* 7385 */;
-import useShopOrientationLock from "useShopOrientationLock" /* 15809 */;
-import CollectiblesShopInternal from "CollectiblesShopInternal" /* 15810 */;
-import { CollectiblesMobileShopScreen as closure_3 } from "items" /* 1076 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 15838 (CollectiblesShopScreen)
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7008 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
+import useGiftCardMobileConsumptionHalfsheet from "useGiftCardMobileConsumptionHalfsheet" /* 7399 */;
+import useShopOrientationLock from "useShopOrientationLock" /* 15839 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/shop/native/CollectiblesShopScreen.tsx");
+const CollectiblesShopV2 = tmp(15840);
+require = fn;
+const constants = fn(1076).CollectiblesMobileShopScreen;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/shop/native/CollectiblesShopScreen.tsx");
 
 export default function CollectiblesShopScreen() {
-  let obj = useSettingNavigationRoute;
-  const settingNavigationRoute = obj.useSettingNavigationRoute();
+  const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
   const shopOrientationLock = useShopOrientationLock.useShopOrientationLock();
-  const obj2 = useShopOrientationLock;
-  const tmp = require;
   const giftCardMobileConsumptionHalfsheet = useGiftCardMobileConsumptionHalfsheet.useGiftCardMobileConsumptionHalfsheet();
   const params = settingNavigationRoute.params;
   let screen;
@@ -39,14 +36,14 @@ export default function CollectiblesShopScreen() {
     analyticsSource = params2.analyticsSource;
   }
   if (analyticsSource == null) {
-    analyticsSource = QUICK_SWITCHERDefault.COLLECTIBLES_SHOP;
+    analyticsSource = AnalyticsLocationDefault.COLLECTIBLES_SHOP;
   }
-  obj = { analyticsSource, screen, onNavigateAway: null };
+  const obj4 = { analyticsSource, screen, onNavigateAway: null };
   const params3 = settingNavigationRoute.params;
   let onNavigateAway;
   if (params3 != null) {
     onNavigateAway = params3.onNavigateAway;
   }
-  obj[2] = onNavigateAway;
-  return jsx(CollectiblesShopInternal.CollectiblesShopV2, { analyticsSource, screen, onNavigateAway: null });
+  obj4.onNavigateAway = onNavigateAway;
+  return jsx(CollectiblesShopV2.CollectiblesShopV2, { analyticsSource, screen, onNavigateAway: null });
 };

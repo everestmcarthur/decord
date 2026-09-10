@@ -1,12 +1,12 @@
-// Module ID: 10651
-// Function ID: 10652
-// Name: get ActivityIndicator
+// Module ID: 10678
+// Function ID: 10679
+// Name: DCDPhotos
 // Dependencies: [17, 2]
 
-// Module 10651 (get ActivityIndicator)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 10678 (DCDPhotos)
+import _mod17 from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/device/native/DCDPhotos.tsx");
+const result = size.fileFinishedImporting("modules/device/native/DCDPhotos.tsx");
 
-export default get_ActivityIndicator.NativeModules.DCDPhotos;
+export default _mod17.NativeModules.DCDPhotos;

@@ -2,9 +2,11 @@
 // Function ID: 78
 // Name: matricesDiffer
 // Dependencies: []
+// Exports: default
 
 // Module 77 (matricesDiffer)
-arg5.default = function matricesDiffer(arg0, arg1) {
+
+export default function matricesDiffer(arg0, arg1) {
   let tmp = arg0 !== arg1;
   if (tmp) {
     let tmp2 = !arg0;

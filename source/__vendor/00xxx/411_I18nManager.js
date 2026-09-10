@@ -1,0 +1,43 @@
+// Module ID: 411
+// Function ID: 412
+// Name: I18nManager
+// Dependencies: [412]
+
+// Module 411 (I18nManager)
+import _modDef412 from "module_412" /* 412 */;
+
+if (_modDef412) {
+  const constants = _modDef412.getConstants();
+  ({ isRTL: obj3.isRTL, doLeftAndRightSwapInRTL: obj3.doLeftAndRightSwapInRTL, localeIdentifier: obj3.localeIdentifier } = constants);
+  let obj = { isRTL: null, doLeftAndRightSwapInRTL: null, localeIdentifier: null };
+  const importDefaultResult = _modDef412;
+  const obj2 = { isRTL: null, doLeftAndRightSwapInRTL: null, localeIdentifier: null };
+} else {
+  obj = { isRTL: false, doLeftAndRightSwapInRTL: true };
+}
+
+export default {
+  getConstants() {
+    return obj;
+  },
+  allowRTL(arg0) {
+    if (_modDef412) {
+      _modDef412.allowRTL(arg0);
+      const tmpResult = _modDef412;
+    }
+  },
+  forceRTL(arg0) {
+    if (_modDef412) {
+      _modDef412.forceRTL(arg0);
+      const tmpResult = _modDef412;
+    }
+  },
+  swapLeftAndRightInRTL(arg0) {
+    if (_modDef412) {
+      const result = _modDef412.swapLeftAndRightInRTL(arg0);
+      const tmpResult = _modDef412;
+    }
+  },
+  isRTL: obj.isRTL,
+  doLeftAndRightSwapInRTL: obj.doLeftAndRightSwapInRTL
+};

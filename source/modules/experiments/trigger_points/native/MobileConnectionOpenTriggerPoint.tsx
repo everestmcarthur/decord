@@ -1,14 +1,14 @@
-// Module ID: 13698
-// Function ID: 13699
-// Name: commonTriggerPointConfiguration
-// Dependencies: [4477, 10814, 2]
+// Module ID: 13721
+// Function ID: 13722
+// Name: MobileConnectionOpenTriggerPoint
+// Dependencies: [4491, 10841, 2]
 
-// Module 13698 (commonTriggerPointConfiguration)
-import set from "set" /* 2 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4477 */;
-import registeredExperimentIds from "registeredExperimentIds" /* 10814 */;
+// Module 13721 (MobileConnectionOpenTriggerPoint)
+import ExperimentConstants from "ExperimentConstants" /* 4491 */;
+import Helpers from "Helpers" /* 10841 */;
+import size from "module_2" /* 2 */;
 
-const commonTriggerPointConfiguration = new registeredExperimentIds.CommonTriggerPointConfiguration([], ExperimentBuckets.CommonTriggerPoints.CONNECTION_OPEN_MOBILE, { location: "app open mobile" });
-const result = set.fileFinishedImporting("modules/experiments/trigger_points/native/MobileConnectionOpenTriggerPoint.tsx");
+const commonTriggerPointConfiguration = new Helpers.CommonTriggerPointConfiguration([], ExperimentConstants.CommonTriggerPoints.CONNECTION_OPEN_MOBILE, { location: "app open mobile" });
+const result = size.fileFinishedImporting("modules/experiments/trigger_points/native/MobileConnectionOpenTriggerPoint.tsx");
 
 export const MobileConnectionOpenTriggerPoint = commonTriggerPointConfiguration;

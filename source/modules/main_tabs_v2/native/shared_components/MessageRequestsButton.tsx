@@ -1,32 +1,27 @@
-// Module ID: 16031
-// Function ID: 16032
-// Name: MessageRequestAnimation
-// Dependencies: [19, 17, 7219, 7220, 21, 4560, 504, 16032, 4975, 1114, 8097, 13257, 9888, 2]
+// Module ID: 16061
+// Function ID: 16062
+// Name: MessageRequestsButton
+// Dependencies: [19, 17, 7233, 7234, 21, 4574, 504, 16062, 4989, 1114, 8113, 13280, 9915, 2]
 // Exports: default
 
-// Module 16031 (MessageRequestAnimation)
+// Module 16061 (MessageRequestsButton)
 import initialize from "initialize" /* 504 */;
-import registerAssetDefault from "registerAsset" /* 9888 */;
-import ButtonBadgeDefault from "ButtonBadge" /* 13257 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "processChannel" /* 7219 */;
-import closure_6 from "processChannel" /* 7220 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import _modDef9915 from "module_9915" /* 9915 */;
+import IconActionButtonDefault from "IconActionButton" /* 13280 */;
+import _mod16062 from "module_16062" /* 16062 */;
+import noop from "module_19" /* 19 */;
+import MessageRequestStore from "MessageRequestStore" /* 7233 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7234 */;
 
-require = arg1;
+require = fn;
 function MessageRequestAnimation(color) {
-  let ref;
-  let stateFromStores;
-  ref = React.useRef(null);
-  const items = [closure_5];
-  stateFromStores = ref(504).useStateFromStores(items, () => messageRequestsCount.getMessageRequestsCount());
-  const obj = ref(504);
-  const items1 = [closure_6];
-  const stateFromStores1 = ref(504).useStateFromStores(items1, () => spamChannelsCount.getSpamChannelsCount());
+  const ref = noop.useRef(null);
+  const items = [MessageRequestStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => messageRequestsCount.getMessageRequestsCount());
+  const items1 = [SpamMessageRequestStore];
+  const stateFromStores1 = initialize.useStateFromStores(items1, () => spamChannelsCount.getSpamChannelsCount());
   const items2 = [stateFromStores];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (stateFromStores > 0) {
       if (ref != null) {
         const current = ref.current;
@@ -36,70 +31,67 @@ function MessageRequestAnimation(color) {
       }
     }
   }, items2);
-  return callback(ref(16032).MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
+  return React5(_mod16062.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
 }
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-let closure_9 = createCacheKey.createStyles({ buttonContainer: { position: "relative" } });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/MessageRequestsButton.tsx");
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+let closure_9 = createStyles.createStyles({ buttonContainer: { position: "relative" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/MessageRequestsButton.tsx");
 
 export default function MessageRequestsButton(alternateVariant) {
   let flag = alternateVariant.alternateVariant;
   if (flag === undefined) {
     flag = false;
   }
-  const merged = Object.assign(alternateVariant, Object.create(null));
-  let obj = initialize;
-  const items = [closure_5];
-  let str = obj.useStateFromStores(items, () => messageRequestsCount.getMessageRequestsCount());
-  obj1 = initialize;
-  const items1 = [closure_6];
+  const merged = Object.assign(alternateVariant, Object.assign({ alternateVariant: 0 }));
+  const tmp2 = closure_9();
+  const items = [MessageRequestStore];
+  const str = initialize.useStateFromStores(items, () => messageRequestsCount.getMessageRequestsCount());
+  const items1 = [SpamMessageRequestStore];
   if (0 === str) {
-    if (0 === obj1.useStateFromStores(items1, () => spamChannelsCount.getSpamChannelsCount())) {
+    if (0 === obj2.useStateFromStores(items1, () => spamChannelsCount.getSpamChannelsCount())) {
       return null;
     }
   }
   if (flag) {
-    str = undefined;
-    if (str > 0) {
-      str = str.toString();
-    }
-    obj = { style: null, collapsable: false, children: null };
-    obj[0] = tmp2.buttonContainer;
-    if (null != str) {
-      obj = { icon: null, variant: "secondary", text: null, size: "sm", accessibilityLabel: null };
-      obj[0] = callback(MessageRequestAnimation, {});
-      obj[2] = str;
-      const intl3 = tmp3(1114).intl;
-      obj[4] = intl3.string(tmp3(1114).t.e7GWjQ);
-      const merged1 = Object.assign(merged);
-      let tmp21 = callback(tmp3(4975).Button, obj);
-      let tmp16 = callback;
-    } else {
-      tmp16 = callback;
-      obj1 = { variant: "secondary", size: "sm", icon: null, accessibilityLabel: null };
-      obj1[2] = callback(MessageRequestAnimation, {});
-      const intl2 = tmp3(1114).intl;
-      obj1[3] = intl2.string(tmp3(1114).t.e7GWjQ);
-      const merged2 = Object.assign(merged);
-      tmp21 = callback(tmp3(8097).IconButton, obj1);
-    }
-    const items2 = [tmp21, str > 0 && tmp16(tmp3(13257).ButtonBadge, { badgePosition: "right" })];
-    obj[2] = items2;
-    return closure_8(View, obj);
-  } else {
-    const obj2 = { source: null, IconComponent: null, accessibilityLabel: null, buttonText: null, badge: null, badgePosition: "right" };
-    obj2[0] = registerAssetDefault;
-    obj2[1] = MessageRequestAnimation;
-    const intl = tmp3(1114).intl;
-    obj2[2] = intl.string(tmp3(1114).t.e7GWjQ);
     let str1;
     if (str > 0) {
       str1 = str.toString();
     }
-    obj2[3] = str1;
-    obj2[4] = str > 0;
+    const obj3 = { style: tmp2.buttonContainer, collapsable: false, children: null };
+    if (null != str1) {
+      const obj4 = { icon: React5(MessageRequestAnimation, {}), variant: "secondary", text: str1, size: "sm", accessibilityLabel: null };
+      const intl3 = tmp3(1114).intl;
+      obj4.accessibilityLabel = intl3.string(tmp3(1114).t.e7GWjQ);
+      const merged1 = Object.assign(merged);
+      let tmp21 = React5(tmp3(4989).Button, obj4);
+      let tmp16 = React5;
+    } else {
+      tmp16 = React5;
+      const obj5 = { variant: "secondary", size: "sm", icon: React5(MessageRequestAnimation, {}), accessibilityLabel: null };
+      const intl2 = tmp3(1114).intl;
+      obj5.accessibilityLabel = intl2.string(tmp3(1114).t.e7GWjQ);
+      const merged2 = Object.assign(merged);
+      tmp21 = React5(tmp3(8113).IconButton, obj5);
+    }
+    const items2 = [tmp21, str > 0 && tmp16(tmp3(13280).ButtonBadge, { badgePosition: "right" })];
+    obj3.children = items2;
+    return React6(View, obj3);
+  } else {
+    const obj6 = { source: _modDef9915, IconComponent: MessageRequestAnimation, accessibilityLabel: null, buttonText: null, badge: null, badgePosition: "right" };
+    const intl = tmp3(1114).intl;
+    obj6.accessibilityLabel = intl.string(tmp3(1114).t.e7GWjQ);
+    let str2;
+    if (str > 0) {
+      str2 = str.toString();
+    }
+    obj6.buttonText = str2;
+    obj6.badge = str > 0;
     const merged3 = Object.assign(merged);
-    return callback(ButtonBadgeDefault, obj2);
+    return React5(IconActionButtonDefault, obj6);
   }
-  tmp2 = callback2();
+  obj2 = initialize;
 };

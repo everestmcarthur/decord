@@ -1,42 +1,40 @@
-// Module ID: 15263
-// Function ID: 15264
-// Name: toggle
-// Dependencies: [1908, 7975, 504, 9094, 1114, 11473, 2]
+// Module ID: 15292
+// Function ID: 15293
+// Name: AdvancedVoiceActivitySetting
+// Dependencies: [1908, 7989, 504, 9121, 1114, 11500, 2]
 
-// Module 15263 (toggle)
+// Module 15292 (AdvancedVoiceActivitySetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import trackDeviceChangedDefault from "trackDeviceChanged" /* 9094 */;
-import closure_3 from "_detectH265HardwareDecode" /* 1908 */;
-import createToggle from "createToggle" /* 11473 */;
+import util from "util" /* 1114 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9121 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const SettingBuilders = fn(11500);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.BbESsg);
+    const intl = util.intl;
+    return intl.string(util.t.BbESsg);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
+  parent: fn(7989).MobileUserSettings.VOICE,
   useValue: function useAdvancedVoiceActivitySettingValue() {
-    const items = [closure_3];
+    const items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => modeOptions.getModeOptions().vadUseKrisp);
   },
   onValueChange: function onAdvancedVoiceActivitySettingValueChange(vadUseKrisp) {
-    mode = mode.getMode();
-    let obj = trackDeviceChangedDefault;
-    obj = { vadUseKrisp };
-    obj.setMode(mode, obj);
+    const mode = MediaEngineStore.getMode();
+    AudioActionCreatorsDefault.setMode(mode, { vadUseKrisp });
   },
   useDescription: function useAdvancedVoiceActivitySettingDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.LoOB1F);
+    const intl = util.intl;
+    return intl.string(util.t.LoOB1F);
   },
   usePredicate: function useHasAdvancedVoiceActivitySetting() {
-    const items = [closure_3];
+    const items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => advancedVoiceActivitySupported.isAdvancedVoiceActivitySupported());
   }
-};
-createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AdvancedVoiceActivitySetting.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AdvancedVoiceActivitySetting.tsx");
 
-export default createToggle;
+export default toggle;

@@ -1,23 +1,21 @@
-// Module ID: 12656
-// Function ID: 12657
-// Name: viewPrompt
+// Module ID: 12682
+// Function ID: 12683
+// Name: GuildPromptsActionCreators
 // Dependencies: [573, 2]
 // Exports: viewPrompt
 
-// Module 12656 (viewPrompt)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 12682 (GuildPromptsActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-function viewPrompt(REAL_NAME_PROMPT, closure_0) {
+function viewPrompt(REAL_NAME_PROMPT, guildId) {
   importDefault = REAL_NAME_PROMPT;
-  dependencyMap = closure_0;
-  dispatcherDefault.wait(() => {
-    let obj = REAL_NAME_PROMPT(table[0]);
-    obj = { type: "GUILD_PROMPT_VIEWED", prompt: REAL_NAME_PROMPT, guildId: table };
-    obj.dispatch(obj);
+  dependencyMap = guildId;
+  DispatcherDefault.wait(() => {
+    DispatcherDefault.dispatch({ type: "GUILD_PROMPT_VIEWED", prompt: _prompt, guildId });
   });
 }
-const result = set.fileFinishedImporting("modules/guild/GuildPromptsActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/guild/GuildPromptsActionCreators.tsx");
 
 export default { viewPrompt };
 export { viewPrompt };

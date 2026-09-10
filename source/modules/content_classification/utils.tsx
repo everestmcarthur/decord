@@ -1,24 +1,21 @@
-// Module ID: 5112
-// Function ID: 5113
-// Name: isAgeRestrictedContentClassification
-// Dependencies: [5113, 5115, 2]
+// Module ID: 5126
+// Function ID: 5127
+// Name: utils
+// Dependencies: [5127, 5129, 2]
 // Exports: isAgeRestrictedContentClassification
 
-// Module 5112 (isAgeRestrictedContentClassification)
-import set from "set" /* 2 */;
-import contentClassificationToAgeRestrictionConclusion from "contentClassificationToAgeRestrictionConclusion" /* 5113 */;
-import AgeRestrictionStatus from "AgeRestrictionStatus" /* 5115 */;
+// Module 5126 (utils)
+import ContentClassificationToAgeRestriction from "ContentClassificationToAgeRestriction" /* 5127 */;
+import AgeRestrictionStatus from "AgeRestrictionStatus" /* 5129 */;
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("modules/content_classification/utils.tsx");
+let result = size.fileFinishedImporting("modules/content_classification/utils.tsx");
 
 export const isAgeRestrictedContentClassification = function isAgeRestrictedContentClassification(contentClassification) {
   let tmp = null != contentClassification;
   if (tmp) {
-    let obj = contentClassificationToAgeRestrictionConclusion;
-    obj = { type: null, data: null };
-    obj[0] = contentClassificationToAgeRestrictionConclusion.ContentClassificationVariant.MINIMAL;
-    obj[1] = contentClassification;
-    const result = obj.contentClassificationToAgeRestriction(obj);
+    const obj2 = { type: ContentClassificationToAgeRestriction.ContentClassificationVariant.MINIMAL, data: contentClassification };
+    const result = ContentClassificationToAgeRestriction.contentClassificationToAgeRestriction(obj2);
     tmp = result === AgeRestrictionStatus.AgeRestrictionStatus.ADULT;
   }
   return tmp;

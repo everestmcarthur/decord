@@ -1,154 +1,78 @@
-// Module ID: 16238
-// Function ID: 16239
-// Name: _handleVoiceChannelPress
-// Dependencies: [5, 19, 17, 7527, 4199, 4575, 4741, 4584, 10123, 1074, 21, 576, 5057, 5569, 1896, 4767, 9667, 16236, 16239, 9476, 504, 16229, 10885, 4550, 7951, 9775, 1242, 16230, 16119, 10918, 1114, 4705, 16133, 16124, 12063, 2]
+// Module ID: 16268
+// Function ID: 16269
+// Name: VoiceChannel
+// Dependencies: [5, 19, 17, 7541, 4212, 4589, 4755, 4598, 10150, 1074, 21, 576, 5071, 5583, 1896, 4781, 9694, 16266, 16269, 9503, 504, 16259, 10912, 4564, 7965, 9802, 1242, 16260, 16149, 10945, 1114, 4719, 16163, 16154, 12089, 2]
 
-// Module 16238 (_handleVoiceChannelPress)
-import ThemesDefault from "Themes" /* 576 */;
-import useEmbeddedAppsDefault from "useEmbeddedApps" /* 12063 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleConnectionOpen" /* 7527 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_8 from "generateOldThreadCutoff" /* 4575 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 4741 */;
-import closure_10 from "getVoiceStatesForGuild" /* 4584 */;
-import { NO_VOICE_STATES } from "getVoiceStatesForGuild" /* 4584 */;
-import hairlineWidth from "hairlineWidth" /* 10123 */;
-import ME from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16268 (VoiceChannel)
+import nativeDefault from "native" /* 576 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9802 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10945 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12089 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
+import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7541 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
+import ReadStateStore from "ReadStateStore" /* 4589 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4755 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4598 */;
 
-const require = arg1;
-function _handleVoiceChannelPress() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c3 = 0;
-    return (function*(arg0, openMemberVerificationModal) {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw openMemberVerificationModal;
-        } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = openMemberVerificationModal;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === paths) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw openMemberVerificationModal;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = openMemberVerificationModal;
-              return obj;
-            } else {
-              let guildId = tmp4;
-              guildId = undefined;
-              guildId = guildId.getGuildId();
-              if (null != guildId) {
-                let obj3 = guildId(paths[12]);
-                if (obj3.shouldShowMembershipVerificationGate(guildId)) {
-                  paths = 1;
-                  c3 = 1;
-                  obj1 = { value: null, done: false };
-                  obj1[0] = tmp10(tmp11[14])(tmp11[13], tmp11.paths);
-                  return obj1;
-                }
-                tmp10 = guildId;
-              }
-              paths = 2;
-              c3 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = guildId(paths[14])(paths[15], paths.paths);
-              return obj2;
-            }
-          } else if (1 === tmp4) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw openMemberVerificationModal;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj3 = { value: null, done: true };
-              obj3[0] = openMemberVerificationModal;
-              return obj3;
-            } else {
-              c3 = 3;
-              const obj4 = { value: null, done: true };
-              obj4[0] = openMemberVerificationModal.openMemberVerificationModal(guildId);
-              return obj4;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw openMemberVerificationModal;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = openMemberVerificationModal;
-            return obj;
-          } else {
-            openMemberVerificationModal.openGuildVoiceModal(guildId, "Channel List");
-            c3 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp14) {
-          c3 = tmp;
-          throw tmp14;
-        }
+require = fn;
+let closure_17 = async function _handleVoiceChannelPress(arg0) {
+  let guildId = arg0;
+  c2 = 0;
+  c3 = 0;
+  return (async (arg0, value) => {
+    closure_129_0 = guildId;
+    guildId = guildId.getGuildId();
+    closure_129_1 = guildId;
+    if (null != guildId) {
+      if (obj4.shouldShowMembershipVerificationGate(guildId)) {
+        c2 = 1;
+        c3 = 1;
+        return { value: tmp10(tmp11[14])(tmp11[13], tmp11.paths), done: false };
       }
-    })();
-  });
-  closure_17 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-let c4 = importAllResult;
-({ CHANNEL_SUBTITLE_TEXT_VARIANT: closure_12, CHANNEL_MARGIN_VERTICAL } = hairlineWidth);
-({ AnalyticEvents: map1, Permissions: closure_14 } = ME);
-let obj = { channelInfo: null, voiceStates: null, voiceStatesCollapsed: null, container: null };
-obj = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, maxHeight: 1 };
-obj[0] = obj;
-obj[1] = { marginLeft: 36, marginTop: -4, marginBottom: 2 };
-obj[2] = { marginLeft: 16 };
-obj[3] = { marginVertical: CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
-let closure_18 = importAllResult.memo((channel) => {
+      obj4 = require("useShowMemberVerificationGate");
+      tmp10 = require;
+    }
+    await require("asyncRequireImpl")(paths[15], paths.paths);
+    value.openGuildVoiceModal(closure_129_0, "Channel List");
+    await "HermesInternal";
+    return value.openMemberVerificationModal(closure_129_1);
+  })();
+};
+const View = fn(17).View;
+const NO_VOICE_STATES = fn(4598).NO_VOICE_STATES;
+const RedesignChannelListConstants = fn(10150);
+({ CHANNEL_SUBTITLE_TEXT_VARIANT: closure_12, CHANNEL_MARGIN_VERTICAL } = RedesignChannelListConstants);
+const Constants = fn(1074);
+({ AnalyticEvents: map1, Permissions: closure_14 } = Constants);
+const jsx = fn(21).jsx;
+let obj = { channelInfo: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, maxHeight: 1 }, voiceStates: { marginLeft: 36, marginTop: -4, marginBottom: 2 }, voiceStatesCollapsed: { marginLeft: 16 }, container: null };
+let obj2 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, maxHeight: 1 };
+obj.container = { marginVertical: CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+let closure_18 = noop.memo((channel) => {
   channel = channel.channel;
   ({ selected, collapsed, subtitle, embeddedActivitiesCount: importDefault } = channel);
   let ensureSyncedChannelVoiceStates;
-  let hasUnread;
+  noop = undefined;
   let gameMentionsAsPlainText;
   ({ locked, voiceStates } = channel);
   obj = channel(ensureSyncedChannelVoiceStates[16]);
   const activeEvent = obj.useActiveEvent(channel.id);
-  obj1 = channel(ensureSyncedChannelVoiceStates[17]);
-  const startTime = obj1.useStartTime(channel);
-  let obj2 = channel(ensureSyncedChannelVoiceStates[18]);
-  ensureSyncedChannelVoiceStates = obj2.useEnsureSyncedChannelVoiceStates(channel.id, voiceStates);
-  let obj3 = channel(ensureSyncedChannelVoiceStates[19]);
-  const isConnectedToVoiceChannel = obj3.useIsConnectedToVoiceChannel(channel);
-  let obj4 = channel(ensureSyncedChannelVoiceStates[20]);
-  const items = [closure_8, closure_9];
+  const startTime = channel(ensureSyncedChannelVoiceStates[17]).useStartTime(channel);
+  const obj2 = channel(ensureSyncedChannelVoiceStates[17]);
+  ensureSyncedChannelVoiceStates = channel(ensureSyncedChannelVoiceStates[18]).useEnsureSyncedChannelVoiceStates(channel.id, voiceStates);
+  let obj3 = channel(ensureSyncedChannelVoiceStates[18]);
+  const isConnectedToVoiceChannel = channel(ensureSyncedChannelVoiceStates[19]).useIsConnectedToVoiceChannel(channel);
+  const obj4 = channel(ensureSyncedChannelVoiceStates[19]);
+  const items = [ReadStateStore, UserGuildSettingsStore];
   const items1 = [channel];
-  const stateFromStoresObject = obj4.useStateFromStoresObject(items, () => ({ hasUnread: closure_1_8.hasUnread(channel.id), mentionCount: closure_1_8.getMentionCount(channel.id), resolvedUnreadSetting: closure_1_9.resolveUnreadSetting(channel) }), items1);
-  hasUnread = stateFromStoresObject.hasUnread;
+  const stateFromStoresObject = channel(ensureSyncedChannelVoiceStates[20]).useStateFromStoresObject(items, () => ({ hasUnread: ReadStateStore.hasUnread(channel.id), mentionCount: ReadStateStore.getMentionCount(channel.id), resolvedUnreadSetting: UserGuildSettingsStore.resolveUnreadSetting(channel) }), items1);
+  let hasUnread = stateFromStoresObject.hasUnread;
   ({ mentionCount: c4, resolvedUnreadSetting } = stateFromStoresObject);
-  let obj5 = channel(ensureSyncedChannelVoiceStates[21]);
-  const channelSubtitleData = obj5.getChannelSubtitleData(subtitle);
+  const obj5 = channel(ensureSyncedChannelVoiceStates[20]);
+  const channelSubtitleData = channel(ensureSyncedChannelVoiceStates[21]).getChannelSubtitleData(subtitle);
   let type;
   if (subtitle != null) {
     type = subtitle.type;
@@ -160,48 +84,50 @@ let closure_18 = importAllResult.memo((channel) => {
       text = subtitle.text;
     }
   }
-  let tmpResult = tmp(tmp2[22]);
-  gameMentionsAsPlainText = tmpResult.useGameMentionsAsPlainText(text);
+  const obj6 = channel(ensureSyncedChannelVoiceStates[21]);
+  gameMentionsAsPlainText = channel(ensureSyncedChannelVoiceStates[22]).useGameMentionsAsPlainText(text);
   let result = null;
   if (null != gameMentionsAsPlainText) {
-    let obj7 = importDefault(tmp2[23]);
-    obj = { channelId: null, linkVariant: null, textVariant: null };
-    obj[0] = channel.id;
-    obj[1] = closure_12;
-    obj[2] = closure_12;
-    result = obj7.parseVoiceChannelStatus(gameMentionsAsPlainText, true, obj);
+    const obj7 = { channelId: channel.id, linkVariant: textVariant, textVariant };
+    result = require("MarkupUtils").parseVoiceChannelStatus(gameMentionsAsPlainText, true, obj7);
+    const obj8 = require("MarkupUtils");
   }
-  tmpResult = tmp(tmp2[24]);
-  obj = {
-    expensive() {
-      return closure_1_1(ensureSyncedChannelVoiceStates[25])({ channel, unread: hasUnread, mentionCount: c4, voiceStates: ensureSyncedChannelVoiceStates, embeddedActivitiesCount: closure_1 });
-    },
-    cheap: channel.name
-  };
+  const tmpResult = channel(ensureSyncedChannelVoiceStates[22]);
   const items2 = [, , ];
   ({ id: arr4[0], guild_id: arr4[1] } = channel);
   items2[2] = gameMentionsAsPlainText;
-  const accessibilityLabelOrCheapFallbackUnsafe = tmpResult.getAccessibilityLabelOrCheapFallbackUnsafe(obj);
-  const effect = importAllResult.useEffect(() => {
+  const accessibilityLabelOrCheapFallbackUnsafe = channel(ensureSyncedChannelVoiceStates[24]).getAccessibilityLabelOrCheapFallbackUnsafe({
+    expensive() {
+      return getChannelA11yLabelDefault({ channel, unread: hasUnread, mentionCount, voiceStates: ensureSyncedChannelVoiceStates, embeddedActivitiesCount });
+    },
+    cheap: channel.name
+  });
+  const effect = noop.useEffect(() => {
     if (null !== gameMentionsAsPlainText) {
-      obj = closure_1_1(ensureSyncedChannelVoiceStates[26]);
-      obj = { guild_id: null, channel_id: null };
-      ({ guild_id: obj2[0], id: obj2[1] } = channel);
-      obj.track(closure_1_13.VOICE_CHANNEL_TOPIC_VIEWED, obj);
+      ({ guild_id: obj2.guild_id, id: obj2.channel_id } = channel);
+      AnalyticsUtilsDefault.track(constants.VOICE_CHANNEL_TOPIC_VIEWED, { guild_id: null, channel_id: null });
+      const obj3 = { guild_id: null, channel_id: null };
     }
   }, items2);
   if (result == null) {
-    subtitle = undefined;
+    let subtitle1;
     if (channelSubtitleData != null) {
-      subtitle = channelSubtitleData.subtitle;
+      subtitle1 = channelSubtitleData.subtitle;
     }
-    result = subtitle;
+    result = subtitle1;
   }
-  obj1 = {
+  const obj9 = {
+    expensive() {
+      return getChannelA11yLabelDefault({ channel, unread: hasUnread, mentionCount, voiceStates: ensureSyncedChannelVoiceStates, embeddedActivitiesCount });
+    },
+    cheap: channel.name
+  };
+  const tmpResult3 = channel(ensureSyncedChannelVoiceStates[24]);
+  const obj10 = {
     onPress() {
-      return (function handleVoiceChannelPress(channel) {
+      return (function handleVoiceChannelPress() {
         const self = this;
-        const apply = closure_17.apply;
+        const apply = closure_1_17.apply;
         if (typeof apply === "unknown") {
           let applyArgumentsResult = HermesBuiltin.applyArguments(self);
         } else {
@@ -211,7 +137,7 @@ let closure_18 = importAllResult.memo((channel) => {
       })(channel);
     },
     onLongPress() {
-      const result = channel(ensureSyncedChannelVoiceStates[29]).openChannelLongPressActionSheet(channel.id);
+      const result = openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel.id);
     },
     style: obj.container,
     accessible: true,
@@ -228,55 +154,48 @@ let closure_18 = importAllResult.memo((channel) => {
     channelInfo: null,
     children: null
   };
-  const tmp19 = jsx(importDefault(ensureSyncedChannelVoiceStates[27]), { channel, isChannelSelected: selected, isChannelCollapsed: collapsed, voiceStates: ensureSyncedChannelVoiceStates, enableConnectedUserLimit: true, enableActivities: true });
+  const tmp19 = jsx(require("ChannelInfo"), { channel, isChannelSelected: selected, isChannelCollapsed: collapsed, voiceStates: ensureSyncedChannelVoiceStates, enableConnectedUserLimit: true, enableActivities: true });
   const intl = tmp(tmp2[30]).intl;
-  obj1[6] = intl.string(channel(ensureSyncedChannelVoiceStates[30]).t["9C444m"]);
-  obj1[7] = channel;
-  obj1[8] = selected;
-  obj1[9] = locked;
+  obj10.accessibilityHint = intl.string(channel(ensureSyncedChannelVoiceStates[30]).t["9C444m"]);
+  obj10.channel = channel;
+  obj10.selected = selected;
+  obj10.locked = locked;
   if (hasUnread) {
     hasUnread = isConnectedToVoiceChannel;
   }
-  obj1[10] = hasUnread;
-  obj1[11] = resolvedUnreadSetting;
-  obj1[12] = result;
-  obj1[13] = null != activeEvent || null != startTime;
-  obj1[14] = tmp19;
+  obj10.unread = hasUnread;
+  obj10.resolvedUnreadSetting = resolvedUnreadSetting;
+  obj10.subtitle = result;
+  obj10.isChannelLive = null != activeEvent || null != startTime;
+  obj10.channelInfo = tmp19;
   let tmp17Result = null;
   if (0 !== ensureSyncedChannelVoiceStates.length) {
     if (collapsed) {
-      obj2 = { channels: null, selectedChannelId: null, selectedVoiceChannelId: null, voiceStates: null };
+      const obj11 = { channels: null, selectedChannelId: null, selectedVoiceChannelId: null, voiceStates: null };
       const items3 = [channel];
-      obj2[0] = items3;
-      obj3 = {};
-      obj3[channel.id] = ensureSyncedChannelVoiceStates;
-      obj2[3] = obj3;
-      obj4 = { style: null, children: null };
-      obj4[0] = tmp21.voiceStatesCollapsed;
-      const summarizedVoiceUsers = tmp(tmp2[31]).computeSummarizedVoiceUsers(obj2);
-      obj5 = { users: null, max: 8, guildId: null, renderIcon: false };
-      obj5[0] = summarizedVoiceUsers;
-      obj5[2] = channel.guild_id;
-      obj4[1] = tmp17(tmp18(tmp2[32]), obj5);
-      tmp17Result = tmp17(gameMentionsAsPlainText, obj4);
-      const tmpResult1 = tmp(tmp2[31]);
+      obj11.channels = items3;
+      const obj12 = {};
+      obj12[channel.id] = ensureSyncedChannelVoiceStates;
+      obj11.voiceStates = obj12;
+      const obj13 = { style: tmp21.voiceStatesCollapsed, children: null };
+      const summarizedVoiceUsers = tmp(tmp2[31]).computeSummarizedVoiceUsers(obj11);
+      const obj14 = { users: summarizedVoiceUsers, max: 8, guildId: channel.guild_id, renderIcon: false };
+      obj13.children = tmp17(tmp18(tmp2[32]), obj14);
+      tmp17Result = tmp17(gameMentionsAsPlainText, obj13);
+      const tmpResult4 = tmp(tmp2[31]);
     } else {
-      const obj6 = { style: null, children: null };
-      obj6[0] = tmp21.voiceStates;
-      obj7 = { channel: null, collapsed: null, voiceStates: null };
-      obj7[0] = channel;
-      obj7[1] = collapsed;
-      obj7[2] = ensureSyncedChannelVoiceStates;
-      obj6[1] = tmp17(tmp18(tmp2[33]), obj7);
-      tmp17Result = tmp17(gameMentionsAsPlainText, obj6);
+      const obj15 = { style: tmp21.voiceStates, children: null };
+      const obj16 = { channel, collapsed, voiceStates: ensureSyncedChannelVoiceStates };
+      obj15.children = tmp17(tmp18(tmp2[33]), obj16);
+      tmp17Result = tmp17(gameMentionsAsPlainText, obj15);
     }
   }
-  obj1[15] = tmp17Result;
-  return jsx(importDefault(ensureSyncedChannelVoiceStates[28]), {
+  obj10.children = tmp17Result;
+  return jsx(require("ChannelItem"), {
     onPress() {
-      return (function handleVoiceChannelPress(channel) {
+      return (function handleVoiceChannelPress() {
         const self = this;
-        const apply = closure_17.apply;
+        const apply = closure_1_17.apply;
         if (typeof apply === "unknown") {
           let applyArgumentsResult = HermesBuiltin.applyArguments(self);
         } else {
@@ -286,7 +205,7 @@ let closure_18 = importAllResult.memo((channel) => {
       })(channel);
     },
     onLongPress() {
-      const result = channel(ensureSyncedChannelVoiceStates[29]).openChannelLongPressActionSheet(channel.id);
+      const result = openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel.id);
     },
     style: obj.container,
     accessible: true,
@@ -304,18 +223,21 @@ let closure_18 = importAllResult.memo((channel) => {
     children: null
   });
 });
-let obj1 = { marginVertical: CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
-const memoResult = importAllResult.memo((channel) => {
+let obj3 = { marginVertical: CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/VoiceChannel.tsx");
+
+export default noop.memo((channel) => {
   channel = channel.channel;
   ({ selected, subtitle } = channel);
-  obj = channel(504);
-  const items = [closure_10];
+  const items = [SortedVoiceStateStore];
   const items1 = [channel.guild_id];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_10.getVoiceStates(channel.guild_id), items1);
-  const arr3 = useEmbeddedAppsDefault(channel);
-  const items2 = [closure_7, closure_6];
-  const stateFromStoresObject = channel(504).useStateFromStoresObject(items2, () => ({ locked: !closure_1_7.can(closure_1_14.CONNECT, channel), bypassLimit: closure_1_7.can(closure_1_14.MOVE_MEMBERS, channel), collapsed: closure_1_6.isCollapsed(channel.id) }));
-  obj = { channel, embeddedActivitiesCount: null, collapsed: null, voiceStates: null, selected: null, locked: null, bypassLimit: null, subtitle: null };
+  const stateFromStores = channel(504).useStateFromStores(items, () => SortedVoiceStateStore.getVoiceStates(channel.guild_id), items1);
+  const arr3 = useEmbeddedAppsForChannelDefault(channel);
+  obj = channel(504);
+  const items2 = [PermissionStore, CollapsedVoiceChannelStore];
+  const stateFromStoresObject = channel(504).useStateFromStoresObject(items2, () => ({ locked: !PermissionStore.can(constants2.CONNECT, channel), bypassLimit: PermissionStore.can(constants2.MOVE_MEMBERS, channel), collapsed: CollapsedVoiceChannelStore.isCollapsed(channel.id) }));
+  const obj3 = { channel, embeddedActivitiesCount: null, collapsed: null, voiceStates: null, selected: null, locked: null, bypassLimit: null, subtitle: null };
   let num;
   ({ locked, bypassLimit, collapsed } = stateFromStoresObject);
   if (arr3 != null) {
@@ -324,21 +246,18 @@ const memoResult = importAllResult.memo((channel) => {
   if (num == null) {
     num = 0;
   }
-  obj[1] = num;
-  obj[2] = collapsed;
+  obj3.embeddedActivitiesCount = num;
+  obj3.collapsed = collapsed;
   let tmp5 = stateFromStores[channel.id];
   if (tmp5 == null) {
     tmp5 = NO_VOICE_STATES;
   }
-  obj[3] = tmp5;
-  obj[4] = selected;
-  obj[5] = locked;
-  obj[6] = bypassLimit;
-  obj[7] = subtitle;
+  obj3.voiceStates = tmp5;
+  obj3.selected = selected;
+  obj3.locked = locked;
+  obj3.bypassLimit = bypassLimit;
+  obj3.subtitle = subtitle;
   return <closure_18 channel={channel} embeddedActivitiesCount={null} collapsed={null} voiceStates={null} selected={null} locked={null} bypassLimit={null} subtitle={null} />;
 });
-let result = require("set").fileFinishedImporting("modules/channel_list_v2/native/items/VoiceChannel.tsx");
-
-export default memoResult;
 export const VOICE_USERS_MARGIN_TOP = -4;
 export const VOICE_USERS_MARGIN_BOTTOM = 2;

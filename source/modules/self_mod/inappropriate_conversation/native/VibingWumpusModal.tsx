@@ -1,23 +1,19 @@
-// Module ID: 11407
-// Function ID: 11408
-// Name: VibingWumpusScreen
-// Dependencies: [32, 19, 17, 4552, 11368, 11408, 1074, 21, 4560, 576, 563, 10961, 1242, 11409, 5529, 11410, 4556, 1114, 4975, 4763, 8274, 8276, 7000, 2]
+// Module ID: 11434
+// Function ID: 11435
+// Name: VibingWumpusModal
+// Dependencies: [32, 19, 17, 4566, 11395, 11435, 1074, 21, 4574, 576, 563, 10988, 1242, 11436, 5543, 11437, 4570, 1114, 4989, 4777, 8302, 8304, 7014, 2]
 // Exports: default
 
-// Module 11407 (VibingWumpusScreen)
-import ThemesDefault from "Themes" /* 576 */;
-import NavigationStack from "NavigationStack" /* 7000 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import { VIBING_WUMPUS_MODAL_KEY } from "LOCATION_CONTEXT_MOBILE" /* 11368 */;
-import VibingWumpusAction from "VibingWumpusAction" /* 11408 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11434 (VibingWumpusModal)
+import nativeDefault from "native" /* 576 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import Navigator from "Navigator" /* 7014 */;
+import InappropriateConversationsActionCreators from "InappropriateConversationsActionCreators" /* 10988 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-require = arg1;
+require = fn;
 class VibingWumpusScreen {
   constructor() {
     tmp = closure_15();
@@ -29,101 +25,96 @@ class VibingWumpusScreen {
     closure_2 = ref;
     tmp5 = closure_0;
     tmp6 = closure_2;
-    obj = require("defaultAreStatesEqual");
+    obj = closure_0(closure_2[10]);
     items = [];
     items[0] = closure_7;
     stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
     closure_3 = stateFromStores;
     effect = closure_4.useEffect(() => {
       let date = new Date();
+      let result = date(ref[11]).playVibingWumpusMusic();
       let obj = date(ref[11]);
-      let result = obj.playVibingWumpusMusic();
-      obj = { source: constants2.INAPPROPRIATE_CONVERSATION };
-      callback(ref[12]).track(constants3.VIBING_WUMPUS_VIEWED, obj);
+      closure_1(ref[12]).track(constants3.VIBING_WUMPUS_VIEWED, { source: constants2.INAPPROPRIATE_CONVERSATION });
       return () => {
-        let obj = closure_1_1(closure_1_2[12]);
-        obj = { duration_open_ms: null, source: null };
+        const obj2 = { duration_open_ms: null, source: null };
         date = new Date();
         const time = date.getTime();
-        obj[0] = time - date.getTime();
-        obj[1] = closure_1_10.INAPPROPRIATE_CONVERSATION;
-        obj.track(closure_1_11.VIBING_WUMPUS_CLOSED, obj);
-        const result = date(closure_1_2[11]).stopVibingWumpusMusic();
+        obj2.duration_open_ms = time - date.getTime();
+        obj2.source = constants2.INAPPROPRIATE_CONVERSATION;
+        closure_1(ref[12]).track(constants3.VIBING_WUMPUS_CLOSED, obj2);
+        const obj = closure_1(ref[12]);
+        const result = first(ref[11]).stopVibingWumpusMusic();
       };
     }, []);
     tmp9 = jsxs;
     tmp11 = jsx;
-    obj = { source: require("registerAsset"), style: tmp.rings };
+    obj1 = { source: closure_1(closure_2[13]), style: tmp.rings };
     tmp10 = Fragment;
     tmp12 = closure_1;
     items1 = [, ];
-    items1[0] = jsx(Image, obj);
+    items1[0] = jsx(Image, obj1);
     tmp13 = View;
-    obj1 = { style: tmp.container, children: null };
-    obj2 = { source: null, ref: null, autoPlay: null, loop: true, style: null, progress: null };
-    tmp14 = require("play");
-    obj2[0] = require("module_11410");
-    obj2[1] = ref;
-    obj2[2] = !stateFromStores;
-    obj2[4] = tmp.wumpus;
+    obj13 = { style: tmp.container, children: null };
+    obj14 = { source: null, ref: null, autoPlay: null, loop: true, style: null, progress: null };
+    tmp14 = closure_1(closure_2[14]);
+    obj14.source = closure_0(closure_2[15]);
+    obj14.ref = ref;
+    obj14.autoPlay = !stateFromStores;
+    obj14.style = tmp.wumpus;
     num = undefined;
     if (stateFromStores) {
       num = 0.8;
     }
-    obj2[5] = num;
+    obj14.progress = num;
     items2 = [, , ];
-    items2[0] = tmp11(tmp14, obj2);
-    obj3 = { style: tmp.warningText, children: null };
-    obj4 = { variant: "heading-xl/semibold", style: tmp.takeoverHeader, accessibilityRole: "header", children: null };
-    intl = require("getSystemLocale").intl;
-    obj4[3] = intl.string(require("getSystemLocale").t.L4ifkZ);
+    items2[0] = tmp11(tmp14, obj14);
+    obj15 = { style: tmp.warningText, children: null };
+    obj16 = { variant: "heading-xl/semibold", style: tmp.takeoverHeader, accessibilityRole: "header", children: null };
+    intl = tmp5(tmp6[17]).intl;
+    obj16.children = intl.string(tmp5(tmp6[17]).t.L4ifkZ);
     items3 = [, ];
-    items3[0] = tmp11(require("Text").Text, obj4);
-    obj5 = { variant: "text-md/medium", style: tmp.takeoverDescription, children: null };
-    intl2 = require("getSystemLocale").intl;
-    obj5[2] = intl2.string(require("getSystemLocale").t.R8LCMZ);
-    items3[1] = tmp11(require("Text").Text, obj5);
-    obj3[1] = items3;
-    items2[1] = tmp9(tmp13, obj3);
-    obj6 = { style: tmp.ctaContainer, children: null };
-    obj7 = { variant: "primary", size: "lg", text: null, grow: true, onPress: null };
-    intl3 = require("getSystemLocale").intl;
-    obj7[2] = intl3.string(require("getSystemLocale").t["8eKkaf"]);
-    obj7[4] = function onPress() {
-      let obj = callback(ref[12]);
-      obj = { action: constants.BACK_TO_CONVERSATION };
-      obj.track(constants3.VIBING_WUMPUS_ACTION, obj);
-      callback(ref[19]).popWithKey(closure_8);
+    items3[0] = tmp11(tmp5(tmp6[16]).Text, obj16);
+    obj17 = { variant: "text-md/medium", style: tmp.takeoverDescription, children: null };
+    intl2 = tmp5(tmp6[17]).intl;
+    obj17.children = intl2.string(tmp5(tmp6[17]).t.R8LCMZ);
+    items3[1] = tmp11(tmp5(tmp6[16]).Text, obj17);
+    obj15.children = items3;
+    items2[1] = tmp9(tmp13, obj15);
+    obj18 = { style: tmp.ctaContainer, children: null };
+    obj19 = { variant: "primary", size: "lg", text: null, grow: true, onPress: null };
+    intl3 = tmp5(tmp6[17]).intl;
+    obj19.text = intl3.string(tmp5(tmp6[17]).t["8eKkaf"]);
+    obj19.onPress = function onPress() {
+      closure_1(ref[12]).track(constants3.VIBING_WUMPUS_ACTION, { action: constants.BACK_TO_CONVERSATION });
+      const obj = closure_1(ref[12]);
+      const obj2 = { action: constants.BACK_TO_CONVERSATION };
+      closure_1(ref[19]).popWithKey(VIBING_WUMPUS_MODAL_KEY);
     };
     items4 = [, ];
-    items4[0] = tmp11(require("Button").Button, obj7);
-    intl4 = require("getSystemLocale").intl;
+    items4[0] = tmp11(tmp5(tmp6[18]).Button, obj19);
+    intl4 = tmp5(tmp6[17]).intl;
     string = intl4.string;
-    t = require("getSystemLocale").t;
+    t = tmp5(tmp6[17]).t;
     if (first) {
       stringResult = string(t.RscU7I);
     } else {
       stringResult = string(t.ZcgDJX);
     }
-    obj8 = {
+    obj20 = {
       variant: "tertiary",
       size: "lg",
       text: stringResult,
       grow: true,
       onPress() {
-            let obj = first(ref[11]);
+            const obj = InappropriateConversationsActionCreators;
             if (first) {
               const result = obj.playVibingWumpusMusic();
-              obj = { action: null };
-              obj[0] = closure_1_9.PLAY;
-              callback(ref[12]).track(closure_1_11.VIBING_WUMPUS_ACTION, obj);
-              const obj4 = callback(ref[12]);
+              const obj3 = { action: constants.PLAY };
+              AnalyticsUtilsDefault.track(AnalyticEvents.VIBING_WUMPUS_ACTION, obj3);
             } else {
               const result1 = obj.pauseVibingWumpusMusic();
-              obj = { action: null };
-              obj[0] = closure_1_9.PAUSE;
-              callback(ref[12]).track(closure_1_11.VIBING_WUMPUS_ACTION, obj);
-              const obj2 = callback(ref[12]);
+              const obj5 = { action: constants.PAUSE };
+              AnalyticsUtilsDefault.track(AnalyticEvents.VIBING_WUMPUS_ACTION, obj5);
             }
             let tmp14 = stateFromStores;
             if (!stateFromStores) {
@@ -133,7 +124,7 @@ class VibingWumpusScreen {
                   current.resume();
                 }
               }
-              callback(!tmp);
+              closure_1(!tmp);
             }
             if (!tmp14) {
               tmp14 = tmp;
@@ -148,48 +139,58 @@ class VibingWumpusScreen {
       icon: null
     };
     if (first) {
-      PauseIcon = require("PlayIcon").PlayIcon;
+      PauseIcon = tmp5(tmp6[20]).PlayIcon;
     } else {
-      PauseIcon = require("PauseIcon").PauseIcon;
+      PauseIcon = tmp5(tmp6[21]).PauseIcon;
     }
-    obj9 = { children: null };
-    obj10 = { size: "md", color: require("Themes").colors.REDESIGN_BUTTON_TERTIARY_TEXT };
-    obj8[5] = tmp11(PauseIcon, obj10);
-    items4[1] = tmp11(require("Button").Button, obj8);
-    obj6[1] = items4;
-    items2[2] = tmp9(tmp13, obj6);
-    obj1[1] = items2;
-    items1[1] = tmp9(tmp13, obj1);
-    obj9[0] = items1;
-    return tmp9(tmp10, obj9);
+    obj21 = { children: null };
+    obj22 = { size: "md", color: tmp12(tmp6[9]).colors.REDESIGN_BUTTON_TERTIARY_TEXT };
+    obj20.icon = tmp11(PauseIcon, obj22);
+    items4[1] = tmp11(tmp5(tmp6[18]).Button, obj20);
+    obj18.children = items4;
+    items2[2] = tmp9(tmp13, obj18);
+    obj13.children = items2;
+    items1[1] = tmp9(tmp13, obj13);
+    obj21.children = items1;
+    return tmp9(tmp10, obj21);
   }
 }
-({ Image: c5, View: closure_6 } = get_ActivityIndicator);
-({ VibingWumpusAction: c9, VibingWumpusSource: c10 } = VibingWumpusAction);
+get_ActivityIndicator = fn(17);
+({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const VIBING_WUMPUS_MODAL_KEY = fn(11395).VIBING_WUMPUS_MODAL_KEY;
+const InappropriateConversationsConstants = fn(11435);
+({ VibingWumpusAction: closure_9, VibingWumpusSource: c10 } = InappropriateConversationsConstants);
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-createCacheKey = { container: null, warningText: null, ctaContainer: null, takeoverHeader: null, takeoverDescription: null, wumpus: null, rings: null };
-createCacheKey = { display: "flex", alignItems: "center", justifyContent: "center", padding: ThemesDefault.space.PX_32, gap: ThemesDefault.space.PX_16, height: "100%" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginBottom: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_4 };
-let obj1 = { marginBottom: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_4 };
-createCacheKey[2] = { display: "flex", alignItems: "center", alignSelf: "stretch", gap: ThemesDefault.space.PX_16 };
-createCacheKey[3] = { textAlign: "center" };
-createCacheKey[4] = { textAlign: "center" };
-createCacheKey[5] = { height: 187 };
-createCacheKey[6] = { position: "absolute", width: "100%", height: 440, top: 120 };
-let closure_15 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { display: "flex", alignItems: "center", alignSelf: "stretch", gap: ThemesDefault.space.PX_16 };
-let result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/VibingWumpusModal.tsx");
+const createStyles = fn(4574);
+let obj2 = { container: { display: "flex", alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16, height: "100%" }, warningText: null, ctaContainer: null, takeoverHeader: null, takeoverDescription: null, wumpus: null, rings: null };
+let obj3 = { display: "flex", alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16, height: "100%" };
+obj2.warningText = { marginBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_4 };
+let obj4 = { marginBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_4 };
+obj2.ctaContainer = { display: "flex", alignItems: "center", alignSelf: "stretch", gap: nativeDefault.space.PX_16 };
+obj2.takeoverHeader = { textAlign: "center" };
+obj2.takeoverDescription = { textAlign: "center" };
+obj2.wumpus = { height: 187 };
+obj2.rings = { position: "absolute", width: "100%", height: 440, top: 120 };
+const __initData = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/VibingWumpusModal.tsx");
 
 export default function VibingWumpusModal() {
-  const VIBING_WUMPUS = {
-    title: "",
-    fullscreen: true,
-    headerShown: false,
-    render() {
-      return callback(closure_16, {});
-    }
+  const obj = {
+    screens: {
+      VIBING_WUMPUS: {
+        title: "",
+        fullscreen: true,
+        headerShown: false,
+        render() {
+          return closure_1_12(VibingWumpusScreen, {});
+        }
+      }
+    },
+    initialRouteName: "VIBING_WUMPUS"
   };
-  return callback(NavigationStack.Navigator, { screens: { VIBING_WUMPUS }, initialRouteName: "VIBING_WUMPUS" });
+  return closure_1_12(Navigator.Navigator, obj);
 };
 export { VibingWumpusScreen };

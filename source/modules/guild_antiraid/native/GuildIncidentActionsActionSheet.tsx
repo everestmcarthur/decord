@@ -1,46 +1,50 @@
-// Module ID: 11834
-// Function ID: 11835
-// Name: DurationSelectionActionSheet
-// Dependencies: [19, 10085, 11835, 8016, 1074, 21, 4560, 7198, 7149, 1114, 7200, 563, 8015, 4527, 1178, 5605, 5687, 7201, 9630, 8593, 5433, 4975, 11836, 1242, 11837, 2]
+// Module ID: 11860
+// Function ID: 11861
+// Name: GuildIncidentActionsActionSheet
+// Dependencies: [19, 10112, 11861, 8030, 1074, 21, 4574, 7211, 7163, 1114, 7213, 563, 8029, 4541, 1178, 5619, 5701, 7214, 9657, 8621, 5447, 4989, 11862, 1242, 11863, 2]
 
-// Module 11834 (DurationSelectionActionSheet)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "computeAlertSettings" /* 10085 */;
-import useGuildIncidentsActionSheetStore from "useGuildIncidentsActionSheetStore" /* 11835 */;
-import { getTimeframes } from "GUILD_REPORT_RAID_MOBILE_KEY" /* 8016 */;
-import ME from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11860 (GuildIncidentActionsActionSheet)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4541 */;
+import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8029 */;
+import GuildAntiRaidActionCreators from "GuildAntiRaidActionCreators" /* 11862 */;
+import noop from "module_19" /* 19 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 10112 */;
 
-const require = arg1;
+const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
+
+const GuildRaidLockdownFeedbackActionSheetDefault = tmp7(11863);
+require = fn;
 function DurationSelectionActionSheet(onClose) {
   onClose = onClose.onClose;
-  let obj = { children: null };
-  obj = { title: null };
+  const obj = { children: null };
+  const obj2 = { title: null };
   const intl = onClose(1114).intl;
-  obj[0] = intl.string(onClose(1114).t.vKYZzc);
-  const items = [callback2(onClose(7149).BottomSheetTitleHeader, obj), ];
-  obj = {
+  obj2.title = intl.string(onClose(1114).t.vKYZzc);
+  const items = [closure_14(onClose(7163).BottomSheetTitleHeader, obj2), ];
+  const arr = getTimeframes();
+  items[1] = closure_14(onClose(7213).ActionSheetRow.Group, {
     hasIcons: false,
-    children: getTimeframes().map((label) => {
-      closure_0 = label;
-      return closure_1_14(onClose(closure_1_2[10]).ActionSheetRow, {
-        label: label.label,
-        onPress() {
-          closure_2_9(label.value);
-          label();
-        }
-      }, label.value);
-    })
-  };
-  items[1] = callback2(onClose(7200).ActionSheetRow.Group, obj);
-  obj[0] = items;
-  return callback3(onClose(7198).ActionSheet, obj);
+    children: getTimeframes().map((label) => closure_1_14(onClose(dependencyMap[10]).ActionSheetRow, {
+      label: label.label,
+      onPress() {
+        React7(label.value);
+        onClose();
+      }
+    }, label.value))
+  });
+  obj.children = items;
+  return closure_15(onClose(7211).ActionSheet, obj);
 }
-({ resetGuildIncidentsActionSheetStore: c5, setInitialTime: closure_6, setPauseDms: error, setPauseInvites: closure_8, setTime: c9, useGuildIncidentsActionSheetStore: c10 } = useGuildIncidentsActionSheetStore);
-({ AnalyticEvents: closure_12, GuildFeatures: map1 } = ME);
+const GuildIncidentsActionSheetStore = fn(11861);
+({ resetGuildIncidentsActionSheetStore: hasOwnProperty, setInitialTime: metroRequire, setPauseDms: closure_7, setPauseInvites: closure_8, setTime: closure_9, useGuildIncidentsActionSheetStore: c10 } = GuildIncidentsActionSheetStore);
+const getTimeframes = fn(8030).getTimeframes;
+const Constants = fn(1074);
+({ AnalyticEvents: closure_12, GuildFeatures: map1 } = Constants);
+const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let closure_16 = createCacheKey.createStyles({ beta: { marginLeft: -12 } });
+const createStyles = fn(4574);
+const value = createStyles.createStyles({ beta: { marginLeft: -12 } });
 class GuildIncidentActionsActionSheet {
   constructor(arg0) {
     guild = global.guild;
@@ -51,11 +55,9 @@ class GuildIncidentActionsActionSheet {
     closure_5 = undefined;
     closure_6 = undefined;
     closure_7 = undefined;
-    onDurationSelectorClose = function onDurationSelectorClose(c5) {
-      let obj = guild(time[13]);
-      obj = { content: closure_1_14(closure_1_18, obj), key: "GuildIncidentActionsActionSheet" };
-      obj = { guild, analyticsData };
-      obj.showActionSheet(obj);
+    onDurationSelectorClose = function onDurationSelectorClose() {
+      const obj2 = { content: closure_2_14(GuildIncidentActionsActionSheet, { guild, analyticsData }), key: "GuildIncidentActionsActionSheet" };
+      ActionSheetActionCreators.showActionSheet(obj2);
     };
     tmp = closure_16();
     tmp2 = closure_10();
@@ -64,17 +66,17 @@ class GuildIncidentActionsActionSheet {
     pauseDms = tmp2.pauseDms;
     tmp3 = guild;
     tmp4 = time;
-    obj = require("defaultAreStatesEqual");
+    obj = guild(time[11]);
     items = [];
     items[0] = pauseDms;
-    stateFromStores = obj.useStateFromStores(items, () => pauseDms.getGuildIncident(guild.id));
-    obj2 = require("DATE_CONFIG");
+    stateFromStores = obj.useStateFromStores(items, () => GuildIncidentsStore.getGuildIncident(guild.id));
+    obj2 = guild(time[12]);
     hasInvitesDisabledResult = obj2.hasInvitesDisabled(stateFromStores);
     closure_5 = hasInvitesDisabledResult;
-    obj3 = require("DATE_CONFIG");
+    obj3 = guild(time[12]);
     hasDMsDisabledResult = obj3.hasDMsDisabled(stateFromStores);
     closure_6 = hasDMsDisabledResult;
-    obj4 = require("DATE_CONFIG");
+    obj4 = guild(time[12]);
     result = obj4.initialLockdownDurationHours(stateFromStores);
     closure_7 = result;
     hasItem = undefined;
@@ -87,20 +89,20 @@ class GuildIncidentActionsActionSheet {
     items1[0] = hasDMsDisabledResult;
     items1[1] = hasInvitesDisabledResult;
     effect = pauseInvites.useEffect(() => {
-      onDurationSelectorClose(c5);
-      _undefined3(c6);
+      React6(c5);
+      React5(c6);
     }, items1);
     items2 = [];
     items2[0] = result;
     effect1 = pauseInvites.useEffect(() => {
-      if (!closure_1_10.getState().hasTimeChanges) {
-        _undefined2(c7);
+      if (!state.getState().hasTimeChanges) {
+        timestampProducer(c7);
       }
     }, items2);
     items3 = [];
     items3[0] = time;
     memo = pauseInvites.useMemo(() => {
-      const found = closure_1_11().find((value) => value.value === closure_2);
+      const found = getTimeframes().find((value) => value.value === time);
       let label;
       if (found != null) {
         label = found.label;
@@ -108,93 +110,86 @@ class GuildIncidentActionsActionSheet {
       return label;
     }, items3);
     tmp14 = jsxs;
-    obj = { startExpanded: true, header: null, children: null };
+    obj1 = { startExpanded: true, header: null, children: null };
     tmp15 = jsx;
-    obj1 = { title: null, leading: null };
-    intl = require("getSystemLocale").intl;
-    obj1[0] = intl.string(require("getSystemLocale").t.oCYAc7);
-    obj2 = { size: require("Button").BetaSizes.SMALL, style: tmp.beta };
-    obj1[1] = jsx(require("Button").BetaTag, obj2);
-    obj[1] = jsx(require("RedesignBottomSheetTitleHeaderBase").BottomSheetTitleHeader, obj1);
+    obj16 = { title: null, leading: null };
+    intl = tmp3(tmp4[9]).intl;
+    obj16.title = intl.string(tmp3(tmp4[9]).t.oCYAc7);
+    obj17 = { size: tmp3(tmp4[14]).BetaSizes.SMALL, style: tmp.beta };
+    obj16.leading = jsx(tmp3(tmp4[14]).BetaTag, obj17);
+    obj1.header = jsx(tmp3(tmp4[8]).BottomSheetTitleHeader, obj16);
     str = memo;
     if (memo == null) {
       str = "";
     }
-    obj3 = { trailing: tmp15(require("TableRowInner").TableRow.TrailingText, { text: str }), label: null, arrow: true, onPress: null, start: true, end: true, accessibilityLabel: null, accessibilityHint: null };
-    intl2 = require("getSystemLocale").intl;
-    obj3[1] = intl2.string(require("getSystemLocale").t.vKYZzc);
-    obj3[3] = function onPress() {
-      let obj = guild(time[13]);
-      obj = { content: closure_1_14(closure_1_17, obj), key: "DurationSelectionActionSheet" };
-      obj = { onClose: onDurationSelectorClose };
-      obj.showActionSheet(obj);
+    obj18 = { trailing: tmp15(tmp3(tmp4[15]).TableRow.TrailingText, { text: str }), label: null, arrow: true, onPress: null, start: true, end: true, accessibilityLabel: null, accessibilityHint: null };
+    intl2 = tmp3(tmp4[9]).intl;
+    obj18.label = intl2.string(tmp3(tmp4[9]).t.vKYZzc);
+    obj18.onPress = function onPress() {
+      const obj2 = { content: closure_2_14(DurationSelectionActionSheet, { onClose: onDurationSelectorClose }), key: "DurationSelectionActionSheet" };
+      ActionSheetActionCreators.showActionSheet(obj2);
     };
-    intl3 = require("getSystemLocale").intl;
-    obj3[6] = intl3.string(require("getSystemLocale").t.vKYZzc);
-    obj3[7] = memo;
+    intl3 = tmp3(tmp4[9]).intl;
+    obj18.accessibilityLabel = intl3.string(tmp3(tmp4[9]).t.vKYZzc);
+    obj18.accessibilityHint = memo;
     items4 = [, , , ];
-    items4[0] = tmp15(require("TableRowInner").TableRow, obj3);
-    obj4 = { label: null, subLabel: null, value: null, onValueChange: null, disabled: null };
-    intl4 = require("getSystemLocale").intl;
-    obj4[0] = intl4.string(require("getSystemLocale").t.Uwsjn6);
-    intl5 = require("getSystemLocale").intl;
-    obj4[1] = intl5.string(require("getSystemLocale").t.qPJkZh);
+    items4[0] = tmp15(tmp3(tmp4[15]).TableRow, obj18);
+    obj19 = { label: null, subLabel: null, value: null, onValueChange: null, disabled: null };
+    intl4 = tmp3(tmp4[9]).intl;
+    obj19.label = intl4.string(tmp3(tmp4[9]).t.Uwsjn6);
+    intl5 = tmp3(tmp4[9]).intl;
+    obj19.subLabel = intl5.string(tmp3(tmp4[9]).t.qPJkZh);
     tmp16 = pauseInvites;
     if (!pauseInvites) {
       tmp16 = hasItem;
     }
-    obj4[2] = tmp16;
-    obj4[3] = function onValueChange() {
-      onDurationSelectorClose(!pauseInvites);
+    obj19.value = tmp16;
+    obj19.onValueChange = function onValueChange() {
+      React6(!pauseInvites);
     };
-    obj4[4] = hasItem;
+    obj19.disabled = hasItem;
     items5 = [, ];
-    items5[0] = tmp15(require("TableSwitchRow").TableSwitchRow, obj4);
+    items5[0] = tmp15(tmp3(tmp4[17]).TableSwitchRow, obj19);
     if (hasItem) {
-      obj5 = { icon: null, label: null };
-      obj6 = { source: null, IconComponent: null, variant: "secondary" };
+      obj20 = { icon: null, label: null };
+      obj21 = { source: null, IconComponent: null, variant: "secondary" };
       tmp17 = analyticsData;
-      obj6[0] = require("registerAsset");
-      obj6[1] = require("WarningIcon").WarningIcon;
-      obj5[0] = tmp15(require("TableRowInner").TableRow.Icon, obj6);
-      intl6 = require("getSystemLocale").intl;
-      obj5[1] = intl6.string(require("getSystemLocale").t["9GPbsV"]);
-      hasItem = tmp15(require("TableRowInner").TableRow, obj5);
+      obj21.source = analyticsData(tmp4[18]);
+      obj21.IconComponent = tmp3(tmp4[19]).WarningIcon;
+      obj20.icon = tmp15(tmp3(tmp4[15]).TableRow.Icon, obj21);
+      intl6 = tmp3(tmp4[9]).intl;
+      obj20.label = intl6.string(tmp3(tmp4[9]).t["9GPbsV"]);
+      hasItem = tmp15(tmp3(tmp4[15]).TableRow, obj20);
     }
     items5[1] = hasItem;
-    items4[1] = tmp14(require("TableRowGroupTitle").TableRowGroup, { hasIcons: true, children: items5 });
-    obj7 = { label: null, subLabel: null, value: null, onValueChange: null, start: true, end: true };
-    intl7 = require("getSystemLocale").intl;
-    obj7[0] = intl7.string(require("getSystemLocale").t["wrDmA/"]);
-    intl8 = require("getSystemLocale").intl;
-    obj7[1] = intl8.string(require("getSystemLocale").t.UQbJW7);
-    obj7[2] = pauseDms;
-    obj7[3] = function onValueChange() {
-      _undefined3(!pauseDms);
+    items4[1] = tmp14(tmp3(tmp4[16]).TableRowGroup, { hasIcons: true, children: items5 });
+    obj22 = { label: null, subLabel: null, value: null, onValueChange: null, start: true, end: true };
+    intl7 = tmp3(tmp4[9]).intl;
+    obj22.label = intl7.string(tmp3(tmp4[9]).t["wrDmA/"]);
+    intl8 = tmp3(tmp4[9]).intl;
+    obj22.subLabel = intl8.string(tmp3(tmp4[9]).t.UQbJW7);
+    obj22.value = pauseDms;
+    obj22.onValueChange = function onValueChange() {
+      React5(!pauseDms);
     };
-    items4[2] = tmp15(require("TableSwitchRow").TableSwitchRow, obj7);
-    obj8 = {
+    items4[2] = tmp15(tmp3(tmp4[17]).TableSwitchRow, obj22);
+    obj23 = {
       onPress() {
-            let obj = guild(time[22]);
-            const result = obj.setGuildIncidentActions(guild.id, pauseInvites, pauseDms, time);
-            obj1 = analyticsData(time[13]);
-            obj1.hideActionSheet("GuildIncidentActionsActionSheet");
-            _undefined();
-            ({ source, alertType, messageId } = analyticsData);
-            obj = { guild_id: guild.id, source, raid_alert_id: messageId, raid_alert_type: alertType, intervention_type_enabled: null, intervention_type_disabled: null, duration: null };
-            const obj3 = analyticsData(time[23]);
-            const tmp = guild;
+            const result = GuildAntiRaidActionCreators.setGuildIncidentActions(guild.id, pauseInvites, pauseDms, time);
             const tmp3 = guild;
             const tmp4 = pauseInvites;
             const tmp5 = pauseDms;
-            const tmp7 = analyticsData;
-            obj[4] = guild(time[12]).getEnabledInterventions(pauseInvites, pauseDms);
-            const obj5 = guild(time[12]);
-            obj[5] = guild(time[12]).getDisabledInterventions(pauseInvites, pauseDms);
-            obj[6] = 60 * time;
-            obj3.track(closure_1_12.GUILD_RAID_INTERVENTION_STATE_CHANGE, obj);
-            let tmp11 = !_undefined;
-            if (!_undefined) {
+            ActionSheetActionCreatorsDefault.hideActionSheet("GuildIncidentActionsActionSheet");
+            hasOwnProperty();
+            ({ source, alertType, messageId } = analyticsData);
+            const obj4 = { guild_id: guild.id, source, raid_alert_id: messageId, raid_alert_type: alertType, intervention_type_enabled: null, intervention_type_disabled: null, duration: null };
+            const obj3 = AnalyticsUtilsDefault;
+            obj4.intervention_type_enabled = GuildAntiRaidUtils.getEnabledInterventions(pauseInvites, pauseDms);
+            obj4.intervention_type_disabled = GuildAntiRaidUtils.getDisabledInterventions(pauseInvites, pauseDms);
+            obj4.duration = 60 * time;
+            obj3.track(constants.GUILD_RAID_INTERVENTION_STATE_CHANGE, obj4);
+            let tmp11 = !c5;
+            if (!c5) {
               tmp11 = !c6;
             }
             if (!tmp11) {
@@ -204,12 +199,11 @@ class GuildIncidentActionsActionSheet {
               tmp11 = tmp5;
             }
             if (!tmp11) {
-              obj = { content: null, key: "GuildRaidLockdownFeedbackActionSheet" };
-              obj1 = { guildId: null };
-              obj1[0] = tmp3.id;
-              obj[0] = closure_1_14(tmp7(tmp2[24]), obj1);
-              tmp(tmp2[13]).showActionSheet(obj);
-              const tmpResult = tmp(tmp2[13]);
+              const obj7 = { content: null, key: "GuildRaidLockdownFeedbackActionSheet" };
+              const obj8 = { guildId: tmp3.id };
+              obj7.content = closure_2_14(GuildRaidLockdownFeedbackActionSheetDefault, obj8);
+              ActionSheetActionCreators.showActionSheet(obj7);
+              const tmpResult = ActionSheetActionCreators;
             }
           },
       text: null,
@@ -217,27 +211,28 @@ class GuildIncidentActionsActionSheet {
       size: "md",
       disabled: null
     };
-    intl9 = require("getSystemLocale").intl;
-    obj8[1] = intl9.string(require("getSystemLocale").t["R3BPH+"]);
+    intl9 = tmp3(tmp4[9]).intl;
+    obj23.text = intl9.string(tmp3(tmp4[9]).t["R3BPH+"]);
     tmp18 = pauseInvites !== hasInvitesDisabledResult || pauseDms !== hasDMsDisabledResult || tmp2.hasTimeChanges;
-    obj9 = { children: null };
-    obj8[4] = !tmp18;
+    obj24 = { children: null };
+    obj23.disabled = !tmp18;
     handleClose = function handleClose() {
       analyticsData(time[13]).hideActionSheet("GuildIncidentActionsActionSheet");
       _undefined();
     };
     items6 = [, ];
-    items6[0] = tmp15(require("Button").Button, obj8);
-    obj10 = { onPress: handleClose, text: null, variant: "secondary", size: "md" };
-    intl10 = require("getSystemLocale").intl;
-    obj10[1] = intl10.string(require("getSystemLocale").t["ETE/oC"]);
-    items6[1] = tmp15(require("Button").Button, obj10);
-    obj9[0] = items6;
-    items4[3] = tmp14(require("ButtonGroup").ButtonGroup, obj9);
-    obj[2] = items4;
-    return tmp14(require("ActionSheet").ActionSheet, obj);
+    items6[0] = tmp15(tmp3(tmp4[21]).Button, obj23);
+    obj25 = { onPress: handleClose, text: null, variant: "secondary", size: "md" };
+    intl10 = tmp3(tmp4[9]).intl;
+    obj25.text = intl10.string(tmp3(tmp4[9]).t["ETE/oC"]);
+    items6[1] = tmp15(tmp3(tmp4[21]).Button, obj25);
+    obj24.children = items6;
+    items4[3] = tmp14(tmp3(tmp4[20]).ButtonGroup, obj24);
+    obj1.children = items4;
+    return tmp14(tmp3(tmp4[7]).ActionSheet, obj1);
   }
 }
-let result = require("set").fileFinishedImporting("modules/guild_antiraid/native/GuildIncidentActionsActionSheet.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_antiraid/native/GuildIncidentActionsActionSheet.tsx");
 
 export default GuildIncidentActionsActionSheet;

@@ -1,17 +1,16 @@
-// Module ID: 17504
-// Function ID: 17505
-// Name: prototype
-// Dependencies: [1371, 7450, 1085, 7118, 9370, 1885, 8062, 2]
+// Module ID: 17535
+// Function ID: 17536
+// Name: UserOfferManager
+// Dependencies: [1371, 7464, 1085, 7132, 9397, 1885, 8077, 2]
 
-// Module 17504 (prototype)
-import initializeDefault from "initialize" /* 7118 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
-import closure_3 from "emitChanges" /* 7450 */;
-import { PaymentGateways } from "sum" /* 1085 */;
+// Module 17535 (UserOfferManager)
+import UserStore from "UserStore" /* 1371 */;
+import UserOfferStore from "UserOfferStore" /* 7464 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-let require = arg1;
-initializeDefault;
-let prototype = function UserOfferManager() {
+let require = fn;
+const PaymentGateways = fn(1085).PaymentGateways;
+const prototype = function UserOfferManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   applyArgumentsResult.actions = {
@@ -21,30 +20,30 @@ let prototype = function UserOfferManager() {
   };
   applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
     currentUser = currentUser.getCurrentUser();
-    const NitroACOMSubscriptionExperiment = applyArgumentsResult(table[4]).NitroACOMSubscriptionExperiment;
+    const NitroACOMSubscriptionExperiment = applyArgumentsResult(dependencyMap[4]).NitroACOMSubscriptionExperiment;
     if (NitroACOMSubscriptionExperiment.getConfig({ location: "UserOfferManager.handlePostConnectionOpen" }).enabled) {
-      const obj = { offerId: "Array", paymentGatewayOverride: 0 };
-      obj[1] = constants.APPLE_ADVANCED_COMMERCE;
+      const obj = { offerId: "Array", paymentGatewayOverride: constants.APPLE_ADVANCED_COMMERCE };
       const tmp4 = obj;
     }
     let isPremiumResult = null == currentUser || !currentUser.verified;
     if (!isPremiumResult) {
-      let tmp2Result = tmp2(tmp3[5]);
-      isPremiumResult = tmp2Result.isPremium(currentUser);
+      isPremiumResult = tmp2(tmp3[5]).isPremium(currentUser);
+      const tmp2Result = tmp2(tmp3[5]);
     }
     if (!isPremiumResult) {
       isPremiumResult = fetchingOffer.isFetchingOffer();
     }
     if (!isPremiumResult) {
-      tmp2Result = tmp2(tmp3[6]);
-      const userOffer = tmp2Result.fetchUserOffer("MobilePremiumOfferManager", true, tmp4);
+      const userOffer = tmp2(tmp3[6]).fetchUserOffer("MobilePremiumOfferManager", true, tmp4);
+      const tmp2Result2 = tmp2(tmp3[6]);
     }
   };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
-const result = require("set").fileFinishedImporting("modules/premium/native/UserOfferManager.tsx");
+const prototype1 = new prototype();
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/UserOfferManager.tsx");
 
-export default prototype;
+export default prototype1;

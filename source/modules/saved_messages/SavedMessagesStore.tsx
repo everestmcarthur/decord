@@ -1,18 +1,17 @@
-// Module ID: 11665
-// Function ID: 11666
-// Name: getTimeSafe
-// Dependencies: [1371, 4195, 7860, 4783, 504, 573, 2]
+// Module ID: 11691
+// Function ID: 11692
+// Name: SavedMessagesStore
+// Dependencies: [1371, 4208, 7874, 4797, 504, 573, 2]
 // Exports: getComparator
 
-// Module 11665 (getTimeSafe)
+// Module 11691 (SavedMessagesStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4783 */;
-import SavedMessageSortTypes from "SavedMessageSortTypes" /* 7860 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
-import set from "set" /* 2 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4797 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 7874 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+require = fn;
 function getTimeSafe(dueAt) {
   if (null == dueAt) {
     return c3;
@@ -24,13 +23,13 @@ function getTimeSafe(dueAt) {
     } catch (err) {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
-      error = new Error("Invalid date given (" + tmp + ")");
+      const error = new Error("Invalid date given (" + tmp + ")");
       throw error;
     }
   }
 }
 function isChannelRelevant(id) {
-  const value = map.get(id);
+  value = map.get(id);
   let tmp2 = null != value;
   if (tmp2) {
     tmp2 = value.size > 0;
@@ -68,8 +67,7 @@ function upsertSavedMessage(saveData) {
 }
 function nullifyMessageObject(channelId) {
   const combined = "" + channelId.channelId + "-" + channelId.messageId;
-  let obj = secondaryIndexMap;
-  const value = secondaryIndexMap.get(combined);
+  value = secondaryIndexMap.get(combined);
   let message;
   if (value != null) {
     message = value.message;
@@ -77,12 +75,13 @@ function nullifyMessageObject(channelId) {
   if (null == message) {
     return false;
   } else {
-    obj = {};
+    const obj2 = {};
     const merged = Object.assign(value);
-    obj.message = null;
-    const result = obj.set(combined, obj);
+    obj2.message = null;
+    const result = obj.set(combined, obj2);
     return true;
   }
+  obj = secondaryIndexMap;
 }
 function handleGuild() {
   let tmp = 0 !== set1.size;
@@ -96,12 +95,12 @@ function handleGuild() {
   return tmp;
 }
 let c3 = 10000000000000;
-const secondaryIndexMap = new require("version").SecondaryIndexMap((saveData) => {
-  const items = [SavedMessageSortTypes.SavedMessageSortTypes.ALL, ];
+const secondaryIndexMap = new fn(4208).SecondaryIndexMap((saveData) => {
+  const items = [SavedMessagesTypes.SavedMessageSortTypes.ALL, ];
   if (null != saveData.saveData.dueAt) {
-    let BOOKMARK = tmp(7860).SavedMessageSortTypes.REMINDER;
+    let BOOKMARK = tmp(7874).SavedMessageSortTypes.REMINDER;
   } else {
-    BOOKMARK = tmp(7860).SavedMessageSortTypes.BOOKMARK;
+    BOOKMARK = tmp(7874).SavedMessageSortTypes.BOOKMARK;
   }
   items[1] = BOOKMARK;
   return items;
@@ -115,7 +114,7 @@ const secondaryIndexMap = new require("version").SecondaryIndexMap((saveData) =>
   return diff;
 });
 let c6 = true;
-let c7 = 0;
+let closure_7 = 0;
 let set = new Set();
 const set1 = new Set();
 const map = new Map();
@@ -124,19 +123,19 @@ class SavedMessagesStore extends Store {
 }
 const prototype = SavedMessagesStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_2);
+  this.waitFor(UserStore);
 };
 prototype["getSavedMessages"] = function getSavedMessages() {
-  return secondaryIndexMap.values(SavedMessageSortTypes.SavedMessageSortTypes.ALL);
+  return secondaryIndexMap.values(SavedMessagesTypes.SavedMessageSortTypes.ALL);
 };
 prototype["getSavedMessage"] = function getSavedMessage(channelId, messageId) {
   return secondaryIndexMap.get("" + channelId + "-" + messageId);
 };
 prototype["getMessageBookmarks"] = function getMessageBookmarks() {
-  return secondaryIndexMap.values(SavedMessageSortTypes.SavedMessageSortTypes.BOOKMARK);
+  return secondaryIndexMap.values(SavedMessagesTypes.SavedMessageSortTypes.BOOKMARK);
 };
 prototype["getMessageReminders"] = function getMessageReminders() {
-  return secondaryIndexMap.values(SavedMessageSortTypes.SavedMessageSortTypes.REMINDER);
+  return secondaryIndexMap.values(SavedMessagesTypes.SavedMessageSortTypes.REMINDER);
 };
 prototype["getOverdueMessageReminderCount"] = function getOverdueMessageReminderCount() {
   return set.size;
@@ -147,13 +146,10 @@ prototype["hasOverdueReminder"] = function hasOverdueReminder() {
 prototype["getMostRecentOverdueDueAt"] = function getMostRecentOverdueDueAt() {
   let num = 0;
   const timestamp = Date.now();
-  const values = secondaryIndexMap.values(SavedMessageSortTypes.SavedMessageSortTypes.REMINDER);
+  const values = secondaryIndexMap.values(SavedMessagesTypes.SavedMessageSortTypes.REMINDER);
   for (const item10021 of values) {
-    let tmp3 = getTimeSafe;
     let tmp4 = getTimeSafe(item10021.saveData.dueAt);
-    let tmp5 = tmp4;
     if (tmp4 > timestamp) {
-      let tmp6 = obj;
       obj.return();
       break;
     } else {
@@ -170,18 +166,18 @@ prototype["getIsStale"] = function getIsStale() {
   return c6;
 };
 prototype["getLastChanged"] = function getLastChanged() {
-  return c7;
+  return closure_7;
 };
 prototype["isMessageBookmarked"] = function isMessageBookmarked(id, id2) {
-  const value = secondaryIndexMap.get("" + id + "-" + id2);
+  value = secondaryIndexMap.get("" + id + "-" + id2);
   return null != value && null == value.saveData.dueAt;
 };
 prototype["isMessageReminder"] = function isMessageReminder(id, id2) {
-  const value = secondaryIndexMap.get("" + id + "-" + id2);
+  value = secondaryIndexMap.get("" + id + "-" + id2);
   return null != value && null != value.saveData.dueAt;
 };
 SavedMessagesStore.displayName = "SavedMessagesStore";
-const savedMessagesStore = new SavedMessagesStore(dispatcherDefault, {
+const savedMessagesStore = new SavedMessagesStore(DispatcherDefault, {
   POST_CONNECTION_OPEN: function handlePostConnectionOpen() {
     c6 = true;
   },
@@ -197,7 +193,6 @@ const savedMessagesStore = new SavedMessagesStore(dispatcherDefault, {
     map.clear();
     set1.clear();
     while (tmp4 !== undefined) {
-      let tmp6 = upsertSavedMessage;
       let tmp7 = upsertSavedMessage(tmp5);
       continue;
     }
@@ -208,13 +203,13 @@ const savedMessagesStore = new SavedMessagesStore(dispatcherDefault, {
   SAVED_MESSAGE_DELETE: function handleDelete(savedMessageData) {
     savedMessageData = savedMessageData.savedMessageData;
     const combined = "" + savedMessageData.channelId + "-" + savedMessageData.messageId;
-    let value = secondaryIndexMap.get(combined);
+    value = secondaryIndexMap.get(combined);
     if (null != value) {
       secondaryIndexMap.delete(combined);
       const messageId = savedMessageData.messageId;
-      value = map.get(value.saveData.channelId);
-      if (value != null) {
-        value.delete(messageId);
+      value2 = map.get(value.saveData.channelId);
+      if (value2 != null) {
+        value2.delete(messageId);
       }
       set1.delete(messageId);
       set.delete(messageId);
@@ -225,28 +220,24 @@ const savedMessagesStore = new SavedMessagesStore(dispatcherDefault, {
   },
   MESSAGE_DELETE: function handleMessageDelete(channelId) {
     const combined = "" + channelId.channelId + "-" + channelId.id;
-    let obj = secondaryIndexMap;
-    const value = secondaryIndexMap.get(combined);
+    value = secondaryIndexMap.get(combined);
     let message;
     if (value != null) {
       message = value.message;
     }
     let flag = false;
     if (null != message) {
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(value);
-      obj.message = null;
-      const result = obj.set(combined, obj);
+      obj2.message = null;
+      const result = secondaryIndexMap.set(combined, obj2);
       flag = true;
     }
     return flag;
   },
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(arg0) {
     while (tmp2 !== undefined) {
-      let tmp4 = nullifyMessageObject;
-      let obj = { messageId: null, channelId: null };
-      obj[0] = tmp3;
-      obj[1] = tmp;
+      let obj = { messageId: tmp3, channelId: tmp };
       let tmp5 = nullifyMessageObject(obj);
       continue;
     }
@@ -257,17 +248,17 @@ const savedMessagesStore = new SavedMessagesStore(dispatcherDefault, {
       if (null != message.channel_id) {
         const _HermesInternal = HermesInternal;
         const combined = "" + message.channel_id + "-" + message.id;
-        const value = secondaryIndexMap.get(combined);
-        message = undefined;
+        value = secondaryIndexMap.get(combined);
+        let message1;
         if (value != null) {
-          message = value.message;
+          message1 = value.message;
         }
-        if (null == message) {
+        if (null == message1) {
           return false;
         } else {
           const obj = {};
           const merged = Object.assign(value);
-          obj.message = createMinimalMessageRecord.updateMessageRecord(value.message, message);
+          obj.message = MessageRecordUtils.updateMessageRecord(value.message, message);
           const result = obj3.set(combined, obj);
         }
         obj3 = secondaryIndexMap;
@@ -283,7 +274,7 @@ const savedMessagesStore = new SavedMessagesStore(dispatcherDefault, {
     if (tmp2) {
       let tmp4 = !c6;
       if (!c6) {
-        const value = map.get(tmp.id);
+        value = map.get(tmp.id);
         if (null != value && value.size > 0) {
           c6 = true;
         }
@@ -304,7 +295,6 @@ const savedMessagesStore = new SavedMessagesStore(dispatcherDefault, {
       let flag2 = false;
       const tmp3 = channels[Symbol.iterator]();
       while (tmp3 !== undefined) {
-        let tmp7 = isChannelRelevant;
         if (isChannelRelevant(tmp5.id)) {
           c6 = true;
           flag2 = true;
@@ -319,7 +309,7 @@ const savedMessagesStore = new SavedMessagesStore(dispatcherDefault, {
     if (tmp2) {
       let tmp4 = !c6;
       if (!c6) {
-        const value = map.get(tmp.id);
+        value = map.get(tmp.id);
         if (null != value && value.size > 0) {
           c6 = true;
         }
@@ -335,7 +325,7 @@ const savedMessagesStore = new SavedMessagesStore(dispatcherDefault, {
     if (tmp2) {
       let tmp4 = !c6;
       if (!c6) {
-        currentUser = currentUser.getCurrentUser();
+        const currentUser = UserStore.getCurrentUser();
         let id;
         if (currentUser != null) {
           id = currentUser.id;
@@ -356,7 +346,8 @@ const savedMessagesStore = new SavedMessagesStore(dispatcherDefault, {
     set.add(savedMessage.savedMessage.saveData.messageId);
   }
 });
-let result = set.fileFinishedImporting("modules/saved_messages/SavedMessagesStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/saved_messages/SavedMessagesStore.tsx");
 
 export default savedMessagesStore;
 export const getComparator = function getComparator(dueAt) {

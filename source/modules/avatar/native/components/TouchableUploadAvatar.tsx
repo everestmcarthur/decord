@@ -1,46 +1,43 @@
-// Module ID: 17448
-// Function ID: 17449
+// Module ID: 17479
+// Function ID: 17480
 // Name: TouchableUploadAvatar
-// Dependencies: [19, 17, 21, 4560, 576, 13865, 5123, 1114, 5587, 1178, 12777, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 13888, 5137, 1114, 5601, 1178, 12803, 2]
 // Exports: default
 
-// Module 17448 (TouchableUploadAvatar)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import PressableBase from "PressableBase" /* 5123 */;
-import preloadDefault from "preload" /* 5587 */;
-import registerAssetDefault from "registerAsset" /* 12777 */;
-import registerAssetDefault2 from "registerAsset" /* 13865 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17479 (TouchableUploadAvatar)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import Pressables from "Pressables" /* 5137 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef12803 from "module_12803" /* 12803 */;
+import _modDef13888 from "module_13888" /* 13888 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { avatarContainer: { display: "flex", paddingTop: 24 }, defaultLogoStyle: null, uploadedAvatarStyle: null, avatarWrapper: null, uploadAvatarWrapper: null, uploadAvatarIcon: null };
-createCacheKey = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, width: 96 };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { width: 200, height: 200, borderRadius: 100, position: "relative" };
-createCacheKey[3] = { borderColor: ThemesDefault.colors.BORDER_MUTED, borderStyle: "dashed", borderWidth: 2, borderRadius: ThemesDefault.radii.round, width: 200, height: 200, justifyContent: "center", alignItems: "center", position: "relative", overflow: "visible" };
-let obj1 = { borderColor: ThemesDefault.colors.BORDER_MUTED, borderStyle: "dashed", borderWidth: 2, borderRadius: ThemesDefault.radii.round, width: 200, height: 200, justifyContent: "center", alignItems: "center", position: "relative", overflow: "visible" };
-createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.round, tintColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, position: "absolute", right: 10, top: 10, width: 40, height: 40, flex: 1, justifyContent: "center" };
-let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.round, tintColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, position: "absolute", right: 10, top: 10, width: 40, height: 40, flex: 1, justifyContent: "center" };
-createCacheKey[5] = { tintColor: ThemesDefault.colors.WHITE, alignSelf: "center" };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { tintColor: ThemesDefault.colors.WHITE, alignSelf: "center" };
-const result = require("set").fileFinishedImporting("modules/avatar/native/components/TouchableUploadAvatar.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { avatarContainer: { display: "flex", paddingTop: 24 }, defaultLogoStyle: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, width: 96 }, uploadedAvatarStyle: { width: 200, height: 200, borderRadius: 100, position: "relative" }, avatarWrapper: null, uploadAvatarWrapper: null, uploadAvatarIcon: null };
+let size = { borderColor: nativeDefault.colors.BORDER_MUTED, borderStyle: "dashed", borderWidth: 2, borderRadius: nativeDefault.radii.round, width: 200, height: 200, justifyContent: "center", alignItems: "center", position: "relative", overflow: "visible" };
+obj2.avatarWrapper = size;
+const size1 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.round, tintColor: nativeDefault.colors.BACKGROUND_BASE_LOW, position: "absolute", right: 10, top: 10, width: 40, height: 40, flex: 1, justifyContent: "center" };
+obj2.uploadAvatarWrapper = size1;
+let obj3 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, width: 96 };
+obj2.uploadAvatarIcon = { tintColor: nativeDefault.colors.WHITE, alignSelf: "center" };
+let closure_6 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/avatar/native/components/TouchableUploadAvatar.tsx");
 
 export default function TouchableUploadAvatar(onSelectAvatar) {
   ({ avatarSource, showPendingAvatar } = onSelectAvatar);
   if (showPendingAvatar === undefined) {
     showPendingAvatar = false;
   }
-  const tmp = callback3();
+  const tmp = closure_6();
   if (!showPendingAvatar) {
-    let tmp3 = registerAssetDefault2;
+    let tmp3 = _modDef13888;
   } else {
     tmp3 = avatarSource;
   }
@@ -48,30 +45,21 @@ export default function TouchableUploadAvatar(onSelectAvatar) {
     if (null != avatarSource) {
       let defaultLogoStyle = tmp.uploadedAvatarStyle;
     }
-    let obj = { style: null, children: null };
-    obj[0] = tmp.avatarContainer;
-    obj = { onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
-    obj[0] = onSelectAvatar.onSelectAvatar;
-    const intl = getSystemLocale.intl;
-    obj[2] = intl.string(getSystemLocale.t["70lEQe"]);
-    obj = { style: null, children: null };
-    obj[0] = tmp.avatarWrapper;
-    obj1 = { resizeMode: "contain", style: null, source: null };
-    obj1[1] = defaultLogoStyle;
-    obj1[2] = tmp3;
-    const items = [callback(preloadDefault, obj1), ];
-    const obj2 = { style: null, children: null };
-    obj2[0] = tmp.uploadAvatarWrapper;
-    const obj3 = { size: null, source: null, style: null };
-    obj3[0] = Button.Icon.Sizes.MEDIUM;
-    obj3[1] = registerAssetDefault;
-    obj3[2] = tmp.uploadAvatarIcon;
-    obj2[1] = callback(Button.Icon, obj3);
-    items[1] = callback(View, obj2);
-    obj[1] = items;
-    obj[3] = callback2(View, obj);
-    obj[1] = callback(PressableBase.PressableOpacity, obj);
-    return callback(View, obj);
+    const obj = { style: tmp.avatarContainer, children: null };
+    const obj2 = { onPress: onSelectAvatar.onSelectAvatar, accessibilityRole: "button", accessibilityLabel: null, children: null };
+    const intl = util.intl;
+    obj2.accessibilityLabel = intl.string(util.t["70lEQe"]);
+    const obj3 = { style: tmp.avatarWrapper, children: null };
+    const obj4 = { resizeMode: "contain", style: defaultLogoStyle, source: tmp3 };
+    const items = [React4(FastImageDefault, obj4), ];
+    const obj5 = { style: tmp.uploadAvatarWrapper, children: null };
+    const obj6 = { size: native.Icon.Sizes.MEDIUM, source: _modDef12803, style: tmp.uploadAvatarIcon };
+    obj5.children = React4(native.Icon, obj6);
+    items[1] = React4(View, obj5);
+    obj3.children = items;
+    obj2.children = hasOwnProperty(View, obj3);
+    obj.children = React4(Pressables.PressableOpacity, obj2);
+    return React4(View, obj);
   }
   defaultLogoStyle = tmp.defaultLogoStyle;
 };

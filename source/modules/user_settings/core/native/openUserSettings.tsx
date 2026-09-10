@@ -1,22 +1,21 @@
-// Module ID: 7382
-// Function ID: 7383
+// Module ID: 7396
+// Function ID: 7397
 // Name: openUserSettings
-// Dependencies: [7383, 1074, 4418, 573, 2]
+// Dependencies: [7397, 1074, 4432, 573, 2]
 // Exports: openUserSettings
 
-// Module 7382 (openUserSettings)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import ME from "ME" /* 1074 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;
-import handleFormClose from "handleFormClose" /* 7383 */;
+// Module 7396 (openUserSettings)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 1074 */;
+import RootNavigationRef from "RootNavigationRef" /* 4432 */;
+import UserSettingsAccountStore from "UserSettingsAccountStore" /* 7397 */;
+import size from "module_2" /* 2 */;
 
-const UserSettingsSections = ME.UserSettingsSections;
-const result = set.fileFinishedImporting("modules/user_settings/core/native/openUserSettings.tsx");
+const UserSettingsSections = Constants.UserSettingsSections;
+const result = size.fileFinishedImporting("modules/user_settings/core/native/openUserSettings.tsx");
 
-export const openUserSettings = (screen) => {
-  let obj = getRootNavigationRef;
-  const rootNavigationRef = obj.getRootNavigationRef();
+export const openUserSettings = (screen, fn) => {
+  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   if (tmp2) {
     screen = undefined;
     if (screen != null) {
@@ -25,13 +24,11 @@ export const openUserSettings = (screen) => {
     if (screen == null) {
       screen = UserSettingsSections.OVERVIEW;
     }
-    obj = { type: "USER_SETTINGS_MODAL_INIT", section: null };
-    obj[1] = screen;
-    dispatcherDefault.dispatch(obj);
+    const obj2 = { type: "USER_SETTINGS_MODAL_INIT", section: screen };
+    DispatcherDefault.dispatch(obj2);
     rootNavigationRef.navigate("settings", screen);
-    if (arg1 != null) {
-      arg1();
+    if (fn != null) {
+      fn();
     }
-    const obj3 = dispatcherDefault;
   }
 };

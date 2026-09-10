@@ -1,148 +1,131 @@
-// Module ID: 16355
-// Function ID: 16356
-// Name: _handleCreateJoinGuildPress
-// Dependencies: [5, 19, 17, 4381, 1074, 1373, 21, 4560, 9699, 1896, 12712, 7212, 9318, 7182, 16297, 13718, 504, 16311, 1114, 16356, 11209, 576, 2]
+// Module ID: 16386
+// Function ID: 16387
+// Name: GuildsBarCreateJoinButton
+// Dependencies: [5, 19, 17, 4395, 1074, 1373, 21, 4574, 9726, 1896, 12738, 7226, 9345, 7196, 16327, 13741, 504, 16342, 1114, 16387, 11236, 576, 2]
 
-// Module 16355 (_handleCreateJoinGuildPress)
-import ThemesDefault from "Themes" /* 576 */;
-import UnreadIndicatorDefault from "UnreadIndicator" /* 16297 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleConnectionOpen" /* 4381 */;
-import ME from "ME" /* 1074 */;
-import { PremiumUpsellTypes } from "GuildFeatures" /* 1373 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16386 (GuildsBarCreateJoinButton)
+import nativeDefault from "native" /* 576 */;
+import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 16327 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 16342 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
 
-const require = arg1;
-function _handleCreateJoinGuildPress() {
-  const self = this;
-  const tmp = callback(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
+const require = fn;
+let closure_14 = async function _handleCreateJoinGuildPress(arg0, value) {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      try {
-        c3 = 2;
-        if (0 === c2) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let lib2 = tmp5;
-            let lib = tmp2;
-            lib = undefined;
-            lib2 = undefined;
-            c2 = 1;
-            c3 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = closure_1_0(c2[9])(c2[8], c2.paths);
-            return obj1;
-          }
-        } else if (1 === tmp5) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            lib = arg1.default;
-            c2 = 2;
-            c3 = 1;
-            const obj3 = { value: null, done: false };
-            obj3[0] = lib(c2[9])(c2[10], c2.paths);
-            return obj3;
-          }
-        } else if (arg0 === 1) {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c3 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
           c3 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj4 = { value: null, done: true };
-          obj4[0] = arg1;
-          return obj4;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          lib2 = arg1.default;
-          lib.acknowledgeTooltip(constants2.GUILD_TOOLTIP);
-          if (obj11.isAtGuildCapAndNonPremium()) {
-            obj = lib2(c2[12]);
-            const obj5 = { initialUpsellKey: null, analyticsLocation: null, analyticsLocations: null, analyticsProperties: null };
-            obj5[0] = constants3.GUILD_CAP;
-            const obj6 = { page: null };
-            obj6[0] = constants.CREATE_JOIN_GUILD_MODAL;
-            obj5[1] = obj6;
-            const items = [lib2(c2[13]).NEW_GUILD_BUTTON];
-            obj5[2] = items;
-            const obj7 = { type: null };
-            obj7[0] = constants4.GUILD_CAP_MODAL_UPSELL;
-            obj5[3] = obj7;
-            const result = obj.handleShowUpsellAlert(obj5);
-          } else {
-            lib2.openCreateGuildModal();
-          }
-          c3 = 3;
-          obj11 = lib(c2[11]);
+          closure_1 = tmp5;
+          closure_0 = tmp2;
+          closure_128_0 = undefined;
+          closure_128_1 = undefined;
+          c2 = 1;
+          c3 = 1;
+          const obj4 = { value: require("asyncRequireImpl")(paths[8], paths.paths), done: false };
+          return obj4;
         }
-      } catch (tmp27) {
-        c3 = tmp;
-        throw tmp27;
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          closure_128_0 = value.default;
+          c2 = 2;
+          c3 = 1;
+          const obj6 = { value: closure_129_0(closure_129_2[9])(closure_129_2[10], closure_129_2.paths), done: false };
+          return obj6;
+        }
+      } else if (arg0 === 1) {
+        c3 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c3 = 3;
+        const obj7 = { value, done: true };
+        return obj7;
+      } else {
+        closure_128_1 = value.default;
+        closure_128_0.acknowledgeTooltip(closure_129_9.GUILD_TOOLTIP);
+        if (obj11.isAtGuildCapAndNonPremium()) {
+          const obj8 = { initialUpsellKey: closure_129_10.GUILD_CAP, analyticsLocation: null, analyticsLocations: null, analyticsProperties: null };
+          const obj9 = { page: closure_129_7.CREATE_JOIN_GUILD_MODAL };
+          obj8.analyticsLocation = obj9;
+          const items = [closure_129_1(closure_129_2[13]).NEW_GUILD_BUTTON];
+          obj8.analyticsLocations = items;
+          const obj10 = { type: closure_129_11.GUILD_CAP_MODAL_UPSELL };
+          obj8.analyticsProperties = obj10;
+          const result = closure_129_1(closure_129_2[12]).handleShowUpsellAlert(obj8);
+          const obj = closure_129_1(closure_129_2[12]);
+        } else {
+          closure_128_1.openCreateGuildModal();
+        }
+        c3 = 3;
+        obj11 = closure_129_0(closure_129_2[11]);
       }
+    } catch (tmp27) {
+      c3 = tmp;
+      throw tmp27;
     }
-  });
-  closure_14 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
   }
-  return applyArgumentsResult;
-}
-let c4 = importAllResult;
-({ AnalyticsPages: error, MOBILE_GUILD_UPSELL_LIST: closure_8, TooltipNames: c9, UpsellTypes: c10 } = ME);
-let closure_13 = createCacheKey.createStyles({ stretch: { alignSelf: "stretch" } });
-const memoResult = importAllResult.memo(function GuildsBarCreateJoinButton() {
-  let obj = enabled(16297);
-  const tmp = callback2();
-  const GameCommunityAddServerEntryExperiment = enabled(13718).GameCommunityAddServerEntryExperiment;
+};
+const View = fn(17).View;
+const Constants = fn(1074);
+({ AnalyticsPages: closure_7, MOBILE_GUILD_UPSELL_LIST: closure_8, TooltipNames: closure_9, UpsellTypes: c10 } = Constants);
+const PremiumUpsellTypes = fn(1373).PremiumUpsellTypes;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_13 = createStyles.createStyles({ stretch: { alignSelf: "stretch" } });
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarCreateJoinButton.tsx");
+
+export default noop.memo(function GuildsBarCreateJoinButton() {
+  const tmp = closure_13();
+  const obj = enabled(16327);
+  const GameCommunityAddServerEntryExperiment = enabled(13741).GameCommunityAddServerEntryExperiment;
   enabled = GameCommunityAddServerEntryExperiment.useConfig({ location: "GuildsBarCreateJoinButton" }).enabled;
-  obj1 = enabled(504);
-  const items = [closure_6];
+  const guildsBarAnimatedWrapperStyles = enabled(16327).useGuildsBarAnimatedWrapperStyles();
+  const items = [SelectedGuildStore];
   let stateFromStores = enabled;
   if (enabled) {
-    stateFromStores = obj1.useStateFromStores(items, () => guildId.getGuildId() === closure_8);
+    stateFromStores = obj2.useStateFromStores(items, () => guildId.getGuildId() === closure_1_8);
   }
   const items1 = [enabled];
-  obj = { style: tmp.stretch, children: null };
-  const memo = importAllResult.useMemo(() => ({
+  const obj3 = { style: tmp.stretch, children: null };
+  const memo = noop.useMemo(() => ({
     onPress() {
-      if (closure_0) {
+      if (enabled) {
         if (!obj.isAtGuildCapAndNonPremium()) {
-          closure_1_1(closure_1_2[17])(closure_1_8);
+          transitionGuildsBarToGuildOrOpenSelectedChannelDefault(closure_2_8);
         }
       }
       (function handleCreateJoinGuildPress() {
         const self = this;
-        const apply = closure_14.apply;
+        const apply = closure_1_14.apply;
         if (typeof apply === "unknown") {
           let applyArgumentsResult = HermesBuiltin.applyArguments(self);
         } else {
@@ -152,19 +135,13 @@ const memoResult = importAllResult.memo(function GuildsBarCreateJoinButton() {
       })();
     }
   }), items1);
-  obj = { selected: stateFromStores, circle: false, unread: false, styles: obj.useGuildsBarAnimatedWrapperStyles(), overState: "y", config: "eyebrow", label: "interactive-text-default", expandedChildren: null, children: "Array" };
-  obj[5] = memo;
-  const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
-  const tmp8 = View;
+  const obj4 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: 0, expandedChildren: -15.5, children: 0 };
+  obj2 = enabled(504);
   const intl = tmp2(1114).intl;
-  obj[6] = intl.string(enabled(1114).t.l5WIbf);
-  obj[7] = jsx(enabled(16356).HomeDrawerAddServerRowExpandedChildren, {});
-  const colors = ThemesDefault.colors;
-  obj1 = { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT };
-  obj[8] = jsx(enabled(11209).CirclePlusIcon, { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
-  obj[1] = jsx(UnreadIndicatorDefault, { selected: stateFromStores, circle: false, unread: false, styles: obj.useGuildsBarAnimatedWrapperStyles(), overState: "y", config: "eyebrow", label: "interactive-text-default", expandedChildren: null, children: "Array" });
-  return <tmp8 selected={stateFromStores} circle={false} unread={false} styles={obj.useGuildsBarAnimatedWrapperStyles()} overState="y" config="eyebrow" label="interactive-text-default" expandedChildren={null}>{"Array"}</tmp8>;
+  obj4.label = intl.string(enabled(1114).t.l5WIbf);
+  obj4.expandedChildren = jsx(enabled(16387).HomeDrawerAddServerRowExpandedChildren, {});
+  const colors = nativeDefault.colors;
+  obj4.children = jsx(enabled(11236).CirclePlusIcon, { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
+  obj3.children = jsx(GuildsBarAnimatedItemWrapperDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: 0, expandedChildren: -15.5, children: 0 });
+  return <tmp8 style={tmp.stretch}>{null}</tmp8>;
 });
-let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarCreateJoinButton.tsx");
-
-export default memoResult;

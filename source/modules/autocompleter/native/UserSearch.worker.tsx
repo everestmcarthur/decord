@@ -1,39 +1,37 @@
-// Module ID: 9845
-// Function ID: 9846
+// Module ID: 9872
+// Function ID: 9873
 // Name: UserSearchWorkerManager
 // Dependencies: [17, 2]
 
-// Module 9845 (UserSearchWorkerManager)
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set from "set" /* 2 */;
+// Module 9872 (UserSearchWorkerManager)
+import get_ActivityIndicator from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
 
 const NativeEventEmitter = get_ActivityIndicator.NativeEventEmitter;
 const UserSearchWorkerManager = get_ActivityIndicator.NativeModules.UserSearchWorkerManager;
-let closure_0 = UserSearchWorkerManager;
 class UserSearchWorker extends NativeEventEmitter {
   constructor() {
-    tmp = new tmp(closure_0, new.target, tmp);
-    // ThrowIfThisInitialized (0x7c)
-    closure_0 = tmp;
+    tmp1 = new tmp(UserSearchWorkerManager, new.target, tmp);
+    closure_0 = tmp1;
     set = new Set();
-    tmp.handlers = set;
-    tmp.subscription = null;
-    tmp.handleCallback = function handleCallback(arg0) {
-      let handlers = arg0;
+    tmp1.handlers = set;
+    tmp1.subscription = null;
+    tmp1.handleCallback = function handleCallback(data) {
+      handlers = data;
       handlers = handlers.handlers;
-      const item = handlers.forEach((arg0) => arg0({ data: closure_0 }));
+      const item = handlers.forEach((fn) => fn({ data }));
     };
-    return tmp;
+    return tmp1;
   }
 }
 const prototype = UserSearchWorker.prototype;
 prototype["postMessage"] = function postMessage(arg0) {
   if (arg0) {
     const _JSON = JSON;
-    closure_0.onmessage(JSON.stringify(arg0));
+    UserSearchWorkerManager.onmessage(JSON.stringify(arg0));
   } else {
     const _Error = Error;
-    error = new Error("Invalid data");
+    const error = new Error("Invalid data");
     throw error;
   }
 };
@@ -62,19 +60,17 @@ prototype["removeEventListener"] = function removeEventListener(arg0, arg1) {
   }
 };
 prototype["terminate"] = function terminate() {
-  closure_0.terminate();
+  UserSearchWorkerManager.terminate();
 };
-tmp = new tmp(UserSearchWorkerManager, prototype, "terminate", UserSearchWorkerManager, UserSearchWorker);
-// ThrowIfThisInitialized (0x7c)
-closure_0 = tmp;
-let set = new Set();
-tmp.handlers = set;
-tmp.subscription = null;
-tmp.handleCallback = function handleCallback(arg0) {
-  let handlers = arg0;
+let tmp2 = new tmp(UserSearchWorkerManager, prototype, "terminate", UserSearchWorkerManager, UserSearchWorker);
+let closure_129_0 = tmp2;
+tmp2.handlers = new Set();
+tmp2.subscription = null;
+tmp2.handleCallback = function handleCallback(data) {
+  handlers = data;
   handlers = handlers.handlers;
-  const item = handlers.forEach((arg0) => arg0({ data: closure_0 }));
+  const item = handlers.forEach((fn) => fn({ data }));
 };
-const result = set.fileFinishedImporting("modules/autocompleter/native/UserSearch.worker.tsx");
+const result = size.fileFinishedImporting("modules/autocompleter/native/UserSearch.worker.tsx");
 
-export default tmp;
+export default tmp2;

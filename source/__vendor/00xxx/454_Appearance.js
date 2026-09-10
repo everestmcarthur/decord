@@ -4,7 +4,7 @@
 // Dependencies: [455]
 
 // Module 454 (Appearance)
-import AppearanceDefault from "Appearance" /* 455 */;
+import _modDef455 from "module_455" /* 455 */;
 
 
-export default AppearanceDefault;
+export default _modDef455;

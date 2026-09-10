@@ -1,11 +1,13 @@
-// Module ID: 10198
-// Function ID: 10199
-// Name: getDisplayName
-// Dependencies: [10, 12, 7781, 2]
+// Module ID: 10225
+// Function ID: 10226
+// Name: serializeAppStartLogs
+// Dependencies: [10, 12, 7795, 2]
 // Exports: default
 
-// Module 10198 (getDisplayName)
-import set2 from "set" /* 2 */;
+// Module 10225 (serializeAppStartLogs)
+import _modDef12 from "module_12" /* 12 */;
+import ThreadUtils from "ThreadUtils" /* 7795 */;
+import size from "module_2" /* 2 */;
 
 function getDisplayName(tag) {
   if (null == tag.tag) {
@@ -24,7 +26,7 @@ function getDisplayName(tag) {
   }
   return text;
 }
-let result = set2.fileFinishedImporting("modules/debug/serializeAppStartLogs.tsx");
+let result = size.fileFinishedImporting("modules/debug/serializeAppStartLogs.tsx");
 
 export default function serializeAppStartLogs(arg0) {
   closure_0 = arg0;
@@ -37,28 +39,28 @@ export default function serializeAppStartLogs(arg0) {
     flag2 = true;
   }
   const logGroups = flag(flag2[0]).logGroups;
-  let mapped = logGroups.map((arg0) => {
-    ({ index, timestamp, logs, nativeLogs, serverTrace } = arg0);
+  let mapped = logGroups.map((item) => {
+    ({ index, timestamp, logs, nativeLogs, serverTrace } = item);
     let tmp = timestamp;
     if (0 === index) {
-      let arr = flag(flag2[1]);
-      const found = arr.find(logs, (log) => {
+      const found = _modDef12.find(logs, (log) => {
         log = log.log;
         return log.indexOf("Logger loaded") >= 0;
       });
-      timestamp = undefined;
+      let timestamp1;
       if (found != null) {
-        timestamp = found.timestamp;
+        timestamp1 = found.timestamp;
       }
-      tmp = timestamp;
+      if (timestamp1 == null) {
+        timestamp1 = closure_0;
+      }
+      tmp = timestamp1;
     }
-    timestamp = logs;
     const substr = logs.slice();
-    timestamp = substr;
-    const set = new Set(nativeLogs.map(closure_1_3));
-    c4 = "";
+    const set = new Set(nativeLogs.map(getDisplayName));
+    let prefix = "";
     closure_5 = [];
-    const item = nativeLogs.forEach((tag) => {
+    item = nativeLogs.forEach((tag) => {
       if (null == tag.tag) {
         let str3 = tag.label;
       } else {
@@ -93,8 +95,8 @@ export default function serializeAppStartLogs(arg0) {
           tmp5 = tmp2;
           num = 0;
           if (set.has(str7.replace("Finish ", "Start "))) {
-            _var = _var.substring(2);
-            arr = arr.pop();
+            prefix = prefix.substring(2);
+            const arr = closure_5.pop();
             tmp5 = tmp2;
             num = 0;
             if (null != arr) {
@@ -104,7 +106,7 @@ export default function serializeAppStartLogs(arg0) {
                 let tmp12 = diff > 5;
                 if (tmp12) {
                   const items = ["GET_CONSTANTS", "CONVERT_CONSTANTS"];
-                  tmp12 = !items.some((arg0) => str7.includes(arg0));
+                  tmp12 = !items.some((item) => str7.includes(item));
                 }
                 tmp11 = tmp12;
               }
@@ -120,16 +122,15 @@ export default function serializeAppStartLogs(arg0) {
       if (num > 0) {
         tmp13 = num;
       }
-      obj[2] = tmp13;
-      obj[3] = _var;
-      obj[4] = str7;
-      obj[5] = tmp5;
+      obj.delta = tmp13;
+      obj.prefix = prefix;
+      obj.log = str7;
+      obj.shouldKeep = tmp5;
       let num4 = 0;
       let num5 = 0;
-      if (0 < str7.length) {
+      if (0 < timestamp1.length) {
         while (true) {
-          timestamp = arr2[num4].timestamp;
-          let tmp14 = num4;
+          let timestamp = arr2[num4].timestamp;
           if (null == timestamp) {
             num4 = num4 + 1;
             num5 = num4;
@@ -145,13 +146,13 @@ export default function serializeAppStartLogs(arg0) {
           break;
         }
       }
-      str7.splice(num5, 0, obj);
+      timestamp1.splice(num5, 0, obj);
       if (startsWithResult) {
-        _var = `${closure_4}| `;
-        arr = arr.push(obj);
+        prefix = `${closure_4}| `;
+        closure_5.push(obj);
       }
     });
-    c6 = false;
+    closure_6 = false;
     const found1 = substr.filter((log) => {
       let tmp = !closure_6;
       if (closure_6) {
@@ -171,7 +172,7 @@ export default function serializeAppStartLogs(arg0) {
       }
       return tmp;
     });
-    timestamp = tmp;
+    timestamp1 = tmp;
     let num2;
     let num3;
     let items = [];
@@ -187,7 +188,7 @@ export default function serializeAppStartLogs(arg0) {
           if (tmp11.log === str.replace("Start ", "Finish ")) {
             let str2 = tmp11.log;
             tmp11.log = str2.replace("Finish ", "");
-            arr = items.push(tmp11);
+            let arr2 = items.push(tmp11);
             tmp12 = sum;
             num = tmp12 + 1;
             if (num >= found1.length) {
@@ -195,13 +196,13 @@ export default function serializeAppStartLogs(arg0) {
             }
           }
         }
-        arr = items.push(tmp9);
+        let arr3 = items.push(tmp9);
       }
     }
     const mapped = items.map((timestamp) => {
       let str = "";
       if (null != timestamp.timestamp) {
-        const result = (timestamp.timestamp - timestamp) / 1000;
+        const result = (timestamp.timestamp - timestamp1) / 1000;
         str = result.toFixed(3);
       }
       const obj = { totalTime: str, deltaTime: null, log: null };
@@ -211,34 +212,32 @@ export default function serializeAppStartLogs(arg0) {
         const _Math = Math;
         str2 = String(Math.round(timestamp.delta));
       }
-      obj[1] = str2;
+      obj.deltaTime = str2;
       let str3 = "";
       if (timestamp.emoji.length > 0) {
         const _HermesInternal = HermesInternal;
         str3 = "" + timestamp.emoji + " ";
       }
-      obj[2] = "" + str3 + timestamp.prefix + timestamp.log + "\n";
+      obj.log = "" + str3 + timestamp.prefix + timestamp.log + "\n";
       return obj;
     });
-    num2 = flag(flag2[1]).max(mapped.map((totalTime) => totalTime.totalTime.length));
+    num2 = _modDef12.max(mapped.map((totalTime) => totalTime.totalTime.length));
     if (num2 == null) {
       num2 = 0;
     }
-    let obj = flag(flag2[1]);
-    num3 = flag(flag2[1]).max(mapped.map((deltaTime) => deltaTime.deltaTime.length));
+    num3 = _modDef12.max(mapped.map((deltaTime) => deltaTime.deltaTime.length));
     if (num3 == null) {
       num3 = 0;
     }
-    const mapped1 = mapped.map((arg0) => {
-      ({ totalTime, deltaTime, log } = arg0);
-      const obj = num2(num3[1]);
-      const padStartResult = num2(num3[1]).padStart(totalTime, num2);
-      return "" + padStartResult + " " + num2(num3[1]).padStart(deltaTime, num3) + " " + log;
+    const mapped1 = mapped.map((item) => {
+      ({ totalTime, deltaTime, log } = item);
+      const obj = flag(flag2[1]);
+      const padStartResult = flag(flag2[1]).padStart(totalTime, num2);
+      return "" + padStartResult + " " + flag(flag2[1]).padStart(deltaTime, num3) + " " + log;
     });
     const sum1 = index + 1;
     const joined = mapped1.join("");
-    const obj2 = flag(flag2[1]);
-    const combined = "Trace #" + sum1 + " started " + callback(flag2[2]).getTimestampString(timestamp) + "\n" + joined;
+    const combined = "Trace #" + sum1 + " started " + ThreadUtils.getTimestampString(timestamp) + "\n" + joined;
     let sum2 = combined;
     if (null != serverTrace) {
       let _HermesInternal = HermesInternal;

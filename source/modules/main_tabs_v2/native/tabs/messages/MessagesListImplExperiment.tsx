@@ -1,15 +1,17 @@
-// Module ID: 16050
-// Function ID: 16051
-// Name: apexExperiment
+// Module ID: 16080
+// Function ID: 16081
+// Name: MessagesListImplExperiment
 // Dependencies: [1433, 2]
 
-// Module 16050 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 16080 (MessagesListImplExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null, 2: { list: "flash", recycleItems: false }, 3: { list: "legend", recycleItems: false } };
-obj[3] = { list: "legend", recycleItems: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-06-messages-list-impl", defaultConfig: { list: "fastest", recycleItems: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesListImplExperiment.tsx");
+const obj = { kind: "user", name: "2026-06-messages-list-impl", defaultConfig: { list: "fastest", recycleItems: false }, variations: null };
+const obj2 = { 1: null, 2: { list: "flash", recycleItems: false }, 3: { list: "legend", recycleItems: false } };
+obj2[3] = { list: "legend", recycleItems: true };
+obj.variations = obj2;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesListImplExperiment.tsx");
 
 export default apexExperiment;

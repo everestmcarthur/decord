@@ -1,19 +1,22 @@
-// Module ID: 11240
-// Function ID: 11241
+// Module ID: 11267
+// Function ID: 11268
 // Name: useCanSetThumbnail
 // Dependencies: [1957, 563, 2]
 // Exports: default
 
-// Module 11240 (useCanSetThumbnail)
-import closure_2 from "ensureGuildLoaded" /* 1957 */;
+// Module 11267 (useCanSetThumbnail)
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/media_channel/useCanSetThumbnail.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_channel/useCanSetThumbnail.tsx");
 
 export default function useCanSetThumbnail(arg0, isImage) {
-  const _require = arg0;
-  const items = [closure_2];
-  const stateFromStores = _require(563).useStateFromStores(items, () => closure_1_2.getChannel(closure_0));
+  _require = arg0;
+  const items = [ChannelStore];
+  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => ChannelStore.getChannel(closure_0));
   let isMediaChannelResult;
   if (stateFromStores != null) {
     isMediaChannelResult = stateFromStores.isMediaChannel();

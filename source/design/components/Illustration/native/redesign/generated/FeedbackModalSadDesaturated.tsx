@@ -1,66 +1,64 @@
-// Module ID: 11637
-// Function ID: 11638
-// Name: getFeedbackModalSadDesaturatedSource
-// Dependencies: [19, 17, 21, 8233, 11638, 11639, 11640, 4411, 2]
+// Module ID: 11663
+// Function ID: 11664
+// Name: FeedbackModalSadDesaturated
+// Dependencies: [19, 17, 21, 8259, 11664, 11665, 11666, 4425, 2]
 // Exports: FeedbackModalSadDesaturated, getFeedbackModalSadDesaturatedSource, useFeedbackModalSadDesaturatedSource
 
-// Module 11637 (getFeedbackModalSadDesaturatedSource)
-import noopAll from "noop" /* 19 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
-import getIllustrationSource from "getIllustrationSource" /* 8233 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 11663 (FeedbackModalSadDesaturated)
+import shared from "shared" /* 4425 */;
+import _mod8259 from "module_8259" /* 8259 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/FeedbackModalSadDesaturated.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/FeedbackModalSadDesaturated.tsx");
 
 export const getFeedbackModalSadDesaturatedSource = function getFeedbackModalSadDesaturatedSource(theme) {
-  let obj = getIllustrationSource;
-  obj = {
+  return _mod8259.getIllustrationSource(theme, {
     dark() {
-      return callback(11638);
+      return require("module_11664");
     },
     darker() {
-      return callback(11639);
+      return require("module_11665");
     },
     light() {
-      return callback(11640);
+      return require("module_11666");
     }
-  };
-  return obj.getIllustrationSource(theme, obj);
+  });
 };
 export const useFeedbackModalSadDesaturatedSource = function useFeedbackModalSadDesaturatedSource() {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = shared;
+  return _mod8259.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return callback(11638);
+      return require("module_11664");
     },
     darker() {
-      return callback(11639);
+      return require("module_11665");
     },
     light() {
-      return callback(11640);
+      return require("module_11666");
     }
-  };
-  return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  });
 };
 export const FeedbackModalSadDesaturated = function FeedbackModalSadDesaturated(arg0) {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = shared;
+  const obj4 = {};
+  const illustrationSource = _mod8259.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return callback(11638);
+      return require("module_11664");
     },
     darker() {
-      return callback(11639);
+      return require("module_11665");
     },
     light() {
-      return callback(11640);
+      return require("module_11666");
     }
-  };
-  obj = {};
-  const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  });
   const merged = Object.assign(arg0);
-  obj.source = illustrationSource;
+  obj4.source = illustrationSource;
   return <Image />;
 };

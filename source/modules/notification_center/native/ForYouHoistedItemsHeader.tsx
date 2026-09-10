@@ -1,23 +1,21 @@
-// Module ID: 16440
-// Function ID: 16441
+// Module ID: 16471
+// Function ID: 16472
 // Name: ForYouHoistedItemsHeader
-// Dependencies: [19, 17, 21, 4560, 576, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 2]
 // Exports: ForYouHoistedItemsHeader
 
-// Module 16440 (ForYouHoistedItemsHeader)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16471 (ForYouHoistedItemsHeader)
+import nativeDefault from "native" /* 576 */;
+import noop from "module_19" /* 19 */;
 
-noopAll;
-createCacheKey = { container: null };
-createCacheKey = { marginTop: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-let closure_2 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/notification_center/native/ForYouHoistedItemsHeader.tsx");
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+const obj2 = { container: { marginTop: nativeDefault.space.PX_16 } };
+let closure_2 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notification_center/native/ForYouHoistedItemsHeader.tsx");
 
 export const ForYouHoistedItemsHeader = function ForYouHoistedItemsHeader() {
-  return <View style={callback().container} />;
+  return <View style={closure_2().container} />;
 };

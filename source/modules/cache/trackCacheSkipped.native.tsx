@@ -1,30 +1,32 @@
-// Module ID: 7665
-// Function ID: 7666
+// Module ID: 7679
+// Function ID: 7680
 // Name: trackCacheSkipped
-// Dependencies: [1074, 1242, 7475, 2]
+// Dependencies: [1074, 1242, 7489, 2]
 // Exports: default
 
-// Module 7665 (trackCacheSkipped)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import getDeviceMetadata from "getDeviceMetadata" /* 7475 */;
+// Module 7679 (trackCacheSkipped)
+import Constants from "Constants" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7489 */;
+import size from "module_2" /* 2 */;
 
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/cache/trackCacheSkipped.native.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/cache/trackCacheSkipped.native.tsx");
 
-export default function trackCacheSkipped(arg0, message) {
-  let obj = expandEventPropertiesDefault;
-  obj = { load_id: getDeviceMetadata.currentLoadId(), reason: arg0, error_message: null, error_stack: null };
+export default function trackCacheSkipped(reason, message) {
+  const obj2 = { load_id: null, reason: null, error_message: null, error_stack: null };
+  const obj = AnalyticsUtilsDefault;
+  obj2.load_id = TTIAnalyticsUtils.currentLoadId();
+  obj2.reason = reason;
   message = undefined;
   if (message != null) {
     message = message.message;
   }
-  obj[2] = message;
+  obj2.error_message = message;
   let stack;
   if (message != null) {
     stack = message.stack;
   }
-  obj[3] = stack;
-  obj.track(AnalyticEvents.CACHE_STORE_CACHE_SKIPPED, obj);
+  obj2.error_stack = stack;
+  obj.track(AnalyticEvents.CACHE_STORE_CACHE_SKIPPED, obj2);
 };

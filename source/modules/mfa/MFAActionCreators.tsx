@@ -1,19 +1,22 @@
-// Module ID: 15667
-// Function ID: 15668
-// Name: openMFAModal
-// Dependencies: [15668, 15669, 15678, 2]
+// Module ID: 15697
+// Function ID: 15698
+// Name: mfa/MFAActionCreators
+// Dependencies: [15698, 15699, 15708, 2]
 // Exports: openMFAModal
 
-// Module 15667 (openMFAModal)
-import set from "set" /* 2 */;
-import get_webauthn from "get webauthn" /* 15668 */;
+// Module 15697 (mfa/MFAActionCreators)
+import MFAConstants from "MFAConstants" /* 15698 */;
+import MFA from "MFA" /* 15708 */;
+import size from "module_2" /* 2 */;
 
-const SELECT_NAMES = get_webauthn.SELECT_NAMES;
-const result = set.fileFinishedImporting("modules/mfa/MFAActionCreators.tsx");
+const require = globalThis.__r;
 
-export const openMFAModal = function openMFAModal(methods) {
-  const _require = arg1;
+const SELECT_NAMES = MFAConstants.SELECT_NAMES;
+const result = size.fileFinishedImporting("modules/mfa/MFAActionCreators.tsx");
+
+export const openMFAModal = function openMFAModal(methods, arg1, arg2) {
+  _require = arg1;
   methods = methods.methods;
-  methods.methods = methods.filter((type) => Object.hasOwn(closure_2, type.type));
-  _require(15669).openMFAModal(methods, (arg0) => callback(closure_1_1[2]).trySubmit(arg0, callback), arg2);
+  methods.methods = methods.filter((type) => Object.hasOwn(SELECT_NAMES, type.type));
+  require("MFAModal").openMFAModal(methods, (arg0) => MFA.trySubmit(arg0, closure_0), arg2);
 };

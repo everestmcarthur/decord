@@ -1,17 +1,17 @@
-// Module ID: 5985
-// Function ID: 5986
+// Module ID: 5999
+// Function ID: 6000
 // Name: FamilyShieldSpotIllustration
-// Dependencies: [21, 5587, 5986, 2]
+// Dependencies: [21, 5601, 6000, 2]
 // Exports: FamilyShieldSpotIllustration
 
-// Module 5985 (FamilyShieldSpotIllustration)
-import set from "set" /* 2 */;
+// Module 5999 (FamilyShieldSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 5986 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6000 from "module_6000" /* 6000 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/FamilyShieldSpotIllustration.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/FamilyShieldSpotIllustration.native.tsx");
 
 export const FamilyShieldSpotIllustration = function FamilyShieldSpotIllustration(width) {
   let num = width.width;
@@ -27,14 +27,14 @@ export const FamilyShieldSpotIllustration = function FamilyShieldSpotIllustratio
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
-  obj = { width: num * num3, height: num2 * num3 };
-  const items = [obj];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { width: num * num3, height: num2 * num3 });
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef6000 };
+  obj.source = obj2;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

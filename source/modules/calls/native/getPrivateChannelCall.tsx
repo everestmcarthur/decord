@@ -1,32 +1,36 @@
-// Module ID: 10874
-// Function ID: 10875
+// Module ID: 10901
+// Function ID: 10902
 // Name: getPrivateChannelCall
-// Dependencies: [4579, 1074, 4767, 7981, 1114, 9087, 2]
+// Dependencies: [4593, 1074, 4781, 7995, 1114, 9114, 2]
 // Exports: default
 
-// Module 10874 (getPrivateChannelCall)
-import closure_2 from "updateVoiceState" /* 4579 */;
-import { NOOP_NULL } from "ME" /* 1074 */;
+// Module 10901 (getPrivateChannelCall)
+import CallsUtils from "CallsUtils" /* 9114 */;
+import VoiceStateStore from "VoiceStateStore" /* 4593 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/calls/native/getPrivateChannelCall.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const NOOP_NULL = fn(1074).NOOP_NULL;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/calls/native/getPrivateChannelCall.tsx");
 
 export default function getPrivateChannelCall(id) {
-  const _require = id;
+  _require = id;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
   let handleStartCall = arg2;
   if (arg2 === undefined) {
-    handleStartCall = _require(flag[2]).handleStartCall;
+    handleStartCall = require("PrivateChannelCallUtils").handleStartCall;
   }
   let handleJoinCall = arg3;
   if (arg3 === undefined) {
-    handleJoinCall = _require(flag[2]).handleJoinCall;
+    handleJoinCall = require("PrivateChannelCallUtils").handleJoinCall;
   }
   const isInChannelResult = handleStartCall.isInChannel(id.id);
-  let obj = _require(flag[3]);
+  const obj = require("useIsCallActive");
   if (id.isSystemDM()) {
     const C = handleJoinCall;
     let tmp9Result = null;
@@ -35,14 +39,14 @@ export default function getPrivateChannelCall(id) {
       const string2 = tmp6(tmp7[4]).intl.string;
       class C {
         constructor() {
-          obj = closure_0(c1[5]);
+          obj = closure_0(closure_1[5]);
           return obj.handleDisconnect(closure_0);
         }
       }
     }
     class C {
       constructor() {
-        obj = closure_0(c1[5]);
+        obj = closure_0(closure_1[5]);
         return obj.handleDisconnect(closure_0);
       }
     }
@@ -88,12 +92,12 @@ export default function getPrivateChannelCall(id) {
       stringResult = string(t.focH1t);
     }
   }
-  obj = { text: tmp9Result, accessibilityHint: null, inCall: null, onPress: null };
+  const obj2 = { text: tmp9Result, accessibilityHint: null, inCall: null, onPress: null };
   if (stringResult == null) {
     stringResult = tmp9Result;
   }
-  obj[1] = stringResult;
-  obj[2] = isInChannelResult;
-  obj[3] = C;
-  return obj;
+  obj2.accessibilityHint = stringResult;
+  obj2.inCall = isInChannelResult;
+  obj2.onPress = C;
+  return obj2;
 };

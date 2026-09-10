@@ -1,43 +1,44 @@
-// Module ID: 11046
-// Function ID: 11047
+// Module ID: 11073
+// Function ID: 11074
 // Name: GiftingSKUCardsGrid
-// Dependencies: [19, 17, 7547, 1887, 21, 4560, 576, 8178, 4277, 11047, 5123, 8829, 8815, 8800, 4556, 1114, 2]
+// Dependencies: [19, 17, 7561, 1887, 21, 4574, 576, 8204, 4292, 11074, 5137, 8858, 8844, 8829, 4570, 1114, 2]
 // Exports: default
 
-// Module 11046 (GiftingSKUCardsGrid)
-import ThemesDefault from "Themes" /* 576 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { isAvatarDecorationRecord, isNameplateRecord } from "fromServer" /* 7547 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11073 (GiftingSKUCardsGrid)
+import nativeDefault from "native" /* 576 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4292 */;
+import useCurrentUser from "useCurrentUser" /* 8204 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8844 */;
+import NameplateCardPreviewDefault from "NameplateCardPreview" /* 8858 */;
+import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11074 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
+require = fn;
+const View = fn(17).View;
+const isAvatarDecorationRecord = fn(7561).isAvatarDecorationRecord;
+const isNameplateRecord = fn(1887).isNameplateRecord;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+let createStyles = fn(4574);
 let obj = { card: null, overlayContainer: null, selected: null, claimed: null, checkmark: null, checkmarkContainer: null, textContainer: null };
-obj = { height: 178, width: 150, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", borderWidth: 1, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", borderColor: ThemesDefault.colors.BORDER_SUBTLE, margin: ThemesDefault.space.PX_4 };
-obj[0] = obj;
-obj[1] = { position: "absolute", top: 10, zIndex: 2, display: "flex", justifyContent: "center", alignItems: "center", width: "100%", height: "75%" };
-createCacheKey = { borderColor: ThemesDefault.colors.BACKGROUND_BRAND };
-obj[2] = createCacheKey;
-obj[3] = { opacity: 0.4 };
-obj[4] = { position: "absolute", opacity: 1, fontWeight: "bold" };
-obj[5] = { position: "absolute", top: 10, zIndex: 3, display: "flex", justifyContent: "center", alignItems: "center", width: "100%", height: "75%" };
-obj[6] = { position: "absolute", bottom: 20, left: 0, right: 0, paddingHorizontal: ThemesDefault.space.PX_16, alignItems: "flex-start" };
-let closure_9 = createCacheKey.createStyles(obj);
-let closure_10 = importAllResult.memo((rewardSkuId) => {
+let size = { height: 178, width: 150, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", borderWidth: 1, borderRadius: nativeDefault.radii.sm, overflow: "hidden", borderColor: nativeDefault.colors.BORDER_SUBTLE, margin: nativeDefault.space.PX_4 };
+obj.card = size;
+obj.overlayContainer = { position: "absolute", top: 10, zIndex: 2, display: "flex", justifyContent: "center", alignItems: "center", width: "100%", height: "75%" };
+obj.selected = { borderColor: nativeDefault.colors.BACKGROUND_BRAND };
+obj.claimed = { opacity: 0.4 };
+obj.checkmark = { position: "absolute", opacity: 1, fontWeight: "bold" };
+obj.checkmarkContainer = { position: "absolute", top: 10, zIndex: 3, display: "flex", justifyContent: "center", alignItems: "center", width: "100%", height: "75%" };
+const rect = { position: "absolute", bottom: 20, left: 0, right: 0, paddingHorizontal: nativeDefault.space.PX_16, alignItems: "flex-start" };
+obj.textContainer = rect;
+let closure_9 = createStyles.createStyles(obj);
+let closure_10 = noop.memo((rewardSkuId) => {
   rewardSkuId = rewardSkuId.rewardSkuId;
   ({ claimed, onSelect: importDefault, isSelected } = rewardSkuId);
-  let currentUser;
-  const tmp = callback2();
-  let obj = rewardSkuId(isSelected[7]);
-  currentUser = obj.useCurrentUser();
-  obj1 = rewardSkuId(isSelected[8]);
-  const radioA11yNative = obj1.useRadioA11yNative({ selected: isSelected });
+  const tmp = closure_9();
+  const currentUser = useCurrentUser.useCurrentUser();
+  const radioA11yNative = useA11yRolesNative.useRadioA11yNative({ selected: isSelected });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
-  let obj2 = rewardSkuId(isSelected[9]);
-  const product = obj2.useFetchCollectiblesProduct(rewardSkuId).product;
+  const product = useFetchCollectiblesProduct.useFetchCollectiblesProduct(rewardSkuId).product;
   const items = [isSelected, currentUser];
   if (null == product) {
     return null;
@@ -48,80 +49,71 @@ let closure_10 = importAllResult.memo((rewardSkuId) => {
     if (isSelected) {
       selected = tmp.selected;
     }
-    obj = { style: null, onPress: null, activeOpacity: 0.8, disabled: null, accessibilityRole: null, accessibilityState: null, children: null };
+    const obj4 = { style: null, onPress: null, activeOpacity: 0.8, disabled: null, accessibilityRole: null, accessibilityState: null, children: null };
     items1[1] = selected;
-    obj[0] = items1;
-    obj[1] = function onPress() {
-      return callback(rewardSkuId);
+    obj4.style = items1;
+    obj4.onPress = function onPress() {
+      return importDefault(rewardSkuId);
     };
-    obj[3] = claimed;
-    obj[4] = accessibilityRole;
-    obj[5] = accessibilityState;
+    obj4.disabled = claimed;
+    obj4.accessibilityRole = accessibilityRole;
+    obj4.accessibilityState = accessibilityState;
     const items2 = [tmp.overlayContainer, ];
     let claimed2 = claimed;
     if (claimed) {
       claimed2 = tmp.claimed;
     }
-    obj = { style: null, children: null };
-    items2[1] = claimed2;
-    obj[0] = items2;
-    if (isNameplateRecord(first)) {
-      obj1 = { item: null, animate: null };
-      obj1[0] = first;
-      obj1[1] = isSelected;
-      let tmp7Result = tmp7(importDefault(tmp3[11]), obj1);
-    } else if (isAvatarDecorationRecord(first)) {
-      obj2 = { item: null, size: 100, animate: null, avatarSource: null };
-      obj2[0] = first;
-      obj2[2] = isSelected;
-      obj2[3] = tmp6;
-      tmp7Result = tmp7(importDefault(tmp3[12]), obj2);
-    }
-    obj[1] = tmp7Result;
-    const items3 = [closure_7(View, obj), , ];
-    tmp7Result = claimed;
-    if (claimed) {
-      const obj3 = { style: null, children: null };
-      obj3[0] = tmp.checkmarkContainer;
-      const obj4 = { size: "lg", style: null };
-      obj4[1] = tmp.checkmark;
-      obj3[1] = tmp7(tmp2(tmp3[13]).CheckmarkLargeBoldIcon, obj4);
-      tmp7Result = tmp7(tmp8, obj3);
-    }
-    items3[1] = tmp7Result;
     const obj5 = { style: null, children: null };
-    obj5[0] = tmp.textContainer;
-    const obj6 = { variant: "heading-sm/bold", color: "mobile-text-heading-primary", lineClamp: 1, accessibilityRole: "header", children: null };
-    obj6[4] = product.name;
-    const items4 = [closure_7(tmp2(tmp3[14]).Text, obj6), ];
-    const intl = tmp2(tmp3[15]).intl;
+    items2[1] = claimed2;
+    obj5.style = items2;
+    if (isNameplateRecord(first)) {
+      const obj6 = { item: first, animate: isSelected };
+      let tmp7Result = tmp7(NameplateCardPreviewDefault, obj6);
+    } else if (isAvatarDecorationRecord(first)) {
+      const obj7 = { item: first, size: 100, animate: isSelected, avatarSource: tmp6 };
+      tmp7Result = tmp7(AvatarDecorationSampleV2Default, obj7);
+    }
+    obj5.children = tmp7Result;
+    const items3 = [React5(View, obj5), , ];
+    let tmp7Result2 = claimed;
+    if (claimed) {
+      const obj8 = { style: tmp.checkmarkContainer, children: null };
+      const obj9 = { size: "lg", style: tmp.checkmark };
+      obj8.children = tmp7(tmp2(8829).CheckmarkLargeBoldIcon, obj9);
+      tmp7Result2 = tmp7(tmp8, obj8);
+    }
+    items3[1] = tmp7Result2;
+    const obj10 = { style: tmp.textContainer, children: null };
+    const obj11 = { variant: "heading-sm/bold", color: "mobile-text-heading-primary", lineClamp: 1, accessibilityRole: "header", children: product.name };
+    const items4 = [React5(tmp2(4570).Text, obj11), ];
+    const intl = tmp2(1114).intl;
     const string = intl.string;
-    const t = tmp2(tmp3[15]).t;
+    const t = tmp2(1114).t;
     if (claimed) {
       let stringResult = string(t["6cfuDj"]);
     } else {
       stringResult = string(t.QQsaCc);
     }
-    const obj7 = { variant: "text-xs/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: null };
-    obj7[3] = stringResult;
-    items4[1] = closure_7(tmp2(tmp3[14]).Text, obj7);
-    obj5[1] = items4;
-    items3[2] = closure_8(View, obj5);
-    obj[6] = items3;
-    return closure_8(tmp2(tmp3[10]).PressableOpacity, obj);
+    const obj12 = { variant: "text-xs/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: stringResult };
+    items4[1] = React5(tmp2(4570).Text, obj12);
+    obj10.children = items4;
+    items3[2] = React6(View, obj10);
+    obj4.children = items3;
+    return React6(tmp2(5137).PressableOpacity, obj4);
   }
 });
-let closure_11 = createCacheKey.createStyles({ grid: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center" } });
-let obj2 = { position: "absolute", bottom: 20, left: 0, right: 0, paddingHorizontal: ThemesDefault.space.PX_16, alignItems: "flex-start" };
-const result = require("set").fileFinishedImporting("modules/premium/gifting/native/views/promotions/GiftingSKUCardsGrid.tsx");
+createStyles = fn(4574);
+let closure_11 = createStyles.createStyles({ grid: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center" } });
+size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/gifting/native/views/promotions/GiftingSKUCardsGrid.tsx");
 
 export default function GiftingSKUCardsGrid(arg0) {
   ({ rewardsToDisplay, claimableRewards: require, onSelect: importDefault, highlightedSkuId: dependencyMap } = arg0);
-  return callback(View, {
-    style: callback3().grid,
+  return closure_7(View, {
+    style: closure_11().grid,
     children: rewardsToDisplay.map((rewardSkuId) => {
       closure_0 = rewardSkuId;
-      return closure_1_7(closure_1_10, { rewardSkuId, claimed: !closure_0.some((arg0) => arg0 === closure_0), isSelected: closure_2 === rewardSkuId, onSelect: closure_1 }, rewardSkuId);
+      return React5(closure_10, { rewardSkuId, claimed: !require.some((item) => item === closure_0), isSelected: dependencyMap === rewardSkuId, onSelect }, rewardSkuId);
     })
   });
 };

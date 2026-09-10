@@ -1,24 +1,22 @@
-// Module ID: 15516
-// Function ID: 15517
-// Name: onSummaryReminderNotificationSettingsChanged
-// Dependencies: [4212, 1074, 1935, 1242, 2]
+// Module ID: 15546
+// Function ID: 15547
+// Name: SummaryReminderNotificationUtils
+// Dependencies: [4225, 1074, 1935, 1242, 2]
 // Exports: onSummaryReminderNotificationSettingsChanged
 
-// Module 15516 (onSummaryReminderNotificationSettingsChanged)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import AccountNotificationFlags from "AccountNotificationFlags" /* 4212 */;
+// Module 15546 (SummaryReminderNotificationUtils)
+import Constants from "Constants" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import NotificationConstants from "NotificationConstants" /* 4225 */;
+import size from "module_2" /* 2 */;
 
-let closure_3 = AccountNotificationFlags.NotificationSettingsUpdateType;
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/notifications/summary_reminder/SummaryReminderNotificationUtils.tsx");
+const constants = NotificationConstants.NotificationSettingsUpdateType;
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/notifications/summary_reminder/SummaryReminderNotificationUtils.tsx");
 
 export const onSummaryReminderNotificationSettingsChanged = function onSummaryReminderNotificationSettingsChanged(summary_reminder_notifications) {
-  const EnableSummaryReminderNotifications = explicitContentFromProto.EnableSummaryReminderNotifications;
+  const EnableSummaryReminderNotifications = UserSettings.EnableSummaryReminderNotifications;
   EnableSummaryReminderNotifications.updateSetting(summary_reminder_notifications);
-  let obj = expandEventPropertiesDefault;
-  obj = { update_type: constants.ACCOUNT, summary_reminder_notifications };
-  obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, { update_type: constants.ACCOUNT, summary_reminder_notifications });
 };

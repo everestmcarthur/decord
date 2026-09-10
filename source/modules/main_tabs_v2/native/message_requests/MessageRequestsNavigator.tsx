@@ -1,89 +1,91 @@
-// Module ID: 16876
-// Function ID: 16877
+// Module ID: 16913
+// Function ID: 16914
 // Name: MessageRequestsNavigator
-// Dependencies: [19, 17, 21, 7913, 4560, 576, 7000, 7475, 1611, 7863, 1114, 10930, 16877, 16896, 16897, 2]
+// Dependencies: [19, 17, 21, 7927, 4574, 576, 7014, 7489, 1611, 7877, 1114, 10957, 16914, 16933, 16934, 2]
 // Exports: default
 
-// Module 16876 (MessageRequestsNavigator)
-import ThemesDefault from "Themes" /* 576 */;
+// Module 16913 (MessageRequestsNavigator)
+import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10930 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 7913 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import HeaderShared from "HeaderShared" /* 7877 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10957 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createNativeStackNavigator.createNativeStackNavigator();
-createNativeStackNavigator = { container: null, header: null };
-createNativeStackNavigator = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-createNativeStackNavigator[0] = createNativeStackNavigator;
-createCacheKey = { borderBottomWidth: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" };
-createNativeStackNavigator[1] = createCacheKey;
-let closure_8 = createCacheKey.createStyles(createNativeStackNavigator);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/message_requests/MessageRequestsNavigator.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const NativeStackNavigator = fn(7927);
+let closure_7 = NativeStackNavigator.createNativeStackNavigator();
+const createStyles = fn(4574);
+let obj3 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, header: null };
+let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+obj3.header = { borderBottomWidth: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" };
+let closure_8 = createStyles.createStyles(obj3);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/message_requests/MessageRequestsNavigator.tsx");
 
 export default function MessageRequestsNavigator() {
-  const tmp = callback3();
-  const _require = tmp;
-  let obj = _require(7000);
-  importDefault = obj.useAccessibilityNativeStackOptions();
-  const layoutEffect = React.useLayoutEffect(() => lib(7475).trackAppUIViewed(), []);
+  const tmp = closure_8();
+  _require = tmp;
+  importDefault = require("Navigator").useAccessibilityNativeStackOptions();
+  const layoutEffect = noop.useLayoutEffect(() => closure_0(7489).trackAppUIViewed(), []);
   const rect = useSafeAreaInsetsDefault();
-  obj = { style: items, children: null };
-  items = [tmp.container, { paddingLeft: rect.left, paddingRight: rect.right }];
-  obj = {
+  const obj2 = { style: null, children: null };
+  const items = [tmp.container, { paddingLeft: rect.left, paddingRight: rect.right }];
+  obj2.style = items;
+  const obj3 = {
     screenOptions(navigation) {
       const obj = {
-        headerStyle: lib.header,
+        headerStyle: closure_0.header,
         headerShadowVisible: false,
         headerTitle(children) {
-          const merged = Object.assign(children, Object.create(null));
+          const merged = Object.assign(children, Object.assign({ children: 0 }));
           const merged1 = Object.assign(merged);
-          return callback2(callback(table[9]).GenericHeaderTitle, { title: children.children });
+          return closure_1_5(closure_1_0(dependencyMap[9]).GenericHeaderTitle, { title: children.children });
         },
         headerTitleAlign: "center",
-        headerLeft: lib(closure_1_2[9]).getRenderModalCloseImage(navigation.navigation)
+        headerLeft: HeaderShared.getRenderModalCloseImage(navigation.navigation)
       };
       let merged = Object.assign(closure_1);
       return obj;
     },
     children: null
   };
-  obj1 = { name: "root", options: null, getComponent: null };
-  const obj2 = { title: null };
+  const obj4 = { name: "root", options: null, getComponent: null };
+  const obj5 = { title: null };
   ({ Navigator, Screen } = closure_7);
-  const intl = _require(1114).intl;
-  obj2[0] = intl.string(_require(1114).t.e7GWjQ);
+  const intl = require("util").intl;
+  obj5.title = intl.string(require("util").t.e7GWjQ);
   let merged = Object.assign(getNavigationModalPresentationDefault());
-  obj1[1] = obj2;
-  obj1[2] = function getComponent() {
-    return lib(16877).default;
+  obj4.options = obj5;
+  obj4.getComponent = function getComponent() {
+    return closure_0(16914).default;
   };
-  const items1 = [callback(Screen, obj1), , ];
-  const obj3 = { name: "spam", options: null, getComponent: null };
-  const obj4 = { title: null };
-  const intl2 = _require(1114).intl;
-  obj4[0] = intl2.string(_require(1114).t.ulKXHp);
+  const items1 = [closure_5(Screen, obj4), , ];
+  const obj6 = { name: "spam", options: null, getComponent: null };
+  const obj7 = { title: null };
+  const intl2 = require("util").intl;
+  obj7.title = intl2.string(require("util").t.ulKXHp);
   let merged1 = Object.assign(getNavigationModalPresentationDefault());
-  obj3[1] = obj4;
-  obj3[2] = function getComponent() {
-    return lib(16896).default;
+  obj6.options = obj7;
+  obj6.getComponent = function getComponent() {
+    return closure_0(16933).default;
   };
-  items1[1] = callback(closure_7.Screen, obj3);
-  const obj5 = { name: "preview", options: null, getComponent: null };
-  const obj6 = { title: null };
-  const intl3 = _require(1114).intl;
-  obj6[0] = intl3.string(_require(1114).t.iilwGH);
+  items1[1] = closure_5(closure_7.Screen, obj6);
+  const obj8 = { name: "preview", options: null, getComponent: null };
+  const obj9 = { title: null };
+  const intl3 = require("util").intl;
+  obj9.title = intl3.string(require("util").t.iilwGH);
   const merged2 = Object.assign(getNavigationModalPresentationDefault());
-  obj5[1] = obj6;
-  obj5[2] = function getComponent() {
-    return lib(16897).default;
+  obj8.options = obj9;
+  obj8.getComponent = function getComponent() {
+    return closure_0(16934).default;
   };
-  items1[2] = callback(closure_7.Screen, obj5);
-  obj[1] = items1;
-  obj[1] = callback2(Navigator, obj);
-  return callback(View, obj);
+  items1[2] = closure_5(closure_7.Screen, obj8);
+  obj3.children = items1;
+  obj2.children = closure_6(Navigator, obj3);
+  return closure_5(View, obj2);
 };

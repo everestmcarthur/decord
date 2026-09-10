@@ -1,24 +1,24 @@
-// Module ID: 7520
-// Function ID: 7521
-// Name: splitQuery
-// Dependencies: [7521, 2]
+// Module ID: 7534
+// Function ID: 7535
+// Name: GuildMemberSafetySearchUtils
+// Dependencies: [7535, 2]
 // Exports: splitQuery
 
-// Module 7520 (splitQuery)
-import set from "set" /* 2 */;
+// Module 7534 (GuildMemberSafetySearchUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetySearchUtils.tsx");
+const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetySearchUtils.tsx");
 
 export const splitQuery = function splitQuery(query) {
   const parts = query.split(",");
-  const mapped = parts.map((str) => str.trim());
+  const mapped = parts.map((item) => item.trim());
   const items = [];
   const items1 = [];
-  const item = mapped.forEach((text) => {
-    if (obj.isSnowflake(text)) {
-      items.push(text);
+  const item = mapped.forEach((item) => {
+    if (obj.isSnowflake(item)) {
+      items.push(item);
     } else {
-      items1.push(text);
+      items1.push(item);
     }
   });
   const items2 = [items1, items];

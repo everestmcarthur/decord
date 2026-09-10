@@ -1,17 +1,17 @@
-// Module ID: 6065
-// Function ID: 6066
+// Module ID: 6079
+// Function ID: 6080
 // Name: GameDiversityTier4LargeBadge
-// Dependencies: [21, 5587, 6066, 2]
+// Dependencies: [21, 5601, 6080, 2]
 // Exports: GameDiversityTier4LargeBadge
 
-// Module 6065 (GameDiversityTier4LargeBadge)
-import set from "set" /* 2 */;
+// Module 6079 (GameDiversityTier4LargeBadge)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import vanityUrlDefault from "vanityUrl" /* 6066 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6080 from "module_6080" /* 6080 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GameDiversityTier4LargeBadge.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/GameDiversityTier4LargeBadge.native.tsx");
 
 export const GameDiversityTier4LargeBadge = function GameDiversityTier4LargeBadge(width) {
   let num = width.width;
@@ -27,14 +27,14 @@ export const GameDiversityTier4LargeBadge = function GameDiversityTier4LargeBadg
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: vanityUrlDefault };
-  obj[1] = obj;
-  obj = { width: num * num3, height: num2 * num3 };
-  const items = [obj];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { width: num * num3, height: num2 * num3 });
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef6080 };
+  obj.source = obj2;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

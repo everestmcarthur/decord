@@ -1,13 +1,13 @@
-// Module ID: 5518
-// Function ID: 5519
-// Name: sortByMatchScore
+// Module ID: 5532
+// Function ID: 5533
+// Name: autocompleter/sortByMatchScore
 // Dependencies: [2]
 // Exports: default
 
-// Module 5518 (sortByMatchScore)
-import set from "set" /* 2 */;
+// Module 5532 (autocompleter/sortByMatchScore)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/autocompleter/sortByMatchScore.tsx");
+const result = size.fileFinishedImporting("modules/autocompleter/sortByMatchScore.tsx");
 
 export default function sortByMatchScore(score, score2) {
   if (score.score === score2.score) {

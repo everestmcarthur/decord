@@ -1,135 +1,126 @@
-// Module ID: 10639
-// Function ID: 10640
+// Module ID: 10666
+// Function ID: 10667
 // Name: UploadPreviewActionSheet
-// Dependencies: [32, 19, 17, 4901, 7151, 21, 4560, 576, 38, 5128, 1477, 1611, 4992, 4527, 5150, 10640, 4259, 6610, 5138, 11240, 11241, 7150, 6627, 4973, 4556, 1115, 8307, 10656, 5687, 5605, 11242, 11244, 1114, 5604, 11246, 9312, 5087, 11248, 4975, 4518, 2]
+// Dependencies: [32, 19, 17, 4915, 7165, 21, 4574, 576, 38, 5142, 1477, 1611, 5006, 4541, 5164, 10667, 4272, 6624, 5152, 11267, 11268, 7164, 6641, 4987, 4570, 1115, 8335, 10683, 5701, 5619, 11269, 11271, 1114, 5618, 11273, 9339, 5101, 11275, 4989, 4532, 2]
 // Exports: default
 
-// Module 10639 (UploadPreviewActionSheet)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { DraftType } from "handleChanged" /* 4901 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 7151 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10666 (UploadPreviewActionSheet)
+import nativeDefault from "native" /* 576 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 5152 */;
+import ImagePickerDefault from "ImagePicker" /* 5164 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9339 */;
+import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 11271 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ Image: c5, View: closure_6 } = get_ActivityIndicator);
-({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { contentContainer: { padding: 16 }, imageWrap: null, imageContainer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.md, width: "100%" };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { overflow: "hidden", alignSelf: "center", borderRadius: ThemesDefault.radii.md - ThemesDefault.space.PX_4 };
-let closure_11 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { overflow: "hidden", alignSelf: "center", borderRadius: ThemesDefault.radii.md - ThemesDefault.space.PX_4 };
-let result = require("set").fileFinishedImporting("modules/media_uploads/native/UploadPreviewActionSheet.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const DraftType = fn(4915).DraftType;
+const ACTION_SHEET_MAX_WIDTH = fn(7165).ACTION_SHEET_MAX_WIDTH;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { contentContainer: { padding: 16 }, imageWrap: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, width: "100%" }, imageContainer: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, width: "100%" };
+obj2.imageContainer = { overflow: "hidden", alignSelf: "center", borderRadius: nativeDefault.radii.md - nativeDefault.space.PX_4 };
+let closure_11 = createStyles.createStyles(obj2);
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/media_uploads/native/UploadPreviewActionSheet.tsx");
 
 export default function UploadPreviewActionSheet(onAdd) {
   onAdd = onAdd.onAdd;
   const onEdit = onAdd.onEdit;
   const onRemove = onAdd.onRemove;
   const channelId = onAdd.channelId;
-  ({ onClose: closure_4, disableAddDescription } = onAdd);
+  ({ onClose: noop, disableAddDescription } = onAdd);
   if (disableAddDescription === undefined) {
     disableAddDescription = false;
   }
   const upload = onAdd.upload;
-  closure_5 = undefined;
-  let id;
-  let isVideo;
-  let item;
-  let spoiler;
-  let width;
-  let callback;
-  const tmp = callback();
+  c11 = undefined;
+  const tmp = c11();
   closure_5 = tmp;
-  id = upload.id;
-  isVideo = upload.isVideo;
+  const id = upload.id;
+  const isVideo = upload.isVideo;
   ({ isImage, isThumbnail } = upload);
-  item = upload.item;
-  spoiler = upload.spoiler;
+  const item = upload.item;
+  const spoiler = upload.spoiler;
   onEdit(onRemove[8])(item.platform === onAdd(onRemove[9]).UploadPlatform.REACT_NATIVE, "Upload must be a React Native upload item.");
-  width = onEdit(onRemove[10])().width;
+  const width = onEdit(onRemove[10])().width;
   const bottom = onEdit(onRemove[11])().bottom;
   onEdit(onRemove[12])(() => () => {
-    if (closure_4 != null) {
+    if (closure_1_4 != null) {
       tmp();
     }
   });
-  let obj = React;
   const items = [width, item, tmp];
-  const size = React.useMemo(() => {
+  let size = noop.useMemo(() => {
     ({ height, width } = item);
-    width = Math.min(width, item) - 2 * closure_5.contentContainer.padding - 2 * closure_5.imageWrap.padding;
+    const width1 = Math.min(width, ACTION_SHEET_MAX_WIDTH) - 2 * closure_5.contentContainer.padding - 2 * closure_5.imageWrap.padding;
     if (null != height) {
       if (null != width) {
         if (0 !== height) {
           if (0 !== width) {
             const _Math = Math;
-            const result = width / Math.max(width, height);
-            const obj = { width: null, height: null };
-            obj[0] = width * result;
-            obj[1] = height * result;
-            return obj;
+            const result = width1 / Math.max(width, height);
+            const size = { width: width * result, height: height * result };
+            return size;
           }
         }
         return { width: 300, height: 300 };
       }
     }
-    return { width, height: width };
+    return { width: width1, height: width1 };
   }, items);
   const items1 = [onRemove, id];
   const items2 = [onAdd];
-  callback = React.useCallback(() => {
-    onEdit(onRemove[13]).hideActionSheet();
+  const callback = noop.useCallback(() => {
+    ActionSheetActionCreatorsDefault.hideActionSheet();
     if (onRemove != null) {
       tmp2(id);
     }
   }, items1);
   const items3 = [onEdit, item];
-  const callback1 = React.useCallback(() => {
-    onEdit(onRemove[13]).hideActionSheet();
+  const callback1 = noop.useCallback(() => {
+    ActionSheetActionCreatorsDefault.hideActionSheet();
     if (onAdd != null) {
       onAdd();
     }
   }, items2);
   const items4 = [isVideo, item];
-  const callback2 = React.useCallback(() => {
-    let obj = onEdit(onRemove[13]);
-    obj.hideActionSheet();
+  const callback2 = noop.useCallback(() => {
+    ActionSheetActionCreatorsDefault.hideActionSheet();
     ({ width, height, uri } = item);
-    obj = { uri, freeStyleCropEnabled: true, width: null, height: null };
+    const size = { uri, freeStyleCropEnabled: true, width: null, height: null };
     let tmp2;
     if (0 !== width) {
       tmp2 = width;
     }
-    obj[2] = tmp2;
+    size.width = tmp2;
     let tmp3;
     if (0 !== height) {
       tmp3 = height;
     }
-    obj[3] = tmp3;
-    const obj2 = onEdit(onRemove[14]);
-    const launchCropperResult = onEdit(onRemove[14]).launchCropper(obj);
-    onEdit(onRemove[14]).launchCropper(obj).then((path) => {
-      if (closure_1 != null) {
-        tmp(closure_1_0(closure_1_2[15]).cropResultToUploadItem(path));
-        const obj = closure_1_0(closure_1_2[15]);
+    size.height = tmp3;
+    const launchCropperResult = ImagePickerDefault.launchCropper(size);
+    ImagePickerDefault.launchCropper(size).then((result) => {
+      if (onEdit != null) {
+        tmp(onAdd(onRemove[15]).cropResultToUploadItem(result));
+        const obj = onAdd(onRemove[15]);
       }
-    }).catch((code) => {
-      if ("E_PICKER_CANCELLED" !== code.code) {
-        let obj = callback2(4259);
-        obj = { key: "CROP_ERROR", IconComponent: null, content: null };
-        obj[1] = callback(6610).CircleErrorIcon;
-        obj[2] = code.message;
-        obj.open(obj);
+    }).catch((error) => {
+      if ("E_PICKER_CANCELLED" !== error.code) {
+        const obj2 = { key: "CROP_ERROR", IconComponent: onAdd(6624).CircleErrorIcon, content: error.message };
+        onEdit(4272).open(obj2);
+        const obj = onEdit(4272);
       }
     });
   }, items3);
-  const memo = React.useMemo(() => {
-    const obj = onAdd(onRemove[18]);
-    return obj.getCaptionLabel(onAdd(onRemove[18]).getType(item.uri), isVideo, item);
+  const memo = noop.useMemo(() => {
+    const obj = utils_UploadUtils;
+    return obj.getCaptionLabel(utils_UploadUtils.getType(item.uri), isVideo, item);
   }, items4);
   let tmp13 = isImage;
   if (isImage) {
@@ -139,7 +130,8 @@ export default function UploadPreviewActionSheet(onAdd) {
   if (!(undefined !== isThumbnail && isThumbnail)) {
     tmp14 = !onAdd.disableSpoiler;
   }
-  let tmp22Result4 = tmp3(tmp4[19])(channelId, upload);
+  let tmp22Result11 = tmp3(tmp4[19])(channelId, upload);
+  let obj = noop;
   const tmp5 = onEdit(onRemove[8]);
   const tmp16 = onEdit(onRemove[20])(channelId, upload);
   [tmp18, c11] = channelId(obj.useState(undefined), 2);
@@ -152,11 +144,11 @@ export default function UploadPreviewActionSheet(onAdd) {
   if (isImage) {
     isImage = null != onEdit;
   }
-  obj = { scrollable: true, startHeight: sum2, children: null };
-  obj = { contentContainerStyle: null, children: null };
+  let obj2 = { scrollable: true, startHeight: sum2, children: null };
+  const obj3 = { contentContainerStyle: null, children: null };
   const tmp17 = channelId(obj.useState(undefined), 2);
-  obj[0] = { padding: onEdit(onRemove[7]).space.PX_16, paddingBottom: bottom };
-  let obj2 = {
+  obj3.contentContainerStyle = { padding: onEdit(onRemove[7]).space.PX_16, paddingBottom: bottom };
+  const obj5 = {
     spacing: 16,
     onLayout(nativeEvent) {
       _undefined(nativeEvent.nativeEvent.layout.height);
@@ -164,122 +156,118 @@ export default function UploadPreviewActionSheet(onAdd) {
     children: null
   };
   const items5 = [spoiler(onAdd(onRemove[24]).Text, { variant: "text-md/semibold", children: item.filename }), , , ];
-  const obj4 = { style: tmp.imageWrap, children: null };
-  const obj5 = { style: items6, children: null };
-  items6 = [tmp.imageContainer, { width: size.width, height: size.height }];
-  obj1 = { padding: onEdit(onRemove[7]).space.PX_16, paddingBottom: bottom };
-  const obj3 = { variant: "text-md/semibold", children: item.filename };
+  const obj7 = { style: tmp.imageWrap, children: null };
+  const obj8 = { style: null, children: null };
+  const items6 = [tmp.imageContainer, { width: size.width, height: size.height }];
+  obj8.style = items6;
+  const obj4 = { padding: onEdit(onRemove[7]).space.PX_16, paddingBottom: bottom };
+  const obj6 = { variant: "text-md/semibold", children: item.filename };
   if (tmp6Result.isIOS()) {
     if (isVideo) {
       const uri = item.uri;
       if (uri.startsWith("file://")) {
-        const obj6 = { style: null, source: null, muted: true, paused: true, preventsDisplaySleepDuringVideoPlayback: false };
-        ({ width: obj12[0], height: obj12[1] } = size);
-        obj6[0] = { width: null, height: null };
-        const obj8 = { uri: null };
-        obj8[0] = item.uri;
-        obj6[1] = obj8;
-        let tmp22Result = tmp22(tmp6(tmp4[26]).VideoComponent, obj6);
-        const obj7 = { width: null, height: null };
+        const obj9 = { style: null, source: null, muted: true, paused: true, preventsDisplaySleepDuringVideoPlayback: false };
+        const size1 = { width: null, height: null };
+        ({ width: obj12.width, height: obj12.height } = size);
+        obj9.style = size1;
+        const obj10 = { uri: item.uri };
+        obj9.source = obj10;
+        let tmp22Result = tmp22(tmp6(tmp4[26]).VideoComponent, obj9);
       }
       const items7 = [tmp22Result, ];
-      tmp22Result = null != memo;
-      if (tmp22Result) {
-        tmp22Result = "" !== memo;
+      let tmp22Result7 = null != memo;
+      if (tmp22Result7) {
+        tmp22Result7 = "" !== memo;
       }
-      if (tmp22Result) {
-        const obj9 = { label: null };
-        obj9[0] = memo;
-        tmp22Result = tmp22(tmp6(tmp4[27]).Caption, obj9);
+      if (tmp22Result7) {
+        const obj11 = { label: memo };
+        tmp22Result7 = tmp22(tmp6(tmp4[27]).Caption, obj11);
       }
-      items7[1] = tmp22Result;
-      obj5[1] = items7;
-      obj4[1] = tmp23(tmp24, obj5);
-      items5[1] = tmp22(tmp24, obj4);
+      items7[1] = tmp22Result7;
+      obj8.children = items7;
+      obj7.children = tmp23(tmp24, obj8);
+      items5[1] = tmp22(tmp24, obj7);
       if (!tmp13) {
         if (!tmp14) {
-          if (!tmp22Result4) {
+          if (!tmp22Result11) {
             let tmp23Result = null;
           }
           items5[2] = tmp23Result;
           if (null != onRemove) {
-            const obj10 = { icon: null, text: null, onPress: null, variant: "destructive" };
-            obj10[0] = tmp22(tmp6(tmp4[39]).TrashIcon, { size: "sm", color: "control-primary-text-default" });
+            const obj13 = { icon: tmp22(tmp6(tmp4[39]).TrashIcon, { size: "sm", color: "control-primary-text-default" }), text: null, onPress: null, variant: "destructive" };
             const intl6 = tmp6(tmp4[32]).intl;
-            obj10[1] = intl6.string(tmp6(tmp4[32]).t["40jBO/"]);
-            obj10[2] = callback;
-            let tmp22Result1 = tmp22(tmp6(tmp4[38]).Button, obj10);
+            obj13.text = intl6.string(tmp6(tmp4[32]).t["40jBO/"]);
+            obj13.onPress = callback;
+            let tmp22Result8 = tmp22(tmp6(tmp4[38]).Button, obj13);
           } else {
-            tmp22Result1 = null;
+            tmp22Result8 = null;
             if (null != onAdd) {
-              const obj11 = { icon: null, text: null, onPress: null };
-              obj11[0] = tmp22(tmp6(tmp4[30]).ImageFileIcon, { size: "sm", color: "control-primary-text-default" });
+              const obj14 = { icon: tmp22(tmp6(tmp4[30]).ImageFileIcon, { size: "sm", color: "control-primary-text-default" }), text: null, onPress: null };
               const intl5 = tmp6(tmp4[32]).intl;
-              obj11[1] = intl5.string(tmp6(tmp4[32]).t.s7oPyG);
-              obj11[2] = callback1;
-              tmp22Result1 = tmp22(tmp6(tmp4[38]).Button, obj11);
+              obj14.text = intl5.string(tmp6(tmp4[32]).t.s7oPyG);
+              obj14.onPress = callback1;
+              tmp22Result8 = tmp22(tmp6(tmp4[38]).Button, obj14);
             }
           }
-          items5[3] = tmp22Result1;
-          obj2[2] = items5;
-          obj[1] = tmp23(tmp6(tmp4[23]).Stack, obj2);
-          obj[2] = tmp22(tmp6(tmp4[22]).BottomSheetScrollView, obj);
-          return tmp22(tmp6(tmp4[21]).BottomSheet, obj);
+          items5[3] = tmp22Result8;
+          obj5.children = items5;
+          obj3.children = tmp23(tmp6(tmp4[23]).Stack, obj5);
+          obj2.children = tmp22(tmp6(tmp4[22]).BottomSheetScrollView, obj3);
+          return tmp22(tmp6(tmp4[21]).BottomSheet, obj2);
         }
       }
-      let tmp22Result2 = null;
+      let tmp22Result9 = null;
       if (tmp13) {
-        const obj12 = { icon: null, onPress: null, label: null, arrow: true };
-        obj12[0] = tmp22(tmp6(tmp4[30]).ImageFileIcon, {});
-        obj12[1] = function onPress() {
-          let obj = onEdit(onRemove[31]);
-          obj = { source: item, channelId, id };
-          return obj.open(obj);
+        const obj15 = {
+          icon: tmp22(tmp6(tmp4[30]).ImageFileIcon, {}),
+          onPress() {
+                  return AddImageDescriptionModalActionCreatorsDefault.open({ source: item, channelId, id });
+                },
+          label: null,
+          arrow: true
         };
         const intl = tmp6(tmp4[32]).intl;
-        obj12[2] = intl.string(tmp6(tmp4[32]).t["5S2AK+"]);
-        tmp22Result2 = tmp22(tmp6(tmp4[29]).TableRow, obj12);
+        obj15.label = intl.string(tmp6(tmp4[32]).t["5S2AK+"]);
+        tmp22Result9 = tmp22(tmp6(tmp4[29]).TableRow, obj15);
       }
-      const items8 = [tmp22Result2, , , ];
-      let tmp22Result3 = null;
+      const items8 = [tmp22Result9, , , ];
+      let tmp22Result10 = null;
       if (tmp14) {
-        const obj13 = { icon: null, onPress: null, label: null, checked: null };
-        obj13[0] = tmp22(tmp6(tmp4[34]).SpoilerIcon, {});
-        obj13[1] = function onPress() {
-          let obj = onEdit(onRemove[13]);
-          obj.hideActionSheet();
-          obj = { spoiler: !spoiler };
-          onEdit(onRemove[35]).update(channelId, id, isVideo.ChannelMessage, obj);
+        const obj16 = {
+          icon: tmp22(tmp6(tmp4[34]).SpoilerIcon, {}),
+          onPress() {
+                  ActionSheetActionCreatorsDefault.hideActionSheet();
+                  UploadAttachmentActionCreatorsDefault.update(channelId, id, DraftType.ChannelMessage, { spoiler: !spoiler });
+                },
+          label: null,
+          checked: null
         };
         const intl2 = tmp6(tmp4[32]).intl;
-        obj13[2] = intl2.string(tmp6(tmp4[32]).t["gsI+xC"]);
-        obj13[3] = spoiler;
-        tmp22Result3 = tmp22(tmp6(tmp4[33]).TableCheckboxRow, obj13);
+        obj16.label = intl2.string(tmp6(tmp4[32]).t["gsI+xC"]);
+        obj16.checked = spoiler;
+        tmp22Result10 = tmp22(tmp6(tmp4[33]).TableCheckboxRow, obj16);
       }
-      items8[1] = tmp22Result3;
-      if (tmp22Result4) {
-        const obj14 = { icon: null, label: null, onPress: null, checked: null };
-        obj14[0] = tmp22(tmp6(tmp4[36]).ImageIcon, {});
+      items8[1] = tmp22Result10;
+      if (tmp22Result11) {
+        const obj17 = { icon: tmp22(tmp6(tmp4[36]).ImageIcon, {}), label: null, onPress: null, checked: null };
         const intl3 = tmp6(tmp4[32]).intl;
-        obj14[1] = intl3.string(tmp6(tmp4[32]).t.ews2pj);
-        obj14[2] = tmp16;
-        obj14[3] = tmp2;
-        tmp22Result4 = tmp22(tmp6(tmp4[33]).TableCheckboxRow, obj14);
+        obj17.label = intl3.string(tmp6(tmp4[32]).t.ews2pj);
+        obj17.onPress = tmp16;
+        obj17.checked = tmp2;
+        tmp22Result11 = tmp22(tmp6(tmp4[33]).TableCheckboxRow, obj17);
       }
-      items8[2] = tmp22Result4;
-      let tmp22Result5 = null;
+      items8[2] = tmp22Result11;
+      let tmp22Result12 = null;
       if (isImage) {
-        const obj15 = { icon: null, onPress: null, label: null, arrow: true };
-        obj15[0] = tmp22(tmp6(tmp4[37]).PencilSparkleIcon, {});
-        obj15[1] = callback2;
+        const obj18 = { icon: tmp22(tmp6(tmp4[37]).PencilSparkleIcon, {}), onPress: callback2, label: null, arrow: true };
         const intl4 = tmp6(tmp4[32]).intl;
-        obj15[2] = intl4.string(tmp6(tmp4[32]).t.b0y3DL);
-        tmp22Result5 = tmp22(tmp6(tmp4[29]).TableRow, obj15);
+        obj18.label = intl4.string(tmp6(tmp4[32]).t.b0y3DL);
+        tmp22Result12 = tmp22(tmp6(tmp4[29]).TableRow, obj18);
       }
-      const obj16 = { hasIcons: true, children: null };
-      items8[3] = tmp22Result5;
-      obj16[1] = items8;
-      tmp23Result = tmp23(tmp6(tmp4[28]).TableRowGroup, obj16);
+      const obj19 = { hasIcons: true, children: null };
+      items8[3] = tmp22Result12;
+      obj19.children = items8;
+      tmp23Result = tmp23(tmp6(tmp4[28]).TableRowGroup, obj19);
     }
   }
   tmp22Result = tmp22(closure_5, { style: { width: size.width, height: size.height }, source: item });

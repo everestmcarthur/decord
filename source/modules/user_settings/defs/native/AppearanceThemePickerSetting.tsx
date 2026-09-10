@@ -1,35 +1,34 @@
-// Module ID: 15268
-// Function ID: 15269
-// Name: route
-// Dependencies: [1183, 7975, 1074, 504, 11473, 1114, 15264, 15269, 2]
+// Module ID: 15297
+// Function ID: 15298
+// Name: AppearanceThemePickerSetting
+// Dependencies: [1183, 7989, 1074, 504, 11500, 1114, 15293, 15298, 2]
 
-// Module 15268 (route)
+// Module 15297 (AppearanceThemePickerSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_2 from "handleThemeChange" /* 1183 */;
-import createToggle from "createToggle" /* 11473 */;
+import util from "util" /* 1114 */;
+import ThemeStore from "ThemeStore" /* 1183 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const SettingBuilders = fn(11500);
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Ksh3ik);
+    const intl = util.intl;
+    return intl.string(util.t.Ksh3ik);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
+  parent: fn(7989).MobileUserSettings.APPEARANCE,
   usePredicate: function useIsSingleThemePickerVisible() {
-    const items = [closure_2];
+    const items = [ThemeStore];
     return !initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   },
-  useTrailing: require("useAppearanceSettingTrailing").useAppearanceSettingTrailing,
-  screen: createToggle
-};
-createToggle = {
-  route: require("ME").UserSettingsSections.APPEARANCE_THEME_PICKER,
-  getComponent() {
-    return require(15269) /* ThemeTypes */.default;
+  useTrailing: fn(15293).useAppearanceSettingTrailing,
+  screen: {
+    route: fn(1074).UserSettingsSections.APPEARANCE_THEME_PICKER,
+    getComponent() {
+      return require("SettingsAppearanceThemePickerScreen").default;
+    }
   }
-};
-createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AppearanceThemePickerSetting.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AppearanceThemePickerSetting.tsx");
 
-export default createToggle;
+export default route;

@@ -1,15 +1,15 @@
-// Module ID: 9050
-// Function ID: 9051
-// Name: isLimitedAccessErrorCode
+// Module ID: 9077
+// Function ID: 9078
+// Name: UserLimitedAccessUtils
 // Dependencies: [1074, 2]
 // Exports: isLimitedAccessErrorCode
 
-// Module 9050 (isLimitedAccessErrorCode)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 9077 (UserLimitedAccessUtils)
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const AbortCodes = ME.AbortCodes;
-const result = set.fileFinishedImporting("modules/user_limited_access/UserLimitedAccessUtils.tsx");
+const AbortCodes = Constants.AbortCodes;
+const result = size.fileFinishedImporting("modules/user_limited_access/UserLimitedAccessUtils.tsx");
 
 export const isLimitedAccessErrorCode = function isLimitedAccessErrorCode(arg0, arg1) {
   let tmp = arg0 >= 400;

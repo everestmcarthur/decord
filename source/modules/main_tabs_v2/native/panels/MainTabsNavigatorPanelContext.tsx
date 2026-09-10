@@ -1,20 +1,22 @@
-// Module ID: 16013
-// Function ID: 16014
-// Name: context
-// Dependencies: [19, 6655, 7074, 2]
+// Module ID: 16043
+// Function ID: 16044
+// Name: MainTabsNavigatorPanelContext
+// Dependencies: [19, 6669, 7088, 2]
 
-// Module 16013 (context)
-import importAllResult from "noop" /* 19 */;
-import { Gesture } from "LegacyBaseButton" /* 6655 */;
-import createFakeSharedValue from "createFakeSharedValue" /* 7074 */;
+// Module 16043 (MainTabsNavigatorPanelContext)
+import noop from "module_19" /* 19 */;
 
 const obj = { gesture: null, disallowGesture: null, translateX: null };
-obj[0] = Gesture.Pan();
-obj[1] = createFakeSharedValue.createFakeSharedValue(false);
-obj[2] = require("module_0");
-const context = importAllResult.createContext(obj);
-const context1 = importAllResult.createContext(undefined);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/panels/MainTabsNavigatorPanelContext.tsx");
+const Gesture = fn(6669).Gesture;
+obj.gesture = Gesture.Pan();
+let ReanimatedHelperTypes = fn(7088);
+obj.disallowGesture = ReanimatedHelperTypes.createFakeSharedValue(false);
+ReanimatedHelperTypes = fn(7088);
+obj.translateX = ReanimatedHelperTypes.createFakeSharedValue(0);
+const context = noop.createContext(obj);
+const context1 = noop.createContext(undefined);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/MainTabsNavigatorPanelContext.tsx");
 
 export default context;
 export const MainTabsChannelScreenStackContext = context1;

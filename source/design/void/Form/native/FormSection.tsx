@@ -1,33 +1,28 @@
-// Module ID: 8607
-// Function ID: 8608
+// Module ID: 8635
+// Function ID: 8636
 // Name: FormSection
-// Dependencies: [19, 17, 1182, 21, 4560, 576, 5686, 7137, 8604, 5687, 8608, 1115, 2]
+// Dependencies: [19, 17, 1182, 21, 4574, 576, 5700, 7151, 8632, 5701, 8636, 1115, 2]
 // Exports: default
 
-// Module 8607 (FormSection)
-import ThemesDefault from "Themes" /* 576 */;
-import context from "context" /* 5686 */;
-import DividerDefault from "Divider" /* 8604 */;
-import FormTitleDefault from "FormTitle" /* 8608 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { TitleStyleType } from "semanticColor" /* 1182 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 8635 (FormSection)
+import nativeDefault from "native" /* 576 */;
+import RedesignCompat from "RedesignCompat" /* 5700 */;
+import FormRowDefault from "FormRow" /* 7151 */;
+import FormDividerDefault from "FormDivider" /* 8632 */;
+import FormTitleDefault from "FormTitle" /* 8636 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ View: c4, StyleSheet, Platform } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { titledSectionHeader: null, titledSectionNoBorder: null, titledSectionNoBorderOrMargin: null, emptySectionHeader: null, sectionBody: null, sectionBodyIOSBorder: null };
-createCacheKey = { borderTopWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, marginTop: 16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginTop: 24 };
-createCacheKey[2] = {};
-createCacheKey[3] = { marginTop: 24 };
-createCacheKey[4] = {};
-createCacheKey[5] = {};
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("design/void/Form/native/FormSection.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, StyleSheet, Platform } = get_ActivityIndicator);
+const TitleStyleType = fn(1182).TitleStyleType;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { titledSectionHeader: { borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: 16 }, titledSectionNoBorder: { marginTop: 24 }, titledSectionNoBorderOrMargin: {}, emptySectionHeader: { marginTop: 24 }, sectionBody: {}, sectionBodyIOSBorder: {} };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/Form/native/FormSection.tsx");
 
 export default function FormSection(arg0) {
   ({ children, inset } = arg0);
@@ -41,33 +36,29 @@ export default function FormSection(arg0) {
   }
   ({ error, hint, hasIcons } = arg0);
   ({ titleViewStyle, titleTextStyle, sectionBodyStyle, wrapperStyle } = arg0);
-  const tmp2 = callback2();
-  let obj = React;
-  if (React.useContext(context.RedesignCompatContext)) {
+  const tmp2 = closure_8();
+  if (noop.useContext(RedesignCompat.RedesignCompatContext)) {
     const Children = obj.Children;
     const toArrayResult = Children.toArray(children);
     const found = toArrayResult.filter((type) => {
-      let isValidElementResult = closure_3.isValidElement(type);
+      let isValidElementResult = noop.isValidElement(type);
       if (isValidElementResult) {
-        isValidElementResult = type.type !== callback(8604);
+        isValidElementResult = type.type !== FormDividerDefault;
       }
       return isValidElementResult;
     });
-    obj = { style: null, children: null };
-    obj[0] = { marginBottom: 24 };
-    obj = { style: null, children: null };
-    obj[0] = { paddingHorizontal: 12 };
-    obj1 = { title: null, hasIcons: null, hasTrailingText: null, children: null };
-    obj1[0] = title;
+    const obj2 = { style: { marginBottom: 24 }, children: null };
+    const obj3 = { style: { paddingHorizontal: 12 }, children: null };
+    const obj4 = { title, hasIcons: null, hasTrailingText: null, children: null };
     if (hasIcons == null) {
       hasIcons = tmp17;
     }
-    obj1[1] = hasIcons;
+    obj4.hasIcons = hasIcons;
     const element = found[found.length - 1];
     let flag = false;
     if (obj.isValidElement(element)) {
       flag = false;
-      if (element.type !== DividerDefault) {
+      if (element.type !== FormDividerDefault) {
         flag = false;
         if (null != element.props) {
           const props = element.props;
@@ -76,20 +67,18 @@ export default function FormSection(arg0) {
         }
       }
     }
-    obj1[2] = flag;
-    obj1[3] = found;
-    obj[1] = callback(tmp3(5687).TableRowGroup, obj1);
-    const items = [callback(closure_4, obj), ];
+    obj4.hasTrailingText = flag;
+    obj4.children = found;
+    obj3.children = timestampProducer(tmp3(5701).TableRowGroup, obj4);
+    const items = [timestampProducer(React4, obj3), ];
     let tmp20Result = null;
     if (null != hint) {
-      const obj2 = { style: null, children: null };
-      obj2[0] = { marginTop: 8 };
-      obj2[1] = hint;
-      tmp20Result = tmp20(tmp19, obj2);
+      const obj5 = { style: { marginTop: 8 }, children: hint };
+      tmp20Result = tmp20(tmp19, obj5);
     }
     items[1] = tmp20Result;
-    obj[1] = items;
-    return closure_7(closure_4, obj);
+    obj2.children = items;
+    return React5(React4, obj2);
   } else {
     let tmp6;
     if (null != title) {
@@ -98,18 +87,15 @@ export default function FormSection(arg0) {
         const _HermesInternal = HermesInternal;
         str2 = "(" + error + ")";
       }
-      const obj3 = { textStyle: null, viewStyle: null, title: null, icon: null, error: null, thinTitle: null, uppercaseTitle: null, inset: null };
-      obj3[0] = titleTextStyle;
-      obj3[1] = titleViewStyle;
+      const obj6 = { textStyle: titleTextStyle, viewStyle: titleViewStyle, title: null, icon: null, error: null, thinTitle: null, uppercaseTitle: null, inset: null };
       const _HermesInternal2 = HermesInternal;
-      obj3[2] = "" + title + " " + str2;
-      obj3[3] = icon;
-      obj3[4] = null != error;
-      obj3[5] = thinTitle;
-      obj3[6] = uppercaseTitle;
-      obj3[7] = inset;
-      tmp6 = callback(FormTitleDefault, obj3);
-      const tmp10 = FormTitleDefault;
+      obj6.title = "" + title + " " + str2;
+      obj6.icon = icon;
+      obj6.error = null != error;
+      obj6.thinTitle = thinTitle;
+      obj6.uppercaseTitle = uppercaseTitle;
+      obj6.inset = inset;
+      tmp6 = timestampProducer(FormTitleDefault, obj6);
     }
     const emptySectionHeader = tmp2.emptySectionHeader;
     let titledSectionNoBorderOrMargin = emptySectionHeader;
@@ -126,31 +112,31 @@ export default function FormSection(arg0) {
         }
       }
     }
-    const obj4 = { style: null, accessibilityRole: null, accessibilityLabel: null, children: null };
+    const obj7 = { style: null, accessibilityRole: null, accessibilityLabel: null, children: null };
     const items1 = [titledSectionNoBorderOrMargin, wrapperStyle];
-    obj4[0] = items1;
+    obj7.style = items1;
     if (accessibilityRole == null) {
       accessibilityRole = "list";
     }
-    obj4[1] = accessibilityRole;
+    obj7.accessibilityRole = accessibilityRole;
     if (accessibilityLabel == null) {
       accessibilityLabel = title;
     }
-    obj4[2] = accessibilityLabel;
+    obj7.accessibilityLabel = accessibilityLabel;
     const items2 = [tmp6, description, , ];
     const items3 = [tmp2.sectionBody, , ];
     let sectionBodyIOSBorder = !inset;
     if (!inset) {
       sectionBodyIOSBorder = tmp2.sectionBodyIOSBorder;
     }
-    const obj5 = { style: null, children: null };
+    const obj8 = { style: null, children: null };
     items3[1] = sectionBodyIOSBorder;
     items3[2] = sectionBodyStyle;
-    obj5[0] = items3;
-    obj5[1] = children;
-    items2[2] = callback(closure_4, obj5);
+    obj8.style = items3;
+    obj8.children = children;
+    items2[2] = timestampProducer(React4, obj8);
     items2[3] = hint;
-    obj4[3] = items2;
-    return closure_7(closure_4, obj4);
+    obj7.children = items2;
+    return React5(React4, obj7);
   }
 };

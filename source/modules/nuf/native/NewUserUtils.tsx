@@ -1,350 +1,291 @@
-// Module ID: 17450
-// Function ID: 17451
-// Name: _shouldSkipContactSyncStep
-// Dependencies: [5, 17, 15961, 5281, 1371, 1074, 12682, 4770, 12684, 1115, 9825, 573, 1484, 12687, 4417, 17451, 4763, 1100, 12750, 2]
+// Module ID: 17481
+// Function ID: 17482
+// Name: NewUserUtils
+// Dependencies: [5, 17, 15991, 5295, 1371, 1074, 12708, 4784, 12710, 1115, 9852, 573, 1484, 12713, 4431, 17482, 4777, 1100, 12776, 2]
 // Exports: continueToNextStep, getKeyForOnboardingStep
 
-// Module 17450 (_shouldSkipContactSyncStep)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import _modDef4763 from "module_4763" /* 4763 */;
-import trackNUFStep from "trackNUFStep" /* 12687 */;
-import NEW_USER_MODAL_KEY from "NEW_USER_MODAL_KEY" /* 17451 */;
-import importDefaultResult from "asyncGeneratorStep" /* 5 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initialize" /* 15961 */;
-import closure_6 from "set" /* 5281 */;
-import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import ME from "ME" /* 1074 */;
-import { ContactPermissions } from "ContactSyncLandingPage" /* 12682 */;
-import { NotificationAuthorizationStatus as closure_11 } from "NativePermissionStatus" /* 4770 */;
+// Module 17481 (NewUserUtils)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import router_utils from "router_utils" /* 1100 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import Link from "Link" /* 1484 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4431 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12710 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12713 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 12776 */;
+import NewUserModalTypes from "NewUserModalTypes" /* 17482 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import ParentalConsentStore from "ParentalConsentStore" /* 15991 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5295 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-function _shouldSkipContactSyncStep() {
-  const self = this;
-  const tmp = importDefaultResult(function*() {
-    if (dependencyMap === 2) {
-      dependencyMap = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        dependencyMap = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            dependencyMap = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            dependencyMap = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const callback = tmp4;
-            let obj2 = closure_1_0(12684);
-            const result = obj2.isContactSyncAvailable();
-            if (result) {
-              c1 = 1;
-              dependencyMap = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(12684).checkContactPermissions();
-              return obj1;
-            } else {
-              dependencyMap = 3;
-            }
-          }
-        } else if (arg0 === 1) {
-          dependencyMap = 3;
-          throw arg1;
-        } else if (arg0 !== 2) {
-          if (arg1 === constants.UNAUTHORIZED) {
-            obj = callback(1115);
-            obj.isIOS();
-          }
-        }
-        dependencyMap = 3;
-        obj2 = { value: null, done: true };
-        obj2[0] = arg1;
-        return obj2;
-      } catch (tmp17) {
-        dependencyMap = tmp;
-        throw tmp17;
-      }
-    }
-  });
-  closure_12 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function lastStepComplete(STEP_GUILD_TEMPLATE) {
-  trackNUFStep.trackNUFStep(STEP_GUILD_TEMPLATE, "NUF Complete");
-  const obj = trackNUFStep;
-  if (obj2.isModalOpen(NEW_USER_MODAL_KEY.NEW_USER_MODAL_KEY)) {
-    _modDef4763.popWithKey(tmp(17451).NEW_USER_MODAL_KEY);
-    const obj3 = _modDef4763;
-  }
-  let tmpResult = tmp(1100);
-  tmpResult.transitionTo(constants.ME, { navigationReplace: true });
-  tmpResult = tmp(12750);
-  const result = tmpResult.setNewUserFlowCompleted();
-}
-function getNextOnboardingStep(flag, first1, first) {
-  const self = this;
-  const apply = _getNextOnboardingStep.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _getNextOnboardingStep() {
-  const self = this;
-  const tmp = importDefaultResult(() => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c6 = 0;
-    c7 = 0;
-    const iter = (function*() {
-      if (transitionStep2 === 2) {
-        transitionStep2 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          transitionStep2 = 2;
-          if (0 === v0) {
-            if (arg0 === 1) {
-              transitionStep2 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              transitionStep2 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let key = tmp5;
-              closure_4 = tmp2;
-              let flag;
-              let callback;
-              dependencyMap = undefined;
-              if (flag === undefined) {
-                flag = false;
-              }
-              closure_3 = undefined;
-              closure_4 = undefined;
-              key = undefined;
-              v0 = undefined;
-              transitionStep2 = undefined;
-              v0 = 1;
-              transitionStep2 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              transitionStep2 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              transitionStep2 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              key = undefined;
-              if (length[callback] != null) {
-                key = tmp76.key;
-              }
-              closure_3 = key;
-              if (key == null) {
-                closure_3 = "registration";
-              }
-              const sum = dependencyMap + 1;
-              dependencyMap = sum;
-              if (sum >= length.length) {
-                callback2(closure_3);
-                let obj2 = { lastShownStepIndex: null, onboardingStepIndex: null, continueNavigation: false };
-                obj2[0] = callback;
-                obj2[1] = dependencyMap;
-                transitionStep2 = 3;
-                let obj3 = { value: null, done: true };
-                obj3[0] = obj2;
-                return obj3;
-              } else {
-                closure_4 = length[dependencyMap];
-                key = closure_4.key;
-                v0 = closure_4.shouldShowStep;
-                transitionStep2 = closure_4.transitionStep;
-                v0 = 2;
-                transitionStep2 = 1;
-                const obj4 = { value: null, done: false };
-                obj4[0] = v0();
-                return obj4;
-              }
-            }
-          } else if (2 === tmp5) {
-            if (arg0 === 1) {
-              transitionStep2 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              transitionStep2 = 3;
-              const obj5 = { value: null, done: true };
-              obj5[0] = arg1;
-              return obj5;
-            } else if (arg1) {
-              callback = dependencyMap;
-              obj3 = flag(12687);
-              const obj6 = { skip: null };
-              obj6[0] = flag;
-              obj3.trackNUFStep(closure_3, key, obj6);
-              if (null != transitionStep2) {
-                callback2(key);
-                obj2 = callback(573);
-                obj2.wait(transitionStep2);
-                const obj7 = { lastShownStepIndex: null, onboardingStepIndex: null, continueNavigation: false };
-                obj7[0] = callback;
-                obj7[1] = dependencyMap;
-                let obj8 = obj7;
-              } else {
-                obj8 = { lastShownStepIndex: null, onboardingStepIndex: null, continueNavigation: null };
-                obj8[0] = callback;
-                obj8[1] = dependencyMap;
-                let transitionStep;
-                if (length[dependencyMap] != null) {
-                  transitionStep = tmp26.transitionStep;
-                }
-                obj8[2] = null == transitionStep;
-              }
-            } else {
-              v0 = 3;
-              transitionStep2 = 1;
-              const obj9 = { value: null, done: false };
-              obj9[0] = callback3(flag, callback, dependencyMap);
-              return obj9;
-            }
-          } else if (arg0 === 1) {
-            transitionStep2 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            transitionStep2 = 3;
-            const obj10 = { value: null, done: true };
-            obj10[0] = arg1;
-            return obj10;
-          } else {
-            transitionStep2 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp64) {
-          transitionStep2 = tmp;
-          throw tmp64;
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_18 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-let c3 = importDefaultResult;
-({ PlatformTypes: closure_8, Routes: c9 } = ME);
-let obj = {
-  key: "choose-avatar",
-  shouldShowStep() {
-    currentUser = currentUser.getCurrentUser();
-    let avatar;
-    if (currentUser != null) {
-      avatar = currentUser.avatar;
-    }
-    return null == avatar;
-  }
-};
-obj = { key: "enable-notification", shouldShowStep: null };
-let closure_13 = importDefaultResult(function*() {
-  if (table === 2) {
-    table = 3;
-    HermesBuiltin.throwTypeError();
+require = fn;
+let closure_12 = async function _shouldSkipContactSyncStep(arg0, value) {
+  if (c2 === 2) {
+    c2 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
   } else if (tmp3 === 3) {
     if (arg0 === 1) {
-      throw arg1;
+      throw value;
     } else if (arg0 === 2) {
-      let obj = { value: null, done: true };
-      obj[0] = arg1;
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
   } else {
     try {
-      table = 2;
+      c2 = 2;
       if (0 === c1) {
         if (arg0 === 1) {
-          table = 3;
-          throw arg1;
+          c2 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          table = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          c2 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           closure_0 = tmp4;
-          obj1 = closure_1_0(table[9]);
-          if (obj1.isIOS()) {
-            const NativePermissionManager = closure_1_4.NativePermissionManager;
+          const result = ContactSyncUtils.isContactSyncAvailable();
+          if (result) {
             c1 = 1;
-            table = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = NativePermissionManager.getNotificationAuthorizationStatus();
-            return obj1;
+            c2 = 1;
+            const obj6 = { value: ContactSyncUtils.checkContactPermissions(), done: false };
+            return obj6;
           } else {
-            table = 3;
+            c2 = 3;
           }
         }
       } else if (arg0 === 1) {
-        table = 3;
-        throw arg1;
+        c2 = 3;
+        throw value;
+      } else if (arg0 !== 2) {
+        if (value === closure_128_10.UNAUTHORIZED) {
+          closure_128_0(closure_128_2[9]).isIOS();
+          const obj = closure_128_0(closure_128_2[9]);
+        }
       }
-      table = 3;
-      obj = { value: null, done: true };
-      obj[0] = arg1;
+      c2 = 3;
+      const obj7 = { value, done: true };
+      return obj7;
+    } catch (tmp17) {
+      c2 = tmp;
+      throw tmp17;
+    }
+  }
+};
+function lastStepComplete(STEP_GUILD_TEMPLATE) {
+  NewUserAnalyticsUtils.trackNUFStep(STEP_GUILD_TEMPLATE, "NUF Complete");
+  if (obj2.isModalOpen(NewUserModalTypes.NEW_USER_MODAL_KEY)) {
+    ModalActionCreatorsDefault.popWithKey(tmp(17482).NEW_USER_MODAL_KEY);
+  }
+  obj2 = NavigationRouteUtils;
+  router_utils.transitionTo(constants2.ME, { navigationReplace: true });
+  const tmpResult = router_utils;
+  const result = nuf_NUFActionCreators.setNewUserFlowCompleted();
+}
+function getNextOnboardingStep() {
+  const self = this;
+  const apply = closure_18.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_18 = async function _getNextOnboardingStep(arg0, value) {
+  if (c7 === 2) {
+    c7 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c7 = 2;
+      if (0 === c6) {
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          closure_5 = tmp5;
+          closure_4 = tmp2;
+          closure_132_0 = undefined;
+          closure_132_1 = undefined;
+          closure_132_2 = undefined;
+          let flag = closure_0;
+          if (closure_0 === undefined) {
+            flag = false;
+          }
+          closure_132_0 = flag;
+          closure_132_1 = closure_1;
+          closure_132_2 = closure_2;
+          closure_132_3 = undefined;
+          closure_132_4 = undefined;
+          let key2;
+          let shouldShowStep;
+          let transitionStep2;
+          c6 = 1;
+          c7 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          let key;
+          if (closure_133_15[closure_132_1] != null) {
+            key = tmp75.key;
+          }
+          let registration = key;
+          if (key == null) {
+            registration = "registration";
+          }
+          closure_132_3 = registration;
+          const sum = closure_132_2 + 1;
+          closure_132_2 = sum;
+          if (sum >= closure_133_15.length) {
+            closure_133_16(closure_132_3);
+            const obj7 = { lastShownStepIndex: closure_132_1, onboardingStepIndex: closure_132_2, continueNavigation: false };
+            c7 = 3;
+            const obj8 = { value: obj7, done: true };
+            return obj8;
+          } else {
+            closure_132_4 = closure_133_15[closure_132_2];
+            key2 = closure_132_4.key;
+            shouldShowStep = closure_132_4.shouldShowStep;
+            transitionStep2 = closure_132_4.transitionStep;
+            c6 = 2;
+            c7 = 1;
+            const obj9 = { value: shouldShowStep(), done: false };
+            return obj9;
+          }
+        }
+      } else if (2 === tmp5) {
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          const obj10 = { value, done: true };
+          return obj10;
+        } else if (value) {
+          closure_132_1 = closure_132_2;
+          const obj11 = { skip: closure_132_0 };
+          closure_133_0(closure_133_2[13]).trackNUFStep(closure_132_3, key2, obj11);
+          if (null != transitionStep2) {
+            closure_133_16(key2);
+            closure_133_1(closure_133_2[11]).wait(transitionStep2);
+            const obj12 = { lastShownStepIndex: closure_132_1, onboardingStepIndex: closure_132_2, continueNavigation: false };
+            let obj13 = obj12;
+            const obj3 = closure_133_1(closure_133_2[11]);
+          } else {
+            obj13 = { lastShownStepIndex: closure_132_1, onboardingStepIndex: closure_132_2, continueNavigation: null };
+            let transitionStep;
+            if (closure_133_15[closure_132_2] != null) {
+              transitionStep = tmp26.transitionStep;
+            }
+            obj13.continueNavigation = null == transitionStep;
+          }
+          const obj4 = closure_133_0(closure_133_2[13]);
+        } else {
+          c6 = 3;
+          c7 = 1;
+          const obj14 = { value: closure_133_17(closure_132_0, closure_132_1, closure_132_2), done: false };
+          return obj14;
+        }
+      } else if (arg0 === 1) {
+        c7 = 3;
+        throw value;
+      } else if (arg0 !== 2) {
+        c7 = 3;
+        const obj15 = { value, done: true };
+        return obj15;
+      } else {
+        c7 = 3;
+        const obj = { value, done: true };
+        return obj;
+      }
+    } catch (tmp64) {
+      c7 = tmp;
+      throw tmp64;
+    }
+  }
+};
+const NativeModules = fn(17).NativeModules;
+const Constants = fn(1074);
+({ PlatformTypes: closure_8, Routes: closure_9 } = Constants);
+const ContactPermissions = fn(12708).ContactPermissions;
+let closure_11 = fn(4784).NotificationAuthorizationStatus;
+let obj2 = { key: "enable-notification", shouldShowStep: null };
+let closure_13 = asyncGeneratorStep(async (arg0, value) => {
+  if (c2 === 2) {
+    c2 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj3 = { value, done: true };
+      return obj3;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c2 = 2;
+      if (0 === c1) {
+        if (arg0 === 1) {
+          c2 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c2 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          closure_0 = tmp4;
+          if (obj2.isIOS()) {
+            const NativePermissionManager = NativeModules.NativePermissionManager;
+            c1 = 1;
+            c2 = 1;
+            const obj5 = { value: NativePermissionManager.getNotificationAuthorizationStatus(), done: false };
+            return obj5;
+          } else {
+            c2 = 3;
+          }
+          obj2 = PlatformUtils;
+        }
+      } else if (arg0 === 1) {
+        c2 = 3;
+        throw value;
+      }
+      c2 = 3;
+      const obj = { value, done: true };
       return obj;
     } catch (tmp11) {
-      table = tmp;
+      c2 = tmp;
       throw tmp11;
     }
   }
 });
-obj[1] = function() {
+obj2.shouldShowStep = function() {
   const self = this;
   const apply = closure_13.apply;
   if (typeof apply === "unknown") {
@@ -354,18 +295,17 @@ obj[1] = function() {
   }
   return applyArgumentsResult;
 };
-obj = { key: "contact-sync", shouldShowStep: null };
-let closure_14 = importDefaultResult(function*() {
+let obj3 = { key: "contact-sync", shouldShowStep: null };
+let closure_14 = asyncGeneratorStep(async (arg0, value) => {
   if (c0 === 2) {
     c0 = 3;
-    HermesBuiltin.throwTypeError();
+    throw new TypeError("Generator functions may not be called on executing generators");
   } else if (tmp3 === 3) {
     if (arg0 === 1) {
-      throw arg1;
+      throw value;
     } else if (arg0 === 2) {
-      let obj = { value: null, done: true };
-      obj[0] = arg1;
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -375,14 +315,13 @@ let closure_14 = importDefaultResult(function*() {
       if (0 === c1) {
         if (arg0 === 1) {
           c0 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          const localAccount = closure_1_6.getLocalAccount(closure_1_8.CONTACTS);
+          const localAccount = ConnectedAccountsStore.getLocalAccount(constants.CONTACTS);
           let friendSync;
           if (localAccount != null) {
             friendSync = localAccount.friendSync;
@@ -392,27 +331,28 @@ let closure_14 = importDefaultResult(function*() {
           } else {
             c1 = 1;
             c0 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = (function shouldSkipContactSyncStep() {
-              const self = this;
-              const apply = closure_12.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            })();
-            return obj1;
+            const obj4 = {
+              value: (function shouldSkipContactSyncStep() {
+                          const self = this;
+                          const apply = closure_1_12.apply;
+                          if (typeof apply === "unknown") {
+                            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                          } else {
+                            applyArgumentsResult = apply(self, arguments);
+                          }
+                          return applyArgumentsResult;
+                        })(),
+              done: false
+            };
+            return obj4;
           }
         }
       } else if (arg0 === 1) {
         c0 = 3;
-        throw arg1;
+        throw value;
       }
       c0 = 3;
-      obj = { value: null, done: true };
-      obj[0] = arg1;
+      const obj = { value, done: true };
       return obj;
     } catch (tmp12) {
       c0 = tmp;
@@ -420,7 +360,7 @@ let closure_14 = importDefaultResult(function*() {
     }
   }
 });
-obj[1] = function() {
+obj3.shouldShowStep = function() {
   const self = this;
   const apply = closure_14.apply;
   if (typeof apply === "unknown") {
@@ -431,37 +371,41 @@ obj[1] = function() {
   return applyArgumentsResult;
 };
 let items = [
-  obj,
-  obj,
+  obj2,
+  obj3,
   {
     key: "discoverability",
     shouldShowStep() {
       return true;
     }
   },
-  obj,
+  {
+    key: "choose-avatar",
+    shouldShowStep() {
+      const currentUser = UserStore.getCurrentUser();
+      let avatar;
+      if (currentUser != null) {
+        avatar = currentUser.avatar;
+      }
+      return null == avatar;
+    }
+  },
   {
     key: "connect-guardian",
     shouldShowStep() {
-      return shouldShowGuardianConnect.getShouldShowGuardianConnect();
+      return ParentalConsentStore.getShouldShowGuardianConnect();
     }
   },
   {
     key: "accept-invite",
-    shouldShowStep: require("showInstantInviteActionSheet").hasDeferredInvite,
+    shouldShowStep: fn(9852).hasDeferredInvite,
     transitionStep() {
-      dispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
+      DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
     }
   }
 ];
-let obj1 = {
-  key: "accept-invite",
-  shouldShowStep: require("showInstantInviteActionSheet").hasDeferredInvite,
-  transitionStep() {
-    dispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
-  }
-};
-let result = require("set").fileFinishedImporting("modules/nuf/native/NewUserUtils.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/nuf/native/NewUserUtils.tsx");
 
 export const getKeyForOnboardingStep = function getKeyForOnboardingStep(onboardingStepIndex) {
   let key;
@@ -471,7 +415,7 @@ export const getKeyForOnboardingStep = function getKeyForOnboardingStep(onboardi
   return key;
 };
 export const continueToNextStep = function continueToNextStep(onboardingStepIndex, current) {
-  closure_0 = current;
+  let state = current;
   let key;
   if (items[onboardingStepIndex] != null) {
     key = tmp.key;
@@ -480,17 +424,16 @@ export const continueToNextStep = function continueToNextStep(onboardingStepInde
     current.navigate(key, {});
     const _setTimeout = setTimeout;
     const timerId = setTimeout(() => {
-      let obj = state;
       state = state.getState();
       const routes = state.routes;
       if (2 === routes.length) {
         items = [routes[1]];
-        const CommonActions = state(closure_1_2[12]).CommonActions;
-        obj = {};
+        const CommonActions = Link.CommonActions;
+        const obj2 = {};
         const merged = Object.assign(state);
-        obj.routes = items;
-        obj.index = 0;
-        obj.dispatch(CommonActions.reset(obj));
+        obj2.routes = items;
+        obj2.index = 0;
+        state.dispatch(CommonActions.reset(obj2));
       }
     }, 500);
   }

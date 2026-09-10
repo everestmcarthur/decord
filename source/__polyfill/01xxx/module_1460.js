@@ -4,15 +4,14 @@
 
 // Module 1460
 if (typeof Object.create === "function") {
-  module.exports = function inherits(arg0, super_) {
+  module.exports = function inherits(value, super_) {
     if (super_) {
-      arg0.super_ = super_;
+      value.super_ = super_;
       const _Object = Object;
-      let obj = { constructor: null };
-      obj = { value: null, enumerable: false, writable: true, configurable: true };
-      obj[0] = arg0;
-      obj[0] = obj;
-      arg0.prototype = Object.create(super_.prototype, obj);
+      const obj = { constructor: null };
+      const obj2 = { value, enumerable: false, writable: true, configurable: true };
+      obj.constructor = obj2;
+      value.prototype = Object.create(super_.prototype, obj);
     }
   };
 } else {

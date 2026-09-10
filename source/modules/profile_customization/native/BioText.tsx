@@ -1,39 +1,43 @@
-// Module ID: 11213
-// Function ID: 11214
-// Name: LinkButton
-// Dependencies: [19, 17, 1074, 2010, 21, 4560, 4255, 1242, 4556, 9424, 1115, 2009, 1114, 2]
+// Module ID: 11240
+// Function ID: 11241
+// Name: BioText
+// Dependencies: [19, 17, 1074, 2010, 21, 4574, 4268, 1242, 4570, 9451, 1115, 2009, 1114, 2]
 // Exports: default
 
-// Module 11213 (LinkButton)
-import Text from "Text" /* 4556 */;
-import closure_3 from "noop" /* 19 */;
-import { Pressable } from "get ActivityIndicator" /* 17 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import { CHANGELOG_URL } from "CHANGELOG_MODAL_KEY" /* 2010 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11240 (BioText)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import LinkingDefault from "Linking" /* 4268 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import BioMarkupUtils from "BioMarkupUtils" /* 9451 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function LinkButton(arg0) {
   ({ lineClamp, text } = arg0);
-  const tmp = callback3();
-  obj = {
+  const tmp = closure_10();
+  let obj = {
     onPress() {
-      let obj = callback(4255);
-      obj.openURL(closure_6);
-      obj = { cta_type: "profile_bio", target: closure_6 };
-      callback(1242).track(constants.CHANGE_LOG_CTA_CLICKED, obj);
+      LinkingDefault.openURL(target);
+      AnalyticsUtilsDefault.track(constants.CHANGE_LOG_CTA_CLICKED, { cta_type: "profile_bio", target });
     },
     style: tmp.link,
-    children: callback(Text.Text, obj)
+    children: null
   };
-  obj = { variant: "text-md/normal", color: "text-link", lineClamp, style: tmp.link, children: items };
-  items = ["\n", text];
-  return callback2(Pressable, obj);
+  const obj2 = { variant: "text-md/normal", color: "text-link", lineClamp, style: tmp.link, children: null };
+  const items = ["\n", text];
+  obj2.children = items;
+  obj.children = React5(Text_Text.Text, obj2);
+  return React6(Pressable, obj);
 }
-({ jsxs: error, jsx: closure_8, Fragment: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles({ text: { alignSelf: "stretch", textAlignVertical: "top", width: "100%", flexGrow: 1, paddingTop: 2, lineHeight: 24 }, span: { alignSelf: "stretch", textAlignVertical: "bottom", width: "100%", flexGrow: 1, display: "flex", paddingBottom: 2 }, link: { alignSelf: "stretch", textAlignVertical: "bottom", width: "100%", flexGrow: 1, bottom: -4, position: "relative" } });
-const result = require("set").fileFinishedImporting("modules/profile_customization/native/BioText.tsx");
+const Pressable = fn(17).Pressable;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const CHANGELOG_URL = fn(2010).CHANGELOG_URL;
+const jsxProd = fn(21);
+({ jsxs: closure_7, jsx: closure_8, Fragment: closure_9 } = jsxProd);
+const createStyles = fn(4574);
+let closure_10 = createStyles.createStyles({ text: { alignSelf: "stretch", textAlignVertical: "top", width: "100%", flexGrow: 1, paddingTop: 2, lineHeight: 24 }, span: { alignSelf: "stretch", textAlignVertical: "bottom", width: "100%", flexGrow: 1, display: "flex", paddingBottom: 2 }, link: { alignSelf: "stretch", textAlignVertical: "bottom", width: "100%", flexGrow: 1, bottom: -4, position: "relative" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/profile_customization/native/BioText.tsx");
 
 export default function BioText(lineClamp) {
   ({ placeholder, bio } = lineClamp);
@@ -42,73 +46,69 @@ export default function BioText(lineClamp) {
   if (textVariant === undefined) {
     textVariant = "text-md/normal";
   }
-  const tmp = callback3();
+  let tmp = closure_10();
   const items = [bio, textVariant];
-  let memo = React.useMemo(() => {
-    let obj = bio(textVariant[9]);
-    obj = { linkVariant: textVariant, textVariant, customEmojiOffsetY: null };
+  let memo = noop.useMemo(() => {
+    const obj2 = { linkVariant: textVariant, textVariant, customEmojiOffsetY: null };
+    const obj = BioMarkupUtils;
+    const tmp = bio;
     let num;
     if (obj3.isAndroid()) {
       num = 3;
     }
-    obj[2] = num;
-    return obj.parseBioReact(bio, undefined, obj);
+    obj2.customEmojiOffsetY = num;
+    return obj.parseBioReact(tmp, undefined, obj2);
   }, items);
   let tmp3 = 0 === bio.length;
   if (tmp3) {
     tmp3 = !lineClamp(textVariant[11])(userId);
   }
   if (lineClamp(textVariant[11])(userId)) {
-    let obj = { variant: null, color: null, lineClamp: null, style: null, children: null };
-    obj[0] = textVariant;
+    let obj2 = { variant: textVariant, color: null, lineClamp: null, style: null, children: null };
     let str2 = "text-default";
     let str3 = "text-default";
     if (tmp3) {
       str3 = "text-muted";
     }
-    obj[1] = str3;
-    obj[2] = lineClamp;
-    obj[3] = tmp.text;
+    obj2.color = str3;
+    obj2.lineClamp = lineClamp;
+    obj2.style = tmp.text;
     const intl = tmp12(tmp6[12]).intl;
     const items1 = [intl.string(bio(tmp6[12]).t.OJmNR9), "\n"];
-    obj[4] = items1;
-    const items2 = [closure_7(bio(tmp6[8]).Text, obj, "changelog-bio"), ];
-    obj = { variant: null, color: null, lineClamp: null, style: null, children: null };
-    obj[0] = textVariant;
+    obj2.children = items1;
+    const items2 = [closure_7(bio(tmp6[8]).Text, obj2, "changelog-bio"), ];
+    const obj3 = { variant: textVariant, color: null, lineClamp: null, style: null, children: null };
     if (tmp3) {
       str2 = "text-muted";
     }
-    obj1 = { children: null };
-    obj[1] = str2;
-    obj[2] = lineClamp;
-    obj[3] = tmp.span;
+    const obj4 = { children: null };
+    obj3.color = str2;
+    obj3.lineClamp = lineClamp;
+    obj3.style = tmp.span;
     const intl2 = tmp12(tmp6[12]).intl;
-    const obj2 = { blogHook: null };
-    obj2[0] = function blogHook(text) {
-      return closure_1_8(closure_1_11, { lineClamp, text }, arg1);
+    const obj5 = {
+      blogHook(text, arg1) {
+          return React6(LinkButton, { lineClamp, text }, arg1);
+        }
     };
-    obj[4] = intl2.format(bio(tmp6[12]).t.RCYeBL, obj2);
-    items2[1] = closure_8(bio(tmp6[8]).Text, obj, "changelog-cta");
-    obj1[0] = items2;
-    let tmp8Result = tmp10(closure_9, obj1);
-    const tmp11 = closure_9;
-    const tmp13 = closure_8;
+    obj3.children = intl2.format(bio(tmp6[12]).t.RCYeBL, obj5);
+    items2[1] = closure_8(bio(tmp6[8]).Text, obj3, "changelog-cta");
+    obj4.children = items2;
+    let tmp8Result = tmp10(closure_9, obj4);
   } else if (!tmp3) {
-    obj = { variant: null, color: null, lineClamp: null, style: null, children: null };
-    obj[0] = textVariant;
+    let obj = { variant: textVariant, color: null, lineClamp: null, style: null, children: null };
     let str = "text-default";
     if (tmp3) {
       str = "text-muted";
     }
-    obj[1] = str;
-    obj[2] = lineClamp;
-    obj[3] = tmp.text;
+    obj.color = str;
+    obj.lineClamp = lineClamp;
+    obj.style = tmp.text;
     if (tmp3) {
       memo = placeholder;
     }
-    obj[4] = memo;
+    obj.children = memo;
     tmp8Result = closure_8(bio(tmp6[8]).Text, obj);
-    const tmp8 = closure_8;
   } else {
     tmp8Result = null;
   }

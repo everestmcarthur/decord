@@ -1,26 +1,24 @@
-// Module ID: 4762
-// Function ID: 4763
+// Module ID: 4776
+// Function ID: 4777
 // Name: transitionToStream
-// Dependencies: [1957, 4527, 4763, 4767, 2]
+// Dependencies: [1957, 4541, 4777, 4781, 2]
 // Exports: default
 
-// Module 4762 (transitionToStream)
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
-import _modDef4763 from "module_4763" /* 4763 */;
-import openChannelCallModal from "openChannelCallModal" /* 4767 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
+// Module 4776 (transitionToStream)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4781 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/go_live/utils/transitionToStream.native.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/go_live/utils/transitionToStream.native.tsx");
 
 export default function transitionToStream(channelId) {
-  channel = channel.getChannel(channelId.channelId);
+  const channel = ChannelStore.getChannel(channelId.channelId);
   if (null != channel) {
-    ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
-    const obj = ACTION_SHEET_HEIGHT_HALFDefault;
-    _modDef4763.popAll();
-    const obj2 = _modDef4763;
-    openChannelCallModal.openGuildVoiceModal(channel, "Go Live");
-    const obj3 = openChannelCallModal;
+    ActionSheetActionCreatorsDefault.hideActionSheet();
+    ModalActionCreatorsDefault.popAll();
+    PrivateChannelCallUtils.openGuildVoiceModal(channel, "Go Live");
   }
 };

@@ -1,67 +1,64 @@
-// Module ID: 9208
-// Function ID: 9209
+// Module ID: 9235
+// Function ID: 9236
 // Name: GuildProfileLoadingError
-// Dependencies: [19, 17, 21, 9195, 4495, 4262, 576, 4987, 8593, 4556, 1114, 5123, 2]
+// Dependencies: [19, 17, 21, 9222, 4509, 4275, 576, 5001, 8621, 4570, 1114, 5137, 2]
 // Exports: default
 
-// Module 9208 (GuildProfileLoadingError)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import map from "map" /* 4262 */;
-import useThemeDefault from "useTheme" /* 4495 */;
-import Text from "Text" /* 4556 */;
-import LinearGradientDefault from "LinearGradient" /* 4987 */;
-import PressableBase from "PressableBase" /* 5123 */;
-import WarningIcon from "WarningIcon" /* 8593 */;
-import GuildProfileBackground from "GuildProfileBackground" /* 9195 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 9235 (GuildProfileLoadingError)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import useToken from "useToken" /* 4275 */;
+import useThemeDefault from "useTheme" /* 4509 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import LinearGradientDefault from "LinearGradient" /* 5001 */;
+import Pressables from "Pressables" /* 5137 */;
+import WarningIcon from "WarningIcon" /* 8621 */;
+import GuildProfileView from "GuildProfileView" /* 9222 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/guild_profile/native/components/GuildProfileLoadingError.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_profile/native/components/GuildProfileLoadingError.tsx");
 
 export default function GuildProfileLoadingError(onPress) {
-  let obj = GuildProfileBackground;
-  const styles = obj.useStyles();
-  obj1 = map;
-  obj = { style: styles.container, children: null };
-  const token = obj1.useToken(ThemesDefault.colors.BACKGROUND_BASE_LOWEST);
-  obj = { style: styles.colorBanner, start: null, end: null, colors: null };
+  const styles = GuildProfileView.useStyles();
   const tmp2 = useThemeDefault();
-  obj[1] = GuildProfileBackground.DiagonalGradient.START;
-  obj[2] = GuildProfileBackground.DiagonalGradient.END;
-  let obj4 = GuildProfileBackground;
-  obj[3] = obj4.getBackgroundForProfile(tmp2, token);
-  const items = [callback(LinearGradientDefault, obj), , ];
-  obj1 = { style: styles.header, children: null };
-  const obj2 = { style: styles.avatarBackground, children: null };
-  const obj3 = { style: styles.avatarBackground, children: null };
-  obj4 = { size: "lg", color: ThemesDefault.colors.TEXT_FEEDBACK_WARNING };
-  obj3[1] = callback(WarningIcon.WarningIcon, obj4);
-  obj2[1] = callback(View, obj3);
-  obj1[1] = callback(View, obj2);
-  items[1] = callback(View, obj1);
-  const obj5 = { style: styles.body, children: null };
-  const obj6 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale.intl;
-  obj6[2] = intl.string(getSystemLocale.t.DmIUGK);
-  const items1 = [callback(Text.Text, obj6), ];
-  const obj7 = { style: styles.error, onPress: onPress.onRetry, accessibilityRole: "button", accessibilityLabel: null, children: null };
-  const intl2 = getSystemLocale.intl;
-  obj7[3] = intl2.string(getSystemLocale.t.s1fAEw);
+  const obj3 = { style: styles.container, children: null };
+  const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOWEST);
+  const obj4 = { style: styles.colorBanner, start: null, end: null, colors: null };
+  obj4.start = GuildProfileView.DiagonalGradient.START;
+  obj4.end = GuildProfileView.DiagonalGradient.END;
   const tmp4 = LinearGradientDefault;
-  const items2 = [callback(WarningIcon.WarningIcon, { size: "sm", color: ThemesDefault.colors.TEXT_FEEDBACK_WARNING }), ];
-  const obj9 = { variant: "text-sm/normal", color: "text-feedback-warning", children: null };
-  const intl3 = getSystemLocale.intl;
-  obj9[2] = intl3.string(getSystemLocale.t.tmGHjc);
-  items2[1] = callback(Text.Text, obj9);
-  obj7[4] = items2;
-  items1[1] = callback2(PressableBase.PressableOpacity, obj7);
-  obj5[1] = items1;
-  items[2] = callback2(View, obj5);
-  obj[1] = items;
-  return callback2(View, obj);
+  obj4.colors = GuildProfileView.getBackgroundForProfile(tmp2, token);
+  const items = [React4(tmp4, obj4), , ];
+  const obj6 = { style: styles.header, children: null };
+  const obj7 = { style: styles.avatarBackground, children: null };
+  const obj8 = { style: styles.avatarBackground, children: null };
+  obj8.children = React4(WarningIcon.WarningIcon, { size: "lg", color: nativeDefault.colors.TEXT_FEEDBACK_WARNING });
+  obj7.children = React4(View, obj8);
+  obj6.children = React4(View, obj7);
+  items[1] = React4(View, obj6);
+  const obj10 = { style: styles.body, children: null };
+  const obj11 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  const intl = util.intl;
+  obj11.children = intl.string(util.t.DmIUGK);
+  const items1 = [React4(Text_Text.Text, obj11), ];
+  const obj12 = { style: styles.error, onPress: onPress.onRetry, accessibilityRole: "button", accessibilityLabel: null, children: null };
+  const intl2 = util.intl;
+  obj12.accessibilityLabel = intl2.string(util.t.s1fAEw);
+  const obj9 = { size: "lg", color: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
+  const items2 = [React4(WarningIcon.WarningIcon, { size: "sm", color: nativeDefault.colors.TEXT_FEEDBACK_WARNING }), ];
+  const obj14 = { variant: "text-sm/normal", color: "text-feedback-warning", children: null };
+  const intl3 = util.intl;
+  obj14.children = intl3.string(util.t.tmGHjc);
+  items2[1] = React4(Text_Text.Text, obj14);
+  obj12.children = items2;
+  items1[1] = hasOwnProperty(Pressables.PressableOpacity, obj12);
+  obj10.children = items1;
+  items[2] = hasOwnProperty(View, obj10);
+  obj3.children = items;
+  return hasOwnProperty(View, obj3);
 };

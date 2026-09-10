@@ -1,14 +1,16 @@
-// Module ID: 13474
-// Function ID: 13475
+// Module ID: 13497
+// Function ID: 13498
 // Name: useScheduledForcedUpdate
-// Dependencies: [19, 7440, 2]
+// Dependencies: [19, 7454, 2]
 // Exports: default
 
-// Module 13474 (useScheduledForcedUpdate)
-import closure_2 from "noop" /* 19 */;
+// Module 13497 (useScheduledForcedUpdate)
+import areHookInputsEqual from "areHookInputsEqual" /* 7454 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/hooks/useScheduledForcedUpdate.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/hooks/useScheduledForcedUpdate.tsx");
 
 export default function useScheduledForcedUpdate(delay) {
   delay = delay.delay;
@@ -16,15 +18,14 @@ export default function useScheduledForcedUpdate(delay) {
   if (flag === undefined) {
     flag = false;
   }
-  let forceUpdate;
-  forceUpdate = delay(flag[1]).useForceUpdate();
+  const forceUpdate = areHookInputsEqual.useForceUpdate();
   const items = [delay, flag, forceUpdate];
-  const effect = forceUpdate.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (timeout > 0) {
       if (!flag) {
         const _setTimeout = setTimeout;
         timeout = setTimeout(() => {
-          callback();
+          forceUpdate();
         }, tmp);
         return () => clearTimeout(closure_0);
       }

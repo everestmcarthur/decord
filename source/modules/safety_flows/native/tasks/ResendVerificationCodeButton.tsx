@@ -1,144 +1,210 @@
-// Module ID: 17881
-// Function ID: 17882
+// Module ID: 17914
+// Function ID: 17915
 // Name: ResendVerificationCodeButton
-// Dependencies: [5, 32, 19, 17, 21, 17872, 4258, 4259, 1114, 2690, 14926, 4513, 4556, 2]
+// Dependencies: [5, 32, 19, 17, 21, 17905, 4271, 4272, 1114, 2690, 14952, 4527, 4570, 2]
 // Exports: default
 
-// Module 17881 (ResendVerificationCodeButton)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import { Pressable } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 17914 (ResendVerificationCodeButton)
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/safety_flows/native/tasks/ResendVerificationCodeButton.tsx");
+const require = fn;
+const Pressable = fn(17).Pressable;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_flows/native/tasks/ResendVerificationCodeButton.tsx");
 
 export default function ResendVerificationCodeButton(flowId) {
   flowId = flowId.flowId;
   const setLoading = flowId.setLoading;
-  let first;
-  let callback;
-  const tmp = callback2(React.useState(0), 2);
-  first = tmp[0];
-  callback = tmp[1];
-  const items = [first];
-  const effect = React.useEffect(() => {
+  countdown = undefined;
+  asyncGeneratorStep = undefined;
+  [countdown, asyncGeneratorStep] = noop.useState(0);
+  const items = [countdown];
+  const effect = noop.useEffect(() => {
     if (first > 0) {
       const _setInterval = setInterval;
       const interval = setInterval(() => {
-        callback((arg0) => arg0 - 1);
+        closure_1_3((arg0) => arg0 - 1);
       }, 1000);
       return () => clearInterval(closure_0);
     }
   }, items);
-  const items1 = [setLoading, first, flowId];
+  const items1 = [setLoading, countdown, flowId];
   let obj = {
-    onPress: React.useCallback(callback(function*() {
+    onPress: noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
       if (c4 === 2) {
         c4 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp7 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
       } else {
         try {
           c4 = 2;
-          if (0 === v0) {
+          if (0 === v3) {
             if (arg0 === 1) {
               c4 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
+            } else if (first > 0) {
+              c4 = 3;
             } else {
-              closure_0 = tmp4;
-              if (closure_1_2 > 0) {
-                c4 = 3;
-              } else {
-                v0(true);
-                let v02 = 2;
-                v0 = 3;
-                c4 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_1_0(closure_1_2[5]).resendVerificationCode(closure_1_0);
-                return obj1;
-              }
+              setLoading(true);
+              c3 = 2;
+              v3 = 3;
+              c4 = 1;
+              const obj6 = { value: tmp4(tmp43[5]).resendVerificationCode(flowId), done: false };
+              return obj6;
             }
           } else if (1 !== tmp8) {
             if (2 === tmp8) {
-              v02 = 1;
-              let obj2 = v0(closure_1_2[7]);
-              obj2 = { key: "SAFETY_FLOWS_VERIFY_EMAIL_ERROR", content: null, icon: null, IconComponent: null, iconColor: "icon-feedback-critical" };
-              const intl = closure_1_0(closure_1_2[8]).intl;
-              obj2[1] = intl.string(v0(closure_1_2[9])["3AXMYu"]);
-              obj2[2] = v0(closure_1_2[10]);
-              obj2[3] = closure_1_0(closure_1_2[11]).XLargeIcon;
-              obj2.open(obj2);
+              c3 = 1;
+              const obj7 = { key: "SAFETY_FLOWS_VERIFY_EMAIL_ERROR", content: null, icon: null, IconComponent: null, iconColor: "icon-feedback-critical" };
+              const intl = tmp4(tmp43[8]).intl;
+              obj7.content = intl.string(v3(tmp43[9])["3AXMYu"]);
+              obj7.icon = v3(tmp43[10]);
+              obj7.IconComponent = tmp4(tmp43[11]).XLargeIcon;
+              v3(tmp43[7]).open(obj7);
+              const obj3 = v3(tmp43[7]);
             } else if (arg0 === 1) {
               c4 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
-              v02 = 0;
-              v0(false);
+              c3 = 0;
+              closure_128_1(false);
               c4 = 3;
-              const obj3 = { value: null, done: true };
-              obj3[0] = arg1;
-              return obj3;
+              const obj8 = { value, done: true };
+              return obj8;
             } else {
-              obj = closure_1_0(closure_1_2[6]);
-              obj.showVerificationSent();
-              v02(30);
-              v02 = 1;
+              tmp4(tmp43[6]).showVerificationSent();
+              closure_128_3(30);
+              c3 = 1;
+              const obj = tmp4(tmp43[6]);
             }
-            v02 = 0;
-            v0(false);
+            c3 = 0;
+            closure_128_1(false);
           }
-          v02 = 0;
-          v0(false);
-          throw closure_2;
+          c3 = 0;
+          closure_128_1(false);
+          throw tmp43;
         } catch (tmp43) {
-          closure_2 = tmp43;
-          if (tmp5 === v02) {
+          if (tmp5 === c3) {
             c4 = tmp3;
             throw tmp43;
           } else if (tmp2 === tmp45) {
-            v0 = tmp2;
+            v3 = tmp2;
           } else {
-            v0 = tmp;
+            v3 = tmp;
           }
         }
       }
     }), items1),
-    disabled: first > 0,
+    disabled: countdown > 0,
     accessibilityRole: "button",
     accessibilityLabel: null,
     children: null
   };
-  let intl = flowId(first[8]).intl;
-  obj[3] = intl.string(setLoading(first[9]).ah0EUu);
-  obj = { variant: "text-sm/medium", color: "text-link", accessibilityLabel: null, importantForAccessibility: "no", children: null };
-  const intl2 = flowId(first[8]).intl;
-  obj[2] = intl2.string(setLoading(first[9]).ah0EUu);
-  if (first > 0) {
+  let intl = flowId(countdown[8]).intl;
+  obj.accessibilityLabel = intl.string(setLoading(countdown[9]).ah0EUu);
+  let obj2 = { variant: "text-sm/medium", color: "text-link", accessibilityLabel: null, importantForAccessibility: "no", children: null };
+  const intl2 = flowId(countdown[8]).intl;
+  obj2.accessibilityLabel = intl2.string(setLoading(countdown[9]).ah0EUu);
+  if (countdown > 0) {
     const intl4 = tmp6(tmp7[8]).intl;
-    obj = { countdown: null };
-    obj[0] = first;
-    let formatResult = intl4.format(tmp8(tmp7[9])["2+Lyn0"], obj);
+    let obj3 = { countdown };
+    let formatResult = intl4.format(tmp8(tmp7[9])["2+Lyn0"], obj3);
   } else {
     const intl3 = tmp6(tmp7[8]).intl;
     formatResult = intl3.string(tmp8(tmp7[9]).ah0EUu);
   }
-  obj[4] = formatResult;
-  obj[4] = jsx(flowId(first[12]).Text, { variant: "text-sm/medium", color: "text-link", accessibilityLabel: null, importantForAccessibility: "no", children: null });
-  return <Pressable variant="text-sm/medium" color="text-link" accessibilityLabel={null} importantForAccessibility="no">{null}</Pressable>;
+  obj2.children = formatResult;
+  obj.children = jsx(flowId(countdown[12]).Text, { variant: "text-sm/medium", color: "text-link", accessibilityLabel: null, importantForAccessibility: "no", children: null });
+  return <Pressable onPress={noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c4 = 2;
+        if (0 === v3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else if (first > 0) {
+            c4 = 3;
+          } else {
+            setLoading(true);
+            c3 = 2;
+            v3 = 3;
+            c4 = 1;
+            const obj6 = { value: tmp4(tmp43[5]).resendVerificationCode(flowId), done: false };
+            return obj6;
+          }
+        } else if (1 !== tmp8) {
+          if (2 === tmp8) {
+            c3 = 1;
+            const obj7 = { key: "SAFETY_FLOWS_VERIFY_EMAIL_ERROR", content: null, icon: null, IconComponent: null, iconColor: "icon-feedback-critical" };
+            const intl = tmp4(tmp43[8]).intl;
+            obj7.content = intl.string(v3(tmp43[9])["3AXMYu"]);
+            obj7.icon = v3(tmp43[10]);
+            obj7.IconComponent = tmp4(tmp43[11]).XLargeIcon;
+            v3(tmp43[7]).open(obj7);
+            const obj3 = v3(tmp43[7]);
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 0;
+            closure_128_1(false);
+            c4 = 3;
+            const obj8 = { value, done: true };
+            return obj8;
+          } else {
+            tmp4(tmp43[6]).showVerificationSent();
+            closure_128_3(30);
+            c3 = 1;
+            const obj = tmp4(tmp43[6]);
+          }
+          c3 = 0;
+          closure_128_1(false);
+        }
+        c3 = 0;
+        closure_128_1(false);
+        throw tmp43;
+      } catch (tmp43) {
+        if (tmp5 === c3) {
+          c4 = tmp3;
+          throw tmp43;
+        } else if (tmp2 === tmp45) {
+          v3 = tmp2;
+        } else {
+          v3 = tmp;
+        }
+      }
+    }
+  }), items1)} disabled={countdown > 0} accessibilityRole="button" accessibilityLabel={null}>{null}</Pressable>;
 };

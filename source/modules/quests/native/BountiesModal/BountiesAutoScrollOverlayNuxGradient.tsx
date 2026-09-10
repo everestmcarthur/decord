@@ -1,53 +1,54 @@
-// Module ID: 15051
-// Function ID: 15052
+// Module ID: 15078
+// Function ID: 15079
 // Name: BountiesAutoScrollOverlayNuxGradient
-// Dependencies: [19, 17, 21, 576, 4296, 4561, 4564, 4987, 2]
+// Dependencies: [19, 17, 21, 576, 4310, 4575, 4578, 5001, 2]
 // Exports: default
 
-// Module 15051 (BountiesAutoScrollOverlayNuxGradient)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 15078 (BountiesAutoScrollOverlayNuxGradient)
+import nativeDefault from "native" /* 576 */;
+import timing from "timing" /* 4575 */;
+import timingPresets from "timingPresets" /* 4578 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const BRAND_500 = ThemesDefault.unsafe_rawColors.BRAND_500;
-let closure_8 = { code: "function BountiesAutoScrollOverlayNuxGradientTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
-let result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesAutoScrollOverlayNuxGradient.tsx");
+require = fn;
+const StyleSheet = fn(17).StyleSheet;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const BRAND_500 = nativeDefault.unsafe_rawColors.BRAND_500;
+const __initData = { code: "function BountiesAutoScrollOverlayNuxGradientTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesAutoScrollOverlayNuxGradient.tsx");
 
 export default function BountiesAutoScrollOverlayNuxGradient(active) {
   active = active.active;
-  let sharedValue;
-  let obj = active(4296);
-  sharedValue = obj.useSharedValue(0);
+  const sharedValue = active(4310).useSharedValue(0);
   const items = [active, sharedValue];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let num = 0;
     if (active) {
       num = 1;
     }
-    const result = sharedValue.set(active(closure_1_2[5]).withTiming(num, active(closure_1_2[6]).timingSlow));
+    const result = sharedValue.set(timing.withTiming(num, timingPresets.timingSlow));
   }, items);
-  obj1 = active(4296);
+  const obj = active(4310);
   const fn = function _() {
     return { opacity: sharedValue.get() };
   };
   fn.__closure = { opacity: sharedValue };
   fn.__workletHash = 17406907036861;
-  fn.__initData = closure_8;
-  const animatedStyle = obj1.useAnimatedStyle(fn);
-  obj = { style: items1, pointerEvents: "none", children: null };
-  items1 = [StyleSheet.absoluteFillObject, animatedStyle];
-  obj = { style: StyleSheet.absoluteFillObject, colors: null, locations: null, start: null, end: null };
+  fn.__initData = __initData;
+  const animatedStyle = active(4310).useAnimatedStyle(fn);
+  const obj3 = { style: null, pointerEvents: "none", children: null };
+  const items1 = [StyleSheet.absoluteFillObject, animatedStyle];
+  obj3.style = items1;
+  const obj4 = { style: StyleSheet.absoluteFillObject, colors: null, locations: null, start: null, end: null };
+  const obj2 = active(4310);
   const items2 = ["" + BRAND_500 + "80", "" + BRAND_500 + "00"];
-  obj[1] = items2;
-  obj[2] = [0, 1];
-  obj[3] = { x: 0.5, y: 1 };
-  obj[4] = { x: 0.5, y: 0 };
-  const items3 = [callback(sharedValue(4987), obj), ];
-  obj1 = { style: StyleSheet.absoluteFillObject, colors: ["rgba(0,0,0,0.4)", "rgba(0,0,0,0)"], locations: [0, 0.5], start: { x: 0.5, y: 1 }, end: { x: 0.5, y: 0 } };
-  items3[1] = callback(sharedValue(4987), obj1);
-  obj[2] = items3;
-  return callback2(sharedValue(4296).View, obj);
+  obj4.colors = items2;
+  obj4.locations = [0, 1];
+  obj4.start = { x: 0.5, y: 1 };
+  obj4.end = { x: 0.5, y: 0 };
+  const items3 = [closure_5(sharedValue(5001), obj4), closure_5(sharedValue(5001), { style: StyleSheet.absoluteFillObject, colors: ["rgba(0,0,0,0.4)", "rgba(0,0,0,0)"], locations: [0, 0.5], start: { x: 0.5, y: 1 }, end: { x: 0.5, y: 0 } })];
+  obj3.children = items3;
+  return closure_6(sharedValue(4310).View, obj3);
 };

@@ -1,32 +1,32 @@
-// Module ID: 17366
-// Function ID: 17367
+// Module ID: 17397
+// Function ID: 17398
 // Name: getInAppReportsFeedbackOptions
 // Dependencies: [1114, 2]
 // Exports: default
 
-// Module 17366 (getInAppReportsFeedbackOptions)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 17397 (getInAppReportsFeedbackOptions)
+import util from "util" /* 1114 */;
+import size from "module_2" /* 2 */;
 
-let obj = { COULD_NOT_FIND: "I couldn't find what I was looking for", CONFUSING_LANGUAGE: "I found the language confusing", OTHER: "Other" };
-const result = set.fileFinishedImporting("modules/in_app_reports/getInAppReportsFeedbackOptions.tsx");
+const InAppReportsFeedbackReasonOption = { COULD_NOT_FIND: "I couldn't find what I was looking for", CONFUSING_LANGUAGE: "I found the language confusing", OTHER: "Other" };
+const result = size.fileFinishedImporting("modules/in_app_reports/getInAppReportsFeedbackOptions.tsx");
 
 export default function getInAppReportsFeedbackOptions() {
-  obj = { label: null, code: 2, value: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.cigGCe);
-  obj[2] = obj.COULD_NOT_FIND;
+  const obj = { label: null, code: 2, value: null };
+  const intl = util.intl;
+  obj.label = intl.string(util.t.cigGCe);
+  obj.value = obj.COULD_NOT_FIND;
   const items = [obj, , ];
-  obj = { label: null, code: 3, value: null };
-  const intl2 = getSystemLocale.intl;
-  obj[0] = intl2.string(getSystemLocale.t.ZyXA0q);
-  obj[2] = obj.CONFUSING_LANGUAGE;
-  items[1] = obj;
-  obj = { label: null, code: 1, value: null };
-  const intl3 = getSystemLocale.intl;
-  obj[0] = intl3.string(getSystemLocale.t.emlT91);
-  obj[2] = obj.OTHER;
-  items[2] = obj;
+  const obj2 = { label: null, code: 3, value: null };
+  const intl2 = util.intl;
+  obj2.label = intl2.string(util.t.ZyXA0q);
+  obj2.value = obj.CONFUSING_LANGUAGE;
+  items[1] = obj2;
+  const obj3 = { label: null, code: 1, value: null };
+  const intl3 = util.intl;
+  obj3.label = intl3.string(util.t.emlT91);
+  obj3.value = obj.OTHER;
+  items[2] = obj3;
   return items;
 };
-export const InAppReportsFeedbackReasonOption = obj;
+export { InAppReportsFeedbackReasonOption };

@@ -5,9 +5,9 @@
 // Exports: default
 
 // Module 1893 (isActivityParticipantValidGuildMember)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/activities/isActivityParticipantValidGuildMember.tsx");
+const result = size.fileFinishedImporting("modules/activities/isActivityParticipantValidGuildMember.tsx");
 
 export default function isActivityParticipantValidGuildMember(member) {
   let tmp = null != member.member && null != member.member.joined_at;

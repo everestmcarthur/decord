@@ -1,11 +1,11 @@
-// Module ID: 13307
-// Function ID: 13308
+// Module ID: 13330
+// Function ID: 13331
 // Name: APBRequestOperations
 // Dependencies: [2]
 
-// Module 13307 (APBRequestOperations)
-import set from "set" /* 2 */;
+// Module 13330 (APBRequestOperations)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/APBRequestOperations.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/APBRequestOperations.tsx");
 
 export const APBRequestOperations = { CANCEL: "cancel", CHARGE: "charge", CREATE: "create", REFUND: "refund", RESUBSCRIBE: "resubscribe", REACTIVATE: "reactivate" };

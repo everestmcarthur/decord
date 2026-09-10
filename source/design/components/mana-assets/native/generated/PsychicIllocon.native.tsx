@@ -1,17 +1,17 @@
-// Module ID: 6369
-// Function ID: 6370
+// Module ID: 6383
+// Function ID: 6384
 // Name: PsychicIllocon
-// Dependencies: [21, 5587, 6370, 2]
+// Dependencies: [21, 5601, 6384, 2]
 // Exports: PsychicIllocon
 
-// Module 6369 (PsychicIllocon)
-import set from "set" /* 2 */;
+// Module 6383 (PsychicIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 6370 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6384 from "module_6384" /* 6384 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/PsychicIllocon.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/PsychicIllocon.native.tsx");
 
 export const PsychicIllocon = function PsychicIllocon(size) {
   let num = size.size;
@@ -19,13 +19,13 @@ export const PsychicIllocon = function PsychicIllocon(size) {
   if (num === undefined) {
     num = 64;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef6384 };
+  obj.source = obj2;
   const items = [{ width: num, height: num }];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { uri: metadataDefault });
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

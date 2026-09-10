@@ -1,26 +1,29 @@
-// Module ID: 9178
-// Function ID: 9179
-// Name: useIsStreamRTCConnectionEmpty
-// Dependencies: [502, 4583, 4599, 504, 2]
+// Module ID: 9205
+// Function ID: 9206
+// Name: useIsEmptyRTCConnection
+// Dependencies: [502, 4597, 4613, 504, 2]
 // Exports: useIsCallRTCConnectionEmpty, useIsStreamRTCConnectionEmpty
 
-// Module 9178 (useIsStreamRTCConnectionEmpty)
+// Module 9205 (useIsEmptyRTCConnection)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "fetchFingerprint" /* 502 */;
-import closure_3 from "createRTCConnection" /* 4583 */;
-import closure_4 from "initialize" /* 4599 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4613 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/rtc/hooks/useIsEmptyRTCConnection.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rtc/hooks/useIsEmptyRTCConnection.tsx");
 
 export const useIsStreamRTCConnectionEmpty = function useIsStreamRTCConnectionEmpty(stateFromStores4) {
-  const _require = stateFromStores4;
-  const items = [closure_4, closure_2];
-  return _require(504).useStateFromStores(items, () => {
+  _require = stateFromStores4;
+  const items = [StreamRTCConnectionStore, AuthenticationStore];
+  return require("initialize").useStateFromStores(items, () => {
     if (null == closure_0) {
       return true;
     } else {
-      const userIds = closure_1_4.getUserIds(tmp);
+      const userIds = StreamRTCConnectionStore.getUserIds(tmp);
       let tmp3 = null == userIds;
       if (!tmp3) {
         let tmp6 = 0 === userIds.size;
@@ -35,7 +38,7 @@ export const useIsStreamRTCConnectionEmpty = function useIsStreamRTCConnectionEm
   });
 };
 export const useIsCallRTCConnectionEmpty = function useIsCallRTCConnectionEmpty() {
-  const items = [closure_3, closure_2];
+  const items = [RTCConnectionStore, AuthenticationStore];
   return initialize.useStateFromStores(items, () => {
     userIds = userIds.getUserIds();
     let tmp = null == userIds;

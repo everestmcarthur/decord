@@ -1,15 +1,17 @@
-// Module ID: 10102
-// Function ID: 10103
-// Name: apexExperiment
+// Module ID: 10129
+// Function ID: 10130
+// Name: MessageRequestPushNotificationExperiment
 // Dependencies: [1433, 2]
 
-// Module 10102 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 10129 (MessageRequestPushNotificationExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null, 2: { enabled: true }, 3: { enabled: false } };
-obj[3] = { enabled: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-07-message-request-push-notification", kind: "user", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/message_request/MessageRequestPushNotificationExperiment.tsx");
+const obj = { name: "2026-07-message-request-push-notification", kind: "user", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null, 2: { enabled: true }, 3: { enabled: false } };
+obj2[3] = { enabled: true };
+obj.variations = obj2;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/message_request/MessageRequestPushNotificationExperiment.tsx");
 
 export default apexExperiment;

@@ -1,14 +1,14 @@
-// Module ID: 4694
-// Function ID: 4695
-// Name: enforcing
+// Module ID: 4708
+// Function ID: 4709
+// Name: NativeIntentsModule
 // Dependencies: [17, 2]
 
-// Module 4694 (enforcing)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 4708 (NativeIntentsModule)
+import _mod17 from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
 
-const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 const enforcing = TurboModuleRegistry.getEnforcing("NativeIntentsModule");
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeIntentsModule.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeIntentsModule.tsx");
 
 export default enforcing;

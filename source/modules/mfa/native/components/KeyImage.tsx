@@ -1,25 +1,23 @@
-// Module ID: 14679
-// Function ID: 14680
+// Module ID: 14705
+// Function ID: 14706
 // Name: KeyImage
-// Dependencies: [17, 21, 4560, 576, 5692, 2]
+// Dependencies: [17, 21, 4574, 576, 5706, 2]
 // Exports: KeyImage
 
-// Module 14679 (KeyImage)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 14705 (KeyImage)
+import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import ThemesDefault from "Themes" /* 576 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5692 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 5706 */;
+import createStyles from "createStyles" /* 4574 */;
+import size from "module_2" /* 2 */;
 
-const View = get_ActivityIndicator.View;
+const View = _mod17.View;
 const jsx = jsxProd.jsx;
-let obj = { container: null };
-obj = { marginBottom: ThemesDefault.space.PX_8 };
-obj[0] = obj;
-let closure_4 = createCacheKey.createStyles(obj);
-const result = set.fileFinishedImporting("modules/mfa/native/components/KeyImage.tsx");
+const obj = { container: { marginBottom: nativeDefault.space.PX_8 } };
+let closure_4 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/mfa/native/components/KeyImage.tsx");
 
 export const KeyImage = function KeyImage() {
-  return <View style={callback().container}>{jsx(AccountAgeTier10LargeBadge.SecurityKeySpotIllustration, { scale: 0.6 })}</View>;
+  return <View style={closure_4().container}>{jsx(native.SecurityKeySpotIllustration, { scale: 0.6 })}</View>;
 };

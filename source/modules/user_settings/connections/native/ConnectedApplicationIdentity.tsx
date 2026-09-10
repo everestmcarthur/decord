@@ -1,29 +1,40 @@
-// Module ID: 14965
-// Function ID: 14966
+// Module ID: 14991
+// Function ID: 14992
 // Name: ConnectedApplicationIdentity
-// Dependencies: [5, 32, 19, 17, 21, 4560, 14966, 1114, 1178, 4556, 9464, 4904, 14944, 4994, 1396, 4977, 9029, 4973, 5123, 6992, 5605, 5687, 7201, 2]
+// Dependencies: [5, 32, 19, 17, 21, 4574, 14992, 1114, 1178, 4570, 9491, 4918, 14970, 5008, 1396, 4991, 9056, 4987, 5137, 7006, 5619, 5701, 7214, 2]
 // Exports: default
 
-// Module 14965 (ConnectedApplicationIdentity)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 14991 (ConnectedApplicationIdentity)
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
+import Icon from "Icon" /* 4991 */;
+import common_AlertDefault from "common/Alert" /* 5008 */;
+import InfoBoxDefault from "InfoBox" /* 9491 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/ConnectedApplicationIdentity.tsx");
+const require = globalThis.__r;
+
+const IconDefault = tmp(4991);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/connections/native/ConnectedApplicationIdentity.tsx");
 
 export default function ConnectedApplicationIdentity(identity) {
   identity = identity.identity;
-  let _require = identity;
+  _require = identity;
   const token = identity.token;
-  let application;
   let str;
-  let callback;
-  let React;
-  application = undefined;
+  _slicedToArray = undefined;
+  noop = undefined;
+  let application;
   if (token != null) {
     application = token.application;
   }
@@ -34,9 +45,7 @@ export default function ConnectedApplicationIdentity(identity) {
   if (str == null) {
     str = "";
   }
-  let obj = _require(application[5]);
-  const legacyClassComponentStyles = obj.useLegacyClassComponentStyles(_require(application[6]).readStyles);
-  obj1 = React;
+  const legacyClassComponentStyles = require("createStyles").useLegacyClassComponentStyles(require("ConnectedAccount").readStyles);
   let profile = identity.profile;
   let flag;
   if (profile != null) {
@@ -45,94 +54,86 @@ export default function ConnectedApplicationIdentity(identity) {
   if (flag == null) {
     flag = false;
   }
-  [tmp6, c4] = callback(React.useState(flag), 2);
+  let obj = require("createStyles");
+  [tmp6, c4] = noop.useState(flag);
   let intl = tmp2(tmp3[7]).intl;
-  const formatResult = intl.format(_require(application[7]).t.VgqIPj, { provider: str });
-  React = formatResult;
+  const formatResult = intl.format(require("util").t.VgqIPj, { provider: str });
+  noop = formatResult;
   let items = [str, formatResult, token];
   let icon;
-  callback = obj1.useCallback(() => {
+  const callback = obj2.useCallback(() => {
     let obj = { children: null };
-    const items = [closure_1_7(lib(application[8]).Spacer, { size: 8 }), , , ];
-    obj = { variant: "text-md/medium", children: null };
-    const intl = lib(application[7]).intl;
-    obj = { provider: str };
-    obj[1] = intl.format(lib(application[7]).t.VgqIPj, obj);
-    items[1] = closure_1_7(lib(application[9]).Text, obj);
-    items[2] = closure_1_7(lib(application[8]).Spacer, { size: 16 });
-    obj1 = { children: null };
-    const intl2 = lib(application[7]).intl;
-    obj1[0] = intl2.format(lib(application[7]).t.COW3Xn, { platformName: str });
-    items[3] = closure_1_7(token(application[10]), obj1);
-    obj[0] = items;
-    const obj2 = { platformName: str };
-    const tmp = token(application[10]);
-    const tmp2 = closure_1_8(closure_1_6, obj);
-    const obj3 = { title: null, body: null, cancelText: null, children: null, confirmText: null, onConfirm: null, confirmColor: null };
-    const intl3 = lib(application[7]).intl;
-    obj3[0] = intl3.formatToPlainString(lib(application[7]).t.U5x12f, { name: str });
-    obj3[1] = c5;
-    const intl4 = lib(application[7]).intl;
-    obj3[2] = intl4.string(lib(application[7]).t["ETE/oC"]);
-    obj3[3] = tmp2;
-    const intl5 = lib(application[7]).intl;
-    obj3[4] = intl5.string(lib(application[7]).t.ppppRJ);
-    obj3[5] = function onConfirm() {
-      if (null != closure_1) {
-        closure_1_0(closure_1_2[12]).handleDeleteApp(tmp);
-        const obj = closure_1_0(closure_1_2[12]);
+    const items = [React5(native.Spacer, { size: 8 }), , , ];
+    const obj2 = { variant: "text-md/medium", children: null };
+    const intl = util.intl;
+    obj2.children = intl.format(util.t.VgqIPj, { provider: str });
+    items[1] = React5(Text_Text.Text, obj2);
+    items[2] = React5(native.Spacer, { size: 16 });
+    const obj4 = { children: null };
+    const intl2 = util.intl;
+    obj4.children = intl2.format(util.t.COW3Xn, { platformName: str });
+    items[3] = React5(InfoBoxDefault, obj4);
+    obj.children = items;
+    const obj3 = { provider: str };
+    const obj5 = { platformName: str };
+    const tmp2 = React6(View, obj);
+    const obj7 = { title: null, body: null, cancelText: null, children: null, confirmText: null, onConfirm: null, confirmColor: null };
+    const intl3 = util.intl;
+    obj7.title = intl3.formatToPlainString(util.t.U5x12f, { name: str });
+    obj7.body = body;
+    const intl4 = util.intl;
+    obj7.cancelText = intl4.string(util.t["ETE/oC"]);
+    obj7.children = tmp2;
+    const intl5 = util.intl;
+    obj7.confirmText = intl5.string(util.t.ppppRJ);
+    obj7.onConfirm = function onConfirm() {
+      if (null != token) {
+        closure_0(application[12]).handleDeleteApp(tmp);
+        const obj = closure_0(application[12]);
       }
     };
-    obj3[6] = token(application[13]).Colors.RED;
-    token(application[11]).show(obj3);
+    obj7.confirmColor = common_AlertDefault.Colors.RED;
+    AlertActionCreatorsDefault.show(obj7);
   }, items);
   if (application != null) {
     icon = application.icon;
   }
   const items1 = [icon, identity.application_id];
-  _require = undefined;
-  const memo = obj1.useMemo(() => {
-    let obj = token(application[14]);
-    obj = { id: lib.application_id, icon: null, size: null, botIconFirst: false };
+  const memo = obj2.useMemo(() => {
+    const obj2 = { id: application_id.application_id, icon: null, size: null, botIconFirst: false };
     let icon;
     if (application != null) {
       icon = application.icon;
     }
-    obj[1] = icon;
-    obj[2] = lib(application[15]).getIconSize(token(application[15]).Sizes.LARGE);
-    return obj.getApplicationIconSource(obj);
+    obj2.icon = icon;
+    const obj = AvatarUtilsDefault;
+    obj2.size = Icon.getIconSize(IconDefault.Sizes.LARGE);
+    return obj.getApplicationIconSource(obj2);
   }, items1);
-  _require = str((arg0) => {
-    closure_0 = arg0;
+  _require = str((connection_visible) => {
     c2 = 0;
     c4 = 0;
     c3 = 0;
-    return (function*(arg0) {
+    return (function*(arg0, value) {
       closure_1 = tmp3;
-      v0(closure_0);
-      c3 = 1;
-      obj1 = token(application[16]);
-      obj1 = { connection_visible: null };
-      obj1[0] = closure_0;
-      yield obj1.updateApplicationIdentityConfig(closure_0.application_id, closure_0.provider_issued_user_id, obj1);
+      v3(connection_visible);
+      yield token(application[16]).updateApplicationIdentityConfig(connection_visible.application_id, connection_visible.provider_issued_user_id, { connection_visible });
       if (1 === tmp7) {
         c3 = 0;
-        const profile = closure_0.profile;
-        let connection_visible;
+        const profile = connection_visible.profile;
+        connection_visible = undefined;
         if (profile != null) {
           connection_visible = profile.connection_visible;
         }
-        v0(true === connection_visible);
-        v0 = 3;
-        const tmp9 = v0;
+        v3(true === connection_visible);
+        v3 = 3;
       } else if (arg0 === 1) {
-        v0 = 3;
-        throw arg1;
+        v3 = 3;
+        throw value;
       } else if (arg0 !== 2) {
         c3 = 0;
       }
-      c3 = 0;
-      return arg1;
+      return value;
     })();
   });
   const profile2 = identity.profile;
@@ -145,54 +146,45 @@ export default function ConnectedApplicationIdentity(identity) {
   if (null == application) {
     return null;
   } else {
-    obj = { accessible: true, accessibilityLabel: null, style: null, size: null, source: null, disableColor: true };
-    obj[1] = application.name;
+    let obj3 = { accessible: true, accessibilityLabel: application.name, style: null, size: null, source: null, disableColor: true };
     const items3 = [, ];
     ({ connectedApplicationIdentityIcon: arr4[0], platformIcon: arr4[1] } = legacyClassComponentStyles);
-    obj[2] = items3;
-    obj[3] = token(tmp3[15]).Sizes.LARGE;
-    obj[4] = memo;
+    obj3.style = items3;
+    obj3.size = token(tmp3[15]).Sizes.LARGE;
+    obj3.source = memo;
     const tmp15 = token(tmp3[15]);
-    obj = { spacing: 8, direction: "horizontal", align: "center", children: null };
-    obj1 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, disabled: null, children: null };
+    let obj4 = { spacing: 8, direction: "horizontal", align: "center", children: null };
+    let obj5 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, disabled: null, children: null };
     let intl2 = tmp2(tmp3[7]).intl;
-    obj1[1] = intl2.string(tmp2(tmp3[7]).t["DT39A+"]);
-    obj1[2] = callback;
-    obj1[3] = { top: 5, left: 5, bottom: 5, right: 5 };
-    obj1[4] = null == token;
-    let obj2 = { style: null, source: null };
-    obj2[0] = legacyClassComponentStyles.deleteConnectionIcon;
-    const tmp16 = callback2(token(tmp3[15]), obj);
-    obj2[1] = token(tmp3[19]);
-    obj1[5] = callback2(token(tmp3[15]), obj2);
-    obj[3] = callback2(tmp2(tmp3[18]).PressableOpacity, obj1);
-    let obj3 = { style: null, children: null };
-    obj3[0] = legacyClassComponentStyles.container;
-    const obj4 = { style: null, children: null };
-    obj4[0] = legacyClassComponentStyles.connectedAccountItem;
-    const obj5 = { style: null, children: null };
-    obj5[0] = legacyClassComponentStyles.connectedAccountTopContainer;
+    obj5.accessibilityLabel = intl2.string(tmp2(tmp3[7]).t["DT39A+"]);
+    obj5.onPress = callback;
+    obj5.hitSlop = { top: 5, left: 5, bottom: 5, right: 5 };
+    obj5.disabled = null == token;
+    const obj6 = { style: legacyClassComponentStyles.deleteConnectionIcon, source: null };
+    const tmp16 = closure_7(token(tmp3[15]), obj3);
+    obj6.source = token(tmp3[19]);
+    obj5.children = closure_7(token(tmp3[15]), obj6);
+    obj4.children = closure_7(tmp2(tmp3[18]).PressableOpacity, obj5);
+    let obj7 = { style: legacyClassComponentStyles.container, children: null };
+    const obj8 = { style: legacyClassComponentStyles.connectedAccountItem, children: null };
+    const obj9 = { style: legacyClassComponentStyles.connectedAccountTopContainer, children: null };
     const tmp17 = token(tmp3[15]);
-    const obj6 = { label: null, icon: null, trailing: null };
-    obj6[0] = application.name;
-    obj6[1] = tmp16;
-    obj6[2] = callback2(tmp2(tmp3[17]).Stack, obj);
-    obj5[1] = callback2(tmp2(tmp3[20]).TableRow, obj6);
-    const items4 = [callback2(View, obj5), ];
-    const obj7 = { style: null, children: null };
-    obj7[0] = legacyClassComponentStyles.connectedAccountContentContainer;
-    const obj8 = { hasIcons: false, children: null };
-    const obj9 = { label: null, value: null, onValueChange: null };
+    const obj10 = { label: application.name, icon: tmp16, trailing: closure_7(tmp2(tmp3[17]).Stack, obj4) };
+    obj9.children = closure_7(tmp2(tmp3[20]).TableRow, obj10);
+    const items4 = [closure_7(View, obj9), ];
+    const obj11 = { style: legacyClassComponentStyles.connectedAccountContentContainer, children: null };
+    const obj12 = { hasIcons: false, children: null };
+    const obj13 = { label: null, value: null, onValueChange: null };
     let intl3 = tmp2(tmp3[7]).intl;
-    obj9[0] = intl3.string(tmp2(tmp3[7]).t.f7yOAX);
-    obj9[1] = tmp6;
-    obj9[2] = tmp12;
-    obj8[1] = callback2(tmp2(tmp3[22]).TableSwitchRow, obj9);
-    obj7[1] = callback2(tmp2(tmp3[21]).TableRowGroup, obj8);
-    items4[1] = callback2(View, obj7);
-    obj4[1] = items4;
-    obj3[1] = callback3(View, obj4);
-    return callback2(View, obj3);
+    obj13.label = intl3.string(tmp2(tmp3[7]).t.f7yOAX);
+    obj13.value = tmp6;
+    obj13.onValueChange = tmp12;
+    obj12.children = closure_7(tmp2(tmp3[22]).TableSwitchRow, obj13);
+    obj11.children = closure_7(tmp2(tmp3[21]).TableRowGroup, obj12);
+    items4[1] = closure_7(View, obj11);
+    obj8.children = items4;
+    obj7.children = closure_8(View, obj8);
+    return closure_7(View, obj7);
   }
-  const tmp5 = callback(React.useState(flag), 2);
+  const tmp5 = _slicedToArray(noop.useState(flag), 2);
 };

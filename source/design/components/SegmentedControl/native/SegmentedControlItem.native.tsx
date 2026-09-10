@@ -1,52 +1,50 @@
-// Module ID: 9799
-// Function ID: 9800
+// Module ID: 9826
+// Function ID: 9827
 // Name: SegmentedControlItem
-// Dependencies: [19, 17, 21, 4560, 576, 8265, 4296, 4974, 1115, 1114, 4556, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 8295, 4310, 4988, 1115, 1114, 4570, 2]
 // Exports: SegmentedControlItem
 
-// Module 9799 (SegmentedControlItem)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9826 (SegmentedControlItem)
+import nativeDefault from "native" /* 576 */;
+import spring from "spring" /* 4988 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ Pressable: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
-let closure_8 = createCacheKey.createStyles((arg0) => {
-  const item = { borderRadius: ThemesDefault.radii.lg, paddingVertical: null, flexDirection: "row", justifyContent: "center" };
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const SPRING_CONFIG = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
+let createStyles = fn(4574);
+let closure_8 = createStyles.createStyles((arg0) => {
+  const item = { borderRadius: nativeDefault.radii.lg, paddingVertical: null, flexDirection: "row", justifyContent: "center" };
   let num = 8;
   if ("experimental_Small" === arg0) {
     num = 4;
   }
-  item[1] = num;
+  item.paddingVertical = num;
   return { item, label: { flexDirection: "column", alignItems: "center", gap: 8 } };
 });
-createCacheKey = { inactive: ThemesDefault.colors.TEXT_MUTED, active: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, pressed: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-let closure_9 = createCacheKey.createStyleProperties(createCacheKey);
-let closure_10 = { code: "function SegmentedControlItemNativeTsx1(){const{colors,pressed,index,activeIndex,withSpring,SPRING_CONFIG}=this.__closure;let color=colors.inactive;const isPressActive=pressed.get()>=0;const isPressed=pressed.get()===index;const isActive=Math.round(activeIndex.get())===index;if(isPressed){color=colors.pressed;}else if(isPressActive){color=colors.inactive;}else if(isActive){color=colors.active;}return{color:withSpring(color,SPRING_CONFIG,'animate-always')};}" };
-const result = require("set").fileFinishedImporting("design/components/SegmentedControl/native/SegmentedControlItem.native.tsx");
+createStyles = fn(4574);
+let closure_9 = createStyles.createStyleProperties({ inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, pressed: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE });
+const __initData = { code: "function SegmentedControlItemNativeTsx1(){const{colors,pressed,index,activeIndex,withSpring,SPRING_CONFIG}=this.__closure;let color=colors.inactive;const isPressActive=pressed.get()>=0;const isPressed=pressed.get()===index;const isActive=Math.round(activeIndex.get())===index;if(isPressed){color=colors.pressed;}else if(isPressActive){color=colors.inactive;}else if(isActive){color=colors.active;}return{color:withSpring(color,SPRING_CONFIG,'animate-always')};}" };
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/SegmentedControl/native/SegmentedControlItem.native.tsx");
 
 export const SegmentedControlItem = function SegmentedControlItem(index) {
   index = index.index;
   const pressed = index.pressed;
   const variant = index.variant;
-  let activeIndex;
-  closure_3 = undefined;
-  activeIndex = index.state.activeIndex;
+  const activeIndex = index.state.activeIndex;
   ({ label, itemCount, icon, onPress, onPressIn, onPressOut, style } = index);
-  const tmp = callback(variant);
-  let tmp2 = callback2();
-  closure_3 = tmp2;
+  const tmp = closure_8(variant);
+  let tmp2 = closure_9();
+  const inactive = tmp2;
+  const derivedStateFromSharedValue = index(activeIndex[5]).useDerivedStateFromSharedValue(activeIndex, (arg0) => ({ selected: arg0 === index }));
   let obj = index(activeIndex[5]);
-  const derivedStateFromSharedValue = obj.useDerivedStateFromSharedValue(activeIndex, (arg0) => ({ selected: arg0 === index }));
-  obj1 = index(activeIndex[6]);
   const fn = function b() {
     let active = inactive.inactive;
-    const value = pressed.get();
+    value = pressed.get();
     if (value === index) {
       active = tmp.pressed;
     } else if (tmp2) {
@@ -57,36 +55,37 @@ export const SegmentedControlItem = function SegmentedControlItem(index) {
     const obj = { color: null };
     tmp2 = pressed.get() >= 0;
     tmp4 = index;
-    obj[0] = index(activeIndex[7]).withSpring(active, closure_1_7, "animate-always");
+    obj.color = spring.withSpring(active, closure_7, "animate-always");
     return obj;
   };
-  obj = { colors: tmp2, pressed, index, activeIndex, withSpring: index(activeIndex[7]).withSpring, SPRING_CONFIG: closure_7 };
-  fn.__closure = obj;
+  const obj2 = index(activeIndex[6]);
+  fn.__closure = { colors: tmp2, pressed, index, activeIndex, withSpring: index(activeIndex[7]).withSpring, SPRING_CONFIG };
   fn.__workletHash = 9369301431547;
-  fn.__initData = closure_10;
-  obj = { style: items, onPress, onPressIn, onPressOut, accessibilityRole: "tab", accessibilityState: derivedStateFromSharedValue, accessibilityHint: null, children: null };
-  items = [tmp.item, style];
-  const animatedStyle = obj1.useAnimatedStyle(fn);
+  fn.__initData = __initData;
+  const obj4 = { style: null, onPress, onPressIn, onPressOut, accessibilityRole: "tab", accessibilityState: derivedStateFromSharedValue, accessibilityHint: null, children: null };
+  const items = [tmp.item, style];
+  obj4.style = items;
+  const animatedStyle = obj2.useAnimatedStyle(fn);
+  const obj3 = { colors: tmp2, pressed, index, activeIndex, withSpring: index(activeIndex[7]).withSpring, SPRING_CONFIG };
+  const tmp8 = inactive;
   let formatToPlainStringResult;
   if (obj5.isAndroid()) {
     const intl = tmp3(tmp4[9]).intl;
-    obj1 = { position: null, tabCount: null };
-    obj1[0] = index + 1;
-    obj1[1] = itemCount;
-    formatToPlainStringResult = intl.formatToPlainString(tmp3(tmp4[9]).t["4EsQA1"], obj1);
+    const obj6 = { position: index + 1, tabCount: itemCount };
+    formatToPlainStringResult = intl.formatToPlainString(tmp3(tmp4[9]).t["4EsQA1"], obj6);
   }
-  obj[6] = formatToPlainStringResult;
-  const obj2 = { style: tmp.label, children: null };
+  obj4.accessibilityHint = formatToPlainStringResult;
+  const obj7 = { style: tmp.label, children: null };
   const items1 = [icon, ];
-  const obj3 = { animated: true, variant: "text-sm/semibold", style: animatedStyle, lineClamp: 1, maxFontSizeMultiplier: null, children: null };
+  const obj8 = { animated: true, variant: "text-sm/semibold", style: animatedStyle, lineClamp: 1, maxFontSizeMultiplier: null, children: null };
   let num2;
   if ("experimental_Large" === variant) {
     num2 = 1.5;
   }
-  obj3[4] = num2;
-  obj3[5] = label;
-  items1[1] = closure_5(index(activeIndex[10]).Text, obj3);
-  obj2[1] = items1;
-  obj[7] = closure_6(closure_4, obj2);
-  return closure_5(closure_3, obj);
+  obj8.maxFontSizeMultiplier = num2;
+  obj8.children = label;
+  items1[1] = closure_5(index(activeIndex[10]).Text, obj8);
+  obj7.children = items1;
+  obj4.children = closure_6(closure_4, obj7);
+  return closure_5(tmp8, obj4);
 };

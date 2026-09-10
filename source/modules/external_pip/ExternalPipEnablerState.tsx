@@ -1,11 +1,11 @@
-// Module ID: 17005
-// Function ID: 17006
-// Name: DEFAULT_STATE
+// Module ID: 17036
+// Function ID: 17037
+// Name: ExternalPipEnablerState
 // Dependencies: [2]
 
-// Module 17005 (DEFAULT_STATE)
-import set from "set" /* 2 */;
+// Module 17036 (ExternalPipEnablerState)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/external_pip/ExternalPipEnablerState.tsx");
+const result = size.fileFinishedImporting("modules/external_pip/ExternalPipEnablerState.tsx");
 
 export const DEFAULT_STATE = { externalPipEnabled: false, selectedStreamId: null, focusedStreamId: null };

@@ -1,14 +1,13 @@
-// Module ID: 4902
-// Function ID: 4903
-// Name: handleConnectionOpen
+// Module ID: 4916
+// Function ID: 4917
+// Name: GuildAvailabilityStore
 // Dependencies: [1979, 3, 504, 573, 2]
 
-// Module 4902 (handleConnectionOpen)
-import timestampDefault from "timestamp" /* 3 */;
+// Module 4916 (GuildAvailabilityStore)
+import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_0 from "createGuildRecordFromRust" /* 1979 */;
-import set from "set" /* 2 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
 function handleConnectionOpen(unavailableGuilds) {
   set = new Set(unavailableGuilds.unavailableGuilds);
@@ -26,16 +25,16 @@ function handleGuild(guild) {
     return false;
   }
 }
-let closure_1 = new timestampDefault("GuildAvailabilityStore");
+const logger = new LoggerDefault("GuildAvailabilityStore");
 let set = new Set();
 const Store = initializeDefault.Store;
 class GuildAvailabilityStore extends Store {
 }
 const prototype = GuildAvailabilityStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_0);
+  this.waitFor(GuildStore);
 };
-prototype["isUnavailable"] = function isUnavailable(guildId, token, selected) {
+prototype["isUnavailable"] = function isUnavailable(guildId) {
   let hasItem = null != guildId;
   if (hasItem) {
     hasItem = set.has(guildId);
@@ -44,7 +43,7 @@ prototype["isUnavailable"] = function isUnavailable(guildId, token, selected) {
 };
 Object.defineProperty(prototype, "totalGuilds", {
   get: function totalGuilds() {
-    return store.getGuildCount() + set.size;
+    return GuildStore.getGuildCount() + set.size;
   },
   set: undefined
 });
@@ -61,14 +60,14 @@ Object.defineProperty(prototype, "unavailableGuilds", {
   set: undefined
 });
 GuildAvailabilityStore.displayName = "GuildAvailabilityStore";
-const guildAvailabilityStore = new GuildAvailabilityStore(dispatcherDefault, {
+const guildAvailabilityStore = new GuildAvailabilityStore(DispatcherDefault, {
   CONNECTION_OPEN: handleConnectionOpen,
   OVERLAY_INITIALIZE: handleConnectionOpen,
   GUILD_UNAVAILABLE: function handleGuildUnavailable(guildId) {
     if (set.has(guildId.guildId)) {
       return false;
     } else {
-      const guild = store.getGuild(guildId.guildId);
+      const guild = GuildStore.getGuild(guildId.guildId);
       let str = "???";
       if (tmp4) {
         str = guild.name;
@@ -93,6 +92,7 @@ const guildAvailabilityStore = new GuildAvailabilityStore(dispatcherDefault, {
     }
   }
 });
-const result = set.fileFinishedImporting("stores/GuildAvailabilityStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/GuildAvailabilityStore.tsx");
 
 export default guildAvailabilityStore;

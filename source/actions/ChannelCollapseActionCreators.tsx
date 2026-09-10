@@ -1,25 +1,24 @@
-// Module ID: 10969
-// Function ID: 10970
-// Dependencies: [4741, 573, 7116, 2]
+// Module ID: 10996
+// Function ID: 10997
+// Name: ChannelCollapseActionCreators
+// Dependencies: [4755, 573, 7130, 2]
 
-// Module 10969
-import dispatcherDefault from "dispatcher" /* 573 */;
-import handleConnectionOpenDefault from "handleConnectionOpen" /* 7116 */;
-import closure_2 from "updateUserGuildSettingsInternal" /* 4741 */;
+// Module 10996 (ChannelCollapseActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import UserGuildSettingsManagerDefault from "UserGuildSettingsManager" /* 7130 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4755 */;
 
-let result = require("set").fileFinishedImporting("actions/ChannelCollapseActionCreators.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("actions/ChannelCollapseActionCreators.tsx");
 
 export default {
   update(channelId) {
-    let obj = dispatcherDefault;
-    obj = { type: "CHANNEL_COLLAPSE", channelId };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "CHANNEL_COLLAPSE", channelId });
   },
   toggleCollapseGuild(id) {
-    let obj = handleConnectionOpenDefault;
-    obj = { hide_muted_channels: !guildCollapsed.isGuildCollapsed(id) };
-    const result = obj.saveUserGuildSettings(id, obj);
-    obj = { type: "GUILD_TOGGLE_COLLAPSE_MUTED", guildId: id };
-    dispatcherDefault.dispatch(obj);
+    const obj = UserGuildSettingsManagerDefault;
+    const result = obj.saveUserGuildSettings(id, { hide_muted_channels: !UserGuildSettingsStore.isGuildCollapsed(id) });
+    const obj2 = { hide_muted_channels: !UserGuildSettingsStore.isGuildCollapsed(id) };
+    DispatcherDefault.dispatch({ type: "GUILD_TOGGLE_COLLAPSE_MUTED", guildId: id });
   }
 };

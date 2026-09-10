@@ -1,122 +1,119 @@
-// Module ID: 16901
-// Function ID: 16902
-// Name: HiddenMedia
-// Dependencies: [19, 17, 4781, 21, 4560, 16902, 576, 5081, 4556, 1114, 4515, 4242, 7162, 504, 8179, 7932, 16903, 8657, 5123, 16904, 2]
+// Module ID: 16938
+// Function ID: 16939
+// Name: RestrictedMessagePreviewList
+// Dependencies: [19, 17, 4795, 21, 4574, 16939, 576, 5095, 4570, 1114, 4529, 4255, 7176, 504, 8205, 7946, 16940, 8685, 5137, 16941, 2]
 // Exports: default
 
-// Module 16901 (HiddenMedia)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "reinjectEphemerals" /* 4781 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16938 (RestrictedMessagePreviewList)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import DateUtils from "DateUtils" /* 4255 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 5095 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8205 */;
+import RestrictedBlockedMessageGroupDefault from "RestrictedBlockedMessageGroup" /* 16941 */;
+import noop from "module_19" /* 19 */;
+import MessageStore from "MessageStore" /* 4795 */;
 
-const require = arg1;
+const require = globalThis.__r;
+
+require = fn;
 function HiddenMedia(length) {
-  let _require;
-  const tmp = callback3();
+  const tmp = closure_10();
   _require = tmp;
   let obj = { children: null };
   let items = [
     Array.from({ length: length.count }, (arg0, arg1) => {
-      let obj = { style: lib.mediaPlaceholderCard, children: null };
-      const items = [closure_1_6(lib(closure_1_2[7]).ImageWarningIcon, { size: "lg", color: "text-muted" }), ];
-      obj = { variant: "text-sm/medium", color: "text-muted", children: null };
-      const intl = lib(closure_1_2[9]).intl;
-      obj[2] = intl.string(lib(closure_1_2[9]).t.B2xSxL);
-      items[1] = closure_1_6(lib(closure_1_2[8]).Text, obj);
-      obj[1] = items;
-      return closure_1_7(closure_1_4, obj, arg1);
+      const obj = { style: mediaPlaceholderCard.mediaPlaceholderCard, children: null };
+      const items = [timestampProducer(ImageWarningIcon.ImageWarningIcon, { size: "lg", color: "text-muted" }), ];
+      const obj2 = { variant: "text-sm/medium", color: "text-muted", children: null };
+      const intl = util.intl;
+      obj2.children = intl.string(util.t.B2xSxL);
+      items[1] = timestampProducer(Text_Text.Text, obj2);
+      obj.children = items;
+      return React5(View, obj, arg1);
     }),
 
   ];
-  obj = { style: tmp.mediaHiddenRow, children: null };
-  const items1 = [callback(_require(4515).CircleInformationIcon, { size: "sm", color: "text-muted" }), ];
-  obj = { variant: "text-sm/normal", color: "text-muted", children: null };
-  let intl = _require(1114).intl;
-  obj[2] = intl.string(_require(1114).t["VGf+K3"]);
-  items1[1] = callback(_require(4556).Text, obj);
-  obj[1] = items1;
-  items[1] = callback2(View, obj);
-  obj[0] = items;
-  return callback2(View, obj);
+  let obj2 = { style: tmp.mediaHiddenRow, children: null };
+  const items1 = [closure_6(require("CircleInformationIcon").CircleInformationIcon, { size: "sm", color: "text-muted" }), ];
+  const obj3 = { variant: "text-sm/normal", color: "text-muted", children: null };
+  let intl = require("util").intl;
+  obj3.children = intl.string(require("util").t["VGf+K3"]);
+  items1[1] = closure_6(require("Text/Text").Text, obj3);
+  obj2.children = items1;
+  items[1] = closure_7(View, obj2);
+  obj.children = items;
+  return closure_7(View, obj);
 }
-({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 let closure_9 = { renderEmbeds: false, renderReactions: false, inlineEmbedMedia: false, inlineAttachmentMedia: false, animateEmoji: false, gifAutoPlay: false, timestampHourCycle: 0, renderCodedLinks: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderComponents: false, renderThreadEmbeds: false, renderReplies: false, renderCommunicationDisabled: false, renderAttachments: false, renderExecutedCommands: false, renderPolls: false, renderSharedClientTheme: false, renderForumPostActions: false, ignoreMentioned: false, ignoreEmbedDescriptionCache: false, forceHideSimpleEmbedContent: false, enableSwipeActions: false, useAlternateEmbedColors: false, restrictedPreview: true };
-createCacheKey = { container: { flexDirection: "column" }, hiddenMedia: null, messageRow: null, avatarHitbox: null, dateDivider: null, dividerLine: null, mediaPlaceholderCard: null, mediaHiddenRow: null };
-createCacheKey = { marginLeft: require("RESTRICTED_AVATAR_SIZE").RESTRICTED_CONTENT_INSET };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { position: "relative" };
-createCacheKey[3] = { position: "absolute", top: 0, left: 0, width: require("RESTRICTED_AVATAR_SIZE").RESTRICTED_CONTENT_INSET, height: require("RESTRICTED_AVATAR_SIZE").RESTRICTED_AVATAR_SIZE };
-let obj1 = { position: "absolute", top: 0, left: 0, width: require("RESTRICTED_AVATAR_SIZE").RESTRICTED_CONTENT_INSET, height: require("RESTRICTED_AVATAR_SIZE").RESTRICTED_AVATAR_SIZE };
-createCacheKey[4] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, marginVertical: ThemesDefault.space.PX_12 };
-let obj2 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, marginVertical: ThemesDefault.space.PX_12 };
-createCacheKey[5] = { flex: 1, height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-let obj3 = { flex: 1, height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[6] = { alignItems: "center", justifyContent: "center", gap: ThemesDefault.space.PX_8, height: 160, marginTop: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-let obj4 = { alignItems: "center", justifyContent: "center", gap: ThemesDefault.space.PX_8, height: 160, marginTop: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[7] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8, marginBottom: ThemesDefault.space.PX_4 };
-let closure_10 = createCacheKey.createStyles(createCacheKey);
-const obj5 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8, marginBottom: ThemesDefault.space.PX_4 };
-const result = require("set").fileFinishedImporting("modules/message_request/native/RestrictedMessagePreviewList.tsx");
+const createStyles = fn(4574);
+let obj2 = { container: { flexDirection: "column" }, hiddenMedia: { marginLeft: fn(16939).RESTRICTED_CONTENT_INSET }, messageRow: { position: "relative" }, avatarHitbox: null, dateDivider: null, dividerLine: null, mediaPlaceholderCard: null, mediaHiddenRow: null };
+let size = { position: "absolute", top: 0, left: 0, width: fn(16939).RESTRICTED_CONTENT_INSET, height: fn(16939).RESTRICTED_AVATAR_SIZE };
+obj2.avatarHitbox = size;
+let obj3 = { marginLeft: fn(16939).RESTRICTED_CONTENT_INSET };
+obj2.dateDivider = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_12 };
+let obj4 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_12 };
+obj2.dividerLine = { flex: 1, height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+let obj5 = { flex: 1, height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.mediaPlaceholderCard = { alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_8, height: 160, marginTop: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj6 = { alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_8, height: 160, marginTop: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj2.mediaHiddenRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_4 };
+let closure_10 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/message_request/native/RestrictedMessagePreviewList.tsx");
 
 export default function RestrictedMessagePreviewList(channelId) {
   channelId = channelId.channelId;
-  importDefault = undefined;
   let analyticsLocations;
   let callback;
-  let memo;
-  closure_5 = undefined;
-  let arr5;
-  let tmp = callback3();
+  let renderMessage;
+  let tmp = closure_10();
   importDefault = tmp;
-  analyticsLocations = importDefault(analyticsLocations[12])().analyticsLocations;
-  let obj = channelId(analyticsLocations[13]);
-  let items = [closure_5];
+  analyticsLocations = require("useAnalyticsLocations")().analyticsLocations;
+  let items = [renderMessage];
   let items1 = [channelId];
   const items2 = [channelId, analyticsLocations];
-  const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
-    messages = messages.getMessages(channelId);
+  const stateFromStoresArray = channelId(analyticsLocations[13]).useStateFromStoresArray(items, () => {
+    const messages = MessageStore.getMessages(channelId);
     return messages.toArray();
   }, items1);
   callback = callback.useCallback((userId) => {
-    lib(analyticsLocations[14])({ userId, channelId, sourceAnalyticsLocations: analyticsLocations });
+    showUserProfileActionSheetDefault({ userId, channelId, sourceAnalyticsLocations: analyticsLocations });
   }, items2);
-  memo = callback.useMemo(() => {
-    const obj = new lib(analyticsLocations[15])();
-    obj.setOptions(closure_9);
+  const memo = callback.useMemo(() => {
+    const obj = new closure_1(analyticsLocations[15])();
+    obj.setOptions(closure_1_9);
     return obj;
   }, []);
   const items3 = [tmp, memo, callback];
-  closure_5 = callback.useCallback((message) => {
-    closure_0 = message;
-    const tmp = lib(analyticsLocations[16])(message);
-    let obj = { style: lib.messageRow, children: null };
-    obj = { pointerEvents: "none", message, rowGenerator: memo };
-    const items = [arr5(lib(analyticsLocations[17]), obj), ];
-    obj = { style: lib.avatarHitbox, accessibilityRole: "button", accessibilityLabel: null, onPress: null };
+  renderMessage = callback.useCallback((message) => {
+    const tmp = closure_1(analyticsLocations[16])(message);
+    const obj = { style: closure_1.messageRow, children: null };
+    const items = [arr5(closure_1(analyticsLocations[17]), { pointerEvents: "none", message, rowGenerator: memo }), ];
+    const obj3 = { style: closure_1.avatarHitbox, accessibilityRole: "button", accessibilityLabel: null, onPress: null };
     const intl = channelId(analyticsLocations[9]).intl;
-    obj[2] = intl.string(channelId(analyticsLocations[9]).t.iXAna6);
-    obj[3] = function onPress() {
-      return closure_1_3(message.author.id);
+    obj3.accessibilityLabel = intl.string(channelId(analyticsLocations[9]).t.iXAna6);
+    obj3.onPress = function onPress() {
+      return callback(message.author.id);
     };
-    items[1] = arr5(channelId(analyticsLocations[18]).PressableOpacity, obj);
-    obj[1] = items;
+    items[1] = arr5(channelId(analyticsLocations[18]).PressableOpacity, obj3);
+    obj.children = items;
     const children = [closure_1_7(memo, obj), ];
     let tmp6Result = tmp > 0;
     if (tmp6Result) {
-      obj1 = { style: null, children: null };
-      obj1[0] = lib.hiddenMedia;
-      const obj2 = { count: null };
-      obj2[0] = tmp;
-      obj1[1] = tmp6(closure_1_11, obj2);
-      tmp6Result = tmp6(memo, obj1);
+      const obj4 = { style: closure_1.hiddenMedia, children: null };
+      const obj5 = { count: tmp };
+      obj4.children = tmp6(HiddenMedia, obj5);
+      tmp6Result = tmp6(memo, obj4);
     }
     children[1] = tmp6Result;
     return closure_1_7(closure_1_8, { children });
   }, items3);
-  arr5 = (function groupMessages(stateFromStoresArray) {
+  const arr5 = (function groupMessages(stateFromStoresArray) {
     const items = [];
     const iter = stateFromStoresArray[Symbol.iterator]();
     const nextResult = iter.next();
@@ -126,7 +123,6 @@ export default function RestrictedMessagePreviewList(channelId) {
         let tmp5 = items[items.length - 1];
         let tmp7 = null;
         if (null != tmp5) {
-          let tmp8 = tmp5;
           tmp7 = null;
           if ("blocked" === tmp6.type) {
             tmp7 = tmp5;
@@ -134,88 +130,72 @@ export default function RestrictedMessagePreviewList(channelId) {
         }
         let tmp9 = tmp7;
         if (null != tmp7) {
-          let tmp10 = channelId;
-          let tmp11 = analyticsLocations;
           let obj2 = channelId(analyticsLocations[11]);
-          let tmp12 = tmp7;
-          let tmp13 = nextResult;
           if (obj2.isSameDay(tmp9.messages[tmp9.messages.length - 1].timestamp, tmp2.timestamp)) {
-            let tmp16 = tmp7;
             let messages = tmp9.messages;
-            let tmp17 = nextResult;
             let arr = messages.push(tmp2);
           }
         }
-        let obj = { type: "blocked", messages: null };
-        let tmp14 = nextResult;
+        let obj3 = { type: "blocked", messages: null };
         let items1 = [tmp2];
-        obj[1] = items1;
-        arr = items.push(obj);
+        obj3.messages = items1;
+        let arr2 = items.push(obj3);
       } else {
-        obj = { type: "message", message: null };
-        let tmp3 = nextResult;
-        obj[1] = tmp2;
-        let arr1 = items.push(obj);
+        let obj = { type: "message", message: null };
+        obj.message = tmp2;
+        let arr3 = items.push(obj);
       }
       continue;
     }
     return items;
   })(stateFromStoresArray);
-  obj = {
+  let obj = channelId(analyticsLocations[13]);
+  return arr5(memo, {
     style: tmp.container,
-    children: arr5.map((type) => {
+    children: arr5.map((type, index) => {
       if ("message" === type.type) {
         let message = type.message;
       } else {
         message = type.messages[0];
       }
-      if (null == arr5[arg1 - 1]) {
+      if (null == arr5[index - 1]) {
         let tmp6Result = null == null;
         if (!tmp6Result) {
-          let obj = channelId(analyticsLocations[11]);
-          tmp6Result = !obj.isSameDay(null.timestamp, message.timestamp);
+          tmp6Result = !DateUtils.isSameDay(null.timestamp, message.timestamp);
         }
         if (tmp6Result) {
-          obj = { style: null, children: null };
-          obj[0] = lib.dateDivider;
-          obj = { style: null };
-          obj[0] = lib.dividerLine;
-          const items = [arr5(tmp7, obj), , ];
-          obj1 = { variant: "text-xs/semibold", color: "text-muted", children: null };
-          let obj4 = channelId(analyticsLocations[11]);
-          obj1[2] = obj4.dateFormat(message.timestamp, "LL");
-          items[1] = arr5(channelId(analyticsLocations[8]).Text, obj1);
-          const obj2 = { style: null };
-          obj2[0] = lib.dividerLine;
-          items[2] = arr5(tmp7, obj2);
-          obj[1] = items;
-          tmp6Result = tmp6(tmp7, obj);
+          const obj2 = { style: closure_1.dateDivider, children: null };
+          const obj3 = { style: closure_1.dividerLine };
+          const items = [timestampProducer(tmp7, obj3), , ];
+          const obj4 = { variant: "text-xs/semibold", color: "text-muted", children: DateUtils.dateFormat(message.timestamp, "LL") };
+          items[1] = timestampProducer(Text_Text.Text, obj4);
+          const obj6 = { style: closure_1.dividerLine };
+          items[2] = timestampProducer(tmp7, obj6);
+          obj2.children = items;
+          tmp6Result = tmp6(tmp7, obj2);
         }
         const items1 = [tmp6Result, ];
         if ("message" === type.type) {
-          let tmp18 = messages(type.message);
+          let tmp18 = renderMessage(type.message);
         } else {
-          const obj3 = { messages: null, renderMessage: null };
-          obj3[0] = type.messages;
-          obj3[1] = messages;
-          tmp18 = arr5(lib(analyticsLocations[19]), obj3);
+          const obj7 = { messages: type.messages, renderMessage };
+          tmp18 = timestampProducer(RestrictedBlockedMessageGroupDefault, obj7);
         }
-        obj4 = { children: null };
+        const obj8 = { children: null };
         items1[1] = tmp18;
-        obj4[0] = items1;
+        obj8.children = items1;
         if ("message" === type.type) {
           let id = type.message.id;
         } else {
           const _HermesInternal = HermesInternal;
           id = "blocked-" + message.id;
         }
-        return closure_1_7(memo, obj4, id);
+        return React5(View, obj8, id);
       } else if ("message" === tmp.type) {
         let message2 = tmp.message;
       } else {
         message2 = tmp.messages[tmp.messages.length - 1];
       }
     })
-  };
-  return arr5(memo, obj);
+  });
 };

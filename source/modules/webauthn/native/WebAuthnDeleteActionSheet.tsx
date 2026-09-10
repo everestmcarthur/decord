@@ -1,99 +1,93 @@
-// Module ID: 14672
-// Function ID: 14673
+// Module ID: 14698
+// Function ID: 14699
 // Name: WebAuthnDeleteActionSheet
-// Dependencies: [19, 17, 21, 4560, 576, 4527, 7150, 7149, 1114, 7199, 14673, 4556, 4975, 6597, 4259, 10657, 4520, 9630, 8593, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 4541, 7164, 7163, 1114, 7212, 14699, 4570, 4989, 6611, 4272, 10684, 4534, 9657, 8621, 2]
 // Exports: default
 
-// Module 14672 (WebAuthnDeleteActionSheet)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import registerAssetDefault from "registerAsset" /* 14673 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14698 (WebAuthnDeleteActionSheet)
+import nativeDefault from "native" /* 576 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6611 */;
+import _modDef14699 from "module_14699" /* 14699 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ Image: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { content: { alignItems: "center" }, subtitle: null, sheetContent: null, sheetBody: null };
-createCacheKey = { textAlign: "center", marginTop: ThemesDefault.space.PX_16 };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
-let obj1 = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
-createCacheKey[3] = { gap: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { gap: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
-let result = require("set").fileFinishedImporting("modules/webauthn/native/WebAuthnDeleteActionSheet.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: c3, View: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { content: { alignItems: "center" }, subtitle: { textAlign: "center", marginTop: nativeDefault.space.PX_16 }, sheetContent: null, sheetBody: null };
+const obj3 = { textAlign: "center", marginTop: nativeDefault.space.PX_16 };
+obj2.sheetContent = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
+let obj4 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
+obj2.sheetBody = { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/webauthn/native/WebAuthnDeleteActionSheet.tsx");
 
 export default function WebAuthnDeleteActionSheet(credential) {
   credential = credential.credential;
   ({ deleting, setDeleting: importDefault } = credential);
   function handleClose() {
-    callback(table[5]).hideActionSheet();
+    ActionSheetActionCreatorsDefault.hideActionSheet();
   }
-  const tmp = callback3();
+  const tmp = closure_7();
   let obj = { contentStyles: tmp.sheetContent, bodyStyles: tmp.sheetBody, children: null };
-  obj = { title: null, trailing: null };
+  let obj2 = { title: null, trailing: null };
   let intl = credential(1114).intl;
-  obj = { keyName: credential.name };
-  obj[0] = intl.formatToPlainString(credential(1114).t.mI3CoL, obj);
-  obj[1] = callback(credential(7199).ActionSheetCloseButton, { onPress: handleClose });
-  const items = [callback(credential(7149).BottomSheetTitleHeader, obj), , , ];
-  obj1 = { style: tmp.content, children: null };
-  const items1 = [callback(closure_3, { source: registerAssetDefault }), ];
-  const obj3 = { variant: "heading-md/normal", style: tmp.subtitle, children: null };
+  obj2.title = intl.formatToPlainString(credential(1114).t.mI3CoL, { keyName: credential.name });
+  obj2.trailing = closure_5(credential(7212).ActionSheetCloseButton, { onPress: handleClose });
+  const items = [closure_5(credential(7163).BottomSheetTitleHeader, obj2), , , ];
+  const obj4 = { style: tmp.content, children: null };
+  const items1 = [closure_5(closure_3, { source: _modDef14699 }), ];
+  const obj6 = { variant: "heading-md/normal", style: tmp.subtitle, children: null };
   const intl2 = credential(1114).intl;
-  obj3[2] = intl2.string(credential(1114).t.IfTbc1);
-  items1[1] = callback(credential(4556).Text, obj3);
-  obj1[1] = items1;
-  items[1] = callback2(closure_4, obj1);
-  const obj4 = { children: null };
-  const obj5 = { text: null, onPress: null, variant: "primary", grow: true };
+  obj6.children = intl2.string(credential(1114).t.IfTbc1);
+  items1[1] = closure_5(credential(4570).Text, obj6);
+  obj4.children = items1;
+  items[1] = closure_6(closure_4, obj4);
+  const obj7 = { children: null };
+  const obj8 = { text: null, onPress: null, variant: "primary", grow: true };
   const intl3 = credential(1114).intl;
-  obj5[0] = intl3.string(credential(1114).t["lqK//z"]);
-  obj5[1] = handleClose;
-  obj4[0] = callback(credential(4975).Button, obj5);
-  items[2] = callback(closure_4, obj4);
-  const obj6 = { children: null };
-  const obj7 = { text: null, onPress: null, variant: "destructive", disabled: null, loading: null, grow: true };
+  obj8.text = intl3.string(credential(1114).t["lqK//z"]);
+  obj8.onPress = handleClose;
+  obj7.children = closure_5(credential(4989).Button, obj8);
+  items[2] = closure_5(closure_4, obj7);
+  const obj9 = { children: null };
+  const obj10 = { text: null, onPress: null, variant: "destructive", disabled: null, loading: null, grow: true };
   const intl4 = credential(1114).intl;
-  obj7[0] = intl4.string(credential(1114).t.zYOk0f);
-  obj7[1] = function onPress() {
-    callback(true);
-    closure_1_1(closure_1_2[5]).hideActionSheet();
-    let obj = closure_1_1(closure_1_2[5]);
-    const result = credential(closure_1_2[13]).deleteWebAuthnCredential(credential);
-    const obj2 = credential(closure_1_2[13]);
+  obj10.text = intl4.string(credential(1114).t.zYOk0f);
+  obj10.onPress = function onPress() {
+    closure_1_1(true);
+    ActionSheetActionCreatorsDefault.hideActionSheet();
+    const result = WebAuthnActionCreators.deleteWebAuthnCredential(credential);
     const nextPromise = result.then(() => {
-      let obj = callback2(4259);
-      obj = { key: "WEBAUTHN_CREDENTIAL_DELETE_SUCCESS_TOAST_KEY", content: null, icon: null, IconComponent: null, iconColor: "status-positive" };
-      const intl = callback(1114).intl;
-      obj[1] = intl.string(callback(1114).t.ZnkeXs);
-      obj[2] = callback2(10657);
-      obj[3] = callback(4520).CircleCheckIcon;
-      obj.open(obj);
+      const obj2 = { key: "WEBAUTHN_CREDENTIAL_DELETE_SUCCESS_TOAST_KEY", content: null, icon: null, IconComponent: null, iconColor: "status-positive" };
+      const intl = credential(1114).intl;
+      obj2.content = intl.string(credential(1114).t.ZnkeXs);
+      obj2.icon = closure_1_1(10684);
+      obj2.IconComponent = credential(4534).CircleCheckIcon;
+      closure_1_1(4272).open(obj2);
     });
     result.then(() => {
-      let obj = callback2(4259);
-      obj = { key: "WEBAUTHN_CREDENTIAL_DELETE_SUCCESS_TOAST_KEY", content: null, icon: null, IconComponent: null, iconColor: "status-positive" };
-      const intl = callback(1114).intl;
-      obj[1] = intl.string(callback(1114).t.ZnkeXs);
-      obj[2] = callback2(10657);
-      obj[3] = callback(4520).CircleCheckIcon;
-      obj.open(obj);
-    }).catch((content) => {
-      let obj = callback2(4259);
-      obj = { key: "WEBAUTHN_CREDENTIAL_DELETE_ERROR_TOAST_KEY", content: content.message, icon: callback2(9630), IconComponent: callback(8593).WarningIcon, iconColor: "icon-feedback-critical" };
-      obj.open(obj);
+      const obj2 = { key: "WEBAUTHN_CREDENTIAL_DELETE_SUCCESS_TOAST_KEY", content: null, icon: null, IconComponent: null, iconColor: "status-positive" };
+      const intl = credential(1114).intl;
+      obj2.content = intl.string(credential(1114).t.ZnkeXs);
+      obj2.icon = closure_1_1(10684);
+      obj2.IconComponent = credential(4534).CircleCheckIcon;
+      closure_1_1(4272).open(obj2);
+    }).catch((error) => {
+      const obj = closure_1_1(4272);
+      obj.open({ key: "WEBAUTHN_CREDENTIAL_DELETE_ERROR_TOAST_KEY", content: error.message, icon: closure_1_1(9657), IconComponent: credential(8621).WarningIcon, iconColor: "icon-feedback-critical" });
     }).finally(() => {
-      callback2(false);
+      closure_1_1(false);
     });
   };
-  obj7[3] = deleting;
-  obj7[4] = deleting;
-  obj6[0] = callback(credential(4975).Button, obj7);
-  items[3] = callback(closure_4, obj6);
-  obj[2] = items;
-  return callback2(credential(7150).BottomSheet, obj);
+  obj10.disabled = deleting;
+  obj10.loading = deleting;
+  obj9.children = closure_5(credential(4989).Button, obj10);
+  items[3] = closure_5(closure_4, obj9);
+  obj.children = items;
+  return closure_6(credential(7164).BottomSheet, obj);
 };

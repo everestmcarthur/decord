@@ -1,12 +1,12 @@
-// Module ID: 14195
-// Function ID: 14196
-// Name: set
+// Module ID: 14220
+// Function ID: 14221
+// Name: TrackingConsentUtils
 // Dependencies: [2]
 
-// Module 14195 (set)
-import set from "set" /* 2 */;
+// Module 14220 (TrackingConsentUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/tracking/TrackingConsentUtils.tsx");
+const result = size.fileFinishedImporting("modules/tracking/TrackingConsentUtils.tsx");
 
 export default {
   canUseInstallationId() {

@@ -1,39 +1,38 @@
-// Module ID: 12954
-// Function ID: 12955
+// Module ID: 12980
+// Function ID: 12981
 // Name: URLCallout
-// Dependencies: [19, 17, 21, 4560, 576, 12955, 4556, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 12981, 4570, 2]
 // Exports: URLCallout
 
-// Module 12954 (URLCallout)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Text from "Text" /* 4556 */;
-import useUrlParts from "useUrlParts" /* 12955 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12980 (URLCallout)
+import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import SharedStateUtils from "SharedStateUtils" /* 12981 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsxs: c3, jsx: c4 } = jsxProd);
-createCacheKey = { linkCalloutContainer: null, linkCalloutContainerText: null };
-createCacheKey = { maxHeight: 300, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, width: "100%", borderRadius: ThemesDefault.radii.md };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { padding: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_12, textAlign: "center" };
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { padding: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_12, textAlign: "center" };
-const result = require("set").fileFinishedImporting("modules/safety_common/native/URLCallout.tsx");
+require = fn;
+const ScrollView = fn(17).ScrollView;
+const jsxProd = fn(21);
+({ jsxs: c3, jsx: closure_4 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { linkCalloutContainer: { maxHeight: 300, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, width: "100%", borderRadius: nativeDefault.radii.md }, linkCalloutContainerText: null };
+let obj3 = { maxHeight: 300, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, width: "100%", borderRadius: nativeDefault.radii.md };
+obj2.linkCalloutContainerText = { padding: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12, textAlign: "center" };
+let closure_5 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_common/native/URLCallout.tsx");
 
 export const URLCallout = function URLCallout(url) {
-  const tmp = callback3();
-  let obj = useUrlParts;
-  const urlParts = obj.useUrlParts(url.url);
-  obj = { style: tmp.linkCalloutContainer, children: null };
+  const tmp = closure_5();
+  const urlParts = SharedStateUtils.useUrlParts(url.url);
+  const obj2 = { style: tmp.linkCalloutContainer, children: null };
   ({ protocol, hostname, theRestOfTheUrl } = urlParts);
-  obj = { style: tmp.linkCalloutContainerText, variant: "text-md/normal", children: null };
+  const obj3 = { style: tmp.linkCalloutContainerText, variant: "text-md/normal", children: null };
+  const obj4 = { variant: "text-md/normal", color: "text-muted", children: null };
   const items = [protocol, "//"];
-  const items1 = [callback(Text.Text, { variant: "text-md/normal", color: "text-muted", children: items }), callback2(Text.Text, { variant: "text-md/semibold", color: "text-default", children: hostname }), callback2(Text.Text, { variant: "text-md/normal", color: "text-muted", children: theRestOfTheUrl })];
-  obj[2] = items1;
-  obj[1] = callback(Text.Text, obj);
-  return callback2(ScrollView, obj);
+  obj4.children = items;
+  const items1 = [React3(Text_Text.Text, obj4), React4(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", children: hostname }), React4(Text_Text.Text, { variant: "text-md/normal", color: "text-muted", children: theRestOfTheUrl })];
+  obj3.children = items1;
+  obj2.children = React3(Text_Text.Text, obj3);
+  return React4(ScrollView, obj2);
 };

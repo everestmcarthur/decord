@@ -1,22 +1,24 @@
-// Module ID: 11276
-// Function ID: 11277
-// Name: ChatScrollPosition
-// Dependencies: [17, 1115, 11277, 1232, 11278, 11279, 2]
+// Module ID: 11303
+// Function ID: 11304
+// Name: NativeChatUtils
+// Dependencies: [17, 1115, 11304, 1232, 11305, 11306, 2]
 
-// Module 11276 (ChatScrollPosition)
-import set from "set" /* 2 */;
-import set2 from "set" /* 1115 */;
-import _modDef1232 from "module_1232" /* 1232 */;
-import __INTERNAL_VIEW_CONFIG from "__INTERNAL_VIEW_CONFIG" /* 11277 */;
-import enforcingDefault from "enforcing" /* 11279 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 11303 (NativeChatUtils)
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import ChatNativeComponent from "ChatNativeComponent" /* 11304 */;
+import NativeChatModuleDefault from "NativeChatModule" /* 11306 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
 
-({ NativeModules: c3, findNodeHandle: c4 } = get_ActivityIndicator);
-let obj = { TOP: 0, [0]: "TOP", MIDDLE: 1, [1]: "MIDDLE", BOTTOM: 2, [2]: "BOTTOM", NONE: 3, [3]: "NONE" };
-obj = {
+({ NativeModules: c3, findNodeHandle: closure_4 } = get_ActivityIndicator);
+const ChatScrollPosition = { TOP: 0, [0]: "TOP", MIDDLE: 1, [1]: "MIDDLE", BOTTOM: 2, [2]: "BOTTOM", NONE: 3, [3]: "NONE" };
+let result = size.fileFinishedImporting("modules/chat/native/NativeChatUtils.tsx");
+
+export default {
   scrollTo(arg0, arg1, arg2) {
     if (null != arg0) {
-      obj = arg2;
+      let obj = arg2;
       if (arg2 == null) {
         obj = {};
       }
@@ -27,101 +29,97 @@ obj = {
         TOP = obj.TOP;
       }
       if (obj2.isIOS()) {
-        const tmp15 = callback(arg0);
+        const tmp15 = React4(arg0);
         if (null != tmp15) {
-          const DCDChatManager = closure_3.DCDChatManager;
+          const DCDChatManager = React3.DCDChatManager;
           DCDChatManager.scrollTo(tmp15, arg1, tmp, tmp2, TOP);
         }
       } else {
-        const Commands = tmp5(11277).Commands;
+        const Commands = tmp5(11304).Commands;
         Commands.scrollTo(arg0, arg1, tmp, tmp2, TOP);
       }
-      obj2 = set2;
+      obj2 = PlatformUtils;
       tmp5 = require;
     }
   },
   scrollToBottom(arg0, arg1) {
     if (null != arg0) {
       if (obj.isIOS()) {
-        const tmp6 = callback(arg0);
+        const tmp6 = React4(arg0);
         if (null != tmp6) {
-          const DCDChatManager = closure_3.DCDChatManager;
+          const DCDChatManager = React3.DCDChatManager;
           DCDChatManager.scrollToBottom(tmp6, arg1);
         }
       } else {
-        const Commands = tmp2(11277).Commands;
+        const Commands = tmp2(11304).Commands;
         Commands.scrollToBottom(arg0, arg1);
       }
-      obj = set2;
+      obj = PlatformUtils;
       tmp2 = require;
     }
   },
   scrollToTop(arg0, arg1) {
     if (null != arg0) {
       if (obj.isIOS()) {
-        const tmp4 = callback(arg0);
+        const tmp4 = React4(arg0);
         if (null != tmp4) {
-          const DCDChatManager = closure_3.DCDChatManager;
+          const DCDChatManager = React3.DCDChatManager;
           DCDChatManager.scrollToTop(tmp4, arg1);
         }
       }
-      obj = set2;
+      obj = PlatformUtils;
     }
   },
   scrollToRelativeOffset(arg0, arg1, arg2) {
     if (null != arg0) {
       if (obj.isIOS()) {
-        const tmp4 = callback(arg0);
+        const tmp4 = React4(arg0);
         if (null != tmp4) {
-          const DCDChatManager = closure_3.DCDChatManager;
+          const DCDChatManager = React3.DCDChatManager;
           const result = DCDChatManager.scrollToRelativeOffset(tmp4, arg1, arg2);
         }
       }
-      obj = set2;
+      obj = PlatformUtils;
     }
   },
   scrollIntoView(arg0, arg1, arg2) {
     if (null != arg0) {
-      obj = arg2;
+      let obj = arg2;
       if (arg2 == null) {
         obj = {};
       }
       const animated = obj.animated;
       const highlight = obj.highlight;
       if (obj2.isIOS()) {
-        const tmp13 = callback(arg0);
+        const tmp13 = React4(arg0);
         if (null != tmp13) {
-          const DCDChatManager = closure_3.DCDChatManager;
+          const DCDChatManager = React3.DCDChatManager;
           DCDChatManager.scrollIntoView(tmp13, arg1, tmp, tmp2);
         }
       } else {
-        const Commands = tmp4(11277).Commands;
+        const Commands = tmp4(11304).Commands;
         Commands.scrollIntoView(arg0, arg1, tmp, tmp2);
       }
-      obj2 = set2;
+      obj2 = PlatformUtils;
       tmp4 = require;
     }
   },
   updateRows(arg0, rows) {
     if (null != arg0) {
       if (obj6.isIOS()) {
-        let tmp31Result = tmp31(11278);
-        const andIncrementChangesetIdForChat = tmp31Result.getAndIncrementChangesetIdForChat(arg0);
+        const andIncrementChangesetIdForChat = tmp31(11305).getAndIncrementChangesetIdForChat(arg0);
         ({ rows, forceReload } = rows);
         if (forceReload == null) {
           forceReload = false;
         }
-        obj = { category: "chat.dispatch", message: null, data: null };
+        const tmp31Result = tmp31(11305);
+        const obj = { category: "chat.dispatch", message: null, data: null };
         const _HermesInternal = HermesInternal;
-        obj[1] = "updateRows dispatch id=" + andIncrementChangesetIdForChat + " ops=" + rows.length;
-        obj = { changesetUpdateId: null, opCount: null, rows: null, forceReload: null };
-        obj[0] = andIncrementChangesetIdForChat;
-        obj[1] = rows.length;
-        obj[2] = rows;
-        obj[3] = forceReload;
-        obj[2] = obj;
-        _modDef1232.addBreadcrumb(obj);
-        const Commands = tmp31(11277).Commands;
+        obj.message = "updateRows dispatch id=" + andIncrementChangesetIdForChat + " ops=" + rows.length;
+        const obj2 = { changesetUpdateId: andIncrementChangesetIdForChat, opCount: rows.length, rows, forceReload };
+        obj.data = obj2;
+        SentryUtilsDefault.addBreadcrumb(obj);
+        const Commands = tmp31(11304).Commands;
         const _JSON2 = JSON;
         const json = JSON.stringify(rows.rows);
         const isLoadingAtTop = rows.isLoadingAtTop;
@@ -143,11 +141,10 @@ obj = {
           flag6 = true;
         }
         Commands.updateRows(arg0, json, isLoadingAtTop, str3, andIncrementChangesetIdForChat, flag4, flag5, flag6);
-        const obj3 = _modDef1232;
       } else {
-        const tmp2 = callback(arg0);
+        const tmp2 = React4(arg0);
         if (null != tmp2) {
-          const obj7 = enforcingDefault;
+          const obj7 = NativeChatModuleDefault;
           const _JSON4 = JSON;
           const json1 = JSON.stringify(rows.rows);
           const isLoadingAtTop2 = rows.isLoadingAtTop;
@@ -156,8 +153,7 @@ obj = {
             const _JSON = JSON;
             json2 = JSON.stringify(rows.scrollData);
           }
-          tmp31Result = tmp31(11278);
-          const andIncrementChangesetIdForChat1 = tmp31Result.getAndIncrementChangesetIdForChat(arg0);
+          const andIncrementChangesetIdForChat1 = tmp31(11305).getAndIncrementChangesetIdForChat(arg0);
           let flag = rows.HACK_iOSForceAnimations;
           if (flag == null) {
             flag = false;
@@ -171,53 +167,50 @@ obj = {
             flag3 = true;
           }
           obj7.updateRows(tmp2, json1, isLoadingAtTop2, json2, andIncrementChangesetIdForChat1, flag, flag2, flag3);
+          const tmp31Result2 = tmp31(11305);
         }
       }
-      obj6 = set2;
+      obj6 = PlatformUtils;
     }
   },
   clearRows(arg0) {
     if (null != arg0) {
       if (obj4.isIOS()) {
-        const Commands = tmp6(11277).Commands;
-        let tmp6Result = tmp6(11278);
-        Commands.clearRows(arg0, tmp6Result.getAndIncrementChangesetIdForChat(arg0));
+        const Commands = tmp6(11304).Commands;
+        Commands.clearRows(arg0, tmp6(11305).getAndIncrementChangesetIdForChat(arg0));
+        const tmp6Result = tmp6(11305);
       } else {
-        const tmp2 = callback(arg0);
+        const tmp2 = React4(arg0);
         if (null != tmp2) {
-          tmp6Result = tmp6(11278);
-          enforcingDefault.clearRows(tmp2, tmp6Result.getAndIncrementChangesetIdForChat(arg0));
-          obj = enforcingDefault;
+          const obj = NativeChatModuleDefault;
+          obj.clearRows(tmp2, tmp6(11305).getAndIncrementChangesetIdForChat(arg0));
+          const tmp6Result2 = tmp6(11305);
         }
       }
-      obj4 = set2;
+      obj4 = PlatformUtils;
     }
   },
   fadeIn(arg0) {
     let isIOSResult = null != arg0;
     if (isIOSResult) {
-      isIOSResult = set2.isIOS();
-      obj = set2;
+      isIOSResult = PlatformUtils.isIOS();
     }
     if (isIOSResult) {
-      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      const Commands = ChatNativeComponent.Commands;
       Commands.fadeIn(arg0);
     }
   },
   focus(arg0, arg1) {
     if (obj.isIOS()) {
       if (null != arg0) {
-        const tmp4 = callback(arg0);
+        const tmp4 = React4(arg0);
         if (null != tmp4) {
-          const DCDChatManager = closure_3.DCDChatManager;
+          const DCDChatManager = React3.DCDChatManager;
           DCDChatManager.focus(tmp4, arg1);
         }
       }
     }
   }
 };
-let result = set.fileFinishedImporting("modules/chat/native/NativeChatUtils.tsx");
-
-export default obj;
-export const ChatScrollPosition = obj;
+export { ChatScrollPosition };
 export const ChatScrollType = { SCROLL: 0, [0]: "SCROLL", FOCUS_ONLY: 1, [1]: "FOCUS_ONLY" };

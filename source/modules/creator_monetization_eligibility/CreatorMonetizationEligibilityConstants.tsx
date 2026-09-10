@@ -1,12 +1,12 @@
-// Module ID: 17685
-// Function ID: 17686
-// Name: CreatorMonetizationApplicationState
+// Module ID: 17718
+// Function ID: 17719
+// Name: CreatorMonetizationEligibilityConstants
 // Dependencies: [2]
 
-// Module 17685 (CreatorMonetizationApplicationState)
-import set from "set" /* 2 */;
+// Module 17718 (CreatorMonetizationEligibilityConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/creator_monetization_eligibility/CreatorMonetizationEligibilityConstants.tsx");
+const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/CreatorMonetizationEligibilityConstants.tsx");
 
 export const CreatorMonetizationApplicationState = { OPEN: "OPEN", REJECTED: "REJECTED", APPROVED: "APPROVED", ACTION_REQUIRED: "ACTION_REQUIRED" };
 export const CreatorMonetizationOnboardingMarketingSection = { HOW_IT_WORKS: "HOW_IT_WORKS", BENEFITS: "BENEFITS", OTHER_CREATORS: "OTHER_CREATORS" };

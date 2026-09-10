@@ -1,126 +1,116 @@
-// Module ID: 16592
-// Function ID: 16593
-// Name: rejectPendingPublish
-// Dependencies: [32, 5, 1371, 16589, 16590, 573, 16593, 16594, 16591, 16596, 1114, 3547, 16597, 16598, 559, 7753, 16599, 504, 2]
-// Exports: closeConnection, deleteStagedAttachment, draftPatchNotes, ensureConnection, exportProjectArchive, fetchProjectMcpConnection, fetchSourceHistory, forceCompaction, getPreviewScreenshotUrl, interruptTurn, isAttachmentAvailable, publishProject, remixProjectWorkspace, requestDebugStatus, requestExternalAuthorizeUrl, requestProjectRebuild, resetHistoryPaging, restoreSourceHistoryEntry, sendModelSettings, sendUserMessage, stageModelSettings, submitProjectSecrets, submitProjectSettings, uploadAttachment
+// Module ID: 16623
+// Function ID: 16624
+// Name: VibegrationsConnectionStore
+// Dependencies: [32, 5, 1371, 16620, 16621, 573, 16624, 16625, 16622, 16627, 1114, 3560, 16628, 16629, 559, 7767, 16630, 16631, 504, 2]
+// Exports: closeConnection, createDatabaseRestorePoint, deleteStagedAttachment, draftPatchNotes, ensureConnection, exportProjectArchive, fetchDatabaseRestorePoints, fetchDatabaseRestoreWindow, fetchProjectMcpConnection, fetchSourceHistory, forceCompaction, getPreviewScreenshotUrl, interruptTurn, isAttachmentAvailable, publishProject, remixProjectWorkspace, requestDebugStatus, requestExternalAuthorizeUrl, requestProjectRebuild, resetHistoryPaging, restoreDatabaseToPoint, restoreDatabaseToTimestamp, restoreSourceHistoryEntry, sendModelSettings, sendUserMessage, stageModelSettings, submitProjectSecrets, submitProjectSettings, uploadAttachment
 
-// Module 16592 (rejectPendingPublish)
+// Module 16623 (VibegrationsConnectionStore)
 import initializeDefault from "initialize" /* 504 */;
-import failsDefault from "fails" /* 559 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import snowflakeSequence from "snowflakeSequence" /* 7753 */;
-import _modDef16591 from "module_16591" /* 16591 */;
-import vibegrationLocation from "vibegrationLocation" /* 16593 */;
-import map10 from "map" /* 16596 */;
-import open2 from "open" /* 16598 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "mergeGuildAvatar" /* 1371 */;
-import closure_6 from "newMessage" /* 16589 */;
-import { getOlderHistoryCursor } from "newMessage" /* 16589 */;
-import closure_8 from "isProjectOwner" /* 16590 */;
-import set from "set" /* 2 */;
+import BackoffDefault from "Backoff" /* 559 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import createNonce from "createNonce" /* 7767 */;
+import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 16622 */;
+import VibegrationsAnalytics from "VibegrationsAnalytics" /* 16624 */;
+import vibegrationsPreviewClaims from "vibegrationsPreviewClaims" /* 16627 */;
+import VibegrationsActionCreators from "VibegrationsActionCreators" /* 16628 */;
+import VibegrationsWebSocket from "VibegrationsWebSocket" /* 16629 */;
+import _slicedToArray from "module_32" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import UserStore from "UserStore" /* 1371 */;
+import VibegrationsChatStore from "VibegrationsChatStore" /* 16620 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16621 */;
 
-require = arg1;
-function rejectPendingPublish(pendingPublish) {
+require = fn;
+function rejectPendingPublish(pendingPublish, arg1) {
   pendingPublish = pendingPublish.pendingPublish;
   if (null != pendingPublish) {
     pendingPublish.pendingPublish = null;
     const _clearTimeout = clearTimeout;
     clearTimeout(pendingPublish.timeout);
     const _Error = Error;
-    error = new Error("Connection failed before the publish result arrived");
+    const error = new Error("Connection failed before the publish result arrived");
     pendingPublish.reject(error);
   }
 }
-function rejectPendingPatchNotesDraft(pendingPatchNotesDraft) {
-  pendingPatchNotesDraft = pendingPatchNotesDraft.pendingPatchNotesDraft;
+function rejectPendingPatchNotesDraft(value, arg1) {
+  const pendingPatchNotesDraft = value.pendingPatchNotesDraft;
   if (null != pendingPatchNotesDraft) {
-    pendingPatchNotesDraft.pendingPatchNotesDraft = null;
+    value.pendingPatchNotesDraft = null;
     const _clearTimeout = clearTimeout;
     clearTimeout(pendingPatchNotesDraft.timeout);
     const _Error = Error;
-    error = new Error(arg1);
+    const error = new Error(arg1);
     pendingPatchNotesDraft.reject(error);
   }
 }
 function setConnState(projectId, open) {
-  obj = dispatcherDefault;
-  obj = { type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId, connState: open };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId, connState: open });
 }
 function sendFailedStep(projectId, intl, arg2) {
   let tmp = arg2;
   if (arg2 === undefined) {
     tmp = obj;
   }
-  obj = dispatcherDefault;
-  obj = { type: "VIBEGRATIONS_CHAT_STEP_APPEND", projectId, step: obj };
-  obj = { type: "step", kind: "terminal_error", message: intl };
-  obj.dispatch(obj);
-  obj1 = {};
+  obj = DispatcherDefault;
+  obj.dispatch({ type: "VIBEGRATIONS_CHAT_STEP_APPEND", projectId, step: { type: "step", kind: "terminal_error", message: intl } });
+  const obj4 = {};
   const merged = Object.assign(tmp);
-  obj1.message = intl;
-  const result = vibegrationLocation.trackVibegrationErrored(projectId, obj1);
+  obj4.message = intl;
+  const result = VibegrationsAnalytics.trackVibegrationErrored(projectId, obj4);
 }
 function appendLocalUserMessage(projectId, nextResult) {
   const nonce = nextResult.nonce;
-  obj = authStore;
   ({ content, attachments } = nextResult);
-  const currentUser = authStore.getCurrentUser();
+  const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
   const result = map5.set(nonce, id);
-  obj = { type: "VIBEGRATIONS_CHAT_MESSAGE_APPEND", projectId, content, id: "optimistic:" + nonce, userId: null, timestamp: null, attachments: null };
-  const currentUser1 = obj.getCurrentUser();
+  obj3 = { type: "VIBEGRATIONS_CHAT_MESSAGE_APPEND", projectId, content, id: "optimistic:" + nonce, userId: null, timestamp: null, attachments: null };
+  const currentUser1 = UserStore.getCurrentUser();
   let id1;
   if (currentUser1 != null) {
     id1 = currentUser1.id;
   }
-  obj[4] = id1;
-  const obj2 = dispatcherDefault;
-  obj[5] = new Date().toISOString();
-  obj[6] = attachments;
-  obj2.dispatch(obj);
+  obj3.userId = id1;
+  obj2 = DispatcherDefault;
+  obj3.timestamp = new Date().toISOString();
+  obj3.attachments = attachments;
+  obj2.dispatch(obj3);
 }
 function appendFailedUserMessage(projectId, nonce, message) {
   nonce = nonce.nonce;
-  obj = authStore;
   ({ content, attachments } = nonce);
-  const currentUser = authStore.getCurrentUser();
+  const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
   const result = map5.set(nonce, id);
-  obj1 = dispatcherDefault;
-  obj = { type: "VIBEGRATIONS_CHAT_MESSAGE_APPEND", projectId, content, id: "optimistic:" + nonce, userId: null, timestamp: null, attachments: null };
+  obj3 = { type: "VIBEGRATIONS_CHAT_MESSAGE_APPEND", projectId, content, id: "optimistic:" + nonce, userId: null, timestamp: null, attachments: null };
   const currentUser1 = obj.getCurrentUser();
   let id1;
   if (currentUser1 != null) {
     id1 = currentUser1.id;
   }
-  obj[4] = id1;
-  obj[5] = new Date().toISOString();
-  obj[6] = attachments;
-  obj1.dispatch(obj);
+  obj3.userId = id1;
+  obj2 = DispatcherDefault;
+  obj3.timestamp = new Date().toISOString();
+  obj3.attachments = attachments;
+  obj2.dispatch(obj3);
   const date = new Date();
-  const tmp5 = importDefault;
-  obj = { type: "VIBEGRATIONS_CHAT_STEP_APPEND", projectId, step: obj1 };
-  obj1 = { type: "step", kind: "terminal_error", message };
-  dispatcherDefault.dispatch(obj);
-  const tmp5Result = dispatcherDefault;
-  const obj2 = {};
+  DispatcherDefault.dispatch({ type: "VIBEGRATIONS_CHAT_STEP_APPEND", projectId, step: { type: "step", kind: "terminal_error", message } });
+  const obj4 = { type: "VIBEGRATIONS_CHAT_STEP_APPEND", projectId, step: { type: "step", kind: "terminal_error", message } };
+  const tmp5Result = DispatcherDefault;
+  const obj5 = {};
   const merged = Object.assign(obj);
-  obj2.message = message;
-  const result1 = vibegrationLocation.trackVibegrationErrored(projectId, obj2);
+  obj5.message = message;
+  const result1 = VibegrationsAnalytics.trackVibegrationErrored(projectId, obj5);
 }
 function failPendingSends(projectId, arg1, message) {
   arg1.pendingSends = [];
   while (tmp !== undefined) {
-    let tmp3 = appendFailedUserMessage;
     let tmp4 = appendFailedUserMessage(projectId, tmp2, message);
     continue;
   }
@@ -140,7 +130,7 @@ function flushPendingSends(projectId, pendingSends) {
         if (attachments != null) {
           mapped = attachments.map((id) => id.id);
         }
-        const project = store.getProject(projectId);
+        const project = VibegrationsProjectStore.getProject(projectId);
         let name;
         if (project != null) {
           name = project.name;
@@ -152,172 +142,128 @@ function flushPendingSends(projectId, pendingSends) {
           message = tmp22.message;
         }
         sendFailedStep(tmp4, message);
-        const tmp23 = sendFailedStep;
       }
       tmp8 = nextResult;
     }
   }
 }
-function _mintUpstreamTicket() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c4 = 0;
-    c7 = 0;
+let closure_27 = async function _mintUpstreamTicket(arg0, arg1) {
+  closure_131_0 = closure_0;
+  closure_131_1 = closure_1;
+  await require("VibegrationsWorkerTickets").mintRemixTicket(closure_2);
+  if (1 === tmp6) {
     c6 = 0;
-    return (function*(arg0, ticket) {
-      c6 = 1;
-      obj1 = lib(table[7]);
-      yield obj1.mintRemixTicket(ticket);
-      if (1 === tmp6) {
-        c6 = 0;
-        let status;
-        if (status != null) {
-          status = status.status;
-        }
-        const ws2 = lib.ws;
-        let str = "failed";
-        if (403 === status) {
-          str = "forbidden";
-        }
-        const result = ws2.sendUpstreamTicketAck(closure_1, undefined, str);
-        c7 = 3;
-        const tmp16 = closure_1;
-      } else if (arg0 === 1) {
-        c7 = 3;
-        throw ticket;
-      } else if (arg0 !== 2) {
-        ticket = ticket.ticket;
-        const ws = lib.ws;
-        const result1 = ws.sendUpstreamTicketAck(closure_1, ticket);
-        c6 = 0;
-      }
-      c6 = 0;
-      return ticket;
-    })();
-  });
-  closure_27 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    let status;
+    if (tmp24 != null) {
+      status = tmp24.status;
+    }
+    closure_131_3 = status;
+    const ws2 = closure_131_0.ws;
+    let str = "failed";
+    if (403 === closure_131_3) {
+      str = "forbidden";
+    }
+    const result = ws2.sendUpstreamTicketAck(closure_131_1, undefined, str);
+    c7 = 3;
+  } else if (arg0 === 1) {
+    c7 = 3;
+    throw arg1;
+  } else if (arg0 !== 2) {
+    const ticket = arg1.ticket;
+    const ws = closure_131_0.ws;
+    const result1 = ws.sendUpstreamTicketAck(closure_131_1, ticket);
+    c6 = 0;
   }
-  return applyArgumentsResult;
-}
-function _relayCaptureRequest() {
-  let self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c4 = 0;
-    c7 = 0;
-    c6 = 0;
-    return (function*(arg0, arg1, arg2) {
-      closure_3 = tmp4;
-      const _Date = Date;
-      const timestamp = Date.now();
-      c6 = 1;
-      obj1 = { probe: null, spec: null, build: null, onAccepted: null };
-      ({ probe: obj6[0], spec: obj6[1], build: obj6[2] } = user);
-      obj1[3] = function() {
-        const self = this;
-        const apply = c4.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      };
-      yield lib(user[8]).relayPreviewCapture(closure_0, user.id, obj1);
-      if (1 === tmp7) {
-        c6 = 0;
-        closure_3 = { status: "failed" };
-        const ws = lib.ws;
-        ws.sendCaptureAck(user.id, closure_3.status, closure_3.code, closure_3.message);
-        c7 = 3;
-      } else if (arg0 === 1) {
-        c7 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        closure_3 = arg1;
-        c6 = 0;
-      }
-      c6 = 0;
+  return arg1;
+};
+let closure_31 = async function _relayCaptureRequest(arg0, arg1, arg2) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  let id = arg2;
+  c4 = 0;
+  c7 = 0;
+  c6 = 0;
+  return (async (arg0, value, arg2) => {
+    closure_3 = tmp4;
+    closure_131_0 = closure_0;
+    closure_131_1 = ws;
+    closure_131_2 = id;
+    const _Date = Date;
+    const timestamp = Date.now();
+    const obj4 = { probe: null, spec: null, build: null, onAccepted: null };
+    ({ probe: obj6.probe, spec: obj6.spec, build: obj6.build } = id);
+    closure_131_4 = asyncGeneratorStep(async () => {
+      ws = ws.ws;
+      ws.sendCaptureAck(user.id, "accepted");
+      await v3(closure_1_2[9]).awaitVibegrationsPreviewClaim(closure_2_0, user.id);
       return arg1;
-    })();
-  });
-  closure_31 = tmp;
-  let apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _relayControlRequest() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c4 = 0;
-    c7 = 0;
-    c6 = 0;
-    return (function*(arg0, arg1, arg2) {
-      const _Date = Date;
-      const timestamp = Date.now();
-      c6 = 1;
-      const obj5 = lib(user[8]);
-      ({ id, request } = user);
-      yield obj5.relayPreviewControl(closure_0, id, request, v0(function*() {
-        ws.sendControlAck(closure_1_2.id, "accepted");
-        const obj2 = v0(closure_1_2[9]);
-        yield obj2.awaitVibegrationsPreviewClaim(v0, closure_1_2.id);
-        return null != arg1;
-      }));
-      if (1 === tmp6) {
-        c6 = 0;
-        const ws4 = lib.ws;
-        ws4.sendControlAck(user.id, "failed", undefined, "the client could not drive the preview frame");
-        c7 = 3;
-      } else if (arg0 === 1) {
-        c7 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        closure_3 = arg1;
-        if ("completed" === closure_3.status) {
-          const ws3 = lib.ws;
-          ws3.sendControlAck(user.id, "completed", closure_3.response);
-        } else if ("failed" === closure_3.status) {
-          const ws2 = lib.ws;
-          ws2.sendControlAck(user.id, "failed", undefined, closure_3.message);
-        } else {
-          const ws = lib.ws;
-          ws.sendControlAck(user.id, "unavailable");
-        }
-        c6 = 0;
+    });
+    obj4.onAccepted = function() {
+      const self = this;
+      const apply = closure_1_4.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
       }
+      return applyArgumentsResult;
+    };
+    await VibegrationsPlatformUtilsDefault.relayPreviewCapture(closure_0, id.id, obj4);
+    if (1 === tmp7) {
       c6 = 0;
-      return arg1;
-    })();
-  });
-  closure_32 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+      closure_131_3 = { status: "failed" };
+      ws = closure_131_1.ws;
+      ws.sendCaptureAck(closure_131_2.id, closure_131_3.status, closure_131_3.code, closure_131_3.message);
+      c7 = 3;
+    } else if (arg0 === 1) {
+      c7 = 3;
+      throw value;
+    } else if (arg0 !== 2) {
+      closure_131_3 = value;
+      c6 = 0;
+    }
+    return value;
+  })();
+};
+let closure_32 = async function _relayControlRequest(arg0, arg1) {
+  closure_131_0 = closure_0;
+  closure_131_1 = ws;
+  closure_131_2 = user;
+  const _Date = Date;
+  const timestamp = Date.now();
+  ({ id, request } = user);
+  await VibegrationsPlatformUtilsDefault.relayPreviewControl(closure_0, id, request, asyncGeneratorStep(async () => {
+    ws = ws.ws;
+    ws.sendControlAck(user.id, "accepted");
+    await v3(closure_1_2[9]).awaitVibegrationsPreviewClaim(closure_2_0, user.id);
+    return null != arg1;
+  }));
+  if (1 === tmp6) {
+    c6 = 0;
+    const ws4 = closure_131_1.ws;
+    ws4.sendControlAck(closure_131_2.id, "failed", undefined, "the client could not drive the preview frame");
+    c7 = 3;
+  } else if (arg0 === 1) {
+    c7 = 3;
+    throw arg1;
+  } else if (arg0 !== 2) {
+    closure_131_3 = arg1;
+    if ("completed" === closure_131_3.status) {
+      const ws3 = closure_131_1.ws;
+      ws3.sendControlAck(closure_131_2.id, "completed", closure_131_3.response);
+    } else if ("failed" === closure_131_3.status) {
+      const ws2 = closure_131_1.ws;
+      ws2.sendControlAck(closure_131_2.id, "failed", undefined, closure_131_3.message);
+    } else {
+      ws = closure_131_1.ws;
+      ws.sendControlAck(closure_131_2.id, "unavailable");
+    }
+    c6 = 0;
   }
-  return applyArgumentsResult;
-}
+  return arg1;
+};
 function handleEvent(projectId, pendingEvents, type) {
-  const _require = pendingEvents;
+  _require = pendingEvents;
   if ("hello" !== type.type) {
     if ("history" !== type.type) {
       if ("capture_preview" !== type.type) {
@@ -326,10 +272,9 @@ function handleEvent(projectId, pendingEvents, type) {
             if ("capture_claim" !== type.type) {
               if ("preview_operation" !== type.type) {
                 if ("request_upstream_ticket" !== type.type) {
-                  let deleteResult = map1;
                   if ("open" !== map1.get(projectId)) {
-                    pendingEvents = pendingEvents.pendingEvents;
-                    pendingEvents.push(type);
+                    const pendingEvents1 = pendingEvents.pendingEvents;
+                    pendingEvents1.push(type);
                   }
                 }
               }
@@ -340,82 +285,68 @@ function handleEvent(projectId, pendingEvents, type) {
     }
   }
   if ("history_page" === type.type) {
-    deleteResult = map7.get(projectId);
-    deleteResult = null;
-    deleteResult = map7.delete(projectId);
+    value = map7.get(projectId);
+    map7.delete(projectId);
     if (true !== type.failed) {
-      deleteResult = attachment_id;
-      deleteResult = dependencyMap;
-      obj = { type: "VIBEGRATIONS_CHAT_HISTORY_PREPEND", projectId: null, entries: null, cursor: null };
-      obj[1] = projectId;
+      obj2 = { type: "VIBEGRATIONS_CHAT_HISTORY_PREPEND", projectId, entries: null, cursor: null };
       let messages = type.messages;
       if (messages == null) {
         messages = [];
       }
-      obj[2] = messages.slice();
-      deleteResult = null;
+      obj2.entries = messages.slice();
+      let tmp206 = null;
       if (true === type.has_more) {
-        deleteResult = type.cursor;
-        if (deleteResult == null) {
-          deleteResult = null;
+        let cursor = type.cursor;
+        if (cursor == null) {
+          cursor = null;
         }
+        tmp206 = cursor;
       }
-      obj[3] = deleteResult;
-      deleteResult = attachment_id(573).dispatch(obj);
-      deleteResult = loadOlderHistory;
-      deleteResult = loadOlderHistory(projectId);
+      obj2.cursor = tmp206;
+      attachment_id(573).dispatch(obj2);
+      loadOlderHistory(projectId);
     }
-    const obj75 = map7;
   } else if ("hello" === type.type) {
     pendingEvents.helloSeen = true;
     const backoff = pendingEvents.backoff;
-    deleteResult = backoff.succeed();
+    backoff.succeed();
   } else if ("history" === type.type) {
     let messages1 = type.messages;
-    deleteResult = null;
     if (messages1 == null) {
       messages1 = [];
     }
-    deleteResult = attachment_id;
-    deleteResult = dependencyMap;
-    deleteResult = messages1.slice();
-    obj = { type: "VIBEGRATIONS_CHAT_HISTORY_SET", projectId: null, entries: null, cursor: null };
-    obj[1] = projectId;
-    obj[2] = deleteResult;
-    deleteResult = null;
+    const substr = messages1.slice();
+    const obj6 = { type: "VIBEGRATIONS_CHAT_HISTORY_SET", projectId, entries: substr, cursor: null };
+    let tmp185 = null;
     if (true === type.has_more) {
-      deleteResult = type.cursor;
-      if (deleteResult == null) {
-        deleteResult = null;
+      let cursor1 = type.cursor;
+      if (cursor1 == null) {
+        cursor1 = null;
       }
+      tmp185 = cursor1;
     }
-    obj[3] = deleteResult;
-    deleteResult = attachment_id(573).dispatch(obj);
-    deleteResult = map7;
-    deleteResult = map7.delete(projectId);
-    deleteResult = (function beginHistoryDrain(projectId) {
-      const tmp = callback(projectId);
+    obj6.cursor = tmp185;
+    attachment_id(573).dispatch(obj6);
+    map7.delete(projectId);
+    (function beginHistoryDrain(projectId) {
+      const tmp = getOlderHistoryCursor(projectId);
       if (null != tmp) {
-        if (closure_37.get(projectId) !== tmp) {
-          const value = closure_11.get(projectId);
+        if (map7.get(projectId) !== tmp) {
+          value = map.get(projectId);
           if (null != value) {
             const result = obj.set(projectId, tmp);
             const ws = value.ws;
             ws.sendLoadHistory(tmp);
           }
         }
-        obj = closure_37;
+        obj = map7;
       }
     })(projectId);
     pendingEvents = pendingEvents.pendingEvents;
     pendingEvents.pendingEvents = [];
-    deleteResult = setConnState;
-    deleteResult = setConnState(projectId, "open");
-    deleteResult = pendingEvents;
-    deleteResult = pendingEvents;
+    setConnState(projectId, "open");
     for (const item10620 of pendingEvents) {
-      deleteResult = handleEvent;
-      deleteResult = handleEvent(arg0, arg1, item10620);
+      let tmp196 = handleEvent(arg0, arg1, item10620);
       continue;
     }
     const pendingModelSettings = pendingEvents.pendingModelSettings;
@@ -423,39 +354,32 @@ function handleEvent(projectId, pendingEvents, type) {
     if (null != pendingModelSettings) {
       try {
         let ws = pendingEvents.ws;
-        deleteResult = ws.sendModelSettings(pendingModelSettings);
+        ws.sendModelSettings(pendingModelSettings);
       } catch (err) {
       }
     }
-    deleteResult = flushPendingSends;
-    deleteResult = flushPendingSends(projectId, pendingEvents);
+    flushPendingSends(projectId, pendingEvents);
     const obj73 = attachment_id(573);
   } else if ("chat_state" === type.type) {
-    deleteResult = attachment_id;
-    deleteResult = dependencyMap;
-    obj1 = { type: "VIBEGRATIONS_CHAT_STOPPED_SET", projectId: null, stopped: null };
-    obj1[1] = projectId;
-    obj1[2] = type.stopped;
-    deleteResult = attachment_id(573).dispatch(obj1);
+    const obj8 = { type: "VIBEGRATIONS_CHAT_STOPPED_SET", projectId, stopped: type.stopped };
+    attachment_id(573).dispatch(obj8);
     let stopped = type.stopped;
     if (!stopped) {
-      deleteResult = map1;
       stopped = "open" !== map1.get(projectId);
     }
     if (!stopped) {
-      deleteResult = flushPendingSends;
-      deleteResult = flushPendingSends(projectId, pendingEvents);
+      flushPendingSends(projectId, pendingEvents);
     }
     const obj71 = attachment_id(573);
   } else if ("user_message" === type.type) {
-    deleteResult = (function appendAcceptedUserMessage(projectId, content) {
+    (function appendAcceptedUserMessage(projectId, content) {
       let hasItem = null != content.nonce;
       if (hasItem) {
         hasItem = map.has(content.nonce);
       }
       if (hasItem) {
         if (null != content.nonce) {
-          const value = map.get(content.nonce);
+          value = map.get(content.nonce);
         }
       }
       if (hasItem) {
@@ -470,297 +394,208 @@ function handleEvent(projectId, pendingEvents, type) {
         map.delete(content.nonce);
       }
       attachment_id(573);
-      obj = { type: "VIBEGRATIONS_CHAT_MESSAGE_APPEND", projectId, content: content.content, id: content.id };
+      const obj = { type: "VIBEGRATIONS_CHAT_MESSAGE_APPEND", projectId, content: content.content, id: content.id };
       if (hasItem) {
         if (null != content.nonce) {
-          obj = { optimisticId: null };
+          obj2 = { optimisticId: null };
           const _HermesInternal = HermesInternal;
-          obj[0] = "optimistic:" + content.nonce;
+          obj2.optimisticId = "optimistic:" + content.nonce;
+          obj3 = obj2;
         }
-        const merged = Object.assign(obj);
+        const merged = Object.assign(obj3);
         ({ user_id: obj.userId, ts: obj.timestamp, attachments: obj.attachments } = content);
         tmp10(obj);
       }
-      obj = {};
+      obj3 = {};
     })(projectId, type);
   } else if ("message_disposition" === type.type) {
     if ((function isKnownDisposition(disposition) {
+      hasOwnProperty = Object.prototype.hasOwnProperty;
       const call = hasOwnProperty.call;
-      return typeof call === "unknown" ? hasOwnProperty(disposition) : call(closure_24, disposition);
+      return typeof call === "unknown" ? hasOwnProperty(disposition) : call(closure_1_24, disposition);
     })(type.disposition)) {
-      deleteResult = attachment_id;
-      deleteResult = dependencyMap;
-      let obj2 = { type: "VIBEGRATIONS_CHAT_MESSAGE_DISPOSITION", projectId: null, id: null, activeTurnId: null, disposition: null };
-      obj2[1] = projectId;
-      ({ id: obj70[2], active_turn_id: obj70[3], disposition: obj70[4] } = type);
-      deleteResult = attachment_id(573).dispatch(obj2);
+      const obj9 = { type: "VIBEGRATIONS_CHAT_MESSAGE_DISPOSITION", projectId, id: null, activeTurnId: null, disposition: null };
+      ({ id: obj70.id, active_turn_id: obj70.activeTurnId, disposition: obj70.disposition } = type);
+      attachment_id(573).dispatch(obj9);
       const obj69 = attachment_id(573);
     }
   } else if ("side_reply" === type.type) {
-    deleteResult = attachment_id;
-    deleteResult = dependencyMap;
-    const obj3 = { type: "VIBEGRATIONS_CHAT_SIDE_REPLY", projectId: null, id: null, inReplyTo: null, content: null, timestamp: null };
-    obj3[1] = projectId;
-    ({ id: obj68[2], in_reply_to: obj68[3], content: obj68[4], ts: obj68[5] } = type);
-    deleteResult = attachment_id(573).dispatch(obj3);
+    const obj11 = { type: "VIBEGRATIONS_CHAT_SIDE_REPLY", projectId, id: null, inReplyTo: null, content: null, timestamp: null };
+    ({ id: obj68.id, in_reply_to: obj68.inReplyTo, content: obj68.content, ts: obj68.timestamp } = type);
+    attachment_id(573).dispatch(obj11);
     const obj67 = attachment_id(573);
   } else if ("provisional_todo" === type.type) {
-    deleteResult = attachment_id;
-    deleteResult = dependencyMap;
-    obj4 = { type: "VIBEGRATIONS_CHAT_PROVISIONAL_TODO", projectId: null, turnId: null, text: null };
-    obj4[1] = projectId;
-    ({ turn_id: obj66[2], text: obj66[3] } = type);
-    deleteResult = attachment_id(573).dispatch(obj4);
+    const obj14 = { type: "VIBEGRATIONS_CHAT_PROVISIONAL_TODO", projectId, turnId: null, text: null };
+    ({ turn_id: obj66.turnId, text: obj66.text } = type);
+    attachment_id(573).dispatch(obj14);
     const obj65 = attachment_id(573);
   } else if ("step" === type.type) {
     if ("reply" === type.kind) {
       let str31 = type.message;
-      deleteResult = null;
       if (str31 == null) {
         str31 = "";
       }
       if ("" !== str31) {
-        deleteResult = attachment_id;
-        deleteResult = dependencyMap;
-        const obj5 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
-        obj5[1] = projectId;
-        obj5[2] = type.turn_id;
-        let obj6 = { content: null, kind: "message" };
-        obj6[0] = str31;
-        obj5[3] = obj6;
-        deleteResult = attachment_id(573).dispatch(obj5);
+        const obj21 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
+        const obj24 = { content: str31, kind: "message" };
+        obj21.patch = obj24;
+        attachment_id(573).dispatch(obj21);
         const obj62 = attachment_id(573);
       } else {
-        deleteResult = sendFailedStep;
-        deleteResult = _require;
-        deleteResult = dependencyMap;
-        const intl2 = _require(1114).intl;
-        deleteResult = attachment_id;
-        deleteResult = obj;
-        deleteResult = sendFailedStep(projectId, intl2.string(attachment_id(3547).Z8Eo8I), obj);
+        const intl2 = require("util").intl;
+        sendFailedStep(projectId, intl2.string(attachment_id(3560).Z8Eo8I), obj2);
       }
     } else if ("announcement" === type.kind) {
       let str29 = type.message;
-      deleteResult = null;
       if (str29 == null) {
         str29 = "";
       }
       if ("" !== str29) {
-        deleteResult = attachment_id;
-        deleteResult = dependencyMap;
-        const obj7 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
-        obj7[1] = projectId;
-        obj7[2] = type.turn_id;
-        const obj8 = { announcement: null };
-        obj8[0] = str29;
-        obj7[3] = obj8;
-        deleteResult = attachment_id(573).dispatch(obj7);
+        const obj27 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
+        const obj28 = { announcement: str29 };
+        obj27.patch = obj28;
+        attachment_id(573).dispatch(obj27);
         const obj94 = attachment_id(573);
-        let obj9 = { type: "VIBEGRATIONS_CHAT_STEP_APPEND", projectId: null, turnId: null, step: null };
-        obj9[1] = projectId;
-        obj9[2] = type.turn_id;
-        obj9[3] = type;
-        deleteResult = attachment_id(573).dispatch(obj9);
+        const obj33 = { type: "VIBEGRATIONS_CHAT_STEP_APPEND", projectId, turnId: type.turn_id, step: type };
+        attachment_id(573).dispatch(obj33);
         const obj97 = attachment_id(573);
       }
     } else if ("thinking_lifecycle" === type.kind) {
       ({ phase, session, seq, ticks, elapsed_ms, text } = type);
-      deleteResult = null;
-      deleteResult = null != phase && null != seq && null != session;
-      if (deleteResult) {
-        deleteResult = attachment_id;
-        deleteResult = dependencyMap;
-        const obj10 = { type: "VIBEGRATIONS_CHAT_THINKING_SET", projectId: null, activity: null };
-        obj10[1] = projectId;
-        const obj11 = { phase: null, session: null, seq: null, ticks: null, elapsedMs: null, text: null };
-        obj11[0] = phase;
-        obj11[1] = session;
-        obj11[2] = seq;
+      if (tmp150) {
+        const obj34 = { type: "VIBEGRATIONS_CHAT_THINKING_SET", projectId, activity: null };
+        const obj37 = { phase, session, seq, ticks: null, elapsedMs: null, text: null };
         if (ticks == null) {
           ticks = 0;
         }
-        obj11[3] = ticks;
+        obj37.ticks = ticks;
         if (elapsed_ms == null) {
           elapsed_ms = 0;
         }
-        obj11[4] = elapsed_ms;
+        obj37.elapsedMs = elapsed_ms;
         if (text == null) {
           text = "";
         }
-        obj11[5] = text;
-        obj10[2] = obj11;
-        deleteResult = attachment_id(573).dispatch(obj10);
+        obj37.text = text;
+        obj34.activity = obj37;
+        attachment_id(573).dispatch(obj34);
         const obj59 = attachment_id(573);
       }
+      tmp150 = null != phase && null != seq && null != session;
     } else if ("compaction" === type.kind) {
-      deleteResult = "start" !== type.phase;
-      if (deleteResult) {
-        deleteResult = "end" !== type.phase;
+      let tmp145 = "start" !== type.phase;
+      if (tmp145) {
+        tmp145 = "end" !== type.phase;
       }
-      if (!deleteResult) {
-        deleteResult = attachment_id;
-        deleteResult = dependencyMap;
-        let obj12 = { type: "VIBEGRATIONS_CHAT_COMPACTING_SET", projectId: null, compacting: null };
-        obj12[1] = projectId;
-        obj12[2] = "start" === type.phase;
-        deleteResult = attachment_id(573).dispatch(obj12);
+      if (!tmp145) {
+        const obj38 = { type: "VIBEGRATIONS_CHAT_COMPACTING_SET", projectId, compacting: "start" === type.phase };
+        attachment_id(573).dispatch(obj38);
         const obj57 = attachment_id(573);
       }
     } else if ("debug_compaction_declined" === type.kind) {
-      deleteResult = null;
-      deleteResult = null != type.projected && null != type.threshold;
-      if (deleteResult) {
-        deleteResult = attachment_id;
-        deleteResult = dependencyMap;
-        const obj13 = { type: "VIBEGRATIONS_DEBUG_COMPACTION_DECLINED", projectId: null, promptCeiling: null, threshold: null, projected: null, headroom: null, retainedMessages: null, observedAt: null };
-        obj13[1] = projectId;
+      if (tmp137) {
+        const obj40 = { type: "VIBEGRATIONS_DEBUG_COMPACTION_DECLINED", projectId, promptCeiling: null, threshold: null, projected: null, headroom: null, retainedMessages: null, observedAt: null };
         let num13 = type.prompt_ceiling;
         if (num13 == null) {
           num13 = 0;
         }
-        obj13[2] = num13;
-        ({ threshold: obj55[3], projected: obj55[4], headroom } = type);
+        obj40.promptCeiling = num13;
+        ({ threshold: obj55.threshold, projected: obj55.projected, headroom } = type);
         if (headroom == null) {
           headroom = type.threshold - type.projected;
         }
-        obj13[5] = headroom;
+        obj40.headroom = headroom;
         let num14 = type.retained_messages;
         if (num14 == null) {
           num14 = 0;
         }
-        obj13[6] = num14;
-        deleteResult = globalThis;
+        obj40.retainedMessages = num14;
         const _Date4 = Date;
-        deleteResult = new.target;
-        deleteResult = new.target;
         const date = new Date();
-        deleteResult = date;
-        obj13[7] = date.toISOString();
-        deleteResult = attachment_id(573).dispatch(obj13);
+        obj40.observedAt = date.toISOString();
+        attachment_id(573).dispatch(obj40);
         const obj54 = attachment_id(573);
       }
+      tmp137 = null != type.projected && null != type.threshold;
     } else if ("force_compaction_result" === type.kind) {
       const outcome = type.outcome;
-      deleteResult = "compacted" !== outcome;
-      if (deleteResult) {
-        deleteResult = "declined" !== outcome;
+      let tmp124 = "compacted" !== outcome;
+      if (tmp124) {
+        tmp124 = "declined" !== outcome;
       }
-      if (deleteResult) {
-        deleteResult = "failed" !== outcome;
+      if (tmp124) {
+        tmp124 = "failed" !== outcome;
       }
-      if (deleteResult) {
-        deleteResult = "busy" !== outcome;
+      if (tmp124) {
+        tmp124 = "busy" !== outcome;
       }
-      if (!deleteResult) {
-        deleteResult = attachment_id;
-        deleteResult = dependencyMap;
-        let obj14 = { type: "VIBEGRATIONS_DEBUG_FORCE_COMPACTION_RESULT", projectId: null, outcome: null, reason: null };
-        obj14[1] = projectId;
-        obj14[2] = outcome;
-        obj14[3] = type.reason;
-        deleteResult = true === type.pending_turn ? { pendingTurn: true } : {};
-        deleteResult = obj14;
-        deleteResult = Object.assign(deleteResult);
-        deleteResult = globalThis;
+      if (!tmp124) {
+        const obj41 = { type: "VIBEGRATIONS_DEBUG_FORCE_COMPACTION_RESULT", projectId, outcome, reason: type.reason };
+        const tmp127 = true === type.pending_turn ? { pendingTurn: true } : {};
+        let merged = Object.assign(tmp127);
         const _Date3 = Date;
-        deleteResult = new.target;
-        deleteResult = new.target;
         const date1 = new Date();
-        deleteResult = date1;
-        obj14.observedAt = date1.toISOString();
-        deleteResult = attachment_id(573).dispatch(obj14);
+        obj41.observedAt = date1.toISOString();
+        attachment_id(573).dispatch(obj41);
         const obj51 = attachment_id(573);
       }
     } else if ("debug_compaction_report" === type.kind) {
-      deleteResult = null;
-      deleteResult = null != type.tokens_before && null != type.tokens_after;
-      if (deleteResult) {
-        deleteResult = attachment_id;
-        deleteResult = dependencyMap;
-        let obj47 = attachment_id(573);
-        const obj15 = { type: "VIBEGRATIONS_DEBUG_COMPACTION_REPORT", projectId: null, tokensBefore: null, tokensAfter: null, retainedMessages: null, promptCeiling: null, observedAt: null };
-        obj15[1] = projectId;
-        ({ tokens_before: obj49[2], tokens_after: obj49[3], retained_messages } = type);
+      if (tmp116) {
+        const obj43 = { type: "VIBEGRATIONS_DEBUG_COMPACTION_REPORT", projectId, tokensBefore: null, tokensAfter: null, retainedMessages: null, promptCeiling: null, observedAt: null };
+        ({ tokens_before: obj49.tokensBefore, tokens_after: obj49.tokensAfter, retained_messages } = type);
         if (retained_messages == null) {
           retained_messages = 0;
         }
-        obj15[4] = retained_messages;
+        obj43.retainedMessages = retained_messages;
         let num12 = type.prompt_ceiling;
         if (num12 == null) {
           num12 = 0;
         }
-        obj15[5] = num12;
-        deleteResult = globalThis;
+        obj43.promptCeiling = num12;
         const _Date2 = Date;
-        deleteResult = new.target;
-        deleteResult = new.target;
         const date2 = new Date();
-        deleteResult = date2;
-        obj15[6] = date2.toISOString();
-        deleteResult = obj47.dispatch(obj15);
+        obj43.observedAt = date2.toISOString();
+        attachment_id(573).dispatch(obj43);
+        const obj48 = attachment_id(573);
       }
+      tmp116 = null != type.tokens_before && null != type.tokens_after;
     } else if ("todos" === type.kind) {
       let items = type.items;
-      deleteResult = null;
       if (items == null) {
         items = [];
       }
       if (items.length > 0) {
-        deleteResult = attachment_id;
-        deleteResult = dependencyMap;
-        let obj16 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
-        obj16[1] = projectId;
-        obj16[2] = type.turn_id;
-        let obj17 = { todos: null };
-        obj17[0] = items;
-        obj16[3] = obj17;
-        deleteResult = attachment_id(573).dispatch(obj16);
+        const obj44 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
+        const obj46 = { todos: items };
+        obj44.patch = obj46;
+        attachment_id(573).dispatch(obj44);
         const obj89 = attachment_id(573);
-        let obj18 = { type: "VIBEGRATIONS_CHAT_STEP_APPEND", projectId: null, turnId: null, step: null };
-        obj18[1] = projectId;
-        obj18[2] = type.turn_id;
-        obj18[3] = type;
-        deleteResult = attachment_id(573).dispatch(obj18);
+        const obj47 = { type: "VIBEGRATIONS_CHAT_STEP_APPEND", projectId, turnId: type.turn_id, step: type };
+        attachment_id(573).dispatch(obj47);
         const obj92 = attachment_id(573);
       }
     } else if ("plan_proposed" === type.kind) {
-      deleteResult = null;
       if (null != type.proposal) {
-        deleteResult = attachment_id;
-        deleteResult = dependencyMap;
-        let obj44 = attachment_id(573);
-        let obj19 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
-        obj19[1] = projectId;
-        obj19[2] = type.turn_id;
-        const obj20 = { proposal: null, kind: "proposal" };
-        obj20[0] = type.proposal;
-        obj19[3] = obj20;
-        deleteResult = obj44.dispatch(obj19);
+        const obj50 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
+        const obj52 = { proposal: type.proposal, kind: "proposal" };
+        obj50.patch = obj52;
+        attachment_id(573).dispatch(obj50);
+        const obj45 = attachment_id(573);
       } else {
-        deleteResult = sendFailedStep;
-        deleteResult = _require;
-        deleteResult = dependencyMap;
-        const intl = _require(1114).intl;
-        deleteResult = attachment_id;
-        deleteResult = obj;
-        deleteResult = sendFailedStep(projectId, intl.string(attachment_id(3547).IHCafX), obj);
+        const intl = require("util").intl;
+        sendFailedStep(projectId, intl.string(attachment_id(3560).IHCafX), obj2);
       }
     } else if ("ideas" === type.kind) {
-      deleteResult = null != type.ideas;
-      if (deleteResult) {
-        deleteResult = type.ideas.length > 0;
+      let tmp100 = null != type.ideas;
+      if (tmp100) {
+        tmp100 = type.ideas.length > 0;
       }
-      if (deleteResult) {
-        deleteResult = attachment_id;
-        deleteResult = dependencyMap;
-        let obj41 = attachment_id(573);
-        let obj21 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
-        obj21[1] = projectId;
-        obj21[2] = type.turn_id;
-        let obj22 = { ideas: null };
-        obj22[0] = type.ideas;
-        obj21[3] = obj22;
-        deleteResult = obj41.dispatch(obj21);
+      if (tmp100) {
+        const obj53 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
+        const obj56 = { ideas: type.ideas };
+        obj53.patch = obj56;
+        attachment_id(573).dispatch(obj53);
+        const obj42 = attachment_id(573);
       }
     } else if ("clarification" === type.kind) {
       let tmp95 = null != type.clarification;
@@ -776,14 +611,11 @@ function handleEvent(projectId, pendingEvents, type) {
         tmp95 = num7 > 0;
       }
       if (tmp95) {
-        let obj38 = attachment_id(573);
-        const obj23 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
-        obj23[1] = projectId;
-        obj23[2] = type.turn_id;
-        let obj24 = { clarification: null };
-        obj24[0] = type.clarification;
-        obj23[3] = obj24;
-        obj38.dispatch(obj23);
+        const obj58 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
+        const obj60 = { clarification: type.clarification };
+        obj58.patch = obj60;
+        attachment_id(573).dispatch(obj58);
+        const obj39 = attachment_id(573);
       }
     } else if ("attachment" === type.kind) {
       let tmp90 = null != type.attachments;
@@ -791,14 +623,11 @@ function handleEvent(projectId, pendingEvents, type) {
         tmp90 = type.attachments.length > 0;
       }
       if (tmp90) {
-        let obj35 = attachment_id(573);
-        const obj25 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
-        obj25[1] = projectId;
-        obj25[2] = type.turn_id;
-        const obj26 = { attachments: null };
-        obj26[0] = type.attachments;
-        obj25[3] = obj26;
-        obj35.dispatch(obj25);
+        const obj61 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
+        const obj63 = { attachments: type.attachments };
+        obj61.patch = obj63;
+        attachment_id(573).dispatch(obj61);
+        const obj36 = attachment_id(573);
       }
     } else if ("collect_secrets" === type.kind) {
       let fields = type.fields;
@@ -806,38 +635,30 @@ function handleEvent(projectId, pendingEvents, type) {
         fields = [];
       }
       if (fields.length > 0) {
-        deleteResult = attachment_id;
-        deleteResult = dependencyMap;
-        const obj27 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
-        obj27[1] = projectId;
-        obj27[2] = type.turn_id;
-        let obj28 = { secretRequest: null };
-        let obj29 = { fields: null, note: null, copy_values: null };
-        obj29[0] = fields;
-        ({ note: obj88[1], copy_values: obj88[2] } = type);
-        obj28[0] = obj29;
-        obj27[3] = obj28;
-        deleteResult = attachment_id(573).dispatch(obj27);
+        const obj64 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
+        const obj72 = { secretRequest: null };
+        const obj74 = { fields, note: null, copy_values: null };
+        ({ note: obj88.note, copy_values: obj88.copy_values } = type);
+        obj72.secretRequest = obj74;
+        obj64.patch = obj72;
+        attachment_id(573).dispatch(obj64);
         const obj85 = attachment_id(573);
       }
     } else if ("collect_settings" === type.kind) {
-      let obj31 = attachment_id(573);
-      const obj30 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
-      obj30[1] = projectId;
-      obj30[2] = type.turn_id;
-      obj31 = { settingsRequest: null };
-      ({ keys: obj35[0], note: obj35[1] } = type);
-      obj31[0] = { keys: null, note: null };
-      obj30[3] = obj31;
-      obj31.dispatch(obj30);
-      const obj32 = { keys: null, note: null };
+      const obj77 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
+      const obj78 = { settingsRequest: null };
+      ({ keys: obj35.keys, note: obj35.note } = type);
+      obj78.settingsRequest = { keys: null, note: null };
+      obj77.patch = obj78;
+      attachment_id(573).dispatch(obj77);
+      const obj32 = attachment_id(573);
+      const obj81 = { keys: null, note: null };
     } else if ("usage" === type.kind) {
       if (tmp81) {
-        obj29 = attachment_id(573);
-        const obj33 = { type: "VIBEGRATIONS_CHAT_USAGE_SET", projectId: null, turn: null, project: null };
-        obj33[1] = projectId;
-        ({ turn: obj31[2], project: obj31[3] } = type);
-        obj29.dispatch(obj33);
+        const obj86 = { type: "VIBEGRATIONS_CHAT_USAGE_SET", projectId, turn: null, project: null };
+        ({ turn: obj31.turn, project: obj31.project } = type);
+        attachment_id(573).dispatch(obj86);
+        const obj30 = attachment_id(573);
       }
       tmp81 = null != type.turn && null != type.project;
     } else if ("project_named" === type.kind) {
@@ -847,11 +668,11 @@ function handleEvent(projectId, pendingEvents, type) {
         tmp76 = "" !== name;
       }
       if (tmp76) {
-        obj28 = _require(16597);
-        obj28.renameProject(projectId, name).catch(() => {
+        const obj29 = require("VibegrationsActionCreators");
+        require("VibegrationsActionCreators").renameProject(projectId, name).catch(() => {
 
         });
-        const renameProjectResult = obj28.renameProject(projectId, name);
+        const renameProjectResult = require("VibegrationsActionCreators").renameProject(projectId, name);
       }
     } else if ("publish_result" === type.kind) {
       const pendingPublish = pendingEvents.pendingPublish;
@@ -862,14 +683,12 @@ function handleEvent(projectId, pendingEvents, type) {
         pendingPublish.resolve(type);
       }
       if (true !== type.ok) {
-        deleteResult = _require;
-        deleteResult = dependencyMap;
         let str21 = type.error;
         if (str21 == null) {
           str21 = "publish_result not ok";
         }
-        _require(16597).trackPublishFailed(projectId, str21, false);
-        const obj84 = _require(16597);
+        require("VibegrationsActionCreators").trackPublishFailed(projectId, str21, false);
+        const obj84 = require("VibegrationsActionCreators");
       }
     } else if ("patch_notes_draft" === type.kind) {
       const pendingPatchNotesDraft = pendingEvents.pendingPatchNotesDraft;
@@ -885,11 +704,9 @@ function handleEvent(projectId, pendingEvents, type) {
       if (null != icon) {
         if ("" !== icon) {
           attachment_id = type.attachment_id;
-          deleteResult = _require;
-          deleteResult = dependencyMap;
-          const obj83 = _require(16597);
-          const setProjectIconResult = _require(16597).setProjectIcon(projectId, icon);
-          deleteResult = _require(16597).setProjectIcon(projectId, icon).then((ok) => {
+          const obj83 = require("VibegrationsActionCreators");
+          const setProjectIconResult = require("VibegrationsActionCreators").setProjectIcon(projectId, icon);
+          require("VibegrationsActionCreators").setProjectIcon(projectId, icon).then((ok) => {
             let str = "failed";
             if (ok.ok) {
               str = "applied";
@@ -912,7 +729,7 @@ function handleEvent(projectId, pendingEvents, type) {
               ws.sendAppIconAck(tmp, "failed");
             }
           });
-          const nextPromise = _require(16597).setProjectIcon(projectId, icon).then((ok) => {
+          const nextPromise = require("VibegrationsActionCreators").setProjectIcon(projectId, icon).then((ok) => {
             let str = "failed";
             if (ok.ok) {
               str = "applied";
@@ -929,40 +746,30 @@ function handleEvent(projectId, pendingEvents, type) {
         }
       }
     } else if ("turn_result" === type.kind) {
-      obj21 = _require(16593);
-      let result = obj21.trackVibegrationTurnResulted(projectId, type);
+      let result = require("VibegrationsAnalytics").trackVibegrationTurnResulted(projectId, type);
       if ("deployed" === type.result) {
-        obj22 = attachment_id(573);
-        const obj34 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
-        obj34[1] = projectId;
-        obj34[2] = type.turn_id;
-        obj34[3] = { kind: "plan_implemented" };
-        obj22.dispatch(obj34);
+        const obj87 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: { kind: "plan_implemented" } };
+        attachment_id(573).dispatch(obj87);
+        const obj23 = attachment_id(573);
       }
-      obj24 = attachment_id(573);
-      obj35 = { type: "VIBEGRATIONS_CHAT_TURN_FINISHED", projectId: null, turnId: null, summary: null };
-      obj35[1] = projectId;
-      ({ turn_id: obj26[2], summary: obj26[3] } = type);
-      obj24.dispatch(obj35);
-      deleteResult = set.delete(projectId);
-      if (deleteResult) {
-        deleteResult = "cancelled" === type.result;
+      const obj22 = require("VibegrationsAnalytics");
+      const tmp59 = attachment_id;
+      const obj90 = { type: "VIBEGRATIONS_CHAT_TURN_FINISHED", projectId, turnId: null, summary: null };
+      ({ turn_id: obj26.turnId, summary: obj26.summary } = type);
+      attachment_id(573).dispatch(obj90);
+      let deleteResult2 = set.delete(projectId);
+      if (deleteResult2) {
+        deleteResult2 = "cancelled" === type.result;
       }
-      if (deleteResult) {
-        const obj36 = { type: "VIBEGRATIONS_CHAT_INTERRUPTED", projectId: null };
-        obj36[1] = projectId;
-        tmp59(573).dispatch(obj36);
+      if (deleteResult2) {
+        const obj91 = { type: "VIBEGRATIONS_CHAT_INTERRUPTED", projectId };
+        tmp59(573).dispatch(obj91);
         const tmp59Result = tmp59(573);
       }
-      tmp59 = attachment_id;
+      const obj25 = attachment_id(573);
     } else {
-      deleteResult = attachment_id;
-      deleteResult = dependencyMap;
-      const obj37 = { type: "VIBEGRATIONS_CHAT_STEP_APPEND", projectId: null, turnId: null, step: null };
-      obj37[1] = projectId;
-      obj37[2] = type.turn_id;
-      obj37[3] = type;
-      deleteResult = attachment_id(573).dispatch(obj37);
+      const obj93 = { type: "VIBEGRATIONS_CHAT_STEP_APPEND", projectId, turnId: type.turn_id, step: type };
+      attachment_id(573).dispatch(obj93);
       let tmp47 = "build_error" !== type.kind;
       if (tmp47) {
         tmp47 = "healthcheck_failed" !== type.kind;
@@ -971,31 +778,30 @@ function handleEvent(projectId, pendingEvents, type) {
         tmp47 = "error" !== type.kind;
       }
       if (!tmp47) {
-        obj19 = _require(16593);
-        obj38 = {};
-        let merged = Object.assign(obj[type.kind]);
-        obj38.message = type.message;
+        const obj95 = {};
+        const merged1 = Object.assign(obj3[type.kind]);
+        obj95.message = type.message;
         let stderr_tail;
         if ("build_error" === type.kind) {
           stderr_tail = type.stderr_tail;
         }
-        obj38.details = stderr_tail;
-        let result1 = obj19.trackVibegrationErrored(projectId, obj38);
+        obj95.details = stderr_tail;
+        let result1 = require("VibegrationsAnalytics").trackVibegrationErrored(projectId, obj95);
+        const obj20 = require("VibegrationsAnalytics");
       }
       if ("preview_ready" === type.kind) {
-        deleteResult = _require;
-        const result2 = _require(16597).refreshPublishedProject(projectId, { isPreview: true });
-        deleteResult = result2.catch(() => {
+        const result2 = require("VibegrationsActionCreators").refreshPublishedProject(projectId, { isPreview: true });
+        result2.catch(() => {
 
         });
-        const obj82 = _require(16597);
+        const obj82 = require("VibegrationsActionCreators");
       }
       const obj80 = attachment_id(573);
     }
   } else if ("capture_preview" === type.type) {
-    (function relayCaptureRequest(projectId, pendingEvents, type) {
+    (function relayCaptureRequest() {
       const self = this;
-      const apply = closure_31.apply;
+      const apply = closure_1_31.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -1005,9 +811,9 @@ function handleEvent(projectId, pendingEvents, type) {
     })(projectId, pendingEvents, type).catch(() => {
 
     });
-    const promise2 = (function relayCaptureRequest(projectId, pendingEvents, type) {
+    const promise2 = (function relayCaptureRequest() {
       const self = this;
-      const apply = closure_31.apply;
+      const apply = closure_1_31.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -1016,9 +822,9 @@ function handleEvent(projectId, pendingEvents, type) {
       return applyArgumentsResult;
     })(projectId, pendingEvents, type);
   } else if ("control_preview" === type.type) {
-    (function relayControlRequest(projectId, pendingEvents, type) {
+    (function relayControlRequest() {
       const self = this;
-      const apply = closure_32.apply;
+      const apply = closure_1_32.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -1028,9 +834,9 @@ function handleEvent(projectId, pendingEvents, type) {
     })(projectId, pendingEvents, type).catch(() => {
 
     });
-    const promise = (function relayControlRequest(projectId, pendingEvents, type) {
+    const promise = (function relayControlRequest() {
       const self = this;
-      const apply = closure_32.apply;
+      const apply = closure_1_32.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -1043,47 +849,39 @@ function handleEvent(projectId, pendingEvents, type) {
       if ("capture_claim" !== type.type) {
         if ("preview_operation" === type.type) {
           if ("begin" === type.phase) {
-            obj17 = attachment_id(16591);
-            const result3 = obj17.beginPreviewOperation(projectId);
+            const result3 = attachment_id(16622).beginPreviewOperation(projectId);
+            const obj18 = attachment_id(16622);
           } else {
-            obj16 = attachment_id(16591);
-            obj16.endPreviewOperation(projectId);
+            attachment_id(16622).endPreviewOperation(projectId);
+            const obj17 = attachment_id(16622);
           }
         } else if ("model_settings" === type.type) {
-          obj14 = attachment_id(573);
-          const obj39 = { type: "VIBEGRATIONS_MODEL_SETTINGS_SET", projectId: null, settings: null, choices: null };
-          obj39[1] = projectId;
-          ({ settings: obj16[2], choices: obj16[3] } = type);
-          obj14.dispatch(obj39);
+          const obj96 = { type: "VIBEGRATIONS_MODEL_SETTINGS_SET", projectId, settings: null, choices: null };
+          ({ settings: obj16.settings, choices: obj16.choices } = type);
+          attachment_id(573).dispatch(obj96);
+          const obj15 = attachment_id(573);
         } else if ("debug_status" === type.type) {
-          obj12 = attachment_id(573);
-          const obj40 = { type: "VIBEGRATIONS_DEBUG_STATUS_SET", projectId: null, status: null, failed: null };
-          obj40[1] = projectId;
+          const obj98 = { type: "VIBEGRATIONS_DEBUG_STATUS_SET", projectId, status: null, failed: null };
           let status = type.status;
           if (status == null) {
             status = null;
           }
-          obj40[2] = status;
-          obj40[3] = true === type.failed || null == type.status;
-          obj12.dispatch(obj40);
+          obj98.status = status;
+          obj98.failed = true === type.failed || null == type.status;
+          attachment_id(573).dispatch(obj98);
+          const obj13 = attachment_id(573);
         } else if ("settings" === type.type) {
-          obj9 = attachment_id(573);
-          obj41 = { type: "VIBEGRATIONS_SETTINGS_SET", projectId: null, settings: null };
-          obj41[1] = projectId;
-          ({ schema: obj12[0], values: obj12[1], secrets: obj12[2], connections: obj12[3] } = type);
-          obj41[2] = { schema: null, values: null, secrets: null, connections: null };
-          obj9.dispatch(obj41);
-          const obj42 = { schema: null, values: null, secrets: null, connections: null };
+          const obj147 = { type: "VIBEGRATIONS_SETTINGS_SET", projectId, settings: null };
+          ({ schema: obj12.schema, values: obj12.values, secrets: obj12.secrets, connections: obj12.connections } = type);
+          obj147.settings = { schema: null, values: null, secrets: null, connections: null };
+          attachment_id(573).dispatch(obj147);
+          const obj10 = attachment_id(573);
+          const obj148 = { schema: null, values: null, secrets: null, connections: null };
         } else if ("debug_model_call" === type.type) {
-          obj6 = attachment_id(573);
-          const obj43 = { type: "VIBEGRATIONS_MODEL_CALL_APPEND", projectId: null, modelCall: null };
-          obj43[1] = projectId;
-          obj43[2] = type;
-          obj6.dispatch(obj43);
+          const obj149 = { type: "VIBEGRATIONS_MODEL_CALL_APPEND", projectId, modelCall: type };
+          attachment_id(573).dispatch(obj149);
           if ("started" !== type.status) {
-            obj44 = { type: "VIBEGRATIONS_DEBUG_MODEL_CALL", projectId: null, id: null, role: null, model: null, stopReason: null, durationMs: null, inputTokens: null, outputTokens: null, cacheReadTokens: null, cacheWriteTokens: null, observedAt: null };
-            obj44[1] = projectId;
-            obj44[2] = type.id;
+            const obj150 = { type: "VIBEGRATIONS_DEBUG_MODEL_CALL", projectId, id: type.id, role: null, model: null, stopReason: null, durationMs: null, inputTokens: null, outputTokens: null, cacheReadTokens: null, cacheWriteTokens: null, observedAt: null };
             let str10 = "compaction";
             if ("compaction" !== type.agent) {
               let str8 = "orchestrator";
@@ -1092,8 +890,8 @@ function handleEvent(projectId, pendingEvents, type) {
               }
               str10 = str8;
             }
-            obj44[3] = str10;
-            obj44[4] = type.model;
+            obj150.role = str10;
+            obj150.model = type.model;
             if ("error" === type.status) {
               let str12 = type.stop_reason;
               if (str12 == null) {
@@ -1103,44 +901,43 @@ function handleEvent(projectId, pendingEvents, type) {
             } else {
               stop_reason = type.stop_reason;
             }
-            obj44[5] = stop_reason;
-            ({ duration_ms: obj79[6], input_tokens } = type);
+            obj150.stopReason = stop_reason;
+            ({ duration_ms: obj79.durationMs, input_tokens } = type);
             if (input_tokens == null) {
               input_tokens = 0;
             }
-            obj44[7] = input_tokens;
+            obj150.inputTokens = input_tokens;
             let num2 = type.output_tokens;
             if (num2 == null) {
               num2 = 0;
             }
-            obj44[8] = num2;
+            obj150.outputTokens = num2;
             let num3 = type.cache_read_tokens;
             if (num3 == null) {
               num3 = 0;
             }
-            obj44[9] = num3;
+            obj150.cacheReadTokens = num3;
             let num4 = type.cache_write_tokens;
             if (num4 == null) {
               num4 = 0;
             }
-            obj44[10] = num4;
+            obj150.cacheWriteTokens = num4;
             const _Date = Date;
             const date3 = new Date();
-            obj44[11] = date3.toISOString();
-            tmp14(573).dispatch(obj44);
+            obj150.observedAt = date3.toISOString();
+            tmp14(573).dispatch(obj150);
             const tmp14Result = tmp14(573);
           }
+          obj7 = attachment_id(573);
           tmp14 = attachment_id;
         } else if ("debug_tool_call" === type.type) {
-          obj4 = attachment_id(573);
-          const obj45 = { type: "VIBEGRATIONS_TOOL_CALL_APPEND", projectId: null, toolCall: null };
-          obj45[1] = projectId;
-          obj45[2] = type;
-          obj4.dispatch(obj45);
+          const obj151 = { type: "VIBEGRATIONS_TOOL_CALL_APPEND", projectId, toolCall: type };
+          attachment_id(573).dispatch(obj151);
+          const obj5 = attachment_id(573);
         } else if ("request_upstream_ticket" === type.type) {
-          (function mintUpstreamTicket(pendingEvents, id, project_id) {
+          (function mintUpstreamTicket() {
             const self = this;
-            const apply = closure_27.apply;
+            const apply = closure_1_27.apply;
             if (typeof apply === "unknown") {
               let applyArgumentsResult = HermesBuiltin.applyArguments(self);
             } else {
@@ -1149,31 +946,27 @@ function handleEvent(projectId, pendingEvents, type) {
             return applyArgumentsResult;
           })(pendingEvents, type.id, type.project_id);
         } else if ("debug_history_state" === type.type) {
-          obj2 = attachment_id(573);
-          const obj46 = { type: "VIBEGRATIONS_HISTORY_LOAD_SETTLE", projectId: null, scope: null, status: null, count: null, truncated: null };
-          obj46[1] = projectId;
-          ({ scope: obj4[2], status: obj4[3], count: obj4[4] } = type);
-          obj46[5] = true === type.truncated;
-          obj2.dispatch(obj46);
+          obj3 = attachment_id(573);
+          const obj152 = { type: "VIBEGRATIONS_HISTORY_LOAD_SETTLE", projectId, scope: null, status: null, count: null, truncated: null };
+          ({ scope: obj4.scope, status: obj4.status, count: obj4.count } = type);
+          obj152.truncated = true === type.truncated;
+          obj3.dispatch(obj152);
         } else {
-          obj = attachment_id(573);
-          obj47 = { type: "VIBEGRATIONS_LOG_APPEND", projectId: null, log: null };
-          obj47[1] = projectId;
-          obj47[2] = type;
-          obj.dispatch(obj47);
-          (function reportRuntimeError(project_id, historical) {
+          const obj153 = { type: "VIBEGRATIONS_LOG_APPEND", projectId, log: type };
+          attachment_id(573).dispatch(obj153);
+          (function reportRuntimeError(projectId, historical) {
             if (true !== historical.historical) {
               if ("error" === historical.level) {
                 let tmp2;
                 if (null != historical.source) {
-                  tmp2 = table[historical.source];
+                  tmp2 = obj7[historical.source];
                 }
                 if (null != tmp2) {
-                  let value = closure_30.get(project_id);
+                  value = map6.get(projectId);
                   if (null == value) {
                     const _Set = Set;
                     set = new Set();
-                    const result = obj4.set(project_id, set);
+                    const result = obj4.set(projectId, set);
                     value = set;
                   }
                   const replaced = historical.message.replace(/\d+/g, "#");
@@ -1185,236 +978,213 @@ function handleEvent(projectId, pendingEvents, type) {
                   }
                   if (!hasItem) {
                     value.add(combined);
-                    ({ location: obj3[0], code: obj3[1] } = tmp2);
-                    ({ message: obj3[2], source: obj3[3] } = historical);
-                    const result1 = pendingEvents(16593).trackVibegrationErrored(project_id, { location: null, code: null, message: null, details: null });
-                    obj = { location: null, code: null, message: null, details: null };
-                    const obj2 = pendingEvents(16593);
+                    ({ location: obj3.location, code: obj3.code } = tmp2);
+                    ({ message: obj3.message, source: obj3.details } = historical);
+                    const result1 = pendingEvents(16624).trackVibegrationErrored(projectId, { location: null, code: null, message: null, details: null });
+                    const obj = { location: null, code: null, message: null, details: null };
+                    obj2 = pendingEvents(16624);
                   }
-                  obj4 = closure_30;
-                  const str = historical.message;
+                  obj4 = map6;
                 }
               }
             }
           })(projectId, type);
+          let obj = attachment_id(573);
         }
       }
     }
     let upload_token;
-    obj18 = _require(16596);
     if ("capture_claim" === type.type) {
       upload_token = type.upload_token;
     }
-    const vibegrationsPreviewClaim = obj18.resolveVibegrationsPreviewClaim(type.id, upload_token);
+    const vibegrationsPreviewClaim = require("vibegrationsPreviewClaims").resolveVibegrationsPreviewClaim(type.id, upload_token);
+    const obj19 = require("vibegrationsPreviewClaims");
   }
 }
-function _openWithFreshTicket() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c6 = 0;
-    c7 = 0;
-    c5 = 0;
-    return (function*(arg0, arg1) {
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+let closure_34 = async function _openWithFreshTicket(arg0, arg1) {
+  closure_0 = arg0;
+  let ws = arg1;
+  c6 = 0;
+  c7 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        obj2 = { value, done: true };
+        return obj2;
       } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let ticket = tmp3;
-              closure_2 = tmp5;
-              closure_2 = undefined;
-              ticket = undefined;
-              let baseUrl;
-              const ws2 = closure_1.ws;
-              ws2.close();
-              c5 = 1;
-              c6 = 2;
-              c7 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = callback(closure_1_2[7]).mintWorkerTicket(callback);
-              return obj1;
-            }
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            let obj4 = { value, done: true };
+            return obj4;
           } else {
-            if (1 === tmp8) {
-              c5 = 0;
-              c5 = baseUrl;
-              if (closure_1.disposed) {
-                c7 = 3;
-                return { value: "HermesInternal", done: null };
-              } else {
-                callback4(callback, "failed");
-                let _Error = Error;
-                let str = "ws open failed";
-                if (c5 instanceof Error) {
-                  str = c5.message;
-                }
-                closure_25(callback, closure_1, str);
-                closure_1.pendingModelSettings = null;
-                callback2(closure_1, "Connection failed before the publish result arrived");
-                callback3(closure_1, "Connection failed before the draft arrived");
-                let obj2 = callback(closure_2[6]);
-                obj2 = { location: "connection", code: null, message: null };
-                obj2[1] = callback(closure_2[6]).VibegrationErrorCodes.WS_OPEN_FAILED;
-                let _Error2 = Error;
-                let str2 = "ws open failed";
-                if (c5 instanceof Error) {
-                  str2 = c5.message;
-                }
-                obj2[2] = str2;
-                let result = obj2.trackVibegrationErrored(callback, obj2);
-                c7 = 3;
-                const tmp23 = closure_25;
-                const tmp24 = callback;
-                const tmp25 = closure_1;
-                const tmp41 = callback;
-              }
-            } else if (arg0 === 1) {
+            closure_3 = tmp3;
+            closure_2 = tmp5;
+            closure_130_0 = closure_0;
+            closure_130_1 = ws;
+            closure_130_2 = undefined;
+            let ticket;
+            let baseUrl;
+            const ws2 = ws.ws;
+            ws2.close();
+            c5 = 1;
+            c6 = 2;
+            c7 = 1;
+            let obj6 = { value: require("VibegrationsWorkerTickets").mintWorkerTicket(closure_0), done: false };
+            return obj6;
+          }
+        } else {
+          if (1 === tmp8) {
+            c5 = 0;
+            closure_130_5 = closure_4;
+            if (closure_130_1.disposed) {
               c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 0;
-              c7 = 3;
-              const obj3 = { value: null, done: true };
-              obj3[0] = arg1;
-              return obj3;
+              return { value: "HermesInternal", done: null };
             } else {
-              closure_2 = arg1;
-              ticket = closure_2.ticket;
-              baseUrl = closure_2.baseUrl;
-              if (!closure_1.disposed) {
-                const ws = closure_1.ws;
-                obj = { url: null, ticket: null, onEvent: null, onClose: null, onError: null };
-                obj[0] = baseUrl;
-                obj[1] = ticket;
-                obj[2] = function onEvent(arg0) {
-                  return closure_1_33(closure_0, closure_1, arg0);
-                };
-                obj[3] = function onClose() {
-                  const pendingPublish = lib.pendingPublish;
-                  if (null != pendingPublish) {
-                    tmp.pendingPublish = null;
-                    const _clearTimeout = clearTimeout;
-                    clearTimeout(pendingPublish.timeout);
-                    const _Error = Error;
-                    error = new Error("Connection closed before the publish result arrived");
-                    pendingPublish.reject(error);
-                  }
-                  const pendingPatchNotesDraft = tmp.pendingPatchNotesDraft;
-                  if (null != pendingPatchNotesDraft) {
-                    tmp.pendingPatchNotesDraft = null;
-                    const _clearTimeout2 = clearTimeout;
-                    clearTimeout(pendingPatchNotesDraft.timeout);
-                    const _Error2 = Error;
-                    const error1 = new Error("Connection closed before the draft arrived");
-                    pendingPatchNotesDraft.reject(error1);
-                  }
-                  obj = callback(table[9]);
-                  const result = obj.clearVibegrationsPreviewClaims(callback);
-                  if (lib.disposed) {
-                    obj = { type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId: null, connState: "closed" };
-                    obj[1] = tmp17;
-                    lib(tmp16[5]).dispatch(obj);
-                    const obj6 = lib(tmp16[5]);
-                  } else if (tmp.helloSeen) {
-                    tmp.reconnectPending = true;
-                    obj = { type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId: null, connState: "connecting" };
-                    obj[1] = tmp17;
-                    lib(tmp16[5]).dispatch(obj);
-                    const backoff = tmp.backoff;
-                    backoff.fail(() => {
-                      closure_1_35(closure_0);
-                    });
-                    obj4 = lib(tmp16[5]);
-                  } else {
-                    obj1 = lib(tmp16[5]);
-                    obj1 = { type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId: null, connState: "closed" };
-                    obj1[1] = tmp17;
-                    obj1.dispatch(obj1);
-                    closure_1_25(tmp17, tmp, "Connection closed before the message was sent");
-                    tmp.pendingModelSettings = null;
-                  }
-                };
-                obj[4] = function onError() {
-
-                };
-                ws.open(obj);
-                c5 = 0;
+              closure_131_17(closure_130_0, "failed");
+              let _Error = Error;
+              let str = "ws open failed";
+              if (closure_130_5 instanceof Error) {
+                str = closure_130_5.message;
               }
+              closure_131_25(closure_130_0, closure_130_1, str);
+              closure_130_1.pendingModelSettings = null;
+              closure_131_9(closure_130_1, "Connection failed before the publish result arrived");
+              closure_131_10(closure_130_1, "Connection failed before the draft arrived");
+              obj7 = { location: "connection", code: closure_131_0(closure_131_2[6]).VibegrationErrorCodes.WS_OPEN_FAILED, message: null };
+              let _Error2 = Error;
+              let str2 = "ws open failed";
+              if (closure_130_5 instanceof Error) {
+                str2 = closure_130_5.message;
+              }
+              obj7.message = str2;
+              let result = closure_131_0(closure_131_2[6]).trackVibegrationErrored(closure_130_0, obj7);
+              c7 = 3;
+              obj3 = closure_131_0(closure_131_2[6]);
             }
+          } else if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
             c5 = 0;
             c7 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp53) {
-          baseUrl = tmp53;
-          if (tmp4 === c5) {
-            c7 = tmp2;
-            throw tmp53;
+            const obj8 = { value, done: true };
+            return obj8;
           } else {
-            c6 = tmp;
+            closure_130_2 = value;
+            ticket = closure_130_2.ticket;
+            baseUrl = closure_130_2.baseUrl;
+            if (!closure_130_1.disposed) {
+              ws = closure_130_1.ws;
+              const obj = {
+                url: baseUrl,
+                ticket,
+                onEvent(arg0) {
+                            return closure_2_33(closure_1_0, ws, arg0);
+                          },
+                onClose() {
+                            const pendingPublish = ws.pendingPublish;
+                            if (null != pendingPublish) {
+                              tmp.pendingPublish = null;
+                              const _clearTimeout = clearTimeout;
+                              clearTimeout(pendingPublish.timeout);
+                              const _Error = Error;
+                              const error = new Error("Connection closed before the publish result arrived");
+                              pendingPublish.reject(error);
+                            }
+                            const pendingPatchNotesDraft = tmp.pendingPatchNotesDraft;
+                            if (null != pendingPatchNotesDraft) {
+                              tmp.pendingPatchNotesDraft = null;
+                              const _clearTimeout2 = clearTimeout;
+                              clearTimeout(pendingPatchNotesDraft.timeout);
+                              const _Error2 = Error;
+                              const error1 = new Error("Connection closed before the draft arrived");
+                              pendingPatchNotesDraft.reject(error1);
+                            }
+                            const result = closure_0(closure_2[9]).clearVibegrationsPreviewClaims(closure_1_0);
+                            if (ws.disposed) {
+                              obj3 = { type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId: tmp17, connState: "closed" };
+                              closure_1(tmp16[5]).dispatch(obj3);
+                              const obj6 = closure_1(tmp16[5]);
+                            } else if (tmp.helloSeen) {
+                              tmp.reconnectPending = true;
+                              const obj5 = { type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId: tmp17, connState: "connecting" };
+                              closure_1(tmp16[5]).dispatch(obj5);
+                              const backoff = tmp.backoff;
+                              backoff.fail(() => {
+                                closure_2_35(closure_1_0);
+                              });
+                              const obj4 = closure_1(tmp16[5]);
+                            } else {
+                              obj7 = { type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId: tmp17, connState: "closed" };
+                              closure_1(tmp16[5]).dispatch(obj7);
+                              closure_2_25(tmp17, tmp, "Connection closed before the message was sent");
+                              tmp.pendingModelSettings = null;
+                              obj2 = closure_1(tmp16[5]);
+                            }
+                          },
+                onError() {
+
+                          }
+              };
+              ws.open(obj);
+              c5 = 0;
+            }
           }
+          c5 = 0;
+          c7 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      } catch (tmp53) {
+        closure_4 = tmp53;
+        if (tmp4 === c5) {
+          c7 = tmp2;
+          throw tmp53;
+        } else {
+          c6 = tmp;
         }
       }
-    })();
-  });
-  closure_34 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
+    }
+  })();
+};
 function connect(projectId) {
-  obj = map;
-  let value = map.get(projectId);
+  value = map.get(projectId);
   if (null == value) {
-    obj = { ws: null, backoff: null, helloSeen: false, disposed: false, reconnectPending: false, pendingSends: null, pendingEvents: null, pendingModelSettings: null, pendingPublish: null, pendingPatchNotesDraft: null };
-    const vibegrationsWebSocket = new open2.VibegrationsWebSocket();
-    obj[0] = vibegrationsWebSocket;
-    const tmp14 = new failsDefault(1000, 30000);
-    obj[1] = tmp14;
-    obj[5] = [];
-    obj[6] = [];
-    const result = obj.set(projectId, obj);
-    value = obj;
+    obj3 = { ws: null, backoff: null, helloSeen: false, disposed: false, reconnectPending: false, pendingSends: null, pendingEvents: null, pendingModelSettings: null, pendingPublish: null, pendingPatchNotesDraft: null };
+    const vibegrationsWebSocket = new VibegrationsWebSocket.VibegrationsWebSocket();
+    obj3.ws = vibegrationsWebSocket;
+    const tmp14 = new BackoffDefault(1000, 30000);
+    obj3.backoff = tmp14;
+    obj3.pendingSends = [];
+    obj3.pendingEvents = [];
+    const result = obj.set(projectId, obj3);
+    value = obj3;
   }
   value.pendingEvents = [];
   value.helloSeen = false;
   value.disposed = false;
   value.reconnectPending = false;
-  obj1 = dispatcherDefault;
-  obj = { type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId, connState: "connecting" };
-  obj1.dispatch(obj);
-  obj1 = { type: "VIBEGRATIONS_TRACE_REPLAY_STARTING", projectId };
-  dispatcherDefault.dispatch(obj1);
-  (function openWithFreshTicket(projectId, value) {
+  DispatcherDefault.dispatch({ type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId, connState: "connecting" });
+  obj = map;
+  const obj5 = { type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId, connState: "connecting" };
+  DispatcherDefault.dispatch({ type: "VIBEGRATIONS_TRACE_REPLAY_STARTING", projectId });
+  (function openWithFreshTicket() {
     const self = this;
-    const apply = closure_34.apply;
+    const apply = closure_1_34.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -1423,9 +1193,8 @@ function connect(projectId) {
     return applyArgumentsResult;
   })(projectId, value);
 }
-function teardown(closure_0) {
-  obj = map;
-  const value = map.get(closure_0);
+function teardown(projectId) {
+  value = map.get(projectId);
   let flag = null != value;
   if (flag) {
     value.disposed = true;
@@ -1437,7 +1206,7 @@ function teardown(closure_0) {
       const _clearTimeout = clearTimeout;
       clearTimeout(pendingPublish.timeout);
       const _Error = Error;
-      error = new Error("Connection closed before the publish result arrived");
+      const error = new Error("Connection closed before the publish result arrived");
       pendingPublish.reject(error);
     }
     const pendingPatchNotesDraft = value.pendingPatchNotesDraft;
@@ -1451,17 +1220,13 @@ function teardown(closure_0) {
     }
     const ws = value.ws;
     ws.close();
-    obj.delete(closure_0);
-    map7.delete(closure_0);
-    const result = _modDef16591.releasePreviewControl(closure_0);
-    const obj2 = _modDef16591;
-    const result1 = map10.clearVibegrationsPreviewClaims(closure_0);
-    const obj3 = map10;
-    obj = { type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId: null, connState: "closed" };
-    obj[1] = closure_0;
-    dispatcherDefault.dispatch(obj);
+    map.delete(projectId);
+    map7.delete(projectId);
+    const result = VibegrationsPlatformUtilsDefault.releasePreviewControl(projectId);
+    const result1 = vibegrationsPreviewClaims.clearVibegrationsPreviewClaims(projectId);
+    const obj5 = { type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId, connState: "closed" };
+    DispatcherDefault.dispatch(obj5);
     flag = true;
-    obj4 = dispatcherDefault;
   }
   return flag;
 }
@@ -1473,7 +1238,7 @@ function loadOlderHistory(projectId) {
     if (map7.get(projectId) === tmp) {
       return true;
     } else {
-      const value = map.get(projectId);
+      value = map.get(projectId);
       let flag = null != value;
       if (flag) {
         const result = obj.set(projectId, tmp);
@@ -1486,22 +1251,22 @@ function loadOlderHistory(projectId) {
     obj = map7;
   }
 }
-function getMediaTicket(closure_0) {
-  const _require = closure_0;
-  let value = map8.get(closure_0);
+function getMediaTicket(arg0) {
+  _require = arg0;
+  value = map8.get(arg0);
   if (null != value) {
     const _Date = Date;
     if (value.expiresAt > Date.now()) {
       return Promise.resolve(value.ticket);
     }
   }
-  value = map9.get(closure_0);
-  if (null != value) {
-    return value;
+  value2 = map9.get(arg0);
+  if (null != value2) {
+    return value2;
   } else {
-    const obj2 = _require(16594);
-    const mintWorkerTicketResult = _require(16594).mintWorkerTicket(closure_0);
-    const cleanupPromise = _require(16594).mintWorkerTicket(closure_0).then((ticket) => {
+    obj2 = require("VibegrationsWorkerTickets");
+    const mintWorkerTicketResult = require("VibegrationsWorkerTickets").mintWorkerTicket(arg0);
+    const cleanupPromise = require("VibegrationsWorkerTickets").mintWorkerTicket(arg0).then((ticket) => {
       const tmp = (function ticketExpiryMs(ticket) {
         try {
           const _atob = atob;
@@ -1522,309 +1287,502 @@ function getMediaTicket(closure_0) {
         }
       })(ticket.ticket);
       if (null != tmp) {
-        obj = { ticket: null, expiresAt: null };
-        obj[0] = ticket;
-        obj[1] = tmp - 30000;
-        let result = closure_1_39.set(closure_0, obj);
+        const obj = { ticket, expiresAt: tmp - 30000 };
+        let result = map8.set(closure_0, obj);
       }
       return ticket;
     }).finally(() => {
-      closure_1_40.delete(closure_0);
+      map9.delete(closure_0);
     });
-    let result = obj.set(closure_0, cleanupPromise);
+    let result = obj.set(arg0, cleanupPromise);
     return cleanupPromise;
   }
   obj = map9;
 }
-function _fetchSourceHistory() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c3 = 0;
-    return (function*(arg0) {
-      if (c3 === 2) {
+let closure_42 = async function _fetchSourceHistory(arg0, value) {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c3 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          let ticket;
+          let baseUrl;
+          closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          closure_129_5 = undefined;
+          c2 = 1;
+          c3 = 1;
+          const obj4 = { value: require("VibegrationsWorkerTickets").mintWorkerTicket(closure_0), done: false };
+          return obj4;
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          closure_129_0 = value;
+          ticket = closure_129_0.ticket;
+          baseUrl = closure_129_0.baseUrl;
+          const _URLSearchParams = URLSearchParams;
+          obj7 = { ticket };
+          const uRLSearchParams = new URLSearchParams(obj7);
+          closure_129_3 = uRLSearchParams;
+          const _fetch = fetch;
+          const _HermesInternal2 = HermesInternal;
+          c2 = 2;
+          c3 = 1;
+          const obj8 = { value: fetch("" + baseUrl + "/agent/source-history?" + closure_129_3), done: false };
+          return obj8;
+        }
+      } else if (2 === tmp5) {
+        if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj9 = { value, done: true };
+          return obj9;
+        } else {
+          closure_129_4 = value;
+          if (closure_129_4.ok) {
+            c2 = 3;
+            c3 = 1;
+            const obj10 = { value: closure_129_4.json(), done: false };
+            return obj10;
+          } else {
+            const _Error = Error;
+            const _HermesInternal = HermesInternal;
+            const error = new Error("version history failed (" + closure_129_4.status + ")");
+            throw error;
+          }
+        }
+      } else if (arg0 === 1) {
         c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+        throw value;
+      } else if (arg0 === 2) {
+        c3 = 3;
+        const obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c3 = 2;
-          if (0 === table) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let ticket = tmp2;
-              let lib;
-              ticket = undefined;
-              table = undefined;
-              c3 = undefined;
-              closure_4 = undefined;
-              closure_5 = undefined;
-              let obj5 = lib(table[7]);
-              table = 1;
-              c3 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj5.mintWorkerTicket(lib);
-              return obj1;
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              lib = arg1;
-              ticket = lib.ticket;
-              table = lib.baseUrl;
-              const _URLSearchParams = URLSearchParams;
-              const obj3 = { ticket: null };
-              obj3[0] = ticket;
-              const uRLSearchParams = new URLSearchParams(obj3);
-              c3 = uRLSearchParams;
-              const _fetch = fetch;
-              const _HermesInternal2 = HermesInternal;
-              table = 2;
-              c3 = 1;
-              obj4 = { value: null, done: false };
-              obj4[0] = fetch("" + table + "/agent/source-history?" + c3);
-              return obj4;
-            }
-          } else if (2 === tmp5) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj5 = { value: null, done: true };
-              obj5[0] = arg1;
-              return obj5;
-            } else {
-              closure_4 = arg1;
-              if (closure_4.ok) {
-                table = 3;
-                c3 = 1;
-                const obj6 = { value: null, done: false };
-                obj6[0] = closure_4.json();
-                return obj6;
-              } else {
-                const _Error = Error;
-                const _HermesInternal = HermesInternal;
-                error = new Error("version history failed (" + closure_4.status + ")");
-                throw error;
-              }
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            closure_5 = arg1;
-            const _Array = Array;
-            if (Array.isArray(closure_5.entries)) {
-              const entries = closure_5.entries;
-            } else {
-              const items = [];
-            }
-            c3 = 3;
-          }
-        } catch (tmp21) {
-          c3 = tmp;
-          throw tmp21;
+        closure_129_5 = value;
+        const _Array = Array;
+        if (Array.isArray(closure_129_5.entries)) {
+          const entries = closure_129_5.entries;
+        } else {
+          const items = [];
         }
+        c3 = 3;
       }
-    })();
-  });
-  closure_42 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp21) {
+      c3 = tmp;
+      throw tmp21;
+    }
   }
-  return applyArgumentsResult;
-}
-function _restoreSourceHistoryEntry() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c4 = 0;
-    c5 = 0;
-    return (function*(arg0, str) {
-      if (c5 === 2) {
+};
+let closure_43 = async function _restoreSourceHistoryEntry(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_3 = tmp5;
+          closure_2 = tmp2;
+          closure_130_0 = closure_0;
+          closure_130_1 = closure_1;
+          closure_130_2 = undefined;
+          let ticket;
+          let baseUrl;
+          closure_130_5 = undefined;
+          closure_130_6 = undefined;
+          closure_130_7 = undefined;
+          closure_130_8 = undefined;
+          c4 = 1;
+          c5 = 1;
+          const obj4 = { value: require("VibegrationsWorkerTickets").mintWorkerTicket(closure_0), done: false };
+          return obj4;
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          closure_130_2 = value;
+          ticket = closure_130_2.ticket;
+          baseUrl = closure_130_2.baseUrl;
+          const _URLSearchParams = URLSearchParams;
+          obj7 = { ticket };
+          const uRLSearchParams = new URLSearchParams(obj7);
+          closure_130_5 = uRLSearchParams;
+          const _fetch = fetch;
+          const _encodeURIComponent = encodeURIComponent;
+          const _HermesInternal3 = HermesInternal;
+          c4 = 2;
+          c5 = 1;
+          const obj8 = { value: fetch("" + baseUrl + "/agent/source-history/" + encodeURIComponent(closure_130_1) + "/restore?" + closure_130_5, { method: "POST" }), done: false };
+          return obj8;
+        }
+      } else if (2 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj9 = { value, done: true };
+          return obj9;
+        } else {
+          closure_130_6 = value;
+          if (closure_130_6.ok) {
+            c4 = 4;
+            c5 = 1;
+            const obj10 = { value: obj5.json(), done: false };
+            return obj10;
+          } else {
+            c4 = 3;
+            c5 = 1;
+            const obj12 = { value: obj5.text(), done: false };
+            return obj12;
+          }
+        }
+      } else if (3 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj13 = { value, done: true };
+          return obj13;
+        } else {
+          closure_130_7 = value.trim();
+          let str3 = "";
+          if ("" !== closure_130_7) {
+            const _HermesInternal = HermesInternal;
+            str3 = ": " + closure_130_7;
+          }
+          const _HermesInternal2 = HermesInternal;
+          const error = new Error("version restore failed (" + closure_130_6.status + ")" + str3);
+          throw error;
+        }
+      } else if (arg0 === 1) {
         c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw str;
-        } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = str;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        const obj14 = { value, done: true };
+        return obj14;
       } else {
-        try {
-          c5 = 2;
-          if (0 === baseUrl) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw str;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = str;
-              return obj;
-            } else {
-              let ticket = tmp5;
-              closure_2 = tmp2;
-              closure_2 = undefined;
-              ticket = undefined;
-              baseUrl = undefined;
-              c5 = undefined;
-              closure_6 = undefined;
-              closure_7 = undefined;
-              closure_8 = undefined;
-              let obj10 = callback(closure_1_2[7]);
-              baseUrl = 1;
-              c5 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj10.mintWorkerTicket(callback);
-              return obj1;
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw str;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = str;
-              return obj2;
-            } else {
-              closure_2 = str;
-              ticket = closure_2.ticket;
-              baseUrl = closure_2.baseUrl;
-              const _URLSearchParams = URLSearchParams;
-              const obj3 = { ticket: null };
-              obj3[0] = ticket;
-              const uRLSearchParams = new URLSearchParams(obj3);
-              c5 = uRLSearchParams;
-              const _fetch = fetch;
-              const _encodeURIComponent = encodeURIComponent;
-              const _HermesInternal3 = HermesInternal;
-              baseUrl = 2;
-              c5 = 1;
-              obj4 = { value: null, done: false };
-              obj4[0] = fetch("" + baseUrl + "/agent/source-history/" + encodeURIComponent(closure_1) + "/restore?" + c5, { method: "POST" });
-              return obj4;
-            }
-          } else if (2 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw str;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj5 = { value: null, done: true };
-              obj5[0] = str;
-              return obj5;
-            } else {
-              closure_6 = str;
-              obj4 = closure_6;
-              if (closure_6.ok) {
-                baseUrl = 4;
-                c5 = 1;
-                const obj6 = { value: null, done: false };
-                obj6[0] = obj4.json();
-                return obj6;
-              } else {
-                baseUrl = 3;
-                c5 = 1;
-                const obj7 = { value: null, done: false };
-                obj7[0] = obj4.text();
-                return obj7;
-              }
-            }
-          } else if (3 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw str;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj8 = { value: null, done: true };
-              obj8[0] = str;
-              return obj8;
-            } else {
-              closure_7 = str.trim();
-              let str3 = "";
-              if ("" !== closure_7) {
-                const _HermesInternal = HermesInternal;
-                str3 = ": " + closure_7;
-              }
-              const _HermesInternal2 = HermesInternal;
-              error = new Error("version restore failed (" + closure_6.status + ")" + str3);
-              throw error;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw str;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj9 = { value: null, done: true };
-            obj9[0] = str;
-            return obj9;
-          } else {
-            closure_8 = str;
-            if (null == closure_8.entry) {
-              const _Error = Error;
-              const error1 = new Error("version restore returned no commit");
-              throw error1;
-            } else {
-              obj = callback(closure_2[12]);
-              const result = obj.refreshPublishedProject(callback, { isPreview: true });
-              result.catch(() => {
+        closure_130_8 = value;
+        if (null == closure_130_8.entry) {
+          const _Error = Error;
+          const error1 = new Error("version restore returned no commit");
+          throw error1;
+        } else {
+          const result = closure_131_0(closure_131_2[12]).refreshPublishedProject(closure_130_0, { isPreview: true });
+          result.catch(() => {
 
-              });
-              c5 = 3;
-              obj10 = { value: null, done: true };
-              obj10[0] = closure_8.entry;
-              return obj10;
-            }
-          }
-        } catch (tmp31) {
-          c5 = tmp;
-          throw tmp31;
+          });
+          c5 = 3;
+          const obj15 = { value: closure_130_8.entry, done: true };
+          return obj15;
         }
       }
-    })();
-  });
-  closure_43 = tmp;
-  const apply = tmp.apply;
+    } catch (tmp31) {
+      c5 = tmp;
+      throw tmp31;
+    }
+  }
+};
+let closure_44 = async function _fetchDatabaseRestorePoints(arg0, value) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp2;
+          closure_130_0 = closure_1;
+          closure_130_1 = undefined;
+          let ticket;
+          let baseUrl;
+          closure_130_4 = undefined;
+          closure_130_5 = undefined;
+          closure_130_6 = undefined;
+          c3 = 1;
+          c4 = 1;
+          const obj4 = { value: require("VibegrationsWorkerTickets").mintWorkerTicket(closure_0), done: false };
+          return obj4;
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          closure_130_1 = value;
+          ticket = closure_130_1.ticket;
+          baseUrl = closure_130_1.baseUrl;
+          const _URLSearchParams = URLSearchParams;
+          obj7 = { ticket, environment: closure_130_0 };
+          const uRLSearchParams = new URLSearchParams(obj7);
+          closure_130_4 = uRLSearchParams;
+          const _fetch = fetch;
+          const _HermesInternal2 = HermesInternal;
+          c3 = 2;
+          c4 = 1;
+          const obj8 = { value: fetch("" + baseUrl + "/agent/database/restore-points?" + closure_130_4), done: false };
+          return obj8;
+        }
+      } else if (2 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj9 = { value, done: true };
+          return obj9;
+        } else {
+          closure_130_5 = value;
+          if (closure_130_5.ok) {
+            c3 = 3;
+            c4 = 1;
+            const obj10 = { value: closure_130_5.json(), done: false };
+            return obj10;
+          } else {
+            const _Error = Error;
+            const _HermesInternal = HermesInternal;
+            const error = new Error("restore points failed (" + closure_130_5.status + ")");
+            throw error;
+          }
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj = { value, done: true };
+        return obj;
+      } else {
+        closure_130_6 = value;
+        const _Array = Array;
+        if (Array.isArray(closure_130_6.restorePoints)) {
+          const restorePoints = closure_130_6.restorePoints;
+        } else {
+          const items = [];
+        }
+        c4 = 3;
+      }
+    } catch (tmp22) {
+      c4 = tmp;
+      throw tmp22;
+    }
+  }
+};
+let closure_45 = async function _fetchDatabaseRestoreWindow() {
+  closure_2 = tmp2;
+  closure_130_0 = closure_1;
+  closure_130_1 = await require("VibegrationsWorkerTickets").mintWorkerTicket(closure_0);
+  const ticket = closure_130_1.ticket;
+  const baseUrl = closure_130_1.baseUrl;
+  const _URLSearchParams = URLSearchParams;
+  const uRLSearchParams = new URLSearchParams({ ticket, environment: closure_130_0 });
+  closure_130_4 = uRLSearchParams;
+  const _fetch = fetch;
+  const _HermesInternal2 = HermesInternal;
+  closure_130_5 = await fetch("" + baseUrl + "/agent/database/restore-window?" + closure_130_4);
+  if (!closure_130_5.ok) {
+    const _Error = Error;
+    const _HermesInternal = HermesInternal;
+    const error = new Error("restore window failed (" + closure_130_5.status + ")");
+    throw error;
+  }
+  await closure_130_5.json();
+  return arg1;
+};
+let closure_46 = async function _createDatabaseRestorePoint(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_3 = tmp2;
+          closure_131_0 = closure_1;
+          closure_131_1 = closure_2;
+          closure_131_2 = undefined;
+          let ticket;
+          let baseUrl;
+          closure_131_5 = undefined;
+          closure_131_6 = undefined;
+          closure_131_7 = undefined;
+          c4 = 1;
+          c5 = 1;
+          const obj4 = { value: require("VibegrationsWorkerTickets").mintWorkerTicket(closure_0), done: false };
+          return obj4;
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          closure_131_2 = value;
+          ticket = closure_131_2.ticket;
+          baseUrl = closure_131_2.baseUrl;
+          const _URLSearchParams = URLSearchParams;
+          const obj6 = { ticket };
+          const uRLSearchParams = new URLSearchParams(obj6);
+          closure_131_5 = uRLSearchParams;
+          const _HermesInternal2 = HermesInternal;
+          const request = { method: "POST", headers: { "content-type": "application/json" }, body: null };
+          if (null == closure_131_1) {
+            obj7 = { environment: closure_131_0 };
+            request.body = tmp58(obj7);
+            const response = fetch(tmp56, request);
+            c4 = 2;
+            c5 = 1;
+          }
+          const obj9 = { environment: closure_131_0, label: closure_131_1 };
+          obj7 = obj9;
+        }
+      } else if (2 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj10 = { value, done: true };
+          return obj10;
+        } else {
+          closure_131_6 = value;
+          if (closure_131_6.ok) {
+            c4 = 3;
+            c5 = 1;
+            const obj11 = { value: closure_131_6.json(), done: false };
+            return obj11;
+          } else {
+            const _Error2 = Error;
+            const _HermesInternal = HermesInternal;
+            const error = new Error("restore point create failed (" + closure_131_6.status + ")");
+            throw error;
+          }
+        }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        const obj12 = { value, done: true };
+        return obj12;
+      } else {
+        closure_131_7 = value;
+        if (null == closure_131_7.restorePoint) {
+          const _Error = Error;
+          const error1 = new Error("restore point create returned nothing");
+          throw error1;
+        } else {
+          c5 = 3;
+          const obj = { value: closure_131_7.restorePoint, done: true };
+          return obj;
+        }
+      }
+    } catch (tmp36) {
+      c5 = tmp;
+      throw tmp36;
+    }
+  }
+};
+function settleDatabaseRestore() {
+  const self = this;
+  const apply = closure_48.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1832,6 +1790,128 @@ function _restoreSourceHistoryEntry() {
   }
   return applyArgumentsResult;
 }
+let closure_48 = async function _settleDatabaseRestore(arg0, arg1) {
+  closure_0 = arg0;
+  let ok = arg1;
+  c6 = 0;
+  c7 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else {
+            closure_3 = tmp3;
+            closure_2 = tmp7;
+            closure_130_0 = closure_0;
+            closure_130_1 = ok;
+            closure_130_2 = undefined;
+            closure_130_3 = undefined;
+            if (ok.ok) {
+              let str = "";
+              if (202 !== obj7.status) {
+                closure_130_2 = str;
+                closure_130_3 = closure_131_0(closure_131_2[16]).databaseRestoreResultFromStatus(closure_130_1.status, closure_130_2);
+                if (closure_130_3.ok) {
+                  c5 = 1;
+                  const result = closure_131_0(closure_131_2[12]).reloadVibegrationsProjectFrames(closure_130_0);
+                  c5 = 0;
+                  const obj4 = closure_131_0(closure_131_2[12]);
+                }
+                c7 = 3;
+                obj3 = closure_131_0(closure_131_2[16]);
+              }
+            }
+            c6 = 1;
+            c7 = 1;
+            const obj6 = { value: ok.text(), done: false };
+            return obj6;
+          }
+        } else if (1 !== tmp7) {
+          c5 = 0;
+        }
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          str = value.trim();
+        }
+      } catch (tmp24) {
+        closure_4 = tmp24;
+        if (tmp4 === c5) {
+          c7 = tmp2;
+          throw tmp24;
+        } else {
+          c6 = tmp;
+        }
+      }
+    }
+  })();
+};
+let closure_49 = async function _restoreDatabaseToPoint() {
+  closure_5 = tmp2;
+  closure_133_0 = closure_0;
+  closure_133_1 = closure_1;
+  closure_133_2 = await require("VibegrationsWorkerTickets").mintWorkerTicket(closure_0);
+  const ticket = closure_133_2.ticket;
+  const baseUrl = closure_133_2.baseUrl;
+  const _URLSearchParams = URLSearchParams;
+  const uRLSearchParams = new URLSearchParams({ ticket });
+  closure_133_5 = uRLSearchParams;
+  _slicedToArray = closure_132_47;
+  closure_2 = closure_133_0;
+  const _fetch = fetch;
+  const _encodeURIComponent = encodeURIComponent;
+  const _HermesInternal = HermesInternal;
+  await fetch("" + baseUrl + "/agent/database/restore-points/" + encodeURIComponent(closure_133_1) + "/restore?" + closure_133_5, { method: "POST" });
+  return _slicedToArray(closure_2, arg1);
+};
+let closure_50 = async function _restoreDatabaseToTimestamp() {
+  closure_6 = tmp2;
+  closure_134_0 = closure_0;
+  closure_134_1 = closure_1;
+  closure_134_2 = closure_2;
+  closure_134_3 = await require("VibegrationsWorkerTickets").mintWorkerTicket(closure_0);
+  const ticket = closure_134_3.ticket;
+  const baseUrl = closure_134_3.baseUrl;
+  const _URLSearchParams = URLSearchParams;
+  const uRLSearchParams = new URLSearchParams({ ticket });
+  closure_134_6 = uRLSearchParams;
+  asyncGeneratorStep = closure_133_47;
+  closure_3 = closure_134_0;
+  const _fetch = fetch;
+  const _HermesInternal = HermesInternal;
+  const request = { method: "POST", headers: { "content-type": "application/json" }, body: null };
+  const _JSON = JSON;
+  const combined = "" + baseUrl + "/agent/database/restore?" + closure_134_6;
+  request.body = JSON.stringify({ environment: closure_134_1, timestampMs: closure_134_2 });
+  await fetch(combined, request);
+  return asyncGeneratorStep(closure_3, arg1);
+};
 function attachmentEndpoint(arg0, arg1) {
   if (null == arg1) {
     const _HermesInternal2 = HermesInternal;
@@ -1843,9 +1923,9 @@ function attachmentEndpoint(arg0, arg1) {
   }
   return combined;
 }
-function uploadAttachmentBytes(arg0, name, name, type) {
+function uploadAttachmentBytes() {
   const self = this;
-  const apply = _uploadAttachmentBytes.apply;
+  const apply = closure_53.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1853,884 +1933,662 @@ function uploadAttachmentBytes(arg0, name, name, type) {
   }
   return applyArgumentsResult;
 }
-function _uploadAttachmentBytes() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2, arg3) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    closure_3 = arg3;
-    c6 = 0;
-    c7 = 0;
-    return (function*(arg0, arg1, arg2, arg3) {
-      let ticket = tmp2;
-      const callback = closure_1;
-      closure_1 = table;
-      table = closure_3;
-      closure_3 = yield callback(table[7]).mintWorkerTicket(callback);
-      ticket = closure_3.ticket;
-      const baseUrl = closure_3.baseUrl;
-      const _URLSearchParams = URLSearchParams;
-      const obj3 = { ticket: null, name: null };
-      obj3[0] = ticket;
-      obj3[1] = closure_1;
-      const uRLSearchParams = new URLSearchParams(obj3);
-      const _HermesInternal2 = HermesInternal;
-      let str3 = "application/octet-stream";
-      const combined = "" + callback2(baseUrl) + "?" + c6;
-      if ("" !== table) {
-        str3 = table;
-      }
-      obj4 = { method: "POST", headers: null, body: null };
-      const obj5 = { "content-type": null };
-      obj5[0] = str3;
-      obj4[1] = obj5;
-      obj4[2] = callback;
-      c7 = yield fetch(combined, obj4);
-      if (!c7.ok) {
-        const _Error = Error;
-        const _HermesInternal = HermesInternal;
-        error = new Error("attachment upload failed (" + c7.status + ")");
-        throw error;
-      }
-      yield c7.json();
-      return arg1;
-    })();
-  });
-  closure_46 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+let closure_53 = async function _uploadAttachmentBytes() {
+  closure_4 = tmp2;
+  closure_132_0 = closure_1;
+  closure_132_1 = closure_2;
+  closure_132_2 = closure_3;
+  closure_132_3 = await require("VibegrationsWorkerTickets").mintWorkerTicket(closure_0);
+  const ticket = closure_132_3.ticket;
+  const baseUrl = closure_132_3.baseUrl;
+  const _URLSearchParams = URLSearchParams;
+  const uRLSearchParams = new URLSearchParams({ ticket, name: closure_132_1 });
+  closure_132_6 = uRLSearchParams;
+  const _HermesInternal2 = HermesInternal;
+  let str3 = "application/octet-stream";
+  const combined = "" + closure_133_51(baseUrl) + "?" + closure_132_6;
+  if ("" !== closure_132_2) {
+    str3 = closure_132_2;
   }
-  return applyArgumentsResult;
-}
-function _exportProjectArchive() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c4 = 0;
-    c5 = 0;
-    return (function*(arg0, arg1) {
-      let ticket = tmp2;
-      const callback = closure_1;
-      const obj6 = callback(closure_1_2[7]);
-      closure_1 = yield obj6.mintWorkerTicket(callback);
-      ticket = closure_1.ticket;
-      const baseUrl = closure_1.baseUrl;
-      const _URLSearchParams = URLSearchParams;
-      const obj3 = { ticket: null, name: null };
-      obj3[0] = ticket;
-      obj3[1] = callback;
-      const uRLSearchParams = new URLSearchParams(obj3);
-      const _fetch = fetch;
-      const _HermesInternal = HermesInternal;
-      c5 = yield fetch("" + baseUrl + "/agent/export?" + c4);
-      if (!c5.ok) {
-        throw new closure_47(c5.status);
-      }
-      yield c5.blob();
-      return arg1;
-    })();
-  });
-  closure_48 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+  const request = { method: "POST", headers: { "content-type": str3 }, body: closure_132_0 };
+  closure_132_7 = await fetch(combined, request);
+  if (!closure_132_7.ok) {
+    const _Error = Error;
+    const _HermesInternal = HermesInternal;
+    const error = new Error("attachment upload failed (" + closure_132_7.status + ")");
+    throw error;
   }
-  return applyArgumentsResult;
-}
-function _remixProjectWorkspace() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c4 = 0;
-    c5 = 0;
-    return (function*(arg0, arg1) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+  await closure_132_7.json();
+  return arg1;
+};
+let closure_55 = async function _exportProjectArchive() {
+  closure_2 = tmp2;
+  closure_130_0 = closure_1;
+  closure_130_1 = await require("VibegrationsWorkerTickets").mintWorkerTicket(closure_0);
+  const ticket = closure_130_1.ticket;
+  const baseUrl = closure_130_1.baseUrl;
+  const _URLSearchParams = URLSearchParams;
+  const uRLSearchParams = new URLSearchParams({ ticket, name: closure_130_0 });
+  closure_130_4 = uRLSearchParams;
+  const _fetch = fetch;
+  const _HermesInternal = HermesInternal;
+  closure_130_5 = await fetch("" + baseUrl + "/agent/export?" + closure_130_4);
+  if (!closure_130_5.ok) {
+    throw new closure_131_54(closure_130_5.status);
+  }
+  await closure_130_5.blob();
+  return arg1;
+};
+let closure_57 = async function _remixProjectWorkspace(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
         if (arg0 === 1) {
-          throw arg1;
+          c5 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          c5 = 3;
+          obj3 = { value, done: true };
+          return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_3 = tmp5;
+          closure_2 = tmp2;
+          closure_130_0 = undefined;
+          closure_130_1 = undefined;
+          closure_130_2 = undefined;
+          closure_130_3 = undefined;
+          closure_130_4 = undefined;
+          closure_130_5 = undefined;
+          const items = [require("VibegrationsWorkerTickets").mintRemixTicket(closure_0), ];
+          const obj10 = require("VibegrationsWorkerTickets");
+          items[1] = require("VibegrationsWorkerTickets").mintWorkerTicket(closure_1);
+          c4 = 1;
+          c5 = 1;
+          const obj4 = { value: Promise.all(items), done: false };
+          return obj4;
         }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let lib = tmp5;
-              closure_2 = tmp2;
-              let callback;
-              dependencyMap = undefined;
-              closure_2 = undefined;
-              lib = undefined;
-              c4 = undefined;
-              c5 = undefined;
-              const items = [callback(closure_1_2[7]).mintRemixTicket(callback), ];
-              const obj10 = callback(closure_1_2[7]);
-              items[1] = callback(closure_1_2[7]).mintWorkerTicket(dependencyMap);
-              c4 = 1;
-              c5 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = Promise.all(items);
-              return obj1;
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              callback = arg1;
-              dependencyMap = lib(callback, 2);
-              closure_2 = 32;
-              lib = 5;
-              const _URLSearchParams = URLSearchParams;
-              const obj3 = { ticket: null };
-              obj3[0] = closure_2.ticket;
-              const uRLSearchParams = new URLSearchParams(obj3);
-              c4 = uRLSearchParams;
-              const _fetch = fetch;
-              const _HermesInternal = HermesInternal;
-              obj4 = { method: "POST", headers: null, body: null };
-              obj4[1] = { "content-type": "application/json" };
-              const _JSON = JSON;
-              const obj5 = { dest_ticket: null };
-              obj5[0] = lib.ticket;
-              const combined = "" + closure_2.baseUrl + "/agent/fork?" + c4;
-              obj4[2] = JSON.stringify(obj5);
-              c4 = 2;
-              c5 = 1;
-              const obj6 = { value: null, done: false };
-              obj6[0] = fetch(combined, obj4);
-              return obj6;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            c5 = arg1;
-            if (c5.ok) {
-              c5 = 3;
-              return { value: "HermesInternal", done: null };
-            } else {
-              throw new closure_49(c5.status);
-            }
-          }
-        } catch (tmp13) {
-          c5 = tmp;
-          throw tmp13;
-        }
-      }
-    })();
-  });
-  closure_50 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _submitProjectSecrets() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c3 = 0;
-    c4 = 0;
-    return (function*(arg0, arg1) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+      } else if (1 === tmp5) {
         if (arg0 === 1) {
-          throw arg1;
+          c5 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          c5 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
+          closure_130_0 = value;
+          closure_130_1 = closure_131_3(closure_130_0, 2);
+          closure_130_2 = closure_130_1[0];
+          closure_130_3 = closure_130_1[1];
+          const _URLSearchParams = URLSearchParams;
+          const obj6 = { ticket: closure_130_2.ticket };
+          const uRLSearchParams = new URLSearchParams(obj6);
+          closure_130_4 = uRLSearchParams;
+          const _fetch = fetch;
+          const _HermesInternal = HermesInternal;
+          const request = { method: "POST", headers: { "content-type": "application/json" }, body: null };
+          const _JSON = JSON;
+          obj7 = { dest_ticket: closure_130_3.ticket };
+          const combined = "" + closure_130_2.baseUrl + "/agent/fork?" + closure_130_4;
+          request.body = JSON.stringify(obj7);
           c4 = 2;
-          if (0 === baseUrl) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let ticket = tmp2;
-              const callback = closure_1;
-              closure_1 = undefined;
-              ticket = undefined;
-              baseUrl = undefined;
-              c4 = undefined;
-              closure_5 = undefined;
-              let obj3 = callback(closure_1_2[7]);
-              baseUrl = 1;
-              c4 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj3.mintWorkerTicket(callback);
-              return obj1;
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              closure_1 = arg1;
-              ticket = closure_1.ticket;
-              baseUrl = closure_1.baseUrl;
-              const _URLSearchParams = URLSearchParams;
-              obj3 = { ticket: null };
-              obj3[0] = ticket;
-              const uRLSearchParams = new URLSearchParams(obj3);
-              c4 = uRLSearchParams;
-              const _fetch = fetch;
-              const _HermesInternal2 = HermesInternal;
-              obj4 = { method: "PUT", headers: null, body: null };
-              obj4[1] = { "content-type": "application/json" };
-              const _JSON = JSON;
-              const combined = "" + baseUrl + "/agent/secrets?" + c4;
-              obj4[2] = JSON.stringify(callback);
-              baseUrl = 2;
-              c4 = 1;
-              const obj5 = { value: null, done: false };
-              obj5[0] = fetch(combined, obj4);
-              return obj5;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            closure_5 = arg1;
-            if (closure_5.ok) {
-              c4 = 3;
-              return { value: "HermesInternal", done: null };
-            } else {
-              const _Error = Error;
-              const _HermesInternal = HermesInternal;
-              error = new Error("secret submission failed (" + closure_5.status + ")");
-              throw error;
-            }
-          }
-        } catch (tmp19) {
-          c4 = tmp;
-          throw tmp19;
+          c5 = 1;
+          const obj8 = { value: fetch(combined, request), done: false };
+          return obj8;
         }
-      }
-    })();
-  });
-  closure_51 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _submitProjectSettings() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c3 = 0;
-    c4 = 0;
-    return (function*(arg0, arg1) {
-      let ticket = tmp2;
-      const callback = closure_1;
-      const obj7 = callback(closure_1_2[7]);
-      closure_1 = yield obj7.mintWorkerTicket(callback);
-      ticket = closure_1.ticket;
-      const _URLSearchParams = URLSearchParams;
-      const obj3 = { ticket: null };
-      obj3[0] = ticket;
-      const uRLSearchParams = new URLSearchParams(obj3);
-      const _fetch = fetch;
-      const _HermesInternal2 = HermesInternal;
-      obj4 = { method: "PUT", headers: null, body: null };
-      obj4[1] = { "content-type": "application/json" };
-      const _JSON = JSON;
-      const combined = "" + baseUrl + "/agent/settings?" + c4;
-      obj4[2] = JSON.stringify(callback);
-      closure_5 = yield fetch(combined, obj4);
-      if (!closure_5.ok) {
-        const _Error = Error;
-        const _HermesInternal = HermesInternal;
-        error = new Error("settings submission failed (" + closure_5.status + ")");
-        throw error;
-      }
-      const data = closure_5.json();
-      let rebuild_required = yield data.catch(() => null);
-      if (rebuild_required != null) {
-        rebuild_required = rebuild_required.rebuild_required;
-      }
-      obj = { rebuildRequired: null };
-      obj[0] = true === rebuild_required;
-      return obj;
-    })();
-  });
-  closure_52 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _fetchProjectMcpConnection() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c4 = 0;
-    c5 = 0;
-    const iter = (function*(arg0) {
-      if (c5 === 2) {
+      } else if (arg0 === 1) {
         c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        const obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c5 = 2;
-          if (0 === baseUrl) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let ticket = tmp5;
-              closure_2 = tmp2;
-              let flag;
-              obj1 = flag;
-              if (flag === undefined) {
-                obj1 = {};
-              }
-              flag = obj1.regenerate;
-              if (flag === undefined) {
-                flag = false;
-              }
-              closure_2 = undefined;
-              ticket = undefined;
-              baseUrl = undefined;
-              c5 = undefined;
-              closure_6 = undefined;
-              closure_7 = undefined;
-              baseUrl = 1;
-              c5 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              let obj7 = callback(closure_2[7]);
-              baseUrl = 2;
-              c5 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = obj7.mintWorkerTicket(callback);
-              return obj3;
-            }
-          } else if (2 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj4 = { value: null, done: true };
-              obj4[0] = arg1;
-              return obj4;
-            } else {
-              closure_2 = arg1;
-              ticket = closure_2.ticket;
-              baseUrl = closure_2.baseUrl;
-              const _URLSearchParams = URLSearchParams;
-              const obj5 = { ticket: null };
-              obj5[0] = ticket;
-              const uRLSearchParams = new URLSearchParams(obj5);
-              c5 = uRLSearchParams;
-              if (flag) {
-                const result = c5.set("regenerate", "1");
-              }
-              const _fetch = fetch;
-              const _HermesInternal2 = HermesInternal;
-              baseUrl = 3;
-              c5 = 1;
-              const obj6 = { value: null, done: false };
-              obj6[0] = fetch("" + baseUrl + "/agent/mcp-token?" + c5, { method: "POST" });
-              return obj6;
-            }
-          } else if (3 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj7 = { value: null, done: true };
-              obj7[0] = arg1;
-              return obj7;
-            } else {
-              closure_6 = arg1;
-              if (closure_6.ok) {
-                baseUrl = 4;
-                c5 = 1;
-                const obj8 = { value: null, done: false };
-                obj8[0] = closure_6.json();
-                return obj8;
-              } else {
-                const _Error = Error;
-                const _HermesInternal = HermesInternal;
-                error = new Error("mcp token failed (" + closure_6.status + ")");
-                throw error;
-              }
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj9 = { value: null, done: true };
-            obj9[0] = arg1;
-            return obj9;
-          } else {
-            closure_7 = arg1;
-            obj = { url: null, token: null, expiresAt: null };
-            obj[0] = closure_7.url;
-            obj[1] = closure_7.token;
-            obj[2] = closure_7.expires_at;
-            c5 = 3;
-            const obj10 = { value: null, done: true };
-            obj10[0] = obj;
-            return obj10;
-          }
-        } catch (tmp29) {
-          c5 = tmp;
-          throw tmp29;
+        closure_130_5 = value;
+        if (closure_130_5.ok) {
+          c5 = 3;
+          return { value: "HermesInternal", done: null };
+        } else {
+          throw new closure_131_56(closure_130_5.status);
         }
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_53 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp13) {
+      c5 = tmp;
+      throw tmp13;
+    }
   }
-  return applyArgumentsResult;
-}
-function _requestExternalAuthorizeUrl() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c7 = 0;
-    c8 = 0;
-    c6 = 0;
-    return (function*(arg0, error) {
-      if (c8 === 2) {
-        c8 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp9 === 3) {
+};
+let closure_58 = async function _submitProjectSecrets(arg0, value) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
         if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp2;
+          closure_130_0 = closure_1;
+          closure_130_1 = undefined;
+          let ticket;
+          let baseUrl;
+          closure_130_4 = undefined;
+          closure_130_5 = undefined;
+          c3 = 1;
+          c4 = 1;
+          const obj5 = { value: require("VibegrationsWorkerTickets").mintWorkerTicket(closure_0), done: false };
+          return obj5;
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          closure_130_1 = value;
+          ticket = closure_130_1.ticket;
+          baseUrl = closure_130_1.baseUrl;
+          const _URLSearchParams = URLSearchParams;
+          obj7 = { ticket };
+          const uRLSearchParams = new URLSearchParams(obj7);
+          closure_130_4 = uRLSearchParams;
+          const _fetch = fetch;
+          const _HermesInternal2 = HermesInternal;
+          const request = { method: "PUT", headers: { "content-type": "application/json" }, body: null };
+          const _JSON = JSON;
+          const combined = "" + baseUrl + "/agent/secrets?" + closure_130_4;
+          request.body = JSON.stringify(closure_130_0);
+          c3 = 2;
+          c4 = 1;
+          const obj8 = { value: fetch(combined, request), done: false };
+          return obj8;
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj = { value, done: true };
+        return obj;
+      } else {
+        closure_130_5 = value;
+        if (closure_130_5.ok) {
+          c4 = 3;
+          return { value: "HermesInternal", done: null };
+        } else {
+          const _Error = Error;
+          const _HermesInternal = HermesInternal;
+          const error = new Error("secret submission failed (" + closure_130_5.status + ")");
           throw error;
-        } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = error;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c8 = 2;
-          if (0 === c7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw error;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj = { value: null, done: true };
-              obj[0] = error;
-              return obj;
-            } else {
-              let baseUrl = tmp4;
-              let ticket = tmp10;
-              const callback = closure_1;
-              closure_1 = undefined;
-              let url;
-              closure_3 = undefined;
-              ticket = undefined;
-              baseUrl = undefined;
-              c6 = undefined;
-              c6 = 1;
-              let obj13 = callback(closure_1_2[7]);
-              c7 = 2;
-              c8 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj13.mintWorkerTicket(callback);
-              return obj1;
-            }
-          } else if (1 === tmp10) {
-            c6 = 0;
-            c8 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = { type: "error", error: "unavailable" };
-            return obj2;
-          } else if (2 === tmp10) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw error;
-            } else if (arg0 === 2) {
-              c6 = 0;
-              c8 = 3;
-              const obj3 = { value: null, done: true };
-              obj3[0] = error;
-              return obj3;
-            } else {
-              closure_3 = error;
-              ticket = closure_3.ticket;
-              baseUrl = closure_3.baseUrl;
-              const _fetch = fetch;
-              obj4 = { method: "POST", headers: null, body: null };
-              obj4[1] = { "content-type": "application/json" };
-              const _JSON = JSON;
-              const obj5 = { connection_type: null };
-              obj5[0] = callback;
-              obj4[2] = JSON.stringify(obj5);
-              c7 = 3;
-              c8 = 1;
-              let obj6 = { value: null, done: false };
-              obj6[0] = fetch((function externalAuthEndpoint(baseUrl, arg1, ticket) {
-                const uRLSearchParams = new URLSearchParams({ ticket });
-                return "" + baseUrl + "/agent/external-auth/" + "authorize-url" + "?" + uRLSearchParams;
-              })(baseUrl, "authorize-url", ticket), obj4);
-              return obj6;
-            }
-          } else if (3 === tmp10) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw error;
-            } else if (arg0 === 2) {
-              c6 = 0;
-              c8 = 3;
-              const obj7 = { value: null, done: true };
-              obj7[0] = error;
-              return obj7;
-            } else {
-              closure_1 = error;
-              c6 = 0;
-              if (closure_1.ok) {
-                c6 = 3;
-                c7 = 7;
-                c8 = 1;
-                const obj8 = { value: null, done: false };
-                obj8[0] = closure_1.json();
-                return obj8;
-              } else {
-                c6 = null;
-                c6 = 2;
-                const tmp30 = callback(url[16]);
-                closure_3 = tmp30;
-                url = tmp30.externalAuthErrorCode;
-                c7 = 6;
-                c8 = 1;
-                const obj9 = { value: null, done: false };
-                obj9[0] = closure_1.json();
-                return obj9;
-              }
-            }
-          } else {
-            if (4 === tmp10) {
-              c6 = 0;
-              obj6 = callback(url[16]);
-              { type: "error", error: null }[1] = obj6.externalAuthErrorFor(closure_1.status, c6);
-              c8 = 3;
-              const obj10 = { type: "error", error: null };
-            } else if (5 === tmp10) {
-              c6 = 0;
-              c8 = 3;
-              const obj11 = { value: null, done: true };
-              obj11[0] = { type: "error", error: "unavailable" };
-              return obj11;
-            } else if (6 === tmp10) {
-              if (arg0 === 1) {
-                c8 = 3;
-                throw error;
-              } else if (arg0 !== 2) {
-                error = undefined;
-                if (error != null) {
-                  error = error.error;
-                }
-                c6 = url(error);
-                c6 = 0;
-              }
-            } else if (arg0 === 1) {
-              c8 = 3;
-              throw error;
-            } else if (arg0 === 2) {
-              c6 = 0;
-              c8 = 3;
-              const obj12 = { value: null, done: true };
-              obj12[0] = error;
-              return obj12;
-            } else {
-              url = undefined;
-              if (error != null) {
-                url = error.url;
-              }
-              c6 = 0;
-              if (typeof url !== "string") {
-                obj = { type: "error", error: "unavailable" };
-                c8 = 3;
-              }
-              obj13 = { type: "url", url: null };
-              obj13[1] = url;
-            }
-            c6 = 0;
-            c8 = 3;
-            const obj14 = { value: null, done: true };
-            obj14[0] = error;
-            return obj14;
-          }
-        } catch (tmp37) {
-          if (tmp5 === c6) {
-            c8 = tmp3;
-            throw tmp37;
-          } else if (tmp2 === tmp38) {
-            c7 = tmp2;
-          } else if (tmp === tmp38) {
-            c7 = tmp7;
-          } else {
-            c7 = tmp6;
-          }
         }
       }
-    })();
-  });
-  closure_54 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp19) {
+      c4 = tmp;
+      throw tmp19;
+    }
   }
-  return applyArgumentsResult;
-}
-function _deleteStagedAttachment() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c4 = 0;
-    c5 = 0;
-    return (function*(arg0, arg1) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+};
+let closure_59 = async function _submitProjectSettings() {
+  closure_2 = tmp2;
+  closure_130_0 = closure_1;
+  closure_130_1 = await require("VibegrationsWorkerTickets").mintWorkerTicket(closure_0);
+  const ticket = closure_130_1.ticket;
+  const baseUrl = closure_130_1.baseUrl;
+  const _URLSearchParams = URLSearchParams;
+  const uRLSearchParams = new URLSearchParams({ ticket });
+  closure_130_4 = uRLSearchParams;
+  const _fetch = fetch;
+  const _HermesInternal2 = HermesInternal;
+  const request = { method: "PUT", headers: { "content-type": "application/json" }, body: null };
+  const _JSON = JSON;
+  const combined = "" + baseUrl + "/agent/settings?" + closure_130_4;
+  request.body = JSON.stringify(closure_130_0);
+  closure_130_5 = await fetch(combined, request);
+  if (!closure_130_5.ok) {
+    const _Error = Error;
+    const _HermesInternal = HermesInternal;
+    const error = new Error("settings submission failed (" + closure_130_5.status + ")");
+    throw error;
+  }
+  const data = closure_130_5.json();
+  closure_130_6 = await data.catch(() => null);
+  if (closure_130_6 != null) {
+    const rebuild_required = closure_130_6.rebuild_required;
+  }
+  value = { rebuildRequired: true === rebuild_required };
+  return value;
+};
+let closure_60 = async function _fetchProjectMcpConnection(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
         if (arg0 === 1) {
-          throw arg1;
+          c5 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          c5 = 3;
+          obj3 = { value, done: true };
+          return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_3 = tmp5;
+          closure_2 = tmp2;
+          closure_130_1 = undefined;
+          closure_130_0 = closure_0;
+          let obj4 = closure_1;
+          if (closure_1 === undefined) {
+            obj4 = {};
+          }
+          let flag = obj4.regenerate;
+          if (flag === undefined) {
+            flag = false;
+          }
+          closure_130_1 = flag;
+          closure_130_2 = undefined;
+          let ticket;
+          let baseUrl;
+          closure_130_5 = undefined;
+          closure_130_6 = undefined;
+          closure_130_7 = undefined;
+          c4 = 1;
+          c5 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          c4 = 2;
+          c5 = 1;
+          const obj6 = { value: closure_131_0(closure_131_2[7]).mintWorkerTicket(closure_130_0), done: false };
+          return obj6;
+        }
+      } else if (2 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          obj7 = { value, done: true };
+          return obj7;
+        } else {
+          closure_130_2 = value;
+          ticket = closure_130_2.ticket;
+          baseUrl = closure_130_2.baseUrl;
+          const _URLSearchParams = URLSearchParams;
+          const obj9 = { ticket };
+          const uRLSearchParams = new URLSearchParams(obj9);
+          closure_130_5 = uRLSearchParams;
+          if (closure_130_1) {
+            const result = closure_130_5.set("regenerate", "1");
+          }
+          const _fetch = fetch;
+          const _HermesInternal2 = HermesInternal;
+          c4 = 3;
+          c5 = 1;
+          const obj10 = { value: fetch("" + baseUrl + "/agent/mcp-token?" + closure_130_5, { method: "POST" }), done: false };
+          return obj10;
+        }
+      } else if (3 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj11 = { value, done: true };
+          return obj11;
+        } else {
+          closure_130_6 = value;
+          if (closure_130_6.ok) {
+            c4 = 4;
+            c5 = 1;
+            const obj12 = { value: closure_130_6.json(), done: false };
+            return obj12;
+          } else {
+            const _Error = Error;
+            const _HermesInternal = HermesInternal;
+            const error = new Error("mcp token failed (" + closure_130_6.status + ")");
+            throw error;
+          }
+        }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        const obj13 = { value, done: true };
+        return obj13;
+      } else {
+        closure_130_7 = value;
+        value = { url: closure_130_7.url, token: closure_130_7.token, expiresAt: closure_130_7.expires_at };
+        c5 = 3;
+        const obj14 = { value, done: true };
+        return obj14;
+      }
+    } catch (tmp29) {
+      c5 = tmp;
+      throw tmp29;
+    }
+  }
+};
+let closure_61 = async function _requestExternalAuthorizeUrl(arg0, value) {
+  if (c8 === 2) {
+    c8 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp9 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c8 = 2;
+      if (0 === c7) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_5 = tmp4;
+          closure_4 = tmp10;
+          closure_132_0 = closure_1;
+          closure_132_1 = undefined;
+          closure_132_2 = undefined;
+          closure_132_3 = undefined;
+          let ticket;
+          let baseUrl;
+          closure_132_6 = undefined;
+          c6 = 1;
+          c7 = 2;
+          c8 = 1;
+          const obj4 = { value: require("VibegrationsWorkerTickets").mintWorkerTicket(closure_0), done: false };
+          return obj4;
+        }
+      } else if (1 === tmp10) {
+        c6 = 0;
+        c8 = 3;
+        const obj5 = { value: { type: "error", error: "unavailable" }, done: true };
+        return obj5;
+      } else if (2 === tmp10) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 0;
+          c8 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          closure_132_3 = value;
+          ticket = closure_132_3.ticket;
+          baseUrl = closure_132_3.baseUrl;
+          const _fetch = fetch;
+          const request = { method: "POST", headers: { "content-type": "application/json" }, body: null };
+          const _JSON = JSON;
+          const obj8 = { connection_type: closure_132_0 };
+          request.body = JSON.stringify(obj8);
+          c7 = 3;
+          c8 = 1;
+          const obj9 = {
+            value: fetch((function externalAuthEndpoint(arg0, arg1, ticket) {
+                      const uRLSearchParams = new URLSearchParams({ ticket });
+                      return "" + arg0 + "/agent/external-auth/" + "authorize-url" + "?" + uRLSearchParams;
+                    })(baseUrl, "authorize-url", ticket), request),
+            done: false
+          };
+          return obj9;
+        }
+      } else if (3 === tmp10) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 0;
+          c8 = 3;
+          const obj10 = { value, done: true };
+          return obj10;
+        } else {
+          closure_132_1 = value;
+          c6 = 0;
+          if (closure_132_1.ok) {
+            c6 = 3;
+            c7 = 7;
+            c8 = 1;
+            const obj11 = { value: closure_132_1.json(), done: false };
+            return obj11;
+          } else {
+            closure_132_6 = null;
+            c6 = 2;
+            const tmp30 = closure_133_0(closure_133_2[17]);
+            closure_3 = tmp30;
+            const externalAuthErrorCode = tmp30.externalAuthErrorCode;
+            c7 = 6;
+            c8 = 1;
+            const obj12 = { value: closure_132_1.json(), done: false };
+            return obj12;
+          }
         }
       } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let baseUrl = tmp5;
-              let ticket = tmp2;
-              const callback = closure_1;
-              closure_1 = undefined;
-              ticket = undefined;
-              baseUrl = undefined;
-              c4 = undefined;
-              c5 = undefined;
-              let obj3 = callback(closure_1_2[7]);
-              c4 = 1;
-              c5 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj3.mintWorkerTicket(callback);
-              return obj1;
+        if (4 === tmp10) {
+          c6 = 0;
+          { type: "error", error: null }.error = closure_133_0(closure_133_2[17]).externalAuthErrorFor(closure_132_1.status, closure_132_6);
+          c8 = 3;
+          const obj13 = { type: "error", error: null };
+          obj7 = closure_133_0(closure_133_2[17]);
+        } else if (5 === tmp10) {
+          c6 = 0;
+          c8 = 3;
+          const obj15 = { value: { type: "error", error: "unavailable" }, done: true };
+          return obj15;
+        } else if (6 === tmp10) {
+          if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            let error;
+            if (value != null) {
+              error = value.error;
             }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              closure_1 = arg1;
-              ticket = closure_1.ticket;
-              baseUrl = closure_1.baseUrl;
-              const _URLSearchParams = URLSearchParams;
-              obj3 = { ticket: null };
-              obj3[0] = ticket;
-              const uRLSearchParams = new URLSearchParams(obj3);
-              c4 = uRLSearchParams;
-              const _fetch = fetch;
-              const _HermesInternal2 = HermesInternal;
-              c4 = 2;
-              c5 = 1;
-              obj4 = { value: null, done: false };
-              obj4[0] = fetch("" + callback2(baseUrl, callback) + "?" + c4, { method: "DELETE", keepalive: true });
-              return obj4;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            c5 = arg1;
-            if (c5.ok) {
-              c5 = 3;
-              return { value: "HermesInternal", done: null };
-            } else {
-              const _Error = Error;
-              const _HermesInternal = HermesInternal;
-              error = new Error("attachment cleanup failed (" + c5.status + ")");
-              throw error;
-            }
+            closure_132_6 = externalAuthErrorCode(error);
+            c6 = 0;
           }
-        } catch (tmp19) {
-          c5 = tmp;
-          throw tmp19;
+        } else if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 0;
+          c8 = 3;
+          const obj16 = { value, done: true };
+          return obj16;
+        } else {
+          let url;
+          if (value != null) {
+            url = value.url;
+          }
+          closure_132_2 = url;
+          c6 = 0;
+          if (typeof closure_132_2 !== "string") {
+            c8 = 3;
+          }
+          const obj17 = { type: "url", url: closure_132_2 };
+        }
+        c6 = 0;
+        c8 = 3;
+        const obj18 = { value, done: true };
+        return obj18;
+      }
+    } catch (tmp37) {
+      if (tmp5 === c6) {
+        c8 = tmp3;
+        throw tmp37;
+      } else if (tmp2 === tmp38) {
+        c7 = tmp2;
+      } else if (tmp === tmp38) {
+        c7 = tmp7;
+      } else {
+        c7 = tmp6;
+      }
+    }
+  }
+};
+let closure_62 = async function _deleteStagedAttachment(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_3 = tmp5;
+          closure_2 = tmp2;
+          closure_130_0 = closure_1;
+          closure_130_1 = undefined;
+          let ticket;
+          let baseUrl;
+          closure_130_4 = undefined;
+          closure_130_5 = undefined;
+          c4 = 1;
+          c5 = 1;
+          const obj5 = { value: require("VibegrationsWorkerTickets").mintWorkerTicket(closure_0), done: false };
+          return obj5;
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          closure_130_1 = value;
+          ticket = closure_130_1.ticket;
+          baseUrl = closure_130_1.baseUrl;
+          const _URLSearchParams = URLSearchParams;
+          obj7 = { ticket };
+          const uRLSearchParams = new URLSearchParams(obj7);
+          closure_130_4 = uRLSearchParams;
+          const _fetch = fetch;
+          const _HermesInternal2 = HermesInternal;
+          c4 = 2;
+          c5 = 1;
+          const obj8 = { value: fetch("" + closure_131_51(baseUrl, closure_130_0) + "?" + closure_130_4, { method: "DELETE", keepalive: true }), done: false };
+          return obj8;
+        }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        const obj = { value, done: true };
+        return obj;
+      } else {
+        closure_130_5 = value;
+        if (closure_130_5.ok) {
+          c5 = 3;
+          return { value: "HermesInternal", done: null };
+        } else {
+          const _Error = Error;
+          const _HermesInternal = HermesInternal;
+          const error = new Error("attachment cleanup failed (" + closure_130_5.status + ")");
+          throw error;
         }
       }
-    })();
-  });
-  closure_55 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp19) {
+      c5 = tmp;
+      throw tmp19;
+    }
   }
-  return applyArgumentsResult;
-}
-function _getPreviewScreenshotUrl() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c3 = 0;
-    c4 = 0;
-    return (function*(arg0, arg1) {
-      let ticket = tmp2;
-      closure_0 = closure_1;
-      closure_1 = yield closure_1_41(closure_0);
-      ticket = closure_1.ticket;
-      const _URLSearchParams = URLSearchParams;
-      const obj3 = { ticket: null };
-      obj3[0] = ticket;
-      const uRLSearchParams = new URLSearchParams(obj3);
-      const _encodeURIComponent = encodeURIComponent;
-      const _HermesInternal = HermesInternal;
-      return "" + baseUrl + "/agent/screenshots/" + encodeURIComponent(closure_0) + "?" + c4;
-    })();
-  });
-  closure_56 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
+};
+let closure_63 = async function _getPreviewScreenshotUrl() {
+  closure_2 = tmp2;
+  closure_130_0 = closure_1;
+  closure_130_1 = await getMediaTicket(closure_0);
+  const ticket = closure_130_1.ticket;
+  const baseUrl = closure_130_1.baseUrl;
+  const _URLSearchParams = URLSearchParams;
+  const uRLSearchParams = new URLSearchParams({ ticket });
+  closure_130_4 = uRLSearchParams;
+  const _encodeURIComponent = encodeURIComponent;
+  const _HermesInternal = HermesInternal;
+  return "" + baseUrl + "/agent/screenshots/" + encodeURIComponent(closure_130_0) + "?" + closure_130_4;
+};
 function getAttachmentUrl(arg0, arg1) {
   const self = this;
-  const apply = _getAttachmentUrl.apply;
+  const apply = closure_65.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -2738,254 +2596,209 @@ function getAttachmentUrl(arg0, arg1) {
   }
   return applyArgumentsResult;
 }
-function _getAttachmentUrl() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c5 = 0;
-    c6 = 0;
-    const iter = (function*(arg0, arg1) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+let closure_65 = async function _getAttachmentUrl(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
-          throw arg1;
+          c6 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          c6 = 3;
+          obj3 = { value, done: true };
+          return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === baseUrl) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let ticket = tmp5;
-              closure_3 = tmp2;
-              let flag;
-              obj1 = flag;
-              if (flag === undefined) {
-                obj1 = {};
-              }
-              flag = obj1.download;
-              if (flag === undefined) {
-                flag = false;
-              }
-              closure_3 = undefined;
-              ticket = undefined;
-              baseUrl = undefined;
-              c6 = undefined;
-              baseUrl = 1;
-              c6 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              baseUrl = 2;
-              c6 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = callback(closure_0);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            closure_3 = arg1;
-            ticket = closure_3.ticket;
-            baseUrl = closure_3.baseUrl;
-            const _URLSearchParams = URLSearchParams;
-            const obj5 = { ticket: null };
-            obj5[0] = ticket;
-            const uRLSearchParams = new URLSearchParams(obj5);
-            c6 = uRLSearchParams;
-            if (flag) {
-              const result = c6.set("download", "1");
-            }
-            const _HermesInternal = HermesInternal;
-            c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = "" + callback2(baseUrl, closure_1) + "?" + c6;
-            return obj;
+          closure_4 = tmp5;
+          closure_3 = tmp2;
+          closure_131_2 = undefined;
+          closure_131_0 = closure_0;
+          closure_131_1 = closure_1;
+          let obj4 = closure_2;
+          if (closure_2 === undefined) {
+            obj4 = {};
           }
-        } catch (tmp21) {
-          c6 = tmp;
-          throw tmp21;
+          let flag = obj4.download;
+          if (flag === undefined) {
+            flag = false;
+          }
+          closure_131_2 = flag;
+          closure_131_3 = undefined;
+          let ticket;
+          let baseUrl;
+          closure_131_6 = undefined;
+          c5 = 1;
+          c6 = 1;
+          return { value: "PX_16", done: true };
         }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_58 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _isAttachmentAvailable() {
-  let self = this;
-  let tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c4 = 0;
-    c5 = 0;
-    return (function*(arg0, arg1) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+      } else if (1 === tmp5) {
         if (arg0 === 1) {
-          throw arg1;
+          c6 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          c6 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
           c5 = 2;
-          if (0 === closure_4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+          c6 = 1;
+          const obj6 = { value: closure_132_41(closure_131_0), done: false };
+          return obj6;
+        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        obj7 = { value, done: true };
+        return obj7;
+      } else {
+        closure_131_3 = value;
+        ticket = closure_131_3.ticket;
+        baseUrl = closure_131_3.baseUrl;
+        const _URLSearchParams = URLSearchParams;
+        const obj8 = { ticket };
+        const uRLSearchParams = new URLSearchParams(obj8);
+        closure_131_6 = uRLSearchParams;
+        if (closure_131_2) {
+          const result = closure_131_6.set("download", "1");
+        }
+        const _HermesInternal = HermesInternal;
+        c6 = 3;
+        const obj = { value: "" + closure_132_51(baseUrl, closure_131_1) + "?" + closure_131_6, done: true };
+        return obj;
+      }
+    } catch (tmp21) {
+      c6 = tmp;
+      throw tmp21;
+    }
+  }
+};
+let closure_66 = async function _isAttachmentAvailable(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_3 = tmp5;
+          closure_2 = tmp2;
+          closure_130_0 = closure_0;
+          closure_130_1 = closure_1;
+          closure_130_4 = undefined;
+          function probe() {
+            const self = this;
+            const apply = closure_3.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
             } else {
-              let _probe = tmp5;
-              let probe = tmp2;
-              closure_4 = undefined;
-              probe = function probe() {
-                const self = this;
-                const apply = _probe.apply;
-                if (typeof apply === "unknown") {
-                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                } else {
-                  applyArgumentsResult = apply(self, arguments);
-                }
-                return applyArgumentsResult;
-              };
-              _probe = function _probe() {
-                const self = this;
-                const tmp = callback(function*() {
-                  const _fetch = fetch;
-                  yield closure_1_57(closure_1_0, c1);
-                  return fetch(arg1, { method: "HEAD" });
-                });
-                closure_3 = tmp;
-                const apply = tmp.apply;
-                if (typeof apply === "unknown") {
-                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                } else {
-                  applyArgumentsResult = apply(self, arguments);
-                }
-                return applyArgumentsResult;
-              };
-              closure_4 = 1;
-              c5 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = probe();
-              return obj1;
+              applyArgumentsResult = apply(self, arguments);
             }
+            return applyArgumentsResult;
+          }
+          closure_130_2 = probe;
+          closure_130_3 = function _probe() {
+            const self = this;
+            const tmp = c4(function*() {
+              const _fetch = fetch;
+              yield closure_1_64(closure_2_0, closure_2_1);
+              return fetch(arg1, { method: "HEAD" });
+            });
+            closure_3 = tmp;
+            const apply = tmp.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          c4 = 1;
+          c5 = 1;
+          const obj4 = { value: probe(), done: false };
+          return obj4;
+        }
+      } else {
+        if (1 === tmp5) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
-            if (1 === tmp5) {
-              if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c5 = 3;
-                const obj2 = { value: null, done: true };
-                obj2[0] = arg1;
-                return obj2;
-              } else {
-                closure_4 = arg1;
-                if (401 === closure_4.status) {
-                  set.delete(closure_0);
-                  closure_4 = 2;
-                  c5 = 1;
-                  const obj3 = { value: null, done: false };
-                  obj3[0] = probe();
-                  return obj3;
-                }
-              }
-            } else if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_4 = arg1;
-            }
-            if (404 === closure_4.status) {
-              c5 = 3;
-              return { value: false, done: true };
-            } else if (closure_4.ok) {
-              c5 = 3;
-              return { value: true, done: true };
-            } else {
-              const _Error = Error;
-              const _HermesInternal = HermesInternal;
-              error = new Error("attachment availability check failed (" + closure_4.status + ")");
-              throw error;
+            closure_130_4 = value;
+            if (401 === closure_130_4.status) {
+              closure_131_39.delete(closure_130_0);
+              c4 = 2;
+              c5 = 1;
+              const obj6 = { value: closure_130_2(), done: false };
+              return obj6;
             }
           }
-        } catch (tmp26) {
-          c5 = tmp;
-          throw tmp26;
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          closure_130_4 = value;
+        }
+        if (404 === closure_130_4.status) {
+          c5 = 3;
+          return { value: false, done: true };
+        } else if (closure_130_4.ok) {
+          c5 = 3;
+          return { value: true, done: true };
+        } else {
+          const _Error = Error;
+          const _HermesInternal = HermesInternal;
+          const error = new Error("attachment availability check failed (" + closure_130_4.status + ")");
+          throw error;
         }
       }
-    })();
-  });
-  closure_59 = tmp;
-  let apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp26) {
+      c5 = tmp;
+      throw tmp26;
+    }
   }
-  return applyArgumentsResult;
-}
+};
 function closeAllConnections() {
   const arr = Array.from(map.keys());
   while (tmp2 !== undefined) {
-    let tmp4 = teardown;
     let tmp5 = teardown(tmp3);
     continue;
   }
@@ -2993,43 +2806,42 @@ function closeAllConnections() {
   map5.clear();
   map8.clear();
 }
+const getOlderHistoryCursor = fn(16620).getOlderHistoryCursor;
 const map = new Map();
 const map1 = new Map();
 const map2 = new Map();
 let set = new Set();
 const map3 = new Map();
 const map4 = new Map();
-let obj = { location: "connection", code: require("vibegrationLocation").VibegrationErrorCodes.SEND_FAILED };
-obj = { location: "agent", code: require("vibegrationLocation").VibegrationErrorCodes.AGENT_ERROR };
+let value = { location: "connection", code: fn(16624).VibegrationErrorCodes.SEND_FAILED };
+let obj2 = { location: "agent", code: fn(16624).VibegrationErrorCodes.AGENT_ERROR };
 const map5 = new Map();
 let closure_24 = { steered: true, queued: true, restarting: true, answered: true };
-obj = { build_error: { location: "build", code: require("vibegrationLocation").VibegrationErrorCodes.BUILD_FAILED }, healthcheck_failed: null, error: null };
-let obj1 = { location: "build", code: require("vibegrationLocation").VibegrationErrorCodes.BUILD_FAILED };
-obj[1] = { location: "healthcheck", code: require("vibegrationLocation").VibegrationErrorCodes.HEALTHCHECK_FAILED };
-let obj2 = { location: "healthcheck", code: require("vibegrationLocation").VibegrationErrorCodes.HEALTHCHECK_FAILED };
-obj[2] = { location: "agent", code: require("vibegrationLocation").VibegrationErrorCodes.AGENT_ERROR };
-let obj4 = { web: null, preview: null };
-let obj3 = { location: "agent", code: require("vibegrationLocation").VibegrationErrorCodes.AGENT_ERROR };
-obj4[0] = { location: "runtime_frame", code: require("vibegrationLocation").VibegrationErrorCodes.RUNTIME_FRAME_ERROR };
-let obj5 = { location: "runtime_frame", code: require("vibegrationLocation").VibegrationErrorCodes.RUNTIME_FRAME_ERROR };
-obj4[1] = { location: "runtime_worker", code: require("vibegrationLocation").VibegrationErrorCodes.RUNTIME_WORKER_ERROR };
+let obj3 = { build_error: { location: "build", code: fn(16624).VibegrationErrorCodes.BUILD_FAILED }, healthcheck_failed: null, error: null };
+let obj4 = { location: "build", code: fn(16624).VibegrationErrorCodes.BUILD_FAILED };
+obj3.healthcheck_failed = { location: "healthcheck", code: fn(16624).VibegrationErrorCodes.HEALTHCHECK_FAILED };
+let obj5 = { location: "healthcheck", code: fn(16624).VibegrationErrorCodes.HEALTHCHECK_FAILED };
+obj3.error = { location: "agent", code: fn(16624).VibegrationErrorCodes.AGENT_ERROR };
+let obj7 = { web: null, preview: null };
+let obj6 = { location: "agent", code: fn(16624).VibegrationErrorCodes.AGENT_ERROR };
+obj7.web = { location: "runtime_frame", code: fn(16624).VibegrationErrorCodes.RUNTIME_FRAME_ERROR };
+let obj8 = { location: "runtime_frame", code: fn(16624).VibegrationErrorCodes.RUNTIME_FRAME_ERROR };
+obj7.preview = { location: "runtime_worker", code: fn(16624).VibegrationErrorCodes.RUNTIME_WORKER_ERROR };
 const map6 = new Map();
 const map7 = new Map();
 const map8 = new Map();
 const map9 = new Map();
 const prototype = function VibegrationsExportError(status) {
-  tmp = new tmp(concat(status, ")"), tmp2, concat);
-  // ThrowIfThisInitialized (0x7c)
-  tmp.status = status;
-  return tmp;
+  const tmp3 = new tmp(concat(status, ")"), tmp2, concat);
+  tmp3.status = status;
+  return tmp3;
 }.prototype;
 class prototype extends Error {
 }
 const prototype2 = function VibegrationsRemixError(status) {
-  tmp = new tmp(concat(status, ")"), tmp2, concat);
-  // ThrowIfThisInitialized (0x7c)
-  tmp.status = status;
-  return tmp;
+  const tmp3 = new tmp(concat(status, ")"), tmp2, concat);
+  tmp3.status = status;
+  return tmp3;
 }.prototype;
 class prototype2 extends Error {
 }
@@ -3038,7 +2850,7 @@ class VibegrationsConnectionStore extends Store {
 }
 const prototype3 = VibegrationsConnectionStore.prototype;
 prototype3["initialize"] = function initialize() {
-  this.waitFor(closure_5, closure_6, closure_8);
+  this.waitFor(UserStore, VibegrationsChatStore, VibegrationsProjectStore);
 };
 prototype3["getConnState"] = function getConnState(projectId) {
   let str = map1.get(projectId);
@@ -3055,32 +2867,32 @@ prototype3["isChatStopped"] = function isChatStopped(arg0) {
   return flag;
 };
 prototype3["getModelSettings"] = function getModelSettings(projectId) {
-  let value = map3.get(projectId);
+  value = map3.get(projectId);
   if (value == null) {
     value = null;
   }
   return value;
 };
 prototype3["getSettings"] = function getSettings(arg0) {
-  let value = map4.get(arg0);
+  value = map4.get(arg0);
   if (value == null) {
     value = null;
   }
   return value;
 };
 prototype3["getDeclaredConnections"] = function getDeclaredConnections(arg0) {
-  const value = map4.get(arg0);
+  value = map4.get(arg0);
   let connections;
   if (value != null) {
     connections = value.connections;
   }
   if (connections == null) {
-    connections = closure_61;
+    connections = closure_68;
   }
   return connections;
 };
-let closure_61 = [];
-const vibegrationsConnectionStore = new VibegrationsConnectionStore(dispatcherDefault, {
+let closure_68 = [];
+const vibegrationsConnectionStore = new VibegrationsConnectionStore(DispatcherDefault, {
   VIBEGRATIONS_CHAT_CONN_STATE: function handleChatConnState(arg0) {
     ({ projectId, connState } = arg0);
     if (map1.get(projectId) === connState) {
@@ -3126,12 +2938,9 @@ const vibegrationsConnectionStore = new VibegrationsConnectionStore(dispatcherDe
     const iter = Array.from(map.keys())[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      let tmp4 = store;
       let tmp3 = nextResult;
-      let tmp5 = null == store.getProject(nextResult);
+      let tmp5 = null == VibegrationsProjectStore.getProject(nextResult);
       if (tmp5) {
-        let tmp6 = teardown;
-        let tmp7 = nextResult;
         tmp5 = teardown(tmp3);
       }
       if (tmp5) {
@@ -3149,16 +2958,17 @@ const vibegrationsConnectionStore = new VibegrationsConnectionStore(dispatcherDe
     }
   }
 });
-let result = set.fileFinishedImporting("modules/vibegrations/stores/VibegrationsConnectionStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/vibegrations/stores/VibegrationsConnectionStore.tsx");
 
 export default vibegrationsConnectionStore;
 export const ensureConnection = function ensureConnection(arg0) {
-  let value = map.get(arg0);
+  value = map.get(arg0);
   if (null != value) {
-    value = map1.get(arg0);
-    let reconnectPending = "closed" !== value;
+    value2 = map1.get(arg0);
+    let reconnectPending = "closed" !== value2;
     if (reconnectPending) {
-      reconnectPending = "failed" !== value;
+      reconnectPending = "failed" !== value2;
     }
     if (!reconnectPending) {
       reconnectPending = value.reconnectPending;
@@ -3170,20 +2980,17 @@ export const ensureConnection = function ensureConnection(arg0) {
     connect(arg0);
   }
 };
-export const sendUserMessage = function sendUserMessage(projectId, str) {
+export const sendUserMessage = function sendUserMessage(projectId, str, arg2) {
   const trimmed = str.trim();
   if ("" !== trimmed) {
-    obj = { content: null, nonce: null, attachments: null };
-    obj[0] = trimmed;
-    obj[1] = snowflakeSequence.createNonce();
-    obj[2] = tmp4;
-    const value = map.get(projectId);
+    const obj = { content: trimmed, nonce: createNonce.createNonce(), attachments: tmp4 };
+    value = map.get(projectId);
     if (null == value) {
       appendLocalUserMessage(projectId, obj);
       try {
         if (null == value) {
           const _Error = Error;
-          error = new Error("Not connected");
+          const error = new Error("Not connected");
           throw error;
         } else {
           const ws = value.ws;
@@ -3192,7 +2999,7 @@ export const sendUserMessage = function sendUserMessage(projectId, str) {
           if (attachments != null) {
             mapped = attachments.map((id) => id.id);
           }
-          const project = store.getProject(projectId);
+          const project = VibegrationsProjectStore.getProject(projectId);
           let name;
           if (project != null) {
             name = project.name;
@@ -3206,26 +3013,24 @@ export const sendUserMessage = function sendUserMessage(projectId, str) {
           str3 = tmp29.message;
         }
         sendFailedStep(tmp2, str3);
-        const tmp30 = sendFailedStep;
       }
     } else {
       const pendingSends = value.pendingSends;
       pendingSends.push(obj);
     }
-    const obj2 = snowflakeSequence;
   }
 };
 export const interruptTurn = function interruptTurn(item10008) {
-  const value = map.get(item10008);
+  value = map.get(item10008);
   try {
     if (null == value) {
       const _Error = Error;
-      error = new Error("Not connected");
+      const error = new Error("Not connected");
       throw error;
     } else {
       const ws = value.ws;
       ws.sendInterrupt();
-      if (thinking.isThinking(item10008)) {
+      if (VibegrationsChatStore.isThinking(item10008)) {
         set.add(item10008);
       }
     }
@@ -3234,27 +3039,28 @@ export const interruptTurn = function interruptTurn(item10008) {
 };
 export const publishProject = function publishProject(arg0) {
   closure_0 = arg0;
-  return new Promise((arg0, arg1) => {
-    const value = closure_1_11.get(closure_0);
+  return new Promise((resolve, reject) => {
+    value = map.get(closure_0);
     closure_0 = value;
     if (null != value) {
       if (null == value.pendingPublish) {
         const _setTimeout = setTimeout;
-        obj = { resolve: null, reject: null, timeout: null };
-        obj[0] = arg0;
-        obj[1] = arg1;
-        obj[2] = setTimeout(() => {
-          const pendingPublish = value.pendingPublish;
-          if (null != pendingPublish) {
-            value.pendingPublish = null;
-            const _clearTimeout = clearTimeout;
-            clearTimeout(pendingPublish.timeout);
-            const _Error = Error;
-            error = new Error("Publish timed out");
-            pendingPublish.reject(error);
-          }
-        }, 120000);
-        value.pendingPublish = obj;
+        obj2 = {
+          resolve,
+          reject,
+          timeout: setTimeout(() => {
+                const pendingPublish = value.pendingPublish;
+                if (null != pendingPublish) {
+                  value.pendingPublish = null;
+                  const _clearTimeout = clearTimeout;
+                  clearTimeout(pendingPublish.timeout);
+                  const _Error = Error;
+                  const error = new Error("Publish timed out");
+                  pendingPublish.reject(error);
+                }
+              }, 120000)
+        };
+        value.pendingPublish = obj2;
         try {
           const ws = value.ws;
           ws.sendPublish();
@@ -3269,52 +3075,53 @@ export const publishProject = function publishProject(arg0) {
       } else {
         const _Error2 = Error;
         const error1 = new Error("Publish already in flight");
-        arg1(error1);
+        reject(error1);
       }
     } else {
       let _Error = Error;
       const error2 = new Error("Not connected");
-      arg1(error2);
+      reject(error2);
     }
-  }).catch((message) => {
+  }).catch((error) => {
     let str = "publish failed";
-    if (message instanceof Error) {
-      str = message.message;
+    if (error instanceof Error) {
+      str = error.message;
     }
-    callback(closure_1_2[12]).trackPublishFailed(callback, str, false);
-    throw message;
+    VibegrationsActionCreators.trackPublishFailed(closure_0, str, false);
+    throw error;
   });
 };
 export const draftPatchNotes = function draftPatchNotes(arg0) {
   closure_0 = arg0;
-  return new Promise((arg0, arg1) => {
-    const value = closure_1_11.get(closure_0);
+  return new Promise((resolve, reject) => {
+    value = map.get(closure_0);
     closure_0 = value;
     if (null != value) {
-      closure_1_10(value, "Superseded by a newer draft request");
+      rejectPendingPatchNotesDraft(value, "Superseded by a newer draft request");
       const _Date = Date;
       const _Math = Math;
       const timestamp = Date.now();
-      let str = Math.random().toString(36);
+      const str3 = Math.random();
       const _HermesInternal = HermesInternal;
-      const combined = "" + timestamp + "-" + str.slice(2);
+      const combined = "" + timestamp + "-" + Math.random().toString(36).slice(2);
       const _setTimeout = setTimeout;
-      obj = { resolve: null, reject: null, timeout: null, nonce: null };
-      obj[0] = arg0;
-      obj[1] = arg1;
-      obj[2] = setTimeout(() => {
-        const pendingPatchNotesDraft = value.pendingPatchNotesDraft;
-        if (null != pendingPatchNotesDraft) {
-          value.pendingPatchNotesDraft = null;
-          const _clearTimeout = clearTimeout;
-          clearTimeout(pendingPatchNotesDraft.timeout);
-          const _Error = Error;
-          error = new Error("Draft timed out");
-          pendingPatchNotesDraft.reject(error);
-        }
-      }, 10000);
-      obj[3] = combined;
-      value.pendingPatchNotesDraft = obj;
+      obj2 = {
+        resolve,
+        reject,
+        timeout: setTimeout(() => {
+            const pendingPatchNotesDraft = value.pendingPatchNotesDraft;
+            if (null != pendingPatchNotesDraft) {
+              value.pendingPatchNotesDraft = null;
+              const _clearTimeout = clearTimeout;
+              clearTimeout(pendingPatchNotesDraft.timeout);
+              const _Error = Error;
+              const error = new Error("Draft timed out");
+              pendingPatchNotesDraft.reject(error);
+            }
+          }, 10000),
+        nonce: combined
+      };
+      value.pendingPatchNotesDraft = obj2;
       try {
         const ws = value.ws;
         ws.sendDraftPatchNotes(combined);
@@ -3326,39 +3133,35 @@ export const draftPatchNotes = function draftPatchNotes(arg0) {
         }
         tmp2(error);
       }
-      const str3 = Math.random();
+      const str1 = Math.random().toString(36);
     } else {
       let _Error = Error;
-      str = "Not connected";
       const error1 = new Error("Not connected");
-      arg1(error1);
+      reject(error1);
     }
   });
 };
 export const stageModelSettings = function stageModelSettings(arg0, pendingModelSettings) {
-  const value = map.get(arg0);
+  value = map.get(arg0);
   if (null != value) {
     value.pendingModelSettings = pendingModelSettings;
   }
 };
 export const requestDebugStatus = function requestDebugStatus(projectId) {
-  obj = dispatcherDefault;
-  obj = { type: "VIBEGRATIONS_DEBUG_STATUS_REQUESTED", projectId };
-  obj.dispatch(obj);
-  const value = map.get(projectId);
+  DispatcherDefault.dispatch({ type: "VIBEGRATIONS_DEBUG_STATUS_REQUESTED", projectId });
+  value = map.get(projectId);
   try {
     if (null == value) {
       const _Error = Error;
-      error = new Error("Not connected");
+      const error = new Error("Not connected");
       throw error;
     } else {
       const ws = value.ws;
       const result = ws.sendDebugStatusRequest();
     }
   } catch (err) {
-    obj = { type: "VIBEGRATIONS_DEBUG_STATUS_SET", projectId: null, status: null, failed: true };
-    obj[1] = tmp4;
-    tmp3(tmp2[5]).dispatch(obj);
+    obj3 = { type: "VIBEGRATIONS_DEBUG_STATUS_SET", projectId: tmp4, status: null, failed: true };
+    tmp3(tmp2[5]).dispatch(obj3);
     const tmp3Result = tmp3(tmp2[5]);
   }
 };
@@ -3366,35 +3169,32 @@ export const forceCompaction = function forceCompaction(projectId, flag) {
   if (flag === undefined) {
     flag = false;
   }
-  obj = dispatcherDefault;
-  obj = { type: "VIBEGRATIONS_DEBUG_FORCE_COMPACTION_REQUESTED", projectId };
-  obj.dispatch(obj);
-  const value = map.get(projectId);
+  DispatcherDefault.dispatch({ type: "VIBEGRATIONS_DEBUG_FORCE_COMPACTION_REQUESTED", projectId });
+  value = map.get(projectId);
   try {
     if (null == value) {
       const _Error = Error;
-      error = new Error("Not connected");
+      const error = new Error("Not connected");
       throw error;
     } else {
       const ws = value.ws;
       ws.sendForceCompaction(flag);
     }
   } catch (err) {
-    obj = { type: "VIBEGRATIONS_DEBUG_FORCE_COMPACTION_RESULT", projectId: null, outcome: "failed", reason: "Not connected", observedAt: null };
-    obj[1] = tmp4;
+    obj3 = { type: "VIBEGRATIONS_DEBUG_FORCE_COMPACTION_RESULT", projectId: tmp4, outcome: "failed", reason: "Not connected", observedAt: null };
     const _Date = Date;
     const date = new Date();
-    obj[4] = date.toISOString();
-    tmp3(tmp2[5]).dispatch(obj);
+    obj3.observedAt = date.toISOString();
+    tmp3(tmp2[5]).dispatch(obj3);
     const tmp3Result = tmp3(tmp2[5]);
   }
 };
 export const sendModelSettings = function sendModelSettings(arg0, arg1) {
-  const value = map.get(arg0);
+  value = map.get(arg0);
   try {
     if (null == value) {
       const _Error = Error;
-      error = new Error("Not connected");
+      const error = new Error("Not connected");
       throw error;
     } else {
       const ws = value.ws;
@@ -3409,7 +3209,7 @@ export const resetHistoryPaging = function resetHistoryPaging(arg0) {
 };
 export const fetchSourceHistory = function fetchSourceHistory() {
   const self = this;
-  const apply = _fetchSourceHistory.apply;
+  const apply = closure_42.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3419,7 +3219,57 @@ export const fetchSourceHistory = function fetchSourceHistory() {
 };
 export const restoreSourceHistoryEntry = function restoreSourceHistoryEntry() {
   const self = this;
-  const apply = _restoreSourceHistoryEntry.apply;
+  const apply = closure_43.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const fetchDatabaseRestorePoints = function fetchDatabaseRestorePoints() {
+  const self = this;
+  const apply = closure_44.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const fetchDatabaseRestoreWindow = function fetchDatabaseRestoreWindow() {
+  const self = this;
+  const apply = closure_45.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const createDatabaseRestorePoint = function createDatabaseRestorePoint() {
+  const self = this;
+  const apply = closure_46.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const restoreDatabaseToPoint = function restoreDatabaseToPoint() {
+  const self = this;
+  const apply = closure_49.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const restoreDatabaseToTimestamp = function restoreDatabaseToTimestamp() {
+  const self = this;
+  const apply = closure_50.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3434,7 +3284,7 @@ export { uploadAttachmentBytes };
 export const VibegrationsExportError = prototype;
 export const exportProjectArchive = function exportProjectArchive() {
   const self = this;
-  const apply = _exportProjectArchive.apply;
+  const apply = closure_55.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3445,7 +3295,7 @@ export const exportProjectArchive = function exportProjectArchive() {
 export const VibegrationsRemixError = prototype2;
 export const remixProjectWorkspace = function remixProjectWorkspace() {
   const self = this;
-  const apply = _remixProjectWorkspace.apply;
+  const apply = closure_57.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3455,7 +3305,7 @@ export const remixProjectWorkspace = function remixProjectWorkspace() {
 };
 export const submitProjectSecrets = function submitProjectSecrets() {
   const self = this;
-  const apply = _submitProjectSecrets.apply;
+  const apply = closure_58.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3465,7 +3315,7 @@ export const submitProjectSecrets = function submitProjectSecrets() {
 };
 export const submitProjectSettings = function submitProjectSettings() {
   const self = this;
-  const apply = _submitProjectSettings.apply;
+  const apply = closure_59.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3475,116 +3325,97 @@ export const submitProjectSettings = function submitProjectSettings() {
 };
 export const requestProjectRebuild = function requestProjectRebuild(arg0) {
   closure_0 = arg0;
-  function _kick() {
-    const self = this;
-    const tmp = closure_1_4(function*() {
-      if (table === 2) {
-        table = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
+  closure_1 = async function _kick(arg0, value) {
+    if (c2 === 2) {
+      c2 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c2 = 2;
+        if (0 === c1) {
+          if (arg0 === 1) {
+            c2 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c2 = 3;
+            obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_128_0 = undefined;
+            let ticket;
+            let baseUrl;
+            closure_128_3 = undefined;
+            c1 = 1;
+            c2 = 1;
+            const obj5 = { value: tmp2(c2[7]).mintWorkerTicket(_require), done: false };
+            return obj5;
+          }
+        } else if (1 === tmp5) {
+          if (arg0 === 1) {
+            c2 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c2 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
+          } else {
+            closure_128_0 = value;
+            ticket = closure_128_0.ticket;
+            baseUrl = closure_128_0.baseUrl;
+            const _URLSearchParams = URLSearchParams;
+            obj7 = { ticket };
+            const uRLSearchParams = new URLSearchParams(obj7);
+            closure_128_3 = uRLSearchParams;
+            const _fetch = fetch;
+            const _HermesInternal = HermesInternal;
+            c1 = 2;
+            c2 = 1;
+            const obj8 = { value: fetch("" + baseUrl + "/agent/rebuild?" + closure_128_3, { method: "POST" }), done: false };
+            return obj8;
+          }
+        } else if (arg0 === 1) {
+          c2 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          c2 = 3;
+          const obj = { value, done: true };
           return obj;
         } else {
+          const ok = value.ok;
+          c2 = 3;
           return { value: "HermesInternal", done: null };
         }
-      } else {
-        try {
-          table = 2;
-          if (0 === ticket) {
-            if (arg0 === 1) {
-              table = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              table = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_0 = tmp2;
-              closure_0 = undefined;
-              ticket = undefined;
-              table = undefined;
-              let uRLSearchParams;
-              let obj3 = closure_1_0(table[7]);
-              ticket = 1;
-              table = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj3.mintWorkerTicket(closure_1_0);
-              return obj1;
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              table = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              table = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              closure_0 = arg1;
-              ticket = closure_0.ticket;
-              table = closure_0.baseUrl;
-              const _URLSearchParams = URLSearchParams;
-              obj3 = { ticket: null };
-              obj3[0] = ticket;
-              uRLSearchParams = new URLSearchParams(obj3);
-              const _fetch = fetch;
-              const _HermesInternal = HermesInternal;
-              ticket = 2;
-              table = 1;
-              obj4 = { value: null, done: false };
-              obj4[0] = fetch("" + table + "/agent/rebuild?" + uRLSearchParams, { method: "POST" });
-              return obj4;
-            }
-          } else if (arg0 === 1) {
-            table = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            table = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const ok = arg1.ok;
-            table = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp9) {
-          table = tmp;
-          throw tmp9;
-        }
+      } catch (tmp9) {
+        c2 = tmp;
+        throw tmp9;
       }
-    });
-    closure_1 = tmp;
-    const apply = tmp.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
     }
-    return applyArgumentsResult;
-  }
+  };
   (function kick() {
     const self = this;
-    const apply = _kick.apply;
+    const apply = closure_1.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  })().catch((arg0) => {
+  })().catch((error) => {
 
   });
 };
 export const fetchProjectMcpConnection = function fetchProjectMcpConnection(arg0) {
   const self = this;
-  const apply = _fetchProjectMcpConnection.apply;
+  const apply = closure_60.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3594,7 +3425,7 @@ export const fetchProjectMcpConnection = function fetchProjectMcpConnection(arg0
 };
 export const requestExternalAuthorizeUrl = function requestExternalAuthorizeUrl(arg0, arg1) {
   const self = this;
-  const apply = _requestExternalAuthorizeUrl.apply;
+  const apply = closure_61.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3604,7 +3435,7 @@ export const requestExternalAuthorizeUrl = function requestExternalAuthorizeUrl(
 };
 export const deleteStagedAttachment = function deleteStagedAttachment(arg0, arg1) {
   const self = this;
-  const apply = _deleteStagedAttachment.apply;
+  const apply = closure_62.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3614,7 +3445,7 @@ export const deleteStagedAttachment = function deleteStagedAttachment(arg0, arg1
 };
 export const getPreviewScreenshotUrl = function getPreviewScreenshotUrl(arg0, arg1) {
   const self = this;
-  const apply = _getPreviewScreenshotUrl.apply;
+  const apply = closure_63.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3625,7 +3456,7 @@ export const getPreviewScreenshotUrl = function getPreviewScreenshotUrl(arg0, ar
 export { getAttachmentUrl };
 export const isAttachmentAvailable = function isAttachmentAvailable(arg0, arg1) {
   const self = this;
-  const apply = _isAttachmentAvailable.apply;
+  const apply = closure_66.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

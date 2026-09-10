@@ -1,16 +1,16 @@
-// Module ID: 4766
-// Function ID: 4767
-// Name: enqueue
+// Module ID: 4780
+// Function ID: 4781
+// Name: ModalDispatchQueue
 // Dependencies: [2]
 
-// Module 4766 (enqueue)
-import set from "set" /* 2 */;
+// Module 4780 (ModalDispatchQueue)
+import size from "module_2" /* 2 */;
 
 class ModalDispatchQueue {
   constructor() {
-    obj = Object.create(new.target.prototype);
-    obj[0] = [];
-    return obj;
+    merged = Object.assign({ queue: null });
+    merged[0] = [];
+    return merged;
   }
 }
 const prototype = ModalDispatchQueue.prototype;
@@ -25,13 +25,13 @@ prototype["flush"] = function flush() {
       let queue = self.queue;
       let arr = queue.shift();
       if (arr != null) {
-        let arrResult = arr();
+        let arr1Result = arr();
       }
     } while (self.queue.length > 0);
   }
 };
-let obj = Object.create(ModalDispatchQueue.prototype);
-obj[0] = [];
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/modal/ModalDispatchQueue.tsx");
+let merged = Object.assign({ queue: null });
+merged[0] = [];
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/modal/ModalDispatchQueue.tsx");
 
-export default obj;
+export default merged;

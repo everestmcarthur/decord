@@ -1,16 +1,16 @@
-// Module ID: 7670
-// Function ID: 7671
+// Module ID: 7684
+// Function ID: 7685
 // Name: callOnce
 // Dependencies: [2]
 // Exports: callOnce
 
-// Module 7670 (callOnce)
-import set from "set" /* 2 */;
+// Module 7684 (callOnce)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("utils/callOnce.tsx");
+const result = size.fileFinishedImporting("utils/callOnce.tsx");
 
-export function callOnce(closure_1_1) {
-  closure_0 = closure_1_1;
+export function callOnce(arg0) {
+  closure_0 = arg0;
   c2 = false;
   return () => {
     const items = [...arguments];

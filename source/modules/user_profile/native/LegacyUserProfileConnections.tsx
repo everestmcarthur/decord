@@ -1,23 +1,28 @@
-// Module ID: 11579
-// Function ID: 11580
+// Module ID: 11605
+// Function ID: 11606
 // Name: LegacyUserProfileConnections
-// Dependencies: [19, 17, 2025, 1385, 4405, 7621, 1074, 1182, 5408, 21, 4560, 576, 5407, 11580, 5283, 1396, 4411, 1178, 11583, 11584, 4262, 11585, 11586, 4528, 7190, 4258, 1114, 8370, 4740, 4255, 5123, 4556, 4271, 504, 7503, 11587, 2]
+// Dependencies: [19, 17, 2025, 1385, 4419, 7635, 1074, 1182, 5422, 21, 4574, 576, 5421, 11606, 5297, 1396, 4425, 1178, 11609, 11610, 4275, 11611, 11612, 4542, 7203, 4271, 1114, 8398, 4754, 4268, 5137, 4570, 4284, 504, 7517, 11613, 2]
 // Exports: default, useAppplicationRoleConnectionItems, useConnectedAccountItems
 
-// Module 11579 (LegacyUserProfileConnections)
-import ThemesDefault from "Themes" /* 576 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "_getSystemLocale" /* 2025 */;
-import closure_7 from "createdAt" /* 1385 */;
-import closure_8 from "initialize" /* 4405 */;
-import closure_9 from "createUserWidgetFromServer" /* 7621 */;
-import ME from "ME" /* 1074 */;
-import { MetadataFields } from "OperatorTypes" /* 5408 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11605 (LegacyUserProfileConnections)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import ToastUtils from "ToastUtils" /* 4271 */;
+import HapticUtils from "HapticUtils" /* 4542 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import PlatformsDefault from "Platforms" /* 5297 */;
+import ClipboardUtils from "ClipboardUtils" /* 7203 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8398 */;
+import noop from "module_19" /* 19 */;
+import LocaleStore from "LocaleStore" /* 2025 */;
+import UserRecord from "UserRecord" /* 1385 */;
+import StreamerModeStore from "StreamerModeStore" /* 4419 */;
+import UserProfileStore from "UserProfileStore" /* 7635 */;
 
-const require = arg1;
+const require = globalThis.__r;
+
+require = fn;
 class ConnectedUserAccount {
   constructor(arg0) {
     account = global.account;
@@ -38,7 +43,7 @@ class ConnectedUserAccount {
     if (showMetadata) {
       tmp3 = account;
       tmp4 = closure_2;
-      obj2 = require("officialApplicationIds");
+      obj2 = account(closure_2[12]);
       tmp5 = MetadataFields;
       createdAtDate = obj2.getCreatedAtDate(metadata[MetadataFields.CREATED_AT], locale);
     }
@@ -48,12 +53,12 @@ class ConnectedUserAccount {
       if (PlatformTypes.REDDIT === type) {
         tmp18 = account;
         tmp19 = closure_2;
-        obj8 = require("PaypalVanityTag");
+        obj8 = account(closure_2[13]);
         redditMetadataItems = obj8.generateRedditMetadataItems(metadata, tmp.metadataItem);
       } else if (tmp6.STEAM === type) {
         tmp16 = account;
         tmp17 = closure_2;
-        obj7 = require("PaypalVanityTag");
+        obj7 = account(closure_2[13]);
         redditMetadataItems = obj7.generateSteamMetadataItems(metadata, tmp.metadataItem);
       } else {
         if (tmp6.BLUESKY !== type) {
@@ -62,17 +67,17 @@ class ConnectedUserAccount {
               if (tmp6.PAYPAL === type) {
                 tmp9 = account;
                 tmp10 = closure_2;
-                obj4 = require("PaypalVanityTag");
+                obj4 = account(closure_2[13]);
                 redditMetadataItems = obj4.generatePaypalMetadataItems(metadata, tmp.metadataItem);
               } else if (tmp6.EBAY === type) {
                 tmp7 = account;
                 tmp8 = closure_2;
-                obj3 = require("PaypalVanityTag");
+                obj3 = account(closure_2[13]);
                 redditMetadataItems = obj3.generateEbayMetadataItems(metadata, tmp.metadataItem);
               } else if (tmp6.TIKTOK === type) {
                 tmp48 = account;
                 tmp49 = closure_2;
-                obj30 = require("PaypalVanityTag");
+                obj30 = account(closure_2[13]);
                 redditMetadataItems = obj30.generateTikTokMetadataItems(metadata, tmp.metadataItem);
               }
             }
@@ -80,14 +85,14 @@ class ConnectedUserAccount {
         }
         tmp11 = account;
         tmp12 = closure_2;
-        obj5 = require("PaypalVanityTag");
+        obj5 = account(closure_2[13]);
         twitterMetadataItems = obj5.generateTwitterMetadataItems(metadata, tmp.metadataItem);
         tmp14 = MetadataFields;
         str = "1";
         redditMetadataItems = twitterMetadataItems;
         if ("1" === metadata[MetadataFields.TWITTER_VERIFIED]) {
           tmp15 = userId;
-          obj6 = require("getPlatformUserUrl");
+          obj6 = userId(tmp12[14]);
           color = obj6.get(tmp6.TWITTER).color;
           redditMetadataItems = twitterMetadataItems;
         }
@@ -95,12 +100,12 @@ class ConnectedUserAccount {
     }
     tmp20 = userId;
     tmp21 = closure_2;
-    obj9 = require("getPlatformUserUrl");
+    obj9 = userId(closure_2[14]);
     value = obj9.get(account.type);
     closure_2 = value;
     tmp23 = account;
-    obj10 = require("getAvatarURL");
-    obj11 = require("AccessibilityAnnouncer");
+    obj10 = account(closure_2[15]);
+    obj11 = account(closure_2[16]);
     tmp24 = value == null;
     if (obj11.isThemeDark(theme)) {
       darkPNG = undefined;
@@ -123,57 +128,55 @@ class ConnectedUserAccount {
     if (null != showInvisibleIcon) {
       if (showInvisibleIcon) {
         tmp30 = jsx;
-        obj = { style: null, source: null };
-        obj[0] = tmp.connectedAccountOpenHide;
-        obj[1] = require("registerAsset");
-        tmp28 = jsx(require("Button").Icon, obj);
+        obj1 = { style: null, source: null };
+        obj1.style = tmp.connectedAccountOpenHide;
+        obj1.source = tmp20(tmp21[18]);
+        tmp28 = jsx(tmp23(tmp21[17]).Icon, obj1);
       }
-      tmp23Result = require("map");
-      token = tmp23Result.useToken(require("Themes").colors.BACKGROUND_MOD_MUTED, theme);
-      tmp23Result1 = require("map");
+      tmp23Result = tmp23(tmp21[20]);
+      token = tmp23Result.useToken(tmp20(tmp21[11]).colors.BACKGROUND_MOD_MUTED, theme);
+      tmp23Result1 = tmp23(tmp21[20]);
       if (null != color) {
         tmp32 = ThemeTypes;
         theme = ThemeTypes.DARK;
       }
-      WHITE = tmp23Result1.useToken(require("Themes").colors.INTERACTIVE_TEXT_ACTIVE, theme);
+      WHITE = tmp23Result1.useToken(tmp20(tmp21[11]).colors.INTERACTIVE_TEXT_ACTIVE, theme);
       tmp33 = token;
       if (null != color) {
-        WHITE = require("Themes").unsafe_rawColors.WHITE;
+        WHITE = tmp20(tmp21[11]).unsafe_rawColors.WHITE;
         tmp33 = color;
       }
       tmp34 = null;
       if (account.verified) {
         tmp35 = jsxs;
         tmp36 = View;
-        obj1 = { style: null, children: null };
-        obj1[0] = tmp.verifiedCheckContainer;
+        obj31 = { style: null, children: null };
+        obj31.style = tmp.verifiedCheckContainer;
         tmp37 = jsx;
-        obj2 = { style: null, size: null, source: null, color: null };
-        obj2[0] = tmp.verifiedCheck;
-        obj2[1] = require("Button").Icon.Sizes.REFRESH_SMALL_16;
-        obj2[2] = require("registerAsset");
-        obj2[3] = tmp33;
+        obj32 = { style: null, size: null, source: null, color: null };
+        obj32.style = tmp.verifiedCheck;
+        obj32.size = tmp23(tmp21[17]).Icon.Sizes.REFRESH_SMALL_16;
+        obj32.source = tmp20(tmp21[21]);
+        obj32.color = tmp33;
         items = [, ];
-        items[0] = jsx(require("Button").Icon, obj2);
-        obj3 = { style: null, size: null, source: null, color: null };
-        obj3[0] = tmp.verifiedCheck;
-        obj3[1] = require("Button").Icon.Sizes.REFRESH_SMALL_16;
-        obj3[2] = require("registerAsset");
-        obj3[3] = WHITE;
-        items[1] = jsx(require("Button").Icon, obj3);
-        obj1[1] = items;
-        tmp34 = jsxs(View, obj1);
+        items[0] = jsx(tmp23(tmp21[17]).Icon, obj32);
+        obj33 = { style: null, size: null, source: null, color: null };
+        obj33.style = tmp.verifiedCheck;
+        obj33.size = tmp23(tmp21[17]).Icon.Sizes.REFRESH_SMALL_16;
+        obj33.source = tmp20(tmp21[22]);
+        obj33.color = WHITE;
+        items[1] = jsx(tmp23(tmp21[17]).Icon, obj33);
+        obj31.children = items;
+        tmp34 = jsxs(View, obj31);
       }
       obj19 = closure_3;
       items1 = [];
       items1[0] = account.name;
       name = undefined;
       callback = closure_3.useCallback(() => {
-        const result = account(_undefined[23]).triggerHapticFeedback(account(_undefined[23]).HapticFeedbackTypes.IMPACT_LIGHT);
-        const obj = account(_undefined[23]);
-        account(_undefined[24]).copy(account.name);
-        const obj2 = account(_undefined[24]);
-        const result1 = account(_undefined[25]).presentCopiedToClipboard();
+        const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_LIGHT);
+        ClipboardUtils.copy(account.name);
+        const result1 = ToastUtils.presentCopiedToClipboard();
       }, items1);
       if (value != null) {
         name = value.name;
@@ -187,10 +190,10 @@ class ConnectedUserAccount {
       items3[2] = userId;
       memo = closure_3.useMemo(() => {
         if (null != platformUserUrl) {
-          const intl2 = account(_undefined[26]).intl;
-          let stringResult = intl2.string(account(_undefined[26]).t.wuRE8M);
+          const intl2 = util.intl;
+          let stringResult = intl2.string(util.t.wuRE8M);
         } else {
-          const intl = account(_undefined[26]).intl;
+          const intl = util.intl;
           let str;
           if (_undefined != null) {
             str = _undefined.name;
@@ -198,77 +201,76 @@ class ConnectedUserAccount {
           if (str == null) {
             str = "";
           }
-          const obj = { name: null };
-          obj[0] = str;
-          stringResult = intl.formatToPlainString(account(_undefined[26]).t.OKzaN3, obj);
+          const obj = { name: str };
+          stringResult = intl.formatToPlainString(util.t.OKzaN3, obj);
         }
         return stringResult;
       }, items2);
       callback1 = obj19.useCallback(() => {
         if (null != platformUserUrl) {
-          let obj = account(_undefined[27]);
-          obj = { href: null, trusted: null, onConfirm: null };
-          obj[0] = tmp;
-          obj[1] = account.type !== closure_1_11.DOMAIN;
-          obj[2] = function onConfirm() {
-            let obj = closure_1_0(closure_1_2[28]);
-            obj = { platform_type: type.type, other_user_id: closure_1 };
-            obj.trackWithMetadata(closure_1_10.CONNECTED_ACCOUNT_VIEWED, obj);
-            closure_1_1(closure_1_2[29]).openURL(closure_3);
+          let obj2 = {
+            href: tmp,
+            trusted: account.type !== constants.DOMAIN,
+            onConfirm() {
+                account(4754).trackWithMetadata(constants.CONNECTED_ACCOUNT_VIEWED, { platform_type: type.type, other_user_id });
+                const obj = account(4754);
+                const obj2 = { platform_type: type.type, other_user_id };
+                userId(4268).openURL(platformUserUrl);
+              }
           };
-          obj.handleClick(obj);
+          MaskedLinkUtils.handleClick(obj2);
         }
       }, items3);
       if (null != platformUserUrl) {
-        PressableOpacity = require("PressableBase").PressableOpacity;
+        PressableOpacity = tmp23(tmp21[30]).PressableOpacity;
       } else {
         PressableOpacity = Pressable;
       }
       tmp42 = jsx;
-      obj4 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, onLongPress: null, children: null };
-      obj4[0] = memo;
+      obj34 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, onLongPress: null, children: null };
+      obj34.accessibilityLabel = memo;
       tmp43 = undefined;
       if (null != platformUserUrl) {
         tmp43 = callback1;
       }
-      obj4[2] = tmp43;
-      obj4[3] = callback;
+      obj34.onPress = tmp43;
+      obj34.onLongPress = callback;
       tmp44 = View;
-      obj5 = { style: null, children: null };
+      obj35 = { style: null, children: null };
       items4 = [, ];
       items4[0] = tmp.connectedAccountContainer;
       items4[1] = style;
-      obj5[0] = items4;
+      obj35.style = items4;
       tmp45 = jsxs;
-      obj6 = { style: null, children: null };
-      obj6[0] = tmp.connectedAccount;
-      obj7 = { size: null, source: null, disableColor: true };
-      obj7[0] = require("Button").Icon.Sizes.MEDIUM;
-      obj7[1] = source;
+      obj36 = { style: null, children: null };
+      obj36.style = tmp.connectedAccount;
+      obj37 = { size: null, source: null, disableColor: true };
+      obj37.size = tmp23(tmp21[17]).Icon.Sizes.MEDIUM;
+      obj37.source = source;
       items5 = [, , ];
-      items5[0] = tmp42(require("Button").Icon, obj7);
-      obj8 = { style: null, children: null };
-      obj8[0] = tmp.connectedAccountNameContainer;
-      obj9 = { style: null, children: null };
-      obj9[0] = tmp.connectedAccountName;
-      obj10 = { variant: "text-md/semibold", style: null, children: null };
-      obj10[1] = tmp.connectedAccountNameText;
-      obj10[2] = account.name;
+      items5[0] = tmp42(tmp23(tmp21[17]).Icon, obj37);
+      obj38 = { style: null, children: null };
+      obj38.style = tmp.connectedAccountNameContainer;
+      obj39 = { style: null, children: null };
+      obj39.style = tmp.connectedAccountName;
+      obj40 = { variant: "text-md/semibold", style: null, children: null };
+      obj40.style = tmp.connectedAccountNameText;
+      obj40.children = account.name;
       items6 = [, ];
-      items6[0] = tmp42(require("Text").Text, obj10);
+      items6[0] = tmp42(tmp23(tmp21[31]).Text, obj40);
       items6[1] = tmp34;
-      obj9[1] = items6;
+      obj39.children = items6;
       items7 = [, , ];
-      items7[0] = jsxs(View, obj9);
+      items7[0] = jsxs(View, obj39);
       tmp42Result = null;
       if (null != createdAtDate) {
-        obj11 = { variant: "heading-deprecated-12/medium", style: null, children: null };
-        obj11[1] = tmp.connectedAccountNameCreatedAtText;
-        intl = require("getSystemLocale").intl;
-        obj12 = { date: null };
-        obj12[0] = createdAtDate;
-        obj11[2] = intl.format(require("getSystemLocale").t["9rfonh"], obj12);
-        tmp42Result = tmp42(require("Text").Text, obj11);
+        obj41 = { variant: "heading-deprecated-12/medium", style: null, children: null };
+        obj41.style = tmp.connectedAccountNameCreatedAtText;
+        intl = tmp23(tmp21[26]).intl;
+        obj42 = { date: null };
+        obj42.date = createdAtDate;
+        obj41.children = intl.format(tmp23(tmp21[26]).t["9rfonh"], obj42);
+        tmp42Result = tmp42(tmp23(tmp21[31]).Text, obj41);
       }
       items7[1] = tmp42Result;
       tmp42Result1 = null;
@@ -276,28 +278,28 @@ class ConnectedUserAccount {
         num = 0;
         tmp42Result1 = null;
         if (redditMetadataItems.length > 0) {
-          obj13 = { style: null, children: null };
-          obj13[0] = tmp.connectedAccountChildren;
-          obj13[1] = redditMetadataItems;
-          tmp42Result1 = tmp42(tmp44, obj13);
+          obj43 = { style: null, children: null };
+          obj43.style = tmp.connectedAccountChildren;
+          obj43.children = redditMetadataItems;
+          tmp42Result1 = tmp42(tmp44, obj43);
         }
       }
       items7[2] = tmp42Result1;
-      obj8[1] = items7;
-      items5[1] = tmp45(tmp44, obj8);
+      obj38.children = items7;
+      items5[1] = tmp45(tmp44, obj38);
       items5[2] = tmp28;
-      obj6[1] = items5;
-      obj5[1] = tmp45(tmp44, obj6);
-      obj4[4] = tmp42(tmp44, obj5);
-      return tmp42(PressableOpacity, obj4);
+      obj36.children = items5;
+      obj35.children = tmp45(tmp44, obj36);
+      obj34.children = tmp42(tmp44, obj35);
+      return tmp42(PressableOpacity, obj34);
     }
     tmp28 = null;
     if (null != platformUserUrl) {
       tmp29 = jsx;
-      obj14 = { style: null, source: null };
-      obj14[0] = tmp.connectedAccountOpenLink;
-      obj14[1] = require("registerAsset");
-      tmp28 = jsx(require("Button").Icon, obj14);
+      obj44 = { style: null, source: null };
+      obj44.style = tmp.connectedAccountOpenLink;
+      obj44.source = tmp20(tmp21[19]);
+      tmp28 = jsx(tmp23(tmp21[17]).Icon, obj44);
     }
     return;
   }
@@ -310,134 +312,133 @@ class ConnectedApplicationUserRoleAccount {
     closure_1 = tmp;
     tmp2 = applicationRoleConnection;
     tmp3 = closure_2;
-    obj = require("PaypalVanityTag");
+    obj = applicationRoleConnection(closure_2[13]);
     roleConnectionMetadataItems = obj.generateRoleConnectionMetadataItems(applicationRoleConnection);
     tmp4 = jsxs;
     tmp5 = View;
-    obj = { style: items, children: null };
+    obj1 = { style: null, children: null };
     items = [, ];
     items[0] = tmp.connectedAccountContainer;
     items[1] = global.style;
+    obj1.style = items;
     tmp6 = null;
     if (null != applicationRoleConnection.platform_name) {
       tmp7 = jsx;
-      obj1 = { variant: "eyebrow", color: "interactive-text-default", children: null };
-      obj1[2] = applicationRoleConnection.platform_name;
-      tmp6 = jsx(require("Text").Text, obj1);
+      obj11 = { variant: "eyebrow", color: "interactive-text-default", children: null };
+      obj11.children = applicationRoleConnection.platform_name;
+      tmp6 = jsx(tmp2(tmp3[31]).Text, obj11);
     }
     items1 = [, , , ];
     items1[0] = tmp6;
     tmp8 = jsx;
-    obj2 = { style: tmp.appConnectionNameContainer, children: null };
+    obj12 = { style: tmp.appConnectionNameContainer, children: null };
     tmp8Result = null;
     if (null != applicationRoleConnection.platform_username) {
-      obj3 = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
-      obj3[2] = applicationRoleConnection.platform_username;
-      tmp8Result = tmp8(require("Text").Text, obj3);
+      obj13 = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
+      obj13.children = applicationRoleConnection.platform_username;
+      tmp8Result = tmp8(tmp2(tmp3[31]).Text, obj13);
     }
-    obj2[1] = tmp8Result;
-    items1[1] = tmp8(tmp5, obj2);
+    obj12.children = tmp8Result;
+    items1[1] = tmp8(tmp5, obj12);
     tmp8Result1 = null;
     if (null != roleConnectionMetadataItems) {
       num = 0;
       tmp8Result1 = null;
       if (roleConnectionMetadataItems.length > 0) {
-        obj4 = { style: null, children: null };
-        obj4[0] = tmp.connectedAccountChildren;
-        obj4[1] = roleConnectionMetadataItems;
-        tmp8Result1 = tmp8(tmp5, obj4);
+        obj14 = { style: null, children: null };
+        obj14.style = tmp.connectedAccountChildren;
+        obj14.children = roleConnectionMetadataItems;
+        tmp8Result1 = tmp8(tmp5, obj14);
       }
     }
     items1[2] = tmp8Result1;
-    obj5 = { style: { flexDirection: "row" }, children: null };
-    obj6 = { style: tmp.connectedAccountPoweredByContainer, children: null };
-    obj7 = { variant: "text-xs/normal", color: "text-muted", children: null };
-    intl = require("getSystemLocale").intl;
-    obj8 = {
+    obj15 = { style: { flexDirection: "row" }, children: null };
+    obj16 = { style: tmp.connectedAccountPoweredByContainer, children: null };
+    obj17 = { variant: "text-xs/normal", color: "text-muted", children: null };
+    intl = tmp2(tmp3[26]).intl;
+    obj18 = {
       applicationHook() {
-            obj = { style: obj.connectedAccountPoweredByText, children: null };
+            const obj = { style: closure_1.connectedAccountPoweredByText, children: null };
             let tmp5 = null;
             if (null != applicationRoleConnection.application.bot) {
-              obj = { style: null, user: null, size: null, guildId: "a" };
-              obj[0] = tmp3.connectedAccountPoweredByAvatar;
-              const tmp12 = new closure_1_7(tmp4.application.bot);
-              obj[1] = tmp12;
-              obj[2] = applicationRoleConnection(closure_1_2[17]).AvatarSizes.SIZE_16;
-              tmp5 = closure_1_14(applicationRoleConnection(closure_1_2[17]).Avatar, obj);
+              const obj2 = { style: tmp3.connectedAccountPoweredByAvatar, user: null, size: null, guildId: "a" };
+              const tmp12 = new UserRecord(tmp4.application.bot);
+              obj2.user = tmp12;
+              obj2.size = native.AvatarSizes.SIZE_16;
+              tmp5 = closure_2_14(native.Avatar, obj2);
             }
-            const items = [tmp5, ];
-            obj = { variant: "text-xs/normal", color: "text-default", children: tmp4.application.name };
-            items[1] = closure_1_14(applicationRoleConnection(closure_1_2[31]).Text, obj);
-            obj[1] = items;
-            return closure_1_15(closure_1_5, obj);
+            const items = [tmp5, closure_2_14(Text_Text.Text, { variant: "text-xs/normal", color: "text-default", children: applicationRoleConnection.application.name })];
+            obj.children = items;
+            return __initData(hasOwnProperty, obj);
           }
     };
-    obj7[2] = intl.format(require("getSystemLocale").t.zIT9YA, obj8);
-    obj6[1] = tmp8(require("Text").Text, obj7);
+    obj17.children = intl.format(tmp2(tmp3[26]).t.zIT9YA, obj18);
+    obj16.children = tmp8(tmp2(tmp3[31]).Text, obj17);
     items2 = [, ];
-    items2[0] = tmp8(tmp5, obj6);
+    items2[0] = tmp8(tmp5, obj16);
     items2[1] = tmp8(tmp5, { style: { flexGrow: 1 } });
-    obj5[1] = items2;
-    items1[3] = tmp4(tmp5, obj5);
-    obj[1] = items1;
-    return tmp4(tmp5, obj);
+    obj15.children = items2;
+    items1[3] = tmp4(tmp5, obj15);
+    obj1.children = items1;
+    return tmp4(tmp5, obj1);
   }
 }
-let c3 = importAllResult;
-({ Pressable: c4, View: c5 } = get_ActivityIndicator);
-({ AnalyticEvents: c10, PlatformTypes: unpackModuleId, ThemeTypes: closure_12 } = ME);
+get_ActivityIndicator = fn(17);
+({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const Constants = fn(1074);
+({ AnalyticEvents: c10, PlatformTypes: closure_11, ThemeTypes: closure_12 } = Constants);
+const MetadataFields = fn(5422).MetadataFields;
+const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-obj = { connectedAccountContainer: obj, connectedAccount: { flexDirection: "row", alignItems: "center" }, connectedAccountNameContainer: { flex: 1, marginLeft: 8 }, connectedAccountName: { flexDirection: "row", alignItems: "center" }, connectedAccountNameText: null, connectedAccountNameCreatedAtText: null, connectedAccountOpenLink: null, connectedAccountOpenHide: null, verifiedCheckContainer: null, verifiedCheck: null, connectedAccountChildren: null, metadataItem: null, appConnectionNameContainer: null, connectedAccountPoweredByContainer: null, connectedAccountPoweredByAvatar: null, connectedAccountPoweredByText: null };
-obj = { paddingHorizontal: 10, paddingVertical: require("semanticColor").FORM_ROW_VERTICAL_PADDING / 2 };
-createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-obj[4] = createCacheKey;
-obj[5] = { color: ThemesDefault.colors.TEXT_SUBTLE };
-let obj2 = { color: ThemesDefault.colors.TEXT_SUBTLE };
+const createStyles = fn(4574);
+let obj = { connectedAccountContainer: { paddingHorizontal: 10, paddingVertical: fn(1182).FORM_ROW_VERTICAL_PADDING / 2 }, connectedAccount: { flexDirection: "row", alignItems: "center" }, connectedAccountNameContainer: { flex: 1, marginLeft: 8 }, connectedAccountName: { flexDirection: "row", alignItems: "center" }, connectedAccountNameText: null, connectedAccountNameCreatedAtText: null, connectedAccountOpenLink: null, connectedAccountOpenHide: null, verifiedCheckContainer: null, verifiedCheck: null, connectedAccountChildren: null, metadataItem: null, appConnectionNameContainer: null, connectedAccountPoweredByContainer: null, connectedAccountPoweredByAvatar: null, connectedAccountPoweredByText: null };
+let obj3 = { paddingHorizontal: 10, paddingVertical: fn(1182).FORM_ROW_VERTICAL_PADDING / 2 };
+obj.connectedAccountNameText = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+let obj4 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+obj.connectedAccountNameCreatedAtText = { color: nativeDefault.colors.TEXT_SUBTLE };
+let size = { height: 24, width: 24, transform: null, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 let items = [{ rotate: "135deg" }];
-obj[6] = { height: 24, width: 24, transform: items, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-let obj3 = { height: 24, width: 24, transform: items, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-obj[7] = { alignSelf: "flex-start", margin: 4, height: 16, width: 16, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-obj[8] = { marginLeft: 4, height: 16, width: 16 };
-obj[9] = { position: "absolute", left: 0, top: 0 };
-obj[10] = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", overflow: "hidden" };
-let obj4 = { alignSelf: "flex-start", margin: 4, height: 16, width: 16, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-obj[11] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-obj[12] = { flex: 1, flexDirection: "row", alignItems: "center", marginTop: 4 };
-let obj5 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-obj[13] = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, paddingHorizontal: 8, paddingVertical: 4, marginTop: 12 };
-obj[14] = { marginRight: 4 };
-obj[15] = { marginTop: -4, alignItems: "center", flexDirection: "row" };
-let closure_17 = createCacheKey.createStyles(obj);
-let closure_18 = importAllResult.memo(ConnectedUserAccount);
-let closure_19 = importAllResult.memo(ConnectedApplicationUserRoleAccount);
+size.transform = items;
+obj.connectedAccountOpenLink = size;
+const size1 = { alignSelf: "flex-start", margin: 4, height: 16, width: 16, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+obj.connectedAccountOpenHide = size1;
+obj.verifiedCheckContainer = { marginLeft: 4, height: 16, width: 16 };
+obj.verifiedCheck = { position: "absolute", left: 0, top: 0 };
+obj.connectedAccountChildren = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", overflow: "hidden" };
+let obj5 = { color: nativeDefault.colors.TEXT_SUBTLE };
+obj.metadataItem = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+obj.appConnectionNameContainer = { flex: 1, flexDirection: "row", alignItems: "center", marginTop: 4 };
+let obj6 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+obj.connectedAccountPoweredByContainer = { flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, paddingHorizontal: 8, paddingVertical: 4, marginTop: 12 };
+obj.connectedAccountPoweredByAvatar = { marginRight: 4 };
+obj.connectedAccountPoweredByText = { marginTop: -4, alignItems: "center", flexDirection: "row" };
+let closure_17 = createStyles.createStyles(obj);
+let closure_18 = noop.memo(ConnectedUserAccount);
+let closure_19 = noop.memo(ConnectedApplicationUserRoleAccount);
 let closure_20 = [];
 let closure_21 = [];
-let obj6 = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, paddingHorizontal: 8, paddingVertical: 4, marginTop: 12 };
-let result = require("set").fileFinishedImporting("modules/user_profile/native/LegacyUserProfileConnections.tsx");
+size = fn(2);
+let result = size.fileFinishedImporting("modules/user_profile/native/LegacyUserProfileConnections.tsx");
 
 export default function LegacyUserProfileConnections(user) {
   user = user.user;
-  let id = user;
-  importDefault = undefined;
-  let obj = id(theme[33]);
-  const items = [closure_9];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_9.getUserProfile(id.id));
-  importDefault = stateFromStores;
-  obj1 = id(theme[33]);
-  const items1 = [closure_8];
+  const items = [UserProfileStore];
+  const stateFromStores = user(504).useStateFromStores(items, () => UserProfileStore.getUserProfile(user.id));
+  let obj = user(504);
+  const items1 = [StreamerModeStore];
   let prop;
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => obj.hidePersonalInformation);
+  const stateFromStores1 = user(504).useStateFromStores(items1, () => StreamerModeStore.hidePersonalInformation);
   if (stateFromStores != null) {
     prop = stateFromStores.applicationRoleConnections;
   }
   const items2 = [prop];
-  const memo = importAllResult.useMemo(() => {
+  const memo = noop.useMemo(() => {
     let prop;
-    if (_undefined != null) {
-      prop = _undefined.applicationRoleConnections;
+    if (stateFromStores != null) {
+      prop = stateFromStores.applicationRoleConnections;
     }
     if (prop == null) {
-      prop = closure_1_21;
+      prop = closure_21;
     }
     return prop;
   }, items2);
@@ -446,46 +447,40 @@ export default function LegacyUserProfileConnections(user) {
     connectedAccounts = stateFromStores.connectedAccounts;
   }
   const items3 = [connectedAccounts];
-  const memo1 = importAllResult.useMemo(() => {
+  const memo1 = noop.useMemo(() => {
     let connectedAccounts;
-    if (_undefined != null) {
-      connectedAccounts = _undefined.connectedAccounts;
+    if (stateFromStores != null) {
+      connectedAccounts = stateFromStores.connectedAccounts;
     }
     if (connectedAccounts == null) {
-      connectedAccounts = closure_1_20;
+      connectedAccounts = closure_20;
     }
     return connectedAccounts;
   }, items3);
-  id = undefined;
-  importDefault = undefined;
-  theme = undefined;
-  let tmpResult = tmp(tmp2[32]);
-  importDefault = tmpResult.useThemeContext().theme;
-  tmpResult = tmp(tmp2[33]);
-  const items4 = [closure_6];
-  theme = tmpResult.useStateFromStores(items4, () => closure_6.locale);
-  const mapped = memo.map((applicationRoleConnection) => {
-    obj = { children: closure_1_14(closure_1_19, obj) };
-    obj = { applicationRoleConnection, theme: c1, locale: theme, style: id };
-    return closure_1_14(React.Fragment, obj, arg1);
+  closure_129_0 = undefined;
+  const obj2 = user(504);
+  const theme = user(4284).useThemeContext().theme;
+  const tmpResult = user(4284);
+  const items4 = [LocaleStore];
+  closure_129_2 = user(504).useStateFromStores(items4, () => LocaleStore.locale);
+  const mapped = memo.map((applicationRoleConnection, index) => {
+    const obj = { children: closure_2_14(closure_19, { applicationRoleConnection, theme: stateFromStores, locale, style: user }) };
+    return closure_2_14(noop.Fragment, obj, index);
   });
-  id = user.id;
-  importDefault = undefined;
-  theme = undefined;
-  importAllResult = undefined;
-  closure_4 = undefined;
-  theme = id(theme[32]).useThemeContext().theme;
-  const obj3 = importAllResult;
-  const tmpResult1 = id(theme[32]);
-  const items5 = [closure_6];
-  importAllResult = id(theme[33]).useStateFromStores(items5, () => closure_6.locale);
-  const tmpResult2 = id(theme[33]);
-  closure_4 = id(theme[34]).usePlatformAllowed({ forUserProfile: true });
+  const id = user.id;
+  closure_130_1 = undefined;
+  const tmpResult5 = user(504);
+  const theme2 = user(4284).useThemeContext().theme;
+  const tmpResult6 = user(4284);
+  const items5 = [LocaleStore];
+  closure_130_3 = user(504).useStateFromStores(items5, () => LocaleStore.locale);
+  const tmpResult7 = user(504);
+  closure_130_4 = user(7517).usePlatformAllowed({ forUserProfile: true });
   const found = memo1.filter((type) => {
-    const value = _undefined(theme[14]).get(type.type);
+    value = PlatformsDefault.get(type.type);
     let tmp2 = null != value;
     if (tmp2) {
-      tmp2 = callback(value);
+      tmp2 = closure_1_4(value);
     }
     return tmp2;
   });
@@ -498,63 +493,58 @@ export default function LegacyUserProfileConnections(user) {
         tmp10 = mapped.length > 0;
       }
       if (tmp10) {
-        obj = { title: null, showContainer: true, children: null };
-        const intl = tmp(tmp2[26]).intl;
-        obj[0] = intl.string(tmp(tmp2[26]).t.PHjkRE);
-        obj[2] = mapped;
-        tmp10 = callback(importDefault(tmp2[35]), obj);
-        const tmp13 = importDefault(tmp2[35]);
+        const obj4 = { title: null, showContainer: true, children: null };
+        const intl = tmp(1114).intl;
+        obj4.title = intl.string(tmp(1114).t.PHjkRE);
+        obj4.children = mapped;
+        tmp10 = closure_14(stateFromStores(11613), obj4);
+        const tmp13 = stateFromStores(11613);
       }
-      obj = { children: null };
+      const obj5 = { children: null };
       const items6 = [tmp10, ];
-      obj1 = { title: null, showContainer: true, children: null };
-      const intl2 = tmp(tmp2[26]).intl;
-      obj1[0] = intl2.string(tmp(tmp2[26]).t["3fe7U5"]);
-      obj1[2] = tmp8;
-      items6[1] = callback(importDefault(tmp2[35]), obj1);
-      obj[0] = items6;
-      tmp17Result = closure_15(closure_16, obj);
-      const tmp16 = importDefault(tmp2[35]);
-      const tmp17 = closure_15;
-      const tmp18 = closure_16;
+      const obj6 = { title: null, showContainer: true, children: null };
+      const intl2 = tmp(1114).intl;
+      obj6.title = intl2.string(tmp(1114).t["3fe7U5"]);
+      obj6.children = tmp8;
+      items6[1] = closure_14(stateFromStores(11613), obj6);
+      obj5.children = items6;
+      tmp17Result = closure_15(closure_16, obj5);
+      const tmp16 = stateFromStores(11613);
     }
   }
   return tmp17Result;
 };
 export { ConnectedUserAccount };
 export { ConnectedApplicationUserRoleAccount };
-export const useAppplicationRoleConnectionItems = function useAppplicationRoleConnectionItems(arr) {
-  const _require = arg1;
-  const theme = _require(4271).useThemeContext().theme;
-  const obj = _require(4271);
-  const items = [closure_6];
-  dependencyMap = _require(504).useStateFromStores(items, () => closure_6.locale);
-  return arr.map((applicationRoleConnection) => {
-    obj = { children: closure_1_14(closure_1_19, obj) };
-    obj = { applicationRoleConnection, theme: c1, locale: theme, style: id };
-    return closure_1_14(React.Fragment, obj, arg1);
+export const useAppplicationRoleConnectionItems = function useAppplicationRoleConnectionItems(arr, arg1) {
+  _require = arg1;
+  const theme = require("native").useThemeContext().theme;
+  const obj = require("native");
+  const items = [LocaleStore];
+  dependencyMap = require("initialize").useStateFromStores(items, () => LocaleStore.locale);
+  return arr.map((applicationRoleConnection, index) => {
+    const obj = { children: closure_2_14(closure_19, { applicationRoleConnection, theme: stateFromStores, locale, style: user }) };
+    return closure_2_14(noop.Fragment, obj, index);
   });
 };
-export const useConnectedAccountItems = function useConnectedAccountItems(arr) {
-  const _require = arg1;
-  closure_1 = arg2;
-  theme = _require(theme[32]).useThemeContext().theme;
-  let obj = _require(theme[32]);
-  const items = [closure_6];
-  closure_3 = _require(theme[33]).useStateFromStores(items, () => closure_6.locale);
-  const obj2 = _require(theme[33]);
-  closure_4 = _require(theme[34]).usePlatformAllowed({ forUserProfile: true });
+export const useConnectedAccountItems = function useConnectedAccountItems(arr, userId, style) {
+  _require = userId;
+  theme = require("native").useThemeContext().theme;
+  let obj = require("native");
+  const items = [LocaleStore];
+  locale = require("initialize").useStateFromStores(items, () => LocaleStore.locale);
+  const obj2 = require("initialize");
+  closure_4 = require("ConnectionsHooks").usePlatformAllowed({ forUserProfile: true });
   const found = arr.filter((type) => {
-    const value = _undefined(theme[14]).get(type.type);
+    value = PlatformsDefault.get(type.type);
     let tmp2 = null != value;
     if (tmp2) {
-      tmp2 = callback(value);
+      tmp2 = closure_1_4(value);
     }
     return tmp2;
   });
-  return found.map((account) => {
-    obj = { children: closure_1_14(closure_1_18, obj) };
-    obj = { account, theme, locale: React, userId: closure_0, style: closure_1 };
-    return closure_1_14(React.Fragment, obj, arg1);
+  return found.map((account, index) => {
+    const obj = { children: closure_2_14(closure_18, { account, theme, locale, userId, style }) };
+    return closure_2_14(noop.Fragment, obj, index);
   });
 };

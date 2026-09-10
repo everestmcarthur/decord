@@ -1,18 +1,19 @@
-// Module ID: 10925
-// Function ID: 10926
+// Module ID: 10952
+// Function ID: 10953
 // Name: ChatGDMCustomizeActionSheet
-// Dependencies: [19, 21, 10926, 10929, 1114, 10931, 2]
+// Dependencies: [19, 21, 10953, 10956, 1114, 10958, 2]
 // Exports: default
 
-// Module 10925 (ChatGDMCustomizeActionSheet)
-import noopAll from "noop" /* 19 */;
-import useNavigatorConfirmChangesOnBackDefault from "useNavigatorConfirmChangesOnBack" /* 10926 */;
-import _modDef10929 from "module_10929" /* 10929 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 10952 (ChatGDMCustomizeActionSheet)
+import useNavigatorConfirmChangesOnBackDefault from "useNavigatorConfirmChangesOnBack" /* 10953 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10956 */;
+import ChatGDMCustomizeDefault from "ChatGDMCustomize" /* 10958 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/group_dm/native/ChatGDMCustomizeActionSheet.tsx");
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/group_dm/native/ChatGDMCustomizeActionSheet.tsx");
 
 export default function ChatGDMCustomizeActionSheet(channelId) {
   channelId = channelId.channelId;
@@ -22,9 +23,9 @@ export default function ChatGDMCustomizeActionSheet(channelId) {
   const obj = { screenKey: "kick", title: null, render: null };
   const tmp = useNavigatorConfirmChangesOnBackDefault();
   const intl = channelId(1114).intl;
-  obj[1] = intl.string(channelId(1114).t["1r5E+m"]);
-  obj[2] = function render() {
-    return closure_1_3(_undefined(_undefined2[5]), { ref: _undefined2, onFinish: _undefined, channelId });
+  obj.title = intl.string(channelId(1114).t["1r5E+m"]);
+  obj.render = function render() {
+    return jsx(ChatGDMCustomizeDefault, { ref, onFinish, channelId });
   };
-  return jsx(_modDef10929, { screenKey: "kick", title: null, render: null });
+  return jsx(ModalStackNavigatorDefault, { screenKey: "kick", title: null, render: null });
 };

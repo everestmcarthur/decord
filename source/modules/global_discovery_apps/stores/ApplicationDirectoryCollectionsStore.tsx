@@ -1,36 +1,35 @@
-// Module ID: 12077
-// Function ID: 12078
-// Name: getLastFetchTimeMs
+// Module ID: 12103
+// Function ID: 12104
+// Name: ApplicationDirectoryCollectionsStore
 // Dependencies: [12, 504, 573, 2]
 
-// Module 12077 (getLastFetchTimeMs)
-import applyDefault from "apply" /* 12 */;
+// Module 12103 (ApplicationDirectoryCollectionsStore)
+import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
 let obj = { FETCHING: 0, [0]: "FETCHING", FETCHED: 1, [1]: "FETCHED", ERROR: 2, [2]: "ERROR" };
 let closure_3 = [];
-let closure_4 = {};
-let closure_5 = {};
-let closure_6 = {};
+let obj2 = {};
+obj = {};
 const Store = initializeDefault.Store;
 class ApplicationDirectoryCollectionsStore extends Store {
 }
 const prototype = ApplicationDirectoryCollectionsStore.prototype;
 prototype["getLastFetchTimeMs"] = function getLastFetchTimeMs(arg0) {
-  return table3["surface:" + arg0.surface + " activeState:" + arg0.activeState];
+  return obj4["surface:" + arg0.surface + " activeState:" + arg0.activeState];
 };
 prototype["getFetchState"] = function getFetchState(arg0) {
-  return table2["surface:" + arg0.surface + " activeState:" + arg0.activeState];
+  return obj["surface:" + arg0.surface + " activeState:" + arg0.activeState];
 };
 prototype["getCollections"] = function getCollections(arg0) {
-  let tmp = table["surface:" + arg0.surface + " activeState:" + arg0.activeState];
+  let tmp = obj2["surface:" + arg0.surface + " activeState:" + arg0.activeState];
   if (tmp == null) {
     tmp = closure_3;
   }
   return tmp;
 };
-obj = {
+obj2 = {
   APPLICATION_DIRECTORY_FETCH_COLLECTIONS: function handleFetchAppDirectoryCollections(arg0) {
     obj = {};
     ({ surface, activeState } = arg0);
@@ -41,20 +40,21 @@ obj = {
     collections = collections.collections;
     const combined = "surface:" + collections.surface + " activeState:" + collections.activeState;
     const mapped = collections.map((application_directory_collection_items) => {
-      application_directory_collection_items.application_directory_collection_items = callback(table[0]).sortBy(application_directory_collection_items.application_directory_collection_items, ["position", "id"]);
+      application_directory_collection_items.application_directory_collection_items = _modDef12.sortBy(application_directory_collection_items.application_directory_collection_items, ["position", "id"]);
       return application_directory_collection_items;
     });
-    obj = applyDefault;
-    obj = {};
-    const merged = Object.assign(obj);
-    obj[combined] = obj.sortBy(mapped, ["position", "id"]);
-    obj = {};
+    obj = _modDef12;
+    obj2 = {};
+    const merged = Object.assign(obj2);
+    obj2[combined] = obj.sortBy(mapped, ["position", "id"]);
+    const obj3 = {};
     const merged1 = Object.assign(obj);
-    obj[combined] = obj.FETCHED;
-    obj1 = {};
+    obj3[combined] = obj.FETCHED;
+    obj = obj3;
+    obj4 = {};
     const timestamp = Date.now();
-    const merged2 = Object.assign(obj1);
-    obj1[combined] = timestamp;
+    const merged2 = Object.assign(obj4);
+    obj4[combined] = timestamp;
   },
   APPLICATION_DIRECTORY_FETCH_COLLECTIONS_FAILURE: function handleFetchAppDirectoryCollectionsFailure(arg0) {
     obj = {};
@@ -63,8 +63,9 @@ obj = {
     obj["surface:" + surface + " activeState:" + activeState] = obj.ERROR;
   }
 };
-const applicationDirectoryCollectionsStore = new ApplicationDirectoryCollectionsStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/global_discovery_apps/stores/ApplicationDirectoryCollectionsStore.tsx");
+const applicationDirectoryCollectionsStore = new ApplicationDirectoryCollectionsStore(DispatcherDefault, obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/global_discovery_apps/stores/ApplicationDirectoryCollectionsStore.tsx");
 
 export default applicationDirectoryCollectionsStore;
 export const FetchState = obj;

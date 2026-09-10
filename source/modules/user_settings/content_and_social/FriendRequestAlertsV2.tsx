@@ -1,17 +1,19 @@
-// Module ID: 10877
-// Function ID: 10878
-// Name: useIsFriendRequestAlertsV2Enabled
+// Module ID: 10904
+// Function ID: 10905
+// Name: FriendRequestAlertsV2
 // Dependencies: [1433, 2]
 // Exports: isFriendRequestAlertsV2Enabled, useIsFriendRequestAlertsV2Enabled
 
-// Module 10877 (useIsFriendRequestAlertsV2Enabled)
-import set from "set" /* 2 */;
+// Module 10904 (FriendRequestAlertsV2)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null };
-obj[1] = { enabled: true };
-let closure_0 = ApexExperiment.createApexExperiment({ kind: "user", name: "2025-10-friend-request-alerts-v2", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/user_settings/content_and_social/FriendRequestAlertsV2.tsx");
+const obj = { kind: "user", name: "2025-10-friend-request-alerts-v2", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj.variations = obj2;
+let closure_0 = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/user_settings/content_and_social/FriendRequestAlertsV2.tsx");
 
 export const useIsFriendRequestAlertsV2Enabled = function useIsFriendRequestAlertsV2Enabled(location) {
   return closure_0.useConfig({ location }).enabled;

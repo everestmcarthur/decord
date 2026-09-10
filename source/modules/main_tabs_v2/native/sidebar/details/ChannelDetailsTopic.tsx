@@ -1,116 +1,107 @@
-// Module ID: 16735
-// Function ID: 16736
-// Name: GuildChannelDetailsTopic
-// Dependencies: [32, 19, 17, 1371, 10921, 1074, 21, 1115, 4560, 16736, 4296, 4974, 4550, 5123, 4556, 4987, 504, 4404, 4705, 2]
+// Module ID: 16772
+// Function ID: 16773
+// Name: ChannelDetailsTopic
+// Dependencies: [32, 19, 17, 1371, 10948, 1074, 21, 1115, 4574, 16773, 4310, 4988, 4564, 5137, 4570, 5001, 504, 4418, 4719, 2]
 
-// Module 16735 (GuildChannelDetailsTopic)
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 10921 */;
-import { VerticalGradient } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import set from "set" /* 1115 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16772 (ChannelDetailsTopic)
+import UserUtilsDefault from "UserUtils" /* 4418 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4564 */;
+import ChannelUtils from "ChannelUtils" /* 4719 */;
+import spring from "spring" /* 4988 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
+require = fn;
 function GuildChannelDetailsTopic(channel) {
   channel = channel.channel;
   let flag = channel.initialExpanded;
   if (flag === undefined) {
     flag = false;
   }
-  let first;
-  let callback;
-  let first1;
+  first = undefined;
+  _slicedToArray = undefined;
+  first1 = undefined;
   closure_5 = undefined;
-  let sharedValue;
-  let sharedValue1;
-  let sharedValue2;
-  const tmp = callback3();
+  const tmp = closure_15();
+  const channelTopicGradientBackground = channel(first[9]).useChannelTopicGradientBackground();
+  [first, _slicedToArray] = first1.useState(true);
+  [first1, closure_5] = first1.useState(flag);
   let obj = channel(first[9]);
-  const channelTopicGradientBackground = obj.useChannelTopicGradientBackground();
-  const tmp5 = callback(first1.useState(true), 2);
-  first = tmp5[0];
-  callback = tmp5[1];
-  const tmp7 = callback(first1.useState(flag), 2);
-  first1 = tmp7[0];
-  closure_5 = tmp7[1];
-  obj1 = channel(first[10]);
-  sharedValue = obj1.useSharedValue(undefined);
+  const sharedValue = channel(first[10]).useSharedValue(undefined);
   let obj2 = channel(first[10]);
-  sharedValue1 = obj2.useSharedValue(undefined);
-  let obj3 = channel(first[10]);
-  sharedValue2 = obj3.useSharedValue(constants.HIDDEN);
-  let obj4 = channel(first[10]);
+  const sharedValue1 = channel(first[10]).useSharedValue(undefined);
+  const obj3 = channel(first[10]);
+  const sharedValue2 = channel(first[10]).useSharedValue(constants.HIDDEN);
+  const obj4 = channel(first[10]);
   const fn = function _() {
-    let value = sharedValue1.get();
-    value = sharedValue.get();
-    if (null != value) {
+    value = sharedValue1.get();
+    value2 = sharedValue.get();
+    if (null != value2) {
       if (null != value) {
-        let obj = channel(first[11]);
-        obj = { height: null };
-        obj[0] = obj.withSpring(value, closure_1_9);
+        if (first1) {
+          value2 = value;
+        }
+        let obj2 = { height: spring.withSpring(value2, SPRING_CHANNEL_DETAILS) };
       }
-      return obj;
+      return obj2;
     }
-    obj = closure_1_16;
+    obj2 = closure_16;
   };
-  obj = { expandedHeight: sharedValue1, truncatedHeight: sharedValue, EMPTY_STYLE: closure_16, withSpring: channel(first[11]).withSpring, expanded: first1, SPRING_CHANNEL_DETAILS: closure_9 };
-  let expanded = closure_16;
-  fn.__closure = obj;
+  const obj5 = channel(first[10]);
+  let expanded = EMPTY_STYLE;
+  fn.__closure = { expandedHeight: sharedValue1, truncatedHeight: sharedValue, EMPTY_STYLE, withSpring: channel(first[11]).withSpring, expanded: first1, SPRING_CHANNEL_DETAILS };
   fn.__workletHash = 11932535786068;
-  fn.__initData = closure_18;
-  const animatedStyle = obj4.useAnimatedStyle(fn);
-  let obj6 = channel(first[10]);
+  fn.__initData = __initData;
+  const animatedStyle = obj5.useAnimatedStyle(fn);
+  const obj6 = { expandedHeight: sharedValue1, truncatedHeight: sharedValue, EMPTY_STYLE, withSpring: channel(first[11]).withSpring, expanded: first1, SPRING_CHANNEL_DETAILS };
   class N {
     constructor() {
       obj = closure_7;
       if (null == closure_7.get()) {
-        obj = closure_1_16;
+        obj1 = closure_16;
       } else {
-        obj = { height: null };
-        obj[0] = obj.get();
+        obj1 = { height: null };
+        obj1.height = obj.get();
       }
-      return obj;
+      return obj1;
     }
   }
-  N.__closure = { expandedHeight: sharedValue1, EMPTY_STYLE: closure_16 };
+  N.__closure = { expandedHeight: sharedValue1, EMPTY_STYLE };
   N.__workletHash = 13643982891313;
-  N.__initData = closure_19;
-  const animatedStyle1 = obj6.useAnimatedStyle(N);
-  let obj7 = channel(first[10]);
+  N.__initData = __initData2;
+  const animatedStyle1 = channel(first[10]).useAnimatedStyle(N);
+  const obj7 = channel(first[10]);
   class L {
     constructor() {
       obj = { opacity: null };
-      obj2 = channel(closure_2[11]);
-      obj[0] = obj2.withSpring(closure_8.get(), closure_1_9);
+      obj2 = closure_0(closure_2[11]);
+      obj.opacity = obj2.withSpring(closure_8.get(), SPRING_CHANNEL_DETAILS);
       return obj;
     }
   }
-  obj = { withSpring: channel(first[11]).withSpring, gradient: sharedValue2, SPRING_CHANNEL_DETAILS: closure_9 };
-  L.__closure = obj;
+  const obj8 = channel(first[10]);
+  L.__closure = { withSpring: channel(first[11]).withSpring, gradient: sharedValue2, SPRING_CHANNEL_DETAILS };
   L.__workletHash = 12423301233362;
-  L.__initData = closure_20;
+  L.__initData = __initData3;
   const items = [sharedValue2, first1];
-  const animatedStyle2 = obj7.useAnimatedStyle(L);
+  const animatedStyle2 = obj8.useAnimatedStyle(L);
   const items1 = [sharedValue1];
-  callback = first1.useCallback((nativeEvent) => {
-    callback(nativeEvent.nativeEvent.lines.length > sharedValue2);
-    if (nativeEvent.nativeEvent.lines.length > sharedValue2) {
+  const callback = first1.useCallback((nativeEvent) => {
+    closure_3(nativeEvent.nativeEvent.lines.length > React6);
+    if (nativeEvent.nativeEvent.lines.length > React6) {
       if (!first1) {
-        let HIDDEN = closure_1_17.VISIBLE;
+        let HIDDEN = constants.VISIBLE;
       }
       tmp4(HIDDEN);
     }
-    HIDDEN = closure_1_17.HIDDEN;
+    HIDDEN = constants.HIDDEN;
   }, items);
   const items2 = [first, first1, sharedValue2];
   const callback1 = first1.useCallback((nativeEvent) => sharedValue1.set(nativeEvent.nativeEvent.layout.height), items1);
   const memo = first1.useMemo(() => first ? (() => {
-    callback(!closure_4);
-    const result = closure_8.set(closure_4 ? tmp2.VISIBLE : tmp2.HIDDEN);
+    closure_1_5(!first1);
+    const result = sharedValue2.set(first1 ? tmp2.VISIBLE : tmp2.HIDDEN);
   }) : undefined, items2);
   const items3 = [sharedValue];
   const items4 = [, ];
@@ -119,126 +110,120 @@ function GuildChannelDetailsTopic(channel) {
     const result = sharedValue.set(nativeEvent.nativeEvent.layout.height);
   }, items3);
   let memo1 = first1.useMemo(() => {
-    let obj = flag(first[12]);
-    obj = { channelId: channel.id, shouldNavigateBack: true, mentionPillOffsetY: closure_1_14 };
-    return obj.parseTopic("" + channel.topic.replace(/(\r\n|\n|\r)/gm, " "), true, obj);
+    const obj = MarkupUtilsDefault;
+    return obj.parseTopic("" + channel.topic.replace(/(\r\n|\n|\r)/gm, " "), true, { channelId: channel.id, shouldNavigateBack: true, mentionPillOffsetY: num });
   }, items4);
   const items5 = [, ];
   ({ id: arr6[0], topic: arr6[1] } = channel);
-  const memo2 = first1.useMemo(() => {
-    let obj = flag(first[12]);
-    obj = { channelId: channel.id, shouldNavigateBack: true, mentionPillOffsetY: closure_1_14 };
-    return obj.parseTopic(channel.topic, true, obj);
-  }, items5);
+  const memo2 = first1.useMemo(() => MarkupUtilsDefault.parseTopic(channel.topic, true, { channelId: channel.id, shouldNavigateBack: true, mentionPillOffsetY: num }), items5);
   const items6 = [channel.id, sharedValue, sharedValue1, flag];
   const effect = first1.useEffect(() => {
     const result = sharedValue.set(undefined);
     const result1 = sharedValue1.set(undefined);
-    callback2(flag);
+    closure_5(flag);
   }, items6);
   if (null == memo) {
     let PressableOpacity = closure_5;
   } else {
     PressableOpacity = tmp2(tmp3[13]).PressableOpacity;
   }
-  obj1 = { style: tmp.hidden, pointerEvents: "none", importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: callback2(tmp2(tmp3[14]).Text, obj2) };
-  obj2 = { variant: "heading-sm/normal", style: tmp.topicText, onTextLayout: callback, onLayout: callback1, children: memo2 };
-  const items7 = [callback2(closure_5, obj1), ];
-  obj3 = { style: items8, children: null };
-  items8 = [tmp.topic, animatedStyle];
-  obj4 = { style: animatedStyle1, children: null };
-  const obj5 = { onPress: memo, activeOpacity: 0.7, children: null };
-  obj6 = { pointerEvents: str, children: null };
-  obj7 = { color: "interactive-text-default", variant: "heading-sm/normal", onLayout: callback2, lineClamp: null, style: null, children: null };
+  const obj10 = { style: tmp.hidden, pointerEvents: "none", importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: closure_11(channel(first[14]).Text, { variant: "heading-sm/normal", style: tmp.topicText, onTextLayout: callback, onLayout: callback1, children: memo2 }) };
+  const items7 = [closure_11(closure_5, obj10), ];
+  const obj12 = { style: null, children: null };
+  const items8 = [tmp.topic, animatedStyle];
+  obj12.style = items8;
+  const obj13 = { style: animatedStyle1, children: null };
+  const obj14 = { onPress: memo, activeOpacity: 0.7, children: null };
+  const obj15 = { pointerEvents: str, children: null };
+  const obj16 = { color: "interactive-text-default", variant: "heading-sm/normal", onLayout: callback2, lineClamp: null, style: null, children: null };
   let tmp27;
   if (!first1) {
     tmp27 = sharedValue2;
   }
-  obj7[3] = tmp27;
+  obj16.lineClamp = tmp27;
   const items9 = [tmp.topicText, , ];
   if (first1) {
     expanded = tmp.expanded;
   }
   items9[1] = expanded;
   items9[2] = { textAlign: channel.textAlign };
-  obj7[4] = items9;
+  obj16.style = items9;
   if (first1) {
     memo1 = memo2;
   }
-  const obj8 = { children: null };
-  obj7[5] = memo1;
-  obj6[1] = callback2(channel(first[14]).Text, obj7);
-  obj5[2] = callback2(closure_5, obj6);
-  obj4[1] = callback2(PressableOpacity, obj5);
-  const items10 = [callback2(flag(first[10]).View, obj4), ];
+  const obj17 = { children: null };
+  obj16.children = memo1;
+  obj15.children = closure_11(channel(first[14]).Text, obj16);
+  obj14.children = closure_11(closure_5, obj15);
+  obj13.children = closure_11(PressableOpacity, obj14);
+  const items10 = [closure_11(flag(first[10]).View, obj13), ];
+  const obj18 = { style: null, pointerEvents: "none", children: closure_11(flag(first[15]), { style: tmp.gradient, start: VerticalGradient.START, end: VerticalGradient.END, colors: channelTopicGradientBackground }) };
   const items11 = [sharedValue.absoluteFill, animatedStyle2];
-  items10[1] = callback2(flag(first[10]).View, { style: items11, pointerEvents: "none", children: callback2(flag(first[15]), obj10) });
-  obj3[1] = items10;
-  items7[1] = closure_12(flag(first[10]).View, obj3);
-  obj8[0] = items7;
-  return closure_12(closure_13, obj8);
+  obj18.style = items11;
+  items10[1] = closure_11(flag(first[10]).View, obj18);
+  obj12.children = items10;
+  items7[1] = closure_12(flag(first[10]).View, obj12);
+  obj17.children = items7;
+  return closure_12(closure_13, obj17);
 }
 function PrivateChannelDetailsTopic(channel) {
   channel = channel.channel;
-  let obj = channel(504);
-  const items = [closure_7];
-  const stateFromStores = obj.useStateFromStores(items, () => {
-    const user = closure_1_7.getUser(channel.getRecipientId());
+  const items = [UserStore];
+  const stateFromStores = channel(504).useStateFromStores(items, () => {
+    const user = UserStore.getUser(channel.getRecipientId());
     let isProvisional;
     if (user != null) {
       isProvisional = user.isProvisional;
     }
     let userTag = null;
     if (!isProvisional) {
-      userTag = closure_1_1(closure_1_2[17]).getUserTag(user);
-      const obj = closure_1_1(closure_1_2[17]);
+      userTag = UserUtilsDefault.getUserTag(user);
     }
     return userTag;
   });
   let tmp4 = null;
   if (null != stateFromStores) {
-    obj = { variant: "heading-sm/normal", color: "interactive-text-default", style: null, children: null };
-    obj = { textAlign: null };
-    obj[0] = channel.textAlign;
-    obj[2] = obj;
-    obj[3] = stateFromStores;
-    tmp4 = callback2(channel(4556).Text, obj);
+    const obj2 = { variant: "heading-sm/normal", color: "interactive-text-default", style: null, children: null };
+    const obj3 = { textAlign: channel.textAlign };
+    obj2.style = obj3;
+    obj2.children = stateFromStores;
+    tmp4 = closure_11(channel(4570).Text, obj2);
   }
   return tmp4;
 }
 function GroupDMChannelDetailsTopic(channel) {
   channel = channel.channel;
-  let obj = channel(504);
-  const items = [closure_7];
-  const stateFromStores = obj.useStateFromStores(items, () => channel(closure_1_2[18]).getPrivateChannelUserTagsString(channel.recipients, closure_1_7));
+  const items = [UserStore];
+  const stateFromStores = channel(504).useStateFromStores(items, () => ChannelUtils.getPrivateChannelUserTagsString(channel.recipients, UserStore));
   let tmp4 = null;
   if (null != stateFromStores) {
-    obj = { variant: "heading-sm/normal", color: "interactive-text-default", style: null, children: null };
-    obj = { textAlign: null };
-    obj[0] = channel.textAlign;
-    obj[2] = obj;
-    obj[3] = stateFromStores;
-    tmp4 = callback2(channel(4556).Text, obj);
+    const obj2 = { variant: "heading-sm/normal", color: "interactive-text-default", style: null, children: null };
+    const obj3 = { textAlign: channel.textAlign };
+    obj2.style = obj3;
+    obj2.children = stateFromStores;
+    tmp4 = closure_11(channel(4570).Text, obj2);
   }
   return tmp4;
 }
-let c4 = importAllResult;
-({ View: c5, StyleSheet: closure_6 } = get_ActivityIndicator);
-({ CHANNEL_TOPIC_LINE_CLAMP: closure_8, SPRING_CHANNEL_DETAILS: c9 } = ChannelDetailsNavigatorScreens);
-({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
-let num = 2;
-if (set.isAndroid()) {
-  num = 4;
-}
-let closure_15 = createCacheKey.createStyles({ hidden: { flex: 1, flexGrow: 1, position: "absolute", opacity: 0 }, topic: { overflow: "hidden" }, gradient: { flex: 1, flexGrow: 1 }, expanded: { textAlign: "center" }, topicText: { paddingVertical: 5 } });
-let closure_16 = {};
-let closure_17 = { HIDDEN: 0, [0]: "HIDDEN", VISIBLE: 1, [1]: "VISIBLE" };
-let closure_18 = { code: "function ChannelDetailsTopicTsx1(){const{expandedHeight,truncatedHeight,EMPTY_STYLE,withSpring,expanded,SPRING_CHANNEL_DETAILS}=this.__closure;const _expandedHeight=expandedHeight.get();const _truncatedHeight=truncatedHeight.get();if(_truncatedHeight==null||_expandedHeight==null)return EMPTY_STYLE;return{height:withSpring(expanded?_expandedHeight:_truncatedHeight,SPRING_CHANNEL_DETAILS)};}" };
-let closure_19 = { code: "function ChannelDetailsTopicTsx2(){const{expandedHeight,EMPTY_STYLE}=this.__closure;if(expandedHeight.get()==null)return EMPTY_STYLE;return{height:expandedHeight.get()};}" };
-let closure_20 = { code: "function ChannelDetailsTopicTsx3(){const{withSpring,gradient,SPRING_CHANNEL_DETAILS}=this.__closure;return{opacity:withSpring(gradient.get(),SPRING_CHANNEL_DETAILS)};}" };
-let result = set.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsTopic.tsx");
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
+const ChannelDetailsConstants = fn(10948);
+({ CHANNEL_TOPIC_LINE_CLAMP: closure_8, SPRING_CHANNEL_DETAILS: closure_9 } = ChannelDetailsConstants);
+const VerticalGradient = fn(1074).VerticalGradient;
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
+const PlatformUtils = fn(1115);
+const createStyles = fn(4574);
+let closure_15 = createStyles.createStyles({ hidden: { flex: 1, flexGrow: 1, position: "absolute", opacity: 0 }, topic: { overflow: "hidden" }, gradient: { flex: 1, flexGrow: 1 }, expanded: { textAlign: "center" }, topicText: { paddingVertical: 5 } });
+const EMPTY_STYLE = {};
+const constants = { HIDDEN: 0, [0]: "HIDDEN", VISIBLE: 1, [1]: "VISIBLE" };
+const __initData = { code: "function ChannelDetailsTopicTsx1(){const{expandedHeight,truncatedHeight,EMPTY_STYLE,withSpring,expanded,SPRING_CHANNEL_DETAILS}=this.__closure;const _expandedHeight=expandedHeight.get();const _truncatedHeight=truncatedHeight.get();if(_truncatedHeight==null||_expandedHeight==null)return EMPTY_STYLE;return{height:withSpring(expanded?_expandedHeight:_truncatedHeight,SPRING_CHANNEL_DETAILS)};}" };
+const __initData2 = { code: "function ChannelDetailsTopicTsx2(){const{expandedHeight,EMPTY_STYLE}=this.__closure;if(expandedHeight.get()==null)return EMPTY_STYLE;return{height:expandedHeight.get()};}" };
+const __initData3 = { code: "function ChannelDetailsTopicTsx3(){const{withSpring,gradient,SPRING_CHANNEL_DETAILS}=this.__closure;return{opacity:withSpring(gradient.get(),SPRING_CHANNEL_DETAILS)};}" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsTopic.tsx");
 
-export default importAllResult.memo(function ChannelDetailsTopic(initialExpanded) {
+export default noop.memo(function ChannelDetailsTopic(initialExpanded) {
   ({ channel, textAlign } = initialExpanded);
   if (textAlign === undefined) {
     textAlign = "center";
@@ -248,35 +233,25 @@ export default importAllResult.memo(function ChannelDetailsTopic(initialExpanded
     flag = false;
   }
   if (channel.isDM()) {
-    let obj = { channel: null, textAlign: null };
-    obj[0] = channel;
-    obj[1] = textAlign;
-    let tmp3 = callback2(PrivateChannelDetailsTopic, obj);
+    const obj2 = { channel, textAlign };
+    let tmp3 = closure_1_11(PrivateChannelDetailsTopic, obj2);
   } else if (channel.isGroupDM()) {
-    obj = { channel: null, textAlign: null };
-    obj[0] = channel;
-    obj[1] = textAlign;
-    tmp3 = callback2(GroupDMChannelDetailsTopic, obj);
+    const obj3 = { channel, textAlign };
+    tmp3 = closure_1_11(GroupDMChannelDetailsTopic, obj3);
   } else {
     let tmp2 = null != channel.topic;
     if (tmp2) {
       tmp2 = "" !== channel.topic.trim();
-      const str = channel.topic;
     }
     if (tmp2) {
-      obj = { channel: null, textAlign: null, initialExpanded: null };
-      obj[0] = channel;
-      obj[1] = textAlign;
-      obj[2] = flag;
-      tmp3 = callback2(GuildChannelDetailsTopic, obj);
+      const obj = { channel, textAlign, initialExpanded: flag };
+      tmp3 = closure_1_11(GuildChannelDetailsTopic, obj);
     }
   }
   let tmp10 = null;
   if (null != tmp3) {
-    obj1 = { style: null, children: null };
-    obj1[0] = initialExpanded.containerStyle;
-    obj1[1] = tmp3;
-    tmp10 = callback2(closure_5, obj1);
+    const obj4 = { style: initialExpanded.containerStyle, children: tmp3 };
+    tmp10 = closure_1_11(hasOwnProperty, obj4);
   }
   return tmp10;
 });

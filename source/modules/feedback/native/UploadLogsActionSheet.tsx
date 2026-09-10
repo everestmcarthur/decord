@@ -1,81 +1,78 @@
-// Module ID: 17359
-// Function ID: 17360
+// Module ID: 17390
+// Function ID: 17391
 // Name: UploadLogsActionSheet
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 7150, 7149, 1114, 4556, 4975, 10193, 1242, 4527, 2]
+// Dependencies: [19, 17, 1074, 21, 4574, 576, 7164, 7163, 1114, 4570, 4989, 10220, 1242, 4541, 2]
 // Exports: default
 
-// Module 17359 (UploadLogsActionSheet)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import Button from "Button" /* 4975 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 7149 */;
-import Background from "Background" /* 7150 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17390 (UploadLogsActionSheet)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7163 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7164 */;
+import DebugUploadManager from "DebugUploadManager" /* 10220 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ AnalyticEvents: c4, DebugLogCategory: c5 } = ME);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, body: null, buttonSpacer: null };
-createCacheKey = { padding: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { textAlign: "center", marginBottom: ThemesDefault.space.PX_16 };
-let obj1 = { textAlign: "center", marginBottom: ThemesDefault.space.PX_16 };
-createCacheKey[2] = { height: ThemesDefault.space.PX_8 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { height: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/feedback/native/UploadLogsActionSheet.tsx");
+const ActionSheetActionCreatorsDefault = tmp3(4541);
+require = fn;
+const View = fn(17).View;
+const Constants = fn(1074);
+({ AnalyticEvents: closure_4, DebugLogCategory: hasOwnProperty } = Constants);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { padding: nativeDefault.space.PX_16 }, body: null, buttonSpacer: null };
+let obj3 = { padding: nativeDefault.space.PX_16 };
+obj2.body = { textAlign: "center", marginBottom: nativeDefault.space.PX_16 };
+let obj4 = { textAlign: "center", marginBottom: nativeDefault.space.PX_16 };
+obj2.buttonSpacer = { height: nativeDefault.space.PX_8 };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/feedback/native/UploadLogsActionSheet.tsx");
 
 export default function UploadLogsActionSheet(arg0) {
   ({ mediaSessionId: require, rtcConnectionId: importDefault } = arg0);
-  let tmp = callback3();
+  const tmp = closure_8();
   let obj = { header: null, children: null };
-  obj = { title: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.KTjjrG);
-  obj[0] = callback(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj);
-  obj = { style: tmp.container, children: null };
-  obj1 = { variant: "text-sm/normal", color: "text-muted", style: tmp.body, children: null };
-  const intl2 = getSystemLocale.intl;
-  obj1[3] = intl2.string(getSystemLocale.t["ZvRR/t"]);
-  const items = [callback(Text.Text, obj1), , , ];
-  let obj2 = { text: null, onPress: null };
-  const intl3 = getSystemLocale.intl;
-  obj2[0] = intl3.string(getSystemLocale.t.EbwFfR);
-  obj2[1] = function onPress() {
-    let obj = closure_1_0(closure_1_2[11]);
-    obj.uploadDebugLogFiles(closure_1_5.RTC);
-    let tmp4 = closure_0;
-    if (closure_0 == null) {
+  let obj2 = { title: null };
+  const intl = util.intl;
+  obj2.title = intl.string(util.t.KTjjrG);
+  obj.header = closure_6(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
+  let obj3 = { style: tmp.container, children: null };
+  const obj4 = { variant: "text-sm/normal", color: "text-muted", style: tmp.body, children: null };
+  const intl2 = util.intl;
+  obj4.children = intl2.string(util.t["ZvRR/t"]);
+  const items = [closure_6(Text_Text.Text, obj4), , , ];
+  const obj5 = { text: null, onPress: null };
+  const intl3 = util.intl;
+  obj5.text = intl3.string(util.t.EbwFfR);
+  obj5.onPress = function onPress() {
+    DebugUploadManager.uploadDebugLogFiles(constants2.RTC);
+    let tmp4 = closure_1_0;
+    if (closure_1_0 == null) {
       tmp4 = null;
     }
-    obj = { media_session_id: tmp4, rtc_connection_id: null };
-    let tmp5 = closure_1;
-    if (closure_1 == null) {
+    const obj3 = { media_session_id: tmp4, rtc_connection_id: null };
+    let tmp5 = closure_1_1;
+    if (closure_1_1 == null) {
       tmp5 = null;
     }
-    obj[1] = tmp5;
-    closure_1_1(closure_1_2[12]).track(closure_1_4.DEBUG_LOG_UPLOADED, obj);
-    const obj2 = closure_1_1(closure_1_2[12]);
-    const tmp = closure_1_2;
-    const tmp3 = closure_1_1;
-    closure_1_1(closure_1_2[13]).hideActionSheet();
+    obj3.rtc_connection_id = tmp5;
+    AnalyticsUtilsDefault.track(constants.DEBUG_LOG_UPLOADED, obj3);
+    ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  items[1] = callback(Button.Button, obj2);
-  items[2] = callback(View, { style: tmp.buttonSpacer });
-  const obj4 = { text: null, variant: "secondary", onPress: null };
-  const intl4 = getSystemLocale.intl;
-  obj4[0] = intl4.string(getSystemLocale.t["ETE/oC"]);
-  obj4[2] = function onPress() {
-    return callback(table[13]).hideActionSheet();
+  items[1] = closure_6(components_Button_Button.Button, obj5);
+  items[2] = closure_6(View, { style: tmp.buttonSpacer });
+  const obj7 = { text: null, variant: "secondary", onPress: null };
+  const intl4 = util.intl;
+  obj7.text = intl4.string(util.t["ETE/oC"]);
+  obj7.onPress = function onPress() {
+    return ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  items[3] = callback(Button.Button, obj4);
-  obj[1] = items;
-  obj[1] = callback2(View, obj);
-  return callback(Background.BottomSheet, obj);
+  items[3] = closure_6(components_Button_Button.Button, obj7);
+  obj3.children = items;
+  obj.children = closure_7(View, obj3);
+  return closure_6(Sheet_BottomSheet.BottomSheet, obj);
 };

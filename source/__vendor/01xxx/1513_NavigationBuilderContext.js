@@ -4,11 +4,11 @@
 // Dependencies: [19]
 
 // Module 1513 (NavigationBuilderContext)
-import noopAll from "noop" /* 19 */;
+import noop from "module_19" /* 19 */;
 
 
-export const NavigationBuilderContext = noopAll.createContext({
-  onDispatchAction(target, arg1) {
+export const NavigationBuilderContext = noop.createContext({
+  onDispatchAction() {
 
   },
   onEmitEvent() {
@@ -21,11 +21,11 @@ export const NavigationBuilderContext = noopAll.createContext({
     return false;
   },
   scheduleUpdate() {
-    error = new Error("Couldn't find a context for scheduling updates.");
+    const error = new Error("Couldn't find a context for scheduling updates.");
     throw error;
   },
   flushUpdates() {
-    error = new Error("Couldn't find a context for flushing updates.");
+    const error = new Error("Couldn't find a context for flushing updates.");
     throw error;
   }
 });

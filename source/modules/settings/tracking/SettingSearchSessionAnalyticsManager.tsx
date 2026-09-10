@@ -1,14 +1,17 @@
-// Module ID: 6996
-// Function ID: 6997
-// Name: getSearchSessionId
-// Dependencies: [1256, 6997, 2]
+// Module ID: 7010
+// Function ID: 7011
+// Name: SettingSearchSessionAnalyticsManager
+// Dependencies: [1256, 7011, 2]
 
-// Module 6996 (getSearchSessionId)
-import set from "set" /* 2 */;
+// Module 7010 (SettingSearchSessionAnalyticsManager)
 import v1 from "v1" /* 1256 */;
-import trackSettingSearchInputFocused from "trackSettingSearchInputFocused" /* 6997 */;
+import Tracking from "Tracking" /* 7011 */;
+import size from "module_2" /* 2 */;
 
 class SettingSearchSessionAnalyticsManager {
+  constructor() {
+    return Object.assign({ searchSessionId: null, searchSessionStartTime: null, isQueryEnteredTracked: false });
+  }
 }
 const prototype = SettingSearchSessionAnalyticsManager.prototype;
 prototype["getSearchSessionId"] = function getSearchSessionId() {
@@ -24,24 +27,22 @@ prototype["initialize"] = function initialize() {
 };
 prototype["maybeTrackQueryEntered"] = function maybeTrackQueryEntered() {
   if (!this.isQueryEnteredTracked) {
-    const result = trackSettingSearchInputFocused.trackSettingSearchQueryEntered();
+    const result = Tracking.trackSettingSearchQueryEntered();
     tmp.isQueryEnteredTracked = true;
-    const obj = trackSettingSearchInputFocused;
   }
 };
 prototype["terminate"] = function terminate() {
   const self = this;
   if (tmp) {
-    let obj = trackSettingSearchInputFocused;
-    obj = { searchSessionDuration: null };
+    const obj2 = { searchSessionDuration: null };
     const _Date = Date;
-    obj[0] = Date.now() - self.searchSessionStartTime;
-    const result = obj.trackSettingSearchClosed(obj);
+    obj2.searchSessionDuration = Date.now() - self.searchSessionStartTime;
+    const result = Tracking.trackSettingSearchClosed(obj2);
     self.searchSessionId = null;
     self.searchSessionStartTime = null;
     self.isQueryEnteredTracked = false;
   }
 };
-let result = set.fileFinishedImporting("modules/settings/tracking/SettingSearchSessionAnalyticsManager.tsx");
+let result = size.fileFinishedImporting("modules/settings/tracking/SettingSearchSessionAnalyticsManager.tsx");
 
-export default Object.create(SettingSearchSessionAnalyticsManager.prototype);
+export default Object.assign({ searchSessionId: null, searchSessionStartTime: null, isQueryEnteredTracked: false });

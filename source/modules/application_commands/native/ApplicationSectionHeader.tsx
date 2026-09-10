@@ -1,46 +1,44 @@
-// Module ID: 12400
-// Function ID: 12401
+// Module ID: 12426
+// Function ID: 12427
 // Name: ApplicationSectionHeader
-// Dependencies: [19, 17, 2021, 21, 4560, 576, 504, 12235, 1114, 5587, 4556, 2]
+// Dependencies: [19, 17, 2021, 21, 4574, 576, 504, 12261, 1114, 5601, 4570, 2]
 // Exports: default
 
-// Module 12400 (ApplicationSectionHeader)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "trackCommunicationDisabled" /* 2021 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12426 (ApplicationSectionHeader)
+import nativeDefault from "native" /* 576 */;
+import noop from "module_19" /* 19 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 
-const require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { applicationHeaderWrapper: null, applicationIcon: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", height: 32, backgroundColor: ThemesDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, paddingHorizontal: 16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { width: 16, height: 16, borderRadius: ThemesDefault.radii.sm, marginRight: 8 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { width: 16, height: 16, borderRadius: ThemesDefault.radii.sm, marginRight: 8 };
-const result = require("set").fileFinishedImporting("modules/application_commands/native/ApplicationSectionHeader.tsx");
+const require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+const obj2 = { applicationHeaderWrapper: { flexDirection: "row", alignItems: "center", height: 32, backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, paddingHorizontal: 16 }, applicationIcon: null };
+let size = { width: 16, height: 16, borderRadius: nativeDefault.radii.sm, marginRight: 8 };
+obj2.applicationIcon = size;
+let closure_7 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/application_commands/native/ApplicationSectionHeader.tsx");
 
 export default function ApplicationSectionHeader(section) {
   section = section.section;
   const guildId = section.guildId;
-  const tmp = callback2();
-  let obj = section(504);
-  const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const tmp = closure_7();
+  const items = [GuildMemberStore];
+  const stateFromStores = section(504).useStateFromStores(items, () => {
     if (null != guildId) {
       let botId;
       if (section != null) {
         botId = tmp2.botId;
       }
       if (null != botId) {
-        return closure_1_4.getMember(tmp, tmp2.botId);
+        return GuildMemberStore.getMember(tmp, tmp2.botId);
       }
     }
   });
-  const applicationCommandsIconSource = section(12235).getApplicationCommandsIconSource(section, stateFromStores);
+  const obj = section(504);
+  const applicationCommandsIconSource = section(12261).getApplicationCommandsIconSource(section, stateFromStores);
   let nick;
   if (stateFromStores != null) {
     nick = stateFromStores.nick;
@@ -50,18 +48,16 @@ export default function ApplicationSectionHeader(section) {
   } else if (section != null) {
     name = section.name;
   }
-  obj = { style: tmp.applicationHeaderWrapper, accessibilityLabel: null, children: null };
+  const obj3 = { style: tmp.applicationHeaderWrapper, accessibilityLabel: null, children: null };
   const intl = tmp2(1114).intl;
-  obj[1] = intl.formatToPlainString(section(1114).t["Ocw/sM"], { applicationName: name });
+  obj3.accessibilityLabel = intl.formatToPlainString(section(1114).t["Ocw/sM"], { applicationName: name });
   let tmp9 = null != applicationCommandsIconSource;
   if (tmp9) {
-    obj = { style: null, source: null };
-    obj[0] = tmp.applicationIcon;
-    obj[1] = applicationCommandsIconSource;
-    tmp9 = callback(guildId(5587), obj);
+    const obj4 = { style: tmp.applicationIcon, source: applicationCommandsIconSource };
+    tmp9 = closure_5(guildId(5601), obj4);
   }
-  const items1 = [tmp9, callback(section(4556).Text, { variant: "eyebrow", color: "interactive-text-default", children: name })];
-  obj[2] = items1;
-  return closure_6(View, obj);
+  const items1 = [tmp9, closure_5(section(4570).Text, { variant: "eyebrow", color: "interactive-text-default", children: name })];
+  obj3.children = items1;
+  return closure_6(View, obj3);
 };
 export const APPLICATION_SECTION_HEADER_HEIGHT = 32;

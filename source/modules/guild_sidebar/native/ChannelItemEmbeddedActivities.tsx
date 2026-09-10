@@ -1,29 +1,26 @@
-// Module ID: 16235
-// Function ID: 16236
+// Module ID: 16265
+// Function ID: 16266
 // Name: ChannelItemEmbeddedActivities
-// Dependencies: [19, 17, 21, 4560, 576, 7172, 4556, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 7186, 4570, 2]
 // Exports: default
 
-// Module 16235 (ChannelItemEmbeddedActivities)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Text from "Text" /* 4556 */;
-import GameIcon from "GameIcon" /* 7172 */;
-import GameIconDefault from "GameIcon" /* 7172 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16265 (ChannelItemEmbeddedActivities)
+import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import GameIcon from "GameIcon" /* 7186 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { overflow: { lineHeight: 16, textAlign: "center", textAlignVertical: "center", padding: 4 }, overflowContainer: null, container: null, modeMuted: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs, display: "flex", alignItems: "center", justifyContent: "center" };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { display: "flex", flexDirection: "row" };
-createCacheKey[3] = { opacity: 0.3 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/ChannelItemEmbeddedActivities.tsx");
+const GameIconDefault = GameIcon;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { overflow: { lineHeight: 16, textAlign: "center", textAlignVertical: "center", padding: 4 }, overflowContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, display: "flex", alignItems: "center", justifyContent: "center" }, container: { display: "flex", flexDirection: "row" }, modeMuted: { opacity: 0.3 } };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_sidebar/native/ChannelItemEmbeddedActivities.tsx");
 
 export default function ChannelItemEmbeddedActivities(muted) {
   ({ embeddedApps, size } = muted);
@@ -31,50 +28,39 @@ export default function ChannelItemEmbeddedActivities(muted) {
     size = GameIcon.GameIconSizes.SIZE_24;
   }
   let modeMuted = muted.muted;
-  const tmp3 = callback2();
+  const tmp3 = closure_6();
   if (embeddedApps.length <= 0) {
     return null;
   } else if (1 === embeddedApps.length) {
-    let obj = { game: null, size: null, style: null };
-    obj[0] = embeddedApps[0].application;
-    obj[1] = size;
+    const obj2 = { game: embeddedApps[0].application, size, style: null };
     if (modeMuted) {
       modeMuted = tmp3.modeMuted;
     }
-    obj[2] = modeMuted;
-    return callback(GameIconDefault, obj);
+    obj2.style = modeMuted;
+    return React4(GameIconDefault, obj2);
   } else {
     const diff = embeddedApps.length - 1;
     const tmp13 = GameIcon.GameIconImageSize[size];
-    obj = { style: null, children: null };
-    obj[0] = tmp3.container;
-    obj1 = { game: null, size: null, style: null };
-    obj1[0] = embeddedApps[0].application;
-    obj1[1] = size;
-    obj1[2] = { marginRight: 4 };
-    const items = [callback(GameIconDefault, obj1), ];
+    const obj3 = { style: tmp3.container, children: null };
+    const obj4 = { game: embeddedApps[0].application, size, style: { marginRight: 4 } };
+    const items = [React4(GameIconDefault, obj4), ];
     if (2 === embeddedApps.length) {
-      obj = { game: null, size: null };
-      obj[0] = embeddedApps[1].application;
-      obj[1] = size;
+      const obj = { game: embeddedApps[1].application, size };
       let tmp16Result = tmp16(GameIconDefault, obj);
     } else {
-      const obj2 = { style: null, children: null };
+      const obj5 = { style: null, children: null };
       const items1 = [tmp3.overflowContainer, ];
-      const obj3 = { height: null, minWidth: null };
-      obj3[0] = tmp13;
-      obj3[1] = tmp13;
-      items1[1] = obj3;
-      obj2[0] = items1;
-      const obj4 = { style: null, variant: "text-xs/bold", children: null };
-      obj4[0] = tmp3.overflow;
+      const obj6 = { height: tmp13, minWidth: tmp13 };
+      items1[1] = obj6;
+      obj5.style = items1;
+      const obj7 = { style: tmp3.overflow, variant: "text-xs/bold", children: null };
       const _HermesInternal = HermesInternal;
-      obj4[2] = "+" + diff;
-      obj2[1] = tmp16(Text.Text, obj4);
-      tmp16Result = tmp16(tmp15, obj2);
+      obj7.children = "+" + diff;
+      obj5.children = tmp16(Text_Text.Text, obj7);
+      tmp16Result = tmp16(tmp15, obj5);
     }
     items[1] = tmp16Result;
-    obj[1] = items;
-    return closure_5(View, obj);
+    obj3.children = items;
+    return hasOwnProperty(View, obj3);
   }
 };

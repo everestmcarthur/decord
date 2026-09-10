@@ -1,39 +1,28 @@
-// Module ID: 16535
-// Function ID: 16536
-// Name: Header
-// Dependencies: [19, 17, 1957, 7864, 1074, 1964, 21, 4560, 576, 1484, 1611, 7872, 504, 1982, 9291, 1114, 4417, 8671, 7865, 7156, 13267, 7875, 11471, 5007, 7222, 4495, 4420, 13278, 7247, 1178, 5125, 16536, 16553, 16571, 16588, 16616, 16622, 11345, 16626, 2]
+// Module ID: 16566
+// Function ID: 16567
+// Name: StandaloneChannelScreen
+// Dependencies: [19, 17, 1957, 7878, 1074, 1964, 21, 4574, 576, 1484, 1611, 7886, 504, 1982, 9318, 1114, 4431, 8699, 7879, 7170, 13290, 7889, 11498, 5021, 7236, 4509, 4434, 13301, 7258, 1178, 5139, 16567, 16584, 16602, 16619, 16648, 16654, 11372, 16658, 2]
 
-// Module 16535 (Header)
-import ThemesDefault from "Themes" /* 576 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import MIN_HEADER_HEIGHT from "MIN_HEADER_HEIGHT" /* 7864 */;
-import ME from "ME" /* 1074 */;
-import { StaticChannelRoute } from "set" /* 1964 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16566 (StandaloneChannelScreen)
+import nativeDefault from "native" /* 576 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4431 */;
+import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 7879 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-const require = arg1;
+require = fn;
 function Header(channelId) {
   channelId = channelId.channelId;
   ({ screenIndex, guildId } = channelId);
   const isNavigationScreen = channelId.isNavigationScreen;
   const frame = channelId.frame;
   const showCreateThread = channelId.showCreateThread;
-  let navigation;
-  closure_5 = undefined;
-  let top;
-  let gradientTop;
-  let callback;
-  let stateFromStores;
+  const navigation = channelId(isNavigationScreen[9]).useNavigation();
+  const tmp4 = closure_14();
+  const headerWrapper = tmp4;
+  const top = guildId(isNavigationScreen[10])().top;
   let obj = channelId(isNavigationScreen[9]);
-  navigation = obj.useNavigation();
-  const tmp4 = callback3();
-  closure_5 = tmp4;
-  top = guildId(isNavigationScreen[10])().top;
-  obj1 = channelId(isNavigationScreen[11]);
-  gradientTop = obj1.useGradientTop();
+  const gradientTop = channelId(isNavigationScreen[11]).useGradientTop();
   let items = [, , , , , , ];
   ({ headerWrapper: arr[0], headerWithFadingFrame: arr[1], splitDivider: arr[2], splitDividerTop: arr[3] } = tmp4);
   items[4] = gradientTop;
@@ -41,7 +30,7 @@ function Header(channelId) {
   items[6] = top;
   const items1 = [navigation, isNavigationScreen];
   const memo = frame.useMemo(() => {
-    const items = [channel.headerWrapper, gradientTop, , , , ];
+    const items = [headerWrapper.headerWrapper, gradientTop, , , , ];
     let prop;
     if (null != frame) {
       prop = tmp.headerWithFadingFrame;
@@ -58,29 +47,26 @@ function Header(channelId) {
     }
     items[4] = splitDividerTop;
     if (null != frame) {
-      let obj = { marginTop: null, minHeight: null };
-      obj[0] = top;
-      obj[1] = top;
+      const obj2 = { marginTop: top, minHeight };
+      let obj = obj2;
     } else {
-      obj = { paddingTop: null, minHeight: null };
-      obj[0] = top;
-      obj[1] = top + top;
+      obj = { paddingTop: top, minHeight: top + minHeight };
     }
     items[5] = obj;
     return items;
   }, items);
-  callback = frame.useCallback(() => {
+  const onPress = frame.useCallback(() => {
     if (isNavigationScreen) {
       navigation.goBack();
     }
   }, items1);
-  let obj2 = channelId(isNavigationScreen[12]);
-  const items2 = [closure_5];
+  let obj2 = channelId(isNavigationScreen[11]);
+  const items2 = [headerWrapper];
   const items3 = [guildId, channelId];
-  stateFromStores = obj2.useStateFromStores(items2, () => {
+  const stateFromStores = channelId(isNavigationScreen[12]).useStateFromStores(items2, () => {
     let tmp = guildId;
     if (obj.isFavoritesGuildId(guildId)) {
-      channel = channel.getChannel(channelId);
+      const channel = ChannelStore.getChannel(channelId);
       let guild_id;
       if (channel != null) {
         guild_id = channel.guild_id;
@@ -90,119 +76,123 @@ function Header(channelId) {
     return tmp;
   }, items3);
   const items4 = [stateFromStores];
-  obj = { IconComponent: null, label: null, action: null };
+  const obj4 = { IconComponent: null, label: null, action: null };
   const memo1 = frame.useMemo(() => {
     let tmp2 = null != stateFromStores;
     if (tmp2) {
-      tmp2 = tmp !== callback;
+      tmp2 = tmp !== React6;
     }
     return tmp2;
   }, items4);
-  obj[0] = channelId(isNavigationScreen[14]).ServerIcon;
+  obj4.IconComponent = channelId(isNavigationScreen[14]).ServerIcon;
   const intl = channelId(isNavigationScreen[15]).intl;
-  obj[1] = intl.string(channelId(isNavigationScreen[15]).t.WYj55Y);
-  obj[2] = function action() {
-    let obj = channelId(isNavigationScreen[16]);
-    obj = { screen: "guilds", guildId: stateFromStores, channelId, resetRoot: false, drawerOpen: false };
-    obj.navigateToRootTab(obj);
+  obj4.label = intl.string(channelId(isNavigationScreen[15]).t.WYj55Y);
+  obj4.action = function action() {
+    NavigationRouteUtils.navigateToRootTab({ screen: "guilds", guildId: stateFromStores, channelId, resetRoot: false, drawerOpen: false });
   };
-  const items5 = [obj];
+  const items5 = [obj4];
   if (memo1) {
-    obj = { triggerOnLongPress: true, align: "below", items: null, children: null };
-    obj[2] = items5;
-    obj[3] = function children(ref) {
-      const merged = Object.assign(ref, Object.create(null));
-      const obj = { ref: ref.ref };
-      const merged1 = Object.assign(merged);
-      obj.onPress = callback;
-      return closure_1_11(channelId(isNavigationScreen[18]).PressableNavigatorBackIcon, obj);
+    const obj5 = {
+      triggerOnLongPress: true,
+      align: "below",
+      items: items5,
+      children(ref) {
+          const merged = Object.assign(ref, Object.assign({ ref: 0 }));
+          const obj = { ref: ref.ref };
+          const merged1 = Object.assign(merged);
+          obj.onPress = onPress;
+          return closure_2_11(PressableNavigatorBackIcon.PressableNavigatorBackIcon, obj);
+        }
     };
-    let tmp13Result = tmp11(tmp(tmp2[17]).ContextMenu, obj);
+    let tmp13Result = tmp11(tmp(tmp2[17]).ContextMenu, obj5);
     let tmp13 = tmp11;
   } else {
-    obj1 = { onPress: null };
-    obj1[0] = callback;
-    tmp13Result = tmp11(tmp(tmp2[18]).PressableNavigatorBackIcon, obj1);
+    const obj6 = { onPress };
+    tmp13Result = tmp11(tmp(tmp2[18]).PressableNavigatorBackIcon, obj6);
     tmp13 = tmp11;
   }
-  obj2 = { style: memo, children: null };
+  const obj7 = { style: memo, children: null };
   const items6 = [tmp13(navigation, { style: tmp4.headerBottomBorder }), ];
   if (!channelId.isBackEnabled) {
-    const obj4 = { style: null };
-    obj4[0] = tmp4.spacer;
-    tmp13Result = tmp13(tmp16, obj4);
+    const obj9 = { style: tmp4.spacer };
+    tmp13Result = tmp13(tmp16, obj9);
   }
-  const obj5 = { children: null };
-  const obj6 = { children: null };
+  const obj10 = { children: null };
+  const obj11 = { children: null };
   const items7 = [tmp13Result, tmp13(guildId(isNavigationScreen[20]), { channelId, isNavigationScreen, screenIndex, showCreateThread }), tmp13(guildId(isNavigationScreen[21]), { containerStyle: tmp4.actions, channelId, screenIndex, showCreateThread })];
-  obj6[0] = items7;
-  items6[1] = closure_12(channelId(isNavigationScreen[19]).LayerScope, obj6);
-  obj2[1] = items6;
-  const items8 = [closure_12(navigation, obj2), frame];
-  obj5[0] = items8;
-  return closure_12(closure_13, obj5);
+  obj11.children = items7;
+  items6[1] = closure_12(channelId(isNavigationScreen[19]).LayerScope, obj11);
+  obj7.children = items6;
+  const items8 = [closure_12(navigation, obj7), frame];
+  obj10.children = items8;
+  return closure_12(closure_13, obj10);
 }
-let c3 = importAllResult;
-({ View: c4, StyleSheet } = get_ActivityIndicator);
-({ MIDNIGHT_BORDER_WIDTH, MIN_HEADER_HEIGHT: closure_6 } = MIN_HEADER_HEIGHT);
-({ EMPTY_STRING_SNOWFLAKE_ID: error, ME: closure_8, ThemeTypes: c9 } = ME);
-({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
-let obj = { container: { flex: 1 }, midnightContainerBorder: null, contentContainer: null, containerEmpty: null, headerWrapper: null, headerBottomBorder: null, headerWithFadingFrame: null, splitDivider: null, splitDividerTop: null, actions: null, spacer: null };
-obj = { borderLeftWidth: MIDNIGHT_BORDER_WIDTH, borderLeftColor: ThemesDefault.colors.APP_FRAME_BORDER, borderTopWidth: MIDNIGHT_BORDER_WIDTH, borderTopColor: "transparent" };
-obj[1] = obj;
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.STANDALONE_CHANNEL_CONTENT_BACKGROUND };
-obj[2] = createCacheKey;
-obj[3] = { backgroundColor: ThemesDefault.colors.STANDALONE_CHANNEL_CONTENT_BACKGROUND };
-let obj2 = { backgroundColor: ThemesDefault.colors.STANDALONE_CHANNEL_CONTENT_BACKGROUND };
-obj[4] = { zIndex: 1, backgroundColor: ThemesDefault.colors.STANDALONE_CHANNEL_CONTENT_BACKGROUND, flexDirection: "row", alignItems: "center", flexShrink: 0 };
-let obj4 = {};
+get_ActivityIndicator = fn(17);
+({ View: closure_4, StyleSheet } = get_ActivityIndicator);
+const MainTabsV2Constants = fn(7878);
+({ MIDNIGHT_BORDER_WIDTH, MIN_HEADER_HEIGHT: metroRequire } = MainTabsV2Constants);
+const Constants = fn(1074);
+({ EMPTY_STRING_SNOWFLAKE_ID: closure_7, ME: closure_8, ThemeTypes: closure_9 } = Constants);
+const StaticChannelRoute = fn(1964).StaticChannelRoute;
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
+const createStyles = fn(4574);
+let obj = { container: { flex: 1 }, midnightContainerBorder: { borderLeftWidth: MIDNIGHT_BORDER_WIDTH, borderLeftColor: nativeDefault.colors.APP_FRAME_BORDER, borderTopWidth: MIDNIGHT_BORDER_WIDTH, borderTopColor: "transparent" }, contentContainer: null, containerEmpty: null, headerWrapper: null, headerBottomBorder: null, headerWithFadingFrame: null, splitDivider: null, splitDividerTop: null, actions: null, spacer: null };
+let obj3 = { borderLeftWidth: MIDNIGHT_BORDER_WIDTH, borderLeftColor: nativeDefault.colors.APP_FRAME_BORDER, borderTopWidth: MIDNIGHT_BORDER_WIDTH, borderTopColor: "transparent" };
+obj.contentContainer = { flex: 1, backgroundColor: nativeDefault.colors.STANDALONE_CHANNEL_CONTENT_BACKGROUND };
+let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.STANDALONE_CHANNEL_CONTENT_BACKGROUND };
+obj.containerEmpty = { backgroundColor: nativeDefault.colors.STANDALONE_CHANNEL_CONTENT_BACKGROUND };
+let obj5 = { backgroundColor: nativeDefault.colors.STANDALONE_CHANNEL_CONTENT_BACKGROUND };
+obj.headerWrapper = { zIndex: 1, backgroundColor: nativeDefault.colors.STANDALONE_CHANNEL_CONTENT_BACKGROUND, flexDirection: "row", alignItems: "center", flexShrink: 0 };
+let obj7 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-obj4.top = undefined;
-obj4.height = 1;
-obj4.backgroundColor = ThemesDefault.colors.STANDALONE_CHANNEL_HEADER_BORDER;
-obj[5] = obj4;
-let obj3 = { zIndex: 1, backgroundColor: ThemesDefault.colors.STANDALONE_CHANNEL_CONTENT_BACKGROUND, flexDirection: "row", alignItems: "center", flexShrink: 0 };
-obj[6] = { borderTopLeftRadius: ThemesDefault.modules.mobile.CHANNEL_DRAWER_CORNER_RADIUS };
-let obj5 = { borderTopLeftRadius: ThemesDefault.modules.mobile.CHANNEL_DRAWER_CORNER_RADIUS };
-obj[7] = { borderLeftWidth: ThemesDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH, borderLeftColor: ThemesDefault.colors.APP_FRAME_BORDER };
-let obj6 = { borderLeftWidth: ThemesDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH, borderLeftColor: ThemesDefault.colors.APP_FRAME_BORDER };
-obj[8] = { borderTopWidth: ThemesDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH, borderTopColor: ThemesDefault.colors.APP_FRAME_BORDER };
-let obj7 = { borderTopWidth: ThemesDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH, borderTopColor: ThemesDefault.colors.APP_FRAME_BORDER };
-obj[9] = { marginRight: ThemesDefault.space.PX_16 };
-let obj8 = { marginRight: ThemesDefault.space.PX_16 };
-obj[10] = { width: ThemesDefault.space.PX_16 };
-let closure_14 = createCacheKey.createStyles(obj);
-let obj9 = { width: ThemesDefault.space.PX_16 };
-const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
+obj7.top = undefined;
+obj7.height = 1;
+obj7.backgroundColor = nativeDefault.colors.STANDALONE_CHANNEL_HEADER_BORDER;
+obj.headerBottomBorder = obj7;
+let obj6 = { zIndex: 1, backgroundColor: nativeDefault.colors.STANDALONE_CHANNEL_CONTENT_BACKGROUND, flexDirection: "row", alignItems: "center", flexShrink: 0 };
+obj.headerWithFadingFrame = { borderTopLeftRadius: nativeDefault.modules.mobile.CHANNEL_DRAWER_CORNER_RADIUS };
+let obj8 = { borderTopLeftRadius: nativeDefault.modules.mobile.CHANNEL_DRAWER_CORNER_RADIUS };
+obj.splitDivider = { borderLeftWidth: nativeDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH, borderLeftColor: nativeDefault.colors.APP_FRAME_BORDER };
+let obj9 = { borderLeftWidth: nativeDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH, borderLeftColor: nativeDefault.colors.APP_FRAME_BORDER };
+obj.splitDividerTop = { borderTopWidth: nativeDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH, borderTopColor: nativeDefault.colors.APP_FRAME_BORDER };
+let obj10 = { borderTopWidth: nativeDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH, borderTopColor: nativeDefault.colors.APP_FRAME_BORDER };
+obj.actions = { marginRight: nativeDefault.space.PX_16 };
+let obj11 = { marginRight: nativeDefault.space.PX_16 };
+obj.spacer = { width: nativeDefault.space.PX_16 };
+let closure_14 = createStyles.createStyles(obj);
+let obj12 = { width: nativeDefault.space.PX_16 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/StandaloneChannelScreen.tsx");
+
+export default noop.memo(function StandaloneChannelScreen(arg0) {
   ({ guildId, channelId } = arg0);
   ({ isNavigationScreen, frame } = arg0);
   ({ showCreateThread, screenIndex } = arg0);
-  dependencyMap = undefined;
-  importAllResult = undefined;
   closure_4 = undefined;
   let isChatBesideChannelList;
   closure_6 = undefined;
-  const tmp = callback3();
+  const tmp = closure_14();
   dependencyMap = tmp;
-  let obj = channelId(1484);
-  importAllResult = obj.useNavigation();
-  obj1 = channelId(11471);
-  const isSwipeToMemberListEnabled = obj1.useIsSwipeToMemberListEnabled();
-  const needSubscriptionToAccess = frame(5007)(channelId).needSubscriptionToAccess;
-  let obj2 = channelId(7222);
+  noop = channelId(1484).useNavigation();
+  const obj = channelId(1484);
+  const isSwipeToMemberListEnabled = channelId(11498).useIsSwipeToMemberListEnabled();
+  const needSubscriptionToAccess = frame(5021)(channelId).needSubscriptionToAccess;
+  const obj2 = channelId(11498);
   let tmp6 = guildId;
   if (guildId == null) {
     tmp6 = closure_7;
   }
-  const canSeeOnboardingHome = obj2.useCanSeeOnboardingHome(tmp6);
-  const tmp9 = frame(4495)() === constants.MIDNIGHT;
+  const canSeeOnboardingHome = channelId(7236).useCanSeeOnboardingHome(tmp6);
+  const obj3 = channelId(7236);
+  const tmp9 = frame(4509)() === constants.MIDNIGHT;
   closure_4 = tmp9;
-  const tmp10 = frame(4420)();
+  const tmp10 = frame(4434)();
   isChatBesideChannelList = tmp10.isChatBesideChannelList;
   const isChatLockedOpen = tmp10.isChatLockedOpen;
   let items = [frame, tmp9, isChatBesideChannelList, , ];
   ({ container: arr[3], midnightContainerBorder: arr[4] } = tmp);
-  const memo = importAllResult.useMemo(() => {
+  const memo = noop.useMemo(() => {
     const items = [closure_2.container, ];
     let prop;
     if (null == frame) {
@@ -217,7 +207,7 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
   }, items);
   const items1 = [frame, , ];
   ({ contentContainer: arr2[1], splitDivider: arr2[2] } = tmp);
-  const memo1 = importAllResult.useMemo(() => {
+  const memo1 = noop.useMemo(() => {
     const items = [closure_2.contentContainer, ];
     let splitDivider;
     if (null != frame) {
@@ -226,9 +216,9 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
     items[1] = splitDivider;
     return items;
   }, items1);
-  let tmp2Result = tmp2(13278);
+  const ref = noop.useRef(null);
   let tmp14 = !isChatLockedOpen;
-  const isForumChannelSearchActive = tmp2Result.useIsForumChannelSearchActive(channelId);
+  const isForumChannelSearchActive = channelId(13301).useIsForumChannelSearchActive(channelId);
   if (isChatLockedOpen) {
     tmp14 = isNavigationScreen;
   }
@@ -236,148 +226,117 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
     tmp14 = !isForumChannelSearchActive;
   }
   closure_6 = tmp14;
-  tmp2Result = tmp2(504);
+  const tmp2Result = channelId(13301);
   const items2 = [isChatBesideChannelList];
   const items3 = [channelId];
-  const stateFromStores = tmp2Result.useStateFromStores(items2, () => {
+  const stateFromStores = channelId(504).useStateFromStores(items2, () => {
     let channel = null;
     if (null != channelId) {
-      channel = isChatBesideChannelList.getChannel(tmp);
+      channel = ChannelStore.getChannel(tmp);
     }
     return channel;
   }, items3);
-  channelId(7247);
+  channelId(7258);
   if (null != channelId) {
     if (null != guildId) {
-      obj = { channelId: null, frame: null, guildId: null, isNavigationScreen: null, screenIndex: null, showCreateThread: null, isBackEnabled: null };
-      obj[0] = channelId;
-      obj[1] = frame;
-      obj[2] = guildId;
-      obj[3] = isNavigationScreen;
-      obj[4] = screenIndex;
-      obj[5] = showCreateThread;
-      obj[6] = tmp14;
-      const tmp35 = callback(Header, obj);
+      const obj4 = { channelId, frame, guildId, isNavigationScreen, screenIndex, showCreateThread, isBackEnabled: tmp14 };
+      const tmp35 = closure_11(Header, obj4);
       if (channelId !== StaticChannelRoute.ROLE_SUBSCRIPTIONS) {
         if (!needSubscriptionToAccess) {
           if (channelId === tmp36.GUILD_HOME) {
-            obj = { style: null, children: null };
-            obj[0] = memo;
+            const obj5 = { style: memo, children: null };
             const items4 = [tmp35, ];
-            obj1 = { style: null, children: null };
-            obj1[0] = memo1;
+            const obj6 = { style: memo1, children: null };
             let tmp33Result = null;
             if (canSeeOnboardingHome) {
-              obj2 = { guildId: null };
-              obj2[0] = guildId;
-              tmp33Result = tmp33(tmp5(16553), obj2);
+              const obj7 = { guildId };
+              tmp33Result = tmp33(tmp5(16584), obj7);
             }
-            obj1[1] = tmp33Result;
-            items4[1] = tmp33(closure_4, obj1);
-            obj[1] = items4;
-            return callback2(closure_4, obj);
+            obj6.children = tmp33Result;
+            items4[1] = tmp33(closure_4, obj6);
+            obj5.children = items4;
+            return closure_12(closure_4, obj5);
           } else if (channelId === tmp36.MEMBER_SAFETY) {
-            const obj3 = { guildId: null };
-            obj3[0] = guildId;
-            return tmp33(tmp5(16571), obj3);
+            const obj8 = { guildId };
+            return tmp33(tmp5(16602), obj8);
           } else if (channelId === tmp36.VIBEGRATIONS) {
-            const obj4 = { guildId: null };
-            obj4[0] = guildId;
-            return tmp33(tmp5(16588), obj4);
+            const obj9 = { guildId };
+            return tmp33(tmp5(16619), obj9);
           } else {
             if (tmp17) {
               if (null != stateFromStores) {
-                const obj5 = { style: null, children: null };
-                obj5[0] = memo;
+                const obj10 = { style: memo, children: null };
                 const items5 = [tmp35, ];
-                const obj6 = { style: null, children: null };
-                obj6[0] = memo1;
-                const obj7 = { channel: null };
-                obj7[0] = stateFromStores;
-                obj6[1] = tmp33(tmp5(16616), obj7);
-                items5[1] = tmp33(closure_4, obj6);
-                obj5[1] = items5;
-                return callback2(closure_4, obj5);
+                const obj11 = { style: memo1, children: null };
+                const obj12 = { channel: stateFromStores };
+                obj11.children = tmp33(tmp5(16648), obj12);
+                items5[1] = tmp33(closure_4, obj11);
+                obj10.children = items5;
+                return closure_12(closure_4, obj10);
               }
             }
             if (showCreateThread) {
-              const obj8 = { style: null, children: null };
-              obj8[0] = memo1;
+              const obj13 = { style: memo1, children: null };
               const items6 = [tmp35, ];
-              const obj9 = { channelId: null, screenIndex: null };
-              obj9[0] = channelId;
-              obj9[1] = screenIndex;
-              items6[1] = tmp33(tmp2(16622).CreateThreadView, obj9);
-              obj8[1] = items6;
-              return tmp18(closure_4, obj8);
+              const obj14 = { channelId, screenIndex };
+              items6[1] = tmp33(tmp2(16654).CreateThreadView, obj14);
+              obj13.children = items6;
+              return tmp18(closure_4, obj13);
             } else {
-              const obj10 = { children: null };
+              const obj15 = { children: null };
               const items7 = [tmp35, ];
-              const obj11 = { style: null, children: null };
-              obj11[0] = memo1;
-              const obj12 = { guildId: null, channelId: null, chatInputRef: null, screenIndex: null };
-              obj12[0] = guildId;
-              obj12[1] = channelId;
-              obj12[2] = ref;
-              obj12[3] = screenIndex;
-              obj11[1] = tmp33(tmp5(11345), obj12);
-              items7[1] = tmp33(closure_4, obj11);
-              obj10[0] = items7;
-              const tmp18Result = tmp18(closure_13, obj10);
+              const obj16 = { style: memo1, children: null };
+              const obj17 = { guildId, channelId, chatInputRef: ref, screenIndex };
+              obj16.children = tmp33(tmp5(11372), obj17);
+              items7[1] = tmp33(closure_4, obj16);
+              obj15.children = items7;
+              const tmp18Result = tmp18(closure_13, obj15);
               if (isSwipeToMemberListEnabled) {
-                const obj13 = { style: null, channelId: null, screenIndex: null, isBackEnabled: null, children: null };
-                obj13[0] = memo;
-                obj13[1] = channelId;
-                obj13[2] = screenIndex;
-                obj13[3] = tmp14;
-                obj13[4] = tmp18Result;
-                tmp33Result = tmp33(tmp5(16626), obj13);
+                const obj18 = { style: memo, channelId, screenIndex, isBackEnabled: tmp14, children: tmp18Result };
+                let tmp33Result2 = tmp33(tmp5(16658), obj18);
               } else {
-                const obj14 = { style: null, accessible: false, onAccessibilityEscape: null, children: null };
-                obj14[0] = memo;
-                obj14[2] = function onAccessibilityEscape() {
-                  if (closure_6) {
-                    navigation.goBack();
-                  }
+                const obj19 = {
+                  style: memo,
+                  accessible: false,
+                  onAccessibilityEscape() {
+                                  if (closure_6) {
+                                    navigation.goBack();
+                                  }
+                                },
+                  children: tmp18Result
                 };
-                obj14[3] = tmp18Result;
-                tmp33Result = tmp33(closure_4, obj14);
+                tmp33Result2 = tmp33(closure_4, obj19);
               }
-              return tmp33Result;
+              return tmp33Result2;
             }
           }
         }
       }
-      const obj15 = { style: null, children: null };
-      obj15[0] = memo;
+      const obj20 = { style: memo, children: null };
       const items8 = [tmp35, ];
-      const obj16 = { style: null, children: null };
-      obj16[0] = memo1;
-      const items9 = [callback(tmp5(5125), { absolute: true }), ];
-      const obj17 = { guildId: null, gatedChannelId: null };
-      obj17[0] = guildId;
+      const obj21 = { style: memo1, children: null };
+      const items9 = [closure_11(tmp5(5139), { absolute: true }), ];
+      const obj22 = { guildId, gatedChannelId: null };
       let tmp32;
       if (needSubscriptionToAccess) {
         tmp32 = channelId;
       }
-      obj17[1] = tmp32;
-      items9[1] = callback(tmp5(16536), obj17);
-      obj16[1] = items9;
-      items8[1] = callback2(closure_4, obj16);
-      obj15[1] = items8;
-      return callback2(closure_4, obj15);
+      obj22.gatedChannelId = tmp32;
+      items9[1] = closure_11(tmp5(16567), obj22);
+      obj21.children = items9;
+      items8[1] = closure_12(closure_4, obj21);
+      obj20.children = items8;
+      return closure_12(closure_4, obj20);
     }
   }
-  const obj18 = { style: items10, children: null };
-  items10 = [memo, tmp.containerEmpty];
-  const obj19 = { title: null, body: null };
+  const obj23 = { style: null, children: null };
+  const items10 = [memo, tmp.containerEmpty];
+  obj23.style = items10;
+  const obj24 = { title: null, body: null };
   const intl = tmp2(1114).intl;
-  obj19[0] = intl.string(channelId(1114).t.ai6Lbr);
+  obj24.title = intl.string(channelId(1114).t.ai6Lbr);
   const intl2 = tmp2(1114).intl;
-  obj19[1] = intl2.string(channelId(1114).t["LTr+x9"]);
-  obj18[1] = callback(channelId(1178).EmptyState, obj19);
-  return callback(closure_4, obj18);
+  obj24.body = intl2.string(channelId(1114).t["LTr+x9"]);
+  obj23.children = closure_11(channelId(1178).EmptyState, obj24);
+  return closure_11(closure_4, obj23);
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/StandaloneChannelScreen.tsx");
-
-export default memoResult;

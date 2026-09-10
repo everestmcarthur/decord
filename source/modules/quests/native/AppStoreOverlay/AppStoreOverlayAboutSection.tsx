@@ -1,68 +1,63 @@
-// Module ID: 11516
-// Function ID: 11517
+// Module ID: 11543
+// Function ID: 11544
 // Name: AppStoreOverlayAboutSection
-// Dependencies: [32, 19, 17, 21, 576, 4560, 1114, 4556, 2]
+// Dependencies: [32, 19, 17, 21, 576, 4574, 1114, 4570, 2]
 // Exports: default
 
-// Module 11516 (AppStoreOverlayAboutSection)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11543 (AppStoreOverlayAboutSection)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ Pressable: c4, View: c5 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let obj = { top: ThemesDefault.space.PX_12, bottom: ThemesDefault.space.PX_12, left: ThemesDefault.space.PX_12, right: ThemesDefault.space.PX_12 };
-obj = { aboutSection: null };
-obj = { borderRadius: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT, padding: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
-obj[0] = obj;
-let closure_9 = createCacheKey.createStyles(obj);
-const result = require("set").fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayAboutSection.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const rect = { top: nativeDefault.space.PX_12, bottom: nativeDefault.space.PX_12, left: nativeDefault.space.PX_12, right: nativeDefault.space.PX_12 };
+const createStyles = fn(4574);
+let obj = { aboutSection: { borderRadius: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT, padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 } };
+let closure_9 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayAboutSection.tsx");
 
 export default function AppStoreOverlayAboutSection(children) {
-  let _require;
-  let first;
-  let callback;
-  const tmp = callback3();
-  [tmp3, c0] = callback(React.useState(false), 2);
-  const tmp4 = callback(React.useState(null), 2);
-  first = tmp4[0];
-  callback = tmp4[1];
+  c0 = undefined;
+  first = undefined;
+  closure_2 = undefined;
+  const tmp = closure_9();
+  [tmp3, c0] = noop.useState(false);
+  [first, closure_2] = noop.useState(null);
   const items = [first];
-  callback = React.useCallback((nativeEvent) => {
+  const callback = noop.useCallback((nativeEvent) => {
     if (null == first) {
-      callback(nativeEvent.nativeEvent.lines.length > 3);
+      closure_2(nativeEvent.nativeEvent.lines.length > 3);
     }
   }, items);
-  const callback1 = React.useCallback(() => {
+  const callback1 = noop.useCallback(() => {
     _undefined((arg0) => !arg0);
   }, []);
-  const intl = _require(first[6]).intl;
-  const t = _require(first[6]).t;
+  const intl = util.intl;
+  const t = util.t;
   const stringResult = intl.string(tmp3 ? t["6MwJo/"] : t.lBeKY2);
-  obj = { style: tmp.aboutSection, children: null };
-  obj = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl2 = tmp8(tmp9[6]).intl;
-  obj[2] = intl2.string(_require(first[6]).t.CI0vSJ);
-  const items1 = [callback2(_require(first[7]).Text, obj), callback2(_require(first[7]).Text, { variant: "text-sm/medium", color: "text-default", lineClamp: num, onTextLayout: callback, children: children.description }), ];
+  const obj = { style: tmp.aboutSection, children: null };
+  const obj2 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
+  const intl2 = tmp8(1114).intl;
+  obj2.children = intl2.string(util.t.CI0vSJ);
+  const items1 = [timestampProducer(Text_Text.Text, obj2), timestampProducer(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", lineClamp: num, onTextLayout: callback, children: children.description }), ];
   let tmp13Result = true === first;
   if (tmp13Result) {
-    obj = { hitSlop: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, onPress: null, children: null };
-    obj[0] = obj;
-    obj[2] = stringResult;
-    obj1 = { expanded: null };
-    obj1[0] = tmp3;
-    obj[3] = obj1;
-    obj[4] = callback1;
-    const obj2 = { variant: "text-sm/medium", color: "text-link", children: null };
-    obj2[2] = stringResult;
-    obj[5] = tmp13(tmp8(tmp9[7]).Text, obj2);
-    tmp13Result = tmp13(closure_4, obj);
+    const obj3 = { hitSlop: rect, accessibilityRole: "button", accessibilityLabel: stringResult, accessibilityState: null, onPress: null, children: null };
+    const obj4 = { expanded: tmp3 };
+    obj3.accessibilityState = obj4;
+    obj3.onPress = callback1;
+    const obj5 = { variant: "text-sm/medium", color: "text-link", children: stringResult };
+    obj3.children = tmp13(tmp8(4570).Text, obj5);
+    tmp13Result = tmp13(React4, obj3);
   }
   items1[2] = tmp13Result;
-  obj[1] = items1;
-  return closure_7(closure_5, obj);
+  obj.children = items1;
+  return React5(hasOwnProperty, obj);
 };

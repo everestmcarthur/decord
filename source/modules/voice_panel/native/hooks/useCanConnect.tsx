@@ -1,40 +1,43 @@
-// Module ID: 17129
-// Function ID: 17130
+// Module ID: 17160
+// Function ID: 17161
 // Name: useCanConnect
-// Dependencies: [1957, 1979, 4199, 4579, 1085, 504, 4705, 2]
+// Dependencies: [1957, 1979, 4212, 4593, 1085, 504, 4719, 2]
 // Exports: default
 
-// Module 17129 (useCanConnect)
-import closure_2 from "ensureGuildLoaded" /* 1957 */;
-import closure_3 from "createGuildRecordFromRust" /* 1979 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_5 from "updateVoiceState" /* 4579 */;
-import { Permissions } from "sum" /* 1085 */;
+// Module 17160 (useCanConnect)
+import ChannelUtils from "ChannelUtils" /* 4719 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
+import VoiceStateStore from "VoiceStateStore" /* 4593 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useCanConnect.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const Permissions = fn(1085).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useCanConnect.tsx");
 
 export default function useCanConnect(arg0) {
-  const _require = arg0;
-  const items = [closure_2, closure_4, closure_3, closure_5];
+  _require = arg0;
+  const items = [ChannelStore, PermissionStore, GuildStore, VoiceStateStore];
   const items1 = [arg0];
-  return _require(504).useStateFromStoresObject(items, () => {
-    const channel = closure_1_2.getChannel(callback);
+  return require("initialize").useStateFromStoresObject(items, () => {
+    const channel = ChannelStore.getChannel(closure_0);
     let tmp = null != channel;
     if (tmp) {
       let isPrivateResult = channel.isPrivate();
       if (!isPrivateResult) {
-        isPrivateResult = closure_1_4.can(closure_1_6.CONNECT, channel);
+        isPrivateResult = PermissionStore.can(Permissions.CONNECT, channel);
       }
       tmp = isPrivateResult;
     }
     const obj = { canConnect: tmp, isAtMaxCapacity: null };
     let isChannelFullResult = null == channel;
     if (!isChannelFullResult) {
-      isChannelFullResult = callback(closure_1_1[6]).isChannelFull(channel, closure_1_5, closure_1_3);
-      const obj3 = callback(closure_1_1[6]);
+      isChannelFullResult = ChannelUtils.isChannelFull(channel, VoiceStateStore, GuildStore);
     }
-    obj[1] = isChannelFullResult;
+    obj.isAtMaxCapacity = isChannelFullResult;
     return obj;
   }, items1);
 };

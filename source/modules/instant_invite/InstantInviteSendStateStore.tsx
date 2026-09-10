@@ -1,30 +1,31 @@
-// Module ID: 9899
-// Function ID: 9900
-// Name: setSendState
+// Module ID: 9926
+// Function ID: 9927
+// Name: InstantInviteSendStateStore
 // Dependencies: [560, 1249, 2]
 // Exports: setSendState
 
-// Module 9899 (setSendState)
-import set from "set" /* 2 */;
-import keys from "keys" /* 560 */;
+// Module 9926 (InstantInviteSendStateStore)
+import module_560 from "module_560" /* 560 */;
+import size from "module_2" /* 2 */;
 
-let obj = keys.create(() => ({}));
-const result = set.fileFinishedImporting("modules/instant_invite/InstantInviteSendStateStore.tsx");
+const require = globalThis.__r;
+
+let useInstantInviteSendStates = module_560.create(() => ({}));
+const result = size.fileFinishedImporting("modules/instant_invite/InstantInviteSendStateStore.tsx");
 
 export const setSendState = function setSendState(arg0, arg1, arg2) {
-  const _require = arg0;
+  _require = arg0;
   dependencyMap = arg1;
-  obj = arg2;
-  const state = obj.getState();
-  obj = _require(1249);
-  obj.batchUpdates(() => {
-    obj = {};
-    const merged = Object.assign(table);
-    obj = {};
-    const merged1 = Object.assign(table[closure_0]);
-    obj[closure_1] = state;
-    obj[closure_0] = obj;
-    state.setState(obj);
+  useInstantInviteSendStates = arg2;
+  const state = useInstantInviteSendStates.getState();
+  require("ReactBatchUpdates").batchUpdates(() => {
+    const obj = {};
+    const merged = Object.assign(closure_3);
+    const obj2 = {};
+    const merged1 = Object.assign(closure_3[closure_0]);
+    obj2[closure_1] = closure_2;
+    obj[closure_0] = obj2;
+    obj.setState(obj);
   });
 };
-export const useInstantInviteSendStates = obj;
+export { useInstantInviteSendStates };

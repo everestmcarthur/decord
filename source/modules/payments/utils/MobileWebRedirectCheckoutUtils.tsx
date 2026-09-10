@@ -1,43 +1,40 @@
-// Module ID: 7406
-// Function ID: 7407
-// Name: MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG
-// Dependencies: [4542, 1074, 1232, 1608, 4387, 5456, 2]
+// Module ID: 7420
+// Function ID: 7421
+// Name: MobileWebRedirectCheckoutUtils
+// Dependencies: [4556, 1074, 1232, 1608, 4401, 5470, 2]
 // Exports: captureMobileWebRedirectCheckoutSentryError, getCustomCheckoutFlow, getCustomCheckoutFlowForAnalytics, isMobileWebRedirectCheckoutEnabled, useGetCustomCheckoutFlow
 
-// Module 7406 (MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG)
-import set from "set" /* 2 */;
-import _modDef1232 from "module_1232" /* 1232 */;
-import isMetaQuest from "isMetaQuest" /* 1608 */;
-import _extends from "_extends" /* 4387 */;
-import CustomCheckoutFlow2 from "CustomCheckoutFlow" /* 4542 */;
-import keysSorter from "keysSorter" /* 5456 */;
-import ME from "ME" /* 1074 */;
+// Module 7420 (MobileWebRedirectCheckoutUtils)
+import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
+import _mod4401 from "module_4401" /* 4401 */;
+import PaymentConstants from "PaymentConstants" /* 4556 */;
+import keysSorter from "keysSorter" /* 5470 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const CustomCheckoutFlow = CustomCheckoutFlow2.CustomCheckoutFlow;
-({ Routes: c4, LinkingTypes: c5 } = ME);
+const CustomCheckoutFlow = PaymentConstants.CustomCheckoutFlow;
+({ Routes: closure_4, LinkingTypes: hasOwnProperty } = Constants);
 const mobile_web_redirect_checkout = "mobile_web_redirect_checkout";
-const result = set.fileFinishedImporting("modules/payments/utils/MobileWebRedirectCheckoutUtils.tsx");
+const result = size.fileFinishedImporting("modules/payments/utils/MobileWebRedirectCheckoutUtils.tsx");
 
 export const MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG = "mobile_web_redirect_checkout";
 export const captureMobileWebRedirectCheckoutSentryError = function captureMobileWebRedirectCheckoutSentryError(error, source, tags) {
-  let obj = _modDef1232;
-  obj = { tags: null, extra: null };
-  obj = { app_context: mobile_web_redirect_checkout, source };
+  const obj2 = { tags: null, extra: null };
   const merged = Object.assign(tags.tags);
-  obj[0] = obj;
-  obj[1] = tags.extra;
-  obj.captureException(error, obj);
+  obj2.tags = { app_context: mobile_web_redirect_checkout, source };
+  obj2.extra = tags.extra;
+  SentryUtilsDefault.captureException(error, obj2);
 };
 export const isMobileWebRedirectCheckoutEnabled = function isMobileWebRedirectCheckoutEnabled() {
-  return isMetaQuest.isMetaQuest();
+  return MetaQuestUtils.isMetaQuest();
 };
 export const getCustomCheckoutFlowForAnalytics = function getCustomCheckoutFlowForAnalytics() {
-  return isMetaQuest.isMetaQuest() ? CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT : CustomCheckoutFlow.MOBILE_WEB_REDIRECT_CHECKOUT;
+  return MetaQuestUtils.isMetaQuest() ? CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT : CustomCheckoutFlow.MOBILE_WEB_REDIRECT_CHECKOUT;
 };
 export const useGetCustomCheckoutFlow = function useGetCustomCheckoutFlow() {
-  const _location = _extends.useLocation();
+  const _location = _mod4401.useLocation();
   ({ pathname, search } = _location);
-  const obj = _extends;
   const parsed = keysSorter.parse(search);
   ({ deep_link_type, flow_type } = parsed);
   if (!pathname.startsWith(constants.BILLING_MANAGE_SUBSCRIPTION)) {

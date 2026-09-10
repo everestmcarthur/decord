@@ -1,9 +1,9 @@
-// Module ID: 4282
-// Function ID: 4283
-// Name: set
+// Module ID: 4297
+// Function ID: 4298
+// Name: MotionTypes
 // Dependencies: [2]
 
-// Module 4282 (set)
-import set from "set" /* 2 */;
+// Module 4297 (MotionTypes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/design/animation/MotionTypes.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/design/animation/MotionTypes.tsx");

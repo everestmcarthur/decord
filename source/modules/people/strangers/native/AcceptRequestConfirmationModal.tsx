@@ -1,50 +1,48 @@
-// Module ID: 10880
-// Function ID: 10881
+// Module ID: 10907
+// Function ID: 10908
 // Name: AcceptRequestConfirmationModal
-// Dependencies: [19, 17, 21, 4560, 576, 4994, 1114, 4904, 4556, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 5008, 1114, 4918, 4570, 2]
 // Exports: default
 
-// Module 10880 (AcceptRequestConfirmationModal)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import componentDidMountDefault from "componentDidMount" /* 4994 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10907 (AcceptRequestConfirmationModal)
+import nativeDefault from "native" /* 576 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
+import common_AlertDefault from "common/Alert" /* 5008 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { bodyText: null, text: null };
-createCacheKey = { textAlign: "center", alignItems: "center", gap: ThemesDefault.space.PX_8 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { textAlign: "center" };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/people/strangers/native/AcceptRequestConfirmationModal.tsx");
+const require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { bodyText: { textAlign: "center", alignItems: "center", gap: nativeDefault.space.PX_8 }, text: { textAlign: "center" } };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/people/strangers/native/AcceptRequestConfirmationModal.tsx");
 
 export default function AcceptRequestConfirmationModal(onConfirm) {
   onConfirm = onConfirm.onConfirm;
-  const tmp = callback3();
-  let obj = { confirmText: null, cancelText: null, onConfirm: null, onCancel: null, children: null };
+  const tmp = closure_6();
+  const obj = { confirmText: null, cancelText: null, onConfirm: null, onCancel: null, children: null };
   const intl = onConfirm(1114).intl;
-  obj[0] = intl.string(onConfirm(1114).t.MMlhsr);
+  obj.confirmText = intl.string(onConfirm(1114).t.MMlhsr);
   const intl2 = onConfirm(1114).intl;
-  obj[1] = intl2.string(onConfirm(1114).t["ETE/oC"]);
-  obj[2] = function onConfirm() {
+  obj.cancelText = intl2.string(onConfirm(1114).t["ETE/oC"]);
+  obj.onConfirm = function onConfirm() {
     onConfirm();
-    closure_1_1(closure_1_2[7]).close();
+    AlertActionCreatorsDefault.close();
   };
-  obj[3] = onConfirm.onCancel;
-  obj = { style: tmp.bodyText, children: null };
-  obj = { variant: "heading-lg/bold", color: "text-strong", style: tmp.text, children: null };
+  obj.onCancel = onConfirm.onCancel;
+  const obj2 = { style: tmp.bodyText, children: null };
+  const obj3 = { variant: "heading-lg/bold", color: "text-strong", style: tmp.text, children: null };
   const intl3 = onConfirm(1114).intl;
-  obj[3] = intl3.string(onConfirm(1114).t.eJzSDT);
-  const items = [callback(onConfirm(4556).Text, obj), ];
-  obj1 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: null };
+  obj3.children = intl3.string(onConfirm(1114).t.eJzSDT);
+  const items = [closure_4(onConfirm(4570).Text, obj3), ];
+  const obj4 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: null };
   const intl4 = onConfirm(1114).intl;
-  obj1[3] = intl4.string(onConfirm(1114).t.GB4jUw);
-  items[1] = callback(onConfirm(4556).Text, obj1);
-  obj[1] = items;
-  obj[4] = callback2(View, obj);
-  return callback(componentDidMountDefault, obj);
+  obj4.children = intl4.string(onConfirm(1114).t.GB4jUw);
+  items[1] = closure_4(onConfirm(4570).Text, obj4);
+  obj2.children = items;
+  obj.children = closure_5(View, obj2);
+  return closure_4(common_AlertDefault, obj);
 };

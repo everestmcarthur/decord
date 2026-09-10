@@ -1,21 +1,24 @@
-// Module ID: 16671
-// Function ID: 16672
+// Module ID: 16708
+// Function ID: 16709
 // Name: MediaGrid
-// Dependencies: [19, 17, 7878, 21, 4560, 16667, 12342, 8879, 16652, 2]
+// Dependencies: [19, 17, 7892, 21, 4574, 16704, 12368, 8906, 16684, 2]
 // Exports: default
 
-// Module 16671 (MediaGrid)
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 7878 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16708 (MediaGrid)
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12368 */;
+import MediaGridItemDefault from "MediaGridItem" /* 16704 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ SEARCH_LIST_HORIZONTAL_PADDING, MEDIA_NUM_COLUMNS: c5, MEDIA_ITEM_GAP_WIDTH: closure_6 } = MessageEmbedTypes);
-createCacheKey = { paddingLeft: SEARCH_LIST_HORIZONTAL_PADDING - 2, paddingRight: SEARCH_LIST_HORIZONTAL_PADDING + 4 };
-let closure_8 = createCacheKey.createStyles({ container: createCacheKey });
-const result = require("set").fileFinishedImporting("modules/search/native/components/list/rows/MediaGrid.tsx");
+require = fn;
+const View = fn(17).View;
+const SearchConstants = fn(7892);
+({ SEARCH_LIST_HORIZONTAL_PADDING, MEDIA_NUM_COLUMNS: hasOwnProperty, MEDIA_ITEM_GAP_WIDTH: metroRequire } = SearchConstants);
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+const obj2 = { container: { paddingLeft: SEARCH_LIST_HORIZONTAL_PADDING - 2, paddingRight: SEARCH_LIST_HORIZONTAL_PADDING + 4 } };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/list/rows/MediaGrid.tsx");
 
 export default function MediaGrid(media) {
   media = media.media;
@@ -23,16 +26,14 @@ export default function MediaGrid(media) {
   const onPress = media.onPress;
   const animate = media.animate;
   const items = [media.length, mediaSize, onPress, animate];
-  let obj = { style: callback().container, children: null };
-  callback = animate.useCallback((arg0) => {
+  let obj = { style: closure_8().container, children: null };
+  const callback = animate.useCallback((arg0) => {
     ({ item, index } = arg0);
-    let obj = { animate, size: mediaSize, media: item, onPress, containerStyle: null };
-    const tmp = mediaSize(onPress[5]);
-    obj = { itemIndex: index, numItems: media.length, numColumns: closure_1_5, spacing: closure_1_6 };
-    obj[4] = media(onPress[6]).getMediaGridItemStyles(obj);
-    return closure_1_7(tmp, obj);
+    const obj = { animate, size: mediaSize, media: item, onPress, containerStyle: null };
+    obj.containerStyle = SearchPlatformUtils.getMediaGridItemStyles({ itemIndex: index, numItems: media.length, numColumns, spacing });
+    return <tmp animate={animate} size={mediaSize} media={item} onPress={onPress} containerStyle={null} />;
   }, items);
-  obj = { numColumns: closure_5, data: media, renderItem: callback, ItemSeparatorComponent: media(onPress[8]).MediaVerticalSeparator, scrollEnabled: false };
-  obj[1] = jsx(media(onPress[7]).FlashList, { numColumns: closure_5, data: media, renderItem: callback, ItemSeparatorComponent: media(onPress[8]).MediaVerticalSeparator, scrollEnabled: false });
-  return <View numColumns={closure_5} data={media} renderItem={callback} ItemSeparatorComponent={media(onPress[8]).MediaVerticalSeparator} scrollEnabled={false} />;
+  let tmp = closure_8();
+  obj.children = jsx(media(onPress[7]).FlashList, { numColumns, data: media, renderItem: callback, ItemSeparatorComponent: media(onPress[8]).MediaVerticalSeparator, scrollEnabled: false });
+  return <View style={closure_8().container}>{null}</View>;
 };

@@ -1,135 +1,131 @@
-// Module ID: 16034
-// Function ID: 16035
-// Name: MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING
-// Dependencies: [19, 17, 4600, 4575, 4209, 2011, 4741, 1371, 1074, 21, 4560, 576, 504, 16035, 8218, 1115, 4573, 4571, 10918, 5123, 9775, 8823, 16036, 7879, 8819, 16037, 8259, 16038, 2]
+// Module ID: 16064
+// Function ID: 16065
+// Name: MessagesItemChannelBase
+// Dependencies: [19, 17, 4614, 4589, 4222, 2011, 4755, 1371, 1074, 21, 4574, 576, 504, 16065, 8244, 1115, 4587, 4585, 10945, 5137, 9802, 8852, 16066, 7893, 8848, 16067, 8285, 16068, 2]
 
-// Module 16034 (MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING)
-import ThemesDefault from "Themes" /* 576 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "sortActivity" /* 4600 */;
-import closure_6 from "generateOldThreadCutoff" /* 4575 */;
-import closure_7 from "markAllUserIdListsStale" /* 4209 */;
-import closure_8 from "handleConnectionOpen" /* 2011 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 4741 */;
-import closure_10 from "mergeGuildAvatar" /* 1371 */;
-import { ActivityTypes } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16064 (MessagesItemChannelBase)
+import nativeDefault from "native" /* 576 */;
+import transitionToChannel from "transitionToChannel" /* 4585 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4587 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10945 */;
+import noop from "module_19" /* 19 */;
+import PresenceStore from "PresenceStore" /* 4614 */;
+import ReadStateStore from "ReadStateStore" /* 4589 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4755 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-let c3 = importAllResult;
+require = fn;
+const View = fn(17).View;
+const ActivityTypes = fn(1074).ActivityTypes;
+const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let closure_14 = createCacheKey.createStyles(() => {
-  let obj = { pressable: null, nameplate: null, rowActive: null, selectedBorder: null, rowSelected: null };
-  obj = { marginBottom: 1, borderRadius: ThemesDefault.radii.md, marginHorizontal: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_8, marginVertical: ThemesDefault.space.PX_4, flexDirection: "row", alignItems: "center", flex: 1 };
-  obj[0] = obj;
-  obj = { borderRadius: ThemesDefault.radii.md };
-  obj[1] = obj;
-  obj[2] = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
-  obj1 = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
-  obj[3] = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED, borderRadius: ThemesDefault.radii.md };
-  const obj2 = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED, borderRadius: ThemesDefault.radii.md };
-  obj[4] = { borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+const createStyles = fn(4574);
+let closure_14 = createStyles.createStyles(() => {
+  const obj = { pressable: { marginBottom: 1, borderRadius: nativeDefault.radii.md, marginHorizontal: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center", flex: 1 }, nameplate: null, rowActive: null, selectedBorder: null, rowSelected: null };
+  const obj2 = { marginBottom: 1, borderRadius: nativeDefault.radii.md, marginHorizontal: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center", flex: 1 };
+  obj.nameplate = { borderRadius: nativeDefault.radii.md };
+  const obj3 = { borderRadius: nativeDefault.radii.md };
+  obj.rowActive = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
+  const rect = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, borderRadius: nativeDefault.radii.md };
+  obj.selectedBorder = rect;
+  const obj4 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
+  obj.rowSelected = { borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
   return obj;
 });
-const memoResult = importAllResult.memo(function MessagesItemChannelBase(channel) {
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelBase.tsx");
+
+export default noop.memo(function MessagesItemChannelBase(channel) {
   channel = channel.channel;
   const height = channel.height;
-  let isPressed = channel.isPressed;
   const setIsPressed = channel.setIsPressed;
-  let stateFromStores;
-  closure_5 = undefined;
-  isPressed = undefined;
-  let obj = channel(isPressed[12]);
-  let items = [closure_8];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  let isPressed;
+  let items = [SelectedChannelStore];
+  const stateFromStores = channel(isPressed[12]).useStateFromStores(items, () => {
     let id;
-    const channelId = closure_1_8.getChannelId(null);
+    const channelId = SelectedChannelStore.getChannelId(null);
     if (channel != null) {
       id = channel.id;
     }
     return channelId === id;
   });
-  let tmp4 = callback();
+  let tmp4 = closure_14();
   closure_5 = tmp4;
-  obj1 = setIsPressed;
   const items1 = [height];
   const items2 = [tmp4, stateFromStores];
   const memo = setIsPressed.useMemo(() => ({ height, overflow: "hidden" }), items1);
   const memo1 = setIsPressed.useMemo(() => {
-    const items = [store.pressable, ];
+    const items = [closure_5.pressable, ];
     let rowSelected;
     if (stateFromStores) {
-      rowSelected = store.rowSelected;
+      rowSelected = closure_5.rowSelected;
     }
     items[1] = rowSelected;
     return items;
   }, items2);
-  let obj2 = channel(isPressed[12]);
+  const obj = channel(isPressed[12]);
   const items3 = [closure_5];
-  const stateFromStoresObject = obj2.useStateFromStoresObject(items3, () => {
-    let obj = channel;
+  const stateFromStoresObject = channel(isPressed[12]).useStateFromStoresObject(items3, () => {
     if (channel.isDM()) {
-      const activities = store.getActivities(obj.getRecipientId());
+      const activities = PresenceStore.getActivities(obj.getRecipientId());
     }
-    if (obj.isDM()) {
-      obj = { status: null, activities: null };
-      obj[0] = store.getStatus(obj.getRecipientId());
-      obj[1] = activities;
+    if (channel.isDM()) {
+      const obj2 = { status: PresenceStore.getStatus(obj.getRecipientId()), activities };
+      let obj3 = obj2;
     } else {
-      obj = { status: "jsxs", activities: "channel" };
+      obj3 = { status: "Array", activities: "PX_16" };
     }
-    return obj;
+    return obj3;
   });
   ({ status, activities } = stateFromStoresObject);
   let obj3 = channel(isPressed[12]);
   const items4 = [isPressed];
-  const stateFromStoresObject1 = obj3.useStateFromStoresObject(items4, () => {
-    let obj = isPressed;
-    const mentionCount = isPressed.getMentionCount(channel.id);
-    obj = { mentionCount, hasUnreadMessages: null };
+  const stateFromStoresObject1 = channel(isPressed[12]).useStateFromStoresObject(items4, () => {
+    const mentionCount = ReadStateStore.getMentionCount(channel.id);
+    const obj3 = { mentionCount, hasUnreadMessages: null };
     let tmp2 = mentionCount > 0;
     if (!tmp2) {
-      tmp2 = null != obj2.getGuildId() && obj.hasUnread(obj2.id);
-      const tmp4 = null != obj2.getGuildId() && obj.hasUnread(obj2.id);
+      tmp2 = null != obj2.getGuildId() && ReadStateStore.hasUnread(obj2.id);
+      const tmp4 = null != obj2.getGuildId() && ReadStateStore.hasUnread(obj2.id);
     }
-    obj[1] = tmp2;
-    return obj;
+    obj3.hasUnreadMessages = tmp2;
+    return obj3;
   });
   const hasUnreadMessages = stateFromStoresObject1.hasUnreadMessages;
+  const obj4 = channel(isPressed[12]);
   ({ isIncomingCall, isOngoingCall } = height(isPressed[13])(channel.id));
-  let obj4 = channel(isPressed[12]);
-  const items5 = [closure_9];
-  const stateFromStoresObject2 = obj4.useStateFromStoresObject(items5, () => ({ resolvedUnreadSetting: closure_1_9.resolveUnreadSetting(channel), muted: closure_1_9.isChannelMuted(channel.getGuildId(), channel.id), favorite: closure_1_9.isMessagesFavorite(channel.id) }));
+  const tmp10 = height(isPressed[13])(channel.id);
+  const items5 = [UserGuildSettingsStore];
+  const stateFromStoresObject2 = channel(isPressed[12]).useStateFromStoresObject(items5, () => ({ resolvedUnreadSetting: UserGuildSettingsStore.resolveUnreadSetting(channel), muted: UserGuildSettingsStore.isChannelMuted(channel.getGuildId(), channel.id), favorite: UserGuildSettingsStore.isMessagesFavorite(channel.id) }));
   ({ resolvedUnreadSetting, muted, favorite } = stateFromStoresObject2);
-  let obj5 = channel(isPressed[12]);
-  const items6 = [closure_7];
-  const stateFromStoresObject3 = obj5.useStateFromStoresObject(items6, () => {
-    let obj = channel;
+  const obj5 = channel(isPressed[12]);
+  const items6 = [RelationshipStore];
+  const stateFromStoresObject3 = channel(isPressed[12]).useStateFromStoresObject(items6, () => {
     let isIgnoredResult = channel.isDM();
     if (isIgnoredResult) {
-      isIgnoredResult = closure_1_7.isIgnored(obj.getRecipientId());
+      isIgnoredResult = RelationshipStore.isIgnored(obj.getRecipientId());
     }
-    obj = { ignored: isIgnoredResult, blocked: null };
+    const obj2 = { ignored: isIgnoredResult, blocked: null };
     let isBlockedResult = obj.isDM();
     if (isBlockedResult) {
-      isBlockedResult = closure_1_7.isBlocked(obj.getRecipientId());
+      isBlockedResult = RelationshipStore.isBlocked(obj.getRecipientId());
     }
-    obj[1] = isBlockedResult;
-    return obj;
+    obj2.blocked = isBlockedResult;
+    return obj2;
   });
   ({ ignored, blocked } = stateFromStoresObject3);
-  let obj6 = channel(isPressed[12]);
-  const items7 = [closure_10];
-  const stateFromStores1 = obj6.useStateFromStores(items7, () => {
+  const obj6 = channel(isPressed[12]);
+  const items7 = [UserStore];
+  const stateFromStores1 = channel(isPressed[12]).useStateFromStores(items7, () => {
     let recipientId;
     if (true === channel.isDM()) {
       recipientId = channel.getRecipientId();
     }
-    return closure_1_10.getUser(recipientId);
+    return UserStore.getUser(recipientId);
   });
-  const tmp10 = height(isPressed[13])(channel.id);
+  const obj7 = channel(isPressed[12]);
   const nameplate = channel(isPressed[14]).useNameplate({ user: stateFromStores1 });
   let tmp15 = null != nameplate;
   if (tmp15) {
@@ -144,48 +140,48 @@ const memoResult = importAllResult.memo(function MessagesItemChannelBase(channel
   const items9 = [, , ];
   ({ guild_id: arr10[0], id: arr10[1] } = channel);
   items9[2] = setIsPressed;
-  const memo2 = obj1.useMemo(() => {
+  const memo2 = obj2.useMemo(() => {
     let tmp = null;
     if (obj.isIOS()) {
       if (isPressed) {
         tmp = null;
       } else if (isPressed) {
-        let backgroundColor = store.rowActive.backgroundColor;
+        let backgroundColor = closure_5.rowActive.backgroundColor;
       } else if (stateFromStores) {
-        backgroundColor = store.rowSelected.backgroundColor;
+        backgroundColor = closure_5.rowSelected.backgroundColor;
       }
     }
     return tmp;
   }, items8);
   const items10 = [setIsPressed];
-  callback = obj1.useCallback(() => {
-    height(isPressed[16]).preload(channel.guild_id, channel.id);
+  const callback = obj2.useCallback(() => {
+    ChannelActionCreatorsDefault.preload(channel.guild_id, channel.id);
     setIsPressed(true);
   }, items9);
   const items11 = [channel.id];
-  const callback1 = obj1.useCallback(() => {
+  const callback1 = obj2.useCallback(() => {
     setIsPressed(false);
   }, items10);
   const items12 = [channel.id];
-  const callback2 = obj1.useCallback(() => {
-    channel(isPressed[17]).transitionToChannel(channel.id);
+  const callback2 = obj2.useCallback(() => {
+    transitionToChannel.transitionToChannel(channel.id);
   }, items11);
-  obj = { style: memo, collapsable: false, children: null };
-  const callback3 = obj1.useCallback(() => {
-    const result = channel(isPressed[18]).openChannelLongPressActionSheet(channel.id);
+  const obj9 = { style: memo, collapsable: false, children: null };
+  const callback3 = obj2.useCallback(() => {
+    const result = openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel.id);
   }, items12);
-  obj = { onPressIn: callback, onPressOut: callback1, onPress: callback2, onLongPress: callback3, accessibilityRole: "button", accessibilityLabel: tmp9(tmp2[20])({ channel, unread: hasUnreadMessages, mentionCount: stateFromStoresObject1.mentionCount, isIncomingCall, isOngoingCall, ignored, blocked }), accessibilityHint: null, underlayColor: null, style: null, children: null };
+  const obj10 = { onPressIn: callback, onPressOut: callback1, onPress: callback2, onLongPress: callback3, accessibilityRole: "button", accessibilityLabel: height(isPressed[20])({ channel, unread: hasUnreadMessages, mentionCount: stateFromStoresObject1.mentionCount, isIncomingCall, isOngoingCall, ignored, blocked }), accessibilityHint: null, underlayColor: null, style: null, children: null };
   const obj8 = channel(isPressed[14]);
   const tmp24 = closure_13;
-  obj[6] = channel(isPressed[20]).getChannelA11yHint({ channel, muted, userStatus: status, isFavorite: favorite });
-  obj[7] = tmp4.rowActive.backgroundColor;
-  obj[8] = memo1;
+  obj10.accessibilityHint = channel(isPressed[20]).getChannelA11yHint({ channel, muted, userStatus: status, isFavorite: favorite });
+  obj10.underlayColor = tmp4.rowActive.backgroundColor;
+  obj10.style = memo1;
   let tmp26;
-  let tmp9Result = tmp9(tmp2[21]);
+  const tmpResult = channel(isPressed[20]);
   if (tmp15) {
     tmp26 = nameplate;
   }
-  obj1 = { nameplate: tmp26, isFocused: stateFromStores, isPressed, isMuted: null, fadeIn: null, style: null };
+  const obj11 = { nameplate: tmp26, isFocused: stateFromStores, isPressed, isMuted: null, fadeIn: null, style: null };
   let tmp27 = muted;
   if (!muted) {
     tmp27 = ignored;
@@ -193,44 +189,40 @@ const memoResult = importAllResult.memo(function MessagesItemChannelBase(channel
   if (!tmp27) {
     tmp27 = blocked;
   }
-  obj1[3] = tmp27;
-  obj1[4] = isPressed;
-  obj1[5] = tmp4.nameplate;
-  const items13 = [closure_12(tmp9Result, obj1), , , , ];
+  obj11.isMuted = tmp27;
+  obj11.fadeIn = isPressed;
+  obj11.style = tmp4.nameplate;
+  const items13 = [closure_12(height(isPressed[21]), obj11), , , , ];
   let tmp22Result = stateFromStores;
   if (stateFromStores) {
-    obj2 = { style: null, pointerEvents: "none" };
-    obj2[0] = tmp4.selectedBorder;
-    tmp22Result = tmp22(tmp23, obj2);
+    const obj12 = { style: tmp4.selectedBorder, pointerEvents: "none" };
+    tmp22Result = tmp22(tmp23, obj12);
   }
   items13[1] = tmp22Result;
-  obj3 = { unread: hasUnreadMessages, resolvedUnreadSetting, muted, layout: null, panelVariant: true };
-  tmp9Result = tmp9(tmp2[22]);
-  obj3[3] = channel(isPressed[23]).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
-  items13[2] = closure_12(tmp9Result, obj3);
-  obj4 = { backgroundColor: memo2, children: null };
-  obj5 = { channel, channelSelected: stateFromStores, hasUnreadMessages, muted, ignored, blocked, isStreaming: null, status: null };
-  const tmpResult = channel(isPressed[20]);
-  obj5[6] = height(isPressed[26])(activities);
-  obj5[7] = status;
-  obj4[1] = closure_12(height(isPressed[25]), obj5);
-  items13[3] = closure_12(channel(isPressed[24]).CutoutBackgroundProvider, obj4);
-  obj6 = { channel, channelSelected: stateFromStores, favorite, muted, ignored, blocked, hasActivity: null, hasUnreadMessages: null, resolvedUnreadSetting: null, hasNameplate: null };
+  const obj13 = { unread: hasUnreadMessages, resolvedUnreadSetting, muted, layout: null, panelVariant: true };
+  const tmp9Result = height(isPressed[21]);
+  obj13.layout = channel(isPressed[23]).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
+  items13[2] = closure_12(height(isPressed[22]), obj13);
+  const obj14 = { backgroundColor: memo2, children: null };
+  const obj15 = { channel, channelSelected: stateFromStores, hasUnreadMessages, muted, ignored, blocked, isStreaming: null, status: null };
+  const tmp9Result4 = height(isPressed[22]);
+  obj15.isStreaming = height(isPressed[26])(activities);
+  obj15.status = status;
+  obj14.children = closure_12(height(isPressed[25]), obj15);
+  items13[3] = closure_12(channel(isPressed[24]).CutoutBackgroundProvider, obj14);
+  const obj16 = { channel, channelSelected: stateFromStores, favorite, muted, ignored, blocked, hasActivity: null, hasUnreadMessages: null, resolvedUnreadSetting: null, hasNameplate: null };
   let someResult;
-  const tmp9Result1 = height(isPressed[25]);
+  const tmp9Result5 = height(isPressed[25]);
   if (activities != null) {
     someResult = activities.some((type) => type.type !== constants.CUSTOM_STATUS);
   }
-  obj6[6] = true === someResult;
-  obj6[7] = hasUnreadMessages;
-  obj6[8] = resolvedUnreadSetting;
-  obj6[9] = tmp15;
-  items13[4] = closure_12(height(isPressed[27]), obj6);
-  obj[9] = items13;
-  obj[2] = tmp24(channel(isPressed[19]).PressableHighlight, obj);
-  return closure_12(stateFromStores, obj);
+  obj16.hasActivity = true === someResult;
+  obj16.hasUnreadMessages = hasUnreadMessages;
+  obj16.resolvedUnreadSetting = resolvedUnreadSetting;
+  obj16.hasNameplate = tmp15;
+  items13[4] = closure_12(height(isPressed[27]), obj16);
+  obj10.children = items13;
+  obj9.children = tmp24(channel(isPressed[19]).PressableHighlight, obj10);
+  return closure_12(stateFromStores, obj9);
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelBase.tsx");
-
-export default memoResult;
 export const MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING = 1;

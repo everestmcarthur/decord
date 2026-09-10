@@ -1,71 +1,60 @@
-// Module ID: 11738
-// Function ID: 11739
-// Name: DoubleTapEmojiEditNudgeInner
-// Dependencies: [5, 19, 17, 4552, 1478, 1074, 1374, 21, 4560, 576, 1935, 7968, 1480, 504, 1396, 11126, 1242, 11129, 4556, 1114, 7130, 5123, 2]
+// Module ID: 11764
+// Function ID: 11765
+// Name: DoubleTapEmojiEditNudge
+// Dependencies: [5, 19, 17, 4566, 1478, 1074, 1374, 21, 4574, 576, 1935, 7982, 1480, 504, 1396, 11153, 1242, 11156, 4570, 1114, 7144, 5137, 2]
 // Exports: DoubleTapEmojiEditNudge
 
-// Module 11738 (DoubleTapEmojiEditNudgeInner)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import closure_7 from "getDimensionsStoreStateForEntry" /* 1478 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import set from "set" /* 1374 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11764 (DoubleTapEmojiEditNudge)
+import nativeDefault from "native" /* 576 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 7982 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import DimensionsStore from "DimensionsStore" /* 1478 */;
 
-const require = arg1;
+require = fn;
 function DoubleTapEmojiEditNudgeInner(location) {
-  const _location = location.location;
+  let _location = location.location;
   const emoji = location.emoji;
-  dependencyMap = undefined;
-  let stateFromStores;
+  dependencyMap = _location(1480).useAppEntryKey();
   let obj = _location(1480);
-  dependencyMap = obj.useAppEntryKey();
-  obj1 = _location(504);
-  const items = [closure_6];
-  stateFromStores = obj1.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  const tmp5 = callback3(callback((arg0) => arg0.byAppEntry[closure_2].fontScale));
+  const tmp3 = DimensionsStore((arg0) => arg0.byAppEntry[closure_2].fontScale);
+  const items = [AccessibilityStore];
+  const stateFromStores = _location(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const tmp5 = closure_14(tmp3);
   const items1 = [emoji, stateFromStores];
   const items2 = [_location];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     if (null != emoji.id) {
-      let obj = emoji(1396);
-      obj = { id: null, size: null, animated: null };
-      obj[0] = tmp.id;
-      obj[1] = closure_1_9;
+      const obj2 = { id: tmp.id, size, animated: null };
       let animated = !stateFromStores;
       if (!stateFromStores) {
         animated = tmp.animated;
       }
-      obj[2] = animated;
-      let url = obj.getEmojiURL(obj);
+      obj2.animated = animated;
+      let url = AvatarUtilsDefault.getEmojiURL(obj2);
     } else {
       url = tmp.url;
     }
     return url;
   }, items1);
-  obj = { style: tmp5.doubleTapEmojiEditNudgeContainer, children: null };
-  callback = React.useCallback(() => {
-    let obj = _location(11126);
-    obj = { pickerIntention: closure_1_10.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
-    closure_0 = stateFromStores((arg0) => {
-      closure_0 = arg0;
+  let obj3 = { style: tmp5.doubleTapEmojiEditNudgeContainer, children: null };
+  const callback = noop.useCallback(() => {
+    let obj2 = { pickerIntention: constants.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
+    closure_0 = stateFromStores((_location) => {
       c3 = 0;
       c4 = 0;
-      return (function*(arg0) {
+      return (function*(arg0, value) {
         if (c4 === 2) {
           c4 = 3;
-          HermesBuiltin.throwTypeError();
+          throw new TypeError("Generator functions may not be called on executing generators");
         } else if (tmp4 === 3) {
           if (arg0 === 1) {
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -75,40 +64,36 @@ function DoubleTapEmojiEditNudgeInner(location) {
             if (0 === c3) {
               if (arg0 === 1) {
                 c4 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 c4 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
                 closure_2 = tmp2;
                 closure_1 = tmp5;
-                obj1 = { emoji_id: null, emoji_name: null, emoji_animated: null, recommended: false, location: null };
-                ({ id: obj8[0], name: obj8[1], animated: obj8[2] } = callback);
-                obj1[4] = callback;
-                closure_2_1(closure_2_2[16]).track(closure_2_8.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj1);
-                const DoubleTapReactionEmoji = callback(closure_2_2[10]).DoubleTapReactionEmoji;
-                ({ id: obj9[0], name: obj9[1], animated: obj9[2] } = callback);
+                closure_129_0 = _location;
+                const obj4 = { emoji_id: null, emoji_name: null, emoji_animated: null, recommended: false, location: null };
+                ({ id: obj8.emoji_id, name: obj8.emoji_name, animated: obj8.emoji_animated } = _location);
+                obj4.location = _location;
+                emoji(1242).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj4);
+                const DoubleTapReactionEmoji = _location(1935).DoubleTapReactionEmoji;
+                ({ id: obj9.emojiId, name: obj9.emojiName, animated: obj9.animated } = _location);
                 c3 = 1;
                 c4 = 1;
-                const obj3 = { value: null, done: false };
-                obj3[0] = DoubleTapReactionEmoji.updateSetting({ emojiId: null, emojiName: null, animated: null, disableDoubleTap: false });
-                return obj3;
+                const obj6 = { value: DoubleTapReactionEmoji.updateSetting({ emojiId: null, emojiName: null, animated: null, disableDoubleTap: false }), done: false };
+                return obj6;
               }
             } else if (arg0 === 1) {
               c4 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj4 = { value: null, done: true };
-              obj4[0] = arg1;
-              return obj4;
+              const obj16 = { value, done: true };
+              return obj16;
             } else {
-              obj = callback(closure_2_2[17]);
-              const obj5 = { emoji: null };
-              obj5[0] = callback;
-              const result = obj.showDoubleTapEmojiUpdatedToast(obj5);
+              const obj17 = { emoji: closure_129_0 };
+              const result = _location(11156).showDoubleTapEmojiUpdatedToast(obj17);
               c4 = 3;
               return { value: "HermesInternal", done: null };
             }
@@ -119,7 +104,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
         }
       })();
     });
-    obj[1] = function() {
+    obj2.onPressEmoji = function() {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -129,48 +114,53 @@ function DoubleTapEmojiEditNudgeInner(location) {
       }
       return applyArgumentsResult;
     };
-    let result = obj.openEmojiPickerActionSheet(obj, "stack");
+    let result = _location(11153).openEmojiPickerActionSheet(obj2, "stack");
   }, items2);
-  obj = { color: "text-subtle", variant: "text-sm/normal", children: null };
+  let obj4 = { color: "text-subtle", variant: "text-sm/normal", children: null };
   const intl = _location(1114).intl;
-  obj[2] = intl.string(_location(1114).t["1EUr/W"]);
-  const items3 = [callback2(_location(4556).Text, obj), , ];
-  obj1 = { style: tmp5.doubleTapEmojiContainer, fastImageStyle: tmp5.doubleTapCustomEmoji, textEmojiStyle: tmp5.doubleTapTextEmoji, src: memo, name: null };
+  obj4.children = intl.string(_location(1114).t["1EUr/W"]);
+  const items3 = [closure_11(_location(4570).Text, obj4), , ];
+  const obj5 = { style: tmp5.doubleTapEmojiContainer, fastImageStyle: tmp5.doubleTapCustomEmoji, textEmojiStyle: tmp5.doubleTapTextEmoji, src: memo, name: null };
   let str = "";
-  const tmp3 = callback((arg0) => arg0.byAppEntry[closure_2].fontScale);
+  let obj2 = _location(504);
   const tmp8 = closure_12;
   const tmp9 = View;
   if (null == emoji.id) {
     str = emoji.surrogates;
   }
-  obj1[4] = str;
-  items3[1] = callback2(emoji(7130), obj1);
-  const obj2 = { accessibilityRole: "button", onPress: callback, hitSlop: closure_13, style: tmp5.editButton, children: null };
-  let obj3 = { color: "text-brand", variant: "text-sm/normal", children: null };
+  obj5.name = str;
+  items3[1] = closure_11(emoji(7144), obj5);
+  let obj6 = { accessibilityRole: "button", onPress: callback, hitSlop, style: tmp5.editButton, children: null };
+  const obj7 = { color: "text-brand", variant: "text-sm/normal", children: null };
   const intl2 = tmp(1114).intl;
-  obj3[2] = intl2.string(_location(1114).t.bt75uw);
-  obj2[4] = callback2(_location(4556).Text, obj3);
-  items3[2] = callback2(_location(5123).PressableOpacity, obj2);
-  obj[1] = items3;
-  return tmp8(tmp9, obj);
+  obj7.children = intl2.string(_location(1114).t.bt75uw);
+  obj6.children = closure_11(_location(4570).Text, obj7);
+  items3[2] = closure_11(_location(5137).PressableOpacity, obj6);
+  obj3.children = items3;
+  return tmp8(tmp9, obj3);
 }
-({ EMOJI_URL_BASE_SIZE: c9, EmojiIntention: c10 } = set);
-({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-let closure_13 = { left: 8, right: 8 };
-let closure_14 = createCacheKey.createStyles((arg0) => {
-  let obj = { doubleTapEmojiContainer: null, doubleTapTextEmoji: null, doubleTapCustomEmoji: null, doubleTapEmojiEditNudgeContainer: null, editButton: null };
-  obj = { marginHorizontal: ThemesDefault.space.PX_4 };
-  obj[0] = obj;
-  obj = { fontSize: 12 * arg0, color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-  obj[1] = obj;
-  obj[2] = { height: 16 * arg0, width: 16 * arg0 };
-  obj[3] = { marginTop: ThemesDefault.space.PX_8, flexDirection: "row", alignItems: "center", justifyContent: "center", flexWrap: "wrap" };
-  obj1 = { height: 16 * arg0, width: 16 * arg0 };
-  const obj2 = { marginTop: ThemesDefault.space.PX_8, flexDirection: "row", alignItems: "center", justifyContent: "center", flexWrap: "wrap" };
-  obj[4] = { marginHorizontal: ThemesDefault.space.PX_4 };
+const View = fn(17).View;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const EmojiConstants = fn(1374);
+({ EMOJI_URL_BASE_SIZE: closure_9, EmojiIntention: c10 } = EmojiConstants);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const hitSlop = { left: 8, right: 8 };
+const createStyles = fn(4574);
+let closure_14 = createStyles.createStyles((arg0) => {
+  const obj = { doubleTapEmojiContainer: { marginHorizontal: nativeDefault.space.PX_4 }, doubleTapTextEmoji: null, doubleTapCustomEmoji: null, doubleTapEmojiEditNudgeContainer: null, editButton: null };
+  const obj2 = { marginHorizontal: nativeDefault.space.PX_4 };
+  obj.doubleTapTextEmoji = { fontSize: 12 * arg0, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+  size = { height: 16 * arg0, width: 16 * arg0 };
+  obj.doubleTapCustomEmoji = size;
+  const obj3 = { fontSize: 12 * arg0, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+  obj.doubleTapEmojiEditNudgeContainer = { marginTop: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center", justifyContent: "center", flexWrap: "wrap" };
+  const obj4 = { marginTop: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center", justifyContent: "center", flexWrap: "wrap" };
+  obj.editButton = { marginHorizontal: nativeDefault.space.PX_4 };
   return obj;
 });
-let result = set.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapEmojiEditNudge.tsx");
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapEmojiEditNudge.tsx");
 
 export const DoubleTapEmojiEditNudge = function DoubleTapEmojiEditNudge(location) {
   const _location = location.location;
@@ -178,8 +168,8 @@ export const DoubleTapEmojiEditNudge = function DoubleTapEmojiEditNudge(location
   const DoubleTapReactionEmoji = setting(1935).DoubleTapReactionEmoji;
   setting = DoubleTapReactionEmoji.useSetting();
   const items = [setting];
-  const memo = React.useMemo(() => setting(closure_1_2[11]).disambiguatedEmojiFromSettingsValue(setting), items);
-  const memo1 = React.useMemo(() => setting(table[11]).getFallbackDoubleTapDisambiguatedEmoji(), []);
+  const memo = noop.useMemo(() => DoubleTapToReactUtils.disambiguatedEmojiFromSettingsValue(setting), items);
+  const memo1 = noop.useMemo(() => setting(dependencyMap[11]).getFallbackDoubleTapDisambiguatedEmoji(), []);
   [][0] = setting;
   let tmp5 = null;
   if (true === setting.disableDoubleTap) {
@@ -187,20 +177,15 @@ export const DoubleTapEmojiEditNudge = function DoubleTapEmojiEditNudge(location
   } else {
     if (!tmp4) {
       if (tmp5 != memo1) {
-        let obj = { location: null, emoji: null };
-        obj[0] = _location;
-        obj[1] = memo1;
-        let tmp8 = callback2(DoubleTapEmojiEditNudgeInner, obj);
+        const obj = { location: _location, emoji: memo1 };
+        const tmp8 = closure_11(DoubleTapEmojiEditNudgeInner, obj);
       }
     }
     tmp5 = null;
     if (tmp9) {
-      obj = { location: null, emoji: null };
-      obj[0] = _location;
-      obj[1] = memo;
-      tmp5 = callback2(DoubleTapEmojiEditNudgeInner, obj);
+      const obj2 = { location: _location, emoji: memo };
+      tmp5 = closure_11(DoubleTapEmojiEditNudgeInner, obj2);
     }
-    tmp8 = tmp5;
     tmp9 = tmp5 != memo;
   }
 };

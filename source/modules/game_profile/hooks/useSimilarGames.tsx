@@ -1,23 +1,23 @@
-// Module ID: 8881
-// Function ID: 8882
+// Module ID: 8908
+// Function ID: 8909
 // Name: useSimilarGames
-// Dependencies: [1916, 1371, 8766, 8765, 7309, 504, 8681, 5111, 2]
+// Dependencies: [1916, 1371, 8794, 8793, 7323, 504, 8709, 5125, 2]
 // Exports: default
 
-// Module 8881 (useSimilarGames)
-import closure_2 from "createGamesFromMessage" /* 1916 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
-import { SIMILAR_GAMES_BLOCKED_GAME_IDS as closure_4 } from "set" /* 8766 */;
+// Module 8908 (useSimilarGames)
+import GameStore from "GameStore" /* 1916 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
+const require = fn;
+fn(8794).SIMILAR_GAMES_BLOCKED_GAME_IDS;
 let closure_5 = [];
-let closure_6 = [];
-const result = require("set").fileFinishedImporting("modules/game_profile/hooks/useSimilarGames.tsx");
+const similarGames = [];
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_profile/hooks/useSimilarGames.tsx");
 
 export default function useSimilarGames(arg0) {
   const hasItem = set.has(arg0);
-  let obj = data(8765);
-  const similarGameIds = obj.useSimilarGameIds(arg0, !hasItem);
+  const similarGameIds = data(8793).useSimilarGameIds(arg0, !hasItem);
   ({ data, isLoading, error } = similarGameIds);
   if (hasItem) {
     let tmp7 = closure_5;
@@ -25,23 +25,22 @@ export default function useSimilarGames(arg0) {
     tmp7 = data;
   }
   data = tmp7;
-  let tmp3Result = tmp3(7309);
-  const games = tmp3Result.useGames(tmp7);
-  tmp3Result = tmp3(504);
-  const items = [closure_2];
+  const obj = data(8793);
+  const tmp2 = !hasItem;
+  const games = data(7323).useGames(tmp7);
+  const tmp3Result = data(7323);
+  const items = [GameStore];
   const items1 = [tmp7];
-  const stateFromStores = tmp3Result.useStateFromStores(items, () => data.some((closure_0) => null == game.getGame(closure_0) && !game.hasNoData(closure_0) && !game.didFetchingFail(closure_0)), items1);
+  const stateFromStores = data(504).useStateFromStores(items, () => data.some((item) => null == game.getGame(item) && !game.hasNoData(item) && !game.didFetchingFail(item)), items1);
   data(504);
-  const items2 = [closure_2, closure_3];
+  const items2 = [GameStore, UserStore];
   [][0] = tmp7;
   if (hasItem) {
-    obj = { isFetching: false, similarGames: null };
-    obj[1] = closure_6;
+    const obj2 = { isFetching: false, similarGames };
+    let obj3 = obj2;
   } else {
-    obj = { isFetching: null, similarGames: null };
-    obj[0] = null == error && null == data || isLoading || stateFromStores;
-    obj[1] = tmp11;
+    obj3 = { isFetching: null == error && null == data || isLoading || stateFromStores, similarGames: tmp11 };
     const tmp13 = null == error && null == data || isLoading || stateFromStores;
   }
-  return obj;
+  return obj3;
 };

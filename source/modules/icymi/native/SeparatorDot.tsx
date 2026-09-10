@@ -1,26 +1,26 @@
-// Module ID: 16515
-// Function ID: 16516
+// Module ID: 16546
+// Function ID: 16547
 // Name: SeparatorDot
-// Dependencies: [19, 17, 21, 4560, 576, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 2]
 // Exports: default
 
-// Module 16515 (SeparatorDot)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16546 (SeparatorDot)
+import nativeDefault from "native" /* 576 */;
+import noop from "module_19" /* 19 */;
 
-noopAll;
-createCacheKey = { separatorDot: null };
-createCacheKey = { width: 4, height: 4, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
-createCacheKey[0] = createCacheKey;
-let closure_2 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/icymi/native/SeparatorDot.tsx");
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+const obj2 = { separatorDot: null };
+let size = { width: 4, height: 4, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
+obj2.separatorDot = size;
+let closure_2 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/icymi/native/SeparatorDot.tsx");
 
 export default function SeparatorDot() {
   const obj = { style: null };
-  const items = [callback().separatorDot];
-  obj[0] = items;
+  const items = [closure_2().separatorDot];
+  obj.style = items;
   return <View style={null} />;
 };

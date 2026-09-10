@@ -1,19 +1,22 @@
-// Module ID: 16955
-// Function ID: 16956
+// Module ID: 16992
+// Function ID: 16993
 // Name: usePreloadedAsset
-// Dependencies: [32, 19, 4552, 504, 1115, 16956, 5587, 2]
+// Dependencies: [32, 19, 4566, 504, 1115, 16993, 5601, 2]
 // Exports: default
 
-// Module 16955 (usePreloadedAsset)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+// Module 16992 (usePreloadedAsset)
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/image/usePreloadedAsset.native.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/image/usePreloadedAsset.native.tsx");
 
 export default function usePreloadedAsset(arg0) {
-  const _require = arg0;
+  _require = arg0;
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -26,28 +29,27 @@ export default function usePreloadedAsset(arg0) {
   if (num === undefined) {
     num = 2000;
   }
-  dependencyMap = undefined;
-  let callback;
+  _slicedToArray = undefined;
   let combined;
   c5 = undefined;
   const items = [c5];
-  const stateFromStores = _require(504).useStateFromStores(items, () => _undefined.useReducedMotion);
-  let obj2 = _require(504);
-  const tmp3 = _require(1115).isAndroid() && flag && !stateFromStores;
+  const stateFromStores = require("initialize").useStateFromStores(items, () => _undefined.useReducedMotion);
+  let obj2 = require("initialize");
+  const tmp3 = require("PlatformUtils").isAndroid() && flag && !stateFromStores;
   dependencyMap = tmp3;
   let tmp4 = !tmp3;
   if (tmp3) {
-    tmp4 = null != num(16956);
+    tmp4 = null != num(16993);
   }
-  callback = tmp4;
+  _slicedToArray = tmp4;
   let str = "image";
   if (tmp3) {
     str = "apng";
   }
   combined = "" + str + ":" + arg0;
-  const obj3 = _require(1115);
+  const obj3 = require("PlatformUtils");
   const obj4 = combined;
-  [tmp9, c5] = callback(combined.useState(null), 2);
+  [tmp9, c5] = combined.useState(null);
   let status = "skipped";
   if (null != arg0) {
     status = "skipped";
@@ -72,29 +74,26 @@ export default function usePreloadedAsset(arg0) {
         timeout = setTimeout(() => {
           if (!c0) {
             c0 = true;
-            const obj = { key: null, status: "timed-out" };
-            obj[0] = closure_1_4;
-            closure_1_5(obj);
+            const obj = { key: combined, status: "timed-out" };
+            c5(obj);
           }
         }, timeout);
         if (dependencyMap) {
-          if (null != num(16956)) {
-            let preloadResult = num(16956).preload(tmp);
-            const obj2 = num(16956);
+          if (null != num(16993)) {
+            let preloadResult = num(16993).preload(tmp);
+            const obj2 = num(16993);
           }
           preloadResult.then(() => {
             if (!c0) {
               c0 = true;
-              const obj = { key: null, status: "preloaded" };
-              obj[0] = closure_1_4;
-              closure_1_5(obj);
+              const obj = { key: combined, status: "preloaded" };
+              c5(obj);
             }
           }, () => {
             if (!c0) {
               c0 = true;
-              const obj = { key: null, status: "skipped" };
-              obj[0] = closure_1_4;
-              closure_1_5(obj);
+              const obj = { key: combined, status: "skipped" };
+              c5(obj);
             }
           });
           return () => {
@@ -102,9 +101,8 @@ export default function usePreloadedAsset(arg0) {
             clearTimeout(closure_1);
           };
         }
-        preloadResult = num(5587).preload(tmp, timeout + 1000);
-        let obj = num(5587);
-        const tmp4 = timeout;
+        preloadResult = num(5601).preload(tmp, timeout + 1000);
+        let obj = num(5601);
       }
     }
   }, items1);

@@ -1,21 +1,21 @@
-// Module ID: 7146
-// Function ID: 7147
-// Name: FormCheckbox
-// Dependencies: [19, 21, 4560, 1178, 2]
+// Module ID: 7160
+// Function ID: 7161
+// Name: Form/FormCheckbox
+// Dependencies: [19, 21, 4574, 1178, 2]
 // Exports: default
 
-// Module 7146 (FormCheckbox)
-import noopAll from "noop" /* 19 */;
-import Button from "Button" /* 1178 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 7160 (Form/FormCheckbox)
+import native from "native" /* 1178 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-let closure_3 = createCacheKey.createStyles({ checkbox: { width: 22, height: 22 } });
-const result = require("set").fileFinishedImporting("design/void/Form/native/FormCheckbox.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_3 = createStyles.createStyles({ checkbox: { width: 22, height: 22 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/Form/native/FormCheckbox.tsx");
 
 export default function FormCheckbox(selected) {
-  const tmp = callback();
-  return jsx(Button.Checkbox, { style: callback().checkbox, selected: selected.selected });
+  const tmp = closure_3();
+  return jsx(native.Checkbox, { style: closure_3().checkbox, selected: selected.selected });
 };

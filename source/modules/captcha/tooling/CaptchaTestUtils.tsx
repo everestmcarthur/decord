@@ -1,26 +1,26 @@
-// Module ID: 15687
-// Function ID: 15688
-// Name: found
-// Dependencies: [15688, 2]
+// Module ID: 15717
+// Function ID: 15718
+// Name: CaptchaTestUtils
+// Dependencies: [15718, 2]
 
-// Module 15687 (found)
-import set from "set" /* 2 */;
-import _testCaptcha from "_testCaptcha" /* 15688 */;
+// Module 15717 (CaptchaTestUtils)
+import CaptchaTestActionCreators from "CaptchaTestActionCreators" /* 15718 */;
+import size from "module_2" /* 2 */;
 
-const entries = Object.entries(_testCaptcha.HCaptchaDifficulty);
-const mapped = entries.map((arg0) => {
-  [tmp, str] = arg0;
+const entries = Object.entries(CaptchaTestActionCreators.HCaptchaDifficulty);
+const mapped = entries.map((item) => {
+  [tmp, str] = item;
   return { id: str.toString(), label: tmp, value: str };
 });
 const found = mapped.filter(function isHCaptchaDifficulty(value) {
   return typeof value.value !== "string";
 });
-const entries1 = Object.entries(_testCaptcha.CaptchaDeciderType);
-const mapped1 = entries1.map((arg0) => {
-  [tmp, tmp2] = arg0;
+const entries1 = Object.entries(CaptchaTestActionCreators.CaptchaDeciderType);
+const mapped1 = entries1.map((item) => {
+  [tmp, tmp2] = item;
   return { id, label, value: id };
 });
-const result = set.fileFinishedImporting("modules/captcha/tooling/CaptchaTestUtils.tsx");
+const result = size.fileFinishedImporting("modules/captcha/tooling/CaptchaTestUtils.tsx");
 
 export const HCAPTCHA_DIFFICULTY_OPTIONS = found;
 export const CAPTCHA_DECIDER_TYPE_OPTIONS = mapped1;

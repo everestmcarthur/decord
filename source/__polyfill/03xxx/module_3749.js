@@ -1,36 +1,34 @@
 // Module ID: 3749
 // Function ID: 3750
-// Dependencies: [2035, 2036]
+// Dependencies: [2033]
 
 // Module 3749
-import buildMatchFn from "buildMatchFn" /* 2035 */;
-import buildMatchPatternFn from "buildMatchPatternFn" /* 2036 */;
+import module_2033 from "module_2033" /* 2033 */;
 
-if (!buildMatchFn) {
-  let obj = { default: null };
-  obj[0] = buildMatchFn;
+if (!module_2033) {
+  const obj2 = { default: module_2033 };
+  let obj = obj2;
 } else {
-  obj = buildMatchFn;
+  obj = module_2033;
 }
-if (!buildMatchPatternFn) {
-  obj = { default: null };
-  obj[0] = buildMatchPatternFn;
-  let obj2 = obj;
-} else {
-  obj2 = buildMatchPatternFn;
-}
-obj2 = {
-  matchPattern: /^(\d+)\.?/i,
-  parsePattern: /\d+/i,
-  valueCallback(joined) {
-    return parseInt(joined, 10);
-  }
+const date = {
+  ordinalNumber(arg0, arg1) {
+    return Number(arg0) + "-oji";
+  },
+  era: obj.default({ values: { narrow: ["pr. Kr.", "po Kr."], abbreviated: ["pr. Kr.", "po Kr."], wide: ["prie\u0161 Krist\u0173", "po Kristaus"] }, defaultWidth: "wide" }),
+  quarter: obj.default({
+    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["I ketv.", "II ketv.", "III ketv.", "IV ketv."], wide: ["I ketvirtis", "II ketvirtis", "III ketvirtis", "IV ketvirtis"] },
+    defaultWidth: "wide",
+    formattingValues: { narrow: ["1", "2", "3", "4"], abbreviated: ["I k.", "II k.", "III k.", "IV k."], wide: ["I ketvirtis", "II ketvirtis", "III ketvirtis", "IV ketvirtis"] },
+    defaultFormattingWidth: "wide",
+    argumentCallback(arg0) {
+      return arg0 - 1;
+    }
+  }),
+  month: obj.default({ values: { narrow: ["S", "V", "K", "B", "G", "B", "L", "R", "R", "S", "L", "G"], abbreviated: ["saus.", "vas.", "kov.", "bal.", "geg.", "bir\u017E.", "liep.", "rugp.", "rugs.", "spal.", "lapkr.", "gruod."], wide: ["sausis", "vasaris", "kovas", "balandis", "gegu\u017E\u0117", "bir\u017Eelis", "liepa", "rugpj\u016Btis", "rugs\u0117jis", "spalis", "lapkritis", "gruodis"] }, defaultWidth: "wide", formattingValues: { narrow: ["S", "V", "K", "B", "G", "B", "L", "R", "R", "S", "L", "G"], abbreviated: ["saus.", "vas.", "kov.", "bal.", "geg.", "bir\u017E.", "liep.", "rugp.", "rugs.", "spal.", "lapkr.", "gruod."], wide: ["sausio", "vasario", "kovo", "baland\u017Eio", "gegu\u017E\u0117s", "bir\u017Eelio", "liepos", "rugpj\u016B\u010Dio", "rugs\u0117jo", "spalio", "lapkri\u010Dio", "gruod\u017Eio"] }, defaultFormattingWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["S", "P", "A", "T", "K", "P", "\u0160"], short: ["Sk", "Pr", "An", "Tr", "Kt", "Pn", "\u0160t"], abbreviated: ["sk", "pr", "an", "tr", "kt", "pn", "\u0161t"], wide: ["sekmadienis", "pirmadienis", "antradienis", "tre\u010Diadienis", "ketvirtadienis", "penktadienis", "\u0161e\u0161tadienis"] }, defaultWidth: "wide", formattingValues: { narrow: ["S", "P", "A", "T", "K", "P", "\u0160"], short: ["Sk", "Pr", "An", "Tr", "Kt", "Pn", "\u0160t"], abbreviated: ["sk", "pr", "an", "tr", "kt", "pn", "\u0161t"], wide: ["sekmadien\u012F", "pirmadien\u012F", "antradien\u012F", "tre\u010Diadien\u012F", "ketvirtadien\u012F", "penktadien\u012F", "\u0161e\u0161tadien\u012F"] }, defaultFormattingWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "pr. p.", pm: "pop.", midnight: "vidurnaktis", noon: "vidurdienis", morning: "rytas", afternoon: "diena", evening: "vakaras", night: "naktis" }, abbreviated: { am: "prie\u0161piet", pm: "popiet", midnight: "vidurnaktis", noon: "vidurdienis", morning: "rytas", afternoon: "diena", evening: "vakaras", night: "naktis" }, wide: { am: "prie\u0161piet", pm: "popiet", midnight: "vidurnaktis", noon: "vidurdienis", morning: "rytas", afternoon: "diena", evening: "vakaras", night: "naktis" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "pr. p.", pm: "pop.", midnight: "vidurnaktis", noon: "perpiet", morning: "rytas", afternoon: "popiet\u0117", evening: "vakaras", night: "naktis" }, abbreviated: { am: "prie\u0161piet", pm: "popiet", midnight: "vidurnaktis", noon: "perpiet", morning: "rytas", afternoon: "popiet\u0117", evening: "vakaras", night: "naktis" }, wide: { am: "prie\u0161piet", pm: "popiet", midnight: "vidurnaktis", noon: "perpiet", morning: "rytas", afternoon: "popiet\u0117", evening: "vakaras", night: "naktis" } }, defaultFormattingWidth: "wide" })
 };
-const items = [/^f/i, /^e/i];
-const items1 = [/1/i, /2/i, /3/i, /4/i];
-const items2 = [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i];
-const items3 = [/^ja/i, /^f/i, /^mar/i, /^ap/i, /^mai/i, /^jun/i, /^jul/i, /^aug/i, /^s/i, /^o/i, /^n/i, /^d/i];
-const items4 = [/^s/i, /^m/i, /^ti/i, /^o/i, /^to/i, /^f/i, /^l/i];
 
-export default { ordinalNumber: obj2.default(obj2), era: obj.default({ matchPatterns: obj3, defaultMatchWidth: "wide", parsePatterns: { any: items }, defaultParseWidth: "any" }), quarter: obj.default(obj4), month: obj.default({ matchPatterns: obj6, defaultMatchWidth: "wide", parsePatterns: { narrow: items2, any: items3 }, defaultParseWidth: "any" }), day: obj.default({ matchPatterns: obj7, defaultMatchWidth: "wide", parsePatterns: { any: items4 }, defaultParseWidth: "any" }), dayPeriod: obj.default({ matchPatterns: obj8, defaultMatchWidth: "any", parsePatterns: { any: obj9 }, defaultParseWidth: "any" }) };
+export default date;
 export default exports.default;

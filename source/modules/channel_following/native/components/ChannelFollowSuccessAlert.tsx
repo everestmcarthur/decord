@@ -1,92 +1,94 @@
-// Module ID: 11338
-// Function ID: 11339
-// Name: items
-// Dependencies: [19, 17, 21, 11339, 11340, 11341, 11342, 11343, 11344, 1114, 4560, 4495, 4411, 7440, 12, 4994, 4556, 2]
+// Module ID: 11365
+// Function ID: 11366
+// Name: ChannelFollowSuccessAlert
+// Dependencies: [19, 17, 21, 11366, 11367, 11368, 11369, 11370, 11371, 1114, 4574, 4509, 4425, 7454, 12, 5008, 4570, 2]
 // Exports: default
 
-// Module 11338 (items)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import useThemeDefault from "useTheme" /* 4495 */;
-import componentDidMountDefault from "componentDidMount" /* 4994 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11365 (ChannelFollowSuccessAlert)
+import _modDef12 from "module_12" /* 12 */;
+import util from "util" /* 1114 */;
+import useThemeDefault from "useTheme" /* 4509 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let items = [require("registerAsset"), require("registerAsset"), require("registerAsset")];
-let items1 = [require("registerAsset"), require("registerAsset"), require("registerAsset")];
+const require = globalThis.__r;
+
+const common_AlertDefault = tmp2(5008);
+require = fn;
+const Image = fn(17).Image;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+let items = [fn(11366), fn(11367), fn(11368)];
+let items1 = [fn(11369), fn(11370), fn(11371)];
 const items2 = [
   () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["w2o/60"]);
+    const intl = util.intl;
+    return intl.string(util.t["w2o/60"]);
   },
   () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.FiAvKg);
+    const intl = util.intl;
+    return intl.string(util.t.FiAvKg);
   },
   () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.vKUFek);
+    const intl = util.intl;
+    return intl.string(util.t.vKUFek);
   },
   () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.veQl5T);
+    const intl = util.intl;
+    return intl.string(util.t.veQl5T);
   },
   () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Pxb7BR);
+    const intl = util.intl;
+    return intl.string(util.t.Pxb7BR);
   },
   () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["W03w++"]);
+    const intl = util.intl;
+    return intl.string(util.t["W03w++"]);
   },
   () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["95HTb5"]);
+    const intl = util.intl;
+    return intl.string(util.t["95HTb5"]);
   },
   () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["+XFelz"]);
+    const intl = util.intl;
+    return intl.string(util.t["+XFelz"]);
   },
   () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.hedHel);
+    const intl = util.intl;
+    return intl.string(util.t.hedHel);
   },
   () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.jgC65t);
+    const intl = util.intl;
+    return intl.string(util.t.jgC65t);
   }
 ];
-let closure_9 = createCacheKey.createStyles({ text: { marginTop: 16, lineHeight: 20, textAlign: "center" }, header: { textAlign: "center" }, image: { alignSelf: "center", marginTop: -72, marginBottom: 16, width: "100%", resizeMode: "contain" } });
-const result = require("set").fileFinishedImporting("modules/channel_following/native/components/ChannelFollowSuccessAlert.tsx");
+const createStyles = fn(4574);
+let closure_9 = createStyles.createStyles({ text: { marginTop: 16, lineHeight: 20, textAlign: "center" }, header: { textAlign: "center" }, image: { alignSelf: "center", marginTop: -72, marginBottom: 16, width: "100%", resizeMode: "contain" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel_following/native/components/ChannelFollowSuccessAlert.tsx");
 
 export default function ChannelFollowSuccessAlert(arg0) {
-  const tmp = callback3();
-  let obj = _require(4411);
-  const tmp6 = obj.isThemeDark(useThemeDefault()) ? items1 : items;
-  _require = tmp6;
-  let tmp5Result = tmp5(7440);
-  items = [tmp6];
-  const stableMemo = tmp5Result.useStableMemo(() => closure_1_1(closure_1_2[14]).sample(closure_0), items);
-  tmp5Result = tmp5(7440);
-  const stableMemo1 = tmp5Result.useStableMemo(() => callback(table[14]).sample(closure_8), []);
-  obj = {};
-  const tmp2 = importDefault;
+  const tmp = closure_9();
   const tmp4 = useThemeDefault();
+  const tmp6 = require("shared").isThemeDark(tmp4) ? items1 : items;
+  _require = tmp6;
+  const obj = require("shared");
+  items = [tmp6];
+  const stableMemo = require("areHookInputsEqual").useStableMemo(() => _modDef12.sample(closure_0), items);
+  const tmp5Result = require("areHookInputsEqual");
+  const stableMemo1 = require("areHookInputsEqual").useStableMemo(() => _modDef12.sample(items2), []);
+  const obj2 = {};
+  const tmp5Result2 = require("areHookInputsEqual");
   const merged = Object.assign(arg0);
   const intl = tmp5(1114).intl;
-  obj.confirmText = intl.string(_require(1114).t["+IrDzN"]);
-  obj = { source: stableMemo, style: tmp.image };
-  items1 = [callback(Image, obj), , ];
-  const tmp2Result = componentDidMountDefault;
-  items1[1] = callback(_require(4556).Text, { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stableMemo1() });
-  const obj2 = { style: tmp.text, variant: "text-md/medium", color: "text-muted", children: null };
+  obj2.confirmText = intl.string(require("util").t["+IrDzN"]);
+  items1 = [closure_4(Image, { source: stableMemo, style: tmp.image }), , ];
+  const obj3 = { source: stableMemo, style: tmp.image };
+  const tmp2Result = common_AlertDefault;
+  items1[1] = closure_4(require("Text/Text").Text, { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stableMemo1() });
+  const obj5 = { style: tmp.text, variant: "text-md/medium", color: "text-muted", children: null };
   const intl2 = tmp5(1114).intl;
-  obj2[3] = intl2.string(_require(1114).t["2QbSea"]);
-  items1[2] = callback(_require(4556).Text, obj2);
-  obj.children = items1;
-  return callback2(tmp2Result, obj);
+  obj5.children = intl2.string(require("util").t["2QbSea"]);
+  items1[2] = closure_4(require("Text/Text").Text, obj5);
+  obj2.children = items1;
+  return closure_5(tmp2Result, obj2);
 };

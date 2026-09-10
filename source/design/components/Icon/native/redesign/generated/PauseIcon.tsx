@@ -1,26 +1,26 @@
-// Module ID: 8276
-// Function ID: 8277
+// Module ID: 8304
+// Function ID: 8305
 // Name: PauseIcon
-// Dependencies: [19, 21, 576, 4261, 8277, 2]
+// Dependencies: [19, 21, 576, 4274, 8305, 2]
 // Exports: PauseIcon
 
-// Module 8276 (PauseIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 8277 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 8304 (PauseIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod8305 from "module_8305" /* 8305 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/PauseIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/PauseIcon.tsx");
 
 export const PauseIcon = function PauseIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8305, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

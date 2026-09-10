@@ -1,157 +1,160 @@
-// Module ID: 14658
-// Function ID: 14659
-// Name: PasswordlessUpsell
-// Dependencies: [32, 19, 17, 14659, 7975, 14660, 21, 4560, 576, 1483, 5607, 5587, 14661, 4556, 1114, 4975, 4763, 14662, 1896, 504, 14684, 6951, 6597, 5687, 14685, 11473, 14689, 14692, 4992, 11886, 2]
+// Module ID: 14684
+// Function ID: 14685
+// Name: SettingsAccountScreen
+// Dependencies: [32, 19, 17, 14685, 7989, 14686, 21, 4574, 576, 1483, 5621, 5601, 14687, 4570, 1114, 4989, 4777, 14688, 1896, 504, 14710, 6965, 6611, 5701, 14711, 11500, 14715, 14718, 5006, 11912, 2]
 
-// Module 14658 (PasswordlessUpsell)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4992 */;
-import preloadDefault from "preload" /* 5587 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
-import useIsTinyBroncoSettingsEnabled from "useIsTinyBroncoSettingsEnabled" /* 14685 */;
-import _modDef14692 from "module_14692" /* 14692 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "hasFetchedCredentials" /* 14659 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 7975 */;
-import { WebAuthnScreens } from "WebAuthnScreens" /* 14660 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14684 (SettingsAccountScreen)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import useMountEffectDefault from "useMountEffect" /* 5006 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import TableRowGroup from "TableRowGroup" /* 5701 */;
+import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6611 */;
+import MFAUtils from "MFAUtils" /* 6965 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 11912 */;
+import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14711 */;
+import SettingsAccountHeaderDefault from "SettingsAccountHeader" /* 14715 */;
+import SettingLayoutDefault from "SettingLayout" /* 14718 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import WebAuthnStore from "WebAuthnStore" /* 14685 */;
 
-require = arg1;
+require = fn;
 function PasswordlessUpsell() {
-  const tmp = callback4();
-  let obj = _require(1483);
-  _require = obj.useNavigation();
-  obj = { style: tmp.upsellPasswordless, children: null };
-  obj = { border: "none", shadow: "none", children: null };
-  obj1 = { style: { flexDirection: "row", gap: 8 }, children: null };
-  const obj2 = { style: { width: 70, height: 70 }, children: null };
-  const obj3 = { source: _require(14661), resizeMode: "contain", style: tmp.upsellImagePasswordless };
-  obj2[1] = callback2(preloadDefault, obj3);
-  const items = [callback2(View, obj2), ];
-  const obj4 = { style: { flex: 1 }, children: null };
-  const obj5 = { style: { flexShrink: 1, width: "90%", gap: 8 }, children: null };
-  const obj6 = { variant: "heading-lg/medium", color: "mobile-text-heading-primary", children: null };
-  const intl = _require(1114).intl;
-  obj6[2] = intl.string(_require(1114).t["+Svv46"]);
-  const items1 = [callback2(_require(4556).Heading, obj6), , ];
-  const obj7 = { variant: "text-md/normal", color: "text-muted", children: null };
-  const intl2 = _require(1114).intl;
-  obj7[2] = intl2.string(_require(1114).t.S0g2K9);
-  items1[1] = callback2(_require(4556).Text, obj7);
-  const obj8 = { style: { flexDirection: "row" }, children: null };
-  const obj9 = { text: null, onPress: null, size: "sm" };
-  const intl3 = _require(1114).intl;
-  obj9[0] = intl3.string(_require(1114).t.piGf5c);
-  obj9[1] = function onPress() {
-    let obj = closure_1_1(closure_1_3[16]);
-    obj = { navigation: callback, initialRouteName: closure_1_9.REGISTER, showNav: true };
-    obj.pushLazy(callback(closure_1_3[18])(closure_1_3[17], closure_1_3.paths), obj);
+  const tmp = closure_13();
+  _require = require("useNavigation").useNavigation();
+  const obj2 = { style: tmp.upsellPasswordless, children: null };
+  const obj3 = { border: "none", shadow: "none", children: null };
+  const obj4 = { style: { flexDirection: "row", gap: 8 }, children: null };
+  const obj5 = { style: { width: 70, height: 70 }, children: null };
+  const obj6 = { source: null, resizeMode: "contain", style: null };
+  const obj = require("useNavigation");
+  obj6.source = require("module_14687");
+  obj6.style = tmp.upsellImagePasswordless;
+  obj5.children = closure_10(FastImageDefault, obj6);
+  const items = [closure_10(View, obj5), ];
+  const obj7 = { style: { flex: 1 }, children: null };
+  const obj8 = { style: { flexShrink: 1, width: "90%", gap: 8 }, children: null };
+  const obj9 = { variant: "heading-lg/medium", color: "mobile-text-heading-primary", children: null };
+  const intl = require("util").intl;
+  obj9.children = intl.string(require("util").t["+Svv46"]);
+  const items1 = [closure_10(require("Text/Text").Heading, obj9), , ];
+  const obj10 = { variant: "text-md/normal", color: "text-muted", children: null };
+  const intl2 = require("util").intl;
+  obj10.children = intl2.string(require("util").t.S0g2K9);
+  items1[1] = closure_10(require("Text/Text").Text, obj10);
+  const obj11 = { style: { flexDirection: "row" }, children: null };
+  const obj12 = { text: null, onPress: null, size: "sm" };
+  const intl3 = require("util").intl;
+  obj12.text = intl3.string(require("util").t.piGf5c);
+  obj12.onPress = function onPress() {
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14688, dependencyMap.paths), { navigation, initialRouteName: WebAuthnScreens.REGISTER, showNav: true });
   };
-  const items2 = [callback2(_require(4975).Button, obj9), callback2(View, {})];
-  obj8[1] = items2;
-  items1[2] = callback3(View, obj8);
-  obj5[1] = items1;
-  obj4[1] = callback3(View, obj5);
-  items[1] = callback2(View, obj4);
-  obj1[1] = items;
-  obj[2] = callback3(View, obj1);
-  obj[1] = callback2(_require(5607).Card, obj);
-  return callback2(View, obj);
+  const items2 = [closure_10(require("components/Button/Button").Button, obj12), closure_10(View, {})];
+  obj11.children = items2;
+  items1[2] = closure_11(View, obj11);
+  obj8.children = items1;
+  obj7.children = closure_11(View, obj8);
+  items[1] = closure_10(View, obj7);
+  obj4.children = items;
+  obj3.children = closure_11(View, obj4);
+  obj2.children = closure_10(require("Card").Card, obj3);
+  return closure_10(View, obj2);
 }
 function AccountTwoFALabel() {
-  let obj = first(504);
-  let items = [closure_7];
-  const tmp3 = callback(obj.useStateFromStoresObject(items, () => {
-    const items = [closure_7.hasCredentials, closure_7.hasFetchedCredentials()];
+  let items = [WebAuthnStore];
+  const tmp3 = _slicedToArray(first(504).useStateFromStoresObject(items, () => {
+    const items = [WebAuthnStore.hasCredentials, WebAuthnStore.hasFetchedCredentials()];
     return items;
   }), 2);
   first = tmp3[0];
   closure_1 = tmp5;
-  const isUserVerified = first(14684).useIsUserVerified();
+  let obj = first(504);
+  const isUserVerified = first(14710).useIsUserVerified();
   const items1 = [tmp3[1], first, isUserVerified];
-  const memo = importAllResult.useMemo(() => {
-    let tmp = first(closure_1_3[21]).hasWebAuthn && isUserVerified && closure_1;
+  const memo = noop.useMemo(() => {
+    let tmp = MFAUtils.hasWebAuthn && isUserVerified && closure_1;
     if (tmp) {
       tmp = !first;
     }
     return tmp;
   }, items1);
   const items2 = [tmp3[1]];
-  const effect = importAllResult.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (!closure_1) {
-      const webAuthnCredentials = first(closure_1_3[22]).fetchWebAuthnCredentials();
-      const obj = first(closure_1_3[22]);
+      const webAuthnCredentials = WebAuthnActionCreators.fetchWebAuthnCredentials();
     }
   }, items2);
   let tmp11 = memo;
   if (memo) {
-    tmp11 = callback2(PasswordlessUpsell, {});
+    tmp11 = closure_10(PasswordlessUpsell, {});
   }
-  obj = { children: null };
+  const obj3 = { children: null };
   const items3 = [tmp11, ];
-  obj = { title: null };
+  const obj4 = { title: null };
   const intl = tmp(1114).intl;
-  obj[0] = intl.string(first(1114).t.fuTmEJ);
-  items3[1] = callback2(first(5687).TableRowGroupTitle, obj);
-  obj[0] = items3;
-  return closure_11(closure_12, obj);
+  obj4.title = intl.string(first(1114).t.fuTmEJ);
+  items3[1] = closure_10(first(5701).TableRowGroupTitle, obj4);
+  obj3.children = items3;
+  return closure_11(closure_12, obj3);
 }
 function AccountStatusLabel() {
-  let obj = useIsTinyBroncoSettingsEnabled;
-  const isTinyBroncoSettingsEnabled = obj.useIsTinyBroncoSettingsEnabled();
-  const intl = getSystemLocale.intl;
-  const t = getSystemLocale.t;
-  obj = { title: intl.string(isTinyBroncoSettingsEnabled ? t.GI2mea : t["16r9jm"]) };
-  return closure_10(TableRowGroupTitle.TableRowGroupTitle, obj);
+  const isTinyBroncoSettingsEnabled = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled();
+  const intl = util.intl;
+  const t = util.t;
+  const tmp2 = closure_1_10;
+  return tmp2(TableRowGroup.TableRowGroupTitle, { title: intl.string(isTinyBroncoSettingsEnabled ? t.GI2mea : t["16r9jm"]) });
 }
 function AccountSecurityPage() {
-  const node = importAllResult.useMemo(() => {
-    let obj = callback(11473);
-    obj = { sections: null, ListHeaderComponent: null };
-    obj = { label: null, settings: null };
-    const intl = callback(1114).intl;
-    obj[0] = intl.string(callback(1114).t.e262Nn);
-    const items = [, , , , , , ];
-    ({ ACCOUNT_USERNAME: arr[0], ACCOUNT_DISPLAY_NAME: arr[1], ACCOUNT_EMAIL: arr[2], ACCOUNT_PHONE: arr[3], ACCOUNT_AGE_GROUP_ADULT: arr[4], ACCOUNT_AGE_GROUP_NON_ADULT: arr[5], ACCOUNT_AGE_GROUP_ASSIGNED_ADULT: arr[6] } = closure_8);
-    obj[1] = items;
-    const items1 = [obj, , , ];
-    const items2 = [, , , , , ];
-    ({ ACCOUNT_CHANGE_PASSWORD: arr3[0], ACCOUNT_WEB_AUTHN_VIEW: arr3[1], ACCOUNT_ENABLE_2FA: arr3[2], ACCOUNT_VIEW_BACKUP_CODES: arr3[3], ACCOUNT_REMOVE_2FA: arr3[4], ACCOUNT_SMS_BACKUP: arr3[5] } = closure_8);
-    items1[1] = { label: callback3(closure_15, {}), settings: items2 };
-    obj1 = { label: callback3(closure_15, {}), settings: items2 };
-    const items3 = [, ];
-    ({ ACCOUNT_AGE_GROUP: arr4[0], ACCOUNT_STANDING: arr4[1] } = closure_8);
-    items1[2] = { label: callback3(closure_16, {}), settings: items3 };
+  const node = noop.useMemo(() => {
+    const obj2 = { sections: null, ListHeaderComponent: null };
     const obj3 = { label: null, settings: null };
-    const intl2 = callback(1114).intl;
-    obj3[0] = intl2.string(callback(1114).t["5V0AkP"]);
+    const intl = require("util").intl;
+    obj3.label = intl.string(require("util").t.e262Nn);
+    const items = [, , , , , , ];
+    ({ ACCOUNT_USERNAME: arr[0], ACCOUNT_DISPLAY_NAME: arr[1], ACCOUNT_EMAIL: arr[2], ACCOUNT_PHONE: arr[3], ACCOUNT_AGE_GROUP_ADULT: arr[4], ACCOUNT_AGE_GROUP_NON_ADULT: arr[5], ACCOUNT_AGE_GROUP_ASSIGNED_ADULT: arr[6] } = MobileUserSettings);
+    obj3.settings = items;
+    const items1 = [obj3, , , ];
+    const obj4 = { label: closure_1_10(AccountTwoFALabel, {}), settings: null };
+    const items2 = [, , , , , ];
+    ({ ACCOUNT_CHANGE_PASSWORD: arr3[0], ACCOUNT_WEB_AUTHN_VIEW: arr3[1], ACCOUNT_ENABLE_2FA: arr3[2], ACCOUNT_VIEW_BACKUP_CODES: arr3[3], ACCOUNT_REMOVE_2FA: arr3[4], ACCOUNT_SMS_BACKUP: arr3[5] } = MobileUserSettings);
+    obj4.settings = items2;
+    items1[1] = obj4;
+    const obj5 = { label: closure_1_10(AccountStatusLabel, {}), settings: null };
+    const items3 = [, ];
+    ({ ACCOUNT_AGE_GROUP: arr4[0], ACCOUNT_STANDING: arr4[1] } = MobileUserSettings);
+    obj5.settings = items3;
+    items1[2] = obj5;
+    const obj6 = { label: null, settings: null };
+    const intl2 = require("util").intl;
+    obj6.label = intl2.string(require("util").t["5V0AkP"]);
     const items4 = [, ];
-    ({ ACCOUNT_DISABLE: arr5[0], ACCOUNT_DELETE: arr5[1] } = closure_8);
-    obj3[1] = items4;
-    items1[3] = obj3;
-    obj[0] = items1;
-    obj[1] = callback2(14689);
-    return obj.createList(obj);
+    ({ ACCOUNT_DISABLE: arr5[0], ACCOUNT_DELETE: arr5[1] } = MobileUserSettings);
+    obj6.settings = items4;
+    items1[3] = obj6;
+    obj2.sections = items1;
+    obj2.ListHeaderComponent = SettingsAccountHeaderDefault;
+    return require("SettingBuilders").createList(obj2);
   }, []);
-  return callback2(_modDef14692, { node });
+  return closure_1_10(SettingLayoutDefault, { node });
 }
-let c5 = importAllResult;
-({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
-let obj = { upsellPasswordless: null, upsellImagePasswordless: null };
-obj = { marginBottom: 16, borderColor: ThemesDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED, borderWidth: 1, borderRadius: ThemesDefault.radii.lg };
-obj[0] = obj;
-obj[1] = { height: "100%", width: "100%" };
-let closure_13 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(() => {
-  useMountLayoutEffectDefault(() => {
-    const safetyHubData = callback(table[29]).getSafetyHubData();
-  });
-  return callback2(AccountSecurityPage, {});
-});
-const result = require("set").fileFinishedImporting("modules/user_settings/account/native/SettingsAccountScreen.tsx");
+const View = fn(17).View;
+const MobileUserSettings = fn(7989).MobileUserSettings;
+const WebAuthnScreens = fn(14686).WebAuthnScreens;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
+const createStyles = fn(4574);
+let obj = { upsellPasswordless: { marginBottom: 16, borderColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED, borderWidth: 1, borderRadius: nativeDefault.radii.lg }, upsellImagePasswordless: { height: "100%", width: "100%" } };
+let closure_13 = createStyles.createStyles(obj);
+let obj3 = { marginBottom: 16, borderColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED, borderWidth: 1, borderRadius: nativeDefault.radii.lg };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/account/native/SettingsAccountScreen.tsx");
 
-export default memoResult;
+export default noop.memo(() => {
+  useMountEffectDefault(() => {
+    const safetyHubData = SafetyHubActionCreatorsAll.getSafetyHubData();
+  });
+  return closure_1_10(AccountSecurityPage, {});
+});

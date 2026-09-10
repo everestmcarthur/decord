@@ -1,47 +1,46 @@
-// Module ID: 14760
-// Function ID: 14761
-// Name: AGE_GROUP_CONFIRM_ROW_PROPS
-// Dependencies: [8411, 8413, 1114, 2946, 4773, 14685, 2]
+// Module ID: 14786
+// Function ID: 14787
+// Name: AgeGroupScreenRowProps
+// Dependencies: [8439, 8441, 1114, 2946, 4787, 14711, 2]
 // Exports: useShowAccountStatusAgeGroupRow, useShowAssignedAdultAgeGroupRow
 
-// Module 14760 (AGE_GROUP_CONFIRM_ROW_PROPS)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 2946 */;
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4773 */;
-import openIncodeAgeVerificationModalDefault from "openIncodeAgeVerificationModal" /* 8411 */;
-import AgeVerificationModalEntryPoint from "AgeVerificationModalEntryPoint" /* 8413 */;
-import useIsTinyBroncoSettingsEnabled from "useIsTinyBroncoSettingsEnabled" /* 14685 */;
+// Module 14786 (AgeGroupScreenRowProps)
+import util from "util" /* 1114 */;
+import _modDef2946 from "module_2946" /* 2946 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 4787 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8439 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8441 */;
+import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14711 */;
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("modules/user_settings/defs/native/AgeGroupScreenRowProps.tsx");
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/AgeGroupScreenRowProps.tsx");
 
 export const AGE_GROUP_CONFIRM_ROW_PROPS = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.SH6Tcv);
+    const intl = util.intl;
+    return intl.string(_modDef2946.SH6Tcv);
   },
   useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.rJiO86);
+    const intl = util.intl;
+    return intl.string(_modDef2946.rJiO86);
   },
   onPress: function onAgeGroupConfirmPress() {
-    let obj = openIncodeAgeVerificationModalDefault;
-    obj = { entryPoint: AgeVerificationModalEntryPoint.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP };
-    const result = obj.showAgeVerificationGetStartedModal(obj);
+    const obj = AgeVerificationActionCreatorsDefault;
+    const result = obj.showAgeVerificationGetStartedModal({ entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP });
   },
   withArrow: true
 };
 export const useShowAssignedAdultAgeGroupRow = function useShowAssignedAdultAgeGroupRow() {
-  let showAssignedAgeGroupSettings = useAgeVerificationRunner.useShowAssignedAgeGroupSettings();
-  useIsTinyBroncoSettingsEnabled;
+  let showAssignedAgeGroupSettings = AgeVerificationUtils.useShowAssignedAgeGroupSettings();
+  TinyBroncoSettingsPredicate;
   if (showAssignedAgeGroupSettings) {
     showAssignedAgeGroupSettings = tmp3 === false;
   }
   return showAssignedAgeGroupSettings;
 };
 export const useShowAccountStatusAgeGroupRow = function useShowAccountStatusAgeGroupRow() {
-  let showAssignedAgeGroupSettings = useAgeVerificationRunner.useShowAssignedAgeGroupSettings();
-  useIsTinyBroncoSettingsEnabled;
+  let showAssignedAgeGroupSettings = AgeVerificationUtils.useShowAssignedAgeGroupSettings();
+  TinyBroncoSettingsPredicate;
   if (showAssignedAgeGroupSettings) {
     showAssignedAgeGroupSettings = tmp3 === true;
   }

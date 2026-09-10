@@ -1,26 +1,27 @@
-// Module ID: 14674
-// Function ID: 14675
-// Name: useAuthSessions
-// Dependencies: [19, 502, 14675, 504, 1114, 4153, 2]
+// Module ID: 14700
+// Function ID: 14701
+// Name: AuthSessionsUtils
+// Dependencies: [19, 502, 14701, 504, 1114, 4166, 2]
 // Exports: formatDate, useAuthSessions
 
-// Module 14674 (useAuthSessions)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import hooksDefault from "hooks" /* 4153 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "fetchFingerprint" /* 502 */;
-import closure_5 from "handleInit" /* 14675 */;
+// Module 14700 (AuthSessionsUtils)
+import util from "util" /* 1114 */;
+import _modDef4166 from "module_4166" /* 4166 */;
+import noop from "module_19" /* 19 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import AuthSessionsStore from "AuthSessionsStore" /* 14701 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/auth_sessions/AuthSessionsUtils.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth_sessions/AuthSessionsUtils.tsx");
 
 export const useAuthSessions = function useAuthSessions() {
-  const items = [closure_5];
+  const items = [AuthSessionsStore];
   stateFromStoresObject = stateFromStoresObject(504).useStateFromStoresObject(items, () => sessions.getSessions());
   const items1 = [stateFromStoresObject];
-  return React.useMemo(() => {
-    const otherSessions = [...authSessionIdHash];
-    authSessionIdHash = closure_1_4.getAuthSessionIdHash();
+  return noop.useMemo(() => {
+    const otherSessions = [...stateFromStoresObject];
+    const authSessionIdHash = AuthenticationStore.getAuthSessionIdHash();
     let currentSession = null;
     if (null != authSessionIdHash) {
       const findIndexResult = otherSessions.findIndex((id_hash) => id_hash.id_hash === authSessionIdHash);
@@ -40,11 +41,11 @@ export const useAuthSessions = function useAuthSessions() {
 export const formatDate = function formatDate(arg0) {
   const timestamp = Date.now();
   if ((timestamp - arg0.valueOf()) / 1000 / 60 / 60 < 1) {
-    const intl = getSystemLocale.intl;
-    let stringResult = intl.string(getSystemLocale.t.TXCmfL);
+    const intl = util.intl;
+    let stringResult = intl.string(util.t.TXCmfL);
   } else {
-    stringResult = hooksDefault(arg0).fromNow();
-    const obj = hooksDefault(arg0);
+    stringResult = _modDef4166(arg0).fromNow();
+    const obj = _modDef4166(arg0);
   }
   return stringResult;
 };

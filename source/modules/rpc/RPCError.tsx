@@ -1,12 +1,12 @@
-// Module ID: 9559
-// Function ID: 9560
-// Name: prototype
-// Dependencies: [2, 9560]
+// Module ID: 9586
+// Function ID: 9587
+// Name: RPCError
+// Dependencies: [2, 9587]
 
-// Module 9559 (prototype)
-import set from "set" /* 2 */;
-import prototype from "prototype" /* 9560 */;
+// Module 9586 (RPCError)
+import shared_RPCError from "shared/RPCError" /* 9587 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/rpc/RPCError.tsx");
+const result = size.fileFinishedImporting("modules/rpc/RPCError.tsx");
 
-export default prototype.RPCError;
+export default shared_RPCError.RPCError;

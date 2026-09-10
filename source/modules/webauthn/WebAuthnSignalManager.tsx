@@ -1,14 +1,13 @@
-// Module ID: 17829
-// Function ID: 17830
-// Name: handleAuthenticatorDelete
-// Dependencies: [5, 502, 7118, 6598, 2]
+// Module ID: 17862
+// Function ID: 17863
+// Name: WebAuthnSignalManager
+// Dependencies: [5, 502, 7132, 6612, 2]
 
-// Module 17829 (handleAuthenticatorDelete)
-import initializeDefault from "initialize" /* 7118 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "fetchFingerprint" /* 502 */;
+// Module 17862 (WebAuthnSignalManager)
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-initializeDefault;
 class WebAuthnSignalManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -19,54 +18,49 @@ class WebAuthnSignalManager extends tmp2 {
 const prototype = WebAuthnSignalManager.prototype;
 prototype["handleAuthenticatorDelete"] = function handleAuthenticatorDelete(credential) {
   credential = credential.credential;
-  return callback(function*() {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
+  return (async (arg0, value) => {
+    if (v3 === 2) {
+      v3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        v0 = 2;
-        if (0 === table) {
+        v3 = 2;
+        if (0 === c1) {
           if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
+            v3 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            v3 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            obj1 = v0(table[3]);
-            table = 1;
-            v0 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = obj1.signalUnknownCredential(v0);
-            return obj1;
+            c1 = 1;
+            v3 = 1;
+            const obj5 = { value: v3(c1[3]).signalUnknownCredential(credential), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
-          v0 = 3;
-          throw arg1;
+          v3 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          v0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          v3 = 3;
+          const obj = { value, done: true };
           return obj;
         } else {
-          v0 = 3;
+          v3 = 3;
           return { value: "HermesInternal", done: null };
         }
       } catch (tmp8) {
-        v0 = tmp;
+        v3 = tmp;
         throw tmp8;
       }
     }
@@ -74,55 +68,50 @@ prototype["handleAuthenticatorDelete"] = function handleAuthenticatorDelete(cred
 };
 prototype["handleWebAuthnCredentialsLoaded"] = function handleWebAuthnCredentialsLoaded(credentials) {
   credentials = credentials.credentials;
-  return callback(function*() {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
+  return (async (arg0, value) => {
+    if (v3 === 2) {
+      v3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        v0 = 2;
-        if (0 === table) {
+        v3 = 2;
+        if (0 === c1) {
           if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
+            v3 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            v3 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            const id = closure_1_3.getId();
-            obj1 = v0(table[3]);
-            table = 1;
-            v0 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = obj1.signalAllAcceptedCredentials(v0, id);
-            return obj1;
+            id = id.getId();
+            c1 = 1;
+            v3 = 1;
+            const obj5 = { value: v3(c1[3]).signalAllAcceptedCredentials(credentials, id), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
-          v0 = 3;
-          throw arg1;
+          v3 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          v0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          v3 = 3;
+          const obj = { value, done: true };
           return obj;
         } else {
-          v0 = 3;
+          v3 = 3;
           return { value: "HermesInternal", done: null };
         }
       } catch (tmp10) {
-        v0 = tmp;
+        v3 = tmp;
         throw tmp10;
       }
     }
@@ -130,60 +119,56 @@ prototype["handleWebAuthnCredentialsLoaded"] = function handleWebAuthnCredential
 };
 prototype["handleCurrentUserUpdate"] = function handleCurrentUserUpdate(user) {
   user = user.user;
-  return callback(function*() {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
+  return (async (arg0, value) => {
+    if (v3 === 2) {
+      v3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        v0 = 2;
-        if (0 === table) {
+        v3 = 2;
+        if (0 === c1) {
           if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
+            v3 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            v3 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            obj1 = v0(table[3]);
-            table = 1;
-            v0 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = obj1.signalCurrentUserDetails(v0);
-            return obj1;
+            c1 = 1;
+            v3 = 1;
+            const obj5 = { value: v3(c1[3]).signalCurrentUserDetails(user), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
-          v0 = 3;
-          throw arg1;
+          v3 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          v0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          v3 = 3;
+          const obj = { value, done: true };
           return obj;
         } else {
-          v0 = 3;
+          v3 = 3;
           return { value: "HermesInternal", done: null };
         }
       } catch (tmp8) {
-        v0 = tmp;
+        v3 = tmp;
         throw tmp8;
       }
     }
   })();
 };
 const webAuthnSignalManager = new WebAuthnSignalManager();
-const result = require("set").fileFinishedImporting("modules/webauthn/WebAuthnSignalManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/webauthn/WebAuthnSignalManager.tsx");
 
 export default webAuthnSignalManager;

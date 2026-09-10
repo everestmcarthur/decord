@@ -1,40 +1,38 @@
-// Module ID: 10236
-// Function ID: 10237
+// Module ID: 10263
+// Function ID: 10264
 // Name: ExpressiveGradient
-// Dependencies: [19, 17, 21, 576, 4262, 672, 4987, 2]
+// Dependencies: [19, 17, 21, 576, 4275, 672, 5001, 2]
 // Exports: ExpressiveGradient
 
-// Module 10236 (ExpressiveGradient)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import nDefault from "n" /* 672 */;
-import map from "map" /* 4262 */;
-import LinearGradientDefault from "LinearGradient" /* 4987 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 10263 (ExpressiveGradient)
+import nativeDefault from "native" /* 576 */;
+import _modDef672 from "module_672" /* 672 */;
+import useToken from "useToken" /* 4275 */;
+import LinearGradientDefault from "LinearGradient" /* 5001 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ View: c3, StyleSheet: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let obj = { purple: null, blue: null, green: null, pink: null, "nitro-pink": null, "nitro-green": null };
-obj = { start: ThemesDefault.colors.EXPRESSIVE_GRADIENT_PURPLE_START, end: ThemesDefault.colors.EXPRESSIVE_GRADIENT_PURPLE_END };
-obj[0] = obj;
-obj = { start: ThemesDefault.colors.EXPRESSIVE_GRADIENT_BLUE_START, end: ThemesDefault.colors.EXPRESSIVE_GRADIENT_BLUE_END };
-obj[1] = obj;
-obj[2] = { start: ThemesDefault.colors.EXPRESSIVE_GRADIENT_GREEN_START, end: ThemesDefault.colors.EXPRESSIVE_GRADIENT_GREEN_END };
-let obj1 = { start: ThemesDefault.colors.EXPRESSIVE_GRADIENT_GREEN_START, end: ThemesDefault.colors.EXPRESSIVE_GRADIENT_GREEN_END };
-obj[3] = { start: ThemesDefault.colors.EXPRESSIVE_GRADIENT_PINK_START, end: ThemesDefault.colors.EXPRESSIVE_GRADIENT_PINK_END };
-let obj2 = { start: ThemesDefault.colors.EXPRESSIVE_GRADIENT_PINK_START, end: ThemesDefault.colors.EXPRESSIVE_GRADIENT_PINK_END };
-obj[4] = { start: ThemesDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_START, end: ThemesDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_END };
-let obj3 = { start: ThemesDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_START, end: ThemesDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_END };
-obj[5] = { start: ThemesDefault.colors.EXPRESSIVE_GRADIENT_NITRO_GREEN_START, end: ThemesDefault.colors.EXPRESSIVE_GRADIENT_NITRO_GREEN_END };
-let closure_8 = { x: 0, y: 0.5 };
-let closure_9 = { x: 1, y: 0.5 };
-let closure_10 = { x: 0.5, y: 0 };
-let closure_11 = { x: 0.5, y: 0.5 };
-const obj4 = { start: ThemesDefault.colors.EXPRESSIVE_GRADIENT_NITRO_GREEN_START, end: ThemesDefault.colors.EXPRESSIVE_GRADIENT_NITRO_GREEN_END };
-const result = require("set").fileFinishedImporting("design/components/ExpressiveGradient/native/ExpressiveGradient.native.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+let obj = { purple: { start: nativeDefault.colors.EXPRESSIVE_GRADIENT_PURPLE_START, end: nativeDefault.colors.EXPRESSIVE_GRADIENT_PURPLE_END }, blue: null, green: null, pink: null, "nitro-pink": null, "nitro-green": null };
+let obj2 = { start: nativeDefault.colors.EXPRESSIVE_GRADIENT_PURPLE_START, end: nativeDefault.colors.EXPRESSIVE_GRADIENT_PURPLE_END };
+obj.blue = { start: nativeDefault.colors.EXPRESSIVE_GRADIENT_BLUE_START, end: nativeDefault.colors.EXPRESSIVE_GRADIENT_BLUE_END };
+let obj3 = { start: nativeDefault.colors.EXPRESSIVE_GRADIENT_BLUE_START, end: nativeDefault.colors.EXPRESSIVE_GRADIENT_BLUE_END };
+obj.green = { start: nativeDefault.colors.EXPRESSIVE_GRADIENT_GREEN_START, end: nativeDefault.colors.EXPRESSIVE_GRADIENT_GREEN_END };
+let obj4 = { start: nativeDefault.colors.EXPRESSIVE_GRADIENT_GREEN_START, end: nativeDefault.colors.EXPRESSIVE_GRADIENT_GREEN_END };
+obj.pink = { start: nativeDefault.colors.EXPRESSIVE_GRADIENT_PINK_START, end: nativeDefault.colors.EXPRESSIVE_GRADIENT_PINK_END };
+let obj5 = { start: nativeDefault.colors.EXPRESSIVE_GRADIENT_PINK_START, end: nativeDefault.colors.EXPRESSIVE_GRADIENT_PINK_END };
+obj["nitro-pink"] = { start: nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_START, end: nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_END };
+let obj6 = { start: nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_START, end: nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_END };
+obj["nitro-green"] = { start: nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_GREEN_START, end: nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_GREEN_END };
+const start = { x: 0, y: 0.5 };
+const end = { x: 1, y: 0.5 };
+const start2 = { x: 0.5, y: 0 };
+const end2 = { x: 0.5, y: 0.5 };
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/ExpressiveGradient/native/ExpressiveGradient.native.tsx");
 
 export const ExpressiveGradient = function ExpressiveGradient(color) {
   let str = color.color;
@@ -52,37 +50,36 @@ export const ExpressiveGradient = function ExpressiveGradient(color) {
       str2 = "purple";
     }
     let tmp3 = obj[str2];
-    const tmp = obj;
   } else {
     tmp3 = str;
   }
-  obj = map;
+  obj = useToken;
   const token = obj.useToken(tmp3.start);
-  obj1 = map;
-  const token1 = obj1.useToken(tmp3.end);
-  let obj2 = map;
-  const token2 = obj2.useToken(backgroundColor);
-  let obj3 = nDefault(token2);
-  obj = { style: items, children: null };
-  items = [closure_4.absoluteFill, style];
-  const items1 = [closure_4.absoluteFill, ];
+  const token1 = useToken.useToken(tmp3.end);
+  const token2 = useToken.useToken(backgroundColor);
+  const obj4 = _modDef672(token2);
+  const obj5 = { style: null, children: null };
+  const items = [React4.absoluteFill, style];
+  obj5.style = items;
+  const items1 = [React4.absoluteFill, ];
   let tmp13;
-  const alphaResult = obj3.alpha(0);
+  const alphaResult = _modDef672(token2).alpha(0);
   if (num > 0) {
-    obj = { bottom: null };
-    obj[0] = `${100 * num}%`;
-    tmp13 = obj;
+    const obj6 = { bottom: `${100 * num}%` };
+    tmp13 = obj6;
   }
-  obj1 = { style: items1, children: null };
+  const obj7 = { style: items1, children: null };
   items1[1] = tmp13;
-  obj2 = { style: tmp12.absoluteFillObject, colors: items2, start: closure_8, end: closure_9, pointerEvents: "none" };
-  items2 = [token, token1];
-  const items3 = [callback(LinearGradientDefault, obj2), ];
-  obj3 = { style: tmp12.absoluteFillObject, colors: items4, start: closure_10, end: closure_11, pointerEvents: "none" };
-  items4 = [obj3.alpha(0).css(), token2];
-  items3[1] = callback(LinearGradientDefault, obj3);
-  obj1[1] = items3;
-  const items5 = [closure_6(closure_3, obj1), children];
-  obj[1] = items5;
-  return closure_6(closure_3, obj);
+  const obj8 = { style: React4.absoluteFillObject, colors: null, start, end, pointerEvents: "none" };
+  const items2 = [token, token1];
+  obj8.colors = items2;
+  const items3 = [hasOwnProperty(LinearGradientDefault, obj8), ];
+  const obj9 = { style: React4.absoluteFillObject, colors: null, start: start2, end: end2, pointerEvents: "none" };
+  const items4 = [_modDef672(token2).alpha(0).css(), token2];
+  obj9.colors = items4;
+  items3[1] = hasOwnProperty(LinearGradientDefault, obj9);
+  obj7.children = items3;
+  const items5 = [timestampProducer(React3, obj7), children];
+  obj5.children = items5;
+  return timestampProducer(React3, obj5);
 };

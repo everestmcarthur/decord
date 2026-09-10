@@ -2,10 +2,12 @@
 // Function ID: 65
 // Name: sizesDiffer
 // Dependencies: []
+// Exports: default
 
 // Module 64 (sizesDiffer)
-let closure_0 = { width: "jsxs", height: "channel" };
-arg5.default = function sizesDiffer(arg0, arg1) {
+let closure_0 = { width: "Array", height: "PX_16" };
+
+export default function sizesDiffer(arg0, arg1) {
   let size = arg0;
   if (!arg0) {
     size = closure_0;

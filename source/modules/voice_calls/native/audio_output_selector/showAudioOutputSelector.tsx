@@ -1,29 +1,24 @@
-// Module ID: 9119
-// Function ID: 9120
+// Module ID: 9146
+// Function ID: 9147
 // Name: showAudioOutputSelector
-// Dependencies: [17, 9120, 1115, 4527, 9121, 1896, 2]
+// Dependencies: [17, 9147, 1115, 4541, 9148, 1896, 2]
 // Exports: showAudioOutputSelector
 
-// Module 9119 (showAudioOutputSelector)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set2 from "set" /* 1115 */;
+// Module 9146 (showAudioOutputSelector)
+import _mod17 from "module_17" /* 17 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
-import VOICE_PANEL_SETTINGS_KEY from "VOICE_PANEL_SETTINGS_KEY" /* 9120 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import VoicePanelHeaderConstants from "VoicePanelHeaderConstants" /* 9147 */;
+import size from "module_2" /* 2 */;
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-let closure_4 = VOICE_PANEL_SETTINGS_KEY.VOICE_PANEL_AUDIO_OUTPUT_ACTION_SHEET_KEY;
-const result = set.fileFinishedImporting("modules/voice_calls/native/audio_output_selector/showAudioOutputSelector.tsx");
+const NativeModules = _mod17.NativeModules;
+let closure_4 = VoicePanelHeaderConstants.VOICE_PANEL_AUDIO_OUTPUT_ACTION_SHEET_KEY;
+const result = size.fileFinishedImporting("modules/voice_calls/native/audio_output_selector/showAudioOutputSelector.tsx");
 
-export const showAudioOutputSelector = function showAudioOutputSelector(channelId, closure_1) {
-  let obj = set2;
+export const showAudioOutputSelector = function showAudioOutputSelector(channelId, isConnectedToVoiceChannel) {
   if (obj.isAndroid()) {
-    obj = { channelId: null, isConnectedToVoiceChannel: null };
-    obj[0] = channelId;
-    obj[1] = closure_1;
-    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9121, dependencyMap.paths), closure_4, obj);
-    const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
+    const obj3 = { channelId, isConnectedToVoiceChannel };
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9148, dependencyMap.paths), closure_4, obj3);
   } else {
     const AudioRoutePicker = NativeModules.AudioRoutePicker;
     if (AudioRoutePicker != null) {

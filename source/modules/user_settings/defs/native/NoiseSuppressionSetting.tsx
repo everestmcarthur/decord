@@ -1,36 +1,36 @@
-// Module ID: 15259
-// Function ID: 15260
-// Name: toggle
-// Dependencies: [1908, 7975, 504, 9998, 11473, 1114, 2]
+// Module ID: 15288
+// Function ID: 15289
+// Name: NoiseSuppressionSetting
+// Dependencies: [1908, 7989, 504, 10025, 11500, 1114, 2]
 
-// Module 15259 (toggle)
+// Module 15288 (NoiseSuppressionSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import handleAutomaticGainControlChange from "handleAutomaticGainControlChange" /* 9998 */;
-import closure_2 from "_detectH265HardwareDecode" /* 1908 */;
-import createToggle from "createToggle" /* 11473 */;
+import util from "util" /* 1114 */;
+import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 10025 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const SettingBuilders = fn(11500);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.t8Qhib);
+    const intl = util.intl;
+    return intl.string(util.t.t8Qhib);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
+  parent: fn(7989).MobileUserSettings.VOICE,
   useValue: function useNoiseSuppressionSettingValue() {
-    const items = [closure_2];
+    const items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => noiseSuppression.getNoiseSuppression());
   },
   onValueChange: function onNoiseSuppressionSettingValueChange(arg0) {
-    const NoiseSuppressionOpt = handleAutomaticGainControlChange.NoiseSuppressionOpt;
-    const result = handleAutomaticGainControlChange.handleNoiseSuppressionChange(arg0 ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE);
+    const NoiseSuppressionOpt = UserSettingsVoiceUtils.NoiseSuppressionOpt;
+    const result = UserSettingsVoiceUtils.handleNoiseSuppressionChange(arg0 ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE);
   },
   usePredicate: function useHasNoiseSuppressionSetting() {
-    const items = [closure_2];
+    const items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => !noiseCancellationSupported.isNoiseCancellationSupported());
   }
-};
-createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/NoiseSuppressionSetting.tsx");
+});
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/NoiseSuppressionSetting.tsx");
 
-export default createToggle;
+export default toggle;

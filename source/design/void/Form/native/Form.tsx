@@ -1,21 +1,23 @@
-// Module ID: 7138
-// Function ID: 7139
-// Name: context
-// Dependencies: [19, 17, 21, 4560, 6981, 5686, 2]
+// Module ID: 7152
+// Function ID: 7153
+// Name: Form/Form
+// Dependencies: [19, 17, 21, 4574, 6995, 5700, 2]
 
-// Module 7138 (context)
-import context2 from "context" /* 5686 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6981 */;
-import importAllResult from "noop" /* 19 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 7152 (Form/Form)
+import RedesignCompat from "RedesignCompat" /* 5700 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6995 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let c3 = importAllResult;
-let closure_6 = createCacheKey.createStyles({ form: { flex: 1 }, redesign: { paddingTop: 16 } });
-const context = importAllResult.createContext({ isForm: false });
-const forwardRefResult = importAllResult.forwardRef((keyboardShouldPersistTaps, ref) => {
+require = fn;
+const ScrollView = fn(17).ScrollView;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_6 = createStyles.createStyles({ form: { flex: 1 }, redesign: { paddingTop: 16 } });
+const context = noop.createContext({ isForm: false });
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/Form/native/Form.tsx");
+
+export default noop.forwardRef((keyboardShouldPersistTaps, ref) => {
   let str = keyboardShouldPersistTaps.keyboardShouldPersistTaps;
   ({ style, children } = keyboardShouldPersistTaps);
   if (str === undefined) {
@@ -26,28 +28,24 @@ const forwardRefResult = importAllResult.forwardRef((keyboardShouldPersistTaps, 
     flag = true;
   }
   ({ contentContainerStyle, onScroll, scrollsToTop, onLayout } = keyboardShouldPersistTaps);
-  const tmp = callback();
-  let redesign = importAllResult.useContext(context2.RedesignCompatContext);
-  let obj = { value: { isForm: true }, children: null };
-  obj = { ref, onLayout, scrollsToTop, style: null, contentContainerStyle: null, contentInset: null, automaticallyAdjustContentInsets: false, keyboardShouldPersistTaps: null, alwaysBounceVertical: null, onScroll: null, children: null };
+  const tmp = closure_6();
+  let redesign = noop.useContext(RedesignCompat.RedesignCompatContext);
+  const obj = { value: { isForm: true }, children: null };
+  const obj2 = { ref, onLayout, scrollsToTop, style: null, contentContainerStyle: null, contentInset: null, automaticallyAdjustContentInsets: false, keyboardShouldPersistTaps: null, alwaysBounceVertical: null, onScroll: null, children: null };
   const items = [tmp.form, style, ];
   if (redesign) {
     redesign = tmp.redesign;
   }
   items[2] = redesign;
-  obj[3] = items;
-  obj = { paddingBottom: 38 + useSafeAreaInsetsKeyboardAwareDefault().insets.bottom };
-  const items1 = [obj, contentContainerStyle];
-  obj[4] = items1;
-  obj[5] = { top: 0 };
-  obj[7] = str;
-  obj[8] = flag;
-  obj[9] = onScroll;
-  obj[10] = children;
-  obj[1] = <ScrollView paddingBottom={38 + useSafeAreaInsetsKeyboardAwareDefault().insets.bottom} />;
-  return <context.Provider paddingBottom={38 + useSafeAreaInsetsKeyboardAwareDefault().insets.bottom} />;
+  obj2.style = items;
+  const items1 = [{ paddingBottom: 38 + useSafeAreaInsetsKeyboardAwareDefault().insets.bottom }, contentContainerStyle];
+  obj2.contentContainerStyle = items1;
+  obj2.contentInset = { top: 0 };
+  obj2.keyboardShouldPersistTaps = str;
+  obj2.alwaysBounceVertical = flag;
+  obj2.onScroll = onScroll;
+  obj2.children = children;
+  obj.children = <ScrollView ref={arg1} onLayout={onLayout} scrollsToTop={scrollsToTop} style={null} contentContainerStyle={null} contentInset={null} automaticallyAdjustContentInsets={false} keyboardShouldPersistTaps={null} alwaysBounceVertical={null} onScroll={null}>{null}</ScrollView>;
+  return <context.Provider value={{ isForm: true }}>{null}</context.Provider>;
 });
-const result = require("set").fileFinishedImporting("design/void/Form/native/Form.tsx");
-
-export default forwardRefResult;
 export const FormContext = context;

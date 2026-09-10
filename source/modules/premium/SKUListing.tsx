@@ -1,12 +1,12 @@
-// Module ID: 13985
-// Function ID: 13986
-// Name: set
+// Module ID: 14008
+// Function ID: 14009
+// Name: SKUListing
 // Dependencies: [2]
 
-// Module 13985 (set)
-import set from "set" /* 2 */;
+// Module 14008 (SKUListing)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/premium/SKUListing.tsx");
+const result = size.fileFinishedImporting("modules/premium/SKUListing.tsx");
 
 export default function SKUListing(skuId, skuFeatures) {
   const obj = Object.create(new.target.prototype);

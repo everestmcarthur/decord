@@ -1,17 +1,18 @@
-// Module ID: 4385
-// Function ID: 4386
-// Name: initialize
+// Module ID: 4399
+// Function ID: 4400
+// Name: DefaultRouteStore
 // Dependencies: [1074, 504, 510, 573, 2]
 
-// Module 4385 (initialize)
-import set from "set" /* 2 */;
+// Module 4399 (DefaultRouteStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage3 from "Storage" /* 510 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import ME2 from "ME" /* 1074 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const Routes = ME2.Routes;
-let obj = { lastViewedPath: null, lastViewedNonVoicePath: null };
+const Routes = Constants.Routes;
+const obj = { lastViewedPath: null, lastViewedNonVoicePath: null };
+let closure_4 = obj;
 const LAST_VIEWED_PATH = "LAST_VIEWED_PATH";
 const PersistedStore = initializeDefault.PersistedStore;
 class DefaultRouteStore extends PersistedStore {
@@ -29,7 +30,7 @@ prototype["initialize"] = function initialize() {
 };
 Object.defineProperty(prototype, "defaultRoute", {
   get: function defaultRoute() {
-    let ME = obj.lastViewedPath;
+    let ME = closure_4.lastViewedPath;
     if (ME == null) {
       ME = Routes.ME;
     }
@@ -39,7 +40,7 @@ Object.defineProperty(prototype, "defaultRoute", {
 });
 Object.defineProperty(prototype, "lastNonVoiceRoute", {
   get: function lastNonVoiceRoute() {
-    let ME = obj.lastViewedNonVoicePath;
+    let ME = closure_4.lastViewedNonVoicePath;
     if (ME == null) {
       ME = Routes.ME;
     }
@@ -54,7 +55,7 @@ Object.defineProperty(prototype, "fallbackRoute", {
   set: undefined
 });
 prototype["getState"] = function getState() {
-  return obj;
+  return closure_4;
 };
 DefaultRouteStore.displayName = "DefaultRouteStore";
 DefaultRouteStore.persistKey = "DefaultRouteStore";
@@ -68,20 +69,19 @@ const items = [
   }
 ];
 DefaultRouteStore.migrations = items;
-obj = {
+const defaultRouteStore = new DefaultRouteStore(DispatcherDefault, {
   SAVE_LAST_ROUTE: function handleSaveRoute(path) {
-    obj.lastViewedPath = path.path;
+    closure_4.lastViewedPath = path.path;
     return true;
   },
   SAVE_LAST_NON_VOICE_ROUTE: function handleSaveLastNonVoiceRoute(path) {
-    obj.lastViewedNonVoicePath = path.path;
+    closure_4.lastViewedNonVoicePath = path.path;
     return true;
   },
   LOGOUT: function handleLogout() {
     closure_4 = { lastViewedPath: null, lastViewedNonVoicePath: null };
   }
-};
-const defaultRouteStore = new DefaultRouteStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("stores/DefaultRouteStore.tsx");
+});
+const result = size.fileFinishedImporting("stores/DefaultRouteStore.tsx");
 
 export default defaultRouteStore;

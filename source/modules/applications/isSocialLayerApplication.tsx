@@ -1,33 +1,34 @@
-// Module ID: 11537
-// Function ID: 11538
+// Module ID: 11563
+// Function ID: 11564
 // Name: isSocialLayerApplication
-// Dependencies: [1074, 8861, 9243, 2]
+// Dependencies: [1074, 8888, 9270, 2]
 // Exports: default, isSocialLayerSDKAuthorization
 
-// Module 11537 (isSocialLayerApplication)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getApplicationFlags from "getApplicationFlags" /* 8861 */;
+// Module 11563 (isSocialLayerApplication)
+import Constants from "Constants" /* 1074 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8888 */;
+import scopes2 from "scopes" /* 9270 */;
+import size from "module_2" /* 2 */;
 
-const ApplicationFlags = ME.ApplicationFlags;
-const result = set.fileFinishedImporting("modules/applications/isSocialLayerApplication.tsx");
+const ApplicationFlags = Constants.ApplicationFlags;
+const result = size.fileFinishedImporting("modules/applications/isSocialLayerApplication.tsx");
 
 export default function isSocialLayerApplication(application) {
-  let hasApplicationFlagResult = getApplicationFlags.hasApplicationFlag(application, ApplicationFlags.SOCIAL_LAYER_INTEGRATION_LIMITED);
+  let hasApplicationFlagResult = ApplicationFlagUtils.hasApplicationFlag(application, ApplicationFlags.SOCIAL_LAYER_INTEGRATION_LIMITED);
   if (!hasApplicationFlagResult) {
-    hasApplicationFlagResult = getApplicationFlags.hasApplicationFlag(application, ApplicationFlags.SOCIAL_LAYER_INTEGRATION);
-    const tmpResult = getApplicationFlags;
+    hasApplicationFlagResult = ApplicationFlagUtils.hasApplicationFlag(application, ApplicationFlags.SOCIAL_LAYER_INTEGRATION);
+    const tmpResult = ApplicationFlagUtils;
   }
   return hasApplicationFlagResult;
 };
 export const isSocialLayerSDKAuthorization = function isSocialLayerSDKAuthorization(application, scopes) {
-  let hasApplicationFlagResult = getApplicationFlags.hasApplicationFlag(application, ApplicationFlags.SOCIAL_LAYER_INTEGRATION_LIMITED);
+  let hasApplicationFlagResult = ApplicationFlagUtils.hasApplicationFlag(application, ApplicationFlags.SOCIAL_LAYER_INTEGRATION_LIMITED);
   if (!hasApplicationFlagResult) {
-    hasApplicationFlagResult = getApplicationFlags.hasApplicationFlag(application, ApplicationFlags.SOCIAL_LAYER_INTEGRATION);
-    const tmpResult = getApplicationFlags;
+    hasApplicationFlagResult = ApplicationFlagUtils.hasApplicationFlag(application, ApplicationFlags.SOCIAL_LAYER_INTEGRATION);
+    const tmpResult = ApplicationFlagUtils;
   }
   if (hasApplicationFlagResult) {
-    hasApplicationFlagResult = scopes.some((arg0) => callback(table[2]).isSocialLayerUmbrellaScope(arg0));
+    hasApplicationFlagResult = scopes.some((item) => scopes2.isSocialLayerUmbrellaScope(item));
   }
   return hasApplicationFlagResult;
 };

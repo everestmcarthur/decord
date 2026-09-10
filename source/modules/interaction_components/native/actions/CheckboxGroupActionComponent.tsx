@@ -1,41 +1,45 @@
-// Module ID: 17401
-// Function ID: 17402
-// Dependencies: [19, 21, 8112, 5687, 5604, 2]
+// Module ID: 17432
+// Function ID: 17433
+// Name: CheckboxGroupActionComponent
+// Dependencies: [19, 21, 8138, 5701, 5618, 2]
 
-// Module 17401
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 17432 (CheckboxGroupActionComponent)
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const memoResult = importAllResult.memo((type) => {
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/interaction_components/native/actions/CheckboxGroupActionComponent.tsx");
+
+export default noop.memo((type) => {
   type = type.type;
   const options = type.options;
   const maxValues = type.maxValues;
-  let obj = maxValues;
   let items = [options];
   const memo = maxValues.useMemo(() => {
-    const found = options.filter((arg0) => arg0.default);
+    const found = options.filter((item) => item.default);
     return found.map((value) => value.value);
   }, items);
   let tmp3;
   if (memo.length > 0) {
-    obj = { type: null, values: null };
-    obj[0] = type;
-    obj[1] = memo;
-    tmp3 = obj;
+    const obj3 = { type, values: memo };
+    tmp3 = obj3;
   }
   const componentState = type(options[2]).useComponentState(type, tmp3);
   const state = componentState.state;
   const executeStateUpdate = componentState.executeStateUpdate;
   const items1 = [state, type];
-  closure_5 = obj.useMemo(() => {
+  closure_5 = maxValues.useMemo(() => {
     type = undefined;
     if (state != null) {
       type = tmp.type;
     }
     return type === type ? state.values : [];
   }, items1);
-  obj = {
+  const obj2 = type(options[2]);
+  const tmp = type;
+  const tmp2 = options;
+  return state(tmp(tmp2[3]).TableRowGroup, {
     hasIcons: false,
     children: options.map((label) => {
       const hasItem = closure_5.includes(label.value);
@@ -46,12 +50,12 @@ const memoResult = importAllResult.memo((type) => {
         onPress: (arg0) => {
           if (arg0) {
             const items = [];
-            items[HermesBuiltin.arraySpread(arr, 0)] = closure_0;
+            items[HermesBuiltin.arraySpread(arr, 0)] = value;
             let found = items;
           } else {
-            found = arr.filter((arg0) => arg0 !== closure_0);
+            found = arr.filter((item) => item !== closure_1_0);
           }
-          closure_1_4({ type: value, values: found });
+          executeStateUpdate({ type, values: found });
         },
         disabled: null
       };
@@ -60,12 +64,8 @@ const memoResult = importAllResult.memo((type) => {
       if (tmp3) {
         tmp3 = !hasItem;
       }
-      obj[4] = tmp3;
+      obj.disabled = tmp3;
       return state(type(options[4]).TableCheckboxRow, obj, label.value);
     })
-  };
-  return state(type(options[3]).TableRowGroup, obj);
+  });
 });
-const result = require("set").fileFinishedImporting("modules/interaction_components/native/actions/CheckboxGroupActionComponent.tsx");
-
-export default memoResult;

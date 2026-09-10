@@ -1,32 +1,30 @@
-// Module ID: 4466
-// Function ID: 4467
-// Name: _getMessageFromRateLimit
-// Dependencies: [4241, 4242, 1090, 1114, 2]
+// Module ID: 4480
+// Function ID: 4481
+// Name: AppliedGuildBoostError
+// Dependencies: [4254, 4255, 1090, 1114, 2]
 
-// Module 4466 (_getMessageFromRateLimit)
-import setDefault from "set" /* 1090 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import prototypeDefault from "prototype" /* 4241 */;
-import resetCache from "resetCache" /* 4242 */;
+// Module 4480 (AppliedGuildBoostError)
+import DurationsDefault from "Durations" /* 1090 */;
+import util from "util" /* 1114 */;
+import DateUtils from "DateUtils" /* 4255 */;
+import V6OrEarlierAPIError from "errors/V6OrEarlierAPIError" /* 4254 */;
 
-require = arg1;
-prototypeDefault;
+require = fn;
 class AppliedGuildBoostError extends tmp2 {
   constructor(arg0, arg1) {
-    tmp = new tmp(global, arg1, new.target, tmp);
-    // ThrowIfThisInitialized (0x7c)
-    if (429 === tmp.status) {
-      tmp.message = tmp._getMessageFromRateLimit(global);
+    tmp1 = new tmp(global, fn, new.target, tmp);
+    if (429 === tmp1.status) {
+      tmp1.message = tmp1._getMessageFromRateLimit(global);
     }
-    return tmp;
+    return tmp1;
   }
 }
 AppliedGuildBoostError.prototype["_getMessageFromRateLimit"] = function _getMessageFromRateLimit(body) {
-  let obj = resetCache;
-  const diffAsUnitsResult = obj.diffAsUnits(0, body.body.retry_after * setDefault.Millis.SECOND);
-  obj = { days: getSystemLocale.t["iXc/Ib"], hours: getSystemLocale.t.WW9P57, minutes: getSystemLocale.t.I7rYev };
-  return resetCache.unitsAsStrings(diffAsUnitsResult, obj);
+  const diffAsUnitsResult = DateUtils.diffAsUnits(0, body.body.retry_after * DurationsDefault.Millis.SECOND);
+  const time = { days: util.t["iXc/Ib"], hours: util.t.WW9P57, minutes: util.t.I7rYev };
+  return DateUtils.unitsAsStrings(diffAsUnitsResult, time);
 };
-const result = require("set").fileFinishedImporting("errors/AppliedGuildBoostError.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("errors/AppliedGuildBoostError.tsx");
 
 export default AppliedGuildBoostError;

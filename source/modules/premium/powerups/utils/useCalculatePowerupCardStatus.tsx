@@ -1,41 +1,41 @@
-// Module ID: 12523
-// Function ID: 12524
+// Module ID: 12549
+// Function ID: 12550
 // Name: useCalculatePowerupCardStatus
-// Dependencies: [19, 4450, 1114, 2428, 2]
+// Dependencies: [19, 4464, 1114, 2428, 2]
 // Exports: useCalculatePowerupCardStatus
 
-// Module 12523 (useCalculatePowerupCardStatus)
-import closure_3 from "noop" /* 19 */;
-import { PowerupActiveStatusType } from "BoostedGuildTiers" /* 4450 */;
+// Module 12549 (useCalculatePowerupCardStatus)
+import util from "util" /* 1114 */;
+import _modDef2428 from "module_2428" /* 2428 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/utils/useCalculatePowerupCardStatus.tsx");
+require = fn;
+const PowerupActiveStatusType = fn(4464).PowerupActiveStatusType;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/utils/useCalculatePowerupCardStatus.tsx");
 
 export const useCalculatePowerupCardStatus = function useCalculatePowerupCardStatus(powerup, arg1, arg2) {
-  closure_0 = powerup;
-  closure_1 = arg1;
+  let sourceEntitlement = arg1;
   closure_2 = arg2;
   const items = [arg1, arg2, powerup];
-  return React.useMemo(() => {
-    const sourceEntitlement = lib.sourceEntitlement;
+  return noop.useMemo(() => {
+    sourceEntitlement = sourceEntitlement.sourceEntitlement;
     let ends_at;
     if (sourceEntitlement != null) {
       ends_at = sourceEntitlement.ends_at;
     }
     if (null != ends_at) {
-      let obj = { type: "expiring", expiringAt: null };
-      obj[1] = tmp.sourceEntitlement.ends_at;
-      let tmp5 = obj;
+      const obj2 = { type: "expiring", expiringAt: tmp.sourceEntitlement.ends_at };
+      let tmp5 = obj2;
     } else {
-      if (dependencyMap) {
+      if (closure_2) {
         if (null != powerup.storeRemovalDate) {
-          obj = { type: "removing", removingAt: null };
-          obj[1] = tmp3.storeRemovalDate;
-          tmp5 = obj;
+          const obj3 = { type: "removing", removingAt: tmp3.storeRemovalDate };
+          tmp5 = obj3;
         }
       }
-      if (tmp.type === closure_1_4.LEVEL_ACTIVATED) {
-        const intl2 = powerup(1114).intl;
+      if (tmp.type === PowerupActiveStatusType.LEVEL_ACTIVATED) {
+        const intl2 = util.intl;
         const sourcePowerup = tmp.sourcePowerup;
         let title;
         if (sourcePowerup != null) {
@@ -45,15 +45,14 @@ export const useCalculatePowerupCardStatus = function useCalculatePowerupCardSta
           const intl3 = tmp9(1114).intl;
           title = intl3.string(tmp9(1114).t.BfF6ED);
         }
-        obj1 = { type: "active", statusText: null };
-        const obj2 = { perkName: null };
-        obj2[0] = title;
-        obj1[1] = intl2.formatToPlainString(lib(2428).WRRYUT, obj2);
-        tmp5 = obj1;
+        const obj4 = { type: "active", statusText: null };
+        const obj5 = { perkName: title };
+        obj4.statusText = intl2.formatToPlainString(_modDef2428.WRRYUT, obj5);
+        tmp5 = obj4;
       } else if (tmp.type !== tmp4.INACTIVE) {
-        obj = { type: "active", statusText: null };
-        const intl = powerup(1114).intl;
-        obj[1] = intl.string(lib(2428).FFLkmx);
+        const obj = { type: "active", statusText: null };
+        const intl = util.intl;
+        obj.statusText = intl.string(_modDef2428.FFLkmx);
         tmp5 = obj;
       }
     }

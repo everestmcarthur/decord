@@ -1,16 +1,20 @@
-// Module ID: 8832
-// Function ID: 8833
+// Module ID: 8861
+// Function ID: 8862
 // Name: useTrackShopCardClick
-// Dependencies: [19, 8833, 1074, 8772, 8178, 7554, 7553, 1242, 2]
+// Dependencies: [19, 8862, 1074, 8800, 8204, 7568, 7567, 1242, 2]
 // Exports: useTrackShopCardClick
 
-// Module 8832 (useTrackShopCardClick)
-import closure_3 from "noop" /* 19 */;
-import { useSelectedVariantIndex } from "useSelectedVariantIndex" /* 8833 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
+// Module 8861 (useTrackShopCardClick)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7567 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7568 */;
+import noop from "module_19" /* 19 */;
 
-let require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useTrackShopCardClick.tsx");
+require = fn;
+const useSelectedVariantIndex = fn(8862).useSelectedVariantIndex;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useTrackShopCardClick.tsx");
 
 export const useTrackShopCardClick = function useTrackShopCardClick(product) {
   product = product.product;
@@ -21,7 +25,7 @@ export const useTrackShopCardClick = function useTrackShopCardClick(product) {
   let tilePosition;
   closure_5 = undefined;
   let shopDiscountSource;
-  let collectiblesAnalyticsContext = require(cardId[3]).useCollectiblesAnalyticsContext();
+  let collectiblesAnalyticsContext = require("CollectiblesAnalyticsContext").useCollectiblesAnalyticsContext();
   if (collectiblesAnalyticsContext == null) {
     collectiblesAnalyticsContext = {};
   }
@@ -30,35 +34,36 @@ export const useTrackShopCardClick = function useTrackShopCardClick(product) {
   tilePosition = collectiblesAnalyticsContext.tilePosition;
   const tmp3 = tilePosition(product);
   closure_5 = tmp3;
-  let tmpResult = tmp(tmp2[4]);
-  const currentUserIfAvailable = tmpResult.useCurrentUserIfAvailable();
-  tmpResult = tmp(tmp2[5]);
-  shopDiscountSource = tmpResult.getShopDiscountSource(currentUserIfAvailable);
+  let obj = require("CollectiblesAnalyticsContext");
+  const currentUserIfAvailable = require("useCurrentUser").useCurrentUserIfAvailable();
+  let tmpResult = require("useCurrentUser");
+  shopDiscountSource = require("CollectiblesUtils").getShopDiscountSource(currentUserIfAvailable);
   const items = [product, tmp3, sessionId, cardId, analyticsLocations, tilePosition, shopDiscountSource];
-  return sessionId.useCallback((cta) => {
-    let obj = product(cardId[6]);
-    if (obj.getIsVariantProduct(closure_0)) {
+  return sessionId.useCallback((cta, arg1) => {
+    if (obj.getIsVariantProduct(product)) {
       let tmp4 = arg1;
       if (arg1 == null) {
-        tmp4 = constants;
+        tmp4 = closure_5;
       }
-      let skuId;
+      let skuId1;
       if (tmp3.variants[tmp4] != null) {
-        skuId = tmp6.skuId;
+        skuId1 = tmp6.skuId;
       }
-      if (skuId == null) {
-        skuId = tmp3.skuId;
+      if (skuId1 == null) {
+        skuId1 = tmp3.skuId;
       }
+      let skuId = skuId1;
     } else {
       skuId = tmp3.skuId;
     }
-    obj = { sku_id: skuId, cta, shop_session_id: sessionId, card_id: cardId, product_sku_ids: null, location_stack: null, position_in_section: null, discount_source: null };
-    let tmpResult = tmp(tmp2[6]);
-    obj[4] = tmpResult.getProductSkuIds(closure_0);
-    obj[5] = analyticsLocations;
-    obj[6] = tilePosition;
-    tmpResult = tmp(tmp2[5]);
-    obj[7] = tmpResult.getAnalyticsShopDiscountSource(shopDiscountSource);
-    analyticsLocations(cardId[7]).track(constants.SHOP_CARD_CLICKED, obj);
+    obj = CollectiblesProductUtils;
+    const obj3 = { sku_id: skuId, cta, shop_session_id: sessionId, card_id: cardId, product_sku_ids: null, location_stack: null, position_in_section: null, discount_source: null };
+    const obj2 = AnalyticsUtilsDefault;
+    obj3.product_sku_ids = CollectiblesProductUtils.getProductSkuIds(product);
+    obj3.location_stack = analyticsLocations;
+    obj3.position_in_section = tilePosition;
+    const tmpResult = CollectiblesProductUtils;
+    obj3.discount_source = CollectiblesUtils.getAnalyticsShopDiscountSource(shopDiscountSource);
+    obj2.track(AnalyticEvents.SHOP_CARD_CLICKED, obj3);
   }, items);
 };

@@ -1,54 +1,54 @@
-// Module ID: 15235
-// Function ID: 15236
+// Module ID: 15264
+// Function ID: 15265
 // Name: useTrialIntervalOptions
-// Dependencies: [19, 15208, 1373, 1114, 15234, 2]
+// Dependencies: [19, 15237, 1373, 1114, 15263, 2]
 // Exports: default
 
-// Module 15235 (useTrialIntervalOptions)
-import closure_2 from "noop" /* 19 */;
-import { TIER_TRIAL_INTERVALS } from "MAX_SUBSCRIPTION_TIERS" /* 15208 */;
-import { SubscriptionIntervalTypes } from "GuildFeatures" /* 1373 */;
+// Module 15264 (useTrialIntervalOptions)
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useTrialIntervalOptions.tsx");
+const require = fn;
+const TIER_TRIAL_INTERVALS = fn(15237).TIER_TRIAL_INTERVALS;
+const SubscriptionIntervalTypes = fn(1373).SubscriptionIntervalTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useTrialIntervalOptions.tsx");
 
 export default function useTrialIntervalOptions(arg0) {
   closure_0 = arg0;
   const items = [arg0];
-  return React.useMemo(() => {
-    const options = closure_1_3.map((interval) => {
-      let obj = { value: interval, label: null, isDefault: null };
-      if (interval.interval === constants.DAY) {
-        if (7 === interval.interval_count) {
-          const intl = lib(1114).intl;
-          obj = { defaultLimit: null };
-          obj[0] = lib(15234).formatPlanIntervalDuration(interval);
-          let formatToPlainStringResult = intl.formatToPlainString(lib(1114).t.XfSsr1, obj);
-          const obj4 = lib(15234);
+  return noop.useMemo(() => {
+    const options = TIER_TRIAL_INTERVALS.map((value) => {
+      const obj = { value, label: null, isDefault: null };
+      if (value.interval === constants.DAY) {
+        if (7 === value.interval_count) {
+          const intl = closure_1_0(1114).intl;
+          const obj3 = { defaultLimit: closure_1_0(15263).formatPlanIntervalDuration(value) };
+          let formatToPlainStringResult = intl.formatToPlainString(closure_1_0(1114).t.XfSsr1, obj3);
+          const obj4 = closure_1_0(15263);
         }
-        obj[1] = formatToPlainStringResult;
-        let tmp5 = interval.interval === tmp.DAY;
+        obj.label = formatToPlainStringResult;
+        let tmp5 = value.interval === tmp.DAY;
         if (tmp5) {
-          tmp5 = 7 === interval.interval_count;
+          tmp5 = 7 === value.interval_count;
         }
-        obj[2] = tmp5;
+        obj.isDefault = tmp5;
         return obj;
       }
-      formatToPlainStringResult = lib(15234).formatPlanIntervalDuration(interval);
+      formatToPlainStringResult = closure_1_0(15263).formatPlanIntervalDuration(value);
     });
     let selectedOption = closure_0;
     if (null != closure_0) {
       const iter = options.find((value) => {
         let tmp = null != value.value;
         if (tmp) {
-          tmp = value.value.interval === lib.interval;
+          tmp = value.value.interval === closure_1_0.interval;
         }
         if (tmp) {
-          tmp = value.value.interval_count === lib.interval_count;
+          tmp = value.value.interval_count === closure_1_0.interval_count;
         }
         return tmp;
       });
-      let value;
+      value = undefined;
       if (iter != null) {
         value = iter.value;
       }

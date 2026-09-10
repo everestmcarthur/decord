@@ -1,6 +1,26 @@
 // Module ID: 14353
 // Function ID: 14354
-// Dependencies: []
+// Dependencies: [14351, 14325]
 
 // Module 14353
-arg5.f = Object.getOwnPropertySymbols;
+import _mod14325 from "module_14325" /* 14325 */;
+import _mod14351 from "module_14351" /* 14351 */;
+
+
+export default (arg0, arg1) => {
+  if (arguments.length < 2) {
+    const tmp7 = _mod14325[arg0];
+    let tmp8;
+    if (_mod14351(tmp7)) {
+      tmp8 = tmp7;
+    }
+    let tmp3 = tmp8;
+  } else {
+    tmp3 = _mod14325[arg0];
+    if (tmp3) {
+      tmp3 = tmp(14325)[arg0][arg1];
+    }
+    tmp = require;
+  }
+  return tmp3;
+};

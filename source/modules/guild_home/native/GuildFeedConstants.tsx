@@ -1,12 +1,12 @@
-// Module ID: 16556
-// Function ID: 16557
-// Name: GUILD_FEED_CARD_MARGIN_HORIZONTAL
+// Module ID: 16587
+// Function ID: 16588
+// Name: GuildFeedConstants
 // Dependencies: [2]
 
-// Module 16556 (GUILD_FEED_CARD_MARGIN_HORIZONTAL)
-import set from "set" /* 2 */;
+// Module 16587 (GuildFeedConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_home/native/GuildFeedConstants.tsx");
+const result = size.fileFinishedImporting("modules/guild_home/native/GuildFeedConstants.tsx");
 
 export const GUILD_FEED_CARD_MARGIN_HORIZONTAL = 12;
 export const GUILD_FEED_MIN_BANNER_HEIGHT = 156;

@@ -1,29 +1,27 @@
-// Module ID: 11308
-// Function ID: 11309
-// Name: questHomeHeroCtaFromServer
+// Module ID: 11335
+// Function ID: 11336
+// Name: QuestHomeHeroCta
 // Dependencies: [2]
 // Exports: questHomeHeroCtaFromServer
 
-// Module 11308 (questHomeHeroCtaFromServer)
-import set from "set" /* 2 */;
+// Module 11335 (QuestHomeHeroCta)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/quests/QuestHomeHeroCta.tsx");
+const result = size.fileFinishedImporting("modules/quests/QuestHomeHeroCta.tsx");
 
 export const questHomeHeroCtaFromServer = function questHomeHeroCtaFromServer(cta) {
-  let obj = { url: cta.url, buttonLabel: cta.button_label, android: null, ios: null };
+  const obj = { url: cta.url, buttonLabel: cta.button_label, android: null, ios: null };
   let tmp;
   if (null != cta.android) {
-    obj = { androidAppId: null };
-    obj[0] = cta.android.android_app_id;
-    tmp = obj;
+    const obj2 = { androidAppId: cta.android.android_app_id };
+    tmp = obj2;
   }
-  obj[2] = tmp;
+  obj.android = tmp;
   let tmp2;
   if (null != cta.ios) {
-    obj = { iosAppId: null };
-    obj[0] = cta.ios.ios_app_id;
-    tmp2 = obj;
+    const obj3 = { iosAppId: cta.ios.ios_app_id };
+    tmp2 = obj3;
   }
-  obj[3] = tmp2;
+  obj.ios = tmp2;
   return obj;
 };

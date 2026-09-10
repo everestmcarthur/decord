@@ -1,66 +1,64 @@
-// Module ID: 13523
-// Function ID: 13524
-// Name: getTopPatternSource
-// Dependencies: [19, 17, 21, 8233, 13524, 13525, 13526, 4411, 2]
+// Module ID: 13546
+// Function ID: 13547
+// Name: TopPattern
+// Dependencies: [19, 17, 21, 8259, 13547, 13548, 13549, 4425, 2]
 // Exports: TopPattern, getTopPatternSource, useTopPatternSource
 
-// Module 13523 (getTopPatternSource)
-import noopAll from "noop" /* 19 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
-import getIllustrationSource from "getIllustrationSource" /* 8233 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 13546 (TopPattern)
+import shared from "shared" /* 4425 */;
+import _mod8259 from "module_8259" /* 8259 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/TopPattern.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/TopPattern.tsx");
 
 export const getTopPatternSource = function getTopPatternSource(theme) {
-  let obj = getIllustrationSource;
-  obj = {
+  return _mod8259.getIllustrationSource(theme, {
     dark() {
-      return callback(13524);
+      return require("module_13547");
     },
     darker() {
-      return callback(13525);
+      return require("module_13548");
     },
     light() {
-      return callback(13526);
+      return require("module_13549");
     }
-  };
-  return obj.getIllustrationSource(theme, obj);
+  });
 };
 export const useTopPatternSource = function useTopPatternSource() {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = shared;
+  return _mod8259.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return callback(13524);
+      return require("module_13547");
     },
     darker() {
-      return callback(13525);
+      return require("module_13548");
     },
     light() {
-      return callback(13526);
+      return require("module_13549");
     }
-  };
-  return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  });
 };
 export const TopPattern = function TopPattern(arg0) {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = shared;
+  const obj4 = {};
+  const illustrationSource = _mod8259.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return callback(13524);
+      return require("module_13547");
     },
     darker() {
-      return callback(13525);
+      return require("module_13548");
     },
     light() {
-      return callback(13526);
+      return require("module_13549");
     }
-  };
-  obj = {};
-  const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  });
   const merged = Object.assign(arg0);
-  obj.source = illustrationSource;
+  obj4.source = illustrationSource;
   return <Image />;
 };

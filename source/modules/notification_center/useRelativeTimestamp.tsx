@@ -1,15 +1,17 @@
-// Module ID: 16039
-// Function ID: 16040
+// Module ID: 16069
+// Function ID: 16070
 // Name: useRelativeTimestamp
-// Dependencies: [32, 19, 7641, 1090, 2]
+// Dependencies: [32, 19, 7655, 1090, 2]
 // Exports: useRelativeTimestamp
 
-// Module 16039 (useRelativeTimestamp)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+// Module 16069 (useRelativeTimestamp)
+import NotificationCenterUtils from "NotificationCenterUtils" /* 7655 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/notification_center/useRelativeTimestamp.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notification_center/useRelativeTimestamp.tsx");
 
 export const useRelativeTimestamp = function useRelativeTimestamp(timestamp) {
   timestamp = timestamp.timestamp;
@@ -17,12 +19,11 @@ export const useRelativeTimestamp = function useRelativeTimestamp(timestamp) {
   if (flag === undefined) {
     flag = true;
   }
-  closure_2 = undefined;
-  const tmp = callback(React.useState(() => timestamp(7641).getRelativeTimestamp(timestamp, flag)), 2);
-  closure_2 = tmp[1];
+  const tmp = _slicedToArray(noop.useState(() => NotificationCenterUtils.getRelativeTimestamp(timestamp, flag)), 2);
+  dependencyMap = tmp[1];
   const items = [timestamp, flag];
-  const effect = React.useEffect(() => {
-    dependencyMap(timestamp(7641).getRelativeTimestamp(interval, flag));
+  const effect = noop.useEffect(() => {
+    dependencyMap(timestamp(7655).getRelativeTimestamp(interval, flag));
     const diff = Date.now() - interval;
     if (diff <= flag(1090).Millis.DAY) {
       if (diff >= tmp4(1090).Millis.HOUR) {
@@ -32,11 +33,11 @@ export const useRelativeTimestamp = function useRelativeTimestamp(timestamp) {
       }
       const _setInterval = setInterval;
       interval = setInterval(() => {
-        callback2(callback(closure_1_2[2]).getRelativeTimestamp(callback, closure_1));
+        dependencyMap(timestamp(7655).getRelativeTimestamp(closure_0, flag));
       }, MINUTE, MINUTE - diff % MINUTE);
       return () => clearInterval(closure_0);
     }
-    const obj = timestamp(7641);
+    const obj = timestamp(7655);
   }, items);
   return tmp[0];
 };

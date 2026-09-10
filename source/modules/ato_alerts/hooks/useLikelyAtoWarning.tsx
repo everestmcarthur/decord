@@ -1,28 +1,24 @@
-// Module ID: 11372
-// Function ID: 11373
+// Module ID: 11399
+// Function ID: 11400
 // Name: useLikelyAtoWarning
-// Dependencies: [10920, 11370, 11371, 10978, 10977, 11369, 2]
+// Dependencies: [10947, 11397, 11398, 11005, 11004, 11396, 2]
 // Exports: useLikelyAtoWarning
 
-// Module 11372 (useLikelyAtoWarning)
-import set from "set" /* 2 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 10920 */;
-import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10977 */;
-import useChannelSafetyWarning from "useChannelSafetyWarning" /* 10978 */;
-import useIsSpamMessageRequest from "useIsSpamMessageRequest" /* 11370 */;
-import useIsMessageRequest from "useIsMessageRequest" /* 11371 */;
+// Module 11399 (useLikelyAtoWarning)
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10947 */;
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 11004 */;
+import useChannelSafetyWarning from "useChannelSafetyWarning" /* 11005 */;
+import useIsSpamMessageRequest from "useIsSpamMessageRequest" /* 11397 */;
+import useIsMessageRequest from "useIsMessageRequest" /* 11398 */;
+import size from "module_2" /* 2 */;
 
-const SafetyWarningTypes = handleConnectionOpen.SafetyWarningTypes;
-const result = set.fileFinishedImporting("modules/ato_alerts/hooks/useLikelyAtoWarning.tsx");
+const SafetyWarningTypes = ChannelSafetyWarningsStore.SafetyWarningTypes;
+const result = size.fileFinishedImporting("modules/ato_alerts/hooks/useLikelyAtoWarning.tsx");
 
 export const useLikelyAtoWarning = function useLikelyAtoWarning(channelId) {
   const isSpamMessageRequest = useIsSpamMessageRequest.useIsSpamMessageRequest(channelId);
-  const obj = useIsSpamMessageRequest;
   const isMessageRequest = useIsMessageRequest.useIsMessageRequest(channelId);
-  const obj2 = useIsMessageRequest;
   const channelSafetyWarning = useChannelSafetyWarning.useChannelSafetyWarning(channelId, SafetyWarningTypes.LIKELY_ATO);
-  const obj3 = useChannelSafetyWarning;
-  const obj4 = useInappropriateConversationWarningsForChannel;
   const tmp4 = useInappropriateConversationWarningsForChannel.useInappropriateConversationWarningsForChannel(channelId).length > 0;
   if (!isSpamMessageRequest) {
     if (!isMessageRequest) {

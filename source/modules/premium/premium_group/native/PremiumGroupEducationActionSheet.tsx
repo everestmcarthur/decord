@@ -1,47 +1,42 @@
-// Module ID: 13520
-// Function ID: 13521
+// Module ID: 13543
+// Function ID: 13544
 // Name: PremiumGroupEducationActionSheet
-// Dependencies: [17, 4232, 21, 4560, 576, 7150, 6610, 4556, 1114, 3063, 2]
+// Dependencies: [17, 4245, 21, 4574, 576, 7164, 6624, 4570, 1114, 3074, 2]
 // Exports: default
 
-// Module 13520 (PremiumGroupEducationActionSheet)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 3063 */;
-import SubscriptionStatusTypes from "SubscriptionStatusTypes" /* 4232 */;
-import Text from "Text" /* 4556 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 6610 */;
-import Background from "Background" /* 7150 */;
+// Module 13543 (PremiumGroupEducationActionSheet)
+import _mod17 from "module_17" /* 17 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import _modDef3074 from "module_3074" /* 3074 */;
+import PremiumGroupConstants from "PremiumGroupConstants" /* 4245 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6624 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7164 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import createStyles from "createStyles" /* 4574 */;
+import size from "module_2" /* 2 */;
 
-const View = get_ActivityIndicator.View;
-const HELP_CENTER_LINK = SubscriptionStatusTypes.HELP_CENTER_LINK;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let obj = { container: { marginTop: 32, marginHorizontal: 30 }, aboutContainer: null, warningIcon: null, aboutTextContainer: null, helpdeskText: null };
-obj = { flexDirection: "row", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, justifyContent: "center", borderRadius: ThemesDefault.radii.lg, marginBottom: 12 };
-obj[1] = obj;
-obj[2] = { margin: 16 };
-obj[3] = { justifyContent: "center", flex: 1, marginRight: 30 };
-obj[4] = { textAlign: "center", marginBottom: 24 };
-let closure_7 = createCacheKey.createStyles(obj);
-const result = set.fileFinishedImporting("modules/premium/premium_group/native/PremiumGroupEducationActionSheet.tsx");
+const View = _mod17.View;
+const HELP_CENTER_LINK = PremiumGroupConstants.HELP_CENTER_LINK;
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+let obj = { container: { marginTop: 32, marginHorizontal: 30 }, aboutContainer: { flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, justifyContent: "center", borderRadius: nativeDefault.radii.lg, marginBottom: 12 }, warningIcon: { margin: 16 }, aboutTextContainer: { justifyContent: "center", flex: 1, marginRight: 30 }, helpdeskText: { textAlign: "center", marginBottom: 24 } };
+let closure_7 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/premium/premium_group/native/PremiumGroupEducationActionSheet.tsx");
 
 export default function PremiumGroupEducationActionSheet(children) {
-  const tmp = callback3();
-  let obj = { children: null };
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.aboutContainer, children: null };
-  const items = [callback(CircleErrorIcon.CircleErrorIcon, { size: "lg", style: tmp.warningIcon }), callback(View, { style: tmp.aboutTextContainer, children: callback(Text.Text, { variant: "text-sm/medium", color: "text-overlay-light", children: children.aboutText }) })];
-  obj[1] = items;
-  const items1 = [callback2(View, obj), ];
-  const obj3 = { variant: "text-sm/medium", color: "text-overlay-light", style: tmp.helpdeskText, children: null };
-  const intl = getSystemLocale.intl;
-  obj3[3] = intl.format(messagesProxyDefault.ah1Ecm, { helpCenterLink: HELP_CENTER_LINK });
-  items1[1] = callback(Text.Text, obj3);
-  obj[1] = items1;
-  obj[0] = callback2(View, obj);
-  return callback(Background.BottomSheet, obj);
+  const tmp = closure_7();
+  const obj = { children: null };
+  const obj2 = { style: tmp.container, children: null };
+  const obj3 = { style: tmp.aboutContainer, children: null };
+  const items = [hasOwnProperty(CircleErrorIcon.CircleErrorIcon, { size: "lg", style: tmp.warningIcon }), hasOwnProperty(View, { style: tmp.aboutTextContainer, children: hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-overlay-light", children: children.aboutText }) })];
+  obj3.children = items;
+  const items1 = [timestampProducer(View, obj3), ];
+  const obj6 = { variant: "text-sm/medium", color: "text-overlay-light", style: tmp.helpdeskText, children: null };
+  const intl = util.intl;
+  obj6.children = intl.format(_modDef3074.ah1Ecm, { helpCenterLink: HELP_CENTER_LINK });
+  items1[1] = hasOwnProperty(Text_Text.Text, obj6);
+  obj2.children = items1;
+  obj.children = timestampProducer(View, obj2);
+  return hasOwnProperty(Sheet_BottomSheet.BottomSheet, obj);
 };

@@ -1,47 +1,50 @@
-// Module ID: 7862
-// Function ID: 7863
+// Module ID: 7876
+// Function ID: 7877
 // Name: ForLaterModal
-// Dependencies: [19, 17, 21, 4560, 576, 1611, 1114, 7860, 5631, 7863, 1115, 5624, 4763, 13285, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 1611, 1114, 7874, 5645, 7877, 1115, 5638, 4777, 13308, 2]
 // Exports: default
 
-// Module 7862 (ForLaterModal)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
+// Module 7876 (ForLaterModal)
+import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import _modDef4763 from "module_4763" /* 4763 */;
-import keyExtractorDefault from "keyExtractor" /* 13285 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import HeaderShared from "HeaderShared" /* 7877 */;
+import ForLaterScreenDefault from "ForLaterScreen" /* 13308 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { modal: null, headerLeftContainer: null, headerRightContainer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, borderBottomWidth: 0, shadowColor: "transparent", height: "100%" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingLeft: ThemesDefault.space.PX_16 };
-const obj1 = { paddingLeft: ThemesDefault.space.PX_16 };
-createCacheKey[2] = { paddingRight: ThemesDefault.space.PX_16 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const obj2 = { paddingRight: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/saved_messages/native/ForLaterModal.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+const obj2 = { modal: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderBottomWidth: 0, shadowColor: "transparent", height: "100%" }, headerLeftContainer: null, headerRightContainer: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderBottomWidth: 0, shadowColor: "transparent", height: "100%" };
+obj2.headerLeftContainer = { paddingLeft: nativeDefault.space.PX_16 };
+let obj4 = { paddingLeft: nativeDefault.space.PX_16 };
+obj2.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/saved_messages/native/ForLaterModal.tsx");
 
 export default function ForLaterModal(type) {
   type = type.type;
-  let _require;
-  const tmp = callback();
-  const intl = _require(1114).intl;
-  if (type === _require(7860).SavedMessageSortTypes.REMINDER) {
+  _require = undefined;
+  const tmp = closure_6();
+  const intl = require("util").intl;
+  if (type === require("SavedMessagesTypes").SavedMessageSortTypes.REMINDER) {
+    let aUXxzT = tmp4(1114).t.aUXxzT;
   } else {
+    aUXxzT = tmp4(1114).t["2pAkDA"];
   }
-  const stringResult = intl.string(_2pAkDA);
+  const stringResult = intl.string(aUXxzT);
   _require = stringResult;
-  let obj = { style: tmp.modal, children: null };
-  obj = {
+  const obj = { style: tmp.modal, children: null };
+  const obj3 = {
     title: stringResult,
     headerTitle() {
-      return closure_1_4(_undefined(closure_1_2[9]).GenericHeaderTitle, { title: _undefined });
+      return React4(HeaderShared.GenericHeaderTitle, { title });
     },
     headerTitleAlign: "center",
     headerStatusBarHeight: null,
@@ -49,18 +52,21 @@ export default function ForLaterModal(type) {
     headerLeftContainerStyle: null,
     headerRightContainerStyle: null
   };
-  let tmp4Result = tmp4(1115);
   let num = 0;
   if (!tmp4Result.isIOS()) {
     num = useSafeAreaInsetsDefault().top;
   }
-  obj[3] = num + ThemesDefault.space.PX_8;
-  tmp4Result = tmp4(5624);
-  obj[4] = tmp4Result.getHeaderCloseButton(_modDef4763.pop);
-  ({ headerLeftContainer: obj2[5], headerRightContainer: obj2[6] } = tmp);
-  const items = [closure_4(_require(5631).Header, obj), ];
-  obj = { type, onClose: _modDef4763.pop };
-  items[1] = closure_4(keyExtractorDefault, obj, type);
-  obj[1] = items;
-  return closure_5(View, obj);
+  obj3.headerStatusBarHeight = num + nativeDefault.space.PX_8;
+  tmp4Result = require("PlatformUtils");
+  const tmp7 = closure_5;
+  const tmp8 = View;
+  obj3.headerLeft = require("NavigatorHeader").getHeaderCloseButton(ModalActionCreatorsDefault.pop);
+  ({ headerLeftContainer: obj2.headerLeftContainerStyle, headerRightContainer: obj2.headerRightContainerStyle } = tmp);
+  const items = [closure_4(require("module_5645").Header, obj3), ];
+  const obj4 = { type, onClose: null };
+  const tmp4Result2 = require("NavigatorHeader");
+  obj4.onClose = ModalActionCreatorsDefault.pop;
+  items[1] = closure_4(ForLaterScreenDefault, obj4, type);
+  obj.children = items;
+  return tmp7(tmp8, obj);
 };

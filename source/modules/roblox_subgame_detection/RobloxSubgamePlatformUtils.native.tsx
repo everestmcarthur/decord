@@ -1,26 +1,28 @@
-// Module ID: 4692
-// Function ID: 4693
-// Dependencies: [5, 4693, 4691, 2]
+// Module ID: 4706
+// Function ID: 4707
+// Name: RobloxSubgamePlatformUtils
+// Dependencies: [5, 4707, 4705, 2]
 
-// Module 4692
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+// Module 4706 (RobloxSubgamePlatformUtils)
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/roblox_subgame_detection/RobloxSubgamePlatformUtils.native.tsx");
+const require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/roblox_subgame_detection/RobloxSubgamePlatformUtils.native.tsx");
 
 export default {
-  getRobloxSubgameURL(closure_0) {
-    return callback(function*() {
+  getRobloxSubgameURL(arg0) {
+    closure_0 = arg0;
+    return (async (arg0, value) => {
       if (c2 === 2) {
         c2 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -30,35 +32,30 @@ export default {
           if (0 === dependencyMap) {
             if (arg0 === 1) {
               c2 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c2 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
-              closure_0 = tmp4;
-              let obj2 = closure_1_0(4693);
               dependencyMap = 1;
               c2 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj2.canOpenUrlScheme("roblox");
-              return obj1;
+              const obj5 = { value: tmp4(4707).canOpenUrlScheme("roblox"), done: false };
+              return obj5;
             }
           } else if (arg0 === 1) {
             c2 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
-            obj = closure_1_0(4691);
-            if (arg1) {
-              obj.ROBLOX_PROTOCOL_URL(closure_0);
+            const obj = tmp4(4705);
+            if (value) {
+              obj.ROBLOX_PROTOCOL_URL(closure_128_0);
             } else {
-              const result = obj.ROBLOX_DEFERRED_WEB_URL(closure_0);
+              const result = obj.ROBLOX_DEFERRED_WEB_URL(closure_128_0);
             }
             c2 = 3;
           }

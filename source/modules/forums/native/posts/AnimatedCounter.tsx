@@ -1,18 +1,19 @@
-// Module ID: 11321
-// Function ID: 11322
-// Name: AnimatedCount
-// Dependencies: [32, 19, 17, 21, 4560, 38, 4296, 4271, 4974, 4556, 4978, 11322, 2]
+// Module ID: 11348
+// Function ID: 11349
+// Name: AnimatedCounter
+// Dependencies: [32, 19, 17, 21, 4574, 38, 4310, 4284, 4988, 4570, 4992, 11349, 2]
 
-// Module 11321 (AnimatedCount)
-import Text from "Text" /* 4556 */;
-import defaultFormatter2 from "defaultFormatter" /* 11322 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11348 (AnimatedCounter)
+import native from "native" /* 4284 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import spring from "spring" /* 4988 */;
+import springPresets from "springPresets" /* 4992 */;
+import AnimatedCounterUtils from "AnimatedCounterUtils" /* 11349 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function AnimatedCount(state) {
   state = state.state;
   const cleanUp = state.cleanUp;
@@ -21,11 +22,9 @@ function AnimatedCount(state) {
   let context;
   let sharedValue;
   let memo;
-  obj = context;
   ({ count, formatter, textColor, textVariant, textStyle } = state);
   context = context.useContext(closure_12);
   cleanUp(height[5])(null != context, "[AnimatedCount] Context should not be nullish.");
-  obj1 = state(height[6]);
   if (state === state(height[7]).TransitionStates.MOUNTED) {
     let NEUTRAL = obj.NEUTRAL;
   } else {
@@ -38,72 +37,68 @@ function AnimatedCount(state) {
       NEUTRAL = obj.NEUTRAL;
     }
   }
-  sharedValue = obj1.useSharedValue(NEUTRAL);
+  sharedValue = state(height[6]).useSharedValue(NEUTRAL);
   items = [height];
-  memo = obj.useMemo(() => closure_1_11.map((arg0) => {
-    if (null == closure_2) {
+  memo = obj.useMemo(() => items.map((item) => {
+    if (null == height) {
       return 0;
-    } else if (closure_1_10.ABOVE === arg0) {
-      let num = -1 * tmp;
-    } else {
-      num = tmp;
-      if (tmp3.BELOW !== arg0) {
-        if (tmp3.NEUTRAL === arg0) {
-          num = 0;
-        }
-      }
+    } else if (constants.ABOVE === item) {
+      const num = -1 * tmp;
+    } else if (tmp3.BELOW !== item) {
     }
   }), items);
+  let obj2 = state(height[6]);
+  const tmp2 = cleanUp;
   let fn = function y() {
     obj = { transform: null };
-    obj = { translateY: null };
-    const obj3 = state(height[8]);
-    const obj4 = state(height[6]);
+    const obj2 = { translateY: null };
+    const obj3 = spring;
     const fn = function t(arg0) {
       let tmp = arg0;
       if (arg0) {
-        tmp = closure_0 === closure_1_0(closure_1_2[7]).TransitionStates.YEETED;
+        tmp = closure_1_0 === state(height[7]).TransitionStates.YEETED;
       }
       if (tmp) {
-        closure_1_0(closure_1_2[6]).runOnJS(closure_1)();
-        obj = closure_1_0(closure_1_2[6]);
+        state(height[6]).runOnJS(cleanUp)();
+        obj = state(height[6]);
       }
     };
-    obj = { state, TransitionStates: state(height[7]).TransitionStates, runOnJS: state(height[6]).runOnJS, cleanUp };
-    fn.__closure = obj;
+    const interpolateResult = ReanimatedRexport.interpolate(sharedValue.get(), items, memo);
+    fn.__closure = { state, TransitionStates: native.TransitionStates, runOnJS: ReanimatedRexport.runOnJS, cleanUp };
     fn.__workletHash = 10933954976568;
-    fn.__initData = closure_1_14;
-    obj[0] = obj3.withSpring(state(height[6]).interpolate(sharedValue.get(), closure_1_11, memo), springConfig, "respect-motion-settings", fn);
-    items = [obj];
-    obj[0] = items;
+    fn.__initData = __initData;
+    obj2.translateY = obj3.withSpring(interpolateResult, springConfig, "respect-motion-settings", fn);
+    items = [obj2];
+    obj.transform = items;
     return obj;
   };
-  obj = { withSpring: tmp5(tmp3[8]).withSpring, interpolate: tmp5(tmp3[6]).interpolate, animationState: sharedValue, ANIMATION_INPUT: items, animationOutput: memo, springConfig, state, TransitionStates: tmp5(tmp3[7]).TransitionStates, runOnJS: tmp5(tmp3[6]).runOnJS, cleanUp };
-  fn.__closure = obj;
+  const tmp5Result = state(height[6]);
+  fn.__closure = { withSpring: state(height[8]).withSpring, interpolate: state(height[6]).interpolate, animationState: sharedValue, ANIMATION_INPUT: items, animationOutput: memo, springConfig, state, TransitionStates: state(height[7]).TransitionStates, runOnJS: state(height[6]).runOnJS, cleanUp };
   fn.__workletHash = 13513457118386;
-  fn.__initData = closure_13;
+  fn.__initData = __initData;
   const items1 = [sharedValue, context, state];
-  const animatedStyle = state(height[6]).useAnimatedStyle(fn);
+  const animatedStyle = tmp5Result.useAnimatedStyle(fn);
   const effect = obj.useEffect(() => {
-    if (state === state(height[7]).TransitionStates.YEETED) {
+    if (state === native.TransitionStates.YEETED) {
       ({ current, previous } = context);
       if (current > previous) {
-        let NEUTRAL = closure_1_10.BELOW;
+        let NEUTRAL = obj.BELOW;
       } else if (current < previous) {
-        NEUTRAL = closure_1_10.ABOVE;
+        NEUTRAL = obj.ABOVE;
       } else {
-        NEUTRAL = closure_1_10.NEUTRAL;
+        NEUTRAL = obj.NEUTRAL;
       }
       const result = -1 * NEUTRAL;
     } else {
-      const result1 = sharedValue.set(closure_1_10.NEUTRAL);
+      const result1 = sharedValue.set(obj.NEUTRAL);
     }
   }, items1);
-  obj = { style: items2, children: null };
-  items2 = [sharedValue.absoluteFill, animatedStyle, { height }];
-  obj1 = { variant: textVariant, color: textColor, style: textStyle, children: formatter(count) };
-  obj[1] = callback(state(height[9]).Text, obj1);
-  return callback(cleanUp(height[6]).View, obj);
+  let obj4 = { style: null, children: null };
+  const items2 = [sharedValue.absoluteFill, animatedStyle, { height }];
+  obj4.style = items2;
+  let obj3 = { withSpring: state(height[8]).withSpring, interpolate: state(height[6]).interpolate, animationState: sharedValue, ANIMATION_INPUT: items, animationOutput: memo, springConfig, state, TransitionStates: state(height[7]).TransitionStates, runOnJS: state(height[6]).runOnJS, cleanUp };
+  obj4.children = closure_7(state(height[9]).Text, { variant: textVariant, color: textColor, style: textStyle, children: formatter(count) });
+  return closure_7(tmp2(height[6]).View, obj4);
 }
 function getItemKey(arg0) {
   return "" + arg0;
@@ -111,23 +106,19 @@ function getItemKey(arg0) {
 function AnimatedCounterTransitionGroup(count) {
   count = count.count;
   const formatter = count.formatter;
-  let ref = formatter;
   const textColor = count.textColor;
   const textVariant = count.textVariant;
   const textStyle = count.textStyle;
   const springConfig = count.springConfig;
-  let first;
-  let callback;
-  let callback2;
-  let callback3;
-  ref = undefined;
-  const tmp = callback3();
+  c8 = undefined;
+  let ref;
+  const tmp = ref();
   const tmp2 = textVariant(textStyle.useState(), 2);
-  first = tmp2[0];
-  callback = tmp2[1];
+  const height = tmp2[0];
+  closure_7 = tmp2[1];
   items = [count];
   [tmp5, c8] = textVariant(textStyle.useState(items), 2);
-  callback3 = textStyle.useRef(tmp5);
+  textStyle.useRef(tmp5);
   ref = textStyle.useRef(count);
   let items1 = [count];
   const effect = textStyle.useEffect(() => {
@@ -140,53 +131,58 @@ function AnimatedCounterTransitionGroup(count) {
   count = tmp5;
   const items2 = [tmp5, ref];
   const memo = textStyle.useMemo(() => ({ current: count[0], previous: ref.current }), items2);
-  const items3 = [formatter, first, springConfig, textColor, textStyle, textVariant];
-  callback = textStyle.useCallback((nativeEvent) => {
-    callback(nativeEvent.nativeEvent.layout.height);
+  const items3 = [formatter, height, springConfig, textColor, textStyle, textVariant];
+  const callback = textStyle.useCallback((nativeEvent) => {
+    closure_7(nativeEvent.nativeEvent.layout.height);
   }, []);
   obj = { style: tmp.container, children: null };
-  obj = { value: memo, children: null };
-  const callback1 = textStyle.useCallback((arg0, arg1, arg2, arg3) => {
+  const obj2 = { value: memo, children: null };
+  const callback1 = textStyle.useCallback((arg0, count, state, cleanUp) => {
     obj = { formatter: ref, springConfig: null, count: null, state: null, cleanUp: null, height: null, textColor: null, textVariant: null, textStyle: null };
     let springStandard = springConfig;
     if (null == springConfig) {
-      springStandard = count(textColor[10]).springStandard;
+      springStandard = springPresets.springStandard;
     }
-    obj[1] = springStandard;
-    obj[2] = arg1;
-    obj[3] = arg2;
-    obj[4] = arg3;
-    obj[5] = first;
-    obj[6] = textColor;
-    obj[7] = textVariant;
-    obj[8] = textStyle;
-    return closure_7(closure_1_15, obj, arg0);
+    obj.springConfig = springStandard;
+    obj.count = count;
+    obj.state = state;
+    obj.cleanUp = cleanUp;
+    obj.height = height;
+    obj.textColor = textColor;
+    obj.textVariant = textVariant;
+    obj.textStyle = textStyle;
+    return React5(AnimatedCount, obj, arg0);
   }, items3);
-  obj = { items: tmp5, renderItem: callback1, getItemKey };
-  obj[1] = callback(count(textColor[7]).TransitionGroup, obj);
-  const items4 = [callback(redux.Provider, obj), ];
-  obj1 = { style: tmp.hidden, onLayout: callback, children: null };
+  obj2.children = closure_7(count(textColor[7]).TransitionGroup, { items: tmp5, renderItem: callback1, getItemKey });
+  const items4 = [closure_7(redux.Provider, obj2), ];
+  const obj4 = { style: tmp.hidden, onLayout: callback, children: null };
+  const obj3 = { items: tmp5, renderItem: callback1, getItemKey };
   const tmp4 = textVariant(textStyle.useState(items), 2);
-  obj1[2] = callback(count(textColor[9]).Text, { variant: textVariant, color: textColor, style: textStyle, children: formatter(count) });
-  items4[1] = callback(first, obj1);
-  obj[1] = items4;
-  return callback2(first, obj);
+  obj4.children = closure_7(count(textColor[9]).Text, { variant: textVariant, color: textColor, style: textStyle, children: formatter(count) });
+  items4[1] = closure_7(height, obj4);
+  obj.children = items4;
+  return c8(height, obj);
 }
 function BasicCounter(arg0) {
   ({ count, textStyle, textColor, textVariant, formatter } = arg0);
-  return callback(Text.Text, { variant: textVariant, color: textColor, style: textStyle, children: formatter(count) });
+  return React5(Text_Text.Text, { variant: textVariant, color: textColor, style: textStyle, children: formatter(count) });
 }
-let c4 = importAllResult;
-({ StyleSheet: c5, View: closure_6 } = get_ActivityIndicator);
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-let closure_9 = createCacheKey.createStyles({ container: { flex: 0, flexGrow: 0, flexShrink: 0, justifyContent: "flex-start", alignItems: "flex-start", overflow: "hidden" }, hidden: { opacity: 0 } });
+get_ActivityIndicator = fn(17);
+({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+let closure_9 = createStyles.createStyles({ container: { flex: 0, flexGrow: 0, flexShrink: 0, justifyContent: "flex-start", alignItems: "flex-start", overflow: "hidden" }, hidden: { opacity: 0 } });
 let obj = { ABOVE: -1, [-1]: "ABOVE", NEUTRAL: 0, [0]: "NEUTRAL", BELOW: 1, [1]: "BELOW" };
 let items = [, , ];
 ({ ABOVE: arr[0], NEUTRAL: arr[1], BELOW: arr[2] } = obj);
-let context = importAllResult.createContext(undefined);
-let closure_13 = { code: "function AnimatedCounterTsx1(){const{withSpring,interpolate,animationState,ANIMATION_INPUT,animationOutput,springConfig,state,TransitionStates,runOnJS,cleanUp}=this.__closure;return{transform:[{translateY:withSpring(interpolate(animationState.get(),ANIMATION_INPUT,animationOutput),springConfig,'respect-motion-settings',function(finished){if(finished&&state===TransitionStates.YEETED){runOnJS(cleanUp)();}})}]};}" };
+const redux = noop.createContext(undefined);
+const __initData = { code: "function AnimatedCounterTsx1(){const{withSpring,interpolate,animationState,ANIMATION_INPUT,animationOutput,springConfig,state,TransitionStates,runOnJS,cleanUp}=this.__closure;return{transform:[{translateY:withSpring(interpolate(animationState.get(),ANIMATION_INPUT,animationOutput),springConfig,'respect-motion-settings',function(finished){if(finished&&state===TransitionStates.YEETED){runOnJS(cleanUp)();}})}]};}" };
 let closure_14 = { code: "function AnimatedCounterTsx2(finished){const{state,TransitionStates,runOnJS,cleanUp}=this.__closure;if(finished&&state===TransitionStates.YEETED){runOnJS(cleanUp)();}}" };
-const memoResult = importAllResult.memo((textColor) => {
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/forums/native/posts/AnimatedCounter.tsx");
+
+export default noop.memo((textColor) => {
   ({ count, textStyle, animate } = textColor);
   if (animate === undefined) {
     animate = true;
@@ -201,28 +197,14 @@ const memoResult = importAllResult.memo((textColor) => {
   }
   let defaultFormatter = textColor.formatter;
   if (defaultFormatter === undefined) {
-    defaultFormatter = defaultFormatter2.defaultFormatter;
+    defaultFormatter = AnimatedCounterUtils.defaultFormatter;
   }
   if (animate) {
-    obj = { count: null, formatter: null, springConfig: null, textColor: null, textVariant: null, textStyle: null };
-    obj[0] = count;
-    obj[1] = defaultFormatter;
-    obj[2] = textColor.springConfig;
-    obj[3] = str;
-    obj[4] = str2;
-    obj[5] = textStyle;
-    let tmp3Result = tmp3(AnimatedCounterTransitionGroup, obj);
+    const obj2 = { count, formatter: defaultFormatter, springConfig: textColor.springConfig, textColor: str, textVariant: str2, textStyle };
+    let tmp3Result = tmp3(AnimatedCounterTransitionGroup, obj2);
   } else {
-    obj = { count: null, formatter: null, textColor: null, textVariant: null, textStyle: null };
-    obj[0] = count;
-    obj[1] = defaultFormatter;
-    obj[2] = str;
-    obj[3] = str2;
-    obj[4] = textStyle;
+    obj = { count, formatter: defaultFormatter, textColor: str, textVariant: str2, textStyle };
     tmp3Result = tmp3(BasicCounter, obj);
   }
   return tmp3Result;
 });
-let result = require("set").fileFinishedImporting("modules/forums/native/posts/AnimatedCounter.tsx");
-
-export default memoResult;

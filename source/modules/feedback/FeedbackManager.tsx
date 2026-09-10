@@ -1,23 +1,23 @@
-// Module ID: 17353
-// Function ID: 17354
-// Name: optOutEligibilityCheck
-// Dependencies: [7214, 4583, 17354, 11631, 7213, 1935, 510, 12, 17355, 7118, 2]
+// Module ID: 17384
+// Function ID: 17385
+// Name: feedback/FeedbackManager
+// Dependencies: [7228, 4597, 17385, 11657, 7227, 1935, 510, 12, 17386, 7132, 2]
 
-// Module 17353 (optOutEligibilityCheck)
-import apply from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 7118 */;
-import useIsSearchResultsFeedbackExperimentEnabled from "useIsSearchResultsFeedbackExperimentEnabled" /* 17355 */;
-import closure_2 from "set" /* 7214 */;
-import closure_3 from "createRTCConnection" /* 4583 */;
-import closure_4 from "initialize" /* 17354 */;
-import FeedbackRating from "FeedbackRating" /* 11631 */;
+// Module 17384 (feedback/FeedbackManager)
+import _mod12 from "module_12" /* 12 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import SearchResultsFeedbackExperiment from "SearchResultsFeedbackExperiment" /* 17386 */;
+import HotspotStore from "hotspot/HotspotStore" /* 7228 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
+import FeedbackOverrideStore from "FeedbackOverrideStore" /* 17385 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-require = arg1;
+require = fn;
 function optOutEligibilityCheck(hotspot) {
-  const _require = hotspot;
-  const InAppFeedbackStates = _require(1935).InAppFeedbackStates;
+  _require = hotspot;
+  const InAppFeedbackStates = require("UserSettings").InAppFeedbackStates;
   const tmp3 = InAppFeedbackStates.getSetting()[hotspot.feedbackType];
-  let optOutExpiryTime;
+  optOutExpiryTime = undefined;
   if (tmp3 != null) {
     optOutExpiryTime = tmp3.optOutExpiryTime;
   }
@@ -30,20 +30,20 @@ function optOutEligibilityCheck(hotspot) {
     const _Date = Date;
     tmp5 = Date.now() < optOutExpiryTime;
   }
-  const hasHotspotResult = closure_2.hasHotspot(hotspot.hotspot);
+  const hasHotspotResult = HotspotStore.hasHotspot(hotspot.hotspot);
   let tmp10 = tmp9;
   if (!hasHotspotResult) {
     tmp10 = !tmp5;
   }
   if (tmp10) {
-    const InAppFeedbackStates2 = _require(1935).InAppFeedbackStates;
+    const InAppFeedbackStates2 = require("UserSettings").InAppFeedbackStates;
     InAppFeedbackStates2.updateSetting((arg0) => {
-      obj = {};
+      const obj = {};
       const merged = Object.assign(arg0);
-      obj = {};
+      obj2 = {};
       const merged1 = Object.assign(arg0[hotspot.feedbackType]);
-      obj.optOutExpiryTime = closure_1_6;
-      obj[hotspot.feedbackType] = obj;
+      obj2.optOutExpiryTime = optOutExpiryTime;
+      obj[hotspot.feedbackType] = obj2;
       return obj;
     });
   }
@@ -57,14 +57,13 @@ function triggerRateEligibilityCheck(chance) {
   return Math.random() < chance.chance;
 }
 function recencyEligibilityCheck(cooldown, storageKey) {
-  const _require = storageKey;
-  const InAppFeedbackStates = _require(1935).InAppFeedbackStates;
+  const InAppFeedbackStates = UserSettings.InAppFeedbackStates;
   const tmp3 = InAppFeedbackStates.getSetting()[storageKey.feedbackType];
   let lastImpressionTime;
   if (tmp3 != null) {
     lastImpressionTime = tmp3.lastImpressionTime;
   }
-  dependencyMap = undefined;
+  c1 = undefined;
   let isNaNResult = null != lastImpressionTime;
   if (isNaNResult) {
     const _Number = Number;
@@ -76,8 +75,8 @@ function recencyEligibilityCheck(cooldown, storageKey) {
   let tmp7;
   if (!isNaNResult) {
     const Storage = tmp(510).Storage;
-    const value = Storage.get(storageKey.storageKey);
-    dependencyMap = value;
+    value = Storage.get(storageKey.storageKey);
+    c1 = value;
     isNaNResult = null == value;
     tmp7 = value;
   }
@@ -88,17 +87,17 @@ function recencyEligibilityCheck(cooldown, storageKey) {
   if (!isNaNResult) {
     const InAppFeedbackStates2 = tmp(1935).InAppFeedbackStates;
     InAppFeedbackStates2.updateSetting((arg0) => {
-      obj = {};
+      const obj = {};
       const merged = Object.assign(arg0);
-      obj = {};
+      obj2 = {};
       const merged1 = Object.assign(arg0[storageKey.feedbackType]);
-      obj.lastImpressionTime = c1;
-      obj[storageKey.feedbackType] = obj;
+      obj2.lastImpressionTime = lastImpressionTime;
+      obj[storageKey.feedbackType] = obj2;
       return obj;
     });
   }
   const items = [lastImpressionTime, tmp7];
-  let num = _require(12).max(items);
+  let num = _mod12.max(items);
   if (num == null) {
     num = 0;
   }
@@ -106,16 +105,14 @@ function recencyEligibilityCheck(cooldown, storageKey) {
   return sum < Date.now();
 }
 function groupRecencyEligibilityCheck(cooldown) {
-  closure_0 = cooldown;
-  const values = Object.values(obj);
+  const group = cooldown;
+  const values = Object.values(obj2);
   const found = values.filter((group) => group.group === group.group);
-  obj = found[Symbol.iterator]();
+  const obj = found[Symbol.iterator]();
   while (obj !== undefined) {
-    let tmp3 = recencyEligibilityCheck;
     if (recencyEligibilityCheck(cooldown, tmp2)) {
       continue;
     } else {
-      let tmp4 = obj;
       obj.return();
       let flag = false;
       return false;
@@ -123,92 +120,92 @@ function groupRecencyEligibilityCheck(cooldown) {
   }
   return true;
 }
-({ FeedbackGroup, FeedbackType, FeedbackTypePrecedence: c5, MAX_REPRESENTABLE_DATE: closure_6 } = FeedbackRating);
+const Constants = fn(11657);
+({ FeedbackGroup, FeedbackType, FeedbackTypePrecedence: hasOwnProperty, MAX_REPRESENTABLE_DATE: metroRequire } = Constants);
 let obj = { chance: 0.2, cooldown: 86400000 };
-obj = {};
-obj = {};
+let obj2 = {};
+const obj3 = {};
 let merged = Object.assign(obj);
-obj.group = FeedbackGroup.AV;
-obj.hotspot = require("HotspotStore").HotspotLocations.VOICE_CALL_FEEDBACK;
-obj.storageKey = "lastVoiceFeedback";
-obj.feedbackType = FeedbackType.VOICE;
+obj3.group = FeedbackGroup.AV;
+obj3.hotspot = fn(7227).HotspotLocations.VOICE_CALL_FEEDBACK;
+obj3.storageKey = "lastVoiceFeedback";
+obj3.feedbackType = FeedbackType.VOICE;
 let items = [
   function voiceEligibilityCheck() {
-    if (wasEverRtcConnected.getWasEverRtcConnected()) {
+    if (RTCConnectionStore.getWasEverRtcConnected()) {
       return obj.getWasEverMultiParticipant();
     } else {
       return true;
     }
-    obj = wasEverRtcConnected;
+    obj = RTCConnectionStore;
   }
 ];
-obj.eligibilityChecks = items;
-obj[FeedbackType.VOICE] = obj;
-const obj1 = {};
+obj3.eligibilityChecks = items;
+obj2[FeedbackType.VOICE] = obj3;
+const obj4 = {};
 let merged1 = Object.assign(obj);
-obj1.group = FeedbackGroup.AV;
-obj1.hotspot = require("HotspotStore").HotspotLocations.REPORT_PROBLEM_POST_STREAM;
-obj1.storageKey = "lastStreamFeedback";
-obj1.feedbackType = FeedbackType.STREAM;
-obj[FeedbackType.STREAM] = obj1;
-const obj2 = {};
-const merged2 = Object.assign(obj);
-obj2.group = FeedbackGroup.AV;
-obj2.hotspot = require("HotspotStore").HotspotLocations.VIDEO_BACKGROUND_FEEDBACK;
-obj2.storageKey = "lastVideoBackgroundFeedback";
-obj2.feedbackType = FeedbackType.VIDEO_BACKGROUND;
-obj[FeedbackType.VIDEO_BACKGROUND] = obj2;
-obj[FeedbackType.ACTIVITY] = { cooldown: 0, chance: 0.5, group: FeedbackGroup.AV, hotspot: require("HotspotStore").HotspotLocations.POST_ACTIVITY_FEEDBACK, storageKey: "lastActivityFeedback", feedbackType: FeedbackType.ACTIVITY };
-const obj3 = { cooldown: 0, chance: 0.5, group: FeedbackGroup.AV, hotspot: require("HotspotStore").HotspotLocations.POST_ACTIVITY_FEEDBACK, storageKey: "lastActivityFeedback", feedbackType: FeedbackType.ACTIVITY };
-obj[FeedbackType.IN_APP_REPORTS] = { cooldown: 172800000, chance: 0.5, group: FeedbackGroup.SAFETY, hotspot: require("HotspotStore").HotspotLocations.IN_APP_REPORTS_FEEDBACK, storageKey: "inAppReportsFeedback", feedbackType: FeedbackType.IN_APP_REPORTS };
+obj4.group = FeedbackGroup.AV;
+obj4.hotspot = fn(7227).HotspotLocations.REPORT_PROBLEM_POST_STREAM;
+obj4.storageKey = "lastStreamFeedback";
+obj4.feedbackType = FeedbackType.STREAM;
+obj2[FeedbackType.STREAM] = obj4;
 const obj5 = {};
+const merged2 = Object.assign(obj);
+obj5.group = FeedbackGroup.AV;
+obj5.hotspot = fn(7227).HotspotLocations.VIDEO_BACKGROUND_FEEDBACK;
+obj5.storageKey = "lastVideoBackgroundFeedback";
+obj5.feedbackType = FeedbackType.VIDEO_BACKGROUND;
+obj2[FeedbackType.VIDEO_BACKGROUND] = obj5;
+obj2[FeedbackType.ACTIVITY] = { cooldown: 0, chance: 0.5, group: FeedbackGroup.AV, hotspot: fn(7227).HotspotLocations.POST_ACTIVITY_FEEDBACK, storageKey: "lastActivityFeedback", feedbackType: FeedbackType.ACTIVITY };
+const obj6 = { cooldown: 0, chance: 0.5, group: FeedbackGroup.AV, hotspot: fn(7227).HotspotLocations.POST_ACTIVITY_FEEDBACK, storageKey: "lastActivityFeedback", feedbackType: FeedbackType.ACTIVITY };
+obj2[FeedbackType.IN_APP_REPORTS] = { cooldown: 172800000, chance: 0.5, group: FeedbackGroup.SAFETY, hotspot: fn(7227).HotspotLocations.IN_APP_REPORTS_FEEDBACK, storageKey: "inAppReportsFeedback", feedbackType: FeedbackType.IN_APP_REPORTS };
+const obj8 = {};
 const merged3 = Object.assign(obj);
-obj5.group = FeedbackGroup.SEARCH;
-obj5.hotspot = require("HotspotStore").HotspotLocations.SEARCH_RESULTS_FEEDBACK;
-obj5.storageKey = "searchResultsFeedback";
-obj5.feedbackType = FeedbackType.SEARCH_RESULTS;
+obj8.group = FeedbackGroup.SEARCH;
+obj8.hotspot = fn(7227).HotspotLocations.SEARCH_RESULTS_FEEDBACK;
+obj8.storageKey = "searchResultsFeedback";
+obj8.feedbackType = FeedbackType.SEARCH_RESULTS;
 const items1 = [
   function searchResultsEligibilityCheck() {
-    return useIsSearchResultsFeedbackExperimentEnabled.getIsSearchResultsFeedbackExperimentEnabled({ location: "FeedbackManager" });
+    return SearchResultsFeedbackExperiment.getIsSearchResultsFeedbackExperimentEnabled({ location: "FeedbackManager" });
   }
 ];
-obj5.eligibilityChecks = items1;
-obj[FeedbackType.SEARCH_RESULTS] = obj5;
-const obj4 = { cooldown: 172800000, chance: 0.5, group: FeedbackGroup.SAFETY, hotspot: require("HotspotStore").HotspotLocations.IN_APP_REPORTS_FEEDBACK, storageKey: "inAppReportsFeedback", feedbackType: FeedbackType.IN_APP_REPORTS };
-obj[FeedbackType.VIBEGRATIONS] = { cooldown: 3600000, chance: 1, group: FeedbackGroup.BUILDER, hotspot: require("HotspotStore").HotspotLocations.VIBEGRATIONS_FEEDBACK, storageKey: "lastVibegrationsFeedback", feedbackType: FeedbackType.VIBEGRATIONS };
-initializeDefault;
+obj8.eligibilityChecks = items1;
+obj2[FeedbackType.SEARCH_RESULTS] = obj8;
+const obj7 = { cooldown: 172800000, chance: 0.5, group: FeedbackGroup.SAFETY, hotspot: fn(7227).HotspotLocations.IN_APP_REPORTS_FEEDBACK, storageKey: "inAppReportsFeedback", feedbackType: FeedbackType.IN_APP_REPORTS };
+obj2[FeedbackType.VIBEGRATIONS] = { cooldown: 3600000, chance: 1, group: FeedbackGroup.BUILDER, hotspot: fn(7227).HotspotLocations.VIBEGRATIONS_FEEDBACK, storageKey: "lastVibegrationsFeedback", feedbackType: FeedbackType.VIBEGRATIONS };
 class FeedbackManager extends tmp7 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.feedbackTypeToShow = null;
-    obj = require("apply");
-    applyArgumentsResult.showFeedbackModalDebounced = obj.debounce((arg0, arg1) => {
-      if (null != feedbackTypeToShow.feedbackTypeToShow) {
-        feedbackTypeToShow = tmp.feedbackTypeToShow;
-        const InAppFeedbackStates = applyArgumentsResult(closure_1_1[5]).InAppFeedbackStates;
+    obj = closure_0(closure_1[7]);
+    applyArgumentsResult.showFeedbackModalDebounced = obj.debounce((fn, fn2) => {
+      if (null != applyArgumentsResult.feedbackTypeToShow) {
+        const feedbackTypeToShow = tmp.feedbackTypeToShow;
+        const InAppFeedbackStates = UserSettings.InAppFeedbackStates;
         InAppFeedbackStates.updateSetting((arg0) => {
-          obj = {};
+          const obj = {};
           const merged = Object.assign(arg0);
-          obj = {};
+          obj2 = {};
           const merged1 = Object.assign(arg0[feedbackTypeToShow]);
-          obj.lastImpressionTime = Date.now();
-          obj[feedbackTypeToShow] = obj;
+          obj2.lastImpressionTime = Date.now();
+          obj[feedbackTypeToShow] = obj2;
           return obj;
         });
         tmp.feedbackTypeToShow = null;
-        arg0();
-      } else if (arg1 != null) {
-        arg1();
+        fn();
+      } else if (fn2 != null) {
+        fn2();
       }
     }, 200);
     return applyArgumentsResult;
   }
 }
-FeedbackManager.prototype["possiblyShowFeedbackModal"] = function possiblyShowFeedbackModal(ACTIVITY, arg1) {
-  feedbackConfig = feedbackConfig.getFeedbackConfig(ACTIVITY);
+FeedbackManager.prototype["possiblyShowFeedbackModal"] = function possiblyShowFeedbackModal(ACTIVITY, arg1, fn) {
+  let feedbackConfig = FeedbackOverrideStore.getFeedbackConfig(ACTIVITY);
   if (feedbackConfig == null) {
-    feedbackConfig = obj[ACTIVITY];
+    feedbackConfig = obj2[ACTIVITY];
   }
   let eligibilityChecks = feedbackConfig.eligibilityChecks;
   if (eligibilityChecks == null) {
@@ -216,17 +213,17 @@ FeedbackManager.prototype["possiblyShowFeedbackModal"] = function possiblyShowFe
   }
   const items = [triggerRateEligibilityCheck, optOutEligibilityCheck, groupRecencyEligibilityCheck];
   if (!tmp3) {
-    if (arg2 != null) {
-      arg2();
+    if (fn != null) {
+      fn();
     }
   } else {
     const self = this;
     self.feedbackTypeToShow = ACTIVITY;
-    const result = self.showFeedbackModalDebounced(arg1, arg2);
+    const result = self.showFeedbackModalDebounced(arg1, fn);
   }
 };
-const obj6 = { cooldown: 3600000, chance: 1, group: FeedbackGroup.BUILDER, hotspot: require("HotspotStore").HotspotLocations.VIBEGRATIONS_FEEDBACK, storageKey: "lastVibegrationsFeedback", feedbackType: FeedbackType.VIBEGRATIONS };
-let result = require("set").fileFinishedImporting("modules/feedback/FeedbackManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/feedback/FeedbackManager.tsx");
 
 export default FeedbackManager;
-export const FeedbackConfig = obj;
+export const FeedbackConfig = obj2;

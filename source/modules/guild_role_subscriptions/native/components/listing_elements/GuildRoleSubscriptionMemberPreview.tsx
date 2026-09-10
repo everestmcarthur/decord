@@ -1,110 +1,88 @@
-// Module ID: 15241
-// Function ID: 15242
+// Module ID: 15270
+// Function ID: 15271
 // Name: GuildRoleSubscriptionMemberPreview
-// Dependencies: [19, 17, 1371, 21, 4560, 576, 1114, 504, 4712, 1396, 7187, 5587, 4556, 1091, 1178, 7188, 2]
+// Dependencies: [19, 17, 1371, 21, 4574, 576, 1114, 504, 4726, 1396, 7201, 5601, 4570, 1091, 1178, 7219, 2]
 // Exports: GuildRoleSubscriptionMemberPreview
 
-// Module 15241 (GuildRoleSubscriptionMemberPreview)
-import noopAll from "noop" /* 19 */;
+// Module 15270 (GuildRoleSubscriptionMemberPreview)
 import initialize from "initialize" /* 504 */;
-import ThemesDefault from "Themes" /* 576 */;
-import int2hslRawAll from "int2hslRaw" /* 1091 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import getNicknameDefault from "getNickname" /* 4712 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1371 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import utils_ColorUtilsAll from "utils/ColorUtils" /* 1091 */;
+import util from "util" /* 1114 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4726 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-noopAll;
-({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, avatar: null, content: null, contextRow: null };
-createCacheKey = { flexDirection: "row", padding: 16, borderRadius: ThemesDefault.radii.xs, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { width: 40, height: 40, borderRadius: 20 };
-createCacheKey[2] = { marginStart: 16 };
-createCacheKey[3] = { flexDirection: "row", alignItems: "center" };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionMemberPreview.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { flexDirection: "row", padding: 16, borderRadius: nativeDefault.radii.xs, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, avatar: { width: 40, height: 40, borderRadius: 20 }, content: { marginStart: 16 }, contextRow: { flexDirection: "row", alignItems: "center" } };
+let closure_9 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionMemberPreview.tsx");
 
 export const GuildRoleSubscriptionMemberPreview = function GuildRoleSubscriptionMemberPreview(content) {
   content = content.content;
   if (content === undefined) {
-    const intl = getSystemLocale.intl;
-    content = intl.string(getSystemLocale.t["6OSasb"]);
+    const intl = util.intl;
+    content = intl.string(util.t["6OSasb"]);
   }
   ({ guildId, role } = content);
   ({ style, textStyle } = content);
-  const tmp3 = callback2();
-  let obj = initialize;
-  const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  getNicknameDefault;
+  const tmp3 = closure_9();
+  const items = [UserStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
+  NicknameUtilsDefault;
   if (null == role) {
     return null;
   } else {
-    let tmp6Result = tmp6(1396);
     let avatarURL;
     if (stateFromStores != null) {
       avatarURL = stateFromStores.getAvatarURL(guildId, 40);
     }
     if (avatarURL == null) {
-      tmp6Result = tmp6(1396);
-      avatarURL = tmp6Result.getDefaultAvatarURL(undefined, undefined);
+      avatarURL = tmp6(1396).getDefaultAvatarURL(undefined, undefined);
+      const tmp6Result2 = tmp6(1396);
     }
-    const source = tmp6Result.makeSource(avatarURL);
-    const roleIconData = tmp4(7187).getRoleIconData(role, 16);
-    obj = { style: null, children: null };
-    const items1 = [tmp3.container, style];
-    obj[0] = items1;
-    obj = { style: null, source: null };
-    obj[0] = tmp3.avatar;
-    obj[1] = source;
-    const items2 = [callback(tmp6(5587), obj), ];
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp3.content;
+    const source = tmp6(1396).makeSource(avatarURL);
+    const tmp6Result = tmp6(1396);
+    const roleIconData = tmp4(7201).getRoleIconData(role, 16);
     const obj2 = { style: null, children: null };
-    obj2[0] = tmp3.contextRow;
-    const obj3 = { variant: "text-md/semibold", color: "interactive-text-active", style: null, children: null };
-    const obj4 = { color: null };
-    const tmp4Result = tmp4(7187);
-    obj4[0] = int2hslRawAll.int2hex(role.color);
-    obj3[2] = obj4;
-    obj3[3] = tmp8;
-    const items3 = [callback(tmp4(4556).Text, obj3), , , ];
+    const items1 = [tmp3.container, style];
+    obj2.style = items1;
+    const obj3 = { style: tmp3.avatar, source };
+    const items2 = [timestampProducer(tmp6(5601), obj3), ];
+    const obj4 = { style: tmp3.content, children: null };
+    const obj5 = { style: tmp3.contextRow, children: null };
+    const obj6 = { variant: "text-md/semibold", color: "interactive-text-active", style: null, children: null };
+    const obj7 = { color: null };
+    const tmp4Result = tmp4(7201);
+    obj7.color = utils_ColorUtilsAll.int2hex(role.color);
+    obj6.style = obj7;
+    obj6.children = tmp8;
+    const items3 = [timestampProducer(tmp4(4570).Text, obj6), , , ];
     let tmp12Result = null;
     if (null != roleIconData) {
+      const obj8 = { children: null };
       const items4 = [tmp14(tmp4(1178).Spacer, { size: 4 }), ];
-      const obj5 = { name: null, source: null, unicodeEmoji: null, size: 16 };
-      obj5[0] = role.name;
-      let tmp19;
-      if (null != roleIconData.customIconSrc) {
-        const obj6 = { uri: null };
-        obj6[0] = roleIconData.customIconSrc;
-        tmp19 = obj6;
-      }
-      const obj7 = { children: null };
-      obj5[1] = tmp19;
-      obj5[2] = roleIconData.unicodeEmoji;
-      items4[1] = tmp14(tmp6(7188), obj5);
-      obj7[0] = items4;
-      tmp12Result = tmp12(closure_7, obj7);
-      const tmp17 = closure_7;
-      const tmp6Result1 = tmp6(7188);
+      const obj9 = { name: role.name, src: null, unicodeEmoji: null, size: 16 };
+      ({ customIconSrc: obj13.src, unicodeEmoji: obj13.unicodeEmoji } = roleIconData);
+      items4[1] = tmp14(tmp6(7219), obj9);
+      obj8.children = items4;
+      tmp12Result = tmp12(React5, obj8);
     }
     items3[1] = tmp12Result;
-    items3[2] = callback(tmp4(1178).Spacer, { size: 8 });
-    items3[3] = callback(tmp4(4556).Text, { variant: "text-xs/medium", color: "text-muted", children: "4:20 PM" });
-    obj2[1] = items3;
-    const items5 = [closure_8(View, obj2), ];
-    const obj8 = { variant: "text-md/normal", color: "text-default", style: null, children: null };
-    obj8[2] = textStyle;
-    obj8[3] = content;
-    items5[1] = callback(tmp4(4556).Text, obj8);
-    obj1[1] = items5;
-    items2[1] = closure_8(View, obj1);
-    obj[1] = items2;
-    return closure_8(View, obj);
+    items3[2] = timestampProducer(tmp4(1178).Spacer, { size: 8 });
+    items3[3] = timestampProducer(tmp4(4570).Text, { variant: "text-xs/medium", color: "text-muted", children: "4:20 PM" });
+    obj5.children = items3;
+    const items5 = [React6(View, obj5), ];
+    const obj10 = { variant: "text-md/normal", color: "text-default", style: textStyle, children: content };
+    items5[1] = timestampProducer(tmp4(4570).Text, obj10);
+    obj4.children = items5;
+    items2[1] = React6(View, obj4);
+    obj2.children = items2;
+    return React6(View, obj2);
   }
 };

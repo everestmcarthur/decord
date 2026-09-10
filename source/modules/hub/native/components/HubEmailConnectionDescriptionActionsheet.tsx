@@ -1,39 +1,39 @@
-// Module ID: 12737
-// Function ID: 12738
+// Module ID: 12763
+// Function ID: 12764
 // Name: HubEmailConnectionDescriptionActionsheet
-// Dependencies: [19, 21, 4560, 7150, 7149, 1114, 4556, 2]
+// Dependencies: [19, 21, 4574, 7164, 7163, 1114, 4570, 2]
 // Exports: default
 
-// Module 12737 (HubEmailConnectionDescriptionActionsheet)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 7149 */;
-import Background from "Background" /* 7150 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12763 (HubEmailConnectionDescriptionActionsheet)
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7163 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7164 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: obj1, jsxs: c3 } = jsxProd);
-let closure_4 = createCacheKey.createStyles({ description: { marginBottom: 8 } });
-const result = require("set").fileFinishedImporting("modules/hub/native/components/HubEmailConnectionDescriptionActionsheet.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c2, jsxs: c3 } = jsxProd);
+const createStyles = fn(4574);
+let closure_4 = createStyles.createStyles({ description: { marginBottom: 8 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/hub/native/components/HubEmailConnectionDescriptionActionsheet.tsx");
 
 export default function HubEmailConnectionDescriptionActionsheet() {
-  const tmp = callback3();
-  let obj = { children: null };
-  obj = { title: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["48kg+O"]);
-  const items = [callback(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj), , ];
-  obj = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj[3] = intl2.string(getSystemLocale.t.O1k9XX);
-  items[1] = callback(Text.Text, obj);
-  obj1 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl3 = getSystemLocale.intl;
-  obj1[3] = intl3.string(getSystemLocale.t.FV5dvh);
-  items[2] = callback(Text.Text, obj1);
-  obj[0] = items;
-  return callback2(Background.BottomSheet, obj);
+  const tmp = closure_4();
+  const obj = { children: null };
+  const obj2 = { title: null };
+  const intl = util.intl;
+  obj2.title = intl.string(util.t["48kg+O"]);
+  const items = [React2(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2), , ];
+  const obj3 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  const intl2 = util.intl;
+  obj3.children = intl2.string(util.t.O1k9XX);
+  items[1] = React2(Text_Text.Text, obj3);
+  const obj4 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  const intl3 = util.intl;
+  obj4.children = intl3.string(util.t.FV5dvh);
+  items[2] = React2(Text_Text.Text, obj4);
+  obj.children = items;
+  return React3(Sheet_BottomSheet.BottomSheet, obj);
 };

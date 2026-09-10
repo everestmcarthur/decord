@@ -1,26 +1,26 @@
-// Module ID: 14615
-// Function ID: 14616
+// Module ID: 14640
+// Function ID: 14641
 // Name: EditIcon
-// Dependencies: [19, 17, 21, 4560, 576, 10255, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 10282, 2]
 // Exports: default
 
-// Module 14615 (EditIcon)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_2 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14640 (EditIcon)
+import nativeDefault from "native" /* 576 */;
+import PencilIcon from "PencilIcon" /* 10282 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-createCacheKey = { editIcon: null, xs: null, sm: null };
-createCacheKey = { alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { width: 24, height: 24, borderRadius: ThemesDefault.radii.md };
-const obj1 = { width: 24, height: 24, borderRadius: ThemesDefault.radii.md };
-createCacheKey[2] = { width: 32, height: 32, borderRadius: ThemesDefault.radii.lg };
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const obj2 = { width: 32, height: 32, borderRadius: ThemesDefault.radii.lg };
-const result = require("set").fileFinishedImporting("modules/profile_customization/native/EditIcon.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+const obj2 = { editIcon: { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, xs: null, sm: null };
+let size = { width: 24, height: 24, borderRadius: nativeDefault.radii.md };
+obj2.xs = size;
+const size1 = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg };
+obj2.sm = size1;
+let closure_5 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/profile_customization/native/EditIcon.tsx");
 
 export default function EditIcon(style) {
   style = style.style;
@@ -28,12 +28,11 @@ export default function EditIcon(style) {
   if (str === undefined) {
     str = "xs";
   }
-  let React;
-  const tmp = callback();
-  React = tmp;
+  const tmp = closure_5();
+  const editIcon = tmp;
   const items = [tmp, style, str];
-  return <View style={React.useMemo(() => {
+  return <View style={noop.useMemo(() => {
     const iconContainerStyle = [editIcon.editIcon, "sm" === str ? editIcon.sm : editIcon.xs, style];
     return { iconContainerStyle };
-  }, items).iconContainerStyle}>{jsx(style(str[5]).PencilIcon, { size: str })}</View>;
+  }, items).iconContainerStyle}>{jsx(PencilIcon.PencilIcon, { size: str })}</View>;
 };

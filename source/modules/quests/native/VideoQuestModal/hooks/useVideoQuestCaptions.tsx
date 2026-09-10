@@ -1,54 +1,55 @@
-// Module ID: 15148
-// Function ID: 15149
+// Module ID: 15175
+// Function ID: 15176
 // Name: useVideoQuestCaptions
-// Dependencies: [32, 19, 11290, 1272, 15149, 2]
+// Dependencies: [32, 19, 11317, 1272, 15176, 2]
 // Exports: useVideoQuestCaptions
 
-// Module 15148 (useVideoQuestCaptions)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+// Module 15175 (useVideoQuestCaptions)
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let closure_4 = { NONE: "none", LOADING: "loading", SUCCESS: "success", ERROR: "error" };
-const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/hooks/useVideoQuestCaptions.tsx");
+require = fn;
+const constants = { NONE: "none", LOADING: "loading", SUCCESS: "success", ERROR: "error" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/hooks/useVideoQuestCaptions.tsx");
 
 export const useVideoQuestCaptions = (quest) => {
-  const questAsset = url(11290).getQuestAsset(quest, url(11290).QuestAssetType.VIDEO_PLAYER_CAPTION, undefined, true);
+  const questAsset = url(11317).getQuestAsset(quest, url(11317).QuestAssetType.VIDEO_PLAYER_CAPTION, undefined, true);
   url = undefined;
   if (questAsset != null) {
     url = questAsset.url;
   }
-  let obj = url(11290);
-  [tmp4, dependencyMap] = callback(React.useState(constants.NONE), 2);
-  const captions = callback(React.useState(null), 2);
-  callback = captions[1];
+  let obj = url(11317);
+  [tmp4, dependencyMap] = noop.useState(constants.NONE);
+  const captions = _slicedToArray(noop.useState(null), 2);
+  _slicedToArray = captions[1];
   const items = [url];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (null != url) {
-      const HTTP = url(closure_1_1[3]).HTTP;
-      const obj = { url: null, rejectWithError: true };
-      obj[0] = tmp;
-      const value = HTTP.get(obj);
+      const HTTP = HTTPUtils.HTTP;
+      const obj = { url: tmp, rejectWithError: true };
+      value = HTTP.get(obj);
       value.then((text) => {
         try {
-          callback2(closure_1_0(closure_1_1[4]).parseVtt(text.text).cues);
-          callback(closure_1_4.SUCCESS);
+          closure_1_2(url(15176).parseVtt(text.text).cues);
+          dependencyMap(constants.SUCCESS);
         } catch (err) {
-          callback(closure_1_4.ERROR);
+          dependencyMap(constants.ERROR);
         }
       }).catch(() => {
-        callback(closure_1_4.ERROR);
+        dependencyMap(constants.ERROR);
       });
       const nextPromise = value.then((text) => {
         try {
-          callback2(closure_1_0(closure_1_1[4]).parseVtt(text.text).cues);
-          callback(closure_1_4.SUCCESS);
+          closure_1_2(url(15176).parseVtt(text.text).cues);
+          dependencyMap(constants.SUCCESS);
         } catch (err) {
-          callback(closure_1_4.ERROR);
+          dependencyMap(constants.ERROR);
         }
       });
     } else {
-      callback(closure_1_4.NONE);
+      dependencyMap(constants.NONE);
     }
   }, items);
   return { captions: captions[0], status };

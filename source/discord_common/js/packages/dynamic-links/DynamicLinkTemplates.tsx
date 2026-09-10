@@ -1,13 +1,13 @@
-// Module ID: 12940
-// Function ID: 12941
-// Name: getInviteDynamicLinkTemplate
+// Module ID: 12966
+// Function ID: 12967
+// Name: DynamicLinkTemplates
 // Dependencies: [2]
 // Exports: getChannelDynamicLinkTemplate, getDefaultDynamicLinkTemplate, getGuildTemplateDynamicLinkTemplate, getInviteDynamicLinkTemplate
 
-// Module 12940 (getInviteDynamicLinkTemplate)
-import set from "set" /* 2 */;
+// Module 12966 (DynamicLinkTemplates)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/dynamic-links/DynamicLinkTemplates.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/dynamic-links/DynamicLinkTemplates.tsx");
 
 export const getInviteDynamicLinkTemplate = function getInviteDynamicLinkTemplate(baseCode) {
   return "" + location.protocol + "//" + window.GLOBAL_ENV.INVITE_HOST + "/" + baseCode;

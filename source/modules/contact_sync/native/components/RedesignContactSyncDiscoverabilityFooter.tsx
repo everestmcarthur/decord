@@ -1,33 +1,33 @@
-// Module ID: 12690
-// Function ID: 12691
+// Module ID: 12716
+// Function ID: 12717
 // Name: RedesignContactSyncDiscoverabilityFooter
-// Dependencies: [1074, 21, 5687, 1114, 2024, 7201, 2]
+// Dependencies: [1074, 21, 5701, 1114, 2024, 7214, 2]
 // Exports: default
 
-// Module 12690 (RedesignContactSyncDiscoverabilityFooter)
-import set from "set" /* 2 */;
+// Module 12716 (RedesignContactSyncDiscoverabilityFooter)
 import jsxProd from "jsxProd" /* 21 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import combinedDefault from "combined" /* 2024 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
-import TableSwitchRow from "TableSwitchRow" /* 7201 */;
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
+import TableRowGroup from "TableRowGroup" /* 5701 */;
+import TableSwitchRow from "TableSwitchRow" /* 7214 */;
+import size from "module_2" /* 2 */;
 
-const HelpdeskArticles = ME.HelpdeskArticles;
+const HelpdeskArticles = Constants.HelpdeskArticles;
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("modules/contact_sync/native/components/RedesignContactSyncDiscoverabilityFooter.tsx");
+const result = size.fileFinishedImporting("modules/contact_sync/native/components/RedesignContactSyncDiscoverabilityFooter.tsx");
 
 export default function RedesignContactSyncDiscoverabilityFooter(arg0) {
   ({ discoverabilityEnabled, onValueChanged } = arg0);
-  let obj = { hasIcons: false, helperText: null, children: null };
-  const intl = getSystemLocale.intl;
-  obj = { helpdeskUrl: combinedDefault.getArticleURL(HelpdeskArticles.CONTACT_SYNC) };
-  obj[1] = intl.format(getSystemLocale.t.zopgpe, obj);
-  obj = { label: null, onValueChange: null, value: null };
-  const intl2 = getSystemLocale.intl;
-  obj[0] = intl2.string(getSystemLocale.t.a5QL24);
-  obj[1] = onValueChanged;
-  obj[2] = discoverabilityEnabled;
-  obj[2] = jsx(TableSwitchRow.TableSwitchRow, { label: null, onValueChange: null, value: null });
-  return jsx(TableRowGroupTitle.TableRowGroup, { label: null, onValueChange: null, value: null });
+  const obj = { hasIcons: false, helperText: null, children: null };
+  const intl = util.intl;
+  const obj2 = { helpdeskUrl: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.CONTACT_SYNC) };
+  obj.helperText = intl.format(util.t.zopgpe, obj2);
+  const obj4 = { label: null, onValueChange: null, value: null };
+  const intl2 = util.intl;
+  obj4.label = intl2.string(util.t.a5QL24);
+  obj4.onValueChange = onValueChanged;
+  obj4.value = discoverabilityEnabled;
+  obj.children = jsx(TableSwitchRow.TableSwitchRow, { label: null, onValueChange: null, value: null });
+  return jsx(TableRowGroup.TableRowGroup, { hasIcons: false, helperText: null, children: null });
 };

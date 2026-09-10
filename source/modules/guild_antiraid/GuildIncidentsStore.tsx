@@ -1,52 +1,49 @@
-// Module ID: 10085
-// Function ID: 10086
-// Name: computeAlertSettings
-// Dependencies: [4476, 1221, 1979, 4199, 8015, 504, 573, 2]
+// Module ID: 10112
+// Function ID: 10113
+// Name: GuildIncidentsStore
+// Dependencies: [4490, 1221, 1979, 4212, 8029, 504, 573, 2]
 
-// Module 10085 (computeAlertSettings)
+// Module 10112 (GuildIncidentsStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import DATE_CONFIG from "DATE_CONFIG" /* 8015 */;
-import closure_2 from "getHash" /* 4476 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1221 */;
-import closure_4 from "createGuildRecordFromRust" /* 1979 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4199 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8029 */;
+import ExperimentStore from "ExperimentStore" /* 4490 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
 
-require = arg1;
+require = fn;
 function computeAlertSettings() {
-  guildsProto = guildsProto.getGuildsProto();
+  let guildsProto = UserSettingsProtoStore.getGuildsProto();
   if (guildsProto == null) {
     guildsProto = {};
   }
-  const guildsArray = store.getGuildsArray();
+  const guildsArray = GuildStore.getGuildsArray();
   closure_7 = {};
   for (const item10012 of guildsArray) {
-    let tmp2 = closure_7;
     let obj = { guildId: null, guildName: null };
-    ({ id: obj2[0], name: obj2[1] } = item10012);
-    let tmp3 = obj;
+    ({ id: obj2.guildId, name: obj2.guildName } = item10012);
     let merged = Object.assign(guildsProto[item10012.id]);
     closure_7[item10012.id] = obj;
     continue;
   }
 }
 function updateGuildIncident(id) {
-  const guild = store.getGuild(id);
+  const guild = GuildStore.getGuild(id);
   let incidentsData;
   if (guild != null) {
     incidentsData = guild.incidentsData;
   }
   let tmp5;
   if (null != incidentsData) {
-    let hasDetectedActivityResult = DATE_CONFIG.hasDetectedActivity(incidentsData);
+    let hasDetectedActivityResult = GuildAntiRaidUtils.hasDetectedActivity(incidentsData);
     if (!hasDetectedActivityResult) {
-      hasDetectedActivityResult = tmp6(8015).isUnderLockdown(incidentsData);
-      const tmp6Result = tmp6(8015);
+      hasDetectedActivityResult = tmp6(8029).isUnderLockdown(incidentsData);
+      const tmp6Result = tmp6(8029);
     }
     if (hasDetectedActivityResult) {
       tmp5 = incidentsData;
     }
-    const obj = DATE_CONFIG;
     tmp6 = require;
   }
   let flag = dependencyMap[id] !== tmp5;
@@ -61,15 +58,15 @@ function updateGuildIncident(id) {
   }
   return flag;
 }
-let closure_6 = {};
+const dependencyMap = {};
 let closure_7 = {};
 const Store = initializeDefault.Store;
 class GuildIncidentsStore extends Store {
 }
 const prototype = GuildIncidentsStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_3, closure_4, closure_5, closure_2);
-  const items = [closure_3, closure_4, closure_5, closure_2];
+  this.waitFor(UserSettingsProtoStore, GuildStore, PermissionStore, ExperimentStore);
+  const items = [UserSettingsProtoStore, GuildStore, PermissionStore, ExperimentStore];
   this.syncWith(items, computeAlertSettings);
 };
 prototype["getGuildIncident"] = function getGuildIncident(id) {
@@ -82,33 +79,31 @@ prototype["getGuildAlertSettings"] = function getGuildAlertSettings() {
   return closure_7;
 };
 GuildIncidentsStore.displayName = "GuildIncidentsStore";
-const guildIncidentsStore = new GuildIncidentsStore(dispatcherDefault, {
+const guildIncidentsStore = new GuildIncidentsStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(arg0) {
     closure_6 = {};
     while (tmp !== undefined) {
-      let tmp3 = updateGuildIncident;
       let tmp4 = updateGuildIncident(tmp2.id);
       continue;
     }
   },
   GUILD_CREATE: function handleGuildCreate(guild) {
     const id = guild.guild.id;
-    guild = store.getGuild(id);
+    guild = GuildStore.getGuild(id);
     let incidentsData;
     if (guild != null) {
       incidentsData = guild.incidentsData;
     }
     let tmp5;
     if (null != incidentsData) {
-      let hasDetectedActivityResult = DATE_CONFIG.hasDetectedActivity(incidentsData);
+      let hasDetectedActivityResult = GuildAntiRaidUtils.hasDetectedActivity(incidentsData);
       if (!hasDetectedActivityResult) {
-        hasDetectedActivityResult = tmp6(8015).isUnderLockdown(incidentsData);
-        const tmp6Result = tmp6(8015);
+        hasDetectedActivityResult = tmp6(8029).isUnderLockdown(incidentsData);
+        const tmp6Result = tmp6(8029);
       }
       if (hasDetectedActivityResult) {
         tmp5 = incidentsData;
       }
-      const obj = DATE_CONFIG;
       tmp6 = require;
     }
     let flag = dependencyMap[id] !== tmp5;
@@ -125,22 +120,21 @@ const guildIncidentsStore = new GuildIncidentsStore(dispatcherDefault, {
   },
   GUILD_UPDATE: function handleGuildUpdate(guild) {
     const id = guild.guild.id;
-    guild = store.getGuild(id);
+    guild = GuildStore.getGuild(id);
     let incidentsData;
     if (guild != null) {
       incidentsData = guild.incidentsData;
     }
     let tmp5;
     if (null != incidentsData) {
-      let hasDetectedActivityResult = DATE_CONFIG.hasDetectedActivity(incidentsData);
+      let hasDetectedActivityResult = GuildAntiRaidUtils.hasDetectedActivity(incidentsData);
       if (!hasDetectedActivityResult) {
-        hasDetectedActivityResult = tmp6(8015).isUnderLockdown(incidentsData);
-        const tmp6Result = tmp6(8015);
+        hasDetectedActivityResult = tmp6(8029).isUnderLockdown(incidentsData);
+        const tmp6Result = tmp6(8029);
       }
       if (hasDetectedActivityResult) {
         tmp5 = incidentsData;
       }
-      const obj = DATE_CONFIG;
       tmp6 = require;
     }
     let flag = dependencyMap[id] !== tmp5;
@@ -162,6 +156,7 @@ const guildIncidentsStore = new GuildIncidentsStore(dispatcherDefault, {
     closure_6 = {};
   }
 });
-const result = require("set").fileFinishedImporting("modules/guild_antiraid/GuildIncidentsStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_antiraid/GuildIncidentsStore.tsx");
 
 export default guildIncidentsStore;

@@ -1,15 +1,16 @@
-// Module ID: 11936
-// Function ID: 11937
+// Module ID: 11962
+// Function ID: 11963
 // Name: getInlineForwardOptions
-// Dependencies: [1074, 4710, 2]
+// Dependencies: [1074, 4724, 2]
 // Exports: getInlineForwardOptions
 
-// Module 11936 (getInlineForwardOptions)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 11962 (getInlineForwardOptions)
+import Constants from "Constants" /* 1074 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 4724 */;
+import size from "module_2" /* 2 */;
 
-const MessageReferenceTypes = ME.MessageReferenceTypes;
-const result = set.fileFinishedImporting("modules/forwarding/getInlineForwardOptions.tsx");
+const MessageReferenceTypes = Constants.MessageReferenceTypes;
+const result = size.fileFinishedImporting("modules/forwarding/getInlineForwardOptions.tsx");
 
 export const getInlineForwardOptions = function getInlineForwardOptions(message, nativeSyntheticEventData) {
   ({ targetKind, embedIndex } = nativeSyntheticEventData);
@@ -33,24 +34,24 @@ export const getInlineForwardOptions = function getInlineForwardOptions(message,
       const attachments = tmp6.attachments;
       const found = attachments.filter((filename) => {
         filename = filename.filename;
-        let isImageFileResult = callback(table[1]).isImageFile(filename);
+        let isImageFileResult = MediaFormatTesters.isImageFile(filename);
         if (!isImageFileResult) {
-          isImageFileResult = callback(table[1]).isVideoFile(filename);
-          const tmpResult = callback(table[1]);
+          isImageFileResult = MediaFormatTesters.isVideoFile(filename);
+          const tmpResult = MediaFormatTesters;
         }
         return isImageFileResult;
       });
       mapped = found.map((id) => id.id);
     }
-    let obj = { onlyAttachmentIds: null };
-    obj[0] = mapped;
-    return obj;
+    const obj2 = { onlyAttachmentIds: mapped };
+    return obj2;
   } else {
     if ("embed" === targetKind) {
       if (null != embedIndex) {
-        obj = { onlyEmbedIndices: null };
+        const obj3 = { onlyEmbedIndices: null };
         const items = [embedIndex];
-        obj[0] = items;
+        obj3.onlyEmbedIndices = items;
+        let obj = obj3;
       }
       return obj;
     }

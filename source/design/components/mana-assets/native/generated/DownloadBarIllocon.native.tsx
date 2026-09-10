@@ -1,17 +1,17 @@
-// Module ID: 5937
-// Function ID: 5938
+// Module ID: 5951
+// Function ID: 5952
 // Name: DownloadBarIllocon
-// Dependencies: [21, 5587, 5938, 2]
+// Dependencies: [21, 5601, 5952, 2]
 // Exports: DownloadBarIllocon
 
-// Module 5937 (DownloadBarIllocon)
-import set from "set" /* 2 */;
+// Module 5951 (DownloadBarIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 5938 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5952 from "module_5952" /* 5952 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/DownloadBarIllocon.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/DownloadBarIllocon.native.tsx");
 
 export const DownloadBarIllocon = function DownloadBarIllocon(size) {
   let num = size.size;
@@ -19,13 +19,13 @@ export const DownloadBarIllocon = function DownloadBarIllocon(size) {
   if (num === undefined) {
     num = 64;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef5952 };
+  obj.source = obj2;
   const items = [{ width: num, height: num }];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { uri: metadataDefault });
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

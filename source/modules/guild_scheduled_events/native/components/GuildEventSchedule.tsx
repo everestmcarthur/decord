@@ -1,32 +1,34 @@
-// Module ID: 9714
-// Function ID: 9715
+// Module ID: 9741
+// Function ID: 9742
 // Name: GuildEventSchedule
-// Dependencies: [19, 21, 4153, 9670, 9715, 1114, 2]
+// Dependencies: [19, 21, 4166, 9697, 9742, 1114, 2]
 // Exports: default
 
-// Module 9714 (GuildEventSchedule)
-import closure_3 from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 9741 (GuildEventSchedule)
+import _modDef4166 from "module_4166" /* 4166 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventSchedule.tsx");
+const require = fn;
+const jsxProd = fn(21);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventSchedule.tsx");
 
 export default function GuildEventSchedule(schedule) {
   schedule = schedule.schedule;
   const onChange = schedule.onChange;
   ({ guildEvent, recurrenceId } = schedule);
-  let obj = onChange(4153)();
-  const addResult = obj.add(schedule(9670).MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days");
+  const tmp2 = onChange(4166)();
+  const addResult = onChange(4166)().add(schedule(9697).MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days");
   const items = [schedule.startDate];
-  const memo = React.useMemo(() => onChange(closure_1_2[2])(schedule.startDate).add(15, "minutes"), items);
-  const tmp2 = onChange(4153)();
-  const addResult1 = onChange(4153)().add(schedule(9670).MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days");
+  const memo = noop.useMemo(() => _modDef4166(schedule.startDate).add(15, "minutes"), items);
+  let obj = onChange(4166)();
+  const addResult1 = onChange(4166)().add(schedule(9697).MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days");
   if (null != recurrenceId) {
-    addResult.add(tmp3(9670).MAX_YEARS_AHEAD_RECURRING_EVENT, "years");
-    addResult1.add(tmp3(9670).MAX_YEARS_AHEAD_RECURRING_EVENT, "years");
+    addResult.add(tmp3(9697).MAX_YEARS_AHEAD_RECURRING_EVENT, "years");
+    addResult1.add(tmp3(9697).MAX_YEARS_AHEAD_RECURRING_EVENT, "years");
   }
-  obj = {
+  const obj2 = {
     date: schedule.startDate,
     onChange(startDate) {
       const obj = {};
@@ -40,27 +42,30 @@ export default function GuildEventSchedule(schedule) {
     timeLabel: null
   };
   const intl = tmp3(1114).intl;
-  obj[4] = intl.string(schedule(1114).t.kKOIwJ);
+  obj2.dateLabel = intl.string(schedule(1114).t.kKOIwJ);
   const intl2 = tmp3(1114).intl;
-  obj[5] = intl2.string(schedule(1114).t["6dGmCD"]);
-  const children = [callback(schedule(9715).GuildEventDatetime, obj), ];
+  obj2.timeLabel = intl2.string(schedule(1114).t["6dGmCD"]);
+  const children = [closure_4(schedule(9742).GuildEventDatetime, obj2), ];
   let tmp9Result = null != guildEvent.scheduled_end_time;
   if (tmp9Result) {
-    obj = { date: null, onChange: null, minimumDate: null, maximumDate: null, dateLabel: null, timeLabel: null };
-    obj[0] = schedule.endDate;
-    obj[1] = function onChange(endDate) {
-      const obj = {};
-      const merged = Object.assign(schedule);
-      obj.endDate = endDate;
-      onChange(obj);
+    const obj4 = {
+      date: schedule.endDate,
+      onChange(endDate) {
+          const obj = {};
+          const merged = Object.assign(schedule);
+          obj.endDate = endDate;
+          onChange(obj);
+        },
+      minimumDate: memo,
+      maximumDate: addResult1,
+      dateLabel: null,
+      timeLabel: null
     };
-    obj[2] = memo;
-    obj[3] = addResult1;
     const intl3 = tmp3(1114).intl;
-    obj[4] = intl3.string(tmp3(1114).t.CTLgZJ);
+    obj4.dateLabel = intl3.string(tmp3(1114).t.CTLgZJ);
     const intl4 = tmp3(1114).intl;
-    obj[5] = intl4.string(tmp3(1114).t.j2RuXF);
-    tmp9Result = callback(tmp3(9715).GuildEventDatetime, obj);
+    obj4.timeLabel = intl4.string(tmp3(1114).t.j2RuXF);
+    tmp9Result = closure_4(tmp3(9742).GuildEventDatetime, obj4);
   }
   children[1] = tmp9Result;
   return closure_6(closure_5, { children });

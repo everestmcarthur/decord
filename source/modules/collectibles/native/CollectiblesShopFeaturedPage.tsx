@@ -1,39 +1,38 @@
-// Module ID: 15817
-// Function ID: 15818
-// Dependencies: [19, 17, 1076, 21, 4560, 1178, 8232, 1114, 15818, 2]
+// Module ID: 15847
+// Function ID: 15848
+// Name: CollectiblesShopFeaturedPage
+// Dependencies: [19, 17, 1076, 21, 4574, 1178, 8258, 1114, 15848, 2]
 // Exports: default
 
-// Module 15817
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import getNoResultsSource from "getNoResultsSource" /* 8232 */;
-import blockDefault from "block" /* 15818 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { CollectiblesMobileShopScreen as closure_4 } from "items" /* 1076 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15847 (CollectiblesShopFeaturedPage)
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import generated_NoResults from "generated/NoResults" /* 8258 */;
+import ShopBlockItemDefault from "ShopBlockItem" /* 15848 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-let closure_6 = createCacheKey.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
-const result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesShopFeaturedPage.tsx");
+require = fn;
+const View = fn(17).View;
+const constants = fn(1076).CollectiblesMobileShopScreen;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_6 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopFeaturedPage.tsx");
 
 export default function _default(shopBlock) {
   shopBlock = shopBlock.shopBlock;
   if (null === shopBlock.fetchShopHomeError) {
     if (undefined !== shopBlock) {
-      let obj = { block: null, screen: null };
-      obj[0] = shopBlock;
-      obj[1] = constants.FEATURED_PAGE;
-      let tmp6 = jsx(blockDefault, { block: null, screen: null });
+      const obj = { block: shopBlock, screen: constants.FEATURED_PAGE };
+      let tmp6 = jsx(ShopBlockItemDefault, { block: shopBlock, screen: constants.FEATURED_PAGE });
     }
     return tmp6;
   }
-  obj = { style: callback().container, children: null };
-  obj = { style: { marginTop: 42 }, Illustration: getNoResultsSource.NoResults, body: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.eAn6z2);
-  obj[1] = jsx(Button.EmptyState, { style: { marginTop: 42 }, Illustration: getNoResultsSource.NoResults, body: null });
-  tmp6 = <View style={{ marginTop: 42 }} Illustration={getNoResultsSource.NoResults} body={null} />;
+  const obj2 = { style: closure_6().container, children: null };
+  const obj3 = { style: { marginTop: 42 }, Illustration: generated_NoResults.NoResults, body: null };
+  const intl = util.intl;
+  obj3.body = intl.string(util.t.eAn6z2);
+  obj2.children = jsx(native.EmptyState, { style: { marginTop: 42 }, Illustration: generated_NoResults.NoResults, body: null });
+  tmp6 = <View style={closure_6().container}>{null}</View>;
 };

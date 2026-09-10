@@ -1,21 +1,22 @@
-// Module ID: 16342
-// Function ID: 16343
+// Module ID: 16373
+// Function ID: 16374
 // Name: getGuildBarNeighbors
-// Dependencies: [5438, 5440, 2]
+// Dependencies: [5452, 5454, 2]
 // Exports: default
 
-// Module 16342 (getGuildBarNeighbors)
-import GuildsNodeType from "GuildsNodeType" /* 5440 */;
-import closure_2 from "insertUnsortedGuilds" /* 5438 */;
+// Module 16373 (getGuildBarNeighbors)
+import GuildsTree from "GuildsTree" /* 5454 */;
+import SortedGuildStore from "SortedGuildStore" /* 5452 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/guilds_bar/native/utils/getGuildBarNeighbors.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guilds_bar/native/utils/getGuildBarNeighbors.tsx");
 
 export default function getGuildBarNeighbors(arg0) {
-  guildsTree = guildsTree.getGuildsTree();
+  const guildsTree = SortedGuildStore.getGuildsTree();
   const node = guildsTree.getNode(arg0);
   if (null != node) {
-    if (node.type === GuildsNodeType.GuildsNodeType.GUILD) {
+    if (node.type === GuildsTree.GuildsNodeType.GUILD) {
       if (null != node.parentId) {
         let root = guildsTree.getNode(node.parentId);
       } else {
@@ -30,27 +31,22 @@ export default function getGuildBarNeighbors(arg0) {
           return null;
         } else {
           let tmp2 = null;
-          if (root.type === tmp5(5440).GuildsNodeType.FOLDER) {
+          if (root.type === tmp5(5454).GuildsNodeType.FOLDER) {
             tmp2 = root;
           }
-          let obj = { containingFolder: null, above: null, below: null };
-          obj[0] = tmp2;
+          const obj = { containingFolder: tmp2, above: null, below: null };
           let tmp3 = null;
           if (null != root.children[index - 1]) {
-            obj = { node: null, isFolder: null };
-            obj[0] = tmp8;
-            obj[1] = tmp8.type === tmp5(5440).GuildsNodeType.FOLDER;
-            tmp3 = obj;
+            const obj2 = { node: tmp8, isFolder: tmp8.type === tmp5(5454).GuildsNodeType.FOLDER };
+            tmp3 = obj2;
           }
-          obj[1] = tmp3;
+          obj.above = tmp3;
           let tmp4 = null;
           if (null != root.children[index + 1]) {
-            obj1 = { node: null, isFolder: null };
-            obj1[0] = tmp9;
-            obj1[1] = tmp9.type === tmp5(5440).GuildsNodeType.FOLDER;
-            tmp4 = obj1;
+            const obj3 = { node: tmp9, isFolder: tmp9.type === tmp5(5454).GuildsNodeType.FOLDER };
+            tmp4 = obj3;
           }
-          obj[2] = tmp4;
+          obj.below = tmp4;
           return obj;
         }
       }

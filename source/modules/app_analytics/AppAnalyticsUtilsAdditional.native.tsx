@@ -1,13 +1,13 @@
-// Module ID: 4743
-// Function ID: 4744
-// Name: getVoiceAnalyticsMetadataAdditional
+// Module ID: 4757
+// Function ID: 4758
+// Name: AppAnalyticsUtilsAdditional
 // Dependencies: [2]
 // Exports: getVoiceAnalyticsMetadataAdditional
 
-// Module 4743 (getVoiceAnalyticsMetadataAdditional)
-import set from "set" /* 2 */;
+// Module 4757 (AppAnalyticsUtilsAdditional)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/app_analytics/AppAnalyticsUtilsAdditional.native.tsx");
+const result = size.fileFinishedImporting("modules/app_analytics/AppAnalyticsUtilsAdditional.native.tsx");
 
 export function getVoiceAnalyticsMetadataAdditional() {
   return { game_name: null, game_id: null };

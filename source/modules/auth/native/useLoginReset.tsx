@@ -1,20 +1,21 @@
-// Module ID: 6954
-// Function ID: 6955
+// Module ID: 6968
+// Function ID: 6969
 // Name: useLoginReset
-// Dependencies: [19, 502, 6593, 2]
+// Dependencies: [19, 502, 6607, 2]
 // Exports: default
 
-// Module 6954 (useLoginReset)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "fetchFingerprint" /* 502 */;
+// Module 6968 (useLoginReset)
+import noop from "module_19" /* 19 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-const result = require("set").fileFinishedImporting("modules/auth/native/useLoginReset.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/native/useLoginReset.tsx");
 
 export default function useLoginReset() {
-  const effect = React.useEffect(() => () => {
+  const effect = noop.useEffect(() => () => {
     if (!authenticated.isAuthenticated()) {
-      callback(table[2]).loginReset();
-      const obj = callback(table[2]);
+      closure_1_0(dependencyMap[2]).loginReset();
+      const obj = closure_1_0(dependencyMap[2]);
     }
   }, []);
 };

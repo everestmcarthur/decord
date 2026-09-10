@@ -1,55 +1,58 @@
-// Module ID: 11139
-// Function ID: 11140
-// Name: renderTooltipItem
-// Dependencies: [32, 19, 17, 21, 4296, 11140, 4279, 11137, 9974, 2]
+// Module ID: 11166
+// Function ID: 11167
+// Name: AnimatedCoachmark
+// Dependencies: [32, 19, 17, 21, 4310, 11167, 4294, 11164, 10001, 2]
 // Exports: AnimatedCoachmark
 
-// Module 11139 (renderTooltipItem)
-import _modDef4296 from "module_4296" /* 4296 */;
-import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 9974 */;
-import Coachmark from "Coachmark" /* 11140 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 11166 (AnimatedCoachmark)
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4294 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4310 */;
+import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 10001 */;
+import TooltipConstants from "TooltipConstants" /* 11164 */;
+import Coachmark from "Coachmark" /* 11167 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
+const StyleSheet = fn(17).StyleSheet;
+const jsx = fn(21).jsx;
 function renderTooltipItem(arg0, enterExitAnimatedStyles) {
-  let obj = { style: items, pointerEvents: "box-none", children: null };
-  items = [enterExitAnimatedStyles, StyleSheet.absoluteFill];
+  const obj = { style: null, pointerEvents: "box-none", children: null };
+  const items = [enterExitAnimatedStyles, StyleSheet.absoluteFill];
+  obj.style = items;
   let tmpResult = null;
   if (null != arg0) {
-    obj = {};
+    const obj2 = {};
     const merged = Object.assign(arg0);
-    obj.enterExitAnimatedStyles = enterExitAnimatedStyles;
-    tmpResult = tmp(Coachmark.CoachmarkContainer, obj);
+    obj2.enterExitAnimatedStyles = enterExitAnimatedStyles;
+    tmpResult = tmp(Coachmark.CoachmarkContainer, obj2);
   }
-  obj[2] = tmpResult;
-  return jsx(_modDef4296.View, { style: items, pointerEvents: "box-none", children: null });
+  obj.children = tmpResult;
+  return jsx(ReanimatedRexportDefault.View, { style: null, pointerEvents: "box-none", children: null });
 }
-let result = require("set").fileFinishedImporting("design/components/Coachmark/native/AnimatedCoachmark.native.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("design/components/Coachmark/native/AnimatedCoachmark.native.tsx");
 
 export const AnimatedCoachmark = function AnimatedCoachmark(visible) {
   visible = visible.visible;
-  const merged = Object.assign(visible, Object.create(null));
-  importDefault = undefined;
-  [tmp3, c1] = callback(React.useState(visible), 2);
-  let obj = visible(11137);
-  const result = obj.tooltipEnterExitAnimation(merged.position);
+  const merged = Object.assign(visible, Object.assign({ visible: 0 }));
+  c1 = undefined;
+  [tmp3, c1] = noop.useState(visible);
+  const tmp2 = _slicedToArray(noop.useState(visible), 2);
+  const result = TooltipConstants.tooltipEnterExitAnimation(merged.position);
   const items = [visible];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     _undefined(visible);
   }, items);
-  obj = { useReducedMotion: React.useContext(visible(4279).AccessibilityPreferencesContext).reducedMotion.enabled, item: null, entering: null, exiting: null, renderItem: null };
+  const obj2 = { useReducedMotion: noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).reducedMotion.enabled, item: null, entering: null, exiting: null, renderItem: null };
   let tmp8;
-  const tmp2 = callback(React.useState(visible), 2);
   const tmp6 = jsx;
   if (tmp3) {
     tmp8 = merged;
   }
-  obj[1] = tmp8;
-  obj[2] = result;
-  obj[3] = result;
-  obj[4] = renderTooltipItem;
-  return tmp6(AnimatedRenderItemDefault, obj);
+  obj2.item = tmp8;
+  obj2.entering = result;
+  obj2.exiting = result;
+  obj2.renderItem = renderTooltipItem;
+  return tmp6(AnimatedEnterExitItemDefault, obj2);
 };

@@ -1,11 +1,11 @@
-// Module ID: 12210
-// Function ID: 12211
-// Name: PollMediaUploadAttachmentStatus
+// Module ID: 12236
+// Function ID: 12237
+// Name: PollTypes
 // Dependencies: [2]
 
-// Module 12210 (PollMediaUploadAttachmentStatus)
-import set from "set" /* 2 */;
+// Module 12236 (PollTypes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/polls/PollTypes.tsx");
+const result = size.fileFinishedImporting("modules/polls/PollTypes.tsx");
 
 export const PollMediaUploadAttachmentStatus = { PREPARING: "PREPARING", READY_TO_UPLOAD: "READY_TO_UPLOAD", ERROR: "ERROR" };

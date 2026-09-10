@@ -1,46 +1,46 @@
-// Module ID: 11473
-// Function ID: 11474
-// Name: createToggle
-// Dependencies: [11474, 2]
+// Module ID: 11500
+// Function ID: 11501
+// Name: SettingBuilders
+// Dependencies: [11501, 2]
 // Exports: createGuildSelector, createList, createPressable, createRadio, createRoute, createSegmentedControl, createSlider, createStatic, createToggle, createVolumeSlider
 
-// Module 11473 (createToggle)
-import set from "set" /* 2 */;
-import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 11474 */;
+// Module 11500 (SettingBuilders)
+import SettingRendererConstants from "SettingRendererConstants" /* 11501 */;
+import size from "module_2" /* 2 */;
 
-const NodeType = GUILD_SELECT_ALL_SERVERS_OPTION_ID.NodeType;
-const result = set.fileFinishedImporting("modules/settings/native/renderer/SettingBuilders.tsx");
+const NodeType = SettingRendererConstants.NodeType;
+const result = size.fileFinishedImporting("modules/settings/native/renderer/SettingBuilders.tsx");
 
-export const createToggle = function createToggle(createToggle) {
-  const merged = Object.assign(createToggle);
+export const createToggle = function createToggle(arg0) {
+  const merged = Object.assign(arg0);
   return { type: NodeType.TOGGLE };
 };
-export const createStatic = function createStatic(createToggle) {
-  const merged = Object.assign(createToggle);
+export const createStatic = function createStatic(arg0) {
+  const merged = Object.assign(arg0);
   return { type: NodeType.STATIC };
 };
-export const createRoute = function createRoute(createToggle) {
-  const merged = Object.assign(createToggle);
+export const createRoute = function createRoute(arg0) {
+  const merged = Object.assign(arg0);
   return { type: NodeType.ROUTE };
 };
-export const createPressable = function createPressable(createToggle) {
-  const merged = Object.assign(createToggle);
+export const createPressable = function createPressable(arg0) {
+  const merged = Object.assign(arg0);
   return { type: NodeType.PRESSABLE };
 };
-export const createVolumeSlider = function createVolumeSlider(createToggle) {
-  const merged = Object.assign(createToggle);
+export const createVolumeSlider = function createVolumeSlider(arg0) {
+  const merged = Object.assign(arg0);
   return { type: NodeType.VOLUME_SLIDER };
 };
-export const createSlider = function createSlider(createToggle) {
-  const merged = Object.assign(createToggle);
+export const createSlider = function createSlider(arg0) {
+  const merged = Object.assign(arg0);
   return { type: NodeType.SLIDER };
 };
-export const createGuildSelector = function createGuildSelector(createToggle) {
-  const merged = Object.assign(createToggle);
+export const createGuildSelector = function createGuildSelector(arg0) {
+  const merged = Object.assign(arg0);
   return { type: NodeType.GUILD_SELECTOR };
 };
-export const createRadio = function createRadio(createToggle) {
-  const merged = Object.assign(createToggle);
+export const createRadio = function createRadio(arg0) {
+  const merged = Object.assign(arg0);
   return { type: NodeType.RADIO };
 };
 export const createList = function createList(arg0) {

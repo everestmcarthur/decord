@@ -1,39 +1,38 @@
-// Module ID: 12248
-// Function ID: 12249
+// Module ID: 12274
+// Function ID: 12275
 // Name: AppLauncherButtonIcon
-// Dependencies: [19, 17, 21, 4427, 1609, 10956, 5106, 2]
+// Dependencies: [19, 17, 21, 4441, 1609, 10983, 5120, 2]
 // Exports: AppLauncherButtonIcon
 
-// Module 12248 (AppLauncherButtonIcon)
-import noopAll from "noop" /* 19 */;
+// Module 12274 (AppLauncherButtonIcon)
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/AppLauncherButtonIcon.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherButtonIcon.tsx");
 
 export const AppLauncherButtonIcon = function AppLauncherButtonIcon(style) {
   style = style.style;
-  const merged = Object.assign(style, Object.create(null));
-  let obj = { style: { overflow: "hidden" }, children: null };
+  const merged = Object.assign(style, Object.assign({ style: 0 }));
+  const obj = { style: { overflow: "hidden" }, children: null };
   if (tmp3 === KeyboardTypes.KeyboardTypes.APP_LAUNCHER) {
-    obj = {};
+    const obj2 = {};
     const merged1 = Object.assign(merged);
     const items = [style, ];
-    obj = { transform: null };
+    const obj3 = { transform: null };
     const items1 = [{ rotate: "45deg" }];
-    obj[0] = items1;
-    items[1] = obj;
-    obj.style = items;
-    let tmp4Result = tmp4(tmp6(10956).PlusLargeIcon, obj);
+    obj3.transform = items1;
+    items[1] = obj3;
+    obj2.style = items;
+    let tmp4Result = tmp4(tmp6(10983).PlusLargeIcon, obj2);
   } else {
-    obj1 = { style: null };
-    obj1[0] = style;
+    const obj4 = { style };
     const merged2 = Object.assign(merged);
-    tmp4Result = tmp4(tmp6(5106).AppsIcon, obj1);
+    tmp4Result = tmp4(tmp6(5120).AppsIcon, obj4);
   }
-  obj[1] = tmp4Result;
+  obj.children = tmp4Result;
   return <View style={{ overflow: "hidden" }}>{null}</View>;
 };

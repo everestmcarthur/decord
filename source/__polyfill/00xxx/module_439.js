@@ -3,4 +3,5 @@
 // Dependencies: []
 
 // Module 439
-arg5.default = null;
+
+export default null;

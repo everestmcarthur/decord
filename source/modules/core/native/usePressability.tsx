@@ -1,12 +1,12 @@
-// Module ID: 16298
-// Function ID: 16299
-// Name: set
+// Module ID: 16328
+// Function ID: 16329
+// Name: usePressability
 // Dependencies: [2, 301]
 
-// Module 16298 (set)
-import set from "set" /* 2 */;
-import usePressabilityDefault from "usePressability" /* 301 */;
+// Module 16328 (usePressability)
+import _modDef301 from "module_301" /* 301 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/core/native/usePressability.tsx");
+const result = size.fileFinishedImporting("modules/core/native/usePressability.tsx");
 
-export default usePressabilityDefault;
+export default _modDef301;

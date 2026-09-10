@@ -1,16 +1,16 @@
-// Module ID: 16648
-// Function ID: 16649
+// Module ID: 16680
+// Function ID: 16681
 // Name: useSearchMediaSize
-// Dependencies: [7878, 2]
+// Dependencies: [7892, 2]
 // Exports: default
 
-// Module 16648 (useSearchMediaSize)
-import set from "set" /* 2 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 7878 */;
+// Module 16680 (useSearchMediaSize)
+import SearchConstants from "SearchConstants" /* 7892 */;
+import size from "module_2" /* 2 */;
 
-({ SEARCH_LIST_HORIZONTAL_PADDING: c0, MEDIA_NUM_COLUMNS: closure_1, MEDIA_ITEM_GAP_WIDTH: obj1 } = MessageEmbedTypes);
-const result = set.fileFinishedImporting("modules/search/native/hooks/useSearchMediaSize.tsx");
+({ SEARCH_LIST_HORIZONTAL_PADDING: closure_0, MEDIA_NUM_COLUMNS: closure_1, MEDIA_ITEM_GAP_WIDTH: c2 } = SearchConstants);
+const result = size.fileFinishedImporting("modules/search/native/hooks/useSearchMediaSize.tsx");
 
 export default function useSearchMediaSize(arg0) {
-  return Math.floor((arg0 - 2 * closure_0 - closure_2 * (closure_1 - 1)) / closure_1);
+  return Math.floor((arg0 - 2 * React - React2 * (framebus - 1)) / framebus);
 };

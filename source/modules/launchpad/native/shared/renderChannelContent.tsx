@@ -1,117 +1,105 @@
-// Module ID: 16985
-// Function ID: 16986
-// Name: ChannelContent
-// Dependencies: [19, 17, 10123, 4742, 21, 4560, 1115, 16980, 5062, 16986, 4556, 5095, 8593, 16121, 2]
+// Module ID: 16701
+// Function ID: 16702
+// Name: renderChannelContent
+// Dependencies: [19, 17, 10150, 4756, 21, 4574, 1115, 16698, 5076, 16702, 4570, 5109, 8621, 16151, 2]
 // Exports: default
 
-// Module 16985 (ChannelContent)
-import Text from "Text" /* 4556 */;
-import LockIcon from "LockIcon" /* 5095 */;
-import WarningIcon from "WarningIcon" /* 8593 */;
-import getLayoutStyleDefault from "getLayoutStyle" /* 16980 */;
-import _modDef16986 from "module_16986" /* 16986 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { SUBTITLE_OPACITY_NORMAL } from "hairlineWidth" /* 10123 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4742 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import set from "set" /* 1115 */;
+// Module 16701 (renderChannelContent)
+import Text_Text from "Text/Text" /* 4570 */;
+import LockIcon from "LockIcon" /* 5109 */;
+import WarningIcon from "WarningIcon" /* 8621 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 16698 */;
+import ChannelTitleDefault from "ChannelTitle" /* 16702 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function ChannelContent(arg0) {
   ({ subtitle, resolvedUnreadSetting, locked, muted, lastMessageTimestampString, channel, channelCategoryName, mentionCount, mentionBadge, isSubscriptionGated } = arg0);
   ({ name, unread, connected, needSubscriptionToAccess } = arg0);
-  const tmp = callback2();
-  let tmp9Result = null != channel;
-  if (tmp9Result) {
+  const tmp = closure_9();
+  let tmp9Result5 = null != channel;
+  if (tmp9Result5) {
     if (!locked) {
-      locked = tmp2(5062)(channel);
+      locked = tmp2(5076)(channel);
     }
-    tmp9Result = locked;
+    tmp9Result5 = locked;
   }
   if (channel != null) {
     let isNSFWResult = channel.isNSFW();
   }
-  const isValidElementResult = validElement.isValidElement(subtitle);
+  const isValidElementResult = noop.isValidElement(subtitle);
   let obj = null != lastMessageTimestampString;
-  let tmp9Result3 = obj;
+  let tmp9Result8 = obj;
   if (obj) {
-    tmp9Result3 = null == mentionBadge;
+    tmp9Result8 = null == mentionBadge;
   }
-  obj = { style: tmp.channelContent, children: null };
-  obj = { style: tmp.channelContainer, children: null };
+  const obj2 = { style: tmp.channelContent, children: null };
+  const obj3 = { style: tmp.channelContainer, children: null };
   const items = [tmp.leftBox, ];
   let str = "center";
   if (isValidElementResult) {
     str = "space-between";
   }
-  obj1 = { style: items, children: null };
+  const obj4 = { style: items, children: null };
   items[1] = { justifyContent: str };
   let num = 0;
-  if (tmp9Result3) {
+  if (tmp9Result8) {
     num = 30;
   }
-  const obj2 = { style: { flexDirection: "row", paddingRight: num, alignItems: "center" }, children: null };
-  const obj3 = { title: name, muted, unread, resolvedUnreadSetting: null, connected: null };
-  const tmp4 = getLayoutStyleDefault();
+  const obj5 = { style: { flexDirection: "row", paddingRight: num, alignItems: "center" }, children: null };
+  const obj6 = { title: name, muted, unread, resolvedUnreadSetting: null, connected: null };
+  const tmp4 = getLayoutStylesDefault();
   if (resolvedUnreadSetting == null) {
     resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
   }
-  obj3[3] = resolvedUnreadSetting;
-  obj3[4] = connected;
-  const items1 = [closure_7(_modDef16986, obj3), , ];
-  tmp9Result = null;
+  obj6.resolvedUnreadSetting = resolvedUnreadSetting;
+  obj6.connected = connected;
+  const items1 = [React5(ChannelTitleDefault, obj6), , ];
+  let tmp9Result = null;
   if (null != channelCategoryName) {
-    const obj4 = { variant: "text-xs/bold", color: "text-muted", style: null, children: null };
-    obj4[2] = { marginRight: 4 };
-    obj4[3] = channelCategoryName;
-    tmp9Result = tmp9(Text.Text, obj4);
+    const obj7 = { variant: "text-xs/bold", color: "text-muted", style: { marginRight: 4 }, children: channelCategoryName };
+    tmp9Result = tmp9(Text_Text.Text, obj7);
   }
   items1[1] = tmp9Result;
-  let tmp11Result = tmp9Result;
-  if (!tmp9Result) {
+  let tmp11Result = tmp9Result5;
+  if (!tmp9Result5) {
     tmp11Result = isNSFWResult;
   }
   if (tmp11Result) {
     const items2 = [tmp.channelTraits, ];
     let num3 = 1;
-    if (tmp9Result) {
+    if (tmp9Result5) {
       num3 = 1;
       if (isNSFWResult) {
         num3 = 2;
       }
     }
-    const obj5 = { style: null, children: null };
-    const obj6 = { maxWidth: null };
-    obj6[0] = 14 * num3;
-    items2[1] = obj6;
-    obj5[0] = items2;
-    if (tmp9Result) {
-      const obj7 = { size: "xxs", color: "icon-muted", style: null };
-      obj7[2] = tmp.channelTraitIcon;
-      tmp9Result = tmp9(LockIcon.LockIcon, obj7);
+    const obj8 = { style: null, children: null };
+    const obj9 = { maxWidth: 14 * num3 };
+    items2[1] = obj9;
+    obj8.style = items2;
+    if (tmp9Result5) {
+      const obj10 = { size: "xxs", color: "icon-muted", style: tmp.channelTraitIcon };
+      tmp9Result5 = tmp9(LockIcon.LockIcon, obj10);
     }
-    const items3 = [tmp9Result, , ];
+    const items3 = [tmp9Result5, , ];
     if (isNSFWResult) {
-      const obj8 = { size: "xxs", color: "icon-muted", style: null };
-      obj8[2] = tmp.channelTraitIcon;
-      isNSFWResult = tmp9(WarningIcon.WarningIcon, obj8);
+      const obj11 = { size: "xxs", color: "icon-muted", style: tmp.channelTraitIcon };
+      isNSFWResult = tmp9(WarningIcon.WarningIcon, obj11);
     }
     items3[1] = isNSFWResult;
     if (isSubscriptionGated) {
-      const obj9 = { locked: null, isInMainTabsExperiment: true };
-      obj9[0] = needSubscriptionToAccess;
-      isSubscriptionGated = tmp9(tmp2(16121), obj9);
+      const obj12 = { locked: needSubscriptionToAccess, isInMainTabsExperiment: true };
+      isSubscriptionGated = tmp9(tmp2(16151), obj12);
     }
     items3[2] = isSubscriptionGated;
-    obj5[1] = items3;
-    tmp11Result = tmp11(tmp10, obj5);
+    obj8.children = items3;
+    tmp11Result = tmp11(tmp10, obj8);
   }
   items1[2] = tmp11Result;
-  obj2[1] = items1;
-  const items4 = [closure_8(View, obj2), ];
-  let tmp9Result1 = null;
+  obj5.children = items1;
+  const items4 = [React6(View, obj5), ];
+  let tmp9Result6 = null;
   if (isValidElementResult) {
     if (mentionCount == null) {
       mentionCount = 0;
@@ -120,70 +108,74 @@ function ChannelContent(arg0) {
     if (mentionCount > 0) {
       num5 = 20;
     }
-    const obj10 = { style: null, children: null };
-    const obj11 = { paddingRight: null };
-    obj11[0] = num5;
-    const items5 = [obj11, ];
-    const obj12 = { marginTop: null };
-    obj12[0] = tmp4.messagePreview.margin.marginTop;
-    items5[1] = obj12;
-    obj10[0] = items5;
-    obj10[1] = subtitle;
-    tmp9Result1 = tmp9(tmp10, obj10);
+    const obj13 = { style: null, children: null };
+    const obj14 = { paddingRight: num5 };
+    const items5 = [obj14, ];
+    const obj15 = { marginTop: tmp4.messagePreview.margin.marginTop };
+    items5[1] = obj15;
+    obj13.style = items5;
+    obj13.children = subtitle;
+    tmp9Result6 = tmp9(tmp10, obj13);
   }
-  items4[1] = tmp9Result1;
-  obj1[1] = items4;
-  const items6 = [closure_8(View, obj1), ];
-  const obj13 = { style: tmp9Result3 ? tmp.rightContentAbsolute : tmp.rightBox, children: null };
-  let tmp9Result2 = obj;
+  items4[1] = tmp9Result6;
+  obj4.children = items4;
+  const items6 = [React6(View, obj4), ];
+  const obj16 = { style: tmp9Result8 ? tmp.rightContentAbsolute : tmp.rightBox, children: null };
+  let tmp9Result7 = obj;
   if (obj) {
     let num6 = 1;
     if (!muted) {
       num6 = SUBTITLE_OPACITY_NORMAL;
     }
-    const obj14 = { variant: "text-xs/medium", color: "text-muted", style: null, maxFontSizeMultiplier: 1.75, children: null };
-    const obj15 = { marginLeft: "auto", opacity: null };
-    obj15[1] = num6;
-    obj14[2] = obj15;
-    obj14[4] = lastMessageTimestampString;
-    tmp9Result2 = tmp9(Text.Text, obj14);
+    const obj17 = { variant: "text-xs/medium", color: "text-muted", style: null, maxFontSizeMultiplier: 1.75, children: null };
+    const obj18 = { marginLeft: "auto", opacity: num6 };
+    obj17.style = obj18;
+    obj17.children = lastMessageTimestampString;
+    tmp9Result7 = tmp9(Text_Text.Text, obj17);
   }
-  const items7 = [tmp9Result2, , ];
+  const items7 = [tmp9Result7, , ];
   const items8 = [{ alignItems: "center", paddingLeft: 4 }, ];
   if (obj) {
     obj = { marginTop: 5 };
   }
   items8[1] = obj;
-  items7[1] = closure_7(View, { style: items8, children: mentionBadge });
-  if (tmp9Result3) {
-    const obj16 = { style: null };
-    obj16[0] = { flex: 1 };
-    tmp9Result3 = tmp9(tmp10, obj16);
+  items7[1] = React5(View, { style: items8, children: mentionBadge });
+  if (tmp9Result8) {
+    const obj19 = { style: { flex: 1 } };
+    tmp9Result8 = tmp9(tmp10, obj19);
   }
-  items7[2] = tmp9Result3;
-  obj13[1] = items7;
-  items6[1] = closure_8(View, obj13);
-  obj[1] = items6;
-  obj[1] = closure_8(View, obj);
-  return closure_7(View, obj);
+  items7[2] = tmp9Result8;
+  obj16.children = items7;
+  items6[1] = React6(View, obj16);
+  obj3.children = items6;
+  obj2.children = React6(View, obj3);
+  return React5(View, obj2);
 }
-({ jsx: error, jsxs: closure_8 } = jsxProd);
+const View = fn(17).View;
+const SUBTITLE_OPACITY_NORMAL = fn(10150).SUBTITLE_OPACITY_NORMAL;
+const UnreadSetting = fn(4756).UnreadSetting;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+let PlatformUtils = fn(1115);
 let num = -1;
-if (set.isIOS()) {
+if (PlatformUtils.isIOS()) {
   num = 2;
 }
-createCacheKey = { channelContent: { flex: 1, marginTop: num }, channelContainer: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, leftBox: { flexDirection: "column", alignItems: "flex-start", flexShrink: 1 }, rightBox: { flexDirection: "column", alignItems: "flex-end" }, rightContentAbsolute: { position: "absolute", right: 0, top: 0 }, channelTraits: { display: "flex", flexDirection: "row", alignItems: "center" }, channelTraitIcon: null };
-createCacheKey = { opacity: SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
+let obj3 = { channelContent: { flex: 1, marginTop: num }, channelContainer: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, leftBox: { flexDirection: "column", alignItems: "flex-start", flexShrink: 1 }, rightBox: { flexDirection: "column", alignItems: "flex-end" }, rightContentAbsolute: { position: "absolute", right: 0, top: 0 }, channelTraits: { display: "flex", flexDirection: "row", alignItems: "center" }, channelTraitIcon: null };
+let obj4 = { opacity: SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
+PlatformUtils = fn(1115);
 let num2 = 0;
-if (set.isAndroid()) {
+if (PlatformUtils.isAndroid()) {
   num2 = 2;
 }
-createCacheKey[2] = num2;
-createCacheKey[6] = createCacheKey;
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = set.fileFinishedImporting("modules/launchpad/native/shared/renderChannelContent.tsx");
+obj4.marginTop = num2;
+obj3.channelTraitIcon = obj4;
+let closure_9 = createStyles.createStyles(obj3);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/launchpad/native/shared/renderChannelContent.tsx");
 
 export default function renderChannelContent(arg0) {
   const merged = Object.assign(arg0);
-  return callback(ChannelContent, {});
+  return React5(ChannelContent, {});
 };

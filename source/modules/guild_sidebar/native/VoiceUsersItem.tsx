@@ -1,22 +1,22 @@
-// Module ID: 16132
-// Function ID: 16133
+// Module ID: 16162
+// Function ID: 16163
 // Name: VoiceUsersItem
-// Dependencies: [19, 17, 21, 4560, 2]
+// Dependencies: [19, 17, 21, 4574, 2]
 // Exports: default
 
-// Module 16132 (VoiceUsersItem)
-import noopAll from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16162 (VoiceUsersItem)
+import noop from "module_19" /* 19 */;
 
-noopAll;
-let closure_2 = createCacheKey.createStyles({ voiceStates: { paddingRight: 8 }, voiceStatesCollapsed: { paddingRight: 0, flexDirection: "row", flexWrap: "wrap", alignItems: "center" } });
-const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/VoiceUsersItem.tsx");
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_2 = createStyles.createStyles({ voiceStates: { paddingRight: 8 }, voiceStatesCollapsed: { paddingRight: 0, flexDirection: "row", flexWrap: "wrap", alignItems: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_sidebar/native/VoiceUsersItem.tsx");
 
 export default function VoiceUsersItem(children) {
   let voiceStatesCollapsed = children.collapsed;
-  const tmp = callback();
+  const tmp = closure_2();
   let voiceStates = !voiceStatesCollapsed;
   if (!voiceStatesCollapsed) {
     voiceStates = tmp.voiceStates;

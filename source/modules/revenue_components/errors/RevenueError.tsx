@@ -1,10 +1,10 @@
-// Module ID: 11448
-// Function ID: 11449
-// Name: prototype
+// Module ID: 11475
+// Function ID: 11476
+// Name: RevenueError
 // Dependencies: [2]
 
-// Module 11448 (prototype)
-import set from "set" /* 2 */;
+// Module 11475 (RevenueError)
+import size from "module_2" /* 2 */;
 
 const prototype = function RevenueError(errorHandlingBehavior) {
   ({ message, extraSentryInformation } = errorHandlingBehavior);
@@ -20,7 +20,6 @@ const prototype = function RevenueError(errorHandlingBehavior) {
     flag = false;
   }
   const tmp = new prototype(message, message, new.target, new.target, extraSentryInformation);
-  // ThrowIfThisInitialized (0x7c)
   tmp.name = new.target.name;
   tmp.extraSentryInformation = extraSentryInformation;
   tmp.errorHandlingBehavior = str;
@@ -29,6 +28,6 @@ const prototype = function RevenueError(errorHandlingBehavior) {
 }.prototype;
 class prototype extends Error {
 }
-const result = set.fileFinishedImporting("modules/revenue_components/errors/RevenueError.tsx");
+const result = size.fileFinishedImporting("modules/revenue_components/errors/RevenueError.tsx");
 
 export const RevenueError = prototype;

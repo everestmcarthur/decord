@@ -1,32 +1,30 @@
-// Module ID: 13188
-// Function ID: 13189
-// Name: createConnectionsRoleTag
+// Module ID: 13211
+// Function ID: 13212
+// Name: ConnectionsRoleTag
 // Dependencies: [17, 1074, 576, 1091, 2]
 // Exports: createConnectionsRoleTag
 
-// Module 13188 (createConnectionsRoleTag)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 576 */;
-import ME from "ME" /* 1074 */;
-import int2hslRaw from "int2hslRaw" /* 1091 */;
+// Module 13211 (ConnectionsRoleTag)
+import _mod17 from "module_17" /* 17 */;
+import nativeDefault from "native" /* 576 */;
+import Constants from "Constants" /* 1074 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
+import size from "module_2" /* 2 */;
 
-const processColor = get_ActivityIndicator.processColor;
-const DEFAULT_ROLE_COLOR_HEX = ME.DEFAULT_ROLE_COLOR_HEX;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/ConnectionsRoleTag.tsx");
+const processColor = _mod17.processColor;
+const DEFAULT_ROLE_COLOR_HEX = Constants.DEFAULT_ROLE_COLOR_HEX;
+const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/ConnectionsRoleTag.tsx");
 
-export const createConnectionsRoleTag = function createConnectionsRoleTag(merged) {
-  let colorString = merged.colorString;
+export const createConnectionsRoleTag = function createConnectionsRoleTag(visibleConnectionsRole) {
+  let colorString = visibleConnectionsRole.colorString;
   if (colorString == null) {
     colorString = DEFAULT_ROLE_COLOR_HEX;
   }
-  let PRIMARY_630 = ThemesDefault.unsafe_rawColors.WHITE;
-  let obj = int2hslRaw;
-  const hex2intResult = obj.hex2int(colorString);
-  const tmp = importDefault;
+  let PRIMARY_630 = nativeDefault.unsafe_rawColors.WHITE;
+  const hex2intResult = utils_ColorUtils.hex2int(colorString);
   if (obj2.getDarkness(hex2intResult) < 0.3) {
-    PRIMARY_630 = ThemesDefault.unsafe_rawColors.PRIMARY_630;
+    PRIMARY_630 = nativeDefault.unsafe_rawColors.PRIMARY_630;
   }
-  obj = { id: merged.id, name: merged.name, backgroundColor: processColor(colorString), iconColor: processColor(PRIMARY_630) };
-  return obj;
+  obj2 = utils_ColorUtils;
+  return { id: visibleConnectionsRole.id, name: visibleConnectionsRole.name, backgroundColor: processColor(colorString), iconColor: processColor(PRIMARY_630) };
 };

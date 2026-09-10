@@ -1,105 +1,82 @@
-// Module ID: 12319
-// Function ID: 12320
-// Name: GuildDirectoryEditDescription
-// Dependencies: [5, 19, 17, 21, 4560, 5682, 12320, 12318, 7123, 4556, 1114, 12321, 5624, 7000, 2]
+// Module ID: 12345
+// Function ID: 12346
+// Name: GuildDirectoryEditDescriptionModal
+// Dependencies: [5, 19, 17, 21, 4574, 5696, 12346, 12344, 7137, 4570, 1114, 12347, 5638, 7014, 2]
 // Exports: default
 
-// Module 12319 (GuildDirectoryEditDescription)
-import noopAll from "noop" /* 19 */;
-import _modDef12318 from "module_12318" /* 12318 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12345 (GuildDirectoryEditDescriptionModal)
+import GuildDirectoryEditDescriptionModalActionCreatorsDefault from "GuildDirectoryEditDescriptionModalActionCreators" /* 12344 */;
+import GuildDirectoryEditDescriptionTemplateDefault from "GuildDirectoryEditDescriptionTemplate" /* 12347 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+const require = globalThis.__r;
+
+const require = fn;
 function GuildDirectoryEditDescription(entry) {
   entry = entry.entry;
-  function _onSubmit(arg0) {
-    const self = this;
-    const tmp = closure_1_4((arg0, arg1) => {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      c3 = 0;
-      c4 = 0;
-      return (function*(arg0, arg1) {
-        if (c4 === 2) {
-          c4 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp3 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          try {
-            c4 = 2;
-            if (0 === dependencyMap) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                closure_2 = tmp4;
-                let obj2 = closure_1_2(12320);
-                dependencyMap = 1;
-                c4 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = obj2.updateDirectoryEntry(closure_0.channelId, closure_0.guildId, closure_0, callback);
-                return obj1;
-              }
-            } else if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              obj = callback(12318);
-              obj.close();
-              c4 = 3;
-              return { value: "HermesInternal", done: null };
-            }
-          } catch (tmp15) {
-            c4 = tmp;
-            throw tmp15;
-          }
-        }
-      })();
-    });
-    closure_1 = tmp;
-    const apply = tmp.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  importDefault = async function _onSubmit(arg0, value) {
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
     } else {
-      applyArgumentsResult = apply(self, arguments);
+      try {
+        c4 = 2;
+        if (0 === dependencyMap) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            const obj3 = tmp4(12346);
+            dependencyMap = 1;
+            c4 = 1;
+            const obj5 = { value: obj3.updateDirectoryEntry(entry.channelId, entry.guildId, closure_0, closure_1), done: false };
+            return obj5;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          closure_1(12344).close();
+          c4 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      } catch (tmp15) {
+        c4 = tmp;
+        throw tmp15;
+      }
     }
-    return applyArgumentsResult;
-  }
-  let tmp = callback3();
-  let obj = { top: true, style: tmp.safeArea, children: null };
-  obj = { style: tmp.container, keyboardShouldPersistTaps: "handled", children: null };
-  obj = { style: tmp.header, children: null };
-  obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  };
+  const tmp = closure_9();
+  const obj = { top: true, style: tmp.safeArea, children: null };
+  let obj2 = { style: tmp.container, keyboardShouldPersistTaps: "handled", children: null };
+  let obj3 = { style: tmp.header, children: null };
+  let obj4 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = entry(1114).intl;
-  obj1[4] = intl.format(entry(1114).t.w9tsNk, { guildName: entry.name });
-  obj[1] = callback(entry(4556).Text, obj1);
-  const items = [callback(closure_5, obj), ];
-  const obj3 = {
+  obj4.children = intl.format(entry(1114).t.w9tsNk, { guildName: entry.name });
+  obj3.children = closure_7(entry(4570).Text, obj4);
+  const items = [closure_7(closure_5, obj3), ];
+  let obj6 = {
     onSubmit(arg0, arg1) {
       const self = this;
-      const apply = _onSubmit.apply;
+      const apply = closure_1.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -112,44 +89,42 @@ function GuildDirectoryEditDescription(entry) {
     directoryChannelId: null
   };
   const intl2 = entry(1114).intl;
-  obj3[1] = intl2.string(entry(1114).t["R3BPH+"]);
-  obj3[2] = entry;
-  obj3[3] = entry.channelId;
-  items[1] = callback(_onSubmit(12321), obj3);
-  obj[2] = items;
-  obj[2] = callback2(closure_6, obj);
-  return callback(entry(7123).SafeAreaPaddingView, obj);
+  obj6.buttonLabel = intl2.string(entry(1114).t["R3BPH+"]);
+  obj6.entry = entry;
+  obj6.directoryChannelId = entry.channelId;
+  items[1] = closure_7(GuildDirectoryEditDescriptionTemplateDefault, obj6);
+  obj2.children = items;
+  obj.children = closure_8(closure_6, obj2);
+  return closure_7(entry(7137).SafeAreaPaddingView, obj);
 }
-noopAll;
-({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { safeArea: null, container: null, title: null, header: null };
-createCacheKey = { marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, flex: 1 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1 };
-createCacheKey[2] = { marginBottom: 8, textAlign: "center" };
-createCacheKey[3] = { alignItems: "center", justifyContent: "center", padding: 16 };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { safeArea: { marginTop: fn(5696).NAV_BAR_HEIGHT, flex: 1 }, container: { flex: 1 }, title: { marginBottom: 8, textAlign: "center" }, header: { alignItems: "center", justifyContent: "center", padding: 16 } };
+let closure_9 = createStyles.createStyles(obj2);
 const EDIT_DESCRIPTION = "EDIT_DESCRIPTION";
-const result = require("set").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryEditDescriptionModal.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryEditDescriptionModal.tsx");
 
 export default function GuildDirectoryEditDescriptionModal(arg0) {
-  let obj = { screens: null, initialRouteName: null };
-  const _require = arg0;
-  obj = {};
-  obj = {
+  const obj = { screens: null, initialRouteName: null };
+  _require = arg0;
+  const obj2 = {};
+  const obj3 = {
     fullscreen: true,
-    headerLeft: _require(5624).getHeaderCloseButton(_modDef12318.close),
+    headerLeft: require("NavigatorHeader").getHeaderCloseButton(GuildDirectoryEditDescriptionModalActionCreatorsDefault.close),
     headerTitle() {
       return null;
     },
     render() {
       const merged = Object.assign(closure_0);
-      return closure_1_7(closure_1_10, {});
+      return React5(GuildDirectoryEditDescription, {});
     }
   };
-  obj[EDIT_DESCRIPTION] = obj;
-  obj[0] = obj;
-  obj[1] = EDIT_DESCRIPTION;
-  return callback(_require(7000).Navigator, obj);
+  obj2[EDIT_DESCRIPTION] = obj3;
+  obj.screens = obj2;
+  obj.initialRouteName = EDIT_DESCRIPTION;
+  return closure_7(require("Navigator").Navigator, obj);
 };

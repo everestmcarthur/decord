@@ -1,17 +1,17 @@
-// Module ID: 6459
-// Function ID: 6460
+// Module ID: 6473
+// Function ID: 6474
 // Name: SingleWidgetAbstractUI
-// Dependencies: [21, 5587, 6460, 2]
+// Dependencies: [21, 5601, 6474, 2]
 // Exports: SingleWidgetAbstractUI
 
-// Module 6459 (SingleWidgetAbstractUI)
-import set from "set" /* 2 */;
+// Module 6473 (SingleWidgetAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 6460 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6474 from "module_6474" /* 6474 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/SingleWidgetAbstractUI.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/SingleWidgetAbstractUI.native.tsx");
 
 export const SingleWidgetAbstractUI = function SingleWidgetAbstractUI(width) {
   let num = width.width;
@@ -27,14 +27,14 @@ export const SingleWidgetAbstractUI = function SingleWidgetAbstractUI(width) {
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
-  obj = { width: num * num3, height: num2 * num3 };
-  const items = [obj];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { width: num * num3, height: num2 * num3 });
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef6474 };
+  obj.source = obj2;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

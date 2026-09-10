@@ -1,22 +1,22 @@
-// Module ID: 8596
-// Function ID: 8597
+// Module ID: 8624
+// Function ID: 8625
 // Name: ScrollHandlingActionSheet
-// Dependencies: [19, 21, 7150, 2]
+// Dependencies: [19, 21, 7164, 2]
 // Exports: default
 
-// Module 8596 (ScrollHandlingActionSheet)
-import noopAll from "noop" /* 19 */;
-import Background from "Background" /* 7150 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 8624 (ScrollHandlingActionSheet)
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7164 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/ScrollHandlingActionSheet.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/ScrollHandlingActionSheet.tsx");
 
 export default function ScrollHandlingActionSheet(children) {
-  const merged = Object.assign(children, Object.create(null));
+  const merged = Object.assign(children, Object.assign({ children: 0, scrollableDeviceHeightBreakpoint: 0 }));
   const obj = { startExpanded: true };
   const merged1 = Object.assign(merged);
   obj.children = children.children;
-  return jsx(Background.BottomSheet, { startExpanded: true });
+  return jsx(Sheet_BottomSheet.BottomSheet, { startExpanded: true });
 };

@@ -1,95 +1,93 @@
-// Module ID: 12671
-// Function ID: 12672
+// Module ID: 12697
+// Function ID: 12698
 // Name: ChannelSpoiler
-// Dependencies: [32, 19, 17, 4576, 1957, 1979, 12275, 21, 4560, 576, 504, 4713, 12276, 4761, 5520, 4418, 5028, 4556, 1114, 4973, 4550, 5123, 12670, 8413, 2]
+// Dependencies: [32, 19, 17, 4590, 1957, 1979, 12301, 21, 4574, 576, 504, 4727, 12302, 4775, 5534, 4432, 5042, 4570, 1114, 4987, 4564, 5137, 12696, 8441, 2]
 // Exports: default
 
-// Module 12671 (ChannelSpoiler)
-import ThemesDefault from "Themes" /* 576 */;
-import computeChannelNameDefault from "computeChannelName" /* 4713 */;
-import GatedContentDefault from "GatedContent" /* 12670 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getParticipants" /* 4576 */;
-import closure_7 from "ensureGuildLoaded" /* 1957 */;
-import closure_8 from "createGuildRecordFromRust" /* 1979 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 12275 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12697 (ChannelSpoiler)
+import nativeDefault from "native" /* 576 */;
+import RootNavigationRef from "RootNavigationRef" /* 4432 */;
+import useChannelNameDefault from "useChannelName" /* 4727 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4775 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5534 */;
+import GatedContentDefault from "GatedContent" /* 12696 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4590 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-const require = arg1;
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { subtitle: { textAlign: "center", lineHeight: 22 }, subtitleContainer: { alignItems: "center" }, divider: null, subtitleMeasure: null };
-createCacheKey = { height: 1, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginVertical: 16 };
-createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { position: "absolute", opacity: 0, left: 0, right: 0 };
-let closure_12 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/spoiler_channels/native/ChannelSpoiler.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const View = fn(17).View;
+const VoicePanelControlsModes = fn(12301).VoicePanelControlsModes;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { subtitle: { textAlign: "center", lineHeight: 22 }, subtitleContainer: { alignItems: "center" }, divider: null, subtitleMeasure: null };
+let size = { height: 1, width: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 16 };
+obj2.divider = size;
+obj2.subtitleMeasure = { position: "absolute", opacity: 0, left: 0, right: 0 };
+let closure_12 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/spoiler_channels/native/ChannelSpoiler.tsx");
 
 export default function ChannelSpoiler(channelId) {
-  const _require = channelId;
-  let obj = _require(504);
-  const items = [closure_8];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getGuild(channelId.guildId));
-  obj1 = _require(504);
-  const items1 = [closure_7];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_7.getChannel(channelId.channelId));
-  const tmp4 = callback3();
-  let obj3 = React;
-  const tmp5 = setControlsMode(React.useState(false), 2);
+  _require = channelId;
+  const items = [GuildStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(channelId.guildId));
+  const obj = require("initialize");
+  const items1 = [ChannelStore];
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => ChannelStore.getChannel(channelId.channelId));
+  const tmp4 = closure_12();
+  const tmp5 = setControlsMode(noop.useState(false), 2);
   importDefault = tmp5[1];
   let isVocalResult;
+  let obj2 = require("initialize");
   if (stateFromStores1 != null) {
     isVocalResult = stateFromStores1.isVocal();
   }
   dependencyMap = isVocalResult;
-  setControlsMode = obj3.useContext(tmp6(12276)).setControlsMode;
+  setControlsMode = obj4.useContext(tmp6(12302)).setControlsMode;
   const items2 = [, , , ];
   ({ guildId: arr3[0], channelId: arr3[1] } = channelId);
   items2[2] = setControlsMode;
   items2[3] = isVocalResult;
-  const callback = obj3.useCallback(() => {
-    if (closure_2) {
-      if (closure_1_6.getChatOpen(channelId.channelId)) {
-        callback(isVocalResult[13]).updateChatOpen(tmp2.channelId, false);
-        let obj = { mode: null };
-        obj[0] = closure_1_9.FLOATING_DEFAULT;
-        setControlsMode(obj);
+  const callback = obj4.useCallback(() => {
+    if (isVocalResult) {
+      if (ChannelRTCStore.getChatOpen(channelId.channelId)) {
+        ChannelRTCActionCreatorsDefault.updateChatOpen(tmp2.channelId, false);
+        const obj3 = { mode: VoicePanelControlsModes.FLOATING_DEFAULT };
+        setControlsMode(obj3);
       }
       tmp2 = channelId;
     }
-    obj = callback(isVocalResult[14]);
-    obj.nsfwReturnToSafety(channelId.guildId);
+    GuildActionCreatorsDefault.nsfwReturnToSafety(channelId.guildId);
   }, items2);
   const items3 = [channelId.channelId];
-  const callback1 = obj3.useCallback((nativeEvent) => {
-    callback(nativeEvent.nativeEvent.lines.length > 3);
+  const callback1 = obj4.useCallback((nativeEvent) => {
+    closure_1(nativeEvent.nativeEvent.lines.length > 3);
   }, []);
   let channelIconComponent = null;
-  const callback2 = obj3.useCallback(() => {
-    let obj = channelId(isVocalResult[15]);
-    const rootNavigationRef = obj.getRootNavigationRef();
+  const callback2 = obj4.useCallback(() => {
+    const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     if (rootNavigationRef != null) {
-      obj = { channelId: null, expandTopic: true };
-      obj[0] = channelId.channelId;
-      rootNavigationRef.navigate("sidebar", obj);
+      const obj2 = { channelId: channelId.channelId, expandTopic: true };
+      rootNavigationRef.navigate("sidebar", obj2);
     }
   }, items3);
   if (null != stateFromStores1) {
-    channelIconComponent = tmp(5028).getChannelIconComponent(stateFromStores1);
-    const tmpResult = tmp(5028);
+    channelIconComponent = tmp(5042).getChannelIconComponent(stateFromStores1);
+    const tmpResult = tmp(5042);
   }
   if (null != channelIconComponent) {
-    obj = { style: null, children: null };
-    obj[0] = { flexDirection: "row", alignItems: "center", gap: 4, flexShrink: 1 };
-    const items4 = [callback(channelIconComponent, { size: "lg", color: "mobile-text-heading-primary" }), ];
-    obj = { variant: "heading-xxl/bold", color: "mobile-text-heading-primary", lineClamp: 1, style: null, children: null };
-    obj[3] = { flexShrink: 1 };
-    obj[4] = tmp7;
-    items4[1] = callback(tmp(4556).Text, obj);
-    obj[1] = items4;
-    let stringResult = callback2(View, obj);
+    let obj3 = { style: { flexDirection: "row", alignItems: "center", gap: 4, flexShrink: 1 }, children: null };
+    const items4 = [closure_10(channelIconComponent, { size: "lg", color: "mobile-text-heading-primary" }), ];
+    const obj5 = { variant: "heading-xxl/bold", color: "mobile-text-heading-primary", lineClamp: 1, style: { flexShrink: 1 }, children: tmp7 };
+    items4[1] = closure_10(tmp(4570).Text, obj5);
+    obj3.children = items4;
+    let stringResult = closure_11(View, obj3);
   } else {
     const intl = tmp(1114).intl;
     stringResult = intl.string(tmp(1114).t["q38/ae"]);
@@ -102,68 +100,59 @@ export default function ChannelSpoiler(channelId) {
   if (null != topic) {
     tmp23Result = null;
     if ("" !== str.trim()) {
-      obj1 = { spacing: 4, style: null, children: null };
-      obj1[1] = tmp4.subtitleContainer;
-      const obj2 = { style: null, pointerEvents: "none", children: null };
-      obj2[0] = tmp4.subtitleMeasure;
-      obj3 = { variant: "text-md/medium", maxFontSizeMultiplier: 2, onTextLayout: null, children: null };
-      obj3[2] = callback1;
-      let tmp6Result = tmp6(4550);
-      const obj4 = { channelId: null };
-      obj4[0] = stateFromStores1.id;
-      obj3[3] = tmp6Result.parseTopic(stateFromStores1.topic, true, obj4);
-      obj2[2] = callback(tmp(4556).Text, obj3);
-      const items5 = [callback(View, obj2), , , ];
-      const obj5 = { color: "text-muted", variant: "text-md/medium", style: null, maxFontSizeMultiplier: 2, lineClamp: 3, children: null };
-      obj5[2] = tmp4.subtitle;
-      tmp6Result = tmp6(4550);
-      const obj6 = { channelId: null };
-      obj6[0] = stateFromStores1.id;
-      obj5[5] = tmp6Result.parseTopic(stateFromStores1.topic, true, obj6);
-      items5[1] = callback(tmp(4556).Text, obj5);
+      const obj6 = { spacing: 4, style: tmp4.subtitleContainer, children: null };
+      const obj7 = { style: tmp4.subtitleMeasure, pointerEvents: "none", children: null };
+      const obj8 = { variant: "text-md/medium", maxFontSizeMultiplier: 2, onTextLayout: callback1, children: null };
+      const obj9 = { channelId: stateFromStores1.id };
+      obj8.children = tmp6(4564).parseTopic(stateFromStores1.topic, true, obj9);
+      obj7.children = closure_10(tmp(4570).Text, obj8);
+      const items5 = [closure_10(View, obj7), , , ];
+      const obj10 = { color: "text-muted", variant: "text-md/medium", style: tmp4.subtitle, maxFontSizeMultiplier: 2, lineClamp: 3, children: null };
+      const tmp23 = closure_11;
+      const tmp25 = View;
+      const tmp6Result = tmp6(4564);
+      const obj11 = { channelId: stateFromStores1.id };
+      obj10.children = tmp6(4564).parseTopic(stateFromStores1.topic, true, obj11);
+      items5[1] = closure_10(tmp(4570).Text, obj10);
       let tmp24Result = null;
       if (tmp5[0]) {
-        const obj7 = { onPress: null, accessibilityRole: "button", children: null };
-        obj7[0] = callback2;
-        const obj8 = { variant: "text-sm/medium", color: "text-brand", style: null, children: null };
-        obj8[2] = { textDecorationLine: "underline" };
+        const obj12 = { onPress: callback2, accessibilityRole: "button", children: null };
+        const obj13 = { variant: "text-sm/medium", color: "text-brand", style: { textDecorationLine: "underline" }, children: null };
         const intl2 = tmp(1114).intl;
-        obj8[3] = intl2.string(tmp(1114).t["/QvRak"]);
-        obj7[2] = tmp24(tmp(4556).Text, obj8);
-        tmp24Result = tmp24(tmp(5123).PressableHighlight, obj7);
+        obj13.children = intl2.string(tmp(1114).t["/QvRak"]);
+        obj12.children = tmp24(tmp(4570).Text, obj13);
+        tmp24Result = tmp24(tmp(5137).PressableHighlight, obj12);
       }
       items5[2] = tmp24Result;
-      const obj9 = { style: null };
-      obj9[0] = tmp4.divider;
-      items5[3] = callback(View, obj9);
-      obj1[2] = items5;
-      tmp23Result = callback2(tmp(4973).Stack, obj1);
-      const tmp23 = callback2;
-      const tmp25 = View;
+      const obj14 = { style: tmp4.divider };
+      items5[3] = closure_10(tmp25, obj14);
+      obj6.children = items5;
+      tmp23Result = tmp23(tmp(4987).Stack, obj6);
+      const tmp6Result3 = tmp6(4564);
     }
     str = stateFromStores1.topic;
   }
-  const obj10 = { modalType: null, onAgree: null, onDisagree: null, title: null, subtitle: null, description: null, agreement: null, disagreement: null, guildId: null, channelId: null };
-  const tmp20 = callback;
-  tmp7 = computeChannelNameDefault(stateFromStores1);
-  obj10[0] = _require(8413).NsfwSpaceWarningModalType.SPOILER_CHANNEL;
-  obj10[1] = function onAgree() {
-    callback(isVocalResult[14]).spoilerAgree(channelId.channelId);
+  const obj15 = { modalType: null, onAgree: null, onDisagree: null, title: null, subtitle: null, description: null, agreement: null, disagreement: null, guildId: null, channelId: null };
+  const tmp20 = closure_10;
+  tmp7 = useChannelNameDefault(stateFromStores1);
+  obj15.modalType = require("AgeVerificationAnalyticsUtils").NsfwSpaceWarningModalType.SPOILER_CHANNEL;
+  obj15.onAgree = function onAgree() {
+    GuildActionCreatorsDefault.spoilerAgree(channelId.channelId);
   };
-  obj10[2] = callback;
-  obj10[3] = stringResult;
-  obj10[4] = tmp23Result;
+  obj15.onDisagree = callback;
+  obj15.title = stringResult;
+  obj15.subtitle = tmp23Result;
   const intl3 = tmp(1114).intl;
-  obj10[5] = intl3.string(_require(1114).t["08bm2Z"]);
+  obj15.description = intl3.string(require("util").t["08bm2Z"]);
   const intl4 = tmp(1114).intl;
-  obj10[6] = intl4.string(_require(1114).t.KmRwcW);
+  obj15.agreement = intl4.string(require("util").t.KmRwcW);
   const intl5 = tmp(1114).intl;
-  obj10[7] = intl5.string(_require(1114).t["/g10LC"]);
+  obj15.disagreement = intl5.string(require("util").t["/g10LC"]);
   let id;
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  obj10[8] = id;
-  obj10[9] = channelId.channelId;
-  return tmp20(GatedContentDefault, obj10);
+  obj15.guildId = id;
+  obj15.channelId = channelId.channelId;
+  return tmp20(GatedContentDefault, obj15);
 };

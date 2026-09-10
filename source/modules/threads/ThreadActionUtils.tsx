@@ -1,16 +1,17 @@
-// Module ID: 4207
-// Function ID: 4208
-// Name: doesThreadMembersActionAffectMe
+// Module ID: 4220
+// Function ID: 4221
+// Name: ThreadActionUtils
 // Dependencies: [502, 2]
 // Exports: doesThreadMembersActionAffectMe
 
-// Module 4207 (doesThreadMembersActionAffectMe)
-import closure_0 from "fetchFingerprint" /* 502 */;
+// Module 4220 (ThreadActionUtils)
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-const result = require("set").fileFinishedImporting("modules/threads/ThreadActionUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/threads/ThreadActionUtils.tsx");
 
 export const doesThreadMembersActionAffectMe = function doesThreadMembersActionAffectMe(removedMemberIds) {
-  id = id.getId();
+  const id = AuthenticationStore.getId();
   let tmp2 = null != id;
   if (tmp2) {
     removedMemberIds = removedMemberIds.removedMemberIds;

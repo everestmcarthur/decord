@@ -1,23 +1,23 @@
-// Module ID: 16397
-// Function ID: 16398
+// Module ID: 16428
+// Function ID: 16429
 // Name: useNotificationsTabBadge
-// Dependencies: [19, 7639, 504, 7640, 2]
+// Dependencies: [19, 7653, 504, 7654, 2]
 // Exports: default
 
-// Module 16397 (useNotificationsTabBadge)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "_validate" /* 7639 */;
+// Module 16428 (useNotificationsTabBadge)
+import noop from "module_19" /* 19 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 7653 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/notifications/useNotificationsTabBadge.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/notifications/useNotificationsTabBadge.tsx");
 
 export default function useNotificationsTabBadge() {
-  let obj = stateFromStores(504);
-  const items = [closure_3];
-  stateFromStores = obj.useStateFromStores(items, () => localItems.localItems);
+  const items = [NotificationCenterItemsStore];
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => localItems.localItems);
   const items1 = [stateFromStores];
-  const memo = React.useMemo(() => stateFromStores.filter((type) => {
-    let tmp3 = type.type === callback(table[3]).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS;
+  const memo = noop.useMemo(() => stateFromStores.filter((type) => {
+    let tmp3 = type.type === stateFromStores(closure_1_1[3]).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS;
     if (!tmp3) {
       tmp3 = type.type === tmp(tmp2[3]).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS;
     }
@@ -26,6 +26,5 @@ export default function useNotificationsTabBadge() {
     }
     return tmp3;
   }).length, items1);
-  obj = { value: memo, showDot: memo > 0 };
-  return obj;
+  return { value: memo, showDot: memo > 0 };
 };

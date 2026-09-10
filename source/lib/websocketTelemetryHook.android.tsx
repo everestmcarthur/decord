@@ -1,13 +1,13 @@
-// Module ID: 17901
-// Function ID: 17902
-// Name: installWebsocketTelemetryHook
+// Module ID: 17934
+// Function ID: 17935
+// Name: websocketTelemetryHook
 // Dependencies: [2]
 // Exports: installWebsocketTelemetryHook
 
-// Module 17901 (installWebsocketTelemetryHook)
-import set from "set" /* 2 */;
+// Module 17934 (websocketTelemetryHook)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("lib/websocketTelemetryHook.android.tsx");
+const result = size.fileFinishedImporting("lib/websocketTelemetryHook.android.tsx");
 
 export const installWebsocketTelemetryHook = function installWebsocketTelemetryHook(arg0) {
   closure_0 = arg0;
@@ -91,30 +91,30 @@ export const installWebsocketTelemetryHook = function installWebsocketTelemetryH
       obj.type = "binary";
     }
     try {
-      callback(obj);
+      closure_0(obj);
     } catch (err) {
     }
   }
   if (typeof globalThis !== "undefined") {
     let _globalThis = globalThis;
   } else {
-    _globalThis = closure_0;
-    if (undefined === closure_0) {
-      let _window = window;
-      _window = null;
+    _globalThis = global;
+    if (undefined === global) {
+      const _window = window;
+      let _window1 = null;
       if (typeof window !== "undefined") {
-        _window = window;
+        _window1 = window;
       }
-      _globalThis = _window;
+      _globalThis = _window1;
     }
   }
-  let _WebSocket;
+  let _WebSocket1;
   if (_globalThis != null) {
-    _WebSocket = _globalThis.WebSocket;
+    _WebSocket1 = _globalThis.WebSocket;
   }
-  if (null != _WebSocket) {
+  if (null != _WebSocket1) {
     if (!_globalThis.__discordWebsocketTelemetryPatched) {
-      _WebSocket = _globalThis.WebSocket;
+      const _WebSocket = _globalThis.WebSocket;
       class PatchedWebSocket {
         constructor() {
           items = [...arguments];
@@ -131,12 +131,12 @@ export const installWebsocketTelemetryHook = function installWebsocketTelemetryH
           c0 = str;
           if (typeof obj.addEventListener === "function") {
             str2 = "message";
-            listener = obj.addEventListener("message", (data) => {
-              data = undefined;
-              if (data != null) {
-                data = data.data;
+            listener = obj.addEventListener("message", (event) => {
+              let data;
+              if (event != null) {
+                data = event.data;
               }
-              closure_1_2(str, data);
+              handleMessage(str, data);
             });
           }
           return obj;

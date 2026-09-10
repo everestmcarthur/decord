@@ -1,27 +1,24 @@
-// Module ID: 7874
-// Function ID: 7875
-// Name: useActiveThemeType
-// Dependencies: [1185, 4379, 1228, 1186, 504, 4416, 2]
+// Module ID: 7888
+// Function ID: 7889
+// Name: useActiveTheme
+// Dependencies: [1185, 4393, 1228, 1186, 504, 4430, 2]
 // Exports: useIsClientThemeOrCustomThemeActive, useIsCustomThemeActive
 
-// Module 7874 (useActiveThemeType)
+// Module 7888 (useActiveTheme)
 import initialize from "initialize" /* 504 */;
-import getGuildIdFromNavigationStateDefault from "getGuildIdFromNavigationState" /* 4416 */;
-import closure_3 from "CHANNEL_SIDEBAR_WIDTH" /* 1185 */;
-import closure_4 from "reset" /* 4379 */;
-import closure_5 from "reset" /* 1228 */;
-import SystemThemeState from "SystemThemeState" /* 1186 */;
+import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 4430 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4393 */;
+import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1228 */;
 
-require = arg1;
+require = fn;
 function useActiveThemeType() {
-  const items = [closure_5];
-  const stateFromStores = initialize.useStateFromStores(items, () => closure_5.hasCustomTheme());
-  const obj = initialize;
-  const items1 = [closure_4];
+  const items = [CustomThemeMobileStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => CustomThemeMobileStore.hasCustomTheme());
+  const items1 = [ClientThemesBackgroundStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => null != gradientPreset.gradientPreset);
-  const tmp3 = getGuildIdFromNavigationStateDefault();
-  const obj2 = initialize;
-  const items2 = [closure_3];
+  const tmp3 = useRoutedActiveGuildThemeDefault();
+  const items2 = [UnsyncedUserSettingsStore];
   let type;
   const stateFromStores2 = initialize.useStateFromStores(items2, () => useSystemTheme.useSystemTheme);
   if (tmp3 != null) {
@@ -48,8 +45,10 @@ function useActiveThemeType() {
   }
   return DEFAULT;
 }
-({ SystemThemeState: closure_6, ActiveThemeType: error } = SystemThemeState);
-const result = require("set").fileFinishedImporting("modules/client_themes/native/useActiveTheme.tsx");
+const ThemeConstants = fn(1186);
+({ SystemThemeState: metroRequire, ActiveThemeType: closure_7 } = ThemeConstants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/client_themes/native/useActiveTheme.tsx");
 
 export const useIsCustomThemeActive = function useIsCustomThemeActive() {
   return useActiveThemeType() === constants2.CUSTOM;

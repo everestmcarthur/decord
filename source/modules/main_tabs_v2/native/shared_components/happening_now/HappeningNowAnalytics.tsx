@@ -1,13 +1,12 @@
-// Module ID: 16062
-// Function ID: 16063
-// Name: convertNullableArrayToItemAndItemIndex
+// Module ID: 16092
+// Function ID: 16093
+// Name: HappeningNowAnalytics
 // Dependencies: [32, 502, 11, 2]
 // Exports: getAffinityProperties
 
-// Module 16062 (convertNullableArrayToItemAndItemIndex)
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "fetchFingerprint" /* 502 */;
+// Module 16092 (HappeningNowAnalytics)
+import _slicedToArray from "module_32" /* 32 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 function convertNullableArrayToItemAndItemIndex(arg0) {
   const items = [];
@@ -18,9 +17,8 @@ function convertNullableArrayToItemAndItemIndex(arg0) {
     if (null === nextResult) {
       let arr = items1.push(-1);
     } else {
-      let tmp3 = nextResult;
-      arr = items.push(tmp2);
-      let arr1 = items1.push(items.length - 1);
+      let arr2 = items.push(tmp2);
+      let arr3 = items1.push(items.length - 1);
     }
     continue;
   }
@@ -73,24 +71,24 @@ function getItemChannelId(channelId) {
   }
   return channelId;
 }
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowAnalytics.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowAnalytics.tsx");
 
 export const getAffinityProperties = function getAffinityProperties(data) {
-  id = id.getId();
-  let obj = DISCORD_EPOCHDefault;
+  const id = AuthenticationStore.getId();
   if (obj.extractTimestamp(id) % 25 === 0) {
-    obj = {};
-    obj = { destination_channel_ids: null, destination_channel_ids_index: null };
-    [obj4[0], obj4[1]] = callback(convertNullableArrayToItemAndItemIndex(data.map(getItemChannelId)), 2);
-    const merged = Object.assign(obj);
-    const tmp6 = callback(convertNullableArrayToItemAndItemIndex(data.map(getItemChannelId)), 2);
-    obj1 = { highlighted_user_ids: null, highlighted_user_ids_index: null };
-    [obj5[0], obj5[1]] = callback(convertNullableArrayToItemAndItemIndex(data.map(getItemUserId)), 2);
-    const merged1 = Object.assign(obj1);
-    let obj2 = obj;
-    const tmp11 = callback(convertNullableArrayToItemAndItemIndex(data.map(getItemUserId)), 2);
+    const obj2 = {};
+    const obj3 = { destination_channel_ids: null, destination_channel_ids_index: null };
+    [obj4.destination_channel_ids, obj4.destination_channel_ids_index] = convertNullableArrayToItemAndItemIndex(data.map(getItemChannelId));
+    const merged = Object.assign(obj3);
+    const tmp6 = _slicedToArray(convertNullableArrayToItemAndItemIndex(data.map(getItemChannelId)), 2);
+    const obj9 = { highlighted_user_ids: null, highlighted_user_ids_index: null };
+    [obj5.highlighted_user_ids, obj5.highlighted_user_ids_index] = convertNullableArrayToItemAndItemIndex(data.map(getItemUserId));
+    const merged1 = Object.assign(obj9);
+    let obj10 = obj2;
+    const tmp11 = _slicedToArray(convertNullableArrayToItemAndItemIndex(data.map(getItemUserId)), 2);
   } else {
-    obj2 = {};
+    obj10 = {};
   }
-  return obj2;
+  return obj10;
 };

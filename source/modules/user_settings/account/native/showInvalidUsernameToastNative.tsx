@@ -1,22 +1,21 @@
-// Module ID: 6991
-// Function ID: 6992
-// Name: showInvalidUsernameToast
-// Dependencies: [4259, 1114, 6992, 2]
+// Module ID: 7005
+// Function ID: 7006
+// Name: showInvalidUsernameToastNative
+// Dependencies: [4272, 1114, 7006, 2]
 // Exports: showInvalidUsernameToast
 
-// Module 6991 (showInvalidUsernameToast)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import dispatcherDefault from "dispatcher" /* 4259 */;
-import registerAssetDefault from "registerAsset" /* 6992 */;
+// Module 7005 (showInvalidUsernameToastNative)
+import util from "util" /* 1114 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
+import _modDef7006 from "module_7006" /* 7006 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/user_settings/account/native/showInvalidUsernameToastNative.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/account/native/showInvalidUsernameToastNative.tsx");
 
 export const showInvalidUsernameToast = function showInvalidUsernameToast() {
-  let obj = dispatcherDefault;
-  obj = { key: "USER_SETTINGS_UPDATE_FAILURE", content: null, icon: null };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t["TGg/2k"]);
-  obj[2] = registerAssetDefault;
-  obj.open(obj);
+  const obj2 = { key: "USER_SETTINGS_UPDATE_FAILURE", content: null, icon: null };
+  const intl = util.intl;
+  obj2.content = intl.string(util.t["TGg/2k"]);
+  obj2.icon = _modDef7006;
+  ToastActionCreatorsDefault.open(obj2);
 };

@@ -1,74 +1,70 @@
-// Module ID: 16274
-// Function ID: 16275
+// Module ID: 16304
+// Function ID: 16305
 // Name: FavoritesGuildChannels
-// Dependencies: [19, 16205, 21, 7049, 4982, 16275, 16266, 16276, 16054, 16138, 16204, 16281, 16106, 2]
+// Dependencies: [19, 16235, 21, 7063, 4996, 16305, 16296, 16306, 16084, 16168, 16234, 16311, 16136, 2]
 // Exports: default
 
-// Module 16274 (FavoritesGuildChannels)
-import noopAll from "noop" /* 19 */;
-import getFontScale from "getFontScale" /* 4982 */;
-import useScaledRowHeightDefault from "useScaledRowHeight" /* 7049 */;
-import ChannelListPanelBackdropDefault from "ChannelListPanelBackdrop" /* 16054 */;
-import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 16138 */;
-import PX_8Default from "PX_8" /* 16204 */;
-import getMissingFavoriteThreadIds from "getMissingFavoriteThreadIds" /* 16275 */;
-import FavoritesGuildSuggestionsLoaderInnerDefault from "FavoritesGuildSuggestionsLoaderInner" /* 16276 */;
-import EmptyBodyDefault from "EmptyBody" /* 16281 */;
-import { useFavoritesGuildSuggestionCount as closure_3 } from "items" /* 16205 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 16304 (FavoritesGuildChannels)
+import useFontScale from "useFontScale" /* 4996 */;
+import useScaledRowHeightDefault from "useScaledRowHeight" /* 7063 */;
+import FavoritesGuildChannelList from "FavoritesGuildChannelList" /* 16305 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5, Fragment: closure_6 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/favorites/native/FavoritesGuildChannels.tsx");
+const ChannelListPanelBackdropDefault = tmp2(16084);
+const ChannelListStickyHeaderDefault = tmp2(16168);
+const FavoritesGuildSuggestedChannelsDefault = tmp2(16234);
+const FavoritesGuildSuggestionsLoaderDefault = tmp2(16306);
+const FavoritesGuildSidebarHeaderDefault = tmp2(16311);
+require = fn;
+let closure_3 = fn(16235).useFavoritesGuildSuggestionCount;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuildChannels.tsx");
 
 export default function FavoritesGuildChannels(arg0) {
-  const tmp = callback();
+  const tmp = closure_3();
   let tmp2 = importDefault;
   let obj = dependencyMap;
-  obj1 = getFontScale;
-  const fontScale = obj1.useFontScale();
-  let obj2 = getMissingFavoriteThreadIds;
-  obj = { withSuggestionsNotice: tmp > 0 };
-  const favoritesGuildChannelList = obj2.useFavoritesGuildChannelList(obj);
-  ({ guildChannels, shouldShowEmptyState, hasNoChannels } = favoritesGuildChannelList);
   const tmp3 = useScaledRowHeightDefault();
+  const fontScale = useFontScale.useFontScale();
+  const favoritesGuildChannelList = FavoritesGuildChannelList.useFavoritesGuildChannelList({ withSuggestionsNotice: tmp > 0 });
+  ({ guildChannels, shouldShowEmptyState, hasNoChannels } = favoritesGuildChannelList);
+  const obj4 = { withSuggestionsNotice: tmp > 0 };
   if (!obj5.useShouldRenderChannelList()) {
     return null;
   } else {
-    let tmp2Result = arg0;
-    const items = [callback2(FavoritesGuildSuggestionsLoaderInnerDefault, {}), ];
+    let tmp2Result2 = arg0;
+    const items = [React4(FavoritesGuildSuggestionsLoaderDefault, {}), ];
     if (hasNoChannels) {
-      obj = { style: null, contentInset: null, children: null };
-      ({ style: obj8[0], contentInset: obj8[1] } = tmp2Result);
-      tmp2Result = ChannelListPanelBackdropDefault;
-      obj1 = { guild: null, showExtraButtons: false, canOpenGuildActionSheet: false };
-      obj1[0] = tmp2Result.guild;
-      const items1 = [tmp10(ChannelListStickyHeaderDefault, obj1), , ];
-      tmp2Result = PX_8Default;
-      items1[1] = tmp10(tmp2Result, {});
+      const obj6 = { style: null, contentInset: null, children: null };
+      ({ style: obj8.style, contentInset: obj8.contentInset } = tmp2Result2);
+      const obj7 = { guild: tmp2Result2.guild, showExtraButtons: false, canOpenGuildActionSheet: false };
+      const items1 = [tmp10(ChannelListStickyHeaderDefault, obj7), , ];
+      tmp2Result2 = FavoritesGuildSuggestedChannelsDefault;
+      items1[1] = tmp10(tmp2Result2, {});
       let tmp10Result = null;
       if (shouldShowEmptyState) {
-        tmp2 = EmptyBodyDefault;
+        tmp2 = FavoritesGuildSidebarHeaderDefault;
         obj = {};
         tmp10Result = tmp10(tmp2, obj);
       }
       items1[2] = tmp10Result;
-      obj[2] = items1;
-      tmp10Result = tmp8(tmp2Result, obj);
+      obj6.children = items1;
+      let tmp10Result1 = tmp8(ChannelListPanelBackdropDefault, obj6);
+      const tmp2Result = ChannelListPanelBackdropDefault;
     } else {
-      obj2 = {};
-      const merged = Object.assign(tmp2Result);
-      obj2.guildChannels = guildChannels;
-      obj2.guildChannelsVersion = 0;
-      obj2.favoritesSuggestionsNoticeHeight = tmp4(16204).getFavoritesSuggestionsNoticeHeight(fontScale, tmp3, tmp);
-      tmp10Result = tmp10(tmp4(16106).ChannelList, obj2);
-      const tmp4Result = tmp4(16204);
+      const obj9 = {};
+      const merged = Object.assign(tmp2Result2);
+      obj9.guildChannels = guildChannels;
+      obj9.guildChannelsVersion = 0;
+      obj9.favoritesSuggestionsNoticeHeight = tmp4(16234).getFavoritesSuggestionsNoticeHeight(fontScale, tmp3, tmp);
+      tmp10Result1 = tmp10(tmp4(16136).ChannelList, obj9);
+      const tmp4Result = tmp4(16234);
     }
-    const obj3 = { children: null };
-    items[1] = tmp10Result;
-    obj3[0] = items;
-    closure_5(closure_6, obj3);
-    const tmp9 = closure_6;
+    const obj10 = { children: null };
+    items[1] = tmp10Result1;
+    obj10.children = items;
+    hasOwnProperty(timestampProducer, obj10);
   }
 };

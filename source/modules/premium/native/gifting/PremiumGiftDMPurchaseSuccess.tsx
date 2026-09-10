@@ -1,52 +1,50 @@
-// Module ID: 11079
-// Function ID: 11080
-// Name: PremiumGiftDMSuccessBody
-// Dependencies: [19, 17, 21, 4560, 576, 10704, 1483, 10748, 10667, 4975, 1114, 2460, 10835, 4556, 2]
+// Module ID: 11106
+// Function ID: 11107
+// Name: PremiumGiftDMPurchaseSuccess
+// Dependencies: [19, 17, 21, 4574, 576, 10731, 1483, 10775, 10694, 4989, 1114, 2460, 10862, 4570, 2]
 // Exports: PremiumGiftDMSuccessActions, default
 
-// Module 11079 (PremiumGiftDMSuccessBody)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import NativeGiftContextProvider from "NativeGiftContextProvider" /* 10704 */;
-import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation" /* 10835 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11106 (PremiumGiftDMPurchaseSuccess)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import PremiumGiftModal from "PremiumGiftModal" /* 10694 */;
+import NativeGiftContext from "NativeGiftContext" /* 10731 */;
+import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation" /* 10862 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { title: null, description: null };
-createCacheKey = { marginTop: ThemesDefault.space.PX_24, textAlign: "center" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
-const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftDMPurchaseSuccess.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { title: { marginTop: nativeDefault.space.PX_24, textAlign: "center" }, description: null };
+let obj3 = { marginTop: nativeDefault.space.PX_24, textAlign: "center" };
+obj2.description = { marginTop: nativeDefault.space.PX_8, textAlign: "center" };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftDMPurchaseSuccess.tsx");
 
 export default function PremiumGiftDMSuccessBody() {
-  const tmp = callback3();
-  let obj = NativeGiftContextProvider;
-  obj = { children: null };
-  obj = { children: callback(PremiumGiftBackgroundAnimationDefault, { giftStyle: obj.useNativeGiftContext().giftStyle }) };
-  const items = [callback(View, obj), , ];
-  obj1 = { style: tmp.title, variant: "heading-lg/bold", children: null };
-  const intl = getSystemLocale.intl;
-  obj1[2] = intl.string(getSystemLocale.t.MqZXbv);
-  items[1] = callback(Text.Text, obj1);
-  const obj2 = { style: tmp.description, variant: "text-md/medium", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj2[2] = intl2.string(getSystemLocale.t.Y1keV0);
-  items[2] = callback(Text.Text, obj2);
-  obj[0] = items;
-  return callback2(closure_6, obj);
+  const tmp = closure_8();
+  const obj2 = { children: null };
+  const items = [hasOwnProperty(View, { children: hasOwnProperty(PremiumGiftBackgroundAnimationDefault, { giftStyle: NativeGiftContext.useNativeGiftContext().giftStyle }) }), , ];
+  const obj4 = { style: tmp.title, variant: "heading-lg/bold", children: null };
+  const intl = util.intl;
+  obj4.children = intl.string(util.t.MqZXbv);
+  items[1] = hasOwnProperty(Text_Text.Text, obj4);
+  const obj5 = { style: tmp.description, variant: "text-md/medium", children: null };
+  const intl2 = util.intl;
+  obj5.children = intl2.string(util.t.Y1keV0);
+  items[2] = hasOwnProperty(Text_Text.Text, obj5);
+  obj2.children = items;
+  return React5(timestampProducer, obj2);
 };
 export const PremiumGiftDMSuccessActions = function PremiumGiftDMSuccessActions() {
-  let obj = onClose(navigation[5]);
-  const nativeGiftContext = obj.useNativeGiftContext();
+  const nativeGiftContext = onClose(navigation[5]).useNativeGiftContext();
   onClose = nativeGiftContext.onClose;
   const prePurchaseGiftingBadgeProgress = nativeGiftContext.prePurchaseGiftingBadgeProgress;
+  let obj = onClose(navigation[5]);
   navigation = onClose(navigation[6]).useNavigation();
   const GiftingBadgeExperiment = onClose(navigation[7]).GiftingBadgeExperiment;
   const enabled = GiftingBadgeExperiment.useConfig({ location: "PremiumGiftDMSuccessActions" }).enabled;
@@ -54,16 +52,15 @@ export const PremiumGiftDMSuccessActions = function PremiumGiftDMSuccessActions(
   const callback = enabled.useCallback(() => {
     if (enabled) {
       if (null != prePurchaseGiftingBadgeProgress) {
-        const obj = { currentProgress: null };
-        obj[0] = tmp;
-        navigation.navigate(onClose(navigation[8]).PremiumGiftScreens.GIFTING_BADGE, obj);
+        const obj = { currentProgress: tmp };
+        navigation.navigate(PremiumGiftModal.PremiumGiftScreens.GIFTING_BADGE, obj);
       }
     }
     onClose();
   }, items);
-  obj = { text: null, variant: "primary", onPress: null };
+  const obj3 = { text: null, variant: "primary", onPress: null };
   const intl = onClose(navigation[10]).intl;
-  obj[0] = intl.string(prePurchaseGiftingBadgeProgress(navigation[11]).bGKjmg);
-  obj[2] = callback;
-  return callback(onClose(navigation[9]).Button, obj);
+  obj3.text = intl.string(prePurchaseGiftingBadgeProgress(navigation[11]).bGKjmg);
+  obj3.onPress = callback;
+  return closure_5(onClose(navigation[9]).Button, obj3);
 };

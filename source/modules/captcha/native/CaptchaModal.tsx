@@ -1,47 +1,48 @@
-// Module ID: 17290
-// Function ID: 17291
+// Module ID: 17321
+// Function ID: 17322
 // Name: CaptchaModal
-// Dependencies: [19, 17, 15949, 15950, 21, 4560, 6944, 1484, 17291, 7150, 4973, 5692, 4556, 1114, 4975, 11282, 17292, 15957, 2]
+// Dependencies: [19, 17, 15979, 15980, 21, 4574, 6958, 1484, 17322, 7164, 4987, 5706, 4570, 1114, 4989, 11309, 17323, 15987, 2]
 // Exports: default
 
-// Module 17290 (CaptchaModal)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1484 */;
-import Text from "Text" /* 4556 */;
-import Stack from "Stack" /* 4973 */;
-import Button from "Button" /* 4975 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5692 */;
-import Background from "Background" /* 7150 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { doesRegistrationHaveIdentityType as closure_6 } from "useRegistrationUIStore" /* 15949 */;
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15950 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17321 (CaptchaModal)
+import util from "util" /* 1114 */;
+import Link from "Link" /* 1484 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Stack_Stack from "Stack/Stack" /* 4987 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import native from "native" /* 5706 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7164 */;
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 11309 */;
+import RegistrationUtils from "RegistrationUtils" /* 15987 */;
+import CaptchaUtilsDefault from "CaptchaUtils" /* 17323 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ Keyboard: c4, View: c5 } = get_ActivityIndicator);
-({ RegisterTransitionSteps: error, RegistrationTransitionActionTypes: closure_8 } = RegistrationTransitionActionTypes);
-({ jsx: c9, jsxs: c10 } = jsxProd);
-let closure_11 = createCacheKey.createStyles((arg0) => {
-  let paddingHorizontal = 8;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Keyboard: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+let closure_6 = fn(15979).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(15980);
+({ RegisterTransitionSteps: closure_7, RegistrationTransitionActionTypes: closure_8 } = RegistrationConstants);
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4574);
+let closure_11 = createStyles.createStyles((arg0) => {
+  let num = 8;
   if (arg0) {
-    paddingHorizontal = 32;
+    num = 32;
   }
-  return { contentContainer: { alignItems: "center", paddingVertical: 8, paddingHorizontal }, description: { paddingBottom: 12, paddingTop: 4 } };
+  return { contentContainer: { alignItems: "center", paddingVertical: 8, paddingHorizontal: num }, description: { paddingBottom: 12, paddingTop: 4 } };
 });
-let result = require("set").fileFinishedImporting("modules/captcha/native/CaptchaModal.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/captcha/native/CaptchaModal.tsx");
 
 export default function CaptchaModal(arg0) {
   ({ onCaptchaVerify: require, onReject } = arg0);
-  ({ close: dependencyMap, sitekey: closure_3, captchaService: closure_4, headerText, bodyText, rqdata: closure_5, rqtoken: closure_6, userflow: closure_7 } = arg0);
-  let navigation;
-  let callback;
-  const tmp2 = callback2(onReject(6944)());
-  let obj = createStandardNavigationFactories;
-  navigation = obj.useNavigation();
+  ({ close: dependencyMap, sitekey: noop, captchaService: closure_4, headerText, bodyText, rqdata: closure_5, rqtoken: closure_6, userflow: closure_7 } = arg0);
+  const tmp2 = closure_11(onReject(6958)());
+  const navigation = Link.useNavigation();
   const items = [navigation];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     const state = navigation.getState();
     let name;
     if (state != null) {
@@ -53,45 +54,42 @@ export default function CaptchaModal(arg0) {
     let str = "Guild Join Captcha";
     if ("auth" === name) {
       str = "Guild Join Captcha";
-      if (closure_1_6()) {
+      if (closure_6()) {
         str = "User Registration Captcha";
       }
     }
     return str;
   }, items);
-  callback = onReject(17291)({ onReject, analyticsType: memo });
-  const effect = React.useEffect(() => {
-    closure_4.dismiss();
+  closure_9 = onReject(17322)({ onReject, analyticsType: memo });
+  const effect = noop.useEffect(() => {
+    closure_1_4.dismiss();
   }, []);
-  obj = { style: tmp2.contentContainer, spacing: 12, children: null };
-  const items1 = [callback(AccountAgeTier10LargeBadge.DisguiseSpotIllustration, { scale: 0.5 }), , ];
+  let obj2 = { style: tmp2.contentContainer, spacing: 12, children: null };
+  const items1 = [closure_9(native.DisguiseSpotIllustration, { scale: 0.5 }), , ];
   if (headerText == null) {
     const intl = tmp3(1114).intl;
     headerText = intl.string(tmp3(1114).t.FpoiHe);
   }
-  const items2 = [callback(Text.Text, { variant: "heading-xl/bold", accessibilityRole: "header", children: headerText }), ];
-  obj = { variant: "text-md/medium", color: "text-subtle", style: tmp2.description, children: null };
+  const items2 = [closure_9(Text_Text.Text, { variant: "heading-xl/bold", accessibilityRole: "header", children: headerText }), ];
+  let obj3 = { variant: "text-md/medium", color: "text-subtle", style: tmp2.description, children: null };
   if (bodyText == null) {
     const intl2 = tmp3(1114).intl;
     bodyText = intl2.string(tmp3(1114).t["/CidxO"]);
   }
-  obj1 = { startHeight: 900, startExpanded: true, children: null };
-  let obj2 = { children: null };
-  obj[3] = bodyText;
-  items2[1] = callback(Text.Text, obj);
-  obj2[0] = items2;
-  items1[1] = closure_10(closure_5, obj2);
-  const obj3 = {
+  let obj4 = { startHeight: 900, startExpanded: true, children: null };
+  let obj5 = { children: null };
+  obj3.children = bodyText;
+  items2[1] = closure_9(Text_Text.Text, obj3);
+  obj5.children = items2;
+  items1[1] = closure_10(closure_5, obj5);
+  const obj6 = {
     grow: true,
     onPress() {
-      callback2();
-      callback();
-      const result = closure_1_0(closure_1_2[15]).emitCaptchaDistributionMetric(closure_7);
-      let obj = closure_1_0(closure_1_2[15]);
-      let obj2 = onReject(closure_1_2[16]);
-      const showCaptchaResult = onReject(closure_1_2[16]).showCaptcha(closure_4, closure_3, closure_5);
-      onReject(closure_1_2[16]).showCaptcha(closure_4, closure_3, closure_5).then((arg0) => {
-        let obj = state;
+      closure_9();
+      dependencyMap();
+      const result = SharedCaptchaUtils.emitCaptchaDistributionMetric(constants);
+      const showCaptchaResult = CaptchaUtilsDefault.showCaptcha(closure_1_4, noop, closure_1_5);
+      CaptchaUtilsDefault.showCaptcha(closure_1_4, noop, closure_1_5).then((result) => {
         state = state.getState();
         let name;
         if (state != null) {
@@ -102,17 +100,14 @@ export default function CaptchaModal(arg0) {
         }
         let tmp4 = "auth" === name;
         if (tmp4) {
-          tmp4 = closure_1_6();
+          tmp4 = closure_2_6();
         }
         if (tmp4) {
-          obj = { step: null, actionType: null };
-          obj[0] = closure_1_7.CAPTCHA;
-          obj[1] = closure_1_8.SUBMITTED;
-          closure_1_0(closure_1_2[17]).trackRegTransition(obj);
-          const obj2 = closure_1_0(closure_1_2[17]);
+          const obj3 = { step: constants.CAPTCHA, actionType: navigation.SUBMITTED };
+          RegistrationUtils.trackRegTransition(obj3);
         }
-        callback(arg0, closure_6);
-        const state1 = obj.getState();
+        closure_1_0(result, closure_1_6);
+        const state1 = state.getState();
         let name1;
         if (state1 != null) {
           const first1 = state1.routes[0];
@@ -122,27 +117,24 @@ export default function CaptchaModal(arg0) {
         }
         let tmp15 = "auth" === name1;
         if (tmp15) {
-          tmp15 = closure_1_6();
+          tmp15 = closure_2_6();
         }
         if (tmp15) {
-          obj = { step: null, actionType: null };
-          obj[0] = closure_1_7.CAPTCHA;
-          obj[1] = closure_1_8.SUCCESS;
-          closure_1_0(closure_1_2[17]).trackRegTransition(obj);
-          const obj4 = closure_1_0(closure_1_2[17]);
+          const obj5 = { step: constants.CAPTCHA, actionType: navigation.SUCCESS };
+          RegistrationUtils.trackRegTransition(obj5);
         }
-      }).catch((arg0) => {
-        if (closure_1 != null) {
-          tmp(arg0);
+      }).catch((error) => {
+        if (onReject != null) {
+          tmp(error);
         }
       });
     },
     text: null
   };
   const intl3 = tmp3(1114).intl;
-  obj3[2] = intl3.string(getSystemLocale.t["cY+Oob"]);
-  items1[2] = callback(Button.Button, obj3);
-  obj[2] = items1;
-  obj1[2] = closure_10(Stack.Stack, obj);
-  return callback(Background.BottomSheet, obj1);
+  obj6.text = intl3.string(util.t["cY+Oob"]);
+  items1[2] = closure_9(components_Button_Button.Button, obj6);
+  obj2.children = items1;
+  obj4.children = closure_10(Stack_Stack.Stack, obj2);
+  return closure_9(Sheet_BottomSheet.BottomSheet, obj4);
 };

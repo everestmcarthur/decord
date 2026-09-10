@@ -1,54 +1,55 @@
-// Module ID: 13459
-// Function ID: 13460
+// Module ID: 13482
+// Function ID: 13483
 // Name: ProgressWheel
-// Dependencies: [19, 17, 21, 4560, 4262, 576, 13449, 5587, 13460, 8456, 13461, 2]
+// Dependencies: [19, 17, 21, 4574, 4275, 576, 13472, 5601, 13483, 8484, 13484, 2]
 // Exports: default
 
-// Module 13459 (ProgressWheel)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import map from "map" /* 4262 */;
-import preloadDefault from "preload" /* 5587 */;
-import inlineStyles from "inlineStyles" /* 8456 */;
-import MAX_REFERRALS_SENT from "MAX_REFERRALS_SENT" /* 13449 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13482 (ProgressWheel)
+import nativeDefault from "native" /* 576 */;
+import useToken from "useToken" /* 4275 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import inlineStyles from "inlineStyles" /* 8484 */;
+import useReferralProgramBannerDetails from "useReferralProgramBannerDetails" /* 13472 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
+const inlineStylesDefault = inlineStyles;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let c6 = 160;
-let closure_7 = 2 * Math.PI * 77;
-let closure_8 = createCacheKey.createStyles({ progressCircleContainer: { width: 160, height: 160, alignItems: "center", justifyContent: "center", marginTop: 24 }, progressCircleImage: { position: "absolute", width: 93, height: 93, borderRadius: 46.5 }, glowImage: { position: "absolute", width: 180, height: 180 } });
-const result = require("set").fileFinishedImporting("modules/premium/referral_program/native/ProgressWheel.tsx");
+const strokeDasharray = 2 * Math.PI * 77;
+const createStyles = fn(4574);
+let closure_8 = createStyles.createStyles({ progressCircleContainer: { width: 160, height: 160, alignItems: "center", justifyContent: "center", marginTop: 24 }, progressCircleImage: { position: "absolute", width: 93, height: 93, borderRadius: 46.5 }, glowImage: { position: "absolute", width: 180, height: 180 } });
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/referral_program/native/ProgressWheel.tsx");
 
 export default function ProgressWheel(arg0) {
   ({ nReferralsSent, altImage } = arg0);
-  const tmp = callback2();
-  let obj = map;
-  const token = obj.useToken(ThemesDefault.colors.BACKGROUND_MOD_STRONG);
-  obj1 = map;
-  obj = { style: tmp.progressCircleContainer, children: null };
-  const token1 = obj1.useToken(ThemesDefault.colors.BACKGROUND_SURFACE_HIGH);
-  let tmp9 = nReferralsSent === MAX_REFERRALS_SENT.MAX_REFERRALS_SENT;
+  const tmp = closure_8();
+  const token = useToken.useToken(nativeDefault.colors.BACKGROUND_MOD_STRONG);
+  const obj3 = { style: tmp.progressCircleContainer, children: null };
+  const token1 = useToken.useToken(nativeDefault.colors.BACKGROUND_SURFACE_HIGH);
+  let tmp9 = nReferralsSent === useReferralProgramBannerDetails.MAX_REFERRALS_SENT;
   if (tmp9) {
-    obj = { source: null, style: null };
-    let tmp4Result = tmp4(5587);
-    obj[0] = tmp4(13460);
-    obj[1] = tmp.glowImage;
-    tmp9 = callback(tmp4Result, obj);
+    const obj4 = { source: tmp4(13483), style: tmp.glowImage };
+    tmp9 = React4(tmp4(5601), obj4);
+    const tmp4Result = tmp4(5601);
   }
   const items = [tmp9, , ];
-  obj1 = { width: c6, height: c6, children: null };
-  tmp4Result = tmp4(8456);
-  const items1 = [callback(inlineStyles.Circle, { cx: 80, cy: 80, r: 77, stroke: token, strokeWidth: 6, fill: token1 }), callback(inlineStyles.Circle, { cx: 80, cy: 80, r: 77, stroke: "#53ac66", strokeWidth: 6, fill: "transparent", strokeDasharray: closure_7, strokeDashoffset: closure_7 * (1 - 33.3 * nReferralsSent / 100), strokeLinecap: "round", rotation: -90, origin: "80, 80" })];
-  obj1[2] = items1;
-  items[1] = closure_5(tmp4Result, obj1);
+  const size = { width: v160, height: v160, children: null };
+  const tmp8 = View;
+  const items1 = [React4(inlineStyles.Circle, { cx: 80, cy: 80, r: 77, stroke: token, strokeWidth: 6, fill: token1 }), React4(inlineStyles.Circle, { cx: 80, cy: 80, r: 77, stroke: "#53ac66", strokeWidth: 6, fill: "transparent", strokeDasharray, strokeDashoffset: strokeDasharray * (1 - 33.3 * nReferralsSent / 100), strokeLinecap: "round", rotation: -90, origin: "80, 80" })];
+  size.children = items1;
+  items[1] = hasOwnProperty(inlineStylesDefault, size);
+  const obj5 = { cx: 80, cy: 80, r: 77, stroke: "#53ac66", strokeWidth: 6, fill: "transparent", strokeDasharray, strokeDashoffset: strokeDasharray * (1 - 33.3 * nReferralsSent / 100), strokeLinecap: "round", rotation: -90, origin: "80, 80" };
+  const tmp13 = React4;
+  const tmp4Result3 = inlineStylesDefault;
   if (altImage == null) {
-    altImage = tmp4(13461);
+    altImage = tmp4(13484);
   }
-  items[2] = callback(preloadDefault, { source: { uri: altImage }, style: tmp.progressCircleImage });
-  obj[1] = items;
-  return closure_5(View, obj);
+  items[2] = tmp13(FastImageDefault, { source: { uri: altImage }, style: tmp.progressCircleImage });
+  obj3.children = items;
+  return hasOwnProperty(tmp8, obj3);
 };

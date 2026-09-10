@@ -1,34 +1,37 @@
-// Module ID: 17940
-// Function ID: 17941
-// Name: promise
-// Dependencies: [1074, 17935, 1242, 4740, 7182, 9187, 2]
+// Module ID: 17973
+// Function ID: 17974
+// Name: DismissCallAction
+// Dependencies: [1074, 17968, 1242, 4754, 7196, 9214, 2]
 
-// Module 17940 (promise)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 17973 (DismissCallAction)
+import Constants from "Constants" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4754 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 9214 */;
+import HeadlessTaskUtilsDefault from "HeadlessTaskUtils" /* 17968 */;
+import size from "module_2" /* 2 */;
 
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/headless_tasks/android/DismissCallAction.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/headless_tasks/android/DismissCallAction.tsx");
 
 export default (arg0) => {
   closure_0 = arg0;
   return new Promise((arg0) => {
     closure_0 = arg0;
-    closure_1_1(closure_1_2[1]).awaitStorage(() => {
-      if (lib.isFullscreenCallUI) {
-        let obj = closure_2_1(closure_2_2[2]);
-        obj = { action_type: "decline" };
-        const merged = Object.assign(lib(closure_2_2[3]).collectChannelAnalyticsMetadataFromId(tmp.channelId));
-        obj.track(closure_2_3.CALLKIT_CLICKED, obj);
-        const obj3 = lib(closure_2_2[3]);
+    HeadlessTaskUtilsDefault.awaitStorage(() => {
+      if (closure_0.isFullscreenCallUI) {
+        const obj2 = { action_type: "decline" };
+        const obj = AnalyticsUtilsDefault;
+        const merged = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadataFromId(tmp.channelId));
+        obj.track(AnalyticEvents.CALLKIT_CLICKED, obj2);
       }
-      obj = { location: closure_2_1(closure_2_2[4]).PUSH_NOTIFICATION, guild_id: tmp.guildId, ringer_user_id: tmp.userId };
-      const obj4 = closure_2_1(closure_2_2[2]);
-      const merged1 = Object.assign(lib(closure_2_2[3]).collectChannelAnalyticsMetadataFromId(tmp.channelId));
-      obj4.track(closure_2_3.RING_CALL_DECLINED, obj);
-      const obj6 = lib(closure_2_2[3]);
-      closure_2_1(closure_2_2[5]).stopRinging(lib.channelId);
-      lib(true);
+      const obj4 = AnalyticsUtilsDefault;
+      const obj5 = { location: AnalyticsLocationDefault.PUSH_NOTIFICATION, guild_id: closure_0.guildId, ringer_user_id: closure_0.userId };
+      const merged1 = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadataFromId(tmp.channelId));
+      obj4.track(AnalyticEvents.RING_CALL_DECLINED, obj5);
+      CallActionCreatorsDefault.stopRinging(closure_0.channelId);
+      closure_0(true);
     });
   });
 };

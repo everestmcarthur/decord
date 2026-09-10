@@ -1,24 +1,28 @@
-// Module ID: 8812
-// Function ID: 8813
-// Dependencies: [19, 17, 21, 8813, 8809, 2]
+// Module ID: 8841
+// Function ID: 8842
+// Name: ProfileEffectLayer
+// Dependencies: [19, 17, 21, 8842, 8838, 2]
 
-// Module 8812
-import importAllResult from "noop" /* 19 */;
-import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 8841 (ProfileEffectLayer)
+import ProfileEffectUtils from "ProfileEffectUtils" /* 8838 */;
+import APNGPlayer from "APNGPlayer" /* 8842 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const memoResult = importAllResult.memo((paused) => {
+require = fn;
+const StyleSheet = fn(17).StyleSheet;
+const jsx = fn(21).jsx;
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffectLayer.android.tsx");
+
+export default noop.memo((paused) => {
   ({ layerConfig, animate } = paused);
   paused = paused.paused;
   const width = paused.width;
-  let aPNGPlayerControls;
   ({ accessibilityLabel, onLoad } = paused);
-  const ref = aPNGPlayerControls.useRef(null);
-  let obj = animate(paused[3]);
-  aPNGPlayerControls = obj.useAPNGPlayerControls(ref);
+  const ref = noop.useRef(null);
+  const aPNGPlayerControls = APNGPlayer.useAPNGPlayerControls(ref);
   const items = [animate, paused, aPNGPlayerControls];
-  const effect = aPNGPlayerControls.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (animate) {
       if (!paused) {
         aPNGPlayerControls.play();
@@ -26,20 +30,19 @@ const memoResult = importAllResult.memo((paused) => {
     }
     aPNGPlayerControls.pause();
   }, items);
-  obj = { ref, url: layerConfig.src, autoplay: false, style: null, ariaLabel: null, onLoad: null };
+  const obj2 = { ref, url: layerConfig.src, autoplay: false, style: null, ariaLabel: null, onLoad: null };
   const items1 = [StyleSheet.absoluteFill, ];
-  obj = { position: "absolute", width, height: animate(paused[4]).calculateProfileEffectHeight(layerConfig, width), opacity: null };
+  const size = { position: "absolute", width, height: null, opacity: null };
+  const tmp4 = jsx;
+  size.height = ProfileEffectUtils.calculateProfileEffectHeight(layerConfig, width);
   let num = 0;
   if (animate) {
     num = 1;
   }
-  obj[3] = num;
-  items1[1] = obj;
-  obj[3] = items1;
-  obj[4] = accessibilityLabel;
-  obj[5] = onLoad;
-  return jsx(animate(paused[3]).APNGPlayer, { position: "absolute", width, height: animate(paused[4]).calculateProfileEffectHeight(layerConfig, width), opacity: null });
+  size.opacity = num;
+  items1[1] = size;
+  obj2.style = items1;
+  obj2.ariaLabel = accessibilityLabel;
+  obj2.onLoad = onLoad;
+  return tmp4(APNGPlayer.APNGPlayer, obj2);
 });
-const result = require("set").fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffectLayer.android.tsx");
-
-export default memoResult;

@@ -1,65 +1,63 @@
-// Module ID: 8857
-// Function ID: 8858
-// Name: redeemError
+// Module ID: 8884
+// Function ID: 8885
+// Name: VirtualCurrencyStore
 // Dependencies: [504, 573, 2]
 
-// Module 8857 (redeemError)
+// Module 8884 (VirtualCurrencyStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
-let object = importDefault;
 const Store = initializeDefault.Store;
 class VirtualCurrencyStore extends Store {
   constructor() {
     closure_0 = undefined;
     obj = {
       VIRTUAL_CURRENCY_REDEEM_START(skuId) {
-            return obj.handleRedeemVirtualCurrencyStart(skuId);
+            return closure_0.handleRedeemVirtualCurrencyStart(skuId);
           },
       VIRTUAL_CURRENCY_REDEEM_SUCCESS(entitlements) {
-            return obj.handleRedeemVirtualCurrencySuccess(entitlements);
+            return closure_0.handleRedeemVirtualCurrencySuccess(entitlements);
           },
       VIRTUAL_CURRENCY_REDEEM_FAIL(error) {
-            return obj.handleRedeemVirtualCurrencyFail(error);
+            return closure_0.handleRedeemVirtualCurrencyFail(error);
           },
       VIRTUAL_CURRENCY_BALANCE_FETCH(arg0) {
-            return obj.handleBalanceFetch(arg0);
+            return closure_0.handleBalanceFetch(arg0);
           },
       VIRTUAL_CURRENCY_BALANCE_FETCH_SUCCESS(balance) {
-            return obj.handleBalanceFetchSuccess(balance);
+            return closure_0.handleBalanceFetchSuccess(balance);
           },
       VIRTUAL_CURRENCY_BALANCE_FETCH_FAIL(error) {
-            return obj.handleBalanceFetchFail(error);
+            return closure_0.handleBalanceFetchFail(error);
           },
       VIRTUAL_CURRENCY_BALANCE_UPDATE(arg0) {
-            return obj.handleBalanceUpdate(arg0);
+            return closure_0.handleBalanceUpdate(arg0);
           },
       VIRTUAL_CURRENCY_ONBOARDING_MODAL_OPEN(arg0) {
-            return obj.handleOnboardingModalOpen(arg0);
+            return closure_0.handleOnboardingModalOpen(arg0);
           },
       VIRTUAL_CURRENCY_ONBOARDING_MODAL_RESET(arg0) {
-            return obj.handleOnboardingModalReset(arg0);
+            return closure_0.handleOnboardingModalReset(arg0);
           },
       LOGIN_SUCCESS() {
-            return obj.handleBalanceStateReset();
+            return closure_0.handleBalanceStateReset();
           },
       VIRTUAL_CURRENCY_SET_BALANCE_PILL_OVERLAY(balancePillOverlay) {
-            const result = obj.setBalancePillOverlay(balancePillOverlay.balancePillOverlay);
+            const result = closure_0.setBalancePillOverlay(balancePillOverlay.balancePillOverlay);
           }
     };
-    tmp2 = new tmp2(require("dispatcher"), obj, new.target, tmp2, tmp, new.target, undefined);
-    // ThrowIfThisInitialized (0x7c)
-    closure_0 = tmp2;
-    tmp2._entitlements = null;
-    tmp2._redeemingSkuId = null;
-    tmp2._isRedeemingVirtualCurrency = false;
-    tmp2._redeemVirtualCurrencyError = null;
-    tmp2._balance = null;
-    tmp2._fetchBalanceError = null;
-    tmp2._isFetchingBalance = false;
-    tmp2._onboardingModalOpenedPrior = false;
-    tmp2._balancePillOverlay = false;
-    return tmp2;
+    tmp21 = new tmp2(closure_0(closure_1[1]), obj, new.target, tmp2, tmp, new.target, undefined);
+    closure_0 = tmp21;
+    tmp21._entitlements = null;
+    tmp21._redeemingSkuId = null;
+    tmp21._isRedeemingVirtualCurrency = false;
+    tmp21._redeemVirtualCurrencyError = null;
+    tmp21._balance = null;
+    tmp21._fetchBalanceError = null;
+    tmp21._isFetchingBalance = false;
+    tmp21._onboardingModalOpenedPrior = false;
+    tmp21._balancePillOverlay = false;
+    return tmp21;
   }
 }
 const prototype = VirtualCurrencyStore.prototype;
@@ -82,13 +80,13 @@ Object.defineProperty(prototype, "redeemingSkuId", {
   set: undefined
 });
 Object.defineProperty(prototype, "entitlements", {
-  get: function entitlements(preorder_release_at) {
+  get: function entitlements() {
     return this._entitlements;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "balance", {
-  get: function balance(arg0) {
+  get: function balance() {
     return this._balance;
   },
   set: undefined
@@ -130,7 +128,7 @@ prototype["handleBalanceStateReset"] = function handleBalanceStateReset() {
 };
 prototype["handleBalanceFetch"] = function handleBalanceFetch(arg0) {
   if (arg0 == null) {
-    HermesBuiltin.throwTypeError();
+    throw new TypeError("Cannot destructure 'undefined' or 'null'.");
   } else {
     const self = this;
     this._isFetchingBalance = true;
@@ -167,7 +165,7 @@ prototype["handleRedeemVirtualCurrencyFail"] = function handleRedeemVirtualCurre
 };
 prototype["handleOnboardingModalOpen"] = function handleOnboardingModalOpen(arg0) {
   if (arg0 == null) {
-    HermesBuiltin.throwTypeError();
+    throw new TypeError("Cannot destructure 'undefined' or 'null'.");
   } else {
     const self = this;
     this._onboardingModalOpenedPrior = true;
@@ -175,7 +173,7 @@ prototype["handleOnboardingModalOpen"] = function handleOnboardingModalOpen(arg0
 };
 function handleOnboardingModalReset(arg0) {
   if (arg0 == null) {
-    HermesBuiltin.throwTypeError();
+    throw new TypeError("Cannot destructure 'undefined' or 'null'.");
   } else {
     const self = this;
     this._onboardingModalOpenedPrior = false;
@@ -183,43 +181,42 @@ function handleOnboardingModalReset(arg0) {
 }
 prototype["handleOnboardingModalReset"] = handleOnboardingModalReset;
 VirtualCurrencyStore.displayName = "VirtualCurrencyStore";
-object = undefined;
-object = new Object(dispatcherDefault, {
+const object = new Object(DispatcherDefault, {
   VIRTUAL_CURRENCY_REDEEM_START(skuId) {
-    return obj.handleRedeemVirtualCurrencyStart(skuId);
+    return closure_0.handleRedeemVirtualCurrencyStart(skuId);
   },
   VIRTUAL_CURRENCY_REDEEM_SUCCESS(entitlements) {
-    return obj.handleRedeemVirtualCurrencySuccess(entitlements);
+    return closure_0.handleRedeemVirtualCurrencySuccess(entitlements);
   },
   VIRTUAL_CURRENCY_REDEEM_FAIL(error) {
-    return obj.handleRedeemVirtualCurrencyFail(error);
+    return closure_0.handleRedeemVirtualCurrencyFail(error);
   },
   VIRTUAL_CURRENCY_BALANCE_FETCH(arg0) {
-    return obj.handleBalanceFetch(arg0);
+    return closure_0.handleBalanceFetch(arg0);
   },
   VIRTUAL_CURRENCY_BALANCE_FETCH_SUCCESS(balance) {
-    return obj.handleBalanceFetchSuccess(balance);
+    return closure_0.handleBalanceFetchSuccess(balance);
   },
   VIRTUAL_CURRENCY_BALANCE_FETCH_FAIL(error) {
-    return obj.handleBalanceFetchFail(error);
+    return closure_0.handleBalanceFetchFail(error);
   },
   VIRTUAL_CURRENCY_BALANCE_UPDATE(arg0) {
-    return obj.handleBalanceUpdate(arg0);
+    return closure_0.handleBalanceUpdate(arg0);
   },
   VIRTUAL_CURRENCY_ONBOARDING_MODAL_OPEN(arg0) {
-    return obj.handleOnboardingModalOpen(arg0);
+    return closure_0.handleOnboardingModalOpen(arg0);
   },
   VIRTUAL_CURRENCY_ONBOARDING_MODAL_RESET(arg0) {
-    return obj.handleOnboardingModalReset(arg0);
+    return closure_0.handleOnboardingModalReset(arg0);
   },
   LOGIN_SUCCESS() {
-    return obj.handleBalanceStateReset();
+    return closure_0.handleBalanceStateReset();
   },
   VIRTUAL_CURRENCY_SET_BALANCE_PILL_OVERLAY(balancePillOverlay) {
-    const result = obj.setBalancePillOverlay(balancePillOverlay.balancePillOverlay);
+    const result = closure_0.setBalancePillOverlay(balancePillOverlay.balancePillOverlay);
   }
 }, tmp, VirtualCurrencyStore, Object, prototype, new.target, undefined, handleOnboardingModalReset, dependencyMap);
-// ThrowIfThisInitialized (0x7c)
+let closure_129_0 = object;
 object._entitlements = null;
 object._redeemingSkuId = null;
 object._isRedeemingVirtualCurrency = false;
@@ -229,6 +226,7 @@ object._fetchBalanceError = null;
 object._isFetchingBalance = false;
 object._onboardingModalOpenedPrior = false;
 object._balancePillOverlay = false;
-let result = require("set").fileFinishedImporting("modules/virtual_currency/stores/VirtualCurrencyStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/virtual_currency/stores/VirtualCurrencyStore.tsx");
 
 export default object;

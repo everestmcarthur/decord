@@ -1,53 +1,55 @@
-// Module ID: 16511
-// Function ID: 16512
-// Name: iCYMIStyles
-// Dependencies: [19, 17, 1371, 21, 16455, 576, 1115, 8351, 8179, 504, 5123, 16494, 1178, 2]
+// Module ID: 16542
+// Function ID: 16543
+// Name: ContentInventoryEntryContainer
+// Dependencies: [19, 17, 1371, 21, 16486, 576, 1115, 8379, 8205, 504, 5137, 16525, 1178, 2]
 // Exports: default
 
-// Module 16511 (iCYMIStyles)
-import ThemesDefault from "Themes" /* 576 */;
-import set from "set" /* 1115 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1371 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 16455 */;
+// Module 16542 (ContentInventoryEntryContainer)
+import nativeDefault from "native" /* 576 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8205 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8379 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-const iCYMIStyles = createICYMIStyles.createICYMIStyles((marginBottom) => {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createICYMIStyles = fn(16486);
+const iCYMIStyles = createICYMIStyles.createICYMIStyles((marginBottom, arg1) => {
   let num = 0;
   if (!arg1) {
     num = marginBottom.margin;
   }
-  let obj = { pressable: { marginTop: num }, container: null, screenshotContainer: null, header: null, headerInfo: null, title: null, subTitleContainer: null };
-  obj = { marginHorizontal: marginBottom.margin, paddingBottom: null, paddingTop: null };
+  const obj = { pressable: { marginTop: num }, container: null, screenshotContainer: null, header: null, headerInfo: null, title: null, subTitleContainer: null };
+  const obj2 = { marginHorizontal: marginBottom.margin, paddingBottom: null, paddingTop: null };
   let num2 = 0;
   if (!arg1) {
     num2 = marginBottom.margin;
   }
-  obj[1] = num2;
+  obj2.paddingBottom = num2;
   let num3 = 0;
   if (arg1) {
     num3 = marginBottom.margin;
   }
-  obj[2] = num3;
-  obj[1] = obj;
-  obj[2] = { marginBottom: marginBottom.margin };
-  obj = { display: "flex", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12, marginBottom: marginBottom.margin };
-  obj[3] = obj;
-  obj[4] = { flex: 1 };
+  obj2.paddingTop = num3;
+  obj.container = obj2;
+  obj.screenshotContainer = { marginBottom: marginBottom.margin };
+  obj.header = { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, marginBottom: marginBottom.margin };
+  obj.headerInfo = { flex: 1 };
+  const obj3 = { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, marginBottom: marginBottom.margin };
   let num4 = 1;
   if (obj4.isAndroid()) {
     num4 = -1;
   }
-  obj[5] = { display: "flex", flexDirection: "row", alignItems: "center", gap: 6, marginBottom: num4, marginTop: 2 };
-  obj4 = set;
-  const tmp = importDefault;
-  obj[6] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
+  obj.title = { display: "flex", flexDirection: "row", alignItems: "center", gap: 6, marginBottom: num4, marginTop: 2 };
+  obj4 = PlatformUtils;
+  obj.subTitleContainer = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/icymi/native/content_inventory/ContentInventoryEntryContainer.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/icymi/native/content_inventory/ContentInventoryEntryContainer.tsx");
 
 export default function ContentInventoryEntryContainer(contentId) {
   contentId = contentId.contentId;
@@ -66,72 +68,48 @@ export default function ContentInventoryEntryContainer(contentId) {
   const items = [contentId, type, userId, onPress];
   const callback = onPress.useCallback(() => {
     if (null != onPress) {
-      let obj = userId(type[7]);
-      obj.itemInteracted(contentId, type, "press");
-      obj1 = userId(type[7]);
-      obj = { itemId: null, itemType: null, actionParameters: null };
-      obj[0] = contentId;
-      obj[1] = type;
-      obj[2] = { actionGestureType: "press", actionTargetElement: "item_container", actionIntentType: "open", actionDestinationType: null };
-      obj1.feedItemActioned(obj);
+      ICYMIActionCreatorsDefault.itemInteracted(contentId, type, "press");
+      const obj3 = { itemId: contentId, itemType: type, actionParameters: { actionGestureType: "press", actionTargetElement: "item_container", actionIntentType: "open", actionDestinationType: null } };
+      ICYMIActionCreatorsDefault.feedItemActioned(obj3);
       tmp();
     } else {
-      userId(type[7]).itemInteracted(contentId, type, "open_profile");
-      const obj4 = userId(type[7]);
-      obj = { itemId: null, itemType: null, actionParameters: null };
-      obj[0] = contentId;
-      obj[1] = type;
-      obj[2] = { actionGestureType: "press", actionTargetElement: "item_container", actionIntentType: "open", actionDestinationType: "user" };
-      userId(type[7]).feedItemActioned(obj);
-      obj1 = { userId: null };
-      obj1[0] = userId;
-      userId(type[8])(obj1);
-      const obj5 = userId(type[7]);
+      ICYMIActionCreatorsDefault.itemInteracted(contentId, type, "open_profile");
+      const obj6 = { itemId: contentId, itemType: type, actionParameters: { actionGestureType: "press", actionTargetElement: "item_container", actionIntentType: "open", actionDestinationType: "user" } };
+      ICYMIActionCreatorsDefault.feedItemActioned(obj6);
+      const obj7 = { userId };
+      showUserProfileActionSheetDefault(obj7);
     }
   }, items);
-  let obj = contentId(type[9]);
-  const items1 = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items1, () => closure_1_5.getUser(userId));
+  const items1 = [UserStore];
+  const stateFromStores = contentId(type[9]).useStateFromStores(items1, () => UserStore.getUser(userId));
   let tmp7Result = null;
   if (null != stateFromStores) {
-    obj = { unstable_pressDelay: 130, onPress: null, accessibilityRole: "button", style: null, children: null };
-    obj[1] = callback;
-    obj[3] = tmp.pressable;
-    obj = { hideDivider: null, highlight: null, children: null };
-    obj[0] = flag;
-    obj[1] = highlight;
+    let obj2 = { unstable_pressDelay: 130, onPress: callback, accessibilityRole: "button", style: tmp.pressable, children: null };
+    let obj3 = { hideDivider: flag, highlight, children: null };
     const items2 = [tmp.container, ];
     let screenshotContainer = flag;
     if (flag) {
       screenshotContainer = tmp.screenshotContainer;
     }
-    obj1 = { style: null, children: null };
-    items2[1] = screenshotContainer;
-    obj1[0] = items2;
-    const obj2 = { style: null, children: null };
-    obj2[0] = tmp.header;
-    const obj3 = { animate: true, size: null, user: null, guildId: "Array" };
-    obj3[1] = tmp3(tmp4[12]).AvatarSizes.NORMAL;
-    obj3[2] = stateFromStores;
-    const items3 = [closure_6(tmp3(tmp4[12]).Avatar, obj3, stateFromStores.id), ];
     let obj4 = { style: null, children: null };
-    obj4[0] = tmp.headerInfo;
-    let obj5 = { style: null, children: null };
-    obj5[0] = tmp.title;
-    obj5[1] = title;
-    const items4 = [closure_6(View, obj5), ];
-    const obj6 = { style: null, children: null };
-    obj6[0] = tmp.subTitleContainer;
-    obj6[1] = subtitle;
-    items4[1] = closure_6(View, obj6);
-    obj4[1] = items4;
-    items3[1] = closure_7(View, obj4);
-    obj2[1] = items3;
-    const items5 = [closure_7(View, obj2), contentId.children];
-    obj1[1] = items5;
-    obj[2] = closure_7(View, obj1);
-    obj[4] = closure_6(tmp3(tmp4[11]).SimplePost, obj);
-    tmp7Result = tmp7(tmp3(tmp4[10]).PressableHighlight, obj);
+    items2[1] = screenshotContainer;
+    obj4.style = items2;
+    let obj5 = { style: tmp.header, children: null };
+    let obj6 = { animate: true, size: tmp3(tmp4[12]).AvatarSizes.NORMAL, user: stateFromStores, guildId: "Array" };
+    const items3 = [closure_6(tmp3(tmp4[12]).Avatar, obj6, stateFromStores.id), ];
+    let obj7 = { style: tmp.headerInfo, children: null };
+    const obj8 = { style: tmp.title, children: title };
+    const items4 = [closure_6(View, obj8), ];
+    const obj9 = { style: tmp.subTitleContainer, children: subtitle };
+    items4[1] = closure_6(View, obj9);
+    obj7.children = items4;
+    items3[1] = closure_7(View, obj7);
+    obj5.children = items3;
+    const items5 = [closure_7(View, obj5), contentId.children];
+    obj4.children = items5;
+    obj3.children = closure_7(View, obj4);
+    obj2.children = closure_6(tmp3(tmp4[11]).SimplePost, obj3);
+    tmp7Result = tmp7(tmp3(tmp4[10]).PressableHighlight, obj2);
   }
   return tmp7Result;
 };

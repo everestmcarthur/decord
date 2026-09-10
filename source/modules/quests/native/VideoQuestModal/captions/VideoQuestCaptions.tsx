@@ -1,32 +1,33 @@
-// Module ID: 15147
-// Function ID: 15148
+// Module ID: 15174
+// Function ID: 15175
 // Name: VideoQuestCaptions
-// Dependencies: [19, 17, 21, 4560, 576, 672, 15148, 15150, 4965, 4556, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 672, 15175, 15177, 4979, 4570, 2]
 // Exports: VideoQuestCaptions
 
-// Module 15147 (VideoQuestCaptions)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importDefaultResult from "n" /* 672 */;
+// Module 15174 (VideoQuestCaptions)
+import nativeDefault from "native" /* 576 */;
+import VideoQuestCaptionsUtils from "VideoQuestCaptionsUtils" /* 15177 */;
+import noop from "module_19" /* 19 */;
+import n from "module_672" /* 672 */;
 
-const require = arg1;
-createCacheKey = { container: null, captionBox: null, captionText: null };
-createCacheKey = { position: "absolute", bottom: ThemesDefault.space.PX_32, left: ThemesDefault.space.PX_16, right: ThemesDefault.space.PX_16, alignItems: "center", justifyContent: "flex-end" };
-createCacheKey[0] = createCacheKey;
-let obj1 = { backgroundColor: null, padding: null, borderRadius: null, overflow: "hidden" };
-const importDefaultResultResult = importDefaultResult(ThemesDefault.unsafe_rawColors.BLACK);
-obj1[0] = importDefaultResult(ThemesDefault.unsafe_rawColors.BLACK).alpha(0.35).hex();
-obj1[1] = ThemesDefault.space.PX_8;
-obj1[2] = ThemesDefault.radii.sm;
-createCacheKey[1] = obj1;
-const alphaResult = importDefaultResult(ThemesDefault.unsafe_rawColors.BLACK).alpha(0.35);
-createCacheKey[2] = { color: ThemesDefault.colors.WHITE, textAlign: "center" };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const obj2 = { color: ThemesDefault.colors.WHITE, textAlign: "center" };
-const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/captions/VideoQuestCaptions.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { container: null, captionBox: null, captionText: null };
+const rect = { position: "absolute", bottom: nativeDefault.space.PX_32, left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16, alignItems: "center", justifyContent: "flex-end" };
+obj2.container = rect;
+let obj3 = { backgroundColor: null, padding: null, borderRadius: null, overflow: "hidden" };
+const importDefaultResultResult = n(nativeDefault.unsafe_rawColors.BLACK);
+obj3.backgroundColor = n(nativeDefault.unsafe_rawColors.BLACK).alpha(0.35).hex();
+obj3.padding = nativeDefault.space.PX_8;
+obj3.borderRadius = nativeDefault.radii.sm;
+obj2.captionBox = obj3;
+const alphaResult = n(nativeDefault.unsafe_rawColors.BLACK).alpha(0.35);
+obj2.captionText = { color: nativeDefault.colors.WHITE, textAlign: "center" };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/captions/VideoQuestCaptions.tsx");
 
 export const VideoQuestCaptions = function VideoQuestCaptions(currentTime) {
   currentTime = currentTime.currentTime;
@@ -36,18 +37,16 @@ export const VideoQuestCaptions = function VideoQuestCaptions(currentTime) {
     flag = true;
   }
   let captions;
-  const tmp = callback();
-  let obj = currentTime(captions[6]);
-  const videoQuestCaptions = obj.useVideoQuestCaptions(quest);
+  const tmp = closure_6();
+  const videoQuestCaptions = currentTime(captions[6]).useVideoQuestCaptions(quest);
   captions = videoQuestCaptions.captions;
   const items = [captions, currentTime, flag];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     let findActiveCaptionResult = null;
     if (null != captions) {
       findActiveCaptionResult = null;
       if (flag) {
-        findActiveCaptionResult = currentTime(captions[7]).findActiveCaption(tmp, currentTime);
-        const obj = currentTime(captions[7]);
+        findActiveCaptionResult = VideoQuestCaptionsUtils.findActiveCaption(tmp, currentTime);
       }
     }
     return findActiveCaptionResult;
@@ -56,17 +55,14 @@ export const VideoQuestCaptions = function VideoQuestCaptions(currentTime) {
   if ("success" === videoQuestCaptions.status) {
     tmp6 = null;
     if (null != memo) {
-      obj = { style: null, importantForAccessibility: "no-hide-descendants", accessibilityRole: "none", accessible: false, children: null };
+      const obj2 = { style: null, importantForAccessibility: "no-hide-descendants", accessibilityRole: "none", accessible: false, children: null };
       const items1 = [tmp.container, style];
-      obj[0] = items1;
-      obj = { style: null, blurTheme: "dark", blurStyle: "default", blurAmount: 0.2, children: null };
-      obj[0] = tmp.captionBox;
-      obj1 = { variant: "heading-sm/medium", style: null, children: null };
-      obj1[1] = tmp.captionText;
-      obj1[2] = memo.text;
-      obj[4] = jsx(currentTime(tmp3[9]).Text, { variant: "heading-sm/medium", style: null, children: null });
-      obj[4] = jsx(flag(tmp3[8]), { style: null, blurTheme: "dark", blurStyle: "default", blurAmount: 0.2, children: null });
-      tmp6 = <View style={null} blurTheme="dark" blurStyle="default" blurAmount={0.2}>{null}</View>;
+      obj2.style = items1;
+      const obj3 = { style: tmp.captionBox, blurTheme: "dark", blurStyle: "default", blurAmount: 0.2, children: null };
+      const obj4 = { variant: "heading-sm/medium", style: tmp.captionText, children: memo.text };
+      obj3.children = jsx(currentTime(tmp3[9]).Text, { variant: "heading-sm/medium", style: tmp.captionText, children: memo.text });
+      obj2.children = jsx(flag(tmp3[8]), { style: tmp.captionBox, blurTheme: "dark", blurStyle: "default", blurAmount: 0.2, children: null });
+      tmp6 = <View style={null} importantForAccessibility="no-hide-descendants" accessibilityRole="none" accessible={false}>{null}</View>;
       const tmp10 = flag(tmp3[8]);
     }
   }

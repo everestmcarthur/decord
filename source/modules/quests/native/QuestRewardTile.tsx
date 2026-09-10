@@ -1,31 +1,33 @@
-// Module ID: 11775
-// Function ID: 11776
+// Module ID: 11801
+// Function ID: 11802
 // Name: QuestRewardTile
-// Dependencies: [19, 21, 11295, 11290, 11776, 2]
+// Dependencies: [19, 21, 11322, 11317, 11802, 2]
 // Exports: default
 
-// Module 11775 (QuestRewardTile)
-import noopDefault from "noop" /* 19 */;
-import _modDef11776 from "module_11776" /* 11776 */;
-import { useMemo } from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 11801 (QuestRewardTile)
+import AssetUtils from "AssetUtils" /* 11317 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 11322 */;
+import QuestDockRewardTileDefault from "QuestDockRewardTile" /* 11802 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopDefault;
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestRewardTile.tsx");
+require = fn;
+const useMemo = fn(19).useMemo;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/QuestRewardTile.tsx");
 
 export default function QuestRewardTile(quest) {
   quest = quest.quest;
-  const merged = Object.assign(quest, Object.create(null));
+  const merged = Object.assign(quest, Object.assign({ quest: 0, accessibilityLabelPrefix: 0 }));
   const items = [quest];
-  const tmp3 = useMemo(() => quest(closure_1_2[2]).getQuestPrimaryReward(quest), items);
+  const tmp3 = useMemo(() => QuestRewardUtils.getQuestPrimaryReward(quest), items);
   if (null != tmp3.name) {
     let name = tmp3.name;
   } else {
     name = tmp3.messages.name;
   }
   const items1 = [quest];
-  const tmp2Result = useMemo(() => quest(closure_1_2[3]).getQuestAsset(quest, quest(closure_1_2[3]).QuestAssetType.REWARD, undefined, true), items1);
+  const tmp2Result = useMemo(() => AssetUtils.getQuestAsset(quest, AssetUtils.QuestAssetType.REWARD, undefined, true), items1);
   const items2 = [quest.accessibilityLabelPrefix, name];
   const found = items2.filter(Boolean);
   const joined = found.join(", ");
@@ -34,7 +36,7 @@ export default function QuestRewardTile(quest) {
   if ("" !== joined) {
     tmp8 = joined;
   }
-  obj[2] = tmp8;
+  obj.accessibilityLabel = tmp8;
   const merged1 = Object.assign(merged);
-  return jsx(_modDef11776, { assetUrl: tmp2Result.url, isAnimatedAsset: tmp2Result.isAnimated, accessibilityLabel: null });
+  return jsx(QuestDockRewardTileDefault, { assetUrl: tmp2Result.url, isAnimatedAsset: tmp2Result.isAnimated, accessibilityLabel: null });
 };

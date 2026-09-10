@@ -1,20 +1,17 @@
-// Module ID: 13914
-// Function ID: 13915
+// Module ID: 13937
+// Function ID: 13938
 // Name: useIsServerThemeAvailableForGuild
-// Dependencies: [4489, 4444, 2]
+// Dependencies: [4503, 4458, 2]
 // Exports: default
 
-// Module 13914 (useIsServerThemeAvailableForGuild)
-import set from "set" /* 2 */;
-import resolveSavedActiveGuildTheme from "resolveSavedActiveGuildTheme" /* 4444 */;
-import experiment from "experiment" /* 4489 */;
+// Module 13937 (useIsServerThemeAvailableForGuild)
+import GuildThemeResolver from "GuildThemeResolver" /* 4458 */;
+import ServerThemeExperiment from "ServerThemeExperiment" /* 4503 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useIsServerThemeAvailableForGuild.tsx");
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useIsServerThemeAvailableForGuild.tsx");
 
 export default function useIsServerThemeAvailableForGuild(guildId, GuildThemeNuxTrigger) {
-  const serverThemeEnabled = experiment.useServerThemeEnabled(guildId, GuildThemeNuxTrigger);
-  const obj = experiment;
-  const tmp = require;
-  const tmp3 = guildId;
-  return null != resolveSavedActiveGuildTheme.useEnabledGuildThemeForGuildId(guildId, GuildThemeNuxTrigger);
+  const serverThemeEnabled = ServerThemeExperiment.useServerThemeEnabled(guildId, GuildThemeNuxTrigger);
+  return null != GuildThemeResolver.useEnabledGuildThemeForGuildId(guildId, GuildThemeNuxTrigger);
 };

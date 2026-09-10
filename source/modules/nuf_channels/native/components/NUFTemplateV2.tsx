@@ -1,33 +1,28 @@
-// Module ID: 13772
-// Function ID: 13773
-// Name: NUFActionSheetTemplate
-// Dependencies: [19, 17, 21, 4560, 4556, 4975, 2]
+// Module ID: 13795
+// Function ID: 13796
+// Name: NUFTemplateV2
+// Dependencies: [19, 17, 21, 4574, 4570, 4989, 2]
 // Exports: default
 
-// Module 13772 (NUFActionSheetTemplate)
-import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4556 */;
-import Button from "Button" /* 4975 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13795 (NUFTemplateV2)
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = createCacheKey.createStyles({ container: { padding: 16, alignItems: "center" }, title: { textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 46, paddingLeft: 18, paddingRight: 18 }, illustration: { alignSelf: "stretch", alignItems: "center", marginBottom: 32 } });
-const result = require("set").fileFinishedImporting("modules/nuf_channels/native/components/NUFTemplateV2.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4574);
+let closure_5 = createStyles.createStyles({ container: { padding: 16, alignItems: "center" }, title: { textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 46, paddingLeft: 18, paddingRight: 18 }, illustration: { alignSelf: "stretch", alignItems: "center", marginBottom: 32 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/nuf_channels/native/components/NUFTemplateV2.tsx");
 
 export default function NUFActionSheetTemplate(arg0) {
   ({ title, illustration, description, onCTAPress, CTALabel } = arg0);
-  const tmp = callback3();
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.illustration, children: illustration };
-  const items = [callback(View, obj), , , ];
-  obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/bold", children: title };
-  items[1] = callback(Text.Text, obj);
-  items[2] = callback(Text.Text, { style: tmp.description, variant: "text-md/medium", children: description });
-  items[3] = callback(Button.Button, { text: CTALabel, onPress: onCTAPress, grow: true });
-  obj[1] = items;
-  return callback2(View, obj);
+  const tmp = closure_5();
+  const obj = { style: tmp.container, children: null };
+  const items = [React3(View, { style: tmp.illustration, children: illustration }), React3(Text_Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/bold", children: title }), React3(Text_Text.Text, { style: tmp.description, variant: "text-md/medium", children: description }), React3(components_Button_Button.Button, { text: CTALabel, onPress: onCTAPress, grow: true })];
+  obj.children = items;
+  return React4(View, obj);
 };

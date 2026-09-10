@@ -1,43 +1,31 @@
-// Module ID: 7777
-// Function ID: 7778
-// Name: dispatcher
+// Module ID: 7791
+// Function ID: 7792
+// Name: DraftActionCreators
 // Dependencies: [573, 2]
 
-// Module 7777 (dispatcher)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 7791 (DraftActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("actions/DraftActionCreators.tsx");
+const result = size.fileFinishedImporting("actions/DraftActionCreators.tsx");
 
 export default {
   clearDraft(id, ThreadSettings) {
-    let obj = dispatcherDefault;
-    obj = { type: "DRAFT_CLEAR", channelId: id, draftType: ThreadSettings };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "DRAFT_CLEAR", channelId: id, draftType: ThreadSettings });
   },
   clearDraftCommand(channelId, draftType) {
-    let obj = dispatcherDefault;
-    obj = { type: "DRAFT_COMMAND_CLEAR", channelId, draftType };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "DRAFT_COMMAND_CLEAR", channelId, draftType });
   },
   saveDraft(id, result1, ChannelMessage, toDraftCommandResult) {
-    let obj = dispatcherDefault;
-    obj = { type: "DRAFT_SAVE", channelId: id, draft: result1, draftType: ChannelMessage, command: toDraftCommandResult };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "DRAFT_SAVE", channelId: id, draft: result1, draftType: ChannelMessage, command: toDraftCommandResult });
   },
-  changeDraft(id, draft, ChannelMessage) {
-    let obj = dispatcherDefault;
-    obj = { type: "DRAFT_CHANGE", channelId: id, draft, draftType: ChannelMessage, command: arg3 };
-    obj.dispatch(obj);
+  changeDraft(id, draft, ChannelMessage, command) {
+    DispatcherDefault.dispatch({ type: "DRAFT_CHANGE", channelId: id, draft, draftType: ChannelMessage, command });
   },
   changeThreadSettings(id, draft) {
-    let obj = dispatcherDefault;
-    obj = { type: "THREAD_SETTINGS_DRAFT_CHANGE", channelId: id, draft };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "THREAD_SETTINGS_DRAFT_CHANGE", channelId: id, draft });
   },
-  changeScheduledMessage(closure_0, draft) {
-    let obj = dispatcherDefault;
-    obj = { type: "SCHEDULED_MESSAGE_DRAFT_CHANGE", channelId: closure_0, draft };
-    obj.dispatch(obj);
+  changeScheduledMessage(channelId, draft) {
+    DispatcherDefault.dispatch({ type: "SCHEDULED_MESSAGE_DRAFT_CHANGE", channelId, draft });
   }
 };

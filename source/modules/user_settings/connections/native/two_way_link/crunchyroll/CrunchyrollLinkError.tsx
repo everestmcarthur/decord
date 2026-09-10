@@ -1,32 +1,31 @@
-// Module ID: 9285
-// Function ID: 9286
-// Name: CrunchyrollLinkDiscordError
-// Dependencies: [19, 9277, 21, 1483, 9271, 9272, 1114, 2]
+// Module ID: 9312
+// Function ID: 9313
+// Name: CrunchyrollLinkError
+// Dependencies: [19, 9304, 21, 1483, 9298, 9299, 1114, 2]
 // Exports: default
 
-// Module 9285 (CrunchyrollLinkDiscordError)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 9312 (CrunchyrollLinkError)
+import util from "util" /* 1114 */;
 import useNavigation from "useNavigation" /* 1483 */;
-import useConnectRetry from "useConnectRetry" /* 9271 */;
-import TwoWayLinkError from "TwoWayLinkError" /* 9272 */;
-import { CrunchyrollLinkModalScenes as closure_2 } from "CrunchyrollLinkModalScenes" /* 9277 */;
-import { jsx } from "jsxProd" /* 21 */;
+import useConnectRetry from "useConnectRetry" /* 9298 */;
+import TwoWayLinkError from "TwoWayLinkError" /* 9299 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkError.tsx");
+require = fn;
+const constants = fn(9304).CrunchyrollLinkModalScenes;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkError.tsx");
 
 export default function CrunchyrollLinkDiscordError(onClose) {
-  let obj = useNavigation;
-  const navigation = obj.useNavigation();
+  const navigation = useNavigation.useNavigation();
   const connectRetry = useConnectRetry.useConnectRetry(navigation, constants.PRE_CONNECT);
-  obj = { title: null, body: null, onClose: null, onRetry: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["8YK70c"]);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(getSystemLocale.t.moyYLf);
-  obj[2] = onClose.onClose;
-  obj[3] = connectRetry;
+  const obj3 = { title: null, body: null, onClose: null, onRetry: null };
+  const intl = util.intl;
+  obj3.title = intl.string(util.t["8YK70c"]);
+  const intl2 = util.intl;
+  obj3.body = intl2.string(util.t.moyYLf);
+  obj3.onClose = onClose.onClose;
+  obj3.onRetry = connectRetry;
   return jsx(TwoWayLinkError.TwoWayLinkError, { title: null, body: null, onClose: null, onRetry: null });
 };

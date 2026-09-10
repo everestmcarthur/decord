@@ -1,38 +1,41 @@
-// Module ID: 15920
-// Function ID: 15921
-// Dependencies: [19, 15483, 21, 15921, 15484, 11473, 15486, 4992, 14692, 2]
+// Module ID: 15950
+// Function ID: 15951
+// Name: RedesignSettingsNotificationScreen
+// Dependencies: [19, 15513, 21, 15951, 15514, 11500, 15516, 5006, 14718, 2]
 
-// Module 15920
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4992 */;
-import _modDef14692 from "module_14692" /* 14692 */;
-import apexExperimentDefault from "apexExperiment" /* 15484 */;
-import importAllResult from "noop" /* 19 */;
-import { initializeAndroidNotificationSettingsStore as closure_4 } from "_initializeAndroidNotificationSettingsStore" /* 15483 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 15950 (RedesignSettingsNotificationScreen)
+import useMountEffectDefault from "useMountEffect" /* 5006 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import SettingLayoutDefault from "SettingLayout" /* 14718 */;
+import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 15514 */;
+import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 15516 */;
+import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 15951 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
-const memoResult = importAllResult.memo(() => {
-  const tmp = !apexExperimentDefault.useConfig({ location: "SettingsNotificationsScreen" }).inHoldout;
+require = fn;
+let closure_4 = fn(15513).initializeAndroidNotificationSettingsStore;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notifications/settings/native/routes/RedesignSettingsNotificationScreen.tsx");
+
+export default noop.memo(() => {
+  const tmp = !ContextualOptInNudgeHoldoutExperimentDefault.useConfig({ location: "SettingsNotificationsScreen" }).inHoldout;
   closure_0 = tmp;
   let items = [tmp];
-  const node = importAllResult.useMemo(() => {
-    let obj = callback(closure_1_2[5]);
-    obj = { sections: null, ListHeaderComponent: null };
-    const items = [callback(closure_1_2[3]).buildOverviewCategoriesSection()];
-    obj[0] = items;
+  const node = noop.useMemo(() => {
+    const obj2 = { sections: null, ListHeaderComponent: null };
+    const obj = SettingBuilders;
+    const items = [MobileNotifSettingsRouteBuilders.buildOverviewCategoriesSection()];
+    obj2.sections = items;
     let tmp2;
-    if (callback) {
-      tmp2 = closure_1_1(closure_1_2[6]);
+    if (closure_0) {
+      tmp2 = NotificationPermissionSettingsHeaderDefault;
     }
-    obj[1] = tmp2;
-    return obj.createList(obj);
+    obj2.ListHeaderComponent = tmp2;
+    return obj.createList(obj2);
   }, items);
-  useMountLayoutEffectDefault(() => {
-    callback2();
+  useMountEffectDefault(() => {
+    closure_1_4();
   });
-  return jsx(_modDef14692, { node });
+  return jsx(SettingLayoutDefault, { node });
 });
-const result = require("set").fileFinishedImporting("modules/notifications/settings/native/routes/RedesignSettingsNotificationScreen.tsx");
-
-export default memoResult;

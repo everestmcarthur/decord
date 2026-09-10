@@ -1,39 +1,41 @@
-// Module ID: 13581
-// Function ID: 13582
-// Name: set
-// Dependencies: [19, 4449, 4450, 4453, 504, 12580, 2]
+// Module ID: 13604
+// Function ID: 13605
+// Name: useMarketablePowerupPerks
+// Dependencies: [19, 4463, 4464, 4467, 504, 12606, 2]
 // Exports: default
 
-// Module 13581 (set)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "calculateAppliedBoosts" /* 4449 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4450 */;
-import set from "set" /* 2 */;
+// Module 13604 (useMarketablePowerupPerks)
+import noop from "module_19" /* 19 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4463 */;
 
-const require = arg1;
-const GuildPowerupType = BoostedGuildTiers.GuildPowerupType;
-let items = [...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET), ...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET), require("VANITY_URL_POWERUP_SKU_ID").VANITY_URL_POWERUP_SKU_ID];
-let set = new Set(items);
-const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useMarketablePowerupPerks.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const GuildPowerupsConstants = fn(4464);
+const GuildPowerupType = GuildPowerupsConstants.GuildPowerupType;
+let items = [...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET), ...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET), fn(4467).VANITY_URL_POWERUP_SKU_ID];
+const set = new Set(items);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useMarketablePowerupPerks.tsx");
 
 export default function useMarketablePowerupPerks(arg0) {
-  const _require = arg0;
-  let items = [closure_4];
-  const stateFromStores = _require(504).useStateFromStores(items, () => {
-    const stateForGuild = closure_1_4.getStateForGuild(closure_0);
+  _require = arg0;
+  let items = [GuildPowerupsStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
+    const stateForGuild = GuildPowerupsStore.getStateForGuild(closure_0);
     let tmp2;
     if (stateForGuild != null) {
       const powerupCatalog = stateForGuild.powerupCatalog;
       if (powerupCatalog != null) {
-        tmp2 = powerupCatalog[closure_1_5.PERK];
+        tmp2 = powerupCatalog[GuildPowerupType.PERK];
       }
     }
     return tmp2;
   });
-  let tmp2 = stateFromStores(12580)(arg0);
+  let tmp2 = stateFromStores(12606)(arg0);
   dependencyMap = tmp2;
   let items1 = [stateFromStores, tmp2];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     let items = stateFromStores;
     if (stateFromStores == null) {
       items = [];

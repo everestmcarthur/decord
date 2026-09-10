@@ -1,49 +1,48 @@
-// Module ID: 16393
-// Function ID: 16394
-// Dependencies: [19, 15101, 21, 4560, 576, 16394, 16395, 13015, 4418, 1114, 2]
+// Module ID: 16424
+// Function ID: 16425
+// Name: YouBarICYMIButton
+// Dependencies: [19, 15128, 21, 4574, 576, 16425, 16426, 13041, 4432, 1114, 2]
 
-// Module 16393
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import FlashIcon from "FlashIcon" /* 13015 */;
-import useICYMITabBadgeDefault from "useICYMITabBadge" /* 16394 */;
-import YouBarButtonIconDefault from "YouBarButtonIcon" /* 16395 */;
-import { YOU_BAR_BUTTON_ICON_SIZE } from "CONNECTION_BANNER_HEIGHT" /* 15101 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 16424 (YouBarICYMIButton)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import RootNavigationRef from "RootNavigationRef" /* 4432 */;
+import FlashIcon from "FlashIcon" /* 13041 */;
+import useICYMITabBadgeDefault from "useICYMITabBadge" /* 16425 */;
+import YouBarButtonDefault from "YouBarButton" /* 16426 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let obj = { icon: { width: YOU_BAR_BUTTON_ICON_SIZE, height: YOU_BAR_BUTTON_ICON_SIZE }, badge: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
-obj[1] = obj;
-let closure_4 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function YouBarICYMIButton(hasNameplate) {
+require = fn;
+const YOU_BAR_BUTTON_ICON_SIZE = fn(15128).YOU_BAR_BUTTON_ICON_SIZE;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj = { icon: { width: YOU_BAR_BUTTON_ICON_SIZE, height: YOU_BAR_BUTTON_ICON_SIZE }, badge: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND } };
+let closure_4 = createStyles.createStyles(obj);
+const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarICYMIButton.tsx");
+
+export default noop.memo(function YouBarICYMIButton(hasNameplate) {
   hasNameplate = hasNameplate.hasNameplate;
-  const tmp = callback();
-  let obj = { hasNameplate, icon: null, hasBadge: null, badgeStyle: null, onPress: null, accessibilityLabel: null };
-  obj = { size: "custom", style: tmp.icon, color: null };
+  const tmp = closure_4();
+  const obj = { hasNameplate, icon: null, hasBadge: null, badgeStyle: null, onPress: null, accessibilityLabel: null };
+  let obj2 = { size: "custom", style: tmp.icon, color: null };
   let str;
   if (hasNameplate) {
     str = "white";
   }
-  obj[2] = str;
-  obj[1] = jsx(FlashIcon.FlashIcon, { size: "custom", style: tmp.icon, color: null });
-  obj[2] = useICYMITabBadgeDefault().showDot;
-  obj[3] = tmp.badge;
-  obj[4] = function onPress() {
-    let obj = callback(table[8]);
-    const rootNavigationRef = obj.getRootNavigationRef();
+  obj2.color = str;
+  obj.icon = jsx(FlashIcon.FlashIcon, { size: "custom", style: tmp.icon, color: null });
+  obj.hasBadge = useICYMITabBadgeDefault().showDot;
+  obj.badgeStyle = tmp.badge;
+  obj.onPress = function onPress() {
+    const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     if (null != rootNavigationRef) {
-      obj = { screen: "icymi-screen", params: null };
-      obj[1] = { inNestedNavigator: true };
-      rootNavigationRef.navigate("icymi", obj);
+      const obj2 = { screen: "icymi-screen", params: { inNestedNavigator: true } };
+      rootNavigationRef.navigate("icymi", obj2);
     }
   };
   const intl = tmp5(1114).intl;
-  obj[5] = intl.string(getSystemLocale.t["jnXV/V"]);
-  return jsx(YouBarButtonIconDefault, { size: "custom", style: tmp.icon, color: null });
+  obj.accessibilityLabel = intl.string(util.t["jnXV/V"]);
+  return jsx(YouBarButtonDefault, { hasNameplate, icon: null, hasBadge: null, badgeStyle: null, onPress: null, accessibilityLabel: null });
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarICYMIButton.tsx");
-
-export default memoResult;

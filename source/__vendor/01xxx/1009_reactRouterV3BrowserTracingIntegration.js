@@ -2,58 +2,57 @@
 // Function ID: 1010
 // Name: reactRouterV3BrowserTracingIntegration
 // Dependencies: [889, 682]
+// Exports: reactRouterV3BrowserTracingIntegration
 
 // Module 1009 (reactRouterV3BrowserTracingIntegration)
+import _mod682 from "module_682" /* 682 */;
 import feedbackAsyncIntegration from "feedbackAsyncIntegration" /* 889 */;
 
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.reactRouterV3BrowserTracingIntegration = function reactRouterV3BrowserTracingIntegration(instrumentNavigation) {
-  let obj = feedbackAsyncIntegration;
-  obj = {};
+
+export const reactRouterV3BrowserTracingIntegration = function reactRouterV3BrowserTracingIntegration(instrumentNavigation) {
+  let obj2 = {};
   const merged = Object.assign(instrumentNavigation);
-  obj.instrumentPageLoad = false;
-  obj.instrumentNavigation = false;
-  let result = obj.browserTracingIntegration(obj);
+  obj2.instrumentPageLoad = false;
+  obj2.instrumentNavigation = false;
+  let result = feedbackAsyncIntegration.browserTracingIntegration(obj2);
   require = result;
   ({ history: dependencyMap, routes: closure_2, match: closure_3, instrumentPageLoad } = instrumentNavigation);
   closure_4 = undefined === instrumentPageLoad || instrumentPageLoad;
   instrumentNavigation = instrumentNavigation.instrumentNavigation;
   closure_5 = undefined === instrumentNavigation || instrumentNavigation;
-  obj = {};
+  let obj3 = {};
   const merged1 = Object.assign(result);
-  obj.afterAllSetup = function afterAllSetup(arg0) {
-    let f108185 = arg0;
-    f108185.afterAllSetup(arg0);
+  obj3.afterAllSetup = function afterAllSetup(arg0) {
+    let f108350 = arg0;
+    f108350.afterAllSetup(arg0);
     let _location = closure_4;
     if (closure_4) {
-      _location = result(closure_1_1[0]).WINDOW.location;
+      _location = result(889).WINDOW.location;
     }
     if (_location) {
-      const _location2 = result(closure_1_1[0]).WINDOW.location;
-      f108185 = (name) => {
+      const _location2 = result(889).WINDOW.location;
+      f108350 = (name) => {
         let str = arg1;
         if (arg1 === undefined) {
           str = "url";
         }
-        let obj = result(closure_2_1[0]);
-        obj = { name, attributes: obj };
-        obj = { [closure_2_0(closure_2_1[1]).SEMANTIC_ATTRIBUTE_SENTRY_OP]: "pageload", [closure_2_0(closure_2_1[1]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.pageload.react.reactrouter_v3" };
-        obj[result(closure_2_1[1]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = str;
-        result = obj.startBrowserTracingPageLoadSpan(f108185, obj);
+        const obj2 = { name, attributes: null };
+        const obj3 = { [closure_3_0(closure_3_1[1]).SEMANTIC_ATTRIBUTE_SENTRY_OP]: "pageload", [closure_3_0(closure_3_1[1]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.pageload.react.reactrouter_v3" };
+        obj3[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = str;
+        obj2.attributes = obj3;
+        result = feedbackAsyncIntegration.startBrowserTracingPageLoadSpan(f108350, obj2);
       };
-      let pathname;
-      pathname = _location2.pathname;
-      let obj = { location: null, routes: null };
-      obj[0] = _location2;
-      obj[1] = closure_2;
-      callback(obj, (arg0, arg1, routes) => {
+      const pathname = _location2.pathname;
+      let obj = { location: _location2, routes };
+      closure_3(obj, (arg0, arg1, routes) => {
         if (!arg0) {
           if (routes) {
             const arr = routes.routes || [];
             const _Array = Array;
-            let str2 = "";
+            str2 = "";
             if (Array.isArray(arr)) {
               str2 = "";
               if (0 !== arr.length) {
@@ -63,7 +62,6 @@ arg5.reactRouterV3BrowserTracingIntegration = function reactRouterV3BrowserTraci
                 if (0 <= diff) {
                   while (true) {
                     let path = found[diff].path;
-                    let tmp4 = diff;
                     let startsWithResult;
                     if (path != null) {
                       startsWithResult = path.startsWith("/");
@@ -81,30 +79,30 @@ arg5.reactRouterV3BrowserTracingIntegration = function reactRouterV3BrowserTraci
                   }
                 }
                 const substr = found.slice(num2);
-                str2 = substr.reduce((arg0, path) => {
+                str2 = substr.reduce((acc, path) => {
                   path = path.path;
                   let combined = path;
-                  if ("/" !== arg0) {
+                  if ("/" !== acc) {
                     combined = path;
-                    if ("" !== arg0) {
+                    if ("" !== acc) {
                       const _HermesInternal = HermesInternal;
                       combined = "/" + path;
                     }
                   }
-                  return "" + arg0 + combined;
+                  return "" + acc + combined;
                 }, "");
               }
             }
             if (0 !== str2.length) {
               if ("/*" !== str2) {
-                let tmp8 = f120445(str2, "route");
+                let tmp8 = f120628(str2, "route");
               }
               return tmp8;
             }
-            tmp8 = f120445(str2);
+            tmp8 = f120628(str2);
           }
         }
-        return f120445(str2);
+        return f120628(str2);
       });
     }
     let listen = closure_5;
@@ -118,27 +116,24 @@ arg5.reactRouterV3BrowserTracingIntegration = function reactRouterV3BrowserTraci
           tmp = "POP" !== action.action;
         }
         if (!tmp) {
-          const f120445 = (name) => {
+          const f120628 = (name) => {
             let str = arg1;
             if (arg1 === undefined) {
               str = "url";
             }
-            let obj = f108185(pathname[0]);
-            obj = { name, attributes: obj };
-            obj = { [closure_2_0(closure_2_1[1]).SEMANTIC_ATTRIBUTE_SENTRY_OP]: "navigation", [closure_2_0(closure_2_1[1]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.navigation.react.reactrouter_v3" };
-            obj[f108185(pathname[1]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = str;
-            result = obj.startBrowserTracingNavigationSpan(f120445, obj);
+            const obj2 = { name, attributes: null };
+            const obj3 = { [closure_3_0(closure_3_1[1]).SEMANTIC_ATTRIBUTE_SENTRY_OP]: "navigation", [closure_3_0(closure_3_1[1]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.navigation.react.reactrouter_v3" };
+            obj3[result(682).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = str;
+            obj2.attributes = obj3;
+            result = result(889).startBrowserTracingNavigationSpan(f120628, obj2);
           };
-          pathname = action.pathname;
-          let obj = { location: null, routes: null };
-          obj[0] = action;
-          obj[1] = closure_1_2;
-          closure_1_3(obj, (arg0, arg1, routes) => {
+          const obj = { location: action, routes };
+          closure_2_3(obj, (arg0, arg1, routes) => {
             if (!arg0) {
               if (routes) {
                 const arr = routes.routes || [];
                 const _Array = Array;
-                let str2 = "";
+                str2 = "";
                 if (Array.isArray(arr)) {
                   str2 = "";
                   if (0 !== arr.length) {
@@ -148,7 +143,6 @@ arg5.reactRouterV3BrowserTracingIntegration = function reactRouterV3BrowserTraci
                     if (0 <= diff) {
                       while (true) {
                         let path = found[diff].path;
-                        let tmp4 = diff;
                         let startsWithResult;
                         if (path != null) {
                           startsWithResult = path.startsWith("/");
@@ -166,34 +160,34 @@ arg5.reactRouterV3BrowserTracingIntegration = function reactRouterV3BrowserTraci
                       }
                     }
                     const substr = found.slice(num2);
-                    str2 = substr.reduce((arg0, path) => {
+                    str2 = substr.reduce((acc, path) => {
                       path = path.path;
                       let combined = path;
-                      if ("/" !== arg0) {
+                      if ("/" !== acc) {
                         combined = path;
-                        if ("" !== arg0) {
+                        if ("" !== acc) {
                           const _HermesInternal = HermesInternal;
                           combined = "/" + path;
                         }
                       }
-                      return "" + arg0 + combined;
+                      return "" + acc + combined;
                     }, "");
                   }
                 }
                 if (0 !== str2.length) {
                   if ("/*" !== str2) {
-                    let tmp8 = f120445(str2, "route");
+                    let tmp8 = f120628(str2, "route");
                   }
                   return tmp8;
                 }
-                tmp8 = f120445(str2);
+                tmp8 = f120628(str2);
               }
             }
-            return f120445(str2);
+            return f120628(str2);
           });
         }
       });
     }
   };
-  return obj;
+  return obj3;
 };

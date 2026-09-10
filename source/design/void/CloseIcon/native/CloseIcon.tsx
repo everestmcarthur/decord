@@ -1,17 +1,17 @@
-// Module ID: 14092
-// Function ID: 14093
-// Name: Close
-// Dependencies: [19, 21, 8456, 2]
+// Module ID: 14115
+// Function ID: 14116
+// Name: CloseIcon
+// Dependencies: [19, 21, 8484, 2]
 // Exports: default
 
-// Module 14092 (Close)
-import noopAll from "noop" /* 19 */;
-import inlineStyles from "inlineStyles" /* 8456 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 14115 (CloseIcon)
+import inlineStyles from "inlineStyles" /* 8484 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/void/CloseIcon/native/CloseIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/CloseIcon/native/CloseIcon.tsx");
 
 export default function Close(width) {
   let num = width.width;
@@ -26,7 +26,7 @@ export default function Close(width) {
   if (str === undefined) {
     str = "currentColor";
   }
-  const merged = Object.assign(width, Object.create(null));
+  const merged = Object.assign(width, Object.assign({ width: 0, height: 0, color: 0 }));
   const obj = {};
   const merged1 = Object.assign(merged);
   obj.width = num;

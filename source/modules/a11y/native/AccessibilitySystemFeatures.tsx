@@ -1,70 +1,68 @@
-// Module ID: 14438
-// Function ID: 14439
-// Name: AccessibilityFeatureFlags
-// Dependencies: [17, 4552, 1349, 14439, 11359, 1242, 14440, 2]
+// Module ID: 14463
+// Function ID: 14464
+// Name: AccessibilitySystemFeatures
+// Dependencies: [17, 4566, 1349, 14464, 11386, 1242, 14465, 2]
 
-// Module 14438 (AccessibilityFeatureFlags)
-import set from "set" /* 2 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import AccessibilityFeatureFlags2 from "AccessibilityFeatureFlags" /* 1349 */;
-import uDefault from "u" /* 11359 */;
-import A11Y_FEATURE_MAP from "A11Y_FEATURE_MAP" /* 14439 */;
-import setFontSize from "setFontSize" /* 14440 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+// Module 14463 (AccessibilitySystemFeatures)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AccessibilityConstants from "AccessibilityConstants" /* 1349 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11386 */;
+import AccessibilityPreferencesSharedValue from "AccessibilityPreferencesSharedValue" /* 14464 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14465 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import size from "module_2" /* 2 */;
 
-({ AccessibilityInfo: c3, Appearance: c4, AppState: c5 } = get_ActivityIndicator);
-const AccessibilityFeatureFlags = AccessibilityFeatureFlags2.AccessibilityFeatureFlags;
+({ AccessibilityInfo: c3, Appearance: closure_4, AppState: hasOwnProperty } = get_ActivityIndicator);
+const AccessibilityFeatureFlags = AccessibilityConstants.AccessibilityFeatureFlags;
 const NONE = AccessibilityFeatureFlags.NONE;
-let result = set.fileFinishedImporting("modules/a11y/native/AccessibilitySystemFeatures.tsx");
+let result = size.fileFinishedImporting("modules/a11y/native/AccessibilitySystemFeatures.tsx");
 
 export default {
   init() {
-    closure_6.addChangeListener(this.handleAccessibilityStoreChanged);
-    const listener = closure_3.addEventListener("reduceMotionChanged", this.handleReduceMotionChanged);
-    const result = closure_3.isReduceMotionEnabled();
+    AccessibilityStore.addChangeListener(this.handleAccessibilityStoreChanged);
+    const listener = React3.addEventListener("reduceMotionChanged", this.handleReduceMotionChanged);
+    const result = React3.isReduceMotionEnabled();
     result.then(this.handleReduceMotionChanged);
-    const listener1 = closure_3.addEventListener("reduceTransparencyChanged", this.handleReduceTransparencyChanged);
-    const result1 = closure_3.isReduceTransparencyEnabled();
+    const listener1 = React3.addEventListener("reduceTransparencyChanged", this.handleReduceTransparencyChanged);
+    const result1 = React3.isReduceTransparencyEnabled();
     result1.then(this.handleReduceTransparencyChanged);
-    const listener2 = closure_3.addEventListener("boldTextChanged", this.handleBoldTextChanged);
-    closure_3.isBoldTextEnabled().then(this.handleBoldTextChanged);
-    const listener3 = closure_3.addEventListener("grayscaleChanged", this.handleGrayscaleChanged);
-    const isBoldTextEnabledResult = closure_3.isBoldTextEnabled();
-    closure_3.isGrayscaleEnabled().then(this.handleGrayscaleChanged);
-    const listener4 = closure_3.addEventListener("invertColorsChanged", this.handleInvertColorsChanged);
-    const result2 = closure_3.isInvertColorsEnabled();
+    const listener2 = React3.addEventListener("boldTextChanged", this.handleBoldTextChanged);
+    React3.isBoldTextEnabled().then(this.handleBoldTextChanged);
+    const listener3 = React3.addEventListener("grayscaleChanged", this.handleGrayscaleChanged);
+    const isBoldTextEnabledResult = React3.isBoldTextEnabled();
+    React3.isGrayscaleEnabled().then(this.handleGrayscaleChanged);
+    const listener4 = React3.addEventListener("invertColorsChanged", this.handleInvertColorsChanged);
+    const result2 = React3.isInvertColorsEnabled();
     result2.then(this.handleInvertColorsChanged);
-    const isGrayscaleEnabledResult = closure_3.isGrayscaleEnabled();
-    const result3 = this.handlePreferredColorSchemeChanged({ colorScheme: closure_4.getColorScheme() });
-    closure_4.addChangeListener(this.handlePreferredColorSchemeChanged);
-    const listener5 = closure_5.addEventListener("change", this.handleAppStateChange);
-    const obj = { colorScheme: closure_4.getColorScheme() };
-    const result4 = expandEventPropertiesDefault.setSystemAccessibilityFeatures(this.getActiveFeatures);
+    const isGrayscaleEnabledResult = React3.isGrayscaleEnabled();
+    const result3 = this.handlePreferredColorSchemeChanged({ colorScheme: React4.getColorScheme() });
+    React4.addChangeListener(this.handlePreferredColorSchemeChanged);
+    const listener5 = hasOwnProperty.addEventListener("change", this.handleAppStateChange);
+    const obj = { colorScheme: React4.getColorScheme() };
+    const result4 = AnalyticsUtilsDefault.setSystemAccessibilityFeatures(this.getActiveFeatures);
   },
   getActiveFeatures() {
-    return NONE;
+    return closure_8;
   },
   handleReduceMotionChanged(arg0) {
-    let obj = setFontSize;
     let str = "no-preference";
     if (arg0) {
       str = "reduce";
     }
-    const result = obj.systemPrefersReducedMotionChanged(str);
+    const result = AccessibilityActionCreators.systemPrefersReducedMotionChanged(str);
     const REDUCED_MOTION = AccessibilityFeatureFlags.REDUCED_MOTION;
-    const useReducedMotion = closure_6.useReducedMotion;
+    const useReducedMotion = AccessibilityStore.useReducedMotion;
     if (useReducedMotion) {
       closure_8 = tmp4 | REDUCED_MOTION;
     } else {
       closure_8 = tmp4 & ~REDUCED_MOTION;
     }
-    const tmp5 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[REDUCED_MOTION];
+    const tmp5 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[REDUCED_MOTION];
     if (null != tmp5) {
-      obj = {};
-      obj[tmp5] = useReducedMotion;
-      uDefault(tmp(14439).accessibilityPreferencesSharedValue, obj);
-      const tmp7 = uDefault;
+      const obj2 = {};
+      obj2[tmp5] = useReducedMotion;
+      updateSharedValueIfChangedDefault(tmp(14464).accessibilityPreferencesSharedValue, obj2);
     }
   },
   handleReduceTransparencyChanged(arg0) {
@@ -74,12 +72,11 @@ export default {
     } else {
       closure_8 = tmp & ~REDUCED_TRANSPARENCY;
     }
-    const tmp4 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[REDUCED_TRANSPARENCY];
+    const tmp4 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[REDUCED_TRANSPARENCY];
     if (null != tmp4) {
       const obj = {};
       obj[tmp4] = arg0;
-      uDefault(A11Y_FEATURE_MAP.accessibilityPreferencesSharedValue, obj);
-      const tmp6 = uDefault;
+      updateSharedValueIfChangedDefault(AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, obj);
     }
   },
   handleBoldTextChanged(arg0) {
@@ -89,12 +86,11 @@ export default {
     } else {
       closure_8 = tmp & ~BOLD_TEXT;
     }
-    const tmp4 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[BOLD_TEXT];
+    const tmp4 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[BOLD_TEXT];
     if (null != tmp4) {
       const obj = {};
       obj[tmp4] = arg0;
-      uDefault(A11Y_FEATURE_MAP.accessibilityPreferencesSharedValue, obj);
-      const tmp6 = uDefault;
+      updateSharedValueIfChangedDefault(AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, obj);
     }
   },
   handleGrayscaleChanged(arg0) {
@@ -104,12 +100,11 @@ export default {
     } else {
       closure_8 = tmp & ~GRAYSCALE;
     }
-    const tmp4 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[GRAYSCALE];
+    const tmp4 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[GRAYSCALE];
     if (null != tmp4) {
       const obj = {};
       obj[tmp4] = arg0;
-      uDefault(A11Y_FEATURE_MAP.accessibilityPreferencesSharedValue, obj);
-      const tmp6 = uDefault;
+      updateSharedValueIfChangedDefault(AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, obj);
     }
   },
   handleInvertColorsChanged(arg0) {
@@ -119,12 +114,11 @@ export default {
     } else {
       closure_8 = tmp & ~INVERT_COLORS;
     }
-    const tmp4 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[INVERT_COLORS];
+    const tmp4 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[INVERT_COLORS];
     if (null != tmp4) {
       const obj = {};
       obj[tmp4] = arg0;
-      uDefault(A11Y_FEATURE_MAP.accessibilityPreferencesSharedValue, obj);
-      const tmp6 = uDefault;
+      updateSharedValueIfChangedDefault(AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, obj);
     }
   },
   handlePreferredColorSchemeChanged(colorScheme) {
@@ -132,143 +126,128 @@ export default {
     if ("dark" === colorScheme) {
       const PREFERS_COLOR_SCHEME_LIGHT3 = AccessibilityFeatureFlags.PREFERS_COLOR_SCHEME_LIGHT;
       closure_8 = closure_8 & ~PREFERS_COLOR_SCHEME_LIGHT3;
-      const tmp21 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_LIGHT3];
+      const tmp21 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_LIGHT3];
       if (null != tmp21) {
-        let obj = {};
-        obj[tmp21] = false;
-        uDefault(tmp19(14439).accessibilityPreferencesSharedValue, obj);
-        const tmp24 = uDefault;
+        const obj2 = {};
+        obj2[tmp21] = false;
+        updateSharedValueIfChangedDefault(tmp19(14464).accessibilityPreferencesSharedValue, obj2);
       }
       const PREFERS_COLOR_SCHEME_DARK2 = AccessibilityFeatureFlags.PREFERS_COLOR_SCHEME_DARK;
       closure_8 = closure_8 | PREFERS_COLOR_SCHEME_DARK2;
-      const tmp27 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_DARK2];
+      const tmp27 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_DARK2];
       if (null != tmp27) {
-        obj = {};
-        obj[tmp27] = true;
-        uDefault(tmp19(14439).accessibilityPreferencesSharedValue, obj);
-        const tmp29 = uDefault;
+        const obj3 = {};
+        obj3[tmp27] = true;
+        updateSharedValueIfChangedDefault(tmp19(14464).accessibilityPreferencesSharedValue, obj3);
       }
-      const tmp17 = AccessibilityFeatureFlags;
     } else if ("light" === colorScheme) {
       const PREFERS_COLOR_SCHEME_DARK = AccessibilityFeatureFlags.PREFERS_COLOR_SCHEME_DARK;
       closure_8 = closure_8 & ~PREFERS_COLOR_SCHEME_DARK;
-      const tmp10 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_DARK];
+      const tmp10 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_DARK];
       if (null != tmp10) {
-        obj1 = {};
-        obj1[tmp10] = false;
-        uDefault(tmp8(14439).accessibilityPreferencesSharedValue, obj1);
-        const tmp13 = uDefault;
+        const obj4 = {};
+        obj4[tmp10] = false;
+        updateSharedValueIfChangedDefault(tmp8(14464).accessibilityPreferencesSharedValue, obj4);
       }
       const PREFERS_COLOR_SCHEME_LIGHT2 = AccessibilityFeatureFlags.PREFERS_COLOR_SCHEME_LIGHT;
       closure_8 = closure_8 | PREFERS_COLOR_SCHEME_LIGHT2;
-      const tmp16 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_LIGHT2];
+      const tmp16 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_LIGHT2];
       if (null != tmp16) {
-        const obj2 = {};
-        obj2[tmp16] = true;
-        uDefault(tmp8(14439).accessibilityPreferencesSharedValue, obj2);
-        const tmp41 = uDefault;
+        const obj5 = {};
+        obj5[tmp16] = true;
+        updateSharedValueIfChangedDefault(tmp8(14464).accessibilityPreferencesSharedValue, obj5);
       }
-      const tmp6 = AccessibilityFeatureFlags;
     } else {
       const PREFERS_COLOR_SCHEME_DARK3 = AccessibilityFeatureFlags.PREFERS_COLOR_SCHEME_DARK;
       closure_8 = closure_8 & ~PREFERS_COLOR_SCHEME_DARK3;
-      const tmp35 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_DARK3];
+      const tmp35 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_DARK3];
       if (null != tmp35) {
-        obj = {};
+        const obj = {};
         obj[tmp35] = false;
-        uDefault(tmp33(14439).accessibilityPreferencesSharedValue, obj);
-        const tmp2 = uDefault;
+        updateSharedValueIfChangedDefault(tmp33(14464).accessibilityPreferencesSharedValue, obj);
       }
       const PREFERS_COLOR_SCHEME_LIGHT = AccessibilityFeatureFlags.PREFERS_COLOR_SCHEME_LIGHT;
       closure_8 = closure_8 & ~PREFERS_COLOR_SCHEME_LIGHT;
-      const tmp5 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_LIGHT];
+      const tmp5 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_LIGHT];
       if (null != tmp5) {
-        const obj3 = {};
-        obj3[tmp5] = false;
-        uDefault(tmp33(14439).accessibilityPreferencesSharedValue, obj3);
-        const tmp38 = uDefault;
+        const obj6 = {};
+        obj6[tmp5] = false;
+        updateSharedValueIfChangedDefault(tmp33(14464).accessibilityPreferencesSharedValue, obj6);
       }
-      const tmp31 = AccessibilityFeatureFlags;
     }
   },
   handleAccessibilityStoreChanged() {
     const REDUCED_MOTION = AccessibilityFeatureFlags.REDUCED_MOTION;
-    const useReducedMotion = closure_6.useReducedMotion;
+    const useReducedMotion = AccessibilityStore.useReducedMotion;
     if (useReducedMotion) {
       closure_8 = tmp3 | REDUCED_MOTION;
     } else {
       closure_8 = tmp3 & ~REDUCED_MOTION;
     }
-    const tmp6 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[REDUCED_MOTION];
+    const tmp6 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[REDUCED_MOTION];
     if (null != tmp6) {
-      let obj = {};
+      const obj = {};
       obj[tmp6] = useReducedMotion;
-      uDefault(tmp4(14439).accessibilityPreferencesSharedValue, obj);
-      const tmp8 = uDefault;
+      updateSharedValueIfChangedDefault(tmp4(14464).accessibilityPreferencesSharedValue, obj);
     }
     const REDUCED_MOTION_FROM_USER_SETTINGS = tmp.REDUCED_MOTION_FROM_USER_SETTINGS;
-    if ("auto" !== closure_6.rawPrefersReducedMotion) {
+    if ("auto" !== AccessibilityStore.rawPrefersReducedMotion) {
       closure_8 = tmp11 | REDUCED_MOTION_FROM_USER_SETTINGS;
     } else {
       closure_8 = tmp11 & ~REDUCED_MOTION_FROM_USER_SETTINGS;
     }
-    const tmp12 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[REDUCED_MOTION_FROM_USER_SETTINGS];
+    const tmp12 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[REDUCED_MOTION_FROM_USER_SETTINGS];
     if (null != tmp12) {
-      obj = {};
-      obj[tmp12] = tmp10;
-      uDefault(tmp4(14439).accessibilityPreferencesSharedValue, obj);
-      const tmp14 = uDefault;
+      const obj2 = {};
+      obj2[tmp12] = tmp10;
+      updateSharedValueIfChangedDefault(tmp4(14464).accessibilityPreferencesSharedValue, obj2);
     }
     const SATURATION_LEVEL_DECREASED = tmp.SATURATION_LEVEL_DECREASED;
-    if (closure_6.saturation < 1) {
+    if (AccessibilityStore.saturation < 1) {
       closure_8 = tmp17 | SATURATION_LEVEL_DECREASED;
     } else {
       closure_8 = tmp17 & ~SATURATION_LEVEL_DECREASED;
     }
-    const tmp18 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[SATURATION_LEVEL_DECREASED];
+    const tmp18 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[SATURATION_LEVEL_DECREASED];
     if (null != tmp18) {
-      obj = {};
-      obj[tmp18] = tmp16;
-      uDefault(tmp4(14439).accessibilityPreferencesSharedValue, obj);
-      const tmp20 = uDefault;
+      const obj3 = {};
+      obj3[tmp18] = tmp16;
+      updateSharedValueIfChangedDefault(tmp4(14464).accessibilityPreferencesSharedValue, obj3);
     }
     const CONTRAST_LEVEL_DECREASED = tmp.CONTRAST_LEVEL_DECREASED;
-    if (closure_6.contrast < 1) {
+    if (AccessibilityStore.contrast < 1) {
       closure_8 = tmp23 | CONTRAST_LEVEL_DECREASED;
     } else {
       closure_8 = tmp23 & ~CONTRAST_LEVEL_DECREASED;
     }
-    const tmp24 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[CONTRAST_LEVEL_DECREASED];
+    const tmp24 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[CONTRAST_LEVEL_DECREASED];
     if (null != tmp24) {
-      obj1 = {};
-      obj1[tmp24] = tmp22;
-      uDefault(tmp4(14439).accessibilityPreferencesSharedValue, obj1);
-      const tmp26 = uDefault;
+      const obj4 = {};
+      obj4[tmp24] = tmp22;
+      updateSharedValueIfChangedDefault(tmp4(14464).accessibilityPreferencesSharedValue, obj4);
     }
     const CONTRAST_LEVEL_INCREASED = tmp.CONTRAST_LEVEL_INCREASED;
-    if (closure_6.contrast > 1) {
+    if (AccessibilityStore.contrast > 1) {
       closure_8 = tmp29 | CONTRAST_LEVEL_INCREASED;
     } else {
       closure_8 = tmp29 & ~CONTRAST_LEVEL_INCREASED;
     }
-    const tmp30 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[CONTRAST_LEVEL_INCREASED];
+    const tmp30 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[CONTRAST_LEVEL_INCREASED];
     if (null != tmp30) {
-      const obj2 = {};
-      obj2[tmp30] = tmp28;
-      uDefault(tmp4(14439).accessibilityPreferencesSharedValue, obj2);
-      const tmp32 = uDefault;
+      const obj5 = {};
+      obj5[tmp30] = tmp28;
+      updateSharedValueIfChangedDefault(tmp4(14464).accessibilityPreferencesSharedValue, obj5);
     }
   },
   handleAppStateChange(arg0) {
     if ("active" === arg0) {
-      let result = closure_3.isReduceMotionEnabled();
-      result.then((arg0) => {
-        let obj = callback(14440);
+      let result = React3.isReduceMotionEnabled();
+      result.then((result) => {
         let str = "no-preference";
-        if (arg0) {
+        if (result) {
           str = "reduce";
         }
-        const result = obj.systemPrefersReducedMotionChanged(str);
+        result = AccessibilityActionCreators.systemPrefersReducedMotionChanged(str);
         const REDUCED_MOTION = constants.REDUCED_MOTION;
         useReducedMotion = useReducedMotion.useReducedMotion;
         if (useReducedMotion) {
@@ -276,30 +255,28 @@ export default {
         } else {
           closure_8 = tmp4 & ~REDUCED_MOTION;
         }
-        const tmp5 = callback(14439).A11Y_FEATURE_MAP[REDUCED_MOTION];
+        const tmp5 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[REDUCED_MOTION];
         if (null != tmp5) {
-          obj = {};
-          obj[tmp5] = useReducedMotion;
-          callback2(11359)(tmp(14439).accessibilityPreferencesSharedValue, obj);
-          const tmp7 = callback2(11359);
+          const obj2 = {};
+          obj2[tmp5] = useReducedMotion;
+          updateSharedValueIfChangedDefault(tmp(14464).accessibilityPreferencesSharedValue, obj2);
         }
       });
-      const result1 = closure_3.prefersCrossFadeTransitions();
-      result1.then((systemPrefersCrossfades) => {
+      const result1 = React3.prefersCrossFadeTransitions();
+      result1.then((result) => {
         const REDUCED_MOTION_PREFERS_CROSSFADES = constants.REDUCED_MOTION_PREFERS_CROSSFADES;
-        if (systemPrefersCrossfades) {
+        if (result) {
           closure_8 = tmp | REDUCED_MOTION_PREFERS_CROSSFADES;
         } else {
           closure_8 = tmp & ~REDUCED_MOTION_PREFERS_CROSSFADES;
         }
-        const tmp4 = callback(14439).A11Y_FEATURE_MAP[REDUCED_MOTION_PREFERS_CROSSFADES];
+        const tmp4 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[REDUCED_MOTION_PREFERS_CROSSFADES];
         if (null != tmp4) {
           const obj = {};
-          obj[tmp4] = systemPrefersCrossfades;
-          callback2(11359)(tmp2(14439).accessibilityPreferencesSharedValue, obj);
-          const tmp6 = callback2(11359);
+          obj[tmp4] = result;
+          updateSharedValueIfChangedDefault(tmp2(14464).accessibilityPreferencesSharedValue, obj);
         }
-        const result = callback(14440).systemPrefersCrossfadesChanged(systemPrefersCrossfades);
+        result = AccessibilityActionCreators.systemPrefersCrossfadesChanged(result);
       });
     }
   }

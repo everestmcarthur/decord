@@ -1,88 +1,90 @@
-// Module ID: 10334
-// Function ID: 10335
-// Name: MessageStandardEmojiActionSheet
-// Dependencies: [19, 17, 1074, 21, 4560, 1115, 1256, 7150, 1242, 10335, 10342, 10343, 2]
+// Module ID: 10361
+// Function ID: 10362
+// Name: MessageEmojiActionSheet
+// Dependencies: [19, 17, 1074, 21, 4574, 1115, 1256, 7164, 1242, 10362, 10369, 10370, 2]
 // Exports: default
 
-// Module 10334 (MessageStandardEmojiActionSheet)
-import noopAll from "noop" /* 19 */;
-import EmojiDefault from "Emoji" /* 10335 */;
-import CustomEmojiContentDefault from "CustomEmojiContent" /* 10343 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import set from "set" /* 1115 */;
+// Module 10361 (MessageEmojiActionSheet)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import StandardEmojiContentDefault from "StandardEmojiContent" /* 10362 */;
+import CustomEmojiContentDefault from "CustomEmojiContent" /* 10370 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+const require = fn;
 function MessageStandardEmojiActionSheet(emojiNode) {
-  let _require;
-  let obj = _require(1256);
-  const v4Result = obj.v4();
+  _require = undefined;
+  const tmp = closure_6();
+  const v4Result = require("v1").v4();
   _require = v4Result;
-  obj = {
+  const obj2 = {
     startExpanded: true,
     onDismiss() {
-      let obj = closure_1_1(closure_1_2[8]);
-      obj = { nonce: c0 };
-      obj.track(closure_1_4.CLOSE_POPOUT, obj);
+      AnalyticsUtilsDefault.track(AnalyticEvents.CLOSE_POPOUT, { nonce });
     },
     children: null
   };
-  obj = { style: callback().contentWrapper, children: jsx(EmojiDefault, { emojiNode: emojiNode.emojiNode, nonce: v4Result }) };
-  obj[2] = <View style={callback().contentWrapper}>{jsx(EmojiDefault, { emojiNode: arg0.emojiNode, nonce: v4Result })}</View>;
-  return jsx(_require(7150).BottomSheet, { style: callback().contentWrapper, children: jsx(EmojiDefault, { emojiNode: emojiNode.emojiNode, nonce: v4Result }) });
+  const obj = require("v1");
+  obj2.children = <View style={tmp.contentWrapper}>{jsx(StandardEmojiContentDefault, { emojiNode: arg0.emojiNode, nonce: v4Result })}</View>;
+  return jsx(require("Sheet/BottomSheet").BottomSheet, {
+    startExpanded: true,
+    onDismiss() {
+      AnalyticsUtilsDefault.track(AnalyticEvents.CLOSE_POPOUT, { nonce });
+    },
+    children: null
+  });
 }
 function MessageCustomEmojiActionSheet(emojiNode) {
   emojiNode = emojiNode.emojiNode;
-  let _require;
-  let obj = _require(10342);
-  obj = { emojiId: emojiNode.id };
-  const emojiAndSource = obj.useEmojiAndSource(obj);
+  _require = undefined;
+  const tmp = closure_6();
+  const emojiAndSource = require("useEmojiAndSource").useEmojiAndSource({ emojiId: emojiNode.id });
   if (emojiAndSource.isFetching) {
     return null;
   } else {
     const v4Result = tmp2(1256).v4();
     _require = v4Result;
-    obj = { startExpanded: true, onDismiss: null, children: null };
-    obj[1] = function onDismiss() {
-      let obj = closure_1_1(closure_1_2[8]);
-      obj = { nonce: c0 };
-      obj.track(closure_1_4.CLOSE_POPOUT, obj);
+    const obj3 = {
+      startExpanded: true,
+      onDismiss() {
+          AnalyticsUtilsDefault.track(AnalyticEvents.CLOSE_POPOUT, { nonce });
+        },
+      children: null
     };
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.contentWrapper;
-    const obj2 = { emojiNode: null, sourceType: null, expressionSourceApplication: null, expressionSourceGuild: null, customEmojiFromJoinedGuild: null, hasJoinedEmojiSourceGuild: null, nonce: null };
-    obj2[0] = emojiNode;
-    obj2[1] = tmp5;
-    obj2[2] = tmp7;
-    obj2[3] = tmp6;
-    obj2[4] = tmp9;
-    obj2[5] = tmp8;
-    obj2[6] = v4Result;
-    obj1[1] = jsx(CustomEmojiContentDefault, { emojiNode: null, sourceType: null, expressionSourceApplication: null, expressionSourceGuild: null, customEmojiFromJoinedGuild: null, hasJoinedEmojiSourceGuild: null, nonce: null });
-    obj[2] = <View style={null}>{null}</View>;
-    return jsx(tmp2(7150).BottomSheet, { startExpanded: true, onDismiss: null, children: null });
+    const obj4 = { style: tmp.contentWrapper, children: null };
+    const obj5 = { emojiNode, sourceType: tmp5, expressionSourceApplication: tmp7, expressionSourceGuild: tmp6, customEmojiFromJoinedGuild: tmp9, hasJoinedEmojiSourceGuild: tmp8, nonce: v4Result };
+    obj4.children = jsx(CustomEmojiContentDefault, { emojiNode, sourceType: tmp5, expressionSourceApplication: tmp7, expressionSourceGuild: tmp6, customEmojiFromJoinedGuild: tmp9, hasJoinedEmojiSourceGuild: tmp8, nonce: v4Result });
+    obj3.children = <View style={tmp.contentWrapper}>{null}</View>;
+    return jsx(tmp2(7164).BottomSheet, {
+      startExpanded: true,
+      onDismiss() {
+          AnalyticsUtilsDefault.track(AnalyticEvents.CLOSE_POPOUT, { nonce });
+        },
+      children: null
+    });
   }
-  tmp = callback();
+  const obj = require("useEmojiAndSource");
+  const obj2 = { emojiId: emojiNode.id };
 }
-noopAll;
+const View = fn(17).View;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+const PlatformUtils = fn(1115);
 let num = 0;
-if (set.isAndroid()) {
+if (PlatformUtils.isAndroid()) {
   num = 16;
 }
-let closure_6 = createCacheKey.createStyles({ contentWrapper: { paddingHorizontal: 16, paddingBottom: num } });
-const result = set.fileFinishedImporting("modules/messages/native/emoji/MessageEmojiActionSheet.tsx");
+let closure_6 = createStyles.createStyles({ contentWrapper: { paddingHorizontal: 16, paddingBottom: num } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/native/emoji/MessageEmojiActionSheet.tsx");
 
 export default function MessageEmojiActionSheet(emojiNode) {
   emojiNode = emojiNode.emojiNode;
   if ("surrogate" in emojiNode) {
-    let obj = { emojiNode: null };
-    obj[0] = emojiNode;
-    let tmpResult = tmp(MessageStandardEmojiActionSheet, obj);
+    const obj2 = { emojiNode };
+    let tmpResult = tmp(MessageStandardEmojiActionSheet, obj2);
   } else {
-    obj = { emojiNode: null };
-    obj[0] = emojiNode;
+    const obj = { emojiNode };
     tmpResult = tmp(MessageCustomEmojiActionSheet, obj);
   }
   return tmpResult;

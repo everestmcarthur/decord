@@ -1,30 +1,30 @@
-// Module ID: 8809
-// Function ID: 8810
-// Name: shouldAnimate
-// Dependencies: [8810, 2]
+// Module ID: 8838
+// Function ID: 8839
+// Name: ProfileEffectUtils
+// Dependencies: [8839, 2]
 // Exports: calculateProfileEffectHeight, shouldAnimate
 
-// Module 8809 (shouldAnimate)
-import set from "set" /* 2 */;
-import DEFAULT_PROFILE_EFFECT_WH_RATIO from "DEFAULT_PROFILE_EFFECT_WH_RATIO" /* 8810 */;
+// Module 8838 (ProfileEffectUtils)
+import getAssetWHRatio from "getAssetWHRatio" /* 8839 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffectUtils.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffectUtils.tsx");
 
-export const shouldAnimate = function shouldAnimate(start, current) {
-  if (current >= start.start) {
-    if (!start.loop) {
-      if (current > start.duration + start.start) {
+export const shouldAnimate = function shouldAnimate(entering, current) {
+  if (current >= entering.start) {
+    if (!entering.loop) {
+      if (current > entering.duration + entering.start) {
         return false;
       }
     }
-    if (start.loop) {
-      if (undefined !== start.loopDelay) {
-        if (start.loopDelay > 0) {
+    if (entering.loop) {
+      if (undefined !== entering.loopDelay) {
+        if (entering.loopDelay > 0) {
           let loopDelay;
-          if (start != null) {
-            loopDelay = start.loopDelay;
+          if (entering != null) {
+            loopDelay = entering.loopDelay;
           }
-          if ((current - start.start) % (start.duration + loopDelay) > start.duration) {
+          if ((current - entering.start) % (entering.duration + loopDelay) > entering.duration) {
             return false;
           }
         }
@@ -36,5 +36,5 @@ export const shouldAnimate = function shouldAnimate(start, current) {
   }
 };
 export const calculateProfileEffectHeight = function calculateProfileEffectHeight(layerConfig, width) {
-  return width / DEFAULT_PROFILE_EFFECT_WH_RATIO.getAssetWHRatio(layerConfig);
+  return width / getAssetWHRatio.getAssetWHRatio(layerConfig);
 };

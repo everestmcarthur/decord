@@ -1,22 +1,22 @@
 // Module ID: 1917
 // Function ID: 1918
-// Name: getOfficialApplicationId
+// Name: GameRecord
 // Dependencies: [1386, 1918, 1894, 1924, 1396, 1369, 2]
 
-// Module 1917 (getOfficialApplicationId)
-import toJSDefault from "toJS" /* 1386 */;
-import getAvatarURL from "getAvatarURL" /* 1396 */;
+// Module 1917 (GameRecord)
+import AvatarUtils from "AvatarUtils" /* 1396 */;
+import Server from "Server" /* 1894 */;
 import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 1924 */;
-import closure_3 from "createExecutable" /* 1918 */;
-import { createExecutable } from "createExecutable" /* 1918 */;
+import Record from "Record" /* 1386 */;
+import ApplicationRecord from "ApplicationRecord" /* 1918 */;
 
-require = arg1;
-toJSDefault;
-const result = require("set").fileFinishedImporting("modules/games/GameRecord.tsx");
+require = fn;
+const createExecutable = fn(1918).createExecutable;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/games/GameRecord.tsx");
 class GameRecord extends tmp2 {
   constructor(arg0) {
     tmp5 = new GameRecord(tmp4, tmp3, tmp2, tmp, new.target, new.target);
-    // ThrowIfThisInitialized (0x7c)
     ({ id: tmp5.id, name: tmp5.name, description: tmp5.description, aliases } = global);
     if (aliases == null) {
       aliases = [];
@@ -82,26 +82,26 @@ class GameRecord extends tmp2 {
       tmp9 = undefined;
       if (null != reviews.steam) {
         obj = { rating: null, ratingCount: null, recentRating: null, recentRatingCount: null, localizedRating: null, localizedRatingCount: null };
-        obj[0] = reviews.steam.rating;
-        obj[1] = reviews.steam.rating_count;
-        obj[2] = reviews.steam.recent_rating;
-        obj[3] = reviews.steam.recent_rating_count;
-        obj[4] = reviews.steam.localized_rating;
-        obj[5] = reviews.steam.localized_rating_count;
+        obj.rating = reviews.steam.rating;
+        obj.ratingCount = reviews.steam.rating_count;
+        obj.recentRating = reviews.steam.recent_rating;
+        obj.recentRatingCount = reviews.steam.recent_rating_count;
+        obj.localizedRating = reviews.steam.localized_rating;
+        obj.localizedRatingCount = reviews.steam.localized_rating_count;
         tmp9 = obj;
       }
-      obj = { steam: null, opencritic: null };
-      obj[0] = tmp9;
+      obj1 = { steam: null, opencritic: null };
+      obj1.steam = tmp9;
       tmp10 = undefined;
       if (null != reviews.opencritic) {
-        obj1 = { topCriticRating: null, topCriticRatingCount: null, tier: null };
-        obj1[0] = reviews.opencritic.top_critic_rating;
-        obj1[1] = reviews.opencritic.top_critic_rating_count;
-        obj1[2] = reviews.opencritic.tier;
-        tmp10 = obj1;
+        obj4 = { topCriticRating: null, topCriticRatingCount: null, tier: null };
+        obj4.topCriticRating = reviews.opencritic.top_critic_rating;
+        obj4.topCriticRatingCount = reviews.opencritic.top_critic_rating_count;
+        obj4.tier = reviews.opencritic.tier;
+        tmp10 = obj4;
       }
-      obj[1] = tmp10;
-      tmp8 = obj;
+      obj1.opencritic = tmp10;
+      tmp8 = obj1;
     } else {
       opencritic = undefined;
       if (reviews != null) {
@@ -123,7 +123,7 @@ prototype["getOfficialApplicationId"] = function getOfficialApplicationId() {
   const linkedApplications = this.linkedApplications;
   let id;
   if (linkedApplications != null) {
-    const found = linkedApplications.find((type) => type.type === callback(table[2]).GameLinkTypes.OFFICIAL);
+    const found = linkedApplications.find((type) => type.type === Server.GameLinkTypes.OFFICIAL);
     if (found != null) {
       id = found.id;
     }
@@ -153,7 +153,7 @@ prototype["getCoverURL"] = function getCoverURL(size) {
     cover = media.cover;
   }
   let str = "png";
-  if (getAvatarURL.SUPPORTS_WEBP) {
+  if (AvatarUtils.SUPPORTS_WEBP) {
     str = "webp";
   }
   return getGameMediaRefURLDefault(this.id, cover, { keepAspectRatio: true, format: str, size });
@@ -168,7 +168,7 @@ prototype["getArtworkURLs"] = function getArtworkURLs() {
   if (artwork == null) {
     artwork = [];
   }
-  const mapped = artwork.map((arg0) => closure_1_1(closure_1_2[3])(self.id, arg0, { keepAspectRatio: true }));
+  const mapped = artwork.map((item) => getGameMediaRefURLDefault(self.id, item, { keepAspectRatio: true }));
   return mapped.filter(self(1369).isNotNullish);
 };
 prototype["getCompanyByRole"] = function getCompanyByRole(DEVELOPER) {

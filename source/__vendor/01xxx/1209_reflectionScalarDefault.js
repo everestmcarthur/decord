@@ -2,18 +2,20 @@
 // Function ID: 1210
 // Name: reflectionScalarDefault
 // Dependencies: [1201, 1206, 1195]
+// Exports: reflectionScalarDefault
 
 // Module 1209 (reflectionScalarDefault)
-import RepeatType from "RepeatType" /* 1201 */;
+import ScalarType from "ScalarType" /* 1201 */;
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.reflectionScalarDefault = function reflectionScalarDefault(T, L) {
+
+export const reflectionScalarDefault = function reflectionScalarDefault(T, L) {
   let STRING = L;
   if (L === undefined) {
-    STRING = RepeatType.LongType.STRING;
+    STRING = ScalarType.LongType.STRING;
   }
-  if (RepeatType.ScalarType.BOOL === T) {
+  if (ScalarType.ScalarType.BOOL === T) {
     return false;
   } else {
     if (tmp3(1201).ScalarType.UINT64 !== T) {
@@ -38,11 +40,9 @@ arg5.reflectionScalarDefault = function reflectionScalarDefault(T, L) {
             }
           }
         }
-        let tmp3Result = tmp3(1206);
-        return tmp3Result.reflectionLongConvert(tmp3(1195).PbLong.ZERO, STRING);
+        return tmp3(1206).reflectionLongConvert(tmp3(1195).PbLong.ZERO, STRING);
       }
     }
-    tmp3Result = tmp3(1206);
-    return tmp3Result.reflectionLongConvert(tmp3(1195).PbULong.ZERO, STRING);
+    return tmp3(1206).reflectionLongConvert(tmp3(1195).PbULong.ZERO, STRING);
   }
 };

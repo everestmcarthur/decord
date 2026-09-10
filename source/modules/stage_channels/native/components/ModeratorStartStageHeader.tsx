@@ -1,41 +1,39 @@
-// Module ID: 10078
-// Function ID: 10079
-// Dependencies: [19, 17, 21, 4560, 5682, 10038, 10032, 2]
+// Module ID: 10105
+// Function ID: 10106
+// Name: ModeratorStartStageHeader
+// Dependencies: [19, 17, 21, 4574, 5696, 10065, 10059, 2]
 
-// Module 10078
-import HideStageChannelCallIcon from "HideStageChannelCallIcon" /* 10032 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 10038 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 10105 (ModeratorStartStageHeader)
+import StageActionHeader from "StageActionHeader" /* 10059 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 10065 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let obj = { header: null };
-obj = { height: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: 8, marginTop: 4, overflow: "visible" };
-obj[0] = obj;
-let closure_6 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo((channel) => {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj = { header: { height: fn(5696).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: 8, marginTop: 4, overflow: "visible" } };
+let closure_6 = createStyles.createStyles(obj);
+const obj3 = { height: fn(5696).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: 8, marginTop: 4, overflow: "visible" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/ModeratorStartStageHeader.tsx");
+
+export default noop.memo((channel) => {
   channel = channel.channel;
   const tmp3 = useMyCurrentStageChannelRoleDefault(channel.id);
   let speaker;
   if (tmp3 != null) {
     speaker = tmp3.speaker;
   }
-  let obj = { style: callback2().header, pointerEvents: "box-none", children: null };
-  const items = [callback(HideStageChannelCallIcon.HideStageChannelCallIcon, { channel }), callback(HideStageChannelCallIcon.StageChannelCallHeader, { channel }), , ];
+  const obj = { style: closure_6().header, pointerEvents: "box-none", children: null };
+  const items = [React4(StageActionHeader.HideStageChannelCallIcon, { channel }), React4(StageActionHeader.StageChannelCallHeader, { channel }), , ];
   if (speaker) {
-    obj = { channelId: null };
-    obj[0] = channel.id;
-    speaker = tmp7(tmp8(10032).MusicMuteButton, obj);
+    const obj2 = { channelId: channel.id };
+    speaker = tmp7(tmp8(10059).MusicMuteButton, obj2);
   }
   items[2] = speaker;
-  obj = { channelId: channel.id };
-  items[3] = callback(HideStageChannelCallIcon.StageInviteButton, obj);
-  obj[2] = items;
-  return closure_5(View, obj);
+  items[3] = React4(StageActionHeader.StageInviteButton, { channelId: channel.id });
+  obj.children = items;
+  return hasOwnProperty(View, obj);
 });
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/ModeratorStartStageHeader.tsx");
-
-export default memoResult;

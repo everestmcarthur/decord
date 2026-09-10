@@ -1,15 +1,16 @@
-// Module ID: 13246
-// Function ID: 13247
-// Name: createPostPreviewEmbeds
-// Dependencies: [1074, 13247, 2]
+// Module ID: 13269
+// Function ID: 13270
+// Name: PostPreviewEmbeds
+// Dependencies: [1074, 13270, 2]
 // Exports: createPostPreviewEmbeds
 
-// Module 13246 (createPostPreviewEmbeds)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 13269 (PostPreviewEmbeds)
+import Constants from "Constants" /* 1074 */;
+import createMediaPostPreviewEmbedContentDefault from "createMediaPostPreviewEmbedContent" /* 13270 */;
+import size from "module_2" /* 2 */;
 
-const MessageEmbedTypes = ME.MessageEmbedTypes;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/PostPreviewEmbeds.tsx");
+const MessageEmbedTypes = Constants.MessageEmbedTypes;
+const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/PostPreviewEmbeds.tsx");
 
 export const createPostPreviewEmbeds = function createPostPreviewEmbeds(message, roleStyle, useReducedMotion) {
   closure_0 = message;
@@ -22,8 +23,8 @@ export const createPostPreviewEmbeds = function createPostPreviewEmbeds(message,
   const embeds = message.embeds;
   if (embeds != null) {
     const item = embeds.forEach((type) => {
-      if (type.type === flag.POST_PREVIEW) {
-        const tmp6 = message(table[1])(message, table, type.url, flag);
+      if (type.type === MessageEmbedTypes.POST_PREVIEW) {
+        const tmp6 = createMediaPostPreviewEmbedContentDefault(closure_0, closure_1, type.url, flag);
         if (null != tmp6) {
           items.push(tmp6);
         }

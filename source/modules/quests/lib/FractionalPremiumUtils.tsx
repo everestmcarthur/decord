@@ -1,52 +1,48 @@
-// Module ID: 11299
-// Function ID: 11300
-// Name: getDurationStringOfFractionalPremium
-// Dependencies: [4218, 1114, 7708, 4242, 1090, 2]
+// Module ID: 11326
+// Function ID: 11327
+// Name: FractionalPremiumUtils
+// Dependencies: [4231, 1114, 7722, 4255, 1090, 2]
 // Exports: getDurationStringOfFractionalPremium, getFractionalPremiumQuestRewardName, getFractionalPremiumQuestRewards
 
-// Module 11299 (getDurationStringOfFractionalPremium)
-import set from "set" /* 2 */;
-import setDefault from "set" /* 1090 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4218 */;
-import resetCache from "resetCache" /* 4242 */;
+// Module 11326 (FractionalPremiumUtils)
+import DurationsDefault from "Durations" /* 1090 */;
+import util from "util" /* 1114 */;
+import PremiumUtils from "PremiumUtils" /* 4231 */;
+import DateUtils from "DateUtils" /* 4255 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7722 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/quests/lib/FractionalPremiumUtils.tsx");
+const result = size.fileFinishedImporting("modules/quests/lib/FractionalPremiumUtils.tsx");
 
 export const getDurationStringOfFractionalPremium = function getDurationStringOfFractionalPremium(arr) {
-  let obj = getPremiumPlanItem;
-  const fractionalPremiumUnitsHoursFromSkuIds = obj.getFractionalPremiumUnitsHoursFromSkuIds(arr.map((skuId) => skuId.skuId));
+  const fractionalPremiumUnitsHoursFromSkuIds = PremiumUtils.getFractionalPremiumUnitsHoursFromSkuIds(arr.map((skuId) => skuId.skuId));
   if (fractionalPremiumUnitsHoursFromSkuIds % 24 === 0) {
     const intl2 = tmp(1114).intl;
-    obj = { days: null };
-    obj[0] = fractionalPremiumUnitsHoursFromSkuIds / 24;
-    let formatToPlainStringResult = intl2.formatToPlainString(tmp(1114).t.Cz1G97, obj);
+    const obj2 = { days: fractionalPremiumUnitsHoursFromSkuIds / 24 };
+    let formatToPlainStringResult = intl2.formatToPlainString(tmp(1114).t.Cz1G97, obj2);
   } else {
     const intl = tmp(1114).intl;
-    obj = { hours: null };
-    obj[0] = fractionalPremiumUnitsHoursFromSkuIds;
-    formatToPlainStringResult = intl.formatToPlainString(tmp(1114).t.J9Lu4h, obj);
+    const obj3 = { hours: fractionalPremiumUnitsHoursFromSkuIds };
+    formatToPlainStringResult = intl.formatToPlainString(tmp(1114).t.J9Lu4h, obj3);
   }
   return formatToPlainStringResult;
 };
 export const getFractionalPremiumQuestRewards = function getFractionalPremiumQuestRewards(rewardsConfig) {
   const rewards = rewardsConfig.rewardsConfig.rewards;
-  return rewards.filter((type) => type.type === callback(table[2]).QuestRewardTypes.FRACTIONAL_PREMIUM);
+  return rewards.filter((type) => type.type === QuestRewardTypes.QuestRewardTypes.FRACTIONAL_PREMIUM);
 };
 export const getFractionalPremiumQuestRewardName = function getFractionalPremiumQuestRewardName(rewardsConfig) {
   const rewards = rewardsConfig.rewardsConfig.rewards;
-  const found = rewards.filter((type) => type.type === callback(table[2]).QuestRewardTypes.FRACTIONAL_PREMIUM);
+  const found = rewards.filter((type) => type.type === QuestRewardTypes.QuestRewardTypes.FRACTIONAL_PREMIUM);
   const flatMapResult = found.flatMap((quantity) => Array(quantity.quantity).fill(quantity.skuId));
-  let obj = { days: null, hours: null, minutes: null };
-  const fractionalPremiumUnitsHoursFromSkuIds = getPremiumPlanItem.getFractionalPremiumUnitsHoursFromSkuIds(flatMapResult);
-  obj[0] = getSystemLocale.t.fYmirx;
-  obj[1] = getSystemLocale.t["C3RO+g"];
-  obj[2] = getSystemLocale.t.r77oHc;
-  const obj2 = getPremiumPlanItem;
-  const obj4 = resetCache;
-  const intl = getSystemLocale.intl;
-  obj = { time: null };
-  const diffAsUnitsResult = resetCache.diffAsUnits(0, fractionalPremiumUnitsHoursFromSkuIds * setDefault.Millis.HOUR);
-  obj[0] = resetCache.unitsAsStrings(diffAsUnitsResult, obj);
-  return intl.formatToPlainString(getSystemLocale.t["4SqnVD"], obj);
+  const time = { days: null, hours: null, minutes: null };
+  const fractionalPremiumUnitsHoursFromSkuIds = PremiumUtils.getFractionalPremiumUnitsHoursFromSkuIds(flatMapResult);
+  time.days = util.t.fYmirx;
+  time.hours = util.t["C3RO+g"];
+  time.minutes = util.t.r77oHc;
+  const intl = util.intl;
+  const obj = { time: null };
+  const diffAsUnitsResult = DateUtils.diffAsUnits(0, fractionalPremiumUnitsHoursFromSkuIds * DurationsDefault.Millis.HOUR);
+  obj.time = DateUtils.unitsAsStrings(diffAsUnitsResult, time);
+  return intl.formatToPlainString(util.t["4SqnVD"], obj);
 };

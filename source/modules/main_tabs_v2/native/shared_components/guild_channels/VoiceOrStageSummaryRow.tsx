@@ -1,89 +1,84 @@
-// Module ID: 16660
-// Function ID: 16661
-// Dependencies: [19, 17, 21, 4560, 576, 10126, 4556, 1178, 16661, 2]
+// Module ID: 16692
+// Function ID: 16693
+// Name: guild_channels/VoiceOrStageSummaryRow
+// Dependencies: [19, 17, 21, 4574, 576, 10153, 4570, 1178, 16693, 2]
 
-// Module 16660
-import ThemesDefault from "Themes" /* 576 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 16692 (guild_channels/VoiceOrStageSummaryRow)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles((height) => {
-  let obj = { container: { flexDirection: "row", alignItems: "center", marginLeft: -2 }, overflowCircle: null, wrapper: null, badge: null, audienceBadge: null };
-  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: ThemesDefault.radii.round, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", height, width: height };
-  obj[1] = obj;
-  obj = { borderRadius: ThemesDefault.radii.round, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderWidth: 2 };
-  obj[2] = obj;
-  obj[3] = { borderRadius: ThemesDefault.radii.round, paddingHorizontal: 8, display: "flex", flexDirection: "row", alignItems: "center", height };
-  obj1 = { borderRadius: ThemesDefault.radii.round, paddingHorizontal: 8, display: "flex", flexDirection: "row", alignItems: "center", height };
-  obj[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+const require = globalThis.__r;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let closure_6 = createStyles.createStyles((height) => {
+  const obj = { container: { flexDirection: "row", alignItems: "center", marginLeft: -2 }, overflowCircle: null, wrapper: null, badge: null, audienceBadge: null };
+  const size = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: nativeDefault.radii.round, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", height, width: height };
+  obj.overflowCircle = size;
+  obj.wrapper = { borderRadius: nativeDefault.radii.round, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderWidth: 2 };
+  const obj2 = { borderRadius: nativeDefault.radii.round, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderWidth: 2 };
+  obj.badge = { borderRadius: nativeDefault.radii.round, paddingHorizontal: 8, display: "flex", flexDirection: "row", alignItems: "center", height };
+  const obj3 = { borderRadius: nativeDefault.radii.round, paddingHorizontal: 8, display: "flex", flexDirection: "row", alignItems: "center", height };
+  obj.audienceBadge = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
   return obj;
 });
-const memoResult = importAllResult.memo(function VoiceOrStageSummaryRow(layout) {
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/VoiceOrStageSummaryRow.tsx");
+
+export default noop.memo(function VoiceOrStageSummaryRow(layout) {
   ({ users, max } = layout);
   if (max === undefined) {
     max = 5;
   }
   ({ guildId: importDefault, audienceCount } = layout);
   let layoutStyles;
-  closure_3 = undefined;
-  closure_4 = undefined;
-  let obj = max(layoutStyles[5]);
-  layoutStyles = obj.getLayoutStyles(layout.layout);
+  layoutStyles = max(layoutStyles[5]).getLayoutStyles(layout.layout);
   const size = layoutStyles.voiceOrStageSummaryRow.size;
   closure_3 = Math.max(users.length - max, 0);
-  let tmp4 = callback(size);
+  let tmp4 = closure_6(size);
   closure_4 = tmp4;
-  obj = { style: items, children: null };
-  items = [tmp4.container, ];
-  obj = { height: size + 4 };
-  items[1] = obj;
+  let obj2 = { style: null, children: null };
+  let items = [tmp4.container, { height: size + 4 }];
+  obj2.style = items;
   let items1 = [
-    users.map((arg0, arg1) => {
-      if (arg1 < max) {
-        if (arg1 === tmp - 1) {
+    users.map((user, index) => {
+      if (index < max) {
+        if (index === tmp - 1) {
           if (closure_3 > 0) {
-            const items = [lib.wrapper, ];
-            let obj = 0 !== arg1;
-            if (obj) {
-              obj = { marginLeft: -12 };
+            const items = [closure_4.wrapper, ];
+            let obj2 = 0 !== index;
+            if (obj2) {
+              obj2 = { marginLeft: -12 };
             }
-            obj = { style: null, children: null };
-            items[1] = obj;
-            obj[0] = items;
-            obj1 = { style: null, children: null };
-            obj1[0] = lib.overflowCircle;
-            const obj2 = { variant: "text-xs/medium", children: null };
+            const obj3 = { style: null, children: null };
+            items[1] = obj2;
+            obj3.style = items;
+            const obj4 = { style: closure_4.overflowCircle, children: null };
+            const obj5 = { variant: "text-xs/medium", children: null };
             const _HermesInternal = HermesInternal;
-            obj2[1] = "+" + tmp2 + 1;
-            obj1[1] = lib(max(layoutStyles[6]).Text, obj2);
-            obj[1] = lib(closure_3, obj1);
-            let tmp3Result = lib(closure_3, obj, "overflow");
-            const tmp13 = lib;
-            const tmp14 = closure_3;
-            const tmp15 = lib;
+            obj5.children = "+" + tmp2 + 1;
+            obj4.children = React4(Text_Text.Text, obj5);
+            obj3.children = React4(View, obj4);
+            let tmp3Result = React4(View, obj3, "overflow");
           }
           return tmp3Result;
         }
-        const items1 = [lib.wrapper, ];
-        obj = 0 !== arg1;
+        const items1 = [closure_4.wrapper, ];
+        let obj = 0 !== index;
         if (obj) {
           obj = { marginLeft: -12 };
         }
-        const obj3 = { style: null, children: null };
+        const obj6 = { style: null, children: null };
         items1[1] = obj;
-        obj3[0] = items1;
-        const obj4 = { user: null, guildId: null, size: null };
-        obj4[0] = arg0;
-        obj4[1] = closure_1;
-        obj4[2] = layoutStyles.voiceOrStageSummaryRow.avatarSize;
-        obj3[1] = lib(max(layoutStyles[7]).Avatar, obj4);
-        tmp3Result = lib(closure_3, obj3, arg1);
-        const tmp3 = lib;
-        const tmp4 = closure_3;
+        obj6.style = items1;
+        const obj7 = { user, guildId, size: layoutStyles.voiceOrStageSummaryRow.avatarSize };
+        obj6.children = React4(native.Avatar, obj7);
+        tmp3Result = React4(View, obj6, index);
       }
     }),
 
@@ -91,31 +86,23 @@ const memoResult = importAllResult.memo(function VoiceOrStageSummaryRow(layout) 
   let tmp8Result = null != audienceCount && audienceCount > 0;
   if (tmp8Result) {
     const items2 = [tmp4.wrapper, ];
-    obj1 = { style: null, children: null };
+    let obj4 = { style: null, children: null };
     items2[1] = users.length > 0 && { marginLeft: -12 };
-    obj1[0] = items2;
-    let obj2 = { style: null, children: null };
+    obj4.style = items2;
+    let obj5 = { style: null, children: null };
     const items3 = [, ];
     ({ badge: arr4[0], audienceBadge: arr4[1] } = tmp4);
-    obj2[0] = items3;
-    let obj3 = { size: null, style: null, source: null };
-    obj3[0] = tmp(tmp2[7]).Icon.Sizes.CUSTOM;
-    obj3[1] = { height: 14, width: 14 };
-    obj3[2] = importDefault(tmp2[8]);
-    const items4 = [closure_4(tmp(tmp2[7]).Icon, obj3), ];
-    let obj4 = { variant: "text-sm/bold", style: null, children: null };
-    obj4[1] = { marginLeft: 4 };
-    obj4[2] = audienceCount;
-    items4[1] = closure_4(tmp(tmp2[6]).Text, obj4);
-    obj2[1] = items4;
-    obj1[1] = tmp5(tmp6, obj2);
-    tmp8Result = tmp8(tmp6, obj1);
+    obj5.style = items3;
+    let obj6 = { size: tmp(tmp2[7]).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: require("module_16693") };
+    const items4 = [closure_4(tmp(tmp2[7]).Icon, obj6), ];
+    let obj7 = { variant: "text-sm/bold", style: { marginLeft: 4 }, children: audienceCount };
+    items4[1] = closure_4(tmp(tmp2[6]).Text, obj7);
+    obj5.children = items4;
+    obj4.children = tmp5(tmp6, obj5);
+    tmp8Result = tmp8(tmp6, obj4);
     const tmp9 = users.length > 0 && { marginLeft: -12 };
   }
   items1[1] = tmp8Result;
-  obj[1] = items1;
-  return closure_5(closure_3, obj);
+  obj2.children = items1;
+  return closure_5(closure_3, obj2);
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/VoiceOrStageSummaryRow.tsx");
-
-export default memoResult;

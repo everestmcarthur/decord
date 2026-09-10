@@ -1,27 +1,31 @@
-// Module ID: 15569
-// Function ID: 15570
-// Dependencies: [19, 21, 5123, 1114, 8361, 7, 9058, 2]
+// Module ID: 15599
+// Function ID: 15600
+// Name: ShareLogsButton
+// Dependencies: [19, 21, 5137, 1114, 8389, 7, 9085, 2]
 
-// Module 15569
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import PressableBase from "PressableBase" /* 5123 */;
-import ShareIcon from "ShareIcon" /* 9058 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+// Module 15599 (ShareLogsButton)
+import LogAggregator from "LogAggregator" /* 7 */;
+import util from "util" /* 1114 */;
+import Pressables from "Pressables" /* 5137 */;
+import showShareActionSheet from "showShareActionSheet" /* 8389 */;
+import ShareIcon from "ShareIcon" /* 9085 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const memoResult = importAllResult.memo(function ShareLogsButton() {
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/debug/native/ShareLogsButton.tsx");
+
+export default noop.memo(function ShareLogsButton() {
   let obj = { accessibilityLabel: null, onPress: null, children: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["Aw+09z"]);
-  obj[1] = function onPress() {
-    let obj = callback(8361);
-    obj = { message: callback(7).stringify() };
-    return obj.showShareActionSheet(obj, "Debug Logs");
+  const intl = util.intl;
+  obj.accessibilityLabel = intl.string(util.t["Aw+09z"]);
+  obj.onPress = function onPress() {
+    const obj2 = { message: null };
+    const obj = showShareActionSheet;
+    obj2.message = LogAggregator.stringify();
+    return obj.showShareActionSheet(obj2, "Debug Logs");
   };
-  obj[2] = jsx(ShareIcon.ShareIcon, {});
-  return jsx(PressableBase.PressableOpacity, { accessibilityLabel: null, onPress: null, children: null });
+  obj.children = jsx(ShareIcon.ShareIcon, {});
+  return jsx(Pressables.PressableOpacity, { accessibilityLabel: null, onPress: null, children: null });
 });
-const result = require("set").fileFinishedImporting("modules/debug/native/ShareLogsButton.tsx");
-
-export default memoResult;

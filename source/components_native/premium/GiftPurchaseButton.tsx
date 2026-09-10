@@ -1,19 +1,20 @@
-// Module ID: 13571
-// Function ID: 13572
+// Module ID: 13594
+// Function ID: 13595
 // Name: GiftPurchaseButton
-// Dependencies: [5, 19, 17, 4224, 7237, 21, 4981, 4556, 504, 7240, 11052, 7162, 10751, 4905, 1114, 4218, 10666, 4976, 13572, 2]
+// Dependencies: [5, 19, 17, 4237, 7251, 21, 4995, 4570, 504, 7254, 11079, 7176, 10778, 4919, 1114, 4231, 10693, 4990, 13595, 2]
 // Exports: default
 
-// Module 13571 (GiftPurchaseButton)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "reset" /* 4224 */;
-import closure_7 from "updateProduct" /* 7237 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 13594 (GiftPurchaseButton)
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
+import SubscriptionStore from "SubscriptionStore" /* 4237 */;
+import IAPStore from "IAPStore" /* 7251 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("components_native/premium/GiftPurchaseButton.tsx");
+const require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/premium/GiftPurchaseButton.tsx");
 
 export default function GiftPurchaseButton(style) {
   let str = style.variant;
@@ -26,27 +27,26 @@ export default function GiftPurchaseButton(style) {
     analyticsLocation = {};
   }
   const recipientUserId = style.recipientUserId;
-  let productIdForGift;
   let analyticsLocations;
   let createOrReuseGiftOrder;
-  obj1 = planId(recipientUserId[6]);
-  const buttonTextColorStyles = obj1.useButtonTextColorStyles(str);
-  let obj = {};
+  const buttonTextColorStyles = planId(recipientUserId[6]).useButtonTextColorStyles(str);
   const merged = Object.assign(planId(recipientUserId[7]).TextStyleSheet["text-sm/semibold"]);
   const merged1 = Object.assign(buttonTextColorStyles);
-  const items = [closure_6];
+  const obj = {};
+  const obj2 = planId(recipientUserId[6]);
+  const items = [SubscriptionStore];
   const stateFromStores = planId(recipientUserId[8]).useStateFromStores(items, () => premiumSubscription.getPremiumSubscription());
-  let obj4 = planId(recipientUserId[8]);
-  productIdForGift = planId(recipientUserId[9]).getProductIdForGift(planId);
-  let obj5 = planId(recipientUserId[9]);
+  const obj4 = planId(recipientUserId[8]);
+  const productIdForGift = planId(recipientUserId[9]).getProductIdForGift(planId);
+  const obj5 = planId(recipientUserId[9]);
   const canPurchaseIAP = planId(recipientUserId[10]).useCanPurchaseIAP(productIdForGift);
   const obj6 = planId(recipientUserId[10]);
-  const items1 = [closure_7];
-  const stateFromStores1 = planId(recipientUserId[8]).useStateFromStores(items1, () => closure_1_7.isPurchasingProduct(productIdForGift));
-  const obj7 = planId(recipientUserId[8]);
-  const items2 = [closure_7];
+  const items1 = [IAPStore];
+  const stateFromStores1 = planId(recipientUserId[8]).useStateFromStores(items1, () => IAPStore.isPurchasingProduct(productIdForGift));
+  let obj7 = planId(recipientUserId[8]);
+  const items2 = [IAPStore];
   let tmp11 = null != stateFromStores;
-  const stateFromStores2 = planId(recipientUserId[8]).useStateFromStores(items2, () => closure_1_7.getProduct(productIdForGift));
+  const stateFromStores2 = planId(recipientUserId[8]).useStateFromStores(items2, () => IAPStore.getProduct(productIdForGift));
   if (tmp11) {
     tmp11 = stateFromStores.planId === planId;
   }
@@ -54,102 +54,22 @@ export default function GiftPurchaseButton(style) {
   const obj8 = planId(recipientUserId[8]);
   createOrReuseGiftOrder = planId(recipientUserId[12]).useCreateOrReuseGiftOrder("GiftPurchaseButton");
   const items3 = [planId, recipientUserId, analyticsLocation, analyticsLocations, createOrReuseGiftOrder, productIdForGift];
-  obj = { style: style.style, children: null };
+  const obj3 = { style: style.style, children: null };
   const callback = analyticsLocations.useCallback(productIdForGift(function*() {
-    if (c4 === 2) {
-      c4 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === planInterval) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let premiumTypeFromPlanId = tmp3;
-            closure_0 = tmp7;
-            closure_0 = undefined;
-            premiumTypeFromPlanId = undefined;
-            let premiumType;
-            planInterval = undefined;
-            premiumType = 1;
-            obj1 = { planId: null, recipientUserId: null, productId: null };
-            obj1[0] = closure_1_0;
-            obj1[1] = dependencyMap;
-            obj1[2] = c3;
-            planInterval = 2;
-            c4 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = closure_1_5(obj1);
-            return obj2;
-          }
-        } else if (1 === tmp7) {
-          premiumType = 0;
-          obj1 = closure_1_1(4905);
-          const obj3 = { title: null, body: null };
-          const intl = closure_1_0(1114).intl;
-          obj3[0] = intl.string(closure_1_0(1114).t.R0RpRX);
-          const intl2 = closure_1_0(1114).intl;
-          obj3[1] = intl2.string(closure_1_0(1114).t.CKsXk3);
-          obj1.show(obj3);
-          c4 = 3;
-          const obj4 = { value: null, done: true };
-          obj4[0] = undefined;
-          return obj4;
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          premiumType = 0;
-          c4 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          closure_0 = arg1;
-          premiumType = 0;
-          premiumTypeFromPlanId = closure_1_0(4218).getPremiumTypeFromPlanId(closure_0);
-          premiumType = premiumTypeFromPlanId.premiumType;
-          planInterval = premiumTypeFromPlanId.planInterval;
-          const obj9 = closure_1_0(4218);
-          const obj5 = { recipientUserId: null, premiumType: null, planInterval: null, analyticsLocation: null, analyticsLocations: null, order: null };
-          obj5[0] = premiumType;
-          obj5[1] = premiumType;
-          obj5[2] = planInterval;
-          obj5[3] = premiumTypeFromPlanId;
-          obj5[4] = c4;
-          obj5[5] = closure_0;
-          closure_1_0(10666).openGiftModal(obj5);
-          c4 = 3;
-          return { value: "HermesInternal", done: null };
-        }
-      } catch (tmp24) {
-        if (tmp4 === premiumType) {
-          c4 = tmp2;
-          throw tmp24;
-        } else {
-          planInterval = tmp;
-        }
-      }
-    }
+    closure_128_0 = yield createOrReuseGiftOrder({ planId, recipientUserId, productId: productIdForGift });
+    const premiumTypeFromPlanId = planId(4231).getPremiumTypeFromPlanId(closure_129_0);
+    const premiumType = premiumTypeFromPlanId.premiumType;
+    const planInterval = premiumTypeFromPlanId.planInterval;
+    planId(10693).openGiftModal({ recipientUserId: closure_129_2, premiumType, planInterval, analyticsLocation: closure_129_1, analyticsLocations: closure_129_4, order: closure_128_0 });
+    yield "HermesInternal";
+    const obj7 = { title: null, body: null };
+    const intl = planId(1114).intl;
+    obj7.title = intl.string(planId(1114).t.R0RpRX);
+    const intl2 = planId(1114).intl;
+    obj7.body = intl2.string(planId(1114).t.CKsXk3);
+    tmp3(4919).show(obj7);
   }), items3);
-  obj1 = { textElement: analyticsLocation(tmp2[18])({ style: obj, basePlanId: planId, isCurrentPlan: tmp11, isGift: true, product: stateFromStores2 }), variant: str, size: "sm", onPress: callback, loading: stateFromStores1, disabled: !canPurchaseIAP, grow: true };
-  obj[1] = jsx(planId(recipientUserId[17]).BaseTextButton, { textElement: analyticsLocation(tmp2[18])({ style: obj, basePlanId: planId, isCurrentPlan: tmp11, isGift: true, product: stateFromStores2 }), variant: str, size: "sm", onPress: callback, loading: stateFromStores1, disabled: !canPurchaseIAP, grow: true });
+  const tmpResult = planId(recipientUserId[12]);
+  obj3.children = jsx(planId(recipientUserId[17]).BaseTextButton, { textElement: analyticsLocation(recipientUserId[18])({ style: obj, basePlanId: planId, isCurrentPlan: tmp11, isGift: true, product: stateFromStores2 }), variant: str, size: "sm", onPress: callback, loading: stateFromStores1, disabled: !canPurchaseIAP, grow: true });
   return <createOrReuseGiftOrder style={arg0.style}>{null}</createOrReuseGiftOrder>;
 };

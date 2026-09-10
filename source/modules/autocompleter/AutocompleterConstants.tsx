@@ -1,12 +1,12 @@
-// Module ID: 5515
-// Function ID: 5516
-// Name: HeaderRecord
+// Module ID: 5529
+// Function ID: 5530
+// Name: autocompleter/AutocompleterConstants
 // Dependencies: [2]
 
-// Module 5515 (HeaderRecord)
-import set from "set" /* 2 */;
+// Module 5529 (autocompleter/AutocompleterConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/autocompleter/AutocompleterConstants.tsx");
+const result = size.fileFinishedImporting("modules/autocompleter/AutocompleterConstants.tsx");
 
 export const HeaderRecord = function HeaderRecord(id) {
   const obj = Object.create(new.target.prototype);

@@ -1,18 +1,17 @@
-// Module ID: 16678
-// Function ID: 16679
-// Name: NativeSearchResultLinkPreviewParser
-// Dependencies: [4997, 4998, 16679, 7987, 2]
+// Module ID: 16715
+// Function ID: 16716
+// Name: SearchResultLinkPreviewMarkup
+// Dependencies: [5011, 5012, 16716, 8001, 2]
 
-// Module 16678 (NativeSearchResultLinkPreviewParser)
-import parseLinkDefault from "parseLink" /* 4998 */;
-import importDefaultResult from "combineMarkupRules" /* 4997 */;
-import createSearchResultLinkPreviewReactRules from "createSearchResultLinkPreviewReactRules" /* 16679 */;
-import importAllResult from "reactParserFor" /* 7987 */;
+// Module 16715 (SearchResultLinkPreviewMarkup)
+import MarkupRulesDefault from "MarkupRules" /* 5012 */;
+import combineMarkupRules from "combineMarkupRules" /* 5011 */;
+import MarkupParser from "MarkupParser" /* 8001 */;
 
-const items = [parseLinkDefault.NATIVE_SEARCH_RESULT_LINK_RULES, ];
-items[1] = require("createSearchResultLinkPreviewReactRules").createSearchResultLinkPreviewReactRules();
-const importDefaultResultResult = importDefaultResult(items);
-const reactParserForResult = importAllResult.reactParserFor(importDefaultResultResult);
-const result = require("set").fileFinishedImporting("modules/search/native/SearchResultLinkPreviewMarkup.tsx");
+const items = [MarkupRulesDefault.NATIVE_SEARCH_RESULT_LINK_RULES, fn(16716).createSearchResultLinkPreviewReactRules()];
+const MarkupSearchResultLinkPreviewReactRules = fn(16716);
+const importDefaultResultResult = combineMarkupRules(items);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/SearchResultLinkPreviewMarkup.tsx");
 
-export const NativeSearchResultLinkPreviewParser = reactParserForResult;
+export const NativeSearchResultLinkPreviewParser = MarkupParser.reactParserFor(combineMarkupRules(items));

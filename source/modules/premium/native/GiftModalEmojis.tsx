@@ -1,20 +1,21 @@
-// Module ID: 11451
-// Function ID: 11452
-// Name: items
-// Dependencies: [32, 19, 17, 21, 4560, 4217, 7130, 2]
+// Module ID: 11478
+// Function ID: 11479
+// Name: GiftModalEmojis
+// Dependencies: [32, 19, 17, 21, 4574, 4230, 7144, 2]
 // Exports: default
 
-// Module 11451 (items)
-import noopAll from "noop" /* 19 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11478 (GiftModalEmojis)
+import EmojiDefault from "Emoji" /* 7144 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-noopAll;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
 let items = [[100, 0, -40], [120, 40, -10], [100, 80, 10], [180, 20, 20], [140, 95, 15], [250, 0, 0], [250, 80, -20], [400, 90, 10], [400, 20, -20], [410, 0, 40]];
-let closure_6 = createCacheKey.createStyles({ emojisContainer: { alignItems: "center", justifyContent: "center", height: 250, width: "100%", position: "absolute", zIndex: 1, paddingBottom: 210 } });
-const result = require("set").fileFinishedImporting("modules/premium/native/GiftModalEmojis.tsx");
+const createStyles = fn(4574);
+let closure_6 = createStyles.createStyles({ emojisContainer: { alignItems: "center", justifyContent: "center", height: 250, width: "100%", position: "absolute", zIndex: 1, paddingBottom: 210 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/GiftModalEmojis.tsx");
 
 export default function _default(emojiName) {
   emojiName = emojiName.emojiName;
@@ -22,50 +23,28 @@ export default function _default(emojiName) {
   if (flag === undefined) {
     flag = false;
   }
-  let uRL;
+  let tmp = closure_6();
+  const src = emojiName(flag[5]).getURL(emojiName);
   let obj = emojiName(flag[5]);
-  uRL = obj.getURL(emojiName);
-  obj = {
-    style: callback().emojisContainer,
-    children: items.map((arg0, arg1) => {
-      [tmp2, tmp3, tmp4] = callback(arg0, 3);
-      let obj = { src: callback, name: emojiName, style: null, forceTextEmoji: true };
-      obj = { position: "absolute", top: null, left: null, transform: null };
-      const tmp = callback(arg0, 3);
-      const tmp5 = closure_1_4;
-      obj[1] = "" + tmp2 + "%";
-      obj[2] = "" + tmp3 + "%";
-      obj = { rotate: "" + tmp4 + "deg" };
-      items = [obj, ];
-      let num = 1;
-      if (flag) {
-        const _Math = Math;
-        num = 1.5 * Math.random() + 0.5;
-      }
-      items[1] = { scale: num };
-      obj[3] = items;
-      obj[2] = obj;
-      return tmp5(emojiName(flag[6]), obj, "" + arg1 + "-" + emojiName);
-    })
-  };
-  return <View style={callback().emojisContainer}>{items.map((arg0, arg1) => {
-    [tmp2, tmp3, tmp4] = callback(arg0, 3);
-    let obj = { src: callback, name: emojiName, style: null, forceTextEmoji: true };
-    obj = { position: "absolute", top: null, left: null, transform: null };
-    const tmp = callback(arg0, 3);
-    const tmp5 = closure_1_4;
-    obj[1] = "" + tmp2 + "%";
-    obj[2] = "" + tmp3 + "%";
-    obj = { rotate: "" + tmp4 + "deg" };
-    items = [obj, ];
+  return <View style={tmp.emojisContainer}>{items.map((item, index) => {
+    [tmp2, tmp3, tmp4] = item;
+    const obj = { src, name: emojiName, style: null, forceTextEmoji: true };
+    const rect = { position: "absolute", top: null, left: null, transform: null };
+    const tmp = _slicedToArray(item, 3);
+    const tmp5 = jsx;
+    rect.top = "" + tmp2 + "%";
+    rect.left = "" + tmp3 + "%";
+    const tmp6 = EmojiDefault;
+    const tmp7 = emojiName;
+    items = [{ rotate: "" + tmp4 + "deg" }, ];
     let num = 1;
     if (flag) {
       const _Math = Math;
       num = 1.5 * Math.random() + 0.5;
     }
     items[1] = { scale: num };
-    obj[3] = items;
-    obj[2] = obj;
-    return tmp5(emojiName(flag[6]), obj, "" + arg1 + "-" + emojiName);
+    rect.transform = items;
+    obj.style = rect;
+    return tmp5(tmp6, obj, "" + index + "-" + tmp7);
   })}</View>;
 };

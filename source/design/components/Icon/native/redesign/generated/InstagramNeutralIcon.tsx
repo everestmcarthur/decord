@@ -1,26 +1,26 @@
-// Module ID: 8103
-// Function ID: 8104
+// Module ID: 8119
+// Function ID: 8120
 // Name: InstagramNeutralIcon
-// Dependencies: [19, 21, 576, 4261, 8104, 2]
+// Dependencies: [19, 21, 576, 4274, 8120, 2]
 // Exports: InstagramNeutralIcon
 
-// Module 8103 (InstagramNeutralIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 8104 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 8119 (InstagramNeutralIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod8120 from "module_8120" /* 8120 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/InstagramNeutralIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/InstagramNeutralIcon.tsx");
 
 export const InstagramNeutralIcon = function InstagramNeutralIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8120, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

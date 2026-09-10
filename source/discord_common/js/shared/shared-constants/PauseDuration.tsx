@@ -1,11 +1,11 @@
-// Module ID: 11449
-// Function ID: 11450
+// Module ID: 11476
+// Function ID: 11477
 // Name: PauseDuration
 // Dependencies: [2]
 
-// Module 11449 (PauseDuration)
-import set from "set" /* 2 */;
+// Module 11476 (PauseDuration)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/PauseDuration.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/PauseDuration.tsx");
 
 export const PauseDuration = { ONE_MONTH: 30, [30]: "ONE_MONTH", TWO_MONTHS: 60, [60]: "TWO_MONTHS", THREE_MONTHS: 90, [90]: "THREE_MONTHS" };

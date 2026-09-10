@@ -1,29 +1,26 @@
-// Module ID: 16197
-// Function ID: 16198
-// Name: AccountLinkLargeBanner
-// Dependencies: [19, 17, 1371, 1954, 21, 576, 7172, 10124, 4980, 4560, 563, 7162, 7182, 5607, 5123, 5680, 1178, 4556, 1114, 4975, 8739, 2]
+// Module ID: 16227
+// Function ID: 16228
+// Name: AccountLinkBanner
+// Dependencies: [19, 17, 1371, 1954, 21, 576, 7186, 10151, 4994, 4574, 563, 7176, 7196, 5621, 5137, 5694, 1178, 4570, 1114, 4989, 8767, 2]
 // Exports: getScaledAccountLinkBannerHeight
 
-// Module 16197 (AccountLinkLargeBanner)
-import ThemesDefault from "Themes" /* 576 */;
-import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4980 */;
-import map from "map" /* 10124 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 16227 (AccountLinkBanner)
+import nativeDefault from "native" /* 576 */;
+import ButtonConstants from "ButtonConstants" /* 4994 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10151 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+require = fn;
 function AccountLinkLargeBanner(arg0) {
   ({ application, markAsDismissed: require, startAuthorization: importDefault } = arg0);
   let analyticsLocations;
-  const tmp = callback3();
-  let obj = require(analyticsLocations[10]);
-  const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  analyticsLocations = importDefault(analyticsLocations[11])(importDefault(analyticsLocations[12]).MOBILE_ACCOUNT_LINK_LARGE_BANNER).analyticsLocations;
+  const tmp = closure_18();
+  const items = [UserStore];
+  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj = require("useStateFromStores");
+  const tmp5 = importDefault;
+  analyticsLocations = require("useAnalyticsLocations")(require("AnalyticsLocation").MOBILE_ACCOUNT_LINK_LARGE_BANNER).analyticsLocations;
   const applicationAccountLinkBenefitConfig = application.applicationAccountLinkBenefitConfig;
   let reward_name;
   if (applicationAccountLinkBenefitConfig != null) {
@@ -31,108 +28,96 @@ function AccountLinkLargeBanner(arg0) {
   }
   let tmp8 = null;
   if (null != reward_name) {
-    obj = { variant: "secondary", style: null, children: null };
-    obj[1] = tmp.card;
-    obj = { accessibilityRole: "button", onPress: null, style: null, children: null };
-    obj[1] = function onPress() {
-      return callback(closure_1_5.USER_DISMISS);
+    const obj2 = { variant: "secondary", style: tmp.card, children: null };
+    const obj3 = {
+      accessibilityRole: "button",
+      onPress() {
+          return require(ContentDismissActionType.USER_DISMISS);
+        },
+      style: tmp.closeButton,
+      children: closure_6(tmp2(tmp3[15]).XSmallIcon, { size: "sm", color: "text-muted" })
     };
-    obj[2] = tmp.closeButton;
-    obj[3] = callback(tmp2(tmp3[15]).XSmallIcon, { size: "sm", color: "text-muted" });
-    const items1 = [callback(tmp2(tmp3[14]).PressableOpacity, obj), , , , ];
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.imagesContainer;
-    const obj2 = { game: null, size: null };
-    obj2[0] = application;
-    obj2[1] = NORMAL;
-    const items2 = [callback(importDefault(tmp3[6]), obj2), , ];
-    const obj3 = { style: null, children: null };
-    obj3[0] = tmp.ellipsisContainer;
-    const obj4 = { style: null };
-    obj4[0] = tmp.ellipsisDot;
-    const items3 = [callback(View, obj4), , ];
-    const obj5 = { style: null };
-    obj5[0] = tmp.ellipsisDot;
-    items3[1] = callback(View, obj5);
-    const obj6 = { style: null };
-    obj6[0] = tmp.ellipsisDot;
-    items3[2] = callback(View, obj6);
-    obj3[1] = items3;
-    items2[1] = callback2(View, obj3);
-    const obj7 = { user: null, size: null, guildId: "Array" };
-    obj7[0] = stateFromStores;
-    obj7[1] = tmp2(tmp3[16]).AvatarSizes.LARGE_48;
-    items2[2] = callback(tmp2(tmp3[16]).Avatar, obj7);
-    obj1[1] = items2;
-    items1[1] = callback2(View, obj1);
-    const obj8 = { variant: null, color: "mobile-text-heading-primary", style: null, children: null };
-    obj8[0] = c15;
-    obj8[2] = tmp.title;
+    const items1 = [closure_6(tmp2(tmp3[14]).PressableOpacity, obj3), , , , ];
+    const obj4 = { style: tmp.imagesContainer, children: null };
+    const obj5 = { game: application, size: NORMAL };
+    const items2 = [closure_6(tmp5(tmp3[6]), obj5), , ];
+    const obj6 = { style: tmp.ellipsisContainer, children: null };
+    const obj7 = { style: tmp.ellipsisDot };
+    const items3 = [closure_6(View, obj7), , ];
+    const obj8 = { style: tmp.ellipsisDot };
+    items3[1] = closure_6(View, obj8);
+    const obj9 = { style: tmp.ellipsisDot };
+    items3[2] = closure_6(View, obj9);
+    obj6.children = items3;
+    items2[1] = closure_7(View, obj6);
+    const obj10 = { user: stateFromStores, size: tmp2(tmp3[16]).AvatarSizes.LARGE_48, guildId: "Array" };
+    items2[2] = closure_6(tmp2(tmp3[16]).Avatar, obj10);
+    obj4.children = items2;
+    items1[1] = closure_7(View, obj4);
+    const obj11 = { variant, color: "mobile-text-heading-primary", style: tmp.title, children: null };
     const intl = tmp2(tmp3[18]).intl;
-    const obj9 = { gameName: null };
-    obj9[0] = application.name;
-    obj8[3] = intl.formatToPlainString(tmp2(tmp3[18]).t["3gpxqO"], obj9);
-    items1[2] = callback(tmp2(tmp3[17]).Text, obj8);
-    const obj10 = { variant: null, color: "text-muted", style: null, children: null };
-    obj10[0] = c16;
-    obj10[2] = tmp.body;
+    const obj12 = { gameName: application.name };
+    obj11.children = intl.formatToPlainString(tmp2(tmp3[18]).t["3gpxqO"], obj12);
+    items1[2] = closure_6(tmp2(tmp3[17]).Text, obj11);
+    const obj13 = { variant: variant2, color: "text-muted", style: tmp.body, children: null };
     const intl2 = tmp2(tmp3[18]).intl;
-    const obj11 = { rewardName: null };
-    obj11[0] = reward_name;
-    obj10[3] = intl2.formatToPlainString(tmp2(tmp3[18]).t.vxvKMm, obj11);
-    items1[3] = callback(tmp2(tmp3[17]).Text, obj10);
-    const obj12 = { style: null, children: null };
-    obj12[0] = tmp.ctaContainer;
-    const obj13 = { variant: "secondary", size: "md", text: null, onPress: null, icon: null };
+    const obj14 = { rewardName: reward_name };
+    obj13.children = intl2.formatToPlainString(tmp2(tmp3[18]).t.vxvKMm, obj14);
+    items1[3] = closure_6(tmp2(tmp3[17]).Text, obj13);
+    const obj15 = { style: tmp.ctaContainer, children: null };
+    const obj16 = { variant: "secondary", size: "md", text: null, onPress: null, icon: null };
     const intl3 = tmp2(tmp3[18]).intl;
-    obj13[2] = intl3.string(tmp2(tmp3[18]).t["0mvtKL"]);
-    obj13[3] = function onPress() {
-      callback2({ analyticsLocations });
+    obj16.text = intl3.string(tmp2(tmp3[18]).t["0mvtKL"]);
+    obj16.onPress = function onPress() {
+      importDefault({ analyticsLocations });
     };
-    obj13[4] = callback(tmp2(tmp3[20]).ExperimentalGameControllerLinkIcon, { size: "sm" });
-    obj12[1] = callback(tmp2(tmp3[19]).Button, obj13);
-    items1[4] = callback(View, obj12);
-    obj[2] = items1;
-    tmp8 = callback2(tmp2(tmp3[13]).Card, obj);
+    obj16.icon = closure_6(tmp2(tmp3[20]).ExperimentalGameControllerLinkIcon, { size: "sm" });
+    obj15.children = closure_6(tmp2(tmp3[19]).Button, obj16);
+    items1[4] = closure_6(View, obj15);
+    obj2.children = items1;
+    tmp8 = closure_7(tmp2(tmp3[13]).Card, obj2);
   }
   return tmp8;
 }
-({ jsx: closure_6, jsxs: error } = jsxProd);
-const PX_8 = ThemesDefault.space.PX_8;
-const PX_82 = ThemesDefault.space.PX_8;
-const PX_12 = ThemesDefault.space.PX_12;
-const PX_16 = ThemesDefault.space.PX_16;
-const PX_4 = ThemesDefault.space.PX_4;
-const NORMAL = require("GameIcon").GameIconSizes.NORMAL;
-let closure_14 = require("GameIcon").GameIconImageSize[NORMAL];
+const View = fn(17).View;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const PX_8 = nativeDefault.space.PX_8;
+const PX_82 = nativeDefault.space.PX_8;
+const PX_12 = nativeDefault.space.PX_12;
+const PX_16 = nativeDefault.space.PX_16;
+const PX_4 = nativeDefault.space.PX_4;
+const NORMAL = fn(7186).GameIconSizes.NORMAL;
+let closure_14 = fn(7186).GameIconImageSize[NORMAL];
 let c15 = "heading-md/bold";
 let c16 = "text-sm/medium";
-const PX_162 = ThemesDefault.space.PX_16;
+const PX_162 = nativeDefault.space.PX_16;
+const createStyles = fn(4574);
 let obj = { card: { padding: PX_12 }, closeButton: null, imagesContainer: null, ellipsisContainer: null, ellipsisDot: null, title: null, body: null, ctaContainer: null };
-obj = { position: "absolute", top: ThemesDefault.space.PX_12, right: ThemesDefault.space.PX_12, width: 24, height: 24, alignItems: "center", justifyContent: "center", zIndex: 1 };
-obj[1] = obj;
-obj[2] = { flexDirection: "row", alignItems: "center", justifyContent: "center" };
-createCacheKey = { flexDirection: "row", alignItems: "center", marginHorizontal: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_4 };
-obj[3] = createCacheKey;
-obj[4] = { width: ThemesDefault.space.PX_4, height: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.space.PX_4 / 2, backgroundColor: ThemesDefault.colors.INTERACTIVE_MUTED };
-obj[5] = { marginTop: PX_16, textAlign: "center" };
-obj[6] = { marginTop: PX_4, textAlign: "center" };
-obj[7] = { marginTop: PX_162 };
-let closure_18 = createCacheKey.createStyles(obj);
-let obj2 = { width: ThemesDefault.space.PX_4, height: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.space.PX_4 / 2, backgroundColor: ThemesDefault.colors.INTERACTIVE_MUTED };
-const memoResult = importAllResult.memo((arg0) => {
-  const merged = Object.assign(arg0);
-  return callback(AccountLinkLargeBanner, {});
-});
-const result = require("set").fileFinishedImporting("modules/application_account_linking/native/AccountLinkBanner.tsx");
+let size = { position: "absolute", top: nativeDefault.space.PX_12, right: nativeDefault.space.PX_12, width: 24, height: 24, alignItems: "center", justifyContent: "center", zIndex: 1 };
+obj.closeButton = size;
+obj.imagesContainer = { flexDirection: "row", alignItems: "center", justifyContent: "center" };
+obj.ellipsisContainer = { flexDirection: "row", alignItems: "center", marginHorizontal: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_4 };
+const size1 = { width: nativeDefault.space.PX_4, height: nativeDefault.space.PX_4, borderRadius: nativeDefault.space.PX_4 / 2, backgroundColor: nativeDefault.colors.INTERACTIVE_MUTED };
+obj.ellipsisDot = size1;
+obj.title = { marginTop: PX_16, textAlign: "center" };
+obj.body = { marginTop: PX_4, textAlign: "center" };
+obj.ctaContainer = { marginTop: PX_162 };
+let closure_18 = createStyles.createStyles(obj);
+let obj3 = { flexDirection: "row", alignItems: "center", marginHorizontal: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_4 };
+size = fn(2);
+const result = size.fileFinishedImporting("modules/application_account_linking/native/AccountLinkBanner.tsx");
 
-export default memoResult;
+export default noop.memo((arg0) => {
+  const merged = Object.assign(arg0);
+  return timestampProducer(AccountLinkLargeBanner, {});
+});
 export const ACCOUNT_LINK_BANNER_MARGIN_TOP = PX_8;
 export const ACCOUNT_LINK_BANNER_MARGIN_BOTTOM = PX_82;
 export const getScaledAccountLinkBannerHeight = function getScaledAccountLinkBannerHeight(fontScale) {
   const sum = PX_8 + PX_12 + closure_14 + PX_16;
-  const sum1 = sum + map.scaleTextLineHeight(c15, fontScale) + PX_4;
-  const obj = map;
-  const sum2 = sum1 + 2 * map.scaleTextLineHeight(c16, fontScale) + PX_162;
-  return sum2 + MINIMUM_HIT_AREA.MEDIUM_BUTTON_HEIGHT + PX_12 + PX_82;
+  const sum1 = sum + useScaledTextLineHeight.scaleTextLineHeight(c15, fontScale) + PX_4;
+  const sum2 = sum1 + 2 * useScaledTextLineHeight.scaleTextLineHeight(c16, fontScale) + PX_162;
+  return sum2 + ButtonConstants.MEDIUM_BUTTON_HEIGHT + PX_12 + PX_82;
 };

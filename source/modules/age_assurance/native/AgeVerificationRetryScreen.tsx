@@ -1,96 +1,93 @@
-// Module ID: 8585
-// Function ID: 8586
-// Name: GetStartedScreen
-// Dependencies: [5, 19, 17, 1074, 8419, 21, 4560, 576, 4773, 8413, 8581, 1114, 8411, 1115, 5692, 4556, 5687, 5605, 2024, 2]
+// Module ID: 8613
+// Function ID: 8614
+// Name: AgeVerificationRetryScreen
+// Dependencies: [5, 19, 17, 1074, 8447, 21, 4574, 576, 4787, 8441, 8609, 1114, 8439, 1115, 5706, 4570, 5701, 5619, 2024, 2]
 // Exports: default
 
-// Module 8585 (GetStartedScreen)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { HelpdeskArticles } from "ME" /* 1074 */;
-import { SafetyHubLinks } from "SafetyHubView" /* 8419 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 8613 (AgeVerificationRetryScreen)
+import nativeDefault from "native" /* 576 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8439 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8441 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ ActivityIndicator: c5, ScrollView: closure_6, View: error } = get_ActivityIndicator);
-({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
-createCacheKey = { loadingIndicator: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, zIndex: 1 }, container: null, headerContainer: null, centerText: null, helpLink: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, flex: 1 };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { paddingVertical: ThemesDefault.space.PX_16, alignItems: "center", gap: ThemesDefault.space.PX_8 };
-createCacheKey[3] = { textAlign: "center" };
-let obj1 = { paddingVertical: ThemesDefault.space.PX_16, alignItems: "center", gap: ThemesDefault.space.PX_8 };
-createCacheKey[4] = { marginTop: ThemesDefault.space.PX_8 };
-let closure_13 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { marginTop: ThemesDefault.space.PX_8 };
-let result = require("set").fileFinishedImporting("modules/age_assurance/native/AgeVerificationRetryScreen.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
+const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const SafetyHubLinks = fn(8447).SafetyHubLinks;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { loadingIndicator: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, zIndex: 1 }, container: { paddingHorizontal: nativeDefault.space.PX_16, flex: 1 }, headerContainer: null, centerText: null, helpLink: null };
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, flex: 1 };
+obj2.headerContainer = { paddingVertical: nativeDefault.space.PX_16, alignItems: "center", gap: nativeDefault.space.PX_8 };
+obj2.centerText = { textAlign: "center" };
+let obj4 = { paddingVertical: nativeDefault.space.PX_16, alignItems: "center", gap: nativeDefault.space.PX_8 };
+obj2.helpLink = { marginTop: nativeDefault.space.PX_8 };
+let closure_13 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationRetryScreen.tsx");
 
 export default function GetStartedScreen(modalSessionId) {
   modalSessionId = modalSessionId.modalSessionId;
   initiateAgeVerification = undefined;
   let isManualAgeVerificationHidden;
-  let stringResult2;
-  const tmp = callback2();
+  const tmp = closure_13();
   let obj = modalSessionId(isManualAgeVerificationHidden[8]);
-  obj = { onComplete: modalSessionId.onClose, entryPoint: modalSessionId(isManualAgeVerificationHidden[9]).AgeVerificationModalEntryPoint.RETRY_MODAL };
-  initiateAgeVerification = obj.useInitiateAgeVerification(obj);
-  ({ loading, initiateAgeVerification } = initiateAgeVerification);
-  let obj2 = modalSessionId(isManualAgeVerificationHidden[10]);
-  isManualAgeVerificationHidden = obj2.useIsManualAgeVerificationHidden("age_verification_retry_modal");
+  const initiateAgeVerification1 = obj.useInitiateAgeVerification({ onComplete: modalSessionId.onClose, entryPoint: modalSessionId(isManualAgeVerificationHidden[9]).AgeVerificationModalEntryPoint.RETRY_MODAL });
+  ({ loading, initiateAgeVerification } = initiateAgeVerification1);
+  let obj2 = { onComplete: modalSessionId.onClose, entryPoint: modalSessionId(isManualAgeVerificationHidden[9]).AgeVerificationModalEntryPoint.RETRY_MODAL };
+  isManualAgeVerificationHidden = modalSessionId(isManualAgeVerificationHidden[10]).useIsManualAgeVerificationHidden("age_verification_retry_modal");
   let intl = modalSessionId(isManualAgeVerificationHidden[11]).intl;
+  let obj3 = modalSessionId(isManualAgeVerificationHidden[10]);
   let intl2 = modalSessionId(isManualAgeVerificationHidden[11]).intl;
   const stringResult = intl.string(modalSessionId(isManualAgeVerificationHidden[11]).t.JSdbBe);
   let intl3 = modalSessionId(isManualAgeVerificationHidden[11]).intl;
-  stringResult2 = intl3.string(modalSessionId(isManualAgeVerificationHidden[11]).t.mFvt9M);
+  const stringResult2 = intl3.string(modalSessionId(isManualAgeVerificationHidden[11]).t.mFvt9M);
   let items = [initiateAgeVerification, modalSessionId, isManualAgeVerificationHidden, stringResult2];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     let obj = { title: stringResult2, description: null, onPress: null };
     const intl = modalSessionId(isManualAgeVerificationHidden[11]).intl;
-    obj[1] = intl.string(modalSessionId(isManualAgeVerificationHidden[11]).t.ecdUKD);
-    closure_0 = stringResult2(function*() {
+    obj.description = intl.string(modalSessionId(isManualAgeVerificationHidden[11]).t.ecdUKD);
+    closure_0 = stringResult2(function*(arg0, value) {
       if (c0 === 2) {
         c0 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
       } else {
         try {
           c0 = 2;
-          if (0 === v02) {
+          if (0 === v1) {
             if (arg0 === 1) {
               c0 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
-              const result = v0(closure_2_2[9]).trackAgeVerificationModalClicked(c0, v0(closure_2_2[9]).AgeVerificationModalVersion.RETRY, v0(closure_2_2[9]).AgeVerificationModalCta.GET_STARTED);
-              v02 = 1;
+              const result = v3(8441).trackAgeVerificationModalClicked(c0, v3(8441).AgeVerificationModalVersion.RETRY, v3(8441).AgeVerificationModalCta.GET_STARTED);
+              v1 = 1;
               c0 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = v02();
-              return obj1;
+              const obj4 = { value: v1(), done: false };
+              return obj4;
             }
           } else if (arg0 === 1) {
             c0 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            const obj = { value, done: true };
             return obj;
           } else {
             c0 = 3;
@@ -102,7 +99,7 @@ export default function GetStartedScreen(modalSessionId) {
         }
       }
     });
-    obj[2] = function() {
+    obj.onPress = function() {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -114,67 +111,64 @@ export default function GetStartedScreen(modalSessionId) {
     };
     const items = [obj];
     if (!isManualAgeVerificationHidden) {
-      obj = { title: null, description: null, onPress: null };
+      let obj2 = { title: null, description: null, onPress: null };
       const intl2 = tmp(tmp2[11]).intl;
-      obj[0] = intl2.string(tmp(tmp2[11]).t["LZO+Hd"]);
+      obj2.title = intl2.string(tmp(tmp2[11]).t["LZO+Hd"]);
       const intl3 = tmp(tmp2[11]).intl;
-      obj[1] = intl3.string(tmp(tmp2[11]).t["ty+iWP"]);
-      obj[2] = function onPress() {
-        closure_1_1(closure_1_2[12]).openUrl(closure_1_9.APPEALS_LINK);
-        const obj = closure_1_1(closure_1_2[12]);
-        const result = callback(closure_1_2[9]).trackAgeVerificationModalClicked(callback, callback(closure_1_2[9]).AgeVerificationModalVersion.RETRY, callback(closure_1_2[9]).AgeVerificationModalCta.MANUAL_REVIEW_REQUEST);
+      obj2.description = intl3.string(tmp(tmp2[11]).t["ty+iWP"]);
+      obj2.onPress = function onPress() {
+        initiateAgeVerification(isManualAgeVerificationHidden[12]).openUrl(constants.APPEALS_LINK);
+        const obj = initiateAgeVerification(isManualAgeVerificationHidden[12]);
+        const result = modalSessionId(isManualAgeVerificationHidden[9]).trackAgeVerificationModalClicked(closure_0, modalSessionId(isManualAgeVerificationHidden[9]).AgeVerificationModalVersion.RETRY, modalSessionId(isManualAgeVerificationHidden[9]).AgeVerificationModalCta.MANUAL_REVIEW_REQUEST);
       };
-      items.push(obj);
+      items.push(obj2);
     }
     return items;
   }, items);
   if (loading) {
-    obj = { style: null, size: "small", color: null };
-    obj[0] = tmp.loadingIndicator;
+    let obj4 = { style: tmp.loadingIndicator, size: "small", color: null };
     let WHITE;
     if (tmp2Result.isAndroid()) {
       WHITE = initiateAgeVerification(tmp3[7]).unsafe_rawColors.WHITE;
     }
-    obj[2] = WHITE;
-    loading = callback(closure_5, obj);
-    const tmp11 = callback;
-    const tmp12 = closure_5;
+    obj4.color = WHITE;
+    loading = closure_10(closure_5, obj4);
     tmp2Result = tmp2(tmp3[13]);
   }
-  obj1 = { children: null };
+  const obj5 = { children: null };
   const items1 = [loading, ];
-  obj2 = { style: tmp.container, children: null };
-  const obj3 = { style: tmp.headerContainer, children: null };
-  const items2 = [callback(modalSessionId(isManualAgeVerificationHidden[14]).ShieldSpotIllustration, {}), callback(modalSessionId(isManualAgeVerificationHidden[15]).Text, { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.centerText, children: stringResult }), ];
-  const obj4 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.centerText, children: stringResult };
+  const obj6 = { style: tmp.container, children: null };
+  const obj7 = { style: tmp.headerContainer, children: null };
+  const items2 = [closure_10(modalSessionId(isManualAgeVerificationHidden[14]).ShieldSpotIllustration, {}), closure_10(modalSessionId(isManualAgeVerificationHidden[15]).Text, { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.centerText, children: stringResult }), ];
+  const obj8 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.centerText, children: stringResult };
   const stringResult1 = intl2.string(modalSessionId(isManualAgeVerificationHidden[11]).t.JNK1ue);
   const tmp10 = closure_12;
-  items2[2] = callback(modalSessionId(isManualAgeVerificationHidden[15]).Text, { variant: "heading-md/medium", color: "text-strong", style: tmp.centerText, children: intl2.string(modalSessionId(isManualAgeVerificationHidden[11]).t.JNK1ue) });
-  obj3[1] = items2;
-  const items3 = [closure_11(closure_7, obj3), , ];
-  const obj5 = { variant: "heading-md/medium", color: "text-strong", style: tmp.centerText, children: intl2.string(modalSessionId(isManualAgeVerificationHidden[11]).t.JNK1ue) };
-  items3[1] = callback(modalSessionId(isManualAgeVerificationHidden[16]).TableRowGroup, {
+  items2[2] = closure_10(modalSessionId(isManualAgeVerificationHidden[15]).Text, { variant: "heading-md/medium", color: "text-strong", style: tmp.centerText, children: intl2.string(modalSessionId(isManualAgeVerificationHidden[11]).t.JNK1ue) });
+  obj7.children = items2;
+  const items3 = [closure_11(closure_7, obj7), , ];
+  const obj9 = { variant: "heading-md/medium", color: "text-strong", style: tmp.centerText, children: intl2.string(modalSessionId(isManualAgeVerificationHidden[11]).t.JNK1ue) };
+  items3[1] = closure_10(modalSessionId(isManualAgeVerificationHidden[16]).TableRowGroup, {
     hasIcons: false,
-    children: memo.map((arg0, arg1) => {
-      ({ title, description, onPress } = arg0);
-      return callback(modalSessionId(isManualAgeVerificationHidden[17]).TableRow, { arrow: true, label, subLabel, onPress }, arg1);
+    children: memo.map((item, index) => {
+      ({ title, description, onPress } = item);
+      return closure_1_10(modalSessionId(isManualAgeVerificationHidden[17]).TableRow, { arrow: true, label, subLabel, onPress }, index);
     })
   });
-  const obj7 = { variant: "text-xs/medium", color: "text-muted", style: items4, children: null };
-  items4 = [, ];
+  const obj11 = { variant: "text-xs/medium", color: "text-muted", style: null, children: null };
+  const items4 = [, ];
   ({ centerText: arr6[0], helpLink: arr6[1] } = tmp);
+  obj11.style = items4;
   const intl4 = tmp2(tmp3[11]).intl;
-  obj7[3] = intl4.format(modalSessionId(isManualAgeVerificationHidden[11]).t["L+FgkZ"], {
+  obj11.children = intl4.format(modalSessionId(isManualAgeVerificationHidden[11]).t["L+FgkZ"], {
     handleOnHelpUrlHook() {
-      const obj = initiateAgeVerification(isManualAgeVerificationHidden[12]);
-      obj.openUrl(initiateAgeVerification(isManualAgeVerificationHidden[18]).getArticleURL(closure_1_8.TIGGER_PAWTECT_LEARN_MORE));
-      const obj2 = initiateAgeVerification(isManualAgeVerificationHidden[18]);
-      const result = modalSessionId(isManualAgeVerificationHidden[9]).trackAgeVerificationModalClicked(modalSessionId, modalSessionId(isManualAgeVerificationHidden[9]).AgeVerificationModalVersion.RETRY, modalSessionId(isManualAgeVerificationHidden[9]).AgeVerificationModalCta.LEARN_MORE);
+      const obj = AgeVerificationActionCreatorsDefault;
+      obj.openUrl(HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_LEARN_MORE));
+      const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalClicked(modalSessionId, AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.RETRY, AgeVerificationAnalyticsUtils.AgeVerificationModalCta.LEARN_MORE);
     }
   });
-  items3[2] = callback(modalSessionId(isManualAgeVerificationHidden[15]).Text, obj7);
-  obj2[1] = items3;
-  items1[1] = closure_11(closure_6, obj2);
-  obj1[0] = items1;
-  return closure_11(tmp10, obj1);
+  items3[2] = closure_10(modalSessionId(isManualAgeVerificationHidden[15]).Text, obj11);
+  obj6.children = items3;
+  items1[1] = closure_11(closure_6, obj6);
+  obj5.children = items1;
+  return closure_11(tmp10, obj5);
 };

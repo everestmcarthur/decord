@@ -1,16 +1,17 @@
-// Module ID: 9180
-// Function ID: 9181
-// Name: experiment
-// Dependencies: [4477, 4474, 2]
+// Module ID: 9207
+// Function ID: 9208
+// Name: GuildVoiceRingingExperiment
+// Dependencies: [4491, 4488, 2]
 
-// Module 9180 (experiment)
-import set from "set" /* 2 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4477 */;
-import createExperiment from "createExperiment" /* 4474 */;
+// Module 9207 (GuildVoiceRingingExperiment)
+import ExperimentConstants from "ExperimentConstants" /* 4491 */;
+import createExperiment from "module_4488" /* 4488 */;
+import size from "module_2" /* 2 */;
 
+const obj = { kind: "guild", id: "2024-12_guild_voice_channel_ringing", label: "Guild Voice Ringing", defaultConfig: { enabled: false }, commonTriggerPoint: ExperimentConstants.CommonTriggerPoints.VOICE_CALL, treatments: null };
 const items = [{ id: 1, label: "Allow users to ring each other in Guild Voice Channels", config: { enabled: true } }];
-const experiment = createExperiment.createExperiment({ kind: "guild", id: "2024-12_guild_voice_channel_ringing", label: "Guild Voice Ringing", defaultConfig: { enabled: false }, commonTriggerPoint: ExperimentBuckets.CommonTriggerPoints.VOICE_CALL, treatments: items });
-const obj = { kind: "guild", id: "2024-12_guild_voice_channel_ringing", label: "Guild Voice Ringing", defaultConfig: { enabled: false }, commonTriggerPoint: ExperimentBuckets.CommonTriggerPoints.VOICE_CALL, treatments: items };
-const result = set.fileFinishedImporting("modules/voice_calls/GuildVoiceRingingExperiment.tsx");
+obj.treatments = items;
+const experiment = createExperiment.createExperiment(obj);
+const result = size.fileFinishedImporting("modules/voice_calls/GuildVoiceRingingExperiment.tsx");
 
 export default experiment;

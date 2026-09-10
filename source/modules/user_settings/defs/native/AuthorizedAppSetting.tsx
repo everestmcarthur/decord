@@ -1,29 +1,29 @@
-// Module ID: 14942
-// Function ID: 14943
-// Name: route
-// Dependencies: [7975, 1074, 11473, 14943, 2]
+// Module ID: 14968
+// Function ID: 14969
+// Name: AuthorizedAppSetting
+// Dependencies: [7989, 1074, 11500, 14969, 2]
 
-// Module 14942 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 14968 (AuthorizedAppSetting)
+import Constants from "Constants" /* 1074 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const require = globalThis.__r;
+
+const route = SettingBuilders.createRoute({
   useTitle() {
     return "";
   },
-  parent: MobileUserSettings.MobileUserSettings.AUTHORIZED_APPS,
+  parent: SettingsConstants.MobileUserSettings.AUTHORIZED_APPS,
   unsearchable: true,
-  screen: obj
-};
-obj = {
-  route: ME.UserSettingsSections.AUTHORIZED_APP,
-  getComponent() {
-    return require(14943) /* AuthorizedAppScreen */.default;
+  screen: {
+    route: Constants.UserSettingsSections.AUTHORIZED_APP,
+    getComponent() {
+      return require("AuthorizedAppScreen").default;
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AuthorizedAppSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AuthorizedAppSetting.tsx");
 
 export default route;

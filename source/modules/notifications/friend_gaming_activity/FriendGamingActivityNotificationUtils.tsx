@@ -1,24 +1,22 @@
-// Module ID: 15507
-// Function ID: 15508
-// Name: onFriendGamingActivityNotificationSettingsChanged
-// Dependencies: [4212, 1074, 1935, 1242, 2]
+// Module ID: 15537
+// Function ID: 15538
+// Name: FriendGamingActivityNotificationUtils
+// Dependencies: [4225, 1074, 1935, 1242, 2]
 // Exports: onFriendGamingActivityNotificationSettingsChanged
 
-// Module 15507 (onFriendGamingActivityNotificationSettingsChanged)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import AccountNotificationFlags from "AccountNotificationFlags" /* 4212 */;
+// Module 15537 (FriendGamingActivityNotificationUtils)
+import Constants from "Constants" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import NotificationConstants from "NotificationConstants" /* 4225 */;
+import size from "module_2" /* 2 */;
 
-let closure_3 = AccountNotificationFlags.NotificationSettingsUpdateType;
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/notifications/friend_gaming_activity/FriendGamingActivityNotificationUtils.tsx");
+const constants = NotificationConstants.NotificationSettingsUpdateType;
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/notifications/friend_gaming_activity/FriendGamingActivityNotificationUtils.tsx");
 
 export const onFriendGamingActivityNotificationSettingsChanged = function onFriendGamingActivityNotificationSettingsChanged(friend_gaming_activity_notifications) {
-  const EnableFriendGamingActivityNotifications = explicitContentFromProto.EnableFriendGamingActivityNotifications;
+  const EnableFriendGamingActivityNotifications = UserSettings.EnableFriendGamingActivityNotifications;
   EnableFriendGamingActivityNotifications.updateSetting(friend_gaming_activity_notifications);
-  let obj = expandEventPropertiesDefault;
-  obj = { update_type: constants.ACCOUNT, friend_gaming_activity_notifications };
-  obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, { update_type: constants.ACCOUNT, friend_gaming_activity_notifications });
 };

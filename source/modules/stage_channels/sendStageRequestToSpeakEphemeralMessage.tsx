@@ -1,23 +1,35 @@
-// Module ID: 17490
-// Function ID: 17491
+// Module ID: 17521
+// Function ID: 17522
 // Name: sendStageRequestToSpeakEphemeralMessage
 // Dependencies: [1074, 573, 11, 2]
 // Exports: sendStageRequestToSpeakEphemeralMessage
 
-// Module 17490 (sendStageRequestToSpeakEphemeralMessage)
-import set from "set" /* 2 */;
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import ME from "ME" /* 1074 */;
+// Module 17521 (sendStageRequestToSpeakEphemeralMessage)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-({ MessageFlags: obj1, MessageStates: c3, MessageTypes: c4 } = ME);
-const result = set.fileFinishedImporting("modules/stage_channels/sendStageRequestToSpeakEphemeralMessage.tsx");
+({ MessageFlags: c2, MessageStates: c3, MessageTypes: closure_4 } = Constants);
+const result = size.fileFinishedImporting("modules/stage_channels/sendStageRequestToSpeakEphemeralMessage.tsx");
 
 export const sendStageRequestToSpeakEphemeralMessage = function sendStageRequestToSpeakEphemeralMessage(channelId, user, requestToSpeakTimestamp) {
-  let obj = dispatcherDefault;
-  obj = { type: "MESSAGE_CREATE", channelId, message: null, optimistic: false, sendMessageOptions: null, isPushNotification: false };
-  obj = { id: DISCORD_EPOCHDefault.fromTimestamp(Date.parse(requestToSpeakTimestamp)), type: constants3.STAGE_RAISE_HAND, flags: constants.EPHEMERAL, content: "", channel_id: channelId, author: user, attachments: [], embeds: [], pinned: false, mentions: [], mention_channels: [], mention_roles: [], mention_everyone: false, timestamp: requestToSpeakTimestamp, state: constants2.SENT, tts: false };
-  obj[2] = obj;
-  obj[4] = {};
-  obj.dispatch(obj);
+  const obj2 = { type: "MESSAGE_CREATE", channelId, message: null, optimistic: false, sendMessageOptions: null, isPushNotification: false };
+  const obj3 = { id: null, type: null, flags: null, content: "", channel_id: null, author: null, attachments: null, embeds: null, pinned: false, mentions: null, mention_channels: null, mention_roles: null, mention_everyone: false, timestamp: null, state: null, tts: false };
+  const obj = DispatcherDefault;
+  obj3.id = SnowflakeUtilsDefault.fromTimestamp(Date.parse(requestToSpeakTimestamp));
+  obj3.type = constants3.STAGE_RAISE_HAND;
+  obj3.flags = constants.EPHEMERAL;
+  obj3.channel_id = channelId;
+  obj3.author = user;
+  obj3.attachments = [];
+  obj3.embeds = [];
+  obj3.mentions = [];
+  obj3.mention_channels = [];
+  obj3.mention_roles = [];
+  obj3.timestamp = requestToSpeakTimestamp;
+  obj3.state = constants2.SENT;
+  obj2.message = obj3;
+  obj2.sendMessageOptions = {};
+  obj.dispatch(obj2);
 };

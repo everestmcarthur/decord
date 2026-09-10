@@ -1,104 +1,100 @@
-// Module ID: 7710
-// Function ID: 7711
-// Name: progressFromServer
-// Dependencies: [32, 4745, 7711, 7708, 2]
+// Module ID: 7724
+// Function ID: 7725
+// Name: QuestServerUtils
+// Dependencies: [32, 4759, 7725, 7722, 2]
 // Exports: excludedQuestFromServer, getClaimedQuestWithUserStatusFromServer, isQuestWithKnownConfigVersion, questConfigFromServer, questUserStatusFromServer, questWithUserStatusFromServer, questsEntitlementsFromServer, questsRewardCodeFromServer
 
-// Module 7710 (progressFromServer)
-import t from "t" /* 4745 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7708 */;
-import questFromServerV2 from "questFromServerV2" /* 7711 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+// Module 7724 (QuestServerUtils)
+import _mod4759 from "module_4759" /* 4759 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7722 */;
+import Quest from "Quest" /* 7725 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
+require = fn;
 function progressFromServer(progress) {
-  let obj = {};
+  const obj = {};
   const entries = Object.entries(progress);
   while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
-    obj = { eventName: null, value: null, updatedAt: null, completedAt: null, heartbeat: null };
-    ({ event_name: obj2[0], value: obj2[1], updated_at: obj2[2], completed_at: obj2[3], heartbeat } = tmp5[1]);
+    let tmp5 = _slicedToArray(tmp3, 2);
+    let obj5 = { eventName: null, value: null, updatedAt: null, completedAt: null, heartbeat: null };
+    ({ event_name: obj2.eventName, value: obj2.value, updated_at: obj2.updatedAt, completed_at: obj2.completedAt, heartbeat } = tmp5[1]);
     let tmp6 = heartbeat;
     let tmp7 = null;
     if (null != heartbeat) {
-      obj = { lastBeatAt: null, expiresAt: null };
-      let tmp8 = heartbeat;
-      ({ last_beat_at: obj3[0], expires_at: obj3[1] } = tmp6);
-      tmp7 = obj;
+      let obj6 = { lastBeatAt: null, expiresAt: null };
+      ({ last_beat_at: obj3.lastBeatAt, expires_at: obj3.expiresAt } = tmp6);
+      tmp7 = obj6;
     }
-    obj[4] = tmp7;
-    obj[tmp5[0]] = obj;
+    obj5.heartbeat = tmp7;
+    obj[tmp5[0]] = obj5;
     continue;
   }
   return obj;
 }
 function getSimpleRewardFromServer(type) {
   if (type.type === QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY) {
+    ({ sku_id: obj2.skuId, type: obj2.type, name: obj2.name, name_with_article: obj2.nameWithArticle, collectible_product: obj2.collectibleProduct, orb_quantity: obj2.orbQuantity } = type);
     let obj = { skuId: null, type: null, name: null, nameWithArticle: null, collectibleProduct: null, orbQuantity: null };
-    ({ sku_id: obj2[0], type: obj2[1], name: obj2[2], name_with_article: obj2[3], collectible_product: obj2[4], orb_quantity: obj2[5] } = type);
+    const obj3 = { skuId: null, type: null, name: null, nameWithArticle: null, collectibleProduct: null, orbQuantity: null };
   } else {
     obj = { skuId: null, type: null, name: null, nameWithArticle: null, asset: null, assetVideo: null, collectibleProduct: null };
-    ({ sku_id: obj[0], type: obj[1], name: obj[2], name_with_article: obj[3], asset: obj[4], asset_video: obj[5], collectible_product: obj[6] } = type);
+    ({ sku_id: obj.skuId, type: obj.type, name: obj.name, name_with_article: obj.nameWithArticle, asset: obj.asset, asset_video: obj.assetVideo, collectible_product: obj.collectibleProduct } = type);
   }
   return obj;
 }
 function _questsEntitlementFromServer(skuId) {
-  let obj = { skuId: skuId.sku_id, tenantMetadata: null, consumed: null };
+  const obj = { skuId: skuId.sku_id, tenantMetadata: null, consumed: null };
   const tenant_metadata = skuId.tenant_metadata;
-  let quest_rewards;
+  let quest_rewards1;
   if (tenant_metadata != null) {
-    quest_rewards = tenant_metadata.quest_rewards;
+    quest_rewards1 = tenant_metadata.quest_rewards;
   }
   let tmp2 = null;
-  if (null != quest_rewards) {
-    quest_rewards = tenant_metadata.quest_rewards;
+  if (null != quest_rewards1) {
+    const quest_rewards = tenant_metadata.quest_rewards;
     const tag = quest_rewards.reward.tag;
     if (QuestRewardTypes.QuestRewardTypes.IN_GAME === tag) {
-      obj = { questRewards: null };
-      obj = { reward: null };
-      obj1 = { tag: null };
-      obj1[0] = quest_rewards.reward.tag;
-      obj[0] = obj1;
-      obj[0] = obj;
-      tmp2 = obj;
-    } else if (tmp3(7708).QuestRewardTypes.REWARD_CODE === tag) {
-      const obj2 = { tag: null, rewardCode: null };
-      obj2[0] = quest_rewards.reward.tag;
-      const obj3 = { userId: null, questId: null, code: null, platform: null, claimedAt: null, tier: null };
-      ({ user_id: obj8[0], quest_id: obj8[1], code: obj8[2], platform: obj8[3], claimed_at: obj8[4], tier } = quest_rewards.reward.reward_code);
+      const obj2 = { questRewards: null };
+      const obj3 = { reward: null };
+      const obj4 = { tag: quest_rewards.reward.tag };
+      obj3.reward = obj4;
+      obj2.questRewards = obj3;
+      tmp2 = obj2;
+    } else if (tmp3(7722).QuestRewardTypes.REWARD_CODE === tag) {
+      const obj5 = { tag: quest_rewards.reward.tag, rewardCode: null };
+      const obj6 = { userId: null, questId: null, code: null, platform: null, claimedAt: null, tier: null };
+      ({ user_id: obj8.userId, quest_id: obj8.questId, code: obj8.code, platform: obj8.platform, claimed_at: obj8.claimedAt, tier } = quest_rewards.reward.reward_code);
       if (tier == null) {
         tier = null;
       }
-      const obj4 = { questRewards: null };
-      const obj5 = { reward: null };
-      obj3[5] = tier;
-      obj2[1] = obj3;
-      obj5[0] = obj2;
-      obj4[0] = obj5;
-      tmp2 = obj4;
+      const obj7 = { questRewards: null };
+      const obj15 = { reward: null };
+      obj6.tier = tier;
+      obj5.rewardCode = obj6;
+      obj15.reward = obj5;
+      obj7.questRewards = obj15;
+      tmp2 = obj7;
     }
     tmp3 = require;
   }
-  obj[1] = tmp2;
-  obj[2] = skuId.consumed;
+  obj.tenantMetadata = tmp2;
+  obj.consumed = skuId.consumed;
   return obj;
 }
-const result = require("set").fileFinishedImporting("modules/quests/utils/QuestServerUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/utils/QuestServerUtils.tsx");
 
 export const isQuestWithKnownConfigVersion = function isQuestWithKnownConfigVersion(config) {
   try {
-    const match = t.match(config.config);
-    const str = t;
+    const match = _mod4759.match(config.config);
     return match.with({ config_version: 2 }, () => true).exhaustive();
   } catch (err) {
     return false;
   }
 };
 export const questConfigFromServer = function questConfigFromServer(body) {
-  const match = t.match(body);
-  const str = t;
-  return match.with({ config_version: 2 }, (id) => callback(table[2]).questFromServerV2(id)).exhaustive();
+  const match = _mod4759.match(body);
+  return match.with({ config_version: 2 }, (id) => Quest.questFromServerV2(id)).exhaustive();
 };
 export const questUserStatusFromServer = function questUserStatusFromServer(body) {
   const obj = { userId: body.user_id, questId: body.quest_id, enrolledAt: body.enrolled_at, completedAt: body.completed_at, claimedAt: body.claimed_at, claimedTier: null, orbQuantityClaimed: null, lastStreamHeartbeatAt: null, streamProgressSeconds: null, dismissedQuestContent: null, progress: null };
@@ -106,73 +102,71 @@ export const questUserStatusFromServer = function questUserStatusFromServer(body
   if (claimed_tier == null) {
     claimed_tier = null;
   }
-  obj[5] = claimed_tier;
+  obj.claimedTier = claimed_tier;
   let orb_quantity_claimed = body.orb_quantity_claimed;
   if (orb_quantity_claimed == null) {
     orb_quantity_claimed = null;
   }
-  obj[6] = orb_quantity_claimed;
-  ({ last_stream_heartbeat_at: obj[7], stream_progress_seconds: obj[8], dismissed_quest_content: obj[9] } = body);
-  obj[10] = progressFromServer(body.progress);
+  obj.orbQuantityClaimed = orb_quantity_claimed;
+  ({ last_stream_heartbeat_at: obj.lastStreamHeartbeatAt, stream_progress_seconds: obj.streamProgressSeconds, dismissed_quest_content: obj.dismissedQuestContent } = body);
+  obj.progress = progressFromServer(body.progress);
   return obj;
 };
 export const questWithUserStatusFromServer = function questWithUserStatusFromServer(body) {
-  let obj = { id: body.id, preview: body.preview, config: null, userStatus: null, targetedContent: null, trafficMetadataSealed: null };
-  const match = t.match(body.config);
-  const str = t;
-  obj[2] = match.with({ config_version: 2 }, (id) => callback(table[2]).questFromServerV2(id)).exhaustive();
+  const obj = { id: body.id, preview: body.preview, config: null, userStatus: null, targetedContent: null, trafficMetadataSealed: null };
+  const match = _mod4759.match(body.config);
+  obj.config = match.with({ config_version: 2 }, (id) => Quest.questFromServerV2(id)).exhaustive();
   let tmp = null;
   if (null != body.user_status) {
     const user_status = body.user_status;
-    obj = { userId: null, questId: null, enrolledAt: null, completedAt: null, claimedAt: null, claimedTier: null, orbQuantityClaimed: null, lastStreamHeartbeatAt: null, streamProgressSeconds: null, dismissedQuestContent: null, progress: null };
-    ({ user_id: obj4[0], quest_id: obj4[1], enrolled_at: obj4[2], completed_at: obj4[3], claimed_at: obj4[4], claimed_tier } = user_status);
+    const obj2 = { userId: null, questId: null, enrolledAt: null, completedAt: null, claimedAt: null, claimedTier: null, orbQuantityClaimed: null, lastStreamHeartbeatAt: null, streamProgressSeconds: null, dismissedQuestContent: null, progress: null };
+    ({ user_id: obj4.userId, quest_id: obj4.questId, enrolled_at: obj4.enrolledAt, completed_at: obj4.completedAt, claimed_at: obj4.claimedAt, claimed_tier } = user_status);
     if (claimed_tier == null) {
       claimed_tier = null;
     }
-    obj[5] = claimed_tier;
+    obj2.claimedTier = claimed_tier;
     let orb_quantity_claimed = user_status.orb_quantity_claimed;
     if (orb_quantity_claimed == null) {
       orb_quantity_claimed = null;
     }
-    obj[6] = orb_quantity_claimed;
-    ({ last_stream_heartbeat_at: obj4[7], stream_progress_seconds: obj4[8], dismissed_quest_content: obj4[9] } = user_status);
-    obj[10] = progressFromServer(user_status.progress);
-    tmp = obj;
+    obj2.orbQuantityClaimed = orb_quantity_claimed;
+    ({ last_stream_heartbeat_at: obj4.lastStreamHeartbeatAt, stream_progress_seconds: obj4.streamProgressSeconds, dismissed_quest_content: obj4.dismissedQuestContent } = user_status);
+    obj2.progress = progressFromServer(user_status.progress);
+    tmp = obj2;
   }
-  obj[3] = tmp;
-  ({ targeted_content: obj[4], traffic_metadata_sealed: obj[5] } = body);
+  obj.userStatus = tmp;
+  ({ targeted_content: obj.targetedContent, traffic_metadata_sealed: obj.trafficMetadataSealed } = body);
   return obj;
 };
 export const excludedQuestFromServer = function excludedQuestFromServer(id) {
   return { id: id.id, replacementId: id.replacement_id };
 };
 export const getClaimedQuestWithUserStatusFromServer = function getClaimedQuestWithUserStatusFromServer(id) {
-  let obj = { id: id.id, config: null, userStatus: null };
+  const obj = { id: id.id, config: null, userStatus: null };
   const config = id.config;
-  obj = { id: config.id, startsAt: config.starts_at, expiresAt: config.expires_at, features: config.features, messages: obj, assets: obj1, colors: obj2, rewards: rewards.map(getSimpleRewardFromServer), cosponsorMetadata: null };
-  obj = { questName: config.messages.quest_name, gamePublisher: config.messages.game_publisher, gameTitle: config.messages.game_title };
-  rewards = config.rewards;
-  obj[8] = questFromServerV2.questCosponsorMetadataFromServer(config.cosponsor_metadata);
-  obj[1] = obj;
+  const obj2 = { id: config.id, startsAt: config.starts_at, expiresAt: config.expires_at, features: config.features, messages: { questName: config.messages.quest_name, gamePublisher: config.messages.game_publisher, gameTitle: config.messages.game_title }, assets: { hero: config.assets.hero, heroVideo: config.assets.hero_video, questBarHero: config.assets.quest_bar_hero, questBarHeroVideo: config.assets.quest_bar_hero_video, gameTile: config.assets.game_tile, logotype: config.assets.logotype, logotypeLight: config.assets.logotype_light, logotypeDark: config.assets.logotype_dark, gameTileLight: config.assets.game_tile_light, gameTileDark: config.assets.game_tile_dark }, colors: { primary: config.colors.primary, secondary: config.colors.secondary }, rewards: null, cosponsorMetadata: Quest.questCosponsorMetadataFromServer(config.cosponsor_metadata) };
+  const rewards = config.rewards;
+  obj2.rewards = rewards.map(getSimpleRewardFromServer);
+  obj.config = obj2;
   let tmp = null;
   if (null != id.user_status) {
     const user_status = id.user_status;
-    const obj3 = { userId: null, questId: null, enrolledAt: null, completedAt: null, claimedAt: null, claimedTier: null, orbQuantityClaimed: null, lastStreamHeartbeatAt: null, streamProgressSeconds: null, dismissedQuestContent: null, progress: null };
-    ({ user_id: obj7[0], quest_id: obj7[1], enrolled_at: obj7[2], completed_at: obj7[3], claimed_at: obj7[4], claimed_tier } = user_status);
+    const obj6 = { userId: null, questId: null, enrolledAt: null, completedAt: null, claimedAt: null, claimedTier: null, orbQuantityClaimed: null, lastStreamHeartbeatAt: null, streamProgressSeconds: null, dismissedQuestContent: null, progress: null };
+    ({ user_id: obj4.userId, quest_id: obj4.questId, enrolled_at: obj4.enrolledAt, completed_at: obj4.completedAt, claimed_at: obj4.claimedAt, claimed_tier } = user_status);
     if (claimed_tier == null) {
       claimed_tier = null;
     }
-    obj3[5] = claimed_tier;
+    obj6.claimedTier = claimed_tier;
     let orb_quantity_claimed = user_status.orb_quantity_claimed;
     if (orb_quantity_claimed == null) {
       orb_quantity_claimed = null;
     }
-    obj3[6] = orb_quantity_claimed;
-    ({ last_stream_heartbeat_at: obj7[7], stream_progress_seconds: obj7[8], dismissed_quest_content: obj7[9] } = user_status);
-    obj3[10] = progressFromServer(user_status.progress);
-    tmp = obj3;
+    obj6.orbQuantityClaimed = orb_quantity_claimed;
+    ({ last_stream_heartbeat_at: obj4.lastStreamHeartbeatAt, stream_progress_seconds: obj4.streamProgressSeconds, dismissed_quest_content: obj4.dismissedQuestContent } = user_status);
+    obj6.progress = progressFromServer(user_status.progress);
+    tmp = obj6;
   }
-  obj[2] = tmp;
+  obj.userStatus = tmp;
   return obj;
 };
 export const questsRewardCodeFromServer = function questsRewardCodeFromServer(body) {
@@ -181,10 +175,12 @@ export const questsRewardCodeFromServer = function questsRewardCodeFromServer(bo
   if (tier == null) {
     tier = null;
   }
-  obj[5] = tier;
+  obj.tier = tier;
   return obj;
 };
 export const questsEntitlementsFromServer = function questsEntitlementsFromServer(body) {
+  const obj = { claimedAt: body.claimed_at, items: null, errors: body.errors };
   const entitlements = body.entitlements;
-  return { claimedAt: body.claimed_at, items: entitlements.map(_questsEntitlementFromServer), errors: body.errors };
+  obj.items = entitlements.map(_questsEntitlementFromServer);
+  return obj;
 };

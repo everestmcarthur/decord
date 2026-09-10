@@ -1,42 +1,40 @@
-// Module ID: 15998
-// Function ID: 15999
+// Module ID: 16028
+// Function ID: 16029
 // Name: useIsHCaptchaModalOpenTracking
-// Dependencies: [19, 15949, 15950, 15946, 4418, 4417, 2]
+// Dependencies: [19, 15979, 15980, 15976, 4432, 4431, 2]
 // Exports: useIsHCaptchaModalOpenTracking
 
-// Module 15998 (useIsHCaptchaModalOpenTracking)
-import closure_2 from "noop" /* 19 */;
-import { doesRegistrationHaveIdentityType as closure_3 } from "useRegistrationUIStore" /* 15949 */;
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15950 */;
+// Module 16028 (useIsHCaptchaModalOpenTracking)
+import RootNavigationRef from "RootNavigationRef" /* 4432 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ RegisterTransitionSteps: c4, RegistrationTransitionActionTypes: c5 } = RegistrationTransitionActionTypes);
-const result = require("set").fileFinishedImporting("modules/auth/native/components/utils/useIsHCaptchaModalOpenTracking.tsx");
+require = fn;
+let closure_3 = fn(15979).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(15980);
+({ RegisterTransitionSteps: closure_4, RegistrationTransitionActionTypes: hasOwnProperty } = RegistrationConstants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/native/components/utils/useIsHCaptchaModalOpenTracking.tsx");
 
 export const useIsHCaptchaModalOpenTracking = function useIsHCaptchaModalOpenTracking() {
-  context = React.useContext(context(15946).TrackRegistrationContext);
+  context = noop.useContext(context(15976).TrackRegistrationContext);
   const items = [context];
-  const layoutEffect = React.useLayoutEffect(() => {
-    const rootNavigationRef = context(closure_1_1[4]).getRootNavigationRef();
+  const layoutEffect = noop.useLayoutEffect(() => {
+    const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     let current;
     if (rootNavigationRef != null) {
       current = rootNavigationRef.current;
     }
     if (null != current) {
       return rootNavigationRef.addListener("state", () => {
-        let obj = closure_1_0(closure_1_1[5]);
-        let isModalOpenResult = obj.isModalOpen("hcaptcha");
+        let isModalOpenResult = context(dependencyMap[5]).isModalOpen("hcaptcha");
         if (isModalOpenResult) {
-          isModalOpenResult = closure_1_3();
+          isModalOpenResult = closure_2_3();
         }
         if (isModalOpenResult) {
-          obj = { step: null, actionType: null };
-          obj[0] = closure_1_4.CAPTCHA;
-          obj[1] = closure_1_5.VIEWED;
-          callback(obj);
+          const obj2 = { step: constants.CAPTCHA, actionType: constants2.VIEWED };
+          closure_1_0(obj2);
         }
       });
     }
-    let obj = context(closure_1_1[4]);
   }, items);
 };

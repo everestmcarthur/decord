@@ -1,34 +1,34 @@
-// Module ID: 7868
-// Function ID: 7869
+// Module ID: 7882
+// Function ID: 7883
 // Name: MaskedBadge
-// Dependencies: [19, 21, 4560, 576, 1178, 7869, 2]
+// Dependencies: [19, 21, 4574, 576, 1178, 7883, 2]
 // Exports: default
 
-// Module 7868 (MaskedBadge)
-import ThemesDefault from "Themes" /* 576 */;
-import DEFAULT_BADGE_SIZEDefault from "DEFAULT_BADGE_SIZE" /* 7869 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 7882 (MaskedBadge)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import BadgeDefault from "Badge" /* 7883 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-createCacheKey = { maskStyle: { position: "relative", right: "HermesInternal" }, unreadDot: { width: 0, height: 0 }, badgeStyle: { flexGrow: 1, flexShrink: 0 }, unreadBadge: { position: "relative", bottom: -3 }, lowPriorityBadge: null };
-createCacheKey = { backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_400 };
-createCacheKey[4] = createCacheKey;
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/MaskedBadge.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { maskStyle: { position: "relative", right: "padding" }, unreadDot: { width: 0, height: 0 }, badgeStyle: { flexGrow: 1, flexShrink: 0 }, unreadBadge: { position: "relative", bottom: -3 }, lowPriorityBadge: { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_400 } };
+let closure_5 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/MaskedBadge.tsx");
 
 export default function MaskedBadge(backgroundColor) {
   backgroundColor = backgroundColor.backgroundColor;
-  const value = backgroundColor.value;
+  value = backgroundColor.value;
   ({ unread, maxValue, lowPriority, size, style } = backgroundColor);
-  const tmp = callback();
+  const tmp = closure_5();
   [][0] = backgroundColor;
   if (value > 0) {
-    let obj = { maskStyle: null, dotStyle: null, style: null, value: null, maxValue: null };
+    const obj2 = { maskStyle: null, dotStyle: null, style: null, value: null, maxValue: null };
     const items = [tmp2, tmp.maskStyle];
-    obj[0] = items;
-    obj[1] = tmp.unreadDot;
+    obj2.maskStyle = items;
+    obj2.dotStyle = tmp.unreadDot;
     const items1 = [tmp.badgeStyle, , ];
     let lowPriorityBadge = null;
     if (lowPriority) {
@@ -36,19 +36,15 @@ export default function MaskedBadge(backgroundColor) {
     }
     items1[1] = lowPriorityBadge;
     items1[2] = style;
-    obj[2] = items1;
-    obj[3] = value;
-    obj[4] = maxValue;
-    let tmp7Result = jsx(backgroundColor(1178).MaskedBadge, { maskStyle: null, dotStyle: null, style: null, value: null, maxValue: null });
-    const tmp7 = jsx;
+    obj2.style = items1;
+    obj2.value = value;
+    obj2.maxValue = maxValue;
+    let tmp7Result = jsx(native.MaskedBadge, { maskStyle: null, dotStyle: null, style: null, value: null, maxValue: null });
   } else {
     tmp7Result = null;
     if (unread) {
-      obj = { size: null, maskColor: null, style: null };
-      obj[0] = size;
-      obj[1] = backgroundColor;
-      obj[2] = tmp.unreadBadge;
-      tmp7Result = jsx(DEFAULT_BADGE_SIZEDefault, { size: null, maskColor: null, style: null });
+      const obj = { size, maskColor: backgroundColor, style: tmp.unreadBadge };
+      tmp7Result = jsx(BadgeDefault, { size, maskColor: backgroundColor, style: tmp.unreadBadge });
     }
   }
   return tmp7Result;

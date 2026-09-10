@@ -1,26 +1,32 @@
-// Module ID: 16823
-// Function ID: 16824
-// Dependencies: [19, 17, 21, 4560, 10937, 2]
+// Module ID: 16860
+// Function ID: 16861
+// Name: InstantInviteSelfMeasurer
+// Dependencies: [19, 17, 21, 4574, 10964, 2]
 
-// Module 16823
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16860 (InstantInviteSelfMeasurer)
+import InstantInvite from "InstantInvite" /* 10964 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
-let closure_6 = createCacheKey.createStyles({ container: { position: "absolute", opacity: 0 } });
-const memoResult = importAllResult.memo(function InstantInviteSelfMeasurer(type) {
+const InstantInviteDefault = InstantInvite;
+
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_6 = createStyles.createStyles({ container: { position: "absolute", opacity: 0 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteSelfMeasurer.tsx");
+
+export default noop.memo(function InstantInviteSelfMeasurer(type) {
   ({ item, onMeasured } = type);
   let str = type.type;
   if (str === undefined) {
     str = "height";
   }
   const items = [onMeasured, str];
-  let obj = {
-    style: items1,
-    onLayout: importAllResult.useCallback((nativeEvent) => {
+  const obj = {
+    style: null,
+    onLayout: noop.useCallback((nativeEvent) => {
       const layout = nativeEvent.nativeEvent.layout;
       onMeasured("height" === str ? layout.height : layout.width);
     }, items),
@@ -30,22 +36,18 @@ const memoResult = importAllResult.memo(function InstantInviteSelfMeasurer(type)
     accessible: false,
     children: null
   };
-  items1 = [type.containerStyle, callback().container];
+  const items1 = [type.containerStyle, closure_6().container];
+  obj.style = items1;
   if ("invite" === item.type) {
-    obj = { invite: null };
-    obj[0] = item.data;
-    let tmp2Result = tmp2(str(10937), obj);
+    const obj2 = { invite: item.data };
+    let tmp2Result = tmp2(InstantInviteDefault, obj2);
   } else {
-    obj = { channel: null };
-    obj[0] = item.data;
-    tmp2Result = tmp2(onMeasured(10937).LinkedChannelInvite, obj);
+    const obj3 = { channel: item.data };
+    tmp2Result = tmp2(InstantInvite.LinkedChannelInvite, obj3);
   }
-  obj[6] = tmp2Result;
-  return <View style={items1} onLayout={importAllResult.useCallback((nativeEvent) => {
+  obj.children = tmp2Result;
+  return <View style={null} onLayout={noop.useCallback((nativeEvent) => {
     const layout = nativeEvent.nativeEvent.layout;
     onMeasured("height" === str ? layout.height : layout.width);
   }, items)} pointerEvents="none" importantForAccessibility="no-hide-descendants" accessibilityElementsHidden accessible={false}>{null}</View>;
 });
-const result = require("set").fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteSelfMeasurer.tsx");
-
-export default memoResult;

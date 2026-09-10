@@ -1,38 +1,37 @@
-// Module ID: 14478
-// Function ID: 14479
-// Name: items
-// Dependencies: [5, 1956, 1957, 4465, 1074, 1085, 14479, 8339, 9560, 9530, 14483, 1094, 9509, 2]
+// Module ID: 14503
+// Function ID: 14504
+// Name: invites
+// Dependencies: [5, 1956, 1957, 4479, 1074, 1085, 14504, 8367, 9587, 9557, 14508, 1094, 9536, 2]
 
-// Module 14478 (items)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "participantFromServer" /* 1956 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import { InstantInviteSources } from "ME" /* 1074 */;
-import sum from "sum" /* 1085 */;
-import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 14479 */;
+// Module 14503 (invites)
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-const require = arg1;
-({ RPCCommands, RPCErrors: closure_6 } = sum);
+const require = fn;
+const InstantInviteSources = fn(1074).InstantInviteSources;
+const Constants = fn(1085);
+({ RPCCommands, RPCErrors: metroRequire } = Constants);
 let obj = {};
-obj = { scope: null, handler: null };
-obj = {};
-const items = [require("set").OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE, require("set").OAuth2Scopes.ACTIVITIES_INVITES_WRITE];
-obj[require("RPC_SCOPE_CONFIG").RPC_SCOPE_CONFIG.ANY] = items;
-obj[0] = obj;
-obj[1] = function handler(arg0) {
+const CONTEXT_MENU_ICON_NAMES = fn(14504);
+let obj3 = { scope: null, handler: null };
+let obj4 = {};
+const items = [fn(8367).OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE, fn(8367).OAuth2Scopes.ACTIVITIES_INVITES_WRITE];
+obj4[fn(4479).RPC_SCOPE_CONFIG.ANY] = items;
+obj3.scope = obj4;
+obj3.handler = function handler(arg0) {
   ({ socket: require, args } = arg0);
-  ({ user_id: dependencyMap, content: closure_2 } = args);
-  return callback(function*() {
+  ({ user_id: dependencyMap, content: asyncGeneratorStep } = args);
+  return (async (arg0, value) => {
     if (connectedActivityLocation === 2) {
       connectedActivityLocation = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -42,87 +41,71 @@ obj[1] = function handler(arg0) {
         if (0 === dependencyMap) {
           if (arg0 === 1) {
             connectedActivityLocation = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             connectedActivityLocation = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            closure_0 = tmp3;
-            const id = closure_1_0.application.id;
+            const id = application.application.id;
             if (null == id) {
-              obj1 = { errorCode: null };
-              obj1[0] = closure_1_6.INVALID_COMMAND;
-              const rPCError = new closure_1_0(9560).RPCError(obj1, "No application.");
+              const obj4 = { errorCode: constants2.INVALID_COMMAND };
+              const rPCError = new tmp3(9587).RPCError(obj4, "No application.");
               throw rPCError;
             } else {
               connectedActivityLocation = connectedActivityLocation.getConnectedActivityLocation();
               if (null == connectedActivityLocation) {
-                const obj2 = { errorCode: null };
-                obj2[0] = closure_1_6.NO_ELIGIBLE_ACTIVITY;
-                const rPCError1 = new closure_1_0(9560).RPCError(obj2, "No eligible activity for application. Ensure an activity was set using setActivity.");
+                const obj7 = { errorCode: constants2.NO_ELIGIBLE_ACTIVITY };
+                const rPCError1 = new tmp3(9587).RPCError(obj7, "No eligible activity for application. Ensure an activity was set using setActivity.");
                 throw rPCError1;
               } else {
                 const kind = connectedActivityLocation.kind;
-                if (closure_1_0(9530).EmbeddedActivityLocationKind.GUILD_CHANNEL !== kind) {
-                  if (closure_1_0(9530).EmbeddedActivityLocationKind.GUILD_CHANNEL_MESSAGE !== kind) {
-                    if (closure_1_0(9530).EmbeddedActivityLocationKind.PRIVATE_CHANNEL !== kind) {
-                      if (closure_1_0(9530).EmbeddedActivityLocationKind.PRIVATE_CHANNEL_MESSAGE !== kind) {
-                        const obj3 = { errorCode: null };
-                        obj3[0] = closure_1_6.NO_ELIGIBLE_ACTIVITY;
-                        const rPCError2 = new closure_1_0(9560).RPCError(obj3, "Unsupported activity location");
+                if (tmp3(9557).EmbeddedActivityLocationKind.GUILD_CHANNEL !== kind) {
+                  if (tmp3(9557).EmbeddedActivityLocationKind.GUILD_CHANNEL_MESSAGE !== kind) {
+                    if (tmp3(9557).EmbeddedActivityLocationKind.PRIVATE_CHANNEL !== kind) {
+                      if (tmp3(9557).EmbeddedActivityLocationKind.PRIVATE_CHANNEL_MESSAGE !== kind) {
+                        const obj8 = { errorCode: constants2.NO_ELIGIBLE_ACTIVITY };
+                        const rPCError2 = new tmp3(9587).RPCError(obj8, "Unsupported activity location");
                         throw rPCError2;
                       }
                     }
-                    let channel = closure_1_4.getChannel(connectedActivityLocation.channel_id);
+                    channel = channel.getChannel(connectedActivityLocation.channel_id);
                     if (null == channel) {
-                      let obj4 = { errorCode: null };
-                      obj4[0] = closure_1_6.INVALID_CHANNEL;
-                      const rPCError3 = new closure_1_0(9560).RPCError(obj4, "Invalid channel");
+                      const obj9 = { errorCode: constants2.INVALID_CHANNEL };
+                      const rPCError3 = new tmp3(9587).RPCError(obj9, "Invalid channel");
                       throw rPCError3;
-                    } else if (channel.type === closure_1_0(1094).ChannelTypes.DM) {
-                      let obj5 = { errorCode: null };
-                      obj5[0] = closure_1_6.INVALID_CHANNEL;
-                      const rPCError4 = new closure_1_0(9560).RPCError(obj5, "Cannot send invite to a DM");
+                    } else if (channel.type === tmp3(1094).ChannelTypes.DM) {
+                      const obj10 = { errorCode: constants2.INVALID_CHANNEL };
+                      const rPCError4 = new tmp3(9587).RPCError(obj10, "Cannot send invite to a DM");
                       throw rPCError4;
                     }
                   }
                   c2 = 1;
-                  obj5 = closure_1_0(9509);
-                  const obj6 = { channelId: null, applicationId: null, userId: null, prefixedContent: null, location: "RPC_ACTIVITY_INVITE_USER", inviteAnalyticsMetadata: null };
-                  obj6[0] = channel.id;
-                  obj6[1] = id;
-                  obj6[2] = dependencyMap;
-                  obj6[3] = c2;
-                  const obj7 = { source: null };
-                  obj7[0] = closure_1_5.ACTIVITY_INVITE;
-                  obj6[5] = obj7;
+                  const obj11 = { channelId: channel.id, applicationId: id, userId, prefixedContent, location: "RPC_ACTIVITY_INVITE_USER", inviteAnalyticsMetadata: null };
+                  const obj12 = { source: constants.ACTIVITY_INVITE };
+                  obj11.inviteAnalyticsMetadata = obj12;
                   dependencyMap = 2;
                   connectedActivityLocation = 1;
-                  const obj8 = { value: null, done: false };
-                  obj8[0] = obj5.sendEmbeddedActivityInviteUser(obj6);
-                  return obj8;
+                  const obj13 = { value: tmp3(9536).sendEmbeddedActivityInviteUser(obj11), done: false };
+                  return obj13;
                 }
-                obj4 = closure_1_0(14483);
-                channel = obj4.validateOpenInviteDialog(tmp69).channel;
+                channel = tmp3(14508).validateOpenInviteDialog(tmp68).channel;
+                const obj5 = tmp3(14508);
               }
             }
           }
         } else if (1 === tmp7) {
           c2 = 0;
-          const obj9 = { errorCode: null };
-          obj9[0] = closure_1_6.UNKNOWN_ERROR;
-          const rPCError5 = new closure_1_0(9560).RPCError(obj9, "Failed to invite user");
+          const obj14 = { errorCode: constants2.UNKNOWN_ERROR };
+          const rPCError5 = new tmp3(9587).RPCError(obj14, "Failed to invite user");
           throw rPCError5;
         } else if (arg0 === 1) {
           connectedActivityLocation = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c2 = 0;
           connectedActivityLocation = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          const obj = { value, done: true };
           return obj;
         } else {
           c2 = 0;
@@ -140,7 +123,8 @@ obj[1] = function handler(arg0) {
     }
   })();
 };
-obj[RPCCommands.INVITE_USER_EMBEDDED] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.INVITE_USER_EMBEDDED, obj);
-const result = require("set").fileFinishedImporting("modules/rpc/server/commands/invites.tsx");
+obj[RPCCommands.INVITE_USER_EMBEDDED] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.INVITE_USER_EMBEDDED, obj3);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rpc/server/commands/invites.tsx");
 
 export default obj;

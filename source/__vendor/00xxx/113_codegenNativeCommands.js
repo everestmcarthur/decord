@@ -2,18 +2,21 @@
 // Function ID: 114
 // Name: codegenNativeCommands
 // Dependencies: [114]
+// Exports: default
 
 // Module 113 (codegenNativeCommands)
 const require = arg1;
 const dependencyMap = arg6;
-arg5.default = function codegenNativeCommands(supportedCommands) {
-  const obj = {};
+
+export default function codegenNativeCommands(supportedCommands) {
+  let obj = {};
   supportedCommands = supportedCommands.supportedCommands;
-  const item = supportedCommands.forEach((arg0) => {
-    closure_0 = arg0;
-    closure_0[arg0] = (arg0) => {
+  const item = supportedCommands.forEach((item) => {
+    closure_0 = item;
+    obj[item] = (arg0) => {
       const substr = [...arguments].slice();
-      callback(closure_1_1[0]).dispatchCommand(arg0, callback, substr);
+      obj = obj(dependencyMap[0]);
+      obj.dispatchCommand(arg0, closure_0, substr);
     };
   });
   return obj;

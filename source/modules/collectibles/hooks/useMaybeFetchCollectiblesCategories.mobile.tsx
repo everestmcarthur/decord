@@ -1,37 +1,36 @@
-// Module ID: 10741
-// Function ID: 10742
-// Name: useMaybeFetchCollectiblesCategories
-// Dependencies: [4559, 504, 10742, 2]
+// Module ID: 10768
+// Function ID: 10769
+// Dependencies: [4573, 504, 10769, 2]
 // Exports: default
 
-// Module 10741 (useMaybeFetchCollectiblesCategories)
+// Module 10768
 import initialize from "initialize" /* 504 */;
-import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 10742 */;
-import closure_2 from "getUserAgnosticState" /* 4559 */;
+import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 10769 */;
+import DevSettingsStore from "DevSettingsStore" /* 4573 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesCategories.mobile.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesCategories.mobile.tsx");
 
-export default function useMaybeFetchCollectiblesCategories(paymentGateway) {
+export default function useMaybeFetchCollectiblesCategories(paymentGateway, arg1) {
   paymentGateway = undefined;
   if (paymentGateway != null) {
     paymentGateway = paymentGateway.paymentGateway;
   }
-  let obj = initialize;
-  const items = [closure_2];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ noCache: store.get("shop_disable_cache"), includeUnpublished: store.get("shop_include_unpublished") }));
+  const items = [DevSettingsStore];
+  const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => ({ noCache: DevSettingsStore.get("shop_disable_cache"), includeUnpublished: DevSettingsStore.get("shop_include_unpublished") }));
   ({ noCache, includeUnpublished } = stateFromStoresObject);
-  obj = { noCache, includeUnpublished, paymentGateway, countryCode: null, logPerf: null };
+  const obj3 = { noCache, includeUnpublished, paymentGateway, countryCode: null, logPerf: null };
   let countryCode;
   if (paymentGateway != null) {
     countryCode = paymentGateway.countryCode;
   }
-  obj[3] = countryCode;
+  obj3.countryCode = countryCode;
   let logPerf;
   if (paymentGateway != null) {
     logPerf = paymentGateway.logPerf;
   }
-  obj[4] = logPerf;
+  obj3.logPerf = logPerf;
   let noOp;
   if (paymentGateway != null) {
     noOp = paymentGateway.noOp;
@@ -40,5 +39,5 @@ export default function useMaybeFetchCollectiblesCategories(paymentGateway) {
   if (paymentGateway != null) {
     skipFetch = paymentGateway.skipFetch;
   }
-  return useMaybeFetchCollectiblesCategoriesShared.useMaybeFetchCollectiblesCategoriesShared(obj, noOp, arg1, skipFetch);
+  return useMaybeFetchCollectiblesCategoriesShared.useMaybeFetchCollectiblesCategoriesShared(obj3, noOp, arg1, skipFetch);
 };

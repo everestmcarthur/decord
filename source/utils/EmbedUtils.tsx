@@ -1,13 +1,17 @@
-// Module ID: 4897
-// Function ID: 4898
-// Name: getEffectiveVideoProvider
-// Dependencies: [1074, 4898, 11, 1384, 12, 4153, 1091, 4785, 2]
+// Module ID: 4911
+// Function ID: 4912
+// Name: EmbedUtils
+// Dependencies: [1074, 4912, 11, 1384, 12, 4166, 1091, 4799, 2]
 // Exports: canEmbedLinks, getMaxEmbedMediaSize, isCollectiblesShopArticleEmbed, isEmbedInline, isGameProfileArticleEmbed, isServerShopArticleEmbed, isSocialLayerStorefrontArticleEmbed, isUserProfileArticleEmbed, mergeEmbedsOnURL, sanitizeEmbed, shouldStripEmbeds
 
-// Module 4897 (getEffectiveVideoProvider)
-import set from "set" /* 2 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 4898 */;
-import ME from "ME" /* 1074 */;
+// Module 4911 (EmbedUtils)
+import _modDef12 from "module_12" /* 12 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
+import FlagUtils from "FlagUtils" /* 1384 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 4799 */;
+import EmbedConstants from "EmbedConstants" /* 4912 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
 function getEffectiveVideoProvider(name, url) {
   if ("YouTube" !== name) {
@@ -30,8 +34,8 @@ function getEffectiveVideoProvider(name, url) {
   }
   return name;
 }
-({ MessageEmbedMediaFlags: c3, MessageEmbedTypes: c4, Permissions: c5 } = ME);
-let closure_6 = MessageEmbedTypes.EMBED_TYPES_WITH_PARSEABLE_FIELDS;
+({ MessageEmbedMediaFlags: c3, MessageEmbedTypes: closure_4, Permissions: hasOwnProperty } = Constants);
+EmbedConstants.EMBED_TYPES_WITH_PARSEABLE_FIELDS;
 const re7 = /sketchfab/i;
 const re8 = /^https:\/\/sketchfab\.com/i;
 const re9 = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i;
@@ -43,43 +47,31 @@ const re14 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/game-sh
 const re15 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/shop\?(?=.*tab=game-shops)(?=.*applicationId=[0-9]+)(?=.*skuId=[0-9]+)/;
 const re16 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/games\/[0-9]+(?:\/[A-Za-z0-9-]*)?\/?$/;
 const re17 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/users\/[0-9]+\/?$/;
-let result = set.fileFinishedImporting("utils/EmbedUtils.tsx");
+let result = size.fileFinishedImporting("utils/EmbedUtils.tsx");
 
 export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
-  let obj = { id: null, url: null, type: null, rawTitle: null, rawDescription: null, referenceId: null, flags: null, contentScanVersion: null };
-  obj1 = str(12);
-  obj[0] = obj1.uniqueId("embed_");
-  ({ url: obj[1], type: obj[2], title: obj[3], description: obj[4], reference_id: obj[5], flags: obj[6], content_scan_version: obj[7] } = footer);
+  const obj = { id: _modDef12.uniqueId("embed_"), url: null, type: null, rawTitle: null, rawDescription: null, referenceId: null, flags: null, contentScanVersion: null };
+  ({ url: obj.url, type: obj.type, title: obj.rawTitle, description: obj.rawDescription, reference_id: obj.referenceId, flags: obj.flags, content_scan_version: obj.contentScanVersion } = footer);
   if (null != footer.footer) {
-    obj = { text: null, iconURL: null, iconProxyURL: null };
-    obj[0] = footer.footer.text;
-    obj[1] = footer.footer.icon_url;
-    obj[2] = footer.footer.proxy_icon_url;
-    obj.footer = obj;
+    const obj3 = { text: footer.footer.text, iconURL: footer.footer.icon_url, iconProxyURL: footer.footer.proxy_icon_url };
+    obj.footer = obj3;
   }
   if (tmp3) {
-    obj = { name: null, url: null, iconURL: null, iconProxyURL: null };
-    obj[0] = footer.author.name;
-    obj[1] = footer.author.url;
-    obj[2] = footer.author.icon_url;
-    obj[3] = footer.author.proxy_icon_url;
-    obj.author = obj;
+    const obj4 = { name: footer.author.name, url: footer.author.url, iconURL: footer.author.icon_url, iconProxyURL: footer.author.proxy_icon_url };
+    obj.author = obj4;
   }
   if (tmp4) {
-    obj1 = { name: null, url: null };
-    obj1[0] = footer.provider.name;
-    obj1[1] = footer.provider.url;
-    obj.provider = obj1;
+    const obj5 = { name: footer.provider.name, url: footer.provider.url };
+    obj.provider = obj5;
   }
   if (null != footer.timestamp) {
     const _Date = Date;
-    let tmpResult = tmp(4153);
     const date = new Date(footer.timestamp);
-    obj.timestamp = tmpResult(date);
+    obj.timestamp = tmp(4166)(date);
+    const tmpResult = tmp(4166);
   }
   if (null != footer.color) {
-    let obj5 = obj6(1091);
-    obj.color = obj5.int2hsl(footer.color, false);
+    obj.color = utils_ColorUtils.int2hsl(footer.color, false);
   }
   if (null != footer.thumbnail) {
     const thumbnail2 = footer.thumbnail;
@@ -89,38 +81,36 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
         if (constants2.IMAGE !== type) {
           const thumbnail3 = footer.thumbnail;
           ({ flags, content_type } = thumbnail3);
-          const obj2 = { url: null, proxyURL: null, width: null, height: null, placeholder: null, placeholderVersion: null, description: null, srcIsAnimated: null, flags: null, contentType: null };
-          ({ url: obj18[0], proxy_url: obj18[1], width: obj18[2], height: obj18[3], placeholder: obj18[4], placeholder_version: obj18[5], description: obj18[6] } = thumbnail3);
+          const size = { url: null, proxyURL: null, width: null, height: null, placeholder: null, placeholderVersion: null, description: null, srcIsAnimated: null, flags: null, contentType: null };
+          ({ url: obj18.url, proxy_url: obj18.proxyURL, width: obj18.width, height: obj18.height, placeholder: obj18.placeholder, placeholder_version: obj18.placeholderVersion, description: obj18.description } = thumbnail3);
           let num = flags;
           if (flags == null) {
             num = 0;
           }
-          obj2[7] = obj6(1384).hasFlag(num, constants.IS_ANIMATED);
+          size.srcIsAnimated = FlagUtils.hasFlag(num, constants.IS_ANIMATED);
           if (flags == null) {
             flags = 0;
           }
-          obj2[8] = flags;
-          obj2[9] = content_type;
-          obj.thumbnail = obj2;
-          const obj19 = obj6(1384);
+          size.flags = flags;
+          size.contentType = content_type;
+          obj.thumbnail = size;
         }
       }
       const thumbnail = footer.thumbnail;
       ({ flags: flags2, content_type: content_type2 } = thumbnail);
-      const obj3 = { url: null, proxyURL: null, width: null, height: null, placeholder: null, placeholderVersion: null, description: null, srcIsAnimated: null, flags: null, contentType: null };
-      ({ url: obj7[0], proxy_url: obj7[1], width: obj7[2], height: obj7[3], placeholder: obj7[4], placeholder_version: obj7[5], description: obj7[6] } = thumbnail);
-      let obj7 = obj6(1384);
+      const size1 = { url: null, proxyURL: null, width: null, height: null, placeholder: null, placeholderVersion: null, description: null, srcIsAnimated: null, flags: null, contentType: null };
+      ({ url: obj7.url, proxy_url: obj7.proxyURL, width: obj7.width, height: obj7.height, placeholder: obj7.placeholder, placeholder_version: obj7.placeholderVersion, description: obj7.description } = thumbnail);
       let num2 = flags2;
       if (flags2 == null) {
         num2 = 0;
       }
-      obj3[7] = obj7.hasFlag(num2, constants.IS_ANIMATED);
+      size1.srcIsAnimated = FlagUtils.hasFlag(num2, constants.IS_ANIMATED);
       if (flags2 == null) {
         flags2 = 0;
       }
-      obj3[8] = flags2;
-      obj3[9] = content_type2;
-      obj.image = obj3;
+      size1.flags = flags2;
+      size1.contentType = content_type2;
+      obj.image = size1;
     }
     tmp12 = thumbnail2.width > 0 && thumbnail2.height > 0;
   }
@@ -133,20 +123,19 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
   if (tmp16) {
     const image2 = footer.image;
     ({ flags: flags3, content_type: content_type3 } = image2);
-    const obj4 = { url: null, proxyURL: null, width: null, height: null, placeholder: null, placeholderVersion: null, description: null, srcIsAnimated: null, flags: null, contentType: null };
-    ({ url: obj9[0], proxy_url: obj9[1], width: obj9[2], height: obj9[3], placeholder: obj9[4], placeholder_version: obj9[5], description: obj9[6] } = image2);
+    const size2 = { url: null, proxyURL: null, width: null, height: null, placeholder: null, placeholderVersion: null, description: null, srcIsAnimated: null, flags: null, contentType: null };
+    ({ url: obj9.url, proxy_url: obj9.proxyURL, width: obj9.width, height: obj9.height, placeholder: obj9.placeholder, placeholder_version: obj9.placeholderVersion, description: obj9.description } = image2);
     let num4 = flags3;
     if (flags3 == null) {
       num4 = 0;
     }
-    obj4[7] = obj6(1384).hasFlag(num4, constants.IS_ANIMATED);
+    size2.srcIsAnimated = FlagUtils.hasFlag(num4, constants.IS_ANIMATED);
     if (flags3 == null) {
       flags3 = 0;
     }
-    obj4[8] = flags3;
-    obj4[9] = content_type3;
-    obj.image = obj4;
-    const obj10 = obj6(1384);
+    size2.flags = flags3;
+    size2.contentType = content_type3;
+    obj.image = size2;
   }
   if (null != footer.video) {
     let tmp20 = null == obj.thumbnail && null != footer.video.proxy_url;
@@ -156,21 +145,18 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
       const tmp21 = video.width > 0 && video.height > 0;
     }
     if (tmp20) {
-      obj5 = { width: null, height: null, url: null };
-      obj5[0] = footer.video.width;
-      obj5[1] = footer.video.height;
-      obj6 = { format: "webp" };
-      str = undefined;
+      const size3 = { width: footer.video.width, height: footer.video.height, url: null };
+      const obj11 = { format: "webp" };
       const _URL = URL;
-      str = new URL(footer.video.proxy_url);
+      const str = new URL(footer.video.proxy_url);
       const _Object = Object;
-      const keys = Object.keys(obj6);
-      const item = keys.forEach((arg0) => {
+      const keys = Object.keys(obj11);
+      const item = keys.forEach((item) => {
         const searchParams = str.searchParams;
-        const result = searchParams.set(arg0, obj6[arg0]);
+        const result = searchParams.set(item, obj11[item]);
       });
-      obj5[2] = str.toString();
-      obj.thumbnail = obj5;
+      size3.url = str.toString();
+      obj.thumbnail = size3;
     }
     let tmp27 = null != obj.thumbnail;
     if (tmp27) {
@@ -182,7 +168,7 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
       ({ provider, video: video3 } = footer);
       if (null == provider) {
         let flag2 = false;
-        if (!regex2.test(video3.url)) {
+        if (!re8.test(video3.url)) {
           let isMatch = null != video3.proxy_url;
           if (!isMatch) {
             isMatch = /^https:/i.test(video3.url);
@@ -190,8 +176,8 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
           }
           let tmp33 = null != id;
           if (tmp33) {
-            tmpResult = tmp(11);
-            tmp33 = tmpResult.extractTimestamp(id) < 1492472454139;
+            tmp33 = tmp(11).extractTimestamp(id) < 1492472454139;
+            const tmpResult2 = tmp(11);
           }
           let tmp34 = isMatch;
           if (tmp33) {
@@ -200,7 +186,7 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
               isMatch1 = null != provider;
             }
             if (isMatch1) {
-              isMatch1 = regex3.test(provider.name);
+              isMatch1 = re9.test(provider.name);
             }
             tmp34 = isMatch1;
           }
@@ -214,20 +200,19 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
     if (tmp27) {
       const video4 = footer.video;
       ({ flags: flags4, content_type: content_type4 } = video4);
-      obj7 = { url: null, proxyURL: null, width: null, height: null, placeholder: null, placeholderVersion: null, description: null, srcIsAnimated: null, flags: null, contentType: null };
-      ({ url: obj15[0], proxy_url: obj15[1], width: obj15[2], height: obj15[3], placeholder: obj15[4], placeholder_version: obj15[5], description: obj15[6] } = video4);
+      const size4 = { url: null, proxyURL: null, width: null, height: null, placeholder: null, placeholderVersion: null, description: null, srcIsAnimated: null, flags: null, contentType: null };
+      ({ url: obj15.url, proxy_url: obj15.proxyURL, width: obj15.width, height: obj15.height, placeholder: obj15.placeholder, placeholder_version: obj15.placeholderVersion, description: obj15.description } = video4);
       let num8 = flags4;
       if (flags4 == null) {
         num8 = 0;
       }
-      obj7[7] = obj6(1384).hasFlag(num8, constants.IS_ANIMATED);
+      size4.srcIsAnimated = FlagUtils.hasFlag(num8, constants.IS_ANIMATED);
       if (flags4 == null) {
         flags4 = 0;
       }
-      obj7[8] = flags4;
-      obj7[9] = content_type4;
-      obj.video = obj7;
-      const obj16 = obj6(1384);
+      size4.flags = flags4;
+      size4.contentType = content_type4;
+      obj.video = size4;
     }
   }
   if (set.has(obj.type)) {
@@ -240,13 +225,12 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
     obj.fields = [];
   }
   if (null != footer.components) {
-    const transformComponentsResult = obj6(4785).transformComponents(footer.components);
+    const transformComponentsResult = InteractionComponentUtils.transformComponents(footer.components);
     let tmp40;
     if (transformComponentsResult.length > 0) {
       tmp40 = transformComponentsResult;
     }
     obj.components = tmp40;
-    const obj17 = obj6(4785);
   }
   return obj;
 };
@@ -255,7 +239,7 @@ export const mergeEmbedsOnURL = function mergeEmbedsOnURL(mapped) {
   const items = [];
   const item = mapped.forEach((url) => {
     if (null != url.url) {
-      const value = map.get(url.url);
+      value = map.get(url.url);
       if (null == value) {
         items.push(url);
         const result = obj.set(url.url, url);
@@ -301,9 +285,9 @@ export const isServerShopArticleEmbed = function isServerShopArticleEmbed(type) 
     tmp = null != type.url;
   }
   if (tmp) {
-    let isMatch = regex5.test(type.url);
+    let isMatch = re11.test(type.url);
     if (!isMatch) {
-      isMatch = regex4.test(type.url);
+      isMatch = re10.test(type.url);
     }
     tmp = isMatch;
   }
@@ -325,7 +309,7 @@ export const isGameProfileArticleEmbed = function isGameProfileArticleEmbed(type
     isMatch = null != type.url;
   }
   if (isMatch) {
-    isMatch = regex9.test(type.url);
+    isMatch = re16.test(type.url);
   }
   return isMatch;
 };
@@ -335,7 +319,7 @@ export const isUserProfileArticleEmbed = function isUserProfileArticleEmbed(type
     isMatch = null != type.url;
   }
   if (isMatch) {
-    isMatch = regex10.test(type.url);
+    isMatch = re17.test(type.url);
   }
   return isMatch;
 };
@@ -345,23 +329,22 @@ export const isSocialLayerStorefrontArticleEmbed = function isSocialLayerStorefr
     tmp = null != type.url;
   }
   if (tmp) {
-    let isMatch = regex7.test(type.url);
+    let isMatch = re14.test(type.url);
     if (!isMatch) {
-      isMatch = regex6.test(type.url);
+      isMatch = re13.test(type.url);
     }
     if (!isMatch) {
-      isMatch = regex8.test(type.url);
+      isMatch = re15.test(type.url);
     }
     tmp = isMatch;
   }
   return tmp;
 };
-export const getMaxEmbedMediaSize = function getMaxEmbedMediaSize(provider) {
-  if (null != arg1) {
-    if (null != arg2) {
-      let obj = { maxMediaWidth: null, maxMediaHeight: null };
-      obj[0] = arg1;
-      obj[1] = arg2;
+export const getMaxEmbedMediaSize = function getMaxEmbedMediaSize(provider, maxMediaWidth, maxMediaHeight) {
+  if (null != maxMediaWidth) {
+    if (null != maxMediaHeight) {
+      const obj2 = { maxMediaWidth, maxMediaHeight };
+      let obj = obj2;
     }
     return obj;
   }
@@ -380,17 +363,16 @@ export const getMaxEmbedMediaSize = function getMaxEmbedMediaSize(provider) {
         if (provider2 != null) {
           name1 = provider2.name;
         }
-        const tmp3 = getEffectiveVideoProvider;
       }
     }
     obj = { maxMediaWidth: 400, maxMediaHeight: 300 };
   }
 };
-export const canEmbedLinks = function canEmbedLinks(isPrivate, closure_9) {
+export const canEmbedLinks = function canEmbedLinks(isPrivate, PermissionStore) {
   if (isPrivate.isPrivate()) {
     let canResult = !isPrivate.isManaged();
   } else {
-    canResult = closure_9.can(constants3.EMBED_LINKS, isPrivate);
+    canResult = PermissionStore.can(constants3.EMBED_LINKS, isPrivate);
   }
   return canResult;
 };

@@ -1,19 +1,21 @@
-// Module ID: 5688
-// Function ID: 5689
+// Module ID: 5702
+// Function ID: 5703
 // Name: TableRadioRow
-// Dependencies: [19, 21, 5685, 4264, 4277, 5605, 5689, 2]
+// Dependencies: [19, 21, 5699, 4277, 4292, 5619, 5703, 2]
 // Exports: TableRadioRow
 
-// Module 5688 (TableRadioRow)
-import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4277 */;
-import TableRowInner from "TableRowInner" /* 5605 */;
-import context2 from "context" /* 5685 */;
-import FormRadio from "FormRadio" /* 5689 */;
-import closure_2 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 5702 (TableRadioRow)
+import native from "native" /* 4277 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4292 */;
+import TableRow from "TableRow" /* 5619 */;
+import TableRadioGroup from "TableRadioGroup" /* 5699 */;
+import FormRadio from "FormRadio" /* 5703 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("design/components/TableRow/native/TableRadioRow.native.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/TableRow/native/TableRadioRow.native.tsx");
 
 export const TableRadioRow = function TableRadioRow(value) {
   value = value.value;
@@ -23,18 +25,17 @@ export const TableRadioRow = function TableRadioRow(value) {
     disabled = false;
   }
   ({ legacyCompat_selected, legacyCompat_onPress: dependencyMap } = value);
-  const merged = Object.assign(value, Object.create(null));
-  let onSelect;
-  const context = onSelect.useContext(context2.TableRadioGroupContext);
-  onSelect = context.onSelect;
+  const merged = Object.assign(value, Object.assign({ value: 0, label: 0, subLabel: 0, disabled: 0, accessibilityHint: 0, legacyCompat_selected: 0, legacyCompat_onPress: 0 }));
+  const context = noop.useContext(TableRadioGroup.TableRadioGroupContext);
+  const onSelect = context.onSelect;
   if (legacyCompat_selected == null) {
     legacyCompat_selected = context.selectedValue === value;
   }
-  let tmp2Result = tmp2(4264);
-  const nodeText = tmp2Result.getNodeText(label);
-  tmp2Result = tmp2(4264);
-  const nodeText1 = tmp2Result.getNodeText(subLabel);
-  const radioA11yNative = useCheckboxA11yNative.useRadioA11yNative({ selected: legacyCompat_selected, disabled });
+  const nodeText = native.getNodeText(label);
+  const tmp2Result = native;
+  const nodeText1 = native.getNodeText(subLabel);
+  const tmp2Result3 = native;
+  const radioA11yNative = useA11yRolesNative.useRadioA11yNative({ selected: legacyCompat_selected, disabled });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   const obj = {};
   const merged1 = Object.assign(merged);
@@ -52,11 +53,11 @@ export const TableRadioRow = function TableRadioRow(value) {
   obj.accessibilityLabel = "" + nodeText + ", " + str;
   obj.accessibilityHint = value.accessibilityHint;
   obj.onPress = function onPress(arg0) {
-    if (closure_1 != null) {
+    if (dependencyMap != null) {
       tmp(arg0);
     }
-    onSelect(closure_0);
+    onSelect(value);
   };
   obj.trailing = jsx(FormRadio.FormRadio, { selected: legacyCompat_selected });
-  return jsx(TableRowInner.TableRow, {});
+  return jsx(TableRow.TableRow, {});
 };

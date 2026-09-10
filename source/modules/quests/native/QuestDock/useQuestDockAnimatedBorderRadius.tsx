@@ -1,33 +1,36 @@
-// Module ID: 15187
-// Function ID: 15188
+// Module ID: 15214
+// Function ID: 15215
 // Name: useQuestDockAnimatedBorderRadius
-// Dependencies: [19, 15102, 4296, 2]
+// Dependencies: [19, 15129, 4310, 2]
 // Exports: default
 
-// Module 15187 (useQuestDockAnimatedBorderRadius)
-import closure_2 from "noop" /* 19 */;
+// Module 15214 (useQuestDockAnimatedBorderRadius)
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let closure_3 = { code: "function useQuestDockAnimatedBorderRadiusTsx1(){const{interpolate,questDockOffset,minBorder,maxBorder,Extrapolation}=this.__closure;return interpolate(questDockOffset.get(),[0,50],[minBorder,maxBorder],Extrapolation.CLAMP);}" };
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/useQuestDockAnimatedBorderRadius.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const __initData = { code: "function useQuestDockAnimatedBorderRadiusTsx1(){const{interpolate,questDockOffset,minBorder,maxBorder,Extrapolation}=this.__closure;return interpolate(questDockOffset.get(),[0,50],[minBorder,maxBorder],Extrapolation.CLAMP);}" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/QuestDock/useQuestDockAnimatedBorderRadius.tsx");
 
 export default function useQuestDockAnimatedBorderRadius(maxBorder) {
-  const _require = maxBorder;
+  _require = maxBorder;
   let num = arg1;
   if (arg1 === undefined) {
     num = 0;
   }
   let questDockOffset;
-  questDockOffset = questDockOffset.useContext(_require(num[1]).QuestDockExternalCoordinationContext).questDockOffset;
-  let obj = _require(num[2]);
+  questDockOffset = questDockOffset.useContext(require("QuestDockExternalCoordinationContext").QuestDockExternalCoordinationContext).questDockOffset;
   const fn = function u() {
-    const value = questDockOffset.get();
-    const items = [num, maxBorder];
-    return maxBorder(num[2]).interpolate(value, [0, 50], items, maxBorder(num[2]).Extrapolation.CLAMP);
+    value = questDockOffset.get();
+    const items = [num, closure_0];
+    return ReanimatedRexport.interpolate(value, [0, 50], items, ReanimatedRexport.Extrapolation.CLAMP);
   };
-  obj = { interpolate: _require(num[2]).interpolate, questDockOffset, minBorder: num, maxBorder, Extrapolation: _require(num[2]).Extrapolation };
-  fn.__closure = obj;
+  const obj = require("ReanimatedRexport");
+  fn.__closure = { interpolate: require("ReanimatedRexport").interpolate, questDockOffset, minBorder: num, maxBorder, Extrapolation: require("ReanimatedRexport").Extrapolation };
   fn.__workletHash = 17005846780112;
-  fn.__initData = closure_3;
+  fn.__initData = __initData;
   return obj.useDerivedValue(fn);
 };

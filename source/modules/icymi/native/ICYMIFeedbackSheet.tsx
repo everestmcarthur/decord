@@ -1,60 +1,61 @@
-// Module ID: 16478
-// Function ID: 16479
+// Module ID: 16509
+// Function ID: 16510
 // Name: ICYMIFeedbackSheet
-// Dependencies: [19, 21, 11652, 1114, 8359, 8351, 2]
+// Dependencies: [19, 21, 11678, 1114, 8387, 8379, 2]
 // Exports: default
 
-// Module 16478 (ICYMIFeedbackSheet)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import DEFAULT_UX_VARIATION from "DEFAULT_UX_VARIATION" /* 8359 */;
-import closeActionSheetDefault from "closeActionSheet" /* 11652 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16509 (ICYMIFeedbackSheet)
+import util from "util" /* 1114 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8379 */;
+import ICYMIAnalytics2 from "ICYMIAnalytics" /* 8387 */;
+import FeedbackActionSheetDefault from "FeedbackActionSheet" /* 11678 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-let result = require("set").fileFinishedImporting("modules/icymi/native/ICYMIFeedbackSheet.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/icymi/native/ICYMIFeedbackSheet.tsx");
 
 export default function ICYMIFeedbackSheet() {
-  let obj = { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, otherKey: "other", trackOpen: null, feedbackReasons: null, trackReport: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["ppfH9+"]);
-  const intl2 = getSystemLocale.intl;
-  obj[3] = intl2.string(getSystemLocale.t["ePk/Cf"]);
-  const intl3 = getSystemLocale.intl;
-  obj[4] = intl3.string(getSystemLocale.t.sBOuOf);
-  obj = { label: null, value: "irrelevant_content" };
-  const intl4 = getSystemLocale.intl;
-  obj[0] = intl4.string(getSystemLocale.t.F6TmZA);
-  let items = [obj, , , , ];
-  obj = { label: null, value: "not_enough_content" };
-  const intl5 = getSystemLocale.intl;
-  obj[0] = intl5.string(getSystemLocale.t.voWAzi);
-  items[1] = obj;
-  obj1 = { label: null, value: "too_much_content" };
-  const intl6 = getSystemLocale.intl;
-  obj1[0] = intl6.string(getSystemLocale.t.Ay8iwx);
-  items[2] = obj1;
-  const obj2 = { label: null, value: "laggy" };
-  const intl7 = getSystemLocale.intl;
-  obj2[0] = intl7.string(getSystemLocale.t["Yu+52W"]);
-  items[3] = obj2;
+  const obj = { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, otherKey: "other", trackOpen: null, feedbackReasons: null, trackReport: null };
+  const intl = util.intl;
+  obj.headerLabel = intl.string(util.t["ppfH9+"]);
+  const intl2 = util.intl;
+  obj.ratingsBodyLabel = intl2.string(util.t["ePk/Cf"]);
+  const intl3 = util.intl;
+  obj.reasonsHeaderLabel = intl3.string(util.t.sBOuOf);
+  let obj2 = { label: null, value: "irrelevant_content" };
+  const intl4 = util.intl;
+  obj2.label = intl4.string(util.t.F6TmZA);
+  let items = [obj2, , , , ];
+  const obj3 = { label: null, value: "not_enough_content" };
+  const intl5 = util.intl;
+  obj3.label = intl5.string(util.t.voWAzi);
+  items[1] = obj3;
+  const obj4 = { label: null, value: "too_much_content" };
+  const intl6 = util.intl;
+  obj4.label = intl6.string(util.t.Ay8iwx);
+  items[2] = obj4;
+  const obj5 = { label: null, value: "laggy" };
+  const intl7 = util.intl;
+  obj5.label = intl7.string(util.t["Yu+52W"]);
+  items[3] = obj5;
   items[4] = { label: "Other", value: "other" };
-  obj[5] = items;
-  obj[7] = DEFAULT_UX_VARIATION.ICYMIAnalytics.trackFeedFeedbackPromptViewed;
-  obj[8] = ["other"];
-  obj[9] = function trackReport(reason) {
-    let obj = callback2(8351);
-    obj.giveFeedback();
-    const ICYMIAnalytics = callback(8359).ICYMIAnalytics;
+  obj.reasons = items;
+  obj.trackOpen = ICYMIAnalytics2.ICYMIAnalytics.trackFeedFeedbackPromptViewed;
+  obj.feedbackReasons = ["other"];
+  obj.trackReport = function trackReport(reason) {
+    ICYMIActionCreatorsDefault.giveFeedback();
+    const ICYMIAnalytics = ICYMIAnalytics2.ICYMIAnalytics;
     let tmp2;
     if (null != reason.reason) {
       const items = [reason.reason.value];
       tmp2 = items;
     }
-    obj = { reason_descriptions: tmp2, rating, user_feedback: reason.feedback };
-    rating = reason.rating;
-    const result = ICYMIAnalytics.trackFeedFeedbackSubmitted(obj);
+    const obj2 = { reason_descriptions: tmp2, rating: null, user_feedback: reason.feedback };
+    const rating = reason.rating;
+    obj2.rating = rating;
+    const result = ICYMIAnalytics.trackFeedFeedbackSubmitted(obj2);
   };
-  return jsx(closeActionSheetDefault, { label: null, value: "not_enough_content" });
+  return jsx(FeedbackActionSheetDefault, { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, otherKey: "other", trackOpen: null, feedbackReasons: null, trackReport: null });
 };

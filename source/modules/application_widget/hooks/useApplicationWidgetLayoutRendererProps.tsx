@@ -1,56 +1,62 @@
-// Module ID: 9026
-// Function ID: 9027
+// Module ID: 9053
+// Function ID: 9054
 // Name: useApplicationWidgetLayoutRendererProps
-// Dependencies: [32, 19, 9027, 9028, 2025, 9029, 504, 9030, 8931, 1369, 9034, 2]
+// Dependencies: [32, 19, 9054, 9055, 2025, 9056, 504, 9057, 8958, 1369, 9061, 2]
 // Exports: default
 
-// Module 9026 (useApplicationWidgetLayoutRendererProps)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "handleFeaturedOrDeveloperFetchSuccess" /* 9027 */;
-import closure_6 from "map" /* 9028 */;
-import { FetchState } from "map" /* 9028 */;
-import closure_8 from "_getSystemLocale" /* 2025 */;
+// Module 9053 (useApplicationWidgetLayoutRendererProps)
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 8958 */;
+import ApplicationAssetV2Utils from "ApplicationAssetV2Utils" /* 9061 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import ApplicationAssetsV2Store from "ApplicationAssetsV2Store" /* 9054 */;
+import UserApplicationIdentityStore from "UserApplicationIdentityStore" /* 9055 */;
+import LocaleStore from "LocaleStore" /* 2025 */;
 
-const require = arg1;
-let closure_9 = [];
-const result = require("set").fileFinishedImporting("modules/application_widget/hooks/useApplicationWidgetLayoutRendererProps.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const FetchState = fn(9055).FetchState;
+const localizedStrings = [];
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/application_widget/hooks/useApplicationWidgetLayoutRendererProps.tsx");
 
 export default function useApplicationWidgetLayoutRendererProps(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   importDefault = arg1;
-  let obj = _require(stateFromStores[5]);
-  const userApplicationIdentities = obj.useUserApplicationIdentities(arg0);
-  let items = [closure_6];
-  stateFromStores = _require(stateFromStores[6]).useStateFromStores(items, () => closure_1_6.getUserIdentityByApplication(closure_0, closure_1));
-  const obj2 = _require(stateFromStores[6]);
-  const tmp4 = closure_6;
-  const items1 = [closure_8];
+  const userApplicationIdentities = require("UserApplicationIdentityActionCreators").useUserApplicationIdentities(arg0);
+  let obj = require("UserApplicationIdentityActionCreators");
+  let items = [UserApplicationIdentityStore];
+  stateFromStores = require("initialize").useStateFromStores(items, () => UserApplicationIdentityStore.getUserIdentityByApplication(closure_0, closure_1));
+  const obj2 = require("initialize");
+  const tmp4 = UserApplicationIdentityStore;
+  const items1 = [LocaleStore];
   const items2 = [arg1];
-  const stateFromStores1 = _require(stateFromStores[6]).useStateFromStores(items1, () => locale.locale);
-  const memo = React.useMemo(() => {
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => locale.locale);
+  const memo = noop.useMemo(() => {
     const items = [closure_1];
     return items;
   }, items2);
-  const first = stateFromStores3(importDefault(stateFromStores[7])(memo), 1)[0];
+  const first = stateFromStores3(require("useApplicationWidgetConfigs")(memo), 1)[0];
   let profile;
   if (stateFromStores != null) {
     profile = stateFromStores.profile;
   }
   const items3 = [profile];
-  const memo1 = React.useMemo(() => {
+  const memo1 = noop.useMemo(() => {
     let profile;
     if (stateFromStores != null) {
       profile = stateFromStores.profile;
     }
-    return callback(stateFromStores[8]).resolvedValuesFromUserApplicationIdentityProfile(profile);
+    return resolvedValuesFromUserApplicationIdentityProfile.resolvedValuesFromUserApplicationIdentityProfile(profile);
   }, items3);
-  let tmpResult = tmp(tmp2[6]);
+  const obj3 = require("initialize");
   const items4 = [tmp4];
-  const stateFromStores2 = tmpResult.useStateFromStores(items4, () => closure_1_6.getFetchState(closure_0) !== closure_1_7.FETCHED);
-  tmpResult = tmp(tmp2[6]);
-  const items5 = [closure_5];
-  stateFromStores3 = tmpResult.useStateFromStores(items5, () => closure_1_5.getAssets(closure_1));
+  const stateFromStores2 = require("initialize").useStateFromStores(items4, () => UserApplicationIdentityStore.getFetchState(closure_0) !== FetchState.FETCHED);
+  const tmpResult = require("initialize");
+  const items5 = [ApplicationAssetsV2Store];
+  stateFromStores3 = require("initialize").useStateFromStores(items5, () => ApplicationAssetsV2Store.getAssets(closure_1));
   const items6 = [stateFromStores3];
   const items7 = [arg1];
   const memo2 = obj4.useMemo(() => {
@@ -59,21 +65,20 @@ export default function useApplicationWidgetLayoutRendererProps(arg0, arg1) {
       obj = {};
     }
     const values = Object.values(obj);
-    return values.filter(callback(stateFromStores[9]).isNotNullish);
+    return values.filter(GlobalUtils.isNotNullish);
   }, items6);
-  obj = { locale: stateFromStores1, surfaceConfigs: null, isLoading: null, hasIdentity: null, resolutionContext: null };
+  const obj5 = { locale: stateFromStores1, surfaceConfigs: null, isLoading: null, hasIdentity: null, resolutionContext: null };
   let surfaces;
-  const callback = obj4.useCallback((metadata) => callback(stateFromStores[10]).getApplicationAssetUrl(closure_1, metadata, metadata.metadata.width), items7);
+  const callback = obj4.useCallback((metadata) => ApplicationAssetV2Utils.getApplicationAssetUrl(closure_1, metadata, metadata.metadata.width), items7);
   if (first != null) {
     surfaces = first.surfaces;
   }
   if (surfaces == null) {
     surfaces = {};
   }
-  obj[1] = surfaces;
-  obj[2] = stateFromStores2;
-  obj[3] = null != stateFromStores;
-  obj = { data: memo1, applicationAssets: memo2, getApplicationAssetUrl: callback, localizedStrings: closure_9 };
-  obj[4] = obj;
-  return obj;
+  obj5.surfaceConfigs = surfaces;
+  obj5.isLoading = stateFromStores2;
+  obj5.hasIdentity = null != stateFromStores;
+  obj5.resolutionContext = { data: memo1, applicationAssets: memo2, getApplicationAssetUrl: callback, localizedStrings };
+  return obj5;
 };

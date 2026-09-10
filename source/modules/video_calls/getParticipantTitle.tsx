@@ -1,17 +1,17 @@
-// Module ID: 10053
-// Function ID: 10054
+// Module ID: 10080
+// Function ID: 10081
 // Name: getParticipantTitle
-// Dependencies: [4581, 10054, 4712, 1114, 2]
+// Dependencies: [4595, 10081, 4726, 1114, 2]
 // Exports: default
 
-// Module 10053 (getParticipantTitle)
-import set from "set" /* 2 */;
-import ParticipantTypes2 from "ParticipantTypes" /* 4581 */;
-import getNicknameDefault from "getNickname" /* 4712 */;
-import useIsGuestOrLurker from "useIsGuestOrLurker" /* 10054 */;
+// Module 10080 (getParticipantTitle)
+import CallConstants from "CallConstants" /* 4595 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4726 */;
+import useIsGuestOrLurker from "useIsGuestOrLurker" /* 10081 */;
+import size from "module_2" /* 2 */;
 
-const ParticipantTypes = ParticipantTypes2.ParticipantTypes;
-let result = set.fileFinishedImporting("modules/video_calls/getParticipantTitle.tsx");
+const ParticipantTypes = CallConstants.ParticipantTypes;
+let result = size.fileFinishedImporting("modules/video_calls/getParticipantTitle.tsx");
 
 export default function getParticipantTitle(guild_id, type, name) {
   if (type.type === ParticipantTypes.ACTIVITY) {
@@ -30,9 +30,8 @@ export default function getParticipantTitle(guild_id, type, name) {
       id = user.id;
     }
     const result = useIsGuestOrLurker.isGuestOrLurkerInGuild(guild_id.guild_id, id);
-    const obj2 = useIsGuestOrLurker;
     let str = "";
-    const name1 = getNicknameDefault.getName(guild_id.getGuildId(), guild_id.id, type.user);
+    const name1 = NicknameUtilsDefault.getName(guild_id.getGuildId(), guild_id.id, type.user);
     if (result) {
       const intl = tmp10(1114).intl;
       const _HermesInternal = HermesInternal;

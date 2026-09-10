@@ -1,0 +1,28 @@
+// Module ID: 14266
+// Function ID: 14267
+// Name: LookupSupportedLocales
+// Dependencies: [14267, 14278, 14279]
+// Exports: match
+
+// Module 14266 (LookupSupportedLocales)
+import _mod14278 from "module_14278" /* 14278 */;
+
+const require = globalThis.__r;
+
+require = arg1;
+const dependencyMap = arg6;
+
+export const match = function match(arg0, arg1, arg2, algorithm) {
+  closure_0 = arg2;
+  const result = _mod14278.CanonicalizeLocaleList(arg0);
+  let str;
+  if (null != algorithm) {
+    str = algorithm.algorithm;
+  }
+  if (!str) {
+    str = "best fit";
+  }
+  return require("ResolveLocale").ResolveLocale(arg1, result, { localeMatcher: str }, [], {}, () => closure_0).locale;
+};
+export const LookupSupportedLocales = require("module_14279").LookupSupportedLocales;
+export const ResolveLocale = require("ResolveLocale").ResolveLocale;

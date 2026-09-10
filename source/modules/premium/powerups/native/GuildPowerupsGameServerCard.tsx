@@ -1,57 +1,53 @@
-// Module ID: 12578
-// Function ID: 12579
+// Module ID: 12604
+// Function ID: 12605
 // Name: GuildPowerupsGameServerCard
-// Dependencies: [19, 17, 4552, 4470, 21, 4560, 576, 504, 12579, 12580, 12571, 12575, 4271, 2]
+// Dependencies: [19, 17, 4566, 4484, 21, 4574, 576, 504, 12605, 12606, 12597, 12601, 4284, 2]
 // Exports: default
 
-// Module 12578 (GuildPowerupsGameServerCard)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import GuildPowerupsPerkCardDefault from "GuildPowerupsPerkCard" /* 12575 */;
-import useGameServerPerkDefault from "useGameServerPerk" /* 12580 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import closure_5 from "handleGameServerInstanceCreated" /* 4470 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12604 (GuildPowerupsGameServerCard)
+import nativeDefault from "native" /* 576 */;
+import useGameServerPowerupStatusDefault from "useGameServerPowerupStatus" /* 12605 */;
+import useGameServerPerkDefault from "useGameServerPerk" /* 12606 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import GameServerStore from "GameServerStore" /* 4484 */;
 
-const require = arg1;
-noopAll;
-createCacheKey = { riveContainer: null };
-createCacheKey = { flex: 1, paddingVertical: ThemesDefault.space.PX_8 };
-createCacheKey[0] = createCacheKey;
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsGameServerCard.tsx");
+const GuildPowerupsPerkCardDefault = tmp5(12601);
+const require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+const obj2 = { riveContainer: { flex: 1, paddingVertical: nativeDefault.space.PX_8 } };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsGameServerCard.tsx");
 
 export default function GuildPowerupsGameServerCard(guildId) {
   guildId = guildId.guildId;
-  let obj = guildId(504);
-  const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getStateForGuild(guildId));
-  const tmp = callback();
+  const tmp = closure_7();
   const tmp2 = guildId;
-  const tmp5 = importDefault;
+  const items = [GameServerStore];
+  const stateFromStores = guildId(504).useStateFromStores(items, () => GameServerStore.getStateForGuild(guildId));
+  const obj = guildId(504);
   const tmp7 = useGameServerPerkDefault(guildId);
-  obj1 = guildId(504);
-  const items1 = [closure_4];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
+  const tmp6 = useGameServerPowerupStatusDefault(guildId);
+  const items1 = [AccessibilityStore];
+  const stateFromStores1 = guildId(504).useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
   let tmp10 = null;
   if (null != stateFromStores) {
     tmp10 = null;
     if (null != tmp7) {
-      obj = { title: null, description: null, cost: null, costDecorator: "+", riveComponent: null, badge: "beta", status: null, onPress: null };
-      ({ title: obj3[0], description: obj3[1], cost: obj3[2] } = tmp7);
-      obj = { style: null, children: null };
-      obj[0] = tmp.riveContainer;
-      obj1 = { stateMachine: "SM_Auto", dataBinding: null };
-      const obj2 = { reducedMotion: null };
-      obj2[0] = stateFromStores1;
-      obj1[1] = obj2;
-      obj[1] = jsx(tmp2(4271).GameServerHostingRive, { stateMachine: "SM_Auto", dataBinding: null });
-      obj[4] = <View style={null}>{null}</View>;
-      obj[6] = tmp6;
-      obj[7] = tmp9;
-      tmp10 = jsx(GuildPowerupsPerkCardDefault, { style: null, children: null });
+      const obj4 = { title: null, description: null, cost: null, costDecorator: "+", riveComponent: null, badge: "beta", status: null, onPress: null };
+      ({ title: obj3.title, description: obj3.description, cost: obj3.cost } = tmp7);
+      const obj5 = { style: tmp.riveContainer, children: null };
+      const obj6 = { stateMachine: "SM_Auto", dataBinding: null };
+      const obj10 = { reducedMotion: stateFromStores1 };
+      obj6.dataBinding = obj10;
+      obj5.children = jsx(tmp2(4284).GameServerHostingRive, { stateMachine: "SM_Auto", dataBinding: null });
+      obj4.riveComponent = <View style={tmp.riveContainer}>{null}</View>;
+      obj4.status = tmp6;
+      obj4.onPress = tmp9;
+      tmp10 = jsx(GuildPowerupsPerkCardDefault, { title: null, description: null, cost: null, costDecorator: "+", riveComponent: null, badge: "beta", status: null, onPress: null });
       const tmp5Result = GuildPowerupsPerkCardDefault;
     }
   }

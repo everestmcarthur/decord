@@ -1,23 +1,26 @@
 // Module ID: 15
 // Function ID: 16
-// Name: createFastConnectSocket
-// Dependencies: [16, 17, 499, 3, 500, 1250, 7757, 13671, 13641, 7649, 1115, 13653, 13640, 13637, 10, 9, 2]
+// Name: fast_connect
+// Dependencies: [16, 17, 499, 3, 500, 1250, 7771, 13694, 13664, 7663, 1115, 13676, 13663, 13660, 10, 9, 2]
 // Exports: closeFastConnectSocket, createFastConnectSocket, getLastFastConnectIdentifyUserId, identifyWebSocket
 
-// Module 15 (createFastConnectSocket)
-import set from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import serializeDefault from "serialize" /* 9 */;
-import HELLO_KEY from "HELLO_KEY" /* 499 */;
-import module_16 from "module_16" /* 16 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 15 (fast_connect)
+import LoggerDefault from "Logger" /* 3 */;
+import TTITrackerDefault from "TTITracker" /* 9 */;
+import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
+import KvCacheVersionConstants from "KvCacheVersionConstants" /* 499 */;
+import checkEnv from "checkEnv" /* 16 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 function createFastConnectSocket() {
   if (null != window.WebSocket) {
-    obj = _require(1115);
+    let obj = require("PlatformUtils");
     if (obj.isAndroid()) {
-      let supportsZstd = obj(13653).getConstants().supportsZstd;
-      const obj2 = obj(13653);
+      let supportsZstd = obj4(13676).getConstants().supportsZstd;
+      const obj2 = obj4(13676);
     } else {
       supportsZstd = closure_4.DCDCompressionManager.supportsZstd;
     }
@@ -27,7 +30,7 @@ function createFastConnectSocket() {
     }
     const _window = window;
     let GATEWAY_ENDPOINT = window.GLOBAL_ENV.GATEWAY_ALT_ENDPOINT;
-    if (!obj(13640)()) {
+    if (!obj4(13663)()) {
       const _window2 = window;
       GATEWAY_ENDPOINT = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
     }
@@ -37,7 +40,7 @@ function createFastConnectSocket() {
     obj.log(`[FAST CONNECT] ${tmp10}`);
     const _Date = Date;
     _require = Date.now();
-    const tmp12 = obj(13637)(combined);
+    const tmp12 = obj4(13660)(combined);
     const _parseFloat = parseFloat;
     const parsed = parseFloat(tmp12._socketId);
     const _isNaN = isNaN;
@@ -47,49 +50,43 @@ function createFastConnectSocket() {
       const isAndroidResult = tmp3(1115).isAndroid();
       if (supportsZstd) {
         if (isAndroidResult) {
-          let tmp7Result = tmp7(13653);
-          const result = tmp7Result.enableZstdStreamSupport(parsed);
+          const result = tmp7(13676).enableZstdStreamSupport(parsed);
+          const tmp7Result = tmp7(13676);
         } else {
           const DCDCompressionManager2 = closure_4.DCDCompressionManager;
           const result1 = DCDCompressionManager2.enableZstdStreamSupport(parsed, 0);
         }
       } else if (isAndroidResult) {
-        tmp7Result = tmp7(13653);
-        const result2 = tmp7Result.enableZlibStreamSupport(parsed);
+        const result2 = tmp7(13676).enableZlibStreamSupport(parsed);
+        const tmp7Result3 = tmp7(13676);
       } else {
         const DCDCompressionManager = closure_4.DCDCompressionManager;
         const result3 = DCDCompressionManager.enableZlibStreamSupport(parsed);
       }
-      obj = { open: false, gateway: null, identify: false, messages: null, clientState: null, userId: null };
-      obj[1] = combined;
-      obj[3] = [];
+      obj4 = { open: false, gateway: combined, identify: false, messages: [], clientState: null, userId: null };
       tmp12.onopen = () => {
-        obj = obj(closure_1_3[14]);
+        const obj = AppStartPerformanceDefault;
         obj.mark("\u{1F310}", "Fastconnect socket opened");
-        closure_1_7.log("connected and identified in " + Date.now() - closure_0 + "ms didIdentify:" + obj.identify);
-        obj.open = true;
+        obj.log("connected and identified in " + Date.now() - closure_0 + "ms didIdentify:" + obj4.identify);
+        obj4.open = true;
       };
       const fn = () => {
-        obj = obj(table[14]);
-        obj.mark("\u{1F310}", "Fastconnect socket close");
+        obj4(dependencyMap[14]).mark("\u{1F310}", "Fastconnect socket close");
         window._ws = null;
       };
       tmp12.onerror = fn;
       tmp12.onclose = fn;
       tmp12.onmessage = (arg0) => {
-        obj = obj(closure_1_3[14]);
-        obj.mark("\u{1F310}", "Fastconnect socket message");
-        const messages = obj.messages;
+        AppStartPerformanceDefault.mark("\u{1F310}", "Fastconnect socket message");
+        const messages = obj4.messages;
         messages.push(arg0);
       };
       const _window4 = window;
-      obj = { ws: null, state: null };
-      obj[0] = tmp12;
-      obj[1] = obj;
-      window._ws = obj;
+      const obj5 = { ws: tmp12, state: obj4 };
+      window._ws = obj5;
       const tmp3Result = tmp3(1115);
       tmp7(10).mark("\u{1F310}", "Fastconnect socket created");
-      const tmp7Result1 = tmp7(10);
+      const tmp7Result4 = tmp7(10);
     }
     obj3 = obj;
     tmp3 = _require;
@@ -97,13 +94,13 @@ function createFastConnectSocket() {
     obj.log("Skipping fast_connect because `window.WebSocket` does not exist.");
   }
 }
-({ NativeModules: c4, AppState } = get_ActivityIndicator);
-let closure_6 = HELLO_KEY.VERSION_TO_FORCE_RESYNCING_ALL_DATA;
-let obj = new timestampDefault("FAST CONNECT");
-obj.info("initial app state (import time)", AppState.currentState);
+({ NativeModules: closure_4, AppState } = get_ActivityIndicator);
+let closure_6 = KvCacheVersionConstants.VERSION_TO_FORCE_RESYNCING_ALL_DATA;
+let d = new LoggerDefault("FAST CONNECT");
+d.info("initial app state (import time)", AppState.currentState);
 let c8 = null;
 const fastConnectSocket = createFastConnectSocket();
-let result = set.fileFinishedImporting("modules/gateway/native/fast_connect.tsx");
+let result = size.fileFinishedImporting("modules/gateway/native/fast_connect.tsx");
 
 export { createFastConnectSocket };
 export const closeFastConnectSocket = function closeFastConnectSocket() {
@@ -120,16 +117,15 @@ export function getLastFastConnectIdentifyUserId() {
 }
 export const identifyWebSocket = function identifyWebSocket() {
   if (null != window._ws) {
-    const beginFastConnect = serializeDefault.beginFastConnect;
+    const beginFastConnect = TTITrackerDefault.beginFastConnect;
     beginFastConnect.measure(() => {
-      const loadFastConnectNativeModule = callback2(table[15]).loadFastConnectNativeModule;
-      const measureResult = loadFastConnectNativeModule.measure(() => callback(table[8]).getConstants());
+      const loadFastConnectNativeModule = TTITrackerDefault.loadFastConnectNativeModule;
+      const measureResult = loadFastConnectNativeModule.measure(() => closure_1_1(closure_1_3[8]).getConstants());
       let token = measureResult.token;
       if (token == null) {
         token = null;
       }
       if (null != token) {
-        let str = "";
         if ("" !== token) {
           const _window = window;
           const state = _ws.state;
@@ -145,8 +141,8 @@ export const identifyWebSocket = function identifyWebSocket() {
           state.userId = tmp8;
           let derivedQosData = null;
           if (null != measureResult.userId) {
-            let tmpResult = tmp(tmp2[8]);
-            derivedQosData = tmpResult.getDerivedQosData(str2);
+            derivedQosData = tmp(tmp2[8]).getDerivedQosData(str2);
+            const tmpResult = tmp(tmp2[8]);
           }
           let prop = measureResult.analyticsInstallation;
           if (prop == null) {
@@ -156,57 +152,52 @@ export const identifyWebSocket = function identifyWebSocket() {
           if (flag == null) {
             flag = false;
           }
-          obj1 = callback(tmp2[4]);
-          const qosTokenFromDerivedData = obj1.buildQosTokenFromDerivedData(derivedQosData, true);
-          logger.info("prepareIdentify: app state: ", closure_5.currentState, "qosTokenPresent: ", qosTokenFromDerivedData.length > 0);
-          obj = { token: null, properties: null, capabilities: null, client_state: null, qos_token: null };
-          obj[0] = token;
-          obj = {};
-          let obj4 = callback3(tmp2[5]);
-          const merged = Object.assign(obj4.getSuperProperties());
-          obj.client_app_state = closure_5.currentState;
-          obj.is_fast_connect = true;
-          let obj5 = callback3(tmp2[6]);
-          obj.gateway_connect_reasons = obj5.describeConnectionReasons();
+          const qosTokenFromDerivedData = require("QosToken").buildQosTokenFromDerivedData(derivedQosData, true);
+          logger.info("prepareIdentify: app state: ", AppState.currentState, "qosTokenPresent: ", qosTokenFromDerivedData.length > 0);
+          const d = { token, properties: null, capabilities: null, client_state: null, qos_token: null };
+          const obj3 = {};
+          const obj2 = require("QosToken");
+          const merged = Object.assign(require("discord_common/AnalyticsUtils").getSuperProperties());
+          obj3.client_app_state = AppState.currentState;
+          obj3.is_fast_connect = true;
+          const obj5 = require("discord_common/AnalyticsUtils");
+          obj3.gateway_connect_reasons = require("RequestGatewaySocket").describeConnectionReasons();
           if (null != prop) {
-            obj1 = { installation_id: null };
-            obj1[0] = prop;
-            let obj2 = obj1;
+            const obj4 = { installation_id: prop };
+            let obj7 = obj4;
           } else {
-            obj2 = {};
+            obj7 = {};
           }
-          const merged1 = Object.assign(obj2);
-          obj[1] = obj;
-          let tmp11Result = tmp11(tmp2[7]);
-          const obj3 = { useChannelObfuscation: null };
-          obj3[0] = flag;
-          obj[2] = tmp11Result.getClientCapabilities(obj3);
-          obj4 = { guild_versions: null };
-          obj4[0] = {};
-          obj[3] = obj4;
-          obj[4] = qosTokenFromDerivedData;
+          const merged1 = Object.assign(obj7);
+          d.properties = obj3;
+          const obj6 = require("RequestGatewaySocket");
+          const obj8 = { useChannelObfuscation: flag };
+          d.capabilities = require("GatewayCapabilities").getClientCapabilities(obj8);
+          const obj9 = { guild_versions: {} };
+          d.client_state = obj9;
+          d.qos_token = qosTokenFromDerivedData;
           const _JSON = JSON;
-          obj5 = { op: 2, d: null };
-          obj5[1] = obj;
-          const json = JSON.stringify(obj5);
-          tmpResult = tmp(tmp2[8]);
-          str = undefined;
+          const obj10 = { op: 2, d };
+          const json = JSON.stringify(obj10);
+          const tmpResult2 = tmp(tmp2[8]);
+          let str1;
           if (measureResult.userId != null) {
-            str = str2.toString();
+            str1 = str2.toString();
           }
-          if (str == null) {
-            str = null;
+          if (str1 == null) {
+            str1 = null;
           }
           const _parseFloat = parseFloat;
           const parsed = parseFloat(_ws.ws._socketId);
-          tmp11Result = tmp11(tmp2[9]);
+          const tmp11Result = require("GatewayCapabilities");
           let tmp25;
-          if (tmp11Result.isCacheEnabled()) {
-            tmp25 = closure_6;
+          if (tmp11Result2.isCacheEnabled()) {
+            tmp25 = closure_1_6;
           }
-          tmpResult.prepareIdentify(str, json, parsed, tmp25);
+          tmpResult2.prepareIdentify(str1, json, parsed, tmp25);
           state.identify = true;
-          state.clientState = obj.client_state;
+          state.clientState = d.client_state;
+          tmp11Result2 = require("isCacheEnabled");
         }
       }
       logger.log("Skipping fast_connect because we could not find a token to connect with.");

@@ -1,40 +1,39 @@
-// Module ID: 15740
-// Function ID: 15741
-// Name: useBugReporterExperimentSettingPredicate
-// Dependencies: [10189, 4763, 10190, 1896, 10220, 11473, 1114, 15741, 2]
+// Module ID: 15770
+// Function ID: 15771
+// Name: BugReporterSetting
+// Dependencies: [10216, 4777, 10217, 1896, 10247, 11500, 1114, 15771, 2]
 // Exports: useBugReporterExperimentSettingPredicate
 
-// Module 15740 (useBugReporterExperimentSettingPredicate)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 15770 (BugReporterSetting)
+import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import _modDef4763 from "module_4763" /* 4763 */;
-import apexExperimentDefault from "apexExperiment" /* 10220 */;
-import closure_3 from "zustandStore" /* 10189 */;
-import createToggle from "createToggle" /* 11473 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import BugReporterExperimentDefault from "BugReporterExperiment" /* 10247 */;
+import BugReportStore from "BugReportStore" /* 10216 */;
 
-require = arg1;
+require = fn;
 function useBugReporterExperimentSettingPredicate() {
-  return apexExperimentDefault.useConfig({ location: "native-settings" }).hasBugReporterAccess;
+  return BugReporterExperimentDefault.useConfig({ location: "native-settings" }).hasBugReporterAccess;
 }
-createToggle = {
+const SettingBuilders = fn(11500);
+const pressable = SettingBuilders.createPressable({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["/tZh0A"]);
+    const intl = util.intl;
+    return intl.string(util.t["/tZh0A"]);
   },
   parent: null,
-  IconComponent: require("BugIcon").BugIcon,
+  IconComponent: fn(15771).BugIcon,
   onPress: function handleBugReporterSettingPress() {
-    if (!field.getField("isReportOpen")) {
-      field.setState({ isReportOpen: true });
-      _modDef4763.pushLazy(asyncRequireImpl(10190, dependencyMap.paths));
-      const obj2 = _modDef4763;
+    if (!BugReportStore.getField("isReportOpen")) {
+      BugReportStore.setState({ isReportOpen: true });
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10217, dependencyMap.paths));
     }
   },
   withArrow: true,
   usePredicate: useBugReporterExperimentSettingPredicate
-};
-createToggle = createToggle.createPressable(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/BugReporterSetting.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/BugReporterSetting.tsx");
 
-export default createToggle;
+export default pressable;
 export { useBugReporterExperimentSettingPredicate };

@@ -1,26 +1,31 @@
-// Module ID: 4983
-// Function ID: 4984
-// Name: BaseButton
-// Dependencies: [109, 19, 17, 4984, 21, 4271, 4560, 4981, 4296, 1369, 1115, 2]
+// Module ID: 4997
+// Function ID: 4998
+// Name: Button/BaseButton
+// Dependencies: [109, 19, 17, 4998, 21, 4284, 4574, 4995, 4310, 1369, 1115, 2]
 
-// Module 4983 (BaseButton)
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { IOS_POINTER_STYLE } from "IOS_POINTER_STYLE" /* 4984 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importDefaultResult from "module_4296" /* 4296 */;
+// Module 4997 (Button/BaseButton)
+import native from "native" /* 4284 */;
+import ButtonHooks from "ButtonHooks" /* 4995 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "module_19" /* 19 */;
+import ReanimatedRexport_mod from "ReanimatedRexport" /* 4310 */;
 
-const require = arg1;
+require = fn;
 let closure_2 = ["style"];
-let c4 = importAllResult;
+get_ActivityIndicator = fn(17);
 ({ Pressable, TouchableOpacity } = get_ActivityIndicator);
-let closure_7 = createCacheKey.createStyles({ disabled: { opacity: 0.5 } });
-let closure_8 = importDefaultResult.createAnimatedComponent(Pressable);
-let closure_9 = importDefaultResult.createAnimatedComponent(TouchableOpacity);
-const importDefaultResult1 = importDefaultResult;
-const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
+const IOS_POINTER_STYLE = fn(4998).IOS_POINTER_STYLE;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_7 = createStyles.createStyles({ disabled: { opacity: 0.5 } });
+let ReanimatedRexport = ReanimatedRexport_mod;
+let closure_8 = ReanimatedRexport.createAnimatedComponent(Pressable);
+let ReanimatedRexport = ReanimatedRexport_mod;
+let closure_9 = ReanimatedRexport.createAnimatedComponent(TouchableOpacity);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Button/native/BaseButton.native.tsx");
+
+export const BaseButton = noop.forwardRef((disabled, ref) => {
   ({ children, variant } = disabled);
   if (variant === undefined) {
     variant = "primary";
@@ -35,42 +40,37 @@ const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
   }
   ({ pressed, onPress, onPressDisabled, onPressIn, onPressOut, onLayout, accessible, accessibilityRole, accessibilityLabel, accessibilityHint, accessibilityState } = disabled);
   ({ accessibilityElementsHidden, importantForAccessibility, hitSlop, scaleAmountInPx } = disabled);
-  closure_2 = undefined;
+  disabled = undefined;
   let buttonAnimationProps;
   ({ onLongPress, accessibilityValue, accessibilityActions, onAccessibilityAction, pointerEvents } = disabled);
   let tmp2 = flag;
   if (flag) {
     tmp2 = null == onPressDisabled;
   }
-  closure_2 = tmp2;
+  disabled = tmp2;
   if (flag) {
     onPress = onPressDisabled;
   }
-  let obj = flag2(accessibilityState[7]);
-  const buttonPressAnimationProps = obj.useButtonPressAnimationProps(pressed, scaleAmountInPx, onLayout, onPressIn, onPressOut);
+  const tmp = closure_7();
+  const buttonPressAnimationProps = ButtonHooks.useButtonPressAnimationProps(pressed, scaleAmountInPx, onLayout, onPressIn, onPressOut);
   if (null == pressed) {
-    obj = { animatedScaleStyles: "Array", buttonAnimationProps: 0 };
-    obj = { onLayout: null, onPressIn: null, onPressOut: null };
-    obj[0] = onLayout;
-    obj[1] = onPressIn;
-    obj[2] = onPressOut;
-    obj[1] = obj;
-    obj1 = obj;
+    const obj2 = { animatedScaleStyles: "Array", buttonAnimationProps: 0 };
+    const obj3 = { onLayout, onPressIn, onPressOut };
+    obj2.buttonAnimationProps = obj3;
+    let obj4 = obj2;
   } else {
-    obj1 = { animatedScaleStyles: null, buttonAnimationProps: null };
-    obj1[0] = buttonPressAnimationProps.style;
-    obj1[1] = tmp7;
+    obj4 = { animatedScaleStyles: buttonPressAnimationProps.style, buttonAnimationProps: tmp7 };
   }
-  buttonAnimationProps = obj1.buttonAnimationProps;
+  buttonAnimationProps = obj4.buttonAnimationProps;
   const items = [accessibilityState, tmp2, flag2];
-  const memo = importAllResult.useMemo(() => {
+  const memo = noop.useMemo(() => {
     const obj = {};
     const merged = Object.assign(accessibilityState);
-    obj.disabled = closure_2;
+    obj.disabled = disabled;
     obj.busy = flag2;
     return obj;
   }, items);
-  let tmp4Result = tmp4(tmp5[5]);
+  native;
   let str = "light";
   if ("primary-overlay" !== variant) {
     let str3;
@@ -83,84 +83,78 @@ const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
   }
   let tmp11 = children;
   if (null != str) {
-    const obj2 = { theme: null, children: null };
-    obj2[0] = str;
-    obj2[1] = children;
-    tmp11 = jsx(tmp4(tmp5[5]).ThemeContextProvider, { theme: null, children: null });
+    const obj5 = { theme: str, children };
+    tmp11 = jsx(tmp4(4284).ThemeContextProvider, { theme: str, children });
   }
   const items1 = [disabled.style, , , ];
   if (flag) {
     flag = tmp.disabled;
   }
   items1[1] = flag;
-  items1[2] = obj1.animatedScaleStyles;
+  items1[2] = obj4.animatedScaleStyles;
   items1[3] = IOS_POINTER_STYLE;
   if ("none" !== accessibilityRole) {
-    const obj3 = {};
+    const obj6 = {};
     let merged = Object.assign(buttonAnimationProps);
-    obj3.ref = ref;
-    obj3.accessible = accessible;
+    obj6.ref = ref;
+    obj6.accessible = accessible;
     if (accessibilityRole == null) {
       accessibilityRole = "button";
     }
-    obj3.accessibilityRole = accessibilityRole;
-    obj3.accessibilityLabel = accessibilityLabel;
-    obj3.accessibilityHint = accessibilityHint;
-    obj3.accessibilityValue = accessibilityValue;
-    obj3.accessibilityState = memo;
-    obj3.accessibilityActions = accessibilityActions;
-    obj3.onAccessibilityAction = onAccessibilityAction;
-    obj3.accessibilityElementsHidden = accessibilityElementsHidden;
-    obj3.importantForAccessibility = importantForAccessibility;
-    obj3.pointerEvents = pointerEvents;
-    obj3.style = items1;
-    obj3.onPress = onPress;
-    obj3.onLongPress = onLongPress;
-    obj3.disabled = tmp2;
-    obj3.hitSlop = hitSlop;
-    obj3.children = tmp11;
+    obj6.accessibilityRole = accessibilityRole;
+    obj6.accessibilityLabel = accessibilityLabel;
+    obj6.accessibilityHint = accessibilityHint;
+    obj6.accessibilityValue = accessibilityValue;
+    obj6.accessibilityState = memo;
+    obj6.accessibilityActions = accessibilityActions;
+    obj6.onAccessibilityAction = onAccessibilityAction;
+    obj6.accessibilityElementsHidden = accessibilityElementsHidden;
+    obj6.importantForAccessibility = importantForAccessibility;
+    obj6.pointerEvents = pointerEvents;
+    obj6.style = items1;
+    obj6.onPress = onPress;
+    obj6.onLongPress = onLongPress;
+    obj6.disabled = tmp2;
+    obj6.hitSlop = hitSlop;
+    obj6.children = tmp11;
     return <closure_8 />;
   } else {
     let str5 = "";
     if (!accessibilityElementsHidden) {
       const items2 = [accessibilityLabel, accessibilityHint];
-      const found = items2.filter(tmp4(tmp5[9]).isNotNullish);
+      const found = items2.filter(tmp4(1369).isNotNullish);
       str5 = found.join(", ");
     }
-    const obj4 = {};
+    const obj7 = {};
     const merged1 = Object.assign(buttonAnimationProps);
-    obj4.ref = ref;
+    obj7.ref = ref;
     let isAndroidResult = accessible;
     if (accessible == null) {
-      tmp4Result = tmp4(tmp5[10]);
-      isAndroidResult = tmp4Result.isAndroid();
+      isAndroidResult = tmp4(1115).isAndroid();
+      const tmp4Result2 = tmp4(1115);
     }
-    obj4.accessible = !isAndroidResult;
-    obj4.accessibilityRole = "none";
-    obj4.accessibilityLabel = str5;
-    obj4.accessibilityElementsHidden = accessibilityElementsHidden;
-    obj4.activeOpacity = 1;
-    obj4.importantForAccessibility = importantForAccessibility;
-    obj4.style = items1;
-    obj4.onPress = onPress;
-    obj4.onPressIn = function onPressIn(arg0) {
+    obj7.accessible = !isAndroidResult;
+    obj7.accessibilityRole = "none";
+    obj7.accessibilityLabel = str5;
+    obj7.accessibilityElementsHidden = accessibilityElementsHidden;
+    obj7.activeOpacity = 1;
+    obj7.importantForAccessibility = importantForAccessibility;
+    obj7.style = items1;
+    obj7.onPress = onPress;
+    obj7.onPressIn = function onPressIn(arg0) {
       const onPressIn = buttonAnimationProps.onPressIn;
       if (onPressIn != null) {
         onPressIn(arg0);
       }
     };
-    obj4.onPressOut = function onPressOut(arg0) {
+    obj7.onPressOut = function onPressOut(arg0) {
       const onPressOut = buttonAnimationProps.onPressOut;
       if (onPressOut != null) {
         onPressOut(arg0);
       }
     };
-    obj4.hitSlop = hitSlop;
-    obj4.children = tmp11;
+    obj7.hitSlop = hitSlop;
+    obj7.children = tmp11;
     return <closure_9 />;
   }
-  tmp = callback();
 });
-const result = require("set").fileFinishedImporting("design/components/Button/native/BaseButton.native.tsx");
-
-export const BaseButton = forwardRefResult;

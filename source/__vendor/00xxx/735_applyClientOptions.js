@@ -2,9 +2,16 @@
 // Function ID: 736
 // Name: applyClientOptions
 // Dependencies: [695, 703, 736, 737, 723, 697, 739, 730, 708]
+// Exports: applyDebugIds, applyDebugMeta, parseEventHintOrCaptureContext, prepareEvent
 
 // Module 735 (applyClientOptions)
-const require = arg1;
+import _mod697 from "module_697" /* 697 */;
+import normalize from "normalize" /* 730 */;
+import _mod739 from "module_739" /* 739 */;
+
+const require = globalThis.__r;
+
+require = arg1;
 const dependencyMap = arg6;
 function applyClientOptions(environment, environment2) {
   ({ release, dist, maxValueLength } = environment2);
@@ -48,8 +55,7 @@ function applyClientOptions(environment, environment2) {
       if (values != null) {
         const item = values.forEach((value) => {
           if (value.value) {
-            value.value = maxValueLength(closure_1_1[5]).truncate(value.value, maxValueLength);
-            const obj = maxValueLength(closure_1_1[5]);
+            value.value = _mod697.truncate(value.value, maxValueLength);
           }
         });
       }
@@ -58,9 +64,10 @@ function applyClientOptions(environment, environment2) {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let closure_3 = ["user", "level", "extra", "contexts", "tags", "fingerprint", "propagationContext"];
-arg5.applyClientOptions = applyClientOptions;
-arg5.applyDebugIds = function applyDebugIds(exception) {
-  _require = _require(739).getFilenameToDebugIdMap(arg1);
+
+export { applyClientOptions };
+export const applyDebugIds = function applyDebugIds(exception, arg1) {
+  const filenameToDebugIdMap = _mod739.getFilenameToDebugIdMap(arg1);
   exception = exception.exception;
   if (exception != null) {
     const values = exception.values;
@@ -72,7 +79,7 @@ arg5.applyDebugIds = function applyDebugIds(exception) {
           if (frames != null) {
             const item = frames.forEach((filename) => {
               if (filename.filename) {
-                filename.debug_id = table[filename.filename];
+                filename.debug_id = closure_1_0[filename.filename];
               }
             });
           }
@@ -81,7 +88,7 @@ arg5.applyDebugIds = function applyDebugIds(exception) {
     }
   }
 };
-arg5.applyDebugMeta = function applyDebugMeta(exception) {
+export const applyDebugMeta = function applyDebugMeta(exception) {
   const obj = {};
   exception = exception.exception;
   if (exception != null) {
@@ -95,9 +102,9 @@ arg5.applyDebugMeta = function applyDebugMeta(exception) {
             const item = frames.forEach((debug_id) => {
               if (debug_id.debug_id) {
                 if (debug_id.abs_path) {
-                  closure_0[debug_id.abs_path] = debug_id.debug_id;
+                  closure_1_0[debug_id.abs_path] = debug_id.debug_id;
                 } else if (debug_id.filename) {
-                  closure_0[debug_id.filename] = debug_id.debug_id;
+                  closure_1_0[debug_id.filename] = debug_id.debug_id;
                 }
                 delete tmp2[tmp];
               }
@@ -117,32 +124,32 @@ arg5.applyDebugMeta = function applyDebugMeta(exception) {
     images = exception.debug_meta.images;
     const _Object = Object;
     const entries = Object.entries(obj);
-    const item1 = entries.forEach((arg0) => {
-      [tmp, tmp2] = arg0;
+    const item1 = entries.forEach((item) => {
+      [tmp, tmp2] = item;
+      closure_1.push({ type: "sourcemap", code_file: tmp, debug_id: tmp2 });
     });
   }
 };
-arg5.parseEventHintOrCaptureContext = function parseEventHintOrCaptureContext(fn) {
-  if (fn) {
+export const parseEventHintOrCaptureContext = function parseEventHintOrCaptureContext(captureContext) {
+  if (captureContext) {
     if (tmp3) {
-      const obj = { captureContext: null };
-      obj[0] = fn;
+      const obj = { captureContext };
       let tmp5 = obj;
     } else {
       const _Object = Object;
-      const keys = Object.keys(fn);
-      tmp5 = fn;
+      const keys = Object.keys(captureContext);
+      tmp5 = captureContext;
     }
     return tmp5;
   }
 };
-arg5.prepareEvent = function prepareEvent(normalizeDepth, event_id, event_id2, clone, emit, isolationScope) {
+export const prepareEvent = function prepareEvent(normalizeDepth, event_id, event_id2, clone, emit, isolationScope) {
   normalizeDepth = normalizeDepth.normalizeDepth;
   let num = 3;
   if (undefined !== normalizeDepth) {
     num = normalizeDepth;
   }
-  let _require = num;
+  _require = num;
   const normalizeMaxBreadth = normalizeDepth.normalizeMaxBreadth;
   let num2 = 1000;
   if (undefined !== normalizeMaxBreadth) {
@@ -152,14 +159,14 @@ arg5.prepareEvent = function prepareEvent(normalizeDepth, event_id, event_id2, c
   let merged = Object.assign(event_id);
   let uuid4Result = event_id.event_id || event_id2.event_id;
   if (!uuid4Result) {
-    uuid4Result = _require(num2[0]).uuid4();
-    let obj2 = _require(num2[0]);
+    uuid4Result = require("uuid4").uuid4();
+    let obj2 = require("uuid4");
   }
   obj.event_id = uuid4Result;
   let timestamp = event_id.timestamp;
   if (!timestamp) {
-    timestamp = _require(num2[1]).dateTimestampInSeconds();
-    let obj3 = _require(num2[1]);
+    timestamp = require("dateTimestampInSeconds").dateTimestampInSeconds();
+    let obj3 = require("dateTimestampInSeconds");
   }
   obj.timestamp = timestamp;
   let integrations = event_id2.integrations;
@@ -183,7 +190,7 @@ arg5.prepareEvent = function prepareEvent(normalizeDepth, event_id, event_id2, c
   }
   if (undefined === event_id.type) {
     _require = undefined;
-    _require = _require(num2[6]).getFilenameToDebugIdMap(normalizeDepth.stackParser);
+    _require = require("module_739").getFilenameToDebugIdMap(normalizeDepth.stackParser);
     let exception = obj.exception;
     if (exception != null) {
       let values = exception.values;
@@ -195,7 +202,7 @@ arg5.prepareEvent = function prepareEvent(normalizeDepth, event_id, event_id2, c
             if (frames != null) {
               const item = frames.forEach((filename) => {
                 if (filename.filename) {
-                  filename.debug_id = table[filename.filename];
+                  filename.debug_id = closure_1_0[filename.filename];
                 }
               });
             }
@@ -203,36 +210,36 @@ arg5.prepareEvent = function prepareEvent(normalizeDepth, event_id, event_id2, c
         });
       }
     }
-    const obj4 = _require(num2[6]);
+    let obj4 = require("module_739");
   }
   const captureContext = event_id2.captureContext;
   if (!captureContext) {
     if (event_id2.mechanism) {
-      const result = _require(num2[0]).addExceptionMechanism(obj, event_id2.mechanism);
-      const obj6 = _require(num2[0]);
+      const result = require("uuid4").addExceptionMechanism(obj, event_id2.mechanism);
+      let obj6 = require("uuid4");
     }
     if (emit) {
       let eventProcessors = emit.getEventProcessors();
     } else {
       eventProcessors = [];
     }
-    const combinedScopeData = _require(num2[2]).getCombinedScopeData(isolationScope, clone);
+    const combinedScopeData = require("mergeScopeData").getCombinedScopeData(isolationScope, clone);
     const tmp31 = event_id2.attachments || [];
     const items1 = [];
     HermesBuiltin.arraySpread(combinedScopeData.attachments, HermesBuiltin.arraySpread(tmp31, 0));
     if (items1.length) {
       event_id2.attachments = items1;
     }
-    let tmp28Result = tmp28(tmp29[2]);
-    const result1 = tmp28Result.applyScopeDataToEvent(obj, combinedScopeData);
+    const obj7 = require("mergeScopeData");
+    const result1 = require("mergeScopeData").applyScopeDataToEvent(obj, combinedScopeData);
     const items2 = [];
     HermesBuiltin.arraySpread(combinedScopeData.eventProcessors, HermesBuiltin.arraySpread(eventProcessors, 0));
-    tmp28Result = tmp28(tmp29[3]);
-    const result2 = tmp28Result.notifyEventProcessors(items2, obj, event_id2);
+    const tmp28Result = require("mergeScopeData");
+    const result2 = require("_notifyEventProcessors").notifyEventProcessors(items2, obj, event_id2);
     return result2.then((exception) => {
       if (exception) {
-        let obj = {};
-        let callback = obj;
+        const obj = {};
+        closure_0 = obj;
         exception = exception.exception;
         if (exception != null) {
           const values = exception.values;
@@ -245,9 +252,9 @@ arg5.prepareEvent = function prepareEvent(normalizeDepth, event_id, event_id2, c
                   const item = frames.forEach((debug_id) => {
                     if (debug_id.debug_id) {
                       if (debug_id.abs_path) {
-                        closure_0[debug_id.abs_path] = debug_id.debug_id;
+                        closure_1_0[debug_id.abs_path] = debug_id.debug_id;
                       } else if (debug_id.filename) {
-                        closure_0[debug_id.filename] = debug_id.debug_id;
+                        closure_1_0[debug_id.filename] = debug_id.debug_id;
                       }
                       delete tmp2[tmp];
                     }
@@ -265,65 +272,66 @@ arg5.prepareEvent = function prepareEvent(normalizeDepth, event_id, event_id2, c
             images = [];
           }
           exception.debug_meta.images = images;
-          const images2 = exception.debug_meta.images;
+          let images2 = exception.debug_meta.images;
           const _Object2 = Object;
           const entries = Object.entries(obj);
-          const item1 = entries.forEach((arg0) => {
-            [tmp, tmp2] = arg0;
+          const item1 = entries.forEach((item) => {
+            [tmp, tmp2] = item;
+            closure_1.push({ type: "sourcemap", code_file: tmp, debug_id: tmp2 });
           });
         }
       }
       let tmp6 = exception;
-      if (typeof callback === "number") {
+      if (typeof closure_0 === "number") {
         tmp6 = exception;
         if (tmp5 > 0) {
-          callback = tmp5;
+          closure_0 = tmp5;
+          images2 = num2;
           let tmp32 = null;
           if (exception) {
-            obj = {};
+            let obj2 = {};
             let merged = Object.assign(exception);
             let breadcrumbs = exception.breadcrumbs;
             if (breadcrumbs) {
-              obj = { breadcrumbs: null };
-              breadcrumbs = exception.breadcrumbs;
-              obj[0] = breadcrumbs.map((data) => {
-                let obj = {};
+              const obj3 = { breadcrumbs: null };
+              const breadcrumbs1 = exception.breadcrumbs;
+              obj3.breadcrumbs = breadcrumbs1.map((data) => {
                 const merged = Object.assign(data);
                 data = data.data;
                 if (data) {
-                  obj = { data: null };
-                  obj[0] = callback(arr[7]).normalize(data.data, callback, arr);
-                  data = obj;
-                  const obj3 = callback(arr[7]);
+                  const obj2 = { data: null };
+                  const normalizer = closure_0(num2[7]);
+                  obj2.data = normalizer.normalize(data.data, closure_0, closure_1);
+                  data = obj2;
                 }
                 const merged1 = Object.assign(data);
-                return obj;
+                return {};
               });
-              breadcrumbs = obj;
+              breadcrumbs = obj3;
             }
             let merged1 = Object.assign(breadcrumbs);
             let user = exception.user;
             if (user) {
-              obj1 = { user: null };
-              obj1[0] = callback(num2[7]).normalize(exception.user, tmp5, tmp35);
-              user = obj1;
-              const obj5 = callback(num2[7]);
+              const obj4 = { user: null };
+              let normalizer = normalize;
+              obj4.user = normalizer.normalize(exception.user, tmp5, tmp35);
+              user = obj4;
             }
             const merged2 = Object.assign(user);
             let contexts = exception.contexts;
             if (contexts) {
-              const obj2 = { contexts: null };
-              obj2[0] = callback(num2[7]).normalize(exception.contexts, tmp5, tmp35);
-              contexts = obj2;
-              const obj7 = callback(num2[7]);
+              const obj5 = { contexts: null };
+              const normalizer2 = normalize;
+              obj5.contexts = normalizer2.normalize(exception.contexts, tmp5, tmp35);
+              contexts = obj5;
             }
             const merged3 = Object.assign(contexts);
             let extra = exception.extra;
             if (extra) {
-              let obj3 = { extra: null };
-              obj3[0] = callback(num2[7]).normalize(exception.extra, tmp5, tmp35);
-              extra = obj3;
-              const obj9 = callback(num2[7]);
+              const obj6 = { extra: null };
+              const normalizer3 = normalize;
+              obj6.extra = normalizer3.normalize(exception.extra, tmp5, tmp35);
+              extra = obj6;
             }
             const merged4 = Object.assign(extra);
             const contexts2 = exception.contexts;
@@ -332,29 +340,28 @@ arg5.prepareEvent = function prepareEvent(normalizeDepth, event_id, event_id2, c
               trace = contexts2.trace;
             }
             if (trace) {
-              trace = obj.contexts;
+              trace = obj2.contexts;
             }
             if (trace) {
-              obj.contexts.trace = exception.contexts.trace;
+              obj2.contexts.trace = exception.contexts.trace;
               if (exception.contexts.trace.data) {
-                obj.contexts.trace.data = callback(num2[7]).normalize(exception.contexts.trace.data, tmp5, tmp35);
-                const obj10 = callback(num2[7]);
+                const normalizer4 = normalize;
+                obj2.contexts.trace.data = normalizer4.normalize(exception.contexts.trace.data, tmp5, tmp35);
               }
             }
             if (exception.spans) {
               const spans = exception.spans;
-              obj.spans = spans.map((data) => {
-                let obj = {};
+              obj2.spans = spans.map((data) => {
                 const merged = Object.assign(data);
                 data = data.data;
                 if (data) {
-                  obj = { data: null };
-                  obj[0] = callback(arr[7]).normalize(data.data, callback, arr);
-                  data = obj;
-                  const obj3 = callback(arr[7]);
+                  const obj2 = { data: null };
+                  const normalizer = closure_0(num2[7]);
+                  obj2.data = normalizer.normalize(data.data, closure_0, closure_1);
+                  data = obj2;
                 }
                 const merged1 = Object.assign(data);
-                return obj;
+                return {};
               });
             }
             const contexts3 = exception.contexts;
@@ -363,13 +370,13 @@ arg5.prepareEvent = function prepareEvent(normalizeDepth, event_id, event_id2, c
               flags = contexts3.flags;
             }
             if (flags) {
-              flags = obj.contexts;
+              flags = obj2.contexts;
             }
-            tmp32 = obj;
+            tmp32 = obj2;
             if (flags) {
-              obj.contexts.flags = callback(3[7]).normalize(exception.contexts.flags, 3, tmp35);
-              tmp32 = obj;
-              const obj11 = callback(num2[7]);
+              const normalizer5 = normalize;
+              obj2.contexts.flags = normalizer5.normalize(exception.contexts.flags, 3, tmp35);
+              tmp32 = obj2;
             }
           }
           tmp6 = tmp32;
@@ -381,7 +388,7 @@ arg5.prepareEvent = function prepareEvent(normalizeDepth, event_id, event_id2, c
     if (clone) {
       let cloneResult = clone.clone();
     } else {
-      cloneResult = new _require(num2[8]).Scope();
+      cloneResult = new require("Scope").Scope();
     }
     cloneResult.update(captureContext);
   }

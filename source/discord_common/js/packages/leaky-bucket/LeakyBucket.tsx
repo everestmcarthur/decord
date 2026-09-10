@@ -1,12 +1,12 @@
-// Module ID: 9566
-// Function ID: 9567
-// Name: _processQueue
+// Module ID: 9593
+// Function ID: 9594
+// Name: LeakyBucket
 // Dependencies: [2]
 
-// Module 9566 (_processQueue)
-import set from "set" /* 2 */;
+// Module 9593 (LeakyBucket)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/leaky-bucket/LeakyBucket.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/leaky-bucket/LeakyBucket.tsx");
 class LeakyBucket {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
@@ -27,7 +27,7 @@ prototype["_processQueue"] = function _processQueue() {
         obj._tokenCount = obj._tokenCount - 1;
         if (null == obj._intervalID) {
           const _setInterval = setInterval;
-          obj._intervalID = setInterval(() => closure_0._iterate(), obj._intervalPeriod);
+          obj._intervalID = setInterval(() => self._iterate(), obj._intervalPeriod);
         }
         const _queue = obj._queue;
         const arr = _queue.shift();
@@ -56,37 +56,33 @@ prototype["_iterate"] = function _iterate() {
 prototype["process"] = function process(arg0) {
   const self = this;
   closure_0 = arg0;
-  return new Promise((arg0, arg1) => {
-    closure_0 = arg1;
-    let obj = closure_0;
+  return new Promise((resolve, fn) => {
+    closure_0 = fn;
     let aborted;
     if (closure_0 != null) {
       aborted = obj.aborted;
     }
     if (aborted) {
       const _Error = Error;
-      error = new Error("Already aborted");
-      arg1(error);
+      let error = new Error("Already aborted");
+      fn(error);
     } else {
-      obj = { resolve: null, signal: null };
-      obj[0] = arg0;
-      obj[1] = obj;
-      let _queue = obj._queue;
-      _queue.push(obj);
+      const obj2 = { resolve, signal: obj };
+      let _queue = obj2._queue;
+      _queue.push(obj2);
       if (obj) {
         const listener = obj.addEventListener("abort", () => {
-          const _queue = obj._queue;
-          const index = _queue.indexOf(obj);
+          const _queue = self._queue;
+          const index = _queue.indexOf(obj2);
           if (index >= 0) {
-            const _queue1 = obj._queue;
+            const _queue1 = self._queue;
             _queue1.splice(index, 1);
           }
-          error = new Error("Aborted");
-          callback(error);
+          const error = new Error("Aborted");
+          closure_0(error);
         }, { once: true });
       }
-      obj._processQueue();
-      const obj3 = obj;
+      obj2._processQueue();
     }
   });
 };

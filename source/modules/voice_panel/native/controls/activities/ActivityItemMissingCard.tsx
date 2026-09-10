@@ -1,119 +1,106 @@
-// Module ID: 17149
-// Function ID: 17150
-// Name: ActivityItemEmptyCard
-// Dependencies: [5, 19, 17, 21, 4560, 576, 12276, 7162, 9535, 9657, 5123, 17150, 17151, 5589, 2]
+// Module ID: 17180
+// Function ID: 17181
+// Name: ActivityItemMissingCard
+// Dependencies: [5, 19, 17, 21, 4574, 576, 12302, 7176, 9562, 9684, 5137, 17181, 17182, 5603, 2]
 
-// Module 17149 (ActivityItemEmptyCard)
-import ThemesDefault from "Themes" /* 576 */;
-import setDefault from "set" /* 5589 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import importAllResult from "noop" /* 19 */;
-import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17180 (ActivityItemMissingCard)
+import nativeDefault from "native" /* 576 */;
+import NativeViewDefault from "NativeView" /* 5603 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+const require = fn;
 function ActivityItemEmptyCard(activity) {
   activity = activity.activity;
   const application = activity.application;
   let channelId;
-  let analyticsLocations;
-  const context = importAllResult.useContext(application(channelId[6]));
+  const context = noop.useContext(application(channelId[6]));
   channelId = context.channelId;
   const layoutManager = context.layoutManager;
   const targetDimensions = layoutManager.getTargetDimensions(undefined);
   ({ width, height } = targetDimensions);
-  analyticsLocations = application(channelId[7])().analyticsLocations;
+  const analyticsLocations = application(channelId[7])().analyticsLocations;
   const items = [activity.launchId, analyticsLocations, application, channelId];
-  const callback = importAllResult.useCallback(analyticsLocations(function*() {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
+  const callback = noop.useCallback(analyticsLocations(function*(arg0, value) {
+    if (v3 === 2) {
+      v3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        v0 = 2;
-        if (0 === id) {
+        v3 = 2;
+        if (0 === c1) {
           if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
+            v3 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            v3 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            obj1 = { channelId: null, applicationId: null, launchId: null, inputApplication: null, analyticsLocations: null };
-            obj1[0] = closure_1_2;
-            obj1[1] = id.id;
-            obj1[2] = v0.launchId;
-            obj1[3] = id;
-            obj1[4] = closure_1_3;
-            id = 1;
-            v0 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = v0(closure_1_2[8]).maybeJoinEmbeddedActivity(obj1);
-            return obj2;
+            const obj4 = { channelId, applicationId: application.id, launchId: activity.launchId, inputApplication: application, analyticsLocations };
+            c1 = 1;
+            v3 = 1;
+            const obj6 = { value: v3(closure_1_2[8]).maybeJoinEmbeddedActivity(obj4), done: false };
+            return obj6;
           }
         } else if (arg0 === 1) {
-          v0 = 3;
-          throw arg1;
+          v3 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          v0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          v3 = 3;
+          const obj = { value, done: true };
           return obj;
         } else {
-          v0 = 3;
+          v3 = 3;
           return { value: "HermesInternal", done: null };
         }
       } catch (tmp5) {
-        v0 = tmp;
+        v3 = tmp;
         throw tmp5;
       }
     }
   }), items);
   let obj = { applicationId: activity.applicationId, size: width, names: ["embedded_background"] };
-  const tmp = callback3();
-  obj = { activeOpacity: 0.7, onPress: callback, style: tmp.disabledActivity, children: null };
-  obj = { imageBackground: application(channelId[9])(obj), aspectRatio: width / height };
-  const items1 = [callback(application(channelId[11]), obj), callback(application(channelId[12]), { channelId, applicationId: application.id, applicationName: application.name })];
-  obj[3] = items1;
-  return callback2(activity(channelId[10]).PressableOpacity, obj);
+  const tmp = closure_8();
+  let obj2 = { activeOpacity: 0.7, onPress: callback, style: tmp.disabledActivity, children: null };
+  const tmp5 = application(channelId[9])({ applicationId: activity.applicationId, size: width, names: ["embedded_background"] });
+  const items1 = [closure_6(application(channelId[11]), { imageBackground: application(channelId[9])({ applicationId: activity.applicationId, size: width, names: ["embedded_background"] }), aspectRatio: width / height }), closure_6(application(channelId[12]), { channelId, applicationId: application.id, applicationName: application.name })];
+  obj2.children = items1;
+  return closure_7(activity(channelId[10]).PressableOpacity, obj2);
 }
-let c4 = importAllResult;
-({ jsx: closure_6, jsxs: error } = jsxProd);
+const ActivityIndicator = fn(17).ActivityIndicator;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
 let obj = { loadingActivity: null, disabledActivity: null };
-obj = { width: "100%", height: "100%", alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-obj[0] = obj;
-createCacheKey = { width: "100%", height: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-obj[1] = createCacheKey;
-let closure_8 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function ActivityItemMissingCard(arg0) {
+let size = { width: "100%", height: "100%", alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj.loadingActivity = size;
+const size1 = { width: "100%", height: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj.disabledActivity = size1;
+let closure_8 = createStyles.createStyles(obj);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/controls/activities/ActivityItemMissingCard.tsx");
+
+export default noop.memo(function ActivityItemMissingCard(arg0) {
   ({ activity, application } = arg0);
   if (null != activity) {
     if (null != application) {
-      let obj = { activity: null, application: null };
-      obj[0] = activity;
-      obj[1] = application;
-      let tmp4 = callback(ActivityItemEmptyCard, obj);
+      const obj = { activity, application };
+      let tmp4 = timestampProducer(ActivityItemEmptyCard, obj);
     }
     return tmp4;
   }
-  obj = { style: callback3().loadingActivity, children: null };
-  const tmp = callback3();
-  obj[1] = callback(ActivityIndicator, { size: "large" });
-  tmp4 = callback(setDefault, obj);
+  const obj2 = { style: closure_8().loadingActivity, children: null };
+  const tmp = closure_8();
+  obj2.children = timestampProducer(ActivityIndicator, { size: "large" });
+  tmp4 = timestampProducer(NativeViewDefault, obj2);
 });
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/activities/ActivityItemMissingCard.tsx");
-
-export default memoResult;

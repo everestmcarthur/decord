@@ -1,37 +1,32 @@
-// Module ID: 11369
-// Function ID: 11370
+// Module ID: 11396
+// Function ID: 11397
 // Name: useStrangerDangerWarning
-// Dependencies: [1371, 10920, 504, 11370, 11371, 10978, 8649, 10977, 2]
+// Dependencies: [1371, 10947, 504, 11397, 11398, 11005, 8677, 11004, 2]
 // Exports: useStrangerDangerWarning
 
-// Module 11369 (useStrangerDangerWarning)
+// Module 11396 (useStrangerDangerWarning)
 import initialize from "initialize" /* 504 */;
-import useUserIsTeen from "useUserIsTeen" /* 8649 */;
-import useChannelSafetyWarning from "useChannelSafetyWarning" /* 10978 */;
-import useIsSpamMessageRequest from "useIsSpamMessageRequest" /* 11370 */;
-import useIsMessageRequest from "useIsMessageRequest" /* 11371 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
-import { SafetyWarningTypes } from "handleConnectionOpen" /* 10920 */;
+import useUserIsTeen from "useUserIsTeen" /* 8677 */;
+import useChannelSafetyWarning from "useChannelSafetyWarning" /* 11005 */;
+import useIsSpamMessageRequest from "useIsSpamMessageRequest" /* 11397 */;
+import useIsMessageRequest from "useIsMessageRequest" /* 11398 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx");
+require = fn;
+const SafetyWarningTypes = fn(10947).SafetyWarningTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx");
 
 export const useStrangerDangerWarning = function useStrangerDangerWarning(id) {
-  const items = [closure_2];
+  const items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj = initialize;
-  const tmp = require;
   const isSpamMessageRequest = useIsSpamMessageRequest.useIsSpamMessageRequest(id);
-  const obj3 = useIsSpamMessageRequest;
   const isMessageRequest = useIsMessageRequest.useIsMessageRequest(id);
-  const obj4 = useIsMessageRequest;
   const channelSafetyWarning = useChannelSafetyWarning.useChannelSafetyWarning(id, SafetyWarningTypes.STRANGER_DANGER);
-  const obj5 = useChannelSafetyWarning;
   const userIsTeen = useUserIsTeen.useUserIsTeen();
   if (stateFromStores != null) {
     const isStaffResult = stateFromStores.isStaff();
   }
-  const obj6 = useUserIsTeen;
   if (userIsTeen) {
     if (!isSpamMessageRequest) {
       if (!isMessageRequest) {

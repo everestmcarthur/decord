@@ -1,13 +1,16 @@
 // Module ID: 1898
 // Function ID: 1899
-// Name: initialize
+// Name: LifecycleManager
 // Dependencies: [2]
 
-// Module 1898 (initialize)
-import set from "set" /* 2 */;
+// Module 1898 (LifecycleManager)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("lib/LifecycleManager.tsx");
+const result = size.fileFinishedImporting("lib/LifecycleManager.tsx");
 class LifecycleManager {
+  constructor() {
+    return Object.assign({ isInitialized: false });
+  }
 }
 const prototype = LifecycleManager.prototype;
 prototype["initialize"] = function initialize() {

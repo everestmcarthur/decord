@@ -1,17 +1,19 @@
-// Module ID: 13694
-// Function ID: 13695
-// Name: apexExperiment
+// Module ID: 13717
+// Function ID: 13718
+// Name: DebugExperiment
 // Dependencies: [1433, 2]
 // Exports: useDebugExperiment
 
-// Module 13694 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 13717 (DebugExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null, 2: {} };
-obj[2] = {};
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-03-debug-experiment", kind: "user", defaultConfig: {}, variations: obj });
-const result = set.fileFinishedImporting("modules/experiments/apex/DebugExperiment.tsx");
+const obj = { name: "2026-03-debug-experiment", kind: "user", defaultConfig: {}, variations: null };
+const obj2 = { 1: null, 2: {} };
+obj2[2] = {};
+obj.variations = obj2;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/experiments/apex/DebugExperiment.tsx");
 
 export default apexExperiment;
 export const DebugExperiment = apexExperiment;

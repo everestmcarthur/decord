@@ -1,26 +1,26 @@
-// Module ID: 13216
-// Function ID: 13217
-// Name: createFriendInvite
-// Dependencies: [17, 4209, 7736, 7945, 1114, 4404, 1396, 2]
+// Module ID: 13239
+// Function ID: 13240
+// Name: FriendInvite
+// Dependencies: [17, 4222, 7750, 7959, 1114, 4418, 1396, 2]
 // Exports: createFriendInvite
 
-// Module 13216 (createFriendInvite)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import InviteSendStates from "InviteSendStates" /* 7736 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7945 */;
-import closure_4 from "markAllUserIdListsStale" /* 4209 */;
+// Module 13239 (FriendInvite)
+import _mod17 from "module_17" /* 17 */;
+import util from "util" /* 1114 */;
+import Constants from "Constants" /* 7750 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7959 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
+import size from "module_2" /* 2 */;
 
-const Image = get_ActivityIndicator.Image;
-const InviteTypes = InviteSendStates.InviteTypes;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/FriendInvite.tsx");
+const Image = _mod17.Image;
+const InviteTypes = Constants.InviteTypes;
+const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/FriendInvite.tsx");
 
-export const createFriendInvite = function createFriendInvite(inviter) {
+export const createFriendInvite = function createFriendInvite(inviter, arg1, arg2, arg3) {
   ({ colors, baseColors } = getEmbedThemeColorsDefault(arg3));
-  const intl = getSystemLocale.intl;
+  const intl = util.intl;
   const string = intl.string;
-  const t = getSystemLocale.t;
+  const t = util.t;
   if (arg1) {
     let str = string(t.eQyu1F);
     let tmp5 = tmp4;
@@ -34,8 +34,8 @@ export const createFriendInvite = function createFriendInvite(inviter) {
   }
   let str3 = "";
   if (null != inviter.inviter) {
-    let tmpResult = tmp(4404);
-    str3 = tmpResult.getUserTag(inviter.inviter);
+    str3 = tmp(4418).getUserTag(inviter.inviter);
+    const tmpResult = tmp(4418);
   }
   let isFriendResult = null != inviter.inviter;
   if (isFriendResult) {
@@ -44,12 +44,12 @@ export const createFriendInvite = function createFriendInvite(inviter) {
     if (inviter != null) {
       id = inviter.id;
     }
-    isFriendResult = friend.isFriend(id);
+    isFriendResult = RelationshipStore.isFriend(id);
   }
   let str4 = "";
   if (null != inviter.inviter) {
-    tmpResult = tmp(1396);
-    str4 = Image.resolveAssetSource(tmpResult.getUserAvatarSource(inviter.inviter)).uri;
+    str4 = Image.resolveAssetSource(tmp(1396).getUserAvatarSource(inviter.inviter)).uri;
+    const tmpResult2 = tmp(1396);
   }
   const inviter2 = inviter.inviter;
   let id1;

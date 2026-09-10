@@ -1,55 +1,51 @@
-// Module ID: 12433
-// Function ID: 12434
+// Module ID: 12459
+// Function ID: 12460
 // Name: ChatInputCharCounter
-// Dependencies: [32, 19, 1371, 1074, 1373, 21, 4560, 504, 4218, 9309, 9318, 4259, 1114, 5123, 4556, 8667, 2]
+// Dependencies: [32, 19, 1371, 1074, 1373, 21, 4574, 504, 4231, 9336, 9345, 4272, 1114, 5137, 4570, 8695, 2]
 
-// Module 12433 (ChatInputCharCounter)
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import closure_5 from "mergeGuildAvatar" /* 1371 */;
-import { UpsellTypes } from "ME" /* 1074 */;
-import { PremiumUpsellTypes } from "GuildFeatures" /* 1373 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12459 (ChatInputCharCounter)
+import util from "util" /* 1114 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-let c4 = importAllResult;
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles({ container: { alignItems: "center", paddingBottom: 6 } });
-const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) => {
+require = fn;
+const UpsellTypes = fn(1074).UpsellTypes;
+const PremiumUpsellTypes = fn(1373).PremiumUpsellTypes;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4574);
+let closure_10 = createStyles.createStyles({ container: { alignItems: "center", paddingBottom: 6 } });
+const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
   analyticsLocations = analyticsLocations.analyticsLocations;
-  let stateFromStores;
   dependencyMap = undefined;
-  let callback;
+  const tmp = closure_10();
+  const items = [UserStore];
+  const stateFromStores = analyticsLocations(504).useStateFromStores(items, () => stateFromStores(_undefined[8]).canUseIncreasedMessageLength(currentUser.getCurrentUser()));
   let obj = analyticsLocations(504);
-  const items = [closure_5];
-  stateFromStores = obj.useStateFromStores(items, () => stateFromStores(_undefined[8]).canUseIncreasedMessageLength(currentUser.getCurrentUser()));
-  const tmp = callback4();
-  [tmp6, c2] = callback(importAllResult.useState(0), 2);
-  const tmp7 = stateFromStores(9309)();
-  callback = tmp7;
-  const imperativeHandle = importAllResult.useImperativeHandle(ref, () => ({
+  [tmp6, c2] = noop.useState(0);
+  const tmp7 = stateFromStores(9336)();
+  _slicedToArray = tmp7;
+  const imperativeHandle = noop.useImperativeHandle(ref, () => ({
     onMessageLengthChanged(length) {
-      callback(Math.max(0, length - closure_3));
+      _undefined(Math.max(0, length - maxLength));
     }
   }));
   const items1 = [analyticsLocations, stateFromStores, tmp7];
   let tmp10 = null;
   if (tmp6 > 0) {
-    obj = { onPress: null, style: null, children: null };
-    obj[0] = tmp9;
-    obj[1] = tmp.container;
-    obj = { color: "text-feedback-critical", lineClamp: 1, variant: "text-xs/medium", children: null };
+    let obj2 = { onPress: tmp9, style: tmp.container, children: null };
+    let obj3 = { color: "text-feedback-critical", lineClamp: 1, variant: "text-xs/medium", children: null };
     const _HermesInternal = HermesInternal;
-    obj[3] = "-" + tmp6;
-    const items2 = [callback2(tmp2(4556).Text, obj), callback2(tmp2(8667).NitroWheelIcon, { size: "sm" })];
-    obj[2] = items2;
-    tmp10 = callback3(tmp2(5123).PressableOpacity, obj);
+    obj3.children = "-" + tmp6;
+    const items2 = [closure_8(tmp2(4570).Text, obj3), closure_8(tmp2(8695).NitroWheelIcon, { size: "sm" })];
+    obj2.children = items2;
+    tmp10 = closure_9(tmp2(5137).PressableOpacity, obj2);
   }
   return tmp10;
 });
 forwardRefResult.displayName = "ChatInputCharCounter";
-const memoResult = importAllResult.memo(forwardRefResult);
-let result = require("set").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputCharCounter.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/chat_input/native/accessories/ChatInputCharCounter.tsx");
 
-export default memoResult;
+export default noop.memo(forwardRefResult);

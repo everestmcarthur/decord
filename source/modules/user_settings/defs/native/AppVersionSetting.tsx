@@ -1,30 +1,29 @@
-// Module ID: 15559
-// Function ID: 15560
-// Dependencies: [1364, 1114, 15560, 11473, 10823, 1935, 2]
+// Module ID: 15589
+// Function ID: 15590
+// Name: AppVersionSetting
+// Dependencies: [1364, 1114, 15590, 11500, 10850, 1935, 2]
 
-// Module 15559
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import getClientInfo from "getClientInfo" /* 15560 */;
-import createToggle from "createToggle" /* 11473 */;
-import importAllResult from "getConstants" /* 1364 */;
+// Module 15589 (AppVersionSetting)
+import util from "util" /* 1114 */;
+import CopyClientInfoSetting from "CopyClientInfoSetting" /* 15590 */;
+import ClientInfoUtils from "ClientInfoUtils" /* 1364 */;
 
-require = arg1;
-const constants = importAllResult.getConstants();
+require = fn;
+const constants = ClientInfoUtils.getConstants();
+const SettingBuilders = fn(11500);
 let obj = {
   useTitle: function useAppVersionSettingTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.H66MEk);
+    const intl = util.intl;
+    return intl.string(util.t.H66MEk);
   },
   parent: null,
-  IconComponent: require("ClydeIcon").ClydeIcon,
+  IconComponent: fn(10850).ClydeIcon,
   useTrailing: function useAppVersionSettingTrailing() {
-    const clientInfoString = getClientInfo.getClientInfoString(closure_3.ReleaseChannel);
-    const obj = getClientInfo;
-    const obj2 = getClientInfo;
-    const clientInfoString1 = obj2.getClientInfoString(importAllResult.getBuildNumberLabel());
+    const clientInfoString = CopyClientInfoSetting.getClientInfoString(closure_3.ReleaseChannel);
+    const obj2 = CopyClientInfoSetting;
+    const clientInfoString1 = obj2.getClientInfoString(ClientInfoUtils.getBuildNumberLabel());
     const hasItem = clientInfoString1.includes("dev");
-    const obj3 = importAllResult;
-    const clientInfoString2 = getClientInfo.getClientInfoString(closure_3.Version);
+    const clientInfoString2 = CopyClientInfoSetting.getClientInfoString(closure_3.Version);
     if (hasItem) {
       let combined = concat(clientInfoString2, " (", clientInfoString, ")");
     } else {
@@ -32,23 +31,24 @@ let obj = {
     }
     return combined;
   },
-  usePredicate: require("explicitContentFromProto").DeveloperMode.useSetting
+  usePredicate: fn(1935).DeveloperMode.useSetting
 };
-const createStaticResult = createToggle.createStatic({
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AppVersionSetting.tsx");
+
+export default SettingBuilders.createStatic({
   useTitle: function useAppVersionSettingTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.H66MEk);
+    const intl = util.intl;
+    return intl.string(util.t.H66MEk);
   },
   parent: null,
-  IconComponent: require("ClydeIcon").ClydeIcon,
+  IconComponent: fn(10850).ClydeIcon,
   useTrailing: function useAppVersionSettingTrailing() {
-    const clientInfoString = getClientInfo.getClientInfoString(closure_3.ReleaseChannel);
-    const obj = getClientInfo;
-    const obj2 = getClientInfo;
-    const clientInfoString1 = obj2.getClientInfoString(importAllResult.getBuildNumberLabel());
+    const clientInfoString = CopyClientInfoSetting.getClientInfoString(closure_3.ReleaseChannel);
+    const obj2 = CopyClientInfoSetting;
+    const clientInfoString1 = obj2.getClientInfoString(ClientInfoUtils.getBuildNumberLabel());
     const hasItem = clientInfoString1.includes("dev");
-    const obj3 = importAllResult;
-    const clientInfoString2 = getClientInfo.getClientInfoString(closure_3.Version);
+    const clientInfoString2 = CopyClientInfoSetting.getClientInfoString(closure_3.Version);
     if (hasItem) {
       let combined = concat(clientInfoString2, " (", clientInfoString, ")");
     } else {
@@ -56,8 +56,5 @@ const createStaticResult = createToggle.createStatic({
     }
     return combined;
   },
-  usePredicate: require("explicitContentFromProto").DeveloperMode.useSetting
+  usePredicate: fn(1935).DeveloperMode.useSetting
 });
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AppVersionSetting.tsx");
-
-export default createStaticResult;

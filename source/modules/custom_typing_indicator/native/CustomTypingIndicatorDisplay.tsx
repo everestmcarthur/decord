@@ -1,26 +1,26 @@
-// Module ID: 11984
-// Function ID: 11985
+// Module ID: 12010
+// Function ID: 12011
 // Name: CustomTypingIndicatorDisplay
-// Dependencies: [19, 21, 4560, 1114, 11975, 4973, 11985, 4556, 5123, 576, 2]
+// Dependencies: [19, 21, 4574, 1114, 12001, 4987, 12011, 4570, 5137, 576, 2]
 // Exports: default
 
-// Module 11984 (CustomTypingIndicatorDisplay)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import Stack from "Stack" /* 4973 */;
-import PressableBase from "PressableBase" /* 5123 */;
-import items2 from "items" /* 11975 */;
-import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 11985 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12010 (CustomTypingIndicatorDisplay)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 12001 */;
+import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 12011 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = createCacheKey.createStyles(() => ({ text: { flexShrink: 1 }, pressable: { flex: 1 } }));
-const result = require("set").fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorDisplay.tsx");
+const Text_Text = tmp3(4570);
+const Stack_Stack = tmp3(4987);
+const Pressables = tmp3(5137);
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4574);
+let closure_5 = createStyles.createStyles(() => ({ text: { flexShrink: 1 }, pressable: { flex: 1 } }));
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorDisplay.tsx");
 
 export default function CustomTypingIndicatorDisplay(showName) {
   ({ config, username, showEmojis } = showName);
@@ -40,49 +40,35 @@ export default function CustomTypingIndicatorDisplay(showName) {
     flag2 = false;
   }
   const onPress = showName.onPress;
-  const tmp = callback2();
+  const tmp = closure_5();
   if (flag) {
     if (null != username) {
-      const intl2 = getSystemLocale.intl;
-      obj1 = items2;
-      let obj = { name: null };
-      obj[0] = username;
-      let formatResult = intl2.format(obj1.getCustomTypingIndicatorSuggestionWithNameMessage(config.typingSuggestion), obj);
-      let tmp3 = require;
+      const intl2 = util.intl;
+      const obj3 = { name: username };
+      let formatResult = intl2.format(CustomTypingIndicatorUtils.getCustomTypingIndicatorSuggestionWithNameMessage(config.typingSuggestion), obj3);
     }
     let str = "flex-start";
     if (flag2) {
       str = "center";
     }
-    obj = { direction: "horizontal", spacing: 8, align: "center", justify: null, children: null };
-    obj[3] = str;
+    const obj4 = { direction: "horizontal", spacing: 8, align: "center", justify: str, children: null };
     let tmp10 = null;
     if (showEmojis) {
-      obj1 = { config: null, size: null };
-      obj1[0] = config;
-      obj1[1] = num;
-      tmp10 = callback(CustomTypingIndicatorGlyphDefault, obj1);
+      const obj5 = { config, size: num };
+      tmp10 = React3(CustomTypingIndicatorGlyphDefault, obj5);
     }
     const items = [tmp10, ];
-    const obj2 = { style: null, variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, maxFontSizeMultiplier: 2, includeFontPadding: true, ellipsizeMode: "tail", children: null };
-    obj2[0] = tmp.text;
-    obj2[7] = formatResult;
-    items[1] = callback(Text.Text, obj2);
-    obj[4] = items;
-    const tmp8Result = closure_4(Stack.Stack, obj);
+    const obj6 = { style: tmp.text, variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, maxFontSizeMultiplier: 2, includeFontPadding: true, ellipsizeMode: "tail", children: formatResult };
+    items[1] = React3(Text_Text.Text, obj6);
+    obj4.children = items;
+    const tmp8Result = React4(Stack_Stack.Stack, obj4);
     let tmp13Result = tmp8Result;
     if (null != onPress) {
-      const obj3 = { style: null, hitSlop: null, onPress: null, accessibilityRole: "button", children: null };
-      obj3[0] = tmp.pressable;
-      obj3[1] = ThemesDefault.space.PX_8;
-      obj3[2] = onPress;
-      obj3[4] = tmp8Result;
-      tmp13Result = callback(PressableBase.PressableOpacity, obj3);
+      const obj7 = { style: tmp.pressable, hitSlop: nativeDefault.space.PX_8, onPress, accessibilityRole: "button", children: tmp8Result };
+      tmp13Result = React3(Pressables.PressableOpacity, obj7);
     }
     return tmp13Result;
   }
-  tmp3 = require;
-  const intl = getSystemLocale.intl;
-  obj = items2;
-  formatResult = intl.string(obj.getCustomTypingIndicatorSuggestionMessage(config.typingSuggestion));
+  const intl = util.intl;
+  formatResult = intl.string(CustomTypingIndicatorUtils.getCustomTypingIndicatorSuggestionMessage(config.typingSuggestion));
 };

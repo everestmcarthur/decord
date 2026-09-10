@@ -1,28 +1,27 @@
-// Module ID: 12020
-// Function ID: 12021
+// Module ID: 12046
+// Function ID: 12047
 // Name: ForumPostTitle
-// Dependencies: [19, 21, 4560, 1116, 4556, 2]
+// Dependencies: [19, 21, 4574, 1116, 4570, 2]
 // Exports: default
 
-// Module 12020 (ForumPostTitle)
-import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4556 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import PlatformTypes from "PlatformTypes" /* 1116 */;
+// Module 12046 (ForumPostTitle)
+import Text_Text from "Text/Text" /* 4570 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-createCacheKey = null;
-if (PlatformTypes.isIOS()) {
-  createCacheKey = { lineHeight: 22 };
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+const PlatformUtils = fn(1116);
+let obj3 = null;
+if (PlatformUtils.isIOS()) {
+  obj3 = { lineHeight: 22 };
 }
-createCacheKey = { title: null };
-PlatformTypes = { marginBottom: 6 };
-createCacheKey = Object.assign(createCacheKey);
-createCacheKey[0] = PlatformTypes;
-let closure_3 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/forums/native/posts/ForumPostTitle.tsx");
+const obj4 = { title: null };
+const merged = Object.assign(obj3);
+obj4.title = { marginBottom: 6 };
+let closure_3 = createStyles.createStyles(obj4);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostTitle.tsx");
 
 export default function ForumPostTitle(arg0) {
   ({ title, lineClamp, ellipsizeMode, hasUnreads, onTextLayout } = arg0);
@@ -30,6 +29,6 @@ export default function ForumPostTitle(arg0) {
   if (hasUnreads) {
     str = "mobile-text-heading-primary";
   }
-  const tmp = callback();
-  return jsx(Text.Text, { variant: "text-md/semibold", color: str, lineClamp, ellipsizeMode, style: callback().title, onTextLayout, children: title });
+  const tmp = closure_3();
+  return jsx(Text_Text.Text, { variant: "text-md/semibold", color: str, lineClamp, ellipsizeMode, style: closure_3().title, onTextLayout, children: title });
 };

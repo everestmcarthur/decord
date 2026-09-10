@@ -1,66 +1,64 @@
-// Module ID: 17513
-// Function ID: 17514
-// Name: getVerifyPhoneSource
-// Dependencies: [19, 17, 21, 8233, 17514, 17515, 17516, 4411, 2]
+// Module ID: 17544
+// Function ID: 17545
+// Name: generated/VerifyPhone
+// Dependencies: [19, 17, 21, 8259, 17545, 17546, 17547, 4425, 2]
 // Exports: VerifyPhone, getVerifyPhoneSource, useVerifyPhoneSource
 
-// Module 17513 (getVerifyPhoneSource)
-import noopAll from "noop" /* 19 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
-import getIllustrationSource from "getIllustrationSource" /* 8233 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 17544 (generated/VerifyPhone)
+import shared from "shared" /* 4425 */;
+import _mod8259 from "module_8259" /* 8259 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/VerifyPhone.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/VerifyPhone.tsx");
 
 export const getVerifyPhoneSource = function getVerifyPhoneSource(theme) {
-  let obj = getIllustrationSource;
-  obj = {
+  return _mod8259.getIllustrationSource(theme, {
     dark() {
-      return callback(17514);
+      return require("module_17545");
     },
     darker() {
-      return callback(17515);
+      return require("module_17546");
     },
     light() {
-      return callback(17516);
+      return require("module_17547");
     }
-  };
-  return obj.getIllustrationSource(theme, obj);
+  });
 };
 export const useVerifyPhoneSource = function useVerifyPhoneSource() {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = shared;
+  return _mod8259.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return callback(17514);
+      return require("module_17545");
     },
     darker() {
-      return callback(17515);
+      return require("module_17546");
     },
     light() {
-      return callback(17516);
+      return require("module_17547");
     }
-  };
-  return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  });
 };
 export const VerifyPhone = function VerifyPhone(arg0) {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = shared;
+  const obj4 = {};
+  const illustrationSource = _mod8259.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return callback(17514);
+      return require("module_17545");
     },
     darker() {
-      return callback(17515);
+      return require("module_17546");
     },
     light() {
-      return callback(17516);
+      return require("module_17547");
     }
-  };
-  obj = {};
-  const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  });
   const merged = Object.assign(arg0);
-  obj.source = illustrationSource;
+  obj4.source = illustrationSource;
   return <Image />;
 };

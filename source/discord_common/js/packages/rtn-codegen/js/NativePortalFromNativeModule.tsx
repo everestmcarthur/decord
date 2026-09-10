@@ -1,14 +1,14 @@
-// Module ID: 8269
-// Function ID: 8270
-// Name: enforcing
+// Module ID: 8298
+// Function ID: 8299
+// Name: NativePortalFromNativeModule
 // Dependencies: [17, 2]
 
-// Module 8269 (enforcing)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 8298 (NativePortalFromNativeModule)
+import _mod17 from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
 
-const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 const enforcing = TurboModuleRegistry.getEnforcing("NativePortalFromNativeModule");
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativePortalFromNativeModule.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativePortalFromNativeModule.tsx");
 
 export default enforcing;

@@ -1,17 +1,19 @@
-// Module ID: 10182
-// Function ID: 10183
-// Dependencies: [17, 1115, 10183, 2]
+// Module ID: 10209
+// Function ID: 10210
+// Name: NativeAPNGView
+// Dependencies: [17, 1115, 10210, 2]
 
-// Module 10182
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import __INTERNAL_VIEW_CONFIG from "__INTERNAL_VIEW_CONFIG" /* 10183 */;
-import set from "set" /* 1115 */;
+// Module 10209 (NativeAPNGView)
+import _mod17 from "module_17" /* 17 */;
+import APNGStickerNativeComponent from "APNGStickerNativeComponent" /* 10210 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import size from "module_2" /* 2 */;
 
-if (set.isAndroid()) {
-  let _default = __INTERNAL_VIEW_CONFIG.default;
+if (PlatformUtils.isAndroid()) {
+  let _default = APNGStickerNativeComponent.default;
 } else {
-  _default = get_ActivityIndicator.requireNativeComponent("APNGStickerView");
+  _default = _mod17.requireNativeComponent("APNGStickerView");
 }
-const result = set.fileFinishedImporting("components_native/common/NativeAPNGView.tsx");
+const result = size.fileFinishedImporting("components_native/common/NativeAPNGView.tsx");
 
 export default _default;

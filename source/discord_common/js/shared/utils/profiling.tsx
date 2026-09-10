@@ -1,13 +1,13 @@
 // Module ID: 571
 // Function ID: 572
-// Name: mark
+// Name: profiling
 // Dependencies: [2]
 // Exports: clearMarks, clearMeasures, mark, measure
 
-// Module 571 (mark)
-import set from "set" /* 2 */;
+// Module 571 (profiling)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/utils/profiling.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/utils/profiling.tsx");
 
 export function mark(arg0) {
 

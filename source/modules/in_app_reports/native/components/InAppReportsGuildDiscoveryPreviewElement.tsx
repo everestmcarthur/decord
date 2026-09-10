@@ -1,63 +1,59 @@
-// Module ID: 9043
-// Function ID: 9044
-// Name: GuildDiscoveryPreviewElement
-// Dependencies: [19, 17, 4552, 21, 4560, 576, 504, 4409, 4556, 1114, 5584, 1971, 2]
+// Module ID: 9070
+// Function ID: 9071
+// Name: InAppReportsGuildDiscoveryPreviewElement
+// Dependencies: [19, 17, 4566, 21, 4574, 576, 504, 4423, 4570, 1114, 5598, 1971, 2]
 // Exports: default
 
-// Module 9043 (GuildDiscoveryPreviewElement)
-import noopAll from "noop" /* 19 */;
+// Module 9070 (InAppReportsGuildDiscoveryPreviewElement)
 import initialize from "initialize" /* 504 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1971 */;
-import hexToRgba from "hexToRgba" /* 4409 */;
-import Text from "Text" /* 4556 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 1971 */;
+import ColorUtils from "ColorUtils" /* 4423 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import GuildIconDefault from "GuildIcon" /* 5598 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, borderColor: null, title: null, itemContainer: null, guildInfo: null, guildName: null, guildIcon: null };
-createCacheKey = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { textTransform: "uppercase", lineHeight: 16, marginBottom: 8 };
-createCacheKey[3] = { minHeight: 40, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, padding: 8 };
-createCacheKey[4] = { display: "flex", flexDirection: "row", alignItems: "center" };
-createCacheKey[5] = { lineHeight: 18, marginStart: 8 };
-let obj1 = { minHeight: 40, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, padding: 8 };
-createCacheKey[6] = { borderRadius: ThemesDefault.radii.xs, width: 18, height: 18 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { borderRadius: ThemesDefault.radii.xs, width: 18, height: 18 };
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsGuildDiscoveryPreviewElement.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, borderColor: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, title: { textTransform: "uppercase", lineHeight: 16, marginBottom: 8 }, itemContainer: null, guildInfo: null, guildName: null, guildIcon: null };
+let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+obj2.itemContainer = { minHeight: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 1, padding: 8 };
+obj2.guildInfo = { display: "flex", flexDirection: "row", alignItems: "center" };
+obj2.guildName = { lineHeight: 18, marginStart: 8 };
+let size = { borderRadius: nativeDefault.radii.xs, width: 18, height: 18 };
+obj2.guildIcon = size;
+let closure_7 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsGuildDiscoveryPreviewElement.tsx");
 
 export default function GuildDiscoveryPreviewElement(guild) {
   guild = guild.guild;
-  const tmp = callback3();
-  let obj = initialize;
-  const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  obj1 = hexToRgba;
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.string(getSystemLocale.t.nTe4HC);
-  const items1 = [callback(Text.Text, obj), ];
-  obj1 = { style: items2, children: null };
-  items2 = [tmp.itemContainer, { borderColor: obj1.hexWithOpacity(tmp.borderColor.color, 0.08) }];
-  const obj2 = { style: tmp.guildInfo, children: null };
-  const obj3 = { style: tmp.guildIcon, guild: null, animate: null };
-  const hexWithOpacityResult = obj1.hexWithOpacity(tmp.borderColor.color, 0.08);
-  const tmp4 = GuildIconSizesDefault;
-  obj3[1] = fromGuildPropertiesWithAdditionalFields.fromClientDiscoverableGuild(guild);
-  obj3[2] = !stateFromStores;
-  const items3 = [callback(tmp4, obj3), callback(Text.Text, { style: tmp.guildName, variant: "text-sm/medium", color: "text-default", children: guild.name })];
-  obj2[1] = items3;
-  obj1[1] = callback2(View, obj2);
-  items1[1] = callback(View, obj1);
-  obj[1] = items1;
-  return callback2(View, obj);
+  const tmp = closure_7();
+  const items = [AccessibilityStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const obj3 = { style: tmp.container, children: null };
+  const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
+  const intl = util.intl;
+  obj4.children = intl.string(util.t.nTe4HC);
+  const items1 = [hasOwnProperty(Text_Text.Text, obj4), ];
+  const obj5 = { style: null, children: null };
+  const items2 = [tmp.itemContainer, { borderColor: ColorUtils.hexWithOpacity(tmp.borderColor.color, 0.08) }];
+  obj5.style = items2;
+  const obj6 = { style: tmp.guildInfo, children: null };
+  const obj7 = { style: tmp.guildIcon, guild: null, animate: null };
+  const hexWithOpacityResult = ColorUtils.hexWithOpacity(tmp.borderColor.color, 0.08);
+  const tmp4 = GuildIconDefault;
+  obj7.guild = GuildRecordUtils.fromClientDiscoverableGuild(guild);
+  obj7.animate = !stateFromStores;
+  const items3 = [hasOwnProperty(tmp4, obj7), hasOwnProperty(Text_Text.Text, { style: tmp.guildName, variant: "text-sm/medium", color: "text-default", children: guild.name })];
+  obj6.children = items3;
+  obj5.children = timestampProducer(View, obj6);
+  items1[1] = hasOwnProperty(View, obj5);
+  obj3.children = items1;
+  return timestampProducer(View, obj3);
 };

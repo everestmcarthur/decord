@@ -1,31 +1,31 @@
-// Module ID: 17868
-// Function ID: 17869
-// Name: handleConnectionOpenSupplemental
-// Dependencies: [17869, 7118, 2]
+// Module ID: 17901
+// Function ID: 17902
+// Name: SafetyFlowsManager
+// Dependencies: [17902, 7132, 2]
 
-// Module 17868 (handleConnectionOpenSupplemental)
-import initializeDefault from "initialize" /* 7118 */;
-import _openSafetyFlow from "_openSafetyFlow" /* 17869 */;
+// Module 17901 (SafetyFlowsManager)
+import openSafetyFlow from "openSafetyFlow" /* 17902 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-require = arg1;
+require = fn;
 function handleConnectionOpenSupplemental() {
-  _openSafetyFlow.openSafetyFlow();
+  openSafetyFlow.openSafetyFlow();
 }
 function handleSafetyFlowsModalOpen() {
-  _openSafetyFlow.openSafetyFlow();
+  openSafetyFlow.openSafetyFlow();
 }
 function handleUserRequiredActionUpdate(requiredAction) {
-  _openSafetyFlow.openSafetyFlow({ requiredAction: requiredAction.requiredAction });
+  openSafetyFlow.openSafetyFlow({ requiredAction: requiredAction.requiredAction });
 }
-initializeDefault;
-let prototype = function SafetyFlowsManager() {
+const prototype = function SafetyFlowsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { CONNECTION_OPEN_SUPPLEMENTAL: handleConnectionOpenSupplemental, SAFETY_FLOWS_MODAL_OPEN: handleSafetyFlowsModalOpen, USER_REQUIRED_ACTION_UPDATE: handleUserRequiredActionUpdate };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
-const result = require("set").fileFinishedImporting("modules/safety_flows/SafetyFlowsManager.tsx");
+const prototype1 = new prototype();
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_flows/SafetyFlowsManager.tsx");
 
-export default prototype;
+export default prototype1;

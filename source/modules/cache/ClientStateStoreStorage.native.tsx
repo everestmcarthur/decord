@@ -1,19 +1,19 @@
-// Module ID: 14196
-// Function ID: 14197
-// Name: setClientState
-// Dependencies: [13641, 2]
+// Module ID: 14221
+// Function ID: 14222
+// Name: ClientStateStoreStorage
+// Dependencies: [13664, 2]
 // Exports: setClientState
 
-// Module 14196 (setClientState)
-import set from "set" /* 2 */;
-import enforcingDefault from "enforcing" /* 13641 */;
+// Module 14221 (ClientStateStoreStorage)
+import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 13664 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/cache/ClientStateStoreStorage.native.tsx");
+const result = size.fileFinishedImporting("modules/cache/ClientStateStoreStorage.native.tsx");
 
-export const setClientState = function setClientState(closure_17, arg1) {
+export const setClientState = function setClientState(arg0) {
   let str;
-  if (closure_17 != null) {
-    str = closure_17.toString();
+  if (arg0 != null) {
+    str = arg0.toString();
   }
-  enforcingDefault.setClientState(str, undefined);
+  NativeFastConnectModuleDefault.setClientState(str, undefined);
 };

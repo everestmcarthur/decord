@@ -1,34 +1,34 @@
-// Module ID: 8015
-// Function ID: 8016
-// Name: DATE_CONFIG
-// Dependencies: [8016, 4153, 8017, 1114, 2]
+// Module ID: 8029
+// Function ID: 8030
+// Name: GuildAntiRaidUtils
+// Dependencies: [8030, 4166, 8031, 1114, 2]
 // Exports: getDisabledInterventions, getEnabledInterventions, getIncidentAlertType, getSecurityActionDetailsString, hasDMsDisabled, hasDetectedActivity, hasDetectedDMRaid, hasDetectedRaid, hasInvitesDisabled, initialLockdownDurationHours, isUnderLockdown
 
-// Module 8015 (DATE_CONFIG)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import hooksDefault from "hooks" /* 4153 */;
-import GuildIncidentActionSources from "GuildIncidentActionSources" /* 8017 */;
-import GUILD_REPORT_RAID_MOBILE_KEY from "GUILD_REPORT_RAID_MOBILE_KEY" /* 8016 */;
+// Module 8029 (GuildAntiRaidUtils)
+import util from "util" /* 1114 */;
+import _modDef4166 from "module_4166" /* 4166 */;
+import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 8031 */;
+import GuildAntiRaidConstants from "GuildAntiRaidConstants" /* 8030 */;
+import size from "module_2" /* 2 */;
 
-({ NAGBAR_DISPLAY_MAX_HOURS: c3, DEFAULT_LOCKDOWN_DURATION: c4, getTimeframes: c5 } = GUILD_REPORT_RAID_MOBILE_KEY);
-let obj = { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" };
-const result = set.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidUtils.tsx");
+({ NAGBAR_DISPLAY_MAX_HOURS: c3, DEFAULT_LOCKDOWN_DURATION: closure_4, getTimeframes: hasOwnProperty } = GuildAntiRaidConstants);
+let date = { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" };
+const result = size.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidUtils.tsx");
 
-export const DATE_CONFIG = obj;
+export const DATE_CONFIG = date;
 export const hasDetectedActivity = function hasDetectedActivity(incidentsData) {
   let tmp = null != incidentsData.dmSpamDetectedAt;
   if (tmp) {
-    obj = hooksDefault(incidentsData.dmSpamDetectedAt);
-    tmp = hooksDefault(incidentsData.dmSpamDetectedAt).add(closure_3, "hours") > hooksDefault();
-    const addResult = hooksDefault(incidentsData.dmSpamDetectedAt).add(closure_3, "hours");
+    const obj = _modDef4166(incidentsData.dmSpamDetectedAt);
+    tmp = _modDef4166(incidentsData.dmSpamDetectedAt).add(React3, "hours") > _modDef4166();
+    const addResult = _modDef4166(incidentsData.dmSpamDetectedAt).add(React3, "hours");
   }
   if (!tmp) {
     let tmp6 = null != incidentsData.raidDetectedAt;
     if (tmp6) {
-      const obj2 = hooksDefault(incidentsData.raidDetectedAt);
-      tmp6 = hooksDefault(incidentsData.raidDetectedAt).add(closure_3, "hours") > hooksDefault();
-      const addResult1 = hooksDefault(incidentsData.raidDetectedAt).add(closure_3, "hours");
+      const obj2 = _modDef4166(incidentsData.raidDetectedAt);
+      tmp6 = _modDef4166(incidentsData.raidDetectedAt).add(React3, "hours") > _modDef4166();
+      const addResult1 = _modDef4166(incidentsData.raidDetectedAt).add(React3, "hours");
     }
     tmp = tmp6;
   }
@@ -37,18 +37,18 @@ export const hasDetectedActivity = function hasDetectedActivity(incidentsData) {
 export const hasDetectedRaid = function hasDetectedRaid(raidDetectedAt) {
   let tmp = null != raidDetectedAt.raidDetectedAt;
   if (tmp) {
-    obj = hooksDefault(raidDetectedAt.raidDetectedAt);
-    tmp = hooksDefault(raidDetectedAt.raidDetectedAt).add(closure_3, "hours") > hooksDefault();
-    const addResult = hooksDefault(raidDetectedAt.raidDetectedAt).add(closure_3, "hours");
+    const obj = _modDef4166(raidDetectedAt.raidDetectedAt);
+    tmp = _modDef4166(raidDetectedAt.raidDetectedAt).add(React3, "hours") > _modDef4166();
+    const addResult = _modDef4166(raidDetectedAt.raidDetectedAt).add(React3, "hours");
   }
   return tmp;
 };
 export const hasDetectedDMRaid = function hasDetectedDMRaid(dmSpamDetectedAt) {
   let tmp = null != dmSpamDetectedAt.dmSpamDetectedAt;
   if (tmp) {
-    obj = hooksDefault(dmSpamDetectedAt.dmSpamDetectedAt);
-    tmp = hooksDefault(dmSpamDetectedAt.dmSpamDetectedAt).add(closure_3, "hours") > hooksDefault();
-    const addResult = hooksDefault(dmSpamDetectedAt.dmSpamDetectedAt).add(closure_3, "hours");
+    const obj = _modDef4166(dmSpamDetectedAt.dmSpamDetectedAt);
+    tmp = _modDef4166(dmSpamDetectedAt.dmSpamDetectedAt).add(React3, "hours") > _modDef4166();
+    const addResult = _modDef4166(dmSpamDetectedAt.dmSpamDetectedAt).add(React3, "hours");
   }
   return tmp;
 };
@@ -56,30 +56,30 @@ export const getIncidentAlertType = function getIncidentAlertType(guildIncident)
   if (null != guildIncident) {
     let tmp = null != guildIncident.raidDetectedAt;
     if (tmp) {
-      obj = hooksDefault(guildIncident.raidDetectedAt);
-      tmp = hooksDefault(guildIncident.raidDetectedAt).add(closure_3, "hours") > hooksDefault();
-      const addResult = hooksDefault(guildIncident.raidDetectedAt).add(closure_3, "hours");
+      const obj = _modDef4166(guildIncident.raidDetectedAt);
+      tmp = _modDef4166(guildIncident.raidDetectedAt).add(React3, "hours") > _modDef4166();
+      const addResult = _modDef4166(guildIncident.raidDetectedAt).add(React3, "hours");
     }
-    const GuildIncidentAlertTypes = GuildIncidentActionSources.GuildIncidentAlertTypes;
+    const GuildIncidentAlertTypes = GuildAntiRaidTypes.GuildIncidentAlertTypes;
   }
 };
 export const getEnabledInterventions = function getEnabledInterventions(pauseInvites, pauseDms) {
   const items = [];
   if (pauseInvites) {
-    items.push(GuildIncidentActionSources.GuildIncidentActionTypes.INVITES_DISABLED);
+    items.push(GuildAntiRaidTypes.GuildIncidentActionTypes.INVITES_DISABLED);
   }
   if (pauseDms) {
-    items.push(GuildIncidentActionSources.GuildIncidentActionTypes.DMS_DISABLED);
+    items.push(GuildAntiRaidTypes.GuildIncidentActionTypes.DMS_DISABLED);
   }
   return items;
 };
 export const getDisabledInterventions = function getDisabledInterventions(pauseInvites, pauseDms) {
   const items = [];
   if (!pauseInvites) {
-    items.push(GuildIncidentActionSources.GuildIncidentActionTypes.INVITES_DISABLED);
+    items.push(GuildAntiRaidTypes.GuildIncidentActionTypes.INVITES_DISABLED);
   }
   if (!pauseDms) {
-    items.push(GuildIncidentActionSources.GuildIncidentActionTypes.DMS_DISABLED);
+    items.push(GuildAntiRaidTypes.GuildIncidentActionTypes.DMS_DISABLED);
   }
   return items;
 };
@@ -87,7 +87,7 @@ export const isUnderLockdown = function isUnderLockdown(incidentsData) {
   let tmp = null != incidentsData.dmsDisabledUntil;
   if (tmp) {
     const _Date = Date;
-    const date = new Date(incidentsData.dmsDisabledUntil);
+    date = new Date(incidentsData.dmsDisabledUntil);
     const _Date2 = Date;
     const date1 = new Date();
     tmp = date > date1;
@@ -113,7 +113,7 @@ export const hasDMsDisabled = function hasDMsDisabled(stateFromStores) {
   let tmp2 = null != dmsDisabledUntil;
   if (tmp2) {
     const _Date = Date;
-    const date = new Date(stateFromStores.dmsDisabledUntil);
+    date = new Date(stateFromStores.dmsDisabledUntil);
     const _Date2 = Date;
     const date1 = new Date();
     tmp2 = date > date1;
@@ -128,7 +128,7 @@ export const hasInvitesDisabled = function hasInvitesDisabled(stateFromStores) {
   let tmp2 = null != invitesDisabledUntil;
   if (tmp2) {
     const _Date = Date;
-    const date = new Date(stateFromStores.invitesDisabledUntil);
+    date = new Date(stateFromStores.invitesDisabledUntil);
     const _Date2 = Date;
     const date1 = new Date();
     tmp2 = date > date1;
@@ -141,13 +141,13 @@ export const initialLockdownDurationHours = function initialLockdownDurationHour
     prop = stateFromStores.lockdownDurationHours;
   }
   if (null == prop) {
-    prop = closure_4;
+    prop = React4;
   } else {
-    obj = callback();
+    const obj = hasOwnProperty();
   }
   return prop;
 };
-export const getSecurityActionDetailsString = function getSecurityActionDetailsString(dmsDisabledUntil) {
+export const getSecurityActionDetailsString = function getSecurityActionDetailsString(dmsDisabledUntil, guildName) {
   let invitesDisabledUntil = dmsDisabledUntil.dmsDisabledUntil;
   if (invitesDisabledUntil == null) {
     invitesDisabledUntil = dmsDisabledUntil.invitesDisabledUntil;
@@ -160,29 +160,26 @@ export const getSecurityActionDetailsString = function getSecurityActionDetailsS
       tmp = tmp28;
     }
     if (tmp === true) {
-      const intl3 = getSystemLocale.intl;
-      obj = { guildName: null, time: null };
-      obj[0] = arg1;
+      const intl3 = util.intl;
+      const obj2 = { guildName, time: null };
       const _Date3 = Date;
-      const date = new Date(invitesDisabledUntil);
-      obj[1] = date.toLocaleString(getSystemLocale.intl.currentLocale, obj);
-      return intl3.formatToPlainString(getSystemLocale.t.hCZitf, obj);
+      date = new Date(invitesDisabledUntil);
+      obj2.time = date.toLocaleString(util.intl.currentLocale, date);
+      return intl3.formatToPlainString(util.t.hCZitf, obj2);
     } else if (tmp27 === true) {
-      const intl2 = getSystemLocale.intl;
-      obj = { guildName: null, time: null };
-      obj[0] = arg1;
+      const intl2 = util.intl;
+      const obj3 = { guildName, time: null };
       const _Date2 = Date;
       const date1 = new Date(invitesDisabledUntil);
-      obj[1] = date1.toLocaleString(getSystemLocale.intl.currentLocale, obj);
-      return intl2.formatToPlainString(getSystemLocale.t["HNKxf+"], obj);
+      obj3.time = date1.toLocaleString(util.intl.currentLocale, date);
+      return intl2.formatToPlainString(util.t["HNKxf+"], obj3);
     } else if (tmp28 === true) {
-      const intl = getSystemLocale.intl;
-      obj = { guildName: null, time: null };
-      obj[0] = arg1;
+      const intl = util.intl;
+      const obj = { guildName, time: null };
       const _Date = Date;
       const date2 = new Date(invitesDisabledUntil);
-      obj[1] = date2.toLocaleString(getSystemLocale.intl.currentLocale, obj);
-      return intl.formatToPlainString(getSystemLocale.t.M3iSyL, obj);
+      obj.time = date2.toLocaleString(util.intl.currentLocale, date);
+      return intl.formatToPlainString(util.t.M3iSyL, obj);
     } else {
       return "";
     }

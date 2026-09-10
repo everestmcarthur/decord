@@ -1,34 +1,33 @@
-// Module ID: 7136
-// Function ID: 7137
+// Module ID: 7150
+// Function ID: 7151
 // Name: FormCheckboxRow
-// Dependencies: [19, 21, 4560, 4277, 7137, 7146, 2]
+// Dependencies: [19, 21, 4574, 4292, 7151, 7160, 2]
 // Exports: default
 
-// Module 7136 (FormCheckboxRow)
-import noopAll from "noop" /* 19 */;
-import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4277 */;
-import _modDef7137 from "module_7137" /* 7137 */;
-import FormCheckboxDefault from "FormCheckbox" /* 7146 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 7150 (FormCheckboxRow)
+import useA11yRolesNative from "useA11yRolesNative" /* 4292 */;
+import FormRowDefault from "FormRow" /* 7151 */;
+import Form_FormCheckboxDefault from "Form/FormCheckbox" /* 7160 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-let closure_4 = createCacheKey.createStyles({ checkboxWrapperStyle: { flexShrink: 0 } });
-const result = require("set").fileFinishedImporting("design/void/Form/native/FormCheckboxRow.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_4 = createStyles.createStyles({ checkboxWrapperStyle: { flexShrink: 0 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/Form/native/FormCheckboxRow.tsx");
 
 export default function FormCheckboxRow(selected) {
   selected = selected.selected;
-  const merged = Object.assign(selected, Object.create(null));
-  let obj = useCheckboxA11yNative;
-  const checkboxA11yNative = obj.useCheckboxA11yNative({ checked: selected });
+  const merged = Object.assign(selected, Object.assign({ selected: 0 }));
+  const tmp2 = closure_4();
+  const checkboxA11yNative = useA11yRolesNative.useCheckboxA11yNative({ checked: selected });
   ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
-  obj = {};
-  const tmp2 = callback();
+  const obj2 = {};
   const merged1 = Object.assign(merged);
-  obj.accessibilityRole = accessibilityRole;
-  obj.accessibilityState = accessibilityState;
-  obj.trailing = jsx(FormCheckboxDefault, { selected });
-  obj.trailingWrapperStyle = tmp2.checkboxWrapperStyle;
-  return jsx(_modDef7137, {});
+  obj2.accessibilityRole = accessibilityRole;
+  obj2.accessibilityState = accessibilityState;
+  obj2.trailing = jsx(Form_FormCheckboxDefault, { selected });
+  obj2.trailingWrapperStyle = tmp2.checkboxWrapperStyle;
+  return jsx(FormRowDefault, {});
 };

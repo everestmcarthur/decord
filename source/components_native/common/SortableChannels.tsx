@@ -1,55 +1,54 @@
-// Module ID: 16151
-// Function ID: 16152
-// Name: render
+// Module ID: 16181
+// Function ID: 16182
+// Name: SortableChannels
 // Dependencies: [19, 17, 21, 12, 1477, 2]
 
-// Module 16151 (render)
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import { createElement } from "noop" /* 19 */;
-import importDefaultResult from "apply" /* 12 */;
+// Module 16181 (SortableChannels)
+import noop from "module_19" /* 19 */;
+import apply from "module_12" /* 12 */;
 
-let require = arg1;
-({ View: c3, Animated: c4, PanResponder: c5, SectionList: closure_6, StyleSheet } = get_ActivityIndicator);
-({ jsxs: error, jsx: closure_8 } = jsxProd);
+let require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, Animated: closure_4, PanResponder: hasOwnProperty, SectionList: metroRequire, StyleSheet } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsxs: closure_7, jsx: closure_8 } = jsxProd);
+const createElement = fn(19).createElement;
 let closure_10 = 24 + StyleSheet.hairlineWidth;
-let closure_11 = importDefaultResult.memoize((arr) => {
+let closure_11 = apply.memoize((arr) => {
   const mapped = arr.map((category) => {
     const items = [{ type: "section", data: category.category }, ...data.map((data) => ({ type: "row", data }))];
     data = category.data;
     return items;
   });
-  return mapped.reduce((arg0, arg1) => {
-    const items = [...arg1];
+  return mapped.reduce((acc, item) => {
+    const items = [...item];
     return items;
   }, []);
 });
-const Component = importAllResult.Component;
+const Component = noop.Component;
 class Row extends Component {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.handleLongPress = function handleLongPress(arg0) {
-      ({ onRowActive: closure_1, rowData: closure_2 } = arg0.props);
+      const nativeEvent = arg0;
+      ({ onRowActive: closure_1, rowData: closure_2 } = applyArgumentsResult.props);
       const _view = applyArgumentsResult._view;
       if (_view != null) {
-        _view.measure((arg0, arg1, arg2, arg3, arg4, arg5) => {
-          if (closure_1 != null) {
-            let obj = { layout: null, rowData: null, touch: null };
-            obj = { frameHeight: null, pageY: null };
-            obj[0] = arg3;
-            obj[1] = arg5;
-            obj[0] = obj;
-            obj[1] = closure_2;
-            obj[2] = nativeEvent.nativeEvent;
+        _view.measure((arg0, arg1, arg2, frameHeight, arg4, pageY) => {
+          if (closure_1_1 != null) {
+            const obj = { layout: null, rowData: null, touch: null };
+            const obj2 = { frameHeight, pageY };
+            obj.layout = obj2;
+            obj.rowData = rowData;
+            obj.touch = nativeEvent.nativeEvent;
             tmp(obj);
           }
         });
       }
     };
     applyArgumentsResult.setViewRef = function setViewRef(_view) {
-      closure_0._view = _view;
+      applyArgumentsResult._view = _view;
     };
     applyArgumentsResult.measure = function measure(arg0) {
       const _view = applyArgumentsResult._view;
@@ -65,29 +64,24 @@ Row.prototype["render"] = function render() {
   const props = this.props;
   ({ rowData, list, activeDivider, isAfter } = props);
   const active2 = list.state.active;
-  let num = -1;
   ({ active, renderItem, style, sortingEnabled } = props);
-  if (null != active2) {
-    num = active2.rowData.index;
-  }
   let tmp3 = null;
   if (sortingEnabled) {
-    let obj = { sortHandlers: null, onLongPress: null, onPressOut: null };
-    obj = { onLongPress: null, onPressOut: null };
-    obj[0] = self.handleLongPress;
-    obj[1] = list.cancel;
-    obj[0] = obj;
-    obj[1] = self.handleLongPress;
-    obj[2] = list.cancel;
+    const obj = { sortHandlers: null, onLongPress: null, onPressOut: null };
+    const obj2 = { onLongPress: self.handleLongPress, onPressOut: list.cancel };
+    obj.sortHandlers = obj2;
+    obj.onLongPress = self.handleLongPress;
+    obj.onPressOut = list.cancel;
     tmp3 = obj;
   }
-  obj = null;
+  let obj3 = null;
   const renderItemResult = renderItem(rowData.data);
   if (active) {
-    obj = { opacity: 0.2 };
+    obj3 = { opacity: 0.2 };
   }
-  obj1 = { style: items, ref: self.setViewRef, collapsable: false, children: null };
-  items = [obj, style];
+  const obj4 = { style: null, ref: self.setViewRef, collapsable: false, children: null };
+  const items = [obj3, style];
+  obj4.style = items;
   let tmp8 = null;
   if (!isAfter) {
     tmp8 = null;
@@ -98,7 +92,7 @@ Row.prototype["render"] = function render() {
       }
     }
   }
-  const items1 = [tmp8, importAllResult.cloneElement(renderItem(rowData.data), tmp3), ];
+  const items1 = [tmp8, noop.cloneElement(renderItem(rowData.data), tmp3), ];
   let tmp9 = null;
   if (isAfter) {
     tmp9 = null;
@@ -110,14 +104,13 @@ Row.prototype["render"] = function render() {
     }
   }
   items1[2] = tmp9;
-  obj1[3] = items1;
-  return closure_7(closure_3, obj1);
+  obj4.children = items1;
+  return React5(React3, obj4);
 };
-const Component2 = importAllResult.Component;
+const Component2 = noop.Component;
 class SortRow extends Component2 {
   constructor(arg0) {
     tmp3 = new SortRow(global, tmp2, tmp, new.target);
-    // ThrowIfThisInitialized (0x7c)
     if (null == global.list.state.active) {
       tmp5 = globalThis;
       _Error = Error;
@@ -134,11 +127,11 @@ class SortRow extends Component2 {
       }
       tmp4 = tmp3;
       obj = { style: null };
-      obj = { position: "absolute", left: 0, right: 0, opacity: null, height: null, overflow: "hidden", backgroundColor: "transparent", marginTop: null };
-      obj[3] = num;
-      obj[4] = layout.frameHeight;
-      obj[7] = layout.pageY - global.list.wrapperLayout.pageY;
-      obj[0] = obj;
+      rect = { position: "absolute", left: 0, right: 0, opacity: null, height: null, overflow: "hidden", backgroundColor: "transparent", marginTop: null };
+      rect.opacity = num;
+      rect.height = layout.frameHeight;
+      rect.marginTop = layout.pageY - global.list.wrapperLayout.pageY;
+      obj.style = rect;
       tmp3.state = obj;
       return tmp3;
     }
@@ -151,16 +144,15 @@ SortRow.prototype["render"] = function render() {
   const pan = props.list.state.pan;
   ({ rowData, renderItem } = props);
   items[2] = pan.getLayout();
-  obj[0] = items;
-  obj[1] = renderItem(rowData.data, true);
-  return callback(RN.View, obj);
+  obj.style = items;
+  obj.children = renderItem(rowData.data, true);
+  return React6(RN.View, obj);
 };
-const Component3 = importAllResult.Component;
+const Component3 = noop.Component;
 class SortableChannels extends Component3 {
   constructor(arg0) {
     closure_0 = undefined;
     obj = new SortableChannels(global, tmp3, tmp2, global, new.target, tmp);
-    // ThrowIfThisInitialized (0x7c)
     closure_0 = obj;
     obj.cancel = function cancel() {
       if (!obj.moved) {
@@ -177,7 +169,8 @@ class SortableChannels extends Component3 {
       if (null != obj._view) {
         const _view = obj._view;
         _view.measure((arg0, arg1, arg2, frameHeight, arg4, pageY) => {
-          closure_0.wrapperLayout = { frameHeight, pageY };
+          const wrapperLayout = { frameHeight, pageY };
+          obj.wrapperLayout = wrapperLayout;
         });
       }
     };
@@ -215,9 +208,8 @@ class SortableChannels extends Component3 {
             }
             if (null != diff1) {
               obj.scrollValue = diff1;
-              obj = { y: null, x: 0 };
-              obj[0] = obj.scrollValue;
-              obj.scrollTo(obj);
+              const point = { y: obj.scrollValue, x: 0 };
+              obj.scrollTo(point);
             }
             if (obj.moved) {
               obj.checkTargetElement();
@@ -272,9 +264,8 @@ class SortableChannels extends Component3 {
         diff1 = num3 - 1;
       }
       if (tmp7) {
-        obj = { hoveringIndex: null };
-        obj[0] = diff1;
-        obj.setState(obj);
+        const obj2 = { hoveringIndex: diff1 };
+        obj.setState(obj2);
         if (onHoverChange != null) {
           onHoverChange(order[diff1]);
         }
@@ -288,11 +279,8 @@ class SortableChannels extends Component3 {
         pan.setValue({ x: 0, y: 0 });
         obj.moveY = layout.layout.pageY + layout.layout.frameHeight / 2;
         const index = layout.rowData.index;
-        obj = { active: null, activeIndex: null, hoveringIndex: null };
-        obj[0] = layout;
-        obj[1] = index;
-        obj[2] = index;
-        obj.setState(obj, obj.scrollAnimation);
+        const obj2 = { active: layout, activeIndex: index, hoveringIndex: index };
+        obj.setState(obj2, obj.scrollAnimation);
         if (onRowActive != null) {
           onRowActive(layout);
         }
@@ -313,19 +301,18 @@ class SortableChannels extends Component3 {
           let renderActiveDividerResult = renderActiveDivider(frameHeight, arg0, tmp5);
         } else {
           obj = { style: null };
-          obj = { height: null };
-          obj[0] = frameHeight;
-          obj[0] = obj;
-          renderActiveDividerResult = closure_1_8(closure_1_3, obj);
+          const obj2 = { height: frameHeight };
+          obj.style = obj2;
+          renderActiveDividerResult = React6(React3, obj);
         }
         return renderActiveDividerResult;
       }
     };
-    obj.renderSectionHeader = function renderSectionHeader(data) {
+    obj.renderSectionHeader = function renderSectionHeader(data, arg1) {
       let tmp = arg1;
-      const state = obj.state;
+      const state = list.state;
       ({ active, hoveringIndex } = state);
-      const order = obj.props.order;
+      const order = list.props.order;
       ({ activeIndex, panResponder } = state);
       const index = order.indexOf(data.section.category.id);
       let tmp4 = !tmp;
@@ -339,38 +326,38 @@ class SortableChannels extends Component3 {
         }
         tmp4 = index1 === index;
       }
-      let str = obj.props.order[hoveringIndex];
+      let str = list.props.order[hoveringIndex];
       if (str == null) {
         str = "";
       }
-      obj = { data, index, isRow: false };
-      const itemLayoutProps = obj.getItemLayoutProps(obj.index);
-      obj = {};
-      const merged = Object.assign(obj.props);
-      const renderSectionHeader = obj.props.renderSectionHeader;
-      obj.renderItem = renderSectionHeader.bind(null, data);
+      const obj2 = { data, index, isRow: false };
+      const itemLayoutProps = list.getItemLayoutProps(obj2.index);
+      const obj3 = {};
+      const merged = Object.assign(list.props);
+      const renderSectionHeader = list.props.renderSectionHeader;
+      obj3.renderItem = renderSectionHeader.bind(null, data);
       let renderActiveDividerResult = null;
       if (str === data.section.key) {
-        renderActiveDividerResult = obj.renderActiveDivider(str);
+        renderActiveDividerResult = list.renderActiveDivider(str);
       }
-      obj.activeDivider = renderActiveDividerResult;
-      obj.key = data.section.key;
+      obj3.activeDivider = renderActiveDividerResult;
+      obj3.key = data.section.key;
       if (!tmp) {
         tmp = tmp4;
       }
-      obj.active = tmp;
-      obj.list = obj;
-      obj.sortingEnabled = obj.props.sortingEnabled;
-      obj.hovering = str === data.section.key;
-      obj.panResponder = panResponder;
-      obj.rowData = obj;
-      obj.onRowActive = obj.handleRowActive;
-      obj.isAfter = hoveringIndex > activeIndex;
-      return closure_1_9(arg1 ? closure_1_13 : closure_1_12, obj);
+      obj3.active = tmp;
+      obj3.list = list;
+      obj3.sortingEnabled = list.props.sortingEnabled;
+      obj3.hovering = str === data.section.key;
+      obj3.panResponder = panResponder;
+      obj3.rowData = obj2;
+      obj3.onRowActive = list.handleRowActive;
+      obj3.isAfter = hoveringIndex > activeIndex;
+      return createElement(arg1 ? SortRow : Row, {});
     };
-    obj.renderItem = function renderItem(data) {
+    obj.renderItem = function renderItem(data, arg1) {
       let tmp = arg1;
-      const state = obj.state;
+      const state = list.state;
       ({ active, hoveringIndex } = state);
       let tmp3 = !tmp;
       ({ activeIndex, panResponder } = state);
@@ -384,32 +371,32 @@ class SortableChannels extends Component3 {
         }
         tmp3 = index === data.item.index;
       }
-      let str = obj.props.order[hoveringIndex];
+      let str = list.props.order[hoveringIndex];
       if (str == null) {
         str = "";
       }
-      obj = { data, index: data.item.index, isRow: true };
-      const itemLayoutProps = obj.getItemLayoutProps(obj.index);
-      obj = {};
-      const merged = Object.assign(obj.props);
+      const obj2 = { data, index: data.item.index, isRow: true };
+      const itemLayoutProps = list.getItemLayoutProps(obj2.index);
+      const obj3 = {};
+      const merged = Object.assign(list.props);
       let renderActiveDividerResult = null;
       if (str === data.item.key) {
-        renderActiveDividerResult = obj.renderActiveDivider(str);
+        renderActiveDividerResult = list.renderActiveDivider(str);
       }
-      obj.activeDivider = renderActiveDividerResult;
-      obj.key = data.item.key;
+      obj3.activeDivider = renderActiveDividerResult;
+      obj3.key = data.item.key;
       if (!tmp) {
         tmp = tmp3;
       }
-      obj.active = tmp;
-      obj.list = obj;
-      obj.sortingEnabled = obj.props.sortingEnabled;
-      obj.hovering = str === data.item.key;
-      obj.panResponder = panResponder;
-      obj.rowData = obj;
-      obj.onRowActive = obj.handleRowActive;
-      obj.isAfter = hoveringIndex > activeIndex;
-      return closure_1_9(arg1 ? closure_1_13 : closure_1_12, obj);
+      obj3.active = tmp;
+      obj3.list = list;
+      obj3.sortingEnabled = list.props.sortingEnabled;
+      obj3.hovering = str === data.item.key;
+      obj3.panResponder = panResponder;
+      obj3.rowData = obj2;
+      obj3.onRowActive = list.handleRowActive;
+      obj3.isAfter = hoveringIndex > activeIndex;
+      return createElement(arg1 ? SortRow : Row, {});
     };
     obj.getItemLayout = function getItemLayout(arg0, index) {
       return obj.getItemLayoutProps(index);
@@ -427,65 +414,47 @@ class SortableChannels extends Component3 {
       return bound;
     };
     obj.getRowHeight = function getRowHeight() {
-      return Math.max(closure_1_10 + 20 * obj.props.fontScale, 48);
+      return Math.max(closure_10 + 20 * obj.props.fontScale, 48);
     };
     obj.getItemLayoutProps = function getItemLayoutProps(index) {
       let num = 0;
       let num2 = 0;
-      const iter = closure_1_11(obj.props.sections)[Symbol.iterator]();
+      const iter = closure_11(obj.props.sections)[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
         let tmp2 = nextResult;
         if ("section" === nextResult.type) {
-          let tmp7 = obj;
-          let tmp8 = tmp2;
           let sectionHeight = obj.getSectionHeight(tmp2);
         } else {
-          let tmp5 = obj;
           sectionHeight = obj.getRowHeight();
         }
         let tmp = sectionHeight;
-        let tmp9 = num2;
         if (num2 === index) {
-          let tmp13 = iter;
           iter.return();
           break;
         } else {
-          let tmp10 = num;
-          let tmp11 = tmp;
           num = num + tmp;
-          let tmp12 = num2;
           num2 = num2 + 1;
           continue;
         }
         obj = { length: null, offset: null, index: null };
-        let tmp14 = tmp;
-        obj[0] = tmp;
-        let tmp15 = num;
-        obj[1] = num;
-        obj[2] = index;
-        let tmp16 = tmp2;
-        let tmp17 = null;
+        obj.length = tmp;
+        obj.offset = num;
+        obj.index = index;
         if (null == tmp2) {
           return obj;
         } else {
-          let tmp18 = tmp2;
           if (null != tmp2.data.id) {
             let id = tmp2.data.id;
           } else {
-            let tmp19 = tmp2;
             id = null;
             if (null != tmp2.data.channel) {
-              let tmp21 = tmp2;
               id = tmp2.data.channel.id;
             }
           }
           if (typeof id === "string") {
-            let tmp22 = obj;
-            obj = { y: null, height: null };
-            obj[0] = num;
-            obj[1] = tmp;
-            obj.layoutMap[id] = obj;
+            let obj2 = { y: num, height: tmp };
+            obj.layoutMap[id] = obj2;
           }
           return obj;
         }
@@ -515,12 +484,12 @@ class SortableChannels extends Component3 {
       }
       return scrollResponder;
     };
-    obj = { x: 0, y: 0 };
-    valueXY = new Animated.ValueXY(obj);
-    panResponder = obj.createPanResponder(global, obj, valueXY);
+    point = { x: 0, y: 0 };
+    valueXY = new Animated.ValueXY(point);
+    panResponder = obj.createPanResponder(global, point, valueXY);
     obj.listener = valueXY.addListener((arg0) => {
       const y = arg0.y;
-      tmp.panY = y;
+      obj.panY = y;
       return y;
     });
     obj.moved = false;
@@ -528,7 +497,7 @@ class SortableChannels extends Component3 {
     obj.dy = 0;
     obj.direction = "down";
     obj.scrollValue = 0;
-    obj4 = require("useWindowDimensions");
+    obj4 = closure_0(closure_1[4]);
     obj.scrollContainerHeight = 1.2 * obj4.getWindowDimensions().height;
     obj.state = { active: null, activeIndex: -1, hoveringIndex: -1, panResponder, pan: valueXY };
     obj.layoutMap = {};
@@ -540,14 +509,13 @@ prototype["componentWillUnmount"] = function componentWillUnmount() {
   const pan = this.state.pan;
   pan.removeListener(this.listener);
 };
-prototype["createPanResponder"] = function createPanResponder(arg0, arg1, valueXY) {
+prototype["createPanResponder"] = function createPanResponder(arg0, point, valueXY) {
   const self = this;
   closure_1 = arg0;
-  closure_2 = arg1;
-  let obj = { dx: valueXY.x, dy: valueXY.y };
-  const items = [null, obj];
+  closure_2 = point;
+  const items = [null, { dx: valueXY.x, dy: valueXY.y }];
   closure_0 = RN.event(items, { useNativeDriver: false });
-  obj = {
+  return hasOwnProperty.create({
     onStartShouldSetPanResponder() {
       return true;
     },
@@ -571,7 +539,7 @@ prototype["createPanResponder"] = function createPanResponder(arg0, arg1, valueX
         }
         tmp.direction = str;
         tmp.dy = dy.dy;
-        callback(arg0, dy);
+        closure_0(arg0, dy);
       }
     },
     onPanResponderGrant() {
@@ -597,7 +565,6 @@ prototype["createPanResponder"] = function createPanResponder(arg0, arg1, valueX
       self.setState({ active: null, hoveringIndex: -1, activeIndex: -1 });
     },
     onPanResponderRelease() {
-      let obj = self;
       ({ active, hoveringIndex } = self.state);
       const onRowMoved = self.props.onRowMoved;
       self.moved = false;
@@ -619,20 +586,16 @@ prototype["createPanResponder"] = function createPanResponder(arg0, arg1, valueX
         if (tmp2 === index) {
           return obj.setState({ active: null, hoveringIndex: -1, activeIndex: -1 });
         } else {
-          obj = { row: null, from: null, to: null };
-          obj[0] = active.rowData;
-          obj[1] = index - 1;
-          obj[2] = tmp2 - 1;
+          const obj2 = { row: active.rowData, from: index - 1, to: tmp2 - 1 };
           if (onRowMoved != null) {
-            onRowMoved(obj);
+            onRowMoved(obj2);
           }
           obj.setState({ active: null, hoveringIndex: -1, activeIndex: -1 });
           const _Math = Math;
           const bound = Math.max(0, obj.scrollContainerHeight - obj.listLayout.height + active.layout.frameHeight);
           if (obj.scrollValue > bound) {
-            obj = { y: null };
-            obj[0] = bound;
-            obj.scrollTo(obj);
+            const obj3 = { y: bound };
+            obj.scrollTo(obj3);
           }
           obj.state.active = null;
           obj.state.hoveringIndex = -1;
@@ -640,8 +603,7 @@ prototype["createPanResponder"] = function createPanResponder(arg0, arg1, valueX
         }
       }
     }
-  };
-  return closure_5.create(obj);
+  });
 };
 prototype["renderActive"] = function renderActive() {
   const self = this;
@@ -659,8 +621,8 @@ prototype["renderActive"] = function renderActive() {
 };
 prototype["render"] = function render() {
   const self = this;
-  let obj = { style: { flex: 1 }, onLayout: this.handleWrapperLayout, ref: this.setWrapperRef, children: null };
-  obj = { enableEmptySections: true };
+  const obj = { style: { flex: 1 }, onLayout: this.handleWrapperLayout, ref: this.setWrapperRef, children: null };
+  const obj3 = { enableEmptySections: true };
   ({ active, panResponder } = this.state);
   const merged = Object.assign(this.props);
   const merged1 = Object.assign(panResponder.panHandlers);
@@ -669,18 +631,19 @@ prototype["render"] = function render() {
   if (tmp7) {
     tmp7 = false !== this.props.scrollEnabled;
   }
-  obj.scrollEnabled = tmp7;
+  obj3.scrollEnabled = tmp7;
   ({ renderItem: obj2.renderItem, renderSectionHeader: obj2.renderSectionHeader } = self);
-  obj.stickySectionHeadersEnabled = false;
-  obj.initialNumToRender = 20;
-  obj.keyExtractor = function keyExtractor(key) {
+  obj3.stickySectionHeadersEnabled = false;
+  obj3.initialNumToRender = 20;
+  obj3.keyExtractor = function keyExtractor(key) {
     return key.key;
   };
-  obj.getItemLayout = self.getItemLayout;
-  const items = [closure_8(closure_6, obj), self.renderActive()];
-  obj[3] = items;
-  return closure_7(closure_3, obj);
+  obj3.getItemLayout = self.getItemLayout;
+  const items = [React6(timestampProducer, obj3), self.renderActive()];
+  obj.children = items;
+  return React5(React3, obj);
 };
-const result = require("set").fileFinishedImporting("components_native/common/SortableChannels.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/common/SortableChannels.tsx");
 
 export default SortableChannels;

@@ -1,9 +1,9 @@
-// Module ID: 13805
-// Function ID: 13806
-// Name: parsed
+// Module ID: 13828
+// Function ID: 13829
+// Name: BrowserConstants
 // Dependencies: [1341, 2]
 
-// Module 13805 (parsed)
+// Module 13828 (BrowserConstants)
 import formatDefault from "format" /* 1341 */;
 
 let str = formatDefault.version;
@@ -149,7 +149,8 @@ if (!tmp20) {
   }
   tmp20 = tmp23;
 }
-const result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/BrowserConstants.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("../discord_common/js/shared/utils/BrowserConstants.tsx");
 
 export const BROWSER_VERSION = parsed;
 export const IS_OCULUS_BROWSER = tmp3;

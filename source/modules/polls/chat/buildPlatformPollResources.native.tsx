@@ -1,21 +1,23 @@
-// Module ID: 11723
-// Function ID: 11724
+// Module ID: 11749
+// Function ID: 11750
 // Name: buildPlatformPollResources
-// Dependencies: [12, 11724, 4560, 576, 7946, 7144, 5618, 1399, 2]
+// Dependencies: [12, 11750, 4574, 576, 7960, 7158, 5632, 1399, 2]
 // Exports: buildPlatformPollResources, getAvatarUrl
 
-// Module 11723 (buildPlatformPollResources)
-import ensureAvatarSource from "ensureAvatarSource" /* 1399 */;
-import registerAssetDefault from "registerAsset" /* 5618 */;
-import registerAssetDefault2 from "registerAsset" /* 7144 */;
-import importDefaultResult from "apply" /* 12 */;
+// Module 11749 (buildPlatformPollResources)
+import nativeDefault from "native" /* 576 */;
+import utils_AvatarUtils from "utils/AvatarUtils" /* 1399 */;
+import _modDef5632 from "module_5632" /* 5632 */;
+import _modDef7158 from "module_7158" /* 7158 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7960 */;
+import apply from "module_12" /* 12 */;
 
-require = arg1;
-let closure_3 = importDefaultResult.mapValues(require("normal").pollStyleSets, (arg0) => {
-  const _require = arg0;
-  closure_1 = _require(4560).createNativeStyleProperties((arg0) => {
-    let tmp = callback(callback2(closure_1_2[3]), arg0);
-    return callback2(closure_1_2[0]).pickBy(tmp, (num) => {
+require = fn;
+let closure_3 = apply.mapValues(fn(11750).pollStyleSets, (arg0) => {
+  _require = arg0;
+  closure_1 = require("createStyles").createNativeStyleProperties((arg0) => {
+    let tmp = closure_0(nativeDefault, arg0);
+    return apply.pickBy(tmp, (num) => {
       let tmp = typeof num !== "number";
       if (typeof num !== "number") {
         tmp = typeof num !== "boolean";
@@ -24,32 +26,29 @@ let closure_3 = importDefaultResult.mapValues(require("normal").pollStyleSets, (
     });
   });
   return (arg0, arg1) => {
-    let obj = callback2(closure_1_2[0]);
-    let tmp = callback(callback2(closure_1_2[3]), arg1);
-    obj = {};
-    const merged = Object.assign(callback2(arg0, arg1));
-    const merged1 = Object.assign(obj.pickBy(callback(callback2(closure_1_2[3]), arg1), (num) => {
+    let tmp = closure_0(nativeDefault, arg1);
+    const merged = Object.assign(closure_1(arg0, arg1));
+    const merged1 = Object.assign(apply.pickBy(tmp, (num) => {
       let tmp = typeof num === "number";
       if (typeof num !== "number") {
         tmp = typeof num === "boolean";
       }
       return tmp;
     }));
-    return obj;
+    return {};
   };
 });
-const result = require("set").fileFinishedImporting("modules/polls/chat/buildPlatformPollResources.native.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/polls/chat/buildPlatformPollResources.native.tsx");
 
 export const buildPlatformPollResources = function buildPlatformPollResources(theme, layoutType) {
-  const _require = theme;
-  importDefault = layoutType;
-  const obj = { styles: importDefaultResult.mapValues(closure_3, (arg0) => arg0(closure_0, closure_1)), selectedIcon: null, checkmarkIcon: null };
-  const obj2 = importDefaultResult;
-  obj[1] = _require(7946).getAssetUriForEmbed(registerAssetDefault2);
-  const obj3 = _require(7946);
-  obj[2] = _require(7946).getAssetUriForEmbed(registerAssetDefault);
+  closure_0 = theme;
+  closure_1 = layoutType;
+  const obj = { styles: apply.mapValues(closure_3, (fn) => fn(closure_0, closure_1)), selectedIcon: null, checkmarkIcon: null };
+  obj.selectedIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7158);
+  obj.checkmarkIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef5632);
   return obj;
 };
 export const getAvatarUrl = function getAvatarUrl(currentUser, guildId) {
-  return ensureAvatarSource.ensureAvatarSource(currentUser.getAvatarSource(guildId, false)).uri;
+  return utils_AvatarUtils.ensureAvatarSource(currentUser.getAvatarSource(guildId, false)).uri;
 };

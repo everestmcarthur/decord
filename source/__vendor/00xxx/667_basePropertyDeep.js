@@ -4,8 +4,10 @@
 // Dependencies: [591]
 
 // Module 667 (basePropertyDeep)
+import baseGet from "baseGet" /* 591 */;
+
 
 export default function basePropertyDeep(arg0) {
   closure_0 = arg0;
-  return (arg0) => callback(closure_1_1[0])(arg0, callback);
+  return (arg0) => baseGet(arg0, closure_0);
 };

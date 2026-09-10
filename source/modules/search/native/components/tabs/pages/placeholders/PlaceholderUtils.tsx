@@ -1,13 +1,13 @@
-// Module ID: 16702
-// Function ID: 16703
-// Name: getAdjustedPlaceholderCount
+// Module ID: 16739
+// Function ID: 16740
+// Name: PlaceholderUtils
 // Dependencies: [2]
 // Exports: getAdjustedPlaceholderCount
 
-// Module 16702 (getAdjustedPlaceholderCount)
-import set from "set" /* 2 */;
+// Module 16739 (PlaceholderUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/PlaceholderUtils.tsx");
+const result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/PlaceholderUtils.tsx");
 
 export const getAdjustedPlaceholderCount = function getAdjustedPlaceholderCount(numResults) {
   ({ numColumns, placeholderCount } = numResults);

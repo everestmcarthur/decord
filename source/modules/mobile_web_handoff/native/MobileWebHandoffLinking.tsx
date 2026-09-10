@@ -1,302 +1,201 @@
-// Module ID: 7316
-// Function ID: 7317
-// Name: createHandoffTokenWithLoadingModal
-// Dependencies: [5, 502, 1074, 4763, 7317, 7319, 1242, 1255, 7320, 1365, 4255, 2]
+// Module ID: 7330
+// Function ID: 7331
+// Name: MobileWebHandoffLinking
+// Dependencies: [5, 502, 1074, 4777, 7331, 7333, 1242, 1255, 7334, 1365, 4268, 2]
 
-// Module 7316 (createHandoffTokenWithLoadingModal)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "fetchFingerprint" /* 502 */;
-import ME from "ME" /* 1074 */;
+// Module 7330 (MobileWebHandoffLinking)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import FingerprintUtils from "FingerprintUtils" /* 1255 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-const require = arg1;
+require = fn;
 function createHandoffTokenWithLoadingModal(arg0) {
   ({ nonce: require, fingerprint: importDefault, handoffSource: dependencyMap } = arg0);
-  return new Promise((arg0) => {
-    closure_0 = arg0;
-    let obj = closure_1_1(closure_1_2[3]);
-    obj.popWithKey(closure_1_8);
-    if (closure_1_4.isAuthenticated()) {
-      obj = { operation: null, onResolved: null, onRejected: null };
-      obj[0] = function operation(arg0) {
-        return closure_1_1(closure_1_2[5]).createHandoffToken(closure_0);
+  return new Promise((onResolved) => {
+    fingerprint(handoff_source[3]).popWithKey(closure_1_8);
+    if (authenticated.isAuthenticated()) {
+      let obj2 = {
+        operation() {
+            return fingerprint(handoff_source[5]).createHandoffToken(closure_0);
+          },
+        onResolved,
+        onRejected() {
+            const obj2 = { reason: "handoff_token_fetch_failure", fingerprint: null, handoff_source: null };
+            const obj = AnalyticsUtilsDefault;
+            obj2.fingerprint = FingerprintUtils.maybeExtractId(fingerprint);
+            obj2.handoff_source = handoff_source;
+            obj.track(constants.MOBILE_WEB_HANDOFF_FAILURE, obj2, { fingerprint });
+            onResolved("null");
+          }
       };
-      obj[1] = arg0;
-      obj[2] = function onRejected(arg0) {
-        let obj = closure_2_1(closure_2_2[6]);
-        obj = { reason: "handoff_token_fetch_failure", fingerprint: closure_2_0(closure_2_2[7]).maybeExtractId(closure_1_1), handoff_source: closure_1_2 };
-        obj = { fingerprint: closure_1_1 };
-        obj.track(closure_2_5.MOBILE_WEB_HANDOFF_FAILURE, obj, obj);
-        callback("null");
-      };
-      const result = closure_1_0(tmp2[4]).showSimpleLoadingModal(closure_1_8, obj);
-      const obj6 = closure_1_0(tmp2[4]);
+      const result = require("SimpleLoadingModal").showSimpleLoadingModal(closure_1_8, obj2);
+      const obj6 = require("SimpleLoadingModal");
     } else {
-      obj = { reason: "user_not_authenticated_in_app", fingerprint: null, handoff_source: null };
-      const tmpResult = closure_1_1(tmp2[6]);
-      obj[1] = closure_1_0(tmp2[7]).maybeExtractId(closure_1);
-      obj[2] = closure_2;
-      obj1 = { fingerprint: null };
-      obj1[0] = closure_1;
-      tmpResult.track(closure_1_5.MOBILE_WEB_HANDOFF_FAILURE, obj, obj1);
-      arg0("null");
-      const obj4 = closure_1_0(tmp2[7]);
+      const obj3 = { reason: "user_not_authenticated_in_app", fingerprint: null, handoff_source: null };
+      const tmpResult = fingerprint(tmp2[6]);
+      obj3.fingerprint = require("FingerprintUtils").maybeExtractId(fingerprint);
+      obj3.handoff_source = handoff_source;
+      const obj5 = { fingerprint };
+      tmpResult.track(constants.MOBILE_WEB_HANDOFF_FAILURE, obj3, obj5);
+      onResolved("null");
+      const obj4 = require("FingerprintUtils");
     }
   });
 }
-function _redirectWithHandoffToken() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c5 = 0;
-    c6 = 0;
-    const iter = (function*(arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === uRL) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_4 = tmp5;
-              let obj4 = tmp2;
-              let flag2;
-              closure_2 = undefined;
-              obj1 = flag2;
-              if (flag2 === undefined) {
-                obj1 = {};
-              }
-              flag2 = obj1.forceExternalBrowser;
-              if (flag2 === undefined) {
-                flag2 = false;
-              }
-              closure_2 = Object.assign(obj1, Object.create(null));
-              obj4 = undefined;
-              closure_4 = undefined;
-              uRL = undefined;
-              uRL = 1;
-              c6 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              let obj3 = { value: null, done: true };
-              obj3[0] = arg1;
-              return obj3;
-            } else {
-              obj4 = {};
-              const merged = Object.assign(closure_2);
-              const nonce = closure_2.nonce;
-              closure_2 = nonce;
-              if (nonce == null) {
-                obj3 = flag2(closure_2[5]);
-                closure_2 = obj3.generateNonce();
-              }
-              obj4.nonce = closure_2;
-              obj4 = callback(closure_2[8]);
-              obj4.handoffSource = obj4.getLoginHandoffSourceFromRedirectTo(callback);
-              uRL = 2;
-              c6 = 1;
-              const obj5 = { value: null, done: false };
-              obj5[0] = callback2(obj4);
-              return obj5;
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = arg1;
-            return obj6;
-          } else {
-            closure_4 = arg1;
-            if (true === closure_2.skipLoginRedirect) {
-              uRL = (function sanitizeRedirectURL(closure_0) {
-                uRL = new URL("" + location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT);
-                const uRL1 = new URL(closure_0, uRL);
-                ({ pathname: tmp.pathname, search: tmp.search, hash: tmp.hash } = uRL1);
-                return uRL;
-              })(callback);
-            } else {
-              const _URL = URL;
-              obj = flag2(closure_2[9]);
-              uRL = new URL(obj.makeUrl(constants.LOGIN_HANDOFF, false));
-            }
-            const searchParams = uRL.searchParams;
-            searchParams.append("handoff_token", closure_4);
-            if (true !== closure_2.skipLoginRedirect) {
-              const searchParams2 = uRL.searchParams;
-              searchParams2.append("handoff_key", obj4.nonce);
-              const searchParams3 = uRL.searchParams;
-              searchParams3.append("redirect_to", callback);
-            }
-            obj1 = flag2(closure_2[10]);
-            if (flag2) {
-              obj1.openURLExternally(uRL.href);
-            } else {
-              obj1.performURLNavigation(uRL.href);
-            }
-            c6 = 3;
-          }
-        } catch (tmp50) {
-          c6 = tmp;
-          throw tmp50;
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_10 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+let closure_10 = async function _redirectWithHandoffToken(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj3 = { value, done: true };
+      return obj3;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _redirectDeveloperPortalWithHandoffToken() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c5 = 0;
-    c6 = 0;
-    const iter = (function*(arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+    try {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
-          throw arg1;
+          c6 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          c6 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let uRL = tmp5;
-              closure_3 = tmp2;
-              obj1 = undefined;
-              if (obj1 === undefined) {
-                obj1 = {};
-              }
-              let obj3;
-              closure_3 = undefined;
-              uRL = undefined;
-              c5 = 1;
-              c6 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              obj3 = {};
-              const merged = Object.assign(obj1);
-              const nonce = obj1.nonce;
-              obj3 = nonce;
-              if (nonce == null) {
-                obj1 = obj1(obj3[5]);
-                obj3 = obj1.generateNonce();
-              }
-              obj3.nonce = obj3;
-              obj3.handoffSource = callback(obj3[8]).LoginHandoffSource.ROLE_SUBSCRIPTION_SETTING;
-              c5 = 2;
-              c6 = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = callback2(obj3);
-              return obj4;
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            closure_3 = arg1;
-            const _URL = URL;
-            const _location = location;
-            const _HermesInternal = HermesInternal;
-            uRL = new URL("" + location.protocol + c6.DEVELOPER_PORTAL_LOGIN_HANDOFF(obj3.nonce, closure_3, callback));
-            obj1(obj3[10]).performURLNavigation(uRL.href);
-            c6 = 3;
-            return { value: "HermesInternal", done: null };
+          closure_4 = tmp5;
+          closure_3 = tmp2;
+          closure_131_1 = undefined;
+          closure_131_2 = undefined;
+          closure_131_0 = closure_0;
+          let obj7 = closure_1;
+          if (closure_1 === undefined) {
+            obj7 = {};
           }
-        } catch (tmp17) {
-          c6 = tmp;
-          throw tmp17;
+          let flag2 = obj7.forceExternalBrowser;
+          if (flag2 === undefined) {
+            flag2 = false;
+          }
+          closure_131_1 = flag2;
+          closure_131_2 = Object.assign(obj7, Object.assign({ forceExternalBrowser: 0 }));
+          closure_131_3 = undefined;
+          closure_131_4 = undefined;
+          closure_131_5 = undefined;
+          c5 = 1;
+          c6 = 1;
+          return { value: "PX_16", done: true };
         }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj9 = { value, done: true };
+          return obj9;
+        } else {
+          const obj10 = {};
+          const merged = Object.assign(closure_131_2);
+          let nonce = closure_131_2.nonce;
+          if (nonce == null) {
+            nonce = closure_132_1(closure_132_2[5]).generateNonce();
+            const obj4 = closure_132_1(closure_132_2[5]);
+          }
+          obj10.nonce = nonce;
+          obj10.handoffSource = closure_132_0(closure_132_2[8]).getLoginHandoffSourceFromRedirectTo(closure_131_0);
+          closure_131_3 = obj10;
+          c5 = 2;
+          c6 = 1;
+          const obj11 = { value: closure_132_9(closure_131_3), done: false };
+          return obj11;
+        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        const obj12 = { value, done: true };
+        return obj12;
+      } else {
+        closure_131_4 = value;
+        if (true === closure_131_2.skipLoginRedirect) {
+          let uRL = (function sanitizeRedirectURL(arg0) {
+            const uRL = new URL("" + location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT);
+            const uRL1 = new URL(arg0, uRL);
+            ({ pathname: tmp.pathname, search: tmp.search, hash: tmp.hash } = uRL1);
+            return uRL;
+          })(closure_131_0);
+        } else {
+          const _URL = URL;
+          uRL = new URL(closure_132_1(closure_132_2[9]).makeUrl(closure_132_7.LOGIN_HANDOFF, false));
+          const obj = closure_132_1(closure_132_2[9]);
+        }
+        closure_131_5 = uRL;
+        const searchParams = closure_131_5.searchParams;
+        searchParams.append("handoff_token", closure_131_4);
+        if (true !== closure_131_2.skipLoginRedirect) {
+          const searchParams2 = closure_131_5.searchParams;
+          searchParams2.append("handoff_key", closure_131_3.nonce);
+          const searchParams3 = closure_131_5.searchParams;
+          searchParams3.append("redirect_to", closure_131_0);
+        }
+        const obj2 = closure_132_1(closure_132_2[10]);
+        if (closure_131_1) {
+          obj2.openURLExternally(closure_131_5.href);
+        } else {
+          obj2.performURLNavigation(closure_131_5.href);
+        }
+        c6 = 3;
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_11 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp50) {
+      c6 = tmp;
+      throw tmp50;
+    }
   }
-  return applyArgumentsResult;
-}
-({ AnalyticEvents: c5, MarketingURLs: closure_6, Routes: error } = ME);
+};
+let closure_11 = async function _redirectDeveloperPortalWithHandoffToken() {
+  const obj7 = {};
+  const merged = Object.assign(closure_131_1);
+  let nonce = closure_131_1.nonce;
+  if (nonce == null) {
+    nonce = closure_132_1(closure_132_2[5]).generateNonce();
+    closure_132_1(closure_132_2[5]);
+  }
+  obj7.nonce = nonce;
+  obj7.handoffSource = closure_132_0(closure_132_2[8]).LoginHandoffSource.ROLE_SUBSCRIPTION_SETTING;
+  closure_131_2 = obj7;
+  closure_131_3 = await closure_132_9(closure_131_2);
+  const _URL = URL;
+  const _location = location;
+  const _HermesInternal = HermesInternal;
+  const uRL = new URL("" + location.protocol + closure_132_6.DEVELOPER_PORTAL_LOGIN_HANDOFF(closure_131_2.nonce, closure_131_3, closure_131_0));
+  closure_131_4 = uRL;
+  closure_132_1(closure_132_2[10]).performURLNavigation(closure_131_4.href);
+  await "HermesInternal";
+  closure_3 = tmp2;
+  closure_131_0 = closure_0;
+  let obj5 = closure_1;
+  if (closure_1 === undefined) {
+    obj5 = {};
+  }
+  closure_131_1 = obj5;
+  return "PX_16";
+};
+const Constants = fn(1074);
+({ AnalyticEvents: hasOwnProperty, MarketingURLs: metroRequire, Routes: closure_7 } = Constants);
 let c8 = "mweb-handoff";
-let result = require("set").fileFinishedImporting("modules/mobile_web_handoff/native/MobileWebHandoffLinking.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/mobile_web_handoff/native/MobileWebHandoffLinking.tsx");
 
 export default {
-  redirectWithHandoffToken(combined, arg1) {
+  redirectWithHandoffToken() {
     const self = this;
-    const apply = _redirectWithHandoffToken.apply;
+    const apply = closure_10.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -304,9 +203,9 @@ export default {
     }
     return applyArgumentsResult;
   },
-  redirectDeveloperPortalWithHandoffToken(DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY) {
+  redirectDeveloperPortalWithHandoffToken() {
     const self = this;
-    const apply = _redirectDeveloperPortalWithHandoffToken.apply;
+    const apply = closure_11.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {

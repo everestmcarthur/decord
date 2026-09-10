@@ -1,7 +1,11 @@
 // Module ID: 4313
 // Function ID: 4314
-// Dependencies: []
+// Dependencies: [4314]
 
 // Module 4313
+const require = globalThis.__r;
 
-export default { uiViewClassName: "RiveView", supportsRawText: false, bubblingEventTypes: {}, directEventTypes: {}, validAttributes: { artboardName: true, stateMachineName: true, autoPlay: true, file: true, alignment: true, fit: true, layoutScaleFactor: true, dataBind: true, onError: true, hybridRef: true } };
+for (const key10013 in require("module_4314")) {
+  arg5[key10013] = require("module_4314")[key10013];
+  continue;
+}

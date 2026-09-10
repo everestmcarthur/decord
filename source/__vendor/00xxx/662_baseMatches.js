@@ -4,20 +4,24 @@
 // Dependencies: [663, 588, 664]
 
 // Module 662 (baseMatches)
+import baseIsMatch from "baseIsMatch" /* 664 */;
+
+const require = globalThis.__r;
+
 
 export default function baseMatches(arg0) {
-  const _require = arg0;
-  arr = _require(arr[0])(arg0);
+  _require = arg0;
+  arr = require("module_663")(arg0);
   if (1 == arr.length) {
     if (arr[0][2]) {
-      let fn = _require(arr[1])(arr[0][0], arr[0][1]);
+      let fn = require("matchesStrictComparable")(arr[0][0], arr[0][1]);
     }
     return fn;
   }
   fn = (arg0) => {
-    let tmp2 = arg0 === callback;
+    let tmp2 = arg0 === closure_0;
     if (!tmp2) {
-      tmp2 = callback(arr[2])(arg0, tmp, arr);
+      tmp2 = baseIsMatch(arg0, tmp, arr);
     }
     return tmp2;
   };

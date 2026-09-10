@@ -1,27 +1,26 @@
-// Module ID: 13809
-// Function ID: 13810
-// Name: getBrowserInvertedWantsConfig
+// Module ID: 13832
+// Function ID: 13833
+// Name: BrowserInvertedWantsExperiment
 // Dependencies: [1433, 1116, 2]
 // Exports: getBrowserInvertedWantsConfig
 
-// Module 13809 (getBrowserInvertedWantsConfig)
-import set from "set" /* 2 */;
-import PlatformTypes from "PlatformTypes" /* 1116 */;
+// Module 13832 (BrowserInvertedWantsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-let obj = { 1: null };
-obj[1] = { invertWants: true };
-let closure_2 = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-03-browser-inverted-wants", defaultConfig: { invertWants: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/media_engine/BrowserInvertedWantsExperiment.tsx");
+const obj = { kind: "user", name: "2026-03-browser-inverted-wants", defaultConfig: { invertWants: false }, variations: null };
+let obj2 = { 1: null };
+obj2[1] = { invertWants: true };
+obj.variations = obj2;
+const config = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/media_engine/BrowserInvertedWantsExperiment.tsx");
 
-export const getBrowserInvertedWantsConfig = function getBrowserInvertedWantsConfig(arg0) {
-  let config = PlatformTypes;
-  if (config.isDesktop()) {
-    config = { invertWants: false };
+export const getBrowserInvertedWantsConfig = function getBrowserInvertedWantsConfig(location) {
+  if (obj.isDesktop()) {
+    let obj2 = { invertWants: false };
   } else {
-    const obj = { location: null };
-    obj[0] = arg0;
-    config = config.getConfig(obj);
+    const obj3 = { location };
+    obj2 = config.getConfig(obj3);
   }
-  return config;
+  return obj2;
 };

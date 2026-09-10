@@ -1,15 +1,15 @@
-// Module ID: 12136
-// Function ID: 12137
-// Name: getActivityLaunchURL
+// Module ID: 12162
+// Function ID: 12163
+// Name: getApplicationInstallURL
 // Dependencies: [1074, 2]
 // Exports: getActivityLaunchURL, getApplicationInstallURL
 
-// Module 12136 (getActivityLaunchURL)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 12162 (getApplicationInstallURL)
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const Routes = ME.Routes;
-let result = set.fileFinishedImporting("modules/applications/getApplicationInstallURL.tsx");
+const Routes = Constants.Routes;
+let result = size.fileFinishedImporting("modules/applications/getApplicationInstallURL.tsx");
 
 export const getActivityLaunchURL = function getActivityLaunchURL(applicationId) {
   ({ customId, referrerId, linkId } = applicationId);

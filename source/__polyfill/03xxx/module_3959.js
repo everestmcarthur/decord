@@ -1,9 +1,33 @@
 // Module ID: 3959
 // Function ID: 3960
-// Dependencies: []
+// Dependencies: [3663, 3664]
+// Exports: default
 
 // Module 3959
-arg5.numericPatterns = undefined;
-arg5.timezonePatterns = undefined;
-arg5.numericPatterns = { month: /^(1[0-2]|0?\d)/, date: /^(3[0-1]|[0-2]?\d)/, dayOfYear: /^(36[0-6]|3[0-5]\d|[0-2]?\d?\d)/, week: /^(5[0-3]|[0-4]?\d)/, hour23h: /^(2[0-3]|[0-1]?\d)/, hour24h: /^(2[0-4]|[0-1]?\d)/, hour11h: /^(1[0-1]|0?\d)/, hour12h: /^(1[0-2]|0?\d)/, minute: /^[0-5]?\d/, second: /^[0-5]?\d/, singleDigit: /^\d/, twoDigits: /^\d{1,2}/, threeDigits: /^\d{1,3}/, fourDigits: /^\d{1,4}/, anyDigitsSigned: /^-?\d+/, singleDigitSigned: /^-?\d/, twoDigitsSigned: /^-?\d{1,2}/, threeDigitsSigned: /^-?\d{1,3}/, fourDigitsSigned: /^-?\d{1,4}/ };
-arg5.timezonePatterns = { basicOptionalMinutes: /^([+-])(\d{2})(\d{2})?|Z/, basic: /^([+-])(\d{2})(\d{2})|Z/, basicOptionalSeconds: /^([+-])(\d{2})(\d{2})((\d{2}))?|Z/, extended: /^([+-])(\d{2}):(\d{2})|Z/, extendedOptionalSeconds: /^([+-])(\d{2}):(\d{2})(:(\d{2}))?|Z/ };
+import _typeof_mod from "module_3663" /* 3663 */;
+import requiredArgs_mod from "requiredArgs" /* 3664 */;
+
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
+  let tmp3 = obj;
+} else {
+  tmp3 = _typeof;
+}
+_typeof = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
+} else {
+  tmp5 = requiredArgs;
+}
+requiredArgs = tmp5;
+
+export default function isEqual(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === _typeof.default(arg1).getTime();
+};
+export default exports.default;

@@ -1,52 +1,57 @@
-// Module ID: 13591
-// Function ID: 13592
-// Name: TierFeatures
-// Dependencies: [32, 19, 17, 1074, 1373, 21, 8762, 1114, 10119, 12536, 5101, 5097, 10386, 13379, 9376, 4503, 13592, 4560, 576, 13586, 5441, 4296, 4561, 4556, 4495, 4411, 4987, 5123, 4454, 13593, 13595, 4409, 1178, 13597, 13598, 5581, 12568, 2]
+// Module ID: 13614
+// Function ID: 13615
+// Name: GuildBoostingMarketingTierCards
+// Dependencies: [32, 19, 17, 1074, 1373, 21, 8790, 1114, 10146, 12562, 5115, 5111, 10413, 13402, 9403, 4517, 13615, 4574, 576, 13609, 5455, 4310, 4575, 4570, 4509, 4425, 5001, 5137, 4468, 13616, 13618, 4423, 1178, 13620, 13621, 5595, 12594, 2]
 // Exports: default
 
-// Module 13591 (TierFeatures)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import useThemeDefault from "useTheme" /* 4495 */;
-import CONTROL_RESOLUTION from "CONTROL_RESOLUTION" /* 13592 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 1074 */;
-import { BoostedGuildFeatures } from "GuildFeatures" /* 1373 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13614 (GuildBoostingMarketingTierCards)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import shared from "shared" /* 4425 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 4468 */;
+import useThemeDefault from "useTheme" /* 4509 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import timing from "timing" /* 4575 */;
+import LinearGradientDefault from "LinearGradient" /* 5001 */;
+import Pressables from "Pressables" /* 5137 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5595 */;
+import ServerBoostStreamQualityMarketingExperiment from "ServerBoostStreamQualityMarketingExperiment" /* 13615 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+const require = globalThis.__r;
+
+require = fn;
 function TierFeatures(features) {
-  const tmp = callback4();
-  const _require = tmp;
+  const tmp = closure_13();
+  _require = tmp;
   features = features.features;
   const isVisible = features.isVisible;
-  let obj = _require(isVisible[21]);
   const fn = function o() {
-    let obj = lib(isVisible[21]);
     let num = 0;
     if (isVisible) {
       num = 150;
     }
+    const obj = ReanimatedRexport;
+    const tmp3 = isVisible;
     let num2 = 0;
-    if (isVisible) {
+    if (tmp3) {
       num2 = 1;
     }
-    obj = { opacity: null };
-    obj = { duration: 150, easing: null };
-    const Easing = tmp(tmp2[21]).Easing;
-    obj[1] = Easing.inOut(lib(isVisible[21]).Easing.quad);
-    obj[0] = obj.withDelay(num, lib(isVisible[22]).withTiming(num2, obj));
-    return obj;
+    const obj2 = { opacity: null };
+    const obj3 = { duration: 150, easing: null };
+    const Easing = tmp(4310).Easing;
+    obj3.easing = Easing.inOut(ReanimatedRexport.Easing.quad);
+    obj2.opacity = obj.withDelay(num, timing.withTiming(num2, obj3));
+    return obj2;
   };
-  obj = { withDelay: _require(isVisible[21]).withDelay, isVisible, TIER_FEATURE_ANIMATION_DURATION_MS: 150, withTiming: _require(isVisible[22]).withTiming, Easing: _require(isVisible[21]).Easing };
-  fn.__closure = obj;
+  let obj = require("ReanimatedRexport");
+  fn.__closure = { withDelay: require("ReanimatedRexport").withDelay, isVisible, TIER_FEATURE_ANIMATION_DURATION_MS: 150, withTiming: require("timing").withTiming, Easing: require("ReanimatedRexport").Easing };
   fn.__workletHash = 13329849944491;
-  fn.__initData = closure_14;
+  fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  obj = { accessibilityElementsHidden: !isVisible, importantForAccessibility: "no-hide-descendants", style: null, children: null };
+  let obj3 = { accessibilityElementsHidden: !isVisible, importantForAccessibility: "no-hide-descendants", style: null, children: null };
   let items = [tmp.cardFeatures, , ];
   let cardFeaturesInvisible = !isVisible;
   if (!isVisible) {
@@ -54,53 +59,47 @@ function TierFeatures(features) {
   }
   items[1] = cardFeaturesInvisible;
   items[2] = animatedStyle;
-  obj[2] = items;
-  obj[3] = features.map((isIncluded) => {
-    const items = [lib.cardFeature, , ];
+  obj3.style = items;
+  obj3.children = features.map((isIncluded, index) => {
+    const items = [cardFeature.cardFeature, , ];
     isIncluded = isIncluded.isIncluded;
     let cardFeatureExcluded = !isIncluded;
     if (!isIncluded) {
       cardFeatureExcluded = tmp3.cardFeatureExcluded;
     }
     items[1] = cardFeatureExcluded;
-    let obj = { style: items, children: null };
-    items[2] = arg1 === features.length - 1 && lib.cardFeatureLast;
-    obj = { size: "custom", style: tmp3.cardFeatureIcon, color: "white" };
-    items1 = [closure_1_9(isIncluded.IconComponent, obj), ];
+    const obj = { style: items, children: null };
+    items[2] = index === features.length - 1 && cardFeature.cardFeatureLast;
+    items1 = [React7(isIncluded.IconComponent, { size: "custom", style: cardFeature.cardFeatureIcon, color: "white" }), ];
     const isIncluded2 = isIncluded.isIncluded;
     let cardFeatureExcludedCopy = !isIncluded2;
     if (!isIncluded2) {
       cardFeatureExcludedCopy = tmp3.cardFeatureExcludedCopy;
     }
-    obj = { style: items2, color: "text-overlay-light", variant: "text-md/semibold", children: isIncluded.getCopy() };
-    items2 = [cardFeatureExcludedCopy];
-    items1[1] = closure_1_9(lib(isVisible[23]).Text, obj);
-    obj[1] = items1;
-    return closure_1_10(closure_1_5, obj, arg1);
+    const obj3 = { style: null, color: "text-overlay-light", variant: "text-md/semibold", children: isIncluded.getCopy() };
+    const items2 = [cardFeatureExcludedCopy];
+    obj3.style = items2;
+    items1[1] = React7(Text_Text.Text, obj3);
+    obj.children = items1;
+    return closure_2_10(View, obj, index);
   });
-  return closure_9(features(isVisible[21]).View, obj);
+  return closure_9(features(isVisible[21]).View, obj3);
 }
-let c4 = importAllResult;
-({ AppliedGuildBoostsRequiredForBoostedGuildTier: closure_6, BoostedGuildTiers } = ME);
-({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
+const View = fn(17).View;
+const Constants = fn(1074);
+({ AppliedGuildBoostsRequiredForBoostedGuildTier: metroRequire, BoostedGuildTiers } = Constants);
+const BoostedGuildFeatures = fn(1373).BoostedGuildFeatures;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 let obj = { tier: BoostedGuildTiers.TIER_1, features: null };
-obj = {
-  orderCollapsed: 0,
-  isIncluded: true,
-  IconComponent: require("ReactionIcon").ReactionIcon,
-  getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.formatToPlainString(getSystemLocale.t.Tlz0x1, { numEmojiSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.emoji });
-  }
-};
 let items = [
-  obj,
   {
+    orderCollapsed: 0,
     isIncluded: true,
-    IconComponent: require("StickerIcon").StickerIcon,
+    IconComponent: fn(8790).ReactionIcon,
     getCopy() {
-      const intl = getSystemLocale.intl;
-      return intl.formatToPlainString(getSystemLocale.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.stickers });
+      const intl = util.intl;
+      return intl.formatToPlainString(util.t.Tlz0x1, { numEmojiSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.emoji });
     }
   },
 ,
@@ -111,190 +110,204 @@ let items = [
 ,
 ,
 ,
+,
 
 ];
-let obj1 = {
+let obj2 = {
+  orderCollapsed: 0,
   isIncluded: true,
-  IconComponent: require("StickerIcon").StickerIcon,
+  IconComponent: fn(8790).ReactionIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.formatToPlainString(getSystemLocale.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.stickers });
+    const intl = util.intl;
+    return intl.formatToPlainString(util.t.Tlz0x1, { numEmojiSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.emoji });
+  }
+};
+items[1] = {
+  isIncluded: true,
+  IconComponent: fn(10146).StickerIcon,
+  getCopy() {
+    const intl = util.intl;
+    return intl.formatToPlainString(util.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.stickers });
+  }
+};
+let obj3 = {
+  isIncluded: true,
+  IconComponent: fn(10146).StickerIcon,
+  getCopy() {
+    const intl = util.intl;
+    return intl.formatToPlainString(util.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.stickers });
   }
 };
 items[2] = {
   isIncluded: true,
-  IconComponent: require("ScreenArrowIcon").ScreenArrowIcon,
+  IconComponent: fn(12562).ScreenArrowIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.formatToPlainString(getSystemLocale.t.Jbg8oY, { resolution: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.screenShareQualityResolution });
+    const intl = util.intl;
+    return intl.formatToPlainString(util.t.Jbg8oY, { resolution: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.screenShareQualityResolution });
   }
 };
-let obj2 = {
+let obj4 = {
   isIncluded: true,
-  IconComponent: require("ScreenArrowIcon").ScreenArrowIcon,
+  IconComponent: fn(12562).ScreenArrowIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.formatToPlainString(getSystemLocale.t.Jbg8oY, { resolution: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.screenShareQualityResolution });
+    const intl = util.intl;
+    return intl.formatToPlainString(util.t.Jbg8oY, { resolution: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.screenShareQualityResolution });
   }
 };
 items[3] = {
   orderCollapsed: 2,
   isIncluded: true,
-  IconComponent: require("VoiceNormalIcon").VoiceNormalIcon,
+  IconComponent: fn(5115).VoiceNormalIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    let obj = { bitrate: null };
-    const intl2 = getSystemLocale.intl;
-    obj = { bitrate: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.bitrate / 1000 };
-    obj[0] = intl2.formatToPlainString(getSystemLocale.t.w1gmLt, obj);
-    return intl.formatToPlainString(getSystemLocale.t.vBfZzD, obj);
+    const intl = util.intl;
+    const obj = { bitrate: null };
+    const intl2 = util.intl;
+    obj.bitrate = intl2.formatToPlainString(util.t.w1gmLt, { bitrate: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.bitrate / 1000 });
+    return intl.formatToPlainString(util.t.vBfZzD, obj);
   }
 };
-let obj3 = {
+let obj5 = {
   orderCollapsed: 2,
   isIncluded: true,
-  IconComponent: require("VoiceNormalIcon").VoiceNormalIcon,
+  IconComponent: fn(5115).VoiceNormalIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    let obj = { bitrate: null };
-    const intl2 = getSystemLocale.intl;
-    obj = { bitrate: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.bitrate / 1000 };
-    obj[0] = intl2.formatToPlainString(getSystemLocale.t.w1gmLt, obj);
-    return intl.formatToPlainString(getSystemLocale.t.vBfZzD, obj);
+    const intl = util.intl;
+    const obj = { bitrate: null };
+    const intl2 = util.intl;
+    obj.bitrate = intl2.formatToPlainString(util.t.w1gmLt, { bitrate: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.bitrate / 1000 });
+    return intl.formatToPlainString(util.t.vBfZzD, obj);
   }
 };
 items[4] = {
   isIncluded: true,
-  IconComponent: require("StageIcon").StageIcon,
+  IconComponent: fn(5111).StageIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.formatToPlainString(getSystemLocale.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.stageVideoUsers });
+    const intl = util.intl;
+    return intl.formatToPlainString(util.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.stageVideoUsers });
   }
 };
-let obj4 = {
+let obj6 = {
   isIncluded: true,
-  IconComponent: require("StageIcon").StageIcon,
+  IconComponent: fn(5111).StageIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.formatToPlainString(getSystemLocale.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.stageVideoUsers });
+    const intl = util.intl;
+    return intl.formatToPlainString(util.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.stageVideoUsers });
   }
 };
 items[5] = {
   orderCollapsed: 1,
   isIncluded: true,
-  IconComponent: require("GifIcon").GifIcon,
+  IconComponent: fn(10413).GifIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.PbAyub);
+    const intl = util.intl;
+    return intl.string(util.t.PbAyub);
   }
 };
-let obj5 = {
+let obj7 = {
   orderCollapsed: 1,
   isIncluded: true,
-  IconComponent: require("GifIcon").GifIcon,
+  IconComponent: fn(10413).GifIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.PbAyub);
+    const intl = util.intl;
+    return intl.string(util.t.PbAyub);
   }
 };
 items[6] = {
   isIncluded: true,
-  IconComponent: require("ServerGridIcon").ServerGridIcon,
+  IconComponent: fn(13402).ServerGridIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.tzGY0q);
+    const intl = util.intl;
+    return intl.string(util.t.tzGY0q);
   }
 };
-let obj6 = {
+let obj8 = {
   isIncluded: true,
-  IconComponent: require("ServerGridIcon").ServerGridIcon,
+  IconComponent: fn(13402).ServerGridIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.tzGY0q);
+    const intl = util.intl;
+    return intl.string(util.t.tzGY0q);
   }
 };
 items[7] = {
   isIncluded: false,
-  IconComponent: require("UploadIcon").UploadIcon,
+  IconComponent: fn(9403).UploadIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    let obj = { uploadSizeLimit: null };
-    const intl2 = getSystemLocale.intl;
-    obj = { size: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.fileSize / 1024 / 1024 };
-    obj[0] = intl2.formatToPlainString(getSystemLocale.t.pIn7Af, obj);
-    return intl.formatToPlainString(getSystemLocale.t.aFRl53, obj);
-  }
-};
-let obj7 = {
-  isIncluded: false,
-  IconComponent: require("UploadIcon").UploadIcon,
-  getCopy() {
-    const intl = getSystemLocale.intl;
-    let obj = { uploadSizeLimit: null };
-    const intl2 = getSystemLocale.intl;
-    obj = { size: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.fileSize / 1024 / 1024 };
-    obj[0] = intl2.formatToPlainString(getSystemLocale.t.pIn7Af, obj);
-    return intl.formatToPlainString(getSystemLocale.t.aFRl53, obj);
-  }
-};
-items[8] = {
-  isIncluded: false,
-  IconComponent: require("ServerGridIcon").ServerGridIcon,
-  getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["1a5rjl"]);
-  }
-};
-let obj8 = {
-  isIncluded: false,
-  IconComponent: require("ServerGridIcon").ServerGridIcon,
-  getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["1a5rjl"]);
-  }
-};
-items[9] = {
-  isIncluded: false,
-  IconComponent: require("ReactionIcon").ReactionIcon,
-  getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["6PV6Qc"]);
+    const intl = util.intl;
+    const obj = { uploadSizeLimit: null };
+    const intl2 = util.intl;
+    obj.uploadSizeLimit = intl2.formatToPlainString(util.t.pIn7Af, { size: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.fileSize / 1024 / 1024 });
+    return intl.formatToPlainString(util.t.aFRl53, obj);
   }
 };
 let obj9 = {
   isIncluded: false,
-  IconComponent: require("ReactionIcon").ReactionIcon,
+  IconComponent: fn(9403).UploadIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["6PV6Qc"]);
+    const intl = util.intl;
+    const obj = { uploadSizeLimit: null };
+    const intl2 = util.intl;
+    obj.uploadSizeLimit = intl2.formatToPlainString(util.t.pIn7Af, { size: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.fileSize / 1024 / 1024 });
+    return intl.formatToPlainString(util.t.aFRl53, obj);
+  }
+};
+items[8] = {
+  isIncluded: false,
+  IconComponent: fn(13402).ServerGridIcon,
+  getCopy() {
+    const intl = util.intl;
+    return intl.string(util.t["1a5rjl"]);
+  }
+};
+let obj10 = {
+  isIncluded: false,
+  IconComponent: fn(13402).ServerGridIcon,
+  getCopy() {
+    const intl = util.intl;
+    return intl.string(util.t["1a5rjl"]);
+  }
+};
+items[9] = {
+  isIncluded: false,
+  IconComponent: fn(8790).ReactionIcon,
+  getCopy() {
+    const intl = util.intl;
+    return intl.string(util.t["6PV6Qc"]);
+  }
+};
+let obj11 = {
+  isIncluded: false,
+  IconComponent: fn(8790).ReactionIcon,
+  getCopy() {
+    const intl = util.intl;
+    return intl.string(util.t["6PV6Qc"]);
   }
 };
 items[10] = {
   isIncluded: false,
-  IconComponent: require("LinkIcon").LinkIcon,
+  IconComponent: fn(4517).LinkIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.adNGjW);
+    const intl = util.intl;
+    return intl.string(util.t.adNGjW);
   }
 };
-obj[1] = items;
+obj.features = items;
 let items1 = [obj, , ];
-let obj11 = { tier: BoostedGuildTiers.TIER_2, features: null };
-const obj10 = {
+const obj13 = { tier: BoostedGuildTiers.TIER_2, features: null };
+let obj12 = {
   isIncluded: false,
-  IconComponent: require("LinkIcon").LinkIcon,
+  IconComponent: fn(4517).LinkIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.adNGjW);
+    const intl = util.intl;
+    return intl.string(util.t.adNGjW);
   }
 };
 let items2 = [
   {
     isIncluded: true,
-    IconComponent: require("ReactionIcon").ReactionIcon,
+    IconComponent: fn(8790).ReactionIcon,
     getCopy() {
-      const intl = getSystemLocale.intl;
-      return intl.formatToPlainString(getSystemLocale.t.Tlz0x1, { numEmojiSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.emoji });
+      const intl = util.intl;
+      return intl.formatToPlainString(util.t.Tlz0x1, { numEmojiSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.emoji });
     }
   },
 ,
@@ -308,210 +321,206 @@ let items2 = [
 ,
 
 ];
-let obj12 = {
+let obj14 = {
   isIncluded: true,
-  IconComponent: require("ReactionIcon").ReactionIcon,
+  IconComponent: fn(8790).ReactionIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.formatToPlainString(getSystemLocale.t.Tlz0x1, { numEmojiSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.emoji });
+    const intl = util.intl;
+    return intl.formatToPlainString(util.t.Tlz0x1, { numEmojiSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.emoji });
   }
 };
 items2[1] = {
   isIncluded: true,
-  IconComponent: require("StickerIcon").StickerIcon,
+  IconComponent: fn(10146).StickerIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.formatToPlainString(getSystemLocale.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.stickers });
+    const intl = util.intl;
+    return intl.formatToPlainString(util.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.stickers });
   }
 };
-let obj13 = {
+let obj15 = {
   isIncluded: true,
-  IconComponent: require("StickerIcon").StickerIcon,
+  IconComponent: fn(10146).StickerIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.formatToPlainString(getSystemLocale.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.stickers });
+    const intl = util.intl;
+    return intl.formatToPlainString(util.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.stickers });
   }
 };
 items2[2] = {
   orderCollapsed: 0,
   isIncluded: true,
-  IconComponent: require("ScreenArrowIcon").ScreenArrowIcon,
+  IconComponent: fn(12562).ScreenArrowIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    const obj = { resolution: CONTROL_RESOLUTION.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards") };
-    return intl.formatToPlainString(getSystemLocale.t.Jbg8oY, obj);
+    const intl = util.intl;
+    const obj = { resolution: ServerBoostStreamQualityMarketingExperiment.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards") };
+    return intl.formatToPlainString(util.t.Jbg8oY, obj);
   }
 };
-let obj14 = {
+let obj16 = {
   orderCollapsed: 0,
   isIncluded: true,
-  IconComponent: require("ScreenArrowIcon").ScreenArrowIcon,
+  IconComponent: fn(12562).ScreenArrowIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    const obj = { resolution: CONTROL_RESOLUTION.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards") };
-    return intl.formatToPlainString(getSystemLocale.t.Jbg8oY, obj);
+    const intl = util.intl;
+    const obj = { resolution: ServerBoostStreamQualityMarketingExperiment.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards") };
+    return intl.formatToPlainString(util.t.Jbg8oY, obj);
   }
 };
 items2[3] = {
   isIncluded: true,
-  IconComponent: require("VoiceNormalIcon").VoiceNormalIcon,
+  IconComponent: fn(5115).VoiceNormalIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    let obj = { bitrate: null };
-    const intl2 = getSystemLocale.intl;
-    obj = { bitrate: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.bitrate / 1000 };
-    obj[0] = intl2.formatToPlainString(getSystemLocale.t.w1gmLt, obj);
-    return intl.formatToPlainString(getSystemLocale.t.vBfZzD, obj);
-  }
-};
-let obj15 = {
-  isIncluded: true,
-  IconComponent: require("VoiceNormalIcon").VoiceNormalIcon,
-  getCopy() {
-    const intl = getSystemLocale.intl;
-    let obj = { bitrate: null };
-    const intl2 = getSystemLocale.intl;
-    obj = { bitrate: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.bitrate / 1000 };
-    obj[0] = intl2.formatToPlainString(getSystemLocale.t.w1gmLt, obj);
-    return intl.formatToPlainString(getSystemLocale.t.vBfZzD, obj);
-  }
-};
-items2[4] = {
-  isIncluded: true,
-  IconComponent: require("StageIcon").StageIcon,
-  getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.formatToPlainString(getSystemLocale.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.stageVideoUsers });
-  }
-};
-let obj16 = {
-  isIncluded: true,
-  IconComponent: require("StageIcon").StageIcon,
-  getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.formatToPlainString(getSystemLocale.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.stageVideoUsers });
-  }
-};
-items2[5] = {
-  isIncluded: true,
-  IconComponent: require("GifIcon").GifIcon,
-  getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.PbAyub);
+    const intl = util.intl;
+    const obj = { bitrate: null };
+    const intl2 = util.intl;
+    obj.bitrate = intl2.formatToPlainString(util.t.w1gmLt, { bitrate: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.bitrate / 1000 });
+    return intl.formatToPlainString(util.t.vBfZzD, obj);
   }
 };
 let obj17 = {
   isIncluded: true,
-  IconComponent: require("GifIcon").GifIcon,
+  IconComponent: fn(5115).VoiceNormalIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.PbAyub);
+    const intl = util.intl;
+    const obj = { bitrate: null };
+    const intl2 = util.intl;
+    obj.bitrate = intl2.formatToPlainString(util.t.w1gmLt, { bitrate: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.bitrate / 1000 });
+    return intl.formatToPlainString(util.t.vBfZzD, obj);
   }
 };
-items2[6] = {
+items2[4] = {
   isIncluded: true,
-  IconComponent: require("ServerGridIcon").ServerGridIcon,
+  IconComponent: fn(5111).StageIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.tzGY0q);
+    const intl = util.intl;
+    return intl.formatToPlainString(util.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.stageVideoUsers });
   }
 };
 let obj18 = {
   isIncluded: true,
-  IconComponent: require("ServerGridIcon").ServerGridIcon,
+  IconComponent: fn(5111).StageIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.tzGY0q);
+    const intl = util.intl;
+    return intl.formatToPlainString(util.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.stageVideoUsers });
+  }
+};
+items2[5] = {
+  isIncluded: true,
+  IconComponent: fn(10413).GifIcon,
+  getCopy() {
+    const intl = util.intl;
+    return intl.string(util.t.PbAyub);
+  }
+};
+let obj19 = {
+  isIncluded: true,
+  IconComponent: fn(10413).GifIcon,
+  getCopy() {
+    const intl = util.intl;
+    return intl.string(util.t.PbAyub);
+  }
+};
+items2[6] = {
+  isIncluded: true,
+  IconComponent: fn(13402).ServerGridIcon,
+  getCopy() {
+    const intl = util.intl;
+    return intl.string(util.t.tzGY0q);
+  }
+};
+let obj20 = {
+  isIncluded: true,
+  IconComponent: fn(13402).ServerGridIcon,
+  getCopy() {
+    const intl = util.intl;
+    return intl.string(util.t.tzGY0q);
   }
 };
 items2[7] = {
   orderCollapsed: 1,
   isIncluded: true,
-  IconComponent: require("UploadIcon").UploadIcon,
+  IconComponent: fn(9403).UploadIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    let obj = { uploadSizeLimit: null };
-    const intl2 = getSystemLocale.intl;
-    obj = { size: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.fileSize / 1024 / 1024 };
-    obj[0] = intl2.formatToPlainString(getSystemLocale.t.pIn7Af, obj);
-    return intl.formatToPlainString(getSystemLocale.t.aFRl53, obj);
+    const intl = util.intl;
+    const obj = { uploadSizeLimit: null };
+    const intl2 = util.intl;
+    obj.uploadSizeLimit = intl2.formatToPlainString(util.t.pIn7Af, { size: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.fileSize / 1024 / 1024 });
+    return intl.formatToPlainString(util.t.aFRl53, obj);
   }
 };
-let obj19 = {
+let obj21 = {
   orderCollapsed: 1,
   isIncluded: true,
-  IconComponent: require("UploadIcon").UploadIcon,
+  IconComponent: fn(9403).UploadIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    let obj = { uploadSizeLimit: null };
-    const intl2 = getSystemLocale.intl;
-    obj = { size: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.fileSize / 1024 / 1024 };
-    obj[0] = intl2.formatToPlainString(getSystemLocale.t.pIn7Af, obj);
-    return intl.formatToPlainString(getSystemLocale.t.aFRl53, obj);
+    const intl = util.intl;
+    const obj = { uploadSizeLimit: null };
+    const intl2 = util.intl;
+    obj.uploadSizeLimit = intl2.formatToPlainString(util.t.pIn7Af, { size: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.fileSize / 1024 / 1024 });
+    return intl.formatToPlainString(util.t.aFRl53, obj);
   }
 };
 items2[8] = {
   orderCollapsed: 3,
   isIncluded: true,
-  IconComponent: require("ServerGridIcon").ServerGridIcon,
+  IconComponent: fn(13402).ServerGridIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["1a5rjl"]);
+    const intl = util.intl;
+    return intl.string(util.t["1a5rjl"]);
   }
 };
-const obj20 = {
+let obj22 = {
   orderCollapsed: 3,
   isIncluded: true,
-  IconComponent: require("ServerGridIcon").ServerGridIcon,
+  IconComponent: fn(13402).ServerGridIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["1a5rjl"]);
+    const intl = util.intl;
+    return intl.string(util.t["1a5rjl"]);
   }
 };
 items2[9] = {
   orderCollapsed: 2,
   isIncluded: true,
-  IconComponent: require("ReactionIcon").ReactionIcon,
+  IconComponent: fn(8790).ReactionIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["6PV6Qc"]);
+    const intl = util.intl;
+    return intl.string(util.t["6PV6Qc"]);
   }
 };
-const obj21 = {
+const obj23 = {
   orderCollapsed: 2,
   isIncluded: true,
-  IconComponent: require("ReactionIcon").ReactionIcon,
+  IconComponent: fn(8790).ReactionIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["6PV6Qc"]);
+    const intl = util.intl;
+    return intl.string(util.t["6PV6Qc"]);
   }
 };
 items2[10] = {
   isIncluded: false,
-  IconComponent: require("LinkIcon").LinkIcon,
+  IconComponent: fn(4517).LinkIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.adNGjW);
+    const intl = util.intl;
+    return intl.string(util.t.adNGjW);
   }
 };
-obj11[1] = items2;
-items1[1] = obj11;
-const obj23 = { tier: BoostedGuildTiers.TIER_3, features: null };
-const obj22 = {
+obj13.features = items2;
+items1[1] = obj13;
+const obj25 = { tier: BoostedGuildTiers.TIER_3, features: null };
+const obj24 = {
   isIncluded: false,
-  IconComponent: require("LinkIcon").LinkIcon,
+  IconComponent: fn(4517).LinkIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.adNGjW);
+    const intl = util.intl;
+    return intl.string(util.t.adNGjW);
   }
 };
 let items3 = [
   {
     isIncluded: true,
-    IconComponent: require("ReactionIcon").ReactionIcon,
+    IconComponent: fn(8790).ReactionIcon,
     getCopy() {
-      const intl = getSystemLocale.intl;
-      return intl.formatToPlainString(getSystemLocale.t.Tlz0x1, { numEmojiSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.emoji });
+      const intl = util.intl;
+      return intl.formatToPlainString(util.t.Tlz0x1, { numEmojiSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.emoji });
     }
   },
 ,
@@ -525,247 +534,244 @@ let items3 = [
 ,
 
 ];
-const obj24 = {
+const obj26 = {
   isIncluded: true,
-  IconComponent: require("ReactionIcon").ReactionIcon,
+  IconComponent: fn(8790).ReactionIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.formatToPlainString(getSystemLocale.t.Tlz0x1, { numEmojiSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.emoji });
+    const intl = util.intl;
+    return intl.formatToPlainString(util.t.Tlz0x1, { numEmojiSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.emoji });
   }
 };
 items3[1] = {
   isIncluded: true,
-  IconComponent: require("StickerIcon").StickerIcon,
+  IconComponent: fn(10146).StickerIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.formatToPlainString(getSystemLocale.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.stickers });
+    const intl = util.intl;
+    return intl.formatToPlainString(util.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.stickers });
   }
 };
-const obj25 = {
+const obj27 = {
   isIncluded: true,
-  IconComponent: require("StickerIcon").StickerIcon,
+  IconComponent: fn(10146).StickerIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.formatToPlainString(getSystemLocale.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.stickers });
+    const intl = util.intl;
+    return intl.formatToPlainString(util.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.stickers });
   }
 };
 items3[2] = {
   isIncluded: true,
-  IconComponent: require("ScreenArrowIcon").ScreenArrowIcon,
+  IconComponent: fn(12562).ScreenArrowIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    const obj = { resolution: CONTROL_RESOLUTION.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards") };
-    return intl.formatToPlainString(getSystemLocale.t.Jbg8oY, obj);
+    const intl = util.intl;
+    const obj = { resolution: ServerBoostStreamQualityMarketingExperiment.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards") };
+    return intl.formatToPlainString(util.t.Jbg8oY, obj);
   }
 };
-const obj26 = {
+const obj28 = {
   isIncluded: true,
-  IconComponent: require("ScreenArrowIcon").ScreenArrowIcon,
+  IconComponent: fn(12562).ScreenArrowIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    const obj = { resolution: CONTROL_RESOLUTION.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards") };
-    return intl.formatToPlainString(getSystemLocale.t.Jbg8oY, obj);
+    const intl = util.intl;
+    const obj = { resolution: ServerBoostStreamQualityMarketingExperiment.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards") };
+    return intl.formatToPlainString(util.t.Jbg8oY, obj);
   }
 };
 items3[3] = {
   orderCollapsed: 2,
   isIncluded: true,
-  IconComponent: require("VoiceNormalIcon").VoiceNormalIcon,
+  IconComponent: fn(5115).VoiceNormalIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    let obj = { bitrate: null };
-    const intl2 = getSystemLocale.intl;
-    obj = { bitrate: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.bitrate / 1000 };
-    obj[0] = intl2.formatToPlainString(getSystemLocale.t.w1gmLt, obj);
-    return intl.formatToPlainString(getSystemLocale.t.vBfZzD, obj);
+    const intl = util.intl;
+    const obj = { bitrate: null };
+    const intl2 = util.intl;
+    obj.bitrate = intl2.formatToPlainString(util.t.w1gmLt, { bitrate: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.bitrate / 1000 });
+    return intl.formatToPlainString(util.t.vBfZzD, obj);
   }
 };
-const obj27 = {
+const obj29 = {
   orderCollapsed: 2,
   isIncluded: true,
-  IconComponent: require("VoiceNormalIcon").VoiceNormalIcon,
+  IconComponent: fn(5115).VoiceNormalIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    let obj = { bitrate: null };
-    const intl2 = getSystemLocale.intl;
-    obj = { bitrate: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.bitrate / 1000 };
-    obj[0] = intl2.formatToPlainString(getSystemLocale.t.w1gmLt, obj);
-    return intl.formatToPlainString(getSystemLocale.t.vBfZzD, obj);
+    const intl = util.intl;
+    const obj = { bitrate: null };
+    const intl2 = util.intl;
+    obj.bitrate = intl2.formatToPlainString(util.t.w1gmLt, { bitrate: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.bitrate / 1000 });
+    return intl.formatToPlainString(util.t.vBfZzD, obj);
   }
 };
 items3[4] = {
   orderCollapsed: 4,
   isIncluded: true,
-  IconComponent: require("StageIcon").StageIcon,
+  IconComponent: fn(5111).StageIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.formatToPlainString(getSystemLocale.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.stageVideoUsers });
+    const intl = util.intl;
+    return intl.formatToPlainString(util.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.stageVideoUsers });
   }
 };
-const obj28 = {
+const obj30 = {
   orderCollapsed: 4,
   isIncluded: true,
-  IconComponent: require("StageIcon").StageIcon,
+  IconComponent: fn(5111).StageIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.formatToPlainString(getSystemLocale.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.stageVideoUsers });
+    const intl = util.intl;
+    return intl.formatToPlainString(util.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.stageVideoUsers });
   }
 };
 items3[5] = {
   orderCollapsed: 3,
   isIncluded: true,
-  IconComponent: require("GifIcon").GifIcon,
+  IconComponent: fn(10413).GifIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.PbAyub);
+    const intl = util.intl;
+    return intl.string(util.t.PbAyub);
   }
 };
-const obj29 = {
+const obj31 = {
   orderCollapsed: 3,
   isIncluded: true,
-  IconComponent: require("GifIcon").GifIcon,
+  IconComponent: fn(10413).GifIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.PbAyub);
+    const intl = util.intl;
+    return intl.string(util.t.PbAyub);
   }
 };
 items3[6] = {
   isIncluded: true,
-  IconComponent: require("ServerGridIcon").ServerGridIcon,
+  IconComponent: fn(13402).ServerGridIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.tzGY0q);
+    const intl = util.intl;
+    return intl.string(util.t.tzGY0q);
   }
 };
-const obj30 = {
+const obj32 = {
   isIncluded: true,
-  IconComponent: require("ServerGridIcon").ServerGridIcon,
+  IconComponent: fn(13402).ServerGridIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.tzGY0q);
+    const intl = util.intl;
+    return intl.string(util.t.tzGY0q);
   }
 };
 items3[7] = {
   orderCollapsed: 1,
   isIncluded: true,
-  IconComponent: require("UploadIcon").UploadIcon,
+  IconComponent: fn(9403).UploadIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    let obj = { uploadSizeLimit: null };
-    const intl2 = getSystemLocale.intl;
-    obj = { size: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.fileSize / 1024 / 1024 };
-    obj[0] = intl2.formatToPlainString(getSystemLocale.t.pIn7Af, obj);
-    return intl.formatToPlainString(getSystemLocale.t.aFRl53, obj);
+    const intl = util.intl;
+    const obj = { uploadSizeLimit: null };
+    const intl2 = util.intl;
+    obj.uploadSizeLimit = intl2.formatToPlainString(util.t.pIn7Af, { size: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.fileSize / 1024 / 1024 });
+    return intl.formatToPlainString(util.t.aFRl53, obj);
   }
 };
-const obj31 = {
+const obj33 = {
   orderCollapsed: 1,
   isIncluded: true,
-  IconComponent: require("UploadIcon").UploadIcon,
+  IconComponent: fn(9403).UploadIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    let obj = { uploadSizeLimit: null };
-    const intl2 = getSystemLocale.intl;
-    obj = { size: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.fileSize / 1024 / 1024 };
-    obj[0] = intl2.formatToPlainString(getSystemLocale.t.pIn7Af, obj);
-    return intl.formatToPlainString(getSystemLocale.t.aFRl53, obj);
+    const intl = util.intl;
+    const obj = { uploadSizeLimit: null };
+    const intl2 = util.intl;
+    obj.uploadSizeLimit = intl2.formatToPlainString(util.t.pIn7Af, { size: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.fileSize / 1024 / 1024 });
+    return intl.formatToPlainString(util.t.aFRl53, obj);
   }
 };
 items3[8] = {
   isIncluded: true,
-  IconComponent: require("ServerGridIcon").ServerGridIcon,
+  IconComponent: fn(13402).ServerGridIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["1a5rjl"]);
+    const intl = util.intl;
+    return intl.string(util.t["1a5rjl"]);
   }
 };
-const obj32 = {
+const obj34 = {
   isIncluded: true,
-  IconComponent: require("ServerGridIcon").ServerGridIcon,
+  IconComponent: fn(13402).ServerGridIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["1a5rjl"]);
+    const intl = util.intl;
+    return intl.string(util.t["1a5rjl"]);
   }
 };
 items3[9] = {
   isIncluded: true,
-  IconComponent: require("ReactionIcon").ReactionIcon,
+  IconComponent: fn(8790).ReactionIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["6PV6Qc"]);
+    const intl = util.intl;
+    return intl.string(util.t["6PV6Qc"]);
   }
 };
-const obj33 = {
+const obj35 = {
   isIncluded: true,
-  IconComponent: require("ReactionIcon").ReactionIcon,
+  IconComponent: fn(8790).ReactionIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["6PV6Qc"]);
+    const intl = util.intl;
+    return intl.string(util.t["6PV6Qc"]);
   }
 };
 items3[10] = {
   orderCollapsed: 0,
   isIncluded: true,
-  IconComponent: require("LinkIcon").LinkIcon,
+  IconComponent: fn(4517).LinkIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.adNGjW);
+    const intl = util.intl;
+    return intl.string(util.t.adNGjW);
   }
 };
-obj23[1] = items3;
-items1[2] = obj23;
-const obj35 = { cardWrapper: { marginRight: 10, width: 290 }, card: null, cardContent: null, pressableWrapper: null, cardHeading: null, cardTierName: null, cardTierBoostcount: null, cardFeatures: null, cardFeaturesInvisible: null, cardFeaturesWrapper: null, cardFeature: null, cardFeatureExcluded: null, cardFeatureExcludedCopy: null, cardFeatureLast: null, cardsScroller: null, cardsScrollerContent: null, cardFeatureIcon: null, cardFooter: null, cardFooterIcon: null, cardTierBadge: null, cardTierBadgeCopy: null, sparkleStar: null, sparkleStarPointed: null, sparkleStarElongated: null, sparkleStarPointed1: null, sparkleStarPointed2: null, sparkleStarPointed3: null, sparkleStarElongated1: null, gradientHighlight: null, gradientHighlightTop: null, gradientHighlightBottom: null };
-const obj34 = {
+obj25.features = items3;
+items1[2] = obj25;
+const createStyles = fn(4574);
+const obj37 = { cardWrapper: { marginRight: 10, width: 290 }, card: null, cardContent: null, pressableWrapper: null, cardHeading: null, cardTierName: null, cardTierBoostcount: null, cardFeatures: null, cardFeaturesInvisible: null, cardFeaturesWrapper: null, cardFeature: null, cardFeatureExcluded: null, cardFeatureExcludedCopy: null, cardFeatureLast: null, cardsScroller: null, cardsScrollerContent: null, cardFeatureIcon: null, cardFooter: null, cardFooterIcon: null, cardTierBadge: null, cardTierBadgeCopy: null, sparkleStar: null, sparkleStarPointed: null, sparkleStarElongated: null, sparkleStarPointed1: null, sparkleStarPointed2: null, sparkleStarPointed3: null, sparkleStarElongated1: null, gradientHighlight: null, gradientHighlightTop: null, gradientHighlightBottom: null };
+const obj36 = {
   orderCollapsed: 0,
   isIncluded: true,
-  IconComponent: require("LinkIcon").LinkIcon,
+  IconComponent: fn(4517).LinkIcon,
   getCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.adNGjW);
+    const intl = util.intl;
+    return intl.string(util.t.adNGjW);
   }
 };
-obj35[1] = { borderRadius: ThemesDefault.radii.lg, height: "100%" };
-obj35[2] = { display: "flex", padding: 24, height: "100%" };
-createCacheKey = { borderRadius: ThemesDefault.radii.lg, overflow: "hidden", height: "100%" };
-obj35[3] = createCacheKey;
-obj35[4] = { alignItems: "baseline", display: "flex", flexDirection: "row", flexGrow: 0, flexShrink: 0, marginBottom: 16 };
-obj35[5] = { marginRight: 10 };
-obj35[6] = { opacity: 0.7 };
-obj35[7] = { flexGrow: 1, flexShrink: 0 };
-obj35[8] = { position: "absolute", top: 0, left: 0, height: "100%", width: "100%" };
-obj35[9] = { alignSelf: "stretch", flexGrow: 1, position: "relative" };
-obj35[10] = { alignItems: "center", display: "flex", flexDirection: "row", marginBottom: 10 };
-obj35[11] = { opacity: 0.5 };
-obj35[12] = { textDecorationLine: "line-through" };
-obj35[13] = { marginBottom: 0 };
-const obj36 = { borderRadius: ThemesDefault.radii.lg, height: "100%" };
-obj35[14] = { flex: 1, marginTop: require("BoostedGuildTiers").PROGRESS_BAR_SPACING };
-obj35[15] = { alignItems: "flex-start", display: "flex", flexDirection: "row", justifyContent: "center", minWidth: "100%", paddingHorizontal: 8, paddingTop: 16, paddingBottom: 20 };
-obj35[16] = { height: 24, marginRight: 6, width: 24 };
-obj35[17] = { display: "flex", flexDirection: "row", marginTop: 24 };
-obj35[18] = { flexGrow: 0, flexShrink: 0, height: 24, marginLeft: 8, width: 24 };
-const obj38 = { flex: 1, marginTop: require("BoostedGuildTiers").PROGRESS_BAR_SPACING };
-obj35[19] = { borderRadius: ThemesDefault.radii.sm, paddingHorizontal: 8, paddingVertical: 4, position: "absolute", top: -16, left: 24 };
-obj35[20] = { textTransform: "uppercase" };
-const obj39 = { borderRadius: ThemesDefault.radii.sm, paddingHorizontal: 8, paddingVertical: 4, position: "absolute", top: -16, left: 24 };
-obj35[21] = { position: "absolute", tintColor: require("result").DARK_WHITE_500_LIGHT_GUILD_BOOSTING_PINK };
-obj35[22] = { height: 15, width: 18 };
-obj35[23] = { height: 45, width: 23 };
-obj35[24] = { top: -7, right: 35 };
-obj35[25] = { top: 20, right: 55 };
-obj35[26] = { bottom: -7, left: 70 };
-obj35[27] = { right: 15, top: 10 };
-obj35[28] = { position: "absolute", height: 1, width: 60 };
-obj35[29] = { right: 15, top: 0 };
-obj35[30] = { left: 48, bottom: 0 };
-let closure_13 = createCacheKey.createStyles(obj35);
-let closure_14 = { code: "function GuildBoostingMarketingTierCardsTsx1(){const{withDelay,isVisible,TIER_FEATURE_ANIMATION_DURATION_MS,withTiming,Easing}=this.__closure;return{opacity:withDelay(isVisible?TIER_FEATURE_ANIMATION_DURATION_MS:0,withTiming(isVisible?1:0,{duration:TIER_FEATURE_ANIMATION_DURATION_MS,easing:Easing.inOut(Easing.quad)}))};}" };
-let closure_16 = importAllResult.forwardRef((onCardPress, ref) => {
-  const tmp = callback4();
+obj37.card = { borderRadius: nativeDefault.radii.lg, height: "100%" };
+obj37.cardContent = { display: "flex", padding: 24, height: "100%" };
+const obj39 = { borderRadius: nativeDefault.radii.lg, height: "100%" };
+obj37.pressableWrapper = { borderRadius: nativeDefault.radii.lg, overflow: "hidden", height: "100%" };
+obj37.cardHeading = { alignItems: "baseline", display: "flex", flexDirection: "row", flexGrow: 0, flexShrink: 0, marginBottom: 16 };
+obj37.cardTierName = { marginRight: 10 };
+obj37.cardTierBoostcount = { opacity: 0.7 };
+obj37.cardFeatures = { flexGrow: 1, flexShrink: 0 };
+obj37.cardFeaturesInvisible = { position: "absolute", top: 0, left: 0, height: "100%", width: "100%" };
+obj37.cardFeaturesWrapper = { alignSelf: "stretch", flexGrow: 1, position: "relative" };
+obj37.cardFeature = { alignItems: "center", display: "flex", flexDirection: "row", marginBottom: 10 };
+obj37.cardFeatureExcluded = { opacity: 0.5 };
+obj37.cardFeatureExcludedCopy = { textDecorationLine: "line-through" };
+obj37.cardFeatureLast = { marginBottom: 0 };
+const obj40 = { borderRadius: nativeDefault.radii.lg, overflow: "hidden", height: "100%" };
+obj37.cardsScroller = { flex: 1, marginTop: fn(13609).PROGRESS_BAR_SPACING };
+obj37.cardsScrollerContent = { alignItems: "flex-start", display: "flex", flexDirection: "row", justifyContent: "center", minWidth: "100%", paddingHorizontal: 8, paddingTop: 16, paddingBottom: 20 };
+obj37.cardFeatureIcon = { height: 24, marginRight: 6, width: 24 };
+obj37.cardFooter = { display: "flex", flexDirection: "row", marginTop: 24 };
+obj37.cardFooterIcon = { flexGrow: 0, flexShrink: 0, height: 24, marginLeft: 8, width: 24 };
+const rect = { borderRadius: nativeDefault.radii.sm, paddingHorizontal: 8, paddingVertical: 4, position: "absolute", top: -16, left: 24 };
+obj37.cardTierBadge = rect;
+obj37.cardTierBadgeCopy = { textTransform: "uppercase" };
+const obj41 = { flex: 1, marginTop: fn(13609).PROGRESS_BAR_SPACING };
+obj37.sparkleStar = { position: "absolute", tintColor: fn(5455).DARK_WHITE_500_LIGHT_GUILD_BOOSTING_PINK };
+obj37.sparkleStarPointed = { height: 15, width: 18 };
+obj37.sparkleStarElongated = { height: 45, width: 23 };
+obj37.sparkleStarPointed1 = { top: -7, right: 35 };
+obj37.sparkleStarPointed2 = { top: 20, right: 55 };
+obj37.sparkleStarPointed3 = { bottom: -7, left: 70 };
+obj37.sparkleStarElongated1 = { right: 15, top: 10 };
+obj37.gradientHighlight = { position: "absolute", height: 1, width: 60 };
+obj37.gradientHighlightTop = { right: 15, top: 0 };
+obj37.gradientHighlightBottom = { left: 48, bottom: 0 };
+let closure_13 = createStyles.createStyles(obj37);
+const __initData = { code: "function GuildBoostingMarketingTierCardsTsx1(){const{withDelay,isVisible,TIER_FEATURE_ANIMATION_DURATION_MS,withTiming,Easing}=this.__closure;return{opacity:withDelay(isVisible?TIER_FEATURE_ANIMATION_DURATION_MS:0,withTiming(isVisible?1:0,{duration:TIER_FEATURE_ANIMATION_DURATION_MS,easing:Easing.inOut(Easing.quad)}))};}" };
+let closure_16 = noop.forwardRef((onCardPress, ref) => {
+  const tmp = closure_13();
   ({ guild, features } = onCardPress);
   ({ isExpanded, tier } = onCardPress);
   const items = [features];
-  const memo = importAllResult.useMemo(() => {
+  const memo = noop.useMemo(() => {
     const found = features.filter((orderCollapsed) => null != orderCollapsed.orderCollapsed);
     return found.sort((orderCollapsed, orderCollapsed2) => {
       let num = 0;
@@ -786,10 +792,9 @@ let closure_16 = importAllResult.forwardRef((onCardPress, ref) => {
     });
   }, items);
   const sum = guild.premiumTier + 1;
-  let obj = features(4411);
   const tmp4 = useThemeDefault();
-  const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
-  const tmp9 = obj.isThemeDark(useThemeDefault()) ? unsafe_rawColors.WHITE : unsafe_rawColors.GUILD_BOOSTING_PINK;
+  const unsafe_rawColors = nativeDefault.unsafe_rawColors;
+  const tmp9 = shared.isThemeDark(tmp4) ? unsafe_rawColors.WHITE : unsafe_rawColors.GUILD_BOOSTING_PINK;
   const intl = tmp7(1114).intl;
   const string = intl.string;
   const t = tmp7(1114).t;
@@ -798,47 +803,47 @@ let closure_16 = importAllResult.forwardRef((onCardPress, ref) => {
   } else {
     stringResult = string(t.agC5xg);
   }
-  obj = { style: tmp.cardWrapper, ref, children: null };
-  obj = { angle: 45, angleCenter: { x: 0.5, y: 0.5 }, colors: null, locations: null, style: null, useAngle: true, children: null };
-  let tmp2Result = tmp2(4987);
-  items1 = [ThemesDefault.unsafe_rawColors.GUILD_BOOSTING_BLUE, ThemesDefault.unsafe_rawColors.GUILD_BOOSTING_PURPLE];
-  obj[2] = items1;
-  obj[3] = [0, 1];
-  obj[4] = tmp.card;
-  obj1 = { style: tmp.pressableWrapper, children: null };
-  const obj2 = { onPress: onCardPress.onCardPress, style: tmp.cardContent, accessibilityRole: "button", accessibilityState: { expanded: isExpanded }, accessibilityLabel: stringResult, children: null };
-  const obj3 = { style: tmp.cardHeading, children: null };
-  const obj4 = { color: "text-overlay-light", style: tmp.cardTierName, variant: "heading-xxl/extrabold", children: null };
-  let tmp7Result = tmp7(4454);
-  obj4[3] = tmp7Result.getTierName(tier, { useLevels: false });
-  const items2 = [callback2(features(4556).Text, obj4), ];
-  const obj5 = { color: "text-overlay-light", style: tmp.cardTierBoostcount, variant: "text-md/medium", children: null };
+  const obj2 = { style: tmp.cardWrapper, ref, children: null };
+  const obj3 = { angle: 45, angleCenter: { x: 0.5, y: 0.5 }, colors: null, locations: null, style: null, useAngle: true, children: null };
+  const isThemeDarkResult = shared.isThemeDark(tmp4);
+  items1 = [nativeDefault.unsafe_rawColors.GUILD_BOOSTING_BLUE, nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PURPLE];
+  obj3.colors = items1;
+  obj3.locations = [0, 1];
+  obj3.style = tmp.card;
+  const obj4 = { style: tmp.pressableWrapper, children: null };
+  const obj5 = { onPress: onCardPress.onCardPress, style: tmp.cardContent, accessibilityRole: "button", accessibilityState: { expanded: isExpanded }, accessibilityLabel: stringResult, children: null };
+  const obj6 = { style: tmp.cardHeading, children: null };
+  const obj7 = { color: "text-overlay-light", style: tmp.cardTierName, variant: "heading-xxl/extrabold", children: null };
+  const tmp2Result = LinearGradientDefault;
+  obj7.children = GuildBoostingUtils.getTierName(tier, { useLevels: false });
+  const items2 = [React7(Text_Text.Text, obj7), ];
+  const obj8 = { color: "text-overlay-light", style: tmp.cardTierBoostcount, variant: "text-md/medium", children: null };
   const intl2 = tmp7(1114).intl;
-  obj5[3] = intl2.format(features(1114).t.gDsyB9, { numSubscriptions: table[tier] });
-  items2[1] = callback2(features(4556).Text, obj5);
-  obj3[1] = items2;
-  const items3 = [callback3(View, obj3), , ];
-  const obj7 = { style: tmp.cardFeaturesWrapper, children: null };
-  const items4 = [callback2(TierFeatures, { features: memo, isVisible: !isExpanded }), callback2(TierFeatures, { features, isVisible: isExpanded })];
-  obj7[1] = items4;
-  items3[1] = callback3(View, obj7);
-  const obj9 = { style: tmp.cardFooter, children: null };
-  const items5 = [callback2(features(4556).Text, { color: "text-overlay-light", variant: "text-md/semibold", children: stringResult }), ];
+  obj8.children = intl2.format(util.t.gDsyB9, { numSubscriptions: timestampProducer[tier] });
+  items2[1] = React7(Text_Text.Text, obj8);
+  obj6.children = items2;
+  const items3 = [closure_1_10(View, obj6), , ];
+  const obj10 = { style: tmp.cardFeaturesWrapper, children: null };
+  const items4 = [React7(TierFeatures, { features: memo, isVisible: !isExpanded }), React7(TierFeatures, { features, isVisible: isExpanded })];
+  obj10.children = items4;
+  items3[1] = closure_1_10(View, obj10);
+  const obj12 = { style: tmp.cardFooter, children: null };
+  const items5 = [React7(Text_Text.Text, { color: "text-overlay-light", variant: "text-md/semibold", children: stringResult }), ];
   if (isExpanded) {
-    let ChevronLargeDownIcon = tmp7(13593).ChevronLargeUpIcon;
+    let ChevronLargeDownIcon = tmp7(13616).ChevronLargeUpIcon;
   } else {
-    ChevronLargeDownIcon = tmp7(13595).ChevronLargeDownIcon;
+    ChevronLargeDownIcon = tmp7(13618).ChevronLargeDownIcon;
   }
-  const isThemeDarkResult = obj.isThemeDark(useThemeDefault());
-  const obj6 = { numSubscriptions: table[tier] };
-  const obj8 = { features: memo, isVisible: !isExpanded };
-  items5[1] = callback2(ChevronLargeDownIcon, { color: ThemesDefault.colors.WHITE, style: tmp.cardFooterIcon });
-  obj9[1] = items5;
-  items3[2] = callback3(View, obj9);
-  obj2[5] = items3;
-  obj1[1] = callback3(features(5123).PressableHighlight, obj2);
-  obj[6] = callback2(View, obj1);
-  const items6 = [callback2(tmp2Result, obj), , ];
+  const obj11 = { features: memo, isVisible: !isExpanded };
+  const obj9 = { numSubscriptions: timestampProducer[tier] };
+  const tmp7Result = GuildBoostingUtils;
+  items5[1] = React7(ChevronLargeDownIcon, { color: nativeDefault.colors.WHITE, style: tmp.cardFooterIcon });
+  obj12.children = items5;
+  items3[2] = closure_1_10(View, obj12);
+  obj5.children = items3;
+  obj4.children = closure_1_10(Pressables.PressableHighlight, obj5);
+  obj3.children = React7(View, obj4);
+  const items6 = [React7(tmp2Result, obj3), , ];
   let tmp16 = tmp15;
   if (tier !== sum) {
     let tmp17 = guild.premiumTier === tier;
@@ -851,113 +856,109 @@ let closure_16 = importAllResult.forwardRef((onCardPress, ref) => {
     items6[1] = tmp16;
     let tmp11Result = tier === BoostedGuildTiers.TIER_3;
     if (tmp11Result) {
-      const obj11 = { children: null };
-      const obj12 = { colors: null, start: null, end: null, locations: null, style: null };
-      tmp2Result = tmp2(4987);
-      tmp7Result = tmp7(4409);
-      const items7 = [tmp7Result.hexWithOpacity(tmp9, 0), tmp7(4409).hexWithOpacity(tmp9, 1), ];
-      const tmp7Result1 = tmp7(4409);
-      items7[2] = tmp7(4409).hexWithOpacity(tmp9, 0);
-      obj12[0] = items7;
-      obj12[1] = { x: 0, y: 0 };
-      obj12[2] = { x: 1, y: 0 };
-      obj12[3] = [0, 0.5, 1];
+      const obj14 = { children: null };
+      const obj15 = { colors: null, start: null, end: null, locations: null, style: null };
+      const tmp2Result4 = tmp2(5001);
+      const items7 = [tmp7(4423).hexWithOpacity(tmp9, 0), , ];
+      const tmp7Result7 = tmp7(4423);
+      items7[1] = tmp7(4423).hexWithOpacity(tmp9, 1);
+      const tmp7Result8 = tmp7(4423);
+      items7[2] = tmp7(4423).hexWithOpacity(tmp9, 0);
+      obj15.colors = items7;
+      obj15.start = { x: 0, y: 0 };
+      obj15.end = { x: 1, y: 0 };
+      obj15.locations = [0, 0.5, 1];
       const items8 = [, ];
       ({ gradientHighlight: arr10[0], gradientHighlightTop: arr10[1] } = tmp);
-      obj12[4] = items8;
-      const items9 = [tmp13(tmp2Result, obj12), , , , , ];
-      const obj13 = { colors: null, start: null, end: null, locations: null, style: null };
-      const tmp7Result2 = tmp7(4409);
-      const tmp2Result1 = tmp2(4987);
-      const items10 = [tmp7(4409).hexWithOpacity(tmp9, 0), , ];
-      const tmp7Result3 = tmp7(4409);
-      items10[1] = tmp7(4409).hexWithOpacity(tmp9, 1);
-      const tmp7Result4 = tmp7(4409);
-      items10[2] = tmp7(4409).hexWithOpacity(tmp9, 0);
-      obj13[0] = items10;
-      obj13[1] = { x: 0, y: 0 };
-      obj13[2] = { x: 1, y: 0 };
-      obj13[3] = [0, 0.5, 1];
+      obj15.style = items8;
+      const items9 = [tmp13(tmp2Result4, obj15), , , , , ];
+      const obj16 = { colors: null, start: null, end: null, locations: null, style: null };
+      const tmp7Result9 = tmp7(4423);
+      const tmp2Result5 = tmp2(5001);
+      const items10 = [tmp7(4423).hexWithOpacity(tmp9, 0), , ];
+      const tmp7Result10 = tmp7(4423);
+      items10[1] = tmp7(4423).hexWithOpacity(tmp9, 1);
+      const tmp7Result11 = tmp7(4423);
+      items10[2] = tmp7(4423).hexWithOpacity(tmp9, 0);
+      obj16.colors = items10;
+      obj16.start = { x: 0, y: 0 };
+      obj16.end = { x: 1, y: 0 };
+      obj16.locations = [0, 0.5, 1];
       const items11 = [, ];
       ({ gradientHighlight: arr13[0], gradientHighlightBottom: arr13[1] } = tmp);
-      obj13[4] = items11;
-      items9[1] = tmp13(tmp2Result1, obj13);
-      const obj14 = { source: null, style: null };
-      obj14[0] = tmp2(13597);
+      obj16.style = items11;
+      items9[1] = tmp13(tmp2Result5, obj16);
+      const obj17 = { source: tmp2(13620), style: null };
       const items12 = [, , ];
       ({ sparkleStar: arr14[0], sparkleStarPointed: arr14[1], sparkleStarPointed1: arr14[2] } = tmp);
-      obj14[1] = items12;
-      items9[2] = tmp13(tmp7(1178).Icon, obj14);
-      const obj15 = { source: null, style: null };
-      obj15[0] = tmp2(13597);
+      obj17.style = items12;
+      items9[2] = tmp13(tmp7(1178).Icon, obj17);
+      const obj18 = { source: tmp2(13620), style: null };
       const items13 = [, , ];
       ({ sparkleStar: arr15[0], sparkleStarPointed: arr15[1], sparkleStarPointed2: arr15[2] } = tmp);
-      obj15[1] = items13;
-      items9[3] = tmp13(tmp7(1178).Icon, obj15);
-      const obj16 = { source: null, style: null };
-      obj16[0] = tmp2(13597);
+      obj18.style = items13;
+      items9[3] = tmp13(tmp7(1178).Icon, obj18);
+      const obj19 = { source: tmp2(13620), style: null };
       const items14 = [, , ];
       ({ sparkleStar: arr16[0], sparkleStarPointed: arr16[1], sparkleStarPointed3: arr16[2] } = tmp);
-      obj16[1] = items14;
-      items9[4] = tmp13(tmp7(1178).Icon, obj16);
-      const obj17 = { source: null, style: null };
-      obj17[0] = tmp2(13598);
+      obj19.style = items14;
+      items9[4] = tmp13(tmp7(1178).Icon, obj19);
+      const obj20 = { source: tmp2(13621), style: null };
       const items15 = [, , ];
       ({ sparkleStar: arr17[0], sparkleStarElongated: arr17[1], sparkleStarElongated1: arr17[2] } = tmp);
-      obj17[1] = items15;
-      items9[5] = tmp13(tmp7(1178).Icon, obj17);
-      obj11[0] = items9;
-      tmp11Result = tmp11(closure_11, obj11);
-      const tmp7Result5 = tmp7(4409);
+      obj20.style = items15;
+      items9[5] = tmp13(tmp7(1178).Icon, obj20);
+      obj14.children = items9;
+      tmp11Result = tmp11(closure_1_11, obj14);
+      const tmp7Result12 = tmp7(4423);
     }
     items6[2] = tmp11Result;
-    obj[2] = items6;
-    return tmp11(tmp12, obj);
+    obj2.children = items6;
+    return tmp11(tmp12, obj2);
   } else {
-    const obj18 = { angle: 3, angleCenter: null, colors: null, locations: null, style: null, useAngle: true, children: null };
-    obj18[1] = { x: 0.5, y: 0.2 };
+    const obj21 = { angle: 3, angleCenter: { x: 0.5, y: 0.2 }, colors: null, locations: null, style: null, useAngle: true, children: null };
     const items16 = [tmp2(576).unsafe_rawColors.GUILD_BOOSTING_BLUE, tmp2(576).unsafe_rawColors.GUILD_BOOSTING_PURPLE];
-    obj18[2] = items16;
-    obj18[3] = [0, 1];
-    obj18[4] = tmp.cardTierBadge;
-    let obj19 = { color: "text-overlay-light", style: null, variant: "text-xs/bold", children: null };
-    obj19[1] = tmp.cardTierBadgeCopy;
+    obj21.colors = items16;
+    obj21.locations = [0, 1];
+    obj21.style = tmp.cardTierBadge;
+    let obj22 = { color: "text-overlay-light", style: tmp.cardTierBadgeCopy, variant: "text-xs/bold", children: null };
     const intl3 = tmp7(1114).intl;
     const string2 = intl3.string;
+    let t1 = tmp7(1114).t;
     if (tmp15) {
-      let string2Result = string2(_9NBo7c);
+      t1 = t1["9NBo7c"];
+      let string2Result = string2(t1);
     } else {
-      string2Result = string2(_9NBo7c["9JbE3J"]);
+      string2Result = string2(t1["9JbE3J"]);
     }
-    obj19[3] = string2Result;
-    obj19 = tmp13(tmp7(4556).Text, obj19);
-    obj18[6] = obj19;
-    tmp13(tmp2(4987), obj18);
-    const tmp2Result2 = tmp2(4987);
+    obj22.children = string2Result;
+    obj22 = tmp13(tmp7(4570).Text, obj22);
+    obj21.children = obj22;
+    tmp13(tmp2(5001), obj21);
+    const tmp2Result6 = tmp2(5001);
   }
 });
-const obj40 = { position: "absolute", tintColor: require("result").DARK_WHITE_500_LIGHT_GUILD_BOOSTING_PINK };
-let result = require("set").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingTierCards.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingTierCards.tsx");
 
 export default function GuildBoostingMarketingTierCards(guild) {
   function handleCardPress() {
-    const result = callback(closure_1_2[35]).DeprecatedLayoutAnimation();
-    callback2((arg0) => !arg0);
+    const result = DeprecatedLayoutAnimation.DeprecatedLayoutAnimation();
+    _slicedToArray((arg0) => !arg0);
   }
-  const tmp = callback4();
+  const tmp = closure_13();
   guild = guild.guild;
-  let _require = guild;
   const ref = handleCardPress.useRef(null);
-  [dependencyMap, closure_3] = callback(handleCardPress.useState(false), 2);
+  [dependencyMap, _slicedToArray] = handleCardPress.useState(false);
   const items = [guild.premiumTier];
   const effect = handleCardPress.useEffect(() => {
-    const timeout = window.setTimeout(() => {
+    let premiumTier = window.setTimeout(() => {
       const current = ref.current;
       if (current != null) {
-        let premiumTier;
+        premiumTier = undefined;
         const _Math = Math;
-        premiumTier = Math.min(closure_1_7.TIER_3, premiumTier.premiumTier + 1);
-        const findIndexResult = closure_1_12.findIndex((tier) => tier.tier === closure_0);
+        premiumTier = Math.min(TIER_3.TIER_3, premiumTier.premiumTier + 1);
+        const findIndexResult = items1.findIndex((tier) => tier.tier === closure_0);
         let num3 = 0;
         if (-1 !== findIndexResult) {
           num3 = findIndexResult;
@@ -970,18 +971,17 @@ export default function GuildBoostingMarketingTierCards(guild) {
     };
   }, items);
   const obj = { ref, itemCount: items1.length, cardWidth: 290, cardMarginRight: 10, contentContainerStyle: tmp.cardsScrollerContent, initialIndex: null, style: null, children: null };
-  _require = undefined;
   _require = Math.min(BoostedGuildTiers.TIER_3, guild.premiumTier + 1);
   let findIndexResult = items1.findIndex((tier) => tier.tier === closure_0);
   let num = 0;
   if (-1 !== findIndexResult) {
     num = findIndexResult;
   }
-  obj[5] = num;
-  obj[6] = tmp.cardsScroller;
-  obj[7] = items1.map((features) => {
+  obj.initialIndex = num;
+  obj.style = tmp.cardsScroller;
+  obj.children = items1.map((features) => {
     const tier = features.tier;
-    return closure_1_9(closure_1_16, { features: features.features, guild: closure_0, isExpanded: closure_2, onCardPress: handleCardPress, tier }, tier);
+    return React7(closure_16, { features: features.features, guild, isExpanded, onCardPress: handleCardPress, tier }, tier);
   });
-  return closure_9(_require(12568).MarketingCardsScroller, obj);
+  return closure_9(require("MarketingCardsScroller").MarketingCardsScroller, obj);
 };

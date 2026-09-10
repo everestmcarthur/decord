@@ -1,148 +1,139 @@
-// Module ID: 14671
-// Function ID: 14672
-// Name: CredentialList
-// Dependencies: [32, 19, 17, 14659, 14660, 21, 4560, 576, 504, 5692, 4556, 1114, 5433, 8097, 4518, 4527, 14672, 1896, 10255, 5687, 5605, 14674, 1483, 6597, 6951, 7377, 8598, 2]
+// Module ID: 14697
+// Function ID: 14698
+// Name: PasskeyInitStep
+// Dependencies: [32, 19, 17, 14685, 14686, 21, 4574, 576, 504, 5706, 4570, 1114, 5447, 8113, 4532, 4541, 14698, 1896, 10282, 5701, 5619, 14700, 1483, 6611, 6965, 7391, 8626, 2]
 // Exports: default
 
-// Module 14671 (CredentialList)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "hasFetchedCredentials" /* 14659 */;
-import { WebAuthnScreens } from "WebAuthnScreens" /* 14660 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14697 (PasskeyInitStep)
+import nativeDefault from "native" /* 576 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6611 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import WebAuthnStore from "WebAuthnStore" /* 14685 */;
 
-const require = arg1;
+require = fn;
 function CredentialList(navigation) {
   navigation = navigation.navigation;
-  closure_1 = undefined;
   dependencyMap = undefined;
-  let callback;
-  let obj = navigation(504);
-  let items = [closure_6];
-  const credentials = obj.useStateFromStoresObject(items, () => ({ credentials: credentials.getCredentials() })).credentials;
-  const tmp3 = callback4();
+  _slicedToArray = undefined;
+  let items = [WebAuthnStore];
+  const credentials = navigation(504).useStateFromStoresObject(items, () => ({ credentials: credentials.getCredentials() })).credentials;
+  const tmp3 = closure_10();
   closure_1 = tmp3;
-  [c2, c3] = callback(React.useState(false), 2);
+  let obj = navigation(504);
+  [c2, c3] = noop.useState(false);
   if (0 === credentials.length) {
-    obj = { style: null, children: null };
-    obj[0] = tmp3.upsellContainer;
-    const items1 = [callback2(tmp(5692).PasskeysSpotIllustration, { scale: 0.6 }), ];
-    obj = { variant: "text-md/normal", style: null, children: null };
-    obj[1] = tmp3.upsellText;
+    let obj2 = { style: tmp3.upsellContainer, children: null };
+    const items1 = [closure_8(tmp(5706).PasskeysSpotIllustration, { scale: 0.6 }), ];
+    let obj3 = { variant: "text-md/normal", style: tmp3.upsellText, children: null };
     let intl2 = tmp(1114).intl;
-    obj[2] = intl2.string(tmp(1114).t.FSNwFW);
-    items1[1] = callback2(tmp(4556).Text, obj);
-    obj[1] = items1;
-    return callback3(View, obj);
+    obj3.children = intl2.string(tmp(1114).t.FSNwFW);
+    items1[1] = closure_8(tmp(4570).Text, obj3);
+    obj2.children = items1;
+    return closure_9(View, obj2);
   } else {
-    obj1 = { title: null, hasIcons: false, children: null };
+    const obj4 = { title: null, hasIcons: false, children: null };
     let intl = tmp(1114).intl;
-    obj1[0] = intl.string(tmp(1114).t["4RIqrQ"]);
-    obj1[2] = credentials.map((label) => {
-      let obj = { label: label.name, trailing: null, subLabel: null };
-      closure_0 = label;
-      obj = { style: lib.iconButtonGroup, children: null };
-      obj = { variant: "secondary", icon: closure_1_8(navigation(_undefined[14]).TrashIcon, { color: lib(_undefined[7]).colors.TEXT_FEEDBACK_CRITICAL }), accessibilityLabel: null, size: "sm", disabled: null, loading: null, onPress: null };
+    obj4.title = intl.string(tmp(1114).t["4RIqrQ"]);
+    obj4.children = credentials.map((label) => {
+      const obj = { label: label.name, trailing: null, subLabel: null };
+      const credential = label;
+      const obj2 = { style: closure_1.iconButtonGroup, children: null };
+      const obj3 = { variant: "secondary", icon: closure_1_8(navigation(_undefined[14]).TrashIcon, { color: closure_1(_undefined[7]).colors.TEXT_FEEDBACK_CRITICAL }), accessibilityLabel: null, size: "sm", disabled: null, loading: null, onPress: null };
       const intl = navigation(_undefined[11]).intl;
-      obj[2] = intl.string(navigation(_undefined[11]).t.N86XcP);
-      obj[4] = _undefined;
-      obj[5] = _undefined;
-      obj[6] = function onPress() {
-        let obj = callback(paths[15]);
-        obj = { credential: closure_0, deleting: closure_1_2, setDeleting: closure_1_3 };
-        return obj.openLazy(navigation(paths[17])(paths[16], paths.paths), "WEBAUTHN_DELETE_SHEET_KEY", obj);
+      obj3.accessibilityLabel = intl.string(navigation(_undefined[11]).t.N86XcP);
+      obj3.disabled = _undefined;
+      obj3.loading = _undefined;
+      obj3.onPress = function onPress() {
+        return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14698, dependencyMap.paths), "WEBAUTHN_DELETE_SHEET_KEY", { credential, deleting, setDeleting });
       };
-      const items = [closure_1_8(navigation(_undefined[13]).IconButton, obj), ];
-      const obj2 = { variant: "secondary", icon: closure_1_8(navigation(_undefined[18]).PencilIcon, {}), accessibilityLabel: null, size: "sm", disabled: null, loading: null, onPress: null };
+      const items = [closure_1_8(navigation(_undefined[13]).IconButton, obj3), ];
+      const obj5 = { variant: "secondary", icon: closure_1_8(navigation(_undefined[18]).PencilIcon, {}), accessibilityLabel: null, size: "sm", disabled: null, loading: null, onPress: null };
       const intl2 = navigation(_undefined[11]).intl;
-      obj2[2] = intl2.string(navigation(_undefined[11]).t.bt75uw);
-      obj2[4] = _undefined;
-      obj2[5] = _undefined;
-      obj2[6] = function onPress() {
-        label.push(closure_2_7.EDIT, { credential: label });
+      obj5.accessibilityLabel = intl2.string(navigation(_undefined[11]).t.bt75uw);
+      obj5.disabled = _undefined;
+      obj5.loading = _undefined;
+      obj5.onPress = function onPress() {
+        navigation.push(WebAuthnScreens.EDIT, { credential });
       };
-      items[1] = closure_1_8(navigation(_undefined[13]).IconButton, obj2);
-      obj[1] = items;
-      obj[1] = closure_1_9(navigation(_undefined[12]).ButtonGroup, obj);
+      items[1] = closure_1_8(navigation(_undefined[13]).IconButton, obj5);
+      obj2.children = items;
+      obj.trailing = closure_1_9(navigation(_undefined[12]).ButtonGroup, obj2);
       let formatResult = null;
       if (null != label.last_used) {
         const intl3 = tmp2(tmp3[11]).intl;
-        const obj3 = { lastUsed: null };
-        obj3[0] = tmp2(tmp3[21]).formatDate(label.last_used);
-        formatResult = intl3.format(tmp2(tmp3[11]).t["7JgxF5"], obj3);
+        const obj6 = { lastUsed: tmp2(tmp3[21]).formatDate(label.last_used) };
+        formatResult = intl3.format(tmp2(tmp3[11]).t["7JgxF5"], obj6);
         const tmp2Result = tmp2(tmp3[21]);
       }
-      obj[2] = formatResult;
+      obj.subLabel = formatResult;
       return closure_1_8(navigation(_undefined[20]).TableRow, obj, label.id);
     });
-    return callback2(tmp(5687).TableRowGroup, obj1);
+    return closure_8(tmp(5701).TableRowGroup, obj4);
   }
-  const tmp4 = callback(React.useState(false), 2);
+  const tmp4 = _slicedToArray(noop.useState(false), 2);
 }
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: null, upsellContainer: null, upsellText: null, iconButtonGroup: null, headerAddButton: null };
-createCacheKey = { flex: 1, flexDirection: "column", alignItems: "stretch", justifyContent: "space-between", marginLeft: ThemesDefault.space.PX_16, marginRight: ThemesDefault.space.PX_16, marginTop: ThemesDefault.space.PX_8 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginTop: ThemesDefault.space.PX_16, alignItems: "center" };
-let obj1 = { marginTop: ThemesDefault.space.PX_16, alignItems: "center" };
-createCacheKey[2] = { color: ThemesDefault.colors.TEXT_SUBTLE, marginTop: ThemesDefault.space.PX_16, textAlign: "center" };
-let obj2 = { color: ThemesDefault.colors.TEXT_SUBTLE, marginTop: ThemesDefault.space.PX_16, textAlign: "center" };
-createCacheKey[3] = { flexDirection: "row", paddingVertical: ThemesDefault.space.PX_8 };
-createCacheKey[4] = { alignSelf: "center" };
-let closure_10 = createCacheKey.createStyles(createCacheKey);
+const View = fn(17).View;
+const WebAuthnScreens = fn(14686).WebAuthnScreens;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { flex: 1, flexDirection: "column", alignItems: "stretch", justifyContent: "space-between", marginLeft: nativeDefault.space.PX_16, marginRight: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_8 }, upsellContainer: null, upsellText: null, iconButtonGroup: null, headerAddButton: null };
+let obj3 = { flex: 1, flexDirection: "column", alignItems: "stretch", justifyContent: "space-between", marginLeft: nativeDefault.space.PX_16, marginRight: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_8 };
+obj2.upsellContainer = { marginTop: nativeDefault.space.PX_16, alignItems: "center" };
+let obj4 = { marginTop: nativeDefault.space.PX_16, alignItems: "center" };
+obj2.upsellText = { color: nativeDefault.colors.TEXT_SUBTLE, marginTop: nativeDefault.space.PX_16, textAlign: "center" };
+let obj5 = { color: nativeDefault.colors.TEXT_SUBTLE, marginTop: nativeDefault.space.PX_16, textAlign: "center" };
+obj2.iconButtonGroup = { flexDirection: "row", paddingVertical: nativeDefault.space.PX_8 };
+obj2.headerAddButton = { alignSelf: "center" };
+let closure_10 = createStyles.createStyles(obj2);
 let closure_11 = { top: 12, bottom: 12, left: 12, right: 12 };
-let obj3 = { flexDirection: "row", paddingVertical: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/webauthn/native/nav_steps/PasskeyInitStep.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/webauthn/native/nav_steps/PasskeyInitStep.tsx");
 
 export default function PasskeyInitStep(arg0) {
   if (arg0 == null) {
-    HermesBuiltin.throwTypeError();
+    throw new TypeError("Cannot destructure 'undefined' or 'null'.");
   } else {
     let navigation;
-    closure_1 = undefined;
     let hasFetchedCredentials;
+    navigation = navigation(hasFetchedCredentials[22]).useNavigation();
+    const tmp5 = closure_10();
+    closure_1 = tmp5;
     let obj = navigation(hasFetchedCredentials[22]);
-    navigation = obj.useNavigation();
-    const tmp6 = callback4();
-    closure_1 = tmp6;
-    obj1 = navigation(hasFetchedCredentials[8]);
-    const items = [closure_6];
-    hasFetchedCredentials = obj1.useStateFromStoresObject(items, () => ({ hasFetchedCredentials: closure_6.hasFetchedCredentials() })).hasFetchedCredentials;
+    const items = [WebAuthnStore];
+    hasFetchedCredentials = navigation(hasFetchedCredentials[8]).useStateFromStoresObject(items, () => ({ hasFetchedCredentials: WebAuthnStore.hasFetchedCredentials() })).hasFetchedCredentials;
     const items1 = [hasFetchedCredentials];
-    const effect = React.useEffect(() => {
+    const effect = noop.useEffect(() => {
       if (!hasFetchedCredentials) {
-        const webAuthnCredentials = navigation(hasFetchedCredentials[23]).fetchWebAuthnCredentials();
-        const obj = navigation(hasFetchedCredentials[23]);
+        const webAuthnCredentials = WebAuthnActionCreators.fetchWebAuthnCredentials();
       }
     }, items1);
-    const items2 = [navigation, tmp6.headerAddButton];
-    const layoutEffect = React.useLayoutEffect(() => {
+    const items2 = [navigation, tmp5.headerAddButton];
+    const layoutEffect = noop.useLayoutEffect(() => {
       navigation.setOptions({
         headerRight() {
-          if (closure_1_0(closure_1_2[24]).hasWebAuthn) {
+          if (navigation(hasFetchedCredentials[24]).hasWebAuthn) {
             const obj = { text: null, style: null, hitSlop: null, onPress: null, foregroundRipple: true };
             const intl = tmp(tmp2[11]).intl;
-            obj[0] = intl.string(tmp(tmp2[11]).t.OYkgVk);
-            obj[1] = headerAddButton.headerAddButton;
-            obj[2] = closure_1_11;
-            obj[3] = function onPress() {
-
+            obj.text = intl.string(tmp(tmp2[11]).t.OYkgVk);
+            obj.style = headerAddButton.headerAddButton;
+            obj.hitSlop = hitSlop;
+            obj.onPress = function onPress() {
+              closure_1_0.push(constants.REGISTER);
             };
-            return closure_1_8(tmp(tmp2[25]).HeaderActionButton, obj);
+            return closure_2_8(tmp(tmp2[25]).HeaderActionButton, obj);
           }
         }
       });
     }, items2);
-    obj = { children: null };
-    obj = { style: null, children: null };
-    obj[0] = tmp6.container;
-    obj1 = { navigation: null };
-    obj1[0] = navigation;
-    obj[1] = callback2(CredentialList, obj1);
-    obj[0] = callback2(View, obj);
-    return callback2(navigation(hasFetchedCredentials[26]).Form, obj);
+    const obj3 = { children: null };
+    const obj4 = { style: tmp5.container, children: null };
+    const obj5 = { navigation };
+    obj4.children = closure_8(CredentialList, obj5);
+    obj3.children = closure_8(View, obj4);
+    return closure_8(navigation(hasFetchedCredentials[26]).Form, obj3);
   }
 };

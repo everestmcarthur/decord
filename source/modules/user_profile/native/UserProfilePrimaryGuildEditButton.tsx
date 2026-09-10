@@ -1,33 +1,31 @@
-// Module ID: 14643
-// Function ID: 14644
+// Module ID: 14669
+// Function ID: 14670
 // Name: UserProfilePrimaryGuildEditButton
-// Dependencies: [19, 1979, 7944, 21, 4560, 576, 504, 14644, 8165, 8164, 1114, 1115, 4556, 14621, 4527, 14645, 1896, 5584, 9189, 2]
+// Dependencies: [19, 1979, 7958, 21, 4574, 576, 504, 14670, 8191, 8190, 1114, 1115, 4570, 14646, 4541, 14671, 1896, 5598, 9216, 2]
 // Exports: default
 
-// Module 14643 (UserProfilePrimaryGuildEditButton)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "createGuildRecordFromRust" /* 1979 */;
-import { GuildTagBadgeSize } from "items" /* 7944 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14669 (UserProfilePrimaryGuildEditButton)
+import nativeDefault from "native" /* 576 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import noop from "module_19" /* 19 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-const require = arg1;
-noopAll;
-createCacheKey = { tag: null };
-createCacheKey = { paddingHorizontal: 6, paddingVertical: 2, columnGap: 4, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[0] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfilePrimaryGuildEditButton.tsx");
+require = fn;
+const GuildTagBadgeSize = fn(7958).GuildTagBadgeSize;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { tag: { paddingHorizontal: 6, paddingVertical: 2, columnGap: 4, borderRadius: nativeDefault.radii.sm } };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfilePrimaryGuildEditButton.tsx");
 
 export default function UserProfilePrimaryGuildEditButton(arg0) {
   ({ user, pendingPrimaryGuildId } = arg0);
   pendingPrimaryGuildId = undefined;
   let userAvailableGuildsWithTags;
   function handleSelectPrimaryGuild(primaryGuildId) {
-    let obj = pendingPrimaryGuildId(handleSelectPrimaryGuild[9]);
-    obj = { primaryGuildId };
-    obj.setPendingChanges(obj);
+    pendingPrimaryGuildId(handleSelectPrimaryGuild[9]).setPendingChanges({ primaryGuildId });
   }
   ({ disabled, tagStyle } = arg0);
   if (undefined === pendingPrimaryGuildId) {
@@ -47,14 +45,15 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
     }
     pendingPrimaryGuildId = tmp4;
   }
-  let obj = pendingPrimaryGuildId(handleSelectPrimaryGuild[6]);
-  const items = [closure_3];
+  const tmp = closure_6();
+  const items = [GuildStore];
   const items1 = [pendingPrimaryGuildId];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getGuild(pendingPrimaryGuildId), items1);
-  obj1 = pendingPrimaryGuildId(handleSelectPrimaryGuild[7]);
-  userAvailableGuildsWithTags = obj1.useUserAvailableGuildsWithTags();
-  let obj2 = pendingPrimaryGuildId(handleSelectPrimaryGuild[8]);
-  const userPrimaryGuild = obj2.getUserPrimaryGuild(user.primaryGuild);
+  const stateFromStores = pendingPrimaryGuildId(handleSelectPrimaryGuild[6]).useStateFromStores(items, () => GuildStore.getGuild(pendingPrimaryGuildId), items1);
+  const obj = pendingPrimaryGuildId(handleSelectPrimaryGuild[6]);
+  userAvailableGuildsWithTags = pendingPrimaryGuildId(handleSelectPrimaryGuild[7]).useUserAvailableGuildsWithTags();
+  const obj2 = pendingPrimaryGuildId(handleSelectPrimaryGuild[7]);
+  const tmp9 = userAvailableGuildsWithTags.length > 0;
+  const userPrimaryGuild = pendingPrimaryGuildId(handleSelectPrimaryGuild[8]).getUserPrimaryGuild(user.primaryGuild);
   if (null != user) {
     let profile;
     if (stateFromStores != null) {
@@ -84,8 +83,8 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
     }
     let guildTagBadgeUrl = null != pendingPrimaryGuildId;
     if (guildTagBadgeUrl) {
-      let tmp6Result = tmp6(tmp7[8]);
-      guildTagBadgeUrl = tmp6Result.getGuildTagBadgeUrl(pendingPrimaryGuildId, badge, GuildTagBadgeSize.SIZE_24);
+      guildTagBadgeUrl = tmp6(tmp7[8]).getGuildTagBadgeUrl(pendingPrimaryGuildId, badge, GuildTagBadgeSize.SIZE_24);
+      const tmp6Result = tmp6(tmp7[8]);
     }
     if (null != stateFromStores) {
       let name = stateFromStores.name;
@@ -104,49 +103,42 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
       const _HermesInternal = HermesInternal;
       combined = "" + name + ", " + tag;
     }
-    tmp6Result = tmp6(tmp7[11]);
     let num = 4;
-    if (tmp6Result.isAndroid()) {
+    if (tmp6Result2.isAndroid()) {
       num = 1;
     }
     const sum = tmp6(tmp7[12]).TextStyleSheet["text-md/semibold"].fontSize + num;
-    obj = { label: null, buttonText: null, accessibilityValue: null, onPress: null, leading: null, trailing: null, disabled: null };
+    const obj4 = { label: null, buttonText: null, accessibilityValue: null, onPress: null, leading: null, trailing: null, disabled: null };
     const intl2 = tmp6(tmp7[10]).intl;
-    obj[0] = intl2.string(tmp6(tmp7[10]).t["DUD+5n"]);
-    obj[1] = name;
-    obj = { text: null };
-    obj[0] = combined;
-    obj[2] = obj;
-    obj[3] = function onPress() {
-      let obj = userAvailableGuildsWithTags(handleSelectPrimaryGuild[14]);
-      obj = { availableGuilds: userAvailableGuildsWithTags, selectedGuildId: pendingPrimaryGuildId, onSelectGuild: handleSelectPrimaryGuild };
-      obj.openLazy(pendingPrimaryGuildId(handleSelectPrimaryGuild[16])(handleSelectPrimaryGuild[15], handleSelectPrimaryGuild.paths), "UserPrimaryGuildListBottomSheet", obj);
+    obj4.label = intl2.string(tmp6(tmp7[10]).t["DUD+5n"]);
+    obj4.buttonText = name;
+    const obj5 = { text: combined };
+    obj4.accessibilityValue = obj5;
+    obj4.onPress = function onPress() {
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14671, dependencyMap.paths), "UserPrimaryGuildListBottomSheet", { availableGuilds: userAvailableGuildsWithTags, selectedGuildId: pendingPrimaryGuildId, onSelectGuild: handleSelectPrimaryGuild });
     };
     let tmp23Result = null;
     if (null != stateFromStores) {
-      obj1 = { guild: null, size: null };
-      obj1[0] = stateFromStores;
-      obj1[1] = tmp6(tmp7[17]).GuildIconSizes.LARGE;
-      tmp23Result = tmp23(userAvailableGuildsWithTags(tmp7[17]), obj1);
+      const obj6 = { guild: stateFromStores, size: tmp6(tmp7[17]).GuildIconSizes.LARGE };
+      tmp23Result = tmp23(userAvailableGuildsWithTags(tmp7[17]), obj6);
       const tmp26 = userAvailableGuildsWithTags(tmp7[17]);
     }
-    obj[4] = tmp23Result;
-    tmp23Result = null;
+    obj4.leading = tmp23Result;
+    let tmp23Result2 = null;
     if (null != tag) {
-      obj2 = { containerStyles: null, textStyle: null, guildTag: null, guildBadge: null, badgeSize: null, textVariant: "text-md/semibold", textColor: "text-default" };
+      const obj7 = { containerStyles: null, textStyle: null, guildTag: null, guildBadge: null, badgeSize: null, textVariant: "text-md/semibold", textColor: "text-default" };
       const items2 = [tmp.tag, tagStyle];
-      obj2[0] = items2;
-      const obj3 = { lineHeight: null };
-      obj3[0] = sum;
-      obj2[1] = obj3;
-      obj2[2] = tag;
-      obj2[3] = guildTagBadgeUrl;
-      obj2[4] = GuildTagBadgeSize.SIZE_16;
-      tmp23Result = tmp23(tmp6(tmp7[18]).BaseGuildTagChiplet, obj2);
+      obj7.containerStyles = items2;
+      const obj8 = { lineHeight: sum };
+      obj7.textStyle = obj8;
+      obj7.guildTag = tag;
+      obj7.guildBadge = guildTagBadgeUrl;
+      obj7.badgeSize = GuildTagBadgeSize.SIZE_16;
+      tmp23Result2 = tmp23(tmp6(tmp7[18]).BaseGuildTagChiplet, obj7);
     }
-    obj[5] = tmp23Result;
-    obj[6] = disabled;
-    return jsx(tmp6(tmp7[13]).UserProfileEditFormButton, { text: null });
+    obj4.trailing = tmp23Result2;
+    obj4.disabled = disabled;
+    return jsx(tmp6(tmp7[13]).UserProfileEditFormButton, { label: null, buttonText: null, accessibilityValue: null, onPress: null, leading: null, trailing: null, disabled: null });
   }
   return null;
 };

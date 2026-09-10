@@ -1,15 +1,15 @@
-// Module ID: 5271
-// Function ID: 5272
-// Name: percentageScrolled
+// Module ID: 5285
+// Function ID: 5286
+// Name: DimensionStore
 // Dependencies: [558, 504, 573, 2]
 
-// Module 5271 (percentageScrolled)
+// Module 5285 (DimensionStore)
 import initializeDefault from "initialize" /* 504 */;
-import shallowEqualDefault from "shallowEqual" /* 558 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
-let closure_2 = {};
-let closure_3 = {};
+const dependencyMap = {};
+const dependencyMap2 = {};
 let closure_4 = { scrollTop: 0 };
 const Store = initializeDefault.Store;
 class DimensionStore extends Store {
@@ -25,11 +25,10 @@ prototype["percentageScrolled"] = function percentageScrolled(arg0) {
 prototype["getChannelDimensions"] = function getChannelDimensions(arg0) {
   return dependencyMap[arg0];
 };
-prototype["getGuildDimensions"] = function getGuildDimensions(arg0) {
-  let tmp = dependencyMap2[arg0];
+prototype["getGuildDimensions"] = function getGuildDimensions(guildId) {
+  let tmp = dependencyMap2[guildId];
   if (tmp == null) {
-    const obj = { guildId: null, scrollTop: null, scrollTo: null };
-    obj[0] = arg0;
+    const obj = { guildId, scrollTop: null, scrollTo: null };
     tmp = obj;
   }
   return tmp;
@@ -45,19 +44,15 @@ prototype["isAtBottom"] = function isAtBottom(channelId) {
   return tmp;
 };
 DimensionStore.displayName = "DimensionStore";
-const dimensionStore = new DimensionStore(dispatcherDefault, {
+const dimensionStore = new DimensionStore(DispatcherDefault, {
   UPDATE_CHANNEL_DIMENSIONS: function handleChannelScroll(arg0) {
     ({ channelId, scrollTop, scrollHeight, offsetHeight } = arg0);
     if (null != scrollTop) {
       if (null != scrollHeight) {
         if (null != offsetHeight) {
-          const obj = { channelId: null, scrollTop: null, scrollHeight: null, offsetHeight: null };
-          obj[0] = channelId;
-          obj[1] = scrollTop;
-          obj[2] = scrollHeight;
-          obj[3] = offsetHeight;
+          const obj = { channelId, scrollTop, scrollHeight, offsetHeight };
           if (null != tmp4) {
-            if (shallowEqualDefault(tmp4, obj)) {
+            if (discord_common_shallowEqualDefault(tmp4, obj)) {
               return false;
             }
           }
@@ -74,8 +69,7 @@ const dimensionStore = new DimensionStore(dispatcherDefault, {
   UPDATE_CHANNEL_LIST_DIMENSIONS: function handleGuildUpdate(arg0) {
     ({ guildId, scrollTop, scrollTo } = arg0);
     if (null == dependencyMap2[guildId]) {
-      const obj = { guildId: null, scrollTop: null, scrollTo: null };
-      obj[0] = guildId;
+      const obj = { guildId, scrollTop: null, scrollTo: null };
       tmp[guildId] = obj;
     }
     if (undefined !== scrollTop) {
@@ -102,6 +96,7 @@ const dimensionStore = new DimensionStore(dispatcherDefault, {
     }
   }
 });
-const result = require("set").fileFinishedImporting("stores/DimensionStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/DimensionStore.tsx");
 
 export default dimensionStore;

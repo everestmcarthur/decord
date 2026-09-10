@@ -1,31 +1,30 @@
 // Module ID: 1186
 // Function ID: 1187
-// Name: SystemThemeState
+// Name: ThemeConstants
 // Dependencies: [1074, 1187, 2]
 
-// Module 1186 (SystemThemeState)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import create from "create" /* 1187 */;
+// Module 1186 (ThemeConstants)
+import Constants from "Constants" /* 1074 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import size from "module_2" /* 2 */;
 
-const ThemeTypes = ME.ThemeTypes;
-let obj = { DARK: "dark", LIGHT: "light", NO_PREFERENCE: "unknown" };
-obj = { [obj.DARK]: ThemeTypes.DARKER, [obj.LIGHT]: ThemeTypes.LIGHT, [obj.NO_PREFERENCE]: ThemeTypes.DARKER };
-obj = { [obj.DARK]: ThemeTypes.DARK, [obj.LIGHT]: ThemeTypes.LIGHT, [obj.NO_PREFERENCE]: ThemeTypes.DARK };
-const obj1 = { [obj.DARK]: ThemeTypes.DARKER, [obj.LIGHT]: ThemeTypes.LIGHT, [obj.NO_PREFERENCE]: ThemeTypes.DARKER };
-const obj2 = { [create.Theme.UNSET]: ThemeTypes.DARK, [create.Theme.DARK]: ThemeTypes.DARK, [create.Theme.DARKER]: ThemeTypes.DARK, [create.Theme.LIGHT]: ThemeTypes.LIGHT, [create.Theme.MIDNIGHT]: ThemeTypes.DARK };
-const obj3 = { [create.Theme.UNSET]: ThemeTypes.DARKER, [create.Theme.DARK]: ThemeTypes.DARK, [create.Theme.DARKER]: ThemeTypes.DARKER, [create.Theme.LIGHT]: ThemeTypes.LIGHT, [create.Theme.MIDNIGHT]: ThemeTypes.MIDNIGHT };
-const obj4 = { [create.Theme.UNSET]: ThemeTypes.DARKER, [create.Theme.DARK]: ThemeTypes.DARKER, [create.Theme.DARKER]: ThemeTypes.DARKER, [create.Theme.LIGHT]: ThemeTypes.LIGHT, [create.Theme.MIDNIGHT]: ThemeTypes.MIDNIGHT };
-const obj5 = { [create.Theme.UNSET]: ThemeTypes.DARKER, [create.Theme.DARK]: ThemeTypes.DARK, [create.Theme.DARKER]: ThemeTypes.DARKER, [create.Theme.LIGHT]: ThemeTypes.LIGHT, [create.Theme.MIDNIGHT]: ThemeTypes.MIDNIGHT };
-const result = set.fileFinishedImporting("modules/user_settings/ThemeConstants.tsx");
+const ThemeTypes = Constants.ThemeTypes;
+const obj = { DARK: "dark", LIGHT: "light", NO_PREFERENCE: "unknown" };
+const obj2 = { [obj.DARK]: ThemeTypes.DARKER, [obj.LIGHT]: ThemeTypes.LIGHT, [obj.NO_PREFERENCE]: ThemeTypes.DARKER };
+const obj3 = { [obj.DARK]: ThemeTypes.DARK, [obj.LIGHT]: ThemeTypes.LIGHT, [obj.NO_PREFERENCE]: ThemeTypes.DARK };
+const obj4 = { [obj.DARK]: ThemeTypes.DARKER, [obj.LIGHT]: ThemeTypes.LIGHT, [obj.NO_PREFERENCE]: ThemeTypes.DARKER };
+const obj5 = { [preloaded_user_settings.Theme.UNSET]: ThemeTypes.DARK, [preloaded_user_settings.Theme.DARK]: ThemeTypes.DARK, [preloaded_user_settings.Theme.DARKER]: ThemeTypes.DARK, [preloaded_user_settings.Theme.LIGHT]: ThemeTypes.LIGHT, [preloaded_user_settings.Theme.MIDNIGHT]: ThemeTypes.DARK };
+const obj6 = { [preloaded_user_settings.Theme.UNSET]: ThemeTypes.DARKER, [preloaded_user_settings.Theme.DARK]: ThemeTypes.DARK, [preloaded_user_settings.Theme.DARKER]: ThemeTypes.DARKER, [preloaded_user_settings.Theme.LIGHT]: ThemeTypes.LIGHT, [preloaded_user_settings.Theme.MIDNIGHT]: ThemeTypes.MIDNIGHT };
+const obj7 = { [preloaded_user_settings.Theme.UNSET]: ThemeTypes.DARKER, [preloaded_user_settings.Theme.DARK]: ThemeTypes.DARKER, [preloaded_user_settings.Theme.DARKER]: ThemeTypes.DARKER, [preloaded_user_settings.Theme.LIGHT]: ThemeTypes.LIGHT, [preloaded_user_settings.Theme.MIDNIGHT]: ThemeTypes.MIDNIGHT };
+const result = size.fileFinishedImporting("modules/user_settings/ThemeConstants.tsx");
 
 export const SystemThemeState = { UNSET: 0, [0]: "UNSET", OFF: 1, [1]: "OFF", ON: 2, [2]: "ON" };
 export const SystemTheme = obj;
 export const ActiveThemeType = { CUSTOM: "custom", CLIENT: "client", SYSTEM: "system", DEFAULT: "default" };
-export const THEME_PREFERENCES_MOBILE = obj;
-export const THEME_PREFERENCES_WEB = obj;
-export const THEME_PREFERENCES_WEB_REFRESH = obj1;
-export const PROTO_THEME_MAP_WEB = obj2;
-export const PROTO_THEME_MAP_WEB_REFRESH = obj3;
-export const PROTO_THEME_MAP_MOBILE = obj4;
-export const PROTO_THEME_MAP_MOBILE_REFRESH = obj5;
+export const THEME_PREFERENCES_MOBILE = obj2;
+export const THEME_PREFERENCES_WEB = obj3;
+export const THEME_PREFERENCES_WEB_REFRESH = obj4;
+export const PROTO_THEME_MAP_WEB = obj5;
+export const PROTO_THEME_MAP_WEB_REFRESH = obj6;
+export const PROTO_THEME_MAP_MOBILE = obj7;
+export const PROTO_THEME_MAP_MOBILE_REFRESH = { [preloaded_user_settings.Theme.UNSET]: ThemeTypes.DARKER, [preloaded_user_settings.Theme.DARK]: ThemeTypes.DARK, [preloaded_user_settings.Theme.DARKER]: ThemeTypes.DARKER, [preloaded_user_settings.Theme.LIGHT]: ThemeTypes.LIGHT, [preloaded_user_settings.Theme.MIDNIGHT]: ThemeTypes.MIDNIGHT };

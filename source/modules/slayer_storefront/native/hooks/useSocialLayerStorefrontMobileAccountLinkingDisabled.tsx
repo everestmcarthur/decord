@@ -1,23 +1,26 @@
-// Module ID: 11011
-// Function ID: 11012
+// Module ID: 11038
+// Function ID: 11039
 // Name: useSocialLayerStorefrontMobileAccountLinkingDisabled
-// Dependencies: [7228, 504, 2]
+// Dependencies: [7242, 504, 2]
 // Exports: useSocialLayerStorefrontMobileAccountLinkingDisabled
 
-// Module 11011 (useSocialLayerStorefrontMobileAccountLinkingDisabled)
-import closure_2 from "handleUserSettingsStoreUpdate" /* 7228 */;
+// Module 11038 (useSocialLayerStorefrontMobileAccountLinkingDisabled)
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7242 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/slayer_storefront/native/hooks/useSocialLayerStorefrontMobileAccountLinkingDisabled.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/slayer_storefront/native/hooks/useSocialLayerStorefrontMobileAccountLinkingDisabled.tsx");
 
 export const useSocialLayerStorefrontMobileAccountLinkingDisabled = function useSocialLayerStorefrontMobileAccountLinkingDisabled(applicationId) {
-  const _require = applicationId;
-  const items = [closure_2];
+  _require = applicationId;
+  const items = [SocialLayerStorefrontStore];
   const items1 = [applicationId];
-  return _require(504).useStateFromStores(items, () => {
+  return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      const configForApplicationId = closure_1_2.getConfigForApplicationId(tmp);
+      const configForApplicationId = SocialLayerStorefrontStore.getConfigForApplicationId(tmp);
       let prop;
       if (configForApplicationId != null) {
         prop = configForApplicationId.disableMobileAccountLinking;

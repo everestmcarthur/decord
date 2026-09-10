@@ -1,62 +1,62 @@
-// Module ID: 17641
-// Function ID: 17642
-// Name: IdentityApplicationRow
-// Dependencies: [32, 19, 17, 21, 11568, 5605, 1178, 4495, 7149, 1114, 7503, 1396, 4411, 4527, 9797, 7198, 9798, 6627, 7123, 5687, 2]
+// Module ID: 17674
+// Function ID: 17675
+// Name: SelectConnectionActionSheet
+// Dependencies: [32, 19, 17, 21, 11594, 5619, 1178, 4509, 7163, 1114, 7517, 1396, 4425, 4541, 9824, 7211, 9825, 6641, 7137, 5701, 2]
 // Exports: default
 
-// Module 17641 (IdentityApplicationRow)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import useThemeDefault from "useTheme" /* 4495 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
-import BottomSheetModal from "BottomSheetModal" /* 6627 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 7149 */;
-import ActionSheet from "ActionSheet" /* 7198 */;
-import request from "request" /* 11568 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 17674 (SelectConnectionActionSheet)
+import util from "util" /* 1114 */;
+import useThemeDefault from "useTheme" /* 4509 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import TableRowGroup from "TableRowGroup" /* 5701 */;
+import BottomSheetModal from "BottomSheetModal" /* 6641 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7137 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7163 */;
+import ActionSheet from "ActionSheet" /* 7211 */;
+import ConnectionsHooks from "ConnectionsHooks" /* 7517 */;
+import SegmentedControlState from "SegmentedControlState" /* 9824 */;
+import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11594 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+const require = globalThis.__r;
+
+require = fn;
 function IdentityApplicationRow(arg0) {
   ({ applicationId, onPress } = arg0);
-  let obj = request;
-  const getOrFetchApplicationBatched = obj.useGetOrFetchApplicationBatched(applicationId);
+  const getOrFetchApplicationBatched = useGetOrFetchApplicationBatched.useGetOrFetchApplicationBatched(applicationId);
   if (null == getOrFetchApplicationBatched) {
     return null;
   } else {
     const bot = getOrFetchApplicationBatched.bot;
     let tmp6Result = null;
     if (null != bot) {
-      obj = { user: null, size: null, guildId: "Array" };
-      obj[0] = bot;
-      obj[1] = tmp(1178).AvatarSizes.XSMALL;
-      tmp6Result = tmp6(tmp(1178).Avatar, obj);
+      const obj2 = { user: bot, size: tmp(1178).AvatarSizes.XSMALL, guildId: "Array" };
+      tmp6Result = tmp6(tmp(1178).Avatar, obj2);
     }
-    obj = { icon: null, label: null, subLabel: null, onPress: null };
-    obj[0] = tmp6Result;
-    obj[1] = getOrFetchApplicationBatched.name;
+    const obj3 = { icon: tmp6Result, label: getOrFetchApplicationBatched.name, subLabel: null, onPress: null };
     let description;
     if ("" !== getOrFetchApplicationBatched.description) {
       description = getOrFetchApplicationBatched.description;
     }
-    obj[2] = description;
-    obj[3] = onPress;
-    return closure_6(tmp(5605).TableRow, obj);
+    obj3.subLabel = description;
+    obj3.onPress = onPress;
+    return timestampProducer(tmp(5619).TableRow, obj3);
   }
 }
-({ jsx: closure_6, jsxs: error } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/guild_settings/roles/native/action_sheet/SelectConnectionActionSheet.tsx");
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/roles/native/action_sheet/SelectConnectionActionSheet.tsx");
 
 export default function SelectConnectionActionSheet(arg0) {
-  ({ addConnection: require, excludedConnections: importDefault, excludedApplications: dependencyMap, integrations, onCompleteApplication: closure_3, gameApplicationIds, onCompleteIdentityApplication } = arg0);
-  closure_5 = undefined;
+  ({ addConnection: require, excludedConnections: importDefault, excludedApplications: dependencyMap, integrations, onCompleteApplication: _slicedToArray, gameApplicationIds, onCompleteIdentityApplication } = arg0);
   closure_5 = useThemeDefault();
   let obj = { title: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.Sm0YG7);
-  const tmp5 = callback(onCompleteIdentityApplication.useState(0), 2);
+  const intl = util.intl;
+  obj.title = intl.string(util.t.Sm0YG7);
+  const tmp5 = _slicedToArray(onCompleteIdentityApplication.useState(0), 2);
   const first = tmp5[0];
   let found;
   if (integrations != null) {
@@ -78,48 +78,44 @@ export default function SelectConnectionActionSheet(arg0) {
       return tmp2;
     });
   }
-  let tmp3Result = tmp3(7503);
-  const platforms = tmp3Result.usePlatforms();
+  const tmp4 = closure_6(BottomSheetTitleHeader.BottomSheetTitleHeader, obj);
+  const platforms = ConnectionsHooks.usePlatforms();
   const found1 = platforms.filter((type) => !set.has(type.type));
   let mapped1;
   const mapped = found1.map((icon) => {
-    closure_0 = icon;
-    let obj = closure_1_0(closure_1_2[11]);
+    const obj = require("AvatarUtils");
     icon = icon.icon;
-    const source = obj.makeSource(closure_1_0(closure_1_2[12]).isThemeDark(closure_5) ? icon.darkPNG : icon.lightPNG);
-    obj = {
-      icon: closure_1_6(tmp(tmp2[6]).Icon, { source, disableColor: true }),
+    const source = obj.makeSource(require("shared").isThemeDark(closure_5) ? icon.darkPNG : icon.lightPNG);
+    const obj2 = require("shared");
+    return closure_1_6(require("TableRow").TableRow, {
+      icon: closure_1_6(require("native").Icon, { source, disableColor: true }),
       label: icon.name,
       onPress() {
-        icon(icon.type);
-        closure_2_1(closure_2_2[13]).hideActionSheet();
+        require(icon.type);
+        ActionSheetActionCreatorsDefault.hideActionSheet();
       }
-    };
-    return closure_1_6(closure_1_0(closure_1_2[5]).TableRow, obj, "row-" + icon.type);
+    }, "row-" + icon.type);
   });
   if (found != null) {
     mapped1 = found.map((application) => {
       application = application.application;
       let tmp = null;
       if (null != application) {
-        let obj = { icon: null, label: null, subLabel: null, onPress: null };
-        obj = { user: null, size: null, guildId: "Array" };
-        obj[0] = application.bot;
-        obj[1] = closure_1_0(closure_1_2[6]).AvatarSizes.XSMALL;
-        obj[0] = closure_1_6(closure_1_0(closure_1_2[6]).Avatar, obj);
-        obj[1] = application.name;
+        const obj = { icon: null, label: null, subLabel: null, onPress: null };
+        const obj2 = { user: application.bot, size: require("native").AvatarSizes.XSMALL, guildId: "Array" };
+        obj.icon = closure_1_6(require("native").Avatar, obj2);
+        obj.label = application.name;
         let description;
         if ("" !== application.description) {
           description = application.description;
         }
-        obj[2] = description;
-        obj[3] = function onPress() {
-          closure_1_3(application.id);
-          closure_2_1(closure_2_2[13]).hideActionSheet();
+        obj.subLabel = description;
+        obj.onPress = function onPress() {
+          _slicedToArray(application.id);
+          ActionSheetActionCreatorsDefault.hideActionSheet();
         };
         const _HermesInternal = HermesInternal;
-        tmp = closure_1_6(closure_1_0(closure_1_2[5]).TableRow, obj, "row-" + application.id);
-        const tmp2 = closure_1_6;
+        tmp = closure_1_6(require("TableRow").TableRow, obj, "row-" + application.id);
       }
       return tmp;
     });
@@ -127,15 +123,15 @@ export default function SelectConnectionActionSheet(arg0) {
   if (gameApplicationIds == null) {
     gameApplicationIds = [];
   }
-  const found2 = gameApplicationIds.filter((arg0) => !set2.has(arg0));
+  const found2 = gameApplicationIds.filter((item) => !set2.has(item));
   if (null != onCompleteIdentityApplication) {
     let mapped2 = found2.map((applicationId) => {
       closure_0 = applicationId;
-      return closure_1_6(closure_1_8, {
+      return closure_1_6(IdentityApplicationRow, {
         applicationId,
         onPress() {
-          closure_1_4(closure_0);
-          closure_2_1(closure_2_2[13]).hideActionSheet();
+          onCompleteIdentityApplication(closure_0);
+          ActionSheetActionCreatorsDefault.hideActionSheet();
         }
       }, "row-identity-" + applicationId);
     });
@@ -150,7 +146,7 @@ export default function SelectConnectionActionSheet(arg0) {
     num = 0;
   }
   const intl2 = tmp3(1114).intl;
-  const items = [intl2.string(getSystemLocale.t["3fe7U5"])];
+  const items = [intl2.string(util.t["3fe7U5"])];
   if (num > 0) {
     const intl3 = tmp3(1114).intl;
     items.push(intl3.string(tmp3(1114).t.PHjkRE));
@@ -159,9 +155,9 @@ export default function SelectConnectionActionSheet(arg0) {
     const intl4 = tmp3(1114).intl;
     items.push(intl4.string(tmp3(1114).t.y3ZnnU));
   }
-  tmp3Result = tmp3(9797);
-  obj = { pageWidth: 0, defaultIndex: first, onSetActiveIndex: tmp5[1], items: items.map((id) => ({ id, label: id, page: null })) };
-  const segmentedControlState = tmp3Result.useSegmentedControlState(obj);
+  const tmp3Result = ConnectionsHooks;
+  const tmp3Result2 = SegmentedControlState;
+  const segmentedControlState = tmp3Result2.useSegmentedControlState({ pageWidth: 0, defaultIndex: first, onSetActiveIndex: tmp5[1], items: items.map((id) => ({ id, label: id, page: null })) });
   if (1 === first) {
     if (tmp10) {
       mapped2 = mapped1;
@@ -173,22 +169,21 @@ export default function SelectConnectionActionSheet(arg0) {
       tmp15 = mapped2;
     }
   }
-  obj = { scrollable: true, header: callback2(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj), startExpanded: true, children: null };
+  const obj3 = { scrollable: true, header: tmp4, startExpanded: true, children: null };
   if (num > 0) {
-    obj1 = { children: null };
-    const obj2 = { state: null };
-    obj2[0] = segmentedControlState;
-    obj1[0] = tmp2(tmp3(9798).SegmentedControl, obj2);
-    let tmp2Result = tmp2(closure_5, obj1);
+    const obj4 = { children: null };
+    const obj5 = { state: segmentedControlState };
+    obj4.children = tmp2(tmp3(9825).SegmentedControl, obj5);
+    let tmp2Result = tmp2(closure_5, obj4);
   } else {
     tmp2Result = null;
   }
   const items1 = [tmp2Result, ];
-  const obj3 = { children: null };
+  const obj6 = { children: null };
+  let obj2 = { pageWidth: 0, defaultIndex: first, onSetActiveIndex: tmp5[1], items: items.map((id) => ({ id, label: id, page: null })) };
   const tmp16 = closure_7;
-  const tmp4 = callback2(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj);
-  obj3[0] = callback2(SafeAreaPaddingView.SafeAreaPaddingView, { bottom: true, children: callback2(TableRowGroupTitle.TableRowGroup, { hasIcons: true, children: tmp15 }) });
-  items1[1] = callback2(BottomSheetModal.BottomSheetScrollView, obj3);
-  obj[3] = items1;
-  return tmp16(ActionSheet.ActionSheet, obj);
+  obj6.children = closure_6(common_SafeAreaView.SafeAreaPaddingView, { bottom: true, children: closure_6(TableRowGroup.TableRowGroup, { hasIcons: true, children: tmp15 }) });
+  items1[1] = closure_6(BottomSheetModal.BottomSheetScrollView, obj6);
+  obj3.children = items1;
+  return tmp16(ActionSheet.ActionSheet, obj3);
 };

@@ -1,14 +1,15 @@
-// Module ID: 7695
-// Function ID: 7696
-// Name: trackingConfigWithDefaults
-// Dependencies: [502, 7689, 2]
+// Module ID: 7709
+// Function ID: 7710
+// Name: appMessageEmbedTrackingConfig
+// Dependencies: [502, 7703, 2]
 // Exports: trackingConfigWithDefaults
 
-// Module 7695 (trackingConfigWithDefaults)
-import closure_0 from "fetchFingerprint" /* 502 */;
-import { LinkType } from "LinkType" /* 7689 */;
+// Module 7709 (appMessageEmbedTrackingConfig)
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-const result = require("set").fileFinishedImporting("modules/applications/message_embed/web/appMessageEmbedTrackingConfig.tsx");
+const LinkType = fn(7703).LinkType;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/applications/message_embed/web/appMessageEmbedTrackingConfig.tsx");
 
 export const trackingConfigWithDefaults = function trackingConfigWithDefaults(id) {
   let str;
@@ -26,45 +27,45 @@ export const trackingConfigWithDefaults = function trackingConfigWithDefaults(id
   if (linkType == null) {
     linkType = LinkType.UNKNOWN;
   }
-  obj[1] = linkType;
+  obj.linkType = linkType;
   let referrerId;
   if (id != null) {
     referrerId = id.referrerId;
   }
   if (referrerId == null) {
-    referrerId = id.getId();
+    referrerId = AuthenticationStore.getId();
   }
-  obj[2] = referrerId;
+  obj.referrerId = referrerId;
   let activityCustomId;
   if (id != null) {
     activityCustomId = id.activityCustomId;
   }
-  obj[3] = activityCustomId;
+  obj.activityCustomId = activityCustomId;
   let onView;
   if (id != null) {
     onView = id.onView;
   }
-  obj[4] = onView;
+  obj.onView = onView;
   let onLinkCopied;
   if (id != null) {
     onLinkCopied = id.onLinkCopied;
   }
-  obj[5] = onLinkCopied;
+  obj.onLinkCopied = onLinkCopied;
   let guildId;
   if (id != null) {
     guildId = id.guildId;
   }
-  obj[6] = guildId;
+  obj.guildId = guildId;
   let channelId;
   if (id != null) {
     channelId = id.channelId;
   }
-  obj[7] = channelId;
+  obj.channelId = channelId;
   let messageId;
   if (id != null) {
     messageId = id.messageId;
   }
-  obj[8] = messageId;
+  obj.messageId = messageId;
   let flag;
   if (id != null) {
     flag = id.isDeadEnd;
@@ -72,11 +73,11 @@ export const trackingConfigWithDefaults = function trackingConfigWithDefaults(id
   if (flag == null) {
     flag = false;
   }
-  obj[9] = flag;
+  obj.isDeadEnd = flag;
   let appEmbedState;
   if (id != null) {
     appEmbedState = id.appEmbedState;
   }
-  obj[10] = appEmbedState;
+  obj.appEmbedState = appEmbedState;
   return obj;
 };

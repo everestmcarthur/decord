@@ -1,21 +1,22 @@
-// Module ID: 16243
-// Function ID: 16244
-// Name: getSectionFooterConfig
-// Dependencies: [7117, 4199, 7534, 1074, 7528, 1982, 2]
+// Module ID: 16273
+// Function ID: 16274
+// Name: SectionFooterHelpers
+// Dependencies: [7131, 4212, 7548, 1074, 7542, 1982, 2]
 // Exports: getSectionFooterActiveVoiceChannels, getSectionFooterConfig, isSectionFooterWithActiveVoiceChannels
 
-// Module 16243 (getSectionFooterConfig)
-import computeSubtitle from "computeSubtitle" /* 7528 */;
-import closure_2 from "incrementVersion" /* 7117 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4199 */;
-import { ChannelListGuildActionRow } from "ChannelListGuildActionRow" /* 7534 */;
-import { Permissions } from "ME" /* 1074 */;
+// Module 16273 (SectionFooterHelpers)
+import ChannelListState from "ChannelListState" /* 7542 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 7131 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_sidebar/SectionFooterHelpers.tsx");
+require = fn;
+const ChannelListGuildActionRow = fn(7548).ChannelListGuildActionRow;
+const Permissions = fn(1074).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_sidebar/SectionFooterHelpers.tsx");
 
 export const getSectionFooterConfig = function getSectionFooterConfig(guildChannels, optInChannelsEnabled, section) {
-  if (section === computeSubtitle.SECTION_INDEX_GUILD_ACTIONS) {
+  if (section === ChannelListState.SECTION_INDEX_GUILD_ACTIONS) {
     const guildActionSection = guildChannels.getGuildActionSection();
     const rows = guildActionSection.getRows();
     let isEmptyResult = 1 === rows.length;
@@ -32,18 +33,18 @@ export const getSectionFooterConfig = function getSectionFooterConfig(guildChann
   }
   let tmp6 = !tmp3;
   if (!tmp3) {
-    const tmp7 = section === tmp(7528).SECTION_INDEX_GUILD_ACTIONS;
+    const tmp7 = section === tmp(7542).SECTION_INDEX_GUILD_ACTIONS;
     if (tmp7) {
       tmp6 = tmp7;
     } else {
       if (tmpResult.isFavoritesGuildId(guildChannels.id)) {
         let tmp8 = section !== guildChannels.getSections(false).length - 1;
       } else {
-        tmp8 = section === tmp(7528).SECTION_INDEX_FAVORITES;
+        tmp8 = section === tmp(7542).SECTION_INDEX_FAVORITES;
         if (!tmp8) {
           let tmp10 = optInChannelsEnabled;
           if (tmp10) {
-            let tmp11 = section !== tmp(7528).SECTION_INDEX_UNCATEGORIZED_CHANNELS;
+            let tmp11 = section !== tmp(7542).SECTION_INDEX_UNCATEGORIZED_CHANNELS;
             if (tmp11) {
               let flag2 = section === guildChannels.recentsSectionNumber;
               if (!flag2) {
@@ -60,24 +61,24 @@ export const getSectionFooterConfig = function getSectionFooterConfig(guildChann
       tmpResult = tmp(1982);
     }
   }
-  const obj = { hasDivider: tmp6, canHaveVoiceSummary: !(section === computeSubtitle.SECTION_INDEX_GUILD_ACTIONS || section === computeSubtitle.SECTION_INDEX_FAVORITES || section === computeSubtitle.SECTION_INDEX_UNCATEGORIZED_CHANNELS || section === guildChannels.recentsSectionNumber || section === guildChannels.voiceChannelsSectionNumber) };
+  const obj = { hasDivider: tmp6, canHaveVoiceSummary: !(section === ChannelListState.SECTION_INDEX_GUILD_ACTIONS || section === ChannelListState.SECTION_INDEX_FAVORITES || section === ChannelListState.SECTION_INDEX_UNCATEGORIZED_CHANNELS || section === guildChannels.recentsSectionNumber || section === guildChannels.voiceChannelsSectionNumber) };
   return obj;
 };
 export const getSectionFooterActiveVoiceChannels = function getSectionFooterActiveVoiceChannels(arg0) {
-  ({ category, voiceStates: require, selectedChannelId: dependencyMap, selectedVoiceChannelId: closure_2 } = arg0);
-  if (true !== closure_2.isCollapsed(category.record.id)) {
+  ({ category, voiceStates: require, selectedChannelId: dependencyMap, selectedVoiceChannelId: CategoryCollapseStore } = arg0);
+  if (true !== CategoryCollapseStore.isCollapsed(category.record.id)) {
     let items = [];
   } else {
     const channelRecords = category.getChannelRecords();
     items = channelRecords.filter((id) => {
-      if (closure_1_3.can(closure_1_5.VIEW_CHANNEL, id)) {
-        let items = table[id.id];
+      if (PermissionStore.can(Permissions.VIEW_CHANNEL, id)) {
+        let items = require[id.id];
         if (items == null) {
           items = [];
         }
-        let tmp4 = id.id !== closure_2;
+        let tmp4 = id.id !== CategoryCollapseStore;
         if (tmp4) {
-          tmp4 = id.id !== closure_1;
+          tmp4 = id.id !== dependencyMap;
         }
         if (tmp4) {
           tmp4 = items.length > 0;
@@ -91,20 +92,20 @@ export const getSectionFooterActiveVoiceChannels = function getSectionFooterActi
   return items;
 };
 export const isSectionFooterWithActiveVoiceChannels = function isSectionFooterWithActiveVoiceChannels(arg0) {
-  ({ category, voiceStates: require, selectedChannelId: dependencyMap, selectedVoiceChannelId: closure_2 } = arg0);
-  if (true !== closure_2.isCollapsed(category.record.id)) {
+  ({ category, voiceStates: require, selectedChannelId: dependencyMap, selectedVoiceChannelId: CategoryCollapseStore } = arg0);
+  if (true !== CategoryCollapseStore.isCollapsed(category.record.id)) {
     let items = [];
   } else {
     const channelRecords = category.getChannelRecords();
     items = channelRecords.filter((id) => {
-      if (closure_1_3.can(closure_1_5.VIEW_CHANNEL, id)) {
-        let items = table[id.id];
+      if (PermissionStore.can(Permissions.VIEW_CHANNEL, id)) {
+        let items = require[id.id];
         if (items == null) {
           items = [];
         }
-        let tmp4 = id.id !== closure_2;
+        let tmp4 = id.id !== CategoryCollapseStore;
         if (tmp4) {
-          tmp4 = id.id !== closure_1;
+          tmp4 = id.id !== dependencyMap;
         }
         if (tmp4) {
           tmp4 = items.length > 0;

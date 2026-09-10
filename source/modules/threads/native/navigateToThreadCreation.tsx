@@ -1,20 +1,18 @@
-// Module ID: 11227
-// Function ID: 11228
+// Module ID: 11254
+// Function ID: 11255
 // Name: navigateToThreadCreation
-// Dependencies: [7765, 4417, 4571, 2]
+// Dependencies: [7779, 4431, 4585, 2]
 // Exports: navigateToThreadCreation
 
-// Module 11227 (navigateToThreadCreation)
-import set from "set" /* 2 */;
-import transitionToChannel from "transitionToChannel" /* 4571 */;
-import patchThreadDefault from "patchThread" /* 7765 */;
+// Module 11254 (navigateToThreadCreation)
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7779 */;
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("modules/threads/native/navigateToThreadCreation.tsx");
+const transitionToChannel = tmp3(4585);
+let result = size.fileFinishedImporting("modules/threads/native/navigateToThreadCreation.tsx");
 
 export const navigateToThreadCreation = function navigateToThreadCreation(channel, Message) {
-  const result = patchThreadDefault.openThreadCreationForMobile(channel, undefined, Message);
-  const obj = patchThreadDefault;
-  const tmp3 = require;
+  const result = ThreadActionCreatorsDefault.openThreadCreationForMobile(channel, undefined, Message);
   if (!obj2.navigateToCreateThread(channel.guild_id, channel.id)) {
     transitionToChannel.transitionToChannel(channel.id);
     const tmp3Result = transitionToChannel;

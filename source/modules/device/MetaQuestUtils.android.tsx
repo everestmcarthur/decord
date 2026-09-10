@@ -1,21 +1,23 @@
 // Module ID: 1608
 // Function ID: 1609
-// Name: isMetaQuest
+// Name: MetaQuestUtils
 // Dependencies: [1342, 1364, 2]
 // Exports: isMetaQuest, isQuestRelease
 
-// Module 1608 (isMetaQuest)
-import getConstantsAll from "getConstants" /* 1364 */;
-import importDefaultResult from "enforcing" /* 1342 */;
+// Module 1608 (MetaQuestUtils)
+import ClientInfoUtilsAll from "ClientInfoUtils" /* 1364 */;
+import NativeMetaQuestModule_mod from "NativeMetaQuestModule" /* 1342 */;
 
-const isMetaQuestResult = importDefaultResult.isMetaQuest();
-const result = require("set").fileFinishedImporting("modules/device/MetaQuestUtils.android.tsx");
+let NativeMetaQuestModule = NativeMetaQuestModule_mod;
+NativeMetaQuestModule = NativeMetaQuestModule.isMetaQuest();
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/device/MetaQuestUtils.android.tsx");
 
 export const isMetaQuest = function isMetaQuest() {
-  return importDefaultResult.isMetaQuest();
+  return NativeMetaQuestModule.isMetaQuest();
 };
 export const isQuestRelease = function isQuestRelease() {
-  const constants = getConstantsAll.getConstants();
+  constants = ClientInfoUtilsAll.getConstants();
   let flag;
   if (constants != null) {
     const ReleaseChannel = constants.ReleaseChannel;
@@ -28,4 +30,4 @@ export const isQuestRelease = function isQuestRelease() {
   }
   return flag;
 };
-export const isThumbstickScrollDevice = isMetaQuestResult;
+export const isThumbstickScrollDevice = NativeMetaQuestModule;

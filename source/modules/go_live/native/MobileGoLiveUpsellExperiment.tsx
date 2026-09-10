@@ -1,15 +1,17 @@
-// Module ID: 9963
-// Function ID: 9964
-// Name: apexExperiment
+// Module ID: 9990
+// Function ID: 9991
+// Name: MobileGoLiveUpsellExperiment
 // Dependencies: [1433, 2]
 
-// Module 9963 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 9990 (MobileGoLiveUpsellExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null, 2: { showMobileGoLiveUpsell: true, goLiveUpsellVariant: "one-step" } };
-obj[2] = { showMobileGoLiveUpsell: true, goLiveUpsellVariant: "two-step" };
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-04-mobile-go-live-upsell", kind: "user", defaultConfig: { showMobileGoLiveUpsell: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/go_live/native/MobileGoLiveUpsellExperiment.tsx");
+const obj = { name: "2026-04-mobile-go-live-upsell", kind: "user", defaultConfig: { showMobileGoLiveUpsell: false }, variations: null };
+const obj2 = { 1: null, 2: { showMobileGoLiveUpsell: true, goLiveUpsellVariant: "one-step" } };
+obj2[2] = { showMobileGoLiveUpsell: true, goLiveUpsellVariant: "two-step" };
+obj.variations = obj2;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/go_live/native/MobileGoLiveUpsellExperiment.tsx");
 
 export default apexExperiment;

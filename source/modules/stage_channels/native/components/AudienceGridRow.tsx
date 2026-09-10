@@ -1,15 +1,12 @@
-// Module ID: 10072
-// Function ID: 10073
-// Name: BlankAudience
-// Dependencies: [19, 17, 5414, 21, 4560, 10073, 10074, 2]
+// Module ID: 10099
+// Function ID: 10100
+// Name: AudienceGridRow
+// Dependencies: [19, 17, 5428, 21, 4574, 10100, 10101, 2]
 
-// Module 10072 (BlankAudience)
-import _modDef10073 from "module_10073" /* 10073 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { MAX_AUDIENCE_ROW_LIMIT } from "MAX_STAGE_TOPIC_LENGTH" /* 5414 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 10099 (AudienceGridRow)
+import BlankAudienceTileDefault from "BlankAudienceTile" /* 10100 */;
+import AudienceTileDefault from "AudienceTile" /* 10101 */;
+import noop from "module_19" /* 19 */;
 
 class BlankAudience {
   constructor(arg0) {
@@ -19,14 +16,21 @@ class BlankAudience {
       tmp = jsx;
       tmp2 = closure_0;
       tmp3 = closure_1;
-      arr = items.push(jsx(require("module_10073"), {}, num));
+      arr1 = items.push(jsx(closure_0(closure_1[5]), {}, num));
     }
     return items;
   }
 }
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ rowContainer: { flex: 1, flexDirection: "row", marginVertical: 16, paddingHorizontal: 4, justifyContent: "space-between" } });
-const memoResult = importAllResult.memo((theme) => {
+const View = fn(17).View;
+const MAX_AUDIENCE_ROW_LIMIT = fn(5428).MAX_AUDIENCE_ROW_LIMIT;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let closure_6 = createStyles.createStyles({ rowContainer: { flex: 1, flexDirection: "row", marginVertical: 16, paddingHorizontal: 4, justifyContent: "space-between" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/AudienceGridRow.tsx");
+
+export default noop.memo((theme) => {
   ({ channel: importDefault, participants, renderBlankAudience } = theme);
   if (renderBlankAudience === undefined) {
     renderBlankAudience = true;
@@ -36,25 +40,21 @@ const memoResult = importAllResult.memo((theme) => {
   if (renderBlankAudience) {
     num = MAX_AUDIENCE_ROW_LIMIT - participants.length;
   }
-  const items = [callback2().rowContainer, ];
+  const items = [closure_6().rowContainer, ];
   let str = "center";
   if (renderBlankAudience) {
     str = "space-between";
   }
-  let obj = { style: items, children: null };
+  const obj = { style: items, children: null };
   items[1] = { justifyContent: str };
-  const items1 = [participants.map((id) => closure_1_4(closure_1_0(theme[6]), { theme, channel: closure_0, participant: id }, id.id)), ];
+  const items1 = [participants.map((participant) => React4(AudienceTileDefault, { theme, channel, participant }, participant.id)), ];
   let tmp5 = null;
   if (num > 0) {
-    obj = { count: null };
-    obj[0] = num;
-    tmp5 = callback(BlankAudience, obj);
+    const obj2 = { count: num };
+    tmp5 = closure_4(BlankAudience, obj2);
   }
   items1[1] = tmp5;
-  obj[1] = items1;
+  obj.children = items1;
   return closure_5(View, obj);
 });
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/AudienceGridRow.tsx");
-
-export default memoResult;
 export { BlankAudience };

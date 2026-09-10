@@ -1,17 +1,19 @@
-// Module ID: 14066
-// Function ID: 14067
-// Name: getWmfCpuEncodeIntel
+// Module ID: 14089
+// Function ID: 14090
+// Name: WindowsMediaFoundationCpuEncodeIntel
 // Dependencies: [1433, 2]
 // Exports: getWmfCpuEncodeIntel
 
-// Module 14066 (getWmfCpuEncodeIntel)
-import set from "set" /* 2 */;
+// Module 14089 (WindowsMediaFoundationCpuEncodeIntel)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null };
-obj[1] = { enabled: true };
-let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-06-wmf-cpu-encode-intel", kind: "user", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/media_engine/WindowsMediaFoundationCpuEncodeIntel.tsx");
+const obj = { name: "2026-06-wmf-cpu-encode-intel", kind: "user", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj.variations = obj2;
+const config = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/media_engine/WindowsMediaFoundationCpuEncodeIntel.tsx");
 
 export const getWmfCpuEncodeIntel = function getWmfCpuEncodeIntel(MediaEngineStore) {
   return config.getConfig({ location: MediaEngineStore });

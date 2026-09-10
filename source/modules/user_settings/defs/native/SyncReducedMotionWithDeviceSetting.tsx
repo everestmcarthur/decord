@@ -1,36 +1,35 @@
-// Module ID: 15419
-// Function ID: 15420
-// Name: toggle
-// Dependencies: [4552, 7975, 504, 14440, 11473, 1114, 2]
+// Module ID: 15448
+// Function ID: 15449
+// Name: SyncReducedMotionWithDeviceSetting
+// Dependencies: [4566, 7989, 504, 14465, 11500, 1114, 2]
 
-// Module 15419 (toggle)
+// Module 15448 (SyncReducedMotionWithDeviceSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import setFontSize from "setFontSize" /* 14440 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import createToggle from "createToggle" /* 11473 */;
+import util from "util" /* 1114 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14465 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const SettingBuilders = fn(11500);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["St+DJK"]);
+    const intl = util.intl;
+    return intl.string(util.t["St+DJK"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7989).MobileUserSettings.ACCESSIBILITY,
   useValue: function useReducedMotionSyncSettingValue() {
-    const items = [closure_2];
-    return initialize.useStateFromStores(items, () => "auto" === obj.rawPrefersReducedMotion);
+    const items = [AccessibilityStore];
+    return initialize.useStateFromStores(items, () => "auto" === AccessibilityStore.rawPrefersReducedMotion);
   },
   onValueChange: function onReducedMotionSyncSettingValueChange(arg0) {
-    const obj = setFontSize;
     let str = "auto";
     if (!arg0) {
-      str = obj.systemPrefersReducedMotion;
+      str = AccessibilityStore.systemPrefersReducedMotion;
     }
-    const result = obj.setPrefersReducedMotion(str);
+    const result = AccessibilityActionCreators.setPrefersReducedMotion(str);
   }
-};
-createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SyncReducedMotionWithDeviceSetting.tsx");
+});
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/SyncReducedMotionWithDeviceSetting.tsx");
 
-export default createToggle;
+export default toggle;

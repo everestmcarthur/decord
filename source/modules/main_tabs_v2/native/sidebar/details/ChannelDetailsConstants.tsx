@@ -1,14 +1,14 @@
-// Module ID: 10921
-// Function ID: 10922
-// Name: ChannelDetailsNavigatorScreens
-// Dependencies: [7878, 2]
+// Module ID: 10948
+// Function ID: 10949
+// Name: ChannelDetailsConstants
+// Dependencies: [7892, 2]
 
-// Module 10921 (ChannelDetailsNavigatorScreens)
-import set from "set" /* 2 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 7878 */;
+// Module 10948 (ChannelDetailsConstants)
+import SearchConstants from "SearchConstants" /* 7892 */;
+import size from "module_2" /* 2 */;
 
-const sum = MessageEmbedTypes.SEARCH_BAR_HEIGHT + 40;
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsConstants.tsx");
+const sum = SearchConstants.SEARCH_BAR_HEIGHT + 40;
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsConstants.tsx");
 
 export const ChannelDetailsNavigatorScreens = { DETAILS: "root", MUTE: "mute", THREADS: "threads", SETTINGS: "settings", PINNED_MESSAGES: "pinned-messages" };
 export const ChannelDetailsButtonTypes = { SEARCH: "search", MUTE: "mute", THREADS: "threads", SETTINGS: "settings", MORE: "more" };

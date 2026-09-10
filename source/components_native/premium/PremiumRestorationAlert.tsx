@@ -1,24 +1,24 @@
-// Module ID: 15247
-// Function ID: 15248
-// Name: render
-// Dependencies: [19, 7237, 21, 15248, 504, 2]
+// Module ID: 15276
+// Function ID: 15277
+// Name: PremiumRestorationAlert
+// Dependencies: [19, 7251, 21, 15277, 504, 2]
 
-// Module 15247 (render)
-import componentDidMountDefault from "componentDidMount" /* 15248 */;
-import importDefaultResult from "updateProduct" /* 7237 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
-import importDefaultResult1 from "initialize" /* 504 */;
+// Module 15276 (PremiumRestorationAlert)
+import UntouchableAlertDefault from "UntouchableAlert" /* 15277 */;
+import noop from "module_19" /* 19 */;
+import IAPStore from "IAPStore" /* 7251 */;
+import initialize from "initialize" /* 504 */;
 
-const PureComponent = importAllResult.PureComponent;
+const jsx = fn(21).jsx;
+const PureComponent = noop.PureComponent;
 class PremiumRestorationAlert extends PureComponent {
 }
 PremiumRestorationAlert.prototype["render"] = function render() {
   ({ isBusy, onClose } = this.props);
-  return jsx(componentDidMountDefault, { loading, onClose });
+  return jsx(UntouchableAlertDefault, { loading, onClose });
 };
-const items = [importDefaultResult];
-const tmp4 = importDefaultResult1.connectStores(items, () => ({ isBusy: importDefaultResult.isBusy() }))(PremiumRestorationAlert);
-const result = require("set").fileFinishedImporting("components_native/premium/PremiumRestorationAlert.tsx");
+const items = [IAPStore];
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/premium/PremiumRestorationAlert.tsx");
 
-export default tmp4;
+export default initialize.connectStores(items, () => ({ isBusy: IAPStore.isBusy() }))(PremiumRestorationAlert);

@@ -1,42 +1,39 @@
-// Module ID: 16441
-// Function ID: 16442
+// Module ID: 16472
+// Function ID: 16473
 // Name: ForYouSuggestedFriendsSectionHeader
-// Dependencies: [19, 17, 21, 4560, 576, 4556, 1114, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 4570, 1114, 2]
 // Exports: default
 
-// Module 16441 (ForYouSuggestedFriendsSectionHeader)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16472 (ForYouSuggestedFriendsSectionHeader)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { container: null, noDivider: null, text: null };
-createCacheKey = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE, marginTop: 12, marginBottom: 8, paddingHorizontal: 24, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderTopWidth: 0, marginTop: 0 };
-createCacheKey[2] = { marginTop: ThemesDefault.space.PX_16 };
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { marginTop: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/notification_center/native/ForYouSuggestedFriendsSectionHeader.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { container: { borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: 12, marginBottom: 8, paddingHorizontal: 24, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, noDivider: { borderTopWidth: 0, marginTop: 0 }, text: null };
+const obj3 = { borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: 12, marginBottom: 8, paddingHorizontal: 24, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
+obj2.text = { marginTop: nativeDefault.space.PX_16 };
+let closure_4 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notification_center/native/ForYouSuggestedFriendsSectionHeader.tsx");
 
 export default function ForYouSuggestedFriendsSectionHeader(showDivider) {
   showDivider = showDivider.showDivider;
-  const tmp = callback();
+  const tmp = closure_4();
   const items = [tmp.container, ];
   let noDivider = !showDivider;
   if (!showDivider) {
     noDivider = tmp.noDivider;
   }
-  let obj = { style: items, children: null };
+  const obj = { style: items, children: null };
   items[1] = noDivider;
-  obj = { style: tmp.text, color: "text-muted", variant: "text-sm/semibold", children: null };
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.string(getSystemLocale.t["1uAmCw"]);
-  obj[1] = jsx(Text.Text, { style: tmp.text, color: "text-muted", variant: "text-sm/semibold", children: null });
-  return <View style={tmp.text} color="text-muted" variant="text-sm/semibold">{null}</View>;
+  const obj2 = { style: tmp.text, color: "text-muted", variant: "text-sm/semibold", children: null };
+  const intl = util.intl;
+  obj2.children = intl.string(util.t["1uAmCw"]);
+  obj.children = jsx(Text_Text.Text, { style: tmp.text, color: "text-muted", variant: "text-sm/semibold", children: null });
+  return <View style={items}>{null}</View>;
 };

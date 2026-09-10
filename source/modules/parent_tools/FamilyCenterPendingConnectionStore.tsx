@@ -1,11 +1,11 @@
-// Module ID: 4774
-// Function ID: 4775
-// Name: initialize
+// Module ID: 4788
+// Function ID: 4789
+// Name: FamilyCenterPendingConnectionStore
 // Dependencies: [504, 573, 2]
 
-// Module 4774 (initialize)
+// Module 4788 (FamilyCenterPendingConnectionStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
 let c0 = null;
 const PersistedStore = initializeDefault.PersistedStore;
@@ -27,9 +27,9 @@ prototype["getPendingConnection"] = function getPendingConnection() {
 };
 FamilyCenterPendingConnectionStore.displayName = "FamilyCenterPendingConnectionStore";
 FamilyCenterPendingConnectionStore.persistKey = "FamilyCenterPendingConnectionStore";
-const familyCenterPendingConnectionStore = new FamilyCenterPendingConnectionStore(dispatcherDefault, {
+const familyCenterPendingConnectionStore = new FamilyCenterPendingConnectionStore(DispatcherDefault, {
   FAMILY_CENTER_PENDING_CONNECTION_SET: function handleSet(teenId) {
-    closure_0 = { teenId: teenId.teenId, linkCode: teenId.linkCode };
+    c0 = { teenId: teenId.teenId, linkCode: teenId.linkCode };
   },
   FAMILY_CENTER_PENDING_CONNECTION_CLEAR: function handleClear() {
     c0 = null;
@@ -38,6 +38,7 @@ const familyCenterPendingConnectionStore = new FamilyCenterPendingConnectionStor
     c0 = null;
   }
 });
-const result = require("set").fileFinishedImporting("modules/parent_tools/FamilyCenterPendingConnectionStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterPendingConnectionStore.tsx");
 
 export default familyCenterPendingConnectionStore;

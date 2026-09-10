@@ -1,22 +1,23 @@
-// Module ID: 11883
-// Function ID: 11884
+// Module ID: 11909
+// Function ID: 11910
 // Name: ClassificationDetailModal
-// Dependencies: [19, 21, 4560, 576, 4763, 5624, 11884, 11914, 11915, 11886, 1484, 7000, 1114, 2]
+// Dependencies: [19, 21, 4574, 576, 4777, 5638, 11910, 11940, 11941, 11912, 1484, 7014, 1114, 2]
 // Exports: default
 
-// Module 11883 (ClassificationDetailModal)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_4 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11909 (ClassificationDetailModal)
+import nativeDefault from "native" /* 576 */;
+import NavigatorHeader from "NavigatorHeader" /* 5638 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 11912 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let closure_6 = { CLASSIFICATION_DETAIL: "CLASSIFICATION_DETAIL" };
-createCacheKey = { headerStyle: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
-createCacheKey[0] = createCacheKey;
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/safety_hub/native/ClassificationDetailModal.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const constants = { CLASSIFICATION_DETAIL: "CLASSIFICATION_DETAIL" };
+const createStyles = fn(4574);
+let obj2 = { headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_hub/native/ClassificationDetailModal.tsx");
 
 export default function ClassificationDetailModal(classificationId) {
   classificationId = classificationId.classificationId;
@@ -25,58 +26,53 @@ export default function ClassificationDetailModal(classificationId) {
   if (flag === undefined) {
     flag = false;
   }
-  dependencyMap = undefined;
-  let safetyHubInitialized;
-  const tmp = callback();
+  const tmp = closure_7();
   dependencyMap = tmp;
-  let obj = classificationId(11915);
-  safetyHubInitialized = obj.useSafetyHubInitialized();
+  const safetyHubInitialized = classificationId(11941).useSafetyHubInitialized();
   const items = [safetyHubInitialized];
   const effect = safetyHubInitialized.useEffect(() => {
     if (!safetyHubInitialized) {
-      const safetyHubData = flag(headerStyle[9]).getSafetyHubData();
-      const obj = flag(headerStyle[9]);
+      const safetyHubData = SafetyHubActionCreatorsAll.getSafetyHubData();
     }
   }, items);
+  let obj = classificationId(11941);
   const isFocused = classificationId(1484).useIsFocused();
   const items1 = [classificationId, flag, tmp, source];
   const memo = safetyHubInitialized.useMemo(() => {
-    closure_1 = closure_2;
-    closure_2 = closure_1;
+    closure_1 = flag;
     let obj = {};
-    obj = {
+    const obj2 = {
       headerStyle: headerStyle.headerStyle,
       headerTitle() {
         return null;
       },
-      headerLeft: classificationId(headerStyle[5]).getHeaderCloseButton(function closeModal() {
-        return callback(table[4]).pop();
+      headerLeft: NavigatorHeader.getHeaderCloseButton(function closeModal() {
+        return closure_1(4777).pop();
       }),
       render() {
-        return closure_1_5(callback(closure_1_3[6]), {
-          classificationId: closure_0,
-          source: closure_2,
+        return jsx(source(11910), {
+          classificationId,
+          source,
           onClose() {
-            let arr = closure_1_1(closure_1_3[4]);
-            arr = arr.pop();
-            if (closure_1) {
-              closure_1_0(closure_1_3[7]).openAccountStanding();
-              const obj = closure_1_0(closure_1_3[7]);
+            closure_1(4777).pop();
+            if (closure_1_1) {
+              closure_0(11940).openAccountStanding();
+              const obj = closure_0(11940);
             }
           },
           onError() {
-            let arr = callback2(4763);
-            arr = arr.pop();
-            callback(11914).openAccountStanding();
+            closure_1_1(4777).pop();
+            const arr = closure_1_1(4777);
+            classificationId(11940).openAccountStanding();
           }
         });
       }
     };
-    obj[closure_1_6.CLASSIFICATION_DETAIL] = obj;
+    obj[constants.CLASSIFICATION_DETAIL] = obj2;
     return obj;
   }, items1);
-  obj = { screens: memo, initialRouteName: constants.CLASSIFICATION_DETAIL, headerBackTitle: null };
+  const obj3 = { screens: memo, initialRouteName: constants.CLASSIFICATION_DETAIL, headerBackTitle: null };
   const intl = classificationId(1114).intl;
-  obj[2] = intl.string(classificationId(1114).t["13/7kX"]);
-  return jsx(classificationId(7000).Navigator, { screens: memo, initialRouteName: constants.CLASSIFICATION_DETAIL, headerBackTitle: null });
+  obj3.headerBackTitle = intl.string(classificationId(1114).t["13/7kX"]);
+  return jsx(classificationId(7014).Navigator, { screens: memo, initialRouteName: constants.CLASSIFICATION_DETAIL, headerBackTitle: null });
 };

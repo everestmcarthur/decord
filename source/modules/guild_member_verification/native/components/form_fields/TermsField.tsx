@@ -1,38 +1,38 @@
-// Module ID: 5600
-// Function ID: 5601
+// Module ID: 5614
+// Function ID: 5615
 // Name: TermsField
-// Dependencies: [19, 17, 21, 4560, 5601, 5604, 1114, 2]
+// Dependencies: [19, 17, 21, 4574, 5615, 5618, 1114, 2]
 // Exports: default
 
-// Module 5600 (TermsField)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import TermsFieldListItemDefault from "TermsFieldListItem" /* 5601 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 5604 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 5614 (TermsField)
+import util from "util" /* 1114 */;
+import TermsFieldListDefault from "TermsFieldList" /* 5615 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 5618 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ container: { marginVertical: 12, flexDirection: "column" } });
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/TermsField.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let closure_6 = createStyles.createStyles({ container: { marginVertical: 12, flexDirection: "column" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/TermsField.tsx");
 
 export default function TermsField(field) {
   field = field.field;
   ({ onChange, rulesChannelId } = field);
   let flag = field.response;
-  let obj = { style: callback2().container, children: null };
-  const items = [callback(TermsFieldListItemDefault, { rules: field.values, rulesChannelId }), ];
+  const obj = { style: closure_6().container, children: null };
+  const items = [React4(TermsFieldListDefault, { rules: field.values, rulesChannelId }), ];
   if (flag == null) {
     flag = false;
   }
-  obj = { start: true, end: true, checked: flag, label: null, onPress: null };
+  const obj2 = { start: true, end: true, checked: flag, label: null, onPress: null };
   const intl = tmp5(1114).intl;
-  obj[3] = intl.string(getSystemLocale.t["2EXfGJ"]);
-  obj[4] = onChange;
-  items[1] = callback(TableCheckboxRow.TableCheckboxRow, obj);
-  obj[1] = items;
-  return closure_5(View, obj);
+  obj2.label = intl.string(util.t["2EXfGJ"]);
+  obj2.onPress = onChange;
+  items[1] = React4(TableCheckboxRow.TableCheckboxRow, obj2);
+  obj.children = items;
+  return hasOwnProperty(View, obj);
 };

@@ -1,157 +1,127 @@
-// Module ID: 16064
-// Function ID: 16065
-// Name: _fetchActiveChannels
-// Dependencies: [5, 1074, 573, 1272, 4462, 2]
+// Module ID: 16094
+// Function ID: 16095
+// Name: ActiveChannelsActionCreators
+// Dependencies: [5, 1074, 573, 1272, 4476, 2]
 // Exports: fetchActiveChannels
 
-// Module 16064 (_fetchActiveChannels)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 1074 */;
+// Module 16094 (ActiveChannelsActionCreators)
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
-function _fetchActiveChannels() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c7 = 0;
-    c8 = 0;
-    c6 = 0;
-    const iter = (function*(arg0) {
-      if (c8 === 2) {
-        c8 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c8 = 2;
-          if (0 === c7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_4 = tmp3;
-              closure_3 = tmp7;
-              let num7;
-              if (num7 === undefined) {
-                num7 = 10;
-              }
-              let body;
-              closure_3 = undefined;
-              c7 = 1;
-              c8 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              const obj2 = { type: "ACTIVE_CHANNELS_FETCH_START", guildId: null };
-              obj2[1] = callback;
-              num7(body[2]).dispatch(obj2);
-              c6 = 1;
-              const HTTP = callback(body[3]).HTTP;
-              const obj3 = { url: null, query: null, rejectWithError: true };
-              obj3[0] = closure_4.ACTIVE_CHANNELS(callback);
-              let obj4 = { channel_limit: null };
-              obj4[0] = num7;
-              obj3[1] = obj4;
-              c7 = 3;
-              c8 = 1;
-              const obj5 = { value: null, done: false };
-              obj5[0] = HTTP.get(obj3);
-              return obj5;
-            }
-          } else if (2 === tmp7) {
-            c6 = 0;
-            closure_4 = closure_5;
-            obj4 = num7(body[2]);
-            const obj6 = { type: "ACTIVE_CHANNELS_FETCH_FAILURE", guildId: null, error: null };
-            obj6[1] = callback;
-            const tmp29 = new num7(body[4])(closure_4);
-            obj6[2] = tmp29;
-            obj4.dispatch(obj6);
-            throw closure_4;
-          } else if (arg0 === 1) {
-            c8 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 0;
-            c8 = 3;
-            const obj7 = { value: null, done: true };
-            obj7[0] = arg1;
-            return obj7;
-          } else {
-            body = arg1;
-            body = body.body;
-            let channels;
-            if (body != null) {
-              channels = body.channels;
-            }
-            body = channels;
-            if (channels == null) {
-              body = [];
-            }
-            closure_3 = body;
-            obj = num7(body[2]);
-            const obj8 = { type: "ACTIVE_CHANNELS_FETCH_SUCCESS", guildId: null, channels: null };
-            obj8[1] = callback;
-            obj8[2] = closure_3;
-            obj.dispatch(obj8);
-            c6 = 0;
-            c8 = 3;
-            const obj9 = { value: null, done: true };
-            obj9[0] = body;
-            return obj9;
-          }
-        } catch (tmp34) {
-          closure_5 = tmp34;
-          if (tmp4 === c6) {
-            c8 = tmp2;
-            throw tmp34;
-          } else {
-            c7 = tmp;
-          }
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_5 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+const require = fn;
+let closure_5 = async function _fetchActiveChannels(arg0, value) {
+  if (c8 === 2) {
+    c8 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    applyArgumentsResult = apply(self, arguments);
+    try {
+      c8 = 2;
+      if (0 === c7) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_4 = tmp3;
+          closure_3 = tmp7;
+          closure_131_1 = undefined;
+          closure_131_0 = closure_0;
+          let num7 = closure_1;
+          if (closure_1 === undefined) {
+            num7 = 10;
+          }
+          closure_131_1 = num7;
+          closure_131_2 = undefined;
+          closure_131_3 = undefined;
+          c7 = 1;
+          c8 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp7) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          const obj6 = { type: "ACTIVE_CHANNELS_FETCH_START", guildId: closure_131_0 };
+          closure_132_1(closure_132_2[2]).dispatch(obj6);
+          c6 = 1;
+          const HTTP = closure_132_0(closure_132_2[3]).HTTP;
+          const request = { url: closure_132_4.ACTIVE_CHANNELS(closure_131_0), query: null, rejectWithError: true };
+          const obj7 = { channel_limit: closure_131_1 };
+          request.query = obj7;
+          c7 = 3;
+          c8 = 1;
+          const obj8 = { value: HTTP.get(request), done: false };
+          return obj8;
+        }
+      } else if (2 === tmp7) {
+        c6 = 0;
+        closure_131_4 = closure_5;
+        const obj9 = { type: "ACTIVE_CHANNELS_FETCH_FAILURE", guildId: closure_131_0, error: null };
+        const tmp29 = new closure_132_1(closure_132_2[4])(closure_131_4);
+        obj9.error = tmp29;
+        closure_132_1(closure_132_2[2]).dispatch(obj9);
+        throw closure_131_4;
+      } else if (arg0 === 1) {
+        c8 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 0;
+        c8 = 3;
+        const obj10 = { value, done: true };
+        return obj10;
+      } else {
+        closure_131_2 = value;
+        const body = closure_131_2.body;
+        let channels;
+        if (body != null) {
+          channels = body.channels;
+        }
+        closure_2 = channels;
+        if (channels == null) {
+          closure_2 = [];
+        }
+        closure_131_3 = closure_2;
+        const obj12 = { type: "ACTIVE_CHANNELS_FETCH_SUCCESS", guildId: closure_131_0, channels: closure_131_3 };
+        closure_132_1(closure_132_2[2]).dispatch(obj12);
+        c6 = 0;
+        c8 = 3;
+        const obj13 = { value: closure_131_2, done: true };
+        return obj13;
+      }
+    } catch (tmp34) {
+      closure_5 = tmp34;
+      if (tmp4 === c6) {
+        c8 = tmp2;
+        throw tmp34;
+      } else {
+        c7 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
-const result = require("set").fileFinishedImporting("modules/active_channels/ActiveChannelsActionCreators.tsx");
+};
+const Endpoints = fn(1074).Endpoints;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/active_channels/ActiveChannelsActionCreators.tsx");
 
-export const fetchActiveChannels = function fetchActiveChannels(arg0) {
+export const fetchActiveChannels = function fetchActiveChannels() {
   const self = this;
-  const apply = _fetchActiveChannels.apply;
+  const apply = closure_5.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

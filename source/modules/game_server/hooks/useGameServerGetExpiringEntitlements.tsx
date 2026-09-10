@@ -1,26 +1,30 @@
-// Module ID: 12563
-// Function ID: 12564
+// Module ID: 12589
+// Function ID: 12590
 // Name: useGameServerGetExpiringEntitlements
-// Dependencies: [19, 4470, 504, 12497, 2]
+// Dependencies: [19, 4484, 504, 12523, 2]
 // Exports: default
 
-// Module 12563 (useGameServerGetExpiringEntitlements)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleGameServerInstanceCreated" /* 4470 */;
+// Module 12589 (useGameServerGetExpiringEntitlements)
+import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 12523 */;
+import noop from "module_19" /* 19 */;
+import GameServerStore from "GameServerStore" /* 4484 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/game_server/hooks/useGameServerGetExpiringEntitlements.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_server/hooks/useGameServerGetExpiringEntitlements.tsx");
 
 export default function useGameServerGetExpiringEntitlements(arg0) {
-  const _require = arg0;
-  let items = [closure_3];
-  stateFromStores = _require(stateFromStores[2]).useStateFromStores(items, () => closure_1_3.getStateForGuild(closure_0));
+  _require = arg0;
+  let items = [GameServerStore];
+  stateFromStores = require("initialize").useStateFromStores(items, () => GameServerStore.getStateForGuild(closure_0));
   let entitlements;
   if (stateFromStores != null) {
     entitlements = stateFromStores.entitlements;
   }
   const items1 = [entitlements];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     let entitlements;
     if (stateFromStores != null) {
       entitlements = stateFromStores.entitlements;
@@ -32,8 +36,7 @@ export default function useGameServerGetExpiringEntitlements(arg0) {
     if (0 === values.length) {
       let items = [];
     } else {
-      items = callback(stateFromStores[3]).getExpiringGuildEntitlements(values);
-      const obj2 = callback(stateFromStores[3]);
+      items = getExpiringGuildEntitlements.getExpiringGuildEntitlements(values);
     }
     return items;
   }, items1);

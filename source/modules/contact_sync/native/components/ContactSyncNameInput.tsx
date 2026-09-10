@@ -1,28 +1,31 @@
-// Module ID: 12701
-// Function ID: 12702
+// Module ID: 12727
+// Function ID: 12728
 // Name: ContactSyncNameInput
-// Dependencies: [32, 19, 17, 21, 4560, 576, 6981, 1114, 4556, 1178, 4975, 12698, 2]
+// Dependencies: [32, 19, 17, 21, 4574, 576, 6995, 1114, 4570, 1178, 4989, 12724, 2]
 // Exports: default
 
-// Module 12701 (ContactSyncNameInput)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12727 (ContactSyncNameInput)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6995 */;
+import ContactSyncErrorDefault from "ContactSyncError" /* 12724 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { flex: { flex: 1 }, content: { flex: 1, padding: 16, paddingBottom: 0 }, title: { marginBottom: 8, textAlign: "center" }, subtitle: { lineHeight: 18, textAlign: "center", marginBottom: 16 }, input: null, formSubtitle: null, button: null, error: null };
-createCacheKey = { width: "100%", marginTop: 8, marginBottom: 12, padding: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.lg };
-createCacheKey[4] = createCacheKey;
-createCacheKey[5] = { lineHeight: 16 };
-createCacheKey[6] = { flexGrow: 0, paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_12 };
-createCacheKey[7] = { marginTop: 8 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flexGrow: 0, paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_12 };
-const result = require("set").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncNameInput.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { flex: { flex: 1 }, content: { flex: 1, padding: 16, paddingBottom: 0 }, title: { marginBottom: 8, textAlign: "center" }, subtitle: { lineHeight: 18, textAlign: "center", marginBottom: 16 }, input: { width: "100%", marginTop: 8, marginBottom: 12, padding: 12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.lg }, formSubtitle: { lineHeight: 16 }, button: null, error: null };
+let obj3 = { width: "100%", marginTop: 8, marginBottom: 12, padding: 12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.lg };
+obj2.button = { flexGrow: 0, paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_12 };
+obj2.error = { marginTop: 8 };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncNameInput.tsx");
 
 export default function ContactSyncNameInput(prefilledFromContactBook) {
   let flag = prefilledFromContactBook.prefilledFromContactBook;
@@ -31,13 +34,12 @@ export default function ContactSyncNameInput(prefilledFromContactBook) {
     flag = false;
   }
   ({ onNext: require, onRemoveName } = prefilledFromContactBook);
-  let first;
-  let tmp = callback2();
-  const tmp2 = callback(React.useState(initialName), 2);
-  first = tmp2[0];
-  const intl = require(first[7]).intl;
+  let tmp = closure_8();
+  const tmp2 = _slicedToArray(noop.useState(initialName), 2);
+  value = tmp2[0];
+  const intl = util.intl;
   const string = intl.string;
-  const t = require(first[7]).t;
+  const t = util.t;
   if (null != onRemoveName) {
     let stringResult = string(t.i4jeWR);
     let tmp9 = tmp7;
@@ -45,80 +47,79 @@ export default function ContactSyncNameInput(prefilledFromContactBook) {
     stringResult = string(t.PDTjLN);
     tmp9 = tmp7;
   }
-  let obj = { style: items, children: null };
-  items = [tmp.content, { paddingBottom: onRemoveName(first[6])({ includeKeyboardHeight: true }).insets.bottom }];
-  obj = { style: tmp.flex, children: null };
-  obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl2 = tmp9(tmp5[7]).intl;
+  const obj = { style: null, children: null };
+  const items = [tmp.content, { paddingBottom: useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom }];
+  obj.style = items;
+  const obj2 = { style: tmp.flex, children: null };
+  const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const intl2 = tmp9(1114).intl;
   const string2 = intl2.string;
-  const t2 = tmp9(tmp5[7]).t;
+  const t2 = tmp9(1114).t;
   if (null != onRemoveName) {
     let string2Result = string2(t2["/OywGQ"]);
   } else {
     string2Result = string2(t2["sO+NI5"]);
   }
-  obj[4] = string2Result;
-  const items1 = [closure_6(tmp9(first[8]).Text, obj), , , , ];
-  obj1 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl3 = tmp9(tmp5[7]).intl;
+  obj3.children = string2Result;
+  const items1 = [timestampProducer(tmp9(4570).Text, obj3), , , , ];
+  const obj4 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
+  const intl3 = tmp9(1114).intl;
   const string3 = intl3.string;
-  const t3 = tmp9(tmp5[7]).t;
+  const t3 = tmp9(1114).t;
   if (null != onRemoveName) {
     let string3Result = string3(t3["xCHh/t"]);
   } else {
     string3Result = string3(t3.xI496M);
   }
-  obj1[3] = string3Result;
-  items1[1] = closure_6(tmp9(first[8]).Text, obj1);
-  const obj2 = { variant: "eyebrow", color: "interactive-text-default", children: null };
-  const intl4 = tmp9(tmp5[7]).intl;
-  obj2[2] = intl4.string(tmp9(first[7]).t["42/D2U"]);
-  items1[2] = closure_6(tmp9(first[8]).Text, obj2);
-  items1[3] = closure_6(tmp9(first[9]).InputView, { value: first, onChangeText: tmp2[1], style: tmp.input, autoFocus: true, showBorder: false, showTopContainer: false, clearButtonVisibility: tmp9(first[9]).ClearButtonVisibility.WITH_CONTENT, autoCorrect: true, autoComplete: "name", textContentType: "name" });
+  obj4.children = string3Result;
+  items1[1] = timestampProducer(tmp9(4570).Text, obj4);
+  const obj5 = { variant: "eyebrow", color: "interactive-text-default", children: null };
+  const intl4 = tmp9(1114).intl;
+  obj5.children = intl4.string(tmp9(1114).t["42/D2U"]);
+  items1[2] = timestampProducer(tmp9(4570).Text, obj5);
+  items1[3] = timestampProducer(tmp9(1178).InputView, { value, onChangeText: tmp2[1], style: tmp.input, autoFocus: true, showBorder: false, showTopContainer: false, clearButtonVisibility: tmp9(1178).ClearButtonVisibility.WITH_CONTENT, autoCorrect: true, autoComplete: "name", textContentType: "name" });
   let tmp12Result = null;
   if (flag) {
-    const obj4 = { style: null, variant: "text-xs/medium", color: "text-default", children: null };
-    obj4[0] = tmp.formSubtitle;
-    const intl5 = tmp9(tmp5[7]).intl;
-    obj4[3] = intl5.string(tmp9(tmp5[7]).t.bCQt9K);
-    tmp12Result = tmp12(tmp9(tmp5[8]).Text, obj4);
+    const obj7 = { style: tmp.formSubtitle, variant: "text-xs/medium", color: "text-default", children: null };
+    const intl5 = tmp9(1114).intl;
+    obj7.children = intl5.string(tmp9(1114).t.bCQt9K);
+    tmp12Result = tmp12(tmp9(4570).Text, obj7);
   }
   items1[4] = tmp12Result;
-  obj[1] = items1;
-  const items2 = [closure_7(View, obj), , , ];
+  obj2.children = items1;
+  const items2 = [React5(View, obj2), , , ];
   let str = "lg";
   if (null != onRemoveName) {
     str = "md";
   }
-  items2[1] = closure_6(tmp9(first[10]).Button, {
+  items2[1] = timestampProducer(tmp9(4989).Button, {
     variant: "primary",
     size: str,
     text: stringResult,
     onPress() {
-      return callback(first);
+      return require(first);
     },
     loading,
-    disabled: "" === first
+    disabled: "" === value
   });
-  tmp12Result = null;
+  let tmp12Result2 = null;
   if (null != onRemoveName) {
-    const obj6 = { style: null, children: null };
-    obj6[0] = tmp.button;
-    const obj7 = { variant: "secondary", size: "md", text: null, onPress: null };
-    const intl6 = tmp9(tmp5[7]).intl;
-    obj7[2] = intl6.string(tmp9(tmp5[7]).t["91RssO"]);
-    obj7[3] = function onPress() {
+    const obj9 = { style: tmp.button, children: null };
+    const obj10 = { variant: "secondary", size: "md", text: null, onPress: null };
+    const intl6 = tmp9(1114).intl;
+    obj10.text = intl6.string(tmp9(1114).t["91RssO"]);
+    obj10.onPress = function onPress() {
       let tmp;
       if (onRemoveName != null) {
         tmp = onRemoveName();
       }
       return tmp;
     };
-    obj6[1] = tmp12(tmp9(tmp5[10]).Button, obj7);
-    tmp12Result = tmp12(tmp11, obj6);
+    obj9.children = tmp12(tmp9(4989).Button, obj10);
+    tmp12Result2 = tmp12(tmp11, obj9);
   }
-  items2[2] = tmp12Result;
-  items2[3] = closure_6(onRemoveName(first[11]), { style: tmp.error, error });
-  obj[1] = items2;
-  return closure_7(View, obj);
+  items2[2] = tmp12Result2;
+  items2[3] = timestampProducer(ContactSyncErrorDefault, { style: tmp.error, error });
+  obj.children = items2;
+  return React5(View, obj);
 };

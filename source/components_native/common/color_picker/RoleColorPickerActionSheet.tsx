@@ -1,52 +1,49 @@
-// Module ID: 16294
-// Function ID: 16295
-// Name: items
-// Dependencies: [32, 19, 17, 1074, 21, 4560, 576, 14600, 7902, 4527, 14598, 7150, 7149, 1114, 4975, 15353, 2]
+// Module ID: 16324
+// Function ID: 16325
+// Name: RoleColorPickerActionSheet
+// Dependencies: [32, 19, 17, 1074, 21, 4574, 576, 14625, 7916, 4541, 14623, 7164, 7163, 1114, 4989, 15382, 2]
 // Exports: default
 
-// Module 16294 (items)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16324 (RoleColorPickerActionSheet)
+import nativeDefault from "native" /* 576 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14623 */;
+import ColorBlockDefault from "ColorBlock" /* 14625 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ View: c5, Pressable: closure_6 } = get_ActivityIndicator);
-({ DEFAULT_ROLE_COLOR: error, ROLE_COLORS } = ME);
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let items = [...require("module_0"), ...require("module_10"), ...require("module_5"), ...require("module_15")];
-createCacheKey = { body: null, colorWrap: null };
-createCacheKey = { paddingVertical: ThemesDefault.space.PX_16, flexGrow: 1, justifyContent: "center", alignItems: "center" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexGrow: 1, flexDirection: "row", flexWrap: "wrap", justifyContent: "center", maxWidth: 340, marginBottom: ThemesDefault.space.PX_16 };
-let closure_11 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flexGrow: 1, flexDirection: "row", flexWrap: "wrap", justifyContent: "center", maxWidth: 340, marginBottom: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("components_native/common/color_picker/RoleColorPickerActionSheet.tsx");
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
+const Constants = fn(1074);
+({ DEFAULT_ROLE_COLOR: closure_7, ROLE_COLORS } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+let items = [...ROLE_COLORS.slice(0, 5), ...ROLE_COLORS.slice(10, 15), ...ROLE_COLORS.slice(5, 10), ...ROLE_COLORS.slice(15, 18)];
+const createStyles = fn(4574);
+const obj2 = { body: { paddingVertical: nativeDefault.space.PX_16, flexGrow: 1, justifyContent: "center", alignItems: "center" }, colorWrap: null };
+let obj3 = { paddingVertical: nativeDefault.space.PX_16, flexGrow: 1, justifyContent: "center", alignItems: "center" };
+obj2.colorWrap = { flexGrow: 1, flexDirection: "row", flexWrap: "wrap", justifyContent: "center", maxWidth: 340, marginBottom: nativeDefault.space.PX_16 };
+let closure_11 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/common/color_picker/RoleColorPickerActionSheet.tsx");
 
 export default function RoleColorPickerActionSheet(color) {
   color = color.color;
-  const onSelect = color.onSelect;
+  let onSelect = color.onSelect;
   ({ confirmLabel, defaultColor } = color);
   if (defaultColor === undefined) {
     defaultColor = memo;
   }
-  let styles;
   let first;
-  closure_5 = undefined;
-  let isWindowSmall;
-  memo = undefined;
-  closure_8 = undefined;
-  let tmp = callback2();
-  let obj = color(defaultColor[7]);
-  styles = obj.useStyles();
+  onSelect = undefined;
+  let tmp = closure_11();
+  const styles = color(defaultColor[7]).useStyles();
   const tmp5 = styles(first.useState(color), 2);
   first = tmp5[0];
   closure_5 = tmp5[1];
-  obj1 = color(defaultColor[8]);
-  isWindowSmall = obj1.useIsWindowSmall();
+  let obj = color(defaultColor[7]);
+  const isWindowSmall = color(defaultColor[8]).useIsWindowSmall();
   items = [isWindowSmall, styles.colorBlock];
   memo = first.useMemo(() => {
     const colorBlock = styles.colorBlock;
@@ -64,50 +61,48 @@ export default function RoleColorPickerActionSheet(color) {
   const items1 = [first, onSelect];
   const callback = first.useCallback(() => {
     onSelect(first);
-    onSelect(defaultColor[9]).hideActionSheet();
+    ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items1);
-  closure_8 = first.useCallback((arg0) => {
-    callback(arg0);
+  onSelect = first.useCallback((arg0) => {
+    closure_5(arg0);
   }, []);
   const items2 = [color, onSelect];
   const callback1 = first.useCallback(() => {
-    onSelect(defaultColor[10])({ color, onSelect });
+    showCustomColorPickerActionSheetDefault({ color, onSelect });
   }, items2);
-  obj = { title: null, trailing: null };
+  const obj3 = { title: null, trailing: null };
   const intl = color(defaultColor[13]).intl;
-  obj[0] = intl.string(color(defaultColor[13]).t.WTqQ5e);
+  obj3.title = intl.string(color(defaultColor[13]).t.WTqQ5e);
   if (null != confirmLabel) {
-    obj = { size: "sm", variant: "secondary", text: null, onPress: null };
-    obj[2] = confirmLabel;
-    obj[3] = callback;
-    obj1 = obj;
+    const obj4 = { size: "sm", variant: "secondary", text: confirmLabel, onPress: callback };
+    let obj5 = obj4;
   } else {
-    obj1 = { size: "sm", text: null, onPress: null };
+    obj5 = { size: "sm", text: null, onPress: null };
     const intl2 = tmp2(tmp3[13]).intl;
-    obj1[1] = intl2.string(tmp2(tmp3[13]).t["R3BPH+"]);
-    obj1[2] = callback;
+    obj5.text = intl2.string(tmp2(tmp3[13]).t["R3BPH+"]);
+    obj5.onPress = callback;
   }
-  const obj2 = { header: null, children: null };
-  obj[1] = closure_8(color(defaultColor[14]).Button, obj1);
-  obj2[0] = closure_8(color(defaultColor[12]).BottomSheetTitleHeader, obj);
-  const obj3 = { style: tmp.body, children: null };
-  const obj4 = { style: tmp.colorWrap, children: null };
-  const items3 = [items.map((color) => callback2(onSelect(defaultColor[7]), { color, style: memo, selected: color === first, onSelect: callback2 }, color)), ];
-  const obj5 = { style: memo, onPress: callback1, accessibilityLabel: null, accessibilityRole: "button", children: null };
+  const obj6 = { header: null, children: null };
+  obj3.trailing = onSelect(color(defaultColor[14]).Button, obj5);
+  obj6.header = onSelect(color(defaultColor[12]).BottomSheetTitleHeader, obj3);
+  const obj7 = { style: tmp.body, children: null };
+  const obj8 = { style: tmp.colorWrap, children: null };
+  const items3 = [items.map((color) => React6(ColorBlockDefault, { color, style: memo, selected: color === first, onSelect }, color)), ];
+  const obj9 = { style: memo, onPress: callback1, accessibilityLabel: null, accessibilityRole: "button", children: null };
   const intl3 = tmp2(tmp3[13]).intl;
-  obj5[2] = intl3.string(color(defaultColor[13]).t["/fkc8a"]);
-  obj5[4] = closure_8(color(defaultColor[15]).EyeDropperIcon, { size: "lg" });
-  items3[1] = closure_8(isWindowSmall, obj5);
-  obj4[1] = items3;
-  const items4 = [callback(closure_5, obj4), ];
-  const obj6 = { variant: "secondary", text: null, onPress: null };
+  obj9.accessibilityLabel = intl3.string(color(defaultColor[13]).t["/fkc8a"]);
+  obj9.children = onSelect(color(defaultColor[15]).EyeDropperIcon, { size: "lg" });
+  items3[1] = onSelect(isWindowSmall, obj9);
+  obj8.children = items3;
+  const items4 = [closure_9(closure_5, obj8), ];
+  const obj10 = { variant: "secondary", text: null, onPress: null };
   const intl4 = tmp2(tmp3[13]).intl;
-  obj6[1] = intl4.string(color(defaultColor[13]).t.yBZMsQ);
-  obj6[2] = function onPress() {
-    callback(defaultColor);
+  obj10.text = intl4.string(color(defaultColor[13]).t.yBZMsQ);
+  obj10.onPress = function onPress() {
+    closure_5(defaultColor);
   };
-  items4[1] = closure_8(color(defaultColor[14]).Button, obj6);
-  obj3[1] = items4;
-  obj2[1] = callback(closure_5, obj3);
-  return closure_8(color(defaultColor[11]).BottomSheet, obj2);
+  items4[1] = onSelect(color(defaultColor[14]).Button, obj10);
+  obj7.children = items4;
+  obj6.children = closure_9(closure_5, obj7);
+  return onSelect(color(defaultColor[11]).BottomSheet, obj6);
 };

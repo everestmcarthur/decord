@@ -1,16 +1,16 @@
-// Module ID: 4675
-// Function ID: 4676
-// Name: items
-// Dependencies: [4585, 2]
+// Module ID: 4689
+// Function ID: 4690
+// Name: VideoCodecUtils
+// Dependencies: [4599, 2]
 // Exports: codecNameToPayloadName, filterParsedVideoCodecs, filterVideoCodecs, getExperimentCodecs, parseNativeCodecs
 
-// Module 4675 (items)
-import set2 from "set" /* 2 */;
-import DesktopSources from "DesktopSources" /* 4585 */;
+// Module 4689 (VideoCodecUtils)
+import Constants from "Constants" /* 4599 */;
+import size from "module_2" /* 2 */;
 
-const ExperimentFlags = DesktopSources.ExperimentFlags;
+const ExperimentFlags = Constants.ExperimentFlags;
 let items = [{ name: "H264", encode: true, decode: true }, { name: "VP8", encode: true, decode: true }];
-const result = set2.fileFinishedImporting("../discord_common/js/packages/media-engine/utils/VideoCodecUtils.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/utils/VideoCodecUtils.tsx");
 
 export const filterParsedVideoCodecs = function filterParsedVideoCodecs(parseNativeCodecsResult, experimentCodecs, arg2) {
   closure_0 = parseNativeCodecsResult;
@@ -23,16 +23,15 @@ export const filterParsedVideoCodecs = function filterParsedVideoCodecs(parseNat
   const combined = experimentCodecs.concat(items);
   items = [];
   const item = combined.forEach((encode) => {
-    mapped = encode;
     const found = mapped.find((name) => encode.name === name.name);
     if (null != found) {
       const obj = { name: null, encode: null, decode: null };
-      ({ name: obj[0], encode } = found);
+      ({ name: obj.name, encode } = found);
       if (encode) {
         encode = encode.encode;
       }
-      obj[1] = encode;
-      obj[2] = found.decode && encode.decode;
+      obj.encode = encode;
+      obj.decode = found.decode && encode.decode;
       items.push(obj);
     }
   });
@@ -42,7 +41,7 @@ export const filterParsedVideoCodecs = function filterParsedVideoCodecs(parseNat
     const item1 = parseNativeCodecsResult.forEach((name) => {
       if (!set.has(name.name)) {
         const obj = { name: null, encode: false, decode: null };
-        ({ name: obj[0], decode: obj[2] } = name);
+        ({ name: obj.name, decode: obj.decode } = name);
         items.push(obj);
       }
     });
@@ -58,9 +57,7 @@ export const getExperimentCodecs = function getExperimentCodecs(experimentFlags)
   }
   items = [];
   if (tmp4) {
-    const obj = { name: "AV1", encode: null, decode: null };
-    obj[1] = hasItem;
-    obj[2] = hasItem1;
+    const obj = { name: "AV1", encode: hasItem, decode: hasItem1 };
     items.push(obj);
   }
   let hasItem2;
@@ -84,7 +81,7 @@ export const filterVideoCodecs = function filterVideoCodecs(arg0, arr) {
     flag = false;
   }
   const parsed = JSON.parse(arg0);
-  let mapped = parsed.map((codec) => {
+  const mapped = parsed.map((codec) => {
     codec = codec.codec;
     let str = "AV1";
     if ("AV1X" !== codec) {
@@ -100,16 +97,15 @@ export const filterVideoCodecs = function filterVideoCodecs(arg0, arr) {
   const combined = arr.concat(items);
   items = [];
   const item = combined.forEach((encode) => {
-    mapped = encode;
     const found = mapped.find((name) => encode.name === name.name);
     if (null != found) {
       const obj = { name: null, encode: null, decode: null };
-      ({ name: obj[0], encode } = found);
+      ({ name: obj.name, encode } = found);
       if (encode) {
         encode = encode.encode;
       }
-      obj[1] = encode;
-      obj[2] = found.decode && encode.decode;
+      obj.encode = encode;
+      obj.decode = found.decode && encode.decode;
       items.push(obj);
     }
   });
@@ -119,7 +115,7 @@ export const filterVideoCodecs = function filterVideoCodecs(arg0, arr) {
     const item1 = mapped.forEach((name) => {
       if (!set.has(name.name)) {
         const obj = { name: null, encode: false, decode: null };
-        ({ name: obj[0], decode: obj[2] } = name);
+        ({ name: obj.name, decode: obj.decode } = name);
         items.push(obj);
       }
     });

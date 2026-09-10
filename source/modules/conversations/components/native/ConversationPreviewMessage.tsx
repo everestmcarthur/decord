@@ -1,51 +1,50 @@
-// Module ID: 7931
-// Function ID: 7932
-// Name: modifyRow
-// Dependencies: [19, 17, 4552, 2021, 21, 7932, 8126, 4560, 576, 504, 4712, 7961, 1935, 4242, 1178, 4556, 8657, 2]
+// Module ID: 7945
+// Function ID: 7946
+// Name: ConversationPreviewMessage
+// Dependencies: [19, 17, 4566, 2021, 21, 7946, 8152, 4574, 576, 504, 4726, 7975, 1935, 4255, 1178, 4570, 8685, 2]
 // Exports: default
 
-// Module 7931 (modifyRow)
-import ThemesDefault from "Themes" /* 576 */;
-import setOptionsDefault from "setOptions" /* 7932 */;
-import MediaGalleryItemType from "MediaGalleryItemType" /* 8126 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import closure_6 from "trackCommunicationDisabled" /* 2021 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 7945 (ConversationPreviewMessage)
+import nativeDefault from "native" /* 576 */;
+import DateUtils from "DateUtils" /* 4255 */;
+import RowGeneratorDefault from "RowGenerator" /* 7946 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8152 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 
-require = arg1;
+require = fn;
 function modifyRow(arg0) {
-  arg0.contextType = MediaGalleryItemType.MessageContextType.SEARCH;
+  arg0.contextType = RowGeneratorTypes.MessageContextType.SEARCH;
   arg0.renderContentOnly = true;
 }
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-let obj = new setOptionsDefault();
-obj.setOptions({ renderReplies: false, renderReactions: false });
-obj = { container: null, header: null, authorRow: null, headerTimestamp: null };
-obj = { gap: ThemesDefault.space.PX_4 };
-obj[0] = obj;
-createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
-obj[1] = createCacheKey;
-obj[2] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
-obj[3] = { flex: 1 };
-let closure_11 = createCacheKey.createStyles(obj);
-let obj2 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
-const result = require("set").fileFinishedImporting("modules/conversations/components/native/ConversationPreviewMessage.tsx");
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+let rowGenerator = new RowGeneratorDefault();
+rowGenerator.setOptions({ renderReplies: false, renderReactions: false });
+const createStyles = fn(4574);
+let obj3 = { container: { gap: nativeDefault.space.PX_4 }, header: null, authorRow: null, headerTimestamp: null };
+let obj4 = { gap: nativeDefault.space.PX_4 };
+obj3.header = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+let obj5 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+obj3.authorRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+obj3.headerTimestamp = { flex: 1 };
+let closure_11 = createStyles.createStyles(obj3);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/conversations/components/native/ConversationPreviewMessage.tsx");
 
 export default function ConversationPreviewMessage(message) {
   message = message.message;
   const guildId = message.guildId;
   let setting;
-  const tmp = callback2();
-  obj = message(setting[9]);
-  const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => roleStyle.roleStyle);
-  obj1 = message(setting[9]);
-  const items1 = [closure_6];
+  const tmp = closure_11();
+  rowGenerator = message(setting[9]);
+  const items = [AccessibilityStore];
+  const stateFromStores = rowGenerator.useStateFromStores(items, () => roleStyle.roleStyle);
+  const items1 = [GuildMemberStore];
   const items2 = [guildId, message.author.id];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_6.getMember(guildId, message.author.id), items2);
+  const stateFromStores1 = message(setting[9]).useStateFromStores(items1, () => GuildMemberStore.getMember(guildId, message.author.id), items2);
   message(setting[10]);
   if ("username" === stateFromStores) {
     let colorString;
@@ -53,32 +52,24 @@ export default function ConversationPreviewMessage(message) {
       colorString = stateFromStores1.colorString;
     }
     if (null != colorString) {
-      obj = { color: null };
-      obj[0] = stateFromStores1.colorString;
+      const obj3 = { color: stateFromStores1.colorString };
     }
-    let tmp2Result = tmp2(tmp3[11]);
     let colorStrings;
     if (stateFromStores1 != null) {
       colorStrings = stateFromStores1.colorStrings;
     }
-    const processColorStringsArray = tmp2Result.useProcessColorStringsArray(colorStrings);
-    tmp2Result = tmp2(tmp3[11]);
-    const isRoleStyleAndRoleColorsEligibleForERC = tmp2Result.useIsRoleStyleAndRoleColorsEligibleForERC(guildId, message.author.id, stateFromStores, processColorStringsArray);
+    const processColorStringsArray = tmp2(tmp3[11]).useProcessColorStringsArray(colorStrings);
+    const tmp2Result2 = tmp2(tmp3[11]);
+    const isRoleStyleAndRoleColorsEligibleForERC = tmp2Result2.useIsRoleStyleAndRoleColorsEligibleForERC(guildId, message.author.id, stateFromStores, processColorStringsArray);
     const TimestampHourCycle = tmp2(tmp3[12]).TimestampHourCycle;
     setting = TimestampHourCycle.useSetting();
     const items3 = [message.timestamp, setting];
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.header;
-    const memo = React.useMemo(() => message(setting[13]).calendarFormat(message.timestamp, true, setting), items3);
-    const obj2 = { user: null, guildId: null, size: null };
-    obj2[0] = message.author;
-    obj2[1] = guildId;
-    obj2[2] = tmp2(tmp3[14]).AvatarSizes.XXSMALL;
-    const items4 = [callback(tmp2(tmp3[14]).Avatar, obj2), , ];
-    const obj3 = { style: null, children: null };
-    obj3[0] = tmp.authorRow;
+    const obj4 = { style: tmp.container, children: null };
+    const obj5 = { style: tmp.header, children: null };
+    const memo = noop.useMemo(() => DateUtils.calendarFormat(message.timestamp, true, setting), items3);
+    const obj6 = { user: message.author, guildId, size: tmp2(tmp3[14]).AvatarSizes.XXSMALL };
+    const items4 = [closure_7(tmp2(tmp3[14]).Avatar, obj6), , ];
+    const obj7 = { style: tmp.authorRow, children: null };
     let tmp24Result = "dot" === stateFromStores;
     if (tmp24Result) {
       let colorString1;
@@ -88,34 +79,28 @@ export default function ConversationPreviewMessage(message) {
       tmp24Result = null != colorString1;
     }
     if (tmp24Result) {
-      ({ colorString: obj10[1], colorStrings: obj10[2] } = stateFromStores1);
+      ({ colorString: obj10.color, colorStrings: obj10.colors } = stateFromStores1);
       tmp24Result = tmp24(tmp2(tmp3[14]).RoleDot, { size: "small", color: null, colors: null });
-      const obj4 = { size: "small", color: null, colors: null };
+      const obj8 = { size: "small", color: null, colors: null };
     }
     const items5 = [tmp24Result, ];
-    const obj5 = { variant: "text-md/medium", lineClamp: 1, style: null, gradientColors: null, children: null };
-    obj5[2] = {};
+    const obj9 = { variant: "text-md/medium", lineClamp: 1, style: {}, gradientColors: null, children: null };
     let tmp27;
     if (isRoleStyleAndRoleColorsEligibleForERC) {
       tmp27 = processColorStringsArray;
     }
-    obj5[3] = tmp27;
-    obj5[4] = tmp7;
-    items5[1] = callback(tmp2(tmp3[15]).Text, obj5);
-    obj3[1] = items5;
-    items4[1] = closure_8(View, obj3);
-    const obj6 = { variant: "text-xs/normal", color: "text-muted", lineClamp: 1, style: null, children: null };
-    obj6[3] = tmp.headerTimestamp;
-    obj6[4] = memo;
-    items4[2] = callback(tmp2(tmp3[15]).Text, obj6);
-    obj1[1] = items4;
-    const items6 = [closure_8(View, obj1), ];
-    const obj7 = { pointerEvents: "none", horizontalOffset: 0, modifyRow: null, message: null, rowGenerator: null };
-    obj7[2] = modifyRow;
-    obj7[3] = message;
-    obj7[4] = obj;
-    items6[1] = callback(guildId(tmp3[16]), obj7);
-    obj[1] = items6;
-    return closure_8(View, obj);
+    obj9.gradientColors = tmp27;
+    obj9.children = tmp7;
+    items5[1] = closure_7(tmp2(tmp3[15]).Text, obj9);
+    obj7.children = items5;
+    items4[1] = closure_8(View, obj7);
+    const obj11 = { variant: "text-xs/normal", color: "text-muted", lineClamp: 1, style: tmp.headerTimestamp, children: memo };
+    items4[2] = closure_7(tmp2(tmp3[15]).Text, obj11);
+    obj5.children = items4;
+    const items6 = [closure_8(View, obj5), ];
+    const obj12 = { pointerEvents: "none", horizontalOffset: 0, modifyRow, message, rowGenerator };
+    items6[1] = closure_7(guildId(tmp3[16]), obj12);
+    obj4.children = items6;
+    return closure_8(View, obj4);
   }
 };

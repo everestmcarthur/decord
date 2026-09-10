@@ -1,18 +1,21 @@
-// Module ID: 5626
-// Function ID: 5627
+// Module ID: 5640
+// Function ID: 5641
 // Name: useDesignToggle
-// Dependencies: [5627, 504, 2]
+// Dependencies: [5641, 504, 2]
 // Exports: default
 
-// Module 5626 (useDesignToggle)
-import closure_2 from "getUserAgnosticState" /* 5627 */;
+// Module 5640 (useDesignToggle)
+import DesignTogglesStore from "DesignTogglesStore" /* 5641 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/devtools/design_toggles/useDesignToggle.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/design_toggles/useDesignToggle.tsx");
 
 export default function useDesignToggle(arg0) {
-  const _require = arg0;
-  const items = [closure_2];
+  _require = arg0;
+  const items = [DesignTogglesStore];
   const items1 = [arg0];
-  return _require(504).useStateFromStores(items, () => closure_1_2.get(closure_0), items1);
+  return require("initialize").useStateFromStores(items, () => DesignTogglesStore.get(closure_0), items1);
 };

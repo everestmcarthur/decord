@@ -1,145 +1,143 @@
-// Module ID: 6979
-// Function ID: 6980
-// Name: OrSeparator
-// Dependencies: [19, 17, 6980, 21, 4560, 576, 4556, 1114, 6981, 1483, 1477, 6605, 4975, 2]
+// Module ID: 6993
+// Function ID: 6994
+// Name: JoinServer
+// Dependencies: [19, 17, 6994, 21, 4574, 576, 4570, 1114, 6995, 1483, 1477, 6619, 4989, 2]
 // Exports: default
 
-// Module 6979 (OrSeparator)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 6993 (JoinServer)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
-import Text from "Text" /* 4556 */;
-import _modDef6605 from "module_6605" /* 6605 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6981 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import NUXGuildTemplatesAnalytics from "NUXGuildTemplatesAnalytics" /* 6980 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6619 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6995 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 class OrSeparator {
   constructor() {
     tmp = closure_11();
     obj = { style: tmp.separator, children: null };
-    obj = { style: tmp.innerSeparator };
+    obj1 = { style: tmp.innerSeparator };
     items = [, , ];
-    items[0] = jsx(View, obj);
-    obj1 = { style: tmp.orText, variant: "text-sm/semibold", color: "text-muted", children: null };
-    intl = require("getSystemLocale").intl;
-    obj1[3] = intl.string(require("getSystemLocale").t.HEuagM);
-    items[1] = jsx(require("Text").Text, obj1);
-    obj2 = { style: tmp.innerSeparator };
-    items[2] = jsx(View, obj2);
-    obj[1] = items;
+    items[0] = jsx(View, obj1);
+    obj5 = { style: tmp.orText, variant: "text-sm/semibold", color: "text-muted", children: null };
+    intl = closure_0(closure_2[7]).intl;
+    obj5.children = intl.string(closure_0(closure_2[7]).t.HEuagM);
+    items[1] = jsx(closure_0(closure_2[6]).Text, obj5);
+    obj6 = { style: tmp.innerSeparator };
+    items[2] = jsx(View, obj6);
+    obj.children = items;
     return jsxs(View, obj);
   }
 }
-({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
-({ CREATE_GUILD_SMALL_SCREEN_MAX_HEIGHT: closure_6, CreateGuildModalStates: error } = NUXGuildTemplatesAnalytics);
-({ jsx: closure_8, jsxs: c9, Fragment: c10 } = jsxProd);
-createCacheKey = { growSpacing: null, container: null, textInput: null, innerSeparator: null, separator: null, orText: null, header: null, description: null, exampleText: null };
-createCacheKey = { flexGrow: 2, minHeight: ThemesDefault.space.PX_24 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexGrow: 2, paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
-let obj1 = { flexGrow: 2, paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
-createCacheKey[2] = { borderRadius: ThemesDefault.radii.lg };
-let obj2 = { borderRadius: ThemesDefault.radii.lg };
-createCacheKey[3] = { height: 1, flexGrow: 2, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[4] = { paddingVertical: 12, flexDirection: "row", justifyContent: "center", alignItems: "center" };
-let obj3 = { height: 1, flexGrow: 2, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[5] = { textAlign: "center", marginHorizontal: ThemesDefault.space.PX_8, textTransform: "uppercase" };
-createCacheKey[6] = { textAlign: "center" };
-createCacheKey[7] = { textAlign: "center", marginTop: 8, marginBottom: 32 };
-createCacheKey[8] = { marginTop: 8 };
-let closure_11 = createCacheKey.createStyles(createCacheKey);
+get_ActivityIndicator = fn(17);
+({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
+const CreateGuildConstants = fn(6994);
+({ CREATE_GUILD_SMALL_SCREEN_MAX_HEIGHT: metroRequire, CreateGuildModalStates: closure_7 } = CreateGuildConstants);
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { growSpacing: { flexGrow: 2, minHeight: nativeDefault.space.PX_24 }, container: null, textInput: null, innerSeparator: null, separator: null, orText: null, header: null, description: null, exampleText: null };
+let obj3 = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };
+obj2.container = { flexGrow: 2, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
+let obj4 = { flexGrow: 2, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
+obj2.textInput = { borderRadius: nativeDefault.radii.lg };
+let obj5 = { borderRadius: nativeDefault.radii.lg };
+obj2.innerSeparator = { height: 1, flexGrow: 2, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.separator = { paddingVertical: 12, flexDirection: "row", justifyContent: "center", alignItems: "center" };
+let obj6 = { height: 1, flexGrow: 2, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.orText = { textAlign: "center", marginHorizontal: nativeDefault.space.PX_8, textTransform: "uppercase" };
+obj2.header = { textAlign: "center" };
+obj2.description = { textAlign: "center", marginTop: 8, marginBottom: 32 };
+obj2.exampleText = { marginTop: 8 };
+let closure_11 = createStyles.createStyles(obj2);
 let items = ["https://discord.gg/hTKzmak", "hTKzmak", "https://discord.gg/wumpus-friends"];
-let closure_13 = items[0];
-let obj4 = { textAlign: "center", marginHorizontal: ThemesDefault.space.PX_8, textTransform: "uppercase" };
-const result = require("set").fileFinishedImporting("modules/accept_invite/native/JoinServer.tsx");
+const placeholder = items[0];
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/accept_invite/native/JoinServer.tsx");
 
 export default function JoinServer(arg0) {
   ({ onDone, submitting } = arg0);
   let navigation;
   ({ error, inviteString, onInviteChange } = arg0);
-  const tmp = callback3();
-  let obj = navigation(1483);
-  navigation = obj.useNavigation();
+  const tmp = closure_11();
+  navigation = navigation(1483).useNavigation();
   items = [navigation];
-  obj = { keyboardShouldPersistTaps: "handled", contentContainerStyle: null, children: null };
+  const obj2 = { keyboardShouldPersistTaps: "handled", contentContainerStyle: null, children: null };
   const items1 = [tmp.container, ];
-  obj = { paddingBottom: null };
-  const callback = React.useCallback(() => {
-    navigation.push(closure_1_7.JOIN_STUDENT_HUB);
+  const obj3 = { paddingBottom: null };
+  const callback = noop.useCallback(() => {
+    navigation.push(constants.JOIN_STUDENT_HUB);
   }, items);
-  obj[0] = useSafeAreaInsetsKeyboardAwareDefault().insets.bottom + ThemesDefault.space.PX_16;
-  items1[1] = obj;
-  obj[1] = items1;
+  obj3.paddingBottom = useSafeAreaInsetsKeyboardAwareDefault().insets.bottom + nativeDefault.space.PX_16;
+  items1[1] = obj3;
+  obj2.contentContainerStyle = items1;
   let tmp7Result = null;
   if (useWindowDimensionsDefault().height > closure_6) {
-    obj1 = { children: null };
-    const obj2 = { style: null, accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
-    obj2[0] = tmp.header;
+    const obj4 = { children: null };
+    const obj5 = { style: tmp.header, accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp4(1114).intl;
-    obj2[4] = intl.string(tmp4(1114).t.jlfuFW);
-    const items2 = [callback(tmp4(4556).Text, obj2), ];
-    const obj3 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
-    obj3[0] = tmp.description;
+    obj5.children = intl.string(tmp4(1114).t.jlfuFW);
+    const items2 = [closure_8(tmp4(4570).Text, obj5), ];
+    const obj6 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
     const intl2 = tmp4(1114).intl;
-    obj3[3] = intl2.string(tmp4(1114).t.lVvN3A);
-    items2[1] = callback(tmp4(4556).Text, obj3);
-    obj1[0] = items2;
-    tmp7Result = tmp7(closure_10, obj1);
+    obj6.children = intl2.string(tmp4(1114).t.lVvN3A);
+    items2[1] = closure_8(tmp4(4570).Text, obj6);
+    obj4.children = items2;
+    tmp7Result = tmp7(closure_10, obj4);
   }
-  const obj4 = { children: null };
+  const obj7 = { children: null };
   const items3 = [tmp7Result, , ];
-  const obj5 = { label: null, error: null, value: null, onChangeText: null, placeholder: null, accessibilityLabel: null, autoFocus: true, autoCapitalize: "none", autoCorrect: false, returnKeyType: "join", textStyle: null, onSubmitEditing: null };
+  const obj8 = { label: null, error: null, value: null, onChangeText: null, placeholder: null, accessibilityLabel: null, autoFocus: true, autoCapitalize: "none", autoCorrect: false, returnKeyType: "join", textStyle: null, onSubmitEditing: null };
+  const obj = navigation(1483);
+  const tmp8 = closure_5;
   const intl3 = tmp4(1114).intl;
-  obj5[0] = intl3.string(navigation(1114).t.qreV25);
-  obj5[1] = error;
-  obj5[2] = inviteString;
-  obj5[3] = onInviteChange;
-  obj5[4] = closure_13;
+  obj8.label = intl3.string(navigation(1114).t.qreV25);
+  obj8.error = error;
+  obj8.value = inviteString;
+  obj8.onChangeText = onInviteChange;
+  obj8.placeholder = placeholder;
   const intl4 = tmp4(1114).intl;
-  obj5[5] = intl4.string(navigation(1114).t.qreV25);
-  obj5[10] = tmp.textInput;
-  obj5[11] = onDone;
-  items3[1] = callback(_modDef6605, obj5);
-  const obj6 = { style: tmp.exampleText, variant: "text-sm/medium", color: "text-muted", children: null };
+  obj8.accessibilityLabel = intl4.string(navigation(1114).t.qreV25);
+  obj8.textStyle = tmp.textInput;
+  obj8.onSubmitEditing = onDone;
+  items3[1] = closure_8(FreeFormInputGroupDefault, obj8);
+  const obj9 = { style: tmp.exampleText, variant: "text-sm/medium", color: "text-muted", children: null };
   const intl5 = tmp4(1114).intl;
-  obj6[3] = intl5.format(navigation(1114).t.vwWaTe, {
+  obj9.children = intl5.format(navigation(1114).t.vwWaTe, {
     example1: items[0],
     example2: items[1],
     example3: items[2],
-    exampleHook(children) {
-      return callback(navigation(table[6]).Text, { variant: "text-sm/medium", color: "text-default", children }, arg1);
+    exampleHook(children, arg1) {
+      return closure_1_8(navigation(dependencyMap[6]).Text, { variant: "text-sm/medium", color: "text-default", children }, arg1);
     }
   });
-  items3[2] = callback(navigation(4556).Text, obj6);
-  obj4[0] = items3;
-  const items4 = [closure_9(closure_4, obj4), ];
-  const obj8 = { children: null };
-  const items5 = [callback(closure_4, { style: tmp.growSpacing }), , , ];
-  const obj10 = { size: "lg", text: null, accessibilityLabel: null, loading: null, disabled: null, onPress: null };
+  items3[2] = closure_8(navigation(4570).Text, obj9);
+  obj7.children = items3;
+  const items4 = [closure_9(closure_4, obj7), ];
+  const obj11 = { children: null };
+  const items5 = [closure_8(closure_4, { style: tmp.growSpacing }), , , ];
+  const obj13 = { size: "lg", text: null, accessibilityLabel: null, loading: null, disabled: null, onPress: null };
   const intl6 = tmp4(1114).intl;
-  obj10[1] = intl6.string(navigation(1114).t["+H/coT"]);
+  obj13.text = intl6.string(navigation(1114).t["+H/coT"]);
   const intl7 = tmp4(1114).intl;
-  obj10[2] = intl7.string(navigation(1114).t["+H/coT"]);
-  obj10[3] = submitting;
-  obj10[4] = submitting;
-  obj10[5] = onDone;
-  items5[1] = callback(navigation(4975).Button, obj10);
-  items5[2] = callback(OrSeparator, {});
-  const obj11 = { size: "lg", variant: "secondary", text: null, accessibilityLabel: null, onPress: null };
+  obj13.accessibilityLabel = intl7.string(navigation(1114).t["+H/coT"]);
+  obj13.loading = submitting;
+  obj13.disabled = submitting;
+  obj13.onPress = onDone;
+  items5[1] = closure_8(navigation(4989).Button, obj13);
+  items5[2] = closure_8(OrSeparator, {});
+  const obj14 = { size: "lg", variant: "secondary", text: null, accessibilityLabel: null, onPress: null };
   const intl8 = tmp4(1114).intl;
-  obj11[2] = intl8.string(navigation(1114).t["MOqX/G"]);
+  obj14.text = intl8.string(navigation(1114).t["MOqX/G"]);
   const intl9 = tmp4(1114).intl;
-  obj11[3] = intl9.string(navigation(1114).t["MOqX/G"]);
-  obj11[4] = callback;
-  items5[3] = callback(navigation(4975).Button, obj11);
-  obj8[0] = items5;
-  items4[1] = closure_9(closure_10, obj8);
-  obj[2] = items4;
-  return closure_9(closure_5, obj);
+  obj14.accessibilityLabel = intl9.string(navigation(1114).t["MOqX/G"]);
+  obj14.onPress = callback;
+  items5[3] = closure_8(navigation(4989).Button, obj14);
+  obj11.children = items5;
+  items4[1] = closure_9(closure_10, obj11);
+  obj2.children = items4;
+  return closure_9(tmp8, obj2);
 };
 export { OrSeparator };

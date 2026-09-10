@@ -1,14 +1,16 @@
-// Module ID: 5420
-// Function ID: 5421
-// Name: getUnitId
+// Module ID: 5434
+// Function ID: 5435
+// Name: ProportionalVadIndicatorExperiment
 // Dependencies: [1434, 2]
 
-// Module 5420 (getUnitId)
-import getUnitIdDefault from "getUnitId" /* 1434 */;
+// Module 5434 (ProportionalVadIndicatorExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
 
-const obj = { 1: null, 2: { enabled: true }, 3: { enabled: true, disableUI: true }, 4: { enabled: true, disableUI: true, swallowVolumeOnlySpeakingEvents: true } };
-obj[4] = { enabled: true, disableUI: true, dontEmitVolumeOnlySpeakingEvents: true };
-const tmp2 = getUnitIdDefault({ kind: "user", name: "2025-12-proportional-vad-indicator", defaultConfig: { enabled: false }, variations: obj });
-const result = require("set").fileFinishedImporting("modules/calls/ProportionalVadIndicatorExperiment.tsx");
+const obj = { kind: "user", name: "2025-12-proportional-vad-indicator", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null, 2: { enabled: true }, 3: { enabled: true, disableUI: true }, 4: { enabled: true, disableUI: true, swallowVolumeOnlySpeakingEvents: true } };
+obj2[4] = { enabled: true, disableUI: true, dontEmitVolumeOnlySpeakingEvents: true };
+obj.variations = obj2;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/calls/ProportionalVadIndicatorExperiment.tsx");
 
-export default tmp2;
+export default apex_ApexExperimentDefault(obj);

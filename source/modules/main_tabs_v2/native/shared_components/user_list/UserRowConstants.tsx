@@ -1,11 +1,11 @@
-// Module ID: 10865
-// Function ID: 10866
-// Name: UserRowModes
+// Module ID: 10892
+// Function ID: 10893
+// Name: UserRowConstants
 // Dependencies: [2]
 
-// Module 10865 (UserRowModes)
-import set from "set" /* 2 */;
+// Module 10892 (UserRowConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UserRowConstants.tsx");
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UserRowConstants.tsx");
 
 export const UserRowModes = { NONE: "none", TOGGLE: "toggle", ACTIONS: "actions" };

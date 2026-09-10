@@ -1,33 +1,32 @@
-// Module ID: 9590
-// Function ID: 9591
+// Module ID: 9617
+// Function ID: 9618
 // Name: openIgnoreThermalStateAlert
-// Dependencies: [19, 21, 4905, 9591, 1896, 2]
+// Dependencies: [19, 21, 4919, 9618, 1896, 2]
 // Exports: openIgnoreThermalStateAlert
 
-// Module 9590 (openIgnoreThermalStateAlert)
-import noopAll from "noop" /* 19 */;
-import _modDef4905 from "module_4905" /* 4905 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 9617 (openIgnoreThermalStateAlert)
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4919 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/activities/native/openIgnoreThermalStateAlert.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/native/openIgnoreThermalStateAlert.tsx");
 
 export const openIgnoreThermalStateAlert = function openIgnoreThermalStateAlert(arg0) {
   closure_0 = arg0;
-  let obj = _modDef4905;
-  obj = {
+  actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return callback(closure_1_2[4])(closure_1_2[3], closure_1_2.paths).then((IgnoreThermalStateAlert) => {
+      return asyncRequireImpl(9618, dependencyMap.paths).then((IgnoreThermalStateAlert) => {
         IgnoreThermalStateAlert = IgnoreThermalStateAlert.IgnoreThermalStateAlert;
         return (arg0) => {
           const obj = {};
           const merged = Object.assign(arg0);
-          obj.onConfirm = IgnoreThermalStateAlert;
-          return closure_2_3(IgnoreThermalStateAlert, obj);
+          obj.onConfirm = onConfirm;
+          return <IgnoreThermalStateAlert />;
         };
       });
     }
-  };
-  obj.openLazy(obj);
+  });
 };

@@ -1,72 +1,73 @@
-// Module ID: 13127
-// Function ID: 13128
-// Name: RemediatedUserNotice
-// Dependencies: [19, 17, 4209, 1074, 21, 4560, 576, 8241, 563, 4556, 1114, 9047, 2]
+// Module ID: 13153
+// Function ID: 13154
+// Name: UserProfileRemediatedNotice
+// Dependencies: [19, 17, 4222, 1074, 21, 4574, 576, 8267, 563, 4570, 1114, 9074, 2]
 // Exports: default
 
-// Module 13127 (RemediatedUserNotice)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "markAllUserIdListsStale" /* 4209 */;
-import { RelationshipTypes } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13153 (UserProfileRemediatedNotice)
+import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8267 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9074 */;
+import noop from "module_19" /* 19 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
 
-const require = arg1;
-noopAll;
-({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null };
-createCacheKey = { padding: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
-createCacheKey[0] = createCacheKey;
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileRemediatedNotice.tsx");
+require = fn;
+const View = fn(17).View;
+const RelationshipTypes = fn(1074).RelationshipTypes;
+const jsxProd = fn(21);
+({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { padding: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" } };
+let closure_9 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileRemediatedNotice.tsx");
 
 export default function RemediatedUserNotice(user) {
   user = user.user;
-  const tmp = callback2();
-  let obj = user(563);
-  const items = [closure_4];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ isPendingIncoming: closure_1_4.getRelationshipType(user.id) === closure_1_5.PENDING_INCOMING, isBlocked: closure_1_4.isBlocked(user.id), isIgnored: closure_1_4.isIgnored(user.id) }));
+  const tmp = closure_9();
+  const tmp3 = UserProfileSharedStylesDefault();
+  const items = [RelationshipStore];
+  const stateFromStoresObject = user(563).useStateFromStoresObject(items, () => ({ isPendingIncoming: RelationshipStore.getRelationshipType(user.id) === RelationshipTypes.PENDING_INCOMING, isBlocked: RelationshipStore.isBlocked(user.id), isIgnored: RelationshipStore.isIgnored(user.id) }));
   ({ isBlocked, isIgnored } = stateFromStoresObject);
   if (isBlocked) {
-    obj = { style: null, children: null };
+    const obj2 = { style: null, children: null };
     const items1 = [tmp.container, tmp3.card, user.style];
-    obj[0] = items1;
+    obj2.style = items1;
     if (isBlocked) {
-      obj = { variant: "text-sm/semibold", color: "text-default", lineClamp: 1, children: null };
+      const obj3 = { variant: "text-sm/semibold", color: "text-default", lineClamp: 1, children: null };
       const intl = tmp4(1114).intl;
-      obj[3] = intl.string(tmp4(1114).t["oC/fU6"]);
-      isBlocked = callback(tmp4(4556).Text, obj);
+      obj3.children = intl.string(tmp4(1114).t["oC/fU6"]);
+      isBlocked = closure_6(tmp4(4570).Text, obj3);
     }
     const items2 = [isBlocked, ];
     if (isIgnored) {
-      obj1 = { children: null };
-      const obj2 = { variant: "text-sm/semibold", color: "text-default", lineClamp: 1, children: null };
+      const obj4 = { children: null };
+      const obj5 = { variant: "text-sm/semibold", color: "text-default", lineClamp: 1, children: null };
       const intl2 = tmp4(1114).intl;
-      obj2[3] = intl2.string(tmp4(1114).t.HXz5An);
-      const items3 = [callback(tmp4(4556).Text, obj2), callback(tmp4(4556).Text, { variant: "text-sm/semibold", color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no", children: "\u2022" }), ];
+      obj5.children = intl2.string(tmp4(1114).t.HXz5An);
+      const items3 = [closure_6(tmp4(4570).Text, obj5), closure_6(tmp4(4570).Text, { variant: "text-sm/semibold", color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no", children: "\u2022" }), ];
       const intl3 = tmp4(1114).intl;
-      const obj3 = { unignoreHook: null };
-      obj3[0] = function unignoreHook(children) {
-        return closure_1_6(user(closure_1_2[9]).Text, {
-          role: "button",
-          variant: "heading-sm/medium",
-          color: "text-link",
-          onPress() {
-            return closure_1_1(closure_1_2[11]).unignoreUser(id.id, "UserProfileRemediatedNotice");
-          },
-          children
-        });
+      const obj6 = {
+        unignoreHook(children) {
+              return timestampProducer(Text_Text.Text, {
+                role: "button",
+                variant: "heading-sm/medium",
+                color: "text-link",
+                onPress() {
+                  return RelationshipActionCreatorsDefault.unignoreUser(id.id, "UserProfileRemediatedNotice");
+                },
+                children
+              });
+            }
       };
-      items3[2] = intl3.format(tmp4(1114).t.PrtAqy, obj3);
-      obj1[0] = items3;
-      isIgnored = tmp8(closure_7, obj1);
+      items3[2] = intl3.format(tmp4(1114).t.PrtAqy, obj6);
+      obj4.children = items3;
+      isIgnored = tmp8(closure_7, obj4);
     }
     items2[1] = isIgnored;
-    obj[1] = items2;
-    let tmp8Result = tmp8(View, obj);
-    const tmp9 = View;
+    obj2.children = items2;
+    let tmp8Result = tmp8(View, obj2);
   } else {
     tmp8Result = null;
     if (isIgnored) {

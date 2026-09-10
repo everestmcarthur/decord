@@ -1,19 +1,18 @@
-// Module ID: 7828
-// Function ID: 7829
-// Name: set
+// Module ID: 7842
+// Function ID: 7843
+// Name: MemoizerUtils
 // Dependencies: [2]
 
-// Module 7828 (set)
-import set from "set" /* 2 */;
+// Module 7842 (MemoizerUtils)
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("utils/MemoizerUtils.tsx");
+let result = size.fileFinishedImporting("utils/MemoizerUtils.tsx");
 
 export default {
   makeMemoizer(getURL) {
-    closure_0 = getURL;
     const map = new Map();
     return (arg0) => {
-      let value = map.get(arg0);
+      value = map.get(arg0);
       if (undefined === value) {
         const tmp3 = getURL(arg0);
         const result = map.set(arg0, tmp3);

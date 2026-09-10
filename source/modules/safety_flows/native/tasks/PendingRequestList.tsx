@@ -1,21 +1,20 @@
-// Module ID: 17888
-// Function ID: 17889
-// Name: PendingRequestRow
-// Dependencies: [19, 17, 1371, 21, 4560, 576, 1178, 504, 17886, 17889, 1396, 4556, 1114, 2690, 5123, 2396, 8800, 14926, 14880, 4259, 4973, 5692, 9058, 14885, 2]
+// Module ID: 17921
+// Function ID: 17922
+// Name: PendingRequestList
+// Dependencies: [19, 17, 1371, 21, 4574, 576, 1178, 504, 17919, 17922, 1396, 4570, 1114, 2690, 5137, 2396, 8829, 14952, 14906, 4272, 4987, 5706, 9085, 14911, 2]
 // Exports: default
 
-// Module 17888 (PendingRequestRow)
-import ThemesDefault from "Themes" /* 576 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
-import messagesProxyDefault from "messagesProxy" /* 2690 */;
-import useRefreshLinkCodeOnExpiryDefault from "useRefreshLinkCodeOnExpiry" /* 14880 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "mergeGuildAvatar" /* 1371 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17921 (PendingRequestList)
+import nativeDefault from "native" /* 576 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import _modDef2690 from "module_2690" /* 2690 */;
+import useRefreshLinkCodeOnExpiryDefault from "useRefreshLinkCodeOnExpiry" /* 14906 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
+const require = globalThis.__r;
+
+const require = fn;
 class PendingRequestRow {
   constructor(arg0) {
     request = global.request;
@@ -24,10 +23,10 @@ class PendingRequestRow {
     tmp = closure_9();
     tmp2 = request;
     tmp3 = onDecline;
-    obj = require("initialize");
+    obj = request(onDecline[7]);
     items = [];
     items[0] = closure_6;
-    stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getUser(request.parent_id));
+    stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(request.parent_id));
     globalName = undefined;
     if (stateFromStores != null) {
       globalName = stateFromStores.globalName;
@@ -56,258 +55,270 @@ class PendingRequestRow {
     if (avatar == null) {
       avatar = request.parent_avatar;
     }
-    tmp2Result = require("useDerivedPendingRequests");
+    tmp2Result = tmp2(tmp3[8]);
     pendingRequestResolution = tmp2Result.usePendingRequestResolution(request.parent_id);
     ({ isConnected, isResolved } = pendingRequestResolution);
-    tmp2Result1 = require("SENT_TIMESTAMP_FORMATTER");
+    tmp2Result1 = tmp2(tmp3[9]);
     tmp11 = jsxs;
     tmp12 = View;
-    obj = { style: tmp.row, children: null };
+    obj1 = { style: tmp.row, children: null };
     tmp13 = jsx;
     result = tmp2Result1.formatPendingRequestSentText(request.created_at);
-    obj1 = { avatarStyle: tmp.avatar, source: null, disablePlaceholder: true };
+    obj20 = { avatarStyle: tmp.avatar, source: null, disablePlaceholder: true };
     tmp14 = onAccept;
-    obj6 = require("getAvatarURL");
-    obj2 = { id: request.parent_id, avatar };
-    obj1[1] = obj6.getUserAvatarSource(obj2);
+    obj6 = onAccept(tmp3[10]);
+    obj21 = { id: request.parent_id, avatar };
+    obj20.source = obj6.getUserAvatarSource(obj21);
     items1 = [, , ];
-    items1[0] = jsx(require("Button").Avatar, obj1);
-    obj3 = { style: tmp.details, children: null };
+    items1[0] = jsx(tmp2(tmp3[6]).Avatar, obj20);
+    obj22 = { style: tmp.details, children: null };
     items2 = [, , ];
-    items2[0] = jsx(require("Text").Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: globalName });
+    items2[0] = jsx(tmp2(tmp3[11]).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: globalName });
     tmp13Result = username1 !== globalName;
     if (tmp13Result) {
-      obj4 = { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: null };
-      obj4[3] = username1;
-      tmp13Result = tmp13(require("Text").Text, obj4);
+      obj23 = { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: null };
+      obj23.children = username1;
+      tmp13Result = tmp13(tmp2(tmp3[11]).Text, obj23);
     }
     items2[1] = tmp13Result;
-    items2[2] = tmp13(require("Text").Text, { variant: "text-xs/medium", color: "text-muted", children: result });
-    obj3[1] = items2;
-    items1[1] = tmp11(tmp12, obj3);
+    items2[2] = tmp13(tmp2(tmp3[11]).Text, { variant: "text-xs/medium", color: "text-muted", children: result });
+    obj22.children = items2;
+    items1[1] = tmp11(tmp12, obj22);
     if (isResolved) {
-      intl3 = require("getSystemLocale").intl;
-      tmp14Result = require("messagesProxy");
+      intl3 = tmp2(tmp3[12]).intl;
+      tmp14Result = tmp14(tmp3[13]);
       tmp22 = isConnected ? tmp14Result.YQP5dE : tmp14Result["2HvOvh"];
       tmp14Result = { variant: "text-sm/normal", color: "text-muted", children: null };
-      tmp14Result[2] = intl3.string(tmp22);
-      tmp13Result1 = tmp13(require("Text").Text, tmp14Result);
+      tmp14Result.children = intl3.string(tmp22);
+      tmp13Result1 = tmp13(tmp2(tmp3[11]).Text, tmp14Result);
     } else {
-      obj5 = { style: null, children: null };
-      obj5[0] = tmp.actions;
+      obj24 = { style: null, children: null };
+      obj24.style = tmp.actions;
       if (hasMaxConnections) {
         items3 = [, ];
         items3[0] = tmp16;
-        obj6 = { accessibilityRole: "button", accessibilityLabel: null, disabled: null, onPress: null, style: null, children: null };
-        intl2 = require("getSystemLocale").intl;
-        obj7 = { name: null };
-        obj7[0] = request.parent_username;
-        obj6[1] = intl2.formatToPlainString(require("messagesProxy")["4GtllP"], obj7);
-        obj6[2] = actionsDisabled;
-        obj6[3] = function onPress() {
-          return callback2(request.parent_id);
+        obj25 = { accessibilityRole: "button", accessibilityLabel: null, disabled: null, onPress: null, style: null, children: null };
+        intl2 = tmp2(tmp3[12]).intl;
+        obj26 = { name: null };
+        obj26.name = request.parent_username;
+        obj25.accessibilityLabel = intl2.formatToPlainString(tmp14(tmp3[15])["4GtllP"], obj26);
+        obj25.disabled = actionsDisabled;
+        obj25.onPress = function onPress() {
+          return dependencyMap(request.parent_id);
         };
         items4 = [, ];
         ({ actionButton: arr6[0], declineButton: arr6[1] } = tmp);
-        obj6[4] = items4;
+        obj25.style = items4;
         if (isDeclineLoading) {
           tmp21 = ActivityIndicator;
-          obj8 = { size: "small", color: null };
-          obj8[1] = tmp.declineIcon.color;
-          tmp13Result2 = tmp13(ActivityIndicator, obj8);
+          obj27 = { size: "small", color: null };
+          obj27.color = tmp.declineIcon.color;
+          tmp13Result2 = tmp13(ActivityIndicator, obj27);
         } else {
-          obj9 = { size: null, color: null, source: null };
-          obj9[0] = require("Button").Icon.Sizes.SMALL;
-          obj9[1] = tmp.declineIcon.color;
-          obj9[2] = require("registerAsset");
-          tmp13Result2 = tmp13(require("Button").Icon, obj9);
+          obj28 = { size: null, color: null, source: null };
+          obj28.size = tmp2(tmp3[6]).Icon.Sizes.SMALL;
+          obj28.color = tmp.declineIcon.color;
+          obj28.source = tmp14(tmp3[17]);
+          tmp13Result2 = tmp13(tmp2(tmp3[6]).Icon, obj28);
         }
-        obj6[5] = tmp13Result2;
-        items3[1] = tmp13(require("PressableBase").PressableOpacity, obj6);
-        obj5[1] = items3;
-        items1[2] = tmp11(tmp12, obj5);
-        obj[1] = items1;
-        return tmp11(tmp12, obj);
+        obj25.children = tmp13Result2;
+        items3[1] = tmp13(tmp2(tmp3[14]).PressableOpacity, obj25);
+        obj24.children = items3;
+        items1[2] = tmp11(tmp12, obj24);
+        obj1.children = items1;
+        return tmp11(tmp12, obj1);
       } else {
-        obj10 = { accessibilityRole: "button", accessibilityLabel: null, disabled: null, onPress: null, style: null, children: null };
-        intl = require("getSystemLocale").intl;
-        obj11 = { name: null };
-        obj11[0] = request.parent_username;
-        obj10[1] = intl.formatToPlainString(require("messagesProxy").jc1Ip7, obj11);
-        obj10[2] = actionsDisabled;
-        obj10[3] = function onPress() {
-          return callback(request.parent_id);
+        obj29 = { accessibilityRole: "button", accessibilityLabel: null, disabled: null, onPress: null, style: null, children: null };
+        intl = tmp2(tmp3[12]).intl;
+        obj30 = { name: null };
+        obj30.name = request.parent_username;
+        obj29.accessibilityLabel = intl.formatToPlainString(tmp14(tmp3[15]).jc1Ip7, obj30);
+        obj29.disabled = actionsDisabled;
+        obj29.onPress = function onPress() {
+          return importDefault(request.parent_id);
         };
         items5 = [, ];
         ({ actionButton: arr4[0], acceptButton: arr4[1] } = tmp);
-        obj10[4] = items5;
+        obj29.style = items5;
         if (isAcceptLoading) {
           tmp18 = ActivityIndicator;
-          obj12 = { size: "small", color: null };
-          obj12[1] = tmp.acceptIcon.color;
-          tmp13Result3 = tmp13(ActivityIndicator, obj12);
+          obj31 = { size: "small", color: null };
+          obj31.color = tmp.acceptIcon.color;
+          tmp13Result3 = tmp13(ActivityIndicator, obj31);
         } else {
-          obj13 = { size: "sm", color: null };
-          obj13[1] = require("Themes").colors.WHITE;
-          tmp13Result3 = tmp13(require("CheckmarkLargeBoldIcon").CheckmarkLargeBoldIcon, obj13);
+          obj32 = { size: "sm", color: null };
+          obj32.color = tmp14(tmp3[5]).colors.WHITE;
+          tmp13Result3 = tmp13(tmp2(tmp3[16]).CheckmarkLargeBoldIcon, obj32);
         }
-        obj10[5] = tmp13Result3;
-        tmp13Result4 = tmp13(require("PressableBase").PressableOpacity, obj10);
+        obj29.children = tmp13Result3;
+        tmp13Result4 = tmp13(tmp2(tmp3[14]).PressableOpacity, obj29);
       }
     }
     return;
   }
 }
-({ ActivityIndicator: c4, View: c5 } = get_ActivityIndicator);
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { card: null, row: null, divider: null, avatar: null, details: null, actions: null, actionButton: null, acceptButton: null, declineButton: null, acceptIcon: null, declineIcon: null, inviteIconContainer: null, inviteQrButton: null, inviteShareButton: null, dividerRow: null, dividerLine: null, dividerLabel: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row", alignItems: "center", paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
-let obj2 = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginLeft: null };
-const sum = ThemesDefault.space.PX_16 + require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL];
-obj2[2] = sum + ThemesDefault.space.PX_12;
-createCacheKey[2] = obj2;
-let obj1 = { flexDirection: "row", alignItems: "center", paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[3] = { borderRadius: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL] / 2, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST };
-let obj3 = { borderRadius: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL] / 2, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST };
-createCacheKey[4] = { flexGrow: 1, flexShrink: 1, paddingLeft: ThemesDefault.space.PX_12, paddingRight: ThemesDefault.space.PX_4 };
-createCacheKey[5] = { flexDirection: "row", alignItems: "center" };
-let obj4 = { flexGrow: 1, flexShrink: 1, paddingLeft: ThemesDefault.space.PX_12, paddingRight: ThemesDefault.space.PX_4 };
-createCacheKey[6] = { height: 36, width: 36, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center" };
-let obj5 = { height: 36, width: 36, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center" };
-createCacheKey[7] = { backgroundColor: ThemesDefault.colors.STATUS_POSITIVE, marginRight: ThemesDefault.space.PX_8 };
-let obj6 = { backgroundColor: ThemesDefault.colors.STATUS_POSITIVE, marginRight: ThemesDefault.space.PX_8 };
-createCacheKey[8] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_STRONG };
-let obj7 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_STRONG };
-createCacheKey[9] = { color: ThemesDefault.colors.WHITE };
-let obj8 = { color: ThemesDefault.colors.WHITE };
-createCacheKey[10] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-let obj9 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-createCacheKey[11] = { width: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL], height: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL], alignItems: "center", justifyContent: "center" };
-let obj10 = { width: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL], height: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL], alignItems: "center", justifyContent: "center" };
-createCacheKey[12] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_STRONG };
-let obj11 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_STRONG };
-createCacheKey[13] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_STRONG, marginRight: ThemesDefault.space.PX_8 };
-createCacheKey[14] = { flexDirection: "row", alignItems: "center" };
-let obj12 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_STRONG, marginRight: ThemesDefault.space.PX_8 };
-createCacheKey[15] = { flexGrow: 1, flexShrink: 1, height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-let obj13 = { flexGrow: 1, flexShrink: 1, height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[16] = { marginHorizontal: ThemesDefault.space.PX_12 };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj14 = { marginHorizontal: ThemesDefault.space.PX_12 };
-let result = require("set").fileFinishedImporting("modules/safety_flows/native/tasks/PendingRequestList.tsx");
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { card: { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" }, row: null, divider: null, avatar: null, details: null, actions: null, actionButton: null, acceptButton: null, declineButton: null, acceptIcon: null, declineIcon: null, inviteIconContainer: null, inviteQrButton: null, inviteShareButton: null, dividerRow: null, dividerLine: null, dividerLabel: null };
+let obj3 = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" };
+obj2.row = { flexDirection: "row", alignItems: "center", paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
+let obj5 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginLeft: null };
+const sum = nativeDefault.space.PX_16 + fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.NORMAL];
+obj5.marginLeft = sum + nativeDefault.space.PX_12;
+obj2.divider = obj5;
+let obj4 = { flexDirection: "row", alignItems: "center", paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.avatar = { borderRadius: fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST };
+let obj6 = { borderRadius: fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST };
+obj2.details = { flexGrow: 1, flexShrink: 1, paddingLeft: nativeDefault.space.PX_12, paddingRight: nativeDefault.space.PX_4 };
+obj2.actions = { flexDirection: "row", alignItems: "center" };
+let size = { height: 36, width: 36, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center" };
+obj2.actionButton = size;
+let obj7 = { flexGrow: 1, flexShrink: 1, paddingLeft: nativeDefault.space.PX_12, paddingRight: nativeDefault.space.PX_4 };
+obj2.acceptButton = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE, marginRight: nativeDefault.space.PX_8 };
+let obj8 = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE, marginRight: nativeDefault.space.PX_8 };
+obj2.declineButton = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG };
+let obj9 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG };
+obj2.acceptIcon = { color: nativeDefault.colors.WHITE };
+let obj10 = { color: nativeDefault.colors.WHITE };
+obj2.declineIcon = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+const size1 = { width: fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.NORMAL], height: fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.NORMAL], alignItems: "center", justifyContent: "center" };
+obj2.inviteIconContainer = size1;
+let obj11 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+obj2.inviteQrButton = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG };
+let obj12 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG };
+obj2.inviteShareButton = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG, marginRight: nativeDefault.space.PX_8 };
+obj2.dividerRow = { flexDirection: "row", alignItems: "center" };
+let obj13 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG, marginRight: nativeDefault.space.PX_8 };
+obj2.dividerLine = { flexGrow: 1, flexShrink: 1, height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+let obj14 = { flexGrow: 1, flexShrink: 1, height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.dividerLabel = { marginHorizontal: nativeDefault.space.PX_12 };
+const React7 = createStyles.createStyles(obj2);
+size = fn(2);
+let result = size.fileFinishedImporting("modules/safety_flows/native/tasks/PendingRequestList.tsx");
 
 export default function PendingRequestList(arg0) {
-  let _require;
   importDefault = undefined;
   dependencyMap = undefined;
   c3 = undefined;
   c4 = undefined;
   c5 = undefined;
   c6 = undefined;
-  let callback;
+  c7 = undefined;
   ({ pendingRequests, linkedUsersProcessed, expiresAt, onRefreshLinkCode, onInviteAnotherGuardian, onShare } = arg0);
-  const tmp = callback2();
+  const tmp = closure_9();
   _require = tmp;
   useRefreshLinkCodeOnExpiryDefault(expiresAt, onRefreshLinkCode);
-  let obj = _require(17886);
-  obj = {
+  const pendingRequestListController = require("usePendingParentRequests").usePendingRequestListController({
     pendingRequests,
     linkedUsersProcessed,
     onActionError() {
-      let obj = _undefined(_undefined2[19]);
-      obj = { key: "SAFETY_FLOWS_PARENTAL_CONSENT_LINK_UPDATE_ERROR", content: null };
-      const intl = lib(_undefined2[12]).intl;
-      obj[1] = intl.string(_undefined(_undefined2[15]).Wu8BK2);
-      obj.open(obj);
+      const obj2 = { key: "SAFETY_FLOWS_PARENTAL_CONSENT_LINK_UPDATE_ERROR", content: null };
+      const intl = closure_0(_undefined[12]).intl;
+      obj2.content = intl.string(hasMaxConnections(_undefined[15]).Wu8BK2);
+      hasMaxConnections(_undefined[19]).open(obj2);
     }
-  };
-  const pendingRequestListController = obj.usePendingRequestListController(obj);
+  });
   ({ seenRequests, hasMaxConnections: c1, actioningUserId: c2, isAcceptLoading: c3, isDeclineLoading: c4, actionsDisabled: c5, handleAccept: c6, handleDecline: c7 } = pendingRequestListController);
-  obj = { spacing: ThemesDefault.space.PX_16, children: null };
+  let obj3 = { spacing: nativeDefault.space.PX_16, children: null };
   let tmp8 = seenRequests.length > 0;
   if (tmp8) {
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.card;
-    obj1[1] = seenRequests.map((parent_id) => {
-      let tmp2 = arg1 > 0;
-      if (tmp2) {
-        let obj = { style: null };
-        obj[0] = lib.divider;
-        tmp2 = _undefined4(c5, obj);
-      }
-      const items = [tmp2, ];
-      obj = { request: parent_id, hasMaxConnections: c1, isAcceptLoading: null, isDeclineLoading: null, actionsDisabled: null, onAccept: null, onDecline: null };
-      let tmp8 = _undefined3;
-      if (_undefined3) {
-        tmp8 = c2 === parent_id.parent_id;
-      }
-      obj[2] = tmp8;
-      let tmp10 = c4;
-      if (c4) {
-        tmp10 = c2 === parent_id.parent_id;
-      }
-      obj = { children: null };
-      obj[3] = tmp10;
-      obj[4] = c5;
-      obj[5] = c6;
-      obj[6] = _undefined4;
-      items[1] = _undefined4(closure_1_10, obj);
-      obj[0] = items;
-      return closure_1_8(_undefined3.Fragment, obj, parent_id.parent_id);
-    });
-    tmp8 = callback(c5, obj1);
+    const obj4 = {
+      style: tmp.card,
+      children: seenRequests.map((request, index) => {
+          let tmp2 = index > 0;
+          if (tmp2) {
+            const obj = { style: closure_0.divider };
+            tmp2 = React5(hasOwnProperty, obj);
+          }
+          const items = [tmp2, ];
+          const obj2 = { request, hasMaxConnections, isAcceptLoading: null, isDeclineLoading: null, actionsDisabled: null, onAccept: null, onDecline: null };
+          let tmp8 = c3;
+          if (c3) {
+            tmp8 = c2 === request.parent_id;
+          }
+          obj2.isAcceptLoading = tmp8;
+          let tmp10 = c4;
+          if (c4) {
+            tmp10 = c2 === request.parent_id;
+          }
+          const obj3 = { children: null };
+          obj2.isDeclineLoading = tmp10;
+          obj2.actionsDisabled = actionsDisabled;
+          obj2.onAccept = onAccept;
+          obj2.onDecline = onDecline;
+          items[1] = React5(PendingRequestRow, obj2);
+          obj3.children = items;
+          return React6(noop.Fragment, obj3, request.parent_id);
+        })
+    };
+    tmp8 = c7(c5, obj4);
   }
   let items = [tmp8, , ];
-  const obj2 = { style: tmp.dividerRow, children: null };
-  const items1 = [callback(c5, { style: tmp.dividerLine }), , ];
-  const obj4 = { style: tmp.dividerLabel, variant: "text-sm/medium", color: "text-muted", children: null };
+  const obj5 = { style: tmp.dividerRow, children: null };
+  const items1 = [c7(c5, { style: tmp.dividerLine }), , ];
+  const obj7 = { style: tmp.dividerLabel, variant: "text-sm/medium", color: "text-muted", children: null };
   let intl = tmp5(1114).intl;
-  obj4[3] = intl.string(messagesProxyDefault["/SbB94"]);
-  items1[1] = callback(_require(4556).Text, obj4);
-  items1[2] = callback(c5, { style: tmp.dividerLine });
-  obj2[1] = items1;
-  items[1] = closure_8(c5, obj2);
-  const obj6 = { style: items2, children: null };
-  items2 = [, ];
+  obj7.children = intl.string(_modDef2690["/SbB94"]);
+  items1[1] = c7(require("Text/Text").Text, obj7);
+  items1[2] = c7(c5, { style: tmp.dividerLine });
+  obj5.children = items1;
+  items[1] = closure_8(c5, obj5);
+  const obj9 = { style: null, children: null };
+  const items2 = [, ];
   ({ card: arr3[0], row: arr3[1] } = tmp);
-  const items3 = [callback(c5, { style: tmp.inviteIconContainer, children: callback(_require(5692).PlaneIllocon, { size: 32 }) }), , ];
-  const obj8 = { style: tmp.details, children: null };
-  const obj9 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+  obj9.style = items2;
+  let obj = require("usePendingParentRequests");
+  let obj2 = {
+    pendingRequests,
+    linkedUsersProcessed,
+    onActionError() {
+      const obj2 = { key: "SAFETY_FLOWS_PARENTAL_CONSENT_LINK_UPDATE_ERROR", content: null };
+      const intl = closure_0(_undefined[12]).intl;
+      obj2.content = intl.string(hasMaxConnections(_undefined[15]).Wu8BK2);
+      hasMaxConnections(_undefined[19]).open(obj2);
+    }
+  };
+  const obj6 = { style: tmp.dividerLine };
+  const obj8 = { style: tmp.dividerLine };
+  const items3 = [c7(c5, { style: tmp.inviteIconContainer, children: c7(require("native").PlaneIllocon, { size: 32 }) }), , ];
+  const obj11 = { style: tmp.details, children: null };
+  const obj12 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = tmp5(1114).intl;
-  obj9[2] = intl2.string(messagesProxyDefault.z9gkwZ);
-  const items4 = [callback(_require(4556).Text, obj9), ];
-  const obj10 = { variant: "text-xs/medium", color: "text-default", children: null };
+  obj12.children = intl2.string(_modDef2690.z9gkwZ);
+  const items4 = [c7(require("Text/Text").Text, obj12), ];
+  const obj13 = { variant: "text-xs/medium", color: "text-default", children: null };
   const intl3 = tmp5(1114).intl;
-  obj10[2] = intl3.string(messagesProxyDefault["9t4+vC"]);
-  items4[1] = callback(_require(4556).Text, obj10);
-  obj8[1] = items4;
-  items3[1] = closure_8(c5, obj8);
-  const obj11 = { style: tmp.actions, children: null };
-  const obj12 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
+  obj13.children = intl3.string(_modDef2690["9t4+vC"]);
+  items4[1] = c7(require("Text/Text").Text, obj13);
+  obj11.children = items4;
+  items3[1] = closure_8(c5, obj11);
+  const obj14 = { style: tmp.actions, children: null };
+  const obj15 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
   const intl4 = tmp5(1114).intl;
-  obj12[1] = intl4.string(_require(1114).t.Ej3B3Y);
-  obj12[2] = onShare;
+  obj15.accessibilityLabel = intl4.string(require("util").t.Ej3B3Y);
+  obj15.onPress = onShare;
   const items5 = [, ];
   ({ actionButton: arr6[0], inviteShareButton: arr6[1] } = tmp);
-  obj12[3] = items5;
-  obj12[4] = callback(_require(9058).ShareIcon, { size: "sm", color: tmp.declineIcon.color });
-  const items6 = [callback(_require(5123).PressableOpacity, obj12), ];
-  const obj14 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
+  obj15.style = items5;
+  obj15.children = c7(require("ShareIcon").ShareIcon, { size: "sm", color: tmp.declineIcon.color });
+  const items6 = [c7(require("Pressables").PressableOpacity, obj15), ];
+  const obj17 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
   const intl5 = tmp5(1114).intl;
-  obj14[1] = intl5.string(messagesProxyDefault.z9gkwZ);
-  obj14[2] = onInviteAnotherGuardian;
+  obj17.accessibilityLabel = intl5.string(_modDef2690.z9gkwZ);
+  obj17.onPress = onInviteAnotherGuardian;
   const items7 = [, ];
   ({ actionButton: arr8[0], inviteQrButton: arr8[1] } = tmp);
-  obj14[3] = items7;
-  obj14[4] = callback(_require(14885).QrCodeIcon, { size: "sm", color: tmp.declineIcon.color });
-  items6[1] = callback(_require(5123).PressableOpacity, obj14);
-  obj11[1] = items6;
-  items3[2] = closure_8(c5, obj11);
-  obj6[1] = items3;
-  items[2] = closure_8(c5, obj6);
-  obj[1] = items;
-  return closure_8(_require(4973).Stack, obj);
+  obj17.style = items7;
+  obj17.children = c7(require("QrCodeIcon").QrCodeIcon, { size: "sm", color: tmp.declineIcon.color });
+  items6[1] = c7(require("Pressables").PressableOpacity, obj17);
+  obj14.children = items6;
+  items3[2] = closure_8(c5, obj14);
+  obj9.children = items3;
+  items[2] = closure_8(c5, obj9);
+  obj3.children = items;
+  return closure_8(require("Stack/Stack").Stack, obj3);
 };
 export { PendingRequestRow };

@@ -1,24 +1,24 @@
-// Module ID: 16121
-// Function ID: 16122
-// Name: SubscriptionGatedChannelIcon
-// Dependencies: [19, 21, 1178, 10307, 2]
+// Module ID: 16151
+// Function ID: 16152
+// Name: GuildRoleSubscriptionGatedChannelIcon
+// Dependencies: [19, 21, 1178, 10334, 2]
 // Exports: default
 
-// Module 16121 (SubscriptionGatedChannelIcon)
-import noopAll from "noop" /* 19 */;
-import Button from "Button" /* 1178 */;
-import registerAssetDefault from "registerAsset" /* 10307 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16151 (GuildRoleSubscriptionGatedChannelIcon)
+import native from "native" /* 1178 */;
+import _modDef10334 from "module_10334" /* 10334 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/premium_channel/GuildRoleSubscriptionGatedChannelIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/premium_channel/GuildRoleSubscriptionGatedChannelIcon.tsx");
 
 export default function SubscriptionGatedChannelIcon(arg0) {
   ({ locked, isInMainTabsExperiment } = arg0);
-  const obj = { source: registerAssetDefault, size: null, disableColor: null };
-  const Sizes = Button.Icon.Sizes;
-  obj[1] = isInMainTabsExperiment ? Sizes.EXTRA_SMALL_10 : Sizes.SMALL;
-  obj[2] = false !== locked;
-  return jsx(Button.Icon, { source: registerAssetDefault, size: null, disableColor: null });
+  const obj = { source: _modDef10334, size: null, disableColor: null };
+  const Sizes = native.Icon.Sizes;
+  obj.size = isInMainTabsExperiment ? Sizes.EXTRA_SMALL_10 : Sizes.SMALL;
+  obj.disableColor = false !== locked;
+  return jsx(native.Icon, { source: _modDef10334, size: null, disableColor: null });
 };

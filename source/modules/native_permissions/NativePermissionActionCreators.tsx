@@ -1,20 +1,18 @@
-// Module ID: 5145
-// Function ID: 5146
-// Name: setPermission
+// Module ID: 5159
+// Function ID: 5160
+// Name: NativePermissionActionCreators
 // Dependencies: [573, 2]
 
-// Module 5145 (setPermission)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 5159 (NativePermissionActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
 const prototype = function NativePermissionActionCreators() {
   return Object.create(new.target.prototype);
 }.prototype;
-prototype["setPermission"] = function setPermission(closure_0, DENIED) {
-  let obj = dispatcherDefault;
-  obj = { type: "SET_NATIVE_PERMISSION", permissionType: closure_0, state: DENIED };
-  obj.dispatch(obj);
+prototype["setPermission"] = function setPermission(permissionType, state) {
+  DispatcherDefault.dispatch({ type: "SET_NATIVE_PERMISSION", permissionType, state });
 };
-const result = set.fileFinishedImporting("modules/native_permissions/NativePermissionActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/native_permissions/NativePermissionActionCreators.tsx");
 
 export default prototype;

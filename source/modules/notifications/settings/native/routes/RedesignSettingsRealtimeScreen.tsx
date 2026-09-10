@@ -1,24 +1,26 @@
-// Module ID: 15922
-// Function ID: 15923
-// Dependencies: [19, 21, 11473, 15921, 14692, 2]
+// Module ID: 15952
+// Function ID: 15953
+// Name: RedesignSettingsRealtimeScreen
+// Dependencies: [19, 21, 11500, 15951, 14718, 2]
 
-// Module 15922
-import _modDef14692 from "module_14692" /* 14692 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 15952 (RedesignSettingsRealtimeScreen)
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import SettingLayoutDefault from "SettingLayout" /* 14718 */;
+import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 15951 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
-const memoResult = importAllResult.memo(() => {
-  const node = importAllResult.useMemo(() => {
-    let obj = callback(11473);
-    obj = { sections: null };
-    const items = [callback(15921).buildRealtimeSettingsSection()];
-    obj[0] = items;
-    return obj.createList(obj);
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notifications/settings/native/routes/RedesignSettingsRealtimeScreen.tsx");
+
+export default noop.memo(() => {
+  const node = noop.useMemo(() => {
+    const obj2 = { sections: null };
+    const obj = SettingBuilders;
+    const items = [MobileNotifSettingsRouteBuilders.buildRealtimeSettingsSection()];
+    obj2.sections = items;
+    return obj.createList(obj2);
   }, []);
-  return jsx(_modDef14692, { node });
+  return jsx(SettingLayoutDefault, { node });
 });
-const result = require("set").fileFinishedImporting("modules/notifications/settings/native/routes/RedesignSettingsRealtimeScreen.tsx");
-
-export default memoResult;

@@ -1,203 +1,307 @@
-// Module ID: 8793
-// Function ID: 8794
-// Name: parseSkuIds
-// Dependencies: [32, 1386, 2]
+// Module ID: 8821
+// Function ID: 8822
+// Name: StorefrontPromotionRecord
+// Dependencies: [32, 1386, 8822, 2]
+// Exports: getCollectiblesCollectAndClaim, getCollectiblesTargetedOffer
 
-// Module 8793 (parseSkuIds)
-import toJSDefault from "toJS" /* 1386 */;
-import closure_0 from "_slicedToArray" /* 32 */;
+// Module 8821 (StorefrontPromotionRecord)
+import StorefrontCollectiblesTypes from "StorefrontCollectiblesTypes" /* 8822 */;
+import _slicedToArray from "module_32" /* 32 */;
+import Record from "Record" /* 1386 */;
 
+require = fn;
 function parseSkuIds(sku_ids) {
   if (null == sku_ids) {
     return null;
   } else {
-    let obj = {};
+    const obj = {};
     const _Object = Object;
     const entries = Object.entries(sku_ids);
     const tmp4 = entries[Symbol.iterator]();
     while (tmp4 !== undefined) {
-      let tmp8 = callback;
-      let tmp9 = callback(tmp6, 2);
-      obj = { priceTiers: null };
-      obj[0] = tmp9[1].price_tiers;
-      obj[tmp9[0]] = obj;
+      let tmp9 = _slicedToArray(tmp6, 2);
+      let obj2 = { priceTiers: tmp9[1].price_tiers };
+      obj[tmp9[0]] = obj2;
       continue;
     }
     return obj;
   }
 }
-toJSDefault;
-let prototype;
-prototype = function StorefrontPromotionRecord(arg0) {
+const prototype = function StorefrontPromotionRecord(arg0) {
   const tmp = new prototype(new.target, new.target);
-  // ThrowIfThisInitialized (0x7c)
   ({ id: tmp.id, applicationId: tmp.applicationId, name: tmp.name, displayName: tmp.displayName, rewardType: tmp.rewardType, rewardStatus: tmp.rewardStatus, rewardConfig: tmp.rewardConfig, skuIds: tmp.skuIds, appliesToAllSkus: tmp.appliesToAllSkus, includeBundles: tmp.includeBundles, startsAt: tmp.startsAt, endsAt: tmp.endsAt, tenantMetadata: tmp.tenantMetadata } = arg0);
   return tmp;
 }.prototype;
 class prototype extends tmp2 {
 }
 prototype["createFromServer"] = function createFromServer(display_name) {
-  ({ id, application_id, name } = display_name);
+  ({ id, name } = display_name);
+  let tmp14 = null;
   if (name == null) {
     name = null;
   }
   display_name = display_name.display_name;
-  if (display_name == null) {
+  if (display_name == tmp14) {
     display_name = null;
   }
-  ({ reward_type, reward_status } = display_name);
-  if (reward_status == null) {
+  ({ reward_status, reward_type } = display_name);
+  if (reward_status == tmp14) {
     reward_status = null;
   }
-  let tmp10 = null;
-  if (null != display_name.reward_config) {
+  let tmp16 = null;
+  if (tmp14 != display_name.reward_config) {
     const reward_config = display_name.reward_config;
-    let tmp11 = null;
-    if (null != reward_config) {
-      let tmp12 = null;
-      if (null != reward_config.discount) {
-        let obj = { id: null, type: null, amount: null, fiatEnabled: null, orbsEnabled: null };
-        obj[0] = reward_config.discount.id;
-        obj[1] = reward_config.discount.type;
-        obj[2] = reward_config.discount.amount;
-        obj[3] = reward_config.discount.fiat_enabled;
-        obj[4] = reward_config.discount.orbs_enabled;
-        tmp12 = obj;
+    let tmp17 = null;
+    if (tmp14 != reward_config) {
+      let tmp18 = null;
+      if (tmp14 != reward_config.discount) {
+        const obj = { id: reward_config.discount.id, type: reward_config.discount.type, amount: reward_config.discount.amount, fiatEnabled: reward_config.discount.fiat_enabled, orbsEnabled: reward_config.discount.orbs_enabled };
+        tmp18 = obj;
       }
-      obj = { discount: null };
-      obj[0] = tmp12;
-      tmp11 = obj;
+      const obj2 = { discount: tmp18 };
+      tmp17 = obj2;
     }
-    tmp10 = tmp11;
+    tmp16 = tmp17;
   }
   let date = null;
   ({ applies_to_all_skus, include_bundles } = display_name);
-  if (null != display_name.starts_at) {
+  if (tmp14 != display_name.starts_at) {
     let _Date = Date;
     date = new Date(display_name.starts_at);
   }
   let date1 = null;
-  if (null != display_name.ends_at) {
+  if (tmp14 != display_name.ends_at) {
     _Date = new.target;
     const _Date2 = Date;
     date1 = new Date(display_name.ends_at);
   }
-  let tmp21 = null;
-  if (null != display_name.tenant_metadata) {
+  let tmp28 = null;
+  if (tmp14 != display_name.tenant_metadata) {
     const tenant_metadata = display_name.tenant_metadata;
-    if (null == tenant_metadata.collectibles) {
-      obj = { collectibles: null };
-      obj[0] = _Date;
-      tmp21 = obj;
+    if (tmp14 == tenant_metadata.collectibles) {
+      const obj3 = { collectibles: _Date };
+      tmp28 = obj3;
     } else {
-      const collectibles = tenant_metadata.collectibles;
-      const reward = collectibles.reward;
-      let nagbar;
-      if (reward != null) {
-        const storefront = reward.storefront;
-        if (storefront != null) {
-          nagbar = storefront.nagbar;
+      let collectibles = tenant_metadata.collectibles;
+      let obj32 = require;
+      let tmp29 = dependencyMap;
+      if (collectibles.type !== StorefrontCollectiblesTypes.StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM) {
+        if (collectibles.type === obj32(8822).StorefrontPromotionCollectiblesType.TARGETED_OFFER) {
+          const reward = collectibles.reward;
+          let nagbar;
+          if (reward != tmp14) {
+            const storefront = reward.storefront;
+            if (storefront != tmp14) {
+              nagbar = storefront.nagbar;
+            }
+          }
+          let offer_notice;
+          if (reward != tmp14) {
+            const checkout = reward.checkout;
+            if (checkout != tmp14) {
+              offer_notice = checkout.offer_notice;
+            }
+          }
+          let override_title;
+          if (reward != tmp14) {
+            const collected = reward.collected;
+            if (collected != tmp14) {
+              override_title = collected.override_title;
+            }
+          }
+          let tmp34;
+          if (tmp14 != override_title) {
+            if ("" !== override_title) {
+              tmp34 = override_title;
+            }
+          }
+          let flavor;
+          if (reward != tmp14) {
+            flavor = reward.flavor;
+          }
+          if (tmp14 == nagbar) {
+            if (tmp14 == offer_notice) {
+              const obj5 = { type: obj32(8822).StorefrontPromotionCollectiblesType.TARGETED_OFFER };
+              let obj6 = obj5;
+            }
+          }
+          obj6 = { type: obj32(8822).StorefrontPromotionCollectiblesType.TARGETED_OFFER, reward: null };
+          let tmp36;
+          if (tmp14 != nagbar) {
+            const header_text = nagbar.header_text;
+            const obj7 = { headerText: header_text, cta: null, helpCenterId: null, icon: null };
+            let tmp37;
+            if (tmp14 != nagbar.cta) {
+              const text = nagbar.cta.text;
+              const obj8 = { text };
+              tmp37 = obj8;
+            }
+            obj7.cta = tmp37;
+            const help_center_id = nagbar.help_center_id;
+            obj7.helpCenterId = help_center_id;
+            const icon = nagbar.icon;
+            const obj9 = { nagbar: null };
+            obj7.icon = icon;
+            obj9.nagbar = obj7;
+            tmp36 = obj9;
+          }
+          const obj10 = { storefront: tmp36, checkout: null, collected: null, flavor: null };
+          let tmp38;
+          if (tmp14 != offer_notice) {
+            const icon2 = offer_notice.icon;
+            const obj11 = { icon: icon2, text: null };
+            const text2 = offer_notice.text;
+            const obj12 = { offerNotice: null };
+            obj11.text = text2;
+            obj12.offerNotice = obj11;
+            tmp38 = obj12;
+          }
+          obj10.checkout = tmp38;
+          let tmp39;
+          if (tmp14 != tmp34) {
+            const obj13 = { overrideTitle: tmp34 };
+            tmp39 = obj13;
+          }
+          obj10.collected = tmp39;
+          obj10.flavor = flavor;
+          obj6.reward = obj10;
         }
       }
-      const reward2 = collectibles.reward;
-      let offer_notice;
-      if (reward2 != null) {
-        const checkout = reward2.checkout;
-        if (checkout != null) {
-          offer_notice = checkout.offer_notice;
-        }
+      const obj14 = { type: obj32(8822).StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM, subtype: obj32(8822).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER, collectionId: collectibles.collection_id, shopHome: null, indexPage: null, shared: null };
+      const obj15 = { title: collectibles.shop_home.title, description: collectibles.shop_home.description, rewardStates: null, style: null };
+      const reward_states = collectibles.shop_home.reward_states;
+      const obj16 = { inProgress: null, earned: null, consumed: null };
+      const obj17 = { progressSteps: null };
+      const progress_steps = reward_states.in_progress.progress_steps;
+      obj17.progressSteps = progress_steps.map((heroAssetPath) => ({ heroAssetPath: heroAssetPath.hero_asset_path }));
+      obj16.inProgress = obj17;
+      const obj18 = { heroAssetPath: reward_states.earned.hero_asset_path };
+      obj16.earned = obj18;
+      const obj19 = { heroAssetPath: reward_states.consumed.hero_asset_path };
+      obj16.consumed = obj19;
+      obj15.rewardStates = obj16;
+      let tmp41;
+      if (tmp14 != collectibles.shop_home.style) {
+        const obj20 = { contentTheme: collectibles.shop_home.style.content_theme };
+        tmp41 = obj20;
       }
-      const reward3 = collectibles.reward;
-      let override_title;
-      if (reward3 != null) {
-        const collected = reward3.collected;
-        if (collected != null) {
-          override_title = collected.override_title;
-        }
+      obj15.style = tmp41;
+      obj14.shopHome = obj15;
+      const obj21 = { description: collectibles.index_page.description, rewardStates: null, style: null };
+      const reward_states2 = collectibles.index_page.reward_states;
+      const obj22 = { inProgress: null, earned: null, consumed: null };
+      const obj23 = { progressSteps: null };
+      const progress_steps1 = reward_states2.in_progress.progress_steps;
+      obj23.progressSteps = progress_steps1.map((heroAssetPath) => ({ heroAssetPath: heroAssetPath.hero_asset_path }));
+      obj22.inProgress = obj23;
+      const obj24 = { heroAssetPath: reward_states2.earned.hero_asset_path };
+      obj22.earned = obj24;
+      const obj25 = { heroAssetPath: reward_states2.consumed.hero_asset_path };
+      obj22.consumed = obj25;
+      obj21.rewardStates = obj22;
+      let tmp42;
+      if (tmp14 != collectibles.index_page.style) {
+        const obj26 = { contentTheme: collectibles.index_page.style.content_theme };
+        tmp42 = obj26;
       }
-      let tmp25;
-      if (null != override_title) {
-        if ("" !== override_title) {
-          tmp25 = override_title;
-        }
+      obj21.style = tmp42;
+      obj14.indexPage = obj21;
+      ({ progress_indicator, navigation, help_center } = collectibles.shared);
+      const obj28 = { title: null, description: null, assets: null, style: null };
+      ({ title: obj27.title, description: obj27.description } = progress_indicator);
+      const obj29 = { rewardPreview: null };
+      const obj30 = { hiddenAssetPath: progress_indicator.assets.reward_preview.hidden_asset_path, revealedAssetPath: progress_indicator.assets.reward_preview.revealed_asset_path };
+      obj29.rewardPreview = obj30;
+      obj28.assets = obj29;
+      obj32 = undefined;
+      if (tmp14 != progress_indicator.style) {
+        const obj31 = { contentTheme: progress_indicator.style.content_theme, backgroundColor: progress_indicator.style.background_color, progressColor: progress_indicator.style.progress_color };
+        obj32 = obj31;
       }
-      const reward4 = collectibles.reward;
-      let flavor;
-      if (reward4 != null) {
-        flavor = reward4.flavor;
+      collectibles = { progressIndicator: null, navigation: null, helpCenter: null };
+      obj28.style = obj32;
+      collectibles.progressIndicator = obj28;
+      let tab;
+      if (navigation != tmp14) {
+        tab = navigation.tab;
       }
-      if (null == nagbar) {
-        if (null == offer_notice) {
-          obj1 = {};
-        }
+      let tmp44;
+      if (tmp14 != tab) {
+        obj32 = { tab: null };
+        const obj62 = { title: navigation.tab.title, icon: navigation.tab.icon };
+        obj32.tab = obj62;
+        tmp44 = obj32;
       }
-      let tmp27;
-      if (null != nagbar) {
-        const header_text = nagbar.header_text;
-        const obj2 = { headerText: null, cta: null, helpCenterId: null, icon: null };
-        obj2[0] = header_text;
-        let tmp28;
-        if (null != nagbar.cta) {
-          const text = nagbar.cta.text;
-          const obj3 = { text: null };
-          obj3[0] = text;
-          tmp28 = obj3;
-        }
-        obj2[1] = tmp28;
-        const help_center_id = nagbar.help_center_id;
-        obj2[2] = help_center_id;
-        const icon = nagbar.icon;
-        const obj4 = { nagbar: null };
-        obj2[3] = icon;
-        obj4[0] = obj2;
-        tmp27 = obj4;
+      collectibles.navigation = tmp44;
+      tmp14 = tmp14 != help_center;
+      tmp29 = undefined;
+      if (tmp14) {
+        obj32 = { text: null, id: null };
+        ({ text: obj4.text, id: obj4.id } = help_center);
+        tmp29 = obj32;
       }
-      const obj5 = { storefront: null, checkout: null, collected: null, flavor: null };
-      obj5[0] = tmp27;
-      let tmp29;
-      if (null != offer_notice) {
-        const icon2 = offer_notice.icon;
-        const obj6 = { icon: null, text: null };
-        obj6[0] = icon2;
-        const text2 = offer_notice.text;
-        const obj7 = { offerNotice: null };
-        obj6[1] = text2;
-        obj7[0] = obj6;
-        tmp29 = obj7;
-      }
-      obj5[1] = tmp29;
-      let tmp30;
-      if (null != tmp25) {
-        const obj8 = { overrideTitle: null };
-        obj8[0] = tmp25;
-        tmp30 = obj8;
-      }
-      obj5[2] = tmp30;
-      obj1 = { reward: null };
-      obj5[3] = flavor;
-      obj1[0] = obj5;
+      collectibles.helpCenter = tmp29;
+      obj14.shared = collectibles;
     }
   }
-  if (typeof prototype !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof prototype === "function") {
+    const tmp49 = new prototype(tmp22, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp, _Date2, _Date, tmp13, new.target, id);
+    tmp49.id = id;
+    tmp49.applicationId = display_name.application_id;
+    tmp49.name = name;
+    tmp49.displayName = display_name;
+    tmp49.rewardType = reward_type;
+    tmp49.rewardStatus = reward_status;
+    tmp49.rewardConfig = tmp16;
+    tmp49.skuIds = tmp19;
+    tmp49.appliesToAllSkus = applies_to_all_skus;
+    tmp49.includeBundles = include_bundles;
+    tmp49.startsAt = date;
+    tmp49.endsAt = date1;
+    tmp49.tenantMetadata = tmp28;
+    return tmp49;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp32 = new prototype(str, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp, _Date2, _Date, prototype, new.target, id, application_id, name, display_name, reward_type, reward_status);
-  // ThrowIfThisInitialized (0x7c)
-  tmp32.id = id;
-  tmp32.applicationId = application_id;
-  tmp32.name = name;
-  tmp32.displayName = display_name;
-  tmp32.rewardType = reward_type;
-  tmp32.rewardStatus = reward_status;
-  tmp32.rewardConfig = tmp10;
-  tmp32.skuIds = parseSkuIds(display_name.sku_ids);
-  tmp32.appliesToAllSkus = applies_to_all_skus;
-  tmp32.includeBundles = include_bundles;
-  tmp32.startsAt = date;
-  tmp32.endsAt = date1;
-  tmp32.tenantMetadata = tmp21;
-  return tmp32;
+  tmp19 = parseSkuIds(display_name.sku_ids);
 };
-const result = require("set").fileFinishedImporting("modules/storefront/records/StorefrontPromotionRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/storefront/records/StorefrontPromotionRecord.tsx");
 
 export default prototype;
+export const getCollectiblesTargetedOffer = function getCollectiblesTargetedOffer(tenantMetadata) {
+  let collectibles;
+  if (tenantMetadata != null) {
+    tenantMetadata = tenantMetadata.tenantMetadata;
+    if (tenantMetadata != null) {
+      collectibles = tenantMetadata.collectibles;
+    }
+  }
+  let type;
+  if (collectibles != null) {
+    type = collectibles.type;
+  }
+  let tmp3;
+  if (type === StorefrontCollectiblesTypes.StorefrontPromotionCollectiblesType.TARGETED_OFFER) {
+    tmp3 = collectibles;
+  }
+  return tmp3;
+};
+export const getCollectiblesCollectAndClaim = function getCollectiblesCollectAndClaim(tenantMetadata) {
+  let collectibles;
+  if (tenantMetadata != null) {
+    tenantMetadata = tenantMetadata.tenantMetadata;
+    if (tenantMetadata != null) {
+      collectibles = tenantMetadata.collectibles;
+    }
+  }
+  let type;
+  if (collectibles != null) {
+    type = collectibles.type;
+  }
+  let tmp3;
+  if (type === StorefrontCollectiblesTypes.StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM) {
+    tmp3 = collectibles;
+  }
+  return tmp3;
+};

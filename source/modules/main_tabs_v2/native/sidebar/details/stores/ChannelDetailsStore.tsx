@@ -1,75 +1,77 @@
-// Module ID: 7876
-// Function ID: 7877
-// Name: useChannelDetailsStore
+// Module ID: 7890
+// Function ID: 7891
+// Name: ChannelDetailsStore
 // Dependencies: [560, 1249, 2]
 // Exports: deleteChannelDetailsSearchState, deleteChannelStates, getIsChannelDetailsSearchActive, setIsChannelDetailsSearchActive, useChannelDetailsSearchActiveSource, useIsChannelDetailsSearchActive
 
-// Module 7876 (useChannelDetailsStore)
-import set from "set" /* 2 */;
-import batchUpdates from "batchUpdates" /* 1249 */;
-import keys from "keys" /* 560 */;
+// Module 7890 (ChannelDetailsStore)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import module_560 from "module_560" /* 560 */;
+import size from "module_2" /* 2 */;
 
 let closure_2 = { isSearchActive: false, searchActiveSource: "initial" };
-let obj = keys.create(() => {
-  obj = { states: new Map() };
+const useChannelDetailsStore = module_560.create(() => {
+  const obj = { states: new Map() };
   return obj;
 });
-let result = set.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/stores/ChannelDetailsStore.tsx");
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/stores/ChannelDetailsStore.tsx");
 
-export const useChannelDetailsStore = obj;
+export { useChannelDetailsStore };
 export const deleteChannelStates = function deleteChannelStates() {
-  batchUpdates.batchUpdates(() => {
-    obj = { states: new Map() };
+  ReactBatchUpdates.batchUpdates(() => {
+    const obj = { states: new Map() };
     return state.setState(obj);
   });
 };
 export const useIsChannelDetailsSearchActive = function useIsChannelDetailsSearchActive(arg0) {
   closure_0 = arg0;
-  const f82990 = (isSearchActive) => isSearchActive.isSearchActive;
+  const f83121 = (isSearchActive) => isSearchActive.isSearchActive;
   return obj((states) => {
     states = states.states;
-    let value = states.get(closure_0);
+    value = states.get(closure_0);
     if (value == null) {
-      obj = {};
-      const merged = Object.assign(closure_1_2);
+      const obj = {};
+      const merged = Object.assign(closure_2);
       value = obj;
     }
-    return f82991(value);
+    return f83122(value);
   });
 };
 export const useChannelDetailsSearchActiveSource = function useChannelDetailsSearchActiveSource(arg0) {
   closure_0 = arg0;
-  const f82991 = (searchActiveSource) => searchActiveSource.searchActiveSource;
+  const f83122 = (searchActiveSource) => searchActiveSource.searchActiveSource;
   return obj((states) => {
     states = states.states;
-    let value = states.get(closure_0);
+    value = states.get(closure_0);
     if (value == null) {
-      obj = {};
-      const merged = Object.assign(closure_1_2);
+      const obj = {};
+      const merged = Object.assign(closure_2);
       value = obj;
     }
-    return f82991(value);
+    return f83122(value);
   });
 };
 export const setIsChannelDetailsSearchActive = function setIsChannelDetailsSearchActive(arg0, isSearchActive, searchActiveSource) {
-  obj = { isSearchActive, searchActiveSource };
+  let obj = { isSearchActive, searchActiveSource };
   const states = obj.getState().states;
-  let value = states.get(arg0);
+  value = states.get(arg0);
   if (value == null) {
-    obj = {};
+    const obj2 = {};
     const merged = Object.assign(closure_2);
-    value = obj;
+    value = obj2;
   }
-  obj = {};
   const merged1 = Object.assign(value);
   const merged2 = Object.assign(obj);
   const map = new Map(states);
-  const result = map.set(arg0, obj);
-  map(1249).batchUpdates(() => closure_1_3.setState({ states: map }));
+  const result = map.set(arg0, {});
+  map(1249).batchUpdates(() => {
+    const obj = { states: map };
+    return obj.setState(obj);
+  });
 };
 export const getIsChannelDetailsSearchActive = function getIsChannelDetailsSearchActive(arg0) {
   const states = obj.getState().states;
-  let value = states.get(arg0);
+  value = states.get(arg0);
   if (value == null) {
     obj = {};
     const merged = Object.assign(closure_2);
@@ -82,5 +84,8 @@ export const deleteChannelDetailsSearchState = function deleteChannelDetailsSear
   states.delete(arg0);
   const map = new Map(states);
   obj = map(1249);
-  obj.batchUpdates(() => closure_1_3.setState({ states: map }));
+  obj.batchUpdates(() => {
+    const obj = { states: map };
+    return obj.setState(obj);
+  });
 };

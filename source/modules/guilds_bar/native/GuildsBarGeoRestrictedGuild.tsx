@@ -1,82 +1,73 @@
-// Module ID: 16349
-// Function ID: 16350
-// Name: items
-// Dependencies: [19, 16288, 21, 4560, 576, 16300, 16297, 1396, 5584, 4904, 1114, 9068, 16350, 16319, 5587, 2]
+// Module ID: 16380
+// Function ID: 16381
+// Name: GuildsBarGeoRestrictedGuild
+// Dependencies: [19, 16318, 21, 4574, 576, 16331, 16327, 1396, 5598, 4918, 1114, 9095, 16381, 16350, 5601, 2]
 
-// Module 16349 (items)
-import ThemesDefault from "Themes" /* 576 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
-import UnreadIndicatorDefault from "UnreadIndicator" /* 16297 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 16300 */;
-import GuildRowWrapperDefault from "GuildRowWrapper" /* 16319 */;
-import _modDef16350 from "module_16350" /* 16350 */;
-import importAllResult from "noop" /* 19 */;
-import { GUILD_ITEM_BADGE_SIZE } from "GUILD_ITEM_SIZE" /* 16288 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16380 (GuildsBarGeoRestrictedGuild)
+import nativeDefault from "native" /* 576 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
+import GuildIcon from "GuildIcon" /* 5598 */;
+import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 16327 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 16331 */;
+import HomeDrawerGuildRowDefault from "HomeDrawerGuildRow" /* 16350 */;
+import GuildsBarGeoRestrictedBadgeDefault from "GuildsBarGeoRestrictedBadge" /* 16381 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
+require = fn;
+const GUILD_ITEM_BADGE_SIZE = fn(16318).GUILD_ITEM_BADGE_SIZE;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
 let obj = { guildIcon: null, geoRestrictedBadge: null };
-obj = { width: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
-obj[0] = obj;
-obj[1] = { borderColor: "transparent", width: GUILD_ITEM_BADGE_SIZE, height: GUILD_ITEM_BADGE_SIZE, bottom: 4, right: 12 };
-let closure_5 = createCacheKey.createStyles(obj);
+let size = { width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
+obj.guildIcon = size;
+obj.geoRestrictedBadge = { borderColor: "transparent", width: GUILD_ITEM_BADGE_SIZE, height: GUILD_ITEM_BADGE_SIZE, bottom: 4, right: 12 };
+let closure_5 = createStyles.createStyles(obj);
 let items = [computeGuildsBarCutoutDefault({ position: "bottom-right" })];
-const memoResult = importAllResult.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
+size = fn(2);
+const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarGeoRestrictedGuild.tsx");
+
+export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
   restrictedGuild = restrictedGuild.restrictedGuild;
-  const tmp = callback();
-  let obj = restrictedGuild(16297);
+  const tmp = closure_5();
   let animatableSourceWithFallback = null;
+  let obj = restrictedGuild(16327);
+  const tmp2 = restrictedGuild;
   if (null != restrictedGuild.icon) {
-    obj1 = getAvatarURLDefault;
-    animatableSourceWithFallback = obj1.getAnimatableSourceWithFallback(false, (canAnimate) => {
-      let obj = closure_1_1(closure_1_2[7]);
-      obj = { id: restrictedGuild.id, size: restrictedGuild(closure_1_2[8]).ImageSizes[restrictedGuild(undefined, closure_1_2[8]).GuildIconSizes.LARGE], icon: restrictedGuild.icon, canAnimate };
-      return obj.getGuildIconSource(obj);
+    animatableSourceWithFallback = AvatarUtilsDefault.getAnimatableSourceWithFallback(false, (canAnimate) => {
+      const obj = AvatarUtilsDefault;
+      return obj.getGuildIconSource({ id: restrictedGuild.id, size: GuildIcon.ImageSizes[GuildIcon.GuildIconSizes.LARGE], icon: restrictedGuild.icon, canAnimate });
     });
   }
   items = [, ];
   ({ id: arr[0], name: arr[1] } = restrictedGuild);
-  const memo = importAllResult.useMemo(() => ({
+  const memo = noop.useMemo(() => ({
     onPress() {
-      let obj = closure_1_1(closure_1_2[9]);
-      obj = { title: null, body: null, cancelText: null, onCancel: null };
-      const intl = closure_1_0(closure_1_2[10]).intl;
-      obj[0] = intl.string(closure_1_0(closure_1_2[10]).t.aCAiGl);
-      const intl2 = closure_1_0(closure_1_2[10]).intl;
-      obj = { serverName: name.name };
-      obj[1] = intl2.format(closure_1_0(closure_1_2[10]).t["4cJV9S"], obj);
-      const intl3 = closure_1_0(closure_1_2[10]).intl;
-      obj[2] = intl3.string(closure_1_0(closure_1_2[10]).t.J2TBi3);
-      obj[3] = function onCancel() {
-        closure_1_1(closure_1_2[11]).leaveGuild(id.id);
+      const obj2 = { title: null, body: null, cancelText: null, onCancel: null };
+      const intl = restrictedGuild(1114).intl;
+      obj2.title = intl.string(restrictedGuild(1114).t.aCAiGl);
+      const intl2 = restrictedGuild(1114).intl;
+      obj2.body = intl2.format(restrictedGuild(1114).t["4cJV9S"], { serverName: name.name });
+      const intl3 = restrictedGuild(1114).intl;
+      obj2.cancelText = intl3.string(restrictedGuild(1114).t.J2TBi3);
+      obj2.onCancel = function onCancel() {
+        closure_2_1(dependencyMap[11]).leaveGuild(id.id);
       };
-      obj.show(obj);
+      AlertActionCreatorsDefault.show(obj2);
     }
   }), items);
-  obj = { selected: false, unread: false, circle: false, styles: obj.useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true }), label: restrictedGuild.name, isDragTarget: false, config: memo, cutouts: items, overState: "a", externalChildren: -0.038, expandedChildren: 0.029, children: -3.91 };
-  const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true });
-  const tmp2 = restrictedGuild;
-  obj = { style: tmp.geoRestrictedBadge };
-  obj[9] = jsx(_modDef16350, { style: tmp.geoRestrictedBadge });
-  obj1 = { guildId: restrictedGuild.id };
-  obj[10] = jsx(GuildRowWrapperDefault, { guildId: restrictedGuild.id });
+  const obj3 = { selected: false, unread: false, circle: false, styles: restrictedGuild(16327).useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true }), label: restrictedGuild.name, isDragTarget: false, config: memo, cutouts: items, overState: "a", externalChildren: 0.658, expandedChildren: "2026-02-pubsub-bulk-ban-users", children: "user" };
+  const guildsBarAnimatedWrapperStyles = restrictedGuild(16327).useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true });
+  obj3.externalChildren = jsx(GuildsBarGeoRestrictedBadgeDefault, { style: tmp.geoRestrictedBadge });
+  obj3.expandedChildren = jsx(HomeDrawerGuildRowDefault, { guildId: restrictedGuild.id });
   if (null != animatableSourceWithFallback) {
-    const obj2 = { source: null, style: null, fadeDuration: 0 };
-    obj2[0] = animatableSourceWithFallback;
-    obj2[1] = tmp.guildIcon;
-    let tmp8Result = tmp8(tmp9(5587), obj2);
+    const obj6 = { source: animatableSourceWithFallback, style: tmp.guildIcon, fadeDuration: 0 };
+    let tmp8Result = tmp8(tmp9(5601), obj6);
   } else {
-    const obj3 = { value: null, selected: false, animate: false, size: null };
-    obj3[0] = restrictedGuild.name;
-    obj3[3] = tmp2(5584).GuildIconSizes.LARGE;
-    tmp8Result = tmp8(tmp9(5584), obj3);
-    const tmp9Result = tmp9(5584);
+    const obj7 = { value: restrictedGuild.name, selected: false, animate: false, size: tmp2(5598).GuildIconSizes.LARGE };
+    tmp8Result = tmp8(tmp9(5598), obj7);
+    const tmp9Result = tmp9(5598);
   }
-  obj[11] = tmp8Result;
-  return jsx(UnreadIndicatorDefault, { style: tmp.geoRestrictedBadge });
+  obj3.children = tmp8Result;
+  return jsx(GuildsBarAnimatedItemWrapperDefault, { selected: false, unread: false, circle: false, styles: restrictedGuild(16327).useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true }), label: restrictedGuild.name, isDragTarget: false, config: memo, cutouts: items, overState: "a", externalChildren: 0.658, expandedChildren: "2026-02-pubsub-bulk-ban-users", children: "user" });
 });
-const result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarGeoRestrictedGuild.tsx");
-
-export default memoResult;

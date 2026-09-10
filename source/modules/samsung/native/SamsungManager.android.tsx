@@ -1,19 +1,19 @@
-// Module ID: 9244
-// Function ID: 9245
-// Name: get ActivityIndicator
+// Module ID: 9271
+// Function ID: 9272
+// Name: SamsungManager
 // Dependencies: [17, 2]
 
-// Module 9244 (get ActivityIndicator)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 9271 (SamsungManager)
+import _mod17 from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-const result = set.fileFinishedImporting("modules/samsung/native/SamsungManager.android.tsx");
+const NativeModules = _mod17.NativeModules;
+const result = size.fileFinishedImporting("modules/samsung/native/SamsungManager.android.tsx");
 
 export default {
-  checkIfOAuthRequest(closure_0) {
+  checkIfOAuthRequest(arg0) {
     const Samsung = NativeModules.Samsung;
-    return Samsung.checkIfOAuthRequest(closure_0);
+    return Samsung.checkIfOAuthRequest(arg0);
   },
   showConnectionDisclaimer() {
     const Samsung = NativeModules.Samsung;
@@ -23,8 +23,8 @@ export default {
     const Samsung = NativeModules.Samsung;
     return Samsung.getAccountUrlAndAuthCode();
   },
-  finishSamsungAuthorization(arg0, arg1, closure_5) {
+  finishSamsungAuthorization(arg0, arg1, arg2) {
     const Samsung = NativeModules.Samsung;
-    return Samsung.finishSamsungAuthorization(arg0, arg1, closure_5);
+    return Samsung.finishSamsungAuthorization(arg0, arg1, arg2);
   }
 };

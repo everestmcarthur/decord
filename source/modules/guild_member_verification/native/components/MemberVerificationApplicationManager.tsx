@@ -1,16 +1,19 @@
-// Module ID: 17381
-// Function ID: 17382
-// Name: prototype
-// Dependencies: [4381, 4382, 7118, 4905, 4384, 5527, 5541, 2]
+// Module ID: 17412
+// Function ID: 17413
+// Name: MemberVerificationApplicationManager
+// Dependencies: [4395, 4396, 7132, 4919, 4398, 5541, 5555, 2]
 
-// Module 17381 (prototype)
-import initializeDefault from "initialize" /* 7118 */;
-import closure_3 from "handleConnectionOpen" /* 4381 */;
-import closure_4 from "handleGatewayJoinRequestUpdate" /* 4382 */;
+// Module 17412 (MemberVerificationApplicationManager)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4398 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4919 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5541 */;
+import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 5555 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4396 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-let require = arg1;
-initializeDefault;
-let prototype = function MemberVerificationApplicationManager() {
+require = fn;
+const prototype = function MemberVerificationApplicationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   applyArgumentsResult.isShowingAlert = false;
@@ -26,29 +29,27 @@ let prototype = function MemberVerificationApplicationManager() {
     }
   };
   applyArgumentsResult.showApplicationApprovedAlert = function showApplicationApprovedAlert() {
-    const guildId = closure_1_3.getGuildId();
+    const guildId = SelectedGuildStore.getGuildId();
     if (null == guildId) {
-      if (guildId.isShowingAlert) {
-        closure_1_1(closure_1_2[3]).close();
+      if (applyArgumentsResult.isShowingAlert) {
+        actions_AlertActionCreatorsDefault.close();
         tmp11.isShowingAlert = false;
-        const obj3 = closure_1_1(closure_1_2[3]);
       }
     } else {
-      const request = closure_1_4.getRequest(guildId);
+      const request = UserGuildJoinRequestStore.getRequest(guildId);
       let applicationStatus;
       if (request != null) {
         applicationStatus = request.applicationStatus;
       }
-      if (applicationStatus === applyArgumentsResult(closure_1_2[4]).GuildJoinRequestApplicationStatuses.APPROVED) {
-        if (guildId.isShowingAlert) {
+      if (applicationStatus === MemberVerificationTypes.GuildJoinRequestApplicationStatuses.APPROVED) {
+        if (applyArgumentsResult.isShowingAlert) {
           let lastSeen;
           if (request != null) {
             lastSeen = request.lastSeen;
           }
           if (null !== lastSeen) {
-            closure_1_1(tmp4[3]).close();
+            actions_AlertActionCreatorsDefault.close();
             tmp17.isShowingAlert = false;
-            const obj2 = closure_1_1(tmp4[3]);
           }
         }
         let tmp6 = tmp17.isShowingAlert || null == request;
@@ -60,11 +61,11 @@ let prototype = function MemberVerificationApplicationManager() {
           tmp6 = null !== lastSeen1;
         }
         if (!tmp6) {
-          let result = applyArgumentsResult(tmp4[5]).openMemberVerificationSuccessAlert(guildId, () => {
-            const result = request(closure_1_2[6]).ackUserGuildJoinRequest(guildId, request.joinRequestId);
+          let result = MemberVerificationAlertActionCreators.openMemberVerificationSuccessAlert(guildId, () => {
+            const result = GuildJoinRequestActionCreatorsDefault.ackUserGuildJoinRequest(guildId, request.joinRequestId);
           });
           tmp17.isShowingAlert = true;
-          const tmp3Result = applyArgumentsResult(tmp4[5]);
+          const tmp3Result = MemberVerificationAlertActionCreators;
         }
       }
     }
@@ -73,7 +74,8 @@ let prototype = function MemberVerificationApplicationManager() {
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
-let result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationApplicationManager.tsx");
+const prototype1 = new prototype();
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationApplicationManager.tsx");
 
-export default prototype;
+export default prototype1;

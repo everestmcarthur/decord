@@ -1,58 +1,37 @@
-// Module ID: 15503
-// Function ID: 15504
-// Name: toggle
-// Dependencies: [7975, 1074, 4212, 11473, 1114, 1935, 1242, 2]
+// Module ID: 15533
+// Function ID: 15534
+// Name: VoiceActivityNotificationSetting
+// Dependencies: [7989, 1074, 4225, 11500, 1114, 1935, 1242, 2]
 
-// Module 15503 (toggle)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import AccountNotificationFlags from "AccountNotificationFlags" /* 4212 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15533 (VoiceActivityNotificationSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import NotificationConstants from "NotificationConstants" /* 4225 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-const AnalyticEvents = ME.AnalyticEvents;
-let closure_4 = AccountNotificationFlags.NotificationSettingsUpdateType;
-const toggle = createToggle.createToggle({
+const AnalyticEvents = Constants.AnalyticEvents;
+const constants = NotificationConstants.NotificationSettingsUpdateType;
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.wtk08S);
+    const intl = util.intl;
+    return intl.string(util.t.wtk08S);
   },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: explicitContentFromProto.EnableVoiceActivityNotifications.useSetting,
+  parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
+  useValue: UserSettings.EnableVoiceActivityNotifications.useSetting,
   useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.rngMNx);
+    const intl = util.intl;
+    return intl.string(util.t.rngMNx);
   },
   onValueChange(voice_activity_notifications) {
-    const EnableVoiceActivityNotifications = explicitContentFromProto.EnableVoiceActivityNotifications;
+    const EnableVoiceActivityNotifications = UserSettings.EnableVoiceActivityNotifications;
     EnableVoiceActivityNotifications.updateSetting(voice_activity_notifications);
-    let obj = expandEventPropertiesDefault;
-    obj = { update_type: constants.ACCOUNT, voice_activity_notifications };
-    obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
+    AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, { update_type: constants.ACCOUNT, voice_activity_notifications });
   }
 });
-let obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.wtk08S);
-  },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: explicitContentFromProto.EnableVoiceActivityNotifications.useSetting,
-  useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.rngMNx);
-  },
-  onValueChange(voice_activity_notifications) {
-    const EnableVoiceActivityNotifications = explicitContentFromProto.EnableVoiceActivityNotifications;
-    EnableVoiceActivityNotifications.updateSetting(voice_activity_notifications);
-    let obj = expandEventPropertiesDefault;
-    obj = { update_type: constants.ACCOUNT, voice_activity_notifications };
-    obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
-  }
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/VoiceActivityNotificationSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/VoiceActivityNotificationSetting.tsx");
 
 export default toggle;

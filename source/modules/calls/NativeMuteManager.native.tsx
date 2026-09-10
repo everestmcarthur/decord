@@ -1,70 +1,69 @@
-// Module ID: 13818
-// Function ID: 13819
-// Name: nativeMuteChanged
-// Dependencies: [9088, 1908, 3, 4447, 573, 9094, 1910, 2]
+// Module ID: 13841
+// Function ID: 13842
+// Name: NativeMuteManager
+// Dependencies: [9115, 1908, 3, 4461, 573, 9121, 1910, 2]
 
-// Module 13818 (nativeMuteChanged)
-import timestampDefault from "timestamp" /* 3 */;
-import trackDeviceChangedDefault from "trackDeviceChanged" /* 9094 */;
-import importDefaultResult from "handleAudioRouteChanged" /* 9088 */;
-import closure_4 from "_detectH265HardwareDecode" /* 1908 */;
-import importDefaultResult1 from "dispatcher" /* 573 */;
+// Module 13841 (NativeMuteManager)
+import LoggerDefault from "Logger" /* 3 */;
+import inject from "inject" /* 1910 */;
+import Timers from "Timers" /* 4461 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9121 */;
+import AudioRouteStore from "AudioRouteStore" /* 9115 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import Dispatcher from "Dispatcher" /* 573 */;
 
-let obj = arg1;
-let c3 = importDefaultResult;
-const obj2 = new timestampDefault("NativeMuteManager");
+require = fn;
+let obj2 = new LoggerDefault("NativeMuteManager");
 obj2.enableNativeLogger(true);
 class NativeMuteManager {
   constructor() {
-    obj = Object.create(new.target.prototype);
-    closure_0 = obj;
-    obj.ignoreForNativeUnmute = false;
-    obj.needToUnmuteNative = false;
-    obj.ignoreForAudioRouteChange = false;
-    timeout = new require("start").Timeout();
-    obj.audioRouteChangeIgnoreTimer = timeout;
-    obj.AUDIO_ROUTE_CHANGE_IGNORE_DURATION_MS = 300;
-    obj.handleAudioRouteChange = function handleAudioRouteChange() {
-      const audioRouteChangeIgnoreTimer = obj.audioRouteChangeIgnoreTimer;
+    obj1 = Object.create(new.target.prototype);
+    closure_0 = obj1;
+    obj1.ignoreForNativeUnmute = false;
+    obj1.needToUnmuteNative = false;
+    obj1.ignoreForAudioRouteChange = false;
+    timeout = new closure_0(closure_2[3]).Timeout();
+    obj1.audioRouteChangeIgnoreTimer = timeout;
+    obj1.AUDIO_ROUTE_CHANGE_IGNORE_DURATION_MS = 300;
+    obj1.handleAudioRouteChange = function handleAudioRouteChange() {
+      const audioRouteChangeIgnoreTimer = obj2.audioRouteChangeIgnoreTimer;
       if (audioRouteChangeIgnoreTimer.isStarted()) {
         const audioRouteChangeIgnoreTimer2 = tmp.audioRouteChangeIgnoreTimer;
         audioRouteChangeIgnoreTimer2.stop();
       }
-      obj.ignoreForAudioRouteChange = true;
+      obj2.ignoreForAudioRouteChange = true;
       const audioRouteChangeIgnoreTimer3 = tmp.audioRouteChangeIgnoreTimer;
-      audioRouteChangeIgnoreTimer3.start(obj.AUDIO_ROUTE_CHANGE_IGNORE_DURATION_MS, () => {
-        closure_0.ignoreForAudioRouteChange = false;
+      audioRouteChangeIgnoreTimer3.start(obj2.AUDIO_ROUTE_CHANGE_IGNORE_DURATION_MS, () => {
+        obj2.ignoreForAudioRouteChange = false;
       });
     };
-    addChangeListenerResult = closure_3.addChangeListener(obj.handleAudioRouteChange);
-    obj = require("dispatcher");
-    subscription = obj.subscribe("VOICE_CHANNEL_SELECT", obj.handleVoiceChannelSelect);
-    return obj;
+    addChangeListenerResult = closure_3.addChangeListener(obj1.handleAudioRouteChange);
+    obj = closure_1(closure_2[4]);
+    subscription = obj.subscribe("VOICE_CHANNEL_SELECT", obj1.handleVoiceChannelSelect);
+    return obj1;
   }
 }
 const prototype = NativeMuteManager.prototype;
 prototype["nativeMuteChanged"] = function nativeMuteChanged() {
-  if (!closure_4.hasActiveCallKitCall()) {
+  if (!MediaEngineStore.hasActiveCallKitCall()) {
     const self = this;
     if (this.ignoreForNativeUnmute) {
       self.ignoreForNativeUnmute = false;
     } else if (!self.ignoreForAudioRouteChange) {
       self.needToUnmuteNative = true;
       obj2.log("Native mute changed > toggling mute");
-      trackDeviceChangedDefault.toggleSelfMute({ playSoundEffect: false });
-      obj = trackDeviceChangedDefault;
+      AudioActionCreatorsDefault.toggleSelfMute({ playSoundEffect: false });
     }
   }
 };
 prototype["updateNativeMute"] = function updateNativeMute() {
-  if (!closure_4.hasActiveCallKitCall()) {
+  if (!MediaEngineStore.hasActiveCallKitCall()) {
     const self = this;
     if (this.needToUnmuteNative) {
       self.needToUnmuteNative = false;
       self.ignoreForNativeUnmute = true;
       obj2.log("Update native mute > unmuting native");
-      obj = obj(1910);
-      const voiceEngine = obj.getVoiceEngine();
+      const voiceEngine = inject.getVoiceEngine();
       const setNativeMuteState = voiceEngine.setNativeMuteState;
       if (setNativeMuteState != null) {
         setNativeMuteState(false);
@@ -75,35 +74,35 @@ prototype["updateNativeMute"] = function updateNativeMute() {
 prototype["handleVoiceChannelSelect"] = function handleVoiceChannelSelect(channelId) {
   if (null == channelId.channelId) {
     obj2.log("Leaving voice channel > unmuting native");
-    obj = obj(1910);
-    const voiceEngine = obj.getVoiceEngine();
+    const voiceEngine = inject.getVoiceEngine();
     const setNativeMuteState = voiceEngine.setNativeMuteState;
     if (setNativeMuteState != null) {
       setNativeMuteState(false);
     }
   }
 };
-obj = Object.create(NativeMuteManager.prototype);
+let obj = Object.create(NativeMuteManager.prototype);
+let closure_129_0 = obj;
 obj.ignoreForNativeUnmute = false;
 obj.needToUnmuteNative = false;
 obj.ignoreForAudioRouteChange = false;
-let timeout = new require("start").Timeout();
+let timeout = new fn(4461).Timeout();
 obj.audioRouteChangeIgnoreTimer = timeout;
 obj.AUDIO_ROUTE_CHANGE_IGNORE_DURATION_MS = 300;
 obj.handleAudioRouteChange = function handleAudioRouteChange() {
-  const audioRouteChangeIgnoreTimer = obj.audioRouteChangeIgnoreTimer;
+  const audioRouteChangeIgnoreTimer = obj2.audioRouteChangeIgnoreTimer;
   if (audioRouteChangeIgnoreTimer.isStarted()) {
     const audioRouteChangeIgnoreTimer2 = tmp.audioRouteChangeIgnoreTimer;
     audioRouteChangeIgnoreTimer2.stop();
   }
-  obj.ignoreForAudioRouteChange = true;
+  obj2.ignoreForAudioRouteChange = true;
   const audioRouteChangeIgnoreTimer3 = tmp.audioRouteChangeIgnoreTimer;
-  audioRouteChangeIgnoreTimer3.start(obj.AUDIO_ROUTE_CHANGE_IGNORE_DURATION_MS, () => {
-    closure_0.ignoreForAudioRouteChange = false;
+  audioRouteChangeIgnoreTimer3.start(obj2.AUDIO_ROUTE_CHANGE_IGNORE_DURATION_MS, () => {
+    obj2.ignoreForAudioRouteChange = false;
   });
 };
-importDefaultResult.addChangeListener(obj.handleAudioRouteChange);
-let subscription = importDefaultResult1.subscribe("VOICE_CHANNEL_SELECT", obj.handleVoiceChannelSelect);
+AudioRouteStore.addChangeListener(obj.handleAudioRouteChange);
+let subscription = Dispatcher.subscribe("VOICE_CHANNEL_SELECT", obj.handleVoiceChannelSelect);
 class NativeMuteManagerWrapper {
 }
 const prototype2 = NativeMuteManagerWrapper.prototype;
@@ -113,6 +112,7 @@ prototype2["nativeMuteChanged"] = function nativeMuteChanged(arg0) {
 prototype2["updateNativeMute"] = function updateNativeMute() {
   obj.updateNativeMute();
 };
-const result = require("set").fileFinishedImporting("modules/calls/NativeMuteManager.native.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/calls/NativeMuteManager.native.tsx");
 
 export default Object.create(NativeMuteManagerWrapper.prototype);

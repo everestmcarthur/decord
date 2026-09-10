@@ -1,75 +1,71 @@
-// Module ID: 16269
-// Function ID: 16270
-// Name: fetchMobileGameCommunities
-// Dependencies: [15623, 1074, 559, 1090, 573, 1272, 1471, 2]
+// Module ID: 16299
+// Function ID: 16300
+// Name: MobileGameCommunitiesActionCreators
+// Dependencies: [15653, 1074, 559, 1090, 573, 1272, 1471, 2]
 // Exports: dismissGuild, fetchMobileGameCommunities, fetchMobileGameCommunitiesIfStale
 
-// Module 16269 (fetchMobileGameCommunities)
-import setDefault from "set" /* 1090 */;
-import parseDefault from "parse" /* 1471 */;
-import closure_3 from "set" /* 15623 */;
-import { Endpoints } from "ME" /* 1074 */;
-import importDefaultResult from "fails" /* 559 */;
-import importDefaultResult1 from "dispatcher" /* 573 */;
+// Module 16299 (MobileGameCommunitiesActionCreators)
+import DurationsDefault from "Durations" /* 1090 */;
+import _modDef1471 from "module_1471" /* 1471 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15653 */;
+import Backoff from "Backoff" /* 559 */;
+import Dispatcher from "Dispatcher" /* 573 */;
 
-const require = arg1;
-importDefaultResult = new importDefaultResult(setDefault.Millis.SECOND, setDefault.Millis.MINUTE, true);
-let c5 = importDefaultResult;
-const subscription = importDefaultResult1.subscribe("LOGOUT", () => importDefaultResult.succeed());
-const result = require("set").fileFinishedImporting("modules/game_community_upsell/native/MobileGameCommunitiesActionCreators.tsx");
+const require = globalThis.__r;
 
-export const fetchMobileGameCommunities = function fetchMobileGameCommunities(gameIdsForDetectedGames, arg1, closure_5) {
-  const _require = gameIdsForDetectedGames;
+const require = fn;
+const Endpoints = fn(1074).Endpoints;
+const importDefaultResult2 = new Backoff(DurationsDefault.Millis.SECOND, DurationsDefault.Millis.MINUTE, true);
+const subscription = Dispatcher.subscribe("LOGOUT", () => importDefaultResult2.succeed());
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_community_upsell/native/MobileGameCommunitiesActionCreators.tsx");
+
+export const fetchMobileGameCommunities = function fetchMobileGameCommunities(gameIdsForDetectedGames, arg1, arg2) {
+  _require = gameIdsForDetectedGames;
   let items = arg1;
   if (arg1 === undefined) {
     items = [];
   }
-  let num = closure_5;
-  if (closure_5 === undefined) {
+  let num = arg2;
+  if (arg2 === undefined) {
     num = 20;
   }
-  const HTTP = _require(1272).HTTP;
-  let obj = { url: Endpoints.MOBILE_GAME_COMMUNITIES, query: null, oldFormErrors: true, rejectWithError: true };
-  obj = { game_ids: gameIdsForDetectedGames, limit: num, ignored_guild_ids: items };
-  obj[1] = parseDefault.stringify(obj);
-  const value = HTTP.get(obj);
+  const HTTP = require("HTTPUtils").HTTP;
+  const request = { url: Endpoints.MOBILE_GAME_COMMUNITIES, query: _modDef1471.stringify({ game_ids: gameIdsForDetectedGames, limit: num, ignored_guild_ids: items }), oldFormErrors: true, rejectWithError: true };
+  value = HTTP.get(request);
   return value.then((body) => {
-    closure_1_5.succeed();
-    let obj = closure_1_1(closure_1_2[4]);
-    obj = { type: "MOBILE_GAME_COMMUNITIES_FETCH_SUCCESS", guilds: body.body.guilds, gameIds: arr };
-    obj.dispatch(obj);
+    pending.succeed();
+    closure_2_1(dependencyMap[4]).dispatch({ type: "MOBILE_GAME_COMMUNITIES_FETCH_SUCCESS", guilds: body.body.guilds, gameIds });
   }, () => {
-    callback(table[4]).dispatch({ type: "MOBILE_GAME_COMMUNITIES_FETCH_FAILURE" });
+    closure_1_1(dependencyMap[4]).dispatch({ type: "MOBILE_GAME_COMMUNITIES_FETCH_FAILURE" });
     if (!pending.pending) {
       pending.fail(() => {
-        arr = Array.from(store.getLastFetchedGameIds());
-        let items = Array.from(store.getDismissedGuildIds());
+        let game_ids = Array.from(closure_3.getLastFetchedGameIds());
+        let items = Array.from(closure_3.getDismissedGuildIds());
         if (items === undefined) {
           items = [];
         }
-        let HTTP = arr(dependencyMap[5]).HTTP;
-        let obj = { url: constants.MOBILE_GAME_COMMUNITIES, query: callback(dependencyMap[6]).stringify({ game_ids: arr, limit: 20, ignored_guild_ids: items }), oldFormErrors: true, rejectWithError: true };
-        let value = HTTP.get(obj);
-        let obj2 = callback(dependencyMap[6]);
+        let HTTP = game_ids(dependencyMap[5]).HTTP;
+        let request = { url: constants.MOBILE_GAME_COMMUNITIES, query: closure_1(dependencyMap[6]).stringify({ game_ids, limit: 20, ignored_guild_ids: items }), oldFormErrors: true, rejectWithError: true };
+        let value = HTTP.get(request);
+        let obj2 = closure_1(dependencyMap[6]);
         value.then((body) => {
-          closure_1_5.succeed();
-          let obj = closure_1_1(closure_1_2[4]);
-          obj = { type: "MOBILE_GAME_COMMUNITIES_FETCH_SUCCESS", guilds: body.body.guilds, gameIds: arr };
-          obj.dispatch(obj);
+          pending.succeed();
+          closure_2_1(dependencyMap[4]).dispatch({ type: "MOBILE_GAME_COMMUNITIES_FETCH_SUCCESS", guilds: body.body.guilds, gameIds });
         }, () => {
-          callback(table[4]).dispatch({ type: "MOBILE_GAME_COMMUNITIES_FETCH_FAILURE" });
+          closure_1_1(dependencyMap[4]).dispatch({ type: "MOBILE_GAME_COMMUNITIES_FETCH_FAILURE" });
           if (!pending.pending) {
             pending.fail(() => {
-              arr = Array.from(store.getLastFetchedGameIds());
-              let items = Array.from(store.getDismissedGuildIds());
+              let game_ids = Array.from(closure_3.getLastFetchedGameIds());
+              let items = Array.from(closure_3.getDismissedGuildIds());
               if (items === undefined) {
                 items = [];
               }
-              let HTTP = arr(dependencyMap[5]).HTTP;
-              let obj = { url: constants.MOBILE_GAME_COMMUNITIES, query: callback(dependencyMap[6]).stringify({ game_ids: arr, limit: 20, ignored_guild_ids: items }), oldFormErrors: true, rejectWithError: true };
-              let value = HTTP.get(obj);
-              let obj2 = callback(dependencyMap[6]);
-              value.then(() => { ... }, () => { ... }).catch(/* F123715 */ function() { ... });
+              let HTTP = game_ids(dependencyMap[5]).HTTP;
+              let request = { url: constants.MOBILE_GAME_COMMUNITIES, query: closure_1(dependencyMap[6]).stringify({ game_ids, limit: 20, ignored_guild_ids: items }), oldFormErrors: true, rejectWithError: true };
+              let value = HTTP.get(request);
+              let obj2 = closure_1(dependencyMap[6]);
+              value.then(() => { ... }, () => { ... }).catch(/* F123903 */ function() { ... });
             });
           }
         }).catch(() => {
@@ -80,64 +76,55 @@ export const fetchMobileGameCommunities = function fetchMobileGameCommunities(ga
   });
 };
 export const fetchMobileGameCommunitiesIfStale = function fetchMobileGameCommunitiesIfStale() {
-  if (!importDefaultResult.pending) {
+  if (!importDefaultResult2.pending) {
     const _Date = Date;
-    let obj = lastFetchedAt;
     const timestamp = Date.now();
-    if (timestamp - lastFetchedAt.getLastFetchedAt() >= 15000) {
+    if (timestamp - MobileGameCommunitiesStore.getLastFetchedAt() >= 15000) {
       const _Array = Array;
-      const arr = Array.from(obj.getLastFetchedGameIds());
+      const game_ids = Array.from(obj.getLastFetchedGameIds());
       const _Array2 = Array;
       let items = Array.from(obj.getDismissedGuildIds());
       if (items === undefined) {
         items = [];
       }
-      const HTTP = arr(1272).HTTP;
-      obj = { url: null, query: null, oldFormErrors: true, rejectWithError: true };
-      obj[0] = Endpoints.MOBILE_GAME_COMMUNITIES;
-      obj = { game_ids: null, limit: null, ignored_guild_ids: null };
-      obj[0] = arr;
-      obj[1] = 20;
-      obj[2] = items;
-      obj[1] = parseDefault.stringify(obj);
-      const value = HTTP.get(obj);
+      const HTTP = game_ids(1272).HTTP;
+      const request = { url: Endpoints.MOBILE_GAME_COMMUNITIES, query: null, oldFormErrors: true, rejectWithError: true };
+      const obj2 = { game_ids, limit: 20, ignored_guild_ids: items };
+      request.query = _modDef1471.stringify(obj2);
+      value = HTTP.get(request);
       return value.then((body) => {
-        closure_1_5.succeed();
-        let obj = closure_1_1(closure_1_2[4]);
-        obj = { type: "MOBILE_GAME_COMMUNITIES_FETCH_SUCCESS", guilds: body.body.guilds, gameIds: arr };
-        obj.dispatch(obj);
+        pending.succeed();
+        closure_2_1(dependencyMap[4]).dispatch({ type: "MOBILE_GAME_COMMUNITIES_FETCH_SUCCESS", guilds: body.body.guilds, gameIds });
       }, () => {
-        callback(table[4]).dispatch({ type: "MOBILE_GAME_COMMUNITIES_FETCH_FAILURE" });
+        closure_1_1(dependencyMap[4]).dispatch({ type: "MOBILE_GAME_COMMUNITIES_FETCH_FAILURE" });
         if (!pending.pending) {
           pending.fail(() => {
-            arr = Array.from(store.getLastFetchedGameIds());
-            let items = Array.from(store.getDismissedGuildIds());
+            let game_ids = Array.from(closure_3.getLastFetchedGameIds());
+            let items = Array.from(closure_3.getDismissedGuildIds());
             if (items === undefined) {
               items = [];
             }
-            let HTTP = arr(dependencyMap[5]).HTTP;
-            let obj = { url: constants.MOBILE_GAME_COMMUNITIES, query: callback(dependencyMap[6]).stringify({ game_ids: arr, limit: 20, ignored_guild_ids: items }), oldFormErrors: true, rejectWithError: true };
-            let value = HTTP.get(obj);
-            let obj2 = callback(dependencyMap[6]);
+            let HTTP = game_ids(dependencyMap[5]).HTTP;
+            let request = { url: constants.MOBILE_GAME_COMMUNITIES, query: closure_1(dependencyMap[6]).stringify({ game_ids, limit: 20, ignored_guild_ids: items }), oldFormErrors: true, rejectWithError: true };
+            let value = HTTP.get(request);
+            let obj2 = closure_1(dependencyMap[6]);
             value.then((body) => {
-              closure_1_5.succeed();
-              let obj = closure_1_1(closure_1_2[4]);
-              obj = { type: "MOBILE_GAME_COMMUNITIES_FETCH_SUCCESS", guilds: body.body.guilds, gameIds: arr };
-              obj.dispatch(obj);
+              pending.succeed();
+              closure_2_1(dependencyMap[4]).dispatch({ type: "MOBILE_GAME_COMMUNITIES_FETCH_SUCCESS", guilds: body.body.guilds, gameIds });
             }, () => {
-              callback(table[4]).dispatch({ type: "MOBILE_GAME_COMMUNITIES_FETCH_FAILURE" });
+              closure_1_1(dependencyMap[4]).dispatch({ type: "MOBILE_GAME_COMMUNITIES_FETCH_FAILURE" });
               if (!pending.pending) {
                 pending.fail(() => {
-                  arr = Array.from(store.getLastFetchedGameIds());
-                  let items = Array.from(store.getDismissedGuildIds());
+                  let game_ids = Array.from(closure_3.getLastFetchedGameIds());
+                  let items = Array.from(closure_3.getDismissedGuildIds());
                   if (items === undefined) {
                     items = [];
                   }
-                  let HTTP = arr(dependencyMap[5]).HTTP;
-                  let obj = { url: constants.MOBILE_GAME_COMMUNITIES, query: callback(dependencyMap[6]).stringify({ game_ids: arr, limit: 20, ignored_guild_ids: items }), oldFormErrors: true, rejectWithError: true };
-                  let value = HTTP.get(obj);
-                  let obj2 = callback(dependencyMap[6]);
-                  value.then(() => { ... }, () => { ... }).catch(/* F123715 */ function() { ... });
+                  let HTTP = game_ids(dependencyMap[5]).HTTP;
+                  let request = { url: constants.MOBILE_GAME_COMMUNITIES, query: closure_1(dependencyMap[6]).stringify({ game_ids, limit: 20, ignored_guild_ids: items }), oldFormErrors: true, rejectWithError: true };
+                  let value = HTTP.get(request);
+                  let obj2 = closure_1(dependencyMap[6]);
+                  value.then(() => { ... }, () => { ... }).catch(/* F123903 */ function() { ... });
                 });
               }
             }).catch(() => {
@@ -150,7 +137,5 @@ export const fetchMobileGameCommunitiesIfStale = function fetchMobileGameCommuni
   }
 };
 export const dismissGuild = function dismissGuild(guildId) {
-  let obj = importDefaultResult1;
-  obj = { type: "MOBILE_GAME_COMMUNITIES_DISMISS_GUILD", guildId };
-  obj.dispatch(obj);
+  Dispatcher.dispatch({ type: "MOBILE_GAME_COMMUNITIES_DISMISS_GUILD", guildId });
 };

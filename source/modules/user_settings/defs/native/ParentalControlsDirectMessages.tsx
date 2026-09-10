@@ -1,40 +1,40 @@
-// Module ID: 15895
-// Function ID: 15896
-// Name: toggle
-// Dependencies: [7537, 7975, 14827, 14828, 11473, 1114, 2]
+// Module ID: 15925
+// Function ID: 15926
+// Name: ParentalControlsDirectMessages
+// Dependencies: [7551, 7989, 14853, 14854, 11500, 1114, 2]
 
-// Module 15895 (toggle)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14827 */;
-import result2 from "result" /* 14828 */;
-import closure_2 from "freshTeenActivityWithMap" /* 7537 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15925 (ParentalControlsDirectMessages)
+import util from "util" /* 1114 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14853 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14854 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7551 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const SettingBuilders = fn(11500);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.RAQUSN);
+    const intl = util.intl;
+    return intl.string(util.t.RAQUSN);
   },
   useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.wbYDfT);
+    const intl = util.intl;
+    return intl.string(util.t.wbYDfT);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(7989).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue() {
-    return !useParentalControlledExplicitContentSettings.useDefaultGuildsRestricted();
+    return !useParentalControlSettings.useDefaultGuildsRestricted();
   },
   onValueChange: function onAllowDirectMessagesFromServerMembersValueChange(arg0) {
-    selectedTeenId = selectedTeenId.getSelectedTeenId();
+    const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {
-      const ParentalControlledDefaultGuildsRestrictedV2 = result2.ParentalControlledDefaultGuildsRestrictedV2;
+      const ParentalControlledDefaultGuildsRestrictedV2 = ParentalControlledUserSettings.ParentalControlledDefaultGuildsRestrictedV2;
       const result = ParentalControlledDefaultGuildsRestrictedV2.updateControlledSetting(selectedTeenId, !arg0);
     }
   },
   unsearchable: true
-};
-createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsDirectMessages.tsx");
+});
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsDirectMessages.tsx");
 
-export default createToggle;
-export const ParentalControlsDirectMessages = createToggle;
+export default toggle;
+export const ParentalControlsDirectMessages = toggle;

@@ -1,24 +1,25 @@
-// Module ID: 13453
-// Function ID: 13454
+// Module ID: 13476
+// Function ID: 13477
 // Name: useDebounce
 // Dependencies: [32, 19, 2]
 // Exports: default
 
-// Module 13453 (useDebounce)
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "noop" /* 19 */;
+// Module 13476 (useDebounce)
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("hooks/useDebounce.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("hooks/useDebounce.tsx");
 
 export default function useDebounce(arg0, arg1) {
-  const callback = arg0;
-  const React = arg1;
-  const tmp = callback(React.useState(arg0), 2);
+  closure_0 = arg0;
+  closure_1 = arg1;
+  const tmp = _slicedToArray(noop.useState(arg0), 2);
   closure_2 = tmp[1];
   const items = [arg0, arg1];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     const timeout = setTimeout(() => {
-      callback(closure_0);
+      closure_1_2(closure_0);
     }, closure_1);
     return () => {
       clearTimeout(closure_0);

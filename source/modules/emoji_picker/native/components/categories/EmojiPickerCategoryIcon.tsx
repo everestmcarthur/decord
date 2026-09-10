@@ -1,26 +1,30 @@
-// Module ID: 10354
-// Function ID: 10355
-// Dependencies: [19, 5463, 21, 8722, 10240, 4523, 8762, 10355, 10357, 9228, 10359, 10361, 8779, 8669, 8667, 2]
+// Module ID: 10381
+// Function ID: 10382
+// Name: EmojiPickerCategoryIcon
+// Dependencies: [19, 5477, 21, 8750, 10267, 4537, 8790, 10382, 10384, 9255, 10386, 10388, 8807, 8697, 8695, 2]
 
-// Module 10354
-import ClockIcon from "ClockIcon" /* 4523 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8667 */;
-import FlagIcon from "FlagIcon" /* 8669 */;
-import TrophyIcon from "TrophyIcon" /* 8722 */;
-import ReactionIcon from "ReactionIcon" /* 8762 */;
-import HeartIcon from "HeartIcon" /* 8779 */;
-import GameControllerIcon from "GameControllerIcon" /* 9228 */;
-import StarIcon from "StarIcon" /* 10240 */;
-import NatureIcon from "NatureIcon" /* 10355 */;
-import FoodIcon from "FoodIcon" /* 10357 */;
-import BicycleIcon from "BicycleIcon" /* 10359 */;
-import ObjectIcon from "ObjectIcon" /* 10361 */;
-import { EmojiCategories } from "EmojiCategoryTypes" /* 5463 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+// Module 10381 (EmojiPickerCategoryIcon)
+import ClockIcon from "ClockIcon" /* 4537 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8695 */;
+import FlagIcon from "FlagIcon" /* 8697 */;
+import TrophyIcon from "TrophyIcon" /* 8750 */;
+import ReactionIcon from "ReactionIcon" /* 8790 */;
+import HeartIcon from "HeartIcon" /* 8807 */;
+import GameControllerIcon from "GameControllerIcon" /* 9255 */;
+import StarIcon from "StarIcon" /* 10267 */;
+import NatureIcon from "NatureIcon" /* 10382 */;
+import FoodIcon from "FoodIcon" /* 10384 */;
+import BicycleIcon from "BicycleIcon" /* 10386 */;
+import ObjectIcon from "ObjectIcon" /* 10388 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const memoResult = importAllResult.memo(function EmojiPickerCategoryIcon(id) {
+require = fn;
+const EmojiCategories = fn(5477).EmojiCategories;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/emoji_picker/native/components/categories/EmojiPickerCategoryIcon.tsx");
+
+export default noop.memo(function EmojiPickerCategoryIcon(id) {
   id = id.id;
   if (EmojiCategories.TOP_GUILD_EMOJI === id) {
     return jsx(TrophyIcon.TrophyIcon, {});
@@ -51,6 +55,3 @@ const memoResult = importAllResult.memo(function EmojiPickerCategoryIcon(id) {
     return jsx(NitroWheelIcon.NitroWheelIcon, {});
   }
 });
-const result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/categories/EmojiPickerCategoryIcon.tsx");
-
-export default memoResult;

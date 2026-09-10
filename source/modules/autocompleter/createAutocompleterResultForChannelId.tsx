@@ -1,72 +1,60 @@
-// Module ID: 9849
-// Function ID: 9850
+// Module ID: 9876
+// Function ID: 9877
 // Name: createAutocompleterResultForChannelId
-// Dependencies: [1957, 4209, 1371, 5515, 1074, 4713, 2]
+// Dependencies: [1957, 4222, 1371, 5529, 1074, 4727, 2]
 // Exports: default
 
-// Module 9849 (createAutocompleterResultForChannelId)
-import computeChannelName from "computeChannelName" /* 4713 */;
-import closure_2 from "ensureGuildLoaded" /* 1957 */;
-import closure_3 from "markAllUserIdListsStale" /* 4209 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import { ChannelTypes } from "ME" /* 1074 */;
+// Module 9876 (createAutocompleterResultForChannelId)
+import useChannelName from "useChannelName" /* 4727 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-require("HeaderRecord").AutocompleterResultTypes;
-const result = require("set").fileFinishedImporting("modules/autocompleter/createAutocompleterResultForChannelId.tsx");
+require = fn;
+fn(5529).AutocompleterResultTypes;
+const ChannelTypes = fn(1074).ChannelTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/autocompleter/createAutocompleterResultForChannelId.tsx");
 
-export default function createAutocompleterResultForChannelId(arg0, arg1, closure_9, closure_7) {
+export default function createAutocompleterResultForChannelId(arg0, arg1, UserStore, RelationshipStore) {
   let obj = arg1;
   if (arg1 === undefined) {
-    obj = closure_2;
+    obj = ChannelStore;
   }
-  obj1 = closure_9;
-  if (closure_9 === undefined) {
-    obj1 = closure_4;
+  let obj2 = UserStore;
+  if (UserStore === undefined) {
+    obj2 = UserStore;
   }
-  let tmp = closure_7;
-  if (closure_7 === undefined) {
-    tmp = closure_3;
+  let tmp = RelationshipStore;
+  if (RelationshipStore === undefined) {
+    tmp = RelationshipStore;
   }
   const channel = obj.getChannel(arg0);
   if (null == channel) {
     return null;
   } else {
-    const channelName = computeChannelName.computeChannelName(channel, obj1, tmp);
+    const channelName = useChannelName.computeChannelName(channel, obj2, tmp);
     const type = channel.type;
     if (ChannelTypes.DM === type) {
-      const user = obj1.getUser(channel.getRecipientId());
+      const user = obj2.getUser(channel.getRecipientId());
       let tmp6 = null;
       if (null != user) {
-        obj = { type: null, record: null, score: 0, comparator: null };
-        obj[0] = AutocompleterResultTypes.USER;
-        obj[1] = user;
-        obj[3] = channelName;
-        tmp6 = obj;
+        const obj3 = { type: AutocompleterResultTypes.USER, record: user, score: 0, comparator: channelName };
+        tmp6 = obj3;
       }
       return tmp6;
     } else if (tmp11.GROUP_DM === type) {
-      obj = { type: null, record: null, score: 0, comparator: null };
-      obj[0] = AutocompleterResultTypes.GROUP_DM;
-      obj[1] = channel;
-      obj[3] = channelName;
-      return obj;
+      const obj4 = { type: AutocompleterResultTypes.GROUP_DM, record: channel, score: 0, comparator: channelName };
+      return obj4;
     } else {
       if (tmp11.GUILD_VOICE !== type) {
         if (tmp11.GUILD_STAGE_VOICE !== type) {
-          obj1 = { type: null, record: null, score: 0, comparator: null };
-          obj1[0] = AutocompleterResultTypes.TEXT_CHANNEL;
-          obj1[1] = channel;
-          obj1[3] = channelName;
-          return obj1;
+          const obj5 = { type: AutocompleterResultTypes.TEXT_CHANNEL, record: channel, score: 0, comparator: channelName };
+          return obj5;
         }
       }
-      const obj2 = { type: null, record: null, score: 0, comparator: null };
-      obj2[0] = AutocompleterResultTypes.VOICE_CHANNEL;
-      obj2[1] = channel;
-      obj2[3] = channelName;
-      return obj2;
+      const obj6 = { type: AutocompleterResultTypes.VOICE_CHANNEL, record: channel, score: 0, comparator: channelName };
+      return obj6;
     }
-    const obj8 = computeChannelName;
   }
 };

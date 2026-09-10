@@ -1,11 +1,11 @@
-// Module ID: 14001
-// Function ID: 14002
-// Name: InputProfile
+// Module ID: 14024
+// Function ID: 14025
+// Name: UserSettingsVoiceAndVideoConstants
 // Dependencies: [2]
 
-// Module 14001 (InputProfile)
-import set from "set" /* 2 */;
+// Module 14024 (UserSettingsVoiceAndVideoConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/user_settings/voice/UserSettingsVoiceAndVideoConstants.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/voice/UserSettingsVoiceAndVideoConstants.tsx");
 
 export const InputProfile = { VOICE_ISOLATION: "VOICE_ISOLATION", STUDIO: "STUDIO", CUSTOM: "CUSTOM" };

@@ -1,48 +1,47 @@
-// Module ID: 11891
-// Function ID: 11892
+// Module ID: 11917
+// Function ID: 11918
 // Name: AppealIngestionModal
-// Dependencies: [5, 32, 19, 17, 8430, 8419, 1074, 21, 4560, 576, 4556, 504, 11885, 1483, 8420, 11890, 11886, 8418, 7123, 1114, 4975, 5624, 11892, 1250, 11906, 11908, 11910, 11912, 11913, 5598, 7000, 2]
+// Dependencies: [5, 32, 19, 17, 8458, 8447, 1074, 21, 4574, 576, 4570, 504, 11911, 1483, 8448, 11916, 11912, 8446, 7137, 1114, 4989, 5638, 11918, 1250, 11932, 11934, 11936, 11938, 11939, 5612, 7014, 2]
 // Exports: AppealIngestionModalHeader, AppealIngestionModalScreen, default
 
-// Module 11891 (AppealIngestionModal)
-import ThemesDefault from "Themes" /* 576 */;
-import Text from "Text" /* 4556 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_8 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8430 */;
-import SafetyHubView from "SafetyHubView" /* 8419 */;
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11917 (AppealIngestionModal)
+import nativeDefault from "native" /* 576 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import NavigatorHeader from "NavigatorHeader" /* 5638 */;
+import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 11916 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import SafetyHubStore from "SafetyHubStore" /* 8458 */;
 
-require = arg1;
-({ APPEAL_INGESTION_IMPRESSION_PROPERTIES: c9, AppealIngestionSections: c10 } = SafetyHubView);
+const require = globalThis.__r;
+
+require = fn;
+const View = fn(17).View;
+const SafetyHubConstants = fn(8447);
+({ APPEAL_INGESTION_IMPRESSION_PROPERTIES: closure_9, AppealIngestionSections: c10 } = SafetyHubConstants);
+const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
+const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-createCacheKey = { container: null, headerContainer: null, header: null, subheader: null, separator: null, footerContainer: null, footerText: null, footerButton: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { alignSelf: "stretch", marginTop: 16, marginBottom: 8, paddingHorizontal: 16 };
-createCacheKey[2] = { marginBottom: 8, textAlign: "center" };
-createCacheKey[3] = { lineHeight: 20, marginBottom: 8, textAlign: "center" };
-createCacheKey[4] = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginVertical: 24 };
-createCacheKey[5] = { marginBottom: 16 };
-createCacheKey[6] = { marginBottom: 16, textAlign: "center" };
-createCacheKey[7] = { paddingHorizontal: 16 };
-let closure_15 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginVertical: 24 };
-const result = require("set").fileFinishedImporting("modules/safety_hub/native/AppealIngestionModal.tsx");
+const createStyles = fn(4574);
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, headerContainer: { alignSelf: "stretch", marginTop: 16, marginBottom: 8, paddingHorizontal: 16 }, header: { marginBottom: 8, textAlign: "center" }, subheader: { lineHeight: 20, marginBottom: 8, textAlign: "center" }, separator: null, footerContainer: null, footerText: null, footerButton: null };
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj2.separator = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 24 };
+obj2.footerContainer = { marginBottom: 16 };
+obj2.footerText = { marginBottom: 16, textAlign: "center" };
+obj2.footerButton = { paddingHorizontal: 16 };
+let closure_15 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionModal.tsx");
 
 export default function AppealIngestionModal(classificationId) {
-  let _require;
-  let flag;
+  _require = undefined;
   let flag2;
   let flag3;
-  let obj = _require(flag3[12]);
-  const safetyHubClassification = obj.useSafetyHubClassification(classificationId.classificationId);
+  const safetyHubClassification = require("useSafetyHubClassifications").useSafetyHubClassification(classificationId.classificationId);
   ({ isDsaEligible: c0, classification } = safetyHubClassification);
-  flag = undefined;
+  let flag;
   if (classification != null) {
     flag = classification.is_spam;
   }
@@ -65,148 +64,141 @@ export default function AppealIngestionModal(classificationId) {
   if (!flag3) {
     flag3 = false;
   }
-  obj = {
+  let obj = require("useSafetyHubClassifications");
+  let obj2 = {
     initialRouteName: constants.SPEED_BUMP,
     screens: flag(flag3[29])(() => {
-      let obj = {};
-      obj = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
-      let obj2 = _undefined(flag3[21]);
-      obj[0] = obj2.getHeaderCloseButton(flag(flag3[15]).close);
-      obj[1] = function headerTitle() {
-        return callback3(callback(4556).Text, { variant: "text-md/normal", children: "accessible" });
-      };
-      obj[2] = function render() {
-        return closure_1_12(callback2(11892), { isDsaEligible: closure_0, isSpam: callback2, isCoppa: closure_2, isDeveloperClassification: dependencyMap });
-      };
-      obj[3] = _undefined(flag3[23]).ImpressionNames.APPEAL_INGESTION_SPEED_BUMP;
-      obj[4] = closure_1_9;
-      obj[closure_1_10.SPEED_BUMP] = obj;
-      obj = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
-      let obj4 = _undefined(flag3[21]);
-      obj[0] = obj4.getHeaderBackButton();
-      obj[1] = function headerTitle() {
-        return callback3(callback(4556).Text, { variant: "text-md/normal", children: "accessible" });
-      };
-      obj[2] = function render() {
-        return closure_1_12(callback2(11906), { isDsaEligible: closure_0 });
-      };
-      obj[3] = _undefined(flag3[23]).ImpressionNames.APPEAL_INGESTION_COLLECT_SIGNAL;
-      obj[4] = closure_1_9;
-      obj[closure_1_10.COLLECT_SIGNAL] = obj;
-      obj1 = {
-        headerLeft: _undefined(flag3[21]).getHeaderBackButton(),
+      const isDsaEligible = c0;
+      const isSpam = flag;
+      const isCoppa = flag2;
+      const isDeveloperClassification = flag3;
+      const obj = {};
+      const obj2 = {
+        headerLeft: NavigatorHeader.getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close),
         headerTitle() {
-          return callback3(callback(4556).Text, { variant: "text-md/normal", children: "accessible" });
+          return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "text-md/normal", children: "accessible" });
         },
         render() {
-          return closure_1_12(callback2(11908), { isDsaEligible: closure_0 });
+          return closure_2_12(flag(flag3[22]), { isDsaEligible, isSpam, isCoppa, isDeveloperClassification });
         },
-        impressionName: _undefined(flag3[23]).ImpressionNames.APPEAL_INGESTION_CONFIRM_SUBMISSION,
-        impressionProperties: closure_1_9
+        impressionName: discord_common_AnalyticsUtils.ImpressionNames.APPEAL_INGESTION_SPEED_BUMP,
+        impressionProperties
       };
-      obj[closure_1_10.CONFIRM_SUBMISSION] = obj1;
-      obj2 = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
-      const obj7 = _undefined(flag3[21]);
-      obj2[0] = _undefined(flag3[21]).getHeaderCloseButton(flag(flag3[15]).close);
-      obj2[1] = function headerTitle() {
-        return callback3(callback(4556).Text, { variant: "text-md/normal", children: "accessible" });
+      obj[constants.SPEED_BUMP] = obj2;
+      const obj4 = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
+      obj4.headerLeft = NavigatorHeader.getHeaderBackButton();
+      obj4.headerTitle = function headerTitle() {
+        return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "text-md/normal", children: "accessible" });
       };
-      obj2[2] = function render() {
-        return callback3(callback2(11910), {});
+      obj4.render = function render() {
+        return closure_2_12(flag(flag3[24]), { isDsaEligible });
       };
-      obj2[3] = _undefined(flag3[23]).ImpressionNames.APPEAL_INGESTION_REQUEST_SENT;
-      obj2[4] = closure_1_9;
-      obj[closure_1_10.REQUEST_SENT] = obj2;
-      const obj3 = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
-      const obj9 = _undefined(flag3[21]);
-      obj3[0] = _undefined(flag3[21]).getHeaderCloseButton(flag(flag3[15]).close);
-      obj3[1] = function headerTitle() {
-        return callback3(callback(4556).Text, { variant: "text-md/normal", children: "accessible" });
+      obj4.impressionName = discord_common_AnalyticsUtils.ImpressionNames.APPEAL_INGESTION_COLLECT_SIGNAL;
+      obj4.impressionProperties = impressionProperties;
+      obj[constants.COLLECT_SIGNAL] = obj4;
+      const obj6 = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
+      obj6.headerLeft = NavigatorHeader.getHeaderBackButton();
+      obj6.headerTitle = function headerTitle() {
+        return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "text-md/normal", children: "accessible" });
       };
-      obj3[2] = function render() {
-        return callback3(callback2(11912), {});
+      obj6.render = function render() {
+        return closure_2_12(flag(flag3[25]), { isDsaEligible });
       };
-      obj3[3] = _undefined(flag3[23]).ImpressionNames.APPEAL_INGESTION_THANKS;
-      obj3[4] = closure_1_9;
-      obj[closure_1_10.THANKS] = obj3;
-      obj4 = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
-      const obj11 = _undefined(flag3[21]);
-      obj4[0] = _undefined(flag3[21]).getHeaderCloseButton(flag(flag3[15]).close);
-      obj4[1] = function headerTitle() {
-        return callback3(callback(4556).Text, { variant: "text-md/normal", children: "accessible" });
+      obj6.impressionName = discord_common_AnalyticsUtils.ImpressionNames.APPEAL_INGESTION_CONFIRM_SUBMISSION;
+      obj6.impressionProperties = impressionProperties;
+      obj[constants.CONFIRM_SUBMISSION] = obj6;
+      const obj8 = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
+      obj8.headerLeft = NavigatorHeader.getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close);
+      obj8.headerTitle = function headerTitle() {
+        return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "text-md/normal", children: "accessible" });
       };
-      obj4[2] = function render() {
-        return callback3(callback2(11913), {});
+      obj8.render = function render() {
+        return closure_1_12(isSpam(isDeveloperClassification[26]), {});
       };
-      obj4[3] = _undefined(flag3[23]).ImpressionNames.APPEAL_INGESTION_SPAM;
-      obj4[4] = closure_1_9;
-      obj[closure_1_10.SPAM] = obj4;
+      obj8.impressionName = discord_common_AnalyticsUtils.ImpressionNames.APPEAL_INGESTION_REQUEST_SENT;
+      obj8.impressionProperties = impressionProperties;
+      obj[constants.REQUEST_SENT] = obj8;
+      const obj10 = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
+      obj10.headerLeft = NavigatorHeader.getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close);
+      obj10.headerTitle = function headerTitle() {
+        return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "text-md/normal", children: "accessible" });
+      };
+      obj10.render = function render() {
+        return closure_1_12(isSpam(isDeveloperClassification[27]), {});
+      };
+      obj10.impressionName = discord_common_AnalyticsUtils.ImpressionNames.APPEAL_INGESTION_THANKS;
+      obj10.impressionProperties = impressionProperties;
+      obj[constants.THANKS] = obj10;
+      const obj12 = { headerLeft: null, headerTitle: null, render: null, impressionName: null, impressionProperties: null };
+      obj12.headerLeft = NavigatorHeader.getHeaderCloseButton(AppealIngestionModalActionCreatorsDefault.close);
+      obj12.headerTitle = function headerTitle() {
+        return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, { variant: "text-md/normal", children: "accessible" });
+      };
+      obj12.render = function render() {
+        return closure_1_12(isSpam(isDeveloperClassification[28]), {});
+      };
+      obj12.impressionName = discord_common_AnalyticsUtils.ImpressionNames.APPEAL_INGESTION_SPAM;
+      obj12.impressionProperties = impressionProperties;
+      obj[constants.SPAM] = obj12;
       return obj;
     }),
     headerBackTitle: null,
     headerTitleAlign: "center"
   };
   const intl = tmp(tmp2[19]).intl;
-  obj[2] = intl.string(_require(flag3[19]).t["13/7kX"]);
-  return callback2(_require(flag3[30]).Navigator, obj);
+  obj2.headerBackTitle = intl.string(require("util").t["13/7kX"]);
+  return closure_12(require("Navigator").Navigator, obj2);
 };
 export const AppealIngestionModalHeader = function AppealIngestionModalHeader(arg0) {
   ({ headerText, subHeaderText } = arg0);
-  const tmp = callback3();
-  let obj = { style: tmp.headerContainer, children: null };
+  const tmp = closure_15();
+  const obj = { style: tmp.headerContainer, children: null };
   let tmp4 = null != headerText;
   if (tmp4) {
     tmp4 = "" !== headerText;
   }
   if (tmp4) {
-    obj = { style: null, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
-    obj[0] = tmp.header;
-    obj[4] = headerText;
-    tmp4 = callback2(Text.Text, obj);
+    const obj2 = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: headerText };
+    tmp4 = closure_1_12(Text_Text.Text, obj2);
   }
   const items = [tmp4, ];
   let tmp8 = null;
   if (null != subHeaderText) {
     tmp8 = null;
     if (subHeaderText.length > 0) {
-      obj = { style: null, variant: "text-md/medium", color: "text-default", children: null };
-      obj[0] = tmp.subheader;
-      obj[3] = subHeaderText;
-      tmp8 = callback2(Text.Text, obj);
+      const obj3 = { style: tmp.subheader, variant: "text-md/medium", color: "text-default", children: subHeaderText };
+      tmp8 = closure_1_12(Text_Text.Text, obj3);
     }
   }
   items[1] = tmp8;
-  obj[1] = items;
-  return closure_13(View, obj);
+  obj.children = items;
+  return map1(View, obj);
 };
 export const AppealIngestionModalScreen = function AppealIngestionModalScreen(children) {
   let safetyHubAppealSignal;
-  let stateFromStores1;
-  let stateFromStores2;
   let navigation;
-  let callback;
+  asyncGeneratorStep = undefined;
   let first;
-  let React;
-  callback = undefined;
-  let footerText = callback3();
+  noop = undefined;
+  let onPress;
+  let footerText = closure_15();
   let stringResult = navigation;
+  const items = [SafetyHubStore];
+  const stateFromStores = safetyHubAppealSignal(navigation[11]).useStateFromStores(items, () => SafetyHubStore.getIsSubmitting());
   let obj = safetyHubAppealSignal(navigation[11]);
-  const items = [closure_8];
-  const stateFromStores = obj.useStateFromStores(items, () => store.getIsSubmitting());
-  obj1 = safetyHubAppealSignal(navigation[12]);
-  safetyHubAppealSignal = obj1.useSafetyHubAppealSignal();
-  let obj2 = safetyHubAppealSignal(navigation[11]);
-  const items1 = [closure_8];
-  stateFromStores1 = obj2.useStateFromStores(items1, () => store.getFreeTextAppealReason());
-  let obj3 = safetyHubAppealSignal(navigation[11]);
-  const items2 = [closure_8];
-  stateFromStores2 = obj3.useStateFromStores(items2, () => store.getAppealClassificationId());
-  let obj4 = safetyHubAppealSignal(navigation[12]);
+  safetyHubAppealSignal = safetyHubAppealSignal(navigation[12]).useSafetyHubAppealSignal();
+  let obj2 = safetyHubAppealSignal(navigation[12]);
+  const items1 = [SafetyHubStore];
+  const stateFromStores1 = safetyHubAppealSignal(navigation[11]).useStateFromStores(items1, () => SafetyHubStore.getFreeTextAppealReason());
+  const obj3 = safetyHubAppealSignal(navigation[11]);
+  const items2 = [SafetyHubStore];
+  const stateFromStores2 = safetyHubAppealSignal(navigation[11]).useStateFromStores(items2, () => SafetyHubStore.getAppealClassificationId());
+  let obj4 = safetyHubAppealSignal(navigation[11]);
   let tmp7 = stateFromStores2;
   if (stateFromStores2 == null) {
     tmp7 = EMPTY_STRING_SNOWFLAKE_ID;
   }
-  const safetyHubClassification = obj4.useSafetyHubClassification(tmp7);
+  const safetyHubClassification = safetyHubAppealSignal(navigation[12]).useSafetyHubClassification(tmp7);
   const classification = safetyHubClassification.classification;
   let flag;
   if (classification != null) {
@@ -228,171 +220,159 @@ export const AppealIngestionModalScreen = function AppealIngestionModalScreen(ch
   if (classification3 != null) {
     prop = classification3.appeal_ingestion_type;
   }
+  let obj5 = safetyHubAppealSignal(navigation[12]);
   navigation = safetyHubAppealSignal(stringResult[13]).useNavigation();
   const tmp11 = null != prop && prop !== safetyHubAppealSignal(stringResult[14]).AppealIngestionType.IN_APP || flag2 || flag;
-  let obj5 = "";
+  let obj12 = "";
   const tmp12 = !tmp11;
   const tmpResult = safetyHubAppealSignal(stringResult[13]);
-  [intl, c4] = first(React.useState(""), 2);
-  const tmp14 = first(React.useState(""), 2);
+  [intl, c4] = first(noop.useState(""), 2);
+  const tmp14 = first(noop.useState(""), 2);
   first = tmp14[0];
-  React = tmp14[1];
+  noop = tmp14[1];
   const items3 = [navigation];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     closure_0 = navigation.addListener("state", () => {
-      callback(store.getState().routes[store.getState(store).routes.length - 1].name);
+      closure_1_6(navigation.getState().routes[navigation.getState(navigation).routes.length - 1].name);
     });
     return () => {
-      closure_1_3.removeListener("state", closure_0);
+      navigation.removeListener("state", closure_0);
     };
   }, items3);
   const items4 = [navigation, first];
-  callback = React.useCallback(() => {
-    if (first === closure_1_10.SPEED_BUMP) {
+  onPress = noop.useCallback(() => {
+    if (first === constants.SPEED_BUMP) {
       navigation.push(tmp2.COLLECT_SIGNAL);
     } else if (tmp === tmp2.COLLECT_SIGNAL) {
       navigation.push(tmp2.CONFIRM_SUBMISSION);
     } else if (tmp === tmp2.CONFIRM_SUBMISSION) {
       navigation.push(tmp2.REQUEST_SENT);
     } else {
-      stateFromStores1(navigation[15]).close();
-      const obj = stateFromStores1(navigation[15]);
+      AppealIngestionModalActionCreatorsDefault.close();
     }
   }, items4);
-  const items5 = [stateFromStores2, safetyHubAppealSignal, stateFromStores1, callback];
-  let string = React.useCallback(callback(function*() {
+  const items5 = [stateFromStores2, safetyHubAppealSignal, stateFromStores1, onPress];
+  let string = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
     if (c5 === 2) {
       c5 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj4 = { value, done: true };
+        return obj4;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
         c5 = 2;
-        if (0 === v0) {
+        if (0 === v2) {
           if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_1 = tmp3;
-            let body = tmp7;
-            if (null !== closure_1_2) {
+            safetyHubAppealSignal = tmp7;
+            if (null !== stateFromStores2) {
               dependencyMap = 1;
-              v0("");
-              v0 = 2;
+              v2("");
+              v2 = 2;
               c5 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = closure_1_2(11886).requestReview(tmp36, closure_1_0, closure_1_1);
-              return obj1;
+              const obj6 = { value: tmp27(11912).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1), done: false };
+              return obj6;
             }
           }
         } else {
           if (1 === tmp7) {
             dependencyMap = 0;
-            body = closure_2;
-            obj1 = closure_1_0(8418);
-            body = body.body;
+            closure_128_0 = tmp27;
+            const body = closure_128_0.body;
             let code;
             if (body != null) {
               code = body.code;
             }
-            v0(obj1.getRequestReviewErrorFromCode(code));
-            const tmp15 = v0;
+            closure_129_4(safetyHubAppealSignal(8446).getRequestReviewErrorFromCode(code));
+            const obj2 = safetyHubAppealSignal(8446);
           } else if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 !== 2) {
-            callback();
+            closure_129_7();
             dependencyMap = 0;
           }
           dependencyMap = 0;
           c5 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          const obj = { value, done: true };
           return obj;
         }
         c5 = 3;
       } catch (tmp27) {
-        closure_2 = tmp27;
         if (tmp4 === dependencyMap) {
           c5 = tmp2;
           throw tmp27;
         } else {
-          v0 = tmp;
+          v2 = tmp;
         }
       }
     }
   }), items5);
-  obj = { style: footerText.container, children: null };
+  let obj6 = { style: footerText.container, children: null };
   const items6 = [children.children, ];
-  obj = { style: footerText.footerContainer, children: null };
-  obj1 = { style: footerText.separator };
-  const items7 = [callback2(callback, obj1), ];
+  const obj7 = { style: footerText.footerContainer, children: null };
+  const items7 = [closure_12(onPress, { style: footerText.separator }), ];
   if (tmp11) {
     items7[1] = tmp12;
-    obj[1] = items7;
-    items6[1] = tmp18(tmp19, obj);
-    obj[1] = items6;
-    return tmp18(tmp19, obj);
+    obj7.children = items7;
+    items6[1] = tmp18(tmp19, obj7);
+    obj6.children = items6;
+    return tmp18(tmp19, obj6);
   } else {
-    obj2 = { bottom: true, style: null, children: null };
-    obj2[1] = footerText.footerButton;
+    const obj9 = { bottom: true, style: footerText.footerButton, children: null };
     if (first === constants.CONFIRM_SUBMISSION) {
-      obj3 = { variant: "text-xs/medium", color: "text-default", style: null, children: null };
-      obj3[2] = footerText.footerText;
+      const obj10 = { variant: "text-xs/medium", color: "text-default", style: footerText.footerText, children: null };
       const intl4 = tmp(stringResult[19]).intl;
-      obj3[3] = intl4.string(tmp(stringResult[19]).t["d6qgY/"]);
-      const items8 = [tmp20(tmp(stringResult[10]).Text, obj3), , ];
+      obj10.children = intl4.string(tmp(stringResult[19]).t["d6qgY/"]);
+      const items8 = [tmp20(tmp(stringResult[10]).Text, obj10), , ];
       let tmp20Result = `` !== intl;
       if (tmp20Result) {
-        obj4 = { variant: "text-xs/medium", color: "text-feedback-critical", style: null, children: null };
+        const obj11 = { variant: "text-xs/medium", color: "text-feedback-critical", style: null, children: null };
         footerText = footerText.footerText;
-        obj4[2] = footerText;
-        obj4[3] = intl;
-        tmp20Result = tmp20(tmp(stringResult[10]).Text, obj4);
+        obj11.style = footerText;
+        obj11.children = intl;
+        tmp20Result = tmp20(tmp(stringResult[10]).Text, obj11);
       }
-      obj5 = { children: null };
+      obj12 = { children: null };
       items8[1] = tmp20Result;
-      const obj6 = { onPress: null, text: null, variant: "destructive", loading: null, disabled: null };
-      obj6[0] = string;
+      const obj13 = { onPress: string, text: null, variant: "destructive", loading: null, disabled: null };
       intl = tmp(stringResult[19]).intl;
       string = intl.string;
       stringResult = string(tmp(stringResult[19]).t.geKm7t);
-      obj6[1] = stringResult;
-      obj6[3] = stateFromStores;
-      obj6[4] = stateFromStores;
-      items8[2] = tmp20(tmp(stringResult[20]).Button, obj6);
-      obj5[0] = items8;
-      tmp20Result = tmp18(closure_14, obj5);
-      const tmp24 = closure_14;
+      obj13.text = stringResult;
+      obj13.loading = stateFromStores;
+      obj13.disabled = stateFromStores;
+      items8[2] = tmp20(tmp(stringResult[20]).Button, obj13);
+      obj12.children = items8;
+      let tmp20Result2 = tmp18(closure_14, obj12);
     } else {
-      const obj7 = { onPress: null, text: null };
-      obj7[0] = callback;
+      const obj14 = { onPress, text: null };
       if (first !== tmp21.REQUEST_SENT) {
         if (first !== tmp21.THANKS) {
           const intl2 = tmp(stringResult[19]).intl;
           let stringResult1 = intl2.string(tmp(stringResult[19]).t.XiOHRX);
         }
-        obj7[1] = stringResult1;
-        tmp20Result = tmp20(tmp27, obj7);
+        obj14.text = stringResult1;
+        tmp20Result2 = tmp20(tmp27, obj14);
       }
       const intl3 = tmp(stringResult[19]).intl;
       stringResult1 = intl3.string(tmp(stringResult[19]).t.i4jeWR);
     }
-    obj2[2] = tmp20Result;
-    tmp20(tmp(stringResult[18]).SafeAreaPaddingView, obj2);
+    obj9.children = tmp20Result2;
+    tmp20(tmp(stringResult[18]).SafeAreaPaddingView, obj9);
   }
 };

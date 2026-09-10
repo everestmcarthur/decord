@@ -1,27 +1,28 @@
-// Module ID: 16916
-// Function ID: 16917
-// Name: MenuContainer
-// Dependencies: [19, 9689, 504, 10655, 4972, 2]
+// Module ID: 16953
+// Function ID: 16954
+// Name: NativeMenuPresenter
+// Dependencies: [19, 9716, 504, 10682, 4986, 2]
 // Exports: default
 
-// Module 16916 (MenuContainer)
-import useBackPressHandlerDefault from "useBackPressHandler" /* 4972 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "initialize" /* 9689 */;
+// Module 16953 (NativeMenuPresenter)
+import useBackPressHandlerDefault from "useBackPressHandler" /* 4986 */;
+import NativeMenuActionCreatorsDefault from "NativeMenuActionCreators" /* 10682 */;
+import noop from "module_19" /* 19 */;
+import NativeMenuStore from "NativeMenuStore" /* 9716 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/native_menu/native/NativeMenuPresenter.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/native_menu/native/NativeMenuPresenter.tsx");
 
 export default function MenuContainer() {
-  const items = [closure_4];
-  const stateFromStoresObject = key(504).useStateFromStoresObject(items, () => ({ key: store.getKey(), menu: store.getMenu() }), []);
+  const items = [NativeMenuStore];
+  const stateFromStoresObject = key(504).useStateFromStoresObject(items, () => ({ key: NativeMenuStore.getKey(), menu: NativeMenuStore.getMenu() }), []);
   key = stateFromStoresObject.key;
   const menu = stateFromStoresObject.menu;
   const items1 = [key];
-  const callback = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     if (null != key) {
-      closure_1_1(closure_1_2[3]).hideNativeMenu(tmp);
-      const obj = closure_1_1(closure_1_2[3]);
+      NativeMenuActionCreatorsDefault.hideNativeMenu(tmp);
     }
     return null != key;
   }, items1);

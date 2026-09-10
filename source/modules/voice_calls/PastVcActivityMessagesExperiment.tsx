@@ -1,18 +1,19 @@
-// Module ID: 17339
-// Function ID: 17340
-// Name: experiment
-// Dependencies: [4477, 4474, 2]
+// Module ID: 17370
+// Function ID: 17371
+// Name: PastVcActivityMessagesExperiment
+// Dependencies: [4491, 4488, 2]
 // Exports: isPastVcActivityMessagesEnabled, useIsPastVcActivityMessagesEnabled
 
-// Module 17339 (experiment)
-import set from "set" /* 2 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4477 */;
-import createExperiment from "createExperiment" /* 4474 */;
+// Module 17370 (PastVcActivityMessagesExperiment)
+import ExperimentConstants from "ExperimentConstants" /* 4491 */;
+import createExperiment from "module_4488" /* 4488 */;
+import size from "module_2" /* 2 */;
 
+const obj = { kind: "guild", id: "2026-02_past_vc_activity_messages", label: "Past VC Activity Messages", commonTriggerPoint: ExperimentConstants.CommonTriggerPoints.VOICE_CALL, defaultConfig: { enabled: false }, treatments: null };
 const items = [{ id: 1, label: "Show past VC activity messages in system channel", config: { enabled: true } }];
-const experiment = createExperiment.createExperiment({ kind: "guild", id: "2026-02_past_vc_activity_messages", label: "Past VC Activity Messages", commonTriggerPoint: ExperimentBuckets.CommonTriggerPoints.VOICE_CALL, defaultConfig: { enabled: false }, treatments: items });
-const obj = { kind: "guild", id: "2026-02_past_vc_activity_messages", label: "Past VC Activity Messages", commonTriggerPoint: ExperimentBuckets.CommonTriggerPoints.VOICE_CALL, defaultConfig: { enabled: false }, treatments: items };
-const result = set.fileFinishedImporting("modules/voice_calls/PastVcActivityMessagesExperiment.tsx");
+obj.treatments = items;
+const experiment = createExperiment.createExperiment(obj);
+const result = size.fileFinishedImporting("modules/voice_calls/PastVcActivityMessagesExperiment.tsx");
 
 export default experiment;
 export const isPastVcActivityMessagesEnabled = function isPastVcActivityMessagesEnabled(id, GuildSettingsModalOverview) {

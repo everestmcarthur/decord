@@ -1,106 +1,94 @@
-// Module ID: 16490
-// Function ID: 16491
+// Module ID: 16521
+// Function ID: 16522
 // Name: useICYMIReloadHandler
-// Dependencies: [5, 19, 8359, 8351, 2]
+// Dependencies: [5, 19, 8387, 8379, 2]
 // Exports: useICYMIReloadHandler
 
-// Module 16490 (useICYMIReloadHandler)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
+// Module 16521 (useICYMIReloadHandler)
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/icymi/useICYMIReloadHandler.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/icymi/useICYMIReloadHandler.tsx");
 
 export const useICYMIReloadHandler = function useICYMIReloadHandler(showDot) {
   closure_0 = showDot;
   const items = [showDot];
-  return React.useCallback(callback(function*() {
+  return noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
     if (dependencyMap === 2) {
       dependencyMap = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
         dependencyMap = 2;
-        if (0 === v0) {
+        if (0 === v3) {
           if (arg0 === 1) {
             dependencyMap = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             dependencyMap = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            closure_0 = tmp2;
-            const ICYMIAnalytics = closure_1_0(8359).ICYMIAnalytics;
+            const ICYMIAnalytics = tmp2(8387).ICYMIAnalytics;
             let str = "NoDotShown";
-            if (closure_1_0) {
+            if (tmp2) {
               str = "DotShown";
             }
-            obj1 = { variant: null, homeSessionId: "gravity_refresh" };
-            obj1[0] = str;
-            ICYMIAnalytics.trackFeedShown(obj1);
-            v0 = 1;
+            const obj5 = { variant: str, homeSessionId: "gravity_refresh" };
+            ICYMIAnalytics.trackFeedShown(obj5);
+            v3 = 1;
             dependencyMap = 1;
-            let obj2 = { value: null, done: false };
-            obj2[0] = v0(8351).fetchDehydrated({ isReloading: true });
-            return obj2;
+            const obj7 = { value: v3(8379).fetchDehydrated({ isReloading: true }), done: false };
+            return obj7;
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
             dependencyMap = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             dependencyMap = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
+            const obj8 = { value, done: true };
+            return obj8;
           } else {
-            let obj5 = v0(8351);
-            v0 = 2;
+            v3 = 2;
             dependencyMap = 1;
-            const obj4 = { value: null, done: false };
-            obj4[0] = obj5.reloadICYMITab();
-            return obj4;
+            const obj9 = { value: v3(8379).reloadICYMITab(), done: false };
+            return obj9;
           }
         } else if (2 === tmp5) {
           if (arg0 === 1) {
             dependencyMap = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             dependencyMap = 3;
-            obj5 = { value: null, done: true };
-            obj5[0] = arg1;
-            return obj5;
+            const obj11 = { value, done: true };
+            return obj11;
           } else {
-            obj2 = v0(8351);
-            v0 = 3;
+            v3 = 3;
             dependencyMap = 1;
-            const obj6 = { value: null, done: false };
-            obj6[0] = obj2.getGuildChannelScores();
-            return obj6;
+            const obj12 = { value: v3(8379).getGuildChannelScores(), done: false };
+            return obj12;
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           dependencyMap = 3;
-          const obj7 = { value: null, done: true };
-          obj7[0] = arg1;
-          return obj7;
+          const obj13 = { value, done: true };
+          return obj13;
         } else {
-          obj = v0(8351);
-          const recommendedGuilds = obj.getRecommendedGuilds();
+          const recommendedGuilds = v3(8379).getRecommendedGuilds();
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }

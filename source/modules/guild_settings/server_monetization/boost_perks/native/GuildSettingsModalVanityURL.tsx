@@ -1,40 +1,40 @@
-// Module ID: 17645
-// Function ID: 17646
-// Name: componentDidMount
-// Dependencies: [19, 17, 17646, 1979, 9069, 1074, 21, 4560, 576, 5624, 7377, 1114, 17647, 7759, 4556, 17526, 6606, 17648, 1483, 504, 7040, 2]
+// Module ID: 17678
+// Function ID: 17679
+// Name: GuildSettingsModalVanityURL
+// Dependencies: [19, 17, 17679, 1979, 9096, 1074, 21, 4574, 576, 5638, 7391, 1114, 17680, 7773, 4570, 17557, 6620, 17681, 1483, 504, 7054, 2]
 // Exports: default
 
-// Module 17645 (componentDidMount)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import TextInput from "TextInput" /* 6606 */;
-import getInviteURLDefault from "getInviteURL" /* 7759 */;
-import getErrorMessageFromErrorCode from "getErrorMessageFromErrorCode" /* 17526 */;
-import _modDef17647 from "module_17647" /* 17647 */;
-import registerAssetDefault from "registerAsset" /* 17648 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "FormStates" /* 17646 */;
-import closure_6 from "createGuildRecordFromRust" /* 1979 */;
-import closure_7 from "handleFormInit" /* 9069 */;
-import { GuildFeatures } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 17678 (GuildSettingsModalVanityURL)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import TextInput from "TextInput" /* 6620 */;
+import HeaderActionButton from "HeaderActionButton" /* 7391 */;
+import getInviteURLDefault from "getInviteURL" /* 7773 */;
+import GuildSettingsVanityURLUtils from "GuildSettingsVanityURLUtils" /* 17557 */;
+import ChangeVanityURLActionCreatorsDefault from "ChangeVanityURLActionCreators" /* 17680 */;
+import _modDef17681 from "module_17681" /* 17681 */;
+import noop from "module_19" /* 19 */;
+import ChangeVanityURLModalStore from "ChangeVanityURLModalStore" /* 17679 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9096 */;
 
-require = arg1;
-({ View: c3, Image: c4 } = get_ActivityIndicator);
-({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
-createCacheKey = { wrapper: null, section: null, hints: null, center: null, image: null };
-createCacheKey = { flex: 1, justifyContent: "space-between", paddingTop: ThemesDefault.space.PX_32 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_12 };
-let obj1 = { paddingHorizontal: ThemesDefault.space.PX_12 };
-createCacheKey[2] = { marginTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_4 };
-createCacheKey[3] = { alignItems: "center", flexDirection: "column" };
-createCacheKey[4] = { width: 135, height: 183, marginBottom: 27 };
-let closure_12 = createCacheKey.createStyles(createCacheKey);
-const PureComponent = importAllResult.PureComponent;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, Image: closure_4 } = get_ActivityIndicator);
+const GuildFeatures = fn(1074).GuildFeatures;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { wrapper: { flex: 1, justifyContent: "space-between", paddingTop: nativeDefault.space.PX_32 }, section: null, hints: null, center: null, image: null };
+let obj3 = { flex: 1, justifyContent: "space-between", paddingTop: nativeDefault.space.PX_32 };
+obj2.section = { paddingHorizontal: nativeDefault.space.PX_12 };
+let obj4 = { paddingHorizontal: nativeDefault.space.PX_12 };
+obj2.hints = { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_4 };
+obj2.center = { alignItems: "center", flexDirection: "column" };
+obj2.image = { width: 135, height: 183, marginBottom: 27 };
+let closure_12 = createStyles.createStyles(obj2);
+const PureComponent = noop.PureComponent;
 class GuildSettingsModalVanityURL extends PureComponent {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -45,22 +45,22 @@ class GuildSettingsModalVanityURL extends PureComponent {
     }
     applyArgumentsResult.state = { isEditing: false, vanityURLCode: str };
     applyArgumentsResult.handleStartEditing = function handleStartEditing() {
-      closure_1_1(closure_1_2[12]).openModal(applyArgumentsResult.props.guild.id, applyArgumentsResult.state.vanityURLCode);
+      ChangeVanityURLActionCreatorsDefault.openModal(applyArgumentsResult.props.guild.id, applyArgumentsResult.state.vanityURLCode);
       applyArgumentsResult.setState({ isEditing: true });
     };
     applyArgumentsResult.handleChange = function handleChange(vanityURLCode) {
       applyArgumentsResult.setState({ vanityURLCode });
     };
     applyArgumentsResult.handleCancel = function handleCancel() {
-      return new Promise((arg0) => {
-        closure_1_1(closure_1_2[12]).closeModal();
+      return new Promise((fn) => {
+        ChangeVanityURLActionCreatorsDefault.closeModal();
         state.setState({ isEditing: false });
-        arg0(true);
+        fn(true);
       });
     };
     applyArgumentsResult.handleSave = function handleSave() {
       applyArgumentsResult.setState({ isEditing: false });
-      closure_1_1(closure_1_2[12]).changeVanityURL(applyArgumentsResult.props.guild.id, applyArgumentsResult.state.vanityURLCode);
+      ChangeVanityURLActionCreatorsDefault.changeVanityURL(applyArgumentsResult.props.guild.id, applyArgumentsResult.state.vanityURLCode);
     };
     return applyArgumentsResult;
   }
@@ -69,15 +69,14 @@ const prototype = GuildSettingsModalVanityURL.prototype;
 prototype["componentDidMount"] = function componentDidMount() {
   this.updateNavigator(undefined, this.state);
 };
-prototype["componentDidUpdate"] = function componentDidUpdate(vanityURLCode) {
+prototype["componentDidUpdate"] = function componentDidUpdate(vanityURLCode, arg1) {
   const self = this;
   if (this.props.vanityURLCode !== vanityURLCode.vanityURLCode) {
     let str = self.props.vanityURLCode;
     if (str == null) {
       str = "";
     }
-    const obj = { vanityURLCode: null };
-    obj[0] = str;
+    const obj = { vanityURLCode: str };
     self.setState(obj);
   }
   self.updateNavigator(vanityURLCode, arg1);
@@ -97,32 +96,31 @@ prototype["updateNavigator"] = function updateNavigator(submitting, isEditing) {
     if (submitting) {
       let fn = () => null;
     } else if (isEditing) {
-      let setOptionsResult = self(5624);
-      fn = setOptionsResult.getHeaderConditionalBackButton(this.handleCancel);
+      fn = self(5638).getHeaderConditionalBackButton(this.handleCancel);
+      let obj = self(5638);
     }
-    setOptionsResult = { headerLeft: null, headerRight: null };
-    setOptionsResult[0] = fn;
+    let obj2 = { headerLeft: fn, headerRight: null };
     if (submitting) {
-      let fn2 = () => callback(self(table[9]).HeaderSubmittingIndicator, {});
+      let fn2 = () => closure_1_9(self(dependencyMap[9]).HeaderSubmittingIndicator, {});
     } else {
       fn2 = isEditing ? (() => {
         const obj = { onPress: self.handleSave, text: null };
-        const intl = self(closure_1_2[11]).intl;
-        obj[1] = intl.string(self(closure_1_2[11]).t["R3BPH+"]);
-        return closure_1_9(self(closure_1_2[10]).HeaderActionButton, obj);
+        const intl = util.intl;
+        obj.text = intl.string(util.t["R3BPH+"]);
+        return React7(HeaderActionButton.HeaderActionButton, obj);
       }) : (() => {
         const obj = { onPress: self.handleStartEditing, text: null };
-        const intl = self(closure_1_2[11]).intl;
-        obj[1] = intl.string(self(closure_1_2[11]).t.bt75uw);
-        return closure_1_9(self(closure_1_2[10]).HeaderActionButton, obj);
+        const intl = util.intl;
+        obj.text = intl.string(util.t.bt75uw);
+        return React7(HeaderActionButton.HeaderActionButton, obj);
       });
     }
-    setOptionsResult[1] = fn2;
-    setOptionsResult = navigation.setOptions(setOptionsResult);
+    obj2.headerRight = fn2;
+    obj2 = navigation.setOptions(obj2);
   }
 };
 prototype["componentWillUnmount"] = function componentWillUnmount() {
-  _modDef17647.closeModal();
+  ChangeVanityURLActionCreatorsDefault.closeModal();
 };
 prototype["render"] = function render() {
   const self = this;
@@ -130,20 +128,18 @@ prototype["render"] = function render() {
   ({ isEditing, vanityURLCode } = this.state);
   if (null != vanityURLCode) {
     if ("" !== vanityURLCode) {
-      let obj = { variant: "text-sm/medium", color: "text-muted", children: null };
-      const intl6 = getSystemLocale.intl;
-      obj = { url: null };
-      obj[0] = getInviteURLDefault(vanityURLCode);
-      obj[2] = intl6.format(getSystemLocale.t.FcGpNU, obj);
+      const obj2 = { variant: "text-sm/medium", color: "text-muted", children: null };
+      const intl6 = util.intl;
+      const obj3 = { url: getInviteURLDefault(vanityURLCode) };
+      obj2.children = intl6.format(util.t.FcGpNU, obj3);
       const tmp24 = getInviteURLDefault(vanityURLCode);
-      const tmp = callback(Text.Text, obj);
+      const tmp = React7(Text_Text.Text, obj2);
     }
   }
   if (isEditing) {
     let errorMessageFromErrorCode;
     if (null != errorDetails) {
-      obj = getErrorMessageFromErrorCode;
-      errorMessageFromErrorCode = obj.getErrorMessageFromErrorCode(errorDetails.code);
+      errorMessageFromErrorCode = GuildSettingsVanityURLUtils.getErrorMessageFromErrorCode(errorDetails.code);
     }
     let hasItem;
     if (guild != null) {
@@ -159,95 +155,78 @@ prototype["render"] = function render() {
       }
       tmp17Result = true !== hasItem1;
     }
-    obj1 = { style: null, children: null };
-    const items = [styles.wrapper, self.props.contentContainerStyle];
-    obj1[0] = items;
-    const obj2 = { style: null, children: null };
-    obj2[0] = styles.section;
-    const obj3 = { isDisabled: null, value: null, onChange: null, autoFocus: null, errorMessage: null };
-    obj3[0] = !isEditing;
-    obj3[1] = vanityURLCode;
-    obj3[2] = self.handleChange;
-    obj3[3] = isEditing;
-    obj3[4] = errorMessageFromErrorCode;
-    const items1 = [callback(TextInput.TextInput, obj3), ];
     const obj4 = { style: null, children: null };
-    obj4[0] = styles.hints;
-    const obj5 = { variant: "text-sm/medium", color: "text-muted", children: null };
-    const intl2 = getSystemLocale.intl;
-    obj5[2] = intl2.string(getSystemLocale.t.IhWDcu);
-    const items2 = [callback(Text.Text, obj5), , , , ];
-    const obj6 = { variant: "text-sm/medium", color: "text-muted", children: null };
-    const intl3 = getSystemLocale.intl;
-    obj6[2] = intl3.string(getSystemLocale.t["1mRkFr"]);
-    items2[1] = callback(Text.Text, obj6);
-    const obj7 = { variant: "text-sm/medium", color: "text-muted", children: null };
-    const intl4 = getSystemLocale.intl;
-    obj7[2] = intl4.string(getSystemLocale.t["eH/HMz"]);
-    items2[2] = callback(Text.Text, obj7);
+    const items = [styles.wrapper, self.props.contentContainerStyle];
+    obj4.style = items;
+    const obj5 = { style: styles.section, children: null };
+    const obj6 = { isDisabled: !isEditing, value: vanityURLCode, onChange: self.handleChange, autoFocus: isEditing, errorMessage: errorMessageFromErrorCode };
+    const items1 = [React7(TextInput.TextInput, obj6), ];
+    const obj7 = { style: styles.hints, children: null };
+    const obj8 = { variant: "text-sm/medium", color: "text-muted", children: null };
+    const intl2 = util.intl;
+    obj8.children = intl2.string(util.t.IhWDcu);
+    const items2 = [React7(Text_Text.Text, obj8), , , , ];
+    const obj9 = { variant: "text-sm/medium", color: "text-muted", children: null };
+    const intl3 = util.intl;
+    obj9.children = intl3.string(util.t["1mRkFr"]);
+    items2[1] = React7(Text_Text.Text, obj9);
+    const obj10 = { variant: "text-sm/medium", color: "text-muted", children: null };
+    const intl4 = util.intl;
+    obj10.children = intl4.string(util.t["eH/HMz"]);
+    items2[2] = React7(Text_Text.Text, obj10);
     if (tmp17Result) {
-      const obj8 = { variant: "text-sm/medium", color: "text-muted", children: null };
+      const obj11 = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl5 = tmp18(1114).intl;
-      obj8[2] = intl5.string(tmp18(1114).t.o3kmm3);
-      tmp17Result = tmp17(tmp18(4556).Text, obj8);
+      obj11.children = intl5.string(tmp18(1114).t.o3kmm3);
+      tmp17Result = tmp17(tmp18(4570).Text, obj11);
     }
     items2[3] = tmp17Result;
     items2[4] = tmp;
-    obj4[1] = items2;
-    items1[1] = closure_10(closure_3, obj4);
-    obj2[1] = items1;
-    const items3 = [closure_10(closure_3, obj2), ];
-    const obj9 = { style: null, children: null };
-    obj9[0] = styles.center;
-    const obj10 = { source: null, style: null, resizeMode: "contain" };
-    obj10[0] = registerAssetDefault;
-    obj10[1] = styles.image;
-    obj9[1] = callback(closure_4, obj10);
-    items3[1] = callback(closure_3, obj9);
-    obj1[1] = items3;
-    return closure_10(closure_3, obj1);
+    obj7.children = items2;
+    items1[1] = closure_1_10(React3, obj7);
+    obj5.children = items1;
+    const items3 = [closure_1_10(React3, obj5), ];
+    const obj12 = { style: styles.center, children: null };
+    const obj13 = { source: _modDef17681, style: styles.image, resizeMode: "contain" };
+    obj12.children = React7(React4, obj13);
+    items3[1] = React7(React3, obj12);
+    obj4.children = items3;
+    return closure_1_10(React3, obj4);
   } else if ("" !== vanityURLCode) {
     const _HermesInternal = HermesInternal;
     let combined = "discord.gg/" + vanityURLCode;
   } else {
-    const intl = getSystemLocale.intl;
-    combined = intl.string(getSystemLocale.t["FaXGO/"]);
+    const intl = util.intl;
+    combined = intl.string(util.t["FaXGO/"]);
   }
 };
-let obj2 = { marginTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_4 };
-const result = require("set").fileFinishedImporting("modules/guild_settings/server_monetization/boost_perks/native/GuildSettingsModalVanityURL.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/server_monetization/boost_perks/native/GuildSettingsModalVanityURL.tsx");
 
 export default function ConnectedGuildSettingsModalVanityURL(guildId) {
   guildId = guildId.guildId;
-  let obj = guildId(1483);
-  const navigation = obj.useNavigation();
-  const tmp = callback3();
+  const tmp = closure_12();
   const tmp2 = guildId;
-  const items = [closure_6];
-  const stateFromStores = guildId(504).useStateFromStores(items, () => closure_1_6.getGuild(guildId));
+  const navigation = guildId(1483).useNavigation();
+  const obj = guildId(1483);
+  const items = [GuildStore];
+  const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   const obj2 = guildId(504);
-  const items1 = [closure_7];
+  const items1 = [GuildSettingsStore];
   const stateFromStores1 = guildId(504).useStateFromStores(items1, () => props2.getProps().vanityURLCode);
   const obj3 = guildId(504);
-  const items2 = [closure_5];
+  const items2 = [ChangeVanityURLModalStore];
   const stateFromStoresObject = guildId(504).useStateFromStoresObject(items2, () => {
     props = props.getProps();
     return { submitting: props.submitting, errorDetails: props.errorDetails };
   });
   let tmp10 = null;
   if (null != stateFromStores) {
-    obj = { children: null };
-    obj = { guild: null, vanityURLCode: null, submitting: null, errorDetails: null, navigation: null, styles: null, contentContainerStyle: null };
-    obj[0] = stateFromStores;
-    obj[1] = stateFromStores1;
-    obj[2] = tmp8;
-    obj[3] = tmp9;
-    obj[4] = navigation;
-    obj[5] = tmp;
-    obj[6] = guildId.contentContainerStyle;
-    const items3 = [callback(GuildSettingsModalVanityURL, obj), callback(tmp2(7040).NavScrim, {})];
-    obj[0] = items3;
-    tmp10 = callback2(closure_11, obj);
+    const obj5 = { children: null };
+    const obj6 = { guild: stateFromStores, vanityURLCode: stateFromStores1, submitting: tmp8, errorDetails: tmp9, navigation, styles: tmp, contentContainerStyle: guildId.contentContainerStyle };
+    const items3 = [closure_9(GuildSettingsModalVanityURL, obj6), closure_9(tmp2(7054).NavScrim, {})];
+    obj5.children = items3;
+    tmp10 = closure_10(closure_11, obj5);
   }
   return tmp10;
 };

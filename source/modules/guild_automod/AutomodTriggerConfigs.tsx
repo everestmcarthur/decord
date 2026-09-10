@@ -1,43 +1,41 @@
-// Module ID: 17546
-// Function ID: 17547
-// Name: AutomodTriggerType
-// Dependencies: [19, 11867, 1114, 16836, 10105, 2]
+// Module ID: 17577
+// Function ID: 17578
+// Name: AutomodTriggerConfigs
+// Dependencies: [19, 11893, 1114, 16873, 10132, 2]
 // Exports: checkTriggerTypeForFlag, getAvailableActionTypes, getDefaultTriggerMetadataForTriggerType, useAvailableTriggerTypes, validateRuleByTriggerConfigOrThrow
 
-// Module 17546 (AutomodTriggerType)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import isInMentionRaidExperiment from "isInMentionRaidExperiment" /* 10105 */;
-import closure_2 from "noop" /* 19 */;
-import AutomodEventType from "AutomodEventType" /* 11867 */;
-import set from "set" /* 2 */;
+// Module 17577 (AutomodTriggerConfigs)
+import util from "util" /* 1114 */;
+import guild_automod_ExperimentUtils from "guild_automod/ExperimentUtils" /* 10132 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ AutomodActionType, AutomodEventType, AutomodTriggerType } = AutomodEventType);
-let closure_4 = AutomodEventType.MENTION_SPAM_LIMIT_DEFAULT;
+require = fn;
+const Constants = fn(11893);
+({ AutomodActionType, AutomodEventType, AutomodTriggerType } = Constants);
+const mentionTotalLimit = Constants.MENTION_SPAM_LIMIT_DEFAULT;
 let obj = { NEW: "new", RECOMMENDED: "recommended", BETA: "beta", ALPHA: "alpha" };
-obj = {};
-obj = {
+let obj2 = {};
+let obj3 = {
   getDefaultRuleName() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.ffR2cM);
+    const intl = util.intl;
+    return intl.string(util.t.ffR2cM);
   },
   type: AutomodTriggerType.SPAM_LINK,
   eventType: AutomodEventType.MESSAGE_SEND,
   perGuildMaxCount: 0,
-  availableActionTypes: null,
+  availableActionTypes: new Set(),
   flags: null,
   defaultActionTypes: null
 };
-let set = new Set();
-obj[4] = set;
-obj[5] = new Set();
+const set = new Set();
+obj3.flags = new Set();
 const set1 = new Set();
-obj[6] = new Set();
-obj[AutomodTriggerType.SPAM_LINK] = obj;
-const obj1 = {
+obj3.defaultActionTypes = new Set();
+obj2[AutomodTriggerType.SPAM_LINK] = obj3;
+const obj4 = {
   getDefaultRuleName() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.ffR2cM);
+    const intl = util.intl;
+    return intl.string(util.t.ffR2cM);
   },
   type: AutomodTriggerType.KEYWORD,
   eventType: AutomodEventType.MESSAGE_SEND,
@@ -49,17 +47,17 @@ const obj1 = {
 let items = [, , ];
 ({ BLOCK_MESSAGE: arr[0], FLAG_TO_CHANNEL: arr[1], USER_COMMUNICATION_DISABLED: arr[2] } = AutomodActionType);
 const set2 = new Set();
-obj1[4] = new Set(items);
+obj4.availableActionTypes = new Set(items);
 const set3 = new Set(items);
-obj1[5] = new Set();
+obj4.flags = new Set();
 const items1 = [AutomodActionType.BLOCK_MESSAGE];
 const set4 = new Set();
-obj1[6] = new Set(items1);
-obj[AutomodTriggerType.KEYWORD] = obj1;
-const obj2 = {
+obj4.defaultActionTypes = new Set(items1);
+obj2[AutomodTriggerType.KEYWORD] = obj4;
+const obj5 = {
   getDefaultRuleName() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["puF/Os"]);
+    const intl = util.intl;
+    return intl.string(util.t["puF/Os"]);
   },
   type: AutomodTriggerType.ML_SPAM,
   eventType: AutomodEventType.MESSAGE_SEND,
@@ -71,17 +69,17 @@ const obj2 = {
 const items2 = [, ];
 ({ BLOCK_MESSAGE: arr3[0], FLAG_TO_CHANNEL: arr3[1] } = AutomodActionType);
 const set5 = new Set(items1);
-obj2[4] = new Set(items2);
+obj5.availableActionTypes = new Set(items2);
 const set6 = new Set(items2);
-obj2[5] = new Set([]);
+obj5.flags = new Set([]);
 const items3 = [AutomodActionType.BLOCK_MESSAGE];
 const set7 = new Set([]);
-obj2[6] = new Set(items3);
-obj[AutomodTriggerType.ML_SPAM] = obj2;
-const obj3 = {
+obj5.defaultActionTypes = new Set(items3);
+obj2[AutomodTriggerType.ML_SPAM] = obj5;
+const obj6 = {
   getDefaultRuleName() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.LnGhZv);
+    const intl = util.intl;
+    return intl.string(util.t.LnGhZv);
   },
   type: AutomodTriggerType.DEFAULT_KEYWORD_LIST,
   eventType: AutomodEventType.MESSAGE_SEND,
@@ -93,17 +91,17 @@ const obj3 = {
 const items4 = [, ];
 ({ BLOCK_MESSAGE: arr5[0], FLAG_TO_CHANNEL: arr5[1] } = AutomodActionType);
 const set8 = new Set(items3);
-obj3[4] = new Set(items4);
+obj6.availableActionTypes = new Set(items4);
 const set9 = new Set(items4);
-obj3[5] = new Set([]);
+obj6.flags = new Set([]);
 const items5 = [AutomodActionType.BLOCK_MESSAGE];
 const set10 = new Set([]);
-obj3[6] = new Set(items5);
-obj[AutomodTriggerType.DEFAULT_KEYWORD_LIST] = obj3;
-const obj4 = {
+obj6.defaultActionTypes = new Set(items5);
+obj2[AutomodTriggerType.DEFAULT_KEYWORD_LIST] = obj6;
+const obj7 = {
   getDefaultRuleName() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.pX7i6n);
+    const intl = util.intl;
+    return intl.string(util.t.pX7i6n);
   },
   type: AutomodTriggerType.MENTION_SPAM,
   eventType: AutomodEventType.MESSAGE_SEND,
@@ -115,17 +113,17 @@ const obj4 = {
 const items6 = [, , ];
 ({ BLOCK_MESSAGE: arr7[0], FLAG_TO_CHANNEL: arr7[1], USER_COMMUNICATION_DISABLED: arr7[2] } = AutomodActionType);
 const set11 = new Set(items5);
-obj4[4] = new Set(items6);
+obj7.availableActionTypes = new Set(items6);
 const set12 = new Set(items6);
-obj4[5] = new Set([]);
+obj7.flags = new Set([]);
 const items7 = [AutomodActionType.BLOCK_MESSAGE];
 const set13 = new Set([]);
-obj4[6] = new Set(items7);
-obj[AutomodTriggerType.MENTION_SPAM] = obj4;
-const obj5 = {
+obj7.defaultActionTypes = new Set(items7);
+obj2[AutomodTriggerType.MENTION_SPAM] = obj7;
+const obj8 = {
   getDefaultRuleName() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.q1L2v8);
+    const intl = util.intl;
+    return intl.string(util.t.q1L2v8);
   },
   type: AutomodTriggerType.USER_PROFILE,
   eventType: AutomodEventType.GUILD_MEMBER_JOIN_OR_UPDATE,
@@ -137,17 +135,17 @@ const obj5 = {
 const items8 = [, ];
 ({ QUARANTINE_USER: arr9[0], FLAG_TO_CHANNEL: arr9[1] } = AutomodActionType);
 const set14 = new Set(items7);
-obj5[4] = new Set(items8);
+obj8.availableActionTypes = new Set(items8);
 const set15 = new Set(items8);
-obj5[5] = new Set([]);
+obj8.flags = new Set([]);
 const items9 = [AutomodActionType.QUARANTINE_USER];
 const set16 = new Set([]);
-obj5[6] = new Set(items9);
-obj[AutomodTriggerType.USER_PROFILE] = obj5;
-const obj6 = {
+obj8.defaultActionTypes = new Set(items9);
+obj2[AutomodTriggerType.USER_PROFILE] = obj8;
+const obj9 = {
   getDefaultRuleName() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.ZQr92M);
+    const intl = util.intl;
+    return intl.string(util.t.ZQr92M);
   },
   type: AutomodTriggerType.SERVER_POLICY,
   eventType: AutomodEventType.MESSAGE_SEND,
@@ -158,45 +156,53 @@ const obj6 = {
 };
 const items10 = [AutomodActionType.FLAG_TO_CHANNEL];
 const set17 = new Set(items9);
-obj6[4] = new Set(items10);
+obj9.availableActionTypes = new Set(items10);
 const items11 = [obj.ALPHA];
 const set18 = new Set(items10);
-obj6[5] = new Set(items11);
+obj9.flags = new Set(items11);
 const set19 = new Set(items11);
-obj6[6] = new Set();
-obj[AutomodTriggerType.SERVER_POLICY] = obj6;
-const obj7 = { MEMBERS: "members", CONTENT: "content" };
-const obj8 = { [obj7.MEMBERS]: items12, [obj7.CONTENT]: items13 };
-items12 = [obj[AutomodTriggerType.USER_PROFILE]];
-items13 = [obj[AutomodTriggerType.SERVER_POLICY], obj[AutomodTriggerType.MENTION_SPAM], obj[AutomodTriggerType.ML_SPAM], obj[AutomodTriggerType.DEFAULT_KEYWORD_LIST], obj[AutomodTriggerType.KEYWORD]];
-const result = set.fileFinishedImporting("modules/guild_automod/AutomodTriggerConfigs.tsx");
+obj9.defaultActionTypes = new Set();
+obj2[AutomodTriggerType.SERVER_POLICY] = obj9;
+const obj10 = { type: AutomodTriggerType.APPLICATION, perGuildMaxCount: 0, availableActionTypes: null, flags: null, defaultActionTypes: null };
+const set20 = new Set();
+obj10.availableActionTypes = new Set();
+const set21 = new Set();
+obj10.flags = new Set();
+const set22 = new Set();
+obj10.defaultActionTypes = new Set();
+obj2[AutomodTriggerType.APPLICATION] = obj10;
+const obj11 = { MEMBERS: "members", CONTENT: "content" };
+const obj12 = { [obj11.MEMBERS]: items12, [obj11.CONTENT]: items13 };
+items12 = [obj2[AutomodTriggerType.USER_PROFILE]];
+items13 = [obj2[AutomodTriggerType.SERVER_POLICY], obj2[AutomodTriggerType.MENTION_SPAM], obj2[AutomodTriggerType.ML_SPAM], obj2[AutomodTriggerType.DEFAULT_KEYWORD_LIST], obj2[AutomodTriggerType.KEYWORD]];
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_automod/AutomodTriggerConfigs.tsx");
 
 export const AutomodTriggerConfigFlags = obj;
-export const triggerConfigs = obj;
-export const AutomodTriggerCategory = obj7;
-export const AUTOMOD_RULE_CONFIGS_BY_CATEGORY = obj8;
+export const triggerConfigs = obj2;
+export const AutomodTriggerCategory = obj11;
+export const AUTOMOD_RULE_CONFIGS_BY_CATEGORY = obj12;
 export const checkTriggerTypeForFlag = function checkTriggerTypeForFlag(arg0, arg1) {
-  const flags = obj[arg0].flags;
+  const flags = obj2[arg0].flags;
   return flags.has(arg1);
 };
 export const getAvailableActionTypes = function getAvailableActionTypes(arg0) {
-  return Array.from(obj[arg0].availableActionTypes);
+  return Array.from(obj2[arg0].availableActionTypes);
 };
 export const validateRuleByTriggerConfigOrThrow = function validateRuleByTriggerConfigOrThrow(actions, arr) {
   ({ id: require, triggerType } = actions);
   actions = actions.actions;
-  closure_2 = undefined;
-  closure_2 = tmp;
+  let availableActionTypes = tmp;
   if (arr.filter((id) => {
-    let tmp = closure_0 !== id.id;
+    let tmp = require !== id.id;
     if (tmp) {
       tmp = id.triggerType === triggerType;
     }
     return tmp;
-  }).length > obj[triggerType].perGuildMaxCount) {
+  }).length > obj2[triggerType].perGuildMaxCount) {
     const _Error3 = Error;
     const _HermesInternal = HermesInternal;
-    error = new Error("You have exceeded the maximum number of rules of type " + triggerType);
+    const error = new Error("You have exceeded the maximum number of rules of type " + triggerType);
     throw error;
   } else if (actions.some((type) => {
     availableActionTypes = availableActionTypes.availableActionTypes;
@@ -212,17 +218,17 @@ export const validateRuleByTriggerConfigOrThrow = function validateRuleByTrigger
   }
 };
 export const useAvailableTriggerTypes = function useAvailableTriggerTypes(arg0) {
-  isUserProfileRuleEnabled = isUserProfileRuleEnabled(16836).useIsUserProfileRuleEnabled(arg0);
+  isUserProfileRuleEnabled = isUserProfileRuleEnabled(16873).useIsUserProfileRuleEnabled(arg0);
   const items = [isUserProfileRuleEnabled];
-  return React.useMemo(() => {
-    const keys = Object.keys(closure_1_7);
-    return keys.reduce((arg0, arg1) => {
-      const found = closure_1_7[arg1].filter((type) => {
-        let tmp2 = type.type !== closure_1_3.SERVER_POLICY;
+  return noop.useMemo(() => {
+    const keys = Object.keys(obj12);
+    return keys.reduce((acc, item) => {
+      const found = obj12[item].filter((type) => {
+        let tmp2 = type.type !== constants.SERVER_POLICY;
         if (tmp2) {
           let tmp3 = type.type === tmp.USER_PROFILE;
           if (tmp3) {
-            tmp3 = !closure_0;
+            tmp3 = !closure_1_0;
           }
           let tmp5 = !tmp3;
           if (!tmp3) {
@@ -232,35 +238,28 @@ export const useAvailableTriggerTypes = function useAvailableTriggerTypes(arg0) 
         }
         return tmp2;
       });
-      arg0[arg1] = found.map((type) => type.type);
-      return arg0;
-    }, { [closure_1_6.MEMBERS]: [], [closure_1_6.CONTENT]: [] });
+      acc[item] = found.map((type) => type.type);
+      return acc;
+    }, { [closure_2_6.MEMBERS]: [], [closure_2_6.CONTENT]: [] });
   }, items);
 };
-export const getDefaultTriggerMetadataForTriggerType = function getDefaultTriggerMetadataForTriggerType(arg0, arg1) {
-  isInMentionRaidExperiment;
-  if (AutomodTriggerType.DEFAULT_KEYWORD_LIST === arg0) {
-    obj = { allowList: null, presets: null };
-    obj[0] = [];
-    obj[1] = [];
-    return obj;
+export const getDefaultTriggerMetadataForTriggerType = function getDefaultTriggerMetadataForTriggerType(triggerType, guildId) {
+  guild_automod_ExperimentUtils;
+  if (AutomodTriggerType.DEFAULT_KEYWORD_LIST === triggerType) {
+    obj2 = { allowList: [], presets: [] };
+    return obj2;
   } else {
-    if (tmp3.USER_PROFILE !== arg0) {
-      if (tmp3.KEYWORD !== arg0) {
-        if (tmp3.MENTION_SPAM === arg0) {
-          obj = { mentionTotalLimit: null, mentionRaidProtectionEnabled: null };
-          obj[0] = closure_4;
-          obj[1] = tmp2;
+    if (tmp3.USER_PROFILE !== triggerType) {
+      if (tmp3.KEYWORD !== triggerType) {
+        if (tmp3.MENTION_SPAM === triggerType) {
+          const obj = { mentionTotalLimit, mentionRaidProtectionEnabled: tmp2 };
           return obj;
-        } else if (tmp3.ML_SPAM !== arg0) {
+        } else if (tmp3.ML_SPAM !== triggerType) {
           const SERVER_POLICY = tmp3.SERVER_POLICY;
         }
       }
     }
-    obj = { keywordFilter: null, regexPatterns: null, allowList: null };
-    obj[0] = [];
-    obj[1] = [];
-    obj[2] = [];
-    return obj;
+    const obj3 = { keywordFilter: [], regexPatterns: [], allowList: [] };
+    return obj3;
   }
 };

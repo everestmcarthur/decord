@@ -1,54 +1,50 @@
-// Module ID: 12599
-// Function ID: 12600
-// Name: isMessagePreviewEnabledForChannel
-// Dependencies: [1371, 7219, 7220, 4783, 504, 573, 2]
+// Module ID: 12625
+// Function ID: 12626
+// Name: MessageRequestPreviewStore
+// Dependencies: [1371, 7233, 7234, 4797, 504, 573, 2]
 
-// Module 12599 (isMessagePreviewEnabledForChannel)
+// Module 12625 (MessageRequestPreviewStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4783 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
-import closure_3 from "processChannel" /* 7219 */;
-import closure_4 from "processChannel" /* 7220 */;
-import set from "set" /* 2 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4797 */;
+import UserStore from "UserStore" /* 1371 */;
+import MessageRequestStore from "MessageRequestStore" /* 7233 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7234 */;
 
-require = arg1;
+require = fn;
 function isMessagePreviewEnabledForChannel(id) {
-  let isMessageRequestResult = closure_3.isMessageRequest(id);
+  let isMessageRequestResult = MessageRequestStore.isMessageRequest(id);
   if (!isMessageRequestResult) {
-    isMessageRequestResult = closure_4.isSpam(id);
+    isMessageRequestResult = SpamMessageRequestStore.isSpam(id);
   }
   return isMessageRequestResult;
 }
 function storeMessagePreview(id, arg1) {
-  let isMessageRequestResult = closure_3.isMessageRequest(id);
+  let isMessageRequestResult = MessageRequestStore.isMessageRequest(id);
   if (!isMessageRequestResult) {
-    isMessageRequestResult = closure_4.isSpam(id);
+    isMessageRequestResult = SpamMessageRequestStore.isSpam(id);
   }
   if (isMessageRequestResult) {
     if (true) {
       let messageRecord = null;
       if (!flag2) {
-        let obj = createMinimalMessageRecord;
-        messageRecord = obj.createMessageRecord(null);
+        messageRecord = MessageRecordUtils.createMessageRecord(null);
       }
-      obj = { loaded: true, error: null, message: null };
-      obj[1] = flag;
-      obj[2] = messageRecord;
-      closure_5[id] = obj;
+      const obj2 = { loaded: true, error: flag, message: messageRecord };
+      closure_5[id] = obj2;
     } else {
       // // eliminated: always false
     }
   }
 }
-let closure_5 = {};
+const dependencyMap = {};
 let set = new Set();
 const Store = initializeDefault.Store;
 class MessageRequestPreviewStore extends Store {
 }
 const prototype = MessageRequestPreviewStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_3, closure_4, closure_2);
+  this.waitFor(MessageRequestStore, SpamMessageRequestStore, UserStore);
 };
 prototype["shouldLoadMessageRequestPreview"] = function shouldLoadMessageRequestPreview(id) {
   return !set.has(id);
@@ -60,7 +56,7 @@ prototype["getMessageRequestPreview"] = function getMessageRequestPreview(id) {
   return dependencyMap[id];
 };
 MessageRequestPreviewStore.displayName = "MessageRequestPreviewStore";
-const messageRequestPreviewStore = new MessageRequestPreviewStore(dispatcherDefault, {
+const messageRequestPreviewStore = new MessageRequestPreviewStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     closure_5 = {};
     set.clear();
@@ -68,9 +64,9 @@ const messageRequestPreviewStore = new MessageRequestPreviewStore(dispatcherDefa
   CHANNEL_CREATE: function handleChannelCreate(channel) {
     channel = channel.channel;
     const id = channel.id;
-    let isMessageRequestResult = closure_3.isMessageRequest(id);
+    let isMessageRequestResult = MessageRequestStore.isMessageRequest(id);
     if (!isMessageRequestResult) {
-      isMessageRequestResult = closure_4.isSpam(id);
+      isMessageRequestResult = SpamMessageRequestStore.isSpam(id);
     }
     if (isMessageRequestResult) {
       set.add(channel.id);
@@ -81,12 +77,8 @@ const messageRequestPreviewStore = new MessageRequestPreviewStore(dispatcherDefa
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp4 = nextResult;
-      let tmp5 = isMessagePreviewEnabledForChannel;
       if (!isMessagePreviewEnabledForChannel(nextResult.id)) {
-        let tmp6 = set;
-        let tmp7 = nextResult;
         let deleteResult = set.delete(tmp4.id);
-        let tmp9 = closure_5;
         let id = tmp4.id;
         delete tmp2[tmp];
       }
@@ -101,27 +93,24 @@ const messageRequestPreviewStore = new MessageRequestPreviewStore(dispatcherDefa
     if (isPushNotification.isPushNotification) {
       return false;
     } else {
-      let channel_id = isPushNotification.message.channel_id;
+      const channel_id = isPushNotification.message.channel_id;
       const message = isPushNotification.message;
-      let isMessageRequestResult = closure_3.isMessageRequest(channel_id);
+      let isMessageRequestResult = MessageRequestStore.isMessageRequest(channel_id);
       if (!isMessageRequestResult) {
-        isMessageRequestResult = closure_4.isSpam(channel_id);
+        isMessageRequestResult = SpamMessageRequestStore.isSpam(channel_id);
       }
       if (isMessageRequestResult) {
         if (null == message) {
           let messageRecord = null;
           if (null != message) {
-            let obj = createMinimalMessageRecord;
-            messageRecord = obj.createMessageRecord(message);
+            messageRecord = MessageRecordUtils.createMessageRecord(message);
           }
-          obj = { loaded: true, error: null, message: null };
-          obj[1] = false;
-          obj[2] = messageRecord;
-          closure_5[channel_id] = obj;
+          const obj2 = { loaded: true, error: false, message: messageRecord };
+          closure_5[channel_id] = obj2;
         } else {
-          channel_id = undefined;
+          let channel_id1;
           if (message != null) {
-            channel_id = message.channel_id;
+            channel_id1 = message.channel_id;
           }
         }
       }
@@ -137,9 +126,8 @@ const messageRequestPreviewStore = new MessageRequestPreviewStore(dispatcherDefa
         if (null != tmp2.message) {
           const obj = {};
           const merged = Object.assign(tmp2);
-          obj.message = createMinimalMessageRecord.updateMessageRecord(tmp2.message, message.message);
+          obj.message = MessageRecordUtils.updateMessageRecord(tmp2.message, message.message);
           dependencyMap[channel_id] = obj;
-          const obj2 = createMinimalMessageRecord;
         }
         tmp3 = tmp4;
       }
@@ -148,9 +136,9 @@ const messageRequestPreviewStore = new MessageRequestPreviewStore(dispatcherDefa
   },
   MESSAGE_DELETE: function handleMessageDelete(channelId) {
     channelId = channelId.channelId;
-    let isMessageRequestResult = closure_3.isMessageRequest(channelId);
+    let isMessageRequestResult = MessageRequestStore.isMessageRequest(channelId);
     if (!isMessageRequestResult) {
-      isMessageRequestResult = closure_4.isSpam(channelId);
+      isMessageRequestResult = SpamMessageRequestStore.isSpam(channelId);
     }
     if (isMessageRequestResult) {
       closure_5[channelId.channelId] = { loaded: true, error: false, message: null };
@@ -160,30 +148,26 @@ const messageRequestPreviewStore = new MessageRequestPreviewStore(dispatcherDefa
   },
   LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: function handleLoadMessageRequestsSupplementalDataSuccess(supplementalData) {
     supplementalData = supplementalData.supplementalData;
-    set = undefined;
     const items = [...supplementalData.requestedChannelIds];
     set = new Set(items);
     const item = supplementalData.forEach((channel_id) => {
       ({ channel_id, message_preview } = channel_id);
-      let isMessageRequestResult = closure_1_3.isMessageRequest(channel_id);
+      let isMessageRequestResult = MessageRequestStore.isMessageRequest(channel_id);
       if (!isMessageRequestResult) {
-        isMessageRequestResult = closure_1_4.isSpam(channel_id);
+        isMessageRequestResult = SpamMessageRequestStore.isSpam(channel_id);
       }
       if (isMessageRequestResult) {
         if (null == message_preview) {
           let messageRecord = null;
           if (null != message_preview) {
-            let obj = set(closure_1_1[3]);
-            messageRecord = obj.createMessageRecord(message_preview);
+            messageRecord = MessageRecordUtils.createMessageRecord(message_preview);
           }
-          obj = { loaded: true, error: null, message: null };
-          obj[1] = false;
-          obj[2] = messageRecord;
-          closure_1_5[channel_id] = obj;
+          const obj2 = { loaded: true, error: false, message: messageRecord };
+          closure_5[channel_id] = obj2;
         } else {
-          channel_id = undefined;
+          let channel_id1;
           if (message_preview != null) {
-            channel_id = message_preview.channel_id;
+            channel_id1 = message_preview.channel_id;
           }
         }
       }
@@ -191,27 +175,25 @@ const messageRequestPreviewStore = new MessageRequestPreviewStore(dispatcherDefa
     });
     const arr = Array.from(set);
     while (tmp4 !== undefined) {
-      let tmp6 = storeMessagePreview;
       let tmp7 = storeMessagePreview(tmp5, null);
       continue;
     }
   },
   LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_ERROR: function handleLoadMessageRequestsSupplementalDataError(requestedChannelIds) {
     requestedChannelIds = requestedChannelIds.requestedChannelIds;
-    const item = requestedChannelIds.forEach((id) => {
-      let isMessageRequestResult = messageRequest.isMessageRequest(id);
+    const item = requestedChannelIds.forEach((item) => {
+      let isMessageRequestResult = messageRequest.isMessageRequest(item);
       if (!isMessageRequestResult) {
-        isMessageRequestResult = spam.isSpam(id);
+        isMessageRequestResult = spam.isSpam(item);
       }
       if (isMessageRequestResult) {
-        const obj = { loaded: true, error: null, message: null };
-        obj[1] = true;
-        obj[2] = null;
-        closure_5[id] = obj;
+        const obj = { loaded: true, error: true, message: null };
+        dependencyMap[item] = obj;
       }
     });
   }
 });
-const result = set.fileFinishedImporting("modules/message_request/MessageRequestPreviewStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/message_request/MessageRequestPreviewStore.tsx");
 
 export default messageRequestPreviewStore;

@@ -1,31 +1,32 @@
-// Module ID: 11199
-// Function ID: 11200
-// Name: getBrandSafetyContext
-// Dependencies: [11200, 1957, 1979, 4209, 4381, 1371, 11201, 7699, 1396, 4713, 2]
+// Module ID: 11226
+// Function ID: 11227
+// Name: BrandSafetyContext
+// Dependencies: [11227, 1957, 1979, 4222, 4395, 1371, 11228, 7713, 1396, 4727, 2]
 // Exports: getBrandSafetyContext
 
-// Module 11199 (getBrandSafetyContext)
-import set from "set" /* 2 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
-import MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN from "MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN" /* 11201 */;
-import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 11200 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import closure_6 from "createGuildRecordFromRust" /* 1979 */;
-import closure_7 from "markAllUserIdListsStale" /* 4209 */;
-import closure_8 from "handleConnectionOpen" /* 4381 */;
-import closure_9 from "mergeGuildAvatar" /* 1371 */;
+// Module 11226 (BrandSafetyContext)
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import ContentImpressionTrackerConstants from "ContentImpressionTrackerConstants" /* 11228 */;
+import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 11227 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
+import UserStore from "UserStore" /* 1371 */;
+import size from "module_2" /* 2 */;
 
-({ getVisibleChannelIdsMethod: c3, getVisibleGuildIdsMethod: c4 } = SidebarVisibilityMethodStore);
-let closure_10 = MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN.MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN;
-let result = set.fileFinishedImporting("modules/quests/lib/analytics/BrandSafetyContext.tsx");
+const require = globalThis.__r;
+
+({ getVisibleChannelIdsMethod: c3, getVisibleGuildIdsMethod: closure_4 } = SidebarVisibilityMethodStore);
+let closure_10 = ContentImpressionTrackerConstants.MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN;
+let result = size.fileFinishedImporting("modules/quests/lib/analytics/BrandSafetyContext.tsx");
 
 export const getBrandSafetyContext = function getBrandSafetyContext(questContent) {
-  let obj = _require(7699);
-  const result = obj.isBillableQuestContent(questContent);
-  obj1 = _require(7699);
-  const adContext = obj1.getAdContext(questContent);
-  const tmp4 = callback2();
-  const tmp5 = callback();
+  const result = require("QuestDataUtils").isBillableQuestContent(questContent);
+  let obj = require("QuestDataUtils");
+  const adContext = require("QuestDataUtils").getAdContext(questContent);
+  const tmp4 = closure_4();
+  const tmp5 = closure_3();
   let prop;
   if (adContext != null) {
     prop = adContext.is_campaign_ias_enabled;
@@ -34,68 +35,64 @@ export const getBrandSafetyContext = function getBrandSafetyContext(questContent
     if (result) {
       if (undefined !== tmp4) {
         if (undefined !== tmp5) {
-          guildId = guildId.getGuildId();
+          const guildId = SelectedGuildStore.getGuildId();
           let guild = null;
           if (null != guildId) {
-            guild = store.getGuild(guildId);
+            guild = GuildStore.getGuild(guildId);
           }
           if (tmp7) {
             let items = [];
           } else {
-            _require = store.getGuilds();
-            const mapped = tmp4().map((arg0) => {
-              if (undefined === dependencyMap[arg0]) {
+            _require = GuildStore.getGuilds();
+            const mapped = tmp4().map((item) => {
+              if (undefined === dependencyMap[item]) {
                 return null;
               } else {
-                let obj = { id: null, name: null };
-                ({ id: obj3[0], name: obj3[1] } = tmp);
+                const obj5 = { id: null, name: null };
+                ({ id: obj3.id, name: obj3.name } = tmp);
                 if (null !== tmp.description) {
-                  obj.description = tmp.description;
+                  obj5.description = tmp.description;
                 }
                 let tmp2 = null;
                 if (null !== tmp.icon) {
-                  obj = closure_1_1(closure_1_2[8]);
-                  obj = { id: null, icon: null, size: 44, canAnimate: true };
-                  ({ id: obj2[0], icon: obj2[1] } = tmp);
-                  let guildIconURL = obj.getGuildIconURL(obj);
+                  ({ id: obj2.id, icon: obj2.icon } = tmp);
+                  let guildIconURL = AvatarUtilsDefault.getGuildIconURL({ id: null, icon: null, size: 44, canAnimate: true });
                   if (guildIconURL == null) {
                     guildIconURL = null;
                   }
                   tmp2 = guildIconURL;
+                  const obj6 = { id: null, icon: null, size: 44, canAnimate: true };
                 }
                 if (null !== tmp2) {
-                  obj.icon_url = tmp2;
+                  obj5.icon_url = tmp2;
                 }
-                return obj;
+                return obj5;
               }
             });
-            items = mapped.filter((arg0) => null !== arg0);
+            items = mapped.filter((item) => null !== item);
             const tmp4Result = tmp4();
           }
-          obj = { guilds: null, channels: null };
-          obj[0] = items;
+          const obj3 = { guilds: items, channels: null };
           if (!tmp8) {
             if (null != guild) {
-              const mapped1 = tmp5().map((arg0) => {
-                channel = channel.getChannel(arg0);
+              const mapped1 = tmp5().map((item) => {
+                channel = channel.getChannel(item);
                 if (undefined === channel) {
                   return null;
                 } else {
-                  const obj = { id: null, name: null };
-                  obj[0] = channel.id;
-                  obj[1] = dependencyMap(table[9]).computeChannelName(channel, closure_9, closure_7);
+                  const obj = { id: channel.id, name: dependencyMap(closure_1_2[9]).computeChannelName(channel, UserStore, RelationshipStore) };
                   if (channel.topic.length > 0) {
                     obj.channel_topic = channel.topic;
                   }
                   return obj;
                 }
               });
-              let found = mapped1.filter((arg0) => null !== arg0);
+              let found = mapped1.filter((item) => null !== item);
               const tmp5Result = tmp5();
             }
-            obj[1] = found;
+            obj3.channels = found;
             if (null != guildId) {
-              obj.selected_guild_id = guildId;
+              obj3.selected_guild_id = guildId;
             }
             let banner;
             if (guild != null) {
@@ -103,32 +100,31 @@ export const getBrandSafetyContext = function getBrandSafetyContext(questContent
             }
             let tmp15 = null;
             if (null != banner) {
-              obj = { id: null, banner: null };
-              ({ id: obj5[0], banner: obj5[1] } = guild);
-              let guildBannerURL = getAvatarURLDefault.getGuildBannerURL(obj, true);
+              ({ id: obj5.id, banner: obj5.banner } = guild);
+              let guildBannerURL = AvatarUtilsDefault.getGuildBannerURL({ id: null, banner: null }, true);
               if (guildBannerURL == null) {
                 guildBannerURL = null;
               }
               tmp15 = guildBannerURL;
-              const obj4 = getAvatarURLDefault;
+              let obj6 = { id: null, banner: null };
             }
             if (null !== tmp15) {
-              obj.selected_guild_banner_url = tmp15;
+              obj3.selected_guild_banner_url = tmp15;
             }
-            if (obj.guilds.length > closure_10) {
-              const guilds = obj.guilds;
-              obj.guilds = guilds.slice(0, tmp18);
-              obj.truncated = true;
+            if (obj3.guilds.length > closure_10) {
+              const guilds = obj3.guilds;
+              obj3.guilds = guilds.slice(0, tmp18);
+              obj3.truncated = true;
             }
-            if (obj.channels.length > closure_10) {
-              const channels = obj.channels;
-              obj.channels = channels.slice(0, tmp18);
-              obj.truncated = true;
+            if (obj3.channels.length > closure_10) {
+              const channels = obj3.channels;
+              obj3.channels = channels.slice(0, tmp18);
+              obj3.truncated = true;
             }
-            obj1 = { brand_safety_context: null };
+            const obj9 = { brand_safety_context: null };
             const _JSON = JSON;
-            obj1[0] = JSON.stringify(obj);
-            return obj1;
+            obj9.brand_safety_context = JSON.stringify(obj3);
+            return obj9;
           }
           found = [];
         }

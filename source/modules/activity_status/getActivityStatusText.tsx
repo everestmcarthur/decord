@@ -1,17 +1,17 @@
-// Module ID: 10893
-// Function ID: 10894
+// Module ID: 10920
+// Function ID: 10921
 // Name: getActivityStatusText
-// Dependencies: [1074, 10894, 7739, 10895, 1114, 10896, 10897, 8344, 2]
+// Dependencies: [1074, 10921, 7753, 10922, 1114, 10923, 10924, 8372, 2]
 // Exports: default
 
-// Module 10893 (getActivityStatusText)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7739 */;
-import StatusDisplayTypes from "StatusDisplayTypes" /* 10894 */;
+// Module 10920 (getActivityStatusText)
+import Constants from "Constants" /* 1074 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7753 */;
+import StatusDisplayTypes from "StatusDisplayTypes" /* 10921 */;
+import size from "module_2" /* 2 */;
 
-const ActivityTypes = ME.ActivityTypes;
-const result = set.fileFinishedImporting("modules/activity_status/getActivityStatusText.tsx");
+const ActivityTypes = Constants.ActivityTypes;
+const result = size.fileFinishedImporting("modules/activity_status/getActivityStatusText.tsx");
 
 export default function getActivityStatusText(name) {
   let flag = arg1;
@@ -75,7 +75,7 @@ export default function getActivityStatusText(name) {
     if (name != null) {
       status_display_type1 = name.status_display_type;
     }
-    if (status_display_type1 !== tmp15(10894).StatusDisplayTypes.STATE) {
+    if (status_display_type1 !== tmp15(10921).StatusDisplayTypes.STATE) {
       let status_display_type2;
       if (name != null) {
         status_display_type2 = name.status_display_type;
@@ -84,7 +84,7 @@ export default function getActivityStatusText(name) {
       if (tmp20) {
         tmp17 = tmp5;
       }
-      tmp20 = status_display_type2 === tmp15(10894).StatusDisplayTypes.DETAILS && null != tmp5;
+      tmp20 = status_display_type2 === tmp15(10921).StatusDisplayTypes.DETAILS && null != tmp5;
     } else {
       tmp17 = tmp8;
     }
@@ -92,10 +92,8 @@ export default function getActivityStatusText(name) {
     tmp17 = tmp2;
   }
   if (isEmbeddedActivityDefault(name)) {
-    const tmp28 = tmp21(10895)(tmp2);
-    let obj = { text: null, tooltip: null };
-    obj[0] = tmp28;
-    obj[1] = tmp28;
+    const tmp28 = tmp21(10922)(tmp2);
+    const obj = { text: tmp28, tooltip: tmp28 };
     return obj;
   } else {
     let type1;
@@ -104,16 +102,14 @@ export default function getActivityStatusText(name) {
     }
     if (type1 === tmp11.PLAYING) {
       if (null != tmp17) {
-        obj = { text: null, tooltip: null };
-        obj[0] = tmp17;
+        const obj2 = { text: tmp17, tooltip: null };
         const intl8 = tmp15(1114).intl;
-        obj1 = { game: null };
-        obj1[0] = tmp17;
-        obj[1] = intl8.formatToPlainString(tmp15(1114).t.lFApmz, obj1);
-        return obj;
+        const obj3 = { game: tmp17 };
+        obj2.tooltip = intl8.formatToPlainString(tmp15(1114).t.lFApmz, obj3);
+        return obj2;
       }
     }
-    if (tmp21(10896)(name)) {
+    if (tmp21(10923)(name)) {
       if (flag) {
         if (null != tmp8) {
           const parts = tmp8.split("; ");
@@ -121,27 +117,23 @@ export default function getActivityStatusText(name) {
           if (parts != null) {
             joined = parts.join(", ");
           }
-          const obj2 = { text: null, tooltip: null };
-          obj2[0] = joined;
+          const obj4 = { text: joined, tooltip: null };
           const intl7 = tmp15(1114).intl;
-          const obj3 = { name: null };
-          obj3[0] = joined;
-          obj2[1] = intl7.formatToPlainString(tmp15(1114).t.Vnuxue, obj3);
-          return obj2;
+          const obj5 = { name: joined };
+          obj4.tooltip = intl7.formatToPlainString(tmp15(1114).t.Vnuxue, obj5);
+          return obj4;
         }
       }
     }
     if (tmp15Result.isStageActivity(name)) {
       if (null != tmp2) {
-        const obj4 = { text: null, tooltip: null };
-        obj4[0] = tmp2;
+        const obj6 = { text: tmp2, tooltip: null };
         const intl6 = tmp15(1114).intl;
-        const obj5 = { name: null };
-        obj5[0] = tmp2;
-        obj4[1] = intl6.formatToPlainString(tmp15(1114).t.pW3Ip3, obj5);
-        let obj16 = obj4;
+        const obj7 = { name: tmp2 };
+        obj6.tooltip = intl6.formatToPlainString(tmp15(1114).t.pW3Ip3, obj7);
+        let obj18 = obj6;
       }
-      return obj16;
+      return obj18;
     }
     let type2;
     if (name != null) {
@@ -149,25 +141,21 @@ export default function getActivityStatusText(name) {
     }
     if (type2 === tmp11.LISTENING) {
       if (null != tmp17) {
-        const obj6 = { text: null, tooltip: null };
-        obj6[0] = tmp17;
+        const obj8 = { text: tmp17, tooltip: null };
         const intl5 = tmp15(1114).intl;
-        const obj7 = { name: null };
-        obj7[0] = tmp17;
-        obj6[1] = intl5.formatToPlainString(tmp15(1114).t.Vnuxue, obj7);
-        obj16 = obj6;
+        const obj9 = { name: tmp17 };
+        obj8.tooltip = intl5.formatToPlainString(tmp15(1114).t.Vnuxue, obj9);
+        obj18 = obj8;
       }
     }
-    if (tmp21(8344)(name)) {
+    if (tmp21(8372)(name)) {
       if (flag) {
         if (null != tmp5) {
-          const obj8 = { text: null, tooltip: null };
-          obj8[0] = tmp5;
+          const obj10 = { text: tmp5, tooltip: null };
           const intl4 = tmp15(1114).intl;
-          const obj9 = { name: null };
-          obj9[0] = tmp5;
-          obj8[1] = intl4.formatToPlainString(tmp15(1114).t.pW3Ip3, obj9);
-          obj16 = obj8;
+          const obj11 = { name: tmp5 };
+          obj10.tooltip = intl4.formatToPlainString(tmp15(1114).t.pW3Ip3, obj11);
+          obj18 = obj10;
         }
       }
     }
@@ -177,13 +165,11 @@ export default function getActivityStatusText(name) {
     }
     if (type3 === tmp11.WATCHING) {
       if (null != tmp17) {
-        const obj10 = { text: null, tooltip: null };
-        obj10[0] = tmp17;
+        const obj12 = { text: tmp17, tooltip: null };
         const intl3 = tmp15(1114).intl;
-        const obj11 = { name: null };
-        obj11[0] = tmp17;
-        obj10[1] = intl3.formatToPlainString(tmp15(1114).t.pW3Ip3, obj11);
-        obj16 = obj10;
+        const obj13 = { name: tmp17 };
+        obj12.tooltip = intl3.formatToPlainString(tmp15(1114).t.pW3Ip3, obj13);
+        obj18 = obj12;
       }
     }
     let type4;
@@ -192,13 +178,11 @@ export default function getActivityStatusText(name) {
     }
     if (type4 === tmp11.COMPETING) {
       if (null != tmp17) {
-        const obj12 = { text: null, tooltip: null };
-        obj12[0] = tmp17;
+        const obj14 = { text: tmp17, tooltip: null };
         const intl2 = tmp15(1114).intl;
-        const obj13 = { name: null };
-        obj13[0] = tmp17;
-        obj12[1] = intl2.formatToPlainString(tmp15(1114).t.QQ2wVE, obj13);
-        obj16 = obj12;
+        const obj15 = { name: tmp17 };
+        obj14.tooltip = intl2.formatToPlainString(tmp15(1114).t.QQ2wVE, obj15);
+        obj18 = obj14;
       }
     }
     let type5;
@@ -207,16 +191,14 @@ export default function getActivityStatusText(name) {
     }
     if (type5 === tmp11.STREAMING) {
       if (null != tmp17) {
-        const obj14 = { text: null, tooltip: null };
-        obj14[0] = tmp17;
+        const obj16 = { text: tmp17, tooltip: null };
         const intl = tmp15(1114).intl;
-        const obj15 = { name: null };
-        obj15[0] = tmp17;
-        obj14[1] = intl.formatToPlainString(tmp15(1114).t["0wJXSh"], obj15);
-        obj16 = obj14;
+        const obj17 = { name: tmp17 };
+        obj16.tooltip = intl.formatToPlainString(tmp15(1114).t["0wJXSh"], obj17);
+        obj18 = obj16;
       }
     }
-    obj16 = {};
-    tmp15Result = tmp15(10897);
+    obj18 = {};
+    tmp15Result = tmp15(10924);
   }
 };

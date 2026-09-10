@@ -1,14 +1,14 @@
-// Module ID: 15091
-// Function ID: 15092
-// Name: commonTriggerPointConfiguration
-// Dependencies: [4477, 10814, 2]
+// Module ID: 15118
+// Function ID: 15119
+// Name: QuestHomeOpenTriggerPoint
+// Dependencies: [4491, 10841, 2]
 
-// Module 15091 (commonTriggerPointConfiguration)
-import set from "set" /* 2 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4477 */;
-import registeredExperimentIds from "registeredExperimentIds" /* 10814 */;
+// Module 15118 (QuestHomeOpenTriggerPoint)
+import ExperimentConstants from "ExperimentConstants" /* 4491 */;
+import Helpers from "Helpers" /* 10841 */;
+import size from "module_2" /* 2 */;
 
-const commonTriggerPointConfiguration = new registeredExperimentIds.CommonTriggerPointConfiguration([], ExperimentBuckets.CommonTriggerPoints.QUEST_HOME_OPEN, { location: "open quest home" });
-const result = set.fileFinishedImporting("modules/experiments/trigger_points/QuestHomeOpenTriggerPoint.tsx");
+const commonTriggerPointConfiguration = new Helpers.CommonTriggerPointConfiguration([], ExperimentConstants.CommonTriggerPoints.QUEST_HOME_OPEN, { location: "open quest home" });
+const result = size.fileFinishedImporting("modules/experiments/trigger_points/QuestHomeOpenTriggerPoint.tsx");
 
 export const QuestHomeOpenTriggerPoint = commonTriggerPointConfiguration;

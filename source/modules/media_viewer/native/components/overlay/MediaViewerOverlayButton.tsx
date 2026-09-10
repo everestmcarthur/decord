@@ -1,17 +1,18 @@
-// Module ID: 8369
-// Function ID: 8370
-// Dependencies: [19, 21, 8097, 2]
+// Module ID: 8397
+// Function ID: 8398
+// Name: MediaViewerOverlayButton
+// Dependencies: [19, 21, 8113, 2]
 
-// Module 8369
-import IconButton from "IconButton" /* 8097 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+// Module 8397 (MediaViewerOverlayButton)
+import IconButton from "IconButton" /* 8113 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaViewerOverlayButton.tsx");
+
+export default noop.forwardRef((arg0, ref) => {
   const merged = Object.assign(arg0);
   return jsx(IconButton.IconButton, { ref, size: "md", variant: "secondary-overlay" });
 });
-const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaViewerOverlayButton.tsx");
-
-export default forwardRefResult;

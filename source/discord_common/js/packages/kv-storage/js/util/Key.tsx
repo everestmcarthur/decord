@@ -1,14 +1,14 @@
 // Module ID: 1992
 // Function ID: 1993
-// Name: combineKey
+// Name: Key
 // Dependencies: [1993, 2]
 // Exports: combineKey, combineKeyPrefix
 
-// Module 1992 (combineKey)
-import set from "set" /* 2 */;
+// Module 1992 (Key)
 import TableId from "TableId" /* 1993 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/util/Key.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/util/Key.tsx");
 
 export const combineKey = function combineKey(prefix, key) {
   if (Array.isArray(key)) {
@@ -24,7 +24,7 @@ export const combineKey = function combineKey(prefix, key) {
       return items1;
     }
   }
-  error = new Error("combination results in an invalid key that has " + items1.length + " elements: " + JSON.stringify(items1));
+  const error = new Error("combination results in an invalid key that has " + items1.length + " elements: " + JSON.stringify(items1));
   throw error;
 };
 export const combineKeyPrefix = function combineKeyPrefix(prefix, items) {
@@ -42,7 +42,7 @@ export const combineKeyPrefix = function combineKeyPrefix(prefix, items) {
     const _Error = Error;
     const _JSON = JSON;
     const _HermesInternal = HermesInternal;
-    error = new Error("combination results in an invalid prefix key that has " + items1.length + " elements: " + JSON.stringify(items1));
+    const error = new Error("combination results in an invalid prefix key that has " + items1.length + " elements: " + JSON.stringify(items1));
     throw error;
   }
 };

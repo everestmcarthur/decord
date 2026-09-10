@@ -1,26 +1,27 @@
-// Module ID: 10986
-// Function ID: 10987
-// Name: getChannelIdFromDestinationId
-// Dependencies: [5, 9839, 1957, 4199, 1371, 10987, 1074, 9840, 4573, 9849, 1114, 1369, 12, 2]
+// Module ID: 11013
+// Function ID: 11014
+// Name: formatResults
+// Dependencies: [5, 9866, 1957, 4212, 1371, 11014, 1074, 9867, 4587, 9876, 1114, 1369, 12, 2]
 // Exports: default, destinationKey, formatResultsWithHeaders, getDestinationIdFromChannelId, getDestinationIdFromResult, getOrResolveChannelIdFromDestinationId
 
-// Module 10986 (getChannelIdFromDestinationId)
-import sortByMatchScore from "sortByMatchScore" /* 9840 */;
-import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9849 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleConnectionOpen" /* 9839 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import { isAllowedType } from "ALLOWED_TYPES" /* 10987 */;
-import ME from "ME" /* 1074 */;
+// Module 11013 (formatResults)
+import _mod12 from "module_12" /* 12 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4587 */;
+import sortByMatchScore from "sortByMatchScore" /* 9867 */;
+import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9876 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import QuickSwitcherStore from "QuickSwitcherStore" /* 9866 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+require = fn;
 function getChannelIdFromDestinationId(type) {
   if ("channel" === type.type) {
     return type.id;
   } else {
-    const dMFromUserId = authStore.getDMFromUserId(type.id);
+    const dMFromUserId = ChannelStore.getDMFromUserId(type.id);
     let tmp4;
     if (null != dMFromUserId) {
       tmp4 = dMFromUserId;
@@ -28,105 +29,81 @@ function getChannelIdFromDestinationId(type) {
     return tmp4;
   }
 }
-function _getOrResolveChannelIdFromDestinationId() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c1 = 0;
-    c4 = 0;
-    return (function*(arg0) {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          v0 = 2;
-          if (0 === table) {
-            if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const tmp21 = closure_1_11(closure_0);
-              if (null != tmp21) {
-                v0 = 3;
-                obj1 = { value: null, done: true };
-                obj1[0] = tmp21;
-                return obj1;
-              } else if ("user" === tmp19.type) {
-                c4 = 1;
-                let obj2 = v0(table[8]);
-                table = 2;
-                v0 = 1;
-                obj2 = { value: null, done: false };
-                obj2[0] = obj2.getOrEnsurePrivateChannel(tmp19.id);
-                return obj2;
-              } else {
-                v0 = 3;
-                return { value: "HermesInternal", done: null };
-              }
-            }
-          } else if (1 === tmp6) {
-            c4 = 0;
-            v0 = 3;
-            return { value: "HermesInternal", done: null };
-          } else if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 0;
-            v0 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            c4 = 0;
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp10) {
-          closure_3 = tmp10;
-          if (tmp3 === c4) {
-            v0 = tmp2;
-            throw tmp10;
-          } else {
-            table = tmp;
-          }
-        }
-      }
-    })();
-  });
-  closure_12 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+let closure_12 = async function _getOrResolveChannelIdFromDestinationId(arg0, value) {
+  if (c1 === 2) {
+    c1 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    applyArgumentsResult = apply(self, arguments);
+    try {
+      c1 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
+          c1 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c1 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          const tmp20 = getChannelIdFromDestinationId(closure_0);
+          if (null != tmp20) {
+            c1 = 3;
+            const obj5 = { value: tmp20, done: true };
+            return obj5;
+          } else if ("user" === tmp18.type) {
+            c4 = 1;
+            c2 = 2;
+            c1 = 1;
+            const obj6 = { value: ChannelActionCreatorsDefault.getOrEnsurePrivateChannel(tmp18.id), done: false };
+            return obj6;
+          } else {
+            c1 = 3;
+            return { value: "HermesInternal", done: null };
+          }
+        }
+      } else if (1 === tmp6) {
+        c4 = 0;
+        c1 = 3;
+        return { value: "HermesInternal", done: null };
+      } else if (arg0 === 1) {
+        c1 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        c1 = 3;
+        const obj7 = { value, done: true };
+        return obj7;
+      } else {
+        c4 = 0;
+        c1 = 3;
+        const obj = { value, done: true };
+        return obj;
+      }
+    } catch (tmp10) {
+      closure_3 = tmp10;
+      if (tmp3 === c4) {
+        c1 = tmp2;
+        throw tmp10;
+      } else {
+        c2 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
-function canShareToChannel(type) {
+};
+function canShareToChannel(type, arg1) {
   if (type.type === sortByMatchScore.AutocompleterResultTypes.USER) {
     let tmp8 = arg1;
     if (!arg1) {
-      tmp8 = null != authStore.getDMChannelFromUserId(type.record.id);
+      tmp8 = null != ChannelStore.getDMChannelFromUserId(type.record.id);
     }
     let tmp7 = tmp8;
   } else {
@@ -134,10 +111,8 @@ function canShareToChannel(type) {
     if (!tmp7) {
       let tmp4 = type.record.type !== constants2.GUILD_FORUM && type.record.type !== tmp3.GUILD_MEDIA;
       if (tmp4) {
-        tmp4 = closure_6.can(constants.VIEW_CHANNEL, type.record) && closure_6.can(constants.SEND_MESSAGES, type.record);
-        const obj = closure_6;
-        const tmp5 = constants;
-        const tmp6 = closure_6.can(constants.VIEW_CHANNEL, type.record) && closure_6.can(constants.SEND_MESSAGES, type.record);
+        tmp4 = PermissionStore.can(constants.VIEW_CHANNEL, type.record) && PermissionStore.can(constants.SEND_MESSAGES, type.record);
+        const tmp6 = PermissionStore.can(constants.VIEW_CHANNEL, type.record) && PermissionStore.can(constants.SEND_MESSAGES, type.record);
       }
       tmp7 = tmp4;
     }
@@ -159,25 +134,17 @@ function mergeAndDedupeResultsWithHeaders(found, items1) {
   while (iter !== undefined) {
     let tmp9 = nextResult;
     if (null != nextResult) {
-      let tmp19 = nextResult;
-      let tmp20 = require;
-      let tmp21 = dependencyMap;
       if (tmp9.type === sortByMatchScore.AutocompleterResultTypes.HEADER) {
         let tmp = nextResult;
       } else {
-        let tmp10 = nextResult;
         let id = tmp9.record.id;
         let tmp11 = id;
         if (!set.has(id)) {
-          let tmp12 = id;
           let addResult1 = set.add(tmp11);
-          let tmp14 = tmp;
           if (null != tmp) {
-            let tmp15 = tmp;
             let arr = items.push(tmp);
           }
-          let tmp17 = nextResult;
-          arr = items.push(tmp9);
+          let arr3 = items.push(tmp9);
         }
       }
     }
@@ -185,28 +152,30 @@ function mergeAndDedupeResultsWithHeaders(found, items1) {
   }
   return items;
 }
-({ Permissions: c9, ChannelTypes: c10 } = ME);
-const result = require("set").fileFinishedImporting("modules/share/formatResults.tsx");
+const isAllowedType = fn(11014).isAllowedType;
+const Constants = fn(1074);
+({ Permissions: closure_9, ChannelTypes: c10 } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/share/formatResults.tsx");
 
 export default function formatResults(hasQuery) {
   ({ results, queryMode } = hasQuery);
-  includeMissingDMs = queryMode;
   ({ frequentChannels, targetDestination, selectedDestinations, pinnedDestinations, originDestination } = hasQuery);
-  importDefault = originDestination;
   ({ channelFilter, includeMissingDMs } = hasQuery);
   if (hasQuery.hasQuery) {
+    closure_130_0 = includeMissingDMs;
     if (channelFilter === undefined) {
       channelFilter = canShareToChannel;
     }
-    importDefault = channelFilter;
+    closure_130_1 = channelFilter;
     return mergeAndDedupeResultsWithHeaders(results.filter((type) => {
-      let isNotNullishResult = includeMissingDMs(closure_1_2[11]).isNotNullish(type);
+      let isNotNullishResult = GlobalUtils.isNotNullish(type);
       if (isNotNullishResult) {
-        let tmp4 = type.type === includeMissingDMs(closure_1_2[7]).AutocompleterResultTypes.HEADER;
+        let tmp4 = type.type === sortByMatchScore.AutocompleterResultTypes.HEADER;
         if (!tmp4) {
-          let tmp6 = closure_1_8(type);
+          let tmp6 = isAllowedType(type);
           if (tmp6) {
-            tmp6 = callback(type, includeMissingDMs);
+            tmp6 = originDestination(type, queryMode);
           }
           tmp4 = tmp6;
         }
@@ -222,48 +191,47 @@ export default function formatResults(hasQuery) {
             user = user.getUser(type.id);
             let tmp6 = null;
             if (null != user) {
-              const obj = { type: null, record: null, score: 0 };
-              obj[0] = includeMissingDMs(9840).AutocompleterResultTypes.USER;
-              obj[1] = user;
+              const obj = { type: queryMode(9867).AutocompleterResultTypes.USER, record: user, score: 0 };
               tmp6 = obj;
             }
             let tmp3 = tmp6;
           } else {
-            tmp3 = callback(9849)(type.id);
+            tmp3 = originDestination(9876)(type.id);
           }
           return tmp3;
         });
       }
-      channelHistory = channelHistory.getChannelHistory();
+      const channelHistory = QuickSwitcherStore.getChannelHistory();
       if (channelHistory.length > 0) {
-        let mapped1 = channelHistory.map((arg0) => callback(9849)(arg0));
+        let mapped1 = channelHistory.map((item) => originDestination(9876)(item));
       } else {
         mapped1 = [];
       }
       if (frequentChannels.length > 0) {
-        let mapped2 = frequentChannels.map((id) => callback(9849)(id.id));
+        let mapped2 = frequentChannels.map((id) => originDestination(9876)(id.id));
       } else {
         mapped2 = [];
       }
       const items = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(mapped, 0);
+      const arraySpreadResult = HermesBuiltin.arraySpread(mapped, 0);
       if (null == targetDestination) {
         items[arraySpreadResult] = null;
-        arraySpreadResult = HermesBuiltin.arraySpread(mapped2, HermesBuiltin.arraySpread(mapped1, arraySpreadResult + 1));
-        importDefault = undefined;
+        HermesBuiltin.arraySpread(mapped2, HermesBuiltin.arraySpread(mapped1, arraySpreadResult + 1));
+        closure_129_1 = undefined;
+        closure_129_0 = includeMissingDMs;
         let tmp20 = channelFilter;
         if (channelFilter === undefined) {
           tmp20 = canShareToChannel;
         }
-        importDefault = tmp20;
+        closure_129_1 = tmp20;
         const found = items.filter((type) => {
-          let isNotNullishResult = includeMissingDMs(closure_1_2[11]).isNotNullish(type);
+          let isNotNullishResult = GlobalUtils.isNotNullish(type);
           if (isNotNullishResult) {
-            let tmp4 = type.type === includeMissingDMs(closure_1_2[7]).AutocompleterResultTypes.HEADER;
+            let tmp4 = type.type === sortByMatchScore.AutocompleterResultTypes.HEADER;
             if (!tmp4) {
-              let tmp6 = closure_1_8(type);
+              let tmp6 = isAllowedType(type);
               if (tmp6) {
-                tmp6 = callback(type, includeMissingDMs);
+                tmp6 = originDestination(type, queryMode);
               }
               tmp4 = tmp6;
             }
@@ -272,14 +240,14 @@ export default function formatResults(hasQuery) {
           return isNotNullishResult;
         });
         if (selectedDestinations != null) {
-          const found1 = selectedDestinations.find((arg0) => includeMissingDMs(closure_1_2[12]).isEqual(arg0, closure_1));
+          const found1 = selectedDestinations.find((item) => _mod12.isEqual(item, originDestination));
         }
         if (null != originDestination) {
           if (null == found1) {
             let items1 = [originDestination.id];
           }
           if (null != queryMode) {
-            let substr = mergeAndDedupeResultsWithHeaders(found.filter((type) => type.type === includeMissingDMs), items1);
+            let substr = mergeAndDedupeResultsWithHeaders(found.filter((type) => type.type === queryMode), items1);
           } else {
             substr = mergeAndDedupeResultsWithHeaders(found, items1).slice(0, 15);
             const arr8 = mergeAndDedupeResultsWithHeaders(found, items1);
@@ -288,45 +256,40 @@ export default function formatResults(hasQuery) {
         }
         items1 = [];
       } else if ("user" === targetDestination.type) {
-        user = user.getUser(targetDestination.id);
+        let user = UserStore.getUser(targetDestination.id);
         targetDestination = null;
         if (null != user) {
-          let obj = { type: null, record: null, score: 0 };
-          obj[0] = includeMissingDMs(9840).AutocompleterResultTypes.USER;
-          obj[1] = user;
+          let obj = { type: queryMode(9867).AutocompleterResultTypes.USER, record: user, score: 0 };
           targetDestination = obj;
         }
-        let tmp9 = targetDestination;
       } else {
-        tmp9 = createAutocompleterResultForChannelIdDefault(targetDestination.id);
+        const tmp9 = originDestination(9876)(targetDestination.id);
       }
     }
     mapped = [];
   }
 };
 export const getDestinationIdFromChannelId = function getDestinationIdFromChannelId(channel_id) {
-  const channel = authStore.getChannel(channel_id);
+  const channel = ChannelStore.getChannel(channel_id);
   let type;
   if (channel != null) {
     type = channel.type;
   }
   if (type === constants2.DM) {
-    let obj = { type: "user", id: null };
-    obj[1] = channel.recipients[0];
+    const obj2 = { type: "user", id: channel.recipients[0] };
+    let obj = obj2;
   } else {
-    obj = { type: "channel", id: null };
-    obj[1] = channel_id;
+    obj = { type: "channel", id: channel_id };
   }
   return obj;
 };
-export const getDestinationIdFromResult = function getDestinationIdFromResult(closure_0) {
-  const record = closure_0.record;
-  if (closure_0.type === sortByMatchScore.AutocompleterResultTypes.USER) {
-    let obj = { type: "user", id: null };
-    obj[1] = record.id;
+export const getDestinationIdFromResult = function getDestinationIdFromResult(results) {
+  const record = results.record;
+  if (results.type === sortByMatchScore.AutocompleterResultTypes.USER) {
+    const obj2 = { type: "user", id: record.id };
+    let obj = obj2;
   } else {
-    obj = { type: "channel", id: null };
-    obj[1] = record.id;
+    obj = { type: "channel", id: record.id };
   }
   return obj;
 };
@@ -334,9 +297,9 @@ export const destinationKey = function destinationKey(destinationIdFromResult) {
   return "" + destinationIdFromResult.type + "-" + destinationIdFromResult.id;
 };
 export { getChannelIdFromDestinationId };
-export const getOrResolveChannelIdFromDestinationId = function getOrResolveChannelIdFromDestinationId(closure_0) {
+export const getOrResolveChannelIdFromDestinationId = function getOrResolveChannelIdFromDestinationId() {
   const self = this;
-  const apply = _getOrResolveChannelIdFromDestinationId.apply;
+  const apply = closure_12.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -354,13 +317,13 @@ export const formatResultsWithHeaders = function formatResultsWithHeaders(hasNon
     items1 = [];
   }
   const intl = queryMode(1114).intl;
-  const headerResult = queryMode(9840).createHeaderResult(intl.string(queryMode(1114).t.qm9dSj));
+  const headerResult = queryMode(9867).createHeaderResult(intl.string(queryMode(1114).t.qm9dSj));
   if (hasNonEmptyQuery.hasNonEmptyQuery) {
     const items2 = [headerResult];
     HermesBuiltin.arraySpread(mergeAndDedupeResultsWithHeaders(results.filter(isAllowedType), items1), 1);
     return items2;
   } else {
-    const mapped = frequentChannels.map((id) => callback(table[9])(id.id));
+    const mapped = frequentChannels.map((id) => createAutocompleterResultForChannelIdDefault(id.id));
     const found = mapped.filter(tmp(1369).isNotNullish);
     const found1 = found.filter(isAllowedType);
     if (null != queryMode) {
@@ -369,7 +332,7 @@ export const formatResultsWithHeaders = function formatResultsWithHeaders(hasNon
       let items4 = items3;
     } else {
       const intl2 = tmp(1114).intl;
-      items4 = [tmp(9840).createHeaderResult(intl2.string(tmp(1114).t["80lOZ1"])), , ];
+      items4 = [tmp(9867).createHeaderResult(intl2.string(tmp(1114).t["80lOZ1"])), , ];
       let tmp13 = null;
       if (null != selectedChannelId) {
         const tmp7 = createAutocompleterResultForChannelIdDefault(selectedChannelId);
@@ -377,9 +340,9 @@ export const formatResultsWithHeaders = function formatResultsWithHeaders(hasNon
         if (null != tmp7) {
           let tmp9 = null;
           if (isAllowedType(tmp7)) {
-            let canResult = tmp7.type === tmp(9840).AutocompleterResultTypes.USER;
+            let canResult = tmp7.type === tmp(9867).AutocompleterResultTypes.USER;
             if (!canResult) {
-              canResult = closure_6.can(constants.VIEW_CHANNEL, tmp7.record);
+              canResult = PermissionStore.can(constants.VIEW_CHANNEL, tmp7.record);
             }
             tmp9 = null;
             if (canResult) {
@@ -393,9 +356,9 @@ export const formatResultsWithHeaders = function formatResultsWithHeaders(hasNon
       items4[1] = tmp13;
       items4[2] = headerResult;
       HermesBuiltin.arraySpread(found1, 3);
-      const tmpResult = tmp(9840);
+      const tmpResult = tmp(9867);
     }
     return mergeAndDedupeResultsWithHeaders(items4, items1);
   }
-  const obj = queryMode(9840);
+  const obj = queryMode(9867);
 };

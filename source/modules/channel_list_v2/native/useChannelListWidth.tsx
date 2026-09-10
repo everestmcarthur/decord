@@ -1,25 +1,24 @@
-// Module ID: 16020
-// Function ID: 16021
+// Module ID: 16050
+// Function ID: 16051
 // Name: useChannelListWidth
-// Dependencies: [11533, 4420, 4262, 576, 1093, 2]
+// Dependencies: [11559, 4434, 4275, 576, 1093, 2]
 // Exports: default
 
-// Module 16020 (useChannelListWidth)
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 576 */;
-import keys from "keys" /* 1093 */;
-import map from "map" /* 4262 */;
-import useChatLayoutDefault from "useChatLayout" /* 4420 */;
-import sum from "sum" /* 11533 */;
+// Module 16050 (useChannelListWidth)
+import nativeDefault from "native" /* 576 */;
+import ConstantsIOS from "ConstantsIOS" /* 1093 */;
+import useToken from "useToken" /* 4275 */;
+import useChatLayoutDefault from "useChatLayout" /* 4434 */;
+import useDrawerWidth from "useDrawerWidth" /* 11559 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/channel_list_v2/native/useChannelListWidth.tsx");
+const result = size.fileFinishedImporting("modules/channel_list_v2/native/useChannelListWidth.tsx");
 
 export default function useChannelListWidth() {
-  const drawerWidth = sum.useDrawerWidth();
-  const obj = sum;
-  const token = map.useToken(ThemesDefault.modules.mobile.CHANNEL_DRAWER_SPACING);
+  const drawerWidth = useDrawerWidth.useDrawerWidth();
+  const token = useToken.useToken(nativeDefault.modules.mobile.CHANNEL_DRAWER_SPACING);
   let num = 0;
-  const diff = drawerWidth - keys.DM_WIDTH;
+  const diff = drawerWidth - ConstantsIOS.DM_WIDTH;
   if (useChatLayoutDefault().isChatBesideChannelList) {
     num = token;
   }

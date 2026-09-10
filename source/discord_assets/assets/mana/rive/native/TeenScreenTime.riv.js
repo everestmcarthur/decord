@@ -1,12 +1,11 @@
-// Module ID: 4373
-// Function ID: 4374
-// Name: metadata
+// Module ID: 4387
+// Function ID: 4388
 // Dependencies: [2]
 
-// Module 4373 (metadata)
-import set from "set" /* 2 */;
+// Module 4387
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/rive/native/TeenScreenTime.riv.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/rive/native/TeenScreenTime.riv.js");
 
 export default "https://cdn.discordapp.com/assets/content/0e8095ebdbf89e1289f83a859a892a5790e8a76949d9bf9bb02e4dfc16190d10.riv";
 export const metadata = { fileBytes: 65951 };

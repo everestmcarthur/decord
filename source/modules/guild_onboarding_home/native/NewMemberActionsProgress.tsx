@@ -1,59 +1,56 @@
-// Module ID: 16213
-// Function ID: 16214
-// Name: ProgressBar
-// Dependencies: [19, 17, 2021, 4747, 4748, 1964, 4187, 21, 4560, 576, 4987, 563, 1384, 5123, 1100, 4556, 1114, 1178, 9944, 2]
+// Module ID: 16243
+// Function ID: 16244
+// Name: NewMemberActionsProgress
+// Dependencies: [19, 17, 2021, 4761, 4762, 1964, 4200, 21, 4574, 576, 5001, 563, 1384, 5137, 1100, 4570, 1114, 1178, 9971, 2]
 // Exports: NewMemberActionsProgress
 
-// Module 16213 (ProgressBar)
-import ThemesDefault from "Themes" /* 576 */;
-import LinearGradientDefault from "LinearGradient" /* 4987 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "trackCommunicationDisabled" /* 2021 */;
-import closure_6 from "handleSettingsLoadSuccess" /* 4747 */;
-import closure_7 from "set" /* 4748 */;
-import { StaticChannelRoute } from "set" /* 1964 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4187 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16243 (NewMemberActionsProgress)
+import nativeDefault from "native" /* 576 */;
+import LinearGradientDefault from "LinearGradient" /* 5001 */;
+import noop from "module_19" /* 19 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4761 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 4762 */;
 
-const require = arg1;
+const require = fn;
 function ProgressBar(percent) {
-  const tmp = callback3();
-  let obj = { style: tmp.progressBackground, children: null };
-  obj = { style: null, colors: null, useAngle: true, angle: -90 };
+  const tmp = closure_12();
+  const obj = { style: tmp.progressBackground, children: null };
+  const obj2 = { style: null, colors: null, useAngle: true, angle: -90 };
   const items = [tmp.progressForeground, ];
-  obj = { width: "" + percent.percent + "%" };
-  items[1] = obj;
-  obj[0] = items;
-  obj[1] = ["rgba(103, 203, 134, 1)", "rgba(59, 165, 92, 1)"];
-  obj[1] = callback(LinearGradientDefault, obj);
-  return callback(View, obj);
+  const obj3 = { width: "" + percent.percent + "%" };
+  items[1] = obj3;
+  obj2.style = items;
+  obj2.colors = ["rgba(103, 203, 134, 1)", "rgba(59, 165, 92, 1)"];
+  obj.children = closure_1_10(LinearGradientDefault, obj2);
+  return closure_1_10(View, obj);
 }
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { container: { padding: 16 }, horizontal: { flexDirection: "row", alignItems: "center" }, spaceBetween: { justifyContent: "space-between" }, spaceBelow: { marginBottom: 8 }, progressBackground: null, progressForeground: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.round, height: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
-createCacheKey[4] = createCacheKey;
-createCacheKey[5] = { backgroundColor: ThemesDefault.colors.STATUS_POSITIVE_BACKGROUND, borderRadius: ThemesDefault.radii.round, height: 8 };
-let closure_12 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { backgroundColor: ThemesDefault.colors.STATUS_POSITIVE_BACKGROUND, borderRadius: ThemesDefault.radii.round, height: 8 };
-const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/native/NewMemberActionsProgress.tsx");
+const View = fn(17).View;
+const StaticChannelRoute = fn(1964).StaticChannelRoute;
+const GuildMemberFlags = fn(4200).GuildMemberFlags;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { padding: 16 }, horizontal: { flexDirection: "row", alignItems: "center" }, spaceBetween: { justifyContent: "space-between" }, spaceBelow: { marginBottom: 8 }, progressBackground: { borderRadius: nativeDefault.radii.round, height: 8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL }, progressForeground: null };
+let obj3 = { borderRadius: nativeDefault.radii.round, height: 8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
+obj2.progressForeground = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND, borderRadius: nativeDefault.radii.round, height: 8 };
+let closure_12 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_onboarding_home/native/NewMemberActionsProgress.tsx");
 
 export const NewMemberActionsProgress = function NewMemberActionsProgress(guildId) {
   guildId = guildId.guildId;
-  let stateFromStores;
   let stateFromStores1;
-  const tmp = callback3();
-  let obj = guildId(stateFromStores1[11]);
-  const items = [closure_6];
+  const tmp = closure_12();
+  const items = [GuildOnboardingHomeSettingsStore];
   const items1 = [guildId];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getNewMemberActions(guildId), items1);
-  obj1 = guildId(stateFromStores1[11]);
-  const items2 = [closure_7];
-  stateFromStores1 = obj1.useStateFromStores(items2, () => closure_1_7.getCompletedActions(guildId));
-  let obj2 = guildId(stateFromStores1[11]);
-  const items3 = [closure_5];
-  const stateFromStores2 = obj2.useStateFromStores(items3, () => closure_1_5.getSelfMember(guildId));
+  const stateFromStores = guildId(stateFromStores1[11]).useStateFromStores(items, () => GuildOnboardingHomeSettingsStore.getNewMemberActions(guildId), items1);
+  const obj = guildId(stateFromStores1[11]);
+  const items2 = [GuildOnboardingMemberActionStore];
+  stateFromStores1 = guildId(stateFromStores1[11]).useStateFromStores(items2, () => GuildOnboardingMemberActionStore.getCompletedActions(guildId));
+  const obj2 = guildId(stateFromStores1[11]);
+  const items3 = [GuildMemberStore];
+  const stateFromStores2 = guildId(stateFromStores1[11]).useStateFromStores(items3, () => GuildMemberStore.getSelfMember(guildId));
   let num;
   if (stateFromStores != null) {
     num = stateFromStores.length;
@@ -62,20 +59,21 @@ export const NewMemberActionsProgress = function NewMemberActionsProgress(guildI
     num = 0;
   }
   const items4 = [stateFromStores1, stateFromStores];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     if (null != stateFromStores) {
       if (null != stateFromStores1) {
-        c0 = 0;
-        const item = stateFromStores.forEach((arg0) => {
-          if (null != closure_1_2[arg0.channelId]) {
+        closure_0 = 0;
+        const item = stateFromStores.forEach((item) => {
+          if (null != stateFromStores1[item.channelId]) {
             closure_0 = closure_0 + 1;
           }
         });
-        return c0;
+        return closure_0;
       }
     }
     return 0;
   }, items4);
+  const obj3 = guildId(stateFromStores1[11]);
   let num2;
   if (stateFromStores2 != null) {
     num2 = stateFromStores2.flags;
@@ -89,40 +87,38 @@ export const NewMemberActionsProgress = function NewMemberActionsProgress(guildI
     if (0 !== num) {
       tmp7 = null;
       if (memo + num !== 0) {
-        obj = { accessibilityRole: "button", activeOpacity: 0.4, style: null, onPress: null, children: null };
-        obj[2] = tmp.container;
-        obj[3] = function onPress() {
-          guildId(stateFromStores1[14]).transitionTo(constants.GUILD_HOME);
+        const obj4 = {
+          accessibilityRole: "button",
+          activeOpacity: 0.4,
+          style: tmp.container,
+          onPress() {
+                  guildId(stateFromStores1[14]).transitionTo(constants.GUILD_HOME);
+                },
+          children: null
         };
-        obj = { style: null, children: null };
+        const obj5 = { style: null, children: null };
         const items5 = [, , ];
         ({ horizontal: arr7[0], spaceBetween: arr7[1], spaceBelow: arr7[2] } = tmp);
-        obj[0] = items5;
-        obj1 = { variant: "text-xs/bold", color: "mobile-text-heading-primary", children: null };
+        obj5.style = items5;
+        const obj6 = { variant: "text-xs/bold", color: "mobile-text-heading-primary", children: null };
         const intl = tmp2(tmp3[16]).intl;
-        obj1[2] = intl.string(tmp2(tmp3[16]).t.LhlgY9);
-        const items6 = [callback(tmp2(tmp3[15]).Text, obj1), ];
-        obj2 = { style: null, children: null };
-        obj2[0] = tmp.horizontal;
-        const obj3 = { variant: "text-xs/bold", color: "mobile-text-heading-primary", children: null };
-        obj3[2] = memo;
-        const items7 = [callback(tmp2(tmp3[15]).Text, obj3), callback(tmp2(tmp3[15]).Text, { variant: "text-xs/medium", color: "text-default", children: "/" }), , ];
-        const obj4 = { variant: "text-xs/bold", color: "mobile-text-heading-primary", children: null };
-        obj4[2] = num;
-        items7[2] = callback(tmp2(tmp3[15]).Text, obj4);
-        const obj5 = { size: null, source: null };
-        obj5[0] = tmp2(tmp3[17]).Icon.Sizes.REFRESH_SMALL_16;
-        obj5[1] = stateFromStores(tmp3[18]);
-        items7[3] = callback(tmp2(tmp3[17]).Icon, obj5);
-        obj2[1] = items7;
-        items6[1] = callback2(View, obj2);
-        obj[1] = items6;
-        const items8 = [callback2(View, obj), ];
-        const obj6 = { percent: null };
-        obj6[0] = memo / num * 100 + 3;
-        items8[1] = callback(ProgressBar, obj6);
-        obj[4] = items8;
-        tmp7 = callback2(tmp2(tmp3[13]).PressableOpacity, obj);
+        obj6.children = intl.string(tmp2(tmp3[16]).t.LhlgY9);
+        const items6 = [closure_10(tmp2(tmp3[15]).Text, obj6), ];
+        const obj7 = { style: tmp.horizontal, children: null };
+        const obj8 = { variant: "text-xs/bold", color: "mobile-text-heading-primary", children: memo };
+        const items7 = [closure_10(tmp2(tmp3[15]).Text, obj8), closure_10(tmp2(tmp3[15]).Text, { variant: "text-xs/medium", color: "text-default", children: "/" }), , ];
+        const obj9 = { variant: "text-xs/bold", color: "mobile-text-heading-primary", children: num };
+        items7[2] = closure_10(tmp2(tmp3[15]).Text, obj9);
+        const obj10 = { size: tmp2(tmp3[17]).Icon.Sizes.REFRESH_SMALL_16, source: stateFromStores(tmp3[18]) };
+        items7[3] = closure_10(tmp2(tmp3[17]).Icon, obj10);
+        obj7.children = items7;
+        items6[1] = closure_11(View, obj7);
+        obj5.children = items6;
+        const items8 = [closure_11(View, obj5), ];
+        const obj11 = { percent: memo / num * 100 + 3 };
+        items8[1] = closure_10(ProgressBar, obj11);
+        obj4.children = items8;
+        tmp7 = closure_11(tmp2(tmp3[13]).PressableOpacity, obj4);
       }
     }
   }

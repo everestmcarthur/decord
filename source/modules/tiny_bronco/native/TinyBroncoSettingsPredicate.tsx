@@ -1,17 +1,17 @@
-// Module ID: 14685
-// Function ID: 14686
-// Name: useIsTinyBroncoSettingsEnabled
-// Dependencies: [14686, 14687, 2]
+// Module ID: 14711
+// Function ID: 14712
+// Name: TinyBroncoSettingsPredicate
+// Dependencies: [14712, 14713, 2]
 // Exports: useIsTinyBroncoSettingsEnabled
 
-// Module 14685 (useIsTinyBroncoSettingsEnabled)
-import set from "set" /* 2 */;
-import TINY_BRONCO_BLOG_URL from "TINY_BRONCO_BLOG_URL" /* 14686 */;
-import useIsTinyBroncoEnabled from "useIsTinyBroncoEnabled" /* 14687 */;
+// Module 14711 (TinyBroncoSettingsPredicate)
+import TinyBroncoConstants from "TinyBroncoConstants" /* 14712 */;
+import TinyBroncoExperiment from "TinyBroncoExperiment" /* 14713 */;
+import size from "module_2" /* 2 */;
 
-let closure_2 = TINY_BRONCO_BLOG_URL.TINY_BRONCO_SETTINGS_LOCATION;
-const result = set.fileFinishedImporting("modules/tiny_bronco/native/TinyBroncoSettingsPredicate.tsx");
+let closure_2 = TinyBroncoConstants.TINY_BRONCO_SETTINGS_LOCATION;
+const result = size.fileFinishedImporting("modules/tiny_bronco/native/TinyBroncoSettingsPredicate.tsx");
 
 export const useIsTinyBroncoSettingsEnabled = function useIsTinyBroncoSettingsEnabled() {
-  return useIsTinyBroncoEnabled.useIsTinyBroncoEnabled(closure_2);
+  return TinyBroncoExperiment.useIsTinyBroncoEnabled(closure_2);
 };

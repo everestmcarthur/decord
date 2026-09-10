@@ -1,16 +1,16 @@
-// Module ID: 11616
-// Function ID: 11617
+// Module ID: 11642
+// Function ID: 11643
 // Name: useAppChannelApplication
-// Dependencies: [1074, 7163, 2]
+// Dependencies: [1074, 7177, 2]
 // Exports: useAppChannelApplication
 
-// Module 11616 (useAppChannelApplication)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import fetchApplication from "fetchApplication" /* 7163 */;
+// Module 11642 (useAppChannelApplication)
+import Constants from "Constants" /* 1074 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 7177 */;
+import size from "module_2" /* 2 */;
 
-const ChannelTypes = ME.ChannelTypes;
-const result = set.fileFinishedImporting("modules/app_channels/useAppChannelApplication.tsx");
+const ChannelTypes = Constants.ChannelTypes;
+const result = size.fileFinishedImporting("modules/app_channels/useAppChannelApplication.tsx");
 
 export const useAppChannelApplication = function useAppChannelApplication(stateFromStores) {
   let type;
@@ -21,5 +21,5 @@ export const useAppChannelApplication = function useAppChannelApplication(stateF
   if (type === ChannelTypes.GUILD_APP) {
     application_id = stateFromStores.application_id;
   }
-  return fetchApplication.useApplication(application_id).data;
+  return ApplicationActionCreators.useApplication(application_id).data;
 };

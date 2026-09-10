@@ -1,22 +1,22 @@
-// Module ID: 9289
-// Function ID: 9290
-// Name: validateHandle
+// Module ID: 9316
+// Function ID: 9317
+// Name: FederatedSocialUtils
 // Dependencies: [1074, 2]
 // Exports: getExampleHandle, validateHandle
 
-// Module 9289 (validateHandle)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 9316 (FederatedSocialUtils)
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const PlatformTypes = ME.PlatformTypes;
-const result = set.fileFinishedImporting("modules/connections/FederatedSocialUtils.tsx");
+const PlatformTypes = Constants.PlatformTypes;
+const result = size.fileFinishedImporting("modules/connections/FederatedSocialUtils.tsx");
 
-export const validateHandle = function validateHandle(first, platformType) {
+export const validateHandle = function validateHandle(arg0, platformType) {
   if (platformType === PlatformTypes.MASTODON) {
-    const isMatch = /^@?[a-z0-9_]+([.-]+[a-z0-9_]+)*@[^@]+\.[^.@]{2,}$/i.test(first);
+    const isMatch = /^@?[a-z0-9_]+([.-]+[a-z0-9_]+)*@[^@]+\.[^.@]{2,}$/i.test(arg0);
     const obj = /^@?[a-z0-9_]+([.-]+[a-z0-9_]+)*@[^@]+\.[^.@]{2,}$/i;
   }
-  return /^.+\.[^.@]{2,}$/.test(first);
+  return /^.+\.[^.@]{2,}$/.test(arg0);
 };
 export const getExampleHandle = function getExampleHandle(platformType) {
   let str = "@example@mastodon.social";

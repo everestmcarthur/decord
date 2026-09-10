@@ -1,18 +1,17 @@
-// Module ID: 14178
-// Function ID: 14179
-// Name: StepPill
-// Dependencies: [19, 17, 21, 4560, 576, 4296, 4262, 4974, 1114, 2038, 2]
+// Module ID: 14203
+// Function ID: 14204
+// Name: ModalStepIndicator
+// Dependencies: [19, 17, 21, 4574, 576, 4310, 4275, 4988, 1114, 2038, 2]
 // Exports: ModalStepIndicator
 
-// Module 14178 (StepPill)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 2038 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14203 (ModalStepIndicator)
+import util from "util" /* 1114 */;
+import _modDef2038 from "module_2038" /* 2038 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import spring from "spring" /* 4988 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function StepPill(isActive) {
   isActive = isActive.isActive;
   let TEXT_BRAND = isActive.activeColor;
@@ -30,92 +29,86 @@ function StepPill(isActive) {
   sharedValue = undefined;
   let token;
   let token1;
-  let obj = isActive(sharedValue[5]);
+  const tmp5 = closure_7();
   let num2 = 0;
   if (isActive) {
     num2 = 1;
   }
-  sharedValue = obj.useSharedValue(num2);
-  let tmp6Result = tmp6(tmp7[6]);
-  token = tmp6Result.useToken(TEXT_BRAND);
-  tmp6Result = tmp6(tmp7[6]);
-  token1 = tmp6Result.useToken(BACKGROUND_MOD_STRONG);
+  sharedValue = isActive(sharedValue[5]).useSharedValue(num2);
+  let obj = isActive(sharedValue[5]);
+  token = isActive(sharedValue[6]).useToken(TEXT_BRAND);
+  const tmp6Result = isActive(sharedValue[6]);
+  token1 = isActive(sharedValue[6]).useToken(BACKGROUND_MOD_STRONG);
   let items = [isActive, sharedValue];
   const effect = token.useEffect(() => {
     num = 0;
     if (isActive) {
       num = 1;
     }
-    const result = sharedValue.set(isActive(sharedValue[7]).withSpring(num, closure_1_6));
+    const result = sharedValue.set(spring.withSpring(num, closure_6));
   }, items);
-  const tmp5 = callback();
+  const tmp6Result3 = isActive(sharedValue[6]);
   class I {
     constructor() {
       obj = { width: null, backgroundColor: null, opacity: null };
-      obj2 = isActive(closure_2[5]);
-      obj[0] = obj2.interpolate(closure_2.get(), [0, 1], [12, 36]);
-      obj3 = isActive(closure_2[5]);
+      obj2 = closure_0(closure_2[5]);
+      obj.width = obj2.interpolate(closure_2.get(), [0, 1], [12, 36]);
+      obj3 = closure_0(closure_2[5]);
       items = [, ];
       items[0] = closure_4;
       items[1] = closure_3;
-      obj[1] = obj3.interpolateColor(closure_2.get(), [0, 1], items);
-      obj4 = isActive(closure_2[5]);
+      obj.backgroundColor = obj3.interpolateColor(closure_2.get(), [0, 1], items);
+      obj4 = closure_0(closure_2[5]);
       items1 = [, ];
       items1[0] = c1;
       items1[1] = 1;
-      obj[2] = obj4.interpolate(closure_2.get(), [0, 1], items1);
+      obj.opacity = obj4.interpolate(closure_2.get(), [0, 1], items1);
       return obj;
     }
   }
-  obj = { interpolate: tmp6(tmp7[5]).interpolate, sharedValue, WIDTH_INACTIVE: 12, WIDTH_ACTIVE: 36, interpolateColor: tmp6(tmp7[5]).interpolateColor, inactiveColor: token1, activeColor: token, inactiveOpacity: num };
-  I.__closure = obj;
+  const tmp6Result4 = isActive(sharedValue[5]);
+  I.__closure = { interpolate: isActive(sharedValue[5]).interpolate, sharedValue, WIDTH_INACTIVE: 12, WIDTH_ACTIVE: 36, interpolateColor: isActive(sharedValue[5]).interpolateColor, inactiveColor: token1, activeColor: token, inactiveOpacity: num };
   I.__workletHash = 12485955218699;
-  I.__initData = closure_8;
-  const animatedStyle = isActive(sharedValue[5]).useAnimatedStyle(I);
-  const style = [animatedStyle, tmp5.stepPill];
-  return jsx(num(sharedValue[5]).View, { style });
+  I.__initData = __initData;
+  const animatedStyle = tmp6Result4.useAnimatedStyle(I);
+  let obj3 = { style: null };
+  let items1 = [animatedStyle, tmp5.stepPill];
+  obj3.style = items1;
+  return jsx(num(sharedValue[5]).View, { style: null });
 }
+const View = fn(17).View;
+const jsx = fn(21).jsx;
 let closure_6 = { overshootClamping: true };
-let closure_7 = createCacheKey.createStyles({ container: { flexDirection: "row", gap: 4 }, stepPill: { height: 4, borderRadius: 2 } });
-let closure_8 = { code: "function ModalStepIndicatorNativeTsx1(){const{interpolate,sharedValue,WIDTH_INACTIVE,WIDTH_ACTIVE,interpolateColor,inactiveColor,activeColor,inactiveOpacity}=this.__closure;return{width:interpolate(sharedValue.get(),[0,1],[WIDTH_INACTIVE,WIDTH_ACTIVE]),backgroundColor:interpolateColor(sharedValue.get(),[0,1],[inactiveColor,activeColor]),opacity:interpolate(sharedValue.get(),[0,1],[inactiveOpacity,1])};}" };
-let result = require("set").fileFinishedImporting("design/components/Modal/native/ModalStepIndicator.native.tsx");
+const createStyles = fn(4574);
+let closure_7 = createStyles.createStyles({ container: { flexDirection: "row", gap: 4 }, stepPill: { height: 4, borderRadius: 2 } });
+const __initData = { code: "function ModalStepIndicatorNativeTsx1(){const{interpolate,sharedValue,WIDTH_INACTIVE,WIDTH_ACTIVE,interpolateColor,inactiveColor,activeColor,inactiveOpacity}=this.__closure;return{width:interpolate(sharedValue.get(),[0,1],[WIDTH_INACTIVE,WIDTH_ACTIVE]),backgroundColor:interpolateColor(sharedValue.get(),[0,1],[inactiveColor,activeColor]),opacity:interpolate(sharedValue.get(),[0,1],[inactiveOpacity,1])};}" };
+const size = fn(2);
+let result = size.fileFinishedImporting("design/components/Modal/native/ModalStepIndicator.native.tsx");
 
 export const ModalStepIndicator = function ModalStepIndicator(arg0) {
   ({ currentStep, totalSteps } = arg0);
   ({ activeColor, inactiveColor, inactiveOpacity } = arg0);
-  const tmp = callback();
+  const tmp = closure_7();
   if (totalSteps <= 0) {
-    let obj = { style: null };
-    obj[0] = tmp.container;
-    return <View style={null} />;
+    const obj2 = { style: tmp.container };
+    return <View style={tmp.container} />;
   } else {
     const items = [];
     for (let num = 0; num < totalSteps; num = num + 1) {
-      let tmp2 = jsx;
-      let tmp3 = StepPill;
-      obj = { isActive: null, activeColor: null, inactiveColor: null, inactiveOpacity: null };
-      obj[0] = num === currentStep;
-      obj[1] = activeColor;
-      obj[2] = inactiveColor;
-      obj[3] = inactiveOpacity;
-      let arr = items.push(<StepPill key={num} isActive={null} activeColor={null} inactiveColor={null} inactiveOpacity={null} />);
+      let obj = { isActive: num === currentStep, activeColor, inactiveColor, inactiveOpacity };
+      let arr = items.push(<StepPill key={num} isActive={num === currentStep} activeColor={activeColor} inactiveColor={inactiveColor} inactiveOpacity={inactiveOpacity} />);
     }
     if (currentStep < 0) {
-      obj = { style: null, children: null };
-      obj[0] = tmp.container;
-      obj[1] = items;
-      return <View style={null}>{null}</View>;
+      const obj3 = { style: tmp.container, children: items };
+      return <View style={tmp.container}>{items}</View>;
     } else {
-      const intl = getSystemLocale.intl;
-      obj1 = { accessible: true, accessibilityRole: "progressbar", accessibilityLabel: null, accessibilityValue: null, importantForAccessibility: "yes", style: null, children: null };
-      obj1[2] = intl.string(messagesProxyDefault.KUwsC0);
-      const obj2 = { min: 1, max: null, now: null };
-      obj2[1] = totalSteps;
-      obj2[2] = currentStep + 1;
-      obj1[3] = obj2;
-      obj1[5] = tmp.container;
-      obj1[6] = items;
-      return <View accessible accessibilityRole="progressbar" accessibilityLabel={null} accessibilityValue={null} importantForAccessibility="yes" style={null}>{null}</View>;
+      const intl = util.intl;
+      const obj4 = { accessible: true, accessibilityRole: "progressbar", accessibilityLabel: intl.string(_modDef2038.KUwsC0), accessibilityValue: null, importantForAccessibility: "yes", style: null, children: null };
+      const range = { min: 1, max: totalSteps, now: currentStep + 1 };
+      obj4.accessibilityValue = range;
+      obj4.style = tmp.container;
+      obj4.children = items;
+      return <View accessible accessibilityRole="progressbar" accessibilityLabel={intl.string(_modDef2038.KUwsC0)} accessibilityValue={null} importantForAccessibility="yes" style={null}>{null}</View>;
     }
   }
 };

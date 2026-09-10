@@ -1,71 +1,67 @@
-// Module ID: 16156
-// Function ID: 16157
+// Module ID: 16186
+// Function ID: 16187
 // Name: FavoritesGuildAddCategoryActionSheet
-// Dependencies: [32, 19, 1970, 21, 4560, 576, 1982, 10228, 4527, 7150, 7149, 1114, 6606, 4975, 2]
+// Dependencies: [32, 19, 1970, 21, 4574, 576, 1982, 10255, 4541, 7164, 7163, 1114, 6620, 4989, 2]
 // Exports: openFavoritesGuildAddCategoryActionSheet
 
-// Module 16156 (FavoritesGuildAddCategoryActionSheet)
-import ThemesDefault from "Themes" /* 576 */;
-import ACTION_SHEET_HEIGHT_HALF from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { MAX_FAVORITE_CATEGORY_NAME_LENGTH as closure_5 } from "date" /* 1970 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16186 (FavoritesGuildAddCategoryActionSheet)
+import nativeDefault from "native" /* 576 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4541 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10255 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
+
+require = fn;
 function FavoritesGuildAddCategoryActionSheet() {
-  const tmp = callback4();
-  const tmp2 = callback(React.useState(""), 2);
-  const first = tmp2[0];
-  let obj = first(1982);
-  const result = obj.isFavoritesGuildCategoryNameValid(first);
+  const tmp = closure_9();
+  [value, obj4.onChange] = noop.useState("");
+  const result = value(1982).isFavoritesGuildCategoryNameValid(value);
   importDefault = result;
-  const items = [result, first];
-  callback = React.useCallback(() => {
-    if (closure_1) {
-      first(closure_1_2[7]).addFavoriteCategory(first);
-      const obj = first(closure_1_2[7]);
-      result(closure_1_2[8]).hideActionSheet(closure_1_8);
-      const obj2 = result(closure_1_2[8]);
+  const items = [result, value];
+  const callback = noop.useCallback(() => {
+    if (result) {
+      FavoritesActionCreators.addFavoriteCategory(first);
+      ActionSheetActionCreatorsDefault.hideActionSheet(FavoritesGuildAddCategoryActionSheet);
     }
   }, items);
-  obj = { contentStyles: tmp.content, bodyStyles: tmp.body, keyboardShouldPersistTaps: "always", header: null, children: null };
-  obj = { title: null };
-  const intl = first(1114).intl;
-  obj[0] = intl.string(first(1114).t["ISN+NM"]);
-  obj[3] = callback2(first(7149).BottomSheetTitleHeader, obj);
-  obj1 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, autoFocus: true, isClearable: true, returnKeyType: "done", onSubmitEditing: null };
-  const intl2 = first(1114).intl;
-  obj1[0] = intl2.string(first(1114).t.OCAkGP);
-  const intl3 = first(1114).intl;
-  obj1[1] = intl3.string(first(1114).t.eTVbtx);
-  obj1[2] = first;
-  obj1[3] = tmp2[1];
-  obj1[4] = closure_5;
-  obj1[8] = callback;
-  const items1 = [callback2(first(6606).TextInput, obj1), ];
-  let obj2 = { text: null, onPress: null, disabled: null };
-  const intl4 = first(1114).intl;
-  obj2[0] = intl4.string(first(1114).t.CumH4u);
-  obj2[1] = callback;
-  obj2[2] = !result;
-  items1[1] = callback2(first(4975).Button, obj2);
-  obj[4] = items1;
-  return callback3(first(7150).BottomSheet, obj);
+  let obj2 = { contentStyles: tmp.content, bodyStyles: tmp.body, keyboardShouldPersistTaps: "always", header: null, children: null };
+  const obj3 = { title: null };
+  const intl = value(1114).intl;
+  obj3.title = intl.string(value(1114).t["ISN+NM"]);
+  obj2.header = closure_6(value(7163).BottomSheetTitleHeader, obj3);
+  const obj4 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, autoFocus: true, isClearable: true, returnKeyType: "done", onSubmitEditing: null };
+  const intl2 = value(1114).intl;
+  obj4.label = intl2.string(value(1114).t.OCAkGP);
+  const intl3 = value(1114).intl;
+  obj4.placeholder = intl3.string(value(1114).t.eTVbtx);
+  obj4.value = value;
+  obj4.maxLength = maxLength;
+  obj4.onSubmitEditing = callback;
+  const items1 = [closure_6(value(6620).TextInput, obj4), ];
+  const obj5 = { text: null, onPress: null, disabled: null };
+  const intl4 = value(1114).intl;
+  obj5.text = intl4.string(value(1114).t.CumH4u);
+  obj5.onPress = callback;
+  obj5.disabled = !result;
+  items1[1] = closure_6(value(4989).Button, obj5);
+  obj2.children = items1;
+  return closure_7(value(7164).BottomSheet, obj2);
 }
-({ jsx: closure_6, jsxs: error } = jsxProd);
+const maxLength = fn(1970).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 FavoritesGuildAddCategoryActionSheet = "FavoritesGuildAddCategoryActionSheet";
-createCacheKey = { content: null, body: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { gap: ThemesDefault.space.PX_16 };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { gap: ThemesDefault.space.PX_16 };
-let result = require("set").fileFinishedImporting("modules/favorites/native/FavoritesGuildAddCategoryActionSheet.tsx");
+const createStyles = fn(4574);
+let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, body: null };
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.body = { gap: nativeDefault.space.PX_16 };
+let closure_9 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuildAddCategoryActionSheet.tsx");
 
 export const openFavoritesGuildAddCategoryActionSheet = function openFavoritesGuildAddCategoryActionSheet() {
-  let obj = ACTION_SHEET_HEIGHT_HALF;
-  obj = { content: callback2(FavoritesGuildAddCategoryActionSheet, {}), key: FavoritesGuildAddCategoryActionSheet };
-  obj.showActionSheet(obj);
+  const obj = ActionSheetActionCreators;
+  obj.showActionSheet({ content: timestampProducer(FavoritesGuildAddCategoryActionSheet, {}), key: FavoritesGuildAddCategoryActionSheet });
 };

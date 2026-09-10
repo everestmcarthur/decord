@@ -1,67 +1,73 @@
-// Module ID: 12985
-// Function ID: 12986
-// Name: useMediaViewerPanGestureConfig
-// Dependencies: [19, 4296, 8270, 8266, 4974, 6964, 6655, 2]
+// Module ID: 13011
+// Function ID: 13012
+// Name: useMediaViewerPanGesture
+// Dependencies: [19, 4310, 8290, 8289, 4988, 6978, 6669, 2]
 // Exports: useMediaViewerPanGesture, useMediaViewerPanGestureConfig
 
-// Module 12985 (useMediaViewerPanGestureConfig)
-import closure_3 from "noop" /* 19 */;
+// Module 13011 (useMediaViewerPanGesture)
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import spring from "spring" /* 4988 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6669 */;
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8289 */;
+import useVideoControls from "useVideoControls" /* 8290 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+const require = globalThis.__r;
+
+require = fn;
 let closure_4 = { damping: 15, mass: 1, stiffness: 250, overshootClamping: true, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001 };
 let closure_5 = { code: "function useMediaViewerPanGestureTsx1(){const{runOnJS,handleClose}=this.__closure;runOnJS(handleClose)();}" };
 let closure_6 = { code: "function useMediaViewerPanGestureTsx2(){const{isInteracting,velocity,swipeVelocityThreshold,runOnJS,dismiss,translatePos,withSpring,SPRING_CONFIG}=this.__closure;isInteracting.set(false);const willClose=Math.abs(velocity.get())>swipeVelocityThreshold;if(willClose){runOnJS(dismiss)();}else if(translatePos.get()!==0){translatePos.set(withSpring(0,{velocity:velocity.get(),...SPRING_CONFIG}));}}" };
 let closure_7 = { code: "function useMediaViewerPanGestureTsx3(_,manager){const{enabled}=this.__closure;if(!enabled.get()){manager.fail();}}" };
 let closure_8 = { code: "function useMediaViewerPanGestureTsx4({velocityY:velocityY,translationY:translationY}){const{translatePos,start,velocity}=this.__closure;translatePos.set(translationY+start.get().y);velocity.set(velocityY);}" };
 let closure_9 = { code: "function useMediaViewerPanGestureTsx5(){const{start,translatePos,isInteracting}=this.__closure;start.set({x:0,y:translatePos.get()});isInteracting.set(true);}" };
-let result = require("set").fileFinishedImporting("modules/media_viewer/native/useMediaViewerPanGesture.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/media_viewer/native/useMediaViewerPanGesture.tsx");
 
 export const useMediaViewerPanGestureConfig = function useMediaViewerPanGestureConfig(arg0, swipeVelocityThreshold, onClose) {
-  const _require = arg0;
-  closure_1 = swipeVelocityThreshold;
+  _require = arg0;
   dependencyMap = onClose;
-  const sharedValue = _require(4296).useSharedValue(false);
-  let obj = _require(4296);
-  const sharedValue1 = _require(4296).useSharedValue(false);
-  const obj2 = _require(4296);
-  const sharedValue2 = _require(4296).useSharedValue(0);
-  const obj3 = _require(4296);
-  const sharedValue3 = _require(4296).useSharedValue(0);
-  const obj4 = _require(4296);
-  const sharedValue4 = _require(4296).useSharedValue({ y: 0, x: 0 });
-  const obj5 = _require(4296);
-  const sharedValue5 = _require(4296).useSharedValue(true);
+  const sharedValue = require("ReanimatedRexport").useSharedValue(false);
+  let obj = require("ReanimatedRexport");
+  const sharedValue1 = require("ReanimatedRexport").useSharedValue(false);
+  let obj2 = require("ReanimatedRexport");
+  const sharedValue2 = require("ReanimatedRexport").useSharedValue(0);
+  let obj3 = require("ReanimatedRexport");
+  const sharedValue3 = require("ReanimatedRexport").useSharedValue(0);
+  const obj4 = require("ReanimatedRexport");
+  const sharedValue4 = require("ReanimatedRexport").useSharedValue({ y: 0, x: 0 });
+  const obj5 = require("ReanimatedRexport");
+  const sharedValue5 = require("ReanimatedRexport").useSharedValue(true);
   const items = [onClose];
-  const callback = sharedValue.useCallback(() => {
-    callback(onClose[2]).tryPauseCurrentVideo();
+  const handleClose = sharedValue.useCallback(() => {
+    useVideoControls.tryPauseCurrentVideo();
     if (onClose != null) {
       onClose();
     }
-    const MediaViewerAnalytics = callback(onClose[3]).MediaViewerAnalytics;
+    const MediaViewerAnalytics = MediaViewerAnalyticsManager.MediaViewerAnalytics;
     MediaViewerAnalytics.markSessionCompleted();
   }, items);
-  const items1 = [arg0, callback, sharedValue, sharedValue2, sharedValue3];
+  const items1 = [arg0, handleClose, sharedValue, sharedValue2, sharedValue3];
   const callback1 = sharedValue.useCallback(() => {
     const result = sharedValue.set(true);
-    let obj = sharedValue3;
     if (sharedValue3.get() < 0) {
-      let tmp2 = -callback;
+      let tmp2 = -closure_0;
     } else {
-      tmp2 = callback;
+      tmp2 = closure_0;
     }
-    obj = { velocity: obj.get() };
-    const merged = Object.assign(sharedValue1);
+    const obj2 = spring;
+    const merged = Object.assign(closure_4);
     const fn = function t() {
-      closure_1_0(closure_1_2[1]).runOnJS(closure_9)();
+      closure_0(closure_2[1]).runOnJS(handleClose)();
     };
-    obj = { runOnJS: callback(onClose[1]).runOnJS, handleClose: callback };
-    fn.__closure = obj;
+    const obj3 = { velocity: sharedValue3.get() };
+    fn.__closure = { runOnJS: ReanimatedRexport.runOnJS, handleClose };
     fn.__workletHash = 7033730772994;
-    fn.__initData = sharedValue2;
-    const result1 = sharedValue2.set(callback(onClose[4]).withSpring(tmp2, obj, "respect-motion-settings", fn));
+    fn.__initData = __initData;
+    const result1 = sharedValue2.set(obj2.withSpring(tmp2, obj3, "respect-motion-settings", fn));
   }, items1);
   const items2 = [sharedValue3, sharedValue, sharedValue1, sharedValue2, swipeVelocityThreshold, callback1, sharedValue4, sharedValue5];
-  return sharedValue.useMemo(() => ({ velocity: sharedValue3, isClosing: sharedValue, isInteracting: sharedValue1, overlayEnabled: sharedValue5, translatePos: sharedValue2, swipeVelocityThreshold: closure_1, dismiss: callback1, start: sharedValue4 }), items2);
+  return sharedValue.useMemo(() => ({ velocity: sharedValue3, isClosing: sharedValue, isInteracting: sharedValue1, overlayEnabled: sharedValue5, translatePos: sharedValue2, swipeVelocityThreshold, dismiss: callback1, start: sharedValue4 }), items2);
 };
 export const useMediaViewerPanGesture = function useMediaViewerPanGesture(panGestureConfig, derivedValue) {
   let swipeVelocityThreshold = panGestureConfig.swipeVelocityThreshold;
@@ -69,74 +75,70 @@ export const useMediaViewerPanGesture = function useMediaViewerPanGesture(panGes
   const isInteracting = panGestureConfig.isInteracting;
   const translatePos = panGestureConfig.translatePos;
   const start = panGestureConfig.start;
-  closure_5 = derivedValue;
-  closure_6 = undefined;
-  let callback;
+  const enabled = derivedValue;
   const tmp = velocity(isInteracting[5])(panGestureConfig.dismiss);
   closure_6 = tmp;
   const items = [tmp, derivedValue, isInteracting, start, swipeVelocityThreshold, translatePos, velocity];
-  callback = translatePos.useCallback(() => {
-    const Gesture = swipeVelocityThreshold(isInteracting[6]).Gesture;
+  const callback = translatePos.useCallback(() => {
+    const Gesture = LegacyBaseButton.Gesture;
     const PanResult = Gesture.Pan();
     const maxPointersResult = Gesture.Pan().maxPointers(1);
     const activeOffsetYResult = Gesture.Pan().maxPointers(1).activeOffsetY([-10, 10]);
     class V {
       constructor() {
-        obj = { x: 0, y: closure_3.get() };
-        result = closure_4.set(obj);
-        result1 = closure_2.set(true);
+        point = { x: 0, y: closure_1_3.get() };
+        result = closure_1_4.set(point);
+        result1 = closure_1_2.set(true);
         return;
       }
     }
-    let obj = { start, translatePos, isInteracting };
-    V.__closure = obj;
+    V.__closure = { start, translatePos, isInteracting };
     V.__workletHash = 12024094550213;
-    V.__initData = closure_1_9;
+    V.__initData = __initData3;
     const failOffsetXResult = Gesture.Pan().maxPointers(1).activeOffsetY([-10, 10]).failOffsetX([-10, 10]);
+    const obj = { start, translatePos, isInteracting };
     class S {
       constructor(arg0) {
         ({ velocityY, translationY } = arg0);
-        result = closure_3.set(translationY + closure_4.get().y);
-        result1 = closure_1.set(velocityY);
+        result = closure_1_3.set(translationY + closure_1_4.get().y);
+        result1 = closure_1_1.set(velocityY);
         return;
       }
     }
-    obj = { translatePos, start, velocity };
-    S.__closure = obj;
+    S.__closure = { translatePos, start, velocity };
     S.__workletHash = 9790035695747;
-    S.__initData = closure_1_8;
+    S.__initData = __initData2;
+    let obj2 = { translatePos, start, velocity };
     const onStartResult = Gesture.Pan().maxPointers(1).activeOffsetY([-10, 10]).failOffsetX([-10, 10]).onStart(V);
     const fn = function w(arg0, fail) {
-      if (!closure_5.get()) {
+      if (!enabled.get()) {
         fail.fail();
       }
     };
-    fn.__closure = { enabled: closure_5 };
+    fn.__closure = { enabled };
     fn.__workletHash = 10675684732258;
-    fn.__initData = callback;
-    obj1 = { enabled: closure_5 };
+    fn.__initData = __initData;
+    let obj3 = { enabled };
     const onUpdateResult = Gesture.Pan().maxPointers(1).activeOffsetY([-10, 10]).failOffsetX([-10, 10]).onStart(V).onUpdate(S);
     const fn2 = function t() {
-      const result = store2.set(false);
-      let obj = store;
-      if (Math.abs(store.get()) > closure_0) {
-        closure_1_0(closure_1_2[1]).runOnJS(closure_6)();
-        const obj5 = closure_1_0(closure_1_2[1]);
+      const result = closure_1_2.set(false);
+      if (Math.abs(velocity.get()) > closure_1_0) {
+        swipeVelocityThreshold(isInteracting[1]).runOnJS(closure_1_6)();
+        const obj5 = swipeVelocityThreshold(isInteracting[1]);
       } else {
-        if (0 !== store3.get()) {
-          obj = { velocity: null };
-          obj[0] = obj.get();
-          const merged = Object.assign(closure_1_4);
-          const result1 = obj2.set(closure_1_0(closure_1_2[4]).withSpring(0, obj));
-          const obj3 = closure_1_0(closure_1_2[4]);
+        if (0 !== translatePos.get()) {
+          const obj4 = { velocity: velocity.get() };
+          const merged = Object.assign(start);
+          const result1 = obj2.set(swipeVelocityThreshold(isInteracting[4]).withSpring(0, obj4));
+          const obj3 = swipeVelocityThreshold(isInteracting[4]);
         }
-        obj2 = store3;
+        obj2 = translatePos;
       }
     };
     const onTouchesDownResult = Gesture.Pan().maxPointers(1).activeOffsetY([-10, 10]).failOffsetX([-10, 10]).onStart(V).onUpdate(S).onTouchesDown(fn);
-    fn2.__closure = { isInteracting, velocity, swipeVelocityThreshold, runOnJS: swipeVelocityThreshold(isInteracting[1]).runOnJS, dismiss: closure_6, translatePos, withSpring: swipeVelocityThreshold(isInteracting[4]).withSpring, SPRING_CONFIG: start };
+    fn2.__closure = { isInteracting, velocity, swipeVelocityThreshold, runOnJS: ReanimatedRexport.runOnJS, dismiss: __initData, translatePos, withSpring: spring.withSpring, SPRING_CONFIG };
     fn2.__workletHash = 3185523772752;
-    fn2.__initData = closure_6;
+    fn2.__initData = __initData;
     return onTouchesDownResult.onEnd(fn2);
   }, items);
   const items1 = [callback];
@@ -147,10 +149,10 @@ export const useMediaViewerPanGesture = function useMediaViewerPanGesture(panGes
     closure_1 = [];
     return {
       panGestureGenerator(index) {
-        if (null != table[index]) {
+        if (null != closure_1[index]) {
           return tmp[index];
         } else {
-          tmp[index] = closure_1_7().blocksExternalGesture(closure_0);
+          tmp[index] = callback().blocksExternalGesture(NativeResult);
           return tmp[index];
         }
       },

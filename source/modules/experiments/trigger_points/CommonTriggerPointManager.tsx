@@ -1,15 +1,14 @@
-// Module ID: 17336
-// Function ID: 17337
-// Name: handleVoiceChannelSelect
-// Dependencies: [7118, 17337, 16907, 2]
+// Module ID: 17367
+// Function ID: 17368
+// Name: CommonTriggerPointManager
+// Dependencies: [7132, 17368, 16944, 2]
 
-// Module 17336 (handleVoiceChannelSelect)
-import initializeDefault from "initialize" /* 7118 */;
-import commonTriggerPointConfiguration from "commonTriggerPointConfiguration" /* 16907 */;
-import commonTriggerPointConfiguration2 from "commonTriggerPointConfiguration" /* 17337 */;
+// Module 17367 (CommonTriggerPointManager)
+import OpenUserSettingsTriggerPoint2 from "OpenUserSettingsTriggerPoint" /* 16944 */;
+import VoiceCallTriggerPoint2 from "VoiceCallTriggerPoint" /* 17368 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-require = arg1;
-initializeDefault;
+require = fn;
 class CommonTriggerPointManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -21,21 +20,21 @@ const prototype = CommonTriggerPointManager.prototype;
 prototype["handleVoiceChannelSelect"] = function handleVoiceChannelSelect(guildId) {
   guildId = guildId.guildId;
   if (null != guildId.channelId) {
-    const VoiceCallTriggerPoint = commonTriggerPointConfiguration2.VoiceCallTriggerPoint;
-    const obj = { guildId: null };
-    obj[0] = guildId;
+    const VoiceCallTriggerPoint = VoiceCallTriggerPoint2.VoiceCallTriggerPoint;
+    const obj = { guildId };
     VoiceCallTriggerPoint.trigger(obj);
   }
 };
 prototype["handleCallCreate"] = function handleCallCreate() {
-  const VoiceCallTriggerPoint = commonTriggerPointConfiguration2.VoiceCallTriggerPoint;
+  const VoiceCallTriggerPoint = VoiceCallTriggerPoint2.VoiceCallTriggerPoint;
   VoiceCallTriggerPoint.trigger();
 };
 prototype["handleUserSettingsModalOpen"] = function handleUserSettingsModalOpen() {
-  const OpenUserSettingsTriggerPoint = commonTriggerPointConfiguration.OpenUserSettingsTriggerPoint;
+  const OpenUserSettingsTriggerPoint = OpenUserSettingsTriggerPoint2.OpenUserSettingsTriggerPoint;
   OpenUserSettingsTriggerPoint.trigger();
 };
 const commonTriggerPointManager = new CommonTriggerPointManager();
-const result = require("set").fileFinishedImporting("modules/experiments/trigger_points/CommonTriggerPointManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/experiments/trigger_points/CommonTriggerPointManager.tsx");
 
 export default commonTriggerPointManager;

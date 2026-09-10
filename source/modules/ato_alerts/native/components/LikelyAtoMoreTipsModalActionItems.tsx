@@ -1,34 +1,34 @@
-// Module ID: 11385
-// Function ID: 11386
+// Module ID: 11412
+// Function ID: 11413
 // Name: LikelyAtoMoreTipsModalActionItems
-// Dependencies: [19, 1371, 21, 504, 4404, 5687, 5605, 1114, 9064, 2]
+// Dependencies: [19, 1371, 21, 504, 4418, 5701, 5619, 1114, 9091, 2]
 // Exports: default
 
-// Module 11385 (LikelyAtoMoreTipsModalActionItems)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 11412 (LikelyAtoMoreTipsModalActionItems)
+import UserUtilsDefault from "UserUtils" /* 4418 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/ato_alerts/native/components/LikelyAtoMoreTipsModalActionItems.tsx");
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/ato_alerts/native/components/LikelyAtoMoreTipsModalActionItems.tsx");
 
 export default function LikelyAtoMoreTipsModalActionItems(senderId) {
   senderId = senderId.senderId;
-  let stateFromStores;
-  let obj = senderId(504);
-  const items = [closure_4];
+  const items = [UserStore];
   const items1 = [senderId];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getUser(senderId), items1);
+  const stateFromStores = senderId(504).useStateFromStores(items, () => UserStore.getUser(senderId), items1);
   const items2 = [stateFromStores];
-  const memo = React.useMemo(() => stateFromStores(closure_1_2[4]).getName(stateFromStores), items2);
-  obj = { hasIcons: true, children: null };
-  obj = { label: null, subLabel: null, onPress: null, icon: null };
+  const memo = noop.useMemo(() => UserUtilsDefault.getName(stateFromStores), items2);
+  const obj2 = { hasIcons: true, children: null };
+  const obj3 = { label: null, subLabel: null, onPress: null, icon: null };
   const intl = senderId(1114).intl;
-  obj[0] = intl.formatToPlainString(senderId(1114).t["F/ID+9"], { username: memo });
+  obj3.label = intl.formatToPlainString(senderId(1114).t["F/ID+9"], { username: memo });
   const intl2 = senderId(1114).intl;
-  obj[1] = intl2.string(senderId(1114).t.w2ve0t);
-  obj[2] = senderId.handleMutePressed;
-  obj[3] = jsx(senderId(9064).BellSlashIcon, {});
-  obj[1] = jsx(senderId(5605).TableRow, { label: null, subLabel: null, onPress: null, icon: null });
-  return jsx(senderId(5687).TableRowGroup, { label: null, subLabel: null, onPress: null, icon: null });
+  obj3.subLabel = intl2.string(senderId(1114).t.w2ve0t);
+  obj3.onPress = senderId.handleMutePressed;
+  obj3.icon = jsx(senderId(9091).BellSlashIcon, {});
+  obj2.children = jsx(senderId(5619).TableRow, { label: null, subLabel: null, onPress: null, icon: null });
+  return jsx(senderId(5701).TableRowGroup, { hasIcons: true, children: null });
 };

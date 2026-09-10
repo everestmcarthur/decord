@@ -1,23 +1,22 @@
-// Module ID: 11126
-// Function ID: 11127
-// Name: EMOJI_PICKER_ACTION_SHEET_KEY
-// Dependencies: [1374, 10338, 4527, 11127, 1896, 2]
+// Module ID: 11153
+// Function ID: 11154
+// Name: openEmojiPickerActionSheet
+// Dependencies: [1374, 10365, 4541, 11154, 1896, 2]
 // Exports: openEmojiPickerActionSheet
 
-// Module 11126 (EMOJI_PICKER_ACTION_SHEET_KEY)
-import set from "set" /* 2 */;
-import set2 from "set" /* 1374 */;
+// Module 11153 (openEmojiPickerActionSheet)
+import EmojiConstants from "EmojiConstants" /* 1374 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
-import toggleGuildExpandedState from "toggleGuildExpandedState" /* 10338 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import emojis_EmojiActionCreators from "emojis/EmojiActionCreators" /* 10365 */;
+import size from "module_2" /* 2 */;
 
-const EmojiInteractionPoint = set2.EmojiInteractionPoint;
+const EmojiInteractionPoint = EmojiConstants.EmojiInteractionPoint;
 const EmojiPickerActionSheet = "EmojiPickerActionSheet";
-let result = set.fileFinishedImporting("modules/emoji_picker/native/openEmojiPickerActionSheet.tsx");
+let result = size.fileFinishedImporting("modules/emoji_picker/native/openEmojiPickerActionSheet.tsx");
 
 export const EMOJI_PICKER_ACTION_SHEET_KEY = "EmojiPickerActionSheet";
 export const openEmojiPickerActionSheet = function openEmojiPickerActionSheet(arg0, stack) {
-  const result = toggleGuildExpandedState.initiateEmojiInteraction(EmojiInteractionPoint.EmojiPickerActionSheetOpened);
-  const obj = toggleGuildExpandedState;
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11127, dependencyMap.paths), EmojiPickerActionSheet, arg0, stack);
+  const result = emojis_EmojiActionCreators.initiateEmojiInteraction(EmojiInteractionPoint.EmojiPickerActionSheetOpened);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11154, dependencyMap.paths), EmojiPickerActionSheet, arg0, stack);
 };

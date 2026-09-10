@@ -1,12 +1,12 @@
-// Module ID: 12139
-// Function ID: 12140
-// Name: CommandListSortOrder
+// Module ID: 12165
+// Function ID: 12166
+// Name: AppLauncherConstants
 // Dependencies: [2]
 
-// Module 12139 (CommandListSortOrder)
-import set from "set" /* 2 */;
+// Module 12165 (AppLauncherConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/app_launcher/AppLauncherConstants.tsx");
+const result = size.fileFinishedImporting("modules/app_launcher/AppLauncherConstants.tsx");
 
 export const CommandListSortOrder = { POPULAR: 0, [0]: "POPULAR", ALPHABETICAL: 1, [1]: "ALPHABETICAL" };
 export const APP_LAUNCHER_ELEMENT_CLASSNAME = "app-launcher-element";

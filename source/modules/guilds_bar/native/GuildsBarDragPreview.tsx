@@ -1,18 +1,17 @@
-// Module ID: 16363
-// Function ID: 16364
-// Name: PreviewItem
-// Dependencies: [19, 5438, 16287, 16288, 21, 4560, 16025, 4296, 4974, 7073, 4271, 4262, 576, 16296, 16318, 4184, 2]
+// Module ID: 16394
+// Function ID: 16395
+// Name: GuildsBarDragPreview
+// Dependencies: [19, 5452, 16317, 16318, 21, 4574, 16055, 4310, 4988, 7087, 4284, 4275, 576, 16326, 16349, 4197, 2]
 
-// Module 16363 (PreviewItem)
-import isIterable from "isIterable" /* 4184 */;
-import importAllResult from "noop" /* 19 */;
-import { GuildsNodeType } from "insertUnsortedGuilds" /* 5438 */;
-import closure_5 from "withEqualityFn" /* 16287 */;
-import { GUILD_ITEM_INSET_LEFT } from "GUILD_ITEM_SIZE" /* 16288 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16394 (GuildsBarDragPreview)
+import _mod4197 from "module_4197" /* 4197 */;
+import native from "native" /* 4284 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import spring from "spring" /* 4988 */;
+import noop from "module_19" /* 19 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16317 */;
 
-require = arg1;
+require = fn;
 function PreviewItem(dragRegion) {
   dragRegion = dragRegion.dragRegion;
   const draggedHeight = dragRegion.draggedHeight;
@@ -24,14 +23,14 @@ function PreviewItem(dragRegion) {
   const scrollPosition = dragRegion.scrollPosition;
   const windowSize = dragRegion.windowSize;
   const dropPosition = dragRegion.dropPosition;
-  let derivedValue;
   let derivedValue1;
   let tmp = windowSize();
+  const isHomeDrawerEnabled = dragRegion(dropComplete[6]).useIsHomeDrawerEnabled();
   let obj = dragRegion(dropComplete[6]);
-  const isHomeDrawerEnabled = obj.useIsHomeDrawerEnabled();
-  obj1 = dragRegion(dropComplete[7]);
+  const tmp2 = dragRegion;
+  const tmp3 = dropComplete;
   let fn = function x() {
-    const value = scrollPosition.get();
+    value = scrollPosition.get();
     let num = 0;
     if (value < dragRegion.get().min) {
       num = dragRegion.get().min - scrollPosition.get();
@@ -41,7 +40,8 @@ function PreviewItem(dragRegion) {
   fn.__closure = { scrollPosition, dragRegion, listInsets };
   fn.__workletHash = 17436881889698;
   fn.__initData = derivedValue1;
-  derivedValue = obj1.useDerivedValue(fn);
+  const derivedValue = dragRegion(dropComplete[7]).useDerivedValue(fn);
+  let obj2 = dragRegion(dropComplete[7]);
   class E {
     constructor() {
       obj = scrollPosition;
@@ -64,11 +64,9 @@ function PreviewItem(dragRegion) {
   }
   E.__closure = { scrollPosition, windowSize, listInsets, dragRegion, draggedHeight };
   E.__workletHash = 4371355784;
-  E.__initData = closure_12;
+  E.__initData = __initData;
   derivedValue1 = dragRegion(dropComplete[7]).useDerivedValue(E);
-  const obj3 = dragRegion(dropComplete[7]);
-  const tmp2 = dragRegion;
-  const tmp3 = dropComplete;
+  let obj3 = dragRegion(dropComplete[7]);
   class T {
     constructor() {
       tmp = dropPosition;
@@ -92,35 +90,35 @@ function PreviewItem(dragRegion) {
           bound1 = Math.min(bound, closure_11.get());
         }
         obj = { top: null };
-        tmp12 = dragRegion;
-        tmp13 = dropComplete;
-        obj2 = dragRegion(dropComplete[8]);
+        tmp12 = closure_0;
+        tmp13 = closure_2;
+        obj2 = closure_0(closure_2[8]);
         tmp14 = closure_10;
         fn = function t(arg0) {
           let tmp = arg0;
           if (arg0) {
-            tmp = null != closure_9;
+            tmp = null != dropPosition;
           }
           if (tmp) {
-            closure_1_0(closure_1_2[7]).runOnJS(closure_2)();
-            const obj = closure_1_0(closure_1_2[7]);
+            dragRegion(dropComplete[7]).runOnJS(closure_1_2)();
+            const obj = dragRegion(dropComplete[7]);
           }
         };
-        obj = { dropPosition: null, runOnJS: null, dropComplete: null };
-        obj[0] = tmp;
-        obj[1] = dragRegion(dropComplete[7]).runOnJS;
+        obj1 = { dropPosition: null, runOnJS: null, dropComplete: null };
+        obj1.dropPosition = tmp;
+        obj1.runOnJS = closure_0(closure_2[7]).runOnJS;
         tmp15 = dropComplete;
-        obj[2] = dropComplete;
-        fn.__closure = obj;
+        obj1.dropComplete = dropComplete;
+        fn.__closure = obj1;
         num2 = 12640145939434;
         fn.__workletHash = 12640145939434;
-        tmp16 = closure_1_14;
-        fn.__initData = closure_1_14;
+        tmp16 = closure_14;
+        fn.__initData = closure_14;
         str = "animate-always";
         tmp17 = obj2;
         tmp18 = bound1;
         tmp19 = fn;
-        obj[0] = obj2.withSpring(bound1, closure_10, "animate-always", fn);
+        obj.top = obj2.withSpring(bound1, closure_10, "animate-always", fn);
         return obj;
       }
       tmp6 = -draggedHeight;
@@ -128,41 +126,40 @@ function PreviewItem(dragRegion) {
       return;
     }
   }
-  obj = { dropPosition, scrollPosition, gestureState, draggedHeight, minY: derivedValue, maxY: derivedValue1, windowSize, withSpring: dragRegion(dropComplete[8]).withSpring, DRAG_SPRING_PHYSICS: derivedValue, runOnJS: dragRegion(dropComplete[7]).runOnJS, dropComplete };
-  T.__closure = obj;
+  const obj4 = dragRegion(dropComplete[7]);
+  T.__closure = { dropPosition, scrollPosition, gestureState, draggedHeight, minY: derivedValue, maxY: derivedValue1, windowSize, withSpring: dragRegion(dropComplete[8]).withSpring, DRAG_SPRING_PHYSICS: derivedValue, runOnJS: dragRegion(dropComplete[7]).runOnJS, dropComplete };
   T.__workletHash = 5676492640532;
-  T.__initData = closure_13;
+  T.__initData = __initData2;
   let items = [overState, overNode];
-  const animatedStyle = dragRegion(dropComplete[7]).useAnimatedStyle(T);
+  const animatedStyle = obj4.useAnimatedStyle(T);
   const memo = gestureState.useMemo(() => {
     if ("convert-after" === overState) {
       if (null != overNode) {
-        const obj = { type: null, id: -1, parentId: "PX_16", name: "Array", color: "padding", expanded: false, children: false };
-        obj[0] = listInsets.FOLDER;
+        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "PX_16", name: "Array", color: "applicationId", expanded: "<string:2435842049>", children: "<string:2842689538>" };
         const items = [tmp2];
-        obj[6] = items;
-        return obj;
+        element.children = items;
+        return element;
       }
     }
   }, items);
   const items1 = [tmp.dragPreview, , ];
   let dragPreviewHome = null;
-  const obj4 = dragRegion(dropComplete[7]);
+  const obj5 = { dropPosition, scrollPosition, gestureState, draggedHeight, minY: derivedValue, maxY: derivedValue1, windowSize, withSpring: dragRegion(dropComplete[8]).withSpring, DRAG_SPRING_PHYSICS: derivedValue, runOnJS: dragRegion(dropComplete[7]).runOnJS, dropComplete };
   if (isHomeDrawerEnabled) {
     dragPreviewHome = tmp.dragPreviewHome;
   }
-  obj = { style: items1, nativeID: "guilds-bar-drag-preview", children: null };
+  const obj6 = { style: items1, nativeID: "guilds-bar-drag-preview", children: null };
   items1[1] = dragPreviewHome;
   items1[2] = animatedStyle;
-  obj1 = { renderItem: renderAnimatedItemPreview, items: null, getItemKey: null };
+  const obj7 = { renderItem: renderAnimatedItemPreview, items: null, getItemKey: null };
   if (null != memo) {
     draggedNode = memo;
   }
   const items2 = [draggedNode];
-  obj1[1] = items2;
-  obj1[2] = getItemPreviewKey;
-  obj[2] = scrollPosition(tmp2(tmp3[10]).TransitionGroup, obj1);
-  return scrollPosition(draggedHeight(dropComplete[9]), obj);
+  obj7.items = items2;
+  obj7.getItemKey = getItemPreviewKey;
+  obj6.children = scrollPosition(tmp2(tmp3[10]).TransitionGroup, obj7);
+  return scrollPosition(draggedHeight(dropComplete[9]), obj6);
 }
 function getItemPreviewKey(id) {
   return "" + id.id;
@@ -174,25 +171,25 @@ function AnimatedItemPreview(cleanUp) {
   ({ node, transitionState } = cleanUp);
   cleanUp = cleanUp.cleanUp;
   let sharedValue;
-  importAllResult = undefined;
+  noop = undefined;
+  let tmp = closure_8();
   let obj = transitionState(sharedValue[11]);
-  let tmp = callback2();
-  obj1 = transitionState(sharedValue[6]);
-  let isHomeDrawerEnabled = obj1.useIsHomeDrawerEnabled();
-  let obj2 = transitionState(sharedValue[7]);
+  const tmp5 = closure_9(GUILD_ITEM_INSET_LEFT + transitionState(sharedValue[11]).useToken(cleanUp(sharedValue[12]).modules.mobile.GUILD_BAR_ITEM_SIZE) / 2);
+  let isHomeDrawerEnabled = transitionState(sharedValue[6]).useIsHomeDrawerEnabled();
+  let obj2 = transitionState(sharedValue[6]);
   let num = 1;
   if (transitionState === transitionState(sharedValue[10]).TransitionStates.ENTERED) {
     num = 0;
   }
-  sharedValue = obj2.useSharedValue(num);
-  importAllResult = tmp9;
+  sharedValue = transitionState(sharedValue[7]).useSharedValue(num);
+  noop = tmp9;
   if (isHomeDrawerEnabled) {
     isHomeDrawerEnabled = !tmp9;
   }
-  const tmp5 = callback3(GUILD_ITEM_INSET_LEFT + obj.useToken(cleanUp(sharedValue[12]).modules.mobile.GUILD_BAR_ITEM_SIZE) / 2);
+  let obj3 = transitionState(sharedValue[7]);
   const tmp8 = GuildsNodeType;
   let fn = function _() {
-    const value = sharedValue.get();
+    value = sharedValue.get();
     let num = 1;
     if (closure_3) {
       let num3 = 0.3;
@@ -210,157 +207,158 @@ function AnimatedItemPreview(cleanUp) {
     }
     if (!closure_3) {
       if (num !== obj.get()) {
-        obj = { translateX: 10, translateY: -10 };
+        let obj2 = { translateX: 10, translateY: -10 };
       }
       let num4 = num;
-      ({ translateX, translateY } = obj);
+      ({ translateX, translateY } = obj2);
       if (tmp) {
         num4 = 0;
       }
-      obj = { zIndex: null, transform: null, opacity: null };
-      obj[0] = num4;
-      obj1 = { translateY: null };
-      let obj4 = transitionState(sharedValue[8]);
-      obj1[0] = obj4.withSpring(translateY, closure_1_10, "animate-always");
-      const items = [obj1, , ];
-      const obj2 = { translateX: null };
-      obj2[0] = transitionState(sharedValue[8]).withSpring(translateX, closure_1_10, "animate-always");
-      items[1] = obj2;
-      const obj3 = { scale: null };
-      const obj9 = transitionState(sharedValue[8]);
+      const obj3 = { zIndex: num4, transform: null, opacity: null };
+      const obj4 = { translateY: spring.withSpring(translateY, closure_10, "animate-always") };
+      const items = [obj4, , ];
+      const obj6 = { translateX: null };
+      const tmp6 = closure_10;
+      obj6.translateX = spring.withSpring(translateX, closure_10, "animate-always");
+      items[1] = obj6;
+      const obj8 = { scale: null };
+      const obj9 = spring;
       const fn = function t(arg0) {
         let tmp = arg0;
         if (arg0) {
-          tmp = closure_0 === closure_1_0(closure_1_2[10]).TransitionStates.YEETED;
+          tmp = closure_1_0 === transitionState(sharedValue[10]).TransitionStates.YEETED;
         }
         if (tmp) {
-          tmp = closure_3;
+          tmp = closure_1_3;
         }
         if (tmp) {
-          closure_1_0(closure_1_2[7]).runOnJS(closure_1)();
-          const obj = closure_1_0(closure_1_2[7]);
+          transitionState(sharedValue[7]).runOnJS(cleanUp)();
+          const obj = transitionState(sharedValue[7]);
         }
       };
-      obj4 = { transitionState: null, TransitionStates: null, isFolder: null, runOnJS: null, cleanUp: null };
-      obj4[0] = transitionState;
-      obj4[1] = transitionState(sharedValue[10]).TransitionStates;
-      obj4[2] = tmp;
-      obj4[3] = transitionState(sharedValue[7]).runOnJS;
-      obj4[4] = cleanUp;
-      fn.__closure = obj4;
+      const obj10 = { transitionState, TransitionStates: native.TransitionStates, isFolder: tmp, runOnJS: ReanimatedRexport.runOnJS, cleanUp };
+      fn.__closure = obj10;
       fn.__workletHash = 9409925192880;
-      fn.__initData = closure_1_19;
-      obj3[0] = obj9.withSpring(num2, closure_1_10, "animate-always", fn);
-      items[2] = obj3;
-      obj[1] = items;
-      const obj7 = transitionState(sharedValue[8]);
-      const tmp6 = closure_1_10;
+      fn.__initData = __initData;
+      obj8.scale = obj9.withSpring(num2, closure_10, "animate-always", fn);
+      items[2] = obj8;
+      obj3.transform = items;
       if (tmp) {
         num = obj.get();
       }
-      obj[2] = transitionState(sharedValue[8]).withSpring(num, tmp6, "animate-always");
-      return obj;
+      obj3.opacity = spring.withSpring(num, tmp6, "animate-always");
+      return obj3;
     }
-    obj = { translateX: 0, translateY: 0 };
+    obj2 = { translateX: 0, translateY: 0 };
   };
-  obj = { isFolder: tmp9, visible: sharedValue, withSpring: tmp2(tmp3[8]).withSpring, DRAG_SPRING_PHYSICS: closure_10, transitionState, TransitionStates: tmp2(tmp3[10]).TransitionStates, runOnJS: tmp2(tmp3[7]).runOnJS, cleanUp };
-  fn.__closure = obj;
+  const tmp2Result = transitionState(sharedValue[7]);
+  fn.__closure = { isFolder: node.type === GuildsNodeType.FOLDER, visible: sharedValue, withSpring: transitionState(sharedValue[8]).withSpring, DRAG_SPRING_PHYSICS, transitionState, TransitionStates: transitionState(sharedValue[10]).TransitionStates, runOnJS: transitionState(sharedValue[7]).runOnJS, cleanUp };
   fn.__workletHash = 13465198693221;
-  fn.__initData = closure_18;
-  const animatedStyle = transitionState(sharedValue[7]).useAnimatedStyle(fn);
-  const effect = importAllResult.useEffect(() => {
+  fn.__initData = __initData4;
+  const animatedStyle = tmp2Result.useAnimatedStyle(fn);
+  const effect = noop.useEffect(() => {
     let num = 1;
-    if (transitionState === transitionState(sharedValue[10]).TransitionStates.YEETED) {
+    if (transitionState === native.TransitionStates.YEETED) {
       num = 0;
     }
     const result = sharedValue.set(num);
   });
   let items = [tmp.animatedPreviewStyle, , ];
   let prop = null;
-  let tmp4Result = tmp4(tmp3[9]);
+  let obj4 = { isFolder: node.type === GuildsNodeType.FOLDER, visible: sharedValue, withSpring: transitionState(sharedValue[8]).withSpring, DRAG_SPRING_PHYSICS, transitionState, TransitionStates: transitionState(sharedValue[10]).TransitionStates, runOnJS: transitionState(sharedValue[7]).runOnJS, cleanUp };
   if (isHomeDrawerEnabled) {
     prop = tmp5.animatedPreviewStyleHome;
   }
-  obj = { style: items, children: null };
+  let obj5 = { style: items, children: null };
   items[1] = prop;
   items[2] = animatedStyle;
   if (node.type === tmp8.FOLDER) {
-    obj1 = { id: null, expanded: null, color: null, name: null, childNodes: null, isDragPreview: true, hideExpandedChildren: null };
-    ({ id: obj8[0], expanded: obj8[1], color: obj8[2], name: obj8[3], children: obj8[4] } = node);
-    obj1[6] = !isHomeDrawerEnabled;
-    let tmp12Result = tmp12(tmp4(tmp3[13]), obj1);
+    let obj6 = { id: null, expanded: null, color: null, name: null, childNodes: null, isDragPreview: true, hideExpandedChildren: null };
+    ({ id: obj8.id, expanded: obj8.expanded, color: obj8.color, name: obj8.name, children: obj8.childNodes } = node);
+    obj6.hideExpandedChildren = !isHomeDrawerEnabled;
+    let tmp12Result = tmp12(tmp4(tmp3[13]), obj6);
   } else {
-    obj2 = { guildId: null, isDragPreview: true, hideExpandedChildren: null };
-    obj2[0] = node.id;
+    let obj7 = { guildId: node.id, isDragPreview: true, hideExpandedChildren: null };
     let tmp16 = !isHomeDrawerEnabled;
-    tmp4Result = tmp4(tmp3[14]);
     if (isHomeDrawerEnabled) {
       tmp16 = transitionState === tmp2(tmp3[10]).TransitionStates.YEETED;
     }
-    obj2[2] = tmp16;
-    tmp12Result = tmp12(tmp4Result, obj2);
+    obj7.hideExpandedChildren = tmp16;
+    tmp12Result = tmp12(tmp4(tmp3[14]), obj7);
+    const tmp4Result2 = tmp4(tmp3[14]);
   }
-  obj[1] = tmp12Result;
-  return <tmp4Result style={items}>{null}</tmp4Result>;
+  obj5.children = tmp12Result;
+  return jsx(cleanUp(sharedValue[9]), { style: items, children: null });
 }
-let c3 = importAllResult;
-let closure_8 = createCacheKey.createStyles({ dragPreview: { position: "absolute", left: 0 }, animatedPreviewStyle: { position: "absolute" }, dragPreviewHome: { right: 0 } });
-let closure_9 = createCacheKey.createStyles((arg0) => {
-  const transformOrigin = [arg0, "50%", 0];
-  return { animatedPreviewStyleHome: { left: 0, right: 0, transformOrigin } };
+const GuildsNodeType = fn(5452).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(16318).GUILD_ITEM_INSET_LEFT;
+const jsx = fn(21).jsx;
+let createStyles = fn(4574);
+let closure_8 = createStyles.createStyles({ dragPreview: { position: "absolute", left: 0 }, animatedPreviewStyle: { position: "absolute" }, dragPreviewHome: { right: 0 } });
+createStyles = fn(4574);
+let closure_9 = createStyles.createStyles((arg0) => {
+  const obj = { animatedPreviewStyleHome: null };
+  const rect = { left: 0, right: 0, transformOrigin: null };
+  const items = [arg0, "50%", 0];
+  rect.transformOrigin = items;
+  obj.animatedPreviewStyleHome = rect;
+  return obj;
 });
-let closure_10 = { mass: 0.5, damping: 80, stiffness: 320 };
+const DRAG_SPRING_PHYSICS = { mass: 0.5, damping: 80, stiffness: 320 };
 let closure_11 = { code: "function GuildsBarDragPreviewTsx1(){const{scrollPosition,dragRegion,listInsets}=this.__closure;return Math.max(scrollPosition.get()<dragRegion.get().min?dragRegion.get().min-scrollPosition.get():0,listInsets.get().start);}" };
-let closure_12 = { code: "function GuildsBarDragPreviewTsx2(){const{scrollPosition,windowSize,listInsets,dragRegion,draggedHeight}=this.__closure;return Math.min(scrollPosition.get()+(windowSize-listInsets.get().end)>dragRegion.get().max?dragRegion.get().max-draggedHeight-scrollPosition.get():windowSize-listInsets.get().end-draggedHeight,windowSize-listInsets.get().end-draggedHeight);}" };
-let closure_13 = { code: "function GuildsBarDragPreviewTsx3(){const{dropPosition,scrollPosition,gestureState,draggedHeight,minY,maxY,windowSize,withSpring,DRAG_SPRING_PHYSICS,runOnJS,dropComplete}=this.__closure;let translateY=function(){if(dropPosition!=null){return dropPosition-scrollPosition.get();}return gestureState.get().absoluteY-draggedHeight/2;}();if(gestureState.get().mode!=null&&dropPosition==null){translateY=Math.min(Math.max(translateY,minY.get()),maxY.get());}else{translateY=Math.max(-draggedHeight,Math.min(translateY,windowSize));}return{top:withSpring(translateY,DRAG_SPRING_PHYSICS,'animate-always',function(finished){if(finished&&dropPosition!=null){runOnJS(dropComplete)();}})};}" };
-let closure_14 = { code: "function GuildsBarDragPreviewTsx4(finished){const{dropPosition,runOnJS,dropComplete}=this.__closure;if(finished&&dropPosition!=null){runOnJS(dropComplete)();}}" };
-let closure_18 = { code: "function GuildsBarDragPreviewTsx5(){const{isFolder,visible,withSpring,DRAG_SPRING_PHYSICS,transitionState,TransitionStates,runOnJS,cleanUp}=this.__closure;const targetScale=function(){if(isFolder){return visible.get()===1?1:0.3;}return visible.get()===1?1:0.33;}();const{translateX:translateX,translateY:translateY}=function(){if(isFolder){return{translateX:0,translateY:0};}if(visible.get()===1){return{translateX:0,translateY:0};}return{translateX:10,translateY:-10};}();return{zIndex:isFolder?0:1,transform:[{translateY:withSpring(translateY,DRAG_SPRING_PHYSICS,'animate-always')},{translateX:withSpring(translateX,DRAG_SPRING_PHYSICS,'animate-always')},{scale:withSpring(targetScale,DRAG_SPRING_PHYSICS,'animate-always',function(finished){if(finished&&transitionState===TransitionStates.YEETED&&isFolder){runOnJS(cleanUp)();}})}],opacity:withSpring(isFolder?visible.get():1,DRAG_SPRING_PHYSICS,'animate-always')};}" };
+const __initData = { code: "function GuildsBarDragPreviewTsx2(){const{scrollPosition,windowSize,listInsets,dragRegion,draggedHeight}=this.__closure;return Math.min(scrollPosition.get()+(windowSize-listInsets.get().end)>dragRegion.get().max?dragRegion.get().max-draggedHeight-scrollPosition.get():windowSize-listInsets.get().end-draggedHeight,windowSize-listInsets.get().end-draggedHeight);}" };
+const __initData2 = { code: "function GuildsBarDragPreviewTsx3(){const{dropPosition,scrollPosition,gestureState,draggedHeight,minY,maxY,windowSize,withSpring,DRAG_SPRING_PHYSICS,runOnJS,dropComplete}=this.__closure;let translateY=function(){if(dropPosition!=null){return dropPosition-scrollPosition.get();}return gestureState.get().absoluteY-draggedHeight/2;}();if(gestureState.get().mode!=null&&dropPosition==null){translateY=Math.min(Math.max(translateY,minY.get()),maxY.get());}else{translateY=Math.max(-draggedHeight,Math.min(translateY,windowSize));}return{top:withSpring(translateY,DRAG_SPRING_PHYSICS,'animate-always',function(finished){if(finished&&dropPosition!=null){runOnJS(dropComplete)();}})};}" };
+const __initData3 = { code: "function GuildsBarDragPreviewTsx4(finished){const{dropPosition,runOnJS,dropComplete}=this.__closure;if(finished&&dropPosition!=null){runOnJS(dropComplete)();}}" };
+const __initData4 = { code: "function GuildsBarDragPreviewTsx5(){const{isFolder,visible,withSpring,DRAG_SPRING_PHYSICS,transitionState,TransitionStates,runOnJS,cleanUp}=this.__closure;const targetScale=function(){if(isFolder){return visible.get()===1?1:0.3;}return visible.get()===1?1:0.33;}();const{translateX:translateX,translateY:translateY}=function(){if(isFolder){return{translateX:0,translateY:0};}if(visible.get()===1){return{translateX:0,translateY:0};}return{translateX:10,translateY:-10};}();return{zIndex:isFolder?0:1,transform:[{translateY:withSpring(translateY,DRAG_SPRING_PHYSICS,'animate-always')},{translateX:withSpring(translateX,DRAG_SPRING_PHYSICS,'animate-always')},{scale:withSpring(targetScale,DRAG_SPRING_PHYSICS,'animate-always',function(finished){if(finished&&transitionState===TransitionStates.YEETED&&isFolder){runOnJS(cleanUp)();}})}],opacity:withSpring(isFolder?visible.get():1,DRAG_SPRING_PHYSICS,'animate-always')};}" };
 let closure_19 = { code: "function GuildsBarDragPreviewTsx6(finished){const{transitionState,TransitionStates,isFolder,runOnJS,cleanUp}=this.__closure;if(finished&&transitionState===TransitionStates.YEETED&&isFolder){runOnJS(cleanUp)();}}" };
-const memoResult = importAllResult.memo(function GuildsBarDragPreview() {
-  const tmp = callback((arg0) => {
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarDragPreview.tsx");
+
+export default noop.memo(function GuildsBarDragPreview() {
+  const tmp = GuildsBarDnDStore((arg0) => {
     ({ dragSpecs, overSpecs, gestureState, scrollPosition, dragRegion, windowSize, dropComplete, listInsets, dropSpecs } = arg0);
     if (null != dropSpecs) {
       const overState = dropSpecs.overState;
-      let obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: null, gestureState: null, scrollPosition: null, dragRegion: null, windowSize: null, dropComplete: null, listInsets: null };
-      ({ dragNode: obj2[0], itemSize: obj2[1] } = dropSpecs);
-      obj[2] = overState;
+      const obj3 = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: null, gestureState: null, scrollPosition: null, dragRegion: null, windowSize: null, dropComplete: null, listInsets: null };
+      ({ dragNode: obj2.draggedNode, itemSize: obj2.draggedHeight } = dropSpecs);
+      obj3.overState = overState;
       let overNode;
       if (overState.startsWith("convert")) {
         overNode = dropSpecs.overNode;
       }
-      obj[3] = overNode;
-      obj[4] = dropSpecs.dropPosition;
-      obj[5] = gestureState;
-      obj[6] = scrollPosition;
-      obj[7] = dragRegion;
-      obj[8] = windowSize;
-      obj[9] = dropComplete;
-      obj[10] = listInsets;
-      return obj;
+      obj3.overNode = overNode;
+      obj3.dropPosition = dropSpecs.dropPosition;
+      obj3.gestureState = gestureState;
+      obj3.scrollPosition = scrollPosition;
+      obj3.dragRegion = dragRegion;
+      obj3.windowSize = windowSize;
+      obj3.dropComplete = dropComplete;
+      obj3.listInsets = listInsets;
+      return obj3;
     } else {
       if (null != dragSpecs) {
         if (null != overSpecs) {
           const state = overSpecs.state;
-          obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "short", scrollPosition: "2-digit", dragRegion: 6, windowSize: 0, dropComplete: 1, listInsets: 2 };
-          ({ node: obj[0], itemSize: obj[1] } = dragSpecs);
-          obj[2] = state;
+          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: null, scrollPosition: null, dragRegion: null, windowSize: null, dropComplete: null, listInsets: null };
+          ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
+          obj.overState = state;
           let node;
           if (state.startsWith("convert")) {
             node = overSpecs.node;
           }
-          obj[3] = node;
-          obj[5] = gestureState;
-          obj[6] = scrollPosition;
-          obj[7] = dragRegion;
-          obj[8] = windowSize;
-          obj[9] = dropComplete;
-          obj[10] = listInsets;
+          obj.overNode = node;
+          obj.gestureState = gestureState;
+          obj.scrollPosition = scrollPosition;
+          obj.dragRegion = dragRegion;
+          obj.windowSize = windowSize;
+          obj.dropComplete = dropComplete;
+          obj.listInsets = listInsets;
           return obj;
         }
       }
       return null;
     }
-  }, isIterable.shallow);
+  }, _mod4197.shallow);
   let tmp2 = null;
   if (null != tmp) {
     let obj = {};
@@ -369,6 +367,3 @@ const memoResult = importAllResult.memo(function GuildsBarDragPreview() {
   }
   return tmp2;
 });
-let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarDragPreview.tsx");
-
-export default memoResult;

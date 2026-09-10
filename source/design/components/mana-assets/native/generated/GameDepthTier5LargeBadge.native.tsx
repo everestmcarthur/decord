@@ -1,17 +1,17 @@
-// Module ID: 6029
-// Function ID: 6030
+// Module ID: 6043
+// Function ID: 6044
 // Name: GameDepthTier5LargeBadge
-// Dependencies: [21, 5587, 6030, 2]
+// Dependencies: [21, 5601, 6044, 2]
 // Exports: GameDepthTier5LargeBadge
 
-// Module 6029 (GameDepthTier5LargeBadge)
-import set from "set" /* 2 */;
+// Module 6043 (GameDepthTier5LargeBadge)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import vanityUrlDefault from "vanityUrl" /* 6030 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6044 from "module_6044" /* 6044 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GameDepthTier5LargeBadge.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/GameDepthTier5LargeBadge.native.tsx");
 
 export const GameDepthTier5LargeBadge = function GameDepthTier5LargeBadge(width) {
   let num = width.width;
@@ -27,14 +27,14 @@ export const GameDepthTier5LargeBadge = function GameDepthTier5LargeBadge(width)
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: vanityUrlDefault };
-  obj[1] = obj;
-  obj = { width: num * num3, height: num2 * num3 };
-  const items = [obj];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { width: num * num3, height: num2 * num3 });
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef6044 };
+  obj.source = obj2;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

@@ -1,31 +1,34 @@
-// Module ID: 10081
-// Function ID: 10082
-// Dependencies: [19, 17, 9472, 21, 4560, 576, 9946, 1611, 9594, 12, 9476, 4495, 5125, 10082, 9486, 11345, 5123, 1114, 1178, 11584, 12778, 2]
+// Module ID: 10108
+// Function ID: 10109
+// Name: ChannelVoiceChat
+// Dependencies: [19, 17, 9499, 21, 4574, 576, 9973, 1611, 9621, 12, 9503, 4509, 5139, 10109, 9513, 11372, 5137, 1114, 1178, 11610, 12804, 2]
 
-// Module 10081
-import ThemesDefault from "Themes" /* 576 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { useIsVoiceChatFocused } from "VoiceChatDrawerState" /* 9472 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10108 (ChannelVoiceChat)
+import nativeDefault from "native" /* 576 */;
+import MessageManagerDefault from "MessageManager" /* 9973 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let obj = { chat: null, chatHeaderSpacer: null, chatHeader: null, chatHeaderBackIconContainer: null, chatHeaderTitleContainer: null, safeAreaTop: null };
-obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignSelf: "stretch" };
-obj[0] = obj;
-createCacheKey = { height: 44, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-obj[1] = createCacheKey;
-obj[2] = { flexDirection: "row", alignSelf: "stretch", height: 44, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "flex-start", position: "absolute", left: 0, right: 0, paddingHorizontal: 16 };
-obj[3] = { width: 32, height: 32, alignItems: "flex-start", justifyContent: "center" };
-obj[4] = { alignSelf: "stretch", flex: 1, justifyContent: "center", marginStart: 16 };
-let obj2 = { flexDirection: "row", alignSelf: "stretch", height: 44, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "flex-start", position: "absolute", left: 0, right: 0, paddingHorizontal: 16 };
-obj[5] = { alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-let closure_8 = createCacheKey.createStyles(obj);
-let obj3 = { alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-const memoResult = importAllResult.memo((channel) => {
+const require = fn;
+const View = fn(17).View;
+const useIsVoiceChatFocused = fn(9499).useIsVoiceChatFocused;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj = { chat: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignSelf: "stretch" }, chatHeaderSpacer: null, chatHeader: null, chatHeaderBackIconContainer: null, chatHeaderTitleContainer: null, safeAreaTop: null };
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignSelf: "stretch" };
+obj.chatHeaderSpacer = { height: 44, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+const rect = { flexDirection: "row", alignSelf: "stretch", height: 44, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "flex-start", position: "absolute", left: 0, right: 0, paddingHorizontal: 16 };
+obj.chatHeader = rect;
+obj.chatHeaderBackIconContainer = { width: 32, height: 32, alignItems: "flex-start", justifyContent: "center" };
+obj.chatHeaderTitleContainer = { alignSelf: "stretch", flex: 1, justifyContent: "center", marginStart: 16 };
+let obj4 = { height: 44, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj.safeAreaTop = { alignSelf: "stretch", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+let closure_8 = createStyles.createStyles(obj);
+let obj5 = { alignSelf: "stretch", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/components/ChannelVoiceChat.tsx");
+
+export default noop.memo((channel) => {
   channel = channel.channel;
   const id = channel.id;
   const guild_id = channel.guild_id;
@@ -33,20 +36,16 @@ const memoResult = importAllResult.memo((channel) => {
   if (flag === undefined) {
     flag = false;
   }
-  const tmp = callback2();
+  const tmp = closure_8();
   const tmp2 = useIsVoiceChatFocused();
-  let obj = importAllResult;
   const items = [id, guild_id];
-  const effect = importAllResult.useEffect(() => {
-    let obj = guild_id(closure_1_2[6]);
-    obj = { guildId: guild_id, channelId: id };
-    const messages = obj.fetchMessages(obj);
+  const effect = noop.useEffect(() => {
+    const messages = MessageManagerDefault.fetchMessages({ guildId: guild_id, channelId: id });
   }, items);
   const tmp6 = guild_id(1611)();
   const top = tmp6.top;
   ({ left, right } = tmp6);
-  obj1 = id(9594);
-  const voiceChatNavigationContext = obj1.useVoiceChatNavigationContext();
+  const voiceChatNavigationContext = id(9621).useVoiceChatNavigationContext();
   let openVoice;
   if (voiceChatNavigationContext != null) {
     openVoice = voiceChatNavigationContext.openVoice;
@@ -54,83 +53,79 @@ const memoResult = importAllResult.memo((channel) => {
   if (openVoice == null) {
     openVoice = tmp4(12).noop;
   }
-  const isConnectedToVoiceChannel = id(9476).useIsConnectedToVoiceChannel(channel.channel);
-  const tmp7Result = id(9476);
+  const obj = noop;
+  const obj2 = id(9621);
+  const isConnectedToVoiceChannel = id(9503).useIsConnectedToVoiceChannel(channel.channel);
+  const tmp7Result = id(9503);
   let str = "no-hide-descendants";
   const ref = obj.useRef(null);
   if (tmp2) {
     str = "yes";
   }
-  obj = { importantForAccessibility: str, accessibilityElementsHidden: !tmp2, style: null, children: null };
+  const obj3 = { importantForAccessibility: str, accessibilityElementsHidden: !tmp2, style: null, children: null };
   const items1 = [tmp.chat, ];
   let tmp15;
   if (!flag) {
-    obj = { paddingLeft: null, paddingRight: null };
-    obj[0] = left;
-    obj[1] = right;
-    tmp15 = obj;
+    const obj4 = { paddingLeft: left, paddingRight: right };
+    tmp15 = obj4;
   }
   items1[1] = tmp15;
-  obj[2] = items1;
-  const items2 = [callback(guild_id(5125), { absolute: true, tall: true }), ];
-  obj1 = { guildId: guild_id, channelId: id, children: null };
+  obj3.style = items1;
+  const items2 = [closure_6(guild_id(5139), { absolute: true, tall: true }), ];
+  const obj5 = { guildId: guild_id, channelId: id, children: null };
   let tmp16Result = null;
   if (!flag) {
-    const obj2 = { hidden: null, animated: true, barStyle: null };
-    obj2[0] = !tmp2;
+    const obj6 = { hidden: !tmp2, animated: true, barStyle: null };
     if (isConnectedToVoiceChannel) {
       let str2 = "light-content";
     } else {
       str2 = "dark-content";
     }
-    obj2[2] = str2;
-    tmp16Result = tmp16(tmp4(9486), obj2);
+    obj6.barStyle = str2;
+    tmp16Result = tmp16(tmp4(9513), obj6);
     const tmp19 = !tmp2;
-    const tmp4Result = tmp4(9486);
+    const tmp4Result = tmp4(9513);
   }
   const items3 = [tmp16Result, , , , ];
   const items4 = [tmp.safeAreaTop, ];
-  const obj3 = { height: top, display: null };
+  const obj7 = { height: top, display: null };
   let str4;
   if (flag) {
     str4 = "none";
   }
-  obj3[1] = str4;
-  items4[1] = obj3;
-  items3[1] = callback(View, { style: items4 });
+  obj7.display = str4;
+  items4[1] = obj7;
+  items3[1] = closure_6(View, { style: items4 });
   const items5 = [tmp.chatHeaderSpacer, ];
   let str5;
   if (flag) {
     str5 = "none";
   }
   items5[1] = { display: str5 };
-  items3[2] = callback(View, { style: items5 });
-  items3[3] = callback(guild_id(11345), { guildId: guild_id, channelId: id, chatInputRef: ref, screenIndex: "voice-panel" });
+  items3[2] = closure_6(View, { style: items5 });
+  items3[3] = closure_6(guild_id(11372), { guildId: guild_id, channelId: id, chatInputRef: ref, screenIndex: "voice-panel" });
   const items6 = [tmp.chatHeader, ];
-  const obj4 = { top, display: null };
+  const obj8 = { top, display: null };
   let str6;
   if (flag) {
     str6 = "none";
   }
-  const obj5 = { style: items6, children: null };
-  obj4[1] = str6;
-  items6[1] = obj4;
-  const obj6 = { accessibilityRole: "button", onPress: openVoice, accessibilityLabel: null, style: null, children: null };
+  const obj9 = { style: items6, children: null };
+  obj8.display = str6;
+  items6[1] = obj8;
+  const obj10 = { accessibilityRole: "button", onPress: openVoice, accessibilityLabel: null, style: null, children: null };
   const intl = tmp7(1114).intl;
-  obj6[2] = intl.string(id(1114).t["13/7kX"]);
-  obj6[3] = tmp.chatHeaderBackIconContainer;
-  const tmp12 = guild_id(4495)();
-  obj6[4] = callback(id(1178).Icon, { source: guild_id(11584), size: id(1178).Icon.Sizes.MEDIUM });
-  const items7 = [callback(id(5123).PressableOpacity, obj6), ];
-  const obj7 = { source: guild_id(11584), size: id(1178).Icon.Sizes.MEDIUM };
-  items7[1] = callback(View, { style: tmp.chatHeaderTitleContainer, children: callback(id(12778).ChannelTitle, { guildId: guild_id, channelId: id }) });
-  obj5[1] = items7;
-  items3[4] = closure_7(View, obj5);
-  obj1[2] = items3;
-  items2[1] = closure_7(id(10082).ChannelContainer, obj1);
-  obj[3] = items2;
-  return closure_7(View, obj);
+  obj10.accessibilityLabel = intl.string(id(1114).t["13/7kX"]);
+  obj10.style = tmp.chatHeaderBackIconContainer;
+  const tmp12 = guild_id(4509)();
+  obj10.children = closure_6(id(1178).Icon, { source: guild_id(11610), size: id(1178).Icon.Sizes.MEDIUM });
+  const items7 = [closure_6(id(5137).PressableOpacity, obj10), ];
+  const obj11 = { source: guild_id(11610), size: id(1178).Icon.Sizes.MEDIUM };
+  items7[1] = closure_6(View, { style: tmp.chatHeaderTitleContainer, children: closure_6(id(12804).ChannelTitle, { guildId: guild_id, channelId: id }) });
+  obj9.children = items7;
+  items3[4] = closure_7(View, obj9);
+  obj5.children = items3;
+  items2[1] = closure_7(id(10109).ChannelContainer, obj5);
+  obj3.children = items2;
+  return closure_7(View, obj3);
 });
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/ChannelVoiceChat.tsx");
-
-export default memoResult;

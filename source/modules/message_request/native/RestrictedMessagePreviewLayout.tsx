@@ -1,15 +1,15 @@
-// Module ID: 16902
-// Function ID: 16903
-// Name: RESTRICTED_AVATAR_SIZE
+// Module ID: 16939
+// Function ID: 16940
+// Name: RestrictedMessagePreviewLayout
 // Dependencies: [1178, 2]
 
-// Module 16902 (RESTRICTED_AVATAR_SIZE)
-import set from "set" /* 2 */;
-import Button from "Button" /* 1178 */;
+// Module 16939 (RestrictedMessagePreviewLayout)
+import native from "native" /* 1178 */;
+import size from "module_2" /* 2 */;
 
-const tmp2 = Button.AVATAR_SIZE_MAP[Button.AvatarSizes.NORMAL];
+const tmp2 = native.AVATAR_SIZE_MAP[native.AvatarSizes.NORMAL];
 const sum = tmp2 + 18;
-const result = set.fileFinishedImporting("modules/message_request/native/RestrictedMessagePreviewLayout.tsx");
+const result = size.fileFinishedImporting("modules/message_request/native/RestrictedMessagePreviewLayout.tsx");
 
 export const RESTRICTED_AVATAR_SIZE = tmp2;
 export const RESTRICTED_CONTENT_INSET = sum;

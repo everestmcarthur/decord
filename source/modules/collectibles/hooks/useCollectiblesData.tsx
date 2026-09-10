@@ -1,26 +1,30 @@
-// Module ID: 8173
-// Function ID: 8174
+// Module ID: 8199
+// Function ID: 8200
 // Name: useCollectiblesData
-// Dependencies: [32, 7542, 7558, 563, 2]
+// Dependencies: [32, 7556, 7572, 563, 2]
 // Exports: default
 
-// Module 8173 (useCollectiblesData)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "updateCategoriesAndProducts" /* 7542 */;
-import closure_4 from "map" /* 7558 */;
+// Module 8199 (useCollectiblesData)
+import _slicedToArray from "module_32" /* 32 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7556 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7572 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useCollectiblesData.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useCollectiblesData.tsx");
 
 export default function useCollectiblesData(arg0) {
-  const _require = arg0;
-  let obj = _require(563);
-  let items = [closure_3];
-  const tmp = callback(obj.useStateFromStoresArray(items, () => {
-    const items = [closure_1_3.getCategoryForProduct(closure_0), closure_1_3.getProduct(closure_0)];
+  _require = arg0;
+  let items = [CollectiblesCategoryStore];
+  const tmp = _slicedToArray(require("useStateFromStores").useStateFromStoresArray(items, () => {
+    const items = [CollectiblesCategoryStore.getCategoryForProduct(closure_0), CollectiblesCategoryStore.getProduct(closure_0)];
     return items;
   }), 2);
-  obj = { category: tmp[0], product: tmp[1], purchase: _require(563).useStateFromStores(items1, () => closure_1_4.getPurchase(closure_0)) };
-  items1 = [closure_4];
-  return obj;
+  const obj2 = { category: tmp[0], product: tmp[1], purchase: null };
+  const obj = require("useStateFromStores");
+  const items1 = [CollectiblesPurchaseStore];
+  obj2.purchase = require("useStateFromStores").useStateFromStores(items1, () => CollectiblesPurchaseStore.getPurchase(closure_0));
+  return obj2;
 };

@@ -1,20 +1,19 @@
 // Module ID: 1476
 // Function ID: 1477
-// Name: getSrcWithWidthAndHeight
+// Name: utils/ImageUtils
 // Dependencies: [32, 17, 1074, 1431, 1477, 1471, 1432, 1878, 12, 1399, 1396, 2]
 // Exports: getMobileOptimizedSrc, getPaletteForAvatarMobile
 
-// Module 1476 (getSrcWithWidthAndHeight)
-import getAvatarURL from "getAvatarURL" /* 1396 */;
-import ensureAvatarSource from "ensureAvatarSource" /* 1399 */;
-import items2 from "items" /* 1432 */;
-import parseDefault from "parse" /* 1471 */;
+// Module 1476 (utils/ImageUtils)
+import AvatarUtils from "AvatarUtils" /* 1396 */;
+import utils_AvatarUtils from "utils/AvatarUtils" /* 1399 */;
+import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment" /* 1431 */;
+import AttachmentImageLadder from "AttachmentImageLadder" /* 1432 */;
+import _modDef1471 from "module_1471" /* 1471 */;
 import useWindowDimensions from "useWindowDimensions" /* 1477 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { MEDIA_PROXY_MAX_TARGET_RESOLUTION as closure_6 } from "ME" /* 1074 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
+require = fn;
 function getSrcWithWidthAndHeight(animated) {
   ({ src, sourceWidth, sourceHeight, targetWidth, targetHeight, format } = animated);
   if (format === undefined) {
@@ -24,12 +23,10 @@ function getSrcWithWidthAndHeight(animated) {
   if (flag === undefined) {
     flag = false;
   }
-  const tmp = callback(src.split("?"), 2);
-  const items = [tmp[0], ];
-  let obj = parseDefault;
-  items[1] = obj.parse(tmp[1]);
-  [tmp5, tmp6] = callback(items, 2);
-  if (regex2.test(tmp5)) {
+  const tmp = _slicedToArray(src.split("?"), 2);
+  const items = [tmp[0], _modDef1471.parse(tmp[1])];
+  [tmp5, tmp6] = items;
+  if (re8.test(tmp5)) {
     tmp6.format = "webp";
   } else if (null != format) {
     tmp6.format = format;
@@ -43,9 +40,8 @@ function getSrcWithWidthAndHeight(animated) {
   if (targetWidth !== sourceWidth) {
     const tmp9 = (function getAttachmentLadderConfig(arg0) {
       try {
-        const obj = { location: null };
-        obj[0] = "native/ImageUtils.getSrcWithWidthAndHeight";
-        const attachmentImageLadderConfig = callback(table[3]).getAttachmentImageLadderConfig(obj);
+        const obj = { location: "native/ImageUtils.getSrcWithWidthAndHeight" };
+        const attachmentImageLadderConfig = AttachmentImageLadderExperiment.getAttachmentImageLadderConfig(obj);
         let tmp5 = null;
         if (true === attachmentImageLadderConfig.enabled) {
           tmp5 = attachmentImageLadderConfig;
@@ -55,19 +51,12 @@ function getSrcWithWidthAndHeight(animated) {
         return null;
       }
     })("native/ImageUtils.getSrcWithWidthAndHeight");
-    let size = { width: null, height: null };
-    size[0] = targetWidth;
-    size[1] = targetHeight;
+    let size = { width: targetWidth, height: targetHeight };
     if (null != tmp9) {
-      obj = { targetWidth: null, targetHeight: null, sourceWidth: null, sourceHeight: null, maxUpscale: null };
-      obj[0] = targetWidth;
-      obj[1] = targetHeight;
-      obj[2] = sourceWidth;
-      obj[3] = sourceHeight;
-      const obj2 = items2;
-      obj[4] = items2.getSnapDownMaxUpscale(tmp9, tmp2(1878)());
-      size = obj2.snapAttachmentDimensions(obj);
-      const obj4 = items2;
+      const obj3 = { targetWidth, targetHeight, sourceWidth, sourceHeight, maxUpscale: null };
+      const obj2 = AttachmentImageLadder;
+      obj3.maxUpscale = AttachmentImageLadder.getSnapDownMaxUpscale(tmp9, tmp2(1878)());
+      size = obj2.snapAttachmentDimensions(obj3);
     }
     if (!tmp12) {
       tmp6.width = size.width | 0;
@@ -78,10 +67,10 @@ function getSrcWithWidthAndHeight(animated) {
   if (flag) {
     tmp6.animated = true;
   }
-  let tmp2Result = tmp2(12);
+  const tmp4 = _slicedToArray(items, 2);
   let text = tmp5;
   if (!tmp2Result.isEmpty(tmp6)) {
-    tmp2Result = tmp2(1471);
+    tmp2(1471);
     text = `${tmp5}?${obj6.stringify(tmp6)}`;
   }
   return text;
@@ -92,13 +81,12 @@ function getMobileOptimizedSrc(proxy_url, width, height, png) {
     tmp = null;
   }
   let num = 1;
-  if (regex.test(proxy_url)) {
+  if (re7.test(proxy_url)) {
     num = 0.3;
   }
-  let obj = useWindowDimensions;
-  const size = obj.getWindowDimensions();
-  const result = store.getPixelSizeForLayoutSize(size.width) * num;
-  const bound = Math.min(width > height ? result / width : store.getPixelSizeForLayoutSize(size.height / 2) * num / height, 1);
+  const size = useWindowDimensions.getWindowDimensions();
+  const result = hasOwnProperty.getPixelSizeForLayoutSize(size.width) * num;
+  const bound = Math.min(width > height ? result / width : hasOwnProperty.getPixelSizeForLayoutSize(size.height / 2) * num / height, 1);
   let rounded1 = height;
   let rounded = width;
   if (bound < 1) {
@@ -107,20 +95,22 @@ function getMobileOptimizedSrc(proxy_url, width, height, png) {
     const _Math2 = Math;
     rounded1 = Math.ceil(height * bound);
   }
-  obj = { src: proxy_url, sourceWidth: width, sourceHeight: height, targetWidth: rounded, targetHeight: rounded1, format: tmp };
-  return getSrcWithWidthAndHeight(obj);
+  return getSrcWithWidthAndHeight({ src: proxy_url, sourceWidth: width, sourceHeight: height, targetWidth: rounded, targetHeight: rounded1, format: tmp });
 }
-function getPaletteForAvatarMobile(closure_0) {
-  const obj = ensureAvatarSource;
+function getPaletteForAvatarMobile(automodAvatarURL) {
+  const obj = utils_AvatarUtils;
   ImageManager = ImageManager.ImageManager;
-  return ImageManager.getDominantColors(obj.ensureAvatarSource(getAvatarURL.makeSource(closure_0)));
+  return ImageManager.getDominantColors(obj.ensureAvatarSource(AvatarUtils.makeSource(automodAvatarURL)));
 }
-({ NativeModules: c4, PixelRatio: c5 } = get_ActivityIndicator);
+get_ActivityIndicator = fn(17);
+({ NativeModules: closure_4, PixelRatio: hasOwnProperty } = get_ActivityIndicator);
+let closure_6 = fn(1074).MEDIA_PROXY_MAX_TARGET_RESOLUTION;
 const tmp3 = /\.(gif)$/i;
 const re7 = tmp3;
-const tmp4 = /\.(avif)$/i;
+let tmp4 = /\.(avif)$/i;
 const re8 = tmp4;
-let result = require("set").fileFinishedImporting("utils/native/ImageUtils.tsx");
+let size = fn(2);
+let result = size.fileFinishedImporting("utils/native/ImageUtils.tsx");
 
 export default { getMobileOptimizedSrc, getPaletteForAvatarMobile };
 export const GIF_RE = tmp3;

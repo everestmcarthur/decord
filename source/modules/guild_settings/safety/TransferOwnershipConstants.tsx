@@ -1,12 +1,12 @@
-// Module ID: 11851
-// Function ID: 11852
-// Name: TransferOwnershipModalScenes
+// Module ID: 11877
+// Function ID: 11878
+// Name: TransferOwnershipConstants
 // Dependencies: [2]
 
-// Module 11851 (TransferOwnershipModalScenes)
-import set from "set" /* 2 */;
+// Module 11877 (TransferOwnershipConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_settings/safety/TransferOwnershipConstants.tsx");
+const result = size.fileFinishedImporting("modules/guild_settings/safety/TransferOwnershipConstants.tsx");
 
 export const TransferOwnershipModalScenes = { TRANFSER_OWNERSHIP: "TRANFSER_OWNERSHIP", CONFIRM_EMAIL_CODE: "CONFIRM_EMAIL_CODE" };
 export const TransferOwnershipVerificationTypes = { MFA: "mfa", SMS: "sms", EMAIL: "email" };

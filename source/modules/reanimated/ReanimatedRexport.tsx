@@ -1,23 +1,24 @@
-// Module ID: 4296
-// Function ID: 4297
-// Dependencies: [1116, 1636, 4297, 2]
+// Module ID: 4310
+// Function ID: 4311
+// Name: ReanimatedRexport
+// Dependencies: [1116, 1636, 4311, 2]
 
-// Module 4296
-import set from "set" /* 2 */;
+// Module 4310 (ReanimatedRexport)
 import cancelAnimationDefault from "cancelAnimation" /* 1636 */;
-import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4297 */;
-import PlatformTypes from "PlatformTypes" /* 1116 */;
+import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4311 */;
+import PlatformUtils from "utils/PlatformUtils" /* 1116 */;
+import size from "module_2" /* 2 */;
 
-if (PlatformTypes.isAndroid()) {
+const require = globalThis.__r;
+
+if (PlatformUtils.isAndroid()) {
   const _Object = Object;
-  const obj = { View: null };
-  obj[0] = REAWorkaroundViewDefault;
+  const obj = { View: REAWorkaroundViewDefault };
   const merged = Object.assign(cancelAnimationDefault, obj);
   const importDefaultResult = cancelAnimationDefault;
 }
-const result = set.fileFinishedImporting("modules/reanimated/ReanimatedRexport.tsx");
+const result = size.fileFinishedImporting("modules/reanimated/ReanimatedRexport.tsx");
 for (const key10033 in require("cancelAnimation")) {
-  let tmp5 = key10033;
   arg5[key10033] = require("cancelAnimation")[key10033];
   continue;
 }

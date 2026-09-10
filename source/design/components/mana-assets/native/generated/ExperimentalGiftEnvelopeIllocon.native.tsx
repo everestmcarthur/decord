@@ -1,17 +1,17 @@
-// Module ID: 5979
-// Function ID: 5980
+// Module ID: 5993
+// Function ID: 5994
 // Name: ExperimentalGiftEnvelopeIllocon
-// Dependencies: [21, 5587, 5980, 2]
+// Dependencies: [21, 5601, 5994, 2]
 // Exports: ExperimentalGiftEnvelopeIllocon
 
-// Module 5979 (ExperimentalGiftEnvelopeIllocon)
-import set from "set" /* 2 */;
+// Module 5993 (ExperimentalGiftEnvelopeIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 5980 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5994 from "module_5994" /* 5994 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ExperimentalGiftEnvelopeIllocon.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ExperimentalGiftEnvelopeIllocon.native.tsx");
 
 export const ExperimentalGiftEnvelopeIllocon = function ExperimentalGiftEnvelopeIllocon(size) {
   let num = size.size;
@@ -19,13 +19,13 @@ export const ExperimentalGiftEnvelopeIllocon = function ExperimentalGiftEnvelope
   if (num === undefined) {
     num = 64;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef5994 };
+  obj.source = obj2;
   const items = [{ width: num, height: num }];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { uri: metadataDefault });
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

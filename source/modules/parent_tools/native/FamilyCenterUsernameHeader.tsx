@@ -1,33 +1,32 @@
-// Module ID: 14895
-// Function ID: 14896
+// Module ID: 14921
+// Function ID: 14922
 // Name: FamilyCenterUsernameHeader
-// Dependencies: [19, 17, 21, 4560, 4404, 4556, 2]
+// Dependencies: [19, 17, 21, 4574, 4418, 4570, 2]
 // Exports: default
 
-// Module 14895 (FamilyCenterUsernameHeader)
-import noopAll from "noop" /* 19 */;
-import nameFromUserDefault from "nameFromUser" /* 4404 */;
-import Text from "Text" /* 4556 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14921 (FamilyCenterUsernameHeader)
+import UserUtilsDefault from "UserUtils" /* 4418 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ container: { justifyContent: "center" } });
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterUsernameHeader.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let closure_6 = createStyles.createStyles({ container: { justifyContent: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterUsernameHeader.tsx");
 
 export default function FamilyCenterUsernameHeader(user) {
   user = user.user;
-  let obj = nameFromUserDefault;
-  const name = obj.useName(user);
-  const tmp = callback3();
-  obj = { style: tmp.container, children: null };
-  const combined = " (@" + nameFromUserDefault.getUserTag(user, { decoration: "never" }) + ")";
-  obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: null };
-  const items = [name, callback(Text.Text, { variant: "text-md/medium", color: "text-muted", lineClamp: 1, children: combined })];
-  obj[3] = items;
-  obj[1] = callback2(Text.Text, obj);
-  return callback(View, obj);
+  const tmp = closure_6();
+  const name = UserUtilsDefault.useName(user);
+  const obj3 = { style: tmp.container, children: null };
+  const combined = " (@" + UserUtilsDefault.getUserTag(user, { decoration: "never" }) + ")";
+  const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: null };
+  const items = [name, React4(Text_Text.Text, { variant: "text-md/medium", color: "text-muted", lineClamp: 1, children: combined })];
+  obj4.children = items;
+  obj3.children = hasOwnProperty(Text_Text.Text, obj4);
+  return React4(View, obj3);
 };

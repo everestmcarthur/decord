@@ -1,21 +1,23 @@
-// Module ID: 9219
-// Function ID: 9220
+// Module ID: 9246
+// Function ID: 9247
 // Name: useGameConsoleAccounts
-// Dependencies: [5281, 1074, 504, 1369, 2]
+// Dependencies: [5295, 1074, 504, 1369, 2]
 // Exports: default
 
-// Module 9219 (useGameConsoleAccounts)
+// Module 9246 (useGameConsoleAccounts)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "set" /* 5281 */;
-import { PlatformTypes } from "ME" /* 1074 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5295 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/game_console/useGameConsoleAccounts.tsx");
+require = fn;
+const PlatformTypes = fn(1074).PlatformTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_console/useGameConsoleAccounts.tsx");
 
 export default function useGameConsoleAccounts() {
-  let items = [closure_2];
+  let items = [ConnectedAccountsStore];
   return initialize.useStateFromStoresArray(items, () => {
-    const items = [store.getAccount(null, constants.XBOX), store.getAccount(null, constants.PLAYSTATION), store.getAccount(null, constants.PLAYSTATION_STAGING)];
-    return items.filter(callback(table[3]).isNotNullish);
+    const items = [ConnectedAccountsStore.getAccount(null, constants.XBOX), ConnectedAccountsStore.getAccount(null, constants.PLAYSTATION), ConnectedAccountsStore.getAccount(null, constants.PLAYSTATION_STAGING)];
+    return items.filter(GlobalUtils.isNotNullish);
   });
 };

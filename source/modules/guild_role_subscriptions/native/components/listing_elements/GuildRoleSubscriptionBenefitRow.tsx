@@ -1,83 +1,76 @@
-// Module ID: 15245
-// Function ID: 15246
-// Name: BenefitRow
-// Dependencies: [19, 17, 1957, 21, 4560, 4213, 15243, 1178, 4556, 504, 4713, 1114, 5028, 2]
+// Module ID: 15274
+// Function ID: 15275
+// Name: GuildRoleSubscriptionBenefitRow
+// Dependencies: [19, 17, 1957, 21, 4574, 4226, 15272, 1178, 4570, 504, 4727, 1114, 5042, 2]
 // Exports: ChannelBenefitRow, IntangibleBenefitRow
 
-// Module 15245 (BenefitRow)
-import noopAll from "noop" /* 19 */;
-import Button from "Button" /* 1178 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4213 */;
-import Text from "Text" /* 4556 */;
-import EmojiIconDefault from "EmojiIcon" /* 15243 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15274 (GuildRoleSubscriptionBenefitRow)
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import EmojiIconDefault from "EmojiIcon" /* 15272 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-require = arg1;
+const UnicodeEmojisDefault = tmp5(4226);
+require = fn;
 function BenefitRow(description) {
   description = description.description;
   ({ emojiId, guildId, title } = description);
-  const tmp = callback3();
-  let obj = { style: tmp.container, children: null };
-  const items = [callback(EmojiIconDefault, { guildId, id: emojiId, size: 22, fontSize: 18 }), callback(Button.Spacer, { size: 16 }), ];
-  obj = { style: tmp.textContainer, children: null };
+  const tmp = closure_7();
+  const obj = { style: tmp.container, children: null };
+  const items = [hasOwnProperty(EmojiIconDefault, { guildId, id: emojiId, size: 22, fontSize: 18 }), hasOwnProperty(native.Spacer, { size: 16 }), ];
+  const obj2 = { style: tmp.textContainer, children: null };
   const items1 = [title, ];
   let tmp4Result = null;
   if (null != description) {
-    obj = { style: null, variant: "text-sm/normal", color: "interactive-text-default", children: null };
-    obj[0] = tmp.description;
-    obj[3] = description;
-    tmp4Result = callback(Text.Text, obj);
+    const obj3 = { style: tmp.description, variant: "text-sm/normal", color: "interactive-text-default", children: description };
+    tmp4Result = hasOwnProperty(Text_Text.Text, obj3);
   }
   items1[1] = tmp4Result;
-  obj[1] = items1;
-  items[2] = closure_6(View, obj);
-  obj[1] = items;
-  return closure_6(View, obj);
+  obj2.children = items1;
+  items[2] = timestampProducer(View, obj2);
+  obj.children = items;
+  return timestampProducer(View, obj);
 }
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ container: { flexDirection: "row", justifyContent: "flex-start" }, textContainer: { flex: 1, justifyContent: "center" }, description: { marginTop: 2 }, channelTitle: { flexDirection: "row", alignItems: "center" }, channelIcon: { width: 16, height: 16, marginEnd: 8 } });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionBenefitRow.tsx");
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let closure_7 = createStyles.createStyles({ container: { flexDirection: "row", justifyContent: "flex-start" }, textContainer: { flex: 1, justifyContent: "center" }, description: { marginTop: 2 }, channelTitle: { flexDirection: "row", alignItems: "center" }, channelIcon: { width: 16, height: 16, marginEnd: 8 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionBenefitRow.tsx");
 
 export const ChannelBenefitRow = function ChannelBenefitRow(benefit) {
   benefit = benefit.benefit;
-  const tmp = callback3();
-  let obj = benefit(504);
-  const items = [closure_4];
+  const tmp = closure_7();
+  const items = [ChannelStore];
   const items1 = [benefit.ref_id];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getChannel(benefit.ref_id), items1);
-  obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+  const stateFromStores = benefit(504).useStateFromStores(items, () => ChannelStore.getChannel(benefit.ref_id), items1);
+  const obj = benefit(504);
+  const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = benefit(1114).intl;
-  obj[2] = "[" + intl.string(benefit(1114).t.bz1PZX) + "]";
-  let tmp8 = callback(benefit(4556).Text, obj);
+  obj2.children = "[" + intl.string(benefit(1114).t.bz1PZX) + "]";
+  let tmp8 = closure_5(benefit(4570).Text, obj2);
   if (null != stateFromStores) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.channelTitle;
-    obj1 = { style: null, size: null, source: null };
-    obj1[0] = tmp.channelIcon;
-    obj1[1] = tmp2(1178).Icon.Sizes.CUSTOM;
-    obj1[2] = tmp2(5028).getChannelIcon(stateFromStores);
-    const items2 = [tmp7(tmp2(1178).Icon, obj1), ];
-    const obj2 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
-    obj2[2] = tmp6;
-    items2[1] = tmp7(tmp2(4556).Text, obj2);
-    obj[1] = items2;
-    tmp8 = callback2(View, obj);
-    const tmp2Result = tmp2(5028);
+    const obj3 = { style: tmp.channelTitle, children: null };
+    const obj4 = { style: tmp.channelIcon, size: tmp2(1178).Icon.Sizes.CUSTOM, source: tmp2(5042).getChannelIcon(stateFromStores) };
+    const items2 = [tmp7(tmp2(1178).Icon, obj4), ];
+    const obj5 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: tmp6 };
+    items2[1] = tmp7(tmp2(4570).Text, obj5);
+    obj3.children = items2;
+    tmp8 = closure_6(View, obj3);
+    const tmp2Result = tmp2(5042);
   }
   if (null != benefit.emoji_id) {
     let str = benefit.emoji_id;
   } else {
     str = "";
     if (null != benefit.emoji_name) {
-      str = parseRawEmojiObjectDefault.convertSurrogateToName(benefit.emoji_name, false);
-      const tmp5Result = parseRawEmojiObjectDefault;
+      str = UnicodeEmojisDefault.convertSurrogateToName(benefit.emoji_name, false);
+      const tmp5Result = UnicodeEmojisDefault;
     }
   }
-  return callback(BenefitRow, { emojiId: str, guildId: benefit.guildId, title: tmp8, description: benefit.description });
+  return closure_5(BenefitRow, { emojiId: str, guildId: benefit.guildId, title: tmp8, description: benefit.description });
 };
 export const IntangibleBenefitRow = function IntangibleBenefitRow(benefit) {
   benefit = benefit.benefit;
@@ -86,11 +79,9 @@ export const IntangibleBenefitRow = function IntangibleBenefitRow(benefit) {
   } else {
     str = "";
     if (null != benefit.emoji_name) {
-      let obj = parseRawEmojiObjectDefault;
-      str = obj.convertSurrogateToName(benefit.emoji_name, false);
+      str = UnicodeEmojisDefault.convertSurrogateToName(benefit.emoji_name, false);
     }
   }
-  obj = { emojiId: str, guildId: benefit.guildId, title: tmp(Text.Text, obj), description: benefit.description };
-  obj = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: benefit.name };
-  return closure_5(BenefitRow, obj);
+  const obj2 = { emojiId: str, guildId: benefit.guildId, title: hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: benefit.name }), description: benefit.description };
+  return hasOwnProperty(BenefitRow, obj2);
 };

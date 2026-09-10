@@ -1,14 +1,14 @@
-// Module ID: 10097
-// Function ID: 10098
-// Name: getStatusExpiryParts
+// Module ID: 10124
+// Function ID: 10125
+// Name: StatusUtils
 // Dependencies: [1114, 2]
 // Exports: getStatusExpiryParts
 
-// Module 10097 (getStatusExpiryParts)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 10124 (StatusUtils)
+import util from "util" /* 1114 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/multi_account/StatusUtils.tsx");
+const result = size.fileFinishedImporting("modules/multi_account/StatusUtils.tsx");
 
 export const getStatusExpiryParts = function getStatusExpiryParts(arg0) {
   const date = new Date(Number(arg0));
@@ -35,25 +35,25 @@ export const getStatusExpiryParts = function getStatusExpiryParts(arg0) {
     tmp7 = date.getDate() === date3.getDate();
     const date4 = date.getDate();
   }
-  const data = getSystemLocale.intl.data;
+  const data = util.intl.data;
   const formatTimeResult = data.formatTime(date, { format: "short" });
   if (tmp2) {
-    let obj = { kind: "today", dateString: null, timeString: null };
+    const obj = { kind: "today", dateString: null, timeString: null };
     const data4 = tmp10(1114).intl.data;
-    obj[1] = data4.formatRelativeTime(0, "day", { numeric: "auto" });
-    obj[2] = formatTimeResult;
-    obj1 = obj;
+    obj.dateString = data4.formatRelativeTime(0, "day", { numeric: "auto" });
+    obj.timeString = formatTimeResult;
+    let obj3 = obj;
   } else if (tmp7) {
-    obj = { kind: "tomorrow", dateString: null, timeString: null };
+    const obj2 = { kind: "tomorrow", dateString: null, timeString: null };
     const data3 = tmp10(1114).intl.data;
-    obj[1] = data3.formatRelativeTime(1, "day", { numeric: "auto" });
-    obj[2] = formatTimeResult;
-    obj1 = obj;
+    obj2.dateString = data3.formatRelativeTime(1, "day", { numeric: "auto" });
+    obj2.timeString = formatTimeResult;
+    obj3 = obj2;
   } else {
-    obj1 = { kind: "date", dateString: null, timeString: null };
+    obj3 = { kind: "date", dateString: null, timeString: null };
     const data2 = tmp10(1114).intl.data;
-    obj1[1] = data2.formatDate(date, { dateStyle: "short" });
-    obj1[2] = formatTimeResult;
+    obj3.dateString = data2.formatDate(date, { dateStyle: "short" });
+    obj3.timeString = formatTimeResult;
   }
-  return obj1;
+  return obj3;
 };

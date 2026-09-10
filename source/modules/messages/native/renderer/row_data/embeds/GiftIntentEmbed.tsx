@@ -1,24 +1,24 @@
-// Module ID: 8077
-// Function ID: 8078
-// Name: createGiftIntentEmbed
-// Dependencies: [8078, 1371, 1373, 4560, 576, 1114, 8082, 4404, 7946, 4496, 8083, 8084, 2]
+// Module ID: 8092
+// Function ID: 8093
+// Name: GiftIntentEmbed
+// Dependencies: [8093, 1371, 1373, 4574, 576, 1114, 8097, 4418, 7960, 4510, 8098, 8099, 2]
 // Exports: createGiftIntentEmbed
 
-// Module 8077 (createGiftIntentEmbed)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import nameFromUserDefault from "nameFromUser" /* 4404 */;
-import frozen from "frozen" /* 7946 */;
-import _sendGiftMessage from "_sendGiftMessage" /* 8082 */;
-import closure_3 from "getCurrentTime" /* 8078 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import { GiftIntentType } from "GuildFeatures" /* 1373 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 8092 (GiftIntentEmbed)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import UserUtilsDefault from "UserUtils" /* 4418 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7960 */;
+import PremiumGiftingUtils from "PremiumGiftingUtils" /* 8097 */;
+import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8093 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-createCacheKey = { headerTextColor: ThemesDefault.colors.TEXT_STRONG, subHeaderTextColor: ThemesDefault.colors.TEXT_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: ThemesDefault.colors.BORDER_MUTED };
-let closure_6 = createCacheKey.createNativeStyleProperties(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/GiftIntentEmbed.tsx");
+require = fn;
+const GiftIntentType = fn(1373).GiftIntentType;
+const createStyles = fn(4574);
+let closure_6 = createStyles.createNativeStyleProperties({ headerTextColor: nativeDefault.colors.TEXT_STRONG, subHeaderTextColor: nativeDefault.colors.TEXT_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: nativeDefault.colors.BORDER_MUTED });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/GiftIntentEmbed.tsx");
 
 export const createGiftIntentEmbed = function createGiftIntentEmbed(message, theme) {
   const giftingPrompt = message.giftingPrompt;
@@ -26,29 +26,27 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
     return null;
   } else {
     ({ giftIntentType, recipientUserId } = giftingPrompt);
-    user = user.getUser(recipientUserId);
+    const user = UserStore.getUser(recipientUserId);
     if (null == user) {
       return null;
     } else {
-      const name = nameFromUserDefault.getName(user);
+      const name = UserUtilsDefault.getName(user);
       if (GiftIntentType.FRIEND_ANNIVERSARY === giftIntentType) {
-        let obj = { headerText: null, subHeaderParts: null };
-        const intl = getSystemLocale.intl;
-        obj[0] = intl.string(getSystemLocale.t.CeQIwZ);
-        obj = { text: null };
-        const intl2 = getSystemLocale.intl;
-        obj = { numberOfYears: null };
-        obj[0] = tmp12;
-        obj[0] = intl2.formatToPlainString(getSystemLocale.t.PpG27s, obj);
-        const items = [obj];
-        obj[1] = items;
+        const obj = { headerText: null, subHeaderParts: null };
+        const intl = util.intl;
+        obj.headerText = intl.string(util.t.CeQIwZ);
+        const obj2 = { text: null };
+        const intl2 = util.intl;
+        const obj3 = { numberOfYears: tmp12 };
+        obj2.text = intl2.formatToPlainString(util.t.PpG27s, obj3);
+        const items = [obj2];
+        obj.subHeaderParts = items;
         let tmp = obj;
       } else {
         tmp = null;
         if (tmp13.UNSPECIFIED !== giftIntentType) {
-          _sendGiftMessage.unhandledGiftIntent(giftIntentType);
+          PremiumGiftingUtils.unhandledGiftIntent(giftIntentType);
           tmp = null;
-          const obj11 = _sendGiftMessage;
         }
       }
       if (null == tmp) {
@@ -62,28 +60,22 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
           const _HermesInternal = HermesInternal;
           combined1 = "" + currentUser.getAvatarURL(undefined, 40);
         }
-        obj1 = { recipientAvatarUrl: null, currentUserAvatarUrl: null, recipientName: null, headerText: null, subHeaderParts: null, recipientUserId: null, giftIntentType: null, headerTextColor: null, subHeaderTextColor: null, backgroundColor: null, borderColor: null, subHeaderIconUrl: null, primaryCtaLabel: null, primaryCtaIconUrl: null, secondaryCtaIconUrl: null, secondaryCtaAccessibilityLabel: null };
-        obj1[0] = combined;
-        obj1[1] = combined1;
-        obj1[2] = name;
-        ({ headerText: obj4[3], subHeaderParts: obj4[4] } = tmp);
-        obj1[5] = recipientUserId;
-        obj1[6] = giftIntentType;
-        ({ headerTextColor: obj4[7], subHeaderTextColor: obj4[8], backgroundColor: obj4[9], borderColor: obj4[10] } = callback(theme));
-        const tmp6 = callback(theme);
-        obj1[11] = frozen.getAssetUriForEmbed(tmp8(4496));
-        const intl3 = getSystemLocale.intl;
-        obj1[12] = intl3.string(getSystemLocale.t.ilhtIa);
-        const obj5 = frozen;
-        obj1[13] = frozen.getAssetUriForEmbed(tmp8(8083));
-        const obj6 = frozen;
-        obj1[14] = frozen.getAssetUriForEmbed(tmp8(8084));
-        const intl4 = getSystemLocale.intl;
-        obj1[15] = intl4.string(getSystemLocale.t.I5gL2H);
-        return obj1;
+        const obj9 = { recipientAvatarUrl: combined, currentUserAvatarUrl: combined1, recipientName: name, headerText: null, subHeaderParts: null, recipientUserId: null, giftIntentType: null, headerTextColor: null, subHeaderTextColor: null, backgroundColor: null, borderColor: null, subHeaderIconUrl: null, primaryCtaLabel: null, primaryCtaIconUrl: null, secondaryCtaIconUrl: null, secondaryCtaAccessibilityLabel: null };
+        ({ headerText: obj4.headerText, subHeaderParts: obj4.subHeaderParts } = tmp);
+        obj9.recipientUserId = recipientUserId;
+        obj9.giftIntentType = giftIntentType;
+        ({ headerTextColor: obj4.headerTextColor, subHeaderTextColor: obj4.subHeaderTextColor, backgroundColor: obj4.backgroundColor, borderColor: obj4.borderColor } = closure_6(theme));
+        const tmp6 = closure_6(theme);
+        obj9.subHeaderIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(tmp8(4510));
+        const intl3 = util.intl;
+        obj9.primaryCtaLabel = intl3.string(util.t.ilhtIa);
+        obj9.primaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(tmp8(8098));
+        obj9.secondaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(tmp8(8099));
+        const intl4 = util.intl;
+        obj9.secondaryCtaAccessibilityLabel = intl4.string(util.t.I5gL2H);
+        return obj9;
       }
-      const obj10 = nameFromUserDefault;
     }
-    obj8 = user;
+    obj8 = UserStore;
   }
 };

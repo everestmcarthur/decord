@@ -1,28 +1,29 @@
-// Module ID: 17874
-// Function ID: 17875
+// Module ID: 17907
+// Function ID: 17908
 // Name: OverviewScreen
-// Dependencies: [19, 21, 4560, 17875, 1483, 17876, 8421, 8422, 4973, 576, 4556, 1114, 2690, 5687, 8582, 17870, 11931, 17877, 11001, 2]
+// Dependencies: [19, 21, 4574, 17908, 1483, 17909, 8449, 8450, 4987, 576, 4570, 1114, 2690, 5701, 8610, 17903, 11957, 17910, 11028, 2]
 // Exports: default
 
-// Module 17874 (OverviewScreen)
-import closure_3 from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17907 (OverviewScreen)
+import SafetyFlowsUtils from "SafetyFlowsUtils" /* 17909 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ content: { margin: "auto", overflow: "visible", justifyContent: "center", textAlign: "center", alignItems: "center" }, title: { textAlign: "center", textTransform: "uppercase", lineHeight: 50 } });
-const result = require("set").fileFinishedImporting("modules/safety_flows/native/OverviewScreen.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let closure_6 = createStyles.createStyles({ content: { margin: "auto", overflow: "visible", justifyContent: "center", textAlign: "center", alignItems: "center" }, title: { textAlign: "center", textTransform: "uppercase", lineHeight: 50 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_flows/native/OverviewScreen.tsx");
 
 export default function OverviewScreen() {
-  let tmp = callback2();
-  let obj = task(17875);
-  task = obj.useSafetyFlowTask().task;
-  obj1 = task(1483);
-  const navigation = obj1.useNavigation();
+  let tmp = closure_6();
+  task = task(17908).useSafetyFlowTask().task;
+  let obj = task(17908);
+  const navigation = task(1483).useNavigation();
   const items = [task, navigation];
-  const callback = React.useCallback(() => {
-    const screensForTaskType = task(closure_1_2[5]).getScreensForTaskType(task.task_type);
+  const callback = noop.useCallback(() => {
+    const screensForTaskType = SafetyFlowsUtils.getScreensForTaskType(task.task_type);
     let tmp = null != screensForTaskType;
     if (tmp) {
       tmp = screensForTaskType.length > 0;
@@ -34,48 +35,48 @@ export default function OverviewScreen() {
       navigation.push(screensForTaskType[0]);
     }
   }, items);
-  obj = { spacing: navigation(576).space.PX_16, style: tmp.content, children: null };
-  obj = { variant: "display-lg", style: tmp.title, children: null };
+  const obj3 = { spacing: navigation(576).space.PX_16, style: tmp.content, children: null };
+  const obj4 = { variant: "display-lg", style: tmp.title, children: null };
   const intl = task(1114).intl;
-  obj[2] = intl.string(navigation(2690).RRamMH);
-  const items1 = [callback(task(4556).Text, obj), , ];
-  obj1 = { variant: "text-md/medium", color: "text-strong", children: null };
+  obj4.children = intl.string(navigation(2690).RRamMH);
+  const items1 = [closure_4(task(4570).Text, obj4), , ];
+  const obj5 = { variant: "text-md/medium", color: "text-strong", children: null };
   const intl2 = task(1114).intl;
-  obj1[2] = intl2.string(navigation(2690).I2Ctk1);
-  items1[1] = callback(task(4556).Text, obj1);
-  const obj2 = { spacing: navigation(576).space.PX_8, children: null };
+  obj5.children = intl2.string(navigation(2690).I2Ctk1);
+  items1[1] = closure_4(task(4570).Text, obj5);
+  const obj6 = { spacing: navigation(576).space.PX_8, children: null };
   const flow_context = task.flow_context;
   let mapped;
   if (flow_context != null) {
     const tasks = flow_context.tasks;
     if (tasks != null) {
-      mapped = tasks.map((task_type) => {
-        const obj = { tip: task(17870).TASK_TYPE_TO_TITLE[task_type.task_type], index: arg1 + 1 };
-        return callback(navigation(8582), obj, task_type.task_type);
+      mapped = tasks.map((task_type, index) => {
+        const obj = { tip: task(17903).TASK_TYPE_TO_TITLE[task_type.task_type], index: index + 1 };
+        return closure_1_4(navigation(8610), obj, task_type.task_type);
       });
     }
   }
-  const obj3 = { children: null };
-  const obj4 = { children: null };
-  const items2 = [callback(task(5687).TableRowGroup, { hasIcons: true, children: mapped }), ];
-  const obj5 = { variant: "text-xs/medium", color: "text-muted", children: null };
+  const obj7 = { children: null };
+  const obj8 = { children: null };
+  const items2 = [closure_4(task(5701).TableRowGroup, { hasIcons: true, children: mapped }), ];
+  const obj9 = { variant: "text-xs/medium", color: "text-muted", children: null };
   const intl3 = tmp2(1114).intl;
-  obj5[2] = intl3.string(navigation(2690)["0TnUrG"]);
-  items2[1] = callback(task(4556).Text, obj5);
-  obj2[1] = items2;
-  items1[2] = closure_5(task(4973).Stack, obj2);
-  obj[2] = items1;
-  obj4[0] = closure_5(task(4973).Stack, obj);
-  const items3 = [callback(task(8422).ModalContent, obj4), ];
-  const obj6 = { children: null };
-  const items4 = [callback(navigation(17877), {}), ];
-  const obj7 = { variant: "primary", text: null, onPress: null };
+  obj9.children = intl3.string(navigation(2690)["0TnUrG"]);
+  items2[1] = closure_4(task(4570).Text, obj9);
+  obj6.children = items2;
+  items1[2] = closure_5(task(4987).Stack, obj6);
+  obj3.children = items1;
+  obj8.children = closure_5(task(4987).Stack, obj3);
+  const items3 = [closure_4(task(8450).ModalContent, obj8), ];
+  const obj10 = { children: null };
+  const items4 = [closure_4(navigation(17910), {}), ];
+  const obj11 = { variant: "primary", text: null, onPress: null };
   const intl4 = tmp2(1114).intl;
-  obj7[1] = intl4.string(navigation(2690).Ks6opt);
-  obj7[2] = callback;
-  items4[1] = callback(task(11001).ModalActionButton, obj7);
-  obj6[0] = items4;
-  items3[1] = closure_5(task(11931).ModalFooter, obj6);
-  obj3[0] = items3;
-  return closure_5(task(8421).ModalScreen, obj3);
+  obj11.text = intl4.string(navigation(2690).Ks6opt);
+  obj11.onPress = callback;
+  items4[1] = closure_4(task(11028).ModalActionButton, obj11);
+  obj10.children = items4;
+  items3[1] = closure_5(task(11957).ModalFooter, obj10);
+  obj7.children = items3;
+  return closure_5(task(8449).ModalScreen, obj7);
 };

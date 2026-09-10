@@ -1,13 +1,13 @@
-// Module ID: 7290
-// Function ID: 7291
+// Module ID: 7304
+// Function ID: 7305
 // Name: getGuildModeratorReportChannelId
 // Dependencies: [2]
 // Exports: default
 
-// Module 7290 (getGuildModeratorReportChannelId)
-import set from "set" /* 2 */;
+// Module 7304 (getGuildModeratorReportChannelId)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/report_to_mod/getGuildModeratorReportChannelId.tsx");
+const result = size.fileFinishedImporting("modules/report_to_mod/getGuildModeratorReportChannelId.tsx");
 
 export default function getGuildModeratorReportChannelId(moderatorReporting) {
   moderatorReporting = moderatorReporting.moderatorReporting;

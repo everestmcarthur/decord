@@ -1,29 +1,26 @@
-// Module ID: 17042
-// Function ID: 17043
-// Dependencies: [19, 9515, 9516, 21, 504, 17043, 17045, 2]
+// Module ID: 17073
+// Function ID: 17074
+// Name: FramePanelContainer
+// Dependencies: [19, 9542, 9543, 21, 504, 17074, 17076, 2]
 
-// Module 17042
-import initialize from "initialize" /* 504 */;
-import FramePanelControllerDefault from "FramePanelController" /* 17043 */;
-import renderActivityOrPIPDefault from "renderActivityOrPIP" /* 17045 */;
-import closure_3 from "map" /* 9515 */;
-import { isLaunched } from "FrameLayoutModes" /* 9516 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+// Module 17073 (FramePanelContainer)
+import FramePanelControllerDefault from "FramePanelController" /* 17074 */;
+import FramePanelUIDefault from "FramePanelUI" /* 17076 */;
+import noop from "module_19" /* 19 */;
+import FramesStore from "FramesStore" /* 9542 */;
 
-require = arg1;
-const memoResult = importAllResult.memo(function FramePanelContainer() {
-  let obj = initialize;
-  const items = [closure_3];
+const require = fn;
+const isLaunched = fn(9543).isLaunched;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelContainer.tsx");
+
+export default noop.memo(function FramePanelContainer() {
+  const items = [FramesStore];
   let tmp2 = null;
-  if (obj.useStateFromStores(items, () => callback(mainFrame.getMainFrame()))) {
-    obj = { children: null };
-    obj[0] = jsx(renderActivityOrPIPDefault, {});
-    tmp2 = jsx(FramePanelControllerDefault, { children: null });
-    const tmp5 = FramePanelControllerDefault;
+  if (obj.useStateFromStores(items, () => isLaunched(mainFrame.getMainFrame()))) {
+    const obj2 = { children: jsx(FramePanelUIDefault, {}) };
+    tmp2 = jsx(FramePanelControllerDefault, { children: jsx(FramePanelUIDefault, {}) });
   }
   return tmp2;
 });
-const result = require("set").fileFinishedImporting("modules/frames/panel/native/FramePanelContainer.tsx");
-
-export default memoResult;

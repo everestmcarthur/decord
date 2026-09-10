@@ -1,33 +1,30 @@
-// Module ID: 16754
-// Function ID: 16755
+// Module ID: 16791
+// Function ID: 16792
 // Name: getFriendStatusCounts
-// Dependencies: [4600, 4209, 1074, 2]
+// Dependencies: [4614, 4222, 1074, 2]
 // Exports: default
 
-// Module 16754 (getFriendStatusCounts)
-import closure_0 from "sortActivity" /* 4600 */;
-import closure_1 from "markAllUserIdListsStale" /* 4209 */;
-import { StatusTypes } from "ME" /* 1074 */;
+// Module 16791 (getFriendStatusCounts)
+import PresenceStore from "PresenceStore" /* 4614 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
 
-const result = require("set").fileFinishedImporting("modules/friends/getFriendStatusCounts.tsx");
+const StatusTypes = fn(1074).StatusTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/friends/getFriendStatusCounts.tsx");
 
 export default function getFriendStatusCounts() {
   let num_friends_online = 0;
   let num_friends_idle = 0;
   let num_friends_dnd = 0;
-  friendIDs = friendIDs.getFriendIDs();
+  const friendIDs = RelationshipStore.getFriendIDs();
   while (tmp2 !== undefined) {
-    let tmp4 = status;
-    status = status.getStatus(tmp3);
+    let status = PresenceStore.getStatus(tmp3);
     let tmp6 = StatusTypes;
     if (StatusTypes.ONLINE === status) {
-      let tmp9 = num_friends_online;
       num_friends_online = num_friends_online + 1;
     } else if (tmp6.IDLE === status) {
-      let tmp8 = num_friends_idle;
       num_friends_idle = num_friends_idle + 1;
     } else if (tmp6.DND === status) {
-      let tmp7 = num_friends_dnd;
       num_friends_dnd = num_friends_dnd + 1;
     }
     continue;

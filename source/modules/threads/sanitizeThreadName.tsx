@@ -1,15 +1,15 @@
-// Module ID: 7274
-// Function ID: 7275
+// Module ID: 7288
+// Function ID: 7289
 // Name: sanitizeThreadName
 // Dependencies: [2]
 // Exports: default
 
-// Module 7274 (sanitizeThreadName)
-import set from "set" /* 2 */;
+// Module 7288 (sanitizeThreadName)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/threads/sanitizeThreadName.tsx");
+const result = size.fileFinishedImporting("modules/threads/sanitizeThreadName.tsx");
 
-export default function sanitizeThreadName(str) {
+export default function sanitizeThreadName(str, arg1) {
   let trimmed = str;
   if (arg1) {
     trimmed = str.trim();

@@ -1,26 +1,25 @@
-// Module ID: 5581
-// Function ID: 5582
-// Name: LayoutAnimation
-// Dependencies: [17, 4552, 1115, 2]
+// Module ID: 5595
+// Function ID: 5596
+// Name: DeprecatedLayoutAnimation
+// Dependencies: [17, 4566, 1115, 2]
 // Exports: DeprecatedLayoutAnimation, DeprecatedLayoutAnimationKeyboard
 
-// Module 5581 (LayoutAnimation)
-import set from "set" /* 2 */;
-import set2 from "set" /* 1115 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import obj from "module_150" /* 150 */;
+// Module 5595 (DeprecatedLayoutAnimation)
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import size from "module_2" /* 2 */;
 
-({ Keyboard: obj1, LayoutAnimation } = get_ActivityIndicator);
-const result = set.fileFinishedImporting("modules/animations/native/DeprecatedLayoutAnimation.tsx");
+({ Keyboard: c2, LayoutAnimation } = get_ActivityIndicator);
+let obj = LayoutAnimation.create(150, "easeInEaseOut", "opacity");
+const result = size.fileFinishedImporting("modules/animations/native/DeprecatedLayoutAnimation.tsx");
 
 export const CONFIG_GUILD_FOLDER_OPACITY = obj;
-export const CONFIG_GUILD_FOLDER_SCALEXY = obj;
+export const CONFIG_GUILD_FOLDER_SCALEXY = LayoutAnimation.create(150, "easeInEaseOut", "scaleXY");
 export const DeprecatedLayoutAnimation = function DeprecatedLayoutAnimation(duration) {
-  let useReducedMotion = closure_4.useReducedMotion;
+  let useReducedMotion = AccessibilityStore.useReducedMotion;
   if (!useReducedMotion) {
-    useReducedMotion = set2.isAndroid();
-    const obj = set2;
+    useReducedMotion = PlatformUtils.isAndroid();
   }
   if (!useReducedMotion) {
     if (null != duration) {
@@ -36,20 +35,18 @@ export const DeprecatedLayoutAnimationKeyboard = function DeprecatedLayoutAnimat
     flag = false;
   }
   if (flag) {
-    let obj = set2;
     if (!obj.isAndroid()) {
-      obj = { duration: null };
-      obj[0] = keyboardDuration;
-      return closure_2.scheduleLayoutAnimation(obj);
+      const obj2 = { duration: keyboardDuration };
+      return React2.scheduleLayoutAnimation(obj2);
     }
+    obj = PlatformUtils;
   }
-  obj = { duration: keyboardDuration, update: obj1 };
-  let useReducedMotion = closure_4.useReducedMotion;
+  const obj3 = { duration: keyboardDuration, update: { duration: keyboardDuration, type: LayoutAnimation.Types.keyboard } };
+  let useReducedMotion = AccessibilityStore.useReducedMotion;
   if (!useReducedMotion) {
-    useReducedMotion = set2.isAndroid();
-    const obj6 = set2;
+    useReducedMotion = PlatformUtils.isAndroid();
   }
   if (!useReducedMotion) {
-    LayoutAnimation.configureNext(obj);
+    LayoutAnimation.configureNext(obj3);
   }
 };

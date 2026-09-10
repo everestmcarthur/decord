@@ -1,28 +1,23 @@
-// Module ID: 12170
-// Function ID: 12171
+// Module ID: 12196
+// Function ID: 12197
 // Name: AppLauncherCommandOptionActionSheet
-// Dependencies: [19, 17, 1482, 21, 4560, 576, 7150, 7149, 7199, 4527, 1178, 2]
+// Dependencies: [19, 17, 1482, 21, 4574, 576, 7164, 7163, 7212, 4541, 1178, 2]
 // Exports: AppLauncherCommandOptionActionSheet
 
-// Module 12170 (AppLauncherCommandOptionActionSheet)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { DEFAULT_CONTENT_PADDING } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1482 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12196 (AppLauncherCommandOptionActionSheet)
+import nativeDefault from "native" /* 576 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-createCacheKey = { actionSheetBackground: null, titleContainer: null, titleWrapper: null, subtitleWrapper: null, contentContainer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: "transparent" };
-createCacheKey[2] = { alignItems: "center" };
-createCacheKey[3] = { paddingHorizontal: 12, textAlign: "center" };
-createCacheKey[4] = { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingTop: DEFAULT_CONTENT_PADDING, flex: 1 };
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/options/AppLauncherCommandOptionActionSheet.tsx");
+const require = fn;
+const View = fn(17).View;
+const DEFAULT_CONTENT_PADDING = fn(1482).DEFAULT_CONTENT_PADDING;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+const obj2 = { actionSheetBackground: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND }, titleContainer: { backgroundColor: "transparent" }, titleWrapper: { alignItems: "center" }, subtitleWrapper: { paddingHorizontal: 12, textAlign: "center" }, contentContainer: { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingTop: DEFAULT_CONTENT_PADDING, flex: 1 } };
+let closure_5 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/options/AppLauncherCommandOptionActionSheet.tsx");
 
 export const AppLauncherCommandOptionActionSheet = function AppLauncherCommandOptionActionSheet(startExpanded) {
   ({ option, scrollable } = startExpanded);
@@ -34,20 +29,41 @@ export const AppLauncherCommandOptionActionSheet = function AppLauncherCommandOp
   if (flag === undefined) {
     flag = true;
   }
-  const merged = Object.assign(startExpanded, Object.create(null));
-  const tmp2 = callback();
-  let obj = {};
+  const merged = Object.assign(startExpanded, Object.assign({ option: 0, children: 0, contentContainerStyles: 0, scrollable: 0, startExpanded: 0 }));
+  const tmp2 = closure_5();
+  const obj = {};
   const merged1 = Object.assign(merged);
   obj.backgroundStyles = tmp2.actionSheetBackground;
   obj.scrollable = scrollable;
   obj.startExpanded = flag;
-  obj = { titleContainerStyle: tmp2.titleContainer, titleWrapperStyle: tmp2.titleWrapper, subtitleStyle: tmp2.subtitleWrapper, leading: null, title: null, subtitle: null, trailing: null };
-  obj = { style: { alignSelf: "flex-start" }, children: jsx(merged(7199).ActionSheetCloseButton, obj1) };
-  obj[3] = <View style={{ alignSelf: "flex-start" }}>{jsx(merged(7199).ActionSheetCloseButton, obj1)}</View>;
-  ({ displayName: obj2[4], displayDescription: obj2[5] } = option);
-  obj[6] = jsx(merged(1178).Spacer, { size: 24 });
-  obj.header = jsx(merged(7149).BottomSheetTitleHeader, { style: { alignSelf: "flex-start" }, children: jsx(merged(7199).ActionSheetCloseButton, obj1) });
+  const obj3 = { titleContainerStyle: tmp2.titleContainer, titleWrapperStyle: tmp2.titleWrapper, subtitleStyle: tmp2.subtitleWrapper, leading: null, title: null, subtitle: null, trailing: null };
+  const obj4 = {
+    style: { alignSelf: "flex-start" },
+    children: jsx(merged(7212).ActionSheetCloseButton, {
+      onPress() {
+        ActionSheetActionCreatorsDefault.hideActionSheet();
+        const onDismiss = merged.onDismiss;
+        if (onDismiss != null) {
+          onDismiss();
+        }
+      }
+    })
+  };
+  obj3.leading = <View style={{ alignSelf: "flex-start" }}>{jsx(merged(7212).ActionSheetCloseButton, {
+    onPress() {
+      ActionSheetActionCreatorsDefault.hideActionSheet();
+      const onDismiss = merged.onDismiss;
+      if (onDismiss != null) {
+        onDismiss();
+      }
+    }
+  })}</View>;
+  ({ displayName: obj2.title, displayDescription: obj2.subtitle } = option);
+  obj3.trailing = jsx(merged(1178).Spacer, { size: 24 });
+  obj.header = jsx(merged(7163).BottomSheetTitleHeader, { titleContainerStyle: tmp2.titleContainer, titleWrapperStyle: tmp2.titleWrapper, subtitleStyle: tmp2.subtitleWrapper, leading: null, title: null, subtitle: null, trailing: null });
+  const obj9 = { style: null, children };
   const items = [tmp2.contentContainer, contentContainerStyles];
-  obj.children = <View style={items}>{children}</View>;
-  return jsx(merged(7150).BottomSheet, { style: { alignSelf: "flex-start" }, children: jsx(merged(7199).ActionSheetCloseButton, obj1) }, option.name);
+  obj9.style = items;
+  obj.children = <View style={null}>{children}</View>;
+  return jsx(merged(7164).BottomSheet, {}, option.name);
 };

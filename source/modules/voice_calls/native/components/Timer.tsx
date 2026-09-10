@@ -1,23 +1,22 @@
-// Module ID: 13801
-// Function ID: 13802
-// Name: componentDidMount
+// Module ID: 13824
+// Function ID: 13825
+// Name: Timer
 // Dependencies: [19, 21, 12, 1178, 2]
 
-// Module 13801 (componentDidMount)
-import applyDefault from "apply" /* 12 */;
-import Button from "Button" /* 1178 */;
-import { jsxs } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+// Module 13824 (Timer)
+import _modDef12 from "module_12" /* 12 */;
+import native from "native" /* 1178 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const PureComponent = importAllResult.PureComponent;
+require = fn;
+const jsxs = fn(21).jsxs;
+const PureComponent = noop.PureComponent;
 class Timer extends PureComponent {
   constructor(arg0) {
     tmp6 = new Timer(global, tmp5, tmp4, tmp3, tmp2, tmp);
-    // ThrowIfThisInitialized (0x7c)
     closure_0 = tmp6;
     tmp6._incrementSecond = function _incrementSecond() {
-      const state = closure_0.state;
+      state = state.state;
       ({ minutes, hours } = state);
       let num = state.seconds + 1;
       let tmp = hours;
@@ -33,11 +32,10 @@ class Timer extends PureComponent {
         tmp = sum;
         tmp2 = num2;
       }
-      closure_0.setState({ seconds: num, minutes: tmp2, hours: tmp });
+      state.setState({ seconds: num, minutes: tmp2, hours: tmp });
     };
     tmp6._decrementSecond = function _decrementSecond() {
-      let obj = closure_0;
-      const state = closure_0.state;
+      state = state.state;
       ({ minutes, hours } = state);
       let num = state.seconds - 1;
       if (num >= 1) {
@@ -50,22 +48,17 @@ class Timer extends PureComponent {
             onComplete();
           }
         } else {
-          obj = { seconds: null, minutes: null, hours: null };
-          obj[0] = num;
-          obj[1] = minutes;
-          obj[2] = hours;
-          obj.setState(obj);
+          const time = { seconds: num, minutes, hours };
+          obj.setState(time);
         }
       } else if (minutes >= 1) {
-        let num2 = minutes - 1;
+        const num2 = minutes - 1;
         num = 59;
         let diff = hours;
       } else {
         diff = hours;
-        num2 = minutes;
         if (tmp) {
           diff = hours - 1;
-          num2 = 59;
           num = 59;
         }
         tmp = minutes < 1 && hours >= 1;
@@ -87,7 +80,7 @@ class Timer extends PureComponent {
         num5 = 1000;
         _Math2 = Math;
         num6 = 86400;
-        result = require("module_0") / 1000 % 86400;
+        result = Math.max(0, Date.now() - timestamp) / 1000 % 86400;
         num7 = 3600;
         num = Math.floor(result / 3600);
         _Math3 = Math;
@@ -101,16 +94,16 @@ class Timer extends PureComponent {
     if (num3 == null) {
       num3 = 0;
     }
-    obj = { seconds: num3, minutes: null, hours: null };
+    time = { seconds: num3, minutes: null, hours: null };
     if (num2 == null) {
       num2 = 0;
     }
-    obj[1] = num2;
+    time.minutes = num2;
     if (num == null) {
       num = 0;
     }
-    obj[2] = num;
-    tmp6.state = obj;
+    time.hours = num;
+    tmp6.state = time;
     return tmp6;
   }
 }
@@ -135,30 +128,30 @@ prototype["render"] = function render() {
   if (!props.hideHours) {
     const _String = String;
     const _HermesInternal = HermesInternal;
-    let str = "" + applyDefault.padStart(String(hours), 2, "0") + ":";
-    const obj = applyDefault;
+    let str = "" + _modDef12.padStart(String(hours), 2, "0") + ":";
   } else {
     str = "";
   }
   if (!hideMinutes) {
     const _String2 = String;
     const _HermesInternal2 = HermesInternal;
-    let str5 = "" + applyDefault.padStart(String(minutes), 2, "0") + ":";
-    const obj2 = applyDefault;
+    let str5 = "" + _modDef12.padStart(String(minutes), 2, "0") + ":";
   } else {
     str5 = "";
   }
   if (str.length > 0) {
     const _String3 = String;
-    let padStartResult = applyDefault.padStart(String(seconds), 2, "0");
-    const obj3 = applyDefault;
+    let padStartResult = _modDef12.padStart(String(seconds), 2, "0");
   } else {
     padStartResult = seconds;
   }
-  const children = [str, str5, padStartResult];
-  return jsxs(Button.LegacyText, { style, accessibilityRole: "timer", children });
+  const obj4 = { style, accessibilityRole: "timer", children: null };
+  const items = [str, str5, padStartResult];
+  obj4.children = items;
+  return jsxs(native.LegacyText, { style, accessibilityRole: "timer", children: null });
 };
 Timer.defaultProps = { hideMinutes: false, hideHours: false };
-let result = require("set").fileFinishedImporting("modules/voice_calls/native/components/Timer.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/voice_calls/native/components/Timer.tsx");
 
 export default Timer;

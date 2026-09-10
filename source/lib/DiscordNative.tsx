@@ -1,11 +1,11 @@
-// Module ID: 4182
-// Function ID: 4183
-// Name: set
+// Module ID: 4195
+// Function ID: 4196
+// Name: DiscordNative
 // Dependencies: [2]
 
-// Module 4182 (set)
-import set from "set" /* 2 */;
+// Module 4195 (DiscordNative)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("lib/DiscordNative.tsx");
+const result = size.fileFinishedImporting("lib/DiscordNative.tsx");
 
 export default window.DiscordNative;

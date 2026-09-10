@@ -1,38 +1,36 @@
-// Module ID: 9168
-// Function ID: 9169
+// Module ID: 9195
+// Function ID: 9196
 // Name: SecureFramesExistingVerificationsHelpMessage
-// Dependencies: [17, 21, 4560, 9169, 1178, 1114, 2]
+// Dependencies: [17, 21, 4574, 9196, 1178, 1114, 2]
 // Exports: default
 
-// Module 9168 (SecureFramesExistingVerificationsHelpMessage)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 9195 (SecureFramesExistingVerificationsHelpMessage)
+import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import useSecureFramesUserVerifiedKeysCount from "useSecureFramesUserVerifiedKeysCount" /* 9169 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import useSecureFramesUserVerifiedKeysCount from "useSecureFramesUserVerifiedKeysCount" /* 9196 */;
+import createStyles from "createStyles" /* 4574 */;
+import size from "module_2" /* 2 */;
 
-const View = get_ActivityIndicator.View;
+const View = _mod17.View;
 const jsx = jsxProd.jsx;
-let closure_4 = createCacheKey.createStyles({ container: { width: "100%" } });
-const result = set.fileFinishedImporting("modules/rtc/native/SecureFramesExistingVerificationsHelpMessage.tsx");
+let closure_4 = createStyles.createStyles({ container: { width: "100%" } });
+const result = size.fileFinishedImporting("modules/rtc/native/SecureFramesExistingVerificationsHelpMessage.tsx");
 
 export default function SecureFramesExistingVerificationsHelpMessage(arg0) {
   ({ style, userId, userKey } = arg0);
-  let obj = useSecureFramesUserVerifiedKeysCount;
-  const secureFramesUserVerifiedKeysCount = obj.useSecureFramesUserVerifiedKeysCount({ userId, keyToOmit: userKey });
+  const tmp = closure_4();
+  const secureFramesUserVerifiedKeysCount = useSecureFramesUserVerifiedKeysCount.useSecureFramesUserVerifiedKeysCount({ userId, keyToOmit: userKey });
   let tmp5 = null;
   if (0 !== secureFramesUserVerifiedKeysCount) {
-    obj = { style: null, children: null };
+    const obj2 = { style: null, children: null };
     const items = [tmp.container, style];
-    obj[0] = items;
-    obj = { messageType: null, children: null };
-    obj[0] = tmp2(1178).HelpMessageTypes.INFO;
+    obj2.style = items;
+    const obj3 = { messageType: tmp2(1178).HelpMessageTypes.INFO, children: null };
     const intl = tmp2(1114).intl;
-    obj1 = { count: null };
-    obj1[0] = secureFramesUserVerifiedKeysCount;
-    obj[1] = intl.format(tmp2(1114).t.uZDkz0, obj1);
-    obj[1] = jsx(tmp2(1178).HelpMessage, { messageType: null, children: null });
-    tmp5 = <View messageType={null}>{null}</View>;
+    const obj4 = { count: secureFramesUserVerifiedKeysCount };
+    obj3.children = intl.format(tmp2(1114).t.uZDkz0, obj4);
+    obj2.children = jsx(tmp2(1178).HelpMessage, { messageType: tmp2(1178).HelpMessageTypes.INFO, children: null });
+    tmp5 = <View style={null}>{null}</View>;
   }
   return tmp5;
 };

@@ -1,32 +1,28 @@
-// Module ID: 12978
-// Function ID: 12979
+// Module ID: 13004
+// Function ID: 13005
 // Name: showMediaMessagePreviewActionSheet
-// Dependencies: [1957, 1371, 4527, 12979, 1896, 2]
+// Dependencies: [1957, 1371, 4541, 13005, 1896, 2]
 // Exports: default
 
-// Module 12978 (showMediaMessagePreviewActionSheet)
+// Module 13004 (showMediaMessagePreviewActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/message_preview/showMediaMessagePreviewActionSheet.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_viewer/native/components/message_preview/showMediaMessagePreviewActionSheet.tsx");
 
 export default function showMediaMessagePreviewActionSheet(message) {
   message = message.message;
-  channel = channel.getChannel(message.channelId);
+  const channel = ChannelStore.getChannel(message.channelId);
   if (null != channel) {
     if (null != message) {
-      user = user.getUser(message.author.id);
+      const user = UserStore.getUser(message.author.id);
       if (null != user) {
-        let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-        obj = { channel: null, message: null, user: null, closeMediaModal: null };
-        obj[0] = channel;
-        obj[1] = message;
-        obj[2] = user;
-        obj[3] = message.closeMediaModal;
-        obj.openLazy(asyncRequireImpl(12979, dependencyMap.paths), "MediaMessagePreviewActionSheet", obj);
+        const obj2 = { channel, message, user, closeMediaModal: message.closeMediaModal };
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13005, dependencyMap.paths), "MediaMessagePreviewActionSheet", obj2);
       }
     }
   }

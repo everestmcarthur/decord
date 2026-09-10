@@ -1,13 +1,13 @@
-// Module ID: 8259
-// Function ID: 8260
-// Name: _isStreaming
+// Module ID: 8285
+// Function ID: 8286
+// Name: isStreaming
 // Dependencies: [1920, 1074, 2]
 // Exports: default
 
-// Module 8259 (_isStreaming)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import items3 from "items3" /* 1920 */;
+// Module 8285 (isStreaming)
+import Constants from "Constants" /* 1074 */;
+import Constants2 from "Constants" /* 1920 */;
+import size from "module_2" /* 2 */;
 
 function _isStreaming(type) {
   let tmp = type.type === ActivityTypes.STREAMING;
@@ -20,11 +20,11 @@ function _isStreaming(type) {
   }
   return tmp;
 }
-const validStreamURL = items3.validStreamURL;
-const ActivityTypes = ME.ActivityTypes;
-const result = set.fileFinishedImporting("modules/activities/utils/isStreaming.tsx");
+const validStreamURL = Constants2.validStreamURL;
+const ActivityTypes = Constants.ActivityTypes;
+const result = size.fileFinishedImporting("modules/activities/utils/isStreaming.tsx");
 
-export default function isStreaming(activeSourceId, arg1) {
+export default function isStreaming(activeSourceId) {
   if (null == activeSourceId) {
     return tmp;
   } else {

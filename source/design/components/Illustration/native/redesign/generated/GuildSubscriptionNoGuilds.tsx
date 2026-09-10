@@ -1,66 +1,64 @@
-// Module ID: 13537
-// Function ID: 13538
-// Name: getGuildSubscriptionNoGuildsSource
-// Dependencies: [19, 17, 21, 8233, 13538, 13539, 13540, 4411, 2]
+// Module ID: 13560
+// Function ID: 13561
+// Name: GuildSubscriptionNoGuilds
+// Dependencies: [19, 17, 21, 8259, 13561, 13562, 13563, 4425, 2]
 // Exports: GuildSubscriptionNoGuilds, getGuildSubscriptionNoGuildsSource, useGuildSubscriptionNoGuildsSource
 
-// Module 13537 (getGuildSubscriptionNoGuildsSource)
-import noopAll from "noop" /* 19 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
-import getIllustrationSource from "getIllustrationSource" /* 8233 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 13560 (GuildSubscriptionNoGuilds)
+import shared from "shared" /* 4425 */;
+import _mod8259 from "module_8259" /* 8259 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/GuildSubscriptionNoGuilds.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/GuildSubscriptionNoGuilds.tsx");
 
 export const getGuildSubscriptionNoGuildsSource = function getGuildSubscriptionNoGuildsSource(theme) {
-  let obj = getIllustrationSource;
-  obj = {
+  return _mod8259.getIllustrationSource(theme, {
     dark() {
-      return callback(13538);
+      return require("module_13561");
     },
     darker() {
-      return callback(13539);
+      return require("module_13562");
     },
     light() {
-      return callback(13540);
+      return require("module_13563");
     }
-  };
-  return obj.getIllustrationSource(theme, obj);
+  });
 };
 export const useGuildSubscriptionNoGuildsSource = function useGuildSubscriptionNoGuildsSource() {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = shared;
+  return _mod8259.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return callback(13538);
+      return require("module_13561");
     },
     darker() {
-      return callback(13539);
+      return require("module_13562");
     },
     light() {
-      return callback(13540);
+      return require("module_13563");
     }
-  };
-  return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  });
 };
 export const GuildSubscriptionNoGuilds = function GuildSubscriptionNoGuilds(arg0) {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = shared;
+  const obj4 = {};
+  const illustrationSource = _mod8259.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return callback(13538);
+      return require("module_13561");
     },
     darker() {
-      return callback(13539);
+      return require("module_13562");
     },
     light() {
-      return callback(13540);
+      return require("module_13563");
     }
-  };
-  obj = {};
-  const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  });
   const merged = Object.assign(arg0);
-  obj.source = illustrationSource;
+  obj4.source = illustrationSource;
   return <Image />;
 };

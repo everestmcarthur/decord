@@ -1,22 +1,25 @@
-// Module ID: 11395
-// Function ID: 11396
+// Module ID: 11422
+// Function ID: 11423
 // Name: useLastChannelMessage
-// Dependencies: [4781, 504, 2]
+// Dependencies: [4795, 504, 2]
 // Exports: useLastChannelMessage
 
-// Module 11395 (useLastChannelMessage)
-import closure_2 from "reinjectEphemerals" /* 4781 */;
+// Module 11422 (useLastChannelMessage)
+import MessageStore from "MessageStore" /* 4795 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useLastChannelMessage.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useLastChannelMessage.tsx");
 
 export const useLastChannelMessage = function useLastChannelMessage(channelId) {
-  const _require = channelId;
-  const items = [closure_2];
-  return _require(504).useStateFromStores(items, () => {
-    let lastNonCurrentUserMessage = closure_1_2.getLastNonCurrentUserMessage(closure_0);
+  _require = channelId;
+  const items = [MessageStore];
+  return require("initialize").useStateFromStores(items, () => {
+    let lastNonCurrentUserMessage = MessageStore.getLastNonCurrentUserMessage(closure_0);
     if (lastNonCurrentUserMessage == null) {
-      lastNonCurrentUserMessage = closure_1_2.getLastMessage(closure_0);
+      lastNonCurrentUserMessage = MessageStore.getLastMessage(closure_0);
     }
     return lastNonCurrentUserMessage;
   });

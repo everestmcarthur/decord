@@ -1,18 +1,19 @@
-// Module ID: 11882
-// Function ID: 11883
+// Module ID: 11908
+// Function ID: 11909
 // Name: useUserIsConsideredAdult
 // Dependencies: [1371, 504, 2]
 // Exports: default
 
-// Module 11882 (useUserIsConsideredAdult)
+// Module 11908 (useUserIsConsideredAdult)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useUserIsConsideredAdult.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useUserIsConsideredAdult.tsx");
 
 export default function useUserIsConsideredAdult() {
-  const items = [closure_2];
+  const items = [UserStore];
   return initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let nsfwAllowed;

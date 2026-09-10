@@ -1,16 +1,16 @@
-// Module ID: 7730
-// Function ID: 7731
-// Name: adUser
+// Module ID: 7744
+// Function ID: 7745
+// Name: AdUserStore
 // Dependencies: [504, 573, 2]
 
-// Module 7730 (adUser)
+// Module 7744 (AdUserStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
 let c1 = false;
 let c2 = false;
 let c3 = null;
-let c4 = null;
+let closure_4 = null;
 const Store = initializeDefault.Store;
 class AdUserStore extends Store {
 }
@@ -41,26 +41,26 @@ Object.defineProperty(prototype, "fetchPromise", {
 });
 Object.defineProperty(prototype, "lastFetchedAt", {
   get: function lastFetchedAt() {
-    return c4;
+    return closure_4;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "hasFetchedRecently", {
   get: function hasFetchedRecently() {
-    let tmp = null != c4;
+    let tmp = null != closure_4;
     if (tmp) {
       const _Date = Date;
-      tmp = Date.now() - c4 < 21600000;
+      tmp = Date.now() - closure_4 < 21600000;
     }
     return tmp;
   },
   set: undefined
 });
 prototype["setFetchPromise"] = function setFetchPromise(arg0) {
-  closure_3 = arg0;
+  c3 = arg0;
 };
 AdUserStore.displayName = "AdUserStore";
-const adUserStore = new AdUserStore(dispatcherDefault, {
+const adUserStore = new AdUserStore(DispatcherDefault, {
   POST_CONNECTION_OPEN: function handlePostConnectionOpen() {
 
   },
@@ -80,6 +80,7 @@ const adUserStore = new AdUserStore(dispatcherDefault, {
     c3 = null;
   }
 });
-const result = require("set").fileFinishedImporting("modules/ads/native/AdUserStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/ads/native/AdUserStore.tsx");
 
 export default adUserStore;

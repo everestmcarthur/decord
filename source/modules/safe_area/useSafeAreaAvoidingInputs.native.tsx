@@ -1,175 +1,153 @@
-// Module ID: 11151
-// Function ID: 11152
-// Name: _calculateScrollOffset
-// Dependencies: [5, 19, 1477, 576, 11152, 5580, 2]
+// Module ID: 11178
+// Function ID: 11179
+// Name: useSafeAreaAvoidingInputs
+// Dependencies: [5, 19, 1477, 576, 11179, 5594, 2]
 // Exports: default
 
-// Module 11151 (_calculateScrollOffset)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
+// Module 11178 (useSafeAreaAvoidingInputs)
+import nativeDefault from "native" /* 576 */;
+import useKeyboardDuration from "useKeyboardDuration" /* 5594 */;
+import ViewMeasureUtils from "ViewMeasureUtils" /* 11179 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-function _calculateScrollOffset() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c5 = 0;
-    c6 = 0;
-    return (function*(arg0, arg1) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              c4 = 0;
-              closure_3 = tmp2;
-              let styles;
-              closure_3 = undefined;
-              if (null == lib) {
-                c6 = 3;
-                obj1 = { value: null, done: true };
-                obj1[0] = lib2(closure_1_2[3]).space.PX_16;
-                return obj1;
-              } else {
-                const type = iter.type;
-                if ("toRef" === type) {
-                  let obj3 = lib(closure_1_2[4]);
-                  c5 = 1;
-                  c6 = 1;
-                  const obj2 = { value: null, done: false };
-                  obj2[0] = obj3.measureViewRefInWindow(iter.ref);
-                  return obj2;
-                } else if ("toValue" === type) {
-                  c6 = 3;
-                  obj3 = { value: null, done: true };
-                  obj3[0] = iter.value;
-                  return obj3;
-                } else if ("toBottom" === type) {
-                  const _Number = Number;
-                  c6 = 3;
-                  const obj4 = { value: null, done: true };
-                  obj4[0] = Number.MAX_SAFE_INTEGER;
-                  return obj4;
-                } else {
-                  c6 = 3;
-                  return { value: "HermesInternal", done: null };
-                }
-              }
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            styles = arg1;
-            const extraOffset = lib.extraOffset;
-            styles = extraOffset;
-            if (extraOffset == null) {
-              styles = 0;
-            }
-            closure_3 = styles;
-            if (null == styles) {
-              const sum = lib2(styles[3]).space.PX_16 + closure_3;
-            } else {
-              const sum1 = styles.y - (lib2.y + lib2.height) + styles.height + closure_3;
-            }
-            c6 = 3;
-          }
-        } catch (tmp27) {
-          c6 = tmp;
-          throw tmp27;
-        }
-      }
-    })();
-  });
-  closure_5 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+require = fn;
+let closure_5 = async function _calculateScrollOffset(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    applyArgumentsResult = apply(self, arguments);
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          c4 = 0;
+          closure_3 = tmp2;
+          closure_131_0 = closure_0;
+          closure_131_1 = closure_1;
+          closure_131_2 = undefined;
+          closure_131_3 = undefined;
+          if (null == closure_0) {
+            c6 = 3;
+            const obj5 = { value: nativeDefault.space.PX_16, done: true };
+            return obj5;
+          } else {
+            const type = iter.type;
+            if ("toRef" === type) {
+              c5 = 1;
+              c6 = 1;
+              const obj6 = { value: ViewMeasureUtils.measureViewRefInWindow(iter.ref), done: false };
+              return obj6;
+            } else if ("toValue" === type) {
+              c6 = 3;
+              const obj7 = { value: iter.value, done: true };
+              return obj7;
+            } else if ("toBottom" === type) {
+              const _Number = Number;
+              c6 = 3;
+              const obj8 = { value: Number.MAX_SAFE_INTEGER, done: true };
+              return obj8;
+            } else {
+              c6 = 3;
+              return { value: "HermesInternal", done: null };
+            }
+          }
+        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        const obj = { value, done: true };
+        return obj;
+      } else {
+        closure_131_2 = value;
+        const extraOffset = closure_131_0.extraOffset;
+        c2 = extraOffset;
+        if (extraOffset == null) {
+          c2 = 0;
+        }
+        closure_131_3 = c2;
+        if (null == closure_131_2) {
+          const sum = closure_132_1(closure_132_2[3]).space.PX_16 + closure_131_3;
+        } else {
+          const sum1 = closure_131_2.y - (closure_131_1.y + closure_131_1.height) + closure_131_2.height + closure_131_3;
+        }
+        c6 = 3;
+      }
+    } catch (tmp27) {
+      c6 = tmp;
+      throw tmp27;
+    }
   }
-  return applyArgumentsResult;
-}
-const result = require("set").fileFinishedImporting("modules/safe_area/useSafeAreaAvoidingInputs.native.tsx");
+};
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safe_area/useSafeAreaAvoidingInputs.native.tsx");
 
 export default function useSafeAreaAvoidingInputs(insets) {
   insets = insets.insets;
   const inputs = insets.inputs;
   const scrollViewRef = insets.scrollViewRef;
-  let callback;
   let onFocus;
-  callback = onFocus.useRef(inputs);
+  asyncGeneratorStep = onFocus.useRef(inputs);
   const items = [inputs];
   const effect = onFocus.useEffect(() => {
     closure_3.current = inputs;
   }, items);
   const items1 = [insets, scrollViewRef];
-  onFocus = onFocus.useCallback(callback(function*() {
+  onFocus = onFocus.useCallback(asyncGeneratorStep(async (arg0, value) => {
     if (c3 === 2) {
       c3 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
         c3 = 2;
-        if (0 === ref) {
+        if (0 === dependencyMap) {
           if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            let found = tmp5;
-            let current2 = tmp2;
-            current2 = undefined;
-            found = undefined;
-            ref = undefined;
-            c3 = undefined;
-            closure_4 = undefined;
-            closure_5 = undefined;
-            closure_6 = undefined;
-            current2 = ref.current;
-            let current = ref2.current;
-            found = current.find((ref) => {
+            closure_1 = tmp5;
+            closure_128_0 = undefined;
+            closure_128_1 = undefined;
+            closure_128_2 = undefined;
+            closure_128_3 = undefined;
+            closure_128_4 = undefined;
+            closure_128_5 = undefined;
+            closure_128_6 = undefined;
+            let current2 = scrollViewRef.current;
+            closure_128_0 = current2;
+            const current1 = ref.current;
+            const found = current1.find((ref) => {
               const current = ref.ref.current;
               let isFocusedResult;
               if (current != null) {
@@ -177,106 +155,99 @@ export default function useSafeAreaAvoidingInputs(insets) {
               }
               return isFocusedResult;
             });
+            closure_128_1 = found;
             if (null != found) {
               if (null != current2) {
-                ref = 1;
+                dependencyMap = 1;
                 c3 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_1_0(ref[4]).measureViewRefInWindow(found.ref);
-                return obj1;
+                const obj4 = { value: tmp2(11179).measureViewRefInWindow(found.ref), done: false };
+                return obj4;
               }
             }
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
-            ref = arg1;
-            let obj6 = closure_1_0(ref[4]);
-            ref = 2;
+            closure_128_2 = value;
+            dependencyMap = 2;
             c3 = 1;
-            const obj3 = { value: null, done: false };
-            obj3[0] = obj6.measureViewRefInView(closure_1_1.ref, closure_1_0);
-            return obj3;
+            const obj6 = { value: tmp2(11179).measureViewRefInView(closure_128_1.ref, closure_128_0), done: false };
+            return obj6;
           }
         } else {
           if (2 === tmp5) {
             if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              const obj4 = { value: null, done: true };
-              obj4[0] = arg1;
-              return obj4;
-            } else if (null != ref) {
-              if (null != ref2) {
-                ref = 3;
-                c3 = 1;
-                const obj5 = { value: null, done: false };
-                obj5[0] = closure_1_0(ref[4]).measureViewInWindow(closure_1_0);
-                return obj5;
+              const obj8 = { value, done: true };
+              return obj8;
+            } else {
+              closure_128_3 = value;
+              if (null != closure_128_2) {
+                if (null != closure_128_3) {
+                  dependencyMap = 3;
+                  c3 = 1;
+                  const obj9 = { value: tmp2(11179).measureViewInWindow(closure_128_0), done: false };
+                  return obj9;
+                }
               }
             }
           } else if (3 === tmp5) {
             if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj6 = { value: null, done: true };
-              obj6[0] = arg1;
-              return obj6;
+              const obj11 = { value, done: true };
+              return obj11;
             } else {
-              closure_4 = arg1;
-              ref = 4;
+              closure_128_4 = value;
+              dependencyMap = 4;
               c3 = 1;
-              const obj7 = { value: null, done: false };
-              obj7[0] = (function calculateScrollOffset(offset, c2) {
-                const self = this;
-                const apply = closure_5.apply;
-                if (typeof apply === "unknown") {
-                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                } else {
-                  applyArgumentsResult = apply(self, arguments);
-                }
-                return applyArgumentsResult;
-              })(found.offset, ref);
-              return obj7;
+              const obj12 = {
+                value: (function calculateScrollOffset() {
+                            const self = this;
+                            const apply = closure_1_5.apply;
+                            if (typeof apply === "unknown") {
+                              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                            } else {
+                              applyArgumentsResult = apply(self, arguments);
+                            }
+                            return applyArgumentsResult;
+                          })(closure_128_1.offset, closure_128_2),
+                done: false
+              };
+              return obj12;
             }
           } else if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            const obj8 = { value: null, done: true };
-            obj8[0] = arg1;
-            return obj8;
+            const obj13 = { value, done: true };
+            return obj13;
           } else {
-            closure_5 = arg1;
+            closure_128_5 = value;
             const _Number = Number;
-            if (closure_5 === Number.MAX_SAFE_INTEGER) {
-              current = ref.current;
+            if (closure_128_5 === Number.MAX_SAFE_INTEGER) {
+              let current = closure_129_2.current;
               if (current != null) {
                 current.scrollToEnd({ animated: true });
               }
             }
           }
-          obj = { insets: null, inputInScrollView: null, inputInWindow: null, scrollOffset: null, scrollView: null };
-          obj[0] = current2;
-          obj[1] = c3;
-          obj[2] = ref;
-          obj[3] = closure_5;
-          obj[4] = closure_4;
-          closure_6 = (function calculateTargetScrollY(scrollView) {
+          let obj = { insets: closure_129_0, inputInScrollView: closure_128_3, inputInWindow: closure_128_2, scrollOffset: closure_128_5, scrollView: closure_128_4 };
+          closure_128_6 = (function calculateTargetScrollY(scrollView) {
             const sum = scrollView.scrollView.y + scrollView.scrollView.height;
-            const diff = current2(table[2]).getWindowDimensions({ ignoreKeyboard: true }).height - scrollView.insets.bottom;
+            const diff = closure_1_0(dependencyMap[2]).getWindowDimensions({ ignoreKeyboard: true }).height - scrollView.insets.bottom;
             if (scrollView.inputInWindow.y + scrollView.inputInWindow.height + scrollView.scrollOffset > diff) {
               const _Math = Math;
               const diff1 = scrollView.scrollView.height - Math.max(0, sum - diff);
@@ -286,30 +257,28 @@ export default function useSafeAreaAvoidingInputs(insets) {
               }
             }
           })(obj);
-          if (null != closure_6) {
-            (function scrollToTargetY(closure_2, closure_6) {
-              const current = closure_2.current;
+          if (null != closure_128_6) {
+            (function scrollToTargetY(current, y) {
+              current = current.current;
               let scrollToResult;
               if (current != null) {
                 const scrollTo = current.scrollTo;
                 if (scrollTo != null) {
-                  let obj = { x: 0, y: null, animated: true };
-                  obj[1] = closure_6;
-                  scrollToResult = scrollTo(obj);
+                  const point = { x: 0, y, animated: true };
+                  scrollToResult = scrollTo(point);
                 }
               }
               if (scrollToResult == null) {
-                current2 = closure_2.current;
+                const current2 = current.current;
                 if (current2 != null) {
                   const scrollToOffset = current2.scrollToOffset;
                   if (scrollToOffset != null) {
-                    obj = { offset: null, animated: true };
-                    obj[0] = closure_6;
+                    const obj = { offset: y, animated: true };
                     scrollToOffset(obj);
                   }
                 }
               }
-            })(ref, closure_6);
+            })(closure_129_2, closure_128_6);
           }
         }
         c3 = 3;
@@ -321,7 +290,7 @@ export default function useSafeAreaAvoidingInputs(insets) {
   }), items1);
   const items2 = [onFocus];
   const effect1 = onFocus.useEffect(() => {
-    const timeout = setTimeout(onFocus, insets(scrollViewRef[5]).getKeyboardDuration());
+    const timeout = setTimeout(onFocus, useKeyboardDuration.getKeyboardDuration());
     return () => clearTimeout(closure_0);
   }, items2);
   return { onFocus };

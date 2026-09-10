@@ -1,28 +1,28 @@
-// Module ID: 9669
-// Function ID: 9670
-// Name: getNextShownUpcomingEventNoticeType
-// Dependencies: [1963, 4153, 11, 2]
+// Module ID: 9696
+// Function ID: 9697
+// Name: GuildScheduledEventUtils
+// Dependencies: [1963, 4166, 11, 2]
 // Exports: getNextShownUpcomingEventNoticeType
 
-// Module 9669 (getNextShownUpcomingEventNoticeType)
-import set from "set" /* 2 */;
-import hooksDefault from "hooks" /* 4153 */;
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1963 */;
+// Module 9696 (GuildScheduledEventUtils)
+import _modDef4166 from "module_4166" /* 4166 */;
+import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 1963 */;
+import size from "module_2" /* 2 */;
 
-({ UpcomingGuildEventNoticeTypes: obj1, NEW_EVENT_WINDOW_MILLISECONDS: c3, EVENT_STARTING_SOON_WINDOW_MILLISECONDS: c4, ACKED_RECENTLY_WINDOW_DAYS: c5 } = GUILD_EVENT_MAX_NAME_LENGTH);
-const result = set.fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventUtils.tsx");
+({ UpcomingGuildEventNoticeTypes: c2, NEW_EVENT_WINDOW_MILLISECONDS: c3, EVENT_STARTING_SOON_WINDOW_MILLISECONDS: closure_4, ACKED_RECENTLY_WINDOW_DAYS: hasOwnProperty } = GuildScheduledEventsConstants);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventUtils.tsx");
 
 export const getNextShownUpcomingEventNoticeType = function getNextShownUpcomingEventNoticeType(guildScheduledEvent, arg1, arg2, flag) {
-  const obj = hooksDefault();
+  const obj = _modDef4166();
   const time = new Date(guildScheduledEvent.scheduled_start_time).getTime();
-  const diff = time - closure_4;
+  const diff = time - React4;
   if (obj.isBetween(diff, time)) {
     if (null != arg1) {
-      const obj4 = tmp(4153)(arg1);
+      const obj4 = tmp(4166)(arg1);
       const isBetweenResult = obj4.isBetween(diff, time);
       let EVENT_STARTING_SOON;
       if (!isBetweenResult) {
-        if (!obj4.isBetween(obj5.subtract(closure_5, "days"), time)) {
+        if (!obj4.isBetween(obj5.subtract(hasOwnProperty, "days"), time)) {
           EVENT_STARTING_SOON = constants.EVENT_STARTING_SOON;
         }
       }
@@ -36,7 +36,7 @@ export const getNextShownUpcomingEventNoticeType = function getNextShownUpcoming
     if (arg2 == null) {
       tmp5 = extractTimestampResult;
     }
-    if (obj.isBetween(extractTimestampResult, Math.min(tmp5 + closure_3, time))) {
+    if (obj.isBetween(extractTimestampResult, Math.min(tmp5 + React3, time))) {
       if (null == arg1) {
         if (!flag) {
           return constants.NEW_EVENT;

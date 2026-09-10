@@ -1,56 +1,52 @@
-// Module ID: 11510
-// Function ID: 11511
-// Name: FractionalStar
-// Dependencies: [19, 17, 21, 4560, 576, 10246, 10240, 2]
+// Module ID: 11537
+// Function ID: 11538
+// Name: AppStoreOverlayStarRating
+// Dependencies: [19, 17, 21, 4574, 576, 10273, 10267, 2]
 // Exports: default
 
-// Module 11510 (FractionalStar)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import StarIcon from "StarIcon" /* 10240 */;
-import StarOutlineIcon from "StarOutlineIcon" /* 10246 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11537 (AppStoreOverlayStarRating)
+import nativeDefault from "native" /* 576 */;
+import StarIcon from "StarIcon" /* 10267 */;
+import StarOutlineIcon from "StarOutlineIcon" /* 10273 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function FractionalStar(fillAmount) {
   fillAmount = fillAmount.fillAmount;
-  const tmp = callback2();
-  let obj = { style: tmp.star, importantForAccessibility: "no", accessibilityElementsHidden: true, children: null };
-  obj = { size: "custom", color: ThemesDefault.colors.TEXT_MUTED, style: tmp.starIcon };
-  const items = [callback(StarOutlineIcon.StarOutlineIcon, obj), ];
+  const tmp = closure_6();
+  const obj = { style: tmp.star, importantForAccessibility: "no", accessibilityElementsHidden: true, children: null };
+  const items = [React4(StarOutlineIcon.StarOutlineIcon, { size: "custom", color: nativeDefault.colors.TEXT_MUTED, style: tmp.starIcon }), ];
   let tmp4Result = fillAmount > 0;
   if (tmp4Result) {
-    obj = { style: null, children: null };
+    const obj3 = { style: null, children: null };
     const items1 = [tmp.starFillMask, ];
-    obj1 = { width: null };
-    obj1[0] = tmp7(576).space.PX_10 * fillAmount;
-    items1[1] = obj1;
-    obj[0] = items1;
-    const obj2 = { size: "custom", color: null, style: null };
-    obj2[1] = tmp7(576).colors.TEXT_MUTED;
-    obj2[2] = tmp.starIcon;
-    obj[1] = tmp4(StarIcon.StarIcon, obj2);
-    tmp4Result = tmp4(tmp3, obj);
+    const obj4 = { width: tmp7(576).space.PX_10 * fillAmount };
+    items1[1] = obj4;
+    obj3.style = items1;
+    const obj5 = { size: "custom", color: tmp7(576).colors.TEXT_MUTED, style: tmp.starIcon };
+    obj3.children = tmp4(StarIcon.StarIcon, obj5);
+    tmp4Result = tmp4(tmp3, obj3);
   }
   items[1] = tmp4Result;
-  obj[3] = items;
-  return closure_5(View, obj);
+  obj.children = items;
+  return hasOwnProperty(View, obj);
 }
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { row: { flexDirection: "row", alignItems: "center", gap: 2 }, star: null, starIcon: null, starFillMask: null };
-createCacheKey = { width: ThemesDefault.space.PX_10, height: ThemesDefault.space.PX_10, position: "relative" };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { width: ThemesDefault.space.PX_10, height: ThemesDefault.space.PX_10, position: "absolute", left: 0, top: 0 };
-let obj1 = { width: ThemesDefault.space.PX_10, height: ThemesDefault.space.PX_10, position: "absolute", left: 0, top: 0 };
-createCacheKey[3] = { position: "absolute", left: 0, top: 0, height: ThemesDefault.space.PX_10, overflow: "hidden" };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { position: "absolute", left: 0, top: 0, height: ThemesDefault.space.PX_10, overflow: "hidden" };
-const result = require("set").fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayStarRating.tsx");
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+const obj2 = { row: { flexDirection: "row", alignItems: "center", gap: 2 }, star: null, starIcon: null, starFillMask: null };
+let size = { width: nativeDefault.space.PX_10, height: nativeDefault.space.PX_10, position: "relative" };
+obj2.star = size;
+const size1 = { width: nativeDefault.space.PX_10, height: nativeDefault.space.PX_10, position: "absolute", left: 0, top: 0 };
+obj2.starIcon = size1;
+const rect = { position: "absolute", left: 0, top: 0, height: nativeDefault.space.PX_10, overflow: "hidden" };
+obj2.starFillMask = rect;
+let closure_6 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayStarRating.tsx");
 
 export default function AppStoreOverlayStarRating(fillAmounts) {
   fillAmounts = fillAmounts.fillAmounts;
-  return callback(View, { style: callback2().row, children: fillAmounts.map((fillAmount) => callback(closure_7, { fillAmount }, arg1)) });
+  return React4(View, { style: closure_6().row, children: fillAmounts.map((fillAmount, index) => closure_1_4(FractionalStar, { fillAmount }, index)) });
 };

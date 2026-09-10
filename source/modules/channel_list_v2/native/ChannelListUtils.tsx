@@ -1,17 +1,17 @@
-// Module ID: 16186
-// Function ID: 16187
-// Name: isFavoritesSection
-// Dependencies: [1074, 7528, 4740, 2]
+// Module ID: 16216
+// Function ID: 16217
+// Name: channel_list_v2/ChannelListUtils
+// Dependencies: [1074, 7542, 4754, 2]
 // Exports: isFavoritesSection, isNamedCategorySection, isRecentsSection, isVoiceChannelsSection, logChannelListEndReached
 
-// Module 16186 (isFavoritesSection)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4740 */;
-import computeSubtitle from "computeSubtitle" /* 7528 */;
+// Module 16216 (channel_list_v2/ChannelListUtils)
+import Constants from "Constants" /* 1074 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4754 */;
+import ChannelListState from "ChannelListState" /* 7542 */;
+import size from "module_2" /* 2 */;
 
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/channel_list_v2/native/ChannelListUtils.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/channel_list_v2/native/ChannelListUtils.tsx");
 
 export const isFavoritesSection = function isFavoritesSection(arg0, favoritesSectionNumber) {
   return arg0 === favoritesSectionNumber.favoritesSectionNumber;
@@ -23,8 +23,8 @@ export const isVoiceChannelsSection = function isVoiceChannelsSection(section, g
   return section === guildChannels.voiceChannelsSectionNumber;
 };
 export const isNamedCategorySection = function isNamedCategorySection(section) {
-  return section >= computeSubtitle.SECTION_INDEX_FIRST_NAMED_CATEGORY;
+  return section >= ChannelListState.SECTION_INDEX_FIRST_NAMED_CATEGORY;
 };
 export const logChannelListEndReached = function logChannelListEndReached() {
-  collectGuildAnalyticsMetadataDefault.trackWithMetadata(AnalyticEvents.CHANNEL_LIST_END_REACHED);
+  AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.CHANNEL_LIST_END_REACHED);
 };

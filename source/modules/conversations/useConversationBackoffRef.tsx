@@ -1,24 +1,25 @@
-// Module ID: 7906
-// Function ID: 7907
+// Module ID: 7920
+// Function ID: 7921
 // Name: useConversationBackoffRef
-// Dependencies: [19, 7598, 559, 2]
+// Dependencies: [19, 7612, 559, 2]
 // Exports: useConversationBackoffRef
 
-// Module 7906 (useConversationBackoffRef)
-import closure_2 from "noop" /* 19 */;
-import CONVERSATION_COLORS from "CONVERSATION_COLORS" /* 7598 */;
+// Module 7920 (useConversationBackoffRef)
+import BackoffDefault from "Backoff" /* 559 */;
+import noop from "module_19" /* 19 */;
 
-({ FETCH_BACKOFF_MAX_MS: c3, FETCH_BACKOFF_MIN_MS: c4 } = CONVERSATION_COLORS);
-const result = require("set").fileFinishedImporting("modules/conversations/useConversationBackoffRef.tsx");
+const ConversationConstants = fn(7612);
+({ FETCH_BACKOFF_MAX_MS: c3, FETCH_BACKOFF_MIN_MS: closure_4 } = ConversationConstants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/conversations/useConversationBackoffRef.tsx");
 
 export const useConversationBackoffRef = function useConversationBackoffRef(items) {
   if (items === undefined) {
     items = [];
   }
-  let ref;
-  ref = React.useRef(new ref(559)(closure_4, closure_3));
-  const effect = React.useEffect(() => {
-    current = current.current;
+  const ref = noop.useRef(new BackoffDefault(React4, React3));
+  const effect = noop.useEffect(() => {
+    const current = ref.current;
     return () => {
       current.succeed();
     };

@@ -1,44 +1,41 @@
-// Module ID: 12403
-// Function ID: 12404
+// Module ID: 12429
+// Function ID: 12430
 // Name: ApplicationCommandLoadingItem
-// Dependencies: [19, 17, 10268, 21, 4560, 576, 4982, 2]
+// Dependencies: [19, 17, 10295, 21, 4574, 576, 4996, 2]
 // Exports: default
 
-// Module 12403 (ApplicationCommandLoadingItem)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getFontScale from "getFontScale" /* 4982 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { AUTOCOMPLETE_ROW_HEIGHT } from "AUTOCOMPLETE_ROW_HEIGHT" /* 10268 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12429 (ApplicationCommandLoadingItem)
+import nativeDefault from "native" /* 576 */;
+import useFontScale from "useFontScale" /* 4996 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
+require = fn;
+const View = fn(17).View;
+const AUTOCOMPLETE_ROW_HEIGHT = fn(10295).AUTOCOMPLETE_ROW_HEIGHT;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = 16;
-let closure_8 = createCacheKey.createStyles((arg0) => {
-  let obj = { applicationCommandLoadingItem: null, applicationCommandLoadingLeftWrapper: null, applicationCommandLoadingName: null, applicationCommandLoadingDescription: null, applicationCommandLoadingSectionName: null };
-  obj = { flexDirection: "row", paddingVertical: 4, paddingHorizontal: 16, alignItems: "center", height: Math.max(arg0 * AUTOCOMPLETE_ROW_HEIGHT, AUTOCOMPLETE_ROW_HEIGHT) };
-  obj[0] = obj;
-  obj[1] = { flexDirection: "column", width: "75%", height: "100%", justifyContent: "space-between" };
-  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, height: c7, borderRadius: c7, width: "20%" };
-  obj[2] = obj;
-  obj[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, height: c7, borderRadius: c7, width: "80%" };
-  obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, height: c7, borderRadius: c7, width: "80%" };
-  obj[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, paddingLeft: 16, width: "25%", marginLeft: "auto", height: c7, borderRadius: c7 };
+const createStyles = fn(4574);
+let closure_8 = createStyles.createStyles((arg0) => {
+  const obj = { applicationCommandLoadingItem: { flexDirection: "row", paddingVertical: 4, paddingHorizontal: 16, alignItems: "center", height: Math.max(arg0 * AUTOCOMPLETE_ROW_HEIGHT, AUTOCOMPLETE_ROW_HEIGHT) }, applicationCommandLoadingLeftWrapper: { flexDirection: "column", width: "75%", height: "100%", justifyContent: "space-between" }, applicationCommandLoadingName: null, applicationCommandLoadingDescription: null, applicationCommandLoadingSectionName: null };
+  const size = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, height: v16, borderRadius: v16, width: "20%" };
+  obj.applicationCommandLoadingName = size;
+  const size1 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: v16, borderRadius: v16, width: "80%" };
+  obj.applicationCommandLoadingDescription = size1;
+  const size2 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, paddingLeft: 16, width: "25%", marginLeft: "auto", height: v16, borderRadius: v16 };
+  obj.applicationCommandLoadingSectionName = size2;
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/application_commands/native/ApplicationCommandLoadingItem.tsx");
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/application_commands/native/ApplicationCommandLoadingItem.tsx");
 
 export default function ApplicationCommandLoadingItem() {
-  let obj = getFontScale;
-  const tmp = callback3(obj.useFontScale());
-  obj = { style: tmp.applicationCommandLoadingItem, children: null };
-  obj = { style: tmp.applicationCommandLoadingLeftWrapper, children: null };
-  const items = [callback(View, { style: tmp.applicationCommandLoadingName }), callback(View, { style: tmp.applicationCommandLoadingDescription })];
-  obj[1] = items;
-  const items1 = [callback2(View, obj), callback(View, { style: tmp.applicationCommandLoadingSectionName })];
-  obj[1] = items1;
-  return callback2(View, obj);
+  const tmp = closure_8(useFontScale.useFontScale());
+  const obj2 = { style: tmp.applicationCommandLoadingItem, children: null };
+  const obj3 = { style: tmp.applicationCommandLoadingLeftWrapper, children: null };
+  const items = [hasOwnProperty(View, { style: tmp.applicationCommandLoadingName }), hasOwnProperty(View, { style: tmp.applicationCommandLoadingDescription })];
+  obj3.children = items;
+  const items1 = [timestampProducer(View, obj3), hasOwnProperty(View, { style: tmp.applicationCommandLoadingSectionName })];
+  obj2.children = items1;
+  return timestampProducer(View, obj2);
 };

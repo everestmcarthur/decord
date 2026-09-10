@@ -1,19 +1,22 @@
-// Module ID: 14838
-// Function ID: 14839
+// Module ID: 14864
+// Function ID: 14865
 // Name: updateDmSafetyAlertsSetting
 // Dependencies: [1940, 1218, 2]
 // Exports: updateDmSafetyAlertsSetting
 
-// Module 14838 (updateDmSafetyAlertsSetting)
-import set from "set" /* 2 */;
+// Module 14864 (updateDmSafetyAlertsSetting)
+import wrappers from "wrappers" /* 1218 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/self_mod/inappropriate_conversation/updateDmSafetyAlertsSetting.tsx");
+const require = globalThis.__r;
 
-export const updateDmSafetyAlertsSetting = function updateDmSafetyAlertsSetting(arg0) {
-  const _require = arg0;
-  const PreloadedUserSettingsActionCreators = _require(1940).PreloadedUserSettingsActionCreators;
-  return PreloadedUserSettingsActionCreators.updateAsync("privacy", (arg0) => {
-    const BoolValue = callback(closure_1_1[1]).BoolValue;
-    arg0.inappropriateConversationWarnings = BoolValue.create({ value: callback });
-  }, _require(1940).UserSettingsDelay.INFREQUENT_USER_ACTION);
+const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/updateDmSafetyAlertsSetting.tsx");
+
+export const updateDmSafetyAlertsSetting = function updateDmSafetyAlertsSetting(value) {
+  _require = value;
+  const PreloadedUserSettingsActionCreators = require("UserSettingsProtoActionCreators").PreloadedUserSettingsActionCreators;
+  return PreloadedUserSettingsActionCreators.updateAsync("privacy", async (arg0) => {
+    const BoolValue = wrappers.BoolValue;
+    arg0.inappropriateConversationWarnings = BoolValue.create({ value });
+  }, require("UserSettingsProtoActionCreators").UserSettingsDelay.INFREQUENT_USER_ACTION);
 };

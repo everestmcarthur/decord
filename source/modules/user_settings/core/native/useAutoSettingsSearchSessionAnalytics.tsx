@@ -1,68 +1,68 @@
-// Module ID: 16908
-// Function ID: 16909
+// Module ID: 16945
+// Function ID: 16946
 // Name: useAutoSettingsSearchSessionAnalytics
-// Dependencies: [19, 1895, 14694, 504, 1093, 8272, 4992, 6996, 2]
+// Dependencies: [19, 1895, 14720, 504, 1093, 8300, 5006, 7010, 2]
 // Exports: useAutoSettingsSearchSessionAnalytics
 
-// Module 16908 (useAutoSettingsSearchSessionAnalytics)
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4992 */;
-import usePreviousDefault from "usePrevious" /* 8272 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "getState" /* 1895 */;
-import closure_5 from "zustandStore" /* 14694 */;
+// Module 16945 (useAutoSettingsSearchSessionAnalytics)
+import useMountEffectDefault from "useMountEffect" /* 5006 */;
+import SettingSearchSessionAnalyticsManagerDefault from "SettingSearchSessionAnalyticsManager" /* 7010 */;
+import usePreviousDefault from "usePrevious" /* 8300 */;
+import noop from "module_19" /* 19 */;
+import AppStateStore from "AppStateStore" /* 1895 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14720 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/user_settings/core/native/useAutoSettingsSearchSessionAnalytics.tsx");
+const require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/core/native/useAutoSettingsSearchSessionAnalytics.tsx");
 
 export const useAutoSettingsSearchSessionAnalytics = function useAutoSettingsSearchSessionAnalytics() {
-  const items = [closure_4];
+  const items = [AppStateStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => {
     state = state.getState();
-    return state === stateFromStores(table[4]).AppStates.ACTIVE;
+    return state === stateFromStores(dependencyMap[4]).AppStates.ACTIVE;
   });
   const tmp2 = usePreviousDefault(stateFromStores);
   importDefault = tmp2;
-  useMountLayoutEffectDefault(() => () => {
-    callback(table[7]).terminate();
+  useMountEffectDefault(() => () => {
+    closure_1_1(closure_1_2[7]).terminate();
   });
   const items1 = [stateFromStores, tmp2];
-  const effect = React.useEffect(() => {
-    let field = closure_1_5.getField("isFocused");
+  const effect = noop.useEffect(() => {
+    let field = UserSettingSearchStore.getField("isFocused");
     if (!field) {
-      field = closure_1_5.getField("query").length > 0;
+      field = UserSettingSearchStore.getField("query").length > 0;
     }
     let tmp3 = stateFromStores;
     if (stateFromStores) {
-      tmp3 = !callback;
+      tmp3 = !closure_1;
     }
     if (tmp3) {
       tmp3 = field;
     }
     if (tmp3) {
-      callback(closure_1_2[7]).initialize();
-      const obj = callback(closure_1_2[7]);
+      SettingSearchSessionAnalyticsManagerDefault.initialize();
     }
     let tmp8 = !tmp2;
     if (!stateFromStores) {
-      tmp8 = callback;
+      tmp8 = closure_1;
     }
     if (tmp8) {
       tmp8 = field;
     }
     if (tmp8) {
-      callback(closure_1_2[7]).terminate();
-      const obj2 = callback(closure_1_2[7]);
+      SettingSearchSessionAnalyticsManagerDefault.terminate();
     }
   }, items1);
   const items2 = [stateFromStores];
-  const effect1 = React.useEffect(() => closure_5.subscribe((isFocused) => {
+  const effect1 = noop.useEffect(() => UserSettingSearchStore.subscribe((isFocused) => {
     isFocused = isFocused.isFocused;
     if (!isFocused) {
       isFocused = isFocused.query.length > 0;
     }
     return isFocused;
   }, (arg0) => {
-    const obj = callback(table[7]);
+    const obj = closure_1_1(closure_1_2[7]);
     if (arg0) {
       obj.initialize();
     } else {
@@ -74,7 +74,7 @@ export const useAutoSettingsSearchSessionAnalytics = function useAutoSettingsSea
     }
   }), items2);
   const items3 = [stateFromStores];
-  const effect2 = React.useEffect(() => closure_5.subscribe((isFocused) => {
+  const effect2 = noop.useEffect(() => UserSettingSearchStore.subscribe((isFocused) => {
     isFocused = isFocused.isFocused;
     if (isFocused) {
       isFocused = isFocused.query.length > 0;
@@ -82,8 +82,8 @@ export const useAutoSettingsSearchSessionAnalytics = function useAutoSettingsSea
     return isFocused;
   }, (arg0) => {
     if (arg0) {
-      const result = callback(table[7]).maybeTrackQueryEntered();
-      const obj = callback(table[7]);
+      const result = closure_1_1(dependencyMap[7]).maybeTrackQueryEntered();
+      const obj = closure_1_1(dependencyMap[7]);
     }
   }, {
     equalityFn(arg0, arg1) {

@@ -1,12 +1,11 @@
-// Module ID: 11172
-// Function ID: 11173
-// Name: metadata
+// Module ID: 11199
+// Function ID: 11200
 // Dependencies: [2]
 
-// Module 11172 (metadata)
-import set from "set" /* 2 */;
+// Module 11199
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/premium/tiered_tenure_badging/mobile_gold_badge_large.png.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/premium/tiered_tenure_badging/mobile_gold_badge_large.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/4a21ddbb9eb0dcaaad7d6e30f78e8f95b866e7b902b9aa48b4695b2a439f17cd.png";
 export const metadata = { fileBytes: 77252 };

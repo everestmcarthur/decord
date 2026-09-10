@@ -1,26 +1,26 @@
-// Module ID: 12757
-// Function ID: 12758
+// Module ID: 12783
+// Function ID: 12784
 // Name: PlusMediumIcon
-// Dependencies: [19, 21, 576, 4261, 12203, 2]
+// Dependencies: [19, 21, 576, 4274, 12229, 2]
 // Exports: PlusMediumIcon
 
-// Module 12757 (PlusMediumIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 12203 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 12783 (PlusMediumIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod12229 from "module_12229" /* 12229 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/PlusMediumIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/PlusMediumIcon.tsx");
 
 export const PlusMediumIcon = function PlusMediumIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12229, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

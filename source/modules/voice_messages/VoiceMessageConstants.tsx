@@ -1,12 +1,12 @@
-// Module ID: 11965
-// Function ID: 11966
-// Name: VoiceMessageAnimationState
+// Module ID: 11991
+// Function ID: 11992
+// Name: VoiceMessageConstants
 // Dependencies: [2]
 
-// Module 11965 (VoiceMessageAnimationState)
-import set from "set" /* 2 */;
+// Module 11991 (VoiceMessageConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/voice_messages/VoiceMessageConstants.tsx");
+const result = size.fileFinishedImporting("modules/voice_messages/VoiceMessageConstants.tsx");
 
 export const VoiceMessageAnimationState = { SENDING: 0, [0]: "SENDING", CANCELLING: 1, [1]: "CANCELLING", LOCKING: 2, [2]: "LOCKING", LOCKED: 3, [3]: "LOCKED" };
 export const VOICE_RECORDING_MIN_DB = -100;

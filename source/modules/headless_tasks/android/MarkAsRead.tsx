@@ -1,21 +1,20 @@
-// Module ID: 17936
-// Function ID: 17937
-// Name: promise
-// Dependencies: [1074, 7110, 2]
+// Module ID: 17969
+// Function ID: 17970
+// Name: MarkAsRead
+// Dependencies: [1074, 7124, 2]
 
-// Module 17936 (promise)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 17969 (MarkAsRead)
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7124 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-({ AnalyticsObjectTypes: obj1, AnalyticsObjects: c3 } = ME);
-const result = set.fileFinishedImporting("modules/headless_tasks/android/MarkAsRead.tsx");
+({ AnalyticsObjectTypes: c2, AnalyticsObjects: c3 } = Constants);
+const result = size.fileFinishedImporting("modules/headless_tasks/android/MarkAsRead.tsx");
 
 export default (arg0) => {
   closure_0 = arg0;
-  return new Promise((arg0) => {
-    let obj = lib(closure_1_1[1]);
-    obj = { object: closure_1_3.MARK_CHANNEL_AS_READ_FROM_NOTIFICATION, objectType: closure_1_2.ACK_MANUAL };
-    obj.ack(lib.channelId, obj, true, true, lib.messageId);
-    arg0(true);
+  return new Promise((fn) => {
+    ReadStateActionCreators.ack(closure_0.channelId, { object: constants2.MARK_CHANNEL_AS_READ_FROM_NOTIFICATION, objectType: constants.ACK_MANUAL }, true, true, closure_0.messageId);
+    fn(true);
   });
 };

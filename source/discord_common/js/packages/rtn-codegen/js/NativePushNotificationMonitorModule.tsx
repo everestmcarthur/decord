@@ -1,14 +1,14 @@
-// Module ID: 9694
-// Function ID: 9695
-// Name: enforcing
+// Module ID: 9721
+// Function ID: 9722
+// Name: NativePushNotificationMonitorModule
 // Dependencies: [17, 2]
 
-// Module 9694 (enforcing)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 9721 (NativePushNotificationMonitorModule)
+import _mod17 from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
 
-const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 const enforcing = TurboModuleRegistry.getEnforcing("NativePushNotificationMonitorModule");
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativePushNotificationMonitorModule.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativePushNotificationMonitorModule.tsx");
 
 export default enforcing;

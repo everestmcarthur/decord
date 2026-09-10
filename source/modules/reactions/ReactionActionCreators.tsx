@@ -1,24 +1,25 @@
-// Module ID: 7764
-// Function ID: 7765
-// Name: checkReactionResponse
-// Dependencies: [5, 502, 1957, 4781, 1074, 1090, 4904, 1114, 1109, 573, 7763, 1272, 7765, 1242, 4740, 4411, 7783, 4217, 2]
+// Module ID: 7778
+// Function ID: 7779
+// Name: ReactionActionCreators
+// Dependencies: [5, 502, 1957, 4795, 1074, 1090, 4918, 1114, 1109, 573, 7777, 1272, 7779, 1242, 4754, 4425, 7797, 4230, 2]
 // Exports: getReactors, playBurstReaction
 
-// Module 7764 (checkReactionResponse)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import setDefault from "set" /* 1090 */;
-import ComponentDispatcher from "ComponentDispatcher" /* 1109 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import setDefault2 from "set" /* 4904 */;
-import ReactionTypes2 from "ReactionTypes" /* 7763 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "fetchFingerprint" /* 502 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import closure_6 from "reinjectEphemerals" /* 4781 */;
-import ME from "ME" /* 1074 */;
+// Module 7778 (ReactionActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
+import util from "util" /* 1114 */;
+import EmojiUtils from "EmojiUtils" /* 4230 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7777 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7779 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import MessageStore from "MessageStore" /* 4795 */;
 
-require = arg1;
-function checkReactionResponse(arg0, arg1, isRetry) {
+require = fn;
+function checkReactionResponse(arg0, fn, isRetry) {
   ({ status, body } = arg0);
   if (429 === status) {
     if (isRetry.isRetry) {
@@ -29,7 +30,7 @@ function checkReactionResponse(arg0, arg1, isRetry) {
       const _isNaN = isNaN;
       if (!isNaN(parsed)) {
         const _setTimeout = setTimeout;
-        const timerId = setTimeout(arg1, parsed * setDefault.Millis.SECOND);
+        const timerId = setTimeout(fn, parsed * DurationsDefault.Millis.SECOND);
       }
       return false;
     }
@@ -40,43 +41,41 @@ function checkReactionResponse(arg0, arg1, isRetry) {
         code = body.code;
       }
       if (constants.TOO_MANY_REACTIONS === code) {
-        obj = setDefault2;
-        obj = { title: null, body: null, confirmText: null };
-        const intl = getSystemLocale.intl;
-        obj[0] = intl.string(getSystemLocale.t.lFddsR);
-        const intl2 = getSystemLocale.intl;
-        obj[1] = intl2.string(getSystemLocale.t.h27eIm);
-        const intl3 = getSystemLocale.intl;
-        obj[2] = intl3.string(getSystemLocale.t.BddRzS);
-        obj.show(obj);
+        const obj2 = { title: null, body: null, confirmText: null };
+        const intl = util.intl;
+        obj2.title = intl.string(util.t.lFddsR);
+        const intl2 = util.intl;
+        obj2.body = intl2.string(util.t.h27eIm);
+        const intl3 = util.intl;
+        obj2.confirmText = intl3.string(util.t.BddRzS);
+        AlertActionCreatorsDefault.show(obj2);
       } else if (tmp3.REACTION_BLOCKED === code) {
-        const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
+        const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
         ComponentDispatch.dispatch(constants2.SHAKE_APP, { duration: 200, intensity: 2 });
       }
     } else if (!isRetry.isRetry) {
-      arg1();
+      fn();
       return false;
     }
     return true;
   }
 }
-function optimisticDispatch(type, channelId, messageId, arg3, userId) {
-  obj = dispatcherDefault;
-  obj = { type, channelId, messageId, userId: null, emoji: null, optimistic: true, colors: null, reactionType: null };
+function optimisticDispatch(type, channelId, messageId, emoji, userId) {
+  const obj2 = { type, channelId, messageId, userId: null, emoji: null, optimistic: true, colors: null, reactionType: null };
   userId = userId.userId;
   if (userId == null) {
-    userId = id.getId();
+    userId = AuthenticationStore.getId();
   }
-  obj[3] = userId;
-  obj[4] = arg3;
+  obj2.userId = userId;
+  obj2.emoji = emoji;
   let colors = userId.colors;
   if (colors == null) {
     colors = [];
   }
-  obj[6] = colors;
-  const ReactionTypes = ReactionTypes2.ReactionTypes;
-  obj[7] = userId.burst ? ReactionTypes.BURST : ReactionTypes.NORMAL;
-  obj.dispatch(obj);
+  obj2.colors = colors;
+  const ReactionTypes = MessageReactionsTypes.ReactionTypes;
+  obj2.reactionType = userId.burst ? ReactionTypes.BURST : ReactionTypes.NORMAL;
+  DispatcherDefault.dispatch(obj2);
 }
 function makeURL(type) {
   ({ channelId, messageId, emoji, userId, useTypeEndpoint } = type);
@@ -85,7 +84,7 @@ function makeURL(type) {
   }
   let NORMAL = type.type;
   if (NORMAL === undefined) {
-    NORMAL = ReactionTypes2.ReactionTypes.NORMAL;
+    NORMAL = MessageReactionsTypes.ReactionTypes.NORMAL;
   }
   if (null != emoji.id) {
     const _HermesInternal = HermesInternal;
@@ -94,7 +93,7 @@ function makeURL(type) {
     name = emoji.name;
   }
   if (null == userId) {
-    let REACTIONSResult = closure_10.REACTIONS(channelId, messageId, name);
+    let REACTIONSResult = closure_1_10.REACTIONS(channelId, messageId, name);
   } else if (useTypeEndpoint) {
     REACTIONSResult = obj.REACTION_WITH_TYPE(channelId, messageId, name, userId, NORMAL);
   } else {
@@ -102,142 +101,109 @@ function makeURL(type) {
   }
   return REACTIONSResult;
 }
-function _getReactors() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    const iter = (function*(arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              dependencyMap = tmp5;
-              let callback2 = tmp2;
-              let callback;
-              callback2 = undefined;
-              dependencyMap = undefined;
-              c3 = undefined;
-              c4 = undefined;
-              c5 = undefined;
-              ({ channelId: c0, messageId: c1, emoji: c2, limit: c3, after: c4, type: c5 } = callback);
-              closure_6 = undefined;
-              closure_7 = undefined;
-              let body;
-              c3 = 1;
-              c4 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              if (c5 === callback(7763).ReactionTypes.VOTE) {
-                let tmp28 = (function makeURLForVoteReactors(c0, c1, c2) {
-                  let name = c2.id;
-                  if (name == null) {
-                    name = c2.name;
-                  }
-                  return closure_10.POLL_ANSWER_VOTERS(c0, c1, name);
-                })(callback, callback2, dependencyMap);
-              } else {
-                const obj2 = { channelId: null, messageId: null, emoji: null };
-                obj2[0] = callback;
-                obj2[1] = callback2;
-                obj2[2] = dependencyMap;
-                tmp28 = callback3(obj2);
-              }
-              closure_6 = tmp28;
-              const HTTP = callback(1272).HTTP;
-              const obj3 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
-              obj3[0] = closure_6;
-              const obj4 = { limit: null, after: null, type: null };
-              obj4[0] = c3;
-              obj4[1] = c4;
-              obj4[2] = c5;
-              obj3[1] = obj4;
-              let obj5 = callback(1272);
-              obj3[3] = obj5.rejectWithMigratedError();
-              const value = HTTP.get(obj3);
-              c3 = 2;
-              c4 = 1;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj5 = { value: null, done: true };
-            obj5[0] = arg1;
-            return obj5;
-          } else {
-            closure_7 = arg1;
-            let tmp14;
-            if (c5 === callback(7763).ReactionTypes.VOTE) {
-              body = closure_7.body.users;
-            } else {
-              body = closure_7.body;
-            }
-            tmp14 = callback2(573);
-            obj = { type: "MESSAGE_REACTION_ADD_USERS", channelId: null, messageId: null, users: null, emoji: null, reactionType: null };
-            obj[1] = callback;
-            obj[2] = callback2;
-            obj[3] = body;
-            obj[4] = dependencyMap;
-            obj[5] = c5;
-            tmp14.dispatch(obj);
-            c4 = 3;
-          }
-        } catch (tmp43) {
-          c4 = tmp;
-          throw tmp43;
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_15 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+let closure_15 = async function _getReactors(arg0, value) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    applyArgumentsResult = apply(self, arguments);
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          closure_129_5 = undefined;
+          ({ channelId: closure_129_0, messageId: closure_129_1, emoji: closure_129_2, limit: closure_129_3, after: closure_129_4, type: closure_129_5 } = closure_0);
+          closure_129_6 = undefined;
+          closure_129_7 = undefined;
+          closure_129_8 = undefined;
+          c3 = 1;
+          c4 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          if (closure_129_5 === closure_130_0(closure_130_2[10]).ReactionTypes.VOTE) {
+            let tmp28 = (function makeURLForVoteReactors(arg0, arg1, id) {
+              let name = id.id;
+              if (name == null) {
+                name = id.name;
+              }
+              return closure_1_10.POLL_ANSWER_VOTERS(arg0, arg1, name);
+            })(closure_129_0, closure_129_1, closure_129_2);
+          } else {
+            const obj5 = { channelId: closure_129_0, messageId: closure_129_1, emoji: closure_129_2 };
+            tmp28 = closure_130_14(obj5);
+          }
+          closure_129_6 = tmp28;
+          const HTTP = closure_130_0(closure_130_2[11]).HTTP;
+          const request = { url: closure_129_6, query: null, oldFormErrors: true, rejectWithError: null };
+          const obj7 = { limit: closure_129_3, after: closure_129_4, type: closure_129_5 };
+          request.query = obj7;
+          request.rejectWithError = closure_130_0(closure_130_2[11]).rejectWithMigratedError();
+          value = HTTP.get(request);
+          c3 = 2;
+          c4 = 1;
+          const obj6 = closure_130_0(closure_130_2[11]);
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj8 = { value, done: true };
+        return obj8;
+      } else {
+        closure_129_7 = value;
+        let tmp14;
+        if (closure_129_5 === closure_130_0(closure_130_2[10]).ReactionTypes.VOTE) {
+          let body = closure_129_7.body.users;
+        } else {
+          body = closure_129_7.body;
+        }
+        closure_129_8 = body;
+        tmp14 = closure_130_1(closure_130_2[9]);
+        obj = { type: "MESSAGE_REACTION_ADD_USERS", channelId: closure_129_0, messageId: closure_129_1, users: closure_129_8, emoji: closure_129_2, reactionType: closure_129_5 };
+        tmp14.dispatch(obj);
+        c4 = 3;
+      }
+    } catch (tmp43) {
+      c4 = tmp;
+      throw tmp43;
+    }
   }
-  return applyArgumentsResult;
-}
+};
 function addReaction() {
   const self = this;
-  const apply = _addReaction.apply;
+  const apply = closure_17.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -245,643 +211,229 @@ function addReaction() {
   }
   return applyArgumentsResult;
 }
-function _addReaction() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    closure_3 = arg3;
-    closure_4 = arg4;
-    c7 = 0;
-    c8 = 0;
-    const iter = (function*(arg0, arg1, arg2) {
-      if (c8 === 2) {
-        c8 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
+let closure_17 = async function _addReaction(arg0, value) {
+  if (c8 === 2) {
+    c8 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c8 = 2;
+      if (0 === c7) {
         if (arg0 === 1) {
-          throw arg1;
+          c8 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          c8 = 3;
+          let obj3 = { value, done: true };
+          return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c8 = 2;
-          if (0 === c7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let isRetry = tmp3;
-              let burst = tmp2;
-              let MESSAGE;
-              closure_4 = undefined;
-              if (MESSAGE === undefined) {
-                MESSAGE = closure_1_11.MESSAGE;
-              }
-              burst = undefined;
-              isRetry = undefined;
-              c7 = undefined;
-              c7 = 1;
-              c8 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp6) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              burst = null != closure_4;
-              if (burst) {
-                burst = closure_4.burst;
-              }
-              isRetry = null != closure_4;
-              if (isRetry) {
-                isRetry = closure_4.isRetry;
-              }
-              if (!isRetry) {
-                if (callback6(callback, callback2, dependencyMap, burst)) {
-                  let obj5 = callback2(4904);
-                  let obj2 = { title: null, body: null, confirmText: null };
-                  let intl = callback(1114).intl;
-                  obj2[0] = intl.string(callback(1114).t["uaUU/g"]);
-                  const intl2 = callback(1114).intl;
-                  obj2[1] = intl2.string(callback(1114).t.psMorl);
-                  const intl3 = callback(1114).intl;
-                  obj2[2] = intl3.string(callback(1114).t["NX+WJN"]);
-                  obj5.show(obj2);
-                  c8 = 3;
-                  return { value: "HermesInternal", done: null };
-                }
-              }
-              c7 = 2;
-              c8 = 1;
-              let obj3 = { value: null, done: false };
-              obj3[0] = callback5(dependencyMap, burst);
-              return obj3;
-            }
-          } else if (2 === tmp6) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              const obj4 = { value: null, done: true };
-              obj4[0] = arg1;
-              return obj4;
-            } else {
-              c7 = arg1;
-              obj5 = { burst: null, colors: null };
-              obj5[0] = burst;
-              obj5[1] = c7;
-              callback3("MESSAGE_REACTION_ADD", callback, callback2, dependencyMap, obj5);
-              c7 = 3;
-              c8 = 1;
-              const obj6 = { value: null, done: false };
-              obj6[0] = callback2(7765).unarchiveThreadIfNecessary(callback);
-              return obj6;
-            }
-          } else if (arg0 === 1) {
-            c8 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c8 = 3;
-            const obj7 = { value: null, done: true };
-            obj7[0] = arg1;
-            return obj7;
-          } else {
-            let HTTP = callback(1272).HTTP;
-            let put = HTTP.put;
-            let obj8 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
-            const obj9 = { channelId: null, messageId: null, emoji: null, userId: "@me" };
-            obj9[0] = callback;
-            obj9[1] = callback2;
-            obj9[2] = dependencyMap;
-            obj8[0] = callback4(obj9);
-            obj = { location: null, type: null };
-            obj[0] = MESSAGE;
-            let fn = callback(7763).ReactionTypes;
-            if (burst) {
-              let NORMAL = fn.BURST;
-            } else {
-              NORMAL = fn.NORMAL;
-            }
-            obj[1] = NORMAL;
-            obj8[1] = obj;
-            obj = callback(1272);
-            obj8[3] = obj.rejectWithMigratedError();
-            HTTP = put(obj8);
-            put = HTTP.then(() => {
-              if ("Message Shortcut" === MESSAGE) {
-                const channel = burst.getChannel(callback);
-                obj = { channel_id: null, guild_id: null, original_message_id: null, emoji_id: null, action: "react" };
-                obj[0] = callback;
-                let guild_id;
-                if (channel != null) {
-                  guild_id = channel.guild_id;
-                }
-                obj[1] = guild_id;
-                obj[2] = callback2;
-                let name = user.id;
-                if (name == null) {
-                  name = user.name;
-                }
-                obj[3] = name;
-                obj = callback(user[14]);
-                let guild_id1;
-                if (channel != null) {
-                  guild_id1 = channel.guild_id;
-                }
-                const merged = Object.assign(obj.collectGuildAnalyticsMetadata(guild_id1));
-                obj1 = callback(user[14]);
-                const merged1 = Object.assign(obj1.collectChannelAnalyticsMetadata(channel));
-                callback2(user[13]).track(constants.MESSAGE_SHORTCUT_ACTION_SENT, obj);
-                const obj8 = callback2(user[13]);
-              }
-              const AccessibilityAnnouncer = callback(user[15]).AccessibilityAnnouncer;
-              const announce = AccessibilityAnnouncer.announce;
-              const intl = callback(user[7]).intl;
-              const formatToPlainString = intl.formatToPlainString;
-              const t = callback(user[7]).t;
-              if (burst) {
-                obj = { name: null };
-                obj[0] = user.name;
-                announce(formatToPlainString(t["RJlG+R"], obj));
-                obj1 = { channelId: null, messageId: null, emoji: null };
-                obj1[0] = callback;
-                obj1[1] = callback2;
-                const obj2 = {};
-                const merged2 = Object.assign(user);
-                obj2.animated = false;
-                obj1[2] = obj2;
-                const result = callback2(user[16]).triggerFullscreenAnimation(obj1);
-                const obj5 = callback2(user[16]);
-              } else {
-                const obj3 = { name: null };
-                obj3[0] = user.name;
-                announce(formatToPlainString(t.ol4acF, obj3));
-              }
-            });
-            fn = (arg0) => {
-              obj = { isRetry };
-              if (closure_1_12(arg0, () => closure_1_16(closure_0, closure_1, closure_2, closure_3, { burst: closure_5, isRetry: true }), obj)) {
-                obj = { burst: null };
-                obj[0] = burst;
-                let obj2 = callback2(user[9]);
-                obj = { type: null, channelId: null, messageId: null, userId: null, emoji: null, optimistic: true, colors: null, reactionType: null };
-                obj[0] = "MESSAGE_REACTION_REMOVE";
-                obj[1] = callback;
-                obj[2] = callback2;
-                let userId = obj.userId;
-                if (userId == null) {
-                  userId = id.getId();
-                }
-                obj[3] = userId;
-                obj[4] = user;
-                let colors = obj.colors;
-                if (colors == null) {
-                  colors = [];
-                }
-                obj[6] = colors;
-                const ReactionTypes = callback(tmp6[10]).ReactionTypes;
-                if (obj.burst) {
-                  let NORMAL = ReactionTypes.BURST;
-                  let tmp10 = tmp9;
-                } else {
-                  NORMAL = ReactionTypes.NORMAL;
-                  tmp10 = tmp9;
-                }
-                obj[7] = NORMAL;
-                obj2.dispatch(obj);
-                const AccessibilityAnnouncer = tmp10(tmp6[15]).AccessibilityAnnouncer;
-                const announce = AccessibilityAnnouncer.announce;
-                const intl = tmp10(tmp6[7]).intl;
-                const formatToPlainString = intl.formatToPlainString;
-                const t = tmp10(tmp6[7]).t;
-                if (burst) {
-                  obj1 = { name: null };
-                  obj1[0] = tmp3.name;
-                  announce(formatToPlainString(t.fJeu87, obj1));
-                } else {
-                  obj2 = { name: null };
-                  obj2[0] = tmp3.name;
-                  announce(formatToPlainString(t["UUn5V+"], obj2));
-                }
-              }
-            };
-            obj8 = put.catch(fn);
-            c8 = 3;
+          let isRetry = tmp3;
+          let burst = tmp2;
+          closure_133_3 = undefined;
+          closure_133_4 = undefined;
+          closure_133_0 = closure_0;
+          closure_133_1 = closure_1;
+          closure_133_2 = user;
+          let MESSAGE = closure_3;
+          if (closure_3 === undefined) {
+            MESSAGE = constants.MESSAGE;
           }
-        } catch (tmp53) {
-          c8 = tmp;
-          throw tmp53;
+          closure_133_3 = MESSAGE;
+          closure_133_4 = id;
+          closure_133_5 = undefined;
+          closure_133_6 = undefined;
+          closure_133_7 = undefined;
+          c7 = 1;
+          c8 = 1;
+          return { value: "PX_16", done: true };
         }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_17 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function removeAllReactions(closure_0, closure_1) {
-  const self = this;
-  const apply = _removeAllReactions.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _removeAllReactions() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c5 = 0;
-    c6 = 0;
-    return (function*(arg0, arg1, arg2) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+      } else if (1 === tmp6) {
         if (arg0 === 1) {
-          throw arg1;
+          c8 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          c8 = 3;
+          let obj4 = { value, done: true };
+          return obj4;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_4 = tmp5;
-              closure_3 = tmp2;
-              let isRetry;
-              isRetry = null != isRetry;
-              if (isRetry) {
-                isRetry = isRetry.isRetry;
-              }
-              obj1 = callback2(table[12]);
-              c5 = 1;
-              c6 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj1.unarchiveThreadIfNecessary(callback);
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const HTTP = callback(isRetry[11]).HTTP;
-            const obj2 = { url: null, oldFormErrors: true, rejectWithError: null };
-            obj2[0] = closure_10.REMOVE_REACTIONS(callback, callback2);
-            obj2[2] = callback(isRetry[11]).rejectWithMigratedError();
-            const obj7 = callback(isRetry[11]);
-            HTTP.del(obj2).catch((arg0) => {
-              closure_1_12(arg0, () => closure_1_18(closure_0, closure_1, { isRetry: true }), { isRetry });
-            });
-            c6 = 3;
-            return { value: "HermesInternal", done: null };
+          burst = null != closure_133_4;
+          if (burst) {
+            burst = closure_133_4.burst;
           }
-        } catch (tmp9) {
-          c6 = tmp;
-          throw tmp9;
-        }
-      }
-    })();
-  });
-  closure_19 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function removeEmojiReactions(channelId, messageId, emoji) {
-  const self = this;
-  const apply = _removeEmojiReactions.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _removeEmojiReactions() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2, arg3) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    closure_3 = arg3;
-    c6 = 0;
-    c7 = 0;
-    return (function*(arg0, arg1, arg2, arg3) {
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
+          closure_133_5 = burst;
+          isRetry = null != closure_133_4;
+          if (isRetry) {
+            isRetry = closure_133_4.isRetry;
+          }
+          closure_133_6 = isRetry;
+          if (!closure_133_6) {
+            if (closure_134_26(closure_133_0, closure_133_1, closure_133_2, closure_133_5)) {
+              let obj5 = { title: null, body: null, confirmText: null };
+              let intl = closure_134_0(closure_134_2[7]).intl;
+              obj5.title = intl.string(closure_134_0(closure_134_2[7]).t["uaUU/g"]);
+              const intl2 = closure_134_0(closure_134_2[7]).intl;
+              obj5.body = intl2.string(closure_134_0(closure_134_2[7]).t.psMorl);
+              const intl3 = closure_134_0(closure_134_2[7]).intl;
+              obj5.confirmText = intl3.string(closure_134_0(closure_134_2[7]).t["NX+WJN"]);
+              closure_134_1(closure_134_2[6]).show(obj5);
+              c8 = 3;
+              return { value: "HermesInternal", done: null };
+            }
+          }
           c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_5 = tmp5;
-              let name = tmp2;
-              let isRetry;
-              name = undefined;
-              isRetry = null != isRetry;
-              if (isRetry) {
-                isRetry = isRetry.isRetry;
-              }
-              c6 = 1;
-              c7 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = callback2(user[12]).unarchiveThreadIfNecessary(callback);
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c7 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c7 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            if (null === user.id) {
-              name = user.name;
-            } else {
-              const _HermesInternal = HermesInternal;
-              name = "" + user.name + ":" + user.id;
-            }
-            const HTTP = callback(user[11]).HTTP;
-            obj = { url: null, oldFormErrors: true, rejectWithError: null };
-            obj[0] = closure_10.REMOVE_EMOJI_REACTIONS(callback, callback2, name);
-            obj1 = callback(user[11]);
-            obj[2] = obj1.rejectWithMigratedError();
-            HTTP.del(obj).catch((arg0) => {
-              closure_1_12(arg0, () => closure_1_20(closure_0, closure_1, closure_2, { isRetry: true }), { isRetry });
-            });
-            c7 = 3;
-            const delResult = HTTP.del(obj);
-          }
-        } catch (tmp25) {
-          c7 = tmp;
-          throw tmp25;
+          c8 = 1;
+          let obj7 = { value: closure_134_24(closure_133_2, closure_133_5), done: false };
+          return obj7;
         }
-      }
-    })();
-  });
-  closure_21 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function removeReaction() {
-  const self = this;
-  const apply = _removeReaction.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _removeReaction() {
-  let self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c4 = 0;
-    c5 = 0;
-    const iter = (function*(arg0) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
+      } else if (2 === tmp6) {
         if (arg0 === 1) {
-          throw arg1;
+          c8 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          c8 = 3;
+          let obj8 = { value, done: true };
+          return obj8;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_133_7 = value;
+          let obj9 = { burst: closure_133_5, colors: closure_133_7 };
+          closure_134_13("MESSAGE_REACTION_ADD", closure_133_0, closure_133_1, closure_133_2, obj9);
+          c7 = 3;
+          c8 = 1;
+          const obj10 = { value: closure_134_1(closure_134_2[12]).unarchiveThreadIfNecessary(closure_133_0), done: false };
+          return obj10;
         }
+      } else if (arg0 === 1) {
+        c8 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c8 = 3;
+        const obj11 = { value, done: true };
+        return obj11;
       } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              _location = tmp3;
-              dependencyMap = tmp2;
-              let callback;
-              let callback2;
-              dependencyMap = undefined;
-              _location = undefined;
-              c4 = undefined;
-              c5 = undefined;
-              ({ channelId: c0, messageId: c1, emoji: c2, location: _location } = callback);
-              if (_location === undefined) {
-                _location = closure_1_11.MESSAGE;
-              }
-              ({ userId: c4, options: c5 } = callback);
-              let burst;
-              let isRetry;
-              c4 = 1;
-              c5 = 1;
-              return { value: "PX_16", done: true };
+        let HTTP = closure_134_0(closure_134_2[11]).HTTP;
+        let put = HTTP.put;
+        let request = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
+        const obj12 = { channelId: closure_133_0, messageId: closure_133_1, emoji: closure_133_2, userId: "@me" };
+        request.url = closure_134_14(obj12);
+        let query = { location: closure_133_3, type: null };
+        let fn = closure_134_0(closure_134_2[10]).ReactionTypes;
+        if (closure_133_5) {
+          let NORMAL = fn.BURST;
+        } else {
+          NORMAL = fn.NORMAL;
+        }
+        query.type = NORMAL;
+        request.query = query;
+        query = closure_134_0(closure_134_2[11]);
+        request.rejectWithError = query.rejectWithMigratedError();
+        HTTP = put(request);
+        put = HTTP.then(() => {
+          if ("Message Shortcut" === closure_1_3) {
+            const channel = burst.getChannel(channelId);
+            const obj3 = { channel_id: channelId, guild_id: null, original_message_id: null, emoji_id: null, action: "react" };
+            let guild_id;
+            if (channel != null) {
+              guild_id = channel.guild_id;
             }
-          } else if (1 === tmp6) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              burst = null != c5;
-              if (burst) {
-                burst = c5.burst;
-              }
-              isRetry = null != c5;
-              if (isRetry) {
-                isRetry = c5.isRetry;
-              }
-              let obj2 = { userId: null, burst: null };
-              obj2[0] = c4;
-              obj2[1] = burst;
-              callback3("MESSAGE_REACTION_REMOVE", callback, callback2, dependencyMap, obj2);
-              let obj5 = callback2(7765);
-              c4 = 2;
-              c5 = 1;
-              let obj3 = { value: null, done: false };
-              obj3[0] = obj5.unarchiveThreadIfNecessary(callback);
-              return obj3;
+            obj3.guild_id = guild_id;
+            obj3.original_message_id = messageId;
+            let name = user.id;
+            if (name == null) {
+              name = user.name;
             }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            let obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
+            obj3.emoji_id = name;
+            const obj8 = closure_1(user[13]);
+            let guild_id1;
+            if (channel != null) {
+              guild_id1 = channel.guild_id;
+            }
+            const merged = Object.assign(closure_0(user[14]).collectGuildAnalyticsMetadata(guild_id1));
+            obj = closure_0(user[14]);
+            const merged1 = Object.assign(closure_0(user[14]).collectChannelAnalyticsMetadata(channel));
+            obj8.track(constants.MESSAGE_SHORTCUT_ACTION_SENT, obj3);
+            const obj2 = closure_0(user[14]);
+          }
+          const AccessibilityAnnouncer = closure_0(user[15]).AccessibilityAnnouncer;
+          const announce = AccessibilityAnnouncer.announce;
+          const intl = closure_0(user[7]).intl;
+          const formatToPlainString = intl.formatToPlainString;
+          const t = closure_0(user[7]).t;
+          if (closure_1_5) {
+            const obj4 = { name: user.name };
+            announce(formatToPlainString(t["RJlG+R"], obj4));
+            const obj6 = { channelId, messageId, emoji: null };
+            const obj7 = {};
+            const merged2 = Object.assign(user);
+            obj7.animated = false;
+            obj6.emoji = obj7;
+            const result = closure_1(user[16]).triggerFullscreenAnimation(obj6);
+            const obj5 = closure_1(user[16]);
           } else {
-            let HTTP = callback(1272).HTTP;
-            let del = HTTP.del;
-            let tmp16 = closure_14;
-            obj5 = { channelId: null, messageId: null, emoji: null, userId: null, type: null, useTypeEndpoint: true };
-            obj5[0] = callback;
-            obj5[1] = callback2;
-            obj5[2] = dependencyMap;
-            callback2 = c4;
-            if (c4 == null) {
-              callback2 = "@me";
+            const obj9 = { name: user.name };
+            announce(formatToPlainString(t.ol4acF, obj9));
+          }
+        });
+        fn = (arg0) => {
+          if (closure_2_12(arg0, () => closure_2_16(closure_1_0, closure_1_1, user, closure_1_3, { burst, isRetry: true }), obj)) {
+            const obj2 = { burst };
+            const obj4 = { type: "MESSAGE_REACTION_REMOVE", channelId, messageId, userId: null, emoji: null, optimistic: true, colors: null, reactionType: null };
+            let userId = obj2.userId;
+            if (userId == null) {
+              userId = id.getId();
             }
-            obj5[3] = callback2;
-            let ReactionTypes = callback(7763).ReactionTypes;
-            if (burst) {
+            obj4.userId = userId;
+            obj4.emoji = emoji;
+            let colors = obj2.colors;
+            if (colors == null) {
+              colors = [];
+            }
+            obj4.colors = colors;
+            const ReactionTypes = closure_0(tmp6[10]).ReactionTypes;
+            if (obj2.burst) {
               let NORMAL = ReactionTypes.BURST;
+              let tmp10 = tmp9;
             } else {
               NORMAL = ReactionTypes.NORMAL;
+              tmp10 = tmp9;
             }
-            obj = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
-            obj5[4] = NORMAL;
-            obj[0] = tmp16(obj5);
-            const obj6 = { location: null, burst: null };
-            obj6[0] = _location;
-            tmp16 = burst;
-            obj6[1] = burst;
-            obj[1] = obj6;
-            obj5 = callback(1272);
-            obj[3] = obj5.rejectWithMigratedError();
-            HTTP = del(obj);
-            del = HTTP.then(() => {
-              burst = undefined;
-              if (burst != null) {
-                burst = burst.burst;
-              }
-              const AccessibilityAnnouncer = _undefined(_undefined2[15]).AccessibilityAnnouncer;
-              const announce = AccessibilityAnnouncer.announce;
-              const intl = _undefined(_undefined2[7]).intl;
-              const formatToPlainString = intl.formatToPlainString;
-              const t = _undefined(_undefined2[7]).t;
-              if (burst) {
-                obj = { name: null };
-                obj[0] = _undefined2.name;
-                announce(formatToPlainString(t["3l9f6u"], obj));
-              } else {
-                obj = { name: null };
-                obj[0] = _undefined2.name;
-                announce(formatToPlainString(t["DQxi+7"], obj));
-              }
-            });
-            ReactionTypes = del.catch((() => {
-              closure_0 = _location((arg0) => {
-                closure_0 = arg0;
-                c3 = 0;
-                c4 = 0;
-                return (/* F125654 */ function*() { ... })();
-              });
-              return function() {
-                const self = this;
-                const apply = closure_0.apply;
-                if (typeof apply === "unknown") {
-                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                } else {
-                  applyArgumentsResult = apply(self, arguments);
-                }
-                return applyArgumentsResult;
-              };
-            })());
-            c5 = 3;
+            obj4.reactionType = NORMAL;
+            closure_1(user[9]).dispatch(obj4);
+            const AccessibilityAnnouncer = tmp10(tmp6[15]).AccessibilityAnnouncer;
+            const announce = AccessibilityAnnouncer.announce;
+            const intl = tmp10(tmp6[7]).intl;
+            const formatToPlainString = intl.formatToPlainString;
+            const t = tmp10(tmp6[7]).t;
+            if (burst) {
+              const obj5 = { name: tmp3.name };
+              announce(formatToPlainString(t.fJeu87, obj5));
+            } else {
+              const obj6 = { name: tmp3.name };
+              announce(formatToPlainString(t["UUn5V+"], obj6));
+            }
+            const obj3 = closure_1(user[9]);
           }
-        } catch (tmp41) {
-          c5 = tmp;
-          throw tmp41;
-        }
+        };
+        request = put.catch(fn);
+        c8 = 3;
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_23 = tmp;
-  let apply = tmp.apply;
+    } catch (tmp53) {
+      c8 = tmp;
+      throw tmp53;
+    }
+  }
+};
+function removeAllReactions() {
+  const self = this;
+  const apply = closure_19.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -889,93 +441,79 @@ function _removeReaction() {
   }
   return applyArgumentsResult;
 }
-function getOptimisticEmojiColors() {
-  const self = this;
-  const apply = _getOptimisticEmojiColors.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _getOptimisticEmojiColors() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c3 = 0;
-    c5 = 0;
-    c4 = 0;
-    return (function*(arg0, arg1) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
+let closure_19 = async function _removeAllReactions(arg0, arg1, arg2) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  let isRetry = arg2;
+  c5 = 0;
+  c6 = 0;
+  return (async (arg0, value, arg2) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_4 = tmp5;
+            closure_3 = tmp2;
+            closure_131_0 = closure_0;
+            closure_131_1 = closure_1;
+            closure_131_2 = undefined;
+            isRetry = null != isRetry;
+            if (isRetry) {
+              isRetry = isRetry.isRetry;
+            }
+            closure_131_2 = isRetry;
+            c5 = 1;
+            c6 = 1;
+            const obj5 = { value: ThreadActionCreatorsDefault.unarchiveThreadIfNecessary(closure_0), done: false };
+            return obj5;
+          }
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          c6 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
+          const HTTP = closure_132_0(closure_132_2[11]).HTTP;
+          const obj6 = { url: closure_132_10.REMOVE_REACTIONS(closure_131_0, closure_131_1), oldFormErrors: true, rejectWithError: closure_132_0(closure_132_2[11]).rejectWithMigratedError() };
+          const obj7 = closure_132_0(closure_132_2[11]);
+          HTTP.del(obj6).catch((error) => {
+            closure_2_12(error, () => closure_2_18(closure_1_0, closure_1_1, { isRetry: true }), { isRetry });
+          });
+          c6 = 3;
           return { value: "HermesInternal", done: null };
         }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_2 = tmp4;
-              let callback = [];
-              if (closure_1) {
-                c4 = 1;
-                obj1 = callback(closure_1_2[17]);
-                c3 = 2;
-                c5 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = obj1.getEmojiColors(tmp9);
-                return obj1;
-              }
-            }
-          } else {
-            if (1 === tmp7) {
-              c4 = 0;
-            } else if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              callback = arg1;
-              c4 = 0;
-            }
-            c4 = 0;
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-          c5 = 3;
-        } catch (tmp15) {
-          if (tmp3 === c4) {
-            c5 = tmp2;
-            throw tmp15;
-          } else {
-            c3 = tmp;
-          }
-        }
+      } catch (tmp9) {
+        c6 = tmp;
+        throw tmp9;
       }
-    })();
-  });
-  closure_25 = tmp;
-  const apply = tmp.apply;
+    }
+  })();
+};
+function removeEmojiReactions() {
+  const self = this;
+  const apply = closure_21.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -983,22 +521,397 @@ function _getOptimisticEmojiColors() {
   }
   return applyArgumentsResult;
 }
+let closure_21 = async function _removeEmojiReactions(arg0, arg1, arg2, arg3) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  closure_2 = arg2;
+  let isRetry = arg3;
+  c6 = 0;
+  c7 = 0;
+  return (async (arg0, value, arg2, arg3) => {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else {
+            closure_5 = tmp5;
+            closure_4 = tmp2;
+            closure_132_0 = closure_0;
+            closure_132_1 = closure_1;
+            closure_132_2 = closure_2;
+            closure_132_3 = undefined;
+            closure_132_4 = undefined;
+            isRetry = null != isRetry;
+            if (isRetry) {
+              isRetry = isRetry.isRetry;
+            }
+            closure_132_3 = isRetry;
+            c6 = 1;
+            c7 = 1;
+            const obj6 = { value: ThreadActionCreatorsDefault.unarchiveThreadIfNecessary(closure_0), done: false };
+            return obj6;
+          }
+        } else if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          const obj7 = { value, done: true };
+          return obj7;
+        } else {
+          if (null === closure_132_2.id) {
+            let name = closure_132_2.name;
+          } else {
+            const _HermesInternal = HermesInternal;
+            name = "" + closure_132_2.name + ":" + closure_132_2.id;
+          }
+          closure_132_4 = name;
+          const HTTP = closure_133_0(closure_133_2[11]).HTTP;
+          obj = { url: closure_133_10.REMOVE_EMOJI_REACTIONS(closure_132_0, closure_132_1, closure_132_4), oldFormErrors: true, rejectWithError: closure_133_0(closure_133_2[11]).rejectWithMigratedError() };
+          const obj2 = closure_133_0(closure_133_2[11]);
+          HTTP.del(obj).catch((error) => {
+            closure_2_12(error, () => closure_2_20(closure_1_0, closure_1_1, closure_1_2, { isRetry: true }), { isRetry });
+          });
+          c7 = 3;
+          const delResult = HTTP.del(obj);
+        }
+      } catch (tmp25) {
+        c7 = tmp;
+        throw tmp25;
+      }
+    }
+  })();
+};
+function removeReaction() {
+  const self = this;
+  const apply = closure_23.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_23 = async function _removeReaction(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          let obj2 = { value, done: true };
+          return obj2;
+        } else {
+          closure_3 = tmp3;
+          const user = tmp2;
+          closure_130_0 = undefined;
+          closure_130_1 = undefined;
+          closure_130_2 = undefined;
+          closure_130_3 = undefined;
+          closure_130_4 = undefined;
+          closure_130_5 = undefined;
+          ({ channelId: closure_130_0, messageId: closure_130_1, emoji: closure_130_2, location: _location } = closure_0);
+          if (_location === undefined) {
+            _location = constants.MESSAGE;
+          }
+          closure_130_3 = _location;
+          ({ userId: closure_130_4, options: closure_130_5 } = closure_0);
+          closure_130_6 = undefined;
+          closure_130_7 = undefined;
+          c4 = 1;
+          c5 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp6) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          let obj3 = { value, done: true };
+          return obj3;
+        } else {
+          let burst = null != closure_130_5;
+          if (burst) {
+            burst = closure_130_5.burst;
+          }
+          closure_130_6 = burst;
+          let isRetry = null != closure_130_5;
+          if (isRetry) {
+            isRetry = closure_130_5.isRetry;
+          }
+          closure_130_7 = isRetry;
+          let obj4 = { userId: closure_130_4, burst: closure_130_6 };
+          closure_131_13("MESSAGE_REACTION_REMOVE", closure_130_0, closure_130_1, closure_130_2, obj4);
+          c4 = 2;
+          c5 = 1;
+          let obj5 = { value: closure_131_1(closure_131_2[12]).unarchiveThreadIfNecessary(closure_130_0), done: false };
+          return obj5;
+        }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        let obj7 = { value, done: true };
+        return obj7;
+      } else {
+        let HTTP = closure_131_0(closure_131_2[11]).HTTP;
+        let del = HTTP.del;
+        let tmp16 = closure_131_14;
+        let obj8 = { channelId: closure_130_0, messageId: closure_130_1, emoji: closure_130_2, userId: null, type: null, useTypeEndpoint: true };
+        let userId = closure_130_4;
+        if (closure_130_4 == null) {
+          userId = "@me";
+        }
+        obj8.userId = userId;
+        let ReactionTypes = closure_131_0(closure_131_2[10]).ReactionTypes;
+        if (closure_130_6) {
+          let NORMAL = ReactionTypes.BURST;
+        } else {
+          NORMAL = ReactionTypes.NORMAL;
+        }
+        const request = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
+        obj8.type = NORMAL;
+        request.url = tmp16(obj8);
+        const obj9 = { location: closure_130_3, burst: null };
+        tmp16 = closure_130_6;
+        obj9.burst = closure_130_6;
+        request.query = obj9;
+        obj8 = closure_131_0(closure_131_2[11]);
+        request.rejectWithError = obj8.rejectWithMigratedError();
+        HTTP = del(request);
+        del = HTTP.then(() => {
+          burst = undefined;
+          if (burst != null) {
+            burst = burst.burst;
+          }
+          const AccessibilityAnnouncer = closure_0(user[15]).AccessibilityAnnouncer;
+          const announce = AccessibilityAnnouncer.announce;
+          const intl = closure_0(user[7]).intl;
+          const formatToPlainString = intl.formatToPlainString;
+          const t = closure_0(user[7]).t;
+          if (burst) {
+            const obj2 = { name: user.name };
+            announce(formatToPlainString(t["3l9f6u"], obj2));
+          } else {
+            obj = { name: user.name };
+            announce(formatToPlainString(t["DQxi+7"], obj));
+          }
+        });
+        ReactionTypes = del.catch((() => {
+          closure_0 = closure_1_3(function*(arg0, value) {
+            if (userId === 2) {
+              userId = 3;
+              throw new TypeError("Generator functions may not be called on executing generators");
+            } else if (tmp5 === 3) {
+              if (arg0 === 1) {
+                throw value;
+              } else if (arg0 === 2) {
+                obj = { value, done: true };
+                return obj;
+              } else {
+                return { value: "HermesInternal", done: null };
+              }
+            } else {
+              try {
+                userId = 2;
+                if (0 === num3) {
+                  num3 = 1;
+                  if (arg0 === 1) {
+                    userId = 3;
+                    throw value;
+                  } else if (arg0 === 2) {
+                    userId = 3;
+                    const obj2 = { value, done: true };
+                    return obj2;
+                  } else {
+                    const messageId = tmp3;
+                    closure_129_0 = undefined;
+                    let intl = { isRetry };
+                    if (closure_2_12(channelId, () => {
+                      obj = { channelId, messageId, emoji, location: _location, userId, options: { burst, isRetry: true } };
+                      return closure_2_22(obj);
+                    }, intl)) {
+                      userId = num3;
+                      const obj3 = { value: closure_2_24(tmp2, burst2), done: false };
+                      return obj3;
+                    } else {
+                      userId = 3;
+                    }
+                  }
+                } else if (arg0 === 1) {
+                  userId = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  userId = 3;
+                  const obj4 = { value, done: true };
+                  return obj4;
+                } else {
+                  closure_129_0 = value;
+                  const obj5 = { userId, burst: burst2, colors: closure_129_0 };
+                  closure_2_13("MESSAGE_REACTION_ADD", channelId, messageId, tmp2, obj5);
+                  burst = undefined;
+                  if (burst != null) {
+                    burst = burst.burst;
+                  }
+                  const AccessibilityAnnouncer = channelId(4425).AccessibilityAnnouncer;
+                  intl = channelId(1114).intl;
+                  if (!burst) {
+                    const obj6 = { name: tmp2.name };
+                    AccessibilityAnnouncer.announce(intl.formatToPlainString(channelId(1114).t["tD9+b+"], obj6));
+                  }
+                }
+                const obj7 = { name: tmp2.name };
+                num3 = tmp11(tmp14(num3.OamVbV, obj7));
+              } catch (tmp24) {
+                userId = tmp;
+                throw tmp24;
+              }
+            }
+          });
+          return function() {
+            const self = this;
+            const apply = closure_0.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+        })());
+        c5 = 3;
+      }
+    } catch (tmp41) {
+      c5 = tmp;
+      throw tmp41;
+    }
+  }
+};
+function getOptimisticEmojiColors() {
+  const self = this;
+  const apply = closure_25.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_25 = async function _getOptimisticEmojiColors(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj3 = { value, done: true };
+      return obj3;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          closure_2 = tmp4;
+          closure_130_0 = [];
+          if (closure_1) {
+            c4 = 1;
+            c3 = 2;
+            c5 = 1;
+            const obj5 = { value: EmojiUtils.getEmojiColors(tmp9), done: false };
+            return obj5;
+          }
+        }
+      } else {
+        if (1 === tmp7) {
+          c4 = 0;
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          closure_130_0 = value;
+          c4 = 0;
+        }
+        c4 = 0;
+        c5 = 3;
+        obj = { value, done: true };
+        return obj;
+      }
+      c5 = 3;
+    } catch (tmp15) {
+      if (tmp3 === c4) {
+        c5 = tmp2;
+        throw tmp15;
+      } else {
+        c3 = tmp;
+      }
+    }
+  }
+};
 function hasUserAlreadyReacted(arg0, arg1, arg2, arg3) {
-  message = message.getMessage(arg0, arg1);
+  const message = MessageStore.getMessage(arg0, arg1);
   let result = null != message;
   if (result) {
     result = message.userHasReactedWithEmoji(arg2, arg3);
   }
   return result;
 }
-({ AbortCodes: error, AnalyticEvents: closure_8, ComponentActions: c9, Endpoints: c10 } = ME);
-let obj = { MESSAGE: "Message", FORUM_TOOLBAR: "Forum Toolbar", MOBILE_MEDIA_VIEWER: "Mobile Media Viewer", MESSAGE_HOVER_BAR: "Message Hover Bar", MESSAGE_INLINE_BUTTON: "Message Inline Button", MESSAGE_CONTEXT_MENU: "Message Context Menu", MESSAGE_REACTION_PICKER: "Message Reaction Picker", MESSAGE_SHORTCUT: "Message Shortcut", DOUBLE_TAP: "Double Tap", IN_APP_NOTIFICATION: "In App Notification" };
-let result = require("set").fileFinishedImporting("modules/reactions/ReactionActionCreators.tsx");
+const Constants = fn(1074);
+({ AbortCodes: closure_7, AnalyticEvents: closure_8, ComponentActions: closure_9, Endpoints: c10 } = Constants);
+const ReactionLocations = { MESSAGE: "Message", FORUM_TOOLBAR: "Forum Toolbar", MOBILE_MEDIA_VIEWER: "Mobile Media Viewer", MESSAGE_HOVER_BAR: "Message Hover Bar", MESSAGE_INLINE_BUTTON: "Message Inline Button", MESSAGE_CONTEXT_MENU: "Message Context Menu", MESSAGE_REACTION_PICKER: "Message Reaction Picker", MESSAGE_SHORTCUT: "Message Shortcut", DOUBLE_TAP: "Double Tap", IN_APP_NOTIFICATION: "In App Notification" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/reactions/ReactionActionCreators.tsx");
 
-export const ReactionLocations = obj;
-export const getReactors = function getReactors(arg0) {
+export { ReactionLocations };
+export const getReactors = function getReactors() {
   const self = this;
-  const apply = _getReactors.apply;
+  const apply = closure_15.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1009,7 +922,7 @@ export const getReactors = function getReactors(arg0) {
 export { addReaction };
 export const playBurstReaction = function playBurstReaction(arg0) {
   ({ channelId, messageId, emoji, key } = arg0);
-  dispatcherDefault.dispatch({ type: "BURST_REACTION_EFFECT_PLAY", channelId, messageId, emoji, key });
+  DispatcherDefault.dispatch({ type: "BURST_REACTION_EFFECT_PLAY", channelId, messageId, emoji, key });
 };
 export { removeAllReactions };
 export { removeEmojiReactions };

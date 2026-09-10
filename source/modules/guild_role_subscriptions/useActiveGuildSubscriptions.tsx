@@ -1,18 +1,20 @@
-// Module ID: 15214
-// Function ID: 15215
+// Module ID: 15243
+// Function ID: 15244
 // Name: useActiveGuildSubscriptions
-// Dependencies: [19, 4224, 15208, 15209, 504, 4884, 2]
+// Dependencies: [19, 4237, 15237, 15238, 504, 4898, 2]
 // Exports: default
 
-// Module 15214 (useActiveGuildSubscriptions)
-import useUserRoleSubscriptionRelationshipDefault from "useUserRoleSubscriptionRelationship" /* 15209 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "reset" /* 4224 */;
-import { UserGuildRoleSubscriptionRelationship as closure_6 } from "MAX_SUBSCRIPTION_TIERS" /* 15208 */;
+// Module 15243 (useActiveGuildSubscriptions)
+import actions_BillingActionCreatorsAll from "actions/BillingActionCreators" /* 4898 */;
+import useUserRoleSubscriptionRelationshipDefault from "useUserRoleSubscriptionRelationship" /* 15238 */;
+import noop from "module_19" /* 19 */;
+import SubscriptionStore from "SubscriptionStore" /* 4237 */;
 
-const require = arg1;
+const require = fn;
+const constants = fn(15237).UserGuildRoleSubscriptionRelationship;
 let closure_7 = [];
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useActiveGuildSubscriptions.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useActiveGuildSubscriptions.tsx");
 
 export default function useActiveGuildSubscriptions() {
   let obj = arg0;
@@ -23,17 +25,15 @@ export default function useActiveGuildSubscriptions() {
   if (flag === undefined) {
     flag = false;
   }
-  importDefault = undefined;
-  closure_2 = undefined;
   const tmp = useUserRoleSubscriptionRelationshipDefault() === constants.SUBSCRIBED;
   importDefault = tmp;
-  const items = [closure_5];
+  const items = [SubscriptionStore];
   let stateFromStores = flag(504).useStateFromStores(items, () => activeGuildSubscriptions.getActiveGuildSubscriptions());
-  closure_2 = React.useRef(false);
+  noop.useRef(false);
   const items1 = [flag, tmp];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     const current = ref.current;
-    const activeGuildSubscriptions = closure_1_5.getActiveGuildSubscriptions();
+    activeGuildSubscriptions = SubscriptionStore.getActiveGuildSubscriptions();
     let num;
     if (activeGuildSubscriptions != null) {
       num = activeGuildSubscriptions.length;
@@ -52,14 +52,13 @@ export default function useActiveGuildSubscriptions() {
     if (!tmp5) {
       let tmp7 = !current;
       if (!current) {
-        tmp7 = !closure_1_5.hasFetchedSubscriptions();
+        tmp7 = !SubscriptionStore.hasFetchedSubscriptions();
       }
       tmp5 = tmp7;
     }
     if (tmp5) {
       ref.current = true;
-      const subscriptions = ref(closure_1_3[5]).fetchSubscriptions();
-      const obj2 = ref(closure_1_3[5]);
+      const subscriptions = actions_BillingActionCreatorsAll.fetchSubscriptions();
     }
   }, items1);
   if (stateFromStores == null) {

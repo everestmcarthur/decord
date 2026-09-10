@@ -1,50 +1,25 @@
-// Module ID: 16949
-// Function ID: 16950
-// Name: deriveProfileFramesMarketing
-// Dependencies: [8835, 8212, 8836, 2]
+// Module ID: 16986
+// Function ID: 16987
+// Name: useProfileFramesMarketing
+// Dependencies: [14659, 8238, 2]
 // Exports: deriveProfileFramesMarketing, getProfileFramesMarketing, useProfileFramesMarketing
 
-// Module 16949 (deriveProfileFramesMarketing)
-import set from "set" /* 2 */;
-import apexExperimentDefault from "apexExperiment" /* 8212 */;
-import useCanPurchaseFrames from "useCanPurchaseFrames" /* 8835 */;
-import apexExperiment from "apexExperiment" /* 8836 */;
-import apexExperimentDefault2 from "apexExperiment" /* 8836 */;
+// Module 16986 (useProfileFramesMarketing)
+import CollectiblesProfileFramesExperimentDefault from "CollectiblesProfileFramesExperiment" /* 8238 */;
+import useCanPurchaseFrames from "useCanPurchaseFrames" /* 14659 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/collectibles/hooks/useProfileFramesMarketing.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useProfileFramesMarketing.tsx");
 
-export const deriveProfileFramesMarketing = function deriveProfileFramesMarketing(arg0) {
-  ({ canViewProfileFramesInCollectiblesShop, isEarlyAccess } = arg0);
-  if (isAnnouncementEligible) {
-    isAnnouncementEligible = !isEarlyAccess;
-  }
-  return { isAnnouncementEligible, isEarlyAccess, showGiftingMarketing: isAnnouncementEligible };
+export const deriveProfileFramesMarketing = function deriveProfileFramesMarketing(canViewProfileFramesInCollectiblesShop) {
+  const isAnnouncementEligible = canViewProfileFramesInCollectiblesShop.canViewProfileFramesInCollectiblesShop;
+  return { isAnnouncementEligible, showGiftingMarketing: isAnnouncementEligible };
 };
 export const useProfileFramesMarketing = function useProfileFramesMarketing(CollectiblesMobileAnnouncementActionSheet) {
-  const canViewProfileFramesInCollectiblesShop = useCanPurchaseFrames.useCanViewProfileFramesInCollectiblesShop(CollectiblesMobileAnnouncementActionSheet);
-  const obj = useCanPurchaseFrames;
-  const isEarlyAccess = useCanPurchaseFrames.useIsProfileFramesEarlyAccessPhase(CollectiblesMobileAnnouncementActionSheet);
-  let isAnnouncementEligible = canViewProfileFramesInCollectiblesShop;
-  if (canViewProfileFramesInCollectiblesShop) {
-    isAnnouncementEligible = !isEarlyAccess;
-  }
-  return { isAnnouncementEligible, isEarlyAccess, showGiftingMarketing: isAnnouncementEligible };
+  const isAnnouncementEligible = useCanPurchaseFrames.useCanViewProfileFramesInCollectiblesShop(CollectiblesMobileAnnouncementActionSheet);
+  return { isAnnouncementEligible, showGiftingMarketing: isAnnouncementEligible };
 };
 export const getProfileFramesMarketing = function getProfileFramesMarketing(location) {
-  let obj = apexExperimentDefault;
-  obj = { location };
-  let isEarlyAccess = obj.getConfig(obj).enableProfileFrames;
-  obj = { location };
-  const bucket = apexExperimentDefault2.getConfig(obj).bucket;
-  let isAnnouncementEligible = isEarlyAccess;
-  if (isEarlyAccess) {
-    isAnnouncementEligible = bucket !== apexExperiment.ProfileFramesPurchaseBucket.CONTROL;
-  }
-  if (isEarlyAccess) {
-    isEarlyAccess = bucket === apexExperiment.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY;
-  }
-  if (isAnnouncementEligible) {
-    isAnnouncementEligible = !isEarlyAccess;
-  }
-  return { isAnnouncementEligible, isEarlyAccess, showGiftingMarketing: isAnnouncementEligible };
+  const isAnnouncementEligible = CollectiblesProfileFramesExperimentDefault.getConfig({ location }).enableProfileFrames;
+  return { isAnnouncementEligible, showGiftingMarketing: isAnnouncementEligible };
 };

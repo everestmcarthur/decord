@@ -1,33 +1,31 @@
-// Module ID: 10974
-// Function ID: 10975
+// Module ID: 11001
+// Function ID: 11002
 // Name: useInappropriateConversationBannerForChannel
-// Dependencies: [10920, 10973, 10975, 10977, 10978, 2]
+// Dependencies: [10947, 11000, 11002, 11004, 11005, 2]
 // Exports: useInappropriateConversationBannerForChannel
 
-// Module 10974 (useInappropriateConversationBannerForChannel)
-import set from "set" /* 2 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 10920 */;
-import InappropriateConversationExperiment from "InappropriateConversationExperiment" /* 10973 */;
-import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 10975 */;
-import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10977 */;
-import useChannelSafetyWarning from "useChannelSafetyWarning" /* 10978 */;
+// Module 11001 (useInappropriateConversationBannerForChannel)
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10947 */;
+import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 11000 */;
+import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 11002 */;
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 11004 */;
+import useChannelSafetyWarning from "useChannelSafetyWarning" /* 11005 */;
+import size from "module_2" /* 2 */;
 
-const SafetyWarningTypes = handleConnectionOpen.SafetyWarningTypes;
-const result = set.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationBannerForChannel.tsx");
+const SafetyWarningTypes = ChannelSafetyWarningsStore.SafetyWarningTypes;
+const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationBannerForChannel.tsx");
 
 export const useInappropriateConversationBannerForChannel = function useInappropriateConversationBannerForChannel(channelId, LOCATION_CONTEXT_MOBILE) {
-  let obj = InappropriateConversationExperiment;
-  obj = { location: LOCATION_CONTEXT_MOBILE };
-  const isEligibleForInappropriateConversationWarning = obj.useIsEligibleForInappropriateConversationWarning(obj);
+  const isEligibleForInappropriateConversationWarning = SelfModInappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning({ location: LOCATION_CONTEXT_MOBILE });
+  const obj2 = { location: LOCATION_CONTEXT_MOBILE };
   const safetyAlertsSettingOrDefault = useSafetyAlertsSettingOrDefault.useSafetyAlertsSettingOrDefault();
-  const obj3 = useSafetyAlertsSettingOrDefault;
   const inappropriateConversationWarningsForChannel = useInappropriateConversationWarningsForChannel.useInappropriateConversationWarningsForChannel(channelId);
   useChannelSafetyWarning;
   if (isEligibleForInappropriateConversationWarning) {
     if (safetyAlertsSettingOrDefault) {
       if (0 !== inappropriateConversationWarningsForChannel.length) {
         if (!inappropriateConversationWarningsForChannel.some((type) => {
-          let tmp2 = type.type === obj.INAPPROPRIATE_CONVERSATION_TIER_1;
+          let tmp2 = type.type === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1;
           if (!tmp2) {
             let tmp3 = type.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2;
             if (tmp3) {

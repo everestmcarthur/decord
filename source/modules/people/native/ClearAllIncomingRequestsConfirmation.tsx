@@ -1,121 +1,121 @@
-// Module ID: 9054
-// Function ID: 9055
-// Name: ClearAllIncomingRequestsConfirmationModal
-// Dependencies: [32, 19, 17, 21, 4560, 576, 4763, 4258, 1114, 9047, 7123, 9055, 7089, 4556, 4975, 2]
+// Module ID: 9081
+// Function ID: 9082
+// Name: ClearAllIncomingRequestsConfirmation
+// Dependencies: [32, 19, 17, 21, 4574, 576, 4777, 4271, 1114, 9074, 7137, 9082, 7103, 4570, 4989, 2]
 // Exports: default
 
-// Module 9054 (ClearAllIncomingRequestsConfirmationModal)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9081 (ClearAllIncomingRequestsConfirmation)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import ToastUtils from "ToastUtils" /* 4271 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9074 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
-({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { root: null, closeButton: null, content: null, container: null, footer: null, header: null, headerText: null, body: null, noticeHeader: null, buttonWrapper: null };
-createCacheKey = { display: "flex", flexDirection: "column", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, height: "100%", paddingTop: ThemesDefault.space.PX_24 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginRight: 8, alignSelf: "flex-end" };
-createCacheKey[2] = { flexGrow: 1, padding: ThemesDefault.space.PX_16 };
-let obj1 = { flexGrow: 1, padding: ThemesDefault.space.PX_16 };
-createCacheKey[3] = { display: "flex", flexDirection: "column", height: "100%", marginTop: ThemesDefault.space.PX_24 };
-let obj2 = { display: "flex", flexDirection: "column", height: "100%", marginTop: ThemesDefault.space.PX_24 };
-createCacheKey[4] = { flexGrow: 0, flexShrink: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, paddingVertical: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_16 };
-let obj3 = { flexGrow: 0, flexShrink: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, paddingVertical: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[5] = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_16 };
-let obj4 = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_16 };
-createCacheKey[6] = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
-let obj5 = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
-createCacheKey[7] = { padding: ThemesDefault.space.PX_24, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-let obj6 = { padding: ThemesDefault.space.PX_24, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[8] = { marginBottom: ThemesDefault.space.PX_4 };
-let obj7 = { marginBottom: ThemesDefault.space.PX_4 };
-createCacheKey[9] = { marginBottom: ThemesDefault.space.PX_4 };
-let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj8 = { marginBottom: ThemesDefault.space.PX_4 };
-let result = require("set").fileFinishedImporting("modules/people/native/ClearAllIncomingRequestsConfirmation.tsx");
+const require = globalThis.__r;
+
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { root: { display: "flex", flexDirection: "column", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: "100%", paddingTop: nativeDefault.space.PX_24 }, closeButton: { marginRight: 8, alignSelf: "flex-end" }, content: null, container: null, footer: null, header: null, headerText: null, body: null, noticeHeader: null, buttonWrapper: null };
+let obj3 = { display: "flex", flexDirection: "column", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: "100%", paddingTop: nativeDefault.space.PX_24 };
+obj2.content = { flexGrow: 1, padding: nativeDefault.space.PX_16 };
+let obj4 = { flexGrow: 1, padding: nativeDefault.space.PX_16 };
+obj2.container = { display: "flex", flexDirection: "column", height: "100%", marginTop: nativeDefault.space.PX_24 };
+let obj5 = { display: "flex", flexDirection: "column", height: "100%", marginTop: nativeDefault.space.PX_24 };
+obj2.footer = { flexGrow: 0, flexShrink: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, paddingVertical: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 };
+let obj6 = { flexGrow: 0, flexShrink: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, paddingVertical: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.header = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: nativeDefault.space.PX_16 };
+let obj7 = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: nativeDefault.space.PX_16 };
+obj2.headerText = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_4 };
+let obj8 = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_4 };
+obj2.body = { padding: nativeDefault.space.PX_24, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj9 = { padding: nativeDefault.space.PX_24, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj2.noticeHeader = { marginBottom: nativeDefault.space.PX_4 };
+let obj10 = { marginBottom: nativeDefault.space.PX_4 };
+obj2.buttonWrapper = { marginBottom: nativeDefault.space.PX_4 };
+let closure_10 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/people/native/ClearAllIncomingRequestsConfirmation.tsx");
 
 export default function ClearAllIncomingRequestsConfirmationModal(incomingRequestCount) {
-  let _require;
-  let callback;
-  let callback1;
-  const tmp = callback4();
-  [tmp3, c0] = callback(React.useState(false), 2);
-  callback = React.useCallback(() => {
+  _require = undefined;
+  const tmp = closure_10();
+  [tmp3, c0] = noop.useState(false);
+  const callback = noop.useCallback(() => {
     _undefined(false);
-    let arr = callback(callback1[6]);
-    arr = arr.pop();
+    ModalActionCreatorsDefault.pop();
   }, []);
-  callback1 = React.useCallback(() => {
+  const callback1 = noop.useCallback(() => {
     _undefined(false);
-    const intl = _undefined(callback1[8]).intl;
-    _undefined(callback1[7]).presentFailedToast(intl.string(_undefined(callback1[8]).t.R0RpRX));
+    const intl = util.intl;
+    ToastUtils.presentFailedToast(intl.string(util.t.R0RpRX));
   }, []);
   const items = [callback, callback1];
-  const callback2 = React.useCallback(() => {
+  const callback2 = noop.useCallback(() => {
     _undefined(true);
-    const result = callback(callback1[9]).clearPendingRelationships();
-    const obj = callback(callback1[9]);
+    const result = RelationshipActionCreatorsDefault.clearPendingRelationships();
     result.then(callback).catch(callback1);
   }, items);
   let obj = { top: true, children: null };
-  obj = { style: tmp.root, children: null };
-  obj = { accessibilityRole: "button", accessibilityLabel: null, source: null, style: null, onPress: null };
-  const tmp2 = callback(React.useState(false), 2);
-  let intl = _require(callback1[8]).intl;
-  obj[1] = intl.string(_require(callback1[8]).t.cpT0Cq);
-  obj[2] = callback(callback1[12]);
+  const obj2 = { style: tmp.root, children: null };
+  const obj3 = { accessibilityRole: "button", accessibilityLabel: null, source: null, style: null, onPress: null };
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
+  let intl = require("util").intl;
+  obj3.accessibilityLabel = intl.string(require("util").t.cpT0Cq);
+  obj3.source = callback(callback1[12]);
   const items1 = [tmp.closeButton];
-  obj[3] = items1;
-  obj[4] = function onPress() {
+  obj3.style = items1;
+  obj3.onPress = function onPress() {
     return callback(callback1[6]).pop();
   };
-  const items2 = [callback2(callback(callback1[11]), obj), ];
-  obj1 = { style: tmp.container, children: null };
-  const obj2 = { style: tmp.content, children: null };
-  const obj3 = { children: null };
-  const obj4 = { style: tmp.header, children: null };
-  const obj5 = { style: tmp.headerText, variant: "text-lg/bold", children: null };
-  const intl2 = _require(callback1[8]).intl;
-  obj5[2] = intl2.string(_require(callback1[8]).t.eVjfAu);
-  obj4[1] = callback2(_require(callback1[13]).Text, obj5);
-  const items3 = [callback2(closure_5, obj4), ];
-  const obj6 = { style: tmp.body, children: null };
-  const obj7 = { style: tmp.noticeHeader, variant: "text-xs/normal", color: "mobile-text-heading-primary", children: null };
-  const intl3 = _require(callback1[8]).intl;
-  obj7[3] = intl3.format(_require(callback1[8]).t.jaXsA3, { incomingRequestCount: incomingRequestCount.incomingPendingRequestCount });
-  obj6[1] = callback2(_require(callback1[13]).Text, obj7);
-  items3[1] = callback2(closure_5, obj6);
-  obj3[0] = items3;
-  obj2[1] = callback3(closure_8, obj3);
-  const items4 = [callback2(closure_6, obj2), ];
-  const obj8 = { style: tmp.footer, children: null };
-  const obj9 = { bottom: true, children: null };
-  const obj10 = { children: null };
-  const obj11 = { style: tmp.buttonWrapper, children: null };
-  const obj12 = { disabled: tmp3, loading: tmp3, variant: "destructive", size: "md", text: null, onPress: null, grow: true };
-  const intl4 = _require(callback1[8]).intl;
-  obj12[4] = intl4.string(_require(callback1[8]).t.Eq9seb);
-  obj12[5] = callback2;
-  obj11[1] = callback2(_require(callback1[14]).Button, obj12);
-  const items5 = [callback2(closure_5, obj11), ];
-  const obj13 = { style: tmp.buttonWrapper, children: null };
-  const obj14 = { variant: "secondary", size: "md", text: null, onPress: null, grow: true };
-  const intl5 = _require(callback1[8]).intl;
-  obj14[2] = intl5.string(_require(callback1[8]).t["ETE/oC"]);
-  obj14[3] = callback(callback1[6]).pop;
-  obj13[1] = callback2(_require(callback1[14]).Button, obj14);
-  items5[1] = callback2(closure_5, obj13);
-  obj10[0] = items5;
-  obj9[1] = callback3(closure_8, obj10);
-  obj8[1] = callback2(_require(callback1[10]).SafeAreaPaddingView, obj9);
-  items4[1] = callback2(closure_5, obj8);
-  obj1[1] = items4;
-  items2[1] = callback3(closure_5, obj1);
-  obj[1] = items2;
-  obj[1] = callback3(closure_5, obj);
-  return callback2(_require(callback1[10]).SafeAreaPaddingView, obj);
+  const items2 = [closure_7(callback(callback1[11]), obj3), ];
+  const obj4 = { style: tmp.container, children: null };
+  const obj5 = { style: tmp.content, children: null };
+  const obj6 = { children: null };
+  const obj7 = { style: tmp.header, children: null };
+  const obj8 = { style: tmp.headerText, variant: "text-lg/bold", children: null };
+  const intl2 = require("util").intl;
+  obj8.children = intl2.string(require("util").t.eVjfAu);
+  obj7.children = closure_7(require("Text/Text").Text, obj8);
+  const items3 = [closure_7(closure_5, obj7), ];
+  const obj9 = { style: tmp.body, children: null };
+  const obj10 = { style: tmp.noticeHeader, variant: "text-xs/normal", color: "mobile-text-heading-primary", children: null };
+  const intl3 = require("util").intl;
+  obj10.children = intl3.format(require("util").t.jaXsA3, { incomingRequestCount: incomingRequestCount.incomingPendingRequestCount });
+  obj9.children = closure_7(require("Text/Text").Text, obj10);
+  items3[1] = closure_7(closure_5, obj9);
+  obj6.children = items3;
+  obj5.children = closure_9(closure_8, obj6);
+  const items4 = [closure_7(closure_6, obj5), ];
+  const obj11 = { style: tmp.footer, children: null };
+  const obj12 = { bottom: true, children: null };
+  const obj13 = { children: null };
+  const obj14 = { style: tmp.buttonWrapper, children: null };
+  const obj15 = { disabled: tmp3, loading: tmp3, variant: "destructive", size: "md", text: null, onPress: null, grow: true };
+  const intl4 = require("util").intl;
+  obj15.text = intl4.string(require("util").t.Eq9seb);
+  obj15.onPress = callback2;
+  obj14.children = closure_7(require("components/Button/Button").Button, obj15);
+  const items5 = [closure_7(closure_5, obj14), ];
+  const obj16 = { style: tmp.buttonWrapper, children: null };
+  const obj17 = { variant: "secondary", size: "md", text: null, onPress: null, grow: true };
+  const intl5 = require("util").intl;
+  obj17.text = intl5.string(require("util").t["ETE/oC"]);
+  obj17.onPress = callback(callback1[6]).pop;
+  obj16.children = closure_7(require("components/Button/Button").Button, obj17);
+  items5[1] = closure_7(closure_5, obj16);
+  obj13.children = items5;
+  obj12.children = closure_9(closure_8, obj13);
+  obj11.children = closure_7(require("common/SafeAreaView").SafeAreaPaddingView, obj12);
+  items4[1] = closure_7(closure_5, obj11);
+  obj4.children = items4;
+  items2[1] = closure_9(closure_5, obj4);
+  obj2.children = items2;
+  obj.children = closure_9(closure_5, obj2);
+  return closure_7(require("common/SafeAreaView").SafeAreaPaddingView, obj);
 };

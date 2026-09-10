@@ -1,48 +1,48 @@
-// Module ID: 12572
-// Function ID: 12573
-// Name: importDefaultResult1
-// Dependencies: [19, 17, 21, 4560, 672, 576, 5607, 2]
+// Module ID: 12598
+// Function ID: 12599
+// Name: GuildPowerupsCard
+// Dependencies: [19, 17, 21, 4574, 672, 576, 5621, 2]
 // Exports: default
 
-// Module 12572 (importDefaultResult1)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import PressableCard from "PressableCard" /* 5607 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importDefaultResult from "n" /* 672 */;
+// Module 12598 (GuildPowerupsCard)
+import nativeDefault from "native" /* 576 */;
+import Card from "Card" /* 5621 */;
+import noop from "module_19" /* 19 */;
+import n_mod from "module_672" /* 672 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { cardActive: null, cardExpiring: null, cardRemoving: null };
-createCacheKey = { borderColor: null };
-const importDefaultResultResult = importDefaultResult(ThemesDefault.unsafe_rawColors.GREEN_360);
-createCacheKey[0] = importDefaultResult(ThemesDefault.unsafe_rawColors.GREEN_360).alpha(0.35).hex();
-createCacheKey[0] = createCacheKey;
-const obj1 = { borderColor: null };
-const alphaResult = importDefaultResult(ThemesDefault.unsafe_rawColors.GREEN_360).alpha(0.35);
-const importDefaultResult1 = importDefaultResult;
-const importDefaultResult1Result = importDefaultResult(ThemesDefault.unsafe_rawColors.YELLOW_300);
-obj1[0] = importDefaultResult(ThemesDefault.unsafe_rawColors.YELLOW_300).alpha(0.35).hex();
-createCacheKey[1] = obj1;
-const obj2 = { borderColor: null };
-const alphaResult1 = importDefaultResult(ThemesDefault.unsafe_rawColors.YELLOW_300).alpha(0.35);
-const importDefaultResult2 = importDefaultResult;
-const importDefaultResult2Result = importDefaultResult(ThemesDefault.unsafe_rawColors.YELLOW_300);
-obj2[0] = importDefaultResult(ThemesDefault.unsafe_rawColors.YELLOW_300).alpha(0.35).hex();
-createCacheKey[2] = obj2;
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const alphaResult2 = importDefaultResult(ThemesDefault.unsafe_rawColors.YELLOW_300).alpha(0.35);
-const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsCard.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { cardActive: null, cardExpiring: null, cardRemoving: null };
+const obj3 = { borderColor: null };
+let n = n_mod;
+const importDefaultResultResult = n(nativeDefault.unsafe_rawColors.GREEN_360);
+obj3.borderColor = n(nativeDefault.unsafe_rawColors.GREEN_360).alpha(0.35).hex();
+obj2.cardActive = obj3;
+const obj4 = { borderColor: null };
+let n = n_mod;
+const alphaResult = n(nativeDefault.unsafe_rawColors.GREEN_360).alpha(0.35);
+const importDefaultResult1Result = n(nativeDefault.unsafe_rawColors.YELLOW_300);
+obj4.borderColor = n(nativeDefault.unsafe_rawColors.YELLOW_300).alpha(0.35).hex();
+obj2.cardExpiring = obj4;
+const obj5 = { borderColor: null };
+let n = n_mod;
+const alphaResult1 = n(nativeDefault.unsafe_rawColors.YELLOW_300).alpha(0.35);
+const importDefaultResult2Result = n(nativeDefault.unsafe_rawColors.YELLOW_300);
+obj5.borderColor = n(nativeDefault.unsafe_rawColors.YELLOW_300).alpha(0.35).hex();
+obj2.cardRemoving = obj5;
+let closure_4 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsCard.tsx");
 
 export default function GuildPowerupsCard(status) {
   status = status.status;
   ({ children, containerStyle, style } = status);
-  const merged = Object.assign(status, Object.create(null));
-  const tmp2 = callback();
-  let obj = { style: containerStyle, children: null };
-  obj = { border: "faint", radius: 16, shadow: "none" };
+  const merged = Object.assign(status, Object.assign({ children: 0, containerStyle: 0, status: 0, style: 0 }));
+  const tmp2 = closure_4();
+  const obj = { style: containerStyle, children: null };
+  const obj2 = { border: "faint", radius: 16, shadow: "none" };
   const merged1 = Object.assign(merged);
   let type;
   if (status != null) {
@@ -60,8 +60,8 @@ export default function GuildPowerupsCard(status) {
   }
   items[2] = "removing" === type2 && tmp2.cardRemoving;
   items[3] = style;
-  obj.style = items;
-  obj.children = children;
-  obj[1] = jsx(PressableCard.Card, { border: "faint", radius: 16, shadow: "none" });
-  return <View border="faint" radius={16} shadow="none" />;
+  obj2.style = items;
+  obj2.children = children;
+  obj.children = jsx(Card.Card, { border: "faint", radius: 16, shadow: "none" });
+  return <View style={containerStyle}>{null}</View>;
 };

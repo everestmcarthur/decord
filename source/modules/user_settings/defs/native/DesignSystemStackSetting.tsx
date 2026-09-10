@@ -1,28 +1,28 @@
-// Module ID: 15791
-// Function ID: 15792
-// Name: route
-// Dependencies: [7975, 1074, 11473, 15792, 2]
+// Module ID: 15821
+// Function ID: 15822
+// Name: DesignSystemStackSetting
+// Dependencies: [7989, 1074, 11500, 15822, 2]
 
-// Module 15791 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15821 (DesignSystemStackSetting)
+import Constants from "Constants" /* 1074 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const require = globalThis.__r;
+
+const route = SettingBuilders.createRoute({
   useTitle() {
     return "Stack";
   },
-  parent: MobileUserSettings.MobileUserSettings.DESIGN_SYSTEMS,
-  screen: obj
-};
-obj = {
-  route: ME.UserSettingsSections.DESIGN_SYSTEM_STACK,
-  getComponent() {
-    return require(15792) /* StackBlock */.default;
+  parent: SettingsConstants.MobileUserSettings.DESIGN_SYSTEMS,
+  screen: {
+    route: Constants.UserSettingsSections.DESIGN_SYSTEM_STACK,
+    getComponent() {
+      return require("UserSettingsDesignSystemStack").default;
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemStackSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemStackSetting.tsx");
 
 export default route;

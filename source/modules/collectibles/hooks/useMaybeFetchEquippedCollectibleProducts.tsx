@@ -1,25 +1,25 @@
-// Module ID: 8216
-// Function ID: 8217
-// Name: useEquippedCollectibleSkuIds
-// Dependencies: [19, 1371, 504, 8186, 8217, 8218, 8219, 2]
+// Module ID: 8242
+// Function ID: 8243
+// Name: useMaybeFetchEquippedCollectibleProducts
+// Dependencies: [19, 1371, 504, 8212, 8243, 8244, 8245, 2]
 // Exports: default
 
-// Module 8216 (useEquippedCollectibleSkuIds)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
+// Module 8242 (useMaybeFetchEquippedCollectibleProducts)
+import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8245 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
+require = fn;
 function useEquippedCollectibleSkuIds(id, guildId) {
-  const _require = id;
-  let obj = _require(skuId1[2]);
+  _require = id;
   let items = [skuId3];
   const items1 = [id];
-  const stateFromStores = obj.useStateFromStores(items, () => skuId3.getUser(closure_0), items1);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => UserStore.getUser(closure_0), items1);
   const tmp2 = skuId(skuId1[3])(id, guildId);
-  const avatarDecoration = _require(skuId1[4]).useAvatarDecoration(stateFromStores, guildId);
-  const obj2 = _require(skuId1[4]);
-  obj = { user: stateFromStores, guildId };
-  const nameplate = _require(skuId1[5]).useNameplate(obj);
+  const obj = require("initialize");
+  const avatarDecoration = require("useAvatarDecoration").useAvatarDecoration(stateFromStores, guildId);
+  const obj2 = require("useAvatarDecoration");
+  const nameplate = require("useNameplate").useNameplate({ user: stateFromStores, guildId });
   skuId = undefined;
   if (avatarDecoration != null) {
     skuId = avatarDecoration.skuId;
@@ -45,26 +45,25 @@ function useEquippedCollectibleSkuIds(id, guildId) {
   const items2 = [skuId, skuId1, skuId2, skuId3];
   return skuId2.useMemo(() => {
     const items = [skuId, skuId1, skuId2, skuId3];
-    return items.filter((arg0) => null != arg0);
+    return items.filter((item) => null != item);
   }, items2);
 }
-let result = require("set").fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchEquippedCollectibleProducts.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchEquippedCollectibleProducts.tsx");
 
-export default function useMaybeFetchEquippedCollectibleProducts(id, guildId) {
+export default function useMaybeFetchEquippedCollectibleProducts(id, guildId, arg2) {
   closure_0 = arg2;
   let tmp = useEquippedCollectibleSkuIds(id, guildId);
-  closure_1 = tmp;
+  const skuIds = tmp;
   const items = [arg2, tmp];
-  const effect = React.useEffect(() => {
-    let tmp = callback;
-    if (callback) {
-      tmp = 0 !== length.length;
+  const effect = noop.useEffect(() => {
+    let tmp = closure_0;
+    if (closure_0) {
+      tmp = 0 !== skuIds.length;
     }
     if (tmp) {
-      let obj = callback(closure_1_2[6]);
-      obj = { skuIds: null };
-      obj[0] = length;
-      const result = obj.maybeFetchProductsBySkuIds(obj);
+      const obj2 = { skuIds };
+      const result = StorefrontProductActionCreators.maybeFetchProductsBySkuIds(obj2);
     }
   }, items);
 };

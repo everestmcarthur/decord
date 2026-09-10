@@ -1,17 +1,17 @@
-// Module ID: 6565
-// Function ID: 6566
+// Module ID: 6579
+// Function ID: 6580
 // Name: WaterIllocon
-// Dependencies: [21, 5587, 6566, 2]
+// Dependencies: [21, 5601, 6580, 2]
 // Exports: WaterIllocon
 
-// Module 6565 (WaterIllocon)
-import set from "set" /* 2 */;
+// Module 6579 (WaterIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 6566 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6580 from "module_6580" /* 6580 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/WaterIllocon.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/WaterIllocon.native.tsx");
 
 export const WaterIllocon = function WaterIllocon(size) {
   let num = size.size;
@@ -19,13 +19,13 @@ export const WaterIllocon = function WaterIllocon(size) {
   if (num === undefined) {
     num = 64;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef6580 };
+  obj.source = obj2;
   const items = [{ width: num, height: num }];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { uri: metadataDefault });
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

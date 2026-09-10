@@ -1,87 +1,70 @@
 // Module ID: 14299
 // Function ID: 14300
-// Dependencies: [14300, 14301, 14302, 14339, 14340, 14356, 14357]
+// Dependencies: [14300, 14301, 1162, 14302, 14303]
+// Exports: getCalendarPreferenceDataForRegion, getHourCyclesPreferenceDataForLocaleOrRegion, getTimeZonePreferenceForRegion, getWeekDataForRegion
 
 // Module 14299
-import _mod14300 from "module_14300" /* 14300 */;
-import getOwnPropertyDescriptor from "getOwnPropertyDescriptor" /* 14302 */;
-import isForced from "isForced" /* 14339 */;
+import e from "e" /* 1162 */;
+import calendars from "calendars" /* 14300 */;
+import hourCycles from "hourCycles" /* 14301 */;
+import timezones from "timezones" /* 14302 */;
+import weekData from "weekData" /* 14303 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export default (dontCallGetSet, obj) => {
-  ({ target, global: _global, stat } = dontCallGetSet);
-  const tmp3 = _mod14300;
-  if (_global) {
-    let prototype = tmp3;
+export const getCalendarPreferenceDataForRegion = function getCalendarPreferenceDataForRegion(region) {
+  let str = null;
+  if (region) {
+    str = region.toUpperCase();
+  }
+  if (!str) {
+    str = "";
+  }
+  return calendars.calendars[str] || calendars.calendars["001"].map((item) => {
+    let str = "gregory";
+    if ("gregorian" !== item) {
+      let str2 = "islamicc";
+      if ("islamic-civil" !== item) {
+        str2 = item;
+      }
+      str = str2;
+    }
+    return str;
+  });
+};
+export const getHourCyclesPreferenceDataForLocaleOrRegion = function getHourCyclesPreferenceDataForLocaleOrRegion(locale, region) {
+  const formatted = locale.toLowerCase();
+  let str = "";
+  if (region) {
+    str = region.toUpperCase();
+  }
+  let v001 = hourCycles.hourCycles[formatted] || tmp2(14301).hourCycles[str];
+  if (!v001) {
+    const concat = "".concat;
+    v001 = tmp2(14301).hourCycles["".concat("", formatted, "-001")];
+  }
+  if (!v001) {
+    v001 = tmp2(14301).hourCycles["001"];
+  }
+  return e.__spreadArray([], v001, true);
+};
+export const getTimeZonePreferenceForRegion = function getTimeZonePreferenceForRegion(region) {
+  const formatted = region.toLowerCase();
+  const items = [];
+  if (timezones.timezones[formatted]) {
+    return tmp2(1162).__spreadArray(items, tmp2(14302).timezones[formatted], true);
   } else {
-    let tmp4 = tmp3[target];
-    if (stat) {
-      if (!tmp4) {
-        tmp4 = tmp(14301)(target, {});
-      }
-      prototype = tmp4;
-    } else {
-      prototype = tmp4;
-      if (tmp4) {
-        prototype = tmp(14300)[target].prototype;
-      }
-    }
+    return items;
   }
-  if (prototype) {
-    for (const key10024 in arg1) {
-      let tmp21 = arg1[key10024];
-      let tmp20 = key10024;
-      if (arg0.dontCallGetSet) {
-        let tmp8 = require;
-        let tmp9 = dependencyMap;
-        obj = getOwnPropertyDescriptor;
-        let iter = obj.f(prototype, key10024);
-        let value = iter;
-        if (iter) {
-          value = iter.value;
-        }
-        let tmp7 = value;
-      } else {
-        tmp7 = prototype[key10024];
-      }
-      let tmp10 = require;
-      let tmp11 = dependencyMap;
-      let sum = key10024;
-      let tmp12 = isForced;
-      if (!_global) {
-        let str4 = "#";
-        if (stat) {
-          str4 = ".";
-        }
-        sum = target + str4 + key10024;
-      }
-      if (!tmp12(sum, arg0.forced)) {
-        if (undefined !== tmp7) {
-          if (typeof tmp21 === typeof tmp7) {
-            continue;
-          } else {
-            let tmp22 = tmp10(14340)(tmp21, tmp7);
-          }
-        }
-        continue;
-      }
-      let sham = arg0.sham;
-      if (!sham) {
-        let sham2 = tmp7;
-        if (tmp7) {
-          sham2 = tmp7.sham;
-        }
-        sham = sham2;
-      }
-      if (sham) {
-        let tmp14 = tmp10(14356)(tmp21, "sham", true);
-      }
-      let tmp15 = prototype;
-      let tmp16 = key10024;
-      let tmp17 = tmp21;
-      let tmp18 = arg0;
-      let tmp19 = tmp10(14357)(prototype, tmp20, tmp21, arg0);
-      continue;
-    }
+};
+export const getWeekDataForRegion = function getWeekDataForRegion(region) {
+  let str = "";
+  if (region) {
+    str = region.toUpperCase();
   }
+  if (!str) {
+    str = "001";
+  }
+  return weekData.weekData[str] || weekData.weekData["001"];
 };

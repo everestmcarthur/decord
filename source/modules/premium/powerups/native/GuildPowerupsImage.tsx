@@ -1,20 +1,21 @@
-// Module ID: 12527
-// Function ID: 12528
+// Module ID: 12553
+// Function ID: 12554
 // Name: GuildPowerupsImage
-// Dependencies: [4552, 21, 4560, 504, 1116, 8814, 5587, 2]
+// Dependencies: [4566, 21, 4574, 504, 1116, 8843, 5601, 2]
 // Exports: default
 
-// Module 12527 (GuildPowerupsImage)
+// Module 12553 (GuildPowerupsImage)
 import initialize from "initialize" /* 504 */;
-import preloadDefault from "preload" /* 5587 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8814 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 8843 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-require = arg1;
-let closure_5 = createCacheKey.createStyles({ image: { width: "75%", height: "100%", alignSelf: "center", resizeMode: "contain" } });
-const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsImage.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_5 = createStyles.createStyles({ image: { width: "75%", height: "100%", alignSelf: "center", resizeMode: "contain" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsImage.tsx");
 
 export default function GuildPowerupsImage(style) {
   ({ imageUrl, isAnimated } = style);
@@ -22,22 +23,23 @@ export default function GuildPowerupsImage(style) {
     isAnimated = true;
   }
   style = style.style;
-  const tmp = callback();
-  let obj = initialize;
-  const items = [closure_3];
-  const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const tmp = closure_5();
+  const items = [AccessibilityStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   if (obj2.isAndroid()) {
     if (isAnimated) {
       if (!stateFromStores) {
-        obj = { style: null, url: null };
+        const obj3 = { style: null, url: null };
         const items1 = [tmp.image, style];
-        obj[0] = items1;
-        obj[1] = imageUrl;
-        let tmp6 = jsx(__INTERNAL_VIEW_CONFIGDefault, { style: null, url: null });
+        obj3.style = items1;
+        obj3.url = imageUrl;
+        let tmp6 = jsx(APNGDecorationNativeComponentDefault, { style: null, url: null });
       }
       return tmp6;
     }
   }
+  const obj4 = { style: null, source: { uri: imageUrl } };
   const items2 = [tmp.image, style];
-  tmp6 = jsx(preloadDefault, { style: items2, source: { uri: imageUrl } });
+  obj4.style = items2;
+  tmp6 = jsx(FastImageDefault, { style: null, source: { uri: imageUrl } });
 };

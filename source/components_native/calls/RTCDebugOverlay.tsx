@@ -1,236 +1,238 @@
-// Module ID: 10042
-// Function ID: 10043
-// Name: Text
-// Dependencies: [19, 17, 1957, 1979, 4583, 10043, 4599, 1371, 4585, 21, 4560, 4409, 576, 1178, 504, 4713, 10045, 10044, 573, 7123, 4975, 1114, 2]
+// Module ID: 10069
+// Function ID: 10070
+// Name: RTCDebugOverlay
+// Dependencies: [19, 17, 1957, 1979, 4597, 10070, 4613, 1371, 4599, 21, 4574, 4423, 576, 1178, 504, 4727, 10072, 10071, 573, 7137, 4989, 1114, 2]
 // Exports: default
 
-// Module 10042 (Text)
+// Module 10069 (RTCDebugOverlay)
 import initialize from "initialize" /* 504 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import Button2 from "Button" /* 4975 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "ensureGuildLoaded" /* 1957 */;
-import closure_8 from "createGuildRecordFromRust" /* 1979 */;
-import closure_9 from "createRTCConnection" /* 4583 */;
-import closure_10 from "updateStats" /* 10043 */;
-import closure_11 from "initialize" /* 4599 */;
-import closure_12 from "mergeGuildAvatar" /* 1371 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4585 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import hexToRgba from "hexToRgba" /* 4409 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7137 */;
+import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 10071 */;
+import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 10072 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
+import RTCDebugStore from "RTCDebugStore" /* 10070 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4613 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+require = fn;
 function Text(arg0) {
   const obj = {};
   const merged = Object.assign(arg0);
-  obj.style = callback3().text;
-  return callback(Button.LegacyText, obj);
+  obj.style = closure_18().text;
+  return closure_1_14(native.LegacyText, obj);
 }
 function Section(arg0) {
   ({ title, children } = arg0);
-  let obj = { children: null };
+  const obj = { children: null };
+  const obj2 = { children: null };
   const items = [title, ":"];
-  const items1 = [callback2(Text, { children: items }), ];
-  obj = { style: callback3().indent, children };
-  items1[1] = callback(closure_5, obj);
-  obj[0] = items1;
-  return callback2(closure_16, obj);
+  obj2.children = items;
+  const items1 = [__initData(Text, obj2), ];
+  const tmp = closure_18();
+  items1[1] = closure_1_14(hasOwnProperty, { style: closure_18().indent, children });
+  obj.children = items1;
+  return __initData(value2, obj);
 }
 function ObjectKV(obj) {
-  closure_0 = undefined;
-  closure_0 = callback3();
+  const row = closure_18();
   const entries = Object.entries(obj.obj);
-  return entries.map((arg0) => {
-    [tmp, obj] = arg0;
-    let value = obj;
+  return entries.map((item) => {
+    [tmp, obj] = item;
+    value = obj;
     if (Array.isArray(obj)) {
       const iter = obj.at(-1);
-      value = undefined;
+      value2 = undefined;
       if (iter != null) {
-        value = iter.value;
+        value2 = iter.value;
       }
       value = obj;
-      if (typeof value === "number") {
+      if (typeof value2 === "number") {
         value = obj.at(-1).value;
       }
     }
     if (null != value) {
       if (typeof value === "object") {
-        obj = { title: null, children: null };
-        obj[0] = tmp;
-        obj = { obj: null };
-        obj[0] = value;
-        obj[1] = closure_1_14(closure_1_21, obj);
-        let tmp4Result = closure_1_14(closure_1_20, obj, tmp);
+        const obj2 = { title: tmp, children: null };
+        const obj3 = { obj: value };
+        obj2.children = closure_2_14(ObjectKV, obj3);
+        let tmp4Result = closure_2_14(Section, obj2, tmp);
       }
       return tmp4Result;
     }
-    obj1 = { style: row.row, children: null };
+    const obj4 = { style: row.row, children: null };
     const items = [tmp, ": ", ];
-    if (typeof closure_1_17 !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (typeof asString === "function") {
+      const obj5 = { children: null };
+      items[2] = "" + value;
+      obj5.children = items;
+      obj4.children = tmp6(tmp7, obj5);
+      tmp4Result = tmp4(tmp5, obj4, tmp);
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    items[2] = "" + value;
-    obj1[1] = closure_1_15(closure_1_19, { children: items });
-    tmp4Result = closure_1_14(closure_1_5, obj1, tmp);
   });
 }
 function RTCDebugGeneral() {
-  let obj = guildId(504);
-  const items = [closure_9];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ guildId: store.getGuildId(), channelId: store.getChannelId() }), []);
+  const items = [RTCConnectionStore];
+  const stateFromStoresObject = guildId(504).useStateFromStoresObject(items, () => ({ guildId: RTCConnectionStore.getGuildId(), channelId: RTCConnectionStore.getChannelId() }), []);
   guildId = stateFromStoresObject.guildId;
   const channelId = stateFromStoresObject.channelId;
-  const items1 = [closure_8];
+  const obj = guildId(504);
+  const items1 = [GuildStore];
   const items2 = [guildId];
-  const stateFromStores = guildId(504).useStateFromStores(items1, () => closure_1_8.getGuild(guildId), items2);
+  const stateFromStores = guildId(504).useStateFromStores(items1, () => GuildStore.getGuild(guildId), items2);
   const obj2 = guildId(504);
-  const items3 = [closure_7];
+  const items3 = [ChannelStore];
   const items4 = [channelId];
-  const stateFromStores1 = guildId(504).useStateFromStores(items3, () => closure_1_7.getChannel(channelId), items4);
-  obj = { id: guildId, name: null };
+  const stateFromStores1 = guildId(504).useStateFromStores(items3, () => ChannelStore.getChannel(channelId), items4);
+  const obj4 = { id: guildId, name: null };
   let name = null;
   const obj3 = guildId(504);
   if (null != stateFromStores) {
     name = stateFromStores.name;
   }
-  obj = { title: "general", children: tmp5(ObjectKV, { obj: { guild: obj, channel: { id: channelId, name: channelId(4713)(stateFromStores1) } } }) };
-  obj[1] = name;
-  return closure_14(Section, obj);
+  const obj5 = { title: "general", children: null };
+  const obj6 = { obj: null };
+  const tmp4 = channelId(4727)(stateFromStores1);
+  const tmp6 = Section;
+  const tmp7 = ObjectKV;
+  obj4.name = name;
+  obj6.obj = { guild: obj4, channel: { id: channelId, name: channelId(4727)(stateFromStores1) } };
+  obj5.children = closure_14(tmp7, obj6);
+  return closure_14(tmp6, obj5);
 }
 function RTCDebugContext(context) {
   context = context.context;
-  let items = [closure_10];
+  let items = [RTCDebugStore];
   const items1 = [context];
-  const stateFromStores = context(504).useStateFromStores(items, () => closure_1_10.getAllStats(context), items1);
+  const stateFromStores = context(504).useStateFromStores(items, () => RTCDebugStore.getAllStats(context), items1);
   let mapped = null;
   if (null != stateFromStores) {
     mapped = null;
     if (0 !== stateFromStores.length) {
       mapped = stateFromStores.map((mediaEngineConnectionId) => {
-        let obj = { title: "" + inbound + " - " + mediaEngineConnectionId.mediaEngineConnectionId, children: null };
+        const obj = { title: "" + context + " - " + mediaEngineConnectionId.mediaEngineConnectionId, children: null };
         let tmp4 = null;
-        if (null != closure_1_25[inbound]) {
-          tmp4 = closure_1_14(tmp3, {});
+        if (null != closure_25[context]) {
+          tmp4 = closure_2_14(tmp3, {});
         }
         const items = [tmp4, , , ];
-        obj = { title: "transport", children: closure_1_14(closure_1_21, obj) };
-        obj = { obj: mediaEngineConnectionId.transport };
-        items[1] = closure_1_14(closure_1_20, obj);
+        const obj2 = { title: "transport", children: closure_2_14(ObjectKV, { obj: mediaEngineConnectionId.transport }) };
+        items[1] = closure_2_14(Section, obj2);
         const outbound = mediaEngineConnectionId.rtp.outbound;
-        items[2] = closure_1_14(closure_1_20, { title: "outbound", children: outbound.map((data) => callback(closure_22, { data }, arg1)) });
-        inbound = mediaEngineConnectionId.rtp.inbound;
+        items[2] = closure_2_14(Section, { title: "outbound", children: outbound.map((data, index) => closure_1_14(closure_1_22, { data }, index)) });
+        const inbound = mediaEngineConnectionId.rtp.inbound;
         const keys = Object.keys(inbound);
         let tmp6Result = null;
         if (0 !== keys.length) {
-          const obj2 = { title: "inbound", children: null };
-          obj2[1] = keys.map((userId) => closure_1_14(closure_1_23, { userId, data: inbound[userId] }, userId));
-          tmp6Result = closure_1_14(tmp2, obj2);
+          const obj5 = { title: "inbound", children: keys.map((userId) => closure_2_14(closure_2_23, { userId, data: inbound[userId] }, userId)) };
+          tmp6Result = closure_2_14(tmp2, obj5);
         }
         items[3] = tmp6Result;
-        obj[1] = items;
-        return closure_1_15(closure_1_20, obj, mediaEngineConnectionId.mediaEngineConnectionId);
+        obj.children = items;
+        return __initData(Section, obj, mediaEngineConnectionId.mediaEngineConnectionId);
       });
     }
   }
   return mapped;
 }
-let c4 = importAllResult;
-({ View: c5, ScrollView: closure_6, StyleSheet } = get_ActivityIndicator);
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);
+const MediaEngineContextTypes = fn(4599).MediaEngineContextTypes;
+const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 function asString(arg0) {
 
 }
+const createStyles = fn(4574);
 let obj = { container: null, scroller: null, indent: null, row: null, text: null, buttonClose: null };
-obj = {};
+let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-obj.backgroundColor = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BLACK, 0.7);
-obj[0] = obj;
-obj[1] = { flex: 1, margin: 8 };
-obj[2] = { marginLeft: 16 };
-obj[3] = { flexDirection: "row" };
-createCacheKey = { color: ThemesDefault.unsafe_rawColors.WHITE, fontSize: 14 };
-obj[4] = createCacheKey;
-obj[5] = { flexGrow: 0, margin: 8 };
-let closure_18 = createCacheKey.createStyles(obj);
-let closure_22 = importAllResult.memo((data) => {
+const ColorUtils = fn(4423);
+obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.7);
+obj.container = obj3;
+obj.scroller = { flex: 1, margin: 8 };
+obj.indent = { marginLeft: 16 };
+obj.row = { flexDirection: "row" };
+obj.text = { color: nativeDefault.unsafe_rawColors.WHITE, fontSize: 14 };
+obj.buttonClose = { flexGrow: 0, margin: 8 };
+let closure_18 = createStyles.createStyles(obj);
+let closure_22 = noop.memo((data) => {
   data = data.data;
-  let obj = { title: data.type, children: null };
-  obj = { obj: Object.assign(data, Object.create(null)) };
-  obj[1] = callback(ObjectKV, obj);
-  return callback(Section, obj);
+  const obj = { title: data.type, children: closure_1_14(ObjectKV, { obj: Object.assign(data, Object.assign({ type: 0 })) }) };
+  return closure_1_14(Section, obj);
 });
-let closure_23 = importAllResult.memo((userId) => {
+let closure_23 = noop.memo((userId) => {
   userId = userId.userId;
   const data = userId.data;
-  let obj = userId(504);
-  const items = [closure_12];
+  const items = [UserStore];
   const items1 = [userId];
-  const str = obj.useStateFromStores(items, () => closure_1_12.getUser(userId), items1);
+  const str = userId(504).useStateFromStores(items, () => UserStore.getUser(userId), items1);
   const combined = "" + userId;
   let sum = combined;
   if (null != str) {
     const _HermesInternal = HermesInternal;
     sum = combined + " (" + str.toString() + ")";
   }
-  obj = { title: sum, children: data.map((data) => callback(closure_22, { data }, arg1)) };
-  return callback(Section, obj);
+  const obj = userId(504);
+  return closure_14(Section, { title: sum, children: data.map((data, index) => closure_1_14(closure_1_22, { data }, index)) });
 });
 let closure_25 = {
   [MediaEngineContextTypes.DEFAULT]: function DefaultContextInfo() {
-    let obj = initialize;
-    const items = [closure_9];
-    obj = {
-      obj: obj.useStateFromStoresObject(items, () => {
-        const obj = { mediaSessionId: store.getMediaSessionId(), state: store.getState(), hostname: callback(table[16]).getShortHostname(store.getHostname()), quality: store.getQuality(), averagePing: store.getAveragePing(), lastPing: store.getLastPing(), outboundLossRate: store.getOutboundLossRate(), duration: store.getDuration() };
+    const items = [RTCConnectionStore];
+    return closure_1_14(ObjectKV, {
+      obj: initialize.useStateFromStoresObject(items, () => {
+        const obj = { mediaSessionId: RTCConnectionStore.getMediaSessionId(), state: RTCConnectionStore.getState(), hostname: RTCConnectionUtilsDefault.getShortHostname(RTCConnectionStore.getHostname()), quality: RTCConnectionStore.getQuality(), averagePing: RTCConnectionStore.getAveragePing(), lastPing: RTCConnectionStore.getLastPing(), outboundLossRate: RTCConnectionStore.getOutboundLossRate(), duration: RTCConnectionStore.getDuration() };
         return obj;
       }, [])
-    };
-    return callback(ObjectKV, obj);
+    });
   },
   [MediaEngineContextTypes.STREAM]: function StreamContextInfo() {
-    const first = allActiveStreamKeys.getAllActiveStreamKeys()[0];
-    let obj = first(504);
-    const items = [allActiveStreamKeys];
+    const first = StreamRTCConnectionStore.getAllActiveStreamKeys()[0];
+    const items = [StreamRTCConnectionStore];
     const items1 = [first];
-    obj = {
-      obj: obj.useStateFromStoresObject(items, () => {
-        const obj = { mediaSessionId: closure_1_11.getMediaSessionId(first), hostname: closure_1_1(closure_1_3[16]).getShortHostname(closure_1_11.getHostname(first)), quality: closure_1_11.getQuality(first) };
+    let obj = first(504);
+    return closure_14(ObjectKV, {
+      obj: first(504).useStateFromStoresObject(items, () => {
+        const obj = { mediaSessionId: StreamRTCConnectionStore.getMediaSessionId(first), hostname: RTCConnectionUtilsDefault.getShortHostname(StreamRTCConnectionStore.getHostname(first)), quality: StreamRTCConnectionStore.getQuality(first) };
         return obj;
       }, items1)
-    };
-    return callback(ObjectKV, obj);
+    });
   }
 };
-const result = require("set").fileFinishedImporting("components_native/calls/RTCDebugOverlay.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/calls/RTCDebugOverlay.tsx");
 
 export default function RTCDebugOverlay(arg0) {
   ({ onClose, style } = arg0);
-  const tmp = callback3();
-  const effect = importAllResult.useEffect(() => {
-    callback(table[17]).open();
-    return () => callback(573).wait(callback2(10044).close);
+  const tmp = closure_18();
+  const effect = noop.useEffect(() => {
+    RTCDebugActionCreatorsAll.open();
+    return () => closure_1_1(573).wait(closure_1_2(10071).close);
   }, []);
-  let obj = { top: true, left: true, right: true, bottom: true, style: items, children: null };
-  items = [tmp.container, style];
-  obj = { style: tmp.scroller, indicatorStyle: "white", children: null };
-  const items1 = [callback(RTCDebugGeneral, {}), ];
+  const rect = { top: true, left: true, right: true, bottom: true, style: null, children: null };
+  const items = [tmp.container, style];
+  rect.style = items;
+  const obj = { style: tmp.scroller, indicatorStyle: "white", children: null };
+  const items1 = [closure_1_14(RTCDebugGeneral, {}), ];
   const values = Object.values(MediaEngineContextTypes);
-  items1[1] = values.map((context) => callback2(closure_26, { context }, context));
-  obj[2] = items1;
-  const items2 = [callback2(closure_6, obj), ];
-  obj = { style: tmp.buttonClose, children: null };
-  obj1 = { text: null, onPress: null };
-  const intl = getSystemLocale.intl;
-  obj1[0] = intl.string(getSystemLocale.t.cpT0Cq);
-  obj1[1] = onClose;
-  obj[1] = callback(Button2.Button, obj1);
-  items2[1] = callback(closure_5, obj);
-  obj[5] = items2;
-  return callback2(SafeAreaPaddingView.SafeAreaPaddingView, obj);
+  items1[1] = values.map((context) => closure_1_14(RTCDebugContext, { context }, context));
+  obj.children = items1;
+  const items2 = [__initData(timestampProducer, obj), ];
+  const obj2 = { style: tmp.buttonClose, children: null };
+  const obj3 = { text: null, onPress: null };
+  const intl = util.intl;
+  obj3.text = intl.string(util.t.cpT0Cq);
+  obj3.onPress = onClose;
+  obj2.children = closure_1_14(components_Button_Button.Button, obj3);
+  items2[1] = closure_1_14(hasOwnProperty, obj2);
+  rect.children = items2;
+  return __initData(common_SafeAreaView.SafeAreaPaddingView, rect);
 };

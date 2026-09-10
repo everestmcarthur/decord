@@ -1,40 +1,36 @@
-// Module ID: 11752
-// Function ID: 11753
-// Dependencies: [4901, 7838, 573, 2]
+// Module ID: 11778
+// Function ID: 11779
+// Name: UploadActionCreators
+// Dependencies: [4915, 7852, 573, 2]
 
-// Module 11752
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_2 from "handleChanged" /* 4901 */;
-import { DraftType } from "handleChanged" /* 4901 */;
-import closure_4 from "initialize" /* 7838 */;
+// Module 11778 (UploadActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import DraftStore from "DraftStore" /* 4915 */;
+import UploadStore from "UploadStore" /* 7852 */;
 
-const result = require("set").fileFinishedImporting("actions/native/UploadActionCreators.tsx");
+const DraftType = fn(4915).DraftType;
+const size = fn(2);
+const result = size.fileFinishedImporting("actions/native/UploadActionCreators.tsx");
 
 export default {
   restoreFailedUpload(messageId, file) {
-    let obj = dispatcherDefault;
-    obj = { type: "UPLOAD_RESTORE_FAILED_UPLOAD", messageId, file };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "UPLOAD_RESTORE_FAILED_UPLOAD", messageId, file });
   },
   cancel(channelId, file) {
-    let obj = dispatcherDefault;
-    obj = { type: "UPLOAD_CANCEL_REQUEST", channelId, file };
-    obj.dispatch(obj);
-    messageForFile = messageForFile.getMessageForFile(file.id);
+    DispatcherDefault.dispatch({ type: "UPLOAD_CANCEL_REQUEST", channelId, file });
+    const messageForFile = UploadStore.getMessageForFile(file.id);
     if (null != messageForFile) {
-      if ("" === draft.getDraft(messageForFile.channel_id, DraftType.ChannelMessage)) {
-        obj = { type: "DRAFT_SAVE", channelId: null, draft: null, draftType: null };
-        ({ channel_id: obj4[1], content: obj4[2] } = messageForFile);
-        obj[3] = tmp6.ChannelMessage;
-        dispatcherDefault.dispatch(obj);
-        const tmpResult = dispatcherDefault;
+      if ("" === DraftStore.getDraft(messageForFile.channel_id, DraftType.ChannelMessage)) {
+        const obj3 = { type: "DRAFT_SAVE", channelId: null, draft: null, draftType: null };
+        ({ channel_id: obj4.channelId, content: obj4.draft } = messageForFile);
+        obj3.draftType = tmp6.ChannelMessage;
+        DispatcherDefault.dispatch(obj3);
+        const tmpResult = DispatcherDefault;
       }
       tmp6 = DraftType;
     }
   },
   cancelUploadItem(found, itemId) {
-    let obj = dispatcherDefault;
-    obj = { type: "UPLOAD_ITEM_CANCEL_REQUEST", file: found, itemId };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "UPLOAD_ITEM_CANCEL_REQUEST", file: found, itemId });
   }
 };

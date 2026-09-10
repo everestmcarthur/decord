@@ -5,11 +5,11 @@
 // Exports: useKeyboardContext
 
 // Module 1829 (NOOP)
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import noop from "noop" /* 19 */;
+import _mod17 from "module_17" /* 17 */;
+import noop from "module_19" /* 19 */;
 
-({ useContext: c0, createContext } = noop);
-const Animated = get_ActivityIndicator.Animated;
+({ useContext: closure_0, createContext } = noop);
+const Animated = _mod17.Animated;
 class NOOP {
   constructor() {
     return;
@@ -20,42 +20,41 @@ class NESTED_NOOP {
     return NOOP;
   }
 }
-c0 = 0;
-let obj = {
+let closure_129_0 = 0;
+const obj = {
   value: 0,
   addListener: NOOP,
   removeListener: NOOP,
   modify: NOOP,
   get() {
-    return c0;
+    return React;
   },
   set: NOOP
 };
-c0 = null;
-obj = {
+let closure_130_0 = null;
+const obj3 = { enabled: true, animated: null, reanimated: null, layout: null, update: null, setKeyboardHandlers: null, setInputHandlers: null, setEnabled: null };
+const obj4 = { progress: null, height: null };
+const value = new Animated.Value(0);
+obj4.progress = value;
+const value2 = new Animated.Value(0);
+obj4.height = value2;
+obj3.animated = obj4;
+obj3.reanimated = { progress: obj, height: obj };
+obj3.layout = {
   value: null,
   addListener: NOOP,
   removeListener: NOOP,
   modify: NOOP,
   get() {
-    return c0;
+    return React;
   },
   set: NOOP
 };
-obj = { enabled: true, animated: null, reanimated: null, layout: null, update: null, setKeyboardHandlers: null, setInputHandlers: null, setEnabled: null };
-const obj1 = { progress: null, height: null };
-let value = new Animated.Value(0);
-obj1[0] = value;
-value = new Animated.Value(0);
-obj1[1] = value;
-obj[1] = obj1;
-obj[2] = { progress: obj, height: obj };
-obj[3] = obj;
-obj[4] = Promise.resolve;
-obj[5] = NESTED_NOOP;
-obj[6] = NESTED_NOOP;
-obj[7] = NOOP;
-const context = createContext(obj);
+obj3.update = Promise.resolve;
+obj3.setKeyboardHandlers = NESTED_NOOP;
+obj3.setInputHandlers = NESTED_NOOP;
+obj3.setEnabled = NOOP;
+const context = createContext(obj3);
 
 export const KeyboardContext = context;
-export const useKeyboardContext = () => _null(context);
+export const useKeyboardContext = () => React(context);

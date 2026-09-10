@@ -1,26 +1,59 @@
-// Module ID: 16070
-// Function ID: 16071
-// Name: cardSize
-// Dependencies: [4209, 4579, 15297, 1369, 12, 2]
+// Module ID: 16100
+// Function ID: 16101
+// Name: happeningNowRankingUtils
+// Dependencies: [4222, 4593, 15326, 1369, 12, 2]
 // Exports: cardSize, filterHappeningNowCards, sortHappeningNowCards
 
-// Module 16070 (cardSize)
-import apply from "apply" /* 12 */;
-import closure_3 from "markAllUserIdListsStale" /* 4209 */;
-import closure_4 from "updateVoiceState" /* 4579 */;
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 15297 */;
+// Module 16100 (happeningNowRankingUtils)
+import _mod12 from "module_12" /* 12 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
+import VoiceStateStore from "VoiceStateStore" /* 4593 */;
 
-require = arg1;
-({ HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: c5, HAPPENING_NOW_CARD_WIDTH_SMALL_WITH_MARGIN: closure_6, HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: error } = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/happeningNowRankingUtils.tsx");
+const _modDef12 = _mod12;
 
-export const cardSize = function cardSize(arg0) {
-  return closure_6;
+require = fn;
+const HappeningNowConstants = fn(15326);
+({ HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: hasOwnProperty, HAPPENING_NOW_CARD_WIDTH_SMALL_WITH_MARGIN: metroRequire, HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: closure_7 } = HappeningNowConstants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/happeningNowRankingUtils.tsx");
+
+export const cardSize = function cardSize(kind) {
+  switch (kind.kind) {
+    case "placeholder":
+      return hasOwnProperty;
+    case "voice":
+      return hasOwnProperty;
+    case "activity":
+      return hasOwnProperty;
+    case "guild-event":
+      return hasOwnProperty;
+    case "active-channel":
+      return hasOwnProperty;
+    case "live-guild-stage":
+      return hasOwnProperty;
+    case "embedded-activity":
+      return hasOwnProperty;
+    case "unified-vc":
+      return hasOwnProperty;
+    case "user":
+      return React5;
+    case "invite":
+      return timestampProducer;
+    case "create-channel":
+      return timestampProducer;
+    case "customize-guild":
+      return timestampProducer;
+    case "student-hub-add-channel":
+      return timestampProducer;
+    default:
+      GlobalUtils.assertNever(kind);
+  }
 };
 export const HappeningNowWeights = { Stage: 7, Voice: 6, Stream: 5, Game: 4, Listening: 3, CustomStatus: 3, User: 2, Base: 1 };
 export const HAPPENING_NOW_OFFLINE_PENALTY = -1000;
-export const filterHappeningNowCards = function filterHappeningNowCards(isFocused) {
-  return isFocused.filter((voiceState) => {
+export const filterHappeningNowCards = function filterHappeningNowCards(arr) {
+  return arr.filter((voiceState) => {
     let flag = false;
     if ("voiceState" in voiceState) {
       flag = false;
@@ -29,7 +62,7 @@ export const filterHappeningNowCards = function filterHappeningNowCards(isFocuse
         flag = false;
         if (null != channelId) {
           const _Object = Object;
-          const values = Object.values(store.getVoiceStatesForChannel(channelId));
+          const values = Object.values(VoiceStateStore.getVoiceStatesForChannel(channelId));
           let everyResult = values.length > 0;
           if (everyResult) {
             everyResult = values.every((discoverable) => false === discoverable.discoverable);
@@ -47,13 +80,13 @@ export const filterHappeningNowCards = function filterHappeningNowCards(isFocuse
           const channelId2 = voiceState.voiceState.channelId;
           flag2 = false;
           if (null != channelId2) {
-            const voiceStatesForChannel = store.getVoiceStatesForChannel(channelId2);
+            const voiceStatesForChannel = VoiceStateStore.getVoiceStatesForChannel(channelId2);
             let someResult = null != voiceStatesForChannel;
             if (someResult) {
-              const mapped = callback2(12)(voiceStatesForChannel).map((userId) => userId.userId);
-              const found = mapped.filter(callback(1369).isNotNullish);
-              someResult = found.some((id) => blockedOrIgnored.isBlockedOrIgnored(id));
-              const arr2 = callback2(12)(voiceStatesForChannel);
+              const mapped = _modDef12(voiceStatesForChannel).map((userId) => userId.userId);
+              const found = mapped.filter(GlobalUtils.isNotNullish);
+              someResult = found.some((item) => blockedOrIgnored.isBlockedOrIgnored(item));
+              const arr2 = _modDef12(voiceStatesForChannel);
             }
             flag2 = someResult;
           }
@@ -68,220 +101,79 @@ export const sortHappeningNowCards = function sortHappeningNowCards(result) {
   const items = [
     (kind) => {
       switch (kind.kind) {
-        case "TypeError":
-          let tmp = closure_5;
+        case "placeholder":
+          let tmp = closure_1_5;
           let num = 1;
-          if (tmp === closure_5) {
+          if (tmp === closure_1_5) {
             num = 0;
           }
           return num;
-        case "Error":
-        break;
-        case "HTTP":
-          tmp = closure_5;
+        case "voice":
+          tmp = closure_1_5;
           num = 1;
-          if (tmp === closure_5) {
+          if (tmp === closure_1_5) {
             num = 0;
           }
           return num;
-        case "T":
-        break;
-        case "HermesInternal":
-          tmp = closure_5;
+        case "activity":
+          tmp = closure_1_5;
           num = 1;
-          if (tmp === closure_5) {
+          if (tmp === closure_1_5) {
             num = 0;
           }
           return num;
-        case "Icon":
-        break;
-        case "IconComponent":
-          tmp = closure_5;
+        case "guild-event":
+          tmp = closure_1_5;
           num = 1;
-          if (tmp === closure_5) {
+          if (tmp === closure_1_5) {
             num = 0;
           }
           return num;
-        case "c":
-        break;
-        case "p":
-          tmp = closure_5;
+        case "active-channel":
+          tmp = closure_1_5;
           num = 1;
-          if (tmp === closure_5) {
+          if (tmp === closure_1_5) {
             num = 0;
           }
           return num;
-        case "LengthDelimited":
-        break;
-        case "limit":
-          tmp = closure_5;
+        case "live-guild-stage":
+          tmp = closure_1_5;
           num = 1;
-          if (tmp === closure_5) {
+          if (tmp === closure_1_5) {
             num = 0;
           }
           return num;
-        case "i":
-        break;
-        case "it":
-          tmp = closure_5;
+        case "embedded-activity":
+          tmp = closure_1_5;
           num = 1;
-          if (tmp === closure_5) {
+          if (tmp === closure_1_5) {
             num = 0;
           }
           return num;
-        case "d":
-        break;
-        case "Map":
-          tmp = closure_5;
+        case "unified-vc":
+          tmp = closure_1_5;
           num = 1;
-          if (tmp === closure_5) {
+          if (tmp === closure_1_5) {
             num = 0;
           }
           return num;
-        case "Math":
+        case "user":
+          tmp = closure_1_7;
         break;
-        case "h":
-          tmp = closure_7;
+        case "invite":
+          tmp = closure_1_6;
         break;
-        case "Number":
+        case "create-channel":
+          tmp = closure_1_6;
         break;
-        case "Object":
-          tmp = closure_6;
+        case "customize-guild":
+          tmp = closure_1_6;
         break;
-        case "ct":
-        break;
-        case "PX_16":
-          tmp = closure_6;
-        break;
-        case "flex":
-        break;
-        case "flexDirection":
-          tmp = closure_6;
-        break;
-        case "PX_8":
-        break;
-        case "Path":
-          tmp = closure_6;
-        break;
-        case "Promise":
-        break;
-        case "s":
-        break;
-        case "Reflect":
-        break;
-        case "Set":
-        break;
-        case "format":
-        break;
-        case "formatToPlainString":
-        break;
-        case "String":
-        break;
-        case "Symbol":
-        break;
-        case "Text":
-        break;
-        case "x":
-        break;
-        case "View":
-        break;
-        case "w":
-        break;
-        case "WireType":
-        break;
-        case "__closure":
-        break;
-        case "__d":
-        break;
-        case "__esModule":
-        break;
-        case "__initData":
-        break;
-        case "filter":
-        break;
-        case "__packager_asset":
-        break;
-        case "k":
-        break;
-        case "set":
-        break;
-        case "__workletHash":
-        break;
-        case "_desired":
-        break;
-        case "_distance":
-        break;
-        case "st":
-        break;
-        case "accessibilityLabel":
-        break;
-        case "accessibilityRole":
-        break;
-        case "accessible":
-        break;
-        case "padding":
-        break;
-        case "paddingHorizontal":
-        break;
-        case "add":
-        break;
-        case "alignItems":
-        break;
-        case "ao":
-        break;
-        case "applicationId":
-        break;
-        case "ti":
-        break;
-        case "apply":
-        break;
-        case "assign":
-        break;
-        case "backgroundColor":
-        break;
-        case "round":
-        break;
-        case "bm":
-        break;
-        case "body":
-        break;
-        case "borderRadius":
-        break;
-        case "bottom":
-        break;
-        case "call":
-        break;
-        case "channel":
-        break;
-        case "channelId":
-        break;
-        case "channel_id":
-        break;
-        case "id":
-        break;
-        case "children":
-        break;
-        case "cix":
-        break;
-        case "ix":
-        break;
-        case "unicodeVersion":
-        break;
-        case "code":
-        break;
-        case "color":
-        break;
-        case "colors":
-        break;
-        case "concat":
-        break;
-        case "construct":
-        break;
-        case "constructor":
+        case "student-hub-add-channel":
+          tmp = closure_1_6;
         break;
         default:
-          callback(table[3]).assertNever(kind);
-          const obj = callback(table[3]);
+          GlobalUtils.assertNever(kind);
       }
     },
     (voiceState) => {
@@ -306,5 +198,5 @@ export const sortHappeningNowCards = function sortHappeningNowCards(result) {
       return flag;
     }
   ];
-  return apply.orderBy(result, items, ["asc", "asc"]);
+  return _mod12.orderBy(result, items, ["asc", "asc"]);
 };

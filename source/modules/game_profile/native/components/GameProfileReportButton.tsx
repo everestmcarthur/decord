@@ -1,31 +1,36 @@
-// Module ID: 8902
-// Function ID: 8903
+// Module ID: 8929
+// Function ID: 8930
 // Name: GameProfileReportButton
-// Dependencies: [19, 21, 4527, 8691, 4763, 8903, 1896, 8903, 4975, 1114, 2]
+// Dependencies: [19, 21, 4541, 8719, 4777, 8930, 1896, 8930, 4989, 1114, 2]
 // Exports: default
 
-// Module 8902 (GameProfileReportButton)
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 8929 (GameProfileReportButton)
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8719 */;
+import GameDetectionReportModal from "GameDetectionReportModal" /* 8930 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileReportButton.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileReportButton.tsx");
 
 export default function GameProfileReportButton(applicationId) {
   applicationId = applicationId.applicationId;
   const trackAction = applicationId.trackAction;
   const items = [applicationId, trackAction];
-  const callback = React.useCallback(() => {
-    let obj = trackAction(closure_1_2[2]);
-    obj.hideActionSheet();
-    trackAction(applicationId(closure_1_2[3]).GameProfileTrackActionActions.Feedback);
-    obj = { applicationId };
-    const obj2 = trackAction(closure_1_2[4]);
-    obj2.pushLazy(applicationId(closure_1_2[6])(closure_1_2[5], closure_1_2.paths), obj, applicationId(closure_1_2[7]).MODAL_KEY);
+  const callback = noop.useCallback(() => {
+    ActionSheetActionCreatorsDefault.hideActionSheet();
+    trackAction(GameProfileAnalyticUtils.GameProfileTrackActionActions.Feedback);
+    const obj2 = ModalActionCreatorsDefault;
+    const obj3 = { applicationId };
+    obj2.pushLazy(asyncRequireImpl(8930, dependencyMap.paths), obj3, GameDetectionReportModal.MODAL_KEY);
   }, items);
   let obj = { variant: "secondary", size: "md", text: null, onPress: null };
   const intl = applicationId(1114).intl;
-  obj[2] = intl.string(applicationId(1114).t.qP2cXd);
-  obj[3] = callback;
-  return jsx(applicationId(4975).Button, { variant: "secondary", size: "md", text: null, onPress: null });
+  obj.text = intl.string(applicationId(1114).t.qP2cXd);
+  obj.onPress = callback;
+  return jsx(applicationId(4989).Button, { variant: "secondary", size: "md", text: null, onPress: null });
 };

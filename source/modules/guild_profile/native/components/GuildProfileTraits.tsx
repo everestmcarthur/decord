@@ -1,20 +1,17 @@
-// Module ID: 9207
-// Function ID: 9208
-// Name: TraitEmoji
-// Dependencies: [19, 17, 21, 4560, 576, 1396, 4217, 7130, 4556, 2]
+// Module ID: 9234
+// Function ID: 9235
+// Name: GuildProfileTraits
+// Dependencies: [19, 17, 21, 4574, 576, 1396, 4230, 7144, 4570, 2]
 // Exports: default
 
-// Module 9207 (TraitEmoji)
-import ThemesDefault from "Themes" /* 576 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
-import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4217 */;
-import Text from "Text" /* 4556 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9234 (GuildProfileTraits)
+import nativeDefault from "native" /* 576 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4230 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function TraitEmoji(emoji) {
   emoji = emoji.emoji;
   if (null == emoji) {
@@ -22,49 +19,42 @@ function TraitEmoji(emoji) {
   } else {
     let emojiURL;
     if (null != emoji.id) {
-      let obj = getAvatarURLDefault;
-      obj = { id: null, animated: null, size: 16 };
-      ({ id: obj2[0], animated: obj2[1] } = emoji);
-      emojiURL = obj.getEmojiURL(obj);
+      ({ id: obj2.id, animated: obj2.animated } = emoji);
+      emojiURL = AvatarUtilsDefault.getEmojiURL({ id: null, animated: null, size: 16 });
+      const obj4 = { id: null, animated: null, size: 16 };
     }
-    const obj3 = getEmojiUnavailableReasonDefault;
     const tmp5 = importDefault;
-    obj = { src: null, name: null, fastImageStyle: null };
-    obj[0] = emojiURL;
-    obj[1] = getEmojiUnavailableReasonDefault.isCustomEmoji(emoji) ? emoji.name : emoji.surrogates;
-    obj[2] = tmp.emojiImage;
-    return callback(tmp5(7130), obj);
+    const obj6 = { src: emojiURL, name: EmojiUtilsDefault.isCustomEmoji(emoji) ? emoji.name : emoji.surrogates, fastImageStyle: tmp.emojiImage };
+    return hasOwnProperty(tmp5(7144), obj6);
   }
 }
 function GuildProfileTraitView(trait) {
   trait = trait.trait;
-  let obj = { style: callback3().trait, children: null };
-  obj = { emoji: trait.emoji };
-  const items = [callback(TraitEmoji, obj), ];
-  obj = { variant: "text-sm/medium", color: "text-default", children: trait.label };
-  items[1] = callback(Text.Text, obj);
-  obj[1] = items;
-  return callback2(View, obj);
+  const obj = { style: closure_7().trait, children: null };
+  const items = [hasOwnProperty(TraitEmoji, { emoji: trait.emoji }), hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: trait.label })];
+  obj.children = items;
+  return timestampProducer(View, obj);
 }
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: 8 }, trait: null, emojiImage: null };
-createCacheKey = { display: "flex", flexDirection: "row", gap: 4, alignItems: "center", paddingHorizontal: 8, paddingVertical: 4, borderRadius: ThemesDefault.radii.lg, borderWidth: 1, borderStyle: "solid", borderColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { width: 16, height: 16 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_profile/native/components/GuildProfileTraits.tsx");
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+const obj2 = { container: { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: 8 }, trait: { display: "flex", flexDirection: "row", gap: 4, alignItems: "center", paddingHorizontal: 8, paddingVertical: 4, borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderStyle: "solid", borderColor: nativeDefault.colors.BORDER_SUBTLE }, emojiImage: { width: 16, height: 16 } };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_profile/native/components/GuildProfileTraits.tsx");
 
 export default function GuildProfileTraits(profile) {
   profile = profile.profile;
   const items = [profile];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     const traits = profile.traits;
-    const mapped = traits.map((arg0, arg1) => {
-      const merged = Object.assign(arg0);
-      return { key: "trait-" + arg1 };
+    const mapped = traits.map((item, index) => {
+      const merged = Object.assign(item);
+      return { key: "trait-" + index };
     });
     return mapped.filter((label) => label.label.length > 0);
   }, items);
-  const tmp = callback3();
-  return callback(View, { style: callback3().container, children: memo.map((key) => callback(closure_9, { trait: key }, key.key)) });
+  const tmp = closure_7();
+  return closure_5(View, { style: closure_7().container, children: memo.map((trait) => closure_1_5(GuildProfileTraitView, { trait }, trait.key)) });
 };

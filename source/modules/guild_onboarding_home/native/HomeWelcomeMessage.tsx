@@ -1,75 +1,74 @@
-// Module ID: 16564
-// Function ID: 16565
+// Module ID: 16595
+// Function ID: 16596
 // Name: HomeWelcomeMessage
-// Dependencies: [19, 17, 1979, 1371, 4747, 21, 4560, 576, 563, 8186, 8227, 7311, 8187, 4404, 4271, 1091, 8257, 1178, 11116, 4556, 4712, 9758, 2]
+// Dependencies: [19, 17, 1979, 1371, 4761, 21, 4574, 576, 563, 8212, 8253, 7325, 8213, 4418, 4284, 1091, 8283, 1178, 11143, 4570, 4726, 9785, 2]
 // Exports: default
 
-// Module 16564 (HomeWelcomeMessage)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "createGuildRecordFromRust" /* 1979 */;
-import closure_6 from "mergeGuildAvatar" /* 1371 */;
-import closure_7 from "handleSettingsLoadSuccess" /* 4747 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16595 (HomeWelcomeMessage)
+import nativeDefault from "native" /* 576 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8213 */;
+import noop from "module_19" /* 19 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import UserStore from "UserStore" /* 1371 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4761 */;
 
-const require = arg1;
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { relativeContainer: { position: "relative" }, welcomeContainer: null, welcomeContent: null, avatarBackground: null, avatarBorder: null, avatar: null, adminUsernameContainer: null, adminUsername: null, message: null, icon: null };
-createCacheKey = { marginHorizontal: 12, marginVertical: 16, borderRadius: ThemesDefault.radii.sm, padding: 2, display: "flex", flexDirection: "column" };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: 12, paddingBottom: 12, paddingTop: 4 };
-let obj1 = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: 12, paddingBottom: 12, paddingTop: 4 };
-createCacheKey[3] = { position: "absolute", zIndex: 2, top: 0, left: 28, width: 40, height: 40, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-let obj2 = { position: "absolute", zIndex: 2, top: 0, left: 28, width: 40, height: 40, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[4] = { position: "absolute", top: -2, zIndex: -1, left: 26, width: 44, height: 44, borderRadius: ThemesDefault.radii.round };
-createCacheKey[5] = { position: "absolute", top: 0, zIndex: 3, left: 28 };
-createCacheKey[6] = { display: "flex", flexDirection: "row", alignItems: "center", marginBottom: 4, paddingLeft: 44 };
-let obj3 = { position: "absolute", top: -2, zIndex: -1, left: 26, width: 44, height: 44, borderRadius: ThemesDefault.radii.round };
-createCacheKey[7] = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, paddingLeft: 8 };
-let obj4 = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, paddingLeft: 8 };
-createCacheKey[8] = { color: ThemesDefault.colors.TEXT_DEFAULT };
-createCacheKey[9] = { marginLeft: 4 };
-let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj5 = { color: ThemesDefault.colors.TEXT_DEFAULT };
-const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/native/HomeWelcomeMessage.tsx");
+const require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { relativeContainer: { position: "relative" }, welcomeContainer: { marginHorizontal: 12, marginVertical: 16, borderRadius: nativeDefault.radii.sm, padding: 2, display: "flex", flexDirection: "column" }, welcomeContent: null, avatarBackground: null, avatarBorder: null, avatar: null, adminUsernameContainer: null, adminUsername: null, message: null, icon: null };
+let obj3 = { marginHorizontal: 12, marginVertical: 16, borderRadius: nativeDefault.radii.sm, padding: 2, display: "flex", flexDirection: "column" };
+obj2.welcomeContent = { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: 12, paddingBottom: 12, paddingTop: 4 };
+let size = { position: "absolute", zIndex: 2, top: 0, left: 28, width: 40, height: 40, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj2.avatarBackground = size;
+const size1 = { position: "absolute", top: -2, zIndex: -1, left: 26, width: 44, height: 44, borderRadius: nativeDefault.radii.round };
+obj2.avatarBorder = size1;
+obj2.avatar = { position: "absolute", top: 0, zIndex: 3, left: 28 };
+obj2.adminUsernameContainer = { display: "flex", flexDirection: "row", alignItems: "center", marginBottom: 4, paddingLeft: 44 };
+let obj4 = { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: 12, paddingBottom: 12, paddingTop: 4 };
+obj2.adminUsername = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, paddingLeft: 8 };
+let obj5 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, paddingLeft: 8 };
+obj2.message = { color: nativeDefault.colors.TEXT_DEFAULT };
+obj2.icon = { marginLeft: 4 };
+let closure_10 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_onboarding_home/native/HomeWelcomeMessage.tsx");
 
 export default function HomeWelcomeMessage(guildId) {
   let diff;
   guildId = guildId.guildId;
-  let stateFromStores1;
   let stateFromStores2;
   let stateFromStores3;
-  const tmp = callback2();
+  const tmp = closure_10();
   let tmp2 = guildId;
   let tmp3 = stateFromStores2;
-  let obj = guildId(stateFromStores2[8]);
-  const items = [closure_6];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  obj1 = guildId(stateFromStores2[8]);
-  const items1 = [closure_7];
-  stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_7.getWelcomeMessage(guildId));
+  const items = [UserStore];
+  const stateFromStores = guildId(stateFromStores2[8]).useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj = guildId(stateFromStores2[8]);
+  const items1 = [GuildOnboardingHomeSettingsStore];
+  const stateFromStores1 = guildId(stateFromStores2[8]).useStateFromStores(items1, () => GuildOnboardingHomeSettingsStore.getWelcomeMessage(guildId));
   let obj2 = guildId(stateFromStores2[8]);
-  const items2 = [closure_6];
-  stateFromStores2 = obj2.useStateFromStores(items2, () => {
+  const items2 = [UserStore];
+  stateFromStores2 = guildId(stateFromStores2[8]).useStateFromStores(items2, () => {
     let first;
     if (stateFromStores1 != null) {
       first = stateFromStores1.authorIds[0];
     }
-    return closure_1_6.getUser(first);
+    return UserStore.getUser(first);
   });
   let id;
+  const obj3 = guildId(stateFromStores2[8]);
   if (stateFromStores2 != null) {
     id = stateFromStores2.id;
   }
   const tmp8 = stateFromStores1(stateFromStores2[9]);
   const tmp8Result = stateFromStores1(stateFromStores2[9])(id, guildId);
   ({ primaryColor, secondaryColor, theme } = stateFromStores1(tmp3[10])({ user: stateFromStores2, displayProfile: stateFromStores1(stateFromStores2[9])(id, guildId) }));
-  let tmp2Result = tmp2(tmp3[8]);
-  const items3 = [closure_5];
-  stateFromStores3 = tmp2Result.useStateFromStores(items3, () => closure_1_5.getGuild(guildId));
-  tmp2Result = tmp2(tmp3[11]);
+  const tmp11 = stateFromStores1(tmp3[10])({ user: stateFromStores2, displayProfile: stateFromStores1(stateFromStores2[9])(id, guildId) });
+  const items3 = [GuildStore];
+  stateFromStores3 = tmp2(tmp3[8]).useStateFromStores(items3, () => GuildStore.getGuild(guildId));
+  const tmp2Result = tmp2(tmp3[8]);
   let authorIds;
   if (stateFromStores1 != null) {
     authorIds = stateFromStores1.authorIds;
@@ -77,77 +76,56 @@ export default function HomeWelcomeMessage(guildId) {
   if (authorIds == null) {
     authorIds = [];
   }
-  obj = {};
-  obj[guildId] = authorIds;
-  const subscribeGuildMembers = tmp2Result.useSubscribeGuildMembers(obj, "HomeWelcomeMessage");
+  const obj4 = {};
+  obj4[guildId] = authorIds;
+  const subscribeGuildMembers = tmp2(tmp3[11]).useSubscribeGuildMembers(obj4, "HomeWelcomeMessage");
   const items4 = [stateFromStores2, stateFromStores3];
   const effect = stateFromStores3.useEffect(() => {
-    let obj = stateFromStores2;
     if (!tmp) {
-      id = undefined;
-      ({ id, getAvatarURL } = obj);
-      if (stateFromStores3 != null) {
-        id = tmp5.id;
-      }
       let id1;
-      const avatarURL = getAvatarURL(id, 80);
+      ({ id, getAvatarURL } = obj);
       if (stateFromStores3 != null) {
         id1 = tmp5.id;
       }
-      obj = { dispatchWait: true, guildId: null };
-      obj[1] = id1;
-      stateFromStores1(stateFromStores2[12])(id, avatarURL, obj);
-      const tmp4 = stateFromStores1(stateFromStores2[12]);
+      let id2;
+      const avatarURL = getAvatarURL(id1, 80);
+      if (stateFromStores3 != null) {
+        id2 = tmp5.id;
+      }
+      const obj2 = { dispatchWait: true, guildId: id2 };
+      maybeFetchUserProfileDefault(id, avatarURL, obj2);
     }
   }, items4);
-  const tmp11 = stateFromStores1(tmp3[10])({ user: stateFromStores2, displayProfile: stateFromStores1(stateFromStores2[9])(id, guildId) });
+  const tmp2Result4 = tmp2(tmp3[11]);
   const name = tmp2(tmp3[13]).useName(stateFromStores);
   if (null != stateFromStores1) {
     if (null != stateFromStores) {
       if (null != stateFromStores2) {
         const items5 = ["#B8CDFF", "#8CD9FF"];
-        obj = { theme: null, primaryColor: null, secondaryColor: null, children: null };
-        obj[0] = theme;
-        obj[1] = primaryColor;
-        obj[2] = secondaryColor;
-        obj1 = { style: null, children: null };
-        obj1[0] = tmp.relativeContainer;
+        const obj5 = { theme, primaryColor, secondaryColor, children: null };
+        const obj6 = { style: tmp.relativeContainer, children: null };
         if (null != stateFromStores2.avatarDecoration) {
           const items6 = [null, , , ];
-          obj2 = { style: null };
-          obj2[0] = tmp.avatarBackground;
-          items6[1] = tmp17(tmp20, obj2);
-          const obj3 = { style: null, user: null, size: null, disableStatus: true };
-          obj3[0] = tmp.avatar;
-          obj3[1] = stateFromStores2;
-          let tmp7Result = tmp7(tmp3[16]);
-          obj3[2] = tmp2(tmp3[17]).AvatarSizes.NORMAL;
-          items6[2] = tmp17(tmp7Result, obj3);
-          const obj4 = { containerStyle: null, primaryColor: null, secondaryColor: null, fallbackBackground: null, children: null };
-          obj4[0] = tmp.welcomeContainer;
-          obj4[1] = primaryColor;
-          obj4[2] = secondaryColor;
-          obj4[3] = items5;
-          const obj5 = { style: null, children: null };
-          obj5[0] = tmp.welcomeContent;
-          const obj6 = { style: null, children: null };
-          obj6[0] = tmp.adminUsernameContainer;
-          tmp7Result = tmp7(tmp3[18]);
-          const obj7 = { style: null, variant: "text-md/semibold", children: null };
-          obj7[0] = tmp.adminUsername;
-          obj7[2] = tmp7(tmp3[20]).getName(guildId, null, stateFromStores2);
-          const items7 = [tmp17(tmp2(tmp3[19]).Text, obj7), ];
+          const obj7 = { style: tmp.avatarBackground };
+          items6[1] = tmp17(tmp20, obj7);
+          const obj8 = { style: tmp.avatar, user: stateFromStores2, size: tmp2(tmp3[17]).AvatarSizes.NORMAL, disableStatus: true };
+          items6[2] = tmp17(tmp7(tmp3[16]), obj8);
+          const obj9 = { containerStyle: tmp.welcomeContainer, primaryColor, secondaryColor, fallbackBackground: items5, children: null };
+          const obj10 = { style: tmp.welcomeContent, children: null };
+          const obj11 = { style: tmp.adminUsernameContainer, children: null };
+          const tmp7Result = tmp7(tmp3[16]);
+          const obj12 = { style: tmp.adminUsername, variant: "text-md/semibold", children: null };
+          const tmp7Result3 = tmp7(tmp3[18]);
+          obj12.children = tmp7(tmp3[20]).getName(guildId, null, stateFromStores2);
+          const items7 = [tmp17(tmp2(tmp3[19]).Text, obj12), ];
           let tmp17Result = null;
           if (tmp16) {
-            const obj8 = { size: null, style: null, source: null, disableColor: true };
-            obj8[0] = tmp2(tmp3[17]).Icon.Sizes.REFRESH_SMALL_16;
-            obj8[1] = tmp.icon;
-            obj8[2] = tmp7(tmp3[21]);
-            tmp17Result = tmp17(tmp2(tmp3[17]).Icon, obj8);
+            const obj13 = { size: tmp2(tmp3[17]).Icon.Sizes.REFRESH_SMALL_16, style: tmp.icon, source: tmp7(tmp3[21]), disableColor: true };
+            tmp17Result = tmp17(tmp2(tmp3[17]).Icon, obj13);
           }
           items7[1] = tmp17Result;
-          obj6[1] = items7;
-          const items8 = [tmp19(tmp20, obj6), ];
+          obj11.children = items7;
+          const items8 = [tmp19(tmp20, obj11), ];
           let username = name;
           if (name == null) {
             username = stateFromStores.username;
@@ -158,53 +136,44 @@ export default function HomeWelcomeMessage(guildId) {
           let num3 = 0;
           if (0 < parts.length - 1) {
             do {
-              let tmp29 = callback;
-              let tmp30 = guildId;
-              let tmp31 = stateFromStores2;
-              let obj9 = { variant: "text-sm/normal", style: null, children: null };
-              obj9[1] = tmp.message;
-              obj9[2] = parts[num3];
-              let arr = items9.push(callback(guildId(stateFromStores2[19]).Text, obj9, num3));
-              let obj10 = { variant: "text-sm/bold", style: null, children: null };
-              obj10[1] = tmp.message;
+              let obj14 = { variant: "text-sm/normal", style: tmp.message, children: parts[num3] };
+              let arr = items9.push(closure_8(guildId(stateFromStores2[19]).Text, obj14, num3));
+              let obj15 = { variant: "text-sm/bold", style: tmp.message, children: null };
               let _HermesInternal = HermesInternal;
-              obj10[2] = "@" + username;
+              obj15.children = "@" + username;
               let _HermesInternal2 = HermesInternal;
-              arr = items9.push(callback(guildId(stateFromStores2[19]).Text, obj10, "" + num3 + "-user"));
+              let arr2 = items9.push(closure_8(guildId(stateFromStores2[19]).Text, obj15, "" + num3 + "-user"));
               num3 = num3 + 1;
               tmp3 = stateFromStores2;
               tmp2 = guildId;
-              tmp28 = callback;
+              tmp28 = closure_8;
               diff = parts.length - 1;
             } while (num3 < diff);
           }
-          const obj11 = { variant: "text-sm/normal", children: null };
-          const obj12 = { variant: "text-sm/normal", style: null, children: null };
-          obj12[1] = tmp.message;
-          obj12[2] = parts[parts.length - 1];
-          items9.push(tmp28(tmp2(tmp3[19]).Text, obj12, parts.length));
-          obj11[1] = items9;
-          items8[1] = tmp17(tmp2(tmp3[19]).Text, obj11);
-          obj5[1] = items8;
-          obj4[4] = tmp19(tmp20, obj5);
-          items6[3] = tmp17(tmp7Result, obj4);
-          obj1[1] = items6;
-          obj[3] = tmp19(tmp20, obj1);
-          return tmp17(tmp18, obj);
+          const obj16 = { variant: "text-sm/normal", children: null };
+          const obj17 = { variant: "text-sm/normal", style: tmp.message, children: parts[parts.length - 1] };
+          items9.push(tmp28(tmp2(tmp3[19]).Text, obj17, parts.length));
+          obj16.children = items9;
+          items8[1] = tmp17(tmp2(tmp3[19]).Text, obj16);
+          obj10.children = items8;
+          obj9.children = tmp19(tmp20, obj10);
+          items6[3] = tmp17(tmp7Result3, obj9);
+          obj6.children = items6;
+          obj5.children = tmp19(tmp20, obj6);
+          return tmp17(tmp18, obj5);
         } else {
           const items10 = [tmp.avatarBorder, ];
           if (null != primaryColor) {
             let int2rgbaResult = tmp2(tmp3[15]).int2rgba(primaryColor, 1);
-            const tmp2Result2 = tmp2(tmp3[15]);
+            const tmp2Result6 = tmp2(tmp3[15]);
           } else {
             int2rgbaResult = items5[0];
           }
-          const obj13 = { style: null };
-          const obj14 = { backgroundColor: null };
-          obj14[0] = int2rgbaResult;
-          items10[1] = obj14;
-          obj13[0] = items10;
-          tmp17Result = tmp17(tmp20, obj13);
+          const obj18 = { style: null };
+          const obj19 = { backgroundColor: int2rgbaResult };
+          items10[1] = obj19;
+          obj18.style = items10;
+          tmp17(tmp20, obj18);
         }
         tmp16 = null != stateFromStores3 && stateFromStores3.ownerId === stateFromStores2.id;
       }

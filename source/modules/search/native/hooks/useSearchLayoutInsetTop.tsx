@@ -1,14 +1,14 @@
-// Module ID: 16869
-// Function ID: 16870
+// Module ID: 16906
+// Function ID: 16907
 // Name: useSearchLayoutInsetTop
 // Dependencies: [1611, 2]
 // Exports: default
 
-// Module 16869 (useSearchLayoutInsetTop)
-import set from "set" /* 2 */;
+// Module 16906 (useSearchLayoutInsetTop)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/search/native/hooks/useSearchLayoutInsetTop.tsx");
+const result = size.fileFinishedImporting("modules/search/native/hooks/useSearchLayoutInsetTop.tsx");
 
 export default function useSearchLayoutInsetTop() {
   return useSafeAreaInsetsDefault().top + 8;

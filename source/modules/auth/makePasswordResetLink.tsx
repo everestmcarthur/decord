@@ -1,15 +1,15 @@
-// Module ID: 6956
-// Function ID: 6957
+// Module ID: 6970
+// Function ID: 6971
 // Name: makePasswordResetLink
 // Dependencies: [1074, 2]
 // Exports: default
 
-// Module 6956 (makePasswordResetLink)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 6970 (makePasswordResetLink)
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const Routes = ME.Routes;
-const result = set.fileFinishedImporting("modules/auth/makePasswordResetLink.tsx");
+const Routes = Constants.Routes;
+const result = size.fileFinishedImporting("modules/auth/makePasswordResetLink.tsx");
 
 export default function makePasswordResetLink(arg0) {
   return "https:" + window.GLOBAL_ENV.WEBAPP_ENDPOINT + Routes.RESET + "#token=" + arg0;

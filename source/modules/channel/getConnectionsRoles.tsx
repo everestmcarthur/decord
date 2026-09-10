@@ -1,25 +1,26 @@
-// Module ID: 5409
-// Function ID: 5410
-// Name: ChannelTypes
+// Module ID: 5423
+// Function ID: 5424
+// Name: getConnectionsRoles
 // Dependencies: [2015, 1979, 1074, 1086, 2]
 // Exports: default
 
-// Module 5409 (ChannelTypes)
-import closure_2 from "createGuildRoleRecordFromRust" /* 2015 */;
-import closure_3 from "createGuildRecordFromRust" /* 1979 */;
-import ME from "ME" /* 1074 */;
-import importAllResult from "fromString" /* 1086 */;
+// Module 5423 (getConnectionsRoles)
+import GuildRoleStore from "GuildRoleStore" /* 2015 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import BigFlagUtils from "BigFlagUtils" /* 1086 */;
 
-({ ChannelTypes, Permissions } = ME);
+const Constants = fn(1074);
+({ ChannelTypes, Permissions } = Constants);
 let items = [, , , , , , ];
 ({ GUILD_TEXT: arr[0], GUILD_VOICE: arr[1], GUILD_ANNOUNCEMENT: arr[2], GUILD_FORUM: arr[3], GUILD_APP: arr[4], PUBLIC_THREAD: arr[5], PRIVATE_THREAD: arr[6] } = ChannelTypes);
-let closure_5 = importAllResult.combine(Permissions.VIEW_CHANNEL, Permissions.SEND_MESSAGES);
-const result = require("set").fileFinishedImporting("modules/channel/getConnectionsRoles.tsx");
+let closure_5 = BigFlagUtils.combine(Permissions.VIEW_CHANNEL, Permissions.SEND_MESSAGES);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel/getConnectionsRoles.tsx");
 
 export default function getConnectionsRoles(type) {
   if (null != type) {
     if (items.includes(type.type)) {
-      guild = guild.getGuild(type.guild_id);
+      const guild = GuildStore.getGuild(type.guild_id);
       if (null == guild) {
         items = [];
       } else {
@@ -28,7 +29,7 @@ export default function getConnectionsRoles(type) {
         const found = values.filter((type) => {
           let tmp = 0 === type.type;
           if (tmp) {
-            const role = closure_1_2.getRole(guild.id, type.id);
+            const role = GuildRoleStore.getRole(guild.id, type.id);
             let guild_connections;
             if (role != null) {
               const tags = role.tags;
@@ -39,13 +40,12 @@ export default function getConnectionsRoles(type) {
             tmp = null === guild_connections;
           }
           if (tmp) {
-            tmp = !guild(closure_1_1[3]).hasAny(type.deny, closure_1_5);
-            const obj = guild(closure_1_1[3]);
+            tmp = !BigFlagUtils.hasAny(type.deny, closure_5);
           }
           return tmp;
         });
-        const mapped = found.map((id) => closure_1_2.getRole(guild.id, id.id));
-        items = mapped.filter((arg0) => null != arg0);
+        const mapped = found.map((id) => GuildRoleStore.getRole(guild.id, id.id));
+        items = mapped.filter((item) => null != item);
       }
       return items;
     }

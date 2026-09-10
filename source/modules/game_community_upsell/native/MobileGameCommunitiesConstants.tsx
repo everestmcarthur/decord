@@ -1,11 +1,11 @@
-// Module ID: 16268
-// Function ID: 16269
-// Name: MAX_DISPLAYED_UPSELL_GUILDS
+// Module ID: 16298
+// Function ID: 16299
+// Name: MobileGameCommunitiesConstants
 // Dependencies: [2]
 
-// Module 16268 (MAX_DISPLAYED_UPSELL_GUILDS)
-import set from "set" /* 2 */;
+// Module 16298 (MobileGameCommunitiesConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/game_community_upsell/native/MobileGameCommunitiesConstants.tsx");
+const result = size.fileFinishedImporting("modules/game_community_upsell/native/MobileGameCommunitiesConstants.tsx");
 
 export const MAX_DISPLAYED_UPSELL_GUILDS = 8;

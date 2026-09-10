@@ -1,11 +1,11 @@
-// Module ID: 12489
-// Function ID: 12490
+// Module ID: 12515
+// Function ID: 12516
 // Name: GameServerStatus
 // Dependencies: [2]
 
-// Module 12489 (GameServerStatus)
-import set from "set" /* 2 */;
+// Module 12515 (GameServerStatus)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/GameServerStatus.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/GameServerStatus.tsx");
 
 export const GameServerStatus = { STARTING: "starting", STARTUP_FAILED: "startup_failed", MISSING_STOCK: "missing_stock", SLEEPING: "sleeping", OFFLINE: "offline", ONLINE: "online", DELETED: "deleted", PROVIDER_ERRORED: "provider_errored" };

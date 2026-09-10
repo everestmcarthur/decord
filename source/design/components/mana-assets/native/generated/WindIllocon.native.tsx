@@ -1,17 +1,17 @@
-// Module ID: 6575
-// Function ID: 6576
+// Module ID: 6589
+// Function ID: 6590
 // Name: WindIllocon
-// Dependencies: [21, 5587, 6576, 2]
+// Dependencies: [21, 5601, 6590, 2]
 // Exports: WindIllocon
 
-// Module 6575 (WindIllocon)
-import set from "set" /* 2 */;
+// Module 6589 (WindIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 6576 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6590 from "module_6590" /* 6590 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/WindIllocon.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/WindIllocon.native.tsx");
 
 export const WindIllocon = function WindIllocon(size) {
   let num = size.size;
@@ -19,13 +19,13 @@ export const WindIllocon = function WindIllocon(size) {
   if (num === undefined) {
     num = 64;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef6590 };
+  obj.source = obj2;
   const items = [{ width: num, height: num }];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { uri: metadataDefault });
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

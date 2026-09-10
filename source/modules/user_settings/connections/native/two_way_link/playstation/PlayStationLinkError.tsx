@@ -1,27 +1,26 @@
-// Module ID: 9270
-// Function ID: 9271
+// Module ID: 9297
+// Function ID: 9298
 // Name: PlayStationLinkError
-// Dependencies: [19, 9260, 1074, 21, 1483, 9271, 1114, 9272, 2]
+// Dependencies: [19, 9287, 1074, 21, 1483, 9298, 1114, 9299, 2]
 // Exports: PlayStationLinkError
 
-// Module 9270 (PlayStationLinkError)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 9297 (PlayStationLinkError)
+import util from "util" /* 1114 */;
 import useNavigation from "useNavigation" /* 1483 */;
-import useConnectRetry from "useConnectRetry" /* 9271 */;
-import TwoWayLinkError from "TwoWayLinkError" /* 9272 */;
-import { PlayStationLinkModalScenes as closure_2 } from "PlayStationLinkModalScenes" /* 9260 */;
-import { AbortCodes } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
+import useConnectRetry from "useConnectRetry" /* 9298 */;
+import TwoWayLinkError from "TwoWayLinkError" /* 9299 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkError.tsx");
+require = fn;
+const constants = fn(9287).PlayStationLinkModalScenes;
+const AbortCodes = fn(1074).AbortCodes;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkError.tsx");
 
 export const PlayStationLinkError = function PlayStationLinkError(arg0) {
   ({ onClose, errorCode } = arg0);
-  let obj = useNavigation;
-  const navigation = obj.useNavigation();
+  const navigation = useNavigation.useNavigation();
   const connectRetry = useConnectRetry.useConnectRetry(navigation, constants.PRE_CONNECT);
   if (errorCode === AbortCodes.UNDER_MINIMUM_AGE) {
     const intl2 = tmp(1114).intl;
@@ -30,11 +29,11 @@ export const PlayStationLinkError = function PlayStationLinkError(arg0) {
     const intl = tmp(1114).intl;
     stringResult = intl.string(tmp(1114).t.qE9nqE);
   }
-  obj = { title: null, body: null, onClose: null, onRetry: null };
+  const obj3 = { title: null, body: null, onClose: null, onRetry: null };
   const intl3 = tmp(1114).intl;
-  obj[0] = intl3.string(getSystemLocale.t.eY3qHd);
-  obj[1] = stringResult;
-  obj[2] = onClose;
-  obj[3] = connectRetry;
+  obj3.title = intl3.string(util.t.eY3qHd);
+  obj3.body = stringResult;
+  obj3.onClose = onClose;
+  obj3.onRetry = connectRetry;
   return jsx(TwoWayLinkError.TwoWayLinkError, { title: null, body: null, onClose: null, onRetry: null });
 };

@@ -1,46 +1,39 @@
-// Module ID: 12117
-// Function ID: 12118
-// Name: EmptyState
-// Dependencies: [19, 17, 21, 4560, 576, 4411, 4495, 12118, 12119, 12055, 9414, 4556, 1114, 2]
+// Module ID: 12143
+// Function ID: 12144
+// Name: NoPermsState
+// Dependencies: [19, 17, 21, 4574, 576, 4425, 4509, 12144, 12145, 12081, 9441, 4570, 1114, 2]
 // Exports: default
 
-// Module 12117 (EmptyState)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
-import useThemeDefault from "useTheme" /* 4495 */;
-import Text from "Text" /* 4556 */;
-import handleApplicationSelected from "handleApplicationSelected" /* 12055 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12143 (NoPermsState)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import shared from "shared" /* 4425 */;
+import useThemeDefault from "useTheme" /* 4509 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12081 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ View: c3, Image: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: null, textContainer: null, image: null };
-createCacheKey = { paddingVertical: 16, paddingHorizontal: 24, gap: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, alignItems: "center", justifyContent: "flex-start", display: "flex", flexDirection: "row" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexShrink: 1 };
-createCacheKey[2] = { width: 64, height: 64 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/NoPermsState.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, Image: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { paddingVertical: 16, paddingHorizontal: 24, gap: 12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, alignItems: "center", justifyContent: "flex-start", display: "flex", flexDirection: "row" }, textContainer: { flexShrink: 1 }, image: { width: 64, height: 64 } };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/NoPermsState.tsx");
 
 export default function EmptyState() {
-  const tmp = callback3();
-  let obj = AccessibilityAnnouncer;
-  const tmp4 = importDefault;
-  const tmp4Result = importDefault(obj.isThemeLight(useThemeDefault()) ? 12118 : 12119);
-  const logAppLauncherEmptyStateView = handleApplicationSelected.useLogAppLauncherEmptyStateView(tmp2(9414).AppLauncherEmptyStateType.HOME_NO_PERMISSIONS);
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.image, resizeMode: "contain", source: tmp4Result };
-  const items = [callback(closure_4, obj), ];
-  obj1 = { style: tmp.textContainer, variant: "text-sm/medium", color: "text-muted", children: null };
+  const tmp = closure_7();
+  const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 12144 : 12145);
+  const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(tmp2(9441).AppLauncherEmptyStateType.HOME_NO_PERMISSIONS);
+  const obj2 = { style: tmp.container, children: null };
+  const items = [hasOwnProperty(React4, { style: tmp.image, resizeMode: "contain", source: tmp4Result }), ];
+  const obj4 = { style: tmp.textContainer, variant: "text-sm/medium", color: "text-muted", children: null };
   const intl = tmp2(1114).intl;
-  obj1[3] = intl.string(getSystemLocale.t.uDnXXj);
-  items[1] = callback(Text.Text, obj1);
-  obj[1] = items;
-  return callback2(closure_3, obj);
+  obj4.children = intl.string(util.t.uDnXXj);
+  items[1] = hasOwnProperty(Text_Text.Text, obj4);
+  obj2.children = items;
+  return timestampProducer(React3, obj2);
 };

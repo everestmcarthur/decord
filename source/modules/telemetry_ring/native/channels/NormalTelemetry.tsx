@@ -1,27 +1,26 @@
-// Module ID: 14084
-// Function ID: 14085
-// Name: NormalTelemetryImpl
+// Module ID: 14107
+// Function ID: 14108
+// Name: NormalTelemetry
 // Dependencies: [1902, 1903, 2]
 
-// Module 14084 (NormalTelemetryImpl)
-import TelemetryChannel from "TelemetryChannel" /* 1903 */;
-import importDefaultResult from "append" /* 1902 */;
-import importDefaultResult1 from "TelemetryChannel" /* 1903 */;
+// Module 14107 (NormalTelemetry)
+import TelemetryRingNative2 from "TelemetryRingNative" /* 1903 */;
+import BaseTelemetryChannel from "BaseTelemetryChannel" /* 1902 */;
 
-require = arg1;
+const TelemetryRingNative = TelemetryRingNative2;
+
+require = fn;
 class NormalTelemetryImpl extends tmp3 {
   constructor() {
-    tmp2 = require("TelemetryChannel");
+    tmp2 = closure_1(closure_2[1]);
     items = [];
-    items[0] = require("TelemetryChannel").TelemetryChannel.NORMAL;
-    tmp = new tmp(tmp2, items, closure_1, new.target);
-    // ThrowIfThisInitialized (0x7c)
-    return tmp;
+    items[0] = closure_0(closure_2[1]).TelemetryChannel.NORMAL;
+    tmp1 = new tmp(tmp2, items, closure_1, new.target);
+    return tmp1;
   }
 }
-let items = [require("TelemetryChannel").TelemetryChannel.NORMAL];
-importDefaultResult = new importDefaultResult(importDefaultResult1, items, tmp, Object, NormalTelemetryImpl, importDefaultResult, importDefaultResult1);
-// ThrowIfThisInitialized (0x7c)
-const result = require("set").fileFinishedImporting("modules/telemetry_ring/native/channels/NormalTelemetry.tsx");
+let items = [fn(1903).TelemetryChannel.NORMAL];
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/telemetry_ring/native/channels/NormalTelemetry.tsx");
 
-export default importDefaultResult;
+export default new BaseTelemetryChannel(TelemetryRingNative, items, tmp, Object, NormalTelemetryImpl, BaseTelemetryChannel, TelemetryRingNative);

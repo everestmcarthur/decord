@@ -1,45 +1,43 @@
-// Module ID: 17033
-// Function ID: 17034
-// Dependencies: [19, 17, 9510, 21, 4560, 4975, 11159, 1114, 8097, 2]
+// Module ID: 17064
+// Function ID: 17065
+// Name: MinimizeActivityButton
+// Dependencies: [19, 17, 9537, 21, 4574, 4989, 11186, 1114, 8113, 2]
 
-// Module 17033
-import registerAssetDefault from "registerAsset" /* 11159 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 9510 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17064 (MinimizeActivityButton)
+import _modDef11186 from "module_11186" /* 11186 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
-let closure_7 = createCacheKey.createStyles({ buttonParent: { flexShrink: 1 } });
-const memoResult = importAllResult.memo(function MinimizeActivityButton(arg0) {
+const require = fn;
+const View = fn(17).View;
+const ActivityPanelModes = fn(9537).ActivityPanelModes;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_7 = createStyles.createStyles({ buttonParent: { flexShrink: 1 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/panel/native/MinimizeActivityButton.tsx");
+
+export default noop.memo(function MinimizeActivityButton(arg0) {
   ({ activityName, setMode } = arg0);
   const items = [setMode];
-  const callback = importAllResult.useCallback(() => {
-    setMode(closure_1_5.PIP);
+  const callback = noop.useCallback(() => {
+    setMode(ActivityPanelModes.PIP);
   }, items);
   if (undefined !== activityName) {
     if ("" !== activityName) {
-      let obj = { style: null, children: null };
-      obj[0] = tmp2.buttonParent;
-      obj = { icon: null, accessibilityLabel: null, onPress: null, text: null, size: "sm", variant: "secondary-overlay", maxFontSizeMultiplier: 1, shrink: true };
-      obj[0] = registerAssetDefault;
+      const obj2 = { style: tmp2.buttonParent, children: null };
+      const obj3 = { icon: _modDef11186, accessibilityLabel: null, onPress: null, text: null, size: "sm", variant: "secondary-overlay", maxFontSizeMultiplier: 1, shrink: true };
       const intl2 = setMode(1114).intl;
-      obj[1] = intl2.string(setMode(1114).t.brPQ5U);
-      obj[2] = callback;
-      obj[3] = activityName;
-      obj[1] = jsx(setMode(4975).Button, { icon: null, accessibilityLabel: null, onPress: null, text: null, size: "sm", variant: "secondary-overlay", maxFontSizeMultiplier: 1, shrink: true });
-      let tmp3 = <View icon={null} accessibilityLabel={null} onPress={null} text={null} size="sm" variant="secondary-overlay" maxFontSizeMultiplier={1} shrink />;
+      obj3.accessibilityLabel = intl2.string(setMode(1114).t.brPQ5U);
+      obj3.onPress = callback;
+      obj3.text = activityName;
+      obj2.children = jsx(setMode(4989).Button, { icon: _modDef11186, accessibilityLabel: null, onPress: null, text: null, size: "sm", variant: "secondary-overlay", maxFontSizeMultiplier: 1, shrink: true });
+      let tmp3 = <View style={tmp2.buttonParent}>{null}</View>;
     }
     return tmp3;
   }
-  obj = { icon: registerAssetDefault, accessibilityLabel: null, onPress: null, size: "sm", variant: "secondary-overlay", maxFontSizeMultiplier: 1 };
+  const obj = { icon: _modDef11186, accessibilityLabel: null, onPress: null, size: "sm", variant: "secondary-overlay", maxFontSizeMultiplier: 1 };
   const intl = setMode(1114).intl;
-  obj[1] = intl.string(setMode(1114).t.brPQ5U);
-  obj[2] = callback;
-  tmp3 = jsx(setMode(8097).IconButton, { icon: registerAssetDefault, accessibilityLabel: null, onPress: null, size: "sm", variant: "secondary-overlay", maxFontSizeMultiplier: 1 });
+  obj.accessibilityLabel = intl.string(setMode(1114).t.brPQ5U);
+  obj.onPress = callback;
+  tmp3 = jsx(setMode(8113).IconButton, { icon: _modDef11186, accessibilityLabel: null, onPress: null, size: "sm", variant: "secondary-overlay", maxFontSizeMultiplier: 1 });
 });
-const result = require("set").fileFinishedImporting("modules/activities/panel/native/MinimizeActivityButton.tsx");
-
-export default memoResult;

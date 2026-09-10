@@ -1,12 +1,14 @@
 // Module ID: 1999
 // Function ID: 2000
-// Name: prefix
+// Name: GuildEntityDao
 // Dependencies: [1991, 1993, 2]
 
-// Module 1999 (prefix)
-import set from "set" /* 2 */;
-import fromDatabaseTransaction from "fromDatabaseTransaction" /* 1991 */;
+// Module 1999 (GuildEntityDao)
+import Table from "Table" /* 1991 */;
 import TableId from "TableId" /* 1993 */;
+import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 let GuildEntityDao;
 class GuildEntityDao {
@@ -19,7 +21,7 @@ class GuildEntityDao {
     obj.originalPrefix = global;
     items = [];
     items[0] = global;
-    table = new require("fromDatabaseTransaction").Table(items, require, importDefault, flag);
+    table = new closure_0(closure_1[0]).Table(items, require, importDefault, flag);
     obj.table = table;
     return obj;
   }
@@ -33,15 +35,18 @@ Object.defineProperty(prototype, "prefix", {
 });
 prototype["withoutLogging"] = function withoutLogging() {
   const originalPrefix = this.originalPrefix;
-  if (typeof GuildEntityDao !== "function") {
-    HermesBuiltin.throwTypeError();
+  const tableId = this.table.tableId;
+  const database = this.table.database;
+  if (typeof GuildEntityDao === "function") {
+    const obj = Object.create(GuildEntityDao.prototype);
+    obj.originalPrefix = originalPrefix;
+    const items = [originalPrefix];
+    const table = new Table.Table(items, tableId, database, false);
+    obj.table = table;
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const obj = Object.create(GuildEntityDao.prototype);
-  obj.originalPrefix = originalPrefix;
-  const items = [originalPrefix];
-  const table = new fromDatabaseTransaction.Table(items, this.table.tableId, this.table.database, false);
-  obj.table = table;
-  return obj;
 };
 prototype["get"] = function get(arg0, arg1) {
   const table = this.table;
@@ -82,20 +87,20 @@ prototype["getGuildId"] = function getGuildId(arg0) {
   return table.getParentId(items);
 };
 prototype["put"] = function put(arg0, arg1) {
-  const _require = arg0;
-  dependencyMap = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   let Replace = arg2;
   if (arg2 === undefined) {
-    Replace = _require(1993).ConflictOptions.Replace;
+    Replace = TableId.ConflictOptions.Replace;
   }
   return this.transaction((put) => put.put(closure_0, closure_1, Replace), "" + this.prefix + " put");
 };
 prototype["putAll"] = function putAll(arg0, arg1) {
-  const _require = arg0;
-  dependencyMap = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   let Replace = arg2;
   if (arg2 === undefined) {
-    Replace = _require(1993).ConflictOptions.Replace;
+    Replace = TableId.ConflictOptions.Replace;
   }
   return this.transaction((putAll) => putAll.putAll(closure_0, closure_1, Replace), "" + this.prefix + " putAll");
 };
@@ -118,22 +123,24 @@ prototype["transaction"] = function transaction(arg0, arg1) {
   closure_0 = arg0;
   const table = this.table;
   return table.transaction((transaction) => {
-    if (typeof closure_1_3 !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (typeof GuildEntityDaoTransaction === "function") {
+      const obj = Object.create(tmp2.prototype);
+      obj.transaction = transaction;
+      return tmp(obj);
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    const obj = Object.create(closure_1_3.prototype);
-    obj.transaction = transaction;
-    return closure_0(obj);
   }, arg1);
 };
 prototype["upgradeTransaction"] = function upgradeTransaction(arg0) {
-  const table = this.table;
-  if (typeof GuildEntityDaoTransaction !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof GuildEntityDaoTransaction === "function") {
+    const obj = Object.create(tmp.prototype);
+    obj.transaction = tmp2;
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const obj = Object.create(GuildEntityDaoTransaction.prototype);
-  obj.transaction = table.upgradeTransaction(arg0);
-  return obj;
+  tmp = GuildEntityDaoTransaction;
 };
 prototype["getManySyncUnsafe"] = function getManySyncUnsafe(arg0, arg1) {
   const table = this.table;
@@ -150,8 +157,10 @@ prototype["deleteSyncUnsafe"] = function deleteSyncUnsafe(arg0) {
   return table.deleteSyncUnsafe(items);
 };
 GuildEntityDao["cell"] = function cell(arg0, data, generation) {
+  const obj = { key: null, data, generation };
   const items = [arg0, data.id];
-  return { key: items, data, generation };
+  obj.key = items;
+  return obj;
 };
 let GuildEntityDaoTransaction;
 class GuildEntityDaoTransaction {
@@ -163,13 +172,15 @@ class GuildEntityDaoTransaction {
 }
 const prototype2 = GuildEntityDaoTransaction.prototype;
 GuildEntityDaoTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(prefix, tableId, transaction) {
-  const tableTransaction = new fromDatabaseTransaction.TableTransaction(prefix, tableId, transaction);
-  if (typeof GuildEntityDaoTransaction !== "function") {
-    HermesBuiltin.throwTypeError();
+  const tableTransaction = new Table.TableTransaction(prefix, tableId, transaction);
+  if (typeof GuildEntityDaoTransaction === "function") {
+    const obj = Object.create(tmp.prototype);
+    obj.transaction = tableTransaction;
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const obj = Object.create(GuildEntityDaoTransaction.prototype);
-  obj.transaction = tableTransaction;
-  return obj;
+  tmp = GuildEntityDaoTransaction;
 };
 prototype2["put"] = function put(arg0, arg1) {
   let Replace = arg2;
@@ -187,13 +198,13 @@ prototype2["putWithGeneration"] = function putWithGeneration(arg0, arg1, arg2) {
   return transaction.put(GuildEntityDao.cell(arg0, arg1, arg2), Replace);
 };
 prototype2["putAll"] = function putAll(arg0, arr) {
-  const _require = arg0;
+  _require = arg0;
   let Replace = arg2;
   if (arg2 === undefined) {
-    Replace = _require(1993).ConflictOptions.Replace;
+    Replace = require("TableId").ConflictOptions.Replace;
   }
   const transaction = this.transaction;
-  return transaction.putAll(arr.map((arg0) => closure_1_2.cell(closure_0, arg0, null)), Replace);
+  return transaction.putAll(arr.map((item) => GuildEntityDao.cell(closure_0, item, null)), Replace);
 };
 prototype2["replaceAll"] = function replaceAll(arg0, arg1) {
   this.delete(arg0);
@@ -223,7 +234,7 @@ prototype2["deleteGeneration"] = function deleteGeneration(arg0, arg1) {
   const transaction = this.transaction;
   return transaction.deleteGeneration([], arg0, arg1);
 };
-const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/GuildEntityDao.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/GuildEntityDao.tsx");
 
 export { GuildEntityDao };
 export { GuildEntityDaoTransaction };

@@ -1,31 +1,31 @@
-// Module ID: 8590
-// Function ID: 8591
+// Module ID: 8618
+// Function ID: 8619
 // Name: ManualReviewDecidedTeenAlertModal
-// Dependencies: [19, 21, 4910, 1114, 2978, 4910, 2]
+// Dependencies: [19, 21, 4924, 1114, 2978, 4924, 2]
 // Exports: default
 
-// Module 8590 (ManualReviewDecidedTeenAlertModal)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 2978 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4910 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 8618 (ManualReviewDecidedTeenAlertModal)
+import util from "util" /* 1114 */;
+import _modDef2978 from "module_2978" /* 2978 */;
+import AlertModal from "AlertModal" /* 4924 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/age_assurance/native/ManualReviewDecidedTeenAlertModal.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/age_assurance/native/ManualReviewDecidedTeenAlertModal.tsx");
 
 export default function ManualReviewDecidedTeenAlertModal() {
-  let obj = { title: null, content: null, actions: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(messagesProxyDefault.AA3xYb);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(messagesProxyDefault["2+f8w1"]);
-  obj = { children: null };
-  obj = { text: null };
-  const intl3 = getSystemLocale.intl;
-  obj[0] = intl3.string(getSystemLocale.t["NX+WJN"]);
-  obj[0] = jsx(getAlertModalItemKey.AlertActionButton, { text: null }, "got-it");
-  obj[2] = jsx(getAlertModalItemKey.AlertActions, { text: null });
-  return jsx(getAlertModalItemKey.AlertModal, { text: null });
+  const obj = { title: null, content: null, actions: null };
+  const intl = util.intl;
+  obj.title = intl.string(_modDef2978.AA3xYb);
+  const intl2 = util.intl;
+  obj.content = intl2.string(_modDef2978["2+f8w1"]);
+  const obj2 = { children: null };
+  const obj3 = { text: null };
+  const intl3 = util.intl;
+  obj3.text = intl3.string(util.t["NX+WJN"]);
+  obj2.children = jsx(AlertModal.AlertActionButton, { text: null }, "got-it");
+  obj.actions = jsx(AlertModal.AlertActions, { children: null });
+  return jsx(AlertModal.AlertModal, { title: null, content: null, actions: null });
 };

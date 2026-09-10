@@ -1,28 +1,30 @@
-// Module ID: 8227
-// Function ID: 8228
+// Module ID: 8253
+// Function ID: 8254
 // Name: useProfileTheme
-// Dependencies: [32, 4552, 8228, 1074, 4495, 504, 575, 8132, 1091, 8229, 4411, 2]
+// Dependencies: [32, 4566, 8254, 1074, 4509, 504, 575, 8158, 1091, 8255, 4425, 2]
 // Exports: default
 
-// Module 8227 (useProfileTheme)
+// Module 8253 (useProfileTheme)
 import initialize from "initialize" /* 504 */;
-import useThemeDefault from "useTheme" /* 4495 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import { useEffectiveThemeOverride } from "useProfileThemeOverrideStore" /* 8228 */;
-import { ThemeTypes } from "ME" /* 1074 */;
+import shims from "shims" /* 575 */;
+import useThemeDefault from "useTheme" /* 4509 */;
+import useAvatarColor from "useAvatarColor" /* 8158 */;
+import _slicedToArray from "module_32" /* 32 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/user_profile/hooks/useProfileTheme.tsx");
+require = fn;
+const useEffectiveThemeOverride = fn(8254).useEffectiveThemeOverride;
+const ThemeTypes = fn(1074).ThemeTypes;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_profile/hooks/useProfileTheme.tsx");
 
 export default function useProfileTheme(arg0) {
   ({ user, displayProfile, pendingAvatarSrc } = arg0);
   ({ pendingThemeColors, isPreview, forceUserTheme } = arg0);
   const tmp2 = useThemeDefault();
   const tmp3 = useEffectiveThemeOverride();
-  let obj = initialize;
-  const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => obj.syncProfileThemeWithUserTheme);
+  const items = [AccessibilityStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => AccessibilityStore.syncProfileThemeWithUserTheme);
   if (pendingAvatarSrc == null) {
     let avatarURL;
     if (user != null) {
@@ -34,10 +36,9 @@ export default function useProfileTheme(arg0) {
     }
     pendingAvatarSrc = avatarURL;
   }
-  let tmp4Result = tmp4(575);
-  const result = tmp4Result.unsafe_getResolvedRawColor("PRIMARY_530", { saturation: 1 });
-  tmp4Result = tmp4(8132);
-  callback(tmp4Result.useAvatarColors(pendingAvatarSrc, result, false), 2);
+  const result = shims.unsafe_getResolvedRawColor("PRIMARY_530", { saturation: 1 });
+  const tmp4Result = shims;
+  _slicedToArray(useAvatarColor.useAvatarColors(pendingAvatarSrc, result, false), 2);
   if (null != tmp3) {
     return tmp3;
   } else {
@@ -47,9 +48,8 @@ export default function useProfileTheme(arg0) {
     }
     if (!canEditThemes) {
       if (!isPreview) {
-        obj = { theme: null, primaryColor: null, secondaryColor: null };
-        obj[0] = tmp2;
-        return obj;
+        const obj2 = { theme: tmp2, primaryColor: null, secondaryColor: null };
+        return obj2;
       }
     }
     let previewThemeColors;
@@ -62,7 +62,7 @@ export default function useProfileTheme(arg0) {
     }
     if (first == null) {
       first = tmp4(1091).hex2int(tmp10);
-      const tmp4Result1 = tmp4(1091);
+      const tmp4Result8 = tmp4(1091);
     }
     let hex2intResult;
     if (previewThemeColors != null) {
@@ -70,25 +70,25 @@ export default function useProfileTheme(arg0) {
     }
     if (hex2intResult == null) {
       hex2intResult = tmp4(1091).hex2int(tmp11);
-      const tmp4Result2 = tmp4(1091);
+      const tmp4Result9 = tmp4(1091);
     }
     let tmp16 = tmp2;
     if (!stateFromStores) {
       tmp16 = tmp2;
       if (!forceUserTheme) {
-        let profileTheme = tmp4(8229).getProfileTheme(first);
+        let profileTheme = tmp4(8255).getProfileTheme(first);
         if (profileTheme == null) {
           profileTheme = tmp2;
         }
         tmp16 = profileTheme;
-        const tmp4Result3 = tmp4(8229);
+        const tmp4Result10 = tmp4(8255);
       }
     }
     if (tmp16 !== ThemeTypes.DARK) {
       let isThemeLightResult = tmp16 === tmp18.DARK;
       if (isThemeLightResult) {
-        isThemeLightResult = tmp4(4411).isThemeLight(tmp2);
-        const tmp4Result4 = tmp4(4411);
+        isThemeLightResult = tmp4(4425).isThemeLight(tmp2);
+        const tmp4Result11 = tmp4(4425);
       }
       let DARKER = tmp16;
       if (isThemeLightResult) {
@@ -96,12 +96,10 @@ export default function useProfileTheme(arg0) {
       }
     } else {
       DARKER = tmp2;
-      const tmp4Result5 = tmp4(4411);
+      const tmp4Result12 = tmp4(4425);
     }
-    obj = { theme: null, primaryColor: null, secondaryColor: null };
-    obj[0] = DARKER;
-    obj[1] = first;
-    obj[2] = hex2intResult;
-    return obj;
+    const obj3 = { theme: DARKER, primaryColor: first, secondaryColor: hex2intResult };
+    return obj3;
   }
+  const tmp4Result7 = useAvatarColor;
 };

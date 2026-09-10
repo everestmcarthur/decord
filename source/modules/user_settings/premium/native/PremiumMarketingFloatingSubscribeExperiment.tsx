@@ -1,13 +1,13 @@
-// Module ID: 13469
-// Function ID: 13470
-// Name: apexExperiment
+// Module ID: 13492
+// Function ID: 13493
+// Name: PremiumMarketingFloatingSubscribeExperiment
 // Dependencies: [1433, 2]
 
-// Module 13469 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 13492 (PremiumMarketingFloatingSubscribeExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-07-nitro-floating-subscribe", kind: "user", defaultConfig: { enabled: false, showAfterLastCard: false }, variations: { 0: { enabled: false, showAfterLastCard: false }, 1: { enabled: true, showAfterLastCard: false }, 2: { enabled: true, showAfterLastCard: true } } });
-const result = set.fileFinishedImporting("modules/user_settings/premium/native/PremiumMarketingFloatingSubscribeExperiment.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumMarketingFloatingSubscribeExperiment.tsx");
 
 export default apexExperiment;

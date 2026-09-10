@@ -1,20 +1,20 @@
-// Module ID: 17489
-// Function ID: 17490
-// Name: handleVoiceStateUpdates
-// Dependencies: [502, 1957, 4781, 4199, 2011, 1371, 1074, 7118, 1965, 17490, 1089, 7456, 2]
+// Module ID: 17520
+// Function ID: 17521
+// Name: StageChannelRequestToSpeakMessageManager
+// Dependencies: [502, 1957, 4795, 4212, 2011, 1371, 1074, 7132, 1965, 17521, 1089, 7470, 2]
 
-// Module 17489 (handleVoiceStateUpdates)
-import initializeDefault from "initialize" /* 7118 */;
-import closure_3 from "fetchFingerprint" /* 502 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "reinjectEphemerals" /* 4781 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_7 from "handleConnectionOpen" /* 2011 */;
-import closure_8 from "mergeGuildAvatar" /* 1371 */;
-import { MessageFlags } from "ME" /* 1074 */;
+// Module 17520 (StageChannelRequestToSpeakMessageManager)
+import MessageTypes from "MessageTypes" /* 1089 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import MessageStore from "MessageStore" /* 4795 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import UserStore from "UserStore" /* 1371 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-const require = arg1;
-initializeDefault;
+require = fn;
+const MessageFlags = fn(1074).MessageFlags;
 class StageChannelRequestToSpeakMessageManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -31,19 +31,19 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
       if (requestToSpeakTimestamp.suppress) {
         if (null != channelId) {
           if (userId !== id.getId()) {
-            if (closure_6.can(userId(table[8]).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel.getChannel(channelId))) {
+            if (closure_6.can(userId(1965).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel.getChannel(channelId))) {
               if (null != requestToSpeakTimestamp) {
                 user = user.getUser(userId);
                 if (null != user) {
-                  const result = tmp11(tmp12[9]).sendStageRequestToSpeakEphemeralMessage(channelId, user, requestToSpeakTimestamp);
-                  const tmp11Result = tmp11(tmp12[9]);
+                  const result = tmp11(17521).sendStageRequestToSpeakEphemeralMessage(channelId, user, requestToSpeakTimestamp);
+                  const tmp11Result = tmp11(17521);
                 }
               } else {
                 messages = messages.getMessages(channelId);
                 const findNewestResult = messages.findNewest((type) => {
-                  let hasFlagResult = type.type === userId(closure_1_2[10]).MessageTypes.STAGE_RAISE_HAND;
+                  let hasFlagResult = type.type === MessageTypes.MessageTypes.STAGE_RAISE_HAND;
                   if (hasFlagResult) {
-                    hasFlagResult = type.hasFlag(closure_1_9.EPHEMERAL);
+                    hasFlagResult = type.hasFlag(constants.EPHEMERAL);
                   }
                   if (hasFlagResult) {
                     hasFlagResult = type.author.id === userId;
@@ -51,8 +51,8 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
                   return hasFlagResult;
                 });
                 if (null != findNewestResult) {
-                  callback(tmp12[11]).deleteMessage(channelId, findNewestResult.id, true);
-                  const obj2 = callback(tmp12[11]);
+                  closure_1(7470).deleteMessage(channelId, findNewestResult.id, true);
+                  const obj2 = closure_1(7470);
                 }
               }
             }
@@ -64,6 +64,7 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
   });
 };
 const stageChannelRequestToSpeakMessageManager = new StageChannelRequestToSpeakMessageManager();
-let result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelRequestToSpeakMessageManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/stage_channels/StageChannelRequestToSpeakMessageManager.tsx");
 
 export default stageChannelRequestToSpeakMessageManager;

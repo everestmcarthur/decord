@@ -1,17 +1,16 @@
-// Module ID: 17104
-// Function ID: 17105
-// Name: apexExperiment
+// Module ID: 17135
+// Function ID: 17136
+// Name: MobileGoLiveEntrypointExperiment
 // Dependencies: [1433, 2]
 
-// Module 17104 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 17135 (MobileGoLiveEntrypointExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-let obj = { CONTROL: 0, [0]: "CONTROL", SCREENSHARE_REPLACES_CHAT: 1, [1]: "SCREENSHARE_REPLACES_CHAT", SCREENSHARE_REPLACES_SOUNDBOARD: 2, [2]: "SCREENSHARE_REPLACES_SOUNDBOARD" };
-obj = { treatment: obj.CONTROL };
-obj = { treatment: obj.SCREENSHARE_REPLACES_CHAT };
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-01-mobile-go-live-entrypoint", kind: "user", defaultConfig: obj, variations: { [obj.SCREENSHARE_REPLACES_CHAT]: obj, [obj.SCREENSHARE_REPLACES_SOUNDBOARD]: { treatment: obj.SCREENSHARE_REPLACES_SOUNDBOARD } } });
-const result = set.fileFinishedImporting("modules/go_live/MobileGoLiveEntrypointExperiment.tsx");
+const obj = { CONTROL: 0, [0]: "CONTROL", SCREENSHARE_REPLACES_CHAT: 1, [1]: "SCREENSHARE_REPLACES_CHAT", SCREENSHARE_REPLACES_SOUNDBOARD: 2, [2]: "SCREENSHARE_REPLACES_SOUNDBOARD" };
+const obj2 = { name: "2026-01-mobile-go-live-entrypoint", kind: "user", defaultConfig: { treatment: obj.CONTROL }, variations: { [obj.SCREENSHARE_REPLACES_CHAT]: { treatment: obj.SCREENSHARE_REPLACES_CHAT }, [obj.SCREENSHARE_REPLACES_SOUNDBOARD]: { treatment: obj.SCREENSHARE_REPLACES_SOUNDBOARD } } };
+const apexExperiment = ApexExperiment.createApexExperiment(obj2);
+const result = size.fileFinishedImporting("modules/go_live/MobileGoLiveEntrypointExperiment.tsx");
 
 export default apexExperiment;
 export const MobileGoLiveEntrypointTreatment = obj;

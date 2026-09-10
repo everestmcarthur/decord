@@ -1,26 +1,26 @@
-// Module ID: 4507
-// Function ID: 4508
+// Module ID: 4521
+// Function ID: 4522
 // Name: CopyIcon
-// Dependencies: [19, 21, 576, 4261, 4508, 2]
+// Dependencies: [19, 21, 576, 4274, 4522, 2]
 // Exports: CopyIcon
 
-// Module 4507 (CopyIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 4508 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 4521 (CopyIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod4522 from "module_4522" /* 4522 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/CopyIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/CopyIcon.tsx");
 
-export const CopyIcon = function CopyIcon(color) {
-  let INTERACTIVE_ICON_DEFAULT = color.color;
+export const CopyIcon = function CopyIcon(tmp6Result2) {
+  let INTERACTIVE_ICON_DEFAULT = tmp6Result2.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(tmp6Result2, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod4522, color: INTERACTIVE_ICON_DEFAULT, style: tmp6Result2.style });
 };

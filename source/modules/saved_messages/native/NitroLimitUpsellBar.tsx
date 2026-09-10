@@ -1,67 +1,60 @@
-// Module ID: 12225
-// Function ID: 12226
+// Module ID: 12251
+// Function ID: 12252
 // Name: NitroLimitUpsellBar
-// Dependencies: [17, 21, 4560, 576, 8593, 9968, 4556, 1114, 9975, 4975, 2]
+// Dependencies: [17, 21, 4574, 576, 8621, 9995, 4570, 1114, 10002, 4989, 2]
 // Exports: default
 
-// Module 12225 (NitroLimitUpsellBar)
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import WarningIcon from "WarningIcon" /* 8593 */;
-import registerAssetDefault from "registerAsset" /* 9968 */;
-import _modDef9975 from "module_9975" /* 9975 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 12251 (NitroLimitUpsellBar)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import WarningIcon from "WarningIcon" /* 8621 */;
+import _modDef9995 from "module_9995" /* 9995 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10002 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import createStyles from "createStyles" /* 4574 */;
+import size from "module_2" /* 2 */;
 
-({ Image: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let obj = { container: null, icon: null, text: null };
-obj = { alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.md, flexDirection: "row", gap: ThemesDefault.space.PX_8, marginBottom: ThemesDefault.space.PX_16, marginHorizontal: ThemesDefault.space.PX_16, padding: ThemesDefault.space.PX_12 };
-obj[0] = obj;
-obj[1] = { height: 20, width: 20 };
-obj[2] = { flex: 1 };
-let closure_7 = createCacheKey.createStyles(obj);
-const result = set.fileFinishedImporting("modules/saved_messages/native/NitroLimitUpsellBar.tsx");
+({ Image: c3, View: closure_4 } = get_ActivityIndicator);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+let obj = { container: { alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.md, flexDirection: "row", gap: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_16, marginHorizontal: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_12 }, icon: { height: 20, width: 20 }, text: { flex: 1 } };
+let closure_7 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/saved_messages/native/NitroLimitUpsellBar.tsx");
 
 export default function NitroLimitUpsellBar(isAtLimit) {
   isAtLimit = isAtLimit.isAtLimit;
   ({ text, onPress, loading } = isAtLimit);
-  const tmp = callback();
-  let obj = { style: tmp.container, children: null };
+  const tmp = closure_7();
+  const obj = { style: tmp.container, children: null };
   if (isAtLimit) {
-    obj = { color: "text-feedback-warning", style: null };
-    obj[1] = tmp.icon;
-    let tmp4Result = tmp4(WarningIcon.WarningIcon, obj);
+    const obj2 = { color: "text-feedback-warning", style: tmp.icon };
+    let tmp4Result = tmp4(WarningIcon.WarningIcon, obj2);
     let tmp9 = tmp4;
   } else {
-    obj = { source: null, style: null };
-    obj[0] = registerAssetDefault;
-    obj[1] = tmp.icon;
-    tmp4Result = tmp4(closure_3, obj);
+    const obj3 = { source: _modDef9995, style: tmp.icon };
+    tmp4Result = tmp4(React3, obj3);
     tmp9 = tmp4;
   }
   const items = [tmp4Result, , ];
-  obj1 = { variant: "text-xs/medium", color: "text-default", style: tmp.text, children: null };
-  const obj2 = { variant: "text-xs/bold", color: "text-brand", children: null };
-  const intl = getSystemLocale.intl;
-  obj2[2] = intl.string(getSystemLocale.t.oW0eUd).toUpperCase();
-  const items1 = [tmp9(Text.Text, obj2), " \u00B7 ", text];
-  obj1[3] = items1;
-  items[1] = closure_6(Text.Text, obj1);
+  const obj4 = { variant: "text-xs/medium", color: "text-default", style: tmp.text, children: null };
+  const obj5 = { variant: "text-xs/bold", color: "text-brand", children: null };
+  const intl = util.intl;
+  obj5.children = intl.string(util.t.oW0eUd).toUpperCase();
+  const items1 = [tmp9(Text_Text.Text, obj5), " \u00B7 ", text];
+  obj4.children = items1;
+  items[1] = timestampProducer(Text_Text.Text, obj4);
   if (isAtLimit) {
-    let Button = _modDef9975;
+    let Button = NitroUpsellButtonDefault;
   } else {
-    Button = tmp12(4975).Button;
+    Button = tmp12(4989).Button;
   }
-  const obj3 = { size: "sm", text: null, onPress: null, loading: null };
+  const obj6 = { size: "sm", text: null, onPress: null, loading: null };
   const intl2 = tmp12(1114).intl;
-  obj3[1] = intl2.string(getSystemLocale.t["8x0jKT"]);
-  obj3[2] = onPress;
-  obj3[3] = loading;
-  items[2] = tmp9(Button, obj3);
-  obj[1] = items;
-  return closure_6(closure_4, obj);
+  obj6.text = intl2.string(util.t["8x0jKT"]);
+  obj6.onPress = onPress;
+  obj6.loading = loading;
+  items[2] = tmp9(Button, obj6);
+  obj.children = items;
+  return timestampProducer(React4, obj);
 };

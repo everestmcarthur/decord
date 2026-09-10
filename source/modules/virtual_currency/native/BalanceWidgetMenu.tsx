@@ -1,70 +1,63 @@
-// Module ID: 15698
-// Function ID: 15699
-// Name: BalanceWidget
-// Dependencies: [19, 17, 1074, 1076, 1954, 5444, 21, 5123, 4556, 1114, 10630, 1943, 1242, 11772, 5447, 15699, 8855, 4527, 11106, 1896, 7182, 7541, 11105, 4380, 4991, 4560, 576, 2]
+// Module ID: 15728
+// Function ID: 15729
+// Name: BalanceWidgetMenu
+// Dependencies: [19, 17, 1074, 1076, 1954, 5458, 21, 5137, 4570, 1114, 10657, 1943, 1242, 11798, 5461, 15729, 8882, 4541, 11133, 1896, 7196, 7555, 11132, 4394, 5005, 4574, 576, 2]
 // Exports: default
 
-// Module 15698 (BalanceWidget)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4380 */;
-import Text from "Text" /* 4556 */;
-import PressableBase from "PressableBase" /* 5123 */;
-import _mod8855 from "module_8855" /* 8855 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10630 */;
-import BalanceWidgetPillButtonDefault from "BalanceWidgetPillButton" /* 11105 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import { CollectiblesMobileShopScreen as closure_6 } from "items" /* 1076 */;
-import ContentDismissActionType from "ContentDismissActionType" /* 1954 */;
-import { RewardFilterTypes } from "QuestsExperimentLocations" /* 5444 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15728 (BalanceWidgetMenu)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import dismissible_content from "dismissible_content" /* 1943 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4394 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Pressables from "Pressables" /* 5137 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
+import _mod8882 from "module_8882" /* 8882 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10657 */;
+import BalanceWidgetPillButtonDefault from "BalanceWidgetPillButton" /* 11132 */;
+import OrbOnboardingPillDefault from "OrbOnboardingPill" /* 15729 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function BalanceWidget(arg0) {
   ({ onPress, style, accessibilityLabel, accessibilityState, children } = arg0);
-  const tmp = callback3();
-  let obj = { onPress, style: items, accessible: true, accessibilityRole: "button", accessibilityLabel, accessibilityState, activeOpacity: 0.8, children: null };
-  items = [tmp.pressable, style];
-  obj = { variant: "text-sm/semibold", color: "text-default", style: tmp.label, children: null };
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.string(getSystemLocale.t.gGtZpz);
-  const items1 = [callback(Text.Text, obj), ];
-  obj = { style: tmp.pill, children };
-  items1[1] = callback(View, obj);
-  obj[7] = items1;
-  return callback2(PressableBase.PressableOpacity, obj);
+  const tmp = closure_15();
+  const obj = { onPress, style: null, accessible: true, accessibilityRole: "button", accessibilityLabel, accessibilityState, activeOpacity: 0.8, children: null };
+  const items = [tmp.pressable, style];
+  obj.style = items;
+  const obj2 = { variant: "text-sm/semibold", color: "text-default", style: tmp.label, children: null };
+  const intl = util.intl;
+  obj2.children = intl.string(util.t.gGtZpz);
+  const items1 = [closure_1_10(Text_Text.Text, obj2), closure_1_10(View, { style: tmp.pill, children })];
+  obj.children = items1;
+  return closure_1_11(Pressables.PressableOpacity, obj);
 }
 class OrbsOnboardingMenuDismissibleContent {
   constructor(arg0) {
     style = global.style;
     obj = { contentTypes: null, groupName: null, children: null };
-    tmp = require("SelectedDismissibleContent");
+    tmp = closure_1(closure_2[10]);
     items = [];
-    items[0] = require("DismissibleContent").DismissibleContent.VIRTUAL_CURRENCY_MOBILE_ONBOARDING_PILL;
-    obj[0] = items;
-    obj[1] = closure_8.VIRTUAL_CURRENCY_MOBILE_ONBOARDING;
-    obj[2] = function children(markAsDismissed) {
+    items[0] = style(closure_2[11]).DismissibleContent.VIRTUAL_CURRENCY_MOBILE_ONBOARDING_PILL;
+    obj.contentTypes = items;
+    obj.groupName = closure_8.VIRTUAL_CURRENCY_MOBILE_ONBOARDING;
+    obj.children = function children(markAsDismissed) {
       markAsDismissed = markAsDismissed.markAsDismissed;
-      if (markAsDismissed.visibleContent === style(closure_1_2[11]).DismissibleContent.VIRTUAL_CURRENCY_MOBILE_ONBOARDING_PILL) {
+      if (markAsDismissed.visibleContent === dismissible_content.DismissibleContent.VIRTUAL_CURRENCY_MOBILE_ONBOARDING_PILL) {
         function handleOnboardingPress() {
-          markAsDismissed(closure_1_7.TAKE_ACTION);
-          let obj = closure_1_1(closure_1_2[12]);
-          obj.track(closure_1_5.USER_PROFILE_ACTION, { profile_action: "ORBS_BALANCE_PRESSED" });
-          obj = { filter: closure_1_9.VIRTUAL_CURRENCY, fromContent: markAsDismissed(closure_1_2[14]).QuestContent.MOBILE_ORBS_ONBOARDING_DC };
-          markAsDismissed(closure_1_2[13]).openQuestHome(obj);
+          markAsDismissed(constants2.TAKE_ACTION);
+          AnalyticsUtilsDefault.track(constants.USER_PROFILE_ACTION, { profile_action: "ORBS_BALANCE_PRESSED" });
+          const obj2 = style(11798);
+          obj2.openQuestHome({ filter: constants3.VIRTUAL_CURRENCY, fromContent: style(5461).QuestContent.MOBILE_ORBS_ONBOARDING_DC });
         }
-        let obj = { onPress: null, style: null, accessibilityLabel: null, children: null };
-        obj[0] = handleOnboardingPress;
-        obj[1] = markAsDismissed;
-        const intl = tmp(tmp2[9]).intl;
-        obj[2] = intl.string(tmp(tmp2[9]).t.Kt2QDh);
-        obj = { onPress: null, accessible: false };
-        obj[0] = handleOnboardingPress;
-        obj[3] = closure_1_10(closure_1_1(tmp2[15]), obj);
-        return closure_1_10(closure_1_12, obj);
+        let obj = { onPress: handleOnboardingPress, style, accessibilityLabel: null, children: null };
+        const intl = tmp(1114).intl;
+        obj.accessibilityLabel = intl.string(tmp(1114).t.Kt2QDh);
+        let obj2 = { onPress: handleOnboardingPress, accessible: false };
+        obj.children = closure_2_10(OrbOnboardingPillDefault, obj2);
+        return closure_2_10(BalanceWidget, obj);
       } else {
         return null;
       }
@@ -74,48 +67,43 @@ class OrbsOnboardingMenuDismissibleContent {
 }
 function BalanceWidgetMenu(style) {
   let str;
-  let obj = str(8855);
-  str = obj.useFetchVirtualCurrencyBalance().balance;
+  str = str(8882).useFetchVirtualCurrencyBalance().balance;
   let items = [str];
-  const callback = React.useCallback(() => {
-    let obj = closure_1_1(closure_1_2[12]);
-    obj.track(closure_1_5.USER_PROFILE_ACTION, { profile_action: "ORBS_BALANCE_PRESSED" });
-    obj1 = closure_1_1(closure_1_2[17]);
-    obj = { balance: str, primaryButtonConfig: null, secondaryButtonConfig: null, source: null };
-    obj = { buttonText: null, onButtonPress: null };
-    const intl = str(closure_1_2[9]).intl;
-    obj[0] = intl.string(str(closure_1_2[9]).t.WrzJBf);
-    obj[1] = function onButtonPress() {
-      let obj = closure_1_1(closure_1_2[12]);
-      obj = { type: "GO_TO_SHOP", source: closure_1_1(closure_1_2[20]).YOU_SCREEN, balance: closure_0 };
-      obj.track(closure_1_5.ORB_BALANCE_ACTION_SHEET_ACTION, obj);
-      closure_1_1(closure_1_2[17]).hideActionSheet();
-      const obj3 = closure_1_1(closure_1_2[17]);
-      obj = { analyticsLocations: null, analyticsSource: null, screen: null };
-      const items = [closure_1_1(closure_1_2[20]).COLLECTIBLES_SHOP];
-      obj[0] = items;
-      obj[1] = closure_1_1(closure_1_2[20]).COLLECTIBLES_SHOP;
-      obj[2] = closure_1_6.ORBS;
-      const result = closure_1_0(closure_1_2[21]).openCollectiblesShopMobile(obj);
+  const callback = noop.useCallback(() => {
+    AnalyticsUtilsDefault.track(AnalyticEvents.USER_PROFILE_ACTION, { profile_action: "ORBS_BALANCE_PRESSED" });
+    let obj3 = { balance: str, primaryButtonConfig: null, secondaryButtonConfig: null, source: null };
+    let obj4 = { buttonText: null, onButtonPress: null };
+    const intl = util.intl;
+    obj4.buttonText = intl.string(util.t.WrzJBf);
+    obj4.onButtonPress = function onButtonPress() {
+      const obj = AnalyticsUtilsDefault;
+      obj.track(constants.ORB_BALANCE_ACTION_SHEET_ACTION, { type: "GO_TO_SHOP", source: AnalyticsLocationDefault.YOU_SCREEN, balance });
+      const obj2 = { type: "GO_TO_SHOP", source: AnalyticsLocationDefault.YOU_SCREEN, balance };
+      ActionSheetActionCreatorsDefault.hideActionSheet();
+      const obj5 = { analyticsLocations: null, analyticsSource: null, screen: null };
+      const items = [AnalyticsLocationDefault.COLLECTIBLES_SHOP];
+      obj5.analyticsLocations = items;
+      obj5.analyticsSource = AnalyticsLocationDefault.COLLECTIBLES_SHOP;
+      obj5.screen = constants2.ORBS;
+      const result = str(7555).openCollectiblesShopMobile(obj5);
     };
-    obj[1] = obj;
-    obj1 = { buttonText: null, onButtonPress: null };
-    const intl2 = str(closure_1_2[9]).intl;
-    obj1[0] = intl2.string(str(closure_1_2[9]).t.SymzJC);
-    obj1[1] = function onButtonPress() {
-      let obj = closure_1_1(closure_1_2[12]);
-      obj = { type: "GO_TO_QUEST_HOME", source: closure_1_1(closure_1_2[20]).YOU_SCREEN, balance: closure_0 };
-      obj.track(closure_1_5.ORB_BALANCE_ACTION_SHEET_ACTION, obj);
-      closure_1_1(closure_1_2[17]).hideActionSheet();
-      const obj3 = closure_1_1(closure_1_2[17]);
-      obj = { mergeExistingRoutes: true, filter: closure_1_9.VIRTUAL_CURRENCY, fromContent: closure_1_0(closure_1_2[14]).QuestContent.ORBS_BALANCE_MENU };
-      closure_1_0(closure_1_2[13]).openQuestHome(obj);
+    obj3.primaryButtonConfig = obj4;
+    let obj5 = { buttonText: null, onButtonPress: null };
+    const intl2 = util.intl;
+    obj5.buttonText = intl2.string(util.t.SymzJC);
+    obj5.onButtonPress = function onButtonPress() {
+      const obj = AnalyticsUtilsDefault;
+      obj.track(constants.ORB_BALANCE_ACTION_SHEET_ACTION, { type: "GO_TO_QUEST_HOME", source: AnalyticsLocationDefault.YOU_SCREEN, balance });
+      const obj2 = { type: "GO_TO_QUEST_HOME", source: AnalyticsLocationDefault.YOU_SCREEN, balance };
+      ActionSheetActionCreatorsDefault.hideActionSheet();
+      const obj4 = str(11798);
+      obj4.openQuestHome({ mergeExistingRoutes: true, filter: constants3.VIRTUAL_CURRENCY, fromContent: str(5461).QuestContent.ORBS_BALANCE_MENU });
     };
-    obj[2] = obj1;
-    obj[3] = closure_1_1(closure_1_2[20]).YOU_SCREEN;
-    obj1.openLazy(() => callback(paths[19])(paths[18], paths.paths).then((arg0) => arg0.default), "BalanceWidgetMenu", obj);
+    obj3.secondaryButtonConfig = obj5;
+    obj3.source = AnalyticsLocationDefault.YOU_SCREEN;
+    ActionSheetActionCreatorsDefault.openLazy(() => balance(paths[19])(paths[18], paths.paths).then((result) => result.default), "BalanceWidgetMenu", obj3);
   }, items);
-  obj = { onPress: callback, style: style.style, accessibilityLabel: null, children: null };
+  let obj2 = { onPress: callback, style: style.style, accessibilityLabel: null, children: null };
   let intl = str(1114).intl;
   let str2;
   if (str != null) {
@@ -124,49 +112,54 @@ function BalanceWidgetMenu(style) {
   if (str2 == null) {
     str2 = "";
   }
-  obj[2] = intl.formatToPlainString(str(1114).t.zPaLL9, { balance: str2 });
-  obj[3] = closure_10(BalanceWidgetPillButtonDefault, { balance: str, onPress: callback, accessible: false });
-  return closure_10(BalanceWidget, obj);
+  obj2.accessibilityLabel = intl.formatToPlainString(str(1114).t.zPaLL9, { balance: str2 });
+  obj2.children = closure_10(BalanceWidgetPillButtonDefault, { balance: str, onPress: callback, accessible: false });
+  return closure_10(BalanceWidget, obj2);
 }
-({ ContentDismissActionType: error, DismissibleContentGroupName: closure_8 } = ContentDismissActionType);
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let closure_15 = createCacheKey.createStyles(() => {
-  let obj = { pressable: null, label: null, pill: null, loadingContainer: null };
-  obj = { flex: 1, flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.md };
-  obj[0] = obj;
-  obj[1] = { flex: 1 };
-  obj[2] = { alignItems: "center" };
-  obj[3] = { height: 36, justifyContent: "center" };
+const View = fn(17).View;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+let closure_6 = fn(1076).CollectiblesMobileShopScreen;
+const DismissibleContentConstants = fn(1954);
+({ ContentDismissActionType: closure_7, DismissibleContentGroupName: closure_8 } = DismissibleContentConstants);
+const RewardFilterTypes = fn(5458).RewardFilterTypes;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(4574);
+let closure_15 = createStyles.createStyles(() => {
+  const obj = { pressable: { flex: 1, flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md }, label: { flex: 1 }, pill: { alignItems: "center" }, loadingContainer: { height: 36, justifyContent: "center" } };
   return obj;
 });
-let result = require("set").fileFinishedImporting("modules/virtual_currency/native/BalanceWidgetMenu.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/virtual_currency/native/BalanceWidgetMenu.tsx");
 
 export default function BalanceWidgetMenuWrapper(style) {
-  let obj = _mod8855;
-  const balance = obj.useFetchVirtualCurrencyBalance().balance;
-  UNSAFE_isDismissibleContentDismissed;
+  const tmp = closure_15();
+  const balance = _mod8882.useFetchVirtualCurrencyBalance().balance;
+  DismissibleContentUnsafeUtils;
   if (null == balance) {
-    obj = { onPress: null, style: null, accessibilityLabel: null, accessibilityState: null, children: null };
-    obj[0] = function onPress() {
+    const obj2 = {
+      onPress() {
 
+        },
+      style: style.style,
+      accessibilityLabel: null,
+      accessibilityState: null,
+      children: null
     };
-    obj[1] = style.style;
     const intl = tmp2(1114).intl;
-    obj[2] = intl.string(tmp2(1114).t.cKwv4k);
-    obj[3] = { busy: true };
-    obj = { style: null, children: null };
-    obj[0] = tmp.loadingContainer;
-    obj[1] = callback(tmp2(4991).Ellipsis, { variant: "primary", size: "sm" });
-    obj[4] = callback(View, obj);
-    let tmp6Result = callback(BalanceWidget, obj);
+    obj2.accessibilityLabel = intl.string(tmp2(1114).t.cKwv4k);
+    obj2.accessibilityState = { busy: true };
+    const obj3 = { style: tmp.loadingContainer, children: closure_1_10(tmp2(5005).Ellipsis, { variant: "primary", size: "sm" }) };
+    obj2.children = closure_1_10(View, obj3);
+    let tmp6Result = closure_1_10(BalanceWidget, obj2);
   } else {
     if (balance <= 0) {
       if (!tmp5) {
         let tmp7 = OrbsOnboardingMenuDismissibleContent;
       }
-      obj1 = {};
+      const obj4 = {};
       const merged = Object.assign(style);
-      tmp6Result = tmp6(tmp7, obj1);
+      tmp6Result = tmp6(tmp7, obj4);
     }
     tmp7 = BalanceWidgetMenu;
   }

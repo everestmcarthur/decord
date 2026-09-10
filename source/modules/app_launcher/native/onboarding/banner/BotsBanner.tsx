@@ -1,35 +1,31 @@
-// Module ID: 12069
-// Function ID: 12070
+// Module ID: 12095
+// Function ID: 12096
 // Name: BotsBanner
-// Dependencies: [19, 21, 12070, 12054, 12065, 1114, 2]
+// Dependencies: [19, 21, 12096, 12080, 12091, 1114, 2]
 // Exports: default
 
-// Module 12069 (BotsBanner)
-import noopAll from "noop" /* 19 */;
-import BannerBaseDefault from "BannerBase" /* 12065 */;
-import useBannerBots from "useBannerBots" /* 12070 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 12095 (BotsBanner)
+import BannerBaseDefault from "BannerBase" /* 12091 */;
+import useBannerBots from "useBannerBots" /* 12096 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/banner/BotsBanner.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/banner/BotsBanner.tsx");
 
 export default function BotsBanner(context) {
-  let obj = useBannerBots;
-  const bannerBots = obj.useBannerBots({ context: context.context });
+  const bannerBots = useBannerBots.useBannerBots({ context: context.context });
   ({ firstBotApplication, secondBotApplication } = bannerBots);
   let tmp4Result = null;
   if (null != firstBotApplication) {
     tmp4Result = null;
     if (null != secondBotApplication) {
-      obj = { image: null, text: null };
-      obj[0] = tmp6;
+      const obj2 = { image: tmp6, text: null };
       const intl = tmp(1114).intl;
-      obj = { firstApplicationName: null, secondApplicationName: null };
-      obj[0] = firstBotApplication.name;
-      obj[1] = secondBotApplication.name;
-      obj[1] = intl.formatToPlainString(tmp(1114).t["9SN0xw"], obj);
-      tmp4Result = jsx(BannerBaseDefault, { firstApplicationName: null, secondApplicationName: null });
+      const obj3 = { firstApplicationName: firstBotApplication.name, secondApplicationName: secondBotApplication.name };
+      obj2.text = intl.formatToPlainString(tmp(1114).t["9SN0xw"], obj3);
+      tmp4Result = jsx(BannerBaseDefault, { image: tmp6, text: null });
       const tmp5Result = BannerBaseDefault;
     }
   }

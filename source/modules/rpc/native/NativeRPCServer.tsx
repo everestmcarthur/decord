@@ -1,13 +1,14 @@
-// Module ID: 14528
-// Function ID: 14529
-// Dependencies: [9561, 14529, 2]
+// Module ID: 14553
+// Function ID: 14554
+// Name: NativeRPCServer
+// Dependencies: [9588, 14554, 2]
 
-// Module 14528
-import root from "root" /* 9561 */;
-import registerTransportDefault from "registerTransport" /* 14529 */;
+// Module 14553 (NativeRPCServer)
+import root from "root" /* 9588 */;
+import RPCServerDefault from "RPCServer" /* 14554 */;
 
-require = arg1;
-const tmp2 = new registerTransportDefault(() => Promise.resolve(root));
-const result = require("set").fileFinishedImporting("modules/rpc/native/NativeRPCServer.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rpc/native/NativeRPCServer.tsx");
 
-export default tmp2;
+export default new RPCServerDefault(() => Promise.resolve(root));

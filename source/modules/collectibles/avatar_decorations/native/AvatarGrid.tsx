@@ -1,84 +1,79 @@
-// Module ID: 13180
-// Function ID: 13181
-// Name: GridAvatar
-// Dependencies: [19, 17, 4552, 4600, 21, 4560, 576, 504, 1178, 8247, 2]
+// Module ID: 13203
+// Function ID: 13204
+// Name: AvatarGrid
+// Dependencies: [19, 17, 4566, 4614, 21, 4574, 576, 504, 1178, 8273, 2]
 // Exports: default
 
-// Module 13180 (GridAvatar)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 1178 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import closure_4 from "sortActivity" /* 4600 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13203 (AvatarGrid)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import PresenceStore from "PresenceStore" /* 4614 */;
 
-require = arg1;
+require = fn;
 function GridAvatar(user) {
   user = user.user;
   ({ guildId, pendingAvatarSrc, pendingAvatarDecoration } = user);
   ({ size, showStatus } = user);
-  let obj = user(504);
-  const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getStatus(user.id));
-  obj1 = user(504);
-  const items1 = [closure_3];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
+  const tmp = closure_7();
+  const items = [PresenceStore];
+  const stateFromStores = user(504).useStateFromStores(items, () => PresenceStore.getStatus(user.id));
+  const obj = user(504);
+  const items1 = [AccessibilityStore];
+  const stateFromStores1 = user(504).useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
   if (undefined === pendingAvatarDecoration) {
     pendingAvatarDecoration = user.avatarDecoration;
   }
-  obj = { avatarDecoration: pendingAvatarDecoration, status: null, statusStyle: null, size: null };
+  const obj3 = { avatarDecoration: pendingAvatarDecoration, status: null, statusStyle: null, size: null };
   let tmp6;
   if (showStatus) {
     tmp6 = stateFromStores;
   }
-  obj[1] = tmp6;
-  obj[2] = callback3().avatarStatusStyle;
-  obj[3] = size;
+  obj3.status = tmp6;
+  obj3.statusStyle = tmp.avatarStatusStyle;
+  obj3.size = size;
   if (undefined !== pendingAvatarSrc) {
-    obj = { source: null };
-    const tmp2Result = tmp2(8247);
-    obj[0] = tmp2Result.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores1);
-    const merged = Object.assign(obj);
-    obj1 = obj;
+    const obj4 = { source: null };
+    const tmp2Result = tmp2(8273);
+    obj4.source = tmp2Result.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores1);
+    const merged = Object.assign(obj3);
+    let obj5 = obj4;
   } else {
-    obj1 = { user: null, guildId: null };
-    obj1[0] = user;
-    obj1[1] = guildId;
-    const merged1 = Object.assign(obj);
+    obj5 = { user, guildId };
+    const merged1 = Object.assign(obj3);
   }
-  return closure_5(user(1178).Avatar, obj1);
+  return closure_5(user(1178).Avatar, obj5);
 }
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { avatarRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-around" }, avatarStatusStyle: null, gridContainer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { width: 108, height: 108, justifyContent: "space-around", marginLeft: 28 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/collectibles/avatar_decorations/native/AvatarGrid.tsx");
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { avatarRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-around" }, avatarStatusStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, gridContainer: { width: 108, height: 108, justifyContent: "space-around", marginLeft: 28 } };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/avatar_decorations/native/AvatarGrid.tsx");
 
 export default function AvatarGrid(arg0) {
-  const tmp = callback3();
-  let obj = { style: tmp.gridContainer, children: null };
-  obj = { style: tmp.avatarRow, children: null };
-  obj = { size: Button.AvatarSizes.NORMAL };
-  const merged = Object.assign(arg0);
-  const items = [callback(GridAvatar, obj), ];
-  const merged1 = Object.assign(arg0);
-  items[1] = callback(GridAvatar, { size: Button.AvatarSizes.NORMAL, showStatus: true });
-  obj[1] = items;
-  const items1 = [callback2(View, obj), ];
+  const tmp = closure_7();
+  const obj = { style: tmp.gridContainer, children: null };
   const obj2 = { style: tmp.avatarRow, children: null };
-  obj1 = { size: Button.AvatarSizes.NORMAL, showStatus: true };
+  const merged = Object.assign(arg0);
+  const items = [hasOwnProperty(GridAvatar, { size: native.AvatarSizes.NORMAL }), ];
+  const obj3 = { size: native.AvatarSizes.NORMAL };
+  const merged1 = Object.assign(arg0);
+  items[1] = hasOwnProperty(GridAvatar, { size: native.AvatarSizes.NORMAL, showStatus: true });
+  obj2.children = items;
+  const items1 = [timestampProducer(View, obj2), ];
+  const obj5 = { style: tmp.avatarRow, children: null };
+  const obj4 = { size: native.AvatarSizes.NORMAL, showStatus: true };
   const merged2 = Object.assign(arg0);
-  const items2 = [callback(GridAvatar, { size: Button.AvatarSizes.REFRESH_MEDIUM_32 }), ];
-  const obj3 = { size: Button.AvatarSizes.REFRESH_MEDIUM_32 };
+  const items2 = [hasOwnProperty(GridAvatar, { size: native.AvatarSizes.REFRESH_MEDIUM_32 }), ];
+  const obj6 = { size: native.AvatarSizes.REFRESH_MEDIUM_32 };
   const merged3 = Object.assign(arg0);
-  items2[1] = callback(GridAvatar, { size: Button.AvatarSizes.REFRESH_MEDIUM_32, showStatus: true });
-  obj2[1] = items2;
-  items1[1] = callback2(View, obj2);
-  obj[1] = items1;
-  return callback2(View, obj);
+  items2[1] = hasOwnProperty(GridAvatar, { size: native.AvatarSizes.REFRESH_MEDIUM_32, showStatus: true });
+  obj5.children = items2;
+  items1[1] = timestampProducer(View, obj5);
+  obj.children = items1;
+  return timestampProducer(View, obj);
 };

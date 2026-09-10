@@ -1,27 +1,26 @@
-// Module ID: 15780
-// Function ID: 15781
-// Name: DemoContextMenu
-// Dependencies: [19, 17, 21, 12777, 7094, 7966, 11258, 4524, 15781, 15782, 11569, 4560, 576, 12, 8671, 4975, 5607, 4556, 2]
+// Module ID: 15810
+// Function ID: 15811
+// Name: UserSettingsDesignSystemContextMenu
+// Dependencies: [19, 17, 21, 12803, 7108, 7980, 11285, 4538, 15811, 15812, 11595, 4574, 576, 12, 8699, 4989, 5621, 4570, 2]
 // Exports: default
 
-// Module 15780 (DemoContextMenu)
-import ThemesDefault from "Themes" /* 576 */;
-import registerAssetDefault from "registerAsset" /* 4524 */;
-import Text from "Text" /* 4556 */;
-import PressableCard from "PressableCard" /* 5607 */;
-import registerAssetDefault2 from "registerAsset" /* 7094 */;
-import registerAssetDefault3 from "registerAsset" /* 7966 */;
-import registerAssetDefault4 from "registerAsset" /* 11258 */;
-import registerAssetDefault5 from "registerAsset" /* 11569 */;
-import registerAssetDefault6 from "registerAsset" /* 12777 */;
-import registerAssetDefault7 from "registerAsset" /* 15781 */;
-import registerAssetDefault8 from "registerAsset" /* 15782 */;
-import closure_2 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15810 (UserSettingsDesignSystemContextMenu)
+import _mod12 from "module_12" /* 12 */;
+import nativeDefault from "native" /* 576 */;
+import _modDef4538 from "module_4538" /* 4538 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import Card from "Card" /* 5621 */;
+import _modDef7108 from "module_7108" /* 7108 */;
+import _modDef7980 from "module_7980" /* 7980 */;
+import _modDef11285 from "module_11285" /* 11285 */;
+import _modDef11595 from "module_11595" /* 11595 */;
+import _modDef12803 from "module_12803" /* 12803 */;
+import _modDef15811 from "module_15811" /* 15811 */;
+import _modDef15812 from "module_15812" /* 15812 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function DemoContextMenu(align) {
   ({ label: require, triggerOnLongPress } = align);
   if (triggerOnLongPress === undefined) {
@@ -42,114 +41,109 @@ function DemoContextMenu(align) {
   items = [num, num2];
   let obj = { style: { alignSelf: str }, children: null };
   const memo = num2.useMemo(() => {
-    if (closure_2 > 1) {
+    if (num2 > 1) {
       const _Array = Array;
-      let obj = { length: null };
-      obj[0] = tmp;
-      let arr = Array.from(obj);
-      let mapped = arr.map(() => {
-        const callback = dependencyMap;
-        let obj = callback(12);
-        dependencyMap = obj.shuffle(closure_1_8);
-        closure_2 = callback(12).shuffle(closure_1_7);
-        obj = { length: dependencyMap };
-        const obj2 = callback(12);
-        return Array.from(obj).map((arg0, arg1) => {
-          const obj = { label: length[arg1 % length.length], IconComponent: "a", iconSource: 12800, variant: 12801, action: 12804 };
-          obj[2] = length2[arg1 % length2.length];
+      let obj = { length: tmp };
+      let mapped = Array.from(obj).map(() => {
+        closure_0 = length;
+        length = text(num[13]).shuffle(closure_2_8);
+        let obj = text(num[13]);
+        text(num[13]).shuffle(items);
+        const obj2 = text(num[13]);
+        const obj3 = { length };
+        return Array.from({ length }).map((item, index) => {
+          const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: 184550268, action: -1644166370 };
           let str = "default";
-          if (arg1 === closure_0 - 1) {
+          if (index === closure_0 - 1) {
             str = "destructive";
           }
-          obj[3] = str;
-          obj[4] = function action() {
+          obj.variant = str;
+          obj.action = function action() {
 
           };
           return obj;
         });
       });
+      const arr = Array.from(obj);
     } else {
-      closure_0 = closure_1;
-      closure_1 = closure_1_0(num[13]).shuffle(closure_1_8);
-      let obj2 = closure_1_0(num[13]);
-      closure_2 = closure_1_0(num[13]).shuffle(closure_1_7);
+      closure_0 = num;
+      closure_1 = _mod12.shuffle(closure_8);
+      closure_2 = _mod12.shuffle(items);
       const _Array2 = Array;
-      obj = { length: null };
-      obj[0] = closure_1;
-      arr = Array.from(obj);
-      mapped = arr.map((arg0, arg1) => {
-        const obj = { label: length[arg1 % length.length], IconComponent: "a", iconSource: 12800, variant: 12801, action: 12804 };
-        obj[2] = length2[arg1 % length2.length];
+      const obj4 = { length: num };
+      mapped = Array.from(obj4).map((item, index) => {
+        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: 184550268, action: -1644166370 };
         let str = "default";
-        if (arg1 === closure_0 - 1) {
+        if (index === closure_0 - 1) {
           str = "destructive";
         }
-        obj[3] = str;
-        obj[4] = function action() {
+        obj.variant = str;
+        obj.action = function action() {
 
         };
         return obj;
       });
-      const obj3 = closure_1_0(num[13]);
+      const arr2 = Array.from(obj4);
     }
     return mapped;
   }, items);
-  obj = {
+  obj.children = closure_5(require("ContextMenu").ContextMenu, {
     triggerOnLongPress,
     items: memo,
     align: align.align,
     title: "Sample title",
     children(ref) {
-      const merged = Object.assign(ref, Object.create(null));
+      const merged = Object.assign(ref, Object.assign({ ref: 0 }));
       const obj = { ref: ref.ref };
       const merged1 = Object.assign(merged);
-      obj.text = closure_0;
+      obj.text = text;
       obj.variant = "primary";
-      return closure_1_5(closure_1_0(num[15]).Button, obj);
+      return hasOwnProperty(components_Button_Button.Button, obj);
     }
-  };
-  obj[1] = callback(require(num[14]).ContextMenu, obj);
-  return callback(closure_3, obj);
+  });
+  return closure_5(closure_3, obj);
 }
-({ View: c3, ScrollView: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let items = [registerAssetDefault6, registerAssetDefault2, registerAssetDefault3, registerAssetDefault4, registerAssetDefault, registerAssetDefault7, registerAssetDefault8, registerAssetDefault5];
+get_ActivityIndicator = fn(17);
+({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+let items = [_modDef12803, _modDef7108, _modDef7980, _modDef11285, _modDef4538, _modDef15811, _modDef15812, _modDef11595];
 let closure_8 = ["Launch Probe!", "Activate Laser", "Teleport Widget", "Engage Hyperdrive", "Deploy Robots", "Initiate Time Warp", "Beam Up Snacks", "Hack Database", "Trigger Cosmic Boom", "Unleash Space Vortex", "Activate Cloaking Device"];
-createCacheKey = { container: { flexDirection: "column", gap: 12, padding: 16 }, card: { gap: 12 }, divider: null };
-createCacheKey = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginVertical: 12 };
-createCacheKey[2] = createCacheKey;
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemContextMenu.tsx");
+const createStyles = fn(4574);
+let obj2 = { container: { flexDirection: "column", gap: 12, padding: 16 }, card: { gap: 12 }, divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 12 } };
+let closure_9 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemContextMenu.tsx");
 
 export default function UserSettingsDesignSystemAlertModal() {
-  const tmp = callback3();
-  let obj = { children: null };
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.card, children: null };
-  items = [callback(Text.Text, { variant: "text-lg/bold", children: "Basic Example" }), callback(Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "You press the button to open the menu and then select an action, or tap and pan down in a single gesture." }), callback(DemoContextMenu, { label: "Open Menu" })];
-  obj[1] = items;
-  const items1 = [callback2(PressableCard.Card, obj), , , , , ];
-  obj1 = { style: tmp.card, children: null };
-  const items2 = [callback(Text.Text, { variant: "text-lg/bold", children: "Long Press" }), callback(Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "You can also have the menu open on long press instead." }), callback(DemoContextMenu, { triggerOnLongPress: true, label: "Long Press to Open" })];
-  obj1[1] = items2;
-  items1[1] = callback2(PressableCard.Card, obj1);
-  const obj2 = { style: tmp.card, children: null };
-  const items3 = [callback(Text.Text, { variant: "text-lg/bold", children: "Sections" }), callback(Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "You can pass an array of arrays of items to create sections in the menu." }), callback(DemoContextMenu, { label: "Open Sectioned Menu", sections: 3, count: 2 })];
-  obj2[1] = items3;
-  items1[2] = callback2(PressableCard.Card, obj2);
+  const tmp = closure_9();
+  const obj = { children: null };
+  const obj2 = { style: tmp.container, children: null };
   const obj3 = { style: tmp.card, children: null };
-  const items4 = [callback(Text.Text, { variant: "text-lg/bold", children: "Automatic Alignment" }), callback(Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "The menu will automatically align itself so that it doesn't overflow offscreen horizontally." }), callback(DemoContextMenu, { alignButton: "flex-end", label: "Open Right-Aligned Menu" }), callback(closure_3, { style: tmp.divider }), callback(Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "It will also position itself vertically, so that it doesn't overflow offscreen vertically." }), callback(DemoContextMenu, { count: 8, label: "Open Tall Menu" })];
-  obj3[1] = items4;
-  items1[3] = callback2(PressableCard.Card, obj3);
+  items = [hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Basic Example" }), hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "You press the button to open the menu and then select an action, or tap and pan down in a single gesture." }), hasOwnProperty(DemoContextMenu, { label: "Open Menu" })];
+  obj3.children = items;
+  const items1 = [timestampProducer(Card.Card, obj3), , , , , ];
+  const obj4 = { style: tmp.card, children: null };
+  const items2 = [hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Long Press" }), hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "You can also have the menu open on long press instead." }), hasOwnProperty(DemoContextMenu, { triggerOnLongPress: true, label: "Long Press to Open" })];
+  obj4.children = items2;
+  items1[1] = timestampProducer(Card.Card, obj4);
   const obj5 = { style: tmp.card, children: null };
-  const items5 = [callback(Text.Text, { variant: "text-lg/bold", children: "Intentional Alignment" }), callback(Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "Menus can take an align prop to intentionally align the menu, instead of using the automatic menu positioning." }), callback(Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "The align prop can be set to above, below, left, or right of the menu trigger. How the menu positions relative to the start or end of the trigger is then automatically determined based on the available space." }), callback(closure_3, { style: tmp.divider }), callback(DemoContextMenu, { count: 3, align: "right", label: "Open Right" }), callback(closure_3, { style: tmp.divider }), callback(DemoContextMenu, { count: 3, alignButton: "flex-end", align: "left", label: "Open Left" }), callback(closure_3, { style: tmp.divider }), callback(DemoContextMenu, { count: 3, align: "below", label: "Always Open Below" }), callback(closure_3, { style: tmp.divider }), callback(DemoContextMenu, { count: 3, alignButton: "flex-end", align: "above", label: "Always Open Above" })];
-  obj5[1] = items5;
-  items1[4] = callback2(PressableCard.Card, obj5);
-  const obj10 = { style: tmp.card, children: null };
-  const items6 = [callback(Text.Text, { variant: "text-lg/bold", children: "Overflow Scrolling" }), callback(Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "Menus should not typically have enough items to require scrolling, but with font scaling and smaller devices its possible. In this case, the menu will allow the user to scroll." }), callback(DemoContextMenu, { count: 30, label: "Open Really Tall Menu" })];
-  obj10[1] = items6;
-  items1[5] = callback2(PressableCard.Card, obj10);
-  obj[1] = items1;
-  obj[0] = callback2(closure_3, obj);
-  return callback(closure_4, obj);
+  const items3 = [hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Sections" }), hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "You can pass an array of arrays of items to create sections in the menu." }), hasOwnProperty(DemoContextMenu, { label: "Open Sectioned Menu", sections: 3, count: 2 })];
+  obj5.children = items3;
+  items1[2] = timestampProducer(Card.Card, obj5);
+  const obj6 = { style: tmp.card, children: null };
+  const items4 = [hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Automatic Alignment" }), hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "The menu will automatically align itself so that it doesn't overflow offscreen horizontally." }), hasOwnProperty(DemoContextMenu, { alignButton: "flex-end", label: "Open Right-Aligned Menu" }), hasOwnProperty(React3, { style: tmp.divider }), hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "It will also position itself vertically, so that it doesn't overflow offscreen vertically." }), hasOwnProperty(DemoContextMenu, { count: 8, label: "Open Tall Menu" })];
+  obj6.children = items4;
+  items1[3] = timestampProducer(Card.Card, obj6);
+  const obj8 = { style: tmp.card, children: null };
+  const items5 = [hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Intentional Alignment" }), hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "Menus can take an align prop to intentionally align the menu, instead of using the automatic menu positioning." }), hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "The align prop can be set to above, below, left, or right of the menu trigger. How the menu positions relative to the start or end of the trigger is then automatically determined based on the available space." }), hasOwnProperty(React3, { style: tmp.divider }), hasOwnProperty(DemoContextMenu, { count: 3, align: "right", label: "Open Right" }), hasOwnProperty(React3, { style: tmp.divider }), hasOwnProperty(DemoContextMenu, { count: 3, alignButton: "flex-end", align: "left", label: "Open Left" }), hasOwnProperty(React3, { style: tmp.divider }), hasOwnProperty(DemoContextMenu, { count: 3, align: "below", label: "Always Open Below" }), hasOwnProperty(React3, { style: tmp.divider }), hasOwnProperty(DemoContextMenu, { count: 3, alignButton: "flex-end", align: "above", label: "Always Open Above" })];
+  obj8.children = items5;
+  items1[4] = timestampProducer(Card.Card, obj8);
+  const obj13 = { style: tmp.card, children: null };
+  const items6 = [hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Overflow Scrolling" }), hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "Menus should not typically have enough items to require scrolling, but with font scaling and smaller devices its possible. In this case, the menu will allow the user to scroll." }), hasOwnProperty(DemoContextMenu, { count: 30, label: "Open Really Tall Menu" })];
+  obj13.children = items6;
+  items1[5] = timestampProducer(Card.Card, obj13);
+  obj2.children = items1;
+  obj.children = timestampProducer(React3, obj2);
+  return hasOwnProperty(React4, obj);
 };

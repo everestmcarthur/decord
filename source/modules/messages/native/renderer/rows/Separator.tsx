@@ -1,53 +1,37 @@
-// Module ID: 13252
-// Function ID: 13253
-// Name: generateSeparatorRowData
-// Dependencies: [7933, 4560, 576, 1369, 2]
+// Module ID: 13275
+// Function ID: 13276
+// Name: Separator
+// Dependencies: [7947, 4574, 576, 1369, 2]
 // Exports: generateSeparatorRowData
 
-// Module 13252 (generateSeparatorRowData)
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 576 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
-import Changeset from "Changeset" /* 7933 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13275 (Separator)
+import nativeDefault from "native" /* 576 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 7947 */;
+import createStyles from "createStyles" /* 4574 */;
+import size from "module_2" /* 2 */;
 
-({ RowType: obj1, SeparatorType: c3 } = Changeset);
-let closure_4 = createCacheKey.createNativeStyleProperties({ dayColor: ThemesDefault.colors.TEXT_MUTED, unreadTextColor: ThemesDefault.colors.MOBILE_CHAT_NEW_MESSAGE_TEXT, unreadBorderColor: ThemesDefault.colors.MOBILE_CHAT_NEW_MESSAGE_BORDER, summaryColor: ThemesDefault.colors.TEXT_BRAND });
-let obj = { dayColor: ThemesDefault.colors.TEXT_MUTED, unreadTextColor: ThemesDefault.colors.MOBILE_CHAT_NEW_MESSAGE_TEXT, unreadBorderColor: ThemesDefault.colors.MOBILE_CHAT_NEW_MESSAGE_BORDER, summaryColor: ThemesDefault.colors.TEXT_BRAND };
-const result = set.fileFinishedImporting("modules/messages/native/renderer/rows/Separator.tsx");
+({ RowType: c2, SeparatorType: c3 } = RowGeneratorConstants);
+let closure_4 = createStyles.createNativeStyleProperties({ dayColor: nativeDefault.colors.TEXT_MUTED, unreadTextColor: nativeDefault.colors.MOBILE_CHAT_NEW_MESSAGE_TEXT, unreadBorderColor: nativeDefault.colors.MOBILE_CHAT_NEW_MESSAGE_BORDER, summaryColor: nativeDefault.colors.TEXT_BRAND });
+const result = size.fileFinishedImporting("modules/messages/native/renderer/rows/Separator.tsx");
 
 export const generateSeparatorRowData = function generateSeparatorRowData(text, theme) {
   ({ rowType, changeType } = text);
-  const tmp = callback(theme);
+  const tmp = closure_4(theme);
   if (constants2.DAY === rowType) {
-    let obj = { type: null, id: null, color: null, text: null, changeType: null };
-    obj[0] = constants.SEPARATOR;
-    obj[1] = rowType;
-    obj[2] = tmp.dayColor;
-    obj[3] = text.text;
-    obj[4] = changeType;
-    return obj;
+    const obj2 = { type: constants.SEPARATOR, id: rowType, color: tmp.dayColor, text: text.text, changeType };
+    return obj2;
   } else if (tmp2.UNREAD === rowType) {
-    obj = { type: null, id: null, color: null, borderColor: null, changeType: null, text: null };
-    obj[0] = constants.SEPARATOR;
-    obj[1] = rowType;
-    ({ unreadTextColor: obj3[2], unreadBorderColor: obj3[3] } = tmp);
-    obj[4] = changeType;
-    obj[5] = text.text;
-    return obj;
+    const obj4 = { type: constants.SEPARATOR, id: rowType, color: null, borderColor: null, changeType: null, text: null };
+    ({ unreadTextColor: obj3.color, unreadBorderColor: obj3.borderColor } = tmp);
+    obj4.changeType = changeType;
+    obj4.text = text.text;
+    return obj4;
   } else if (tmp2.SUMMARY === rowType) {
     const summary = text.summary;
-    obj1 = { type: null, id: null, color: null, text: null, summary: null, isBeforeContent: null, changeType: null };
-    obj1[0] = constants.SEPARATOR;
-    obj1[1] = rowType;
-    obj1[2] = tmp.summaryColor;
-    obj1[3] = summary.topic;
-    obj1[4] = summary;
-    obj1[5] = text.isBeforeContent;
-    obj1[6] = changeType;
-    return obj1;
+    const obj7 = { type: constants.SEPARATOR, id: rowType, color: tmp.summaryColor, text: summary.topic, summary, isBeforeContent: text.isBeforeContent, changeType };
+    return obj7;
   } else {
-    obj = isDiscordFrontendDevelopment;
-    obj.assertNever(rowType);
+    GlobalUtils.assertNever(rowType);
   }
 };

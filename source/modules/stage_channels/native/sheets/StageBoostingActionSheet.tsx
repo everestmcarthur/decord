@@ -1,39 +1,42 @@
-// Module ID: 5430
-// Function ID: 5431
+// Module ID: 5444
+// Function ID: 5445
 // Name: StageBoostingActionSheet
-// Dependencies: [19, 4552, 1979, 4199, 5414, 1074, 1373, 21, 504, 1965, 1114, 4527, 1242, 5431, 5425, 4992, 5433, 4975, 5434, 10235, 5692, 5587, 8597, 2]
+// Dependencies: [19, 4566, 1979, 4212, 5428, 1074, 1373, 21, 504, 1965, 1114, 4541, 1242, 5445, 5439, 5006, 5447, 4989, 5448, 10262, 5706, 5601, 8625, 2]
 // Exports: default
 
-// Module 5430 (StageBoostingActionSheet)
-import noopAll from "noop" /* 19 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import closure_4 from "createGuildRecordFromRust" /* 1979 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4199 */;
-import { STAGE_BOOSTING_SHEET_KEY } from "MAX_STAGE_TOPIC_LENGTH" /* 5414 */;
-import ME from "ME" /* 1074 */;
-import GuildFeatures from "GuildFeatures" /* 1373 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 5444 (StageBoostingActionSheet)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 1965 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 5448 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
 
-const require = arg1;
-noopAll;
-({ AnalyticEvents: error, BoostedGuildTiers: closure_8, GuildFeatures: c9, MAX_STAGE_VIDEO_USER_LIMIT_TIER2: c10, MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED: unpackModuleId } = ME);
-({ BoostingUpsellAction: closure_12, PremiumUpsellTypes: map1 } = GuildFeatures);
+require = fn;
+const STAGE_BOOSTING_SHEET_KEY = fn(5428).STAGE_BOOSTING_SHEET_KEY;
+const Constants = fn(1074);
+({ AnalyticEvents: closure_7, BoostedGuildTiers: closure_8, GuildFeatures: closure_9, MAX_STAGE_VIDEO_USER_LIMIT_TIER2: c10, MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED: closure_11 } = Constants);
+const PremiumConstants = fn(1373);
+({ BoostingUpsellAction: closure_12, PremiumUpsellTypes: map1 } = PremiumConstants);
+const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/sheets/StageBoostingActionSheet.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/sheets/StageBoostingActionSheet.tsx");
 
 export default function StageBoostingActionSheet(channel) {
   channel = channel.channel;
   let stateFromStores2;
   dependencyMap = undefined;
-  closure_3 = undefined;
-  let obj = channel(504);
-  const items = [closure_4];
+  let useReducedMotion;
+  const items = [GuildStore];
   const items1 = [channel.guild_id];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getGuild(channel.guild_id), items1);
-  obj1 = channel(504);
-  const items2 = [closure_3];
+  const stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id), items1);
+  let obj = channel(504);
+  const items2 = [useReducedMotion];
   let num;
-  const stateFromStores1 = obj1.useStateFromStores(items2, () => useReducedMotion.useReducedMotion);
+  const stateFromStores1 = channel(504).useStateFromStores(items2, () => useReducedMotion.useReducedMotion);
   if (stateFromStores != null) {
     num = stateFromStores.maxStageVideoChannelUsers;
   }
@@ -43,7 +46,7 @@ export default function StageBoostingActionSheet(channel) {
   let hasItem = null != stateFromStores;
   if (hasItem) {
     const features = stateFromStores.features;
-    hasItem = features.has(constants.COMMUNITY);
+    hasItem = features.has(constants2.COMMUNITY);
   }
   if (hasItem) {
     let tmp9 = num < closure_11;
@@ -57,10 +60,10 @@ export default function StageBoostingActionSheet(channel) {
       tmp9 = num <= closure_10;
     }
   }
-  let tmpResult = tmp(504);
-  const items3 = [closure_5];
+  let obj2 = channel(504);
+  const items3 = [PermissionStore];
   const items4 = [channel];
-  stateFromStores2 = tmpResult.useStateFromStores(items3, () => closure_1_5.can(channel(1965).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel), items4);
+  stateFromStores2 = channel(504).useStateFromStores(items3, () => PermissionStore.can(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, channel), items4);
   if (hasItem) {
     let premiumTier1;
     if (stateFromStores != null) {
@@ -88,85 +91,73 @@ export default function StageBoostingActionSheet(channel) {
   }
   const intl3 = tmp(1114).intl;
   const string3 = intl3.string;
-  T_zF9M = tmp(1114).t;
+  let t1 = tmp(1114).t;
   if (stateFromStores2) {
     if (tmp9) {
-      T_zF9M = T_zF9M["T+zF9M"];
-      let string3Result = string3(T_zF9M);
+      t1 = t1["T+zF9M"];
+      let string3Result = string3(t1);
     } else {
-      string3Result = string3(T_zF9M.XVL8LJ);
+      string3Result = string3(t1.XVL8LJ);
     }
   } else {
     function handleClose() {
-      let obj = stateFromStores2(4527);
-      obj.hideActionSheet(closure_1_6);
-      obj = { guild_id: channel.guild_id, type: closure_1_13.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, action: closure_1_12.DISMISS };
-      stateFromStores2(1242).track(closure_1_7.BOOSTING_UPSELL_CLICKED, obj);
+      ActionSheetActionCreatorsDefault.hideActionSheet(STAGE_BOOSTING_SHEET_KEY);
+      AnalyticsUtilsDefault.track(constants.BOOSTING_UPSELL_CLICKED, { guild_id: channel.guild_id, type: constants4.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, action: constants3.DISMISS });
     }
-    tmpResult = tmp(5431);
-    dependencyMap = tmpResult.useActualStageSpeakerCount(channel.id);
-    const string3Result1 = string3(T_zF9M.pqPQL0);
-    closure_3 = tmp(5431).useStageParticipantsCount(channel.id, tmp(5425).StageChannelParticipantNamedIndex.AUDIENCE);
-    stateFromStores2(4992)(() => {
-      let obj = stateFromStores2(1242);
-      obj = { guild_id: channel.guild_id, type: closure_1_13.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, listener_count: dependencyMap + closure_3 };
-      obj.track(closure_1_7.BOOSTING_UPSELL_VIEWED, obj);
+    const string3Result1 = string3(t1.pqPQL0);
+    dependencyMap = tmp(5445).useActualStageSpeakerCount(channel.id);
+    const tmpResult3 = tmp(5445);
+    useReducedMotion = tmp(5445).useStageParticipantsCount(channel.id, tmp(5439).StageChannelParticipantNamedIndex.AUDIENCE);
+    stateFromStores2(5006)(() => {
+      AnalyticsUtilsDefault.track(constants.BOOSTING_UPSELL_VIEWED, { guild_id: channel.guild_id, type: constants4.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, listener_count: closure_2 + closure_3 });
     });
     if (tmp9) {
-      obj = { size: "lg", children: null };
-      obj = { variant: "experimental_premium-primary", size: "lg", shiny: null, text: null, onPress: null };
-      obj[2] = !stateFromStores1;
+      let obj3 = { size: "lg", children: null };
+      let obj4 = { variant: "experimental_premium-primary", size: "lg", shiny: !stateFromStores1, text: null, onPress: null };
       const intl6 = tmp(1114).intl;
-      obj[3] = intl6.string(tmp(1114).t.Uj0md3);
-      obj[4] = function onPress() {
-        let obj = stateFromStores2(4527);
-        obj.hideActionSheet(closure_1_6);
-        obj = { guild_id: channel.guild_id, type: closure_1_13.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, action: closure_1_12.DISMISS };
-        stateFromStores2(1242).track(closure_1_7.BOOSTING_UPSELL_CLICKED, obj);
-        const obj2 = stateFromStores2(1242);
-        channel(5434).openApplyBoostModal(channel.guild_id);
-        const obj4 = channel(5434);
-        obj = { guild_id: channel.guild_id, type: closure_1_13.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, action: closure_1_12.BOOST };
-        stateFromStores2(1242).track(closure_1_7.BOOSTING_UPSELL_CLICKED, obj);
+      obj4.text = intl6.string(tmp(1114).t.Uj0md3);
+      obj4.onPress = function onPress() {
+        ActionSheetActionCreatorsDefault.hideActionSheet(STAGE_BOOSTING_SHEET_KEY);
+        AnalyticsUtilsDefault.track(constants.BOOSTING_UPSELL_CLICKED, { guild_id: channel.guild_id, type: constants4.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, action: constants3.DISMISS });
+        const obj3 = { guild_id: channel.guild_id, type: constants4.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, action: constants3.DISMISS };
+        actions_BoostingActionCreators.openApplyBoostModal(channel.guild_id);
+        AnalyticsUtilsDefault.track(constants.BOOSTING_UPSELL_CLICKED, { guild_id: channel.guild_id, type: constants4.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, action: constants3.BOOST });
       };
-      const items5 = [callback(tmp(4975).Button, obj), ];
-      obj1 = { variant: "secondary", size: "lg", text: null, onPress: null };
+      const items5 = [closure_14(tmp(4989).Button, obj4), ];
+      const obj5 = { variant: "secondary", size: "lg", text: null, onPress: null };
       const intl7 = tmp(1114).intl;
-      obj1[2] = intl7.string(tmp(1114).t.f3Pet9);
-      obj1[3] = handleClose;
-      items5[1] = callback(tmp(4975).Button, obj1);
-      obj[1] = items5;
-      let tmp23Result = callback2(tmp(5433).ButtonGroup, obj);
-      let tmp23 = callback;
+      obj5.text = intl7.string(tmp(1114).t.f3Pet9);
+      obj5.onPress = handleClose;
+      items5[1] = closure_14(tmp(4989).Button, obj5);
+      obj3.children = items5;
+      let tmp24Result = closure_15(tmp(5447).ButtonGroup, obj3);
+      let tmp24 = closure_14;
     } else {
-      tmp23 = callback;
+      tmp24 = closure_14;
       if (stateFromStores2) {
-        let obj2 = { variant: "secondary", size: "lg", text: null, onPress: null };
+        const obj6 = { variant: "secondary", size: "lg", text: null, onPress: null };
         const intl5 = tmp(1114).intl;
-        obj2[2] = intl5.string(tmp(1114).t.WAI6xu);
-        obj2[3] = handleClose;
-        let obj3 = obj2;
+        obj6.text = intl5.string(tmp(1114).t.WAI6xu);
+        obj6.onPress = handleClose;
+        let obj7 = obj6;
       } else {
-        obj3 = { variant: "primary", size: "lg", text: null, onPress: null };
+        obj7 = { variant: "primary", size: "lg", text: null, onPress: null };
         const intl4 = tmp(1114).intl;
-        obj3[2] = intl4.string(tmp(1114).t["NX+WJN"]);
-        obj3[3] = handleClose;
+        obj7.text = intl4.string(tmp(1114).t["NX+WJN"]);
+        obj7.onPress = handleClose;
       }
-      tmp23Result = tmp23(tmp(4975).Button, obj3);
+      tmp24Result = tmp24(tmp(4989).Button, obj7);
     }
-    let obj4 = { title: null, description: null, illustration: null, actions: null };
-    obj4[0] = string3Result1;
-    obj4[1] = stringResult;
+    const obj8 = { title: string3Result1, description: stringResult, illustration: null, actions: null };
     if (tmp9) {
-      tmp23Result = tmp23(tmp(5692).HoldingGemSpotIllustration, { accessible: false });
+      let tmp24Result2 = tmp24(tmp(5706).HoldingGemSpotIllustration, { accessible: false });
     } else {
-      const obj5 = { source: null };
-      obj5[0] = tmp21(8597);
-      tmp23Result = tmp23(tmp21(5587), obj5);
-      const tmp21Result = tmp21(5587);
+      const obj9 = { source: tmp22(8625) };
+      tmp24Result2 = tmp24(tmp22(5601), obj9);
+      const tmp22Result = tmp22(5601);
     }
-    obj4[2] = tmp23Result;
-    obj4[3] = tmp23Result;
-    return tmp23(tmp(10235).PromoSheet, obj4);
+    obj8.illustration = tmp24Result2;
+    obj8.actions = tmp24Result;
+    return tmp24(tmp(10262).PromoSheet, obj8);
   }
 };

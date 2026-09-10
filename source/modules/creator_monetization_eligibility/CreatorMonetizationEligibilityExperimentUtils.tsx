@@ -1,22 +1,22 @@
-// Module ID: 7261
-// Function ID: 7262
-// Name: set
-// Dependencies: [1371, 4220, 1074, 504, 2]
+// Module ID: 7275
+// Function ID: 7276
+// Name: CreatorMonetizationEligibilityExperimentUtils
+// Dependencies: [1371, 4233, 1074, 504, 2]
 // Exports: isExpeditedMonetizationOnboardingGuild, isRavenOnboardingGuild, isUserInCreatorMonetizationEligibleCountry, isWhitegloveOnboardingGuild, useIsExpeditedOnboardingGuild, useIsRavenOnboardingGuild, useIsUserInCreatorMonetizationEligibleCountry, useIsWhitegloveOnboardingGuild
 
-// Module 7261 (set)
+// Module 7275 (CreatorMonetizationEligibilityExperimentUtils)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
-import closure_3 from "handlePaymentSourceCreateEnd" /* 4220 */;
-import { GuildFeatures } from "ME" /* 1074 */;
-import set from "set" /* 2 */;
+import UserStore from "UserStore" /* 1371 */;
+import BillingInfoStore from "BillingInfoStore" /* 4233 */;
 
-require = arg1;
-let set = new Set(["US"]);
-const result = set.fileFinishedImporting("modules/creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx");
+require = fn;
+const GuildFeatures = fn(1074).GuildFeatures;
+const set = new Set(["US"]);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx");
 
 export const useIsUserInCreatorMonetizationEligibleCountry = function useIsUserInCreatorMonetizationEligibleCountry() {
-  const items = [closure_2, closure_3];
+  const items = [UserStore, BillingInfoStore];
   return initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let country;
@@ -37,7 +37,7 @@ export const useIsUserInCreatorMonetizationEligibleCountry = function useIsUserI
   });
 };
 export const isUserInCreatorMonetizationEligibleCountry = function isUserInCreatorMonetizationEligibleCountry() {
-  currentUser = currentUser.getCurrentUser();
+  const currentUser = UserStore.getCurrentUser();
   let country;
   if (currentUser != null) {
     const storeCountry = currentUser.storeCountry;
@@ -46,7 +46,7 @@ export const isUserInCreatorMonetizationEligibleCountry = function isUserInCreat
     }
   }
   if (country == null) {
-    country = ipCountryCode.ipCountryCode;
+    country = BillingInfoStore.ipCountryCode;
   }
   let hasItem = null != country;
   if (hasItem) {

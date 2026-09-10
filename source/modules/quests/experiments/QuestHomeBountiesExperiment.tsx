@@ -1,15 +1,17 @@
-// Module ID: 11528
-// Function ID: 11529
-// Name: apexExperiment
+// Module ID: 11555
+// Function ID: 11556
+// Name: QuestHomeBountiesExperiment
 // Dependencies: [1433, 2]
 
-// Module 11528 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 11555 (QuestHomeBountiesExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null };
-obj[1] = { enabled: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-03-quest-home-bounties", kind: "user", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/quests/experiments/QuestHomeBountiesExperiment.tsx");
+const obj = { name: "2026-03-quest-home-bounties", kind: "user", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj.variations = obj2;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/quests/experiments/QuestHomeBountiesExperiment.tsx");
 
 export const QuestHomeBountiesExperiment = apexExperiment;

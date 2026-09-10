@@ -1,39 +1,40 @@
-// Module ID: 13894
-// Function ID: 13895
-// Dependencies: [4476, 1975, 1114, 504, 7260, 7261, 4192, 2]
+// Module ID: 13917
+// Function ID: 13918
+// Name: RoleSubscriptionsOnboardingGuildPickerFeatureSpec
+// Dependencies: [4490, 1975, 1114, 504, 7274, 7275, 4205, 2]
 
-// Module 13894
+// Module 13917 (RoleSubscriptionsOnboardingGuildPickerFeatureSpec)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_2 from "getHash" /* 4476 */;
-import { isGuildOwner } from "GuildNSFWContentLevel" /* 1975 */;
+import util from "util" /* 1114 */;
+import ExperimentStore from "ExperimentStore" /* 4490 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/ui/RoleSubscriptionsOnboardingGuildPickerFeatureSpec.tsx");
+require = fn;
+const isGuildOwner = fn(1975).isGuildOwner;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_role_subscriptions/ui/RoleSubscriptionsOnboardingGuildPickerFeatureSpec.tsx");
 
 export default {
   title() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["KzCF/6"]);
+    const intl = util.intl;
+    return intl.string(util.t["KzCF/6"]);
   },
   description() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.xMW8FH);
+    const intl = util.intl;
+    return intl.string(util.t.xMW8FH);
   },
   canCreateGuild: false,
   useIsGuildSupported() {
-    const items = [closure_2];
-    return initialize.useStateFromStores(items, () => (id) => {
-      let result = callback2(id, arg1);
+    const items = [ExperimentStore];
+    return initialize.useStateFromStores(items, () => (guild, arg1) => {
+      let result = closure_1_3(guild, arg1);
       if (result) {
-        let obj = callback(7260);
-        obj = { guild: null, isOwner: true, canManageGuildRoleSubscriptions: true, isUserInCreatorMonetizationEligibleCountry: null, shouldRestrictUpdatingRoleSubscriptionSettings: null };
-        obj[0] = id;
-        obj[3] = callback(7261).isUserInCreatorMonetizationEligibleCountry();
-        const obj3 = callback(7261);
-        obj[4] = callback(4192).shouldRestrictUpdatingCreatorMonetizationSettings(id.id);
-        result = obj.canSeeGuildRoleSubscriptionSettings(obj);
-        const obj4 = callback(4192);
+        const obj2 = { guild, isOwner: true, canManageGuildRoleSubscriptions: true, isUserInCreatorMonetizationEligibleCountry: null, shouldRestrictUpdatingRoleSubscriptionSettings: null };
+        const obj = closure_1_0(7274);
+        obj2.isUserInCreatorMonetizationEligibleCountry = closure_1_0(7275).isUserInCreatorMonetizationEligibleCountry();
+        const obj3 = closure_1_0(7275);
+        obj2.shouldRestrictUpdatingRoleSubscriptionSettings = closure_1_0(4205).shouldRestrictUpdatingCreatorMonetizationSettings(guild.id);
+        result = obj.canSeeGuildRoleSubscriptionSettings(obj2);
+        const obj4 = closure_1_0(4205);
       }
       return result;
     }, [], initialize.statesWillNeverBeEqual);

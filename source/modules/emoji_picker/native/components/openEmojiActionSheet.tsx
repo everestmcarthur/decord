@@ -1,19 +1,19 @@
-// Module ID: 10333
-// Function ID: 10334
+// Module ID: 10360
+// Function ID: 10361
 // Name: openEmojiActionSheet
-// Dependencies: [1374, 1396, 1874, 4527, 10334, 1896, 2]
+// Dependencies: [1374, 1396, 1874, 4541, 10361, 1896, 2]
 // Exports: openEmojiActionSheet
 
-// Module 10333 (openEmojiActionSheet)
-import set from "set" /* 2 */;
-import set2 from "set" /* 1374 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
-import dismissGlobalKeyboard from "dismissGlobalKeyboard" /* 1874 */;
+// Module 10360 (openEmojiActionSheet)
+import EmojiConstants from "EmojiConstants" /* 1374 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import size from "module_2" /* 2 */;
 
-const EMOJI_URL_BASE_SIZE = set2.EMOJI_URL_BASE_SIZE;
-let result = set.fileFinishedImporting("modules/emoji_picker/native/components/openEmojiActionSheet.tsx");
+const EMOJI_URL_BASE_SIZE = EmojiConstants.EMOJI_URL_BASE_SIZE;
+let result = size.fileFinishedImporting("modules/emoji_picker/native/components/openEmojiActionSheet.tsx");
 
 export const openEmojiActionSheet = function openEmojiActionSheet(uniqueName) {
   if (null != uniqueName.uniqueName) {
@@ -22,30 +22,26 @@ export const openEmojiActionSheet = function openEmojiActionSheet(uniqueName) {
     }
     if (null == uniqueName.id) {
       if (null != uniqueName.surrogates) {
-        let obj = { surrogate: null, content: null };
-        obj[0] = uniqueName.surrogates;
+        const obj4 = { surrogate: uniqueName.surrogates, content: null };
         const _HermesInternal = HermesInternal;
-        obj[1] = ":" + name + ":";
+        obj4.content = ":" + name + ":";
+        let obj = obj4;
       }
-      const result = dismissGlobalKeyboard.dismissGlobalKeyboard();
-      const obj6 = ACTION_SHEET_HEIGHT_HALFDefault;
-      obj = { emojiNode: null };
-      obj[0] = obj;
-      obj6.openLazy(asyncRequireImpl(10334, dependencyMap.paths), "MessageEmojiActionSheet", obj, "stack");
+      const result = KeyboardManagerUtils.dismissGlobalKeyboard();
+      const obj6 = ActionSheetActionCreatorsDefault;
+      const obj7 = { emojiNode: obj };
+      obj6.openLazy(asyncRequireImpl(10361, dependencyMap.paths), "MessageEmojiActionSheet", obj7, "stack");
     }
-    obj = { id: null, alt: null, src: null };
-    obj[0] = uniqueName.id;
-    obj[1] = name;
+    obj = { id: uniqueName.id, alt: name, src: null };
     if (null != uniqueName.id) {
-      obj1 = getAvatarURLDefault;
-      obj1 = { id: null, animated: null, size: null };
-      ({ id: obj3[0], animated: obj3[1] } = uniqueName);
-      obj1[2] = EMOJI_URL_BASE_SIZE;
-      let url = obj1.getEmojiURL(obj1);
+      const obj10 = { id: null, animated: null, size: null };
+      ({ id: obj3.id, animated: obj3.animated } = uniqueName);
+      obj10.size = EMOJI_URL_BASE_SIZE;
+      let url = AvatarUtilsDefault.getEmojiURL(obj10);
     } else {
       url = uniqueName.url;
     }
-    obj[2] = url;
+    obj.src = url;
   }
   name = uniqueName.name;
 };

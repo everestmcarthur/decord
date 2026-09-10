@@ -2,39 +2,43 @@
 // Function ID: 1011
 // Name: tanstackRouterBrowserTracingIntegration
 // Dependencies: [889, 682]
+// Exports: tanstackRouterBrowserTracingIntegration
 
 // Module 1010 (tanstackRouterBrowserTracingIntegration)
-const require = arg1;
+import _mod682 from "module_682" /* 682 */;
+import feedbackAsyncIntegration from "feedbackAsyncIntegration" /* 889 */;
+
+const require = globalThis.__r;
+
+require = arg1;
 let dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.tanstackRouterBrowserTracingIntegration = function tanstackRouterBrowserTracingIntegration(arg0) {
+
+export const tanstackRouterBrowserTracingIntegration = function tanstackRouterBrowserTracingIntegration(arg0) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
-  dependencyMap = undefined;
-  closure_2 = undefined;
-  closure_3 = undefined;
-  const _require = arg0;
-  obj = {};
+  _require = arg0;
+  let obj3 = {};
   let merged = Object.assign(obj);
-  obj.instrumentNavigation = false;
-  obj.instrumentPageLoad = false;
-  let result = _require(889).browserTracingIntegration(obj);
+  obj3.instrumentNavigation = false;
+  obj3.instrumentPageLoad = false;
+  const result = require("feedbackAsyncIntegration").browserTracingIntegration(obj3);
   dependencyMap = result;
   const instrumentPageLoad = obj.instrumentPageLoad;
   closure_2 = undefined === instrumentPageLoad || instrumentPageLoad;
   const instrumentNavigation = obj.instrumentNavigation;
   closure_3 = undefined === instrumentNavigation || instrumentNavigation;
-  obj = {};
+  let obj4 = {};
   const merged1 = Object.assign(result);
-  obj.afterAllSetup = function afterAllSetup(f108185) {
-    obj1 = f108185;
-    _undefined.afterAllSetup(f108185);
-    const _location = callback(_undefined[0]).WINDOW.location;
+  obj4.afterAllSetup = function afterAllSetup(f108350) {
+    let obj3 = f108350;
+    _undefined.afterAllSetup(f108350);
+    const _location = obj3(_undefined[0]).WINDOW.location;
     if (closure_2) {
       if (_location) {
-        ({ options, matchRoutes } = obj1);
+        ({ options, matchRoutes } = obj3);
         let matchRoutesResult = matchRoutes(_location.pathname, options.parseSearch(_location.search), { preload: false, throwOnError: false });
         let routeId;
         if (matchRoutesResult[matchRoutesResult.length - 1] != null) {
@@ -44,43 +48,41 @@ arg5.tanstackRouterBrowserTracingIntegration = function tanstackRouterBrowserTra
         if ("__root__" !== routeId) {
           forEach = tmp5;
         }
-        let result = { name: null, attributes: null };
-        result[0] = forEach ? forEach.routeId : _location.pathname;
-        let obj = {};
-        obj[tmp2(tmp3[1]).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "pageload";
-        obj[tmp2(tmp3[1]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react.tanstack_router";
+        let obj = { name: forEach ? forEach.routeId : _location.pathname, attributes: null };
+        let obj2 = {};
+        obj2[tmp2(tmp3[1]).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "pageload";
+        obj2[tmp2(tmp3[1]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react.tanstack_router";
         let str4 = "url";
         if (forEach) {
           str4 = "route";
         }
-        obj[tmp2(tmp3[1]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = str4;
-        obj1 = undefined;
-        obj1 = {};
+        obj2[tmp2(tmp3[1]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = str4;
+        obj3 = {};
         if (forEach) {
           let _Object = Object;
           let entries = Object.entries(forEach.params);
           forEach = entries.forEach;
           let item = forEach((arg0) => {
             [tmp, tmp2] = arg0;
-            obj["url.path.params." + tmp] = tmp2;
-            obj["url.path.parameter." + tmp] = tmp2;
-            obj["params." + tmp] = tmp2;
+            obj2["url.path.params." + tmp] = tmp2;
+            obj2["url.path.parameter." + tmp] = tmp2;
+            obj2["params." + tmp] = tmp2;
           });
-          let tmp9 = obj1;
+          let tmp9 = obj3;
         } else {
-          tmp9 = obj1;
+          tmp9 = obj3;
         }
         const merged = Object.assign(tmp9);
-        result[1] = obj;
-        result = tmp2(tmp3[0]).startBrowserTracingPageLoadSpan(f108185, result);
+        obj.attributes = obj2;
+        obj = tmp2(tmp3[0]).startBrowserTracingPageLoadSpan(f108350, obj);
         const tmp2Result = tmp2(tmp3[0]);
       }
     }
     if (closure_3) {
-      const subscription = obj1.subscribe("onBeforeNavigate", (fromLocation) => {
+      const subscription = obj3.subscribe("onBeforeNavigate", (fromLocation) => {
         if (fromLocation.fromLocation) {
           if (fromLocation.toLocation.state !== fromLocation.fromLocation.state) {
-            let matchRoutesResult = obj1.matchRoutes(fromLocation.toLocation.pathname, fromLocation.toLocation.search, { preload: false, throwOnError: false });
+            let matchRoutesResult = obj3.matchRoutes(fromLocation.toLocation.pathname, fromLocation.toLocation.search, { preload: false, throwOnError: false });
             let routeId;
             if (matchRoutesResult[matchRoutesResult.length - 1] != null) {
               routeId = tmp6.routeId;
@@ -89,23 +91,21 @@ arg5.tanstackRouterBrowserTracingIntegration = function tanstackRouterBrowserTra
             if ("__root__" !== routeId) {
               tmp2 = tmp6;
             }
-            let obj = obj1(889);
-            obj = { name: null, attributes: null };
-            obj[0] = tmp2 ? tmp2.routeId : obj1(889).WINDOW.location.pathname;
-            obj = {};
-            obj[obj1(682).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "navigation";
-            obj[obj1(682).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.navigation.react.tanstack_router";
+            let obj2 = { name: tmp2 ? tmp2.routeId : feedbackAsyncIntegration.WINDOW.location.pathname, attributes: null };
+            obj3 = {};
+            obj3[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_OP] = "navigation";
+            obj3[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.navigation.react.tanstack_router";
             let str4 = "url";
             if (tmp2) {
               str4 = "route";
             }
-            obj[obj1(682).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = str4;
-            obj[1] = obj;
-            obj1 = obj.startBrowserTracingNavigationSpan(obj1, obj);
-            closure_1 = obj1.subscribe("onResolved", (toLocation) => {
-              callback();
-              if (obj) {
-                const matchRoutesResult = closure_0.matchRoutes(toLocation.toLocation.pathname, toLocation.toLocation.search, { preload: false, throwOnError: false });
+            obj3[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = str4;
+            obj2.attributes = obj3;
+            obj3 = feedbackAsyncIntegration.startBrowserTracingNavigationSpan(obj3, obj2);
+            dependencyMap = obj3.subscribe("onResolved", (toLocation) => {
+              dependencyMap();
+              if (closure_0) {
+                const matchRoutesResult = obj3.matchRoutes(toLocation.toLocation.pathname, toLocation.toLocation.search, { preload: false, throwOnError: false });
                 let routeId;
                 if (matchRoutesResult[matchRoutesResult.length - 1] != null) {
                   routeId = tmp4.routeId;
@@ -116,33 +116,30 @@ arg5.tanstackRouterBrowserTracingIntegration = function tanstackRouterBrowserTra
                 }
                 if (forEach) {
                   obj.updateName(forEach.routeId);
-                  const attr = obj.setAttribute(obj1(closure_2_1[1]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE, "route");
-                  obj = undefined;
-                  obj = {};
+                  const attr = obj.setAttribute(closure_0(682).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE, "route");
+                  const obj2 = {};
                   if (forEach) {
                     const _Object = Object;
                     const entries = Object.entries(forEach.params);
                     forEach = entries.forEach;
                     const item = forEach((arg0) => {
                       [tmp, tmp2] = arg0;
-                      obj["url.path.params." + tmp] = tmp2;
-                      obj["url.path.parameter." + tmp] = tmp2;
-                      obj["params." + tmp] = tmp2;
+                      obj2["url.path.params." + tmp] = tmp2;
+                      obj2["url.path.parameter." + tmp] = tmp2;
+                      obj2["params." + tmp] = tmp2;
                     });
-                    let tmp12 = obj;
+                    let tmp12 = obj2;
                   } else {
-                    tmp12 = obj;
+                    tmp12 = obj2;
                   }
                   obj.setAttributes(tmp12);
                 }
               }
             });
-            const obj4 = obj1;
-            const tmp5 = obj1;
           }
         }
       });
     }
   };
-  return obj;
+  return obj4;
 };

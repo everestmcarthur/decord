@@ -1,18 +1,18 @@
-// Module ID: 11095
-// Function ID: 11096
+// Module ID: 11122
+// Function ID: 11123
 // Name: BalanceWidgetPill
-// Dependencies: [2, 11096, 11105, 11103, 11106]
+// Dependencies: [2, 11123, 11132, 11130, 11133]
 
-// Module 11095 (BalanceWidgetPill)
-import set from "set" /* 2 */;
-import BalanceWidgetPill from "BalanceWidgetPill" /* 11096 */;
-import BalanceCounter from "BalanceCounter" /* 11103 */;
-import BalanceWidgetPillButton from "BalanceWidgetPillButton" /* 11105 */;
-import refDefault from "ref" /* 11106 */;
+// Module 11122 (BalanceWidgetPill)
+import virtual_currency_BalanceWidgetPill from "virtual_currency/BalanceWidgetPill" /* 11123 */;
+import BalanceCounter from "BalanceCounter" /* 11130 */;
+import BalanceWidgetPillButton from "BalanceWidgetPillButton" /* 11132 */;
+import BalanceWidgetActionSheetDefault from "BalanceWidgetActionSheet" /* 11133 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/virtual_currency/native/index.tsx");
+const result = size.fileFinishedImporting("modules/virtual_currency/native/index.tsx");
 
-export const BalanceWidgetPill = BalanceWidgetPill.BalanceWidgetPill;
+export const BalanceWidgetPill = virtual_currency_BalanceWidgetPill.BalanceWidgetPill;
 export const BalanceWidgetPillButton = BalanceWidgetPillButton.BalanceWidgetPillButton;
 export const BalanceCounter = BalanceCounter.BalanceCounter;
-export const BalanceWidgetActionSheet = refDefault;
+export const BalanceWidgetActionSheet = BalanceWidgetActionSheetDefault;

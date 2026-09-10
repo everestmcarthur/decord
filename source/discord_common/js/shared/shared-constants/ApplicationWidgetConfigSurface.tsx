@@ -1,11 +1,11 @@
-// Module ID: 9014
-// Function ID: 9015
+// Module ID: 9041
+// Function ID: 9042
 // Name: ApplicationWidgetConfigSurface
 // Dependencies: [2]
 
-// Module 9014 (ApplicationWidgetConfigSurface)
-import set from "set" /* 2 */;
+// Module 9041 (ApplicationWidgetConfigSurface)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationWidgetConfigSurface.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationWidgetConfigSurface.tsx");
 
 export const ApplicationWidgetConfigSurface = { WIDGET_TOP: "widget_top", WIDGET_BOTTOM: "widget_bottom", ADD_WIDGET_PREVIEW: "add_widget_preview", MINI_PROFILE: "mini_profile", ACTIVITY_ACCESSORY: "activity_accessory" };

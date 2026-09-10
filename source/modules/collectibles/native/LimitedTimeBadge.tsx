@@ -1,55 +1,50 @@
-// Module ID: 8841
-// Function ID: 8842
+// Module ID: 8868
+// Function ID: 8869
 // Name: LimitedTimeBadge
-// Dependencies: [19, 17, 2025, 1183, 21, 4560, 576, 1114, 504, 4411, 7439, 4556, 2]
+// Dependencies: [19, 17, 2025, 1183, 21, 4574, 576, 1114, 504, 4425, 7453, 4570, 2]
 // Exports: default
 
-// Module 8841 (LimitedTimeBadge)
-import noopAll from "noop" /* 19 */;
+// Module 8868 (LimitedTimeBadge)
 import initialize from "initialize" /* 504 */;
-import ThemesDefault from "Themes" /* 576 */;
-import useCountdownDefault from "useCountdown" /* 7439 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "_getSystemLocale" /* 2025 */;
-import closure_5 from "handleThemeChange" /* 1183 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import shared from "shared" /* 4425 */;
+import useCountdownDefault from "useCountdown" /* 7453 */;
+import noop from "module_19" /* 19 */;
+import LocaleStore from "LocaleStore" /* 2025 */;
+import ThemeStore from "ThemeStore" /* 1183 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { root: null, backgroundDarkMode: null, backgroundLightMode: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.md, paddingHorizontal: 8, paddingVertical: 2 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: ThemesDefault.colors.WHITE };
-let obj1 = { backgroundColor: ThemesDefault.colors.WHITE };
-createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
-const result = require("set").fileFinishedImporting("modules/collectibles/native/LimitedTimeBadge.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { root: { borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 2 }, backgroundDarkMode: null, backgroundLightMode: null };
+let obj3 = { borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 2 };
+obj2.backgroundDarkMode = { backgroundColor: nativeDefault.colors.WHITE };
+let obj4 = { backgroundColor: nativeDefault.colors.WHITE };
+obj2.backgroundLightMode = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/LimitedTimeBadge.tsx");
 
 export default function LimitedTimeBadge(unpublishedAt) {
-  const tmp = callback();
-  let obj = initialize;
-  const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => callback(table[9]).isThemeDark(theme.theme));
-  obj1 = initialize;
-  const items1 = [closure_4];
+  const tmp = closure_7();
+  const items = [ThemeStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => shared.isThemeDark(theme.theme));
+  const items1 = [LocaleStore];
   const items2 = ["en-US", "en-GB"];
-  const hasItem = items2.includes(obj1.useStateFromStores(items1, () => locale.locale));
+  const hasItem = items2.includes(initialize.useStateFromStores(items1, () => locale.locale));
   ({ days, hours } = useCountdownDefault(unpublishedAt.unpublishedAt, 1000, undefined, true));
   if (hasItem) {
     if (days > 1) {
       const intl6 = tmp2(1114).intl;
-      obj = { days: null };
-      obj[0] = days;
-      let formatToPlainStringResult = intl6.formatToPlainString(tmp2(1114).t.DkxLY0, obj);
+      const obj3 = { days };
+      let formatToPlainStringResult = intl6.formatToPlainString(tmp2(1114).t.DkxLY0, obj3);
     } else {
       if (days <= 1) {
         if (hours > 0) {
           const intl5 = tmp2(1114).intl;
-          obj = { hours: null };
-          obj[0] = hours;
-          formatToPlainStringResult = intl5.formatToPlainString(tmp2(1114).t.WJieZ2, obj);
+          const obj4 = { hours };
+          formatToPlainStringResult = intl5.formatToPlainString(tmp2(1114).t.WJieZ2, obj4);
         }
       }
       const intl4 = tmp2(1114).intl;
@@ -68,22 +63,20 @@ export default function LimitedTimeBadge(unpublishedAt) {
       sum = sum1;
     }
     const items3 = [tmp.root, , ];
-    obj1 = { style: null, children: null };
+    const obj5 = { style: null, children: null };
     items3[1] = stateFromStores ? tmp.backgroundDarkMode : tmp.backgroundLightMode;
     items3[2] = unpublishedAt.style;
-    obj1[0] = items3;
+    obj5.style = items3;
     let str2 = "text-overlay-light";
     if (stateFromStores) {
       str2 = "text-overlay-dark";
     }
-    const obj2 = { color: null, variant: "text-xs/bold", accessibilityLabel: null, allowFontScaling: false, children: null };
-    obj2[0] = str2;
+    const obj6 = { color: str2, variant: "text-xs/bold", accessibilityLabel: null, allowFontScaling: false, children: null };
     const intl7 = tmp2(1114).intl;
-    const obj3 = { daysLeft: null };
-    obj3[0] = days;
-    obj2[2] = intl7.formatToPlainString(tmp2(1114).t.TlZULM, obj3);
-    obj2[4] = sum;
-    obj1[1] = jsx(tmp2(4556).Text, { color: null, variant: "text-xs/bold", accessibilityLabel: null, allowFontScaling: false, children: null });
+    const obj7 = { daysLeft: days };
+    obj6.accessibilityLabel = intl7.formatToPlainString(tmp2(1114).t.TlZULM, obj7);
+    obj6.children = sum;
+    obj5.children = jsx(tmp2(4570).Text, { color: str2, variant: "text-xs/bold", accessibilityLabel: null, allowFontScaling: false, children: null });
     return <View style={null}>{null}</View>;
   }
 };

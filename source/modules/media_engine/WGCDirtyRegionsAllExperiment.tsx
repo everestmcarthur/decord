@@ -1,15 +1,17 @@
-// Module ID: 14008
-// Function ID: 14009
-// Name: apexExperiment
+// Module ID: 14031
+// Function ID: 14032
+// Name: WGCDirtyRegionsAllExperiment
 // Dependencies: [1433, 2]
 
-// Module 14008 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 14031 (WGCDirtyRegionsAllExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null };
-obj[1] = { enabled: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-02-wgc-dirty-regions-all", kind: "user", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/media_engine/WGCDirtyRegionsAllExperiment.tsx");
+const obj = { name: "2026-02-wgc-dirty-regions-all", kind: "user", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj.variations = obj2;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/media_engine/WGCDirtyRegionsAllExperiment.tsx");
 
 export const WGCDirtyRegionsAllExperiment = apexExperiment;

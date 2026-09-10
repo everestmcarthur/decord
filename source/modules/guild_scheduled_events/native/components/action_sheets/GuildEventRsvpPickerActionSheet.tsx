@@ -1,38 +1,39 @@
-// Module ID: 9824
-// Function ID: 9825
+// Module ID: 9851
+// Function ID: 9852
 // Name: GuildEventRsvpPickerActionSheet
-// Dependencies: [32, 19, 17, 1963, 21, 4560, 576, 9711, 1114, 7150, 7149, 7123, 5685, 5688, 4975, 9703, 4527, 2]
+// Dependencies: [32, 19, 17, 1963, 21, 4574, 576, 9738, 1114, 7164, 7163, 7137, 5699, 5702, 4989, 9730, 4541, 2]
 // Exports: default
 
-// Module 9824 (GuildEventRsvpPickerActionSheet)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { GuildScheduledEventUserResponses as closure_6 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1963 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9851 (GuildEventRsvpPickerActionSheet)
+import nativeDefault from "native" /* 576 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9730 */;
+import GuildEventRsvpUtils from "GuildEventRsvpUtils" /* 9738 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, buttonWrapper: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginTop: ThemesDefault.space.PX_24 };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { marginTop: ThemesDefault.space.PX_24 };
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/action_sheets/GuildEventRsvpPickerActionSheet.tsx");
+require = fn;
+const View = fn(17).View;
+const constants = fn(1963).GuildScheduledEventUserResponses;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16 }, buttonWrapper: null };
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.buttonWrapper = { marginTop: nativeDefault.space.PX_24 };
+let closure_9 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/action_sheets/GuildEventRsvpPickerActionSheet.tsx");
 
 export default function GuildEventRsvpPickerActionSheet(event) {
   event = event.event;
-  ({ recurrenceId: importDefault, guildId: dependencyMap, onRsvp: closure_3 } = event);
-  let first;
+  ({ recurrenceId: importDefault, guildId: dependencyMap, onRsvp: _slicedToArray } = event);
+  let defaultValue;
   closure_5 = undefined;
-  let tmp = callback4();
-  const tmp4 = callback(first.useState(event(9711).ResponseOptions.SERIES), 2);
-  first = tmp4[0];
-  let obj = event(9711);
-  const existingRsvp = obj.getExistingRsvp(event.id, null);
+  let tmp = closure_9();
+  const tmp4 = _slicedToArray(defaultValue.useState(event(9738).ResponseOptions.SERIES), 2);
+  defaultValue = tmp4[0];
+  const existingRsvp = event(9738).getExistingRsvp(event.id, null);
   let response;
   if (existingRsvp != null) {
     response = existingRsvp.response;
@@ -46,34 +47,34 @@ export default function GuildEventRsvpPickerActionSheet(event) {
     const intl = tmp2(1114).intl;
     stringResult = intl.string(tmp2(1114).t["8MPCVr"]);
   }
-  obj = { header: callback2(tmp2(7149).BottomSheetTitleHeader, { title: stringResult }), children: null };
-  obj = { bottom: true, style: tmp.container, children: null };
-  obj1 = { defaultValue: first, onChange: tmp4[1], hasIcons: false, children: null };
-  const responseOptions = event(9711).getResponseOptions();
-  obj1[3] = responseOptions.map((value) => callback2(event(table[13]).TableRadioRow, { value: value.value, label: value.name }, value.value));
-  const items = [callback2(event(5685).TableRadioGroup, obj1), ];
-  const obj2 = { style: tmp.buttonWrapper, children: null };
-  const obj3 = {
+  const obj2 = { header: closure_7(event(7163).BottomSheetTitleHeader, { title: stringResult }), children: null };
+  const obj3 = { bottom: true, style: tmp.container, children: null };
+  const obj4 = { defaultValue, onChange: tmp4[1], hasIcons: false, children: null };
+  const obj = event(9738);
+  const responseOptions = event(9738).getResponseOptions();
+  obj4.children = responseOptions.map((value) => closure_1_7(event(dependencyMap[13]).TableRadioRow, { value: value.value, label: value.name }, value.value));
+  const items = [closure_7(event(5699).TableRadioGroup, obj4), ];
+  const obj5 = { style: tmp.buttonWrapper, children: null };
+  const obj6 = {
     onPress() {
       let tmp3 = null;
-      if (first !== event(closure_1_2[7]).ResponseOptions.SERIES) {
-        tmp3 = closure_1;
+      if (first !== GuildEventRsvpUtils.ResponseOptions.SERIES) {
+        tmp3 = closure_1_1;
       }
-      event(closure_1_2[15]).updateRsvp(event.id, tmp3, closure_2, closure_5);
-      if (callback != null) {
-        callback();
+      GuildScheduledEventModalActionCreators.updateRsvp(event.id, tmp3, dependencyMap, closure_5);
+      if (_slicedToArray != null) {
+        _slicedToArray();
       }
-      const tmp = event;
-      const tmpResult = event(closure_1_2[15]);
-      closure_1_1(closure_1_2[16]).hideActionSheet();
+      const tmpResult = GuildScheduledEventModalActionCreators;
+      ActionSheetActionCreatorsDefault.hideActionSheet();
     },
     text: null
   };
   const intl3 = tmp2(1114).intl;
-  obj3[1] = intl3.string(event(1114).t.TyCVIq);
-  obj2[1] = callback2(event(4975).Button, obj3);
-  items[1] = callback2(closure_5, obj2);
-  obj[2] = items;
-  obj[1] = callback3(event(7123).SafeAreaPaddingView, obj);
-  return callback2(event(7150).BottomSheet, obj);
+  obj6.text = intl3.string(event(1114).t.TyCVIq);
+  obj5.children = closure_7(event(4989).Button, obj6);
+  items[1] = closure_7(closure_5, obj5);
+  obj3.children = items;
+  obj2.children = closure_8(event(7137).SafeAreaPaddingView, obj3);
+  return closure_7(event(7164).BottomSheet, obj2);
 };

@@ -1,15 +1,15 @@
-// Module ID: 8115
-// Function ID: 8116
+// Module ID: 8141
+// Function ID: 8142
 // Name: validateComponent
-// Dependencies: [1894, 4785, 1114, 38, 2]
+// Dependencies: [1894, 4799, 1114, 38, 2]
 // Exports: default
 
-// Module 8115 (validateComponent)
-import set from "set" /* 2 */;
+// Module 8141 (validateComponent)
 import _modDef38 from "module_38" /* 38 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1894 */;
+import Server from "Server" /* 1894 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/interaction_components/validateComponent.tsx");
+const result = size.fileFinishedImporting("modules/interaction_components/validateComponent.tsx");
 
 export default function validateComponent(type, arg1, modal) {
   values = arg1;
@@ -17,7 +17,7 @@ export default function validateComponent(type, arg1, modal) {
     _modDef38(values.type === type.type, "component type matches state");
   }
   type = type.type;
-  if (PermissionOverwriteType.ComponentType.BUTTON === type) {
+  if (Server.ComponentType.BUTTON === type) {
     return null;
   } else {
     if (tmp4(1894).ComponentType.STRING_SELECT !== type) {
@@ -31,10 +31,8 @@ export default function validateComponent(type, arg1, modal) {
                   if (0 !== values.value.length) {
                     if (values.value.length < minLength) {
                       const intl8 = tmp4(1114).intl;
-                      let obj = { min: null, max: null };
-                      obj[0] = minLength;
-                      obj[1] = maxLength;
-                      let formatToPlainStringResult = intl8.formatToPlainString(tmp4(1114).t.ONSqYd, obj);
+                      const range = { min: minLength, max: maxLength };
+                      let formatToPlainStringResult = intl8.formatToPlainString(tmp4(1114).t.ONSqYd, range);
                     } else {
                       formatToPlainStringResult = null;
                     }
@@ -65,16 +63,14 @@ export default function validateComponent(type, arg1, modal) {
                   let formatToPlainStringResult1 = stringResult1;
                 } else if (num3 < minValues2) {
                   const intl6 = tmp4(1114).intl;
-                  obj = { minValues: null };
-                  obj[0] = minValues2;
-                  formatToPlainStringResult1 = intl6.formatToPlainString(tmp4(1114).t.pmAt62, obj);
+                  const obj2 = { minValues: minValues2 };
+                  formatToPlainStringResult1 = intl6.formatToPlainString(tmp4(1114).t.pmAt62, obj2);
                 } else {
                   formatToPlainStringResult1 = null;
                   if (num3 > maxValues2) {
                     const intl5 = tmp4(1114).intl;
-                    obj1 = { maxValues: null };
-                    obj1[0] = maxValues2;
-                    formatToPlainStringResult1 = intl5.formatToPlainString(tmp4(1114).t.dy6viJ, obj1);
+                    const obj3 = { maxValues: maxValues2 };
+                    formatToPlainStringResult1 = intl5.formatToPlainString(tmp4(1114).t.dy6viJ, obj3);
                   }
                 }
                 return formatToPlainStringResult1;
@@ -107,15 +103,13 @@ export default function validateComponent(type, arg1, modal) {
                   let formatToPlainStringResult2 = stringResult3;
                 } else if (num < minValues) {
                   const intl2 = tmp4(1114).intl;
-                  const obj2 = { count: null };
-                  obj2[0] = minValues;
-                  formatToPlainStringResult2 = intl2.formatToPlainString(tmp4(1114).t.Jmwzdx, obj2);
+                  const obj4 = { count: minValues };
+                  formatToPlainStringResult2 = intl2.formatToPlainString(tmp4(1114).t.Jmwzdx, obj4);
                 } else {
                   formatToPlainStringResult2 = null;
                   if (num > maxValues) {
                     const intl = tmp4(1114).intl;
-                    obj = { count: null };
-                    obj[0] = maxValues;
+                    const obj = { count: maxValues };
                     formatToPlainStringResult2 = intl.formatToPlainString(tmp4(1114).t.LDvfRP, obj);
                   }
                 }
@@ -133,16 +127,14 @@ export default function validateComponent(type, arg1, modal) {
     ({ minValues: minValues3, maxValues: maxValues3 } = type);
     if (null == values) {
       {
-        const obj3 = { minValues: null, required: null };
-        obj3[0] = minValues3;
-        obj3[1] = tmp16;
+        const obj5 = { minValues: minValues3, required: tmp16 };
         let stringResult4 = null;
-        if (!tmp4Result.canSelectBeEmpty(obj3, modal)) {
+        if (!tmp4Result.canSelectBeEmpty(obj5, modal)) {
           const intl10 = tmp4(1114).intl;
           stringResult4 = intl10.string(tmp4(1114).t.eJEUvD);
         }
         const tmp18 = stringResult4;
-        tmp4Result = tmp4(4785);
+        tmp4Result = tmp4(4799);
       }
       return tmp18;
     } else if (values.type === tmp4(1894).ComponentType.STRING_SELECT) {

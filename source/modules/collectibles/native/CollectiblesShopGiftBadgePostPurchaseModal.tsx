@@ -1,64 +1,67 @@
-// Module ID: 11032
-// Function ID: 11033
+// Module ID: 11059
+// Function ID: 11060
 // Name: CollectiblesShopGiftBadgePostPurchaseModal
-// Dependencies: [19, 17, 21, 4560, 576, 1611, 4763, 7541, 7182, 8421, 1114, 5680, 4556, 2492, 11033, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 1611, 4777, 7555, 7196, 8449, 1114, 5694, 4570, 2492, 11060, 2]
 // Exports: default
 
-// Module 11032 (CollectiblesShopGiftBadgePostPurchaseModal)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 11059 (CollectiblesShopGiftBadgePostPurchaseModal)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import messagesProxyDefault from "messagesProxy" /* 2492 */;
-import Text from "Text" /* 4556 */;
-import XSmallIcon from "XSmallIcon" /* 5680 */;
-import ModalScreen from "ModalScreen" /* 8421 */;
-import PostPurchaseFooterDefault from "PostPurchaseFooter" /* 11033 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import _modDef2492 from "module_2492" /* 2492 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import XSmallIcon from "XSmallIcon" /* 5694 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7555 */;
+import ModalScreen from "ModalScreen" /* 8449 */;
+import GiftBadgePostPurchaseDefault from "GiftBadgePostPurchase" /* 11060 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ Pressable: c4, View: c5 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles((paddingTop) => {
-  obj = { header: obj, closeButton: null, closeIcon: null };
-  obj = { position: "absolute", top: 0, left: 0, right: 0, height: paddingTop + 56, paddingTop, zIndex: 1, flexDirection: "row", alignItems: "center", justifyContent: "center" };
-  obj = { position: "absolute", left: 0, top: paddingTop, bottom: 0, paddingHorizontal: ThemesDefault.space.PX_16, justifyContent: "center" };
-  obj[1] = obj;
-  obj[2] = { tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let closure_8 = createStyles.createStyles((paddingTop) => {
+  const obj = { header: null, closeButton: null, closeIcon: null };
+  const rect = { position: "absolute", top: 0, left: 0, right: 0, height: paddingTop + 56, paddingTop, zIndex: 1, flexDirection: "row", alignItems: "center", justifyContent: "center" };
+  obj.header = rect;
+  const rect1 = { position: "absolute", left: 0, top: paddingTop, bottom: 0, paddingHorizontal: nativeDefault.space.PX_16, justifyContent: "center" };
+  obj.closeButton = rect1;
+  obj.closeIcon = { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
   return obj;
 });
-let result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesShopGiftBadgePostPurchaseModal.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopGiftBadgePostPurchaseModal.tsx");
 
 export default function CollectiblesShopGiftBadgePostPurchaseModal(currentProgress) {
-  const tmp = callback3(useSafeAreaInsetsDefault().top);
-  const callback = React.useCallback(() => {
-    let arr = callback2(4763);
-    arr = arr.pop();
+  const tmp = closure_8(useSafeAreaInsetsDefault().top);
+  const callback = noop.useCallback(() => {
+    ModalActionCreatorsDefault.pop();
   }, []);
-  const callback1 = React.useCallback(() => {
-    let obj = callback(7541);
-    obj = { analyticsLocations: null, analyticsSource: null };
-    const items = [callback2(7182).GIFTING_BADGE_POST_PURCHASE];
-    obj[0] = items;
-    obj[1] = callback2(7182).GIFTING_BADGE_POST_PURCHASE;
-    const result = obj.openCollectiblesShopMobile(obj);
+  const callback1 = noop.useCallback(() => {
+    const obj2 = { analyticsLocations: null, analyticsSource: null };
+    const items = [AnalyticsLocationDefault.GIFTING_BADGE_POST_PURCHASE];
+    obj2.analyticsLocations = items;
+    obj2.analyticsSource = AnalyticsLocationDefault.GIFTING_BADGE_POST_PURCHASE;
+    const result = CollectiblesActionCreators.openCollectiblesShopMobile(obj2);
   }, []);
-  let obj = { children: null };
-  obj = { style: tmp.header, children: null };
-  obj = { onPress: callback, accessibilityRole: "button", accessibilityLabel: null, style: null, children: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.cpT0Cq);
-  obj[3] = tmp.closeButton;
-  obj[4] = callback(XSmallIcon.XSmallIcon, { size: "md", style: tmp.closeIcon });
-  let items = [callback(closure_4, obj), ];
-  const obj2 = { accessibilityRole: "header", "aria-level": "1", lineClamp: 1, variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj2[5] = intl2.string(messagesProxyDefault.roVAey);
-  items[1] = callback(Text.Text, obj2);
-  obj[1] = items;
-  const items1 = [callback2(closure_5, obj), callback(PostPurchaseFooterDefault, { currentProgress: currentProgress.giftBadgeProgress, onSendGift: callback1 })];
-  obj[0] = items1;
-  return callback2(ModalScreen.ModalScreen, obj);
+  const obj = { children: null };
+  let obj2 = { style: tmp.header, children: null };
+  const obj3 = { onPress: callback, accessibilityRole: "button", accessibilityLabel: null, style: null, children: null };
+  const intl = util.intl;
+  obj3.accessibilityLabel = intl.string(util.t.cpT0Cq);
+  obj3.style = tmp.closeButton;
+  obj3.children = timestampProducer(XSmallIcon.XSmallIcon, { size: "md", style: tmp.closeIcon });
+  let items = [timestampProducer(React4, obj3), ];
+  const obj5 = { accessibilityRole: "header", "aria-level": "1", lineClamp: 1, variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", children: null };
+  const intl2 = util.intl;
+  obj5.children = intl2.string(_modDef2492.roVAey);
+  items[1] = timestampProducer(Text_Text.Text, obj5);
+  obj2.children = items;
+  const items1 = [React5(hasOwnProperty, obj2), timestampProducer(GiftBadgePostPurchaseDefault, { currentProgress: currentProgress.giftBadgeProgress, onSendGift: callback1 })];
+  obj.children = items1;
+  return React5(ModalScreen.ModalScreen, obj);
 };

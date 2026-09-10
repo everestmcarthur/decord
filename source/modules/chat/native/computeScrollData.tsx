@@ -1,16 +1,18 @@
-// Module ID: 11275
-// Function ID: 11276
+// Module ID: 11302
+// Function ID: 11303
 // Name: computeScrollData
-// Dependencies: [4552, 7933, 11276, 4491, 2]
+// Dependencies: [4566, 7947, 11303, 4505, 2]
 // Exports: default, findMessageRowIndex
 
-// Module 11275 (computeScrollData)
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import Changeset from "Changeset" /* 7933 */;
+// Module 11302 (computeScrollData)
+import NativeChatUtils from "NativeChatUtils" /* 11303 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-const require = arg1;
-({ RowType: c3, SeparatorType: c4 } = Changeset);
-const result = require("set").fileFinishedImporting("modules/chat/native/computeScrollData.tsx");
+require = fn;
+const RowGeneratorConstants = fn(7947);
+({ RowType: c3, SeparatorType: closure_4 } = RowGeneratorConstants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/chat/native/computeScrollData.tsx");
 
 export default function computeScrollData(shouldInitialScroll) {
   ({ rows, scrollToMessageId, jumpTargetId, animated, scrollPosition, focusTargetId, jumpType } = shouldInitialScroll);
@@ -28,15 +30,13 @@ export default function computeScrollData(shouldInitialScroll) {
         tmp3 = findIndexResult;
       }
       if (null != tmp3) {
-        let obj = { type: null, index: null, animate: null, highlight: false, position: null };
-        obj[0] = focusTargetId(11276).ChatScrollType.SCROLL;
-        obj[1] = tmp3;
+        const obj2 = { type: NativeChatUtils.ChatScrollType.SCROLL, index: tmp3, animate: null, highlight: false, position: null };
         if (animated) {
-          animated = !closure_2.useReducedMotion;
+          animated = !AccessibilityStore.useReducedMotion;
         }
-        obj[2] = animated;
-        obj[4] = focusTargetId(11276).ChatScrollPosition.TOP;
-        return obj;
+        obj2.animate = animated;
+        obj2.position = NativeChatUtils.ChatScrollPosition.TOP;
+        return obj2;
       }
     }
   }
@@ -55,20 +55,18 @@ export default function computeScrollData(shouldInitialScroll) {
       tmp6 = findIndexResult1;
     }
     if (null != tmp6) {
-      obj = { type: null, index: null, animate: null, highlight: null, position: null };
-      obj[0] = focusTargetId(11276).ChatScrollType.SCROLL;
-      obj[1] = tmp6;
-      const useReducedMotion = closure_2.useReducedMotion;
+      const obj = { type: NativeChatUtils.ChatScrollType.SCROLL, index: tmp6, animate: null, highlight: null, position: null };
+      const useReducedMotion = AccessibilityStore.useReducedMotion;
       let tmp10 = !useReducedMotion;
       if (!useReducedMotion) {
-        tmp10 = jumpType !== tmp7(4491).JumpType.INSTANT;
+        tmp10 = jumpType !== tmp7(4505).JumpType.INSTANT;
       }
-      obj[2] = tmp10;
-      obj[3] = scrollToMessageId === jumpTargetId;
+      obj.animate = tmp10;
+      obj.highlight = scrollToMessageId === jumpTargetId;
       if (scrollPosition == null) {
-        scrollPosition = tmp7(11276).ChatScrollPosition.TOP;
+        scrollPosition = tmp7(11303).ChatScrollPosition.TOP;
       }
-      obj[4] = scrollPosition;
+      obj.position = scrollPosition;
       tmp4 = obj;
     }
   }
@@ -87,10 +85,8 @@ export default function computeScrollData(shouldInitialScroll) {
         tmp13 = findIndexResult2;
       }
       if (null != tmp13) {
-        obj = { type: null, index: null };
-        obj[0] = focusTargetId(11276).ChatScrollType.FOCUS_ONLY;
-        obj[1] = tmp13;
-        tmp11 = obj;
+        const obj3 = { type: NativeChatUtils.ChatScrollType.FOCUS_ONLY, index: tmp13 };
+        tmp11 = obj3;
       }
     }
     tmp4 = tmp11;

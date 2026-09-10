@@ -1,40 +1,41 @@
-// Module ID: 14590
-// Function ID: 14591
+// Module ID: 14615
+// Function ID: 14616
 // Name: UserSettingsEditUserProfile
-// Dependencies: [19, 1371, 21, 7162, 7182, 504, 8187, 14591, 2]
+// Dependencies: [19, 1371, 21, 7176, 7196, 504, 8213, 14616, 2]
 // Exports: default
 
-// Module 14590 (UserSettingsEditUserProfile)
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7182 */;
-import EditUserProfileBannerDefault from "EditUserProfileBanner" /* 14591 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 14615 (UserSettingsEditUserProfile)
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7176 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8213 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/profiles/native/UserSettingsEditUserProfile.tsx");
+const UserProfileEditFormDefault = tmp(14616);
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/profiles/native/UserSettingsEditUserProfile.tsx");
 
 export default function UserSettingsEditUserProfile(arg0) {
-  let obj = stateFromStores(504);
-  const items = [closure_4];
-  stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
+  let tmp3 = useAnalyticsLocationsDefault;
+  const tmp4 = stateFromStores;
+  const items = [UserStore];
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [stateFromStores];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (null != stateFromStores) {
-      closure_1_1(closure_1_2[6])(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
-      const tmp3 = closure_1_1(closure_1_2[6]);
+      maybeFetchUserProfileDefault(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
     }
   }, items1);
   let tmp7 = null;
   if (null != stateFromStores) {
-    obj = { value: null, children: null };
-    obj[0] = tmp3(QUICK_SWITCHERDefault.USER_SETTINGS_USER_PROFILE).analyticsLocations;
-    obj = { currentUser: null };
-    obj[0] = stateFromStores;
+    const obj2 = { value: tmp3(AnalyticsLocationDefault.USER_SETTINGS_USER_PROFILE).analyticsLocations, children: null };
+    const obj3 = { currentUser: stateFromStores };
     const merged = Object.assign(arg0);
-    obj[1] = jsx(EditUserProfileBannerDefault, { currentUser: null });
-    tmp7 = jsx(stateFromStores(7162).AnalyticsLocationProvider, { currentUser: null });
-    const tmpResult = EditUserProfileBannerDefault;
+    obj2.children = jsx(UserProfileEditFormDefault, { currentUser: stateFromStores });
+    tmp7 = jsx(tmp4(7176).AnalyticsLocationProvider, { value: tmp3(AnalyticsLocationDefault.USER_SETTINGS_USER_PROFILE).analyticsLocations, children: null });
+    const tmpResult = UserProfileEditFormDefault;
   }
   return tmp7;
 };

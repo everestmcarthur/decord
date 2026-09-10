@@ -1,94 +1,101 @@
-// Module ID: 16947
-// Function ID: 16948
-// Name: CatEarsBackdrop
-// Dependencies: [19, 17, 1076, 7151, 1954, 21, 4560, 576, 1477, 6627, 1611, 4296, 16948, 4556, 1114, 16949, 7541, 7182, 7150, 16950, 5692, 4975, 2]
+// Module ID: 16984
+// Function ID: 16985
+// Name: CollectiblesMobileAnnouncementActionSheet
+// Dependencies: [19, 17, 1076, 7165, 1954, 21, 4574, 576, 1477, 6641, 1611, 4310, 16985, 4570, 1114, 16986, 7555, 7196, 7164, 16987, 5706, 4989, 2]
 // Exports: default
 
-// Module 16947 (CatEarsBackdrop)
-import ThemesDefault from "Themes" /* 576 */;
-import Text from "Text" /* 4556 */;
-import metadataDefault from "metadata" /* 16950 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { CollectiblesMobileShopScreen as closure_6 } from "items" /* 1076 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 7151 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16984 (CollectiblesMobileAnnouncementActionSheet)
+import nativeDefault from "native" /* 576 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import BottomSheetModal from "BottomSheetModal" /* 6641 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7555 */;
+import _modDef16985 from "module_16985" /* 16985 */;
+import _modDef16987 from "module_16987" /* 16987 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+const ReanimatedRexportDefault = ReanimatedRexport;
+
+require = fn;
 function CatEarsBackdrop() {
-  const tmp = callback3();
-  const width = top(1477)().width;
-  let obj = animatedPosition(6627);
-  animatedPosition = obj.useBottomSheet().animatedPosition;
-  top = top(1611)().top;
+  const tmp = closure_11();
+  const width = useWindowDimensionsDefault().width;
+  const animatedPosition = BottomSheetModal.useBottomSheet().animatedPosition;
+  const top = useSafeAreaInsetsDefault().top;
   const bound = Math.min(width, ACTION_SHEET_MAX_WIDTH);
   const result = (width - bound) / 2;
   const result1 = bound / 1200;
-  obj1 = animatedPosition(4296);
   const fn = function t() {
-    let obj = { transform: null };
-    obj = { translateY: animatedPosition.get() + top - 60 };
-    const items = [obj];
-    obj[0] = items;
+    const obj = { transform: null };
+    const items = [{ translateY: animatedPosition.get() + top - 60 }];
+    obj.transform = items;
     return obj;
   };
   fn.__closure = { animatedPosition, safeAreaTop: top, MASCOT_SAFE_AREA_NUDGE: 60 };
   fn.__workletHash = 6274760278164;
-  fn.__initData = closure_12;
-  const animatedStyle = obj1.useAnimatedStyle(fn);
-  obj = { style: items, children: null };
-  items = [tmp.mascotContainer, { left: result, right: result }, animatedStyle];
-  obj = { style: items1, children: null };
-  items1 = [tmp.mascotLayer, ];
-  obj1 = { top: -138 * result1, left: tmp6, right: tmp6 };
-  items1[1] = obj1;
-  const obj2 = { source: { uri: top(16948) }, style: tmp.mascotImage, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
-  obj[1] = callback(closure_4, obj2);
-  obj[1] = callback(closure_5, obj);
-  return callback(top(4296).View, obj);
+  fn.__initData = __initData;
+  const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
+  const obj3 = { style: null, children: null };
+  let items = [tmp.mascotContainer, { left: result, right: result }, animatedStyle];
+  obj3.style = items;
+  const obj4 = { style: null, children: null };
+  const items1 = [tmp.mascotLayer, ];
+  const rect = { top: -138 * result1, left: -56 * result1, right: -56 * result1 };
+  items1[1] = rect;
+  obj4.style = items1;
+  const obj5 = { source: null, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
+  obj5.source = { uri: _modDef16985 };
+  obj5.style = tmp.mascotImage;
+  obj4.children = React7(React4, obj5);
+  obj3.children = React7(hasOwnProperty, obj4);
+  return React7(ReanimatedRexportDefault.View, obj3);
 }
 function FeatureRow(arg0) {
   ({ icon, text } = arg0);
-  const tmp = callback3();
-  let obj = { style: tmp.featureRow, children: null };
-  const items = [icon, ];
-  obj = { variant: "text-sm/medium", color: "text-subtle", style: tmp.featureText, children: text };
-  items[1] = callback(Text.Text, obj);
-  obj[1] = items;
-  return callback2(closure_5, obj);
+  const tmp = closure_11();
+  const obj = { style: tmp.featureRow, children: null };
+  const items = [icon, React7(Text_Text.Text, { variant: "text-sm/medium", color: "text-subtle", style: tmp.featureText, children: text })];
+  obj.children = items;
+  return closure_1_10(hasOwnProperty, obj);
 }
-({ Image: c4, StyleSheet, View: c5 } = get_ActivityIndicator);
-({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { mascotContainer: null, mascotLayer: null, mascotImage: null, framePreviewImage: null, container: null, headerText: null, featureRow: null, featureText: null, featureRows: null };
-createCacheKey = {};
+get_ActivityIndicator = fn(17);
+({ Image: closure_4, StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
+let closure_6 = fn(1076).CollectiblesMobileShopScreen;
+const ACTION_SHEET_MAX_WIDTH = fn(7165).ACTION_SHEET_MAX_WIDTH;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { mascotContainer: null, mascotLayer: null, mascotImage: null, framePreviewImage: null, container: null, headerText: null, featureRow: null, featureText: null, featureRows: null };
+let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-createCacheKey.pointerEvents = "none";
-createCacheKey[0] = createCacheKey;
+obj3.pointerEvents = "none";
+obj2.mascotContainer = obj3;
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
-createCacheKey[1] = {};
-createCacheKey[2] = { width: "100%", aspectRatio: 1.8324022346368716 };
-createCacheKey[3] = { width: "100%", aspectRatio: 3.25, resizeMode: "contain" };
-createCacheKey[4] = { padding: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_16 };
-createCacheKey[5] = { textAlign: "center" };
-let obj1 = {};
-let obj2 = { padding: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_16 };
-createCacheKey[6] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_16 };
-createCacheKey[7] = { flex: 1 };
-let obj3 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_16 };
-createCacheKey[8] = { gap: ThemesDefault.space.PX_32 };
-let closure_11 = createCacheKey.createStyles(createCacheKey);
-let closure_12 = { code: "function CollectiblesMobileAnnouncementActionSheetTsx1(){const{animatedPosition,safeAreaTop,MASCOT_SAFE_AREA_NUDGE}=this.__closure;return{transform:[{translateY:animatedPosition.get()+safeAreaTop-MASCOT_SAFE_AREA_NUDGE}]};}" };
-let obj4 = { gap: ThemesDefault.space.PX_32 };
-let result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesMobileAnnouncementActionSheet.tsx");
+obj2.mascotLayer = {};
+obj2.mascotImage = { width: "100%", aspectRatio: 1.8324022346368716 };
+obj2.framePreviewImage = { width: "100%", aspectRatio: 3.25, resizeMode: "contain" };
+obj2.container = { padding: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_16 };
+obj2.headerText = { textAlign: "center" };
+let obj4 = {};
+let obj5 = { padding: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_16 };
+obj2.featureRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_16 };
+obj2.featureText = { flex: 1 };
+let obj6 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_16 };
+obj2.featureRows = { gap: nativeDefault.space.PX_32 };
+let closure_11 = createStyles.createStyles(obj2);
+const __initData = { code: "function CollectiblesMobileAnnouncementActionSheetTsx1(){const{animatedPosition,safeAreaTop,MASCOT_SAFE_AREA_NUDGE}=this.__closure;return{transform:[{translateY:animatedPosition.get()+safeAreaTop-MASCOT_SAFE_AREA_NUDGE}]};}" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesMobileAnnouncementActionSheet.tsx");
 
 export default function CollectiblesMobileAnnouncementActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   importDefault = undefined;
   dependencyMap = undefined;
-  const tmp = callback3();
-  let obj = markAsDismissed(16949);
+  const tmp = closure_11();
   const intl = markAsDismissed(1114).intl;
   const string = intl.string;
   const t = markAsDismissed(1114).t;
@@ -97,58 +104,60 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   } else {
     stringResult = string(t["+9vaAT"]);
   }
-  importDefault = React.useRef(false);
-  dependencyMap = React.useRef(markAsDismissed);
+  importDefault = noop.useRef(false);
+  dependencyMap = noop.useRef(markAsDismissed);
   const items = [markAsDismissed];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     closure_2.current = markAsDismissed;
   }, items);
-  const effect1 = React.useEffect(() => () => {
+  const effect1 = noop.useEffect(() => () => {
     if (!ref.current) {
-      ref2.current(closure_1_8.AUTO_DISMISS);
+      ref2.current(constants2.AUTO_DISMISS);
     }
   }, []);
   const items1 = [markAsDismissed];
   const items2 = [markAsDismissed];
-  const callback = React.useCallback(() => {
-    callback.current = true;
-    markAsDismissed(closure_1_8.PRIMARY);
-    let obj = markAsDismissed(7541);
-    obj = { screen: closure_1_6.FEATURED_PAGE, analyticsLocations: [], analyticsSource: callback(7182).ACTION_SHEET };
-    const result = obj.openCollectiblesShopMobile(obj);
-  }, items1);
-  const callback1 = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     closure_1.current = true;
-    markAsDismissed(closure_1_8.USER_DISMISS);
+    markAsDismissed(ContentDismissActionType.PRIMARY);
+    const obj = CollectiblesActionCreators;
+    const result = obj.openCollectiblesShopMobile({ screen: constants.FEATURED_PAGE, analyticsLocations: [], analyticsSource: AnalyticsLocationDefault.ACTION_SHEET });
+  }, items1);
+  const callback1 = noop.useCallback(() => {
+    closure_1.current = true;
+    markAsDismissed(ContentDismissActionType.USER_DISMISS);
   }, items2);
-  const memo = React.useMemo(() => callback2(closure_13, {}), []);
-  obj = { onDismiss: callback1, backdropChildren: memo, children: null };
-  obj = { style: tmp.container, children: null };
-  obj1 = { source: { uri: metadataDefault }, style: tmp.framePreviewImage, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
-  const items3 = [callback(closure_4, obj1), , , ];
-  const obj3 = { variant: "heading-xl/bold", color: "text-strong", accessibilityRole: "header", style: tmp.headerText, children: null };
+  const memo = noop.useMemo(() => closure_1_9(CatEarsBackdrop, {}), []);
+  const obj2 = { onDismiss: callback1, backdropChildren: memo, children: null };
+  const obj3 = { style: tmp.container, children: null };
+  const obj4 = { source: null, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
+  obj = markAsDismissed(16986);
+  obj4.source = { uri: _modDef16987 };
+  obj4.style = tmp.framePreviewImage;
+  const items3 = [closure_9(closure_4, obj4), , , ];
+  const obj6 = { variant: "heading-xl/bold", color: "text-strong", accessibilityRole: "header", style: tmp.headerText, children: null };
   const intl2 = tmp2(1114).intl;
-  obj3[4] = intl2.string(markAsDismissed(1114).t.vRCvqo);
-  items3[1] = callback(markAsDismissed(4556).Text, obj3);
-  const obj4 = { style: tmp.featureRows, children: null };
-  const obj5 = { icon: callback(markAsDismissed(5692).PaintIllocon, { size: 32 }), text: null };
+  obj6.children = intl2.string(markAsDismissed(1114).t.vRCvqo);
+  items3[1] = closure_9(markAsDismissed(4570).Text, obj6);
+  const obj7 = { style: tmp.featureRows, children: null };
+  const obj8 = { icon: closure_9(markAsDismissed(5706).PaintIllocon, { size: 32 }), text: null };
   const intl3 = tmp2(1114).intl;
-  obj5[1] = intl3.string(markAsDismissed(1114).t["6ZWB0C"]);
-  const items4 = [callback(FeatureRow, obj5), , ];
-  const obj6 = { icon: callback(markAsDismissed(5692).HeartIllocon, { size: 32 }), text: null };
+  obj8.text = intl3.string(markAsDismissed(1114).t["6ZWB0C"]);
+  const items4 = [closure_9(FeatureRow, obj8), , ];
+  const obj9 = { icon: closure_9(markAsDismissed(5706).HeartIllocon, { size: 32 }), text: null };
   const intl4 = tmp2(1114).intl;
-  obj6[1] = intl4.string(markAsDismissed(1114).t.MkVbBY);
-  items4[1] = callback(FeatureRow, obj6);
-  const obj2 = { uri: metadataDefault };
-  items4[2] = callback(FeatureRow, { icon: callback(markAsDismissed(5692).ShopIllocon, { size: 32 }), text: stringResult });
-  obj4[1] = items4;
-  items3[2] = callback2(closure_5, obj4);
-  const obj8 = { size: "lg", text: null, onPress: null };
+  obj9.text = intl4.string(markAsDismissed(1114).t.MkVbBY);
+  items4[1] = closure_9(FeatureRow, obj9);
+  const obj5 = { uri: _modDef16987 };
+  items4[2] = closure_9(FeatureRow, { icon: closure_9(markAsDismissed(5706).ShopIllocon, { size: 32 }), text: stringResult });
+  obj7.children = items4;
+  items3[2] = closure_10(closure_5, obj7);
+  const obj11 = { size: "lg", text: null, onPress: null };
   const intl5 = tmp2(1114).intl;
-  obj8[1] = intl5.string(markAsDismissed(1114).t.S9hXPI);
-  obj8[2] = callback;
-  items3[3] = callback(markAsDismissed(4975).Button, obj8);
-  obj[1] = items3;
-  obj[2] = callback2(closure_5, obj);
-  return callback(markAsDismissed(7150).BottomSheet, obj);
+  obj11.text = intl5.string(markAsDismissed(1114).t.S9hXPI);
+  obj11.onPress = callback;
+  items3[3] = closure_9(markAsDismissed(4989).Button, obj11);
+  obj3.children = items3;
+  obj2.children = closure_10(closure_5, obj3);
+  return closure_9(markAsDismissed(7164).BottomSheet, obj2);
 };

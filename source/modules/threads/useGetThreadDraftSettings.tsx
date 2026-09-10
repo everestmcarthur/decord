@@ -1,45 +1,47 @@
-// Module ID: 10258
-// Function ID: 10259
+// Module ID: 10285
+// Function ID: 10286
 // Name: useGetThreadDraftSettings
-// Dependencies: [4901, 504, 11, 2]
+// Dependencies: [4915, 504, 11, 2]
 // Exports: default, useHasThreadDraft
 
-// Module 10258 (useGetThreadDraftSettings)
-import closure_3 from "handleChanged" /* 4901 */;
+// Module 10285 (useGetThreadDraftSettings)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import DraftStore from "DraftStore" /* 4915 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/threads/useGetThreadDraftSettings.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/threads/useGetThreadDraftSettings.tsx");
 
 export default function useGetThreadDraftSettings(arg0) {
-  const _require = arg0;
-  const items = [closure_3];
-  return _require(504).useStateFromStores(items, () => {
+  _require = arg0;
+  const items = [DraftStore];
+  return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != closure_0) {
-      let threadSettings = closure_1_3.getThreadSettings(tmp);
+      let threadSettings = DraftStore.getThreadSettings(tmp);
       if (threadSettings == null) {
-        threadSettings = obj.getThreadDraftWithParentMessageId(closure_1_1(closure_1_2[2]).castChannelIdAsMessageId(tmp));
-        const obj2 = closure_1_1(closure_1_2[2]);
+        threadSettings = obj.getThreadDraftWithParentMessageId(SnowflakeUtilsDefault.castChannelIdAsMessageId(tmp));
       }
       tmp2 = threadSettings;
-      obj = closure_1_3;
+      obj = DraftStore;
     }
     return tmp2;
   });
 };
 export const useHasThreadDraft = function useHasThreadDraft(arg0) {
-  const _require = arg0;
-  const items = [closure_3];
-  return _require(504).useStateFromStores(items, () => {
+  _require = arg0;
+  const items = [DraftStore];
+  return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      let threadSettings = closure_1_3.getThreadSettings(tmp);
+      let threadSettings = DraftStore.getThreadSettings(tmp);
       if (threadSettings == null) {
-        threadSettings = obj.getThreadDraftWithParentMessageId(closure_1_1(closure_1_2[2]).castChannelIdAsMessageId(tmp));
-        const obj2 = closure_1_1(closure_1_2[2]);
+        threadSettings = obj.getThreadDraftWithParentMessageId(SnowflakeUtilsDefault.castChannelIdAsMessageId(tmp));
       }
       tmp2 = null != threadSettings;
-      obj = closure_1_3;
+      obj = DraftStore;
     }
     return tmp2;
   });

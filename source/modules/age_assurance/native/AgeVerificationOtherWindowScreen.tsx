@@ -1,57 +1,57 @@
-// Module ID: 8454
-// Function ID: 8455
+// Module ID: 8482
+// Function ID: 8483
 // Name: AgeVerificationOtherWindowScreen
-// Dependencies: [19, 21, 4560, 1114, 2946, 8421, 8422, 4973, 6960, 576, 4556, 2]
+// Dependencies: [19, 21, 4574, 1114, 2946, 8449, 8450, 4987, 6974, 576, 4570, 2]
 // Exports: default
 
-// Module 8454 (AgeVerificationOtherWindowScreen)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 2946 */;
-import Text from "Text" /* 4556 */;
-import Stack from "Stack" /* 4973 */;
-import MobilePhoneIcon from "MobilePhoneIcon" /* 6960 */;
-import ModalScreen from "ModalScreen" /* 8421 */;
-import ModalContent from "ModalContent" /* 8422 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 8482 (AgeVerificationOtherWindowScreen)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import _modDef2946 from "module_2946" /* 2946 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Stack_Stack from "Stack/Stack" /* 4987 */;
+import MobilePhoneIcon from "MobilePhoneIcon" /* 6974 */;
+import ModalScreen from "ModalScreen" /* 8449 */;
+import ModalContent from "ModalContent" /* 8450 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = createCacheKey.createStyles({ container: { flex: 1, alignSelf: "stretch" }, text: { textAlign: "center" } });
-const result = require("set").fileFinishedImporting("modules/age_assurance/native/AgeVerificationOtherWindowScreen.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4574);
+let closure_5 = createStyles.createStyles({ container: { flex: 1, alignSelf: "stretch" }, text: { textAlign: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationOtherWindowScreen.tsx");
 
 export default function AgeVerificationOtherWindowScreen(copy) {
   copy = copy.copy;
-  const tmp = callback3();
+  const tmp = closure_5();
   let title;
   if (copy != null) {
     title = copy.title;
   }
   if (title == null) {
-    const intl = getSystemLocale.intl;
-    title = intl.string(messagesProxyDefault.MLPgsX);
+    const intl = util.intl;
+    title = intl.string(_modDef2946.MLPgsX);
   }
   let description;
   if (copy != null) {
     description = copy.description;
   }
   if (description == null) {
-    const intl2 = getSystemLocale.intl;
-    description = intl2.string(messagesProxyDefault.VcZF1q);
+    const intl2 = util.intl;
+    description = intl2.string(_modDef2946.VcZF1q);
   }
-  let obj = { children: null };
-  obj = { children: null };
-  obj = { align: "center", justify: "center", spacing: 16, style: tmp.container, children: null };
-  const items = [callback(MobilePhoneIcon.MobilePhoneIcon, { size: "lg", color: ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT }), ];
-  const obj2 = { align: "center", justify: "center", spacing: 8, children: null };
-  const items1 = [callback(Text.Text, { accessibilityRole: "header", variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.text, children: title }), callback(Text.Text, { variant: "text-md/medium", color: "text-muted", style: tmp.text, children: description })];
-  obj2[3] = items1;
-  items[1] = callback2(Stack.Stack, obj2);
-  obj[4] = items;
-  obj[0] = callback2(Stack.Stack, obj);
-  obj[0] = callback(ModalContent.ModalContent, obj);
-  return callback(ModalScreen.ModalScreen, obj);
+  const obj = { children: null };
+  const obj2 = { children: null };
+  const obj3 = { align: "center", justify: "center", spacing: 16, style: tmp.container, children: null };
+  const items = [React3(MobilePhoneIcon.MobilePhoneIcon, { size: "lg", color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT }), ];
+  const obj5 = { align: "center", justify: "center", spacing: 8, children: null };
+  const items1 = [React3(Text_Text.Text, { accessibilityRole: "header", variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.text, children: title }), React3(Text_Text.Text, { variant: "text-md/medium", color: "text-muted", style: tmp.text, children: description })];
+  obj5.children = items1;
+  items[1] = React4(Stack_Stack.Stack, obj5);
+  obj3.children = items;
+  obj2.children = React4(Stack_Stack.Stack, obj3);
+  obj.children = React3(ModalContent.ModalContent, obj2);
+  return React3(ModalScreen.ModalScreen, obj);
 };

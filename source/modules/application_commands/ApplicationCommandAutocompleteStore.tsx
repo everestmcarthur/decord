@@ -1,17 +1,16 @@
-// Module ID: 7779
-// Function ID: 7780
-// Name: handleInit
-// Dependencies: [7780, 1074, 1115, 1894, 4740, 504, 573, 2]
+// Module ID: 7793
+// Function ID: 7794
+// Name: ApplicationCommandAutocompleteStore
+// Dependencies: [7794, 1074, 1115, 1894, 4754, 504, 573, 2]
 
-// Module 7779 (handleInit)
+// Module 7793 (ApplicationCommandAutocompleteStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
-import closure_2 from "handleInit" /* 7780 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import set from "set" /* 1115 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Server from "Server" /* 1894 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4754 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 7794 */;
 
-require = arg1;
+require = fn;
 function handleInit() {
   map.clear();
   map1.clear();
@@ -22,8 +21,8 @@ function handleSetActiveCommand(arg0) {
   if (command != null) {
     const id = command.id;
   }
-  const activeOptionName = store.getActiveOptionName(channelId);
-  const value = map1.get(channelId);
+  const activeOptionName = ApplicationCommandStore.getActiveOptionName(channelId);
+  value = map1.get(channelId);
   let tmp3 = null != value;
   if (tmp3) {
     tmp3 = id !== value.commandId || activeOptionName !== value.optionName;
@@ -46,168 +45,150 @@ function handleSetActiveCommand(arg0) {
     tmp5 = null != id && id !== value.commandId;
   }
 }
+const AnalyticEvents = fn(1074).AnalyticEvents;
 let map = new Map();
 let map1 = new Map();
 let map2 = new Map();
-let closure_7 = set.isDesktop();
+const PlatformUtils = fn(1115);
+let closure_7 = PlatformUtils.isDesktop();
 const Store = initializeDefault.Store;
 class ApplicationCommandAutocompleteStore extends Store {
 }
 const prototype = ApplicationCommandAutocompleteStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_2);
+  this.waitFor(ApplicationCommandStore);
 };
 prototype["getLastErrored"] = function getLastErrored(id) {
-  let obj = map1;
   if (!map1.has(id)) {
-    const activeCommand = store.getActiveCommand(id);
+    const activeCommand = ApplicationCommandStore.getActiveCommand(id);
     id = undefined;
     if (activeCommand != null) {
       id = activeCommand.id;
     }
-    obj = { commandId: null, optionName: null, optionNameToAutocompleteQueries: null, optionNameToLastResults: null, optionNameToNonce: null, optionNameToLastQuery: null, lastErrored: false, lastResponseNonce: "call" };
-    obj[0] = id;
-    obj[1] = store.getActiveOptionName(id);
+    const obj3 = { commandId: id, optionName: ApplicationCommandStore.getActiveOptionName(id), optionNameToAutocompleteQueries: null, optionNameToLastResults: null, optionNameToNonce: null, optionNameToLastQuery: null, lastErrored: false, lastResponseNonce: "call" };
     const _Map = Map;
     map = new Map();
-    obj[2] = map;
+    obj3.optionNameToAutocompleteQueries = map;
     const _Map2 = Map;
     map1 = new Map();
-    obj[3] = map1;
+    obj3.optionNameToLastResults = map1;
     const _Map3 = Map;
     map2 = new Map();
-    obj[4] = map2;
+    obj3.optionNameToNonce = map2;
     const _Map4 = Map;
     const map3 = new Map();
-    obj[5] = map3;
-    const result = obj.set(id, obj);
-    const obj2 = store;
+    obj3.optionNameToLastQuery = map3;
+    const result = obj.set(id, obj3);
   }
-  return obj.get(id).lastErrored;
+  return map1.get(id).lastErrored;
 };
-prototype["getAutocompleteChoices"] = function getAutocompleteChoices(id, name, first) {
-  let obj = map1;
+prototype["getAutocompleteChoices"] = function getAutocompleteChoices(id, name, query) {
   if (!map1.has(id)) {
-    const activeCommand = store.getActiveCommand(id);
+    const activeCommand = ApplicationCommandStore.getActiveCommand(id);
     id = undefined;
     if (activeCommand != null) {
       id = activeCommand.id;
     }
-    obj = { commandId: null, optionName: null, optionNameToAutocompleteQueries: null, optionNameToLastResults: null, optionNameToNonce: null, optionNameToLastQuery: null, lastErrored: false, lastResponseNonce: "call" };
-    obj[0] = id;
-    obj[1] = store.getActiveOptionName(id);
+    const obj3 = { commandId: id, optionName: ApplicationCommandStore.getActiveOptionName(id), optionNameToAutocompleteQueries: null, optionNameToLastResults: null, optionNameToNonce: null, optionNameToLastQuery: null, lastErrored: false, lastResponseNonce: "call" };
     const _Map = Map;
     map = new Map();
-    obj[2] = map;
+    obj3.optionNameToAutocompleteQueries = map;
     const _Map2 = Map;
     map1 = new Map();
-    obj[3] = map1;
+    obj3.optionNameToLastResults = map1;
     const _Map3 = Map;
     map2 = new Map();
-    obj[4] = map2;
+    obj3.optionNameToNonce = map2;
     const _Map4 = Map;
     const map3 = new Map();
-    obj[5] = map3;
-    const result = obj.set(id, obj);
-    const obj2 = store;
+    obj3.optionNameToLastQuery = map3;
+    const result = obj.set(id, obj3);
   }
   const optionNameToAutocompleteQueries = obj.get(id).optionNameToAutocompleteQueries;
-  let value = optionNameToAutocompleteQueries.get(name);
-  value = undefined;
+  value = optionNameToAutocompleteQueries.get(name);
+  value2 = undefined;
   if (value != null) {
-    value = value.get(first);
+    value2 = value.get(query);
   }
-  return value;
+  return value2;
 };
 prototype["getAutocompleteLastChoices"] = function getAutocompleteLastChoices(id, name) {
-  let obj = map1;
   if (!map1.has(id)) {
-    const activeCommand = store.getActiveCommand(id);
+    const activeCommand = ApplicationCommandStore.getActiveCommand(id);
     id = undefined;
     if (activeCommand != null) {
       id = activeCommand.id;
     }
-    obj = { commandId: null, optionName: null, optionNameToAutocompleteQueries: null, optionNameToLastResults: null, optionNameToNonce: null, optionNameToLastQuery: null, lastErrored: false, lastResponseNonce: "call" };
-    obj[0] = id;
-    obj[1] = store.getActiveOptionName(id);
+    const obj3 = { commandId: id, optionName: ApplicationCommandStore.getActiveOptionName(id), optionNameToAutocompleteQueries: null, optionNameToLastResults: null, optionNameToNonce: null, optionNameToLastQuery: null, lastErrored: false, lastResponseNonce: "call" };
     const _Map = Map;
     map = new Map();
-    obj[2] = map;
+    obj3.optionNameToAutocompleteQueries = map;
     const _Map2 = Map;
     map1 = new Map();
-    obj[3] = map1;
+    obj3.optionNameToLastResults = map1;
     const _Map3 = Map;
     map2 = new Map();
-    obj[4] = map2;
+    obj3.optionNameToNonce = map2;
     const _Map4 = Map;
     const map3 = new Map();
-    obj[5] = map3;
-    const result = obj.set(id, obj);
-    const obj2 = store;
+    obj3.optionNameToLastQuery = map3;
+    const result = obj.set(id, obj3);
   }
-  return obj.get(id).optionNameToLastResults.get(name);
+  return map1.get(id).optionNameToLastResults.get(name);
 };
 prototype["getLastResponseNonce"] = function getLastResponseNonce(id) {
-  let obj = map1;
   if (!map1.has(id)) {
-    const activeCommand = store.getActiveCommand(id);
+    const activeCommand = ApplicationCommandStore.getActiveCommand(id);
     id = undefined;
     if (activeCommand != null) {
       id = activeCommand.id;
     }
-    obj = { commandId: null, optionName: null, optionNameToAutocompleteQueries: null, optionNameToLastResults: null, optionNameToNonce: null, optionNameToLastQuery: null, lastErrored: false, lastResponseNonce: "call" };
-    obj[0] = id;
-    obj[1] = store.getActiveOptionName(id);
+    const obj3 = { commandId: id, optionName: ApplicationCommandStore.getActiveOptionName(id), optionNameToAutocompleteQueries: null, optionNameToLastResults: null, optionNameToNonce: null, optionNameToLastQuery: null, lastErrored: false, lastResponseNonce: "call" };
     const _Map = Map;
     map = new Map();
-    obj[2] = map;
+    obj3.optionNameToAutocompleteQueries = map;
     const _Map2 = Map;
     map1 = new Map();
-    obj[3] = map1;
+    obj3.optionNameToLastResults = map1;
     const _Map3 = Map;
     map2 = new Map();
-    obj[4] = map2;
+    obj3.optionNameToNonce = map2;
     const _Map4 = Map;
     const map3 = new Map();
-    obj[5] = map3;
-    const result = obj.set(id, obj);
-    const obj2 = store;
+    obj3.optionNameToLastQuery = map3;
+    const result = obj.set(id, obj3);
   }
-  return obj.get(id).lastResponseNonce;
+  return map1.get(id).lastResponseNonce;
 };
 ApplicationCommandAutocompleteStore.displayName = "ApplicationCommandAutocompleteStore";
-set = {
+const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteStore(DispatcherDefault, {
   CONNECTION_OPEN: handleInit,
   LOGOUT: handleInit,
   CHANNEL_SELECT: handleInit,
   APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST: function handleApplicationCommandAutocompleteRequest(arg0) {
     ({ nonce, channelId, query, name } = arg0);
-    let obj = map1;
     if (!map1.has(channelId)) {
-      const activeCommand = store.getActiveCommand(channelId);
+      const activeCommand = ApplicationCommandStore.getActiveCommand(channelId);
       let id;
       if (activeCommand != null) {
         id = activeCommand.id;
       }
-      obj = { commandId: null, optionName: null, optionNameToAutocompleteQueries: null, optionNameToLastResults: null, optionNameToNonce: null, optionNameToLastQuery: null, lastErrored: false, lastResponseNonce: "call" };
-      obj[0] = id;
-      obj[1] = store.getActiveOptionName(channelId);
+      const obj3 = { commandId: id, optionName: ApplicationCommandStore.getActiveOptionName(channelId), optionNameToAutocompleteQueries: null, optionNameToLastResults: null, optionNameToNonce: null, optionNameToLastQuery: null, lastErrored: false, lastResponseNonce: "call" };
       const _Map = Map;
       map = new Map();
-      obj[2] = map;
+      obj3.optionNameToAutocompleteQueries = map;
       const _Map2 = Map;
       map1 = new Map();
-      obj[3] = map1;
+      obj3.optionNameToLastResults = map1;
       const _Map3 = Map;
       map2 = new Map();
-      obj[4] = map2;
+      obj3.optionNameToNonce = map2;
       const _Map4 = Map;
       const map3 = new Map();
-      obj[5] = map3;
-      const result = obj.set(channelId, obj);
-      const obj2 = store;
+      obj3.optionNameToLastQuery = map3;
+      const result = obj.set(channelId, obj3);
     }
-    let value = obj.get(channelId);
+    value = obj.get(channelId);
     const optionNameToLastQuery = value.optionNameToLastQuery;
     if (optionNameToLastQuery.get(name) === query) {
       return false;
@@ -215,26 +196,23 @@ set = {
       const optionNameToLastQuery2 = value.optionNameToLastQuery;
       const result1 = optionNameToLastQuery2.set(name, query);
       const optionNameToAutocompleteQueries = value.optionNameToAutocompleteQueries;
-      value = optionNameToAutocompleteQueries.get(name);
-      let value1;
-      if (value != null) {
-        value1 = value.get(query);
+      const value4 = optionNameToAutocompleteQueries.get(name);
+      let value5;
+      if (value4 != null) {
+        value5 = value4.get(query);
       }
-      if (null != value1) {
+      if (null != value5) {
         value.lastErrored = false;
-        const result2 = value.optionNameToLastResults.set(name, value1);
+        const result2 = value.optionNameToLastResults.set(name, value5);
         return true;
       } else {
         const optionNameToNonce2 = value.optionNameToNonce;
-        const value2 = optionNameToNonce2.get(name);
-        if (null != value2) {
-          map.delete(value2);
+        const value6 = optionNameToNonce2.get(name);
+        if (null != value6) {
+          map.delete(value6);
         }
-        obj = { channelId: null, query: null, name: null };
-        obj[0] = channelId;
-        obj[1] = query;
-        obj[2] = name;
-        const result3 = map.set(nonce, obj);
+        const obj4 = { channelId, query, name };
+        const result3 = map.set(nonce, obj4);
         const _Date = Date;
         const date = new Date();
         const result4 = map2.set(nonce, date);
@@ -251,60 +229,56 @@ set = {
   },
   APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE: function handleApplicationCommandAutocompleteResponse(arg0) {
     ({ choices, nonce } = arg0);
-    let _require;
-    let obj = map;
-    let value = map.get(nonce);
+    closure_0 = undefined;
+    value = map.get(nonce);
     if (null == value) {
       return false;
     } else {
       obj.delete(nonce);
       const channelId = value.channelId;
       if (!map1.has(channelId)) {
-        const activeCommand = store.getActiveCommand(channelId);
+        const activeCommand = ApplicationCommandStore.getActiveCommand(channelId);
         let id;
         if (activeCommand != null) {
           id = activeCommand.id;
         }
-        obj = { commandId: null, optionName: null, optionNameToAutocompleteQueries: null, optionNameToLastResults: null, optionNameToNonce: null, optionNameToLastQuery: null, lastErrored: false, lastResponseNonce: "call" };
-        obj[0] = id;
-        obj[1] = store.getActiveOptionName(channelId);
+        const obj3 = { commandId: id, optionName: ApplicationCommandStore.getActiveOptionName(channelId), optionNameToAutocompleteQueries: null, optionNameToLastResults: null, optionNameToNonce: null, optionNameToLastQuery: null, lastErrored: false, lastResponseNonce: "call" };
         const _Map = Map;
         map = new Map();
-        obj[2] = map;
+        obj3.optionNameToAutocompleteQueries = map;
         const _Map2 = Map;
         map1 = new Map();
-        obj[3] = map1;
+        obj3.optionNameToLastResults = map1;
         const _Map3 = Map;
         map2 = new Map();
-        obj[4] = map2;
+        obj3.optionNameToNonce = map2;
         const _Map4 = Map;
         const map3 = new Map();
-        obj[5] = map3;
-        const result = obj10.set(channelId, obj);
-        const obj2 = store;
+        obj3.optionNameToLastQuery = map3;
+        const result = obj10.set(channelId, obj3);
       }
-      value = obj10.get(channelId);
-      const optionNameToAutocompleteQueries = value.optionNameToAutocompleteQueries;
+      const value4 = obj10.get(channelId);
+      const optionNameToAutocompleteQueries = value4.optionNameToAutocompleteQueries;
       if (null == optionNameToAutocompleteQueries.get(value.name)) {
-        const optionNameToAutocompleteQueries2 = value.optionNameToAutocompleteQueries;
+        const optionNameToAutocompleteQueries2 = value4.optionNameToAutocompleteQueries;
         const _Map5 = Map;
         const map4 = new Map();
         const result1 = optionNameToAutocompleteQueries2.set(value.name, map4);
       }
       let tmp29 = closure_7;
       if (closure_7) {
-        const activeOption = store.getActiveOption(value.channelId);
+        const activeOption = ApplicationCommandStore.getActiveOption(value.channelId);
         let type;
         if (activeOption != null) {
           type = activeOption.type;
         }
-        tmp29 = type === _require(1894).ApplicationCommandOptionType.INTEGER;
+        tmp29 = type === Server.ApplicationCommandOptionType.INTEGER;
       }
-      _require = tmp29;
+      closure_0 = tmp29;
       let mapped;
       if (choices != null) {
-        mapped = choices.map((arg0) => {
-          ({ value, name_localized, name } = arg0);
+        mapped = choices.map((item) => {
+          ({ value, name_localized, name } = item);
           if (name_localized == null) {
             name_localized = name;
           }
@@ -314,87 +288,82 @@ set = {
             const _Number = Number;
             NumberResult = Number(value);
           }
-          obj[2] = NumberResult;
+          obj.value = NumberResult;
           return obj;
         });
       }
       if (mapped == null) {
         mapped = [];
       }
-      const value1 = map2.get(nonce);
+      const value5 = map2.get(nonce);
       let num = 0;
-      if (null != value1) {
+      if (null != value5) {
         const _Date = Date;
         const date = new Date();
         const time = date.getTime();
-        num = time - value1.getTime();
+        num = time - value5.getTime();
       }
-      obj = { duration_ms: null, error: false, num_options: null };
-      obj[0] = num;
-      obj[2] = mapped.length;
-      _require(4740).trackWithMetadata(AnalyticEvents.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE, obj);
+      const obj5 = { duration_ms: num, error: false, num_options: mapped.length };
+      AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE, obj5);
       map2.delete(nonce);
-      const optionNameToAutocompleteQueries3 = value.optionNameToAutocompleteQueries;
-      const value2 = optionNameToAutocompleteQueries3.get(value.name);
-      if (value2 != null) {
-        const result2 = value2.set(value.query, mapped);
+      const optionNameToAutocompleteQueries3 = value4.optionNameToAutocompleteQueries;
+      const value6 = optionNameToAutocompleteQueries3.get(value.name);
+      if (value6 != null) {
+        const result2 = value6.set(value.query, mapped);
       }
-      const optionNameToLastQuery = value.optionNameToLastQuery;
+      const optionNameToLastQuery = value4.optionNameToLastQuery;
       if (optionNameToLastQuery.get(value.name) === value.query) {
-        value.lastErrored = false;
-        const result3 = value.optionNameToLastResults.set(value.name, mapped);
-        const optionNameToLastResults = value.optionNameToLastResults;
+        value4.lastErrored = false;
+        const result3 = value4.optionNameToLastResults.set(value.name, mapped);
+        const optionNameToLastResults = value4.optionNameToLastResults;
       }
-      value.lastResponseNonce = nonce;
+      value4.lastResponseNonce = nonce;
       return true;
     }
+    obj = map;
   },
   INTERACTION_FAILURE: function handleInteractionFailure(nonce) {
     nonce = nonce.nonce;
     if (null == nonce) {
       return false;
     } else {
-      let value = map.get(nonce);
+      value = map.get(nonce);
       if (null == value) {
         return false;
       } else {
         obj7.delete(nonce);
-        value = map2.get(nonce);
+        value2 = map2.get(nonce);
         let num = 0;
-        if (null != value) {
+        if (null != value2) {
           const _Date = Date;
           const date = new Date();
           const time = date.getTime();
-          num = time - value.getTime();
+          num = time - value2.getTime();
         }
-        let obj = { duration_ms: null, error: true };
-        obj[0] = num;
-        collectGuildAnalyticsMetadata.trackWithMetadata(AnalyticEvents.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE, obj);
+        const obj = { duration_ms: num, error: true };
+        AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE, obj);
         map2.delete(nonce);
         const channelId = value.channelId;
         if (!map1.has(channelId)) {
-          const activeCommand = store.getActiveCommand(channelId);
+          const activeCommand = ApplicationCommandStore.getActiveCommand(channelId);
           let id;
           if (activeCommand != null) {
             id = activeCommand.id;
           }
-          obj = { commandId: null, optionName: null, optionNameToAutocompleteQueries: null, optionNameToLastResults: null, optionNameToNonce: null, optionNameToLastQuery: null, lastErrored: false, lastResponseNonce: "call" };
-          obj[0] = id;
-          obj[1] = store.getActiveOptionName(channelId);
+          const obj3 = { commandId: id, optionName: ApplicationCommandStore.getActiveOptionName(channelId), optionNameToAutocompleteQueries: null, optionNameToLastResults: null, optionNameToNonce: null, optionNameToLastQuery: null, lastErrored: false, lastResponseNonce: "call" };
           const _Map = Map;
           map = new Map();
-          obj[2] = map;
+          obj3.optionNameToAutocompleteQueries = map;
           const _Map2 = Map;
           map1 = new Map();
-          obj[3] = map1;
+          obj3.optionNameToLastResults = map1;
           const _Map3 = Map;
           map2 = new Map();
-          obj[4] = map2;
+          obj3.optionNameToNonce = map2;
           const _Map4 = Map;
           const map3 = new Map();
-          obj[5] = map3;
-          const result = obj4.set(channelId, obj);
-          const obj5 = store;
+          obj3.optionNameToLastQuery = map3;
+          const result = obj4.set(channelId, obj3);
         }
         map1.get(channelId).lastErrored = true;
         return true;
@@ -409,8 +378,8 @@ set = {
     if (command != null) {
       const id = command.id;
     }
-    const activeOptionName = store.getActiveOptionName(channelId);
-    const value = map1.get(channelId);
+    const activeOptionName = ApplicationCommandStore.getActiveOptionName(channelId);
+    value = map1.get(channelId);
     let tmp3 = null != value;
     if (tmp3) {
       tmp3 = id !== value.commandId || activeOptionName !== value.optionName;
@@ -433,8 +402,8 @@ set = {
       tmp5 = null != id && id !== value.commandId;
     }
   }
-};
-const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteStore(dispatcherDefault, set);
-let result = set.fileFinishedImporting("modules/application_commands/ApplicationCommandAutocompleteStore.tsx");
+});
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandAutocompleteStore.tsx");
 
 export default applicationCommandAutocompleteStore;

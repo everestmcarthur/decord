@@ -1,15 +1,15 @@
-// Module ID: 16068
-// Function ID: 16069
+// Module ID: 16098
+// Function ID: 16099
 // Name: isActivityTemporaryCustomStatus
 // Dependencies: [1074, 2]
 // Exports: isActivityTemporaryCustomStatus
 
-// Module 16068 (isActivityTemporaryCustomStatus)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 16098 (isActivityTemporaryCustomStatus)
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const ActivityTypes = ME.ActivityTypes;
-const result = set.fileFinishedImporting("modules/custom_status/utils/isActivityTemporaryCustomStatus.tsx");
+const ActivityTypes = Constants.ActivityTypes;
+const result = size.fileFinishedImporting("modules/custom_status/utils/isActivityTemporaryCustomStatus.tsx");
 
 export const isActivityTemporaryCustomStatus = function isActivityTemporaryCustomStatus(type) {
   let tmp = type.type === ActivityTypes.CUSTOM_STATUS;

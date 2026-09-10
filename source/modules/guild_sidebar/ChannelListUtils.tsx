@@ -1,13 +1,13 @@
-// Module ID: 4706
-// Function ID: 4707
-// Name: hasStream
+// Module ID: 4720
+// Function ID: 4721
+// Name: ChannelListUtils
 // Dependencies: [2]
 // Exports: hasStream
 
-// Module 4706 (hasStream)
-import set from "set" /* 2 */;
+// Module 4720 (ChannelListUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_sidebar/ChannelListUtils.tsx");
+const result = size.fileFinishedImporting("modules/guild_sidebar/ChannelListUtils.tsx");
 
 export const hasStream = function hasStream(voiceStates) {
   if (null == voiceStates) {

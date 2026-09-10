@@ -1,49 +1,44 @@
-// Module ID: 11405
-// Function ID: 11406
+// Module ID: 11432
+// Function ID: 11433
 // Name: SafetyToolsActionSheetHeader
-// Dependencies: [19, 17, 21, 4560, 576, 11396, 5624, 4556, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 11423, 5638, 4570, 2]
 // Exports: default
 
-// Module 11405 (SafetyToolsActionSheetHeader)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_2 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11432 (SafetyToolsActionSheetHeader)
+import nativeDefault from "native" /* 576 */;
+import NavigatorHeader from "NavigatorHeader" /* 5638 */;
+import SafetyToolsActionCreators from "SafetyToolsActionCreators" /* 11423 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { navbarContainer: { display: "flex", flexDirection: "row", justifyContent: "center" }, navbarLeft: null };
-createCacheKey = { position: "absolute", left: ThemesDefault.space.PX_16 };
-createCacheKey[1] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/self_mod/shared/native/SafetyToolsActionSheetHeader.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+const obj2 = { navbarContainer: { display: "flex", flexDirection: "row", justifyContent: "center" }, navbarLeft: { position: "absolute", left: nativeDefault.space.PX_16 } };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/self_mod/shared/native/SafetyToolsActionSheetHeader.tsx");
 
 export default function SafetyToolsActionSheetHeader(channelId) {
   channelId = channelId.channelId;
   const recipientId = channelId.recipientId;
   const warningId = channelId.warningId;
   const warningType = channelId.warningType;
-  let callback;
-  callback = undefined;
   ({ title, hasBackButton } = channelId);
-  const tmp = callback2();
-  callback = tmp;
+  const tmp = closure_6();
+  const navbarLeft = tmp;
   const items = [channelId, recipientId, warningId, warningType];
-  callback = warningId.useCallback(() => {
-    const result = channelId(recipientId[5]).openSafetyToolsActionSheet(channelId, recipientId, warningId, warningType);
+  const callback = warningId.useCallback(() => {
+    const result = SafetyToolsActionCreators.openSafetyToolsActionSheet(channelId, recipientId, warningId, warningType);
   }, items);
   const items1 = [callback, tmp.navbarLeft];
-  let obj = { style: tmp.navbarContainer, children: null };
+  const obj = { style: tmp.navbarContainer, children: null };
   let memo = null != hasBackButton;
   if (memo) {
-    memo = warningId.useMemo(() => {
-      let obj = channelId(recipientId[6]);
-      obj = { style: lib.navbarLeft };
-      return lib(obj.getHeaderBackButton(callback), obj);
-    }, items1);
+    memo = warningId.useMemo(() => React4(NavigatorHeader.getHeaderBackButton(callback), { style: navbarLeft.navbarLeft }), items1);
   }
-  const items2 = [memo, callback(channelId(recipientId[7]).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: title })];
-  obj[1] = items2;
+  const items2 = [memo, navbarLeft(channelId(recipientId[7]).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: title })];
+  obj.children = items2;
   return callback(warningType, obj);
 };

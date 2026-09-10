@@ -1,42 +1,40 @@
-// Module ID: 4261
-// Function ID: 4262
+// Module ID: 4274
+// Function ID: 4275
 // Name: BaseIconImage
-// Dependencies: [19, 17, 21, 4262, 2]
+// Dependencies: [19, 17, 21, 4275, 2]
 // Exports: BaseIconImage
 
-// Module 4261 (BaseIconImage)
-import noopAll from "noop" /* 19 */;
-import map from "map" /* 4262 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 4274 (BaseIconImage)
+import useToken from "useToken" /* 4275 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-let closure_4 = { xxs: { width: 12, height: 12 }, xs: { width: 16, height: 16 }, sm: { width: 18, height: 18 }, md: { width: 24, height: 24 }, lg: { width: 32, height: 32 }, custom: { width: "jsxs", height: "channel" }, refresh_sm: { width: 18, height: 18 } };
-const result = require("set").fileFinishedImporting("design/components/Icon/native/BaseIconImage.tsx");
+require = fn;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+let closure_4 = { xxs: { width: 12, height: 12 }, xs: { width: 16, height: 16 }, sm: { width: 18, height: 18 }, md: { width: 24, height: 24 }, lg: { width: 32, height: 32 }, custom: { width: "Array", height: "PX_16" }, refresh_sm: { width: 18, height: 18 } };
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/BaseIconImage.tsx");
 
-export const BaseIconImage = function BaseIconImage(source) {
-  let str = source.size;
+export const BaseIconImage = function BaseIconImage(size) {
+  let str = size.size;
   if (str === undefined) {
     str = "md";
   }
-  const color = source.color;
-  ({ resizeMode, style, accessible, accessibilityLabel } = source);
-  let obj = map;
-  const token = obj.useToken(color);
+  const color = size.color;
+  ({ resizeMode, style, accessible, accessibilityLabel } = size);
+  const token = useToken.useToken(color);
   if (null != token) {
-    obj = { tintColor: null };
-    obj[0] = token;
-    let tmp3 = obj;
+    const obj2 = { tintColor: token };
+    let tmp3 = obj2;
   } else {
     if (tmp2) {
-      obj = { tintColor: null };
-      obj[0] = color;
-      tmp3 = obj;
+      const obj3 = { tintColor: color };
+      tmp3 = obj3;
     }
     tmp2 = null != color && typeof color === "string";
   }
-  style = [table[str], tmp3, ];
-  style[2] = style;
-  return <Image fadeDuration={0} source={arg0.source} resizeMode={resizeMode} style={style} accessible={accessible} accessibilityLabel={accessibilityLabel} />;
+  const obj4 = { fadeDuration: 0, source: size.source, resizeMode, style: null, accessible, accessibilityLabel };
+  const items = [closure_4[str], tmp3, style];
+  obj4.style = items;
+  return <Image fadeDuration={0} source={arg0.source} resizeMode={resizeMode} style={null} accessible={accessible} accessibilityLabel={accessibilityLabel} />;
 };

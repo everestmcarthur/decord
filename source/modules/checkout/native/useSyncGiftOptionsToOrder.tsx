@@ -1,33 +1,33 @@
-// Module ID: 11009
-// Function ID: 11010
+// Module ID: 11036
+// Function ID: 11037
 // Name: useSyncGiftOptionsToOrder
-// Dependencies: [32, 19, 3, 7429, 4233, 2]
+// Dependencies: [32, 19, 3, 7443, 4246, 2]
 // Exports: default
 
-// Module 11009 (useSyncGiftOptionsToOrder)
-import timestampDefault from "timestamp" /* 3 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+// Module 11036 (useSyncGiftOptionsToOrder)
+import LoggerDefault from "Logger" /* 3 */;
+import BillingUtils from "BillingUtils" /* 4246 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let closure_4 = new timestampDefault("useSyncGiftOptionsToOrder");
-const tmp2 = new timestampDefault("useSyncGiftOptionsToOrder");
-let result = require("set").fileFinishedImporting("modules/checkout/native/useSyncGiftOptionsToOrder.tsx");
+require = fn;
+let closure_4 = new LoggerDefault("useSyncGiftOptionsToOrder");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/checkout/native/useSyncGiftOptionsToOrder.tsx");
 
-export default function useSyncGiftOptionsToOrder(arg0, arg1) {
+export default function useSyncGiftOptionsToOrder(arg0, current) {
   closure_0 = arg0;
-  closure_1 = arg1;
-  let callback = React.useRef(null);
-  React = React.useRef(null);
-  closure_4 = React.useRef(false);
-  closure_5 = React.useRef(undefined);
-  closure_6 = React.useRef(null);
-  closure_7 = React.useRef(0);
-  closure_8 = React.useRef(null);
-  closure_9 = React.useRef(null);
-  closure_10 = React.useRef([]);
-  [tmp2, closure_11] = callback(React.useState(0), 2);
-  callback = React.useCallback((arg0) => {
+  _slicedToArray = noop.useRef(null);
+  noop = noop.useRef(null);
+  noop.useRef(false);
+  noop.useRef(undefined);
+  noop.useRef(null);
+  noop.useRef(0);
+  noop.useRef(null);
+  noop.useRef(null);
+  closure_10 = noop.useRef([]);
+  [tmp2, closure_11] = noop.useState(0);
+  const callback = noop.useCallback((arg0) => {
     closure_10.current = [];
     for (const item10008 of tmp) {
       let item10008Result = item10008(arg0);
@@ -35,26 +35,26 @@ export default function useSyncGiftOptionsToOrder(arg0, arg1) {
     }
   }, []);
   const items = [callback];
-  const effect = React.useEffect(() => () => {
+  const effect = noop.useEffect(() => () => {
     if (null != ref.current) {
       const _clearTimeout = clearTimeout;
       clearTimeout(tmp.current);
     }
     callback(false);
   }, items);
-  const items1 = [arg0, arg1, tmp2, callback];
-  const effect1 = React.useEffect(() => {
+  const items1 = [arg0, current, tmp2, callback];
+  const effect1 = noop.useEffect(() => {
     if (null != id) {
       id = tmp.id;
-      closure_3.current = table;
+      ref2.current = current;
       if (ref5.current !== id) {
         ref5.current = id;
         ref4.current = tmp.revision;
         ref.current = null;
-        closure_7.current = 0;
+        ref3.current = 0;
       }
-      if (ref7.current !== table) {
-        closure_7.current = 0;
+      if (ref7.current !== current) {
+        ref3.current = 0;
       }
       if (!ref3.current) {
         if (ref.current !== tmp5) {
@@ -65,54 +65,49 @@ export default function useSyncGiftOptionsToOrder(arg0, arg1) {
           }
           tmp11.current = true;
           tmp9.current = tmp5;
-          let obj = callback(table[3]);
-          obj = { orderId: null, giftInfo: null, expectedRevision: null };
-          obj[0] = id;
-          obj = { recipient_id: null, gift_style: null, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null, custom_message_contents: null };
-          ({ recipient_id: obj3[0], gift_style: obj3[1], emoji_id: obj3[2], emoji_name: obj3[3], sound_id: obj3[4], reward_sku_ids: obj3[5], custom_message: obj3[6] } = tmp5);
-          obj[1] = obj;
-          obj[2] = ref4.current;
-          const updateOrderResult = obj.updateOrder(obj);
-          const nextPromise = obj.updateOrder(obj).then((current) => {
-            closure_5.current = current;
-            closure_2.current = closure_1;
-            closure_7.current = 0;
+          const obj2 = { orderId: id, giftInfo: null, expectedRevision: null };
+          ({ recipient_id: obj3.recipient_id, gift_style: obj3.gift_style, emoji_id: obj3.emoji_id, emoji_name: obj3.emoji_name, sound_id: obj3.sound_id, reward_sku_ids: obj3.reward_sku_ids, custom_message: obj3.custom_message_contents } = tmp5);
+          obj2.giftInfo = { recipient_id: null, gift_style: null, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null, custom_message_contents: null };
+          obj2.expectedRevision = ref4.current;
+          const obj = closure_0(current[3]);
+          const obj5 = { recipient_id: null, gift_style: null, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null, custom_message_contents: null };
+          const updateOrderResult = closure_0(current[3]).updateOrder(obj2);
+          const nextPromise = closure_0(current[3]).updateOrder(obj2).then((current) => {
+            ref4.current = current;
+            ref.current = current;
+            ref3.current = 0;
           });
-          obj.updateOrder(obj).then((current) => {
-            closure_5.current = current;
-            closure_2.current = closure_1;
-            closure_7.current = 0;
+          closure_0(current[3]).updateOrder(obj2).then((current) => {
+            ref4.current = current;
+            ref.current = current;
+            ref3.current = 0;
           }).catch((error) => {
-            closure_1_7.current = closure_1_7.current + 1;
-            let obj = { error, orderId: id };
-            logger.error("Failed to sync gift customization to order", obj);
-            obj = { orderId: id };
-            const result = id(table[4]).captureBillingException(error, { tags: { source: "useSyncGiftOptionsToOrder" }, extra: obj });
+            ref3.current = ref3.current + 1;
+            logger.error("Failed to sync gift customization to order", { error, orderId: id });
+            const result = BillingUtils.captureBillingException(error, { tags: { source: "useSyncGiftOptionsToOrder" }, extra: { orderId: id } });
           }).finally(() => {
-            closure_4.current = false;
+            logger.current = false;
             if (ref.current !== ref2.current) {
               if (0 === ref3.current) {
-                callback((arg0) => arg0 + 1);
+                closure_1_11((arg0) => arg0 + 1);
               } else if (tmp3.current < 3) {
                 const _setTimeout = setTimeout;
-                closure_9.current = setTimeout(() => callback((arg0) => arg0 + 1), 500 * 2 ** (tmp3.current - 1));
+                ref8.current = setTimeout(() => closure_1_11((arg0) => arg0 + 1), 500 * 2 ** (tmp3.current - 1));
               } else {
-                callback2(false);
+                callback(false);
               }
             } else {
-              callback2(true);
+              callback(true);
             }
           });
-          const catchPromise = obj.updateOrder(obj).then((current) => {
-            closure_5.current = current;
-            closure_2.current = closure_1;
-            closure_7.current = 0;
+          const catchPromise = closure_0(current[3]).updateOrder(obj2).then((current) => {
+            ref4.current = current;
+            ref.current = current;
+            ref3.current = 0;
           }).catch((error) => {
-            closure_1_7.current = closure_1_7.current + 1;
-            let obj = { error, orderId: id };
-            logger.error("Failed to sync gift customization to order", obj);
-            obj = { orderId: id };
-            const result = id(table[4]).captureBillingException(error, { tags: { source: "useSyncGiftOptionsToOrder" }, extra: obj });
+            ref3.current = ref3.current + 1;
+            logger.error("Failed to sync gift customization to order", { error, orderId: id });
+            const result = BillingUtils.captureBillingException(error, { tags: { source: "useSyncGiftOptionsToOrder" }, extra: { orderId: id } });
           });
         } else {
           callback(true);
@@ -124,21 +119,21 @@ export default function useSyncGiftOptionsToOrder(arg0, arg1) {
     }
   }, items1);
   const items2 = [arg0];
-  const callback1 = React.useCallback(() => {
+  const callback1 = noop.useCallback(() => {
     if (null != closure_0) {
       if (ref.current !== ref2.current) {
         if (ref6.current >= 3) {
           tmp3.current = 0;
         }
         let resolved = new Promise((arg0) => {
-          let current = ref3.current;
-          current.push(arg0);
+          const current1 = ref3.current;
+          current1.push(arg0);
           current = ref.current;
           if (!current) {
             current = null != ref2.current;
           }
           if (!current) {
-            callback((arg0) => arg0 + 1);
+            closure_1_11((arg0) => arg0 + 1);
           }
         });
       }
@@ -147,5 +142,5 @@ export default function useSyncGiftOptionsToOrder(arg0, arg1) {
     resolved = Promise.resolve(true);
   }, items2);
   const items3 = [callback1];
-  return React.useMemo(() => ({ awaitSync: callback1 }), items3);
+  return noop.useMemo(() => ({ awaitSync: callback1 }), items3);
 };

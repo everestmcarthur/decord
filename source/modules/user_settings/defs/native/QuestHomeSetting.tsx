@@ -1,43 +1,44 @@
-// Module ID: 14996
-// Function ID: 14997
-// Name: route
-// Dependencies: [1074, 11473, 1114, 11489, 14997, 14999, 7722, 5449, 2]
+// Module ID: 15022
+// Function ID: 15023
+// Name: defs/QuestHomeSetting
+// Dependencies: [1074, 11500, 1114, 11516, 15023, 15025, 7736, 5463, 2]
 
-// Module 14996 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import getIsEligibleForQuests from "getIsEligibleForQuests" /* 11489 */;
-import QuestsIcon from "QuestsIcon" /* 14997 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15022 (defs/QuestHomeSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import QuestContent from "QuestContent" /* 5463 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 7736 */;
+import QuestsEligibility from "QuestsEligibility" /* 11516 */;
+import QuestsIcon from "QuestsIcon" /* 15023 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const require = globalThis.__r;
+
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.JALI2K);
+    const intl = util.intl;
+    return intl.string(util.t.JALI2K);
   },
   usePredicate() {
-    return getIsEligibleForQuests.getIsEligibleForQuests();
+    return QuestsEligibility.getIsEligibleForQuests();
   },
   parent: null,
   IconComponent: QuestsIcon.QuestsIcon,
-  screen: obj,
+  screen: {
+    route: Constants.UserSettingsSections.QUESTS,
+    getComponent() {
+      return require("QuestHomeSetting").default;
+    }
+  },
   usePreNavigationAction() {
     return () => {
-      let obj = callback(7722);
-      obj = { fromContent: callback(5449).QuestContent.USER_SETTINGS };
-      const result = obj.setQuestHomeUtmContext(obj);
+      const obj = utils_QuestUtils;
+      const result = obj.setQuestHomeUtmContext({ fromContent: QuestContent.QuestContent.USER_SETTINGS });
       return true;
     };
   }
-};
-obj = {
-  route: ME.UserSettingsSections.QUESTS,
-  getComponent() {
-    return require(14999) /* QuestHomeSetting */.default;
-  }
-};
-const route = createToggle.createRoute(obj);
-let result = set.fileFinishedImporting("modules/user_settings/defs/native/QuestHomeSetting.tsx");
+});
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/QuestHomeSetting.tsx");
 
 export default route;

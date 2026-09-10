@@ -1,12 +1,12 @@
-// Module ID: 9456
-// Function ID: 9457
-// Name: set
-// Dependencies: [2, 9457]
+// Module ID: 9483
+// Function ID: 9484
+// Name: GameConsoleAlertUtils
+// Dependencies: [2, 9484]
 
-// Module 9456 (set)
-import set from "set" /* 2 */;
-import _mod9457 from "module_9457" /* 9457 */;
+// Module 9483 (GameConsoleAlertUtils)
+import game_console_GameConsoleAlertUtils from "game_console/GameConsoleAlertUtils" /* 9484 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/game_console/GameConsoleAlertUtils.tsx");
+const result = size.fileFinishedImporting("modules/game_console/GameConsoleAlertUtils.tsx");
 
-export default _mod9457.default;
+export default game_console_GameConsoleAlertUtils.default;

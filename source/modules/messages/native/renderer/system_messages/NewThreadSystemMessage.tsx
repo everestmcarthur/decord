@@ -1,46 +1,46 @@
-// Module ID: 8011
-// Function ID: 8012
-// Name: createNewThreadSystemMessage
-// Dependencies: [1957, 4209, 1371, 7960, 1114, 7962, 4713, 7964, 2]
+// Module ID: 8025
+// Function ID: 8026
+// Name: NewThreadSystemMessage
+// Dependencies: [1957, 4222, 1371, 7974, 1114, 7976, 4727, 7978, 2]
 // Exports: createNewThreadSystemMessage
 
-// Module 8011 (createNewThreadSystemMessage)
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7960 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7962 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7964 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import closure_4 from "markAllUserIdListsStale" /* 4209 */;
-import closure_5 from "mergeGuildAvatar" /* 1371 */;
+// Module 8025 (NewThreadSystemMessage)
+import util from "util" /* 1114 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7974 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7976 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/NewThreadSystemMessage.tsx");
+const createCommonMessageDefault = tmp7(7978);
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/NewThreadSystemMessage.tsx");
 
 export const createNewThreadSystemMessage = function createNewThreadSystemMessage(roleStyle) {
   const message = roleStyle.message;
-  let obj = getMessageAuthorWithProcessedColor;
-  const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
+  const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   const messageReference = message.messageReference;
   let channel_id;
   if (messageReference != null) {
     channel_id = messageReference.channel_id;
   }
-  channel = channel.getChannel(channel_id);
+  const channel = ChannelStore.getChannel(channel_id);
   const intl = tmp(1114).intl;
-  obj = { actorName: messageAuthorWithProcessedColor.nick, actorHook: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), threadName: null, threadOnClick: null };
+  const obj2 = { actorName: messageAuthorWithProcessedColor.nick, actorHook: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), threadName: null, threadOnClick: null };
   if (null != channel) {
-    let content = tmp(4713).computeChannelName(channel, closure_5, closure_4);
-    const tmpResult = tmp(4713);
+    let content = tmp(4727).computeChannelName(channel, UserStore, RelationshipStore);
+    const tmpResult = tmp(4727);
   } else {
     content = message.content;
   }
-  obj[2] = content;
+  obj2.threadName = content;
   const messageReference2 = message.messageReference;
   let channel_id1;
   if (messageReference2 != null) {
     channel_id1 = messageReference2.channel_id;
   }
-  obj = { content: intl.formatToParts(tmp(1114).t.veX9jq, obj) };
-  obj[3] = { action: "bindOpenThreadChannel", threadId: channel_id1, medium: true };
+  obj2.threadOnClick = { action: "bindOpenThreadChannel", threadId: channel_id1, medium: true };
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
-  return obj;
+  return { content: intl.formatToParts(util.t.veX9jq, obj2) };
 };

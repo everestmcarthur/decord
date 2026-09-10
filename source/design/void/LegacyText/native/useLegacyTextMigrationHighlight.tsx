@@ -1,26 +1,25 @@
-// Module ID: 8618
-// Function ID: 8619
+// Module ID: 8646
+// Function ID: 8647
 // Name: useLegacyTextMigrationHighlight
-// Dependencies: [4559, 4560, 576, 504, 2]
+// Dependencies: [4573, 4574, 576, 504, 2]
 // Exports: useLegacyTextMigrationHighlight
 
-// Module 8618 (useLegacyTextMigrationHighlight)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_2 from "getUserAgnosticState" /* 4559 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 8646 (useLegacyTextMigrationHighlight)
+import nativeDefault from "native" /* 576 */;
+import DevSettingsStore from "DevSettingsStore" /* 4573 */;
 
-const require = arg1;
-createCacheKey = { highlight: null };
-createCacheKey = { borderWidth: 1, borderColor: ThemesDefault.colors.STATUS_DANGER };
-createCacheKey[0] = createCacheKey;
-let closure_3 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("design/void/LegacyText/native/useLegacyTextMigrationHighlight.tsx");
+const require = fn;
+const createStyles = fn(4574);
+const obj2 = { highlight: { borderWidth: 1, borderColor: nativeDefault.colors.STATUS_DANGER } };
+let closure_3 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/LegacyText/native/useLegacyTextMigrationHighlight.tsx");
 
 export const useLegacyTextMigrationHighlight = function useLegacyTextMigrationHighlight() {
-  const tmp = callback();
-  const items = [closure_2];
+  const tmp = closure_3();
+  const items = [DevSettingsStore];
   let highlight = null;
-  if (obj.useStateFromStores(items, () => closure_2.get("highlight_mana_text"))) {
+  if (obj.useStateFromStores(items, () => DevSettingsStore.get("highlight_mana_text"))) {
     highlight = tmp.highlight;
   }
   return highlight;

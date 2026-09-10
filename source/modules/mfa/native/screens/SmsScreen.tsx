@@ -1,33 +1,34 @@
-// Module ID: 15681
-// Function ID: 15682
+// Module ID: 15711
+// Function ID: 15712
 // Name: SmsScreen
-// Dependencies: [5, 32, 19, 17, 1074, 21, 6944, 15674, 1114, 1272, 15678, 15673, 6606, 4975, 15676, 2]
+// Dependencies: [5, 32, 19, 17, 1074, 21, 6958, 15704, 1114, 1272, 15708, 15703, 6620, 4989, 15706, 2]
 // Exports: default
 
-// Module 15681 (SmsScreen)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { Endpoints } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 15711 (SmsScreen)
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/mfa/native/screens/SmsScreen.tsx");
+require = fn;
+const View = fn(17).View;
+const Endpoints = fn(1074).Endpoints;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/mfa/native/screens/SmsScreen.tsx");
 
 export default function SmsScreen(mfaChallenge) {
   mfaChallenge = mfaChallenge.mfaChallenge;
   const finish = mfaChallenge.finish;
-  dependencyMap = undefined;
   c3 = undefined;
   let first;
-  let React;
+  noop = undefined;
   c6 = undefined;
   c7 = undefined;
-  function handleChange(Button, arg1) {
+  function handleChange(Button) {
     const self = this;
-    const apply = _handleChange.apply;
+    const apply = closure_9.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -35,279 +36,235 @@ export default function SmsScreen(mfaChallenge) {
     }
     return applyArgumentsResult;
   }
-  function _handleChange(c6, arg1) {
-    const self = this;
-    const tmp = _undefined((arg0) => {
-      closure_0 = arg0;
-      c6 = 0;
-      c7 = 0;
-      c5 = 0;
-      return (function*(arg0) {
-        if (v02 === 2) {
-          v02 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp6 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          try {
-            v02 = 2;
-            let SMS_CODE_LENGTH = c6;
-            if (0 === c6) {
-              if (arg0 === 1) {
-                v02 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                v02 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                const callback = tmp3;
-                v0(lib);
-                SMS_CODE_LENGTH = lib(closure_1_2[10]).SMS_CODE_LENGTH;
-                if (lib.length === SMS_CODE_LENGTH) {
-                  closure_1_2(null);
-                  closure_1_3(true);
-                  v0 = 1;
-                  obj1 = { mfaType: "sms", data: null };
-                  obj1[1] = tmp37;
-                  c6 = 2;
-                  v02 = 1;
-                  const obj2 = { value: null, done: false };
-                  obj2[0] = closure_1_1(obj1);
-                  return obj2;
-                }
-                tmp37 = lib;
-              }
-            } else {
-              if (1 === SMS_CODE_LENGTH) {
-                v0 = 0;
-                lib = closure_4;
-                const body = lib.body;
-                let message;
-                if (body != null) {
-                  message = body.message;
-                }
-                if (message == null) {
-                  message = lib.message;
-                }
-                SMS_CODE_LENGTH(message);
-                const tmp14 = SMS_CODE_LENGTH;
-              } else if (arg0 === 1) {
-                v02 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                v0 = 0;
-                v02 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                v02(true);
-                v0 = 0;
-              }
-              SMS_CODE_LENGTH = callback(false);
-            }
-            v02 = 3;
-          } catch (tmp28) {
-            closure_4 = tmp28;
-            if (tmp4 === v0) {
-              v02 = tmp2;
-              throw tmp28;
-            } else {
-              c6 = tmp;
-            }
-          }
-        }
-      })();
-    });
-    closure_9 = tmp;
-    const apply = tmp.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
-  }
-  function _handleResend() {
-    const self = this;
-    const tmp = _undefined(function*() {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+  closure_9 = async function _handleChange(arg0, value) {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        try {
-          v0 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_2 = tmp4;
-              closure_1 = tmp8;
-              let body;
-              closure_1_2(null);
-              closure_1_3(true);
-              const intl2 = closure_1_0(closure_1_2[8]).intl;
-              v0(intl2.string(closure_1_0(closure_1_2[8]).t.LQdCQE));
-              c4 = 2;
-              const HTTP = closure_1_0(closure_1_2[9]).HTTP;
-              obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: false };
-              obj1[0] = closure_1_7.LOGIN_SMS_SEND;
-              const obj2 = { ticket: null };
-              obj2[0] = closure_1_0.ticket;
-              obj1[1] = obj2;
-              c5 = 3;
-              v0 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.post(obj1);
-              return obj3;
-            }
-          } else if (1 === tmp8) {
-            c4 = 0;
-            callback(false);
-            throw callback;
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c7 = 2;
+        let SMS_CODE_LENGTH = c6;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            if (2 === tmp8) {
-              c4 = 1;
-              closure_1 = callback;
-              let message = closure_1.message;
-              body = message;
-              if (message == null) {
-                body = closure_1.body;
-                message = undefined;
-                if (body != null) {
-                  message = body.message;
-                }
-                body = message;
-              }
-              closure_2(body);
-              v0(undefined);
-              c4 = 0;
-              closure_1_3(false);
-              v0 = 3;
-              const tmp16 = closure_2;
-            } else if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              body = arg1;
-              const intl = closure_1_0(closure_1_2[8]).intl;
-              const obj4 = { phoneNumber: null };
-              obj4[0] = body.body.phone;
-              v0(intl.formatToPlainString(closure_1_0(closure_1_2[8]).t["8r6h7+"], obj4));
-              c4 = 1;
+            closure_3 = tmp3;
+            noop(mfaChallenge);
+            SMS_CODE_LENGTH = mfaChallenge(SMS_CODE_LENGTH[10]).SMS_CODE_LENGTH;
+            if (mfaChallenge.length === SMS_CODE_LENGTH) {
+              dependencyMap(null);
+              asyncGeneratorStep(true);
+              c5 = 1;
+              const obj4 = { mfaType: "sms", data: tmp36 };
+              c6 = 2;
+              c7 = 1;
+              const obj5 = { value: finish(obj4), done: false };
+              return obj5;
             }
-            c4 = 0;
-            closure_1_3(false);
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            tmp36 = mfaChallenge;
+          }
+        } else {
+          if (1 === SMS_CODE_LENGTH) {
+            c5 = 0;
+            closure_130_0 = closure_4;
+            const body = closure_130_0.body;
+            let message;
+            if (body != null) {
+              message = body.message;
+            }
+            if (message == null) {
+              message = closure_130_0.message;
+            }
+            closure_131_2(message);
+          } else if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 0;
+            c7 = 3;
+            const obj = { value, done: true };
             return obj;
-          }
-        } catch (tmp34) {
-          callback = tmp34;
-          if (tmp5 === c4) {
-            v0 = tmp3;
-            throw tmp34;
-          } else if (tmp2 === tmp36) {
-            c5 = tmp2;
           } else {
-            c5 = tmp;
+            closure_131_7(true);
+            c5 = 0;
           }
+          SMS_CODE_LENGTH = closure_131_3(false);
+        }
+        c7 = 3;
+      } catch (tmp28) {
+        closure_4 = tmp28;
+        if (tmp4 === c5) {
+          c7 = tmp2;
+          throw tmp28;
+        } else {
+          c6 = tmp;
         }
       }
-    });
-    closure_10 = tmp;
-    const apply = tmp.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
     }
-    return applyArgumentsResult;
-  }
-  let obj = finish(15674);
-  const screenStyles = obj.useScreenStyles(finish(6944)());
-  const tmp4 = first(React.useState(null), 2);
+  };
+  closure_10 = async function _handleResend(arg0, value) {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_1 = tmp8;
+            closure_129_0 = undefined;
+            dependencyMap(null);
+            asyncGeneratorStep(true);
+            const intl2 = message1(tmp4[8]).intl;
+            View(intl2.string(message1(tmp4[8]).t.LQdCQE));
+            c4 = 2;
+            const HTTP = message1(tmp4[9]).HTTP;
+            const request = { url: constants.LOGIN_SMS_SEND, body: null, oldFormErrors: true, rejectWithError: false };
+            const obj4 = { ticket: ticket.ticket };
+            request.body = obj4;
+            c5 = 3;
+            c6 = 1;
+            const obj5 = { value: HTTP.post(request), done: false };
+            return obj5;
+          }
+        } else if (1 === tmp8) {
+          c4 = 0;
+          closure_130_3(false);
+          throw closure_3;
+        } else {
+          if (2 === tmp8) {
+            c4 = 1;
+            closure_129_1 = closure_3;
+            const message = closure_129_1.message;
+            message1 = message;
+            if (message == null) {
+              const body = closure_129_1.body;
+              message1 = undefined;
+              if (body != null) {
+                message1 = body.message;
+              }
+            }
+            closure_130_2(message1);
+            closure_130_6(undefined);
+            c4 = 0;
+            closure_130_3(false);
+            c6 = 3;
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            closure_129_0 = value;
+            const intl = message1(tmp4[8]).intl;
+            const obj6 = { phoneNumber: closure_129_0.body.phone };
+            closure_130_6(intl.formatToPlainString(message1(tmp4[8]).t["8r6h7+"], obj6));
+            c4 = 1;
+          }
+          c4 = 0;
+          closure_130_3(false);
+          c6 = 3;
+          const obj = { value, done: true };
+          return obj;
+        }
+      } catch (tmp34) {
+        closure_3 = tmp34;
+        if (tmp5 === c4) {
+          c6 = tmp3;
+          throw tmp34;
+        } else if (tmp2 === tmp36) {
+          c5 = tmp2;
+        } else {
+          c5 = tmp;
+        }
+      }
+    }
+  };
+  const tmp2 = finish(6958)();
+  const screenStyles = finish(15704).useScreenStyles(tmp2);
+  const tmp4 = first(noop.useState(null), 2);
   dependencyMap = tmp4[1];
-  const tmp2 = finish(6944)();
-  [tmp6, c3] = first(React.useState(false), 2);
-  const tmp7 = first(React.useState(""), 2);
+  let obj = finish(15704);
+  [tmp6, c3] = first(noop.useState(false), 2);
+  const tmp7 = first(noop.useState(""), 2);
   first = tmp7[0];
-  React = tmp7[1];
+  noop = tmp7[1];
   let intl = mfaChallenge(1114).intl;
-  const tmp5 = first(React.useState(false), 2);
+  const tmp5 = first(noop.useState(false), 2);
   const tmp8 = mfaChallenge;
-  [tmp10, c6] = first(React.useState(intl.string(mfaChallenge(1114).t.LQdCQE)), 2);
-  const tmp9 = first(React.useState(intl.string(mfaChallenge(1114).t.LQdCQE)), 2);
-  [tmp12, c7] = first(React.useState(false), 2);
+  [tmp10, c6] = first(noop.useState(intl.string(mfaChallenge(1114).t.LQdCQE)), 2);
+  const tmp9 = first(noop.useState(intl.string(mfaChallenge(1114).t.LQdCQE)), 2);
+  [tmp12, c7] = first(noop.useState(false), 2);
   const items = [mfaChallenge.ticket];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     dependencyMap(null);
-    const HTTP = mfaChallenge(1272).HTTP;
-    obj = { url: _undefined2.LOGIN_SMS_SEND, body: obj, oldFormErrors: true, rejectWithError: false };
-    obj = { ticket: mfaChallenge.ticket };
-    const postResult = HTTP.post(obj);
-    HTTP.post(obj).then((body) => {
-      const intl = closure_1_0(closure_1_2[8]).intl;
-      callback(intl.formatToPlainString(closure_1_0(closure_1_2[8]).t["8r6h7+"], { phoneNumber: body.body.phone }));
-    }).catch((body) => {
-      body = body.body;
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: Endpoints.LOGIN_SMS_SEND, body: { ticket: mfaChallenge.ticket }, oldFormErrors: true, rejectWithError: false };
+    const obj = { ticket: mfaChallenge.ticket };
+    const postResult = HTTP.post(request);
+    HTTP.post(request).then((body) => {
+      const intl = mfaChallenge(1114).intl;
+      closure_1_6(intl.formatToPlainString(mfaChallenge(1114).t["8r6h7+"], { phoneNumber: body.body.phone }));
+    }).catch((error) => {
+      const body = error.body;
       let message;
       if (body != null) {
         message = body.message;
       }
       if (message == null) {
-        message = body.message;
+        message = error.message;
       }
-      closure_2(message);
-      callback(undefined);
+      dependencyMap(message);
+      closure_1_6(undefined);
     });
   }, items);
-  obj = { headerText: null, subtitle: null, input: null, submit: null, screenProps: null, mfaMethod: "sms" };
-  const tmp11 = first(React.useState(false), 2);
+  let obj2 = { headerText: null, subtitle: null, input: null, submit: null, screenProps: null, mfaMethod: "sms" };
+  const tmp11 = first(noop.useState(false), 2);
   let intl2 = mfaChallenge(1114).intl;
-  obj[0] = intl2.string(mfaChallenge(1114).t.o4JNrO);
-  obj[1] = tmp10;
-  obj = { style: screenStyles.inputContainer, children: null };
-  obj1 = { autoFocus: true, autoCapitalize: "characters", maxLength: mfaChallenge(15678).SMS_CODE_LENGTH, autoComplete: "sms-otp", textContentType: "oneTimeCode", keyboardType: "number-pad", onChange: handleChange, label: null, placeholder: null, errorMessage: null };
+  obj2.headerText = intl2.string(mfaChallenge(1114).t.o4JNrO);
+  obj2.subtitle = tmp10;
+  let obj3 = { style: screenStyles.inputContainer, children: null };
+  let obj4 = { autoFocus: true, autoCapitalize: "characters", maxLength: mfaChallenge(15708).SMS_CODE_LENGTH, autoComplete: "sms-otp", textContentType: "oneTimeCode", keyboardType: "number-pad", onChange: handleChange, label: null, placeholder: null, errorMessage: null };
   const intl3 = mfaChallenge(1114).intl;
-  obj1[7] = intl3.string(mfaChallenge(1114).t["/sHnXc"]);
+  obj4.label = intl3.string(mfaChallenge(1114).t["/sHnXc"]);
   const intl4 = mfaChallenge(1114).intl;
-  obj1[8] = intl4.string(mfaChallenge(1114).t.tARzgo);
-  obj1[9] = tmp4[0];
-  const items1 = [handleChange(mfaChallenge(6606).TextInput, obj1), ];
-  let obj2 = { text: null, variant: "secondary", size: "sm", onPress: null };
+  obj4.placeholder = intl4.string(mfaChallenge(1114).t.tARzgo);
+  obj4.errorMessage = tmp4[0];
+  const items1 = [handleChange(mfaChallenge(6620).TextInput, obj4), ];
+  let obj5 = { text: null, variant: "secondary", size: "sm", onPress: null };
   const intl5 = mfaChallenge(1114).intl;
-  obj2[0] = intl5.string(mfaChallenge(1114).t.WbaP3r);
-  obj2[3] = function handleResend() {
+  obj5.text = intl5.string(mfaChallenge(1114).t.WbaP3r);
+  obj5.onPress = function handleResend() {
     const self = this;
-    const apply = _handleResend.apply;
+    const apply = closure_10.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -315,29 +272,29 @@ export default function SmsScreen(mfaChallenge) {
     }
     return applyArgumentsResult;
   };
-  items1[1] = handleChange(mfaChallenge(4975).Button, obj2);
-  obj[1] = items1;
-  obj[2] = _handleChange(c6, obj);
-  let obj3 = { variant: "primary", text: null, loading: null, onPress: null, disabled: null };
-  const tmp15 = finish(15673);
+  items1[1] = handleChange(mfaChallenge(4989).Button, obj5);
+  obj3.children = items1;
+  obj2.input = closure_9(c6, obj3);
+  let obj6 = { variant: "primary", text: null, loading: null, onPress: null, disabled: null };
+  const tmp15 = finish(15703);
   const intl6 = mfaChallenge(1114).intl;
-  obj3[1] = intl6.string(mfaChallenge(1114).t.geKm7t);
+  obj6.text = intl6.string(mfaChallenge(1114).t.geKm7t);
   let tmp17 = tmp6;
   if (!tmp6) {
     tmp17 = tmp12;
   }
-  obj3[2] = tmp17;
-  obj3[3] = function onPress() {
+  obj6.loading = tmp17;
+  obj6.onPress = function onPress() {
     handleChange(first);
   };
   if (!tmp6) {
     tmp6 = tmp12;
   }
   if (!tmp6) {
-    tmp6 = first.length !== tmp8(15678).SMS_CODE_LENGTH;
+    tmp6 = first.length !== tmp8(15708).SMS_CODE_LENGTH;
   }
-  obj3[4] = tmp6;
-  obj[3] = handleChange(finish(15676), obj3);
-  obj[4] = { mfaChallenge, finish };
-  return handleChange(tmp15, obj);
+  obj6.disabled = tmp6;
+  obj2.submit = handleChange(finish(15706), obj6);
+  obj2.screenProps = { mfaChallenge, finish };
+  return handleChange(tmp15, obj2);
 };

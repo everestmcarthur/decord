@@ -1,44 +1,44 @@
-// Module ID: 11577
-// Function ID: 11578
+// Module ID: 11603
+// Function ID: 11604
 // Name: LeaveConnectionRoleActionSheet
-// Dependencies: [19, 17, 21, 4560, 7150, 4556, 1114, 4975, 2]
+// Dependencies: [19, 17, 21, 4574, 7164, 4570, 1114, 4989, 2]
 // Exports: default
 
-// Module 11577 (LeaveConnectionRoleActionSheet)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import Button from "Button" /* 4975 */;
-import Background from "Background" /* 7150 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11603 (LeaveConnectionRoleActionSheet)
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7164 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = createCacheKey.createStyles({ container: { padding: 12 }, marginTop: { marginTop: 8 }, button: { marginTop: 8, marginBottom: 16 } });
-const result = require("set").fileFinishedImporting("modules/connections/native/LeaveConnectionRoleActionSheet.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4574);
+let closure_5 = createStyles.createStyles({ container: { padding: 12 }, marginTop: { marginTop: 8 }, button: { marginTop: 8, marginBottom: 16 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/connections/native/LeaveConnectionRoleActionSheet.tsx");
 
 export default function LeaveConnectionRoleActionSheet(onLeaveRolePressed) {
-  const tmp = callback3();
-  let obj = { children: null };
-  obj = { style: tmp.container, children: null };
-  obj = { variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.vytvJF);
-  const items = [callback(Text.Text, obj), , ];
-  obj1 = { style: tmp.marginTop, variant: "text-md/normal", color: "text-default", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj1[3] = intl2.string(getSystemLocale.t.caJwb5);
-  items[1] = callback(Text.Text, obj1);
-  const obj2 = { style: tmp.button, children: null };
-  const obj3 = { variant: "destructive", onPress: onLeaveRolePressed.onLeaveRolePressed, text: null, grow: true };
-  const intl3 = getSystemLocale.intl;
-  obj3[2] = intl3.string(getSystemLocale.t["+Oi4XF"]);
-  obj2[1] = callback(Button.Button, obj3);
-  items[2] = callback(View, obj2);
-  obj[1] = items;
-  obj[0] = callback2(View, obj);
-  return callback(Background.BottomSheet, obj);
+  const tmp = closure_5();
+  const obj = { children: null };
+  const obj2 = { style: tmp.container, children: null };
+  const obj3 = { variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+  const intl = util.intl;
+  obj3.children = intl.string(util.t.vytvJF);
+  const items = [React3(Text_Text.Text, obj3), , ];
+  const obj4 = { style: tmp.marginTop, variant: "text-md/normal", color: "text-default", children: null };
+  const intl2 = util.intl;
+  obj4.children = intl2.string(util.t.caJwb5);
+  items[1] = React3(Text_Text.Text, obj4);
+  const obj5 = { style: tmp.button, children: null };
+  const obj6 = { variant: "destructive", onPress: onLeaveRolePressed.onLeaveRolePressed, text: null, grow: true };
+  const intl3 = util.intl;
+  obj6.text = intl3.string(util.t["+Oi4XF"]);
+  obj5.children = React3(components_Button_Button.Button, obj6);
+  items[2] = React3(View, obj5);
+  obj2.children = items;
+  obj.children = React4(View, obj2);
+  return React3(Sheet_BottomSheet.BottomSheet, obj);
 };

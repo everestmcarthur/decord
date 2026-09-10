@@ -1,24 +1,23 @@
-// Module ID: 4543
-// Function ID: 4544
-// Name: getPathsFromURL
-// Dependencies: [4544, 1074, 1076, 4547, 1367, 4548, 4549, 1362, 7890, 4545, 7735, 9242, 8339, 7691, 5456, 2]
+// Module ID: 4557
+// Function ID: 4558
+// Name: findCodedLinks
+// Dependencies: [4558, 1074, 1076, 4561, 1367, 4562, 4563, 1362, 7904, 4559, 7749, 9269, 8367, 7705, 5470, 2]
 // Exports: default, findCodedLink, isSuspiciousCodedLink, parseGameServerShareCode, parseQuestsEmbedCode, parseUserProfileEmbedCode, remainingPathFromDiscordHostMatch
 
-// Module 4543 (getPathsFromURL)
+// Module 4557 (findCodedLinks)
+import BuildOverrideUtils from "BuildOverrideUtils" /* 1362 */;
 import Url from "Url" /* 1367 */;
-import findCodedLinkUrlsDefault from "findCodedLinkUrls" /* 4549 */;
-import closure_3 from "updateInvite" /* 4544 */;
-import { PRIMARY_DOMAIN } from "ME" /* 1074 */;
-import { CollectibleShopTab } from "items" /* 1076 */;
-import importDefaultResult from "set" /* 4547 */;
+import CodedLink from "CodedLink" /* 4562 */;
+import findCodedLinkUrlsDefault from "findCodedLinkUrls" /* 4563 */;
+import InviteStore from "InviteStore" /* 4558 */;
+import RegexUtils_mod from "RegexUtils" /* 4561 */;
 
-require = arg1;
+require = fn;
 function getPathsFromURL(target) {
   const url = parseURLSafely(target);
   if (null != url) {
     if (null != url.pathname) {
-      obj = { url: null, inviteHostRemainingPath: null, templateHostRemainingPath: null, primaryHostRemainingPath: null };
-      obj[0] = url;
+      obj = { url, inviteHostRemainingPath: null, templateHostRemainingPath: null, primaryHostRemainingPath: null };
       let replaced;
       if (url.host != null) {
         replaced = str31.replace(/^www[.]/i, "");
@@ -43,13 +42,13 @@ function getPathsFromURL(target) {
           tmp2 = tmp4;
         }
       }
-      obj[1] = tmp2;
+      obj.inviteHostRemainingPath = tmp2;
       let replaced1;
       if (url.host != null) {
         replaced1 = str5.replace(/^www[.]/i, "");
       }
       let tmp7 = null;
-      if (replaced1 === obj.host) {
+      if (replaced1 === obj7.host) {
         let str7 = url.pathname;
         if (str7 == null) {
           str7 = "";
@@ -68,13 +67,13 @@ function getPathsFromURL(target) {
           tmp7 = tmp9;
         }
       }
-      obj[2] = tmp7;
+      obj.templateHostRemainingPath = tmp7;
       let replaced2;
       if (url.host != null) {
         replaced2 = str10.replace(/^www[.]/i, "");
       }
       let tmp12 = null;
-      if (replaced2 === obj2.host) {
+      if (replaced2 === obj13.host) {
         let str12 = url.pathname;
         if (str12 == null) {
           str12 = "";
@@ -99,7 +98,7 @@ function getPathsFromURL(target) {
           replaced3 = str32.replace(/^www[.]/i, "");
         }
         let tmp16 = null;
-        if (replaced3 === obj4.host) {
+        if (replaced3 === obj19.host) {
           let str16 = url.pathname;
           if (str16 == null) {
             str16 = "";
@@ -126,7 +125,7 @@ function getPathsFromURL(target) {
           replaced4 = str33.replace(/^www[.]/i, "");
         }
         let tmp20 = null;
-        if (replaced4 === obj6.host) {
+        if (replaced4 === obj23.host) {
           let str20 = url.pathname;
           if (str20 == null) {
             str20 = "";
@@ -153,7 +152,7 @@ function getPathsFromURL(target) {
           replaced5 = str34.replace(/^www[.]/i, "");
         }
         let tmp24 = null;
-        if (replaced5 === obj9.host) {
+        if (replaced5 === obj26.host) {
           let str24 = url.pathname;
           if (str24 == null) {
             str24 = "";
@@ -180,7 +179,7 @@ function getPathsFromURL(target) {
           replaced6 = str35.replace(/^www[.]/i, "");
         }
         let tmp28 = null;
-        if (replaced6 === obj11.host) {
+        if (replaced6 === obj41.host) {
           let str28 = url.pathname;
           if (str28 == null) {
             str28 = "";
@@ -201,7 +200,7 @@ function getPathsFromURL(target) {
         }
         tmp12 = tmp28;
       }
-      obj[3] = tmp12;
+      obj.primaryHostRemainingPath = tmp12;
     }
     return obj;
   }
@@ -214,6 +213,8 @@ function parseURLSafely(url) {
     return null;
   }
 }
+const PRIMARY_DOMAIN = fn(1074).PRIMARY_DOMAIN;
+const CollectibleShopTab = fn(1076).CollectibleShopTab;
 const re5 = /^\/([a-zA-Z0-9-]+)$/;
 const re6 = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/;
 const re7 = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?\.?$/;
@@ -235,110 +236,108 @@ const re21 = tmp3;
 if (null == INVITE_HOST) {
   let obj = { host: null, pathPrefix: null };
 } else if (INVITE_HOST.indexOf("/") >= 0) {
-  let obj1 = require("Url");
-  const parsed = obj1.parse(INVITE_HOST, undefined, true);
+  let parsed = fn(1367).parse(INVITE_HOST, undefined, true);
+  ({ host: obj3.host, pathname: obj3.pathPrefix } = parsed);
   obj = { host: null, pathPrefix: null };
-  ({ host: obj3[0], pathname: obj3[1] } = parsed);
+  let obj2 = fn(1367);
+  let obj4 = { host: null, pathPrefix: null };
 } else {
-  obj = { host: null, pathPrefix: null };
-  obj[0] = INVITE_HOST;
+  obj = { host: INVITE_HOST, pathPrefix: null };
 }
 if (null == GUILD_TEMPLATE_HOST) {
-  obj = { host: null, pathPrefix: null };
+  let obj7 = { host: null, pathPrefix: null };
 } else if (GUILD_TEMPLATE_HOST.indexOf("/") >= 0) {
-  let obj4 = require("Url");
-  const parsed1 = obj4.parse(GUILD_TEMPLATE_HOST, undefined, true);
-  obj1 = { host: null, pathPrefix: null };
-  ({ host: obj6[0], pathname: obj6[1] } = parsed1);
-  obj = obj1;
+  const parsed1 = fn(1367).parse(GUILD_TEMPLATE_HOST, undefined, true);
+  ({ host: obj6.host, pathname: obj6.pathPrefix } = parsed1);
+  obj7 = { host: null, pathPrefix: null };
+  let obj10 = { host: null, pathPrefix: null };
+  let obj5 = fn(1367);
 } else {
-  obj = { host: null, pathPrefix: null };
-  obj[0] = GUILD_TEMPLATE_HOST;
+  obj7 = { host: GUILD_TEMPLATE_HOST, pathPrefix: null };
 }
 if (WEBAPP_ENDPOINT == null) {
   let _HermesInternal = HermesInternal;
   WEBAPP_ENDPOINT = "//canary." + PRIMARY_DOMAIN;
 }
 if (null == WEBAPP_ENDPOINT) {
-  let obj2 = { host: null, pathPrefix: null };
+  let obj13 = { host: null, pathPrefix: null };
 } else if (WEBAPP_ENDPOINT.indexOf("/") >= 0) {
-  let obj7 = require("Url");
-  const parsed2 = obj7.parse(WEBAPP_ENDPOINT, undefined, true);
-  let obj3 = { host: null, pathPrefix: null };
-  ({ host: obj9[0], pathname: obj9[1] } = parsed2);
-  obj2 = obj3;
+  const parsed2 = fn(1367).parse(WEBAPP_ENDPOINT, undefined, true);
+  ({ host: obj9.host, pathname: obj9.pathPrefix } = parsed2);
+  obj13 = { host: null, pathPrefix: null };
+  let obj16 = { host: null, pathPrefix: null };
+  let obj8 = fn(1367);
 } else {
-  obj2 = { host: null, pathPrefix: null };
-  obj2[0] = WEBAPP_ENDPOINT;
+  obj13 = { host: WEBAPP_ENDPOINT, pathPrefix: null };
 }
 let combined = "//canary." + PRIMARY_DOMAIN;
 if (null == combined) {
-  obj4 = { host: null, pathPrefix: null };
+  let obj19 = { host: null, pathPrefix: null };
 } else if (combined.indexOf("/") >= 0) {
-  let obj10 = require("Url");
-  const parsed3 = obj10.parse(combined, undefined, true);
-  ({ host: obj12[0], pathname: obj12[1] } = parsed3);
-  obj4 = { host: null, pathPrefix: null };
-  let obj5 = { host: null, pathPrefix: null };
+  const parsed3 = fn(1367).parse(combined, undefined, true);
+  ({ host: obj12.host, pathname: obj12.pathPrefix } = parsed3);
+  obj19 = { host: null, pathPrefix: null };
+  let obj11 = fn(1367);
+  let obj22 = { host: null, pathPrefix: null };
 } else {
-  obj4 = { host: null, pathPrefix: null };
-  obj4[0] = combined;
+  obj19 = { host: combined, pathPrefix: null };
 }
-const combined1 = "//ptb." + PRIMARY_DOMAIN;
+let combined1 = "//ptb." + PRIMARY_DOMAIN;
 if (null == combined1) {
-  let obj6 = { host: null, pathPrefix: null };
+  let obj23 = { host: null, pathPrefix: null };
 } else if (combined1.indexOf("/") >= 0) {
-  const parsed4 = require("Url").parse(combined1, undefined, true);
-  obj7 = { host: null, pathPrefix: null };
-  ({ host: obj15[0], pathname: obj15[1] } = parsed4);
-  obj6 = obj7;
-  let obj14 = require("Url");
+  const parsed4 = fn(1367).parse(combined1, undefined, true);
+  ({ host: obj15.host, pathname: obj15.pathPrefix } = parsed4);
+  obj23 = { host: null, pathPrefix: null };
+  let obj14 = fn(1367);
+  let obj24 = { host: null, pathPrefix: null };
 } else {
-  obj6 = { host: null, pathPrefix: null };
-  obj6[0] = combined1;
+  obj23 = { host: combined1, pathPrefix: null };
 }
 if ("discordapp.com".indexOf("/") >= 0) {
-  const parsed5 = require("Url").parse("discordapp.com", undefined, true);
-  ({ host: obj18[0], pathname: obj18[1] } = parsed5);
-  let obj9 = { host: null, pathPrefix: null };
-  let obj17 = require("Url");
-  let obj8 = { host: null, pathPrefix: null };
+  const parsed5 = fn(1367).parse("discordapp.com", undefined, true);
+  ({ host: obj18.host, pathname: obj18.pathPrefix } = parsed5);
+  let obj26 = { host: null, pathPrefix: null };
+  let obj17 = fn(1367);
+  let obj25 = { host: null, pathPrefix: null };
 } else {
-  obj9 = { host: "discordapp.com", pathPrefix: null };
+  obj26 = { host: "discordapp.com", pathPrefix: null };
 }
 if ("discord.com".indexOf("/") >= 0) {
-  const parsed6 = require("Url").parse("discord.com", undefined, true);
-  obj10 = { host: null, pathPrefix: null };
-  ({ host: obj21[0], pathname: obj21[1] } = parsed6);
-  let obj11 = obj10;
-  let obj20 = require("Url");
+  const parsed6 = fn(1367).parse("discord.com", undefined, true);
+  ({ host: obj21.host, pathname: obj21.pathPrefix } = parsed6);
+  let obj41 = { host: null, pathPrefix: null };
+  let obj20 = fn(1367);
+  let obj27 = { host: null, pathPrefix: null };
 } else {
-  obj11 = { host: "discord.com", pathPrefix: null };
+  obj41 = { host: "discord.com", pathPrefix: null };
 }
+let RegexUtils = RegexUtils_mod;
 let str7 = obj.host;
 if (str7 == null) {
   str7 = "";
 }
-let items = [importDefaultResult.escape(str7), , , , ];
-let str8 = obj.host;
+let items = [RegexUtils.escape(str7), , , , ];
+let RegexUtils = RegexUtils_mod;
+let str8 = obj7.host;
 if (str8 == null) {
   str8 = "";
 }
-items[1] = importDefaultResult.escape(str8);
-const importDefaultResult1 = importDefaultResult;
-let str9 = obj2.host;
+items[1] = RegexUtils.escape(str8);
+let RegexUtils = RegexUtils_mod;
+let str9 = obj13.host;
 if (str9 == null) {
   str9 = "";
 }
-items[2] = importDefaultResult.escape(str9);
-const importDefaultResult2 = importDefaultResult;
-let str10 = obj9.host;
+items[2] = RegexUtils.escape(str9);
+let RegexUtils = RegexUtils_mod;
+let str10 = obj26.host;
 if (str10 == null) {
   str10 = "";
 }
-items[3] = importDefaultResult.escape(str10);
-const importDefaultResult3 = importDefaultResult;
-let str11 = obj11.host;
+items[3] = RegexUtils.escape(str10);
+let RegexUtils = RegexUtils_mod;
+let str11 = obj41.host;
 if (str11 == null) {
   str11 = "";
 }
@@ -354,7 +353,7 @@ function findCodedLinks(str) {
       }
       return combined;
     });
-    let match = str.match(closure_21);
+    let match = str.match(re21);
     if (match == null) {
       match = [];
     }
@@ -365,8 +364,7 @@ function findCodedLinks(str) {
           const set = new Set();
           const items = [];
           function _loop(iter) {
-            let formatted = closure_1_30;
-            ({ url, inviteHostRemainingPath, templateHostRemainingPath, primaryHostRemainingPath } = closure_1_30(iter));
+            ({ url, inviteHostRemainingPath, templateHostRemainingPath, primaryHostRemainingPath } = getPathsFromURL(iter));
             if (null != url) {
               if (null != url.pathname) {
                 let query = null;
@@ -376,486 +374,387 @@ function findCodedLinks(str) {
                     query = url.query;
                   }
                 }
-                obj = set(closure_1_2[7]);
                 if (obj.isBuildOverrideLink(iter)) {
-                  obj1 = set;
                   if (!set.has(iter)) {
-                    obj1.add(iter);
-                    obj = { type: null, code: null, url: null };
-                    obj[0] = tmp4(tmp5[5]).CodedLinkType.BUILD_OVERRIDE;
-                    obj[1] = iter;
-                    obj[2] = iter;
-                    items.push(obj);
+                    obj2.add(iter);
+                    const obj3 = { type: tmp4(tmp5[5]).CodedLinkType.BUILD_OVERRIDE, code: iter, url: iter };
+                    items.push(obj3);
                   }
+                  obj2 = set;
                 }
-                let tmp4Result = tmp4(tmp5[7]);
+                obj = BuildOverrideUtils;
                 if (tmp4Result.isManualBuildOverrideLink(iter)) {
-                  obj4 = set;
                   if (!set.has(iter)) {
-                    obj4.add(iter);
-                    obj = { type: null, code: null, url: null };
-                    obj[0] = tmp4(tmp5[5]).CodedLinkType.MANUAL_BUILD_OVERRIDE;
-                    obj[1] = iter;
-                    obj[2] = iter;
-                    items.push(obj);
+                    obj5.add(iter);
+                    const obj4 = { type: tmp4(tmp5[5]).CodedLinkType.MANUAL_BUILD_OVERRIDE, code: iter, url: iter };
+                    items.push(obj4);
                   }
+                  obj5 = set;
                 }
-                tmp4Result = tmp4(tmp5[8]);
-                if (tmp4Result.isExperimentEmbedURL(iter)) {
-                  let obj7 = set;
+                tmp4Result = BuildOverrideUtils;
+                if (tmp4Result8.isExperimentEmbedURL(iter)) {
                   if (!set.has(iter)) {
-                    obj7.add(iter);
-                    obj1 = { type: null, code: null, url: null };
-                    obj1[0] = tmp4(tmp5[5]).CodedLinkType.EXPERIMENT;
-                    obj1[1] = iter;
-                    obj1[2] = iter;
-                    items.push(obj1);
+                    obj8.add(iter);
+                    const obj6 = { type: tmp4(tmp5[5]).CodedLinkType.EXPERIMENT, code: iter, url: iter };
+                    items.push(obj6);
                   }
+                  obj8 = set;
                 }
                 let match;
                 if (inviteHostRemainingPath != null) {
-                  match = inviteHostRemainingPath.match(closure_1_5);
+                  match = inviteHostRemainingPath.match(closure_2_5);
                 }
                 if (null != match) {
                   if ("https:" === url.protocol) {
                     const inviteKeyFromUrlParams = tmp4(tmp5[9]).generateInviteKeyFromUrlParams(inviteHostRemainingPath.substring(1), url.search);
-                    const invite = closure_1_3.getInvite(inviteKeyFromUrlParams);
+                    invite = invite.getInvite(inviteKeyFromUrlParams);
                     if (null != invite) {
-                      if (tmp4Result2.isEmbeddedApplicationInvite(invite)) {
-                        let obj13 = set;
+                      if (tmp4Result10.isEmbeddedApplicationInvite(invite)) {
                         if (!set.has(inviteKeyFromUrlParams)) {
-                          obj13.add(inviteKeyFromUrlParams);
-                          obj2 = { type: null, code: null, url: null };
-                          obj2[0] = tmp4(tmp5[5]).CodedLinkType.EMBEDDED_ACTIVITY_INVITE;
-                          obj2[1] = inviteKeyFromUrlParams;
-                          obj2[2] = iter;
-                          items.push(obj2);
+                          obj14.add(inviteKeyFromUrlParams);
+                          obj7 = { type: tmp4(tmp5[5]).CodedLinkType.EMBEDDED_ACTIVITY_INVITE, code: inviteKeyFromUrlParams, url: iter };
+                          items.push(obj7);
                         }
+                        obj14 = set;
                       }
-                      tmp4Result2 = tmp4(tmp5[10]);
+                      tmp4Result10 = tmp4(tmp5[10]);
                     }
                     if (iter.includes("\\")) {
                       return 0;
                     } else {
-                      obj11 = set;
                       if (!set.has(inviteKeyFromUrlParams)) {
-                        obj11.add(inviteKeyFromUrlParams);
-                        const obj3 = { type: null, code: null, url: null };
-                        obj3[0] = tmp4(tmp5[5]).CodedLinkType.INVITE;
-                        obj3[1] = inviteKeyFromUrlParams;
-                        obj3[2] = iter;
-                        items.push(obj3);
+                        obj12.add(inviteKeyFromUrlParams);
+                        const obj9 = { type: tmp4(tmp5[5]).CodedLinkType.INVITE, code: inviteKeyFromUrlParams, url: iter };
+                        items.push(obj9);
                       }
+                      obj12 = set;
                     }
-                    const tmp4Result1 = tmp4(tmp5[9]);
+                    const tmp4Result9 = tmp4(tmp5[9]);
                   }
                 }
                 let match1;
                 if (templateHostRemainingPath != null) {
-                  match1 = templateHostRemainingPath.match(closure_1_5);
+                  match1 = templateHostRemainingPath.match(closure_2_5);
                 }
                 if (null != match1) {
                   const substr = templateHostRemainingPath.substring(1);
-                  let obj15 = set;
                   if (!set.has(substr)) {
-                    obj15.add(substr);
-                    obj4 = { type: null, code: null, url: null };
-                    obj4[0] = tmp4(tmp5[5]).CodedLinkType.TEMPLATE;
-                    obj4[1] = substr;
-                    obj4[2] = iter;
-                    items.push(obj4);
+                    obj16.add(substr);
+                    const obj10 = { type: tmp4(tmp5[5]).CodedLinkType.TEMPLATE, code: substr, url: iter };
+                    items.push(obj10);
                   }
+                  obj16 = set;
                 }
                 let match2;
                 if (primaryHostRemainingPath != null) {
-                  match2 = primaryHostRemainingPath.match(closure_1_7);
+                  match2 = primaryHostRemainingPath.match(closure_2_7);
                 }
                 if (null != match2) {
-                  formatted = match2[1].toUpperCase();
+                  const formatted = match2[1].toUpperCase();
                   if (formatted === tmp4(tmp5[5]).CodedLinkType.INVITE) {
                     if (iter.includes("\\")) {
                       return 0;
                     } else {
                       const inviteKeyFromUrlParams1 = tmp4(tmp5[9]).generateInviteKeyFromUrlParams(match2[2], url.search);
-                      let obj20 = set;
                       if (!set.has(inviteKeyFromUrlParams1)) {
-                        obj20.add(inviteKeyFromUrlParams1);
-                        const obj5 = { type: null, code: null, url: null };
-                        obj5[0] = tmp4(tmp5[5]).CodedLinkType.INVITE;
-                        obj5[1] = inviteKeyFromUrlParams1;
-                        obj5[2] = iter;
-                        items.push(obj5);
+                        obj21.add(inviteKeyFromUrlParams1);
+                        const obj11 = { type: tmp4(tmp5[5]).CodedLinkType.INVITE, code: inviteKeyFromUrlParams1, url: iter };
+                        items.push(obj11);
                       }
-                      const tmp4Result3 = tmp4(tmp5[9]);
+                      obj21 = set;
+                      const tmp4Result11 = tmp4(tmp5[9]);
                     }
                   } else {
-                    let obj17 = set;
                     if (!set.has(match2[2])) {
-                      obj17.add(tmp34);
-                      obj6 = { type: null, code: null, url: null };
-                      obj6[0] = formatted;
-                      obj6[1] = tmp34;
-                      obj6[2] = iter;
-                      items.push(obj6);
+                      obj18.add(tmp34);
+                      obj13 = { type: formatted, code: tmp34, url: iter };
+                      items.push(obj13);
                     }
+                    obj18 = set;
                   }
-                  const str23 = match2[1];
                 }
                 let match3;
                 if (primaryHostRemainingPath != null) {
-                  match3 = primaryHostRemainingPath.match(closure_1_6);
+                  match3 = primaryHostRemainingPath.match(closure_2_6);
                 }
                 if (null != match3) {
                   const replaced = primaryHostRemainingPath.replace("/channels/", "");
-                  let obj22 = set;
                   if (!set.has(replaced)) {
-                    obj22.add(replaced);
-                    obj7 = { type: null, code: null, url: null };
-                    obj7[0] = tmp4(tmp5[5]).CodedLinkType.CHANNEL_LINK;
-                    obj7[1] = replaced;
-                    obj7[2] = iter;
-                    items.push(obj7);
+                    obj23.add(replaced);
+                    const obj15 = { type: tmp4(tmp5[5]).CodedLinkType.CHANNEL_LINK, code: replaced, url: iter };
+                    items.push(obj15);
                   }
+                  obj23 = set;
                 }
                 let tmp48 = null;
                 if (null != url.pathname) {
-                  const match4 = str6.match(closure_1_8);
+                  const match4 = str6.match(regExp);
                   tmp48 = null;
                   if (null != match4) {
                     tmp48 = null;
                     if (match4.length >= 4) {
                       let tmp51 = null;
                       if (null != match4[2]) {
-                        const obj8 = { guildId: null, guildEventId: null, recurrenceId: null };
-                        obj8[0] = match4[1];
-                        obj8[1] = tmp50;
-                        obj8[2] = match4[4];
-                        tmp51 = obj8;
+                        const obj17 = { guildId: match4[1], guildEventId: tmp50, recurrenceId: match4[4] };
+                        tmp51 = obj17;
                       }
                       tmp48 = tmp51;
                     }
                   }
                 }
                 if (null != tmp48) {
-                  formatted = globalThis;
                   const _HermesInternal6 = HermesInternal;
                   let str7 = "";
-                  formatted = "" + tmp48.guildId + "-" + tmp48.guildEventId;
+                  const combined = "" + tmp48.guildId + "-" + tmp48.guildEventId;
                   if (null != tmp48.recurrenceId) {
                     const _HermesInternal = HermesInternal;
                     str7 = "-" + tmp48.recurrenceId;
                   }
-                  const sum = formatted + str7;
+                  const sum = combined + str7;
                   if (!set.has(sum)) {
                     obj26.add(sum);
-                    obj9 = { type: null, code: null, url: null };
-                    obj9[0] = tmp4(tmp5[5]).CodedLinkType.EVENT;
-                    obj9[1] = sum;
-                    obj9[2] = iter;
-                    items.push(obj9);
+                    obj19 = { type: tmp4(tmp5[5]).CodedLinkType.EVENT, code: sum, url: iter };
+                    items.push(obj19);
                   }
                   obj26 = set;
                 }
                 let match5;
                 if (primaryHostRemainingPath != null) {
-                  match5 = primaryHostRemainingPath.match(closure_1_19);
+                  match5 = primaryHostRemainingPath.match(closure_2_19);
                 }
                 if (null != match5) {
                   if (null != query) {
-                    formatted = tmp4(tmp5[11]).parseOAuth2AuthorizeProps(query);
-                    const clientId = formatted.clientId;
+                    const result = tmp4(tmp5[11]).parseOAuth2AuthorizeProps(query);
+                    const clientId = result.clientId;
                     let tmp58 = null == clientId;
                     if (!tmp58) {
                       tmp58 = "" === clientId;
                     }
                     if (!tmp58) {
-                      const scopes = formatted.scopes;
+                      const scopes = result.scopes;
                       let someResult;
                       if (scopes != null) {
-                        someResult = scopes.some((arg0) => arg0 !== callback(table[12]).OAuth2Scopes.APPLICATIONS_COMMANDS);
+                        someResult = scopes.some((item) => item !== set(closure_1_2[12]).OAuth2Scopes.APPLICATIONS_COMMANDS);
                       }
                       tmp58 = someResult;
                     }
                     if (!tmp58) {
                       if (!set.has(clientId)) {
                         obj28.add(clientId);
-                        const obj10 = { type: null, code: null, url: null };
-                        obj10[0] = tmp4(tmp5[5]).CodedLinkType.APP_OAUTH2_LINK;
-                        obj10[1] = clientId;
-                        obj10[2] = iter;
-                        items.push(obj10);
+                        const obj20 = { type: tmp4(tmp5[5]).CodedLinkType.APP_OAUTH2_LINK, code: clientId, url: iter };
+                        items.push(obj20);
                       }
                       obj28 = set;
                     }
-                    const tmp4Result4 = tmp4(tmp5[11]);
+                    const tmp4Result12 = tmp4(tmp5[11]);
                   }
                 }
                 let match6;
                 if (primaryHostRemainingPath != null) {
-                  match6 = primaryHostRemainingPath.match(closure_1_9);
+                  match6 = primaryHostRemainingPath.match(closure_2_9);
                 }
                 if (null != match6) {
                   if (!set.has(match6[2])) {
                     obj30.add(tmp65);
-                    obj11 = { type: null, code: null, url: null };
-                    obj11[0] = tmp4(tmp5[5]).CodedLinkType.APP_DIRECTORY_PROFILE;
-                    obj11[1] = tmp65;
-                    obj11[2] = iter;
-                    items.push(obj11);
+                    const obj22 = { type: tmp4(tmp5[5]).CodedLinkType.APP_DIRECTORY_PROFILE, code: tmp65, url: iter };
+                    items.push(obj22);
                   }
                   obj30 = set;
                 }
                 let match7;
                 if (primaryHostRemainingPath != null) {
-                  match7 = primaryHostRemainingPath.match(closure_1_10);
+                  match7 = primaryHostRemainingPath.match(closure_2_10);
                 }
                 if (null != match7) {
-                  formatted = match7[2];
-                  formatted = match7[3];
-                  if (null != formatted) {
-                    const storefrontSKUCodedLink = tmp4(tmp5[13]).makeStorefrontSKUCodedLink(formatted, formatted);
+                  if (null != match7[3]) {
+                    const storefrontSKUCodedLink = tmp4(tmp5[13]).makeStorefrontSKUCodedLink(tmp150, tmp151);
                     if (!set.has(storefrontSKUCodedLink)) {
                       obj35.add(storefrontSKUCodedLink);
-                      const obj12 = { type: null, code: null, url: null };
-                      obj12[0] = tmp4(tmp5[5]).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU;
-                      obj12[1] = storefrontSKUCodedLink;
-                      obj12[2] = iter;
-                      items.push(obj12);
+                      const obj24 = { type: tmp4(tmp5[5]).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU, code: storefrontSKUCodedLink, url: iter };
+                      items.push(obj24);
                     }
                     obj35 = set;
-                    const tmp4Result5 = tmp4(tmp5[13]);
+                    const tmp4Result13 = tmp4(tmp5[13]);
                   } else {
-                    if (!set.has(formatted)) {
-                      obj32.add(formatted);
-                      obj13 = { type: null, code: null, url: null };
-                      obj13[0] = tmp4(tmp5[5]).CodedLinkType.APP_DIRECTORY_STOREFRONT;
-                      obj13[1] = formatted;
-                      obj13[2] = iter;
-                      items.push(obj13);
+                    if (!set.has(tmp150)) {
+                      obj32.add(tmp150);
+                      const obj25 = { type: tmp4(tmp5[5]).CodedLinkType.APP_DIRECTORY_STOREFRONT, code: tmp150, url: iter };
+                      items.push(obj25);
                     }
                     obj32 = set;
                   }
                 }
                 let match8;
                 if (primaryHostRemainingPath != null) {
-                  match8 = primaryHostRemainingPath.match(closure_1_11);
+                  match8 = primaryHostRemainingPath.match(closure_2_11);
                 }
                 if (null != match8) {
                   if (!set.has(match8[1])) {
                     obj37.add(tmp80);
-                    const obj14 = { type: null, code: null, url: null };
-                    obj14[0] = tmp4(tmp5[5]).CodedLinkType.ACTIVITY_BOOKMARK;
-                    obj14[1] = tmp80;
-                    obj14[2] = iter;
-                    items.push(obj14);
+                    const obj27 = { type: tmp4(tmp5[5]).CodedLinkType.ACTIVITY_BOOKMARK, code: tmp80, url: iter };
+                    items.push(obj27);
                   }
                   obj37 = set;
                 }
                 let match9;
                 if (primaryHostRemainingPath != null) {
-                  match9 = primaryHostRemainingPath.match(closure_1_12);
+                  match9 = primaryHostRemainingPath.match(closure_2_12);
                 }
                 if (null != match9) {
                   const _HermesInternal2 = HermesInternal;
-                  const combined = "" + match9[1] + "-" + match9[2];
-                  if (!set.has(combined)) {
-                    obj39.add(combined);
-                    obj15 = { type: null, code: null, url: null };
-                    obj15[0] = tmp4(tmp5[5]).CodedLinkType.GUILD_PRODUCT;
-                    obj15[1] = combined;
-                    obj15[2] = iter;
-                    items.push(obj15);
+                  const combined1 = "" + match9[1] + "-" + match9[2];
+                  if (!set.has(combined1)) {
+                    obj39.add(combined1);
+                    const obj29 = { type: tmp4(tmp5[5]).CodedLinkType.GUILD_PRODUCT, code: combined1, url: iter };
+                    items.push(obj29);
                   }
                   obj39 = set;
                 }
                 let match10;
                 if (primaryHostRemainingPath != null) {
-                  match10 = primaryHostRemainingPath.match(closure_1_14);
+                  match10 = primaryHostRemainingPath.match(closure_2_14);
                 }
                 if (null != match10) {
                   if (!set.has(match10[1])) {
                     obj41.add(tmp93);
-                    const obj16 = { type: null, code: null, url: null };
-                    obj16[0] = tmp4(tmp5[5]).CodedLinkType.SERVER_SHOP;
-                    obj16[1] = tmp93;
-                    obj16[2] = iter;
-                    items.push(obj16);
+                    const obj31 = { type: tmp4(tmp5[5]).CodedLinkType.SERVER_SHOP, code: tmp93, url: iter };
+                    items.push(obj31);
                   }
                   obj41 = set;
                 }
                 let match11;
                 if (primaryHostRemainingPath != null) {
-                  match11 = primaryHostRemainingPath.match(closure_1_13);
+                  match11 = primaryHostRemainingPath.match(closure_2_13);
                 }
                 if (null != match11) {
                   let tmp99 = match11[1];
                   if (tmp99 == null) {
                     tmp99 = match11[2];
                   }
-                  formatted = globalThis;
                   const _HermesInternal3 = HermesInternal;
-                  formatted = "" + match11[3] + "-" + tmp99;
-                  if (!set.has(formatted)) {
-                    formatted = obj43.add(formatted);
-                    formatted = items;
-                    obj17 = { type: null, code: null, url: null };
-                    obj17[0] = tmp4(tmp5[5]).CodedLinkType.SOCIAL_LAYER_STOREFRONT;
-                    obj17[1] = formatted;
-                    obj17[2] = iter;
-                    formatted = items.push(obj17);
+                  const combined2 = "" + match11[3] + "-" + tmp99;
+                  if (!set.has(combined2)) {
+                    obj43.add(combined2);
+                    const obj33 = { type: tmp4(tmp5[5]).CodedLinkType.SOCIAL_LAYER_STOREFRONT, code: combined2, url: iter };
+                    items.push(obj33);
                   }
                   obj43 = set;
                 }
-                const str13 = formatted(iter).primaryHostRemainingPath;
-                formatted = undefined;
+                const str13 = getPathsFromURL(iter).primaryHostRemainingPath;
+                let match12;
                 if (str13 != null) {
-                  formatted = closure_1_15;
-                  formatted = str13.match(closure_1_15);
+                  match12 = str13.match(closure_2_15);
                 }
-                formatted = undefined;
-                if (formatted != null) {
-                  formatted = formatted[1];
+                let tmp107;
+                if (match12 != null) {
+                  tmp107 = match12[1];
                 }
-                if (formatted == null) {
-                  formatted = null;
+                if (tmp107 == null) {
+                  tmp107 = null;
                 }
-                if (null != formatted) {
-                  if (!set.has(formatted)) {
-                    formatted = obj45.add(formatted);
-                    formatted = items;
-                    const obj18 = { type: null, code: null, url: null };
-                    obj18[0] = tmp4(tmp5[5]).CodedLinkType.QUESTS_EMBED;
-                    obj18[1] = formatted;
-                    obj18[2] = iter;
-                    formatted = items.push(obj18);
+                if (null != tmp107) {
+                  if (!set.has(tmp107)) {
+                    obj45.add(tmp107);
+                    const obj34 = { type: tmp4(tmp5[5]).CodedLinkType.QUESTS_EMBED, code: tmp107, url: iter };
+                    items.push(obj34);
                   }
                   obj45 = set;
                 }
-                formatted = undefined;
+                let match13;
                 if (primaryHostRemainingPath != null) {
-                  formatted = closure_1_17;
-                  formatted = primaryHostRemainingPath.match(closure_1_17);
+                  match13 = primaryHostRemainingPath.match(closure_2_17);
                 }
-                if (null != formatted) {
-                  formatted = formatted[1];
-                  if (!set.has(formatted)) {
-                    formatted = obj47.add(formatted);
-                    formatted = items;
-                    const obj19 = { type: null, code: null, url: null };
-                    obj19[0] = tmp4(tmp5[5]).CodedLinkType.GAME_PROFILE;
-                    obj19[1] = formatted;
-                    obj19[2] = iter;
-                    formatted = items.push(obj19);
+                if (null != match13) {
+                  if (!set.has(match13[1])) {
+                    obj47.add(tmp113);
+                    const obj36 = { type: tmp4(tmp5[5]).CodedLinkType.GAME_PROFILE, code: tmp113, url: iter };
+                    items.push(obj36);
                   }
                   obj47 = set;
                 }
-                formatted = undefined;
+                let match14;
                 if (primaryHostRemainingPath != null) {
-                  formatted = closure_1_16;
-                  formatted = primaryHostRemainingPath.match(closure_1_16);
+                  match14 = primaryHostRemainingPath.match(closure_2_16);
                 }
-                if (null != formatted) {
-                  formatted = formatted[1];
-                  if (!set.has(formatted)) {
-                    formatted = obj49.add(formatted);
-                    formatted = items;
-                    obj20 = { type: null, code: null, url: null };
-                    obj20[0] = tmp4(tmp5[5]).CodedLinkType.GAME_SERVER_SHARE;
-                    obj20[1] = formatted;
-                    obj20[2] = iter;
-                    formatted = items.push(obj20);
+                if (null != match14) {
+                  if (!set.has(match14[1])) {
+                    obj49.add(tmp119);
+                    const obj38 = { type: tmp4(tmp5[5]).CodedLinkType.GAME_SERVER_SHARE, code: tmp119, url: iter };
+                    items.push(obj38);
                   }
                   obj49 = set;
                 }
-                formatted = undefined;
+                let match15;
                 if (primaryHostRemainingPath != null) {
-                  formatted = closure_1_18;
-                  formatted = primaryHostRemainingPath.match(closure_1_18);
+                  match15 = primaryHostRemainingPath.match(closure_2_18);
                 }
-                if (null != formatted) {
-                  formatted = formatted[1];
-                  if (!set.has(formatted)) {
-                    formatted = obj51.add(formatted);
-                    formatted = items;
-                    const obj21 = { type: null, code: null, url: null };
-                    obj21[0] = tmp4(tmp5[5]).CodedLinkType.USER_PROFILE;
-                    obj21[1] = formatted;
-                    obj21[2] = iter;
-                    formatted = items.push(obj21);
+                if (null != match15) {
+                  if (!set.has(match15[1])) {
+                    obj51.add(tmp125);
+                    const obj40 = { type: tmp4(tmp5[5]).CodedLinkType.USER_PROFILE, code: tmp125, url: iter };
+                    items.push(obj40);
                   }
                   obj51 = set;
                 }
                 if ("/shop" === primaryHostRemainingPath) {
-                  formatted = null;
+                  let parsed = null;
                   if (null != query) {
-                    formatted = tmp4(tmp5[14]).parse(query);
-                    const tmp4Result6 = tmp4(tmp5[14]);
+                    parsed = tmp4(tmp5[14]).parse(query);
+                    const tmp4Result14 = tmp4(tmp5[14]);
                   }
                   let str15;
-                  if (formatted != null) {
-                    str15 = formatted.tab;
+                  if (parsed != null) {
+                    str15 = parsed.tab;
                   }
-                  formatted = closure_1_4;
-                  if (str15 === closure_1_4.GAME_SHOPS) {
-                    formatted = undefined;
-                    if (formatted != null) {
-                      formatted = formatted.applicationId;
+                  if (str15 === constants.GAME_SHOPS) {
+                    let applicationId1;
+                    if (parsed != null) {
+                      applicationId1 = parsed.applicationId;
                     }
-                    if (null != formatted) {
-                      formatted = undefined;
-                      if (formatted != null) {
-                        formatted = formatted.skuId;
+                    if (null != applicationId1) {
+                      let skuId1;
+                      if (parsed != null) {
+                        skuId1 = parsed.skuId;
                       }
-                      if (null != formatted) {
-                        ({ applicationId, skuId } = formatted);
-                        formatted = typeof applicationId === "string";
+                      if (null != skuId1) {
+                        ({ applicationId, skuId } = parsed);
+                        let tmp140 = typeof applicationId === "string";
                         if (typeof applicationId === "string") {
-                          formatted = typeof skuId === "string";
+                          tmp140 = typeof skuId === "string";
                         }
-                        if (formatted) {
-                          formatted = globalThis;
+                        if (tmp140) {
                           const _HermesInternal5 = HermesInternal;
-                          formatted = "" + skuId + "-" + applicationId;
-                          if (!set.has(formatted)) {
-                            formatted = obj56.add(formatted);
-                            formatted = items;
-                            obj22 = { type: null, code: null, url: null };
-                            obj22[0] = tmp4(tmp5[5]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP;
-                            obj22[1] = formatted;
-                            obj22[2] = iter;
-                            formatted = items.push(obj22);
+                          const combined3 = "" + skuId + "-" + applicationId;
+                          if (!set.has(combined3)) {
+                            obj56.add(combined3);
+                            const obj42 = { type: tmp4(tmp5[5]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP, code: combined3, url: iter };
+                            items.push(obj42);
                           }
                           obj56 = set;
                         }
                       }
                     }
                   }
-                  formatted = undefined;
+                  let match16;
                   if (url.hash != null) {
-                    formatted = closure_1_20;
-                    formatted = str16.match(closure_1_20);
+                    match16 = str16.match(closure_2_20);
                   }
                   if (str15 == null) {
                     str15 = "";
                   }
                   let str17;
-                  if (formatted != null) {
-                    str17 = formatted[1];
+                  if (match16 != null) {
+                    str17 = match16[1];
                   }
                   if (str17 == null) {
                     str17 = "";
                   }
-                  formatted = globalThis;
                   const _HermesInternal4 = HermesInternal;
-                  formatted = "" + str15 + "-" + str17;
-                  if (!set.has(formatted)) {
-                    formatted = obj54.add(formatted);
-                    formatted = items;
-                    const obj23 = { type: null, code: null, url: null };
-                    obj23[0] = tmp4(tmp5[5]).CodedLinkType.COLLECTIBLES_SHOP;
-                    obj23[1] = formatted;
-                    obj23[2] = iter;
-                    formatted = items.push(obj23);
+                  const combined4 = "" + str15 + "-" + str17;
+                  if (!set.has(combined4)) {
+                    obj54.add(combined4);
+                    const obj44 = { type: tmp4(tmp5[5]).CodedLinkType.COLLECTIBLES_SHOP, code: combined4, url: iter };
+                    items.push(obj44);
                   }
                   obj54 = set;
                 }
@@ -881,7 +780,7 @@ function parseQuestsEmbedCode(target) {
   const str = getPathsFromURL(target).primaryHostRemainingPath;
   let match;
   if (str != null) {
-    match = str.match(closure_15);
+    match = str.match(re15);
   }
   let tmp3;
   if (match != null) {
@@ -892,11 +791,11 @@ function parseQuestsEmbedCode(target) {
   }
   return tmp3;
 }
-items[4] = importDefaultResult.escape(str11);
+items[4] = RegexUtils.escape(str11);
 const found = items.filter(Boolean);
 const regExp1 = new RegExp("((https?://[^ ]*)|^|\\s)(" + found.join("|") + ")", "g");
-const importDefaultResult4 = importDefaultResult;
-let result = require("set").fileFinishedImporting("modules/coded_links/findCodedLinks.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/coded_links/findCodedLinks.tsx");
 
 export default findCodedLinks;
 export const DEVLINK_REGEX = tmp3;
@@ -906,7 +805,7 @@ export const remainingPathFromDiscordHostMatch = function remainingPathFromDisco
     replaced = str.replace(/^www[.]/i, "");
   }
   let tmp3 = null;
-  if (replaced === obj2.host) {
+  if (replaced === obj13.host) {
     let str3 = parseURLSafelyResult.pathname;
     if (str3 == null) {
       str3 = "";
@@ -931,7 +830,7 @@ export const remainingPathFromDiscordHostMatch = function remainingPathFromDisco
       replaced1 = str22.replace(/^www[.]/i, "");
     }
     let tmp7 = null;
-    if (replaced1 === obj4.host) {
+    if (replaced1 === obj19.host) {
       let str7 = parseURLSafelyResult.pathname;
       if (str7 == null) {
         str7 = "";
@@ -958,7 +857,7 @@ export const remainingPathFromDiscordHostMatch = function remainingPathFromDisco
       replaced2 = str23.replace(/^www[.]/i, "");
     }
     let tmp11 = null;
-    if (replaced2 === obj6.host) {
+    if (replaced2 === obj23.host) {
       let str11 = parseURLSafelyResult.pathname;
       if (str11 == null) {
         str11 = "";
@@ -985,7 +884,7 @@ export const remainingPathFromDiscordHostMatch = function remainingPathFromDisco
       replaced3 = str24.replace(/^www[.]/i, "");
     }
     let tmp15 = null;
-    if (replaced3 === obj9.host) {
+    if (replaced3 === obj26.host) {
       let str15 = parseURLSafelyResult.pathname;
       if (str15 == null) {
         str15 = "";
@@ -1012,7 +911,7 @@ export const remainingPathFromDiscordHostMatch = function remainingPathFromDisco
       replaced4 = str25.replace(/^www[.]/i, "");
     }
     let tmp19 = null;
-    if (replaced4 === obj11.host) {
+    if (replaced4 === obj41.host) {
       let str19 = parseURLSafelyResult.pathname;
       if (str19 == null) {
         str19 = "";
@@ -1049,7 +948,7 @@ export const isSuspiciousCodedLink = function isSuspiciousCodedLink(arr) {
       if (replaced === tmp6.host) {
         return true;
       } else {
-        const items = [obj2, obj4, obj6, obj9, obj11];
+        const items = [obj13, obj19, obj23, obj26, obj41];
         if (items.some((host) => {
           let replaced;
           if (url.host != null) {
@@ -1060,7 +959,7 @@ export const isSuspiciousCodedLink = function isSuspiciousCodedLink(arr) {
           let flag;
           if (url.pathname != null) {
             const formatted = str2.toUpperCase();
-            flag = formatted.includes(url(4548).CodedLinkType.INVITE);
+            flag = formatted.includes(CodedLink.CodedLinkType.INVITE);
           }
           if (flag == null) {
             flag = false;
@@ -1078,7 +977,7 @@ export const parseUserProfileEmbedCode = function parseUserProfileEmbedCode(targ
   const str = getPathsFromURL(target).primaryHostRemainingPath;
   let match;
   if (str != null) {
-    match = str.match(closure_18);
+    match = str.match(re18);
   }
   let tmp3;
   if (match != null) {
@@ -1093,7 +992,7 @@ export const parseGameServerShareCode = function parseGameServerShareCode(target
   const str = getPathsFromURL(target).primaryHostRemainingPath;
   let match;
   if (str != null) {
-    match = str.match(closure_16);
+    match = str.match(re16);
   }
   let tmp3;
   if (match != null) {
@@ -1117,7 +1016,7 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
       }
       return combined;
     });
-    let match = str.match(closure_21);
+    let match = str.match(re21);
     if (match == null) {
       match = [];
     }
@@ -1128,8 +1027,7 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
           const set = new Set();
           const items = [];
           function _loop(iter) {
-            let formatted = closure_1_30;
-            ({ url, inviteHostRemainingPath, templateHostRemainingPath, primaryHostRemainingPath } = closure_1_30(iter));
+            ({ url, inviteHostRemainingPath, templateHostRemainingPath, primaryHostRemainingPath } = getPathsFromURL(iter));
             if (null != url) {
               if (null != url.pathname) {
                 let query = null;
@@ -1139,486 +1037,387 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
                     query = url.query;
                   }
                 }
-                obj = set(closure_1_2[7]);
                 if (obj.isBuildOverrideLink(iter)) {
-                  obj1 = set;
                   if (!set.has(iter)) {
-                    obj1.add(iter);
-                    obj = { type: null, code: null, url: null };
-                    obj[0] = tmp4(tmp5[5]).CodedLinkType.BUILD_OVERRIDE;
-                    obj[1] = iter;
-                    obj[2] = iter;
-                    items.push(obj);
+                    obj2.add(iter);
+                    const obj3 = { type: tmp4(tmp5[5]).CodedLinkType.BUILD_OVERRIDE, code: iter, url: iter };
+                    items.push(obj3);
                   }
+                  obj2 = set;
                 }
-                let tmp4Result = tmp4(tmp5[7]);
+                obj = BuildOverrideUtils;
                 if (tmp4Result.isManualBuildOverrideLink(iter)) {
-                  obj4 = set;
                   if (!set.has(iter)) {
-                    obj4.add(iter);
-                    obj = { type: null, code: null, url: null };
-                    obj[0] = tmp4(tmp5[5]).CodedLinkType.MANUAL_BUILD_OVERRIDE;
-                    obj[1] = iter;
-                    obj[2] = iter;
-                    items.push(obj);
+                    obj5.add(iter);
+                    const obj4 = { type: tmp4(tmp5[5]).CodedLinkType.MANUAL_BUILD_OVERRIDE, code: iter, url: iter };
+                    items.push(obj4);
                   }
+                  obj5 = set;
                 }
-                tmp4Result = tmp4(tmp5[8]);
-                if (tmp4Result.isExperimentEmbedURL(iter)) {
-                  let obj7 = set;
+                tmp4Result = BuildOverrideUtils;
+                if (tmp4Result8.isExperimentEmbedURL(iter)) {
                   if (!set.has(iter)) {
-                    obj7.add(iter);
-                    obj1 = { type: null, code: null, url: null };
-                    obj1[0] = tmp4(tmp5[5]).CodedLinkType.EXPERIMENT;
-                    obj1[1] = iter;
-                    obj1[2] = iter;
-                    items.push(obj1);
+                    obj8.add(iter);
+                    const obj6 = { type: tmp4(tmp5[5]).CodedLinkType.EXPERIMENT, code: iter, url: iter };
+                    items.push(obj6);
                   }
+                  obj8 = set;
                 }
                 let match;
                 if (inviteHostRemainingPath != null) {
-                  match = inviteHostRemainingPath.match(closure_1_5);
+                  match = inviteHostRemainingPath.match(closure_2_5);
                 }
                 if (null != match) {
                   if ("https:" === url.protocol) {
                     const inviteKeyFromUrlParams = tmp4(tmp5[9]).generateInviteKeyFromUrlParams(inviteHostRemainingPath.substring(1), url.search);
-                    const invite = closure_1_3.getInvite(inviteKeyFromUrlParams);
+                    invite = invite.getInvite(inviteKeyFromUrlParams);
                     if (null != invite) {
-                      if (tmp4Result2.isEmbeddedApplicationInvite(invite)) {
-                        let obj13 = set;
+                      if (tmp4Result10.isEmbeddedApplicationInvite(invite)) {
                         if (!set.has(inviteKeyFromUrlParams)) {
-                          obj13.add(inviteKeyFromUrlParams);
-                          obj2 = { type: null, code: null, url: null };
-                          obj2[0] = tmp4(tmp5[5]).CodedLinkType.EMBEDDED_ACTIVITY_INVITE;
-                          obj2[1] = inviteKeyFromUrlParams;
-                          obj2[2] = iter;
-                          items.push(obj2);
+                          obj14.add(inviteKeyFromUrlParams);
+                          obj7 = { type: tmp4(tmp5[5]).CodedLinkType.EMBEDDED_ACTIVITY_INVITE, code: inviteKeyFromUrlParams, url: iter };
+                          items.push(obj7);
                         }
+                        obj14 = set;
                       }
-                      tmp4Result2 = tmp4(tmp5[10]);
+                      tmp4Result10 = tmp4(tmp5[10]);
                     }
                     if (iter.includes("\\")) {
                       return 0;
                     } else {
-                      obj11 = set;
                       if (!set.has(inviteKeyFromUrlParams)) {
-                        obj11.add(inviteKeyFromUrlParams);
-                        const obj3 = { type: null, code: null, url: null };
-                        obj3[0] = tmp4(tmp5[5]).CodedLinkType.INVITE;
-                        obj3[1] = inviteKeyFromUrlParams;
-                        obj3[2] = iter;
-                        items.push(obj3);
+                        obj12.add(inviteKeyFromUrlParams);
+                        const obj9 = { type: tmp4(tmp5[5]).CodedLinkType.INVITE, code: inviteKeyFromUrlParams, url: iter };
+                        items.push(obj9);
                       }
+                      obj12 = set;
                     }
-                    const tmp4Result1 = tmp4(tmp5[9]);
+                    const tmp4Result9 = tmp4(tmp5[9]);
                   }
                 }
                 let match1;
                 if (templateHostRemainingPath != null) {
-                  match1 = templateHostRemainingPath.match(closure_1_5);
+                  match1 = templateHostRemainingPath.match(closure_2_5);
                 }
                 if (null != match1) {
                   const substr = templateHostRemainingPath.substring(1);
-                  let obj15 = set;
                   if (!set.has(substr)) {
-                    obj15.add(substr);
-                    obj4 = { type: null, code: null, url: null };
-                    obj4[0] = tmp4(tmp5[5]).CodedLinkType.TEMPLATE;
-                    obj4[1] = substr;
-                    obj4[2] = iter;
-                    items.push(obj4);
+                    obj16.add(substr);
+                    const obj10 = { type: tmp4(tmp5[5]).CodedLinkType.TEMPLATE, code: substr, url: iter };
+                    items.push(obj10);
                   }
+                  obj16 = set;
                 }
                 let match2;
                 if (primaryHostRemainingPath != null) {
-                  match2 = primaryHostRemainingPath.match(closure_1_7);
+                  match2 = primaryHostRemainingPath.match(closure_2_7);
                 }
                 if (null != match2) {
-                  formatted = match2[1].toUpperCase();
+                  const formatted = match2[1].toUpperCase();
                   if (formatted === tmp4(tmp5[5]).CodedLinkType.INVITE) {
                     if (iter.includes("\\")) {
                       return 0;
                     } else {
                       const inviteKeyFromUrlParams1 = tmp4(tmp5[9]).generateInviteKeyFromUrlParams(match2[2], url.search);
-                      let obj20 = set;
                       if (!set.has(inviteKeyFromUrlParams1)) {
-                        obj20.add(inviteKeyFromUrlParams1);
-                        const obj5 = { type: null, code: null, url: null };
-                        obj5[0] = tmp4(tmp5[5]).CodedLinkType.INVITE;
-                        obj5[1] = inviteKeyFromUrlParams1;
-                        obj5[2] = iter;
-                        items.push(obj5);
+                        obj21.add(inviteKeyFromUrlParams1);
+                        const obj11 = { type: tmp4(tmp5[5]).CodedLinkType.INVITE, code: inviteKeyFromUrlParams1, url: iter };
+                        items.push(obj11);
                       }
-                      const tmp4Result3 = tmp4(tmp5[9]);
+                      obj21 = set;
+                      const tmp4Result11 = tmp4(tmp5[9]);
                     }
                   } else {
-                    let obj17 = set;
                     if (!set.has(match2[2])) {
-                      obj17.add(tmp34);
-                      obj6 = { type: null, code: null, url: null };
-                      obj6[0] = formatted;
-                      obj6[1] = tmp34;
-                      obj6[2] = iter;
-                      items.push(obj6);
+                      obj18.add(tmp34);
+                      obj13 = { type: formatted, code: tmp34, url: iter };
+                      items.push(obj13);
                     }
+                    obj18 = set;
                   }
-                  const str23 = match2[1];
                 }
                 let match3;
                 if (primaryHostRemainingPath != null) {
-                  match3 = primaryHostRemainingPath.match(closure_1_6);
+                  match3 = primaryHostRemainingPath.match(closure_2_6);
                 }
                 if (null != match3) {
                   const replaced = primaryHostRemainingPath.replace("/channels/", "");
-                  let obj22 = set;
                   if (!set.has(replaced)) {
-                    obj22.add(replaced);
-                    obj7 = { type: null, code: null, url: null };
-                    obj7[0] = tmp4(tmp5[5]).CodedLinkType.CHANNEL_LINK;
-                    obj7[1] = replaced;
-                    obj7[2] = iter;
-                    items.push(obj7);
+                    obj23.add(replaced);
+                    const obj15 = { type: tmp4(tmp5[5]).CodedLinkType.CHANNEL_LINK, code: replaced, url: iter };
+                    items.push(obj15);
                   }
+                  obj23 = set;
                 }
                 let tmp48 = null;
                 if (null != url.pathname) {
-                  const match4 = str6.match(closure_1_8);
+                  const match4 = str6.match(regExp);
                   tmp48 = null;
                   if (null != match4) {
                     tmp48 = null;
                     if (match4.length >= 4) {
                       let tmp51 = null;
                       if (null != match4[2]) {
-                        const obj8 = { guildId: null, guildEventId: null, recurrenceId: null };
-                        obj8[0] = match4[1];
-                        obj8[1] = tmp50;
-                        obj8[2] = match4[4];
-                        tmp51 = obj8;
+                        const obj17 = { guildId: match4[1], guildEventId: tmp50, recurrenceId: match4[4] };
+                        tmp51 = obj17;
                       }
                       tmp48 = tmp51;
                     }
                   }
                 }
                 if (null != tmp48) {
-                  formatted = globalThis;
                   const _HermesInternal6 = HermesInternal;
                   let str7 = "";
-                  formatted = "" + tmp48.guildId + "-" + tmp48.guildEventId;
+                  const combined = "" + tmp48.guildId + "-" + tmp48.guildEventId;
                   if (null != tmp48.recurrenceId) {
                     const _HermesInternal = HermesInternal;
                     str7 = "-" + tmp48.recurrenceId;
                   }
-                  const sum = formatted + str7;
+                  const sum = combined + str7;
                   if (!set.has(sum)) {
                     obj26.add(sum);
-                    obj9 = { type: null, code: null, url: null };
-                    obj9[0] = tmp4(tmp5[5]).CodedLinkType.EVENT;
-                    obj9[1] = sum;
-                    obj9[2] = iter;
-                    items.push(obj9);
+                    obj19 = { type: tmp4(tmp5[5]).CodedLinkType.EVENT, code: sum, url: iter };
+                    items.push(obj19);
                   }
                   obj26 = set;
                 }
                 let match5;
                 if (primaryHostRemainingPath != null) {
-                  match5 = primaryHostRemainingPath.match(closure_1_19);
+                  match5 = primaryHostRemainingPath.match(closure_2_19);
                 }
                 if (null != match5) {
                   if (null != query) {
-                    formatted = tmp4(tmp5[11]).parseOAuth2AuthorizeProps(query);
-                    const clientId = formatted.clientId;
+                    const result = tmp4(tmp5[11]).parseOAuth2AuthorizeProps(query);
+                    const clientId = result.clientId;
                     let tmp58 = null == clientId;
                     if (!tmp58) {
                       tmp58 = "" === clientId;
                     }
                     if (!tmp58) {
-                      const scopes = formatted.scopes;
+                      const scopes = result.scopes;
                       let someResult;
                       if (scopes != null) {
-                        someResult = scopes.some((arg0) => arg0 !== callback(table[12]).OAuth2Scopes.APPLICATIONS_COMMANDS);
+                        someResult = scopes.some((item) => item !== set(closure_1_2[12]).OAuth2Scopes.APPLICATIONS_COMMANDS);
                       }
                       tmp58 = someResult;
                     }
                     if (!tmp58) {
                       if (!set.has(clientId)) {
                         obj28.add(clientId);
-                        const obj10 = { type: null, code: null, url: null };
-                        obj10[0] = tmp4(tmp5[5]).CodedLinkType.APP_OAUTH2_LINK;
-                        obj10[1] = clientId;
-                        obj10[2] = iter;
-                        items.push(obj10);
+                        const obj20 = { type: tmp4(tmp5[5]).CodedLinkType.APP_OAUTH2_LINK, code: clientId, url: iter };
+                        items.push(obj20);
                       }
                       obj28 = set;
                     }
-                    const tmp4Result4 = tmp4(tmp5[11]);
+                    const tmp4Result12 = tmp4(tmp5[11]);
                   }
                 }
                 let match6;
                 if (primaryHostRemainingPath != null) {
-                  match6 = primaryHostRemainingPath.match(closure_1_9);
+                  match6 = primaryHostRemainingPath.match(closure_2_9);
                 }
                 if (null != match6) {
                   if (!set.has(match6[2])) {
                     obj30.add(tmp65);
-                    obj11 = { type: null, code: null, url: null };
-                    obj11[0] = tmp4(tmp5[5]).CodedLinkType.APP_DIRECTORY_PROFILE;
-                    obj11[1] = tmp65;
-                    obj11[2] = iter;
-                    items.push(obj11);
+                    const obj22 = { type: tmp4(tmp5[5]).CodedLinkType.APP_DIRECTORY_PROFILE, code: tmp65, url: iter };
+                    items.push(obj22);
                   }
                   obj30 = set;
                 }
                 let match7;
                 if (primaryHostRemainingPath != null) {
-                  match7 = primaryHostRemainingPath.match(closure_1_10);
+                  match7 = primaryHostRemainingPath.match(closure_2_10);
                 }
                 if (null != match7) {
-                  formatted = match7[2];
-                  formatted = match7[3];
-                  if (null != formatted) {
-                    const storefrontSKUCodedLink = tmp4(tmp5[13]).makeStorefrontSKUCodedLink(formatted, formatted);
+                  if (null != match7[3]) {
+                    const storefrontSKUCodedLink = tmp4(tmp5[13]).makeStorefrontSKUCodedLink(tmp150, tmp151);
                     if (!set.has(storefrontSKUCodedLink)) {
                       obj35.add(storefrontSKUCodedLink);
-                      const obj12 = { type: null, code: null, url: null };
-                      obj12[0] = tmp4(tmp5[5]).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU;
-                      obj12[1] = storefrontSKUCodedLink;
-                      obj12[2] = iter;
-                      items.push(obj12);
+                      const obj24 = { type: tmp4(tmp5[5]).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU, code: storefrontSKUCodedLink, url: iter };
+                      items.push(obj24);
                     }
                     obj35 = set;
-                    const tmp4Result5 = tmp4(tmp5[13]);
+                    const tmp4Result13 = tmp4(tmp5[13]);
                   } else {
-                    if (!set.has(formatted)) {
-                      obj32.add(formatted);
-                      obj13 = { type: null, code: null, url: null };
-                      obj13[0] = tmp4(tmp5[5]).CodedLinkType.APP_DIRECTORY_STOREFRONT;
-                      obj13[1] = formatted;
-                      obj13[2] = iter;
-                      items.push(obj13);
+                    if (!set.has(tmp150)) {
+                      obj32.add(tmp150);
+                      const obj25 = { type: tmp4(tmp5[5]).CodedLinkType.APP_DIRECTORY_STOREFRONT, code: tmp150, url: iter };
+                      items.push(obj25);
                     }
                     obj32 = set;
                   }
                 }
                 let match8;
                 if (primaryHostRemainingPath != null) {
-                  match8 = primaryHostRemainingPath.match(closure_1_11);
+                  match8 = primaryHostRemainingPath.match(closure_2_11);
                 }
                 if (null != match8) {
                   if (!set.has(match8[1])) {
                     obj37.add(tmp80);
-                    const obj14 = { type: null, code: null, url: null };
-                    obj14[0] = tmp4(tmp5[5]).CodedLinkType.ACTIVITY_BOOKMARK;
-                    obj14[1] = tmp80;
-                    obj14[2] = iter;
-                    items.push(obj14);
+                    const obj27 = { type: tmp4(tmp5[5]).CodedLinkType.ACTIVITY_BOOKMARK, code: tmp80, url: iter };
+                    items.push(obj27);
                   }
                   obj37 = set;
                 }
                 let match9;
                 if (primaryHostRemainingPath != null) {
-                  match9 = primaryHostRemainingPath.match(closure_1_12);
+                  match9 = primaryHostRemainingPath.match(closure_2_12);
                 }
                 if (null != match9) {
                   const _HermesInternal2 = HermesInternal;
-                  const combined = "" + match9[1] + "-" + match9[2];
-                  if (!set.has(combined)) {
-                    obj39.add(combined);
-                    obj15 = { type: null, code: null, url: null };
-                    obj15[0] = tmp4(tmp5[5]).CodedLinkType.GUILD_PRODUCT;
-                    obj15[1] = combined;
-                    obj15[2] = iter;
-                    items.push(obj15);
+                  const combined1 = "" + match9[1] + "-" + match9[2];
+                  if (!set.has(combined1)) {
+                    obj39.add(combined1);
+                    const obj29 = { type: tmp4(tmp5[5]).CodedLinkType.GUILD_PRODUCT, code: combined1, url: iter };
+                    items.push(obj29);
                   }
                   obj39 = set;
                 }
                 let match10;
                 if (primaryHostRemainingPath != null) {
-                  match10 = primaryHostRemainingPath.match(closure_1_14);
+                  match10 = primaryHostRemainingPath.match(closure_2_14);
                 }
                 if (null != match10) {
                   if (!set.has(match10[1])) {
                     obj41.add(tmp93);
-                    const obj16 = { type: null, code: null, url: null };
-                    obj16[0] = tmp4(tmp5[5]).CodedLinkType.SERVER_SHOP;
-                    obj16[1] = tmp93;
-                    obj16[2] = iter;
-                    items.push(obj16);
+                    const obj31 = { type: tmp4(tmp5[5]).CodedLinkType.SERVER_SHOP, code: tmp93, url: iter };
+                    items.push(obj31);
                   }
                   obj41 = set;
                 }
                 let match11;
                 if (primaryHostRemainingPath != null) {
-                  match11 = primaryHostRemainingPath.match(closure_1_13);
+                  match11 = primaryHostRemainingPath.match(closure_2_13);
                 }
                 if (null != match11) {
                   let tmp99 = match11[1];
                   if (tmp99 == null) {
                     tmp99 = match11[2];
                   }
-                  formatted = globalThis;
                   const _HermesInternal3 = HermesInternal;
-                  formatted = "" + match11[3] + "-" + tmp99;
-                  if (!set.has(formatted)) {
-                    formatted = obj43.add(formatted);
-                    formatted = items;
-                    obj17 = { type: null, code: null, url: null };
-                    obj17[0] = tmp4(tmp5[5]).CodedLinkType.SOCIAL_LAYER_STOREFRONT;
-                    obj17[1] = formatted;
-                    obj17[2] = iter;
-                    formatted = items.push(obj17);
+                  const combined2 = "" + match11[3] + "-" + tmp99;
+                  if (!set.has(combined2)) {
+                    obj43.add(combined2);
+                    const obj33 = { type: tmp4(tmp5[5]).CodedLinkType.SOCIAL_LAYER_STOREFRONT, code: combined2, url: iter };
+                    items.push(obj33);
                   }
                   obj43 = set;
                 }
-                const str13 = formatted(iter).primaryHostRemainingPath;
-                formatted = undefined;
+                const str13 = getPathsFromURL(iter).primaryHostRemainingPath;
+                let match12;
                 if (str13 != null) {
-                  formatted = closure_1_15;
-                  formatted = str13.match(closure_1_15);
+                  match12 = str13.match(closure_2_15);
                 }
-                formatted = undefined;
-                if (formatted != null) {
-                  formatted = formatted[1];
+                let tmp107;
+                if (match12 != null) {
+                  tmp107 = match12[1];
                 }
-                if (formatted == null) {
-                  formatted = null;
+                if (tmp107 == null) {
+                  tmp107 = null;
                 }
-                if (null != formatted) {
-                  if (!set.has(formatted)) {
-                    formatted = obj45.add(formatted);
-                    formatted = items;
-                    const obj18 = { type: null, code: null, url: null };
-                    obj18[0] = tmp4(tmp5[5]).CodedLinkType.QUESTS_EMBED;
-                    obj18[1] = formatted;
-                    obj18[2] = iter;
-                    formatted = items.push(obj18);
+                if (null != tmp107) {
+                  if (!set.has(tmp107)) {
+                    obj45.add(tmp107);
+                    const obj34 = { type: tmp4(tmp5[5]).CodedLinkType.QUESTS_EMBED, code: tmp107, url: iter };
+                    items.push(obj34);
                   }
                   obj45 = set;
                 }
-                formatted = undefined;
+                let match13;
                 if (primaryHostRemainingPath != null) {
-                  formatted = closure_1_17;
-                  formatted = primaryHostRemainingPath.match(closure_1_17);
+                  match13 = primaryHostRemainingPath.match(closure_2_17);
                 }
-                if (null != formatted) {
-                  formatted = formatted[1];
-                  if (!set.has(formatted)) {
-                    formatted = obj47.add(formatted);
-                    formatted = items;
-                    const obj19 = { type: null, code: null, url: null };
-                    obj19[0] = tmp4(tmp5[5]).CodedLinkType.GAME_PROFILE;
-                    obj19[1] = formatted;
-                    obj19[2] = iter;
-                    formatted = items.push(obj19);
+                if (null != match13) {
+                  if (!set.has(match13[1])) {
+                    obj47.add(tmp113);
+                    const obj36 = { type: tmp4(tmp5[5]).CodedLinkType.GAME_PROFILE, code: tmp113, url: iter };
+                    items.push(obj36);
                   }
                   obj47 = set;
                 }
-                formatted = undefined;
+                let match14;
                 if (primaryHostRemainingPath != null) {
-                  formatted = closure_1_16;
-                  formatted = primaryHostRemainingPath.match(closure_1_16);
+                  match14 = primaryHostRemainingPath.match(closure_2_16);
                 }
-                if (null != formatted) {
-                  formatted = formatted[1];
-                  if (!set.has(formatted)) {
-                    formatted = obj49.add(formatted);
-                    formatted = items;
-                    obj20 = { type: null, code: null, url: null };
-                    obj20[0] = tmp4(tmp5[5]).CodedLinkType.GAME_SERVER_SHARE;
-                    obj20[1] = formatted;
-                    obj20[2] = iter;
-                    formatted = items.push(obj20);
+                if (null != match14) {
+                  if (!set.has(match14[1])) {
+                    obj49.add(tmp119);
+                    const obj38 = { type: tmp4(tmp5[5]).CodedLinkType.GAME_SERVER_SHARE, code: tmp119, url: iter };
+                    items.push(obj38);
                   }
                   obj49 = set;
                 }
-                formatted = undefined;
+                let match15;
                 if (primaryHostRemainingPath != null) {
-                  formatted = closure_1_18;
-                  formatted = primaryHostRemainingPath.match(closure_1_18);
+                  match15 = primaryHostRemainingPath.match(closure_2_18);
                 }
-                if (null != formatted) {
-                  formatted = formatted[1];
-                  if (!set.has(formatted)) {
-                    formatted = obj51.add(formatted);
-                    formatted = items;
-                    const obj21 = { type: null, code: null, url: null };
-                    obj21[0] = tmp4(tmp5[5]).CodedLinkType.USER_PROFILE;
-                    obj21[1] = formatted;
-                    obj21[2] = iter;
-                    formatted = items.push(obj21);
+                if (null != match15) {
+                  if (!set.has(match15[1])) {
+                    obj51.add(tmp125);
+                    const obj40 = { type: tmp4(tmp5[5]).CodedLinkType.USER_PROFILE, code: tmp125, url: iter };
+                    items.push(obj40);
                   }
                   obj51 = set;
                 }
                 if ("/shop" === primaryHostRemainingPath) {
-                  formatted = null;
+                  let parsed = null;
                   if (null != query) {
-                    formatted = tmp4(tmp5[14]).parse(query);
-                    const tmp4Result6 = tmp4(tmp5[14]);
+                    parsed = tmp4(tmp5[14]).parse(query);
+                    const tmp4Result14 = tmp4(tmp5[14]);
                   }
                   let str15;
-                  if (formatted != null) {
-                    str15 = formatted.tab;
+                  if (parsed != null) {
+                    str15 = parsed.tab;
                   }
-                  formatted = closure_1_4;
-                  if (str15 === closure_1_4.GAME_SHOPS) {
-                    formatted = undefined;
-                    if (formatted != null) {
-                      formatted = formatted.applicationId;
+                  if (str15 === constants.GAME_SHOPS) {
+                    let applicationId1;
+                    if (parsed != null) {
+                      applicationId1 = parsed.applicationId;
                     }
-                    if (null != formatted) {
-                      formatted = undefined;
-                      if (formatted != null) {
-                        formatted = formatted.skuId;
+                    if (null != applicationId1) {
+                      let skuId1;
+                      if (parsed != null) {
+                        skuId1 = parsed.skuId;
                       }
-                      if (null != formatted) {
-                        ({ applicationId, skuId } = formatted);
-                        formatted = typeof applicationId === "string";
+                      if (null != skuId1) {
+                        ({ applicationId, skuId } = parsed);
+                        let tmp140 = typeof applicationId === "string";
                         if (typeof applicationId === "string") {
-                          formatted = typeof skuId === "string";
+                          tmp140 = typeof skuId === "string";
                         }
-                        if (formatted) {
-                          formatted = globalThis;
+                        if (tmp140) {
                           const _HermesInternal5 = HermesInternal;
-                          formatted = "" + skuId + "-" + applicationId;
-                          if (!set.has(formatted)) {
-                            formatted = obj56.add(formatted);
-                            formatted = items;
-                            obj22 = { type: null, code: null, url: null };
-                            obj22[0] = tmp4(tmp5[5]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP;
-                            obj22[1] = formatted;
-                            obj22[2] = iter;
-                            formatted = items.push(obj22);
+                          const combined3 = "" + skuId + "-" + applicationId;
+                          if (!set.has(combined3)) {
+                            obj56.add(combined3);
+                            const obj42 = { type: tmp4(tmp5[5]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP, code: combined3, url: iter };
+                            items.push(obj42);
                           }
                           obj56 = set;
                         }
                       }
                     }
                   }
-                  formatted = undefined;
+                  let match16;
                   if (url.hash != null) {
-                    formatted = closure_1_20;
-                    formatted = str16.match(closure_1_20);
+                    match16 = str16.match(closure_2_20);
                   }
                   if (str15 == null) {
                     str15 = "";
                   }
                   let str17;
-                  if (formatted != null) {
-                    str17 = formatted[1];
+                  if (match16 != null) {
+                    str17 = match16[1];
                   }
                   if (str17 == null) {
                     str17 = "";
                   }
-                  formatted = globalThis;
                   const _HermesInternal4 = HermesInternal;
-                  formatted = "" + str15 + "-" + str17;
-                  if (!set.has(formatted)) {
-                    formatted = obj54.add(formatted);
-                    formatted = items;
-                    const obj23 = { type: null, code: null, url: null };
-                    obj23[0] = tmp4(tmp5[5]).CodedLinkType.COLLECTIBLES_SHOP;
-                    obj23[1] = formatted;
-                    obj23[2] = iter;
-                    formatted = items.push(obj23);
+                  const combined4 = "" + str15 + "-" + str17;
+                  if (!set.has(combined4)) {
+                    obj54.add(combined4);
+                    const obj44 = { type: tmp4(tmp5[5]).CodedLinkType.COLLECTIBLES_SHOP, code: combined4, url: iter };
+                    items.push(obj44);
                   }
                   obj54 = set;
                 }
@@ -1636,7 +1435,7 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
       }
       return [];
     }
-    const result = coerceLinksToCodedLinks(findCodedLinkUrlsDefault(str).concat(match));
+    let result = coerceLinksToCodedLinks(findCodedLinkUrlsDefault(str).concat(match));
     items = result.slice(0, 10);
     obj = findCodedLinkUrlsDefault(str);
   }

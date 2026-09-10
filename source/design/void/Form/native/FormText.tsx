@@ -1,54 +1,54 @@
-// Module ID: 8611
-// Function ID: 8612
-// Name: FormTextColors
-// Dependencies: [19, 21, 4560, 5441, 576, 1178, 2]
+// Module ID: 8639
+// Function ID: 8640
+// Name: FormText
+// Dependencies: [19, 21, 4574, 5455, 576, 1178, 2]
 
-// Module 8611 (FormTextColors)
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 1178 */;
-import result2 from "result" /* 5441 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 8639 (FormText)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import LegacyTokens from "LegacyTokens" /* 5455 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let closure_3 = createCacheKey.createStyles((arg0) => {
-  let obj = { primary: null, text: null };
-  obj = { color: result2.DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
-  obj[0] = obj;
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_3 = createStyles.createStyles((arg0) => {
+  const obj = { primary: { color: LegacyTokens.DARK_PRIMARY_100_LIGHT_PRIMARY_500 }, text: null };
   let num = 16;
   if ("small" === arg0) {
     num = 12;
   }
-  obj = { fontSize: num, lineHeight: null };
+  const obj3 = { fontSize: num, lineHeight: null };
   let num2 = 22;
   if ("small" === arg0) {
     num2 = 16;
   }
-  obj[1] = num2;
-  obj[1] = obj;
+  obj3.lineHeight = num2;
+  obj.text = obj3;
   return obj;
 });
-let obj = { BRAND: null, RED: null, GREEN: null, YELLOW: null, LINK: null, WHITE: null };
-obj = { color: ThemesDefault.unsafe_rawColors.BRAND_500 };
-obj[0] = obj;
-createCacheKey = { color: ThemesDefault.unsafe_rawColors.RED_400 };
-obj[1] = createCacheKey;
-obj[2] = { color: ThemesDefault.unsafe_rawColors.GREEN_360 };
-const obj2 = { color: ThemesDefault.unsafe_rawColors.GREEN_360 };
-obj[3] = { color: ThemesDefault.unsafe_rawColors.YELLOW_300 };
-const obj3 = { color: ThemesDefault.unsafe_rawColors.YELLOW_300 };
-obj[4] = { color: ThemesDefault.unsafe_rawColors.BLUE_345 };
-const obj4 = { color: ThemesDefault.unsafe_rawColors.BLUE_345 };
-obj[5] = { color: ThemesDefault.unsafe_rawColors.WHITE };
-const obj5 = { color: ThemesDefault.unsafe_rawColors.WHITE };
-const forwardRefResult = importAllResult.forwardRef((size, ref) => {
+let obj = { BRAND: { color: nativeDefault.unsafe_rawColors.BRAND_500 }, RED: null, GREEN: null, YELLOW: null, LINK: null, WHITE: null };
+let obj3 = { color: nativeDefault.unsafe_rawColors.BRAND_500 };
+obj.RED = { color: nativeDefault.unsafe_rawColors.RED_400 };
+const obj4 = { color: nativeDefault.unsafe_rawColors.RED_400 };
+obj.GREEN = { color: nativeDefault.unsafe_rawColors.GREEN_360 };
+const obj5 = { color: nativeDefault.unsafe_rawColors.GREEN_360 };
+obj.YELLOW = { color: nativeDefault.unsafe_rawColors.YELLOW_300 };
+const obj6 = { color: nativeDefault.unsafe_rawColors.YELLOW_300 };
+obj.LINK = { color: nativeDefault.unsafe_rawColors.BLUE_345 };
+const obj7 = { color: nativeDefault.unsafe_rawColors.BLUE_345 };
+obj.WHITE = { color: nativeDefault.unsafe_rawColors.WHITE };
+const obj8 = { color: nativeDefault.unsafe_rawColors.WHITE };
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/Form/native/FormText.tsx");
+
+export default noop.forwardRef((size, ref) => {
   let str = size.size;
   if (str === undefined) {
     str = "medium";
   }
   let primary = size.color;
-  const tmp = callback(str);
+  const tmp = closure_3(str);
   const obj = { ref, style: null, children: null };
   const items = [tmp.text, , ];
   if (primary == null) {
@@ -56,11 +56,8 @@ const forwardRefResult = importAllResult.forwardRef((size, ref) => {
   }
   items[1] = primary;
   items[2] = size.style;
-  obj[1] = items;
-  obj[2] = size.children;
-  return jsx(Button.LegacyText, { ref, style: null, children: null });
+  obj.style = items;
+  obj.children = size.children;
+  return jsx(native.LegacyText, { ref, style: null, children: null });
 });
-const result = require("set").fileFinishedImporting("design/void/Form/native/FormText.tsx");
-
-export default forwardRefResult;
 export const FormTextColors = obj;

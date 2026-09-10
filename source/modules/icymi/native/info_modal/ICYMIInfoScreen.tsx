@@ -1,117 +1,107 @@
-// Module ID: 16471
-// Function ID: 16472
+// Module ID: 16502
+// Function ID: 16503
 // Name: ICYMIInfoScreen
-// Dependencies: [32, 5, 19, 17, 1085, 21, 4560, 576, 5682, 1611, 4495, 1483, 8359, 16472, 4763, 7863, 7871, 1114, 5587, 16474, 16475, 16476, 16477, 4556, 9291, 13013, 4520, 4527, 16478, 1896, 4975, 2]
+// Dependencies: [32, 5, 19, 17, 1085, 21, 4574, 576, 5696, 1611, 4509, 1483, 8387, 16503, 4777, 7877, 7885, 1114, 5601, 16505, 16506, 16507, 16508, 4570, 9318, 13039, 4534, 4541, 16509, 1896, 4989, 2]
 // Exports: default
 
-// Module 16471 (ICYMIInfoScreen)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { ThemeTypes } from "sum" /* 1085 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16502 (ICYMIInfoScreen)
+import nativeDefault from "native" /* 576 */;
+import _slicedToArray from "module_32" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
-({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
-createCacheKey = { container: null, closeIcon: null, closeIconColor: null, bgImage: null, headerImg: null, flashIcon: null, subContainer: null, header: null, headerText: null, body: null, divider: null, infoRow: null, infoIcon: null, infoText: null, hint: null, footer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, position: "relative", flex: 1 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { position: "absolute", justifyContent: "center", left: 12, width: 24, height: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, zIndex: 2 };
-let obj1 = { position: "absolute", justifyContent: "center", left: 12, width: 24, height: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, zIndex: 2 };
-createCacheKey[2] = { backgroundColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-createCacheKey[3] = { position: "absolute", top: 0, left: 0, width: "100%", aspectRatio: 1.2515923566878981, overflow: "visible" };
-createCacheKey[4] = { position: "absolute", top: 16, width: 361, height: 240 };
-createCacheKey[5] = { marginBottom: 32, marginTop: 132 };
-createCacheKey[6] = { flex: 1, paddingHorizontal: 16, paddingTop: 16 };
-createCacheKey[7] = { alignItems: "center", paddingHorizontal: 12 };
-createCacheKey[8] = { textAlign: "center", marginTop: 8 };
-let obj2 = { backgroundColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-createCacheKey[9] = { gap: 16, padding: 16, backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.lg, marginTop: 40 };
-let obj3 = { gap: 16, padding: 16, backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.lg, marginTop: 40 };
-createCacheKey[10] = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginLeft: 48 };
-createCacheKey[11] = { display: "flex", flexDirection: "row", alignItems: "center", overflow: "hidden", gap: 16 };
-let obj4 = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginLeft: 48 };
-createCacheKey[12] = { padding: 8, backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: ThemesDefault.radii.round };
-createCacheKey[13] = { flexShrink: 1 };
-createCacheKey[14] = { margin: 12 };
-let obj5 = { padding: 8, backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: ThemesDefault.radii.round };
-createCacheKey[15] = { position: "absolute", bottom: 0, left: ThemesDefault.space.PX_24, right: ThemesDefault.space.PX_24, paddingBottom: ThemesDefault.space.PX_8 };
-let closure_12 = createCacheKey.createStyles(createCacheKey);
-let obj6 = { position: "absolute", bottom: 0, left: ThemesDefault.space.PX_24, right: ThemesDefault.space.PX_24, paddingBottom: ThemesDefault.space.PX_8 };
-let result = require("set").fileFinishedImporting("modules/icymi/native/info_modal/ICYMIInfoScreen.tsx");
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+const ThemeTypes = fn(1085).ThemeTypes;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, position: "relative", flex: 1 }, closeIcon: null, closeIconColor: null, bgImage: null, headerImg: null, flashIcon: null, subContainer: null, header: null, headerText: null, body: null, divider: null, infoRow: null, infoIcon: null, infoText: null, hint: null, footer: null };
+let size = { position: "absolute", justifyContent: "center", left: 12, width: 24, height: fn(5696).NAV_BAR_HEIGHT, zIndex: 2 };
+obj2.closeIcon = size;
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, position: "relative", flex: 1 };
+obj2.closeIconColor = { backgroundColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+obj2.bgImage = { position: "absolute", top: 0, left: 0, width: "100%", aspectRatio: 1.2515923566878981, overflow: "visible" };
+obj2.headerImg = { position: "absolute", top: 16, width: 361, height: 240 };
+obj2.flashIcon = { marginBottom: 32, marginTop: 132 };
+obj2.subContainer = { flex: 1, paddingHorizontal: 16, paddingTop: 16 };
+obj2.header = { alignItems: "center", paddingHorizontal: 12 };
+obj2.headerText = { textAlign: "center", marginTop: 8 };
+let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+obj2.body = { gap: 16, padding: 16, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.lg, marginTop: 40 };
+let obj5 = { gap: 16, padding: 16, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.lg, marginTop: 40 };
+obj2.divider = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginLeft: 48 };
+obj2.infoRow = { display: "flex", flexDirection: "row", alignItems: "center", overflow: "hidden", gap: 16 };
+let obj6 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginLeft: 48 };
+obj2.infoIcon = { padding: 8, backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: nativeDefault.radii.round };
+obj2.infoText = { flexShrink: 1 };
+obj2.hint = { margin: 12 };
+const rect = { position: "absolute", bottom: 0, left: nativeDefault.space.PX_24, right: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_8 };
+obj2.footer = rect;
+let closure_12 = createStyles.createStyles(obj2);
+size = fn(2);
+let result = size.fileFinishedImporting("modules/icymi/native/info_modal/ICYMIInfoScreen.tsx");
 
 export default function ICYMIInfoScreen(extendedOnboarding) {
   extendedOnboarding = extendedOnboarding.extendedOnboarding;
   let navigation;
-  dependencyMap = undefined;
-  const tmp = callback4();
+  const tmp = closure_12();
   ({ top, bottom } = navigation(1611)());
   const tmp4 = navigation(1611)();
-  let obj = extendedOnboarding(1483);
-  navigation = obj.useNavigation();
+  const tmp5 = navigation(4509)();
+  navigation = extendedOnboarding(1483).useNavigation();
   const items = [extendedOnboarding, navigation];
   const items1 = [navigation];
-  const callback = React.useCallback(callback2(function*() {
+  const callback = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
     if (dependencyMap === 2) {
       dependencyMap = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
         dependencyMap = 2;
-        if (0 === v0) {
+        if (0 === v1) {
           if (arg0 === 1) {
             dependencyMap = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             dependencyMap = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else if (extendedOnboarding) {
+            const ICYMIAnalytics = tmp2(8387).ICYMIAnalytics;
+            const result = ICYMIAnalytics.trackFeedOnboardingScreenSkipped({ location: "overview" });
+            dependencyMap(true);
+            v1 = 1;
+            dependencyMap = 1;
+            const obj5 = { value: tmp2(16503).maybeFetchGuildDiscoveryCategories(), done: false };
+            return obj5;
           } else {
-            closure_0 = tmp2;
-            if (closure_1_0) {
-              const ICYMIAnalytics = closure_1_0(8359).ICYMIAnalytics;
-              const result = ICYMIAnalytics.trackFeedOnboardingScreenSkipped({ location: "overview" });
-              dependencyMap(true);
-              obj1 = closure_1_0(16472);
-              v0 = 1;
-              dependencyMap = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj1.maybeFetchGuildDiscoveryCategories();
-              return obj1;
-            } else {
-              let arr = v0(4763);
-              arr = arr.pop();
-              dependencyMap = 3;
-            }
+            v1(4777).pop();
+            dependencyMap = 3;
+            const arr = v1(4777);
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 !== 2) {
           const _setTimeout = setTimeout;
           let timerId = setTimeout(() => {
             navigation.navigate("topics_cloud");
-            const timerId = setTimeout(() => callback(false), 500);
+            const timerId = setTimeout(() => closure_1_2(false), 500);
           }, 100);
         }
         dependencyMap = 3;
-        obj = { value: null, done: true };
-        obj[0] = arg1;
+        const obj = { value, done: true };
         return obj;
       } catch (tmp18) {
         dependencyMap = tmp;
@@ -119,128 +109,131 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
       }
     }
   }), items);
-  const layoutEffect = React.useLayoutEffect(() => {
+  const layoutEffect = noop.useLayoutEffect(() => {
     navigation.setOptions({
       header() {
         return null;
       }
     });
   }, items1);
-  const tmp10 = callback(React.useState(false), 2);
+  const tmp10 = _slicedToArray(noop.useState(false), 2);
   dependencyMap = tmp10[1];
-  obj = { style: items2, children: null };
-  items2 = [{ marginTop: top }, tmp.closeIcon];
-  obj = {
-    source: navigation(7871),
+  const obj2 = { style: null, children: null };
+  const items2 = [{ marginTop: top }, tmp.closeIcon];
+  obj2.style = items2;
+  let obj3 = {
+    source: navigation(7885),
     onPress() {
-      return navigation(4763).pop();
+      return navigation(4777).pop();
     },
     accessibilityLabel: null,
     color: null
   };
   const intl = extendedOnboarding(1114).intl;
-  obj[2] = intl.string(extendedOnboarding(1114).t.cpT0Cq);
-  obj[3] = tmp.closeIconColor.backgroundColor;
-  obj[1] = callback3(extendedOnboarding(7863).HeaderIconButton, obj);
-  const items3 = [callback3(closure_6, obj), , ];
-  obj1 = { style: items4, children: null };
-  items4 = [tmp.container, { marginBottom: bottom }];
-  const obj2 = { source: null, style: null };
-  const obj3 = { uri: null };
+  obj3.accessibilityLabel = intl.string(extendedOnboarding(1114).t.cpT0Cq);
+  obj3.color = tmp.closeIconColor.backgroundColor;
+  obj2.children = closure_9(extendedOnboarding(7877).HeaderIconButton, obj3);
+  const items3 = [closure_9(closure_6, obj2), , ];
+  let obj4 = { style: null, children: null };
+  const items4 = [tmp.container, { marginBottom: bottom }];
+  obj4.style = items4;
+  let obj5 = { source: null, style: null };
+  const obj6 = { uri: null };
+  let obj = extendedOnboarding(1483);
   const tmp12 = closure_11;
   const tmp15 = closure_7;
-  const tmp5 = navigation(4495)();
-  obj3[0] = navigation(16474);
-  obj2[0] = obj3;
-  obj2[1] = tmp.bgImage;
-  const items5 = [callback3(navigation(5587), obj2), ];
-  const obj4 = { style: null, children: null };
+  obj6.uri = navigation(16505);
+  obj5.source = obj6;
+  obj5.style = tmp.bgImage;
+  const items5 = [closure_9(navigation(5601), obj5), ];
+  const obj7 = { style: null, children: null };
   const items6 = [tmp.subContainer, ];
-  const tmp16 = navigation(5587);
+  const tmp16 = navigation(5601);
   items6[1] = { marginTop: top + navigation(576).space.PX_12 };
-  obj4[0] = items6;
-  const obj6 = { style: tmp.header, children: null };
-  const obj5 = { marginTop: top + navigation(576).space.PX_12 };
+  obj7.style = items6;
+  const obj9 = { style: tmp.header, children: null };
+  const obj8 = { marginTop: top + navigation(576).space.PX_12 };
   if (tmp5 === ThemeTypes.LIGHT) {
-    let tmp2Result = tmp2(16475);
+    let tmp2Result = tmp2(16506);
   } else {
-    tmp2Result = tmp2(16476);
+    tmp2Result = tmp2(16507);
   }
-  const items7 = [callback3(navigation(5587), { source: { uri: tmp2Result }, style: tmp.headerImg }), , , ];
-  const obj8 = { source: null, style: null };
-  tmp2Result = tmp2(5587);
-  obj8[0] = navigation(16477);
-  obj8[1] = tmp.flashIcon;
-  items7[1] = callback3(tmp2Result, obj8);
-  const obj9 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
+  const items7 = [closure_9(navigation(5601), { source: { uri: tmp2Result }, style: tmp.headerImg }), , , ];
+  const obj11 = { source: null, style: null };
+  const obj10 = { source: { uri: tmp2Result }, style: tmp.headerImg };
+  const tmp17 = navigation(5601);
+  obj11.source = navigation(16508);
+  obj11.style = tmp.flashIcon;
+  items7[1] = closure_9(navigation(5601), obj11);
+  const obj12 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
   const intl2 = tmp6(1114).intl;
-  obj9[2] = intl2.string(extendedOnboarding(1114).t["jnXV/V"]);
-  items7[2] = callback3(extendedOnboarding(4556).Text, obj9);
-  const obj10 = { variant: "text-md/normal", color: "text-default", style: tmp.headerText, children: null };
+  obj12.children = intl2.string(extendedOnboarding(1114).t["jnXV/V"]);
+  items7[2] = closure_9(extendedOnboarding(4570).Text, obj12);
+  const obj13 = { variant: "text-md/normal", color: "text-default", style: tmp.headerText, children: null };
   const intl3 = tmp6(1114).intl;
-  obj10[3] = intl3.string(extendedOnboarding(1114).t["9SjvoK"]);
-  items7[3] = callback3(extendedOnboarding(4556).Text, obj10);
-  obj6[1] = items7;
-  const items8 = [closure_10(closure_6, obj6), ];
-  const obj11 = { children: null };
-  const obj12 = { style: tmp.body, children: null };
-  const obj13 = { style: tmp.infoRow, children: null };
-  const obj7 = { source: { uri: tmp2Result }, style: tmp.headerImg };
-  const tmp17 = navigation(5587);
-  const items9 = [callback3(closure_6, { style: tmp.infoIcon, children: callback3(extendedOnboarding(9291).ServerIcon, { size: "sm", color: "interactive-text-active" }) }), ];
-  const obj15 = { variant: "text-md/medium", color: "mobile-text-heading-primary", style: tmp.infoText, children: null };
+  obj13.children = intl3.string(extendedOnboarding(1114).t["9SjvoK"]);
+  items7[3] = closure_9(extendedOnboarding(4570).Text, obj13);
+  obj9.children = items7;
+  const items8 = [closure_10(closure_6, obj9), ];
+  const obj14 = { children: null };
+  const obj15 = { style: tmp.body, children: null };
+  const obj16 = { style: tmp.infoRow, children: null };
+  const tmp2Result2 = navigation(5601);
+  const items9 = [closure_9(closure_6, { style: tmp.infoIcon, children: closure_9(extendedOnboarding(9318).ServerIcon, { size: "sm", color: "interactive-text-active" }) }), ];
+  const obj18 = { variant: "text-md/medium", color: "mobile-text-heading-primary", style: tmp.infoText, children: null };
   const intl4 = tmp6(1114).intl;
-  obj15[3] = intl4.string(extendedOnboarding(1114).t.knxfqR);
-  items9[1] = callback3(extendedOnboarding(4556).Text, obj15);
-  obj13[1] = items9;
-  const items10 = [closure_10(closure_6, obj13), callback3(closure_6, { style: tmp.divider }), , , ];
-  const obj17 = { style: tmp.infoRow, children: null };
-  const obj14 = { style: tmp.infoIcon, children: callback3(extendedOnboarding(9291).ServerIcon, { size: "sm", color: "interactive-text-active" }) };
-  const obj16 = { style: tmp.divider };
-  const items11 = [callback3(closure_6, { style: tmp.infoIcon, children: callback3(extendedOnboarding(13013).NewUserIcon, { size: "sm", color: "interactive-text-active" }) }), ];
-  const obj19 = { variant: "text-md/medium", color: "mobile-text-heading-primary", style: tmp.infoText, children: null };
+  obj18.children = intl4.string(extendedOnboarding(1114).t.knxfqR);
+  items9[1] = closure_9(extendedOnboarding(4570).Text, obj18);
+  obj16.children = items9;
+  const items10 = [closure_10(closure_6, obj16), closure_9(closure_6, { style: tmp.divider }), , , ];
+  const obj20 = { style: tmp.infoRow, children: null };
+  const obj17 = { style: tmp.infoIcon, children: closure_9(extendedOnboarding(9318).ServerIcon, { size: "sm", color: "interactive-text-active" }) };
+  const obj19 = { style: tmp.divider };
+  const items11 = [closure_9(closure_6, { style: tmp.infoIcon, children: closure_9(extendedOnboarding(13039).NewUserIcon, { size: "sm", color: "interactive-text-active" }) }), ];
+  const obj22 = { variant: "text-md/medium", color: "mobile-text-heading-primary", style: tmp.infoText, children: null };
   const intl5 = tmp6(1114).intl;
-  obj19[3] = intl5.string(extendedOnboarding(1114).t.BnUXZi);
-  items11[1] = callback3(extendedOnboarding(4556).Text, obj19);
-  obj17[1] = items11;
-  items10[2] = closure_10(closure_6, obj17);
-  items10[3] = callback3(closure_6, { style: tmp.divider });
-  const obj21 = { style: tmp.infoRow, children: null };
-  const obj18 = { style: tmp.infoIcon, children: callback3(extendedOnboarding(13013).NewUserIcon, { size: "sm", color: "interactive-text-active" }) };
-  const obj20 = { style: tmp.divider };
-  const items12 = [callback3(closure_6, { style: tmp.infoIcon, children: callback3(extendedOnboarding(4520).CircleCheckIcon, { size: "sm", color: "interactive-text-active" }) }), ];
-  const obj23 = { variant: "text-md/medium", color: "mobile-text-heading-primary", style: tmp.infoText, children: null };
+  obj22.children = intl5.string(extendedOnboarding(1114).t.BnUXZi);
+  items11[1] = closure_9(extendedOnboarding(4570).Text, obj22);
+  obj20.children = items11;
+  items10[2] = closure_10(closure_6, obj20);
+  items10[3] = closure_9(closure_6, { style: tmp.divider });
+  const obj24 = { style: tmp.infoRow, children: null };
+  const obj21 = { style: tmp.infoIcon, children: closure_9(extendedOnboarding(13039).NewUserIcon, { size: "sm", color: "interactive-text-active" }) };
+  const obj23 = { style: tmp.divider };
+  const items12 = [closure_9(closure_6, { style: tmp.infoIcon, children: closure_9(extendedOnboarding(4534).CircleCheckIcon, { size: "sm", color: "interactive-text-active" }) }), ];
+  const obj26 = { variant: "text-md/medium", color: "mobile-text-heading-primary", style: tmp.infoText, children: null };
   const intl6 = tmp6(1114).intl;
-  obj23[3] = intl6.string(extendedOnboarding(1114).t.itb1rh);
-  items12[1] = callback3(extendedOnboarding(4556).Text, obj23);
-  obj21[1] = items12;
-  items10[4] = closure_10(closure_6, obj21);
-  obj12[1] = items10;
-  const items13 = [closure_10(closure_6, obj12), ];
-  const obj24 = { variant: "text-xs/medium", color: "text-muted", style: tmp.hint, children: null };
+  obj26.children = intl6.string(extendedOnboarding(1114).t.itb1rh);
+  items12[1] = closure_9(extendedOnboarding(4570).Text, obj26);
+  obj24.children = items12;
+  items10[4] = closure_10(closure_6, obj24);
+  obj15.children = items10;
+  const items13 = [closure_10(closure_6, obj15), ];
+  const obj27 = { variant: "text-xs/medium", color: "text-muted", style: tmp.hint, children: null };
   const intl7 = tmp6(1114).intl;
-  obj24[3] = intl7.format(extendedOnboarding(1114).t["jVS/hc"], {
-    feedbackHook(children) {
-      return callback(extendedOnboarding(4556).Text, {
+  obj27.children = intl7.format(extendedOnboarding(1114).t["jVS/hc"], {
+    feedbackHook(children, arg1) {
+      return closure_1_9(extendedOnboarding(4570).Text, {
         variant: "text-xs/medium",
         color: "text-link",
         onPress() {
-          return callback2(paths[27]).openLazy(callback(paths[29])(paths[28], paths.paths), "ICYMIFeedbackSheet", {});
+          return navigation(paths[27]).openLazy(extendedOnboarding(paths[29])(paths[28], paths.paths), "ICYMIFeedbackSheet", {});
         },
         children
       }, arg1);
     }
   });
-  items13[1] = callback3(extendedOnboarding(4556).Text, obj24);
-  obj11[0] = items13;
-  items8[1] = closure_10(closure_6, obj11);
-  obj4[1] = items8;
-  items5[1] = closure_10(closure_6, obj4);
-  obj1[1] = items5;
-  items3[1] = closure_10(tmp15, obj1);
-  const obj26 = { style: items14, children: null };
-  items14 = [{ marginBottom: bottom }, tmp.footer];
-  const obj27 = { size: "lg", loading: tmp10[0], text: null, onPress: null };
+  items13[1] = closure_9(extendedOnboarding(4570).Text, obj27);
+  obj14.children = items13;
+  items8[1] = closure_10(closure_6, obj14);
+  obj7.children = items8;
+  items5[1] = closure_10(closure_6, obj7);
+  obj4.children = items5;
+  items3[1] = closure_10(tmp15, obj4);
+  const obj29 = { style: null, children: null };
+  const items14 = [{ marginBottom: bottom }, tmp.footer];
+  obj29.style = items14;
+  const obj30 = { size: "lg", loading: tmp10[0], text: null, onPress: null };
   const intl8 = tmp6(1114).intl;
   const string = intl8.string;
   const t = tmp6(1114).t;
@@ -249,11 +242,11 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
   } else {
     stringResult = string(t["+IrDzN"]);
   }
-  const obj28 = { children: null };
-  obj27[2] = stringResult;
-  obj27[3] = callback;
-  obj26[1] = callback3(extendedOnboarding(4975).Button, obj27);
-  items3[2] = callback3(closure_6, obj26);
-  obj28[0] = items3;
-  return closure_10(tmp12, obj28);
+  const obj31 = { children: null };
+  obj30.text = stringResult;
+  obj30.onPress = callback;
+  obj29.children = closure_9(extendedOnboarding(4989).Button, obj30);
+  items3[2] = closure_9(closure_6, obj29);
+  obj31.children = items3;
+  return closure_10(tmp12, obj31);
 };

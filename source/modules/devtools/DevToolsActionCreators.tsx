@@ -1,26 +1,25 @@
-// Module ID: 15577
-// Function ID: 15578
-// Name: updateDevToolsSettings
-// Dependencies: [7719, 573, 2]
+// Module ID: 15607
+// Function ID: 15608
+// Name: DevToolsActionCreators
+// Dependencies: [7733, 573, 2]
 // Exports: clearAnalyticsLog, openDevTools, toggleDisplayDevTools, updateDevToolsSettings
 
-// Module 15577 (updateDevToolsSettings)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_2 from "initialize" /* 7719 */;
+// Module 15607 (DevToolsActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7733 */;
 
-const result = require("set").fileFinishedImporting("modules/devtools/DevToolsActionCreators.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/DevToolsActionCreators.tsx");
 
 export const updateDevToolsSettings = function updateDevToolsSettings(settings) {
-  let obj = dispatcherDefault;
-  obj = { type: "DEV_TOOLS_SETTINGS_UPDATE", settings };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "DEV_TOOLS_SETTINGS_UPDATE", settings });
 };
 export const toggleDisplayDevTools = function toggleDisplayDevTools() {
-  dispatcherDefault.dispatch({ type: "DEV_TOOLS_SETTINGS_UPDATE", settings: { displayTools: !displayTools.displayTools } });
+  DispatcherDefault.dispatch({ type: "DEV_TOOLS_SETTINGS_UPDATE", settings: { displayTools: !DevToolsSettingsStore.displayTools } });
 };
 export const openDevTools = function openDevTools(lastOpenTabId, lastOpenSubTabId) {
-  dispatcherDefault.dispatch({ type: "DEV_TOOLS_SETTINGS_UPDATE", settings: { displayTools: true, lastOpenTabId, lastOpenSubTabId } });
+  DispatcherDefault.dispatch({ type: "DEV_TOOLS_SETTINGS_UPDATE", settings: { displayTools: true, lastOpenTabId, lastOpenSubTabId } });
 };
 export const clearAnalyticsLog = function clearAnalyticsLog() {
-  dispatcherDefault.dispatch({ type: "ANALYTICS_LOG_CLEAR" });
+  DispatcherDefault.dispatch({ type: "ANALYTICS_LOG_CLEAR" });
 };

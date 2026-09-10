@@ -1,37 +1,42 @@
-// Module ID: 14171
-// Function ID: 14172
-// Name: ContextMenuDivider
-// Dependencies: [32, 19, 17, 21, 4560, 576, 8673, 4296, 4271, 6981, 1477, 1115, 4974, 8672, 6655, 4556, 14169, 4962, 4963, 1114, 2]
+// Module ID: 14196
+// Function ID: 14197
+// Name: ContextMenuPopout
+// Dependencies: [32, 19, 17, 21, 4574, 576, 8701, 4310, 4284, 6995, 1477, 1115, 4988, 8700, 6669, 4570, 14194, 4976, 4977, 1114, 2]
 // Exports: ContextMenuPopout
 
-// Module 14171 (ContextMenuDivider)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14196 (ContextMenuPopout)
+import nativeDefault from "native" /* 576 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import native from "native" /* 4284 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 4976 */;
+import spring from "spring" /* 4988 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6669 */;
+import ContextMenuState from "ContextMenuState" /* 8700 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 8701 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = fn;
 function ContextMenuDivider() {
-  return callback(closure_5, { style: callback2().divider });
+  return timestampProducer(hasOwnProperty, { style: closure_9().divider });
 }
 function ContextMenuBackdrop(onDismiss) {
   const visible = onDismiss.visible;
-  let obj = visible(4296);
+  const tmp = closure_15();
   const fn = function n() {
     const obj = { opacity: null };
-    const value = visible.get();
-    obj[0] = visible(closure_1_2[12]).withSpring(value, visible(closure_1_2[6]).CONTEXT_MENU_SPRING);
+    value = visible.get();
+    obj.opacity = spring.withSpring(value, ContextMenuConstants.CONTEXT_MENU_SPRING);
     return obj;
   };
-  obj = { withSpring: visible(4974).withSpring, visible, CONTEXT_MENU_SPRING: visible(8673).CONTEXT_MENU_SPRING };
-  fn.__closure = obj;
+  let obj = visible(4310);
+  fn.__closure = { withSpring: visible(4988).withSpring, visible, CONTEXT_MENU_SPRING: visible(8701).CONTEXT_MENU_SPRING };
   fn.__workletHash = 6862317967896;
-  fn.__initData = closure_16;
+  fn.__initData = __initData2;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  obj = { blur: "none", style: animatedStyle, accessibleDismissStyle: callback3().accessibleDismiss, onDismiss: onDismiss.onPress, accessibilityLabel: null };
-  const tmp = callback3();
+  const obj3 = { blur: "none", style: animatedStyle, accessibleDismissStyle: tmp.accessibleDismiss, onDismiss: onDismiss.onPress, accessibilityLabel: null };
+  const obj2 = { withSpring: visible(4988).withSpring, visible, CONTEXT_MENU_SPRING: visible(8701).CONTEXT_MENU_SPRING };
   const tmp3 = closure_6;
   const obj4 = visible(1115);
   const intl = visible(1114).intl;
@@ -42,84 +47,78 @@ function ContextMenuBackdrop(onDismiss) {
   } else {
     stringResult = string(t.xs0juG);
   }
-  obj[4] = stringResult;
-  return tmp3(visible(4963).Backdrop, obj);
+  obj3.accessibilityLabel = stringResult;
+  return tmp3(visible(4977).Backdrop, obj3);
 }
-({ View: c5, StyleSheet } = get_ActivityIndicator);
-({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, titleContainer: null, divider: null };
-createCacheKey = { position: "absolute", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.lg, minWidth: require("CONTEXT_MENU_LONG_PRESS_DURATION_MS").CONTEXT_MENU_MIN_WIDTH };
-const merged = Object.assign(ThemesDefault.shadows.SHADOW_HIGH);
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { padding: require("CONTEXT_MENU_LONG_PRESS_DURATION_MS").CONTEXT_MENU_ITEM_PADDING };
-let obj1 = { padding: require("CONTEXT_MENU_LONG_PRESS_DURATION_MS").CONTEXT_MENU_ITEM_PADDING };
-createCacheKey[2] = { borderBottomWidth: require("CONTEXT_MENU_LONG_PRESS_DURATION_MS").CONTEXT_MENU_DIVIDER_HEIGHT, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+let createStyles = fn(4574);
+let obj2 = { container: null, titleContainer: null, divider: null };
+const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
+obj2.container = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.lg, minWidth: fn(8701).CONTEXT_MENU_MIN_WIDTH };
+let obj3 = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.lg, minWidth: fn(8701).CONTEXT_MENU_MIN_WIDTH };
+obj2.titleContainer = { padding: fn(8701).CONTEXT_MENU_ITEM_PADDING };
+let obj4 = { padding: fn(8701).CONTEXT_MENU_ITEM_PADDING };
+obj2.divider = { borderBottomWidth: fn(8701).CONTEXT_MENU_DIVIDER_HEIGHT, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
+let closure_9 = createStyles.createStyles(obj2);
 let closure_10 = { code: "function ContextMenuPopoutNativeTsx1(){const{maxHeight,height,CONTEXT_MENU_MIN_WIDTH,positionY,positionX,CONTEXT_MENU_MIN_SCALE,withSpring,interpolate,visible,CONTEXT_MENU_SPRING,transitionState,TransitionStates,runOnJS,cleanUp,onClose}=this.__closure;const visibleHeight=Math.min(maxHeight,height);const halfHeight=visibleHeight/2;const halfWidth=CONTEXT_MENU_MIN_WIDTH/2;const translateYDirection=positionY==='below'?-1:1;const translateXDirection=positionX==='left'?-1:1;const translateY=translateYDirection*halfHeight+CONTEXT_MENU_MIN_SCALE*-translateYDirection*halfHeight;const translateX=translateXDirection*halfWidth+CONTEXT_MENU_MIN_SCALE*-translateXDirection*halfWidth;return{opacity:withSpring(interpolate(visible.get(),[0,1],[0,1]),CONTEXT_MENU_SPRING,'respect-motion-settings',function(finished){if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanUp)();runOnJS(onClose)();}}),transform:[{translateX:withSpring(interpolate(visible.get(),[0,1],[translateX,0]),CONTEXT_MENU_SPRING)},{translateY:withSpring(interpolate(visible.get(),[0,1],[translateY,0]),CONTEXT_MENU_SPRING)},{scale:withSpring(interpolate(visible.get(),[0,1],[CONTEXT_MENU_MIN_SCALE,1]),CONTEXT_MENU_SPRING)}]};}" };
-let closure_11 = { code: "function ContextMenuPopoutNativeTsx2(finished){const{transitionState,TransitionStates,runOnJS,cleanUp,onClose}=this.__closure;if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanUp)();runOnJS(onClose)();}}" };
+let __initData = { code: "function ContextMenuPopoutNativeTsx2(finished){const{transitionState,TransitionStates,runOnJS,cleanUp,onClose}=this.__closure;if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanUp)();runOnJS(onClose)();}}" };
 let closure_12 = { code: "function update_ContextMenuPopoutNativeTsx3(e){const{updateContextMenuState,state}=this.__closure;updateContextMenuState(e.absoluteX,e.absoluteY,state);}" };
 let closure_13 = { code: "function ContextMenuPopoutNativeTsx4(){const{state,runOnJS,requestClose}=this.__closure;const{activeIndex:activeIndex}=state;const isDismiss=activeIndex.get()===-1;runOnJS(requestClose)(isDismiss);}" };
-let obj3 = { accessibleDismiss: null };
-let obj4 = {};
+createStyles = fn(4574);
+let obj7 = { accessibleDismiss: null };
+let obj8 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
-obj4.height = "auto";
-obj3[0] = obj4;
-let closure_15 = createCacheKey.createStyles(obj3);
-let closure_16 = { code: "function ContextMenuPopoutNativeTsx5(){const{withSpring,visible,CONTEXT_MENU_SPRING}=this.__closure;return{opacity:withSpring(visible.get(),CONTEXT_MENU_SPRING)};}" };
-let obj2 = { borderBottomWidth: require("CONTEXT_MENU_LONG_PRESS_DURATION_MS").CONTEXT_MENU_DIVIDER_HEIGHT, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
-let result = require("set").fileFinishedImporting("design/components/ContextMenu/native/ContextMenuPopout.native.tsx");
+obj8.height = "auto";
+obj7.accessibleDismiss = obj8;
+let closure_15 = createStyles.createStyles(obj7);
+const __initData2 = { code: "function ContextMenuPopoutNativeTsx5(){const{withSpring,visible,CONTEXT_MENU_SPRING}=this.__closure;return{opacity:withSpring(visible.get(),CONTEXT_MENU_SPRING)};}" };
+let size = fn(2);
+let result = size.fileFinishedImporting("design/components/ContextMenu/native/ContextMenuPopout.native.tsx");
 
 export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
   ({ menu, transitionState } = cleanUp);
-  items = transitionState;
   cleanUp = cleanUp.cleanUp;
-  title = cleanUp;
+  positionX = undefined;
   state = undefined;
-  let callback2;
-  let dividerIndexes;
-  state = undefined;
-  let requestClose;
-  let onClose;
   let sharedValue;
   let diff2;
-  let first;
-  closure_11 = undefined;
+  __initData = undefined;
   ({ x, positionX } = menu);
-  state = positionX;
   const positionY = menu.positionY;
-  callback2 = positionY;
   const height = menu.height;
-  dividerIndexes = height;
   ({ items, state } = menu);
-  requestClose = menu.requestClose;
-  onClose = menu.onClose;
+  const requestClose = menu.requestClose;
+  const onClose = menu.onClose;
   ({ title, keyboardShouldPersistTaps } = menu);
   let str = "handled";
   if (undefined !== keyboardShouldPersistTaps) {
     str = keyboardShouldPersistTaps;
   }
   const y = menu.y;
-  let obj = items(state[7]);
   let num = 0;
-  if (transitionState === items(state[8]).TransitionStates.MOUNTED) {
+  if (transitionState === transitionState(positionX[8]).TransitionStates.MOUNTED) {
     num = 1;
   }
-  sharedValue = obj.useSharedValue(num);
-  obj1 = dividerIndexes;
-  items = [transitionState, sharedValue];
-  const effect = dividerIndexes.useEffect(() => {
-    if (items === items(state[8]).TransitionStates.YEETED) {
+  sharedValue = transitionState(positionX[7]).useSharedValue(num);
+  let items1 = [transitionState, sharedValue];
+  const effect = height.useEffect(() => {
+    if (transitionState === native.TransitionStates.YEETED) {
       const result = sharedValue.set(0);
     } else {
       const result1 = sharedValue.set(1);
     }
-  }, items);
+  }, items1);
   const tmp5 = diff2();
-  ({ top, bottom } = title(state[9])({ includeKeyboardHeight: true }).insets);
-  obj = { ignoreKeyboard: null };
-  let tmpResult = tmp(tmp2[11]);
-  obj[0] = tmpResult.isAndroid();
-  const size = title(state[10])(obj);
+  ({ top, bottom } = cleanUp(positionX[9])({ includeKeyboardHeight: true }).insets);
+  let obj3 = { ignoreKeyboard: null };
+  let obj = transitionState(positionX[7]);
+  const tmp6 = cleanUp;
+  let tmp7 = cleanUp(positionX[10]);
+  obj3.ignoreKeyboard = transitionState(positionX[11]).isAndroid();
+  const size = tmp7(obj3);
   let diff = size.height - y;
   if ("below" === positionY) {
     const diff1 = diff - bottom;
@@ -128,27 +127,26 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
     const diff3 = diff - top;
     diff2 = diff3 - tmp(tmp2[6]).CONTEXT_MENU_EDGE_OFFSET;
   }
-  const tmp13 = callback2(obj1.useState(height >= diff2), 2);
-  first = tmp13[0];
-  closure_11 = tmp13[1];
+  const tmp13 = positionY(height.useState(height >= diff2), 2);
+  __initData = tmp13[1];
   let str2 = "bottom";
   if ("below" === positionY) {
     str2 = "top";
   }
-  obj = { [str2]: y, [positionX]: x, maxHeight: diff2, maxWidth: size.width - items(state[6]).CONTEXT_MENU_EDGE_OFFSET - x };
-  tmpResult = tmp(tmp2[7]);
+  let obj4 = { [str2]: y, [positionX]: x, maxHeight: diff2, maxWidth: size.width - transitionState(positionX[6]).CONTEXT_MENU_EDGE_OFFSET - x };
+  let tmpResult = transitionState(positionX[11]);
   class R {
     constructor() {
-      result = Math.min(closure_9, dividerIndexes) / 2;
-      tmp2 = items;
-      tmp3 = state;
-      result1 = items(state[6]).CONTEXT_MENU_MIN_WIDTH / 2;
+      result = Math.min(closure_9, height) / 2;
+      tmp2 = closure_0;
+      tmp3 = closure_2;
+      result1 = closure_0(closure_2[6]).CONTEXT_MENU_MIN_WIDTH / 2;
       num = 1;
-      if ("below" === closure_3) {
+      if ("below" === positionY) {
         num = -1;
       }
       num2 = 1;
-      if ("left" === state) {
+      if ("left" === positionX) {
         num2 = -1;
       }
       obj = { opacity: null, transform: null };
@@ -158,21 +156,21 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
       fn = function t(arg0) {
         let tmp = arg0;
         if (arg0) {
-          tmp = closure_0 === closure_1_0(closure_1_2[8]).TransitionStates.YEETED;
+          tmp = closure_1_0 === transitionState(positionX[8]).TransitionStates.YEETED;
         }
         if (tmp) {
-          closure_1_0(closure_1_2[7]).runOnJS(closure_1)();
-          const obj = closure_1_0(closure_1_2[7]);
-          closure_1_0(closure_1_2[7]).runOnJS(closure_7)();
-          const obj2 = closure_1_0(closure_1_2[7]);
+          transitionState(positionX[7]).runOnJS(cleanUp)();
+          const obj = transitionState(positionX[7]);
+          transitionState(positionX[7]).runOnJS(onClose)();
+          const obj2 = transitionState(positionX[7]);
         }
       };
-      obj = { transitionState: items, TransitionStates: tmp2(tmp3[8]).TransitionStates, runOnJS: tmp2(tmp3[7]).runOnJS, cleanUp: title, onClose };
-      fn.__closure = obj;
+      obj1 = { transitionState, TransitionStates: tmp2(tmp3[8]).TransitionStates, runOnJS: tmp2(tmp3[7]).runOnJS, cleanUp, onClose };
+      fn.__closure = obj1;
       fn.__workletHash = 4025068986009;
       fn.__initData = closure_11;
-      obj[0] = tmp2Result.withSpring(interpolateResult, tmp2(tmp3[6]).CONTEXT_MENU_SPRING, "respect-motion-settings", fn);
-      obj1 = { translateX: null };
+      obj.opacity = tmp2Result.withSpring(interpolateResult, tmp2(tmp3[6]).CONTEXT_MENU_SPRING, "respect-motion-settings", fn);
+      obj14 = { translateX: null };
       tmp2Result2 = tmp2(tmp3[12]);
       tmp2Result3 = tmp2(tmp3[7]);
       value = closure_8.get();
@@ -180,10 +178,10 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
       items[0] = num2 * result1 + tmp2(tmp3[6]).CONTEXT_MENU_MIN_SCALE * -num2 * result1;
       items[1] = 0;
       interpolateResult1 = tmp2Result3.interpolate(value, [0, 1], items);
-      obj1[0] = tmp2Result2.withSpring(interpolateResult1, tmp2(tmp3[6]).CONTEXT_MENU_SPRING);
+      obj14.translateX = tmp2Result2.withSpring(interpolateResult1, tmp2(tmp3[6]).CONTEXT_MENU_SPRING);
       items1 = [, , ];
-      items1[0] = obj1;
-      obj2 = { translateY: null };
+      items1[0] = obj14;
+      obj15 = { translateY: null };
       tmp2Result4 = tmp2(tmp3[12]);
       tmp2Result5 = tmp2(tmp3[7]);
       value1 = closure_8.get();
@@ -191,9 +189,9 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
       items2[0] = num * result + tmp2(tmp3[6]).CONTEXT_MENU_MIN_SCALE * -num * result;
       items2[1] = 0;
       interpolateResult2 = tmp2Result5.interpolate(value1, [0, 1], items2);
-      obj2[0] = tmp2Result4.withSpring(interpolateResult2, tmp2(tmp3[6]).CONTEXT_MENU_SPRING);
-      items1[1] = obj2;
-      obj3 = { scale: null };
+      obj15.translateY = tmp2Result4.withSpring(interpolateResult2, tmp2(tmp3[6]).CONTEXT_MENU_SPRING);
+      items1[1] = obj15;
+      obj16 = { scale: null };
       tmp2Result6 = tmp2(tmp3[12]);
       tmp2Result7 = tmp2(tmp3[7]);
       value2 = closure_8.get();
@@ -201,118 +199,121 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
       items3[0] = tmp2(tmp3[6]).CONTEXT_MENU_MIN_SCALE;
       items3[1] = 1;
       interpolateResult3 = tmp2Result7.interpolate(value2, [0, 1], items3);
-      obj3[0] = tmp2Result6.withSpring(interpolateResult3, tmp2(tmp3[6]).CONTEXT_MENU_SPRING);
-      items1[2] = obj3;
-      obj[1] = items1;
+      obj16.scale = tmp2Result6.withSpring(interpolateResult3, tmp2(tmp3[6]).CONTEXT_MENU_SPRING);
+      items1[2] = obj16;
+      obj.transform = items1;
       return obj;
     }
   }
-  obj1 = { maxHeight: diff2, height, CONTEXT_MENU_MIN_WIDTH: tmp(tmp2[6]).CONTEXT_MENU_MIN_WIDTH, positionY, positionX, CONTEXT_MENU_MIN_SCALE: tmp(tmp2[6]).CONTEXT_MENU_MIN_SCALE, withSpring: tmp(tmp2[12]).withSpring, interpolate: tmp(tmp2[7]).interpolate, visible: sharedValue, CONTEXT_MENU_SPRING: tmp(tmp2[6]).CONTEXT_MENU_SPRING, transitionState, TransitionStates: tmp(tmp2[8]).TransitionStates, runOnJS: tmp(tmp2[7]).runOnJS, cleanUp, onClose };
-  R.__closure = obj1;
+  const tmpResult2 = transitionState(positionX[7]);
+  R.__closure = { maxHeight: diff2, height, CONTEXT_MENU_MIN_WIDTH: transitionState(positionX[6]).CONTEXT_MENU_MIN_WIDTH, positionY, positionX, CONTEXT_MENU_MIN_SCALE: transitionState(positionX[6]).CONTEXT_MENU_MIN_SCALE, withSpring: transitionState(positionX[12]).withSpring, interpolate: transitionState(positionX[7]).interpolate, visible: sharedValue, CONTEXT_MENU_SPRING: transitionState(positionX[6]).CONTEXT_MENU_SPRING, transitionState, TransitionStates: transitionState(positionX[8]).TransitionStates, runOnJS: transitionState(positionX[7]).runOnJS, cleanUp, onClose };
   R.__workletHash = 16778623591634;
-  R.__initData = first;
-  let items1 = [state, requestClose, first];
-  const animatedStyle = tmpResult.useAnimatedStyle(R);
-  let items2 = [diff2];
-  const memo = obj1.useMemo(() => {
+  R.__initData = __initData;
+  let items2 = [state, requestClose, __initData];
+  const animatedStyle = tmpResult2.useAnimatedStyle(R);
+  let items3 = [diff2];
+  const memo = obj2.useMemo(() => {
     function update(absoluteX) {
-      const result = closure_1_0(closure_1_2[13]).updateContextMenuState(absoluteX.absoluteX, absoluteX.absoluteY, closure_5);
+      const result = transitionState(positionX[13]).updateContextMenuState(absoluteX.absoluteX, absoluteX.absoluteY, activeIndex);
     }
-    let obj = { updateContextMenuState: items(state[13]).updateContextMenuState, state };
-    update.__closure = obj;
+    update.__closure = { updateContextMenuState: ContextMenuState.updateContextMenuState, state };
     update.__workletHash = 4218299258082;
-    update.__initData = closure_1_12;
-    const Gesture = items(state[14]).Gesture;
+    update.__initData = __initData2;
+    const Gesture = LegacyBaseButton.Gesture;
+    const obj = { updateContextMenuState: ContextMenuState.updateContextMenuState, state };
     const PanResult = Gesture.Pan();
     const enabledResult = Gesture.Pan().enabled(!first);
     const onStartResult = Gesture.Pan().enabled(!first).onStart(update);
     const fn = function t() {
       activeIndex = activeIndex.activeIndex;
-      const value = activeIndex.get();
-      closure_1_0(closure_1_2[7]).runOnJS(closure_6)(-1 === value);
+      value = activeIndex.get();
+      transitionState(positionX[7]).runOnJS(requestClose)(-1 === value);
     };
-    obj = { state, runOnJS: items(state[7]).runOnJS, requestClose };
-    fn.__closure = obj;
+    const onUpdateResult = Gesture.Pan().enabled(!first).onStart(update).onUpdate(update);
+    fn.__closure = { state, runOnJS: ReanimatedRexport.runOnJS, requestClose };
     fn.__workletHash = 14495067009140;
-    fn.__initData = closure_1_13;
-    return Gesture.Pan().enabled(!first).onStart(update).onUpdate(update).onEnd(fn);
-  }, items1);
-  let items3 = [requestClose];
-  const callback = obj1.useCallback((nativeEvent) => {
-    const rounded = Math.round(nativeEvent.nativeEvent.layout.height);
-    callback(rounded >= Math.round(diff2));
+    fn.__initData = __initData3;
+    return onUpdateResult.onEnd(fn);
   }, items2);
   const items4 = [requestClose];
-  const callback1 = obj1.useCallback(() => {
-    requestClose(true);
+  const callback = obj2.useCallback((nativeEvent) => {
+    const rounded = Math.round(nativeEvent.nativeEvent.layout.height);
+    __initData(rounded >= Math.round(diff2));
   }, items3);
-  callback2 = obj1.useCallback(() => {
-    requestClose(false);
+  const items5 = [requestClose];
+  const callback1 = obj2.useCallback(() => {
+    requestClose(true);
   }, items4);
-  const items5 = [requestClose(ContextMenuBackdrop, { onPress: callback1, visible: sharedValue }), ];
-  let obj2 = { gesture: memo, children: null };
-  const obj3 = { onLayout: callback, bounces: false, style: items6, keyboardShouldPersistTaps: str, accessibilityRole: "list", children: null };
-  items6 = [tmp5.container, obj, animatedStyle];
+  const callback2 = obj2.useCallback(() => {
+    requestClose(false);
+  }, items5);
+  const items6 = [requestClose(ContextMenuBackdrop, { onPress: callback1, visible: sharedValue }), ];
+  const obj6 = { gesture: memo, children: null };
+  const obj7 = { onLayout: callback, bounces: false, style: null, keyboardShouldPersistTaps: str, accessibilityRole: "list", children: null };
+  const items7 = [tmp5.container, obj4, animatedStyle];
+  obj7.style = items7;
   let tmp20Result = null;
   if (null != title) {
-    const obj4 = { children: null };
-    const obj5 = { style: null, children: null };
-    obj5[0] = tmp5.titleContainer;
-    const obj6 = { variant: "text-md/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
-    obj6[3] = title;
-    obj5[1] = tmp22(tmp(tmp2[15]).Text, obj6);
-    const items7 = [tmp22(state, obj5), tmp22(ContextMenuDivider, {})];
-    obj4[0] = items7;
-    tmp20Result = tmp20(tmp21, obj4);
+    const obj8 = { children: null };
+    const obj9 = { style: tmp5.titleContainer, children: null };
+    const obj10 = { variant: "text-md/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: title };
+    obj9.children = tmp22(tmp(tmp2[15]).Text, obj10);
+    const items8 = [tmp22(state, obj9), tmp22(ContextMenuDivider, {})];
+    obj8.children = items8;
+    tmp20Result = tmp20(tmp21, obj8);
   }
-  const obj7 = { children: null };
-  const items8 = [tmp20Result, ];
-  dividerIndexes = menu.dividerIndexes;
-  items8[1] = items.map((arg0, index) => {
-    ({ label, action: items } = arg0);
-    ({ iconSource, IconComponent, trailingIndicator, variant, accessibilityRole } = arg0);
-    const diff = items.length - 1;
-    let obj = { index, label, start: null, end: null, lastInSection: null, iconSource: null, IconComponent: null, trailingIndicator: null, state: null, onPress: null, variant: null, accessibilityRole: null };
+  const obj11 = { children: null };
+  const items9 = [tmp20Result, ];
+  closure_129_0 = items;
+  closure_129_1 = title;
+  closure_129_2 = state;
+  closure_129_3 = callback2;
+  const dividerIndexes = menu.dividerIndexes;
+  items9[1] = items.map((item, index) => {
+    ({ label, action: transitionState } = item);
+    ({ iconSource, IconComponent, trailingIndicator, variant, accessibilityRole } = item);
+    const diff = transitionState.length - 1;
+    const obj = { index, label, start: null, end: null, lastInSection: null, iconSource: null, IconComponent: null, trailingIndicator: null, state: null, onPress: null, variant: null, accessibilityRole: null };
     let tmp3 = 0 === index;
     if (tmp3) {
-      tmp3 = null == title;
+      tmp3 = null == cleanUp;
     }
-    obj[2] = tmp3;
-    obj[3] = index === diff;
-    obj[4] = dividerIndexes.includes(index + 1);
-    obj[5] = iconSource;
-    obj[6] = IconComponent;
-    obj[7] = trailingIndicator;
-    obj[8] = state;
-    obj[9] = function onPress(arg0) {
-      let isAndroidResult = items(state[11]).isAndroid();
+    obj.start = tmp3;
+    obj.end = index === diff;
+    obj.lastInSection = height.includes(index + 1);
+    obj.iconSource = iconSource;
+    obj.IconComponent = IconComponent;
+    obj.trailingIndicator = trailingIndicator;
+    obj.state = positionX;
+    obj.onPress = function onPress(arg0) {
+      let isAndroidResult = PlatformUtils.isAndroid();
       if (isAndroidResult) {
-        isAndroidResult = items(state[17]).getIsScreenReaderEnabled();
-        const tmpResult = items(state[17]);
+        isAndroidResult = useIsScreenReaderEnabled.getIsScreenReaderEnabled();
+        const tmpResult = useIsScreenReaderEnabled;
       }
       if (isAndroidResult) {
-        callback();
+        transitionState();
       }
-      if (closure_1_3 != null) {
+      if (positionY != null) {
         tmp6(arg0);
       }
     };
-    obj[10] = variant;
-    obj[11] = accessibilityRole;
-    const tmp2Result = requestClose(items(state[16]).ContextMenuItem, obj, "" + label + "-" + index);
+    obj.variant = variant;
+    obj.accessibilityRole = accessibilityRole;
+    const tmp2Result = requestClose(transitionState(positionX[16]).ContextMenuItem, obj, "" + label + "-" + index);
     let tmp7 = tmp2Result;
-    if (dividerIndexes.includes(index)) {
-      obj = { children: null };
+    if (height.includes(index)) {
+      const obj2 = { children: null };
       const _HermesInternal = HermesInternal;
-      items = [tmp2(closure_1_14, {}, "divider-" + index), tmp2Result];
-      obj[0] = items;
-      tmp7 = sharedValue(onClose, obj);
+      const items = [tmp2(ContextMenuDivider, {}, "divider-" + index), tmp2Result];
+      obj2.children = items;
+      tmp7 = sharedValue(onClose, obj2);
     }
     return tmp7;
   });
-  obj3[5] = items8;
-  obj2[1] = sharedValue(title(state[7]).ScrollView, obj3);
-  items5[1] = requestClose(items(state[14]).GestureDetector, obj2);
-  obj7[0] = items5;
-  return sharedValue(onClose, obj7);
+  obj7.children = items9;
+  obj6.children = sharedValue(tmp6(positionX[7]).ScrollView, obj7);
+  items6[1] = requestClose(transitionState(positionX[14]).GestureDetector, obj6);
+  obj11.children = items6;
+  return sharedValue(onClose, obj11);
 };

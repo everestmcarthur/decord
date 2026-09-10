@@ -1,31 +1,31 @@
-// Module ID: 11679
-// Function ID: 11680
-// Dependencies: [5, 11680, 1074, 7765, 1272, 4461, 1114, 4904, 573, 2]
+// Module ID: 11705
+// Function ID: 11706
+// Name: ChannelPinActionCreators
+// Dependencies: [5, 11706, 1074, 7779, 1272, 4475, 1114, 4918, 573, 2]
 
-// Module 11679
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleChannelDelete" /* 11680 */;
-import { FetchState } from "handleChannelDelete" /* 11680 */;
-import ME from "ME" /* 1074 */;
+// Module 11705 (ChannelPinActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import ChannelPinsStore from "ChannelPinsStore" /* 11706 */;
 
-const require = arg1;
-({ AbortCodes: closure_6, Endpoints: error, MAX_PINS_PER_CHANNEL: closure_8 } = ME);
+const require = fn;
+const FetchState = fn(11706).FetchState;
+const Constants = fn(1074);
+({ AbortCodes: metroRequire, Endpoints: closure_7, MAX_PINS_PER_CHANNEL: closure_8 } = Constants);
 let obj = {
-  pinMessage(id, id2) {
-    closure_0 = id;
-    closure_1 = id2;
-    return callback(function*() {
+  pinMessage(channel, id) {
+    closure_0 = channel;
+    closure_1 = id;
+    return (async (arg0, value) => {
       if (c3 === 2) {
         c3 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp5 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -35,62 +35,52 @@ let obj = {
           if (0 === dependencyMap) {
             if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
-              c1 = tmp2;
-              c0 = tmp3;
-              c0 = undefined;
-              c1 = undefined;
-              ({ id: c0, name: c1 } = closure_1_0);
-              obj1 = closure_1_1(7765);
+              closure_128_0 = undefined;
+              closure_128_1 = undefined;
+              ({ id: closure_128_0, name: closure_128_1 } = tmp3);
               dependencyMap = 1;
               c3 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj1.unarchiveThreadIfNecessary(closure_1_0.id);
-              return obj1;
+              const obj5 = { value: tmp2(7779).unarchiveThreadIfNecessary(tmp3.id), done: false };
+              return obj5;
             }
           } else if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            const HTTP = closure_1_0(1272).HTTP;
-            const obj2 = { url: null, rejectWithError: true };
-            obj2[0] = closure_1_7.PIN(c0, c1);
-            HTTP.put(obj2).catch((arg0) => {
-              const aPIError = new closure_2_0(4461).APIError(arg0);
+            const HTTP = tmp3(1272).HTTP;
+            const obj6 = { url: closure_1_7.PIN(closure_128_0, closure_129_1), rejectWithError: true };
+            HTTP.put(obj6).catch((error) => {
+              const aPIError = new _private(4475).APIError(error);
               const code = aPIError.code;
-              const intl = closure_2_0(1114).intl;
-              const intl2 = closure_2_0(1114).intl;
-              let stringResult1 = intl2.string(closure_2_0(1114).t.fEptJP);
-              let stringResult3 = intl.string(closure_2_0(1114).t.j2d6Km);
+              const intl = _private(1114).intl;
+              const intl2 = _private(1114).intl;
+              let stringResult1 = intl2.string(_private(1114).t.fEptJP);
+              let stringResult3 = intl.string(_private(1114).t.j2d6Km);
               if (null != code) {
-                if (closure_2_6.TOO_MANY_PINS_IN_CHANNEL === code) {
+                if (constants.TOO_MANY_PINS_IN_CHANNEL === code) {
                   const intl15 = tmp(1114).intl;
                   const stringResult2 = intl15.string(tmp(1114).t.HI88Q3);
                   const intl16 = tmp(1114).intl;
                   const formatToPlainString = intl16.formatToPlainString;
                   let t = tmp(1114).t;
                   if (isPrivateResult) {
-                    t = { maxPins: null };
-                    t[0] = closure_2_8;
+                    t = { maxPins };
                     let formatToPlainStringResult = formatToPlainString(t.Q89oQU, t);
                   } else {
-                    obj = { maxPins: null, channelName: null };
-                    obj[0] = closure_2_8;
-                    obj[1] = c1;
+                    obj = { maxPins, channelName };
                     formatToPlainStringResult = formatToPlainString(t.NnO1S5, obj);
                   }
-                  isPrivateResult = _undefined.isPrivate();
+                  isPrivateResult = _private.isPrivate();
                 } else if (tmp18.INVALID_ACCESS === code) {
                   const intl13 = tmp(1114).intl;
                   stringResult3 = intl13.string(tmp(1114).t["25gfQX"]);
@@ -128,11 +118,11 @@ let obj = {
                   const stringResult4 = intl3.string(tmp(1114).t.HI88Q3);
                 }
               }
-              const stringResult = intl.string(closure_2_0(1114).t.j2d6Km);
-              obj = { title: stringResult3, body: stringResult1, confirmText: null };
+              const stringResult = intl.string(_private(1114).t.j2d6Km);
+              const obj2 = { title: stringResult3, body: stringResult1, confirmText: null };
               const intl17 = tmp(1114).intl;
-              obj[2] = intl17.string(closure_2_0(1114).t.BddRzS);
-              closure_2_1(4904).show(obj);
+              obj2.confirmText = intl17.string(_private(1114).t.BddRzS);
+              channelName(4918).show(obj2);
             });
             c3 = 3;
             return { value: "HermesInternal", done: null };
@@ -144,20 +134,17 @@ let obj = {
       }
     })();
   },
-  unpinMessage(id, id2) {
-    closure_0 = id;
-    closure_1 = id2;
-    return callback(function*() {
+  unpinMessage(channel, id) {
+    return (async (arg0, value) => {
       if (c3 === 2) {
         c3 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -167,48 +154,42 @@ let obj = {
           if (0 === dependencyMap) {
             if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
-              closure_1 = tmp4;
               id = tmp4;
-              obj1 = closure_1_1(7765);
+              channel = tmp4;
               dependencyMap = 1;
               c3 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj1.unarchiveThreadIfNecessary(closure_1_0.id);
-              return obj1;
+              const obj5 = { value: id(7779).unarchiveThreadIfNecessary(channel.id), done: false };
+              return obj5;
             }
           } else if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            const HTTP = closure_1_0(1272).HTTP;
-            const obj2 = { url: null, oldFormErrors: true, rejectWithError: true };
-            obj2[0] = closure_1_7.PIN(id.id, closure_1);
-            HTTP.del(obj2).catch(() => {
-              obj = callback2(4904);
-              obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
-              const intl = callback(1114).intl;
-              obj[0] = intl.string(callback(1114).t.xFjByk);
-              const intl2 = callback(1114).intl;
-              obj[1] = intl2.string(callback(1114).t["0R/Toc"]);
-              const intl3 = callback(1114).intl;
-              obj[2] = intl3.string(callback(1114).t["7NqTJn"]);
-              const intl4 = callback(1114).intl;
-              obj[3] = intl4.string(callback(1114).t["ETE/oC"]);
-              const unpinMessage = closure_1_9.unpinMessage;
-              obj[4] = unpinMessage.bind(closure_1_9, callback, callback2);
-              return obj.show(obj);
+            const HTTP = channel(1272).HTTP;
+            const obj6 = { url: closure_1_7.PIN(closure_129_0.id, closure_129_1), oldFormErrors: true, rejectWithError: true };
+            HTTP.del(obj6).catch(() => {
+              const obj2 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
+              const intl = closure_0(1114).intl;
+              obj2.title = intl.string(closure_0(1114).t.xFjByk);
+              const intl2 = closure_0(1114).intl;
+              obj2.body = intl2.string(closure_0(1114).t["0R/Toc"]);
+              const intl3 = closure_0(1114).intl;
+              obj2.confirmText = intl3.string(closure_0(1114).t["7NqTJn"]);
+              const intl4 = closure_0(1114).intl;
+              obj2.cancelText = intl4.string(closure_0(1114).t["ETE/oC"]);
+              unpinMessage = unpinMessage.unpinMessage;
+              obj2.onConfirm = unpinMessage.bind(unpinMessage, closure_1_0, closure_1_1);
+              return closure_1(4918).show(obj2);
             });
             c3 = 3;
             return { value: "HermesInternal", done: null };
@@ -221,12 +202,10 @@ let obj = {
     })();
   },
   ackPins(channelId) {
-    obj = dispatcherDefault;
-    obj = { type: "CHANNEL_PINS_ACK", channelId };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "CHANNEL_PINS_ACK", channelId });
   },
   fetchPins(channelId, reset) {
-    const _require = channelId;
+    _require = channelId;
     let flag;
     if (reset != null) {
       flag = reset.reset;
@@ -246,7 +225,7 @@ let obj = {
     }
     let tmp = flag;
     if (!flag) {
-      let length = pins.getPins(channelId);
+      let length = ChannelPinsStore.getPins(channelId);
       let flag2 = true;
       if (null != length) {
         const state = length.state;
@@ -272,35 +251,27 @@ let obj = {
       tmp = flag2;
     }
     if (tmp) {
-      obj = dispatcherDefault;
-      obj = { type: "LOAD_PINNED_MESSAGES", channelId: null, reset: null };
-      obj[1] = channelId;
-      obj[2] = flag;
-      obj.dispatch(obj);
-      const HTTP = _require(1272).HTTP;
-      obj = { url: null, query: null, retries: 2, oldFormErrors: true, rejectWithError: true };
-      obj[0] = closure_7.PINS(channelId);
-      obj1 = { limit: null, before: null };
-      obj1[0] = num;
+      const obj2 = { type: "LOAD_PINNED_MESSAGES", channelId, reset: flag };
+      DispatcherDefault.dispatch(obj2);
+      const HTTP = require("HTTPUtils").HTTP;
+      const request = { url: closure_7.PINS(channelId), query: null, retries: 2, oldFormErrors: true, rejectWithError: true };
+      const obj3 = { limit: num, before: null };
       let toISOStringResult;
       if (before != null) {
         toISOStringResult = before.toISOString();
       }
-      obj1[1] = toISOStringResult;
-      obj[1] = obj1;
-      const value = HTTP.get(obj);
+      obj3.before = toISOStringResult;
+      request.query = obj3;
+      value = HTTP.get(request);
       value.then((body) => {
-        obj = closure_1_1(closure_1_2[8]);
-        obj = { type: "LOAD_PINNED_MESSAGES_SUCCESS", pins: body.body.items, channelId: closure_0, hasMore: body.body.has_more };
-        obj.dispatch(obj);
+        DispatcherDefault.dispatch({ type: "LOAD_PINNED_MESSAGES_SUCCESS", pins: body.body.items, channelId, hasMore: body.body.has_more });
       }, () => {
-        obj = closure_1_1(closure_1_2[8]);
-        obj = { type: "LOAD_PINNED_MESSAGES_FAILURE", channelId: closure_0 };
-        obj.dispatch(obj);
+        DispatcherDefault.dispatch({ type: "LOAD_PINNED_MESSAGES_FAILURE", channelId });
       });
     }
   }
 };
-const result = require("set").fileFinishedImporting("actions/ChannelPinActionCreators.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("actions/ChannelPinActionCreators.tsx");
 
 export default obj;

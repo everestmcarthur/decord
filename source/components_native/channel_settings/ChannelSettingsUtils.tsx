@@ -1,13 +1,13 @@
-// Module ID: 16817
-// Function ID: 16818
-// Name: getIsChannelNameSettingEditable
+// Module ID: 16854
+// Function ID: 16855
+// Name: ChannelSettingsUtils
 // Dependencies: [2]
 // Exports: getIsChannelNameSettingEditable
 
-// Module 16817 (getIsChannelNameSettingEditable)
-import set from "set" /* 2 */;
+// Module 16854 (ChannelSettingsUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("components_native/channel_settings/ChannelSettingsUtils.tsx");
+const result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsUtils.tsx");
 
 export const getIsChannelNameSettingEditable = function getIsChannelNameSettingEditable(arg0) {
   ({ canManageThread, canSendMessages, isForumPost, isChannelOwner } = arg0);

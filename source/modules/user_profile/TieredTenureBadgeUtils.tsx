@@ -1,16 +1,16 @@
-// Module ID: 7634
-// Function ID: 7635
-// Name: getTieredTenureBadgeData
-// Dependencies: [1373, 4153, 2]
+// Module ID: 7648
+// Function ID: 7649
+// Name: TieredTenureBadgeUtils
+// Dependencies: [1373, 4166, 2]
 // Exports: getEarnedOnDate, getEarnedTenureBadge, getTieredTenureBadge, getTieredTenureBadgeData
 
-// Module 7634 (getTieredTenureBadgeData)
-import set from "set" /* 2 */;
-import hooksDefault from "hooks" /* 4153 */;
-import GuildFeatures from "GuildFeatures" /* 1373 */;
+// Module 7648 (TieredTenureBadgeUtils)
+import _modDef4166 from "module_4166" /* 4166 */;
+import PremiumConstants from "PremiumConstants" /* 1373 */;
+import size from "module_2" /* 2 */;
 
-({ TENURE_BADGES: obj1, TIERED_TENURE_BADGE_ORDER: c3 } = GuildFeatures);
-const result = set.fileFinishedImporting("modules/user_profile/TieredTenureBadgeUtils.tsx");
+({ TENURE_BADGES: c2, TIERED_TENURE_BADGE_ORDER: c3 } = PremiumConstants);
+const result = size.fileFinishedImporting("modules/user_profile/TieredTenureBadgeUtils.tsx");
 
 export const getTieredTenureBadgeData = function getTieredTenureBadgeData(tieredTenureBadge) {
   return dependencyMap[tieredTenureBadge];
@@ -28,7 +28,7 @@ export const getEarnedOnDate = function getEarnedOnDate(earnedTenureBadge, premi
   } else if (null == dependencyMap[earnedTenureBadge]) {
     return null;
   } else {
-    const obj = hooksDefault(premiumSince);
+    const obj = _modDef4166(premiumSince);
     obj.add(tmp3.tenureReqNumMonths, "months");
     obj.add(1, "days");
     return obj.toDate();
@@ -42,17 +42,12 @@ export const getEarnedTenureBadge = function getEarnedTenureBadge(premiumSince) 
     let diff = length.length - 1;
     if (0 <= diff) {
       while (true) {
-        let tmp = length;
-        let tmp3 = diff;
         let toDateResult = null;
         if (null != premiumSince) {
-          let tmp5 = dependencyMap;
           let tmp6 = dependencyMap[length[diff]];
           toDateResult = null;
           if (null != tmp6) {
-            let tmp7 = importDefault;
-            let tmp8 = dependencyMap;
-            let obj = hooksDefault(premiumSince);
+            let obj = _modDef4166(premiumSince);
             let addResult = obj.add(tmp6.tenureReqNumMonths, "months");
             let addResult1 = obj.add(1, "days");
             toDateResult = obj.toDate();

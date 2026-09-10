@@ -1,31 +1,31 @@
-// Module ID: 16872
-// Function ID: 16873
+// Module ID: 16909
+// Function ID: 16910
 // Name: ContextMenuCommandItem
-// Dependencies: [19, 17, 21, 4560, 576, 5605, 12, 1114, 12235, 5587, 1894, 4505, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 5619, 12, 1114, 12261, 5601, 1894, 4519, 2]
 // Exports: ContextMenuCommandAppItem, ContextMenuCommandEmptyItem, ContextMenuCommandLoadingItem, default
 
-// Module 16872 (ContextMenuCommandItem)
-import applyDefault from "apply" /* 12 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import preloadDefault from "preload" /* 5587 */;
-import TableRowInner from "TableRowInner" /* 5605 */;
-import getApplicationCommandsIconSource from "getApplicationCommandsIconSource" /* 12235 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16909 (ContextMenuCommandItem)
+import _modDef12 from "module_12" /* 12 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import TableRow from "TableRow" /* 5619 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 12261 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-createCacheKey = { commandIcon: null, loadingIcon: null, loadingName: null };
-createCacheKey = { width: 32, height: 32, borderRadius: ThemesDefault.radii.lg };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-const obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: 24, borderRadius: ThemesDefault.radii.md };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: 24, borderRadius: ThemesDefault.radii.md };
-const result = require("set").fileFinishedImporting("modules/application_commands/native/ContextMenuCommandItem.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { commandIcon: null, loadingIcon: null, loadingName: null };
+let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg };
+obj2.commandIcon = size;
+obj2.loadingIcon = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+obj2.loadingName = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, height: 24, borderRadius: nativeDefault.radii.md };
+let closure_6 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/application_commands/native/ContextMenuCommandItem.tsx");
 
 export default function ContextMenuCommandItem(item) {
   item = item.item;
@@ -37,75 +37,76 @@ export default function ContextMenuCommandItem(item) {
     name = section.name;
   }
   items[1] = name;
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     const type = item.type;
-    const intl = tmp2(tmp3[7]).intl;
+    const intl = tmp2(1114).intl;
     let name;
     if (section != null) {
       name = section.name;
     }
-    return intl.formatToPlainString(item(closure_1_2[7]).t.Pk4Mz3, { applicationName: name, commandName: item.displayName });
+    return intl.formatToPlainString(util.t.Pk4Mz3, { applicationName: name, commandName: item.displayName });
   }, items);
-  let obj = item(12235);
-  const applicationCommandsIconSource = obj.getApplicationCommandsIconSource(section);
-  obj = { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null };
+  const tmp = closure_6();
+  const tmp5 = item;
+  const applicationCommandsIconSource = item(12261).getApplicationCommandsIconSource(section);
+  const obj2 = { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null };
   let tmp8Result = null != applicationCommandsIconSource;
   if (tmp8Result) {
-    obj = { style: null, source: null };
-    obj[0] = tmp.commandIcon;
-    obj[1] = applicationCommandsIconSource;
-    tmp8Result = tmp8(section(5587), obj);
+    const obj3 = { style: tmp.commandIcon, source: applicationCommandsIconSource };
+    tmp8Result = tmp8(section(5601), obj3);
   }
-  obj[3] = tmp8Result;
-  obj[4] = jsx(item(4505).SendMessageIcon, {});
-  obj[5] = start;
-  obj[6] = end;
-  return jsx(item(5605).TableRow, { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null });
+  obj2.icon = tmp8Result;
+  obj2.trailing = jsx(tmp5(4519).SendMessageIcon, {});
+  obj2.start = start;
+  obj2.end = end;
+  return jsx(item(5619).TableRow, { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null });
 };
 export const ContextMenuCommandLoadingItem = function ContextMenuCommandLoadingItem(arg0) {
   ({ start, end } = arg0);
-  const tmp = callback();
-  let obj = { label: null, icon: null, start: null, end: null };
-  obj = { style: null };
+  const tmp = closure_6();
+  const obj = { label: null, icon: null, start: null, end: null };
+  const obj2 = { style: null };
   const items = [tmp.loadingName, ];
-  obj = { width: "" + applyDefault.random(60, 80) + "%" };
-  items[1] = obj;
-  obj[0] = items;
-  obj[0] = <View width={"" + applyDefault.random(60, 80) + "%"} />;
+  const obj3 = { width: "" + _modDef12.random(60, 80) + "%" };
+  items[1] = obj3;
+  obj2.style = items;
+  obj.label = <View style={null} />;
+  const obj5 = { style: null };
   const items1 = [, ];
   ({ commandIcon: arr2[0], loadingIcon: arr2[1] } = tmp);
-  obj[1] = <View style={items1} />;
-  obj[2] = start;
-  obj[3] = end;
-  return jsx(TableRowInner.TableRow, { width: "" + applyDefault.random(60, 80) + "%" });
+  obj5.style = items1;
+  obj.icon = <View style={null} />;
+  obj.start = start;
+  obj.end = end;
+  return jsx(TableRow.TableRow, { label: null, icon: null, start: null, end: null });
 };
 export const ContextMenuCommandEmptyItem = function ContextMenuCommandEmptyItem(arg0) {
   ({ start, end } = arg0);
   const obj = { label: null, icon: null, start: null, end: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.YSNlV2);
+  const intl = util.intl;
+  obj.label = intl.string(util.t.YSNlV2);
+  const obj2 = { style: null };
   const items = [, ];
-  ({ commandIcon: arr[0], loadingIcon: arr[1] } = callback());
-  obj[1] = <View style={items} />;
-  obj[2] = start;
-  obj[3] = end;
-  return jsx(TableRowInner.TableRow, { label: null, icon: null, start: null, end: null });
+  ({ commandIcon: arr[0], loadingIcon: arr[1] } = closure_6());
+  obj2.style = items;
+  obj.icon = <View style={null} />;
+  obj.start = start;
+  obj.end = end;
+  return jsx(TableRow.TableRow, { label: null, icon: null, start: null, end: null });
 };
 export const ContextMenuCommandAppItem = function ContextMenuCommandAppItem(section) {
   section = section.section;
   ({ onPress, start, end } = section);
-  let obj = getApplicationCommandsIconSource;
-  const applicationCommandsIconSource = obj.getApplicationCommandsIconSource(section);
-  obj = { onPress, label: section.name, icon: null, start: null, end: null, arrow: true };
+  const tmp = closure_6();
+  const applicationCommandsIconSource = application_commands_ApplicationCommandUtils.getApplicationCommandsIconSource(section);
+  const obj2 = { onPress, label: section.name, icon: null, start: null, end: null, arrow: true };
   let tmp4Result = null != applicationCommandsIconSource;
   if (tmp4Result) {
-    obj = { style: null, source: null };
-    obj[0] = tmp.commandIcon;
-    obj[1] = applicationCommandsIconSource;
-    tmp4Result = tmp4(preloadDefault, obj);
+    const obj3 = { style: tmp.commandIcon, source: applicationCommandsIconSource };
+    tmp4Result = tmp4(FastImageDefault, obj3);
   }
-  obj[2] = tmp4Result;
-  obj[3] = start;
-  obj[4] = end;
-  return jsx(TableRowInner.TableRow, { onPress, label: section.name, icon: null, start: null, end: null, arrow: true });
+  obj2.icon = tmp4Result;
+  obj2.start = start;
+  obj2.end = end;
+  return jsx(TableRow.TableRow, { onPress, label: section.name, icon: null, start: null, end: null, arrow: true });
 };

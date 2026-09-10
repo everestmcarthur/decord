@@ -1,76 +1,70 @@
-// Module ID: 13300
-// Function ID: 13301
+// Module ID: 13323
+// Function ID: 13324
 // Name: BetaTag
-// Dependencies: [19, 17, 7432, 21, 4560, 576, 4987, 1093, 4556, 1114, 2]
+// Dependencies: [19, 17, 7446, 21, 4574, 576, 5001, 1093, 4570, 1114, 2]
 // Exports: default
 
-// Module 13300 (BetaTag)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import keys from "keys" /* 1093 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import LinearGradientDefault from "LinearGradient" /* 4987 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { Gradients } from "items" /* 7432 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13323 (BetaTag)
+import nativeDefault from "native" /* 576 */;
+import ConstantsIOS from "ConstantsIOS" /* 1093 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import LinearGradientDefault from "LinearGradient" /* 5001 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { container: null, text: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.lg, marginLeft: 8, paddingHorizontal: 8, justifyContent: "center" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { textTransform: "uppercase" };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { SMALL: "small", MEDIUM: "medium" };
-const result = require("set").fileFinishedImporting("design/void/BetaTag/native/BetaTag.tsx");
+require = fn;
+const View = fn(17).View;
+const Gradients = fn(7446).Gradients;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.lg, marginLeft: 8, paddingHorizontal: 8, justifyContent: "center" }, text: { textTransform: "uppercase" } };
+let closure_6 = createStyles.createStyles(obj2);
+let obj4 = { SMALL: "small", MEDIUM: "medium" };
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/BetaTag/native/BetaTag.tsx");
 
 export default function BetaTag(gradient) {
   ({ style, textStyle, size } = gradient);
   if (size === undefined) {
-    size = obj1.MEDIUM;
+    size = obj4.MEDIUM;
   }
   let flag = gradient.gradient;
   if (flag === undefined) {
     flag = false;
   }
-  const tmp2 = callback();
+  const tmp2 = closure_6();
   let str = "text-xs/bold";
-  if (obj1.SMALL !== size) {
-    if (obj1.MEDIUM === size) {
+  if (obj4.SMALL !== size) {
+    if (obj4.MEDIUM === size) {
       str = "text-sm/bold";
     }
   }
   if (flag) {
-    let obj = { style: null, start: null, end: null, colors: null, children: null };
+    const obj2 = { style: null, start: null, end: null, colors: null, children: null };
     const items = [tmp2.container, style];
-    obj[0] = items;
-    obj[1] = keys.HorizontalGradient.START;
-    obj[2] = keys.HorizontalGradient.END;
-    obj[3] = Gradients.PREMIUM_TIER_2_TRI_COLOR;
-    obj = { variant: null, color: "text-overlay-light", style: null, children: null };
-    obj[0] = str;
+    obj2.style = items;
+    obj2.start = ConstantsIOS.HorizontalGradient.START;
+    obj2.end = ConstantsIOS.HorizontalGradient.END;
+    obj2.colors = Gradients.PREMIUM_TIER_2_TRI_COLOR;
+    const obj3 = { variant: str, color: "text-overlay-light", style: null, children: null };
     const items1 = [tmp2.text, textStyle];
-    obj[2] = items1;
-    const intl2 = getSystemLocale.intl;
-    obj[3] = intl2.string(getSystemLocale.t.oW0eUd);
-    obj[4] = tmp3(Text.Text, obj);
-    let tmp3Result = tmp3(LinearGradientDefault, obj);
-    const tmp10 = LinearGradientDefault;
+    obj3.style = items1;
+    const intl2 = util.intl;
+    obj3.children = intl2.string(util.t.oW0eUd);
+    obj2.children = tmp3(Text_Text.Text, obj3);
+    let tmp3Result = tmp3(LinearGradientDefault, obj2);
   } else {
-    obj = { style: null, children: null };
+    const obj = { style: null, children: null };
     const items2 = [tmp2.container, style];
-    obj[0] = items2;
-    obj1 = { variant: null, color: "text-overlay-light", style: null, children: null };
-    obj1[0] = str;
+    obj.style = items2;
+    obj4 = { variant: str, color: "text-overlay-light", style: null, children: null };
     const items3 = [tmp2.text, textStyle];
-    obj1[2] = items3;
-    const intl = getSystemLocale.intl;
-    obj1[3] = intl.string(getSystemLocale.t.oW0eUd);
-    obj[1] = tmp3(Text.Text, obj1);
+    obj4.style = items3;
+    const intl = util.intl;
+    obj4.children = intl.string(util.t.oW0eUd);
+    obj.children = tmp3(Text_Text.Text, obj4);
     tmp3Result = tmp3(View, obj);
   }
   return tmp3Result;
 };
-export const BetaSizes = obj1;
+export const BetaSizes = obj4;

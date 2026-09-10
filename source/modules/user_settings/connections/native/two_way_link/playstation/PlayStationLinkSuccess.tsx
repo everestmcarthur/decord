@@ -1,52 +1,53 @@
-// Module ID: 9268
-// Function ID: 9269
+// Module ID: 9295
+// Function ID: 9296
 // Name: PlayStationLinkSuccess
-// Dependencies: [19, 17, 21, 4560, 9231, 9269, 4556, 1114, 7123, 4975, 2]
+// Dependencies: [19, 17, 21, 4574, 9258, 9296, 4570, 1114, 7137, 4989, 2]
 // Exports: PlayStationLinkSuccess
 
-// Module 9268 (PlayStationLinkSuccess)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import Button from "Button" /* 4975 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
-import styles from "styles" /* 9231 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9295 (PlayStationLinkSuccess)
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7137 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9258 */;
+import _modDef9296 from "module_9296" /* 9296 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ Image: c4, View: c5 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ image: { width: 124, height: 160, marginBottom: 24 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkSuccess.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let closure_8 = createStyles.createStyles({ image: { width: 124, height: 160, marginBottom: 24 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkSuccess.tsx");
 
 export const PlayStationLinkSuccess = function PlayStationLinkSuccess(onClose) {
-  let obj = styles;
-  const twoWayLinkStyles = obj.useTwoWayLinkStyles();
-  obj = { style: twoWayLinkStyles.container, children: null };
-  obj = { style: twoWayLinkStyles.content, children: null };
-  const tmp = callback3();
-  const items = [callback(closure_4, { source: React.useMemo(() => ({ uri: callback(table[5]) }), []), style: callback3().image }), , ];
-  const obj2 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
-  const intl = getSystemLocale.intl;
-  obj2[3] = intl.string(getSystemLocale.t.e6SOl0);
-  items[1] = callback(Text.Text, obj2);
-  const obj3 = { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: null };
-  const intl2 = getSystemLocale.intl;
-  obj3[3] = intl2.string(getSystemLocale.t.QjAZAQ);
-  items[2] = callback(Text.Text, obj3);
-  obj[1] = items;
-  const items1 = [callback2(closure_5, obj), ];
-  const obj4 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: null };
-  const obj5 = { style: twoWayLinkStyles.footerButton, children: null };
-  const obj6 = { size: "md", text: null, onPress: null };
-  const intl3 = getSystemLocale.intl;
-  obj6[1] = intl3.string(getSystemLocale.t.i4jeWR);
-  obj6[2] = onClose.onClose;
-  obj5[1] = callback(Button.Button, obj6);
-  obj4[2] = callback(closure_5, obj5);
-  items1[1] = callback(SafeAreaPaddingView.SafeAreaPaddingView, obj4);
-  obj[1] = items1;
-  return callback2(closure_5, obj);
+  const tmp = closure_8();
+  const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
+  const obj2 = { style: twoWayLinkStyles.container, children: null };
+  const obj3 = { style: twoWayLinkStyles.content, children: null };
+  const items = [timestampProducer(React4, { source: noop.useMemo(() => ({ uri: _modDef9296 }), []), style: tmp.image }), , ];
+  const obj5 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
+  const intl = util.intl;
+  obj5.children = intl.string(util.t.e6SOl0);
+  items[1] = timestampProducer(Text_Text.Text, obj5);
+  const obj6 = { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: null };
+  const intl2 = util.intl;
+  obj6.children = intl2.string(util.t.QjAZAQ);
+  items[2] = timestampProducer(Text_Text.Text, obj6);
+  obj3.children = items;
+  const items1 = [React5(hasOwnProperty, obj3), ];
+  const obj7 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: null };
+  const obj8 = { style: twoWayLinkStyles.footerButton, children: null };
+  const obj9 = { size: "md", text: null, onPress: null };
+  const intl3 = util.intl;
+  obj9.text = intl3.string(util.t.i4jeWR);
+  obj9.onPress = onClose.onClose;
+  obj8.children = timestampProducer(components_Button_Button.Button, obj9);
+  obj7.children = timestampProducer(hasOwnProperty, obj8);
+  items1[1] = timestampProducer(common_SafeAreaView.SafeAreaPaddingView, obj7);
+  obj2.children = items1;
+  return React5(hasOwnProperty, obj2);
 };

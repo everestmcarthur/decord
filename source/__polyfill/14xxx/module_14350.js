@@ -1,9 +1,16 @@
 // Module ID: 14350
 // Function ID: 14351
-// Dependencies: []
+// Dependencies: [14351]
 
 // Module 14350
+import _mod14351 from "module_14351" /* 14351 */;
 
-export default Math.trunc || (function trunc(arg0) {
-  return 0 < +arg0 ? floor : ceil(+arg0);
-});
+
+export default (obj) => {
+  if (typeof obj === "object") {
+    let tmp2 = null !== obj;
+  } else {
+    tmp2 = _mod14351(obj);
+  }
+  return tmp2;
+};

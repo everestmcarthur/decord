@@ -2,19 +2,21 @@
 // Function ID: 734
 // Name: sampleSpan
 // Dependencies: [720, 701, 688, 689]
+// Exports: sampleSpan
 
 // Module 733 (sampleSpan)
-const require = arg1;
+import _mod720 from "module_720" /* 720 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.sampleSpan = function sampleSpan(tracesSampler, parentSampled) {
-  const _require = parentSampled;
-  let obj = _require(720);
+
+export const sampleSpan = function sampleSpan(tracesSampler, parentSampled, arg2) {
   if (obj.hasSpansEnabled(tracesSampler)) {
     if (typeof tracesSampler.tracesSampler === "function") {
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(parentSampled);
-      obj.inheritOrSampleWith = function inheritOrSampleWith(arg0) {
+      obj2.inheritOrSampleWith = function inheritOrSampleWith(arg0) {
         if (typeof parentSampled.parentSampleRate === "number") {
           let parentSampleRate = tmp.parentSampleRate;
         } else {
@@ -26,7 +28,7 @@ arg5.sampleSpan = function sampleSpan(tracesSampler, parentSampled) {
         }
         return parentSampleRate;
       };
-      let tracesSampleRate = tracesSampler.tracesSampler(obj);
+      let tracesSampleRate = tracesSampler.tracesSampler(obj2);
       let flag2 = true;
     } else if (undefined !== parentSampled.parentSampled) {
       tracesSampleRate = parentSampled.parentSampled;
@@ -74,4 +76,5 @@ arg5.sampleSpan = function sampleSpan(tracesSampler, parentSampled) {
     const items3 = [false];
     return items3;
   }
+  obj = _mod720;
 };

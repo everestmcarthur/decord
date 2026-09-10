@@ -1,32 +1,33 @@
-// Module ID: 8057
-// Function ID: 8058
+// Module ID: 8072
+// Function ID: 8073
 // Name: useMaybeFetchReferralsRemaining
-// Dependencies: [19, 1371, 7452, 1373, 504, 8058, 8059, 7393, 1885, 2]
+// Dependencies: [19, 1371, 7466, 1373, 504, 8073, 8074, 7407, 1885, 2]
 // Exports: useMaybeFetchReferralsRemaining
 
-// Module 8057 (useMaybeFetchReferralsRemaining)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import closure_5 from "emitChanges" /* 7452 */;
-import GuildFeatures from "GuildFeatures" /* 1373 */;
+// Module 8072 (useMaybeFetchReferralsRemaining)
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7466 */;
 
-const require = arg1;
-({ PremiumTypes: closure_6, FractionalPremiumStates: error } = GuildFeatures);
-let result = require("set").fileFinishedImporting("modules/premium/referral_program/hooks/useMaybeFetchReferralsRemaining.tsx");
+const require = fn;
+const PremiumConstants = fn(1373);
+({ PremiumTypes: metroRequire, FractionalPremiumStates: closure_7 } = PremiumConstants);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/referral_program/hooks/useMaybeFetchReferralsRemaining.tsx");
 
 export const useMaybeFetchReferralsRemaining = function useMaybeFetchReferralsRemaining(flag) {
   if (flag === undefined) {
     flag = false;
   }
   let fetched;
-  const items = [closure_4];
+  const items = [UserStore];
   const stateFromStores = flag(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = flag(504);
   let tmp = flag;
-  const hasDiscountApplied = flag(8058).useHasDiscountApplied();
-  const obj2 = flag(8058);
-  const hasActiveTrial = flag(8059).useHasActiveTrial();
-  const tmp6 = fetched(7393)();
+  const hasDiscountApplied = flag(8073).useHasDiscountApplied();
+  const obj2 = flag(8073);
+  const hasActiveTrial = flag(8074).useHasActiveTrial();
+  const tmp6 = fetched(7407)();
   let verified;
   if (stateFromStores != null) {
     verified = stateFromStores.verified;
@@ -49,13 +50,13 @@ export const useMaybeFetchReferralsRemaining = function useMaybeFetchReferralsRe
     fetched = !hasActiveTrial;
   }
   const items1 = [fetched, flag];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let tmp = fetched;
     if (fetched) {
       tmp = !flag;
     }
     if (tmp) {
-      const result = closure_1_5.checkAndFetchReferralsRemaining();
+      const result = ReferralTrialStore.checkAndFetchReferralsRemaining();
     }
   }, items1);
 };

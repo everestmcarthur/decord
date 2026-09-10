@@ -2,6 +2,7 @@
 // Function ID: 1274
 // Name: _createForOfIteratorHelper
 // Dependencies: [1274, 1275, 1321, 1322, 1323, 1324, 1325]
+// Exports: agent, del, delete, get, getXHR, head, options, parseString, patch, post, put, serializeObject
 
 // Module 1273 (_createForOfIteratorHelper)
 import _mod1275 from "module_1275" /* 1275 */;
@@ -9,69 +10,70 @@ import defaultOptions from "defaultOptions" /* 1321 */;
 import ResponseBase from "ResponseBase" /* 1322 */;
 import Emitter from "Emitter" /* 1323 */;
 import RequestBase from "RequestBase" /* 1324 */;
-import _createForOfIteratorHelper2 from "_createForOfIteratorHelper" /* 1325 */;
-import _createForOfIteratorHelper from "_createForOfIteratorHelper" /* 1274 */;
+import _mod1325 from "module_1325" /* 1325 */;
+import _createForOfIteratorHelper_mod from "module_1274" /* 1274 */;
 
 let length;
 let str2 = require;
 let _exports = exports;
-function _createForOfIteratorHelper(iterable) {
-  closure_0 = iterable;
-  iterable = typeof Symbol !== "undefined";
+function _createForOfIteratorHelper(iterable, arg1) {
+  let length = iterable;
+  let prop = typeof Symbol !== "undefined";
   if (typeof Symbol !== "undefined") {
     const _Symbol = Symbol;
-    iterable = iterable[Symbol.iterator];
+    prop = iterable[Symbol.iterator];
   }
-  if (!iterable) {
-    iterable = iterable[Symbol.iterator];
+  if (!prop) {
+    prop = iterable[Symbol.iterator];
   }
-  let arr = iterable;
-  if (iterable) {
-    c4 = true;
+  closure_1 = prop;
+  if (prop) {
+    let done = true;
     c5 = false;
-    let obj = { s: null, n: null, e: null, f: null };
-    obj[0] = function s() {
-      const call = closure_1.call;
-      closure_1 = typeof call === "unknown" ? closure_1() : call(closure_0);
-    };
-    obj[1] = function n() {
-      const iter = arr.next();
-      const done = iter.done;
-      return iter;
-    };
-    obj[2] = function e(arg0) {
-      c5 = true;
-      closure_3 = arg0;
-    };
-    obj[3] = function f() {
-      try {
-        let tmp = c4;
-        if (!c4) {
-          tmp = null == arr.return;
+    const obj2 = {
+      s() {
+          const call = closure_1.call;
+          closure_1 = typeof call === "unknown" ? closure_1() : call(closure_0);
+        },
+      n() {
+          const iter = closure_1.next();
+          done = iter.done;
+          return iter;
+        },
+      e(arg0) {
+          c5 = true;
+          closure_3 = arg0;
+        },
+      f() {
+          try {
+            let tmp = done;
+            if (!done) {
+              tmp = null == closure_1.return;
+            }
+            if (!tmp) {
+              closure_1.return();
+            }
+            if (c5) {
+              throw closure_3;
+            }
+          } catch (tmp8) {
+            if (c5) {
+              throw closure_3;
+            } else {
+              throw tmp8;
+            }
+          }
         }
-        if (!tmp) {
-          arr.return();
-        }
-        if (c5) {
-          throw closure_3;
-        }
-      } catch (tmp8) {
-        if (c5) {
-          throw closure_3;
-        } else {
-          throw tmp8;
-        }
-      }
     };
-    return obj;
+    return obj2;
   } else {
     const _Array = Array;
     if (!Array.isArray(iterable)) {
-      arr = undefined;
+      let arr;
       if (iterable) {
         if (typeof iterable === "string") {
           const _Array4 = Array;
-          let array = new Array(length2);
+          const array = new Array(length2);
           class F {
             constructor() {
               return;
@@ -95,39 +97,41 @@ function _createForOfIteratorHelper(iterable) {
               return;
             }
           }
-          let name = tmp3;
-          if (tmp4) {
+          let name = tmp4;
+          if (tmp5) {
             name = iterable.constructor.name;
           }
           if ("Map" !== name) {
             if ("Set" !== name) {
               if ("Arguments" === name) {
+                length = iterable.length;
                 const _Array2 = Array;
-                array = new Array(length);
+                const array2 = new Array(length);
                 class F {
                   constructor() {
                     return;
                   }
                 }
                 let num3 = 0;
-                arr = array;
-                if (0 < iterable.length) {
+                arr = array2;
+                if (0 < length) {
                   do {
-                    array[num3] = iterable[num3];
+                    array2[num3] = iterable[num3];
                     num3 = num3 + 1;
-                    arr = array;
+                    arr = array2;
                   } while (num3 < length);
                 }
               } else {
-                obj = /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/;
+                let obj = /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/;
               }
             }
           }
           const _Array3 = Array;
           arr = Array.from(iterable);
-          tmp4 = "Object" === tmp3 && iterable.constructor;
+          tmp5 = "Object" === tmp4 && iterable.constructor;
         }
       }
+      closure_1 = arr;
       if (!arr) {
         const _TypeError = TypeError;
         const typeError = new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
@@ -138,32 +142,33 @@ function _createForOfIteratorHelper(iterable) {
         }
       }
     }
-    if (arr) {
-      closure_0 = arr;
+    if (closure_1) {
+      length = closure_1;
     }
-    c2 = 0;
+    closure_2 = 0;
     class F {
       constructor() {
         return;
       }
     }
-    obj = { s: null, n: null, e: null, f: null };
-    obj[0] = F;
-    obj[1] = function n() {
-      if (closure_2 >= length.length) {
-        let obj = { done: true };
-      } else {
-        obj = { done: false, value: null };
-        closure_2 = tmp3 + 1;
-        obj[1] = tmp[+closure_2];
-      }
-      return obj;
+    const obj3 = {
+      s: F,
+      n() {
+          if (closure_2 >= length.length) {
+            let obj = { done: true };
+          } else {
+            obj = { done: false, value: null };
+            closure_2 = tmp3 + 1;
+            obj.value = tmp[+closure_2];
+          }
+          return obj;
+        },
+      e(arg0) {
+          throw arg0;
+        },
+      f: F
     };
-    obj[2] = function e(arg0) {
-      throw arg0;
-    };
-    obj[3] = F;
-    return obj;
+    return obj3;
   }
 }
 function noop() {
@@ -182,8 +187,6 @@ function pushEncodedKeyValuePair(items, key10006, value) {
           let iter2 = iter;
           if (!iter.done) {
             do {
-              let tmp15 = pushEncodedKeyValuePair;
-              let tmp16 = iter2;
               let tmp17 = pushEncodedKeyValuePair(items, key10006, iter2.value);
               let iter3 = obj3.n();
               iter2 = iter3;
@@ -199,19 +202,14 @@ function pushEncodedKeyValuePair(items, key10006, value) {
       } else {
         if (obj2.isObject(value)) {
           for (const key10033 in arg2) {
-            let tmp26 = str2;
-            let tmp27 = dependencyMap;
             let tmp25 = key10033;
             let obj4 = str2(1274);
             if (!obj4.hasOwn(arg2, key10033)) {
               continue;
             } else {
-              let tmp9 = pushEncodedKeyValuePair;
               let _HermesInternal = HermesInternal;
               let str5 = "";
-              let tmp10 = arg1;
               let str6 = "[";
-              let tmp11 = key10033;
               let str7 = "]";
               let tmp12 = pushEncodedKeyValuePair(arg0, "" + arg1 + "[" + tmp25 + "]", arg2[key10033]);
               continue;
@@ -259,21 +257,27 @@ class Response {
       num4 = 1;
       str4 = ":";
       num5 = -1;
-      for (let num6 = 0; num6 < length; num6 = num6 + 1) {
-        arr2 = parts[num6];
-        index = arr2.indexOf(":");
-        tmp4 = num6;
-        if (-1 !== index) {
-          str5 = require("module_0");
-          tmp6 = trim;
-          formatted = str5.toLowerCase();
-          str6 = arr2.slice(index + 1);
-          if (typeof trim !== "function") {
-            str8 = "Trying to call a non-function";
-            throwTypeErrorResult = HermesBuiltin.throwTypeError();
+      num6 = 0;
+      if (0 < length) {
+        while (true) {
+          arr2 = parts[num6];
+          index = arr2.indexOf(":");
+          tmp4 = num6;
+          if (-1 !== index) {
+            str5 = arr2.slice(0, index);
+            tmp6 = trim;
+            formatted = str5.toLowerCase();
+            str6 = arr2.slice(index + 1);
+            if (typeof trim !== "function") {
+              break;
+            } else {
+              obj[formatted] = str6.trim();
+            }
           }
-          obj[formatted] = str6.trim();
+          num6 = num6 + 1;
         }
+        str8 = "Trying to call a non-function";
+        throw new TypeError("Trying to call a non-function");
       }
       self.headers = obj;
       ({ headers: self.header, xhr: xhr2 } = self);
@@ -309,28 +313,28 @@ class Response {
   }
   _parseBody(arg0) {
     self = this;
-    application_json = closure_6.parse[this.type];
+    prop = closure_6.parse[this.type];
     if (this.req._parser) {
       req = self.req;
       _parserResult = req._parser(self, global);
     } else {
-      isMatch = !application_json;
-      if (!application_json) {
+      isMatch = !prop;
+      if (!prop) {
         obj = /[/+]json($|[^-\w])/i;
         isMatch = obj.test(self.type);
       }
       if (isMatch) {
-        application_json = tmp.parse["application/json"];
+        prop = tmp.parse["application/json"];
       }
       _parserResult = null;
-      if (application_json) {
+      if (prop) {
         _parserResult = null;
         if (global) {
           num = 0;
           if (global.length > 0) {
-            _parserResult = application_json(global);
+            _parserResult = prop(global);
           } else {
-            tmp4 = globalThis;
+            tmp5 = globalThis;
             _Object = Object;
             _parserResult = null;
           }
@@ -367,7 +371,6 @@ function parseString(str) {
   for (let num = 0; num < length; num = num + 1) {
     let arr2 = parts[num];
     let index = arr2.indexOf("=");
-    let tmp2 = num;
     if (-1 === index) {
       let _decodeURIComponent3 = decodeURIComponent;
       obj[decodeURIComponent(arr2)] = "";
@@ -392,10 +395,9 @@ class Request {
     self._header = {};
     onResult = self.on("end", () => {
       try {
-        let obj = self;
-        obj = Object.create(closure_1_10.prototype);
-        closure_1_10(self);
-        obj.emit("response", obj);
+        const obj3 = Object.create(Response.prototype);
+        Response(self);
+        self.emit("response", obj3);
         try {
           if (!obj._isResponseOK(tmp8)) {
             str2 = tmp8.statusText;
@@ -405,7 +407,7 @@ class Request {
             if (!str2) {
               str2 = "Unsuccessful HTTP response";
             }
-            error = new Error(str2);
+            const error = new Error(str2);
           }
           if (error) {
             error.original = null;
@@ -415,7 +417,7 @@ class Request {
               status = tmp8.status;
             }
             error.status = status;
-            obj.callback(error, obj);
+            obj.callback(error, obj3);
           } else {
             obj.callback(null, tmp8);
           }
@@ -433,11 +435,11 @@ class Request {
             response = obj2.xhr.response;
           }
           error1.rawResponse = response;
-          status = null;
+          let status1 = null;
           if (obj2.xhr.status) {
-            status = obj2.xhr.status;
+            status1 = obj2.xhr.status;
           }
-          error1.status = status;
+          error1.status = status1;
           error1.statusCode = error1.status;
         } else {
           error1.rawResponse = tmp;
@@ -490,7 +492,7 @@ class Request {
         str3 = "basic";
       }
       obj = { type: null };
-      obj[0] = str3;
+      obj.type = str3;
       tmp2 = obj;
     }
     tmp4 = tmp2.encoder || ((arg0) => {
@@ -499,7 +501,7 @@ class Request {
         return btoa(arg0);
       } else {
         const _Error = Error;
-        error = new Error("Cannot use basic auth, btoa is not a function");
+        const error = new Error("Cannot use basic auth, btoa is not a function");
         throw error;
       }
     });
@@ -510,7 +512,7 @@ class Request {
     if (typeof global !== "string") {
       tmp7 = closure_0;
       tmp8 = closure_2;
-      obj = require("_createForOfIteratorHelper");
+      obj = closure_0(closure_2[0]);
       joined = global;
       if (obj.isObject(global)) {
         items = [];
@@ -520,7 +522,7 @@ class Request {
           tmp9 = key10006;
           tmp10 = closure_0;
           tmp11 = closure_2;
-          obj2 = require("_createForOfIteratorHelper");
+          obj2 = closure_0(closure_2[0]);
           if (!obj2.hasOwn(arg0, key10006)) {
             continue;
           } else {
@@ -538,7 +540,7 @@ class Request {
     self = this;
     if (tmp) {
       _query = self._query;
-      arr = _query.push(tmp);
+      arr1 = _query.push(tmp);
     }
     return self;
   }
@@ -668,13 +670,13 @@ class Request {
   _end() {
     self = this;
     if (this._aborted) {
-      tmp24 = globalThis;
+      tmp25 = globalThis;
       _Error = Error;
-      tmp25 = new.target;
-      str9 = "The request has been aborted even before .end() was called";
       tmp26 = new.target;
+      str9 = "The request has been aborted even before .end() was called";
+      tmp27 = new.target;
       error = new Error("The request has been aborted even before .end() was called");
-      tmp28 = error;
+      tmp29 = error;
       return self.callback(error);
     } else {
       tmp = closure_6;
@@ -748,26 +750,26 @@ class Request {
             flag3 = true;
             xhr.withCredentials = true;
           }
-          result = tmp2;
+          tmp13Result = tmp2;
           if (self._formData) {
           } else {
             str4 = "GET";
-            result = tmp2;
+            tmp13Result = tmp2;
             if ("GET" === self.method) {
             } else {
               str10 = "HEAD";
-              result = tmp2;
+              tmp13Result = tmp2;
               if ("HEAD" === self.method) {
               } else {
-                result = tmp2;
+                tmp13Result = tmp2;
                 if (typeof tmp2 === "string") {
                 } else {
-                  result = tmp2;
+                  tmp13Result = tmp2;
                   if (self._isHost(tmp2)) {
                   } else {
                     str5 = self._header["content-type"];
-                    application_json = self._serializer;
-                    if (application_json) {
+                    _serializer = self._serializer;
+                    if (_serializer) {
                     } else {
                       str6 = "";
                       if (!str5) {
@@ -775,38 +777,38 @@ class Request {
                         str7 = ";";
                         str6 = str5.split(";")[0];
                       }
-                      application_json = tmp.serialize[str6];
+                      _serializer = tmp.serialize[str6];
                     }
-                    tmp13 = !application_json;
-                    if (application_json) {
+                    tmp14 = !_serializer;
+                    if (_serializer) {
                     } else {
-                      tmp14 = isJSON;
+                      tmp15 = isJSON;
                       num = 0;
-                      tmp13 = isJSON(str5);
+                      tmp14 = isJSON(str5);
                     }
-                    if (!tmp13) {
+                    if (!tmp14) {
                     } else {
-                      application_json = tmp.serialize["application/json"];
+                      _serializer = tmp.serialize["application/json"];
                     }
-                    result = tmp2;
-                    if (!application_json) {
+                    tmp13Result = tmp2;
+                    if (!_serializer) {
                     } else {
-                      result = application_json(tmp2);
+                      tmp13Result = _serializer(tmp2);
                     }
                   }
                 }
               }
             }
           }
-          tmp15 = null;
+          tmp16 = null;
           for (const key10069 in self.header) {
-            tmp29 = key10069;
+            tmp30 = key10069;
             hasOwnResult = null !== self.header[key10069];
             if (!hasOwnResult) {
             } else {
-              tmp16 = self;
-              tmp17 = closure_2;
-              obj2 = require("_createForOfIteratorHelper");
+              tmp17 = closure_0;
+              tmp18 = closure_2;
+              obj2 = closure_0(closure_2[0]);
               hasOwnResult = obj2.hasOwn(self.header, key10069);
             }
             if (!hasOwnResult) {
@@ -823,84 +825,44 @@ class Request {
           }
           str8 = "request";
           emitResult = self.emit("request", self);
-          tmp21 = null;
-          if (undefined === result) {
+          tmp22 = null;
+          if (undefined === tmp13Result) {
           } else {
-            tmp21 = result;
+            tmp22 = tmp13Result;
           }
-          sendResult = xhr.send(tmp21);
+          sendResult = xhr.send(tmp22);
           return;
         }
         num = xhr.open;
         flag = true;
         numResult = num(self.method, self.url, true);
-      } catch (tmp23) {
-        return obj.callback(tmp23);
+      } catch (tmp24) {
+        return obj.callback(tmp24);
       }
     }
     return;
   }
 }
 _exports = module.exports;
-_exports.Request = Request;
-_exports.getXHR = () => {
-  if (self.XMLHttpRequest) {
-    const xMLHttpRequest = new self.XMLHttpRequest();
-    return xMLHttpRequest;
-  } else {
-    const _Error = Error;
-    error = new Error("Browser-only version of superagent could not find XHR");
-    throw error;
-  }
-};
 function trim(arg0) {
 
 }
-_exports.serializeObject = function serialize(obj) {
-  if (obj.isObject(obj)) {
-    const items = [];
-    for (const key10012 in arg0) {
-      let tmp4 = key10012;
-      let tmp5 = str2;
-      let tmp6 = dependencyMap;
-      let obj2 = str2(1274);
-      if (!obj2.hasOwn(arg0, key10012)) {
-        continue;
-      } else {
-        let tmp2 = pushEncodedKeyValuePair;
-        let tmp3 = pushEncodedKeyValuePair(items, key10012, arg0[key10012]);
-        continue;
-      }
-      continue;
-    }
-    return items.join("&");
-  } else {
-    return obj;
-  }
-  obj = str2(1274);
-};
-_exports.parseString = parseString;
-_exports.types = { html: "text/html", json: "application/json", xml: "text/xml", urlencoded: "application/x-www-form-urlencoded", form: "application/x-www-form-urlencoded", "form-data": "application/x-www-form-urlencoded" };
-let obj = { "application/x-www-form-urlencoded": _mod1275.stringify, "application/json": defaultOptions };
-_exports.serialize = obj;
-obj = { "application/x-www-form-urlencoded": parseString, "application/json": JSON.parse };
-_exports.parse = obj;
+let _createForOfIteratorHelper = _createForOfIteratorHelper_mod;
 _createForOfIteratorHelper.mixin(Response.prototype, ResponseBase.prototype);
-_exports.Response = Response;
 Emitter(Request.prototype);
+let _createForOfIteratorHelper = _createForOfIteratorHelper_mod;
 _createForOfIteratorHelper.mixin(Request.prototype, RequestBase.prototype);
 Request.prototype.ca = Request.prototype.agent;
 Request.prototype.buffer = Request.prototype.ca;
 Request.prototype.pipe = Request.prototype.write;
-_exports.agent = () => new str2(1325)();
 let items = ["GET", "POST", "OPTIONS", "PATCH", "PUT", "DELETE"];
 let num = 0;
 let num2 = 0;
 if (0 < items.length) {
   do {
     str2 = items[num2];
-    _createForOfIteratorHelper2.prototype[str2.toLowerCase()] = function(arg0, arg1) {
-      const request = new _exports.Request(str2, arg0);
+    _mod1325.prototype[str2.toLowerCase()] = function(arg0, arg1) {
+      const request = new metroRequire.Request(str2, arg0);
       this._setDefaults(request);
       if (arg1) {
         request.end(arg1);
@@ -912,7 +874,7 @@ if (0 < items.length) {
     length = items.length;
   } while (num2 < length);
 }
-function del(arg0, fn) {
+function del(arg0, fn, arg2) {
   let tmp = arg2;
   const obj = _exports("DELETE", arg0);
   let tmp2 = fn;
@@ -928,8 +890,56 @@ function del(arg0, fn) {
   }
   return obj;
 }
-_createForOfIteratorHelper2.prototype.del = _createForOfIteratorHelper2.prototype.delete;
-_exports.get = (arg0, fn) => {
+_mod1325.prototype.del = _mod1325.prototype.delete;
+
+export default (arg0, fn) => {
+  if (typeof fn === "function") {
+    const request = new _exports.Request("GET", arg0);
+    let endResult = request.end(fn);
+  } else if (1 === arguments.length) {
+    endResult = new _exports.Request("GET", arg0);
+  } else {
+    endResult = new _exports.Request(arg0, fn);
+  }
+  return endResult;
+};
+export { Request };
+export const getXHR = () => {
+  if (self.XMLHttpRequest) {
+    const xMLHttpRequest = new self.XMLHttpRequest();
+    return xMLHttpRequest;
+  } else {
+    const _Error = Error;
+    const error = new Error("Browser-only version of superagent could not find XHR");
+    throw error;
+  }
+};
+export const serializeObject = function serialize(obj) {
+  if (obj.isObject(obj)) {
+    const items = [];
+    for (const key10012 in arg0) {
+      let obj2 = str2(1274);
+      if (!obj2.hasOwn(arg0, key10012)) {
+        continue;
+      } else {
+        let tmp3 = pushEncodedKeyValuePair(items, key10012, arg0[key10012]);
+        continue;
+      }
+      continue;
+    }
+    return items.join("&");
+  } else {
+    return obj;
+  }
+  obj = str2(1274);
+};
+export { parseString };
+export const types = { html: "text/html", json: "application/json", xml: "text/xml", urlencoded: "application/x-www-form-urlencoded", form: "application/x-www-form-urlencoded", "form-data": "application/x-www-form-urlencoded" };
+export const serialize = { "application/x-www-form-urlencoded": _mod1275.stringify, "application/json": defaultOptions };
+export const parse = { "application/x-www-form-urlencoded": parseString, "application/json": JSON.parse };
+export { Response };
+export const agent = () => new str2(1325)();
+export const get = (arg0, fn, arg2) => {
   let tmp = arg2;
   const obj = _exports("GET", arg0);
   let tmp2 = fn;
@@ -945,7 +955,7 @@ _exports.get = (arg0, fn) => {
   }
   return obj;
 };
-_exports.head = (arg0, fn) => {
+export const head = (arg0, fn, arg2) => {
   let tmp = arg2;
   const obj = _exports("HEAD", arg0);
   let tmp2 = fn;
@@ -961,7 +971,7 @@ _exports.head = (arg0, fn) => {
   }
   return obj;
 };
-_exports.options = (arg0, fn) => {
+export const options = (arg0, fn, arg2) => {
   let tmp = arg2;
   const obj = _exports("OPTIONS", arg0);
   let tmp2 = fn;
@@ -977,9 +987,9 @@ _exports.options = (arg0, fn) => {
   }
   return obj;
 };
-_exports.del = del;
-_exports.delete = del;
-_exports.patch = (arg0, fn) => {
+export { del };
+export const delete = del;
+export const patch = (arg0, fn, arg2) => {
   let tmp = arg2;
   const obj = _exports("PATCH", arg0);
   let tmp2 = fn;
@@ -995,7 +1005,7 @@ _exports.patch = (arg0, fn) => {
   }
   return obj;
 };
-_exports.post = (arg0, fn) => {
+export const post = (arg0, fn, arg2) => {
   let tmp = arg2;
   const obj = _exports("POST", arg0);
   let tmp2 = fn;
@@ -1011,7 +1021,7 @@ _exports.post = (arg0, fn) => {
   }
   return obj;
 };
-_exports.put = (arg0, fn) => {
+export const put = (arg0, fn, arg2) => {
   let tmp = arg2;
   const obj = _exports("PUT", arg0);
   let tmp2 = fn;
@@ -1026,16 +1036,4 @@ _exports.put = (arg0, fn) => {
     obj.end(tmp);
   }
   return obj;
-};
-
-export default (arg0, fn) => {
-  if (typeof fn === "function") {
-    const request = new _exports.Request("GET", arg0);
-    let endResult = request.end(fn);
-  } else if (1 === arguments.length) {
-    endResult = new _exports.Request("GET", arg0);
-  } else {
-    endResult = new _exports.Request(arg0, fn);
-  }
-  return endResult;
 };

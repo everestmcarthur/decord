@@ -1,12 +1,12 @@
-// Module ID: 15141
-// Function ID: 15142
-// Name: generateSessionId
+// Module ID: 15168
+// Function ID: 15169
+// Name: SessionManager
 // Dependencies: [2]
 
-// Module 15141 (generateSessionId)
-import set from "set" /* 2 */;
+// Module 15168 (SessionManager)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/video-qoe/utils/SessionManager.tsx");
+const result = size.fileFinishedImporting("modules/video-qoe/utils/SessionManager.tsx");
 const prototype = function SessionManager() {
   return Object.create(new.target.prototype);
 }.prototype;

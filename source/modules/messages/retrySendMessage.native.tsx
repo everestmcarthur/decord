@@ -1,28 +1,31 @@
-// Module ID: 11681
-// Function ID: 11682
+// Module ID: 11707
+// Function ID: 11708
 // Name: retrySendMessage
-// Dependencies: [4553, 7456, 9416, 5127, 9314, 2]
+// Dependencies: [4567, 7470, 9443, 5141, 9341, 2]
 // Exports: default
 
-// Module 11681 (retrySendMessage)
-import set from "set" /* 2 */;
-import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4553 */;
-import trackInviteDefault from "trackInvite" /* 7456 */;
+// Module 11707 (retrySendMessage)
+import MessageConstants from "MessageConstants" /* 4567 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7470 */;
+import handleUploadAttachmentErrors from "handleUploadAttachmentErrors" /* 9341 */;
+import size from "module_2" /* 2 */;
 
-const MessageSendLocation = MESSAGE_GROUP_SPACING.MessageSendLocation;
-let result = set.fileFinishedImporting("modules/messages/retrySendMessage.native.tsx");
+const require = globalThis.__r;
+
+const MessageSendLocation = MessageConstants.MessageSendLocation;
+let result = size.fileFinishedImporting("modules/messages/retrySendMessage.native.tsx");
 
 export default function retrySendMessage(id, id2, arr) {
-  const _require = id;
+  _require = id;
   let obj = arg3;
   if (arg3 === undefined) {
     obj = {};
   }
-  trackInviteDefault.deleteMessage(id.id, id2.id, true);
+  MessageActionCreatorsDefault.deleteMessage(id.id, id2.id, true);
   if (id2.isCommandType()) {
     if (tmp17) {
-      _require(9416).retryCommandMessage(id2, id, obj);
-      const obj6 = _require(9416);
+      require("executeCommand").retryCommandMessage(id2, id, obj);
+      const obj6 = require("executeCommand");
     }
     tmp17 = null != id2.interactionData && null != obj.applicationId;
   } else {
@@ -33,31 +36,26 @@ export default function retrySendMessage(id, id2, arr) {
       mapped = arr.map((on) => {
         let fromJsonResult = on;
         if (null == on.on) {
-          const CloudUpload = guildId(table[3]).CloudUpload;
+          const CloudUpload = guildId(dependencyMap[3]).CloudUpload;
           fromJsonResult = CloudUpload.fromJson(on);
         }
         return fromJsonResult;
       });
     }
-    const tmpResult = trackInviteDefault;
+    const tmpResult = MessageActionCreatorsDefault;
     id = id.id;
-    obj = { content: null, tts: null, invalidEmojis: null, validNonShortcutEmojis: null };
-    obj[0] = content;
-    obj[1] = tts;
-    obj[2] = [];
-    obj[3] = [];
-    obj = {};
+    const obj3 = { content, tts, invalidEmojis: [], validNonShortcutEmojis: [] };
+    const obj4 = {};
     const merged = Object.assign(obj);
-    obj.nonce = nonce;
-    obj.flags = flags;
-    obj.messageReference = messageReference;
-    obj.location = MessageSendLocation.RETRY;
-    obj.attachmentsToUpload = mapped;
-    obj.onAttachmentUploadError = function onAttachmentUploadError(file, code, reason) {
-      let obj = guildId(closure_1_2[4]);
-      obj = { file, guildId: guildId.getGuildId(), analyticsLocations: [], code, reason };
-      const result = obj.handleUploadMessageAttachmentsErrors(obj);
+    obj4.nonce = nonce;
+    obj4.flags = flags;
+    obj4.messageReference = messageReference;
+    obj4.location = MessageSendLocation.RETRY;
+    obj4.attachmentsToUpload = mapped;
+    obj4.onAttachmentUploadError = function onAttachmentUploadError(file, code, reason) {
+      const obj = handleUploadAttachmentErrors;
+      const result = obj.handleUploadMessageAttachmentsErrors({ file, guildId: guildId.getGuildId(), analyticsLocations: [], code, reason });
     };
-    tmpResult.sendMessage(id, obj, undefined, obj);
+    tmpResult.sendMessage(id, obj3, undefined, obj4);
   }
 };

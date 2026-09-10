@@ -1,29 +1,29 @@
-// Module ID: 15704
-// Function ID: 15705
-// Name: setWarningBoosts
-// Dependencies: [5, 19, 17, 1221, 12566, 1979, 4381, 15705, 1074, 21, 4560, 576, 1272, 4153, 4458, 12492, 15619, 7201, 12498, 1940, 1943, 1611, 504, 4556, 5687, 5605, 2]
+// Module ID: 15734
+// Function ID: 15735
+// Name: DevToolsGuildPowerupsScreen
+// Dependencies: [5, 19, 17, 1221, 12592, 1979, 4395, 15735, 1074, 21, 4574, 576, 1272, 4166, 4472, 12518, 15649, 7214, 12524, 1940, 1943, 1611, 504, 4570, 5701, 5619, 2]
 // Exports: default
 
-// Module 15704 (setWarningBoosts)
-import ThemesDefault from "Themes" /* 576 */;
-import TableSwitchRow from "TableSwitchRow" /* 7201 */;
-import useToggleDismissibleContentDismissStateDefault from "useToggleDismissibleContentDismissState" /* 15619 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "handleConnectionClosedOrResumed" /* 1221 */;
-import closure_8 from "handleModifyingAppliedBoostStart" /* 12566 */;
-import closure_9 from "createGuildRecordFromRust" /* 1979 */;
-import closure_10 from "handleConnectionOpen" /* 4381 */;
-import items from "items" /* 15705 */;
-import { Endpoints } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15734 (DevToolsGuildPowerupsScreen)
+import nativeDefault from "native" /* 576 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
+import dismissible_content from "dismissible_content" /* 1943 */;
+import _modDef4166 from "module_4166" /* 4166 */;
+import TableSwitchRow from "TableSwitchRow" /* 7214 */;
+import GuildDismissibleContentUtils from "GuildDismissibleContentUtils" /* 12524 */;
+import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 15649 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 12592 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
 
-require = arg1;
+require = fn;
 function setWarningBoosts() {
   const self = this;
-  const apply = _setWarningBoosts.apply;
+  const apply = closure_22.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -31,210 +31,168 @@ function setWarningBoosts() {
   }
   return applyArgumentsResult;
 }
-function _setWarningBoosts() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c5 = 0;
-    c6 = 0;
-    return (function*(arg0, arg1, arg2) {
-      if (c6 === 2) {
+let closure_22 = async function _setWarningBoosts(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj3 = { value, done: true };
+      return obj3;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          closure_4 = tmp3;
+          closure_3 = tmp2;
+          closure_131_0 = closure_0;
+          const HTTP = HTTPUtils.HTTP;
+          const request = { url: constants.APPLIED_BOOST_MODIFY_END_DATE, body: null, rejectWithError: true };
+          const obj6 = { applied_boost_ids: importDefault.map((id) => id.id), ends_at: null };
+          let addResult = null;
+          if (!closure_2) {
+            addResult = _modDef4166().add(1, "day");
+            const obj4 = _modDef4166();
+          }
+          obj6.ends_at = addResult;
+          request.body = obj6;
+          c5 = 1;
+          c6 = 1;
+          const obj7 = { value: HTTP.patch(request), done: false };
+          return obj7;
+        }
+      } else if (arg0 === 1) {
         c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_4 = tmp3;
-              closure_3 = tmp2;
-              const HTTP = callback(1272).HTTP;
-              obj1 = { url: null, body: null, rejectWithError: true };
-              obj1[0] = closure_1_17.APPLIED_BOOST_MODIFY_END_DATE;
-              const obj2 = { applied_boost_ids: null, ends_at: null };
-              obj2[0] = lib.map((id) => id.id);
-              let addResult = null;
-              if (!dependencyMap) {
-                let obj3 = lib(4153)();
-                addResult = obj3.add(1, "day");
-              }
-              obj2[1] = addResult;
-              obj1[1] = obj2;
-              c5 = 1;
-              c6 = 1;
-              obj3 = { value: null, done: false };
-              obj3[0] = HTTP.patch(obj1);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            obj = callback(4458);
-            const appliedGuildBoostsForGuild = obj.fetchAppliedGuildBoostsForGuild(callback);
-            obj1 = callback(12492);
-            const guildBoostEntitlements = obj1.fetchGuildBoostEntitlements(callback, true);
-            c6 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp20) {
-          c6 = tmp;
-          throw tmp20;
-        }
+        const appliedGuildBoostsForGuild = closure_132_0(closure_132_2[14]).fetchAppliedGuildBoostsForGuild(closure_131_0);
+        const obj = closure_132_0(closure_132_2[14]);
+        const guildBoostEntitlements = closure_132_0(closure_132_2[15]).fetchGuildBoostEntitlements(closure_131_0, true);
+        c6 = 3;
+        return { value: "HermesInternal", done: null };
       }
-    })();
-  });
-  closure_22 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp20) {
+      c6 = tmp;
+      throw tmp20;
+    }
   }
-  return applyArgumentsResult;
-}
-function _sendPowerupsSystemMessage() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c1 = 0;
-    return (function*(arg0) {
-      if (c1 === 2) {
+};
+let closure_23 = async function _sendPowerupsSystemMessage(arg0, value) {
+  if (c1 === 2) {
+    c1 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c1 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
+          c1 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c1 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          const HTTP = HTTPUtils.HTTP;
+          const obj4 = { url: Endpoints.SEND_POWERUPS_SYSTEM_MESSAGE(closure_0), rejectWithError: true };
+          c2 = 1;
+          c1 = 1;
+          const obj5 = { value: HTTP.post(obj4), done: false };
+          return obj5;
+        }
+      } else if (arg0 === 1) {
         c1 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+        throw value;
+      } else if (arg0 === 2) {
+        c1 = 3;
+        const obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c1 = 2;
-          if (0 === table) {
-            if (arg0 === 1) {
-              c1 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c1 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const HTTP = callback(table[12]).HTTP;
-              obj1 = { url: null, rejectWithError: true };
-              obj1[0] = closure_1_17.SEND_POWERUPS_SYSTEM_MESSAGE(callback);
-              table = 1;
-              c1 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.post(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c1 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c1 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            c1 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp9) {
-          c1 = tmp;
-          throw tmp9;
-        }
+        c1 = 3;
+        return { value: "HermesInternal", done: null };
       }
-    })();
-  });
-  closure_23 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp9) {
+      c1 = tmp;
+      throw tmp9;
+    }
   }
-  return applyArgumentsResult;
-}
+};
 function UserDCSwitchRow(dc) {
   dc = dc.dc;
-  ({ isDismissed, handleToggleDismissState } = useToggleDismissibleContentDismissStateDefault(dc));
-  const tmp = useToggleDismissibleContentDismissStateDefault(dc);
-  return callback4(TableSwitchRow.TableSwitchRow, { label: callback3(dc), value: isDismissed, onValueChange: handleToggleDismissState });
+  ({ isDismissed, handleToggleDismissState } = toggleDismissibleContentDismissStateDefault(dc));
+  const tmp = toggleDismissibleContentDismissStateDefault(dc);
+  return collapsedCategories(TableSwitchRow.TableSwitchRow, { label: value2(dc), value: isDismissed, onValueChange: handleToggleDismissState });
 }
 function GuildDCSwitchRow(dc) {
   dc = dc.dc;
   const guildId = dc.guildId;
   const items = [dc, guildId];
-  const callback = React.useCallback((arg0) => {
+  const callback = noop.useCallback((arg0) => {
     if (arg0) {
-      let tmpResult = tmp(tmp2[18]);
-      const result = tmpResult.markContentAsDismissed(dc, guildId, false);
+      const result = tmp(12524).markContentAsDismissed(dc, guildId, false);
+      const tmpResult = tmp(12524);
     } else {
-      tmpResult = tmp(tmp2[19]);
-      const result1 = tmpResult.removeDismissedRecurringContent(dc(closure_1_2[20]).DismissibleContent.GUILD_POWERUP_NOTIFICATION);
-      const result2 = dc(closure_1_2[18]).unmarkContentAsDismissed(dc, guildId);
-      const obj2 = dc(closure_1_2[18]);
+      const result1 = tmp(1940).removeDismissedRecurringContent(dismissible_content.DismissibleContent.GUILD_POWERUP_NOTIFICATION);
+      const tmpResult2 = tmp(1940);
+      const result2 = GuildDismissibleContentUtils.unmarkContentAsDismissed(dc, guildId);
     }
   }, items);
-  return callback4(dc(7201).TableSwitchRow, { label: callback2(dc), value: dc.isDismissed, onValueChange: callback });
+  return closure_18(dc(7214).TableSwitchRow, { label: closure_15(dc), value: dc.isDismissed, onValueChange: callback });
 }
-({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
-({ GUILD_DCS: unpackModuleId, SERVER_TAG_GUILD_DCS: closure_12, USER_DCS: map1, VANITY_URL_POWERUP_DCS: closure_14, getGuildDCString: closure_15, getUserDCString: closure_16 } = items);
+get_ActivityIndicator = fn(17);
+({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const DevToolsGuildPowerupsConstants = fn(15735);
+({ GUILD_DCS: closure_11, SERVER_TAG_GUILD_DCS: closure_12, USER_DCS: map1, VANITY_URL_POWERUP_DCS: closure_14, getGuildDCString: closure_15, getUserDCString: closure_16 } = DevToolsGuildPowerupsConstants);
+const Endpoints = fn(1074).Endpoints;
+const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
-createCacheKey = { container: null, scrollContainer: null, noGuildContainer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { padding: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
-let obj1 = { padding: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
-createCacheKey[2] = { flex: 1, justifyContent: "center", alignItems: "center", padding: ThemesDefault.space.PX_32 };
-let closure_20 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { flex: 1, justifyContent: "center", alignItems: "center", padding: ThemesDefault.space.PX_32 };
-let result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsGuildPowerupsScreen.tsx");
+const createStyles = fn(4574);
+let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, scrollContainer: null, noGuildContainer: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+obj2.scrollContainer = { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
+let obj4 = { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
+obj2.noGuildContainer = { flex: 1, justifyContent: "center", alignItems: "center", padding: nativeDefault.space.PX_32 };
+let closure_20 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsGuildPowerupsScreen.tsx");
 
 export default function DevToolsGuildPowerupsScreen() {
-  const tmp = callback5();
+  const tmp = closure_20();
+  const tmp4 = useSafeAreaInsetsDefault();
+  let items = [SelectedGuildStore];
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => guildId.getGuildId());
   let obj = stateFromStores(504);
-  let items = [closure_10];
-  stateFromStores = obj.useStateFromStores(items, () => guildId.getGuildId());
-  obj1 = stateFromStores(504);
-  const items1 = [closure_9];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => {
+  const items1 = [GuildStore];
+  const stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () => {
     let tmp2 = null;
     if (null != stateFromStores) {
-      const guild = closure_1_9.getGuild(tmp);
+      const guild = GuildStore.getGuild(tmp);
       let name;
       if (guild != null) {
         name = guild.name;
@@ -243,24 +201,24 @@ export default function DevToolsGuildPowerupsScreen() {
     }
     return tmp2;
   });
-  let obj2 = stateFromStores(504);
-  const items2 = [closure_7];
-  importDefault = obj2.useStateFromStoresArray(items2, () => {
-    const items = [...closure_1_12];
-    return items.filter((GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK) => {
-      let isContentDismissedResult = null != closure_0;
+  const obj2 = stateFromStores(504);
+  const items2 = [UserSettingsProtoStore];
+  importDefault = stateFromStores(504).useStateFromStoresArray(items2, () => {
+    const items = [...closure_2_12];
+    return items.filter((item) => {
+      let isContentDismissedResult = null != closure_1_0;
       if (isContentDismissedResult) {
-        isContentDismissedResult = closure_1_0(closure_1_2[18]).isContentDismissed(GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK, tmp);
-        const obj = closure_1_0(closure_1_2[18]);
+        isContentDismissedResult = stateFromStores(dependencyMap[18]).isContentDismissed(item, tmp);
+        const obj = stateFromStores(dependencyMap[18]);
       }
       return isContentDismissedResult;
     });
   });
-  let obj3 = stateFromStores(504);
-  const items3 = [closure_8];
-  dependencyMap = obj3.useStateFromStoresArray(items3, () => {
+  const obj3 = stateFromStores(504);
+  const items3 = [AppliedGuildBoostStore];
+  dependencyMap = stateFromStores(504).useStateFromStoresArray(items3, () => {
     if (null != stateFromStores) {
-      let appliedGuildBoostsForGuild = closure_1_8.getAppliedGuildBoostsForGuild(tmp);
+      let appliedGuildBoostsForGuild = AppliedGuildBoostStore.getAppliedGuildBoostsForGuild(tmp);
       if (appliedGuildBoostsForGuild == null) {
         appliedGuildBoostsForGuild = [];
       }
@@ -271,77 +229,78 @@ export default function DevToolsGuildPowerupsScreen() {
     return items;
   });
   if (null == stateFromStores) {
-    obj = { style: null, children: null };
+    const obj5 = { style: null, children: null };
     const items4 = [, ];
     ({ container: arr7[0], noGuildContainer: arr7[1] } = tmp);
-    obj[0] = items4;
-    obj[1] = callback4(tmp5(4556).Text, { variant: "heading-md/semibold", color: "text-muted", children: "No guild selected" });
-    let tmp16Result = callback4(closure_6, obj);
+    obj5.style = items4;
+    obj5.children = closure_18(tmp5(4570).Text, { variant: "heading-md/semibold", color: "text-muted", children: "No guild selected" });
+    let tmp16Result = closure_18(closure_6, obj5);
   } else {
-    obj = { style: null, contentContainerStyle: null, children: null };
-    obj[0] = tmp.container;
+    const obj6 = { style: tmp.container, contentContainerStyle: null, children: null };
     const items5 = [tmp.scrollContainer, ];
-    obj1 = { paddingBottom: null };
-    obj1[0] = tmp4.bottom + ThemesDefault.space.PX_16;
-    items5[1] = obj1;
-    obj[1] = items5;
+    const obj7 = { paddingBottom: tmp4.bottom + nativeDefault.space.PX_16 };
+    items5[1] = obj7;
+    obj6.contentContainerStyle = items5;
     let str = stateFromStores1;
     if (stateFromStores1 == null) {
       str = "Unknown";
     }
-    obj2 = { title: null, hasIcons: false, children: null };
+    const obj8 = { title: null, hasIcons: false, children: null };
     const _HermesInternal = HermesInternal;
-    obj2[0] = "Current Guild: " + str;
-    obj3 = { label: "Reset Notification Indicators", onPress: null };
-    obj3[1] = function onPress() {
-      return stateFromStores(arr[15]).guildPowerupsResetNotifications();
-    };
-    obj2[2] = callback4(tmp5(5605).TableRow, obj3);
-    const items6 = [callback4(tmp5(5687).TableRowGroup, obj2), , , , , , ];
-    const obj4 = { title: "Warning State", hasIcons: false, children: null };
-    const obj5 = { label: "Set Half Boosts expiring in 1 day", onPress: null };
-    obj5[1] = function onPress() {
-      return closure_1_21(stateFromStores, arr.slice(Math.floor(arr.length / 2)), false);
-    };
-    const items7 = [callback4(tmp5(5605).TableRow, obj5), ];
-    const obj6 = { label: "Reset End Date", onPress: null };
-    obj6[1] = function onPress() {
-      return closure_1_21(stateFromStores, closure_2, true);
-    };
-    items7[1] = callback4(tmp5(5605).TableRow, obj6);
-    obj4[2] = items7;
-    items6[1] = closure_19(tmp5(5687).TableRowGroup, obj4);
-    const obj7 = { title: "User Level DCs", hasIcons: false, children: null };
-    obj7[2] = closure_13.map((dc) => callback(closure_24, { dc }, dc));
-    items6[2] = callback4(tmp5(5687).TableRowGroup, obj7);
-    const obj8 = { title: "Guild Level DCs", hasIcons: false, children: null };
-    obj8[2] = closure_11.map((dc) => closure_1_18(closure_1_25, { dc, guildId: stateFromStores, isDismissed: closure_1.includes(dc) }, dc));
-    items6[3] = callback4(tmp5(5687).TableRowGroup, obj8);
-    const obj9 = { title: "Server Tag Guild Level DCs", hasIcons: false, children: null };
-    obj9[2] = closure_12.map((dc) => closure_1_18(closure_1_25, { dc, guildId: stateFromStores, isDismissed: closure_1.includes(dc) }, dc));
-    items6[4] = callback4(tmp5(5687).TableRowGroup, obj9);
-    const obj10 = { title: "Powerup Rollback DCs", hasIcons: false, children: null };
-    obj10[2] = closure_14.map((dc) => callback(closure_24, { dc }, dc));
-    items6[5] = callback4(tmp5(5687).TableRowGroup, obj10);
-    const obj11 = { title: "System Messages", hasIcons: false, children: null };
-    const obj12 = { label: "Send Powerups System Message", onPress: null };
-    obj12[1] = function onPress() {
-      return (function sendPowerupsSystemMessage(stateFromStores) {
-        const self = this;
-        const apply = closure_23.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
+    obj8.title = "Current Guild: " + str;
+    const obj9 = {
+      label: "Reset Notification Indicators",
+      onPress() {
+          return stateFromStores(closure_2[15]).guildPowerupsResetNotifications();
         }
-        return applyArgumentsResult;
-      })(stateFromStores);
     };
-    obj11[2] = callback4(tmp5(5605).TableRow, obj12);
-    items6[6] = callback4(tmp5(5687).TableRowGroup, obj11);
-    obj[2] = items6;
-    tmp16Result = tmp16(closure_5, obj);
-    const tmp17 = closure_5;
+    obj8.children = closure_18(tmp5(5619).TableRow, obj9);
+    const items6 = [closure_18(tmp5(5701).TableRowGroup, obj8), , , , , , ];
+    const obj10 = { title: "Warning State", hasIcons: false, children: null };
+    const obj11 = {
+      label: "Set Half Boosts expiring in 1 day",
+      onPress() {
+          return setWarningBoosts(stateFromStores, closure_2.slice(Math.floor(closure_2.length / 2)), false);
+        }
+    };
+    const items7 = [closure_18(tmp5(5619).TableRow, obj11), ];
+    const obj12 = {
+      label: "Reset End Date",
+      onPress() {
+          return setWarningBoosts(stateFromStores, closure_2, true);
+        }
+    };
+    items7[1] = closure_18(tmp5(5619).TableRow, obj12);
+    obj10.children = items7;
+    items6[1] = closure_19(tmp5(5701).TableRowGroup, obj10);
+    const obj13 = { title: "User Level DCs", hasIcons: false, children: closure_13.map((dc) => closure_1_18(UserDCSwitchRow, { dc }, dc)) };
+    items6[2] = closure_18(tmp5(5701).TableRowGroup, obj13);
+    const obj14 = { title: "Guild Level DCs", hasIcons: false, children: closure_11.map((dc) => collapsedCategories(GuildDCSwitchRow, { dc, guildId: stateFromStores, isDismissed: closure_1.includes(dc) }, dc)) };
+    items6[3] = closure_18(tmp5(5701).TableRowGroup, obj14);
+    const obj15 = { title: "Server Tag Guild Level DCs", hasIcons: false, children: closure_12.map((dc) => collapsedCategories(GuildDCSwitchRow, { dc, guildId: stateFromStores, isDismissed: closure_1.includes(dc) }, dc)) };
+    items6[4] = closure_18(tmp5(5701).TableRowGroup, obj15);
+    const obj16 = { title: "Powerup Rollback DCs", hasIcons: false, children: closure_14.map((dc) => closure_1_18(UserDCSwitchRow, { dc }, dc)) };
+    items6[5] = closure_18(tmp5(5701).TableRowGroup, obj16);
+    const obj17 = { title: "System Messages", hasIcons: false, children: null };
+    const obj18 = {
+      label: "Send Powerups System Message",
+      onPress() {
+          return (function sendPowerupsSystemMessage() {
+            const self = this;
+            const apply = closure_1_23.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          })(stateFromStores);
+        }
+    };
+    obj17.children = closure_18(tmp5(5619).TableRow, obj18);
+    items6[6] = closure_18(tmp5(5701).TableRowGroup, obj17);
+    obj6.children = items6;
+    tmp16Result = tmp16(closure_5, obj6);
   }
   return tmp16Result;
 };

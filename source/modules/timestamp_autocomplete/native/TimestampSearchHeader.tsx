@@ -1,57 +1,52 @@
-// Module ID: 12393
-// Function ID: 12394
-// Name: useTimestampSearchHeaderHeight
-// Dependencies: [19, 17, 21, 10124, 4560, 576, 4523, 4556, 1114, 8598, 2]
+// Module ID: 12419
+// Function ID: 12420
+// Name: TimestampSearchHeader
+// Dependencies: [19, 17, 21, 10151, 4574, 576, 4537, 4570, 1114, 8626, 2]
 // Exports: useTimestampSearchHeaderHeight
 
-// Module 12393 (useTimestampSearchHeaderHeight)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import ClockIcon from "ClockIcon" /* 4523 */;
-import Text from "Text" /* 4556 */;
-import Form from "Form" /* 8598 */;
-import map from "map" /* 10124 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 12419 (TimestampSearchHeader)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import ClockIcon from "ClockIcon" /* 4537 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Form from "Form" /* 8626 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10151 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ StyleSheet: obj1, View: c3 } = get_ActivityIndicator);
-({ jsx: c4, jsxs: c5 } = jsxProd);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ StyleSheet: c2, View: c3 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let c6 = "text-sm/semibold";
 let c7 = "text-sm/medium";
-let obj = { container: null, headerRow: null, icon: null, description: null, divider: null };
-obj = { backgroundColor: ThemesDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
-obj[0] = obj;
-obj[1] = { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingVertical: 12 };
-obj[2] = { marginRight: 12 };
-obj[3] = { paddingHorizontal: 16, paddingBottom: 12 };
-createCacheKey = { marginLeft: 0, backgroundColor: ThemesDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };
-obj[4] = createCacheKey;
-let closure_8 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function TimestampSearchHeader() {
-  const tmp = callback3();
-  let obj = { style: tmp.container, children: null };
-  obj = { accessible: true, accessibilityRole: "header", children: null };
-  obj = { style: tmp.headerRow, children: null };
-  const items = [callback(ClockIcon.ClockIcon, { size: "sm", style: tmp.icon }), callback(Text.Text, { variant: c6, color: "mobile-text-heading-primary", children: "@time" })];
-  obj[1] = items;
-  const items1 = [callback2(closure_3, obj), ];
-  const obj3 = { style: tmp.description, variant: c7, color: "text-muted", children: null };
-  const intl = getSystemLocale.intl;
-  obj3[3] = intl.string(getSystemLocale.t.V6L3TV);
-  items1[1] = callback(Text.Text, obj3);
-  obj[2] = items1;
-  const items2 = [callback2(closure_3, obj), callback(Form.FormDivider, { style: tmp.divider })];
-  obj[1] = items2;
-  return callback2(closure_3, obj);
-});
-const result = require("set").fileFinishedImporting("modules/timestamp_autocomplete/native/TimestampSearchHeader.tsx");
+const createStyles = fn(4574);
+let obj = { container: { backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND }, headerRow: { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingVertical: 12 }, icon: { marginRight: 12 }, description: { paddingHorizontal: 16, paddingBottom: 12 }, divider: null };
+let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
+obj.divider = { marginLeft: 0, backgroundColor: nativeDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };
+let closure_8 = createStyles.createStyles(obj);
+const obj4 = { marginLeft: 0, backgroundColor: nativeDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/timestamp_autocomplete/native/TimestampSearchHeader.tsx");
 
-export default memoResult;
+export default noop.memo(function TimestampSearchHeader() {
+  const tmp = closure_8();
+  const obj = { style: tmp.container, children: null };
+  const obj2 = { accessible: true, accessibilityRole: "header", children: null };
+  const obj3 = { style: tmp.headerRow, children: null };
+  const items = [React4(ClockIcon.ClockIcon, { size: "sm", style: tmp.icon }), React4(Text_Text.Text, { variant, color: "mobile-text-heading-primary", children: "@time" })];
+  obj3.children = items;
+  const items1 = [hasOwnProperty(React3, obj3), ];
+  const obj6 = { style: tmp.description, variant: variant2, color: "text-muted", children: null };
+  const intl = util.intl;
+  obj6.children = intl.string(util.t.V6L3TV);
+  items1[1] = React4(Text_Text.Text, obj6);
+  obj2.children = items1;
+  const items2 = [hasOwnProperty(React3, obj2), React4(Form.FormDivider, { style: tmp.divider })];
+  obj.children = items2;
+  return hasOwnProperty(React3, obj);
+});
 export const useTimestampSearchHeaderHeight = function useTimestampSearchHeaderHeight() {
-  const sum = 24 + map.useScaledTextLineHeight(c6);
-  const obj = map;
-  return sum + map.useScaledTextLineHeight(c7) + 12 + hairlineWidth.hairlineWidth;
+  const sum = 24 + useScaledTextLineHeight.useScaledTextLineHeight(c6);
+  return sum + useScaledTextLineHeight.useScaledTextLineHeight(c7) + 12 + hairlineWidth.hairlineWidth;
 };

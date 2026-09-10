@@ -1,58 +1,57 @@
-// Module ID: 16783
-// Function ID: 16784
+// Module ID: 16820
+// Function ID: 16821
 // Name: SpamRequestsScreen
-// Dependencies: [19, 4209, 1371, 10865, 1074, 21, 7162, 7182, 504, 16782, 8773, 1250, 8179, 10871, 2]
+// Dependencies: [19, 4222, 1371, 10892, 1074, 21, 7176, 7196, 504, 16819, 8801, 1250, 8205, 10898, 2]
 // Exports: default
 
-// Module 16783 (SpamRequestsScreen)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "markAllUserIdListsStale" /* 4209 */;
-import closure_5 from "mergeGuildAvatar" /* 1371 */;
-import { UserRowModes } from "UserRowModes" /* 10865 */;
-import { RelationshipTypes } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16820 (SpamRequestsScreen)
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8205 */;
+import noop from "module_19" /* 19 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/SpamRequestsScreen.tsx");
+const require = fn;
+const UserRowModes = fn(10892).UserRowModes;
+const RelationshipTypes = fn(1074).RelationshipTypes;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/SpamRequestsScreen.tsx");
 
 export default function SpamRequestsScreen(navigation) {
   navigation = navigation.navigation;
-  let analyticsLocations;
   let stateFromStoresArray;
   let stateFromStoresArray1;
-  let callback;
-  analyticsLocations = stateFromStoresArray(stateFromStoresArray1[6])(stateFromStoresArray(stateFromStoresArray1[7]).FRIEND_REQUESTS).analyticsLocations;
-  let obj = analyticsLocations(stateFromStoresArray1[8]);
-  const items = [closure_4];
-  stateFromStoresArray = obj.useStateFromStoresArray(items, () => analyticsLocations(stateFromStoresArray1[9]).getPendingRelationshipIds(mutableRelationships.getMutableRelationships()).spamIds);
-  obj = { name: null };
+  let onPress;
+  const analyticsLocations = stateFromStoresArray(stateFromStoresArray1[6])(stateFromStoresArray(stateFromStoresArray1[7]).FRIEND_REQUESTS).analyticsLocations;
   const tmp = stateFromStoresArray1;
   const tmp2 = stateFromStoresArray(stateFromStoresArray1[6]);
   const tmp3 = analyticsLocations;
-  obj[0] = analyticsLocations(stateFromStoresArray1[11]).ImpressionNames.FRIEND_REQUESTS_SPAM_INBOX;
-  stateFromStoresArray(stateFromStoresArray1[10])(obj);
+  const items = [RelationshipStore];
+  stateFromStoresArray = analyticsLocations(stateFromStoresArray1[8]).useStateFromStoresArray(items, () => analyticsLocations(stateFromStoresArray1[9]).getPendingRelationshipIds(mutableRelationships.getMutableRelationships()).spamIds);
+  const obj2 = { name: null };
+  const obj = analyticsLocations(stateFromStoresArray1[8]);
+  obj2.name = analyticsLocations(stateFromStoresArray1[11]).ImpressionNames.FRIEND_REQUESTS_SPAM_INBOX;
+  stateFromStoresArray(stateFromStoresArray1[10])(obj2);
   const tmp5 = stateFromStoresArray(stateFromStoresArray1[10]);
-  const items1 = [closure_5];
+  const items1 = [UserStore];
   const items2 = [stateFromStoresArray];
   stateFromStoresArray1 = analyticsLocations(stateFromStoresArray1[8]).useStateFromStoresArray(items1, () => {
-    const mapped = stateFromStoresArray.map((arg0) => user.getUser(arg0));
-    return mapped.filter((arg0) => null != arg0);
+    const mapped = stateFromStoresArray.map((item) => user.getUser(item));
+    return mapped.filter((item) => null != item);
   }, items2);
   const items3 = [analyticsLocations];
-  callback = callback.useCallback((id) => {
-    stateFromStoresArray(stateFromStoresArray1[12])({ userId: id.id, localUser: id, sourceAnalyticsLocations: analyticsLocations });
+  onPress = onPress.useCallback((id) => {
+    showUserProfileActionSheetDefault({ userId: id.id, localUser: id, sourceAnalyticsLocations: analyticsLocations });
   }, items3);
-  const items4 = [callback, stateFromStoresArray1];
-  const callback1 = callback.useCallback(() => {
+  const items4 = [onPress, stateFromStoresArray1];
+  const callback1 = onPress.useCallback(() => {
 
   }, []);
   if (0 !== stateFromStoresArray1.length) {
-    obj = { getItemProps: null, getSectionProps: null, sections: null };
-    obj[0] = tmp9;
-    obj[1] = callback1;
+    const obj4 = { getItemProps: tmp9, getSectionProps: callback1, sections: null };
     const items5 = [stateFromStoresArray1.length];
-    obj[2] = items5;
-    return jsx(tmp3(tmp[13]).UsersFastList, { getItemProps: null, getSectionProps: null, sections: null });
+    obj4.sections = items5;
+    return jsx(tmp3(tmp[13]).UsersFastList, { getItemProps: tmp9, getSectionProps: callback1, sections: null });
   } else {
     navigation.goBack();
   }

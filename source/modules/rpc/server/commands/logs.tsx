@@ -1,47 +1,48 @@
-// Module ID: 14491
-// Function ID: 14492
-// Dependencies: [1074, 3, 9562, 9564, 2]
+// Module ID: 14516
+// Function ID: 14517
+// Name: logs
+// Dependencies: [1074, 3, 9589, 9591, 2]
 
-// Module 14491
-import set from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9562 */;
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 9564 */;
-import ME from "ME" /* 1074 */;
+// Module 14516 (logs)
+import LoggerDefault from "Logger" /* 3 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9589 */;
+import RPCHelpers from "RPCHelpers" /* 9591 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-({ RPC_APPLICATION_LOGGING_CATEGORY, RPCCommands } = ME);
-let closure_3 = new timestampDefault(RPC_APPLICATION_LOGGING_CATEGORY);
-let obj = {
-  validation(string) {
-    let obj = createRpcJoiSchemaObjectDefault(string);
-    obj = { level: null, message: null };
-    const requiredResult = obj.required();
-    const stringResult = string.string();
-    obj[0] = string.string().max(10).required();
-    const maxResult = string.string().max(10);
-    const stringResult1 = string.string();
-    obj[1] = string.string().max(1000).required();
-    return requiredResult.keys(obj);
-  },
-  handler(arg0) {
-    ({ socket, args } = arg0);
-    const level = args.level;
-    const result = recurseReplaceContentTree.validatePostMessageTransport(socket.transport);
-    const combined = "" + socket.application.id + " - " + args.message;
-    if ("log" === level) {
-      closure_3.log(combined);
-    } else if ("warn" === level) {
-      closure_3.warn(combined);
-    } else if ("debug" === level) {
-      closure_3.verbose(combined);
-    } else if ("info" === level) {
-      closure_3.info(combined);
-    } else if ("error" === level) {
-      closure_3.error(combined);
+({ RPC_APPLICATION_LOGGING_CATEGORY, RPCCommands } = Constants);
+let closure_3 = new LoggerDefault(RPC_APPLICATION_LOGGING_CATEGORY);
+let result = size.fileFinishedImporting("modules/rpc/server/commands/logs.tsx");
+
+export default {
+  [RPCCommands.CAPTURE_LOG]: {
+    validation(string) {
+      const obj = createRpcJoiSchemaObjectDefault(string);
+      const obj2 = { level: null, message: null };
+      const requiredResult = createRpcJoiSchemaObjectDefault(string).required();
+      const stringResult = string.string();
+      obj2.level = string.string().max(10).required();
+      const maxResult = string.string().max(10);
+      const stringResult1 = string.string();
+      obj2.message = string.string().max(1000).required();
+      return requiredResult.keys(obj2);
+    },
+    handler(arg0) {
+      ({ socket, args } = arg0);
+      const level = args.level;
+      const result = RPCHelpers.validatePostMessageTransport(socket.transport);
+      const combined = "" + socket.application.id + " - " + args.message;
+      if ("log" === level) {
+        closure_3.log(combined);
+      } else if ("warn" === level) {
+        closure_3.warn(combined);
+      } else if ("debug" === level) {
+        closure_3.verbose(combined);
+      } else if ("info" === level) {
+        closure_3.info(combined);
+      } else if ("error" === level) {
+        closure_3.error(combined);
+      }
     }
   }
 };
-const tmp3 = new timestampDefault(RPC_APPLICATION_LOGGING_CATEGORY);
-let result = set.fileFinishedImporting("modules/rpc/server/commands/logs.tsx");
-
-export default { [RPCCommands.CAPTURE_LOG]: obj };

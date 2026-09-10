@@ -1,20 +1,21 @@
-// Module ID: 13821
-// Function ID: 13822
-// Name: start
-// Dependencies: [7742, 4615, 12, 2]
+// Module ID: 13844
+// Function ID: 13845
+// Name: SystemResponsiveness
+// Dependencies: [7756, 4629, 12, 2]
 
-// Module 13821 (start)
-import set from "set" /* 2 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4615 */;
+// Module 13844 (SystemResponsiveness)
+import _modDef12 from "module_12" /* 12 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4629 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("lib/SystemResponsiveness.tsx");
+const result = size.fileFinishedImporting("lib/SystemResponsiveness.tsx");
 class SystemResponsiveness {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.sampleStats = function sampleStats(rtp) {
       if (null != rtp) {
-        const item = closure_1_1(closure_1_2[2]).forEach(rtp.rtp.outbound, (type) => {
+        const item = _modDef12.forEach(rtp.rtp.outbound, (type) => {
           if ("audio" === type.type) {
             let prop = type.pttQueueLatencyMicrosSamples;
             if (prop == null) {
@@ -22,18 +23,16 @@ class SystemResponsiveness {
             }
             const iter = prop[Symbol.iterator]();
             while (iter !== undefined) {
-              let tmp5 = obj;
               let pttQueueLatencyHistogram = obj.pttQueueLatencyHistogram;
               let addSampleResult = pttQueueLatencyHistogram.addSample(iter.next() / 1000);
               continue;
             }
           }
         });
-        const arr = closure_1_1(closure_1_2[2]);
       }
     };
     obj.connection = global;
-    histogram = new require("getSamples").Histogram();
+    histogram = new closure_0(closure_2[0]).Histogram();
     obj.pttQueueLatencyHistogram = histogram;
     return obj;
   }

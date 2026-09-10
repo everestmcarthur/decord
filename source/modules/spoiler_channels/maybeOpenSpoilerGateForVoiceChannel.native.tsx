@@ -1,34 +1,33 @@
-// Module ID: 12936
-// Function ID: 12937
+// Module ID: 12962
+// Function ID: 12963
 // Name: maybeOpenSpoilerGateForVoiceChannel
-// Dependencies: [1957, 21, 7329, 4906, 12937, 2]
+// Dependencies: [1957, 21, 7343, 4920, 12963, 2]
 // Exports: maybeOpenSpoilerGateForVoiceChannel
 
-// Module 12936 (maybeOpenSpoilerGateForVoiceChannel)
-import useAlertStore from "useAlertStore" /* 4906 */;
-import isChannelSpoilerGated from "isChannelSpoilerGated" /* 7329 */;
-import VoicePanelSpoilerAlert from "VoicePanelSpoilerAlert" /* 12937 */;
-import VoicePanelSpoilerAlertDefault from "VoicePanelSpoilerAlert" /* 12937 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 12962 (maybeOpenSpoilerGateForVoiceChannel)
+import useAlertStore from "useAlertStore" /* 4920 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 7343 */;
+import VoicePanelSpoilerAlert from "VoicePanelSpoilerAlert" /* 12963 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/spoiler_channels/maybeOpenSpoilerGateForVoiceChannel.native.tsx");
+const VoicePanelSpoilerAlertDefault = VoicePanelSpoilerAlert;
+
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/spoiler_channels/maybeOpenSpoilerGateForVoiceChannel.native.tsx");
 
 export const maybeOpenSpoilerGateForVoiceChannel = function maybeOpenSpoilerGateForVoiceChannel(id) {
-  channel = channel.getChannel(id);
+  const channel = ChannelStore.getChannel(id);
   let tmp2 = null == channel;
   if (!tmp2) {
-    let obj = isChannelSpoilerGated;
-    tmp2 = !obj.shouldShowSpoilerGateForChannelId(id);
+    tmp2 = !SpoilerChannelUtils.shouldShowSpoilerGateForChannelId(id);
   }
   let flag = !tmp2;
   if (!tmp2) {
-    obj = { channelId: null };
-    obj[0] = channel.id;
-    useAlertStore.openAlert(VoicePanelSpoilerAlert.VOICE_PANEL_SPOILER_KEY, jsx(VoicePanelSpoilerAlertDefault, { channelId: null }));
+    const obj3 = { channelId: channel.id };
+    useAlertStore.openAlert(VoicePanelSpoilerAlert.VOICE_PANEL_SPOILER_KEY, jsx(VoicePanelSpoilerAlertDefault, { channelId: channel.id }));
     flag = true;
-    const obj2 = useAlertStore;
   }
   return flag;
 };

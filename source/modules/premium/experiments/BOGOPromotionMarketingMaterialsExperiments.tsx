@@ -1,15 +1,15 @@
-// Module ID: 13475
-// Function ID: 13476
-// Name: apexExperiment
+// Module ID: 13498
+// Function ID: 13499
+// Name: BOGOPromotionMarketingMaterialsExperiments
 // Dependencies: [1433, 2]
 // Exports: getBogoMarketingMaterialsEnabled, useBogoMarketingMaterialsEnabled
 
-// Module 13475 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 13498 (BOGOPromotionMarketingMaterialsExperiments)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-03-bogo-promotion-marketing-materials-v2", kind: "user", defaultConfig: false, variations: { 1: true } });
-const result = set.fileFinishedImporting("modules/premium/experiments/BOGOPromotionMarketingMaterialsExperiments.tsx");
+const result = size.fileFinishedImporting("modules/premium/experiments/BOGOPromotionMarketingMaterialsExperiments.tsx");
 
 export default apexExperiment;
 export const useBogoMarketingMaterialsEnabled = function useBogoMarketingMaterialsEnabled(location) {

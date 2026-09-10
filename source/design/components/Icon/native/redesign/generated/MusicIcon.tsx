@@ -1,26 +1,26 @@
-// Module ID: 9916
-// Function ID: 9917
+// Module ID: 9943
+// Function ID: 9944
 // Name: MusicIcon
-// Dependencies: [19, 21, 576, 4261, 9917, 2]
+// Dependencies: [19, 21, 576, 4274, 9944, 2]
 // Exports: MusicIcon
 
-// Module 9916 (MusicIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 9917 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 9943 (MusicIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod9944 from "module_9944" /* 9944 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/MusicIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/MusicIcon.tsx");
 
 export const MusicIcon = function MusicIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9944, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,33 +1,33 @@
-// Module ID: 11137
-// Function ID: 11138
-// Name: tooltipEnterExitAnimation
-// Dependencies: [4974, 2]
+// Module ID: 11164
+// Function ID: 11165
+// Name: TooltipConstants
+// Dependencies: [4988, 2]
 // Exports: tooltipEnterExitAnimation
 
-// Module 11137 (tooltipEnterExitAnimation)
-import set from "set" /* 2 */;
+// Module 11164 (TooltipConstants)
+import spring from "spring" /* 4988 */;
+import size from "module_2" /* 2 */;
 
-let closure_2 = { overshootClamping: true, damping: 35, stiffness: 450, mass: 0.5, restDisplacementThreshold: 0.001 };
-let closure_3 = { code: "function TooltipConstantsNativeTsx1(visible,cleanUp){const{withSpring,translateY,TOOLTIP_SPRING}=this.__closure;return{transform:[{translateY:withSpring(visible===1?0:translateY,TOOLTIP_SPRING,'respect-motion-settings',cleanUp)}],opacity:withSpring(visible,TOOLTIP_SPRING,'respect-motion-settings',cleanUp)};}" };
-const result = set.fileFinishedImporting("design/components/Tooltip/native/TooltipConstants.native.tsx");
+const TOOLTIP_SPRING = { overshootClamping: true, damping: 35, stiffness: 450, mass: 0.5, restDisplacementThreshold: 0.001 };
+const __initData = { code: "function TooltipConstantsNativeTsx1(visible,cleanUp){const{withSpring,translateY,TOOLTIP_SPRING}=this.__closure;return{transform:[{translateY:withSpring(visible===1?0:translateY,TOOLTIP_SPRING,'respect-motion-settings',cleanUp)}],opacity:withSpring(visible,TOOLTIP_SPRING,'respect-motion-settings',cleanUp)};}" };
+const result = size.fileFinishedImporting("design/components/Tooltip/native/TooltipConstants.native.tsx");
 
 export const tooltipEnterExitAnimation = function tooltipEnterExitAnimation(position) {
   let num = -8;
   if ("top" === position) {
     num = 8;
   }
-  const fn = function o(value, fn2) {
-    let obj = num(closure_1_1[0]);
+  const fn = function o(targetHeight, fn2) {
     num = 0;
-    obj = { transform: null, opacity: null };
-    obj = { translateY: obj.withSpring(num, closure_1_2, "respect-motion-settings", fn2) };
-    const items = [obj];
-    obj[0] = items;
-    obj[1] = num(closure_1_1[0]).withSpring(value, closure_1_2, "respect-motion-settings", fn2);
-    return obj;
+    const obj2 = { transform: null, opacity: null };
+    const items = [{ translateY: spring.withSpring(num, closure_2, "respect-motion-settings", fn2) }];
+    obj2.transform = items;
+    const obj3 = { translateY: spring.withSpring(num, closure_2, "respect-motion-settings", fn2) };
+    obj2.opacity = spring.withSpring(targetHeight, closure_2, "respect-motion-settings", fn2);
+    return obj2;
   };
-  fn.__closure = { withSpring: num(4974).withSpring, translateY: num, TOOLTIP_SPRING: closure_2 };
+  fn.__closure = { withSpring: num(4988).withSpring, translateY: num, TOOLTIP_SPRING };
   fn.__workletHash = 7727487832145;
-  fn.__initData = closure_3;
+  fn.__initData = __initData;
   return fn;
 };

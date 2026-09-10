@@ -1,19 +1,19 @@
-// Module ID: 11931
-// Function ID: 11932
+// Module ID: 11957
+// Function ID: 11958
 // Name: ModalFooter
-// Dependencies: [19, 17, 21, 4560, 2]
+// Dependencies: [19, 17, 21, 4574, 2]
 // Exports: ModalFooter
 
-// Module 11931 (ModalFooter)
-import noopAll from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11957 (ModalFooter)
+import noop from "module_19" /* 19 */;
 
-noopAll;
-let closure_2 = createCacheKey.createStyles({ footer: { flexDirection: "column", paddingVertical: 16, paddingHorizontal: 24 } });
-const result = require("set").fileFinishedImporting("design/components/Modal/native/ModalFooter.native.tsx");
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_2 = createStyles.createStyles({ footer: { flexDirection: "column", paddingVertical: 16, paddingHorizontal: 24 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Modal/native/ModalFooter.native.tsx");
 
 export const ModalFooter = function ModalFooter(children) {
-  return <View style={callback().footer}>{arg0.children}</View>;
+  return <View style={closure_2().footer}>{arg0.children}</View>;
 };

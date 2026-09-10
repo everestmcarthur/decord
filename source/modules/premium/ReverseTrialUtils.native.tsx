@@ -1,18 +1,19 @@
-// Module ID: 8065
-// Function ID: 8066
-// Name: useIsInReverseTrial
+// Module ID: 8080
+// Function ID: 8081
+// Name: ReverseTrialUtils
 // Dependencies: [1371, 504, 2]
 // Exports: maybeShowReverseTrialFollowupUpsellModal, maybeShowReverseTrialInitialUpsellModal, useIsInReverseTrial, useReverseTrialDaysRemaining
 
-// Module 8065 (useIsInReverseTrial)
+// Module 8080 (ReverseTrialUtils)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/ReverseTrialUtils.native.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/ReverseTrialUtils.native.tsx");
 
 export const useIsInReverseTrial = function useIsInReverseTrial() {
-  const items = [closure_2];
+  const items = [UserStore];
   return initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;

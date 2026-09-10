@@ -1,11 +1,11 @@
-// Module ID: 8207
-// Function ID: 8208
+// Module ID: 8233
+// Function ID: 8234
 // Name: ProfileFrameLayerOrder
 // Dependencies: [2]
 
-// Module 8207 (ProfileFrameLayerOrder)
-import set from "set" /* 2 */;
+// Module 8233 (ProfileFrameLayerOrder)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ProfileFrameLayerOrder.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ProfileFrameLayerOrder.tsx");
 
 export const ProfileFrameLayerOrder = { FRONT: "front", BACK: "back" };

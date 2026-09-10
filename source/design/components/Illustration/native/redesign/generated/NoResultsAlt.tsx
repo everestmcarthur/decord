@@ -1,66 +1,64 @@
-// Module ID: 9765
-// Function ID: 9766
-// Name: getNoResultsAltSource
-// Dependencies: [19, 17, 21, 8233, 9766, 9767, 7054, 4411, 2]
+// Module ID: 9792
+// Function ID: 9793
+// Name: NoResultsAlt
+// Dependencies: [19, 17, 21, 8259, 9793, 9794, 7068, 4425, 2]
 // Exports: NoResultsAlt, getNoResultsAltSource, useNoResultsAltSource
 
-// Module 9765 (getNoResultsAltSource)
-import noopAll from "noop" /* 19 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
-import getIllustrationSource from "getIllustrationSource" /* 8233 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 9792 (NoResultsAlt)
+import shared from "shared" /* 4425 */;
+import _mod8259 from "module_8259" /* 8259 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/NoResultsAlt.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/NoResultsAlt.tsx");
 
 export const getNoResultsAltSource = function getNoResultsAltSource(theme) {
-  let obj = getIllustrationSource;
-  obj = {
+  return _mod8259.getIllustrationSource(theme, {
     dark() {
-      return callback(9766);
+      return require("module_9793");
     },
     darker() {
-      return callback(9767);
+      return require("module_9794");
     },
     light() {
-      return callback(7054);
+      return require("module_7068");
     }
-  };
-  return obj.getIllustrationSource(theme, obj);
+  });
 };
 export const useNoResultsAltSource = function useNoResultsAltSource() {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = shared;
+  return _mod8259.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return callback(9766);
+      return require("module_9793");
     },
     darker() {
-      return callback(9767);
+      return require("module_9794");
     },
     light() {
-      return callback(7054);
+      return require("module_7068");
     }
-  };
-  return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  });
 };
 export const NoResultsAlt = function NoResultsAlt(arg0) {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = shared;
+  const obj4 = {};
+  const illustrationSource = _mod8259.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return callback(9766);
+      return require("module_9793");
     },
     darker() {
-      return callback(9767);
+      return require("module_9794");
     },
     light() {
-      return callback(7054);
+      return require("module_7068");
     }
-  };
-  obj = {};
-  const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  });
   const merged = Object.assign(arg0);
-  obj.source = illustrationSource;
+  obj4.source = illustrationSource;
   return <Image />;
 };

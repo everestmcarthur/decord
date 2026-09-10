@@ -1,11 +1,11 @@
-// Module ID: 10832
-// Function ID: 10833
-// Name: UnifiedGiftModalScreens
+// Module ID: 10859
+// Function ID: 10860
+// Name: UnifiedGiftModalTypes
 // Dependencies: [2]
 
-// Module 10832 (UnifiedGiftModalScreens)
-import set from "set" /* 2 */;
+// Module 10859 (UnifiedGiftModalTypes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/checkout/native/gifting/UnifiedGiftModalTypes.tsx");
+const result = size.fileFinishedImporting("modules/checkout/native/gifting/UnifiedGiftModalTypes.tsx");
 
 export const UnifiedGiftModalScreens = { GIFT_DETAIL: "GiftDetail", RECIPENT_SELECT: "RecipientSelect" };

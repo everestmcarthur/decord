@@ -1,35 +1,32 @@
-// Module ID: 13439
-// Function ID: 13440
+// Module ID: 13462
+// Function ID: 13463
 // Name: PillText
-// Dependencies: [1074, 21, 4560, 576, 13440, 4987, 4556, 2]
+// Dependencies: [1074, 21, 4574, 576, 13463, 5001, 4570, 2]
 // Exports: default
 
-// Module 13439 (PillText)
-import set from "set" /* 2 */;
+// Module 13462 (PillText)
 import jsxProd from "jsxProd" /* 21 */;
-import ThemesDefault from "Themes" /* 576 */;
-import ME from "ME" /* 1074 */;
-import Text from "Text" /* 4556 */;
-import LinearGradientDefault from "LinearGradient" /* 4987 */;
-import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 13440 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import Constants from "Constants" /* 1074 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import LinearGradientDefault from "LinearGradient" /* 5001 */;
+import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 13463 */;
+import createStyles from "createStyles" /* 4574 */;
+import size from "module_2" /* 2 */;
 
-const HorizontalGradient = ME.HorizontalGradient;
+const HorizontalGradient = Constants.HorizontalGradient;
 const jsx = jsxProd.jsx;
-let obj = { pillTextContainer: null, pillText: null };
-obj = { paddingHorizontal: 8, borderRadius: ThemesDefault.radii.lg, justifyContent: "center" };
-obj[0] = obj;
-obj[1] = { textTransform: "uppercase" };
-let closure_5 = createCacheKey.createStyles(obj);
-const result = set.fileFinishedImporting("modules/premium/native/components/PillText.tsx");
+let obj = { pillTextContainer: { paddingHorizontal: 8, borderRadius: nativeDefault.radii.lg, justifyContent: "center" }, pillText: { textTransform: "uppercase" } };
+let closure_5 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/premium/native/components/PillText.tsx");
 
 export default function PillText(arg0) {
   ({ pillText, style } = arg0);
-  const tmp = callback();
-  let obj = { style: items, start: HorizontalGradient.START, end: HorizontalGradient.END, colors: usePremiumPrimaryGradientColorsDefault(), children: null };
-  items = [tmp.pillTextContainer, style];
+  const tmp = closure_5();
+  const obj = { style: null, start: HorizontalGradient.START, end: HorizontalGradient.END, colors: usePremiumPrimaryGradientColorsDefault(), children: null };
+  const items = [tmp.pillTextContainer, style];
+  obj.style = items;
   const tmp2 = usePremiumPrimaryGradientColorsDefault();
-  obj = { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.pillText, children: pillText };
-  obj[4] = jsx(Text.Text, { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.pillText, children: pillText });
-  return jsx(LinearGradientDefault, { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.pillText, children: pillText });
+  obj.children = jsx(Text_Text.Text, { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.pillText, children: pillText });
+  return jsx(LinearGradientDefault, { style: null, start: HorizontalGradient.START, end: HorizontalGradient.END, colors: usePremiumPrimaryGradientColorsDefault(), children: null });
 };

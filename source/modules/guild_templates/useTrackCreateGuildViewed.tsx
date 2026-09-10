@@ -1,33 +1,34 @@
-// Module ID: 11799
-// Function ID: 11800
+// Module ID: 11825
+// Function ID: 11826
 // Name: useTrackCreateGuildViewed
-// Dependencies: [19, 7326, 1074, 1242, 2]
+// Dependencies: [19, 7340, 1074, 1242, 2]
 // Exports: default
 
-// Module 11799 (useTrackCreateGuildViewed)
-import closure_2 from "noop" /* 19 */;
-import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 7326 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
+// Module 11825 (useTrackCreateGuildViewed)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/guild_templates/useTrackCreateGuildViewed.tsx");
+const GuildTemplateStates = fn(7340).GuildTemplateStates;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_templates/useTrackCreateGuildViewed.tsx");
 
 export default function useTrackCreateGuildViewed(arg0) {
   closure_0 = arg0;
-  closure_1 = React.useRef([]);
-  const effect = React.useEffect(() => {
-    let tmp2 = null != callback;
+  noop.useRef([]);
+  const effect = noop.useEffect(() => {
+    let tmp2 = null != closure_0;
     if (tmp2) {
-      tmp2 = tmp.state !== closure_1_3.RESOLVING;
+      tmp2 = tmp.state !== GuildTemplateStates.RESOLVING;
     }
     if (tmp2) {
-      let current = ref.current;
+      const current = ref.current;
       if (!current.includes(tmp.code)) {
-        current = tmp4.current;
-        current.push(tmp.code);
-        let obj = callback(ref[3]);
-        obj = { guild_template_code: null, guild_template_name: null, guild_template_description: null, guild_template_guild_id: null };
-        ({ code: obj2[0], name: obj2[1], description: obj2[2], sourceGuildId: obj2[3] } = tmp);
-        obj.track(closure_1_4.CREATE_GUILD_VIEWED, obj);
+        const current1 = tmp4.current;
+        current1.push(tmp.code);
+        ({ code: obj2.guild_template_code, name: obj2.guild_template_name, description: obj2.guild_template_description, sourceGuildId: obj2.guild_template_guild_id } = tmp);
+        AnalyticsUtilsDefault.track(AnalyticEvents.CREATE_GUILD_VIEWED, { guild_template_code: null, guild_template_name: null, guild_template_description: null, guild_template_guild_id: null });
+        const obj3 = { guild_template_code: null, guild_template_name: null, guild_template_description: null, guild_template_guild_id: null };
       }
       tmp4 = ref;
     }

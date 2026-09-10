@@ -1,20 +1,20 @@
-// Module ID: 7556
-// Function ID: 7557
-// Name: apexExperiment
+// Module ID: 7570
+// Function ID: 7571
+// Name: XboxGamePassPerksExperiment
 // Dependencies: [1433, 2]
 // Exports: getIsXboxGamePassPerksEnabled, useIsXboxGamePassPerksEnabled
 
-// Module 7556 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 7570 (XboxGamePassPerksExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-03-crepe", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
-const result = set.fileFinishedImporting("modules/partner_perks/xbox/game_pass_perks/XboxGamePassPerksExperiment.tsx");
+const result = size.fileFinishedImporting("modules/partner_perks/xbox/game_pass_perks/XboxGamePassPerksExperiment.tsx");
 
 export default apexExperiment;
-export const useIsXboxGamePassPerksEnabled = function useIsXboxGamePassPerksEnabled(location) {
-  return apexExperiment.useConfig({ location }).enabled;
+export const useIsXboxGamePassPerksEnabled = function useIsXboxGamePassPerksEnabled(ProgramRewardsUtils) {
+  return apexExperiment.useConfig({ location: ProgramRewardsUtils }).enabled;
 };
-export const getIsXboxGamePassPerksEnabled = function getIsXboxGamePassPerksEnabled(canUseMonthlyOrbs) {
-  return apexExperiment.getConfig({ location: canUseMonthlyOrbs }).enabled;
+export const getIsXboxGamePassPerksEnabled = function getIsXboxGamePassPerksEnabled(ProgramRewardsUtils) {
+  return apexExperiment.getConfig({ location: ProgramRewardsUtils }).enabled;
 };

@@ -1,14 +1,14 @@
-// Module ID: 11268
-// Function ID: 11269
-// Name: componentWillUnmount
-// Dependencies: [19, 21, 11269, 7072, 2]
+// Module ID: 11295
+// Function ID: 11296
+// Name: SwipeableFastList
+// Dependencies: [19, 21, 11296, 7086, 2]
 
-// Module 11268 (componentWillUnmount)
-import renderDefaultEmptyDefault from "renderDefaultEmpty" /* 7072 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+// Module 11295 (SwipeableFastList)
+import FastListDefault from "FastList" /* 7086 */;
+import noop from "module_19" /* 19 */;
 
-const Component = importAllResult.Component;
+const jsx = fn(21).jsx;
+const Component = noop.Component;
 class SwipeableFastList extends Component {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -32,7 +32,7 @@ class SwipeableFastList extends Component {
           return renderQuickActions(closure_0, closure_1);
         },
         ref(arg0) {
-          closure_0._refs[closure_3] = arg0;
+          applyArgumentsResult._refs[closure_3] = arg0;
           if (tmp) {
             obj.bounceSwipeable(arg0);
             const props = obj.props;
@@ -43,15 +43,38 @@ class SwipeableFastList extends Component {
           }
         },
         overshootFriction: 8,
-        onSwipeableWillOpen(View, arg1) {
-          return closure_0.handleOpen(closure_3);
+        onSwipeableWillOpen() {
+          return applyArgumentsResult.handleOpen(closure_3);
         },
         onSwipeableClose() {
-          return closure_0.handleClose(closure_3);
+          return applyArgumentsResult.handleClose(closure_3);
         },
         children: props.renderItem(arg0, arg1, arg2)
       };
-      return closure_1_2(arg0(closure_1_1[2]), obj);
+      return jsx(arg0(dependencyMap[2]), {
+        renderRightActions() {
+          return renderQuickActions(closure_0, closure_1);
+        },
+        ref(arg0) {
+          applyArgumentsResult._refs[closure_3] = arg0;
+          if (tmp) {
+            obj.bounceSwipeable(arg0);
+            const props = obj.props;
+            const onBounceSwipable = props.onBounceSwipable;
+            if (onBounceSwipable != null) {
+              onBounceSwipable();
+            }
+          }
+        },
+        overshootFriction: 8,
+        onSwipeableWillOpen() {
+          return applyArgumentsResult.handleOpen(closure_3);
+        },
+        onSwipeableClose() {
+          return applyArgumentsResult.handleClose(closure_3);
+        },
+        children: props.renderItem(arg0, arg1, arg2)
+      });
     };
     applyArgumentsResult.handleScroll = function handleScroll(arg0) {
       applyArgumentsResult.closeOpenRow();
@@ -71,8 +94,7 @@ prototype["componentWillUnmount"] = function componentWillUnmount() {
   }
 };
 prototype["bounceSwipeable"] = function bounceSwipeable(arg0) {
-  let self = this;
-  self = this;
+  const self = this;
   closure_0 = arg0;
   if (null != this._bounceTimeout) {
     const _clearTimeout = clearTimeout;
@@ -81,7 +103,7 @@ prototype["bounceSwipeable"] = function bounceSwipeable(arg0) {
   self._bounceTimeout = setTimeout(() => {
     closure_0.openRight();
     self._bounceTimeout = setTimeout(() => {
-      closure_0.close();
+      closure_1_0.close();
     }, 400);
   }, 700);
 };
@@ -90,7 +112,6 @@ prototype["closeOpenRow"] = function closeOpenRow() {
   if (null != this._openRowKey) {
     if (null != self._refs[self._openRowKey]) {
       self._refs[self._openRowKey].close();
-      const obj = self._refs[self._openRowKey];
     }
     self._openRowKey = null;
   }
@@ -108,14 +129,15 @@ prototype["render"] = function render() {
   const obj = {};
   const merged = Object.assign(this.props);
   ({ handleScroll: obj.onScroll, renderRow: obj.renderItem } = this);
-  return jsx(renderDefaultEmptyDefault, {});
+  return jsx(FastListDefault, {});
 };
 SwipeableFastList.defaultProps = {
   bounceFirstRowOnMount: true,
-  renderQuickActions(closure_0, closure_1) {
+  renderQuickActions() {
     return null;
   }
 };
-const result = require("set").fileFinishedImporting("components_native/common/SwipeableFastList.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/common/SwipeableFastList.tsx");
 
 export default SwipeableFastList;

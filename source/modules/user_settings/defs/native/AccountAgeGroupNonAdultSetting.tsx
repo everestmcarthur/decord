@@ -1,29 +1,29 @@
-// Module ID: 14761
-// Function ID: 14762
-// Name: pressable
-// Dependencies: [7975, 8411, 8413, 4773, 1114, 5423, 14685, 11473, 2]
+// Module ID: 14787
+// Function ID: 14788
+// Name: AccountAgeGroupNonAdultSetting
+// Dependencies: [7989, 8439, 8441, 4787, 1114, 5437, 14711, 11500, 2]
 
-// Module 14761 (pressable)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4773 */;
-import isFeatureAgeGated from "isFeatureAgeGated" /* 5423 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import openIncodeAgeVerificationModalDefault from "openIncodeAgeVerificationModal" /* 8411 */;
-import AgeVerificationModalEntryPoint from "AgeVerificationModalEntryPoint" /* 8413 */;
-import useIsTinyBroncoSettingsEnabled from "useIsTinyBroncoSettingsEnabled" /* 14685 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 14787 (AccountAgeGroupNonAdultSetting)
+import util from "util" /* 1114 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 4787 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5437 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8439 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8441 */;
+import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14711 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-const pressable = createToggle.createPressable({
+const pressable = SettingBuilders.createPressable({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["/52UYy"]);
+    const intl = util.intl;
+    return intl.string(util.t["/52UYy"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
+  parent: SettingsConstants.MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountAgeGroupNonAdultSettingTrailing() {
-    const isAgeVerified = useAgeVerificationRunner.useIsAgeVerified();
-    const intl = getSystemLocale.intl;
-    let stringResult = intl.string(getSystemLocale.t.lKDPGA);
+    const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
+    const intl = util.intl;
+    let stringResult = intl.string(util.t.lKDPGA);
     if (isAgeVerified) {
       const intl2 = tmp(1114).intl;
       stringResult = intl2.string(tmp(1114).t.sK0dmH);
@@ -31,19 +31,15 @@ const pressable = createToggle.createPressable({
     return stringResult;
   },
   onPress: function onAccountAgeGroupNonAdultSettingPress() {
-    let obj = openIncodeAgeVerificationModalDefault;
-    obj = { entryPoint: AgeVerificationModalEntryPoint.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP };
-    const result = obj.showAgeVerificationGetStartedModal(obj);
+    const obj = AgeVerificationActionCreatorsDefault;
+    const result = obj.showAgeVerificationGetStartedModal({ entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP });
   },
   withArrow: true,
   usePredicate: function AccountAgeGroupNonAdultSettingPredicate() {
-    const isAgeVerified = useAgeVerificationRunner.useIsAgeVerified();
-    const obj = useAgeVerificationRunner;
-    const isVerifiedTeen = useAgeVerificationRunner.useIsVerifiedTeen();
-    const obj2 = useAgeVerificationRunner;
-    let hasTeenDefaults = isFeatureAgeGated.useHasTeenDefaults();
-    const obj3 = isFeatureAgeGated;
-    const isTinyBroncoSettingsEnabled = useIsTinyBroncoSettingsEnabled.useIsTinyBroncoSettingsEnabled();
+    const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
+    const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
+    let hasTeenDefaults = RegionalFeatureConfigUtils.useHasTeenDefaults();
+    const isTinyBroncoSettingsEnabled = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled();
     if (hasTeenDefaults) {
       let tmp5 = !isAgeVerified;
       if (isAgeVerified) {
@@ -57,49 +53,6 @@ const pressable = createToggle.createPressable({
     return hasTeenDefaults;
   }
 });
-let obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["/52UYy"]);
-  },
-  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
-  useTrailing: function useAccountAgeGroupNonAdultSettingTrailing() {
-    const isAgeVerified = useAgeVerificationRunner.useIsAgeVerified();
-    const intl = getSystemLocale.intl;
-    let stringResult = intl.string(getSystemLocale.t.lKDPGA);
-    if (isAgeVerified) {
-      const intl2 = tmp(1114).intl;
-      stringResult = intl2.string(tmp(1114).t.sK0dmH);
-    }
-    return stringResult;
-  },
-  onPress: function onAccountAgeGroupNonAdultSettingPress() {
-    let obj = openIncodeAgeVerificationModalDefault;
-    obj = { entryPoint: AgeVerificationModalEntryPoint.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP };
-    const result = obj.showAgeVerificationGetStartedModal(obj);
-  },
-  withArrow: true,
-  usePredicate: function AccountAgeGroupNonAdultSettingPredicate() {
-    const isAgeVerified = useAgeVerificationRunner.useIsAgeVerified();
-    const obj = useAgeVerificationRunner;
-    const isVerifiedTeen = useAgeVerificationRunner.useIsVerifiedTeen();
-    const obj2 = useAgeVerificationRunner;
-    let hasTeenDefaults = isFeatureAgeGated.useHasTeenDefaults();
-    const obj3 = isFeatureAgeGated;
-    const isTinyBroncoSettingsEnabled = useIsTinyBroncoSettingsEnabled.useIsTinyBroncoSettingsEnabled();
-    if (hasTeenDefaults) {
-      let tmp5 = !isAgeVerified;
-      if (isAgeVerified) {
-        tmp5 = isVerifiedTeen;
-      }
-      hasTeenDefaults = tmp5;
-    }
-    if (hasTeenDefaults) {
-      hasTeenDefaults = !isTinyBroncoSettingsEnabled;
-    }
-    return hasTeenDefaults;
-  }
-};
-let result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountAgeGroupNonAdultSetting.tsx");
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountAgeGroupNonAdultSetting.tsx");
 
 export default pressable;

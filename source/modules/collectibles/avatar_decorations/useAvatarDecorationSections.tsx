@@ -1,45 +1,48 @@
-// Module ID: 13172
-// Function ID: 13173
+// Module ID: 13195
+// Function ID: 13196
 // Name: useAvatarDecorationSections
-// Dependencies: [32, 19, 7542, 7558, 563, 7554, 1114, 2]
+// Dependencies: [32, 19, 7556, 7572, 563, 7568, 1114, 2]
 // Exports: default
 
-// Module 13172 (useAvatarDecorationSections)
-import closure_2 from "_slicedToArray" /* 32 */;
-import { useMemo } from "noop" /* 19 */;
-import closure_4 from "updateCategoriesAndProducts" /* 7542 */;
-import closure_5 from "map" /* 7558 */;
+// Module 13195 (useAvatarDecorationSections)
+import util from "util" /* 1114 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7568 */;
+import _slicedToArray from "module_32" /* 32 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7556 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7572 */;
 
-const require = arg1;
-let obj = { PURCHASE: "purchase", PREMIUM_PURCHASE: "premium_purchase", PREVIEW: "preview" };
-obj = { skuId: "None" };
-obj = { skuId: "Shop" };
-let result = require("set").fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecorationSections.tsx");
+require = fn;
+const useMemo = fn(19).useMemo;
+const Section = { PURCHASE: "purchase", PREMIUM_PURCHASE: "premium_purchase", PREVIEW: "preview" };
+let obj2 = { skuId: "None" };
+let obj3 = { skuId: "Shop" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecorationSections.tsx");
 
 export default function useAvatarDecorationSections() {
-  let items = [closure_5];
+  let items = [CollectiblesPurchaseStore];
   stateFromStores = stateFromStores(first[4]).useStateFromStores(items, () => purchases.purchases);
-  obj = stateFromStores(first[4]);
-  let items1 = [closure_4];
-  const tmp2 = callback(stateFromStores(first[4]).useStateFromStoresArray(items1, () => {
+  let obj = stateFromStores(first[4]);
+  let items1 = [CollectiblesCategoryStore];
+  const tmp2 = _slicedToArray(stateFromStores(first[4]).useStateFromStoresArray(items1, () => {
     const items = [, ];
-    ({ categories: arr[0], products: arr[1] } = closure_4);
+    ({ categories: arr[0], products: arr[1] } = CollectiblesCategoryStore);
     return items;
   }), 2);
   first = tmp2[0];
-  callback = tmp4;
+  _slicedToArray = tmp4;
   const items2 = [first, tmp2[1], stateFromStores];
   return useMemo(() => {
-    obj = stateFromStores(first[5]);
+    let obj = CollectiblesUtils;
     const avatarDecorations = obj.getAvatarDecorations(stateFromStores, first);
     const reduced = avatarDecorations.reduce((premium_purchase, skuId) => {
-      const value = closure_0.get(skuId.skuId);
+      value = closure_1_0.get(skuId.skuId);
       if (null != value) {
-        let result = closure_1_0(closure_1_1[5]).isPremiumCollectiblesPurchase(value);
-        const obj2 = closure_1_0(closure_1_1[5]);
+        let result = stateFromStores(first[5]).isPremiumCollectiblesPurchase(value);
+        obj2 = stateFromStores(first[5]);
       } else {
-        result = closure_1_0(closure_1_1[5]).isPremiumCollectiblesProduct(closure_2.get(skuId.skuId));
-        obj = closure_1_0(closure_1_1[5]);
+        result = stateFromStores(first[5]).isPremiumCollectiblesProduct(closure_1_2.get(skuId.skuId));
+        const obj = stateFromStores(first[5]);
       }
       if (result) {
         premium_purchase = premium_purchase.premium_purchase;
@@ -53,22 +56,23 @@ export default function useAvatarDecorationSections() {
       }
       return premium_purchase;
     }, { purchase: [], premium_purchase: [], preview: [] });
-    obj = { section: closure_1_6.PURCHASE, items, height: 12, header: null };
-    items = [closure_1_7, closure_1_8, ...reduced.purchase];
-    const intl = stateFromStores(first[6]).intl;
-    obj[3] = intl.string(stateFromStores(first[6]).t.VqmVqE);
-    const items1 = [obj, , ];
-    obj = { section: closure_1_6.PREMIUM_PURCHASE, items: reduced.premium_purchase, height: 12, header: null };
-    const intl2 = stateFromStores(first[6]).intl;
-    obj[3] = intl2.string(stateFromStores(first[6]).t.TiLCgw);
-    items1[1] = obj;
-    obj1 = { section: closure_1_6.PREVIEW, items: reduced.preview, height: 12, header: null };
-    const intl3 = stateFromStores(first[6]).intl;
-    obj1[3] = intl3.string(stateFromStores(first[6]).t["1vbbee"]);
-    items1[2] = obj1;
+    obj2 = { section: obj.PURCHASE, items: null, height: 12, header: null };
+    const items = [obj2, obj3, ...reduced.purchase];
+    obj2.items = items;
+    const intl = util.intl;
+    obj2.header = intl.string(util.t.VqmVqE);
+    const items1 = [obj2, , ];
+    obj3 = { section: obj.PREMIUM_PURCHASE, items: reduced.premium_purchase, height: 12, header: null };
+    const intl2 = util.intl;
+    obj3.header = intl2.string(util.t.TiLCgw);
+    items1[1] = obj3;
+    const obj4 = { section: obj.PREVIEW, items: reduced.preview, height: 12, header: null };
+    const intl3 = util.intl;
+    obj4.header = intl3.string(util.t["1vbbee"]);
+    items1[2] = obj4;
     return items1.filter((items) => items.items.length > 0);
   }, items2);
 };
-export const Section = obj;
-export const NONE_ITEM = obj;
-export const SHOP_ITEM = obj;
+export { Section };
+export const NONE_ITEM = obj2;
+export const SHOP_ITEM = obj3;

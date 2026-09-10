@@ -1,63 +1,59 @@
-// Module ID: 4544
-// Function ID: 4545
-// Name: updateInvite
-// Dependencies: [1074, 4545, 504, 573, 2]
+// Module ID: 4558
+// Function ID: 4559
+// Name: InviteStore
+// Dependencies: [1074, 4559, 504, 573, 2]
 
-// Module 4544 (updateInvite)
-import set from "set" /* 2 */;
+// Module 4558 (InviteStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import ME from "ME" /* 1074 */;
-import readSnowflake from "readSnowflake" /* 4545 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 1074 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 4559 */;
+import size from "module_2" /* 2 */;
 
-function updateInvite(code, arg1) {
+function updateInvite(code, fn) {
   let str = code;
   if (code == null) {
     str = "";
   }
-  let obj = readSnowflake;
-  const result = obj.parseExtraDataFromInviteKey(str);
-  const value = map.get(str);
+  const result = InviteCodeUtils.parseExtraDataFromInviteKey(str);
+  value = map.get(str);
   if (null != value) {
-    obj = { state: null };
-    obj[0] = InviteStates.RESOLVING;
+    const obj2 = { state: InviteStates.RESOLVING };
     const merged = Object.assign(value);
+    let obj3 = obj2;
   } else {
-    obj = { state: null, code: null };
-    obj[0] = InviteStates.RESOLVING;
-    obj[1] = result.baseCode;
+    obj3 = { state: InviteStates.RESOLVING, code: result.baseCode };
   }
-  arg1(obj);
+  fn(obj3);
   map = new Map(map);
-  const result1 = map.set(str, obj);
-  const guild = obj.guild;
+  const result1 = map.set(str, obj3);
+  const guild = obj3.guild;
   let id;
   if (guild != null) {
     id = guild.id;
   }
   if (null != id) {
-    obj1 = {};
-    const merged1 = Object.assign(obj1);
-    obj1[obj.guild.id] = str;
+    obj4 = {};
+    const merged1 = Object.assign(obj4);
+    obj4[obj3.guild.id] = str;
   }
 }
 function handleInviteResolveFailure(code) {
-  closure_0 = code;
+  const banned = code;
   updateInvite(code.code, (arg0) => {
     if ("banned" in banned) {
       if (banned.banned) {
-        let EXPIRED = closure_1_2.BANNED;
+        let EXPIRED = InviteStates.BANNED;
       }
       arg0.state = EXPIRED;
     }
-    EXPIRED = closure_1_2.EXPIRED;
+    EXPIRED = InviteStates.EXPIRED;
   });
 }
-const InviteStates = ME.InviteStates;
-let map = new Map();
+const InviteStates = Constants.InviteStates;
+new Map();
 const map1 = new Map();
-let closure_5 = {};
-const map2 = new Map();
+let map = new Map();
 const Store = initializeDefault.Store;
 class InviteStore extends Store {
 }
@@ -72,25 +68,22 @@ prototype["getInvites"] = function getInvites() {
   return map;
 };
 prototype["getInviteKeyForGuildId"] = function getInviteKeyForGuildId(id) {
-  return table[id];
+  return obj4[id];
 };
 prototype["getFriendMemberIds"] = function getFriendMemberIds(arg0) {
-  return map2.get(arg0);
+  return map.get(arg0);
 };
 InviteStore.displayName = "InviteStore";
-const inviteStore = new InviteStore(dispatcherDefault, {
+const inviteStore = new InviteStore(DispatcherDefault, {
   INVITE_RESOLVE: function handleInviteResolve(code) {
     code = code.code;
-    let obj = readSnowflake;
-    const result = obj.parseExtraDataFromInviteKey(code);
+    const result = InviteCodeUtils.parseExtraDataFromInviteKey(code);
     map = new Map(map);
-    obj = { code: result.baseCode, state: InviteStates.RESOLVING };
-    const result1 = map.set(code, obj);
+    const result1 = map.set(code, { code: result.baseCode, state: InviteStates.RESOLVING });
   },
   INVITE_RESOLVE_SUCCESS: function handleInviteResolveSuccess(code) {
-    closure_0 = code;
     updateInvite(code.code, (arg0) => {
-      arg0.state = closure_1_2.RESOLVED;
+      arg0.state = InviteStates.RESOLVED;
       arg0.guild = code.invite.guild;
       arg0.channel = code.invite.channel;
       arg0.inviter = code.invite.inviter;
@@ -125,24 +118,22 @@ const inviteStore = new InviteStore(dispatcherDefault, {
   INVITE_RESOLVE_FAILURE: handleInviteResolveFailure,
   INSTANT_INVITE_REVOKE_SUCCESS: handleInviteResolveFailure,
   FRIEND_INVITE_CREATE_SUCCESS: function handleFriendInviteCreate(invite) {
-    closure_0 = invite;
     updateInvite(invite.invite.code, (arg0) => {
-      arg0.state = closure_1_2.RESOLVED;
+      arg0.state = InviteStates.RESOLVED;
       arg0.inviter = invite.invite.inviter;
     });
   },
   FRIEND_INVITE_REVOKE_SUCCESS: function handleFriendInviteRevokeSuccess(invites) {
     invites = invites.invites;
     const item = invites.forEach((code) => {
-      callback(code.code, (arg0) => {
+      updateInvite(code.code, (arg0) => {
         arg0.state = constants.EXPIRED;
       });
     });
   },
   INSTANT_INVITE_CREATE_SUCCESS: function handleInstantInviteCreate(invite) {
-    closure_0 = invite;
     updateInvite(invite.invite.code, (arg0) => {
-      arg0.state = closure_1_2.RESOLVED;
+      arg0.state = InviteStates.RESOLVED;
       arg0.guild = invite.invite.guild;
       arg0.channel = invite.invite.channel;
       arg0.inviter = invite.invite.inviter;
@@ -172,9 +163,8 @@ const inviteStore = new InviteStore(dispatcherDefault, {
     });
   },
   INVITE_ACCEPT_SUCCESS: function handleAcceptInviteSuccess(code) {
-    closure_0 = code;
     updateInvite(code.code, (channel) => {
-      channel.state = closure_1_2.ACCEPTED;
+      channel.state = InviteStates.ACCEPTED;
       channel.guild = code.invite.guild;
       channel.new_member = code.invite.new_member;
       const merged = Object.assign(channel.channel);
@@ -217,6 +207,6 @@ const inviteStore = new InviteStore(dispatcherDefault, {
     }
   }
 });
-let result = set.fileFinishedImporting("stores/InviteStore.tsx");
+let result = size.fileFinishedImporting("stores/InviteStore.tsx");
 
 export default inviteStore;

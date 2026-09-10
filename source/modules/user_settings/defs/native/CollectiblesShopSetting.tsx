@@ -1,42 +1,43 @@
-// Module ID: 15807
-// Function ID: 15808
-// Name: route
-// Dependencies: [1074, 11473, 1114, 12142, 15808, 7541, 7182, 2]
+// Module ID: 15837
+// Function ID: 15838
+// Name: CollectiblesShopSetting
+// Dependencies: [1074, 11500, 1114, 12168, 15838, 7555, 7196, 2]
 
-// Module 15807 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import ShopIcon from "ShopIcon" /* 12142 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15837 (CollectiblesShopSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7555 */;
+import ShopIcon from "ShopIcon" /* 12168 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const require = globalThis.__r;
+
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.pWG4ze);
+    const intl = util.intl;
+    return intl.string(util.t.pWG4ze);
   },
   parent: null,
   IconComponent: ShopIcon.ShopIcon,
-  screen: obj,
+  screen: {
+    route: Constants.UserSettingsSections.COLLECTIBLES_SHOP,
+    getComponent() {
+      return require("CollectiblesShopScreen").default;
+    }
+  },
   usePreNavigationAction() {
     return () => {
-      let obj = callback(7541);
-      obj = { analyticsLocations: null, analyticsSource: null };
-      const items = [callback2(7182).USER_SETTINGS];
-      obj[0] = items;
-      obj[1] = callback2(7182).USER_SETTINGS;
-      const result = obj.openCollectiblesShopMobile(obj);
+      const obj2 = { analyticsLocations: null, analyticsSource: null };
+      const items = [AnalyticsLocationDefault.USER_SETTINGS];
+      obj2.analyticsLocations = items;
+      obj2.analyticsSource = AnalyticsLocationDefault.USER_SETTINGS;
+      const result = CollectiblesActionCreators.openCollectiblesShopMobile(obj2);
       return false;
     };
   }
-};
-obj = {
-  route: ME.UserSettingsSections.COLLECTIBLES_SHOP,
-  getComponent() {
-    return require(15808) /* CollectiblesShopScreen */.default;
-  }
-};
-const route = createToggle.createRoute(obj);
-let result = set.fileFinishedImporting("modules/user_settings/defs/native/CollectiblesShopSetting.tsx");
+});
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/CollectiblesShopSetting.tsx");
 
 export default route;

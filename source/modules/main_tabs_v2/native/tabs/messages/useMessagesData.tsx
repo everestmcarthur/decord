@@ -1,47 +1,48 @@
-// Module ID: 16048
-// Function ID: 16049
+// Module ID: 16078
+// Function ID: 16079
 // Name: useMessagesData
-// Dependencies: [32, 19, 5277, 502, 4209, 7218, 504, 16049, 1935, 2]
+// Dependencies: [32, 19, 5291, 502, 4222, 7232, 504, 16079, 1935, 2]
 // Exports: default
 
-// Module 16048 (useMessagesData)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "_handleConnectionOpen" /* 5277 */;
-import closure_6 from "fetchFingerprint" /* 502 */;
-import closure_7 from "markAllUserIdListsStale" /* 4209 */;
-import closure_8 from "makeSortedChannel" /* 7218 */;
+// Module 16078 (useMessagesData)
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5291 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7232 */;
 
-const require = arg1;
-let obj = { HappeningNow: 0, [0]: "HappeningNow", EmptyState: 1, [1]: "EmptyState" };
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesData.tsx");
+const require = fn;
+const MessagesDataHeader = { HappeningNow: 0, [0]: "HappeningNow", EmptyState: 1, [1]: "EmptyState" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesData.tsx");
 
 export default function useMessagesData() {
   let items = [numFriendSuggestions, friendSuggestions];
-  const stateFromStoresObject = connected(first[6]).useStateFromStoresObject(items, () => ({ connected: null != numFriendSuggestions.getSessionId(), connectedToGateway: friendSuggestions.isConnected() }));
+  const stateFromStoresObject = connected(channelFavorites[6]).useStateFromStoresObject(items, () => ({ connected: null != numFriendSuggestions.getSessionId(), connectedToGateway: friendSuggestions.isConnected() }));
   connected = stateFromStoresObject.connected;
   const connectedToGateway = stateFromStoresObject.connectedToGateway;
-  obj = connected(first[6]);
+  let obj = connected(channelFavorites[6]);
   const items1 = [stateFromStores];
-  const tmp4 = callback(connected(first[6]).useStateFromStoresArray(items1, () => stateFromStores.getSortedChannels()), 2);
-  first = tmp4[0];
-  callback = tmp6;
+  const tmp4 = _slicedToArray(connected(channelFavorites[6]).useStateFromStoresArray(items1, () => stateFromStores.getSortedChannels()), 2);
+  channelFavorites = tmp4[0];
+  _slicedToArray = tmp6;
   let tmp8 = connected;
-  const obj2 = connected(first[6]);
+  const obj2 = connected(channelFavorites[6]);
   if (connected) {
     tmp8 = connectedToGateway;
   }
-  const tmp7Result = connectedToGateway(first[7])({ location: "Messages Tab", isConnected: tmp8 });
+  const tmp7Result = connectedToGateway(channelFavorites[7])({ location: "Messages Tab", isConnected: tmp8 });
   const setAdded = tmp7Result.setAdded;
   friendSuggestions = tmp7Result.friendSuggestions;
   numFriendSuggestions = tmp7Result.numFriendSuggestions;
   const HappeningNowCardsDisabled = tmp(tmp2[8]).HappeningNowCardsDisabled;
   const setting = HappeningNowCardsDisabled.useSetting();
-  const tmp7 = connectedToGateway(first[7]);
+  const tmp7 = connectedToGateway(channelFavorites[7]);
   const items2 = [setting];
-  stateFromStores = connected(first[6]).useStateFromStores(items2, () => setting.getFriendCount());
-  closure_9 = setAdded.useRef(-1);
-  const items3 = [connected, connectedToGateway, first, tmp4[1], numFriendSuggestions, friendSuggestions, setting, stateFromStores, setAdded];
+  stateFromStores = connected(channelFavorites[6]).useStateFromStores(items2, () => setting.getFriendCount());
+  setAdded.useRef(-1);
+  const items3 = [connected, connectedToGateway, channelFavorites, tmp4[1], numFriendSuggestions, friendSuggestions, setting, stateFromStores, setAdded];
   return setAdded.useMemo(() => {
     if (-1 === ref.current) {
       tmp.current = 0;
@@ -54,8 +55,6 @@ export default function useMessagesData() {
         tmp.current = tmp.current + 1;
       }
     }
-    let arr = first;
-    let arr1 = length;
     if (numFriendSuggestions <= 0) {
       if (tmp3) {
         let num3 = 0;
@@ -68,13 +67,13 @@ export default function useMessagesData() {
       bound = Math.min(tmp4, 5);
     }
     const items = [];
-    arr = items.push(arr.length);
-    arr = items.push(arr1.length);
+    items.push(channelFavorites.length);
+    items.push(length.length);
     let num4 = 0;
     if (numFriendSuggestions > 0) {
       num4 = 1;
     }
-    arr1 = items.push(num4);
+    items.push(num4);
     let num5 = 0;
     if (numFriendSuggestions > 0) {
       num5 = 0;
@@ -87,36 +86,36 @@ export default function useMessagesData() {
     }
     items.push(num5);
     items.push(bound);
-    if (first.length + length.length > 0) {
+    if (channelFavorites.length + length.length > 0) {
       let HappeningNow = null;
       if (!setting) {
-        HappeningNow = ref.HappeningNow;
+        HappeningNow = obj.HappeningNow;
       }
       let EmptyState = HappeningNow;
     } else {
       EmptyState = null;
       if (tmp5) {
-        EmptyState = ref.EmptyState;
+        EmptyState = obj.EmptyState;
       }
     }
-    obj = { channels: arr1, channelFavorites: arr, dataKey: null, showFullscreenEmptyState: null, setAddedFriendSuggestions: null, friendSuggestions: null, renderHeader: null, renderFooter: null, sections: null };
+    obj = { channels: length, channelFavorites, dataKey: null, showFullscreenEmptyState: null, setAddedFriendSuggestions: null, friendSuggestions: null, renderHeader: null, renderFooter: null, sections: null };
     let combined = null;
     if (ref.current > 0) {
       const _HermesInternal = HermesInternal;
       combined = "" + tmp.current;
     }
-    obj[2] = combined;
+    obj.dataKey = combined;
     let tmp26 = !tmp3;
-    if (first.length + length.length <= 0) {
+    if (channelFavorites.length + length.length <= 0) {
       tmp26 = connected;
     }
     if (tmp26) {
       tmp26 = !tmp5;
     }
-    obj[3] = tmp26;
-    obj[4] = setAdded;
-    obj[5] = friendSuggestions;
-    obj[6] = EmptyState;
+    obj.showFullscreenEmptyState = tmp26;
+    obj.setAddedFriendSuggestions = setAdded;
+    obj.friendSuggestions = friendSuggestions;
+    obj.renderHeader = EmptyState;
     let tmp27 = connected;
     if (connected) {
       tmp27 = stateFromStores < 4;
@@ -127,10 +126,10 @@ export default function useMessagesData() {
     if (!tmp27) {
       tmp27 = tmp5;
     }
-    obj[7] = tmp27;
-    obj[8] = items;
+    obj.renderFooter = tmp27;
+    obj.sections = items;
     return obj;
   }, items3);
 };
 export const MessagesDataSections = { FavoriteChannels: 0, [0]: "FavoriteChannels", Channels: 1, [1]: "Channels", Separator: 2, [2]: "Separator", SuggestedFriends: 3, [3]: "SuggestedFriends", Placeholders: 4, [4]: "Placeholders" };
-export const MessagesDataHeader = obj;
+export { MessagesDataHeader };

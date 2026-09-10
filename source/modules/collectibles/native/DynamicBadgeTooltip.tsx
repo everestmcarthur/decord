@@ -1,17 +1,21 @@
-// Module ID: 13138
-// Function ID: 13139
+// Module ID: 13163
+// Function ID: 13164
 // Name: DynamicBadgeTooltip
-// Dependencies: [32, 19, 21, 1114, 11133, 5123, 2]
+// Dependencies: [32, 19, 21, 1114, 11160, 5137, 2]
 // Exports: DynamicBadgeTooltip
 
-// Module 13138 (DynamicBadgeTooltip)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 13163 (DynamicBadgeTooltip)
+import util from "util" /* 1114 */;
+import Pressables from "Pressables" /* 5137 */;
+import useTooltip from "useTooltip" /* 11160 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let closure_5 = { top: 14, bottom: 14, left: 14, right: 14 };
-const result = require("set").fileFinishedImporting("modules/collectibles/native/DynamicBadgeTooltip.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const hitSlop = { top: 14, bottom: 14, left: 14, right: 14 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/DynamicBadgeTooltip.tsx");
 
 export const DynamicBadgeTooltip = function DynamicBadgeTooltip(tooltipPosition) {
   let str = tooltipPosition.tooltipPosition;
@@ -19,35 +23,29 @@ export const DynamicBadgeTooltip = function DynamicBadgeTooltip(tooltipPosition)
   if (str === undefined) {
     str = "bottom";
   }
-  let first;
-  let callback;
-  let React;
-  callback = undefined;
-  const ref = React.useRef(null);
-  const tmp2 = callback(React.useState(false), 2);
-  first = tmp2[0];
-  callback = tmp2[1];
-  const intl = str(first[3]).intl;
-  const stringResult = intl.string(str(first[3]).t.dCou7i);
-  React = stringResult;
-  callback = React.useCallback(() => {
-    callback(false);
+  visible = undefined;
+  closure_2 = undefined;
+  const ref = noop.useRef(null);
+  [visible, closure_2] = noop.useState(false);
+  const intl = util.intl;
+  const stringResult = intl.string(util.t.dCou7i);
+  c3 = stringResult;
+  const onPress = noop.useCallback(() => {
+    closure_2(false);
   }, []);
-  const items = [str, stringResult, first, callback];
-  const memo = React.useMemo(() => ({ position: str, label: c3, visible: first, onPress: callback }), items);
-  let obj = str(first[4]);
-  const tooltip = obj.useTooltip(ref, memo);
-  const items1 = [first];
-  const effect = React.useEffect(() => {
+  const items = [str, stringResult, visible, onPress];
+  const memo = noop.useMemo(() => ({ position: str, label, visible, onPress }), items);
+  const tooltip = useTooltip.useTooltip(ref, memo);
+  const items1 = [visible];
+  const effect = noop.useEffect(() => {
     if (first) {
       const _setTimeout = setTimeout;
-      const timeout = setTimeout(() => callback(false), 2500);
+      const timeout = setTimeout(() => closure_1_2(false), 2500);
       return () => clearTimeout(closure_0);
     }
   }, items1);
-  const callback1 = React.useCallback(() => {
-    callback((arg0) => !arg0);
+  const callback1 = noop.useCallback(() => {
+    closure_2((arg0) => !arg0);
   }, []);
-  obj = { ref, onPress: callback1, hitSlop: closure_5, accessibilityRole: "button", accessibilityLabel, accessibilityHint: stringResult, children };
-  return callback(str(first[5]).PressableOpacity, obj);
+  return jsx(Pressables.PressableOpacity, { ref, onPress: callback1, hitSlop, accessibilityRole: "button", accessibilityLabel, accessibilityHint: stringResult, children });
 };

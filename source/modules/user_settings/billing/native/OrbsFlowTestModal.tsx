@@ -1,46 +1,43 @@
-// Module ID: 15697
-// Function ID: 15698
-// Name: BalanceWidgetMenuSection
-// Dependencies: [32, 19, 17, 21, 7913, 7000, 7863, 10930, 4560, 576, 4973, 4556, 15698, 4527, 11106, 1896, 1114, 6606, 4975, 11096, 11105, 6981, 7156, 15700, 2]
+// Module ID: 15727
+// Function ID: 15728
+// Name: OrbsFlowTestModal
+// Dependencies: [32, 19, 17, 21, 7927, 7014, 7877, 10957, 4574, 576, 4987, 4570, 15728, 4541, 11133, 1896, 1114, 6620, 4989, 11123, 11132, 6995, 7170, 15730, 2]
 
-// Module 15697 (BalanceWidgetMenuSection)
-import ThemesDefault from "Themes" /* 576 */;
-import Text from "Text" /* 4556 */;
-import Stack from "Stack" /* 4973 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6981 */;
-import Layer from "Layer" /* 7156 */;
-import BalanceWidgetDefault from "BalanceWidget" /* 15698 */;
-import OrbCheckoutMenuDefault from "OrbCheckoutMenu" /* 15700 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 7913 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15727 (OrbsFlowTestModal)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Stack_Stack from "Stack/Stack" /* 4987 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6995 */;
+import LayerScope from "LayerScope" /* 7170 */;
+import HeaderShared from "HeaderShared" /* 7877 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10957 */;
+import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 15728 */;
+import OrbCheckoutMenuDefault from "OrbCheckoutMenu" /* 15730 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+const require = globalThis.__r;
+
+require = fn;
 function BalanceWidgetMenuSection() {
-  const tmp = callback4();
-  let obj = { spacing: 16, style: tmp.container, children: null };
-  obj = { variant: "text-lg/semibold", style: tmp.title, children: "Balance Widget Menu" };
-  const items = [callback2(Text.Text, obj), callback2(BalanceWidgetDefault, {})];
-  obj[2] = items;
-  return callback3(Stack.Stack, obj);
+  const tmp = closure_10();
+  const obj = { spacing: 16, style: tmp.container, children: null };
+  const items = [React5(Text_Text.Text, { variant: "text-lg/semibold", style: tmp.title, children: "Balance Widget Menu" }), React5(BalanceWidgetMenuDefault, {})];
+  obj.children = items;
+  return React6(Stack_Stack.Stack, obj);
 }
 function BalanceWidgetPillSection() {
-  const tmp = callback4();
-  const tmp2 = callback(importAllResult.useState(1000), 2);
-  const first = tmp2[0];
-  closure_1 = tmp2[1];
-  const tmp4 = callback(importAllResult.useState("1000"), 2);
-  const first1 = tmp4[0];
-  callback = tmp4[1];
+  const tmp = closure_10();
+  [balance, closure_1] = noop.useState(1000);
+  [first1, _slicedToArray] = noop.useState("1000");
   const items = [first1];
-  callback = importAllResult.useCallback((arg0) => {
-    callback2(arg0);
+  const callback = noop.useCallback((arg0) => {
+    closure_3(arg0);
   }, []);
-  const items1 = [first];
-  const callback1 = importAllResult.useCallback(() => {
+  const items1 = [balance];
+  const callback1 = noop.useCallback(() => {
     const parsed = parseInt(first1, 10);
     const isNaNResult = isNaN(parsed);
     let tmp3 = !isNaNResult;
@@ -48,90 +45,87 @@ function BalanceWidgetPillSection() {
       tmp3 = parsed >= 0;
     }
     if (tmp3) {
-      callback(parsed);
+      closure_1(parsed);
     }
   }, items);
-  const callback2 = importAllResult.useCallback(() => {
-    let obj = callback(first1[13]);
-    obj = { balance: first, primaryButtonConfig: null, secondaryButtonConfig: null };
-    obj = { buttonText: null, onButtonPress: null };
-    const intl = first(first1[16]).intl;
-    obj[0] = intl.string(first(first1[16]).t.cpT0Cq);
-    obj[1] = function onButtonPress() {
-      callback2(paths[13]).hideActionSheet();
+  const callback2 = noop.useCallback(() => {
+    const obj2 = { balance, primaryButtonConfig: null, secondaryButtonConfig: null };
+    const obj3 = { buttonText: null, onButtonPress: null };
+    const intl = util.intl;
+    obj3.buttonText = intl.string(util.t.cpT0Cq);
+    obj3.onButtonPress = function onButtonPress() {
+      closure_1_1(paths[13]).hideActionSheet();
     };
-    obj[1] = obj;
-    obj1 = { buttonText: null, onButtonPress: null };
-    const intl2 = first(first1[16]).intl;
-    obj1[0] = intl2.string(first(first1[16]).t.WAI6xu);
-    obj1[1] = function onButtonPress() {
-      callback2(paths[13]).hideActionSheet();
+    obj2.primaryButtonConfig = obj3;
+    const obj4 = { buttonText: null, onButtonPress: null };
+    const intl2 = util.intl;
+    obj4.buttonText = intl2.string(util.t.WAI6xu);
+    obj4.onButtonPress = function onButtonPress() {
+      closure_1_1(paths[13]).hideActionSheet();
     };
-    obj[2] = obj1;
-    obj.openLazy(() => callback(paths[15])(paths[14], paths.paths).then((arg0) => arg0.default), "OrbsFlowTestModalBalanceWidgetMenuKey", obj);
+    obj2.secondaryButtonConfig = obj4;
+    ActionSheetActionCreatorsDefault.openLazy(() => balance(paths[15])(paths[14], paths.paths).then((result) => result.default), "OrbsFlowTestModalBalanceWidgetMenuKey", obj2);
   }, items1);
-  let obj = { spacing: 16, style: tmp.container, children: null };
-  obj = { variant: "text-lg/semibold", style: tmp.title, children: "Balance Widget Pill" };
-  const items2 = [callback2(first(first1[11]).Text, obj), callback2(first(first1[17]).TextInput, { value: first1, onChange: callback, placeholder: "Enter balance amount", keyboardType: "numeric" }), callback2(first(first1[18]).Button, { text: "Apply Balance", variant: "primary", onPress: callback1 }), ];
-  obj = { style: tmp.balancePillContainer, children: null };
-  const items3 = [callback2(first(first1[19]).BalanceWidgetPill, { balance: first }), callback2(first(first1[20]).BalanceWidgetPillButton, { balance: first, onPress: callback2 })];
-  obj[1] = items3;
-  items2[3] = callback3(closure_6, obj);
-  obj[2] = items2;
-  return callback3(first(first1[10]).Stack, obj);
+  const obj = { spacing: 16, style: tmp.container, children: null };
+  const items2 = [closure_7(balance(first1[11]).Text, { variant: "text-lg/semibold", style: tmp.title, children: "Balance Widget Pill" }), closure_7(balance(first1[17]).TextInput, { value: first1, onChange: callback, placeholder: "Enter balance amount", keyboardType: "numeric" }), closure_7(balance(first1[18]).Button, { text: "Apply Balance", variant: "primary", onPress: callback1 }), ];
+  let obj3 = { style: tmp.balancePillContainer, children: null };
+  const items3 = [closure_7(balance(first1[19]).BalanceWidgetPill, { balance }), closure_7(balance(first1[20]).BalanceWidgetPillButton, { balance, onPress: callback2 })];
+  obj3.children = items3;
+  items2[3] = closure_8(closure_6, obj3);
+  obj.children = items2;
+  return closure_8(balance(first1[10]).Stack, obj);
 }
 function OrbsFlowTest() {
   const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets;
-  let obj = { children: null };
-  obj = { style: callback4().wrap, contentContainerStyle: obj, children: null };
-  obj = { paddingBottom: insets.bottom, paddingTop: insets.top, paddingLeft: insets.left, paddingRight: insets.right };
-  const items = [callback2(BalanceWidgetMenuSection, {}), callback2(BalanceWidgetPillSection, {}), callback2(OrbCheckoutMenuDefault, {})];
-  obj[2] = items;
-  obj[0] = callback3(closure_5, obj);
-  return callback2(Layer.LayerScope, obj);
+  const obj = { children: null };
+  const obj2 = { style: closure_10().wrap, contentContainerStyle: { paddingBottom: insets.bottom, paddingTop: insets.top, paddingLeft: insets.left, paddingRight: insets.right }, children: null };
+  const items = [React5(BalanceWidgetMenuSection, {}), React5(BalanceWidgetPillSection, {}), React5(OrbCheckoutMenuDefault, {})];
+  obj2.children = items;
+  obj.children = React6(hasOwnProperty, obj2);
+  return React5(LayerScope.LayerScope, obj);
 }
-let c4 = importAllResult;
-({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-let closure_9 = createNativeStackNavigator.createNativeStackNavigator();
-let obj = { wrap: null, container: null, title: null, balancePillContainer: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-obj[0] = obj;
-createNativeStackNavigator = { padding: ThemesDefault.space.PX_16 };
-obj[1] = createNativeStackNavigator;
-obj[2] = { marginBottom: 8 };
-createCacheKey = { flexDirection: "row", justifyContent: "center", marginBottom: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
-obj[3] = createCacheKey;
-let closure_10 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function OrbsFlowTestModal() {
-  let obj = _require(7000);
-  _require = obj.useAccessibilityNativeStackOptions();
-  obj = {
+get_ActivityIndicator = fn(17);
+({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const NativeStackNavigator = fn(7927);
+let closure_9 = NativeStackNavigator.createNativeStackNavigator();
+const createStyles = fn(4574);
+let obj = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: null, title: null, balancePillContainer: null };
+let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj.container = { padding: nativeDefault.space.PX_16 };
+obj.title = { marginBottom: 8 };
+const obj5 = { padding: nativeDefault.space.PX_16 };
+obj.balancePillContainer = { flexDirection: "row", justifyContent: "center", marginBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
+let closure_10 = createStyles.createStyles(obj);
+const obj6 = { flexDirection: "row", justifyContent: "center", marginBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/billing/native/OrbsFlowTestModal.tsx");
+
+export default noop.memo(function OrbsFlowTestModal() {
+  _require = require("Navigator").useAccessibilityNativeStackOptions();
+  const obj2 = {
     screenOptions(navigation) {
       const obj = {
         headerTitle(children) {
-          const merged = Object.assign(children, Object.create(null));
+          const merged = Object.assign(children, Object.assign({ children: 0 }));
           const merged1 = Object.assign(merged);
-          return callback2(callback(table[6]).GenericHeaderTitle, { title: children.children });
+          return closure_1_7(closure_1_0(closure_1_2[6]).GenericHeaderTitle, { title: children.children });
         },
-        headerLeft: callback(closure_1_2[6]).getRenderModalCloseImage(navigation.navigation),
+        headerLeft: HeaderShared.getRenderModalCloseImage(navigation.navigation),
         headerTitleAlign: "center"
       };
-      let merged = Object.assign(callback);
-      let merged1 = Object.assign(closure_1_1(closure_1_2[7])());
+      let merged = Object.assign(closure_0);
+      let merged1 = Object.assign(getNavigationModalPresentationDefault());
       return obj;
     },
-    children: callback2(closure_9.Screen, obj)
+    children: closure_7(closure_9.Screen, {
+      name: "OrbsFlowTest",
+      options() {
+        return { title: "Orbs Flow Test" };
+      },
+      component: OrbsFlowTest
+    })
   };
-  obj = {
-    name: "OrbsFlowTest",
-    options() {
-      return { title: "Orbs Flow Test" };
-    },
-    component: OrbsFlowTest
-  };
-  return callback2(closure_9.Navigator, obj);
+  return closure_7(closure_9.Navigator, obj2);
 });
-const result = require("set").fileFinishedImporting("modules/user_settings/billing/native/OrbsFlowTestModal.tsx");
-
-export default memoResult;

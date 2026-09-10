@@ -1,13 +1,13 @@
-// Module ID: 4792
-// Function ID: 4793
-// Name: ActionComponentState
+// Module ID: 4806
+// Function ID: 4807
+// Name: InteractionComponentTypes
 // Dependencies: [2]
 // Exports: asComponentId
 
-// Module 4792 (ActionComponentState)
-import set from "set" /* 2 */;
+// Module 4806 (InteractionComponentTypes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/interaction_components/InteractionComponentTypes.tsx");
+const result = size.fileFinishedImporting("modules/interaction_components/InteractionComponentTypes.tsx");
 
 export const ActionComponentState = { NORMAL: 0, [0]: "NORMAL", LOADING: 1, [1]: "LOADING", DISABLED: 2, [2]: "DISABLED" };
 export function asComponentId(componentId) {

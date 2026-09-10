@@ -1,46 +1,44 @@
-// Module ID: 11324
-// Function ID: 11325
-// Dependencies: [19, 17, 10100, 1074, 21, 4560, 576, 11325, 4763, 10101, 7382, 10175, 4556, 2]
+// Module ID: 11351
+// Function ID: 11352
+// Name: RestrictedHoursWarningNotification
+// Dependencies: [19, 17, 10127, 1074, 21, 4574, 576, 11352, 4777, 10128, 7396, 10202, 4570, 2]
 
-// Module 11324
-import ThemesDefault from "Themes" /* 576 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { NOTIFICATION_PREVIEW_LINE_CLAMP as closure_5 } from "set" /* 10100 */;
-import ME from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11351 (RestrictedHoursWarningNotification)
+import nativeDefault from "native" /* 576 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import openUserSettings from "openUserSettings" /* 7396 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 10128 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
-({ InAppNotificationTypes: closure_6, UserSettingsSections: error } = ME);
+require = fn;
+const View = fn(17).View;
+const lineClamp = fn(10127).NOTIFICATION_PREVIEW_LINE_CLAMP;
+const Constants = fn(1074);
+({ InAppNotificationTypes: metroRequire, UserSettingsSections: closure_7 } = Constants);
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
 let obj = { iconContainer: null };
-obj = { width: 48, height: 48, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center" };
-obj[0] = obj;
-let closure_9 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function RestrictedHoursWarningNotification(notification) {
-  notification = notification.notification;
-  let type;
-  type = notification.type;
-  let obj = { style: callback().iconContainer, children: null };
-  obj = { size: "sm", color: type(576).colors.WHITE };
-  obj[1] = jsx(notification(11325).ThemeDarkIcon, { size: "sm", color: type(576).colors.WHITE });
-  const items = [notification.title];
-  const items1 = [type];
-  const memo = importAllResult.useMemo(() => ({ type: "simple", text: notification.title }), items);
-  callback = importAllResult.useCallback(() => {
-    if (type === closure_1_6.RESTRICTED_SCHEDULE_UPDATED) {
-      let obj = type(closure_1_2[8]);
-      obj.popAll();
-      type(closure_1_2[9]).clearNotification();
-      const obj2 = type(closure_1_2[9]);
-    }
-    obj = { screen: closure_1_7.FAMILY_CENTER };
-    notification(closure_1_2[10]).openUserSettings(obj);
-  }, items1);
-  obj = { icon: <View size="sm" color={type(576).colors.WHITE} />, header: memo, children: jsx(notification(4556).Text, obj1), onPress: callback, notification };
-  return jsx(notification(10175).NotificationPressable, { icon: <View size="sm" color={type(576).colors.WHITE} />, header: memo, children: jsx(notification(4556).Text, obj1), onPress: callback, notification });
-});
-const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/RestrictedHoursWarningNotification.tsx");
+let size = { width: 48, height: 48, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center" };
+obj.iconContainer = size;
+let closure_9 = createStyles.createStyles(obj);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_notifications/native/RestrictedHoursWarningNotification.tsx");
 
-export default memoResult;
+export default noop.memo(function RestrictedHoursWarningNotification(notification) {
+  notification = notification.notification;
+  const type = notification.type;
+  let obj = { style: closure_9().iconContainer, children: jsx(notification(11352).ThemeDarkIcon, { size: "sm", color: type(576).colors.WHITE }) };
+  const items = [notification.title];
+  let obj2 = { size: "sm", color: type(576).colors.WHITE };
+  const items1 = [type];
+  const memo = noop.useMemo(() => ({ type: "simple", text: notification.title }), items);
+  const callback = noop.useCallback(() => {
+    if (type === constants.RESTRICTED_SCHEDULE_UPDATED) {
+      ModalActionCreatorsDefault.popAll();
+      InAppNotificationActionCreatorsDefault.clearNotification();
+    }
+    openUserSettings.openUserSettings({ screen: constants2.FAMILY_CENTER });
+  }, items1);
+  const obj3 = { icon: <View style={closure_9().iconContainer}>{jsx(notification(11352).ThemeDarkIcon, { size: "sm", color: type(576).colors.WHITE })}</View>, header: memo, children: jsx(notification(4570).Text, { variant: "redesign/message-preview/medium", color: "text-subtle", lineClamp, children: notification.subtitle }), onPress: callback, notification };
+  return jsx(notification(10202).NotificationPressable, { icon: <View style={closure_9().iconContainer}>{jsx(notification(11352).ThemeDarkIcon, { size: "sm", color: type(576).colors.WHITE })}</View>, header: memo, children: jsx(notification(4570).Text, { variant: "redesign/message-preview/medium", color: "text-subtle", lineClamp, children: notification.subtitle }), onPress: callback, notification });
+});

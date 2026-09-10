@@ -1,21 +1,20 @@
-// Module ID: 17383
-// Function ID: 17384
-// Name: updateSoundpack
-// Dependencies: [1236, 9908, 9909, 7118, 17384, 17387, 17388, 17389, 9910, 2]
+// Module ID: 17414
+// Function ID: 17415
+// Name: HolidayEventsManager
+// Dependencies: [1236, 9935, 9936, 7132, 17415, 17418, 17419, 17420, 9937, 2]
 
-// Module 17383 (updateSoundpack)
-import initializeDefault from "initialize" /* 7118 */;
-import getSoundPackDefault from "getSoundPack" /* 9910 */;
-import HolidayEmojiAnimationTypeDefault from "HolidayEmojiAnimationType" /* 17384 */;
-import HolidayEmojiAnimationTypeDefault2 from "HolidayEmojiAnimationType" /* 17387 */;
-import setSoundpack from "setSoundpack" /* 17388 */;
-import setIncomingRingtone from "setIncomingRingtone" /* 17389 */;
-import closure_3 from "initialize" /* 1236 */;
-import closure_4 from "Soundpacks" /* 9908 */;
-import { Soundpacks } from "Soundpacks" /* 9909 */;
+// Module 17414 (HolidayEventsManager)
+import getSoundsForPackDefault from "getSoundsForPack" /* 9937 */;
+import HolidayEventsConfigDefault from "HolidayEventsConfig" /* 17415 */;
+import HolidayEventsUtilsDefault from "HolidayEventsUtils" /* 17418 */;
+import SoundpackActions from "SoundpackActions" /* 17419 */;
+import setIncomingRingtone from "setIncomingRingtone" /* 17420 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
+import SoundpackStore from "SoundpackStore" /* 9935 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-require = arg1;
-initializeDefault;
+require = fn;
+const Soundpacks = fn(9936).Soundpacks;
 class HolidayEventsManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -24,7 +23,7 @@ class HolidayEventsManager extends tmp2 {
     applyArgumentsResult.stores = map.set(closure_3, () => applyArgumentsResult.handleExperimentUpdated());
     applyArgumentsResult.actions = { NOTIFICATIONS_SET_DISABLED_SOUNDS: applyArgumentsResult.updateRingtone };
     applyArgumentsResult.handleExperimentUpdated = function handleExperimentUpdated() {
-      if (!closure_1_1(closure_1_2[4]).isDesktopOnly) {
+      if (!HolidayEventsConfigDefault.isDesktopOnly) {
         applyArgumentsResult.updateSoundpack();
         applyArgumentsResult.updateRingtone();
       }
@@ -34,46 +33,43 @@ class HolidayEventsManager extends tmp2 {
 }
 const prototype = HolidayEventsManager.prototype;
 prototype["updateSoundpack"] = function updateSoundpack() {
-  const soundpack = store.getSoundpack();
-  const lastSoundpackExperimentId = store.getLastSoundpackExperimentId();
-  const experiment = HolidayEmojiAnimationTypeDefault.experiment;
+  const soundpack = SoundpackStore.getSoundpack();
+  const lastSoundpackExperimentId = SoundpackStore.getLastSoundpackExperimentId();
+  const experiment = HolidayEventsConfigDefault.experiment;
   if (experiment != null) {
     const name = experiment.definition.name;
   }
-  let isEligibleResult = HolidayEmojiAnimationTypeDefault2.isEligible();
+  let isEligibleResult = HolidayEventsUtilsDefault.isEligible();
   if (isEligibleResult) {
     if (isEligibleResult) {
-      isEligibleResult = null != tmp3(17384).soundpack;
+      isEligibleResult = null != tmp3(17415).soundpack;
     }
     if (isEligibleResult) {
       isEligibleResult = name !== lastSoundpackExperimentId;
     }
     if (isEligibleResult) {
-      isEligibleResult = soundpack !== tmp3(17384).soundpack;
+      isEligibleResult = soundpack !== tmp3(17415).soundpack;
     }
     if (isEligibleResult) {
-      setSoundpack.setSoundpack(tmp3(17384).soundpack, name);
-      const obj3 = setSoundpack;
+      SoundpackActions.setSoundpack(tmp3(17415).soundpack, name);
     }
   } else {
-    setSoundpack.setSoundpack(Soundpacks.CLASSIC, null);
-    const obj2 = setSoundpack;
+    SoundpackActions.setSoundpack(Soundpacks.CLASSIC, null);
   }
 };
 prototype["updateRingtone"] = function updateRingtone() {
   if (obj.isEligible()) {
-    const tmpResult = getSoundPackDefault;
+    const tmpResult = getSoundsForPackDefault;
     if (null != tmpResultResult.call_ringing) {
       setIncomingRingtone.setIncomingRingtone("call_ringing", `${tmp7.call_ringing}.mp3`);
-      const obj3 = setIncomingRingtone;
     }
-    tmpResultResult = getSoundPackDefault(store.getSoundpack());
+    tmpResultResult = getSoundsForPackDefault(SoundpackStore.getSoundpack());
   } else {
     setIncomingRingtone.setIncomingRingtone("call_ringing", "call_ringing.mp3");
-    const obj2 = setIncomingRingtone;
   }
 };
 const holidayEventsManager = new HolidayEventsManager();
-const result = require("set").fileFinishedImporting("modules/holidays/HolidayEventsManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/holidays/HolidayEventsManager.tsx");
 
 export default holidayEventsManager;

@@ -1,43 +1,45 @@
-// Module ID: 16054
-// Function ID: 16055
+// Module ID: 16084
+// Function ID: 16085
 // Name: ChannelListPanelBackdrop
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 16025, 1611, 15094, 16055, 2]
+// Dependencies: [19, 17, 1074, 21, 4574, 576, 16055, 1611, 15121, 16085, 2]
 // Exports: default
 
-// Module 16054 (ChannelListPanelBackdrop)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { DM_WIDTH } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16084 (ChannelListPanelBackdrop)
+import nativeDefault from "native" /* 576 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
+import QuestHooks from "QuestHooks" /* 15121 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16055 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ View: c4, StyleSheet } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: { flex: 1, position: "relative", overflow: "hidden" }, panelTint: null, listWrapper: null };
-createCacheKey = {};
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, StyleSheet } = get_ActivityIndicator);
+const DM_WIDTH = fn(1074).DM_WIDTH;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { flex: 1, position: "relative", overflow: "hidden" }, panelTint: null, listWrapper: null };
+let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-createCacheKey.backgroundColor = ThemesDefault.colors.PANEL_BG;
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { flex: 1 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/channel_list_v2/native/components/ChannelListPanelBackdrop.tsx");
+obj3.backgroundColor = nativeDefault.colors.PANEL_BG;
+obj2.panelTint = obj3;
+obj2.listWrapper = { flex: 1 };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel_list_v2/native/components/ChannelListPanelBackdrop.tsx");
 
 export default function ChannelListPanelBackdrop(children) {
   const style = children.style;
   const contentInset = children.contentInset;
-  dependencyMap = undefined;
-  let mobileQuestDockHeight;
-  const tmp = callback();
-  dependencyMap = tmp;
-  let obj = style(16025);
-  const isHomeDrawerEnabled = obj.useIsHomeDrawerEnabled();
-  obj1 = style(15094);
-  mobileQuestDockHeight = obj1.useMobileQuestDockHeight();
+  const tmp = closure_8();
+  const container = tmp;
+  const isHomeDrawerEnabled = useHomeDrawerGesture.useIsHomeDrawerEnabled();
+  const tmp2 = require;
+  const tmp4 = importDefault;
+  const mobileQuestDockHeight = QuestHooks.useMobileQuestDockHeight();
   let items = [tmp, contentInset, mobileQuestDockHeight, style];
-  obj = {
-    style: mobileQuestDockHeight.useMemo(() => {
+  const obj3 = {
+    style: noop.useMemo(() => {
       const items = [container.container, , ];
       const rect = contentInset;
       let num;
@@ -55,7 +57,7 @@ export default function ChannelListPanelBackdrop(children) {
       if (num2 == null) {
         num2 = 0;
       }
-      obj[1] = num2 + mobileQuestDockHeight;
+      obj.paddingBottom = num2 + mobileQuestDockHeight;
       let num3;
       if (rect != null) {
         num3 = rect.left;
@@ -63,7 +65,7 @@ export default function ChannelListPanelBackdrop(children) {
       if (num3 == null) {
         num3 = 0;
       }
-      obj[2] = num3;
+      obj.marginLeft = num3;
       let num4;
       if (rect != null) {
         num4 = rect.right;
@@ -71,7 +73,7 @@ export default function ChannelListPanelBackdrop(children) {
       if (num4 == null) {
         num4 = 0;
       }
-      obj[3] = num4;
+      obj.marginRight = num4;
       items[1] = obj;
       items[2] = style;
       return items;
@@ -79,15 +81,12 @@ export default function ChannelListPanelBackdrop(children) {
     children: null
   };
   if (isHomeDrawerEnabled) {
-    let ScreenAlignedThemedGradientSliding = style(tmp9).ScreenAlignedThemedGradientSliding;
+    let ScreenAlignedThemedGradientSliding = tmp2(tmp9).ScreenAlignedThemedGradientSliding;
   } else {
-    ScreenAlignedThemedGradientSliding = contentInset(tmp9);
+    ScreenAlignedThemedGradientSliding = tmp4(tmp9);
   }
-  obj = { offsetX: DM_WIDTH, offsetY: contentInset(1611)().top };
-  const items1 = [closure_6(ScreenAlignedThemedGradientSliding, obj), , ];
-  obj1 = { pointerEvents: "none", style: tmp.panelTint };
-  items1[1] = closure_6(closure_4, obj1);
-  items1[2] = closure_6(closure_4, { style: tmp.listWrapper, children: children.children });
-  obj[1] = items1;
-  return closure_7(closure_4, obj);
+  const tmp6 = React5;
+  const items1 = [timestampProducer(ScreenAlignedThemedGradientSliding, { offsetX: DM_WIDTH, offsetY: useSafeAreaInsetsDefault().top }), timestampProducer(React4, { pointerEvents: "none", style: tmp.panelTint }), timestampProducer(React4, { style: tmp.listWrapper, children: children.children })];
+  obj3.children = items1;
+  return tmp6(React4, obj3);
 };

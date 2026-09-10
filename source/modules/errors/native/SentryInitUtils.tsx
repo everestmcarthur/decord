@@ -1,124 +1,110 @@
 // Module ID: 1233
 // Function ID: 1234
-// Name: _maybeBackfillMissingBreadcrumbsFromTelemetryRing
-// Dependencies: [5, 17, 1074, 1085, 675, 3, 1234, 1100, 1242, 14085, 7602, 7607, 1358, 1232, 1364, 7603, 1115, 4539, 1608, 1359, 1345, 2]
+// Name: SentryInitUtils
+// Dependencies: [5, 17, 1074, 1085, 675, 3, 1234, 1100, 1242, 14108, 7616, 7621, 1358, 1232, 1364, 7617, 1115, 4553, 1608, 1359, 1345, 2]
 // Exports: initSentry
 
-// Module 1233 (_maybeBackfillMissingBreadcrumbsFromTelemetryRing)
-import timestampDefault from "timestamp" /* 3 */;
-import transitionTo from "transitionTo" /* 1100 */;
-import _modDef1232 from "module_1232" /* 1232 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 1074 */;
-import { PRIMARY_DOMAIN } from "sum" /* 1085 */;
-import addBreadcrumb from "addBreadcrumb" /* 675 */;
-import IGNORE_ANALYTICS_BREADCRUMB_EVENTS from "IGNORE_ANALYTICS_BREADCRUMB_EVENTS" /* 1358 */;
+// Module 1233 (SentryInitUtils)
+import LoggerDefault from "Logger" /* 3 */;
+import router_utils from "router_utils" /* 1100 */;
+import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import TelemetryRingLifecycle from "TelemetryRingLifecycle" /* 1234 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import ClientInfoUtilsAll from "ClientInfoUtils" /* 1364 */;
+import MetricEvents from "MetricEvents" /* 7621 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-require = arg1;
-function _maybeBackfillMissingBreadcrumbsFromTelemetryRing() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c3 = 0;
-    return (function*(arg0) {
-      if (table === 2) {
-        table = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+const require = globalThis.__r;
+
+require = fn;
+let closure_15 = async function _maybeBackfillMissingBreadcrumbsFromTelemetryRing(arg0) {
+  let breadcrumbs = arg0;
+  c2 = 0;
+  c3 = 0;
+  return (async (arg0, value) => {
+    if (c3 === 2) {
+      c3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        try {
-          table = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              table = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              table = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_1 = tmp2;
-              closure_1 = undefined;
-              const breadcrumbs = lib.breadcrumbs;
-              const _Array2 = Array;
-              if (Array.isArray(breadcrumbs)) {
-                if (breadcrumbs.length > 0) {
-                  table = 3;
-                }
-              }
-              const SentryTelemetry = lib(table[6]).SentryTelemetry;
-              items = [SentryTelemetry.snapshotForBreadcrumbs(), ];
-              const promise = new Promise((arg0, arg1) => {
-                closure_0 = arg1;
-                return setTimeout(() => {
-                  error = new Error("TelemetryRing breadcrumb timeout");
-                  return callback(error);
-                }, 200);
-              });
-              items[1] = promise;
-              c2 = 1;
-              table = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = Promise.race(items).catch(() => null);
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            table = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            closure_1 = arg1;
-            let isArray = null != closure_1;
-            if (isArray) {
-              const _Array = Array;
-              isArray = Array.isArray(closure_1.entries);
-            }
-            if (isArray) {
-              isArray = 0 !== closure_1.entries.length;
-            }
-            if (isArray) {
-              const entries = closure_1.entries;
-              lib.breadcrumbs = entries.map((data) => {
-                let key = data.message;
-                if (key == null) {
-                  key = data.key;
-                }
-                return { message: key, category: "telemetry_ring", timestamp: data.timestamp / 1000, data: data.data };
-              });
-            }
-          }
-          table = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } catch (tmp21) {
-          table = tmp;
-          throw tmp21;
-        }
+        return { value: "HermesInternal", done: null };
       }
-    })();
-  });
-  closure_15 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
+    } else {
+      try {
+        c3 = 2;
+        if (0 === c2) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_1 = tmp2;
+            closure_129_0 = breadcrumbs;
+            closure_129_1 = undefined;
+            breadcrumbs = breadcrumbs.breadcrumbs;
+            const _Array2 = Array;
+            if (Array.isArray(breadcrumbs)) {
+              if (breadcrumbs.length > 0) {
+                c3 = 3;
+              }
+            }
+            const SentryTelemetry = TelemetryRingLifecycle.SentryTelemetry;
+            items = [SentryTelemetry.snapshotForBreadcrumbs(), ];
+            const promise = new Promise((arg0, arg1) => {
+              closure_0 = arg1;
+              return setTimeout(() => {
+                const error = new Error("TelemetryRing breadcrumb timeout");
+                return closure_0(error);
+              }, 200);
+            });
+            items[1] = promise;
+            c2 = 1;
+            c3 = 1;
+            const obj4 = { value: Promise.race(items).catch(() => null), done: false };
+            return obj4;
+          }
+        } else if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          closure_129_1 = value;
+          let isArray = null != closure_129_1;
+          if (isArray) {
+            const _Array = Array;
+            isArray = Array.isArray(closure_129_1.entries);
+          }
+          if (isArray) {
+            isArray = 0 !== closure_129_1.entries.length;
+          }
+          if (isArray) {
+            const entries = closure_129_1.entries;
+            closure_129_0.breadcrumbs = entries.map((data) => {
+              let key = data.message;
+              if (key == null) {
+                key = data.key;
+              }
+              return { message: key, category: "telemetry_ring", timestamp: data.timestamp / 1000, data: data.data };
+            });
+          }
+        }
+        c3 = 3;
+        const obj = { value, done: true };
+        return obj;
+      } catch (tmp21) {
+        c3 = tmp;
+        throw tmp21;
+      }
+    }
+  })();
+};
 function filterError(event_id, originalException) {
   let message = event_id;
   importDefault = originalException;
@@ -181,7 +167,7 @@ function filterError(event_id, originalException) {
     }
     let someResult = typeof message === "string";
     if (typeof message === "string") {
-      someResult = closure_11.some((arg0) => message.includes(arg0));
+      someResult = closure_11.some((item) => message.includes(item));
     }
     flag = someResult;
   }
@@ -192,8 +178,7 @@ function filterError(event_id, originalException) {
       tmp20 = 0 !== event_id.length;
     }
     if (tmp20) {
-      _modDef1232.markCrashHandled(event_id);
-      const obj = _modDef1232;
+      SentryUtilsDefault.markCrashHandled(event_id);
     }
   } else {
     let originalException3;
@@ -210,63 +195,54 @@ function filterError(event_id, originalException) {
       }
       event_id.tags.httpStatusCode = status1;
     }
-    let tmp13 = c12;
-    if ("error" === event_id.level) {
-      tmp13 = c13;
-    }
     if (!c14) {
-      if (callback2()) {
+      if (closure_20()) {
         const _Math = Math;
       }
       trackCrash(event_id, originalException, false);
     }
-    return callback(function*() {
+    return (async (arg0, value) => {
       closure_1 = tmp3;
-      closure_0 = tmp3;
-      c2 = 1;
-      const ZoomedInTelemetry = closure_1_0(table[6]).ZoomedInTelemetry;
+      const ZoomedInTelemetry = tmp3(c3[6]).ZoomedInTelemetry;
       items = [ZoomedInTelemetry.flushNow(), ];
-      const promise = new Promise((arg0) => setTimeout(arg0, 200));
-      items[1] = promise;
-      yield Promise.race(items);
+      items[1] = new Promise((arg0) => setTimeout(arg0, 200));
+      await Promise.race(items);
       if (1 === tmp7) {
         c2 = 0;
-        closure_1_19(closure_1_0, closure_1_1);
+        trackCrash(closure_129_0, closure_129_1);
         c4 = 3;
       } else if (2 === tmp7) {
         if (arg0 === 1) {
           c4 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c2 = 0;
           c4 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
+          return { value, done: true };
         } else {
-          table = 3;
+          c3 = 3;
           c4 = 1;
-          const obj3 = { value: null, done: false };
-          obj3[0] = (function maybeBackfillMissingBreadcrumbsFromTelemetryRing(closure_0) {
-            const self = this;
-            const apply = closure_15.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
-          })(closure_0);
-          return obj3;
+          return {
+            value: (function maybeBackfillMissingBreadcrumbsFromTelemetryRing() {
+                  const self = this;
+                  const apply = closure_1_15.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                })(closure_129_0),
+            done: false
+          };
         }
       } else if (arg0 === 1) {
         c4 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 !== 2) {
         c2 = 0;
       }
-      c2 = 0;
-      return arg1;
+      return value;
     })();
   }
   return null;
@@ -286,16 +262,16 @@ function getCrashErrorMessage(exception) {
     if (extra2 != null) {
       prop = extra2.persisted_error_message;
     }
-    let message;
+    let message1;
     if (typeof prop === "string") {
       if (prop.length > 0) {
-        message = prop;
+        message1 = prop;
       }
     }
-    if (message == null) {
-      message = exception.message;
+    if (message1 == null) {
+      message1 = exception.message;
     }
-    return message;
+    return message1;
   } else {
     ({ type, value } = first);
     if (null != type) {
@@ -308,7 +284,7 @@ function getCrashErrorMessage(exception) {
     if (extra != null) {
       const prop1 = extra.persisted_error_message;
     }
-    message = type;
+    let message = type;
     if (type == null) {
       message = value;
     }
@@ -383,8 +359,7 @@ function trackCrash(event, hint, arg2) {
   if (arg2 === undefined) {
     flag = true;
   }
-  let obj = { event, hint };
-  logger.info("Crash", obj);
+  logger.info("Crash", { event, hint });
   ({ level, extra } = event);
   let native_is_native;
   if (extra != null) {
@@ -420,8 +395,7 @@ function trackCrash(event, hint, arg2) {
         tmp7 = 0 !== event_id.length;
       }
       if (tmp7) {
-        obj1 = _modDef1232;
-        obj1.markCrashHandled(event_id);
+        SentryUtilsDefault.markCrashHandled(event_id);
       }
     }
   }
@@ -458,17 +432,16 @@ function trackCrash(event, hint, arg2) {
     const _Date2 = Date;
     result = Date.now();
   }
-  const obj3 = transitionTo;
-  const track = expandEventPropertiesDefault.track;
+  const obj = { event, hint };
+  const obj3 = router_utils;
+  const track = AnalyticsUtilsDefault.track;
   if (tmp4) {
-    extra = event.extra;
-    if (extra == null) {
-      extra = {};
+    let extra1 = event.extra;
+    if (extra1 == null) {
+      extra1 = {};
     }
-    obj = { did_crash: true, sentry_issue_id: null, client_track_timestamp: null, exit_reason: null, exit_description: null, tombstone_hash: null, tombstone_cause: null, tombstone: null, call_stack_tree: null, binary_name: null, exception_message: null, exception_stacktrace: null, js_error_message: null, js_error_stacktrace: null };
-    obj[1] = tmp13;
-    obj[2] = result;
-    const native_exit_reason = extra.native_exit_reason;
+    const obj4 = { did_crash: true, sentry_issue_id: tmp13, client_track_timestamp: result, exit_reason: null, exit_description: null, tombstone_hash: null, tombstone_cause: null, tombstone: null, call_stack_tree: null, binary_name: null, exception_message: null, exception_stacktrace: null, js_error_message: null, js_error_stacktrace: null };
+    const native_exit_reason = extra1.native_exit_reason;
     let tmp27 = null;
     if (typeof native_exit_reason === "string") {
       tmp27 = null;
@@ -476,8 +449,8 @@ function trackCrash(event, hint, arg2) {
         tmp27 = native_exit_reason;
       }
     }
-    obj[3] = tmp27;
-    const prop1 = extra.native_exit_description;
+    obj4.exit_reason = tmp27;
+    const prop1 = extra1.native_exit_description;
     let tmp28 = null;
     if (typeof prop1 === "string") {
       tmp28 = null;
@@ -485,8 +458,8 @@ function trackCrash(event, hint, arg2) {
         tmp28 = prop1;
       }
     }
-    obj[4] = tmp28;
-    const prop2 = extra.native_tombstone_hash;
+    obj4.exit_description = tmp28;
+    const prop2 = extra1.native_tombstone_hash;
     let tmp29 = null;
     if (typeof prop2 === "string") {
       tmp29 = null;
@@ -494,8 +467,8 @@ function trackCrash(event, hint, arg2) {
         tmp29 = prop2;
       }
     }
-    obj[5] = tmp29;
-    const prop3 = extra.native_tombstone_cause;
+    obj4.tombstone_hash = tmp29;
+    const prop3 = extra1.native_tombstone_cause;
     let tmp30 = null;
     if (typeof prop3 === "string") {
       tmp30 = null;
@@ -503,8 +476,8 @@ function trackCrash(event, hint, arg2) {
         tmp30 = prop3;
       }
     }
-    obj[6] = tmp30;
-    const native_tombstone = extra.native_tombstone;
+    obj4.tombstone_cause = tmp30;
+    const native_tombstone = extra1.native_tombstone;
     let tmp31 = null;
     if (typeof native_tombstone === "string") {
       tmp31 = null;
@@ -512,8 +485,8 @@ function trackCrash(event, hint, arg2) {
         tmp31 = native_tombstone;
       }
     }
-    obj[7] = tmp31;
-    const prop4 = extra.native_tombstone_group_by;
+    obj4.tombstone = tmp31;
+    const prop4 = extra1.native_tombstone_group_by;
     let tmp32 = null;
     if (typeof prop4 === "string") {
       tmp32 = null;
@@ -521,8 +494,8 @@ function trackCrash(event, hint, arg2) {
         tmp32 = prop4;
       }
     }
-    obj[8] = tmp32;
-    const prop5 = extra.native_tombstone_origin;
+    obj4.call_stack_tree = tmp32;
+    const prop5 = extra1.native_tombstone_origin;
     let tmp33 = null;
     if (typeof prop5 === "string") {
       tmp33 = null;
@@ -530,10 +503,10 @@ function trackCrash(event, hint, arg2) {
         tmp33 = prop5;
       }
     }
-    obj[9] = tmp33;
-    obj[10] = getCrashErrorMessage(event);
-    obj[11] = getErrorStackTrace(event);
-    const prop6 = extra.persisted_error_message;
+    obj4.binary_name = tmp33;
+    obj4.exception_message = getCrashErrorMessage(event);
+    obj4.exception_stacktrace = getErrorStackTrace(event);
+    const prop6 = extra1.persisted_error_message;
     let tmp36 = null;
     if (typeof prop6 === "string") {
       tmp36 = null;
@@ -541,8 +514,8 @@ function trackCrash(event, hint, arg2) {
         tmp36 = prop6;
       }
     }
-    obj[12] = tmp36;
-    const prop7 = extra.persisted_error_stack;
+    obj4.js_error_message = tmp36;
+    const prop7 = extra1.persisted_error_stack;
     let tmp37 = null;
     if (typeof prop7 === "string") {
       tmp37 = null;
@@ -550,23 +523,15 @@ function trackCrash(event, hint, arg2) {
         tmp37 = prop7;
       }
     }
-    obj[13] = tmp37;
-    track(tmp20.APP_NATIVE_CRASH, obj);
+    obj4.js_error_stacktrace = tmp37;
+    track(tmp20.APP_NATIVE_CRASH, obj4);
     let tmp25 = tmp18;
     let tmp26 = tmp18;
   } else {
-    obj = { path: null, client_track_timestamp: null, sentry_issue_id: null, extra: null, error_message: null, error_level: null, error_stack: null };
-    obj[0] = obj3.getHistory().location.pathname;
-    obj[1] = result;
-    obj[2] = tmp13;
-    obj[3] = hint;
-    obj[4] = getCrashErrorMessage(event);
-    obj[5] = level;
-    obj[6] = getErrorStackTrace(event);
-    track(tmp20.APP_CRASHED, obj);
+    const obj5 = { path: obj3.getHistory().location.pathname, client_track_timestamp: result, sentry_issue_id: tmp13, extra: hint, error_message: getCrashErrorMessage(event), error_level: level, error_stack: getErrorStackTrace(event) };
+    track(tmp20.APP_CRASHED, obj5);
     tmp25 = tmp18;
     tmp26 = tmp18;
-    const tmp22 = level;
   }
   const event_id2 = event.event_id;
   let tmp39 = typeof event_id2 === "string";
@@ -577,67 +542,68 @@ function trackCrash(event, hint, arg2) {
     tmp25(1232).markCrashHandled(event_id2);
     const tmp25Result = tmp25(1232);
   }
-  const AppCrashedReasons = tmp11(14085).AppCrashedReasons;
-  const tmp19 = expandEventPropertiesDefault;
+  const AppCrashedReasons = tmp11(14108).AppCrashedReasons;
   const tmp41 = tmp4 ? AppCrashedReasons.UNHANDLED_NATIVE_ERROR : AppCrashedReasons.UNHANDLED_JS_ERROR;
-  obj1 = { name: tmp11(7607).MetricEvents.APP_CRASHED, tags: null };
+  const obj6 = { name: MetricEvents.MetricEvents.APP_CRASHED, tags: null };
   items = ["reason:" + tmp41, ];
   if (level == null) {
     level = "unknown";
   }
   items[1] = "level:" + level;
-  obj1[1] = items;
-  tmp26(7602).increment(obj1, true);
+  obj6.tags = items;
+  tmp26(7616).increment(obj6, true);
 }
-({ AnalyticEvents: closure_6, Endpoints } = ME);
-addBreadcrumb = addBreadcrumb.reactNavigationIntegration();
+const NativeModules = fn(17).NativeModules;
+const Constants = fn(1074);
+({ AnalyticEvents: metroRequire, Endpoints } = Constants);
+const PRIMARY_DOMAIN = fn(1085).PRIMARY_DOMAIN;
+let registerSpanErrorInstrumentation = fn(675);
+registerSpanErrorInstrumentation = registerSpanErrorInstrumentation.reactNavigationIntegration();
 const regExp = new RegExp("/v" + window.GLOBAL_ENV.API_VERSION + Endpoints.METRICS, "g");
 let items = [regExp, , ];
 const regExp1 = new RegExp("/v" + window.GLOBAL_ENV.API_VERSION + Endpoints.METRICS_V2, "g");
 items[1] = regExp1;
 const regExp2 = new RegExp("/v" + window.GLOBAL_ENV.API_VERSION + Endpoints.TRACK, "g");
 items[2] = regExp2;
-let closure_10 = new timestampDefault("Sentry");
+const logger = new LoggerDefault("Sentry");
 let closure_11 = ["The operation couldn\u2019t be completed. (com.apple.CallKit.error.requesttransaction", "Request has been terminated", "couldn't execute statement: database is disabled", "couldn't delete database: database is currently open", "database is no longer open"];
 let c12 = 0.05;
 let c13 = 0.005;
 let c14 = false;
-let closure_20 = IGNORE_ANALYTICS_BREADCRUMB_EVENTS.filterThrottle({ maxBudgetMinute: 1, maxBudgetHour: 15 });
-let tmp7 = new timestampDefault("Sentry");
-const result1 = require("set").fileFinishedImporting("modules/errors/native/SentryInitUtils.tsx");
+const CommonSentryInitUtils = fn(1358);
+let closure_20 = CommonSentryInitUtils.filterThrottle({ maxBudgetMinute: 1, maxBudgetHour: 15 });
+const size = fn(2);
+const result1 = size.fileFinishedImporting("modules/errors/native/SentryInitUtils.tsx");
 
-export const routingInstrumentation = addBreadcrumb;
+export const routingInstrumentation = registerSpanErrorInstrumentation;
 export const initSentry = function initSentry() {
   const CrashReportingManager = NativeModules.CrashReportingManager;
   if (CrashReportingManager != null) {
     const isUserStaffForCrashReporting = CrashReportingManager.getIsUserStaffForCrashReporting((arg0) => {
       closure_14 = arg0;
-      let obj = callback3(table[14]);
-      const constants = obj.getConstants();
+      constants = ClientInfoUtilsAll.getConstants();
       const ReleaseChannel = constants.ReleaseChannel;
       if (-1 === ReleaseChannel.indexOf("debug")) {
         if (-1 === ReleaseChannel.indexOf("developer")) {
-          const isStable = callback(tmp[15]).isStable;
-          obj = { releaseChannel: null, isProductionChannel: null };
-          obj[0] = ReleaseChannel;
-          obj[1] = isStable;
-          closure_10.verbose("Initialize", obj);
+          const isStable = require("ReleaseChannelUtils").isStable;
+          const obj2 = { releaseChannel: ReleaseChannel, isProductionChannel: isStable };
+          logger.verbose("Initialize", obj2);
           if (obj15.isAndroid()) {
             if (isStable) {
-              let tmp14Result = tmp14(tmp[17]);
-              const device = tmp14Result.getDevice();
+              const device = tmp14(tmp[17]).getDevice();
+              const tmp14Result = tmp14(tmp[17]);
             }
           }
           c12 = 0.05;
           const SentryDsn = constants.SentryDsn;
           if (isStable) {
-            tmp14Result = tmp14(tmp[18]);
             let SentryStaffDsn = SentryDsn;
-            if (tmp14Result.isMetaQuest()) {
+            if (tmp14Result9.isMetaQuest()) {
               c12 = 1;
               c13 = 1;
               SentryStaffDsn = SentryDsn;
             }
+            tmp14Result9 = tmp14(tmp[18]);
           } else {
             c12 = 1;
             SentryStaffDsn = constants.SentryAlphaBetaDsn;
@@ -646,71 +612,65 @@ export const initSentry = function initSentry() {
             SentryStaffDsn = constants.SentryStaffDsn;
             c12 = 1;
           }
-          obj15 = callback(tmp[16]);
-          const lastCrashReport = callback2(tmp[13]).getLastCrashReport();
-          const obj4 = callback2(tmp[13]);
-          lastCrashReport.then((arg0) => {
-            if (null != arg0) {
-              callback2(arg0, { crash_event_source: "startup_reconcile" });
+          obj15 = require("PlatformUtils");
+          const lastCrashReport = require("SentryUtils").getLastCrashReport();
+          const obj4 = require("SentryUtils");
+          lastCrashReport.then((result) => {
+            if (null != result) {
+              closure_1_19(result, { crash_event_source: "startup_reconcile" });
             }
-          }).catch((arg0) => {
-            logger.warn("Failed to replay pending crash report", arg0);
+          }).catch((error) => {
+            logger.warn("Failed to replay pending crash report", error);
           });
-          const nextPromise = lastCrashReport.then((arg0) => {
-            if (null != arg0) {
-              callback2(arg0, { crash_event_source: "startup_reconcile" });
+          const nextPromise = lastCrashReport.then((result) => {
+            if (null != result) {
+              closure_1_19(result, { crash_event_source: "startup_reconcile" });
             }
           });
-          const tmp14Result1 = callback(tmp[4]);
+          const tmp14Result10 = require("module_675");
           let str2 = "ios";
-          if (tmp14Result2.isAndroid()) {
+          if (tmp14Result11.isAndroid()) {
             str2 = "android";
           }
-          obj = { tunnel: null, autoInitializeNativeSdk: false, beforeSend: null, dist: "6379", dsn: null, environment: null, tracesSampleRate: 0, sampleRate: 1, ignoreErrors: null, release: "discord_android@346.1.0-2+346201", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
-          obj[0] = `/error-reporting-proxy/${str2}`;
-          obj[2] = closure_16;
-          obj[4] = SentryStaffDsn;
-          obj[5] = ReleaseChannel;
-          obj[8] = closure_11;
-          items = [closure_7];
-          obj[10] = items;
-          const items1 = [closure_8, , ];
-          tmp14Result2 = callback(tmp[16]);
-          items1[1] = callback(tmp[4]).featureFlagsIntegration();
-          const tmp14Result3 = callback(tmp[4]);
-          obj1 = { shouldCreateSpanForRequest: null };
-          obj1[0] = function shouldCreateSpanForRequest(arg0) {
-            closure_0 = arg0;
-            return !closure_9.some((arg0) => null != closure_0.match(arg0));
+          const obj3 = { tunnel: `/error-reporting-proxy/${str2}`, autoInitializeNativeSdk: false, beforeSend, dist: "6385", dsn: SentryStaffDsn, environment: ReleaseChannel, tracesSampleRate: 0, sampleRate: 1, ignoreErrors, release: "discord_android@346.2.0-2+346202", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
+          items = [PRIMARY_DOMAIN];
+          obj3.tracePropagationTargets = items;
+          const items1 = [registerSpanErrorInstrumentation, , ];
+          tmp14Result11 = require("PlatformUtils");
+          items1[1] = require("module_675").featureFlagsIntegration();
+          const tmp14Result12 = require("module_675");
+          const obj5 = {
+            shouldCreateSpanForRequest(arg0) {
+                  closure_0 = arg0;
+                  return !closure_1_9.some((item) => null != closure_0.match(item));
+                }
           };
-          items1[2] = callback(tmp[4]).reactNativeTracingIntegration(obj1);
-          obj[11] = items1;
-          obj[12] = function beforeBreadcrumb(data) {
+          items1[2] = require("module_675").reactNativeTracingIntegration(obj5);
+          obj3.integrations = items1;
+          obj3.beforeBreadcrumb = function beforeBreadcrumb(data) {
             if (null == data.data) {
               data.data = {};
             }
-            const currentMemoryUsageKB = callback(table[19]).getCurrentMemoryUsageKB();
+            const currentMemoryUsageKB = closure_1_1(dependencyMap[19]).getCurrentMemoryUsageKB();
             if (null != currentMemoryUsageKB) {
               data.data.client_performance_memory = currentMemoryUsageKB;
             }
-            const obj = callback(table[19]);
-            const tmp = callback;
-            const tmp2 = table;
-            const currentCPUUsagePercent = callback(table[19]).getCurrentCPUUsagePercent();
+            const obj = closure_1_1(dependencyMap[19]);
+            const currentCPUUsagePercent = closure_1_1(dependencyMap[19]).getCurrentCPUUsagePercent();
             if (null != currentCPUUsagePercent) {
               data.data.client_performance_cpu = currentCPUUsagePercent;
             }
             return data;
           };
-          tmp14Result1.init(obj);
-          const tmp14Result4 = callback(tmp[4]);
-          callback(tmp[4]).setTag("buildNumber", "6379");
-          const tmp14Result5 = callback(tmp[4]);
-          callback(tmp[4]).setTag("appVersion", constants.Version);
-          const tmp14Result6 = callback(tmp[4]);
+          tmp14Result10.init(obj3);
+          const tmp14Result13 = require("module_675");
+          require("module_675").setTag("buildNumber", "6385");
+          const tmp14Result14 = require("module_675");
+          require("module_675").setTag("appVersion", constants.Version);
+          const tmp14Result15 = require("module_675");
           const _HermesInternal = HermesInternal;
-          callback(tmp[4]).setTag("design_id", "" + callback(tmp[20]).DesignIds.DESIGN_TABS_IA);
-          const tmp14Result7 = callback(tmp[4]);
+          require("module_675").setTag("design_id", "" + require("DesignIds").DesignIds.DESIGN_TABS_IA);
+          const tmp14Result16 = require("module_675");
         }
       }
     });

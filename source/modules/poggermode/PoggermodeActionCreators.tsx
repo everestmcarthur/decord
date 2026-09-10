@@ -1,58 +1,49 @@
-// Module ID: 7830
-// Function ID: 7831
-// Name: updatePoggermodeSettings
-// Dependencies: [502, 7678, 7831, 573, 7833, 2]
+// Module ID: 7844
+// Function ID: 7845
+// Name: PoggermodeActionCreators
+// Dependencies: [502, 7692, 7845, 573, 7847, 2]
 // Exports: clearMessageCombo, updateCombo, updateComboOnMessageSend, updatePoggermodeSettings
 
-// Module 7830 (updatePoggermodeSettings)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import getScreenshakeLocationNameDefault from "getScreenshakeLocationName" /* 7833 */;
-import closure_2 from "fetchFingerprint" /* 502 */;
-import closure_3 from "initialize" /* 7678 */;
-import closure_4 from "updateCombo" /* 7831 */;
+// Module 7844 (PoggermodeActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import trackPoggermodeSettingsUpdatedDefault from "trackPoggermodeSettingsUpdated" /* 7847 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import PoggermodeSettingsStore from "PoggermodeSettingsStore" /* 7692 */;
+import PoggermodeStore from "PoggermodeStore" /* 7845 */;
 
-const result = require("set").fileFinishedImporting("modules/poggermode/PoggermodeActionCreators.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/poggermode/PoggermodeActionCreators.tsx");
 
 export const updatePoggermodeSettings = function updatePoggermodeSettings(settings) {
-  let obj = dispatcherDefault;
-  obj = { type: "POGGERMODE_SETTINGS_UPDATE", settings };
-  obj.dispatch(obj);
-  obj = {};
-  const merged = Object.assign(state.getState());
+  DispatcherDefault.dispatch({ type: "POGGERMODE_SETTINGS_UPDATE", settings });
+  const merged = Object.assign(PoggermodeSettingsStore.getState());
   const merged1 = Object.assign(settings);
-  getScreenshakeLocationNameDefault(obj);
+  trackPoggermodeSettingsUpdatedDefault({});
 };
 export const updateCombo = function updateCombo(arg0) {
-  let obj = dispatcherDefault;
-  obj = { type: "POGGERMODE_UPDATE_COMBO" };
   const merged = Object.assign(arg0);
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "POGGERMODE_UPDATE_COMBO" });
 };
 export const clearMessageCombo = function clearMessageCombo(arg0) {
-  let obj = dispatcherDefault;
-  obj = { type: "POGGERMODE_UPDATE_MESSAGE_COMBO", comboMessage: null };
-  obj = {};
+  const obj2 = { type: "POGGERMODE_UPDATE_MESSAGE_COMBO", comboMessage: null };
+  const obj3 = {};
   const merged = Object.assign(arg0);
-  obj.displayed = true;
-  obj[1] = obj;
-  obj.dispatch(obj);
+  obj3.displayed = true;
+  obj2.comboMessage = obj3;
+  DispatcherDefault.dispatch(obj2);
 };
-export const updateComboOnMessageSend = function updateComboOnMessageSend(closure_1_0, id) {
-  id = id.getId();
-  const iter = userCombo.getUserCombo(id, closure_1_0);
+export const updateComboOnMessageSend = function updateComboOnMessageSend(channelId, id) {
+  id = AuthenticationStore.getId();
+  const iter = PoggermodeStore.getUserCombo(id, channelId);
   if (null != iter) {
-    let obj = dispatcherDefault;
-    obj = { type: "POGGERMODE_UPDATE_MESSAGE_COMBO", comboMessage: null };
-    obj = { combo: null, channelId: null, messageId: null, displayed: false };
-    obj[0] = iter;
-    obj[1] = closure_1_0;
-    obj[2] = id;
-    obj[1] = obj;
-    obj.dispatch(obj);
+    const obj2 = { type: "POGGERMODE_UPDATE_MESSAGE_COMBO", comboMessage: null };
+    const obj3 = { combo: iter, channelId, messageId: id, displayed: false };
+    obj2.comboMessage = obj3;
+    DispatcherDefault.dispatch(obj2);
   }
   let num = 1;
   if (null != iter) {
-    let value;
+    value = undefined;
     if (iter != null) {
       value = iter.value;
     }
@@ -68,5 +59,5 @@ export const updateComboOnMessageSend = function updateComboOnMessageSend(closur
       num = num3 + 1;
     }
   }
-  dispatcherDefault.dispatch({ type: "POGGERMODE_UPDATE_COMBO", channelId: closure_1_0, userId: id, multiplier: num, value: 0 });
+  DispatcherDefault.dispatch({ type: "POGGERMODE_UPDATE_COMBO", channelId, userId: id, multiplier: num, value: 0 });
 };

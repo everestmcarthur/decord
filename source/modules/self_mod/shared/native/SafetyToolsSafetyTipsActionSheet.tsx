@@ -1,44 +1,41 @@
-// Module ID: 11413
-// Function ID: 11414
+// Module ID: 11440
+// Function ID: 11441
 // Name: SafetyToolsSafetyTipsActionSheet
-// Dependencies: [19, 17, 11368, 21, 4560, 576, 11404, 1114, 11381, 4556, 2]
+// Dependencies: [19, 17, 11395, 21, 4574, 576, 11431, 1114, 11408, 4570, 2]
 // Exports: default
 
-// Module 11413 (SafetyToolsSafetyTipsActionSheet)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import SafetyTipsContainerDefault from "SafetyTipsContainer" /* 11381 */;
-import SafetyToolsActionSheetWrapperDefault from "SafetyToolsActionSheetWrapper" /* 11404 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { getInappropriateConversationsSafetyTips as closure_4 } from "LOCATION_CONTEXT_MOBILE" /* 11368 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11440 (SafetyToolsSafetyTipsActionSheet)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import SafetyTipsSectionDefault from "SafetyTipsSection" /* 11408 */;
+import SafetyToolsActionSheetWrapperDefault from "SafetyToolsActionSheetWrapper" /* 11431 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { safetyTipsContainer: null };
-createCacheKey = { marginHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/self_mod/shared/native/SafetyToolsSafetyTipsActionSheet.tsx");
+require = fn;
+const View = fn(17).View;
+let closure_4 = fn(11395).getInappropriateConversationsSafetyTips;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { safetyTipsContainer: { marginHorizontal: nativeDefault.space.PX_16 } };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/self_mod/shared/native/SafetyToolsSafetyTipsActionSheet.tsx");
 
 export default function SafetyToolsSafetyTipsActionSheet(arg0) {
   ({ channelId, recipientId, warningId, warningType, onClose } = arg0);
-  let obj = { hasHeaderBack: true, recipientId, warningId, warningType, headerTitle: null, channelId: null, onClose: null, children: null };
-  const tmp = callback2();
-  const intl = getSystemLocale.intl;
-  obj[4] = intl.string(getSystemLocale.t.EtNxi6);
-  obj[5] = channelId;
-  obj[6] = onClose;
-  obj = { style: tmp.safetyTipsContainer, children: null };
-  obj = { description: null, safetyTips: null };
-  const tmp2 = SafetyToolsActionSheetWrapperDefault;
-  const intl2 = getSystemLocale.intl;
-  obj[0] = intl2.string(getSystemLocale.t.DJMZX6);
-  const tmp3 = SafetyTipsContainerDefault;
-  obj[1] = callback().map((children) => callback2(callback(table[9]).Text, { variant: "text-sm/medium", children }, arg1));
-  obj[1] = <tmp3 description={null} safetyTips={null} />;
-  obj[7] = <View description={null} safetyTips={null} />;
-  return <tmp2 description={null} safetyTips={null} />;
+  const obj = { hasHeaderBack: true, recipientId, warningId, warningType, headerTitle: null, channelId: null, onClose: null, children: null };
+  const tmp = closure_6();
+  const intl = util.intl;
+  obj.headerTitle = intl.string(util.t.EtNxi6);
+  obj.channelId = channelId;
+  obj.onClose = onClose;
+  const obj2 = { style: tmp.safetyTipsContainer, children: null };
+  const obj3 = { description: null, safetyTips: null };
+  const intl2 = util.intl;
+  obj3.description = intl2.string(util.t.DJMZX6);
+  obj3.safetyTips = closure_4().map((children, index) => jsx(Text_Text.Text, { variant: "text-sm/medium", children }, index));
+  obj2.children = <tmp3 description={null} safetyTips={null} />;
+  obj.children = <View style={tmp.safetyTipsContainer}>{null}</View>;
+  return <tmp2 hasHeaderBack recipientId={recipientId} warningId={warningId} warningType={warningType} headerTitle={null} channelId={null} onClose={null}>{null}</tmp2>;
 };

@@ -1,12 +1,12 @@
-// Module ID: 15142
-// Function ID: 15143
-// Name: mapDiscordToMuxMetadata
+// Module ID: 15169
+// Function ID: 15170
+// Name: MuxIntegration
 // Dependencies: [2]
 
-// Module 15142 (mapDiscordToMuxMetadata)
-import set from "set" /* 2 */;
+// Module 15169 (MuxIntegration)
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("modules/video-qoe/integrations/MuxIntegration.tsx");
+let result = size.fileFinishedImporting("modules/video-qoe/integrations/MuxIntegration.tsx");
 const prototype = function MuxIntegration() {
   return Object.create(new.target.prototype);
 }.prototype;
@@ -20,34 +20,34 @@ prototype["mapDiscordToMuxMetadata"] = function mapDiscordToMuxMetadata(config, 
     }
     durationMs = result;
   }
-  obj[6] = durationMs;
-  obj[7] = config.contentMetadata.contentType;
-  obj[8] = config.contentMetadata.questId;
-  obj[9] = config.contentMetadata.gameId;
+  obj.video_duration = durationMs;
+  obj.video_content_type = config.contentMetadata.contentType;
+  obj.video_series = config.contentMetadata.questId;
+  obj.video_producer = config.contentMetadata.gameId;
   let str = config.contentMetadata.gameName;
   if (str == null) {
     str = "Discord";
   }
-  obj[10] = str;
-  obj[12] = config.contentMetadata.videoStreamType;
-  obj[13] = this.getBuildChannel();
-  obj[14] = this.getAppVersion();
+  obj.video_brand = str;
+  obj.video_stream_type = config.contentMetadata.videoStreamType;
+  obj.view_client_application_name = this.getBuildChannel();
+  obj.view_client_application_version = this.getAppVersion();
   const userContext = config.userContext;
   let userId;
   if (userContext != null) {
     userId = userContext.userId;
   }
-  obj[15] = userId;
+  obj.viewer_user_id = userId;
   const userContext2 = config.userContext;
   let userTier;
   if (userContext2 != null) {
     userTier = userContext2.userTier;
   }
-  obj[16] = userTier;
+  obj.viewer_plan = userTier;
   return obj;
 };
 prototype["getAppVersion"] = function getAppVersion() {
-  return "6379";
+  return "6385";
 };
 prototype["getBuildChannel"] = function getBuildChannel() {
   try {

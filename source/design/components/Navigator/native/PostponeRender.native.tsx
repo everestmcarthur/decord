@@ -1,43 +1,42 @@
-// Module ID: 7037
-// Function ID: 7038
+// Module ID: 7051
+// Function ID: 7052
 // Name: PostponeRender
-// Dependencies: [32, 19, 17, 21, 4560, 576, 4992, 7038, 7039, 5578, 2]
+// Dependencies: [32, 19, 17, 21, 4574, 576, 5006, 7052, 7053, 5592, 2]
 // Exports: PostponeRender
 
-// Module 7037 (PostponeRender)
-import ThemesDefault from "Themes" /* 576 */;
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4992 */;
-import _modDef5578 from "module_5578" /* 5578 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 7051 (PostponeRender)
+import nativeDefault from "native" /* 576 */;
+import useMountEffectDefault from "useMountEffect" /* 5006 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5592 */;
+import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7052 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ View: c5, StyleSheet } = get_ActivityIndicator);
-createCacheKey = { view: null };
-createCacheKey = {};
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+const obj2 = { view: null };
+const obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-createCacheKey.backgroundColor = ThemesDefault.colors.BACKGROUND_BASE_LOWER;
-createCacheKey[0] = createCacheKey;
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("design/components/Navigator/native/PostponeRender.native.tsx");
+obj3.backgroundColor = nativeDefault.colors.BACKGROUND_BASE_LOWER;
+obj2.view = obj3;
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Navigator/native/PostponeRender.native.tsx");
 
 export const PostponeRender = function PostponeRender(children) {
   children = children.children;
-  let first;
+  first = undefined;
   importDefault = undefined;
-  dependencyMap = undefined;
   ({ postpone, ignoreKeyboard, viewStyle } = children);
-  const tmp2 = callback(React.useState(postpone), 2);
-  first = tmp2[0];
-  importDefault = tmp2[1];
-  dependencyMap = React.useRef(undefined);
-  useMountLayoutEffectDefault(() => {
+  [first, importDefault] = noop.useState(postpone);
+  dependencyMap = noop.useRef(undefined);
+  useMountEffectDefault(() => {
     if (first) {
-      table.current = first(table[7]).runAfterInteractions(() => {
-        callback(false);
+      ref.current = RunAfterInteractionsUtils.runAfterInteractions(() => {
+        closure_1_1(false);
       });
       return () => {
         const current = ref.current;
@@ -48,13 +47,15 @@ export const PostponeRender = function PostponeRender(children) {
     }
   });
   if (first) {
-    children = jsx(first(7039).SceneLoadingIndicator, {});
+    children = jsx(first(7053).SceneLoadingIndicator, {});
   }
   if (ignoreKeyboard) {
     let tmp4Result = closure_5;
   } else {
-    tmp4Result = _modDef5578;
+    tmp4Result = KeyboardAwareViewDefault;
   }
-  const style = [callback2().view, viewStyle];
-  return <tmp4Result style={style}>{children}</tmp4Result>;
+  const obj = { style: null, children };
+  const items = [closure_7().view, viewStyle];
+  obj.style = items;
+  return <tmp4Result style={null}>{children}</tmp4Result>;
 };

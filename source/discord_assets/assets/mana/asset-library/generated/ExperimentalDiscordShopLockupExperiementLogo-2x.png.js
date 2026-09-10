@@ -1,12 +1,11 @@
-// Module ID: 5974
-// Function ID: 5975
-// Name: metadata
+// Module ID: 5988
+// Function ID: 5989
 // Dependencies: [2]
 
-// Module 5974 (metadata)
-import set from "set" /* 2 */;
+// Module 5988
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ExperimentalDiscordShopLockupExperiementLogo-2x.png.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ExperimentalDiscordShopLockupExperiementLogo-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/192f29aeac0dfd24c4495e23ecba46e404e12988340975803b27d57b250c1e48.png";
 export const metadata = { fileBytes: 2127 };

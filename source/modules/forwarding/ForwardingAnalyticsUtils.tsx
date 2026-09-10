@@ -1,73 +1,62 @@
-// Module ID: 11686
-// Function ID: 11687
-// Name: trackForwardStart
-// Dependencies: [19, 1957, 1074, 1242, 4740, 12, 2]
+// Module ID: 11712
+// Function ID: 11713
+// Name: ForwardingAnalyticsUtils
+// Dependencies: [19, 1957, 1074, 1242, 4754, 12, 2]
 // Exports: trackForwardCancel, trackForwardCopyLink, trackForwardSent, trackForwardStart, useTrackForwardAddRecipientOnce, useTrackForwardEditContextMessageOnce, useTrackForwardEditSearchOnce
 
-// Module 11686 (trackForwardStart)
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
+// Module 11712 (ForwardingAnalyticsUtils)
+import _mod12 from "module_12" /* 12 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4754 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/forwarding/ForwardingAnalyticsUtils.tsx");
+require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forwarding/ForwardingAnalyticsUtils.tsx");
 
 export const trackForwardStart = function trackForwardStart(channel_id, id, source) {
-  let obj = expandEventPropertiesDefault;
-  obj = { channel_id, message_id: id, source };
-  obj.track(AnalyticEvents.FORWARD_MESSAGE_STARTED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.FORWARD_MESSAGE_STARTED, { channel_id, message_id: id, source });
 };
 export const trackForwardCancel = function trackForwardCancel(arg0) {
   ({ channelId, messageId, numDestinationChanges, numQueryChanges } = arg0);
-  expandEventPropertiesDefault.track(AnalyticEvents.FORWARD_MESSAGE_CANCELLED, { channel_id: channelId, message_id: messageId, num_destination_changes: numDestinationChanges, num_query_changes: numQueryChanges });
+  AnalyticsUtilsDefault.track(AnalyticEvents.FORWARD_MESSAGE_CANCELLED, { channel_id: channelId, message_id: messageId, num_destination_changes: numDestinationChanges, num_query_changes: numQueryChanges });
 };
 export const trackForwardSent = function trackForwardSent(arg0) {
   ({ channelId, messageId } = arg0);
   ({ hasError, hasContextMessage, numDestinations, numDestinationChanges, numQueryChanges, anyDestinationHasSlowmode, source } = arg0);
-  let obj = expandEventPropertiesDefault;
-  obj.track(AnalyticEvents.FORWARD_MESSAGE_SENT, { channel_id: channelId, message_id: messageId, has_error: hasError, has_context_message: hasContextMessage, num_destinations: numDestinations, num_destination_changes: numDestinationChanges, num_query_changes: numQueryChanges, any_destination_has_slowmode: anyDestinationHasSlowmode });
+  AnalyticsUtilsDefault.track(AnalyticEvents.FORWARD_MESSAGE_SENT, { channel_id: channelId, message_id: messageId, has_error: hasError, has_context_message: hasContextMessage, num_destinations: numDestinations, num_destination_changes: numDestinationChanges, num_query_changes: numQueryChanges, any_destination_has_slowmode: anyDestinationHasSlowmode });
   if ("message-shortcut" === source) {
-    channel = channel.getChannel(channelId);
-    obj = { action: "forward", original_message_id: null };
-    obj[1] = messageId;
+    const channel = ChannelStore.getChannel(channelId);
+    const obj2 = { action: "forward", original_message_id: messageId };
     const tmp13 = require;
-    const tmpResult = expandEventPropertiesDefault;
+    const tmpResult = AnalyticsUtilsDefault;
     let guild_id;
     if (channel != null) {
       guild_id = channel.guild_id;
     }
-    const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guild_id));
-    const obj5 = collectGuildAnalyticsMetadata;
-    const merged1 = Object.assign(tmp13(4740).collectChannelAnalyticsMetadata(channel));
-    tmpResult.track(AnalyticEvents.MESSAGE_SHORTCUT_ACTION_SENT, obj);
-    const tmp13Result = tmp13(4740);
+    const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guild_id));
+    const merged1 = Object.assign(tmp13(4754).collectChannelAnalyticsMetadata(channel));
+    tmpResult.track(AnalyticEvents.MESSAGE_SHORTCUT_ACTION_SENT, obj2);
+    const tmp13Result = tmp13(4754);
   }
 };
 export const trackForwardCopyLink = function trackForwardCopyLink(channel_id, id) {
-  let obj = expandEventPropertiesDefault;
-  obj = { channel_id, message_id: id };
-  obj.track(AnalyticEvents.FORWARD_COPY_LINK, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.FORWARD_COPY_LINK, { channel_id, message_id: id });
 };
 export const useTrackForwardAddRecipientOnce = function useTrackForwardAddRecipientOnce() {
-  return React.useMemo(() => callback(table[5]).once((channel_id, message_id, has_query) => {
-    let obj = callback(table[3]);
-    obj = { channel_id, message_id, has_query };
-    obj.track(constants.FORWARD_ADD_RECIPIENT, obj);
+  return noop.useMemo(() => _mod12.once((channel_id, message_id, has_query) => {
+    closure_1_1(closure_1_2[3]).track(constants.FORWARD_ADD_RECIPIENT, { channel_id, message_id, has_query });
   }), []);
 };
 export const useTrackForwardEditSearchOnce = function useTrackForwardEditSearchOnce() {
-  return React.useMemo(() => callback(table[5]).once((channel_id, message_id) => {
-    let obj = callback(table[3]);
-    obj = { channel_id, message_id };
-    obj.track(constants.FORWARD_EDIT_SEARCH, obj);
+  return noop.useMemo(() => _mod12.once((channel_id, message_id) => {
+    closure_1_1(closure_1_2[3]).track(constants.FORWARD_EDIT_SEARCH, { channel_id, message_id });
   }), []);
 };
 export const useTrackForwardEditContextMessageOnce = function useTrackForwardEditContextMessageOnce() {
-  return React.useMemo(() => callback(table[5]).once((channel_id, message_id) => {
-    let obj = callback(table[3]);
-    obj = { channel_id, message_id };
-    obj.track(constants.FORWARD_EDIT_CONTEXT_MESSAGE, obj);
+  return noop.useMemo(() => _mod12.once((channel_id, message_id) => {
+    closure_1_1(closure_1_2[3]).track(constants.FORWARD_EDIT_CONTEXT_MESSAGE, { channel_id, message_id });
   }), []);
 };

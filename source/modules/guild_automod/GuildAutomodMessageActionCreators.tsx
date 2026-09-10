@@ -1,17 +1,15 @@
-// Module ID: 11623
-// Function ID: 11624
-// Name: removeAutomodMessageNotice
+// Module ID: 11649
+// Function ID: 11650
+// Name: GuildAutomodMessageActionCreators
 // Dependencies: [573, 2]
 // Exports: removeAutomodMessageNotice
 
-// Module 11623 (removeAutomodMessageNotice)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 11649 (GuildAutomodMessageActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_automod/GuildAutomodMessageActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/guild_automod/GuildAutomodMessageActionCreators.tsx");
 
-export const removeAutomodMessageNotice = function removeAutomodMessageNotice(messageId) {
-  let obj = dispatcherDefault;
-  obj = { type: "REMOVE_AUTOMOD_MESSAGE_NOTICE", messageId };
-  obj.dispatch(obj);
+export const removeAutomodMessageNotice = function removeAutomodMessageNotice(id2) {
+  DispatcherDefault.dispatch({ type: "REMOVE_AUTOMOD_MESSAGE_NOTICE", messageId: id2 });
 };

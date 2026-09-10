@@ -1,23 +1,22 @@
-// Module ID: 17342
-// Function ID: 17343
-// Name: finishRoll
-// Dependencies: [1957, 2011, 11963, 9306, 4553, 7118, 1114, 7456, 7682, 2]
+// Module ID: 17373
+// Function ID: 17374
+// Name: DiceRollLifecycleManager
+// Dependencies: [1957, 2011, 11989, 9333, 4567, 7132, 1114, 7470, 7696, 2]
 
-// Module 17342 (finishRoll)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import initializeDefault from "initialize" /* 7118 */;
-import trackInviteDefault from "trackInvite" /* 7456 */;
-import rebuildDefault from "rebuild" /* 7682 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import closure_4 from "handleConnectionOpen" /* 2011 */;
-import closure_5 from "INITIAL_STATE" /* 11963 */;
-import { INITIAL_STATE } from "INITIAL_STATE" /* 11963 */;
-import ROLL_DURATION_MS from "ROLL_DURATION_MS" /* 9306 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4553 */;
+// Module 17373 (DiceRollLifecycleManager)
+import util from "util" /* 1114 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7470 */;
+import MessageParserDefault from "MessageParser" /* 7696 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import DiceRollStore from "DiceRollStore" /* 11989 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-require = arg1;
-({ AFTER_ROLL_DELAY_MS: error, ALLOWED_DICE_SIDES_SET: closure_8, DEFAULT_DICE_SIDES: c9, DISMISS_DELAY_MS: c10, MAX_DICE_COUNT: unpackModuleId, ROLL_DURATION_MS: closure_12 } = ROLL_DURATION_MS);
-initializeDefault;
+require = fn;
+const INITIAL_STATE = fn(11989).INITIAL_STATE;
+const DiceRollConstants = fn(9333);
+({ AFTER_ROLL_DELAY_MS: closure_7, ALLOWED_DICE_SIDES_SET: closure_8, DEFAULT_DICE_SIDES: closure_9, DISMISS_DELAY_MS: c10, MAX_DICE_COUNT: closure_11, ROLL_DURATION_MS: closure_12 } = DiceRollConstants);
+const MessageSendLocation = fn(4567).MessageSendLocation;
 class DiceRollLifecycleManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -34,7 +33,7 @@ class DiceRollLifecycleManager extends tmp3 {
     applyArgumentsResult.postRollDismissTimer = null;
     applyArgumentsResult.collapseTimer = null;
     applyArgumentsResult.handleChannelSelect = function handleChannelSelect(channelId) {
-      const state = closure_1_5.getState();
+      state = DiceRollStore.getState();
       if (tmp2) {
         applyArgumentsResult.clearTimers();
         applyArgumentsResult.dismiss();
@@ -53,8 +52,8 @@ class DiceRollLifecycleManager extends tmp3 {
       let num3;
       closure_2 = undefined;
       let items;
-      if (closure_1_4.getChannelId() === channelId) {
-        if (null == closure_1_5.getState().channelId) {
+      if (channelId.getChannelId() === channelId) {
+        if (null == state.getState().channelId) {
           num3 = 42;
           if (42 !== num) {
             const _Math = Math;
@@ -62,14 +61,11 @@ class DiceRollLifecycleManager extends tmp3 {
             num3 = Math.min(Math.max(num, 1), closure_1_11);
           }
           let tmp4 = diceSides;
-          if (!closure_1_8.has(diceSides)) {
+          if (!set.has(diceSides)) {
             tmp4 = closure_1_9;
           }
           closure_2 = tmp4;
-          const obj = { channelId: null, rolling: true, diceCount: null, diceSides: null, results: null };
-          obj[0] = channelId;
-          obj[2] = num3;
-          obj[3] = tmp4;
+          const obj = { channelId, rolling: true, diceCount: num3, diceSides: tmp4, results: null };
           obj2.setState(obj);
           items = [];
           for (let num4 = 0; num4 < num3; num4 = num4 + 1) {
@@ -79,74 +75,68 @@ class DiceRollLifecycleManager extends tmp3 {
           }
           const _setTimeout = setTimeout;
           channelId.rollTimer = setTimeout(() => {
-            channelId.rollTimer = null;
-            channelId.finishRoll(channelId, num3, closure_2, items);
+            applyArgumentsResult.rollTimer = null;
+            applyArgumentsResult.finishRoll(channelId, num3, closure_2, items);
           }, closure_1_12);
         }
-        obj2 = closure_1_5;
+        obj2 = state;
       }
     };
     return applyArgumentsResult;
   }
 }
 const prototype = DiceRollLifecycleManager.prototype;
-prototype["finishRoll"] = function finishRoll(channelId, arg1, closure_2, items) {
+prototype["finishRoll"] = function finishRoll(channelId, arg1, arg2, items) {
   const self = this;
-  store.setState({ rolling: false, results: items });
+  DiceRollStore.setState({ rolling: false, results: items });
   this.postRollDismissTimer = setTimeout(() => {
     self.postRollDismissTimer = null;
     self.dismiss();
-  }, closure_7);
-  this.sendMessage(channelId, arg1, closure_2, items);
+  }, React5);
+  this.sendMessage(channelId, arg1, arg2, items);
 };
-prototype["sendMessage"] = function sendMessage(arg0, arg1, arg2, arr) {
-  channel = channel.getChannel(arg0);
+prototype["sendMessage"] = function sendMessage(arg0, count, sides, arr) {
+  const channel = ChannelStore.getChannel(arg0);
   if (null != channel) {
     let str = channel.getGuildId();
     if (str == null) {
       str = "@me";
     }
-    obj1 = globalThis;
+    let obj2 = globalThis;
     const _location = location;
     const _window = window;
     const _HermesInternal = HermesInternal;
-    const combined = "" + location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT + "/channels/" + str + "/" + arg0 + "/roll-dice/" + arg1 + "d" + arg2;
-    const intl = getSystemLocale.intl;
-    let obj = { count: null, sides: null };
-    obj[0] = arg1;
-    obj[1] = arg2;
+    const combined = "" + location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT + "/channels/" + str + "/" + arg0 + "/roll-dice/" + count + "d" + sides;
+    const intl = util.intl;
+    const obj = { count, sides };
     const _HermesInternal2 = HermesInternal;
-    const combined1 = "[`" + intl.formatToPlainString(getSystemLocale.t.uV5JaG, obj) + "`](" + combined + ")";
-    const reduced = arr.reduce((arg0, arg1) => arg0 + arg1, 0);
-    const intl2 = getSystemLocale.intl;
-    obj = { total: null, count: null, sides: null };
-    obj[0] = reduced;
-    obj[1] = arg1;
-    obj[2] = arg2;
-    const result = intl2.formatToMarkdownString(getSystemLocale.t.tmSbYW, obj);
-    const mapped = arr.map((arg0) => ":game_die: " + arg0.toString());
+    const combined1 = "[`" + intl.formatToPlainString(util.t.uV5JaG, obj) + "`](" + combined + ")";
+    const reduced = arr.reduce((acc, item) => acc + item, 0);
+    const intl2 = util.intl;
+    const obj3 = { total: reduced, count, sides };
+    const result = intl2.formatToMarkdownString(util.t.tmSbYW, obj3);
+    const mapped = arr.map((item) => ":game_die: " + item.toString());
     let str10 = " ";
     const _HermesInternal3 = HermesInternal;
     const combined2 = "-# " + mapped.join(" ");
-    if (1 === arg1) {
+    if (1 === count) {
       let combined3 = "### " + result + ` ` + combined1;
     } else {
       const _HermesInternal4 = HermesInternal;
       combined3 = "### " + result + ` ` + combined1 + "\n" + combined2;
     }
-    str10 = trackInviteDefault;
-    obj1 = rebuildDefault;
-    obj1 = { location: null };
-    obj1[0] = MessageSendLocation.CHAT_INPUT;
-    str10.sendMessage(arg0, obj1.parse(channel, combined3), true, obj1);
+    str10 = MessageActionCreatorsDefault;
+    obj2 = MessageParserDefault;
+    const obj4 = { location: MessageSendLocation.CHAT_INPUT };
+    str10.sendMessage(arg0, obj2.parse(channel, combined3), true, obj4);
   }
 };
 prototype["dismiss"] = function dismiss() {
   const self = this;
-  store.setState({ dismissing: true });
+  DiceRollStore.setState({ dismissing: true });
   this.collapseTimer = setTimeout(() => {
     self.collapseTimer = null;
-    closure_1_5.setState(closure_1_6);
+    DiceRollStore.setState(INITIAL_STATE);
   }, closure_10);
 };
 prototype["clearTimers"] = function clearTimers() {
@@ -168,6 +158,7 @@ prototype["clearTimers"] = function clearTimers() {
   }
 };
 const diceRollLifecycleManager = new DiceRollLifecycleManager();
-let result = require("set").fileFinishedImporting("modules/dice_roll/DiceRollLifecycleManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/dice_roll/DiceRollLifecycleManager.tsx");
 
 export default diceRollLifecycleManager;

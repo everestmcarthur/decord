@@ -1,64 +1,60 @@
-// Module ID: 9057
-// Function ID: 9058
-// Name: parents
-// Dependencies: [32, 19, 21, 7539, 4258, 1114, 8404, 9056, 9058, 2]
+// Module ID: 9084
+// Function ID: 9085
+// Name: InAppReportsShareWithParentElement
+// Dependencies: [32, 19, 21, 7553, 4271, 1114, 8432, 9083, 9085, 2]
 // Exports: default
 
-// Module 9057 (parents)
-import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 9056 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 9084 (InAppReportsShareWithParentElement)
+import FamilyCenterActionCreators from "FamilyCenterActionCreators" /* 7553 */;
+import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 9083 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsShareWithParentElement.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsShareWithParentElement.tsx");
 
 export default function _default(parents) {
   parents = parents.parents;
-  importDefault = undefined;
-  const tmp = callback(React.useState(false), 2);
+  const tmp = _slicedToArray(noop.useState(false), 2);
   importDefault = tmp[1];
   [][0] = parents;
   if (0 === parents.length) {
     return null;
   } else {
     const intl3 = parents(1114).intl;
-    let obj = { count: null, parent1: null, parent2: null, parent3: null };
-    obj[0] = parents.length;
-    obj[1] = parents[0].username;
+    let obj2 = { count: parents.length, parent1: parents[0].username, parent2: null, parent3: null };
     let username;
     if (parents[1] != null) {
       username = tmp17.username;
     }
-    obj[2] = username;
+    obj2.parent2 = username;
     let username1;
     if (parents[2] != null) {
       username1 = tmp4.username;
     }
-    obj[3] = username1;
-    obj = { title: null, disabledTitle: null, icon: null, description: null, disabled: null, onPress: null };
-    obj[0] = intl3.formatToPlainString(parents(1114).t.HqyWeO, obj);
-    const formatToPlainStringResult = intl3.formatToPlainString(parents(1114).t.HqyWeO, obj);
+    obj2.parent3 = username1;
+    let obj = { title: intl3.formatToPlainString(parents(1114).t.HqyWeO, obj2), disabledTitle: null, icon: null, description: null, disabled: null, onPress: null };
+    const formatToPlainStringResult = intl3.formatToPlainString(parents(1114).t.HqyWeO, obj2);
     let intl = tmp15(1114).intl;
-    obj = { count: null, parent1: null, parent2: null, parent3: null };
-    obj[0] = parents.length;
-    obj[1] = parents[0].username;
+    const obj3 = { count: parents.length, parent1: parents[0].username, parent2: null, parent3: null };
     let username2;
     if (parents[1] != null) {
       username2 = tmp10.username;
     }
-    obj[2] = username2;
+    obj3.parent2 = username2;
     let username3;
     if (parents[2] != null) {
       username3 = tmp12.username;
     }
-    obj[3] = username3;
-    obj[1] = intl.formatToPlainString(parents(1114).t.BlAMme, obj);
-    obj[2] = jsx(parents(9058).ShareIcon, {});
+    obj3.parent3 = username3;
+    obj.disabledTitle = intl.formatToPlainString(parents(1114).t.BlAMme, obj3);
+    obj.icon = jsx(parents(9085).ShareIcon, {});
     const intl2 = tmp15(1114).intl;
-    obj[3] = intl2.string(parents(1114).t["5l/hlt"]);
-    obj[4] = tmp[0];
-    obj[5] = tmp2;
-    return jsx(InAppReportsUpsellsTableRowDefault, { count: null, parent1: null, parent2: null, parent3: null });
+    obj.description = intl2.string(parents(1114).t["5l/hlt"]);
+    obj.disabled = tmp[0];
+    obj.onPress = tmp2;
+    return jsx(InAppReportsUpsellsTableRowDefault, { title: intl3.formatToPlainString(parents(1114).t.HqyWeO, obj2), disabledTitle: null, icon: null, description: null, disabled: null, onPress: null });
   }
 };

@@ -1,65 +1,59 @@
-// Module ID: 7972
-// Function ID: 7973
-// Name: DoubleTapErrorToastIcon
-// Dependencies: [19, 17, 1374, 21, 4560, 576, 7973, 4259, 4556, 1114, 2]
+// Module ID: 7986
+// Function ID: 7987
+// Name: DoubleTapErrorToast
+// Dependencies: [19, 17, 1374, 21, 4574, 576, 7987, 4272, 4570, 1114, 2]
 // Exports: showDoubleTapErrorToast
 
-// Module 7972 (DoubleTapErrorToastIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import dispatcherDefault from "dispatcher" /* 4259 */;
-import XSmallBoldIcon from "XSmallBoldIcon" /* 7973 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { EmojiDisabledReasons } from "set" /* 1374 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 7986 (DoubleTapErrorToast)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import XSmallBoldIcon from "XSmallBoldIcon" /* 7987 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function DoubleTapErrorToastIcon() {
-  let obj = { style: callback().icon, "aria-hidden": true, children: null };
-  obj = { color: ThemesDefault.colors.WHITE, size: "xs" };
-  obj[2] = jsx(XSmallBoldIcon.XSmallBoldIcon, { color: ThemesDefault.colors.WHITE, size: "xs" });
-  return <View color={ThemesDefault.colors.WHITE} size="xs" />;
+  const obj = { style: closure_6().icon, "aria-hidden": true, children: jsx(XSmallBoldIcon.XSmallBoldIcon, { color: nativeDefault.colors.WHITE, size: "xs" }) };
+  return <View style={closure_6().icon} aria-hidden>{jsx(XSmallBoldIcon.XSmallBoldIcon, { color: nativeDefault.colors.WHITE, size: "xs" })}</View>;
 }
-noopAll;
-createCacheKey = { icon: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, borderRadius: ThemesDefault.radii.round, padding: ThemesDefault.space.PX_4, marginLeft: ThemesDefault.space.PX_4 };
-createCacheKey[0] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapErrorToast.tsx");
+const View = fn(17).View;
+const EmojiDisabledReasons = fn(1374).EmojiDisabledReasons;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { icon: { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, borderRadius: nativeDefault.radii.round, padding: nativeDefault.space.PX_4, marginLeft: nativeDefault.space.PX_4 } };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapErrorToast.tsx");
 
 export const showDoubleTapErrorToast = function showDoubleTapErrorToast(arg0) {
   ({ emojiName: require, reason: importDefault } = arg0);
-  let obj = dispatcherDefault;
-  obj = {
+  ToastActionCreatorsDefault.open({
     key: "EMOJI_DOUBLE_TAP_ERROR",
     icon() {
-      return callback(closure_7, {});
+      return <DoubleTapErrorToastIcon />;
     },
     content() {
-      if (closure_1 === closure_1_4.DISALLOW_EXTERNAL) {
-        if (null != closure_0) {
-          let obj = { variant: "text-sm/normal", children: null };
-          const intl3 = closure_1_0(closure_1_2[9]).intl;
-          obj = { emojiName: null };
-          obj[0] = tmp;
-          obj[1] = intl3.format(closure_1_0(closure_1_2[9]).t.Dz4vkv, obj);
-          let tmp3Result = closure_1_5(closure_1_0(closure_1_2[8]).Text, obj);
+      if (importDefault === EmojiDisabledReasons.DISALLOW_EXTERNAL) {
+        if (null != closure_1_0) {
+          const obj2 = { variant: "text-sm/normal", children: null };
+          const intl3 = util.intl;
+          const obj3 = { emojiName: tmp };
+          obj2.children = intl3.format(util.t.Dz4vkv, obj3);
+          let tmp3Result = jsx(Text_Text.Text, { variant: "text-sm/normal", children: null });
         }
         return tmp3Result;
       }
-      if (null != closure_0) {
-        const intl2 = tmp4(tmp5[9]).intl;
-        obj = { emojiName: null };
-        obj[0] = tmp6;
-        let formatResult = intl2.format(tmp4(tmp5[9]).t.WZGLFq, obj);
+      if (null != closure_1_0) {
+        const intl2 = tmp4(1114).intl;
+        const obj = { emojiName: tmp6 };
+        let formatResult = intl2.format(tmp4(1114).t.WZGLFq, obj);
       } else {
-        const intl = tmp4(tmp5[9]).intl;
-        formatResult = intl.string(tmp4(tmp5[9]).t.CL5mWi);
+        const intl = tmp4(1114).intl;
+        formatResult = intl.string(tmp4(1114).t.CL5mWi);
       }
-      tmp3Result = closure_1_5(closure_1_0(closure_1_2[8]).Text, { variant: "text-sm/normal", children: formatResult });
+      tmp3Result = jsx(Text_Text.Text, { variant: "text-sm/normal", children: formatResult });
     },
     toastDurationMs: 3000
-  };
-  obj.open(obj);
+  });
 };

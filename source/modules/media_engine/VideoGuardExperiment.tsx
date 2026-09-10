@@ -1,16 +1,18 @@
-// Module ID: 13264
-// Function ID: 13265
-// Name: VIDEO_GUARD_BLOG_POST_URL
+// Module ID: 13287
+// Function ID: 13288
+// Name: VideoGuardExperiment
 // Dependencies: [1433, 2]
 
-// Module 13264 (VIDEO_GUARD_BLOG_POST_URL)
-import set from "set" /* 2 */;
+// Module 13287 (VideoGuardExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null, 2: { videoEnabled: false } };
-obj[2] = { videoEnabled: false };
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-08-video-guard", kind: "user", defaultConfig: { videoEnabled: true }, variations: obj });
-const result = set.fileFinishedImporting("modules/media_engine/VideoGuardExperiment.tsx");
+const obj = { name: "2026-08-video-guard", kind: "user", defaultConfig: { videoEnabled: true }, variations: null };
+const obj2 = { 1: null, 2: { videoEnabled: false } };
+obj2[2] = { videoEnabled: false };
+obj.variations = obj2;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/media_engine/VideoGuardExperiment.tsx");
 
 export const VIDEO_GUARD_BLOG_POST_URL = "https://discord.com/blog/a-letter-to-the-discord-community-in-brazil";
 export const VideoGuardExperiment = apexExperiment;

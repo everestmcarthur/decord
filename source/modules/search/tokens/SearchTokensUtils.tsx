@@ -1,20 +1,21 @@
-// Module ID: 12348
-// Function ID: 12349
-// Name: ANSWER_IN_REGEX
-// Dependencies: [4547, 2]
+// Module ID: 12374
+// Function ID: 12375
+// Name: SearchTokensUtils
+// Dependencies: [4561, 2]
 // Exports: makeRegexForOptionsWithNegation, validateForMapWithNegation
 
-// Module 12348 (ANSWER_IN_REGEX)
-import set from "set" /* 2 */;
+// Module 12374 (SearchTokensUtils)
+import RegexUtilsDefault from "RegexUtils" /* 4561 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/search/tokens/SearchTokensUtils.tsx");
+const result = size.fileFinishedImporting("modules/search/tokens/SearchTokensUtils.tsx");
 
 export const ANSWER_IN_REGEX = /(?:\s*#?((?:"(\\\\|\\"|[^\\"])*")|(?:[^\s]+)))/i;
 export const GENERIC_REGEX = /(?:\s*([^\s]+))/;
 export const makeRegexForOptionsWithNegation = function makeRegexForOptionsWithNegation(items) {
   items = [...items];
   const sorted = items.sort((arg0, arg1) => arg1.length - arg0.length);
-  const mapped = sorted.map((arg0) => callback(table[0]).escape(arg0));
+  const mapped = sorted.map((item) => RegexUtilsDefault.escape(item));
   const regExp = new RegExp("(?:\\s*(-?(?:" + mapped.join("|") + ")))", "i");
   return regExp;
 };

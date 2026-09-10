@@ -1,17 +1,18 @@
-// Module ID: 15852
-// Function ID: 15853
-// Name: useSecureFramesVerifiedUserIds
-// Dependencies: [9139, 504, 2]
+// Module ID: 15882
+// Function ID: 15883
+// Name: useSecureFramesVerifiedUsers
+// Dependencies: [9166, 504, 2]
 // Exports: useSecureFramesVerifiedUserIds
 
-// Module 15852 (useSecureFramesVerifiedUserIds)
+// Module 15882 (useSecureFramesVerifiedUsers)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "initialize" /* 9139 */;
+import VerifiedKeyStore from "VerifiedKeyStore" /* 9166 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/rtc/hooks/useSecureFramesVerifiedUsers.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rtc/hooks/useSecureFramesVerifiedUsers.tsx");
 
 export const useSecureFramesVerifiedUserIds = function useSecureFramesVerifiedUserIds() {
-  const items = [closure_2];
+  const items = [VerifiedKeyStore];
   return initialize.useStateFromStoresArray(items, () => userIds.getUserIds());
 };

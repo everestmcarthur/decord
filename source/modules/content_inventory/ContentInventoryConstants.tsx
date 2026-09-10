@@ -1,12 +1,12 @@
-// Module ID: 8358
-// Function ID: 8359
-// Name: ContentInventoryFeedKey
+// Module ID: 8386
+// Function ID: 8387
+// Name: ContentInventoryConstants
 // Dependencies: [2]
 
-// Module 8358 (ContentInventoryFeedKey)
-import set from "set" /* 2 */;
+// Module 8386 (ContentInventoryConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/content_inventory/ContentInventoryConstants.tsx");
+const result = size.fileFinishedImporting("modules/content_inventory/ContentInventoryConstants.tsx");
 
 export const ContentInventoryFeedKey = { GLOBAL_FEED: "global feed", GAME_PROFILE_FEED: "game profile feed" };
 export const ContentInventorySurfaceTypes = { GUILD_MEMBER_LIST: 1, [1]: "GUILD_MEMBER_LIST" };

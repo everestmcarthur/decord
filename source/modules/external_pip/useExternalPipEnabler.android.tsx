@@ -1,39 +1,40 @@
-// Module ID: 17004
-// Function ID: 17005
-// Name: useExternalPIPEnabler
-// Dependencies: [4576, 502, 4583, 504, 17005, 2]
+// Module ID: 17035
+// Function ID: 17036
+// Name: useExternalPipEnabler
+// Dependencies: [4590, 502, 4597, 504, 17036, 2]
 // Exports: default
 
-// Module 17004 (useExternalPIPEnabler)
-import closure_2 from "getParticipants" /* 4576 */;
-import closure_3 from "fetchFingerprint" /* 502 */;
-import closure_4 from "createRTCConnection" /* 4583 */;
+// Module 17035 (useExternalPipEnabler)
+import ExternalPipEnablerState from "ExternalPipEnablerState" /* 17036 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4590 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/external_pip/useExternalPipEnabler.android.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/external_pip/useExternalPipEnabler.android.tsx");
 
 export default function useExternalPIPEnabler(disabled) {
   disabled = disabled.disabled;
-  const items = [closure_2, closure_4, closure_3];
+  const items = [ChannelRTCStore, RTCConnectionStore, AuthenticationStore];
   const items1 = [disabled];
   return disabled(504).useStateFromStoresObject(items, () => {
-    const channelId = closure_1_4.getChannelId();
+    const channelId = RTCConnectionStore.getChannelId();
     if (null != channelId) {
       if (!disabled) {
-        let obj = closure_1_2;
-        const videoParticipants = closure_1_2.getVideoParticipants(channelId);
+        const videoParticipants = ChannelRTCStore.getVideoParticipants(channelId);
         let tmp2 = videoParticipants.filter((localVideoDisabled) => !localVideoDisabled.localVideoDisabled).length > 0;
         if (!tmp2) {
-          const streamParticipants = obj.getStreamParticipants(channelId);
+          const streamParticipants = ChannelRTCStore.getStreamParticipants(channelId);
           const found = streamParticipants.filter((user) => user.user.id !== id.getId());
           tmp2 = null != found.find((streamId) => null != streamId.streamId);
         }
-        obj = {};
-        const merged = Object.assign(disabled(closure_1_1[4]).DEFAULT_STATE);
-        obj.externalPipEnabled = tmp2;
-        return obj;
+        const obj2 = {};
+        const merged = Object.assign(ExternalPipEnablerState.DEFAULT_STATE);
+        obj2.externalPipEnabled = tmp2;
+        return obj2;
       }
     }
-    return disabled(closure_1_1[4]).DEFAULT_STATE;
+    return ExternalPipEnablerState.DEFAULT_STATE;
   }, items1);
 };

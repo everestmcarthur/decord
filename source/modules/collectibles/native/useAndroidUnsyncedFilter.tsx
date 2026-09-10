@@ -1,24 +1,24 @@
-// Module ID: 15079
-// Function ID: 15080
+// Module ID: 15106
+// Function ID: 15107
 // Name: useAndroidUnsyncedFilter
-// Dependencies: [19, 4559, 7237, 504, 4231, 8853, 2]
+// Dependencies: [19, 4573, 7251, 504, 4244, 8880, 2]
 // Exports: useAndroidUnsyncedFilter
 
-// Module 15079 (useAndroidUnsyncedFilter)
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import closure_3 from "getUserAgnosticState" /* 4559 */;
-import closure_4 from "updateProduct" /* 7237 */;
+// Module 15106 (useAndroidUnsyncedFilter)
+import _mod19 from "module_19" /* 19 */;
+import DevSettingsStore from "DevSettingsStore" /* 4573 */;
+import IAPStore from "IAPStore" /* 7251 */;
+import size from "module_2" /* 2 */;
 
-noop.useCallback;
-const result = set.fileFinishedImporting("modules/collectibles/native/useAndroidUnsyncedFilter.tsx");
+_mod19.useCallback;
+const result = size.fileFinishedImporting("modules/collectibles/native/useAndroidUnsyncedFilter.tsx");
 
 export const useAndroidUnsyncedFilter = function useAndroidUnsyncedFilter() {
-  const items = [closure_4];
+  const items = [IAPStore];
   stateFromStores = stateFromStores(stateFromStores1[3]).useStateFromStores(items, () => fetchingGoogleSkus.isFetchingGoogleSkus());
   const obj = stateFromStores(stateFromStores1[3]);
-  const items1 = [closure_3];
-  stateFromStores1 = stateFromStores(stateFromStores1[3]).useStateFromStores(items1, () => closure_3.get("bypass_google_sku_sync"));
+  const items1 = [DevSettingsStore];
+  stateFromStores1 = stateFromStores(stateFromStores1[3]).useStateFromStores(items1, () => DevSettingsStore.get("bypass_google_sku_sync"));
   const items2 = [stateFromStores, stateFromStores1];
   return useCallback((arr) => {
     let found = arr;
@@ -27,7 +27,7 @@ export const useAndroidUnsyncedFilter = function useAndroidUnsyncedFilter() {
       if (!stateFromStores1) {
         found = arr;
         if (!stateFromStores) {
-          found = arr.filter((variants) => callback(table[5]).isGPlaySynced(variants));
+          found = arr.filter((item) => stateFromStores(stateFromStores1[5]).isGPlaySynced(item));
         }
       }
     }

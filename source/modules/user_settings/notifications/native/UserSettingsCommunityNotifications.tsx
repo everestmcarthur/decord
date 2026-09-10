@@ -1,61 +1,66 @@
-// Module ID: 15521
-// Function ID: 15522
+// Module ID: 15551
+// Function ID: 15552
 // Name: UserSettingsCommunityNotifications
-// Dependencies: [19, 10085, 21, 4560, 504, 11, 8598, 4973, 5687, 7201, 1114, 1940, 2]
+// Dependencies: [19, 10112, 21, 4574, 504, 11, 8626, 4987, 5701, 7214, 1114, 1940, 2]
 // Exports: default
 
-// Module 15521 (UserSettingsCommunityNotifications)
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import noopAll from "noop" /* 19 */;
-import closure_3 from "computeAlertSettings" /* 10085 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15551 (UserSettingsCommunityNotifications)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import util from "util" /* 1114 */;
+import TableRowGroup from "TableRowGroup" /* 5701 */;
+import TableSwitchRow from "TableSwitchRow" /* 7214 */;
+import noop from "module_19" /* 19 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 10112 */;
 
-const require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ container: { paddingHorizontal: 16 } });
-let result = require("set").fileFinishedImporting("modules/user_settings/notifications/native/UserSettingsCommunityNotifications.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let closure_6 = createStyles.createStyles({ container: { paddingHorizontal: 16 } });
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/notifications/native/UserSettingsCommunityNotifications.tsx");
 
 export default function UserSettingsCommunityNotifications() {
+  const tmp = closure_6();
+  let items = [GuildIncidentsStore];
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => guildAlertSettings.getGuildAlertSettings());
   let obj = stateFromStores(504);
-  let items = [closure_3];
-  stateFromStores = obj.useStateFromStores(items, () => guildAlertSettings.getGuildAlertSettings());
-  const tmp = callback2();
-  const keys = DISCORD_EPOCHDefault.keys(stateFromStores);
+  const keys = SnowflakeUtilsDefault.keys(stateFromStores);
   let tmp5 = null;
   if (0 !== keys.length) {
-    obj = { children: null };
-    obj = { spacing: 24, style: null, children: null };
-    obj[1] = tmp.container;
-    obj[2] = keys.map((arg0) => {
-      stateFromStores = arg0;
-      let obj = { title: stateFromStores[arg0].guildName, hasIcons: false, children: null };
-      obj = { label: null, value: null, onValueChange: null };
-      const intl = stateFromStores(closure_1_2[10]).intl;
-      obj[0] = intl.string(stateFromStores(closure_1_2[10]).t.u6dc5B);
-      obj[1] = !stateFromStores[arg0].disableRaidAlertNag;
-      obj[2] = function onValueChange() {
-        const result = callback(closure_1_2[11]).updateUserGuildSettings(callback, (disableRaidAlertNag) => {
-          disableRaidAlertNag.disableRaidAlertNag = !disableRaidAlertNag.disableRaidAlertNag;
-        }, callback(closure_1_2[11]).UserSettingsDelay.INFREQUENT_USER_ACTION);
-      };
-      const items = [closure_1_4(stateFromStores(closure_1_2[9]).TableSwitchRow, obj), ];
-      obj = { label: null, value: null, onValueChange: null };
-      const intl2 = stateFromStores(closure_1_2[10]).intl;
-      obj[0] = intl2.string(stateFromStores(closure_1_2[10]).t.P8MG6q);
-      obj[1] = !stateFromStores[arg0].disableRaidAlertPush;
-      obj[2] = function onValueChange() {
-        const result = callback(closure_1_2[11]).updateUserGuildSettings(callback, (disableRaidAlertPush) => {
-          disableRaidAlertPush.disableRaidAlertPush = !disableRaidAlertPush.disableRaidAlertPush;
-        }, callback(closure_1_2[11]).UserSettingsDelay.INFREQUENT_USER_ACTION);
-      };
-      items[1] = closure_1_4(stateFromStores(closure_1_2[9]).TableSwitchRow, obj);
-      obj[2] = items;
-      return closure_1_5(stateFromStores(closure_1_2[8]).TableRowGroup, obj, arg0);
-    });
-    obj[0] = callback(tmp2(4973).Stack, obj);
-    tmp5 = callback(tmp2(8598).Form, obj);
+    let obj3 = { children: null };
+    const obj4 = {
+      spacing: 24,
+      style: tmp.container,
+      children: keys.map((item) => {
+          closure_0 = item;
+          const obj = { title: stateFromStores[item].guildName, hasIcons: false, children: null };
+          const obj2 = { label: null, value: null, onValueChange: null };
+          const intl = util.intl;
+          obj2.label = intl.string(util.t.u6dc5B);
+          obj2.value = !stateFromStores[item].disableRaidAlertNag;
+          obj2.onValueChange = function onValueChange() {
+            const result = stateFromStores(1940).updateUserGuildSettings(closure_0, (disableRaidAlertNag) => {
+              disableRaidAlertNag.disableRaidAlertNag = !disableRaidAlertNag.disableRaidAlertNag;
+            }, stateFromStores(1940).UserSettingsDelay.INFREQUENT_USER_ACTION);
+          };
+          const items = [React4(TableSwitchRow.TableSwitchRow, obj2), ];
+          const obj3 = { label: null, value: null, onValueChange: null };
+          const intl2 = util.intl;
+          obj3.label = intl2.string(util.t.P8MG6q);
+          obj3.value = !stateFromStores[item].disableRaidAlertPush;
+          obj3.onValueChange = function onValueChange() {
+            const result = stateFromStores(1940).updateUserGuildSettings(closure_0, (disableRaidAlertPush) => {
+              disableRaidAlertPush.disableRaidAlertPush = !disableRaidAlertPush.disableRaidAlertPush;
+            }, stateFromStores(1940).UserSettingsDelay.INFREQUENT_USER_ACTION);
+          };
+          items[1] = React4(TableSwitchRow.TableSwitchRow, obj3);
+          obj.children = items;
+          return hasOwnProperty(TableRowGroup.TableRowGroup, obj, item);
+        })
+    };
+    obj3.children = closure_4(tmp2(4987).Stack, obj4);
+    tmp5 = closure_4(tmp2(8626).Form, obj3);
   }
   return tmp5;
 };

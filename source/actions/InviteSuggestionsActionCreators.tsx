@@ -1,33 +1,29 @@
-// Module ID: 9852
-// Function ID: 9853
-// Name: loadInviteSuggestions
-// Dependencies: [9838, 9853, 573, 2]
+// Module ID: 9879
+// Function ID: 9880
+// Name: InviteSuggestionsActionCreators
+// Dependencies: [9865, 9880, 573, 2]
 // Exports: loadInviteSuggestions, searchInviteSuggestions
 
-// Module 9852 (loadInviteSuggestions)
-import set2 from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import fetchUserAffinitiesV2 from "fetchUserAffinitiesV2" /* 9853 */;
-import compareRowsByMatchScore from "compareRowsByMatchScore" /* 9838 */;
+// Module 9879 (InviteSuggestionsActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 9880 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9865 */;
+import size from "module_2" /* 2 */;
 
-const result = set2.fileFinishedImporting("actions/InviteSuggestionsActionCreators.tsx");
+const result = size.fileFinishedImporting("actions/InviteSuggestionsActionCreators.tsx");
 
 export const loadInviteSuggestions = function loadInviteSuggestions(arg0) {
   ({ omitUserIds: require, guild: importDefault, channel: dependencyMap, applicationId: closure_3, inviteTargetType: closure_4 } = arg0);
-  const userAffinitiesV2 = fetchUserAffinitiesV2.fetchUserAffinitiesV2();
+  const userAffinitiesV2 = UserAffinitiesActionCreators.fetchUserAffinitiesV2();
   return userAffinitiesV2.then(() => {
-    let obj = closure_1_1(closure_1_2[2]);
-    let set = closure_0;
-    if (closure_0 == null) {
+    let set = require;
+    if (require == null) {
       const _Set = Set;
       set = new Set();
     }
-    obj = { type: "LOAD_INVITE_SUGGESTIONS", omitUserIds: set, guild: closure_1, channel: closure_2, applicationId: closure_3, inviteTargetType: closure_4 };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "LOAD_INVITE_SUGGESTIONS", omitUserIds: set, guild, channel, applicationId, inviteTargetType });
   });
 };
 export const searchInviteSuggestions = function searchInviteSuggestions(query) {
-  let obj = dispatcherDefault;
-  obj = { type: "INVITE_SUGGESTIONS_SEARCH", query };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "INVITE_SUGGESTIONS_SEARCH", query });
 };

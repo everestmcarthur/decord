@@ -1,92 +1,86 @@
-// Module ID: 11672
-// Function ID: 11673
-// Name: handleEdit
-// Dependencies: [19, 7680, 4210, 7681, 7838, 1371, 11673, 1074, 1964, 7601, 21, 4404, 11, 11674, 10256, 7182, 1242, 7456, 4904, 1114, 11675, 11678, 11679, 4272, 7834, 11681, 7765, 4417, 1100, 4785, 7190, 4258, 4705, 4573, 10252, 4710, 1365, 9947, 8263, 8370, 8373, 7292, 4527, 11682, 1896, 7289, 8634, 2528, 7276, 4571, 8179, 4740, 11259, 11684, 1109, 11685, 1894, 11709, 11714, 11715, 11719, 11732, 2]
+// Module ID: 11698
+// Function ID: 11699
+// Name: LongPressMessageActionSheetUtils
+// Dependencies: [19, 7694, 4223, 7695, 7852, 1371, 11699, 1074, 1964, 7615, 21, 4418, 11, 11700, 10283, 7196, 1242, 7470, 4918, 1114, 11701, 11704, 11705, 4285, 7848, 11707, 7779, 4431, 1100, 4799, 7203, 4271, 4719, 4587, 10279, 4724, 1365, 9974, 8293, 8398, 8401, 7306, 4541, 11708, 1896, 7303, 8662, 2528, 7290, 4585, 8205, 4754, 11286, 11710, 1109, 11711, 1894, 11735, 11740, 11741, 11745, 11758, 2]
 // Exports: getContextBarCancelReason, handleCopyId, handleCopyMessageLink, handleCreateThread, longPressMessageOptionHandler
 
-// Module 11672 (handleEdit)
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import noopAll from "noop" /* 19 */;
-import transitionTo from "transitionTo" /* 1100 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import presentAddedFriendToast from "presentAddedFriendToast" /* 4258 */;
-import coerceMainRoute from "coerceMainRoute" /* 4417 */;
-import allowChannelAccess from "allowChannelAccess" /* 4705 */;
-import _copy from "_copy" /* 7190 */;
-import trackInviteDefault from "trackInvite" /* 7456 */;
-import patchThreadDefault from "patchThread" /* 7765 */;
-import openCreateForumPostModal from "openCreateForumPostModal" /* 10256 */;
-import createPendingReply from "createPendingReply" /* 11674 */;
-import closure_4 from "getState" /* 7680 */;
-import { isMessageComponentsV2 } from "hasFlag" /* 4210 */;
-import closure_6 from "initialize" /* 7681 */;
-import closure_7 from "initialize" /* 7838 */;
-import closure_8 from "mergeGuildAvatar" /* 1371 */;
-import closure_9 from "getOptions" /* 11673 */;
-import ME from "ME" /* 1074 */;
-import { isStaticChannelRoute } from "set" /* 1964 */;
-import { EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_20 } from "USER_SETTING_ACTION_SHEET_KEY" /* 7601 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 11698 (LongPressMessageActionSheetUtils)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import router_utils from "router_utils" /* 1100 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import ToastUtils from "ToastUtils" /* 4271 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4285 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4431 */;
+import ChannelUtils from "ChannelUtils" /* 4719 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
+import ClipboardUtils from "ClipboardUtils" /* 7203 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7470 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7779 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8293 */;
+import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10283 */;
+import PendingReplyActionCreators from "PendingReplyActionCreators" /* 11700 */;
+import ChannelPinActionCreatorsDefault from "ChannelPinActionCreators" /* 11705 */;
+import SavedMessageHelpers from "SavedMessageHelpers" /* 11735 */;
+import SavedMessageSources from "SavedMessageSources" /* 11740 */;
+import noop from "module_19" /* 19 */;
+import PendingReplyStore from "PendingReplyStore" /* 7694 */;
+import EditMessageStore from "EditMessageStore" /* 7695 */;
+import UploadStore from "UploadStore" /* 7852 */;
+import UserStore from "UserStore" /* 1371 */;
+import SendMessageOptionsStore from "SendMessageOptionsStore" /* 11699 */;
 
-require = arg1;
+require = fn;
 function handleEdit(id, isForumPost, current, source) {
   let flag = arg4;
   if (arg4 === undefined) {
     flag = false;
   }
   if (isForumPost.isForumPost()) {
-    let obj = DISCORD_EPOCHDefault;
     if (isForumPost.id === obj.castMessageIdAsChannelId(id.id)) {
       if (null != isForumPost.parent_id) {
-        createPendingReply.deletePendingReply(isForumPost.id);
-        const obj7 = createPendingReply;
-        obj = { guildId: null, parentChannelId: null, threadId: null, messageId: null, isEdit: true, analyticsLocations: null, analyticsLocationObject: null };
-        ({ guild_id: obj9[0], parent_id: obj9[1], id: obj9[2] } = isForumPost);
-        obj[3] = id.id;
-        const items = [tmp(7182).FORUM_CHANNEL, tmp(7182).GUILD_CHANNEL];
-        obj[5] = items;
-        obj = { page: null, section: null, object: null };
-        obj[0] = constants3.GUILD_CHANNEL;
-        obj[1] = constants4.FORUM_POST_HEADER;
-        obj[2] = constants2.CONTEXT_MENU;
-        obj[6] = obj;
-        const result = openCreateForumPostModal.openCreateForumPostModal(obj);
-        const obj8 = openCreateForumPostModal;
+        PendingReplyActionCreators.deletePendingReply(isForumPost.id);
+        const obj6 = { guildId: null, parentChannelId: null, threadId: null, messageId: null, isEdit: true, analyticsLocations: null, analyticsLocationObject: null };
+        ({ guild_id: obj9.guildId, parent_id: obj9.parentChannelId, id: obj9.threadId } = isForumPost);
+        obj6.messageId = id.id;
+        const items = [tmp(7196).FORUM_CHANNEL, tmp(7196).GUILD_CHANNEL];
+        obj6.analyticsLocations = items;
+        const obj10 = { page: constants3.GUILD_CHANNEL, section: constants4.FORUM_POST_HEADER, object: constants2.CONTEXT_MENU };
+        obj6.analyticsLocationObject = obj10;
+        const result = ForumComposerModalActionCreators.openCreateForumPostModal(obj6);
       }
     }
+    obj = SnowflakeUtilsDefault;
   }
   if (flag) {
     if ("message_swipe" === source) {
-      if (editing.isEditing(isForumPost.id, id.id)) {
-        const currentUser = authStore.getCurrentUser();
-        obj1 = { message_id: null, channel_id: null, guild_id: null, context_action: "edit", reason: "swipe_edit_undo", is_own_message: null };
-        obj1[0] = id.id;
-        ({ id: obj5[1], guild_id: obj5[2] } = isForumPost);
+      if (EditMessageStore.isEditing(isForumPost.id, id.id)) {
+        const currentUser = UserStore.getCurrentUser();
+        const obj16 = { message_id: id.id, channel_id: null, guild_id: null, context_action: "edit", reason: "swipe_edit_undo", is_own_message: null };
+        ({ id: obj5.channel_id, guild_id: obj5.guild_id } = isForumPost);
         let tmp15 = null != currentUser;
         if (tmp15) {
           tmp15 = currentUser.id === id.author.id;
         }
-        obj1[5] = tmp15;
-        expandEventPropertiesDefault.track(constants.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj1);
-        const obj4 = expandEventPropertiesDefault;
-        const tmp11 = importDefault;
-        trackInviteDefault.endEditMessage(isForumPost.id);
+        obj16.is_own_message = tmp15;
+        AnalyticsUtilsDefault.track(constants.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj16);
+        MessageActionCreatorsDefault.endEditMessage(isForumPost.id);
         if (current != null) {
           const current2 = current.current;
           if (current2 != null) {
             current2.dismissKeyboard();
           }
         }
-        const tmp11Result = trackInviteDefault;
+        const tmp11Result = MessageActionCreatorsDefault;
       }
     }
   }
-  pendingReply = pendingReply.getPendingReply(isForumPost.id);
+  const pendingReply = PendingReplyStore.getPendingReply(isForumPost.id);
   if (null != pendingReply) {
-    const currentUser1 = authStore.getCurrentUser();
-    let obj2 = { message_id: null, channel_id: null, guild_id: null, context_action: "reply", reason: null, is_own_message: null };
-    obj2[0] = id.id;
-    ({ id: obj12[1], guild_id: obj12[2] } = isForumPost);
+    const currentUser1 = UserStore.getCurrentUser();
+    const obj17 = { message_id: id.id, channel_id: null, guild_id: null, context_action: "reply", reason: null, is_own_message: null };
+    ({ id: obj12.channel_id, guild_id: obj12.guild_id } = isForumPost);
     if ("message_swipe" === source) {
       let str3 = "swipe_edit";
     } else if ("action_sheet" === source) {
@@ -94,15 +88,12 @@ function handleEdit(id, isForumPost, current, source) {
     } else {
       str3 = "pressed_cancel";
     }
-    obj2[4] = str3;
-    obj2[5] = null != currentUser1 && currentUser1.id === pendingReply.message.author.id;
-    expandEventPropertiesDefault.track(constants.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj2);
-    const obj11 = expandEventPropertiesDefault;
+    obj17.reason = str3;
+    obj17.is_own_message = null != currentUser1 && currentUser1.id === pendingReply.message.author.id;
+    AnalyticsUtilsDefault.track(constants.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj17);
   }
-  obj1 = createPendingReply;
-  obj1.deletePendingReply(isForumPost.id);
-  obj2 = trackInviteDefault;
-  const result1 = obj2.startEditMessageRecord(isForumPost.id, id, source);
+  PendingReplyActionCreators.deletePendingReply(isForumPost.id);
+  const result1 = MessageActionCreatorsDefault.startEditMessageRecord(isForumPost.id, id, source);
   if (current != null) {
     current = current.current;
     if (current != null) {
@@ -110,9 +101,14 @@ function handleEdit(id, isForumPost, current, source) {
     }
   }
 }
-noopAll;
-({ AnalyticEvents: c10, AnalyticsObjects: unpackModuleId, AnalyticsPages: closure_12, AnalyticsSections: map1, ComponentActions: closure_14, GIF_RE_IOS: closure_15, MediaType: closure_16, MessageStates: closure_17, MessageTypes: closure_18 } = ME);
-let result = require("set").fileFinishedImporting("modules/messages/native/long_press/LongPressMessageActionSheetUtils.tsx");
+const isMessageComponentsV2 = fn(4223).isMessageComponentsV2;
+const Constants = fn(1074);
+({ AnalyticEvents: c10, AnalyticsObjects: closure_11, AnalyticsPages: closure_12, AnalyticsSections: map1, ComponentActions: closure_14, GIF_RE_IOS: closure_15, MediaType: closure_16, MessageStates: closure_17, MessageTypes: closure_18 } = Constants);
+const isStaticChannelRoute = fn(1964).isStaticChannelRoute;
+let closure_20 = fn(7615).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/messages/native/long_press/LongPressMessageActionSheetUtils.tsx");
 
 export function getContextBarCancelReason(edit, cancel) {
   if ("message_swipe" === cancel) {
@@ -141,637 +137,582 @@ export const handleCreateThread = function handleCreateThread(guild_id, id, Mess
   if (id != null) {
     id = id.id;
   }
-  const result = patchThreadDefault.openThreadCreationForMobile(guild_id, id, str);
+  const result = ThreadActionCreatorsDefault.openThreadCreationForMobile(guild_id, id, str);
   let result1 = null == id;
   if (!result1) {
-    let tmpResult = tmp(11);
-    result1 = coerceMainRoute.navigateToCreateThread(guild_id.guild_id, tmpResult.castMessageIdAsChannelId(id.id));
-    const obj2 = coerceMainRoute;
+    const obj2 = NavigationRouteUtils;
+    result1 = obj2.navigateToCreateThread(guild_id.guild_id, tmp(11).castMessageIdAsChannelId(id.id));
+    const tmpResult = tmp(11);
   }
   if (!result1) {
-    tmpResult = tmp(11);
-    transitionTo.transitionToGuild(guild_id.guild_id, tmpResult.castMessageIdAsChannelId(id.id));
-    const obj4 = transitionTo;
+    const obj4 = router_utils;
+    obj4.transitionToGuild(guild_id.guild_id, tmp(11).castMessageIdAsChannelId(id.id));
+    const tmpResult2 = tmp(11);
   }
 };
 export const handleCopyMessageLink = function handleCopyMessageLink(channel, message_id) {
-  let obj = expandEventPropertiesDefault;
-  obj = { message_id, channel: channel.id };
-  obj.track(constants.MESSAGE_LINK_COPIED, obj);
-  const channelPermalink = allowChannelAccess.getChannelPermalink(channel.guild_id, channel.id, message_id);
+  AnalyticsUtilsDefault.track(constants.MESSAGE_LINK_COPIED, { message_id, channel: channel.id });
+  const obj2 = { message_id, channel: channel.id };
+  const channelPermalink = ChannelUtils.getChannelPermalink(channel.guild_id, channel.id, message_id);
   if (null != channelPermalink) {
-    let tmp3Result = tmp3(7190);
-    tmp3Result.copy(channelPermalink);
-    tmp3Result = tmp3(4258);
-    tmp3Result.presentLinkCopied();
+    tmp3(7203).copy(channelPermalink);
+    const tmp3Result = tmp3(7203);
+    tmp3(4271).presentLinkCopied();
+    const tmp3Result2 = tmp3(4271);
   }
 };
 export const handleCopyId = function handleCopyId(arg0) {
-  _copy.copy(arg0);
-  const obj = _copy;
-  const result = presentAddedFriendToast.presentMessageIdCopied();
+  ClipboardUtils.copy(arg0);
+  const result = ToastUtils.presentMessageIdCopied();
 };
 export const longPressMessageOptionHandler = function longPressMessageOptionHandler(analyticsLocations) {
   ({ label, message, channel } = analyticsLocations);
-  id = channel;
   ({ chatInputRef, selectedMedia, actionSheetSource, onActionExecuted, onBack, disabled } = analyticsLocations);
   if (disabled === undefined) {
     disabled = false;
   }
-  let id2;
-  selectedMedia = undefined;
+  id = undefined;
   ({ guild_id, id } = channel);
-  id2 = id;
-  id2 = message.id;
-  selectedMedia = id2;
+  const id2 = message.id;
   if (!disabled) {
-    let result = id;
-    let intl = id(1114).intl;
-    if (label !== intl.string(id(1114).t.PHjkRE)) {
-      let obj = id2(4527);
-      obj.hideActionSheet();
+    const tmp = channel;
+    let intl = channel(1114).intl;
+    if (label !== intl.string(channel(1114).t.PHjkRE)) {
+      id(4541).hideActionSheet();
+      let obj = id(4541);
     }
-    let intl2 = result(1114).intl;
-    if (intl2.string(result(1114).t["+78Pfm"]) !== label) {
-      const intl26 = result(1114).intl;
-      if (intl26.string(result(1114).t.n5EBAJ) !== label) {
-        const intl27 = result(1114).intl;
-        result = id2;
-        if (intl27.string(id2(2528)["1D+vqy"]) === label) {
-          if (resultResult.canReportMessageToMods(message)) {
-            result = result(8634).showReportToModMessageModal(message);
-            const resultResult1 = result(8634);
+    let intl2 = tmp(1114).intl;
+    if (intl2.string(tmp(1114).t["+78Pfm"]) !== label) {
+      const intl26 = tmp(1114).intl;
+      if (intl26.string(tmp(1114).t.n5EBAJ) !== label) {
+        const intl27 = tmp(1114).intl;
+        if (intl27.string(id(2528)["1D+vqy"]) === label) {
+          if (tmpResult.canReportMessageToMods(message)) {
+            let result = tmp(8662).showReportToModMessageModal(message);
+            const tmpResult34 = tmp(8662);
           }
-          resultResult = result(7276);
+          tmpResult = tmp(7290);
         } else {
-          const intl28 = result(1114).intl;
-          if (intl28.string(result(1114).t.k5WiPf) === label) {
-            result = constants7;
-            if (message.type === constants7.THREAD_STARTER_MESSAGE) {
-              result = null;
+          const intl28 = tmp(1114).intl;
+          if (intl28.string(tmp(1114).t.k5WiPf) === label) {
+            if (message.type === constants8.THREAD_STARTER_MESSAGE) {
               if (null != message.messageReference) {
                 const guild_id2 = message.messageReference.guild_id;
                 if (null != guild_id2) {
-                  result = result(1100).transitionToGuild(guild_id2, result, result);
-                  const resultResult2 = result(1100);
+                  tmp(1100).transitionToGuild(guild_id2, tmp146, tmp145);
+                  const tmpResult35 = tmp(1100);
                 }
               }
             }
           } else {
-            const intl29 = result(1114).intl;
-            if (intl29.string(result(1114).t["+TSRGD"]) === label) {
-              result = result(4571).transitionToMessage(channel.id, message.id);
-              const resultResult3 = result(4571);
+            const intl29 = tmp(1114).intl;
+            if (intl29.string(tmp(1114).t["+TSRGD"]) === label) {
+              tmp(4585).transitionToMessage(channel.id, message.id);
+              const tmpResult36 = tmp(4585);
             } else {
-              const intl30 = result(1114).intl;
-              if (intl30.string(result(1114).t.zBoHlf) === label) {
-                result = result(7190).copy(id2);
-                const resultResult4 = result(7190);
-                result = result(4258).presentMessageIdCopied();
-                const resultResult5 = result(4258);
+              const intl30 = tmp(1114).intl;
+              if (intl30.string(tmp(1114).t.zBoHlf) === label) {
+                tmp(7203).copy(id2);
+                const tmpResult37 = tmp(7203);
+                const result1 = tmp(4271).presentMessageIdCopied();
+                const tmpResult38 = tmp(4271);
               } else {
-                const intl31 = result(1114).intl;
-                if (intl31.string(result(1114).t.P8tvKG) === label) {
-                  result = authStore;
-                  result = authStore.getUser(message.author.id);
-                  result = null;
-                  if (null != result) {
+                const intl31 = tmp(1114).intl;
+                if (intl31.string(tmp(1114).t.P8tvKG) === label) {
+                  const user = UserStore.getUser(message.author.id);
+                  if (null != user) {
                     if (chatInputRef != null) {
                       const current7 = chatInputRef.current;
                       if (current7 != null) {
-                        result = globalThis;
                         const _HermesInternal = HermesInternal;
-                        result = current7.insertText("@" + result(4404).getUserTag(result, { decoration: "never" }), null, true);
-                        const resultResult6 = result(4404);
+                        current7.insertText("@" + tmp130(4418).getUserTag(user, { decoration: "never" }), null, true);
+                        const tmp130Result = tmp130(4418);
                       }
                     }
                     if (chatInputRef != null) {
                       const current8 = chatInputRef.current;
                       if (current8 != null) {
-                        result = current8.focus();
+                        current8.focus();
                       }
                     }
                     if (chatInputRef != null) {
                       const current9 = chatInputRef.current;
                       if (current9 != null) {
-                        result = current9.openSystemKeyboard();
+                        current9.openSystemKeyboard();
                       }
                     }
                   }
                 } else {
-                  const intl32 = result(1114).intl;
-                  if (intl32.string(result(1114).t.cduTBL) === label) {
-                    obj = { userId: null, channelId: null, messageId: null, sourceAnalyticsLocations: null };
-                    obj[0] = message.author.id;
-                    obj[1] = id;
-                    obj[2] = message.id;
-                    obj[3] = analyticsLocations.analyticsLocations;
-                    result = result(8179)(obj);
+                  const intl32 = tmp(1114).intl;
+                  if (intl32.string(tmp(1114).t.cduTBL) === label) {
+                    let obj2 = { userId: message.author.id, channelId: id, messageId: message.id, sourceAnalyticsLocations: analyticsLocations.analyticsLocations };
+                    tmp130(8205)(obj2);
                   } else {
-                    const intl33 = result(1114).intl;
-                    if (intl33.string(result(1114).t.fsBWmS) === label) {
-                      result = handleEdit;
-                      result = message;
-                      result = channel;
-                      result = chatInputRef;
-                      result = handleEdit(message, channel, chatInputRef, "action_sheet");
+                    const intl33 = tmp(1114).intl;
+                    if (intl33.string(tmp(1114).t.fsBWmS) === label) {
+                      handleEdit(message, channel, chatInputRef, "action_sheet");
                     } else {
-                      const intl34 = result(1114).intl;
-                      if (intl34.string(result(1114).t.MFGE51) === label) {
-                        result = null;
+                      const intl34 = tmp(1114).intl;
+                      if (intl34.string(tmp(1114).t.MFGE51) === label) {
+                        closure_135_0 = id;
+                        closure_135_1 = id2;
                         if (chatInputRef != null) {
                           const current6 = chatInputRef.current;
                           if (current6 != null) {
-                            result = current6.dismissKeyboard();
+                            current6.dismissKeyboard();
                           }
                         }
-                        obj = { title: null, children: null, cancelText: null, confirmText: null, onConfirm: null };
-                        const intl23 = result(1114).intl;
-                        obj[0] = intl23.string(result(1114).t.aIz1oV);
-                        result = jsx;
-                        obj1 = { channelId: null };
-                        obj1[0] = id;
-                        obj[1] = jsx(result(11675), { channelId: null });
-                        const intl24 = result(1114).intl;
-                        obj[2] = intl24.string(result(1114).t["ETE/oC"]);
-                        const intl25 = result(1114).intl;
-                        obj[3] = intl25.string(result(1114).t["cY+Oob"]);
-                        obj[4] = function onConfirm() {
-                          return id2(closure_1_3[17]).crosspostMessage(id, id2);
+                        let obj3 = { title: null, children: null, cancelText: null, confirmText: null, onConfirm: null };
+                        const intl23 = tmp(1114).intl;
+                        obj3.title = intl23.string(tmp(1114).t.aIz1oV);
+                        let obj4 = { channelId: id };
+                        obj3.children = jsx(tmp130(11701), { channelId: id });
+                        const intl24 = tmp(1114).intl;
+                        obj3.cancelText = intl24.string(tmp(1114).t["ETE/oC"]);
+                        const intl25 = tmp(1114).intl;
+                        obj3.confirmText = intl25.string(tmp(1114).t["cY+Oob"]);
+                        obj3.onConfirm = function onConfirm() {
+                          return MessageActionCreatorsDefault.crosspostMessage(channel, id);
                         };
-                        result = result(4904).show(obj);
-                        const resultResult7 = result(4904);
+                        tmp130(4918).show(obj3);
+                        const tmp130Result29 = tmp130(4918);
                       } else {
-                        const intl35 = result(1114).intl;
-                        if (intl35.string(result(1114).t.CvQ18w) === label) {
-                          id = channel;
-                          id2 = message;
-                          result = null;
+                        const intl35 = tmp(1114).intl;
+                        if (intl35.string(tmp(1114).t.CvQ18w) === label) {
+                          closure_134_0 = channel;
+                          closure_134_1 = message;
                           if (chatInputRef != null) {
                             const current5 = chatInputRef.current;
                             if (current5 != null) {
-                              result = current5.dismissKeyboard();
+                              current5.dismissKeyboard();
                             }
                           }
-                          const obj2 = { title: null, body: null, children: null, cancelText: null, confirmText: null, onConfirm: null };
-                          const intl19 = result(1114).intl;
-                          obj2[0] = intl19.string(result(1114).t.CvQ18w);
-                          const intl20 = result(1114).intl;
-                          obj2[1] = intl20.string(result(1114).t.WG5dyo);
-                          result = jsx;
-                          const obj3 = { message: null };
-                          obj3[0] = message;
-                          obj2[2] = jsx(result(11678), { message: null });
-                          const intl21 = result(1114).intl;
-                          obj2[3] = intl21.string(result(1114).t.gm1Vej);
-                          const intl22 = result(1114).intl;
-                          obj2[4] = intl22.string(result(1114).t.p89ACt);
-                          obj2[5] = function onConfirm() {
-                            id2(closure_1_3[22]).pinMessage(id, id2.id);
-                            const AccessibilityAnnouncer = id(closure_1_3[23]).AccessibilityAnnouncer;
-                            const intl = id(closure_1_3[19]).intl;
-                            AccessibilityAnnouncer.announce(intl.string(id(closure_1_3[19]).t.sCfDDl));
+                          const obj5 = { title: null, body: null, children: null, cancelText: null, confirmText: null, onConfirm: null };
+                          const intl19 = tmp(1114).intl;
+                          obj5.title = intl19.string(tmp(1114).t.CvQ18w);
+                          const intl20 = tmp(1114).intl;
+                          obj5.body = intl20.string(tmp(1114).t.WG5dyo);
+                          const obj6 = { message };
+                          obj5.children = jsx(tmp130(11704), { message });
+                          const intl21 = tmp(1114).intl;
+                          obj5.cancelText = intl21.string(tmp(1114).t.gm1Vej);
+                          const intl22 = tmp(1114).intl;
+                          obj5.confirmText = intl22.string(tmp(1114).t.p89ACt);
+                          obj5.onConfirm = function onConfirm() {
+                            ChannelPinActionCreatorsDefault.pinMessage(channel, id.id);
+                            const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
+                            const intl = util.intl;
+                            AccessibilityAnnouncer.announce(intl.string(util.t.sCfDDl));
                           };
-                          result = result(4904).show(obj2);
-                          const resultResult8 = result(4904);
+                          tmp130(4918).show(obj5);
+                          const tmp130Result30 = tmp130(4918);
                         } else {
-                          const intl36 = result(1114).intl;
-                          if (intl36.string(result(1114).t["Bse+F/"]) === label) {
-                            id = channel;
-                            id2 = message;
+                          const intl36 = tmp(1114).intl;
+                          if (intl36.string(tmp(1114).t["Bse+F/"]) === label) {
+                            closure_133_0 = channel;
+                            closure_133_1 = message;
                             if (chatInputRef != null) {
                               const current4 = chatInputRef.current;
                               if (current4 != null) {
                                 current4.dismissKeyboard();
                               }
                             }
-                            const obj4 = { title: null, body: null, children: null, cancelText: null, confirmText: null, onConfirm: null };
-                            const intl15 = result(1114).intl;
-                            obj4[0] = intl15.string(result(1114).t["Bse+F/"]);
-                            const intl16 = result(1114).intl;
-                            obj4[1] = intl16.string(result(1114).t.NjEPp7);
-                            const obj5 = { message: null };
-                            obj5[0] = message;
-                            obj4[2] = jsx(result(11678), { message: null });
-                            const intl17 = result(1114).intl;
-                            obj4[3] = intl17.string(result(1114).t.gm1Vej);
-                            const intl18 = result(1114).intl;
-                            obj4[4] = intl18.string(result(1114).t.p89ACt);
-                            obj4[5] = function onConfirm() {
-                              return id2(closure_1_3[22]).unpinMessage(id, id2.id);
+                            const obj7 = { title: null, body: null, children: null, cancelText: null, confirmText: null, onConfirm: null };
+                            const intl15 = tmp(1114).intl;
+                            obj7.title = intl15.string(tmp(1114).t["Bse+F/"]);
+                            const intl16 = tmp(1114).intl;
+                            obj7.body = intl16.string(tmp(1114).t.NjEPp7);
+                            const obj8 = { message };
+                            obj7.children = jsx(tmp130(11704), { message });
+                            const intl17 = tmp(1114).intl;
+                            obj7.cancelText = intl17.string(tmp(1114).t.gm1Vej);
+                            const intl18 = tmp(1114).intl;
+                            obj7.confirmText = intl18.string(tmp(1114).t.p89ACt);
+                            obj7.onConfirm = function onConfirm() {
+                              return ChannelPinActionCreatorsDefault.unpinMessage(channel, id.id);
                             };
-                            result = result(4904).show(obj4);
-                            const resultResult9 = result(4904);
+                            tmp130(4918).show(obj7);
+                            const tmp130Result31 = tmp130(4918);
                           } else {
-                            const intl37 = result(1114).intl;
-                            if (intl37.string(result(1114).t["lE/PG3"]) === label) {
-                              const result1 = result(7456).patchMessageGuildOfficial(id, id2, true);
-                              const resultResult10 = result(7456);
+                            const intl37 = tmp(1114).intl;
+                            if (intl37.string(tmp(1114).t["lE/PG3"]) === label) {
+                              const result2 = tmp130(7470).patchMessageGuildOfficial(id, id2, true);
+                              const tmp130Result32 = tmp130(7470);
                             } else {
-                              const intl38 = result(1114).intl;
-                              if (intl38.string(result(1114).t["2km5Gf"]) === label) {
-                                const result2 = result(7456).patchMessageGuildOfficial(id, id2, false);
-                                const resultResult11 = result(7456);
+                              const intl38 = tmp(1114).intl;
+                              if (intl38.string(tmp(1114).t["2km5Gf"]) === label) {
+                                const result3 = tmp130(7470).patchMessageGuildOfficial(id, id2, false);
+                                const tmp130Result33 = tmp130(7470);
                               } else {
-                                const intl39 = result(1114).intl;
-                                if (intl39.string(result(1114).t.xwMqD7) === label) {
-                                  if (message.state === constants6.SENDING) {
-                                    result(7834).cancelRequest(id2);
-                                    const resultResult12 = result(7834);
-                                    result(7456).deleteMessage(id, id2, true);
-                                    const resultResult13 = result(7456);
+                                const intl39 = tmp(1114).intl;
+                                if (intl39.string(tmp(1114).t.xwMqD7) === label) {
+                                  if (message.state === constants7.SENDING) {
+                                    tmp130(7848).cancelRequest(id2);
+                                    const tmp130Result34 = tmp130(7848);
+                                    tmp130(7470).deleteMessage(id, id2, true);
+                                    const tmp130Result35 = tmp130(7470);
                                   } else if (message.state === tmp86.SEND_FAILED) {
-                                    result(7456).deleteMessage(id, id2, true);
-                                    const resultResult14 = result(7456);
+                                    tmp130(7470).deleteMessage(id, id2, true);
+                                    const tmp130Result36 = tmp130(7470);
                                   } else {
-                                    id2 = message;
-                                    result = null;
+                                    closure_132_0 = id;
+                                    closure_132_1 = message;
                                     if (chatInputRef != null) {
                                       const current3 = chatInputRef.current;
                                       if (current3 != null) {
                                         current3.dismissKeyboard();
                                       }
                                     }
-                                    const obj6 = { title: null, body: null, children: null, cancelText: null, confirmText: null, onConfirm: null };
-                                    const intl11 = result(1114).intl;
-                                    obj6[0] = intl11.string(result(1114).t.MWMcg7);
-                                    const intl12 = result(1114).intl;
-                                    obj6[1] = intl12.string(result(1114).t.AMvpS4);
-                                    const obj7 = { message: null };
-                                    obj7[0] = message;
-                                    obj6[2] = jsx(result(11678), { message: null });
-                                    const intl13 = result(1114).intl;
-                                    obj6[3] = intl13.string(result(1114).t.gm1Vej);
-                                    const intl14 = result(1114).intl;
-                                    obj6[4] = intl14.string(result(1114).t.p89ACt);
-                                    obj6[5] = function onConfirm() {
-                                      id2(closure_1_3[17]).deleteMessage(id, id2.id, false);
+                                    const obj10 = { title: null, body: null, children: null, cancelText: null, confirmText: null, onConfirm: null };
+                                    const intl11 = tmp(1114).intl;
+                                    obj10.title = intl11.string(tmp(1114).t.MWMcg7);
+                                    const intl12 = tmp(1114).intl;
+                                    obj10.body = intl12.string(tmp(1114).t.AMvpS4);
+                                    const obj11 = { message };
+                                    obj10.children = jsx(tmp130(11704), { message });
+                                    const intl13 = tmp(1114).intl;
+                                    obj10.cancelText = intl13.string(tmp(1114).t.gm1Vej);
+                                    const intl14 = tmp(1114).intl;
+                                    obj10.confirmText = intl14.string(tmp(1114).t.p89ACt);
+                                    obj10.onConfirm = function onConfirm() {
+                                      MessageActionCreatorsDefault.deleteMessage(channel, id.id, false);
                                     };
-                                    result(4904).show(obj6);
-                                    const resultResult15 = result(4904);
+                                    tmp130(4918).show(obj10);
+                                    const tmp130Result37 = tmp130(4918);
                                   }
-                                  const obj8 = { channel_id: null, guild_id: null, action_sheet_option: "delete", message_state: null };
-                                  obj8[0] = id;
-                                  obj8[1] = guild_id;
-                                  obj8[3] = message.state;
-                                  result(4740).trackWithMetadata(constants.MESSAGE_ACTION_SHEET_OPTION_PRESSED, obj8);
-                                  const resultResult16 = result(4740);
+                                  const obj13 = { channel_id: id, guild_id, action_sheet_option: "delete", message_state: message.state };
+                                  tmp130(4754).trackWithMetadata(constants.MESSAGE_ACTION_SHEET_OPTION_PRESSED, obj13);
+                                  const tmp130Result38 = tmp130(4754);
                                 } else {
-                                  const intl40 = result(1114).intl;
-                                  if (intl40.string(result(1114).t["5911Lb"]) === label) {
-                                    uploaderFileForMessageId = uploaderFileForMessageId.getUploaderFileForMessageId(message.id);
+                                  const intl40 = tmp(1114).intl;
+                                  if (intl40.string(tmp(1114).t["5911Lb"]) === label) {
+                                    const uploaderFileForMessageId = UploadStore.getUploaderFileForMessageId(message.id);
                                     let items;
                                     if (uploaderFileForMessageId != null) {
                                       items = uploaderFileForMessageId.items;
                                     }
-                                    result(11681)(channel, message, items, options.getOptions(message.id));
-                                    const resultResult17 = result(11681);
-                                    const obj9 = { channel_id: null, guild_id: null, action_sheet_option: "retry", message_state: null };
-                                    obj9[0] = id;
-                                    obj9[1] = guild_id;
-                                    obj9[3] = message.state;
-                                    result(4740).trackWithMetadata(constants.MESSAGE_ACTION_SHEET_OPTION_PRESSED, obj9);
-                                    const resultResult18 = result(4740);
+                                    tmp130(11707)(channel, message, items, SendMessageOptionsStore.getOptions(message.id));
+                                    const tmp130Result39 = tmp130(11707);
+                                    const obj15 = { channel_id: id, guild_id, action_sheet_option: "retry", message_state: message.state };
+                                    tmp130(4754).trackWithMetadata(constants.MESSAGE_ACTION_SHEET_OPTION_PRESSED, obj15);
+                                    const tmp130Result40 = tmp130(4754);
                                   } else {
-                                    const intl41 = result(1114).intl;
-                                    if (intl41.string(result(1114).t.JrGD7E) === label) {
+                                    const intl41 = tmp(1114).intl;
+                                    if (intl41.string(tmp(1114).t.JrGD7E) === label) {
                                       const contentMessage = message.getContentMessage();
                                       if (isMessageComponentsV2(contentMessage)) {
-                                        const allTextDisplayContent = result(4785).getAllTextDisplayContent(contentMessage.components);
+                                        const allTextDisplayContent = tmp(4799).getAllTextDisplayContent(contentMessage.components);
                                         if (null != allTextDisplayContent) {
-                                          result(7190).copy(allTextDisplayContent);
-                                          const resultResult20 = result(7190);
+                                          tmp(7203).copy(allTextDisplayContent);
+                                          const tmpResult40 = tmp(7203);
                                         }
-                                        const resultResult19 = result(4785);
+                                        const tmpResult39 = tmp(4799);
                                       } else {
-                                        result(7190).copy(contentMessage.content);
-                                        const resultResult21 = result(7190);
+                                        tmp(7203).copy(contentMessage.content);
+                                        const tmpResult41 = tmp(7203);
                                       }
-                                      result(4258).presentMessageCopied();
-                                      const resultResult22 = result(4258);
+                                      tmp(4271).presentMessageCopied();
+                                      const tmpResult42 = tmp(4271);
                                     } else {
-                                      const intl42 = result(1114).intl;
-                                      if (intl42.string(result(1114).t.lfIHs4) === label) {
-                                        const result3 = result(11259).handleAddNewReactions(channel, id2);
-                                        const resultResult23 = result(11259);
+                                      const intl42 = tmp(1114).intl;
+                                      if (intl42.string(tmp(1114).t.lfIHs4) === label) {
+                                        const result4 = tmp(11286).handleAddNewReactions(channel, id2);
+                                        const tmpResult43 = tmp(11286);
                                       } else {
-                                        const intl43 = result(1114).intl;
-                                        if (intl43.string(result(1114).t.gHp0C4) === label) {
+                                        const intl43 = tmp(1114).intl;
+                                        if (intl43.string(tmp(1114).t.gHp0C4) === label) {
                                           if ("Preview" === actionSheetSource) {
-                                            const result4 = result(11259).handleViewPreviewReactions(id2, id);
-                                            const resultResult24 = result(11259);
+                                            const result5 = tmp(11286).handleViewPreviewReactions(id2, id);
+                                            const tmpResult44 = tmp(11286);
                                           } else {
-                                            const obj10 = { messageId: null, channelId: null, location: null };
-                                            obj10[0] = id2;
-                                            obj10[1] = id;
-                                            const obj11 = { object: null };
-                                            obj11[0] = constants2.MESSAGE_ACTION_SHEET;
-                                            obj10[2] = obj11;
-                                            result(11259).handleViewReactions(obj10);
-                                            const resultResult25 = result(11259);
+                                            const obj17 = { messageId: id2, channelId: id, location: null };
+                                            const obj18 = { object: constants2.MESSAGE_ACTION_SHEET };
+                                            obj17.location = obj18;
+                                            tmp(11286).handleViewReactions(obj17);
+                                            const tmpResult45 = tmp(11286);
                                           }
                                         } else {
-                                          const intl44 = result(1114).intl;
-                                          if (intl44.string(result(1114).t.ZbtGBm) === label) {
-                                            const result5 = result(11259).handleRemoveAllReactions(id, id2);
-                                            const resultResult26 = result(11259);
+                                          const intl44 = tmp(1114).intl;
+                                          if (intl44.string(tmp(1114).t.ZbtGBm) === label) {
+                                            const result6 = tmp(11286).handleRemoveAllReactions(id, id2);
+                                            const tmpResult46 = tmp(11286);
                                           } else {
-                                            const intl45 = result(1114).intl;
-                                            if (intl45.string(result(1114).t["g33r/P"]) === label) {
-                                              const obj12 = { recipientIds: null };
-                                              obj12[0] = message.author.id;
-                                              result(4573).openPrivateChannel(obj12);
-                                              const resultResult27 = result(4573);
+                                            const intl45 = tmp(1114).intl;
+                                            if (intl45.string(tmp(1114).t["g33r/P"]) === label) {
+                                              const obj19 = { recipientIds: message.author.id };
+                                              tmp130(4587).openPrivateChannel(obj19);
+                                              const tmp130Result41 = tmp130(4587);
                                             } else {
-                                              const intl46 = result(1114).intl;
-                                              if (intl46.string(result(1114).t.Xrt5Po) === label) {
-                                                const obj13 = { message_id: null, channel: null };
-                                                obj13[0] = id2;
-                                                obj13[1] = channel.id;
-                                                result(1242).track(constants.MESSAGE_LINK_COPIED, obj13);
-                                                const resultResult28 = result(1242);
-                                                const channelPermalink = result(4705).getChannelPermalink(channel.guild_id, channel.id, id2);
+                                              const intl46 = tmp(1114).intl;
+                                              if (intl46.string(tmp(1114).t.Xrt5Po) === label) {
+                                                const obj20 = { message_id: id2, channel: channel.id };
+                                                tmp130(1242).track(constants.MESSAGE_LINK_COPIED, obj20);
+                                                const tmp130Result42 = tmp130(1242);
+                                                const channelPermalink = tmp(4719).getChannelPermalink(channel.guild_id, channel.id, id2);
                                                 if (null != channelPermalink) {
-                                                  result = result(7190).copy(channelPermalink);
-                                                  const resultResult30 = result(7190);
-                                                  result = result(4258).presentLinkCopied();
-                                                  const resultResult31 = result(4258);
+                                                  tmp(7203).copy(channelPermalink);
+                                                  const tmpResult48 = tmp(7203);
+                                                  tmp(4271).presentLinkCopied();
+                                                  const tmpResult49 = tmp(4271);
                                                 }
-                                                const resultResult29 = result(4705);
+                                                const tmpResult47 = tmp(4719);
                                               } else {
-                                                const intl47 = result(1114).intl;
-                                                if (intl47.string(result(1114).t.RpE9k7) === label) {
-                                                  result(10252)(id, id2);
+                                                const intl47 = tmp(1114).intl;
+                                                if (intl47.string(tmp(1114).t.RpE9k7) === label) {
+                                                  tmp130(10279)(id, id2);
                                                 } else {
-                                                  const intl48 = result(1114).intl;
-                                                  if (intl48.string(result(1114).t["S/xNKV"]) === label) {
-                                                    id = selectedMedia;
-                                                    id2 = id;
+                                                  const intl48 = tmp(1114).intl;
+                                                  if (intl48.string(tmp(1114).t["S/xNKV"]) === label) {
+                                                    closure_131_0 = selectedMedia;
+                                                    closure_131_1 = id;
                                                     let mediaUrl;
                                                     if (selectedMedia != null) {
                                                       mediaUrl = selectedMedia.mediaUrl;
                                                     }
                                                     if (null != mediaUrl) {
-                                                      result = closure_15;
-                                                      selectedMedia = result(4710).urlMatchesFileExtension(selectedMedia.mediaUrl, closure_15);
-                                                      const resultResult32 = result(4710);
-                                                      result = result(1365).toURLSafe(selectedMedia.mediaUrl);
-                                                      if (null != result) {
-                                                        if (obj40.isRefreshableAttachmentUrl(result)) {
-                                                          let result6 = tmp53(9947).maybeRefreshAttachmentUrl(selectedMedia.mediaUrl);
-                                                          const tmp53Result = tmp53(9947);
+                                                      closure_131_2 = tmp(4724).urlMatchesFileExtension(selectedMedia.mediaUrl, closure_15);
+                                                      const tmpResult50 = tmp(4724);
+                                                      const toURLSafeResult = tmp130(1365).toURLSafe(selectedMedia.mediaUrl);
+                                                      if (null != toURLSafeResult) {
+                                                        if (obj40.isRefreshableAttachmentUrl(toURLSafeResult)) {
+                                                          let result7 = tmp53(9974).maybeRefreshAttachmentUrl(selectedMedia.mediaUrl);
+                                                          const tmp53Result = tmp53(9974);
                                                         }
-                                                        obj40 = selectedMedia(9947);
-                                                        tmp53 = selectedMedia;
-                                                        result6.then((mediaUrl) => id(closure_1_3[38]).downloadMediaAssetWithContentType(mediaUrl, selectedMedia ? closure_1_16.GIF : closure_1_16.IMAGE, id.contentType)).then(() => {
-                                                          let obj = id(closure_1_3[31]);
-                                                          if (selectedMedia) {
+                                                        obj40 = id2(9974);
+                                                        tmp53 = id2;
+                                                        result7.then((result) => MediaSourceUtil.downloadMediaAssetWithContentType(result, id2 ? constants6.GIF : constants6.IMAGE, channel.contentType)).then(() => {
+                                                          const obj = ToastUtils;
+                                                          if (id2) {
                                                             obj.presentGifSaved();
                                                           } else {
                                                             obj.presentImageSaved();
                                                           }
-                                                          const tmp4 = closure_1_19(id2);
+                                                          const tmp4 = isStaticChannelRoute(id);
                                                           let tmp5;
                                                           if (!tmp4) {
                                                             tmp5 = tmp3;
                                                           }
-                                                          obj = { channel_id: tmp5, channel_static_route: null };
+                                                          const obj3 = { channel_id: tmp5, channel_static_route: null };
                                                           let tmp6;
                                                           if (tmp4) {
                                                             tmp6 = tmp3;
                                                           }
-                                                          obj = {};
-                                                          obj[1] = tmp6;
-                                                          const merged = Object.assign(obj);
-                                                          id2(closure_1_3[16]).track(closure_1_10.CONTEXT_MENU_IMAGE_SAVED, obj);
+                                                          obj3.channel_static_route = tmp6;
+                                                          const merged = Object.assign(obj3);
+                                                          AnalyticsUtilsDefault.track(constants.CONTEXT_MENU_IMAGE_SAVED, {});
                                                         }, () => {
-                                                          let obj = id2(closure_1_3[18]);
-                                                          obj = { title: null, body: null, isDismissable: true };
-                                                          const intl = id(closure_1_3[19]).intl;
-                                                          obj[0] = intl.string(id(closure_1_3[19]).t.cV3alD);
-                                                          const intl2 = id(closure_1_3[19]).intl;
-                                                          obj[1] = intl2.string(id(closure_1_3[19]).t.r4Zjzv);
-                                                          obj.show(obj);
-                                                          const tmp3 = closure_1_19(id2);
+                                                          const obj2 = { title: null, body: null, isDismissable: true };
+                                                          const intl = util.intl;
+                                                          obj2.title = intl.string(util.t.cV3alD);
+                                                          const intl2 = util.intl;
+                                                          obj2.body = intl2.string(util.t.r4Zjzv);
+                                                          AlertActionCreatorsDefault.show(obj2);
+                                                          const tmp3 = isStaticChannelRoute(id);
                                                           let tmp4;
                                                           if (!tmp3) {
                                                             tmp4 = tmp2;
                                                           }
-                                                          obj = { channel_id: tmp4, channel_static_route: null };
+                                                          const obj4 = { channel_id: tmp4, channel_static_route: null };
                                                           let tmp5;
                                                           if (tmp3) {
                                                             tmp5 = tmp2;
                                                           }
-                                                          obj[1] = tmp5;
-                                                          const merged = Object.assign(obj);
-                                                          id2(closure_1_3[16]).track(closure_1_10.CONTEXT_MENU_IMAGE_SAVE_FAILED, {});
+                                                          obj4.channel_static_route = tmp5;
+                                                          const merged = Object.assign(obj4);
+                                                          AnalyticsUtilsDefault.track(constants.CONTEXT_MENU_IMAGE_SAVE_FAILED, {});
                                                         });
-                                                        const nextPromise = result6.then((mediaUrl) => id(closure_1_3[38]).downloadMediaAssetWithContentType(mediaUrl, selectedMedia ? closure_1_16.GIF : closure_1_16.IMAGE, id.contentType));
+                                                        const nextPromise = result7.then((result) => MediaSourceUtil.downloadMediaAssetWithContentType(result, id2 ? constants6.GIF : constants6.IMAGE, channel.contentType));
                                                       }
-                                                      result6 = Promise.resolve(selectedMedia.mediaUrl);
-                                                      const resultResult33 = result(1365);
+                                                      result7 = Promise.resolve(selectedMedia.mediaUrl);
+                                                      const tmp130Result43 = tmp130(1365);
                                                     }
                                                   } else {
-                                                    const intl49 = result(1114).intl;
-                                                    if (intl49.string(result(1114).t.JVuuz3) === label) {
+                                                    const intl49 = tmp(1114).intl;
+                                                    if (intl49.string(tmp(1114).t.JVuuz3) === label) {
                                                       let mediaUrl1;
                                                       if (selectedMedia != null) {
                                                         mediaUrl1 = selectedMedia.mediaUrl;
                                                       }
                                                       if (null != mediaUrl1) {
-                                                        result = constants5;
-                                                        const result7 = result(8263).downloadMediaAssetWithContentType(selectedMedia.mediaUrl, constants5.VIDEO, selectedMedia.contentType);
-                                                        result = result7.then(() => {
-                                                          id(4258).presentVideoSaved();
+                                                        const result8 = tmp(8293).downloadMediaAssetWithContentType(selectedMedia.mediaUrl, constants6.VIDEO, selectedMedia.contentType);
+                                                        result8.then(() => {
+                                                          channel(4271).presentVideoSaved();
                                                         }, () => {
-                                                          let obj = id2(4904);
-                                                          obj = { title: null, body: null, isDismissable: true };
-                                                          const intl = id(1114).intl;
-                                                          obj[0] = intl.string(id(1114).t.cV3alD);
-                                                          const intl2 = id(1114).intl;
-                                                          obj[1] = intl2.string(id(1114).t.r4Zjzv);
-                                                          obj.show(obj);
+                                                          const obj2 = { title: null, body: null, isDismissable: true };
+                                                          const intl = channel(1114).intl;
+                                                          obj2.title = intl.string(channel(1114).t.cV3alD);
+                                                          const intl2 = channel(1114).intl;
+                                                          obj2.body = intl2.string(channel(1114).t.r4Zjzv);
+                                                          id(4918).show(obj2);
                                                         });
-                                                        const resultResult34 = result(8263);
+                                                        const tmpResult51 = tmp(8293);
                                                       }
                                                     } else {
-                                                      const intl50 = result(1114).intl;
-                                                      if (intl50.string(result(1114).t.vbAEaA) === label) {
+                                                      const intl50 = tmp(1114).intl;
+                                                      if (intl50.string(tmp(1114).t.vbAEaA) === label) {
                                                         let mediaUrl2;
                                                         if (selectedMedia != null) {
                                                           mediaUrl2 = selectedMedia.mediaUrl;
                                                         }
                                                         if (null != mediaUrl2) {
-                                                          const obj14 = { href: null };
-                                                          obj14[0] = mediaUrl2;
-                                                          result = result(8370).handleClick(obj14);
-                                                          const resultResult35 = result(8370);
+                                                          const obj21 = { href: mediaUrl2 };
+                                                          tmp(8398).handleClick(obj21);
+                                                          const tmpResult52 = tmp(8398);
                                                         }
                                                       } else {
-                                                        const intl51 = result(1114).intl;
-                                                        if (intl51.string(result(1114).t["92CPQ+"]) !== label) {
-                                                          const intl52 = result(1114).intl;
-                                                          if (intl52.string(result(1114).t["8xHmxo"]) !== label) {
-                                                            const intl53 = result(1114).intl;
-                                                            if (intl53.string(result(1114).t["5IEsGx"]) === label) {
-                                                              const obj15 = { message: null, channel: null, chatInputRef: null, actionSource: "action_sheet" };
-                                                              obj15[0] = message;
-                                                              obj15[1] = channel;
-                                                              obj15[2] = chatInputRef;
-                                                              result(11684)(obj15);
+                                                        const intl51 = tmp(1114).intl;
+                                                        if (intl51.string(tmp(1114).t["92CPQ+"]) !== label) {
+                                                          const intl52 = tmp(1114).intl;
+                                                          if (intl52.string(tmp(1114).t["8xHmxo"]) !== label) {
+                                                            const intl53 = tmp(1114).intl;
+                                                            if (intl53.string(tmp(1114).t["5IEsGx"]) === label) {
+                                                              const obj22 = { message, channel, chatInputRef, actionSource: "action_sheet" };
+                                                              tmp130(11710)(obj22);
                                                               if ("Preview" === actionSheetSource) {
-                                                                result = result(4571).transitionToMessage(channel.id, message.id);
-                                                                result = globalThis;
+                                                                tmp(4585).transitionToMessage(channel.id, message.id);
                                                                 const _setTimeout = setTimeout;
-                                                                result = setTimeout(() => {
-                                                                  const ComponentDispatch = id(closure_1_3[54]).ComponentDispatch;
-                                                                  return ComponentDispatch.dispatch(closure_1_14.TEXTAREA_FOCUS, { channelId: id.id });
+                                                                const timerId = setTimeout(() => {
+                                                                  const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
+                                                                  return ComponentDispatch.dispatch(constants5.TEXTAREA_FOCUS, { channelId: channel.id });
                                                                 }, 500);
-                                                                const resultResult36 = result(4571);
+                                                                const tmpResult53 = tmp(4585);
                                                               }
                                                             } else {
-                                                              const intl54 = result(1114).intl;
-                                                              if (intl54.string(result(1114).t.I3ltXO) === label) {
-                                                                const obj16 = { message: null, source: "long-press-sheet" };
-                                                                obj16[0] = message;
-                                                                result(11685).openForwardModal(obj16);
-                                                                const resultResult37 = result(11685);
+                                                              const intl54 = tmp(1114).intl;
+                                                              if (intl54.string(tmp(1114).t.I3ltXO) === label) {
+                                                                const obj23 = { message, source: "long-press-sheet" };
+                                                                tmp(11711).openForwardModal(obj23);
+                                                                const tmpResult54 = tmp(11711);
                                                               } else {
-                                                                const intl55 = result(1114).intl;
-                                                                if (intl55.string(result(1114).t.rBIGBL) === label) {
-                                                                  id = undefined;
+                                                                const intl55 = tmp(1114).intl;
+                                                                if (intl55.string(tmp(1114).t.rBIGBL) === label) {
+                                                                  let id1;
                                                                   if (message != null) {
-                                                                    id = message.id;
+                                                                    id1 = message.id;
                                                                   }
-                                                                  const result8 = result(7765).openThreadCreationForMobile(channel, id, "Message");
-                                                                  let result9 = null == message;
-                                                                  if (!result9) {
-                                                                    const resultResult39 = result(4417);
-                                                                    result9 = resultResult39.navigateToCreateThread(channel.guild_id, result(11).castMessageIdAsChannelId(message.id));
-                                                                    const resultResult40 = result(11);
+                                                                  const result9 = tmp130(7779).openThreadCreationForMobile(channel, id1, "Message");
+                                                                  let result10 = null == message;
+                                                                  if (!result10) {
+                                                                    const tmpResult55 = tmp(4431);
+                                                                    result10 = tmpResult55.navigateToCreateThread(channel.guild_id, tmp130(11).castMessageIdAsChannelId(message.id));
+                                                                    const tmp130Result45 = tmp130(11);
                                                                   }
-                                                                  if (!result9) {
-                                                                    const resultResult41 = result(1100);
-                                                                    resultResult41.transitionToGuild(channel.guild_id, result(11).castMessageIdAsChannelId(message.id));
-                                                                    const resultResult42 = result(11);
+                                                                  if (!result10) {
+                                                                    const tmpResult56 = tmp(1100);
+                                                                    tmpResult56.transitionToGuild(channel.guild_id, tmp130(11).castMessageIdAsChannelId(message.id));
+                                                                    const tmp130Result46 = tmp130(11);
                                                                   }
-                                                                  const resultResult38 = result(7765);
+                                                                  const tmp130Result44 = tmp130(7779);
                                                                 } else {
-                                                                  const intl56 = result(1114).intl;
-                                                                  if (intl56.string(result(1114).t["39d0Wj"]) === label) {
-                                                                    const resultResult43 = result(1100);
-                                                                    resultResult43.transitionToGuild(channel.guild_id, result(11).castMessageIdAsChannelId(message.id));
-                                                                    const resultResult44 = result(11);
+                                                                  const intl56 = tmp(1114).intl;
+                                                                  if (intl56.string(tmp(1114).t["39d0Wj"]) === label) {
+                                                                    const tmpResult57 = tmp(1100);
+                                                                    tmpResult57.transitionToGuild(channel.guild_id, tmp130(11).castMessageIdAsChannelId(message.id));
+                                                                    const tmp130Result47 = tmp130(11);
                                                                   } else {
-                                                                    const intl57 = result(1114).intl;
-                                                                    if (intl57.string(result(1114).t.PHjkRE) === label) {
-                                                                      result(4527).hideActionSheet();
-                                                                      const resultResult45 = result(4527);
-                                                                      const obj17 = { channel: null, commandType: null, commandTargetId: null };
-                                                                      obj17[0] = channel;
-                                                                      obj17[1] = result(1894).ApplicationCommandType.MESSAGE;
-                                                                      obj17[2] = message.id;
-                                                                      const result10 = result(4417).navigateToContextMenuCommands(obj17);
-                                                                      const resultResult46 = result(4417);
+                                                                    const intl57 = tmp(1114).intl;
+                                                                    if (intl57.string(tmp(1114).t.PHjkRE) === label) {
+                                                                      tmp130(4541).hideActionSheet();
+                                                                      const tmp130Result48 = tmp130(4541);
+                                                                      const obj24 = { channel, commandType: tmp(1894).ApplicationCommandType.MESSAGE, commandTargetId: message.id };
+                                                                      const result11 = tmp(4431).navigateToContextMenuCommands(obj24);
+                                                                      const tmpResult58 = tmp(4431);
                                                                     } else {
-                                                                      const intl58 = result(1114).intl;
-                                                                      if (intl58.string(result(1114).t.tpxJto) === label) {
-                                                                        const obj18 = { channelId: null, messageId: null, displayToast: true, source: null };
-                                                                        obj18[0] = id;
-                                                                        obj18[1] = id2;
-                                                                        obj18[3] = result(11714).SavedMessageSources.LONG_PRESS_ACTION_SHEET;
-                                                                        const result11 = result(11709).addOrUpdateSavedMessage(obj18);
-                                                                        const resultResult47 = result(11709);
+                                                                      const intl58 = tmp(1114).intl;
+                                                                      if (intl58.string(tmp(1114).t.tpxJto) === label) {
+                                                                        const obj25 = { channelId: id, messageId: id2, displayToast: true, source: tmp(11740).SavedMessageSources.LONG_PRESS_ACTION_SHEET };
+                                                                        const result12 = tmp(11735).addOrUpdateSavedMessage(obj25);
+                                                                        const tmpResult59 = tmp(11735);
                                                                       } else {
-                                                                        const intl59 = result(1114).intl;
-                                                                        if (intl59.string(result(1114).t.SvXS1Z) === label) {
-                                                                          const obj19 = { channelId: null, messageId: null, displayToast: true };
-                                                                          obj19[0] = id;
-                                                                          obj19[1] = id2;
-                                                                          result(11709).removeSavedMessage(obj19);
-                                                                          const resultResult48 = result(11709);
+                                                                        const intl59 = tmp(1114).intl;
+                                                                        if (intl59.string(tmp(1114).t.SvXS1Z) === label) {
+                                                                          const obj26 = { channelId: id, messageId: id2, displayToast: true };
+                                                                          tmp(11735).removeSavedMessage(obj26);
+                                                                          const tmpResult60 = tmp(11735);
                                                                         } else {
-                                                                          const intl60 = result(1114).intl;
-                                                                          if (intl60.string(result(1114).t.mJ3P0N) === label) {
-                                                                            const obj20 = { createReminder: null, channelId: null, messageId: null, onBack: null };
-                                                                            obj20[0] = function createReminder(dueAt) {
-                                                                              let obj = id(closure_1_3[57]);
-                                                                              obj = { channelId: id2, messageId: selectedMedia, dueAt, displayToast: true, source: id(closure_1_3[58]).SavedMessageSources.LONG_PRESS_ACTION_SHEET };
-                                                                              return obj.addOrUpdateSavedMessage(obj);
+                                                                          const intl60 = tmp(1114).intl;
+                                                                          if (intl60.string(tmp(1114).t.mJ3P0N) === label) {
+                                                                            const obj27 = {
+                                                                              createReminder(dueAt) {
+                                                                                                                                                          const obj = SavedMessageHelpers;
+                                                                                                                                                          return obj.addOrUpdateSavedMessage({ channelId: id, messageId: id2, dueAt, displayToast: true, source: SavedMessageSources.SavedMessageSources.LONG_PRESS_ACTION_SHEET });
+                                                                                                                                                        },
+                                                                              channelId: null,
+                                                                              messageId: null,
+                                                                              onBack: null
                                                                             };
-                                                                            ({ channel_id: obj16[1], id: obj16[2] } = message);
-                                                                            obj20[3] = onBack;
-                                                                            result(4527).openLazy(result(1896)(11715, tmp2.paths), "MessageReminderDurationActionSheet", obj20);
-                                                                            const resultResult49 = result(4527);
+                                                                            ({ channel_id: obj16.channelId, id: obj16.messageId } = message);
+                                                                            obj27.onBack = onBack;
+                                                                            tmp130(4541).openLazy(tmp(1896)(11741, tmp2.paths), "MessageReminderDurationActionSheet", obj27);
+                                                                            const tmp130Result49 = tmp130(4541);
                                                                           } else {
-                                                                            const intl61 = result(1114).intl;
-                                                                            if (intl61.string(result(1114).t.vrbqs1) === label) {
-                                                                              const obj21 = { createReminder: null, removeReminder: null, channelId: null, messageId: null, onBack: null };
-                                                                              obj21[0] = function createReminder(dueAt) {
-                                                                                let obj = id(closure_1_3[57]);
-                                                                                obj = { channelId: id2, messageId: selectedMedia, dueAt, displayToast: true, source: id(closure_1_3[58]).SavedMessageSources.LONG_PRESS_ACTION_SHEET };
-                                                                                return obj.addOrUpdateSavedMessage(obj);
+                                                                            const intl61 = tmp(1114).intl;
+                                                                            if (intl61.string(tmp(1114).t.vrbqs1) === label) {
+                                                                              const obj28 = {
+                                                                                createReminder(dueAt) {
+                                                                                                                                                              const obj = SavedMessageHelpers;
+                                                                                                                                                              return obj.addOrUpdateSavedMessage({ channelId: id, messageId: id2, dueAt, displayToast: true, source: SavedMessageSources.SavedMessageSources.LONG_PRESS_ACTION_SHEET });
+                                                                                                                                                            },
+                                                                                removeReminder() {
+                                                                                                                                                              return SavedMessageHelpers.removeSavedMessage({ channelId: id, messageId: id2, displayToast: true, isReminder: true });
+                                                                                                                                                            },
+                                                                                channelId: null,
+                                                                                messageId: null,
+                                                                                onBack: null
                                                                               };
-                                                                              obj21[1] = function removeReminder() {
-                                                                                let obj = id(closure_1_3[57]);
-                                                                                obj = { channelId: id2, messageId: selectedMedia, displayToast: true, isReminder: true };
-                                                                                return obj.removeSavedMessage(obj);
-                                                                              };
-                                                                              ({ channel_id: obj14[2], id: obj14[3] } = message);
-                                                                              obj21[4] = onBack;
-                                                                              result(4527).openLazy(result(1896)(11715, tmp2.paths), "MessageReminderDurationActionSheet", obj21);
-                                                                              const resultResult50 = result(4527);
+                                                                              ({ channel_id: obj14.channelId, id: obj14.messageId } = message);
+                                                                              obj28.onBack = onBack;
+                                                                              tmp130(4541).openLazy(tmp(1896)(11741, tmp2.paths), "MessageReminderDurationActionSheet", obj28);
+                                                                              const tmp130Result50 = tmp130(4541);
                                                                             } else {
-                                                                              const intl62 = result(1114).intl;
-                                                                              if (intl62.string(result(1114).t.ZH7P2h) === label) {
+                                                                              const intl62 = tmp(1114).intl;
+                                                                              if (intl62.string(tmp(1114).t.ZH7P2h) === label) {
                                                                                 if (null != selectedMedia) {
-                                                                                  let id1;
+                                                                                  let id3;
                                                                                   if ("embed" === selectedMedia.sourceType) {
-                                                                                    id1 = selectedMedia.source.id;
+                                                                                    id3 = selectedMedia.source.id;
                                                                                   }
-                                                                                  id2 = undefined;
+                                                                                  let id4;
                                                                                   if ("attachment" === selectedMedia.sourceType) {
-                                                                                    id2 = selectedMedia.source.id;
+                                                                                    id4 = selectedMedia.source.id;
                                                                                   }
-                                                                                  let result12 = undefined !== id1 || undefined !== id2;
-                                                                                  if (!result12) {
-                                                                                    result12 = result(7292).messageHasObscurableMedia(message);
-                                                                                    const resultResult51 = result(7292);
+                                                                                  let result13 = undefined !== id3 || undefined !== id4;
+                                                                                  if (!result13) {
+                                                                                    result13 = tmp(7306).messageHasObscurableMedia(message);
+                                                                                    const tmpResult61 = tmp(7306);
                                                                                   }
-                                                                                  if (result12) {
-                                                                                    const obj22 = { channelId: null, messageId: null, attachmentId: null, embedId: null };
-                                                                                    ({ channel_id: obj12[0], id: obj12[1] } = message);
-                                                                                    obj22[2] = id2;
-                                                                                    obj22[3] = id1;
-                                                                                    result(4527).openLazy(result(1896)(11682, tmp2.paths), closure_20, obj22);
-                                                                                    const resultResult52 = result(4527);
+                                                                                  if (result13) {
+                                                                                    const obj29 = { channelId: null, messageId: null, attachmentId: null, embedId: null };
+                                                                                    ({ channel_id: obj12.channelId, id: obj12.messageId } = message);
+                                                                                    obj29.attachmentId = id4;
+                                                                                    obj29.embedId = id3;
+                                                                                    tmp130(4541).openLazy(tmp(1896)(11708, tmp2.paths), closure_20, obj29);
+                                                                                    const tmp130Result51 = tmp130(4541);
                                                                                   }
                                                                                 }
                                                                               } else {
-                                                                                const intl63 = result(1114).intl;
-                                                                                if (intl63.string(result(1114).t.grdwwt) === label) {
-                                                                                  ({ channel_id: obj9[0], id: obj9[1] } = message);
-                                                                                  result(11719).endPollEarly({ channelId: null, messageId: null });
-                                                                                  const obj23 = { channelId: null, messageId: null };
-                                                                                  const resultResult53 = result(11719);
+                                                                                const intl63 = tmp(1114).intl;
+                                                                                if (intl63.string(tmp(1114).t.grdwwt) === label) {
+                                                                                  ({ channel_id: obj9.channelId, id: obj9.messageId } = message);
+                                                                                  tmp130(11745).endPollEarly({ channelId: null, messageId: null });
+                                                                                  const obj30 = { channelId: null, messageId: null };
+                                                                                  const tmp130Result52 = tmp130(11745);
                                                                                 } else {
-                                                                                  const intl64 = result(1114).intl;
-                                                                                  if (intl64.string(result(1114).t.Rjezbz) === label) {
-                                                                                    const obj24 = { message: null, guildId: null, onBack: null };
-                                                                                    obj24[0] = message;
-                                                                                    obj24[1] = guild_id;
-                                                                                    obj24[2] = onBack;
-                                                                                    result(4527).openLazy(result(1896)(11732, tmp2.paths), "AppInteractionInfoActionSheet", obj24);
-                                                                                    const resultResult54 = result(4527);
+                                                                                  const intl64 = tmp(1114).intl;
+                                                                                  if (intl64.string(tmp(1114).t.Rjezbz) === label) {
+                                                                                    const obj31 = { message, guildId: guild_id, onBack };
+                                                                                    tmp130(4541).openLazy(tmp(1896)(11758, tmp2.paths), "AppInteractionInfoActionSheet", obj31);
+                                                                                    const tmp130Result53 = tmp130(4541);
                                                                                   } else {
-                                                                                    const intl65 = result(1114).intl;
-                                                                                    if (intl65.string(result(1114).t["4sxKOb"]) !== label) {
-                                                                                      const intl66 = result(1114).intl;
-                                                                                      if (intl66.string(result(1114).t.wUIMqa) !== label) {
-                                                                                        const intl67 = result(1114).intl;
-                                                                                        if (intl67.string(result(1114).t.kFwAsa) === label) {
-                                                                                          id2 = message;
-                                                                                          result = null;
+                                                                                    const intl65 = tmp(1114).intl;
+                                                                                    if (intl65.string(tmp(1114).t["4sxKOb"]) !== label) {
+                                                                                      const intl66 = tmp(1114).intl;
+                                                                                      if (intl66.string(tmp(1114).t.wUIMqa) !== label) {
+                                                                                        const intl67 = tmp(1114).intl;
+                                                                                        if (intl67.string(tmp(1114).t.kFwAsa) === label) {
+                                                                                          closure_129_0 = id;
+                                                                                          closure_129_1 = message;
+                                                                                          closure_129_2 = selectedMedia;
                                                                                           let sourceType;
                                                                                           if (selectedMedia != null) {
                                                                                             sourceType = selectedMedia.sourceType;
@@ -783,47 +724,49 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                                                 current.dismissKeyboard();
                                                                                               }
                                                                                             }
-                                                                                            const obj25 = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null };
-                                                                                            const intl3 = result(1114).intl;
-                                                                                            obj25[0] = intl3.string(result(1114).t.CbTIEo);
-                                                                                            const intl4 = result(1114).intl;
-                                                                                            obj25[1] = intl4.string(result(1114).t.faHmO3);
-                                                                                            const intl5 = result(1114).intl;
-                                                                                            obj25[2] = intl5.string(result(1114).t["ETE/oC"]);
-                                                                                            const intl6 = result(1114).intl;
-                                                                                            obj25[3] = intl6.string(result(1114).t.kFwAsa);
-                                                                                            obj25[4] = function onConfirm() {
-                                                                                              id = selectedMedia.source.id;
-                                                                                              const attachments = id2.attachments;
+                                                                                            const obj32 = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null };
+                                                                                            const intl3 = tmp(1114).intl;
+                                                                                            obj32.title = intl3.string(tmp(1114).t.CbTIEo);
+                                                                                            const intl4 = tmp(1114).intl;
+                                                                                            obj32.body = intl4.string(tmp(1114).t.faHmO3);
+                                                                                            const intl5 = tmp(1114).intl;
+                                                                                            obj32.cancelText = intl5.string(tmp(1114).t["ETE/oC"]);
+                                                                                            const intl6 = tmp(1114).intl;
+                                                                                            obj32.confirmText = intl6.string(tmp(1114).t.kFwAsa);
+                                                                                            obj32.onConfirm = function onConfirm() {
+                                                                                              id = id2.source.id;
+                                                                                              const attachments = id.attachments;
                                                                                               const found = attachments.filter((id) => id.id !== id);
-                                                                                              const result = id2(closure_1_3[17]).patchMessageAttachments(id, id2.id, found);
+                                                                                              const result = MessageActionCreatorsDefault.patchMessageAttachments(channel, id.id, found);
                                                                                             };
-                                                                                            result(4904).show(obj25);
-                                                                                            const resultResult55 = result(4904);
+                                                                                            tmp130(4918).show(obj32);
+                                                                                            const tmp130Result54 = tmp130(4918);
                                                                                           }
                                                                                         }
                                                                                       }
                                                                                     }
+                                                                                    closure_130_0 = id;
+                                                                                    closure_130_1 = id2;
                                                                                     if (chatInputRef != null) {
                                                                                       const current2 = chatInputRef.current;
                                                                                       if (current2 != null) {
                                                                                         current2.dismissKeyboard();
                                                                                       }
                                                                                     }
-                                                                                    const obj26 = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null };
-                                                                                    const intl7 = result(1114).intl;
-                                                                                    obj26[0] = intl7.string(result(1114).t.VL1KOk);
-                                                                                    const intl8 = result(1114).intl;
-                                                                                    obj26[1] = intl8.string(result(1114).t["vXZ+Fo"]);
-                                                                                    const intl9 = result(1114).intl;
-                                                                                    obj26[2] = intl9.string(result(1114).t["ETE/oC"]);
-                                                                                    const intl10 = result(1114).intl;
-                                                                                    obj26[3] = intl10.string(result(1114).t.YEHppG);
-                                                                                    obj26[4] = function onConfirm() {
-                                                                                      id2(closure_1_3[17]).suppressEmbeds(id, id2);
+                                                                                    const obj33 = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null };
+                                                                                    const intl7 = tmp(1114).intl;
+                                                                                    obj33.title = intl7.string(tmp(1114).t.VL1KOk);
+                                                                                    const intl8 = tmp(1114).intl;
+                                                                                    obj33.body = intl8.string(tmp(1114).t["vXZ+Fo"]);
+                                                                                    const intl9 = tmp(1114).intl;
+                                                                                    obj33.cancelText = intl9.string(tmp(1114).t["ETE/oC"]);
+                                                                                    const intl10 = tmp(1114).intl;
+                                                                                    obj33.confirmText = intl10.string(tmp(1114).t.YEHppG);
+                                                                                    obj33.onConfirm = function onConfirm() {
+                                                                                      MessageActionCreatorsDefault.suppressEmbeds(channel, id);
                                                                                     };
-                                                                                    result(4904).show(obj26);
-                                                                                    const resultResult56 = result(4904);
+                                                                                    tmp130(4918).show(obj33);
+                                                                                    const tmp130Result55 = tmp130(4918);
                                                                                   }
                                                                                 }
                                                                               }
@@ -844,35 +787,33 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                         }
                                                         let flag = null != mediaUrl3;
                                                         if (flag) {
-                                                          result(7190).copy(mediaUrl3);
-                                                          const resultResult57 = result(7190);
-                                                          result(4258).presentLinkCopied();
+                                                          tmp(7203).copy(mediaUrl3);
+                                                          const tmpResult62 = tmp(7203);
+                                                          tmp(4271).presentLinkCopied();
                                                           flag = true;
-                                                          const resultResult58 = result(4258);
+                                                          const tmpResult63 = tmp(4271);
                                                         }
                                                         if (flag) {
                                                           let hostname;
                                                           if (null != mediaUrl3) {
-                                                            hostname = result(8373).getHostname(mediaUrl3);
-                                                            const resultResult60 = result(8373);
+                                                            hostname = tmp(8401).getHostname(mediaUrl3);
+                                                            const tmpResult64 = tmp(8401);
                                                           }
-                                                          const obj27 = { hostname: null };
-                                                          obj27[0] = hostname;
+                                                          const obj34 = { hostname };
                                                           const tmp40 = isStaticChannelRoute(id);
                                                           let tmp41;
                                                           if (!tmp40) {
                                                             tmp41 = id;
                                                           }
-                                                          const obj28 = { channel_id: null, channel_static_route: null };
-                                                          obj28[0] = tmp41;
+                                                          const obj35 = { channel_id: tmp41, channel_static_route: null };
                                                           let tmp42;
                                                           if (tmp40) {
                                                             tmp42 = id;
                                                           }
-                                                          obj28[1] = tmp42;
-                                                          let merged = Object.assign(obj28);
-                                                          result(1242).track(constants.CONTEXT_MENU_MEDIA_LINK_COPIED, obj27);
-                                                          const resultResult59 = result(1242);
+                                                          obj35.channel_static_route = tmp42;
+                                                          let merged = Object.assign(obj35);
+                                                          tmp130(1242).track(constants.CONTEXT_MENU_MEDIA_LINK_COPIED, obj34);
+                                                          const tmp130Result56 = tmp130(1242);
                                                         }
                                                       }
                                                     }
@@ -899,15 +840,14 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
           }
         }
       }
-      result = null;
       if (onActionExecuted != null) {
-        result = onActionExecuted(label);
+        onActionExecuted(label);
       }
     }
-    if (resultResult61.canReportMessage(message)) {
-      result = result(8634).showReportModalForMessage(message, "mobile_message_action_sheet");
-      const resultResult62 = result(8634);
+    if (tmpResult65.canReportMessage(message)) {
+      const result14 = tmp(8662).showReportModalForMessage(message, "mobile_message_action_sheet");
+      const tmpResult66 = tmp(8662);
     }
-    resultResult61 = result(7289);
+    tmpResult65 = tmp(7303);
   }
 };

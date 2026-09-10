@@ -1,41 +1,31 @@
-// Module ID: 13781
-// Function ID: 13782
-// Name: NUFActionSheetTemplate
-// Dependencies: [19, 17, 21, 4560, 576, 4556, 4975, 2]
+// Module ID: 13804
+// Function ID: 13805
+// Name: NUFTemplate
+// Dependencies: [19, 17, 21, 4574, 576, 4570, 4989, 2]
 // Exports: default
 
-// Module 13781 (NUFActionSheetTemplate)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Text from "Text" /* 4556 */;
-import Button from "Button" /* 4975 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13804 (NUFTemplate)
+import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ View: obj1, Image: c3 } = get_ActivityIndicator);
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: null, title: null, description: null, image: null };
-createCacheKey = { padding: 16, alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { textAlign: "center", marginBottom: 8 };
-createCacheKey[2] = { textAlign: "center", lineHeight: 18, marginBottom: 24 };
-createCacheKey[3] = { marginBottom: 24 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/nuf_channels/native/components/NUFTemplate.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c2, Image: c3 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+const obj2 = { container: { padding: 16, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, title: { textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", lineHeight: 18, marginBottom: 24 }, image: { marginBottom: 24 } };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/nuf_channels/native/components/NUFTemplate.tsx");
 
 export default function NUFActionSheetTemplate(arg0) {
   ({ title, description, imageSrc, onCTAPress, CTALabel } = arg0);
-  const tmp = callback3();
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: title };
-  const items = [callback(Text.Text, obj), , , ];
-  obj = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: description };
-  items[1] = callback(Text.Text, obj);
-  items[2] = callback(closure_3, { source: imageSrc, style: tmp.image });
-  items[3] = callback(Button.Button, { text: CTALabel, size: "md", onPress: onCTAPress, grow: true });
-  obj[1] = items;
-  return callback2(closure_2, obj);
+  const tmp = closure_6();
+  const obj = { style: tmp.container, children: null };
+  const items = [React4(Text_Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: title }), React4(Text_Text.Text, { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: description }), React4(React3, { source: imageSrc, style: tmp.image }), React4(components_Button_Button.Button, { text: CTALabel, size: "md", onPress: onCTAPress, grow: true })];
+  obj.children = items;
+  return hasOwnProperty(React2, obj);
 };

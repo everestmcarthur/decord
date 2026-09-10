@@ -1,11 +1,11 @@
-// Module ID: 10894
-// Function ID: 10895
+// Module ID: 10921
+// Function ID: 10922
 // Name: StatusDisplayTypes
 // Dependencies: [2]
 
-// Module 10894 (StatusDisplayTypes)
-import set from "set" /* 2 */;
+// Module 10921 (StatusDisplayTypes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/StatusDisplayTypes.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/StatusDisplayTypes.tsx");
 
 export const StatusDisplayTypes = { NAME: 0, [0]: "NAME", STATE: 1, [1]: "STATE", DETAILS: 2, [2]: "DETAILS" };

@@ -1,67 +1,72 @@
-// Module ID: 17000
-// Function ID: 17001
-// Name: StyleSheet
-// Dependencies: [19, 17, 7538, 1074, 21, 576, 4560, 1611, 14869, 14868, 17001, 9684, 4262, 7552, 1242, 7539, 7382, 4556, 4987, 1114, 2396, 2]
+// Module ID: 17031
+// Function ID: 17032
+// Name: ParentalConsentWarningBanner
+// Dependencies: [19, 17, 7552, 1074, 21, 576, 4574, 1611, 14895, 14894, 17032, 9711, 4275, 7566, 1242, 7553, 7396, 4570, 5001, 1114, 2396, 2]
 // Exports: default
 
-// Module 17000 (StyleSheet)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { FamilyCenterSubPages } from "items" /* 7538 */;
-import ME from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17031 (ParentalConsentWarningBanner)
+import nativeDefault from "native" /* 576 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import openUserSettings from "openUserSettings" /* 7396 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7553 */;
+import tinycolorDefault from "tinycolor" /* 7566 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ Pressable: c4, StyleSheet } = get_ActivityIndicator);
+const require = globalThis.__r;
+
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Pressable: closure_4, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
-({ AnalyticEvents: closure_8, UserSettingsSections: c9, VerticalGradient: c10 } = ME);
-({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
-let closure_14 = 28 + ThemesDefault.space.PX_16;
-let closure_15 = [0.5875, 1];
-createCacheKey = { strip: null, pressable: null, label: null, link: null };
-createCacheKey = { position: "absolute", top: 0, left: 0, right: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-createCacheKey[0] = createCacheKey;
-let obj1 = {};
+const FamilyCenterSubPages = fn(7552).FamilyCenterSubPages;
+const Constants = fn(1074);
+({ AnalyticEvents: closure_8, UserSettingsSections: closure_9, VerticalGradient: c10 } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
+let closure_14 = 28 + nativeDefault.space.PX_16;
+const locations = [0.5875, 1];
+const createStyles = fn(4574);
+let obj2 = { strip: null, pressable: null, label: null, link: null };
+const rect = { position: "absolute", top: 0, left: 0, right: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+obj2.strip = rect;
+let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj1.flexDirection = "row";
-obj1.alignItems = "center";
-obj1.justifyContent = "center";
-obj1.paddingHorizontal = ThemesDefault.space.PX_12;
-obj1.paddingBottom = ThemesDefault.space.PX_16;
-createCacheKey[1] = obj1;
-createCacheKey[2] = { paddingRight: ThemesDefault.space.PX_8 };
-createCacheKey[3] = { textDecorationLine: "underline" };
-let closure_16 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { paddingRight: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/ParentalConsentWarningBanner.tsx");
+obj3.flexDirection = "row";
+obj3.alignItems = "center";
+obj3.justifyContent = "center";
+obj3.paddingHorizontal = nativeDefault.space.PX_12;
+obj3.paddingBottom = nativeDefault.space.PX_16;
+obj2.pressable = obj3;
+obj2.label = { paddingRight: nativeDefault.space.PX_8 };
+obj2.link = { textDecorationLine: "underline" };
+let closure_16 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/native/ParentalConsentWarningBanner.tsx");
 
 export default function ParentalConsentWarningBanner(children) {
-  let _require;
   let token;
   let daysRemaining;
-  const tmp = callback();
+  const tmp = closure_16();
   _require = tmp;
   let Gfqlpa = token;
   let obj = daysRemaining;
   const tmp2 = token(daysRemaining[7])();
   let intl = _require;
-  obj1 = _require(daysRemaining[8]);
-  const parentalConsentWarning = obj1.useParentalConsentWarning();
-  let obj2 = _require(daysRemaining[9]);
-  const isParentalConsentBannerActive = obj2.useIsParentalConsentBannerActive();
-  let obj3 = _require(daysRemaining[10]);
-  let isOnMainSurface = obj3.useIsOnMainSurface();
-  let obj4 = _require(daysRemaining[11]);
-  let obj5 = _require(daysRemaining[12]);
-  token = obj5.useToken(token(daysRemaining[5]).colors.BACKGROUND_FEEDBACK_WARNING);
+  const parentalConsentWarning = require("useParentalConsentWarning").useParentalConsentWarning();
+  let obj2 = require("useParentalConsentWarning");
+  const isParentalConsentBannerActive = require("useIsParentalConsentBannerActive").useIsParentalConsentBannerActive();
+  let obj3 = require("useIsParentalConsentBannerActive");
+  let isOnMainSurface = require("useIsOnMainSurface").useIsOnMainSurface();
+  const obj4 = require("useIsOnMainSurface");
+  const obj5 = require("useGlobalStatusIndicatorState");
+  token = require("useToken").useToken(token(daysRemaining[5]).colors.BACKGROUND_FEEDBACK_WARNING);
   let items = [token];
   daysRemaining = undefined;
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     const items = [token, ];
-    const obj = token(daysRemaining[13])(token);
-    items[1] = token(daysRemaining[13])(token).setAlpha(0).toRgbString();
+    const obj = tinycolorDefault(token);
+    items[1] = tinycolorDefault(token).setAlpha(0).toRgbString();
     return items;
   }, items);
   if (parentalConsentWarning != null) {
@@ -74,7 +79,7 @@ export default function ParentalConsentWarningBanner(children) {
     isOnMainSurface = isParentalConsentBannerActive;
   }
   if (isOnMainSurface) {
-    isOnMainSurface = !obj4.useGlobalStatusIndicatorState().isVisible;
+    isOnMainSurface = !obj5.useGlobalStatusIndicatorState().isVisible;
   }
   if (isOnMainSurface) {
     isOnMainSurface = null != daysRemaining;
@@ -85,16 +90,13 @@ export default function ParentalConsentWarningBanner(children) {
   const items1 = [daysRemaining];
   const sum = tmp2.top + closure_14;
   const items2 = [tmp.link];
-  callback = obj7.useCallback(() => {
-    let obj = token(daysRemaining[14]);
-    obj = { days_remaining: daysRemaining };
-    obj.track(closure_1_8.PARENTAL_CONSENT_WARNING_BANNER_TAPPED, obj);
-    const tab = token(daysRemaining[15]).selectTab(closure_1_7.REQUESTS);
-    const obj3 = token(daysRemaining[15]);
-    obj = { screen: closure_1_9.FAMILY_CENTER };
-    lib(daysRemaining[16]).openUserSettings(obj);
+  const callback = obj7.useCallback(() => {
+    AnalyticsUtilsDefault.track(constants.PARENTAL_CONSENT_WARNING_BANNER_TAPPED, { days_remaining: daysRemaining });
+    const obj2 = { days_remaining: daysRemaining };
+    const tab = FamilyCenterActionCreatorsDefault.selectTab(FamilyCenterSubPages.REQUESTS);
+    openUserSettings.openUserSettings({ screen: constants2.FAMILY_CENTER });
   }, items1);
-  const callback1 = obj7.useCallback((children) => closure_1_11(lib(daysRemaining[17]).Text, { variant: "text-sm/medium", color: "text-strong", style: lib.link, children }, arg1), items2);
+  const callback1 = obj7.useCallback((children, arg1) => closure_2_11(Text_Text.Text, { variant: "text-sm/medium", color: "text-strong", style: link.link, children }, arg1), items2);
   const items3 = [StyleSheet.absoluteFill, ];
   let num2 = 0;
   if (isOnMainSurface) {
@@ -106,50 +108,40 @@ export default function ParentalConsentWarningBanner(children) {
   if (isOnMainSurface) {
     tmp18 = null;
     if (null != daysRemaining) {
-      obj = { style: null, pointerEvents: "box-none", children: null };
+      const obj8 = { style: null, pointerEvents: "box-none", children: null };
       const items5 = [tmp.strip, ];
-      obj = { height: null };
-      obj[0] = sum;
-      items5[1] = obj;
-      obj[0] = items5;
-      obj1 = { pointerEvents: "none", style: null, colors: null, locations: null, start: null, end: null };
-      obj1[1] = StyleSheet.absoluteFill;
-      obj1[2] = memo;
-      obj1[3] = closure_15;
-      ({ START: obj10[4], END: obj10[5] } = closure_10);
-      const items6 = [tmp15(Gfqlpa(obj[18]), obj1), ];
-      obj2 = { accessibilityRole: "button", accessibilityHint: null, onPress: null, style: null, children: null };
+      const obj9 = { height: sum };
+      items5[1] = obj9;
+      obj8.style = items5;
+      const obj11 = { pointerEvents: "none", style: StyleSheet.absoluteFill, colors: memo, locations, start: null, end: null };
+      ({ START: obj10.start, END: obj10.end } = closure_10);
+      const items6 = [tmp15(Gfqlpa(obj[18]), obj11), ];
+      let obj12 = { accessibilityRole: "button", accessibilityHint: null, onPress: null, style: null, children: null };
       const intl2 = intl(obj[19]).intl;
-      obj2[1] = intl2.string(Gfqlpa(obj[20]).O2HKdA);
-      obj2[2] = callback;
+      obj12.accessibilityHint = intl2.string(Gfqlpa(obj[20]).O2HKdA);
+      obj12.onPress = callback;
       const items7 = [tmp.pressable, ];
-      obj3 = { paddingTop: null };
-      obj3[0] = tmp2.top + 8;
-      items7[1] = obj3;
-      obj2[3] = items7;
-      obj4 = { variant: "text-sm/medium", color: "text-strong", lineClamp: 1, style: null, children: null };
-      obj4[3] = tmp.label;
+      const obj13 = { paddingTop: tmp2.top + 8 };
+      items7[1] = obj13;
+      obj12.style = items7;
+      let obj14 = { variant: "text-sm/medium", color: "text-strong", lineClamp: 1, style: tmp.label, children: null };
       if (0 === daysRemaining) {
         intl = intl(obj[19]).intl;
         Gfqlpa = Gfqlpa(obj[20]).Gfqlpa;
-        obj = { connectHook: null };
-        obj[0] = callback1;
+        obj = { connectHook: callback1 };
         let formatResult = intl.format(Gfqlpa, obj);
       } else {
         const intl3 = intl(obj[19]).intl;
-        obj5 = { count: null, connectHook: null };
-        obj5[0] = daysRemaining;
-        obj5[1] = callback1;
-        formatResult = intl3.format(Gfqlpa(obj[20]).ZBK5mM, obj5);
+        const obj21 = { count: daysRemaining, connectHook: callback1 };
+        formatResult = intl3.format(Gfqlpa(obj[20]).ZBK5mM, obj21);
       }
-      obj4[4] = formatResult;
-      obj4 = tmp15(intl(obj[17]).Text, obj4);
-      obj2[4] = obj4;
-      obj2 = tmp15(closure_4, obj2);
-      items6[1] = obj2;
-      obj[2] = items6;
-      tmp13(tmp16, obj);
-      const tmp21 = closure_4;
+      obj14.children = formatResult;
+      obj14 = tmp15(intl(obj[17]).Text, obj14);
+      obj12.children = obj14;
+      obj12 = tmp15(closure_4, obj12);
+      items6[1] = obj12;
+      obj8.children = items6;
+      tmp13(tmp16, obj8);
     }
   }
   children[1] = tmp18;

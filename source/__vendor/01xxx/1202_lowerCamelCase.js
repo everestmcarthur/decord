@@ -2,17 +2,17 @@
 // Function ID: 1203
 // Name: lowerCamelCase
 // Dependencies: []
+// Exports: lowerCamelCase
 
 // Module 1202 (lowerCamelCase)
-arg5.lowerCamelCase = function lowerCamelCase(name) {
+
+export const lowerCamelCase = function lowerCamelCase(name) {
   const items = [];
   let num = 0;
   let flag = false;
   if (0 < name.length) {
     do {
       let str = name.charAt(num);
-      let tmp = num;
-      let tmp2 = flag;
       let flag2 = true;
       if ("_" != str) {
         let obj = /\d/;
@@ -20,13 +20,13 @@ arg5.lowerCamelCase = function lowerCamelCase(name) {
           let arr = items.push(str);
           flag2 = true;
         } else if (flag) {
-          arr = items.push(str.toUpperCase());
+          let arr5 = items.push(str.toUpperCase());
           flag2 = false;
         } else if (0 === num) {
-          let arr1 = items.push(str.toLowerCase());
+          let arr6 = items.push(str.toLowerCase());
           flag2 = flag;
         } else {
-          let arr2 = items.push(str);
+          let arr7 = items.push(str);
           flag2 = flag;
         }
       }

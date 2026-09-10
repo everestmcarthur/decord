@@ -1,26 +1,26 @@
-// Module ID: 7929
-// Function ID: 7930
+// Module ID: 7943
+// Function ID: 7944
 // Name: DenyIcon
-// Dependencies: [19, 21, 576, 4261, 7930, 2]
+// Dependencies: [19, 21, 576, 4274, 7944, 2]
 // Exports: DenyIcon
 
-// Module 7929 (DenyIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 7930 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 7943 (DenyIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod7944 from "module_7944" /* 7944 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/DenyIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/DenyIcon.tsx");
 
 export const DenyIcon = function DenyIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7944, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

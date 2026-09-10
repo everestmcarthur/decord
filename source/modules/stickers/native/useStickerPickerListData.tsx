@@ -1,103 +1,127 @@
-// Module ID: 10421
-// Function ID: 10422
+// Module ID: 10448
+// Function ID: 10449
 // Name: useStickerPickerListData
-// Dependencies: [19, 10395, 10278, 1219, 10394, 12, 1114, 5268, 10299, 2]
+// Dependencies: [19, 10422, 10305, 1219, 10338, 10421, 12, 1114, 5282, 10326, 2]
 // Exports: default
 
-// Module 10421 (useStickerPickerListData)
-import closure_3 from "noop" /* 19 */;
-import { useStickerPickerStore } from "useStickerPickerStore" /* 10395 */;
-import PADDING_HORIZONTAL from "PADDING_HORIZONTAL" /* 10278 */;
+// Module 10448 (useStickerPickerListData)
+import _modDef12 from "module_12" /* 12 */;
+import StickersTypes from "StickersTypes" /* 5282 */;
+import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 10326 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ MIN_MARGIN: c5, ROW_HEIGHT: closure_6, STICKER_SIZE: error, LABEL_HEIGHT } = PADDING_HORIZONTAL);
-let obj = { STICKERS: 0, [0]: "STICKERS", NSFW: 1, [1]: "NSFW" };
-let closure_9 = LABEL_HEIGHT + 2 * require("ExpressionPickerViewType").PADDING_VERTICAL;
-const result = require("set").fileFinishedImporting("modules/stickers/native/useStickerPickerListData.tsx");
+require = fn;
+let useStickerPickerStore = fn(10422).useStickerPickerStore;
+const StickerPickerConstants = fn(10305);
+({ MIN_MARGIN: hasOwnProperty, ROW_HEIGHT: metroRequire, STICKER_SIZE: closure_7, LABEL_HEIGHT } = StickerPickerConstants);
+const StickerPickerSectionType = { STICKERS: 0, [0]: "STICKERS", NSFW: 1, [1]: "NSFW" };
+let closure_9 = LABEL_HEIGHT + 2 * fn(1219).PADDING_VERTICAL;
+let closure_10 = fn(10338).PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT + fn(10338).PREMIUM_UPSELL_SECTION_DIVIDER_MARGIN;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stickers/native/useStickerPickerListData.tsx");
 
 export default function useStickerPickerListData(containerWidth) {
   containerWidth = containerWidth.containerWidth;
   const searchResults = containerWidth.searchResults;
   const stickerFormats = containerWidth.stickerFormats;
-  let stickerCategories;
   useStickerPickerStore = undefined;
-  stickerCategories = containerWidth(stickerFormats[4]).useStickerCategories(containerWidth.channel);
+  const stickerCategories = containerWidth(stickerFormats[5]).useStickerCategories(containerWidth.channel);
   const tmp2 = useStickerPickerStore((packToScrollTo) => packToScrollTo.packToScrollTo);
   useStickerPickerStore = tmp2;
   let items = [containerWidth, stickerCategories, stickerFormats, searchResults, tmp2];
   return stickerCategories.useMemo(() => {
-    const rounded = Math.floor((c0 - closure_1_5) / (closure_1_7 + closure_1_5));
-    c0 = rounded;
+    function pushCategory(arr, intl) {
+      let str = intl;
+      if (intl === undefined) {
+        str = "";
+      }
+      let flag = arg3;
+      if (arg3 === undefined) {
+        flag = false;
+      }
+      if (true === arg2) {
+        const obj = { type: null, stickersByRow: null };
+        obj.type = obj.NSFW;
+        obj.stickersByRow = [];
+        items3.push(obj);
+        num2.push(1);
+      } else {
+        const found = arr.filter((format_type) => items1.includes(format_type.format_type));
+        const chunkResult = _modDef12.chunk(found, mapped2);
+        const obj3 = { type: obj.STICKERS, stickersByRow: chunkResult };
+        items3.push(obj3);
+        num2.push(chunkResult.length);
+      }
+      items1.push(str);
+      items2.push(flag);
+    }
+    const rounded = Math.floor((mapped2 - closure_1_5) / (closure_1_7 + closure_1_5));
+    mapped2 = rounded;
     const items = [];
+    let num2 = items;
     const items1 = [];
     const items2 = [];
     const items3 = [];
-    c4 = undefined;
-    if (null != items) {
-      const intl = containerWidth(stickerFormats[6]).intl;
-      let str = intl.string(containerWidth(stickerFormats[6]).t["zkoeq/"]);
-      if (str === undefined) {
-        str = "";
-      }
-      let found = items.filter((format_type) => closure_2.includes(format_type.format_type));
-      obj = searchResults(stickerFormats[5]);
-      let chunkResult = obj.chunk(found, rounded);
-      obj = { type: null, stickersByRow: null };
-      obj[0] = closure_1_8.STICKERS;
-      obj[1] = chunkResult;
-      items3.push(obj);
-      items.push(chunkResult.length);
-      items2.push(str);
-      const tmp11 = stickerFormats;
+    packToScrollToIndex = undefined;
+    if (null != num2) {
+      const intl = containerWidth(stickerFormats[7]).intl;
+      pushCategory(tmp2, intl.string(containerWidth(stickerFormats[7]).t["zkoeq/"]));
     } else {
-      const mapped = items3.map((id) => {
-        if (c4 === id.id) {
-          closure_4 = arg1;
+      const mapped = items2.map((id, index) => {
+        if (closure_4 === id.id) {
+          closure_5 = index;
         }
-        let shouldNSFWGateGuildResult = id.type === containerWidth(stickerFormats[7]).StickerCategoryTypes.GUILD;
+        let shouldNSFWGateGuildResult = id.type === StickersTypes.StickerCategoryTypes.GUILD;
         if (shouldNSFWGateGuildResult) {
-          shouldNSFWGateGuildResult = containerWidth(tmp3[8]).shouldNSFWGateGuild(id.id);
-          const tmp2Result = containerWidth(tmp3[8]);
+          shouldNSFWGateGuildResult = age_gate_AgeGateUtils.shouldNSFWGateGuild(id.id);
+          const tmp2Result = age_gate_AgeGateUtils;
         }
-        ({ stickers, name } = id);
-        if (name === undefined) {
-          name = "";
-        }
-        if (true === shouldNSFWGateGuildResult) {
-          obj = { type: null, stickersByRow: null };
-          obj[0] = closure_2_8.NSFW;
-          obj[1] = [];
-          items3.push(obj);
-          items.push(1);
-        } else {
-          const found = stickers.filter((format_type) => closure_2.includes(format_type.format_type));
-          const chunkResult = searchResults(tmp3[5]).chunk(found, c0);
-          obj = { type: null, stickersByRow: null };
-          obj[0] = closure_2_8.STICKERS;
-          obj[1] = chunkResult;
-          items3.push(obj);
-          items.push(chunkResult.length);
-          const obj2 = searchResults(tmp3[5]);
-        }
-        items2.push(name);
+        pushCategory(id.stickers, id.name, shouldNSFWGateGuildResult, true === id.isNitroLocked);
       });
-      const push = items1.push;
-      c0 = 0;
-      const items4 = [];
-      HermesBuiltin.arraySpread(items.map((arg0, arg1) => {
-        if (0 === arg1) {
-          if (0 === arg0) {
+    }
+    mapped2 = items2;
+    let START = null;
+    if (true === items2[0]) {
+      START = containerWidth(stickerFormats[4]).PremiumUpsellSectionDividerPosition.START;
+    }
+    const mapped1 = items2.map((item, index) => {
+      let flag = mapped2[index + 1];
+      if (flag == null) {
+        flag = false;
+      }
+      if (item === flag) {
+        return null;
+      } else {
+        const PremiumUpsellSectionDividerPosition = containerWidth(stickerFormats[4]).PremiumUpsellSectionDividerPosition;
+      }
+    });
+    num2 = 0;
+    if (null != START) {
+      num2 = closure_1_10;
+    }
+    const items4 = [];
+    mapped2 = mapped1.map((item) => {
+      let num = 12;
+      if (null != item) {
+        num = closure_1_10;
+      }
+      return num;
+    });
+    if (null == num2) {
+      const push = items4.push;
+      const items5 = [];
+      HermesBuiltin.arraySpread(items.map((item, index) => {
+        if (0 === index) {
+          if (0 === item) {
             return 0;
           }
         }
-        const sum = arg0 * closure_1_6 + closure_1_9 + 12 + c0;
-        c0 = sum;
+        sum = item * rowHeight + sectionSize + mapped2[index] + sum;
         return sum;
       }), 0);
-      HermesBuiltin.apply(items4, items1);
+      HermesBuiltin.apply(items5, items4);
     }
-    obj = { sections: items, sectionHeights: items1, sectionSize: closure_1_9, sectionFooterSize: 12, sectionLabels: items2, rowHeight: closure_1_6, rowSize: rounded, rowsBySection: items3, packToScrollToIndex: c4 };
-    return obj;
+    return { sections: items, sectionHeights: items4, sectionSize, sectionFooterSize: 12, sectionFooterSizes: mapped2, sectionDividerPositions: mapped1, listHeaderDividerPosition: START, listHeaderSize: num2, sectionLabels: items1, sectionNitroLocked: items2, rowHeight, rowSize: rounded, rowsBySection: items3, packToScrollToIndex };
   }, items);
 };
-export const StickerPickerSectionType = obj;
+export { StickerPickerSectionType };

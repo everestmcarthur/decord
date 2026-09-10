@@ -1,22 +1,20 @@
-// Module ID: 17426
-// Function ID: 17427
+// Module ID: 17457
+// Function ID: 17458
 // Name: setupLoadFromMessageManagerHandlers
 // Dependencies: [2]
 // Exports: default
 
-// Module 17426 (setupLoadFromMessageManagerHandlers)
-import set2 from "set" /* 2 */;
+// Module 17457 (setupLoadFromMessageManagerHandlers)
+import size from "module_2" /* 2 */;
 
-const result = set2.fileFinishedImporting("modules/messages/setupLoadFromMessageManagerHandlers.tsx");
+const result = size.fileFinishedImporting("modules/messages/setupLoadFromMessageManagerHandlers.tsx");
 
-export default function setupLoadFromMessageManagerHandlers(actions) {
+export default function setupLoadFromMessageManagerHandlers(actions, arg1) {
   closure_0 = arg1;
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
   }
-  let onBeforeBatch;
-  let set;
   function handleMessage(message) {
     message = message.message;
     let hasItem = null != message.channel_id;
@@ -32,7 +30,7 @@ export default function setupLoadFromMessageManagerHandlers(actions) {
         hasItem1 = set.has(message.channel_id);
       }
       if (hasItem1) {
-        callback(message);
+        closure_0(message);
       }
     }
   }
@@ -48,7 +46,7 @@ export default function setupLoadFromMessageManagerHandlers(actions) {
         hasItem = set.has(channel_id.channel_id);
       }
       if (hasItem) {
-        callback(channel_id);
+        closure_1_0(channel_id);
       }
     });
   }
@@ -60,38 +58,38 @@ export default function setupLoadFromMessageManagerHandlers(actions) {
     let item = data.forEach((messages) => {
       messages = messages.messages;
       let item = messages.forEach((arr) => {
-        const item = arr.forEach((arg0) => callback(arg0));
+        const item = arr.forEach((item) => closure_1_0(item));
       });
     });
   }
-  onBeforeBatch = obj.onBeforeBatch;
-  set = new Set();
-  obj = {};
+  const onBeforeBatch = obj.onBeforeBatch;
+  const set = new Set();
+  const obj2 = {};
   const merged = Object.assign(actions.actions);
-  obj.POST_CONNECTION_OPEN = function POST_CONNECTION_OPEN() {
+  obj2.POST_CONNECTION_OPEN = function POST_CONNECTION_OPEN() {
     set.clear();
   };
-  obj.MESSAGE_CREATE = { callback: handleMessage, autoSubscribe: false };
-  obj.MESSAGE_UPDATE = handleMessage;
-  obj.LOAD_MESSAGES_SUCCESS = handleLoadMessages;
-  obj.LOAD_MESSAGES_AROUND_SUCCESS = handleLoadMessages;
-  obj.LOAD_RECENT_MENTIONS_SUCCESS = function LOAD_RECENT_MENTIONS_SUCCESS(messages) {
+  obj2.MESSAGE_CREATE = { callback: handleMessage, autoSubscribe: false };
+  obj2.MESSAGE_UPDATE = handleMessage;
+  obj2.LOAD_MESSAGES_SUCCESS = handleLoadMessages;
+  obj2.LOAD_MESSAGES_AROUND_SUCCESS = handleLoadMessages;
+  obj2.LOAD_RECENT_MENTIONS_SUCCESS = function LOAD_RECENT_MENTIONS_SUCCESS(messages) {
     messages = messages.messages;
     if (onBeforeBatch != null) {
       tmp();
     }
-    const item = messages.forEach((arg0) => callback(arg0));
+    const item = messages.forEach((item) => closure_1_0(item));
   };
-  obj.LOAD_PINNED_MESSAGES_SUCCESS = function LOAD_PINNED_MESSAGES_SUCCESS(pins) {
+  obj2.LOAD_PINNED_MESSAGES_SUCCESS = function LOAD_PINNED_MESSAGES_SUCCESS(pins) {
     pins = pins.pins;
     if (onBeforeBatch != null) {
       tmp();
     }
-    const item = pins.forEach((message) => callback(message.message));
+    const item = pins.forEach((message) => closure_1_0(message.message));
   };
-  obj.SEARCH_MESSAGES_SUCCESS = handleSearchMessagesSuccess;
-  obj.MOD_VIEW_SEARCH_MESSAGES_SUCCESS = handleSearchMessagesSuccess;
-  obj.CHANNEL_SELECT = {
+  obj2.SEARCH_MESSAGES_SUCCESS = handleSearchMessagesSuccess;
+  obj2.MOD_VIEW_SEARCH_MESSAGES_SUCCESS = handleSearchMessagesSuccess;
+  obj2.CHANNEL_SELECT = {
     callback(channelId) {
       channelId = channelId.channelId;
       if (null != channelId) {
@@ -100,5 +98,5 @@ export default function setupLoadFromMessageManagerHandlers(actions) {
     },
     autoSubscribe: false
   };
-  actions.actions = obj;
+  actions.actions = obj2;
 };

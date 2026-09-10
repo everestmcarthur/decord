@@ -1,17 +1,17 @@
-// Module ID: 10327
-// Function ID: 10328
-// Name: context
+// Module ID: 10354
+// Function ID: 10355
+// Name: PortalKeyboardModalContext
 // Dependencies: [19, 2]
 // Exports: useIsPortalKeyboardInModal
 
-// Module 10327 (context)
-import importAllResult from "noop" /* 19 */;
+// Module 10354 (PortalKeyboardModalContext)
+import noop from "module_19" /* 19 */;
 
-let c0 = importAllResult;
-const context = importAllResult.createContext(false);
-const result = require("set").fileFinishedImporting("modules/keyboard/native/PortalKeyboardModalContext.tsx");
+const context = noop.createContext(false);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/keyboard/native/PortalKeyboardModalContext.tsx");
 
 export const PortalKeyboardInModalContext = context;
 export const useIsPortalKeyboardInModal = function useIsPortalKeyboardInModal() {
-  return importAllResult.useContext(context);
+  return noop.useContext(context);
 };

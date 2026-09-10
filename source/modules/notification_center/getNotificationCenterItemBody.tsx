@@ -1,21 +1,24 @@
-// Module ID: 16427
-// Function ID: 16428
+// Module ID: 16458
+// Function ID: 16459
 // Name: getNotificationCenterItemBody
-// Dependencies: [7526, 1979, 4209, 1371, 1074, 1114, 4404, 7640, 1925, 38, 2]
+// Dependencies: [7540, 1979, 4222, 1371, 1074, 1114, 4418, 7654, 1925, 38, 2]
 // Exports: default, getFriendRequestSentBody
 
-// Module 16427 (getNotificationCenterItemBody)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_3 from "scheduledEventSort" /* 7526 */;
-import { isGuildEventEnded } from "scheduledEventSort" /* 7526 */;
-import closure_5 from "createGuildRecordFromRust" /* 1979 */;
-import closure_6 from "markAllUserIdListsStale" /* 4209 */;
-import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import ME from "ME" /* 1074 */;
+// Module 16458 (getNotificationCenterItemBody)
+import util from "util" /* 1114 */;
+import UserUtilsDefault from "UserUtils" /* 4418 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7654 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7540 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-({ EMPTY_STRING_SNOWFLAKE_ID: closure_8, RelationshipTypes: c9 } = ME);
-const result = require("set").fileFinishedImporting("modules/notification_center/getNotificationCenterItemBody.tsx");
+require = fn;
+const isGuildEventEnded = fn(7540).isGuildEventEnded;
+const Constants = fn(1074);
+({ EMPTY_STRING_SNOWFLAKE_ID: closure_8, RelationshipTypes: closure_9 } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notification_center/getNotificationCenterItemBody.tsx");
 
 export default function getNotificationCenterItemBody(arg0) {
   ({ item, renderApplication } = arg0);
@@ -27,22 +30,19 @@ export default function getNotificationCenterItemBody(arg0) {
     id = other_user.id;
   }
   if (id == null) {
-    id = closure_8;
+    id = React6;
   }
-  let obj = renderApplication(4404);
-  obj1 = user;
   const other_user2 = item.other_user;
   let id1;
   if (other_user2 != null) {
     id1 = other_user2.id;
   }
-  let name = obj.getName(user.getUser(id1));
+  const name1 = UserUtilsDefault.getName(UserStore.getUser(id1));
   applicationId = item.applicationId;
   renderApplication = applicationId;
   const type = item.type;
-  if (applicationId(7640).NotificationCenterLocalItems.FRIEND_REQUESTS_GROUPED === type) {
-    let tmp2Result = tmp2(4404);
-    let other_users = item.other_users;
+  if (NotificationCenterItemsTypes.NotificationCenterLocalItems.FRIEND_REQUESTS_GROUPED === type) {
+    const other_users = item.other_users;
     let id2;
     if (other_users != null) {
       const first = other_users[0];
@@ -50,8 +50,8 @@ export default function getNotificationCenterItemBody(arg0) {
         id2 = first.id;
       }
     }
-    const name1 = tmp2Result.getName(obj1.getUser(id2));
-    tmp2Result = tmp2(4404);
+    const name2 = tmp2(4418).getName(obj2.getUser(id2));
+    const tmp2Result = tmp2(4418);
     const other_users2 = item.other_users;
     let id3;
     if (other_users2 != null) {
@@ -59,23 +59,20 @@ export default function getNotificationCenterItemBody(arg0) {
         id3 = tmp37.id;
       }
     }
-    other_users = item.other_users;
+    const other_users1 = item.other_users;
     let num;
-    const name2 = tmp2Result.getName(obj1.getUser(id3));
-    if (other_users != null) {
-      num = other_users.length;
+    const name3 = tmp2(4418).getName(obj2.getUser(id3));
+    if (other_users1 != null) {
+      num = other_users1.length;
     }
     if (num == null) {
       num = 0;
     }
     const bound = Math.max(num - 2, 0);
     const intl12 = tmp6(1114).intl;
-    obj = { user: null, user2: null, count: null };
-    obj[0] = name1;
-    obj[1] = name2;
-    obj[2] = bound;
-    return intl12.format(tmp6(1114).t.g5xyIC, obj);
-  } else if (tmp6(7640).NotificationCenterLocalItems.MOBILE_NATIVE_UPDATE_AVAILABLE === type) {
+    const obj3 = { user: name2, user2: name3, count: bound };
+    return intl12.format(tmp6(1114).t.g5xyIC, obj3);
+  } else if (tmp6(7654).NotificationCenterLocalItems.MOBILE_NATIVE_UPDATE_AVAILABLE === type) {
     let str7;
     if (item.local_id != null) {
       const parts = str6.split("_");
@@ -86,12 +83,11 @@ export default function getNotificationCenterItemBody(arg0) {
     }
     const _HermesInternal3 = HermesInternal;
     return "Update to build " + str7 + " available!";
-  } else if (tmp6(7640).NotificationCenterItems.FRIEND_SUGGESTION_CREATED === type) {
-    if (relationshipType.getRelationshipType(id) === constants.PENDING_OUTGOING) {
+  } else if (tmp6(7654).NotificationCenterItems.FRIEND_SUGGESTION_CREATED === type) {
+    if (RelationshipStore.getRelationshipType(id) === constants.PENDING_OUTGOING) {
       const intl11 = tmp6(1114).intl;
-      obj = { user: null };
-      obj[0] = name;
-      let str5 = intl11.format(tmp6(1114).t.gZVTy2, obj);
+      const obj4 = { user: name1 };
+      let str5 = intl11.format(tmp6(1114).t.gZVTy2, obj4);
     } else {
       str5 = item.body;
       if (str5 == null) {
@@ -99,124 +95,124 @@ export default function getNotificationCenterItemBody(arg0) {
       }
     }
     return str5;
-  } else if (tmp6(7640).NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED === type) {
+  } else if (tmp6(7654).NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED === type) {
     const guild_scheduled_event_id = item.guild_scheduled_event_id;
     let guildScheduledEvent = null;
     if (null != guild_scheduled_event_id) {
-      guildScheduledEvent = guildScheduledEvent.getGuildScheduledEvent(guild_scheduled_event_id);
+      guildScheduledEvent = GuildScheduledEventStore.getGuildScheduledEvent(guild_scheduled_event_id);
     }
     if (guildScheduledEvent != null) {
-      name = guildScheduledEvent.name;
+      const name = guildScheduledEvent.name;
     }
     let guild_id;
     if (guildScheduledEvent != null) {
       guild_id = guildScheduledEvent.guild_id;
     }
-    guild = guild.getGuild(guild_id);
-    let name3;
+    const guild = GuildStore.getGuild(guild_id);
+    let name4;
     if (guild != null) {
-      name3 = guild.name;
+      name4 = guild.name;
     }
-    let tmp6Result = tmp6(1925);
-    if (!tmp6Result.isNullOrEmpty(name3)) {
-      tmp6Result = tmp6(1925);
-      if (!tmp6Result.isNullOrEmpty(name)) {
+    const tmp27Result = isGuildEventEnded(guildScheduledEvent);
+    if (!tmp6Result.isNullOrEmpty(name4)) {
+      if (!tmp6Result2.isNullOrEmpty(name)) {
         if (tmp27Result) {
           const intl10 = tmp6(1114).intl;
-          obj1 = { event_name: null, guild_name: null };
-          obj1[0] = name;
-          obj1[1] = name3;
-          let formatResult = intl10.format(tmp6(1114).t.AyvfXR, obj1);
+          const obj5 = { event_name: name, guild_name: name4 };
+          let formatResult = intl10.format(tmp6(1114).t.AyvfXR, obj5);
         }
         return formatResult;
       }
+      tmp6Result2 = tmp6(1925);
     }
     let str4 = item.body;
     if (str4 == null) {
       str4 = "";
     }
     formatResult = str4;
-    const tmp27 = isGuildEventEnded;
-    tmp27Result = isGuildEventEnded(guildScheduledEvent);
-  } else if (tmp6(7640).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS === type) {
+    tmp6Result = tmp6(1925);
+  } else if (tmp6(7654).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS === type) {
     if (null != applicationId) {
       const intl9 = tmp6(1114).intl;
-      const obj2 = { username: null, applicationName: null };
-      obj2[0] = name;
-      obj2[1] = function applicationName() {
-        return renderApplication(applicationId);
+      const obj6 = {
+        username: name1,
+        applicationName() {
+              return renderApplication(applicationId);
+            }
       };
-      let formatResult1 = intl9.format(tmp6(1114).t["9Dgf1L"], obj2);
+      let formatResult1 = intl9.format(tmp6(1114).t["9Dgf1L"], obj6);
     } else {
       const intl8 = tmp6(1114).intl;
-      const obj3 = { username: null };
-      obj3[0] = name;
-      formatResult1 = intl8.format(tmp19, obj3);
+      const obj7 = { username: name1 };
+      formatResult1 = intl8.format(tmp19, obj7);
     }
     return formatResult1;
-  } else if (tmp6(7640).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED === type) {
+  } else if (tmp6(7654).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED === type) {
     if (null != applicationId) {
       const intl7 = tmp6(1114).intl;
-      const obj4 = { username: null, applicationName: null };
-      obj4[0] = name;
-      obj4[1] = function applicationName() {
-        return renderApplication(applicationId);
+      const obj8 = {
+        username: name1,
+        applicationName() {
+              return renderApplication(applicationId);
+            }
       };
-      let formatResult2 = intl7.format(tmp6(1114).t.nnC1q9, obj4);
+      let formatResult2 = intl7.format(tmp6(1114).t.nnC1q9, obj8);
     } else {
       const intl6 = tmp6(1114).intl;
-      const obj5 = { username: null };
-      obj5[0] = name;
-      formatResult2 = intl6.format(tmp17, obj5);
+      const obj9 = { username: name1 };
+      formatResult2 = intl6.format(tmp17, obj9);
     }
     return formatResult2;
-  } else if (tmp6(7640).NotificationCenterItems.FRIEND_REQUEST_ACCEPTED === type) {
+  } else if (tmp6(7654).NotificationCenterItems.FRIEND_REQUEST_ACCEPTED === type) {
     if (null != applicationId) {
       const intl5 = tmp6(1114).intl;
-      const obj6 = { username: null, applicationName: null };
-      obj6[0] = name;
-      obj6[1] = function applicationName() {
-        return renderApplication(applicationId);
+      const obj10 = {
+        username: name1,
+        applicationName() {
+              return renderApplication(applicationId);
+            }
       };
-      let formatResult3 = intl5.format(tmp6(1114).t.jXlYiF, obj6);
+      let formatResult3 = intl5.format(tmp6(1114).t.jXlYiF, obj10);
     } else {
       const intl4 = tmp6(1114).intl;
-      const obj7 = { username: null };
-      obj7[0] = name;
-      formatResult3 = intl4.format(tmp15, obj7);
+      const obj11 = { username: name1 };
+      formatResult3 = intl4.format(tmp15, obj11);
     }
     return formatResult3;
-  } else if (tmp6(7640).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED === type) {
+  } else if (tmp6(7654).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED === type) {
     const _HermesInternal2 = HermesInternal;
     tmp2(38)(null != applicationId, "Expected application id for " + item.type);
     const intl3 = tmp6(1114).intl;
-    const obj8 = { username: null, applicationName: null };
-    obj8[0] = name;
-    obj8[1] = function applicationName() {
-      return applicationId(renderApplication);
+    const obj12 = {
+      username: name1,
+      applicationName() {
+          return applicationId(renderApplication);
+        }
     };
-    return intl3.format(tmp6(1114).t["BB/0vn"], obj8);
-  } else if (tmp6(7640).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS === type) {
+    return intl3.format(tmp6(1114).t["BB/0vn"], obj12);
+  } else if (tmp6(7654).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS === type) {
     const _HermesInternal = HermesInternal;
     tmp2(38)(null != applicationId, "Expected application id for " + item.type);
     const intl2 = tmp6(1114).intl;
-    const obj9 = { username: null, applicationName: null };
-    obj9[0] = name;
-    obj9[1] = function applicationName() {
-      return applicationId(renderApplication);
+    const obj13 = {
+      username: name1,
+      applicationName() {
+          return applicationId(renderApplication);
+        }
     };
-    return intl2.format(tmp6(1114).t["7cqOLI"], obj9);
-  } else if (tmp6(7640).NotificationCenterItems.GAME_FRIEND_REQUEST_ACCEPTED === type) {
+    return intl2.format(tmp6(1114).t["7cqOLI"], obj13);
+  } else if (tmp6(7654).NotificationCenterItems.GAME_FRIEND_REQUEST_ACCEPTED === type) {
     if (null == applicationId) {
       let body = item.body;
     } else {
       const intl = tmp6(1114).intl;
-      const obj10 = { username: null, applicationName: null };
-      obj10[0] = name;
-      obj10[1] = function applicationName() {
-        return applicationId(renderApplication);
+      const obj14 = {
+        username: name1,
+        applicationName() {
+              return applicationId(renderApplication);
+            }
       };
-      body = intl.format(tmp6(1114).t.Wi64vN, obj10);
+      body = intl.format(tmp6(1114).t.Wi64vN, obj14);
     }
     return body;
   } else {
@@ -228,6 +224,6 @@ export default function getNotificationCenterItemBody(arg0) {
   }
 };
 export const getFriendRequestSentBody = function getFriendRequestSentBody(user) {
-  const intl = getSystemLocale.intl;
-  return intl.format(getSystemLocale.t.gZVTy2, { user });
+  const intl = util.intl;
+  return intl.format(util.t.gZVTy2, { user });
 };

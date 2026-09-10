@@ -1,29 +1,27 @@
-// Module ID: 7717
-// Function ID: 7718
-// Name: questCtaConfigFromServer
+// Module ID: 7731
+// Function ID: 7732
+// Name: CTA
 // Dependencies: [2]
 // Exports: questCtaConfigFromServer
 
-// Module 7717 (questCtaConfigFromServer)
-import set from "set" /* 2 */;
+// Module 7731 (CTA)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/quests/types/v2/CTA.tsx");
+const result = size.fileFinishedImporting("modules/quests/types/v2/CTA.tsx");
 
 export const questCtaConfigFromServer = function questCtaConfigFromServer(cta_config) {
   let tmp;
   if (null != cta_config.android) {
-    let obj = { androidAppId: null };
-    obj[0] = cta_config.android.android_app_id;
+    const obj = { androidAppId: cta_config.android.android_app_id };
     tmp = obj;
   }
-  obj = { android: tmp, ios: null, link: null, buttonLabel: null, subtitle: null };
+  const obj3 = { android: tmp, ios: null, link: null, buttonLabel: null, subtitle: null };
   let tmp2;
   if (null != cta_config.ios) {
-    obj = { iosAppId: null };
-    obj[0] = cta_config.ios.ios_app_id;
-    tmp2 = obj;
+    const obj5 = { iosAppId: cta_config.ios.ios_app_id };
+    tmp2 = obj5;
   }
-  obj[1] = tmp2;
-  ({ link: obj2[2], button_label: obj2[3], subtitle: obj2[4] } = cta_config);
-  return obj;
+  obj3.ios = tmp2;
+  ({ link: obj2.link, button_label: obj2.buttonLabel, subtitle: obj2.subtitle } = cta_config);
+  return obj3;
 };

@@ -1,14 +1,15 @@
-// Module ID: 17106
-// Function ID: 17107
+// Module ID: 17137
+// Function ID: 17138
 // Name: useVoicePanelNavArrowPressed
-// Dependencies: [19, 12275, 12276, 2]
+// Dependencies: [19, 12301, 12302, 2]
 // Exports: default
 
-// Module 17106 (useVoicePanelNavArrowPressed)
-import closure_2 from "noop" /* 19 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 12275 */;
+// Module 17137 (useVoicePanelNavArrowPressed)
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useVoicePanelNavArrowPressed.tsx");
+const VoicePanelControlsModes = fn(12301).VoicePanelControlsModes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useVoicePanelNavArrowPressed.tsx");
 
 export default function useVoicePanelNavArrowPressed() {
   const context = dismissPanel.useContext(focused(setFocused[2]));
@@ -18,13 +19,13 @@ export default function useVoicePanelNavArrowPressed() {
   const controlsSpecs = context.controlsSpecs;
   const items = [focused, controlsSpecs, dismissPanel, setFocused];
   return dismissPanel.useCallback(() => {
-    const value = focused.get();
+    value = focused.get();
     let id;
     if (value != null) {
       id = value.id;
     }
     if (null != id) {
-      if (controlsSpecs.get().mode !== controlsSpecs.DRAWER) {
+      if (controlsSpecs.get().mode !== VoicePanelControlsModes.DRAWER) {
         setFocused(null);
         let flag = true;
       }

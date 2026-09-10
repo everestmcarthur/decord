@@ -1,103 +1,99 @@
-// Module ID: 17658
-// Function ID: 17659
+// Module ID: 17691
+// Function ID: 17692
 // Name: GuildSettingsModalCommunity
-// Dependencies: [19, 1957, 2012, 4199, 4209, 1371, 9069, 16480, 1074, 21, 4560, 576, 4262, 1483, 504, 9068, 1114, 7377, 5624, 4713, 4527, 9431, 1896, 8598, 4973, 5687, 5605, 2]
+// Dependencies: [19, 1957, 2012, 4212, 4222, 1371, 9096, 16511, 1074, 21, 4574, 576, 4275, 1483, 504, 9095, 1114, 7391, 5638, 4727, 4541, 9458, 1896, 8626, 4987, 5701, 5619, 2]
 // Exports: default
 
-// Module 17658 (GuildSettingsModalCommunity)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "comparator" /* 2012 */;
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_6 } from "comparator" /* 2012 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_8 from "markAllUserIdListsStale" /* 4209 */;
-import closure_9 from "mergeGuildAvatar" /* 1371 */;
-import closure_10 from "handleFormInit" /* 9069 */;
-import { calculateLocaleOptions } from "GuildPrimaryCategory" /* 16480 */;
-import ME from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17691 (GuildSettingsModalCommunity)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import HeaderActionButton from "HeaderActionButton" /* 7391 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9095 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildChannelStore from "GuildChannelStore" /* 2012 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
+import UserStore from "UserStore" /* 1371 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9096 */;
 
-const require = arg1;
-({ ChannelTypes: closure_12, GuildFeatures: map1, GuildSettingsSections: closure_14, Permissions: closure_15 } = ME);
+require = fn;
+let closure_6 = fn(2012).GUILD_SELECTABLE_CHANNELS_KEY;
+const calculateLocaleOptions = fn(16511).calculateLocaleOptions;
+const Constants = fn(1074);
+({ ChannelTypes: closure_12, GuildFeatures: map1, GuildSettingsSections: closure_14, Permissions: closure_15 } = Constants);
+const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-createCacheKey = { overview: { flex: 1 }, overviewContent: null };
-createCacheKey = { paddingTop: ThemesDefault.space.PX_16 };
-createCacheKey[1] = createCacheKey;
-let closure_18 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_settings/community/native/GuildSettingsModalCommunity.tsx");
+const createStyles = fn(4574);
+let obj2 = { overview: { flex: 1 }, overviewContent: { paddingTop: nativeDefault.space.PX_16 } };
+let closure_18 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/community/native/GuildSettingsModalCommunity.tsx");
 
 export default function GuildSettingsModalCommunity(guildId) {
   guildId = guildId.guildId;
-  let preferredLocale = guildId;
   const onClose = guildId.onClose;
   let navigation;
-  let submitting;
-  let hasChanges;
-  let guild;
-  let rulesChannel;
   let publicUpdatesChannel;
   let callback1;
-  preferredLocale = undefined;
+  let preferredLocale;
+  const token = preferredLocale(navigation[12]).useToken(onClose(navigation[11]).modules.mobile.TABLE_ROW_PADDING);
   let obj = preferredLocale(navigation[12]);
-  const token = obj.useToken(onClose(navigation[11]).modules.mobile.TABLE_ROW_PADDING);
-  obj1 = preferredLocale(navigation[13]);
-  navigation = obj1.useNavigation();
-  let obj2 = preferredLocale(navigation[14]);
-  const items = [closure_10];
-  const stateFromStoresObject = obj2.useStateFromStoresObject(items, () => props.getProps());
-  submitting = stateFromStoresObject.submitting;
-  hasChanges = stateFromStoresObject.hasChanges;
-  guild = stateFromStoresObject.guild;
-  let obj3 = preferredLocale(navigation[14]);
+  const tmp3 = onClose;
+  const tmp5 = closure_18();
+  navigation = preferredLocale(navigation[13]).useNavigation();
+  let obj2 = preferredLocale(navigation[13]);
+  const items = [GuildSettingsStore];
+  const stateFromStoresObject = preferredLocale(navigation[14]).useStateFromStoresObject(items, () => props.getProps());
+  const submitting = stateFromStoresObject.submitting;
+  const hasChanges = stateFromStoresObject.hasChanges;
+  const guild = stateFromStoresObject.guild;
+  const obj3 = preferredLocale(navigation[14]);
   const items1 = [publicUpdatesChannel];
-  const stateFromStoresObject1 = obj3.useStateFromStoresObject(items1, () => {
+  const stateFromStoresObject1 = preferredLocale(navigation[14]).useStateFromStoresObject(items1, () => {
     let canResult = null != guild;
     if (canResult) {
-      canResult = publicUpdatesChannel.can(closure_1_15.MANAGE_GUILD, tmp);
+      canResult = PermissionStore.can(constants3.MANAGE_GUILD, tmp);
     }
     const obj = { canManage: canResult, isAdmin: null };
     let canResult1 = null != tmp;
     if (canResult1) {
-      canResult1 = publicUpdatesChannel.can(closure_1_15.ADMINISTRATOR, tmp);
+      canResult1 = PermissionStore.can(constants3.ADMINISTRATOR, tmp);
     }
-    obj[1] = canResult1;
+    obj.isAdmin = canResult1;
     return obj;
   });
   ({ canManage, isAdmin } = stateFromStoresObject1);
-  let obj4 = preferredLocale(navigation[14]);
+  const obj4 = preferredLocale(navigation[14]);
   const items2 = [hasChanges];
-  const stateFromStoresObject2 = obj4.useStateFromStoresObject(items2, () => {
-    let obj = hasChanges;
+  const stateFromStoresObject2 = preferredLocale(navigation[14]).useStateFromStoresObject(items2, () => {
     let rulesChannelId;
     if (guild != null) {
       rulesChannelId = tmp.rulesChannelId;
     }
-    obj = { rulesChannel: hasChanges.getChannel(rulesChannelId), publicUpdatesChannel: null };
+    const obj2 = { rulesChannel: ChannelStore.getChannel(rulesChannelId), publicUpdatesChannel: null };
     let prop;
     if (guild != null) {
       prop = tmp.publicUpdatesChannelId;
     }
-    obj[1] = obj.getChannel(prop);
-    return obj;
+    obj2.publicUpdatesChannel = ChannelStore.getChannel(prop);
+    return obj2;
   });
-  rulesChannel = stateFromStoresObject2.rulesChannel;
+  const rulesChannel = stateFromStoresObject2.rulesChannel;
   publicUpdatesChannel = stateFromStoresObject2.publicUpdatesChannel;
-  let obj5 = submitting;
   const items3 = [guild, navigation, onClose];
   const effect = submitting.useEffect(() => {
     let hasItem;
     if (guild != null) {
       const features = guild.features;
-      hasItem = features.has(closure_1_13.COMMUNITY);
+      hasItem = features.has(constants.COMMUNITY);
     }
     if (!hasItem) {
-      let obj = onClose(navigation[15]);
-      obj.setSection(closure_1_14.COMMUNITY_INTRO);
-      obj = { onClose: null };
-      obj[0] = onClose;
-      const replaced = navigation.replace(closure_1_14.COMMUNITY_INTRO, obj);
+      GuildSettingsActionCreatorsDefault.setSection(constants2.COMMUNITY_INTRO);
+      const obj2 = { onClose };
+      const replaced = navigation.replace(constants2.COMMUNITY_INTRO, obj2);
     }
   }, items3);
   const items4 = [guild];
@@ -105,13 +101,10 @@ export default function GuildSettingsModalCommunity(guildId) {
     if (null != guild) {
       const _Set = Set;
       const set = new Set(tmp.features);
-      set.delete(closure_1_13.COMMUNITY);
-      set.delete(closure_1_13.DISCOVERABLE);
-      const obj = { features: null, rulesChannelId: null, publicUpdatesChannelId: null, preferredLocale: null };
-      obj[0] = set;
-      obj[3] = tmp.preferredLocale;
-      onClose(navigation[15]).saveGuild(tmp.id, obj);
-      const obj2 = onClose(navigation[15]);
+      set.delete(constants.COMMUNITY);
+      set.delete(constants.DISCOVERABLE);
+      const obj = { features: set, rulesChannelId: null, publicUpdatesChannelId: null, preferredLocale: tmp.preferredLocale };
+      GuildSettingsActionCreatorsDefault.saveGuild(tmp.id, obj);
     }
   }, items4);
   let intl = preferredLocale(navigation[16]).intl;
@@ -123,27 +116,22 @@ export default function GuildSettingsModalCommunity(guildId) {
     stringResult = string(t.kQzUNk);
   }
   const items5 = [guild, navigation, submitting, hasChanges, onClose];
-  const effect1 = obj5.useEffect(() => {
-    function handlePublicCancelChanges(arg0) {
-      if (null != closure_5) {
-        handlePublicSaveChanges(closure_1_2[15]).cancelChanges(tmp.id);
-        const obj = handlePublicSaveChanges(closure_1_2[15]);
+  const effect1 = obj6.useEffect(() => {
+    function handlePublicCancelChanges() {
+      if (null != guild) {
+        onClose(navigation[15]).cancelChanges(tmp.id);
+        const obj = onClose(navigation[15]);
       }
       if (handlePublicSaveChanges != null) {
         tmp5();
       }
     }
-    function handlePublicSaveChanges(arg0) {
-      if (null != closure_5) {
-        ({ id, rulesChannelId, publicUpdatesChannelId, preferredLocale, features, safetyAlertsChannelId } = closure_5);
-        let obj = handlePublicSaveChanges(closure_1_2[15]);
-        obj = { rulesChannelId: null, safetyAlertsChannelId: null, publicUpdatesChannelId: null, preferredLocale: null, features: null };
-        obj[0] = rulesChannelId;
-        obj[1] = safetyAlertsChannelId;
-        obj[2] = publicUpdatesChannelId;
-        obj[3] = preferredLocale;
-        obj[4] = features;
-        obj.saveGuild(id, obj);
+    function handlePublicSaveChanges() {
+      if (null != guild) {
+        ({ id, rulesChannelId, publicUpdatesChannelId, preferredLocale, features, safetyAlertsChannelId } = guild);
+        const obj2 = { rulesChannelId, safetyAlertsChannelId, publicUpdatesChannelId, preferredLocale, features };
+        onClose(navigation[15]).saveGuild(id, obj2);
+        const obj = onClose(navigation[15]);
       }
     }
     if (submitting) {
@@ -151,135 +139,131 @@ export default function GuildSettingsModalCommunity(guildId) {
     } else if (hasChanges) {
       fn = () => {
         const obj = { onPress: handlePublicCancelChanges, text: null };
-        const intl = preferredLocale(navigation[16]).intl;
-        obj[1] = intl.string(preferredLocale(navigation[16]).t["ETE/oC"]);
-        return closure_2_16(preferredLocale(navigation[17]).HeaderActionButton, obj);
+        const intl = util.intl;
+        obj.text = intl.string(util.t["ETE/oC"]);
+        return value2(HeaderActionButton.HeaderActionButton, obj);
       };
     }
     let obj = { headerLeft: fn, headerRight: null };
     if (submitting) {
-      let fn2 = () => callback(handlePublicCancelChanges(table[18]).HeaderSubmittingIndicator, {});
+      let fn2 = () => closure_1_16(handlePublicCancelChanges(navigation[18]).HeaderSubmittingIndicator, {});
     } else if (hasChanges) {
       fn2 = () => {
         const obj = { onPress: handlePublicSaveChanges, text: null };
-        const intl = preferredLocale(navigation[16]).intl;
-        obj[1] = intl.string(preferredLocale(navigation[16]).t["R3BPH+"]);
-        return closure_2_16(preferredLocale(navigation[17]).HeaderActionButton, obj);
+        const intl = util.intl;
+        obj.text = intl.string(util.t["R3BPH+"]);
+        return value2(HeaderActionButton.HeaderActionButton, obj);
       };
     }
-    obj[1] = fn2;
+    obj.headerRight = fn2;
     navigation.setOptions(obj);
   }, items5);
   const items6 = [guildId];
-  callback1 = obj5.useCallback(() => {
-    const channels = guild.getChannels(preferredLocale);
+  callback1 = obj6.useCallback(() => {
+    const channels = GuildChannelStore.getChannels(preferredLocale);
     if (null != channels) {
-      const found = channels[rulesChannel].filter((channel) => channel.channel.type === constants.GUILD_TEXT);
+      const found = channels[closure_6].filter((channel) => channel.channel.type === constants.GUILD_TEXT);
       const mapped = found.map((channel) => {
         channel = channel.channel;
-        const obj = { value: channel.id, label: callback(table[19]).computeChannelName(channel, closure_9, closure_8, true) };
+        const obj = { value: channel.id, label: closure_1_0(navigation[19]).computeChannelName(channel, closure_1_9, callback1, true) };
         return obj;
       });
-      const arr = channels[rulesChannel];
     }
     return [];
   }, items6);
   const items7 = [callback1, rulesChannel];
   const items8 = [callback1, publicUpdatesChannel];
-  const callback2 = obj5.useCallback(() => {
-    let obj = onClose(navigation[20]);
-    obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
-    const intl = preferredLocale(navigation[16]).intl;
-    obj[0] = intl.string(preferredLocale(navigation[16]).t.Yr6nGx);
-    obj[1] = callback1();
-    obj[2] = function onItemSelect(rulesChannelId) {
-      let obj = callback(9068);
-      obj = { rulesChannelId };
-      obj.updateGuild(obj);
-      callback(4527).hideActionSheet();
+  const callback2 = obj6.useCallback(() => {
+    let obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+    let obj = ActionSheetActionCreatorsDefault;
+    const intl = util.intl;
+    obj2.title = intl.string(util.t.Yr6nGx);
+    obj2.items = callback1();
+    obj2.onItemSelect = function onItemSelect(rulesChannelId) {
+      onClose(9095).updateGuild({ rulesChannelId });
+      const obj = onClose(9095);
+      const obj2 = { rulesChannelId };
+      onClose(4541).hideActionSheet();
     };
     let id;
     if (rulesChannel != null) {
       id = rulesChannel.id;
     }
-    obj[3] = id;
-    obj.openLazy(preferredLocale(navigation[22])(navigation[21], navigation.paths), "SelectRulesChannel", obj);
+    obj2.selectedItem = id;
+    obj.openLazy(asyncRequireImpl(9458, dependencyMap.paths), "SelectRulesChannel", obj2);
   }, items7);
   preferredLocale = undefined;
-  const callback3 = obj5.useCallback(() => {
-    let obj = onClose(navigation[20]);
-    obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
-    const intl = preferredLocale(navigation[16]).intl;
-    obj[0] = intl.string(preferredLocale(navigation[16]).t.VqhxxN);
-    obj[1] = callback1();
-    obj[2] = function onItemSelect(publicUpdatesChannelId) {
-      let obj = callback(9068);
-      obj = { publicUpdatesChannelId };
-      obj.updateGuild(obj);
-      callback(4527).hideActionSheet();
+  const callback3 = obj6.useCallback(() => {
+    let obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+    let obj = ActionSheetActionCreatorsDefault;
+    const intl = util.intl;
+    obj2.title = intl.string(util.t.VqhxxN);
+    obj2.items = callback1();
+    obj2.onItemSelect = function onItemSelect(publicUpdatesChannelId) {
+      onClose(9095).updateGuild({ publicUpdatesChannelId });
+      const obj = onClose(9095);
+      const obj2 = { publicUpdatesChannelId };
+      onClose(4541).hideActionSheet();
     };
     let id;
     if (publicUpdatesChannel != null) {
       id = publicUpdatesChannel.id;
     }
-    obj[3] = id;
-    obj.openLazy(preferredLocale(navigation[22])(navigation[21], navigation.paths), "SelectUpdatesChannel", obj);
+    obj2.selectedItem = id;
+    obj.openLazy(asyncRequireImpl(9458, dependencyMap.paths), "SelectUpdatesChannel", obj2);
   }, items8);
   if (guild != null) {
     preferredLocale = guild.preferredLocale;
   }
   [][0] = preferredLocale;
-  let tmp21Result1 = null;
+  let tmp21Result4 = null;
   if (null != guild) {
-    obj = { style: null, contentContainerStyle: null, children: null };
-    ({ overview: obj7[0], overviewContent: obj7[1] } = tmp5);
-    obj = { style: null, spacing: null, children: null };
-    obj1 = { paddingHorizontal: null };
-    obj1[0] = token;
-    obj[0] = obj1;
-    obj[1] = onClose(tmp2[11]).space.PX_24;
+    const obj8 = { style: null, contentContainerStyle: null, children: null };
+    ({ overview: obj7.style, overviewContent: obj7.contentContainerStyle } = tmp5);
+    const obj9 = { style: null, spacing: null, children: null };
+    const obj10 = { paddingHorizontal: token };
+    obj9.style = obj10;
+    obj9.spacing = tmp3(tmp2[11]).space.PX_24;
     let str = null;
     if (null != rulesChannel) {
-      let tmpResult = tmp(tmp2[19]);
+      const tmpResult = tmp(tmp2[19]);
       str = tmpResult.computeChannelName(rulesChannel, preferredLocale, callback1, true);
     }
-    obj2 = { helperText: null, hasIcons: false, children: null };
+    const obj11 = { helperText: null, hasIcons: false, children: null };
     const intl2 = tmp(tmp2[16]).intl;
-    obj2[0] = intl2.string(tmp(tmp2[16]).t["3q1TEo"]);
-    obj3 = { label: null, disabled: null, trailing: null, arrow: true, onPress: null };
+    obj11.helperText = intl2.string(tmp(tmp2[16]).t["3q1TEo"]);
+    const obj12 = { label: null, disabled: null, trailing: null, arrow: true, onPress: null };
     const intl3 = tmp(tmp2[16]).intl;
-    obj3[0] = intl3.string(tmp(tmp2[16]).t.U5BW0c);
-    obj3[1] = !canManage;
+    obj12.label = intl3.string(tmp(tmp2[16]).t.U5BW0c);
+    obj12.disabled = !canManage;
     if (str == null) {
       str = "";
     }
-    obj4 = { text: null };
-    obj4[0] = str;
-    obj3[2] = closure_16(tmp(tmp2[26]).TableRow.TrailingText, obj4);
-    obj3[4] = callback2;
-    obj2[2] = closure_16(tmp(tmp2[26]).TableRow, obj3);
-    const items9 = [closure_16(tmp(tmp2[25]).TableRowGroup, obj2), , , ];
+    const obj13 = { text: str };
+    obj12.trailing = closure_16(tmp(tmp2[26]).TableRow.TrailingText, obj13);
+    obj12.onPress = callback2;
+    obj11.children = closure_16(tmp(tmp2[26]).TableRow, obj12);
+    const items9 = [closure_16(tmp(tmp2[25]).TableRowGroup, obj11), , , ];
     let str2 = null;
     if (null != publicUpdatesChannel) {
-      tmpResult = tmp(tmp2[19]);
-      str2 = tmpResult.computeChannelName(publicUpdatesChannel, preferredLocale, callback1, true);
+      const tmpResult2 = tmp(tmp2[19]);
+      str2 = tmpResult2.computeChannelName(publicUpdatesChannel, preferredLocale, callback1, true);
     }
-    obj5 = { helperText: null, hasIcons: false, children: null };
+    const obj14 = { helperText: null, hasIcons: false, children: null };
     const intl4 = tmp(tmp2[16]).intl;
-    obj5[0] = intl4.string(tmp(tmp2[16]).t["Fg6O/5"]);
-    const obj6 = { label: null, disabled: null, trailing: null, arrow: true, onPress: null };
+    obj14.helperText = intl4.string(tmp(tmp2[16]).t["Fg6O/5"]);
+    const obj15 = { label: null, disabled: null, trailing: null, arrow: true, onPress: null };
     const intl5 = tmp(tmp2[16]).intl;
-    obj6[0] = intl5.string(tmp(tmp2[16]).t.vAyDGU);
-    obj6[1] = !isAdmin;
+    obj15.label = intl5.string(tmp(tmp2[16]).t.vAyDGU);
+    obj15.disabled = !isAdmin;
     if (str2 == null) {
       str2 = "";
     }
-    const obj7 = { text: null };
-    obj7[0] = str2;
-    obj6[2] = closure_16(tmp(tmp2[26]).TableRow.TrailingText, obj7);
-    obj6[4] = callback3;
-    obj5[2] = closure_16(tmp(tmp2[26]).TableRow, obj6);
-    items9[1] = closure_16(tmp(tmp2[25]).TableRowGroup, obj5);
+    const obj16 = { text: str2 };
+    obj15.trailing = closure_16(tmp(tmp2[26]).TableRow.TrailingText, obj16);
+    obj15.onPress = callback3;
+    obj14.children = closure_16(tmp(tmp2[26]).TableRow, obj15);
+    items9[1] = closure_16(tmp(tmp2[25]).TableRowGroup, obj14);
     preferredLocale = undefined;
     let tmp21Result = null;
     if (null != guild) {
@@ -289,42 +273,38 @@ export default function GuildSettingsModalCommunity(guildId) {
       if (found != null) {
         str3 = found.label;
       }
-      const obj8 = { helperText: null, hasIcons: false, children: null };
+      const obj17 = { helperText: null, hasIcons: false, children: null };
       const intl6 = tmp(tmp2[16]).intl;
-      obj8[0] = intl6.string(tmp(tmp2[16]).t["l2g81/"]);
-      const obj9 = { label: null, disabled: null, trailing: null, arrow: true, onPress: null };
+      obj17.helperText = intl6.string(tmp(tmp2[16]).t["l2g81/"]);
+      const obj18 = { label: null, disabled: null, trailing: null, arrow: true, onPress: null };
       const intl7 = tmp(tmp2[16]).intl;
-      obj9[0] = intl7.string(tmp(tmp2[16]).t.VeC8vc);
-      obj9[1] = !canManage;
+      obj18.label = intl7.string(tmp(tmp2[16]).t.VeC8vc);
+      obj18.disabled = !canManage;
       if (str3 == null) {
         str3 = "";
       }
-      const obj10 = { text: null };
-      obj10[0] = str3;
-      obj9[2] = tmp21(tmp(tmp2[26]).TableRow.TrailingText, obj10);
-      obj9[4] = tmp19;
-      obj8[2] = tmp21(tmp(tmp2[26]).TableRow, obj9);
-      tmp21Result = tmp21(tmp(tmp2[25]).TableRowGroup, obj8);
+      const obj19 = { text: str3 };
+      obj18.trailing = tmp21(tmp(tmp2[26]).TableRow.TrailingText, obj19);
+      obj18.onPress = tmp19;
+      obj17.children = tmp21(tmp(tmp2[26]).TableRow, obj18);
+      tmp21Result = tmp21(tmp(tmp2[25]).TableRowGroup, obj17);
       const arr11 = calculateLocaleOptions();
     }
     items9[2] = tmp21Result;
-    tmp21Result = null;
+    let tmp21Result3 = null;
     if (isAdmin) {
-      const obj11 = { helperText: null, hasIcons: false, children: null };
-      obj11[0] = stringResult;
-      const obj12 = { variant: "danger", onPress: null, label: null, disabled: null };
-      obj12[1] = callback;
+      const obj20 = { helperText: stringResult, hasIcons: false, children: null };
+      const obj21 = { variant: "danger", onPress: callback, label: null, disabled: null };
       const intl8 = tmp(tmp2[16]).intl;
-      obj12[2] = intl8.string(tmp(tmp2[16]).t.c1BmbC);
-      obj12[3] = !tmp12;
-      obj11[2] = tmp21(tmp(tmp2[26]).TableRow, obj12);
-      tmp21Result = tmp21(tmp(tmp2[25]).TableRowGroup, obj11);
+      obj21.label = intl8.string(tmp(tmp2[16]).t.c1BmbC);
+      obj21.disabled = !tmp12;
+      obj20.children = tmp21(tmp(tmp2[26]).TableRow, obj21);
+      tmp21Result3 = tmp21(tmp(tmp2[25]).TableRowGroup, obj20);
     }
-    items9[3] = tmp21Result;
-    obj[2] = items9;
-    obj[2] = closure_17(tmp(tmp2[24]).Stack, obj);
-    tmp21Result1 = tmp21(tmp(tmp2[23]).Form, obj);
-    const tmp22 = closure_17;
+    items9[3] = tmp21Result3;
+    obj9.children = items9;
+    obj8.children = closure_17(tmp(tmp2[24]).Stack, obj9);
+    tmp21Result4 = tmp21(tmp(tmp2[23]).Form, obj8);
   }
-  return tmp21Result1;
+  return tmp21Result4;
 };

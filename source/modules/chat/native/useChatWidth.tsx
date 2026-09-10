@@ -1,25 +1,27 @@
-// Module ID: 11532
-// Function ID: 11533
+// Module ID: 11558
+// Function ID: 11559
 // Name: useChatWidth
-// Dependencies: [19, 4420, 4422, 11533, 11534, 2]
+// Dependencies: [19, 4434, 4436, 11559, 11560, 2]
 // Exports: default, getChatWidth
 
-// Module 11532 (useChatWidth)
-import useChatLayout from "useChatLayout" /* 4420 */;
-import useChatLayoutDefault from "useChatLayout" /* 4420 */;
-import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4422 */;
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4422 */;
-import sum from "sum" /* 11533 */;
-import contextDefault from "context" /* 11534 */;
-import closure_3 from "noop" /* 19 */;
+// Module 11558 (useChatWidth)
+import useChatLayout from "useChatLayout" /* 4434 */;
+import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4436 */;
+import useDrawerWidth from "useDrawerWidth" /* 11559 */;
+import ChatViewWidthContextDefault from "ChatViewWidthContext" /* 11560 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/chat/native/useChatWidth.tsx");
+const useChatLayoutDefault = useChatLayout;
+const useBaseAppContainerDimensionsDefault = useBaseAppContainerDimensions;
+
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/chat/native/useChatWidth.tsx");
 
 export default function useChatWidth(arg0) {
-  let context = React.useContext(contextDefault);
+  let context = noop.useContext(ChatViewWidthContextDefault);
   const width = useBaseAppContainerDimensionsDefault().width;
-  sum;
+  useDrawerWidth;
   if (null == context) {
     if (null == arg0) {
       let diff = width;
@@ -36,13 +38,12 @@ export default function useChatWidth(arg0) {
 };
 export const getChatWidth = function getChatWidth(arg0) {
   const obj = useChatLayout;
-  const tmp = require;
   const width = useBaseAppContainerDimensions.getBaseAppContainerDimensions().width;
   if (null == arg0) {
     let diff = width;
     if (obj.getChatLayout().isChatLockedOpen) {
-      diff = width - sum.getDrawerWidth();
-      const tmpResult = sum;
+      diff = width - useDrawerWidth.getDrawerWidth();
+      const tmpResult = useDrawerWidth;
     }
     let tmp3 = diff;
   } else {

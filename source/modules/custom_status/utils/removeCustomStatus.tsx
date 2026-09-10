@@ -1,14 +1,14 @@
-// Module ID: 11125
-// Function ID: 11126
+// Module ID: 11152
+// Function ID: 11153
 // Name: removeCustomStatus
-// Dependencies: [11123, 2]
+// Dependencies: [11150, 2]
 // Exports: default
 
-// Module 11125 (removeCustomStatus)
-import set from "set" /* 2 */;
-import setCustomStatusDefault from "setCustomStatus" /* 11123 */;
+// Module 11152 (removeCustomStatus)
+import setCustomStatusDefault from "setCustomStatus" /* 11150 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/custom_status/utils/removeCustomStatus.tsx");
+const result = size.fileFinishedImporting("modules/custom_status/utils/removeCustomStatus.tsx");
 
 export default function removeCustomStatus() {
   setCustomStatusDefault({ text: "", emojiInfo: null, clearAfter: null });

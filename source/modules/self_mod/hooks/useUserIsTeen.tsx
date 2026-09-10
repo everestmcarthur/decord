@@ -1,18 +1,19 @@
-// Module ID: 8649
-// Function ID: 8650
+// Module ID: 8677
+// Function ID: 8678
 // Name: useUserIsTeen
 // Dependencies: [1371, 504, 2]
 // Exports: useUserIsTeen
 
-// Module 8649 (useUserIsTeen)
+// Module 8677 (useUserIsTeen)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/self_mod/hooks/useUserIsTeen.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/self_mod/hooks/useUserIsTeen.tsx");
 
 export const useUserIsTeen = function useUserIsTeen() {
-  const items = [closure_2];
+  const items = [UserStore];
   return false === initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let nsfwAllowed;

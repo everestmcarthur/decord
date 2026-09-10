@@ -1,20 +1,19 @@
-// Module ID: 17097
-// Function ID: 17098
-// Name: triggerIOSHaptic
-// Dependencies: [12277, 4528, 2]
+// Module ID: 17128
+// Function ID: 17129
+// Name: utils/triggerIOSHaptic
+// Dependencies: [12303, 4542, 2]
 // Exports: default
 
-// Module 17097 (triggerIOSHaptic)
-import set from "set" /* 2 */;
-import HapticFeedbackTypes from "HapticFeedbackTypes" /* 4528 */;
-import VoicePanelModes from "VoicePanelModes" /* 12277 */;
+// Module 17128 (utils/triggerIOSHaptic)
+import HapticUtils from "HapticUtils" /* 4542 */;
+import VoicePanelConstants from "VoicePanelConstants" /* 12303 */;
+import size from "module_2" /* 2 */;
 
-const IS_IOS = VoicePanelModes.IS_IOS;
-let result = set.fileFinishedImporting("modules/voice_panel/native/utils/triggerIOSHaptic.tsx");
+const IS_IOS = VoicePanelConstants.IS_IOS;
+let result = size.fileFinishedImporting("modules/voice_panel/native/utils/triggerIOSHaptic.tsx");
 
 export default function triggerIOSHaptic() {
   if (IS_IOS) {
-    const result = HapticFeedbackTypes.triggerHapticFeedback(HapticFeedbackTypes.HapticFeedbackTypes.IMPACT_MEDIUM);
-    const obj = HapticFeedbackTypes;
+    const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
   }
 };

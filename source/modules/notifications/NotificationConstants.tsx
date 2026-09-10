@@ -1,12 +1,12 @@
-// Module ID: 4212
-// Function ID: 4213
-// Name: AccountNotificationFlags
+// Module ID: 4225
+// Function ID: 4226
+// Name: NotificationConstants
 // Dependencies: [2]
 
-// Module 4212 (AccountNotificationFlags)
-import set from "set" /* 2 */;
+// Module 4225 (NotificationConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/notifications/NotificationConstants.tsx");
+const result = size.fileFinishedImporting("modules/notifications/NotificationConstants.tsx");
 
 export const AccountNotificationFlags = { USE_NEW_NOTIFICATIONS: 16, [16]: "USE_NEW_NOTIFICATIONS", MENTION_ON_ALL_MESSAGES: 32, [32]: "MENTION_ON_ALL_MESSAGES" };
 export const NotificationSettingsUpdateType = { GUILD: "guild", CHANNEL: "channel", ACCOUNT: "account", AUTHORIZED_APP_DM: "authorized_app_dm", AUTHORIZED_APP_DM_PUSH_NOTIFICATION: "authorized_app_dm_push_notification" };

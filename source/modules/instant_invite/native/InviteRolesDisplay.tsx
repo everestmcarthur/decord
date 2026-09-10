@@ -1,48 +1,44 @@
-// Module ID: 10951
-// Function ID: 10952
+// Module ID: 10978
+// Function ID: 10979
 // Name: InviteRolesDisplay
-// Dependencies: [19, 17, 2015, 21, 4560, 504, 4556, 1114, 10952, 2]
+// Dependencies: [19, 17, 2015, 21, 4574, 504, 4570, 1114, 10979, 2]
 // Exports: default
 
-// Module 10951 (InviteRolesDisplay)
-import noopAll from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "createGuildRoleRecordFromRust" /* 2015 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10978 (InviteRolesDisplay)
+import RolePillDefault from "RolePill" /* 10979 */;
+import noop from "module_19" /* 19 */;
+import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 
-const require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ container: { marginTop: 8 }, label: { marginBottom: 4 }, rolesRow: { flexDirection: "row", flexWrap: "wrap" } });
-const result = require("set").fileFinishedImporting("modules/instant_invite/native/InviteRolesDisplay.tsx");
+const require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let closure_7 = createStyles.createStyles({ container: { marginTop: 8 }, label: { marginBottom: 4 }, rolesRow: { flexDirection: "row", flexWrap: "wrap" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/instant_invite/native/InviteRolesDisplay.tsx");
 
 export default function InviteRolesDisplay(roleIds) {
   roleIds = roleIds.roleIds;
   const guildId = roleIds.guildId;
-  const tmp = callback3();
-  let obj = roleIds(504);
-  const items = [closure_4];
+  const tmp = closure_7();
+  const items = [GuildRoleStore];
   const items1 = [roleIds, guildId];
-  const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
-    const mapped = roleIds.map((arg0) => closure_1_4.getRole(closure_1, arg0));
-    return mapped.filter((arg0) => null != arg0);
+  const stateFromStoresArray = roleIds(504).useStateFromStoresArray(items, () => {
+    const mapped = roleIds.map((item) => role.getRole(guildId, item));
+    return mapped.filter((item) => null != item);
   }, items1);
   let tmp4 = null;
   if (0 !== stateFromStoresArray.length) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
-    obj = { variant: "text-xs/semibold", color: "text-muted", style: null, children: null };
-    obj[2] = tmp.label;
+    const obj2 = { style: tmp.container, children: null };
+    const obj3 = { variant: "text-xs/semibold", color: "text-muted", style: tmp.label, children: null };
     const intl = tmp2(1114).intl;
-    obj[3] = intl.string(tmp2(1114).t.stcSfI);
-    const items2 = [callback(tmp2(4556).Text, obj), ];
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.rolesRow;
-    obj1[1] = stateFromStoresArray.map((id) => closure_1_5(guildId(closure_1_2[8]), { role: id, guildId }, id.id));
-    items2[1] = callback(View, obj1);
-    obj[1] = items2;
-    tmp4 = callback2(View, obj);
+    obj3.children = intl.string(tmp2(1114).t.stcSfI);
+    const items2 = [closure_5(tmp2(4570).Text, obj3), ];
+    const obj4 = { style: tmp.rolesRow, children: stateFromStoresArray.map((role) => hasOwnProperty(RolePillDefault, { role, guildId }, role.id)) };
+    items2[1] = closure_5(View, obj4);
+    obj2.children = items2;
+    tmp4 = closure_6(View, obj2);
   }
   return tmp4;
 };

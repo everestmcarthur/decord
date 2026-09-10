@@ -1,37 +1,37 @@
-// Module ID: 15410
-// Function ID: 15411
-// Name: useValue
-// Dependencies: [4552, 7975, 504, 14440, 11473, 1114, 2786, 2]
+// Module ID: 15439
+// Function ID: 15440
+// Name: DisplayNameStylesAccessibilitySetting
+// Dependencies: [4566, 7989, 504, 14465, 11500, 1114, 2786, 2]
 // Exports: onValueChange, useValue
 
-// Module 15410 (useValue)
+// Module 15439 (DisplayNameStylesAccessibilitySetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 2786 */;
-import setFontSize from "setFontSize" /* 14440 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import createToggle from "createToggle" /* 11473 */;
+import util from "util" /* 1114 */;
+import _modDef2786 from "module_2786" /* 2786 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14465 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-require = arg1;
+require = fn;
 function useValue() {
-  const items = [closure_3];
-  return initialize.useStateFromStores(items, () => obj.displayNameStylesEnabled);
+  const items = [AccessibilityStore];
+  return initialize.useStateFromStores(items, () => AccessibilityStore.displayNameStylesEnabled);
 }
 function onValueChange(enabled) {
-  const result = setFontSize.setDisplayNameStylesEnabled(enabled);
+  const result = AccessibilityActionCreators.setDisplayNameStylesEnabled(enabled);
 }
-createToggle = {
+const SettingBuilders = fn(11500);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault["2gFUEw"]);
+    const intl = util.intl;
+    return intl.string(_modDef2786["2gFUEw"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7989).MobileUserSettings.ACCESSIBILITY,
   useValue,
   onValueChange
-};
-createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DisplayNameStylesAccessibilitySetting.tsx");
+});
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/DisplayNameStylesAccessibilitySetting.tsx");
 
-export default createToggle;
+export default toggle;
 export { useValue };
 export { onValueChange };

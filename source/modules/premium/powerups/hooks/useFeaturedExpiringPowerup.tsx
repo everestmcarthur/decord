@@ -1,26 +1,30 @@
-// Module ID: 12510
-// Function ID: 12511
+// Module ID: 12536
+// Function ID: 12537
 // Name: useFeaturedExpiringPowerup
-// Dependencies: [19, 4470, 4449, 504, 12511, 7554, 2]
+// Dependencies: [19, 4484, 4463, 504, 12537, 7568, 2]
 // Exports: default
 
-// Module 12510 (useFeaturedExpiringPowerup)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleGameServerInstanceCreated" /* 4470 */;
-import closure_4 from "calculateAppliedBoosts" /* 4449 */;
+// Module 12536 (useFeaturedExpiringPowerup)
+import CollectiblesUtils from "CollectiblesUtils" /* 7568 */;
+import noop from "module_19" /* 19 */;
+import GameServerStore from "GameServerStore" /* 4484 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4463 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useFeaturedExpiringPowerup.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useFeaturedExpiringPowerup.tsx");
 
 export default function useFeaturedExpiringPowerup(arg0) {
-  const _require = arg0;
-  let items = [closure_4];
-  stateFromStores = _require(stateFromStores[3]).useStateFromStores(items, () => closure_1_4.getStateForGuild(closure_0));
-  let obj = _require(stateFromStores[3]);
+  _require = arg0;
+  let items = [GuildPowerupsStore];
+  stateFromStores = require("initialize").useStateFromStores(items, () => GuildPowerupsStore.getStateForGuild(closure_0));
+  let obj = require("initialize");
   const items1 = [expiringPowerupCoachmarkEnabled];
-  const stateFromStores1 = _require(stateFromStores[3]).useStateFromStores(items1, () => expiringPowerupCoachmarkEnabled.getStateForGuild(closure_0));
-  const obj2 = _require(stateFromStores[3]);
-  expiringPowerupCoachmarkEnabled = _require(stateFromStores[4]).useExpiringPowerupCoachmarkEnabled("useFeaturedExpiringPowerup");
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => GameServerStore.getStateForGuild(closure_0));
+  const obj2 = require("initialize");
+  expiringPowerupCoachmarkEnabled = require("ExpiringPowerupCoachmarkExperiment").useExpiringPowerupCoachmarkEnabled("useFeaturedExpiringPowerup");
   const items2 = [stateFromStores, stateFromStores1, expiringPowerupCoachmarkEnabled];
   return stateFromStores1.useMemo(() => {
     if (expiringPowerupCoachmarkEnabled) {
@@ -32,7 +36,7 @@ export default function useFeaturedExpiringPowerup(arg0) {
         unlockedPowerups = {};
       }
       const items = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(Object.values(unlockedPowerups), 0);
+      const arraySpreadResult = HermesBuiltin.arraySpread(Object.values(unlockedPowerups), 0);
       let entitlements;
       if (stateFromStores1 != null) {
         entitlements = stateFromStores1.entitlements;
@@ -40,7 +44,7 @@ export default function useFeaturedExpiringPowerup(arg0) {
       if (entitlements == null) {
         entitlements = {};
       }
-      arraySpreadResult = HermesBuiltin.arraySpread(Object.values(entitlements), arraySpreadResult);
+      HermesBuiltin.arraySpread(Object.values(entitlements), arraySpreadResult);
       const found = items.filter((ends_at) => {
         let tmp = null != ends_at.ends_at;
         if (tmp) {
@@ -84,12 +88,11 @@ export default function useFeaturedExpiringPowerup(arg0) {
             }
           }
         }
-        const obj = { name: null, daysUntilExpiry: null, numExpiringBoosts: null, isGameServer: null, skuId: null };
-        obj[0] = title;
+        const obj = { name: title, daysUntilExpiry: null, numExpiringBoosts: null, isGameServer: null, skuId: null };
         const _Math = Math;
         const _Date = Date;
         const date = new Date(reduced.ends_at);
-        obj[1] = Math.max(0, callback(stateFromStores[5]).getDaysRemaining(date));
+        obj.daysUntilExpiry = Math.max(0, CollectiblesUtils.getDaysRemaining(date));
         let metadata = reduced.metadata;
         let num3;
         if (metadata != null) {
@@ -98,9 +101,9 @@ export default function useFeaturedExpiringPowerup(arg0) {
         if (num3 == null) {
           num3 = 0;
         }
-        obj[2] = num3;
-        obj[3] = null != game_server;
-        obj[4] = reduced.sku_id;
+        obj.numExpiringBoosts = num3;
+        obj.isGameServer = null != game_server;
+        obj.skuId = reduced.sku_id;
         return obj;
       }
     }

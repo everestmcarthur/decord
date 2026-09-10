@@ -1,33 +1,10 @@
 // Module ID: 8330
 // Function ID: 8331
-// Dependencies: [8321, 8314, 4389]
+// Dependencies: [17]
 
 // Module 8330
-import colorPropType from "colorPropType" /* 8314 */;
-import _mod8321 from "module_8321" /* 8321 */;
-import emptyFunction from "emptyFunction" /* 4389 */;
+import _mod17 from "module_17" /* 17 */;
 
-let obj = {};
-const module_8321 = Object.assign(_mod8321);
-obj.color = colorPropType;
-obj.fontFamily = emptyFunction.string;
-obj.fontSize = emptyFunction.number;
-obj.fontStyle = emptyFunction.oneOf(["normal", "italic"]);
-obj.fontWeight = emptyFunction.oneOf(["normal", "bold", "100", "200", "300", "400", "500", "600", "700", "800", "900"]);
-obj.fontVariant = emptyFunction.arrayOf(emptyFunction.oneOf(["small-caps", "oldstyle-nums", "lining-nums", "tabular-nums", "proportional-nums"]));
-obj = { width: emptyFunction.number, height: emptyFunction.number };
-obj.textShadowOffset = emptyFunction.shape(obj);
-obj.textShadowRadius = emptyFunction.number;
-obj.textShadowColor = colorPropType;
-obj.letterSpacing = emptyFunction.number;
-obj.lineHeight = emptyFunction.number;
-obj.textAlign = emptyFunction.oneOf(["auto", "left", "right", "center", "justify"]);
-obj.textAlignVertical = emptyFunction.oneOf(["auto", "top", "bottom", "center"]);
-obj.includeFontPadding = emptyFunction.bool;
-obj.textDecorationLine = emptyFunction.oneOf(["none", "underline", "line-through", "underline line-through"]);
-obj.textDecorationStyle = emptyFunction.oneOf(["solid", "double", "dotted", "dashed"]);
-obj.textDecorationColor = colorPropType;
-obj.textTransform = emptyFunction.oneOf(["none", "capitalize", "uppercase", "lowercase"]);
-obj.writingDirection = emptyFunction.oneOf(["auto", "ltr", "rtl"]);
+const StyleSheet = _mod17.StyleSheet;
 
-export default obj;
+export default StyleSheet.create({ container: { flex: 1, overflow: "hidden" }, loadingOrErrorView: { position: "absolute", flex: 1, justifyContent: "center", alignItems: "center", height: "100%", width: "100%", backgroundColor: "white" }, loadingProgressBar: { height: 20 }, errorText: { fontSize: 14, textAlign: "center", marginBottom: 2 }, errorTextTitle: { fontSize: 15, fontWeight: "500", marginBottom: 10 }, webView: { backgroundColor: "#ffffff" } });

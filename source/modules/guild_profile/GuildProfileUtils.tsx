@@ -1,24 +1,24 @@
-// Module ID: 7737
-// Function ID: 7738
-// Name: getEstablishedDate
+// Module ID: 7751
+// Function ID: 7752
+// Name: GuildProfileUtils
 // Dependencies: [1961, 1074, 1971, 2]
 // Exports: getEstablishedDate, guildInviteCanEmbedProfile
 
-// Module 7737 (getEstablishedDate)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import createChannelRecord from "createChannelRecord" /* 1961 */;
-import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1971 */;
+// Module 7751 (GuildProfileUtils)
+import Constants from "Constants" /* 1074 */;
+import ChannelRecord from "ChannelRecord" /* 1961 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 1971 */;
+import size from "module_2" /* 2 */;
 
-let closure_2 = createChannelRecord.createChannelRecordFromInvite;
-const GuildFeatures = ME.GuildFeatures;
-const result = set.fileFinishedImporting("modules/guild_profile/GuildProfileUtils.tsx");
+let closure_2 = ChannelRecord.createChannelRecordFromInvite;
+const GuildFeatures = Constants.GuildFeatures;
+const result = size.fileFinishedImporting("modules/guild_profile/GuildProfileUtils.tsx");
 
-export const getEstablishedDate = function getEstablishedDate(tmpResult1, locale) {
-  if (null != tmpResult1) {
-    if ("" !== tmpResult1) {
+export const getEstablishedDate = function getEstablishedDate(tmpResult4, locale) {
+  if (null != tmpResult4) {
+    if ("" !== tmpResult4) {
       const _Date = Date;
-      const date = new Date(tmpResult1);
+      const date = new Date(tmpResult4);
       const _Date2 = Date;
       let toLocaleDateStringResult = null;
       if (date instanceof Date) {
@@ -37,7 +37,7 @@ export const guildInviteCanEmbedProfile = function guildInviteCanEmbedProfile(gu
   if (null == guild.guild) {
     return false;
   } else {
-    const features = fromGuildPropertiesWithAdditionalFields.fromInviteGuild(guild.guild).features;
+    const features = GuildRecordUtils.fromInviteGuild(guild.guild).features;
     if (features.has(GuildFeatures.HUB)) {
       return false;
     } else {
@@ -47,7 +47,7 @@ export const guildInviteCanEmbedProfile = function guildInviteCanEmbedProfile(gu
       }
       let tmp2 = null;
       if (null != channel) {
-        tmp2 = callback(guild.channel);
+        tmp2 = closure_2(guild.channel);
       }
       let isGuildVoiceOrThreadResult;
       if (tmp2 != null) {
@@ -55,6 +55,5 @@ export const guildInviteCanEmbedProfile = function guildInviteCanEmbedProfile(gu
       }
       return !isGuildVoiceOrThreadResult;
     }
-    const obj = fromGuildPropertiesWithAdditionalFields;
   }
 };

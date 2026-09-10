@@ -1,19 +1,19 @@
-// Module ID: 12186
-// Function ID: 12187
+// Module ID: 12212
+// Function ID: 12213
 // Name: UsernameText
-// Dependencies: [19, 21, 4712, 4556, 2]
+// Dependencies: [19, 21, 4726, 4570, 2]
 // Exports: default
 
-// Module 12186 (UsernameText)
-import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4556 */;
-import getNickname from "getNickname" /* 4712 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 12212 (UsernameText)
+import Text_Text from "Text/Text" /* 4570 */;
+import NicknameUtils from "NicknameUtils" /* 4726 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsxs: obj1, Fragment: c3, jsx: c4 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/base_components/UsernameText.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsxs: c2, Fragment: c3, jsx: closure_4 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/UsernameText.tsx");
 
 export default function UsernameText(color) {
   ({ user, variant } = color);
@@ -24,38 +24,37 @@ export default function UsernameText(color) {
   if (str === undefined) {
     str = "text-default";
   }
-  let obj = { variant, color: str };
-  obj1 = getNickname;
-  const name = obj1.getName(color.guildId, null, user);
+  const obj = { variant, color: str };
+  const name = NicknameUtils.getName(color.guildId, null, user);
   if (user.hasUniqueUsername()) {
-    str = user.toString();
+    let str1 = user.toString();
   } else {
-    obj = { children: null };
+    const obj3 = { children: null };
     const items = [user.toString(), ];
-    obj = {};
+    const obj4 = {};
     const merged = Object.assign(obj);
-    obj.color = "text-muted";
+    obj4.color = "text-muted";
     const items1 = ["#", user.discriminator];
-    obj.children = items1;
-    items[1] = callback(tmp(4556).Text, obj);
-    obj[0] = items;
-    str = callback(closure_3, obj);
+    obj4.children = items1;
+    items[1] = React2(tmp(4570).Text, obj4);
+    obj3.children = items;
+    str1 = React2(React3, obj3);
   }
-  obj1 = {};
+  const obj5 = {};
   const merged1 = Object.assign(obj);
-  let tmp13 = str;
+  let tmp13 = str1;
   if (tmp4) {
-    const obj2 = { children: null };
+    const obj6 = { children: null };
     const items2 = [name, " ", ];
-    const obj3 = {};
+    const obj7 = {};
     const merged2 = Object.assign(obj);
-    obj3.color = "text-muted";
-    const items3 = ["(", str, ")"];
-    obj3.children = items3;
-    items2[2] = callback(tmp(4556).Text, obj3);
-    obj2[0] = items2;
-    tmp13 = callback(closure_3, obj2);
+    obj7.color = "text-muted";
+    const items3 = ["(", str1, ")"];
+    obj7.children = items3;
+    items2[2] = React2(tmp(4570).Text, obj7);
+    obj6.children = items2;
+    tmp13 = React2(React3, obj6);
   }
-  obj1.children = tmp13;
-  return closure_4(Text.Text, obj1);
+  obj5.children = tmp13;
+  return React4(Text_Text.Text, obj5);
 };

@@ -1,19 +1,19 @@
-// Module ID: 9634
-// Function ID: 9635
+// Module ID: 9661
+// Function ID: 9662
 // Name: mediaEngineContextFromParticipantType
-// Dependencies: [4581, 4585, 2]
+// Dependencies: [4595, 4599, 2]
 // Exports: default
 
-// Module 9634 (mediaEngineContextFromParticipantType)
-import set from "set" /* 2 */;
-import ParticipantTypes2 from "ParticipantTypes" /* 4581 */;
-import DesktopSources from "DesktopSources" /* 4585 */;
+// Module 9661 (mediaEngineContextFromParticipantType)
+import CallConstants from "CallConstants" /* 4595 */;
+import Constants from "Constants" /* 4599 */;
+import size from "module_2" /* 2 */;
 
-const ParticipantTypes = ParticipantTypes2.ParticipantTypes;
-const MediaEngineContextTypes = DesktopSources.MediaEngineContextTypes;
+const ParticipantTypes = CallConstants.ParticipantTypes;
+const MediaEngineContextTypes = Constants.MediaEngineContextTypes;
 let closure_0 = Object.freeze({ [ParticipantTypes.STREAM]: MediaEngineContextTypes.STREAM, [ParticipantTypes.HIDDEN_STREAM]: MediaEngineContextTypes.STREAM, [ParticipantTypes.USER]: MediaEngineContextTypes.DEFAULT, [ParticipantTypes.ACTIVITY]: MediaEngineContextTypes.DEFAULT });
-const result = set.fileFinishedImporting("modules/calls/mediaEngineContextFromParticipantType.tsx");
+const result = size.fileFinishedImporting("modules/calls/mediaEngineContextFromParticipantType.tsx");
 
 export default function mediaEngineContextFromParticipantType(arg0) {
-  return table[arg0];
+  return closure_0[arg0];
 };

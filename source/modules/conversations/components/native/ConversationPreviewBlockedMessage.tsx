@@ -1,34 +1,34 @@
-// Module ID: 7928
-// Function ID: 7929
+// Module ID: 7942
+// Function ID: 7943
 // Name: ConversationPreviewBlockedMessage
-// Dependencies: [19, 21, 4973, 576, 7929, 6968, 4556, 1114, 2]
+// Dependencies: [19, 21, 4987, 576, 7943, 6982, 4570, 1114, 2]
 // Exports: default
 
-// Module 7928 (ConversationPreviewBlockedMessage)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Text from "Text" /* 4556 */;
-import Stack from "Stack" /* 4973 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 7942 (ConversationPreviewBlockedMessage)
+import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Stack_Stack from "Stack/Stack" /* 4987 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/conversations/components/native/ConversationPreviewBlockedMessage.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/conversations/components/native/ConversationPreviewBlockedMessage.tsx");
 
 export default function ConversationPreviewBlockedMessage(reason) {
-  let obj = { direction: "horizontal", spacing: ThemesDefault.space.PX_8, align: "center", children: null };
+  const obj = { direction: "horizontal", spacing: nativeDefault.space.PX_8, align: "center", children: null };
   if ("blocked" === reason.reason) {
-    let EyeSlashIcon = tmp2(7929).DenyIcon;
+    let EyeSlashIcon = tmp2(7943).DenyIcon;
   } else {
-    EyeSlashIcon = tmp2(6968).EyeSlashIcon;
+    EyeSlashIcon = tmp2(6982).EyeSlashIcon;
   }
-  obj = { size: "sm", color: ThemesDefault.colors.TEXT_MUTED };
-  const items = [closure_3(EyeSlashIcon, obj), ];
+  const items = [React3(EyeSlashIcon, { size: "sm", color: nativeDefault.colors.TEXT_MUTED }), ];
   const intl = tmp2(1114).intl;
   const t = tmp2(1114).t;
-  obj = { variant: "text-md/normal", color: "text-muted", children: intl.string(tmp6 ? t["WPe+xL"] : t.uxrh1O) };
-  items[1] = closure_3(Text.Text, obj);
-  obj[3] = items;
-  return closure_4(Stack.Stack, obj);
+  const obj2 = { size: "sm", color: nativeDefault.colors.TEXT_MUTED };
+  const tmp = React4;
+  items[1] = React3(Text_Text.Text, { variant: "text-md/normal", color: "text-muted", children: intl.string("blocked" === reason.reason ? t["WPe+xL"] : t.uxrh1O) });
+  obj.children = items;
+  return tmp(Stack_Stack.Stack, obj);
 };

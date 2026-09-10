@@ -1,12 +1,12 @@
-// Module ID: 17065
-// Function ID: 17066
-// Name: SOUND_BUTTON_HEIGHT
+// Module ID: 17096
+// Function ID: 17097
+// Name: SoundboardStyleConstants
 // Dependencies: [2]
 
-// Module 17065 (SOUND_BUTTON_HEIGHT)
-import set from "set" /* 2 */;
+// Module 17096 (SoundboardStyleConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/soundboard/native/SoundboardStyleConstants.tsx");
+const result = size.fileFinishedImporting("modules/soundboard/native/SoundboardStyleConstants.tsx");
 
 export const SOUND_BUTTON_HEIGHT = 88;
 export const SOUND_ROW_HORIZONTAL_PADDING = 12;

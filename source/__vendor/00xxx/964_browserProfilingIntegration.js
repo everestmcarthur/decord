@@ -4,7 +4,8 @@
 // Dependencies: [965, 966, 937, 682, 893, 967]
 
 // Module 964 (browserProfilingIntegration)
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 682 */;
+import _mod966 from "module_966" /* 966 */;
+import registerSpanErrorInstrumentation from "module_682" /* 682 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
@@ -17,7 +18,7 @@ export const browserProfilingIntegration = registerSpanErrorInstrumentation.defi
     if (!tmp4) {
       options.profileLifecycle = "manual";
     }
-    let tmp2Result = tmp2(966);
+    tmp4 = uIProfiler(966).hasLegacyProfiling(options) || options.profileLifecycle;
     if (tmp2Result.hasLegacyProfiling(options)) {
       if (!options.profilesSampleRate) {
         if (tmp2(937).DEBUG_BUILD) {
@@ -26,43 +27,43 @@ export const browserProfilingIntegration = registerSpanErrorInstrumentation.defi
         }
       }
     }
-    tmp2Result = tmp2(682);
-    let activeSpan = tmp2Result.getActiveSpan();
+    tmp2Result = uIProfiler(966);
+    let activeSpan = uIProfiler(682).getActiveSpan();
     let rootSpan = activeSpan;
     if (activeSpan) {
       rootSpan = tmp2(682).getRootSpan(activeSpan);
-      const tmp2Result1 = tmp2(682);
+      const tmp2Result10 = tmp2(682);
     }
-    tmp4 = uIProfiler(966).hasLegacyProfiling(options) || options.profileLifecycle;
-    const tmp2Result2 = uIProfiler(966);
+    const tmp2Result9 = uIProfiler(682);
+    const tmp2Result11 = uIProfiler(966);
     if (tmp8) {
       let debug2 = tmp2(682).debug;
       debug2.warn("[Profiling] Both legacy profiling (`profilesSampleRate`) and UI profiling settings are defined. `profileSessionSampleRate` has no effect when legacy profiling is enabled.");
     }
     tmp8 = uIProfiler(966).hasLegacyProfiling(options) && undefined !== options.profileSessionSampleRate && uIProfiler(937).DEBUG_BUILD;
-    if (tmp2Result3.hasLegacyProfiling(options)) {
+    if (tmp2Result12.hasLegacyProfiling(options)) {
       let result = rootSpan;
       if (rootSpan) {
         result = tmp2(966).isAutomatedPageLoadSpan(rootSpan);
-        const tmp2Result4 = tmp2(966);
+        const tmp2Result13 = tmp2(966);
       }
       if (result) {
         result = tmp2(966).shouldProfileSpanLegacy(rootSpan);
-        const tmp2Result5 = tmp2(966);
+        const tmp2Result14 = tmp2(966);
       }
       if (result) {
         tmp2(967).startProfileForSpan(rootSpan);
-        const tmp2Result6 = tmp2(967);
+        const tmp2Result15 = tmp2(967);
       }
       getOptions.on("spanStart", (rootSpan) => {
         let result = rootSpan === uIProfiler(682).getRootSpan(rootSpan);
         if (result) {
-          let tmpResult = tmp(966);
-          result = tmpResult.shouldProfileSpanLegacy(rootSpan);
+          result = tmp(966).shouldProfileSpanLegacy(rootSpan);
+          const tmpResult = tmp(966);
         }
         if (result) {
-          tmpResult = tmp(967);
-          tmpResult.startProfileForSpan(rootSpan);
+          tmp(967).startProfileForSpan(rootSpan);
+          const tmpResult2 = tmp(967);
         }
       });
       getOptions.on("beforeEnvelope", (arg0) => {
@@ -87,75 +88,45 @@ export const browserProfilingIntegration = registerSpanErrorInstrumentation.defi
                 }
               }
               let tmp20 = profile_id;
-              let tmp21 = contexts;
               if (tmp18 != null) {
                 let profile2 = tmp18.profile;
                 if (profile2 != null) {
                   let start_timestamp = profile2.start_timestamp;
                 }
               }
-              let tmp23 = profile_id;
               if (typeof tmp20 === "string") {
-                let tmp27 = profile_id;
                 if (tmp20) {
-                  let tmp35 = contexts;
-                  profile = undefined;
+                  let profile1;
                   if (tmp18 != null) {
-                    profile = tmp18.profile;
+                    profile1 = tmp18.profile;
                   }
-                  if (profile) {
-                    let tmp37 = contexts;
+                  if (profile1) {
                     delete tmp2[tmp];
                   }
                   let tmp39 = uIProfiler;
-                  let tmp41 = dependencyMap;
-                  let tmp38 = uIProfiler;
-                  let tmp40 = dependencyMap;
                   let obj3 = uIProfiler(966);
-                  let tmp42 = profile_id;
                   let result1 = obj3.takeProfileFromGlobalCache(tmp20);
-                  let tmp45 = uIProfiler;
-                  let tmp46 = dependencyMap;
                   if (result1) {
                     let tmp39Result = tmp39(966);
-                    let tmp51 = profile_id;
-                    let tmp52 = start_timestamp;
-                    let tmp53 = result1;
-                    let tmp54 = nextResult;
-                    let tmp55 = tmp39Result;
                     let profilingEvent = tmp39Result.createProfilingEvent(tmp20, tmp22, tmp44, tmp16);
                     if (profilingEvent) {
-                      let tmp58 = profilingEvent;
                       let arr = items.push(tmp57);
                     }
                   } else if (tmp39(937).DEBUG_BUILD) {
-                    let tmp47 = tmp38;
-                    let tmp48 = tmp40;
                     let debug3 = tmp39(682).debug;
-                    let tmp49 = profile_id;
                     let _HermesInternal = HermesInternal;
                     let logResult = debug3.log("[Profiling] Could not retrieve profile for span: " + tmp20);
                   }
                 } else {
-                  let tmp28 = uIProfiler;
                   let tmp29 = uIProfiler;
-                  let tmp30 = dependencyMap;
-                  let tmp31 = dependencyMap;
                   if (uIProfiler(937).DEBUG_BUILD) {
-                    let tmp32 = tmp28;
-                    let tmp33 = tmp30;
                     let debug2 = tmp29(682).debug;
                     let logResult1 = debug2.log("[Profiling] cannot find profile for a span without a profile context");
                   }
                 }
               } else {
-                let tmp65 = uIProfiler;
                 let tmp66 = uIProfiler;
-                let tmp67 = dependencyMap;
-                let tmp68 = dependencyMap;
                 if (uIProfiler(937).DEBUG_BUILD) {
-                  let tmp24 = tmp65;
-                  let tmp25 = tmp67;
                   let debug = tmp66(682).debug;
                   let logResult2 = debug.log("[Profiling] cannot find profile for a span without a profile context");
                 }
@@ -175,18 +146,18 @@ export const browserProfilingIntegration = registerSpanErrorInstrumentation.defi
       if ("manual" === profileLifecycle) {
         uIProfiler.initialize(getOptions);
       } else if ("trace" === profileLifecycle) {
-        if (tmp2Result7.hasSpansEnabled(options)) {
+        if (tmp2Result16.hasSpansEnabled(options)) {
           uIProfiler.initialize(getOptions);
           if (rootSpan) {
             uIProfiler.notifyRootSpanActive(rootSpan);
           }
           const WINDOW = tmp2(893).WINDOW;
           const timerId = WINDOW.setTimeout(() => {
-            const activeSpan = uIProfiler(closure_1_1[3]).getActiveSpan();
+            const activeSpan = registerSpanErrorInstrumentation.getActiveSpan();
             let rootSpan = activeSpan;
             if (activeSpan) {
-              rootSpan = uIProfiler(closure_1_1[3]).getRootSpan(activeSpan);
-              const tmpResult = uIProfiler(closure_1_1[3]);
+              rootSpan = registerSpanErrorInstrumentation.getRootSpan(activeSpan);
+              const tmpResult = registerSpanErrorInstrumentation;
             }
             if (rootSpan) {
               uIProfiler.notifyRootSpanActive(rootSpan);
@@ -196,11 +167,11 @@ export const browserProfilingIntegration = registerSpanErrorInstrumentation.defi
           let debug3 = tmp2(682).debug;
           debug3.warn("[Profiling] `profileLifecycle` is 'trace' but tracing is disabled. Set a `tracesSampleRate` or `tracesSampler` to enable span tracing.");
         }
-        tmp2Result7 = tmp2(682);
+        tmp2Result16 = tmp2(682);
       }
     }
   },
   processEvent(contexts) {
-    return callback(966).attachProfiledThreadToEvent(contexts);
+    return _mod966.attachProfiledThreadToEvent(contexts);
   }
 }));

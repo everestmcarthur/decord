@@ -1,15 +1,15 @@
-// Module ID: 7861
-// Function ID: 7862
-// Name: getRemindersLastSeenAt
+// Module ID: 7875
+// Function ID: 7876
+// Name: MessageRemindersSeenStorage
 // Dependencies: [510, 2]
 // Exports: getRemindersLastSeenAt, markRemindersSeen
 
-// Module 7861 (getRemindersLastSeenAt)
-import set from "set" /* 2 */;
+// Module 7875 (MessageRemindersSeenStorage)
 import Storage2 from "Storage" /* 510 */;
+import size from "module_2" /* 2 */;
 
 const MessageRemindersLastSeenAt = "MessageRemindersLastSeenAt";
-let result = set.fileFinishedImporting("modules/saved_messages/message_reminders/native/MessageRemindersSeenStorage.tsx");
+let result = size.fileFinishedImporting("modules/saved_messages/message_reminders/native/MessageRemindersSeenStorage.tsx");
 
 export const getRemindersLastSeenAt = function getRemindersLastSeenAt() {
   const Storage = Storage2.Storage;

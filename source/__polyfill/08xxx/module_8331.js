@@ -1,6 +1,9 @@
 // Module ID: 8331
 // Function ID: 8332
-// Dependencies: []
+// Dependencies: [17]
 
 // Module 8331
-arg5.default = { SRT: "application/x-subrip", TTML: "application/ttml+xml", VTT: "text/vtt" };
+import _mod17 from "module_17" /* 17 */;
+
+
+export default _mod17.requireNativeComponent("RNCWebViewContainer");

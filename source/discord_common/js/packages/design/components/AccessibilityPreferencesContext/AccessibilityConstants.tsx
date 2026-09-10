@@ -1,11 +1,11 @@
-// Module ID: 4280
-// Function ID: 4281
-// Name: LOW_SATURATION_THRESHOLD
+// Module ID: 4295
+// Function ID: 4296
+// Name: AccessibilityPreferencesContext/AccessibilityConstants
 // Dependencies: [2]
 
-// Module 4280 (LOW_SATURATION_THRESHOLD)
-import set from "set" /* 2 */;
+// Module 4295 (AccessibilityPreferencesContext/AccessibilityConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityConstants.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityConstants.tsx");
 
 export const LOW_SATURATION_THRESHOLD = 0.4;

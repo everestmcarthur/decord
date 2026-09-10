@@ -1,77 +1,76 @@
-// Module ID: 17456
-// Function ID: 17457
+// Module ID: 17487
+// Function ID: 17488
 // Name: RedesignDiscoverabilityLanding
-// Dependencies: [19, 17, 21, 4560, 576, 1611, 5682, 4556, 1114, 5587, 12754, 12684, 4975, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 1611, 5696, 4570, 1114, 5601, 12780, 12710, 4989, 2]
 // Exports: default
 
-// Module 17456 (RedesignDiscoverabilityLanding)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 17487 (RedesignDiscoverabilityLanding)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import Text from "Text" /* 4556 */;
-import Button from "Button" /* 4975 */;
-import preloadDefault from "preload" /* 5587 */;
-import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT" /* 5682 */;
-import registerAssetDefault from "registerAsset" /* 12754 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import NavigatorConstants from "NavigatorConstants" /* 5696 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12710 */;
+import _modDef12780 from "module_12780" /* 12780 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ View: c3, ScrollView: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: null, topContainer: null, growContainer: null, image: null, title: null, subtitle: null, info: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingTop: ThemesDefault.space.PX_16 };
-createCacheKey[2] = { flexGrow: 2 };
-let obj1 = { paddingTop: ThemesDefault.space.PX_16 };
-createCacheKey[3] = { width: "100%", marginBottom: ThemesDefault.space.PX_32 };
-let obj2 = { width: "100%", marginBottom: ThemesDefault.space.PX_32 };
-createCacheKey[4] = { textAlign: "center", marginBottom: ThemesDefault.space.PX_16 };
-let obj3 = { textAlign: "center", marginBottom: ThemesDefault.space.PX_16 };
-createCacheKey[5] = { textAlign: "center", marginBottom: ThemesDefault.space.PX_32 };
-createCacheKey[6] = { paddingHorizontal: 16, marginTop: 8, marginBottom: 24, textAlign: "center" };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { textAlign: "center", marginBottom: ThemesDefault.space.PX_32 };
-const result = require("set").fileFinishedImporting("modules/nuf/native/components/RedesignDiscoverabilityLanding.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, topContainer: null, growContainer: null, image: null, title: null, subtitle: null, info: null };
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj2.topContainer = { paddingTop: nativeDefault.space.PX_16 };
+obj2.growContainer = { flexGrow: 2 };
+let obj4 = { paddingTop: nativeDefault.space.PX_16 };
+obj2.image = { width: "100%", marginBottom: nativeDefault.space.PX_32 };
+let obj5 = { width: "100%", marginBottom: nativeDefault.space.PX_32 };
+obj2.title = { textAlign: "center", marginBottom: nativeDefault.space.PX_16 };
+let obj6 = { textAlign: "center", marginBottom: nativeDefault.space.PX_16 };
+obj2.subtitle = { textAlign: "center", marginBottom: nativeDefault.space.PX_32 };
+obj2.info = { paddingHorizontal: 16, marginTop: 8, marginBottom: 24, textAlign: "center" };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/nuf/native/components/RedesignDiscoverabilityLanding.tsx");
 
 export default function RedesignDiscoverabilityLanding(onNext) {
-  const tmp = callback3();
-  let obj = { style: tmp.container, alwaysBounceVertical: false, contentContainerStyle: null, children: null };
-  obj = { flexGrow: 2, paddingTop: NAV_BAR_HEIGHT.NAV_BAR_HEIGHT + 32, paddingBottom: useSafeAreaInsetsDefault().bottom + 16, paddingHorizontal: ThemesDefault.space.PX_16 };
-  obj[2] = obj;
-  obj = { style: tmp.topContainer };
-  const items = [callback(closure_3, obj), , , , , , ];
-  obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale.intl;
-  obj1[4] = intl.string(getSystemLocale.t.n8nw6j);
-  items[1] = callback(Text.Text, obj1);
-  const obj2 = { variant: "text-sm/medium", color: "text-default", style: tmp.subtitle, children: null };
-  const intl2 = getSystemLocale.intl;
-  obj2[3] = intl2.string(getSystemLocale.t.KMW0kP);
-  items[2] = callback(Text.Text, obj2);
-  const obj3 = { resizeMode: "contain", style: tmp.image, source: registerAssetDefault };
-  items[3] = callback(preloadDefault, obj3);
-  const obj4 = { style: tmp.info, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl3 = getSystemLocale.intl;
-  const items1 = [intl3.string(getSystemLocale.t.ci12MJ), " ", ];
-  const intl4 = getSystemLocale.intl;
-  items1[2] = intl4.format(getSystemLocale.t.VcSQ4n, {
-    learnMoreHook(children) {
-      return callback2(callback(4556).Text, { onPress: callback(12684).handleOpenLearnMoreLink, variant: "text-sm/medium", color: "text-link", children }, arg1);
+  const tmp = closure_7();
+  const obj = { style: tmp.container, alwaysBounceVertical: false, contentContainerStyle: { flexGrow: 2, paddingTop: NavigatorConstants.NAV_BAR_HEIGHT + 32, paddingBottom: useSafeAreaInsetsDefault().bottom + 16, paddingHorizontal: nativeDefault.space.PX_16 }, children: null };
+  const items = [hasOwnProperty(React3, { style: tmp.topContainer }), , , , , , ];
+  const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const intl = util.intl;
+  obj4.children = intl.string(util.t.n8nw6j);
+  items[1] = hasOwnProperty(Text_Text.Text, obj4);
+  const obj5 = { variant: "text-sm/medium", color: "text-default", style: tmp.subtitle, children: null };
+  const intl2 = util.intl;
+  obj5.children = intl2.string(util.t.KMW0kP);
+  items[2] = hasOwnProperty(Text_Text.Text, obj5);
+  const obj6 = { resizeMode: "contain", style: tmp.image, source: null };
+  const obj2 = { flexGrow: 2, paddingTop: NavigatorConstants.NAV_BAR_HEIGHT + 32, paddingBottom: useSafeAreaInsetsDefault().bottom + 16, paddingHorizontal: nativeDefault.space.PX_16 };
+  const obj3 = { style: tmp.topContainer };
+  obj6.source = _modDef12780;
+  items[3] = hasOwnProperty(FastImageDefault, obj6);
+  const obj7 = { style: tmp.info, variant: "text-sm/medium", color: "text-default", children: null };
+  const intl3 = util.intl;
+  const items1 = [intl3.string(util.t.ci12MJ), " ", ];
+  const intl4 = util.intl;
+  items1[2] = intl4.format(util.t.VcSQ4n, {
+    learnMoreHook(children, arg1) {
+      return closure_1_5(Text_Text.Text, { onPress: ContactSyncUtils.handleOpenLearnMoreLink, variant: "text-sm/medium", color: "text-link", children }, arg1);
     }
   });
-  obj4[3] = items1;
-  items[4] = callback2(Text.Text, obj4);
-  items[5] = callback(closure_3, { style: tmp.growContainer });
-  const obj7 = { variant: "primary", size: "lg", text: null, onPress: null };
-  const intl5 = getSystemLocale.intl;
-  obj7[2] = intl5.string(getSystemLocale.t.gHPk3I);
-  obj7[3] = onNext.onNext;
-  items[6] = callback(Button.Button, obj7);
-  obj[3] = items;
-  return callback2(closure_4, obj);
+  obj7.children = items1;
+  items[4] = timestampProducer(Text_Text.Text, obj7);
+  items[5] = hasOwnProperty(React3, { style: tmp.growContainer });
+  const obj10 = { variant: "primary", size: "lg", text: null, onPress: null };
+  const intl5 = util.intl;
+  obj10.text = intl5.string(util.t.gHPk3I);
+  obj10.onPress = onNext.onNext;
+  items[6] = hasOwnProperty(components_Button_Button.Button, obj10);
+  obj.children = items;
+  return timestampProducer(React4, obj);
 };

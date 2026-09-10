@@ -1,59 +1,56 @@
-// Module ID: 12216
-// Function ID: 12217
-// Name: keyExtractor
-// Dependencies: [32, 19, 17, 12217, 1074, 1373, 7846, 21, 7182, 4560, 576, 1611, 1114, 4296, 4974, 5631, 7863, 1115, 5624, 4763, 7844, 504, 12218, 7845, 5577, 12223, 8879, 7162, 9318, 1093, 9972, 4218, 12225, 2]
+// Module ID: 12242
+// Function ID: 12243
+// Name: ScheduledMessagesModal
+// Dependencies: [32, 19, 17, 12243, 1074, 1373, 7860, 21, 7196, 4574, 576, 1611, 1114, 4310, 4988, 5645, 7877, 1115, 5638, 4777, 7858, 504, 12244, 7859, 5591, 12249, 8906, 7176, 9345, 1093, 9999, 4231, 12251, 2]
 // Exports: default
 
-// Module 12216 (keyExtractor)
-import ThemesDefault from "Themes" /* 576 */;
-import keys from "keys" /* 1093 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import set from "set" /* 1115 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4218 */;
-import _mod4296 from "module_4296" /* 4296 */;
-import HeaderBackImage from "HeaderBackImage" /* 5624 */;
-import Background from "Background" /* 5631 */;
-import contextDefault from "context" /* 7162 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7182 */;
-import usePremiumUpsellConfig from "usePremiumUpsellConfig" /* 9318 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9972 */;
-import NitroLimitUpsellBarDefault from "NitroLimitUpsellBar" /* 12225 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleScheduledMessageRemovalStart" /* 12217 */;
-import { AnalyticsPages } from "ME" /* 1074 */;
-import { PremiumTypes } from "GuildFeatures" /* 1373 */;
-import { MAX_SCHEDULED_MESSAGES_PER_USER as closure_9 } from "MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS" /* 7846 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12242 (ScheduledMessagesModal)
+import nativeDefault from "native" /* 576 */;
+import ConstantsIOS from "ConstantsIOS" /* 1093 */;
+import util from "util" /* 1114 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import PremiumUtils from "PremiumUtils" /* 4231 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import spring from "spring" /* 4988 */;
+import _mod5645 from "module_5645" /* 5645 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7176 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
+import ScheduledMessageActionCreators from "ScheduledMessageActionCreators" /* 7858 */;
+import HeaderShared from "HeaderShared" /* 7877 */;
+import PremiumUpsellUtils from "PremiumUpsellUtils" /* 9345 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9999 */;
+import ScheduledMessageCardDefault from "ScheduledMessageCard" /* 12244 */;
+import NitroLimitUpsellBarDefault from "NitroLimitUpsellBar" /* 12251 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import ScheduledMessageStore from "ScheduledMessageStore" /* 12243 */;
 
-require = arg1;
+const NavigatorHeader = tmp4(5638);
+require = fn;
 function keyExtractor(scheduledMessageId) {
   return scheduledMessageId.scheduledMessageId;
 }
 function ScheduledMessagesPage(handleScroll) {
-  let _require;
-  let stateFromStores;
+  _require = undefined;
   let stateFromStores2;
-  const tmp = callback3();
-  [tmp3, c0] = callback(React.useState(false), 2);
-  const effect = React.useEffect(() => {
-    const scheduledMessages = _undefined(stateFromStores2[20]).fetchScheduledMessages();
-    scheduledMessages.then(() => callback(true));
+  const tmp = closure_14();
+  [tmp3, c0] = noop.useState(false);
+  const effect = noop.useEffect(() => {
+    const scheduledMessages = ScheduledMessageActionCreators.fetchScheduledMessages();
+    scheduledMessages.then(() => closure_1_0(true));
   }, []);
   let obj = stateFromStores2;
-  obj1 = _require(stateFromStores2[21]);
-  items = [closure_6];
-  stateFromStores = obj1.useStateFromStores(items, () => store.getScheduledMessagesForInbox());
-  let obj2 = _require(stateFromStores2[21]);
-  const items1 = [closure_6];
-  const stateFromStores1 = obj2.useStateFromStores(items1, () => store.loading);
-  let obj3 = _require(stateFromStores2[21]);
-  const items2 = [closure_6];
-  stateFromStores2 = obj3.useStateFromStores(items2, () => store.getMessagesPendingRemoval());
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
+  items = [ScheduledMessageStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => ScheduledMessageStore.getScheduledMessagesForInbox());
+  const obj2 = require("initialize");
+  const items1 = [ScheduledMessageStore];
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => ScheduledMessageStore.loading);
+  const obj3 = require("initialize");
+  const items2 = [ScheduledMessageStore];
+  stateFromStores2 = require("initialize").useStateFromStores(items2, () => ScheduledMessageStore.getMessagesPendingRemoval());
   const items3 = [stateFromStores];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     const values = Object.values(stateFromStores);
     return values.sort((sendAtTimestamp, sendAtTimestamp2) => {
       const date = new Date(sendAtTimestamp.sendAtTimestamp);
@@ -62,13 +59,13 @@ function ScheduledMessagesPage(handleScroll) {
     });
   }, items3);
   const items4 = [stateFromStores2];
-  callback = React.useCallback((item) => {
+  const callback = noop.useCallback((item) => {
     item = item.item;
     const obj = { scheduledMessage: item, isPendingRemoval: stateFromStores2.has(item.scheduledMessageId) };
-    return closure_1_10(stateFromStores(stateFromStores2[22]), obj);
+    return closure_2_10(ScheduledMessageCardDefault, obj);
   }, items4);
-  const tmp2 = callback(React.useState(false), 2);
-  const scheduledMessagesLimit = _require(stateFromStores2[23]).useScheduledMessagesLimit("ScheduledMessagesMobileModal");
+  const obj4 = require("initialize");
+  const scheduledMessagesLimit = require("ScheduledMessageUtils").useScheduledMessagesLimit("ScheduledMessagesMobileModal");
   const limit = scheduledMessagesLimit.limit;
   let tmp11 = limit > 0;
   if (tmp11) {
@@ -76,119 +73,107 @@ function ScheduledMessagesPage(handleScroll) {
   }
   if (!tmp3) {
     if (0 === memo.length) {
-      obj = { style: null, children: null };
-      obj[0] = tmp.loading;
-      obj[1] = callback2(tmp5(obj[24]).ActivityIndicator, { size: "large" });
-      return callback2(View, obj);
+      const obj6 = { style: tmp.loading, children: closure_10(tmp5(obj[24]).ActivityIndicator, { size: "large" }) };
+      return closure_10(View, obj6);
     }
   }
   if (0 === memo.length) {
     obj = {};
-    callback2(stateFromStores(obj[25]), obj);
+    closure_10(stateFromStores(obj[25]), obj);
     const tmp19 = stateFromStores(obj[25]);
   } else {
-    obj = { style: null, children: null };
-    obj[0] = tmp.listContainer;
-    obj1 = { data: null, renderItem: null, contentContainerStyle: null, keyExtractor: null, onScroll: null };
-    obj1[0] = memo;
-    obj1[1] = callback;
-    obj1[2] = tmp.cardContainer;
-    obj1[3] = keyExtractor;
-    obj1[4] = handleScroll.handleScroll;
-    obj[1] = callback2(tmp5(obj[26]).FlashList, obj1);
-    const items5 = [callback2(View, obj), ];
+    const obj7 = { style: tmp.listContainer, children: null };
+    const obj8 = { data: memo, renderItem: callback, contentContainerStyle: tmp.cardContainer, keyExtractor, onScroll: handleScroll.handleScroll };
+    obj7.children = closure_10(tmp5(obj[26]).FlashList, obj8);
+    const items5 = [closure_10(View, obj7), ];
     let tmp22Result = null;
     if (scheduledMessagesLimit.isUpgradable) {
-      obj2 = { isAtLimit: null };
-      obj2[0] = tmp11;
-      tmp22Result = tmp22(ScheduledMessageNitroUpsellBar, obj2);
+      const obj9 = { isAtLimit: tmp11 };
+      tmp22Result = tmp22(ScheduledMessageNitroUpsellBar, obj9);
     }
-    obj3 = { children: null };
+    const obj10 = { children: null };
     items5[1] = tmp22Result;
-    obj3[0] = items5;
-    closure_11(closure_12, obj3);
-    const tmp20 = closure_11;
-    const tmp21 = closure_12;
-    tmp22 = callback2;
+    obj10.children = items5;
+    closure_11(closure_12, obj10);
+    tmp22 = closure_10;
   }
 }
 function ScheduledMessageNitroUpsellBar(isAtLimit) {
   isAtLimit = isAtLimit.isAtLimit;
-  let obj = usePremiumUpsellConfig;
-  const premiumUpsellConfig = obj.usePremiumUpsellConfig(keys.UpsellTypes.SCHEDULED_MESSAGES, contextDefault(items).analyticsLocations);
+  const premiumUpsellConfig = PremiumUpsellUtils.usePremiumUpsellConfig(ConstantsIOS.UpsellTypes.SCHEDULED_MESSAGES, useAnalyticsLocationsDefault(items).analyticsLocations);
   ({ useTier0UpsellContent, onViewAllPerks } = premiumUpsellConfig);
   ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(useTier0UpsellContent, onViewAllPerks, AnalyticsPages.PREMIUM_UPSELL_SCHEDULED_MESSAGES, undefined, items));
-  obj1 = getPremiumPlanItem;
-  const premiumTypeDisplayName = obj1.getPremiumTypeDisplayName(PremiumTypes.TIER_2);
   const tmp2 = usePremiumFeatureUpsellGetNitroDefault(useTier0UpsellContent, onViewAllPerks, AnalyticsPages.PREMIUM_UPSELL_SCHEDULED_MESSAGES, undefined, items);
-  const tmp4 = closure_10;
-  const intl = getSystemLocale.intl;
+  const premiumTypeDisplayName = PremiumUtils.getPremiumTypeDisplayName(PremiumTypes.TIER_2);
+  const tmp4 = closure_1_10;
+  const intl = util.intl;
   const formatToPlainString = intl.formatToPlainString;
-  const t = getSystemLocale.t;
+  const t = util.t;
   if (isAtLimit) {
-    obj = { nitroTierName: null, premiumMax: null };
-    obj[0] = premiumTypeDisplayName;
-    obj[1] = closure_9;
-    let formatToPlainStringResult = formatToPlainString(t["7GgYhg"], obj);
+    const obj3 = { nitroTierName: premiumTypeDisplayName, premiumMax };
+    let formatToPlainStringResult = formatToPlainString(t["7GgYhg"], obj3);
   } else {
-    obj = { nitroTierName: null };
-    obj[0] = premiumTypeDisplayName;
-    formatToPlainStringResult = formatToPlainString(t.WfTDdG, obj);
+    const obj4 = { nitroTierName: premiumTypeDisplayName };
+    formatToPlainStringResult = formatToPlainString(t.WfTDdG, obj4);
   }
-  obj1 = { text: formatToPlainStringResult, isAtLimit, onPress: null, loading: null };
+  const obj5 = { text: formatToPlainStringResult, isAtLimit, onPress: null, loading: null };
   let tmp8 = null;
   if (!loading) {
     tmp8 = onPress;
   }
-  obj1[2] = tmp8;
-  obj1[3] = loading;
-  return tmp4(NitroLimitUpsellBarDefault, obj1);
+  obj5.onPress = tmp8;
+  obj5.loading = loading;
+  return tmp4(NitroLimitUpsellBarDefault, obj5);
 }
-({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
-let items = [QUICK_SWITCHERDefault.SCHEDULED_MESSAGES_LIST];
-createCacheKey = { modal: null, headerLeftContainer: null, headerRightContainer: null, headerBorder: null, cardContainer: null, listContainer: null, loading: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, borderBottomWidth: 0, shadowColor: "transparent", height: "100%" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingLeft: ThemesDefault.space.PX_16 };
-let obj1 = { paddingLeft: ThemesDefault.space.PX_16 };
-createCacheKey[2] = { paddingRight: ThemesDefault.space.PX_16 };
-let obj2 = { paddingRight: ThemesDefault.space.PX_16 };
-createCacheKey[3] = { height: 1, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[4] = { paddingHorizontal: 16, paddingVertical: 8 };
-createCacheKey[5] = { flex: 1 };
-createCacheKey[6] = { flex: 1, alignItems: "center", justifyContent: "center" };
-let closure_14 = createCacheKey.createStyles(createCacheKey);
-let closure_15 = { code: "function ScheduledMessagesModalTsx1(){const{borderOpacity}=this.__closure;return{opacity:borderOpacity.get()};}" };
-let obj3 = { height: 1, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-let result = require("set").fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessagesModal.tsx");
+const View = fn(17).View;
+const AnalyticsPages = fn(1074).AnalyticsPages;
+const PremiumTypes = fn(1373).PremiumTypes;
+const premiumMax = fn(7860).MAX_SCHEDULED_MESSAGES_PER_USER;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
+let items = [AnalyticsLocationDefault.SCHEDULED_MESSAGES_LIST];
+const createStyles = fn(4574);
+let obj2 = { modal: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderBottomWidth: 0, shadowColor: "transparent", height: "100%" }, headerLeftContainer: null, headerRightContainer: null, headerBorder: null, cardContainer: null, listContainer: null, loading: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderBottomWidth: 0, shadowColor: "transparent", height: "100%" };
+obj2.headerLeftContainer = { paddingLeft: nativeDefault.space.PX_16 };
+let obj4 = { paddingLeft: nativeDefault.space.PX_16 };
+obj2.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
+let size = { height: 1, width: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.headerBorder = size;
+obj2.cardContainer = { paddingHorizontal: 16, paddingVertical: 8 };
+obj2.listContainer = { flex: 1 };
+obj2.loading = { flex: 1, alignItems: "center", justifyContent: "center" };
+let closure_14 = createStyles.createStyles(obj2);
+const __initData = { code: "function ScheduledMessagesModalTsx1(){const{borderOpacity}=this.__closure;return{opacity:borderOpacity.get()};}" };
+size = fn(2);
+let result = size.fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessagesModal.tsx");
 
 export default function ScheduledMessagesModal() {
-  const tmp = callback3();
-  const intl = getSystemLocale.intl;
-  const stringResult = intl.string(getSystemLocale.t.SZVs3K);
-  require = stringResult;
-  let obj = _mod4296;
-  const sharedValue = obj.useSharedValue(0);
+  const tmp = closure_14();
+  const intl = util.intl;
+  const stringResult = intl.string(util.t.SZVs3K);
+  const require = stringResult;
+  const sharedValue = ReanimatedRexport.useSharedValue(0);
   items = [sharedValue];
-  const callback = React.useCallback((nativeEvent) => {
+  const callback = noop.useCallback((nativeEvent) => {
     let num = 0;
     if (nativeEvent.nativeEvent.contentOffset.y > 8) {
       num = 1;
     }
-    const result = sharedValue.set(stringResult(closure_1_2[14]).withSpring(num));
+    const result = sharedValue.set(spring.withSpring(num));
   }, items);
   const fn = function t() {
     return { opacity: sharedValue.get() };
   };
   fn.__closure = { borderOpacity: sharedValue };
   fn.__workletHash = 2142182513871;
-  fn.__initData = closure_15;
-  obj = { style: tmp.modal, children: null };
-  const animatedStyle = _mod4296.useAnimatedStyle(fn);
-  obj = {
+  fn.__initData = __initData;
+  const obj3 = { style: tmp.modal, children: null };
+  const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
+  const obj6 = {
     title: stringResult,
     headerTitle() {
-      return closure_1_10(stringResult(closure_1_2[16]).GenericHeaderTitle, { title: closure_0 });
+      return closure_2_10(HeaderShared.GenericHeaderTitle, { title: stringResult });
     },
     headerTitleAlign: "center",
     headerStatusBarHeight: null,
@@ -196,22 +181,22 @@ export default function ScheduledMessagesModal() {
     headerLeftContainerStyle: null,
     headerRightContainerStyle: null
   };
-  const obj2 = _mod4296;
   const tmp10 = View;
-  const tmp4 = require;
   const tmp9 = closure_11;
   let num = 0;
   if (!obj5.isIOS()) {
     num = sharedValue(1611)().top;
   }
-  obj[3] = num + sharedValue(576).space.PX_8;
-  obj5 = set;
-  obj[4] = HeaderBackImage.getHeaderCloseButton(sharedValue(4763).pop);
-  ({ headerLeftContainer: obj4[5], headerRightContainer: obj4[6] } = tmp);
-  const items1 = [closure_10(Background.Header, obj), , ];
+  obj6.headerStatusBarHeight = num + sharedValue(576).space.PX_8;
+  obj5 = PlatformUtils;
+  obj6.headerLeft = NavigatorHeader.getHeaderCloseButton(sharedValue(4777).pop);
+  ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp);
+  const items1 = [closure_10(_mod5645.Header, obj6), , ];
+  const obj7 = { style: null };
   const items2 = [tmp.headerBorder, animatedStyle];
-  items1[1] = closure_10(sharedValue(4296).View, { style: items2 });
+  obj7.style = items2;
+  items1[1] = closure_10(sharedValue(4310).View, obj7);
   items1[2] = closure_10(ScheduledMessagesPage, { handleScroll: callback });
-  obj[1] = items1;
-  return tmp9(tmp10, obj);
+  obj3.children = items1;
+  return tmp9(tmp10, obj3);
 };

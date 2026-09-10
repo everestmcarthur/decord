@@ -1,39 +1,32 @@
-// Module ID: 17397
-// Function ID: 17398
+// Module ID: 17428
+// Function ID: 17429
 // Name: LabelLayoutComponent
-// Dependencies: [19, 17, 21, 8112, 1894, 6607, 2]
+// Dependencies: [19, 17, 21, 8138, 1894, 6621, 2]
 // Exports: default
 
-// Module 17397 (LabelLayoutComponent)
-import noopAll from "noop" /* 19 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1894 */;
-import Input from "Input" /* 6607 */;
-import isInteractionComponent from "isInteractionComponent" /* 8112 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 17428 (LabelLayoutComponent)
+import Server from "Server" /* 1894 */;
+import Input from "Input" /* 6621 */;
+import ComponentStateContext from "ComponentStateContext" /* 8138 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/interaction_components/native/layouts/LabelLayoutComponent.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/interaction_components/native/layouts/LabelLayoutComponent.tsx");
 
 export default function LabelLayoutComponent(arg0) {
   ({ component, renderComponent } = arg0);
   ({ label, description } = arg0);
-  let obj = isInteractionComponent;
-  const componentError = obj.useComponentError(component);
-  if (component.type === PermissionOverwriteType.ComponentType.CHECKBOX) {
+  const componentError = ComponentStateContext.useComponentError(component);
+  if (component.type === Server.ComponentType.CHECKBOX) {
     let renderComponentResult = renderComponent(component, "label-child");
   } else {
-    obj = { label: null, description: null, required: null, errorMessage: null, children: null };
-    obj[0] = label;
-    obj[1] = description;
-    obj[2] = component.required;
-    obj[3] = componentError;
-    obj = { style: null, children: null };
-    obj[0] = { width: "100%" };
-    obj[1] = renderComponent(component, "label-child");
-    obj[4] = <View style={null}>{null}</View>;
-    renderComponentResult = jsx(Input.Input, { style: null, children: null });
+    const obj2 = { label, description, required: component.required, errorMessage: componentError, children: null };
+    const obj3 = { style: { width: "100%" }, children: renderComponent(component, "label-child") };
+    obj2.children = <View style={{ width: "100%" }}>{renderComponent(component, "label-child")}</View>;
+    renderComponentResult = jsx(Input.Input, { label, description, required: component.required, errorMessage: componentError, children: null });
   }
   return renderComponentResult;
 };

@@ -1,18 +1,18 @@
-// Module ID: 4482
-// Function ID: 4483
-// Name: validateAllExperiments
-// Dependencies: [4476, 2]
+// Module ID: 4496
+// Function ID: 4497
+// Name: validateTriggerPoint
+// Dependencies: [4490, 2]
 // Exports: validateAllExperiments, validateOneExperiment
 
-// Module 4482 (validateAllExperiments)
-import getHashDefault from "getHash" /* 4476 */;
+// Module 4496 (validateTriggerPoint)
+import ExperimentStore from "ExperimentStore" /* 4490 */;
 
-getHashDefault;
-const result = require("set").fileFinishedImporting("modules/experiments/trigger_points/validateTriggerPoint.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/experiments/trigger_points/validateTriggerPoint.tsx");
 
 export function validateAllExperiments() {
 
 }
-export function validateOneExperiment(id, label, commonTriggerPoint) {
+export function validateOneExperiment() {
 
 }

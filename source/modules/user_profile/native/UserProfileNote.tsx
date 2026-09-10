@@ -1,25 +1,27 @@
-// Module ID: 13055
-// Function ID: 13056
+// Module ID: 13081
+// Function ID: 13082
 // Name: UserProfileNote
-// Dependencies: [19, 21, 4560, 8190, 13056, 7910, 13058, 5123, 1114, 4527, 13060, 7207, 4556, 2]
+// Dependencies: [19, 21, 4574, 8216, 13082, 7924, 13084, 5137, 1114, 4541, 13086, 7221, 4570, 2]
 // Exports: default
 
-// Module 13055 (UserProfileNote)
-import noopAll from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13081 (UserProfileNote)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import openEditNoteModalDefault from "openEditNoteModal" /* 13086 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-let closure_4 = createCacheKey.createStyles({ title: { justifyContent: "space-between" } });
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileNote.tsx");
+const require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_4 = createStyles.createStyles({ title: { justifyContent: "space-between" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileNote.tsx");
 
 export default function UserProfileNote(style) {
   const userId = style.userId;
   const onBack = style.onBack;
   let trackUserProfileAction;
-  let obj = userId(trackUserProfileAction[3]);
-  trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
+  const tmp = closure_4();
+  trackUserProfileAction = userId(trackUserProfileAction[3]).useUserProfileAnalyticsContext().trackUserProfileAction;
   const note = onBack(trackUserProfileAction[4])(userId).note;
   let tmp6Result = null != note;
   if (tmp6Result) {
@@ -38,45 +40,56 @@ export default function UserProfileNote(style) {
   } else {
     stringResult = string(t["1ZZtts"]);
   }
-  obj = {
+  const obj2 = {
     accessibilityRole: "button",
     accessibilityHint: stringResult,
     accessibilityLabel: note,
     onPress() {
-      let obj = onBack(trackUserProfileAction[9]);
-      obj.hideActionSheet();
-      obj = {
+      ActionSheetActionCreatorsDefault.hideActionSheet();
+      openEditNoteModalDefault({
         userId,
         onBack,
         onSave() {
-          return callback({ action: "SET_NOTE" });
+          return trackUserProfileAction({ action: "SET_NOTE" });
         }
-      };
-      onBack(trackUserProfileAction[10])(obj);
+      });
     },
     activeOpacity: 0.8,
     children: null
   };
-  obj = { style: style.style, title: null, titleStyle: null, titleIcon: null, children: null };
-  const tmp = callback();
-  const tmp4 = onBack;
-  const tmp8 = note;
+  const obj3 = { style: style.style, title: null, titleStyle: null, titleIcon: null, children: null };
+  const obj = userId(trackUserProfileAction[3]);
   const intl2 = tmp2(tmp3[8]).intl;
-  obj[1] = intl2.string(userId(trackUserProfileAction[8]).t["mQKv+v"]);
+  obj3.title = intl2.string(userId(trackUserProfileAction[8]).t["mQKv+v"]);
   const items = [tmp.title, ];
-  obj1 = !tmp6Result;
+  let obj4 = !tmp6Result;
   if (!tmp6Result) {
-    obj1 = { marginBottom: 0 };
+    obj4 = { marginBottom: 0 };
   }
-  items[1] = obj1;
-  obj[2] = items;
-  obj[3] = <PaperPlusIcon size="xs" color="interactive-text-default" />;
+  items[1] = obj4;
+  obj3.titleStyle = items;
+  obj3.titleIcon = <PaperPlusIcon size="xs" color="interactive-text-default" />;
   if (tmp6Result) {
-    const obj2 = { variant: "text-md/normal", color: "text-default", children: null };
-    obj2[2] = note;
-    tmp6Result = tmp6(tmp2(tmp3[12]).Text, obj2);
+    const obj5 = { variant: "text-md/normal", color: "text-default", children: note };
+    tmp6Result = tmp6(tmp2(tmp3[12]).Text, obj5);
   }
-  obj[4] = tmp6Result;
-  obj[5] = jsx(onBack(trackUserProfileAction[11]), { style: style.style, title: null, titleStyle: null, titleIcon: null, children: null });
-  return jsx(userId(trackUserProfileAction[7]).PressableOpacity, { style: style.style, title: null, titleStyle: null, titleIcon: null, children: null });
+  obj3.children = tmp6Result;
+  obj2.children = jsx(onBack(trackUserProfileAction[11]), { style: style.style, title: null, titleStyle: null, titleIcon: null, children: null });
+  return jsx(userId(trackUserProfileAction[7]).PressableOpacity, {
+    accessibilityRole: "button",
+    accessibilityHint: stringResult,
+    accessibilityLabel: note,
+    onPress() {
+      ActionSheetActionCreatorsDefault.hideActionSheet();
+      openEditNoteModalDefault({
+        userId,
+        onBack,
+        onSave() {
+          return trackUserProfileAction({ action: "SET_NOTE" });
+        }
+      });
+    },
+    activeOpacity: 0.8,
+    children: null
+  });
 };

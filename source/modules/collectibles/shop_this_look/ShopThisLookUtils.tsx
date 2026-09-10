@@ -1,28 +1,27 @@
-// Module ID: 13116
-// Function ID: 13117
-// Name: isShoppableCollectibleSku
-// Dependencies: [1232, 13117, 2]
+// Module ID: 13142
+// Function ID: 13143
+// Name: ShopThisLookUtils
+// Dependencies: [1232, 13143, 2]
 // Exports: isShoppableCollectibleSku
 
-// Module 13116 (isShoppableCollectibleSku)
-import set from "set" /* 2 */;
-import _modDef1232 from "module_1232" /* 1232 */;
-import CollectiblesSKUSourceType from "CollectiblesSKUSourceType" /* 13117 */;
+// Module 13142 (ShopThisLookUtils)
+import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import CollectiblesSKUSourceType from "CollectiblesSKUSourceType" /* 13143 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/collectibles/shop_this_look/ShopThisLookUtils.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/shop_this_look/ShopThisLookUtils.tsx");
 
 export const isShoppableCollectibleSku = function isShoppableCollectibleSku(stateFromStores) {
   type = stateFromStores;
   if (null == stateFromStores) {
     return tmp;
   } else if (typeof type.isAvailable !== "function") {
-    let obj = _modDef1232;
-    obj = { extra: null };
-    obj = { skuId: null, skuType: null };
-    ({ id: obj3[0], type } = type);
-    obj[1] = type;
-    obj[0] = obj;
-    obj.captureMessage("isShoppableCollectibleSku: sku missing isAvailable()", obj);
+    const obj2 = { extra: null };
+    const obj5 = { skuId: null, skuType: null };
+    ({ id: obj3.skuId, type } = type);
+    obj5.skuType = type;
+    obj2.extra = obj5;
+    SentryUtilsDefault.captureMessage("isShoppableCollectibleSku: sku missing isAvailable()", obj2);
     let flag = false;
   } else {
     flag = type.isAvailable();

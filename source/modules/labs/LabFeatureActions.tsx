@@ -1,15 +1,16 @@
-// Module ID: 15536
-// Function ID: 15537
-// Name: toggleLabFeature
-// Dependencies: [8353, 573, 2]
+// Module ID: 15566
+// Function ID: 15567
+// Name: LabFeatureActions
+// Dependencies: [8381, 573, 2]
 // Exports: toggleLabFeature
 
-// Module 15536 (toggleLabFeature)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_2 from "getUserAgnosticState" /* 8353 */;
+// Module 15566 (LabFeatureActions)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import LabFeatureStore from "LabFeatureStore" /* 8381 */;
 
 let closure_3 = {};
-const result = require("set").fileFinishedImporting("modules/labs/LabFeatureActions.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/labs/LabFeatureActions.tsx");
 
 export const toggleLabFeature = function toggleLabFeature(ICYMI_LAB_FEATURE, arg1) {
   let tmp = arg1;
@@ -18,9 +19,7 @@ export const toggleLabFeature = function toggleLabFeature(ICYMI_LAB_FEATURE, arg
   }
   let enabled = tmp.enabled;
   if (enabled === undefined) {
-    enabled = !closure_2.get(ICYMI_LAB_FEATURE);
+    enabled = !LabFeatureStore.get(ICYMI_LAB_FEATURE);
   }
-  let obj = dispatcherDefault;
-  obj = { type: "LAB_FEATURE_TOGGLE", labFeature: ICYMI_LAB_FEATURE, enabled };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "LAB_FEATURE_TOGGLE", labFeature: ICYMI_LAB_FEATURE, enabled });
 };

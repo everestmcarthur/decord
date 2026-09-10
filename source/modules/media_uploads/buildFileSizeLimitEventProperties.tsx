@@ -1,41 +1,40 @@
-// Module ID: 9316
-// Function ID: 9317
+// Module ID: 9343
+// Function ID: 9344
 // Name: buildFileSizeLimitEventProperties
 // Dependencies: [2]
 // Exports: buildFileSizeLimitEventProperties
 
-// Module 9316 (buildFileSizeLimitEventProperties)
-import set from "set" /* 2 */;
+// Module 9343 (buildFileSizeLimitEventProperties)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/media_uploads/buildFileSizeLimitEventProperties.tsx");
+const result = size.fileFinishedImporting("modules/media_uploads/buildFileSizeLimitEventProperties.tsx");
 
 export const buildFileSizeLimitEventProperties = function buildFileSizeLimitEventProperties(arg0) {
   ({ guildId, channelId } = arg0);
   ({ userIndividualFileSizeLimit, numAttachments, preCompressionFileSizes, preCompressionAggregateSize, postCompressionFileSizes, postCompressionAggregateSize, attachmentMimeTypes, errorType, kestrelVariant } = arg0);
   if (undefined !== channelId) {
-    let obj = { channel_id: null };
-    obj[0] = channelId;
+    const obj2 = { channel_id: channelId };
+    let obj = obj2;
   } else {
     obj = {};
   }
-  obj = {};
+  const obj3 = {};
   const merged = Object.assign(obj);
   if (undefined !== guildId) {
-    obj1 = { guild_id: null };
-    obj1[0] = guildId;
-    let obj2 = obj1;
+    const obj4 = { guild_id: guildId };
+    let obj5 = obj4;
   } else {
-    obj2 = {};
+    obj5 = {};
   }
-  const merged1 = Object.assign(obj2);
-  obj.user_individual_file_size_limit = userIndividualFileSizeLimit;
-  obj.num_attachments = numAttachments;
-  obj.pre_compression_file_sizes = preCompressionFileSizes;
-  obj.pre_compression_aggregate_file_size = preCompressionAggregateSize;
-  obj.post_compression_file_sizes = postCompressionFileSizes;
-  obj.post_compression_aggregate_file_size = postCompressionAggregateSize;
-  obj.attachment_mimetypes = attachmentMimeTypes;
-  obj.error_type = errorType;
-  obj.kestrel_variant = kestrelVariant;
-  return obj;
+  const merged1 = Object.assign(obj5);
+  obj3.user_individual_file_size_limit = userIndividualFileSizeLimit;
+  obj3.num_attachments = numAttachments;
+  obj3.pre_compression_file_sizes = preCompressionFileSizes;
+  obj3.pre_compression_aggregate_file_size = preCompressionAggregateSize;
+  obj3.post_compression_file_sizes = postCompressionFileSizes;
+  obj3.post_compression_aggregate_file_size = postCompressionAggregateSize;
+  obj3.attachment_mimetypes = attachmentMimeTypes;
+  obj3.error_type = errorType;
+  obj3.kestrel_variant = kestrelVariant;
+  return obj3;
 };

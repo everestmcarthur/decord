@@ -1,17 +1,17 @@
-// Module ID: 6463
-// Function ID: 6464
+// Module ID: 6477
+// Function ID: 6478
 // Name: SleepingWumpusSpotIllustration
-// Dependencies: [21, 5587, 6464, 2]
+// Dependencies: [21, 5601, 6478, 2]
 // Exports: SleepingWumpusSpotIllustration
 
-// Module 6463 (SleepingWumpusSpotIllustration)
-import set from "set" /* 2 */;
+// Module 6477 (SleepingWumpusSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 6464 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6478 from "module_6478" /* 6478 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/SleepingWumpusSpotIllustration.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/SleepingWumpusSpotIllustration.native.tsx");
 
 export const SleepingWumpusSpotIllustration = function SleepingWumpusSpotIllustration(width) {
   let num = width.width;
@@ -27,14 +27,14 @@ export const SleepingWumpusSpotIllustration = function SleepingWumpusSpotIllustr
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
-  obj = { width: num * num3, height: num2 * num3 };
-  const items = [obj];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { width: num * num3, height: num2 * num3 });
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef6478 };
+  obj.source = obj2;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

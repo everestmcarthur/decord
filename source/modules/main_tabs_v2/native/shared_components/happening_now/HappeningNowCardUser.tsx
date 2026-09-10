@@ -1,22 +1,27 @@
-// Module ID: 16093
-// Function ID: 16094
-// Dependencies: [19, 17, 4600, 1371, 15297, 1074, 21, 1178, 4560, 7162, 504, 1242, 8179, 1896, 4404, 9775, 15298, 8259, 2]
+// Module ID: 16123
+// Function ID: 16124
+// Name: HappeningNowCardUser
+// Dependencies: [19, 17, 4614, 1371, 15326, 1074, 21, 1178, 4574, 7176, 504, 1242, 8205, 1896, 4418, 9802, 15327, 8285, 2]
 
-// Module 16093
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "sortActivity" /* 4600 */;
-import closure_6 from "mergeGuildAvatar" /* 1371 */;
-import { HappeningNowCardTrackingType as closure_7 } from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 15297 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16123 (HappeningNowCardUser)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import noop from "module_19" /* 19 */;
+import PresenceStore from "PresenceStore" /* 4614 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-let c3 = importAllResult;
-const LARGE = require("Button").AvatarSizes.LARGE;
-let closure_11 = createCacheKey.createStyles({ content: { flex: 1, display: "flex", alignItems: "center" } });
-const memoResult = importAllResult.memo((index) => {
+require = fn;
+const View = fn(17).View;
+let closure_7 = fn(15326).HappeningNowCardTrackingType;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsx = fn(21).jsx;
+const LARGE = fn(1178).AvatarSizes.LARGE;
+const createStyles = fn(4574);
+let closure_11 = createStyles.createStyles({ content: { flex: 1, display: "flex", alignItems: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardUser.tsx");
+
+export default noop.memo((index) => {
   index = index.index;
   const userId = index.userId;
   const guildId = index.guildId;
@@ -24,37 +29,31 @@ const memoResult = importAllResult.memo((index) => {
   if (flag === undefined) {
     flag = false;
   }
-  let analyticsLocations;
-  let stateFromStores;
   let status;
-  analyticsLocations = userId(guildId[9])().analyticsLocations;
-  let obj = index(guildId[10]);
-  let items = [closure_6];
+  const analyticsLocations = userId(guildId[9])().analyticsLocations;
+  const tmp = closure_11();
+  let items = [UserStore];
   const items1 = [userId];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getUser(userId), items1);
+  const stateFromStores = index(guildId[10]).useStateFromStores(items, () => UserStore.getUser(userId), items1);
   const items2 = [index, guildId, userId, stateFromStores, analyticsLocations];
   const callback = analyticsLocations.useCallback(() => {
-    let obj = userId(guildId[11]);
-    obj = { order: index, guild_id: guildId, type: closure_1_7.INDIVIDUAL_USER_CARD, highlighted_user_ids: items };
-    items = [userId];
-    obj.track(closure_1_8.ACTIVITY_CARD_CLICKED, obj);
+    const obj2 = { order: index, guild_id: guildId, type: constants.INDIVIDUAL_USER_CARD, highlighted_user_ids: null };
+    const items = [userId];
+    obj2.highlighted_user_ids = items;
+    AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj2);
     if (null != stateFromStores) {
-      index(tmp[13])(tmp[12], tmp.paths).then((arg0) => arg0.default({ userId: id.id, localUser: id, sourceAnalyticsLocations: closure_3 }));
-      const promise = index(tmp[13])(tmp[12], tmp.paths);
+      asyncRequireImpl(8205, dependencyMap.paths).then((result) => result.default({ userId: localUser.id, localUser, sourceAnalyticsLocations }));
+      const promise = asyncRequireImpl(8205, dependencyMap.paths);
     }
   }, items2);
-  obj1 = index(guildId[10]);
+  let obj = index(guildId[10]);
   const items3 = [status];
   const items4 = [guildId, stateFromStores];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items3, () => {
+  const stateFromStoresObject = index(guildId[10]).useStateFromStoresObject(items3, () => {
     if (null == stateFromStores) {
       let obj = {};
     } else {
-      obj = { status: null, activities: null, isMobileOnline: null, isVROnline: null };
-      obj[0] = status.getStatus(tmp.id, guildId);
-      obj[1] = status.getActivities(tmp.id, guildId);
-      obj[2] = status.isMobileOnline(tmp.id);
-      obj[3] = status.isVROnline(tmp.id);
+      obj = { status: PresenceStore.getStatus(tmp.id, guildId), activities: PresenceStore.getActivities(tmp.id, guildId), isMobileOnline: PresenceStore.isMobileOnline(tmp.id), isVROnline: PresenceStore.isVROnline(tmp.id) };
     }
     return obj;
   }, items4);
@@ -64,36 +63,24 @@ const memoResult = importAllResult.memo((index) => {
   if (null == stateFromStores) {
     return null;
   } else {
-    let tmp2Result = tmp2(tmp3[14]);
-    const items6 = [tmp2Result.getName(stateFromStores), tmp4(tmp3[15]).getStatusLabel(status)];
+    const items6 = [tmp2(tmp3[14]).getName(stateFromStores), ];
+    const tmp2Result = tmp2(tmp3[14]);
+    items6[1] = tmp4(tmp3[15]).getStatusLabel(status);
     const joined = items6.join(", ");
-    obj = { onPress: null, width: null, panelVariant: null, accessibilityLabel: null, children: null };
-    obj[0] = callback;
+    const obj3 = { onPress: callback, width: null, panelVariant: null, accessibilityLabel: null, children: null };
     let str = "small";
-    tmp2Result = tmp2(tmp3[16]);
+    const tmp4Result = tmp4(tmp3[15]);
     if (index.fullwidth) {
       str = "full";
     }
-    obj[1] = str;
-    obj[2] = flag;
-    obj[3] = joined;
-    obj = { style: null, children: null };
-    obj[0] = tmp.content;
-    obj1 = { user: null, avatarDecoration: null, guildId: null, size: null, isMobileOnline: null, isVROnline: null, streaming: null, status: null, autoStatusCutout: true };
-    obj1[0] = stateFromStores;
-    obj1[1] = stateFromStores.avatarDecoration;
-    obj1[2] = guildId;
-    obj1[3] = LARGE;
-    obj1[4] = isMobileOnline;
-    obj1[5] = isVROnline;
-    obj1[6] = tmp2(tmp3[17])(activities);
-    obj1[7] = tmp8;
-    obj[1] = jsx(tmp4(tmp3[7]).Avatar, { user: null, avatarDecoration: null, guildId: null, size: null, isMobileOnline: null, isVROnline: null, streaming: null, status: null, autoStatusCutout: true });
-    obj[4] = <stateFromStores style={null}>{null}</stateFromStores>;
-    return <tmp2Result style={null}>{null}</tmp2Result>;
+    obj3.width = str;
+    obj3.panelVariant = flag;
+    obj3.accessibilityLabel = joined;
+    const obj4 = { style: tmp.content, children: null };
+    const obj5 = { user: stateFromStores, avatarDecoration: stateFromStores.avatarDecoration, guildId, size: LARGE, isMobileOnline, isVROnline, streaming: tmp2(tmp3[17])(activities), status: tmp8, autoStatusCutout: true };
+    obj4.children = jsx(tmp4(tmp3[7]).Avatar, { user: stateFromStores, avatarDecoration: stateFromStores.avatarDecoration, guildId, size: LARGE, isMobileOnline, isVROnline, streaming: tmp2(tmp3[17])(activities), status: tmp8, autoStatusCutout: true });
+    obj3.children = <stateFromStores style={tmp.content}>{null}</stateFromStores>;
+    return jsx(tmp2(tmp3[16]), { onPress: callback, width: null, panelVariant: null, accessibilityLabel: null, children: null });
   }
-  tmp = callback();
+  let obj2 = index(guildId[10]);
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardUser.tsx");
-
-export default memoResult;

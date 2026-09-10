@@ -1,19 +1,18 @@
-// Module ID: 13984
-// Function ID: 13985
-// Name: set
+// Module ID: 14007
+// Function ID: 14008
+// Name: PremiumSKUFeature
 // Dependencies: [2]
 
-// Module 13984 (set)
-import set from "set" /* 2 */;
+// Module 14007 (PremiumSKUFeature)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/premium/PremiumSKUFeature.tsx");
+const result = size.fileFinishedImporting("modules/premium/PremiumSKUFeature.tsx");
 
-export default function PremiumSKUFeature(name, getFeatureValue, description) {
-  let obj = Object.create(new.target.prototype);
-  obj.name = name;
-  obj.description = description;
-  obj.getFeatureValue = getFeatureValue;
-  obj = { value: getFeatureValue, configurable: false, writable: false };
-  Object.defineProperty(obj, "getFeatureValue", obj);
-  return obj;
+export default function PremiumSKUFeature(INCREASED_FILE_UPLOAD_SIZE, getUserMaxFileSize, description) {
+  const obj2 = Object.create(new.target.prototype);
+  obj2.name = INCREASED_FILE_UPLOAD_SIZE;
+  obj2.description = description;
+  obj2.getFeatureValue = getUserMaxFileSize;
+  Object.defineProperty(obj2, "getFeatureValue", { value: getUserMaxFileSize, configurable: false, writable: false });
+  return obj2;
 }.prototype;

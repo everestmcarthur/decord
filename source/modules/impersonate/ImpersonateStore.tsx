@@ -1,30 +1,30 @@
 // Module ID: 2014
 // Function ID: 2015
-// Name: initialize
+// Name: ImpersonateStore
 // Dependencies: [2015, 1979, 1074, 1084, 11, 2020, 1384, 504, 1933, 573, 2]
 
-// Module 2014 (initialize)
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+// Module 2014 (ImpersonateStore)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1933 */;
-import ImpersonateType from "ImpersonateType" /* 2020 */;
-import closure_4 from "createGuildRoleRecordFromRust" /* 2015 */;
-import closure_5 from "createGuildRecordFromRust" /* 1979 */;
-import { GuildSettingsSections } from "ME" /* 1074 */;
-import { ChannelNotificationSettingsFlags as closure_7 } from "MAX_FAVORITES" /* 1084 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import FunctionUtils from "FunctionUtils" /* 1933 */;
+import ImpersonateTypes from "ImpersonateTypes" /* 2020 */;
+import GuildRoleStore from "GuildRoleStore" /* 2015 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-require = arg1;
-let closure_8 = {};
+require = fn;
+const GuildSettingsSections = fn(1074).GuildSettingsSections;
+let closure_7 = fn(1084).ChannelNotificationSettingsFlags;
+const dependencyMap = {};
 const Store = initializeDefault.Store;
 class ImpersonateStore extends Store {
 }
 const prototype = ImpersonateStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_5, closure_4);
+  this.waitFor(GuildStore, GuildRoleStore);
 };
 prototype["hasViewingRoles"] = function hasViewingRoles() {
-  return !areArraysShallowlyEqual.isPlainObjectEmpty(closure_8);
+  return !FunctionUtils.isPlainObjectEmpty(closure_8);
 };
 prototype["isViewingRoles"] = function isViewingRoles(guildId) {
   let tmp = null != guildId;
@@ -54,17 +54,17 @@ prototype["getViewingRolesTimestamp"] = function getViewingRolesTimestamp(arg0) 
 prototype["getData"] = function getData(arg0) {
   return dependencyMap[arg0];
 };
-prototype["isFullServerPreview"] = function isFullServerPreview(closure_0) {
+prototype["isFullServerPreview"] = function isFullServerPreview(id) {
   let type;
-  if (dependencyMap[closure_0] != null) {
+  if (dependencyMap[id] != null) {
     type = tmp.type;
   }
-  return type === ImpersonateType.ImpersonateType.NEW_MEMBER;
+  return type === ImpersonateTypes.ImpersonateType.NEW_MEMBER;
 };
 prototype["isOptInEnabled"] = function isOptInEnabled(arg0) {
   let optInEnabled = null != tmp;
   if (optInEnabled) {
-    optInEnabled = tmp.type === ImpersonateType.ImpersonateType.NEW_MEMBER;
+    optInEnabled = tmp.type === ImpersonateTypes.ImpersonateType.NEW_MEMBER;
   }
   if (optInEnabled) {
     optInEnabled = tmp.optInEnabled;
@@ -74,7 +74,7 @@ prototype["isOptInEnabled"] = function isOptInEnabled(arg0) {
 prototype["isOnboardingEnabled"] = function isOnboardingEnabled(id) {
   let onboardingEnabled = null != tmp;
   if (onboardingEnabled) {
-    onboardingEnabled = tmp.type === ImpersonateType.ImpersonateType.NEW_MEMBER;
+    onboardingEnabled = tmp.type === ImpersonateTypes.ImpersonateType.NEW_MEMBER;
   }
   if (onboardingEnabled) {
     onboardingEnabled = tmp.onboardingEnabled;
@@ -85,7 +85,7 @@ prototype["getViewingChannels"] = function getViewingChannels(id) {
   let optInChannels = null;
   if (null != dependencyMap[id]) {
     optInChannels = null;
-    if (tmp.type === ImpersonateType.ImpersonateType.NEW_MEMBER) {
+    if (tmp.type === ImpersonateTypes.ImpersonateType.NEW_MEMBER) {
       optInChannels = tmp.optInChannels;
     }
   }
@@ -95,7 +95,7 @@ prototype["getOnboardingResponses"] = function getOnboardingResponses(arg0) {
   let onboardingResponses = null;
   if (null != dependencyMap[arg0]) {
     onboardingResponses = null;
-    if (tmp.type === ImpersonateType.ImpersonateType.NEW_MEMBER) {
+    if (tmp.type === ImpersonateTypes.ImpersonateType.NEW_MEMBER) {
       onboardingResponses = tmp.onboardingResponses;
     }
   }
@@ -105,13 +105,13 @@ prototype["getMemberOptions"] = function getMemberOptions(guildId) {
   let memberOptions = null;
   if (null != dependencyMap[guildId]) {
     memberOptions = null;
-    if (tmp.type === ImpersonateType.ImpersonateType.NEW_MEMBER) {
+    if (tmp.type === ImpersonateTypes.ImpersonateType.NEW_MEMBER) {
       memberOptions = tmp.memberOptions;
     }
   }
   return memberOptions;
 };
-prototype["isChannelOptedIn"] = function isChannelOptedIn(id) {
+prototype["isChannelOptedIn"] = function isChannelOptedIn(id, arg1) {
   const viewingChannels = this.getViewingChannels(id);
   let hasItem = null != viewingChannels;
   if (hasItem) {
@@ -126,7 +126,7 @@ prototype["isViewingServerShop"] = function isViewingServerShop(id) {
     if (dependencyMap[id] != null) {
       type = tmp3.type;
     }
-    tmp = type === ImpersonateType.ImpersonateType.SERVER_SHOP;
+    tmp = type === ImpersonateTypes.ImpersonateType.SERVER_SHOP;
   }
   return tmp;
 };
@@ -148,7 +148,7 @@ prototype["getBackNavigationSection"] = function getBackNavigationSection(arg0) 
     return GuildSettingsSections.ROLES;
   } else {
     const type = tmp6.type;
-    if (ImpersonateType.ImpersonateType.ROLES !== type) {
+    if (ImpersonateTypes.ImpersonateType.ROLES !== type) {
       if (tmp7(2020).ImpersonateType.SERVER_SHOP !== type) {
         if (tmp7(2020).ImpersonateType.NEW_MEMBER === type) {
           return GuildSettingsSections.ONBOARDING;
@@ -161,16 +161,15 @@ prototype["getBackNavigationSection"] = function getBackNavigationSection(arg0) 
   }
 };
 ImpersonateStore.displayName = "ImpersonateStore";
-const impersonateStore = new ImpersonateStore(dispatcherDefault, {
+const impersonateStore = new ImpersonateStore(DispatcherDefault, {
   IMPERSONATE_UPDATE: function handleImpersonateUpdate(arg0) {
     ({ guildId, data } = arg0);
-    let obj = DISCORD_EPOCHDefault;
-    const result = obj.castGuildIdAsEveryoneGuildRoleId(guildId);
+    const result = SnowflakeUtilsDefault.castGuildIdAsEveryoneGuildRoleId(guildId);
     delete tmp2[tmp];
-    obj = {};
+    const obj2 = {};
     const merged = Object.assign(data);
-    obj.timestamp = Date.now();
-    closure_8[guildId] = obj;
+    obj2.timestamp = Date.now();
+    closure_8[guildId] = obj2;
   },
   IMPERSONATE_STOP: function handleImpersonateStop(arg0) {
     if (null == dependencyMap[arg0.guildId]) {
@@ -201,15 +200,15 @@ const impersonateStore = new ImpersonateStore(dispatcherDefault, {
               optInChannels = new Set();
             }
             const keys = optInChannels(11).keys(overrides);
-            const item = keys.forEach((arg0) => {
-              let num = overrides[arg0].flags;
+            const item = keys.forEach((item) => {
+              let num = overrides[item].flags;
               if (num == null) {
                 num = 0;
               }
-              if (obj.hasFlag(num, closure_1_7.OPT_IN_ENABLED)) {
-                obj2.add(arg0);
+              if (obj.hasFlag(num, constants.OPT_IN_ENABLED)) {
+                obj2.add(item);
               } else {
-                obj2.delete(arg0);
+                obj2.delete(item);
               }
             });
             tmp6.optInChannels = optInChannels;
@@ -227,7 +226,7 @@ const impersonateStore = new ImpersonateStore(dispatcherDefault, {
     if (null != guildId) {
       if (null != dependencyMap[guildId]) {
         if (null != dependencyMap[guildId]) {
-          if (tmp9.type === onboardingResponses(2020).ImpersonateType.NEW_MEMBER) {
+          if (tmp9.type === ImpersonateTypes.ImpersonateType.NEW_MEMBER) {
             onboardingResponses = tmp9.onboardingResponses;
             if (onboardingResponses == null) {
               const _Set = Set;
@@ -238,7 +237,7 @@ const impersonateStore = new ImpersonateStore(dispatcherDefault, {
               tmp5 = removedOptionIds.length > 0;
             }
             if (tmp5) {
-              const item = removedOptionIds.forEach((arg0) => onboardingResponses.delete(arg0));
+              const item = removedOptionIds.forEach((item) => onboardingResponses.delete(item));
             }
             if (tmp) {
               onboardingResponses.add(optionId);
@@ -263,12 +262,12 @@ const impersonateStore = new ImpersonateStore(dispatcherDefault, {
       let flag = null != tmp2;
       if (flag) {
         if (null != roles) {
-          tmp2.roles = roles.reduce((arg0, arg1) => {
-            const role = closure_1_4.getRole(guildId, arg1);
+          tmp2.roles = roles.reduce((acc, item) => {
+            const role = GuildRoleStore.getRole(guildId, item);
             if (null != role) {
-              arg0[arg1] = role;
+              acc[item] = role;
             }
-            return arg0;
+            return acc;
           }, {});
         }
         let tmp3 = null != flags;
@@ -285,6 +284,7 @@ const impersonateStore = new ImpersonateStore(dispatcherDefault, {
     }
   }
 });
-let result = require("set").fileFinishedImporting("modules/impersonate/ImpersonateStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/impersonate/ImpersonateStore.tsx");
 
 export default impersonateStore;

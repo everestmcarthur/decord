@@ -1,23 +1,22 @@
-// Module ID: 8031
-// Function ID: 8032
-// Name: createPrivateChannelIntegrationSystemMessage
-// Dependencies: [1074, 7960, 7962, 7996, 7964, 2]
+// Module ID: 8046
+// Function ID: 8047
+// Name: PrivateChannelIntegrationSystemMessage
+// Dependencies: [1074, 7974, 7976, 8010, 7978, 2]
 // Exports: createPrivateChannelIntegrationSystemMessage
 
-// Module 8031 (createPrivateChannelIntegrationSystemMessage)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7960 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7962 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7964 */;
+// Module 8046 (PrivateChannelIntegrationSystemMessage)
+import Constants from "Constants" /* 1074 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7974 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7976 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7978 */;
+import size from "module_2" /* 2 */;
 
-const MessageTypes = ME.MessageTypes;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/PrivateChannelIntegrationSystemMessage.tsx");
+const MessageTypes = Constants.MessageTypes;
+const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/PrivateChannelIntegrationSystemMessage.tsx");
 
 export const createPrivateChannelIntegrationSystemMessage = function createPrivateChannelIntegrationSystemMessage(roleStyle, type) {
   const message = roleStyle.message;
-  let obj = getMessageAuthorWithProcessedColor;
-  const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
+  const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   const tmp5 = formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
   const application = message.application;
   let bot;
@@ -25,26 +24,16 @@ export const createPrivateChannelIntegrationSystemMessage = function createPriva
     bot = application.bot;
   }
   if (null != bot) {
-    obj = { action: "bindUserMenu", userId: null, messageChannelId: null, medium: true };
-    obj[1] = application.bot.id;
-    obj[2] = message.channel_id;
+    const obj2 = { action: "bindUserMenu", userId: application.bot.id, messageChannelId: message.channel_id, medium: true };
   }
   if (type === MessageTypes.PRIVATE_CHANNEL_INTEGRATION_ADDED) {
-    let tmpResult = tmp(7996);
-    obj = { application: null, username: null, usernameOnClick: null, applicationNameOnClick: null };
-    obj[0] = application;
-    obj[1] = messageAuthorWithProcessedColor.nick;
-    obj[2] = tmp5;
-    obj[3] = tmp7;
-    let privateChannelIntegrationAddedSystemMessageASTContent = tmpResult.getPrivateChannelIntegrationAddedSystemMessageASTContent(obj);
+    const obj3 = { application, username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp5, applicationNameOnClick: tmp7 };
+    let privateChannelIntegrationAddedSystemMessageASTContent = tmp(8010).getPrivateChannelIntegrationAddedSystemMessageASTContent(obj3);
+    const tmpResult = tmp(8010);
   } else {
-    tmpResult = tmp(7996);
-    obj1 = { application: null, username: null, usernameOnClick: null, applicationNameOnClick: null };
-    obj1[0] = application;
-    obj1[1] = messageAuthorWithProcessedColor.nick;
-    obj1[2] = tmp5;
-    obj1[3] = tmp7;
-    privateChannelIntegrationAddedSystemMessageASTContent = tmpResult.getPrivateChannelIntegrationRemovedSystemMessageASTContent(obj1);
+    const obj4 = { application, username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp5, applicationNameOnClick: tmp7 };
+    privateChannelIntegrationAddedSystemMessageASTContent = tmp(8010).getPrivateChannelIntegrationRemovedSystemMessageASTContent(obj4);
+    const tmpResult2 = tmp(8010);
   }
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return { content: privateChannelIntegrationAddedSystemMessageASTContent };

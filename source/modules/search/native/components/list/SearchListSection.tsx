@@ -1,24 +1,26 @@
-// Module ID: 16684
-// Function ID: 16685
-// Dependencies: [19, 17, 7878, 21, 4560, 4556, 2]
+// Module ID: 16721
+// Function ID: 16722
+// Name: SearchListSection
+// Dependencies: [19, 17, 7892, 21, 4574, 4570, 2]
 
-// Module 16684
-import Text from "Text" /* 4556 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 16721 (SearchListSection)
+import Text_Text from "Text/Text" /* 4570 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = createCacheKey.createStyles({ section: { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", textTransform: "none", paddingTop: require("MessageEmbedTypes").SEARCH_LIST_SECTION_TOP_PADDING, paddingHorizontal: 16, paddingBottom: 8 } });
-const memoResult = importAllResult.memo((arg0) => {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4574);
+let closure_5 = createStyles.createStyles({ section: { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", textTransform: "none", paddingTop: fn(7892).SEARCH_LIST_SECTION_TOP_PADDING, paddingHorizontal: 16, paddingBottom: 8 } });
+let obj = { section: { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", textTransform: "none", paddingTop: fn(7892).SEARCH_LIST_SECTION_TOP_PADDING, paddingHorizontal: 16, paddingBottom: 8 } };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/list/SearchListSection.tsx");
+
+export default noop.memo((arg0) => {
   ({ title, trailing } = arg0);
-  const obj = { style: callback3().section, children: null };
-  const items = [callback(Text.Text, { maxFontSizeMultiplier: 2, accessibilityRole: "header", variant: "text-sm/semibold", color: "interactive-text-default", children: title }), trailing];
-  obj[1] = items;
-  return callback2(View, obj);
+  const obj = { style: closure_5().section, children: null };
+  const items = [React3(Text_Text.Text, { maxFontSizeMultiplier: 2, accessibilityRole: "header", variant: "text-sm/semibold", color: "interactive-text-default", children: title }), trailing];
+  obj.children = items;
+  return React4(View, obj);
 });
-const result = require("set").fileFinishedImporting("modules/search/native/components/list/SearchListSection.tsx");
-
-export default memoResult;

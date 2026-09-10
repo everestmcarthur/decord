@@ -1,13 +1,13 @@
-// Module ID: 16234
-// Function ID: 16235
+// Module ID: 16264
+// Function ID: 16265
 // Name: showChannelItemEmbeddedActivities
 // Dependencies: [2]
 // Exports: showChannelItemEmbeddedActivities
 
-// Module 16234 (showChannelItemEmbeddedActivities)
-import set from "set" /* 2 */;
+// Module 16264 (showChannelItemEmbeddedActivities)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_sidebar/showChannelItemEmbeddedActivities.tsx");
+const result = size.fileFinishedImporting("modules/guild_sidebar/showChannelItemEmbeddedActivities.tsx");
 
 export const showChannelItemEmbeddedActivities = function showChannelItemEmbeddedActivities(arg0) {
   return arg0.length > 0;

@@ -1,15 +1,27 @@
-// Module ID: 16104
-// Function ID: 16105
-// Dependencies: [32, 19, 21, 16059, 16033, 16099, 16100, 16045, 16043, 16048, 16060, 16098, 16101, 8879, 2]
+// Module ID: 16134
+// Function ID: 16135
+// Name: MessagesFlashList
+// Dependencies: [32, 19, 21, 16089, 16063, 16129, 16130, 16075, 16073, 16078, 16090, 16128, 16131, 8906, 2]
 
-// Module 16104
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16134 (MessagesFlashList)
+import MessagesItemChannel from "MessagesItemChannel" /* 16063 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 16073 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 16075 */;
+import useMessagesData from "useMessagesData" /* 16078 */;
+import MessagesItemHappeningNowDefault from "MessagesItemHappeningNow" /* 16090 */;
+import MessagesItemEmptyStateDefault from "MessagesItemEmptyState" /* 16128 */;
+import MessagesItemSeparatorDefault from "MessagesItemSeparator" /* 16129 */;
+import MessagesItemSuggestedFriendsHeaderDefault from "MessagesItemSuggestedFriendsHeader" /* 16130 */;
+import MessagesItemAddFriendsWidgetDefault from "MessagesItemAddFriendsWidget" /* 16131 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c4 = importAllResult;
-const memoResult = importAllResult.memo(importAllResult.forwardRef(function MessagesFlashList(listItemHeight, ref) {
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesFlashList.tsx");
+
+export default noop.memo(noop.forwardRef(function MessagesFlashList(listItemHeight, ref) {
   ({ data, insetEnd } = listItemHeight);
   listItemHeight = listItemHeight.listItemHeight;
   const listItemSuggestedFriendHeight = listItemHeight.listItemSuggestedFriendHeight;
@@ -18,28 +30,17 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Mess
   const listTop = listItemHeight.listTop;
   const scrollIndicatorInsetBottom = listItemHeight.scrollIndicatorInsetBottom;
   const scrollPosition = listItemHeight.scrollPosition;
-  let friendSuggestions;
-  let renderHeader;
-  let renderFooter;
-  let setAddedFriendSuggestions;
-  ref = undefined;
-  data = undefined;
-  let friendsHeaderIndex;
-  let extraData;
-  let listHeaderHeight;
-  let first;
-  closure_18 = undefined;
-  friendSuggestions = data.friendSuggestions;
-  renderHeader = data.renderHeader;
-  renderFooter = data.renderFooter;
-  setAddedFriendSuggestions = data.setAddedFriendSuggestions;
+  const friendSuggestions = data.friendSuggestions;
+  const renderHeader = data.renderHeader;
+  const renderFooter = data.renderFooter;
+  const setAddedFriendSuggestions = data.setAddedFriendSuggestions;
   ({ accessibilityLabel, handleScrollAnimated } = listItemHeight);
   ref = listRefHappeningNow.useRef(null);
   let tmp2 = listItemHeight(listItemSuggestedFriendHeight[3])(data, { listItemHeight });
-  data = tmp2.listData;
-  friendsHeaderIndex = tmp2.friendsHeaderIndex;
-  extraData = tmp2.friendsHeaderOffset;
-  listHeaderHeight = tmp2.listHeaderHeight;
+  const data2 = tmp2.listData;
+  const friendsHeaderIndex = tmp2.friendsHeaderIndex;
+  const extraData = tmp2.friendsHeaderOffset;
+  const listHeaderHeight = tmp2.listHeaderHeight;
   let items = [listHeaderHeight];
   const imperativeHandle = listRefHappeningNow.useImperativeHandle(ref, () => ({
     scrollToTop() {
@@ -49,9 +50,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Mess
       }
       const current = ref.current;
       if (current != null) {
-        const obj = { offset: null, animated: null };
-        obj[0] = closure_16;
-        obj[1] = flag;
+        const obj = { offset, animated: flag };
         current.scrollToOffset(obj);
       }
     }
@@ -63,29 +62,20 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Mess
     if ("favorite" !== kind) {
       if ("channel" !== kind) {
         if ("separator" === kind) {
-          return listTop(listItemHeight(listItemSuggestedFriendHeight[5]), {});
+          return jsx(MessagesItemSeparatorDefault, {});
         } else if ("friendsHeader" === kind) {
-          let obj = { scrollPosition: null, stickyAt: null, stickyTop: null, stickyLeft: null };
-          obj[0] = scrollPosition;
-          obj[1] = extraData;
-          obj[2] = listTop;
-          obj[3] = listLeft;
-          return listTop(listItemHeight(listItemSuggestedFriendHeight[6]), obj);
+          const obj2 = { scrollPosition, stickyAt: extraData, stickyTop: listTop, stickyLeft: listLeft };
+          return jsx(MessagesItemSuggestedFriendsHeaderDefault, { scrollPosition, stickyAt: extraData, stickyTop: listTop, stickyLeft: listLeft });
         } else if ("suggestedFriend" === kind) {
-          obj = { height: null, suggestedFriend: null, onAddFriendSuggestions: null };
-          obj[0] = listItemSuggestedFriendHeight;
-          obj[1] = friendSuggestions[item.row];
-          obj[2] = setAddedFriendSuggestions;
-          return listTop(insetEnd(listItemSuggestedFriendHeight[7]).MessagesItemSuggestedFriendFlash, obj);
+          const obj3 = { height: listItemSuggestedFriendHeight, suggestedFriend: friendSuggestions[item.row], onAddFriendSuggestions: setAddedFriendSuggestions };
+          return jsx(MessagesItemSuggestedFriend.MessagesItemSuggestedFriendFlash, { height: listItemSuggestedFriendHeight, suggestedFriend: friendSuggestions[item.row], onAddFriendSuggestions: setAddedFriendSuggestions });
         } else if ("placeholder" === kind) {
-          obj = { row: null, height: null };
-          obj[0] = item.row;
-          obj[1] = listItemHeight;
-          return listTop(listItemHeight(listItemSuggestedFriendHeight[8]), obj);
+          const obj = { row: item.row, height: listItemHeight };
+          return jsx(MessagesItemPlaceholderDefault, { row: item.row, height: listItemHeight });
         }
       }
     }
-    return listTop(insetEnd(listItemSuggestedFriendHeight[4]).MessagesItemChannelFlash, { channelId: item.channelId, placeholderHeight: listItemHeight, row: item.row });
+    return jsx(MessagesItemChannel.MessagesItemChannelFlash, { channelId: item.channelId, placeholderHeight: listItemHeight, row: item.row });
   }, items1);
   const items2 = [friendSuggestions];
   const getItemType = listRefHappeningNow.useCallback((kind) => kind.kind, []);
@@ -119,35 +109,33 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Mess
   }, items2);
   const items4 = [renderFooter];
   const ListHeaderComponent = listRefHappeningNow.useMemo(() => {
-    if (insetEnd(listItemSuggestedFriendHeight[9]).MessagesDataHeader.HappeningNow === renderHeader) {
-      const obj = { listRef: null };
-      obj[0] = listRefHappeningNow;
-      return listTop(listItemHeight(tmp3[10]), obj);
-    } else if (tmp2(tmp3[9]).MessagesDataHeader.EmptyState === tmp) {
-      return listTop(listItemHeight(tmp3[11]), {});
+    if (useMessagesData.MessagesDataHeader.HappeningNow === renderHeader) {
+      const obj = { listRef: listRefHappeningNow };
+      return jsx(MessagesItemHappeningNowDefault, { listRef: listRefHappeningNow });
+    } else if (useMessagesData.MessagesDataHeader.EmptyState === tmp) {
+      return jsx(MessagesItemEmptyStateDefault, {});
     } else {
       return null;
     }
     tmp = renderHeader;
-    tmp2 = insetEnd;
   }, items3);
   const ListFooterComponent = listRefHappeningNow.useMemo(() => {
     let tmp = null;
     if (renderFooter) {
-      tmp = listTop(listItemHeight(listItemSuggestedFriendHeight[12]), {});
+      tmp = jsx(MessagesItemAddFriendsWidgetDefault, {});
     }
     return tmp;
   }, items4);
   const tmp9 = listLeft(listRefHappeningNow.useState(null), 2);
-  first = tmp9[0];
+  const first = tmp9[0];
   closure_18 = tmp9[1];
-  const items5 = [data];
-  const onCommitLayoutEffect = listRefHappeningNow.useCallback(() => callback(data), items5);
-  const items6 = [first, data, friendsHeaderIndex];
+  const items5 = [data2];
+  const onCommitLayoutEffect = listRefHappeningNow.useCallback(() => closure_18(data2), items5);
+  const items6 = [first, data2, friendsHeaderIndex];
   const items7 = [insetEnd];
   const stickyHeaderIndices = listRefHappeningNow.useMemo(() => {
     let tmp;
-    if (first === data) {
+    if (first === data2) {
       if (null != friendsHeaderIndex) {
         const items = [tmp2];
         tmp = items;
@@ -158,8 +146,5 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Mess
   const items8 = [scrollIndicatorInsetBottom];
   const contentContainerStyle = listRefHappeningNow.useMemo(() => ({ paddingBottom: insetEnd }), items7);
   const scrollIndicatorInsets = listRefHappeningNow.useMemo(() => ({ bottom: scrollIndicatorInsetBottom }), items8);
-  return listTop(insetEnd(listItemSuggestedFriendHeight[13]).AnimatedFlashList, { ref, accessibilityLabel, contentContainerStyle, data, extraData, getItemType, keyExtractor, ListFooterComponent, ListHeaderComponent, onCommitLayoutEffect, onLoad: onCommitLayoutEffect, onScroll, renderItem, scrollIndicatorInsets, stickyHeaderIndices });
+  return listTop(insetEnd(listItemSuggestedFriendHeight[13]).AnimatedFlashList, { ref, accessibilityLabel, contentContainerStyle, data: data2, extraData, getItemType, keyExtractor, ListFooterComponent, ListHeaderComponent, onCommitLayoutEffect, onLoad: onCommitLayoutEffect, onScroll, renderItem, scrollIndicatorInsets, stickyHeaderIndices });
 }));
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesFlashList.tsx");
-
-export default memoResult;

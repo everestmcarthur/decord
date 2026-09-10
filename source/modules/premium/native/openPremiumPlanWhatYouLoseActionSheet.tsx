@@ -1,18 +1,17 @@
-// Module ID: 13337
-// Function ID: 13338
+// Module ID: 13360
+// Function ID: 13361
 // Name: openPremiumPlanWhatYouLoseActionSheet
-// Dependencies: [4527, 13338, 1896, 2]
+// Dependencies: [4541, 13361, 1896, 2]
 // Exports: default
 
-// Module 13337 (openPremiumPlanWhatYouLoseActionSheet)
-import set from "set" /* 2 */;
+// Module 13360 (openPremiumPlanWhatYouLoseActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/premium/native/openPremiumPlanWhatYouLoseActionSheet.tsx");
+const result = size.fileFinishedImporting("modules/premium/native/openPremiumPlanWhatYouLoseActionSheet.tsx");
 
 export default function openPremiumPlanWhatYouLoseActionSheet(arg0) {
-  ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
-  const obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(13338, dependencyMap.paths), "PremiumPlanWhatYouLoseActionSheet", arg0);
+  ActionSheetActionCreatorsDefault.hideActionSheet();
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13361, dependencyMap.paths), "PremiumPlanWhatYouLoseActionSheet", arg0);
 };

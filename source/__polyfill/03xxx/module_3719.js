@@ -1,37 +1,32 @@
 // Module ID: 3719
 // Function ID: 3720
-// Dependencies: [2035, 2036]
+// Dependencies: [2033]
 
 // Module 3719
-import buildMatchFn from "buildMatchFn" /* 2035 */;
-import buildMatchPatternFn from "buildMatchPatternFn" /* 2036 */;
+import module_2033 from "module_2033" /* 2033 */;
 
-if (!buildMatchFn) {
-  let obj = { default: null };
-  obj[0] = buildMatchFn;
+if (!module_2033) {
+  const obj2 = { default: module_2033 };
+  let obj = obj2;
 } else {
-  obj = buildMatchFn;
+  obj = module_2033;
 }
-if (!buildMatchPatternFn) {
-  obj = { default: null };
-  obj[0] = buildMatchPatternFn;
-  let obj2 = obj;
-} else {
-  obj2 = buildMatchPatternFn;
-}
-obj2 = {
-  matchPattern: /^(\d+)(º)?/i,
-  parsePattern: /\d+/i,
-  valueCallback(joined) {
-    return parseInt(joined, 10);
-  }
+const date = {
+  ordinalNumber(arg0, arg1) {
+    return Number(arg0) + ".";
+  },
+  era: obj.default({ values: { narrow: ["pr.n.e.", "AD"], abbreviated: ["pr. Kr.", "po. Kr."], wide: ["Prije Krista", "Poslije Krista"] }, defaultWidth: "wide" }),
+  quarter: obj.default({
+    values: { narrow: ["1.", "2.", "3.", "4."], abbreviated: ["1. kv.", "2. kv.", "3. kv.", "4. kv."], wide: ["1. kvartal", "2. kvartal", "3. kvartal", "4. kvartal"] },
+    defaultWidth: "wide",
+    argumentCallback(arg0) {
+      return arg0 - 1;
+    }
+  }),
+  month: obj.default({ values: { narrow: ["1.", "2.", "3.", "4.", "5.", "6.", "7.", "8.", "9.", "10.", "11.", "12."], abbreviated: ["sij", "velj", "o\u017Eu", "tra", "svi", "lip", "srp", "kol", "ruj", "lis", "stu", "pro"], wide: ["sije\u010Danj", "velja\u010Da", "o\u017Eujak", "travanj", "svibanj", "lipanj", "srpanj", "kolovoz", "rujan", "listopad", "studeni", "prosinac"] }, defaultWidth: "wide", formattingValues: { narrow: ["1.", "2.", "3.", "4.", "5.", "6.", "7.", "8.", "9.", "10.", "11.", "12."], abbreviated: ["sij", "velj", "o\u017Eu", "tra", "svi", "lip", "srp", "kol", "ruj", "lis", "stu", "pro"], wide: ["sije\u010Dnja", "velja\u010De", "o\u017Eujka", "travnja", "svibnja", "lipnja", "srpnja", "kolovoza", "rujna", "listopada", "studenog", "prosinca"] }, defaultFormattingWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["N", "P", "U", "S", "\u010C", "P", "S"], short: ["ned", "pon", "uto", "sri", "\u010Det", "pet", "sub"], abbreviated: ["ned", "pon", "uto", "sri", "\u010Det", "pet", "sub"], wide: ["nedjelja", "ponedjeljak", "utorak", "srijeda", "\u010Detvrtak", "petak", "subota"] }, defaultWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "AM", pm: "PM", midnight: "pono\u0107", noon: "podne", morning: "ujutro", afternoon: "popodne", evening: "nave\u010Der", night: "no\u0107u" }, abbreviated: { am: "AM", pm: "PM", midnight: "pono\u0107", noon: "podne", morning: "ujutro", afternoon: "popodne", evening: "nave\u010Der", night: "no\u0107u" }, wide: { am: "AM", pm: "PM", midnight: "pono\u0107", noon: "podne", morning: "ujutro", afternoon: "poslije podne", evening: "nave\u010Der", night: "no\u0107u" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "AM", pm: "PM", midnight: "pono\u0107", noon: "podne", morning: "ujutro", afternoon: "popodne", evening: "nave\u010Der", night: "no\u0107u" }, abbreviated: { am: "AM", pm: "PM", midnight: "pono\u0107", noon: "podne", morning: "ujutro", afternoon: "popodne", evening: "nave\u010Der", night: "no\u0107u" }, wide: { am: "AM", pm: "PM", midnight: "pono\u0107", noon: "podne", morning: "ujutro", afternoon: "poslije podne", evening: "nave\u010Der", night: "no\u0107u" } }, defaultFormattingWidth: "wide" })
 };
-const items = [/^a/i, /^(d|e)/i];
-const items1 = [/1/i, /2/i, /3/i, /4/i];
-const items2 = [/^g/i, /^f/i, /^m/i, /^a/i, /^m/i, /^g/i, /^l/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i];
-const items3 = [/^ge/i, /^f/i, /^mar/i, /^ap/i, /^mag/i, /^gi/i, /^l/i, /^ag/i, /^s/i, /^o/i, /^n/i, /^d/i];
-const items4 = [/^d/i, /^l/i, /^m/i, /^m/i, /^g/i, /^v/i, /^s/i];
-const items5 = [/^d/i, /^l/i, /^ma/i, /^me/i, /^g/i, /^v/i, /^s/i];
 
-export default { ordinalNumber: obj2.default(obj2), era: obj.default({ matchPatterns: obj3, defaultMatchWidth: "wide", parsePatterns: { any: items }, defaultParseWidth: "any" }), quarter: obj.default(obj4), month: obj.default({ matchPatterns: obj6, defaultMatchWidth: "wide", parsePatterns: { narrow: items2, any: items3 }, defaultParseWidth: "any" }), day: obj.default({ matchPatterns: obj7, defaultMatchWidth: "wide", parsePatterns: { narrow: items4, any: items5 }, defaultParseWidth: "any" }), dayPeriod: obj.default({ matchPatterns: obj8, defaultMatchWidth: "any", parsePatterns: { any: obj9 }, defaultParseWidth: "any" }) };
+export default date;
 export default exports.default;

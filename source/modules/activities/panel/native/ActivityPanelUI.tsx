@@ -1,30 +1,29 @@
-// Module ID: 17019
-// Function ID: 17020
-// Name: renderActivityOrPIP
-// Dependencies: [19, 17, 9510, 21, 17020, 17026, 17040, 7156, 4271, 17041, 17018, 2]
+// Module ID: 17050
+// Function ID: 17051
+// Name: ActivityPanelUI
+// Dependencies: [19, 17, 9537, 21, 17051, 17057, 17071, 7170, 4284, 17072, 17049, 2]
 // Exports: default
 
-// Module 17019 (renderActivityOrPIP)
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17040 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 9510 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 17050 (ActivityPanelUI)
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17049 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17071 */;
+import ActivityPanelSystemUIManagerDefault from "ActivityPanelSystemUIManager" /* 17072 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+const require = fn;
 function renderActivityOrPIP(arg0, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
-    let tmp4 = 17020;
+    let tmp4 = 17051;
   } else {
-    tmp4 = 17026;
+    tmp4 = 17057;
   }
-  return closure_7(importDefault(tmp4), { transitionState, transitionCleanUp }, arg0);
+  return React5(importDefault(tmp4), { transitionState, transitionCleanUp }, arg0);
 }
 function getKey(arg0) {
   return arg0;
 }
 function wrapChildren(children) {
-  return callback(closure_4, { style: absoluteFill.absoluteFill, pointerEvents: "box-none", children });
+  return React5(React4, { style: absoluteFill.absoluteFill, pointerEvents: "box-none", children });
 }
 class BaseActivityPanelUI {
   constructor(arg0) {
@@ -32,39 +31,43 @@ class BaseActivityPanelUI {
     closure_1 = undefined;
     ({ renderActivityOrPIP, renderActivityPanelSystemUIManager } = global);
     mode = closure_3.useContext(global.context).mode;
-    tmp = require("useIsConnectedToVoiceChannel")();
+    tmp = closure_1(closure_2[6])();
     closure_1 = tmp;
     items = [, ];
     items[0] = mode;
     items[1] = tmp;
     memo = closure_3.useMemo(() => {
-      if (mode !== closure_1_6.DISCONNECTED) {
+      if (mode !== ActivityPanelModes.DISCONNECTED) {
         if (tmp === tmp2.PIP) {
           return tmp4;
         }
-        tmp4 = tmp === tmp2.PIP ? closure_1_13 : closure_1_14;
+        tmp4 = tmp === tmp2.PIP ? closure_13 : closure_14;
       }
-      tmp4 = closure_1_12;
+      tmp4 = closure_12;
     }, items);
     obj = { children: null };
     items1 = [, ];
     items1[0] = renderActivityPanelSystemUIManager();
-    obj = { items: memo, renderItem: renderActivityOrPIP, getItemKey: getKey, wrapChildren };
-    items1[1] = jsx(require("ManaContext").TransitionGroup, obj);
-    obj[0] = items1;
-    return jsxs(require("Layer").LayerScope, obj);
+    obj1 = { items: memo, renderItem: renderActivityOrPIP, getItemKey: getKey, wrapChildren };
+    items1[1] = jsx(mode(closure_2[8]).TransitionGroup, obj1);
+    obj.children = items1;
+    return jsxs(mode(closure_2[7]).LayerScope, obj);
   }
 }
-({ View: c4, StyleSheet: c5 } = get_ActivityIndicator);
-({ jsx: error, jsxs: closure_8 } = jsxProd);
+get_ActivityIndicator = fn(17);
+({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
+const ActivityPanelModes = fn(9537).ActivityPanelModes;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let closure_12 = [];
 let closure_13 = ["pip"];
 let closure_14 = ["activity"];
-const result = require("set").fileFinishedImporting("modules/activities/panel/native/ActivityPanelUI.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/panel/native/ActivityPanelUI.tsx");
 
 export default function ActivityPanelUI() {
-  const callback = React.useCallback(() => callback2(callback(table[9]), {}), []);
-  const items = [callback];
-  return React.useMemo(() => closure_1_7(closure_1_15, { renderActivityOrPIP: closure_1_9, context: closure_1_1(closure_1_2[10]), renderActivityPanelSystemUIManager: callback }), items);
+  const renderActivityPanelSystemUIManager = noop.useCallback(() => closure_1_7(ActivityPanelSystemUIManagerDefault, {}), []);
+  const items = [renderActivityPanelSystemUIManager];
+  return noop.useMemo(() => React5(BaseActivityPanelUI, { renderActivityOrPIP, context: ActivityPanelStateContextDefault, renderActivityPanelSystemUIManager }), items);
 };
 export { BaseActivityPanelUI };

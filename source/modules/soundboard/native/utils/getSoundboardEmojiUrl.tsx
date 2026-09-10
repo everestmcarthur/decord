@@ -1,24 +1,21 @@
-// Module ID: 11939
-// Function ID: 11940
+// Module ID: 11965
+// Function ID: 11966
 // Name: getSoundboardEmojiUrl
 // Dependencies: [1396, 2]
 // Exports: default
 
-// Module 11939 (getSoundboardEmojiUrl)
-import set from "set" /* 2 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
+// Module 11965 (getSoundboardEmojiUrl)
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/soundboard/native/utils/getSoundboardEmojiUrl.tsx");
+const result = size.fileFinishedImporting("modules/soundboard/native/utils/getSoundboardEmojiUrl.tsx");
 
-export default function getSoundboardEmojiUrl(emojiId) {
+export default function getSoundboardEmojiUrl(emojiId, size) {
   emojiId = emojiId.emojiId;
   let emojiURL;
   if (null != emojiId) {
-    let obj = getAvatarURLDefault;
-    obj = { id: null, animated: false, size: null };
-    obj[0] = emojiId;
-    obj[2] = arg1;
-    emojiURL = obj.getEmojiURL(obj);
+    const obj2 = { id: emojiId, animated: false, size };
+    emojiURL = AvatarUtilsDefault.getEmojiURL(obj2);
   }
   return emojiURL;
 };

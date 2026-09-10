@@ -1,28 +1,29 @@
-// Module ID: 9367
-// Function ID: 9368
+// Module ID: 9394
+// Function ID: 9395
 // Name: PremiumFeaturesCards
-// Dependencies: [19, 17, 1373, 21, 4560, 9368, 2]
+// Dependencies: [19, 17, 1373, 21, 4574, 9395, 2]
 // Exports: default
 
-// Module 9367 (PremiumFeaturesCards)
-import noopAll from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { PremiumTypes } from "GuildFeatures" /* 1373 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9394 (PremiumFeaturesCards)
+import PremiumFeaturesCardDefault from "PremiumFeaturesCard" /* 9395 */;
+import noop from "module_19" /* 19 */;
 
-noopAll;
-let closure_5 = createCacheKey.createStyles({ container: { width: "100%", gap: 12 } });
-createCacheKey = { TIER_0_LEADING: 0, [0]: "TIER_0_LEADING", TIER_2_LEADING: 1, [1]: "TIER_2_LEADING" };
-const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesCards.tsx");
+const View = fn(17).View;
+const PremiumTypes = fn(1373).PremiumTypes;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_5 = createStyles.createStyles({ container: { width: "100%", gap: 12 } });
+const obj2 = { TIER_0_LEADING: 0, [0]: "TIER_0_LEADING", TIER_2_LEADING: 1, [1]: "TIER_2_LEADING" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesCards.tsx");
 
 export default function PremiumFeaturesCards(onFirstCardLayout) {
   ({ applicationId: importDefault, onPaymentSuccess: dependencyMap, onPaymentDismiss: View, order } = onFirstCardLayout);
   if (order === undefined) {
-    order = createCacheKey.TIER_0_LEADING;
+    order = obj2.TIER_0_LEADING;
   }
   onFirstCardLayout = onFirstCardLayout.onFirstCardLayout;
-  if (createCacheKey.TIER_2_LEADING === order) {
+  if (obj2.TIER_2_LEADING === order) {
     const items = [, ];
     ({ TIER_2: arr2[0], TIER_0: arr2[1] } = onFirstCardLayout);
     let items1 = items;
@@ -31,14 +32,25 @@ export default function PremiumFeaturesCards(onFirstCardLayout) {
     items1 = [, ];
     ({ TIER_0: arr[0], TIER_2: arr[1] } = onFirstCardLayout);
   }
-  const tmp2 = callback();
-  const items2 = [tmp2.container, onFirstCardLayout.style];
-  return <View style={items2} onLayout={arg0.onLayout}>{items1.map((premiumType) => {
+  const obj = {
+    style: null,
+    onLayout: onFirstCardLayout.onLayout,
+    children: items1.map((premiumType, index) => {
+      let tmp3;
+      if (0 === index) {
+        tmp3 = onFirstCardLayout;
+      }
+      return jsx(PremiumFeaturesCardDefault, { onLayout: tmp3, premiumType, applicationId, onPaymentSuccess, onPaymentDismiss }, premiumType);
+    })
+  };
+  const items2 = [closure_5().container, onFirstCardLayout.style];
+  obj.style = items2;
+  return <View style={null} onLayout={arg0.onLayout}>{items1.map((premiumType, index) => {
     let tmp3;
-    if (0 === arg1) {
+    if (0 === index) {
       tmp3 = onFirstCardLayout;
     }
-    return closure_1_4(closure_1_0(closure_1_1[5]), { onLayout: tmp3, premiumType, applicationId: closure_0, onPaymentSuccess: closure_1, onPaymentDismiss: closure_2 }, premiumType);
+    return jsx(PremiumFeaturesCardDefault, { onLayout: tmp3, premiumType, applicationId, onPaymentSuccess, onPaymentDismiss }, premiumType);
   })}</View>;
 };
-export const PremiumFeatureCardOrder = createCacheKey;
+export const PremiumFeatureCardOrder = obj2;

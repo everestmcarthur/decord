@@ -1,31 +1,34 @@
-// Module ID: 11371
-// Function ID: 11372
+// Module ID: 11398
+// Function ID: 11399
 // Name: useIsMessageRequest
-// Dependencies: [7219, 7220, 504, 2]
+// Dependencies: [7233, 7234, 504, 2]
 // Exports: useIsEitherTypeOfMessageRequest, useIsMessageRequest
 
-// Module 11371 (useIsMessageRequest)
-import closure_2 from "processChannel" /* 7219 */;
-import closure_3 from "processChannel" /* 7220 */;
+// Module 11398 (useIsMessageRequest)
+import MessageRequestStore from "MessageRequestStore" /* 7233 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7234 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/message_request/hooks/useIsMessageRequest.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/message_request/hooks/useIsMessageRequest.tsx");
 
 export const useIsMessageRequest = function useIsMessageRequest(id) {
-  const _require = id;
-  const items = [closure_2];
+  _require = id;
+  const items = [MessageRequestStore];
   const items1 = [id];
-  return _require(504).useStateFromStores(items, () => closure_1_2.isMessageRequest(closure_0), items1);
+  return require("initialize").useStateFromStores(items, () => MessageRequestStore.isMessageRequest(closure_0), items1);
 };
 export const useIsEitherTypeOfMessageRequest = function useIsEitherTypeOfMessageRequest(arg0) {
-  const _require = arg0;
-  const items = [closure_2, closure_3];
-  return _require(504).useStateFromStores(items, () => {
+  _require = arg0;
+  const items = [MessageRequestStore, SpamMessageRequestStore];
+  return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      let isMessageRequestResult = closure_1_2.isMessageRequest(tmp);
+      let isMessageRequestResult = MessageRequestStore.isMessageRequest(tmp);
       if (!isMessageRequestResult) {
-        isMessageRequestResult = closure_1_3.isSpam(tmp);
+        isMessageRequestResult = SpamMessageRequestStore.isSpam(tmp);
       }
       tmp2 = isMessageRequestResult;
     }

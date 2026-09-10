@@ -1,17 +1,21 @@
-// Module ID: 13639
-// Function ID: 13640
-// Name: shouldUseAltGateway
-// Dependencies: [13640, 2]
+// Module ID: 13662
+// Function ID: 13663
+// Name: AltGatewayTracker
+// Dependencies: [13663, 2]
 
-// Module 13639 (shouldUseAltGateway)
-import getCachedUseAltGatewayDefault from "getCachedUseAltGateway" /* 13640 */;
+// Module 13662 (AltGatewayTracker)
+import getCachedUseAltGatewayDefault from "getCachedUseAltGateway" /* 13663 */;
 
 let closure_1 = getCachedUseAltGatewayDefault();
-const result = require("set").fileFinishedImporting("modules/gateway/AltGatewayTracker.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/gateway/AltGatewayTracker.tsx");
 class AltGatewayTracker {
+  constructor() {
+    return Object.assign({ failures: 0, fallbackTripped: false });
+  }
 }
 const prototype = AltGatewayTracker.prototype;
-prototype["shouldUseAltGateway"] = function shouldUseAltGateway(arg0) {
+prototype["shouldUseAltGateway"] = function shouldUseAltGateway() {
   const fallbackTripped = this.fallbackTripped;
   let tmp = !fallbackTripped;
   if (!fallbackTripped) {

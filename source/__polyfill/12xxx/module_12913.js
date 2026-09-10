@@ -1,0 +1,39 @@
+// Module ID: 12913
+// Function ID: 12914
+// Dependencies: [12825, 12828, 12827, 12833]
+// Exports: addConsoleInstrumentationHandler
+
+// Module 12913
+import _mod12825 from "module_12825" /* 12825 */;
+import _mod12827 from "module_12827" /* 12827 */;
+import _mod12828 from "module_12828" /* 12828 */;
+
+require = arg1;
+const dependencyMap = arg6;
+function instrumentConsole() {
+  if ("console" in _mod12828.GLOBAL_OBJ) {
+    const CONSOLE_LEVELS = _mod12827.CONSOLE_LEVELS;
+    const item = CONSOLE_LEVELS.forEach((item) => {
+      closure_0 = item;
+      if (item in closure_0(12828).GLOBAL_OBJ.console) {
+        tmp(12833).fill(tmp(12828).GLOBAL_OBJ.console, item, (arg0) => {
+          _mod12827.originalConsoleMethods[level] = arg0;
+          return () => {
+            const items = [...arguments];
+            level(12825).triggerHandlers("console", { args: items, level });
+            const obj3 = level(12827).originalConsoleMethods[level];
+            if (obj3) {
+              obj3.apply(level(12828).GLOBAL_OBJ.console, items);
+            }
+          };
+        });
+        const tmpResult = tmp(12833);
+      }
+    });
+  }
+}
+
+export const addConsoleInstrumentationHandler = function addConsoleInstrumentationHandler(arg0) {
+  _mod12825.addHandler("console", arg0);
+  _mod12825.maybeInstrument("console", instrumentConsole);
+};

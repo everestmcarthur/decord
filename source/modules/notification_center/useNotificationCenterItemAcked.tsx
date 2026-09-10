@@ -1,25 +1,28 @@
-// Module ID: 16422
-// Function ID: 16423
+// Module ID: 16453
+// Function ID: 16454
 // Name: useNotificationCenterItemAcked
-// Dependencies: [16415, 504, 7641, 2]
+// Dependencies: [16446, 504, 7655, 2]
 // Exports: useNotificationCenterItemAcked
 
-// Module 16422 (useNotificationCenterItemAcked)
-import closure_2 from "handleLoadFinished" /* 16415 */;
+// Module 16453 (useNotificationCenterItemAcked)
+import NotificationCenterStore from "NotificationCenterStore" /* 16446 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/notification_center/useNotificationCenterItemAcked.tsx");
+const require = globalThis.__r;
 
-export const useNotificationCenterItemAcked = function useNotificationCenterItemAcked(item, ackedBeforeId) {
-  const _require = item;
-  const items = [closure_2];
-  let stateFromStores = _require(504).useStateFromStores(items, () => closure_1_2.isLocalItemAcked(closure_0));
-  const forceUnacked = item.forceUnacked;
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notification_center/useNotificationCenterItemAcked.tsx");
+
+export const useNotificationCenterItemAcked = function useNotificationCenterItemAcked(forceUnacked, ackedBeforeId) {
+  _require = forceUnacked;
+  const items = [NotificationCenterStore];
+  let stateFromStores = require("initialize").useStateFromStores(items, () => NotificationCenterStore.isLocalItemAcked(closure_0));
+  forceUnacked = forceUnacked.forceUnacked;
   let tmp4 = !forceUnacked;
   if (!forceUnacked) {
     if (!stateFromStores) {
-      stateFromStores = _require(7641).isRemoteAcked(item, ackedBeforeId);
-      const tmpResult = _require(7641);
+      stateFromStores = require("NotificationCenterUtils").isRemoteAcked(forceUnacked, ackedBeforeId);
+      const tmpResult = require("NotificationCenterUtils");
     }
     tmp4 = stateFromStores;
   }

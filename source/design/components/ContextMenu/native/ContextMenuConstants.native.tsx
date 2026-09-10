@@ -1,18 +1,20 @@
-// Module ID: 8673
-// Function ID: 8674
-// Name: CONTEXT_MENU_LONG_PRESS_DURATION_MS
-// Dependencies: [1115, 4528, 2]
+// Module ID: 8701
+// Function ID: 8702
+// Name: ContextMenuConstants
+// Dependencies: [1115, 4542, 2]
 
-// Module 8673 (CONTEXT_MENU_LONG_PRESS_DURATION_MS)
-import HapticFeedbackTypes2 from "HapticFeedbackTypes" /* 4528 */;
-import set from "set" /* 1115 */;
+// Module 8701 (ContextMenuConstants)
+import HapticUtils from "HapticUtils" /* 4542 */;
+import PlatformUtils_mod from "PlatformUtils" /* 1115 */;
+import size from "module_2" /* 2 */;
 
-set = set.isIOS();
-const HapticFeedbackTypes = HapticFeedbackTypes2.HapticFeedbackTypes;
-const result = set.fileFinishedImporting("design/components/ContextMenu/native/ContextMenuConstants.native.tsx");
+let PlatformUtils = PlatformUtils_mod;
+PlatformUtils = PlatformUtils.isIOS();
+const HapticFeedbackTypes = HapticUtils.HapticFeedbackTypes;
+const result = size.fileFinishedImporting("design/components/ContextMenu/native/ContextMenuConstants.native.tsx");
 
 export const CONTEXT_MENU_LONG_PRESS_DURATION_MS = 300;
-export const CONTEXT_MENU_OPEN_HAPTIC = set ? HapticFeedbackTypes.IMPACT_HEAVY : HapticFeedbackTypes.IMPACT_MEDIUM;
+export const CONTEXT_MENU_OPEN_HAPTIC = PlatformUtils ? HapticFeedbackTypes.IMPACT_HEAVY : HapticFeedbackTypes.IMPACT_MEDIUM;
 export const CONTEXT_MENU_ITEM_PADDING = 12;
 export const CONTEXT_MENU_ITEM_BASE_HEIGHT = 42;
 export const CONTEXT_MENU_DIVIDER_HEIGHT = 4;

@@ -1,27 +1,27 @@
-// Module ID: 14717
-// Function ID: 14718
-// Name: pressable
-// Dependencies: [1371, 7975, 7043, 504, 4763, 7042, 1896, 7045, 11473, 1114, 2]
+// Module ID: 14743
+// Function ID: 14744
+// Name: AccountPhoneSetting
+// Dependencies: [1371, 7989, 7057, 504, 4777, 7056, 1896, 7059, 11500, 1114, 2]
 
-// Module 14717 (pressable)
+// Module 14743 (AccountPhoneSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import _modDef4763 from "module_4763" /* 4763 */;
-import ChangePhoneReason from "ChangePhoneReason" /* 7045 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
-import { PHONE_VERIFICATION_MODAL_KEY as closure_4 } from "PHONE_VERIFICATION_MODAL_KEY" /* 7043 */;
-import createToggle from "createToggle" /* 11473 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import PhoneActionCreators from "PhoneActionCreators" /* 7059 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+let closure_4 = fn(7057).PHONE_VERIFICATION_MODAL_KEY;
+const SettingBuilders = fn(11500);
+const pressable = SettingBuilders.createPressable({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.dEYpSt);
+    const intl = util.intl;
+    return intl.string(util.t.dEYpSt);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
+  parent: fn(7989).MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountPhoneSettingTrailing() {
-    const items = [closure_3];
+    const items = [UserStore];
     return initialize.useStateFromStores(items, () => {
       currentUser = currentUser.getCurrentUser();
       let phone;
@@ -32,13 +32,14 @@ createToggle = {
     });
   },
   onPress: function onAccountPhoneSettingPress() {
-    let obj = _modDef4763;
-    obj = { allowDeletePhone: true, reason: ChangePhoneReason.ChangePhoneReason.USER_SETTINGS_UPDATE };
-    obj.pushLazy(asyncRequireImpl(7042, dependencyMap.paths), obj, closure_4);
+    const obj2 = { allowDeletePhone: true, reason: null };
+    const obj = ModalActionCreatorsDefault;
+    obj2.reason = PhoneActionCreators.ChangePhoneReason.USER_SETTINGS_UPDATE;
+    obj.pushLazy(asyncRequireImpl(7056, dependencyMap.paths), obj2, closure_4);
   },
   withArrow: true
-};
-createToggle = createToggle.createPressable(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountPhoneSetting.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountPhoneSetting.tsx");
 
-export default createToggle;
+export default pressable;

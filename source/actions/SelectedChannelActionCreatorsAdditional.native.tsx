@@ -1,38 +1,43 @@
-// Module ID: 5412
-// Function ID: 5413
-// Name: getChannelSelectionOrigin
-// Dependencies: [1957, 1979, 5413, 4199, 2011, 4381, 1371, 4579, 5414, 4705, 5415, 4258, 5416, 5417, 4527, 5430, 1896, 13630, 1256, 573, 2]
+// Module ID: 5426
+// Function ID: 5427
+// Name: SelectedChannelActionCreatorsAdditional
+// Dependencies: [1957, 1979, 5427, 4212, 2011, 4395, 1371, 4593, 5428, 4719, 5429, 4271, 5430, 5431, 4541, 5444, 1896, 13653, 1256, 573, 2]
 // Exports: getChannelSelectionOrigin, selectVoiceChannelAdditional
 
-// Module 5412 (getChannelSelectionOrigin)
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import closure_4 from "createGuildRecordFromRust" /* 1979 */;
-import closure_5 from "recomputeGuild" /* 5413 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_7 from "handleConnectionOpen" /* 2011 */;
-import closure_8 from "handleConnectionOpen" /* 4381 */;
-import closure_9 from "mergeGuildAvatar" /* 1371 */;
-import closure_10 from "updateVoiceState" /* 4579 */;
-import { STAGE_BOOSTING_SHEET_KEY } from "MAX_STAGE_TOPIC_LENGTH" /* 5414 */;
+// Module 5426 (SelectedChannelActionCreatorsAdditional)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import v1 from "v1" /* 1256 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 5427 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
+import UserStore from "UserStore" /* 1371 */;
+import VoiceStateStore from "VoiceStateStore" /* 4593 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("actions/SelectedChannelActionCreatorsAdditional.native.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const STAGE_BOOSTING_SHEET_KEY = fn(5428).STAGE_BOOSTING_SHEET_KEY;
+const size = fn(2);
+const result = size.fileFinishedImporting("actions/SelectedChannelActionCreatorsAdditional.native.tsx");
 
 export const getChannelSelectionOrigin = function getChannelSelectionOrigin() {
-  guildId = guildId.getGuildId();
+  let guildId = SelectedGuildStore.getGuildId();
   if (guildId == null) {
     guildId = null;
   }
   const obj = { fromGuildId: guildId, fromChannelId: null };
-  channelId = channelId.getChannelId(guildId, false);
+  let channelId = SelectedChannelStore.getChannelId(guildId, false);
   if (channelId == null) {
     channelId = null;
   }
-  obj[1] = channelId;
+  obj.fromChannelId = channelId;
   return obj;
 };
 export const selectVoiceChannelAdditional = function selectVoiceChannelAdditional(id, guildId, flag, flag2, arg4) {
-  const _require = id;
+  _require = id;
   importDefault = guildId;
   if (flag === undefined) {
     flag = false;
@@ -53,35 +58,32 @@ export const selectVoiceChannelAdditional = function selectVoiceChannelAdditiona
     flag4 = false;
   }
   const channel = flag2.getChannel(id);
-  currentUser = currentUser.getCurrentUser();
+  const currentUser = UserStore.getCurrentUser();
   if (null != currentUser) {
     if (null != channel) {
-      const isChannelFullResult = _require(flag[9]).isChannelFull(channel, closure_10, flag3);
+      const isChannelFullResult = require("ChannelUtils").isChannelFull(channel, VoiceStateStore, flag3);
       const check = flag4.getCheck(channel.guild_id);
       if (!check.canChat) {
-        let tmp14Result = tmp14(tmp15[10]);
         if (!tmp14Result.canLurkerListen(channel)) {
-          tmp14Result = tmp14(tmp15[11]);
-          return tmp14Result.unverifiedVoiceGate(check);
+          return tmp14(tmp15[11]).unverifiedVoiceGate(check);
         }
+        tmp14Result = tmp14(tmp15[10]);
       }
-      const tmp4 = importDefault(flag[12])(channel, closure_6);
+      const tmp4 = require("canJoinVoiceChannel")(channel, PermissionStore);
       if (isChannelFullResult) {
         if (channel.isGuildStageVoice()) {
-          if (tmp14Result1.getStageHasMedia(channel.id)) {
-            obj = { channel: null };
-            obj[0] = channel;
-            importDefault(tmp15[14]).openLazy(tmp14(tmp15[16])(tmp15[15], tmp15.paths), STAGE_BOOSTING_SHEET_KEY, obj);
+          if (tmp14Result4.getStageHasMedia(channel.id)) {
+            let obj2 = { channel };
+            require("ActionSheetActionCreators").openLazy(tmp14(tmp15[16])(tmp15[15], tmp15.paths), STAGE_BOOSTING_SHEET_KEY, obj2);
           }
-          tmp14Result1 = tmp14(tmp15[13]);
+          tmp14Result4 = tmp14(tmp15[13]);
         }
       }
     }
-    importDefault(flag[17])(() => {
-      let obj = id(flag[18]);
-      const v4Result = obj.v4();
-      obj = { type: "VOICE_CHANNEL_SELECT", guildId, channelId: id, currentVoiceChannelId: closure_1_7.getVoiceChannelId(), video: flag, stream: flag2, lockVoiceStateForResume: flag3, joinVoiceId: v4Result, bypassIdleUpdate: flag4 };
-      guildId(flag[19]).dispatch(obj);
+    require("collectCallFeedback")(() => {
+      const v4Result = v1.v4();
+      const obj2 = DispatcherDefault;
+      obj2.dispatch({ type: "VOICE_CHANNEL_SELECT", guildId, channelId, currentVoiceChannelId: SelectedChannelStore.getVoiceChannelId(), video: flag, stream: flag2, lockVoiceStateForResume: flag3, joinVoiceId: v4Result, bypassIdleUpdate: flag4 });
     }, id, flag2, flag);
   }
 };

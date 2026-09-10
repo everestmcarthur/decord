@@ -1,44 +1,41 @@
-// Module ID: 10156
-// Function ID: 10157
+// Module ID: 10183
+// Function ID: 10184
 // Name: NotificationSettingsMuteBanner
-// Dependencies: [19, 17, 21, 4560, 576, 4556, 4975, 1114, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 4570, 4989, 1114, 2]
 // Exports: NotificationSettingsMuteBanner, getMuteBannerSubtitleFromConfig
 
-// Module 10156 (NotificationSettingsMuteBanner)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import Button from "Button" /* 4975 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10183 (NotificationSettingsMuteBanner)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { card: null };
-createCacheKey = { padding: 16, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", borderRadius: ThemesDefault.radii.lg + 8, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
-createCacheKey[0] = createCacheKey;
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMuteBanner.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { card: { padding: 16, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", borderRadius: nativeDefault.radii.lg + 8, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND } };
+let closure_5 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMuteBanner.tsx");
 
 export const NotificationSettingsMuteBanner = function NotificationSettingsMuteBanner(children) {
-  let obj = { style: null, children: null };
-  const items = [children.style, callback3().card];
-  obj[0] = items;
-  obj = { style: { flex: 1, marginRight: 8 }, children: null };
-  obj = { variant: "text-md/semibold", color: "text-overlay-light", children: children.title };
-  const items1 = [callback(Text.Text, obj), callback(Text.Text, { variant: "text-xs/medium", color: "text-overlay-light", children: children.subtitle })];
-  obj[1] = items1;
-  const items2 = [callback2(View, obj), ];
-  const obj2 = { text: null, onPress: null, variant: "primary-overlay" };
-  const intl = getSystemLocale.intl;
-  obj2[0] = intl.string(getSystemLocale.t.YqAjXy);
-  obj2[1] = children.onPressUnmute;
-  items2[1] = callback(Button.Button, obj2);
-  obj[1] = items2;
-  return callback2(View, obj);
+  const obj = { style: null, children: null };
+  const items = [children.style, closure_5().card];
+  obj.style = items;
+  const obj2 = { style: { flex: 1, marginRight: 8 }, children: null };
+  const items1 = [React3(Text_Text.Text, { variant: "text-md/semibold", color: "text-overlay-light", children: children.title }), React3(Text_Text.Text, { variant: "text-xs/medium", color: "text-overlay-light", children: children.subtitle })];
+  obj2.children = items1;
+  const items2 = [React4(View, obj2), ];
+  const obj5 = { text: null, onPress: null, variant: "primary-overlay" };
+  const intl = util.intl;
+  obj5.text = intl.string(util.t.YqAjXy);
+  obj5.onPress = children.onPressUnmute;
+  items2[1] = React3(components_Button_Button.Button, obj5);
+  obj.children = items2;
+  return React4(View, obj);
 };
 export const getMuteBannerSubtitleFromConfig = function getMuteBannerSubtitleFromConfig(config) {
   let end_time;
@@ -46,15 +43,15 @@ export const getMuteBannerSubtitleFromConfig = function getMuteBannerSubtitleFro
     end_time = config.end_time;
   }
   if (null == end_time) {
-    const intl = getSystemLocale.intl;
-    let stringResult = intl.string(getSystemLocale.t["tFqP/P"]);
+    const intl = util.intl;
+    let stringResult = intl.string(util.t["tFqP/P"]);
   } else {
-    const intl2 = getSystemLocale.intl;
+    const intl2 = util.intl;
     const obj = { endTime: null };
     const _Date = Date;
     const date = new Date(config.end_time);
-    obj[0] = date.toLocaleString(getSystemLocale.intl.currentLocale, { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
-    stringResult = intl2.formatToPlainString(getSystemLocale.t.C7m4oh, obj);
+    obj.endTime = date.toLocaleString(util.intl.currentLocale, { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
+    stringResult = intl2.formatToPlainString(util.t.C7m4oh, obj);
   }
   return stringResult;
 };

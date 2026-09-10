@@ -1,22 +1,22 @@
-// Module ID: 6616
-// Function ID: 6617
+// Module ID: 6630
+// Function ID: 6631
 // Name: CircleXIcon
-// Dependencies: [19, 17, 21, 576, 4261, 6617, 6618, 2]
+// Dependencies: [19, 17, 21, 576, 4274, 6631, 6632, 2]
 // Exports: CircleXIcon
 
-// Module 6616 (CircleXIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 6617 */;
-import registerAsset2 from "registerAsset" /* 6618 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 6630 (CircleXIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod6631 from "module_6631" /* 6631 */;
+import _mod6632 from "module_6632" /* 6632 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/CircleXIcon.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/CircleXIcon.tsx");
 
 export const CircleXIcon = function CircleXIcon(color) {
   ({ style, secondaryColor } = color);
@@ -25,19 +25,19 @@ export const CircleXIcon = function CircleXIcon(color) {
   }
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
-  let obj = { children: null };
-  obj = { source: registerAsset, color: secondaryColor, style };
+  const merged = Object.assign(color, Object.assign({ style: 0, secondaryColor: 0, color: 0 }));
+  const obj = { children: null };
   const merged1 = Object.assign(merged);
-  const items = [callback(BaseIconImage.BaseIconImage, obj), ];
-  obj = { source: registerAsset2, color: INTERACTIVE_ICON_DEFAULT, style: items2 };
+  const items = [React4(BaseIconImage.BaseIconImage, { source: _mod6631, color: secondaryColor, style }), ];
+  const obj3 = { source: _mod6632, color: INTERACTIVE_ICON_DEFAULT, style: null };
   const items1 = [style];
-  items2 = [];
+  const items2 = [];
   items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };
+  obj3.style = items2;
   const merged2 = Object.assign(merged);
-  items[1] = callback(BaseIconImage.BaseIconImage, obj);
-  obj[0] = items;
-  return callback2(View, obj);
+  items[1] = React4(BaseIconImage.BaseIconImage, obj3);
+  obj.children = items;
+  return hasOwnProperty(View, obj);
 };

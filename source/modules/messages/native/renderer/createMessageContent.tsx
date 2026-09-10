@@ -1,71 +1,65 @@
-// Module ID: 7940
-// Function ID: 7941
-// Name: createThreadEmbed
-// Dependencies: [17, 4552, 4788, 4379, 5459, 7938, 7941, 4200, 7942, 7595, 4201, 7306, 1183, 502, 1957, 2021, 1979, 4209, 7838, 1371, 4553, 7933, 1074, 7944, 4713, 7945, 11, 7887, 7329, 1114, 7946, 7947, 7948, 4899, 1384, 7761, 7953, 5004, 7954, 7956, 7270, 7958, 8088, 8089, 8105, 7292, 7600, 1935, 8106, 8110, 8033, 8154, 4793, 1399, 1396, 8157, 1178, 7186, 13181, 1369, 13182, 4188, 5407, 13183, 13184, 4242, 11722, 13185, 8165, 7267, 576, 13186, 7961, 13188, 13189, 8085, 13192, 13193, 13210, 13229, 13231, 13245, 7965, 7966, 13246, 13249, 13250, 13251, 7967, 7963, 2]
+// Module ID: 7954
+// Function ID: 7955
+// Name: createMessageContent
+// Dependencies: [17, 4566, 4802, 4393, 5473, 7952, 7955, 4213, 7956, 7609, 4214, 7320, 1183, 502, 1957, 2021, 1979, 4222, 7852, 1371, 4567, 7947, 1074, 7958, 4727, 7959, 11, 7901, 7343, 1114, 7960, 7961, 7962, 4913, 1384, 7775, 7967, 5018, 7968, 7970, 7284, 7972, 8103, 8104, 8131, 7306, 7614, 1935, 8132, 8136, 8048, 8180, 4807, 1399, 1396, 8183, 1178, 8034, 13204, 1369, 13205, 4201, 5421, 13206, 13207, 4255, 11748, 13208, 8191, 7281, 576, 13209, 7975, 13211, 13212, 8100, 13215, 13216, 13233, 13252, 13254, 13268, 7979, 7980, 13269, 13272, 13273, 13274, 7981, 7977, 2]
 
-// Module 7940 (createThreadEmbed)
-import set from "set" /* 2 */;
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import computeChannelName from "computeChannelName" /* 4713 */;
-import processMessage from "processMessage" /* 7595 */;
-import _formatMessageCountLabel from "_formatMessageCountLabel" /* 7887 */;
-import Changeset from "Changeset" /* 7933 */;
-import items6 from "items" /* 7944 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7945 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import closure_5 from "addApplication" /* 4788 */;
-import closure_6 from "reset" /* 4379 */;
-import closure_7 from "getEmojiToGroupId" /* 5459 */;
-import closure_8 from "handleMessageSendFailedAutomod" /* 7938 */;
-import closure_9 from "deleteNonce" /* 7941 */;
-import closure_10 from "initialize" /* 4200 */;
-import closure_11 from "set" /* 7942 */;
-import closure_12 from "processMessage" /* 7595 */;
-import closure_14 from "storeThread" /* 4201 */;
-import closure_15 from "updateState" /* 7306 */;
-import closure_16 from "handleThemeChange" /* 1183 */;
-import closure_17 from "fetchFingerprint" /* 502 */;
-import closure_18 from "ensureGuildLoaded" /* 1957 */;
-import closure_19 from "trackCommunicationDisabled" /* 2021 */;
-import closure_20 from "createGuildRecordFromRust" /* 1979 */;
-import closure_21 from "markAllUserIdListsStale" /* 4209 */;
-import closure_22 from "initialize" /* 7838 */;
-import closure_23 from "mergeGuildAvatar" /* 1371 */;
-import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4553 */;
-import ME from "ME" /* 1074 */;
+// Module 7954 (createMessageContent)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import _mod17 from "module_17" /* 17 */;
+import util from "util" /* 1114 */;
+import useChannelName from "useChannelName" /* 4727 */;
+import ReferencedMessageStore2 from "ReferencedMessageStore" /* 7609 */;
+import MessageCountUtils from "MessageCountUtils" /* 7901 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 7947 */;
+import GuildTagConstants from "GuildTagConstants" /* 7958 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7959 */;
+import transformMessageComponentsDefault from "transformMessageComponents" /* 8136 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import ApplicationStore from "ApplicationStore" /* 4802 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4393 */;
+import EmojiStore from "EmojiStore" /* 5473 */;
+import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 7952 */;
+import InteractionStore from "InteractionStore" /* 7955 */;
+import LurkingStore from "LurkingStore" /* 4213 */;
+import MediaPostSharePromptStore from "MediaPostSharePromptStore" /* 7956 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4214 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7320 */;
+import ThemeStore from "ThemeStore" /* 1183 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
+import UploadStore from "UploadStore" /* 7852 */;
+import UserStore from "UserStore" /* 1371 */;
+import MessageConstants from "MessageConstants" /* 4567 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, options, arg5) {
+const ReferencedMessageStore = ReferencedMessageStore2;
+
+function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, options, forcedTheme) {
   if (!isInlineReplyPreview) {
     if (message.hasFlag(constants3.HAS_THREAD)) {
       if (null != channel1) {
         let string2Result = dependencyMap;
-        const channelName = computeChannelName.computeChannelName(channel1, closure_23, closure_21);
-        const backgroundColor = getEmbedThemeColorsDefault(arg5).baseColors.backgroundColor;
-        const obj11 = computeChannelName;
+        const channelName = useChannelName.computeChannelName(channel1, UserStore, RelationshipStore);
+        const backgroundColor = getEmbedThemeColorsDefault(forcedTheme).baseColors.backgroundColor;
         const tmp19 = importDefault;
-        const mostRecentMessage = store3.getMostRecentMessage(DISCORD_EPOCHDefault.castMessageIdAsChannelId(message.id));
-        const obj12 = DISCORD_EPOCHDefault;
-        const count = store3.getCount(DISCORD_EPOCHDefault.castMessageIdAsChannelId(message.id));
-        const obj13 = DISCORD_EPOCHDefault;
-        let intl5 = _formatMessageCountLabel.formatMobileMessageCountLabel(count, channel1.id);
-        const obj14 = _formatMessageCountLabel;
-        let string2 = _formatMessageCountLabel.formatMessageCountLabel(count, channel1.id);
+        const mostRecentMessage = ThreadMessageStore.getMostRecentMessage(SnowflakeUtilsDefault.castMessageIdAsChannelId(message.id));
+        const count = ThreadMessageStore.getCount(SnowflakeUtilsDefault.castMessageIdAsChannelId(message.id));
+        let intl5 = MessageCountUtils.formatMobileMessageCountLabel(count, channel1.id);
+        let string2 = MessageCountUtils.formatMessageCountLabel(count, channel1.id);
         if (null != count) {
           if (count > 0) {
-            let tmp15Result = tmp15(7329);
             if (tmp15Result.isChannelSpoilerGated(channel1)) {
-              let obj = { title: null, messageCountLabel: null, messageCountAccessibilityLabel: null, messagePreviewString: null, archived: false, backgroundColor: null };
-              obj[0] = channelName;
-              obj[1] = intl5;
-              obj[2] = string2;
+              const obj2 = { title: channelName, messageCountLabel: intl5, messageCountAccessibilityLabel: string2, messagePreviewString: null, archived: false, backgroundColor: null };
               intl5 = tmp15(1114).intl;
               string2 = intl5.string;
               string2Result = string2(tmp15(1114).t["5uaI/7"]);
-              obj[3] = string2Result;
-              obj[5] = backgroundColor;
-              obj1 = obj;
+              obj2.messagePreviewString = string2Result;
+              obj2.backgroundColor = backgroundColor;
+              let obj4 = obj2;
             } else {
               const threadMetadata = channel1.threadMetadata;
               let archived;
@@ -73,41 +67,28 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
                 archived = threadMetadata.archived;
               }
               if (archived) {
-                obj = { title: null, messageCountLabel: null, messageCountAccessibilityLabel: null, messagePreviewString: null, archived: true, archivedIconUrl: null, backgroundColor: null };
-                obj[0] = channelName;
-                obj[1] = intl5;
-                obj[2] = string2;
+                const obj3 = { title: channelName, messageCountLabel: intl5, messageCountAccessibilityLabel: string2, messagePreviewString: null, archived: true, archivedIconUrl: null, backgroundColor: null };
                 const intl4 = tmp15(1114).intl;
-                obj[3] = intl4.string(tmp15(1114).t.ZTo4HS);
-                tmp15Result = tmp15(7946);
-                obj[5] = tmp15Result.getAssetUriForEmbed(tmp19(7947));
-                obj[6] = backgroundColor;
-                obj1 = obj;
+                obj3.messagePreviewString = intl4.string(tmp15(1114).t.ZTo4HS);
+                obj3.archivedIconUrl = tmp15(7960).getAssetUriForEmbed(tmp19(7961));
+                obj3.backgroundColor = backgroundColor;
+                obj4 = obj3;
+                const tmp15Result2 = tmp15(7960);
               } else {
                 if (null != mostRecentMessage) {
                   if (mostRecentMessage.type !== constants.CHANNEL_NAME_CHANGE) {
                     if (mostRecentMessage.type !== tmp23.THREAD_STARTER_MESSAGE) {
                       if (!mostRecentMessage.blocked) {
                         if (!mostRecentMessage.ignored) {
-                          obj1 = { title: null, messageCountLabel: null, messageCountAccessibilityLabel: null, referencedMessage: null, backgroundColor: null };
-                          obj1[0] = channelName;
-                          obj1[1] = intl5;
-                          obj1[2] = string2;
-                          const obj2 = { state: null, message: null };
-                          obj2[0] = ReferencedMessageRowState.LOADED;
-                          const obj3 = { message: null, roleStyle: null, options: null, isFirst: true, isEditing: false, canShowImages: true, isSystemDM: false, isInlineReplyPreview: true };
-                          obj3[0] = mostRecentMessage;
-                          obj3[1] = roleStyle;
-                          obj3[2] = options;
-                          obj2[1] = createMessageContent(obj3);
-                          obj1[3] = obj2;
-                          obj1[4] = backgroundColor;
+                          obj4 = { title: channelName, messageCountLabel: intl5, messageCountAccessibilityLabel: string2, referencedMessage: null, backgroundColor: null };
+                          const obj5 = { state: ReferencedMessageRowState.LOADED, message: null };
+                          const obj6 = { message: mostRecentMessage, roleStyle, options, isFirst: true, isEditing: false, canShowImages: true, isSystemDM: false, isInlineReplyPreview: true };
+                          obj5.message = createMessageContent(obj6);
+                          obj4.referencedMessage = obj5;
+                          obj4.backgroundColor = backgroundColor;
                         }
                       }
-                      const obj4 = { title: null, messageCountLabel: null, messageCountAccessibilityLabel: null, messagePreviewString: null, archived: false, backgroundColor: null };
-                      obj4[0] = channelName;
-                      obj4[1] = intl5;
-                      obj4[2] = string2;
+                      const obj7 = { title: channelName, messageCountLabel: intl5, messageCountAccessibilityLabel: string2, messagePreviewString: null, archived: false, backgroundColor: null };
                       const intl2 = tmp15(1114).intl;
                       const string = intl2.string;
                       let XAkOo2 = tmp15(1114).t;
@@ -117,30 +98,25 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
                       } else {
                         stringResult = string(XAkOo2["G7p6v/"]);
                       }
-                      obj4[3] = stringResult;
-                      obj4[5] = backgroundColor;
+                      obj7.messagePreviewString = stringResult;
+                      obj7.backgroundColor = backgroundColor;
                     }
                   }
                 }
-                const obj5 = { title: null, messageCountLabel: null, messageCountAccessibilityLabel: null, messagePreviewString: null, archived: false, backgroundColor: null };
-                obj5[0] = channelName;
-                obj5[1] = intl5;
-                obj5[2] = string2;
+                const obj8 = { title: channelName, messageCountLabel: intl5, messageCountAccessibilityLabel: string2, messagePreviewString: null, archived: false, backgroundColor: null };
                 const intl3 = tmp15(1114).intl;
-                obj5[3] = intl3.string(tmp15(1114).t.ZTo4HS);
-                obj5[5] = backgroundColor;
-                obj1 = obj5;
+                obj8.messagePreviewString = intl3.string(tmp15(1114).t.ZTo4HS);
+                obj8.backgroundColor = backgroundColor;
+                obj4 = obj8;
               }
             }
+            tmp15Result = tmp15(7343);
           }
         }
-        obj = { title: null, messageCountLabel: null, messageCountAccessibilityLabel: null, messagePreviewString: null, archived: false, backgroundColor: null };
-        obj[0] = channelName;
-        obj[1] = intl5;
-        obj[2] = string2;
+        const obj = { title: channelName, messageCountLabel: intl5, messageCountAccessibilityLabel: string2, messagePreviewString: null, archived: false, backgroundColor: null };
         const intl = tmp15(1114).intl;
-        obj[3] = intl.string(getSystemLocale.t.HYtNyE);
-        obj[5] = backgroundColor;
+        obj.messagePreviewString = intl.string(util.t.HYtNyE);
+        obj.backgroundColor = backgroundColor;
         return obj;
       }
     }
@@ -155,27 +131,25 @@ function createMessageContent(message) {
   ({ options, pushFeedbackType, renderContentOnly } = message);
   gifAutoPlay = undefined;
   shouldObscureSpoiler = undefined;
-  let shouldDisableInteractiveComponents;
-  closure_4 = undefined;
-  let store;
-  guildId = undefined;
+  AccessibilityStore = undefined;
+  ApplicationStore = undefined;
+  let guildId1;
   let enabledHarmTypesForMessage;
   let result1;
   let setting;
   let interaction;
   ({ ignoreMentioned, animateEmoji, gifAutoPlay } = options);
   ({ renderCommunicationDisabled, renderAttachments, renderPolls, forcedTheme, forceHideSimpleEmbedContent, shouldObscureSpoiler } = options);
-  shouldDisableInteractiveComponents = options.shouldDisableInteractiveComponents;
+  const shouldDisableInteractiveComponents = options.shouldDisableInteractiveComponents;
   const restrictedPreview = options.restrictedPreview;
   ({ renderEmbeds, renderReactions, inlineEmbedMedia, inlineAttachmentMedia, constrainedWidth, animatingStickerMessageId, timestampHourCycle, renderCodedLinks, renderGiftCode, renderActivityInstanceEmbed, renderActivityInviteEmbed, renderComponents, renderThreadEmbeds, renderReplies, renderExecutedCommands, renderSharedClientTheme, renderForumPostActions, ignoreEmbedDescriptionCache, useAlternateEmbedColors } = options);
   if (forcedTheme == null) {
-    let merged = theme;
-    forcedTheme = theme.theme;
+    forcedTheme = ThemeStore.theme;
   }
   const tmp3 = shouldObscureSpoiler;
   const tmp4 = gifAutoPlay(shouldObscureSpoiler[36])(forcedTheme, useAlternateEmbedColors);
-  closure_4 = tmp4;
-  store = tmp5;
+  AccessibilityStore = tmp4;
+  ApplicationStore = tmp5;
   let tmp7 = tmp5;
   if (true === canShowImages) {
     tmp7 = renderEmbeds;
@@ -191,20 +165,18 @@ function createMessageContent(message) {
   if (true === canShowImages) {
     tmp10 = inlineAttachmentMedia;
   }
-  let obj = store4;
-  const channel = store4.getChannel(message.getChannelId());
-  let tmp2Result = tmp2(tmp3[26]);
-  const channel1 = store4.getChannel(tmp2Result.castMessageIdAsChannelId(message.id));
-  guildId = undefined;
+  const channel = ChannelStore.getChannel(message.getChannelId());
+  const channel1 = ChannelStore.getChannel(gifAutoPlay(tmp3[26]).castMessageIdAsChannelId(message.id));
+  guildId1 = undefined;
   if (channel != null) {
-    guildId = channel.getGuildId();
+    guildId1 = channel.getGuildId();
   }
   const tmp13 = message;
-  let obj4 = message(tmp3[37]);
-  const hasEnhancedRoleColors = obj4.getHasEnhancedRoleColors(guildId, message.author.id);
+  const tmp2Result = gifAutoPlay(tmp3[26]);
+  const hasEnhancedRoleColors = message(tmp3[37]).getHasEnhancedRoleColors(guildId1, message.author.id);
   if (messageForward == null) {
-    let tmp13Result = tmp13(tmp3[38]);
-    messageForward = tmp13Result.maybeCreateSingleForwardForMessage(message);
+    messageForward = tmp13(tmp3[38]).maybeCreateSingleForwardForMessage(message);
+    const tmp13Result = tmp13(tmp3[38]);
   }
   let message2 = message;
   if (null != messageForward) {
@@ -212,78 +184,48 @@ function createMessageContent(message) {
   }
   let items = [];
   if (renderReactions) {
-    obj = { reactions: null, animateEmoji: null };
-    obj[0] = message.reactions;
-    obj[1] = animateEmoji;
-    items = tmp2(tmp3[39])(obj);
+    const obj2 = { reactions: message.reactions, animateEmoji };
+    items = tmp2(tmp3[39])(obj2);
   }
   let tmp16 = null;
   if (message.type === constants.THREAD_STARTER_MESSAGE) {
-    const messageByReference = store2.getMessageByReference(message.messageReference);
-    message = null;
+    const messageByReference = ReferencedMessageStore.getMessageByReference(message.messageReference);
+    let message1 = null;
     if (messageByReference.state === ReferencedMessageState.LOADED) {
-      message = messageByReference.message;
+      message1 = messageByReference.message;
     }
-    tmp16 = message;
+    tmp16 = message1;
   }
   if (null != tmp16) {
-    obj = {};
-    merged = createMessageContent;
-    obj = { message: null, roleStyle: null, isFirst: null, isEditing: null, canShowImages: null, isSystemDM: null, isInlineReplyPreview: null, options: null };
-    obj[0] = tmp16;
-    obj[1] = roleStyle;
-    obj[2] = isFirst;
-    obj[3] = isEditing;
-    obj[4] = canShowImages;
-    obj[5] = isSystemDM;
-    obj[6] = isInlineReplyPreview;
-    obj = {};
-    merged = obj;
-    merged = options;
-    merged = Object.assign(options);
-    obj.renderThreadEmbeds = false;
-    obj.renderReactions = false;
-    obj.shouldDisableInteractiveComponents = true;
-    obj[7] = obj;
-    merged = obj;
-    merged = Object.assign(createMessageContent(obj));
-    obj.id = message.id;
-    return obj;
+    const obj3 = {};
+    const obj5 = { message: tmp16, roleStyle, isFirst, isEditing, canShowImages, isSystemDM, isInlineReplyPreview, options: null };
+    const obj6 = {};
+    const merged = Object.assign(options);
+    obj6.renderThreadEmbeds = false;
+    obj6.renderReactions = false;
+    obj6.shouldDisableInteractiveComponents = true;
+    obj5.options = obj6;
+    const merged1 = Object.assign(createMessageContent(obj5));
+    obj3.id = message.id;
+    return obj3;
   } else if (tmp2(tmp3[40])(message)) {
     if (message.type === tmp15.THREAD_CREATED) {
-      obj1 = { threadEmbed: null };
-      merged = createThreadEmbed;
-      merged = message;
-      merged = roleStyle;
-      merged = isInlineReplyPreview;
-      merged = channel1;
-      merged = options;
-      merged = forcedTheme;
-      obj1[0] = createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, options, tmp6);
-      obj = tmp13(tmp3[41]);
-      obj = { message: null, theme: null, reactions: null, roleStyle: null };
-      obj[0] = message;
-      obj[1] = forcedTheme;
-      obj[2] = items;
-      obj[3] = roleStyle;
-      merged = obj1;
-      merged = Object.assign(obj.createSystemMessageContent(obj));
-      merged = obj1;
+      const obj7 = { threadEmbed: createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, options, tmp6) };
+      const obj8 = { message, theme: forcedTheme, reactions: items, roleStyle };
+      const merged2 = Object.assign(tmp13(tmp3[41]).createSystemMessageContent(obj8));
+      let systemMessageContent = obj7;
+      const tmp13Result59 = tmp13(tmp3[41]);
     } else {
-      tmp13Result = tmp13(tmp3[41]);
-      const obj2 = { message: null, theme: null, reactions: null, roleStyle: null, isForumPost: null };
-      obj2[0] = message;
-      obj2[1] = forcedTheme;
-      obj2[2] = items;
-      obj2[3] = roleStyle;
-      merged = undefined;
+      const obj9 = { message, theme: forcedTheme, reactions: items, roleStyle, isForumPost: null };
+      let isForumPostResult;
       if (channel != null) {
-        merged = channel.isForumPost();
+        isForumPostResult = channel.isForumPost();
       }
-      obj2[4] = merged;
-      merged = tmp13Result.createSystemMessageContent(obj2);
+      obj9.isForumPost = isForumPostResult;
+      systemMessageContent = tmp13(tmp3[41]).createSystemMessageContent(obj9);
+      const tmp13Result60 = tmp13(tmp3[41]);
     }
-    return merged;
+    return systemMessageContent;
   } else {
     let tmp21 = !isFirst;
     if (isFirst) {
@@ -297,7 +239,7 @@ function createMessageContent(message) {
     const result = tmp13(tmp3[42]).isMessageNewerThanImprovedMarkdownEpoch(timestamp.valueOf());
     if (null != message2.content) {
       if ("" !== message2.content) {
-        const tmp13Result2 = tmp13(tmp3[43]);
+        const tmp13Result62 = tmp13(tmp3[43]);
         if (!forceHideSimpleEmbedContent) {
           let tmp23 = tmp7;
           if (tmp7) {
@@ -306,11 +248,10 @@ function createMessageContent(message) {
           forceHideSimpleEmbedContent = tmp23;
         }
         const tmp24 = null != channel1 && message.isFirstMessageInForumPost(channel1);
-        let parseMessageMarkupResult = tmp13Result2.parseMessageMarkup(message, message2, forceHideSimpleEmbedContent, isInlineReplyPreview, tmp24, result, result);
+        let parseMessageMarkupResult = tmp13Result62.parseMessageMarkup(message, message2, forceHideSimpleEmbedContent, isInlineReplyPreview, tmp24, result, result);
       }
-      const content = parseMessageMarkupResult.content;
+      ({ content, hasSpoilerEmbeds } = parseMessageMarkupResult);
       let tmp33 = restrictedPreview;
-      ({ hasSpoilerEmbeds, hasBailedAst } = parseMessageMarkupResult);
       if (restrictedPreview) {
         tmp33 = null != content;
       }
@@ -319,80 +260,72 @@ function createMessageContent(message) {
         stringResult = tmp2(tmp3[44])(content);
       }
       enabledHarmTypesForMessage = tmp13(tmp3[45]).getEnabledHarmTypesForMessage(message);
-      const tmp13Result3 = tmp13(tmp3[45]);
+      const tmp13Result63 = tmp13(tmp3[45]);
       result1 = tmp13(tmp3[46]).shouldAgeVerifyForExplicitMedia();
       const ViewImageDescriptions = tmp13(tmp3[47]).ViewImageDescriptions;
       setting = ViewImageDescriptions.getSetting();
       if (tmp7) {
-        tmp7 = !hasBailedAst;
+        tmp7 = !parseMessageMarkupResult.hasBailedAst;
       }
       if (tmp7) {
         tmp7 = !restrictedPreview;
       }
       interaction = setting.getInteraction(message);
-      let tmp40;
+      let tmp2Result1Result;
       if (tmp7) {
-        const obj3 = { embeds: null, channelId: null, gifAutoPlay: null, hasSpoilerEmbeds: null, ignoreEmbedDescriptionCache: null, shouldInlineEmbedMedia: null, colors: null, showListsAndHeaders: null, showMaskedLinks: null, themedBackgroundColor: null, enabledContentHarmTypeFlags: null, shouldAgeVerify: null, authorIsBot: null, showContentInventoryEntryFallbackEmbed: null, transformComponents: null };
-        obj3[0] = message2.embeds;
-        obj3[1] = message.channel_id;
-        obj3[2] = gifAutoPlay;
-        obj3[3] = hasSpoilerEmbeds;
-        obj3[4] = ignoreEmbedDescriptionCache;
-        obj3[5] = tmp9;
-        obj3[6] = tmp4;
-        obj3[7] = result;
-        obj3[8] = result;
-        obj3[9] = tmp4.embedBackgroundColor;
-        obj3[10] = enabledHarmTypesForMessage;
-        obj3[11] = result1;
-        obj3[12] = message.author.bot;
-        obj3[13] = message.showContentInventoryEntryFallbackEmbed;
-        obj3[14] = function transformComponents(arg0) {
-          return gifAutoPlay(shouldObscureSpoiler[49])({ message, guildId, interaction, shouldDisableInteractiveComponents, shouldShowMedia: closure_5, shouldObscureSpoiler, enabledContentHarmTypeFlags: enabledHarmTypesForMessage, shouldAgeVerify: result1, shouldShowMosaicMediaDescriptions: setting, shouldAutoPlayGifs: gifAutoPlay, colors: closure_4 }, arg0);
+        const obj10 = { embeds: message2.embeds, channelId: message.channel_id, gifAutoPlay, hasSpoilerEmbeds: null, ignoreEmbedDescriptionCache: null, shouldInlineEmbedMedia: null, colors: null, showListsAndHeaders: null, showMaskedLinks: null, themedBackgroundColor: null, enabledContentHarmTypeFlags: null, shouldAgeVerify: null, authorIsBot: null, showContentInventoryEntryFallbackEmbed: null, transformComponents: null };
+        if (hasSpoilerEmbeds) {
+          hasSpoilerEmbeds = shouldObscureSpoiler;
+        }
+        obj10.hasSpoilerEmbeds = hasSpoilerEmbeds;
+        obj10.ignoreEmbedDescriptionCache = ignoreEmbedDescriptionCache;
+        obj10.shouldInlineEmbedMedia = tmp9;
+        obj10.colors = tmp4;
+        obj10.showListsAndHeaders = result;
+        obj10.showMaskedLinks = result;
+        obj10.themedBackgroundColor = tmp4.embedBackgroundColor;
+        obj10.enabledContentHarmTypeFlags = enabledHarmTypesForMessage;
+        obj10.shouldAgeVerify = result1;
+        obj10.authorIsBot = message.author.bot;
+        obj10.showContentInventoryEntryFallbackEmbed = message.showContentInventoryEntryFallbackEmbed;
+        obj10.transformComponents = function transformComponents(arg0) {
+          return transformMessageComponentsDefault({ message, guildId: guildId1, interaction, shouldDisableInteractiveComponents, shouldShowMedia, shouldObscureSpoiler, enabledContentHarmTypeFlags: enabledHarmTypesForMessage, shouldAgeVerify: result1, shouldShowMosaicMediaDescriptions: setting, shouldAutoPlayGifs: gifAutoPlay, colors }, arg0);
         };
-        tmp40 = tmp2(tmp3[48])(obj3);
+        tmp2Result1Result = tmp2(tmp3[48])(obj10);
+        const tmp2Result7 = tmp2(tmp3[48]);
       }
-      obj4 = { message: null, isSystemDM: null, channel: null, colors: null };
-      obj4[0] = message;
-      obj4[1] = isSystemDM;
-      obj4[2] = channel;
-      obj4[3] = tmp4;
-      const tmp13Result4 = tmp13(tmp3[46]);
-      let obj14 = uploaderFileForMessageId;
-      ({ tagText, tagAccessibilityLabel, tagVerified, tagTextColor, tagBackgroundColor, tagType, tagIconUrl, opTagText, opTagTextColor, opTagBackgroundColor } = tmp2(tmp3[50])(obj4));
-      uploaderFileForMessageId = uploaderFileForMessageId.getUploaderFileForMessageId(message.id);
-      const tmp41 = tmp2(tmp3[50])(obj4);
-      let tmp46 = tmp40;
-      if (!tmp45) {
-        let items1 = tmp40;
-        if (tmp40 == null) {
+      const obj11 = { message, isSystemDM, channel, colors: tmp4 };
+      const tmp13Result64 = tmp13(tmp3[46]);
+      ({ tagText, tagAccessibilityLabel, tagVerified, tagTextColor, tagBackgroundColor, tagType, tagIconUrl, opTagText, opTagTextColor, opTagBackgroundColor } = tmp2(tmp3[50])(obj11));
+      const uploaderFileForMessageId = UploadStore.getUploaderFileForMessageId(message.id);
+      const obj14 = UploadStore;
+      const tmp42 = tmp2(tmp3[50])(obj11);
+      let tmp47 = tmp2Result1Result;
+      if (!tmp46) {
+        let items1 = tmp2Result1Result;
+        if (tmp2Result1Result == null) {
           items1 = [];
         }
-        const obj5 = { uploaderFile: null, useAttachmentUploadPreview: null, colors: null };
-        obj5[0] = uploaderFileForMessageId;
-        obj5[1] = tmp43;
-        obj5[2] = tmp4;
-        items1.push(tmp2(tmp3[51])(obj5));
-        tmp46 = items1;
+        const obj12 = { uploaderFile: uploaderFileForMessageId, useAttachmentUploadPreview: tmp44, colors: tmp4 };
+        items1.push(tmp2(tmp3[51])(obj12));
+        tmp47 = items1;
       }
-      const message1 = result1.getMessage(message.id);
-      let tmp50 = tmp46;
-      if (null != message1) {
-        let items2 = tmp46;
-        if (tmp46 == null) {
+      const message4 = result1.getMessage(message.id);
+      let tmp51 = tmp47;
+      if (null != message4) {
+        let items2 = tmp47;
+        if (tmp47 == null) {
           items2 = [];
         }
-        const obj6 = { errorMessage: null, colors: null };
-        obj6[0] = message1.errorMessage;
-        obj6[1] = tmp4;
-        items2.push(tmp13(tmp3[51]).createAutomodBlockedMessageEmbed(obj6));
-        tmp50 = items2;
-        const tmp13Result5 = tmp13(tmp3[51]);
+        const obj13 = { errorMessage: message4.errorMessage, colors: tmp4 };
+        items2.push(tmp13(tmp3[51]).createAutomodBlockedMessageEmbed(obj13));
+        tmp51 = items2;
+        const tmp13Result65 = tmp13(tmp3[51]);
       }
-      tmp45 = message.state !== constants2.SEND_FAILED || message.isCommandType();
+      tmp46 = message.state !== constants2.SEND_FAILED || message.isCommandType();
       const userAuthor = tmp13(tmp3[52]).getUserAuthor(message.author, channel);
       ({ guildMemberAvatar, guildMemberAvatarDecoration, iconRoleId } = userAuthor);
-      const tmp13Result6 = tmp13(tmp3[52]);
+      const tmp13Result66 = tmp13(tmp3[52]);
       if (message.isInteractionPlaceholder()) {
         if (null == message.author.avatar) {
           if (null == guildMemberAvatar) {
@@ -402,120 +335,106 @@ function createMessageContent(message) {
               icon = application.icon;
             }
             if (null != icon) {
-              tmp2Result = tmp2(tmp3[54]);
-              const obj7 = { id: null, icon: null, bot: null };
-              obj7[0] = message.application.id;
-              obj7[1] = message.application.icon;
-              obj7[2] = message.application.bot;
-              let applicationIconSource = tmp2Result.getApplicationIconSource(obj7);
+              const obj15 = { id: message.application.id, icon: message.application.icon, bot: message.application.bot };
+              let applicationIconSource = tmp2(tmp3[54]).getApplicationIconSource(obj15);
+              const tmp2Result8 = tmp2(tmp3[54]);
             }
-            const ensureAvatarSourceResult = tmp13Result7.ensureAvatarSource(applicationIconSource);
+            const ensureAvatarSourceResult = tmp13Result67.ensureAvatarSource(applicationIconSource);
             if (null == guildMemberAvatarDecoration) {
               guildMemberAvatarDecoration = author.avatarDecoration;
             }
-            const obj8 = { avatarDecoration: null, size: null };
-            obj8[0] = guildMemberAvatarDecoration;
-            const tmp13Result8 = tmp13(tmp3[54]);
-            obj8[1] = tmp13(tmp3[55]).getDecorationSizeForAvatarSize(tmp13(tmp3[56]).AvatarSizes.NORMAL);
-            const avatarDecorationURL = tmp13Result8.getAvatarDecorationURL(obj8);
+            const obj16 = { avatarDecoration: guildMemberAvatarDecoration, size: null };
+            const tmp13Result68 = tmp13(tmp3[54]);
+            obj16.size = tmp13(tmp3[55]).getDecorationSizeForAvatarSize(tmp13(tmp3[56]).AvatarSizes.NORMAL);
+            const avatarDecorationURL = tmp13Result68.getAvatarDecorationURL(obj16);
             if (null != iconRoleId) {
-              if (null != guildId) {
-                const obj9 = { guildId: null, roleId: null, size: 18 };
-                obj9[0] = guildId;
-                obj9[1] = iconRoleId;
-                const roleIcon = tmp13(tmp3[57]).getRoleIcon(obj9);
-                const tmp13Result10 = tmp13(tmp3[57]);
+              if (null != guildId1) {
+                const obj17 = { guildId: guildId1, roleId: iconRoleId, size: 18 };
+                const roleIcon = tmp13(tmp3[57]).getRoleIcon(obj17);
+                const tmp13Result70 = tmp13(tmp3[57]);
               }
             }
             if (message.hasFlag(constants3.SOURCE_MESSAGE_DELETED)) {
               const intl = tmp13(tmp3[29]).intl;
               stringResult = intl.string(tmp13(tmp3[29]).t.JOtgSw);
             }
-            const tmp13Result9 = tmp13(tmp3[55]);
+            const tmp13Result69 = tmp13(tmp3[55]);
             const messageAuthor = tmp13(tmp3[52]).getMessageAuthor(message);
             ({ nick, colorString, colorStrings } = messageAuthor);
             if (message.type === tmp15.INTERACTION_PREMIUM_UPSELL) {
               const intl2 = tmp13(tmp3[29]).intl;
-              const obj10 = { appName: null };
-              obj10[0] = nick;
-              stringResult = intl2.formatToPlainString(tmp13(tmp3[29]).t["u4A+xK"], obj10);
+              const obj18 = { appName: nick };
+              stringResult = intl2.formatToPlainString(tmp13(tmp3[29]).t["u4A+xK"], obj18);
             }
             if (message.type === tmp15.REPLY) {
               if (renderReplies) {
-                const messageByReference1 = store2.getMessageByReference(message.messageReference);
+                const messageByReference1 = ReferencedMessageStore.getMessageByReference(message.messageReference);
                 const state = messageByReference1.state;
                 if (ReferencedMessageState.LOADED === state) {
                   const message3 = messageByReference1.message;
                   const result2 = tmp13(tmp3[38]).maybeCreateSingleForwardForMessage(message3);
-                  if (blockedForMessage.isBlockedForMessage(message3)) {
-                    const obj11 = { state: null, content: null };
-                    obj11[0] = ReferencedMessageRowState.SYSTEM;
+                  if (RelationshipStore.isBlockedForMessage(message3)) {
+                    const obj19 = { state: ReferencedMessageRowState.SYSTEM, content: null };
                     const intl12 = tmp13(tmp3[29]).intl;
-                    obj11[1] = intl12.string(tmp13(tmp3[29]).t.XAkOo2);
-                    let tmp60 = obj11;
+                    obj19.content = intl12.string(tmp13(tmp3[29]).t.XAkOo2);
+                    let tmp61 = obj19;
                   } else if (obj35.isIgnoredForMessage(message3)) {
-                    const obj12 = { state: null, content: null };
-                    obj12[0] = ReferencedMessageRowState.SYSTEM;
+                    const obj20 = { state: ReferencedMessageRowState.SYSTEM, content: null };
                     const intl11 = tmp13(tmp3[29]).intl;
-                    obj12[1] = intl11.string(tmp13(tmp3[29]).t["G7p6v/"]);
-                    tmp60 = obj12;
+                    obj20.content = intl11.string(tmp13(tmp3[29]).t["G7p6v/"]);
+                    tmp61 = obj20;
                   } else {
-                    const obj13 = { message: null, messageForward: null, roleStyle: null, isFirst: true, isEditing: false, canShowImages: true, isSystemDM: false, isInlineReplyPreview: true, options: null };
-                    obj13[0] = message3;
-                    obj13[1] = result2;
-                    obj13[2] = roleStyle;
-                    obj14 = {};
-                    const merged1 = Object.assign(options);
-                    obj14.renderReplies = false;
-                    obj13[8] = obj14;
-                    const tmp72 = createMessageContent(obj13);
-                    if (null == tmp72) {
-                      const obj15 = { state: null, content: null };
-                      obj15[0] = ReferencedMessageRowState.SYSTEM;
+                    const obj21 = { message: message3, messageForward: result2, roleStyle, isFirst: true, isEditing: false, canShowImages: true, isSystemDM: false, isInlineReplyPreview: true, options: null };
+                    const obj22 = {};
+                    const merged3 = Object.assign(options);
+                    obj22.renderReplies = false;
+                    obj21.options = obj22;
+                    const tmp73 = createMessageContent(obj21);
+                    if (null == tmp73) {
+                      const obj23 = { state: ReferencedMessageRowState.SYSTEM, content: null };
                       const intl10 = tmp13(tmp3[29]).intl;
-                      obj15[1] = intl10.string(tmp13(tmp3[29]).t["1i+hMi"]);
-                      tmp60 = obj15;
+                      obj23.content = intl10.string(tmp13(tmp3[29]).t["1i+hMi"]);
+                      tmp61 = obj23;
                     } else {
-                      if ("username" in tmp72) {
+                      if ("username" in tmp73) {
                         const messageAuthor1 = tmp13(tmp3[52]).getMessageAuthor(message3);
                         ({ nick: nick2, colorString: colorString2 } = messageAuthor1);
                         if (nick2 == null) {
                           nick2 = message3.author.username;
                         }
-                        tmp72.username = nick2;
+                        tmp73.username = nick2;
                         if (tmp21) {
-                          let colorString3 = tmp72.colorString;
+                          let colorString3 = tmp73.colorString;
                         } else {
                           colorString3 = shouldDisableInteractiveComponents(colorString2);
                           if (colorString3 == null) {
-                            colorString3 = tmp72.colorString;
+                            colorString3 = tmp73.colorString;
                           }
-                          const tmp74 = shouldDisableInteractiveComponents;
                         }
-                        tmp72.colorString = colorString3;
+                        tmp73.colorString = colorString3;
                         if (tmp2(tmp3[58])(message, message3)) {
-                          tmp72.username = `@${tmp72.username}`;
+                          tmp73.username = `@${tmp73.username}`;
                         }
-                        const tmp13Result13 = tmp13(tmp3[52]);
+                        const tmp13Result73 = tmp13(tmp3[52]);
                       }
                       const _Array = Array;
-                      let isArray = Array.isArray(tmp72.content);
+                      let isArray = Array.isArray(tmp73.content);
                       if (isArray) {
-                        isArray = 0 === tmp72.content.length;
+                        isArray = 0 === tmp73.content.length;
                       }
                       if (isArray) {
-                        tmp72.content = undefined;
+                        tmp73.content = undefined;
                       }
-                      message2 = undefined;
+                      let message5;
                       if (result2 != null) {
-                        message2 = result2.messageSnapshot.message;
+                        message5 = result2.messageSnapshot.message;
                       }
-                      if (message2 == null) {
-                        message2 = message3;
+                      if (message5 == null) {
+                        message5 = message3;
                       }
-                      if ("stickers" in message2) {
-                        let messageStickers = tmp13(tmp3[33]).getMessageStickers(message2);
-                        const tmp13Result14 = tmp13(tmp3[33]);
+                      if ("stickers" in message5) {
+                        let messageStickers = tmp13(tmp3[33]).getMessageStickers(message5);
+                        const tmp13Result74 = tmp13(tmp3[33]);
                       } else {
                         messageStickers = [];
                       }
@@ -523,78 +442,74 @@ function createMessageContent(message) {
                         const intl9 = tmp13(tmp3[29]).intl;
                         let stringResult1 = intl9.string(tmp13(tmp3[29]).t["7K5Lma"]);
                       } else {
-                        if ("interaction" in message2) {
-                          if (null != message2.interaction) {
-                            if ("" === message2.content) {
+                        if ("interaction" in message5) {
+                          if (null != message5.interaction) {
+                            if ("" === message5.content) {
                               const intl8 = tmp13(tmp3[29]).intl;
                               stringResult1 = intl8.string(tmp13(tmp3[29]).t["2v7kfl"]);
                             }
                           }
                         }
-                        if (tmp13Result15.hasFlag(message2.flags, tmp58.IS_VOICE_MESSAGE)) {
+                        if (tmp13Result75.hasFlag(message5.flags, tmp59.IS_VOICE_MESSAGE)) {
                           const intl7 = tmp13(tmp3[29]).intl;
                           stringResult1 = intl7.string(tmp13(tmp3[29]).t["6bhHrc"]);
-                        } else if (message2.type === tmp15.POLL_RESULT) {
-                          stringResult1 = tmp13(tmp3[35]).getPollResultsReplyPreviewMobile(message2);
-                          const tmp13Result16 = tmp13(tmp3[35]);
+                        } else if (message5.type === tmp15.POLL_RESULT) {
+                          stringResult1 = tmp13(tmp3[35]).getPollResultsReplyPreviewMobile(message5);
+                          const tmp13Result76 = tmp13(tmp3[35]);
                         } else {
-                          obj = tmp13(tmp3[34]);
-                          if (obj.hasFlag(message2.flags, tmp58.IS_COMPONENTS_V2)) {
+                          if (tmp13Result77.hasFlag(message5.flags, tmp59.IS_COMPONENTS_V2)) {
                             const intl6 = tmp13(tmp3[29]).intl;
                             stringResult1 = intl6.string(tmp13(tmp3[29]).t.Xxm5i3);
-                          } else if ("" === message2.content) {
+                          } else if ("" === message5.content) {
                             const intl5 = tmp13(tmp3[29]).intl;
                             stringResult1 = intl5.string(tmp13(tmp3[29]).t.JAKsM8);
                           } else {
                             stringResult1 = null;
                           }
+                          tmp13Result77 = tmp13(tmp3[34]);
                         }
-                        tmp13Result15 = tmp13(tmp3[34]);
+                        tmp13Result75 = tmp13(tmp3[34]);
                       }
                       if (message3.type === tmp15.POLL_RESULT) {
-                        tmp72.content = stringResult1;
+                        tmp73.content = stringResult1;
                       }
-                      const obj16 = { state: null, message: null };
-                      obj16[0] = ReferencedMessageRowState.LOADED;
-                      obj16[1] = tmp72;
-                      tmp60 = obj16;
+                      const obj24 = { state: ReferencedMessageRowState.LOADED, message: tmp73 };
+                      tmp61 = obj24;
                       if (null != stringResult1) {
-                        obj16.systemContent = stringResult1;
-                        tmp60 = obj16;
+                        obj24.systemContent = stringResult1;
+                        tmp61 = obj24;
                       }
                     }
                   }
-                  obj35 = blockedForMessage;
-                  const tmp13Result12 = tmp13(tmp3[38]);
-                } else if (tmp63.NOT_LOADED === state) {
-                  const obj17 = { state: null, content: null };
-                  obj17[0] = ReferencedMessageRowState.SYSTEM;
+                  obj35 = RelationshipStore;
+                  const tmp13Result72 = tmp13(tmp3[38]);
+                } else if (tmp64.NOT_LOADED === state) {
+                  const obj25 = { state: ReferencedMessageRowState.SYSTEM, content: null };
                   const intl4 = tmp13(tmp3[29]).intl;
-                  obj17[1] = intl4.string(tmp13(tmp3[29]).t["1i+hMi"]);
-                  tmp60 = obj17;
-                } else if (tmp63.DELETED === state) {
-                  const obj18 = { state: null, content: null };
-                  obj18[0] = ReferencedMessageRowState.SYSTEM;
+                  obj25.content = intl4.string(tmp13(tmp3[29]).t["1i+hMi"]);
+                  tmp61 = obj25;
+                } else if (tmp64.DELETED === state) {
+                  const obj26 = { state: ReferencedMessageRowState.SYSTEM, content: null };
                   const intl3 = tmp13(tmp3[29]).intl;
-                  obj18[1] = intl3.string(tmp13(tmp3[29]).t.mE3KJN);
-                  tmp60 = obj18;
+                  obj26.content = intl3.string(tmp13(tmp3[29]).t.mE3KJN);
+                  tmp61 = obj26;
                 } else {
                   tmp13(tmp3[59]).assertNever(messageByReference1);
-                  const tmp13Result17 = tmp13(tmp3[59]);
+                  const tmp13Result78 = tmp13(tmp3[59]);
                 }
               }
             }
             if (renderThreadEmbeds) {
-              const tmp83 = createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, options, tmp6);
+              const tmp84 = createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, options, tmp6);
             }
-            const tmp13Result11 = tmp13(tmp3[52]);
+            const tmp13Result71 = tmp13(tmp3[52]);
             let member = null;
             const interactionStatus = tmp13(tmp3[60]).createInteractionStatus(message, interaction);
-            if (null != guildId) {
-              member = member.getMember(guildId, author.id);
+            if (null != guildId1) {
+              member = GuildMemberStore.getMember(guildId1, author.id);
             }
-            const tmp13Result18 = tmp13(tmp3[60]);
-            const useReducedMotion = closure_4.useReducedMotion;
+            const tmp13Result79 = tmp13(tmp3[60]);
+            const useReducedMotion = AccessibilityStore.useReducedMotion;
             let parent_id;
             const result3 = tmp13(tmp3[61]).isMemberCommunicationDisabled(member);
             if (channel != null) {
@@ -611,243 +526,218 @@ function createMessageContent(message) {
                 channel2 = obj.getChannel(channel.parent_id);
               }
             }
-            const tmp13Result19 = tmp13(tmp3[61]);
-            const obj19 = { guildMember: null, channel: null, onlyChannelConnectionRoles: true };
-            obj19[0] = member;
-            obj19[1] = channel2;
-            merged = tmp13(tmp3[62]).getVisibleConnectionsRole(obj19);
-            merged = tmp43;
-            if (tmp43) {
-              merged = 0 === message.attachments.length;
+            const tmp13Result80 = tmp13(tmp3[61]);
+            const obj27 = { guildMember: member, channel: channel2, onlyChannelConnectionRoles: true };
+            const visibleConnectionsRole = tmp13(tmp3[62]).getVisibleConnectionsRole(obj27);
+            let tmp102 = tmp44;
+            if (tmp44) {
+              tmp102 = 0 === message.attachments.length;
             }
-            if (merged) {
-              merged = null != uploaderFileForMessageId;
+            if (tmp102) {
+              tmp102 = null != uploaderFileForMessageId;
             }
-            if (merged) {
-              const obj20 = { uploaderFile: null, isFailedMessage: null, shouldInlineAttachmentMedia: null };
-              obj20[0] = uploaderFileForMessageId;
-              obj20[1] = message.state === tmp44.SEND_FAILED;
-              obj20[2] = tmp10;
-              let items3 = tmp2(tmp3[63])(obj20);
+            if (tmp102) {
+              const obj28 = { uploaderFile: uploaderFileForMessageId, isFailedMessage: message.state === tmp45.SEND_FAILED, shouldInlineAttachmentMedia: tmp10 };
+              let items3 = tmp2(tmp3[63])(obj28);
             } else {
               items3 = [];
               if (renderAttachments) {
-                const obj21 = { attachments: null, uploadAttachments: null, shouldInlineAttachmentMedia: null, gifAutoPlay: null, viewImageDescriptions: null, useReducedMotion: null, shouldObscureSpoiler: null, themedBackgroundColor: null, enabledContentHarmTypeFlags: null, shouldAgeVerify: null, colors: null };
-                obj21[0] = message2.attachments;
-                merged = tmp2(tmp3[64]);
-                obj21[1] = obj14.getUploadAttachments(message.nonce);
-                obj21[2] = tmp10;
-                obj21[3] = gifAutoPlay;
-                obj21[4] = setting;
-                obj21[5] = useReducedMotion;
-                obj21[6] = shouldObscureSpoiler;
-                obj21[7] = tmp4.embedBackgroundColor;
-                obj21[8] = enabledHarmTypesForMessage;
-                obj21[9] = result1;
-                obj21[10] = tmp4;
-                items3 = merged(obj21);
+                const obj29 = { attachments: message2.attachments, uploadAttachments: obj14.getUploadAttachments(message.nonce), shouldInlineAttachmentMedia: tmp10, gifAutoPlay, viewImageDescriptions: setting, useReducedMotion, shouldObscureSpoiler, themedBackgroundColor: tmp4.embedBackgroundColor, enabledContentHarmTypeFlags: enabledHarmTypesForMessage, shouldAgeVerify: result1, colors: tmp4 };
+                items3 = tmp2(tmp3[64])(obj29);
+                const tmp2Result9 = tmp2(tmp3[64]);
               }
             }
-            if (merged) {
-              if (message.state !== tmp44.SEND_FAILED) {
+            if (tmp102) {
+              if (message.state !== tmp45.SEND_FAILED) {
                 const intl13 = tmp13(tmp3[29]).intl;
-                merged = intl13.string(tmp13(tmp3[29]).t["yXY+5J"]);
+                let stringResult2 = intl13.string(tmp13(tmp3[29]).t["yXY+5J"]);
               }
-              if (merged) {
-                if (message.state !== tmp44.SEND_FAILED) {
+              if (tmp102) {
+                if (message.state !== tmp45.SEND_FAILED) {
                   const intl14 = tmp13(tmp3[29]).intl;
-                  merged = intl14.string(tmp13(tmp3[29]).t["yXY+5J"]);
+                  let stringResult3 = intl14.string(tmp13(tmp3[29]).t["yXY+5J"]);
                 }
-                merged = id;
-                merged = stringResult;
-                merged = id.getId();
+                let stringResult4 = stringResult;
+                const id1 = AuthenticationStore.getId();
                 if (message.isUnsupported) {
                   const intl15 = tmp13(tmp3[29]).intl;
-                  merged = intl15.string(tmp13(tmp3[29]).t.sWi5EU);
+                  stringResult4 = intl15.string(tmp13(tmp3[29]).t.sWi5EU);
                 }
-                merged = message.isPoll();
-                merged = !merged;
-                if (merged) {
-                  merged = !isInlineReplyPreview;
+                const isPollResult = message.isPoll();
+                let tmp110 = !isPollResult;
+                if (isPollResult) {
+                  let tmp111 = !isInlineReplyPreview;
                   if (!isInlineReplyPreview) {
-                    merged = renderPolls;
+                    tmp111 = renderPolls;
                   }
+                  tmp110 = tmp111;
                 }
-                if (!merged) {
-                  merged = null != stringResult;
-                  if (merged) {
-                    merged = "" !== stringResult;
+                if (!tmp110) {
+                  let tmp112 = null != stringResult;
+                  if (tmp112) {
+                    tmp112 = "" !== stringResult;
                   }
+                  tmp110 = tmp112;
                 }
-                if (!merged) {
-                  merged = tmp13(tmp3[35]).getPollReplyPreview(message);
-                  const tmp13Result21 = tmp13(tmp3[35]);
+                if (!tmp110) {
+                  stringResult4 = tmp13(tmp3[35]).getPollReplyPreview(message);
+                  const tmp13Result82 = tmp13(tmp3[35]);
                 }
                 if (renderPolls) {
-                  const obj22 = { theme: null, animateEmoji: null };
-                  obj22[0] = forcedTheme;
-                  obj22[1] = animateEmoji;
-                  merged = tmp2(tmp3[66])(message, undefined, obj22);
+                  const obj30 = { theme: forcedTheme, animateEmoji };
+                  const tmp113 = tmp2(tmp3[66])(message, undefined, obj30);
                 }
                 if (renderSharedClientTheme) {
-                  merged = tmp13(tmp3[67]).formatSharedClientThemeData(message, ensureAvatarSourceResult, nick);
-                  const tmp13Result22 = tmp13(tmp3[67]);
+                  const result4 = tmp13(tmp3[67]).formatSharedClientThemeData(message, ensureAvatarSourceResult, nick);
+                  const tmp13Result83 = tmp13(tmp3[67]);
                 }
-                merged = guildId;
-                if (tmp13Result23.shouldDisplayGuildTag(author.id, merged)) {
-                  merged = tmp13(tmp3[68]).getUserPrimaryGuild(author.primaryGuild);
-                  merged = undefined;
-                  ({ guildId, tag } = merged);
-                  if (null != merged.guildId) {
-                    merged = GuildTagBadgeSize;
-                    merged = tmp13(tmp3[68]).getGuildTagBadgeUrl(merged.guildId, merged.badge, GuildTagBadgeSize.SIZE_12);
-                    const tmp13Result25 = tmp13(tmp3[68]);
+                if (tmp13Result84.shouldDisplayGuildTag(author.id, tmp115)) {
+                  const userPrimaryGuild = tmp13(tmp3[68]).getUserPrimaryGuild(author.primaryGuild);
+                  let guildTagBadgeUrl;
+                  ({ guildId, tag } = userPrimaryGuild);
+                  if (null != userPrimaryGuild.guildId) {
+                    guildTagBadgeUrl = tmp13(tmp3[68]).getGuildTagBadgeUrl(userPrimaryGuild.guildId, userPrimaryGuild.badge, GuildTagBadgeSize.SIZE_12);
+                    const tmp13Result86 = tmp13(tmp3[68]);
                   }
-                  merged = tag;
-                  merged = guildId;
-                  const tmp13Result24 = tmp13(tmp3[68]);
+                  const tmp116 = guildTagBadgeUrl;
+                  const tmp117 = tag;
+                  const tmp118 = guildId;
+                  const tmp13Result85 = tmp13(tmp3[68]);
                 }
-                merged = undefined;
+                let linkedLobby;
                 if (channel != null) {
-                  merged = channel.linkedLobby;
+                  linkedLobby = channel.linkedLobby;
                 }
-                if (null != merged) {
+                if (null != linkedLobby) {
                   if (null != message.additionalName) {
                     if ("" !== message.additionalName) {
-                      merged = store;
-                      merged = store.getApplication(merged.application_id);
-                      merged = undefined;
-                      if (merged != null) {
-                        merged = merged.icon;
+                      const application1 = ApplicationStore.getApplication(linkedLobby.application_id);
+                      let icon1;
+                      if (application1 != null) {
+                        icon1 = application1.icon;
                       }
-                      merged = undefined;
-                      if (null != merged) {
-                        ({ id: obj61[0], icon: obj61[1] } = merged);
-                        merged = tmp2(tmp3[54]).getApplicationIconURL({ id: null, icon: null, size: 16 });
-                        const obj23 = { id: null, icon: null, size: 16 };
-                        const tmp2Result1 = tmp2(tmp3[54]);
+                      let applicationIconURL;
+                      if (null != icon1) {
+                        ({ id: obj61.id, icon: obj61.icon } = application1);
+                        applicationIconURL = tmp2(tmp3[54]).getApplicationIconURL({ id: null, icon: null, size: 16 });
+                        const obj31 = { id: null, icon: null, size: 16 };
+                        const tmp2Result10 = tmp2(tmp3[54]);
                       }
                       const additionalName = message.additionalName;
+                      const tmp123 = applicationIconURL;
                     }
                   }
                 }
-                tmp13Result23 = tmp13(tmp3[68]);
-                merged = message2;
+                tmp115 = guildId1;
+                tmp13Result84 = tmp13(tmp3[68]);
+                let tmp128 = message2;
                 if (message2 == null) {
-                  merged = message;
+                  tmp128 = message;
                 }
                 let str8 = message.applicationId;
-                merged = tmp13(tmp3[34]).hasFlag(merged.flags, tmp58.IS_VOICE_MESSAGE);
-                merged = store;
+                const tmp13Result87 = tmp13(tmp3[34]);
                 if (str8 == null) {
                   str8 = "";
                 }
-                merged = store.getApplication(str8);
-                merged = null != merged;
-                if (merged) {
-                  merged = tmp13(tmp3[34]).hasFlag(message.flags, tmp58.SENT_BY_SOCIAL_LAYER_INTEGRATION);
-                  const tmp13Result27 = tmp13(tmp3[34]);
+                const application2 = ApplicationStore.getApplication(str8);
+                let hasFlagResult1 = null != application2;
+                if (hasFlagResult1) {
+                  hasFlagResult1 = tmp13(tmp3[34]).hasFlag(message.flags, tmp59.SENT_BY_SOCIAL_LAYER_INTEGRATION);
+                  const tmp13Result88 = tmp13(tmp3[34]);
                 }
-                if (merged) {
-                  id = merged.id;
+                if (hasFlagResult1) {
+                  const id = application2.id;
                 }
-                merged = undefined;
+                let hasFlagResult2;
                 if (message2 != null) {
-                  merged = message2.hasFlag(tmp58.IS_GUILD_OFFICIAL);
+                  hasFlagResult2 = message2.hasFlag(tmp59.IS_GUILD_OFFICIAL);
                 }
                 const items4 = [];
-                if (merged) {
-                  merged = guild;
-                  merged = guild.getGuild(guildId);
-                  if (null != merged) {
-                    if (tmp13Result28.isGuildOfficialMessagesEnabled(merged, "createMessageContent")) {
-                      let officialMessageColor = merged.officialMessageColor;
+                if (hasFlagResult2) {
+                  const guild = GuildStore.getGuild(guildId1);
+                  if (null != guild) {
+                    if (tmp13Result89.isGuildOfficialMessagesEnabled(guild, "createMessageContent")) {
+                      let officialMessageColor = guild.officialMessageColor;
                       if (officialMessageColor == null) {
                         officialMessageColor = closure_24;
                       }
-                      const officialMessageStyle = tmp95.officialMessageStyle;
-                      merged = tmp13(tmp3[69]).showGuildOfficialMessageGradient(officialMessageStyle);
-                      merged = undefined;
-                      if (merged) {
-                        merged = closure_26;
-                        merged = officialMessageColor | closure_26;
+                      const officialMessageStyle = tmp96.officialMessageStyle;
+                      const result5 = tmp13(tmp3[69]).showGuildOfficialMessageGradient(officialMessageStyle);
+                      let tmp139;
+                      if (result5) {
+                        tmp139 = officialMessageColor | closure_26;
                       }
-                      const tmp13Result29 = tmp13(tmp3[69]);
-                      merged = undefined;
-                      if (tmp13Result30.showGuildOfficialMessageTextColor(officialMessageStyle)) {
+                      const tmp13Result90 = tmp13(tmp3[69]);
+                      let numResult;
+                      if (tmp13Result91.showGuildOfficialMessageTextColor(officialMessageStyle)) {
                         const internal = tmp2(tmp3[70]).internal;
-                        merged = internal.resolveSemanticColor(forcedTheme, tmp2(tmp3[70]).colors.BACKGROUND_BASE_LOWER);
+                        const semanticColor = internal.resolveSemanticColor(forcedTheme, tmp2(tmp3[70]).colors.BACKGROUND_BASE_LOWER);
                         let num5 = 1;
-                        if (tmp95.desaturateUserColors) {
-                          num5 = tmp95.saturation;
+                        if (tmp96.desaturateUserColors) {
+                          num5 = tmp96.saturation;
                         }
-                        const tmp13Result31 = tmp13(tmp3[69]);
+                        const tmp13Result92 = tmp13(tmp3[69]);
                         let num6 = 0;
-                        if (merged) {
+                        if (result5) {
                           num6 = closure_25;
                         }
-                        merged = tmp13Result31;
-                        merged = officialMessageColor;
-                        merged = num5;
-                        merged = num6;
-                        const accessibleGuildOfficialTextColor = tmp13Result31.getAccessibleGuildOfficialTextColor(officialMessageColor, merged, num5, num6);
-                        merged = accessibleGuildOfficialTextColor.num();
+                        const accessibleGuildOfficialTextColor = tmp13Result92.getAccessibleGuildOfficialTextColor(officialMessageColor, semanticColor, num5, num6);
+                        numResult = accessibleGuildOfficialTextColor.num();
                       }
                       const intl16 = tmp13(tmp3[29]).intl;
-                      merged = items4.push(intl16.string(tmp13(tmp3[29]).t.GzDTxY));
-                      tmp13Result30 = tmp13(tmp3[69]);
+                      items4.push(intl16.string(tmp13(tmp3[29]).t.GzDTxY));
+                      const tmp135 = tmp139;
+                      tmp13Result91 = tmp13(tmp3[69]);
                     }
-                    tmp13Result28 = tmp13(tmp3[69]);
+                    tmp13Result89 = tmp13(tmp3[69]);
                   }
                 }
                 let obj69 = message2;
                 if (message2 == null) {
                   obj69 = message;
                 }
-                if (obj69.hasFlag(tmp58.SUPPRESS_NOTIFICATIONS)) {
+                if (obj69.hasFlag(tmp59.SUPPRESS_NOTIFICATIONS)) {
                   const intl17 = tmp13(tmp3[29]).intl;
-                  merged = items4.push(intl17.string(tmp13(tmp3[29]).t.t0MA8g));
+                  items4.push(intl17.string(tmp13(tmp3[29]).t.t0MA8g));
                 }
                 if (items4.length > 0) {
-                  merged = items4.join(", ");
+                  const joined = items4.join(", ");
                 }
-                const tmp13Result26 = tmp13(tmp3[34]);
-                const obj24 = { id: null, channelId: null, guildId: null, flags: null, type: null, nonce: null, state: null, reactions: null, referencedMessage: null, threadEmbed: null, forwardInfo: null, mentioned: null, edited: null, editedTimestamp: null, editedColor: null, textColor: null, officialMessageColor: null, linkColor: null, tagText: null, tagAccessibilityLabel: null, tagVerified: null, tagTextColor: null, tagBackgroundColor: null, tagType: null, tagIconUrl: null, opTagText: null, opTagTextColor: null, opTagBackgroundColor: null, stateAccessibilityLabel: null, constrainedWidth: null, gifAutoPlay: null, animateEmoji: null, username: null, avatarURL: null, avatarDecorationURL: null, authorId: null, usernameColor: null, roleColor: null, roleColors: null, shouldShowRoleDot: null, shouldShowRoleOnName: null, showLinkDecorations: null, colorString: null, roleIcon: null, connectionsRoleTag: null, timestamp: null, timestampTooltip: null, timestampColor: null, timestampAccessibilityLabel: null, content: null, isEditing: null, renderContentOnly: null, surveyIndication: null, ephemeralIndication: null, interactionStatus: null, executedCommand: null, components: null, feedbackColor: null, highlightColor: null, embeds: null, giftCodes: null, codedLinks: null, activityInstanceEmbed: null, activityRichPresenceInviteEmbed: null, useAttachmentGridLayout: null, useAttachmentUploadPreview: null, attachments: null, attachmentsOpacity: null, stickers: null, communicationDisabled: null, isFirstForumPostMessage: null, postActions: null, isCurrentUserMessageAuthor: null, usingGradientTheme: null, swipeToReplyIconUrl: null, swipeToEditIconUrl: null, postPreviewEmbeds: null, obscureLearnMoreLabel: null, safetyPolicyNoticeEmbed: null, pollData: null, sharedClientTheme: null, safetySystemNotificationEmbed: null };
-                ({ id: obj71[0], channel_id: obj71[1] } = message);
-                merged = guildId;
-                merged = tmp13(tmp3[71]).createVoiceChannelBadge(message.author.id, guildId);
-                obj24[2] = merged;
-                merged = message2;
+                const hasFlagResult = tmp13(tmp3[34]).hasFlag(tmp128.flags, tmp59.IS_VOICE_MESSAGE);
+                const obj32 = { id: null, channelId: null, guildId: null, flags: null, type: null, nonce: null, state: null, reactions: null, referencedMessage: null, threadEmbed: null, forwardInfo: null, mentioned: null, edited: null, editedTimestamp: null, editedColor: null, textColor: null, officialMessageColor: null, linkColor: null, tagText: null, tagAccessibilityLabel: null, tagVerified: null, tagTextColor: null, tagBackgroundColor: null, tagType: null, tagIconUrl: null, opTagText: null, opTagTextColor: null, opTagBackgroundColor: null, stateAccessibilityLabel: null, constrainedWidth: null, gifAutoPlay: null, animateEmoji: null, username: null, avatarURL: null, avatarDecorationURL: null, authorId: null, usernameColor: null, roleColor: null, roleColors: null, shouldShowRoleDot: null, shouldShowRoleOnName: null, showLinkDecorations: null, forceRevealSpoilers: null, colorString: null, roleIcon: null, connectionsRoleTag: null, timestamp: null, timestampTooltip: null, timestampColor: null, timestampAccessibilityLabel: null, content: null, isEditing: null, renderContentOnly: null, surveyIndication: null, ephemeralIndication: null, interactionStatus: null, executedCommand: null, components: null, feedbackColor: null, highlightColor: null, embeds: null, giftCodes: null, codedLinks: null, activityInstanceEmbed: null, activityRichPresenceInviteEmbed: null, useAttachmentGridLayout: null, useAttachmentUploadPreview: null, attachments: null, attachmentsOpacity: null, stickers: null, communicationDisabled: null, isFirstForumPostMessage: null, postActions: null, isCurrentUserMessageAuthor: null, usingGradientTheme: null, swipeToReplyIconUrl: null, swipeToEditIconUrl: null, postPreviewEmbeds: null, obscureLearnMoreLabel: null, safetyPolicyNoticeEmbed: null, pollData: null, sharedClientTheme: null, safetySystemNotificationEmbed: null };
+                ({ id: obj71.id, channel_id: obj71.channelId } = message);
+                const voiceChannelBadge = tmp13(tmp3[71]).createVoiceChannelBadge(message.author.id, guildId1);
+                obj32.guildId = guildId1;
+                let tmp153 = message2;
                 if (message2 == null) {
-                  merged = message;
+                  tmp153 = message;
                 }
-                obj24[3] = merged.flags;
-                obj24[4] = message.type;
+                obj32.flags = tmp153.flags;
+                obj32.type = message.type;
                 if (null != message.nonce) {
                   if (typeof message.nonce !== "string") {
-                    merged = globalThis;
                     const _String = String;
                     let nonce = String(message.nonce);
                   }
-                  obj24[5] = nonce;
-                  obj24[6] = message.state;
-                  obj24[7] = items;
-                  merged = undefined;
+                  obj32.nonce = nonce;
+                  obj32.state = message.state;
+                  obj32.reactions = items;
+                  let tmp155;
                   if (!renderContentOnly) {
-                    merged = tmp60;
+                    tmp155 = tmp61;
                   }
-                  obj24[8] = merged;
-                  obj24[9] = tmp83;
-                  merged = undefined;
+                  obj32.referencedMessage = tmp155;
+                  obj32.threadEmbed = tmp84;
+                  let forwardInfo;
                   if (null != messageForward) {
-                    merged = messageForward.getForwardInfo();
+                    forwardInfo = messageForward.getForwardInfo();
                   }
-                  obj24[10] = merged;
+                  obj32.forwardInfo = forwardInfo;
                   let mentioned = !ignoreMentioned;
                   if (!ignoreMentioned) {
                     mentioned = message.mentioned;
                   }
-                  obj24[11] = mentioned;
+                  obj32.mentioned = mentioned;
                   let str12 = "";
                   if (message.isEdited()) {
                     str12 = "";
@@ -856,389 +746,353 @@ function createMessageContent(message) {
                       str12 = intl18.string(tmp13(tmp3[29]).t.C8sXIM);
                     }
                   }
-                  obj24[12] = str12;
-                  merged = undefined;
+                  obj32.edited = str12;
+                  let dateFormatResult;
                   if (message.isEdited()) {
                     if (!renderContentOnly) {
                       if (null != message.editedTimestamp) {
-                        merged = tmp13(tmp3[65]).dateFormat(message.editedTimestamp, "LLLL");
-                        const tmp13Result33 = tmp13(tmp3[65]);
+                        dateFormatResult = tmp13(tmp3[65]).dateFormat(message.editedTimestamp, "LLLL");
+                        const tmp13Result94 = tmp13(tmp3[65]);
                       }
                     }
                   }
-                  obj24[13] = merged;
-                  obj24[14] = tmp4.editedColor;
+                  obj32.editedTimestamp = dateFormatResult;
+                  obj32.editedColor = tmp4.editedColor;
                   if (message.isUnsupported) {
                     let textColor = tmp4.unsupportedColor;
-                  } else if (null != merged) {
-                    textColor = 4278190080 | merged;
+                  } else if (null != tmp134) {
+                    textColor = 4278190080 | tmp134;
                   } else {
                     textColor = tmp4.textColor;
                   }
-                  obj24[15] = textColor;
-                  obj24[16] = merged;
-                  obj24[17] = tmp4.linkColor;
-                  obj24[18] = tagText;
-                  obj24[19] = tagAccessibilityLabel;
-                  obj24[20] = tagVerified;
-                  obj24[21] = tagTextColor;
-                  obj24[22] = tagBackgroundColor;
-                  obj24[23] = tagType;
-                  obj24[24] = tagIconUrl;
-                  obj24[25] = opTagText;
-                  obj24[26] = opTagTextColor;
-                  obj24[27] = opTagBackgroundColor;
-                  obj24[28] = merged;
-                  obj24[29] = constrainedWidth;
-                  obj24[30] = gifAutoPlay;
-                  obj24[31] = animateEmoji;
+                  obj32.textColor = textColor;
+                  obj32.officialMessageColor = tmp135;
+                  obj32.linkColor = tmp4.linkColor;
+                  obj32.tagText = tagText;
+                  obj32.tagAccessibilityLabel = tagAccessibilityLabel;
+                  obj32.tagVerified = tagVerified;
+                  obj32.tagTextColor = tagTextColor;
+                  obj32.tagBackgroundColor = tagBackgroundColor;
+                  obj32.tagType = tagType;
+                  obj32.tagIconUrl = tagIconUrl;
+                  obj32.opTagText = opTagText;
+                  obj32.opTagTextColor = opTagTextColor;
+                  obj32.opTagBackgroundColor = opTagBackgroundColor;
+                  obj32.stateAccessibilityLabel = joined;
+                  obj32.constrainedWidth = constrainedWidth;
+                  obj32.gifAutoPlay = gifAutoPlay;
+                  obj32.animateEmoji = animateEmoji;
                   if (tmp21) {
                     nick = author.username;
                   }
-                  obj24[32] = nick;
-                  merged = undefined;
+                  obj32.username = nick;
+                  let uri;
                   if (!tmp21) {
-                    merged = ensureAvatarSourceResult.uri;
+                    uri = ensureAvatarSourceResult.uri;
                   }
-                  obj24[33] = merged;
-                  merged = null;
+                  obj32.avatarURL = uri;
+                  let tmp159 = null;
                   if (!tmp21) {
-                    merged = avatarDecorationURL;
+                    tmp159 = avatarDecorationURL;
                   }
-                  obj24[34] = merged;
-                  obj24[35] = author.id;
+                  obj32.avatarDecorationURL = tmp159;
+                  obj32.authorId = author.id;
                   if (!tmp21) {
                     if ("username" === roleStyle) {
-                      merged = colorString;
-                      merged = shouldDisableInteractiveComponents;
-                      let defaultUsernameColor = merged(merged);
+                      let defaultUsernameColor = shouldDisableInteractiveComponents(colorString);
                       if (defaultUsernameColor == null) {
                         defaultUsernameColor = tmp4.defaultUsernameColor;
                       }
                     }
-                    obj24[36] = defaultUsernameColor;
-                    merged = null;
+                    obj32.usernameColor = defaultUsernameColor;
+                    let tmp162 = null;
                     if (!tmp21) {
-                      merged = colorString;
-                      merged = shouldDisableInteractiveComponents;
-                      merged = merged(merged);
-                      if (merged == null) {
-                        merged = null;
+                      let tmp163Result = shouldDisableInteractiveComponents(colorString);
+                      if (tmp163Result == null) {
+                        tmp163Result = null;
                       }
+                      tmp162 = tmp163Result;
                     }
-                    obj24[37] = merged;
-                    merged = null;
+                    obj32.roleColor = tmp162;
+                    let processColorStringsResult = null;
                     if (hasEnhancedRoleColors) {
-                      merged = null;
+                      processColorStringsResult = null;
                       if (!tmp21) {
-                        merged = tmp13(tmp3[72]).processColorStrings(colorStrings);
-                        const tmp13Result34 = tmp13(tmp3[72]);
+                        processColorStringsResult = tmp13(tmp3[72]).processColorStrings(colorStrings);
+                        const tmp13Result95 = tmp13(tmp3[72]);
                       }
                     }
-                    obj24[38] = merged;
-                    obj24[39] = "dot" === roleStyle;
-                    obj24[40] = "username" === roleStyle;
-                    obj24[41] = closure_4.alwaysShowLinkDecorations;
+                    obj32.roleColors = processColorStringsResult;
+                    obj32.shouldShowRoleDot = "dot" === roleStyle;
+                    obj32.shouldShowRoleOnName = "username" === roleStyle;
+                    obj32.showLinkDecorations = AccessibilityStore.alwaysShowLinkDecorations;
+                    obj32.forceRevealSpoilers = !shouldObscureSpoiler;
                     if (tmp21) {
                       let defaultUsernameColor2 = tmp4.defaultUsernameColor;
                     } else {
-                      merged = shouldDisableInteractiveComponents;
-                      defaultUsernameColor2 = merged(colorString);
+                      defaultUsernameColor2 = shouldDisableInteractiveComponents(colorString);
                       if (defaultUsernameColor2 == null) {
                         defaultUsernameColor2 = tmp4.defaultUsernameColor;
                       }
                     }
-                    obj24[42] = defaultUsernameColor2;
-                    merged = undefined;
+                    obj32.colorString = defaultUsernameColor2;
+                    let tmp168;
                     if (!tmp21) {
-                      merged = roleIcon;
+                      tmp168 = roleIcon;
                     }
-                    obj24[43] = merged;
-                    merged = undefined;
-                    if (null != merged) {
-                      merged = tmp13(tmp3[73]).createConnectionsRoleTag(merged);
-                      const tmp13Result35 = tmp13(tmp3[73]);
+                    obj32.roleIcon = tmp168;
+                    let connectionsRoleTag;
+                    if (null != visibleConnectionsRole) {
+                      connectionsRoleTag = tmp13(tmp3[73]).createConnectionsRoleTag(visibleConnectionsRole);
+                      const tmp13Result96 = tmp13(tmp3[73]);
                     }
-                    obj24[44] = merged;
-                    merged = undefined;
-                    obj24[45] = merged;
-                    merged = undefined;
+                    obj32.connectionsRoleTag = connectionsRoleTag;
+                    let tmp170;
                     if (!tmp21) {
-                      merged = tmp13(tmp3[65]).dateFormat(message.timestamp, "LLLL");
-                      const tmp13Result36 = tmp13(tmp3[65]);
+                      tmp170 = stringResult2;
                     }
-                    obj24[46] = merged;
-                    merged = undefined;
+                    obj32.timestamp = tmp170;
+                    let dateFormatResult1;
                     if (!tmp21) {
-                      merged = tmp4.timestampColor;
+                      dateFormatResult1 = tmp13(tmp3[65]).dateFormat(message.timestamp, "LLLL");
+                      const tmp13Result97 = tmp13(tmp3[65]);
                     }
-                    obj24[47] = merged;
-                    merged = undefined;
-                    obj24[48] = merged;
-                    obj24[49] = merged;
-                    obj24[50] = isEditing;
-                    obj24[51] = renderContentOnly;
-                    merged = undefined;
+                    obj32.timestampTooltip = dateFormatResult1;
+                    let timestampColor;
+                    if (!tmp21) {
+                      timestampColor = tmp4.timestampColor;
+                    }
+                    obj32.timestampColor = timestampColor;
+                    let tmp173;
+                    if (!tmp21) {
+                      tmp173 = stringResult3;
+                    }
+                    obj32.timestampAccessibilityLabel = tmp173;
+                    obj32.content = stringResult4;
+                    obj32.isEditing = isEditing;
+                    obj32.renderContentOnly = renderContentOnly;
+                    let surveyIndication;
                     if (undefined !== pushFeedbackType) {
-                      merged = tmp13(tmp3[74]).createSurveyIndication(message, forcedTheme, pushFeedbackType);
-                      const tmp13Result37 = tmp13(tmp3[74]);
+                      surveyIndication = tmp13(tmp3[74]).createSurveyIndication(message, forcedTheme, pushFeedbackType);
+                      const tmp13Result98 = tmp13(tmp3[74]);
                     }
-                    obj24[52] = merged;
-                    obj24[53] = tmp13(tmp3[75]).createEphemeralIndication(message);
-                    obj24[54] = interactionStatus;
-                    merged = undefined;
+                    obj32.surveyIndication = surveyIndication;
+                    obj32.ephemeralIndication = tmp13(tmp3[75]).createEphemeralIndication(message);
+                    obj32.interactionStatus = interactionStatus;
+                    let executedCommand;
                     if (renderExecutedCommands) {
-                      const tmp13Result39 = tmp13(tmp3[76]);
-                      merged = tmp13Result39;
-                      merged = message;
-                      merged = channel;
-                      merged = roleStyle;
-                      merged = forcedTheme;
-                      merged = tmp13Result39.createExecutedCommand(message, channel, roleStyle, tmp6, tmp4.defaultUsernameColor);
+                      const tmp13Result100 = tmp13(tmp3[76]);
+                      executedCommand = tmp13Result100.createExecutedCommand(message, channel, roleStyle, tmp6, tmp4.defaultUsernameColor);
                     }
-                    obj24[55] = merged;
-                    merged = undefined;
+                    obj32.executedCommand = executedCommand;
+                    let tmp181;
                     if (message2.components.length > 0) {
                       if (renderComponents) {
-                        const obj25 = { message: null, guildId: null, interaction: null, shouldDisableInteractiveComponents: null, shouldShowMedia: null, shouldObscureSpoiler: null, enabledContentHarmTypeFlags: null, shouldAgeVerify: null, shouldShowMosaicMediaDescriptions: null, shouldAutoPlayGifs: null, colors: null };
-                        obj25[0] = message;
-                        obj25[1] = guildId;
-                        obj25[2] = interaction;
-                        obj25[3] = shouldDisableInteractiveComponents;
-                        obj25[4] = tmp5;
-                        obj25[5] = shouldObscureSpoiler;
-                        obj25[6] = enabledHarmTypesForMessage;
-                        obj25[7] = result1;
-                        obj25[8] = setting;
-                        obj25[9] = gifAutoPlay;
-                        obj25[10] = tmp4;
-                        merged = tmp2(tmp3[49])(obj25, message2.components);
+                        const obj33 = { message, guildId: guildId1, interaction, shouldDisableInteractiveComponents, shouldShowMedia: tmp5, shouldObscureSpoiler, enabledContentHarmTypeFlags: enabledHarmTypesForMessage, shouldAgeVerify: result1, shouldShowMosaicMediaDescriptions: setting, shouldAutoPlayGifs: gifAutoPlay, colors: tmp4 };
+                        tmp181 = tmp2(tmp3[49])(obj33, message2.components);
                       }
                     }
-                    obj24[56] = merged;
+                    obj32.components = tmp181;
                     let num9 = 0;
                     if (!renderContentOnly) {
                       num9 = tmp4.feedbackColor;
                     }
-                    obj24[57] = num9;
+                    obj32.feedbackColor = num9;
                     let num10 = 0;
                     if (!renderContentOnly) {
                       num10 = tmp4.highlightColor;
                     }
-                    obj24[58] = num10;
-                    obj24[59] = tmp50;
+                    obj32.highlightColor = num10;
+                    obj32.embeds = tmp51;
                     if (renderGiftCode) {
                       let giftCodeEmbed = tmp13(tmp3[77]).createGiftCodeEmbed(message, forcedTheme);
-                      const tmp13Result40 = tmp13(tmp3[77]);
+                      const tmp13Result101 = tmp13(tmp3[77]);
                     } else {
                       giftCodeEmbed = [];
                     }
-                    obj24[60] = giftCodeEmbed;
+                    obj32.giftCodes = giftCodeEmbed;
                     if (renderCodedLinks) {
-                      const tmp13Result41 = tmp13(tmp3[78]);
-                      merged = tmp13Result41;
-                      merged = message;
-                      merged = message2;
-                      merged = channel;
-                      merged = forcedTheme;
-                      let codedLinkEmbeds = tmp13Result41.createCodedLinkEmbeds(message, message2, channel, tmp6);
+                      const tmp13Result102 = tmp13(tmp3[78]);
+                      let codedLinkEmbeds = tmp13Result102.createCodedLinkEmbeds(message, message2, channel, tmp6);
                     } else {
                       codedLinkEmbeds = [];
                     }
-                    obj24[61] = codedLinkEmbeds;
-                    merged = undefined;
+                    obj32.codedLinks = codedLinkEmbeds;
+                    let activityInstanceEmbed;
                     if (renderActivityInstanceEmbed) {
-                      merged = tmp13(tmp3[79]).createActivityInstanceEmbed(message);
-                      const tmp13Result42 = tmp13(tmp3[79]);
+                      activityInstanceEmbed = tmp13(tmp3[79]).createActivityInstanceEmbed(message);
+                      const tmp13Result103 = tmp13(tmp3[79]);
                     }
-                    obj24[62] = merged;
-                    merged = undefined;
+                    obj32.activityInstanceEmbed = activityInstanceEmbed;
+                    let activityRichPresenceInviteEmbed;
                     if (renderActivityInviteEmbed) {
-                      merged = tmp13(tmp3[80]).createActivityRichPresenceInviteEmbed(message, channel);
-                      const tmp13Result43 = tmp13(tmp3[80]);
+                      activityRichPresenceInviteEmbed = tmp13(tmp3[80]).createActivityRichPresenceInviteEmbed(message, channel);
+                      const tmp13Result104 = tmp13(tmp3[80]);
                     }
-                    obj24[63] = merged;
+                    obj32.activityRichPresenceInviteEmbed = activityRichPresenceInviteEmbed;
                     if (tmp10) {
                       if (renderAttachments) {
-                        merged = 0 !== message2.attachments.length || 0 !== message2.embeds.length;
-                        renderAttachments = merged;
+                        renderAttachments = 0 !== message2.attachments.length || 0 !== message2.embeds.length;
+                        const tmp189 = 0 !== message2.attachments.length || 0 !== message2.embeds.length;
                       }
                       if (!renderAttachments) {
-                        renderAttachments = tmp43;
+                        renderAttachments = tmp44;
                       }
                       tmp10 = renderAttachments;
                     }
-                    obj24[64] = tmp10;
-                    obj24[65] = tmp43;
-                    obj24[66] = items3;
+                    obj32.useAttachmentGridLayout = tmp10;
+                    obj32.useAttachmentUploadPreview = tmp44;
+                    obj32.attachments = items3;
                     let num12 = 1;
-                    if (tmp43) {
+                    if (tmp44) {
                       num12 = 1;
-                      if (message.state === tmp44.SEND_FAILED) {
+                      if (message.state === tmp45.SEND_FAILED) {
                         num12 = 0.2;
                       }
                     }
-                    obj24[67] = num12;
+                    obj32.attachmentsOpacity = num12;
                     if (restrictedPreview) {
                       let items5 = [];
                     } else {
-                      const obj26 = { message: null, animateStickersSetting: null, isUserInteracting: null };
-                      obj26[0] = message2;
-                      merged = tmp2(tmp3[81]);
+                      const obj34 = { message: message2, animateStickersSetting: null, isUserInteracting: null };
                       const AnimateStickers = tmp13(tmp3[47]).AnimateStickers;
-                      obj26[1] = AnimateStickers.getSetting();
-                      obj26[2] = message.id === animatingStickerMessageId;
-                      items5 = merged(obj26);
+                      obj34.animateStickersSetting = AnimateStickers.getSetting();
+                      obj34.isUserInteracting = message.id === animatingStickerMessageId;
+                      items5 = tmp2(tmp3[81])(obj34);
+                      const tmp2Result11 = tmp2(tmp3[81]);
                     }
-                    obj24[68] = items5;
+                    obj32.stickers = items5;
                     if (renderCommunicationDisabled) {
                       renderCommunicationDisabled = result3;
                     }
-                    obj24[69] = renderCommunicationDisabled;
-                    merged = undefined;
+                    obj32.communicationDisabled = renderCommunicationDisabled;
+                    let isForumPostResult1;
                     if (channel != null) {
-                      merged = channel.isForumPost();
+                      isForumPostResult1 = channel.isForumPost();
                     }
-                    obj24[70] = merged && message.id === message.channel_id;
-                    merged = undefined;
+                    obj32.isFirstForumPostMessage = isForumPostResult1 && message.id === message.channel_id;
+                    let isForumPostResult2;
                     if (channel != null) {
-                      merged = channel.isForumPost();
+                      isForumPostResult2 = channel.isForumPost();
                     }
-                    merged = undefined;
-                    if (merged) {
+                    let tmp193;
+                    if (isForumPostResult2) {
                       if (renderForumPostActions) {
-                        merged = undefined;
+                        let forumPostActions;
                         if (message.id === message.channel_id) {
-                          merged = channel.getGuildId();
-                          if (null == merged) {
-                            merged = closure_14;
-                            merged = 0 !== message.reactions.length;
-                            merged = undefined;
-                            merged = closure_14.hasJoined(message.channel_id);
-                            if (!merged) {
-                              merged = obj.getChannel(channel.parent_id);
-                              merged = undefined;
-                              if (merged != null) {
-                                merged = merged.defaultReactionEmoji;
+                          const guildId2 = channel.getGuildId();
+                          if (null == guildId2) {
+                            let defaultReaction;
+                            if (0 === message.reactions.length) {
+                              const channel3 = obj.getChannel(channel.parent_id);
+                              let defaultReactionEmoji;
+                              if (channel3 != null) {
+                                defaultReactionEmoji = channel3.defaultReactionEmoji;
                               }
-                              merged = undefined;
-                              if (merged != null) {
-                                merged = merged.emojiId;
+                              let emojiId;
+                              if (defaultReactionEmoji != null) {
+                                emojiId = defaultReactionEmoji.emojiId;
                               }
-                              merged = null;
-                              if (null != merged) {
-                                merged = enabledHarmTypesForMessage;
-                                merged = enabledHarmTypesForMessage.getUsableCustomEmojiById(merged.emojiId);
+                              let usableCustomEmojiById = null;
+                              if (null != emojiId) {
+                                usableCustomEmojiById = enabledHarmTypesForMessage.getUsableCustomEmojiById(defaultReactionEmoji.emojiId);
                               }
-                              const obj27 = { defaultReactionEmoji: null, customGuildEmoji: null };
-                              obj27[0] = merged;
-                              obj27[1] = merged;
-                              merged = tmp13(tmp3[32]).createDefaultReaction(obj27);
-                              const tmp13Result44 = tmp13(tmp3[32]);
+                              const obj36 = { defaultReactionEmoji, customGuildEmoji: usableCustomEmojiById };
+                              defaultReaction = tmp13(tmp3[32]).createDefaultReaction(obj36);
+                              const tmp13Result105 = tmp13(tmp3[32]);
                             }
-                            merged = closure_11;
-                            merged = closure_11.shouldDisplayPrompt(channel.id);
-                            const obj28 = { isFollowing: null, hasReactions: null, defaultReaction: null, showMediaPostSharePrompt: null };
-                            obj28[0] = merged;
-                            obj28[1] = merged;
-                            obj28[2] = merged;
-                            obj28[3] = merged;
-                            merged = tmp13(tmp3[32]).createForumPostActions(obj28);
-                            const tmp13Result45 = tmp13(tmp3[32]);
-                          } else {
-                            merged = interaction;
+                            const hasJoinedResult = JoinedThreadsStore.hasJoined(message.channel_id);
+                            const shouldDisplayPromptResult = MediaPostSharePromptStore.shouldDisplayPrompt(channel.id);
+                            const obj37 = { isFollowing: hasJoinedResult, hasReactions: 0 !== message.reactions.length, defaultReaction, showMediaPostSharePrompt: shouldDisplayPromptResult };
+                            forumPostActions = tmp13(tmp3[32]).createForumPostActions(obj37);
+                            const tmp13Result106 = tmp13(tmp3[32]);
                           }
                         }
+                        tmp193 = forumPostActions;
                       }
                     }
-                    obj24[71] = merged;
-                    obj24[72] = message.author.id === merged;
-                    merged = guildId;
-                    obj24[73] = null != guildId.gradientPreset;
-                    const tmp13Result38 = tmp13(tmp3[75]);
-                    obj24[74] = tmp13(tmp3[30]).getAssetUriForEmbed(tmp2(tmp3[82]));
-                    const tmp13Result46 = tmp13(tmp3[30]);
-                    obj24[75] = tmp13(tmp3[30]).getAssetUriForEmbed(tmp2(tmp3[83]));
+                    obj32.postActions = tmp193;
+                    obj32.isCurrentUserMessageAuthor = message.author.id === id1;
+                    obj32.usingGradientTheme = null != guildId1.gradientPreset;
+                    const tmp13Result99 = tmp13(tmp3[75]);
+                    obj32.swipeToReplyIconUrl = tmp13(tmp3[30]).getAssetUriForEmbed(tmp2(tmp3[82]));
+                    const tmp13Result107 = tmp13(tmp3[30]);
+                    obj32.swipeToEditIconUrl = tmp13(tmp3[30]).getAssetUriForEmbed(tmp2(tmp3[83]));
                     if (tmp7) {
                       let postPreviewEmbeds = tmp13(tmp3[84]).createPostPreviewEmbeds(message, roleStyle, useReducedMotion);
-                      const tmp13Result48 = tmp13(tmp3[84]);
+                      const tmp13Result109 = tmp13(tmp3[84]);
                     } else {
                       postPreviewEmbeds = [];
                     }
-                    obj24[76] = postPreviewEmbeds;
+                    obj32.postPreviewEmbeds = postPreviewEmbeds;
                     const intl19 = tmp13(tmp3[29]).intl;
-                    obj24[77] = intl19.string(tmp13(tmp3[29]).t["2aXnfa"]);
-                    const tmp13Result47 = tmp13(tmp3[30]);
-                    obj24[78] = tmp13(tmp3[85]).createSafetyPolicyNoticeEmbed(message);
-                    obj24[79] = merged;
-                    obj24[80] = merged;
-                    const tmp13Result49 = tmp13(tmp3[85]);
-                    obj24[81] = tmp13(tmp3[86]).createSafetySystemNotificationEmbed(message);
-                    const tmp13Result50 = tmp13(tmp3[86]);
-                    merged = obj24;
-                    merged = Object.assign(tmp13(tmp3[87]).createCtaButtons(message.id, message.channel_id, tmp4));
-                    merged = undefined;
-                    if (merged) {
-                      merged = tmp4.embedBackgroundColor;
+                    obj32.obscureLearnMoreLabel = intl19.string(tmp13(tmp3[29]).t["2aXnfa"]);
+                    const tmp13Result108 = tmp13(tmp3[30]);
+                    obj32.safetyPolicyNoticeEmbed = tmp13(tmp3[85]).createSafetyPolicyNoticeEmbed(message);
+                    obj32.pollData = tmp113;
+                    obj32.sharedClientTheme = result4;
+                    const tmp13Result110 = tmp13(tmp3[85]);
+                    obj32.safetySystemNotificationEmbed = tmp13(tmp3[86]).createSafetySystemNotificationEmbed(message);
+                    const tmp13Result111 = tmp13(tmp3[86]);
+                    const merged4 = Object.assign(tmp13(tmp3[87]).createCtaButtons(message.id, message.channel_id, tmp4));
+                    let embedBackgroundColor;
+                    if (hasFlagResult) {
+                      embedBackgroundColor = tmp4.embedBackgroundColor;
                     }
-                    obj24.audioAttachmentBackgroundColor = merged;
-                    const tmp13Result51 = tmp13(tmp3[87]);
-                    obj24.accessibilityActions = tmp13(tmp3[88]).createMessageAccessibilityActions(message, channel);
-                    obj24.clanTagGuildId = merged;
-                    obj24.clanTag = merged;
-                    obj24.clanBadgeUrl = merged;
-                    obj24.lobbyAdditionalName = additionalName;
-                    obj24.lobbyTagIconUrl = merged;
-                    obj24.isFirst = isFirst;
-                    obj24.gameApplicationId = id;
-                    merged = undefined;
+                    obj32.audioAttachmentBackgroundColor = embedBackgroundColor;
+                    const tmp13Result112 = tmp13(tmp3[87]);
+                    obj32.accessibilityActions = tmp13(tmp3[88]).createMessageAccessibilityActions(message, channel);
+                    obj32.clanTagGuildId = tmp118;
+                    obj32.clanTag = tmp117;
+                    obj32.clanBadgeUrl = tmp116;
+                    obj32.lobbyAdditionalName = additionalName;
+                    obj32.lobbyTagIconUrl = tmp123;
+                    obj32.isFirst = isFirst;
+                    obj32.gameApplicationId = id;
+                    let type;
                     if (channel != null) {
-                      merged = channel.type;
+                      type = channel.type;
                     }
-                    merged = constants4;
-                    obj24.isAnnouncementChannel = merged === constants4.GUILD_ANNOUNCEMENT;
-                    const tmp13Result52 = tmp13(tmp3[88]);
-                    obj24.displayNameStyles = tmp13(tmp3[89]).createDisplayNameStylesMobile(message.author, member);
-                    obj24.voiceChannelBadge = merged;
-                    return obj24;
+                    obj32.isAnnouncementChannel = type === constants4.GUILD_ANNOUNCEMENT;
+                    const tmp13Result113 = tmp13(tmp3[88]);
+                    obj32.displayNameStyles = tmp13(tmp3[89]).createDisplayNameStylesMobile(message.author, member);
+                    obj32.voiceChannelBadge = voiceChannelBadge;
+                    return obj32;
                   }
                   defaultUsernameColor = tmp4.defaultUsernameColor;
                 }
                 nonce = message.nonce;
-                const tmp13Result32 = tmp13(tmp3[71]);
+                const tmp13Result93 = tmp13(tmp3[71]);
               }
-              merged = tmp13(tmp3[65]).accessibilityLabelCalendarFormat(message.timestamp);
-              const tmp13Result54 = tmp13(tmp3[65]);
+              stringResult3 = tmp13(tmp3[65]).accessibilityLabelCalendarFormat(message.timestamp);
+              const tmp13Result115 = tmp13(tmp3[65]);
             }
-            const tmp13Result20 = tmp13(tmp3[62]);
-            merged = tmp13(tmp3[65]).calendarFormat(message.timestamp, true, timestampHourCycle);
-            const tmp13Result55 = tmp13(tmp3[65]);
+            const tmp13Result81 = tmp13(tmp3[62]);
+            stringResult2 = tmp13(tmp3[65]).calendarFormat(message.timestamp, true, timestampHourCycle);
+            const tmp13Result116 = tmp13(tmp3[65]);
           }
         }
       }
       if (null != guildMemberAvatar) {
-        if (null != guildId) {
-          const obj29 = { userId: null, avatar: null, guildId: null };
-          obj29[0] = author.id;
-          obj29[1] = guildMemberAvatar;
-          obj29[2] = guildId;
-          applicationIconSource = tmp2(tmp3[54]).getGuildMemberAvatarSource(obj29, author);
-          const tmp2Result2 = tmp2(tmp3[54]);
+        if (null != guildId1) {
+          const obj38 = { userId: author.id, avatar: guildMemberAvatar, guildId: guildId1 };
+          applicationIconSource = tmp2(tmp3[54]).getGuildMemberAvatarSource(obj38, author);
+          const tmp2Result12 = tmp2(tmp3[54]);
         }
       }
       applicationIconSource = author.getAvatarSource(undefined);
-      tmp13Result7 = tmp13(tmp3[53]);
+      tmp13Result67 = tmp13(tmp3[53]);
     }
-    parseMessageMarkupResult = { content: "flex", hasSpoilerEmbeds: "onTapSummaryJump", hasBailedAst: 0.00000000000000000000000000000000000000000000000000000012273576812576707 };
-    const tmp13Result1 = tmp13(tmp3[42]);
+    parseMessageMarkupResult = { content: "flex", hasSpoilerEmbeds: "CONNECTION_OPEN", hasBailedAst: "WRITE_CACHES" };
+    const tmp13Result61 = tmp13(tmp3[42]);
   }
 }
-const processColor = get_ActivityIndicator.processColor;
-const ReferencedMessageState = processMessage.ReferencedMessageState;
-({ DEFAULT_GUILD_OFFICIAL_COLOR: closure_24, GUILD_OFFICIAL_HIGHLIGHT_ALPHA: closure_25, GUILD_OFFICIAL_HIGHLIGHT_ALPHA_COLOR: closure_26 } = MESSAGE_GROUP_SPACING);
-const ReferencedMessageRowState = Changeset.ReferencedMessageRowState;
-({ MessageTypes: closure_28, MessageStates: closure_29, MessageFlags: closure_30, ChannelTypes: closure_31 } = ME);
-const GuildTagBadgeSize = items6.GuildTagBadgeSize;
-let result = set.fileFinishedImporting("modules/messages/native/renderer/createMessageContent.tsx");
+const processColor = _mod17.processColor;
+const ReferencedMessageState = ReferencedMessageStore2.ReferencedMessageState;
+({ DEFAULT_GUILD_OFFICIAL_COLOR: closure_24, GUILD_OFFICIAL_HIGHLIGHT_ALPHA: closure_25, GUILD_OFFICIAL_HIGHLIGHT_ALPHA_COLOR: closure_26 } = MessageConstants);
+const ReferencedMessageRowState = RowGeneratorConstants.ReferencedMessageRowState;
+({ MessageTypes: closure_28, MessageStates: closure_29, MessageFlags: closure_30, ChannelTypes: items } = Constants);
+const GuildTagBadgeSize = GuildTagConstants.GuildTagBadgeSize;
+let result = size.fileFinishedImporting("modules/messages/native/renderer/createMessageContent.tsx");
 
 export default createMessageContent;

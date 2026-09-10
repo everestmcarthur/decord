@@ -1,40 +1,37 @@
-// Module ID: 14687
-// Function ID: 14688
-// Name: useIsTinyBroncoEnabled
-// Dependencies: [1433, 14688, 4773, 2]
+// Module ID: 14713
+// Function ID: 14714
+// Name: TinyBroncoExperiment
+// Dependencies: [1433, 14714, 4787, 2]
 // Exports: isTinyBroncoEnabled, useIsTinyBroncoEnabled, useShouldShowTinyBroncoDismissibleContent
 
-// Module 14687 (useIsTinyBroncoEnabled)
-import set from "set" /* 2 */;
-import TINY_BRONCO_DEV_ONLY from "TINY_BRONCO_DEV_ONLY" /* 14688 */;
+// Module 14713 (TinyBroncoExperiment)
+import TinyBroncoGate from "TinyBroncoGate" /* 14714 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
 let closure_2 = ApexExperiment.createApexExperiment({ name: "2026-08-tiny-bronco", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
-const result = set.fileFinishedImporting("modules/tiny_bronco/TinyBroncoExperiment.tsx");
+const result = size.fileFinishedImporting("modules/tiny_bronco/TinyBroncoExperiment.tsx");
 
-export const useIsTinyBroncoEnabled = function useIsTinyBroncoEnabled(closure_2) {
-  let enabled = TINY_BRONCO_DEV_ONLY.TINY_BRONCO_DEV_ONLY;
+export const useIsTinyBroncoEnabled = function useIsTinyBroncoEnabled(location) {
+  let enabled = TinyBroncoGate.TINY_BRONCO_DEV_ONLY;
   if (enabled) {
-    const obj = { location: null };
-    obj[0] = closure_2;
+    const obj = { location };
     enabled = closure_2.useConfig(obj).enabled;
   }
   return enabled;
 };
-export const isTinyBroncoEnabled = function isTinyBroncoEnabled(closure_5) {
-  let enabled = TINY_BRONCO_DEV_ONLY.TINY_BRONCO_DEV_ONLY;
+export const isTinyBroncoEnabled = function isTinyBroncoEnabled(stateFromStores) {
+  let enabled = TinyBroncoGate.TINY_BRONCO_DEV_ONLY;
   if (enabled) {
-    const obj = { location: null };
-    obj[0] = closure_5;
+    const obj = { location: stateFromStores };
     enabled = closure_2.getConfig(obj).enabled;
   }
   return enabled;
 };
-export const useShouldShowTinyBroncoDismissibleContent = function useShouldShowTinyBroncoDismissibleContent(arg0) {
-  let enabled = TINY_BRONCO_DEV_ONLY.TINY_BRONCO_DEV_ONLY;
+export const useShouldShowTinyBroncoDismissibleContent = function useShouldShowTinyBroncoDismissibleContent(location) {
+  let enabled = TinyBroncoGate.TINY_BRONCO_DEV_ONLY;
   if (enabled) {
-    const obj = { location: null };
-    obj[0] = arg0;
+    const obj = { location };
     enabled = closure_2.useConfig(obj).enabled;
   }
   if (enabled) {

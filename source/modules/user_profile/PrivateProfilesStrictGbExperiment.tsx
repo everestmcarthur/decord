@@ -1,15 +1,15 @@
-// Module ID: 13081
-// Function ID: 13082
-// Name: apexExperiment
+// Module ID: 13107
+// Function ID: 13108
+// Name: PrivateProfilesStrictGbExperiment
 // Dependencies: [1433, 2]
 // Exports: getIsInPrivateProfilesStrictGbExperiment, useIsInPrivateProfilesStrictGbExperiment
 
-// Module 13081 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 13107 (PrivateProfilesStrictGbExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-03-private-profiles-strict-gb", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true }, 2: { enabled: true }, 3: { enabled: true } } });
-const result = set.fileFinishedImporting("modules/user_profile/PrivateProfilesStrictGbExperiment.tsx");
+const result = size.fileFinishedImporting("modules/user_profile/PrivateProfilesStrictGbExperiment.tsx");
 
 export const PrivateProfilesStrictGbExperiment = apexExperiment;
 export const useIsInPrivateProfilesStrictGbExperiment = function useIsInPrivateProfilesStrictGbExperiment(location) {

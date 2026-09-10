@@ -1,15 +1,16 @@
-// Module ID: 17727
-// Function ID: 17728
-// Name: useRoleSubscriptionSettingsDisabled
-// Dependencies: [2, 17728]
+// Module ID: 17760
+// Function ID: 17761
+// Name: RoleSubscriptionSettingsDisabledContext
+// Dependencies: [2, 17761]
 
-// Module 17727 (useRoleSubscriptionSettingsDisabled)
-import set from "set" /* 2 */;
-import context from "context" /* 17728 */;
-import contextDefault from "context" /* 17728 */;
+// Module 17760 (RoleSubscriptionSettingsDisabledContext)
+import CreatorMonetizationSettingsDisabledContext from "CreatorMonetizationSettingsDisabledContext" /* 17761 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/RoleSubscriptionSettingsDisabledContext.tsx");
+const CreatorMonetizationSettingsDisabledContextDefault = CreatorMonetizationSettingsDisabledContext;
 
-export default contextDefault;
-export const useRoleSubscriptionSettingsDisabled = context.useCreatorMonetizationSettingsDisabled;
-export const RoleSubscriptionSettingsDisabledContextProvider = context.CreatorMonetizationSettingsDisabledContextProvider;
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/RoleSubscriptionSettingsDisabledContext.tsx");
+
+export default CreatorMonetizationSettingsDisabledContextDefault;
+export const useRoleSubscriptionSettingsDisabled = CreatorMonetizationSettingsDisabledContext.useCreatorMonetizationSettingsDisabled;
+export const RoleSubscriptionSettingsDisabledContextProvider = CreatorMonetizationSettingsDisabledContext.CreatorMonetizationSettingsDisabledContextProvider;

@@ -1,17 +1,16 @@
-// Module ID: 8250
-// Function ID: 8251
-// Name: prototype
-// Dependencies: [2011, 7118, 2]
+// Module ID: 8276
+// Function ID: 8277
+// Name: VideoBackgroundManager
+// Dependencies: [2011, 7132, 2]
 
-// Module 8250 (prototype)
-import initializeDefault from "initialize" /* 7118 */;
-import closure_0 from "handleConnectionOpen" /* 2011 */;
+// Module 8276 (VideoBackgroundManager)
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-initializeDefault;
-let prototype = function VideoBackgroundManager() {
+const prototype = function VideoBackgroundManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  const voiceChannelId = applyArgumentsResult;
-  applyArgumentsResult.previousSelectedVoiceChannelId = voiceChannelId.getVoiceChannelId();
+  SelectedChannelStore = applyArgumentsResult;
+  applyArgumentsResult.previousSelectedVoiceChannelId = SelectedChannelStore.getVoiceChannelId();
   applyArgumentsResult.cachedDominantColors = {};
   applyArgumentsResult._handleSelectVoiceChannel = function _handleSelectVoiceChannel(channelId) {
     channelId = channelId.channelId;
@@ -25,7 +24,8 @@ let prototype = function VideoBackgroundManager() {
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
-const result = require("set").fileFinishedImporting("modules/calls/native/VideoBackgroundManager.tsx");
+const prototype1 = new prototype();
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/calls/native/VideoBackgroundManager.tsx");
 
-export default prototype;
+export default prototype1;

@@ -1,24 +1,24 @@
-// Module ID: 12355
-// Function ID: 12356
-// Name: create
-// Dependencies: [12353, 12354, 2]
+// Module ID: 12381
+// Function ID: 12382
+// Name: SearchFetchManager
+// Dependencies: [12379, 12380, 2]
 
-// Module 12355 (create)
-import set from "set" /* 2 */;
-import cleanUp from "cleanUp" /* 12353 */;
-import fetch from "fetch" /* 12354 */;
+// Module 12381 (SearchFetchManager)
+import AbstractSearchFetchManager2 from "AbstractSearchFetchManager" /* 12379 */;
+import SearchFetcher from "SearchFetcher" /* 12380 */;
+import size from "module_2" /* 2 */;
 
-const AbstractSearchFetchManager = cleanUp.AbstractSearchFetchManager;
+const AbstractSearchFetchManager = AbstractSearchFetchManager2.AbstractSearchFetchManager;
 class SearchFetchManager extends AbstractSearchFetchManager {
 }
 SearchFetchManager.prototype["create"] = function create(arg0) {
   ({ id, searchType, searchQuery } = arg0);
   this.cancel(id);
-  const searchFetcherImpl = new fetch.SearchFetcherImpl(id, searchType, searchQuery);
+  const searchFetcherImpl = new SearchFetcher.SearchFetcherImpl(id, searchType, searchQuery);
   const result = this.set(id, searchFetcherImpl);
   return searchFetcherImpl;
 };
 const searchFetchManager = new SearchFetchManager();
-let result = set.fileFinishedImporting("modules/search/managers/SearchFetchManager.tsx");
+let result = size.fileFinishedImporting("modules/search/managers/SearchFetchManager.tsx");
 
 export default searchFetchManager;

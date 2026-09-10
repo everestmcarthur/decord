@@ -1,23 +1,26 @@
-// Module ID: 8856
-// Function ID: 8857
+// Module ID: 8883
+// Function ID: 8884
 // Name: useFetchVirtualCurrencyBalance
-// Dependencies: [19, 8857, 504, 8858, 2]
+// Dependencies: [19, 8884, 504, 8885, 2]
 // Exports: useFetchVirtualCurrencyBalance
 
-// Module 8856 (useFetchVirtualCurrencyBalance)
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import closure_3 from "redeemError" /* 8857 */;
+// Module 8883 (useFetchVirtualCurrencyBalance)
+import _mod19 from "module_19" /* 19 */;
+import VirtualCurrencyActionCreators from "VirtualCurrencyActionCreators" /* 8885 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 8884 */;
+import size from "module_2" /* 2 */;
 
-const useEffect = noop.useEffect;
-const result = set.fileFinishedImporting("modules/virtual_currency/hooks/useFetchVirtualCurrencyBalance.tsx");
+const require = globalThis.__r;
+
+const useEffect = _mod19.useEffect;
+const result = size.fileFinishedImporting("modules/virtual_currency/hooks/useFetchVirtualCurrencyBalance.tsx");
 
 export const useFetchVirtualCurrencyBalance = function useFetchVirtualCurrencyBalance(disableFetch) {
-  const _require = disableFetch;
-  const items = [closure_3];
-  const isFetching = _require(balance[2]).useStateFromStoresObject(items, () => ({ balance: closure_3.balance, isFetching: closure_3.isFetchingBalance, error: closure_3.fetchBalanceError }));
+  _require = disableFetch;
+  const items = [VirtualCurrencyStore];
+  const isFetching = require("initialize").useStateFromStoresObject(items, () => ({ balance: VirtualCurrencyStore.balance, isFetching: VirtualCurrencyStore.isFetchingBalance, error: VirtualCurrencyStore.fetchBalanceError }));
   balance = isFetching.balance;
-  error = isFetching.error;
+  const error = isFetching.error;
   const items1 = [balance, error, ];
   disableFetch = undefined;
   if (disableFetch != null) {
@@ -36,11 +39,10 @@ export const useFetchVirtualCurrencyBalance = function useFetchVirtualCurrencyBa
       disableFetch = null !== error;
     }
     if (!disableFetch) {
-      disableFetch = closure_1_3.isFetchingBalance;
+      disableFetch = VirtualCurrencyStore.isFetchingBalance;
     }
     if (!disableFetch) {
-      const virtualCurrencyBalance = disableFetch(balance[3]).fetchVirtualCurrencyBalance();
-      const obj = disableFetch(balance[3]);
+      const virtualCurrencyBalance = VirtualCurrencyActionCreators.fetchVirtualCurrencyBalance();
     }
   }, items1);
   return { balance, isFetching: isFetching.isFetching, error };

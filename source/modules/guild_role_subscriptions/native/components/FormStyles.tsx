@@ -1,32 +1,32 @@
-// Module ID: 13901
-// Function ID: 13902
-// Name: styles
-// Dependencies: [1074, 4560, 5524, 576, 2]
+// Module ID: 13924
+// Function ID: 13925
+// Name: FormStyles
+// Dependencies: [1074, 4574, 5538, 576, 2]
 
-// Module 13901 (styles)
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 576 */;
-import ME from "ME" /* 1074 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importDefaultResult from "createTextStyle" /* 5524 */;
+// Module 13924 (FormStyles)
+import nativeDefault from "native" /* 576 */;
+import Constants from "Constants" /* 1074 */;
+import createStyles from "createStyles" /* 4574 */;
+import TextStyles_mod from "TextStyles" /* 5538 */;
+import size from "module_2" /* 2 */;
 
-const Fonts = ME.Fonts;
-let obj = { padding: 16, flexGrow: 0, borderRadius: 8, marginHorizontal: 16 };
-obj = { header: { marginTop: 24, paddingStart: 16 }, textInput: null, disabledTextInput: null, dropdownInput: null };
-obj = {};
-const merged = Object.assign(importDefaultResult(Fonts.PRIMARY_MEDIUM, ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, 16));
+const Fonts = Constants.Fonts;
+const obj = { padding: 16, flexGrow: 0, borderRadius: 8, marginHorizontal: 16 };
+const obj2 = { header: { marginTop: 24, paddingStart: 16 }, textInput: null, disabledTextInput: null, dropdownInput: null };
+const obj3 = {};
+let TextStyles = TextStyles_mod;
+const merged = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, 16));
 const merged1 = Object.assign(obj);
-obj.backgroundColor = ThemesDefault.colors.BACKGROUND_BASE_LOWEST;
-obj[1] = obj;
-obj[2] = { padding: 16, width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-const obj2 = {};
-const obj1 = { padding: 16, width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-const merged2 = Object.assign(importDefaultResult(Fonts.PRIMARY_MEDIUM, ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, 16));
+obj3.backgroundColor = nativeDefault.colors.BACKGROUND_BASE_LOWEST;
+obj2.textInput = obj3;
+obj2.disabledTextInput = { padding: 16, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+const obj5 = {};
+let TextStyles = TextStyles_mod;
+const merged2 = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, 16));
 const merged3 = Object.assign(obj);
-obj2.backgroundColor = ThemesDefault.colors.BACKGROUND_SURFACE_HIGH;
-obj[3] = obj2;
-const styles = createCacheKey.createStyles(obj);
-const importDefaultResult1 = importDefaultResult;
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormStyles.tsx");
+obj5.backgroundColor = nativeDefault.colors.BACKGROUND_SURFACE_HIGH;
+obj2.dropdownInput = obj5;
+const styles = createStyles.createStyles(obj2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormStyles.tsx");
 
 export default styles;

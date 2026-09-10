@@ -1,67 +1,65 @@
-// Module ID: 12988
-// Function ID: 12989
-// Name: setUseEntranceAnimationState
-// Dependencies: [32, 19, 1178, 560, 1249, 4561, 4296, 2]
+// Module ID: 13014
+// Function ID: 13015
+// Name: useEntranceAnimation
+// Dependencies: [32, 19, 1178, 560, 1249, 4575, 4310, 2]
 // Exports: useEntranceAnimation
 
-// Module 12988 (setUseEntranceAnimationState)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import keys from "keys" /* 560 */;
+// Module 13014 (useEntranceAnimation)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import timing from "timing" /* 4575 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = fn;
 function setUseEntranceAnimationState(arg0) {
-  const _require = arg0;
-  _require(1249).batchUpdates(() => closure_1_5.setState(closure_0));
+  _require = arg0;
+  require("ReactBatchUpdates").batchUpdates(() => obj4.setState(closure_0));
 }
-let obj = { duration: 300, easing: require("Button").STANDARD_EASING };
-obj = keys.create(() => ({ isComplete: false }));
+let obj = { duration: 300, easing: fn(1178).STANDARD_EASING };
+const module_560 = fn(560);
+let obj4 = module_560.create(() => ({ isComplete: false }));
 let closure_7 = { code: "function useEntranceAnimationTsx1(){const{runOnJS,setUseEntranceAnimationState}=this.__closure;runOnJS(setUseEntranceAnimationState)({isComplete:true});}" };
 let closure_8 = { code: "function useEntranceAnimationTsx2(){const{runOnJS,setUseEntranceAnimationState,incrementLoads}=this.__closure;runOnJS(setUseEntranceAnimationState)({isComplete:true});runOnJS(incrementLoads)();}" };
-let result = require("set").fileFinishedImporting("modules/media_viewer/native/useEntranceAnimation.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/media_viewer/native/useEntranceAnimation.tsx");
 
-export const useEntranceAnimationState = obj;
+export const useEntranceAnimationState = obj4;
 export const useEntranceAnimation = function useEntranceAnimation(entranceAnimationDriver) {
-  closure_0 = entranceAnimationDriver;
-  [tmp2, dependencyMap] = callback(React.useState(0), 2);
-  callback = React.useCallback(() => {
-    callback((arg0) => arg0 + 1);
+  [tmp2, dependencyMap] = incrementLoads(noop.useState(0), 2);
+  incrementLoads = noop.useCallback(() => {
+    dependencyMap((arg0) => arg0 + 1);
   }, []);
   const items = [entranceAnimationDriver];
-  const items1 = [callback, entranceAnimationDriver];
-  const handleLoadStart = React.useCallback(() => {
-    obj = entranceAnimationDriver(closure_1_1[4]);
+  const items1 = [incrementLoads, entranceAnimationDriver];
+  const handleLoadStart = noop.useCallback(() => {
+    obj = ReactBatchUpdates;
     obj.batchUpdates(() => state.setState({ isComplete: false }));
     const fn = function t() {
-      callback(table[6]).runOnJS(closure_6)({ isComplete: true });
+      entranceAnimationDriver(dependencyMap[6]).runOnJS(closure_1_6)({ isComplete: true });
     };
-    obj = { runOnJS: entranceAnimationDriver(closure_1_1[6]).runOnJS, setUseEntranceAnimationState: closure_1_6 };
-    fn.__closure = obj;
+    const obj2 = timing;
+    fn.__closure = { runOnJS: ReanimatedRexport.runOnJS, setUseEntranceAnimationState };
     fn.__workletHash = 7427534745615;
-    fn.__initData = closure_1_7;
-    const result = entranceAnimationDriver.set(entranceAnimationDriver(closure_1_1[5]).withTiming(1, closure_1_4, "respect-motion-settings", fn));
+    fn.__initData = __initData;
+    const result = entranceAnimationDriver.set(obj2.withTiming(1, obj, "respect-motion-settings", fn));
   }, items);
-  const handleError = React.useCallback(() => {
-    obj = entranceAnimationDriver;
+  const handleError = noop.useCallback(() => {
     if (1 !== entranceAnimationDriver.get()) {
-      entranceAnimationDriver(closure_1_1[4]).batchUpdates(() => state.setState({ isComplete: false }));
-      const obj3 = entranceAnimationDriver(closure_1_1[5]);
+      ReactBatchUpdates.batchUpdates(() => state.setState({ isComplete: false }));
+      const obj3 = timing;
       const fn = function t() {
-        closure_1_0(closure_1_1[6]).runOnJS(closure_1_6)({ isComplete: true });
-        obj = closure_1_0(closure_1_1[6]);
-        closure_1_0(closure_1_1[6]).runOnJS(closure_2)();
+        closure_0(4310).runOnJS(setUseEntranceAnimationState)({ isComplete: true });
+        obj = closure_0(4310);
+        closure_0(4310).runOnJS(incrementLoads)();
       };
-      obj = { runOnJS: null, setUseEntranceAnimationState: null, incrementLoads: null };
-      obj[0] = entranceAnimationDriver(closure_1_1[6]).runOnJS;
-      obj[1] = closure_1_6;
-      obj[2] = callback;
-      fn.__closure = obj;
+      obj4 = { runOnJS: ReanimatedRexport.runOnJS, setUseEntranceAnimationState, incrementLoads };
+      fn.__closure = obj4;
       fn.__workletHash = 9904090637386;
-      fn.__initData = closure_1_8;
-      const result = obj.set(obj3.withTiming(1, closure_1_4, "respect-motion-settings", fn));
-      const obj2 = entranceAnimationDriver(closure_1_1[4]);
+      fn.__initData = __initData2;
+      const result = obj.set(obj3.withTiming(1, obj, "respect-motion-settings", fn));
     } else {
-      callback();
+      incrementLoads();
     }
   }, items1);
   return { loads, handleLoadStart, handleError, handleLoad: handleError };

@@ -1,54 +1,50 @@
-// Module ID: 9546
-// Function ID: 9547
-// Name: ConfirmActivityGateContent
-// Dependencies: [19, 17, 21, 4560, 576, 9547, 4556, 1114, 4904, 1178, 2]
+// Module ID: 9573
+// Function ID: 9574
+// Name: confirmActivityAgeGateAlert
+// Dependencies: [19, 17, 21, 4574, 576, 9574, 4570, 1114, 4918, 1178, 2]
 // Exports: confirmActivityAgeGateAlert
 
-// Module 9546 (ConfirmActivityGateContent)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import Text from "Text" /* 4556 */;
-import setDefault from "set" /* 4904 */;
-import SvgComponentDefault from "SvgComponent" /* 9547 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9573 (confirmActivityAgeGateAlert)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
+import ActivityAnnouncementDefault from "ActivityAnnouncement" /* 9574 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function ConfirmActivityGateContent(children) {
-  const tmp = callback3();
-  let obj = { style: tmp.alertContainer, children: null };
-  const items = [callback(SvgComponentDefault, {}), ];
-  obj = { style: tmp.alertBodyText, variant: "text-md/normal", children: children.description };
-  items[1] = callback(Text.Text, obj);
-  obj[1] = items;
-  return callback2(View, obj);
+  const tmp = closure_6();
+  const obj = { style: tmp.alertContainer, children: null };
+  const items = [React4(ActivityAnnouncementDefault, {}), React4(Text_Text.Text, { style: tmp.alertBodyText, variant: "text-md/normal", children: children.description })];
+  obj.children = items;
+  return hasOwnProperty(View, obj);
 }
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { alertContainer: { display: "flex", alignItems: "center", padding: 8 }, alertBodyText: null };
-createCacheKey = { fontSize: 16, lineHeight: 24, color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, textAlign: "center" };
-createCacheKey[1] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/activities/confirmActivityAgeGateAlert.native.tsx");
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+const obj2 = { alertContainer: { display: "flex", alignItems: "center", padding: 8 }, alertBodyText: { fontSize: 16, lineHeight: 24, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, textAlign: "center" } };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/confirmActivityAgeGateAlert.native.tsx");
 
 export const confirmActivityAgeGateAlert = function confirmActivityAgeGateAlert(arg0) {
   ({ application, onAgree, onDisagree } = arg0);
-  const intl = getSystemLocale.intl;
-  let obj = { applicationName: application.name };
-  const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t.OgmIqy, obj);
-  obj = { title: null, children: null, cancelText: null, confirmText: null, onConfirm: null, onCancel: null, confirmColor: null };
-  const intl2 = getSystemLocale.intl;
-  obj[0] = intl2.string(getSystemLocale.t.SSDPOF);
-  obj[1] = callback(ConfirmActivityGateContent, { description: formatToPlainStringResult });
-  const intl3 = getSystemLocale.intl;
-  obj[2] = intl3.string(getSystemLocale.t.hg1uxn);
-  const intl4 = getSystemLocale.intl;
-  obj[3] = intl4.string(getSystemLocale.t.wVq7uo);
-  obj[4] = onAgree;
-  obj[5] = onDisagree;
-  obj[6] = Button.ButtonColors.RED;
-  return Promise.resolve(setDefault.show(obj));
+  const intl = util.intl;
+  const formatToPlainStringResult = intl.formatToPlainString(util.t.OgmIqy, { applicationName: application.name });
+  const obj = { applicationName: application.name };
+  const obj3 = { title: null, children: null, cancelText: null, confirmText: null, onConfirm: null, onCancel: null, confirmColor: null };
+  const intl2 = util.intl;
+  obj3.title = intl2.string(util.t.SSDPOF);
+  obj3.children = React4(ConfirmActivityGateContent, { description: formatToPlainStringResult });
+  const intl3 = util.intl;
+  obj3.cancelText = intl3.string(util.t.hg1uxn);
+  const intl4 = util.intl;
+  obj3.confirmText = intl4.string(util.t.wVq7uo);
+  obj3.onConfirm = onAgree;
+  obj3.onCancel = onDisagree;
+  obj3.confirmColor = native.ButtonColors.RED;
+  return Promise.resolve(AlertActionCreatorsDefault.show(obj3));
 };

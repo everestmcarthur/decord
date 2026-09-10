@@ -1,29 +1,29 @@
 // Module ID: 1185
 // Function ID: 1186
-// Name: CHANNEL_SIDEBAR_WIDTH
+// Name: UnsyncedUserSettingsStore
 // Dependencies: [1186, 1084, 1074, 1219, 1220, 504, 510, 12, 573, 2]
 
-// Module 1185 (CHANNEL_SIDEBAR_WIDTH)
-import set from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
+// Module 1185 (UnsyncedUserSettingsStore)
+import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage3 from "Storage" /* 510 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 1084 */;
-import SystemThemeState2 from "SystemThemeState" /* 1186 */;
-import ExpressionPickerViewType from "ExpressionPickerViewType" /* 1219 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import UserSettingsConstants from "UserSettingsConstants" /* 1084 */;
+import ThemeConstants from "ThemeConstants" /* 1186 */;
+import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1219 */;
 import getSystemThemeDefault from "getSystemTheme" /* 1220 */;
-import ME from "ME" /* 1074 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const SystemThemeState = SystemThemeState2.SystemThemeState;
-const ListDensityMode = MAX_FAVORITES.ListDensityMode;
-({ DEFAULT_CHAT_SIDEBAR_WIDTH: c5, CHANNEL_SIDEBAR_WIDTH } = ME);
-let closure_7 = ME.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
-const ExpressionPickerWidths = ExpressionPickerViewType.ExpressionPickerWidths;
+const SystemThemeState = ThemeConstants.SystemThemeState;
+const ListDensityMode = UserSettingsConstants.ListDensityMode;
+({ DEFAULT_CHAT_SIDEBAR_WIDTH: hasOwnProperty, CHANNEL_SIDEBAR_WIDTH } = Constants);
+let closure_7 = Constants.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
+const ExpressionPickerWidths = ExpressionPickerConstants.ExpressionPickerWidths;
 let obj = { DATA_SAVER: "data_saver", STANDARD: "standard", BEST: "best" };
 let closure_9 = (window.innerWidth - CHANNEL_SIDEBAR_WIDTH) / 2;
 const STANDARD = obj.STANDARD;
-let c11 = null;
+let closure_11 = null;
 let closure_12 = {};
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class UnsyncedUserSettingsStore extends DeviceSettingsStore {
@@ -34,22 +34,23 @@ prototype["initialize"] = function initialize(arg0) {
   if (arg0 == null) {
     obj = {};
   }
+  closure_12 = obj;
   const useSystemTheme = obj.useSystemTheme;
   if (null != useSystemTheme) {
     if (null != getSystemThemeDefault()) {
       let UNSET = useSystemTheme;
     }
     obj.useSystemTheme = UNSET;
-    let lowQualityImageMode = obj.dataSavingMode;
+    let lowQualityImageMode = closure_12.dataSavingMode;
     if (lowQualityImageMode == null) {
-      lowQualityImageMode = obj.lowQualityImageMode;
+      lowQualityImageMode = closure_12.lowQualityImageMode;
     }
-    obj.dataSavingMode = lowQualityImageMode;
-    let str = obj.hdrDynamicRange;
+    closure_12.dataSavingMode = lowQualityImageMode;
+    let str = closure_12.hdrDynamicRange;
     if (str == null) {
       str = "no-limit";
     }
-    obj.hdrDynamicRange = str;
+    closure_12.hdrDynamicRange = str;
   }
   UNSET = SystemThemeState.UNSET;
 };
@@ -77,7 +78,7 @@ Object.defineProperty(prototype, "lowQualityImageMode", {
   set: undefined
 });
 Object.defineProperty(prototype, "videoUploadQuality", {
-  get: function videoUploadQuality(arg0) {
+  get: function videoUploadQuality() {
     let videoUploadQuality = closure_12.videoUploadQuality;
     if (videoUploadQuality == null) {
       videoUploadQuality = STANDARD;
@@ -123,7 +124,7 @@ Object.defineProperty(prototype, "threadSidebarWidth", {
   get: function threadSidebarWidth() {
     let threadSidebarWidth = closure_12.threadSidebarWidth;
     if (threadSidebarWidth == null) {
-      threadSidebarWidth = closure_5;
+      threadSidebarWidth = hasOwnProperty;
     }
     return threadSidebarWidth;
   },
@@ -143,7 +144,7 @@ Object.defineProperty(prototype, "callChatSidebarWidth", {
   get: function callChatSidebarWidth() {
     let callChatSidebarWidth = closure_12.callChatSidebarWidth;
     if (callChatSidebarWidth == null) {
-      callChatSidebarWidth = closure_5;
+      callChatSidebarWidth = hasOwnProperty;
     }
     return callChatSidebarWidth;
   },
@@ -156,7 +157,7 @@ Object.defineProperty(prototype, "homeSidebarWidth", {
       if (null == closure_11) {
         const _Math = Math;
         const _window = window;
-        closure_11 = Math.max(0.4 * (window.innerWidth - CHANNEL_SIDEBAR_WIDTH), closure_5);
+        closure_11 = Math.max(0.4 * (window.innerWidth - CHANNEL_SIDEBAR_WIDTH), hasOwnProperty);
       }
       homeSidebarWidth = closure_11;
     }
@@ -358,24 +359,24 @@ UnsyncedUserSettingsStore.persistKey = "UnsyncedUserSettingsStore";
 const items = [
   () => {
     const Storage = Storage3.Storage;
-    const value = Storage.get("UserSettingsStore");
+    value = Storage.get("UserSettingsStore");
     const Storage2 = Storage3.Storage;
     Storage2.remove("UserSettingsStore");
-    return applyDefault.pick(value, "dataSavingMode", "videoUploadQuality", "lowQualityImageMode", "useSystemTheme", "expressionPickerWidth", "disableVoiceChannelChangeAlert", "disableHardwareMuteSilenceAlert", "disableHideSelfStreamAndVideoConfirmationAlert", "pushUpsellDismissed", "disableEmbeddedActivityPopOutAlert", "disableActivityHardwareAccelerationPrompt", "disableInviteWithTextChannelActivityLaunch", "disableActivityHostLeftNitroUpsell", "disableCallUserConfirmationPrompt", "disableApplicationSubscriptionCancellationSurvey", "enableAndroidChatListAnimations");
+    return _modDef12.pick(value, "dataSavingMode", "videoUploadQuality", "lowQualityImageMode", "useSystemTheme", "expressionPickerWidth", "disableVoiceChannelChangeAlert", "disableHardwareMuteSilenceAlert", "disableHideSelfStreamAndVideoConfirmationAlert", "pushUpsellDismissed", "disableEmbeddedActivityPopOutAlert", "disableActivityHardwareAccelerationPrompt", "disableInviteWithTextChannelActivityLaunch", "disableActivityHostLeftNitroUpsell", "disableCallUserConfirmationPrompt", "disableApplicationSubscriptionCancellationSurvey", "enableAndroidChatListAnimations");
   },
   (arg0) => {
     delete tmp[tmp2];
   }
 ];
 UnsyncedUserSettingsStore.migrations = items;
-obj = {
+const unsyncedUserSettingsStore = new UnsyncedUserSettingsStore(DispatcherDefault, {
   UNSYNCED_USER_SETTINGS_UPDATE: function handleUnsyncedUserSettingsUpdate(settings) {
-    const obj = {};
-    const merged = Object.assign(obj);
+    const merged = Object.assign(closure_12);
     const merged1 = Object.assign(settings.settings);
+    closure_12 = {};
   },
   LOGOUT: function handleLogOut() {
-    obj = { useSystemTheme: obj.useSystemTheme };
+    closure_12 = { useSystemTheme: closure_12.useSystemTheme };
   },
   LOGIN_SUCCESS: function handleLogInSuccess() {
     if (null == closure_12) {
@@ -385,9 +386,8 @@ obj = {
   REGISTER_SUCCESS: function handleRegisterSuccess() {
     closure_12.useSystemTheme = SystemThemeState.ON;
   }
-};
-const unsyncedUserSettingsStore = new UnsyncedUserSettingsStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("modules/user_settings/UnsyncedUserSettingsStore.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/UnsyncedUserSettingsStore.tsx");
 
 export default unsyncedUserSettingsStore;
 export const VideoQualitySettings = obj;

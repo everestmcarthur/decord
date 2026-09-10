@@ -1,16 +1,18 @@
-// Module ID: 13715
-// Function ID: 13716
-// Name: initialize
-// Dependencies: [32, 6595, 1074, 504, 573, 13716, 13717, 2]
+// Module ID: 13738
+// Function ID: 13739
+// Name: LocalAppDetectionStore
+// Dependencies: [32, 6609, 1074, 504, 573, 13739, 13740, 2]
 
-// Module 13715 (initialize)
+// Module 13738 (LocalAppDetectionStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "hasConsented" /* 6595 */;
-import { Consents } from "ME" /* 1074 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 13739 */;
+import LocalAppDetectionUtils from "LocalAppDetectionUtils" /* 13740 */;
+import _slicedToArray from "module_32" /* 32 */;
+import ConsentStore from "ConsentStore" /* 6609 */;
 
-let object = arg1;
+require = fn;
+const Consents = fn(1074).Consents;
 let closure_6 = { detected: false, lastScannedAt: "PX_16" };
 let closure_7 = { apps: {} };
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
@@ -19,16 +21,15 @@ class LocalAppDetectionStore extends DeviceSettingsStore {
     closure_0 = undefined;
     obj = {
       POST_CONNECTION_OPEN() {
-            return obj.handlePostConnectionOpen();
+            return closure_0.handlePostConnectionOpen();
           },
       LOCAL_APP_DETECTION_COMPLETE(arg0) {
-            return obj.handleLocalAppDetectionComplete(arg0);
+            return closure_0.handleLocalAppDetectionComplete(arg0);
           }
     };
-    tmp2 = new tmp2(require("dispatcher"), obj, new.target, tmp2, tmp, new.target);
-    // ThrowIfThisInitialized (0x7c)
-    closure_0 = tmp2;
-    return tmp2;
+    tmp21 = new tmp2(closure_1(closure_2[4]), obj, new.target, tmp2, tmp, new.target);
+    closure_0 = tmp21;
+    return tmp21;
   }
 }
 const prototype = LocalAppDetectionStore.prototype;
@@ -38,7 +39,7 @@ prototype["initialize"] = function initialize(arg0) {
     tmp = closure_7;
   }
   closure_7 = tmp;
-  this.waitFor(closure_4);
+  this.waitFor(ConsentStore);
 };
 prototype["getUserAgnosticState"] = function getUserAgnosticState() {
   return closure_7;
@@ -51,7 +52,7 @@ prototype["getAppState"] = function getAppState(nextResult) {
   return tmp;
 };
 prototype["isAppInstalled"] = function isAppInstalled(nextResult) {
-  let detected = closure_4.hasConsented(Consents.PERSONALIZATION);
+  let detected = ConsentStore.hasConsented(Consents.PERSONALIZATION);
   if (detected) {
     const self = this;
     detected = this.getAppState(nextResult).detected;
@@ -61,7 +62,7 @@ prototype["isAppInstalled"] = function isAppInstalled(nextResult) {
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
   const self = this;
   const items = [];
-  const iter = object(13716).ALL_DETECTABLE_APP_NAMES[Symbol.iterator]();
+  const iter = LocalAppDetectionTypes.ALL_DETECTABLE_APP_NAMES[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
@@ -69,18 +70,15 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
     let tmp5 = null == appState.lastScannedAt;
     if (!tmp5) {
       let _Date = Date;
-      let tmp6 = appState;
       tmp5 = Date.now() - tmp4.lastScannedAt > 86400000;
     }
     if (tmp5) {
-      let tmp7 = nextResult;
       let arr = items.push(tmp2);
     }
     continue;
   }
   if (items.length > 0) {
-    object(13717).detectLocalApps(items);
-    const obj = object(13717);
+    LocalAppDetectionUtils.detectLocalApps(items);
   }
 };
 prototype["handleLocalAppDetectionComplete"] = function handleLocalAppDetectionComplete(result) {
@@ -89,19 +87,17 @@ prototype["handleLocalAppDetectionComplete"] = function handleLocalAppDetectionC
     return false;
   } else {
     const _Date = Date;
-    let obj = {};
+    const obj = {};
     const timestamp = Date.now();
-    const merged = Object.assign(obj);
+    const merged = Object.assign(closure_7);
     const tmp6 = entries[Symbol.iterator]();
     while (tmp6 !== undefined) {
-      let tmp10 = callback;
-      let tmp11 = callback(tmp8, 2);
-      obj = { detected: null, lastScannedAt: null };
-      obj[0] = tmp11[1];
-      obj[1] = timestamp;
-      obj.apps[tmp11[0]] = obj;
+      let tmp11 = _slicedToArray(tmp8, 2);
+      let obj2 = { detected: tmp11[1], lastScannedAt: timestamp };
+      obj.apps[tmp11[0]] = obj2;
       continue;
     }
+    closure_7 = obj;
   }
 };
 class DEV_resetState {
@@ -113,16 +109,16 @@ class DEV_resetState {
 prototype["DEV_resetState"] = DEV_resetState;
 LocalAppDetectionStore.displayName = "AppDetectionStore";
 LocalAppDetectionStore.persistKey = "AppDetectionStore";
-object = undefined;
-object = new Object(dispatcherDefault, {
+const object = new Object(DispatcherDefault, {
   POST_CONNECTION_OPEN() {
-    return obj.handlePostConnectionOpen();
+    return closure_0.handlePostConnectionOpen();
   },
   LOCAL_APP_DETECTION_COMPLETE(arg0) {
-    return obj.handleLocalAppDetectionComplete(arg0);
+    return closure_0.handleLocalAppDetectionComplete(arg0);
   }
 }, tmp, LocalAppDetectionStore, Object, prototype, new.target, undefined, DEV_resetState);
-// ThrowIfThisInitialized (0x7c)
-const result = require("set").fileFinishedImporting("modules/local_app_detection/native/LocalAppDetectionStore.tsx");
+let closure_129_0 = object;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/local_app_detection/native/LocalAppDetectionStore.tsx");
 
 export default object;

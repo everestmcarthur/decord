@@ -1,38 +1,38 @@
-// Module ID: 17608
-// Function ID: 17609
-// Name: MAX_SUBCATEGORIES
+// Module ID: 17639
+// Function ID: 17640
+// Name: GuildSettingsConstants
 // Dependencies: [1114, 2]
 // Exports: getSettingsErrorMessage
 
-// Module 17608 (MAX_SUBCATEGORIES)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 17639 (GuildSettingsConstants)
+import util from "util" /* 1114 */;
+import size from "module_2" /* 2 */;
 
-const obj = {
+const ERROR_KEY_TO_LABEL_FUNC = {
   afk_channel_id() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.KuYcnU);
+    const intl = util.intl;
+    return intl.string(util.t.KuYcnU);
   },
   public_updates_channel_id() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.vAyDGU);
+    const intl = util.intl;
+    return intl.string(util.t.vAyDGU);
   },
   safety_alerts_channel_id() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.sMkYE8);
+    const intl = util.intl;
+    return intl.string(util.t.sMkYE8);
   },
   system_channel_id() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.NASFnq);
+    const intl = util.intl;
+    return intl.string(util.t.NASFnq);
   }
 };
-const result = set.fileFinishedImporting("modules/guild_settings/GuildSettingsConstants.tsx");
+const result = size.fileFinishedImporting("modules/guild_settings/GuildSettingsConstants.tsx");
 
 export const MAX_SUBCATEGORIES = 5;
 export const MAX_KEYWORDS = 10;
 export const MAX_KEYWORD_LENGTH = 30;
 export const GuildSettingsRoleEditSections = { DISPLAY: 0, [0]: "DISPLAY", PERMISSIONS: 1, [1]: "PERMISSIONS", MEMBERS: 2, [2]: "MEMBERS", VERIFICATIONS: 3, [3]: "VERIFICATIONS" };
-export const ERROR_KEY_TO_LABEL_FUNC = obj;
+export { ERROR_KEY_TO_LABEL_FUNC };
 export const getSettingsErrorMessage = function getSettingsErrorMessage(arg0) {
   if (0 === Object.keys(arg0).length) {
     return null;

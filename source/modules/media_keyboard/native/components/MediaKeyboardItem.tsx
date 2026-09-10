@@ -1,38 +1,36 @@
-// Module ID: 10653
-// Function ID: 10654
-// Name: NewCaption
-// Dependencies: [19, 17, 4900, 10654, 21, 4296, 4560, 576, 4409, 1178, 10402, 4556, 504, 5136, 10655, 1114, 5168, 5138, 10656, 10657, 4561, 1477, 10658, 5087, 10117, 2]
+// Module ID: 10680
+// Function ID: 10681
+// Name: MediaKeyboardItem
+// Dependencies: [19, 17, 4914, 10681, 21, 4310, 4574, 576, 4423, 1178, 10429, 4570, 504, 5150, 10682, 1114, 5182, 5152, 10683, 10684, 4575, 1477, 10685, 5101, 10144, 2]
 // Exports: isAttachFilesNode, isMediaCameraNode, isSpecialMediaGridNode, isViewAllPhotosNode
 
-// Module 10653 (NewCaption)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
+// Module 10680 (MediaKeyboardItem)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
-import Text from "Text" /* 4556 */;
-import ImageIcon from "ImageIcon" /* 5087 */;
-import AttachmentIcon from "AttachmentIcon" /* 10117 */;
-import registerAssetDefault from "registerAsset" /* 10402 */;
-import CameraIcon from "CameraIcon" /* 10658 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "map" /* 4900 */;
-import frozen from "frozen" /* 10654 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importDefaultResult from "module_4296" /* 4296 */;
-import hexToRgba from "hexToRgba" /* 4409 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4310 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import timing from "timing" /* 4575 */;
+import ImageIcon from "ImageIcon" /* 5101 */;
+import AttachmentIcon from "AttachmentIcon" /* 10144 */;
+import _modDef10429 from "module_10429" /* 10429 */;
+import CameraIcon from "CameraIcon" /* 10685 */;
+import noop from "module_19" /* 19 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 4914 */;
 
-require = arg1;
+const ReanimatedRexport = ReanimatedRexport2;
+
+require = fn;
 function NewCaption(arg0) {
   ({ label, style, textStyle } = arg0);
-  const tmp = callback3();
-  let obj = { style: items, children: null };
-  items = [tmp.labelContainer, style];
-  obj = { source: registerAssetDefault, style: tmp.icon };
-  const items1 = [callback(Button.Icon, obj), callback(Text.Text, { style: textStyle, color: "text-overlay-light", variant: "text-xs/bold", children: label })];
-  obj[1] = items1;
-  return callback2(closure_4, obj);
+  const tmp = closure_12();
+  const obj = { style: null, children: null };
+  const items = [tmp.labelContainer, style];
+  obj.style = items;
+  const items1 = [React7(native.Icon, { source: _modDef10429, style: tmp.icon }), React7(Text_Text.Text, { style: textStyle, color: "text-overlay-light", variant: "text-xs/bold", children: label })];
+  obj.children = items1;
+  return closure_1_10(React4, obj);
 }
 function MediaKeyboardImage(draftType) {
   draftType = draftType.draftType;
@@ -44,24 +42,20 @@ function MediaKeyboardImage(draftType) {
   const onPressItem = draftType.onPressItem;
   const onLongPressItem = draftType.onLongPressItem;
   const includedUploadIds = draftType.includedUploadIds;
-  let image;
-  let constants;
   ({ disabled, uploadLimit, disableWhenReachedLimit } = draftType);
-  const tmp = callback3();
+  const tmp = closure_12();
   const node = item.node;
-  image = node.image;
+  const image = node.image;
   const type = node.type;
-  let obj = index(totalNumItems[12]);
   const items = [image];
   const items1 = [channelId, draftType, image, includedUploadIds];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = index(totalNumItems[12]).useStateFromStoresObject(items, () => {
     const obj = {
-      upload: image.findUpload(totalNumItems, index, (id) => {
-        let doesImageMatchUploadResult = closure_1_0(closure_1_2[13]).doesImageMatchUpload(closure_6, id);
+      upload: UploadAttachmentStore.findUpload(totalNumItems, index, (id) => {
+        let doesImageMatchUploadResult = index(totalNumItems[13]).doesImageMatchUpload(image, id);
         if (doesImageMatchUploadResult) {
-          doesImageMatchUploadResult = null == closure_5 || closure_5.includes(id.id);
-          const obj2 = closure_5;
-          const tmp3 = null == closure_5 || closure_5.includes(id.id);
+          doesImageMatchUploadResult = null == includedUploadIds || includedUploadIds.includes(id.id);
+          const tmp3 = null == includedUploadIds || includedUploadIds.includes(id.id);
         }
         return doesImageMatchUploadResult;
       }),
@@ -72,30 +66,23 @@ function MediaKeyboardImage(draftType) {
       length = includedUploadIds.length;
     }
     if (length == null) {
-      length = image.getUploadCount(totalNumItems, index);
+      length = UploadAttachmentStore.getUploadCount(totalNumItems, index);
     }
-    obj[1] = length;
+    obj.uploadCount = length;
     return obj;
   }, items1);
   constants = tmp5;
-  obj1 = onPressItem;
   const items2 = [channelId, item, null != stateFromStoresObject.upload, onPressItem, onLongPressItem];
   const memo = onPressItem.useMemo(() => ({
     onPress() {
-      let obj = closure_1_1(closure_1_2[14]);
-      obj.hideNativeMenu();
-      obj = { channelId: closure_2, item: closure_1, isIncluded: closure_7 };
-      callback(obj);
+      numItemsPerRow(totalNumItems[14]).hideNativeMenu();
+      onPressItem({ channelId, item, isIncluded });
     },
     onLongPress() {
-      let obj = closure_1_1(closure_1_2[14]);
-      obj.hideNativeMenu();
-      if (closure_4 != null) {
-        obj = { channelId: null, item: null, isIncluded: null };
-        obj[0] = closure_2;
-        obj[1] = closure_1;
-        obj[2] = closure_7;
-        tmp2(obj);
+      numItemsPerRow(totalNumItems[14]).hideNativeMenu();
+      if (onLongPressItem != null) {
+        const obj2 = { channelId, item, isIncluded };
+        tmp2(obj2);
       }
     }
   }), items2);
@@ -109,13 +96,12 @@ function MediaKeyboardImage(draftType) {
     if (tmp9.VIDEO !== type) {
       if (constants2.VIDEO !== type) {
         if (tmp9.PHOTO === type) {
-          let tmp2Result = tmp2(tmp3[17]);
           let tmp12 = null;
           if ("image/gif" === tmp2Result.getType(image.uri)) {
-            obj = { style: null, label: "GIF" };
-            obj[0] = tmp.mediaKeyboardItemLabelContainer;
-            tmp12 = callback(tmp2(tmp3[18]).Caption, obj);
+            const obj3 = { style: tmp.mediaKeyboardItemLabelContainer, label: "GIF" };
+            tmp12 = closure_9(tmp2(tmp3[18]).Caption, obj3);
           }
+          tmp2Result = tmp2(tmp3[17]);
         } else {
           tmp12 = null;
         }
@@ -125,25 +111,19 @@ function MediaKeyboardImage(draftType) {
         tmp16 = stateFromStoresObject.uploadCount >= uploadLimit && disableWhenReachedLimit || disabled;
         const tmp17 = stateFromStoresObject.uploadCount >= uploadLimit && disableWhenReachedLimit || disabled;
       }
-      obj = { style: null, children: null };
-      obj[0] = tmp.checkIconContainer;
-      obj1 = { source: null, disableColor: false, color: null, style: null };
-      obj1[0] = numItemsPerRow(tmp3[19]);
-      obj1[2] = tmp.checkIcon.color;
-      obj1[3] = tmp.checkIcon;
-      obj[1] = callback(tmp2(tmp3[9]).Icon, obj1);
+      const obj4 = { style: tmp.checkIconContainer, children: null };
+      const obj5 = { source: numItemsPerRow(tmp3[19]), disableColor: false, color: tmp.checkIcon.color, style: tmp.checkIcon };
+      obj4.children = closure_9(tmp2(tmp3[9]).Icon, obj5);
       const items3 = [index, numItemsPerRow, totalNumItems];
-      let obj2 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, onPress: null, onLongPress: null, disabled: null, style: null, children: null };
-      obj2[1] = stringResult;
-      const obj3 = { selected: null };
-      obj3[0] = tmp5;
-      obj2[2] = obj3;
-      obj2[3] = tmp7;
-      obj2[4] = tmp8;
-      obj2[5] = tmp16;
+      const obj6 = { accessibilityRole: "button", accessibilityLabel: stringResult, accessibilityState: null, onPress: null, onLongPress: null, disabled: null, style: null, children: null };
+      const obj7 = { selected: tmp5 };
+      obj6.accessibilityState = obj7;
+      obj6.onPress = tmp7;
+      obj6.onLongPress = tmp8;
+      obj6.disabled = tmp16;
       const items4 = [tmp.imageContainer, , ];
       let imageDisabled;
-      const memo1 = obj1.useMemo(() => {
+      const memo1 = onPressItem.useMemo(() => {
         let num = 0;
         if (0 !== totalNumItems) {
           const _Math = Math;
@@ -165,7 +145,7 @@ function MediaKeyboardImage(draftType) {
         if (tmp7) {
           num7 = 16;
         }
-        obj[1] = num7;
+        obj.borderTopRightRadius = num7;
         let num8 = num3;
         if (rounded === num) {
           num8 = num3;
@@ -173,7 +153,7 @@ function MediaKeyboardImage(draftType) {
             num8 = 16;
           }
         }
-        obj[2] = num8;
+        obj.borderBottomLeftRadius = num8;
         if (index === totalNumItems - 1) {
           let num9 = 16;
         } else {
@@ -182,11 +162,11 @@ function MediaKeyboardImage(draftType) {
             num9 = num3;
           }
         }
-        obj[3] = num9;
+        obj.borderBottomRightRadius = num9;
         if (index % numItemsPerRow == 0) {
           num3 = 0;
         }
-        obj[4] = num3;
+        obj.marginLeft = num3;
         return obj;
       }, items3);
       if (tmp16) {
@@ -194,35 +174,25 @@ function MediaKeyboardImage(draftType) {
       }
       items4[1] = imageDisabled;
       items4[2] = memo1;
-      obj2[6] = items4;
-      const obj4 = { resizeMode: "cover", resizeMethod: "resize", style: null, source: null, localImageSource: null };
+      obj6.style = items4;
+      const obj8 = { resizeMode: "cover", resizeMethod: "resize", style: null, source: null, localImageSource: null };
       const items5 = [tmp.image, ];
-      const obj5 = { height: null, width: null };
-      obj5[0] = size;
-      obj5[1] = size;
-      items5[1] = obj5;
-      obj4[2] = items5;
-      const obj6 = { uri: null, width: null, height: null, cache: "force-cache" };
-      obj6[0] = image.uri;
-      obj6[1] = size;
-      obj6[2] = size;
-      obj4[3] = obj6;
-      const obj7 = { uri: null, width: null, height: null };
-      obj7[0] = image.uri;
-      obj7[1] = size;
-      obj7[2] = size;
-      obj4[4] = obj7;
-      const items6 = [callback(tmp2(tmp3[9]).ThumbnailImage, obj4), tmp12, , ];
+      const size1 = { height: size, width: size };
+      items5[1] = size1;
+      obj8.style = items5;
+      const size2 = { uri: image.uri, width: size, height: size, cache: "force-cache" };
+      obj8.source = size2;
+      const size3 = { uri: image.uri, width: size, height: size };
+      obj8.localImageSource = size3;
+      const items6 = [closure_9(tmp2(tmp3[9]).ThumbnailImage, obj8), tmp12, , ];
       let tmp18Result = null;
       if (tmp5) {
-        const obj8 = { style: null };
+        const obj9 = { style: null };
         const items7 = [tmp.selectedOverlay, ];
-        const obj9 = { height: null, width: null };
-        obj9[0] = size;
-        obj9[1] = size;
-        items7[1] = obj9;
-        obj8[0] = items7;
-        tmp18Result = tmp18(onLongPressItem, obj8);
+        const size4 = { height: size, width: size };
+        items7[1] = size4;
+        obj9.style = items7;
+        tmp18Result = tmp18(onLongPressItem, obj9);
       }
       items6[2] = tmp18Result;
       let tmp27 = null;
@@ -230,63 +200,63 @@ function MediaKeyboardImage(draftType) {
         tmp27 = tmp20;
       }
       items6[3] = tmp27;
-      obj2[7] = items6;
-      return closure_10(includedUploadIds, obj2);
+      obj6.children = items6;
+      return closure_10(includedUploadIds, obj6);
     }
-    const obj10 = { label: null };
-    tmp2Result = tmp2(tmp3[16]);
-    obj10[0] = tmp2Result.getTimeFormat(image.playableDuration);
-    tmp12 = callback(NewCaption, obj10);
+    const obj10 = { label: tmp2(tmp3[16]).getTimeFormat(image.playableDuration) };
+    tmp12 = closure_9(NewCaption, obj10);
+    const tmp2Result2 = tmp2(tmp3[16]);
   }
   const intl2 = tmp2(tmp3[15]).intl;
   stringResult = intl2.string(tmp2(tmp3[15]).t.SkfkEJ);
 }
 function MediaKeyboardDummy(arg0) {
   ({ size, isFirstInRow } = arg0);
-  const tmp = callback3();
+  const tmp = closure_12();
   const items = [tmp.imageContainer, ];
   let obj = !isFirstInRow;
   if (!isFirstInRow) {
     obj = { marginLeft: 4 };
   }
-  obj = { style: items, children: tmp2(tmp3, { style: items1 }) };
+  const obj2 = { style: items, children: null };
   items[1] = obj;
-  items1 = [tmp.image, { height: size, width: size }];
-  return closure_9(closure_4, obj);
+  const obj3 = { style: null };
+  const items1 = [tmp.image, { height: size, width: size }];
+  obj3.style = items1;
+  obj2.children = React7(React4, obj3);
+  return React7(React4, obj2);
 }
 function MediaKeyboardSpecialButton(arg0) {
   ({ size, disabled, index, totalNumItems, numItemsPerRow } = arg0);
   index = undefined;
-  numItemsPerRow = undefined;
   totalNumItems = undefined;
   ({ onPress, accessibilityLabel, children } = arg0);
-  const tmp = callback3();
-  let obj = index(totalNumItems[5]);
-  const sharedValue = obj.useSharedValue(0);
+  const tmp = closure_12();
+  const sharedValue = index(totalNumItems[5]).useSharedValue(0);
   index = sharedValue;
-  const tmp3 = callback4();
+  const tmp3 = closure_16();
   const backgroundColor = tmp3.backgroundColor;
   numItemsPerRow = backgroundColor;
   const pressedBackgroundColor = tmp3.pressedBackgroundColor;
   totalNumItems = pressedBackgroundColor;
+  let obj = index(totalNumItems[5]);
   const fn = function h() {
-    let obj = { backgroundColor: null };
-    const obj2 = index(totalNumItems[20]);
+    const obj = { backgroundColor: null };
+    const obj2 = timing;
     const items = [numItemsPerRow, totalNumItems];
-    obj = { duration: 200, easing: null };
-    const obj3 = index(totalNumItems[5]);
-    const Easing = index(totalNumItems[5]).Easing;
-    obj[1] = Easing.out(index(totalNumItems[5]).Easing.quad);
-    obj[0] = obj2.withTiming(index(totalNumItems[5]).interpolateColor(index.get(), [0, 1], items), obj);
+    const obj4 = { duration: 200, easing: null };
+    const Easing = ReanimatedRexport2.Easing;
+    obj4.easing = Easing.out(ReanimatedRexport2.Easing.quad);
+    obj.backgroundColor = obj2.withTiming(ReanimatedRexport2.interpolateColor(index.get(), [0, 1], items), obj4);
     return obj;
   };
-  obj = { withTiming: index(totalNumItems[20]).withTiming, interpolateColor: index(totalNumItems[5]).interpolateColor, pressed: sharedValue, backgroundColor, pressedBackgroundColor, Easing: index(totalNumItems[5]).Easing };
-  fn.__closure = obj;
+  let obj2 = index(totalNumItems[5]);
+  fn.__closure = { withTiming: index(totalNumItems[20]).withTiming, interpolateColor: index(totalNumItems[5]).interpolateColor, pressed: sharedValue, backgroundColor, pressedBackgroundColor, Easing: index(totalNumItems[5]).Easing };
   fn.__workletHash = 15924448581794;
-  fn.__initData = closure_17;
+  fn.__initData = __initData;
   let items = [index, numItemsPerRow, totalNumItems];
-  const animatedStyle = index(totalNumItems[5]).useAnimatedStyle(fn);
-  obj = {
+  const animatedStyle = obj2.useAnimatedStyle(fn);
+  let obj4 = {
     disabled,
     accessibilityRole: "button",
     accessibilityLabel,
@@ -303,7 +273,7 @@ function MediaKeyboardSpecialButton(arg0) {
   const items1 = [animatedStyle, , , , , ];
   ({ imageContainer: arr2[1], specialButton: arr2[2] } = tmp);
   items1[3] = { width: size, height: size };
-  items1[4] = importAllResult.useMemo(() => {
+  items1[4] = noop.useMemo(() => {
     let num = 0;
     if (0 !== totalNumItems) {
       const _Math = Math;
@@ -325,7 +295,7 @@ function MediaKeyboardSpecialButton(arg0) {
     if (tmp7) {
       num7 = 16;
     }
-    obj[1] = num7;
+    obj.borderTopRightRadius = num7;
     let num8 = num3;
     if (rounded === num) {
       num8 = num3;
@@ -333,7 +303,7 @@ function MediaKeyboardSpecialButton(arg0) {
         num8 = 16;
       }
     }
-    obj[2] = num8;
+    obj.borderBottomLeftRadius = num8;
     if (index === totalNumItems - 1) {
       let num9 = 16;
     } else {
@@ -342,79 +312,84 @@ function MediaKeyboardSpecialButton(arg0) {
         num9 = num3;
       }
     }
-    obj[3] = num9;
+    obj.borderBottomRightRadius = num9;
     if (index % numItemsPerRow == 0) {
       num3 = 0;
     }
-    obj[4] = num3;
+    obj.marginLeft = num3;
     return obj;
   }, items);
-  disabled = undefined;
+  let disabled1;
   if (disabled) {
-    disabled = tmp.disabled;
+    disabled1 = tmp.disabled;
   }
-  items1[5] = disabled;
-  obj[6] = items1;
-  obj[7] = children;
-  return closure_9(closure_11, obj);
+  items1[5] = disabled1;
+  obj4.style = items1;
+  obj4.children = children;
+  return closure_9(closure_11, obj4);
 }
-let c3 = importAllResult;
-({ View: c4, Pressable } = get_ActivityIndicator);
-({ ALAssetsType: error, DeviceMediaType: closure_8 } = frozen);
-({ jsx: c9, jsxs: c10 } = jsxProd);
-let closure_11 = importDefaultResult.createAnimatedComponent(Pressable);
-let obj = { container: { flexDirection: "row", paddingHorizontal: 12, alignItems: "center" }, image: null, imageContainer: null, labelContainer: null, mediaKeyboardItemLabelContainer: null, icon: null, checkIcon: null, checkIconContainer: null, selectedOverlay: null, specialButton: null, disabled: null, imageDisabled: null };
-obj = { backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
-obj[1] = obj;
-obj[2] = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden", position: "relative" };
-createCacheKey = { flexDirection: "row", alignItems: "center", backgroundColor: null, borderRadius: null, paddingHorizontal: 5, paddingVertical: 4, position: "absolute", left: 8, bottom: 8 };
-createCacheKey[2] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.PRIMARY_700, 0.6);
-createCacheKey[3] = ThemesDefault.radii.xs;
-obj[3] = createCacheKey;
-obj[4] = { right: 10 };
-let obj1 = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden", position: "relative" };
-obj[5] = { width: 12, height: 12, tintColor: ThemesDefault.colors.WHITE, marginEnd: 4 };
-let obj3 = { width: 12, height: 12, tintColor: ThemesDefault.colors.WHITE, marginEnd: 4 };
-obj[6] = { width: 14, height: 14, color: ThemesDefault.colors.BACKGROUND_BRAND };
-let obj5 = { width: 24, height: 24, position: "absolute", justifyContent: "center", alignItems: "center", right: 6, top: 6, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.WHITE, borderWidth: 1, borderColor: null };
-obj5[10] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BLACK, 0.1);
-obj[7] = obj5;
-let obj6 = {};
+get_ActivityIndicator = fn(17);
+({ View: closure_4, Pressable } = get_ActivityIndicator);
+const DeviceConstants = fn(10681);
+({ ALAssetsType: closure_7, DeviceMediaType: closure_8 } = DeviceConstants);
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+let closure_11 = ReanimatedRexport.createAnimatedComponent(Pressable);
+let createStyles = fn(4574);
+let obj = { container: { flexDirection: "row", paddingHorizontal: 12, alignItems: "center" }, image: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND }, imageContainer: null, labelContainer: null, mediaKeyboardItemLabelContainer: null, icon: null, checkIcon: null, checkIconContainer: null, selectedOverlay: null, specialButton: null, disabled: null, imageDisabled: null };
+let obj2 = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
+obj.imageContainer = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", position: "relative" };
+const rect = { flexDirection: "row", alignItems: "center", backgroundColor: null, borderRadius: null, paddingHorizontal: 5, paddingVertical: 4, position: "absolute", left: 8, bottom: 8 };
+let ColorUtils = fn(4423);
+rect.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.6);
+rect.borderRadius = nativeDefault.radii.xs;
+obj.labelContainer = rect;
+obj.mediaKeyboardItemLabelContainer = { right: 10 };
+let size = { width: 12, height: 12, tintColor: nativeDefault.colors.WHITE, marginEnd: 4 };
+obj.icon = size;
+let size1 = { width: 14, height: 14, color: nativeDefault.colors.BACKGROUND_BRAND };
+obj.checkIcon = size1;
+let size2 = { width: 24, height: 24, position: "absolute", justifyContent: "center", alignItems: "center", right: 6, top: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.WHITE, borderWidth: 1, borderColor: null };
+ColorUtils = fn(4423);
+size2.borderColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.1);
+obj.checkIconContainer = size2;
+let obj5 = {};
 const merged = Object.assign(get_ActivityIndicator.StyleSheet.absoluteFillObject);
-obj6.borderRadius = ThemesDefault.radii.xs;
-obj6.backgroundColor = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BLACK, 0.3);
-obj[8] = obj6;
-obj[9] = { flexDirection: "column", justifyContent: "center", alignItems: "center", gap: 8 };
-obj[10] = { opacity: 0.4 };
-obj[11] = { opacity: 0.2 };
-let closure_12 = createCacheKey.createStyles(obj);
-hexToRgba = { backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, pressedBackgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_ACTIVE };
-let closure_16 = createCacheKey.createStyleProperties(hexToRgba);
-let closure_17 = { code: "function MediaKeyboardItemTsx1(){const{withTiming,interpolateColor,pressed,backgroundColor,pressedBackgroundColor,Easing}=this.__closure;return{backgroundColor:withTiming(interpolateColor(pressed.get(),[0,1],[backgroundColor,pressedBackgroundColor]),{duration:200,easing:Easing.out(Easing.quad)})};}" };
-let obj4 = { width: 14, height: 14, color: ThemesDefault.colors.BACKGROUND_BRAND };
-const memoResult = importAllResult.memo((arg0) => {
-  ({ items, channel: require, draftType: importDefault, onPressItem: dependencyMap, onLongPressItem: closure_3, rowIndex: closure_4, totalNumItems: Pressable, numPerRow } = arg0);
+obj5.borderRadius = nativeDefault.radii.xs;
+ColorUtils = fn(4423);
+obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.3);
+obj.selectedOverlay = obj5;
+obj.specialButton = { flexDirection: "column", justifyContent: "center", alignItems: "center", gap: 8 };
+obj.disabled = { opacity: 0.4 };
+obj.imageDisabled = { opacity: 0.2 };
+let closure_12 = createStyles.createStyles(obj);
+createStyles = fn(4574);
+let obj4 = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", position: "relative" };
+let closure_16 = createStyles.createStyleProperties({ backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, pressedBackgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_ACTIVE });
+const __initData = { code: "function MediaKeyboardItemTsx1(){const{withTiming,interpolateColor,pressed,backgroundColor,pressedBackgroundColor,Easing}=this.__closure;return{backgroundColor:withTiming(interpolateColor(pressed.get(),[0,1],[backgroundColor,pressedBackgroundColor]),{duration:200,easing:Easing.out(Easing.quad)})};}" };
+let obj6 = { backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, pressedBackgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_ACTIVE };
+size = fn(2);
+let result = size.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardItem.tsx");
+
+export default noop.memo((arg0) => {
+  ({ items, channel: require, draftType: importDefault, onPressItem: dependencyMap, onLongPressItem: noop, rowIndex: closure_4, totalNumItems: Pressable, numPerRow } = arg0);
   ({ includedUploadIds: closure_7, uploadLimit: closure_8, disableWhenReachedLimit: closure_9, disabled: closure_10 } = arg0);
-  closure_11 = undefined;
-  let obj;
   ({ handleCameraPress, handleAttachPress, handleViewAllPhotosPress } = arg0);
-  closure_11 = (useWindowDimensionsDefault().width - (24 + 4 * (numPerRow - 1))) / numPerRow;
-  obj = { camera: null, allphotos: null, attach: null };
-  obj = { text: getSystemLocale.t.uje3P9, onPress: handleCameraPress, Icon: CameraIcon.CameraIcon };
-  obj[0] = obj;
-  obj = { text: getSystemLocale.t.Zmm6dN, onPress: handleViewAllPhotosPress, Icon: ImageIcon.ImageIcon };
-  obj[1] = obj;
+  const size = (useWindowDimensionsDefault().width - (24 + 4 * (numPerRow - 1))) / numPerRow;
+  let obj = { camera: null, allphotos: null, attach: null };
   const tmp = obj();
-  obj[2] = { text: getSystemLocale.t["8Hvr3+"], onPress: handleAttachPress, Icon: AttachmentIcon.AttachmentIcon };
-  obj1 = { text: getSystemLocale.t["8Hvr3+"], onPress: handleAttachPress, Icon: AttachmentIcon.AttachmentIcon };
-  return callback(closure_4, {
+  obj.camera = { text: util.t.uje3P9, onPress: handleCameraPress, Icon: CameraIcon.CameraIcon };
+  let obj2 = { text: util.t.uje3P9, onPress: handleCameraPress, Icon: CameraIcon.CameraIcon };
+  obj.allphotos = { text: util.t.Zmm6dN, onPress: handleViewAllPhotosPress, Icon: ImageIcon.ImageIcon };
+  let obj3 = { text: util.t.Zmm6dN, onPress: handleViewAllPhotosPress, Icon: ImageIcon.ImageIcon };
+  obj.attach = { text: util.t["8Hvr3+"], onPress: handleAttachPress, Icon: AttachmentIcon.AttachmentIcon };
+  let obj4 = { text: util.t["8Hvr3+"], onPress: handleAttachPress, Icon: AttachmentIcon.AttachmentIcon };
+  return disableWhenReachedLimit(closure_4, {
     style: tmp.container,
-    children: items.map((type) => {
+    children: items.map((type, index) => {
       if (null == type) {
-        obj = { size: null, isFirstInRow: null };
-        obj[0] = closure_11;
-        obj[1] = 0 === arg1;
-        return closure_1_9(closure_1_15, obj, arg1);
+        const obj2 = { size, isFirstInRow: 0 === index };
+        return React7(MediaKeyboardDummy, obj2, index);
       } else {
         let hasItem = "type" in type;
         if (hasItem) {
@@ -422,43 +397,23 @@ const memoResult = importAllResult.memo((arg0) => {
           hasItem = items.includes(type.type);
         }
         if (hasItem) {
-          obj = { size: null, onPress: null, disabled: null, accessibilityLabel: null, index: null, totalNumItems: null, numItemsPerRow: null, children: null };
-          obj[0] = closure_11;
-          obj[1] = obj[type.type].onPress;
-          obj[2] = closure_10;
-          const intl = closure_1_0(closure_1_2[15]).intl;
-          obj[3] = intl.string(obj[type.type].text);
-          obj[4] = closure_4 * numPerRow + arg1;
-          obj[5] = closure_5;
-          obj[6] = numPerRow;
-          obj1 = { color: null, size: "lg" };
-          obj1[0] = closure_1_1(closure_1_2[7]).colors.ICON_SUBTLE;
-          obj[7] = closure_1_9(obj[type.type].Icon, obj1);
-          return closure_1_9(closure_1_18, obj, arg1);
+          const obj3 = { size, onPress: obj[type.type].onPress, disabled, accessibilityLabel: null, index: null, totalNumItems: null, numItemsPerRow: null, children: null };
+          const intl = util.intl;
+          obj3.accessibilityLabel = intl.string(obj[type.type].text);
+          obj3.index = closure_1_4 * numPerRow + index;
+          obj3.totalNumItems = totalNumItems;
+          obj3.numItemsPerRow = numPerRow;
+          const obj4 = { color: nativeDefault.colors.ICON_SUBTLE, size: "lg" };
+          obj3.children = React7(obj[type.type].Icon, obj4);
+          return React7(MediaKeyboardSpecialButton, obj3, index);
         } else {
-          obj = { channelId: null, draftType: null, index: null, totalNumItems: null, numItemsPerRow: null, item: null, includedUploadIds: null, uploadLimit: null, disableWhenReachedLimit: null, size: null, onPressItem: null, onLongPressItem: null, disabled: null };
-          obj[0] = id.id;
-          obj[1] = closure_1;
-          obj[2] = closure_4 * numPerRow + arg1;
-          obj[3] = closure_5;
-          obj[4] = numPerRow;
-          obj[5] = type;
-          obj[6] = closure_7;
-          obj[7] = closure_8;
-          obj[8] = closure_9;
-          obj[9] = closure_11;
-          obj[10] = closure_2;
-          obj[11] = closure_3;
-          obj[12] = closure_10;
-          return closure_1_9(closure_1_14, obj, arg1);
+          obj = { channelId: id.id, draftType, index: closure_1_4 * numPerRow + index, totalNumItems, numItemsPerRow: numPerRow, item: type, includedUploadIds, uploadLimit, disableWhenReachedLimit, size, onPressItem, onLongPressItem, disabled };
+          return React7(MediaKeyboardImage, obj, index);
         }
       }
     })
   });
 });
-let result = require("set").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardItem.tsx");
-
-export default memoResult;
 export const PARENT_PADDING = 24;
 export const CHILD_PADDING = 4;
 export const SEPARATOR_SIZE = 4;

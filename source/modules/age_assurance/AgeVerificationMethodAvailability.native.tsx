@@ -1,85 +1,70 @@
-// Module ID: 8438
-// Function ID: 8439
-// Name: filterByAvailability
-// Dependencies: [5, 32, 19, 1379, 1115, 8439, 8440, 2]
+// Module ID: 8466
+// Function ID: 8467
+// Name: AgeVerificationMethodAvailability
+// Dependencies: [5, 32, 19, 1379, 1115, 8467, 8468, 2]
 // Exports: getAvailableMethodsV2, useAvailableMethodsV2
 
-// Module 8438 (filterByAvailability)
-import set from "set" /* 1115 */;
-import MIN_AGE_GATE from "MIN_AGE_GATE" /* 8439 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+// Module 8466 (AgeVerificationMethodAvailability)
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import AppStoreAgeSignalSupport from "AppStoreAgeSignalSupport" /* 8467 */;
+import GoogleWalletActionCreators from "GoogleWalletActionCreators" /* 8468 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-function filterByAvailability(arr) {
+require = fn;
+function filterByAvailability(arr, arg1) {
   ({ googleWallet: require, appStoreSignal: dependencyMap } = arg1);
   return arr.filter((method) => {
     method = method.method;
-    if (callback(table[3]).AgeAssuranceMethod.GOOGLE_WALLET === method) {
-      return callback;
+    if (closure_0(first[3]).AgeAssuranceMethod.GOOGLE_WALLET === method) {
+      return closure_0;
     } else if (tmp(tmp2[3]).AgeAssuranceMethod.OS_SIGNAL === method) {
-      return table;
+      return closure_1;
     } else {
       return true;
     }
-    tmp = callback;
-    tmp2 = table;
+    tmp = closure_0;
+    tmp2 = first;
   });
 }
 function isAppStoreSignalAvailable() {
-  let isIOSResult = set.isIOS();
+  let isIOSResult = PlatformUtils.isIOS();
   if (isIOSResult) {
-    isIOSResult = MIN_AGE_GATE.isAppStoreAgeSignalSupported();
-    const tmpResult = MIN_AGE_GATE;
+    isIOSResult = AppStoreAgeSignalSupport.isAppStoreAgeSignalSupported();
+    const tmpResult = AppStoreAgeSignalSupport;
   }
   return isIOSResult;
 }
-function _getAvailableMethodsV() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    return (function*(arg0, googleWallet) {
-      closure_3 = tmp2;
-      closure_2 = callback;
-      closure_1 = {};
-      const obj2 = callback(closure_1_1[6]);
-      closure_1.googleWallet = yield obj2.checkGoogleWalletAvailable();
-      closure_1.appStoreSignal = v0();
-      return callback2(closure_2, closure_1);
-    })();
-  });
-  closure_7 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-let result = require("set").fileFinishedImporting("modules/age_assurance/AgeVerificationMethodAvailability.native.tsx");
+let closure_7 = async function _getAvailableMethodsV() {
+  closure_3 = tmp2;
+  noop = filterByAvailability;
+  closure_2 = closure_0;
+  closure_1 = {};
+  closure_1.googleWallet = await GoogleWalletActionCreators.checkGoogleWalletAvailable();
+  closure_1.appStoreSignal = closure_131_6();
+  return noop(closure_2, closure_1);
+};
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationMethodAvailability.native.tsx");
 
 export const useAvailableMethodsV2 = function useAvailableMethodsV2(methods) {
-  closure_0 = methods;
-  let tmp = memo(React.useState(false), 2);
+  let tmp = memo(noop.useState(false), 2);
   const first = tmp[0];
   closure_2 = tmp[1];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     c0 = false;
     const result = methods(first[6]).checkGoogleWalletAvailable();
-    result.then((arg0) => {
+    result.then((result) => {
       if (!c0) {
-        closure_1_2(arg0);
+        closure_2(result);
       }
     });
     return () => {
       c0 = true;
     };
   }, []);
-  memo = React.useMemo(() => {
+  memo = noop.useMemo(() => {
     let isIOSResult = methods(first[4]).isIOS();
     if (isIOSResult) {
       isIOSResult = methods(first[5]).isAppStoreAgeSignalSupported();
@@ -88,26 +73,26 @@ export const useAvailableMethodsV2 = function useAvailableMethodsV2(methods) {
     return isIOSResult;
   }, []);
   const items = [methods, first, memo];
-  return React.useMemo(() => {
-    methods = closure_1;
+  return noop.useMemo(() => {
+    methods = first;
     closure_1 = memo;
     return methods.filter((method) => {
       method = method.method;
-      if (callback(table[3]).AgeAssuranceMethod.GOOGLE_WALLET === method) {
-        return callback;
+      if (closure_0(first[3]).AgeAssuranceMethod.GOOGLE_WALLET === method) {
+        return closure_0;
       } else if (tmp(tmp2[3]).AgeAssuranceMethod.OS_SIGNAL === method) {
-        return table;
+        return closure_1;
       } else {
         return true;
       }
-      tmp = callback;
-      tmp2 = table;
+      tmp = closure_0;
+      tmp2 = first;
     });
   }, items);
 };
-export const getAvailableMethodsV2 = function getAvailableMethodsV2(methods) {
+export const getAvailableMethodsV2 = function getAvailableMethodsV2() {
   const self = this;
-  const apply = _getAvailableMethodsV.apply;
+  const apply = closure_7.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

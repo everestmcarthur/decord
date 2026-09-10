@@ -1,70 +1,72 @@
-// Module ID: 12104
-// Function ID: 12105
+// Module ID: 12130
+// Function ID: 12131
 // Name: useTrackAppLauncherHomeItemImpression
-// Dependencies: [19, 12105, 12092, 8861, 1086, 2]
+// Dependencies: [19, 12131, 12118, 8888, 1086, 2]
 // Exports: useTrackAppLauncherHomeItemImpression
 
-// Module 12104 (useTrackAppLauncherHomeItemImpression)
-import closure_3 from "noop" /* 19 */;
+// Module 12130 (useTrackAppLauncherHomeItemImpression)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/useTrackAppLauncherHomeItemImpression.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/useTrackAppLauncherHomeItemImpression.tsx");
 
 export const useTrackAppLauncherHomeItemImpression = function useTrackAppLauncherHomeItemImpression() {
-  let obj = trackAppLauncherItemImpressionOnFirstView(12105);
-  trackAppLauncherItemImpressionOnFirstView = obj.useTrackAppLauncherItemImpressionOnFirstView().trackAppLauncherItemImpressionOnFirstView;
-  obj = {
-    trackAppLauncherHomeItemImpression: React.useCallback((viewableItems) => {
-      viewableItems = viewableItems.viewableItems;
-      let item = viewableItems.forEach((item) => {
-        item = item.item;
-        if (item.type === closure_1_0(closure_1_2[2]).AppLauncherHomeListItemType.RECOMMENDATION_APP) {
-          shelfItem1SectionPosition = item.sectionPosition;
-          applicationId = item.application.id;
-          let tmpResult = tmp(tmp2[3]);
-          let flags = tmpResult.getApplicationFlags(item.application);
-        } else if (item.type === tmp(tmp2[2]).AppLauncherHomeListItemType.RECOMMENDATION_BANNER_CARD) {
-          shelfItem1SectionPosition = item.sectionPosition;
-          applicationId = item.item.application.id;
-          tmpResult = tmp(tmp2[3]);
-          flags = tmpResult.getApplicationFlags(item.item.application);
-        } else if (item.type === tmp(tmp2[2]).AppLauncherHomeListItemType.SHELF_ITEM) {
-          ({ sectionPosition: shelfItem1SectionPosition, applicationId } = item);
-          flags = item.section.application.flags;
-        } else if (item.type === tmp(tmp2[2]).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE) {
-          ({ shelfItem1SectionPosition, shelfItem2SectionPosition } = item);
-          applicationId = item.shelfItem1.application.id;
-          const shelfItem2 = item.shelfItem2;
-          if (shelfItem2 != null) {
-            const id = shelfItem2.application.id;
-          }
-          flags = item.shelfItem1.application.flags;
-          const shelfItem22 = item.shelfItem2;
-          if (shelfItem22 != null) {
-            const flags2 = shelfItem22.application.flags;
-          }
+  trackAppLauncherItemImpressionOnFirstView = trackAppLauncherItemImpressionOnFirstView(12131).useTrackAppLauncherItemImpressionOnFirstView().trackAppLauncherItemImpressionOnFirstView;
+  let obj2 = { trackAppLauncherHomeItemImpression: null };
+  const items = [trackAppLauncherItemImpressionOnFirstView];
+  obj2.trackAppLauncherHomeItemImpression = noop.useCallback((viewableItems) => {
+    viewableItems = viewableItems.viewableItems;
+    let item = viewableItems.forEach((item) => {
+      item = item.item;
+      if (item.type === trackAppLauncherItemImpressionOnFirstView(dependencyMap[2]).AppLauncherHomeListItemType.RECOMMENDATION_APP) {
+        shelfItem1SectionPosition = item.sectionPosition;
+        applicationId = item.application.id;
+        let flags = tmp(tmp2[3]).getApplicationFlags(item.application);
+        const tmpResult = tmp(tmp2[3]);
+      } else if (item.type === tmp(tmp2[2]).AppLauncherHomeListItemType.RECOMMENDATION_BANNER_CARD) {
+        shelfItem1SectionPosition = item.sectionPosition;
+        applicationId = item.item.application.id;
+        flags = tmp(tmp2[3]).getApplicationFlags(item.item.application);
+        const tmpResult2 = tmp(tmp2[3]);
+      } else if (item.type === tmp(tmp2[2]).AppLauncherHomeListItemType.SHELF_ITEM) {
+        ({ sectionPosition: shelfItem1SectionPosition, applicationId } = item);
+        flags = item.section.application.flags;
+      } else if (item.type === tmp(tmp2[2]).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE) {
+        ({ shelfItem1SectionPosition, shelfItem2SectionPosition } = item);
+        applicationId = item.shelfItem1.application.id;
+        const shelfItem2 = item.shelfItem2;
+        if (shelfItem2 != null) {
+          const id = shelfItem2.application.id;
         }
-        let obj = { itemKey: "sectionName:" + item.sectionName + " applicationId:" + applicationId, sectionName: item.sectionName, sectionPosition: shelfItem1SectionPosition, sectionOverallPosition: item.sectionOverallPosition, applicationId, applicationFlags: closure_1_1(closure_1_2[4]).asUintN(32, flags) };
-        callback(obj);
-        if (tmp7) {
-          obj = { itemKey: null, sectionName: null, sectionPosition: null, sectionOverallPosition: null, applicationId: null, applicationFlags: null };
-          const _HermesInternal = HermesInternal;
-          obj[0] = "sectionName:" + item.sectionName + " applicationId:" + id;
-          obj[1] = item.sectionName;
-          obj[2] = shelfItem2SectionPosition;
-          obj[3] = item.sectionOverallPosition;
-          obj[4] = id;
-          let asUintNResult;
-          if (null != flags2) {
-            asUintNResult = closure_1_1(tmp2[4]).asUintN(32, flags2);
-            const tmp5Result = closure_1_1(tmp2[4]);
-          }
-          obj[5] = asUintNResult;
-          callback(obj);
+        flags = item.shelfItem1.application.flags;
+        const shelfItem22 = item.shelfItem2;
+        if (shelfItem22 != null) {
+          const flags2 = shelfItem22.application.flags;
         }
-      });
-    }, items)
-  };
-  items = [trackAppLauncherItemImpressionOnFirstView];
-  return obj;
+      }
+      const obj = { itemKey: "sectionName:" + item.sectionName + " applicationId:" + applicationId, sectionName: item.sectionName, sectionPosition: shelfItem1SectionPosition, sectionOverallPosition: item.sectionOverallPosition, applicationId, applicationFlags: BigFlagUtilsAll.asUintN(32, flags) };
+      closure_1_0(obj);
+      if (tmp7) {
+        const obj2 = { itemKey: null, sectionName: null, sectionPosition: null, sectionOverallPosition: null, applicationId: null, applicationFlags: null };
+        const _HermesInternal = HermesInternal;
+        obj2.itemKey = "sectionName:" + item.sectionName + " applicationId:" + id;
+        obj2.sectionName = item.sectionName;
+        obj2.sectionPosition = shelfItem2SectionPosition;
+        obj2.sectionOverallPosition = item.sectionOverallPosition;
+        obj2.applicationId = id;
+        let asUintNResult;
+        if (null != flags2) {
+          asUintNResult = require("BigFlagUtils").asUintN(32, flags2);
+          const tmp5Result = require("BigFlagUtils");
+        }
+        obj2.applicationFlags = asUintNResult;
+        closure_1_0(obj2);
+      }
+    });
+  }, items);
+  return obj2;
 };

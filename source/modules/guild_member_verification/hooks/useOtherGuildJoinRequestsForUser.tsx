@@ -1,29 +1,29 @@
-// Module ID: 16585
-// Function ID: 16586
+// Module ID: 16616
+// Function ID: 16617
 // Name: useOtherGuildJoinRequestsForUser
-// Dependencies: [19, 5542, 504, 5541, 2]
+// Dependencies: [19, 5556, 504, 5555, 2]
 // Exports: useOtherGuildJoinRequestsForUser
 
-// Module 16585 (useOtherGuildJoinRequestsForUser)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "updateSubmittedGuildJoinRequestTotal" /* 5542 */;
+// Module 16616 (useOtherGuildJoinRequestsForUser)
+import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 5555 */;
+import noop from "module_19" /* 19 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5556 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/useOtherGuildJoinRequestsForUser.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_member_verification/hooks/useOtherGuildJoinRequestsForUser.tsx");
 
 export const useOtherGuildJoinRequestsForUser = function useOtherGuildJoinRequestsForUser(guildId) {
   guildId = guildId.guildId;
   const userId = guildId.userId;
   const selectedJoinRequestId = guildId.selectedJoinRequestId;
-  let stateFromStores;
-  let items = [closure_4];
+  let items = [GuildJoinRequestStore];
   const items1 = [guildId, userId];
-  stateFromStores = guildId(selectedJoinRequestId[2]).useStateFromStores(items, () => closure_1_4.getRequestsForUser(guildId, userId), items1);
+  const stateFromStores = guildId(selectedJoinRequestId[2]).useStateFromStores(items, () => GuildJoinRequestStore.getRequestsForUser(guildId, userId), items1);
   const items2 = [guildId, userId, stateFromStores];
   const effect = stateFromStores.useEffect(() => {
     if (null == stateFromStores) {
-      const guildJoinRequestsForUser = userId(selectedJoinRequestId[3]).fetchGuildJoinRequestsForUser(guildId, userId);
-      const obj = userId(selectedJoinRequestId[3]);
+      const guildJoinRequestsForUser = GuildJoinRequestActionCreatorsDefault.fetchGuildJoinRequestsForUser(guildId, userId);
     }
   }, items2);
   const items3 = [stateFromStores, selectedJoinRequestId];
@@ -32,7 +32,7 @@ export const useOtherGuildJoinRequestsForUser = function useOtherGuildJoinReques
     if (stateFromStores == null) {
       items = [];
     }
-    const found = items.filter((joinRequestId) => joinRequestId.joinRequestId !== closure_2);
+    const found = items.filter((joinRequestId) => joinRequestId.joinRequestId !== selectedJoinRequestId);
     const substr = found.slice();
     return substr.sort((createdAt, createdAt2) => {
       const time = new Date(createdAt2.createdAt).getTime();

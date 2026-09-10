@@ -2,35 +2,34 @@
 // Function ID: 815
 // Name: captureFeedback
 // Dependencies: [713]
+// Exports: captureFeedback
 
 // Module 814 (captureFeedback)
-import getClient from "getClient" /* 713 */;
+import _mod713 from "module_713" /* 713 */;
 
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.captureFeedback = function captureFeedback(tags) {
+
+export const captureFeedback = function captureFeedback(contact_email) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
   let currentScope = arg2;
   if (arg2 === undefined) {
-    currentScope = getClient.getCurrentScope();
-    const obj3 = getClient;
+    currentScope = _mod713.getCurrentScope();
   }
-  obj = { contexts: { feedback: obj }, type: "feedback", level: "info", tags: tags.tags };
-  obj = { contact_email: tags.email, name: tags.name, message: tags.message, url: tags.url, source: tags.source, associated_event_id: tags.associatedEventId };
+  const obj2 = { contexts: { feedback: { contact_email: contact_email.email, name: contact_email.name, message: contact_email.message, url: contact_email.url, source: contact_email.source, associated_event_id: contact_email.associatedEventId } }, type: "feedback", level: "info", tags: contact_email.tags };
   let client;
   if (currentScope != null) {
     client = currentScope.getClient();
   }
   if (!client) {
-    client = getClient.getClient();
-    const obj6 = getClient;
+    client = _mod713.getClient();
   }
   if (client) {
-    client.emit("beforeSendFeedback", obj, obj);
+    client.emit("beforeSendFeedback", obj2, obj);
   }
-  return currentScope.captureEvent(obj, obj);
+  return currentScope.captureEvent(obj2, obj);
 };

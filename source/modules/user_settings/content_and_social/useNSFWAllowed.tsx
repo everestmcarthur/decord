@@ -1,18 +1,19 @@
-// Module ID: 9302
-// Function ID: 9303
+// Module ID: 9329
+// Function ID: 9330
 // Name: useNSFWAllowed
 // Dependencies: [1371, 504, 2]
 // Exports: useNSFWAllowed
 
-// Module 9302 (useNSFWAllowed)
+// Module 9329 (useNSFWAllowed)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/useNSFWAllowed.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/content_and_social/useNSFWAllowed.tsx");
 
 export const useNSFWAllowed = function useNSFWAllowed() {
-  const items = [closure_2];
+  const items = [UserStore];
   return initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let nsfwAllowed;

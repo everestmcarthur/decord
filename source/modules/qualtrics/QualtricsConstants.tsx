@@ -1,12 +1,12 @@
-// Module ID: 4756
-// Function ID: 4757
-// Name: QuestionTypeEnum
+// Module ID: 4770
+// Function ID: 4771
+// Name: QualtricsConstants
 // Dependencies: [2]
 
-// Module 4756 (QuestionTypeEnum)
-import set from "set" /* 2 */;
+// Module 4770 (QualtricsConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/qualtrics/QualtricsConstants.tsx");
+const result = size.fileFinishedImporting("modules/qualtrics/QualtricsConstants.tsx");
 
 export const QuestionTypeEnum = { MULTIPLE_CHOICE: "MC", TEXT_ENTRY: "TE", DESCRIPTIVE_BLOCK: "DB" };
 export const QuestionSelectorEnum = { SINGLE_ANSWER: "SAVR", MULTIPLE_ANSWER: "MAVR", DROPDOWN: "DL", SINGLE_LINE: "SL", MULTI_LINE: "ML", ESSAY: "ESTB", FORM: "FORM", PASSWORD: "PW", LIKERT: "Likert", BIPOLAR: "Bipolar", PROFILE: "Profile", MAXDIFF: "MaxDiff", DRAG_AND_DROP: "DND", RANK: "Rank", TEXT_BLOCK: "TB" };

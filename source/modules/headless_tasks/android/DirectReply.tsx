@@ -1,47 +1,95 @@
-// Module ID: 17941
-// Function ID: 17942
-// Name: promise
-// Dependencies: [5, 17, 4553, 3, 17935, 7456, 2]
+// Module ID: 17974
+// Function ID: 17975
+// Name: DirectReply
+// Dependencies: [5, 17, 4567, 3, 17968, 7470, 2]
 
-// Module 17941 (promise)
-import timestampDefault from "timestamp" /* 3 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4553 */;
+// Module 17974 (DirectReply)
+import LoggerDefault from "Logger" /* 3 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-let closure_5 = new timestampDefault("DirectReply");
-let tmp = new timestampDefault("DirectReply");
-let result = require("set").fileFinishedImporting("modules/headless_tasks/android/DirectReply.tsx");
+const NativeModules = fn(17).NativeModules;
+const MessageSendLocation = fn(4567).MessageSendLocation;
+let closure_5 = new LoggerDefault("DirectReply");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/headless_tasks/android/DirectReply.tsx");
 
 export default (arg0) => {
   closure_0 = arg0;
   return new Promise((arg0) => {
-    const lib = arg0;
-    closure_1_5.log("Executing DirectReply");
-    let PushNotificationAndroid = closure_1_3.PushNotificationAndroid;
-    let result = PushNotificationAndroid.markNotificationAsDirectReply(lib.channelId);
-    lib(closure_1_1[4]).awaitStorage(() => {
-      function _sendMessage() {
-        const self = this;
-        const tmp = closure_3_2((arg0) => {
-          closure_0 = arg0;
-          c3 = 0;
-          c4 = 0;
-          return (/* F125881 */ function*() { ... })();
-        });
-        closure_0 = tmp;
-        const apply = tmp.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    closure_0 = arg0;
+    logger.log("Executing DirectReply");
+    let PushNotificationAndroid = NativeModules.PushNotificationAndroid;
+    let result = PushNotificationAndroid.markNotificationAsDirectReply(closure_0.channelId);
+    closure_0(dependencyMap[4]).awaitStorage(() => {
+      closure_0 = async function _sendMessage(arg0, value) {
+        if (c4 === 2) {
+          c4 = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp4 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            return { value: "HermesInternal", done: null };
+          }
         } else {
-          applyArgumentsResult = apply(self, arguments);
+          try {
+            c4 = 2;
+            if (0 === c3) {
+              if (arg0 === 1) {
+                c4 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c4 = 3;
+                const obj3 = { value, done: true };
+                return obj3;
+              } else {
+                closure_2 = tmp5;
+                closure_1 = tmp2;
+                closure_129_0 = closure_0;
+                closure_129_1 = undefined;
+                const obj6 = closure_0(dependencyMap[5]);
+                const obj4 = { content: closure_0.channelReplyText, tts: false, invalidEmojis: [], validNonShortcutEmojis: [] };
+                const obj5 = { eagerDispatch: false, location: constants.PUSH_NOTIFICATION };
+                c3 = 1;
+                c4 = 1;
+                const obj7 = { value: obj6.sendMessage(closure_0.channelId, obj4, false, obj5), done: false };
+                return obj7;
+              }
+            } else if (arg0 === 1) {
+              c4 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj8 = { value, done: true };
+              return obj8;
+            } else {
+              closure_129_1 = value;
+              logger.log("Sent message, ok:", closure_129_1.ok);
+              if (closure_129_1.ok) {
+                const PushNotificationAndroid = NativeModules.PushNotificationAndroid;
+                const _JSON = JSON;
+                const obj = {};
+                const merged = Object.assign(closure_129_1.body);
+                const merged1 = Object.assign(closure_129_0);
+                const result = PushNotificationAndroid.handleDirectReplySuccess(JSON.stringify(obj));
+              }
+              closure_0(true);
+              c4 = 3;
+              return { value: "HermesInternal", done: null };
+            }
+          } catch (tmp20) {
+            c4 = tmp;
+            throw tmp20;
+          }
         }
-        return applyArgumentsResult;
-      }
-      closure_2_5.log("Storage loaded");
-      (function sendMessage(closure_0) {
+      };
+      logger.log("Storage loaded");
+      (function sendMessage(arg0) {
         const self = this;
-        const apply = _sendMessage.apply;
+        const apply = closure_0.apply;
         if (typeof apply === "unknown") {
           let applyArgumentsResult = HermesBuiltin.applyArguments(self);
         } else {

@@ -1,40 +1,43 @@
-// Module ID: 9384
-// Function ID: 9385
+// Module ID: 9411
+// Function ID: 9412
 // Name: useDiscountedPremiumProductInfo
-// Dependencies: [19, 1085, 9385, 7240, 7234, 2]
+// Dependencies: [19, 1085, 9412, 7254, 7248, 2]
 // Exports: useDiscountedPremiumProductInfo
 
-// Module 9384 (useDiscountedPremiumProductInfo)
-import closure_2 from "noop" /* 19 */;
-import { CurrencyCodes } from "sum" /* 1085 */;
+// Module 9411 (useDiscountedPremiumProductInfo)
+import ProductIds from "ProductIds" /* 7254 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/premium/native/hooks/useDiscountedPremiumProductInfo.android.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const CurrencyCodes = fn(1085).CurrencyCodes;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/native/hooks/useDiscountedPremiumProductInfo.android.tsx");
 
 export const useDiscountedPremiumProductInfo = function useDiscountedPremiumProductInfo(premiumDiscountOffer, items3) {
-  const _require = premiumDiscountOffer;
-  let obj = _require(discountedProduct[2]);
-  const discountedPremiumPlan = obj.useDiscountedPremiumPlan(premiumDiscountOffer, items3);
+  _require = premiumDiscountOffer;
+  const discountedPremiumPlan = require("useDiscountedPremiumPlan").useDiscountedPremiumPlan(premiumDiscountOffer, items3);
   discountedProduct = discountedPremiumPlan.discountedProduct;
   const items = [premiumDiscountOffer, discountedProduct];
-  obj = {
+  const obj = require("useDiscountedPremiumPlan");
+  return {
     discountedPlan: discountedPremiumPlan.discountedPlan,
     discountedProduct,
-    discountedPriceString: React.useMemo(() => {
-      if (null != premiumDiscountOffer) {
+    discountedPriceString: noop.useMemo(() => {
+      if (null != closure_0) {
         if (null != discountedProduct) {
-          const tmp8 = premiumDiscountOffer(discountedProduct[3]).DiscountIdToProductOfferId[tmp.discountId];
+          const tmp8 = ProductIds.DiscountIdToProductOfferId[tmp.discountId];
           let tmp2;
           if (tmp8 != null) {
             tmp2 = tmp8[tmp5.identifier];
           }
-          premiumDiscountOffer = tmp2;
+          closure_0 = tmp2;
           if (null == tmp2) {
             return null;
           } else {
-            if (str2.toUpperCase() in closure_1_3) {
+            if (str2.toUpperCase() in CurrencyCodes) {
               let USD = tmp5.currencyCode.toLowerCase();
-              const str = tmp5.currencyCode;
             } else {
               USD = tmp9.USD;
             }
@@ -45,19 +48,17 @@ export const useDiscountedPremiumProductInfo = function useDiscountedPremiumProd
                 if (null != found.pricingPhases) {
                   if (found.pricingPhases.length > 0) {
                     const result = found.pricingPhases[0].price / 100;
-                    return tmp6(tmp7[4]).formatPrice(result, USD, { convertToMajorUnits: false });
+                    return tmp6(7248).formatPrice(result, USD, { convertToMajorUnits: false });
                   }
                 }
               }
             }
             return null;
           }
-          tmp6 = premiumDiscountOffer;
-          tmp7 = discountedProduct;
+          tmp6 = require;
         }
       }
       return null;
     }, items)
   };
-  return obj;
 };

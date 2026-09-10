@@ -1,36 +1,36 @@
-// Module ID: 14180
-// Function ID: 14181
+// Module ID: 14205
+// Function ID: 14206
 // Name: AvatarDuoPile
-// Dependencies: [19, 21, 11005, 12623, 8818, 12, 13032, 2]
+// Dependencies: [19, 21, 11032, 12649, 8847, 12, 13058, 2]
 // Exports: AvatarDuoPile
 
-// Module 14180 (AvatarDuoPile)
-import noopAll from "noop" /* 19 */;
-import SolidCutout from "SolidCutout" /* 8818 */;
-import Pile from "Pile" /* 11005 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 14205 (AvatarDuoPile)
+import ClipView from "ClipView" /* 8847 */;
+import Pile from "Pile" /* 11032 */;
+import CutoutableAvatarImage from "CutoutableAvatarImage" /* 13058 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Pile/native/AvatarDuoPile.native.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+let size = fn(2);
+const result = size.fileFinishedImporting("design/components/Pile/native/AvatarDuoPile.native.tsx");
 
 export const AvatarDuoPile = function AvatarDuoPile(size) {
   size = size.size;
-  const merged = Object.assign(size, Object.create(null));
+  const merged = Object.assign(size, Object.assign({ size: 0, children: 0 }));
   if ("aria-label" in merged) {
-    aria_label = merged["aria-label"];
+    let prop = merged["aria-label"];
   } else {
-    let tmp3Result = tmp3(12623);
-    aria_label = tmp3Result.getListSummaryLabel(merged.names);
+    prop = tmp3(12649).getListSummaryLabel(merged.names);
+    const tmp3Result = tmp3(12649);
   }
-  const obj = { aria-label, shape: SolidCutout.CutoutShape.Circle, size: null, gap: 4, depthX: 0.5, depthY: 0.5, children: null };
-  tmp3Result = tmp3(12);
-  if (tmp3Result.isArray(size)) {
-    let mapped = size.map((arg0) => callback(table[6]).AVATAR_SIZE_MAP[arg0]);
+  const obj = { "aria-label": prop, shape: ClipView.CutoutShape.Circle, size: null, gap: 4, depthX: 0.5, depthY: 0.5, children: null };
+  if (tmp3Result2.isArray(size)) {
+    let mapped = size.map((item) => CutoutableAvatarImage.AVATAR_SIZE_MAP[item]);
   } else {
-    mapped = tmp3(13032).AVATAR_SIZE_MAP[size];
+    mapped = tmp3(13058).AVATAR_SIZE_MAP[size];
   }
-  obj[2] = mapped;
-  obj[6] = size.children;
-  return jsx(Pile.Pile, { aria-label, shape: SolidCutout.CutoutShape.Circle, size: null, gap: 4, depthX: 0.5, depthY: 0.5, children: null });
+  obj.size = mapped;
+  obj.children = size.children;
+  return jsx(Pile.Pile, { "aria-label": prop, shape: ClipView.CutoutShape.Circle, size: null, gap: 4, depthX: 0.5, depthY: 0.5, children: null });
 };

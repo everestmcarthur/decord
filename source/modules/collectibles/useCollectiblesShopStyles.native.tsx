@@ -1,19 +1,20 @@
-// Module ID: 11084
-// Function ID: 11085
-// Name: importDefaultResult1
-// Dependencies: [7552, 576, 11085, 2]
+// Module ID: 11111
+// Function ID: 11112
+// Name: useCollectiblesShopStyles
+// Dependencies: [7566, 576, 11112, 2]
 
-// Module 11084 (importDefaultResult1)
-import ThemesDefault from "Themes" /* 576 */;
-import createUseCollectiblesShopStylesDefault from "createUseCollectiblesShopStyles" /* 11085 */;
-import importDefaultResult from "tinycolor" /* 7552 */;
-import saturateResult from "module_1" /* 1 */;
-import saturateResult1 from "module_1" /* 1 */;
+// Module 11111 (useCollectiblesShopStyles)
+import nativeDefault from "native" /* 576 */;
+import createUseCollectiblesShopStylesDefault from "createUseCollectiblesShopStyles" /* 11112 */;
+import tinycolor_mod from "tinycolor" /* 7566 */;
 
-const importDefaultResultResult = importDefaultResult(ThemesDefault.unsafe_rawColors.WHITE);
-const importDefaultResult1 = importDefaultResult;
-const importDefaultResult1Result = importDefaultResult(ThemesDefault.unsafe_rawColors.BLACK);
-const tmp6 = createUseCollectiblesShopStylesDefault({ dark: require("module_1"), light: saturateResult });
-const result = require("set").fileFinishedImporting("modules/collectibles/useCollectiblesShopStyles.native.tsx");
+let tinycolor = tinycolor_mod;
+const importDefaultResultResult = tinycolor(nativeDefault.unsafe_rawColors.WHITE);
+let tinycolor = tinycolor_mod;
+const saturateResult = tinycolor(nativeDefault.unsafe_rawColors.WHITE).saturate(1);
+const importDefaultResult1Result = tinycolor(nativeDefault.unsafe_rawColors.BLACK);
+const saturateResult1 = tinycolor(nativeDefault.unsafe_rawColors.BLACK).saturate(1);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/useCollectiblesShopStyles.native.tsx");
 
-export default tmp6;
+export default createUseCollectiblesShopStylesDefault({ dark: tinycolor(nativeDefault.unsafe_rawColors.BLACK).saturate(1), light: saturateResult });

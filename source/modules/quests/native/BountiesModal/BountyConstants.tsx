@@ -1,11 +1,11 @@
-// Module ID: 15047
-// Function ID: 15048
-// Name: END_CARD_IMAGE_SIZE
+// Module ID: 15074
+// Function ID: 15075
+// Name: BountyConstants
 // Dependencies: [2]
 
-// Module 15047 (END_CARD_IMAGE_SIZE)
-import set from "set" /* 2 */;
+// Module 15074 (BountyConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/quests/native/BountiesModal/BountyConstants.tsx");
+const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountyConstants.tsx");
 
 export const END_CARD_IMAGE_SIZE = 92;

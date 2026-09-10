@@ -1,27 +1,27 @@
-// Module ID: 14004
-// Function ID: 14005
-// Name: apexExperiment
+// Module ID: 14027
+// Function ID: 14028
+// Name: PTTEducationExperiment
 // Dependencies: [1433, 2]
 
-// Module 14004 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 14027 (PTTEducationExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-let obj = { showPTTJoinTooltip: false, showPTTIconIndicator: false, showPTTNoKeybindWarning: false, showPTTSpeakingIndicator: false };
-obj = { name: "2025-12-09-ptt-education", kind: "user", defaultConfig: obj, variations: null };
-obj = { 1: null, 2: null };
-const obj1 = {};
+const obj = { showPTTJoinTooltip: false, showPTTIconIndicator: false, showPTTNoKeybindWarning: false, showPTTSpeakingIndicator: false };
+const obj2 = { name: "2025-12-09-ptt-education", kind: "user", defaultConfig: obj, variations: null };
+const obj3 = { 1: null, 2: null };
+const obj4 = {};
 const merged = Object.assign(obj);
-obj1.showPTTJoinTooltip = true;
-obj1.showPTTNoKeybindWarning = true;
-obj1.showPTTSpeakingIndicator = true;
-obj[1] = obj1;
-const obj2 = {};
+obj4.showPTTJoinTooltip = true;
+obj4.showPTTNoKeybindWarning = true;
+obj4.showPTTSpeakingIndicator = true;
+obj3[1] = obj4;
+const obj5 = {};
 const merged1 = Object.assign(obj);
-obj2.showPTTIconIndicator = true;
-obj[2] = obj2;
-obj[3] = obj;
-const apexExperiment = ApexExperiment.createApexExperiment(obj);
-const result = set.fileFinishedImporting("modules/voice_calls/PTTEducationExperiment.tsx");
+obj5.showPTTIconIndicator = true;
+obj3[2] = obj5;
+obj2.variations = obj3;
+const apexExperiment = ApexExperiment.createApexExperiment(obj2);
+const result = size.fileFinishedImporting("modules/voice_calls/PTTEducationExperiment.tsx");
 
 export default apexExperiment;

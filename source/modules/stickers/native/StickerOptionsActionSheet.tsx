@@ -1,33 +1,35 @@
-// Module ID: 10410
-// Function ID: 10411
+// Module ID: 10437
+// Function ID: 10438
 // Name: StickerOptionsActionSheet
-// Dependencies: [19, 21, 7190, 4258, 4527, 7198, 5687, 5605, 4503, 1114, 2]
+// Dependencies: [19, 21, 7203, 4271, 4541, 7211, 5701, 5619, 4517, 1114, 2]
 // Exports: default
 
-// Module 10410 (StickerOptionsActionSheet)
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 10437 (StickerOptionsActionSheet)
+import ToastUtils from "ToastUtils" /* 4271 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import ClipboardUtils from "ClipboardUtils" /* 7203 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/stickers/native/StickerOptionsActionSheet.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/stickers/native/StickerOptionsActionSheet.tsx");
 
 export default function StickerOptionsActionSheet(stickerUrl) {
   stickerUrl = stickerUrl.stickerUrl;
   const items = [stickerUrl];
-  const callback = React.useCallback(() => {
-    stickerUrl(closure_1_2[2]).copy(stickerUrl);
-    const obj = stickerUrl(closure_1_2[2]);
-    const result = stickerUrl(closure_1_2[3]).presentCopiedToClipboard();
-    const obj2 = stickerUrl(closure_1_2[3]);
-    closure_1_1(closure_1_2[4]).hideActionSheet();
+  const callback = noop.useCallback(() => {
+    ClipboardUtils.copy(stickerUrl);
+    const result = ToastUtils.presentCopiedToClipboard();
+    ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items);
   let obj = { children: null };
-  obj = { hasIcons: true, children: null };
-  obj = { icon: jsx(stickerUrl(4503).LinkIcon, {}), label: null, onPress: null };
+  let obj2 = { hasIcons: true, children: null };
+  const obj3 = { icon: jsx(stickerUrl(4517).LinkIcon, {}), label: null, onPress: null };
   const intl = stickerUrl(1114).intl;
-  obj[1] = intl.string(stickerUrl(1114).t.B1ubHx);
-  obj[2] = callback;
-  obj[1] = jsx(stickerUrl(5605).TableRow, { icon: jsx(stickerUrl(4503).LinkIcon, {}), label: null, onPress: null });
-  obj[0] = jsx(stickerUrl(5687).TableRowGroup, { icon: jsx(stickerUrl(4503).LinkIcon, {}), label: null, onPress: null });
-  return jsx(stickerUrl(7198).ActionSheet, { icon: jsx(stickerUrl(4503).LinkIcon, {}), label: null, onPress: null });
+  obj3.label = intl.string(stickerUrl(1114).t.B1ubHx);
+  obj3.onPress = callback;
+  obj2.children = jsx(stickerUrl(5619).TableRow, { icon: jsx(stickerUrl(4517).LinkIcon, {}), label: null, onPress: null });
+  obj.children = jsx(stickerUrl(5701).TableRowGroup, { hasIcons: true, children: null });
+  return jsx(stickerUrl(7211).ActionSheet, { children: null });
 };

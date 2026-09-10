@@ -1,11 +1,11 @@
-// Module ID: 16361
-// Function ID: 16362
-// Name: SpecialGuildsNodeIds
+// Module ID: 16392
+// Function ID: 16393
+// Name: GuildsBarTypes
 // Dependencies: [2]
 
-// Module 16361 (SpecialGuildsNodeIds)
-import set from "set" /* 2 */;
+// Module 16392 (GuildsBarTypes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guilds_bar/GuildsBarTypes.tsx");
+const result = size.fileFinishedImporting("modules/guilds_bar/GuildsBarTypes.tsx");
 
 export const SpecialGuildsNodeIds = { PENDING_JOIN_REQUESTS_FOLDER: 1, [1]: "PENDING_JOIN_REQUESTS_FOLDER" };

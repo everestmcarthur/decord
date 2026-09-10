@@ -1,165 +1,141 @@
-// Module ID: 9465
-// Function ID: 9466
-// Name: _transferToXbox
-// Dependencies: [5, 19, 17, 1074, 21, 9456, 9453, 9466, 4905, 9467, 1896, 9459, 4702, 2]
+// Module ID: 9492
+// Function ID: 9493
+// Name: transferToXbox
+// Dependencies: [5, 19, 17, 1074, 21, 9483, 9480, 9493, 4919, 9494, 1896, 9486, 4716, 2]
 // Exports: default
 
-// Module 9465 (_transferToXbox)
-import noopAll from "noop" /* 19 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import { Linking } from "get ActivityIndicator" /* 17 */;
-import { PlatformTypes } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 9492 (transferToXbox)
+import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 9483 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-function _transferToXbox() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    return (function*(arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let callback2 = tmp5;
-              let callback = tmp2;
-              callback = undefined;
-              callback2 = undefined;
-              dependencyMap = 1;
-              c4 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = closure_1_1(9456).maybeShowPTTAlert(closure_1_6.XBOX);
-              return obj1;
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              dependencyMap = 2;
-              c4 = 1;
-              let obj3 = { value: null, done: false };
-              obj3[0] = callback2(9453).disconnectRemote();
-              return obj3;
-            }
-          } else if (2 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              let obj4 = { value: null, done: true };
-              obj4[0] = arg1;
-              return obj4;
-            } else {
-              let obj9 = callback2(9453);
-              dependencyMap = 3;
-              c4 = 1;
-              const obj5 = { value: null, done: false };
-              obj5[0] = obj9.getConnectNonce();
-              return obj5;
-            }
-          } else if (3 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj6 = { value: null, done: true };
-              obj6[0] = arg1;
-              return obj6;
-            } else {
-              callback = arg1;
-              const obj7 = { nonce: null, forQRCode: false };
-              obj7[0] = callback;
-              callback2 = callback(9466)(user, obj7);
-              dependencyMap = 4;
-              c4 = 1;
-              const obj8 = { value: null, done: false };
-              obj8[0] = closure_5.canOpenURL(callback2);
-              return obj8;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj9 = { value: null, done: true };
-            obj9[0] = arg1;
-            return obj9;
-          } else if (arg1) {
-            tmp47(9459)(user.id, constants.XBOX);
-            obj3 = callback2(9453);
-            obj3.waitForSession(constants.XBOX, user.id, callback);
-            obj4 = callback2(4702);
-            obj4.stopOwnStream(false);
-            closure_5.openURL(callback2);
-            c4 = 3;
-            return { value: "HermesInternal", done: null };
-          } else {
-            const obj10 = { importer: null };
-            obj10[0] = function importer() {
-              return callback(paths[10])(paths[9], paths.paths).then((arg0) => {
-                closure_0 = arg0.default;
-                return () => { ... };
-              });
-            };
-            c4 = 3;
-            const obj11 = { value: null, done: true };
-            obj11[0] = tmp47(4905).openLazy(obj10);
-            return obj11;
-          }
-        } catch (tmp39) {
-          c4 = tmp;
-          throw tmp39;
-        }
-      }
-    })();
-  });
-  closure_8 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+const require = fn;
+let closure_8 = async function _transferToXbox(arg0, value) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    applyArgumentsResult = apply(self, arguments);
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = closure_0;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          c3 = 1;
+          c4 = 1;
+          const obj3 = { value: GameConsoleAlertUtilsDefault.maybeShowPTTAlert(constants.XBOX), done: false };
+          return obj3;
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          c3 = 2;
+          c4 = 1;
+          const obj7 = { value: closure_130_2(closure_130_3[6]).disconnectRemote(), done: false };
+          return obj7;
+        }
+      } else if (2 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj8 = { value, done: true };
+          return obj8;
+        } else {
+          c3 = 3;
+          c4 = 1;
+          const obj9 = { value: closure_130_2(closure_130_3[6]).getConnectNonce(), done: false };
+          return obj9;
+        }
+      } else if (3 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj11 = { value, done: true };
+          return obj11;
+        } else {
+          closure_129_1 = value;
+          const obj12 = { nonce: closure_129_1, forQRCode: false };
+          closure_129_2 = closure_130_1(closure_130_3[7])(closure_129_0, obj12);
+          c3 = 4;
+          c4 = 1;
+          const obj14 = { value: closure_130_5.canOpenURL(closure_129_2), done: false };
+          return obj14;
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj15 = { value, done: true };
+        return obj15;
+      } else if (value) {
+        tmp46(tmp47[11])(closure_129_0.id, closure_130_6.XBOX);
+        closure_130_2(closure_130_3[6]).waitForSession(closure_130_6.XBOX, closure_129_0.id, closure_129_1);
+        const obj4 = closure_130_2(closure_130_3[6]);
+        closure_130_2(closure_130_3[12]).stopOwnStream(false);
+        closure_130_5.openURL(closure_129_2);
+        c4 = 3;
+        return { value: "HermesInternal", done: null };
+      } else {
+        const obj17 = {
+          importer() {
+                  return closure_1_0(paths[10])(paths[9], paths.paths).then((result) => {
+                    closure_0 = result.default;
+                    return (arg0) => {
+                      const merged = Object.assign(arg0);
+                      return closure_2_7(closure_0, {});
+                    };
+                  });
+                }
+        };
+        c4 = 3;
+        const obj18 = { value: tmp46(tmp47[8]).openLazy(obj17), done: true };
+        return obj18;
+      }
+    } catch (tmp39) {
+      c4 = tmp;
+      throw tmp39;
+    }
   }
-  return applyArgumentsResult;
-}
-noopAll;
-const result = require("set").fileFinishedImporting("modules/game_console/native/transferToXbox.tsx");
+};
+const Linking = fn(17).Linking;
+const PlatformTypes = fn(1074).PlatformTypes;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_console/native/transferToXbox.tsx");
 
 export default function transferToXbox() {
   const self = this;
-  const apply = _transferToXbox.apply;
+  const apply = closure_8.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

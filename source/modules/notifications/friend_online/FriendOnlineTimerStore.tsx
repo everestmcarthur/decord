@@ -1,15 +1,16 @@
-// Module ID: 17811
-// Function ID: 17812
-// Name: initialize
+// Module ID: 17844
+// Function ID: 17845
+// Name: FriendOnlineTimerStore
 // Dependencies: [1090, 504, 573, 2]
 
-// Module 17811 (initialize)
+// Module 17844 (FriendOnlineTimerStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import setDefault from "set" /* 1090 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import DurationsDefault from "Durations" /* 1090 */;
 
-const HOUR = setDefault.Millis.HOUR;
-let obj = { lastReportedAtMs: null };
+const HOUR = DurationsDefault.Millis.HOUR;
+const obj = { lastReportedAtMs: null };
+let closure_2 = obj;
 const PersistedStore = initializeDefault.PersistedStore;
 class FriendOnlineTimerStore extends PersistedStore {
 }
@@ -25,25 +26,25 @@ prototype["initialize"] = function initialize() {
   closure_2 = tmp;
 };
 prototype["isCooldownElapsed"] = function isCooldownElapsed() {
-  let tmp = null == obj.lastReportedAtMs;
+  let tmp = null == closure_2.lastReportedAtMs;
   if (!tmp) {
     const _Date = Date;
-    tmp = Date.now() - obj.lastReportedAtMs >= HOUR;
+    tmp = Date.now() - closure_2.lastReportedAtMs >= HOUR;
   }
   return tmp;
 };
 prototype["getState"] = function getState() {
-  return obj;
+  return closure_2;
 };
 FriendOnlineTimerStore.displayName = "FriendOnlineTimerStore";
 FriendOnlineTimerStore.persistKey = "FriendOnlineTimerStore";
-obj = {
+const friendOnlineTimerStore = new FriendOnlineTimerStore(DispatcherDefault, {
   FRIEND_ONLINE_TIMER_REPORTED: function setLastReportedAtMs(timestampMs) {
-    obj.lastReportedAtMs = timestampMs.timestampMs;
+    closure_2.lastReportedAtMs = timestampMs.timestampMs;
     return true;
   }
-};
-const friendOnlineTimerStore = new FriendOnlineTimerStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/notifications/friend_online/FriendOnlineTimerStore.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notifications/friend_online/FriendOnlineTimerStore.tsx");
 
 export default friendOnlineTimerStore;

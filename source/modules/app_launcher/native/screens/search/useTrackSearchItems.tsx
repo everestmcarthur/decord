@@ -1,57 +1,50 @@
-// Module ID: 12110
-// Function ID: 12111
+// Module ID: 12136
+// Function ID: 12137
 // Name: useTrackSearchItems
-// Dependencies: [19, 11220, 8773, 1250, 7523, 2]
+// Dependencies: [19, 11247, 8801, 1250, 7537, 2]
 // Exports: useTrackSearchItems
 
-// Module 12110 (useTrackSearchItems)
-import closure_2 from "noop" /* 19 */;
+// Module 12136 (useTrackSearchItems)
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/search/useTrackSearchItems.tsx");
+const require = globalThis.__r;
 
-export const useTrackSearchItems = function useTrackSearchItems(callback3, memo1, first) {
-  const _require = callback3;
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/screens/search/useTrackSearchItems.tsx");
+
+export const useTrackSearchItems = function useTrackSearchItems(callback3, memo1, set) {
+  _require = callback3;
   dependencyMap = memo1;
-  const React = first;
-  let obj = _require(11220);
-  const entrypoint = obj.useAppLauncherContext().entrypoint;
-  closure_4 = React.useRef({});
-  closure_5 = React.useRef(first);
-  obj = {
-    handleViewableItemsChanged: React.useCallback((viewableItems) => {
-      viewableItems = viewableItems.viewableItems;
-      if (ref.current !== closure_2) {
-        ref.current = closure_2;
-        closure_4.current = {};
-      }
-      const item = viewableItems.forEach((isViewable) => {
-        if (isViewable.isViewable) {
-          const tmp2 = callback(isViewable.item);
-          if (null != tmp2) {
-            if (null == ref.current[tmp2]) {
-              ref.current[tmp2] = true;
-              ({ applicationId, commandId } = callback2(isViewable.item));
-              let obj = closure_1_0(closure_1_1[2]);
-              obj = { type: null, name: null, properties: null };
-              obj[0] = closure_1_0(closure_1_1[3]).ImpressionTypes.VIEW;
-              obj[1] = closure_1_0(closure_1_1[3]).ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM;
-              obj = { location: null, application_id: null, command_id: null, search_results_position: null, query: null, source: null };
-              obj[0] = closure_1_0(closure_1_1[4]).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH;
-              obj[1] = applicationId;
-              obj[2] = commandId;
-              obj[3] = isViewable.index;
-              obj[4] = closure_2;
-              obj[5] = closure_3;
-              obj[2] = obj;
-              obj.trackImpression(obj, false);
-              const tmp5 = callback2(isViewable.item);
-            }
+  noop = set;
+  const entrypoint = require("AppLauncherContext").useAppLauncherContext().entrypoint;
+  closure_4 = noop.useRef({});
+  noop.useRef(set);
+  let obj2 = { handleViewableItemsChanged: null };
+  const items = [entrypoint, callback3, memo1, set];
+  obj2.handleViewableItemsChanged = noop.useCallback((viewableItems) => {
+    viewableItems = viewableItems.viewableItems;
+    if (ref.current !== current) {
+      ref.current = current;
+      ref.current = {};
+    }
+    const item = viewableItems.forEach((isViewable) => {
+      if (isViewable.isViewable) {
+        const tmp2 = callback3(isViewable.item);
+        if (null != tmp2) {
+          if (null == ref.current[tmp2]) {
+            ref.current[tmp2] = true;
+            ({ applicationId, commandId } = dependencyMap(isViewable.item));
+            const tmp5 = dependencyMap(isViewable.item);
+            const obj2 = { type: closure_0(1250).ImpressionTypes.VIEW, name: closure_0(1250).ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM, properties: null };
+            const obj3 = { location: closure_0(7537).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH, application_id: applicationId, command_id: commandId, search_results_position: isViewable.index, query, source };
+            obj2.properties = obj3;
+            closure_0(8801).trackImpression(obj2, false);
+            const obj = closure_0(8801);
           }
         }
-      });
-    }, items)
-  };
-  items = [entrypoint, callback3, memo1, first];
-  return obj;
+      }
+    });
+  }, items);
+  return obj2;
 };

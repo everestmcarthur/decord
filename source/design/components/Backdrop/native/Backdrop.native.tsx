@@ -1,33 +1,30 @@
-// Module ID: 4963
-// Function ID: 4964
+// Module ID: 4977
+// Function ID: 4978
 // Name: Backdrop
-// Dependencies: [19, 17, 21, 4560, 576, 1114, 4271, 1611, 4296, 4964, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 1114, 4284, 1611, 4310, 4978, 2]
 // Exports: Backdrop
 
-// Module 4963 (Backdrop)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 4977 (Backdrop)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import ManaContext from "ManaContext" /* 4271 */;
-import _modDef4296 from "module_4296" /* 4296 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4310 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
+require = fn;
+get_ActivityIndicator = fn(17);
 ({ Pressable: c3, StyleSheet } = get_ActivityIndicator);
-({ jsx: c4, jsxs: c5 } = jsxProd);
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let closure_6 = {};
-createCacheKey = { fill: StyleSheet.absoluteFillObject, backdrop: null, backdropOpaque: null, accessibilityDismiss: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { backgroundColor: ThemesDefault.colors.MOBILE_BACKGROUND_SCRIM_OPAQUE };
-createCacheKey[3] = { position: "absolute", top: 0, left: 0, right: 0, height: 16 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { backgroundColor: ThemesDefault.colors.MOBILE_BACKGROUND_SCRIM_OPAQUE };
-const result = require("set").fileFinishedImporting("design/components/Backdrop/native/Backdrop.native.tsx");
+const createStyles = fn(4574);
+let obj2 = { fill: StyleSheet.absoluteFillObject, backdrop: { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM }, backdropOpaque: null, accessibilityDismiss: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM };
+obj2.backdropOpaque = { backgroundColor: nativeDefault.colors.MOBILE_BACKGROUND_SCRIM_OPAQUE };
+obj2.accessibilityDismiss = { position: "absolute", top: 0, left: 0, right: 0, height: 16 };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Backdrop/native/Backdrop.native.tsx");
 
 export const Backdrop = function Backdrop(animatedProps) {
   animatedProps = animatedProps.animatedProps;
@@ -45,54 +42,49 @@ export const Backdrop = function Backdrop(animatedProps) {
   }
   ({ onDismiss, accessibilityLabel } = animatedProps);
   if (accessibilityLabel === undefined) {
-    const intl = getSystemLocale.intl;
-    accessibilityLabel = intl.string(getSystemLocale.t.WAI6xu);
+    const intl = util.intl;
+    accessibilityLabel = intl.string(util.t.WAI6xu);
   }
-  let backgroundColor = callback2();
-  let obj = ManaContext;
-  obj = { onPress: onDismiss, "aria-hidden": true };
-  obj = { style: items, pointerEvents: "box-none", animatedProps, children: null };
-  items = [backgroundColor.fill, style];
+  let backgroundColor = closure_7();
+  const obj2 = { onPress: onDismiss, "aria-hidden": true };
+  const obj3 = { style: null, pointerEvents: "box-none", animatedProps, children: null };
+  const items = [backgroundColor.fill, style];
+  obj3.style = items;
   let tmp4 = null != onDismiss;
   if (tmp4) {
-    obj1 = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, "aria-hidden": null };
+    const obj4 = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, "aria-hidden": null };
     const items1 = [backgroundColor.accessibilityDismiss, , ];
-    const obj2 = { top: null };
-    obj2[0] = useSafeAreaInsetsDefault().top;
-    items1[1] = obj2;
+    const obj5 = { top: useSafeAreaInsetsDefault().top };
+    items1[1] = obj5;
     items1[2] = accessibleDismissStyle;
-    obj1[0] = items1;
-    obj1[1] = onDismiss;
-    obj1[3] = accessibilityLabel;
-    obj1[4] = animatedProps["aria-hidden"];
-    tmp4 = callback(closure_3, obj1);
+    obj4.style = items1;
+    obj4.onPress = onDismiss;
+    obj4.accessibilityLabel = accessibilityLabel;
+    obj4["aria-hidden"] = animatedProps["aria-hidden"];
+    tmp4 = React4(React3, obj4);
   }
   const items2 = [tmp4, ];
   if ("none" !== str) {
-    const obj3 = {};
-    const merged = Object.assign(obj);
-    obj3.style = backgroundColor.fill;
+    const obj6 = {};
+    const merged = Object.assign(obj2);
+    obj6.style = backgroundColor.fill;
     if ("none" === str) {
       let num = 0;
-      const obj4 = { blurAmount: null, style: null, blurTheme: null, tintColor: null, android_fallbackColor: null };
-      obj4[0] = num;
-      obj4[1] = backgroundColor.fill;
-      obj4[2] = obj.useThemeContext().theme;
-      obj4[3] = backgroundColor.backdrop.backgroundColor;
+      const obj7 = { blurAmount: num, style: backgroundColor.fill, blurTheme: obj.useThemeContext().theme, tintColor: backgroundColor.backdrop.backgroundColor, android_fallbackColor: null };
       backgroundColor = backgroundColor.backdrop.backgroundColor;
-      obj4[4] = backgroundColor;
-      obj3.children = tmp7(tmp15, obj4);
+      obj7.android_fallbackColor = backgroundColor;
+      obj6.children = tmp7(tmp15, obj7);
     } else if ("subtle" !== str) {
       num = 0.25;
     }
     num = 0.05;
   } else {
-    const obj5 = {};
-    const merged1 = Object.assign(obj);
+    const obj8 = {};
+    const merged1 = Object.assign(obj2);
     const items3 = [backgroundColor.fill, flag ? backgroundColor.backdropOpaque : backgroundColor.backdrop];
-    obj5.style = items3;
-    items2[1] = tmp7(tmp8, obj5);
-    obj[3] = items2;
-    return closure_5(_modDef4296.View, obj);
+    obj8.style = items3;
+    items2[1] = tmp7(tmp8, obj8);
+    obj3.children = items2;
+    return hasOwnProperty(ReanimatedRexportDefault.View, obj3);
   }
 };

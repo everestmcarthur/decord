@@ -1,38 +1,34 @@
-// Module ID: 17825
-// Function ID: 17826
-// Name: updateApiRequestConfig
-// Dependencies: [17, 502, 1272, 1242, 7118, 1115, 2]
+// Module ID: 17858
+// Function ID: 17859
+// Name: ApiRequestConfigManager
+// Dependencies: [17, 502, 1272, 1242, 7132, 1115, 2]
 
-// Module 17825 (updateApiRequestConfig)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set2 from "set" /* 1115 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import sendRequest from "sendRequest" /* 1272 */;
-import initializeDefault from "initialize" /* 7118 */;
-import closure_4 from "fetchFingerprint" /* 502 */;
+// Module 17858 (ApiRequestConfigManager)
+import _mod17 from "module_17" /* 17 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
+import size from "module_2" /* 2 */;
 
 function updateApiRequestConfig() {
   const NativeCacheModule = NativeModules.NativeCacheModule;
   if (NativeCacheModule != null) {
     const _JSON = JSON;
-    let obj = { apiBaseUrl: null, headers: null };
-    obj[0] = sendRequest.getAPIBaseURL();
-    obj = { "X-Super-Properties": null, "X-Fingerprint": null, "X-Installation-ID": null };
-    const obj2 = sendRequest;
-    obj[0] = expandEventPropertiesDefault.getSuperPropertiesBase64();
-    obj[1] = store.getFingerprint();
-    obj[2] = store.getInstallationForTracking();
-    obj[1] = obj;
+    const obj = { apiBaseUrl: HTTPUtils.getAPIBaseURL(), headers: null };
+    const obj3 = { "X-Super-Properties": null, "X-Fingerprint": null, "X-Installation-ID": null };
+    obj3["X-Super-Properties"] = AnalyticsUtilsDefault.getSuperPropertiesBase64();
+    obj3["X-Fingerprint"] = AuthenticationStore.getFingerprint();
+    obj3["X-Installation-ID"] = AuthenticationStore.getInstallationForTracking();
+    obj.headers = obj3;
     const result = NativeCacheModule.setItem("discordApiRequestConfig", JSON.stringify(obj));
-    const obj4 = expandEventPropertiesDefault;
   }
 }
-const NativeModules = get_ActivityIndicator.NativeModules;
-initializeDefault;
-let prototype = function ApiRequestConfigManager() {
+const NativeModules = _mod17.NativeModules;
+const prototype = function ApiRequestConfigManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult.handleUpdate = set2.isAndroid() ? updateApiRequestConfig : (() => {
+  applyArgumentsResult.handleUpdate = PlatformUtils.isAndroid() ? updateApiRequestConfig : (() => {
 
   });
   applyArgumentsResult.actions = { POST_CONNECTION_OPEN: applyArgumentsResult.handleUpdate, APP_STATE_UPDATE: applyArgumentsResult.handleUpdate };
@@ -40,7 +36,7 @@ let prototype = function ApiRequestConfigManager() {
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
-let result = set.fileFinishedImporting("modules/api_request_config/native/ApiRequestConfigManager.tsx");
+const prototype1 = new prototype();
+let result = size.fileFinishedImporting("modules/api_request_config/native/ApiRequestConfigManager.tsx");
 
-export default prototype;
+export default prototype1;

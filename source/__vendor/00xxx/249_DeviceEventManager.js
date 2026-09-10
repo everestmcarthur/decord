@@ -4,12 +4,13 @@
 // Dependencies: [250]
 
 // Module 249 (DeviceEventManager)
-import DeviceEventManagerDefault from "DeviceEventManager" /* 250 */;
+import _modDef250 from "module_250" /* 250 */;
 
-for (const key10016 in require("DeviceEventManager")) {
-  let tmp2 = key10016;
-  arg5[key10016] = require("DeviceEventManager")[key10016];
+const require = globalThis.__r;
+
+for (const key10016 in require("module_250")) {
+  arg5[key10016] = require("module_250")[key10016];
   continue;
 }
 
-export default DeviceEventManagerDefault;
+export default _modDef250;

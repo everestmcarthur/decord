@@ -4,8 +4,9 @@
 // Dependencies: [115]
 
 // Module 114 (renderElement)
-for (const key10013 in require("renderElement")) {
-  let tmp2 = key10013;
-  arg5[key10013] = require("renderElement")[key10013];
+const require = globalThis.__r;
+
+for (const key10013 in require("module_115")) {
+  arg5[key10013] = require("module_115")[key10013];
   continue;
 }

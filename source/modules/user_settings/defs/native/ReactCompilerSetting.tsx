@@ -1,11 +1,12 @@
-// Module ID: 15885
-// Function ID: 15886
-// Dependencies: [11473, 15565, 2]
+// Module ID: 15915
+// Function ID: 15916
+// Name: ReactCompilerSetting
+// Dependencies: [11500, 15595, 2]
 
-// Module 15885
-import set from "set" /* 2 */;
-import WrenchIcon from "WrenchIcon" /* 15565 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15915 (ReactCompilerSetting)
+import WrenchIcon from "WrenchIcon" /* 15595 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
 const obj = {
   useTitle() {
@@ -20,7 +21,9 @@ const obj = {
     return false;
   }
 };
-const createStaticResult = createToggle.createStatic({
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ReactCompilerSetting.tsx");
+
+export default SettingBuilders.createStatic({
   useTitle() {
     return "React Compiler";
   },
@@ -33,6 +36,3 @@ const createStaticResult = createToggle.createStatic({
     return false;
   }
 });
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/ReactCompilerSetting.tsx");
-
-export default createStaticResult;

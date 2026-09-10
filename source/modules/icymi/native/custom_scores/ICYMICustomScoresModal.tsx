@@ -1,39 +1,38 @@
-// Module ID: 16458
-// Function ID: 16459
+// Module ID: 16489
+// Function ID: 16490
 // Name: ICYMICustomScoresModal
-// Dependencies: [19, 21, 7913, 4560, 576, 7000, 7863, 1114, 10930, 16459, 16460, 2]
+// Dependencies: [19, 21, 7927, 4574, 576, 7014, 7877, 1114, 10957, 16490, 16491, 2]
 // Exports: default
 
-// Module 16458 (ICYMICustomScoresModal)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 7913 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16489 (ICYMICustomScoresModal)
+import nativeDefault from "native" /* 576 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = createNativeStackNavigator.createNativeStackNavigator();
-createNativeStackNavigator = { header: null };
-createNativeStackNavigator = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createNativeStackNavigator[0] = createNativeStackNavigator;
-let closure_6 = createCacheKey.createStyles(createNativeStackNavigator);
-const result = require("set").fileFinishedImporting("modules/icymi/native/custom_scores/ICYMICustomScoresModal.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const NativeStackNavigator = fn(7927);
+let closure_5 = NativeStackNavigator.createNativeStackNavigator();
+const createStyles = fn(4574);
+const obj3 = { header: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
+let closure_6 = createStyles.createStyles(obj3);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/icymi/native/custom_scores/ICYMICustomScoresModal.tsx");
 
 export default function ICYMICustomScoresModal() {
-  const _require = callback3();
-  let obj = _require(7000);
-  closure_1 = obj.useAccessibilityNativeStackOptions();
-  obj = {
+  _require = closure_6();
+  closure_1 = require("Navigator").useAccessibilityNativeStackOptions();
+  const obj2 = {
     screenOptions() {
       let merged = Object.assign(closure_1);
       return {
-        headerStyle: lib.header,
+        headerStyle: closure_0.header,
         headerTitle(children) {
-          const merged = Object.assign(children, Object.create(null));
+          const merged = Object.assign(children, Object.assign({ children: 0 }));
           const merged1 = Object.assign(merged);
-          return callback2(callback(table[6]).GenericHeaderTitle, { title: children.children });
+          return closure_1_3(closure_1_0(dependencyMap[6]).GenericHeaderTitle, { title: children.children });
         },
         headerTitleAlign: "center"
       };
@@ -41,33 +40,32 @@ export default function ICYMICustomScoresModal() {
     initialRouteName: "default",
     children: null
   };
-  obj = {
-    name: "default",
-    options(navigation) {
-      const obj = { title: null, headerLeft: null };
-      const intl = lib(1114).intl;
-      obj[0] = intl.string(lib(1114).t.jVshKt);
-      obj[1] = lib(7863).getRenderModalCloseImage(navigation.navigation);
-      const merged = Object.assign(callback(10930)());
-      return obj;
-    },
-    getComponent() {
-      return lib(16459).default;
-    }
-  };
   const items = [
-    callback(closure_5.Screen, obj),
-    callback(closure_5.Screen, {
-      name: "guild",
+    closure_3(closure_5.Screen, {
+      name: "default",
       options(navigation) {
-        const obj = { headerLeft: lib(7863).getRenderModalBackImage(navigation.navigation) };
+        const obj = { title: null, headerLeft: null };
+        const intl = closure_0(1114).intl;
+        obj.title = intl.string(closure_0(1114).t.jVshKt);
+        obj.headerLeft = closure_0(7877).getRenderModalCloseImage(navigation.navigation);
+        const merged = Object.assign(closure_1(10957)());
         return obj;
       },
       getComponent() {
-        return lib(16460).default;
+        return closure_0(16490).default;
+      }
+    }),
+    closure_3(closure_5.Screen, {
+      name: "guild",
+      options(navigation) {
+        const obj = { headerLeft: closure_0(7877).getRenderModalBackImage(navigation.navigation) };
+        return obj;
+      },
+      getComponent() {
+        return closure_0(16491).default;
       }
     })
   ];
-  obj[2] = items;
-  return callback2(closure_5.Navigator, obj);
+  obj2.children = items;
+  return closure_4(closure_5.Navigator, obj2);
 };

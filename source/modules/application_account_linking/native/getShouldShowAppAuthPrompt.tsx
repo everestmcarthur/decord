@@ -1,24 +1,25 @@
-// Module ID: 11768
-// Function ID: 11769
+// Module ID: 11794
+// Function ID: 11795
 // Name: getShouldShowAppAuthPrompt
-// Dependencies: [7107, 7167, 7170, 2]
+// Dependencies: [7121, 7181, 7184, 2]
 // Exports: getShouldShowAppAuthPrompt
 
-// Module 11768 (getShouldShowAppAuthPrompt)
-import getAuthorizationApp from "getAuthorizationApp" /* 7167 */;
-import tokensToAppTokensMapDefault from "tokensToAppTokensMap" /* 7170 */;
-import closure_3 from "recomputeFromAppTokens" /* 7107 */;
-import { FetchState } from "recomputeFromAppTokens" /* 7107 */;
+// Module 11794 (getShouldShowAppAuthPrompt)
+import useAuthorizationApp from "useAuthorizationApp" /* 7181 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7184 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7121 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/application_account_linking/native/getShouldShowAppAuthPrompt.tsx");
+require = fn;
+const FetchState = fn(7121).FetchState;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/application_account_linking/native/getShouldShowAppAuthPrompt.tsx");
 
-export const getShouldShowAppAuthPrompt = function getShouldShowAppAuthPrompt(application) {
-  if (null == application) {
+export const getShouldShowAppAuthPrompt = function getShouldShowAppAuthPrompt(application1) {
+  if (null == application1) {
     return false;
   } else {
     let response = dependencyMap;
-    const authorizationApp = getAuthorizationApp.getAuthorizationApp(application);
+    const authorizationApp = useAuthorizationApp.getAuthorizationApp(application1);
     if (null == authorizationApp) {
       return false;
     } else {
@@ -40,11 +41,10 @@ export const getShouldShowAppAuthPrompt = function getShouldShowAppAuthPrompt(ap
         }
         if (null == parentId) {
           return tmp4;
-        } else if (fetchStateForApplication.getFetchStateForApplication(parentId) === FetchState.NOT_FETCHED) {
+        } else if (AuthorizedAppsStore.getFetchStateForApplication(parentId) === FetchState.NOT_FETCHED) {
           const items = [parentId];
-          response = tokensToAppTokensMapDefault.fetch(items);
+          response = AuthorizedAppsActionCreatorsDefault.fetch(items);
           let flag2 = false;
-          const obj2 = tokensToAppTokensMapDefault;
         } else {
           flag2 = !(obj.getFetchStateForApplication(parentId) === tmp5.FETCHED && null != obj.getNewestTokenForApplication(parentId));
           const tmp6 = obj.getFetchStateForApplication(parentId) === tmp5.FETCHED && null != obj.getNewestTokenForApplication(parentId);
@@ -53,6 +53,5 @@ export const getShouldShowAppAuthPrompt = function getShouldShowAppAuthPrompt(ap
         return false;
       }
     }
-    const obj3 = getAuthorizationApp;
   }
 };

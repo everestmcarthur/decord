@@ -1,12 +1,12 @@
-// Module ID: 17614
-// Function ID: 17615
-// Name: map
+// Module ID: 17645
+// Function ID: 17646
+// Name: GuildRoleConnectionsConfigurationStore
 // Dependencies: [1979, 504, 573, 2]
 
-// Module 17614 (map)
+// Module 17645 (GuildRoleConnectionsConfigurationStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_0 from "createGuildRecordFromRust" /* 1979 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
 const map = new Map();
 const Store = initializeDefault.Store;
@@ -14,17 +14,18 @@ class GuildRoleConnectionsConfigurationStore extends Store {
 }
 const prototype = GuildRoleConnectionsConfigurationStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_0);
+  this.waitFor(GuildStore);
 };
 prototype["getGuildRoleConnectionsConfiguration"] = function getGuildRoleConnectionsConfiguration(arg0) {
   return map.get(arg0);
 };
 GuildRoleConnectionsConfigurationStore.displayName = "GuildRoleConnectionsConfigurationStore";
-const guildRoleConnectionsConfigurationStore = new GuildRoleConnectionsConfigurationStore(dispatcherDefault, {
+const guildRoleConnectionsConfigurationStore = new GuildRoleConnectionsConfigurationStore(DispatcherDefault, {
   GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS: function handleFetchSuccess(roleId) {
     const result = map.set(roleId.roleId, roleId.roleConnectionConfigurations);
   }
 });
-let result = require("set").fileFinishedImporting("modules/connections/GuildRoleConnectionsConfigurationStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/connections/GuildRoleConnectionsConfigurationStore.tsx");
 
 export default guildRoleConnectionsConfigurationStore;

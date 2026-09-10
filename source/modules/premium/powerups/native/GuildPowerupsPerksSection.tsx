@@ -1,63 +1,59 @@
-// Module ID: 12573
-// Function ID: 12574
-// Name: GuildPowerupPerksSection
-// Dependencies: [17, 21, 4560, 576, 12556, 1114, 2428, 12574, 12576, 12578, 2]
+// Module ID: 12599
+// Function ID: 12600
+// Name: GuildPowerupsPerksSection
+// Dependencies: [17, 21, 4574, 576, 12582, 1114, 2428, 12600, 12602, 12604, 2]
 // Exports: default
 
-// Module 12573 (GuildPowerupPerksSection)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 2428 */;
-import GuildPowerupsSectionHeaderDefault from "GuildPowerupsSectionHeader" /* 12556 */;
+// Module 12599 (GuildPowerupsPerksSection)
+import _mod17 from "module_17" /* 17 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import _modDef2428 from "module_2428" /* 2428 */;
+import GuildPowerupsSectionHeaderDefault from "GuildPowerupsSectionHeader" /* 12582 */;
+import GuildPowerupsSinglePerkCardDefault from "GuildPowerupsSinglePerkCard" /* 12600 */;
+import GuildPowerupsMultiPerkCardDefault from "GuildPowerupsMultiPerkCard" /* 12602 */;
+import GuildPowerupsGameServerCardDefault from "GuildPowerupsGameServerCard" /* 12604 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import createStyles from "createStyles" /* 4574 */;
+import size from "module_2" /* 2 */;
 
-const View = get_ActivityIndicator.View;
-({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-let obj = { container: null };
-obj = { flexDirection: "column", gap: ThemesDefault.space.PX_16 };
-obj[0] = obj;
-let closure_7 = createCacheKey.createStyles(obj);
-const result = set.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsPerksSection.tsx");
+const View = _mod17.View;
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+let obj = { container: { flexDirection: "column", gap: nativeDefault.space.PX_16 } };
+let closure_7 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsPerksSection.tsx");
 
 export default function GuildPowerupPerksSection(arg0) {
   ({ guildId: require, listings } = arg0);
   let obj = { children: null };
-  obj = { title: null, description: null };
-  const tmp = callback3();
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(messagesProxyDefault.TV3Vm8);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(messagesProxyDefault.STx9hp);
-  const items = [callback(GuildPowerupsSectionHeaderDefault, obj), ];
-  obj = {
+  let obj2 = { title: null, description: null };
+  const tmp = closure_7();
+  const intl = util.intl;
+  obj2.title = intl.string(_modDef2428.TV3Vm8);
+  const intl2 = util.intl;
+  obj2.description = intl2.string(_modDef2428.STx9hp);
+  const items = [closure_4(GuildPowerupsSectionHeaderDefault, obj2), ];
+  items[1] = closure_4(View, {
     style: tmp.container,
-    children: listings.map((type) => {
+    children: listings.map((type, index) => {
       type = type.type;
       if ("singlePerk" === type) {
-        let obj = { guildId: null, powerup: null, badge: null };
-        obj[0] = closure_0;
-        ({ powerup: obj3[1], badge: obj3[2] } = type);
-        return closure_1_4(closure_1_1(closure_1_2[7]), obj, type.powerup.skuId);
+        const obj2 = { guildId, powerup: null, badge: null };
+        ({ powerup: obj3.powerup, badge: obj3.badge } = type);
+        return React4(GuildPowerupsSinglePerkCardDefault, obj2, type.powerup.skuId);
       } else if ("multiPerk" === type) {
-        obj = { guildId: null, listing: null };
-        obj[0] = closure_0;
-        obj[1] = type;
+        const obj5 = { guildId, listing: type };
         const _HermesInternal2 = HermesInternal;
-        return closure_1_4(closure_1_1(closure_1_2[8]), obj, "" + type.group + "-" + arg1);
+        return React4(GuildPowerupsMultiPerkCardDefault, obj5, "" + type.group + "-" + index);
       } else if ("gameServer" === type) {
-        obj = { guildId: null };
-        obj[0] = closure_0;
+        const obj = { guildId };
         const _HermesInternal = HermesInternal;
-        return closure_1_4(closure_1_1(closure_1_2[9]), obj, "game-server-" + arg1);
+        return React4(GuildPowerupsGameServerCardDefault, obj, "game-server-" + index);
       } else {
         return null;
       }
     })
-  };
-  items[1] = callback(View, obj);
-  obj[0] = items;
-  return callback2(closure_5, obj);
+  });
+  obj.children = items;
+  return closure_6(closure_5, obj);
 };

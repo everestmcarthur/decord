@@ -1,27 +1,28 @@
-// Module ID: 17043
-// Function ID: 17044
+// Module ID: 17074
+// Function ID: 17075
 // Name: FramePanelController
-// Dependencies: [19, 4788, 9515, 9516, 9510, 21, 504, 9512, 17010, 17044, 2]
+// Dependencies: [19, 4802, 9542, 9543, 9537, 21, 504, 9539, 17041, 17075, 2]
 // Exports: default
 
-// Module 17043 (FramePanelController)
-import contextDefault from "context" /* 17044 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "addApplication" /* 4788 */;
-import closure_5 from "map" /* 9515 */;
-import { asLaunched } from "FrameLayoutModes" /* 9516 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 9510 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 17074 (FramePanelController)
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9539 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 17075 */;
+import noop from "module_19" /* 19 */;
+import ApplicationStore from "ApplicationStore" /* 4802 */;
+import FramesStore from "FramesStore" /* 9542 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/frames/panel/native/FramePanelController.tsx");
+const require = fn;
+const asLaunched = fn(9543).asLaunched;
+const ActivityPanelModes = fn(9537).ActivityPanelModes;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelController.tsx");
 
 export default function FramePanelController(children) {
   let mainFrameId;
-  let obj = mainFrameId(504);
-  const items = [closure_5, closure_4];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    const tmp = callback(mainFrame.getMainFrame());
+  const items = [FramesStore, ApplicationStore];
+  const stateFromStoresObject = mainFrameId(504).useStateFromStoresObject(items, () => {
+    const tmp = asLaunched(mainFrame.getMainFrame());
     let mode;
     if (tmp != null) {
       mode = tmp.data.activityPanelMode;
@@ -50,12 +51,11 @@ export default function FramePanelController(children) {
   mainFrameId = stateFromStoresObject.mainFrameId;
   const items1 = [mainFrameId];
   ({ mode, connectedActivityAppId, currentApp, orientationLockStateForApp } = stateFromStoresObject);
-  const callback = React.useCallback((PIP) => {
+  const callback = noop.useCallback((PIP) => {
     if (null != mainFrameId) {
-      closure_1_1(closure_1_2[7]).updateFramePanelMode(tmp, PIP);
-      const obj = closure_1_1(closure_1_2[7]);
+      FramesActionCreatorsDefault.updateFramePanelMode(tmp, PIP);
     }
   }, items1);
-  obj = { context: contextDefault, orientationLockStateForApp, mode, hasConnectedActivity: null != mainFrameId, connectedActivityAppId, currentApp, updateActivityPanelMode: callback, children: children.children };
-  return jsx(mainFrameId(17010).BaseActivityPanelController, { context: contextDefault, orientationLockStateForApp, mode, hasConnectedActivity: null != mainFrameId, connectedActivityAppId, currentApp, updateActivityPanelMode: callback, children: children.children });
+  let obj = mainFrameId(504);
+  return jsx(mainFrameId(17041).BaseActivityPanelController, { context: FramePanelStateContextDefault, orientationLockStateForApp, mode, hasConnectedActivity: null != mainFrameId, connectedActivityAppId, currentApp, updateActivityPanelMode: callback, children: children.children });
 };

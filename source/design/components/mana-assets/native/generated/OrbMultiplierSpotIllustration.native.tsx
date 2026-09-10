@@ -1,17 +1,17 @@
-// Module ID: 6331
-// Function ID: 6332
+// Module ID: 6345
+// Function ID: 6346
 // Name: OrbMultiplierSpotIllustration
-// Dependencies: [21, 5587, 6332, 2]
+// Dependencies: [21, 5601, 6346, 2]
 // Exports: OrbMultiplierSpotIllustration
 
-// Module 6331 (OrbMultiplierSpotIllustration)
-import set from "set" /* 2 */;
+// Module 6345 (OrbMultiplierSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 6332 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6346 from "module_6346" /* 6346 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/OrbMultiplierSpotIllustration.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/OrbMultiplierSpotIllustration.native.tsx");
 
 export const OrbMultiplierSpotIllustration = function OrbMultiplierSpotIllustration(width) {
   let num = width.width;
@@ -27,14 +27,14 @@ export const OrbMultiplierSpotIllustration = function OrbMultiplierSpotIllustrat
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
-  obj = { width: num * num3, height: num2 * num3 };
-  const items = [obj];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { width: num * num3, height: num2 * num3 });
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef6346 };
+  obj.source = obj2;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

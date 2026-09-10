@@ -1,18 +1,19 @@
-// Module ID: 8044
-// Function ID: 8045
-// Name: createInGameMessageNuxSystemMessage
-// Dependencies: [4788, 1074, 7953, 7960, 7962, 2024, 1114, 7964, 2]
+// Module ID: 8059
+// Function ID: 8060
+// Name: InGameMessageNuxSystemMessage
+// Dependencies: [4802, 1074, 7967, 7974, 7976, 2024, 1114, 7978, 2]
 // Exports: createInGameMessageNuxSystemMessage
 
-// Module 8044 (createInGameMessageNuxSystemMessage)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import resultDefault from "result" /* 7953 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7960 */;
-import closure_3 from "addApplication" /* 4788 */;
-import { HelpdeskArticles } from "ME" /* 1074 */;
+// Module 8059 (InGameMessageNuxSystemMessage)
+import util from "util" /* 1114 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 7967 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7974 */;
+import ApplicationStore from "ApplicationStore" /* 4802 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/InGameMessageNuxSystemMessage.tsx");
+require = fn;
+const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/InGameMessageNuxSystemMessage.tsx");
 
 export const createInGameMessageNuxSystemMessage = function createInGameMessageNuxSystemMessage(message) {
   message = message.message;
@@ -21,29 +22,24 @@ export const createInGameMessageNuxSystemMessage = function createInGameMessageN
   if (str == null) {
     str = "";
   }
-  application = application.getApplication(str);
+  const application = ApplicationStore.getApplication(str);
   if (null == application) {
     return null;
   } else {
-    let obj = getMessageAuthorWithProcessedColor;
-    const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-    obj = { username: null, usernameOnClick: null, gameName: null, urlOnClick: null };
-    obj[0] = messageAuthorWithProcessedColor.nick;
-    obj = { message: null, author: null, roleStyle: null };
-    obj[0] = message;
-    obj[1] = messageAuthorWithProcessedColor;
-    obj[2] = roleStyle;
-    obj[1] = tmp(7962)(obj);
-    obj[2] = application.name;
-    obj1 = { action: "bindOpenUrl", url: null, linkColor: null, medium: true };
-    obj1[1] = tmp(2024).getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS);
-    obj1[2] = tmp3.linkColor;
-    obj[3] = obj1;
-    const obj2 = { content: null };
-    const intl = getSystemLocale.intl;
-    obj2[0] = intl.formatToParts(getSystemLocale.t["92erOB"], obj);
-    const merged = Object.assign(tmp(7964)(message));
-    return obj2;
+    const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
+    const obj2 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: null, gameName: null, urlOnClick: null };
+    const obj3 = { message, author: messageAuthorWithProcessedColor, roleStyle };
+    obj2.usernameOnClick = tmp(7976)(obj3);
+    obj2.gameName = application.name;
+    const obj4 = { action: "bindOpenUrl", url: null, linkColor: null, medium: true };
+    obj4.url = tmp(2024).getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS);
+    obj4.linkColor = tmp3.linkColor;
+    obj2.urlOnClick = obj4;
+    const obj5 = { content: null };
+    const intl = util.intl;
+    obj5.content = intl.formatToParts(util.t["92erOB"], obj2);
+    const merged = Object.assign(tmp(7978)(message));
+    return obj5;
   }
-  tmp3 = resultDefault(theme);
+  tmp3 = resolveMessageContentColorsDefault(theme);
 };

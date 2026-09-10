@@ -1,16 +1,18 @@
-// Module ID: 10745
-// Function ID: 10746
-// Name: apexExperiment
+// Module ID: 10772
+// Function ID: 10773
+// Name: PremiumGiftingGogoPromotionExperiment
 // Dependencies: [1433, 2]
 
-// Module 10745 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 10772 (PremiumGiftingGogoPromotionExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null };
-obj[1] = { enabled: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-08-premium-gifting-gogo-promotion", kind: "user", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/premium/gifting/experiments/PremiumGiftingGogoPromotionExperiment.tsx");
+const obj = { name: "2026-08-premium-gifting-gogo-promotion", kind: "user", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj.variations = obj2;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/premium/gifting/experiments/PremiumGiftingGogoPromotionExperiment.tsx");
 
 export default apexExperiment;
 export const PremiumGiftingGogoPromotionExperiment = apexExperiment;

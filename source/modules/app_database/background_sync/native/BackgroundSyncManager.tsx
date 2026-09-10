@@ -1,16 +1,15 @@
-// Module ID: 17323
-// Function ID: 17324
-// Name: handleMessageCreate
-// Dependencies: [502, 1371, 7118, 17324, 2]
+// Module ID: 17354
+// Function ID: 17355
+// Name: BackgroundSyncManager
+// Dependencies: [502, 1371, 7132, 17355, 2]
 
-// Module 17323 (handleMessageCreate)
-import initializeDefault from "initialize" /* 7118 */;
-import _backgroundSync from "_backgroundSync" /* 17324 */;
-import closure_2 from "fetchFingerprint" /* 502 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
+// Module 17354 (BackgroundSyncManager)
+import background_sync_BackgroundSync from "background_sync/BackgroundSync" /* 17355 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import UserStore from "UserStore" /* 1371 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-require = arg1;
-initializeDefault;
+require = fn;
 class BackgroundSyncManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -24,10 +23,10 @@ prototype["handleMessageCreate"] = function handleMessageCreate(message) {
   if (!message.optimistic) {
     let tmp2 = null != message.author;
     if (tmp2) {
-      tmp2 = message.author.id === id.getId();
+      tmp2 = message.author.id === AuthenticationStore.getId();
     }
     if (tmp2) {
-      currentUser = currentUser.getCurrentUser();
+      const currentUser = UserStore.getCurrentUser();
       let isStaffResult;
       if (currentUser != null) {
         isStaffResult = currentUser.isStaff();
@@ -38,15 +37,15 @@ prototype["handleMessageCreate"] = function handleMessageCreate(message) {
       tmp2 = "run bg sync" === message.content;
     }
     if (tmp2) {
-      _backgroundSync.backgroundSync({ force: true });
-      const obj2 = _backgroundSync;
+      background_sync_BackgroundSync.backgroundSync({ force: true });
     }
   }
 };
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
-  _backgroundSync.backgroundSync({ force: false, messagesOnly: true, checkLastMessageId: true });
+  background_sync_BackgroundSync.backgroundSync({ force: false, messagesOnly: true, checkLastMessageId: true });
 };
 const backgroundSyncManager = new BackgroundSyncManager();
-const result = require("set").fileFinishedImporting("modules/app_database/background_sync/native/BackgroundSyncManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_database/background_sync/native/BackgroundSyncManager.tsx");
 
 export default backgroundSyncManager;

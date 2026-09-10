@@ -2,12 +2,17 @@
 // Function ID: 464
 // Name: codegenNativeComponent
 // Dependencies: [68, 464]
+// Exports: default
 
 // Module 463 (codegenNativeComponent)
+import measureDefault from "measure" /* 68 */;
+import _modDef464 from "module_464" /* 464 */;
+
 const global = arg0;
-const module = arg2;
+importDefault = arg2;
 const dependencyMap = arg6;
-arg5.default = function codegenNativeComponent(arg0, paperComponentName) {
+
+export default function codegenNativeComponent(arg0, paperComponentName) {
   paperComponentName = arg0;
   if (paperComponentName) {
     paperComponentName = arg0;
@@ -32,12 +37,12 @@ arg5.default = function codegenNativeComponent(arg0, paperComponentName) {
           str = "(unknown)";
         }
         const _HermesInternal = HermesInternal;
-        error = new Error("Failed to find native component for either " + arg0 + " or " + str);
+        const error = new Error("Failed to find native component for either " + arg0 + " or " + str);
         throw error;
       }
-      obj2 = module(68);
-      tmp7 = module;
+      obj2 = measureDefault;
+      tmp7 = importDefault;
     }
   }
-  return module(464)(paperComponentNameDeprecated);
+  return _modDef464(paperComponentNameDeprecated);
 };

@@ -1,55 +1,35 @@
-// Module ID: 15866
-// Function ID: 15867
-// Name: toggle
-// Dependencies: [7975, 1935, 11473, 1114, 2]
+// Module ID: 15896
+// Function ID: 15897
+// Name: DisableStreamPreviewsSetting
+// Dependencies: [7989, 1935, 11500, 1114, 2]
 
-// Module 15866 (toggle)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15896 (DisableStreamPreviewsSetting)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-const toggle = createToggle.createToggle({
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["1CzWUK"]);
+    const intl = util.intl;
+    return intl.string(util.t["1CzWUK"]);
   },
   useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.jTNPHM);
+    const intl = util.intl;
+    return intl.string(util.t.jTNPHM);
   },
-  parent: MobileUserSettings.MobileUserSettings.VOICE,
+  parent: SettingsConstants.MobileUserSettings.VOICE,
   useValue() {
-    const DisableStreamPreviews = explicitContentFromProto.DisableStreamPreviews;
+    const DisableStreamPreviews = UserSettings.DisableStreamPreviews;
     let flag = DisableStreamPreviews.useSetting();
     if (flag == null) {
       flag = false;
     }
     return flag;
   },
-  onValueChange: explicitContentFromProto.DisableStreamPreviews.updateSetting
+  onValueChange: UserSettings.DisableStreamPreviews.updateSetting
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["1CzWUK"]);
-  },
-  useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.jTNPHM);
-  },
-  parent: MobileUserSettings.MobileUserSettings.VOICE,
-  useValue() {
-    const DisableStreamPreviews = explicitContentFromProto.DisableStreamPreviews;
-    let flag = DisableStreamPreviews.useSetting();
-    if (flag == null) {
-      flag = false;
-    }
-    return flag;
-  },
-  onValueChange: explicitContentFromProto.DisableStreamPreviews.updateSetting
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/DisableStreamPreviewsSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DisableStreamPreviewsSetting.tsx");
 
 export default toggle;

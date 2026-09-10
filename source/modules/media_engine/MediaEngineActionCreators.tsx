@@ -1,24 +1,24 @@
-// Module ID: 9701
-// Function ID: 9702
-// Name: setPushToTalkState
-// Dependencies: [1908, 4585, 573, 2]
+// Module ID: 9728
+// Function ID: 9729
+// Name: MediaEngineActionCreators
+// Dependencies: [1908, 4599, 573, 2]
 // Exports: setPushToTalkState
 
-// Module 9701 (setPushToTalkState)
-import closure_2 from "_detectH265HardwareDecode" /* 1908 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4585 */;
+// Module 9728 (MediaEngineActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
-const result = require("set").fileFinishedImporting("modules/media_engine/MediaEngineActionCreators.tsx");
+const MediaEngineContextTypes = fn(4599).MediaEngineContextTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_engine/MediaEngineActionCreators.tsx");
 
-export const setPushToTalkState = function setPushToTalkState(isActive, arg1) {
-  importDefault = isActive;
+export const setPushToTalkState = function setPushToTalkState(first1, arg1) {
+  closure_0 = first1;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = importDefault(flag[2]);
-  obj = { type: "PUSH_TO_TALK_STATE_CHANGE", isActive, isPriority: flag };
-  obj.dispatch(obj);
-  mediaEngine = mediaEngine.getMediaEngine();
+  DispatcherDefault.dispatch({ type: "PUSH_TO_TALK_STATE_CHANGE", isActive: first1, isPriority: flag });
+  const mediaEngine = MediaEngineStore.getMediaEngine();
   mediaEngine.eachConnection((setForceAudioInput) => setForceAudioInput.setForceAudioInput(closure_0, flag, false), MediaEngineContextTypes.DEFAULT);
 };

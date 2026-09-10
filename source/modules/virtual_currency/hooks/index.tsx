@@ -1,18 +1,18 @@
-// Module ID: 8855
-// Function ID: 8856
-// Dependencies: [2, 8856, 8863]
+// Module ID: 8882
+// Function ID: 8883
+// Dependencies: [2, 8883, 8890]
 
-// Module 8855
-import set from "set" /* 2 */;
+// Module 8882
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/virtual_currency/hooks/index.tsx");
+const require = globalThis.__r;
+
+const result = size.fileFinishedImporting("modules/virtual_currency/hooks/index.tsx");
 for (const key10018 in require("useFetchVirtualCurrencyBalance")) {
-  let tmp3 = key10018;
   arg5[key10018] = require("useFetchVirtualCurrencyBalance")[key10018];
   continue;
 }
 for (const key10022 in require("useRedeemVirtualCurrency")) {
-  let tmp4 = key10022;
   arg5[key10022] = require("useRedeemVirtualCurrency")[key10022];
   continue;
 }

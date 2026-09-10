@@ -1,61 +1,60 @@
-// Module ID: 15858
-// Function ID: 15859
-// Name: useIsDisabled
-// Dependencies: [7975, 15859, 14827, 1935, 11473, 1114, 15860, 2]
+// Module ID: 15888
+// Function ID: 15889
+// Name: UseDataForQuestsSetting
+// Dependencies: [7989, 15889, 14853, 1935, 11500, 1114, 15890, 2]
 
-// Module 15858 (useIsDisabled)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import MobileUserSettings2 from "MobileUserSettings" /* 7975 */;
-import useAdPersonalizationTogglesDisabled from "useAdPersonalizationTogglesDisabled" /* 15859 */;
-import apexExperiment from "apexExperiment" /* 15860 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15888 (UseDataForQuestsSetting)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import useAdPersonalizationTogglesDisabled from "useAdPersonalizationTogglesDisabled" /* 15889 */;
+import AdTopicOptOutClientExperiment from "AdTopicOptOutClientExperiment" /* 15890 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
 function useIsDisabled() {
   let adPersonalizationTogglesDisabled = useAdPersonalizationTogglesDisabled.useAdPersonalizationTogglesDisabled();
-  const obj = useAdPersonalizationTogglesDisabled;
   if (!adPersonalizationTogglesDisabled) {
     adPersonalizationTogglesDisabled = obj2.useIsParentallyControlled();
   }
   return adPersonalizationTogglesDisabled;
 }
 function useDataToSupportQuestsSettingValue() {
-  const DropsOptedOut = explicitContentFromProto.DropsOptedOut;
+  const DropsOptedOut = UserSettings.DropsOptedOut;
   return !DropsOptedOut.useSetting();
 }
 function onDataToSupportQuestsSettingValueChange(arg0) {
-  const DropsOptedOut = explicitContentFromProto.DropsOptedOut;
+  const DropsOptedOut = UserSettings.DropsOptedOut;
   DropsOptedOut.updateSetting(!arg0);
 }
-const MobileUserSettings = MobileUserSettings2.MobileUserSettings;
-let obj = {
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+let SettingBuilders = SettingBuilders_mod;
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.sJYh5t);
+    const intl = util.intl;
+    return intl.string(util.t.sJYh5t);
   },
   parent: MobileUserSettings.DATA_AND_PRIVACY,
   usePredicate() {
-    return !apexExperiment.useIsAdTopicOptOutClientEnabled();
+    return !AdTopicOptOutClientExperiment.useIsAdTopicOptOutClientEnabled();
   },
   useValue: useDataToSupportQuestsSettingValue,
   onValueChange: onDataToSupportQuestsSettingValueChange,
   useIsDisabled
-};
-const toggle = createToggle.createToggle(obj);
-obj = {
+});
+let SettingBuilders = SettingBuilders_mod;
+const toggle1 = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.sJYh5t);
+    const intl = util.intl;
+    return intl.string(util.t.sJYh5t);
   },
   parent: MobileUserSettings.SPONSORED_CONTENT_PREFERENCES,
-  usePredicate: apexExperiment.useIsAdTopicOptOutClientEnabled,
+  usePredicate: AdTopicOptOutClientExperiment.useIsAdTopicOptOutClientEnabled,
   useValue: useDataToSupportQuestsSettingValue,
   onValueChange: onDataToSupportQuestsSettingValueChange,
   useIsDisabled
-};
-const toggle1 = createToggle.createToggle(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/UseDataForQuestsSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/UseDataForQuestsSetting.tsx");
 
 export default toggle;
 export const UseDataForQuestsSponsoredContentSetting = toggle1;

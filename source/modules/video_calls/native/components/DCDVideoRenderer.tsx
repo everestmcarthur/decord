@@ -1,13 +1,15 @@
-// Module ID: 9621
-// Function ID: 9622
-// Dependencies: [4968, 9622, 2]
+// Module ID: 9648
+// Function ID: 9649
+// Name: DCDVideoRenderer
+// Dependencies: [4982, 9649, 2]
 
-// Module 9621
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 9622 */;
-import importDefaultResult from "map" /* 4968 */;
+// Module 9648 (DCDVideoRenderer)
+import VideoRendererNativeComponentDefault from "VideoRendererNativeComponent" /* 9649 */;
+import requireNativeComponentOrDefault from "requireNativeComponentOrDefault" /* 4982 */;
 
-const obj = { componentName: "DCDVideoRenderer", componentFoundInstance: __INTERNAL_VIEW_CONFIGDefault };
-const importDefaultResultResult = importDefaultResult(obj);
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/DCDVideoRenderer.tsx");
+const obj = { componentName: "DCDVideoRenderer", componentFoundInstance: null };
+obj.componentFoundInstance = VideoRendererNativeComponentDefault;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/components/DCDVideoRenderer.tsx");
 
-export default importDefaultResultResult;
+export default requireNativeComponentOrDefault(obj);

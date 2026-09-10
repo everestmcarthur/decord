@@ -1,65 +1,46 @@
-// Module ID: 15491
-// Function ID: 15492
-// Name: onChange
-// Dependencies: [7975, 1074, 4212, 1935, 1187, 1242, 11473, 1114, 2]
+// Module ID: 15521
+// Function ID: 15522
+// Name: CustomStatusNotificationSettings
+// Dependencies: [7989, 1074, 4225, 1935, 1187, 1242, 11500, 1114, 2]
 // Exports: onChange
 
-// Module 15491 (onChange)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import create from "create" /* 1187 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import AccountNotificationFlags from "AccountNotificationFlags" /* 4212 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15521 (CustomStatusNotificationSettings)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import NotificationConstants from "NotificationConstants" /* 4225 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
 function onChange(custom_status_push_notifications) {
-  const CustomStatusPushNotifications = explicitContentFromProto.CustomStatusPushNotifications;
-  const CustomStatusPushNotificationType = create.CustomStatusPushNotificationType;
+  const CustomStatusPushNotifications = UserSettings.CustomStatusPushNotifications;
+  const CustomStatusPushNotificationType = preloaded_user_settings.CustomStatusPushNotificationType;
   CustomStatusPushNotifications.updateSetting(custom_status_push_notifications ? CustomStatusPushNotificationType.STATUS_PUSH_ENABLED : CustomStatusPushNotificationType.STATUS_PUSH_DISABLED);
-  let obj = expandEventPropertiesDefault;
-  obj = { update_type: constants.ACCOUNT, custom_status_push_notifications };
-  obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, { update_type: constants.ACCOUNT, custom_status_push_notifications });
 }
-const AnalyticEvents = ME.AnalyticEvents;
-let closure_4 = AccountNotificationFlags.NotificationSettingsUpdateType;
-const toggle = createToggle.createToggle({
+const AnalyticEvents = Constants.AnalyticEvents;
+const constants = NotificationConstants.NotificationSettingsUpdateType;
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.PTtxi9);
+    const intl = util.intl;
+    return intl.string(util.t.PTtxi9);
   },
   useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["/+OQEs"]);
+    const intl = util.intl;
+    return intl.string(util.t["/+OQEs"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
+  parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
   useValue() {
-    const CustomStatusPushNotifications = explicitContentFromProto.CustomStatusPushNotifications;
+    const CustomStatusPushNotifications = UserSettings.CustomStatusPushNotifications;
     const setting = CustomStatusPushNotifications.useSetting();
-    return setting !== create.CustomStatusPushNotificationType.STATUS_PUSH_DISABLED;
+    return setting !== preloaded_user_settings.CustomStatusPushNotificationType.STATUS_PUSH_DISABLED;
   },
   onValueChange: onChange
 });
-let obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.PTtxi9);
-  },
-  useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["/+OQEs"]);
-  },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue() {
-    const CustomStatusPushNotifications = explicitContentFromProto.CustomStatusPushNotifications;
-    const setting = CustomStatusPushNotifications.useSetting();
-    return setting !== create.CustomStatusPushNotificationType.STATUS_PUSH_DISABLED;
-  },
-  onValueChange: onChange
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/CustomStatusNotificationSettings.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/CustomStatusNotificationSettings.tsx");
 
 export default toggle;
 export { onChange };

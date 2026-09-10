@@ -1,103 +1,109 @@
-// Module ID: 11130
-// Function ID: 11131
+// Module ID: 11157
+// Function ID: 11158
 // Name: BurstReactionToggle
-// Dependencies: [19, 17, 4552, 1954, 21, 4296, 504, 4262, 576, 4561, 4974, 4560, 11131, 1114, 9378, 2]
+// Dependencies: [19, 17, 4566, 1954, 21, 4310, 504, 4275, 576, 4575, 4988, 4574, 11158, 1114, 9405, 2]
 // Exports: default
 
-// Module 11130 (BurstReactionToggle)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { Pressable } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
-import { jsx } from "jsxProd" /* 21 */;
-import { Easing } from "module_4296" /* 4296 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11157 (BurstReactionToggle)
+import initialize from "initialize" /* 504 */;
+import nativeDefault from "native" /* 576 */;
+import useToken from "useToken" /* 4275 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import timing from "timing" /* 4575 */;
+import spring from "spring" /* 4988 */;
+import SuperReactionIcon from "SuperReactionIcon" /* 9405 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-const require = arg1;
+const require = globalThis.__r;
+
+require = fn;
+const Pressable = fn(17).Pressable;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsx = fn(21).jsx;
 let obj = { duration: 100, easing: null };
-obj[1] = Easing.out(require("module_4296").Easing.quad);
+const Easing = fn(4310).Easing;
+obj.easing = Easing.out(fn(4310).Easing.quad);
 let closure_9 = { stiffness: 750, mass: 2.5, damping: 70 };
-let closure_10 = { code: "function BurstReactionToggleTsx1(){const{reducedMotion,targetBackgroundColor,backgroundColor,rotation}=this.__closure;const _backgroundColor=reducedMotion?targetBackgroundColor:backgroundColor.get();const _rotation=reducedMotion?0:rotation.get();return{backgroundColor:_backgroundColor,transform:[{rotate:_rotation+\"deg\"}]};}" };
-obj = { container: null };
-obj = { borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, padding: 8, marginLeft: 8, width: 40, height: 40 };
-obj[0] = obj;
-let closure_11 = createCacheKey.createStyles(obj);
-let result = require("set").fileFinishedImporting("modules/reactions/native/BurstReactionToggle.tsx");
+const __initData = { code: "function BurstReactionToggleTsx1(){const{reducedMotion,targetBackgroundColor,backgroundColor,rotation}=this.__closure;const _backgroundColor=reducedMotion?targetBackgroundColor:backgroundColor.get();const _rotation=reducedMotion?0:rotation.get();return{backgroundColor:_backgroundColor,transform:[{rotate:_rotation+\"deg\"}]};}" };
+const createStyles = fn(4574);
+let obj3 = { container: null };
+let size = { borderRadius: nativeDefault.modules.button.BORDER_RADIUS, padding: 8, marginLeft: 8, width: 40, height: 40 };
+obj3.container = size;
+let closure_11 = createStyles.createStyles(obj3);
+size = fn(2);
+let result = size.fileFinishedImporting("modules/reactions/native/BurstReactionToggle.tsx");
 
 export default function BurstReactionToggle(arg0) {
-  ({ onPress: stateFromStores, isActive } = arg0);
-  let str;
-  const colors = str(num[8]).colors;
+  ({ onPress: require, isActive } = arg0);
+  importDefault = undefined;
+  const colors = nativeDefault.colors;
   if (isActive) {
     let INTERACTIVE_TEXT_DEFAULT = colors.WHITE;
     let tmp4 = tmp2;
-    let tmp5 = tmp3;
-    let tmp6 = tmp3;
     let tmp7 = tmp2;
   } else {
     INTERACTIVE_TEXT_DEFAULT = colors.INTERACTIVE_TEXT_DEFAULT;
     tmp4 = tmp2;
-    tmp5 = tmp3;
-    tmp6 = tmp3;
     tmp7 = tmp2;
   }
-  obj = sharedValue;
-  const ref = sharedValue.useRef(null);
-  str = tmp7(tmp6[12])(ref);
-  stateFromStores = undefined;
-  str = undefined;
-  num = undefined;
-  sharedValue = undefined;
-  let sharedValue1;
-  const tmp = callback();
-  let items = [closure_5];
-  stateFromStores = stateFromStores(tmp5[6]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  const obj2 = stateFromStores(tmp5[6]);
-  const colors2 = tmp4(tmp5[8]).colors;
-  str = stateFromStores(tmp5[7]).useToken(isActive ? colors2.BACKGROUND_BRAND : colors2.INPUT_BACKGROUND_DEFAULT);
+  const ref = noop.useRef(null);
+  importDefault = tmp7(11158)(ref);
+  closure_129_1 = undefined;
+  closure_129_2 = undefined;
+  closure_129_3 = undefined;
+  closure_129_4 = undefined;
+  obj = noop;
+  const tmp = closure_11();
+  let items = [AccessibilityStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  closure_129_0 = stateFromStores;
+  const colors2 = tmp4(576).colors;
+  let str = useToken.useToken(isActive ? colors2.BACKGROUND_BRAND : colors2.INPUT_BACKGROUND_DEFAULT);
   if (str == null) {
     str = "";
   }
-  num = 0;
+  closure_129_1 = str;
+  let num = 0;
   if (isActive) {
     num = 360;
   }
-  let tmp9Result = tmp9(tmp5[5]);
-  sharedValue = tmp9Result.useSharedValue(str);
-  tmp9Result = tmp9(tmp5[5]);
-  sharedValue1 = tmp9Result.useSharedValue(num);
-  const obj3 = stateFromStores(tmp5[7]);
+  closure_129_2 = num;
+  const sharedValue = ReanimatedRexport.useSharedValue(str);
+  closure_129_3 = sharedValue;
+  const tmp9Result = ReanimatedRexport;
+  const sharedValue1 = ReanimatedRexport.useSharedValue(num);
+  closure_129_4 = sharedValue1;
+  const tmp9Result3 = ReanimatedRexport;
   const fn = function s() {
-    if (stateFromStores) {
-      let value = str;
+    if (require) {
+      value = closure_1;
     } else {
-      value = sharedValue.get();
+      value = noop.get();
     }
     obj = { backgroundColor: value, transform: null };
-    num = 0;
-    if (!stateFromStores) {
-      num = sharedValue1.get();
+    let num = 0;
+    if (!require) {
+      num = Pressable.get();
     }
-    obj = { rotate: "" + num + "deg" };
-    const items = [obj];
-    obj[1] = items;
+    const items = [{ rotate: "" + num + "deg" }];
+    obj.transform = items;
     return obj;
   };
   fn.__closure = { reducedMotion: stateFromStores, targetBackgroundColor: str, backgroundColor: sharedValue, rotation: sharedValue1 };
   fn.__workletHash = 1525758595013;
-  fn.__initData = closure_10;
+  fn.__initData = __initData;
   const items1 = [sharedValue, str, sharedValue1, num];
-  const animatedStyle = stateFromStores(tmp5[5]).useAnimatedStyle(fn);
+  const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
   const effect = obj.useEffect(() => {
-    const result = sharedValue.set(stateFromStores(num[9]).withTiming(str, closure_1_8));
-    obj = stateFromStores(num[9]);
-    const result1 = sharedValue1.set(stateFromStores(num[10]).withSpring(num, closure_1_9));
+    obj = timing;
+    const result = noop.set(obj.withTiming(closure_1, obj));
+    const result1 = Pressable.set(spring.withSpring(dependencyMap, closure_9));
   }, items1);
-  obj = {
+  const obj4 = {
     onPress() {
-      str(closure_1_6.AUTO);
-      stateFromStores();
+      closure_1(ContentDismissActionType.AUTO);
+      require();
     },
     accessible: true,
     accessibilityLabel: null,
@@ -105,18 +111,22 @@ export default function BurstReactionToggle(arg0) {
     accessibilityState: null,
     children: null
   };
-  const intl = tmp9(tmp6[13]).intl;
+  const intl = tmp9(1114).intl;
   const string = intl.string;
-  const t = tmp9(tmp6[13]).t;
+  const t = tmp9(1114).t;
   if (isActive) {
     let stringResult = string(t["5cRA/b"]);
   } else {
     stringResult = string(t.buV4av);
   }
-  obj[2] = stringResult;
-  obj[4] = { checked: isActive };
-  obj = { style: items2, ref, children: tmp15(tmp9(tmp6[14]).SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT }) };
-  items2 = [tmp.container, animatedStyle];
-  obj[5] = jsx(tmp7(tmp6[5]).View, { style: items2, ref, children: tmp15(tmp9(tmp6[14]).SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT }) });
-  return <sharedValue1 style={items2} ref={ref}>{tmp15(tmp9(tmp6[14]).SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT })}</sharedValue1>;
+  obj4.accessibilityLabel = stringResult;
+  obj4.accessibilityState = { checked: isActive };
+  const obj5 = { style: null, ref, children: jsx(SuperReactionIcon.SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT }) };
+  const items2 = [tmp.container, animatedStyle];
+  obj5.style = items2;
+  obj4.children = jsx(tmp7(4310).View, { style: null, ref, children: jsx(SuperReactionIcon.SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT }) });
+  return <Pressable onPress={function onPress() {
+    closure_1(ContentDismissActionType.AUTO);
+    require();
+  }} accessible accessibilityLabel={null} accessibilityRole="switch" accessibilityState={null}>{null}</Pressable>;
 };

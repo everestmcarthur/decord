@@ -1,24 +1,23 @@
-// Module ID: 16873
-// Function ID: 16874
+// Module ID: 16910
+// Function ID: 16911
 // Name: ContextMenuCommandAppScreen
-// Dependencies: [19, 21, 4560, 576, 6981, 7049, 16872, 7055, 2]
+// Dependencies: [19, 21, 4574, 576, 6995, 7063, 16909, 7069, 2]
 // Exports: default
 
-// Module 16873 (ContextMenuCommandAppScreen)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_2 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16910 (ContextMenuCommandAppScreen)
+import nativeDefault from "native" /* 576 */;
+import noop from "module_19" /* 19 */;
 
-createCacheKey = { list: null };
-createCacheKey = { marginHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/application_commands/native/ContextMenuCommandAppScreen.tsx");
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+const obj2 = { list: { marginHorizontal: nativeDefault.space.PX_16 } };
+let closure_4 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/application_commands/native/ContextMenuCommandAppScreen.tsx");
 
 export default function ContextMenuCommandAppScreen(route) {
   const params = route.route.params;
-  const section = params.section;
+  let section = params.section;
   const commands = params.commands;
   const onPressCommand = params.onPressCommand;
   let items = [commands.length];
@@ -28,19 +27,19 @@ export default function ContextMenuCommandAppScreen(route) {
     return items;
   }, items);
   const callback = onPressCommand.useCallback((arg0, arg1) => {
-    closure_0 = tmp;
+    section = tmp;
     const diff = commands.length - 1;
-    return closure_1_3(section(commands[6]), {
+    return jsx(section(commands[6]), {
       item: commands[arg1],
       onPress() {
-        return closure_1_2(closure_0);
+        return onPressCommand(closure_0);
       },
-      section: closure_0,
+      section,
       start: 0 === arg1,
       end: arg1 === diff
     }, commands[arg1].id);
   }, items1);
   const tmp = section(commands[5])();
-  const tmp4 = callback();
-  return jsx(section(commands[7]), { style: callback().list, sections: memo, estimatedListSize: "windowSize", itemSize: tmp, insetEnd: section(commands[4])({ includeKeyboardHeight: true }).insets.bottom, renderItem: callback });
+  const tmp4 = closure_4();
+  return jsx(section(commands[7]), { style: closure_4().list, sections: memo, estimatedListSize: "windowSize", itemSize: tmp, insetEnd: section(commands[4])({ includeKeyboardHeight: true }).insets.bottom, renderItem: callback });
 };

@@ -1,33 +1,31 @@
-// Module ID: 15412
-// Function ID: 15413
-// Name: toggle
-// Dependencies: [4552, 7975, 11473, 1114, 504, 14440, 2]
+// Module ID: 15441
+// Function ID: 15442
+// Name: YouBarAvatarDecoAccessibilitySetting
+// Dependencies: [4566, 7989, 11500, 1114, 504, 14465, 2]
 
-// Module 15412 (toggle)
+// Module 15441 (YouBarAvatarDecoAccessibilitySetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import setFontSize from "setFontSize" /* 14440 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import createToggle from "createToggle" /* 11473 */;
+import util from "util" /* 1114 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14465 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const SettingBuilders = fn(11500);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["34XN2f"]);
+    const intl = util.intl;
+    return intl.string(util.t["34XN2f"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7989).MobileUserSettings.ACCESSIBILITY,
   useValue() {
-    const items = [closure_2];
-    return initialize.useStateFromStores(items, () => obj.animateYouBarAvatarDeco);
+    const items = [AccessibilityStore];
+    return initialize.useStateFromStores(items, () => AccessibilityStore.animateYouBarAvatarDeco);
   },
   onValueChange(animateAvatarDeco) {
-    let obj = setFontSize;
-    obj = { animateAvatarDeco };
-    return obj.setYouBarAnimations(obj);
+    return AccessibilityActionCreators.setYouBarAnimations({ animateAvatarDeco });
   }
-};
-createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/YouBarAvatarDecoAccessibilitySetting.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/YouBarAvatarDecoAccessibilitySetting.tsx");
 
-export default createToggle;
+export default toggle;

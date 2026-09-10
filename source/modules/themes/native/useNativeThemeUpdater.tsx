@@ -1,34 +1,35 @@
-// Module ID: 16960
-// Function ID: 16961
+// Module ID: 16997
+// Function ID: 16998
 // Name: useNativeThemeUpdater
-// Dependencies: [19, 1183, 16961, 16962, 2]
+// Dependencies: [19, 1183, 16998, 16999, 2]
 // Exports: default
 
-// Module 16960 (useNativeThemeUpdater)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleThemeChange" /* 1183 */;
+// Module 16997 (useNativeThemeUpdater)
+import noop from "module_19" /* 19 */;
+import ThemeStore from "ThemeStore" /* 1183 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/themes/native/useNativeThemeUpdater.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/themes/native/useNativeThemeUpdater.tsx");
 
 export default function useNativeThemeUpdater() {
-  closure_0 = React.useRef(theme.theme);
-  const layoutEffect = React.useLayoutEffect(() => {
-    callback(table[2]).updateVisualRefresh(true);
+  closure_0 = noop.useRef(ThemeStore.theme);
+  const layoutEffect = noop.useLayoutEffect(() => {
+    closure_0(16998).updateVisualRefresh(true);
   }, []);
-  const layoutEffect1 = React.useLayoutEffect(() => {
-    function handleThemeUpdate(arg0) {
-      const theme = closure_1_3.theme;
+  const layoutEffect1 = noop.useLayoutEffect(() => {
+    function handleThemeUpdate() {
+      const theme = ThemeStore.theme;
       if (theme !== handleThemeUpdate.current) {
         handleThemeUpdate.current = theme;
-        handleThemeUpdate(closure_1_1[3]).updateTheme(theme);
-        const obj = handleThemeUpdate(closure_1_1[3]);
+        handleThemeUpdate(16999).updateTheme(theme);
+        const obj = handleThemeUpdate(16999);
       }
     }
-    callback(closure_1_1[3]).updateTheme(closure_1_3.theme);
-    closure_1_3.addChangeListener(handleThemeUpdate);
+    handleThemeUpdate(16999).updateTheme(ThemeStore.theme);
+    ThemeStore.addChangeListener(handleThemeUpdate);
     return () => {
-      closure_2_3.removeChangeListener(handleThemeUpdate);
+      ThemeStore.removeChangeListener(handleThemeUpdate);
     };
   }, []);
 };

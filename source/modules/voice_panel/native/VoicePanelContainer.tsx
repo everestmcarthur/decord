@@ -1,34 +1,34 @@
-// Module ID: 17051
-// Function ID: 17052
-// Name: VoicePanel
-// Dependencies: [19, 1957, 4768, 21, 504, 17052, 17096, 4184, 4271, 2]
+// Module ID: 17082
+// Function ID: 17083
+// Name: VoicePanelContainer
+// Dependencies: [19, 1957, 4782, 21, 504, 17083, 17127, 4197, 4284, 2]
 
-// Module 17051 (VoicePanel)
-import isIterable from "isIterable" /* 4184 */;
-import ManaContext from "ManaContext" /* 4271 */;
-import VoicePanelControllerDefault from "VoicePanelController" /* 17052 */;
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "withEqualityFn" /* 4768 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 17082 (VoicePanelContainer)
+import _mod4197 from "module_4197" /* 4197 */;
+import native from "native" /* 4284 */;
+import VoicePanelControllerDefault from "VoicePanelController" /* 17083 */;
+import VoicePanelUIDefault from "VoicePanelUI" /* 17127 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import VoicePanelStore from "VoicePanelStore" /* 4782 */;
 
-require = arg1;
+require = fn;
 function VoicePanel(arg0) {
-  const _require = arg0;
-  let obj = _require(504);
-  const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => {
-    const channel = closure_1_4.getChannel(channelId.channelId);
+  _require = arg0;
+  const items = [ChannelStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
+    const channel = ChannelStore.getChannel(channelId.channelId);
     let guild_id;
     if (channel != null) {
       guild_id = channel.guild_id;
     }
     return guild_id;
   });
-  obj = {};
+  const obj2 = {};
+  const obj = require("initialize");
   const merged = Object.assign(arg0);
-  obj.guildId = stateFromStores;
-  obj.children = importAllResult.useMemo(() => callback2(callback(table[6]), {}), []);
+  obj2.guildId = stateFromStores;
+  obj2.children = noop.useMemo(() => jsx(VoicePanelUIDefault, {}), []);
   return jsx(VoicePanelControllerDefault, {});
 }
 function getChannelKey(arg0) {
@@ -37,11 +37,11 @@ function getChannelKey(arg0) {
 function renderVoicePanel(arg0, channelId, transitionState, transitionCleanUp) {
   return <VoicePanel key={arg1} channelId={arg1} transitionState={arg2} transitionCleanUp={arg3} />;
 }
-let c3 = importAllResult;
-const memoResult = importAllResult.memo(function VoicePanelContainer() {
-  const tmp = callback((channels) => Array.from(channels.channels), isIterable.shallow);
-  return jsx(ManaContext.TransitionGroup, { items: callback((channels) => Array.from(channels.channels), isIterable.shallow), getItemKey: getChannelKey, renderItem: renderVoicePanel });
-});
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/VoicePanelContainer.tsx");
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/VoicePanelContainer.tsx");
 
-export default memoResult;
+export default noop.memo(function VoicePanelContainer() {
+  const tmp = VoicePanelStore((channels) => Array.from(channels.channels), _mod4197.shallow);
+  return jsx(native.TransitionGroup, { items: VoicePanelStore((channels) => Array.from(channels.channels), _mod4197.shallow), getItemKey: getChannelKey, renderItem: renderVoicePanel });
+});

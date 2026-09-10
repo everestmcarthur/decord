@@ -4,29 +4,30 @@
 // Dependencies: [19, 21, 1599, 1486]
 
 // Module 1598 (ServerContainer)
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import BaseNavigationContainer from "BaseNavigationContainer" /* 1486 */;
+import ServerContext from "ServerContext" /* 1599 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = fn;
+const jsx = fn(21).jsx;
 
-export const ServerContainer = importAllResult.forwardRef(function ServerContainer(arg0, fn) {
-  let obj;
+export const ServerContainer = noop.forwardRef(function ServerContainer(arg0, fn) {
   ({ children, location: _location } = arg0);
-  const effect = importAllResult.useEffect(() => {
+  const effect = noop.useEffect(() => {
     console.error("'ServerContainer' should only be used on the server with 'react-dom/server' for SSR.");
   }, []);
-  obj = {};
+  value = {};
   if (fn) {
-    obj = { getCurrentOptions: null };
-    obj[0] = function getCurrentOptions() {
-      return obj.options;
+    const obj2 = {
+      getCurrentOptions() {
+          return obj.options;
+        }
     };
     if (typeof fn === "function") {
-      fn(obj);
+      fn(obj2);
     } else {
-      fn.current = obj;
+      fn.current = obj2;
     }
   }
-  obj = { value: { location: _location }, children: jsx(obj(1486).CurrentRenderContext.Provider, { value: obj, children }) };
-  return jsx(obj(1599).ServerContext.Provider, { value: { location: _location }, children: jsx(obj(1486).CurrentRenderContext.Provider, { value: obj, children }) });
+  return jsx(ServerContext.ServerContext.Provider, { value: { location: _location }, children: jsx(BaseNavigationContainer.CurrentRenderContext.Provider, { value, children }) });
 });

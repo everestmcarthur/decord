@@ -1,12 +1,11 @@
-// Module ID: 6392
-// Function ID: 6393
-// Name: metadata
+// Module ID: 6406
+// Function ID: 6407
 // Dependencies: [2]
 
-// Module 6392 (metadata)
-import set from "set" /* 2 */;
+// Module 6406
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/RulebookSpotIllustration-2x.png.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/RulebookSpotIllustration-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/e94e33061189b967bb209ce81c0a2dc8e6f501ea9154b1fbcfff7dca9613f3ad.png";
 export const metadata = { fileBytes: 21642 };

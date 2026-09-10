@@ -3,7 +3,8 @@
 // Dependencies: []
 
 // Module 466
-arg5.default = {
+
+export default {
   show() {
 
   }

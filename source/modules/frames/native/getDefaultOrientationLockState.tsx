@@ -1,27 +1,23 @@
-// Module ID: 16619
-// Function ID: 16620
-// Name: setOrientationLockState
-// Dependencies: [9639, 573, 2]
+// Module ID: 16651
+// Function ID: 16652
+// Name: frames/getDefaultOrientationLockState
+// Dependencies: [9666, 573, 2]
 // Exports: setOrientationLockState
 
-// Module 16619 (setOrientationLockState)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import getIsTabletActivitySurface from "getIsTabletActivitySurface" /* 9639 */;
+// Module 16651 (frames/getDefaultOrientationLockState)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import getDefaultOrientationLockState from "getDefaultOrientationLockState" /* 9666 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/frames/native/getDefaultOrientationLockState.tsx");
+const result = size.fileFinishedImporting("modules/frames/native/getDefaultOrientationLockState.tsx");
 
-export const setOrientationLockState = function setOrientationLockState(arg0, application) {
+export const setOrientationLockState = function setOrientationLockState(frameId, application, arg2) {
   let defaultOrientationLockState = arg2;
   if (arg2 == null) {
-    let obj = getIsTabletActivitySurface;
-    defaultOrientationLockState = obj.getDefaultOrientationLockState(application);
+    defaultOrientationLockState = getDefaultOrientationLockState.getDefaultOrientationLockState(application);
   }
   if (null != defaultOrientationLockState) {
-    obj = { type: "FRAME_SET_ORIENTATION_LOCK_STATE", frameId: null, lockState: null };
-    obj[1] = arg0;
-    obj[2] = defaultOrientationLockState;
-    dispatcherDefault.dispatch(obj);
-    const obj2 = dispatcherDefault;
+    const obj3 = { type: "FRAME_SET_ORIENTATION_LOCK_STATE", frameId, lockState: defaultOrientationLockState };
+    DispatcherDefault.dispatch(obj3);
   }
 };

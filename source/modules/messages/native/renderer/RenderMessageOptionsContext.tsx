@@ -1,12 +1,12 @@
-// Module ID: 7934
-// Function ID: 7935
-// Name: UserOption
+// Module ID: 7948
+// Function ID: 7949
+// Name: RenderMessageOptionsContext
 // Dependencies: [2]
 
-// Module 7934 (UserOption)
-import set from "set" /* 2 */;
+// Module 7948 (RenderMessageOptionsContext)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/messages/native/renderer/RenderMessageOptionsContext.tsx");
+const result = size.fileFinishedImporting("modules/messages/native/renderer/RenderMessageOptionsContext.tsx");
 
 export const UserOption = { USER_SETTING: 0, [0]: "USER_SETTING", FORCE_ENABLE: 1, [1]: "FORCE_ENABLE", FORCE_DISABLE: 2, [2]: "FORCE_DISABLE" };
 export const DEFAULT_OPTIONS = { renderEmbeds: true, renderReactions: true, inlineEmbedMedia: true, inlineAttachmentMedia: true, animateEmoji: true, gifAutoPlay: false, timestampHourCycle: 0, renderCodedLinks: true, renderGiftCode: true, renderActivityInstanceEmbed: true, renderActivityInviteEmbed: true, renderComponents: true, renderThreadEmbeds: true, renderReplies: true, renderCommunicationDisabled: false, renderAttachments: true, renderExecutedCommands: true, renderPolls: true, renderSharedClientTheme: true, renderForumPostActions: true, ignoreMentioned: false, ignoreEmbedDescriptionCache: false, forceHideSimpleEmbedContent: false, enableSwipeActions: false, useAlternateEmbedColors: false, restrictedPreview: false };

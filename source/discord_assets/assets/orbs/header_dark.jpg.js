@@ -1,12 +1,11 @@
-// Module ID: 15824
-// Function ID: 15825
-// Name: metadata
+// Module ID: 15854
+// Function ID: 15855
 // Dependencies: [2]
 
-// Module 15824 (metadata)
-import set from "set" /* 2 */;
+// Module 15854
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/orbs/header_dark.jpg.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/orbs/header_dark.jpg.js");
 
 export default "https://cdn.discordapp.com/assets/content/d1b989b4414544ed45532844f8d84b22cb5b43fab9dfd0939c28ebf813757f99.jpg";
 export const metadata = { fileBytes: 41615 };

@@ -1,42 +1,44 @@
-// Module ID: 11080
-// Function ID: 11081
+// Module ID: 11107
+// Function ID: 11108
 // Name: PremiumGiftingGoGoSuccessActions
-// Dependencies: [19, 10670, 1074, 1076, 21, 4560, 576, 10704, 504, 10747, 10758, 1483, 10748, 4799, 10667, 8361, 7541, 7182, 10759, 1114, 2460, 4975, 2]
+// Dependencies: [19, 10697, 1074, 1076, 21, 4574, 576, 10731, 504, 10774, 10785, 1483, 10775, 4813, 10694, 8389, 7555, 7196, 10786, 1114, 2460, 4989, 2]
 // Exports: default
 
-// Module 11080 (PremiumGiftingGoGoSuccessActions)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createEmptyPromotionsByType" /* 10670 */;
-import { AnalyticsSections } from "ME" /* 1074 */;
-import { CollectiblesMobileShopScreen as closure_6 } from "items" /* 1076 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11107 (PremiumGiftingGoGoSuccessActions)
+import nativeDefault from "native" /* 576 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7555 */;
+import showShareActionSheet from "showShareActionSheet" /* 8389 */;
+import PremiumGiftModal from "PremiumGiftModal" /* 10694 */;
+import noop from "module_19" /* 19 */;
+import PromotionsStore from "PromotionsStore" /* 10697 */;
 
-const require = arg1;
-({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles(() => {
-  let obj = { promoDetails: null };
-  obj = { marginBottom: ThemesDefault.space.PX_6, paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
-  obj[0] = obj;
+require = fn;
+const AnalyticsSections = fn(1074).AnalyticsSections;
+let closure_6 = fn(1076).CollectiblesMobileShopScreen;
+const jsxProd = fn(21);
+({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4574);
+let closure_10 = createStyles.createStyles(() => {
+  const obj = { promoDetails: { marginBottom: nativeDefault.space.PX_6, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE } };
   return obj;
 });
-let result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftingGoGoSuccessActions.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftingGoGoSuccessActions.tsx");
 
 export default function PremiumGiftingGoGoSuccessActions(giftCode) {
   giftCode = giftCode.giftCode;
   let onClose;
-  let prePurchaseGiftingBadgeProgress;
   let navigation;
   let enabled;
   let giftCodeURL;
-  let obj = onClose(navigation[7]);
-  const nativeGiftContext = obj.useNativeGiftContext();
+  const tmp = closure_10();
+  const nativeGiftContext = onClose(navigation[7]).useNativeGiftContext();
   onClose = nativeGiftContext.onClose;
-  prePurchaseGiftingBadgeProgress = nativeGiftContext.prePurchaseGiftingBadgeProgress;
-  obj1 = onClose(navigation[8]);
+  const prePurchaseGiftingBadgeProgress = nativeGiftContext.prePurchaseGiftingBadgeProgress;
+  let obj = onClose(navigation[7]);
   let items = [giftCodeURL];
-  const stateFromStores = obj1.useStateFromStores(items, () => {
+  const stateFromStores = onClose(navigation[8]).useStateFromStores(items, () => {
     const marketingComponentByType = giftCodeURL.getMarketingComponentByType(onClose(navigation[9]).MarketingComponentType.GIFT_CUSTOMIZATION_BANNER);
     let prop = null;
     if (null != marketingComponentByType) {
@@ -47,74 +49,67 @@ export default function PremiumGiftingGoGoSuccessActions(giftCode) {
     }
     return prop;
   });
-  let obj2 = onClose(navigation[10]);
+  let obj2 = onClose(navigation[8]);
   let asset;
   if (stateFromStores != null) {
     asset = stateFromStores.asset;
   }
-  const themeAndReducedMotionAwareAssetUrl = obj2.useThemeAndReducedMotionAwareAssetUrl(asset);
-  let tmp2Result = tmp2(tmp3[11]);
-  navigation = tmp2Result.useNavigation();
-  const tmp = callback2();
+  const themeAndReducedMotionAwareAssetUrl = onClose(navigation[10]).useThemeAndReducedMotionAwareAssetUrl(asset);
+  let obj3 = onClose(navigation[10]);
+  navigation = onClose(navigation[11]).useNavigation();
+  const tmp2Result = onClose(navigation[11]);
   enabled = prePurchaseGiftingBadgeProgress(navigation[12]).useConfig({ location: "PremiumGiftSuccessActions" }).enabled;
-  tmp2Result = tmp2(tmp3[13]);
-  giftCodeURL = tmp2Result.getGiftCodeURL(giftCode);
+  const obj5 = prePurchaseGiftingBadgeProgress(navigation[12]);
+  giftCodeURL = onClose(navigation[13]).getGiftCodeURL(giftCode);
   const items1 = [enabled, prePurchaseGiftingBadgeProgress, navigation, onClose];
   const items2 = [giftCodeURL, enabled, prePurchaseGiftingBadgeProgress, navigation];
   const callback = enabled.useCallback(() => {
     if (enabled) {
       if (null != prePurchaseGiftingBadgeProgress) {
-        const obj = { currentProgress: null };
-        obj[0] = tmp;
-        navigation.navigate(onClose(navigation[14]).PremiumGiftScreens.GIFTING_BADGE, obj);
+        const obj = { currentProgress: tmp };
+        navigation.navigate(PremiumGiftModal.PremiumGiftScreens.GIFTING_BADGE, obj);
       }
     }
     onClose();
   }, items1);
   const items3 = [onClose];
   const callback1 = enabled.useCallback(() => {
-    let obj = onClose(navigation[15]);
-    obj = { url: giftCodeURL };
-    obj.showShareActionSheet(obj, closure_1_5.PREMIUM_GIFT_SUCCESS_MODAL);
+    showShareActionSheet.showShareActionSheet({ url: giftCodeURL }, AnalyticsSections.PREMIUM_GIFT_SUCCESS_MODAL);
     let tmp4 = enabled;
     if (enabled) {
       tmp4 = null != prePurchaseGiftingBadgeProgress;
     }
     if (tmp4) {
-      obj = { currentProgress: null };
-      obj[0] = prePurchaseGiftingBadgeProgress;
-      navigation.navigate(onClose(navigation[14]).PremiumGiftScreens.GIFTING_BADGE, obj);
+      const obj3 = { currentProgress: prePurchaseGiftingBadgeProgress };
+      navigation.navigate(PremiumGiftModal.PremiumGiftScreens.GIFTING_BADGE, obj3);
     }
   }, items2);
   let tmp16 = null != stateFromStores;
-  callback2 = enabled.useCallback(() => {
+  const callback2 = enabled.useCallback(() => {
     onClose();
-    let obj = onClose(navigation[16]);
-    obj = { analyticsSource: prePurchaseGiftingBadgeProgress(navigation[17]).PREMIUM_GIFT_SUCCESS_MODAL, analyticsLocations: null, screen: null };
-    const items = [prePurchaseGiftingBadgeProgress(navigation[17]).PREMIUM_GIFT_SUCCESS_MODAL];
-    obj[1] = items;
-    obj[2] = closure_1_6.ORBS;
-    const result = obj.openCollectiblesShopMobile(obj);
+    const obj2 = { analyticsSource: AnalyticsLocationDefault.PREMIUM_GIFT_SUCCESS_MODAL, analyticsLocations: null, screen: null };
+    const items = [AnalyticsLocationDefault.PREMIUM_GIFT_SUCCESS_MODAL];
+    obj2.analyticsLocations = items;
+    obj2.screen = constants.ORBS;
+    const result = CollectiblesActionCreators.openCollectiblesShopMobile(obj2);
   }, items3);
   if (tmp16) {
-    obj = { style: null, imageUrl: null, title: null, subtitle: null };
-    obj[0] = tmp.promoDetails;
-    obj[1] = themeAndReducedMotionAwareAssetUrl;
+    const obj4 = { style: tmp.promoDetails, imageUrl: themeAndReducedMotionAwareAssetUrl, title: null, subtitle: null };
     const intl = tmp2(tmp3[19]).intl;
-    obj[2] = intl.string(tmp9(tmp3[20])["ZME/HA"]);
+    obj4.title = intl.string(tmp9(tmp3[20])["ZME/HA"]);
     const intl2 = tmp2(tmp3[19]).intl;
-    obj[3] = intl2.string(tmp9(tmp3[20]).aMeOMj);
-    tmp16 = callback(tmp9(tmp3[18]), obj);
+    obj4.subtitle = intl2.string(tmp9(tmp3[20]).aMeOMj);
+    tmp16 = closure_7(tmp9(tmp3[18]), obj4);
     const tmp9Result = tmp9(tmp3[18]);
   }
   const items4 = [tmp16, , ];
   let tmp19 = null != giftCode;
   if (tmp19) {
-    obj = { variant: "primary", text: null, onPress: null };
+    const obj6 = { variant: "primary", text: null, onPress: null };
     const intl3 = tmp2(tmp3[19]).intl;
-    obj[1] = intl3.string(tmp2(tmp3[19]).t.RDE0Sc);
-    obj[2] = callback1;
-    tmp19 = callback(tmp2(tmp3[21]).Button, obj);
+    obj6.text = intl3.string(tmp2(tmp3[19]).t.RDE0Sc);
+    obj6.onPress = callback1;
+    tmp19 = closure_7(tmp2(tmp3[21]).Button, obj6);
   }
   items4[1] = tmp19;
   if (enabled) {
@@ -123,24 +118,23 @@ export default function PremiumGiftingGoGoSuccessActions(giftCode) {
       if (null == giftCode) {
         str2 = "primary";
       }
-      obj1 = { variant: null, text: null, onPress: null };
-      obj1[0] = str2;
+      const obj7 = { variant: str2, text: null, onPress: null };
       const intl5 = tmp2(tmp3[19]).intl;
-      obj1[1] = intl5.string(tmp2(tmp3[19]).t.cpT0Cq);
-      obj1[2] = callback;
-      let obj3 = obj1;
+      obj7.text = intl5.string(tmp2(tmp3[19]).t.cpT0Cq);
+      obj7.onPress = callback;
+      let obj9 = obj7;
     }
-    obj2 = { children: null };
-    items4[2] = callback(tmp22, obj3);
-    obj2[0] = items4;
-    return closure_9(closure_8, obj2);
+    const obj8 = { children: null };
+    items4[2] = closure_7(tmp22, obj9);
+    obj8.children = items4;
+    return closure_9(closure_8, obj8);
   }
   let str = "secondary";
   if (null == giftCode) {
     str = "primary";
   }
-  obj3 = { grow: true, variant: str, text: null, onPress: null };
+  obj9 = { grow: true, variant: str, text: null, onPress: null };
   const intl4 = tmp2(tmp3[19]).intl;
-  obj3[2] = intl4.string(onClose(navigation[19]).t.fYfGgK);
-  obj3[3] = callback2;
+  obj9.text = intl4.string(onClose(navigation[19]).t.fYfGgK);
+  obj9.onPress = callback2;
 };

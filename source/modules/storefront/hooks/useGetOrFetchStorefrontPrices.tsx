@@ -1,36 +1,34 @@
-// Module ID: 8789
-// Function ID: 8790
-// Name: useGetOrFetchStorefrontPricesForApplicationId
-// Dependencies: [19, 8790, 2]
+// Module ID: 8817
+// Function ID: 8818
+// Name: useGetOrFetchStorefrontPrices
+// Dependencies: [19, 8818, 2]
 // Exports: useGetOrFetchStorefrontPricesForApplicationId, useGetOrFetchStorefrontPricesForSkuIds
 
-// Module 8789 (useGetOrFetchStorefrontPricesForApplicationId)
-import closure_2 from "noop" /* 19 */;
+// Module 8817 (useGetOrFetchStorefrontPrices)
+import StorefrontActionCreators from "StorefrontActionCreators" /* 8818 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/storefront/hooks/useGetOrFetchStorefrontPrices.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/storefront/hooks/useGetOrFetchStorefrontPrices.tsx");
 
 export const useGetOrFetchStorefrontPricesForApplicationId = function useGetOrFetchStorefrontPricesForApplicationId(applicationId) {
   applicationId = applicationId.applicationId;
   const items = [applicationId];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (null != applicationId) {
-      let obj = applicationId(closure_1_1[1]);
-      obj = { applicationId: null };
-      obj[0] = tmp;
-      const storefrontPricesForApplicationId = obj.fetchStorefrontPricesForApplicationId(obj);
+      const obj2 = { applicationId: tmp };
+      const storefrontPricesForApplicationId = StorefrontActionCreators.fetchStorefrontPricesForApplicationId(obj2);
     }
   }, items);
 };
 export const useGetOrFetchStorefrontPricesForSkuIds = function useGetOrFetchStorefrontPricesForSkuIds(skuIds) {
   skuIds = skuIds.skuIds;
   const items = [skuIds];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (0 !== skuIds.length) {
-      let obj = skuIds(closure_1_1[1]);
-      obj = { skuIds: null };
-      obj[0] = tmp;
-      const storefrontPricesForSkuIds = obj.fetchStorefrontPricesForSkuIds(obj);
+      const obj2 = { skuIds: tmp };
+      const storefrontPricesForSkuIds = StorefrontActionCreators.fetchStorefrontPricesForSkuIds(obj2);
     }
   }, items);
 };

@@ -1,44 +1,30 @@
-// Module ID: 15912
-// Function ID: 15913
-// Name: toggle
-// Dependencies: [7975, 11473, 1114, 13125, 1935, 2]
+// Module ID: 15942
+// Function ID: 15943
+// Name: FriendRequestsNotesSetting
+// Dependencies: [7989, 11500, 1114, 13151, 1935, 2]
 
-// Module 15912 (toggle)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import useHideFriendRequestNotes from "useHideFriendRequestNotes" /* 13125 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15942 (FriendRequestsNotesSetting)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import HideFriendRequestNotesUtils from "HideFriendRequestNotesUtils" /* 13151 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-const toggle = createToggle.createToggle({
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.UVl5Hz);
+    const intl = util.intl;
+    return intl.string(util.t.UVl5Hz);
   },
-  parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: SettingsConstants.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue() {
-    return !useHideFriendRequestNotes.useHideFriendRequestNotes();
+    return !HideFriendRequestNotesUtils.useHideFriendRequestNotes();
   },
   onValueChange(arg0) {
-    const HideFriendRequestNotes = explicitContentFromProto.HideFriendRequestNotes;
+    const HideFriendRequestNotes = UserSettings.HideFriendRequestNotes;
     return HideFriendRequestNotes.updateSetting(!arg0);
   }
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.UVl5Hz);
-  },
-  parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  useValue() {
-    return !useHideFriendRequestNotes.useHideFriendRequestNotes();
-  },
-  onValueChange(arg0) {
-    const HideFriendRequestNotes = explicitContentFromProto.HideFriendRequestNotes;
-    return HideFriendRequestNotes.updateSetting(!arg0);
-  }
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/FriendRequestsNotesSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/FriendRequestsNotesSetting.tsx");
 
 export default toggle;

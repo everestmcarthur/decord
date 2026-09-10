@@ -1,21 +1,19 @@
-// Module ID: 13440
-// Function ID: 13441
+// Module ID: 13463
+// Function ID: 13464
 // Name: usePremiumPrimaryGradientColors
-// Dependencies: [4262, 576, 2]
+// Dependencies: [4275, 576, 2]
 // Exports: default
 
-// Module 13440 (usePremiumPrimaryGradientColors)
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 576 */;
-import map from "map" /* 4262 */;
+// Module 13463 (usePremiumPrimaryGradientColors)
+import nativeDefault from "native" /* 576 */;
+import useToken from "useToken" /* 4275 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/premium/native/usePremiumPrimaryGradientColors.tsx");
+const result = size.fileFinishedImporting("modules/premium/native/usePremiumPrimaryGradientColors.tsx");
 
 export default function usePremiumPrimaryGradientColors() {
-  const items = [map.useToken(ThemesDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT), , ];
-  const obj = map;
-  items[1] = map.useToken(ThemesDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT_2);
-  const obj2 = map;
-  items[2] = map.useToken(ThemesDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PINK_FOR_GRADIENT);
+  const items = [useToken.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT), , ];
+  items[1] = useToken.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT_2);
+  items[2] = useToken.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PINK_FOR_GRADIENT);
   return items;
 };

@@ -1,17 +1,17 @@
-// Module ID: 4562
-// Function ID: 4563
-// Name: CONFIG_NEVER_ANIMATE
-// Dependencies: [4296, 2]
+// Module ID: 4576
+// Function ID: 4577
+// Name: ReanimatedConstants
+// Dependencies: [4310, 2]
 
-// Module 4562 (CONFIG_NEVER_ANIMATE)
-import set from "set" /* 2 */;
-import _mod4296 from "module_4296" /* 4296 */;
+// Module 4576 (ReanimatedConstants)
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import size from "module_2" /* 2 */;
 
-let obj = { duration: 1, reduceMotion: _mod4296.ReduceMotion.Always };
-obj = {};
+const obj = { duration: 1, reduceMotion: ReanimatedRexport.ReduceMotion.Always };
+const obj2 = {};
 const merged = Object.assign(obj);
-obj.reduceMotion = undefined;
-const result = set.fileFinishedImporting("design/animation/reanimated/ReanimatedConstants.tsx");
+obj2.reduceMotion = undefined;
+const result = size.fileFinishedImporting("design/animation/reanimated/ReanimatedConstants.tsx");
 
 export const CONFIG_NEVER_ANIMATE = obj;
-export const CONFIG_NEVER_ANIMATE_TIMING = obj;
+export const CONFIG_NEVER_ANIMATE_TIMING = obj2;

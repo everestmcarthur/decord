@@ -1,13 +1,14 @@
-// Module ID: 5462
-// Function ID: 5463
-// Name: initialize
+// Module ID: 5476
+// Function ID: 5477
+// Name: TopEmojiStore
 // Dependencies: [504, 573, 2]
 
-// Module 5462 (initialize)
+// Module 5476 (TopEmojiStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
-let obj = { topEmojisByGuildId: {} };
+const obj = { topEmojisByGuildId: {} };
+let closure_1 = obj;
 let closure_2 = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class TopEmojiStore extends PersistedStore {
@@ -21,17 +22,17 @@ prototype["initialize"] = function initialize(arg0) {
   closure_1 = tmp;
 };
 prototype["getState"] = function getState() {
-  return obj;
+  return closure_1;
 };
 prototype["getTopEmojiIdsByGuildId"] = function getTopEmojiIdsByGuildId(guildId) {
-  return obj.topEmojisByGuildId[guildId];
+  return closure_1.topEmojisByGuildId[guildId];
 };
 prototype["getIsFetching"] = function getIsFetching(arg0) {
-  return table[arg0];
+  return closure_2[arg0];
 };
 TopEmojiStore.displayName = "TopEmojiStore";
 TopEmojiStore.persistKey = "TopEmojiStore";
-obj = {
+const topEmojiStore = new TopEmojiStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
     closure_1 = obj;
     closure_2 = {};
@@ -41,11 +42,11 @@ obj = {
   },
   TOP_EMOJIS_FETCH_SUCCESS: function handleTopEmojisLoaded(arg0) {
     ({ guildId, topEmojisMetadata } = arg0);
-    obj.topEmojisByGuildId[guildId] = topEmojisMetadata.map((emojiId) => emojiId.emojiId);
+    closure_1.topEmojisByGuildId[guildId] = topEmojisMetadata.map((emojiId) => emojiId.emojiId);
     closure_2[guildId] = false;
   }
-};
-const topEmojiStore = new TopEmojiStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/emojis/top_emojis/TopEmojiStore.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/emojis/top_emojis/TopEmojiStore.tsx");
 
 export default topEmojiStore;

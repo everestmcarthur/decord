@@ -1,21 +1,24 @@
-// Module ID: 16562
-// Function ID: 16563
+// Module ID: 16593
+// Function ID: 16594
 // Name: useResourceChannels
-// Dependencies: [1957, 4747, 563, 2]
+// Dependencies: [1957, 4761, 563, 2]
 // Exports: default
 
-// Module 16562 (useResourceChannels)
-import closure_2 from "ensureGuildLoaded" /* 1957 */;
-import closure_3 from "handleSettingsLoadSuccess" /* 4747 */;
+// Module 16593 (useResourceChannels)
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4761 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/useResourceChannels.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_onboarding_home/useResourceChannels.tsx");
 
 export default function useResourceChannels(arg0) {
-  const _require = arg0;
-  const items = [closure_3, closure_2];
-  return _require(563).useStateFromStoresArray(items, () => {
-    const resourceChannels = closure_1_3.getResourceChannels(closure_0);
+  _require = arg0;
+  const items = [GuildOnboardingHomeSettingsStore, ChannelStore];
+  return require("useStateFromStores").useStateFromStoresArray(items, () => {
+    const resourceChannels = GuildOnboardingHomeSettingsStore.getResourceChannels(closure_0);
     return resourceChannels.filter((channelId) => null != channel.getChannel(channelId.channelId));
   });
 };

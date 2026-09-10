@@ -1,24 +1,21 @@
-// Module ID: 13450
-// Function ID: 13451
-// Name: apexExperiment
+// Module ID: 13473
+// Function ID: 13474
+// Name: PremiumReferralIncentivesExperiment
 // Dependencies: [1433, 2]
 // Exports: usePremiumReferralIncentivesVariant
 
-// Module 13450 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 13473 (PremiumReferralIncentivesExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-let obj = { ORBS: "orbs", DISCOUNT: "discount" };
-obj = { referralRewardType: obj.ORBS, useAltReferralCardArt: false };
-obj = { referralRewardType: obj.DISCOUNT, useAltReferralCardArt: false };
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-07-premium-referral-incentives", kind: "user", defaultConfig: { referralRewardType: null, useAltReferralCardArt: false }, variations: { 0: { referralRewardType: null, useAltReferralCardArt: false }, 1: obj, 2: obj, 3: { referralRewardType: obj.ORBS, useAltReferralCardArt: true }, 4: { referralRewardType: obj.DISCOUNT, useAltReferralCardArt: true } } });
-const result = set.fileFinishedImporting("modules/premium/experiments/PremiumReferralIncentivesExperiment.tsx");
+const obj = { ORBS: "orbs", DISCOUNT: "discount" };
+const obj2 = { name: "2026-07-premium-referral-incentives", kind: "user", defaultConfig: { referralRewardType: null, useAltReferralCardArt: false }, variations: { 0: { referralRewardType: null, useAltReferralCardArt: false }, 1: { referralRewardType: obj.ORBS, useAltReferralCardArt: false }, 2: { referralRewardType: obj.DISCOUNT, useAltReferralCardArt: false }, 3: { referralRewardType: obj.ORBS, useAltReferralCardArt: true }, 4: { referralRewardType: obj.DISCOUNT, useAltReferralCardArt: true } } };
+const apexExperiment = ApexExperiment.createApexExperiment(obj2);
+const result = size.fileFinishedImporting("modules/premium/experiments/PremiumReferralIncentivesExperiment.tsx");
 
 export default apexExperiment;
 export const ReferralRewardType = obj;
 export const usePremiumReferralIncentivesVariant = function usePremiumReferralIncentivesVariant(location) {
-  let obj = { location };
-  const config = apexExperiment.useConfig(obj);
-  obj = { referralRewardType: config.referralRewardType, useAltReferralCardArt: config.useAltReferralCardArt, isInReferralIncentivesTreatment: null != config.referralRewardType };
-  return obj;
+  const config = apexExperiment.useConfig({ location });
+  return { referralRewardType: config.referralRewardType, useAltReferralCardArt: config.useAltReferralCardArt, isInReferralIncentivesTreatment: null != config.referralRewardType };
 };

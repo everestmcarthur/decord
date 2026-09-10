@@ -1,104 +1,98 @@
-// Module ID: 13353
-// Function ID: 13354
+// Module ID: 13376
+// Function ID: 13377
 // Name: BuyNitroMarketing
-// Dependencies: [19, 17, 1373, 21, 4560, 576, 13354, 1483, 13355, 13362, 13360, 13363, 7162, 13356, 10747, 13389, 13396, 13397, 8879, 13399, 13402, 13407, 13411, 13412, 13413, 2]
+// Dependencies: [19, 17, 1373, 21, 4574, 576, 13377, 1483, 13378, 13385, 13383, 13386, 7176, 13379, 10774, 13412, 13419, 13420, 8906, 13422, 13425, 13430, 13434, 13435, 13436, 2]
 // Exports: default
 
-// Module 13353 (BuyNitroMarketing)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { PremiumTypes } from "GuildFeatures" /* 1373 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13376 (BuyNitroMarketing)
+import nativeDefault from "native" /* 576 */;
+import BuyNitroPerkDetails from "BuyNitroPerkDetails" /* 13412 */;
+import BuyNitroSectionHeaderDefault from "BuyNitroSectionHeader" /* 13419 */;
+import BuyNitroPerkDefault from "BuyNitroPerk" /* 13420 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
-createCacheKey = { container: null, list: null, listContent: null, listHeader: null, sectionHeader: null, disabled: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1 };
-createCacheKey[2] = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_24 };
-let obj1 = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_24 };
-createCacheKey[3] = { gap: ThemesDefault.space.PX_24 };
-let obj2 = { gap: ThemesDefault.space.PX_24 };
-createCacheKey[4] = { marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_16 };
-createCacheKey[5] = { pointerEvents: "none" };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_16 };
-let result = require("set").fileFinishedImporting("modules/premium_marketing/native/BuyNitroMarketing.tsx");
+require = fn;
+const View = fn(17).View;
+const PremiumTypes = fn(1373).PremiumTypes;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, list: { flex: 1 }, listContent: null, listHeader: null, sectionHeader: null, disabled: null };
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+obj2.listContent = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24 };
+let obj4 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24 };
+obj2.listHeader = { gap: nativeDefault.space.PX_24 };
+let obj5 = { gap: nativeDefault.space.PX_24 };
+obj2.sectionHeader = { marginTop: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_16 };
+obj2.disabled = { pointerEvents: "none" };
+let closure_9 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium_marketing/native/BuyNitroMarketing.tsx");
 
 export default function BuyNitroMarketing(onPaymentDismiss) {
   ({ onClose, applicationId } = onPaymentDismiss);
   ({ initialLoadCompleted, initialTier, onPaymentSuccess } = onPaymentDismiss);
   onPaymentDismiss = onPaymentDismiss.onPaymentDismiss;
-  let React;
-  let nativeStackNavigation;
   let buyNitroPlanSelection;
-  closure_6 = undefined;
+  let ref;
   let onSelectNitroTier;
   let locationStackFromLocationContext;
-  let callback;
-  const tmp = callback();
-  React = tmp;
+  let onOpenDetails;
+  const tmp = onOpenDetails();
+  noop = tmp;
+  const youBarSettingsCustomHeaderPaddingTop = applicationId(onPaymentDismiss[6]).useYouBarSettingsCustomHeaderPaddingTop();
   let obj = applicationId(onPaymentDismiss[6]);
-  const youBarSettingsCustomHeaderPaddingTop = obj.useYouBarSettingsCustomHeaderPaddingTop();
-  obj1 = applicationId(onPaymentDismiss[7]);
-  nativeStackNavigation = obj1.useNativeStackNavigation();
-  let obj2 = applicationId(onPaymentDismiss[8]);
-  const buyNitroMarketingLifecycleHooks = obj2.useBuyNitroMarketingLifecycleHooks(nativeStackNavigation, initialLoadCompleted);
-  let obj3 = applicationId(onPaymentDismiss[9]);
+  const nativeStackNavigation = applicationId(onPaymentDismiss[7]).useNativeStackNavigation();
+  let obj2 = applicationId(onPaymentDismiss[7]);
+  const buyNitroMarketingLifecycleHooks = applicationId(onPaymentDismiss[8]).useBuyNitroMarketingLifecycleHooks(nativeStackNavigation, initialLoadCompleted);
+  const obj3 = applicationId(onPaymentDismiss[8]);
   let tmp7;
   if (null != initialTier) {
-    obj = { tier: null, productId: "a" };
-    obj[0] = initialTier;
-    tmp7 = obj;
+    const obj5 = { tier: initialTier, productId: "a" };
+    tmp7 = obj5;
   }
-  buyNitroPlanSelection = obj3.useBuyNitroPlanSelection(tmp7);
-  closure_6 = React.useRef(buyNitroPlanSelection);
+  buyNitroPlanSelection = applicationId(onPaymentDismiss[9]).useBuyNitroPlanSelection(tmp7);
+  ref = noop.useRef(buyNitroPlanSelection);
   const items = [buyNitroPlanSelection];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     closure_6.current = buyNitroPlanSelection;
   }, items);
-  let tmp2Result = tmp2(tmp3[10]);
-  const isBuyNitroPurchaseBlocked = tmp2Result.useIsBuyNitroPurchaseBlocked();
+  const obj4 = applicationId(onPaymentDismiss[9]);
+  const isBuyNitroPurchaseBlocked = applicationId(onPaymentDismiss[10]).useIsBuyNitroPurchaseBlocked();
   const tmp12 = onPaymentSuccess(onPaymentDismiss[11])(buyNitroPlanSelection);
   onSelectNitroTier = tmp12.onSelectNitroTier;
   ({ onScroll, listData, listRef } = tmp12);
-  tmp2Result = tmp2(tmp3[12]);
-  locationStackFromLocationContext = tmp2Result.useLocationStackFromLocationContext();
+  const tmp2Result = applicationId(onPaymentDismiss[10]);
+  locationStackFromLocationContext = applicationId(onPaymentDismiss[12]).useLocationStackFromLocationContext();
+  const tmp2Result3 = applicationId(onPaymentDismiss[12]);
   const promotionMarketingComponent = applicationId(onPaymentDismiss[13]).usePromotionMarketingComponent(tmp2(tmp3[14]).MarketingComponentType.MARKETING_PAGE_BANNER);
   const items1 = [locationStackFromLocationContext, applicationId, onPaymentSuccess, onPaymentDismiss];
-  callback = React.useCallback((perk) => {
-    let obj = applicationId(onPaymentDismiss[15]);
-    obj = { selectedTier: ref.current.selection.tier, selectedProductId: ref.current.selection.productId, analyticsLocations: locationStackFromLocationContext, applicationId, onPaymentSuccess, onPaymentDismiss };
-    const result = obj.openBuyNitroPerkDetails(perk, obj);
+  onOpenDetails = noop.useCallback((perk) => {
+    const result = BuyNitroPerkDetails.openBuyNitroPerkDetails(perk, { selectedTier: ref.current.selection.tier, selectedProductId: ref.current.selection.productId, analyticsLocations: locationStackFromLocationContext, applicationId, onPaymentSuccess, onPaymentDismiss });
   }, items1);
-  const items2 = [buyNitroPlanSelection.selection.tier, tmp.sectionHeader, callback, onSelectNitroTier];
-  obj = { style: tmp.container, children: null };
-  obj1 = { style: tmp.list, children: null };
-  const callback1 = React.useCallback((item) => {
+  const items2 = [buyNitroPlanSelection.selection.tier, tmp.sectionHeader, onOpenDetails, onSelectNitroTier];
+  const obj6 = { style: tmp.container, children: null };
+  const obj7 = { style: tmp.list, children: null };
+  const callback1 = noop.useCallback((item) => {
     item = item.item;
     if ("section-header" === item.kind) {
-      let obj = { style: null, title: null, titleRequiresNitroHack: null, onPress: null };
-      obj[0] = sectionHeader.sectionHeader;
-      obj[1] = item.title;
-      obj[2] = true === item.highlightNitro;
-      obj[3] = function onPress() {
-        return callback(closure_1_5.TIER_2);
+      const obj2 = {
+        style: sectionHeader.sectionHeader,
+        title: item.title,
+        titleRequiresNitroHack: true === item.highlightNitro,
+        onPress() {
+            return onSelectNitroTier(buyNitroPlanSelection.TIER_2);
+          }
       };
-      let tmp6 = ref(onPaymentSuccess(onPaymentDismiss[16]), obj);
+      let tmp6 = timestampProducer(BuyNitroSectionHeaderDefault, obj2);
     } else {
-      obj = { perk: null, selectedTier: null, onOpenDetails: null, start: null, end: null };
-      obj[0] = item.perk;
-      obj[1] = buyNitroPlanSelection.selection.tier;
-      obj[2] = callback;
-      ({ start: obj[3], end: obj[4] } = item);
-      tmp6 = ref(onPaymentSuccess(onPaymentDismiss[17]), obj);
+      const obj = { perk: item.perk, selectedTier: buyNitroPlanSelection.selection.tier, onOpenDetails, start: null, end: null };
+      ({ start: obj.start, end: obj.end } = item);
+      tmp6 = timestampProducer(BuyNitroPerkDefault, obj);
     }
     return tmp6;
   }, items2);
-  obj2 = {
+  const obj8 = {
     ref: listRef,
     contentContainerStyle: tmp.listContent,
     data: listData,
@@ -119,16 +113,16 @@ export default function BuyNitroMarketing(onPaymentDismiss) {
     scrollEventThrottle: 16,
     showsVerticalScrollIndicator: false
   };
-  obj3 = { topInset: youBarSettingsCustomHeaderPaddingTop, onBackPress: null, selectedTier: null };
+  const obj9 = { topInset: youBarSettingsCustomHeaderPaddingTop, onBackPress: null, selectedTier: null };
   const tmp20 = locationStackFromLocationContext;
-  const tmp2Result1 = applicationId(onPaymentDismiss[13]);
+  const tmp2Result4 = applicationId(onPaymentDismiss[13]);
   if (onClose == null) {
     onClose = () => nativeStackNavigation.pop();
   }
-  obj3[1] = onClose;
-  obj3[2] = buyNitroPlanSelection.selection.tier;
-  const items3 = [closure_6(onPaymentSuccess(onPaymentDismiss[19]), obj3), ];
-  const obj4 = { style: tmp.listHeader, children: null };
+  obj9.onBackPress = onClose;
+  obj9.selectedTier = buyNitroPlanSelection.selection.tier;
+  const items3 = [ref(onPaymentSuccess(onPaymentDismiss[19]), obj9), ];
+  const obj10 = { style: tmp.listHeader, children: null };
   let tmp19Result = initialLoadCompleted;
   if (initialLoadCompleted) {
     let oneofKind;
@@ -138,32 +132,31 @@ export default function BuyNitroMarketing(onPaymentDismiss) {
     tmp19Result = "marketingPageBanner" === oneofKind;
   }
   if (tmp19Result) {
-    const obj5 = { bannerFields: null, componentId: null, promotionId: null, analyticsPage: "Marketing Page Banner Tile", style: null, onPaymentSuccess: null, onPaymentDismiss: null };
-    obj5[0] = promotionMarketingComponent.properties.properties.marketingPageBanner;
-    ({ id: obj14[1], promotionId: obj14[2] } = promotionMarketingComponent);
+    const obj11 = { bannerFields: promotionMarketingComponent.properties.properties.marketingPageBanner, componentId: null, promotionId: null, analyticsPage: "Marketing Page Banner Tile", style: null, onPaymentSuccess: null, onPaymentDismiss: null };
+    ({ id: obj14.componentId, promotionId: obj14.promotionId } = promotionMarketingComponent);
     let disabled;
     if (isBuyNitroPurchaseBlocked) {
       disabled = tmp.disabled;
     }
-    obj5[4] = disabled;
-    obj5[5] = onPaymentSuccess;
-    obj5[6] = onPaymentDismiss;
-    tmp19Result = tmp19(tmp11(tmp3[20]), obj5);
+    obj11.style = disabled;
+    obj11.onPaymentSuccess = onPaymentSuccess;
+    obj11.onPaymentDismiss = onPaymentDismiss;
+    tmp19Result = tmp19(tmp11(tmp3[20]), obj11);
     const tmp11Result = tmp11(tmp3[20]);
   }
-  const obj6 = { children: null };
-  const items4 = [tmp19Result, closure_6(onPaymentSuccess(onPaymentDismiss[21]), { planSelection: buyNitroPlanSelection }), closure_6(onPaymentSuccess(onPaymentDismiss[22]), {})];
-  obj4[1] = items4;
-  items3[1] = onSelectNitroTier(nativeStackNavigation, obj4);
-  obj6[0] = items3;
-  obj2[6] = onSelectNitroTier(tmp20, obj6);
-  obj2[7] = onScroll;
-  obj1[1] = closure_6(applicationId(onPaymentDismiss[18]).FlashList, obj2);
-  const items5 = [closure_6(nativeStackNavigation, obj1), closure_6(onPaymentSuccess(onPaymentDismiss[23]), { planSelection: buyNitroPlanSelection, applicationId, onPaymentSuccess, onPaymentDismiss }), ];
+  const obj12 = { children: null };
+  const items4 = [tmp19Result, ref(onPaymentSuccess(onPaymentDismiss[21]), { planSelection: buyNitroPlanSelection }), ref(onPaymentSuccess(onPaymentDismiss[22]), {})];
+  obj10.children = items4;
+  items3[1] = onSelectNitroTier(nativeStackNavigation, obj10);
+  obj12.children = items3;
+  obj8.ListHeaderComponent = onSelectNitroTier(tmp20, obj12);
+  obj8.onScroll = onScroll;
+  obj7.children = ref(applicationId(onPaymentDismiss[18]).FlashList, obj8);
+  const items5 = [ref(nativeStackNavigation, obj7), ref(onPaymentSuccess(onPaymentDismiss[23]), { planSelection: buyNitroPlanSelection, applicationId, onPaymentSuccess, onPaymentDismiss }), ];
   if (initialLoadCompleted) {
     initialLoadCompleted = tmp19(tmp2(tmp3[24]).BuyNitroTriggerPointEffect, {});
   }
   items5[2] = initialLoadCompleted;
-  obj[1] = items5;
-  return onSelectNitroTier(nativeStackNavigation, obj);
+  obj6.children = items5;
+  return onSelectNitroTier(nativeStackNavigation, obj6);
 };

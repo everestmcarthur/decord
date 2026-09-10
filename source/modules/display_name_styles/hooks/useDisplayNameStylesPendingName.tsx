@@ -1,26 +1,28 @@
-// Module ID: 15338
-// Function ID: 15339
+// Module ID: 15367
+// Function ID: 15368
 // Name: useDisplayNameStylesPendingName
-// Dependencies: [8160, 2021, 4404, 504, 2]
+// Dependencies: [8186, 2021, 4418, 504, 2]
 // Exports: useDisplayNameStylesPendingName
 
-// Module 15338 (useDisplayNameStylesPendingName)
-import nameFromUserDefault from "nameFromUser" /* 4404 */;
-import closure_3 from "handleFormOpen" /* 8160 */;
-import closure_4 from "trackCommunicationDisabled" /* 2021 */;
+// Module 15367 (useDisplayNameStylesPendingName)
+import UserUtilsDefault from "UserUtils" /* 4418 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8186 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesPendingName.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesPendingName.tsx");
 
 export const useDisplayNameStylesPendingName = function useDisplayNameStylesPendingName(stateFromStores, guildId) {
-  const _require = stateFromStores;
+  _require = stateFromStores;
   importDefault = guildId;
-  const name = nameFromUserDefault.useName(stateFromStores);
-  const obj = nameFromUserDefault;
-  const items = [closure_3, closure_4];
+  const name = UserUtilsDefault.useName(stateFromStores);
+  const items = [UserProfileSettingsStore, GuildMemberStore];
   const items1 = [guildId, stateFromStores];
-  let str = _require(504).useStateFromStores(items, () => {
-    const pendingChanges = closure_1_3.getPendingChanges(closure_1);
+  let str = require("initialize").useStateFromStores(items, () => {
+    const pendingChanges = UserProfileSettingsStore.getPendingChanges(closure_1);
     if (null != closure_1) {
       let pendingNickname = pendingChanges.pendingNickname;
       if (pendingNickname == null) {
@@ -28,7 +30,7 @@ export const useDisplayNameStylesPendingName = function useDisplayNameStylesPend
         if (stateFromStores != null) {
           id = stateFromStores.id;
         }
-        pendingNickname = closure_1_4.getNick(closure_1, id);
+        pendingNickname = GuildMemberStore.getNick(closure_1, id);
       }
       let pendingGlobalName = pendingNickname;
     } else {

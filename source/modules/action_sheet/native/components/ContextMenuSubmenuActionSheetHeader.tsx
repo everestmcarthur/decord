@@ -1,34 +1,34 @@
-// Module ID: 11733
-// Function ID: 11734
+// Module ID: 11759
+// Function ID: 11760
 // Name: ContextMenuSubmenuActionSheetHeader
-// Dependencies: [19, 17, 21, 4560, 9723, 1114, 2]
+// Dependencies: [19, 17, 21, 4574, 9750, 1114, 2]
 // Exports: default
 
-// Module 11733 (ContextMenuSubmenuActionSheetHeader)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import ActionSheetHeaderPressableText from "ActionSheetHeaderPressableText" /* 9723 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11759 (ContextMenuSubmenuActionSheetHeader)
+import util from "util" /* 1114 */;
+import ActionSheetHeaderPressableText from "ActionSheetHeaderPressableText" /* 9750 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-let closure_4 = createCacheKey.createStyles({ headerContainer: { paddingVertical: 12, paddingHorizontal: 16, alignItems: "flex-start" } });
-const result = require("set").fileFinishedImporting("modules/action_sheet/native/components/ContextMenuSubmenuActionSheetHeader.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_4 = createStyles.createStyles({ headerContainer: { paddingVertical: 12, paddingHorizontal: 16, alignItems: "flex-start" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/action_sheet/native/components/ContextMenuSubmenuActionSheetHeader.tsx");
 
 export default function ContextMenuSubmenuActionSheetHeader(onBack) {
   let fn = onBack.onBack;
-  let obj = { style: callback().headerContainer, children: null };
-  obj = { label: null, onPress: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["13/7kX"]);
+  const obj = { style: closure_4().headerContainer, children: null };
+  const obj2 = { label: null, onPress: null };
+  const intl = util.intl;
+  obj2.label = intl.string(util.t["13/7kX"]);
   if (fn == null) {
     fn = () => {
 
     };
   }
-  obj[1] = fn;
-  obj[1] = jsx(ActionSheetHeaderPressableText.ActionSheetHeaderPressableText, { label: null, onPress: null });
-  return <View label={null} onPress={null} />;
+  obj2.onPress = fn;
+  obj.children = jsx(ActionSheetHeaderPressableText.ActionSheetHeaderPressableText, { label: null, onPress: null });
+  return <View style={closure_4().headerContainer}>{null}</View>;
 };

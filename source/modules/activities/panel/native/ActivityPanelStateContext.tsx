@@ -1,16 +1,15 @@
-// Module ID: 17018
-// Function ID: 17019
-// Name: useActivityWebViewLock
-// Dependencies: [19, 9510, 7074, 2]
+// Module ID: 17049
+// Function ID: 17050
+// Name: ActivityPanelStateContext
+// Dependencies: [19, 9537, 7088, 2]
 
-// Module 17018 (useActivityWebViewLock)
-import createFakeSharedValue from "createFakeSharedValue" /* 7074 */;
-import importAllResult from "noop" /* 19 */;
+// Module 17049 (ActivityPanelStateContext)
+import noop from "module_19" /* 19 */;
 
 const obj = {
-  mode: require("ActivityPanelModes").ActivityPanelModes.PANEL,
+  mode: fn(9537).ActivityPanelModes.PANEL,
   setMode() {
-    error = new Error("ActivityPanelStateContextType.Provider.setMode: not called within a context provider");
+    const error = new Error("ActivityPanelStateContextType.Provider.setMode: not called within a context provider");
     throw error;
   },
   wrapperDimensions: { width: 9, height: 16, isLandscape: false, isWindowLandscape: false },
@@ -19,14 +18,18 @@ const obj = {
   wrapperOffset: null,
   useActivityWebViewLock: null
 };
-obj[3] = createFakeSharedValue.createFakeSharedValue({ x: -1, y: -1 });
-obj[4] = createFakeSharedValue.createFakeSharedValue({ top: 0, bottom: 0 });
-obj[5] = createFakeSharedValue.createFakeSharedValue({ x: 0, y: 0, gestureActive: false });
-obj[6] = function useActivityWebViewLock() {
+let ReanimatedHelperTypes = fn(7088);
+obj.pipState = ReanimatedHelperTypes.createFakeSharedValue({ x: -1, y: -1 });
+ReanimatedHelperTypes = fn(7088);
+obj.pipAvoidanceSpecs = ReanimatedHelperTypes.createFakeSharedValue({ top: 0, bottom: 0 });
+ReanimatedHelperTypes = fn(7088);
+obj.wrapperOffset = ReanimatedHelperTypes.createFakeSharedValue({ x: 0, y: 0, gestureActive: false });
+obj.useActivityWebViewLock = function useActivityWebViewLock() {
   return true;
 };
-const context = importAllResult.createContext(obj);
-const result = require("set").fileFinishedImporting("modules/activities/panel/native/ActivityPanelStateContext.tsx");
+const context = noop.createContext(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/panel/native/ActivityPanelStateContext.tsx");
 
 export default context;
 export const activityPanelStateContextDefault = obj;

@@ -1,18 +1,15 @@
-// Module ID: 14094
-// Function ID: 14095
+// Module ID: 14117
+// Function ID: 14118
 // Name: GradientBorder
-// Dependencies: [19, 17, 1074, 21, 4745, 576, 4987, 2]
+// Dependencies: [19, 17, 1074, 21, 4759, 576, 5001, 2]
 
-// Module 14094 (GradientBorder)
-import ThemesDefault from "Themes" /* 576 */;
-import t from "t" /* 4745 */;
-import LinearGradientDefault from "LinearGradient" /* 4987 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 14117 (GradientBorder)
+import nativeDefault from "native" /* 576 */;
+import _mod4759 from "module_4759" /* 4759 */;
+import LinearGradientDefault from "LinearGradient" /* 5001 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 class GradientBorder {
   constructor(arg0) {
     ({ children, borderWidth } = global);
@@ -25,14 +22,14 @@ class GradientBorder {
       tmp = closure_1;
       tmp2 = closure_2;
       num = 1;
-      borderRadius = require("Themes").radii.sm + 1;
+      borderRadius = closure_1(closure_2[5]).radii.sm + 1;
     }
-    merged = Object.assign(global, Object.create(null));
+    merged = Object.assign(global, Object.assign({ children: 0, direction: 0, style: 0, borderWidth: 0, borderRadius: 0 }));
     tmp4 = closure_2;
-    str = require("t");
+    str = closure_0(closure_2[4]);
     match = str.match(direction);
-    withResult = match.with(closure_8.HORIZONTAL, () => closure_5);
-    withResult1 = withResult.with(closure_8.VERTICAL, () => closure_6);
+    withResult = match.with(closure_8.HORIZONTAL, () => closure_1_5);
+    withResult1 = withResult.with(closure_8.VERTICAL, () => closure_1_6);
     withResult2 = withResult1.with(closure_8.DIAGONAL, () => ({ START: { x: 0, y: 0 }, END: { x: 1, y: 1 } }));
     withResult3 = withResult2.with(closure_8.ANTI_DIAGONAL, () => ({ START: { x: 0, y: 1 }, END: { x: 1, y: 0 } }));
     exhaustiveResult = withResult3.exhaustive();
@@ -43,19 +40,19 @@ class GradientBorder {
       if (closure_3.isValidElement(children)) {
         tmp9 = jsx;
         tmp10 = closure_1;
-        obj = { start: null, end: null, style: null };
-        obj[0] = tmp6;
-        obj[1] = tmp7;
+        obj1 = { start: null, end: null, style: null };
+        obj1.start = tmp6;
+        obj1.end = tmp7;
         items = [, ];
         items[0] = style;
-        obj1 = { borderRadius: null, padding: null };
-        obj1[0] = borderRadius;
-        obj1[1] = borderWidth;
-        items[1] = obj1;
-        obj[2] = items;
-        tmp12 = obj;
+        obj13 = { borderRadius: null, padding: null };
+        obj13.borderRadius = borderRadius;
+        obj13.padding = borderWidth;
+        items[1] = obj13;
+        obj1.style = items;
+        tmp12 = obj1;
         tmp13 = merged;
-        tmp11 = require("LinearGradient");
+        tmp11 = closure_1(tmp4[6]);
         merged1 = Object.assign(merged);
         cloneElementResult = null;
         if (null != children) {
@@ -65,37 +62,41 @@ class GradientBorder {
             if (children.type === View) {
               Children = obj6.Children;
               onlyResult = Children.only(children);
-              obj2 = {};
-              tmp18 = obj2;
+              obj14 = {};
+              tmp18 = obj14;
               merged2 = Object.assign(onlyResult.props);
-              obj3 = {};
-              tmp20 = obj3;
+              obj15 = {};
+              tmp20 = obj15;
               merged3 = Object.assign(onlyResult.props.style);
-              obj3.borderRadius = borderRadius - borderWidth;
+              obj15.borderRadius = borderRadius - borderWidth;
               str2 = "hidden";
-              obj3.overflow = "hidden";
-              obj2.style = obj3;
-              cloneElementResult = obj6.cloneElement(onlyResult, obj2);
+              obj15.overflow = "hidden";
+              obj14.style = obj15;
+              cloneElementResult = obj6.cloneElement(onlyResult, obj14);
             }
           }
-          obj4 = { style: null, children: null };
-          obj5 = { borderRadius: null };
+          obj16 = { style: null, children: null };
+          obj17 = { borderRadius: null };
           borderRadius = borderRadius - borderWidth;
-          obj5[0] = borderRadius;
-          obj4[0] = obj5;
-          obj4[1] = children;
-          cloneElementResult = tmp9(tmp16, obj4);
+          obj17.borderRadius = borderRadius;
+          obj16.style = obj17;
+          obj16.children = children;
+          cloneElementResult = tmp9(tmp16, obj16);
         }
-        obj.children = cloneElementResult;
-        tmp9Result = tmp9(tmp11, obj);
+        obj1.children = cloneElementResult;
+        tmp9Result = tmp9(tmp11, obj1);
       }
     }
     return tmp8;
   }
 }
-({ HorizontalGradient: c5, VerticalGradient: closure_6 } = ME);
-let obj = { HORIZONTAL: "horizontal", VERTICAL: "vertical", DIAGONAL: "diagonal", ANTI_DIAGONAL: "anti-diagonal" };
-GradientBorder.Direction = obj;
-const result = require("set").fileFinishedImporting("design/void/GradientBorder/native/GradientBorder.tsx");
+const View = fn(17).View;
+const Constants = fn(1074);
+({ HorizontalGradient: hasOwnProperty, VerticalGradient: metroRequire } = Constants);
+const jsx = fn(21).jsx;
+const Direction = { HORIZONTAL: "horizontal", VERTICAL: "vertical", DIAGONAL: "diagonal", ANTI_DIAGONAL: "anti-diagonal" };
+GradientBorder.Direction = Direction;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/GradientBorder/native/GradientBorder.tsx");
 
 export default GradientBorder;

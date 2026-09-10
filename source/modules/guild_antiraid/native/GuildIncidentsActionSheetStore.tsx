@@ -1,38 +1,52 @@
-// Module ID: 11835
-// Function ID: 11836
-// Name: useGuildIncidentsActionSheetStore
-// Dependencies: [8016, 560, 1249, 2]
+// Module ID: 11861
+// Function ID: 11862
+// Name: GuildIncidentsActionSheetStore
+// Dependencies: [8030, 560, 1249, 2]
 // Exports: resetGuildIncidentsActionSheetStore, setInitialTime, setPauseDms, setPauseInvites, setTime
 
-// Module 11835 (useGuildIncidentsActionSheetStore)
-import set from "set" /* 2 */;
-import batchUpdates from "batchUpdates" /* 1249 */;
-import GUILD_REPORT_RAID_MOBILE_KEY from "GUILD_REPORT_RAID_MOBILE_KEY" /* 8016 */;
-import keys from "keys" /* 560 */;
+// Module 11861 (GuildIncidentsActionSheetStore)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import GuildAntiRaidConstants from "GuildAntiRaidConstants" /* 8030 */;
+import module_560 from "module_560" /* 560 */;
+import size from "module_2" /* 2 */;
 
-const DEFAULT_LOCKDOWN_DURATION = GUILD_REPORT_RAID_MOBILE_KEY.DEFAULT_LOCKDOWN_DURATION;
-const obj = keys.create(() => ({ time: DEFAULT_LOCKDOWN_DURATION, pauseInvites: true, pauseDms: true, hasTimeChanges: false }));
-const result = set.fileFinishedImporting("modules/guild_antiraid/native/GuildIncidentsActionSheetStore.tsx");
+const require = globalThis.__r;
 
-export const useGuildIncidentsActionSheetStore = obj;
-export const setTime = function setTime(arg0) {
-  const _require = arg0;
-  _require(1249).batchUpdates(() => closure_1_3.setState({ time: closure_0, hasTimeChanges: true }));
+const DEFAULT_LOCKDOWN_DURATION = GuildAntiRaidConstants.DEFAULT_LOCKDOWN_DURATION;
+const useGuildIncidentsActionSheetStore = module_560.create(() => ({ time: DEFAULT_LOCKDOWN_DURATION, pauseInvites: true, pauseDms: true, hasTimeChanges: false }));
+const result = size.fileFinishedImporting("modules/guild_antiraid/native/GuildIncidentsActionSheetStore.tsx");
+
+export { useGuildIncidentsActionSheetStore };
+export const setTime = function setTime(diff) {
+  _require = diff;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    const obj = { time, hasTimeChanges: true };
+    return obj.setState(obj);
+  });
 };
-export const setInitialTime = function setInitialTime(arg0) {
-  const _require = arg0;
-  _require(1249).batchUpdates(() => closure_1_3.setState({ time: closure_0, hasTimeChanges: false }));
+export const setInitialTime = function setInitialTime(time) {
+  _require = time;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    const obj = { time, hasTimeChanges: false };
+    return obj.setState(obj);
+  });
 };
-export const setPauseInvites = function setPauseInvites(arg0) {
-  const _require = arg0;
-  _require(1249).batchUpdates(() => closure_1_3.setState({ pauseInvites: closure_0 }));
+export const setPauseInvites = function setPauseInvites(pauseInvites) {
+  _require = pauseInvites;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    const obj = { pauseInvites };
+    return obj.setState(obj);
+  });
 };
-export const setPauseDms = function setPauseDms(arg0) {
-  const _require = arg0;
-  _require(1249).batchUpdates(() => closure_1_3.setState({ pauseDms: closure_0 }));
+export const setPauseDms = function setPauseDms(pauseDms) {
+  _require = pauseDms;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    const obj = { pauseDms };
+    return obj.setState(obj);
+  });
 };
 export const resetGuildIncidentsActionSheetStore = function resetGuildIncidentsActionSheetStore() {
-  batchUpdates.batchUpdates(() => {
-    state.setState({ time: closure_2, pauseInvites: true, pauseDms: true, hasTimeChanges: false });
+  ReactBatchUpdates.batchUpdates(() => {
+    state.setState({ time, pauseInvites: true, pauseDms: true, hasTimeChanges: false });
   });
 };

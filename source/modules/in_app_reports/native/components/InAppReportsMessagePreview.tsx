@@ -1,46 +1,45 @@
-// Module ID: 8656
-// Function ID: 8657
-// Name: MessagePreview
-// Dependencies: [19, 17, 21, 4560, 576, 7932, 4409, 4556, 1114, 8657, 2]
+// Module ID: 8684
+// Function ID: 8685
+// Name: InAppReportsMessagePreview
+// Dependencies: [19, 17, 21, 4574, 576, 7946, 4423, 4570, 1114, 8685, 2]
 // Exports: default
 
-// Module 8656 (MessagePreview)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import hexToRgba from "hexToRgba" /* 4409 */;
-import Text from "Text" /* 4556 */;
-import setOptionsDefault from "setOptions" /* 7932 */;
-import DCDChatItemDefault from "DCDChatItem" /* 8657 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 8684 (InAppReportsMessagePreview)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import ColorUtils from "ColorUtils" /* 4423 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import RowGeneratorDefault from "RowGenerator" /* 7946 */;
+import ChatItemDefault from "ChatItem" /* 8685 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, borderColor: null, title: null, chatItemContainer: null };
-createCacheKey = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { lineHeight: 16, marginBottom: 8 };
-createCacheKey[3] = { minHeight: 40, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, padding: 8 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const obj5 = new setOptionsDefault();
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, borderColor: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, title: { lineHeight: 16, marginBottom: 8 }, chatItemContainer: null };
+let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+obj2.chatItemContainer = { minHeight: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 1, padding: 8 };
+let closure_6 = createStyles.createStyles(obj2);
+let obj5 = new RowGeneratorDefault();
 obj5.setOptions({ renderCodedLinks: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderEmbeds: true, ignoreMentioned: true, inlineAttachmentMedia: false, inlineEmbedMedia: true, renderReactions: false });
-const obj1 = { minHeight: 40, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, padding: 8 };
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsMessagePreview.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsMessagePreview.tsx");
 
 export default function MessagePreview(message) {
-  const tmp = callback3();
-  let obj = hexToRgba;
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.string(getSystemLocale.t.iouM3a);
-  const items = [callback(Text.Text, obj), ];
-  const hexWithOpacityResult = obj.hexWithOpacity(tmp.borderColor.color, 0.08);
-  const items1 = [tmp.chatItemContainer, { borderColor: hexWithOpacityResult }];
-  items[1] = callback(View, { accessible: true, style: items1, children: callback(DCDChatItemDefault, obj2) });
-  obj[1] = items;
-  return callback2(View, obj);
+  const tmp = closure_6();
+  const obj2 = { style: tmp.container, children: null };
+  const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
+  const intl = util.intl;
+  obj3.children = intl.string(util.t.iouM3a);
+  const items = [React4(Text_Text.Text, obj3), ];
+  const obj4 = { accessible: true, style: null, children: null };
+  const items1 = [tmp.chatItemContainer, { borderColor: ColorUtils.hexWithOpacity(tmp.borderColor.color, 0.08) }];
+  obj4.style = items1;
+  obj5 = { rowGenerator: obj5, maxHeight: 120, message: message.message, pointerEvents: "none" };
+  obj4.children = React4(ChatItemDefault, obj5);
+  items[1] = React4(View, obj4);
+  obj2.children = items;
+  return hasOwnProperty(View, obj2);
 };

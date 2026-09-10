@@ -1,38 +1,36 @@
-// Module ID: 13743
-// Function ID: 13744
+// Module ID: 13766
+// Function ID: 13767
 // Name: showVoiceChannelBlockedUserWarning
-// Dependencies: [1895, 13738, 13741, 1093, 4527, 13744, 1896, 1250, 2]
+// Dependencies: [1895, 13761, 13764, 1093, 4541, 13767, 1896, 1250, 2]
 // Exports: showVoiceChannelBlockedUserWarning
 
-// Module 13743 (showVoiceChannelBlockedUserWarning)
-import keys from "keys" /* 1093 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
-import closure_3 from "getState" /* 1895 */;
-import useSharedSpacesWarningStore from "useSharedSpacesWarningStore" /* 13738 */;
-import { VoiceChannelWarningSurfaces as closure_6 } from "GdmWarningMedium" /* 13741 */;
+// Module 13766 (showVoiceChannelBlockedUserWarning)
+import ConstantsIOS from "ConstantsIOS" /* 1093 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import AppStateStore from "AppStateStore" /* 1895 */;
 
-require = arg1;
-({ queueBlockWarning: c4, dequeueBlockWarning: c5 } = useSharedSpacesWarningStore);
-const result = require("set").fileFinishedImporting("modules/shared_space_warnings/show_voice_channel_warning/showVoiceChannelBlockedUserWarning.native.tsx");
+require = fn;
+const SharedSpacesWarningStore = fn(13761);
+({ queueBlockWarning: closure_4, dequeueBlockWarning: hasOwnProperty } = SharedSpacesWarningStore);
+const constants = fn(13764).VoiceChannelWarningSurfaces;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/shared_space_warnings/show_voice_channel_warning/showVoiceChannelBlockedUserWarning.native.tsx");
 
-export const showVoiceChannelBlockedUserWarning = function showVoiceChannelBlockedUserWarning(channelId, id) {
-  state = state.getState();
-  if (state === keys.AppStates.ACTIVE) {
-    callback2();
-    let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-    obj = { channelId: null, blockedUserId: null, impressionName: null, impressionProperties: null };
-    obj[0] = channelId;
-    obj[1] = id;
-    obj[2] = tmp2(1250).ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING;
-    obj = { channel_id: null, blocked_user_ids: null, warning_surface: null };
-    obj[0] = channelId;
-    const items = [id];
-    obj[1] = items;
-    obj[2] = constants.POST_JOIN_SHEET;
-    obj[3] = obj;
-    obj.openLazy(tmp2(1896)(13744, dependencyMap.paths), "gdm_blocked_user_action_sheet", obj);
-    const tmp11 = tmp2(1896)(13744, dependencyMap.paths);
+export const showVoiceChannelBlockedUserWarning = function showVoiceChannelBlockedUserWarning(channelId, items1) {
+  const state = AppStateStore.getState();
+  if (state === ConstantsIOS.AppStates.ACTIVE) {
+    hasOwnProperty();
+    const obj2 = { channelId, blockedUserId: items1, impressionName: null, impressionProperties: null };
+    const obj = ActionSheetActionCreatorsDefault;
+    obj2.impressionName = tmp2(1250).ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING;
+    const obj3 = { channel_id: channelId, blocked_user_ids: null, warning_surface: null };
+    const items = [items1];
+    obj3.blocked_user_ids = items;
+    obj3.warning_surface = constants.POST_JOIN_SHEET;
+    obj2.impressionProperties = obj3;
+    obj.openLazy(tmp2(1896)(13767, dependencyMap.paths), "gdm_blocked_user_action_sheet", obj2);
+    const tmp11 = tmp2(1896)(13767, dependencyMap.paths);
   } else {
-    callback();
+    React4();
   }
 };

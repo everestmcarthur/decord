@@ -1,60 +1,55 @@
-// Module ID: 9254
-// Function ID: 9255
-// Name: error
-// Dependencies: [19, 17, 21, 4560, 576, 7123, 9255, 4556, 1114, 4975, 4763, 2]
+// Module ID: 9281
+// Function ID: 9282
+// Dependencies: [19, 17, 21, 4574, 576, 7137, 9282, 4570, 1114, 4989, 4777, 2]
 // Exports: default
 
-// Module 9254 (error)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Text from "Text" /* 4556 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
-import registerAssetDefault from "registerAsset" /* 9255 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9281
+import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7137 */;
+import _modDef9282 from "module_9282" /* 9282 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ Image: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: null, inner: null, text: null, image: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, gap: 16, paddingHorizontal: 16, justifyContent: "center", flexDirection: "column" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, flexDirection: "column", alignItems: "center", justifyContent: "center" };
-createCacheKey[2] = { marginTop: 24, textAlign: "center" };
-createCacheKey[3] = { tintColor: ThemesDefault.colors.TEXT_FEEDBACK_WARNING };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { tintColor: ThemesDefault.colors.TEXT_FEEDBACK_WARNING };
-const result = require("set").fileFinishedImporting("modules/oauth2/native/ErrorResult.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: c3, View: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, gap: 16, paddingHorizontal: 16, justifyContent: "center", flexDirection: "column" }, inner: { flex: 1, flexDirection: "column", alignItems: "center", justifyContent: "center" }, text: { marginTop: 24, textAlign: "center" }, image: null };
+const obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, gap: 16, paddingHorizontal: 16, justifyContent: "center", flexDirection: "column" };
+obj2.image = { tintColor: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/oauth2/native/ErrorResult.tsx");
 
 export default function ErrorResult(error) {
   error = error.error;
-  const tmp = callback2();
-  let obj = { bottom: true, style: tmp.container, children: null };
-  obj = { style: tmp.inner, children: null };
-  obj = { source: registerAssetDefault, style: tmp.image };
-  const items = [callback(closure_3, obj), ];
-  obj1 = { style: tmp.text, variant: "text-md/medium", children: null };
+  const tmp = closure_7();
+  const obj = { bottom: true, style: tmp.container, children: null };
+  const obj2 = { style: tmp.inner, children: null };
+  const items = [hasOwnProperty(React3, { source: _modDef9282, style: tmp.image }), ];
+  const obj4 = { style: tmp.text, variant: "text-md/medium", children: null };
   if (error == null) {
     const intl = tmp3(1114).intl;
     error = intl.string(tmp3(1114).t.mqn873);
   }
-  obj1[2] = error;
-  items[1] = callback(Text.Text, obj1);
-  obj[1] = items;
-  const items1 = [closure_6(closure_4, obj), ];
+  obj4.children = error;
+  items[1] = hasOwnProperty(Text_Text.Text, obj4);
+  obj2.children = items;
+  const items1 = [timestampProducer(React4, obj2), ];
   let tmp6Result = null;
   if (!error.hideFooter) {
-    const obj2 = { size: "lg", text: null, onPress: null };
+    const obj5 = { size: "lg", text: null, onPress: null };
     const intl2 = tmp3(1114).intl;
-    obj2[1] = intl2.string(tmp3(1114).t.cpT0Cq);
-    obj2[2] = function onPress() {
-      return callback(table[10]).pop();
+    obj5.text = intl2.string(tmp3(1114).t.cpT0Cq);
+    obj5.onPress = function onPress() {
+      return ModalActionCreatorsDefault.pop();
     };
-    tmp6Result = tmp6(tmp3(4975).Button, obj2);
+    tmp6Result = tmp6(tmp3(4989).Button, obj5);
   }
   items1[1] = tmp6Result;
-  obj[2] = items1;
-  return closure_6(SafeAreaPaddingView.SafeAreaPaddingView, obj);
+  obj.children = items1;
+  return timestampProducer(common_SafeAreaView.SafeAreaPaddingView, obj);
 };

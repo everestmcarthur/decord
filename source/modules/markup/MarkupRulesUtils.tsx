@@ -1,13 +1,13 @@
-// Module ID: 8096
-// Function ID: 8097
-// Name: smartOutput
+// Module ID: 8112
+// Function ID: 8113
+// Name: MarkupRulesUtils
 // Dependencies: [2]
 // Exports: isStaticRouteIconType, smartOutput
 
-// Module 8096 (smartOutput)
-import set from "set" /* 2 */;
+// Module 8112 (MarkupRulesUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/markup/MarkupRulesUtils.tsx");
+const result = size.fileFinishedImporting("modules/markup/MarkupRulesUtils.tsx");
 
 export const smartOutput = function smartOutput(node, output, state) {
   if (typeof node.content !== "string") {

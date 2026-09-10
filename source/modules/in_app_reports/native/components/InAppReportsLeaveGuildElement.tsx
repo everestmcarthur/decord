@@ -1,75 +1,73 @@
-// Module ID: 9067
-// Function ID: 9068
-// Name: LeaveGuildElement
-// Dependencies: [32, 19, 1074, 21, 9068, 4740, 9056, 1114, 4905, 4994, 9078, 2]
+// Module ID: 9094
+// Function ID: 9095
+// Name: InAppReportsLeaveGuildElement
+// Dependencies: [32, 19, 1074, 21, 9095, 4754, 9083, 1114, 4919, 5008, 9105, 2]
 // Exports: default
 
-// Module 9067 (LeaveGuildElement)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 9094 (InAppReportsLeaveGuildElement)
+import util from "util" /* 1114 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4754 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4919 */;
+import common_AlertDefault from "common/Alert" /* 5008 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsLeaveGuildElement.tsx");
+require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsLeaveGuildElement.tsx");
 
 export default function LeaveGuildElement(guild) {
   guild = guild.guild;
   const addCallback = guild.addCallback;
   const reportId = guild.reportId;
-  let callback;
-  let React;
-  closure_5 = undefined;
-  const tmp = callback(React.useState(false), 2);
-  callback = tmp[1];
-  React = tmp2;
+  _slicedToArray = undefined;
+  noop = undefined;
+  [obj.disabled, _slicedToArray] = noop.useState(false);
+  noop = tmp2;
   const items = [null != guild];
-  const effect = React.useEffect(() => {
-    callback(!closure_4);
+  const effect = noop.useEffect(() => {
+    closure_3(!closure_4);
   }, items);
   const items1 = [addCallback, reportId, guild];
-  closure_5 = React.useCallback(() => {
+  const onConfirm = noop.useCallback(() => {
     if (null != guild) {
-      addCallback(() => closure_1_1(closure_1_2[4]).leaveGuild(id.id));
-      let obj = addCallback(reportId[5]);
-      obj = { guild_id: null, report_id: null };
-      obj[0] = tmp.id;
-      obj[1] = reportId;
-      obj.trackWithMetadata(constants.IAR_LEAVE_GUILD_BUTTON_CLICKED, obj);
-      callback(true);
+      addCallback(() => addCallback(reportId[4]).leaveGuild(id.id));
+      const obj2 = { guild_id: tmp.id, report_id: reportId };
+      AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.IAR_LEAVE_GUILD_BUTTON_CLICKED, obj2);
+      closure_3(true);
     }
   }, items1);
   let obj = { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null };
   let intl = guild(reportId[7]).intl;
-  obj[0] = intl.string(guild(reportId[7]).t.cU96ip);
+  obj.title = intl.string(guild(reportId[7]).t.cU96ip);
   let intl2 = guild(reportId[7]).intl;
-  obj[1] = intl2.string(guild(reportId[7]).t.rJGMXU);
+  obj.disabledTitle = intl2.string(guild(reportId[7]).t.rJGMXU);
   let intl3 = guild(reportId[7]).intl;
   let name;
   if (guild != null) {
     name = guild.name;
   }
-  obj[2] = intl3.formatToPlainString(guild(reportId[7]).t["26mR6/"], { guildName: name });
-  obj[3] = tmp[0];
-  obj[5] = function onPress() {
-    let obj = addCallback(reportId[8]);
-    obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, confirmColor: null };
-    const intl = guild(reportId[7]).intl;
-    obj[0] = intl.string(guild(reportId[7]).t.J2TBi3);
-    const intl2 = guild(reportId[7]).intl;
+  obj.description = intl3.formatToPlainString(guild(reportId[7]).t["26mR6/"], { guildName: name });
+  obj.onPress = function onPress() {
+    const obj2 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, confirmColor: null };
+    const intl = util.intl;
+    obj2.title = intl.string(util.t.J2TBi3);
+    const intl2 = util.intl;
     let name;
     if (guild != null) {
       name = guild.name;
     }
-    obj[1] = intl2.formatToPlainString(guild(reportId[7]).t.TB1og8, { name });
-    const intl3 = tmp3(tmp2[7]).intl;
-    obj[2] = intl3.string(guild(reportId[7]).t.p89ACt);
-    const intl4 = tmp3(tmp2[7]).intl;
-    obj[3] = intl4.string(guild(reportId[7]).t.gm1Vej);
-    obj[4] = closure_5;
-    obj[5] = addCallback(reportId[9]).Colors.RED;
-    obj.show(obj);
+    obj2.body = intl2.formatToPlainString(util.t.TB1og8, { name });
+    const intl3 = tmp3(1114).intl;
+    obj2.confirmText = intl3.string(util.t.p89ACt);
+    const intl4 = tmp3(1114).intl;
+    obj2.cancelText = intl4.string(util.t.gm1Vej);
+    obj2.onConfirm = onConfirm;
+    obj2.confirmColor = common_AlertDefault.Colors.RED;
+    actions_AlertActionCreatorsDefault.show(obj2);
   };
-  obj[6] = jsx(guild(reportId[10]).DoorExitIcon, { color: "text-feedback-critical" });
+  obj.icon = jsx(guild(reportId[10]).DoorExitIcon, { color: "text-feedback-critical" });
   return jsx(addCallback(reportId[6]), { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null });
 };

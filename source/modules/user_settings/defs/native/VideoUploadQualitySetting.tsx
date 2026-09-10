@@ -1,56 +1,55 @@
-// Module ID: 15467
-// Function ID: 15468
-// Name: radio
-// Dependencies: [1185, 7975, 504, 15466, 1935, 1114, 11473, 2]
+// Module ID: 15496
+// Function ID: 15497
+// Name: VideoUploadQualitySetting
+// Dependencies: [1185, 7989, 504, 15495, 1935, 1114, 11500, 2]
 
-// Module 15467 (radio)
+// Module 15496 (VideoUploadQualitySetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import UserSettingsText from "UserSettingsText" /* 15466 */;
-import closure_2 from "CHANNEL_SIDEBAR_WIDTH" /* 1185 */;
-import { VideoQualitySettings } from "CHANNEL_SIDEBAR_WIDTH" /* 1185 */;
-import createToggle from "createToggle" /* 11473 */;
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import UserSettingsText from "UserSettingsText" /* 15495 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const VideoQualitySettings = fn(1185).VideoQualitySettings;
+const SettingBuilders = fn(11500);
+const radio = SettingBuilders.createRadio({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.PXq9f1);
+    const intl = util.intl;
+    return intl.string(util.t.PXq9f1);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.CHAT,
+  parent: fn(7989).MobileUserSettings.CHAT,
   useValue: function useVideoUploadQualitySettingValue() {
-    const items = [closure_2];
+    const items = [UnsyncedUserSettingsStore];
     return initialize.useStateFromStores(items, () => videoUploadQuality.videoUploadQuality);
   },
   onValueChange: function onVideoUploadQualitySettingValueChange(videoUploadQuality) {
-    let obj = UserSettingsText;
-    obj = { videoUploadQuality, viewImageDescriptions: null, lowQualityImageMode: null, dataSavingMode: null };
-    const ViewImageDescriptions = explicitContentFromProto.ViewImageDescriptions;
-    obj[1] = ViewImageDescriptions.getSetting();
-    ({ lowQualityImageMode: obj2[2], dataSavingMode: obj2[3] } = closure_2);
-    const result = obj.setVideoUploadQuality(obj);
+    const obj3 = { videoUploadQuality, viewImageDescriptions: null, lowQualityImageMode: null, dataSavingMode: null };
+    const ViewImageDescriptions = UserSettings.ViewImageDescriptions;
+    obj3.viewImageDescriptions = ViewImageDescriptions.getSetting();
+    ({ lowQualityImageMode: obj2.lowQualityImageMode, dataSavingMode: obj2.dataSavingMode } = UnsyncedUserSettingsStore);
+    const result = UserSettingsText.setVideoUploadQuality(obj3);
   },
   useOptions: function useVideoUploadQualitySettingOptions() {
-    let obj = { label: null, value: null };
-    const intl = getSystemLocale.intl;
-    obj[0] = intl.string(getSystemLocale.t.cWGW5d);
-    obj[1] = VideoQualitySettings.BEST;
+    const obj = { label: null, value: null };
+    const intl = util.intl;
+    obj.label = intl.string(util.t.cWGW5d);
+    obj.value = VideoQualitySettings.BEST;
     const items = [obj, , ];
-    obj = { label: null, value: null };
-    const intl2 = getSystemLocale.intl;
-    obj[0] = intl2.string(getSystemLocale.t["5hKnyC"]);
-    obj[1] = VideoQualitySettings.STANDARD;
-    items[1] = obj;
-    obj = { label: null, value: null };
-    const intl3 = getSystemLocale.intl;
-    obj[0] = intl3.string(getSystemLocale.t.y5k4ZJ);
-    obj[1] = VideoQualitySettings.DATA_SAVER;
-    items[2] = obj;
+    const obj2 = { label: null, value: null };
+    const intl2 = util.intl;
+    obj2.label = intl2.string(util.t["5hKnyC"]);
+    obj2.value = VideoQualitySettings.STANDARD;
+    items[1] = obj2;
+    const obj3 = { label: null, value: null };
+    const intl3 = util.intl;
+    obj3.label = intl3.string(util.t.y5k4ZJ);
+    obj3.value = VideoQualitySettings.DATA_SAVER;
+    items[2] = obj3;
     return items;
   }
-};
-createToggle = createToggle.createRadio(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/VideoUploadQualitySetting.tsx");
+});
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/VideoUploadQualitySetting.tsx");
 
-export default createToggle;
+export default radio;

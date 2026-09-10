@@ -1,29 +1,26 @@
-// Module ID: 16741
-// Function ID: 16742
+// Module ID: 16778
+// Function ID: 16779
 // Name: trackGuildViewedClickstream
-// Dependencies: [1074, 4399, 7465, 2]
+// Dependencies: [1074, 4413, 7479, 2]
 // Exports: default
 
-// Module 16741 (trackGuildViewedClickstream)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import RouteParam from "RouteParam" /* 4399 */;
-import isClickstreamEnabled from "isClickstreamEnabled" /* 7465 */;
+// Module 16778 (trackGuildViewedClickstream)
+import Constants from "Constants" /* 1074 */;
+import RouteUtils from "RouteUtils" /* 4413 */;
+import Clickstream from "Clickstream" /* 7479 */;
+import size from "module_2" /* 2 */;
 
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/app_analytics/track/guild_viewed/trackGuildViewedClickstream.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/app_analytics/track/guild_viewed/trackGuildViewedClickstream.tsx");
 
 export default function trackGuildViewedClickstream(guildId) {
   guildId = guildId.guildId;
   let isPseudoGuildIdResult = null == guildId;
   if (!isPseudoGuildIdResult) {
-    let obj = RouteParam;
-    isPseudoGuildIdResult = obj.isPseudoGuildId(guildId);
+    isPseudoGuildIdResult = RouteUtils.isPseudoGuildId(guildId);
   }
   if (!isPseudoGuildIdResult) {
-    obj = { guild_id: null };
-    obj[0] = guildId;
-    isClickstreamEnabled.trackClickstream(AnalyticEvents.GUILD_VIEWED_CLICKSTREAM, obj);
-    const obj2 = isClickstreamEnabled;
+    const obj3 = { guild_id: guildId };
+    Clickstream.trackClickstream(AnalyticEvents.GUILD_VIEWED_CLICKSTREAM, obj3);
   }
 };

@@ -1,17 +1,17 @@
-// Module ID: 5789
-// Function ID: 5790
+// Module ID: 5803
+// Function ID: 5804
 // Name: BananaSpotIllustration
-// Dependencies: [21, 5587, 5790, 2]
+// Dependencies: [21, 5601, 5804, 2]
 // Exports: BananaSpotIllustration
 
-// Module 5789 (BananaSpotIllustration)
-import set from "set" /* 2 */;
+// Module 5803 (BananaSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 5790 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5804 from "module_5804" /* 5804 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/BananaSpotIllustration.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BananaSpotIllustration.native.tsx");
 
 export const BananaSpotIllustration = function BananaSpotIllustration(width) {
   let num = width.width;
@@ -27,14 +27,14 @@ export const BananaSpotIllustration = function BananaSpotIllustration(width) {
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
-  obj = { width: num * num3, height: num2 * num3 };
-  const items = [obj];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { width: num * num3, height: num2 * num3 });
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef5804 };
+  obj.source = obj2;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

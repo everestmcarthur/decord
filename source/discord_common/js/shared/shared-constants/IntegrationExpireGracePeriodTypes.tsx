@@ -1,11 +1,11 @@
-// Module ID: 17599
-// Function ID: 17600
+// Module ID: 17630
+// Function ID: 17631
 // Name: IntegrationExpireGracePeriodTypes
 // Dependencies: [2]
 
-// Module 17599 (IntegrationExpireGracePeriodTypes)
-import set from "set" /* 2 */;
+// Module 17630 (IntegrationExpireGracePeriodTypes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/IntegrationExpireGracePeriodTypes.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/IntegrationExpireGracePeriodTypes.tsx");
 
 export const IntegrationExpireGracePeriodTypes = { ONE_DAY: 1, [1]: "ONE_DAY", THREE_DAYS: 3, [3]: "THREE_DAYS", SEVEN_DAYS: 7, [7]: "SEVEN_DAYS", FOURTEEN_DAYS: 14, [14]: "FOURTEEN_DAYS", THIRTY_DAYS: 30, [30]: "THIRTY_DAYS" };

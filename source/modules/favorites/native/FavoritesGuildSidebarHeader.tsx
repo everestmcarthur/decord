@@ -1,27 +1,23 @@
-// Module ID: 16281
-// Function ID: 16282
-// Name: EmptyBody
-// Dependencies: [19, 17, 16205, 21, 4560, 576, 10229, 10981, 4527, 10233, 1896, 10232, 4556, 1114, 3225, 5080, 5101, 5071, 4973, 2]
+// Module ID: 16311
+// Function ID: 16312
+// Name: FavoritesGuildSidebarHeader
+// Dependencies: [19, 17, 16235, 21, 4574, 576, 10256, 11008, 4541, 10260, 1896, 10259, 4570, 1114, 3236, 5094, 5115, 5085, 4987, 2]
 // Exports: default
 
-// Module 16281 (EmptyBody)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 3225 */;
-import Text from "Text" /* 4556 */;
-import Stack from "Stack" /* 4973 */;
-import ChatIcon from "ChatIcon" /* 5071 */;
-import TextIcon from "TextIcon" /* 5080 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5101 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { useHasFavoritesGuildSuggestions as closure_5 } from "items" /* 16205 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16311 (FavoritesGuildSidebarHeader)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import _modDef3236 from "module_3236" /* 3236 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Stack_Stack from "Stack/Stack" /* 4987 */;
+import ChatIcon from "ChatIcon" /* 5085 */;
+import TextIcon from "TextIcon" /* 5094 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5115 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function EmptyBody() {
-  const callback = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     if (obj.getFavoritesAccess().hasAccess) {
       tmp3(tmp2[7])({ source: "favorites_empty_sidebar" });
     } else {
@@ -31,86 +27,93 @@ function EmptyBody() {
     }
   }, []);
   const obj = { variant: "text-sm/medium", color: "text-muted", children: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.format(messagesProxyDefault.Z3Hdr5, { onClick: callback });
-  return callback2(Text.Text, obj);
+  const intl = util.intl;
+  obj.children = intl.format(_modDef3236.Z3Hdr5, { onClick: callback });
+  return timestampProducer(Text_Text.Text, obj);
 }
 function PlaceholderRows() {
-  const tmp = callback4();
-  let obj = { style: tmp.placeholderRows, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
-  obj = { style: tmp.placeholderRow, children: null };
-  obj = { size: "sm", color: ThemesDefault.colors.ICON_MUTED };
-  const items = [callback2(TextIcon.TextIcon, obj), ];
+  const tmp = closure_9();
+  const obj = { style: tmp.placeholderRows, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
+  const obj2 = { style: tmp.placeholderRow, children: null };
+  const items = [timestampProducer(TextIcon.TextIcon, { size: "sm", color: nativeDefault.colors.ICON_MUTED }), ];
+  const obj4 = { style: null };
   const items1 = [, ];
   ({ placeholderBar: arr2[0], placeholderBarShort: arr2[1] } = tmp);
-  items[1] = callback2(View, { style: items1 });
-  obj[1] = items;
-  const items2 = [callback3(View, obj), , ];
-  obj1 = { style: tmp.placeholderRow, children: null };
-  const items3 = [callback2(VoiceNormalIcon.VoiceNormalIcon, { size: "sm", color: ThemesDefault.colors.ICON_MUTED }), ];
+  obj4.style = items1;
+  items[1] = timestampProducer(View, obj4);
+  obj2.children = items;
+  const items2 = [React5(View, obj2), , ];
+  const obj5 = { style: tmp.placeholderRow, children: null };
+  const obj3 = { size: "sm", color: nativeDefault.colors.ICON_MUTED };
+  const items3 = [timestampProducer(VoiceNormalIcon.VoiceNormalIcon, { size: "sm", color: nativeDefault.colors.ICON_MUTED }), ];
+  const obj7 = { style: null };
   const items4 = [, ];
   ({ placeholderBar: arr5[0], placeholderBarLong: arr5[1] } = tmp);
-  items3[1] = callback2(View, { style: items4 });
-  obj1[1] = items3;
-  items2[1] = callback3(View, obj1);
-  const obj3 = { style: tmp.placeholderRow, children: null };
-  const obj2 = { size: "sm", color: ThemesDefault.colors.ICON_MUTED };
-  const items5 = [callback2(ChatIcon.ChatIcon, { size: "sm", color: ThemesDefault.colors.ICON_MUTED }), ];
+  obj7.style = items4;
+  items3[1] = timestampProducer(View, obj7);
+  obj5.children = items3;
+  items2[1] = React5(View, obj5);
+  const obj8 = { style: tmp.placeholderRow, children: null };
+  const obj6 = { size: "sm", color: nativeDefault.colors.ICON_MUTED };
+  const items5 = [timestampProducer(ChatIcon.ChatIcon, { size: "sm", color: nativeDefault.colors.ICON_MUTED }), ];
+  const obj10 = { style: null };
   const items6 = [, ];
   ({ placeholderBar: arr7[0], placeholderBarShort: arr7[1] } = tmp);
-  items5[1] = callback2(View, { style: items6 });
-  obj3[1] = items5;
-  items2[2] = callback3(View, obj3);
-  obj[3] = items2;
-  return callback3(View, obj);
+  obj10.style = items6;
+  items5[1] = timestampProducer(View, obj10);
+  obj8.children = items5;
+  items2[2] = React5(View, obj8);
+  obj.children = items2;
+  return React5(View, obj);
 }
-({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
-createCacheKey = { copy: null, divider: null, placeholderRows: null, placeholderRow: null, placeholderBar: null, placeholderBarShort: null, placeholderBarLong: null };
-createCacheKey = { paddingTop: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { height: 1, marginTop: ThemesDefault.space.PX_12, marginHorizontal: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-let obj1 = { height: 1, marginTop: ThemesDefault.space.PX_12, marginHorizontal: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[2] = { paddingTop: ThemesDefault.space.PX_8 };
-let obj2 = { paddingTop: ThemesDefault.space.PX_8 };
-createCacheKey[3] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16 };
-let obj3 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[4] = { height: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
-const obj4 = { height: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
-createCacheKey[5] = { width: ThemesDefault.space.PX_80 };
-const obj5 = { width: ThemesDefault.space.PX_80 };
-createCacheKey[6] = { width: ThemesDefault.space.PX_128 };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-const obj6 = { width: ThemesDefault.space.PX_128 };
-const result = require("set").fileFinishedImporting("modules/favorites/native/FavoritesGuildSidebarHeader.tsx");
+const View = fn(17).View;
+let closure_5 = fn(16235).useHasFavoritesGuildSuggestions;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { copy: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, divider: null, placeholderRows: null, placeholderRow: null, placeholderBar: null, placeholderBarShort: null, placeholderBarLong: null };
+let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.divider = { height: 1, marginTop: nativeDefault.space.PX_12, marginHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+let obj4 = { height: 1, marginTop: nativeDefault.space.PX_12, marginHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.placeholderRows = { paddingTop: nativeDefault.space.PX_8 };
+let obj5 = { paddingTop: nativeDefault.space.PX_8 };
+obj2.placeholderRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 };
+let obj6 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.placeholderBar = { height: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
+let obj7 = { height: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
+obj2.placeholderBarShort = { width: nativeDefault.space.PX_80 };
+let obj8 = { width: nativeDefault.space.PX_80 };
+obj2.placeholderBarLong = { width: nativeDefault.space.PX_128 };
+let closure_9 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuildSidebarHeader.tsx");
 
 export default function FavoritesGuildSidebarHeader() {
-  const tmp = callback4();
-  const tmp2 = callback();
-  let obj = { spacing: ThemesDefault.space.PX_8, children: null };
+  const tmp = closure_9();
+  const tmp2 = closure_5();
+  const obj = { spacing: nativeDefault.space.PX_8, children: null };
   let tmp7 = null;
   if (tmp2) {
-    obj = { style: null };
-    obj[0] = tmp.divider;
-    tmp7 = callback2(View, obj);
+    const obj2 = { style: tmp.divider };
+    tmp7 = timestampProducer(View, obj2);
   }
   const items = [tmp7, , ];
-  obj = { spacing: tmp6(576).space.PX_8, style: tmp.copy, children: null };
-  obj1 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj3 = { spacing: nativeDefault.space.PX_8, style: tmp.copy, children: null };
+  const obj4 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = tmp4(1114).intl;
-  obj1[2] = intl.string(messagesProxyDefault["1n0TGE"]);
-  const items1 = [callback2(Text.Heading, obj1), callback2(EmptyBody, {})];
-  obj[2] = items1;
-  items[1] = closure_7(Stack.Stack, obj);
+  obj4.children = intl.string(_modDef3236["1n0TGE"]);
+  const items1 = [timestampProducer(Text_Text.Heading, obj4), timestampProducer(EmptyBody, {})];
+  obj3.children = items1;
+  items[1] = React5(Stack_Stack.Stack, obj3);
   let tmp3Result = null;
   if (!tmp2) {
-    const obj2 = { children: null };
-    const obj3 = { style: null };
-    obj3[0] = tmp.divider;
-    const items2 = [tmp10(View, obj3), tmp10(PlaceholderRows, {})];
-    obj2[0] = items2;
-    tmp3Result = tmp3(closure_8, obj2);
+    const obj5 = { children: null };
+    const obj6 = { style: tmp.divider };
+    const items2 = [tmp10(View, obj6), tmp10(PlaceholderRows, {})];
+    obj5.children = items2;
+    tmp3Result = tmp3(React6, obj5);
   }
   items[2] = tmp3Result;
-  obj[1] = items;
-  return closure_7(Stack.Stack, obj);
+  obj.children = items;
+  return React5(Stack_Stack.Stack, obj);
 };

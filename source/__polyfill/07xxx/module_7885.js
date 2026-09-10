@@ -1,0 +1,9 @@
+// Module ID: 7885
+// Function ID: 7886
+// Dependencies: [1122]
+
+// Module 7885
+import registerAsset from "module_1122" /* 1122 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/main_tabs_v2/native/images", width: 24, height: 24, scales: [2, 3, 4], hash: "3b3008631d50089085453fd7d277929c", name: "stack-nav-close", type: "png" });

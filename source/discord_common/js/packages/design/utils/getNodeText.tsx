@@ -1,12 +1,13 @@
-// Module ID: 4266
-// Function ID: 4267
-// Name: getNodeText
+// Module ID: 4279
+// Function ID: 4280
+// Name: utils/getNodeText
 // Dependencies: [19, 2]
 
-// Module 4266 (getNodeText)
-import closure_0 from "noop" /* 19 */;
+// Module 4279 (utils/getNodeText)
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/utils/getNodeText.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("../discord_common/js/packages/design/utils/getNodeText.tsx");
 function getNodeText(label) {
   if (typeof label !== "string") {
     if (typeof label !== "number") {
@@ -14,7 +15,7 @@ function getNodeText(label) {
       if (label instanceof Array) {
         const mapped = label.map(getNodeText);
         let joined = mapped.join("");
-      } else if (validElement.isValidElement(label)) {
+      } else if (noop.isValidElement(label)) {
         joined = getNodeText(label.props.children);
       }
     }

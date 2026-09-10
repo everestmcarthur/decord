@@ -1,54 +1,59 @@
-// Module ID: 10161
-// Function ID: 10162
+// Module ID: 10188
+// Function ID: 10189
 // Name: NotificationSettingsMessageNotification
-// Dependencies: [19, 17, 21, 4560, 576, 10162, 4556, 1114, 5123, 10163, 10160, 4527, 10165, 1896, 10154, 10167, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 10189, 4570, 1114, 5137, 10190, 10187, 4541, 10192, 1896, 10181, 10194, 2]
 // Exports: NotificationSettingsChannelMessageNotification, NotificationSettingsGuildMessageNotification
 
-// Module 10161 (NotificationSettingsMessageNotification)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import NotificationSettingsMockMessageDefault from "NotificationSettingsMockMessage" /* 10163 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10188 (NotificationSettingsMessageNotification)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Pressables from "Pressables" /* 5137 */;
+import notificationSettingsPresetOptionUtils from "notificationSettingsPresetOptionUtils" /* 10189 */;
+import NotificationSettingsMockMessageDefault from "NotificationSettingsMockMessage" /* 10190 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+const require = globalThis.__r;
+
+require = fn;
 class NotificationSettingsMessageNotification {
   constructor(arg0) {
     closure_0 = global;
     tmp = closure_6();
     tmp2 = closure_0;
     tmp3 = closure_2;
-    obj = require("getPushNotificationSelectOptions");
+    obj = closure_0(closure_2[5]);
     pushNotificationSelectOptions = obj.getPushNotificationSelectOptions();
     found = pushNotificationSelectOptions.find((value) => value.value === onPress.setting);
     tmp5 = jsxs;
     tmp6 = View;
-    obj = { style: global.style, children: null };
-    obj1 = { style: tmp.header, children: null };
+    obj1 = { style: global.style, children: null };
+    obj11 = { style: tmp.header, children: null };
     tmp7 = jsx;
-    obj2 = { variant: "text-sm/semibold", color: "text-default", style: tmp.headerTitle, children: null };
-    intl = require("getSystemLocale").intl;
-    obj2[3] = intl.string(require("getSystemLocale").t["1m22ZB"]);
+    obj12 = { variant: "text-sm/semibold", color: "text-default", style: tmp.headerTitle, children: null };
+    intl = closure_0(closure_2[7]).intl;
+    obj12.children = intl.string(closure_0(closure_2[7]).t["1m22ZB"]);
     items = [, ];
-    items[0] = jsx(require("Text").Text, obj2);
+    items[0] = jsx(closure_0(closure_2[6]).Text, obj12);
     if ("guild" === global.context) {
-      intl3 = require("getSystemLocale").intl;
-      stringResult = intl3.string(require("getSystemLocale").t["4bP2ZZ"]);
+      intl3 = tmp2(tmp3[7]).intl;
+      stringResult = intl3.string(tmp2(tmp3[7]).t["4bP2ZZ"]);
     } else {
-      intl2 = require("getSystemLocale").intl;
-      stringResult = intl2.string(require("getSystemLocale").t["R1j5+4"]);
+      intl2 = tmp2(tmp3[7]).intl;
+      stringResult = intl2.string(tmp2(tmp3[7]).t["R1j5+4"]);
     }
-    items[1] = tmp7(require("Text").Text, { variant: "text-xs/semibold", color: "text-default", children: stringResult });
-    obj1[1] = items;
+    items[1] = tmp7(closure_0(closure_2[6]).Text, { variant: "text-xs/semibold", color: "text-default", children: stringResult });
+    obj11.children = items;
     items1 = [, ];
-    items1[0] = tmp5(tmp6, obj1);
-    obj3 = { onPress: global.onCustomize, activeOpacity: 0.6, children: null };
-    obj4 = { style: tmp.card, children: null };
-    obj5 = { notificationSetting: global.setting };
+    items1[0] = tmp5(tmp6, obj11);
+    obj13 = { onPress: global.onCustomize, activeOpacity: 0.6, children: null };
+    obj14 = { style: tmp.card, children: null };
+    obj15 = { notificationSetting: global.setting };
     items2 = [, , ];
-    items2[0] = tmp7(require("NotificationSettingsMockMessage"), obj5);
-    obj6 = { variant: "text-sm/medium", style: tmp.label, children: null };
+    items2[0] = tmp7(closure_1(tmp3[9]), obj15);
+    obj16 = { variant: "text-sm/medium", style: tmp.label, children: null };
     str = undefined;
     if (found != null) {
       str = found.label;
@@ -56,59 +61,52 @@ class NotificationSettingsMessageNotification {
     if (str == null) {
       str = "unset";
     }
-    obj6[2] = str;
-    items2[1] = tmp7(require("Text").Text, obj6);
-    obj7 = { onPress: global.onCustomize, children: null };
-    obj8 = { variant: "text-sm/semibold", style: tmp.cta, color: "text-brand", children: null };
-    intl4 = require("getSystemLocale").intl;
-    obj8[3] = intl4.string(require("getSystemLocale").t.yxiV9W);
-    obj7[1] = tmp7(require("Text").Text, obj8);
-    items2[2] = tmp7(require("PressableBase").PressableOpacity, obj7);
-    obj4[1] = items2;
-    obj3[2] = tmp5(tmp6, obj4);
-    items1[1] = tmp7(require("PressableBase").PressableOpacity, obj3);
-    obj[1] = items1;
-    return tmp5(tmp6, obj);
+    obj16.children = str;
+    items2[1] = tmp7(tmp2(tmp3[6]).Text, obj16);
+    obj17 = { onPress: global.onCustomize, children: null };
+    obj18 = { variant: "text-sm/semibold", style: tmp.cta, color: "text-brand", children: null };
+    intl4 = tmp2(tmp3[7]).intl;
+    obj18.children = intl4.string(tmp2(tmp3[7]).t.yxiV9W);
+    obj17.children = tmp7(tmp2(tmp3[6]).Text, obj18);
+    items2[2] = tmp7(tmp2(tmp3[8]).PressableOpacity, obj17);
+    obj14.children = items2;
+    obj13.children = tmp5(tmp6, obj14);
+    items1[1] = tmp7(tmp2(tmp3[8]).PressableOpacity, obj13);
+    obj1.children = items1;
+    return tmp5(tmp6, obj1);
   }
 }
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { card: null, cta: null, label: null, header: null, headerTitle: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 20, borderWidth: 1, padding: 14 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { textAlign: "center", marginTop: 4 };
-createCacheKey[2] = { textAlign: "center", marginTop: 8 };
-createCacheKey[3] = { marginBottom: 8 };
-createCacheKey[4] = { marginBottom: 4 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageNotification.tsx");
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 20, borderWidth: 1, padding: 14 }, cta: { textAlign: "center", marginTop: 4 }, label: { textAlign: "center", marginTop: 8 }, header: { marginBottom: 8 }, headerTitle: { marginBottom: 4 } };
+const timestampProducer = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageNotification.tsx");
 
 export default NotificationSettingsMessageNotification;
 export const NotificationSettingsGuildMessageNotification = function NotificationSettingsGuildMessageNotification(style) {
-  const _require = style;
-  let obj = {
+  _require = style;
+  const obj = {
     context: "guild",
     style: style.style,
-    setting: _require(10160).useGuildPresetSettings(style.guildId).notification,
+    setting: require("notificationSettingsGuildFlagUtils").useGuildPresetSettings(style.guildId).notification,
     onCustomize() {
-      let obj = closure_1_1(closure_1_2[11]);
-      obj = { guildId: style.guildId };
-      obj.openLazy(style(closure_1_2[13])(closure_1_2[12], closure_1_2.paths), "MessageNotificationGuildActionSheet", obj);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10192, dependencyMap.paths), "MessageNotificationGuildActionSheet", { guildId: style.guildId });
     }
   };
-  return callback(NotificationSettingsMessageNotification, obj);
+  return closure_4(NotificationSettingsMessageNotification, obj);
 };
 export const NotificationSettingsChannelMessageNotification = function NotificationSettingsChannelMessageNotification(style) {
-  const _require = style;
-  let obj = {
+  _require = style;
+  const obj = {
     context: "channel",
     style: style.style,
-    setting: _require(10154).useChannelPresetSettings(style.channel).notification,
+    setting: require("notficationSettingsChannelFlagUtils").useChannelPresetSettings(style.channel).notification,
     onCustomize() {
-      let obj = closure_1_1(closure_1_2[11]);
-      obj = { channel: style.channel };
-      obj.openLazy(style(closure_1_2[13])(closure_1_2[15], closure_1_2.paths), "MessageNotificationChannelActionSheet", obj);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10194, dependencyMap.paths), "MessageNotificationChannelActionSheet", { channel: style.channel });
     }
   };
-  return callback(NotificationSettingsMessageNotification, obj);
+  return closure_4(NotificationSettingsMessageNotification, obj);
 };

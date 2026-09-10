@@ -1,46 +1,49 @@
-// Module ID: 13979
-// Function ID: 13980
+// Module ID: 14002
+// Function ID: 14003
 // Name: GuildProgressBar
-// Dependencies: [19, 17, 21, 4560, 12478, 576, 4296, 4561, 4564, 2]
+// Dependencies: [19, 17, 21, 4574, 12504, 576, 4310, 4575, 4578, 2]
 // Exports: default
 
-// Module 13979 (GuildProgressBar)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14002 (GuildProgressBar)
+import nativeDefault from "native" /* 576 */;
+import timing from "timing" /* 4575 */;
+import timingPresets from "timingPresets" /* 4578 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-createCacheKey = { wrapper: null, progress: null };
-createCacheKey = { position: "relative", backgroundColor: require("useIOSCompletionStates").PROGRESS_BACKGROUND_COLOR, borderRadius: ThemesDefault.radii.xs, height: 8 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { position: "absolute", height: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.xs };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-let closure_7 = { code: "function GuildProgressBarTsx1(){const{percentWidth}=this.__closure;return{width:percentWidth.get()+\"%\"};}" };
-const obj1 = { position: "absolute", height: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.xs };
-let result = require("set").fileFinishedImporting("modules/guild_progress/native/components/GuildProgressBar.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+const obj2 = { wrapper: { position: "relative", backgroundColor: fn(12504).PROGRESS_BACKGROUND_COLOR, borderRadius: nativeDefault.radii.xs, height: 8 }, progress: null };
+let obj3 = { position: "relative", backgroundColor: fn(12504).PROGRESS_BACKGROUND_COLOR, borderRadius: nativeDefault.radii.xs, height: 8 };
+obj2.progress = { position: "absolute", height: 8, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.xs };
+let closure_6 = createStyles.createStyles(obj2);
+const __initData = { code: "function GuildProgressBarTsx1(){const{percentWidth}=this.__closure;return{width:percentWidth.get()+\"%\"};}" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_progress/native/components/GuildProgressBar.tsx");
 
 export default function GuildProgressBar(percent) {
   percent = percent.percent;
-  let sharedValue;
-  const tmp = callback();
-  let obj = percent(4296);
-  sharedValue = obj.useSharedValue(0);
+  const tmp = closure_6();
+  const sharedValue = percent(4310).useSharedValue(0);
   const items = [percent, sharedValue];
-  const effect = React.useEffect(() => {
-    const result = sharedValue.set(percent(closure_1_2[7]).withTiming(percent, percent(closure_1_2[8]).timingSlow));
+  const effect = noop.useEffect(() => {
+    const result = sharedValue.set(timing.withTiming(percent, timingPresets.timingSlow));
   }, items);
+  const obj = percent(4310);
   const fn = function h() {
     return { width: "" + sharedValue.get() + "%" };
   };
   fn.__closure = { percentWidth: sharedValue };
   fn.__workletHash = 14122394499539;
-  fn.__initData = closure_7;
-  obj = { style: items1, children: null };
-  items1 = [tmp.wrapper, percent.style];
-  const animatedStyle = percent(4296).useAnimatedStyle(fn);
+  fn.__initData = __initData;
+  const obj3 = { style: null, children: null };
+  const items1 = [tmp.wrapper, percent.style];
+  obj3.style = items1;
+  const animatedStyle = percent(4310).useAnimatedStyle(fn);
+  const obj4 = { style: null };
   const items2 = [tmp.progress, animatedStyle];
-  obj[1] = jsx(sharedValue(4296).View, { style: items2 });
-  return <View style={items1}>{null}</View>;
+  obj4.style = items2;
+  obj3.children = jsx(sharedValue(4310).View, { style: null });
+  return <View style={null}>{null}</View>;
 };

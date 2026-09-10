@@ -1,24 +1,23 @@
-// Module ID: 8353
-// Function ID: 8354
-// Name: getUserAgnosticState
-// Dependencies: [504, 8354, 573, 2]
+// Module ID: 8381
+// Function ID: 8382
+// Name: LabFeatureStore
+// Dependencies: [504, 8382, 573, 2]
 
-// Module 8353 (getUserAgnosticState)
+// Module 8381 (LabFeatureStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import hide_icymi_tabDefault from "hide_icymi_tab" /* 8354 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import LabFeaturesDefault from "LabFeatures" /* 8382 */;
 
-let closure_2 = {};
+let toggleStates = {};
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class LabFeatureStore extends DeviceSettingsStore {
 }
 const prototype = LabFeatureStore.prototype;
 prototype["getUserAgnosticState"] = function getUserAgnosticState() {
-  return { toggleStates: closure_2 };
+  return { toggleStates };
 };
 prototype["initialize"] = function initialize(toggleStates) {
-  for (const key10008 in hide_icymi_tabDefault) {
-    let tmp = key10008;
+  for (const key10008 in LabFeaturesDefault) {
     let flag;
     let tmp2 = closure_2;
     if (arg0 != null) {
@@ -35,7 +34,7 @@ prototype["initialize"] = function initialize(toggleStates) {
   }
 };
 prototype["get"] = function get(arg0) {
-  let flag = table[arg0];
+  let flag = toggleStates[arg0];
   if (flag == null) {
     flag = false;
   }
@@ -47,11 +46,12 @@ prototype["set"] = function set(arg0, arg1) {
 };
 LabFeatureStore.displayName = "LabFeatureStore";
 LabFeatureStore.persistKey = "LabFeatureStore";
-const labFeatureStore = new LabFeatureStore(dispatcherDefault, {
+const labFeatureStore = new LabFeatureStore(DispatcherDefault, {
   LAB_FEATURE_TOGGLE: function handleLabFeatureToggleSet(labFeature) {
     closure_2[labFeature.labFeature] = labFeature.enabled;
   }
 });
-const result = require("set").fileFinishedImporting("modules/labs/LabFeatureStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/labs/LabFeatureStore.tsx");
 
 export default labFeatureStore;

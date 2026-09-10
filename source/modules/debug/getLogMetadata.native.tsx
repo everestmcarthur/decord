@@ -1,27 +1,30 @@
-// Module ID: 10200
-// Function ID: 10201
+// Module ID: 10227
+// Function ID: 10228
 // Name: getLogMetadata
-// Dependencies: [1364, 4539, 2]
+// Dependencies: [1364, 4553, 2]
 // Exports: default
 
-// Module 10200 (getLogMetadata)
-import set from "set" /* 2 */;
-import getConstantsAll from "getConstants" /* 1364 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4539 */;
+// Module 10227 (getLogMetadata)
+import ClientInfoUtilsAll from "ClientInfoUtils" /* 1364 */;
+import DeviceUtils from "DeviceUtils" /* 4553 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/debug/getLogMetadata.native.tsx");
+const result = size.fileFinishedImporting("modules/debug/getLogMetadata.native.tsx");
 
 export default function getLogMetadata() {
-  let obj = getConstantsAll;
-  const constants = obj.getConstants();
-  obj = { logsUploaded: new Date().toISOString(), Identifier, Version, Manifest, ReleaseChannel, Build, JSBuildNumber: null, DeviceVendorID: null, DeviceInfo: null, systemVersion: null };
+  constants = ClientInfoUtilsAll.getConstants();
+  const obj2 = { logsUploaded: null, Identifier: null, Version: null, Manifest: null, ReleaseChannel: null, Build: null, JSBuildNumber: null, DeviceVendorID: null, DeviceInfo: null, systemVersion: null };
   ({ Identifier, Version, Manifest, ReleaseChannel, Build, DeviceVendorID } = constants);
+  obj2.logsUploaded = new Date().toISOString();
+  obj2.Identifier = Identifier;
+  obj2.Version = Version;
+  obj2.Manifest = Manifest;
+  obj2.ReleaseChannel = ReleaseChannel;
+  obj2.Build = Build;
   const date = new Date();
-  obj[6] = getConstantsAll.getBuildNumberLabel();
-  obj[7] = DeviceVendorID;
-  const obj4 = getConstantsAll;
-  obj[8] = DCDDeviceManager.getDeviceInfo();
-  const obj5 = DCDDeviceManager;
-  obj[9] = DCDDeviceManager.getSystemVersion();
-  return obj;
+  obj2.JSBuildNumber = ClientInfoUtilsAll.getBuildNumberLabel();
+  obj2.DeviceVendorID = DeviceVendorID;
+  obj2.DeviceInfo = DeviceUtils.getDeviceInfo();
+  obj2.systemVersion = DeviceUtils.getSystemVersion();
+  return obj2;
 };

@@ -1,11 +1,11 @@
-// Module ID: 16224
-// Function ID: 16225
-// Name: initialize
+// Module ID: 16254
+// Function ID: 16255
+// Name: GuildBoostingProgressBarPersistedStore
 // Dependencies: [504, 573, 2]
 
-// Module 16224 (initialize)
+// Module 16254 (GuildBoostingProgressBarPersistedStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
 let closure_0 = {};
 const PersistedStore = initializeDefault.PersistedStore;
@@ -21,21 +21,23 @@ prototype["getState"] = function getState() {
   return closure_0;
 };
 prototype["getCountForGuild"] = function getCountForGuild(guildId) {
-  return table[guildId];
+  return closure_0[guildId];
 };
 GuildBoostingProgressBarPersistedStore.displayName = "GuildBoostingProgressBarPersistedStore";
 GuildBoostingProgressBarPersistedStore.persistKey = "PremiumGuildProgressBarPersistedStore";
-const guildBoostingProgressBarPersistedStore = new GuildBoostingProgressBarPersistedStore(dispatcherDefault, {
+const guildBoostingProgressBarPersistedStore = new GuildBoostingProgressBarPersistedStore(DispatcherDefault, {
   APPLIED_GUILD_BOOST_COUNT_UPDATE: function handlePremiumCountUpdate(arg0) {
     const obj = {};
     ({ guildId, premiumCount } = arg0);
-    const merged = Object.assign(obj);
+    const merged = Object.assign(closure_0);
     obj[guildId] = premiumCount;
+    closure_0 = obj;
   },
   APPLIED_GUILD_BOOST_COUNT_RESET: function handlePremiumCountReset() {
     closure_0 = {};
   }
 });
-const result = require("set").fileFinishedImporting("modules/guild_boosting/GuildBoostingProgressBarPersistedStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_boosting/GuildBoostingProgressBarPersistedStore.tsx");
 
 export default guildBoostingProgressBarPersistedStore;

@@ -1,25 +1,29 @@
-// Module ID: 9647
-// Function ID: 9648
-// Name: getSafeArea
-// Dependencies: [5, 32, 19, 17, 8860, 1920, 1074, 4465, 21, 4560, 3, 1115, 9648, 1256, 8298, 9649, 9650, 1364, 9652, 9653, 1242, 1109, 563, 4904, 1114, 1272, 9654, 1365, 9522, 9555, 8272, 4761, 9520, 2]
+// Module ID: 9674
+// Function ID: 9675
+// Name: EmbeddedActivityWebView
+// Dependencies: [5, 32, 19, 17, 8887, 1920, 1074, 4479, 21, 4574, 3, 1115, 9675, 1256, 8326, 9676, 9677, 1364, 9679, 9680, 1242, 1109, 563, 4918, 1114, 1272, 9681, 1365, 9549, 9582, 8300, 4775, 9547, 2]
 // Exports: default, useHasInvalidUrlErrorState
 
-// Module 9647 (getSafeArea)
-import timestampDefault from "timestamp" /* 3 */;
-import usePreviousDefault from "usePrevious" /* 8272 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "noop" /* 19 */;
-import { Linking } from "get ActivityIndicator" /* 17 */;
-import closure_8 from "initialize" /* 8860 */;
-import items3 from "items3" /* 1920 */;
-import ME from "ME" /* 1074 */;
-import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4465 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import set from "set" /* 1115 */;
+// Module 9674 (EmbeddedActivityWebView)
+import LoggerDefault from "Logger" /* 3 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import v1 from "v1" /* 1256 */;
+import URLUtilsDefault from "URLUtils" /* 1365 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4775 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
+import usePreviousDefault from "usePrevious" /* 8300 */;
+import WebView from "WebView" /* 8326 */;
+import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9547 */;
+import getPostMessageJavaScriptDefault from "getPostMessageJavaScript" /* 9549 */;
+import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 9582 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 8887 */;
 
-const require = arg1;
+require = fn;
 function getSafeArea(arg0, arg1) {
   let override = arg0;
   let num = arg1;
@@ -87,15 +91,14 @@ class BaseActivityWebView {
     tmp2 = hasIframeId;
     tmp3 = hasInvalidUrlError;
     tmp = activitySessionId();
-    context = applicationId.useContext(require("context").WebViewContext);
+    context = applicationId.useContext(hasIframeId(hasInvalidUrlError[12]).WebViewContext);
     tmp5 = hadInvalidUrlError;
-    first = hadInvalidUrlError(applicationId.useState(() => callback()), 1)[0];
+    first = hadInvalidUrlError(applicationId.useState(() => require()), 1)[0];
     first1 = hadInvalidUrlError(applicationId.useState(() => {
       if (null != webViewKey) {
-        let v4Result = callback2();
+        let v4Result = importDefault();
       } else {
-        v4Result = closure_1_0(hasInvalidUrlError[13]).v4();
-        const obj = closure_1_0(hasInvalidUrlError[13]);
+        v4Result = v1.v4();
       }
       return v4Result;
     }), 1)[0];
@@ -109,8 +112,7 @@ class BaseActivityWebView {
     memo = applicationId.useMemo(() => {
       let webViewProxy;
       if (null != webViewKey) {
-        webViewProxy = closure_1_0(hasInvalidUrlError[14]).getWebViewProxy(tmp);
-        const obj = closure_1_0(hasInvalidUrlError[14]);
+        webViewProxy = WebView.getWebViewProxy(tmp);
       }
       return webViewProxy;
     }, items);
@@ -118,28 +120,28 @@ class BaseActivityWebView {
     tmp10 = hadInvalidUrlError(applicationId.useState(null), 2);
     [str, closure_20] = tmp10;
     tmp11 = getOrCreateIframeId;
-    obj = { onIframeMount, onIframeUnmount, isNewIframe: null, isIframeRetiring: null };
+    obj1 = { onIframeMount, onIframeUnmount, isNewIframe: null, isIframeRetiring: null };
     tmp13 = !first;
-    tmp12 = require("useIframeLifecycle");
+    tmp12 = getOrCreateIframeId(hasInvalidUrlError[15]);
     if (first) {
       tmp13 = null == webViewKey;
     }
-    obj[2] = tmp13;
-    obj[3] = null == webViewKey;
-    tmp12Result = tmp12(first1, obj);
-    rect = require("useStableSafeAreaInsets")();
+    obj1.isNewIframe = tmp13;
+    obj1.isIframeRetiring = null == webViewKey;
+    tmp12Result = tmp12(first1, obj1);
+    rect = tmp11(tmp3[16])();
     closure_21 = rect;
-    obj4 = require("getConstants");
-    obj1 = {};
+    obj4 = releaseIframeId(tmp3[17]);
+    obj13 = {};
     constants = obj4.getConstants();
     merged = Object.assign(queryParams);
     merged1 = Object.assign(deepLinkQueryParams);
-    obj1.frame_id = first1;
-    obj1.platform = referrerPolicy.MOBILE;
-    obj1.mobile_app_version = constants.Version;
-    tmp18 = require("getIFrameSandboxAttributes")({ allowPopups });
+    obj13.frame_id = first1;
+    obj13.platform = referrerPolicy.MOBILE;
+    obj13.mobile_app_version = constants.Version;
+    tmp18 = tmp11(tmp3[18])({ allowPopups });
     closure_22 = tmp18;
-    uRLSearchParams = new URLSearchParams(obj1);
+    uRLSearchParams = new URLSearchParams(obj13);
     combined = "" + activityUrl + "?" + uRLSearchParams;
     closure_23 = combined;
     closure_24 = obj2.useRef(safeAreasConfig);
@@ -149,146 +151,125 @@ class BaseActivityWebView {
     items1[2] = onLoadError;
     items1[3] = referrerPolicy;
     effect = obj2.useEffect(() => {
-      function _loadHtml() {
-        const self = this;
-        const tmp = setHasInvalidUrlError(function*() {
-          if (c7 === 2) {
-            c7 = 3;
-            HermesBuiltin.throwTypeError();
-          } else if (tmp5 === 3) {
-            if (arg0 === 1) {
-              throw arg1;
-            } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              return { value: "HermesInternal", done: null };
-            }
+      closure_0 = async function _loadHtml(arg0, value) {
+        if (c7 === 2) {
+          c7 = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp5 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
-            try {
-              c7 = 2;
-              if (0 === c6) {
-                if (arg0 === 1) {
-                  c7 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c7 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                } else {
-                  closure_5 = tmp3;
-                  closure_4 = tmp2;
-                  let callback;
-                  rect = callback(closure_2_3[16]).getStableSafeAreaInsets();
-                  const current = closure_1_24.current;
-                  let left;
-                  if (current != null) {
-                    left = current.left;
-                  }
-                  let left1;
-                  if (rect != null) {
-                    left1 = rect.left;
-                  }
-                  callback = left1;
-                  if (left1 == null) {
-                    callback = 0;
-                  }
-                  obj1 = { left: null, right: null, top: null, bottom: null };
-                  obj1[0] = closure_2_18(left, callback);
-                  let right;
-                  if (current != null) {
-                    right = current.right;
-                  }
-                  let right1;
-                  if (rect != null) {
-                    right1 = rect.right;
-                  }
-                  c1 = right1;
-                  if (right1 == null) {
-                    c1 = 0;
-                  }
-                  obj1[1] = closure_2_18(right, c1);
-                  let top;
-                  if (current != null) {
-                    top = current.top;
-                  }
-                  let top1;
-                  if (rect != null) {
-                    top1 = rect.top;
-                  }
-                  c2 = top1;
-                  if (top1 == null) {
-                    c2 = 0;
-                  }
-                  obj1[2] = closure_2_18(top, c2);
-                  let bottom;
-                  if (current != null) {
-                    bottom = current.bottom;
-                  }
-                  let bottom1;
-                  if (rect != null) {
-                    bottom1 = rect.bottom;
-                  }
-                  c3 = bottom1;
-                  if (bottom1 == null) {
-                    c3 = 0;
-                  }
-                  obj1[3] = closure_2_18(bottom, c3);
-                  const obj2 = { iFrameUri: null, iFrameSandboxAttributes: null, referrerPolicy: null, insets: null, messageForDisallowedNavigationError: null };
-                  obj2[0] = closure_1_23;
-                  obj2[1] = closure_1_22;
-                  obj2[2] = closure_1_9;
-                  obj2[3] = obj1;
-                  let tmp36;
-                  const obj7 = callback(closure_2_3[16]);
-                  const tmp44 = closure_2_3;
-                  if (!closure_2_17) {
-                    tmp36 = closure_2_10;
-                  }
-                  obj2[4] = tmp36;
-                  c6 = 1;
-                  c7 = 1;
-                  const obj3 = { value: null, done: false };
-                  obj3[0] = closure_2_1(closure_2_3[19])(obj2);
-                  return obj3;
-                }
-              } else if (arg0 === 1) {
+            return { value: "HermesInternal", done: null };
+          }
+        } else {
+          try {
+            c7 = 2;
+            if (0 === c6) {
+              if (arg0 === 1) {
                 c7 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 c7 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
-                callback = arg1;
-                if (null != callback) {
-                  closure_1_20(closure_1_0);
-                } else {
-                  closure_1_8();
+                closure_5 = tmp3;
+                closure_4 = tmp2;
+                closure_132_0 = undefined;
+                rect = require("useStableSafeAreaInsets").getStableSafeAreaInsets();
+                const current = ref.current;
+                let left;
+                if (current != null) {
+                  left = current.left;
                 }
-                c7 = 3;
+                let left1;
+                if (rect != null) {
+                  left1 = rect.left;
+                }
+                c0 = left1;
+                if (left1 == null) {
+                  c0 = 0;
+                }
+                const rect1 = { left: closure_2_18(left, c0), right: null, top: null, bottom: null };
+                let right;
+                if (current != null) {
+                  right = current.right;
+                }
+                let right1;
+                if (rect != null) {
+                  right1 = rect.right;
+                }
+                c1 = right1;
+                if (right1 == null) {
+                  c1 = 0;
+                }
+                rect1.right = closure_2_18(right, c1);
+                let top;
+                if (current != null) {
+                  top = current.top;
+                }
+                let top1;
+                if (rect != null) {
+                  top1 = rect.top;
+                }
+                c2 = top1;
+                if (top1 == null) {
+                  c2 = 0;
+                }
+                rect1.top = closure_2_18(top, c2);
+                let bottom;
+                if (current != null) {
+                  bottom = current.bottom;
+                }
+                let bottom1;
+                if (rect != null) {
+                  bottom1 = rect.bottom;
+                }
+                c3 = bottom1;
+                if (bottom1 == null) {
+                  c3 = 0;
+                }
+                rect1.bottom = closure_2_18(bottom, c3);
+                const obj4 = { iFrameUri, iFrameSandboxAttributes, referrerPolicy, insets: rect1, messageForDisallowedNavigationError: null };
+                let tmp36;
+                const obj7 = require("useStableSafeAreaInsets");
+                if (!url) {
+                  tmp36 = isPipOrGridMode;
+                }
+                obj4.messageForDisallowedNavigationError = tmp36;
+                c6 = 1;
+                c7 = 1;
+                const obj5 = { value: require("createWebviewHtmlFile")(obj4), done: false };
+                return obj5;
               }
-            } catch (tmp37) {
-              c7 = tmp;
-              throw tmp37;
+            } else if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c7 = 3;
+              const obj = { value, done: true };
+              return obj;
+            } else {
+              closure_132_0 = value;
+              if (null != closure_132_0) {
+                closure_1_20(closure_132_0);
+              } else {
+                onLoadError();
+              }
+              c7 = 3;
             }
+          } catch (tmp37) {
+            c7 = tmp;
+            throw tmp37;
           }
-        });
-        closure_0 = tmp;
-        const apply = tmp.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
         }
-        return applyArgumentsResult;
-      }
+      };
       !(function loadHtml() {
         const self = this;
-        const apply = _loadHtml.apply;
+        const apply = closure_0.apply;
         if (typeof apply === "unknown") {
           let applyArgumentsResult = HermesBuiltin.applyArguments(self);
         } else {
@@ -302,7 +283,7 @@ class BaseActivityWebView {
     items3 = [];
     items3[0] = applicationId;
     callback = obj2.useCallback((nativeEvent) => {
-      first1.warn("activity WebView error for appId " + applicationId + ". " + JSON.stringify(nativeEvent.nativeEvent));
+      logger.warn("activity WebView error for appId " + applicationId + ". " + JSON.stringify(nativeEvent.nativeEvent));
     }, items2);
     items4 = [, , , , , , , ];
     items4[0] = applicationId;
@@ -314,23 +295,20 @@ class BaseActivityWebView {
     items4[6] = memo;
     items4[7] = onActivityCrash;
     callback1 = obj2.useCallback((nativeEvent) => {
-      first1.warn("activity WebView render process gone for appId " + applicationId + ". " + JSON.stringify(nativeEvent.nativeEvent));
+      logger.warn("activity WebView render process gone for appId " + applicationId + ". " + JSON.stringify(nativeEvent.nativeEvent));
     }, items3);
     callback2 = obj2.useCallback(() => {
-      first1.warn("activity WebView content process terminated for appId " + applicationId);
-      let obj = closure_1_1(hasInvalidUrlError[20]);
-      obj = { application_id: applicationId, channel_id: channelId, guild_id: guildId, activity_session_id: activitySessionId };
-      obj.track(safeAreasConfig.ACTIVITY_WEB_VIEW_CONTENT_PROCESS_TERMINATED, obj);
-      const ComponentDispatch = closure_1_0(hasInvalidUrlError[21]).ComponentDispatch;
-      obj = { id: first1 };
-      ComponentDispatch.dispatch(webViewKey.IFRAME_UNMOUNT, obj);
+      logger.warn("activity WebView content process terminated for appId " + applicationId);
+      AnalyticsUtilsDefault.track(constants2.ACTIVITY_WEB_VIEW_CONTENT_PROCESS_TERMINATED, { application_id: applicationId, channel_id: channelId, guild_id: guildId, activity_session_id: activitySessionId });
+      const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
+      ComponentDispatch.dispatch(constants.IFRAME_UNMOUNT, { id: first1 });
       releaseIframeId();
       if (null != memo) {
         memo.releaseWebView();
       }
       onActivityCrash();
     }, items4);
-    tmp2Result = require("defaultAreStatesEqual");
+    tmp2Result = tmp2(tmp3[22]);
     items5 = [];
     items5[0] = onLoadError;
     stateFromStores = tmp2Result.useStateFromStores(items5, () => onLoadError.getUseActivityUrlOverride());
@@ -343,7 +321,7 @@ class BaseActivityWebView {
       try {
         const _URL = URL;
         const uRL = new URL(combined);
-        callback3(uRL);
+        closure_18(uRL);
       } catch (tmp9) {
         if (stateFromStores) {
           setHasInvalidUrlError(true);
@@ -361,15 +339,14 @@ class BaseActivityWebView {
         tmp = hasInvalidUrlError;
       }
       if (tmp) {
-        let obj = closure_1_1(hasInvalidUrlError[23]);
-        obj = { title: null, body: null, confirmText: null };
-        const intl = closure_1_0(hasInvalidUrlError[24]).intl;
-        obj[0] = intl.string(closure_1_0(hasInvalidUrlError[24]).t.PtobXW);
-        const intl2 = closure_1_0(hasInvalidUrlError[24]).intl;
-        obj[1] = intl2.string(closure_1_0(hasInvalidUrlError[24]).t["55iAUT"]);
-        const intl3 = closure_1_0(hasInvalidUrlError[24]).intl;
-        obj[2] = intl3.string(closure_1_0(hasInvalidUrlError[24]).t.BddRzS);
-        obj.show(obj);
+        const obj2 = { title: null, body: null, confirmText: null };
+        const intl = util.intl;
+        obj2.title = intl.string(util.t.PtobXW);
+        const intl2 = util.intl;
+        obj2.body = intl2.string(util.t["55iAUT"]);
+        const intl3 = util.intl;
+        obj2.confirmText = intl3.string(util.t.BddRzS);
+        AlertActionCreatorsDefault.show(obj2);
       }
     }, items7);
     closure_26 = null;
@@ -393,97 +370,83 @@ class BaseActivityWebView {
             if (null !== match) {
               if (match.length >= 2) {
                 const parts = match[1].split(" ");
-                const found = parts.filter((arg0) => !closure_0.includes(arg0));
+                const found = parts.filter((item) => !closure_1_0.includes(item));
                 str = match[1];
               }
               return [];
             }
           }
-          function _fetchAndParseCSP() {
-            const self = this;
-            const tmp = setHasInvalidUrlError(function*() {
-              if (c4 === 2) {
-                c4 = 3;
-                HermesBuiltin.throwTypeError();
-              } else if (tmp5 === 3) {
-                if (arg0 === 1) {
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  let obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                } else {
-                  return { value: "HermesInternal", done: null };
-                }
+          closure_2 = async function _fetchAndParseCSP(arg0, value) {
+            if (c4 === 2) {
+              c4 = 3;
+              throw new TypeError("Generator functions may not be called on executing generators");
+            } else if (tmp5 === 3) {
+              if (arg0 === 1) {
+                throw value;
+              } else if (arg0 === 2) {
+                const obj2 = { value, done: true };
+                return obj2;
               } else {
-                try {
-                  c4 = 2;
-                  if (0 === c3) {
-                    if (arg0 === 1) {
-                      c4 = 3;
-                      throw arg1;
-                    } else if (arg0 === 2) {
-                      c4 = 3;
-                      obj = { value: null, done: true };
-                      obj[0] = arg1;
-                      return obj;
-                    } else {
-                      let items = tmp3;
-                      content_security_policy = tmp2;
-                      closure_0 = undefined;
-                      content_security_policy = undefined;
-                      items = undefined;
-                      const _HermesInternal = HermesInternal;
-                      combined = "https://" + closure_1_6 + ".discordsays.com";
-                      closure_0 = combined;
-                      const HTTP = closure_2_0(closure_2_3[25]).HTTP;
-                      obj1 = { url: null, rejectWithError: false };
-                      const _HermesInternal2 = HermesInternal;
-                      obj1[0] = "" + combined + "/.discord/csp";
-                      c3 = 1;
-                      c4 = 1;
-                      const obj2 = { value: null, done: false };
-                      obj2[0] = HTTP.get(obj1);
-                      return obj2;
-                    }
-                  } else if (arg0 === 1) {
+                return { value: "HermesInternal", done: null };
+              }
+            } else {
+              try {
+                c4 = 2;
+                if (0 === c3) {
+                  if (arg0 === 1) {
                     c4 = 3;
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
                     c4 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
+                    const obj3 = { value, done: true };
+                    return obj3;
                   } else {
-                    content_security_policy = arg1.headers["content-security-policy"];
-                    items = ["about:blank", "file://*", closure_0];
-                    closure_0 = 3;
-                    closure_0 = HermesBuiltin.arraySpread(content_security_policy(/frame-src (.*?);/, content_security_policy), closure_0);
-                    closure_0 = HermesBuiltin.arraySpread(content_security_policy(/child-src (.*?);/, content_security_policy), closure_0);
-                    closure_1_30(items.map((arg0) => "^" + content_security_policy(table[26])(arg0).replace(/\\\*/g, ".*")));
-                    closure_1_28(true);
-                    c4 = 3;
-                    return { value: "HermesInternal", done: null };
+                    closure_2 = tmp3;
+                    closure_1 = tmp2;
+                    closure_129_0 = undefined;
+                    closure_129_1 = undefined;
+                    closure_129_2 = undefined;
+                    const _HermesInternal = HermesInternal;
+                    combined = "https://" + applicationId + ".discordsays.com";
+                    closure_129_0 = combined;
+                    const HTTP = require("HTTPUtils").HTTP;
+                    const obj4 = { url: null, rejectWithError: false };
+                    const _HermesInternal2 = HermesInternal;
+                    obj4.url = "" + combined + "/.discord/csp";
+                    c3 = 1;
+                    c4 = 1;
+                    const obj5 = { value: HTTP.get(obj4), done: false };
+                    return obj5;
                   }
-                } catch (tmp7) {
-                  c4 = tmp;
-                  throw tmp7;
+                } else if (arg0 === 1) {
+                  c4 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c4 = 3;
+                  const obj = { value, done: true };
+                  return obj;
+                } else {
+                  closure_129_1 = value.headers["content-security-policy"];
+                  const items = ["about:blank", "file://*", closure_129_0];
+                  closure_0 = 3;
+                  closure_0 = HermesBuiltin.arraySpread(closure_130_1(/frame-src (.*?);/, closure_129_1), closure_0);
+                  closure_0 = HermesBuiltin.arraySpread(closure_130_1(/child-src (.*?);/, closure_129_1), closure_0);
+                  closure_129_2 = items;
+                  closure_1_30(closure_129_2.map((item) => "^" + closure_1_1(closure_1_3[26])(item).replace(/\\\*/g, ".*")));
+                  closure_1_28(true);
+                  c4 = 3;
+                  return { value: "HermesInternal", done: null };
                 }
+              } catch (tmp7) {
+                c4 = tmp;
+                throw tmp7;
               }
-            });
-            closure_2 = tmp;
-            const apply = tmp.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
             }
-            return applyArgumentsResult;
-          }
+          };
           closure_0 = ["'self'"];
           (function fetchAndParseCSP() {
             const self = this;
-            const apply = _fetchAndParseCSP.apply;
+            const apply = closure_2.apply;
             if (typeof apply === "unknown") {
               let applyArgumentsResult = HermesBuiltin.applyArguments(self);
             } else {
@@ -502,7 +465,7 @@ class BaseActivityWebView {
         if (null != combined1) {
           if (null != mainDocumentURL) {
             if (mainDocumentURL !== combined1) {
-              onActivityCrash.openURL(mainDocumentURL.url);
+              Linking.openURL(mainDocumentURL.url);
               return false;
             }
           }
@@ -513,25 +476,19 @@ class BaseActivityWebView {
           let _RegExp = RegExp;
           let tmp3 = new.target;
           let tmp4 = new.target;
-          let tmp5 = nextResult;
           let regExp = new RegExp(nextResult);
-          let tmp6 = regExp;
           if (regExp.test(mainDocumentURL.url)) {
-            let tmp7 = iter;
             iter.return();
             let flag = true;
             return true;
           }
         }
-        let str = onLoadError.getActivityUrlOverride();
+        let str = DeveloperActivityShelfStore.getActivityUrlOverride();
         if (str == null) {
           str = "";
         }
-        const toURLSafeResult = closure_1_1(hasInvalidUrlError[27]).toURLSafe(str);
-        const obj2 = closure_1_1(hasInvalidUrlError[27]);
-        const tmp8 = closure_1_1;
-        const tmp9 = hasInvalidUrlError;
-        const toURLSafeResult1 = closure_1_1(hasInvalidUrlError[27]).toURLSafe(mainDocumentURL.url);
+        const toURLSafeResult = URLUtilsDefault.toURLSafe(str);
+        const toURLSafeResult1 = URLUtilsDefault.toURLSafe(mainDocumentURL.url);
         return null != toURLSafeResult && null != toURLSafeResult1 && toURLSafeResult.origin + toURLSafeResult.pathname === toURLSafeResult1.origin + toURLSafeResult1.pathname;
       }, items9);
       if (tmp39) {
@@ -546,7 +503,7 @@ class BaseActivityWebView {
       callback4 = obj2.useCallback((arg0) => {
         const current = ref.current;
         if (current != null) {
-          current.injectJavaScript(closure_1_1(hasInvalidUrlError[28])(arg0));
+          current.injectJavaScript(getPostMessageJavaScriptDefault(arg0));
         }
       }, []);
       closure_33 = callback4;
@@ -578,165 +535,146 @@ class BaseActivityWebView {
             tmp = null != origin;
           }
           if (tmp) {
-            let obj = closure_1_1(hasInvalidUrlError[29]);
-            obj = { type: null, origin: null, iframeId: null };
-            obj[0] = channelId.POST_MESSAGE;
-            obj[1] = origin;
-            obj[2] = first1;
-            obj.handleMessage(parsed, obj, callback4);
+            const obj2 = { type: TransportTypes.POST_MESSAGE, origin, iframeId: first1 };
+            WebViewPostMessageTransportDefault.handleMessage(parsed, obj2, callback4);
           }
         }
       }, items10);
       effect4 = obj2.useEffect(() => {
         if (closure_31) {
           if (null != memo) {
-            function _tryInjectJavaScript() {
-              const self = this;
-              const tmp = setHasInvalidUrlError(function*() {
-                if (c9 === 2) {
-                  c9 = 3;
-                  HermesBuiltin.throwTypeError();
-                } else if (tmp7 === 3) {
-                  if (arg0 === 1) {
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    let obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
-                  } else {
-                    return { value: "HermesInternal", done: null };
-                  }
+            closure_0 = async function _tryInjectJavaScript(arg0, value) {
+              if (c9 === 2) {
+                c9 = 3;
+                throw new TypeError("Generator functions may not be called on executing generators");
+              } else if (tmp7 === 3) {
+                if (arg0 === 1) {
+                  throw value;
+                } else if (arg0 === 2) {
+                  const obj2 = { value, done: true };
+                  return obj2;
                 } else {
-                  try {
-                    c9 = 2;
-                    if (0 === c8) {
-                      if (arg0 === 1) {
-                        c9 = 3;
-                        throw arg1;
-                      } else if (arg0 === 2) {
-                        c9 = 3;
-                        obj = { value: null, done: true };
-                        obj[0] = arg1;
-                        return obj;
-                      } else {
-                        closure_5 = tmp3;
-                        closure_4 = tmp5;
-                        let obj2;
-                        if (null != closure_1_19) {
-                          if (closure_1_10) {
-                            rect = { top: 0, bottom: 0, left: 0, right: 0 };
-                          } else {
-                            rect = closure_1_21;
-                          }
-                          const rect2 = closure_1_12;
-                          let left;
-                          if (closure_1_12 != null) {
-                            left = rect2.left;
-                          }
-                          let left1;
-                          if (rect != null) {
-                            left1 = rect.left;
-                          }
-                          obj2 = left1;
-                          if (left1 == null) {
-                            obj2 = 0;
-                          }
-                          obj1 = { left: null, right: null, top: null, bottom: null };
-                          obj1[0] = closure_2_18(left, obj2);
-                          let right;
-                          if (rect2 != null) {
-                            right = rect2.right;
-                          }
-                          let right1;
-                          if (rect != null) {
-                            right1 = rect.right;
-                          }
-                          c1 = right1;
-                          if (right1 == null) {
-                            c1 = 0;
-                          }
-                          obj1[1] = closure_2_18(right, c1);
-                          let top;
-                          if (rect2 != null) {
-                            top = rect2.top;
-                          }
-                          let top1;
-                          if (rect != null) {
-                            top1 = rect.top;
-                          }
-                          c2 = top1;
-                          if (top1 == null) {
-                            c2 = 0;
-                          }
-                          obj1[2] = closure_2_18(top, c2);
-                          let bottom;
-                          if (rect2 != null) {
-                            bottom = rect2.bottom;
-                          }
-                          let bottom1;
-                          if (rect != null) {
-                            bottom1 = rect.bottom;
-                          }
-                          c3 = bottom1;
-                          if (bottom1 == null) {
-                            c3 = 0;
-                          }
-                          obj2 = { type: "safeAreaUpdateEvent", data: null };
-                          const obj3 = { insets: null };
-                          obj1[3] = closure_2_18(bottom, c3);
-                          obj3[0] = obj1;
-                          obj2[1] = obj3;
-                          c7 = 1;
-                          c8 = 2;
-                          c9 = 1;
-                          const obj4 = { value: null, done: false };
-                          obj4[0] = obj8.injectJavaScript(closure_2_1(closure_2_3[28])(obj2));
-                          return obj4;
-                        }
-                        obj8 = closure_1_19;
-                      }
-                    } else {
-                      if (1 === tmp8) {
-                        c7 = 0;
-                        if (null != closure_1_32.current) {
-                          closure_1_33(closure_2_1(closure_2_3[28])(closure_1_0));
-                        }
-                      } else if (arg0 === 1) {
-                        c9 = 3;
-                        throw arg1;
-                      } else if (arg0 !== 2) {
-                        c7 = 0;
-                      }
-                      c7 = 0;
+                  return { value: "HermesInternal", done: null };
+                }
+              } else {
+                try {
+                  c9 = 2;
+                  if (0 === c8) {
+                    if (arg0 === 1) {
                       c9 = 3;
-                      obj = { value: null, done: true };
-                      obj[0] = arg1;
-                      return obj;
-                    }
-                    c9 = 3;
-                  } catch (tmp35) {
-                    closure_6 = tmp35;
-                    if (tmp4 === c7) {
-                      c9 = tmp2;
-                      throw tmp35;
+                      throw value;
+                    } else if (arg0 === 2) {
+                      c9 = 3;
+                      const obj3 = { value, done: true };
+                      return obj3;
                     } else {
-                      c8 = tmp;
+                      closure_5 = tmp3;
+                      closure_4 = tmp5;
+                      closure_132_0 = undefined;
+                      if (null != memo) {
+                        if (isPipOrGridMode) {
+                          rect = { top: 0, bottom: 0, left: 0, right: 0 };
+                        } else {
+                          rect = closure_1_21;
+                        }
+                        const rect2 = safeAreasConfig;
+                        let left;
+                        if (safeAreasConfig != null) {
+                          left = rect2.left;
+                        }
+                        let left1;
+                        if (rect != null) {
+                          left1 = rect.left;
+                        }
+                        c0 = left1;
+                        if (left1 == null) {
+                          c0 = 0;
+                        }
+                        const rect1 = { left: closure_2_18(left, c0), right: null, top: null, bottom: null };
+                        let right;
+                        if (rect2 != null) {
+                          right = rect2.right;
+                        }
+                        let right1;
+                        if (rect != null) {
+                          right1 = rect.right;
+                        }
+                        c1 = right1;
+                        if (right1 == null) {
+                          c1 = 0;
+                        }
+                        rect1.right = closure_2_18(right, c1);
+                        let top;
+                        if (rect2 != null) {
+                          top = rect2.top;
+                        }
+                        let top1;
+                        if (rect != null) {
+                          top1 = rect.top;
+                        }
+                        c2 = top1;
+                        if (top1 == null) {
+                          c2 = 0;
+                        }
+                        rect1.top = closure_2_18(top, c2);
+                        let bottom;
+                        if (rect2 != null) {
+                          bottom = rect2.bottom;
+                        }
+                        let bottom1;
+                        if (rect != null) {
+                          bottom1 = rect.bottom;
+                        }
+                        c3 = bottom1;
+                        if (bottom1 == null) {
+                          c3 = 0;
+                        }
+                        const obj4 = { type: "safeAreaUpdateEvent", data: null };
+                        const obj5 = { insets: null };
+                        rect1.bottom = closure_2_18(bottom, c3);
+                        obj5.insets = rect1;
+                        obj4.data = obj5;
+                        closure_132_0 = obj4;
+                        c7 = 1;
+                        c8 = 2;
+                        c9 = 1;
+                        const obj6 = { value: obj8.injectJavaScript(getPostMessageJavaScriptDefault(obj4)), done: false };
+                        return obj6;
+                      }
+                      obj8 = memo;
                     }
+                  } else {
+                    if (1 === tmp8) {
+                      c7 = 0;
+                      if (null != ref.current) {
+                        callback4(getPostMessageJavaScriptDefault(closure_132_0));
+                      }
+                    } else if (arg0 === 1) {
+                      c9 = 3;
+                      throw value;
+                    } else if (arg0 !== 2) {
+                      c7 = 0;
+                    }
+                    c7 = 0;
+                    c9 = 3;
+                    const obj = { value, done: true };
+                    return obj;
+                  }
+                  c9 = 3;
+                } catch (tmp35) {
+                  closure_6 = tmp35;
+                  if (tmp4 === c7) {
+                    c9 = tmp2;
+                    throw tmp35;
+                  } else {
+                    c8 = tmp;
                   }
                 }
-              });
-              closure_0 = tmp;
-              const apply = tmp.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
               }
-              return applyArgumentsResult;
-            }
+            };
             (function tryInjectJavaScript() {
               const self = this;
-              const apply = _tryInjectJavaScript.apply;
+              const apply = closure_0.apply;
               if (typeof apply === "unknown") {
                 let applyArgumentsResult = HermesBuiltin.applyArguments(self);
               } else {
@@ -772,19 +710,19 @@ class BaseActivityWebView {
               if (null != left.override) {
                 _Math2 = Math;
                 left = left.override;
-                bound = require("module_0");
+                bound = Math.max(0, left);
               } else {
                 bound = num;
                 if (null != left.offset) {
                   _Math = Math;
-                  bound = require("module_0");
+                  bound = Math.max(0, num + left.offset);
                 }
               }
               tmp47 = bound;
             }
           }
-          obj2 = { left: null, right: null, top: null, bottom: null };
-          obj2[0] = num2;
+          rect1 = { left: null, right: null, top: null, bottom: null };
+          rect1.left = num2;
           right = undefined;
           if (safeAreasConfig != null) {
             right = safeAreasConfig.right;
@@ -806,18 +744,18 @@ class BaseActivityWebView {
               if (null != right.override) {
                 _Math4 = Math;
                 right = right.override;
-                bound1 = require("module_0");
+                bound1 = Math.max(0, right);
               } else {
                 bound1 = num5;
                 if (null != right.offset) {
                   _Math3 = Math;
-                  bound1 = require("module_0");
+                  bound1 = Math.max(0, num5 + right.offset);
                 }
               }
               tmp50 = bound1;
             }
           }
-          obj2[1] = num6;
+          rect1.right = num6;
           top = undefined;
           if (safeAreasConfig != null) {
             top = safeAreasConfig.top;
@@ -839,18 +777,18 @@ class BaseActivityWebView {
               if (null != top.override) {
                 _Math6 = Math;
                 top = top.override;
-                bound2 = require("module_0");
+                bound2 = Math.max(0, top);
               } else {
                 bound2 = num9;
                 if (null != top.offset) {
                   _Math5 = Math;
-                  bound2 = require("module_0");
+                  bound2 = Math.max(0, num9 + top.offset);
                 }
               }
               tmp53 = bound2;
             }
           }
-          obj2[2] = num10;
+          rect1.top = num10;
           bottom = undefined;
           if (safeAreasConfig != null) {
             bottom = safeAreasConfig.bottom;
@@ -872,31 +810,31 @@ class BaseActivityWebView {
               if (null != bottom.override) {
                 _Math8 = Math;
                 bottom = bottom.override;
-                bound3 = require("module_0");
+                bound3 = Math.max(0, bottom);
               } else {
                 bound3 = num13;
                 if (null != bottom.offset) {
                   _Math7 = Math;
-                  bound3 = require("module_0");
+                  bound3 = Math.max(0, num13 + bottom.offset);
                 }
               }
               tmp56 = bound3;
             }
           }
-          obj2[3] = num14;
+          rect1.bottom = num14;
           if (tmp32) {
-            tmp2Result1 = require("_createWebviewHtmlFile");
-            injectedJavascriptForIOS = tmp2Result1.createInjectedJavascriptForIOS(obj2);
+            tmp2Result1 = tmp2(tmp3[19]);
+            injectedJavascriptForIOS = tmp2Result1.createInjectedJavascriptForIOS(rect1);
           }
           tmp59Result = null;
           if (null != str) {
             tmp59 = guildId;
-            obj3 = { style: null, ref: null, source: null, androidAssetLoaderConfig: null, originWhitelist: null, overScrollMode: "never", scrollEnabled: false, cacheEnabled: true, onError: null, onContentProcessDidTerminate: null, onRenderProcessGone: null, webViewKey: null, temporaryParentNodeTag: null, messagingWithWebViewKeyEnabled: null, onMessage: null, allowFileAccess: null, injectedJavaScript: null, injectedJavaScriptForMainFrameOnly: false, onShouldStartLoadWithRequest: null, mediaPlaybackRequiresUserAction: false, ignoreSilentHardwareSwitch: null, allowsInlineMediaPlayback: true, minimumFontSize: 1, bounces: false, allowsProtectedMedia: true };
-            obj3[0] = tmp.webView;
-            obj3[1] = ref;
-            obj4 = { uri: null };
-            obj4[0] = null;
-            obj3[2] = obj4;
+            obj14 = { style: null, ref: null, source: null, androidAssetLoaderConfig: null, originWhitelist: null, overScrollMode: "never", scrollEnabled: false, cacheEnabled: true, onError: null, onContentProcessDidTerminate: null, onRenderProcessGone: null, webViewKey: null, temporaryParentNodeTag: null, messagingWithWebViewKeyEnabled: null, onMessage: null, allowFileAccess: null, injectedJavaScript: null, injectedJavaScriptForMainFrameOnly: false, onShouldStartLoadWithRequest: null, mediaPlaybackRequiresUserAction: false, ignoreSilentHardwareSwitch: null, allowsInlineMediaPlayback: true, minimumFontSize: 1, bounces: false, allowsProtectedMedia: true };
+            obj14.style = tmp.webView;
+            obj14.ref = ref;
+            obj15 = { uri: null };
+            obj15.uri = null;
+            obj14.source = obj15;
             if ("" === url.port) {
               host = url.host;
             } else {
@@ -904,37 +842,37 @@ class BaseActivityWebView {
               str6 = ":";
               host = "" + url.hostname + ":" + url.port;
             }
-            obj5 = { domain: null, httpAllowed: null, pathHandlers: null };
-            obj5[0] = host;
+            obj16 = { domain: null, httpAllowed: null, pathHandlers: null };
+            obj16.domain = host;
             str7 = "http:";
-            obj5[1] = "http:" === url.protocol;
-            obj6 = { type: "internal", path: null, directory: null };
+            obj16.httpAllowed = "http:" === url.protocol;
+            obj17 = { type: "internal", path: null, directory: null };
             _HermesInternal4 = HermesInternal;
             str8 = "/";
-            obj6[1] = "/" + first1 + "/";
+            obj17.path = "/" + first1 + "/";
             num17 = 0;
-            obj6[2] = require("module_0");
+            obj17.directory = str.substring(0, str.lastIndexOf("/"));
             items12 = [];
-            items12[0] = obj6;
-            obj5[2] = items12;
-            obj3[3] = obj5;
-            obj3[4] = ["*"];
-            obj3[8] = callback;
-            obj3[9] = callback2;
-            obj3[10] = callback1;
-            obj3[11] = webViewKey;
-            obj3[12] = context;
-            obj3[13] = null != webViewKey;
-            obj3[14] = callback5;
-            obj3[15] = tmp32;
-            obj3[16] = injectedJavascriptForIOS;
+            items12[0] = obj17;
+            obj16.pathHandlers = items12;
+            obj14.androidAssetLoaderConfig = obj16;
+            obj14.originWhitelist = ["*"];
+            obj14.onError = callback;
+            obj14.onContentProcessDidTerminate = callback2;
+            obj14.onRenderProcessGone = callback1;
+            obj14.webViewKey = webViewKey;
+            obj14.temporaryParentNodeTag = context;
+            obj14.messagingWithWebViewKeyEnabled = null != webViewKey;
+            obj14.onMessage = callback5;
+            obj14.allowFileAccess = tmp32;
+            obj14.injectedJavaScript = injectedJavascriptForIOS;
             tmp60 = undefined;
             if (tmp32) {
               tmp60 = callback3;
             }
-            obj3[18] = tmp60;
-            obj3[20] = ignoreSilentHardwareSwitch;
-            tmp59Result = tmp59(require("WebView").WebView, obj3);
+            obj14.onShouldStartLoadWithRequest = tmp60;
+            obj14.ignoreSilentHardwareSwitch = ignoreSilentHardwareSwitch;
+            tmp59Result = tmp59(tmp2(tmp3[14]).WebView, obj14);
           }
           return tmp59Result;
         }
@@ -960,73 +898,57 @@ class BaseActivityWebView {
     return;
   }
 }
-({ ActivityPlatform: c9, DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY: c10 } = items3);
-({ ComponentActions: unpackModuleId, AnalyticEvents: closure_12 } = ME);
-let closure_15 = createCacheKey.createStyles({ webView: { backgroundColor: "transparent" } });
-let closure_16 = new timestampDefault("EmbeddedActivityWebView");
-let closure_17 = set.isIOS();
-const result = set.fileFinishedImporting("modules/activities/native/EmbeddedActivityWebView.tsx");
+const Linking = fn(17).Linking;
+let Constants = fn(1920);
+({ ActivityPlatform: closure_9, DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY: c10 } = Constants);
+Constants = fn(1074);
+({ ComponentActions: closure_11, AnalyticEvents: closure_12 } = Constants);
+const TransportTypes = fn(4479).TransportTypes;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_15 = createStyles.createStyles({ webView: { backgroundColor: "transparent" } });
+let closure_16 = new LoggerDefault("EmbeddedActivityWebView");
+const PlatformUtils = fn(1115);
+let closure_17 = PlatformUtils.isIOS();
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/native/EmbeddedActivityWebView.tsx");
 
 export default function EmbeddedActivityWebView(channelId) {
   channelId = channelId.channelId;
   const currentEmbeddedActivity = channelId.currentEmbeddedActivity;
   const applicationId = channelId.applicationId;
-  const merged = Object.assign(channelId, Object.create(null));
-  let first;
-  closure_4 = undefined;
-  let obj = React;
-  const tmp2 = callback(React.useState(false), 2);
-  first = tmp2[0];
-  const tmp4 = currentEmbeddedActivity(first[30])(first);
+  const merged = Object.assign(channelId, Object.assign({ channelId: 0, currentEmbeddedActivity: 0, applicationId: 0 }));
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
+  const hasInvalidUrlError = tmp2[0];
+  const tmp4 = currentEmbeddedActivity(hasInvalidUrlError[30])(hasInvalidUrlError);
   closure_4 = tmp4;
-  obj = {};
+  let obj2 = {};
   if (null != currentEmbeddedActivity) {
     if (null != currentEmbeddedActivity.customId) {
-      obj.custom_id = currentEmbeddedActivity.customId;
+      obj2.custom_id = currentEmbeddedActivity.customId;
     }
     if (null != currentEmbeddedActivity.referrerId) {
-      obj.referrer_id = currentEmbeddedActivity.referrerId;
+      obj2.referrer_id = currentEmbeddedActivity.referrerId;
     }
   }
-  const items = [first, tmp4, channelId, applicationId, currentEmbeddedActivity];
-  const effect = obj.useEffect(() => {
+  const items = [hasInvalidUrlError, tmp4, channelId, applicationId, currentEmbeddedActivity];
+  const effect = noop.useEffect(() => {
     let tmp = !closure_4;
     if (!closure_4) {
       tmp = first;
     }
     if (tmp) {
       if (null != channelId) {
-        let obj = currentEmbeddedActivity(first[31]);
-        const participant = obj.selectParticipant(tmp2, null);
+        const participant = ChannelRTCActionCreatorsDefault.selectParticipant(tmp2, null);
       }
       let _location;
       if (currentEmbeddedActivity != null) {
         _location = currentEmbeddedActivity.location;
       }
-      obj = { location: null, applicationId: null, showFeedback: false };
-      obj[0] = _location;
-      obj[1] = applicationId;
-      currentEmbeddedActivity(first[32]).leaveActivity(obj);
-      const obj2 = currentEmbeddedActivity(first[32]);
+      const obj3 = { location: _location, applicationId, showFeedback: false };
+      EmbeddedActivitiesNativeManagerDefault.leaveActivity(obj3);
     }
   }, items);
-  obj = {
-    hasIframeId() {
-      return currentEmbeddedActivity(first[32]).hasIframeId();
-    },
-    getOrCreateIframeId() {
-      return currentEmbeddedActivity(first[32]).getOrCreateIframeId();
-    },
-    releaseIframeId() {
-      return currentEmbeddedActivity(first[32]).releaseIframeId();
-    },
-    hasInvalidUrlError: first,
-    setHasInvalidUrlError: tmp2[1],
-    hadInvalidUrlError: tmp4,
-    deepLinkQueryParams: obj,
-    applicationId,
-    channelId
-  };
   const merged1 = Object.assign(merged);
   return <BaseActivityWebView hasIframeId={function hasIframeId() {
     return currentEmbeddedActivity(first[32]).hasIframeId();
@@ -1034,11 +956,11 @@ export default function EmbeddedActivityWebView(channelId) {
     return currentEmbeddedActivity(first[32]).getOrCreateIframeId();
   }} releaseIframeId={function releaseIframeId() {
     return currentEmbeddedActivity(first[32]).releaseIframeId();
-  }} hasInvalidUrlError={first} setHasInvalidUrlError={tmp2[1]} hadInvalidUrlError={tmp4} deepLinkQueryParams={obj} applicationId={applicationId} channelId={channelId} />;
+  }} hasInvalidUrlError={hasInvalidUrlError} setHasInvalidUrlError={tmp2[1]} hadInvalidUrlError={tmp4} deepLinkQueryParams={obj2} applicationId={applicationId} channelId={channelId} />;
 };
 export { BaseActivityWebView };
 export const useHasInvalidUrlErrorState = function useHasInvalidUrlErrorState() {
-  const tmp = callback(React.useState(false), 2);
+  const tmp = _slicedToArray(noop.useState(false), 2);
   const first = tmp[0];
   return { hasInvalidUrlError: first, setHasInvalidUrlError: tmp[1], hadInvalidUrlError: usePreviousDefault(first) };
 };

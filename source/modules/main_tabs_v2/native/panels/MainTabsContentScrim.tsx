@@ -1,43 +1,46 @@
-// Module ID: 16530
-// Function ID: 16531
+// Module ID: 16561
+// Function ID: 16562
 // Name: MainTabsContentScrim
-// Dependencies: [17, 21, 4560, 576, 4296, 2]
+// Dependencies: [17, 21, 4574, 576, 4310, 2]
 // Exports: MainTabsContentScrim
 
-// Module 16530 (MainTabsContentScrim)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 16561 (MainTabsContentScrim)
+import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import ThemesDefault from "Themes" /* 576 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import createStyles from "createStyles" /* 4574 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
 let obj = { scrim: null };
-obj = {};
-const merged = Object.assign(get_ActivityIndicator.StyleSheet.absoluteFillObject);
-obj.zIndex = 5;
-obj.backgroundColor = ThemesDefault.colors.BACKGROUND_SCRIM;
-obj[0] = obj;
-let closure_4 = createCacheKey.createStyles(obj);
-let closure_5 = { code: "function MainTabsContentScrimTsx1(){const{interpolate,translateX,maxWidth,Extrapolation}=this.__closure;return{opacity:interpolate(translateX.get(),[maxWidth,0],[0,0.5],Extrapolation.CLAMP)};}" };
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/panels/MainTabsContentScrim.tsx");
+const obj2 = {};
+const merged = Object.assign(_mod17.StyleSheet.absoluteFillObject);
+obj2.zIndex = 5;
+obj2.backgroundColor = nativeDefault.colors.BACKGROUND_SCRIM;
+obj.scrim = obj2;
+let closure_4 = createStyles.createStyles(obj);
+const __initData = { code: "function MainTabsContentScrimTsx1(){const{interpolate,translateX,maxWidth,Extrapolation}=this.__closure;return{opacity:interpolate(translateX.get(),[maxWidth,0],[0,0.5],Extrapolation.CLAMP)};}" };
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/MainTabsContentScrim.tsx");
 
 export const MainTabsContentScrim = function MainTabsContentScrim(translateX) {
   translateX = translateX.translateX;
   const maxWidth = translateX.maxWidth;
-  let obj = translateX(4296);
+  const tmp = closure_4();
   const fn = function c() {
     const obj = { opacity: null };
-    const value = translateX.get();
+    value = translateX.get();
     const items = [maxWidth, 0];
-    obj[0] = translateX(closure_1_2[4]).interpolate(value, items, [0, 0.5], translateX(closure_1_2[4]).Extrapolation.CLAMP);
+    obj.opacity = ReanimatedRexport.interpolate(value, items, [0, 0.5], ReanimatedRexport.Extrapolation.CLAMP);
     return obj;
   };
-  obj = { interpolate: translateX(4296).interpolate, translateX, maxWidth, Extrapolation: translateX(4296).Extrapolation };
-  fn.__closure = obj;
+  let obj = translateX(4310);
+  fn.__closure = { interpolate: translateX(4310).interpolate, translateX, maxWidth, Extrapolation: translateX(4310).Extrapolation };
   fn.__workletHash = 7933670426250;
-  fn.__initData = closure_5;
+  fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  const style = [callback().scrim, animatedStyle];
-  return jsx(maxWidth(4296).View, { style, pointerEvents: "none" });
+  const obj3 = { style: null, pointerEvents: "none" };
+  let items = [tmp.scrim, animatedStyle];
+  obj3.style = items;
+  return jsx(maxWidth(4310).View, { style: null, pointerEvents: "none" });
 };

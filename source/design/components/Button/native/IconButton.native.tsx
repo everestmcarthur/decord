@@ -1,65 +1,59 @@
-// Module ID: 8097
-// Function ID: 8098
+// Module ID: 8113
+// Function ID: 8114
 // Name: IconButton
-// Dependencies: [19, 21, 4560, 576, 4983, 8098, 4556, 2]
+// Dependencies: [19, 21, 4574, 576, 4997, 8114, 4570, 2]
 
-// Module 8097 (IconButton)
-import ThemesDefault from "Themes" /* 576 */;
-import Text from "Text" /* 4556 */;
-import BaseButton from "BaseButton" /* 4983 */;
-import BaseIconButton from "BaseIconButton" /* 8098 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 8113 (IconButton)
+import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Button_BaseButton from "Button/BaseButton" /* 4997 */;
+import BaseIconButton from "BaseIconButton" /* 8114 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = createCacheKey.createStyles((arg0) => {
-  const labelPressable = { paddingBottom: ThemesDefault.space.PX_4, gap: ThemesDefault.space.PX_8, alignItems: "center", alignSelf: "center", flexGrow: null };
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4574);
+let closure_5 = createStyles.createStyles((arg0) => {
+  const labelPressable = { paddingBottom: nativeDefault.space.PX_4, gap: nativeDefault.space.PX_8, alignItems: "center", alignSelf: "center", flexGrow: null };
   let num = 0;
   if (arg0) {
     num = 1;
   }
-  labelPressable[4] = num;
+  labelPressable.flexGrow = num;
   return { labelPressable, label: { textAlign: "center" } };
 });
-const forwardRefResult = importAllResult.forwardRef((grow) => {
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Button/native/IconButton.native.tsx");
+
+export const IconButton = noop.forwardRef((grow, ref) => {
   ({ label, accessibilityLabel, maxFontSizeMultiplier, accessibilityHint } = grow);
-  const merged = Object.assign(grow, Object.create(null));
-  const tmp2 = callback3(grow.grow);
+  const merged = Object.assign(grow, Object.assign({ label: 0, grow: 0, accessibilityLabel: 0, maxFontSizeMultiplier: 0, accessibilityHint: 0 }));
+  const tmp2 = closure_5(grow.grow);
   if (null != label) {
-    let obj = { style: null };
-    obj[0] = tmp2.labelPressable;
+    const obj2 = { style: tmp2.labelPressable };
     const merged1 = Object.assign(merged);
-    obj.variant = "none";
-    obj.accessibilityLabel = accessibilityLabel;
-    obj.accessibilityHint = accessibilityHint;
-    obj = { ref: null };
-    obj[0] = arg1;
+    obj2.variant = "none";
+    obj2.accessibilityLabel = accessibilityLabel;
+    obj2.accessibilityHint = accessibilityHint;
+    const obj3 = { ref };
     const merged2 = Object.assign(merged);
-    obj.accessibilityRole = "none";
-    obj.accessibilityLabel = "";
-    obj.size = "lg";
-    obj.maxFontSizeMultiplier = maxFontSizeMultiplier;
-    const items = [callback(BaseIconButton.BaseIconButton, obj), ];
-    obj1 = { style: null, variant: "text-xs/medium", color: "interactive-text-default", maxFontSizeMultiplier: null, children: null };
-    obj1[0] = tmp2.label;
-    obj1[3] = maxFontSizeMultiplier;
-    obj1[4] = label;
-    items[1] = callback(Text.Text, obj1);
-    obj.children = items;
-    let tmp9 = callback2(BaseButton.BaseButton, obj);
+    obj3.accessibilityRole = "none";
+    obj3.accessibilityLabel = "";
+    obj3.size = "lg";
+    obj3.maxFontSizeMultiplier = maxFontSizeMultiplier;
+    const items = [React3(BaseIconButton.BaseIconButton, obj3), ];
+    const obj4 = { style: tmp2.label, variant: "text-xs/medium", color: "interactive-text-default", maxFontSizeMultiplier, children: label };
+    items[1] = React3(Text_Text.Text, obj4);
+    obj2.children = items;
+    let tmp9 = React4(Button_BaseButton.BaseButton, obj2);
   } else {
-    obj = { ref: null };
-    obj[0] = arg1;
+    const obj = { ref };
     const merged3 = Object.assign(merged);
     obj.accessibilityLabel = accessibilityLabel;
     obj.accessibilityHint = accessibilityHint;
     obj.maxFontSizeMultiplier = maxFontSizeMultiplier;
-    tmp9 = callback(BaseIconButton.BaseIconButton, obj);
+    tmp9 = React3(BaseIconButton.BaseIconButton, obj);
   }
   return tmp9;
 });
-const result = require("set").fileFinishedImporting("design/components/Button/native/IconButton.native.tsx");
-
-export const IconButton = forwardRefResult;

@@ -1,13 +1,13 @@
-// Module ID: 8689
-// Function ID: 8690
-// Name: set
+// Module ID: 8717
+// Function ID: 8718
+// Name: GameUtils
 // Dependencies: [2]
 
-// Module 8689 (set)
-import set from "set" /* 2 */;
+// Module 8717 (GameUtils)
+import size from "module_2" /* 2 */;
 
 let c0 = "not supported";
-const result = set.fileFinishedImporting("utils/GameUtils.native.tsx");
+const result = size.fileFinishedImporting("utils/GameUtils.native.tsx");
 
 export default {
   waitSubscribed() {
@@ -29,11 +29,11 @@ export default {
     return Promise.resolve(false);
   },
   launch() {
-    error = new Error(c0);
+    const error = new Error(c0);
     return Promise.reject(error);
   },
   launchDispatchApplication() {
-    error = new Error(c0);
+    const error = new Error(c0);
     return Promise.reject(error);
   },
   removeShortcuts() {
@@ -43,7 +43,7 @@ export default {
     return Promise.resolve(false);
   },
   launchGame() {
-    error = new Error(c0);
+    const error = new Error(c0);
     return Promise.reject(error);
   },
   isProtocolRegistered() {

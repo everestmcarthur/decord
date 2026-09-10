@@ -1,217 +1,196 @@
-// Module ID: 16119
-// Function ID: 16120
-// Name: getChannelMode
-// Dependencies: [109, 19, 17, 4600, 4209, 1371, 1074, 1964, 4742, 21, 4560, 576, 5441, 12383, 1396, 5587, 16120, 5075, 5028, 504, 1178, 5007, 16121, 4713, 1100, 2]
+// Module ID: 16149
+// Function ID: 16150
+// Name: ChannelItem
+// Dependencies: [109, 19, 17, 4614, 4222, 1371, 1074, 1964, 4756, 21, 4574, 576, 5455, 12409, 1396, 5601, 16150, 5089, 5042, 504, 1178, 5021, 16151, 4727, 1100, 2]
 
-// Module 16119 (getChannelMode)
-import ThemesDefault from "Themes" /* 576 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
-import getChannelIcon from "getChannelIcon" /* 5028 */;
-import BookCheckIcon2 from "BookCheckIcon" /* 5075 */;
-import BaseChannelSubtitle from "BaseChannelSubtitle" /* 12383 */;
-import registerAssetDefault from "registerAsset" /* 16120 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "sortActivity" /* 4600 */;
-import closure_7 from "markAllUserIdListsStale" /* 4209 */;
-import closure_8 from "mergeGuildAvatar" /* 1371 */;
-import ME from "ME" /* 1074 */;
-import { StaticChannelRoute } from "set" /* 1964 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4742 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
-import set from "set" /* 2 */;
+// Module 16149 (ChannelItem)
+import nativeDefault from "native" /* 576 */;
+import router_utils from "router_utils" /* 1100 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5042 */;
+import BookCheckIcon2 from "BookCheckIcon" /* 5089 */;
+import BaseChannelItem from "BaseChannelItem" /* 12409 */;
+import _modDef16150 from "module_16150" /* 16150 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "module_19" /* 19 */;
+import PresenceStore from "PresenceStore" /* 4614 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+const require = globalThis.__r;
+
+require = fn;
 function getChannelMode(selected) {
   ({ unread, channel } = selected);
   if (selected.selected) {
-    const ChannelModes = BaseChannelSubtitle.ChannelModes;
+    const ChannelModes = BaseChannelItem.ChannelModes;
     if (!isGuildVocalResult) {
       const SELECTED = ChannelModes.SELECTED;
     }
     isGuildVocalResult = channel.isGuildVocal();
   } else {
     if (tmp2) {
-      let DEFAULT = BaseChannelSubtitle.ChannelModes.LOCKED;
+      let DEFAULT = BaseChannelItem.ChannelModes.LOCKED;
     } else if (tmp) {
-      DEFAULT = BaseChannelSubtitle.ChannelModes.MUTED;
+      DEFAULT = BaseChannelItem.ChannelModes.MUTED;
     } else if (unread) {
       if (selected.resolvedUnreadSetting === UnreadSetting.ALL_MESSAGES) {
-        let UNREAD_LESS_IMPORTANT = BaseChannelSubtitle.ChannelModes.UNREAD_IMPORTANT;
+        let UNREAD_LESS_IMPORTANT = BaseChannelItem.ChannelModes.UNREAD_IMPORTANT;
       } else {
-        UNREAD_LESS_IMPORTANT = BaseChannelSubtitle.ChannelModes.UNREAD_LESS_IMPORTANT;
+        UNREAD_LESS_IMPORTANT = BaseChannelItem.ChannelModes.UNREAD_LESS_IMPORTANT;
       }
     } else {
-      DEFAULT = BaseChannelSubtitle.ChannelModes.DEFAULT;
+      DEFAULT = BaseChannelItem.ChannelModes.DEFAULT;
     }
     return DEFAULT;
   }
 }
 function ChannelIcon(arg0) {
-  const tmp = callback3();
+  const tmp = closure_16();
   ({ channel, locked, isChannelLive, selected } = arg0);
   if (channel.type === ChannelTypes.DM) {
-    let obj = { userId: null, selected: null };
-    obj[0] = channel.getRecipientId();
+    const obj4 = { userId: channel.getRecipientId(), selected: null };
     if (selected == null) {
       selected = false;
     }
-    obj[1] = selected;
-    return callback2(DMChannelIcon, obj);
+    obj4.selected = selected;
+    return map1(DMChannelIcon, obj4);
   } else {
     if (channel.type === tmp4.GROUP_DM) {
-      obj = getAvatarURLDefault;
-      obj = { id: null, icon: null, applicationId: null, size: 20 };
-      ({ id: obj2[0], icon: obj2[1] } = channel);
-      obj[2] = channel.getApplicationId();
-      const channelIconSource = obj.getChannelIconSource(obj);
+      const obj6 = { id: null, icon: null, applicationId: null, size: 20 };
+      ({ id: obj2.id, icon: obj2.icon } = channel);
+      obj6.applicationId = channel.getApplicationId();
+      const channelIconSource = AvatarUtilsDefault.getChannelIconSource(obj6);
       if (null != channelIconSource) {
-        obj1 = { style: null, source: null };
-        obj1[0] = tmp.groupDmAvatar;
-        obj1[1] = channelIconSource;
-        return callback2(tmp5(5587), obj1);
+        const obj7 = { style: tmp.groupDmAvatar, source: channelIconSource };
+        return map1(tmp5(5601), obj7);
       }
       tmp5 = importDefault;
     }
     if (tmp2) {
-      let tmp12 = registerAssetDefault;
+      let tmp12 = _modDef16150;
       let BookCheckIcon = BookCheckIcon2.BookCheckIcon;
       let tmp9 = require;
     } else {
       tmp9 = require;
-      let obj2 = getChannelIcon;
-      obj2 = { isRulesChannel: false, locked: null };
-      obj2[1] = locked;
-      const channelIcon = obj2.getChannelIcon(channel, obj2);
-      let obj4 = getChannelIcon;
-      const obj3 = { isRulesChannel: false, locked: null };
-      obj3[1] = locked;
-      BookCheckIcon = obj4.getChannelIconComponent(channel, obj3);
+      const obj8 = { isRulesChannel: false, locked };
+      const channelIcon = utils_ChannelUtils.getChannelIcon(channel, obj8);
+      const obj9 = { isRulesChannel: false, locked };
+      BookCheckIcon = utils_ChannelUtils.getChannelIconComponent(channel, obj9);
       tmp12 = channelIcon;
     }
-    obj4 = { mode: null, source: null, isChannelLive: null, style: null };
-    obj4[0] = tmp3;
-    obj4[1] = tmp12;
-    obj4[2] = isChannelLive;
+    const obj10 = { mode: tmp3, source: tmp12, isChannelLive, style: null };
     let channelIconLive;
     if (isChannelLive) {
       channelIconLive = tmp.channelIconLive;
     }
-    obj4[3] = channelIconLive;
+    obj10.style = channelIconLive;
     if (null != BookCheckIcon) {
-      const obj5 = { IconComponent: null };
-      obj5[0] = BookCheckIcon;
-      let obj6 = obj5;
+      const obj11 = { IconComponent: BookCheckIcon };
+      let obj19 = obj11;
     } else {
-      obj6 = {};
+      obj19 = {};
     }
-    const merged = Object.assign(obj6);
-    return callback2(tmp9(12383).BaseChannelIcon, obj4);
+    const merged = Object.assign(obj19);
+    return map1(tmp9(12409).BaseChannelIcon, obj10);
   }
 }
 function DMChannelIcon(userId) {
   userId = userId.userId;
   let avatarStatusSelected = userId.selected;
-  const tmp = callback3();
-  let obj = userId(504);
-  const items = [closure_8];
+  const tmp = closure_16();
+  const items = [UserStore];
   const items1 = [userId];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getUser(userId), items1);
-  const items2 = [closure_6];
+  const stateFromStores = userId(504).useStateFromStores(items, () => UserStore.getUser(userId), items1);
+  const obj = userId(504);
+  const items2 = [PresenceStore];
   const items3 = [userId];
-  const stateFromStoresObject = userId(504).useStateFromStoresObject(items2, () => ({ status: closure_1_6.getStatus(userId), isMobileOnline: closure_1_6.isMobileOnline(userId), isVROnline: closure_1_6.isVROnline(userId) }), items3);
+  const stateFromStoresObject = userId(504).useStateFromStoresObject(items2, () => ({ status: PresenceStore.getStatus(userId), isMobileOnline: PresenceStore.isMobileOnline(userId), isVROnline: PresenceStore.isVROnline(userId) }), items3);
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
-  obj = { user: stateFromStores, guildId: "o", size: 0, style: 7, status: 4, isMobileOnline: "shims - shim_star_lb", isVROnline: 1, statusStyle: null };
-  obj[2] = userId(1178).AvatarSizes.XSMALL_20;
-  obj[3] = tmp.dmAvatar;
-  obj[4] = status;
-  obj[5] = isMobileOnline;
-  obj[6] = isVROnline;
+  const obj3 = { user: stateFromStores, guildId: "o", size: userId(1178).AvatarSizes.XSMALL_20, style: tmp.dmAvatar, status, isMobileOnline, isVROnline, statusStyle: null };
   const items4 = [tmp.avatarStatus, ];
   if (avatarStatusSelected) {
     avatarStatusSelected = tmp.avatarStatusSelected;
   }
   items4[1] = avatarStatusSelected;
-  obj[7] = items4;
-  return closure_13(userId(1178).Avatar, obj);
+  obj3.statusStyle = items4;
+  return closure_13(userId(1178).Avatar, obj3);
 }
 let closure_3 = ["channel", "subtitle", "hideIcon", "children", "textStyle", "channelInfo", "onPress"];
-const ChannelTypes = ME.ChannelTypes;
-const Routes = ME.Routes;
+const View = fn(17).View;
+const Constants = fn(1074);
+const ChannelTypes = Constants.ChannelTypes;
+const Routes = Constants.Routes;
+const StaticChannelRoute = fn(1964).StaticChannelRoute;
+const UnreadSetting = fn(4756).UnreadSetting;
+const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let items = [, ];
 ({ GUILD_VOICE: arr[0], GUILD_STAGE_VOICE: arr[1] } = ChannelTypes);
-let set = new Set(items);
-let obj = { channelIconLive: null, dmAvatar: null, avatarStatus: null, groupDmAvatar: null, channelInfoContainer: null, avatarStatusSelected: null };
-obj = { tintColor: ThemesDefault.unsafe_rawColors.GREEN_360 };
-obj[0] = obj;
-obj[1] = { marginRight: 8 };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-obj[2] = createCacheKey;
-obj[3] = { width: 20, height: 20, borderRadius: 10, marginRight: 8 };
-obj[4] = { paddingStart: 4 };
-obj[5] = { backgroundColor: require("result").DARK_393C42_LIGHT_DEE0E4 };
-let closure_16 = createCacheKey.createStyles(obj);
-let obj2 = { backgroundColor: require("result").DARK_393C42_LIGHT_DEE0E4 };
-const result = set.fileFinishedImporting("modules/guild_sidebar/native/ChannelItem.tsx");
+const set = new Set(items);
+const createStyles = fn(4574);
+let obj = { channelIconLive: { tintColor: nativeDefault.unsafe_rawColors.GREEN_360 }, dmAvatar: { marginRight: 8 }, avatarStatus: null, groupDmAvatar: null, channelInfoContainer: null, avatarStatusSelected: null };
+let obj3 = { tintColor: nativeDefault.unsafe_rawColors.GREEN_360 };
+obj.avatarStatus = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj.groupDmAvatar = { width: 20, height: 20, borderRadius: 10, marginRight: 8 };
+obj.channelInfoContainer = { paddingStart: 4 };
+let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj.avatarStatusSelected = { backgroundColor: fn(5455).DARK_393C42_LIGHT_DEE0E4 };
+let closure_16 = createStyles.createStyles(obj);
+let obj5 = { backgroundColor: fn(5455).DARK_393C42_LIGHT_DEE0E4 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_sidebar/native/ChannelItem.tsx");
 
-export default importAllResult.memo((channel) => {
+export default noop.memo((channel) => {
   channel = channel.channel;
   ({ channelInfo, onPress: importDefault } = channel);
   ({ subtitle, hideIcon, children, textStyle } = channel);
-  const tmp = callback3();
-  const tmp2 = callback(channel, closure_3);
-  ({ isSubscriptionGated, needSubscriptionToAccess } = importDefault(needSubscriptionToAccess[21])(channel.id));
+  const tmp = closure_16();
+  const tmp2 = _objectWithoutProperties(channel, closure_3);
+  ({ isSubscriptionGated, needSubscriptionToAccess } = require("useChannelRoleSubscriptionStatus")(channel.id));
   const tmp6 = getChannelMode(channel);
   if (null != channelInfo) {
-    let obj = { style: null, children: null };
-    obj[0] = tmp.channelInfoContainer;
+    let obj = { style: tmp.channelInfoContainer, children: null };
     const items = [channelInfo, ];
     let tmp10 = null;
     if (isSubscriptionGated) {
-      obj = { locked: null };
-      obj[0] = needSubscriptionToAccess;
-      tmp10 = callback2(tmp3(tmp4[22]), obj);
+      const obj2 = { locked: needSubscriptionToAccess };
+      tmp10 = closure_13(tmp3(tmp4[22]), obj2);
     }
     items[1] = tmp10;
-    obj[1] = items;
+    obj.children = items;
     let tmp8Result = closure_14(View, obj);
-    const tmp8 = closure_14;
-    const tmp9 = View;
   } else {
     tmp8Result = null;
   }
-  obj = { mode: tmp6, unread: null, hideIcon: null, name: null, icon: null, channelInfo: null, onPress: null };
-  const tmp5 = importDefault(needSubscriptionToAccess[21])(channel.id);
-  const tmp3Result = importDefault(needSubscriptionToAccess[13]);
-  obj[1] = tmp6 === channel(needSubscriptionToAccess[13]).ChannelModes.UNREAD_IMPORTANT || tmp6 === channel(needSubscriptionToAccess[13]).ChannelModes.UNREAD_LESS_IMPORTANT;
-  obj[2] = hideIcon;
-  obj1 = { mode: tmp6, name: null, subtitle: null, textStyle: null };
+  const obj3 = { mode: tmp6, unread: null, hideIcon: null, name: null, icon: null, channelInfo: null, onPress: null };
+  const tmp5 = require("useChannelRoleSubscriptionStatus")(channel.id);
+  const tmp3Result = require("BaseChannelItem");
+  obj3.unread = tmp6 === channel(needSubscriptionToAccess[13]).ChannelModes.UNREAD_IMPORTANT || tmp6 === channel(needSubscriptionToAccess[13]).ChannelModes.UNREAD_LESS_IMPORTANT;
+  obj3.hideIcon = hideIcon;
+  const obj4 = { mode: tmp6, name: null, subtitle: null, textStyle: null };
   const tmp15 = tmp6 === channel(needSubscriptionToAccess[13]).ChannelModes.UNREAD_IMPORTANT || tmp6 === channel(needSubscriptionToAccess[13]).ChannelModes.UNREAD_LESS_IMPORTANT;
-  obj1[1] = channel(needSubscriptionToAccess[23]).computeChannelName(channel, closure_8, closure_7);
-  obj1[2] = subtitle;
-  obj1[3] = textStyle;
-  obj[3] = callback2(channel(needSubscriptionToAccess[13]).BaseChannelName, obj1);
-  const obj2 = {};
+  obj4.name = channel(needSubscriptionToAccess[23]).computeChannelName(channel, UserStore, RelationshipStore);
+  obj4.subtitle = subtitle;
+  obj4.textStyle = textStyle;
+  obj3.name = closure_13(channel(needSubscriptionToAccess[13]).BaseChannelName, obj4);
+  const obj5 = {};
   const merged = Object.assign(channel);
-  obj2.mode = tmp6;
-  obj[4] = callback2(ChannelIcon, obj2);
-  obj[5] = tmp8Result;
-  obj[6] = function onPress(arg0) {
+  obj5.mode = tmp6;
+  obj3.icon = closure_13(ChannelIcon, obj5);
+  obj3.channelInfo = tmp8Result;
+  obj3.onPress = function onPress(arg0) {
     if (needSubscriptionToAccess) {
-      if (closure_1_15.has(channel.type)) {
-        channel(needSubscriptionToAccess[24]).transitionTo(closure_1_10.CHANNEL(channel.guild_id, closure_1_11.ROLE_SUBSCRIPTIONS));
-        const obj = channel(needSubscriptionToAccess[24]);
+      if (set.has(channel.type)) {
+        router_utils.transitionTo(Routes.CHANNEL(channel.guild_id, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
       }
     }
-    if (closure_1 != null) {
+    if (importDefault != null) {
       tmp3(arg0);
     }
   };
   const merged1 = Object.assign(tmp2);
-  obj.children = children;
-  return callback2(tmp3Result, obj);
+  obj3.children = children;
+  return closure_13(tmp3Result, obj3);
 });
 export { getChannelMode };

@@ -1,20 +1,20 @@
-// Module ID: 8007
-// Function ID: 8008
-// Name: createGuildStreamSystemMessage
-// Dependencies: [4602, 7980, 7960, 7962, 1114, 7964, 2]
+// Module ID: 8021
+// Function ID: 8022
+// Name: GuildStreamSystemMessage
+// Dependencies: [4616, 7994, 7974, 7976, 1114, 7978, 2]
 // Exports: createGuildStreamSystemMessage
 
-// Module 8007 (createGuildStreamSystemMessage)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import StreamIssueReportReasons from "StreamIssueReportReasons" /* 4602 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7960 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7962 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7964 */;
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 7980 */;
+// Module 8021 (GuildStreamSystemMessage)
+import util from "util" /* 1114 */;
+import Constants from "Constants" /* 4616 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7974 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7976 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7978 */;
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 7994 */;
+import size from "module_2" /* 2 */;
 
-const StreamTypes = StreamIssueReportReasons.StreamTypes;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildStreamSystemMessage.tsx");
+const StreamTypes = Constants.StreamTypes;
+const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildStreamSystemMessage.tsx");
 
 export const createGuildStreamSystemMessage = function createGuildStreamSystemMessage(roleStyle) {
   const message = roleStyle.message;
@@ -24,26 +24,25 @@ export const createGuildStreamSystemMessage = function createGuildStreamSystemMe
   }
   ({ channel_id, guild_id } = messageReference);
   const tmp3 = getHumanizedCallDurationDefault(message);
-  obj1 = getMessageAuthorWithProcessedColor;
-  const messageAuthorWithProcessedColor = obj1.getMessageAuthorWithProcessedColor(message);
-  let obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
-  obj = { streamType: StreamTypes.GUILD, channelId: channel_id, ownerId: message.author.id, guildId: guild_id };
-  obj1 = { ended: tmp4, content: null };
-  const intl = getSystemLocale.intl;
+  const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
+  const obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
+  const obj3 = { action: "bindJoinStream", stream: { streamType: StreamTypes.GUILD, channelId: channel_id, ownerId: message.author.id, guildId: guild_id } };
+  const obj5 = { ended: null != tmp3, content: null };
+  const intl = util.intl;
   const formatToParts = intl.formatToParts;
-  const t = getSystemLocale.t;
+  const t = util.t;
   if (null != tmp3) {
-    const obj2 = {};
+    const obj6 = {};
     const merged = Object.assign(obj);
-    obj2.duration = tmp3;
-    let formatToPartsResult = formatToParts(t.FP7rUI, obj2);
+    obj6.duration = tmp3;
+    let formatToPartsResult = formatToParts(t.FP7rUI, obj6);
   } else {
-    const obj3 = {};
+    const obj7 = {};
     const merged1 = Object.assign(obj);
-    obj3.onJoinStream = { action: "bindJoinStream", stream: obj };
-    formatToPartsResult = formatToParts(t.dMmbGk, obj3);
+    obj7.onJoinStream = obj3;
+    formatToPartsResult = formatToParts(t.dMmbGk, obj7);
   }
-  obj1[1] = formatToPartsResult;
+  obj5.content = formatToPartsResult;
   const merged2 = Object.assign(createCommonMessageDefault(roleStyle));
-  return obj1;
+  return obj5;
 };

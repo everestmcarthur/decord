@@ -1,21 +1,24 @@
-// Module ID: 10978
-// Function ID: 10979
+// Module ID: 11005
+// Function ID: 11006
 // Name: useChannelSafetyWarning
-// Dependencies: [10920, 504, 2]
+// Dependencies: [10947, 504, 2]
 // Exports: useChannelSafetyWarning
 
-// Module 10978 (useChannelSafetyWarning)
-import closure_2 from "handleConnectionOpen" /* 10920 */;
+// Module 11005 (useChannelSafetyWarning)
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10947 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/self_mod/hooks/useChannelSafetyWarning.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/self_mod/hooks/useChannelSafetyWarning.tsx");
 
 export const useChannelSafetyWarning = function useChannelSafetyWarning(channelId, LIKELY_ATO) {
-  const _require = channelId;
+  _require = channelId;
   dependencyMap = LIKELY_ATO;
-  const items = [closure_2];
+  const items = [ChannelSafetyWarningsStore];
   const items1 = [channelId];
-  const stateFromStores = _require(504).useStateFromStores(items, () => closure_1_2.getChannelSafetyWarnings(closure_0), items1);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelSafetyWarningsStore.getChannelSafetyWarnings(closure_0), items1);
   const found = stateFromStores.filter((type) => type.type === closure_1);
   return found.find((dismiss_timestamp) => {
     let tmp = null == dismiss_timestamp.dismiss_timestamp;

@@ -1,37 +1,38 @@
-// Module ID: 7109
-// Function ID: 7110
-// Name: getFlattenedChannels
+// Module ID: 7123
+// Function ID: 7124
+// Name: useFlattenedChannels
 // Dependencies: [1957, 12, 1369, 504, 2]
 // Exports: useFlattenedChannels
 
-// Module 7109 (getFlattenedChannels)
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
+// Module 7123 (useFlattenedChannels)
+import _modDef12 from "module_12" /* 12 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-const require = arg1;
-function getFlattenedChannels(guildId, set, found, arg3) {
-  const _require = set;
+const require = globalThis.__r;
+
+require = fn;
+function getFlattenedChannels(guildId, set, found, flag) {
+  _require = set;
   importDefault = found;
-  let flag = arg3;
-  if (arg3 === undefined) {
+  if (flag === undefined) {
     flag = false;
   }
-  let mutableGuildChannelsForGuild;
-  set = undefined;
-  let found2;
-  const tmp = importDefault(flag[1]);
-  const values = importDefault(flag[1])(mutableGuildChannelsForGuild.getMutableGuildChannelsForGuild(guildId)).values();
-  const tmpResult = importDefault(flag[1])(mutableGuildChannelsForGuild.getMutableGuildChannelsForGuild(guildId));
-  mutableGuildChannelsForGuild = values.groupBy("parent_id").value();
+  ChannelStore = undefined;
+  const tmp = require("module_12");
+  const values = require("module_12")(ChannelStore.getMutableGuildChannelsForGuild(guildId)).values();
+  const tmpResult = require("module_12")(ChannelStore.getMutableGuildChannelsForGuild(guildId));
+  ChannelStore = values.groupBy("parent_id").value();
   const iter = values.groupBy("parent_id");
-  const mapped = importDefault(flag[1])(found).map((isCategory) => isCategory.isCategory() ? isCategory.id : isCategory.parent_id);
-  found = mapped.filter(_require(flag[2]).isNotNullish);
-  const arr = importDefault(flag[1])(found);
-  const mapped1 = found.uniq().map((arg0) => channel.getChannel(arg0));
-  const found1 = mapped1.filter(_require(flag[2]).isNotNullish);
+  const mapped = require("module_12")(found).map((isCategory) => isCategory.isCategory() ? isCategory.id : isCategory.parent_id);
+  found = mapped.filter(require("GlobalUtils").isNotNullish);
+  const arr = require("module_12")(found);
+  const mapped1 = found.uniq().map((item) => channel.getChannel(item));
+  const found1 = mapped1.filter(require("GlobalUtils").isNotNullish);
   const uniqResult = found.uniq();
   const valueResult = found1.sortBy("position").value();
   set = new Set(valueResult.map((id) => id.id));
-  found2 = found.filter((isCategory) => {
+  let found2 = found.filter((isCategory) => {
     let isCategoryResult = isCategory.isCategory();
     if (!isCategoryResult) {
       let hasItem = null != isCategory.parent_id;
@@ -43,7 +44,7 @@ function getFlattenedChannels(guildId, set, found, arg3) {
     return !isCategoryResult;
   });
   const iter2 = found1.sortBy("position");
-  const sortByResult = importDefault(flag[1]).sortBy(found2, (position) => {
+  const sortByResult = require("module_12").sortBy(found2, (position) => {
     position = position.position;
     if (position.isGuildVocal()) {
       let sum = position + 10000;
@@ -60,13 +61,13 @@ function getFlattenedChannels(guildId, set, found, arg3) {
     if (iter3.has(iter3.id)) {
       found = channel[iter3.id];
     } else {
-      found = lib.filter((parent_id) => parent_id.parent_id === iter3.id);
+      found = closure_1.filter((parent_id) => parent_id.parent_id === iter3.id);
     }
     if (found == null) {
       found = [];
     }
     const items = [
-      ...lib(flag[1]).sortBy(found, (position) => {
+      ..._modDef12.sortBy(found, (position) => {
         position = position.position;
         if (position.isGuildVocal()) {
           let sum = position + 10000;
@@ -85,19 +86,20 @@ function getFlattenedChannels(guildId, set, found, arg3) {
   }
   return sortByResult;
 }
-const result = require("set").fileFinishedImporting("modules/guild_onboarding/useFlattenedChannels.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_onboarding/useFlattenedChannels.tsx");
 
 export { getFlattenedChannels };
 export const useFlattenedChannels = function useFlattenedChannels(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   closure_1 = arg1;
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
   }
-  const items = [closure_3];
-  return _require(flag[3]).useStateFromStoresArray(items, () => {
-    const mapped = Array.from(closure_1).map((arg0) => channel.getChannel(arg0));
-    return closure_1_4(callback, closure_1, mapped.filter(callback(flag[2]).isNotNullish), flag);
+  const items = [ChannelStore];
+  return require("initialize").useStateFromStoresArray(items, () => {
+    const mapped = Array.from(closure_1).map((item) => channel.getChannel(item));
+    return getFlattenedChannels(closure_0, closure_1, mapped.filter(GlobalUtils.isNotNullish), flag);
   });
 };

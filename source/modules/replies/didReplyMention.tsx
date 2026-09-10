@@ -1,13 +1,13 @@
-// Module ID: 13181
-// Function ID: 13182
+// Module ID: 13204
+// Function ID: 13205
 // Name: didReplyMention
 // Dependencies: [2]
 // Exports: default
 
-// Module 13181 (didReplyMention)
-import set from "set" /* 2 */;
+// Module 13204 (didReplyMention)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/replies/didReplyMention.tsx");
+const result = size.fileFinishedImporting("modules/replies/didReplyMention.tsx");
 
 export default function didReplyMention(mentions, author) {
   let hasItem = null != author;

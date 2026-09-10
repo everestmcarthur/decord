@@ -1,44 +1,43 @@
-// Module ID: 16676
-// Function ID: 16677
-// Name: FormRowPlaceholderItem
-// Dependencies: [19, 17, 7878, 21, 4560, 576, 16649, 4296, 2]
+// Module ID: 16713
+// Function ID: 16714
+// Name: FormRowPlaceholder
+// Dependencies: [19, 17, 7892, 21, 4574, 576, 16681, 4310, 2]
 // Exports: default
 
-// Module 16676 (FormRowPlaceholderItem)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import _modDef4296 from "module_4296" /* 4296 */;
-import useFullscreenPlaceholderCount from "useFullscreenPlaceholderCount" /* 16649 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16713 (FormRowPlaceholder)
+import nativeDefault from "native" /* 576 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4310 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 16681 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { itemContainer: { flexDirection: "row", paddingHorizontal: 16, overflow: "hidden", height: 64, paddingVertical: require("MessageEmbedTypes").SEARCH_ROW_TAP_STATE_PADDING, alignItems: "center" }, avatar: null, innerContainer: null, upperText: null, lowerText: null };
-createCacheKey = { height: 48, width: 48, borderRadius: ThemesDefault.radii.xl, marginRight: 16, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { justifyContent: "center", flex: 1 };
-createCacheKey[3] = { width: "50%", borderRadius: ThemesDefault.radii.md, height: 16, marginBottom: 8, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-let obj1 = { width: "50%", borderRadius: ThemesDefault.radii.md, height: 16, marginBottom: 8, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[4] = { justifyContent: "center", width: "100%", borderRadius: ThemesDefault.radii.md, height: 16, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const obj2 = { justifyContent: "center", width: "100%", borderRadius: ThemesDefault.radii.md, height: 16, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/FormRowPlaceholder.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { itemContainer: { flexDirection: "row", paddingHorizontal: 16, overflow: "hidden", height: 64, paddingVertical: fn(7892).SEARCH_ROW_TAP_STATE_PADDING, alignItems: "center" }, avatar: null, innerContainer: null, upperText: null, lowerText: null };
+let size = { height: 48, width: 48, borderRadius: nativeDefault.radii.xl, marginRight: 16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.avatar = size;
+obj2.innerContainer = { justifyContent: "center", flex: 1 };
+const size1 = { width: "50%", borderRadius: nativeDefault.radii.md, height: 16, marginBottom: 8, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.upperText = size1;
+const size2 = { justifyContent: "center", width: "100%", borderRadius: nativeDefault.radii.md, height: 16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.lowerText = size2;
+let closure_6 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/FormRowPlaceholder.tsx");
 
 export default function FormRowPlaceholderItem(style) {
-  const tmp = callback3();
-  let obj = useFullscreenPlaceholderCount;
-  const placeholderAnimatedStyle = obj.usePlaceholderAnimatedStyle(true);
-  obj = { style: items, pointerEvents: "none", children: null };
-  items = [placeholderAnimatedStyle, tmp.itemContainer, style.style];
-  obj = { style: tmp.avatar };
-  const items1 = [callback(View, obj), ];
-  obj1 = { style: tmp.innerContainer, children: null };
-  const items2 = [callback(View, { style: tmp.upperText }), callback(View, { style: tmp.lowerText })];
-  obj1[1] = items2;
-  items1[1] = callback2(View, obj1);
-  obj[2] = items1;
-  return callback2(_modDef4296.View, obj);
+  const tmp = closure_6();
+  const placeholderAnimatedStyle = usePlaceholderStyles.usePlaceholderAnimatedStyle(true);
+  const obj2 = { style: null, pointerEvents: "none", children: null };
+  const items = [placeholderAnimatedStyle, tmp.itemContainer, style.style];
+  obj2.style = items;
+  const items1 = [React4(View, { style: tmp.avatar }), ];
+  const obj4 = { style: tmp.innerContainer, children: null };
+  const items2 = [React4(View, { style: tmp.upperText }), React4(View, { style: tmp.lowerText })];
+  obj4.children = items2;
+  items1[1] = hasOwnProperty(View, obj4);
+  obj2.children = items1;
+  return hasOwnProperty(ReanimatedRexportDefault.View, obj2);
 };

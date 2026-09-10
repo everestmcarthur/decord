@@ -1,35 +1,33 @@
-// Module ID: 13148
-// Function ID: 13149
+// Module ID: 13173
+// Function ID: 13174
 // Name: OrbBadgePreview
-// Dependencies: [19, 17, 21, 4560, 8178, 11114, 8853, 1114, 2]
+// Dependencies: [19, 17, 21, 4574, 8204, 11141, 8880, 1114, 2]
 // Exports: OrbBadgePreview
 
-// Module 13148 (OrbBadgePreview)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import useCurrentUser from "useCurrentUser" /* 8178 */;
-import hasAtLeastOneGPlaySynced from "hasAtLeastOneGPlaySynced" /* 8853 */;
-import filterLayerDefault from "filterLayer" /* 11114 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13173 (OrbBadgePreview)
+import util from "util" /* 1114 */;
+import useCurrentUser from "useCurrentUser" /* 8204 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8880 */;
+import UserProfilePreviewDefault from "UserProfilePreview" /* 11141 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-let closure_5 = createCacheKey.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
-const result = require("set").fileFinishedImporting("modules/collectibles/native/OrbBadgePreview.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_5 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/OrbBadgePreview.tsx");
 
 export const OrbBadgePreview = function OrbBadgePreview() {
-  let obj = useCurrentUser;
-  obj = { style: callback().container, children: null };
-  const currentUser = obj.useCurrentUser();
-  obj = { compact: true, user: currentUser, additionalBadges: null, accessibilityLabel: null };
-  const tmp = callback();
-  const tmp3 = filterLayerDefault;
-  const items = [hasAtLeastOneGPlaySynced.createOrbProfileBadge()];
-  obj[2] = items;
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.string(getSystemLocale.t.bxcI6Y);
-  obj[1] = <tmp3 compact user={currentUser} additionalBadges={null} accessibilityLabel={null} />;
-  return <View compact user={currentUser} additionalBadges={null} accessibilityLabel={null} />;
+  const tmp = closure_5();
+  const obj2 = { style: tmp.container, children: null };
+  const currentUser = useCurrentUser.useCurrentUser();
+  const obj3 = { compact: true, user: currentUser, additionalBadges: null, accessibilityLabel: null };
+  const items = [collectibles_CollectiblesUtils.createOrbProfileBadge()];
+  obj3.additionalBadges = items;
+  const intl = util.intl;
+  obj3.accessibilityLabel = intl.string(util.t.bxcI6Y);
+  obj2.children = <tmp3 compact user={currentUser} additionalBadges={null} accessibilityLabel={null} />;
+  return <View style={tmp.container}>{null}</View>;
 };

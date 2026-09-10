@@ -1,36 +1,35 @@
-// Module ID: 16308
-// Function ID: 16309
-// Name: HomeDrawerSharedItem
-// Dependencies: [19, 17, 21, 4560, 2]
+// Module ID: 16339
+// Function ID: 16340
+// Name: HomeDrawerShared
+// Dependencies: [19, 17, 21, 4574, 2]
 // Exports: HomeDrawerSharedItem
 
-// Module 16308 (HomeDrawerSharedItem)
-import noopAll from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16339 (HomeDrawerShared)
+import noop from "module_19" /* 19 */;
 
-noopAll;
-({ jsxs: closure_1, jsx: obj1 } = jsxProd);
-let closure_3 = createCacheKey.createStyles({ container: { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: 12 }, titleContainer: { flex: 1, flexDirection: "column", justifyContent: "center", gap: 2 }, rightContainer: { overflow: "hidden" } });
-const result = require("set").fileFinishedImporting("modules/home_drawer/native/HomeDrawerShared.tsx");
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsxs: closure_1, jsx: c2 } = jsxProd);
+const createStyles = fn(4574);
+let closure_3 = createStyles.createStyles({ container: { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: 12 }, titleContainer: { flex: 1, flexDirection: "column", justifyContent: "center", gap: 2 }, rightContainer: { overflow: "hidden" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerShared.tsx");
 
 export const HomeDrawerSharedItem = function HomeDrawerSharedItem(right) {
   right = right.right;
   ({ title, subtitle } = right);
-  const tmp = callback3();
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.titleContainer, children: items };
-  items = [title, subtitle];
-  const items1 = [callback(View, obj), ];
+  const tmp = closure_3();
+  const obj = { style: tmp.container, children: null };
+  const obj2 = { style: tmp.titleContainer, children: null };
+  const items = [title, subtitle];
+  obj2.children = items;
+  const items1 = [framebus(View, obj2), ];
   let tmp4 = null;
   if (null != right) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.rightContainer;
-    obj[1] = right;
-    tmp4 = callback2(tmp3, obj);
+    const obj3 = { style: tmp.rightContainer, children: right };
+    tmp4 = React2(tmp3, obj3);
   }
   items1[1] = tmp4;
-  obj[1] = items1;
-  return callback(View, obj);
+  obj.children = items1;
+  return framebus(View, obj);
 };

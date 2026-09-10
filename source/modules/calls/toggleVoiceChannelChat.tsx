@@ -1,36 +1,34 @@
-// Module ID: 14515
-// Function ID: 14516
+// Module ID: 14540
+// Function ID: 14541
 // Name: toggleVoiceChannelChat
-// Dependencies: [1957, 4583, 4576, 4761, 2]
+// Dependencies: [1957, 4597, 4590, 4775, 2]
 // Exports: toggleVoiceChannelChat
 
-// Module 14515 (toggleVoiceChannelChat)
-import _modDef4761 from "module_4761" /* 4761 */;
-import closure_2 from "ensureGuildLoaded" /* 1957 */;
-import closure_3 from "createRTCConnection" /* 4583 */;
-import closure_4 from "getParticipants" /* 4576 */;
+// Module 14540 (toggleVoiceChannelChat)
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4775 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4590 */;
 
-const result = require("set").fileFinishedImporting("modules/calls/toggleVoiceChannelChat.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/calls/toggleVoiceChannelChat.tsx");
 
 export const toggleVoiceChannelChat = function toggleVoiceChannelChat(open) {
-  let obj = connected;
-  if (connected.isConnected()) {
+  if (RTCConnectionStore.isConnected()) {
     const channelId = obj.getChannelId();
     if (null == channelId) {
       return null;
     } else {
-      channel = channel.getChannel(channelId);
+      const channel = ChannelStore.getChannel(channelId);
       if (null != channel) {
         if (channel.isGuildVoice()) {
           let tmp3 = open;
           if (open == null) {
-            tmp3 = !chatOpen.getChatOpen(channelId);
+            tmp3 = !ChannelRTCStore.getChatOpen(channelId);
           }
-          _modDef4761.updateChatOpen(channelId, tmp3);
-          obj = { channelId: null, chatOpen: null };
-          obj[0] = channelId;
-          obj[1] = tmp3;
-          return obj;
+          ChannelRTCActionCreatorsDefault.updateChatOpen(channelId, tmp3);
+          const obj2 = { channelId, chatOpen: tmp3 };
+          return obj2;
         }
       }
       return null;
@@ -38,4 +36,5 @@ export const toggleVoiceChannelChat = function toggleVoiceChannelChat(open) {
   } else {
     return null;
   }
+  obj = RTCConnectionStore;
 };

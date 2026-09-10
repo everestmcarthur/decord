@@ -3,22 +3,38 @@
 // Dependencies: [123, 199, 211, 215, 217, 203, 222, 223, 226, 228]
 
 // Module 198
-import t from "t" /* 215 */;
+import _mod215 from "module_215" /* 215 */;
 import URL from "URL" /* 226 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 228 */;
-import polyfillObjectProperty from "polyfillObjectProperty" /* 123 */;
+import _mod228 from "module_228" /* 228 */;
+import polyfillObjectProperty_mod from "polyfillObjectProperty" /* 123 */;
 
-polyfillObjectProperty.polyfillGlobal("XMLHttpRequest", () => require(199) /* _isNativeReflectConstruct */.default);
-polyfillObjectProperty.polyfillGlobal("FormData", () => require(211) /* FormData */.default);
-polyfillObjectProperty.polyfillGlobal("fetch", () => t.fetch);
-polyfillObjectProperty.polyfillGlobal("Headers", () => t.Headers);
-polyfillObjectProperty.polyfillGlobal("Request", () => t.Request);
-polyfillObjectProperty.polyfillGlobal("Response", () => t.Response);
-polyfillObjectProperty.polyfillGlobal("WebSocket", () => require(217) /* _isNativeReflectConstruct */.default);
-polyfillObjectProperty.polyfillGlobal("Blob", () => require(203) /* Blob */.default);
-polyfillObjectProperty.polyfillGlobal("File", () => require(222) /* _isNativeReflectConstruct */.default);
-polyfillObjectProperty.polyfillGlobal("FileReader", () => require(223) /* _isNativeReflectConstruct */.default);
+const require = globalThis.__r;
+
+let polyfillObjectProperty = polyfillObjectProperty_mod;
+polyfillObjectProperty.polyfillGlobal("XMLHttpRequest", () => require("module_199").default);
+let polyfillObjectProperty = polyfillObjectProperty_mod;
+polyfillObjectProperty.polyfillGlobal("FormData", () => require("FormData").default);
+let polyfillObjectProperty = polyfillObjectProperty_mod;
+polyfillObjectProperty.polyfillGlobal("fetch", () => _mod215.fetch);
+let polyfillObjectProperty = polyfillObjectProperty_mod;
+polyfillObjectProperty.polyfillGlobal("Headers", () => _mod215.Headers);
+let polyfillObjectProperty = polyfillObjectProperty_mod;
+polyfillObjectProperty.polyfillGlobal("Request", () => _mod215.Request);
+let polyfillObjectProperty = polyfillObjectProperty_mod;
+polyfillObjectProperty.polyfillGlobal("Response", () => _mod215.Response);
+let polyfillObjectProperty = polyfillObjectProperty_mod;
+polyfillObjectProperty.polyfillGlobal("WebSocket", () => require("module_217").default);
+let polyfillObjectProperty = polyfillObjectProperty_mod;
+polyfillObjectProperty.polyfillGlobal("Blob", () => require("Blob").default);
+let polyfillObjectProperty = polyfillObjectProperty_mod;
+polyfillObjectProperty.polyfillGlobal("File", () => require("module_222").default);
+let polyfillObjectProperty = polyfillObjectProperty_mod;
+polyfillObjectProperty.polyfillGlobal("FileReader", () => require("module_223").default);
+let polyfillObjectProperty = polyfillObjectProperty_mod;
 polyfillObjectProperty.polyfillGlobal("URL", () => URL.URL);
+let polyfillObjectProperty = polyfillObjectProperty_mod;
 polyfillObjectProperty.polyfillGlobal("URLSearchParams", () => URL.URLSearchParams);
-polyfillObjectProperty.polyfillGlobal("AbortController", () => _isNativeReflectConstruct.AbortController);
-polyfillObjectProperty.polyfillGlobal("AbortSignal", () => _isNativeReflectConstruct.AbortSignal);
+let polyfillObjectProperty = polyfillObjectProperty_mod;
+polyfillObjectProperty.polyfillGlobal("AbortController", () => _mod228.AbortController);
+let polyfillObjectProperty = polyfillObjectProperty_mod;
+polyfillObjectProperty.polyfillGlobal("AbortSignal", () => _mod228.AbortSignal);

@@ -1,13 +1,13 @@
-// Module ID: 4796
-// Function ID: 4797
-// Name: context
+// Module ID: 4810
+// Function ID: 4811
+// Name: DisplayNameStylesContext
 // Dependencies: [19, 2]
 
-// Module 4796 (context)
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
+// Module 4810 (DisplayNameStylesContext)
+import _mod19 from "module_19" /* 19 */;
+import size from "module_2" /* 2 */;
 
-const context = noop.createContext({ overrideSettings: false });
-const result = set.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesContext.tsx");
+const context = _mod19.createContext({ overrideSettings: false });
+const result = size.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesContext.tsx");
 
 export const DisplayNameStylesContext = context;

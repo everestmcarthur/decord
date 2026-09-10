@@ -1,27 +1,28 @@
-// Module ID: 13095
-// Function ID: 13096
+// Module ID: 13121
+// Function ID: 13122
 // Name: useWishlistSuggestionsDismissibleContent
-// Dependencies: [32, 19, 7621, 1954, 1090, 504, 7388, 1943, 2]
+// Dependencies: [32, 19, 7635, 1954, 1090, 504, 7402, 1943, 2]
 // Exports: default
 
-// Module 13095 (useWishlistSuggestionsDismissibleContent)
-import setDefault from "set" /* 1090 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createUserWidgetFromServer" /* 7621 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
+// Module 13121 (useWishlistSuggestionsDismissibleContent)
+import DurationsDefault from "Durations" /* 1090 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import UserProfileStore from "UserProfileStore" /* 7635 */;
 
-const require = arg1;
-let closure_6 = 90 * setDefault.Millis.DAY;
-let closure_7 = 90 * setDefault.Millis.DAY;
-const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useWishlistSuggestionsDismissibleContent.tsx");
+const require = fn;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const cooldownDurationMs = 90 * DurationsDefault.Millis.DAY;
+let closure_7 = 90 * DurationsDefault.Millis.DAY;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/hooks/useWishlistSuggestionsDismissibleContent.tsx");
 
 export default function useWishlistSuggestionsDismissibleContent(userId) {
   userId = userId.userId;
   const wishlist = userId.wishlist;
   let hasFetchedWishlist = userId.hasFetchedWishlist;
-  let callback;
-  let React;
+  _slicedToArray = undefined;
+  noop = undefined;
   let num;
   if (wishlist != null) {
     num = wishlist.items.length;
@@ -29,9 +30,8 @@ export default function useWishlistSuggestionsDismissibleContent(userId) {
   if (num == null) {
     num = 0;
   }
-  let obj = React;
-  [tmp4, tmp5] = callback(React.useState(false), 2);
-  callback = tmp5;
+  [tmp4, tmp5] = noop.useState(false);
+  _slicedToArray = tmp5;
   let tmp6 = !hasFetchedWishlist;
   if (hasFetchedWishlist) {
     tmp6 = tmp;
@@ -42,14 +42,15 @@ export default function useWishlistSuggestionsDismissibleContent(userId) {
   if (!tmp6) {
     tmp5(true);
   }
-  const tmp2 = callback;
-  const tmp3 = callback(React.useState(false), 2);
-  const items = [closure_4];
+  const obj = noop;
+  const tmp2 = _slicedToArray;
+  const tmp3 = _slicedToArray(noop.useState(false), 2);
+  const items = [UserProfileStore];
   const items1 = [wishlist, userId];
   const stateFromStores = userId(wishlist[5]).useStateFromStores(items, () => {
     let num = 0;
     if (null != wishlist) {
-      const wishlistSettings = closure_1_4.getWishlistSettings(userId, tmp.id);
+      const wishlistSettings = UserProfileStore.getWishlistSettings(userId, tmp.id);
       let num2;
       if (wishlistSettings != null) {
         num2 = wishlistSettings.updated_at;
@@ -63,21 +64,17 @@ export default function useWishlistSuggestionsDismissibleContent(userId) {
     return num;
   }, items1);
   const obj2 = userId(wishlist[5]);
-  obj = { showAfterTimestamp: stateFromStores + closure_7, cooldownDurationMs: closure_6 };
-  const tmp2Result = tmp2(userId(wishlist[6]).useSelectedTimeRecurringDismissibleContent(userId(wishlist[7]).DismissibleContent.USER_PROFILE_WISHLIST_RECOMMENDATIONS, obj, undefined, true), 2);
-  React = tmp10;
+  const tmp2Result = tmp2(userId(wishlist[6]).useSelectedTimeRecurringDismissibleContent(userId(wishlist[7]).DismissibleContent.USER_PROFILE_WISHLIST_RECOMMENDATIONS, { showAfterTimestamp: stateFromStores + closure_7, cooldownDurationMs }, undefined, true), 2);
+  noop = tmp10;
   if (hasFetchedWishlist) {
     hasFetchedWishlist = tmp2Result[0] === userId(wishlist[7]).DismissibleContent.USER_PROFILE_WISHLIST_RECOMMENDATIONS || tmp4 || !tmp;
     const tmp11 = tmp2Result[0] === userId(wishlist[7]).DismissibleContent.USER_PROFILE_WISHLIST_RECOMMENDATIONS || tmp4 || !tmp;
   }
-  obj = {
-    isVisible: hasFetchedWishlist,
-    isDismissible: tmp,
-    markAsDismissed: obj.useCallback(() => {
-      _undefined(false);
-      callback(closure_1_5.USER_DISMISS);
-    }, items2)
-  };
-  items2 = [tmp2Result[1]];
-  return obj;
+  const obj5 = { isVisible: hasFetchedWishlist, isDismissible: num >= 3, markAsDismissed: null };
+  const items2 = [tmp2Result[1]];
+  obj5.markAsDismissed = obj.useCallback(() => {
+    _undefined(false);
+    closure_3(ContentDismissActionType.USER_DISMISS);
+  }, items2);
+  return obj5;
 };

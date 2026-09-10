@@ -1,19 +1,18 @@
-// Module ID: 5141
-// Function ID: 5142
-// Name: get
-// Dependencies: [4182, 2]
+// Module ID: 5155
+// Function ID: 5156
+// Name: ProcessArgs
+// Dependencies: [4195, 2]
 
-// Module 5141 (get)
-import set from "set" /* 2 */;
-import setDefault from "set" /* 4182 */;
+// Module 5155 (ProcessArgs)
+import DiscordNativeDefault from "DiscordNative" /* 4195 */;
+import size from "module_2" /* 2 */;
 
-let prototype;
-prototype = function ProcessArgs() {
+const prototype = function ProcessArgs() {
   return Object.create(new.target.prototype);
 }.prototype;
 prototype["get"] = function get() {
   if (null == prototype.cached) {
-    const tmp4 = setDefault;
+    const tmp4 = DiscordNativeDefault;
     let mainArgvSync;
     if (tmp4 != null) {
       const processUtils = tmp4.processUtils;
@@ -39,14 +38,14 @@ prototype["get"] = function get() {
   return prototype.cached;
 };
 prototype["contains"] = function contains(arg0) {
-  const value = prototype.get();
+  value = prototype.get();
   return value.includes(arg0);
 };
 prototype["isEnvVariableTrue"] = function isEnvVariableTrue(DISCORD_DISALLOW_POPUPS) {
-  if (undefined === setDefault) {
+  if (undefined === DiscordNativeDefault) {
     return false;
   } else {
-    const tmpResult = setDefault;
+    const tmpResult = DiscordNativeDefault;
     let tmp5;
     if (tmpResult != null) {
       const _process = tmpResult.process;
@@ -64,7 +63,6 @@ prototype["isEnvVariableTrue"] = function isEnvVariableTrue(DISCORD_DISALLOW_POP
     }
     return true;
   }
-  const tmp = importDefault;
 };
 prototype["isDisallowPopupsSet"] = function isDisallowPopupsSet() {
   const hasItem = prototype.contains("--disallow-popups");
@@ -80,6 +78,6 @@ prototype["isDiscordTestSet"] = function isDiscordTestSet() {
 prototype["isDiscordGatewayPlaintextSet"] = function isDiscordGatewayPlaintextSet() {
   return false;
 };
-const result = set.fileFinishedImporting("utils/ProcessArgs.tsx");
+const result = size.fileFinishedImporting("utils/ProcessArgs.tsx");
 
 export const ProcessArgs = prototype;

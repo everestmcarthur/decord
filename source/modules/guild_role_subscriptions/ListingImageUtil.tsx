@@ -1,26 +1,24 @@
-// Module ID: 17725
-// Function ID: 17726
-// Name: getSource
-// Dependencies: [4802, 2]
+// Module ID: 17758
+// Function ID: 17759
+// Name: ListingImageUtil
+// Dependencies: [4816, 2]
 // Exports: getSource
 
-// Module 17725 (getSource)
-import set from "set" /* 2 */;
-import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4802 */;
+// Module 17758 (ListingImageUtil)
+import StoreUtils from "StoreUtils" /* 4816 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/ListingImageUtil.tsx");
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/ListingImageUtil.tsx");
 
 export const getSource = function getSource(image_asset) {
   if (null == image_asset.image_asset) {
-    let obj = { uri: "" };
+    let obj2 = { uri: "" };
   } else {
-    obj = _httpGetWithCountryCodeQuery;
-    let str = obj.getAssetURL(image_asset.application_id, image_asset.image_asset);
+    let str = StoreUtils.getAssetURL(image_asset.application_id, image_asset.image_asset);
     if (str == null) {
       str = "";
     }
-    obj = { uri: null };
-    obj[0] = str;
+    obj2 = { uri: str };
   }
-  return obj;
+  return obj2;
 };

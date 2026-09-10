@@ -1,37 +1,39 @@
-// Module ID: 12125
-// Function ID: 12126
-// Name: useSortApplicationsViaFrecency
-// Dependencies: [19, 9296, 1084, 1940, 504, 11, 7521, 2]
+// Module ID: 12151
+// Function ID: 12152
+// Name: ApplicationFrecencyHooks
+// Dependencies: [19, 9323, 1084, 1940, 504, 11, 7535, 2]
 // Exports: useSortApplicationsViaFrecency
 
-// Module 12125 (useSortApplicationsViaFrecency)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleUserSettingsProtoStoreChange" /* 9296 */;
-import { UserSettingsTypes } from "MAX_FAVORITES" /* 1084 */;
+// Module 12151 (ApplicationFrecencyHooks)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import noop from "module_19" /* 19 */;
+import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9323 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/applications/ApplicationFrecencyHooks.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const UserSettingsTypes = fn(1084).UserSettingsTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/applications/ApplicationFrecencyHooks.tsx");
 
 export const useSortApplicationsViaFrecency = function useSortApplicationsViaFrecency(found, stateFromStoresArray) {
-  const _require = found;
-  closure_1 = stateFromStoresArray;
+  _require = found;
   const effect = memo.useEffect(() => {
-    const FrecencyUserSettingsActionCreators = lib(stateFromStores[3]).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = closure_0(stateFromStores[3]).FrecencyUserSettingsActionCreators;
     const ifUncached = FrecencyUserSettingsActionCreators.loadIfUncached(memo2.FRECENCY_AND_FAVORITES_SETTINGS);
   }, []);
   let items = [memo1];
-  stateFromStores = _require(stateFromStores[4]).useStateFromStores(items, () => memo1.getApplicationFrecencyWithoutLoadingLatest());
+  stateFromStores = require("initialize").useStateFromStores(items, () => memo1.getApplicationFrecencyWithoutLoadingLatest());
   let items1 = [found, stateFromStoresArray];
   memo = memo.useMemo(() => {
     if (null != stateFromStoresArray) {
       if (0 !== stateFromStoresArray.length) {
-        let mapped = lib.map((arg0) => {
-          closure_0 = arg0;
+        let mapped = closure_0.map((item) => {
           const obj = {};
-          const merged = Object.assign(arg0);
+          const merged = Object.assign(item);
           let flag;
-          if (closure_1 != null) {
-            flag = closure_1.some((application) => application.application.id === id.id);
+          if (stateFromStoresArray != null) {
+            flag = stateFromStoresArray.some((application) => application.application.id === item.id);
           }
           if (flag == null) {
             flag = false;
@@ -42,16 +44,13 @@ export const useSortApplicationsViaFrecency = function useSortApplicationsViaFre
       }
       return mapped;
     }
-    mapped = lib;
+    mapped = closure_0;
   }, items1);
   const items2 = [found, stateFromStoresArray];
   memo1 = memo.useMemo(() => {
     found = undefined;
-    if (closure_1 != null) {
-      found = closure_1.filter((arg0) => {
-        closure_0 = arg0;
-        return !closure_0.some((id) => id.id === application.application.id);
-      });
+    if (stateFromStoresArray != null) {
+      found = stateFromStoresArray.filter((item) => !found.some((id) => id.id === item.application.id));
     }
     return found;
   }, items2);
@@ -59,18 +58,18 @@ export const useSortApplicationsViaFrecency = function useSortApplicationsViaFre
   const memo2 = memo.useMemo(() => {
     if (memo1 != null) {
       const item = arr.forEach((id) => {
-        let obj = closure_1_1(closure_1_2[5]);
-        if (null == store.getEntry(id.application.id)) {
-          obj = { timestamp: null };
-          obj[0] = extractTimestampResult;
-          store.track(id.application.id, obj);
+        const obj = closure_1(stateFromStores[5]);
+        const obj2 = entry;
+        if (null == entry.getEntry(id.application.id)) {
+          const obj3 = { timestamp: extractTimestampResult };
+          obj2.track(id.application.id, obj3);
         }
       });
     }
     stateFromStores.compute();
     let mapped;
     if (memo1 != null) {
-      mapped = arr.map((application) => callback(store[6]).getApplicationCommandSection(application.application, true));
+      mapped = arr.map((application) => found(stateFromStores[6]).getApplicationCommandSection(application.application, true));
     }
     if (mapped == null) {
       mapped = [];
@@ -79,11 +78,11 @@ export const useSortApplicationsViaFrecency = function useSortApplicationsViaFre
     const items1 = [...mapped];
     items.push.apply(items1);
     const sorted = items.sort((id, id2) => {
-      let num = store.getScore(id2.id);
+      let num = stateFromStores.getScore(id2.id);
       if (num == null) {
         num = 0;
       }
-      let num2 = store.getScore(id.id);
+      let num2 = stateFromStores.getScore(id.id);
       if (num2 == null) {
         num2 = 0;
       }
@@ -98,21 +97,20 @@ export const useSortApplicationsViaFrecency = function useSortApplicationsViaFre
   }, items3);
   const items4 = [memo2, memo, stateFromStores, stateFromStoresArray];
   return memo.useMemo(() => {
-    if (closure_1 != null) {
-      const item = closure_1.forEach((id) => {
-        const extractTimestampResult = callback(stateFromStores[5]).extractTimestamp(id.id);
-        let tmp2 = null == callback;
+    if (stateFromStoresArray != null) {
+      const item = stateFromStoresArray.forEach((id) => {
+        const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(id.id);
+        let tmp2 = null == applyResult;
         if (!tmp2) {
-          tmp2 = extractTimestampResult > callback;
+          tmp2 = extractTimestampResult > applyResult;
         }
         if (tmp2) {
           closure_0 = id;
-          callback = extractTimestampResult;
         }
       });
     }
     const item1 = memo.forEach((id) => {
-      const entry = str.getEntry(id.id);
+      const entry = stateFromStores.getEntry(id.id);
       let recentUses;
       if (entry != null) {
         recentUses = entry.recentUses;
@@ -121,19 +119,18 @@ export const useSortApplicationsViaFrecency = function useSortApplicationsViaFre
         recentUses = [];
       }
       const items = [...recentUses];
-      const applyResult = Math.max.apply(items);
-      let tmp3 = null == closure_1;
+      applyResult = Math.max.apply(items);
+      let tmp3 = null == applyResult;
       if (!tmp3) {
-        tmp3 = applyResult > closure_1;
+        tmp3 = applyResult > applyResult;
       }
       if (tmp3) {
         closure_0 = id;
-        closure_1 = applyResult;
       }
     });
     let str;
-    if (lib != null) {
-      const application = lib.application;
+    if (closure_0 != null) {
+      const application = closure_0.application;
       if (application != null) {
         str = application.id;
       }

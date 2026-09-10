@@ -1,30 +1,34 @@
-// Module ID: 14071
-// Function ID: 14072
-// Name: modKey
+// Module ID: 14094
+// Function ID: 14095
+// Name: KeybindModKeys
 // Dependencies: [1115, 2]
 
-// Module 14071 (modKey)
-import set from "set" /* 1115 */;
+// Module 14094 (KeybindModKeys)
+import PlatformUtils_mod from "PlatformUtils" /* 1115 */;
+import size from "module_2" /* 2 */;
 
-if (set.isMac()) {
+let PlatformUtils = PlatformUtils_mod;
+if (PlatformUtils.isMac()) {
   let str = "cmd";
 } else {
-  const _module1 = set;
+  const _module1 = PlatformUtils;
   str = "ctrl";
 }
-if (set.isMac()) {
+let PlatformUtils = PlatformUtils_mod;
+if (PlatformUtils.isMac()) {
   let str2 = "opt";
 } else {
-  const _module3 = set;
+  const _module3 = PlatformUtils;
   str2 = "alt";
 }
-if (set.isMac()) {
+let PlatformUtils = PlatformUtils_mod;
+if (PlatformUtils.isMac()) {
   let str3 = "return";
 } else {
-  const _module5 = set;
+  const _module5 = PlatformUtils;
   str3 = "enter";
 }
-const result = set.fileFinishedImporting("lib/KeybindModKeys.tsx");
+const result = size.fileFinishedImporting("lib/KeybindModKeys.tsx");
 
 export const modKey = str;
 export const altKey = str2;

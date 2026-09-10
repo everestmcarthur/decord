@@ -1,15 +1,15 @@
-// Module ID: 12640
-// Function ID: 12641
-// Name: __INTERNAL_VIEW_CONFIG
+// Module ID: 12666
+// Function ID: 12667
+// Name: NonRecycledViewNativeComponent
 // Dependencies: [65, 2]
 
-// Module 12640 (__INTERNAL_VIEW_CONFIG)
-import set from "set" /* 2 */;
-import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
+// Module 12666 (NonRecycledViewNativeComponent)
+import module_65 from "module_65" /* 65 */;
+import size from "module_2" /* 2 */;
 
-const obj = { uiViewClassName: "DCDNonRecycledView", validAttributes: {} };
-const value = setRuntimeConfigProvider.get("DCDNonRecycledView", () => obj);
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NonRecycledViewNativeComponent.tsx");
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "DCDNonRecycledView", validAttributes: {} };
+const value = module_65.get("DCDNonRecycledView", () => obj);
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NonRecycledViewNativeComponent.tsx");
 
 export default value;
-export const __INTERNAL_VIEW_CONFIG = obj;
+export { __INTERNAL_VIEW_CONFIG };

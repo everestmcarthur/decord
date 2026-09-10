@@ -1,22 +1,22 @@
-// Module ID: 11366
-// Function ID: 11367
+// Module ID: 11393
+// Function ID: 11394
 // Name: ChatViewWrapperBase
-// Dependencies: [19, 21, 11364, 7156, 11365, 2]
+// Dependencies: [19, 21, 11391, 7170, 11392, 2]
 // Exports: default
 
-// Module 11366 (ChatViewWrapperBase)
-import noopAll from "noop" /* 19 */;
-import Layer from "Layer" /* 7156 */;
-import useChatViewPointerEventsAndroidDefault from "useChatViewPointerEventsAndroid" /* 11364 */;
-import StickyWrapper from "StickyWrapper" /* 11365 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 11393 (ChatViewWrapperBase)
+import LayerScope from "LayerScope" /* 7170 */;
+import useChatViewPointerEventsDefault from "useChatViewPointerEvents" /* 11391 */;
+import StickyWrapper from "StickyWrapper" /* 11392 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/chat/native/ChatViewWrapperBase.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/chat/native/ChatViewWrapperBase.tsx");
 
 export default function ChatViewWrapperBase(arg0) {
   ({ channelId, children, stickyHeader, style } = arg0);
-  const tmp = useChatViewPointerEventsAndroidDefault(channelId);
-  return jsx(Layer.LayerScope, { children: jsx(StickyWrapper.StickyWrapper, { header: stickyHeader, style, pointerEvents: useChatViewPointerEventsAndroidDefault(channelId), children }) });
+  const tmp = useChatViewPointerEventsDefault(channelId);
+  return jsx(LayerScope.LayerScope, { children: jsx(StickyWrapper.StickyWrapper, { header: stickyHeader, style, pointerEvents: useChatViewPointerEventsDefault(channelId), children }) });
 };

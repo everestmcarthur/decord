@@ -1,21 +1,21 @@
-// Module ID: 5556
-// Function ID: 5557
-// Name: INTERACTION_EVENTS
+// Module ID: 5570
+// Function ID: 5571
+// Name: WindowInteractingUtils
 // Dependencies: [2]
 // Exports: clearCurrentlyInteractingWindowId, getCurrentlyInteractingWindowId, setCurrentlyInteractingWindowId
 
-// Module 5556 (INTERACTION_EVENTS)
-import set from "set" /* 2 */;
+// Module 5570 (WindowInteractingUtils)
+import size from "module_2" /* 2 */;
 
 let c0 = null;
-const result = set.fileFinishedImporting("utils/web/WindowInteractingUtils.tsx");
+const result = size.fileFinishedImporting("utils/web/WindowInteractingUtils.tsx");
 
 export const INTERACTION_EVENTS = ["click", "mousedown", "mouseup", "keydown", "keyup", "keypress", "contextmenu"];
 export function getCurrentlyInteractingWindowId() {
   return c0;
 }
 export function setCurrentlyInteractingWindowId(arg0) {
-  closure_0 = arg0;
+  c0 = arg0;
 }
 export function clearCurrentlyInteractingWindowId(arg0) {
   if (c0 === arg0) {

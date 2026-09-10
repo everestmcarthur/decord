@@ -1,25 +1,28 @@
-// Module ID: 15232
-// Function ID: 15233
+// Module ID: 15261
+// Function ID: 15262
 // Name: useSubscriptionRole
-// Dependencies: [2015, 15215, 504, 2]
+// Dependencies: [2015, 15244, 504, 2]
 // Exports: default
 
-// Module 15232 (useSubscriptionRole)
-import closure_2 from "createGuildRoleRecordFromRust" /* 2015 */;
+// Module 15261 (useSubscriptionRole)
+import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useSubscriptionRole.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useSubscriptionRole.tsx");
 
 export default function useSubscriptionRole(arg0, editStateId) {
-  const _require = arg0;
-  dependencyMap = _require(15215).useSubscriptionListing(editStateId);
-  const obj = _require(15215);
-  const items = [closure_2];
-  return _require(504).useStateFromStores(items, () => {
+  _require = arg0;
+  dependencyMap = require("GuildRoleSubscriptionsHooks").useSubscriptionListing(editStateId);
+  const obj = require("GuildRoleSubscriptionsHooks");
+  const items = [GuildRoleStore];
+  return require("initialize").useStateFromStores(items, () => {
     let role;
     if (null != closure_0) {
       if (null != closure_1) {
-        role = closure_1_2.getRole(tmp, tmp3.role_id);
+        role = GuildRoleStore.getRole(tmp, tmp3.role_id);
       }
     }
     return role;

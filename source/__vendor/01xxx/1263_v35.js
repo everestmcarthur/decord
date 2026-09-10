@@ -2,17 +2,23 @@
 // Function ID: 1264
 // Name: v35
 // Dependencies: [1264, 1259]
+// Exports: default
 
 // Module 1263 (v35)
-const require = arg1;
-const module = arg2;
+import unsafeStringify from "unsafeStringify" /* 1259 */;
+import _modDef1264 from "module_1264" /* 1264 */;
+
+require = arg1;
+importDefault = arg2;
 const dependencyMap = arg6;
 let c3 = "6ba7b810-9dad-11d1-80b4-00c04fd430c8";
 let c4 = "6ba7b811-9dad-11d1-80b4-00c04fd430c8";
-arg5.default = function v35(name) {
+
+export default function v35(v3, arg1, arg2) {
   closure_0 = arg1;
   closure_1 = arg2;
-  function generateUUID(str, str2) {
+  function generateUUID(str, str2, arg2, arg3) {
+    let length;
     let arr = str;
     if (typeof str === "string") {
       const _unescape = unescape;
@@ -23,7 +29,7 @@ arg5.default = function v35(name) {
       arr = items;
       if (0 < unescapeResult.length) {
         do {
-          arr = items.push(unescapeResult.charCodeAt(num));
+          let arr3 = items.push(unescapeResult.charCodeAt(num));
           num = num + 1;
           arr = items;
           length = unescapeResult.length;
@@ -32,15 +38,15 @@ arg5.default = function v35(name) {
     }
     let arr2 = str2;
     if (typeof str2 === "string") {
-      arr2 = callback2(closure_1_2[0])(str2);
+      arr2 = _modDef1264(str2);
     }
-    length = undefined;
+    let length1;
     if (null !== arr2) {
       if (undefined !== arr2) {
-        length = arr2.length;
+        length1 = arr2.length;
       }
     }
-    if (16 !== length) {
+    if (16 !== length1) {
       const _TypeError = TypeError;
       throw TypeError("Namespace must be array-like (16 iterable integer values, 0-255)");
     } else {
@@ -48,8 +54,8 @@ arg5.default = function v35(name) {
       const uint8Array = new Uint8Array(16 + arr.length);
       const result = uint8Array.set(arr2);
       const result1 = uint8Array.set(arr, arr2.length);
-      const tmp17 = callback2(uint8Array);
-      tmp17[6] = 15 & tmp17[6] | callback;
+      const tmp17 = closure_1(uint8Array);
+      tmp17[6] = 15 & tmp17[6] | closure_0;
       tmp17[8] = 63 & tmp17[8] | 128;
       if (arg2) {
         let num2 = arg3;
@@ -63,17 +69,17 @@ arg5.default = function v35(name) {
         } while (num4 < 16);
         return arg2;
       } else {
-        return callback(closure_1_2[1]).unsafeStringify(tmp17);
+        return unsafeStringify.unsafeStringify(tmp17);
       }
     }
   }
   try {
-    generateUUID.name = name;
-    generateUUID.DNS = c3;
-    generateUUID.URL = c4;
+    generateUUID.name = v3;
+    generateUUID.DNS = DNS;
+    generateUUID.URL = _URL;
     return generateUUID;
   } catch (err) {
   }
 };
-arg5.DNS = "6ba7b810-9dad-11d1-80b4-00c04fd430c8";
-arg5.URL = "6ba7b811-9dad-11d1-80b4-00c04fd430c8";
+export const DNS = "6ba7b810-9dad-11d1-80b4-00c04fd430c8";
+export const URL = "6ba7b811-9dad-11d1-80b4-00c04fd430c8";

@@ -1,159 +1,151 @@
-// Module ID: 11418
-// Function ID: 11419
+// Module ID: 11445
+// Function ID: 11446
 // Name: ForumPostActionBar
-// Dependencies: [32, 19, 17, 4200, 4201, 1957, 1074, 21, 4560, 576, 504, 7304, 1477, 11257, 7872, 11419, 5123, 1114, 4511, 4556, 9781, 4503, 7456, 11, 4491, 11420, 2]
+// Dependencies: [32, 19, 17, 4213, 4214, 1957, 1074, 21, 4574, 576, 504, 7318, 1477, 11284, 7886, 11446, 5137, 1114, 4525, 4570, 9808, 4517, 7470, 11, 4505, 11447, 2]
 // Exports: default
 
-// Module 11418 (ForumPostActionBar)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 4200 */;
-import closure_7 from "storeThread" /* 4201 */;
-import closure_8 from "ensureGuildLoaded" /* 1957 */;
-import { AnalyticsSections } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11445 (ForumPostActionBar)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import nativeDefault from "native" /* 576 */;
+import Client from "Client" /* 4505 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7470 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11284 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import LurkingStore from "LurkingStore" /* 4213 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4214 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-const require = arg1;
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { actionBarContainer: null, actionRow: null, reactionRow: null, actionButton: null, actionButtonsContainer: null, lastActionButton: null, buttonText: null };
-createCacheKey = { overflow: "hidden", paddingHorizontal: 12, paddingVertical: 8, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, marginBottom: -1 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { display: "flex", flexDirection: "row", alignItems: "center", flex: 1 };
-createCacheKey[2] = { display: "flex", flexDirection: "row", alignItems: "center", flex: 1 };
-createCacheKey[3] = { display: "flex", flexDirection: "row", alignItems: "center", paddingHorizontal: 8, height: 28, marginRight: 4, borderRadius: ThemesDefault.radii.xs, borderWidth: 1, backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, borderColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT };
-createCacheKey[4] = { justifyContent: "flex-end" };
-createCacheKey[5] = { marginRight: 0 };
-createCacheKey[6] = { marginLeft: 8 };
-let closure_12 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { display: "flex", flexDirection: "row", alignItems: "center", paddingHorizontal: 8, height: 28, marginRight: 4, borderRadius: ThemesDefault.radii.xs, borderWidth: 1, backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, borderColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT };
-let result = require("set").fileFinishedImporting("modules/forums/native/ForumPostActionBar.tsx");
+require = fn;
+const View = fn(17).View;
+const AnalyticsSections = fn(1074).AnalyticsSections;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { actionBarContainer: { overflow: "hidden", paddingHorizontal: 12, paddingVertical: 8, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, marginBottom: -1 }, actionRow: { display: "flex", flexDirection: "row", alignItems: "center", flex: 1 }, reactionRow: { display: "flex", flexDirection: "row", alignItems: "center", flex: 1 }, actionButton: null, actionButtonsContainer: null, lastActionButton: null, buttonText: null };
+let obj3 = { overflow: "hidden", paddingHorizontal: 12, paddingVertical: 8, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, marginBottom: -1 };
+obj2.actionButton = { display: "flex", flexDirection: "row", alignItems: "center", paddingHorizontal: 8, height: 28, marginRight: 4, borderRadius: nativeDefault.radii.xs, borderWidth: 1, backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, borderColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT };
+obj2.actionButtonsContainer = { justifyContent: "flex-end" };
+obj2.lastActionButton = { marginRight: 0 };
+obj2.buttonText = { marginLeft: 8 };
+let closure_12 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/forums/native/ForumPostActionBar.tsx");
 
 export default function ForumPostActionBar(channel) {
   channel = channel.channel;
-  let stateFromStores1;
-  dependencyMap = undefined;
-  let width;
-  let React;
-  const tmp = callback2();
+  noop = undefined;
+  const tmp = closure_12();
+  const items = [ChannelStore];
+  const stateFromStores = channel(504).useStateFromStores(items, () => ChannelStore.getChannel(channel.parent_id));
   let obj = channel(504);
-  const items = [closure_8];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getChannel(channel.parent_id));
-  obj1 = channel(7304);
-  const firstMessage = obj1.useFirstForumPostMessage(channel).firstMessage;
-  let obj2 = channel(504);
-  const items1 = [closure_7];
-  stateFromStores1 = obj2.useStateFromStores(items1, () => closure_1_7.hasJoined(channel.id));
+  const firstMessage = channel(7318).useFirstForumPostMessage(channel).firstMessage;
+  let obj2 = channel(7318);
+  const items1 = [JoinedThreadsStore];
+  const stateFromStores1 = channel(504).useStateFromStores(items1, () => JoinedThreadsStore.hasJoined(channel.id));
   dependencyMap = channel.getGuildId();
-  let obj3 = channel(504);
-  const items2 = [closure_6];
-  const stateFromStores2 = obj3.useStateFromStores(items2, () => {
+  const obj3 = channel(504);
+  const items2 = [LurkingStore];
+  const stateFromStores2 = channel(504).useStateFromStores(items2, () => {
     let isLurkingResult = null != closure_2;
     if (isLurkingResult) {
-      isLurkingResult = closure_1_6.isLurking(tmp);
+      isLurkingResult = LurkingStore.isLurking(tmp);
     }
     return isLurkingResult;
   });
-  width = stateFromStores1(1477)().width;
-  const tmp7 = width(React.useState(0), 2);
-  React = tmp7[1];
+  const width = stateFromStores1(1477)().width;
+  const tmp7 = width(noop.useState(0), 2);
+  noop = tmp7[1];
   const items3 = [width];
-  const callback = React.useCallback((nativeEvent) => {
-    callback(width - nativeEvent.nativeEvent.layout.width - 40);
+  const callback = noop.useCallback((nativeEvent) => {
+    closure_4(width - nativeEvent.nativeEvent.layout.width - 40);
   }, items3);
-  let obj4 = channel(7872);
-  obj = { style: null, children: null };
-  const items4 = [tmp.actionBarContainer, obj4.useGradientTop()];
-  obj[0] = items4;
+  const obj4 = channel(504);
+  const obj6 = { style: null, children: null };
+  const items4 = [tmp.actionBarContainer, channel(7886).useGradientTop()];
+  obj6.style = items4;
   let tmp11 = null != firstMessage;
   if (tmp11) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.reactionRow;
-    obj1 = { thread: null, parentChannel: null, firstMessage: null, containerWidth: null };
-    obj1[0] = channel;
-    obj1[1] = stateFromStores;
-    obj1[2] = firstMessage;
-    obj1[3] = tmp7[0];
-    obj[1] = callback(tmp2(11419).ForumPostActionBarReactions, obj1);
-    tmp11 = callback(tmp10, obj);
+    const obj7 = { style: tmp.reactionRow, children: null };
+    const obj8 = { thread: channel, parentChannel: stateFromStores, firstMessage, containerWidth: tmp7[0] };
+    obj7.children = closure_10(tmp2(11446).ForumPostActionBarReactions, obj8);
+    tmp11 = closure_10(tmp10, obj7);
   }
   const items5 = [tmp11, ];
-  obj2 = { style: items6, onLayout: callback, children: null };
-  items6 = [, ];
+  const obj9 = { style: null, onLayout: callback, children: null };
+  const items6 = [, ];
   ({ actionRow: arr7[0], actionButtonsContainer: arr7[1] } = tmp);
+  obj9.style = items6;
   if (stateFromStores2) {
     const items7 = [tmp13, , ];
-    obj3 = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
+    const obj10 = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
     const intl4 = tmp2(1114).intl;
-    obj3[1] = intl4.string(tmp2(1114).t.WqhZss);
-    obj3[2] = tmp.actionButton;
-    obj3[3] = function onPress() {
+    obj10.accessibilityLabel = intl4.string(tmp2(1114).t.WqhZss);
+    obj10.style = tmp.actionButton;
+    obj10.onPress = function onPress() {
       const guildId = channel.getGuildId();
       if (null != guildId) {
-        let obj = channel(11257);
-        obj = { section: null };
-        obj[0] = closure_1_9.CHANNEL_HEADER;
-        const result = obj.handleCopyLinkForumPost(guildId, channel.id, obj);
+        const obj2 = { section: AnalyticsSections.CHANNEL_HEADER };
+        const result = messages_MessagesUtils.handleCopyLinkForumPost(guildId, channel.id, obj2);
       }
     };
-    obj3[4] = callback(tmp2(4503).LinkIcon, { size: "xs" });
-    items7[1] = callback(tmp2(5123).PressableOpacity, obj3);
-    obj4 = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
+    obj10.children = closure_10(tmp2(4517).LinkIcon, { size: "xs" });
+    items7[1] = closure_10(tmp2(5137).PressableOpacity, obj10);
+    const obj11 = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
     const intl5 = tmp2(1114).intl;
-    obj4[1] = intl5.string(tmp2(1114).t.nFP4oa);
+    obj11.accessibilityLabel = intl5.string(tmp2(1114).t.nFP4oa);
     const items8 = [, ];
     ({ actionButton: arr12[0], lastActionButton: arr12[1] } = tmp);
-    obj4[2] = items8;
-    obj4[3] = function onPress() {
-      let obj = stateFromStores1(7456);
-      obj = { channelId: channel.id, messageId: stateFromStores1(11).castChannelIdAsMessageId(channel.id), flash: true, jumpType: channel(4491).JumpType.ANIMATED };
-      obj.jumpToMessage(obj);
+    obj11.style = items8;
+    obj11.onPress = function onPress() {
+      const obj2 = { channelId: channel.id, messageId: null, flash: true, jumpType: null };
+      const obj = MessageActionCreatorsDefault;
+      obj2.messageId = SnowflakeUtilsDefault.castChannelIdAsMessageId(channel.id);
+      obj2.jumpType = Client.JumpType.ANIMATED;
+      obj.jumpToMessage(obj2);
     };
-    obj4[4] = callback(tmp2(11420).ArrowLargeUpIcon, { size: "xs" });
-    items7[2] = callback(tmp2(5123).PressableOpacity, obj4);
-    obj2[2] = items7;
-    items5[1] = tmp9(tmp10, obj2);
-    obj[1] = items5;
-    return tmp9(tmp10, obj);
+    obj11.children = closure_10(tmp2(11447).ArrowLargeUpIcon, { size: "xs" });
+    items7[2] = closure_10(tmp2(5137).PressableOpacity, obj11);
+    obj9.children = items7;
+    items5[1] = tmp9(tmp10, obj9);
+    obj6.children = items5;
+    return tmp9(tmp10, obj6);
   } else {
     let items9 = function handleFollow() {
-      const result = channel(11257).handleToggleFollowForumPost(channel, stateFromStores1);
+      const result = messages_MessagesUtils.handleToggleFollowForumPost(channel, stateFromStores1);
     };
-    const obj5 = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
+    const obj12 = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
     let intl = tmp2(1114).intl;
     let Text = intl.string;
     let t = tmp2(1114).t;
     if (stateFromStores1) {
-      obj5[1] = Text(t.G3ooHD);
-      obj5[2] = tmp.actionButton;
-      obj5[3] = items9;
-      intl = callback;
-      items9 = [callback(tmp2(4511).CheckmarkLargeIcon, { size: "xs", color: "text-brand" }), ];
-      Text = tmp2(4556).Text;
-      const obj6 = { style: null, variant: "text-sm/semibold", color: "text-brand", children: null };
+      obj12.accessibilityLabel = Text(t.G3ooHD);
+      obj12.style = tmp.actionButton;
+      obj12.onPress = items9;
+      intl = closure_10;
+      items9 = [closure_10(tmp2(4525).CheckmarkLargeIcon, { size: "xs", color: "text-brand" }), ];
+      Text = tmp2(4570).Text;
+      const obj13 = { style: null, variant: "text-sm/semibold", color: "text-brand", children: null };
       const items10 = [tmp.buttonText];
-      obj6[0] = items10;
+      obj13.style = items10;
       const intl3 = tmp2(1114).intl;
-      obj6[3] = intl3.string(tmp2(1114).t["OtF+lC"]);
-      t = callback(Text, obj6);
+      obj13.children = intl3.string(tmp2(1114).t["OtF+lC"]);
+      t = closure_10(Text, obj13);
       items9[1] = t;
-      obj5[4] = items9;
-      let tmp15 = obj5;
+      obj12.children = items9;
+      let tmp15 = obj12;
     } else {
-      obj5[1] = Text(t["DjZ+6E"]);
-      obj5[2] = tmp.actionButton;
-      obj5[3] = items9;
-      const items11 = [callback(tmp2(9781).BellIcon, { size: "xs" }), ];
-      const obj7 = { style: null, variant: "text-sm/semibold", color: "interactive-text-default", children: null };
-      obj7[0] = tmp.buttonText;
+      obj12.accessibilityLabel = Text(t["DjZ+6E"]);
+      obj12.style = tmp.actionButton;
+      obj12.onPress = items9;
+      const items11 = [closure_10(tmp2(9808).BellIcon, { size: "xs" }), ];
+      const obj14 = { style: tmp.buttonText, variant: "text-sm/semibold", color: "interactive-text-default", children: null };
       const intl2 = tmp2(1114).intl;
-      obj7[3] = intl2.string(tmp2(1114).t["0rQinA"]);
-      items11[1] = callback(tmp2(4556).Text, obj7);
-      obj5[4] = items11;
-      tmp15 = obj5;
+      obj14.children = intl2.string(tmp2(1114).t["0rQinA"]);
+      items11[1] = closure_10(tmp2(4570).Text, obj14);
+      obj12.children = items11;
+      tmp15 = obj12;
     }
-    tmp9(tmp2(5123).PressableOpacity, tmp15);
+    tmp9(tmp2(5137).PressableOpacity, tmp15);
   }
 };

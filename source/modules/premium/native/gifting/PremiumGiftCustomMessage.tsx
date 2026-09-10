@@ -1,61 +1,60 @@
-// Module ID: 10863
-// Function ID: 10864
-// Name: GiftCustomMessage
-// Dependencies: [19, 17, 1373, 21, 4560, 576, 1114, 7085, 10704, 2]
+// Module ID: 10890
+// Function ID: 10891
+// Name: PremiumGiftCustomMessage
+// Dependencies: [19, 17, 1373, 21, 4574, 576, 1114, 7099, 10731, 2]
 
-// Module 10863 (GiftCustomMessage)
-import ThemesDefault from "Themes" /* 576 */;
-import NativeGiftContextProvider from "NativeGiftContextProvider" /* 10704 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { CUSTOM_GIFT_MESSAGE_MAX_LENGTH as closure_4 } from "GuildFeatures" /* 1373 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10890 (PremiumGiftCustomMessage)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import TextArea from "TextArea" /* 7099 */;
+import NativeGiftContext from "NativeGiftContext" /* 10731 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 class GiftCustomMessage {
   constructor(arg0) {
     ({ setMessagePosition, setCustomGiftMessage } = global);
     ({ onFocusMessage, customGiftMessage } = global);
     tmp = closure_6();
-    intl = require("getSystemLocale").intl;
+    intl = closure_0(closure_1[6]).intl;
     items = [];
     items[0] = setCustomGiftMessage;
-    stringResult = intl.string(require("getSystemLocale").t.ZkOo1U);
+    stringResult = intl.string(closure_0(closure_1[6]).t.ZkOo1U);
     obj = {
       style: tmp.container,
       onLayout(nativeEvent) {
-            return callback(nativeEvent.nativeEvent.layout.y);
+            return require(nativeEvent.nativeEvent.layout.y);
           },
       children: null
     };
     callback = closure_2.useCallback((arg0) => {
       setCustomGiftMessage(arg0);
     }, items);
-    obj = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, onFocus: null };
-    intl2 = require("getSystemLocale").intl;
-    obj[0] = intl2.string(require("getSystemLocale").t.B3miE8);
-    obj[1] = stringResult;
-    obj[2] = customGiftMessage;
-    obj[3] = callback;
-    obj[4] = closure_4;
-    obj[5] = onFocusMessage;
-    obj[2] = jsx(require("TextArea").TextArea, obj);
+    obj1 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, onFocus: null };
+    intl2 = closure_0(closure_1[6]).intl;
+    obj1.label = intl2.string(closure_0(closure_1[6]).t.B3miE8);
+    obj1.placeholder = stringResult;
+    obj1.value = customGiftMessage;
+    obj1.onChange = callback;
+    obj1.maxLength = closure_4;
+    obj1.onFocus = onFocusMessage;
+    obj.children = jsx(closure_0(closure_1[7]).TextArea, obj1);
     return jsx(View, obj);
   }
 }
-let obj = { container: null };
-obj = { marginTop: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_16 };
-obj[0] = obj;
-let closure_6 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo((arg0) => {
+const View = fn(17).View;
+const React4 = fn(1373).CUSTOM_GIFT_MESSAGE_MAX_LENGTH;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj = { container: { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16 } };
+const timestampProducer = createStyles.createStyles(obj);
+const obj3 = { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftCustomMessage.tsx");
+
+export default noop.memo((arg0) => {
   ({ onFocusMessage, setMessagePosition } = arg0);
-  let obj = NativeGiftContextProvider;
-  const nativeGiftContext = obj.useNativeGiftContext();
-  obj = { onFocusMessage, setMessagePosition, customGiftMessage: nativeGiftContext.customGiftMessage, setCustomGiftMessage: nativeGiftContext.setCustomGiftMessage };
+  const nativeGiftContext = NativeGiftContext.useNativeGiftContext();
   return <GiftCustomMessage onFocusMessage={onFocusMessage} setMessagePosition={setMessagePosition} customGiftMessage={nativeGiftContext.customGiftMessage} setCustomGiftMessage={nativeGiftContext.setCustomGiftMessage} />;
 });
-const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftCustomMessage.tsx");
-
-export default memoResult;
 export { GiftCustomMessage };

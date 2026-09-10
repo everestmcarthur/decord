@@ -1,30 +1,27 @@
-// Module ID: 9018
-// Function ID: 9019
-// Name: formatDurationNarrow
-// Dependencies: [19, 17, 21, 4560, 576, 1114, 9019, 4556, 9020, 2]
+// Module ID: 9045
+// Function ID: 9046
+// Name: UserProfileApplicationWidgetFieldUtils
+// Dependencies: [19, 17, 21, 4574, 576, 1114, 9046, 4570, 9047, 2]
 // Exports: FieldText, formatDurationNarrow
 
-// Module 9018 (formatDurationNarrow)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import ImageSkeleton from "ImageSkeleton" /* 9019 */;
-import items2 from "items" /* 9020 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9045 (UserProfileApplicationWidgetFieldUtils)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 9046 */;
+import ApplicationWidgetMarkupUtils from "ApplicationWidgetMarkupUtils" /* 9047 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ Image: obj1, View: c3 } = get_ActivityIndicator);
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { fieldTextRow: null, fieldIcon: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { width: 16, height: 16 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: c2, View: c3 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { fieldTextRow: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, fieldIcon: { width: 16, height: 16 } };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx");
 
 export const formatDurationNarrow = function formatDurationNarrow(arg0) {
   let num = 0;
@@ -38,65 +35,52 @@ export const formatDurationNarrow = function formatDurationNarrow(arg0) {
   const result1 = Math.floor(num / 1000) % 60;
   const items = [];
   if (rounded > 0) {
-    const intl = getSystemLocale.intl;
-    let obj = { hours: null };
-    obj[0] = rounded;
-    items.push(intl.formatToPlainString(getSystemLocale.t.rhY1Rs, obj));
+    const intl = util.intl;
+    const obj = { hours: rounded };
+    items.push(intl.formatToPlainString(util.t.rhY1Rs, obj));
   }
   if (0 < result) {
-    const intl2 = getSystemLocale.intl;
-    obj = { minutes: null };
-    obj[0] = result;
-    items.push(intl2.formatToPlainString(getSystemLocale.t["XIGt+W"], obj));
+    const intl2 = util.intl;
+    const obj2 = { minutes: result };
+    items.push(intl2.formatToPlainString(util.t["XIGt+W"], obj2));
   }
   let tmp10 = result1 > 0;
   if (0 >= result1) {
     tmp10 = 0 === items.length;
   }
   if (tmp10) {
-    const intl3 = getSystemLocale.intl;
-    obj = { seconds: null };
-    obj[0] = result1;
-    items.push(intl3.formatToPlainString(getSystemLocale.t.pyvjRp, obj));
+    const intl3 = util.intl;
+    const obj3 = { seconds: result1 };
+    items.push(intl3.formatToPlainString(util.t.pyvjRp, obj3));
   }
   return items.join(" ");
 };
 export const FieldText = function FieldText(arg0) {
   ({ field, variant } = arg0);
   ({ color, skeletonWidthChars } = arg0);
-  const tmp = callback2();
+  const tmp = closure_6();
   if ("hidden" === field.status) {
     return null;
   } else if ("skeleton" === field.status) {
-    let obj = { variant: null, widthChars: null };
-    obj[0] = variant;
-    obj[1] = skeletonWidthChars;
-    let tmp9Result = callback(ImageSkeleton.TextSkeleton, obj);
+    const obj2 = { variant, widthChars: skeletonWidthChars };
+    let tmp9Result = React4(UserProfileApplicationWidgetSkeletons.TextSkeleton, obj2);
   } else {
-    obj = { style: null, children: null };
-    obj[0] = tmp.fieldTextRow;
-    obj1 = { variant: null, color: null, lineClamp: 2, children: null };
-    obj1[0] = variant;
-    obj1[1] = color;
-    const obj2 = { linkVariant: null };
-    obj2[0] = variant;
-    obj1[3] = items2.parseApplicationWidgetText(field.text, obj2);
-    const items = [callback(Text.Text, obj1), ];
+    const obj3 = { style: tmp.fieldTextRow, children: null };
+    const obj4 = { variant, color, lineClamp: 2, children: null };
+    const obj5 = { linkVariant: variant };
+    obj4.children = ApplicationWidgetMarkupUtils.parseApplicationWidgetText(field.text, obj5);
+    const items = [React4(Text_Text.Text, obj4), ];
     let tmp11Result = null != field.icon;
     if (tmp11Result) {
-      obj = { source: null, style: null, resizeMode: "contain" };
-      const obj3 = { uri: null };
-      obj3[0] = field.icon.url;
-      obj[0] = obj3;
-      obj[1] = tmp.fieldIcon;
-      tmp11Result = tmp11(closure_2, obj);
+      const obj = { source: null, style: null, resizeMode: "contain" };
+      const obj7 = { uri: field.icon.url };
+      obj.source = obj7;
+      obj.style = tmp.fieldIcon;
+      tmp11Result = tmp11(React2, obj);
     }
     items[1] = tmp11Result;
-    obj[1] = items;
-    tmp9Result = closure_5(closure_3, obj);
-    const obj6 = items2;
-    const tmp10 = closure_3;
-    tmp11 = callback;
-    const tmp9 = closure_5;
+    obj3.children = items;
+    tmp9Result = hasOwnProperty(React3, obj3);
+    tmp11 = React4;
   }
 };

@@ -1,17 +1,17 @@
-// Module ID: 14105
-// Function ID: 14106
+// Module ID: 14128
+// Function ID: 14129
 // Name: WarningCircle
-// Dependencies: [19, 21, 8456, 2]
+// Dependencies: [19, 21, 8484, 2]
 // Exports: default
 
-// Module 14105 (WarningCircle)
-import noopAll from "noop" /* 19 */;
-import inlineStyles from "inlineStyles" /* 8456 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 14128 (WarningCircle)
+import inlineStyles from "inlineStyles" /* 8484 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/void/WarningCircle/native/WarningCircle.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/WarningCircle/native/WarningCircle.tsx");
 
 export default function WarningCircle(width) {
   let num = width.width;
@@ -26,7 +26,7 @@ export default function WarningCircle(width) {
   if (str === undefined) {
     str = "currentColor";
   }
-  const merged = Object.assign(width, Object.create(null));
+  const merged = Object.assign(width, Object.assign({ width: 0, height: 0, color: 0 }));
   const obj = {};
   const merged1 = Object.assign(merged);
   obj.width = num;

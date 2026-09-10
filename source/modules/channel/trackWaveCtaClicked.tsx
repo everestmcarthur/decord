@@ -1,18 +1,19 @@
-// Module ID: 12269
-// Function ID: 12270
-// Name: getDmHasMessageHistory
+// Module ID: 12295
+// Function ID: 12296
+// Name: trackWaveCtaClicked
 // Dependencies: [1957, 1074, 1242, 2]
 // Exports: getDmHasMessageHistory, trackWaveCtaClicked
 
-// Module 12269 (getDmHasMessageHistory)
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import closure_2 from "ensureGuildLoaded" /* 1957 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
+// Module 12295 (trackWaveCtaClicked)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-const result = require("set").fileFinishedImporting("modules/channel/trackWaveCtaClicked.tsx");
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel/trackWaveCtaClicked.tsx");
 
 export const getDmHasMessageHistory = function getDmHasMessageHistory(arg0) {
-  const channel = store.getChannel(arg0);
+  const channel = ChannelStore.getChannel(arg0);
   let lastMessageId;
   if (channel != null) {
     lastMessageId = channel.lastMessageId;
@@ -20,13 +21,12 @@ export const getDmHasMessageHistory = function getDmHasMessageHistory(arg0) {
   return null != lastMessageId;
 };
 export const trackWaveCtaClicked = function trackWaveCtaClicked(channelId) {
-  let obj = expandEventPropertiesDefault;
-  obj = { channel_id: channelId.channelId, source: channelId.source, dm_has_message_history: null };
-  const channel = store.getChannel(channelId.channelId);
+  const obj2 = { channel_id: channelId.channelId, source: channelId.source, dm_has_message_history: null };
+  const channel = ChannelStore.getChannel(channelId.channelId);
   let lastMessageId;
   if (channel != null) {
     lastMessageId = channel.lastMessageId;
   }
-  obj[2] = null != lastMessageId;
-  obj.track(AnalyticEvents.WAVE_CTA_CLICKED, obj);
+  obj2.dm_has_message_history = null != lastMessageId;
+  AnalyticsUtilsDefault.track(AnalyticEvents.WAVE_CTA_CLICKED, obj2);
 };

@@ -1,27 +1,27 @@
-// Module ID: 7983
-// Function ID: 7984
-// Name: createChangeChannelIconSystemMessage
-// Dependencies: [1957, 7953, 7960, 7962, 7964, 1114, 7967, 2]
+// Module ID: 7997
+// Function ID: 7998
+// Name: ChangeChannelIconSystemMessage
+// Dependencies: [1957, 7967, 7974, 7976, 7978, 1114, 7981, 2]
 // Exports: createChangeChannelIconSystemMessage
 
-// Module 7983 (createChangeChannelIconSystemMessage)
-import resultDefault from "result" /* 7953 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7960 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7962 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7964 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
+// Module 7997 (ChangeChannelIconSystemMessage)
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 7967 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7974 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7976 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7978 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/ChangeChannelIconSystemMessage.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/ChangeChannelIconSystemMessage.tsx");
 
 export const createChangeChannelIconSystemMessage = function createChangeChannelIconSystemMessage(message) {
   message = message.message;
   ({ theme, roleStyle } = message);
-  const tmp3 = resultDefault(theme);
-  let obj = getMessageAuthorWithProcessedColor;
-  const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
+  const tmp3 = resolveMessageContentColorsDefault(theme);
+  const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   const tmp6 = formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle });
-  channel = channel.getChannel(message.channel_id);
+  const channel = ChannelStore.getChannel(message.channel_id);
   let flag;
   if (channel != null) {
     const isGroupDM = channel.isGroupDM;
@@ -37,23 +37,17 @@ export const createChangeChannelIconSystemMessage = function createChangeChannel
   const formatToParts = intl.formatToParts;
   const t = tmp4(1114).t;
   if (flag) {
-    obj = { username: null, usernameOnClick: null, onEditGroup: null };
-    obj[0] = messageAuthorWithProcessedColor.nick;
-    obj[1] = tmp6;
+    const obj2 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp6, onEditGroup: null };
     let linkColor;
     if (tmp3 != null) {
       linkColor = tmp3.linkColor;
     }
-    obj = { action: "bindOpenGdmCustomizeActionSheet", linkColor: null, messageChannelId: null, medium: true };
-    obj[1] = linkColor;
-    obj[2] = message.channel_id;
-    obj[2] = obj;
-    let formatToPartsResult = formatToParts(t.hfeYXC, obj);
+    const obj3 = { action: "bindOpenGdmCustomizeActionSheet", linkColor, messageChannelId: message.channel_id, medium: true };
+    obj2.onEditGroup = obj3;
+    let formatToPartsResult = formatToParts(t.hfeYXC, obj2);
   } else {
-    obj1 = { username: null, usernameOnClick: null };
-    obj1[0] = messageAuthorWithProcessedColor.nick;
-    obj1[1] = tmp6;
-    formatToPartsResult = formatToParts(t.wypJZ0, obj1);
+    const obj4 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp6 };
+    formatToPartsResult = formatToParts(t.wypJZ0, obj4);
   }
   const merged = Object.assign(tmp8);
   let tmp12;
@@ -62,15 +56,15 @@ export const createChangeChannelIconSystemMessage = function createChangeChannel
     if (accessibilityActions == null) {
       accessibilityActions = [];
     }
-    const obj3 = { accessibilityActions: null };
+    const obj6 = { accessibilityActions: null };
     const items = [];
-    const obj4 = { label: null, name: null };
+    const obj7 = { label: null, name: null };
     const intl2 = tmp4(1114).intl;
-    obj4[0] = intl2.string(tmp4(1114).t["5Q9+/L"]);
-    obj4[1] = tmp4(7967).MessageAccessibilityAction.EDIT_GDM;
-    items[HermesBuiltin.arraySpread(accessibilityActions, 0)] = obj4;
-    obj3[0] = items;
-    tmp12 = obj3;
+    obj7.label = intl2.string(tmp4(1114).t["5Q9+/L"]);
+    obj7.name = tmp4(7981).MessageAccessibilityAction.EDIT_GDM;
+    items[HermesBuiltin.arraySpread(accessibilityActions, 0)] = obj7;
+    obj6.accessibilityActions = items;
+    tmp12 = obj6;
     const arraySpreadResult = HermesBuiltin.arraySpread(accessibilityActions, 0);
   }
   const merged1 = Object.assign(tmp12);

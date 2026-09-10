@@ -1,12 +1,11 @@
-// Module ID: 6334
-// Function ID: 6335
-// Name: metadata
+// Module ID: 6348
+// Function ID: 6349
 // Dependencies: [2]
 
-// Module 6334 (metadata)
-import set from "set" /* 2 */;
+// Module 6348
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/OrbNitroCardSpotIllustration-2x.png.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/OrbNitroCardSpotIllustration-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/7cc953a6003978681a409c563ec1e973b4198c5fbb017fca37c7b62afa4912b9.png";
 export const metadata = { fileBytes: 37242 };

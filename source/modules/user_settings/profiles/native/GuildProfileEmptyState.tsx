@@ -1,155 +1,147 @@
-// Module ID: 14651
-// Function ID: 14652
+// Module ID: 14677
+// Function ID: 14678
 // Name: GuildProfileEmptyState
-// Dependencies: [5, 19, 17, 21, 4560, 14652, 4556, 1114, 4975, 12712, 1896, 2]
+// Dependencies: [5, 19, 17, 21, 4574, 14678, 4570, 1114, 4989, 12738, 1896, 2]
 // Exports: default
 
-// Module 14651 (GuildProfileEmptyState)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import Button from "Button" /* 4975 */;
-import SvgComponentDefault from "SvgComponent" /* 14652 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14677 (GuildProfileEmptyState)
+import util from "util" /* 1114 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import GuildProfileEmptyStateSvgDefault from "GuildProfileEmptyStateSvg" /* 14678 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ ScrollView: c4, View: c5 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ container: { paddingHorizontal: 16, alignItems: "center" }, image: { marginBottom: 16, marginTop: 64, textAlign: "center" }, header: { textAlign: "center", marginStart: 8, marginEnd: 8, marginBottom: 8 }, createButton: { marginTop: 16, marginBottom: 12 } });
-let result = require("set").fileFinishedImporting("modules/user_settings/profiles/native/GuildProfileEmptyState.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let closure_8 = createStyles.createStyles({ container: { paddingHorizontal: 16, alignItems: "center" }, image: { marginBottom: 16, marginTop: 64, textAlign: "center" }, header: { textAlign: "center", marginStart: 8, marginEnd: 8, marginBottom: 8 }, createButton: { marginTop: 16, marginBottom: 12 } });
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/profiles/native/GuildProfileEmptyState.tsx");
 
 export default function GuildProfileEmptyState() {
-  const tmp = callback4();
+  const tmp = closure_8();
   let obj = { contentContainerStyle: tmp.container, children: null };
-  obj = { style: tmp.image, children: callback2(SvgComponentDefault, obj) };
-  obj = { style: tmp.image };
-  const items = [callback2(closure_5, obj), , , , ];
-  obj1 = { style: tmp.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale.intl;
-  obj1[3] = intl.string(getSystemLocale.t.Z1OZCV);
-  items[1] = callback2(Text.Text, obj1);
-  const obj2 = { style: tmp.header, variant: "text-sm/normal", color: "text-default", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj2[3] = intl2.string(getSystemLocale.t.UEmBq7);
-  items[2] = callback2(Text.Text, obj2);
-  const obj3 = { style: tmp.createButton, children: null };
-  const obj4 = { text: null, onPress: null };
-  const intl3 = getSystemLocale.intl;
-  obj4[0] = intl3.string(getSystemLocale.t["6dIB4R"]);
-  obj4[1] = callback(function*() {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
+  let obj2 = { style: tmp.image, children: timestampProducer(GuildProfileEmptyStateSvgDefault, { style: tmp.image }) };
+  const items = [timestampProducer(hasOwnProperty, obj2), , , , ];
+  let obj4 = { style: tmp.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
+  const intl = util.intl;
+  obj4.children = intl.string(util.t.Z1OZCV);
+  items[1] = timestampProducer(Text_Text.Text, obj4);
+  const obj5 = { style: tmp.header, variant: "text-sm/normal", color: "text-default", children: null };
+  const intl2 = util.intl;
+  obj5.children = intl2.string(util.t.UEmBq7);
+  items[2] = timestampProducer(Text_Text.Text, obj5);
+  const obj6 = { style: tmp.createButton, children: null };
+  const obj7 = { text: null, onPress: null };
+  const intl3 = util.intl;
+  obj7.text = intl3.string(util.t["6dIB4R"]);
+  obj7.onPress = asyncGeneratorStep(async (arg0, value) => {
+    if (c0 === 2) {
+      c0 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        v0 = 2;
+        c0 = 2;
         if (0 === c1) {
           if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
+            c0 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            c0 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             c1 = 1;
-            v0 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = v0(closure_1_2[10])(closure_1_2[9], closure_1_2.paths);
-            return obj1;
+            c0 = 1;
+            const obj4 = { value: asyncRequireImpl(dependencyMap[9], dependencyMap.paths), done: false };
+            return obj4;
           }
         } else if (arg0 === 1) {
-          v0 = 3;
-          throw arg1;
+          c0 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          v0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          c0 = 3;
+          const obj = { value, done: true };
           return obj;
         } else {
-          arg1.default.openCreateGuildModal();
-          v0 = 3;
+          value.default.openCreateGuildModal();
+          c0 = 3;
           return { value: "HermesInternal", done: null };
         }
       } catch (tmp8) {
-        v0 = tmp;
+        c0 = tmp;
         throw tmp8;
       }
     }
   });
-  obj3[1] = callback2(Button.Button, obj4);
-  items[3] = callback2(closure_5, obj3);
-  const obj5 = { text: null, variant: "secondary", onPress: null };
-  const intl4 = getSystemLocale.intl;
-  obj5[0] = intl4.string(getSystemLocale.t.yRjK4p);
-  obj5[2] = callback(function*() {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
+  obj6.children = timestampProducer(components_Button_Button.Button, obj7);
+  items[3] = timestampProducer(hasOwnProperty, obj6);
+  const obj8 = { text: null, variant: "secondary", onPress: null };
+  const intl4 = util.intl;
+  obj8.text = intl4.string(util.t.yRjK4p);
+  obj8.onPress = asyncGeneratorStep(async (arg0, value) => {
+    if (c0 === 2) {
+      c0 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        v0 = 2;
+        c0 = 2;
         if (0 === c1) {
           if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
+            c0 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            c0 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             c1 = 1;
-            v0 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = v0(closure_1_2[10])(closure_1_2[9], closure_1_2.paths);
-            return obj1;
+            c0 = 1;
+            const obj4 = { value: asyncRequireImpl(dependencyMap[9], dependencyMap.paths), done: false };
+            return obj4;
           }
         } else if (arg0 === 1) {
-          v0 = 3;
-          throw arg1;
+          c0 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          v0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          c0 = 3;
+          const obj = { value, done: true };
           return obj;
         } else {
-          const result = arg1.default.openGuildJoinServerScreen();
-          v0 = 3;
+          const result = value.default.openGuildJoinServerScreen();
+          c0 = 3;
           return { value: "HermesInternal", done: null };
         }
       } catch (tmp8) {
-        v0 = tmp;
+        c0 = tmp;
         throw tmp8;
       }
     }
   });
-  items[4] = callback2(Button.Button, obj5);
-  obj[1] = items;
-  return callback3(closure_4, obj);
+  items[4] = timestampProducer(components_Button_Button.Button, obj8);
+  obj.children = items;
+  return React5(React4, obj);
 };

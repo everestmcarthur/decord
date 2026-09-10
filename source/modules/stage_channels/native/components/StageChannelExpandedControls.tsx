@@ -1,44 +1,47 @@
-// Module ID: 10018
-// Function ID: 10019
-// Dependencies: [19, 17, 4582, 502, 1979, 21, 4560, 4409, 576, 9588, 9476, 504, 5417, 9093, 10019, 2]
+// Module ID: 10045
+// Function ID: 10046
+// Name: StageChannelExpandedControls
+// Dependencies: [19, 17, 4596, 502, 1979, 21, 4574, 4423, 576, 9615, 9503, 504, 5431, 9120, 10046, 2]
 
-// Module 10018
-import ThemesDefault from "Themes" /* 576 */;
-import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 9093 */;
-import useCanCurrentUserSpeakInChannelDefault from "useCanCurrentUserSpeakInChannel" /* 9588 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "reset" /* 4582 */;
-import closure_5 from "fetchFingerprint" /* 502 */;
-import closure_6 from "createGuildRecordFromRust" /* 1979 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import hexToRgba from "hexToRgba" /* 4409 */;
-import importAllResult from "noop" /* 19 */;
+// Module 10045 (StageChannelExpandedControls)
+import nativeDefault from "native" /* 576 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 9615 */;
+import noop from "module_19" /* 19 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4596 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-const require = arg1;
+const useChannelVideoLimitDefault = tmp2(9120);
+const require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
 let obj = { container: null };
-obj = { backgroundColor: null, borderRadius: null, overflow: "hidden" };
-obj[0] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.WHITE, 0.24);
-obj[1] = ThemesDefault.radii.sm;
-obj[0] = obj;
-let closure_8 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo((channel) => {
+let obj3 = { backgroundColor: null, borderRadius: null, overflow: "hidden" };
+const ColorUtils = fn(4423);
+obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
+obj3.borderRadius = nativeDefault.radii.sm;
+obj.container = obj3;
+let closure_8 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageChannelExpandedControls.tsx");
+
+export default noop.memo((channel) => {
   channel = channel.channel;
   importDefault = undefined;
-  const tmp = callback();
-  const tmp2 = importDefault;
-  let obj = channel(9476);
-  const isConnectedToVoiceChannel = obj.useIsConnectedToVoiceChannel(channel);
-  obj1 = channel(504);
-  const items = [closure_6];
+  const tmp = closure_8();
+  const tmp4 = useCanSpeakInChannelDefault(channel.id);
+  const isConnectedToVoiceChannel = channel(9503).useIsConnectedToVoiceChannel(channel);
+  const obj = channel(9503);
+  const items = [GuildStore];
   const items1 = [channel.guild_id];
-  const stateFromStores = obj1.useStateFromStores(items, () => closure_1_6.getGuild(channel.guild_id), items1);
-  const tmp4 = useCanCurrentUserSpeakInChannelDefault(channel.id);
-  const items2 = [closure_4];
+  const stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id), items1);
+  const obj2 = channel(504);
+  const items2 = [ApplicationStreamingStore];
   const items3 = [channel.id];
-  const stateFromStoresArray = channel(504).useStateFromStoresArray(items2, () => closure_1_4.getAllApplicationStreamsForChannel(channel.id), items3);
+  const stateFromStoresArray = channel(504).useStateFromStoresArray(items2, () => ApplicationStreamingStore.getAllApplicationStreamsForChannel(channel.id), items3);
   const obj3 = channel(504);
-  const items4 = [closure_5];
+  const items4 = [AuthenticationStore];
   importDefault = channel(504).useStateFromStores(items4, () => id.getId());
   let num;
   if (stateFromStores != null) {
@@ -48,12 +51,11 @@ const memoResult = importAllResult.memo((channel) => {
     num = 0;
   }
   const obj4 = channel(504);
-  const stageHasMedia = channel(5417).useStageHasMedia(channel.id);
+  const stageHasMedia = channel(5431).useStageHasMedia(channel.id);
   const items5 = [];
-  items5.push(jsx(channel(10019).StreamVolumeItem, {}));
+  items5.push(jsx(channel(10046).StreamVolumeItem, {}));
   if (tmp11) {
-    obj = { channel: null, disabled: null };
-    obj[0] = channel;
+    const obj5 = { channel, disabled: null };
     let tmp12 = stateFromStoresArray.length > 0;
     if (tmp12) {
       tmp12 = null == stateFromStoresArray.find((ownerId) => ownerId.ownerId === closure_1);
@@ -65,15 +67,13 @@ const memoResult = importAllResult.memo((channel) => {
       }
       tmp12 = reachedLimit;
     }
-    obj[1] = tmp12;
-    items5.push(tmp9(tmp5(10019).ScreenshareButton, obj));
+    obj5.disabled = tmp12;
+    items5.push(tmp9(tmp5(10046).ScreenshareButton, obj5));
   }
-  obj = { channelId: channel.id, isConnectedToVoiceChannel };
-  items5.push(jsx(channel(10019).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel }));
-  items5.push(jsx(channel(10019).DeafenButton, { channel }));
-  obj1 = { style: tmp.container, children: items5.map((children) => callback(closure_3, { children }, arg1)) };
-  return <View style={tmp.container}>{items5.map((children) => callback(closure_3, { children }, arg1))}</View>;
+  items5.push(jsx(channel(10046).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel }));
+  items5.push(jsx(channel(10046).DeafenButton, { channel }));
+  const obj6 = { channelId: channel.id, isConnectedToVoiceChannel };
+  tmp11 = num > 0 && tmp4;
+  const tmp5Result = channel(5431);
+  return <View style={tmp.container}>{items5.map((children, index) => <View key={arg1}>{arg0}</View>)}</View>;
 });
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/StageChannelExpandedControls.tsx");
-
-export default memoResult;

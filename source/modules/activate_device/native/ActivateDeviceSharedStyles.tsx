@@ -1,11 +1,11 @@
-// Module ID: 13887
-// Function ID: 13888
-// Name: innerContent
+// Module ID: 13910
+// Function ID: 13911
+// Name: ActivateDeviceSharedStyles
 // Dependencies: [2]
 
-// Module 13887 (innerContent)
-import set from "set" /* 2 */;
+// Module 13910 (ActivateDeviceSharedStyles)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/activate_device/native/ActivateDeviceSharedStyles.tsx");
+const result = size.fileFinishedImporting("modules/activate_device/native/ActivateDeviceSharedStyles.tsx");
 
 export default { innerContent: { flexDirection: "column", gap: 8, alignItems: "center" }, centerText: { textAlign: "center" } };

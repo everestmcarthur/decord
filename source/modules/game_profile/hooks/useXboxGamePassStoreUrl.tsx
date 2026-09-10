@@ -1,16 +1,17 @@
-// Module ID: 8697
-// Function ID: 8698
+// Module ID: 8725
+// Function ID: 8726
 // Name: useXboxGamePassStoreUrl
-// Dependencies: [1074, 1925, 8690, 2]
+// Dependencies: [1074, 1925, 8718, 2]
 // Exports: default
 
-// Module 8697 (useXboxGamePassStoreUrl)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import XBOX_DISCORD_OCID from "XBOX_DISCORD_OCID" /* 8690 */;
+// Module 8725 (useXboxGamePassStoreUrl)
+import Constants from "Constants" /* 1074 */;
+import StringUtils from "StringUtils" /* 1925 */;
+import distributorStoreUrls from "distributorStoreUrls" /* 8718 */;
+import size from "module_2" /* 2 */;
 
-const Distributors = ME.Distributors;
-const result = set.fileFinishedImporting("modules/game_profile/hooks/useXboxGamePassStoreUrl.tsx");
+const Distributors = Constants.Distributors;
+const result = size.fileFinishedImporting("modules/game_profile/hooks/useXboxGamePassStoreUrl.tsx");
 
 export default function useXboxGamePassStoreUrl(thirdPartySkus) {
   if (null == thirdPartySkus) {
@@ -20,8 +21,7 @@ export default function useXboxGamePassStoreUrl(thirdPartySkus) {
     const found = thirdPartySkus.find((distributor) => {
       let tmp = distributor.distributor === constants.XBOX_GAME_PASS;
       if (tmp) {
-        tmp = !callback(table[1]).isNullOrEmpty(distributor.id);
-        const obj = callback(table[1]);
+        tmp = !StringUtils.isNullOrEmpty(distributor.id);
       }
       return tmp;
     });
@@ -31,8 +31,7 @@ export default function useXboxGamePassStoreUrl(thirdPartySkus) {
     }
     let xboxGamePassStoreUrl = null;
     if (null != id) {
-      xboxGamePassStoreUrl = XBOX_DISCORD_OCID.buildXboxGamePassStoreUrl(found.id);
-      let obj = XBOX_DISCORD_OCID;
+      xboxGamePassStoreUrl = distributorStoreUrls.buildXboxGamePassStoreUrl(found.id);
     }
     return xboxGamePassStoreUrl;
   }

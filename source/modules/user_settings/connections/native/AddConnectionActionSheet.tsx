@@ -1,37 +1,41 @@
-// Module ID: 14960
-// Function ID: 14961
-// Name: AddApplicationIdentityTableRow
-// Dependencies: [1074, 1921, 21, 4560, 1178, 4495, 1611, 7503, 7168, 7150, 7149, 1114, 6627, 5605, 4527, 9257, 1396, 4411, 7165, 7162, 7182, 2]
+// Module ID: 14986
+// Function ID: 14987
+// Name: AddConnectionActionSheet
+// Dependencies: [1074, 1921, 21, 4574, 1178, 4509, 1611, 7517, 7182, 7164, 7163, 1114, 6641, 5619, 4541, 9284, 1396, 4425, 7179, 7176, 7196, 2]
 // Exports: default
 
-// Module 14960 (AddApplicationIdentityTableRow)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import items2 from "items" /* 1921 */;
+// Module 14986 (AddConnectionActionSheet)
+import Constants from "Constants" /* 1074 */;
+import AvatarUtils from "AvatarUtils" /* 1396 */;
+import UserApplicationIdentityConstants from "UserApplicationIdentityConstants" /* 1921 */;
+import shared from "shared" /* 4425 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import TableRow from "TableRow" /* 5619 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import Button from "Button" /* 1178 */;
+import createStyles from "createStyles" /* 4574 */;
+import native from "native" /* 1178 */;
+import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 function AddApplicationIdentityTableRow(application) {
   application = application.application;
-  let _require;
+  _require = undefined;
   let analyticsLocations;
   ({ start, end } = application);
-  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(7165)(application));
-  const tmp2 = analyticsLocations(7165)(application);
-  analyticsLocations = analyticsLocations(7162)(analyticsLocations(7182).ACTION_SHEET).analyticsLocations;
-  const tmp3 = analyticsLocations(7162);
-  let obj = _require(1178);
-  const iconSource = application.getIconSource(obj.getIconSize(_require(1178).IconSizes.LARGE));
-  obj = {
+  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(7179)(application));
+  const tmp2 = analyticsLocations(7179)(application);
+  analyticsLocations = analyticsLocations(7176)(analyticsLocations(7196).ACTION_SHEET).analyticsLocations;
+  const tmp3 = analyticsLocations(7176);
+  const tmp4 = closure_7();
+  const iconSource = application.getIconSource(require("native").getIconSize(require("native").IconSizes.LARGE));
+  const obj2 = {
     start,
     end,
     label: application.name,
     onPress() {
-      let obj = analyticsLocations(closure_1_2[14]);
-      obj.hideActionSheet();
-      obj = { analyticsLocations };
-      _undefined(obj);
+      ActionSheetActionCreatorsDefault.hideActionSheet();
+      _undefined({ analyticsLocations });
     },
     icon: null,
     trailing: null,
@@ -39,30 +43,28 @@ function AddApplicationIdentityTableRow(application) {
   };
   let tmp7Result = null;
   if (null != iconSource) {
-    obj = { source: null, style: null, disableColor: true };
-    obj[0] = iconSource;
-    obj[1] = tmp4.icon;
-    tmp7Result = tmp7(tmp5(1178).Icon, obj);
+    const obj3 = { source: iconSource, style: tmp4.icon, disableColor: true };
+    tmp7Result = tmp7(tmp5(1178).Icon, obj3);
   }
-  obj[4] = tmp7Result;
-  obj[5] = closure_5(_require(5605).TableRow.Arrow, {});
-  obj[6] = !canStartAuthorization;
-  return closure_5(_require(5605).TableRow, obj, application.id);
+  obj2.icon = tmp7Result;
+  obj2.trailing = closure_5(require("TableRow").TableRow.Arrow, {});
+  obj2.disabled = !canStartAuthorization;
+  return closure_5(require("TableRow").TableRow, obj2, application.id);
 }
-const AnalyticsLocations = ME.AnalyticsLocations;
-let closure_4 = items2.getMigratedApplicationIdentityConnectionsScreenApplications;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
+const AnalyticsLocations = Constants.AnalyticsLocations;
+let closure_4 = UserApplicationIdentityConstants.getMigratedApplicationIdentityConnectionsScreenApplications;
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = { list: { paddingHorizontal: 16 }, icon: null };
-obj = { borderRadius: null };
-obj[0] = Button.getIconSize(Button.Icon.Sizes.LARGE);
-obj[1] = obj;
-let closure_7 = createCacheKey.createStyles(obj);
-const result = set.fileFinishedImporting("modules/user_settings/connections/native/AddConnectionActionSheet.tsx");
+let obj2 = { borderRadius: null };
+obj2.borderRadius = native.getIconSize(native.Icon.Sizes.LARGE);
+obj.icon = obj2;
+let closure_7 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/user_settings/connections/native/AddConnectionActionSheet.tsx");
 
 export default function AddConnectionActionSheet() {
-  const _require = found(found1[5])();
-  let obj = _require(found1[7]);
-  const platforms = obj.usePlatforms();
+  _require = found(found1[5])();
+  let tmp = closure_7();
+  const platforms = require("ConnectionsHooks").usePlatforms();
   found = platforms.filter((migrationData) => {
     let tmp = null == migrationData.migrationData;
     if (!tmp) {
@@ -71,54 +73,51 @@ export default function AddConnectionActionSheet() {
     }
     return tmp;
   });
-  let tmp = callback4();
+  let obj = require("ConnectionsHooks");
   const tmp2 = found(found1[8]);
-  found1 = found(found1[8])(callback("AddConnectionActionSheet")).filter((arg0) => null != arg0);
-  obj = { scrollable: true, startExpanded: true, header: null, children: null };
-  obj = { title: null };
-  const intl = _require(found1[11]).intl;
-  obj[0] = intl.string(_require(found1[11]).t.Zhcj9X);
-  obj[2] = callback2(_require(found1[10]).BottomSheetTitleHeader, obj);
-  obj1 = { style: tmp.list, contentContainerStyle: { paddingBottom: found(found1[6])().bottom }, children: null };
+  found1 = found(found1[8])(closure_4("AddConnectionActionSheet")).filter((item) => null != item);
+  const obj2 = { scrollable: true, startExpanded: true, header: null, children: null };
+  const obj3 = { title: null };
+  const intl = require("util").intl;
+  obj3.title = intl.string(require("util").t.Zhcj9X);
+  obj2.header = closure_5(require("BottomSheetTitleHeader").BottomSheetTitleHeader, obj3);
+  const obj4 = { style: tmp.list, contentContainerStyle: { paddingBottom: found(found1[6])().bottom }, children: null };
   const items = [
-    found1.map((application) => {
-      const obj = { application, start: 0 === arg1, end: null };
-      let tmp3 = arg1 === found1.length - 1;
+    found1.map((application, index) => {
+      const obj = { application, start: 0 === index, end: null };
+      let tmp3 = index === found1.length - 1;
       if (tmp3) {
         tmp3 = 0 === found.length;
       }
-      obj[2] = tmp3;
-      return closure_1_5(closure_1_8, obj, application.id);
+      obj.end = tmp3;
+      return hasOwnProperty(AddApplicationIdentityTableRow, obj, application.id);
     }),
-    found.map((label) => {
+    found.map((label, index) => {
       const type = label.type;
       const icon = label.icon;
-      let tmp4 = 0 === arg1;
+      let tmp4 = 0 === index;
       if (tmp4) {
         tmp4 = 0 === found1.length;
       }
-      let obj = {
+      const obj = {
         start: tmp4,
-        end: arg1 === found.length - 1,
+        end: index === found.length - 1,
         label: label.name,
         onPress() {
-          let obj = closure_1_1(closure_1_2[14]);
-          obj.hideActionSheet();
-          obj = { platformType: type, location: closure_1_3.USER_SETTINGS };
-          closure_1_1(closure_1_2[15])(obj);
+          found(found1[14]).hideActionSheet();
+          found(found1[15])({ platformType: type, location: constants.USER_SETTINGS });
         },
         icon: null,
         trailing: null
       };
-      let tmp2Result = tmp2(tmp3[16]);
-      tmp2Result = tmp2(tmp3[17]);
-      obj = { source: tmp2Result.makeSource(tmp2Result.isThemeDark(type) ? icon.darkPNG : icon.lightPNG), disableColor: true };
-      obj[4] = closure_1_5(callback(found1[4]).Icon, obj);
-      obj[5] = closure_1_5(callback(found1[13]).TableRow.Arrow, {});
-      return closure_1_5(callback(found1[13]).TableRow, obj, type);
+      const tmp2Result = AvatarUtils;
+      const tmp2Result2 = shared;
+      obj.icon = hasOwnProperty(native.Icon, { source: tmp2Result.makeSource(shared.isThemeDark(closure_0) ? icon.darkPNG : icon.lightPNG), disableColor: true });
+      obj.trailing = hasOwnProperty(TableRow.TableRow.Arrow, {});
+      return hasOwnProperty(TableRow.TableRow, obj, type);
     })
   ];
-  obj1[2] = items;
-  obj[3] = callback3(_require(found1[12]).BottomSheetScrollView, obj1);
-  return callback2(_require(found1[9]).BottomSheet, obj);
+  obj4.children = items;
+  obj2.children = closure_6(require("BottomSheetModal").BottomSheetScrollView, obj4);
+  return closure_5(require("Sheet/BottomSheet").BottomSheet, obj2);
 };

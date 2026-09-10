@@ -1,19 +1,20 @@
-// Module ID: 7058
-// Function ID: 7059
+// Module ID: 7072
+// Function ID: 7073
 // Name: useFastestListUnexpectedItemSizeCallback
-// Dependencies: [19, 7059, 2]
+// Dependencies: [19, 7073, 2]
 // Exports: default
 
-// Module 7058 (useFastestListUnexpectedItemSizeCallback)
-import closure_2 from "noop" /* 19 */;
+// Module 7072 (useFastestListUnexpectedItemSizeCallback)
+import FastestListLogger from "FastestListLogger" /* 7073 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/fastest_list/useFastestListUnexpectedItemSizeCallback.android.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/fastest_list/useFastestListUnexpectedItemSizeCallback.android.tsx");
 
 export default function useFastestListUnexpectedItemSizeCallback(arg0) {
-  closure_0 = arg0;
   const items = [arg0];
-  return React.useCallback((nativeEvent) => {
+  return noop.useCallback((nativeEvent) => {
     nativeEvent = nativeEvent.nativeEvent;
     const current = ref.current;
     if (nativeEvent.isSectionHeader) {
@@ -65,15 +66,15 @@ export default function useFastestListUnexpectedItemSizeCallback(arg0) {
       }
       const obj = { detailMessage: null, itemPosition: null, itemName: null, itemProps: null, listId: null };
       const _HermesInternal4 = HermesInternal;
-      obj[0] = "Expected item size " + nativeEvent.sizeExpected + ", but got " + nativeEvent.size + ".";
-      obj[1] = combined;
+      obj.detailMessage = "Expected item size " + nativeEvent.sizeExpected + ", but got " + nativeEvent.size + ".";
+      obj.itemPosition = combined;
       if (str == null) {
         str = "Unknown component.";
       }
-      obj[2] = str;
-      obj[3] = joined;
-      obj[4] = ref.current.listId;
-      ref(closure_1_1[1]).logFastestListError("Expected item size mismatch.", obj);
+      obj.itemName = str;
+      obj.itemProps = joined;
+      obj.listId = ref.current.listId;
+      FastestListLogger.logFastestListError("Expected item size mismatch.", obj);
     }
     let type1;
     if (type != null) {

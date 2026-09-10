@@ -1,35 +1,36 @@
-// Module ID: 13098
-// Function ID: 13099
+// Module ID: 13124
+// Function ID: 13125
 // Name: AddToWishlistGrid
-// Dependencies: [19, 17, 7208, 21, 4560, 13097, 13099, 2]
+// Dependencies: [19, 17, 7222, 21, 4574, 13123, 13125, 2]
 // Exports: default
 
-// Module 13098 (AddToWishlistGrid)
-import noopAll from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13124 (AddToWishlistGrid)
+import WishlistAnalyticsContext from "WishlistAnalyticsContext" /* 13123 */;
+import AddToWishlistItemCardDefault from "AddToWishlistItemCard" /* 13125 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-let closure_5 = createCacheKey.createStyles({ itemsContainer: { flexDirection: "row", flexWrap: "wrap", gap: require("ARBITRARY_LARGE_OFFSET").WISHLIST_SUGGESTION_CARD_GAP, justifyContent: "flex-start" } });
-const result = require("set").fileFinishedImporting("modules/wishlists/native/AddToWishlistGrid.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_5 = createStyles.createStyles({ itemsContainer: { flexDirection: "row", flexWrap: "wrap", gap: fn(7222).WISHLIST_SUGGESTION_CARD_GAP, justifyContent: "flex-start" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/wishlists/native/AddToWishlistGrid.tsx");
 
 export default function AddToWishlistGrid(arg0) {
   ({ items, wishlist: require, analyticsLocations: importDefault, cardSize: dependencyMap } = arg0);
-  return <View style={callback().itemsContainer}>{items.map((itemSource, positionInSection) => {
+  return <View style={closure_5().itemsContainer}>{items.map((itemSource, positionInSection) => {
     const sku = itemSource.sku;
-    obj = { newValue: obj, children: null };
-    obj = { positionInSection, skuId: sku.id, itemSource: itemSource.itemSource, productLine: sku.productLine };
-    obj = { sku, wishlistId: null, analyticsLocations: null, size: null };
-    let id;
+    const obj = { newValue: { positionInSection, skuId: sku.id, itemSource: itemSource.itemSource, productLine: sku.productLine }, children: null };
+    const obj3 = { sku, wishlistId: null, analyticsLocations: null, size: null };
+    id = undefined;
     if (id != null) {
       id = id.id;
     }
-    obj[1] = id;
-    obj[2] = closure_1;
-    obj[3] = closure_2;
-    obj[1] = closure_1_4(closure_1_1(closure_1_2[6]), obj);
-    return closure_1_4(closure_1_0(closure_1_2[5]).WishlistAnalyticsProvider, obj, sku.id);
+    obj3.wishlistId = id;
+    obj3.analyticsLocations = analyticsLocations;
+    obj3.size = size;
+    obj.children = jsx(AddToWishlistItemCardDefault, { sku, wishlistId: null, analyticsLocations: null, size: null });
+    return jsx(WishlistAnalyticsContext.WishlistAnalyticsProvider, { newValue: { positionInSection, skuId: sku.id, itemSource: itemSource.itemSource, productLine: sku.productLine }, children: null }, sku.id);
   })}</View>;
 };

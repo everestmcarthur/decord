@@ -1,26 +1,26 @@
-// Module ID: 9376
-// Function ID: 9377
+// Module ID: 9403
+// Function ID: 9404
 // Name: UploadIcon
-// Dependencies: [19, 21, 576, 4261, 9377, 2]
+// Dependencies: [19, 21, 576, 4274, 9404, 2]
 // Exports: UploadIcon
 
-// Module 9376 (UploadIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 9377 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 9403 (UploadIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod9404 from "module_9404" /* 9404 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/UploadIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/UploadIcon.tsx");
 
 export const UploadIcon = function UploadIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9404, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

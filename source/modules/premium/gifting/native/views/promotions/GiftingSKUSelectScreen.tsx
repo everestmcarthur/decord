@@ -1,115 +1,113 @@
-// Module ID: 11045
-// Function ID: 11046
+// Module ID: 11072
+// Function ID: 11073
 // Name: GiftingSKUSelectScreen
-// Dependencies: [32, 19, 17, 21, 4560, 576, 1611, 4556, 1114, 11046, 4975, 2]
+// Dependencies: [32, 19, 17, 21, 4574, 576, 1611, 4570, 1114, 11073, 4989, 2]
 // Exports: default
 
-// Module 11045 (GiftingSKUSelectScreen)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11072 (GiftingSKUSelectScreen)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import GiftingSKUCardsGridDefault from "GiftingSKUCardsGrid" /* 11073 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, scroll: null, contentContainer: null, header: null, subtitle: null, buttonContainer: null, headerContainer: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1 };
-createCacheKey[2] = { display: "flex", flexDirection: "column", padding: ThemesDefault.space.PX_24 };
-let obj1 = { display: "flex", flexDirection: "column", padding: ThemesDefault.space.PX_24 };
-createCacheKey[3] = { textAlign: "center", padding: ThemesDefault.space.PX_8 };
-createCacheKey[4] = { textAlign: "center" };
-let obj2 = { textAlign: "center", padding: ThemesDefault.space.PX_8 };
-createCacheKey[5] = { marginHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_24 };
-let obj3 = { marginHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_24 };
-createCacheKey[6] = { marginBottom: ThemesDefault.space.PX_24 };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { marginBottom: ThemesDefault.space.PX_24 };
-const result = require("set").fileFinishedImporting("modules/premium/gifting/native/views/promotions/GiftingSKUSelectScreen.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scroll: { flex: 1 }, contentContainer: null, header: null, subtitle: null, buttonContainer: null, headerContainer: null };
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj2.contentContainer = { display: "flex", flexDirection: "column", padding: nativeDefault.space.PX_24 };
+let obj4 = { display: "flex", flexDirection: "column", padding: nativeDefault.space.PX_24 };
+obj2.header = { textAlign: "center", padding: nativeDefault.space.PX_8 };
+obj2.subtitle = { textAlign: "center" };
+let obj5 = { textAlign: "center", padding: nativeDefault.space.PX_8 };
+obj2.buttonContainer = { marginHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_24 };
+let obj6 = { marginHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_24 };
+obj2.headerContainer = { marginBottom: nativeDefault.space.PX_24 };
+let closure_9 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/gifting/native/views/promotions/GiftingSKUSelectScreen.tsx");
 
 export default function GiftingSKUSelectScreen(rewardsToDisplay) {
   const defaultHighlightedReward = rewardsToDisplay.defaultHighlightedReward;
   const claimableRewards = rewardsToDisplay.claimableRewards;
   const onSelect = rewardsToDisplay.onSelect;
-  let first;
-  let React;
-  let first1;
+  highlightedSkuId = undefined;
+  closure_4 = undefined;
+  first1 = undefined;
   closure_6 = undefined;
-  let memo;
-  const tmp = callback2();
-  const tmp2 = first(React.useState(defaultHighlightedReward), 2);
-  first = tmp2[0];
-  React = tmp2[1];
-  const tmp4 = first(React.useState(false), 2);
-  first1 = tmp4[0];
-  closure_6 = tmp4[1];
-  const items = [onSelect, first, claimableRewards];
-  const callback = React.useCallback(() => {
-    const found = claimableRewards.find((arg0) => arg0 === closure_3);
+  const tmp = closure_9();
+  [highlightedSkuId, closure_4] = noop.useState(defaultHighlightedReward);
+  [first1, closure_6] = noop.useState(false);
+  const items = [onSelect, highlightedSkuId, claimableRewards];
+  const callback = noop.useCallback(() => {
+    const found = claimableRewards.find((item) => item === highlightedSkuId);
     if (null != found) {
       onSelect(found);
     }
   }, items);
-  const items1 = [first, claimableRewards];
-  const callback1 = React.useCallback((arg0) => {
-    callback(arg0);
-    callback2(true);
+  const items1 = [highlightedSkuId, claimableRewards];
+  const callback1 = noop.useCallback((arg0) => {
+    closure_4(arg0);
+    closure_6(true);
   }, []);
-  memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     let someResult = null != first;
     if (someResult) {
-      someResult = claimableRewards.some((arg0) => arg0 === closure_3);
+      someResult = claimableRewards.some((item) => item === highlightedSkuId);
     }
     return someResult;
   }, items1);
-  const items2 = [first, claimableRewards, first1, defaultHighlightedReward, memo];
-  const effect = React.useEffect(() => {
+  const items2 = [highlightedSkuId, claimableRewards, first1, defaultHighlightedReward, memo];
+  const effect = noop.useEffect(() => {
     if (0 === claimableRewards.length) {
-      callback(undefined);
+      closure_4(undefined);
     } else if (!memo) {
       let someResult = !first1;
       if (!first1) {
         someResult = null != defaultHighlightedReward;
       }
       if (someResult) {
-        someResult = obj.some((arg0) => arg0 === closure_0);
+        someResult = obj.some((item) => item === defaultHighlightedReward);
       }
       let tmp7;
       if (someResult) {
         tmp7 = defaultHighlightedReward;
       }
-      callback(tmp7);
-      const tmp6 = callback;
+      closure_4(tmp7);
     }
   }, items2);
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.scroll, contentContainerStyle: tmp.contentContainer, children: null };
-  obj = { style: tmp.headerContainer, children: null };
-  obj1 = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
-  const intl = defaultHighlightedReward(onSelect[8]).intl;
-  obj1[4] = intl.string(defaultHighlightedReward(onSelect[8]).t["+ByEeM"]);
-  const items3 = [memo(defaultHighlightedReward(onSelect[7]).Text, obj1), ];
-  const obj2 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: null };
-  const intl2 = defaultHighlightedReward(onSelect[8]).intl;
-  obj2[3] = intl2.string(defaultHighlightedReward(onSelect[8]).t.vPeaOS);
-  items3[1] = memo(defaultHighlightedReward(onSelect[7]).Text, obj2);
-  obj[1] = items3;
-  const items4 = [callback(first1, obj), memo(claimableRewards(onSelect[9]), { rewardsToDisplay: rewardsToDisplay.allRewards, claimableRewards, onSelect: callback1, highlightedSkuId: first })];
-  obj[2] = items4;
-  const items5 = [callback(closure_6, obj), ];
-  const obj3 = { style: items6, children: null };
-  items6 = [tmp.buttonContainer, { paddingBottom: claimableRewards(onSelect[6])().bottom }];
-  const obj4 = { text: null, onPress: null, disabled: null };
-  const intl3 = defaultHighlightedReward(onSelect[8]).intl;
-  obj4[0] = intl3.string(defaultHighlightedReward(onSelect[8]).t["3d0Nmb"]);
-  obj4[1] = callback;
-  obj4[2] = null == first || !memo;
-  obj3[1] = memo(defaultHighlightedReward(onSelect[10]).Button, obj4);
-  items5[1] = memo(first1, obj3);
-  obj[1] = items5;
-  return callback(first1, obj);
+  const obj = { style: tmp.container, children: null };
+  const obj2 = { style: tmp.scroll, contentContainerStyle: tmp.contentContainer, children: null };
+  const obj3 = { style: tmp.headerContainer, children: null };
+  const obj4 = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
+  const intl = util.intl;
+  obj4.children = intl.string(util.t["+ByEeM"]);
+  const items3 = [React5(Text_Text.Text, obj4), ];
+  const obj5 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: null };
+  const intl2 = util.intl;
+  obj5.children = intl2.string(util.t.vPeaOS);
+  items3[1] = React5(Text_Text.Text, obj5);
+  obj3.children = items3;
+  const items4 = [React6(hasOwnProperty, obj3), React5(GiftingSKUCardsGridDefault, { rewardsToDisplay: rewardsToDisplay.allRewards, claimableRewards, onSelect: callback1, highlightedSkuId })];
+  obj2.children = items4;
+  const items5 = [React6(timestampProducer, obj2), ];
+  const obj6 = { style: null, children: null };
+  const items6 = [tmp.buttonContainer, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
+  obj6.style = items6;
+  const obj7 = { text: null, onPress: null, disabled: null };
+  const intl3 = util.intl;
+  obj7.text = intl3.string(util.t["3d0Nmb"]);
+  obj7.onPress = callback;
+  obj7.disabled = null == highlightedSkuId || !memo;
+  obj6.children = React5(components_Button_Button.Button, obj7);
+  items5[1] = React5(hasOwnProperty, obj6);
+  obj.children = items5;
+  return React6(hasOwnProperty, obj);
 };

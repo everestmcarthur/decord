@@ -1,15 +1,15 @@
-// Module ID: 11315
-// Function ID: 11316
+// Module ID: 11342
+// Function ID: 11343
 // Name: getChannelAndRecipientsFromInvite
 // Dependencies: [1961, 2]
 // Exports: default
 
-// Module 11315 (getChannelAndRecipientsFromInvite)
-import set from "set" /* 2 */;
-import createChannelRecord from "createChannelRecord" /* 1961 */;
+// Module 11342 (getChannelAndRecipientsFromInvite)
+import ChannelRecord from "ChannelRecord" /* 1961 */;
+import size from "module_2" /* 2 */;
 
-let closure_0 = createChannelRecord.createChannelRecordFromInvite;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/getChannelAndRecipientsFromInvite.tsx");
+let closure_0 = ChannelRecord.createChannelRecordFromInvite;
+const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/getChannelAndRecipientsFromInvite.tsx");
 
 export default function getChannelAndRecipientsFromInvite(channel) {
   if (null != channel.channel) {
@@ -17,16 +17,15 @@ export default function getChannelAndRecipientsFromInvite(channel) {
       const recipients = channel.channel.recipients;
       let substr = recipients.slice();
     }
-    let obj = { recipients_: null, channel: null };
-    obj[0] = substr;
+    const obj = { recipients_: substr, channel: null };
     let tmp = null;
     if (null != channel.channel) {
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(channel.channel);
-      obj.recipients = substr;
-      tmp = callback(obj);
+      obj2.recipients = substr;
+      tmp = closure_0(obj2);
     }
-    obj[1] = tmp;
+    obj.channel = tmp;
     return obj;
   }
   substr = [];

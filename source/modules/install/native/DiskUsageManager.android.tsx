@@ -1,12 +1,11 @@
-// Module ID: 17409
-// Function ID: 17410
-// Name: _initialize
-// Dependencies: [7118, 2]
+// Module ID: 17440
+// Function ID: 17441
+// Name: DiskUsageManager
+// Dependencies: [7132, 2]
 
-// Module 17409 (_initialize)
-import initializeDefault from "initialize" /* 7118 */;
+// Module 17440 (DiskUsageManager)
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-initializeDefault;
 class DiskUsageManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -27,6 +26,7 @@ prototype["_terminate"] = function _terminate() {
 
 };
 const diskUsageManager = new DiskUsageManager();
-const result = require("set").fileFinishedImporting("modules/install/native/DiskUsageManager.android.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/install/native/DiskUsageManager.android.tsx");
 
 export default diskUsageManager;

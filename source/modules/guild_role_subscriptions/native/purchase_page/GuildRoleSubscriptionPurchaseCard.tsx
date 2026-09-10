@@ -1,67 +1,67 @@
-// Module ID: 16549
-// Function ID: 16550
+// Module ID: 16580
+// Function ID: 16581
 // Name: GuildRoleSubscriptionPurchaseCard
-// Dependencies: [32, 19, 17, 21, 4560, 576, 1611, 15230, 16544, 7150, 4556, 1178, 16550, 6627, 1114, 15240, 2]
+// Dependencies: [32, 19, 17, 21, 4574, 576, 1611, 15259, 16575, 7164, 4570, 1178, 16581, 6641, 1114, 15269, 2]
 // Exports: default
 
-// Module 16549 (GuildRoleSubscriptionPurchaseCard)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import Text from "Text" /* 4556 */;
-import BottomSheetModal from "BottomSheetModal" /* 6627 */;
-import Background from "Background" /* 7150 */;
-import getRoleEmojisAll from "getRoleEmojis" /* 15230 */;
-import SectionTitle from "SectionTitle" /* 15240 */;
-import TruncatedText from "TruncatedText" /* 16544 */;
-import emphasisHookDefault from "emphasisHook" /* 16550 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16580 (GuildRoleSubscriptionPurchaseCard)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import BottomSheetModal from "BottomSheetModal" /* 6641 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7164 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15259 */;
+import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 15269 */;
+import Elements from "Elements" /* 16575 */;
+import SubscribeButtonDefault from "SubscribeButton" /* 16581 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, header: null, content: null, headerText: null, headerDot: null, seperator: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { padding: 16, paddingBottom: 24 };
-createCacheKey[2] = { padding: 16, paddingTop: 24, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[3] = { flexDirection: "row", alignItems: "center" };
-let obj1 = { padding: 16, paddingTop: 24, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[4] = { width: 3, height: 3, borderRadius: 1.5, backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginHorizontal: 8 };
-let obj2 = { width: 3, height: 3, borderRadius: 1.5, backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginHorizontal: 8 };
-createCacheKey[5] = { borderBottomWidth: 1, marginLeft: -16, marginRight: -16, borderColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const obj3 = { borderBottomWidth: 1, marginLeft: -16, marginRight: -16, borderColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/GuildRoleSubscriptionPurchaseCard.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 }, header: { padding: 16, paddingBottom: 24 }, content: null, headerText: null, headerDot: null, seperator: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 };
+obj2.content = { padding: 16, paddingTop: 24, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj2.headerText = { flexDirection: "row", alignItems: "center" };
+let size = { width: 3, height: 3, borderRadius: 1.5, backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginHorizontal: 8 };
+obj2.headerDot = size;
+let obj4 = { padding: 16, paddingTop: 24, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj2.seperator = { borderBottomWidth: 1, marginLeft: -16, marginRight: -16, borderColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
+let closure_8 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/GuildRoleSubscriptionPurchaseCard.tsx");
 
 export default function GuildRoleSubscriptionPurchaseCard(guildId) {
   const listingId = guildId.listingId;
-  const tmp = callback4();
-  let obj = getRoleEmojisAll;
-  obj1 = getRoleEmojisAll;
-  let obj2 = TruncatedText;
-  const formattedSubscriptionPlan = obj2.useFormattedSubscriptionPlan(listingId);
-  obj = { scrollable: true, startExpanded: true, children: null };
-  obj = { style: tmp.container, children: null };
-  obj1 = { style: tmp.header, children: null };
-  obj2 = { style: tmp.headerText, children: null };
-  const items = [callback2(Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: callback(obj1.useName(listingId), 1)[0] }), callback2(View, { style: tmp.headerDot }), callback2(Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: formattedSubscriptionPlan })];
-  obj2[1] = items;
-  const items1 = [callback3(View, obj2), callback2(Button.Spacer, { size: 16 }), callback2(TruncatedText.TruncatedText, { variant: "text-sm/normal", color: "text-default", lineClamp: 2, children: callback(obj.useDescription(listingId), 1)[0] }), callback2(Button.Spacer, { size: 24 }), callback2(emphasisHookDefault, { listingId })];
-  obj1[1] = items1;
-  const items2 = [callback3(View, obj1), callback2(View, { style: tmp.seperator }), ];
-  const obj5 = { scrollsToTop: false, style: tmp.content, contentContainerStyle: obj6, children: null };
-  const obj7 = { variant: "text-sm/bold", color: "text-default", style: { textTransform: "uppercase" }, children: null };
-  const intl = getSystemLocale.intl;
-  obj7[3] = intl.string(getSystemLocale.t.UdEvUi);
-  const items3 = [callback2(Text.Text, obj7), callback2(Button.Spacer, { size: 24 }), callback2(SectionTitle.Content, { listingId, guildId: guildId.guildId })];
-  obj5[3] = items3;
-  items2[2] = callback3(BottomSheetModal.BottomSheetScrollView, obj5);
-  obj[1] = items2;
-  obj[2] = callback3(View, obj);
-  return callback2(Background.BottomSheet, obj);
+  const tmp = closure_8();
+  const obj = GuildRoleSubscriptionListingEditStateUtilsAll;
+  const obj2 = GuildRoleSubscriptionListingEditStateUtilsAll;
+  const formattedSubscriptionPlan = Elements.useFormattedSubscriptionPlan(listingId);
+  const obj4 = { scrollable: true, startExpanded: true, children: null };
+  const obj5 = { style: tmp.container, children: null };
+  const obj6 = { style: tmp.header, children: null };
+  const obj7 = { style: tmp.headerText, children: null };
+  const items = [timestampProducer(Text_Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: _slicedToArray(obj2.useName(listingId), 1)[0] }), timestampProducer(View, { style: tmp.headerDot }), timestampProducer(Text_Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: formattedSubscriptionPlan })];
+  obj7.children = items;
+  const items1 = [React5(View, obj7), timestampProducer(native.Spacer, { size: 16 }), timestampProducer(Elements.TruncatedText, { variant: "text-sm/normal", color: "text-default", lineClamp: 2, children: _slicedToArray(obj.useDescription(listingId), 1)[0] }), timestampProducer(native.Spacer, { size: 24 }), timestampProducer(SubscribeButtonDefault, { listingId })];
+  obj6.children = items1;
+  const items2 = [React5(View, obj6), timestampProducer(View, { style: tmp.seperator }), ];
+  const obj10 = { scrollsToTop: false, style: tmp.content, contentContainerStyle: null, children: null };
+  const obj8 = { style: tmp.headerDot };
+  const obj9 = { style: tmp.seperator };
+  obj10.contentContainerStyle = { paddingBottom: 16 + useSafeAreaInsetsDefault().bottom };
+  const obj12 = { variant: "text-sm/bold", color: "text-default", style: { textTransform: "uppercase" }, children: null };
+  const intl = util.intl;
+  obj12.children = intl.string(util.t.UdEvUi);
+  const items3 = [timestampProducer(Text_Text.Text, obj12), timestampProducer(native.Spacer, { size: 24 }), timestampProducer(GuildRoleSubscriptionCard.Content, { listingId, guildId: guildId.guildId })];
+  obj10.children = items3;
+  items2[2] = React5(BottomSheetModal.BottomSheetScrollView, obj10);
+  obj5.children = items2;
+  obj4.children = React5(View, obj5);
+  return timestampProducer(Sheet_BottomSheet.BottomSheet, obj4);
 };

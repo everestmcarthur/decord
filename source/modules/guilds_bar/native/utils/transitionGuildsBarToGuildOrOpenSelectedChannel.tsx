@@ -1,28 +1,28 @@
-// Module ID: 16311
-// Function ID: 16312
+// Module ID: 16342
+// Function ID: 16343
 // Name: transitionGuildsBarToGuildOrOpenSelectedChannel
-// Dependencies: [2011, 4381, 1074, 4418, 4417, 4571, 7342, 2]
+// Dependencies: [2011, 4395, 1074, 4432, 4431, 4585, 7356, 2]
 // Exports: default
 
-// Module 16311 (transitionGuildsBarToGuildOrOpenSelectedChannel)
-import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;
-import closure_2 from "handleConnectionOpen" /* 2011 */;
-import closure_3 from "handleConnectionOpen" /* 4381 */;
-import { ME } from "ME" /* 1074 */;
+// Module 16342 (transitionGuildsBarToGuildOrOpenSelectedChannel)
+import RootNavigationRef from "RootNavigationRef" /* 4432 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/guilds_bar/native/utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx");
+require = fn;
+const ME = fn(1074).ME;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guilds_bar/native/utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx");
 
 export default function transitionGuildsBarToGuildOrOpenSelectedChannel(arg0) {
-  const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
+  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   let isReadyResult;
   if (rootNavigationRef != null) {
     isReadyResult = rootNavigationRef.isReady();
   }
   let tmp4;
   if (true === isReadyResult) {
-    let tmpResult = tmp(4417);
-    const coerceGuildsRouteResult = tmpResult.coerceGuildsRoute(rootNavigationRef.getCurrentRoute());
+    const coerceGuildsRouteResult = tmp(4431).coerceGuildsRoute(rootNavigationRef.getCurrentRoute());
     let drawerOpen;
     if (coerceGuildsRouteResult != null) {
       const params = coerceGuildsRouteResult.params;
@@ -35,23 +35,24 @@ export default function transitionGuildsBarToGuildOrOpenSelectedChannel(arg0) {
       if (arg0 !== ME) {
         tmp7 = arg0;
       }
-      guildId = guildId.getGuildId();
+      let guildId = SelectedGuildStore.getGuildId();
       if (guildId == null) {
         guildId = null;
       }
       let tmp10;
       if (guildId === tmp7) {
-        channelId = channelId.getChannelId(arg0, false);
+        const channelId = SelectedChannelStore.getChannelId(arg0, false);
         tmp10 = channelId;
       }
       tmp4 = tmp10;
     }
+    const tmpResult = tmp(4431);
   }
   if (null != tmp4) {
-    tmpResult = tmp(4571);
-    tmpResult.transitionToChannel(tmp4);
+    tmp(4585).transitionToChannel(tmp4);
+    const tmpResult3 = tmp(4585);
   } else {
-    tmp(7342).transitionToGuild(arg0);
-    const tmpResult1 = tmp(7342);
+    tmp(7356).transitionToGuild(arg0);
+    const tmpResult4 = tmp(7356);
   }
 };

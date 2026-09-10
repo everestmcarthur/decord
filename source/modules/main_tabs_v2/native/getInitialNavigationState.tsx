@@ -1,95 +1,94 @@
-// Module ID: 4419
-// Function ID: 4420
-// Name: getInitialGuildState
-// Dependencies: [32, 502, 4385, 2011, 1074, 3, 4420, 1100, 4386, 4399, 4423, 2]
+// Module ID: 4433
+// Function ID: 4434
+// Name: getInitialNavigationState
+// Dependencies: [32, 502, 4399, 2011, 1074, 3, 4434, 1100, 4400, 4413, 4437, 2]
 // Exports: computeInitialNavigationState, default, getInitialAuthState, wrapRouteForRootNavigator
 
-// Module 4419 (getInitialGuildState)
-import timestampDefault from "timestamp" /* 3 */;
-import transitionTo from "transitionTo" /* 1100 */;
-import matchPath from "matchPath" /* 4386 */;
-import RouteParam5 from "RouteParam" /* 4399 */;
-import useChatLayout from "useChatLayout" /* 4420 */;
-import MobileHomeDrawerExperiment2 from "MobileHomeDrawerExperiment" /* 4423 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "fetchFingerprint" /* 502 */;
-import closure_4 from "initialize" /* 4385 */;
-import closure_5 from "handleConnectionOpen" /* 2011 */;
-import ME from "ME" /* 1074 */;
+// Module 4433 (getInitialNavigationState)
+import LoggerDefault from "Logger" /* 3 */;
+import router_utils from "router_utils" /* 1100 */;
+import matchPathCompat from "matchPathCompat" /* 4400 */;
+import RouteUtils from "RouteUtils" /* 4413 */;
+import useChatLayout from "useChatLayout" /* 4434 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4437 */;
+import _slicedToArray from "module_32" /* 32 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import DefaultRouteStore from "DefaultRouteStore" /* 4399 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
-require = arg1;
-function getInitialGuildState(closure_6, channelId, flag, flag2) {
+require = fn;
+function getInitialGuildState(guildId, channelId, flag, flag2) {
   flag = flag2;
   if (flag2 === undefined) {
     flag = false;
   }
   if (channelId == null) {
-    channelId = channelId.getChannelId(closure_6);
+    channelId = SelectedChannelStore.getChannelId(guildId);
   }
-  let obj = useChatLayout;
-  const isChatLockedOpen = obj.getChatLayout().isChatLockedOpen;
+  const isChatLockedOpen = useChatLayout.getChatLayout().isChatLockedOpen;
   if (flag) {
     if (null != channelId) {
       if (!isChatLockedOpen) {
         if (!flag) {
           let items = [true, ];
-          obj = { index: 0, routes: null };
-          obj = { name: "tabs", state: null };
-          obj1 = { routes: null, index: 0 };
-          const obj2 = { name: "guilds", params: null };
-          const obj3 = { guildId: null, channelId: null };
-          obj3[0] = closure_6;
-          obj3[1] = channelId;
-          obj2[1] = obj3;
-          const items1 = [obj2];
-          obj1[0] = items1;
-          obj[1] = obj1;
-          const items2 = [obj, ];
-          const obj4 = { name: "channel", params: null };
-          const obj5 = { guildId: null, channelId: null };
-          obj5[0] = closure_6;
-          obj5[1] = channelId;
-          obj4[1] = obj5;
-          items2[1] = obj4;
-          const obj6 = { name: "main", state: null };
-          const obj7 = { routes: null, index: null };
-          obj7[0] = items2;
-          obj7[1] = items2.length - 1;
-          obj6[1] = obj7;
-          const items3 = [obj6];
-          obj[1] = items3;
-          items[1] = obj;
+          const obj2 = { index: 0, routes: null };
+          const obj3 = { name: "tabs", state: null };
+          const obj4 = { routes: null, index: 0 };
+          const obj5 = { name: "guilds", params: null };
+          const obj6 = { guildId, channelId };
+          obj5.params = obj6;
+          const items1 = [obj5];
+          obj4.routes = items1;
+          obj3.state = obj4;
+          const items2 = [obj3, ];
+          const obj7 = { name: "channel", params: null };
+          const obj8 = { guildId, channelId };
+          obj7.params = obj8;
+          items2[1] = obj7;
+          const obj9 = { name: "main", state: null };
+          const obj10 = { routes: items2, index: items2.length - 1 };
+          obj9.state = obj10;
+          const items3 = [obj9];
+          obj2.routes = items3;
+          items[1] = obj2;
         }
         return items;
       }
     }
   }
   const items4 = [isChatLockedOpen && null != channelId, ];
-  const items5 = [{ name: "guilds", params: { guildId: closure_6, channelId, drawerOpen: flag } }];
-  const items6 = [{ name: "tabs", state: { routes: items5, index: 0 } }];
-  const items7 = [{ name: "main", state: { routes: items6, index: items6.length - 1 } }];
-  items4[1] = { index: 0, routes: items7 };
+  const obj11 = { index: 0, routes: null };
+  const obj12 = { name: "tabs", state: null };
+  const obj13 = { routes: null, index: 0 };
+  const items5 = [{ name: "guilds", params: { guildId, channelId, drawerOpen: flag } }];
+  obj13.routes = items5;
+  obj12.state = obj13;
+  const items6 = [obj12];
+  const obj15 = { name: "main", state: { routes: items6, index: items6.length - 1 } };
+  const items7 = [obj15];
+  obj11.routes = items7;
+  items4[1] = obj11;
   items = items4;
 }
 function computeInitialNavigationStateWithoutLogging() {
-  if (null != token.getToken()) {
-    obj1 = transitionTo;
-    const _location = obj1.getHistory().location;
-    let obj2 = matchPath;
-    let obj = { path: null };
-    const RouteParam = RouteParam5.RouteParam;
-    const RouteParam2 = RouteParam5.RouteParam;
-    obj[0] = closure_7.CHANNEL(RouteParam.guildId(), RouteParam2.channelId({ optional: true }), ":messageId?");
-    const matchPathResult = obj2.matchPath(_location.pathname, obj);
-    const MobileHomeDrawerExperiment = MobileHomeDrawerExperiment2.MobileHomeDrawerExperiment;
+  if (null != AuthenticationStore.getToken()) {
+    const _location = router_utils.getHistory().location;
+    const obj4 = { path: null };
+    const RouteParam = RouteUtils.RouteParam;
+    const obj3 = matchPathCompat;
+    const obj5 = React5;
+    const RouteParam2 = RouteUtils.RouteParam;
+    obj4.path = React5.CHANNEL(RouteParam.guildId(), RouteParam2.channelId({ optional: true }), ":messageId?");
+    const matchPathResult = obj3.matchPath(_location.pathname, obj4);
+    const MobileHomeDrawerExperiment = HomeDrawerExperiment.MobileHomeDrawerExperiment;
     const tmp5 = MobileHomeDrawerExperiment.getConfig({ location: "app-start" }).landOnHome && null == matchPathResult;
     if (null == matchPathResult) {
-      obj = { path: null };
-      const RouteParam3 = tmp(4399).RouteParam;
-      const tmpResult = tmp(4386);
-      const RouteParam4 = tmp(4399).RouteParam;
-      obj[0] = obj5.CHANNEL(RouteParam3.guildId(), RouteParam4.channelId({ optional: true }), ":messageId?");
-      let matchPathResult1 = tmpResult.matchPath(lastNonVoiceRoute.lastNonVoiceRoute, obj);
+      const obj6 = { path: null };
+      const RouteParam3 = tmp(4413).RouteParam;
+      const tmpResult = tmp(4400);
+      const RouteParam4 = tmp(4413).RouteParam;
+      obj6.path = obj5.CHANNEL(RouteParam3.guildId(), RouteParam4.channelId({ optional: true }), ":messageId?");
+      let matchPathResult1 = tmpResult.matchPath(DefaultRouteStore.lastNonVoiceRoute, obj6);
       let flag = false;
       const guildIdResult1 = RouteParam3.guildId();
     } else {
@@ -113,68 +112,68 @@ function computeInitialNavigationStateWithoutLogging() {
       if (tmp5 === undefined) {
         flag2 = false;
       }
-      items[1] = getInitialGuildState(closure_6, undefined, false, flag2)[1];
+      items[1] = getInitialGuildState(timestampProducer, undefined, false, flag2)[1];
       return items;
     } else {
       if (!flag) {
-        flag = guildId !== closure_6;
+        flag = guildId !== timestampProducer;
       }
-      const tmp16 = callback(getInitialGuildState(guildId, channelId, flag, tmp5), 2);
+      const tmp16 = _slicedToArray(getInitialGuildState(guildId, channelId, flag, tmp5), 2);
       let str2 = "other";
       if (!tmp16[0]) {
         let str3 = "guild-channels";
-        if (guildId === closure_6) {
+        if (guildId === timestampProducer) {
           str3 = "private-channels";
         }
         str2 = str3;
       }
       if ("private-channels" === str2) {
-        obj1 = { page: null };
-        obj1[0] = str2;
-        const items1 = [obj1, tmp17];
+        const obj7 = { page: str2 };
+        const items1 = [obj7, tmp17];
         let items2 = items1;
       } else {
-        obj2 = { page: null, guildId: null };
-        obj2[0] = str2;
-        obj2[1] = guildId;
-        items2 = [obj2, tmp17];
+        const obj8 = { page: str2, guildId };
+        items2 = [obj8, tmp17];
       }
       return items2;
     }
     const guildIdResult = RouteParam.guildId();
-    obj5 = closure_7;
   } else {
     const items3 = [{ page: "other" }, ];
-    obj = { routes: null, index: 0 };
+    const obj = { routes: null, index: 0 };
     const items4 = [{ name: "auth" }];
-    obj[0] = items4;
+    obj.routes = items4;
     items3[1] = obj;
     return items3;
   }
 }
-({ ME: closure_6, Routes: error } = ME);
-let closure_8 = new timestampDefault("getInitialNavigationState");
-const tmp3 = new timestampDefault("getInitialNavigationState");
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/getInitialNavigationState.tsx");
+const Constants = fn(1074);
+({ ME: metroRequire, Routes: closure_7 } = Constants);
+const logger = new LoggerDefault("getInitialNavigationState");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/getInitialNavigationState.tsx");
 
 export default function getInitialNavigationState(arr) {
   const tmp = computeInitialNavigationStateWithoutLogging()[1];
-  closure_0 = tmp;
+  let routes = tmp;
   if (null != arr) {
-    const item = arr.forEach((arg0) => {
+    const item = arr.forEach((item) => {
       routes = routes.routes;
-      return routes.push(arg0);
+      return routes.push(item);
     });
   }
   return tmp;
 };
 export const wrapRouteForRootNavigator = function wrapRouteForRootNavigator(items) {
-  items = [{ name: "main", state: { routes: items, index: items.length - 1 } }];
+  const obj = { name: "main", state: { routes: items, index: items.length - 1 } };
+  items = [obj];
   return items;
 };
 export function getInitialAuthState() {
-  const routes = [{ name: "auth" }];
-  return { routes, index: 0 };
+  const obj = { routes: null, index: 0 };
+  const items = [{ name: "auth" }];
+  obj.routes = items;
+  return obj;
 }
 export { getInitialGuildState };
 export const computeInitialNavigationState = function computeInitialNavigationState() {

@@ -1,19 +1,19 @@
-// Module ID: 15218
-// Function ID: 15219
+// Module ID: 15247
+// Function ID: 15248
 // Name: LoadingIndicator
-// Dependencies: [19, 17, 21, 4560, 2]
+// Dependencies: [19, 17, 21, 4574, 2]
 // Exports: default
 
-// Module 15218 (LoadingIndicator)
-import noopAll from "noop" /* 19 */;
-import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15247 (LoadingIndicator)
+import noop from "module_19" /* 19 */;
 
-noopAll;
-let closure_2 = createCacheKey.createStyles({ indicator: { margin: 16 } });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/LoadingIndicator.tsx");
+const ActivityIndicator = fn(17).ActivityIndicator;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_2 = createStyles.createStyles({ indicator: { margin: 16 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/LoadingIndicator.tsx");
 
 export default function LoadingIndicator() {
-  return <ActivityIndicator style={callback().indicator} />;
+  return <ActivityIndicator style={closure_2().indicator} />;
 };

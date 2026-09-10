@@ -1,107 +1,97 @@
-// Module ID: 9192
-// Function ID: 9193
+// Module ID: 9219
+// Function ID: 9220
 // Name: useGuildProfile
-// Dependencies: [5, 19, 9070, 504, 9193, 2]
+// Dependencies: [5, 19, 9097, 504, 9220, 2]
 // Exports: useGuildProfile
 
-// Module 9192 (useGuildProfile)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleUpdateStart" /* 9070 */;
+// Module 9219 (useGuildProfile)
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
+import GuildProfileStore from "GuildProfileStore" /* 9097 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_profile/hooks/useGuildProfile.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_profile/hooks/useGuildProfile.tsx");
 
 export const useGuildProfile = function useGuildProfile(guildId) {
-  const _require = guildId;
-  let obj = _require(504);
-  const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getProfile(closure_0));
-  const items1 = [closure_4];
-  obj = { guildProfile: stateFromStores, fetchGuildProfile: null, fetchStatus: null };
-  const stateFromStores1 = _require(504).useStateFromStores(items1, () => closure_1_4.getFetchStatus(closure_0));
+  _require = guildId;
+  const items = [GuildProfileStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => GuildProfileStore.getProfile(closure_0));
+  let obj = require("initialize");
+  const items1 = [GuildProfileStore];
+  const obj3 = { guildProfile: stateFromStores, fetchGuildProfile: null, fetchStatus: null };
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => GuildProfileStore.getFetchStatus(closure_0));
   const items2 = [guildId];
-  obj[1] = React.useCallback(callback(() => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    const iter = (function*() {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+  obj3.fetchGuildProfile = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_2 = tmp5;
-              closure_1 = tmp2;
-              let flag;
-              if (flag === undefined) {
-                flag = false;
-              }
-              c3 = 1;
-              c4 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              let obj2 = callback(closure_1_1[4]);
-              c3 = 2;
-              c4 = 1;
-              obj2 = { value: null, done: false };
-              obj2[0] = obj2.getGuildProfile(flag, flag);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
             c4 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            closure_2 = tmp5;
+            closure_129_0 = undefined;
+            let flag = guildId;
+            if (guildId === undefined) {
+              flag = false;
+            }
+            closure_129_0 = flag;
+            c3 = 1;
+            c4 = 1;
+            return { value: "PX_16", done: true };
           }
-        } catch (tmp12) {
-          c4 = tmp;
-          throw tmp12;
+        } else if (1 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else {
+            c3 = 2;
+            c4 = 1;
+            const obj6 = { value: guildId(tmp2[4]).getGuildProfile(closure_130_0, closure_129_0), done: false };
+            return obj6;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj7 = { value, done: true };
+          return obj7;
+        } else {
+          c4 = 3;
+          const obj = { value, done: true };
+          return obj;
         }
+      } catch (tmp12) {
+        c4 = tmp;
+        throw tmp12;
       }
-    })();
-    iter.next();
-    return iter;
+    }
   }), items2);
-  obj[2] = stateFromStores1;
-  return obj;
+  obj3.fetchStatus = stateFromStores1;
+  return obj3;
 };

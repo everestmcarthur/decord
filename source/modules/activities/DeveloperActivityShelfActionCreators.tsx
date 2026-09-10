@@ -1,30 +1,27 @@
-// Module ID: 9554
-// Function ID: 9555
-// Name: toggleUseActivityUrlOverride
+// Module ID: 9581
+// Function ID: 9582
+// Name: DeveloperActivityShelfActionCreators
 // Dependencies: [573, 2]
 // Exports: markActivityUsed, setActivityUrlOverride, toggleUseActivityUrlOverride, updateFilter
 
-// Module 9554 (toggleUseActivityUrlOverride)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 9581 (DeveloperActivityShelfActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/activities/DeveloperActivityShelfActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/activities/DeveloperActivityShelfActionCreators.tsx");
 
 export const toggleUseActivityUrlOverride = function toggleUseActivityUrlOverride() {
-  dispatcherDefault.dispatch({ type: "DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE" });
+  DispatcherDefault.dispatch({ type: "DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE" });
 };
 export const setActivityUrlOverride = function setActivityUrlOverride(activityUrlOverride) {
-  let obj = dispatcherDefault;
-  obj = { type: "DEVELOPER_ACTIVITY_SHELF_SET_ACTIVITY_URL_OVERRIDE", activityUrlOverride };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "DEVELOPER_ACTIVITY_SHELF_SET_ACTIVITY_URL_OVERRIDE", activityUrlOverride });
 };
 export const markActivityUsed = function markActivityUsed(id) {
-  let obj = dispatcherDefault;
-  obj = { type: "DEVELOPER_ACTIVITY_SHELF_MARK_ACTIVITY_USED", applicationId: id, timestamp: new Date().getTime() };
-  obj.dispatch(obj);
+  const obj2 = { type: "DEVELOPER_ACTIVITY_SHELF_MARK_ACTIVITY_USED", applicationId: id, timestamp: null };
+  const obj = DispatcherDefault;
+  obj2.timestamp = new Date().getTime();
+  obj.dispatch(obj2);
 };
 export const updateFilter = function updateFilter(filter) {
-  let obj = dispatcherDefault;
-  obj = { type: "DEVELOPER_ACTIVITY_SHELF_UPDATE_FILTER", filter };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "DEVELOPER_ACTIVITY_SHELF_UPDATE_FILTER", filter });
 };

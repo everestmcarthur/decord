@@ -1,81 +1,78 @@
-// Module ID: 11562
-// Function ID: 11563
+// Module ID: 11588
+// Function ID: 11589
 // Name: useBatchUpdateChannelSettings
-// Dependencies: [19, 7117, 4741, 1074, 573, 504, 7113, 11563, 11560, 2]
+// Dependencies: [19, 7131, 4755, 1074, 573, 504, 7127, 11589, 11586, 2]
 // Exports: default
 
-// Module 11562 (useBatchUpdateChannelSettings)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "incrementVersion" /* 7117 */;
-import closure_5 from "updateUserGuildSettingsInternal" /* 4741 */;
-import { AnalyticsSections } from "ME" /* 1074 */;
+// Module 11588 (useBatchUpdateChannelSettings)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7127 */;
+import noop from "module_19" /* 19 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 7131 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4755 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/opt_in_channels/useBatchUpdateChannelSettings.tsx");
+const require = globalThis.__r;
 
-export default function useBatchUpdateChannelSettings(arg0) {
-  const _require = arg0;
-  let obj = _require(504);
-  let items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getPendingChannelUpdates(closure_0));
-  let items1 = [arg0];
-  const effect = React.useEffect(() => {
-    let obj = stateFromStores(closure_1_2[4]);
-    obj = { type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId: closure_0 };
-    obj.dispatch(obj);
+require = fn;
+const AnalyticsSections = fn(1074).AnalyticsSections;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/opt_in_channels/useBatchUpdateChannelSettings.tsx");
+
+export default function useBatchUpdateChannelSettings(guildId) {
+  _require = guildId;
+  let items = [UserGuildSettingsStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => UserGuildSettingsStore.getPendingChannelUpdates(closure_0));
+  let items1 = [guildId];
+  const effect = noop.useEffect(() => {
+    DispatcherDefault.dispatch({ type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId });
     return () => {
-      let obj = closure_1_1(closure_1_2[4]);
-      obj = { type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId: closure_0 };
-      obj.dispatch(obj);
+      stateFromStores(573).dispatch({ type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId });
     };
   }, items1);
-  const items2 = [arg0, stateFromStores];
-  const effect1 = React.useEffect(() => {
+  const items2 = [guildId, stateFromStores];
+  const effect1 = noop.useEffect(() => {
     if (null != stateFromStores) {
-      const result = callback(closure_1_2[6]).updateOptInChannelsBatched(callback, tmp);
-      const obj = callback(closure_1_2[6]);
+      const result = OptInChannelsActionCreators.updateOptInChannelsBatched(closure_0, tmp);
     }
   }, items2);
-  obj = {
-    onChannelClick: React.useCallback((closure_0, id, id) => {
-      const isChannelOptedInResult = channelOptedIn.isChannelOptedIn(closure_0, id);
+  let obj = require("initialize");
+  return {
+    onChannelClick: noop.useCallback((guildId, channelId, channel) => {
+      const isChannelOptedInResult = channelOptedIn.isChannelOptedIn(guildId, channelId);
       let isCollapsedResult = !isChannelOptedInResult;
       if (!isChannelOptedInResult) {
-        isCollapsedResult = collapsed.isCollapsed(id);
+        isCollapsedResult = collapsed.isCollapsed(channel);
       }
       if (isCollapsedResult) {
-        isCollapsedResult = null != id;
+        isCollapsedResult = null != channel;
       }
       if (isCollapsedResult) {
-        let obj = callback(11563);
-        obj.categoryExpand(id);
+        guildId(11589).categoryExpand(channel);
+        const obj = guildId(11589);
       }
-      obj1 = callback(11560);
-      if (obj1.hasNotSetUpChannelOptIn(closure_0)) {
-        if (id === id) {
-          let tmp8Result = tmp8(11560);
-          obj = { include: null };
+      if (obj2.hasNotSetUpChannelOptIn(guildId)) {
+        if (channelId === channel) {
+          const obj3 = { include: null };
           const _Set2 = Set;
-          const items = [id];
+          const items = [channelId];
           const set = new Set(items);
-          obj[0] = set;
-          const result = tmp8Result.optIntoAllChannelsForExistingMember(closure_0, obj);
+          obj3.include = set;
+          const result = tmp8(11586).optIntoAllChannelsForExistingMember(guildId, obj3);
+          const tmp8Result = tmp8(11586);
         } else {
-          tmp8Result = tmp8(11560);
-          obj = { exclude: null };
+          const obj4 = { exclude: null };
           const _Set = Set;
-          const items1 = [id];
+          const items1 = [channelId];
           const set1 = new Set(items1);
-          obj[0] = set1;
-          const result1 = tmp8Result.optIntoAllChannelsForExistingMember(closure_0, obj);
+          obj4.exclude = set1;
+          const result1 = tmp8(11586).optIntoAllChannelsForExistingMember(guildId, obj4);
+          const tmp8Result3 = tmp8(11586);
         }
       } else {
-        const tmp8Result1 = tmp8(7113);
-        obj1 = { section: null };
-        obj1[0] = constants.CHANNEL_BROWSER;
-        const result2 = tmp8Result1.updateOptInChannelsImmediate(closure_0, id, !isChannelOptedInResult, obj1);
+        const tmp8Result4 = tmp8(7127);
+        const obj5 = { section: constants.CHANNEL_BROWSER };
+        const result2 = tmp8Result4.updateOptInChannelsImmediate(guildId, channelId, !isChannelOptedInResult, obj5);
       }
     }, [])
   };
-  return obj;
 };

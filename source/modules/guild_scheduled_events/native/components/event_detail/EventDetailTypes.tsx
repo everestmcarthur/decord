@@ -1,14 +1,14 @@
-// Module ID: 9809
-// Function ID: 9810
-// Name: isRemainingUsersGroup
+// Module ID: 9836
+// Function ID: 9837
+// Name: EventDetailTypes
 // Dependencies: [2]
 // Exports: isRemainingUsersGroup
 
-// Module 9809 (isRemainingUsersGroup)
-import set from "set" /* 2 */;
+// Module 9836 (EventDetailTypes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_scheduled_events/native/components/event_detail/EventDetailTypes.tsx");
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/event_detail/EventDetailTypes.tsx");
 
-export const isRemainingUsersGroup = function isRemainingUsersGroup(item) {
-  return undefined !== item.count;
+export const isRemainingUsersGroup = function isRemainingUsersGroup(count) {
+  return undefined !== count.count;
 };

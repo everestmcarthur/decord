@@ -1,17 +1,15 @@
-// Module ID: 11480
-// Function ID: 11481
-// Name: subscribe
+// Module ID: 11507
+// Function ID: 11508
+// Name: PresenceSubscriptionsActionCreators
 // Dependencies: [573, 2]
 // Exports: subscribe
 
-// Module 11480 (subscribe)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 11507 (PresenceSubscriptionsActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/presence_subscriptions/PresenceSubscriptionsActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/presence_subscriptions/PresenceSubscriptionsActionCreators.tsx");
 
 export const subscribe = function subscribe(subscription) {
-  let obj = dispatcherDefault;
-  obj = { type: "PRESENCE_SUBSCRIPTIONS_ADD", subscription };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "PRESENCE_SUBSCRIPTIONS_ADD", subscription });
 };

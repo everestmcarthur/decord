@@ -1,67 +1,66 @@
-// Module ID: 7860
-// Function ID: 7861
-// Name: SavedMessageSortTypes
-// Dependencies: [4783, 2]
+// Module ID: 7874
+// Function ID: 7875
+// Name: SavedMessagesTypes
+// Dependencies: [4797, 2]
 // Exports: savedMessageCreateObjectToClient, savedMessageDataToClient, savedMessageDeleteObjectToClient
 
-// Module 7860 (SavedMessageSortTypes)
-import set from "set" /* 2 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4783 */;
+// Module 7874 (SavedMessagesTypes)
+import MessageRecordUtils from "MessageRecordUtils" /* 4797 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/saved_messages/SavedMessagesTypes.tsx");
+const result = size.fileFinishedImporting("modules/saved_messages/SavedMessagesTypes.tsx");
 
 export const SavedMessageSortTypes = { ALL: "ALL", REMINDER: "REMINDER", BOOKMARK: "BOOKMARK" };
 export const savedMessageDataToClient = function savedMessageDataToClient(save_data) {
   const obj = { channelId: save_data.channel_id, messageId: save_data.message_id, savedAt: new Date(save_data.saved_at), authorSummary: null, channelSummary: null, messageSummary: null, guildId: null, authorId: null, notes: null, dueAt: null };
-  ({ author_summary: obj[3], channel_summary: obj[4], message_summary: obj[5] } = save_data);
+  ({ author_summary: obj.authorSummary, channel_summary: obj.channelSummary, message_summary: obj.messageSummary } = save_data);
   let guild_id;
   if (0 !== save_data.guild_id) {
     guild_id = save_data.guild_id;
   }
-  obj[6] = guild_id;
+  obj.guildId = guild_id;
   let author_id;
   if (0 !== save_data.author_id) {
     author_id = save_data.author_id;
   }
-  obj[7] = author_id;
-  obj[8] = save_data.notes;
+  obj.authorId = author_id;
+  obj.notes = save_data.notes;
   let date1;
   if (null != save_data.due_at) {
     const _Date = Date;
     date1 = new Date(save_data.due_at);
   }
-  obj[9] = date1;
+  obj.dueAt = date1;
   return obj;
 };
 export const savedMessageCreateObjectToClient = function savedMessageCreateObjectToClient(body) {
   let messageRecord = null;
   if (null != body.message) {
-    let obj = createMinimalMessageRecord;
-    messageRecord = obj.createMessageRecord(body.message);
+    messageRecord = MessageRecordUtils.createMessageRecord(body.message);
   }
-  obj = { message: messageRecord, saveData: null };
+  const obj2 = { message: messageRecord, saveData: null };
   const save_data = body.save_data;
-  obj = { channelId: save_data.channel_id, messageId: save_data.message_id, savedAt: new Date(save_data.saved_at), authorSummary: null, channelSummary: null, messageSummary: null, guildId: null, authorId: null, notes: null, dueAt: null };
-  ({ author_summary: obj3[3], channel_summary: obj3[4], message_summary: obj3[5] } = save_data);
+  const obj5 = { channelId: save_data.channel_id, messageId: save_data.message_id, savedAt: new Date(save_data.saved_at), authorSummary: null, channelSummary: null, messageSummary: null, guildId: null, authorId: null, notes: null, dueAt: null };
+  ({ author_summary: obj3.authorSummary, channel_summary: obj3.channelSummary, message_summary: obj3.messageSummary } = save_data);
   let guild_id;
   if (0 !== save_data.guild_id) {
     guild_id = save_data.guild_id;
   }
-  obj[6] = guild_id;
+  obj5.guildId = guild_id;
   let author_id;
   if (0 !== save_data.author_id) {
     author_id = save_data.author_id;
   }
-  obj[7] = author_id;
-  obj[8] = save_data.notes;
+  obj5.authorId = author_id;
+  obj5.notes = save_data.notes;
   let date1;
   if (null != save_data.due_at) {
     const _Date = Date;
     date1 = new Date(save_data.due_at);
   }
-  obj[9] = date1;
-  obj[1] = obj;
-  return obj;
+  obj5.dueAt = date1;
+  obj2.saveData = obj5;
+  return obj2;
 };
 export const savedMessageDeleteObjectToClient = function savedMessageDeleteObjectToClient(channelId) {
   return { channelId: channelId.channel_id, messageId: channelId.message_id };

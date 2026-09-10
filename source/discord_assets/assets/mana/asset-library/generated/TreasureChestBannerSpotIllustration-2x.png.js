@@ -1,12 +1,11 @@
-// Module ID: 6548
-// Function ID: 6549
-// Name: metadata
+// Module ID: 6562
+// Function ID: 6563
 // Dependencies: [2]
 
-// Module 6548 (metadata)
-import set from "set" /* 2 */;
+// Module 6562
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/TreasureChestBannerSpotIllustration-2x.png.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/TreasureChestBannerSpotIllustration-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/364945bb8426628bbbdc005e00afd328ac25c0bdb90b92733d5e90eec58f8d40.png";
 export const metadata = { fileBytes: 50096 };

@@ -1,26 +1,29 @@
-// Module ID: 9476
-// Function ID: 9477
-// Name: useIsConnectedToVoiceChannel
-// Dependencies: [502, 4579, 504, 2]
+// Module ID: 9503
+// Function ID: 9504
+// Name: VoiceChatHooks
+// Dependencies: [502, 4593, 504, 2]
 // Exports: useIsConnectedToVoiceChannel, useIsConnectedToVoiceChannelForId
 
-// Module 9476 (useIsConnectedToVoiceChannel)
-import closure_2 from "fetchFingerprint" /* 502 */;
-import closure_3 from "updateVoiceState" /* 4579 */;
+// Module 9503 (VoiceChatHooks)
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import VoiceStateStore from "VoiceStateStore" /* 4593 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/voice_chat/VoiceChatHooks.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_chat/VoiceChatHooks.tsx");
 
 export const useIsConnectedToVoiceChannel = function useIsConnectedToVoiceChannel(id) {
   id = undefined;
   if (id != null) {
     id = id.id;
   }
-  const items = [closure_3, closure_2];
-  return id(504).useStateFromStores(items, () => closure_1_3.isInChannel(id, closure_1_2.getId()));
+  const items = [VoiceStateStore, AuthenticationStore];
+  return id(504).useStateFromStores(items, () => VoiceStateStore.isInChannel(id, AuthenticationStore.getId()));
 };
 export const useIsConnectedToVoiceChannelForId = function useIsConnectedToVoiceChannelForId(arg0) {
-  const _require = arg0;
-  const items = [closure_3, closure_2];
-  return _require(504).useStateFromStores(items, () => closure_1_3.isInChannel(id, closure_1_2.getId()));
+  _require = arg0;
+  const items = [VoiceStateStore, AuthenticationStore];
+  return require("initialize").useStateFromStores(items, () => VoiceStateStore.isInChannel(id, AuthenticationStore.getId()));
 };

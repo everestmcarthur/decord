@@ -1,12 +1,12 @@
-// Module ID: 14404
-// Function ID: 14405
-// Name: reactNativeCorePlugins
-// Dependencies: [14405, 2]
+// Module ID: 14429
+// Function ID: 14430
+// Name: ReactotronConfig
+// Dependencies: [14430, 2]
 
-// Module 14404 (reactNativeCorePlugins)
-import importDefaultResult from "reactNativeCorePlugins" /* 14405 */;
+// Module 14429 (ReactotronConfig)
+import reactNativeCorePlugins from "reactNativeCorePlugins" /* 14430 */;
 
-const reactNative = importDefaultResult.configure({}).useReactNative();
+const reactNative = reactNativeCorePlugins.configure({}).useReactNative();
 reactNative.connect();
-const configureResult = importDefaultResult.configure({});
-const result = require("set").fileFinishedImporting("modules/debug/native/ReactotronConfig.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/debug/native/ReactotronConfig.tsx");

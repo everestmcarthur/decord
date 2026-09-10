@@ -1,28 +1,30 @@
-// Module ID: 8911
-// Function ID: 8912
+// Module ID: 8938
+// Function ID: 8939
 // Name: InputButton
-// Dependencies: [109, 19, 17, 21, 4560, 576, 4980, 6621, 4976, 2]
+// Dependencies: [109, 19, 17, 21, 4574, 576, 4994, 6635, 4990, 2]
 
-// Module 8911 (InputButton)
-import ThemesDefault from "Themes" /* 576 */;
-import CollapsingText from "CollapsingText" /* 4976 */;
-import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4980 */;
-import useInputStyles from "useInputStyles" /* 6621 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import { Text } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 8938 (InputButton)
+import nativeDefault from "native" /* 576 */;
+import BaseTextButton from "BaseTextButton" /* 4990 */;
+import ButtonConstants from "ButtonConstants" /* 4994 */;
+import InputFieldContainer from "InputFieldContainer" /* 6635 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 let closure_2 = ["size", "isRound", "text", "value", "icon", "iconPosition", "accessibilityLabel", "accessibilityValue", "maxFontSizeMultiplier"];
-let obj = { buttonText: { flexGrow: 1, flexShrink: 1, width: "100%" }, buttonTextPlaceholder: null, buttonTextValue: null };
-obj = { color: ThemesDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
-obj[1] = obj;
-createCacheKey = { color: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT };
-obj[2] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(obj);
-const forwardRefResult = importAllResult.forwardRef((size, ref) => {
+const Text = fn(17).Text;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+const obj = { buttonText: { flexGrow: 1, flexShrink: 1, width: "100%" }, buttonTextPlaceholder: { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT }, buttonTextValue: null };
+let obj3 = { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
+obj.buttonTextValue = { color: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT };
+let closure_6 = createStyles.createStyles(obj);
+let obj4 = { color: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT };
+let size = fn(2);
+const result = size.fileFinishedImporting("design/components/experimental/Button/native/InputButton.native.tsx");
+
+export const InputButton = noop.forwardRef((size, ref) => {
   size = size.size;
   let str = "lg";
   if (undefined !== size) {
@@ -36,59 +38,53 @@ const forwardRefResult = importAllResult.forwardRef((size, ref) => {
   }
   ({ accessibilityLabel, accessibilityValue, maxFontSizeMultiplier } = size);
   if (undefined === maxFontSizeMultiplier) {
-    maxFontSizeMultiplier = MINIMUM_HIT_AREA.BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER;
+    maxFontSizeMultiplier = ButtonConstants.BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER;
   }
-  const tmp4 = callback(size, closure_2);
-  let obj = useInputStyles;
-  const inputStyles = obj.useInputStyles({ size: str, isRound: undefined !== isRound && isRound, hasLeadingIcon: tmp7 });
-  const tmp9 = callback2();
+  const tmp4 = _objectWithoutProperties(size, closure_2);
+  const obj2 = { size: str, isRound: undefined !== isRound && isRound, hasLeadingIcon: "start" === str2 };
+  const inputStyles = InputFieldContainer.useInputStyles(obj2);
+  const tmp9 = closure_6();
   if (null != icon) {
     if (tmp7) {
-      obj = { paddingStart: null };
-      obj[0] = inputStyles.leadingIcon.paddingEnd;
+      const obj3 = { paddingStart: inputStyles.leadingIcon.paddingEnd };
     } else {
-      obj = { paddingEnd: null };
-      obj[0] = inputStyles.trailingIcon.paddingStart;
+      const obj4 = { paddingEnd: inputStyles.trailingIcon.paddingStart };
     }
   } else {
-    const obj2 = {};
+    const obj6 = {};
     const merged = Object.assign(tmp4);
-    obj2.ref = ref;
-    obj2.size = str;
-    obj2.variant = "tertiary";
-    obj2.icon = icon;
-    obj2.iconPosition = str2;
+    obj6.ref = ref;
+    obj6.size = str;
+    obj6.variant = "tertiary";
+    obj6.icon = icon;
+    obj6.iconPosition = str2;
     const items = [, ];
     ({ padding: arr[0], radius: arr[1] } = inputStyles);
-    obj2.pillStyle = items;
+    obj6.pillStyle = items;
     if (accessibilityLabel == null) {
-      str = undefined;
+      let str1;
       if (text != null) {
-        str = text.toString();
+        str1 = text.toString();
       }
-      accessibilityLabel = str;
+      accessibilityLabel = str1;
     }
-    obj2.accessibilityLabel = accessibilityLabel;
+    obj6.accessibilityLabel = accessibilityLabel;
     if (accessibilityValue == null) {
-      const obj3 = { text: null };
-      obj3[0] = value;
-      accessibilityValue = obj3;
+      const obj7 = { text: value };
+      accessibilityValue = obj7;
     }
-    obj2.accessibilityValue = accessibilityValue;
+    obj6.accessibilityValue = accessibilityValue;
     const items1 = [inputStyles.text, tmp9.buttonText, , ];
-    const obj4 = { style: null, numberOfLines: 1, maxFontSizeMultiplier: null, children: null };
+    const obj8 = { style: null, numberOfLines: 1, maxFontSizeMultiplier: null, children: null };
     items1[2] = null != value ? tmp9.buttonTextValue : tmp9.buttonTextPlaceholder;
     items1[3] = {};
-    obj4[0] = items1;
-    obj4[2] = maxFontSizeMultiplier;
+    obj8.style = items1;
+    obj8.maxFontSizeMultiplier = maxFontSizeMultiplier;
     if (value == null) {
       value = text;
     }
-    obj4[3] = value;
-    obj2.textElement = <Text style={null} numberOfLines={1} maxFontSizeMultiplier={null}>{null}</Text>;
-    return jsx(CollapsingText.BaseTextButton, {});
+    obj8.children = value;
+    obj6.textElement = <Text style={null} numberOfLines={1} maxFontSizeMultiplier={null}>{null}</Text>;
+    return jsx(BaseTextButton.BaseTextButton, {});
   }
 });
-const result = require("set").fileFinishedImporting("design/components/experimental/Button/native/InputButton.native.tsx");
-
-export const InputButton = forwardRefResult;

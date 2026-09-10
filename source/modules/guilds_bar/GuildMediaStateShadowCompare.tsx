@@ -1,50 +1,50 @@
-// Module ID: 16334
-// Function ID: 16335
-// Name: logger
-// Dependencies: [13711, 4, 1232, 509, 2]
+// Module ID: 16365
+// Function ID: 16366
+// Name: GuildMediaStateShadowCompare
+// Dependencies: [13734, 4, 1232, 509, 2]
 // Exports: compareGuildMediaState
 
-// Module 16334 (logger)
-import addAll from "add" /* 509 */;
-import _modDef1232 from "module_1232" /* 1232 */;
-import closure_3 from "markAllStale" /* 13711 */;
-import set from "set" /* 2 */;
+// Module 16365 (GuildMediaStateShadowCompare)
+import LastFewActionsAll from "LastFewActions" /* 509 */;
+import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import GuildMediaStateStore from "GuildMediaStateStore" /* 13734 */;
 
-const logger = new require("log").Logger("GuildMediaStateShadowCompare");
+const logger = new fn(4).Logger("GuildMediaStateShadowCompare");
 let closure_5 = ["audio", "video", "screenshare", "liveStage", "activeEvent", "activity", "isCurrentUserConnected"];
-let c6 = 0;
-let c7 = 0;
+let closure_6 = 0;
+let closure_7 = 0;
 const map = new Map();
-let set = new Set();
-let result = set.fileFinishedImporting("modules/guilds_bar/GuildMediaStateShadowCompare.tsx");
+const set = new Set();
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guilds_bar/GuildMediaStateShadowCompare.tsx");
 
-export const compareGuildMediaState = function compareGuildMediaState(closure_0, closure_1, stateFromStores) {
-  importDefault = closure_1;
-  importAll = stateFromStores;
-  const found = closure_5.filter((arg0) => {
-    let flag = table[arg0];
+export const compareGuildMediaState = function compareGuildMediaState(guildId, fromHook, stateFromStores) {
+  closure_0 = fromHook;
+  let guildMediaState = stateFromStores;
+  const found = closure_5.filter((item) => {
+    let flag = closure_0[item];
     if (flag == null) {
       flag = false;
     }
-    let flag2 = table2[arg0];
+    let flag2 = closure_1[item];
     if (flag2 == null) {
       flag2 = false;
     }
     return flag !== flag2;
   });
   if (0 !== found.length) {
-    importDefault = closure_1;
-    importAll = guildMediaState.getGuildMediaState(closure_0);
-    let str = addAll.last();
+    closure_0 = fromHook;
+    guildMediaState = GuildMediaStateStore.getGuildMediaState(guildId);
+    let str = LastFewActionsAll.last();
     if (str == null) {
       str = "unknown";
     }
-    const tmp = 0 === closure_5.filter((arg0) => {
-      let flag = table[arg0];
+    const tmp = 0 === closure_5.filter((item) => {
+      let flag = closure_0[item];
       if (flag == null) {
         flag = false;
       }
-      let flag2 = table2[arg0];
+      let flag2 = closure_1[item];
       if (flag2 == null) {
         flag2 = false;
       }
@@ -58,7 +58,6 @@ export const compareGuildMediaState = function compareGuildMediaState(closure_0,
     }
     const _HermesInternal = HermesInternal;
     const combined = "" + str + ":" + joined + ":" + str4;
-    let obj = set;
     let flag = false;
     if (!set.has(combined)) {
       if (tmp) {
@@ -68,7 +67,6 @@ export const compareGuildMediaState = function compareGuildMediaState(closure_0,
       }
       flag = false;
       if (!tmp9) {
-        obj1 = map;
         let num3 = map.get(str);
         if (num3 == null) {
           num3 = 0;
@@ -76,7 +74,7 @@ export const compareGuildMediaState = function compareGuildMediaState(closure_0,
         let num5 = num3 >= 3;
         if (!num5) {
           obj.add(combined);
-          const result = obj1.set(str, num3 + 1);
+          const result = obj2.set(str, num3 + 1);
           if (!tmp) {
             closure_6 = closure_6 + 1;
             num5 = 0;
@@ -84,35 +82,27 @@ export const compareGuildMediaState = function compareGuildMediaState(closure_0,
         }
         closure_7 = closure_7 + 1;
         num5 = 0;
+        obj2 = map;
       }
     }
     if (flag) {
-      obj = { guildId: null, lastAction: null, mismatchedFields: null, fromHook: null, fromStore: null, isTransient: null };
-      obj[0] = closure_0;
-      obj[1] = str;
-      obj[2] = found;
-      obj[3] = closure_1;
-      obj[4] = stateFromStores;
-      obj[5] = tmp;
-      if (obj.isTransient) {
+      const obj3 = { guildId, lastAction: str, mismatchedFields: found, fromHook, fromStore: stateFromStores, isTransient: tmp };
+      if (obj3.isTransient) {
         str3 = "transient";
       }
       const _HermesInternal2 = HermesInternal;
-      const mismatchedFields = obj.mismatchedFields;
-      const combined1 = "GuildMediaStateStore diverged from useGuildMediaState after " + obj.lastAction + " (" + str3 + "): ";
+      const mismatchedFields = obj3.mismatchedFields;
+      const combined1 = "GuildMediaStateStore diverged from useGuildMediaState after " + obj3.lastAction + " (" + str3 + "): ";
       const sum = combined1 + mismatchedFields.join(", ");
-      logger.warn(sum, obj);
-      obj = { tags: null, extra: null };
-      obj1 = { app_context: "guild_media_state_shadow", divergence_severity: null, divergence_action: null };
-      obj1[1] = str3;
-      obj1[2] = obj.lastAction;
-      obj[0] = obj1;
-      ({ guildId: obj7[0], mismatchedFields: obj7[1], fromHook: obj7[2], fromStore: obj7[3] } = obj);
-      obj[1] = { guildId: null, mismatchedFields: null, fromHook: null, fromStore: null };
-      _modDef1232.captureMessage(sum, obj);
-      const obj2 = { guildId: null, mismatchedFields: null, fromHook: null, fromStore: null };
-      const obj4 = _modDef1232;
+      logger.warn(sum, obj3);
+      const obj5 = { tags: null, extra: null };
+      const obj6 = { app_context: "guild_media_state_shadow", divergence_severity: str3, divergence_action: obj3.lastAction };
+      obj5.tags = obj6;
+      ({ guildId: obj7.guildId, mismatchedFields: obj7.mismatchedFields, fromHook: obj7.fromHook, fromStore: obj7.fromStore } = obj3);
+      obj5.extra = { guildId: null, mismatchedFields: null, fromHook: null, fromStore: null };
+      SentryUtilsDefault.captureMessage(sum, obj5);
+      const obj12 = { guildId: null, mismatchedFields: null, fromHook: null, fromStore: null };
     }
-    const obj8 = addAll;
+    obj = set;
   }
 };

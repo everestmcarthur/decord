@@ -1,41 +1,28 @@
-// Module ID: 15325
-// Function ID: 15326
-// Name: toggle
-// Dependencies: [7975, 1114, 11473, 1935, 2]
+// Module ID: 15354
+// Function ID: 15355
+// Name: ExactSearchResultCountsSetting
+// Dependencies: [7989, 1114, 11500, 1935, 2]
 
-// Module 15325 (toggle)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15354 (ExactSearchResultCountsSetting)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-const toggle = createToggle.createToggle({
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.aP91Ud);
+    const intl = util.intl;
+    return intl.string(util.t.aP91Ud);
   },
-  parent: MobileUserSettings.MobileUserSettings.APPEARANCE,
-  useValue: explicitContentFromProto.SearchResultExactCountEnabled.useSetting,
-  onValueChange: explicitContentFromProto.SearchResultExactCountEnabled.updateSetting,
+  parent: SettingsConstants.MobileUserSettings.APPEARANCE,
+  useValue: UserSettings.SearchResultExactCountEnabled.useSetting,
+  onValueChange: UserSettings.SearchResultExactCountEnabled.updateSetting,
   useDescription: function useSearchResultExactCountDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.qx4cha);
+    const intl = util.intl;
+    return intl.string(util.t.qx4cha);
   }
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.aP91Ud);
-  },
-  parent: MobileUserSettings.MobileUserSettings.APPEARANCE,
-  useValue: explicitContentFromProto.SearchResultExactCountEnabled.useSetting,
-  onValueChange: explicitContentFromProto.SearchResultExactCountEnabled.updateSetting,
-  useDescription: function useSearchResultExactCountDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.qx4cha);
-  }
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/ExactSearchResultCountsSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ExactSearchResultCountsSetting.tsx");
 
 export default toggle;

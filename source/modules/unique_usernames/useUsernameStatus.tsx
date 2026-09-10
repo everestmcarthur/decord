@@ -1,40 +1,40 @@
-// Module ID: 14710
-// Function ID: 14711
+// Module ID: 14736
+// Function ID: 14737
 // Name: useUsernameStatus
-// Dependencies: [32, 19, 14711, 2]
+// Dependencies: [32, 19, 14737, 2]
 // Exports: useUsernameStatus
 
-// Module 14710 (useUsernameStatus)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+// Module 14736 (useUsernameStatus)
+import useUsernameLiveCheck from "useUsernameLiveCheck" /* 14737 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/unique_usernames/useUsernameStatus.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/unique_usernames/useUsernameStatus.tsx");
 
 export const useUsernameStatus = (arg0, flag, flag2) => {
-  const _require = arg0;
+  closure_0 = arg0;
   if (flag === undefined) {
     flag = true;
   }
   if (flag2 === undefined) {
     flag2 = false;
   }
-  dependencyMap = tmp;
-  let usernameLiveCheck;
-  let React;
-  usernameLiveCheck = _require(14711).useUsernameLiveCheck(arg0, flag, flag2);
-  const tmp3 = usernameLiveCheck(React.useState(undefined), 2);
-  React = tmp3[1];
+  closure_1 = tmp;
+  const usernameLiveCheck = useUsernameLiveCheck.useUsernameLiveCheck(arg0, flag, flag2);
+  const tmp3 = _slicedToArray(noop.useState(undefined), 2);
+  closure_3 = tmp3[1];
   const items = [usernameLiveCheck, arg0, arg3];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if ("" !== closure_0) {
       if (tmp !== closure_1) {
         if (null != usernameLiveCheck) {
-          callback(tmp3);
+          closure_3(tmp3);
         }
       }
     }
-    callback(undefined);
+    closure_3(undefined);
   }, items);
   return tmp3[0];
 };

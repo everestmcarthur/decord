@@ -1,15 +1,15 @@
 // Module ID: 1996
 // Function ID: 1997
-// Name: logger
+// Name: Runtime
 // Dependencies: [4, 1988, 2]
 
-// Module 1996 (logger)
-import set from "set" /* 2 */;
-import log from "log" /* 4 */;
+// Module 1996 (Runtime)
+import logger_Logger from "logger/Logger" /* 4 */;
+import size from "module_2" /* 2 */;
 
 let c2 = 1000000;
 let closure_3 = "1" === process.env.KV_STORAGE_LOGGING;
-const logger = new log.Logger("Runtime");
+const logger = new logger_Logger.Logger("Runtime");
 const prototype = function Runtime() {
   return Object.create(new.target.prototype);
 }.prototype;
@@ -20,14 +20,14 @@ prototype["nextId"] = function nextId() {
 };
 prototype["executeAsync"] = function executeAsync(type, arg1) {
   const self = this;
-  closure_1 = type;
+  const tag = type;
   closure_0 = arg1;
   this.initialize();
   return new Promise((resolve, reject) => {
     const nextIdResult = self.nextId();
-    callback(nextIdResult);
+    closure_0(nextIdResult);
     const pending = self.pending;
-    const result = pending.set(nextIdResult, { id: nextIdResult, tag: closure_1, started: performance.now(), resolve, reject });
+    const result = pending.set(nextIdResult, { id: nextIdResult, tag, started: performance.now(), resolve, reject });
   });
 };
 prototype["addCompletionCallback"] = function addCompletionCallback(arg0) {
@@ -40,16 +40,16 @@ prototype["addDatabaseStateCallback"] = function addDatabaseStateCallback(arg0) 
 };
 prototype["removeCompletionCallback"] = function removeCompletionCallback(databaseStateCallback) {
   closure_0 = databaseStateCallback;
-  this.completionCallbacks = this.completionCallbacks.filter((arg0) => arg0 !== closure_0);
+  this.completionCallbacks = this.completionCallbacks.filter((item) => item !== closure_0);
 };
 prototype["removeDatabaseStateCallback"] = function removeDatabaseStateCallback(arg0) {
   closure_0 = arg0;
-  this.dbStateCallbacks = this.dbStateCallbacks.filter((arg0) => arg0 !== closure_0);
+  this.dbStateCallbacks = this.dbStateCallbacks.filter((item) => item !== closure_0);
 };
-prototype["onResponse"] = function onResponse(id) {
+prototype["onResponse"] = function onResponse(id, arg1) {
   const self = this;
   const pending = this.pending;
-  const value = pending.get(id.id);
+  value = pending.get(id.id);
   if (null != value) {
     let num = arg1;
     const pending2 = self.pending;
@@ -83,16 +83,11 @@ prototype["resolveOperation"] = function resolveOperation(value, ok) {
 };
 prototype["completeOperation"] = function completeOperation(value, timings, nowResult) {
   if (this.completionCallbacks.length > 0) {
-    let obj = { id: null, tag: null, ok: null, value: null, timings: null };
-    ({ id: obj[0], tag: obj[1] } = value);
-    ({ ok: obj[2], data: obj[3] } = timings);
-    obj = { queue: null, execution: null, materialization: null, ccTotal: null, jsTotal: null };
-    obj[0] = timings.timings.queueTimeNanoseconds / c2;
-    obj[1] = timings.timings.executionTimeNanoseconds / c2;
-    obj[2] = timings.timings.materializationTimeNanoseconds / c2;
-    obj[3] = timings.timings.totalTimeNanoseconds / c2;
-    obj[4] = nowResult - value.started;
-    obj[4] = obj;
+    const obj = { id: null, tag: null, ok: null, value: null, timings: null };
+    ({ id: obj.id, tag: obj.tag } = value);
+    ({ ok: obj.ok, data: obj.value } = timings);
+    const obj2 = { queue: timings.timings.queueTimeNanoseconds / c2, execution: timings.timings.executionTimeNanoseconds / c2, materialization: timings.timings.materializationTimeNanoseconds / c2, ccTotal: timings.timings.totalTimeNanoseconds / c2, jsTotal: nowResult - value.started };
+    obj.timings = obj2;
     for (const item10005 of completionCallbacks) {
       let item10005Result = item10005(obj);
       continue;
@@ -100,16 +95,16 @@ prototype["completeOperation"] = function completeOperation(value, timings, nowR
   }
 };
 prototype["initialize"] = function initialize() {
-  let self = this;
-  self = this;
+  const self = this;
   if (!this.initialized) {
     const KV_RAW = self(1988).KV_RAW;
-    const obj = { status: null, response: null };
-    obj[0] = function status(handle) {
-      return self.onStatus(handle);
-    };
-    obj[1] = function response(arg0, arg1) {
-      return self.onResponse(arg0, arg1);
+    const obj = {
+      status(handle) {
+          return self.onStatus(handle);
+        },
+      response(arg0, arg1) {
+          return self.onResponse(arg0, arg1);
+        }
     };
     KV_RAW.setCallbacks(obj);
     if (closure_3) {
@@ -140,7 +135,6 @@ prototype.pending = new Map();
 prototype.initialized = false;
 prototype.dbStateCallbacks = [];
 prototype.completionCallbacks = [];
-const map = new Map();
-let result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/raw/Runtime.tsx");
+let result = size.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/raw/Runtime.tsx");
 
 export const Runtime = prototype;

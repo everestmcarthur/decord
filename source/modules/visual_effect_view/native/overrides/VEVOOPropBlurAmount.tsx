@@ -1,35 +1,40 @@
-// Module ID: 15930
-// Function ID: 15931
-// Dependencies: [32, 19, 4966, 21, 4560, 8598, 7202, 15931, 2]
+// Module ID: 15960
+// Function ID: 15961
+// Name: VEVOOPropBlurAmount
+// Dependencies: [32, 19, 4980, 21, 4574, 8626, 7215, 15961, 2]
 
-// Module 15930
-import FormSwitch from "FormSwitch" /* 7202 */;
-import Form from "Form" /* 8598 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import useVisualEffectViewOverrides from "useVisualEffectViewOverrides" /* 4966 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15960 (VEVOOPropBlurAmount)
+import FormSwitch from "FormSwitch" /* 7215 */;
+import Form from "Form" /* 8626 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let c4 = importAllResult;
-({ getVisualEffectViewOverrides: c5, setVisualEffectViewOverides: closure_6 } = useVisualEffectViewOverrides);
-let closure_8 = createCacheKey.createStyles({ enabledSwitchStyle: { alignSelf: "flex-start" } });
-const memoResult = importAllResult.memo(function VEVOOPropBlurAmount() {
-  const tmp = callback2();
-  [tmp3, require] = callback(importAllResult.useState(false), 2);
-  const tmp4 = callback(importAllResult.useState(callback().blurAmountOverride), 2);
+const require = globalThis.__r;
+
+require = fn;
+const VEVOOStore = fn(4980);
+({ getVisualEffectViewOverrides: hasOwnProperty, setVisualEffectViewOverides: metroRequire } = VEVOOStore);
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_8 = createStyles.createStyles({ enabledSwitchStyle: { alignSelf: "flex-start" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOOPropBlurAmount.tsx");
+
+export default noop.memo(function VEVOOPropBlurAmount() {
+  const tmp = closure_8();
+  [tmp3, require] = onValueChange(noop.useState(false), 2);
+  const tmp4 = onValueChange(noop.useState(closure_5().blurAmountOverride), 2);
   const first = tmp4[0];
   dependencyMap = tmp4[1];
-  const tmp2 = callback(importAllResult.useState(false), 2);
-  callback = importAllResult.useCallback((blurAmountOverride) => {
+  const tmp2 = onValueChange(noop.useState(false), 2);
+  onValueChange = noop.useCallback((blurAmountOverride) => {
     if (null != blurAmountOverride) {
-      callback2(blurAmountOverride);
+      closure_2(blurAmountOverride);
     }
     const obj = {};
-    const merged = Object.assign(closure_1_5());
+    const merged = Object.assign(hasOwnProperty());
     obj.blurAmountOverride = blurAmountOverride;
-    closure_1_6(obj);
+    timestampProducer(obj);
   }, []);
   let str;
   if (first != null) {
@@ -38,11 +43,27 @@ const memoResult = importAllResult.memo(function VEVOOPropBlurAmount() {
   if (str == null) {
     str = "";
   }
-  obj = { label: "Blur Amount " + str, leadingStyle: tmp.enabledSwitchStyle, leading: tmp7(FormSwitch.FormSwitch, obj), subLabel: tmp7(first(15931), obj1), disabled: !tmp3 };
-  obj = {
+  let obj = {
+    label: "Blur Amount " + str,
+    leadingStyle: tmp.enabledSwitchStyle,
+    leading: jsx(FormSwitch.FormSwitch, {
+      value: tmp3,
+      onValueChange(arg0) {
+        require(arg0);
+        let tmp3;
+        if (arg0) {
+          tmp3 = first;
+        }
+        callback(tmp3);
+      }
+    }),
+    subLabel: null,
+    disabled: !tmp3
+  };
+  const obj2 = {
     value: tmp3,
     onValueChange(arg0) {
-      callback(arg0);
+      require(arg0);
       let tmp3;
       if (arg0) {
         tmp3 = first;
@@ -50,20 +71,23 @@ const memoResult = importAllResult.memo(function VEVOOPropBlurAmount() {
       callback(tmp3);
     }
   };
-  const ref = importAllResult.useRef(first);
-  const tmp8 = require;
+  const ref = noop.useRef(first);
+  obj.subLabel = jsx(first(15961), { disabled: !tmp3, disabledOpacity: !tmp3, initialValue: noop.useRef(first), onValueChange });
   return jsx(Form.FormRow, {
-    value: tmp3,
-    onValueChange(arg0) {
-      callback(arg0);
-      let tmp3;
-      if (arg0) {
-        tmp3 = first;
+    label: "Blur Amount " + str,
+    leadingStyle: tmp.enabledSwitchStyle,
+    leading: jsx(FormSwitch.FormSwitch, {
+      value: tmp3,
+      onValueChange(arg0) {
+        require(arg0);
+        let tmp3;
+        if (arg0) {
+          tmp3 = first;
+        }
+        callback(tmp3);
       }
-      callback(tmp3);
-    }
+    }),
+    subLabel: null,
+    disabled: !tmp3
   });
 });
-const result = require("set").fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOOPropBlurAmount.tsx");
-
-export default memoResult;

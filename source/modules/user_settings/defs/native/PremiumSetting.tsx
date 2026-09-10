@@ -1,63 +1,65 @@
-// Module ID: 14983
-// Function ID: 14984
-// Name: route
-// Dependencies: [19, 1371, 4224, 1074, 21, 13418, 4218, 1114, 7417, 11438, 14984, 11473, 8667, 14986, 2]
+// Module ID: 15009
+// Function ID: 15010
+// Name: PremiumSetting
+// Dependencies: [19, 1371, 4237, 1074, 21, 13441, 4231, 1114, 7431, 11465, 15010, 11500, 8695, 15012, 2]
 
-// Module 14983 (route)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4218 */;
-import apexExperiment from "apexExperiment" /* 13418 */;
-import ThemedTabBadgeDefault from "ThemedTabBadge" /* 14984 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import closure_5 from "reset" /* 4224 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15009 (PremiumSetting)
+import util from "util" /* 1114 */;
+import PremiumUtils from "PremiumUtils" /* 4231 */;
+import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7431 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11465 */;
+import MobileNitroManageSubscriptionsSettingsExperiment from "MobileNitroManageSubscriptionsSettingsExperiment" /* 13441 */;
+import PremiumTabBadgeDefault from "PremiumTabBadge" /* 15010 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
+import SubscriptionStore from "SubscriptionStore" /* 4237 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const jsx = fn(21).jsx;
+const SettingBuilders = fn(11500);
+const route = SettingBuilders.createRoute({
   useTitle: function getPremiumSettingTitle() {
-    const mobileNitroManageSubscriptionsSettingsExperiment = apexExperiment.getMobileNitroManageSubscriptionsSettingsExperiment({ location: "PremiumSetting" });
-    const obj = apexExperiment;
-    currentUser = currentUser.getCurrentUser();
-    const result = getPremiumPlanItem.hasPremiumSubscriptionToDisplay(currentUser, premiumTypeSubscription.getPremiumTypeSubscription());
-    const intl = getSystemLocale.intl;
+    const mobileNitroManageSubscriptionsSettingsExperiment = MobileNitroManageSubscriptionsSettingsExperiment.getMobileNitroManageSubscriptionsSettingsExperiment({ location: "PremiumSetting" });
+    const currentUser = UserStore.getCurrentUser();
+    const result = PremiumUtils.hasPremiumSubscriptionToDisplay(currentUser, SubscriptionStore.getPremiumTypeSubscription());
+    const intl = util.intl;
     const string = intl.string;
+    let t = util.t;
     if (result) {
       if (mobileNitroManageSubscriptionsSettingsExperiment) {
-        let stringResult = string(_4gwVVn);
+        t = t["4gwVVn"];
+        let stringResult = string(t);
       } else {
-        stringResult = string(_4gwVVn["8jmdON"]);
+        stringResult = string(t["8jmdON"]);
       }
     } else {
-      return string(_4gwVVn["8x0jKT"]);
+      return string(t["8x0jKT"]);
     }
   },
   parent: null,
-  IconComponent: require("NitroWheelIcon").NitroWheelIcon,
+  IconComponent: fn(8695).NitroWheelIcon,
   usePreNavigationAction: function useCanNavigateToPaymentSetting() {
-    return React.useCallback(() => {
-      const isPaymentsBlocked = callback(table[8]).getIsPaymentsBlocked();
+    return noop.useCallback(() => {
+      const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
       let flag = !isPaymentsBlocked;
       if (isPaymentsBlocked) {
-        callback2(table[9])();
+        openBlockedPaymentsCountryActionSheetDefault();
         flag = false;
       }
       return flag;
     }, []);
   },
   useTrailing: function usePremiumSettingTrailing() {
-    return jsx(ThemedTabBadgeDefault, {});
+    return jsx(PremiumTabBadgeDefault, {});
   },
-  screen: createToggle
-};
-createToggle = {
-  route: require("ME").UserSettingsSections.PREMIUM,
-  getComponent() {
-    return require(14986) /* PremiumScreen */.default;
+  screen: {
+    route: fn(1074).UserSettingsSections.PREMIUM,
+    getComponent() {
+      return require("PremiumSettingScreen").default;
+    }
   }
-};
-createToggle = createToggle.createRoute(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/PremiumSetting.tsx");
+});
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/PremiumSetting.tsx");
 
-export default createToggle;
+export default route;

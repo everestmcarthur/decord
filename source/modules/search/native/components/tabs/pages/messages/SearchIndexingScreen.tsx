@@ -1,25 +1,25 @@
-// Module ID: 16701
-// Function ID: 16702
+// Module ID: 16738
+// Function ID: 16739
 // Name: SearchIndexingScreen
-// Dependencies: [19, 21, 12362, 12344, 16641, 2]
+// Dependencies: [19, 21, 12388, 12370, 16673, 2]
 // Exports: default
 
-// Module 16701 (SearchIndexingScreen)
-import _modDef16641 from "module_16641" /* 16641 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16738 (SearchIndexingScreen)
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12388 */;
+import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 16673 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/SearchIndexingScreen.tsx");
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/messages/SearchIndexingScreen.tsx");
 
 export default function SearchIndexingScreen(searchContext) {
   searchContext = searchContext.searchContext;
   const items = [searchContext];
-  const effect = React.useEffect(() => {
-    let obj = closure_1_1(closure_1_2[2]);
-    obj = { searchContext };
-    obj.trackSearchIndexing(obj);
+  const effect = noop.useEffect(() => {
+    search_tracking_TrackingDefault.trackSearchIndexing({ searchContext });
   }, items);
-  const text = searchContext(12344).getIndexingErrorText(searchContext);
-  return jsx(_modDef16641, { text });
+  const text = searchContext(12370).getIndexingErrorText(searchContext);
+  return jsx(pages_ErrorScreenDefault, { text });
 };

@@ -4,7 +4,7 @@
 // Dependencies: [30]
 
 // Module 271 (NativeMutationObserverCxx)
-import getAll from "get" /* 30 */;
+import get from "module_30" /* 30 */;
 
 
-export default getAll.get("NativeMutationObserverCxx");
+export default get.get("NativeMutationObserverCxx");

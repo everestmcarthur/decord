@@ -1,23 +1,28 @@
-// Module ID: 11683
-// Function ID: 11684
-// Name: useRedactableMediaAttachmentsForMessage
-// Dependencies: [4781, 563, 10180, 7292, 7297, 2]
+// Module ID: 11709
+// Function ID: 11710
+// Name: useExplicitMediaAttachmentsForMessage
+// Dependencies: [4795, 563, 10207, 7306, 7311, 2]
 // Exports: useRedactableMediaAttachmentsForMessage, useRedactableMediaEmbedsForMessage
 
-// Module 11683 (useRedactableMediaAttachmentsForMessage)
-import closure_2 from "reinjectEphemerals" /* 4781 */;
+// Module 11709 (useExplicitMediaAttachmentsForMessage)
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7306 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7311 */;
+import MessageStore from "MessageStore" /* 4795 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/hooks/useExplicitMediaAttachmentsForMessage.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/explicit_media_redaction/hooks/useExplicitMediaAttachmentsForMessage.tsx");
 
 export const useRedactableMediaAttachmentsForMessage = function useRedactableMediaAttachmentsForMessage(channelId, messageId, attachmentId) {
-  const _require = channelId;
+  _require = channelId;
   dependencyMap = messageId;
   closure_2 = attachmentId;
   const items = [closure_2];
-  const stateFromStores = _require(563).useStateFromStores(items, () => attachmentId.getMessage(closure_0, closure_1));
-  let obj = _require(563);
-  closure_3 = _require(10180).useEnabledHarmTypesBitmaskForMessage(stateFromStores);
+  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => MessageStore.getMessage(closure_0, closure_1));
+  let obj = require("useStateFromStores");
+  closure_3 = require("useContentHarmTypes").useEnabledHarmTypesBitmaskForMessage(stateFromStores);
   if (null == stateFromStores) {
     return [];
   } else {
@@ -33,16 +38,16 @@ export const useRedactableMediaAttachmentsForMessage = function useRedactableMed
     }
     return found;
   }
-  const obj2 = _require(10180);
+  const obj2 = require("useContentHarmTypes");
 };
 export const useRedactableMediaEmbedsForMessage = function useRedactableMediaEmbedsForMessage(channelId, messageId, embedId) {
-  const _require = channelId;
+  _require = channelId;
   dependencyMap = messageId;
   closure_2 = embedId;
   const items = [closure_2];
-  const stateFromStores = _require(563).useStateFromStores(items, () => embedId.getMessage(closure_0, closure_1));
-  let obj = _require(563);
-  closure_3 = _require(10180).useEnabledHarmTypesBitmaskForMessage(stateFromStores);
+  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => MessageStore.getMessage(closure_0, closure_1));
+  let obj = require("useStateFromStores");
+  closure_3 = require("useContentHarmTypes").useEnabledHarmTypesBitmaskForMessage(stateFromStores);
   if (null == stateFromStores) {
     return [];
   } else {
@@ -58,5 +63,5 @@ export const useRedactableMediaEmbedsForMessage = function useRedactableMediaEmb
     }
     return found;
   }
-  const obj2 = _require(10180);
+  const obj2 = require("useContentHarmTypes");
 };

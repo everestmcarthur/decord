@@ -1,41 +1,37 @@
-// Module ID: 12115
-// Function ID: 12116
-// Name: EmptyState
-// Dependencies: [19, 17, 21, 4560, 576, 12055, 9414, 12116, 4556, 1114, 2]
+// Module ID: 12141
+// Function ID: 12142
+// Name: home/EmptyState
+// Dependencies: [19, 17, 21, 4574, 576, 12081, 9441, 12142, 4570, 1114, 2]
 // Exports: default
 
-// Module 12115 (EmptyState)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 9414 */;
-import handleApplicationSelected from "handleApplicationSelected" /* 12055 */;
-import SvgComponentDefault from "SvgComponent" /* 12116 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12141 (home/EmptyState)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9441 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12081 */;
+import HomeEmptyStateDefault from "HomeEmptyState" /* 12142 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: null, textContainer: null };
-createCacheKey = { padding: 16, gap: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.lg, alignItems: "center", justifyContent: "center" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { textAlign: "center" };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/EmptyState.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { padding: 16, gap: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.lg, alignItems: "center", justifyContent: "center" }, textContainer: { textAlign: "center" } };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/EmptyState.tsx");
 
 export default function EmptyState() {
-  const tmp = callback3();
-  let obj = handleApplicationSelected;
-  const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(AppLauncherEntrypoint.AppLauncherEmptyStateType.HOME_EMPTY);
-  obj = { style: tmp.container, children: null };
-  const items = [callback(SvgComponentDefault, {}), ];
-  obj = { style: tmp.textContainer, variant: "text-md/semibold", color: "text-default", children: null };
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.string(getSystemLocale.t["V7+xhH"]);
-  items[1] = callback(Text.Text, obj);
-  obj[1] = items;
-  return callback2(View, obj);
+  const tmp = closure_6();
+  const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(AppLauncherTypes.AppLauncherEmptyStateType.HOME_EMPTY);
+  const obj2 = { style: tmp.container, children: null };
+  const items = [React4(HomeEmptyStateDefault, {}), ];
+  const obj3 = { style: tmp.textContainer, variant: "text-md/semibold", color: "text-default", children: null };
+  const intl = util.intl;
+  obj3.children = intl.string(util.t["V7+xhH"]);
+  items[1] = React4(Text_Text.Text, obj3);
+  obj2.children = items;
+  return hasOwnProperty(View, obj2);
 };

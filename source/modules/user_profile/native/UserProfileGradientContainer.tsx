@@ -1,19 +1,20 @@
-// Module ID: 11116
-// Function ID: 11117
-// Dependencies: [19, 21, 8239, 4987, 2]
+// Module ID: 11143
+// Function ID: 11144
+// Name: UserProfileGradientContainer
+// Dependencies: [19, 21, 8265, 5001, 2]
 
-// Module 11116
-import LinearGradientDefault from "LinearGradient" /* 4987 */;
-import useUserProfileGradientColors from "useUserProfileGradientColors" /* 8239 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+// Module 11143 (UserProfileGradientContainer)
+import LinearGradientDefault from "LinearGradient" /* 5001 */;
+import useUserProfileGradientColors from "useUserProfileGradientColors" /* 8265 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const memoResult = importAllResult.memo((arg0) => {
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileGradientContainer.tsx");
+
+export default noop.memo((arg0) => {
   ({ primaryColor, secondaryColor, fallbackBackground, containerStyle, children } = arg0);
   const colors = useUserProfileGradientColors.useUserProfileGradientColors(primaryColor, secondaryColor, fallbackBackground);
   return jsx(LinearGradientDefault, { colors, style, children });
 });
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileGradientContainer.tsx");
-
-export default memoResult;

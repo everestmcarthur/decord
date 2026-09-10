@@ -1,90 +1,86 @@
-// Module ID: 16616
-// Function ID: 16617
+// Module ID: 16648
+// Function ID: 16649
 // Name: VibegrationsAppChannelView
-// Dependencies: [32, 19, 17, 9515, 9516, 21, 4560, 576, 16013, 1877, 7247, 16617, 9573, 9512, 16618, 4556, 1114, 3547, 4975, 2]
+// Dependencies: [32, 19, 17, 9542, 9543, 21, 4574, 576, 16043, 1877, 7258, 16649, 9600, 9539, 16650, 4570, 1114, 3560, 4989, 2]
 // Exports: default
 
-// Module 16616 (VibegrationsAppChannelView)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "map" /* 9515 */;
-import FrameLayoutModes from "FrameLayoutModes" /* 9516 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16648 (VibegrationsAppChannelView)
+import nativeDefault from "native" /* 576 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9539 */;
+import FramesNativeManagerDefault from "FramesNativeManager" /* 9600 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import FramesStore from "FramesStore" /* 9542 */;
 
-const require = arg1;
-({ ActivityIndicator: c5, View: closure_6 } = get_ActivityIndicator);
-({ EmbeddedSurfaceType: closure_8, FrameLayoutModes: c9, isLaunched: c10 } = FrameLayoutModes);
-({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-let closure_13 = createCacheKey.createStyles((paddingBottom) => {
-  obj = { container: obj, centered: null, copy: null };
-  obj = { flex: 1, paddingBottom };
-  obj = { flex: 1, alignItems: "center", justifyContent: "center", padding: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_12 };
-  obj[1] = obj;
-  obj[2] = { alignItems: "center", gap: ThemesDefault.space.PX_4 };
+const require = globalThis.__r;
+
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const FramesConstants = fn(9543);
+({ EmbeddedSurfaceType: closure_8, FrameLayoutModes: closure_9, isLaunched: c10 } = FramesConstants);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4574);
+let closure_13 = createStyles.createStyles((paddingBottom) => {
+  const obj = { container: { flex: 1, paddingBottom }, centered: { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_12 }, copy: null };
+  const obj2 = { flex: 1, paddingBottom };
+  const obj3 = { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_12 };
+  obj.copy = { alignItems: "center", gap: nativeDefault.space.PX_4 };
   return obj;
 });
-let result = require("set").fileFinishedImporting("modules/vibegrations/native/VibegrationsAppChannelView.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/vibegrations/native/VibegrationsAppChannelView.tsx");
 
 export default function VibegrationsAppChannelView(channel) {
   channel = channel.channel;
-  let _require = channel;
+  _require = channel;
   let disallowGesture;
-  disallowGesture = undefined;
+  let disallowGesture1;
   let first;
-  let React;
-  let memo;
-  closure_6 = undefined;
+  noop = undefined;
   closure_7 = undefined;
-  let tmp2 = disallowGesture;
-  let container = callback4(disallowGesture(disallowGesture[9])());
+  let tmp2 = disallowGesture1;
+  let container = closure_13(disallowGesture(disallowGesture1[9])());
   let InlineFrameView = _require;
-  let obj = _require(disallowGesture[10]);
-  let result = obj.vibegrationsAppIdFromTopic(channel.topic);
+  let result = require("VibegrationsUtils").vibegrationsAppIdFromTopic(channel.topic);
   disallowGesture = result;
   const guild_id = channel.guild_id;
-  disallowGesture = guild_id;
-  obj1 = React;
-  const tmp4 = first(React.useState(false), 2);
+  disallowGesture1 = guild_id;
+  const tmp4 = first(noop.useState(false), 2);
   first = tmp4[0];
-  React = tmp4[1];
+  noop = tmp4[1];
   const items = [channel.id, guild_id];
-  memo = React.useMemo(() => ({ type: closure_1_8.APP_CHANNEL, channelId: id.id, guildId: disallowGesture }), items);
+  const memo = noop.useMemo(() => ({ type: constants.APP_CHANNEL, channelId: id.id, guildId: disallowGesture1 }), items);
   const tmp7 = disallowGesture(tmp2[11])(result, memo);
-  closure_6 = tmp7;
+  const id2 = tmp7;
   let id = null;
   if (null != tmp7) {
     id = null;
-    if (callback(tmp7)) {
+    if (closure_10(tmp7)) {
       id = tmp7;
     }
   }
   const items1 = [result, first, tmp7, memo];
-  const effect = obj1.useEffect(() => {
+  const effect = obj2.useEffect(() => {
     if (null != disallowGesture) {
       if (!first) {
         if (null == closure_6) {
-          mainFrame = mainFrame.getMainFrame();
+          const mainFrame = FramesStore.getMainFrame();
           if (null != mainFrame) {
-            let obj = disallowGesture(disallowGesture[12]);
-            obj.leaveFrame(mainFrame.id);
+            FramesNativeManagerDefault.leaveFrame(mainFrame.id);
           }
-          obj = { applicationId: null, surface: null };
-          obj[0] = tmp;
-          obj[1] = memo;
-          const obj2 = disallowGesture(disallowGesture[13]);
-          disallowGesture(disallowGesture[13]).launchFrame(obj).catch(() => callback(true));
-          const launchFrameResult = disallowGesture(disallowGesture[13]).launchFrame(obj);
+          const obj3 = { applicationId: tmp, surface: memo };
+          FramesActionCreatorsDefault.launchFrame(obj3).catch(() => closure_1_4(true));
+          const launchFrameResult = FramesActionCreatorsDefault.launchFrame(obj3);
         }
       }
     }
   }, items1);
-  closure_7 = obj1.useRef(null);
+  closure_7 = obj2.useRef(null);
   const items2 = [tmp7];
-  const effect1 = obj1.useEffect(() => {
-    let id;
+  const effect1 = obj2.useEffect(() => {
+    id = undefined;
     if (id2 != null) {
       id = id2.id;
     }
@@ -93,35 +89,33 @@ export default function VibegrationsAppChannelView(channel) {
     }
     closure_7.current = id;
   }, items2);
-  const effect2 = obj1.useEffect(() => () => {
+  const effect2 = obj2.useEffect(() => () => {
     if (null != ref.current) {
-      closure_1_1(closure_1_2[12]).leaveFrame(tmp.current);
-      const obj = closure_1_1(closure_1_2[12]);
+      disallowGesture(disallowGesture1[12]).leaveFrame(tmp.current);
+      const obj = disallowGesture(disallowGesture1[12]);
     }
   }, []);
   _require = tmp13;
-  disallowGesture = undefined;
-  disallowGesture = undefined;
-  disallowGesture = obj1.useContext(tmp(tmp2[8])).disallowGesture;
-  const context = obj1.useContext(InlineFrameView(tmp2[8]).MainTabsChannelScreenStackContext);
-  disallowGesture = undefined;
+  disallowGesture = obj2.useContext(tmp(tmp2[8])).disallowGesture;
+  const context = obj2.useContext(InlineFrameView(tmp2[8]).MainTabsChannelScreenStackContext);
+  disallowGesture1 = undefined;
   if (context != null) {
-    disallowGesture = context.disallowGesture;
+    disallowGesture1 = context.disallowGesture;
   }
-  if (disallowGesture == null) {
-    disallowGesture = null;
+  if (disallowGesture1 == null) {
+    disallowGesture1 = null;
   }
-  const items3 = [null != id, disallowGesture, disallowGesture];
-  const effect3 = obj1.useEffect(() => {
+  const items3 = [null != id, disallowGesture, disallowGesture1];
+  const effect3 = obj2.useEffect(() => {
     if (closure_0) {
       let result = disallowGesture.set(true);
-      if (disallowGesture != null) {
-        let result1 = disallowGesture.set(true);
+      if (disallowGesture1 != null) {
+        let result1 = disallowGesture1.set(true);
       }
       return () => {
-        const result = closure_1.set(false);
-        if (closure_2 != null) {
-          const result1 = closure_2.set(false);
+        const result = disallowGesture.set(false);
+        if (disallowGesture1 != null) {
+          const result1 = disallowGesture1.set(false);
         }
       };
     }
@@ -129,42 +123,37 @@ export default function VibegrationsAppChannelView(channel) {
   if (null == result) {
     return null;
   } else if (null != id) {
-    obj = { style: null, children: null };
+    let obj3 = { style: null, children: null };
     container = container.container;
-    obj[0] = container;
+    obj3.style = container;
     InlineFrameView = InlineFrameView(tmp2[14]).InlineFrameView;
-    obj = { frameId: null, layoutMode: null };
+    const obj4 = { frameId: null, layoutMode: null };
     id = id.id;
-    obj[0] = id;
-    obj[1] = constants.FOCUSED;
-    tmp2 = callback2(InlineFrameView, obj);
-    obj[1] = tmp2;
-    let tmp21 = callback2(closure_6, obj);
+    obj4.frameId = id;
+    obj4.layoutMode = constants2.FOCUSED;
+    tmp2 = closure_11(InlineFrameView, obj4);
+    obj3.children = tmp2;
+    let tmp21 = closure_11(id2, obj3);
   } else if (first) {
-    obj1 = { style: null, children: null };
-    obj1[0] = container.centered;
-    let obj2 = { style: null, children: null };
-    obj2[0] = container.copy;
-    const obj3 = { variant: "heading-lg/bold", color: "text-default", children: null };
-    obj3[2] = channel.name;
-    const items4 = [callback2(InlineFrameView(tmp2[15]).Text, obj3), ];
-    const obj4 = { variant: "text-md/normal", color: "text-muted", children: null };
+    const obj5 = { style: container.centered, children: null };
+    const obj6 = { style: container.copy, children: null };
+    const obj7 = { variant: "heading-lg/bold", color: "text-default", children: channel.name };
+    const items4 = [closure_11(InlineFrameView(tmp2[15]).Text, obj7), ];
+    const obj8 = { variant: "text-md/normal", color: "text-muted", children: null };
     const intl = InlineFrameView(tmp2[16]).intl;
-    obj4[2] = intl.string(tmp(tmp2[17]).QM4w4h);
-    items4[1] = callback2(InlineFrameView(tmp2[15]).Text, obj4);
-    obj2[1] = items4;
-    const items5 = [callback3(closure_6, obj2), ];
-    const obj5 = { variant: "primary", text: null, onPress: null };
+    obj8.children = intl.string(tmp(tmp2[17]).QM4w4h);
+    items4[1] = closure_11(InlineFrameView(tmp2[15]).Text, obj8);
+    obj6.children = items4;
+    const items5 = [closure_12(id2, obj6), ];
+    const obj9 = { variant: "primary", text: null, onPress: null };
     const intl2 = InlineFrameView(tmp2[16]).intl;
-    obj5[1] = intl2.string(tmp(tmp2[17]).jLMpUv);
-    obj5[2] = tmp17;
-    items5[1] = callback2(InlineFrameView(tmp2[18]).Button, obj5);
-    obj1[1] = items5;
-    tmp21 = callback3(closure_6, obj1);
+    obj9.text = intl2.string(tmp(tmp2[17]).jLMpUv);
+    obj9.onPress = tmp17;
+    items5[1] = closure_11(InlineFrameView(tmp2[18]).Button, obj9);
+    obj5.children = items5;
+    tmp21 = closure_12(id2, obj5);
   } else {
-    const obj6 = { style: null, children: null };
-    obj6[0] = container.centered;
-    obj6[1] = callback2(memo, {});
-    tmp21 = callback2(closure_6, obj6);
+    const obj10 = { style: container.centered, children: closure_11(memo, {}) };
+    tmp21 = closure_11(id2, obj10);
   }
 };

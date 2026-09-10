@@ -1,22 +1,23 @@
-// Module ID: 15266
-// Function ID: 15267
-// Name: DEFAULT_FONT_SCALE_STORE_STATE
-// Dependencies: [1115, 10125, 1244, 2]
+// Module ID: 15295
+// Function ID: 15296
+// Name: FontScaleStore
+// Dependencies: [1115, 10152, 1244, 2]
 
-// Module 15266 (DEFAULT_FONT_SCALE_STORE_STATE)
-import enforcingDefault from "enforcing" /* 10125 */;
-import set from "set" /* 1115 */;
-import identity from "identity" /* 1244 */;
+// Module 15295 (FontScaleStore)
+import NativeFontModuleDefault from "NativeFontModule" /* 10152 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import identity from "module_1244" /* 1244 */;
+import size from "module_2" /* 2 */;
 
-if (set.isAndroid()) {
-  let customFontScale = enforcingDefault.getCustomFontScale();
-  const importDefaultResult = enforcingDefault;
+if (PlatformUtils.isAndroid()) {
+  let customFontScale = NativeFontModuleDefault.getCustomFontScale();
+  const importDefaultResult = NativeFontModuleDefault;
 } else {
   customFontScale = { fontScale: 1, isClassicChatFontScaleEnabled: false };
 }
-const obj = { persistedFontScale: customFontScale.fontScale, persistedIsClassicChatFontScaleEnabled: customFontScale.isClassicChatFontScaleEnabled, fontScale: customFontScale.fontScale, isClassicChatFontScaleEnabled: customFontScale.isClassicChatFontScaleEnabled };
+const DEFAULT_FONT_SCALE_STORE_STATE = { persistedFontScale: customFontScale.fontScale, persistedIsClassicChatFontScaleEnabled: customFontScale.isClassicChatFontScaleEnabled, fontScale: customFontScale.fontScale, isClassicChatFontScaleEnabled: customFontScale.isClassicChatFontScaleEnabled };
 const withEqualityFn = identity.createWithEqualityFn(() => obj);
-const result = set.fileFinishedImporting("modules/user_settings/appearance/native/FontScaleStore.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/appearance/native/FontScaleStore.tsx");
 
-export const DEFAULT_FONT_SCALE_STORE_STATE = obj;
+export { DEFAULT_FONT_SCALE_STORE_STATE };
 export const useFontScaleStore = withEqualityFn;

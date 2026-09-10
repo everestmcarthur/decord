@@ -1,27 +1,25 @@
-// Module ID: 12017
-// Function ID: 12018
-// Name: ForumPostAppliedTagPills
-// Dependencies: [19, 17, 21, 4560, 576, 10632, 2]
+// Module ID: 12043
+// Function ID: 12044
+// Name: ForumPostAppliedTags
+// Dependencies: [19, 17, 21, 4574, 576, 10659, 2]
 // Exports: ForumPostAppliedTagPills, ForumPostAppliedTags
 
-// Module 12017 (ForumPostAppliedTagPills)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12043 (ForumPostAppliedTags)
+import nativeDefault from "native" /* 576 */;
+import AppliedForumTag from "AppliedForumTag" /* 10659 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4, Fragment: c5 } = jsxProd);
-createCacheKey = { pillTagsContainer: { display: "flex", flexDirection: "row", alignItems: "center" }, tag: null, tagsContainer: null, dot: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { display: "flex", flexDirection: "row", alignItems: "center" };
-createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, height: 4, width: 4, borderRadius: 10, marginHorizontal: 8 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, height: 4, width: 4, borderRadius: 10, marginHorizontal: 8 };
-const result = require("set").fileFinishedImporting("modules/forums/native/posts/ForumPostAppliedTags.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4, Fragment: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { pillTagsContainer: { display: "flex", flexDirection: "row", alignItems: "center" }, tag: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, tagsContainer: { display: "flex", flexDirection: "row", alignItems: "center" }, dot: null };
+let size = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, height: 4, width: 4, borderRadius: 10, marginHorizontal: 8 };
+obj2.dot = size;
+let closure_6 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostAppliedTags.tsx");
 
 export const ForumPostAppliedTagPills = function ForumPostAppliedTagPills(additionalTagsCount) {
   ({ appliedTags, hasUnreads } = additionalTagsCount);
@@ -29,25 +27,25 @@ export const ForumPostAppliedTagPills = function ForumPostAppliedTagPills(additi
   if (num === undefined) {
     num = 0;
   }
-  dependencyMap = undefined;
-  const tmp = callback2();
+  const tmp = closure_6();
   dependencyMap = tmp;
-  let obj = { style: items, children: null };
-  items = [additionalTagsCount.containerStyle, tmp.pillTagsContainer];
-  const items1 = [appliedTags.map((id) => closure_1_3(hasUnreads(tag[5]).AppliedForumTagPill, { tag: id, containerStyle: tag.tag, hasUnreads }, id.id)), ];
+  const obj = { style: null, children: null };
+  const items = [additionalTagsCount.containerStyle, tmp.pillTagsContainer];
+  obj.style = items;
+  const items1 = [appliedTags.map((tag) => React3(AppliedForumTag.AppliedForumTagPill, { tag, containerStyle: tag.tag, hasUnreads }, tag.id)), ];
   let tmp4 = num > 0;
   if (tmp4) {
-    obj = { tag: null, containerStyle: null, hasUnreads: null };
-    obj = { id: "-1", name: null };
+    const obj2 = { tag: null, containerStyle: null, hasUnreads: null };
+    const obj3 = { id: "-1", name: null };
     const _HermesInternal = HermesInternal;
-    obj[1] = "+" + num;
-    obj[0] = obj;
-    obj[1] = tmp.tag;
-    obj[2] = hasUnreads;
-    tmp4 = callback(hasUnreads(10632).AppliedForumTagPill, obj);
+    obj3.name = "+" + num;
+    obj2.tag = obj3;
+    obj2.containerStyle = tmp.tag;
+    obj2.hasUnreads = hasUnreads;
+    tmp4 = closure_3(hasUnreads(10659).AppliedForumTagPill, obj2);
   }
   items1[1] = tmp4;
-  obj[1] = items1;
+  obj.children = items1;
   return closure_4(View, obj);
 };
 export const ForumPostAppliedTags = function ForumPostAppliedTags(appliedTags) {
@@ -57,43 +55,40 @@ export const ForumPostAppliedTags = function ForumPostAppliedTags(appliedTags) {
   if (num === undefined) {
     num = 0;
   }
-  closure_2 = undefined;
-  const tmp = callback2();
-  closure_2 = tmp;
-  let obj = { style: items, children: null };
-  items = [appliedTags.containerStyle, tmp.tagsContainer];
+  const tmp = closure_6();
+  const dot = tmp;
+  const obj = { style: null, children: null };
+  const items = [appliedTags.containerStyle, tmp.tagsContainer];
+  obj.style = items;
   const items1 = [
-    appliedTags.map((id) => {
-      let obj = { tag: id, hasUnreads };
-      const children = [closure_1_3(appliedTags(hasUnreads[5]).AppliedForumTag, obj, id.id), ];
-      let tmp3Result = arg1 !== appliedTags.length - 1;
+    appliedTags.map((tag, index) => {
+      const children = [React3(AppliedForumTag.AppliedForumTag, { tag, hasUnreads }, tag.id), ];
+      let tmp3Result = index !== appliedTags.length - 1;
       if (tmp3Result) {
-        obj = { style: null };
-        obj[0] = dot.dot;
-        tmp3Result = closure_1_3(dot, obj);
+        const obj2 = { style: dot.dot };
+        tmp3Result = React3(View, obj2);
       }
       children[1] = tmp3Result;
-      return closure_1_4(closure_1_5, { children });
+      return React4(hasOwnProperty, { children });
     }),
 
   ];
   let tmp2Result = num > 0;
   if (tmp2Result) {
-    obj = { children: null };
-    obj = { style: null };
-    obj[0] = tmp.dot;
-    const items2 = [callback(tmp3, obj), ];
-    obj1 = { tag: null, hasUnreads: null };
-    const obj2 = { id: "-1", name: null };
+    let obj2 = { children: null };
+    const obj3 = { style: tmp.dot };
+    const items2 = [closure_3(tmp3, obj3), ];
+    const obj4 = { tag: null, hasUnreads: null };
+    const obj5 = { id: "-1", name: null };
     const _HermesInternal = HermesInternal;
-    obj2[1] = "+" + num;
-    obj1[0] = obj2;
-    obj1[1] = hasUnreads;
-    items2[1] = callback(appliedTags(hasUnreads[5]).AppliedForumTag, obj1);
-    obj[0] = items2;
-    tmp2Result = tmp2(closure_5, obj);
+    obj5.name = "+" + num;
+    obj4.tag = obj5;
+    obj4.hasUnreads = hasUnreads;
+    items2[1] = closure_3(appliedTags(hasUnreads[5]).AppliedForumTag, obj4);
+    obj2.children = items2;
+    tmp2Result = tmp2(closure_5, obj2);
   }
   items1[1] = tmp2Result;
-  obj[1] = items1;
-  return closure_4(closure_2, obj);
+  obj.children = items1;
+  return closure_4(dot, obj);
 };

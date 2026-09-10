@@ -1,34 +1,32 @@
-// Module ID: 14758
-// Function ID: 14759
-// Dependencies: [7975, 4773, 5423, 14685, 11473, 1114, 2]
+// Module ID: 14784
+// Function ID: 14785
+// Name: AccountAgeGroupAdultSetting
+// Dependencies: [7989, 4787, 5437, 14711, 11500, 1114, 2]
 
-// Module 14758
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4773 */;
-import isFeatureAgeGated from "isFeatureAgeGated" /* 5423 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import useIsTinyBroncoSettingsEnabled from "useIsTinyBroncoSettingsEnabled" /* 14685 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 14784 (AccountAgeGroupAdultSetting)
+import util from "util" /* 1114 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 4787 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5437 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14711 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
 let obj = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["/52UYy"]);
+    const intl = util.intl;
+    return intl.string(util.t["/52UYy"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
+  parent: SettingsConstants.MobileUserSettings.ACCOUNT,
   useTrailing() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.XxRj7f);
+    const intl = util.intl;
+    return intl.string(util.t.XxRj7f);
   },
   usePredicate: function useAccountAgeGroupAdultSettingPredicate() {
-    const isAgeVerified = useAgeVerificationRunner.useIsAgeVerified();
-    const obj = useAgeVerificationRunner;
-    const isVerifiedTeen = useAgeVerificationRunner.useIsVerifiedTeen();
-    const obj2 = useAgeVerificationRunner;
-    let hasAgeGatedFeatures = isFeatureAgeGated.useHasAgeGatedFeatures();
-    const obj3 = isFeatureAgeGated;
-    const isTinyBroncoSettingsEnabled = useIsTinyBroncoSettingsEnabled.useIsTinyBroncoSettingsEnabled();
+    const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
+    const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
+    let hasAgeGatedFeatures = RegionalFeatureConfigUtils.useHasAgeGatedFeatures();
+    const isTinyBroncoSettingsEnabled = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled();
     if (hasAgeGatedFeatures) {
       hasAgeGatedFeatures = isAgeVerified;
     }
@@ -41,24 +39,23 @@ let obj = {
     return hasAgeGatedFeatures;
   }
 };
-const createStaticResult = createToggle.createStatic({
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountAgeGroupAdultSetting.tsx");
+
+export default SettingBuilders.createStatic({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["/52UYy"]);
+    const intl = util.intl;
+    return intl.string(util.t["/52UYy"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
+  parent: SettingsConstants.MobileUserSettings.ACCOUNT,
   useTrailing() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.XxRj7f);
+    const intl = util.intl;
+    return intl.string(util.t.XxRj7f);
   },
   usePredicate: function useAccountAgeGroupAdultSettingPredicate() {
-    const isAgeVerified = useAgeVerificationRunner.useIsAgeVerified();
-    const obj = useAgeVerificationRunner;
-    const isVerifiedTeen = useAgeVerificationRunner.useIsVerifiedTeen();
-    const obj2 = useAgeVerificationRunner;
-    let hasAgeGatedFeatures = isFeatureAgeGated.useHasAgeGatedFeatures();
-    const obj3 = isFeatureAgeGated;
-    const isTinyBroncoSettingsEnabled = useIsTinyBroncoSettingsEnabled.useIsTinyBroncoSettingsEnabled();
+    const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
+    const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
+    let hasAgeGatedFeatures = RegionalFeatureConfigUtils.useHasAgeGatedFeatures();
+    const isTinyBroncoSettingsEnabled = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled();
     if (hasAgeGatedFeatures) {
       hasAgeGatedFeatures = isAgeVerified;
     }
@@ -71,6 +68,3 @@ const createStaticResult = createToggle.createStatic({
     return hasAgeGatedFeatures;
   }
 });
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountAgeGroupAdultSetting.tsx");
-
-export default createStaticResult;

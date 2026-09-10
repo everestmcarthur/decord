@@ -1,58 +1,57 @@
-// Module ID: 10831
-// Function ID: 10832
+// Module ID: 10858
+// Function ID: 10859
 // Name: UnifiedGiftModal
-// Dependencies: [32, 19, 21, 4763, 7000, 10832, 1114, 5624, 10833, 10864, 7162, 2]
+// Dependencies: [32, 19, 21, 4777, 7014, 10859, 1114, 5638, 10860, 10891, 7176, 2]
 // Exports: default
 
-// Module 10831 (UnifiedGiftModal)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 10858 (UnifiedGiftModal)
+import util from "util" /* 1114 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import NavigatorHeader from "NavigatorHeader" /* 5638 */;
+import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10859 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/checkout/native/gifting/UnifiedGiftModal.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/checkout/native/gifting/UnifiedGiftModal.tsx");
 
 export default function UnifiedGiftModal(analyticsLocations) {
   ({ skuId, lockedRecipientUser, onGiftModalDismiss, validateRecipient, renderProductDetails, renderPurchaseSection } = analyticsLocations);
-  let first;
-  closure_7 = undefined;
-  let callback;
   const tmp = validateRecipient(renderProductDetails.useState(lockedRecipientUser), 2);
-  first = tmp[0];
+  const first = tmp[0];
   closure_7 = tmp[1];
   const items = [onGiftModalDismiss];
-  callback = renderProductDetails.useCallback(() => {
-    let arr = lockedRecipientUser(onGiftModalDismiss[3]);
-    arr = arr.pop();
+  const callback = renderProductDetails.useCallback(() => {
+    ModalActionCreatorsDefault.pop();
     if (onGiftModalDismiss != null) {
       onGiftModalDismiss();
     }
   }, items);
-  let obj = skuId(onGiftModalDismiss[4]);
   const items1 = [lockedRecipientUser, first, skuId, callback, validateRecipient, renderProductDetails, renderPurchaseSection];
-  const navigatorScreens = obj.useNavigatorScreens(() => {
-    let obj = {};
-    obj = { title: null, headerLeft: null, render: null };
-    const intl = skuId(onGiftModalDismiss[6]).intl;
-    obj[0] = intl.string(skuId(onGiftModalDismiss[6]).t["JCFN/y"]);
-    obj[1] = skuId(onGiftModalDismiss[7]).getHeaderCloseButton(callback);
-    obj[2] = function render() {
-      return closure_1_5(closure_1_1(closure_1_2[8]), { skuId: closure_0, recipientUser: closure_6, setRecipientUser: closure_7, lockedRecipient: null != closure_1, validateRecipient: closure_3, renderProductDetails: closure_4, renderPurchaseSection: closure_5 });
+  const navigatorScreens = skuId(onGiftModalDismiss[4]).useNavigatorScreens(() => {
+    const obj = {};
+    const obj2 = { title: null, headerLeft: null, render: null };
+    const intl = util.intl;
+    obj2.title = intl.string(util.t["JCFN/y"]);
+    obj2.headerLeft = NavigatorHeader.getHeaderCloseButton(callback);
+    obj2.render = function render() {
+      return renderPurchaseSection(lockedRecipientUser(onGiftModalDismiss[8]), { skuId, recipientUser, setRecipientUser, lockedRecipient: null != closure_1_1, validateRecipient, renderProductDetails, renderPurchaseSection });
     };
-    obj[skuId(onGiftModalDismiss[5]).UnifiedGiftModalScreens.GIFT_DETAIL] = obj;
-    obj = { title: null, headerLeft: null, render: null };
-    const intl2 = skuId(onGiftModalDismiss[6]).intl;
-    obj[0] = intl2.string(skuId(onGiftModalDismiss[6]).t.R0vK0N);
-    const obj3 = skuId(onGiftModalDismiss[7]);
-    obj[1] = skuId(onGiftModalDismiss[7]).getHeaderBackButton();
-    obj[2] = function render() {
-      return closure_1_5(closure_1_1(closure_1_2[9]), { setRecipientUser: closure_7 });
+    obj[UnifiedGiftModalTypes.UnifiedGiftModalScreens.GIFT_DETAIL] = obj2;
+    const obj4 = { title: null, headerLeft: null, render: null };
+    const intl2 = util.intl;
+    obj4.title = intl2.string(util.t.R0vK0N);
+    obj4.headerLeft = NavigatorHeader.getHeaderBackButton();
+    obj4.render = function render() {
+      return renderPurchaseSection(lockedRecipientUser(onGiftModalDismiss[9]), { setRecipientUser });
     };
-    obj[skuId(onGiftModalDismiss[5]).UnifiedGiftModalScreens.RECIPENT_SELECT] = obj;
+    obj[UnifiedGiftModalTypes.UnifiedGiftModalScreens.RECIPENT_SELECT] = obj4;
     return obj;
   }, items1);
-  obj = { value: analyticsLocations.analyticsLocations, children: null };
-  obj = { initialRouteName: skuId(onGiftModalDismiss[5]).UnifiedGiftModalScreens.GIFT_DETAIL, screens: navigatorScreens };
-  obj[1] = renderPurchaseSection(skuId(onGiftModalDismiss[4]).Navigator, obj);
-  return renderPurchaseSection(skuId(onGiftModalDismiss[10]).AnalyticsLocationProvider, obj);
+  let obj2 = { value: analyticsLocations.analyticsLocations, children: null };
+  let obj = skuId(onGiftModalDismiss[4]);
+  obj2.children = renderPurchaseSection(skuId(onGiftModalDismiss[4]).Navigator, { initialRouteName: skuId(onGiftModalDismiss[5]).UnifiedGiftModalScreens.GIFT_DETAIL, screens: navigatorScreens });
+  return renderPurchaseSection(skuId(onGiftModalDismiss[10]).AnalyticsLocationProvider, obj2);
 };

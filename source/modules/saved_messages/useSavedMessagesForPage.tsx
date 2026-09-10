@@ -1,69 +1,69 @@
-// Module ID: 13286
-// Function ID: 13287
-// Name: getSavedMessagesForType
-// Dependencies: [32, 19, 11665, 7860, 13287, 504, 1369, 2]
+// Module ID: 13309
+// Function ID: 13310
+// Name: useSavedMessagesForPage
+// Dependencies: [32, 19, 11691, 7874, 13310, 504, 1369, 2]
 // Exports: default
 
-// Module 13286 (getSavedMessagesForType)
-import SavedMessageSortTypes from "SavedMessageSortTypes" /* 7860 */;
-import useRefreshSavedMessagesDefault from "useRefreshSavedMessages" /* 13287 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "getTimeSafe" /* 11665 */;
+// Module 13309 (useSavedMessagesForPage)
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 7874 */;
+import useRefreshSavedMessagesDefault from "useRefreshSavedMessages" /* 13310 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11691 */;
 
-require = arg1;
+require = fn;
 function getSavedMessagesForType(arg0) {
-  if (SavedMessageSortTypes.SavedMessageSortTypes.BOOKMARK === arg0) {
-    return store.getMessageBookmarks();
-  } else if (SavedMessageSortTypes.SavedMessageSortTypes.REMINDER === arg0) {
-    return store.getMessageReminders();
+  if (SavedMessagesTypes.SavedMessageSortTypes.BOOKMARK === arg0) {
+    return SavedMessagesStore.getMessageBookmarks();
+  } else if (SavedMessagesTypes.SavedMessageSortTypes.REMINDER === arg0) {
+    return SavedMessagesStore.getMessageReminders();
   } else {
-    return store.getSavedMessages();
+    return SavedMessagesStore.getSavedMessages();
   }
-  const tmp = require;
 }
-const result = require("set").fileFinishedImporting("modules/saved_messages/useSavedMessagesForPage.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/saved_messages/useSavedMessagesForPage.tsx");
 
 export default function useSavedMessagesForPage() {
   let ALL = arg0;
   if (arg0 === undefined) {
-    ALL = ALL(7860).SavedMessageSortTypes.ALL;
+    ALL = ALL(7874).SavedMessageSortTypes.ALL;
   }
   importDefault = undefined;
   dependencyMap = undefined;
-  let callback;
-  [c1, c2] = callback(React.useState(() => {
-    if (ALL(_undefined2[3]).SavedMessageSortTypes.BOOKMARK === ALL) {
-      let messageBookmarks = closure_1_5.getMessageBookmarks();
-    } else if (ALL(_undefined2[3]).SavedMessageSortTypes.REMINDER === ALL) {
-      messageBookmarks = closure_1_5.getMessageReminders();
+  [c1, c2] = noop.useState(() => {
+    if (SavedMessagesTypes.SavedMessageSortTypes.BOOKMARK === ALL) {
+      let messageBookmarks = SavedMessagesStore.getMessageBookmarks();
+    } else if (SavedMessagesTypes.SavedMessageSortTypes.REMINDER === ALL) {
+      messageBookmarks = SavedMessagesStore.getMessageReminders();
     } else {
-      messageBookmarks = closure_1_5.getSavedMessages();
+      messageBookmarks = SavedMessagesStore.getSavedMessages();
     }
     return messageBookmarks.map((saveData) => saveData.saveData);
-  }), 2);
-  callback = React.useRef(store.getIsStale());
+  });
+  _slicedToArray = noop.useRef(SavedMessagesStore.getIsStale());
   let items = [ALL];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     function handleChange() {
-      const lastChanged = closure_2_5.getLastChanged();
+      lastChanged = SavedMessagesStore.getLastChanged();
       if (lastChanged !== lastChanged) {
-        if (closure_1_3.current) {
+        if (ref.current) {
           if (!obj.getIsStale()) {
             tmp9.current = false;
-            if (ALL(table[3]).SavedMessageSortTypes.BOOKMARK === closure_0) {
+            if (SavedMessagesTypes.SavedMessageSortTypes.BOOKMARK === ALL) {
               let messageBookmarks = obj.getMessageBookmarks();
-            } else if (ALL(table[3]).SavedMessageSortTypes.REMINDER === closure_0) {
+            } else if (SavedMessagesTypes.SavedMessageSortTypes.REMINDER === ALL) {
               messageBookmarks = obj.getMessageReminders();
             } else {
               messageBookmarks = obj.getSavedMessages();
             }
-            closure_1_2(messageBookmarks.map((saveData) => saveData.saveData));
+            c2(messageBookmarks.map((saveData) => saveData.saveData));
           }
         }
-        closure_1_2((arg0) => {
+        c2((arg0) => {
           let items = [...arg0];
-          const map = new Map(closure_1_6(lastChanged).map((saveData) => {
+          const map = new Map(closure_2_6(lastChanged).map((saveData) => {
             const items = [saveData.saveData.messageId, saveData];
             return items;
           }));
@@ -72,10 +72,8 @@ export default function useSavedMessagesForPage() {
           while (iter !== undefined) {
             let tmp2 = nextResult;
             if (map.has(nextResult.messageId)) {
-              let tmp5 = nextResult;
               let deleteResult = map.delete(tmp2.messageId);
             } else {
-              let tmp3 = nextResult;
               let spliceResult = items.splice(items.indexOf(tmp2), 1);
             }
             continue;
@@ -89,26 +87,26 @@ export default function useSavedMessagesForPage() {
         });
       }
     }
-    let lastChanged = closure_1_5.getLastChanged();
-    closure_1_5.addChangeListener(handleChange);
+    let lastChanged = SavedMessagesStore.getLastChanged();
+    SavedMessagesStore.addChangeListener(handleChange);
     return () => {
-      closure_2_5.removeChangeListener(handleChange);
+      SavedMessagesStore.removeChangeListener(handleChange);
     };
   }, items);
   useRefreshSavedMessagesDefault();
-  let tmp3 = callback(React.useState(() => {
-    if (ALL(_undefined2[3]).SavedMessageSortTypes.BOOKMARK === ALL) {
-      let messageBookmarks = closure_1_5.getMessageBookmarks();
-    } else if (ALL(_undefined2[3]).SavedMessageSortTypes.REMINDER === ALL) {
-      messageBookmarks = closure_1_5.getMessageReminders();
+  let tmp3 = _slicedToArray(noop.useState(() => {
+    if (SavedMessagesTypes.SavedMessageSortTypes.BOOKMARK === ALL) {
+      let messageBookmarks = SavedMessagesStore.getMessageBookmarks();
+    } else if (SavedMessagesTypes.SavedMessageSortTypes.REMINDER === ALL) {
+      messageBookmarks = SavedMessagesStore.getMessageReminders();
     } else {
-      messageBookmarks = closure_1_5.getSavedMessages();
+      messageBookmarks = SavedMessagesStore.getSavedMessages();
     }
     return messageBookmarks.map((saveData) => saveData.saveData);
   }), 2);
-  const items1 = [store];
+  const items1 = [SavedMessagesStore];
   return ALL(504).useStateFromStoresArray(items1, () => {
     const mapped = _undefined.map((channelId) => savedMessage.getSavedMessage(channelId.channelId, channelId.messageId));
-    return mapped.filter(ALL(_undefined2[6]).isNotNullish);
+    return mapped.filter(GlobalUtils.isNotNullish);
   });
 };

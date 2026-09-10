@@ -2,25 +2,31 @@
 // Function ID: 1728
 // Name: FadingTransition
 // Dependencies: []
+// Exports: FadingTransition
 
 // Module 1727 (FadingTransition)
-arg5.FadingTransition = function FadingTransition(name) {
+
+export const FadingTransition = function FadingTransition(name, arg1) {
   ({ translateX, translateY, scaleX, scaleY } = arg1);
-  let obj = { name, style: null, duration: 300 };
-  obj = { 0: null, 20: null, 60: null, 100: null };
-  obj = { opacity: 1, transform: null };
+  const obj = { name, style: null, duration: 300 };
+  const obj2 = { 0: null, 20: null, 60: null, 100: null };
+  const obj3 = { opacity: 1, transform: null };
   const items = [{ translateX: "" + translateX + "px", translateY: "" + translateY + "px", scale: "" + scaleX + "," + scaleY }];
-  obj[1] = items;
-  obj[0] = obj;
-  const obj2 = { opacity: 0, transform: null };
-  obj1 = { translateX: "" + translateX + "px", translateY: "" + translateY + "px", scale: "" + scaleX + "," + scaleY };
+  obj3.transform = items;
+  obj2[0] = obj3;
+  const obj5 = { opacity: 0, transform: null };
+  const obj4 = { translateX: "" + translateX + "px", translateY: "" + translateY + "px", scale: "" + scaleX + "," + scaleY };
   const items1 = [{ translateX: "" + translateX + "px", translateY: "" + translateY + "px", scale: "" + scaleX + "," + scaleY }];
-  obj2[1] = items1;
-  obj[20] = obj2;
+  obj5.transform = items1;
+  obj2[20] = obj5;
+  const obj7 = { opacity: 0, transform: null };
   const items2 = [{ translateX: "0px", translateY: "0px", scale: "1,1" }];
-  obj[60] = { opacity: 0, transform: items2 };
+  obj7.transform = items2;
+  obj2[60] = obj7;
+  const obj8 = { opacity: 1, transform: null };
   const items3 = [{ translateX: "0px", translateY: "0px", scale: "1,1" }];
-  obj[100] = { opacity: 1, transform: items3 };
-  obj[1] = obj;
+  obj8.transform = items3;
+  obj2[100] = obj8;
+  obj.style = obj2;
   return obj;
 };

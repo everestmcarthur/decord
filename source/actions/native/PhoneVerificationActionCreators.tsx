@@ -1,19 +1,19 @@
-// Module ID: 7076
-// Function ID: 7077
-// Name: dispatcher
+// Module ID: 7090
+// Function ID: 7091
+// Name: PhoneVerificationActionCreators
 // Dependencies: [573, 2]
 
-// Module 7076 (dispatcher)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 7090 (PhoneVerificationActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("actions/native/PhoneVerificationActionCreators.tsx");
+const result = size.fileFinishedImporting("actions/native/PhoneVerificationActionCreators.tsx");
 
 export default {
   openCountrySelector() {
-    dispatcherDefault.dispatch({ type: "VERIFICATION_OPEN_COUNTRY_SELECTOR" });
+    DispatcherDefault.dispatch({ type: "VERIFICATION_OPEN_COUNTRY_SELECTOR" });
   },
   setCountrySelectorClosed() {
-    dispatcherDefault.dispatch({ type: "VERIFICATION_CLOSE_COUNTRY_SELECTOR" });
+    DispatcherDefault.dispatch({ type: "VERIFICATION_CLOSE_COUNTRY_SELECTOR" });
   }
 };

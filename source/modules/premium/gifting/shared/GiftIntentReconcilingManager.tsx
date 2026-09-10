@@ -1,25 +1,24 @@
-// Module ID: 17471
-// Function ID: 17472
-// Name: onPostConnectionOpen
-// Dependencies: [4782, 1221, 1957, 8078, 1074, 1090, 7118, 559, 10749, 573, 7456, 2]
+// Module ID: 17502
+// Function ID: 17503
+// Name: GiftIntentReconcilingManager
+// Dependencies: [4796, 1221, 1957, 8093, 1074, 1090, 7132, 559, 10776, 573, 7470, 2]
 
-// Module 17471 (onPostConnectionOpen)
-import failsDefault from "fails" /* 559 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import setDefault from "set" /* 1090 */;
-import initializeDefault from "initialize" /* 7118 */;
-import trackInviteDefault from "trackInvite" /* 7456 */;
-import fetchAndReconcileGiftIntentDismissals from "fetchAndReconcileGiftIntentDismissals" /* 10749 */;
-import closure_3 from "dropChannelIfEmpty" /* 4782 */;
-import closure_4 from "handleConnectionClosedOrResumed" /* 1221 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import closure_6 from "getCurrentTime" /* 8078 */;
-import { MessageTypes } from "ME" /* 1074 */;
+// Module 17502 (GiftIntentReconcilingManager)
+import BackoffDefault from "Backoff" /* 559 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7470 */;
+import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10776 */;
+import EphemeralMessageStore from "EphemeralMessageStore" /* 4796 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8093 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-require = arg1;
-let closure_8 = 10 * setDefault.Millis.SECOND;
-let closure_9 = 5 * setDefault.Millis.MINUTE;
-initializeDefault;
+require = fn;
+const MessageTypes = fn(1074).MessageTypes;
+let closure_8 = 10 * DurationsDefault.Millis.SECOND;
+let closure_9 = 5 * DurationsDefault.Millis.MINUTE;
 class GiftIntentReconcilingManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -48,7 +47,7 @@ class GiftIntentReconcilingManager extends tmp2 {
     items1[0] = items;
     map = new Map(items1);
     applyArgumentsResult.stores = map;
-    tmp4 = new require("fails")(closure_8, closure_9);
+    tmp4 = new closure_1(closure_2[7])(closure_8, closure_9);
     applyArgumentsResult.reconcileBackoff = tmp4;
     applyArgumentsResult.isReconciling = false;
     applyArgumentsResult.heldGiftingPromptSystemMessage = false;
@@ -81,10 +80,10 @@ prototype["maybeReconcileServerDismissals"] = function maybeReconcileServerDismi
   }
 };
 prototype["isReconcileEligible"] = function isReconcileEligible() {
-  return store.getFriendAnniversaries().length > 0;
+  return PremiumGiftingIntentStore.getFriendAnniversaries().length > 0;
 };
 prototype["getServerDismissalTimestampMs"] = function getServerDismissalTimestampMs() {
-  const userContent = settings.settings.userContent;
+  const userContent = UserSettingsProtoStore.settings.userContent;
   let str;
   if (userContent != null) {
     str = userContent.lastGiftIntentDismissedAtMs;
@@ -99,8 +98,7 @@ prototype["attemptReconcileFetch"] = function attemptReconcileFetch() {
   const serverDismissalTimestampMs = this.getServerDismissalTimestampMs();
   if (!tmp2) {
     self.isReconciling = true;
-    const andReconcileGiftIntentDismissals = fetchAndReconcileGiftIntentDismissals.fetchAndReconcileGiftIntentDismissals(serverDismissalTimestampMs);
-    const obj = fetchAndReconcileGiftIntentDismissals;
+    const andReconcileGiftIntentDismissals = PremiumGiftingIntentActionCreators.fetchAndReconcileGiftIntentDismissals(serverDismissalTimestampMs);
   }
 };
 prototype["onReconcileSuccess"] = function onReconcileSuccess(dismissals) {
@@ -125,54 +123,37 @@ prototype["removeRemotelyDismissedGiftIntentCards"] = function removeRemotelyDis
     let tmp2 = targetId;
     let dismissedAtMs = nextResult.dismissedAtMs;
     let lastReconciledDismissalAtMs = self.lastReconciledDismissalAtMs;
-    let value = lastReconciledDismissalAtMs.get(targetId);
+    value = lastReconciledDismissalAtMs.get(targetId);
     let tmp4 = value;
     let lastReconciledDismissalAtMs2 = self.lastReconciledDismissalAtMs;
     let num = value;
     if (value == null) {
       num = 0;
     }
-    let tmp5 = dismissedAtMs;
     let result = lastReconciledDismissalAtMs2.set(targetId, Math.max(num, dismissedAtMs));
-    let tmp7 = value;
     if (null != tmp4) {
-      let tmp20 = dismissedAtMs;
-      let tmp21 = value;
       if (dismissedAtMs > tmp4) {
-        let tmp22 = dMFromUserId;
-        let tmp23 = targetId;
-        dMFromUserId = dMFromUserId.getDMFromUserId(tmp2);
+        let dMFromUserId = ChannelStore.getDMFromUserId(tmp2);
         let tmp25 = dMFromUserId;
         if (null != dMFromUserId) {
-          let tmp26 = messages;
-          let tmp27 = dMFromUserId;
-          messages = messages.getMessages(tmp25);
-          let tmp29 = messages;
-          let tmp8 = messages;
+          let messages = EphemeralMessageStore.getMessages(tmp25);
           for (const item10031 of messages) {
             let tmp9 = item10031;
-            let tmp10 = MessageTypes;
             let tmp11 = item10031.type === MessageTypes.GIFTING_PROMPT;
             if (tmp11) {
-              let tmp12 = item10031;
               let giftingPrompt = tmp9.giftingPrompt;
               let recipientUserId;
               if (giftingPrompt != null) {
                 recipientUserId = giftingPrompt.recipientUserId;
               }
-              let tmp14 = targetId;
               tmp11 = recipientUserId === tmp2;
             }
             if (tmp11) {
-              let tmp15 = importDefault;
-              let tmp16 = dependencyMap;
-              let obj = dispatcherDefault;
-              obj = { type: "MESSAGE_DELETE", id: null, channelId: null };
-              let tmp17 = item10031;
-              obj[1] = tmp9.id;
-              let tmp18 = dMFromUserId;
-              obj[2] = tmp25;
-              let dispatchResult = obj.dispatch(obj);
+              let obj = DispatcherDefault;
+              let obj2 = { type: "MESSAGE_DELETE", id: null, channelId: null };
+              obj2.id = tmp9.id;
+              obj2.channelId = tmp25;
+              let dispatchResult = obj.dispatch(obj2);
             }
             continue;
           }
@@ -193,7 +174,7 @@ prototype["onLogout"] = function onLogout() {
 prototype["maybeRetryHeldGiftingPromptSystemMessage"] = function maybeRetryHeldGiftingPromptSystemMessage() {
   const self = this;
   if (this.heldGiftingPromptSystemMessage) {
-    const lastKnownGiftIntentDismissedAtMs = store.getLastKnownGiftIntentDismissedAtMs();
+    const lastKnownGiftIntentDismissedAtMs = PremiumGiftingIntentStore.getLastKnownGiftIntentDismissedAtMs();
     if (lastKnownGiftIntentDismissedAtMs >= self.getServerDismissalTimestampMs()) {
       self.heldGiftingPromptSystemMessage = false;
       const result = self.sendGiftingPromptSystemMessagesIfEligible();
@@ -201,24 +182,21 @@ prototype["maybeRetryHeldGiftingPromptSystemMessage"] = function maybeRetryHeldG
   }
 };
 prototype["shouldHoldGiftingPromptSystemMessageForServerReconcile"] = function shouldHoldGiftingPromptSystemMessageForServerReconcile() {
-  const lastKnownGiftIntentDismissedAtMs = store.getLastKnownGiftIntentDismissedAtMs();
+  const lastKnownGiftIntentDismissedAtMs = PremiumGiftingIntentStore.getLastKnownGiftIntentDismissedAtMs();
   return lastKnownGiftIntentDismissedAtMs < this.getServerDismissalTimestampMs();
 };
-prototype["trySendGiftingPromptSystemMessage"] = function trySendGiftingPromptSystemMessage(id, FRIEND_ANNIVERSARY, closure_0, SEND_MESSAGE) {
+prototype["trySendGiftingPromptSystemMessage"] = function trySendGiftingPromptSystemMessage(id, FRIEND_ANNIVERSARY, recipientUserId, SEND_MESSAGE) {
   if (this.shouldHoldGiftingPromptSystemMessageForServerReconcile()) {
     this.heldGiftingPromptSystemMessage = true;
     let flag = false;
   } else {
-    let obj = trackInviteDefault;
-    obj = { giftIntentType: null, recipientUserId: null, giftIntentSecondaryAction: null };
-    obj[0] = FRIEND_ANNIVERSARY;
-    obj[1] = closure_0;
-    obj[2] = SEND_MESSAGE;
-    const result = obj.sendGiftingPromptSystemMessage(id, obj);
+    const obj2 = { giftIntentType: FRIEND_ANNIVERSARY, recipientUserId, giftIntentSecondaryAction: SEND_MESSAGE };
+    const result = MessageActionCreatorsDefault.sendGiftingPromptSystemMessage(id, obj2);
     flag = true;
   }
   return flag;
 };
-let result = require("set").fileFinishedImporting("modules/premium/gifting/shared/GiftIntentReconcilingManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/gifting/shared/GiftIntentReconcilingManager.tsx");
 
 export default GiftIntentReconcilingManager;

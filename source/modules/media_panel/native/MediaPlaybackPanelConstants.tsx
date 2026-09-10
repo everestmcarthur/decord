@@ -1,12 +1,12 @@
-// Module ID: 14540
-// Function ID: 14541
-// Name: MediaPlaybackPanelModes
+// Module ID: 14565
+// Function ID: 14566
+// Name: MediaPlaybackPanelConstants
 // Dependencies: [2]
 
-// Module 14540 (MediaPlaybackPanelModes)
-import set from "set" /* 2 */;
+// Module 14565 (MediaPlaybackPanelConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelConstants.tsx");
+const result = size.fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelConstants.tsx");
 
 export const MediaPlaybackPanelModes = { DISMISSED: "dismissed", PIP: "pip" };
 export const PLAYBACK_COMPLETION_DETECTION_TOLERANCE = 100;

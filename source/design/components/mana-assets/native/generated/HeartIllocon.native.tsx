@@ -1,17 +1,17 @@
-// Module ID: 6195
-// Function ID: 6196
+// Module ID: 6209
+// Function ID: 6210
 // Name: HeartIllocon
-// Dependencies: [21, 5587, 6196, 2]
+// Dependencies: [21, 5601, 6210, 2]
 // Exports: HeartIllocon
 
-// Module 6195 (HeartIllocon)
-import set from "set" /* 2 */;
+// Module 6209 (HeartIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 6196 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6210 from "module_6210" /* 6210 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/HeartIllocon.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/HeartIllocon.native.tsx");
 
 export const HeartIllocon = function HeartIllocon(size) {
   let num = size.size;
@@ -19,13 +19,13 @@ export const HeartIllocon = function HeartIllocon(size) {
   if (num === undefined) {
     num = 64;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef6210 };
+  obj.source = obj2;
   const items = [{ width: num, height: num }];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { uri: metadataDefault });
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

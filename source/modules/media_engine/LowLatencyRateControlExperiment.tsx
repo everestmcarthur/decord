@@ -1,29 +1,30 @@
-// Module ID: 14016
-// Function ID: 14017
-// Name: getLowLatencyRateControlExperimentConfig
+// Module ID: 14039
+// Function ID: 14040
+// Name: LowLatencyRateControlExperiment
 // Dependencies: [1434, 2]
 // Exports: getLowLatencyRateControlExperimentConfig
 
-// Module 14016 (getLowLatencyRateControlExperimentConfig)
-import getUnitIdDefault from "getUnitId" /* 1434 */;
+// Module 14039 (LowLatencyRateControlExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
 
-let obj = { 1: null };
-obj[1] = { enabled: true };
-let closure_0 = getUnitIdDefault({ kind: "user", name: "2025-10-low-latency-rate-control", defaultConfig: { enabled: false }, variations: obj });
-const result = require("set").fileFinishedImporting("modules/media_engine/LowLatencyRateControlExperiment.tsx");
+const obj = { kind: "user", name: "2025-10-low-latency-rate-control", defaultConfig: { enabled: false }, variations: null };
+let obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj.variations = obj2;
+let closure_0 = apex_ApexExperimentDefault(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_engine/LowLatencyRateControlExperiment.tsx");
 
 export const getLowLatencyRateControlExperimentConfig = function getLowLatencyRateControlExperimentConfig(disable) {
   let flag = disable.disable;
   if (flag === undefined) {
     flag = false;
   }
-  let obj = closure_0;
   if (flag) {
     let defaultConfig = obj.definition.defaultConfig;
   } else {
-    obj = { location: null };
-    obj[0] = disable.location;
-    defaultConfig = obj.getConfig(obj);
+    const obj2 = { location: disable.location };
+    defaultConfig = obj.getConfig(obj2);
   }
   return defaultConfig;
 };

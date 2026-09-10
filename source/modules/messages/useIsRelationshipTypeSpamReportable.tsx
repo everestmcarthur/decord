@@ -1,20 +1,23 @@
-// Module ID: 12597
-// Function ID: 12598
+// Module ID: 12623
+// Function ID: 12624
 // Name: useIsRelationshipTypeSpamReportable
-// Dependencies: [4209, 1074, 504, 2]
+// Dependencies: [4222, 1074, 504, 2]
 // Exports: useIsRelationshipTypeSpamReportable
 
-// Module 12597 (useIsRelationshipTypeSpamReportable)
-import closure_2 from "markAllUserIdListsStale" /* 4209 */;
-import { RelationshipTypes } from "ME" /* 1074 */;
+// Module 12623 (useIsRelationshipTypeSpamReportable)
+import RelationshipStore from "RelationshipStore" /* 4222 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/useIsRelationshipTypeSpamReportable.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const RelationshipTypes = fn(1074).RelationshipTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/useIsRelationshipTypeSpamReportable.tsx");
 
 export const useIsRelationshipTypeSpamReportable = function useIsRelationshipTypeSpamReportable(id) {
-  const _require = id;
-  const items = [closure_2];
+  _require = id;
+  const items = [RelationshipStore];
   const items1 = [id];
-  const stateFromStores = _require(504).useStateFromStores(items, () => closure_1_2.getRelationshipType(closure_0), items1);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => RelationshipStore.getRelationshipType(closure_0), items1);
   return stateFromStores === RelationshipTypes.NONE || stateFromStores === RelationshipTypes.BLOCKED || stateFromStores === RelationshipTypes.PENDING_INCOMING;
 };

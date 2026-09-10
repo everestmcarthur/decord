@@ -1,139 +1,125 @@
-// Module ID: 11854
-// Function ID: 11855
-// Dependencies: [32, 19, 17, 1979, 1371, 21, 4560, 576, 6981, 11151, 504, 5520, 11855, 4556, 1114, 4404, 7085, 4975, 2]
+// Module ID: 11880
+// Function ID: 11881
+// Name: KickConfirm
+// Dependencies: [32, 19, 17, 1979, 1371, 21, 4574, 576, 6995, 11178, 504, 5534, 11881, 4570, 1114, 4418, 7099, 4989, 2]
 
-// Module 11854
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "createGuildRecordFromRust" /* 1979 */;
-import closure_9 from "mergeGuildAvatar" /* 1371 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11880 (KickConfirm)
+import nativeDefault from "native" /* 576 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5534 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-let c4 = importAllResult;
-({ Image: c5, View: closure_6, ScrollView: error } = get_ActivityIndicator);
-({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
-let obj = { container: null, iconLabelBlock: null, iconStyles: null, redText: null, blurb: null, errorText: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-obj[0] = obj;
-createCacheKey = { marginTop: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_16, alignItems: "center" };
-obj[1] = createCacheKey;
-obj[2] = { height: 1.25 * ThemesDefault.space.PX_96 };
-let obj2 = { height: 1.25 * ThemesDefault.space.PX_96 };
-obj[3] = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_4, color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
-let obj3 = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_4, color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
-obj[4] = { marginVertical: ThemesDefault.space.PX_16 };
-let obj4 = { marginVertical: ThemesDefault.space.PX_16 };
-obj[5] = { marginBottom: ThemesDefault.space.PX_16 };
-let closure_13 = createCacheKey.createStyles(obj);
-let obj5 = { marginBottom: ThemesDefault.space.PX_16 };
-const memoResult = importAllResult.memo(function KickConfirm(arg0) {
+const require = globalThis.__r;
+
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: hasOwnProperty, View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
+const createStyles = fn(4574);
+let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, iconLabelBlock: null, iconStyles: null, redText: null, blurb: null, errorText: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj.iconLabelBlock = { marginTop: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16, alignItems: "center" };
+let obj4 = { marginTop: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16, alignItems: "center" };
+obj.iconStyles = { height: 1.25 * nativeDefault.space.PX_96 };
+let obj5 = { height: 1.25 * nativeDefault.space.PX_96 };
+obj.redText = { marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_4, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
+let obj6 = { marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_4, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
+obj.blurb = { marginVertical: nativeDefault.space.PX_16 };
+let obj7 = { marginVertical: nativeDefault.space.PX_16 };
+obj.errorText = { marginBottom: nativeDefault.space.PX_16 };
+let closure_13 = createStyles.createStyles(obj);
+let obj8 = { marginBottom: nativeDefault.space.PX_16 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_moderation/native/KickConfirm.tsx");
+
+export default noop.memo(function KickConfirm(arg0) {
   ({ guildId: require, userId: importDefault, onKick } = arg0);
-  let stateFromStores;
   let stateFromStores1;
-  closure_5 = undefined;
   c6 = undefined;
-  const tmp = callback3();
-  const ref = stateFromStores1.useRef(null);
+  const tmp = closure_13();
+  let ref = stateFromStores1.useRef(null);
   const ref1 = stateFromStores1.useRef(null);
-  const insets = importDefault(onKick[8])({ includeKeyboardHeight: true }).insets;
+  const insets = require("useSafeAreaInsetsKeyboardAware")({ includeKeyboardHeight: true }).insets;
+  let obj = { insets, inputs: null, scrollViewRef: ref };
   const items = [{ ref: ref1, offset: { type: "toBottom" } }];
-  importDefault(onKick[9])({ insets, inputs: items, scrollViewRef: ref });
-  let obj = require(onKick[10]);
-  const items1 = [closure_8];
-  stateFromStores = obj.useStateFromStores(items1, () => closure_1_8.getGuild(closure_0));
-  obj1 = require(onKick[10]);
-  const items2 = [closure_9];
-  stateFromStores1 = obj1.useStateFromStores(items2, () => closure_1_9.getUser(closure_1));
-  closure_5 = stateFromStores1.useRef("");
+  obj.inputs = items;
+  require("useSafeAreaAvoidingInputs")(obj);
+  const items1 = [GuildStore];
+  const stateFromStores = require("initialize").useStateFromStores(items1, () => GuildStore.getGuild(require));
+  const obj2 = require("initialize");
+  const items2 = [UserStore];
+  stateFromStores1 = require("initialize").useStateFromStores(items2, () => UserStore.getUser(importDefault));
+  ref = stateFromStores1.useRef("");
+  const obj3 = require("initialize");
   [tmp11, c6] = stateFromStores(stateFromStores1.useState(() => ({ kicking: false, kickError: false })), 2);
   const items3 = [stateFromStores, onKick, stateFromStores1];
-  let tmp14Result = null;
+  let tmp14Result2 = null;
   if (null != stateFromStores1) {
-    tmp14Result = null;
+    tmp14Result2 = null;
     if (null != stateFromStores) {
-      obj = { style: null, ref: null, contentContainerStyle: null, children: null };
-      obj[0] = tmp.container;
-      obj[1] = ref;
-      obj = { paddingHorizontal: null, paddingBottom: null };
-      obj[0] = tmp4(tmp5[7]).space.PX_24;
-      obj[1] = insets.bottom;
-      obj[2] = obj;
-      obj1 = { style: null, children: null };
-      obj1[0] = tmp.iconLabelBlock;
-      const obj2 = { style: null, source: null, resizeMode: "contain" };
-      obj2[0] = tmp.iconStyles;
-      obj2[1] = tmp4(tmp5[12]);
-      const items4 = [callback(closure_5, obj2), , ];
-      const obj3 = { style: null, variant: "text-md/semibold", children: null };
-      obj3[0] = tmp.redText;
+      const obj4 = { style: tmp.container, ref, contentContainerStyle: null, children: null };
+      const obj5 = { paddingHorizontal: tmp4(tmp5[7]).space.PX_24, paddingBottom: insets.bottom };
+      obj4.contentContainerStyle = obj5;
+      const obj6 = { style: tmp.iconLabelBlock, children: null };
+      const obj7 = { style: tmp.iconStyles, source: tmp4(tmp5[12]), resizeMode: "contain" };
+      const items4 = [closure_10(ref, obj7), , ];
+      const obj8 = { style: tmp.redText, variant: "text-md/semibold", children: null };
       const intl = tmp7(tmp5[14]).intl;
-      const obj4 = { user: null };
-      let tmp4Result = tmp4(tmp5[15]);
-      obj4[0] = tmp4Result.getName(stateFromStores1);
-      obj3[2] = intl.formatToPlainString(tmp7(tmp5[14]).t["1Ie87p"], obj4);
-      items4[1] = callback(tmp7(tmp5[13]).Text, obj3);
-      const obj5 = { variant: "text-lg/bold", color: "text-feedback-warning", children: null };
-      obj5[2] = stateFromStores.name;
-      items4[2] = callback(tmp7(tmp5[13]).Text, obj5);
-      obj1[1] = items4;
-      const items5 = [callback2(c6, obj1), , , , ];
-      const obj6 = { style: null, variant: "heading-md/normal", color: "text-feedback-warning", children: null };
-      obj6[0] = tmp.blurb;
+      const obj9 = { user: tmp4(tmp5[15]).getName(stateFromStores1) };
+      obj8.children = intl.formatToPlainString(tmp7(tmp5[14]).t["1Ie87p"], obj9);
+      items4[1] = closure_10(tmp7(tmp5[13]).Text, obj8);
+      const obj10 = { variant: "text-lg/bold", color: "text-feedback-warning", children: stateFromStores.name };
+      items4[2] = closure_10(tmp7(tmp5[13]).Text, obj10);
+      obj6.children = items4;
+      const items5 = [closure_11(c6, obj6), , , , ];
+      const obj11 = { style: tmp.blurb, variant: "heading-md/normal", color: "text-feedback-warning", children: null };
       const intl2 = tmp7(tmp5[14]).intl;
-      const obj7 = { user: null };
-      tmp4Result = tmp4(tmp5[15]);
-      obj7[0] = tmp4Result.getName(stateFromStores1);
-      obj6[3] = intl2.format(tmp7(tmp5[14]).t["/yH0UT"], obj7);
-      items5[1] = callback(tmp7(tmp5[13]).Text, obj6);
-      const obj8 = { ref: null, containerStyle: null, label: null, maxLength: 512, onChange: null };
-      obj8[0] = ref1;
-      const obj9 = { marginBottom: null };
-      obj9[0] = tmp4(tmp5[7]).space.PX_16;
-      obj8[1] = obj9;
+      const obj12 = { user: null };
+      const tmp15 = closure_7;
+      const tmp16 = closure_11;
+      const tmp17 = closure_12;
+      const tmp4Result = tmp4(tmp5[15]);
+      obj12.user = tmp4(tmp5[15]).getName(stateFromStores1);
+      obj11.children = intl2.format(tmp7(tmp5[14]).t["/yH0UT"], obj12);
+      items5[1] = closure_10(tmp7(tmp5[13]).Text, obj11);
+      const obj13 = { ref: ref1, containerStyle: null, label: null, maxLength: 512, onChange: null };
+      const obj14 = { marginBottom: tmp4(tmp5[7]).space.PX_16 };
+      obj13.containerStyle = obj14;
       const intl3 = tmp7(tmp5[14]).intl;
-      obj8[2] = intl3.string(tmp7(tmp5[14]).t["+2QEPt"]);
-      obj8[4] = function onChange(current) {
+      obj13.label = intl3.string(tmp7(tmp5[14]).t["+2QEPt"]);
+      obj13.onChange = function onChange(current) {
         closure_5.current = current;
       };
-      items5[2] = callback(tmp7(tmp5[16]).TextArea, obj8);
-      const obj10 = { style: null, children: null };
-      const obj11 = { marginBottom: null };
-      obj11[0] = tmp4(tmp5[7]).space.PX_16;
-      obj10[0] = obj11;
-      const obj12 = { variant: "destructive", text: null, onPress: null, disabled: null };
+      items5[2] = closure_10(tmp7(tmp5[16]).TextArea, obj13);
+      const obj15 = { style: null, children: null };
+      const obj16 = { marginBottom: tmp4(tmp5[7]).space.PX_16 };
+      obj15.style = obj16;
+      const obj17 = { variant: "destructive", text: null, onPress: null, disabled: null };
       const intl4 = tmp7(tmp5[14]).intl;
-      obj12[1] = intl4.string(tmp7(tmp5[14]).t["3glT6Z"]);
-      obj12[2] = tmp12;
-      obj12[3] = tmp11.kicking;
-      obj10[1] = callback(tmp7(tmp5[17]).Button, obj12);
-      items5[3] = callback(c6, obj10);
-      tmp14Result = null;
+      obj17.text = intl4.string(tmp7(tmp5[14]).t["3glT6Z"]);
+      obj17.onPress = tmp12;
+      obj17.disabled = tmp11.kicking;
+      obj15.children = closure_10(tmp7(tmp5[17]).Button, obj17);
+      items5[3] = closure_10(c6, obj15);
+      let tmp14Result = null;
       if (tmp11.kickError) {
-        const obj13 = { style: null, variant: "text-md/semibold", color: "input-text-error-default", children: null };
-        obj13[0] = tmp.errorText;
+        const obj18 = { style: tmp.errorText, variant: "text-md/semibold", color: "input-text-error-default", children: null };
         const intl5 = tmp7(tmp5[14]).intl;
-        const obj14 = { user: null };
-        obj14[0] = tmp4(tmp5[15]).getName(stateFromStores1);
-        obj13[3] = intl5.format(tmp7(tmp5[14]).t.UktD5J, obj14);
-        tmp14Result = tmp14(tmp7(tmp5[13]).Text, obj13);
-        const tmp4Result1 = tmp4(tmp5[15]);
+        const obj19 = { user: tmp4(tmp5[15]).getName(stateFromStores1) };
+        obj18.children = intl5.format(tmp7(tmp5[14]).t.UktD5J, obj19);
+        tmp14Result = tmp14(tmp7(tmp5[13]).Text, obj18);
+        const tmp4Result4 = tmp4(tmp5[15]);
       }
-      const obj15 = { children: null };
+      const obj20 = { children: null };
       items5[4] = tmp14Result;
-      obj15[0] = items5;
-      obj[3] = callback2(closure_12, obj15);
-      tmp14Result = tmp14(closure_7, obj);
-      const tmp15 = closure_7;
-      const tmp16 = callback2;
-      const tmp17 = closure_12;
+      obj20.children = items5;
+      obj4.children = tmp16(tmp17, obj20);
+      tmp14Result2 = tmp14(tmp15, obj4);
+      const tmp4Result3 = tmp4(tmp5[15]);
     }
   }
-  return tmp14Result;
+  return tmp14Result2;
 });
-const result = require("set").fileFinishedImporting("modules/guild_moderation/native/KickConfirm.tsx");
-
-export default memoResult;

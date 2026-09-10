@@ -1,12 +1,12 @@
-// Module ID: 12499
-// Function ID: 12500
-// Name: GUILD_POWERUP_NOTIFICATION_COOLDOWN
+// Module ID: 12525
+// Function ID: 12526
+// Name: GuildPowerupsNotification
 // Dependencies: [2]
 
-// Module 12499 (GUILD_POWERUP_NOTIFICATION_COOLDOWN)
-import set from "set" /* 2 */;
+// Module 12525 (GuildPowerupsNotification)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/premium/powerups/constants/GuildPowerupsNotification.tsx");
+const result = size.fileFinishedImporting("modules/premium/powerups/constants/GuildPowerupsNotification.tsx");
 
 export const GUILD_POWERUP_NOTIFICATION_COOLDOWN = 21600000;
 export const BOOST_TO_UNLOCK_COACHMARK_COOLDOWN = 2592000000;

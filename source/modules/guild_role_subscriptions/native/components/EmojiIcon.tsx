@@ -1,20 +1,20 @@
-// Module ID: 15243
-// Function ID: 15244
+// Module ID: 15272
+// Function ID: 15273
 // Name: EmojiIcon
-// Dependencies: [19, 21, 15244, 5587, 10307, 7130, 1396, 2]
+// Dependencies: [19, 21, 15273, 5601, 10334, 7144, 1396, 2]
 // Exports: default
 
-// Module 15243 (EmojiIcon)
-import noopAll from "noop" /* 19 */;
-import preloadDefault from "preload" /* 5587 */;
-import EmojiDefault from "Emoji" /* 7130 */;
-import registerAssetDefault from "registerAsset" /* 10307 */;
-import useEmojiByIdOrName from "useEmojiByIdOrName" /* 15244 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 15272 (EmojiIcon)
+import FastImageDefault from "FastImage" /* 5601 */;
+import EmojiDefault from "Emoji" /* 7144 */;
+import _modDef10334 from "module_10334" /* 10334 */;
+import useEmojiByIdOrName from "useEmojiByIdOrName" /* 15273 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/EmojiIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/EmojiIcon.tsx");
 
 export default function EmojiIcon(size) {
   let num = size.size;
@@ -30,35 +30,26 @@ export default function EmojiIcon(size) {
   if (lineHeight === undefined) {
     lineHeight = num + 4;
   }
-  let obj = useEmojiByIdOrName;
-  const emojiByIdOrName = obj.useEmojiByIdOrName(guildId, id);
+  const emojiByIdOrName = useEmojiByIdOrName.useEmojiByIdOrName(guildId, id);
   if (null == emojiByIdOrName) {
     let tmp4 = null;
     if (flag) {
-      obj = { resizeMode: "contain", style: null, source: null };
-      obj = { width: null, height: null };
-      obj[0] = num;
-      obj[1] = num;
-      obj[1] = obj;
-      obj[2] = registerAssetDefault;
-      tmp4 = jsx(preloadDefault, { width: null, height: null });
-      const tmp7 = preloadDefault;
+      const obj2 = { resizeMode: "contain", style: null, source: null };
+      size = { width: num, height: num };
+      obj2.style = size;
+      obj2.source = _modDef10334;
+      tmp4 = jsx(FastImageDefault, { resizeMode: "contain", style: null, source: null });
     }
     let tmp8Result = tmp4;
   } else {
-    obj1 = { style: null, fastImageStyle: null, textEmojiStyle: null, name: null, src: null };
-    obj1[0] = size.style;
-    const obj2 = { width: null, height: null };
-    obj2[0] = num;
-    obj2[1] = num;
-    obj1[1] = obj2;
+    const obj3 = { style: size.style, fastImageStyle: null, textEmojiStyle: null, name: null, src: null };
+    const size1 = { width: num, height: num };
+    obj3.fastImageStyle = size1;
     if (fontSize == null) {
       fontSize = num;
     }
-    const obj3 = { fontSize: null, lineHeight: null };
-    obj3[0] = fontSize;
-    obj3[1] = lineHeight;
-    obj1[2] = obj3;
+    const obj5 = { fontSize, lineHeight };
+    obj3.textEmojiStyle = obj5;
     if (null != emojiByIdOrName.id) {
       let str = emojiByIdOrName.name;
     } else {
@@ -70,20 +61,18 @@ export default function EmojiIcon(size) {
         str = "";
       }
     }
-    obj1[3] = str;
+    obj3.name = str;
     if (null != emojiByIdOrName.id) {
-      const obj4 = { id: null, animated: null, size: null };
-      ({ id: obj4[0], animated: obj4[1] } = emojiByIdOrName);
-      obj4[2] = num;
-      let url = tmp9(1396).getEmojiURL(obj4);
+      const obj6 = { id: null, animated: null, size: null };
+      ({ id: obj4.id, animated: obj4.animated } = emojiByIdOrName);
+      obj6.size = num;
+      let url = tmp9(1396).getEmojiURL(obj6);
       const tmp9Result = tmp9(1396);
     } else {
       url = emojiByIdOrName.url;
     }
-    obj1[4] = url;
-    tmp8Result = jsx(EmojiDefault, { style: null, fastImageStyle: null, textEmojiStyle: null, name: null, src: null });
-    const tmp10 = EmojiDefault;
-    const tmp8 = jsx;
+    obj3.src = url;
+    tmp8Result = jsx(EmojiDefault, { style: size.style, fastImageStyle: null, textEmojiStyle: null, name: null, src: null });
     tmp9 = importDefault;
   }
   return tmp8Result;

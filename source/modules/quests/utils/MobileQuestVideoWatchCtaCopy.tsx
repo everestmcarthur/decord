@@ -1,102 +1,89 @@
-// Module ID: 11518
-// Function ID: 11519
-// Name: formatWatchRemainingDurationShort
-// Dependencies: [5444, 7724, 1114, 11519, 2]
+// Module ID: 11545
+// Function ID: 11546
+// Name: MobileQuestVideoWatchCtaCopy
+// Dependencies: [5458, 7738, 1114, 11546, 2]
 // Exports: getVideoQuestWatchCtaAccessibilityLabel, getVideoQuestWatchCtaText
 
-// Module 11518 (formatWatchRemainingDurationShort)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import QuestsExperimentLocations2 from "QuestsExperimentLocations" /* 5444 */;
-import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7724 */;
-import apexExperimentDefault from "apexExperiment" /* 11519 */;
+// Module 11545 (MobileQuestVideoWatchCtaCopy)
+import util from "util" /* 1114 */;
+import QuestConstants from "QuestConstants" /* 5458 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7738 */;
+import VQRemainingTimeTruncationExperimentDefault from "VQRemainingTimeTruncationExperiment" /* 11546 */;
+import size from "module_2" /* 2 */;
 
 function formatWatchRemainingDurationShort(questTaskDetails, truncate) {
-  let obj = getApplicationIdsByTaskTypes;
-  const remainingTaskTime = obj.getRemainingTaskTime(questTaskDetails);
+  const time = QuestTaskUtils.getRemainingTaskTime(questTaskDetails);
   let num = 60;
-  truncate = 60 * remainingTaskTime.minutes + remainingTaskTime.seconds;
-  truncate = undefined;
+  truncate = 60 * time.minutes + time.seconds;
+  let truncate1;
   if (truncate != null) {
-    truncate = truncate.truncate;
+    truncate1 = truncate.truncate;
   }
-  if (null != truncate && truncate > truncate.truncate) {
+  if (null != truncate1 && truncate > truncate.truncate) {
     truncate = truncate.truncate;
   }
   if (truncate >= num) {
     const intl2 = tmp(1114).intl;
-    let t = tmp(1114).t;
-    t = { count: null };
+    tmp(1114).t;
+    const t1 = { count: null };
     const _Math = Math;
     num = truncate / num;
-    t[0] = Math.round(num);
-    intl2.formatToPlainString(tmp5 ? t.XTdnRd : t.PHhTXX, t);
-    const tmp6 = tmp5 ? t.XTdnRd : t.PHhTXX;
+    t1.count = Math.round(num);
+    intl2.formatToPlainString(tmp4 ? t1.XTdnRd : t1.PHhTXX, t1);
+    const tmp5 = tmp4 ? t1.XTdnRd : t1.PHhTXX;
   } else {
     const intl = tmp(1114).intl;
-    t = tmp(1114).t;
-    obj = { count: null };
-    obj[0] = truncate;
-    return intl.formatToPlainString(tmp5 ? t["spl/XS"] : t.rUfeQx, obj);
+    const t = tmp(1114).t;
+    const obj2 = { count: truncate };
+    return intl.formatToPlainString(tmp4 ? t["spl/XS"] : t.rUfeQx, obj2);
   }
 }
-const QuestsExperimentLocations = QuestsExperimentLocations2.QuestsExperimentLocations;
-const result = set.fileFinishedImporting("modules/quests/utils/MobileQuestVideoWatchCtaCopy.tsx");
+const QuestsExperimentLocations = QuestConstants.QuestsExperimentLocations;
+const result = size.fileFinishedImporting("modules/quests/utils/MobileQuestVideoWatchCtaCopy.tsx");
 
 export { formatWatchRemainingDurationShort };
 export const getVideoQuestWatchCtaText = function getVideoQuestWatchCtaText(questTaskDetails) {
   if (questTaskDetails.percentComplete > 0) {
-    const intl = getSystemLocale.intl;
-    let obj = { durationShort: null };
-    obj[0] = formatWatchRemainingDurationShort(questTaskDetails);
-    return intl.formatToPlainString(getSystemLocale.t["pF/deA"], obj);
+    const intl = util.intl;
+    const obj = { durationShort: formatWatchRemainingDurationShort(questTaskDetails) };
+    return intl.formatToPlainString(util.t["pF/deA"], obj);
   } else {
-    obj1 = apexExperimentDefault;
-    obj = { location: null };
-    obj[0] = QuestsExperimentLocations.QUESTS_CARD;
-    const intl2 = getSystemLocale.intl;
-    obj = { durationShort: null };
-    obj1 = { truncate: null };
-    obj1[0] = obj1.getConfig(obj).truncateMoreThanSeconds;
-    obj[0] = formatWatchRemainingDurationShort(questTaskDetails, obj1);
-    return intl2.formatToPlainString(getSystemLocale.t.CHrvqg, obj);
+    const obj3 = { location: QuestsExperimentLocations.QUESTS_CARD };
+    const intl2 = util.intl;
+    const obj4 = { durationShort: null };
+    const obj5 = { truncate: VQRemainingTimeTruncationExperimentDefault.getConfig(obj3).truncateMoreThanSeconds };
+    obj4.durationShort = formatWatchRemainingDurationShort(questTaskDetails, obj5);
+    return intl2.formatToPlainString(util.t.CHrvqg, obj4);
   }
 };
 export const getVideoQuestWatchCtaAccessibilityLabel = function getVideoQuestWatchCtaAccessibilityLabel(questTaskDetails) {
-  let obj = getApplicationIdsByTaskTypes;
-  const remainingTaskTime = obj.getRemainingTaskTime(questTaskDetails);
+  const remainingTaskTime = QuestTaskUtils.getRemainingTaskTime(questTaskDetails);
   ({ minutes, seconds } = remainingTaskTime);
   if (minutes > 0) {
     if (seconds > 0) {
       const intl3 = tmp2(1114).intl;
-      obj = { minutes: null, seconds: null };
-      obj[0] = minutes;
-      obj[1] = seconds;
-      let formatToPlainStringResult = intl3.formatToPlainString(tmp2(1114).t["lW/66D"], obj);
+      const time = { minutes, seconds };
+      let formatToPlainStringResult = intl3.formatToPlainString(tmp2(1114).t["lW/66D"], time);
     }
     const intl4 = tmp2(1114).intl;
     const formatToPlainString = intl4.formatToPlainString;
     const t = tmp2(1114).t;
     if (tmp) {
-      obj = { remainTime: null };
-      obj[0] = formatToPlainStringResult;
-      let formatToPlainStringResult1 = formatToPlainString(t["ch+yrN"], obj);
+      const obj2 = { remainTime: formatToPlainStringResult };
+      let formatToPlainStringResult1 = formatToPlainString(t["ch+yrN"], obj2);
     } else {
-      obj1 = { remainTime: null };
-      obj1[0] = formatToPlainStringResult;
-      formatToPlainStringResult1 = formatToPlainString(t.Bwc5Dg, obj1);
+      const obj3 = { remainTime: formatToPlainStringResult };
+      formatToPlainStringResult1 = formatToPlainString(t.Bwc5Dg, obj3);
     }
     return formatToPlainStringResult1;
   }
   if (minutes > 0) {
     const intl2 = tmp2(1114).intl;
-    const obj2 = { count: null };
-    obj2[0] = minutes;
-    formatToPlainStringResult = intl2.formatToPlainString(tmp2(1114).t["SxnF/O"], obj2);
+    const obj4 = { count: minutes };
+    formatToPlainStringResult = intl2.formatToPlainString(tmp2(1114).t["SxnF/O"], obj4);
   } else {
     const intl = tmp2(1114).intl;
-    const obj3 = { count: null };
-    obj3[0] = seconds;
-    formatToPlainStringResult = intl.formatToPlainString(tmp2(1114).t["0BZpdi"], obj3);
+    const obj5 = { count: seconds };
+    formatToPlainStringResult = intl.formatToPlainString(tmp2(1114).t["0BZpdi"], obj5);
   }
 };

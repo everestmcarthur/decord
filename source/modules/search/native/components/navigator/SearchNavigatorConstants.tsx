@@ -1,11 +1,11 @@
-// Module ID: 16646
-// Function ID: 16647
-// Name: SearchNavigatorScreens
+// Module ID: 16678
+// Function ID: 16679
+// Name: SearchNavigatorConstants
 // Dependencies: [2]
 
-// Module 16646 (SearchNavigatorScreens)
-import set from "set" /* 2 */;
+// Module 16678 (SearchNavigatorConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/search/native/components/navigator/SearchNavigatorConstants.tsx");
+const result = size.fileFinishedImporting("modules/search/native/components/navigator/SearchNavigatorConstants.tsx");
 
 export const SearchNavigatorScreens = { SEARCH_TABS: "search_tabs", SEARCH_CHAT_PREVIEW: "search_chat_preview" };

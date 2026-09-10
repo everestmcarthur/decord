@@ -1,10 +1,11 @@
-// Module ID: 13650
-// Function ID: 13651
-// Name: flush
+// Module ID: 13673
+// Function ID: 13674
+// Name: ActionBatcher
 // Dependencies: [573, 2]
 
-// Module 13650 (flush)
-import set from "set" /* 2 */;
+// Module 13673 (ActionBatcher)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
 let ActionBatcher;
 class ActionBatcher {
@@ -16,10 +17,10 @@ class ActionBatcher {
     obj.socket = global;
     obj.shouldFlush = importDefault;
     obj.add = (arg0) => {
-      obj.action = callback(obj.action, arg0);
+      obj.action = closure_0(obj.action, arg0);
     };
     batchers = ActionBatcher.batchers;
-    arr = batchers.push(obj);
+    arr1 = batchers.push(obj);
     return obj;
   }
 }
@@ -32,13 +33,11 @@ ActionBatcher["flush"] = function flush(arg0, arg1) {
     if (tmp2) {
       let shouldFlushResult = null == arg0;
       if (!shouldFlushResult) {
-        let tmp4 = nextResult;
         shouldFlushResult = obj.shouldFlush(arg0, arg1);
       }
       tmp2 = shouldFlushResult;
     }
     if (tmp2) {
-      let tmp5 = nextResult;
       let flushResult = obj.flush();
     }
     continue;
@@ -49,15 +48,14 @@ ActionBatcher.prototype["flush"] = function flush() {
   const action = this.action;
   this.action = null;
   if (null != action) {
-    const obj = action(self[0]);
-    action(self[0]).dispatch(action).catch((error) => {
+    DispatcherDefault.dispatch(action).catch((error) => {
       const socket = self.socket;
       return socket.resetSocketAndClearCacheOnError({ error, action: action.type });
     });
-    const dispatchResult = action(self[0]).dispatch(action);
+    const dispatchResult = DispatcherDefault.dispatch(action);
   }
 };
 ActionBatcher.batchers = [];
-const result = set.fileFinishedImporting("modules/gateway/ActionBatcher.tsx");
+const result = size.fileFinishedImporting("modules/gateway/ActionBatcher.tsx");
 
 export default ActionBatcher;

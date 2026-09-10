@@ -1,99 +1,79 @@
-// Module ID: 14978
-// Function ID: 14979
-// Name: _updateClipsAllowVoiceRecording
-// Dependencies: [5, 7975, 1935, 573, 11473, 1114, 2]
+// Module ID: 15004
+// Function ID: 15005
+// Name: ClipsOptOutOfVoiceRecordingSetting
+// Dependencies: [5, 7989, 1935, 573, 11500, 1114, 2]
 
-// Module 14978 (_updateClipsAllowVoiceRecording)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15004 (ClipsOptOutOfVoiceRecordingSetting)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-require = arg1;
-function _updateClipsAllowVoiceRecording() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c3 = 0;
-    return (function*(arg0) {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const callback2 = tmp4;
-              const ClipsAllowVoiceRecording = callback(1935).ClipsAllowVoiceRecording;
-              dependencyMap = 1;
-              c3 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = ClipsAllowVoiceRecording.updateSetting(callback);
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            obj = callback2(573);
-            obj.dispatch({ type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE" });
-            c3 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp12) {
-          c3 = tmp;
-          throw tmp12;
-        }
-      }
-    })();
-  });
-  closure_4 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+require = fn;
+let closure_4 = async function _updateClipsAllowVoiceRecording(arg0, value) {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    applyArgumentsResult = apply(self, arguments);
+    try {
+      c3 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_1 = tmp4;
+          const ClipsAllowVoiceRecording = UserSettings.ClipsAllowVoiceRecording;
+          c2 = 1;
+          c3 = 1;
+          const obj4 = { value: ClipsAllowVoiceRecording.updateSetting(closure_0), done: false };
+          return obj4;
+        }
+      } else if (arg0 === 1) {
+        c3 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c3 = 3;
+        const obj5 = { value, done: true };
+        return obj5;
+      } else {
+        closure_129_1(closure_129_2[3]).dispatch({ type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE" });
+        c3 = 3;
+        return { value: "HermesInternal", done: null };
+      }
+    } catch (tmp12) {
+      c3 = tmp;
+      throw tmp12;
+    }
   }
-  return applyArgumentsResult;
-}
-createToggle = {
+};
+const SettingBuilders = fn(11500);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.AGDDkH);
+    const intl = util.intl;
+    return intl.string(util.t.AGDDkH);
   },
   useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["wW9/zQ"]);
+    const intl = util.intl;
+    return intl.string(util.t["wW9/zQ"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.CLIPS,
-  useValue: require("explicitContentFromProto").ClipsAllowVoiceRecording.useSetting,
+  parent: fn(7989).MobileUserSettings.CLIPS,
+  useValue: fn(1935).ClipsAllowVoiceRecording.useSetting,
   onValueChange: function updateClipsAllowVoiceRecording() {
     const self = this;
-    const apply = _updateClipsAllowVoiceRecording.apply;
+    const apply = closure_4.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -101,8 +81,8 @@ createToggle = {
     }
     return applyArgumentsResult;
   }
-};
-createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ClipsOptOutOfVoiceRecordingSetting.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ClipsOptOutOfVoiceRecordingSetting.tsx");
 
-export default createToggle;
+export default toggle;

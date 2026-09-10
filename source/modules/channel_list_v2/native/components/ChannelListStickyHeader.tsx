@@ -1,59 +1,60 @@
-// Module ID: 16138
-// Function ID: 16139
+// Module ID: 16168
+// Function ID: 16169
 // Name: ChannelListStickyHeader
-// Dependencies: [19, 17, 1074, 21, 4296, 4560, 576, 16107, 1982, 1114, 16139, 13910, 16137, 5610, 4262, 10240, 4556, 8745, 1178, 7209, 16153, 12301, 16158, 16159, 2]
+// Dependencies: [19, 17, 1074, 21, 4310, 4574, 576, 16137, 1982, 1114, 16169, 13933, 16167, 5624, 4275, 10267, 4570, 8773, 1178, 7223, 16183, 12327, 16188, 16189, 2]
 // Exports: default
 
-// Module 16138 (ChannelListStickyHeader)
-import ThemesDefault from "Themes" /* 576 */;
-import GuildBadgeV2Default from "GuildBadgeV2" /* 8745 */;
-import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 16107 */;
-import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 16137 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { JoinGuildSources } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importDefaultResult from "module_4296" /* 4296 */;
+// Module 16168 (ChannelListStickyHeader)
+import nativeDefault from "native" /* 576 */;
+import GuildBadgeV2Default from "GuildBadgeV2" /* 8773 */;
+import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 16137 */;
+import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 16167 */;
+import noop from "module_19" /* 19 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
 
-const require = arg1;
-({ View: c4, Pressable } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = importDefaultResult.createAnimatedComponent(Pressable);
-let closure_9 = createCacheKey.createStyles(() => {
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, Pressable } = get_ActivityIndicator);
+const JoinGuildSources = fn(1074).JoinGuildSources;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+let closure_8 = ReanimatedRexport.createAnimatedComponent(Pressable);
+const createStyles = fn(4574);
+let closure_9 = createStyles.createStyles(() => {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = true;
   }
-  let obj = { chevron: { flexShrink: 0, flexGrow: 0 }, container: null, divider: null, guildBadge: null, flex: null, header: null, headerRow: null, headerRowTitle: null, headerRowInset: null, headerIcon: null, subheader: null, ellipse: null, joinButton: null };
-  obj = { gap: ThemesDefault.space.PX_8, paddingTop: ThemesDefault.space.PX_16, paddingBottom: null, zIndex: 1 };
+  const obj = { chevron: { flexShrink: 0, flexGrow: 0 }, container: null, divider: null, guildBadge: null, flex: null, header: null, headerRow: null, headerRowTitle: null, headerRowInset: null, headerIcon: null, subheader: null, ellipse: null, joinButton: null };
+  const obj2 = { gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_16, paddingBottom: null, zIndex: 1 };
   let num = 0;
   if (!flag) {
     num = tmp(576).space.PX_12;
   }
-  obj[2] = num;
-  obj[1] = obj;
-  obj = { height: 1, backgroundColor: tmp(576).colors.BORDER_SUBTLE, marginHorizontal: tmp(576).space.PX_16 };
-  obj[2] = obj;
-  obj[3] = { margin: 0 };
-  obj[4] = { flexShrink: 1 };
-  obj[5] = { alignItems: "center", flexDirection: "row", gap: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_16 };
-  obj1 = { alignItems: "center", flexDirection: "row", gap: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_16 };
-  obj[6] = { alignItems: "center", flexDirection: "row", gap: ThemesDefault.space.PX_8 };
-  obj[7] = { flexGrow: 1, flexShrink: 1 };
-  const obj2 = { alignItems: "center", flexDirection: "row", gap: ThemesDefault.space.PX_8 };
-  obj[8] = { paddingEnd: ThemesDefault.space.PX_16 };
-  const obj3 = { paddingEnd: ThemesDefault.space.PX_16 };
-  obj[9] = { marginRight: ThemesDefault.space.PX_4 };
-  const obj4 = { marginRight: ThemesDefault.space.PX_4 };
-  obj[10] = { flexDirection: "row", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
-  const obj5 = { flexDirection: "row", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
-  obj[11] = { width: 4, height: 4, backgroundColor: ThemesDefault.colors.TEXT_SUBTLE, borderRadius: ThemesDefault.radii.round };
-  const obj6 = { width: 4, height: 4, backgroundColor: ThemesDefault.colors.TEXT_SUBTLE, borderRadius: ThemesDefault.radii.round };
-  obj[12] = { marginHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_8 };
+  obj2.paddingBottom = num;
+  obj.container = obj2;
+  obj.divider = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginHorizontal: nativeDefault.space.PX_16 };
+  obj.guildBadge = { margin: 0 };
+  obj.flex = { flexShrink: 1 };
+  const obj3 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginHorizontal: nativeDefault.space.PX_16 };
+  obj.header = { alignItems: "center", flexDirection: "row", gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16 };
+  const obj4 = { alignItems: "center", flexDirection: "row", gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16 };
+  obj.headerRow = { alignItems: "center", flexDirection: "row", gap: nativeDefault.space.PX_8 };
+  obj.headerRowTitle = { flexGrow: 1, flexShrink: 1 };
+  const obj5 = { alignItems: "center", flexDirection: "row", gap: nativeDefault.space.PX_8 };
+  obj.headerRowInset = { paddingEnd: nativeDefault.space.PX_16 };
+  const obj6 = { paddingEnd: nativeDefault.space.PX_16 };
+  obj.headerIcon = { marginRight: nativeDefault.space.PX_4 };
+  const obj7 = { marginRight: nativeDefault.space.PX_4 };
+  obj.subheader = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
+  const size = { width: 4, height: 4, backgroundColor: tmp(576).colors.TEXT_SUBTLE, borderRadius: tmp(576).radii.round };
+  obj.ellipse = size;
+  const obj8 = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
+  obj.joinButton = { marginHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_8 };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/channel_list_v2/native/components/ChannelListStickyHeader.tsx");
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/channel_list_v2/native/components/ChannelListStickyHeader.tsx");
 
 export default function ChannelListStickyHeader(guild) {
   guild = guild.guild;
@@ -69,161 +70,145 @@ export default function ChannelListStickyHeader(guild) {
   if (flag3 === undefined) {
     flag3 = false;
   }
-  importDefault = undefined;
-  const tmp = callback2(flag);
-  let tmp24Result2 = useIsGameCommunityServerPreviewDefault(guild.id);
-  let obj = React;
-  const ref = React.useRef(null);
-  obj1 = guild(1982);
-  const isFavoritesGuildIdResult = obj1.isFavoritesGuildId(guild.id);
+  const tmp = closure_9(flag);
+  let tmp24Result7 = useIsGameCommunityServerPreviewDefault(guild.id);
+  const ref = noop.useRef(null);
+  const isFavoritesGuildIdResult = guild(1982).isFavoritesGuildId(guild.id);
   importDefault = isFavoritesGuildIdResult;
   if (!flag2) {
     flag2 = isFavoritesGuildIdResult;
   }
   const t = tmp6(1114).t;
   const items = [guild, isFavoritesGuildIdResult];
-  const callback = obj.useCallback(() => {
+  const callback = noop.useCallback(() => {
     if (c1) {
-      tmp(tmp2[10])();
+      tmp(16169)();
     } else {
-      tmp(tmp2[11])(guild);
+      tmp(13933)(guild);
     }
   }, items);
   const tmp10 = useStickyServerHeaderSubtitleDefault(guild);
-  let tmp6Result = tmp6(5610);
-  const iOSPressEffects = tmp6Result.useIOSPressEffects(4);
-  ({ onPressIn, onPressOut, pressableStyles } = iOSPressEffects);
-  tmp6Result = tmp6(1982);
-  const favoritesAwareGuildName = tmp6Result.getFavoritesAwareGuildName(guild);
-  const token = guild(4262).useToken(tmp2(576).modules.mobile.CHANNEL_LIST_TITLE_TEXT_STYLE);
-  const tmp6Result1 = guild(4262);
+  const obj2 = guild(1982);
   const tmp8 = isFavoritesGuildIdResult ? t.hW8QDk : t["Gpyp/e"];
-  const token1 = guild(4262).useToken(tmp2(576).modules.mobile.CHANNEL_LIST_SUBTITLE_TEXT_STYLE);
-  obj = { style: items1, onPress: null, onPressIn: null, onPressOut: null, accessible: true, accessibilityRole: null, accessibilityHint: null, children: null };
-  items1 = [pressableStyles, tmp.headerRowTitle];
+  const iOSPressEffects = guild(5624).useIOSPressEffects(4);
+  ({ onPressIn, onPressOut, pressableStyles } = iOSPressEffects);
+  const tmp6Result = guild(5624);
+  const favoritesAwareGuildName = guild(1982).getFavoritesAwareGuildName(guild);
+  const tmp6Result4 = guild(1982);
+  const token = guild(4275).useToken(tmp2(576).modules.mobile.CHANNEL_LIST_TITLE_TEXT_STYLE);
+  const tmp6Result5 = guild(4275);
+  const token1 = guild(4275).useToken(tmp2(576).modules.mobile.CHANNEL_LIST_SUBTITLE_TEXT_STYLE);
+  const obj3 = { style: null, onPress: null, onPressIn: null, onPressOut: null, accessible: true, accessibilityRole: null, accessibilityHint: null, children: null };
+  const items1 = [pressableStyles, tmp.headerRowTitle];
+  obj3.style = items1;
   let tmp17;
   if (flag2) {
     tmp17 = callback;
   }
-  obj[1] = tmp17;
+  obj3.onPress = tmp17;
   let tmp18;
   if (flag2) {
     tmp18 = onPressIn;
   }
-  obj[2] = tmp18;
+  obj3.onPressIn = tmp18;
   let tmp19;
   if (flag2) {
     tmp19 = onPressOut;
   }
-  obj[3] = tmp19;
+  obj3.onPressOut = tmp19;
   let str = "header";
   if (flag2) {
     str = "button";
   }
-  obj[5] = str;
+  obj3.accessibilityRole = str;
   let stringResult;
   if (flag2) {
     const intl = tmp6(1114).intl;
     stringResult = intl.string(tmp8);
   }
-  obj[6] = stringResult;
-  obj = { style: tmp.header, children: null };
+  obj3.accessibilityHint = stringResult;
+  const obj4 = { style: tmp.header, children: null };
   let tmp22 = null;
   if (isFavoritesGuildIdResult) {
-    obj1 = { style: null, size: "sm", color: null };
-    obj1[0] = tmp.headerIcon;
-    obj1[2] = tmp2(576).colors.MOBILE_TEXT_HEADING_PRIMARY;
-    tmp22 = callback(tmp6(10240).StarIcon, obj1);
+    const obj5 = { style: tmp.headerIcon, size: "sm", color: tmp2(576).colors.MOBILE_TEXT_HEADING_PRIMARY };
+    tmp22 = closure_6(tmp6(10267).StarIcon, obj5);
   }
   const items2 = [tmp22, , , ];
   const tmp16 = closure_8;
-  const tmp6Result2 = guild(4262);
-  items2[1] = callback(closure_4, { ref, collapsable: false, style: tmp.flex, children: callback(guild(4556).Text, { experimental_useNativeText: true, color: "mobile-text-heading-primary", variant: token, lineClamp: 1, children: favoritesAwareGuildName }) });
-  const obj3 = { guild, size: null, style: null };
-  const obj2 = { ref, collapsable: false, style: tmp.flex, children: callback(guild(4556).Text, { experimental_useNativeText: true, color: "mobile-text-heading-primary", variant: token, lineClamp: 1, children: favoritesAwareGuildName }) };
-  obj3[1] = guild(1178).Icon.Sizes.REFRESH_SMALL_16;
-  obj3[2] = tmp.guildBadge;
-  items2[2] = callback(GuildBadgeV2Default, obj3);
+  const tmp6Result6 = guild(4275);
+  items2[1] = closure_6(closure_4, { ref, collapsable: false, style: tmp.flex, children: closure_6(guild(4570).Text, { experimental_useNativeText: true, color: "mobile-text-heading-primary", variant: token, lineClamp: 1, children: favoritesAwareGuildName }) });
+  const obj7 = { guild, size: null, style: null };
+  const obj6 = { ref, collapsable: false, style: tmp.flex, children: closure_6(guild(4570).Text, { experimental_useNativeText: true, color: "mobile-text-heading-primary", variant: token, lineClamp: 1, children: favoritesAwareGuildName }) };
+  obj7.size = guild(1178).Icon.Sizes.REFRESH_SMALL_16;
+  obj7.style = tmp.guildBadge;
+  items2[2] = closure_6(GuildBadgeV2Default, obj7);
   let tmp24Result = null;
   if (flag2) {
-    const obj4 = { size: "xxs", color: null, style: null };
-    obj4[1] = tmp2(576).colors.TEXT_SUBTLE;
-    obj4[2] = tmp.chevron;
-    tmp24Result = tmp24(tmp6(7209).ChevronSmallRightIcon, obj4);
+    const obj8 = { size: "xxs", color: tmp2(576).colors.TEXT_SUBTLE, style: tmp.chevron };
+    tmp24Result = tmp24(tmp6(7223).ChevronSmallRightIcon, obj8);
   }
   items2[3] = tmp24Result;
-  obj[1] = items2;
-  const items3 = [closure_7(closure_4, obj), ];
+  obj4.children = items2;
+  const items3 = [closure_7(closure_4, obj4), ];
   let tmp15Result = null;
   if (null != tmp10) {
     tmp15Result = null;
     if (tmp10 > 0) {
-      const obj5 = { style: null, children: null };
-      obj5[0] = tmp.subheader;
-      const obj6 = { experimental_useNativeText: true, color: "text-muted", variant: null, lineClamp: 1, children: null };
-      obj6[2] = token1;
+      const obj9 = { style: tmp.subheader, children: null };
+      const obj10 = { experimental_useNativeText: true, color: "text-muted", variant: token1, lineClamp: 1, children: null };
       const intl2 = tmp6(1114).intl;
-      const obj7 = { count: null };
-      obj7[0] = tmp10;
-      obj6[4] = intl2.format(tmp6(1114).t.zRl6XR, obj7);
-      const items4 = [tmp24(tmp6(4556).Text, obj6), , ];
-      const obj8 = { style: null };
-      obj8[0] = tmp.ellipse;
-      items4[1] = tmp24(tmp21, obj8);
-      const obj9 = { experimental_useNativeText: true, color: "text-muted", variant: null, lineClamp: 1, children: null };
-      obj9[2] = token1;
+      const obj11 = { count: tmp10 };
+      obj10.children = intl2.format(tmp6(1114).t.zRl6XR, obj11);
+      const items4 = [tmp24(tmp6(4570).Text, obj10), , ];
+      const obj12 = { style: tmp.ellipse };
+      items4[1] = tmp24(tmp21, obj12);
+      const obj13 = { experimental_useNativeText: true, color: "text-muted", variant: token1, lineClamp: 1, children: null };
       const intl3 = tmp6(1114).intl;
-      obj9[4] = intl3.string(tmp6(1114).t["1g9A/f"]);
-      items4[2] = tmp24(tmp6(4556).Text, obj9);
-      obj5[1] = items4;
-      tmp15Result = tmp15(tmp21, obj5);
+      obj13.children = intl3.string(tmp6(1114).t["1g9A/f"]);
+      items4[2] = tmp24(tmp6(4570).Text, obj13);
+      obj9.children = items4;
+      tmp15Result = tmp15(tmp21, obj9);
     }
   }
   items3[1] = tmp15Result;
-  obj[7] = items3;
-  const obj10 = { style: tmp.container, children: null };
+  obj3.children = items3;
+  const obj14 = { style: tmp.container, children: null };
   const items5 = [tmp.headerRow, ];
   let headerRowInset = null;
-  tmp15Result = tmp15(tmp16, obj);
+  const tmp2Result = GuildBadgeV2Default;
   if (isFavoritesGuildIdResult) {
     headerRowInset = tmp.headerRowInset;
   }
-  const obj11 = { style: items5, children: null };
+  const obj15 = { style: items5, children: null };
   items5[1] = headerRowInset;
-  const items6 = [tmp15Result, ];
-  tmp24Result = null;
+  const items6 = [closure_7(tmp16, obj3), ];
+  let tmp24Result5 = null;
   if (isFavoritesGuildIdResult) {
-    tmp24Result = tmp24(tmp6(16153).FavoritesGuildHeaderActionButton, {});
+    tmp24Result5 = tmp24(tmp6(16183).FavoritesGuildHeaderActionButton, {});
   }
-  items6[1] = tmp24Result;
-  obj11[1] = items6;
-  const items7 = [closure_7(closure_4, obj11), , , , ];
-  let tmp24Result1 = null;
+  items6[1] = tmp24Result5;
+  obj15.children = items6;
+  const items7 = [closure_7(closure_4, obj15), , , , ];
+  let tmp24Result6 = null;
   if (flag) {
-    const obj12 = { guild: null, useButtonComponent: true, useEventsButton: true };
-    obj12[0] = guild;
-    tmp24Result1 = tmp24(tmp2(12301), obj12);
+    const obj16 = { guild, useButtonComponent: true, useEventsButton: true };
+    tmp24Result6 = tmp24(tmp2(12327), obj16);
   }
-  items7[1] = tmp24Result1;
-  if (tmp24Result2) {
-    const obj13 = { style: null, children: null };
-    obj13[0] = tmp.joinButton;
-    const obj14 = { guildId: null, joinSource: null };
-    obj14[0] = guild.id;
-    obj14[1] = JoinGuildSources.CHANNEL_LIST_STICKY_HEADER_LURKER;
-    obj13[1] = tmp24(tmp2(16158), obj14);
-    tmp24Result2 = tmp24(tmp21, obj13);
+  items7[1] = tmp24Result6;
+  if (tmp24Result7) {
+    const obj17 = { style: tmp.joinButton, children: null };
+    const obj18 = { guildId: guild.id, joinSource: JoinGuildSources.CHANNEL_LIST_STICKY_HEADER_LURKER };
+    obj17.children = tmp24(tmp2(16188), obj18);
+    tmp24Result7 = tmp24(tmp21, obj17);
   }
-  items7[2] = tmp24Result2;
-  items7[3] = callback(closure_4, { style: tmp.divider });
-  let tmp24Result3 = null;
+  items7[2] = tmp24Result7;
+  items7[3] = closure_6(closure_4, { style: tmp.divider });
+  let tmp24Result8 = null;
   if (flag3) {
-    const obj16 = { targetRef: null, guild: null };
-    obj16[0] = ref;
-    obj16[1] = guild;
-    tmp24Result3 = tmp24(tmp2(16159), obj16);
+    const obj20 = { targetRef: ref, guild };
+    tmp24Result8 = tmp24(tmp2(16189), obj20);
   }
-  items7[4] = tmp24Result3;
-  obj10[1] = items7;
-  return closure_7(closure_4, obj10);
+  items7[4] = tmp24Result8;
+  obj14.children = items7;
+  return closure_7(closure_4, obj14);
 };

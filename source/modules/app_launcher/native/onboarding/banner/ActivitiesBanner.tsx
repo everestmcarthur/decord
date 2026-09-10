@@ -1,35 +1,32 @@
-// Module ID: 12053
-// Function ID: 12054
+// Module ID: 12079
+// Function ID: 12080
 // Name: ActivitiesBanner
-// Dependencies: [32, 19, 21, 12042, 12054, 12065, 1114, 2]
+// Dependencies: [32, 19, 21, 12068, 12080, 12091, 1114, 2]
 // Exports: default
 
-// Module 12053 (ActivitiesBanner)
-import noopAll from "noop" /* 19 */;
-import useActivityApplications from "useActivityApplications" /* 12042 */;
-import BannerBaseDefault from "BannerBase" /* 12065 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 12079 (ActivitiesBanner)
+import useActivityApplications from "useActivityApplications" /* 12068 */;
+import BannerBaseDefault from "BannerBase" /* 12091 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/banner/ActivitiesBanner.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/banner/ActivitiesBanner.tsx");
 
 export default function ActivitiesBanner(context) {
-  let obj = useActivityApplications;
-  obj = { guildId: context.context.channel.guild_id, fetchesShelf: false };
-  [tmp4, tmp5] = callback(obj.useActivityApplications(obj), 2);
+  const obj2 = { guildId: context.context.channel.guild_id, fetchesShelf: false };
+  [tmp4, tmp5] = useActivityApplications.useActivityApplications({ guildId: context.context.channel.guild_id, fetchesShelf: false });
   let tmp6Result = null;
   if (null != tmp4) {
     tmp6Result = null;
     if (null != tmp5) {
-      obj = { image: null, text: null };
-      obj[0] = tmp8;
+      const obj3 = { image: tmp8, text: null };
       const intl = tmp(1114).intl;
-      obj1 = { activityName: null };
-      obj1[0] = tmp4.name;
-      obj[1] = intl.formatToPlainString(tmp(1114).t.zHMWuV, obj1);
-      tmp6Result = jsx(BannerBaseDefault, { image: null, text: null });
+      const obj4 = { activityName: tmp4.name };
+      obj3.text = intl.formatToPlainString(tmp(1114).t.zHMWuV, obj4);
+      tmp6Result = jsx(BannerBaseDefault, { image: tmp8, text: null });
       const tmp7Result = BannerBaseDefault;
     }
   }

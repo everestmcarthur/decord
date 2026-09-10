@@ -1,145 +1,127 @@
-// Module ID: 17891
-// Function ID: 17892
+// Module ID: 17924
+// Function ID: 17925
 // Name: ErrorScreen
-// Dependencies: [5, 32, 19, 17, 21, 4560, 576, 1483, 17872, 17876, 4556, 1114, 4973, 4975, 6593, 2]
+// Dependencies: [5, 32, 19, 17, 21, 4574, 576, 1483, 17905, 17909, 4570, 1114, 4987, 4989, 6607, 2]
 // Exports: default
 
-// Module 17891 (ErrorScreen)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17924 (ErrorScreen)
+import nativeDefault from "native" /* 576 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, buttonContainer: null };
-createCacheKey = { flexDirection: "column", justifyContent: "center", gap: ThemesDefault.space.PX_8, padding: ThemesDefault.space.PX_16, alignItems: "center" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginTop: ThemesDefault.space.PX_8 };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { marginTop: ThemesDefault.space.PX_8 };
-let result = require("set").fileFinishedImporting("modules/safety_flows/native/ErrorScreen.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { flexDirection: "column", justifyContent: "center", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_16, alignItems: "center" }, buttonContainer: null };
+let obj3 = { flexDirection: "column", justifyContent: "center", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_16, alignItems: "center" };
+obj2.buttonContainer = { marginTop: nativeDefault.space.PX_8 };
+let closure_9 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/safety_flows/native/ErrorScreen.tsx");
 
 export default function ErrorScreen() {
-  function _handleRetry() {
-    const self = this;
-    const tmp = closure_1_3(function*() {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
+  dependencyMap = async function _handleRetry(arg0, value) {
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_1 = tmp3;
+            closure_0 = tmp7;
+            closure_128_0 = undefined;
+            c3 = 1;
+            _require(true);
+            c4 = 2;
+            c5 = 1;
+            const obj5 = { value: closure_0(tmp32[8]).getCurrentTask(), done: false };
+            return obj5;
+          }
+        } else if (1 === tmp7) {
+          c3 = 0;
+          closure_129_0(false);
+          throw tmp32;
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          c3 = 0;
+          closure_129_0(false);
+          c5 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
+          closure_128_0 = value;
+          if (null != closure_128_0) {
+            const result = closure_0(tmp32[9]).navigateToScreenForTask(closure_129_1, closure_128_0);
+            const obj = closure_0(tmp32[9]);
+          }
+          c3 = 0;
+          closure_129_0(false);
+          c5 = 3;
           return { value: "HermesInternal", done: null };
         }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_1 = tmp3;
-              let callback = tmp7;
-              callback = undefined;
-              c3 = 1;
-              closure_1_0(true);
-              let obj2 = closure_1_0(closure_1_2[8]);
-              c4 = 2;
-              c5 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj2.getCurrentTask();
-              return obj1;
-            }
-          } else if (1 === tmp7) {
-            c3 = 0;
-            callback(false);
-            throw closure_2;
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 0;
-            callback(false);
-            c5 = 3;
-            obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            callback = arg1;
-            if (null != callback) {
-              obj = closure_1_0(closure_1_2[9]);
-              const result = obj.navigateToScreenForTask(closure_1, callback);
-            }
-            c3 = 0;
-            callback(false);
-            c5 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp32) {
-          closure_2 = tmp32;
-          if (tmp4 === c3) {
-            c5 = tmp2;
-            throw tmp32;
-          } else {
-            c4 = tmp;
-          }
+      } catch (tmp32) {
+        if (tmp4 === c3) {
+          c5 = tmp2;
+          throw tmp32;
+        } else {
+          c4 = tmp;
         }
       }
-    });
-    closure_2 = tmp;
-    const apply = tmp.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
     }
-    return applyArgumentsResult;
-  }
-  let tmp = callback(React.useState(false), 2);
-  const _require = tmp[1];
-  let obj = _require(_handleRetry[7]);
-  closure_1 = obj.useNavigation();
-  const tmp2 = callback4();
-  obj = { style: tmp2.container, children: null };
-  obj = { variant: "heading-lg/semibold", children: null };
-  const intl = _require(_handleRetry[11]).intl;
-  obj[1] = intl.string(_require(_handleRetry[11]).t.c6kn6F);
-  const items = [callback2(_require(_handleRetry[10]).Text, obj), , ];
-  obj1 = { variant: "text-md/normal", color: "text-muted", children: null };
-  const intl2 = _require(_handleRetry[11]).intl;
-  obj1[2] = intl2.string(_require(_handleRetry[11]).t.ZUEGFn);
-  items[1] = callback2(_require(_handleRetry[10]).Text, obj1);
-  let obj2 = { style: tmp2.buttonContainer, spacing: 8, children: null };
-  const obj3 = {
+  };
+  [obj7.loading, _require] = noop.useState(false);
+  closure_1 = require("useNavigation").useNavigation();
+  const tmp2 = closure_9();
+  let obj2 = { style: tmp2.container, children: null };
+  const obj3 = { variant: "heading-lg/semibold", children: null };
+  const intl = require("util").intl;
+  obj3.children = intl.string(require("util").t.c6kn6F);
+  const items = [closure_7(require("Text/Text").Text, obj3), , ];
+  let obj4 = { variant: "text-md/normal", color: "text-muted", children: null };
+  const intl2 = require("util").intl;
+  obj4.children = intl2.string(require("util").t.ZUEGFn);
+  items[1] = closure_7(require("Text/Text").Text, obj4);
+  let obj5 = { style: tmp2.buttonContainer, spacing: 8, children: null };
+  let obj6 = {
     onPress() {
-      return callback(_handleRetry[14]).logout("safety_flows_error_screen");
+      return closure_1(closure_2[14]).logout("safety_flows_error_screen");
     },
     text: null,
     variant: "secondary",
     size: "md"
   };
-  const intl3 = _require(_handleRetry[11]).intl;
-  obj3[1] = intl3.string(_require(_handleRetry[11]).t["2jxGer"]);
-  const items1 = [callback2(_require(_handleRetry[13]).Button, obj3), ];
-  const obj4 = {
+  const intl3 = require("util").intl;
+  obj6.text = intl3.string(require("util").t["2jxGer"]);
+  const items1 = [closure_7(require("components/Button/Button").Button, obj6), ];
+  const obj7 = {
     onPress: function handleRetry() {
       const self = this;
-      const apply = _handleRetry.apply;
+      const apply = closure_2.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -152,12 +134,11 @@ export default function ErrorScreen() {
     size: "md",
     loading: null
   };
-  const intl4 = _require(_handleRetry[11]).intl;
-  obj4[1] = intl4.string(_require(_handleRetry[11]).t["7NqTJn"]);
-  obj4[4] = tmp[0];
-  items1[1] = callback2(_require(_handleRetry[13]).Button, obj4);
-  obj2[2] = items1;
-  items[2] = callback3(_require(_handleRetry[12]).Stack, obj2);
-  obj[1] = items;
-  return callback3(View, obj);
+  const intl4 = require("util").intl;
+  obj7.text = intl4.string(require("util").t["7NqTJn"]);
+  items1[1] = closure_7(require("components/Button/Button").Button, obj7);
+  obj5.children = items1;
+  items[2] = closure_8(require("Stack/Stack").Stack, obj5);
+  obj2.children = items;
+  return closure_8(View, obj2);
 };

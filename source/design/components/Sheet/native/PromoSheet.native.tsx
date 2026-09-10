@@ -1,71 +1,65 @@
-// Module ID: 10235
-// Function ID: 10236
+// Module ID: 10262
+// Function ID: 10263
 // Name: PromoSheet
-// Dependencies: [109, 19, 17, 21, 4560, 576, 10236, 7150, 4973, 10237, 4556, 2]
+// Dependencies: [109, 19, 17, 21, 4574, 576, 10263, 7164, 4987, 10264, 4570, 2]
 // Exports: PromoSheet
 
-// Module 10235 (PromoSheet)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10262 (PromoSheet)
+import nativeDefault from "native" /* 576 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+const require = fn;
 let closure_3 = ["title", "description", "illustration", "graphic", "gradientColor", "actions"];
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { content: { paddingHorizontal: 20, position: "relative" }, title: { textAlign: "center" }, description: { textAlign: "center" }, illustration: { alignSelf: "stretch", alignItems: "center" }, graphic: null };
-createCacheKey = { alignSelf: "center", maxWidth: ThemesDefault.modules.mobile.PROMO_SHEET_GRAPHIC_MAX_WIDTH };
-createCacheKey[4] = createCacheKey;
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("design/components/Sheet/native/PromoSheet.native.tsx");
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { content: { paddingHorizontal: 20, position: "relative" }, title: { textAlign: "center" }, description: { textAlign: "center" }, illustration: { alignSelf: "stretch", alignItems: "center" }, graphic: { alignSelf: "center", maxWidth: nativeDefault.modules.mobile.PROMO_SHEET_GRAPHIC_MAX_WIDTH } };
+let closure_9 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Sheet/native/PromoSheet.native.tsx");
 
 export const PromoSheet = function PromoSheet(arg0) {
   ({ description, illustration, graphic, gradientColor } = arg0);
   ({ title, actions } = arg0);
-  const tmp2 = callback2();
+  const tmp2 = closure_9();
   const items = [gradientColor];
-  const memo = React.useMemo(() => null != gradientColor ? ((arg0) => {
-    let obj = {};
+  const memo = noop.useMemo(() => null != gradientColor ? ((arg0) => {
+    const obj = {};
     const merged = Object.assign(arg0);
-    obj = { offsetBottom: 0.25, color: closure_0, backgroundColor: closure_1_1(closure_1_2[5]).colors.MOBILE_ACTIONSHEET_BACKGROUND };
-    obj.children = closure_1_7(closure_1_0(closure_1_2[6]).ExpressiveGradient, obj);
-    return closure_1_7(closure_1_6, obj);
+    obj.children = closure_2_7(gradientColor(10263).ExpressiveGradient, { offsetBottom: 0.25, color, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND });
+    return closure_2_7(View, obj);
   }) : undefined, items);
   let obj = {};
-  let merged = Object.assign(callback(arg0, closure_3));
+  let merged = Object.assign(_objectWithoutProperties(arg0, closure_3));
   obj.startExpanded = true;
   obj.contentStyles = tmp2.content;
   obj.backgroundComponent = memo;
   if (null != graphic) {
-    obj = {};
+    const obj2 = {};
     const merged1 = Object.assign(graphic);
-    obj.style = tmp2.graphic;
-    let tmp4Result = tmp4(tmp5(10237).Graphic, obj);
+    obj2.style = tmp2.graphic;
+    let tmp4Result = tmp4(tmp5(10264).Graphic, obj2);
   } else {
     tmp4Result = null;
     if (null != illustration) {
-      obj = { style: null, children: null };
-      obj[0] = tmp2.illustration;
-      obj[1] = illustration;
-      tmp4Result = tmp4(View, obj);
+      const obj3 = { style: tmp2.illustration, children: illustration };
+      tmp4Result = tmp4(View, obj3);
     }
   }
   const items1 = [tmp4Result, , ];
-  const items2 = [closure_7(gradientColor(4556).Text, { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp2.title, children: title }), ];
-  tmp4Result = null;
+  const items2 = [closure_7(gradientColor(4570).Text, { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp2.title, children: title }), ];
+  let tmp4Result2 = null;
   if (null != description) {
-    const obj2 = { variant: "redesign/heading-18/medium", color: "text-subtle", style: null, children: null };
-    obj2[2] = tmp2.description;
-    obj2[3] = description;
-    tmp4Result = tmp4(tmp5(4556).Text, obj2);
+    const obj5 = { variant: "redesign/heading-18/medium", color: "text-subtle", style: tmp2.description, children: description };
+    tmp4Result2 = tmp4(tmp5(4570).Text, obj5);
   }
-  const obj3 = { spacing: 24, children: null };
-  items2[1] = tmp4Result;
-  items1[1] = closure_8(gradientColor(4973).Stack, { children: items2 });
+  const obj6 = { spacing: 24, children: null };
+  items2[1] = tmp4Result2;
+  items1[1] = closure_8(gradientColor(4987).Stack, { children: items2 });
   items1[2] = actions;
-  obj3[1] = items1;
-  obj.children = closure_8(gradientColor(4973).Stack, obj3);
-  return closure_7(gradientColor(7150).BottomSheet, obj);
+  obj6.children = items1;
+  obj.children = closure_8(gradientColor(4987).Stack, obj6);
+  return closure_7(gradientColor(7164).BottomSheet, obj);
 };

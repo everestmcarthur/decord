@@ -1,11 +1,11 @@
-// Module ID: 9138
-// Function ID: 9139
-// Name: map
+// Module ID: 9165
+// Function ID: 9166
+// Name: TransientKeyStore
 // Dependencies: [504, 573, 2]
 
-// Module 9138 (map)
+// Module 9165 (TransientKeyStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
 const map = new Map();
 const Store = initializeDefault.Store;
@@ -16,7 +16,7 @@ prototype["getUsers"] = function getUsers() {
   return map;
 };
 prototype["isKeyVerified"] = function isKeyVerified(arg0, arg1) {
-  const value = map.get(arg0);
+  value = map.get(arg0);
   if (null != arg1) {
     if (null != value) {
       if (value.length === arg1.length) {
@@ -34,7 +34,7 @@ prototype["isKeyVerified"] = function isKeyVerified(arg0, arg1) {
   return false;
 };
 TransientKeyStore.displayName = "TransientKeyStore";
-const transientKeyStore = new TransientKeyStore(dispatcherDefault, {
+const transientKeyStore = new TransientKeyStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     map.clear();
   },
@@ -46,6 +46,7 @@ const transientKeyStore = new TransientKeyStore(dispatcherDefault, {
     return map.delete(userId.userId);
   }
 });
-let result = require("set").fileFinishedImporting("modules/rtc/TransientKeyStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/rtc/TransientKeyStore.tsx");
 
 export default transientKeyStore;

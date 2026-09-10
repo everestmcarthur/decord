@@ -1,13 +1,13 @@
-// Module ID: 8222
-// Function ID: 8223
-// Name: PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO
-// Dependencies: [8207, 2]
+// Module ID: 8248
+// Function ID: 8249
+// Name: ProfileFrameConstants
+// Dependencies: [8233, 2]
 
-// Module 8222 (PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO)
-import set from "set" /* 2 */;
-import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 8207 */;
+// Module 8248 (ProfileFrameConstants)
+import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 8233 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/collectibles/profile_frames/native/ProfileFrameConstants.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/profile_frames/native/ProfileFrameConstants.tsx");
 
 export const PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO = 0.625;
 export const PROFILE_FRAME_ASPECT_RATIO = 0.66;

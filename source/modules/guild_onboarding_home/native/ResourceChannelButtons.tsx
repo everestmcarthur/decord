@@ -1,94 +1,77 @@
-// Module ID: 12286
-// Function ID: 12287
+// Module ID: 12312
+// Function ID: 12313
 // Name: ResourceChannelButtons
-// Dependencies: [32, 19, 17, 21, 4560, 576, 1484, 12287, 12288, 4975, 1178, 11584, 12290, 2]
+// Dependencies: [32, 19, 17, 21, 4574, 576, 1484, 12313, 12314, 4989, 1178, 11610, 12316, 2]
 // Exports: default
 
-// Module 12286 (ResourceChannelButtons)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12312 (ResourceChannelButtons)
+import nativeDefault from "native" /* 576 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12314 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { wrapper: null, buttonWrapper: null, spacer: null, iconColor: null };
-createCacheKey = { display: "flex", flexDirection: "row", padding: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1 };
-createCacheKey[2] = { width: 8 };
-createCacheKey[3] = { color: ThemesDefault.colors.WHITE };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { color: ThemesDefault.colors.WHITE };
-const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/native/ResourceChannelButtons.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+const obj2 = { wrapper: { display: "flex", flexDirection: "row", padding: 12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, buttonWrapper: { flex: 1 }, spacer: { width: 8 }, iconColor: null };
+let obj3 = { display: "flex", flexDirection: "row", padding: 12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj2.iconColor = { color: nativeDefault.colors.WHITE };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_onboarding_home/native/ResourceChannelButtons.tsx");
 
 export default function ResourceChannelButtons(channel) {
   channel = channel.channel;
-  let navigation;
-  let first;
-  let callback;
-  let React;
-  let obj = channel(first[6]);
-  navigation = obj.useNavigation();
-  const tmp4 = callback3();
-  obj1 = channel(first[7]);
-  const tmp5 = callback(obj1.usePreviousAndNextResourceChannel(channel.guild_id, channel.id), 2);
-  first = tmp5[0];
-  callback = tmp7;
+  first = undefined;
+  noop = undefined;
+  const navigation = channel(first[6]).useNavigation();
+  const tmp4 = closure_8();
+  const obj = channel(first[6]);
+  [first] = channel(first[7]).usePreviousAndNextResourceChannel(channel.guild_id, channel.id);
+  _slicedToArray = tmp7;
   const items = [channel.guild_id, navigation];
-  React = React.useCallback((channelId) => {
+  noop = noop.useCallback((channelId) => {
     navigation.goBack();
-    const homeResourceChannel = channel(first[8]).selectHomeResourceChannel(channel.guild_id, channelId);
+    const homeResourceChannel = GuildOnboardingHomeActionCreators.selectHomeResourceChannel(channel.guild_id, channelId);
   }, items);
   if (null != first) {
-    obj = { style: null, children: null };
-    obj[0] = tmp4.wrapper;
+    const obj3 = { style: tmp4.wrapper, children: null };
     let tmp11 = null != first;
     if (tmp11) {
-      obj = { style: null, children: null };
-      obj[0] = tmp4.buttonWrapper;
-      obj1 = { variant: "secondary", text: null, icon: null, onPress: null, grow: true };
-      obj1[1] = first.title;
-      const obj2 = { color: null, source: null };
-      obj2[0] = tmp4.iconColor.color;
-      obj2[1] = navigation(tmp2[11]);
-      obj1[2] = callback2(tmp(tmp2[10]).Icon, obj2);
-      obj1[3] = function onPress() {
-        return callback(first.channelId);
+      const obj4 = { style: tmp4.buttonWrapper, children: null };
+      const obj5 = { variant: "secondary", text: first.title, icon: null, onPress: null, grow: true };
+      const obj6 = { color: tmp4.iconColor.color, source: navigation(tmp2[11]) };
+      obj5.icon = closure_6(tmp(tmp2[10]).Icon, obj6);
+      obj5.onPress = function onPress() {
+        return closure_4(first.channelId);
       };
-      obj[1] = callback2(tmp(tmp2[9]).Button, obj1);
-      tmp11 = callback2(tmp10, obj);
+      obj4.children = closure_6(tmp(tmp2[9]).Button, obj5);
+      tmp11 = closure_6(tmp10, obj4);
     }
     const items1 = [tmp11, , ];
     let tmp14 = null != first && null != tmp7;
     if (tmp14) {
-      const obj3 = { style: null };
-      obj3[0] = tmp4.spacer;
-      tmp14 = callback2(tmp10, obj3);
+      const obj7 = { style: tmp4.spacer };
+      tmp14 = closure_6(tmp10, obj7);
     }
     items1[1] = tmp14;
     let tmp16 = null != tmp7;
     if (tmp16) {
-      const obj4 = { style: null, children: null };
-      obj4[0] = tmp4.buttonWrapper;
-      const obj5 = { text: null, icon: null, iconPosition: "end", onPress: null, grow: true };
-      obj5[0] = tmp7.title;
-      const obj6 = { color: null, source: null };
-      obj6[0] = tmp4.iconColor.color;
-      obj6[1] = navigation(tmp2[12]);
-      obj5[1] = callback2(tmp(tmp2[10]).Icon, obj6);
-      obj5[3] = function onPress() {
-        return callback(channelId.channelId);
+      const obj8 = { style: tmp4.buttonWrapper, children: null };
+      const obj9 = { text: tmp7.title, icon: null, iconPosition: "end", onPress: null, grow: true };
+      const obj10 = { color: tmp4.iconColor.color, source: navigation(tmp2[12]) };
+      obj9.icon = closure_6(tmp(tmp2[10]).Icon, obj10);
+      obj9.onPress = function onPress() {
+        return closure_4(channelId.channelId);
       };
-      obj4[1] = callback2(tmp(tmp2[9]).Button, obj5);
-      tmp16 = callback2(tmp10, obj4);
+      obj8.children = closure_6(tmp(tmp2[9]).Button, obj9);
+      tmp16 = closure_6(tmp10, obj8);
     }
     items1[2] = tmp16;
-    obj[1] = items1;
-    let tmp9Result = closure_7(tmp10, obj);
-    const tmp9 = closure_7;
+    obj3.children = items1;
+    let tmp9Result = closure_7(tmp10, obj3);
   } else {
     tmp9Result = null;
   }

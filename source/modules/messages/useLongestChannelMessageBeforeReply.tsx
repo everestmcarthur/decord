@@ -1,36 +1,35 @@
-// Module ID: 12454
-// Function ID: 12455
+// Module ID: 12480
+// Function ID: 12481
 // Name: useLongestChannelMessageBeforeReply
-// Dependencies: [4781, 504, 2]
+// Dependencies: [4795, 504, 2]
 // Exports: useLongestChannelMessageBeforeReply
 
-// Module 12454 (useLongestChannelMessageBeforeReply)
-import closure_2 from "reinjectEphemerals" /* 4781 */;
+// Module 12480 (useLongestChannelMessageBeforeReply)
+import MessageStore from "MessageStore" /* 4795 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/useLongestChannelMessageBeforeReply.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/useLongestChannelMessageBeforeReply.tsx");
 
 export const useLongestChannelMessageBeforeReply = function useLongestChannelMessageBeforeReply(id, recipientId) {
-  const _require = id;
+  _require = id;
   dependencyMap = recipientId;
-  const items = [closure_2];
+  const items = [MessageStore];
   const items1 = [id, recipientId];
-  return _require(504).useStateFromStores(items, () => {
+  return require("initialize").useStateFromStores(items, () => {
     if (null != closure_1) {
-      const messages = closure_1_2.getMessages(closure_0);
-      const findOldestResult = messages.findOldest((author) => author.author.id === closure_1);
+      const messages = MessageStore.getMessages(closure_0);
+      const findOldestResult = messages.findOldest((author) => author.author.id === recipientId);
       let tmp4 = findOldestResult;
       if (null != findOldestResult) {
         const toArrayResult = messages.toArray();
         for (const item10018 of toArrayResult) {
-          let tmp9 = closure_1;
           if (item10018.author.id !== closure_1) {
-            let tmp13 = obj2;
             obj2.return();
             break;
           } else {
-            let tmp10 = item10018;
-            let tmp11 = tmp4;
             let length;
             if (tmp4 != null) {
               length = tmp4.content.length;

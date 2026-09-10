@@ -1,72 +1,75 @@
-// Module ID: 13254
-// Function ID: 13255
+// Module ID: 13277
+// Function ID: 13278
 // Name: ConversationNavigatorMoreMenu
-// Dependencies: [19, 17, 21, 4560, 576, 1114, 8921, 7907, 7909, 4258, 8923, 8671, 8097, 8677, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 1114, 8948, 7921, 7923, 4271, 8950, 8699, 8113, 8705, 2]
 // Exports: default
 
-// Module 13254 (ConversationNavigatorMoreMenu)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_2 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13277 (ConversationNavigatorMoreMenu)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import IconButton from "IconButton" /* 8113 */;
+import MoreHorizontalIcon from "MoreHorizontalIcon" /* 8705 */;
+import ThumbsUpIcon from "ThumbsUpIcon" /* 8948 */;
+import ThumbsDownIcon from "ThumbsDownIcon" /* 8950 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-createCacheKey = { container: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_12 };
-createCacheKey[0] = createCacheKey;
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/conversations/components/native/ConversationNavigatorMoreMenu.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_12 } };
+let closure_5 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/conversations/components/native/ConversationNavigatorMoreMenu.tsx");
 
 export default function ConversationNavigatorMoreMenu(channelId) {
   channelId = channelId.channelId;
   const conversationId = channelId.conversationId;
-  let React;
-  React = callback();
+  noop = closure_5();
   let items = [channelId, conversationId];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     let obj = { label: null, IconComponent: null, action: null };
-    const intl = channelId(conversationId[5]).intl;
-    obj[0] = intl.string(channelId(conversationId[5]).t["7iRs51"]);
-    obj[1] = channelId(conversationId[6]).ThumbsUpIcon;
-    obj[2] = function action() {
-      let obj = closure_1_0(closure_1_1[7]);
-      const result = obj.setConversationFeedbackRating(closure_0, closure_1, "up");
-      const ConversationsAnalytics = closure_1_0(closure_1_1[8]).ConversationsAnalytics;
-      obj = { channelId: closure_0, conversationId: closure_1, isThumbsUp: true, isFocusMode: true };
-      ConversationsAnalytics.trackThumbsClicked(obj);
-      closure_1_0(closure_1_1[9]).presentFeedbackSent();
+    const intl = util.intl;
+    obj.label = intl.string(util.t["7iRs51"]);
+    obj.IconComponent = ThumbsUpIcon.ThumbsUpIcon;
+    obj.action = function action() {
+      const result = channelId(conversationId[7]).setConversationFeedbackRating(channelId, conversationId, "up");
+      const ConversationsAnalytics = channelId(conversationId[8]).ConversationsAnalytics;
+      ConversationsAnalytics.trackThumbsClicked({ channelId, conversationId, isThumbsUp: true, isFocusMode: true });
+      const obj = channelId(conversationId[7]);
+      const obj2 = { channelId, conversationId, isThumbsUp: true, isFocusMode: true };
+      channelId(conversationId[9]).presentFeedbackSent();
     };
     const items = [obj, ];
-    obj = { label: null, IconComponent: null, action: null };
-    const intl2 = channelId(conversationId[5]).intl;
-    obj[0] = intl2.string(channelId(conversationId[5]).t.uNGhdg);
-    obj[1] = channelId(conversationId[10]).ThumbsDownIcon;
-    obj[2] = function action() {
-      let obj = closure_1_0(closure_1_1[7]);
-      const result = obj.setConversationFeedbackRating(closure_0, closure_1, "down");
-      const ConversationsAnalytics = closure_1_0(closure_1_1[8]).ConversationsAnalytics;
-      obj = { channelId: closure_0, conversationId: closure_1, isThumbsUp: false, isFocusMode: true };
-      ConversationsAnalytics.trackThumbsClicked(obj);
-      closure_1_0(closure_1_1[9]).presentFeedbackSent();
+    let obj2 = { label: null, IconComponent: null, action: null };
+    const intl2 = util.intl;
+    obj2.label = intl2.string(util.t.uNGhdg);
+    obj2.IconComponent = ThumbsDownIcon.ThumbsDownIcon;
+    obj2.action = function action() {
+      const result = channelId(conversationId[7]).setConversationFeedbackRating(channelId, conversationId, "down");
+      const ConversationsAnalytics = channelId(conversationId[8]).ConversationsAnalytics;
+      ConversationsAnalytics.trackThumbsClicked({ channelId, conversationId, isThumbsUp: false, isFocusMode: true });
+      const obj = channelId(conversationId[7]);
+      const obj2 = { channelId, conversationId, isThumbsUp: false, isFocusMode: true };
+      channelId(conversationId[9]).presentFeedbackSent();
     };
-    items[1] = obj;
+    items[1] = obj2;
     return items;
   }, items);
   return jsx(channelId(conversationId[11]).ContextMenu, {
     items: memo,
     children(ref) {
-      let obj = { style: container.container, ref: ref.ref, children: null };
-      const merged = Object.assign(ref, Object.create(null));
-      obj = {};
+      const obj = { style: container.container, ref: ref.ref, children: null };
+      const merged = Object.assign(ref, Object.assign({ ref: 0 }));
+      const obj2 = {};
       const merged1 = Object.assign(merged);
-      obj.size = "sm";
-      obj.variant = "tertiary";
-      const intl = channelId(conversationId[5]).intl;
-      obj.accessibilityLabel = intl.string(channelId(conversationId[5]).t["6Ic4Ev"]);
-      obj.icon = closure_1_4(channelId(conversationId[13]).MoreHorizontalIcon, { size: "sm" });
-      obj[2] = closure_1_4(channelId(conversationId[12]).IconButton, obj);
-      return closure_1_4(closure_1_3, obj);
+      obj2.size = "sm";
+      obj2.variant = "tertiary";
+      const intl = util.intl;
+      obj2.accessibilityLabel = intl.string(util.t["6Ic4Ev"]);
+      obj2.icon = jsx(MoreHorizontalIcon.MoreHorizontalIcon, { size: "sm" });
+      obj.children = jsx(IconButton.IconButton, {});
+      return <View style={container.container} ref={arg0.ref}>{null}</View>;
     }
   });
 };

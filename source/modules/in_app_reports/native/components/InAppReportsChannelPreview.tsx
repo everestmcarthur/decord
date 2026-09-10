@@ -1,76 +1,63 @@
-// Module ID: 9040
-// Function ID: 9041
-// Name: ChannelPreview
-// Dependencies: [19, 17, 1979, 21, 4560, 576, 504, 4409, 4556, 1114, 5584, 2]
+// Module ID: 9067
+// Function ID: 9068
+// Name: InAppReportsChannelPreview
+// Dependencies: [19, 17, 1979, 21, 4574, 576, 504, 4423, 4570, 1114, 5598, 2]
 // Exports: default
 
-// Module 9040 (ChannelPreview)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "createGuildRecordFromRust" /* 1979 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9067 (InAppReportsChannelPreview)
+import nativeDefault from "native" /* 576 */;
+import GuildIconDefault from "GuildIcon" /* 5598 */;
+import noop from "module_19" /* 19 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-const require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, borderColor: null, title: null, itemContainer: null, guildInfo: null, guildName: null, topic: null };
-createCacheKey = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { lineHeight: 16, marginBottom: 8 };
-createCacheKey[3] = { minHeight: 40, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, padding: 8 };
-createCacheKey[4] = { display: "flex", flexDirection: "row", alignItems: "center" };
-createCacheKey[5] = { lineHeight: 18, marginStart: 8 };
-createCacheKey[6] = { lineHeight: 20, marginTop: 8 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { minHeight: 40, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, padding: 8 };
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsChannelPreview.tsx");
+const require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, borderColor: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, title: { lineHeight: 16, marginBottom: 8 }, itemContainer: null, guildInfo: null, guildName: null, topic: null };
+let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+obj2.itemContainer = { minHeight: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 1, padding: 8 };
+obj2.guildInfo = { display: "flex", flexDirection: "row", alignItems: "center" };
+obj2.guildName = { lineHeight: 18, marginStart: 8 };
+obj2.topic = { lineHeight: 20, marginTop: 8 };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsChannelPreview.tsx");
 
 export default function ChannelPreview(stageInstance) {
   stageInstance = stageInstance.stageInstance;
-  const tmp = callback3();
-  let obj = stageInstance(504);
-  const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getGuild(stageInstance.guild_id));
+  const tmp = closure_7();
+  const items = [GuildStore];
+  const stateFromStores = stageInstance(504).useStateFromStores(items, () => GuildStore.getGuild(stageInstance.guild_id));
   if (null != stateFromStores) {
     if (null != stageInstance) {
-      obj = { style: null, children: null };
-      obj[0] = tmp.container;
-      const tmp2Result = tmp2(4409);
-      obj = { style: null, accessibilityRole: "header", variant: "text-xs/bold", children: null };
-      obj[0] = tmp.title;
+      const obj2 = { style: tmp.container, children: null };
+      const tmp2Result = tmp2(4423);
+      const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
       const intl = tmp2(1114).intl;
-      obj[3] = intl.string(tmp2(1114).t.InbJ8x);
-      const items1 = [callback(tmp2(4556).Text, obj), ];
-      obj1 = { style: null, children: null };
+      obj3.children = intl.string(tmp2(1114).t.InbJ8x);
+      const items1 = [closure_5(tmp2(4570).Text, obj3), ];
+      const obj4 = { style: null, children: null };
       const items2 = [tmp.itemContainer, ];
-      const obj2 = { borderColor: null };
-      obj2[0] = tmp2(4409).hexWithOpacity(tmp.borderColor.color, 0.08);
-      items2[1] = obj2;
-      obj1[0] = items2;
-      const obj3 = { style: null, children: null };
-      obj3[0] = tmp.guildInfo;
-      const obj4 = { guild: null, size: null, selected: false };
-      obj4[0] = stateFromStores;
-      const hexWithOpacityResult = tmp2(4409).hexWithOpacity(tmp.borderColor.color, 0.08);
-      obj4[1] = tmp2(5584).GuildIconSizes.XXSMALL;
-      const items3 = [callback(GuildIconSizesDefault, obj4), ];
-      const obj5 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
-      obj5[0] = tmp.guildName;
-      obj5[3] = stateFromStores.name;
-      items3[1] = callback(tmp2(4556).Text, obj5);
-      obj3[1] = items3;
-      const items4 = [callback2(View, obj3), ];
-      const obj6 = { style: null, variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
-      obj6[0] = tmp.topic;
-      obj6[3] = stageInstance.topic;
-      items4[1] = callback(tmp2(4556).Text, obj6);
-      obj1[1] = items4;
-      items1[1] = callback2(View, obj1);
-      obj[1] = items1;
-      return callback2(View, obj);
+      const obj5 = { borderColor: tmp2(4423).hexWithOpacity(tmp.borderColor.color, 0.08) };
+      items2[1] = obj5;
+      obj4.style = items2;
+      const obj6 = { style: tmp.guildInfo, children: null };
+      const obj7 = { guild: stateFromStores, size: null, selected: false };
+      const hexWithOpacityResult = tmp2(4423).hexWithOpacity(tmp.borderColor.color, 0.08);
+      obj7.size = tmp2(5598).GuildIconSizes.XXSMALL;
+      const items3 = [closure_5(GuildIconDefault, obj7), ];
+      const obj8 = { style: tmp.guildName, variant: "text-sm/medium", color: "text-default", children: stateFromStores.name };
+      items3[1] = closure_5(tmp2(4570).Text, obj8);
+      obj6.children = items3;
+      const items4 = [closure_6(View, obj6), ];
+      const obj9 = { style: tmp.topic, variant: "text-md/bold", color: "mobile-text-heading-primary", children: stageInstance.topic };
+      items4[1] = closure_5(tmp2(4570).Text, obj9);
+      obj4.children = items4;
+      items1[1] = closure_6(View, obj4);
+      obj2.children = items1;
+      return closure_6(View, obj2);
     }
   }
   return null;

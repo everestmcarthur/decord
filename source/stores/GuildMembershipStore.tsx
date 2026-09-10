@@ -1,46 +1,46 @@
 // Module ID: 1959
 // Function ID: 1960
-// Name: allGuildIds
+// Name: GuildMembershipStore
 // Dependencies: [504, 573, 2]
 
-// Module 1959 (allGuildIds)
+// Module 1959 (GuildMembershipStore)
 import initializeDefault from "initialize" /* 504 */;
-import importDefaultResult from "dispatcher" /* 573 */;
-import set from "set" /* 2 */;
+import Dispatcher2 from "Dispatcher" /* 573 */;
 
-let closure_0 = arg1;
+const Dispatcher = Dispatcher2;
+
+require = fn;
 const Store = initializeDefault.Store;
 class GuildMembershipStore extends Store {
   constructor() {
     closure_0 = undefined;
-    tmp2 = require("dispatcher");
+    tmp2 = closure_1(closure_2[1]);
     obj = {
       CACHE_LOADED(arg0) {
-            return obj.handleCacheLoaded(arg0);
+            return closure_0.handleCacheLoaded(arg0);
           },
       CACHE_LOADED_LAZY(arg0) {
-            return obj.handleCacheLoadedLazy(arg0);
+            return closure_0.handleCacheLoadedLazy(arg0);
           },
       CONNECTION_OPEN(arg0) {
-            return obj.handleConnectionOpen(arg0);
+            return closure_0.handleConnectionOpen(arg0);
           },
       GUILD_CREATE(arg0) {
-            return obj.handleGuildCreate(arg0);
+            return closure_0.handleGuildCreate(arg0);
           },
       GUILD_DELETE: null
     };
     class GUILD_DELETE {
       constructor(arg0) {
-        return obj.handleGuildDelete(global);
+        return closure_0.handleGuildDelete(global);
       }
     }
-    obj[4] = GUILD_DELETE;
-    tmp = new tmp(tmp2, obj, require("dispatcher").DispatchBand.Early, GUILD_DELETE, new.target, tmp, tmp2);
-    // ThrowIfThisInitialized (0x7c)
-    closure_0 = tmp;
+    obj.GUILD_DELETE = GUILD_DELETE;
+    tmp1 = new tmp(tmp2, obj, closure_0(closure_2[1]).DispatchBand.Early, GUILD_DELETE, new.target, tmp, tmp2);
+    closure_0 = tmp1;
     set = new Set();
-    tmp.guildIds = set;
-    return tmp;
+    tmp1.guildIds = set;
+    return tmp1;
   }
 }
 const prototype = GuildMembershipStore.prototype;
@@ -78,29 +78,27 @@ function handleGuildDelete(guild) {
   }
 }
 prototype["handleGuildDelete"] = handleGuildDelete;
-closure_0 = undefined;
 let obj = {
   CACHE_LOADED(arg0) {
-    return obj.handleCacheLoaded(arg0);
+    return closure_0.handleCacheLoaded(arg0);
   },
   CACHE_LOADED_LAZY(arg0) {
-    return obj.handleCacheLoadedLazy(arg0);
+    return closure_0.handleCacheLoadedLazy(arg0);
   },
   CONNECTION_OPEN(arg0) {
-    return obj.handleConnectionOpen(arg0);
+    return closure_0.handleConnectionOpen(arg0);
   },
   GUILD_CREATE(arg0) {
-    return obj.handleGuildCreate(arg0);
+    return closure_0.handleGuildCreate(arg0);
   },
   GUILD_DELETE(arg0) {
-    return obj.handleGuildDelete(arg0);
+    return closure_0.handleGuildDelete(arg0);
   }
 };
-tmp = new tmp(importDefaultResult, obj, require("dispatcher").DispatchBand.Early, GuildMembershipStore, tmp, importDefaultResult, obj, new.target, undefined, handleGuildDelete, globalThis);
-// ThrowIfThisInitialized (0x7c)
-closure_0 = tmp;
-let set = new Set();
-tmp.guildIds = set;
-const result = set.fileFinishedImporting("stores/GuildMembershipStore.tsx");
+let tmp2 = new tmp(Dispatcher, obj, fn(573).DispatchBand.Early, GuildMembershipStore, tmp, Dispatcher, obj, new.target, undefined, handleGuildDelete, globalThis);
+let closure_129_0 = tmp2;
+tmp2.guildIds = new Set();
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/GuildMembershipStore.tsx");
 
-export default tmp;
+export default tmp2;

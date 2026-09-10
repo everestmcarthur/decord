@@ -1,19 +1,18 @@
-// Module ID: 14122
-// Function ID: 14123
-// Name: __INTERNAL_VIEW_CONFIG
+// Module ID: 14145
+// Function ID: 14146
+// Name: PassthroughTouchNativeComponent
 // Dependencies: [106, 65, 2]
 
-// Module 14122 (__INTERNAL_VIEW_CONFIG)
-import set from "set" /* 2 */;
+// Module 14145 (PassthroughTouchNativeComponent)
 import weakSet from "weakSet" /* 106 */;
-import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
+import module_65 from "module_65" /* 65 */;
+import size from "module_2" /* 2 */;
 
-let obj = { uiViewClassName: "PassthroughTouchView", directEventTypes: { topTouchDown: { registrationName: "onTouchDown" } }, validAttributes: null };
-obj = {};
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "PassthroughTouchView", directEventTypes: { topTouchDown: { registrationName: "onTouchDown" } }, validAttributes: null };
 const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onTouchDown: true }));
-obj[2] = obj;
-const value = setRuntimeConfigProvider.get("PassthroughTouchView", () => obj);
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/PassthroughTouchNativeComponent.tsx");
+__INTERNAL_VIEW_CONFIG.validAttributes = {};
+const value = module_65.get("PassthroughTouchView", () => obj);
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/PassthroughTouchNativeComponent.tsx");
 
 export default value;
-export const __INTERNAL_VIEW_CONFIG = obj;
+export { __INTERNAL_VIEW_CONFIG };

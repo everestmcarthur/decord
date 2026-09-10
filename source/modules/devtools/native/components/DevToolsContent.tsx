@@ -1,35 +1,36 @@
-// Module ID: 15746
-// Function ID: 15747
-// Name: DevToolsContentSortButtons
-// Dependencies: [32, 19, 17, 11430, 4476, 1236, 21, 4560, 576, 504, 11794, 15747, 4556, 5123, 4528, 15059, 15748, 1483, 1611, 5687, 5605, 4259, 14584, 2]
+// Module ID: 15776
+// Function ID: 15777
+// Name: DevToolsContent
+// Dependencies: [32, 19, 17, 11457, 4490, 1236, 21, 4574, 576, 504, 11820, 15777, 4570, 5137, 4542, 15086, 15778, 1483, 1611, 5701, 5619, 4272, 14609, 2]
 
-// Module 15746 (DevToolsContentSortButtons)
-import ThemesDefault from "Themes" /* 576 */;
+// Module 15776 (DevToolsContent)
+import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import Text from "Text" /* 4556 */;
-import PressableBase from "PressableBase" /* 5123 */;
-import ArrowSmallUpIcon from "ArrowSmallUpIcon" /* 15059 */;
-import getSortedDevToolsScreensDefault from "getSortedDevToolsScreens" /* 15747 */;
-import ArrowSmallDownIcon from "ArrowSmallDownIcon" /* 15748 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "getCurrentBuildOverride" /* 11430 */;
-import closure_8 from "getHash" /* 4476 */;
-import closure_9 from "initialize" /* 1236 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import HapticUtils from "HapticUtils" /* 4542 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Pressables from "Pressables" /* 5137 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 14609 */;
+import ArrowSmallUpIcon from "ArrowSmallUpIcon" /* 15086 */;
+import useSortedDevToolsScreens from "useSortedDevToolsScreens" /* 15777 */;
+import ArrowSmallDownIcon from "ArrowSmallDownIcon" /* 15778 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11457 */;
+import ExperimentStore from "ExperimentStore" /* 4490 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
 
-require = arg1;
+const require = globalThis.__r;
+const useSortedDevToolsScreensDefault = useSortedDevToolsScreens;
+
+require = fn;
 function DevToolsContentSortButtons(arg0) {
   ({ screenKey: require, start, end } = arg0);
-  const tmp = callback4();
+  const tmp = closure_12();
   let obj = { style: tmp.sortingIcons, children: null };
-  obj = {
+  const obj2 = {
     onPress() {
-      const result = closure_1_0(closure_1_2[14]).triggerHapticFeedback(closure_1_0(closure_1_2[14]).HapticFeedbackTypes.IMPACT_MEDIUM);
-      const obj = closure_1_0(closure_1_2[14]);
-      closure_1_0(closure_1_2[11]).updateSortOrder(closure_0, "up");
+      const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
+      useSortedDevToolsScreens.updateSortOrder(_require, "up");
     },
     disabled: start,
     style: null,
@@ -42,14 +43,13 @@ function DevToolsContentSortButtons(arg0) {
     start = tmp.disabledButton;
   }
   items[1] = start;
-  obj[2] = items;
-  obj[5] = closure_10(ArrowSmallUpIcon.ArrowSmallUpIcon, {});
-  const items1 = [closure_10(PressableBase.PressableOpacity, obj), ];
-  obj = {
+  obj2.style = items;
+  obj2.children = closure_10(ArrowSmallUpIcon.ArrowSmallUpIcon, {});
+  const items1 = [closure_10(Pressables.PressableOpacity, obj2), ];
+  const obj3 = {
     onPress() {
-      const result = closure_1_0(closure_1_2[14]).triggerHapticFeedback(closure_1_0(closure_1_2[14]).HapticFeedbackTypes.IMPACT_MEDIUM);
-      const obj = closure_1_0(closure_1_2[14]);
-      closure_1_0(closure_1_2[11]).updateSortOrder(closure_0, "down");
+      const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
+      useSortedDevToolsScreens.updateSortOrder(_require, "down");
     },
     disabled: end,
     style: null,
@@ -62,148 +62,139 @@ function DevToolsContentSortButtons(arg0) {
     end = tmp.disabledButton;
   }
   items2[1] = end;
-  obj[2] = items2;
-  obj[5] = closure_10(ArrowSmallDownIcon.ArrowSmallDownIcon, {});
-  items1[1] = closure_10(PressableBase.PressableOpacity, obj);
-  obj[1] = items1;
+  obj3.style = items2;
+  obj3.children = closure_10(ArrowSmallDownIcon.ArrowSmallDownIcon, {});
+  items1[1] = closure_10(Pressables.PressableOpacity, obj3);
+  obj.children = items1;
   return closure_11(closure_5, obj);
 }
-let c4 = importAllResult;
-({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let obj = { devToolsContainer: null, sortingIcons: null, button: null, disabledButton: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: ThemesDefault.space.PX_16 };
-obj[0] = obj;
-createCacheKey = { flexDirection: "row", gap: ThemesDefault.space.PX_8 };
-obj[1] = createCacheKey;
-obj[2] = { backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, width: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_32, borderRadius: ThemesDefault.radii.round, justifyContent: "center", alignItems: "center" };
-obj[3] = { opacity: 0.5 };
-let closure_12 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo((arg0) => {
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(4574);
+let obj = { devToolsContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16 }, sortingIcons: null, button: null, disabledButton: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16 };
+obj.sortingIcons = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
+let size = { backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, width: nativeDefault.space.PX_32, height: nativeDefault.space.PX_32, borderRadius: nativeDefault.radii.round, justifyContent: "center", alignItems: "center" };
+obj.button = size;
+obj.disabledButton = { opacity: 0.5 };
+let closure_12 = createStyles.createStyles(obj);
+const memoResult = noop.memo((arg0) => {
   ({ label, value } = arg0);
   const obj = { variant: "text-xs/medium", color: "text-subtle", children: null };
-  const items = [label, callback2(Text.Text, { variant: "text-xs/semibold", children: value })];
-  obj[2] = items;
-  return callback3(Text.Text, obj);
+  const items = [label, closure_1_10(Text_Text.Text, { variant: "text-xs/semibold", children: value })];
+  obj.children = items;
+  return closure_1_11(Text_Text.Text, obj);
 });
-const obj2 = { backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, width: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_32, borderRadius: ThemesDefault.radii.round, justifyContent: "center", alignItems: "center" };
-const memoResult1 = importAllResult.memo(function DevToolsContent(arg0) {
-  let _require;
-  importDefault = undefined;
-  dependencyMap = undefined;
-  let callback;
-  let arr5;
-  ({ title, embedded } = arg0);
-  let obj = _require(1483);
-  _require = obj.useNavigation();
+let obj4 = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
+size = fn(2);
+let result = size.fileFinishedImporting("modules/devtools/native/components/DevToolsContent.tsx");
+
+export default noop.memo(function DevToolsContent(arg0) {
   _require = undefined;
   importDefault = undefined;
-  const tmp = callback4();
-  const tmp3 = importDefault;
-  obj1 = _require(504);
-  const items = [closure_7];
-  _require = obj1.useStateFromStores(items, () => {
+  dependencyMap = undefined;
+  _slicedToArray = undefined;
+  let arr5;
+  ({ title, embedded } = arg0);
+  const tmp = closure_12();
+  _require = require("useNavigation").useNavigation();
+  let obj = require("useNavigation");
+  let tmp4 = useSafeAreaInsetsDefault();
+  const items = [BuildOverrideStore];
+  closure_129_0 = require("initialize").useStateFromStores(items, () => {
     const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
     let id;
     if (overrides != null) {
-      const tmp4 = overrides[callback(undefined, _undefined[10]).DEVICE_FIELD];
+      const tmp4 = overrides[closure_0(undefined, _undefined[10]).DEVICE_FIELD];
       if (tmp4 != null) {
         id = tmp4.id;
       }
     }
     return id;
   });
-  let tmp4 = useSafeAreaInsetsDefault();
-  const items1 = [closure_8];
-  const stateFromStores = _require(504).useStateFromStores(items1, () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length);
-  const obj3 = _require(504);
-  const items2 = [closure_9];
-  importDefault = stateFromStores + _require(504).useStateFromStores(items2, () => Object.keys(clientOverrides.getClientOverrides()).length);
-  const obj4 = _require(504);
-  importDefault = getSortedDevToolsScreensDefault().map((arg0) => {
-    [tmp] = arg0;
+  let obj2 = require("initialize");
+  const items1 = [ExperimentStore];
+  const stateFromStores = require("initialize").useStateFromStores(items1, () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length);
+  const obj3 = require("initialize");
+  const items2 = [ApexExperimentStore];
+  closure_129_1 = stateFromStores + require("initialize").useStateFromStores(items2, () => Object.keys(clientOverrides.getClientOverrides()).length);
+  const obj4 = require("initialize");
+  importDefault = useSortedDevToolsScreensDefault().map((item) => {
+    [tmp] = item;
     if ("buildOverride" === tmp) {
       let tmp7;
       if (null != closure_0) {
-        let obj = { label: "Build override: ", value: null };
-        obj[1] = tmp5;
-        tmp7 = closure_1_10(closure_1_13, obj, tmp);
+        const obj2 = { label: "Build override: ", value: tmp5 };
+        tmp7 = closure_2_10(memoResult, obj2, tmp);
       }
       return tmp7;
     } else if ("experiments" === tmp) {
       let tmp2;
       if (closure_1 > 0) {
-        obj = { label: "Experiments overridden: ", value: null };
-        obj[1] = closure_1.toString();
-        tmp2 = closure_1_10(closure_1_13, obj, tmp);
+        const obj = { label: "Experiments overridden: ", value: closure_1.toString() };
+        tmp2 = closure_2_10(memoResult, obj, tmp);
       }
       return tmp2;
     }
   });
-  const arr4 = getSortedDevToolsScreensDefault();
-  [c2, c3] = callback(arr5.useState(false), 2);
-  arr5 = getSortedDevToolsScreensDefault();
-  obj = {
+  const arr4 = useSortedDevToolsScreensDefault();
+  [c2, c3] = arr5.useState(false);
+  arr5 = useSortedDevToolsScreensDefault();
+  const tmp6 = _slicedToArray(arr5.useState(false), 2);
+  let tmp7 = closure_10;
+  const tmp8 = closure_10(require("TableRowGroup").TableRowGroup, {
     title,
     hasIcons: true,
-    children: arr5.map((arg0, arg1) => {
-      [tmp, ] = arg0;
-      let obj = { label: tmp2, subLabel: table[arg1], icon: closure_1_10(callback(_undefined[20]).TableRow.Icon, { IconComponent: tmp3 }), arrow: !_undefined, trailing: null, onLongPress: null, onPress: null };
+    children: arr5.map((item, index) => {
+      [tmp, ] = item;
+      let obj = { label: tmp2, subLabel: closure_1[index], icon: closure_1_10(screenKey(_undefined[20]).TableRow.Icon, { IconComponent: tmp3 }), arrow: !_undefined, trailing: null, onLongPress: null, onPress: null };
       let tmp4Result;
       if (_undefined) {
-        obj = { screenKey: null, start: null, end: null };
-        obj[0] = tmp;
-        obj[1] = 0 === arg1;
-        obj[2] = arg1 === arr5.length - 1;
-        tmp4Result = tmp4(closure_1_14, obj);
+        let obj2 = { screenKey: tmp, start: 0 === index, end: index === arr5.length - 1 };
+        tmp4Result = tmp4(DevToolsContentSortButtons, obj2);
       }
-      obj[4] = tmp4Result;
-      obj[5] = function onLongPress() {
-        let obj = closure_1_1(closure_1_2[21]);
+      obj.trailing = tmp4Result;
+      obj.onLongPress = function onLongPress() {
         let str = "sorting-enabled";
-        if (closure_2) {
+        if (_undefined) {
           str = "sorting-disabled";
         }
-        obj = { key: str, content: null };
+        const obj2 = { key: str, content: null };
         let str2 = "Sorting enabled";
-        if (closure_2) {
+        if (tmp2) {
           str2 = "Sorting disabled";
         }
-        obj[1] = str2;
-        obj.open(obj);
-        const result = closure_1_0(closure_1_2[14]).triggerHapticFeedback(closure_1_0(tmp[14]).HapticFeedbackTypes.IMPACT_MEDIUM);
-        callback2((arg0) => !arg0);
+        obj2.content = str2;
+        closure_1(dependencyMap[21]).open(obj2);
+        const obj = closure_1(dependencyMap[21]);
+        tmp2 = _undefined;
+        const result = screenKey(dependencyMap[14]).triggerHapticFeedback(screenKey(tmp[14]).HapticFeedbackTypes.IMPACT_MEDIUM);
+        closure_1_3((arg0) => !arg0);
       };
-      obj[6] = function onPress() {
-        if (!closure_1_2) {
-          let arr = closure_1_0;
-          if (null != closure_1_0.push) {
-            arr = arr.push(callback);
+      obj.onPress = function onPress() {
+        if (!c2) {
+          if (null != screenKey.push) {
+            arr.push(screenKey);
           } else {
-            let obj = callback(table[22]);
-            obj = { screenKey: null };
-            obj[0] = callback;
-            obj.navigateToDevTools(obj);
+            const obj2 = { screenKey };
+            DevToolsNavigator.navigateToDevTools(obj2);
           }
+          arr = screenKey;
         }
       };
-      return closure_1_10(callback(_undefined[20]).TableRow, obj, tmp);
+      return closure_1_10(screenKey(_undefined[20]).TableRow, obj, tmp);
     })
-  };
-  const tmp8 = callback2(_require(5687).TableRowGroup, obj);
+  });
   let tmp7Result = tmp8;
   if (!embedded) {
-    obj = { style: null, contentContainerStyle: null, children: null };
-    obj[0] = tmp.devToolsContainer;
-    obj1 = { paddingBottom: null };
-    obj1[0] = tmp4.bottom + ThemesDefault.space.PX_16;
-    obj[1] = obj1;
-    obj[2] = tmp8;
-    tmp7Result = callback2(closure_6, obj);
+    const obj6 = { style: tmp.devToolsContainer, contentContainerStyle: null, children: null };
+    const obj7 = { paddingBottom: tmp4.bottom + nativeDefault.space.PX_16 };
+    obj6.contentContainerStyle = obj7;
+    obj6.children = tmp8;
+    tmp7Result = tmp7(closure_6, obj6);
   }
   return tmp7Result;
 });
-let result = require("set").fileFinishedImporting("modules/devtools/native/components/DevToolsContent.tsx");
-
-export default memoResult1;
 export const DevToolsContentSubLabel = memoResult;

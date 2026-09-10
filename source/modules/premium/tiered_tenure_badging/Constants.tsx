@@ -1,11 +1,11 @@
-// Module ID: 8194
-// Function ID: 8195
-// Name: DEFAULT_PREMIUM_BADGE_ID
+// Module ID: 8220
+// Function ID: 8221
+// Name: Constants
 // Dependencies: [2]
 
-// Module 8194 (DEFAULT_PREMIUM_BADGE_ID)
-import set from "set" /* 2 */;
+// Module 8220 (Constants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/premium/tiered_tenure_badging/Constants.tsx");
+const result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/Constants.tsx");
 
 export const DEFAULT_PREMIUM_BADGE_ID = "premium";

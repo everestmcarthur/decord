@@ -1,71 +1,63 @@
-// Module ID: 15588
-// Function ID: 15589
+// Module ID: 15618
+// Function ID: 15619
 // Name: DevToolsLoggingFlagsScreen
-// Dependencies: [17, 1347, 21, 4560, 576, 504, 5687, 7201, 1348, 2]
+// Dependencies: [17, 1347, 21, 4574, 576, 504, 5701, 7214, 1348, 2]
 // Exports: default
 
-// Module 15588 (DevToolsLoggingFlagsScreen)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 15618 (DevToolsLoggingFlagsScreen)
+import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
-import ThemesDefault from "Themes" /* 576 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
-import TableSwitchRow from "TableSwitchRow" /* 7201 */;
-import closure_3 from "refreshSourceMapCookie" /* 1347 */;
+import nativeDefault from "native" /* 576 */;
+import DeveloperOptionsActionCreators from "DeveloperOptionsActionCreators" /* 1348 */;
+import TableRowGroup from "TableRowGroup" /* 5701 */;
+import TableSwitchRow from "TableSwitchRow" /* 7214 */;
+import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1347 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import createStyles from "createStyles" /* 4574 */;
+import size from "module_2" /* 2 */;
 
-const ScrollView = get_ActivityIndicator.ScrollView;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let obj = { container: null, content: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-obj[0] = obj;
-obj[1] = { padding: ThemesDefault.space.PX_16 };
-let closure_6 = createCacheKey.createStyles(obj);
-const obj1 = { padding: ThemesDefault.space.PX_16 };
-const result = set.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsLoggingFlagsScreen.tsx");
+const ScrollView = _mod17.ScrollView;
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null };
+let obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj.content = { padding: nativeDefault.space.PX_16 };
+let closure_6 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsLoggingFlagsScreen.tsx");
 
 export default function DevToolsLoggingFlagsScreen() {
-  const tmp = callback3();
-  let obj = initialize;
-  const items = [closure_3];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ isLoggingGatewayEvents: closure_3.isLoggingGatewayEvents, isLoggingAnalyticsEvents: closure_3.isLoggingAnalyticsEvents, isTracingRequests: closure_3.isTracingRequests }));
-  obj = { style: tmp.container, contentContainerStyle: tmp.content, children: null };
+  const tmp = closure_6();
+  const items = [DeveloperOptionsStore];
+  const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => ({ isLoggingGatewayEvents: DeveloperOptionsStore.isLoggingGatewayEvents, isLoggingAnalyticsEvents: DeveloperOptionsStore.isLoggingAnalyticsEvents, isTracingRequests: DeveloperOptionsStore.isTracingRequests }));
+  const obj2 = { style: tmp.container, contentContainerStyle: tmp.content, children: null };
   ({ isLoggingGatewayEvents, isLoggingAnalyticsEvents, isTracingRequests } = stateFromStoresObject);
-  obj = { title: "Logging", hasIcons: false, children: null };
+  const obj3 = { title: "Logging", hasIcons: false, children: null };
   const items1 = [
-    callback(TableSwitchRow.TableSwitchRow, {
+    React4(TableSwitchRow.TableSwitchRow, {
       label: "Gateway Events",
       subLabel: "Logs all gateway events to console, including content. Enable verbose logs to see them.",
       value: isLoggingGatewayEvents,
       onValueChange(logGatewayEvents) {
-        let obj = callback(1348);
-        obj = { logGatewayEvents };
-        return obj.setDeveloperOptionSettings(obj);
+        return DeveloperOptionsActionCreators.setDeveloperOptionSettings({ logGatewayEvents });
       }
     }),
-    callback(TableSwitchRow.TableSwitchRow, {
+    React4(TableSwitchRow.TableSwitchRow, {
       label: "Analytics Events",
       subLabel: "Logs all analytics events to the developer console.",
       value: isLoggingAnalyticsEvents,
       onValueChange(logAnalyticsEvents) {
-        let obj = callback(1348);
-        obj = { logAnalyticsEvents };
-        return obj.setDeveloperOptionSettings(obj);
+        return DeveloperOptionsActionCreators.setDeveloperOptionSettings({ logAnalyticsEvents });
       }
     }),
-    callback(TableSwitchRow.TableSwitchRow, {
+    React4(TableSwitchRow.TableSwitchRow, {
       label: "Tracing Requests",
       subLabel: "Force trace all client requests with APM.",
       value: isTracingRequests,
       onValueChange(trace) {
-        let obj = callback(1348);
-        obj = { trace };
-        return obj.setDeveloperOptionSettings(obj);
+        return DeveloperOptionsActionCreators.setDeveloperOptionSettings({ trace });
       }
     })
   ];
-  obj[2] = items1;
-  obj[2] = callback2(TableRowGroupTitle.TableRowGroup, obj);
-  return callback(ScrollView, obj);
+  obj3.children = items1;
+  obj2.children = hasOwnProperty(TableRowGroup.TableRowGroup, obj3);
+  return React4(ScrollView, obj2);
 };

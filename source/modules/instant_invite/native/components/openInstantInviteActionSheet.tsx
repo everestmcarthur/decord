@@ -1,27 +1,27 @@
-// Module ID: 9832
-// Function ID: 9833
+// Module ID: 9859
+// Function ID: 9860
 // Name: openInstantInviteActionSheet
-// Dependencies: [4527, 9833, 1896, 1250, 2]
+// Dependencies: [4541, 9860, 1896, 1250, 2]
 // Exports: default
 
-// Module 9832 (openInstantInviteActionSheet)
-import set from "set" /* 2 */;
-import encodeProperties from "encodeProperties" /* 1250 */;
+// Module 9859 (openInstantInviteActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/instant_invite/native/components/openInstantInviteActionSheet.tsx");
+const discord_common_AnalyticsUtils = tmp2(1250);
+const result = size.fileFinishedImporting("modules/instant_invite/native/components/openInstantInviteActionSheet.tsx");
 
 export default function openInstantInviteActionSheet(invite_channel_id) {
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
+  const obj = ActionSheetActionCreatorsDefault;
   let id = invite_channel_id.vanityURLCode;
   if (id == null) {
     id = invite_channel_id.channel.id;
   }
   const combined = "InstantInviteActionSheet-" + id;
-  obj = {};
+  const obj2 = {};
   const merged = Object.assign(invite_channel_id);
-  obj.impressionName = encodeProperties.ImpressionNames.GUILD_INVITE;
-  obj.impressionProperties = { invite_channel_id: invite_channel_id.channel.id, invite_guild_id: invite_channel_id.channel.guild_id };
-  obj.openLazy(asyncRequireImpl(9833, dependencyMap.paths), combined, obj, invite_channel_id.stackingBehavior);
+  obj2.impressionName = discord_common_AnalyticsUtils.ImpressionNames.GUILD_INVITE;
+  obj2.impressionProperties = { invite_channel_id: invite_channel_id.channel.id, invite_guild_id: invite_channel_id.channel.guild_id };
+  obj.openLazy(asyncRequireImpl(9860, dependencyMap.paths), combined, obj2, invite_channel_id.stackingBehavior);
 };

@@ -1,23 +1,25 @@
-// Module ID: 11041
-// Function ID: 11042
+// Module ID: 11068
+// Function ID: 11069
 // Name: PremiumWishlistItemCard
-// Dependencies: [19, 21, 8777, 8778, 2]
+// Dependencies: [19, 21, 8805, 8806, 2]
 // Exports: default
 
-// Module 11041 (PremiumWishlistItemCard)
-import SourceIconDefault from "SourceIcon" /* 8778 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 11068 (PremiumWishlistItemCard)
+import SKUPreview from "SKUPreview" /* 8805 */;
+import WishlistItemCardBaseDefault from "WishlistItemCardBase" /* 8806 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/wishlists/native/PremiumWishlistItemCard.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/wishlists/native/PremiumWishlistItemCard.tsx");
 
 export default function PremiumWishlistItemCard(size) {
   size = size.size;
   ({ sku, source } = size);
-  const merged = Object.assign(size, Object.create(null));
+  const merged = Object.assign(size, Object.assign({ sku: 0, source: 0, size: 0 }));
   const items = [size];
-  const callback = React.useCallback(() => closure_1_4(size(closure_1_2[2]).PremiumSKUPreview, { size }), items);
+  const callback = noop.useCallback(() => jsx(SKUPreview.PremiumSKUPreview, { size }), items);
   const merged1 = Object.assign(merged);
-  return jsx(SourceIconDefault, { accessibilityLabel: sku.name, renderPreview: callback, source, size });
+  return jsx(WishlistItemCardBaseDefault, { accessibilityLabel: sku.name, renderPreview: callback, source, size });
 };

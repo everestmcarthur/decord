@@ -1,31 +1,34 @@
-// Module ID: 8652
-// Function ID: 8653
+// Module ID: 8680
+// Function ID: 8681
 // Name: useSelectedTeen
-// Dependencies: [1371, 7537, 563, 2]
+// Dependencies: [1371, 7551, 563, 2]
 // Exports: useSelectedTeen, useSelectedTeenId
 
-// Module 8652 (useSelectedTeen)
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 563 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
-import closure_3 from "freshTeenActivityWithMap" /* 7537 */;
+// Module 8680 (useSelectedTeen)
+import useStateFromStores from "useStateFromStores" /* 563 */;
+import UserStore from "UserStore" /* 1371 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7551 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useSelectedTeen.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useSelectedTeen.tsx");
 
 export const useSelectedTeen = function useSelectedTeen() {
-  const items = [closure_3];
-  _require = _require(563).useStateFromStores(items, () => selectedTeenId.getSelectedTeenId());
-  const obj = _require(563);
-  const items1 = [closure_2];
-  return _require(563).useStateFromStores(items1, () => {
+  const items = [FamilyCenterStore];
+  _require = require("useStateFromStores").useStateFromStores(items, () => selectedTeenId.getSelectedTeenId());
+  const obj = require("useStateFromStores");
+  const items1 = [UserStore];
+  return require("useStateFromStores").useStateFromStores(items1, () => {
     let user;
     if (null !== closure_0) {
-      user = closure_1_2.getUser(tmp);
+      user = UserStore.getUser(tmp);
     }
     return user;
   });
 };
 export const useSelectedTeenId = function useSelectedTeenId() {
-  const items = [closure_3];
-  return defaultAreStatesEqual.useStateFromStores(items, () => selectedTeenId.getSelectedTeenId());
+  const items = [FamilyCenterStore];
+  return useStateFromStores.useStateFromStores(items, () => selectedTeenId.getSelectedTeenId());
 };

@@ -1,74 +1,69 @@
-// Module ID: 16882
-// Function ID: 16883
+// Module ID: 16919
+// Function ID: 16920
 // Name: MessageRequestMutualServers
-// Dependencies: [19, 17, 21, 4560, 5584, 16883, 1114, 12622, 4556, 5123, 2]
+// Dependencies: [19, 17, 21, 4574, 5598, 16920, 1114, 12648, 4570, 5137, 2]
 // Exports: default
 
-// Module 16882 (MessageRequestMutualServers)
-import noopAll from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16919 (MessageRequestMutualServers)
+import GuildIconDefault from "GuildIcon" /* 5598 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ container: { flexDirection: "row", alignItems: "center", gap: 4 }, label: { flexShrink: 1 } });
-const result = require("set").fileFinishedImporting("modules/message_request/native/MessageRequestMutualServers.tsx");
+const require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let closure_6 = createStyles.createStyles({ container: { flexDirection: "row", alignItems: "center", gap: 4 }, label: { flexShrink: 1 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/message_request/native/MessageRequestMutualServers.tsx");
 
 export default function MessageRequestMutualServers(textVariant) {
   ({ onPress, iconSize } = textVariant);
   ({ userId, style } = textVariant);
   if (iconSize === undefined) {
-    iconSize = iconSize(5584).GuildIconSizes.XXSMALL_12;
+    iconSize = iconSize(5598).GuildIconSizes.XXSMALL_12;
   }
   let str = textVariant.textVariant;
   if (str === undefined) {
     str = "text-xs/medium";
   }
   const suffix = textVariant.suffix;
-  const tmp3 = callback2();
-  let obj = iconSize(16883);
-  const mutualGuildsForMessageRequests = obj.useMutualGuildsForMessageRequests(userId);
+  const tmp3 = closure_6();
+  const mutualGuildsForMessageRequests = iconSize(16920).useMutualGuildsForMessageRequests(userId);
   const substr = mutualGuildsForMessageRequests.slice(0, 3);
   if (mutualGuildsForMessageRequests.length > 0) {
     const intl2 = tmp4(1114).intl;
-    obj = { count: null };
-    obj[0] = length;
-    let formatResult = intl2.format(tmp4(1114).t.eE3oep, obj);
+    const obj2 = { count: length };
+    let formatResult = intl2.format(tmp4(1114).t.eE3oep, obj2);
   } else {
     const intl = tmp4(1114).intl;
     formatResult = intl.string(tmp4(1114).t.jpY0X5);
   }
-  obj = { style: items, children: null };
-  items = [tmp3.container, style];
+  const obj3 = { style: null, children: null };
+  const items = [tmp3.container, style];
+  obj3.style = items;
   let tmp9 = length > 0;
   if (tmp9) {
-    obj1 = { size: null, names: null, children: null };
-    obj1[0] = iconSize;
-    obj1[1] = substr.map((name) => name.name);
-    obj1[2] = substr.map((guild) => closure_1_4(closure_1_1(closure_1_2[4]), { guild, size: iconSize }, guild.id));
-    tmp9 = callback(tmp4(12622).GuildIconPile, obj1);
+    const obj4 = { size: iconSize, names: substr.map((name) => name.name), children: substr.map((guild) => React4(GuildIconDefault, { guild, size: iconSize }, guild.id)) };
+    tmp9 = closure_4(tmp4(12648).GuildIconPile, obj4);
   }
   const items1 = [tmp9, ];
-  const obj2 = { variant: str, color: "text-muted", lineClamp: 1, style: tmp3.label, children: null };
+  const obj5 = { variant: str, color: "text-muted", lineClamp: 1, style: tmp3.label, children: null };
   let combined = formatResult;
   if (null != suffix) {
     const _HermesInternal = HermesInternal;
     combined = "" + formatResult + " \u00B7 " + suffix;
   }
-  obj2[4] = combined;
-  items1[1] = callback(iconSize(4556).Text, obj2);
-  obj[1] = items1;
-  const tmp7Result = closure_5(View, obj);
+  obj5.children = combined;
+  items1[1] = closure_4(iconSize(4570).Text, obj5);
+  obj3.children = items1;
+  const tmp7Result = closure_5(View, obj3);
   let tmp11Result = tmp7Result;
   if (null != onPress) {
     tmp11Result = tmp7Result;
     if (length > 0) {
-      const obj3 = { accessibilityRole: "button", onPress: null, children: null };
-      obj3[1] = onPress;
-      obj3[2] = tmp7Result;
-      tmp11Result = tmp11(tmp4(5123).PressableOpacity, obj3);
+      const obj6 = { accessibilityRole: "button", onPress, children: tmp7Result };
+      tmp11Result = tmp11(tmp4(5137).PressableOpacity, obj6);
     }
   }
   return tmp11Result;

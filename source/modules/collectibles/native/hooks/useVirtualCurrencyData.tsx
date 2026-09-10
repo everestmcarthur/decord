@@ -1,25 +1,27 @@
-// Module ID: 13153
-// Function ID: 13154
+// Module ID: 13178
+// Function ID: 13179
 // Name: useVirtualCurrencyData
-// Dependencies: [19, 7553, 8855, 2]
+// Dependencies: [19, 7567, 8882, 2]
 // Exports: useVirtualCurrencyData
 
-// Module 13153 (useVirtualCurrencyData)
-import closure_2 from "noop" /* 19 */;
+// Module 13178 (useVirtualCurrencyData)
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7567 */;
+import _mod8882 from "module_8882" /* 8882 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/native/hooks/useVirtualCurrencyData.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/hooks/useVirtualCurrencyData.tsx");
 
 export const useVirtualCurrencyData = function useVirtualCurrencyData(product, canUseShopDiscountsResult) {
-  let obj = productOrbPrice(balance[1]);
-  obj = { product, hasShopDiscount: canUseShopDiscountsResult };
-  productOrbPrice = obj.getProductOrbPrice(obj);
-  balance = productOrbPrice(balance[2]).useFetchVirtualCurrencyBalance().balance;
+  const productOrbPrice = CollectiblesProductUtils.getProductOrbPrice({ product, hasShopDiscount: canUseShopDiscountsResult });
+  const obj2 = { product, hasShopDiscount: canUseShopDiscountsResult };
+  const balance = _mod8882.useFetchVirtualCurrencyBalance().balance;
   const items = [productOrbPrice, balance];
-  obj = {
+  return {
     price: productOrbPrice,
     balance,
-    canAfford: React.useMemo(() => {
+    canAfford: noop.useMemo(() => {
       let tmp2 = null;
       if (null != productOrbPrice) {
         tmp2 = null;
@@ -30,5 +32,4 @@ export const useVirtualCurrencyData = function useVirtualCurrencyData(product, c
       return tmp2;
     }, items)
   };
-  return obj;
 };

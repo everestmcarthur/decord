@@ -1,31 +1,29 @@
-// Module ID: 12558
-// Function ID: 12559
+// Module ID: 12584
+// Function ID: 12585
 // Name: getGuildPowerupsBoostInfoText
-// Dependencies: [4450, 1114, 2428, 2]
+// Dependencies: [4464, 1114, 2428, 2]
 // Exports: getGuildPowerupsBoostInfoText
 
-// Module 12558 (getGuildPowerupsBoostInfoText)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 2428 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4450 */;
+// Module 12584 (getGuildPowerupsBoostInfoText)
+import util from "util" /* 1114 */;
+import _modDef2428 from "module_2428" /* 2428 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4464 */;
+import size from "module_2" /* 2 */;
 
-const BoostInfoType = BoostedGuildTiers.BoostInfoType;
-const result = set.fileFinishedImporting("modules/premium/powerups/utils/getGuildPowerupsBoostInfoText.tsx");
+const BoostInfoType = GuildPowerupsConstants.BoostInfoType;
+const result = size.fileFinishedImporting("modules/premium/powerups/utils/getGuildPowerupsBoostInfoText.tsx");
 
 export const getGuildPowerupsBoostInfoText = function getGuildPowerupsBoostInfoText(count, type) {
   if (BoostInfoType.AVAILABLE === type) {
-    const intl3 = getSystemLocale.intl;
-    let obj = { boostCount: null };
-    obj[0] = count;
-    return intl3.formatToPlainString(messagesProxyDefault.BdRXZA, obj);
+    const intl3 = util.intl;
+    const obj2 = { boostCount: count };
+    return intl3.formatToPlainString(_modDef2428.BdRXZA, obj2);
   } else if (tmp.SPENT === type) {
-    const intl2 = getSystemLocale.intl;
-    obj = { boostCount: null };
-    obj[0] = count;
-    return intl2.formatToPlainString(messagesProxyDefault.xvgIVG, obj);
+    const intl2 = util.intl;
+    const obj = { boostCount: count };
+    return intl2.formatToPlainString(_modDef2428.xvgIVG, obj);
   } else if (tmp.TOTAL === type) {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault["/F7Z2y"]);
+    const intl = util.intl;
+    return intl.string(_modDef2428["/F7Z2y"]);
   }
 };

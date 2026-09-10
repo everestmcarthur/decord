@@ -1,21 +1,21 @@
-// Module ID: 17388
-// Function ID: 17389
-// Name: setSoundpack
-// Dependencies: [9908, 1074, 1242, 573, 2]
+// Module ID: 17419
+// Function ID: 17420
+// Name: SoundpackActions
+// Dependencies: [9935, 1074, 1242, 573, 2]
 // Exports: setSoundpack
 
-// Module 17388 (setSoundpack)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import closure_2 from "Soundpacks" /* 9908 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
+// Module 17419 (SoundpackActions)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import SoundpackStore from "SoundpackStore" /* 9935 */;
 
-const result = require("set").fileFinishedImporting("modules/soundpacks/SoundpackActions.tsx");
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/soundpacks/SoundpackActions.tsx");
 
 export const setSoundpack = function setSoundpack(CLASSIC, name) {
-  let obj = expandEventPropertiesDefault;
-  obj = { soundpack: CLASSIC, previous_soundpack: soundpack.getSoundpack() };
-  obj.track(AnalyticEvents.SOUNDPACK_UPDATED, obj);
-  obj = { type: "SET_SOUNDPACK", soundpack: CLASSIC, forExperimentId: name };
-  dispatcherDefault.dispatch(obj);
+  const obj = AnalyticsUtilsDefault;
+  obj.track(AnalyticEvents.SOUNDPACK_UPDATED, { soundpack: CLASSIC, previous_soundpack: SoundpackStore.getSoundpack() });
+  const obj2 = { soundpack: CLASSIC, previous_soundpack: SoundpackStore.getSoundpack() };
+  DispatcherDefault.dispatch({ type: "SET_SOUNDPACK", soundpack: CLASSIC, forExperimentId: name });
 };

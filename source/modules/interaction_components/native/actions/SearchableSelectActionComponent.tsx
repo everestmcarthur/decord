@@ -1,35 +1,41 @@
-// Module ID: 15717
-// Function ID: 15718
+// Module ID: 15747
+// Function ID: 15748
 // Name: SearchableSelectActionComponent
-// Dependencies: [19, 1957, 21, 4785, 8112, 38, 8120, 1894, 15715, 8122, 4527, 11832, 1896, 11828, 2]
+// Dependencies: [19, 1957, 21, 4799, 8138, 38, 8146, 1894, 15745, 8148, 4541, 11858, 1896, 11854, 2]
 // Exports: default
 
-// Module 15717 (SearchableSelectActionComponent)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 15747 (SearchableSelectActionComponent)
+import Server from "Server" /* 1894 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import SearchableSelectActionComponentUtils from "SearchableSelectActionComponentUtils" /* 8146 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/interaction_components/native/actions/SearchableSelectActionComponent.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/interaction_components/native/actions/SearchableSelectActionComponent.tsx");
 
 export default function SearchableSelectActionComponent(defaultValues) {
-  const _require = defaultValues;
-  let obj = _require(customId[3]);
-  const selectPlaceholder = obj.getSelectPlaceholder(defaultValues);
-  obj1 = _require(customId[4]);
-  const componentStateContext = obj1.useComponentStateContext();
+  _require = defaultValues;
+  const selectPlaceholder = require("InteractionComponentUtils").getSelectPlaceholder(defaultValues);
+  let obj = require("InteractionComponentUtils");
+  const componentStateContext = require("ComponentStateContext").useComponentStateContext();
   let modal;
+  let obj2 = require("ComponentStateContext");
   if (componentStateContext != null) {
     modal = componentStateContext.modal;
   }
   guild_id(customId[5])(null != modal, "SearchableSelectActionComponent must be rendered inside a modal ComponentStateContext");
   let channelId;
-  let tmp4Result = tmp4(tmp2[5]);
+  let tmp5 = guild_id(customId[5]);
   if (componentStateContext != null) {
     channelId = componentStateContext.channelId;
   }
-  tmp4Result(null != channelId, "SearchableSelectActionComponent must be used inside a channel");
-  channel = channel.getChannel(componentStateContext.channelId);
+  guild_id(customId[5])(null != channelId, "SearchableSelectActionComponent must be used inside a channel");
+  const channel = ChannelStore.getChannel(componentStateContext.channelId);
   guild_id = undefined;
   if (channel != null) {
     guild_id = channel.guild_id;
@@ -38,8 +44,8 @@ export default function SearchableSelectActionComponent(defaultValues) {
     guild_id = null;
   }
   const items = [defaultValues.defaultValues, guild_id];
-  let memo = obj.useMemo(() => {
-    let snowflakeSelectDefaultValues = defaultValues(customId[6]).getSnowflakeSelectDefaultValues(defaultValues.defaultValues, guild_id);
+  let memo = obj4.useMemo(() => {
+    let snowflakeSelectDefaultValues = SearchableSelectActionComponentUtils.getSnowflakeSelectDefaultValues(defaultValues.defaultValues, guild_id);
     if (snowflakeSelectDefaultValues == null) {
       snowflakeSelectDefaultValues = [];
     }
@@ -47,10 +53,8 @@ export default function SearchableSelectActionComponent(defaultValues) {
   }, items);
   let tmp13;
   if (memo.length > 0) {
-    obj = { type: null, selectedOptions: null };
-    obj[0] = defaultValues.type;
-    obj[1] = memo;
-    tmp13 = obj;
+    let obj3 = { type: defaultValues.type, selectedOptions: memo };
+    tmp13 = obj3;
   }
   const componentState = componentStateContext.useComponentState(defaultValues, tmp13);
   const state = componentState.state;
@@ -60,7 +64,7 @@ export default function SearchableSelectActionComponent(defaultValues) {
   if (state != null) {
     type = state.type;
   }
-  if (type !== _require(customId[7]).ComponentType.USER_SELECT) {
+  if (type !== require("Server").ComponentType.USER_SELECT) {
     let type1;
     if (state != null) {
       type1 = state.type;
@@ -89,45 +93,36 @@ export default function SearchableSelectActionComponent(defaultValues) {
       if (type4 === tmp(tmp2[7]).ComponentType.LABEL) {
         tmp22 = first;
       }
-      obj = { channelId: null, guildId: null, containerId: null, onSubmit: null, labelComponent: null, allowEmpty: null };
-      obj[0] = componentStateContext.channelId;
-      obj[1] = guild_id;
-      obj[2] = customId;
-      obj[3] = executeStateUpdate;
-      obj[4] = tmp22;
-      let tmpResult = tmp(tmp2[3]);
-      obj[5] = tmpResult.canSelectBeEmpty(defaultValues, "modal");
-      obj1 = { model: null, onTap: null };
-      const obj2 = {};
-      tmp4Result = tmp4(tmp2[8]);
+      obj4 = { channelId: componentStateContext.channelId, guildId: guild_id, containerId: customId, onSubmit: executeStateUpdate, labelComponent: tmp22, allowEmpty: tmp(tmp2[3]).canSelectBeEmpty(defaultValues, "modal") };
+      const obj5 = { model: null, onTap: null };
+      const obj6 = {};
+      const tmpResult = tmp(tmp2[3]);
       let merged = Object.assign(defaultValues);
-      obj2.placeholder = selectPlaceholder;
-      obj2.state = visualState;
-      tmpResult = tmp(tmp2[9]);
-      obj2.selectedOptions = tmpResult.transformSearchableSelectOptions(memo, guild_id);
-      obj1[0] = obj2;
-      obj1[1] = function onTap() {
-        if (defaultValues.type === defaultValues(customId[7]).ComponentType.CHANNEL_SELECT) {
+      obj6.placeholder = selectPlaceholder;
+      obj6.state = visualState;
+      const tmp4Result2 = tmp4(tmp2[8]);
+      obj6.selectedOptions = tmp(tmp2[9]).transformSearchableSelectOptions(memo, guild_id);
+      obj5.model = obj6;
+      obj5.onTap = function onTap() {
+        if (defaultValues.type === Server.ComponentType.CHANNEL_SELECT) {
           const _HermesInternal2 = HermesInternal;
-          const obj3 = guild_id(tmp3[10]);
-          obj = { selectionActionComponent: null };
-          obj[0] = tmp;
+          const obj3 = ActionSheetActionCreatorsDefault;
+          const obj2 = { selectionActionComponent: tmp };
           const combined = "ChannelSelectComponentActionSheet:" + customId;
-          const merged = Object.assign(obj);
-          obj3.openLazy(tmp2(tmp3[12])(tmp3[11], tmp3.paths), combined, obj);
-          const tmp14 = tmp2(tmp3[12])(tmp3[11], tmp3.paths);
+          const merged = Object.assign(obj4);
+          obj3.openLazy(tmp2(1896)(11858, tmp3.paths), combined, obj2);
+          const tmp14 = tmp2(1896)(11858, tmp3.paths);
         } else {
-          obj = guild_id(tmp3[10]);
           const _HermesInternal = HermesInternal;
-          obj = { selectionActionComponent: null };
-          obj[0] = tmp;
+          const obj = ActionSheetActionCreatorsDefault;
+          obj4 = { selectionActionComponent: tmp };
           const combined1 = "MentionableSelectComponentActionSheet:" + customId;
-          const merged1 = Object.assign(obj);
-          obj.openLazy(tmp2(tmp3[12])(tmp3[13], tmp3.paths), combined1, obj);
-          const tmp5 = tmp2(tmp3[12])(tmp3[13], tmp3.paths);
+          const merged1 = Object.assign(obj4);
+          obj.openLazy(tmp2(1896)(11854, tmp3.paths), combined1, obj4);
+          const tmp5 = tmp2(1896)(11854, tmp3.paths);
         }
       };
-      return <tmp4Result model={null} onTap={null} />;
+      return <tmp4Result2 model={null} onTap={null} />;
     }
   }
   memo = state.selectedOptions;

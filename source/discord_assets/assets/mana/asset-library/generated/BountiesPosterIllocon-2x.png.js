@@ -1,12 +1,11 @@
-// Module ID: 5806
-// Function ID: 5807
-// Name: metadata
+// Module ID: 5820
+// Function ID: 5821
 // Dependencies: [2]
 
-// Module 5806 (metadata)
-import set from "set" /* 2 */;
+// Module 5820
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BountiesPosterIllocon-2x.png.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BountiesPosterIllocon-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/d9542b88ed933b80986126386fac39d5377ce538ed7472b525f5dfdb6ab25a3f.png";
 export const metadata = { fileBytes: 620 };

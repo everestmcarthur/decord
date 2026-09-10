@@ -1,26 +1,29 @@
-// Module ID: 10038
-// Function ID: 10039
+// Module ID: 10065
+// Function ID: 10066
 // Name: useMyCurrentStageChannelRole
-// Dependencies: [502, 2011, 5421, 504, 2]
+// Dependencies: [502, 2011, 5435, 504, 2]
 // Exports: default
 
-// Module 10038 (useMyCurrentStageChannelRole)
-import closure_2 from "fetchFingerprint" /* 502 */;
-import closure_3 from "handleConnectionOpen" /* 2011 */;
-import closure_4 from "buildStageChannelUserRoles" /* 5421 */;
+// Module 10065 (useMyCurrentStageChannelRole)
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5435 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/stage_channels/useMyCurrentStageChannelRole.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/useMyCurrentStageChannelRole.tsx");
 
 export default function useMyCurrentStageChannelRole(arg0) {
-  const _require = arg0;
-  const items = [closure_2, closure_3, closure_4];
+  _require = arg0;
+  const items = [AuthenticationStore, SelectedChannelStore, StageChannelRoleStore];
   const items1 = [arg0];
-  return _require(504).useStateFromStores(items, () => {
-    const id = closure_1_2.getId();
+  return require("initialize").useStateFromStores(items, () => {
+    const id = AuthenticationStore.getId();
     let permissionsForUser = null;
-    if (closure_1_3.getVoiceChannelId() === closure_0) {
-      permissionsForUser = closure_1_4.getPermissionsForUser(id, tmp2);
+    if (SelectedChannelStore.getVoiceChannelId() === closure_0) {
+      permissionsForUser = StageChannelRoleStore.getPermissionsForUser(id, tmp2);
     }
     return permissionsForUser;
   }, items1);

@@ -1,12 +1,12 @@
-// Module ID: 11408
-// Function ID: 11409
-// Name: VibingWumpusAction
+// Module ID: 11435
+// Function ID: 11436
+// Name: InappropriateConversationsConstants
 // Dependencies: [2]
 
-// Module 11408 (VibingWumpusAction)
-import set from "set" /* 2 */;
+// Module 11435 (InappropriateConversationsConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationsConstants.tsx");
+const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationsConstants.tsx");
 
 export const VibingWumpusAction = { PLAY: "play", PAUSE: "pause", BACK_TO_CONVERSATION: "back_to_conversation" };
 export const VibingWumpusSource = { INAPPROPRIATE_CONVERSATION: "inappropriate_conversation", KEYBIND: "keybind" };

@@ -1,111 +1,97 @@
-// Module ID: 11652
-// Function ID: 11653
-// Name: closeActionSheet
-// Dependencies: [32, 19, 17, 11631, 21, 4560, 576, 4527, 8272, 12, 11634, 4992, 4763, 11653, 1896, 1611, 7150, 7149, 7199, 6627, 4556, 11635, 5687, 5605, 5604, 1114, 2]
+// Module ID: 11678
+// Function ID: 11679
+// Name: FeedbackActionSheet
+// Dependencies: [32, 19, 17, 11657, 21, 4574, 576, 4541, 8300, 12, 11660, 5006, 4777, 11679, 1896, 1611, 7164, 7163, 7212, 6641, 4570, 11661, 5701, 5619, 5618, 1114, 2]
 // Exports: default
 
-// Module 11652 (closeActionSheet)
-import ThemesDefault from "Themes" /* 576 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { FeedbackRating } from "FeedbackRating" /* 11631 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11678 (FeedbackActionSheet)
+import nativeDefault from "native" /* 576 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import FeedbackUtils from "FeedbackUtils" /* 11660 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = fn;
 function closeActionSheet() {
-  ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
+  ActionSheetActionCreatorsDefault.hideActionSheet();
 }
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, ratingsHeader: null, reasonsList: null };
-createCacheKey = { padding: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { textAlign: "center" };
-createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_16 };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { marginBottom: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/feedback/native/FeedbackActionSheet.tsx");
+const View = fn(17).View;
+const FeedbackRating = fn(11657).FeedbackRating;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { padding: nativeDefault.space.PX_16 }, ratingsHeader: { textAlign: "center" }, reasonsList: null };
+let obj3 = { padding: nativeDefault.space.PX_16 };
+obj2.reasonsList = { marginBottom: nativeDefault.space.PX_16 };
+let closure_9 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/feedback/native/FeedbackActionSheet.tsx");
 
 export default function FeedbackActionSheet(feedbackReasons) {
   ({ hideDontShowAgainCheckbox, ratingsBodyLabel, reasons } = feedbackReasons);
   feedbackReasons = feedbackReasons.feedbackReasons;
   const otherKey = feedbackReasons.otherKey;
-  ({ trackOpen: closure_3, trackReport: closure_4, getFreeformDescription: View } = feedbackReasons);
-  let ref;
-  closure_7 = undefined;
+  ({ trackOpen: _slicedToArray, trackReport: noop, getFreeformDescription: View } = feedbackReasons);
   c8 = undefined;
-  let first;
-  closure_10 = undefined;
+  selectedRating = undefined;
+  onPress = undefined;
   c11 = undefined;
   c12 = undefined;
   c13 = undefined;
   c14 = undefined;
-  let first1;
+  first1 = undefined;
   closure_16 = undefined;
-  closure_17 = undefined;
   ({ headerLabel, showHeaderCloseButton, ratingOptions, ratingTextLabels, reasonsHeaderLabel } = feedbackReasons);
-  let tmp = first();
-  ref = React.useRef(null);
+  let tmp = selectedRating();
+  const ref = noop.useRef(null);
   const tmp5 = feedbackReasons(otherKey[8])(reasons);
   closure_7 = tmp5;
   let obj = feedbackReasons(otherKey[9]);
-  [arr, c8] = callback(React.useState(obj.shuffle(reasons)), 2);
+  [arr, c8] = noop.useState(feedbackReasons(otherKey[9]).shuffle(reasons));
   const items = [reasons, tmp5, otherKey];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (!obj.isEqual(closure_7, reasons)) {
-      _undefined(reasons(otherKey[10]).shuffleProblems(reasons, otherKey));
-      const obj2 = reasons(otherKey[10]);
+      _undefined(FeedbackUtils.shuffleProblems(reasons, otherKey));
     }
   }, items);
-  const tmp8 = callback(React.useState(null), 2);
-  first = tmp8[0];
-  closure_10 = tmp8[1];
-  const tmp6 = callback(React.useState(obj.shuffle(reasons)), 2);
-  [c11, c12] = callback(React.useState(null), 2);
-  const tmp10 = callback(React.useState(null), 2);
-  [c13, c14] = callback(React.useState(false), 2);
-  const tmp12 = callback(React.useState(false), 2);
-  first1 = tmp12[0];
-  closure_16 = tmp12[1];
+  [selectedRating, onPress] = noop.useState(null);
+  const tmp6 = _slicedToArray(noop.useState(feedbackReasons(otherKey[9]).shuffle(reasons)), 2);
+  [c11, c12] = noop.useState(null);
+  const tmp10 = _slicedToArray(noop.useState(null), 2);
+  [c13, c14] = noop.useState(false);
+  [first1, closure_16] = noop.useState(false);
   feedbackReasons(otherKey[11])(() => {
-    callback();
+    _slicedToArray();
   });
-  obj1 = reasons(otherKey[11]);
-  const unmountEffect = obj1.useUnmountEffect(() => {
+  const tmp11 = _slicedToArray(noop.useState(false), 2);
+  const unmountEffect = reasons(otherKey[11]).useUnmountEffect(() => {
     if (c13) {
-      let obj = { result: null, trackReport: null, descriptionLabel: null };
-      obj = { rating: null, reason: null, dontShowAgain: null };
-      obj[0] = first;
-      obj[1] = c11;
-      obj[2] = first1;
-      obj[0] = obj;
-      obj[1] = callback2;
+      const obj3 = { result: null, trackReport: null, descriptionLabel: null };
+      const obj4 = { rating, reason, dontShowAgain: first1 };
+      obj3.result = obj4;
+      obj3.trackReport = trackReport;
       let tmp14;
-      const obj2 = feedbackReasons(otherKey[12]);
-      if (callback3 != null) {
-        tmp14 = callback3(c11);
+      const obj2 = ModalActionCreatorsDefault;
+      if (View != null) {
+        tmp14 = View(reason);
       }
-      obj[2] = tmp14;
-      obj2.pushLazy(reasons(otherKey[14])(otherKey[13], otherKey.paths), obj);
-      const tmp9 = reasons(otherKey[14])(otherKey[13], otherKey.paths);
+      obj3.descriptionLabel = tmp14;
+      obj2.pushLazy(asyncRequireImpl(11679, dependencyMap.paths), obj3);
+      const tmp9 = asyncRequireImpl(11679, dependencyMap.paths);
     } else {
-      obj = { rating: null, reason: null, dontShowAgain: null };
-      obj[0] = first;
-      obj[1] = c11;
-      obj[2] = first1;
-      callback2(obj);
+      const obj = { rating, reason, dontShowAgain: first1 };
+      trackReport(obj);
     }
   });
   const items1 = [feedbackReasons];
-  callback = React.useCallback((arg0) => {
-    callback5(arg0);
-    if (arg0 === ref.GOOD) {
+  const callback = noop.useCallback((arg0) => {
+    closure_10(arg0);
+    if (arg0 === FeedbackRating.GOOD) {
       _undefined2(null);
       _undefined3(false);
-      feedbackReasons(otherKey[7]).hideActionSheet();
-      const obj = feedbackReasons(otherKey[7]);
+      ActionSheetActionCreatorsDefault.hideActionSheet();
     } else {
       const current = ref.current;
       if (current != null) {
@@ -113,7 +99,7 @@ export default function FeedbackActionSheet(feedbackReasons) {
       }
     }
   }, []);
-  closure_17 = React.useCallback((value) => {
+  closure_17 = noop.useCallback((value) => {
     _undefined2(value);
     let hasItem;
     if (feedbackReasons != null) {
@@ -122,11 +108,11 @@ export default function FeedbackActionSheet(feedbackReasons) {
     if (hasItem) {
       _undefined3(true);
     }
-    feedbackReasons(otherKey[7]).hideActionSheet();
+    ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items1);
-  let tmp18 = null !== first;
+  let tmp18 = null !== selectedRating;
   if (tmp18) {
-    tmp18 = first !== ref.GOOD;
+    tmp18 = selectedRating !== ref.GOOD;
   }
   const bottom = tmp3(tmp4[15])().bottom;
   let num = 48;
@@ -134,67 +120,67 @@ export default function FeedbackActionSheet(feedbackReasons) {
     num = 0;
   }
   const sum = 232 + num + bottom;
-  obj = { scrollable: true, ref, startHeight: sum, maxHeight: null, header: null, children: null };
+  let obj3 = { scrollable: true, ref, startHeight: sum, maxHeight: null, header: null, children: null };
   let tmp22;
-  if (null == first) {
+  if (null == selectedRating) {
     tmp22 = sum;
   }
-  obj[3] = tmp22;
-  obj = { title: headerLabel, trailing: null };
+  obj3.maxHeight = tmp22;
+  let obj4 = { title: headerLabel, trailing: null };
   let tmp21Result = null;
   if (showHeaderCloseButton) {
-    obj1 = { onPress: null };
-    obj1[0] = closure_10;
-    tmp21Result = tmp21(tmp15(tmp4[18]).ActionSheetCloseButton, obj1);
+    const obj5 = { onPress };
+    tmp21Result = tmp21(tmp15(tmp4[18]).ActionSheetCloseButton, obj5);
   }
-  obj[1] = tmp21Result;
-  obj[4] = closure_7(reasons(otherKey[17]).BottomSheetTitleHeader, obj);
-  let obj2 = { contentContainerStyle: items2, children: null };
-  items2 = [tmp.container, { paddingBottom: tmp.container.padding + bottom }];
-  tmp21Result = null;
+  obj4.trailing = tmp21Result;
+  obj3.header = closure_7(reasons(otherKey[17]).BottomSheetTitleHeader, obj4);
+  const obj6 = { contentContainerStyle: null, children: null };
+  const items2 = [tmp.container, { paddingBottom: tmp.container.padding + bottom }];
+  obj6.contentContainerStyle = items2;
+  let tmp21Result4 = null;
   if (null != ratingsBodyLabel) {
-    const obj3 = { style: null, variant: "text-md/medium", color: "text-default", children: null };
-    obj3[0] = tmp.ratingsHeader;
-    obj3[3] = ratingsBodyLabel;
-    tmp21Result = tmp21(tmp15(tmp4[20]).Text, obj3);
+    const obj7 = { style: tmp.ratingsHeader, variant: "text-md/medium", color: "text-default", children: ratingsBodyLabel };
+    tmp21Result4 = tmp21(tmp15(tmp4[20]).Text, obj7);
   }
-  const items3 = [tmp21Result, closure_7(feedbackReasons(otherKey[21]), { ratingOptions, textLabels: ratingTextLabels, selectedRating: first, onChangeRating: callback }), , ];
-  let tmp21Result1 = null;
+  const items3 = [tmp21Result4, closure_7(feedbackReasons(otherKey[21]), { ratingOptions, textLabels: ratingTextLabels, selectedRating, onChangeRating: callback }), , ];
+  let tmp21Result5 = null;
   if (tmp18) {
-    const obj4 = { style: null, children: null };
-    obj4[0] = tmp.reasonsList;
-    const obj5 = { title: null, hasIcons: false, children: null };
-    obj5[0] = reasonsHeaderLabel;
-    obj5[2] = arr.map((label) => {
-      closure_0 = label;
-      let tmp;
-      if (null != label.label) {
-        const obj = { label: null, labelLineClamp: 2, onPress: null };
-        obj[0] = label.label;
-        obj[2] = function onPress() {
-          return closure_1_17(closure_0);
-        };
-        tmp = callback4(reasons(otherKey[23]).TableRow, obj, arg1);
-      }
-      return tmp;
-    });
-    obj4[1] = tmp21(tmp15(tmp4[22]).TableRowGroup, obj5);
-    tmp21Result1 = tmp21(View, obj4);
-  }
-  items3[2] = tmp21Result1;
-  let tmp21Result2 = null;
-  if (!hideDontShowAgainCheckbox) {
-    const obj6 = { start: true, end: true, checked: null, label: null, onPress: null };
-    obj6[2] = first1;
-    const intl = tmp15(tmp4[25]).intl;
-    obj6[3] = intl.string(tmp15(tmp4[25]).t["5E9SB9"]);
-    obj6[4] = function onPress() {
-      return callback6(!first1);
+    const obj8 = { style: tmp.reasonsList, children: null };
+    const obj9 = {
+      title: reasonsHeaderLabel,
+      hasIcons: false,
+      children: arr.map((label, index) => {
+          closure_0 = label;
+          let tmp;
+          if (null != label.label) {
+            const obj = {
+              label: label.label,
+              labelLineClamp: 2,
+              onPress() {
+                  return closure_17(closure_0);
+                }
+            };
+            tmp = closure_7(reasons(otherKey[23]).TableRow, obj, index);
+          }
+          return tmp;
+        })
     };
-    tmp21Result2 = tmp21(tmp15(tmp4[24]).TableCheckboxRow, obj6);
+    obj8.children = tmp21(tmp15(tmp4[22]).TableRowGroup, obj9);
+    tmp21Result5 = tmp21(View, obj8);
   }
-  items3[3] = tmp21Result2;
-  obj2[1] = items3;
-  obj[5] = c8(reasons(otherKey[19]).BottomSheetScrollView, obj2);
-  return closure_7(reasons(otherKey[16]).BottomSheet, obj);
+  items3[2] = tmp21Result5;
+  let tmp21Result6 = null;
+  if (!hideDontShowAgainCheckbox) {
+    const obj10 = { start: true, end: true, checked: first1, label: null, onPress: null };
+    const intl = tmp15(tmp4[25]).intl;
+    obj10.label = intl.string(tmp15(tmp4[25]).t["5E9SB9"]);
+    obj10.onPress = function onPress() {
+      return closure_16(!first1);
+    };
+    tmp21Result6 = tmp21(tmp15(tmp4[24]).TableCheckboxRow, obj10);
+  }
+  items3[3] = tmp21Result6;
+  obj6.children = items3;
+  obj3.children = c8(reasons(otherKey[19]).BottomSheetScrollView, obj6);
+  return closure_7(reasons(otherKey[16]).BottomSheet, obj3);
 };

@@ -1,57 +1,64 @@
-// Module ID: 8089
-// Function ID: 8090
-// Name: parseEmbedTitleMarkup
-// Dependencies: [1074, 1090, 1437, 4550, 8090, 7888, 2]
+// Module ID: 8104
+// Function ID: 8105
+// Name: MarkupParsers
+// Dependencies: [1074, 1090, 1437, 4564, 8105, 8106, 7902, 8121, 1232, 2]
 // Exports: parseEmbedDescriptionMarkup, parseEmbedTitleMarkup, parseEmbedTitleMarkupWithoutLinks, parseMessageMarkup
 
-// Module 8089 (parseEmbedTitleMarkup)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import setDefault from "set" /* 1090 */;
-import get_defaultRulesDefault from "get defaultRules" /* 4550 */;
-import getInitialParserState from "getInitialParserState" /* 7888 */;
-import LHeading from "LHeading" /* 8090 */;
-import importDefaultResult from "priv" /* 1437 */;
+// Module 8104 (MarkupParsers)
+import Constants from "Constants" /* 1074 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4564 */;
+import renderMessageMarkup from "renderMessageMarkup" /* 7902 */;
+import NativeMarkdownExperiment2 from "NativeMarkdownExperiment" /* 8105 */;
+import parseNativeMarkupDefault from "parseNativeMarkup" /* 8121 */;
+import priv from "priv" /* 1437 */;
+import size from "module_2" /* 2 */;
 
-const MessageTypes = ME.MessageTypes;
-let obj = { max: Infinity, maxAge: 15 * setDefault.Millis.MINUTE, updateAgeOnGet: true };
-let closure_4 = new importDefaultResult(obj);
-const tmp2 = new importDefaultResult(obj);
-let closure_5 = new importDefaultResult(obj);
-obj = {};
+const ChangeLogStandardTemplate = changelogRules(8106);
+function parseMessageContentToAST(arg0, arg1, arg2) {
+  if (!arg2) {
+    return renderMessageMarkup.renderMessageMarkupToAST(arg0, arg1);
+  } else {
+    try {
+      return renderMessageMarkup.renderMessageMarkupToASTWithParser(parseNativeMarkupDefault, arg0, arg1);
+    } catch (tmp4) {
+      SentryUtilsDefault.captureException(tmp4);
+    }
+  }
+}
+const MessageTypes = Constants.MessageTypes;
+let obj = { max: Infinity, maxAge: 15 * DurationsDefault.Millis.MINUTE, updateAgeOnGet: true };
+let closure_4 = new priv(obj);
+const tmp2 = new priv(obj);
+let closure_5 = new priv(obj);
+let obj2 = {};
 let merged = Object.assign(obj);
-obj.updateAgeOnGet = false;
-importDefaultResult = new importDefaultResult(obj);
-const tmp3 = new importDefaultResult(obj);
-let closure_7 = new importDefaultResult(obj);
-const tmp7 = new importDefaultResult(obj);
-let result = set.fileFinishedImporting("modules/messages/native/renderer/MarkupParsers.tsx");
+obj2.updateAgeOnGet = false;
+const importDefaultResult1 = new priv(obj2);
+const tmp3 = new priv(obj);
+let closure_7 = new priv(obj);
+let result = size.fileFinishedImporting("modules/messages/native/renderer/MarkupParsers.tsx");
 
-export const parseEmbedTitleMarkup = function parseEmbedTitleMarkup(rawName, closure_0) {
-  const combined = "" + rawName + "-" + closure_0;
-  let obj = closure_4;
-  let value = closure_4.get(combined);
+export const parseEmbedTitleMarkup = function parseEmbedTitleMarkup(rawName, channelId) {
+  const combined = "" + rawName + "-" + channelId;
+  value = closure_4.get(combined);
   if (null == value) {
-    obj = { channelId: null };
-    obj[0] = closure_0;
-    const parseEmbedTitleToASTResult = get_defaultRulesDefault.parseEmbedTitleToAST(rawName, true, obj);
-    const result = obj.set(combined, parseEmbedTitleToASTResult);
+    const obj3 = { channelId };
+    const parseEmbedTitleToASTResult = MarkupUtilsDefault.parseEmbedTitleToAST(rawName, true, obj3);
+    const result = closure_4.set(combined, parseEmbedTitleToASTResult);
     value = parseEmbedTitleToASTResult;
-    const obj2 = get_defaultRulesDefault;
   }
   return value;
 };
-export const parseEmbedTitleMarkupWithoutLinks = function parseEmbedTitleMarkupWithoutLinks(arg0, arg1) {
-  const combined = "" + arg0 + "-" + arg1 + "-nolinks";
-  let obj = closure_5;
-  let value = closure_5.get(combined);
+export const parseEmbedTitleMarkupWithoutLinks = function parseEmbedTitleMarkupWithoutLinks(arg0, channelId) {
+  const combined = "" + arg0 + "-" + channelId + "-nolinks";
+  value = closure_5.get(combined);
   if (null == value) {
-    obj = { channelId: null };
-    obj[0] = arg1;
-    const result = get_defaultRulesDefault.parseEmbedTitleWithoutLinksToAST(arg0, true, obj);
-    const result1 = obj.set(combined, result);
+    const obj3 = { channelId };
+    const result = MarkupUtilsDefault.parseEmbedTitleWithoutLinksToAST(arg0, true, obj3);
+    const result1 = closure_5.set(combined, result);
     value = result;
-    const obj2 = get_defaultRulesDefault;
   }
   return value;
 };
@@ -59,7 +66,7 @@ export const parseEmbedDescriptionMarkup = function parseEmbedDescriptionMarkup(
   ({ description, channelId, isField, replaceMap, showListsAndHeaders } = arg0);
   ({ ignoreCache, showMaskedLinks } = arg0);
   const combined = "" + description + "-" + channelId;
-  const value = importDefaultResult.get(combined);
+  value = importDefaultResult1.get(combined);
   if (null != value) {
     if (!ignoreCache) {
       return value;
@@ -71,7 +78,6 @@ export const parseEmbedDescriptionMarkup = function parseEmbedDescriptionMarkup(
   if (keys !== undefined) {
     tmp4 = replaced;
     while (keys[tmp] !== undefined) {
-      let tmp11 = tmp7;
       replaced = replaced.replaceAll(tmp7, replaceMap[tmp7]);
       continue;
     }
@@ -81,11 +87,11 @@ export const parseEmbedDescriptionMarkup = function parseEmbedDescriptionMarkup(
   if (!isField) {
     tmp8 = showListsAndHeaders;
   }
-  obj[4] = tmp8;
-  obj[5] = showListsAndHeaders;
-  obj[6] = showMaskedLinks;
-  const parseToASTResult = get_defaultRulesDefault.parseToAST(tmp4, true, obj);
-  const result = importDefaultResult.set(combined, parseToASTResult);
+  obj.allowHeading = tmp8;
+  obj.allowList = showListsAndHeaders;
+  obj.previewLinkTarget = showMaskedLinks;
+  const parseToASTResult = MarkupUtilsDefault.parseToAST(tmp4, true, obj);
+  const result = importDefaultResult1.set(combined, parseToASTResult);
   return parseToASTResult;
 };
 export const parseMessageMarkup = function parseMessageMarkup(message, message2, forceHideSimpleEmbedContent, isInlineReplyPreview, arg4, result, result2) {
@@ -105,50 +111,57 @@ export const parseMessageMarkup = function parseMessageMarkup(message, message2,
   if (result2 === undefined) {
     flag3 = false;
   }
-  obj1 = closure_7;
-  const value = closure_7.get(message);
+  let changelogRules = require;
+  let astParserForResultResult = dependencyMap;
+  const NativeMarkdownExperiment = NativeMarkdownExperiment2.NativeMarkdownExperiment;
+  let enabled = NativeMarkdownExperiment.getConfig({ location: "parseMessageMarkup" }).enabled;
+  value = closure_7.get(message);
   if (null != value) {
     if (value.isInlineReplyPreview === flag) {
-      return value;
+      if (value.nativeMarkdownEnabled === enabled) {
+        return value;
+      }
     }
   }
   if (message.type !== MessageTypes.CHANGELOG) {
-    obj = { contentMessage: null, hideSimpleEmbedContent: null, formatInline: null, allowGameMentions: true, allowHeading: null, allowList: null, allowLinks: null, previewLinkTarget: null };
-    obj[0] = message2;
-    obj[1] = forceHideSimpleEmbedContent;
-    obj[2] = flag;
+    const obj3 = { contentMessage: message2, hideSimpleEmbedContent: forceHideSimpleEmbedContent, formatInline: flag, allowGameMentions: true, allowHeading: null, allowList: null, allowLinks: null, previewLinkTarget: null };
     let tmp5 = flag2;
     if (!flag2) {
       tmp5 = obj;
     }
-    obj[4] = tmp5;
+    obj3.allowHeading = tmp5;
     let tmp6 = flag2;
     if (!flag2) {
       tmp6 = obj;
     }
-    obj = {};
-    obj[5] = tmp6;
-    obj[6] = flag3;
-    obj[7] = flag3;
-    const merged = Object.assign(getInitialParserState.renderMessageMarkupToAST(message, obj));
-    obj.isInlineReplyPreview = flag;
-    result = obj1.set(message, obj);
-    const obj3 = getInitialParserState;
+    let obj4 = {};
+    obj3.allowList = tmp6;
+    obj3.allowLinks = flag3;
+    obj3.previewLinkTarget = flag3;
+    const merged = Object.assign(parseMessageContentToAST(message, obj3, enabled));
+    obj4.isInlineReplyPreview = flag;
+    obj4.nativeMarkdownEnabled = enabled;
+    result = obj2.set(message, obj4);
   }
-  const obj6 = get_defaultRulesDefault;
-  obj1 = { hideSimpleEmbedContent: forceHideSimpleEmbedContent, formatInline: flag, allowHeading: null, allowList: null, allowLinks: null, previewLinkTarget: null };
+  const obj5 = MarkupUtilsDefault;
+  changelogRules = ChangeLogStandardTemplate.changelogRules;
+  const obj6 = { hideSimpleEmbedContent: forceHideSimpleEmbedContent, formatInline: flag, allowHeading: null, allowList: null, allowLinks: null, previewLinkTarget: null };
   flag = flag2;
-  const obj7 = LHeading;
+  const changelogRulesResult = ChangeLogStandardTemplate;
   if (!flag2) {
     flag = obj;
   }
-  obj1[2] = flag;
+  obj6.allowHeading = flag;
   if (!flag2) {
     flag2 = obj;
   }
-  obj = { content: obj6.astParserFor(LHeading.changelogRules(message.changelogId, true))(message.content, false, obj1), isInlineReplyPreview: false, hasSpoilerEmbeds: false, hasBailedAst: false };
-  obj1[3] = flag2;
-  obj1[4] = flag3;
-  obj1[5] = flag3;
-  const result1 = obj1.set(message, obj);
+  obj = { content: null, isInlineReplyPreview: false, hasSpoilerEmbeds: false, hasBailedAst: false, nativeMarkdownEnabled: null };
+  obj6.allowList = flag2;
+  obj6.allowLinks = flag3;
+  obj6.previewLinkTarget = flag3;
+  astParserForResultResult = obj5.astParserFor(changelogRules(message.changelogId, true))(message.content, false, obj6);
+  obj.content = astParserForResultResult;
+  obj.nativeMarkdownEnabled = enabled;
+  enabled = obj2.set(message, obj);
+  obj4 = obj;
 };

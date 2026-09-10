@@ -1,876 +1,575 @@
-// Module ID: 5541
-// Function ID: 5542
-// Name: _fetchGuildJoinRequests
-// Dependencies: [5, 1961, 5542, 4382, 1074, 4384, 573, 1272, 5543, 4904, 1114, 5411, 2]
+// Module ID: 5555
+// Function ID: 5556
+// Name: GuildJoinRequestActionCreators
+// Dependencies: [5, 1961, 5556, 4396, 1074, 4398, 573, 1272, 5557, 4918, 1114, 5425, 2]
 
-// Module 5541 (_fetchGuildJoinRequests)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import trackMemberApplicationViewed from "trackMemberApplicationViewed" /* 5543 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { createChannelRecordFromServer as closure_4 } from "createChannelRecord" /* 1961 */;
-import closure_5 from "updateSubmittedGuildJoinRequestTotal" /* 5542 */;
-import { joinRequestFromServer } from "handleGatewayJoinRequestUpdate" /* 4382 */;
-import ME from "ME" /* 1074 */;
+// Module 5555 (GuildJoinRequestActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4398 */;
+import GuildJoinRequestAnalyticUtils from "GuildJoinRequestAnalyticUtils" /* 5557 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5556 */;
 
-require = arg1;
-function _fetchGuildJoinRequests() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c6 = 0;
-    c7 = 0;
-    c5 = 0;
-    const iter = (function*(arg0) {
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              c3 = tmp3;
-              dependencyMap = tmp7;
-              let callback;
-              let lib;
-              dependencyMap = undefined;
-              c3 = undefined;
-              limit = undefined;
-              c5 = undefined;
-              ({ guildId: c0, status } = callback);
-              if (status === undefined) {
-                status = callback(closure_1_2[5]).GuildJoinRequestApplicationStatuses.SUBMITTED;
-              }
-              lib = status;
-              ({ before: c2, after: c3, limit } = callback);
-              if (limit === undefined) {
-                limit = callback(closure_1_2[5]).MAX_RESULTS_PER_PAGE;
-              }
-              let flag = tmp70.force;
-              if (flag === undefined) {
-                flag = false;
-              }
-              c5 = flag;
-              c6 = undefined;
-              c7 = undefined;
-              let total;
-              closure_9 = undefined;
-              c6 = 1;
-              c7 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp7) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              let tmp31 = c5;
-              if (!c5) {
-                tmp31 = !c5.hasFetched(callback);
-              }
-              c6 = tmp31;
-              if (!c5.isFetching()) {
-                if (c6) {
-                  let obj5 = lib(573);
-                  obj5.dispatch({ type: "GUILD_JOIN_REQUESTS_FETCH_START" });
-                  c5 = 1;
-                  const HTTP = callback(1272).HTTP;
-                  const obj2 = { url: null, query: null, rejectWithError: null };
-                  obj2[0] = total.GUILD_JOIN_REQUESTS(callback);
-                  const obj3 = { status: null, limit: null, before: null, after: null };
-                  obj3[0] = lib;
-                  obj3[1] = limit;
-                  obj3[2] = dependencyMap;
-                  obj3[3] = c3;
-                  obj2[1] = obj3;
-                  obj2[2] = callback(1272).rejectWithMigratedError();
-                  c6 = 3;
-                  c7 = 1;
-                  let obj4 = { value: null, done: false };
-                  obj4[0] = HTTP.get(obj2);
-                  return obj4;
-                }
-              }
-              c7 = 3;
-              return { value: "HermesInternal", done: null };
-            }
-          } else if (2 === tmp7) {
-            c5 = 0;
-            closure_10 = limit;
-            obj4 = lib(573);
-            obj4.dispatch({ type: "GUILD_JOIN_REQUESTS_FETCH_FAILURE" });
-            throw closure_10;
-          } else if (arg0 === 1) {
-            c7 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 0;
-            c7 = 3;
-            obj5 = { value: null, done: true };
-            obj5[0] = arg1;
-            return obj5;
-          } else {
-            c7 = arg1;
-            total = c7.body.total;
-            const guild_join_requests = c7.body.guild_join_requests;
-            lib = guild_join_requests;
-            if (guild_join_requests == null) {
-              lib = [];
-            }
-            closure_9 = lib.map(c6);
-            obj = lib(573);
-            const obj6 = { type: "GUILD_JOIN_REQUESTS_FETCH_SUCCESS", status: null, requests: null, total: null, limit: null, guildId: null };
-            obj6[1] = lib;
-            obj6[2] = closure_9;
-            obj6[3] = total;
-            obj6[4] = limit;
-            obj6[5] = callback;
-            obj.dispatch(obj6);
-            c5 = 0;
-            c7 = 3;
-            const obj7 = { value: null, done: true };
-            obj7[0] = c7;
-            return obj7;
-          }
-        } catch (tmp57) {
-          limit = tmp57;
-          if (tmp4 === c5) {
-            c7 = tmp2;
-            throw tmp57;
-          } else {
-            c6 = tmp;
-          }
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_9 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _fetchGuildJoinRequestsForUser() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c5 = 0;
-    c6 = 0;
-    return (function*(arg0, arg1) {
-      closure_4 = tmp2;
-      closure_3 = tmp5;
-      const HTTP = callback(closure_1_2[7]).HTTP;
-      obj1 = { url: null, rejectWithError: null };
-      obj1[0] = closure_1_8.GUILD_JOIN_REQUESTS_FOR_USER(callback, callback2);
-      obj1[1] = callback(closure_1_2[7]).rejectWithMigratedError();
-      closure_2 = yield HTTP.get(obj1);
-      const body = closure_2.body;
-      closure_2 = body;
-      if (body == null) {
-        closure_2 = [];
-      }
-      closure_3 = closure_2.map(c6);
-      const obj = callback2(closure_2[6]);
-      const obj4 = { type: "GUILD_JOIN_REQUESTS_FOR_USER_FETCH_SUCCESS", guildId: null, userId: null, requests: null };
-      obj4[1] = callback;
-      obj4[2] = callback2;
-      obj4[3] = closure_3;
-      obj.dispatch(obj4);
-      return closure_2;
-    })();
-  });
-  closure_10 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _removeGuildJoinRequest() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    return (function*(arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const table = tmp3;
-              let callback2 = tmp7;
-              callback2 = undefined;
-              c4 = 1;
-              const HTTP = callback(closure_1_2[7]).HTTP;
-              obj1 = { url: null, rejectWithError: null };
-              obj1[0] = closure_1_8.GUILD_MEMBER_REQUEST_TO_JOIN(callback);
-              obj1[1] = callback(closure_1_2[7]).rejectWithMigratedError();
-              c5 = 2;
-              c6 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.del(obj1);
-              return obj2;
-            }
-          } else if (1 === tmp7) {
-            c4 = 0;
-            throw closure_3;
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 0;
-            c6 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            callback2 = arg1;
-            obj = callback2(table[6]);
-            const obj4 = { type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: null, request: null };
-            obj4[1] = callback;
-            obj.dispatch(obj4);
-            c4 = 0;
-            c6 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = callback2;
-            return obj5;
-          }
-        } catch (tmp16) {
-          closure_3 = tmp16;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp16;
-          } else {
-            c5 = tmp;
-          }
-        }
-      }
-    })();
-  });
-  closure_11 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _ackUserGuildJoinRequest() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c6 = 0;
-    c7 = 0;
-    c5 = 0;
-    return (function*(arg0, arg1) {
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_3 = tmp4;
-              dependencyMap = tmp8;
-              c5 = 2;
-              const HTTP = callback(closure_1_2[7]).HTTP;
-              obj1 = { url: null, rejectWithError: null };
-              obj1[0] = closure_1_8.GUILD_JOIN_REQUEST_ACK(callback, callback2);
-              obj1[1] = callback(closure_1_2[7]).rejectWithMigratedError();
-              c6 = 3;
-              c7 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.post(obj1);
-              return obj2;
-            }
-          } else if (1 === tmp8) {
-            c5 = 0;
-            let obj8 = callback2(573);
-            let obj3 = { type: "ACK_APPROVED_GUILD_JOIN_REQUEST", id: null, guildId: null };
-            obj3[1] = callback2;
-            obj3[2] = callback;
-            obj8.dispatch(obj3);
-            throw closure_4;
-          } else if (2 === tmp8) {
-            c5 = 0;
-            let obj6 = callback2(573);
-            const obj4 = { type: "ACK_APPROVED_GUILD_JOIN_REQUEST", id: null, guildId: null };
-            obj4[1] = callback2;
-            obj4[2] = callback;
-            obj6.dispatch(obj4);
-            c7 = 3;
-            return { value: "HermesInternal", done: null };
-          } else if (arg0 === 1) {
-            c7 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 0;
-            obj3 = callback2(573);
-            const obj5 = { type: "ACK_APPROVED_GUILD_JOIN_REQUEST", id: null, guildId: null };
-            obj5[1] = callback2;
-            obj5[2] = callback;
-            obj3.dispatch(obj5);
-            c7 = 3;
-            obj6 = { value: null, done: true };
-            obj6[0] = arg1;
-            return obj6;
-          } else {
-            c5 = 0;
-            obj = callback2(573);
-            const obj7 = { type: "ACK_APPROVED_GUILD_JOIN_REQUEST", id: null, guildId: null };
-            obj7[1] = callback2;
-            obj7[2] = callback;
-            obj.dispatch(obj7);
-            c7 = 3;
-            obj8 = { value: null, done: true };
-            obj8[0] = arg1;
-            return obj8;
-          }
-        } catch (tmp40) {
-          closure_4 = tmp40;
-          if (tmp5 === c5) {
-            c7 = tmp3;
-            throw tmp40;
-          } else if (tmp2 === tmp42) {
-            c6 = tmp2;
-          } else {
-            c6 = tmp;
-          }
-        }
-      }
-    })();
-  });
-  closure_12 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _updateGuildJoinRequest() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    closure_3 = arg3;
-    closure_4 = arg4;
-    c7 = 0;
-    c8 = 0;
-    const iter = (function*(arg0, arg1, arg2) {
-      if (c8 === 2) {
-        c8 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c8 = 2;
-          if (0 === c7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_6 = tmp3;
-              closure_5 = tmp2;
-              let APPROVED;
-              closure_4 = undefined;
-              if (APPROVED === undefined) {
-                APPROVED = callback(4384).GuildJoinRequestApplicationStatuses.APPROVED;
-              }
-              closure_5 = undefined;
-              c7 = 1;
-              c8 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp6) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              let obj7 = callback(5543);
-              const obj2 = { guildId: null, actionType: null, applicationUserId: null };
-              obj2[0] = callback;
-              obj2[1] = APPROVED;
-              obj2[2] = callback2;
-              const result = obj7.trackMemberApplicationAction(obj2);
-              const HTTP = callback(1272).HTTP;
-              const obj3 = { url: null, body: null, rejectWithError: null };
-              obj3[0] = c8.GUILD_JOIN_REQUEST(callback, dependencyMap);
-              const obj4 = { action: null, rejection_reason: null };
-              obj4[0] = APPROVED;
-              obj4[1] = closure_4;
-              obj3[1] = obj4;
-              obj3[2] = callback(1272).rejectWithMigratedError();
-              const obj12 = callback(1272);
-              c7 = 2;
-              c8 = 1;
-              const obj5 = { value: null, done: false };
-              obj5[0] = HTTP.patch(obj3).catch((body) => {
-                if (body) {
-                  body = body.body;
-                }
-                if (body) {
-                  body = body.body.code === constants.REQUEST_TO_JOIN_USER_INELIGIBLE;
-                }
-                if (body) {
-                  let obj = callback2(4904);
-                  obj = { title: null, body: null };
-                  const intl = callback(1114).intl;
-                  obj[0] = intl.string(callback(1114).t.DxJj4e);
-                  const intl2 = callback(1114).intl;
-                  obj[1] = intl2.string(callback(1114).t.rSAOk9);
-                  obj.show(obj);
-                }
-                return Promise.reject(body);
-              });
-              return obj5;
-            }
-          } else if (arg0 === 1) {
-            c8 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c8 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = arg1;
-            return obj6;
-          } else {
-            closure_5 = arg1;
-            obj = callback2(573);
-            obj7 = { type: "GUILD_JOIN_REQUEST_UPDATE", guildId: null, status: null, request: null };
-            obj7[1] = callback;
-            obj7[2] = closure_5.body.application_status;
-            obj7[3] = closure_5.body;
-            obj.dispatch(obj7);
-            c8 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp18) {
-          c8 = tmp;
-          throw tmp18;
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_13 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _resetGuildJoinRequest() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    return (function*(arg0, body) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              const table = tmp3;
-              body = tmp7;
-              body = undefined;
-              c4 = 1;
-              const HTTP = callback(closure_1_2[7]).HTTP;
-              obj1 = { url: null, rejectWithError: null };
-              obj1[0] = closure_1_8.GUILD_MEMBER_REQUEST_TO_JOIN(callback);
-              obj1[1] = callback(closure_1_2[7]).rejectWithMigratedError();
-              c5 = 2;
-              c6 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.post(obj1);
-              return obj2;
-            }
-          } else if (1 === tmp7) {
-            c4 = 0;
-            throw closure_3;
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            c4 = 0;
-            c6 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = body;
-            return obj3;
-          } else {
-            body = body.body;
-            obj = body(table[6]);
-            const obj4 = { type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: null, request: null };
-            obj4[1] = callback;
-            obj4[2] = body;
-            obj.dispatch(obj4);
-            c4 = 0;
-            c6 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = body;
-            return obj5;
-          }
-        } catch (tmp17) {
-          closure_3 = tmp17;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp17;
-          } else {
-            c5 = tmp;
-          }
-        }
-      }
-    })();
-  });
-  closure_14 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _fetchRequestToJoinGuilds() {
-  const self = this;
-  const tmp = callback(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
+require = fn;
+let closure_9 = async function _fetchGuildJoinRequests(arg0, value) {
+  if (c7 === 2) {
+    c7 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      try {
-        c3 = 2;
-        if (0 === dependencyMap) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const callback = tmp2;
-            let body = tmp5;
-            body = undefined;
-            const HTTP = closure_1_0(1272).HTTP;
-            obj1 = { url: null, rejectWithError: null };
-            obj1[0] = closure_1_8.USER_JOIN_REQUEST_GUILDS;
-            obj1[1] = closure_1_0(1272).rejectWithMigratedError();
-            dependencyMap = 1;
-            c3 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = HTTP.get(obj1);
-            return obj2;
-          }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw arg1;
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c7 = 2;
+      if (0 === c6) {
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          c3 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
+          c7 = 3;
+          const obj3 = { value, done: true };
           return obj3;
         } else {
-          body = arg1;
-          obj = callback(573);
-          const obj4 = { type: "USER_JOIN_REQUEST_GUILDS_FETCH", guilds: null };
-          obj4[1] = body.body;
-          obj.dispatch(obj4);
-          c3 = 3;
+          closure_3 = tmp3;
+          closure_2 = tmp7;
+          closure_130_0 = undefined;
+          closure_130_1 = undefined;
+          closure_130_2 = undefined;
+          closure_130_3 = undefined;
+          closure_130_4 = undefined;
+          closure_130_5 = undefined;
+          ({ guildId: closure_130_0, status } = closure_0);
+          if (status === undefined) {
+            status = MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED;
+          }
+          closure_130_1 = status;
+          ({ before: closure_130_2, after: closure_130_3, limit } = closure_0);
+          if (limit === undefined) {
+            limit = MemberVerificationTypes.MAX_RESULTS_PER_PAGE;
+          }
+          closure_130_4 = limit;
+          let flag = tmp69.force;
+          if (flag === undefined) {
+            flag = false;
+          }
+          closure_130_5 = flag;
+          closure_130_6 = undefined;
+          closure_130_7 = undefined;
+          let total;
+          closure_130_9 = undefined;
+          c6 = 1;
+          c7 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp7) {
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          let tmp31 = closure_130_5;
+          if (!closure_130_5) {
+            tmp31 = !closure_131_5.hasFetched(closure_130_0);
+          }
+          closure_130_6 = tmp31;
+          if (!closure_131_5.isFetching()) {
+            if (closure_130_6) {
+              closure_131_1(closure_131_2[6]).dispatch({ type: "GUILD_JOIN_REQUESTS_FETCH_START" });
+              c5 = 1;
+              const HTTP = closure_131_0(closure_131_2[7]).HTTP;
+              const request = { url: closure_131_8.GUILD_JOIN_REQUESTS(closure_130_0), query: null, rejectWithError: null };
+              const obj7 = { status: closure_130_1, limit: closure_130_4, before: closure_130_2, after: closure_130_3 };
+              request.query = obj7;
+              const obj6 = closure_131_1(closure_131_2[6]);
+              request.rejectWithError = closure_131_0(closure_131_2[7]).rejectWithMigratedError();
+              c6 = 3;
+              c7 = 1;
+              const obj8 = { value: HTTP.get(request), done: false };
+              return obj8;
+            }
+          }
+          c7 = 3;
           return { value: "HermesInternal", done: null };
         }
-      } catch (tmp12) {
-        c3 = tmp;
-        throw tmp12;
+      } else if (2 === tmp7) {
+        c5 = 0;
+        closure_130_10 = closure_4;
+        closure_131_1(closure_131_2[6]).dispatch({ type: "GUILD_JOIN_REQUESTS_FETCH_FAILURE" });
+        throw closure_130_10;
+      } else if (arg0 === 1) {
+        c7 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 0;
+        c7 = 3;
+        const obj10 = { value, done: true };
+        return obj10;
+      } else {
+        closure_130_7 = value;
+        total = closure_130_7.body.total;
+        const guild_join_requests = closure_130_7.body.guild_join_requests;
+        importDefault = guild_join_requests;
+        if (guild_join_requests == null) {
+          importDefault = [];
+        }
+        closure_130_9 = importDefault.map(closure_131_6);
+        const obj11 = { type: "GUILD_JOIN_REQUESTS_FETCH_SUCCESS", status: closure_130_1, requests: closure_130_9, total, limit: closure_130_4, guildId: closure_130_0 };
+        closure_131_1(closure_131_2[6]).dispatch(obj11);
+        c5 = 0;
+        c7 = 3;
+        const obj12 = { value: closure_130_7, done: true };
+        return obj12;
+      }
+    } catch (tmp57) {
+      closure_4 = tmp57;
+      if (tmp4 === c5) {
+        c7 = tmp2;
+        throw tmp57;
+      } else {
+        c6 = tmp;
       }
     }
-  });
-  closure_15 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
   }
-  return applyArgumentsResult;
-}
-function _fetchJoinRequestForInterview() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    return (function*(arg0) {
-      const table = tmp2;
-      let callback = tmp5;
-      const HTTP = lib(closure_1_2[7]).HTTP;
-      obj1 = { url: null, rejectWithError: null };
-      obj1[0] = closure_1_8.JOIN_REQUEST(lib);
-      obj1[1] = lib(closure_1_2[7]).rejectWithMigratedError();
-      lib = yield HTTP.get(obj1);
-      callback = callback2(lib.body);
-      const obj = callback(table[6]);
-      const obj4 = { type: "GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS", joinRequest: null };
-      obj4[1] = callback;
-      obj.dispatch(obj4);
-      return lib;
-    })();
-  });
-  closure_16 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+};
+let closure_10 = async function _fetchGuildJoinRequestsForUser() {
+  closure_4 = tmp2;
+  closure_3 = tmp5;
+  closure_131_0 = closure_0;
+  closure_131_1 = closure_1;
+  const HTTP = HTTPUtils.HTTP;
+  closure_131_2 = await HTTP.get({ url: closure_2_8.GUILD_JOIN_REQUESTS_FOR_USER(closure_0, closure_1), rejectWithError: HTTPUtils.rejectWithMigratedError() });
+  const body = closure_131_2.body;
+  dependencyMap = body;
+  if (body == null) {
+    dependencyMap = [];
   }
-  return applyArgumentsResult;
-}
-function _createOrEnterJoinRequestInterview() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c4 = 0;
-    c5 = 0;
-    const iter = (function*(arg0) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+  closure_131_3 = dependencyMap.map(closure_132_6);
+  closure_132_1(closure_132_2[6]).dispatch({ type: "GUILD_JOIN_REQUESTS_FOR_USER_FETCH_SUCCESS", guildId: closure_131_0, userId: closure_131_1, requests: closure_131_3 });
+  return closure_131_2;
+};
+let closure_11 = async function _removeGuildJoinRequest(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
-          throw arg1;
+          c6 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          c6 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
+          closure_2 = tmp3;
+          closure_1 = tmp7;
+          closure_129_0 = closure_0;
+          closure_129_1 = undefined;
+          c4 = 1;
+          const HTTP = HTTPUtils.HTTP;
+          const obj4 = { url: React6.GUILD_MEMBER_REQUEST_TO_JOIN(closure_0), rejectWithError: HTTPUtils.rejectWithMigratedError() };
           c5 = 2;
-          if (0 === v0) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let user = tmp5;
-              let body = tmp2;
-              let flag;
-              if (flag === undefined) {
-                flag = true;
-              }
-              body = undefined;
-              user = undefined;
-              v0 = 1;
-              c5 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              const HTTP = callback(body[7]).HTTP;
-              const obj2 = { url: null, rejectWithError: null };
-              obj2[0] = closure_8.JOIN_REQUEST_INTERVIEW(callback);
-              obj2[1] = callback(body[7]).rejectWithMigratedError();
-              v0 = 2;
-              c5 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.post(obj2);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            body = arg1;
-            user = v0(body.body);
-            const obj5 = { type: "CHANNEL_CREATE", channel: null };
-            obj5[1] = user;
-            flag(body[6]).dispatch(obj5);
-            if (flag) {
-              obj = flag(body[11]);
-              const privateChannel = obj.selectPrivateChannel(user.id);
-            }
-            c5 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = user.id;
-            return obj6;
-          }
-        } catch (tmp15) {
-          c5 = tmp;
-          throw tmp15;
+          c6 = 1;
+          const obj5 = { value: HTTP.del(obj4), done: false };
+          return obj5;
         }
+      } else if (1 === tmp7) {
+        c4 = 0;
+        throw closure_3;
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        c6 = 3;
+        const obj6 = { value, done: true };
+        return obj6;
+      } else {
+        closure_129_1 = value;
+        const obj7 = { type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: closure_129_0, request: null };
+        closure_130_1(closure_130_2[6]).dispatch(obj7);
+        c4 = 0;
+        c6 = 3;
+        const obj8 = { value: closure_129_1, done: true };
+        return obj8;
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_17 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp16) {
+      closure_3 = tmp16;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp16;
+      } else {
+        c5 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
-({ AbortCodes: error, Endpoints: closure_8 } = ME);
-let result = require("set").fileFinishedImporting("modules/guild_member_verification/GuildJoinRequestActionCreators.tsx");
+};
+let closure_12 = async function _ackUserGuildJoinRequest(arg0, value) {
+  if (c7 === 2) {
+    c7 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp7 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c7 = 2;
+      if (0 === c6) {
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_3 = tmp4;
+          closure_2 = tmp8;
+          closure_130_0 = closure_0;
+          closure_130_1 = closure_1;
+          c5 = 2;
+          const HTTP = HTTPUtils.HTTP;
+          const obj5 = { url: React6.GUILD_JOIN_REQUEST_ACK(closure_0, closure_1), rejectWithError: HTTPUtils.rejectWithMigratedError() };
+          c6 = 3;
+          c7 = 1;
+          const obj6 = { value: HTTP.post(obj5), done: false };
+          return obj6;
+        }
+      } else if (1 === tmp8) {
+        c5 = 0;
+        const obj8 = { type: "ACK_APPROVED_GUILD_JOIN_REQUEST", id: closure_130_1, guildId: closure_130_0 };
+        closure_131_1(closure_131_2[6]).dispatch(obj8);
+        throw closure_4;
+      } else if (2 === tmp8) {
+        c5 = 0;
+        const obj10 = { type: "ACK_APPROVED_GUILD_JOIN_REQUEST", id: closure_130_1, guildId: closure_130_0 };
+        closure_131_1(closure_131_2[6]).dispatch(obj10);
+        c7 = 3;
+        return { value: "HermesInternal", done: null };
+      } else if (arg0 === 1) {
+        c7 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 0;
+        const obj11 = { type: "ACK_APPROVED_GUILD_JOIN_REQUEST", id: closure_130_1, guildId: closure_130_0 };
+        closure_131_1(closure_131_2[6]).dispatch(obj11);
+        c7 = 3;
+        const obj12 = { value, done: true };
+        return obj12;
+      } else {
+        c5 = 0;
+        const obj13 = { type: "ACK_APPROVED_GUILD_JOIN_REQUEST", id: closure_130_1, guildId: closure_130_0 };
+        closure_131_1(closure_131_2[6]).dispatch(obj13);
+        c7 = 3;
+        const obj14 = { value, done: true };
+        return obj14;
+      }
+    } catch (tmp40) {
+      closure_4 = tmp40;
+      if (tmp5 === c5) {
+        c7 = tmp3;
+        throw tmp40;
+      } else if (tmp2 === tmp42) {
+        c6 = tmp2;
+      } else {
+        c6 = tmp;
+      }
+    }
+  }
+};
+let closure_13 = async function _updateGuildJoinRequest() {
+  const result = closure_134_0(closure_134_2[8]).trackMemberApplicationAction({ guildId: closure_133_0, actionType: closure_133_3, applicationUserId: closure_133_1 });
+  const HTTP = closure_134_0(closure_134_2[7]).HTTP;
+  const request = { url: closure_134_8.GUILD_JOIN_REQUEST(closure_133_0, closure_133_2), body: { action: closure_133_3, rejection_reason: closure_133_4 }, rejectWithError: null };
+  closure_134_0(closure_134_2[8]);
+  request.rejectWithError = closure_134_0(closure_134_2[7]).rejectWithMigratedError();
+  closure_134_0(closure_134_2[7]);
+  closure_133_5 = await HTTP.patch(request).catch((error) => {
+    let body = error;
+    if (error) {
+      body = error.body;
+    }
+    if (body) {
+      body = error.body.code === constants.REQUEST_TO_JOIN_USER_INELIGIBLE;
+    }
+    if (body) {
+      const obj2 = { title: null, body: null };
+      const intl = closure_1_0(1114).intl;
+      obj2.title = intl.string(closure_1_0(1114).t.DxJj4e);
+      const intl2 = closure_1_0(1114).intl;
+      obj2.body = intl2.string(closure_1_0(1114).t.rSAOk9);
+      closure_1_1(4918).show(obj2);
+      const obj = closure_1_1(4918);
+    }
+    return Promise.reject(error);
+  });
+  closure_134_1(closure_134_2[6]).dispatch({ type: "GUILD_JOIN_REQUEST_UPDATE", guildId: closure_133_0, status: closure_133_5.body.application_status, request: closure_133_5.body });
+  await "HermesInternal";
+  closure_6 = tmp3;
+  closure_5 = tmp2;
+  closure_133_0 = closure_0;
+  closure_133_1 = closure_1;
+  closure_133_2 = dependencyMap;
+  let APPROVED = closure_3;
+  if (closure_3 === undefined) {
+    APPROVED = require("MemberVerificationTypes").GuildJoinRequestApplicationStatuses.APPROVED;
+  }
+  closure_133_3 = APPROVED;
+  closure_133_4 = closure_4;
+  return "PX_16";
+};
+let closure_14 = async function _resetGuildJoinRequest(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp3;
+          closure_1 = tmp7;
+          closure_129_0 = closure_0;
+          let body;
+          c4 = 1;
+          const HTTP = HTTPUtils.HTTP;
+          const obj4 = { url: React6.GUILD_MEMBER_REQUEST_TO_JOIN(closure_0), rejectWithError: HTTPUtils.rejectWithMigratedError() };
+          c5 = 2;
+          c6 = 1;
+          const obj5 = { value: HTTP.post(obj4), done: false };
+          return obj5;
+        }
+      } else if (1 === tmp7) {
+        c4 = 0;
+        throw closure_3;
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        c6 = 3;
+        const obj6 = { value, done: true };
+        return obj6;
+      } else {
+        body = value.body;
+        const obj7 = { type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: closure_129_0, request: body };
+        closure_130_1(closure_130_2[6]).dispatch(obj7);
+        c4 = 0;
+        c6 = 3;
+        const obj8 = { value: body, done: true };
+        return obj8;
+      }
+    } catch (tmp17) {
+      closure_3 = tmp17;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp17;
+      } else {
+        c5 = tmp;
+      }
+    }
+  }
+};
+let closure_15 = async function _fetchRequestToJoinGuilds(arg0, value) {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c3 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_1 = tmp2;
+          closure_0 = tmp5;
+          closure_128_0 = undefined;
+          const HTTP = HTTPUtils.HTTP;
+          const obj4 = { url: constants.USER_JOIN_REQUEST_GUILDS, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+          c2 = 1;
+          c3 = 1;
+          const obj5 = { value: HTTP.get(obj4), done: false };
+          return obj5;
+        }
+      } else if (arg0 === 1) {
+        c3 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c3 = 3;
+        const obj6 = { value, done: true };
+        return obj6;
+      } else {
+        closure_128_0 = value;
+        const obj7 = { type: "USER_JOIN_REQUEST_GUILDS_FETCH", guilds: closure_128_0.body };
+        closure_129_1(closure_129_2[6]).dispatch(obj7);
+        c3 = 3;
+        return { value: "HermesInternal", done: null };
+      }
+    } catch (tmp12) {
+      c3 = tmp;
+      throw tmp12;
+    }
+  }
+};
+let closure_16 = async function _fetchJoinRequestForInterview() {
+  closure_2 = tmp2;
+  closure_1 = tmp5;
+  const HTTP = HTTPUtils.HTTP;
+  closure_129_0 = await HTTP.get({ url: closure_2_8.JOIN_REQUEST(closure_0), rejectWithError: HTTPUtils.rejectWithMigratedError() });
+  closure_129_1 = closure_130_6(closure_129_0.body);
+  closure_130_1(closure_130_2[6]).dispatch({ type: "GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS", joinRequest: closure_129_1 });
+  return closure_129_0;
+};
+let closure_17 = async function _createOrEnterJoinRequestInterview(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_3 = tmp5;
+          closure_2 = tmp2;
+          closure_130_1 = undefined;
+          closure_130_0 = closure_0;
+          let flag = closure_1;
+          if (closure_1 === undefined) {
+            flag = true;
+          }
+          closure_130_1 = flag;
+          closure_130_2 = undefined;
+          closure_130_3 = undefined;
+          c4 = 1;
+          c5 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          const HTTP = closure_131_0(closure_131_2[7]).HTTP;
+          const obj5 = { url: closure_131_8.JOIN_REQUEST_INTERVIEW(closure_130_0), rejectWithError: closure_131_0(closure_131_2[7]).rejectWithMigratedError() };
+          c4 = 2;
+          c5 = 1;
+          const obj6 = { value: HTTP.post(obj5), done: false };
+          return obj6;
+        }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        const obj7 = { value, done: true };
+        return obj7;
+      } else {
+        closure_130_2 = value;
+        closure_130_3 = closure_131_4(closure_130_2.body);
+        const obj9 = { type: "CHANNEL_CREATE", channel: closure_130_3 };
+        closure_131_1(closure_131_2[6]).dispatch(obj9);
+        if (closure_130_1) {
+          const privateChannel = closure_131_1(closure_131_2[11]).selectPrivateChannel(closure_130_3.id);
+          const obj = closure_131_1(closure_131_2[11]);
+        }
+        c5 = 3;
+        const obj10 = { value: closure_130_3.id, done: true };
+        return obj10;
+      }
+    } catch (tmp15) {
+      c5 = tmp;
+      throw tmp15;
+    }
+  }
+};
+let closure_4 = fn(1961).createChannelRecordFromServer;
+const joinRequestFromServer = fn(4396).joinRequestFromServer;
+const Constants = fn(1074);
+({ AbortCodes: closure_7, Endpoints: closure_8 } = Constants);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_member_verification/GuildJoinRequestActionCreators.tsx");
 
 export default {
-  fetchGuildJoinRequests(arg0) {
+  fetchGuildJoinRequests() {
     const self = this;
-    const apply = _fetchGuildJoinRequests.apply;
+    const apply = closure_9.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -878,9 +577,9 @@ export default {
     }
     return applyArgumentsResult;
   },
-  fetchGuildJoinRequestsForUser(guildId, userId) {
+  fetchGuildJoinRequestsForUser() {
     const self = this;
-    const apply = _fetchGuildJoinRequestsForUser.apply;
+    const apply = closure_10.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -888,9 +587,9 @@ export default {
     }
     return applyArgumentsResult;
   },
-  ackUserGuildJoinRequest(guildId, joinRequestId) {
+  ackUserGuildJoinRequest() {
     const self = this;
-    const apply = _ackUserGuildJoinRequest.apply;
+    const apply = closure_12.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -898,9 +597,9 @@ export default {
     }
     return applyArgumentsResult;
   },
-  removeGuildJoinRequest(closure_1_0) {
+  removeGuildJoinRequest() {
     const self = this;
-    const apply = _removeGuildJoinRequest.apply;
+    const apply = closure_11.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -908,9 +607,9 @@ export default {
     }
     return applyArgumentsResult;
   },
-  updateGuildJoinRequest(closure_1_2, closure_1_1, c3, APPROVED, c4) {
+  updateGuildJoinRequest() {
     const self = this;
-    const apply = _updateGuildJoinRequest.apply;
+    const apply = closure_13.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -918,9 +617,9 @@ export default {
     }
     return applyArgumentsResult;
   },
-  resetGuildJoinRequest(closure_1_0) {
+  resetGuildJoinRequest() {
     const self = this;
-    const apply = _resetGuildJoinRequest.apply;
+    const apply = closure_14.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -930,7 +629,7 @@ export default {
   },
   fetchRequestToJoinGuilds() {
     const self = this;
-    const apply = _fetchRequestToJoinGuilds.apply;
+    const apply = closure_15.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -939,29 +638,22 @@ export default {
     return applyArgumentsResult;
   },
   setSelectedApplicationTab(guildId, applicationTab) {
-    let obj = dispatcherDefault;
-    obj = { type: "GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB", guildId, applicationTab };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB", guildId, applicationTab });
   },
   setSelectedSortOrder(guildId, sortOrder, applicationStatus) {
-    let obj = dispatcherDefault;
-    obj = { type: "GUILD_JOIN_REQUESTS_SET_SORT_ORDER", guildId, sortOrder, applicationStatus };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "GUILD_JOIN_REQUESTS_SET_SORT_ORDER", guildId, sortOrder, applicationStatus });
   },
   setSelectedGuildJoinRequest(guildId, request) {
     if (null != request) {
-      let obj = trackMemberApplicationViewed;
-      obj = { guildId: null, applicationStatus: null, applicationUserId: null };
-      obj[0] = guildId;
-      ({ applicationStatus: obj2[1], userId: obj2[2] } = request);
-      const result = obj.trackMemberApplicationViewed(obj);
+      const obj4 = { guildId, applicationStatus: null, applicationUserId: null };
+      ({ applicationStatus: obj2.applicationStatus, userId: obj2.applicationUserId } = request);
+      const result = GuildJoinRequestAnalyticUtils.trackMemberApplicationViewed(obj4);
     }
-    obj = { type: "GUILD_JOIN_REQUESTS_SET_SELECTED", guildId, request };
-    dispatcherDefault.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "GUILD_JOIN_REQUESTS_SET_SELECTED", guildId, request });
   },
-  fetchJoinRequestForInterview(closure_3) {
+  fetchJoinRequestForInterview() {
     const self = this;
-    const apply = _fetchJoinRequestForInterview.apply;
+    const apply = closure_16.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -969,9 +661,9 @@ export default {
     }
     return applyArgumentsResult;
   },
-  createOrEnterJoinRequestInterview(arg0, arg1) {
+  createOrEnterJoinRequestInterview() {
     const self = this;
-    const apply = _createOrEnterJoinRequestInterview.apply;
+    const apply = closure_17.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {

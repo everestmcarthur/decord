@@ -1,17 +1,19 @@
-// Module ID: 10292
-// Function ID: 10293
-// Name: getSoundmojiSendExperiment
+// Module ID: 10319
+// Function ID: 10320
+// Name: SoundmojiSendingExperiment
 // Dependencies: [1433, 2]
 // Exports: getSoundmojiSendExperiment, useSoundmojiEmojiPickerSectionExperiment, useSoundmojiSendExperiment
 
-// Module 10292 (getSoundmojiSendExperiment)
-import set from "set" /* 2 */;
+// Module 10319 (SoundmojiSendingExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null, 2: { enabled: true, showSoundmojiInEmojiPicker: false } };
-obj[2] = { enabled: true, showSoundmojiInEmojiPicker: true };
-let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-03-soundmoji-sending", kind: "user", defaultConfig: { enabled: false, showSoundmojiInEmojiPicker: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/premium/sounds/soundmoji/SoundmojiSendingExperiment.tsx");
+const obj = { name: "2026-03-soundmoji-sending", kind: "user", defaultConfig: { enabled: false, showSoundmojiInEmojiPicker: false }, variations: null };
+const obj2 = { 1: null, 2: { enabled: true, showSoundmojiInEmojiPicker: false } };
+obj2[2] = { enabled: true, showSoundmojiInEmojiPicker: true };
+obj.variations = obj2;
+let closure_0 = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/SoundmojiSendingExperiment.tsx");
 
 export const getSoundmojiSendExperiment = function getSoundmojiSendExperiment(location) {
   return closure_0.getConfig({ location: location.location }).enabled;

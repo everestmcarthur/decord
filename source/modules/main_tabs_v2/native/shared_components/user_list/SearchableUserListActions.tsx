@@ -1,52 +1,54 @@
-// Module ID: 10869
-// Function ID: 10870
-// Name: UserFlashListActions
-// Dependencies: [19, 17, 21, 10870, 5687, 5605, 2]
+// Module ID: 10896
+// Function ID: 10897
+// Name: SearchableUserListActions
+// Dependencies: [19, 17, 21, 10897, 5701, 5619, 2]
 // Exports: useUserListActionsProps
 
-// Module 10869 (UserFlashListActions)
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 10896 (SearchableUserListActions)
+import TableRow from "TableRow" /* 5619 */;
+import TableRowGroup from "TableRowGroup" /* 5701 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 class UserFlashListActions {
   constructor(arg0) {
     actions = global.actions;
     tmp = jsx;
-    obj = { style: items, children: null };
+    obj = { style: null, children: null };
     items = [, ];
     items[0] = { flex: 1 };
     items[1] = global.style;
+    obj.style = items;
     tmp2 = View;
     mapped = undefined;
     if (actions != null) {
-      mapped = actions.map((arg0, arg1) => {
-        ({ label, subLabel, icon, IconComponent, iconVariant, onPress } = arg0);
-        return callback2(callback(5605).TableRow, { label, subLabel, icon: callback2(callback(5605).TableRow.Icon, { source: icon, IconComponent, variant: iconVariant }), onPress, arrow: true }, arg1);
+      mapped = actions.map((item, index) => {
+        ({ label, subLabel, icon, IconComponent, iconVariant, onPress } = item);
+        return jsx(TableRow.TableRow, { label, subLabel, icon: jsx(TableRow.TableRow.Icon, { source: icon, IconComponent, variant: iconVariant }), onPress, arrow: true }, index);
       });
     }
-    obj[1] = tmp(require("TableRowGroupTitle").TableRowGroup, { hasIcons: true, children: mapped });
+    obj.children = tmp(closure_0(closure_2[4]).TableRowGroup, { hasIcons: true, children: mapped });
     return tmp(tmp2, obj);
   }
 }
-({ View: c4, StyleSheet: c5 } = get_ActivityIndicator);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/SearchableUserListActions.tsx");
+get_ActivityIndicator = fn(17);
+({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/SearchableUserListActions.tsx");
 
 export const useUserListActionsProps = function useUserListActionsProps(actions) {
   actions = actions.actions;
   const style = actions.style;
-  dependencyMap = undefined;
-  const tmp = style(10870)();
+  const tmp = style(10897)();
   dependencyMap = tmp;
   const items = [actions, tmp, style];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     let obj = style;
     if (style == null) {
       obj = {};
     }
-    const flattenResult = closure_1_5.flatten(obj);
+    const flattenResult = hasOwnProperty.flatten(obj);
     const paddingTop = flattenResult.paddingTop;
     let num = 0;
     if (undefined !== paddingTop) {
@@ -66,19 +68,18 @@ export const useUserListActionsProps = function useUserListActionsProps(actions)
             num3 = arr.length * closure_2 + num + num2;
           }
         }
-        obj = { headerSize: null, renderHeader: null };
-        obj[0] = num3;
+        const obj2 = { headerSize: num3, renderHeader: null };
         let fn;
         if (null != actions) {
           if (arr.length > 0) {
-            fn = () => closure_1_6(closure_1_7, { actions: closure_0, style: closure_1 });
+            fn = () => <UserFlashListActions actions={actions} style={style} />;
           }
         }
-        obj[1] = fn;
-        return obj;
+        obj2.renderHeader = fn;
+        return obj2;
       }
     }
-    error = new Error("UserListActions: paddingTop and paddingBottom must be numbers.");
+    const error = new Error("UserListActions: paddingTop and paddingBottom must be numbers.");
     throw error;
   }, items);
 };

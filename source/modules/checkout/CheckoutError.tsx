@@ -1,21 +1,20 @@
-// Module ID: 11447
-// Function ID: 11448
-// Name: prototype
-// Dependencies: [11448, 2]
+// Module ID: 11474
+// Function ID: 11475
+// Name: CheckoutError
+// Dependencies: [11475, 2]
 
-// Module 11447 (prototype)
-import set from "set" /* 2 */;
-import prototype2 from "prototype" /* 11448 */;
+// Module 11474 (CheckoutError)
+import RevenueError2 from "RevenueError" /* 11475 */;
+import size from "module_2" /* 2 */;
 
-const RevenueError = prototype2.RevenueError;
+const RevenueError = RevenueError2.RevenueError;
 const prototype = function CheckoutError(arg0) {
-  tmp = new tmp(arg0, new.target);
-  // ThrowIfThisInitialized (0x7c)
-  tmp.name = "FatalCheckoutError";
-  return tmp;
+  const tmp2 = new tmp(arg0, new.target);
+  tmp2.name = "FatalCheckoutError";
+  return tmp2;
 }.prototype;
 class prototype extends RevenueError {
 }
-const result = set.fileFinishedImporting("modules/checkout/CheckoutError.tsx");
+const result = size.fileFinishedImporting("modules/checkout/CheckoutError.tsx");
 
 export const CheckoutError = prototype;

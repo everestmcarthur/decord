@@ -1,17 +1,17 @@
-// Module ID: 11552
-// Function ID: 11553
-// Name: castNativeSyntheticEventData
+// Module ID: 11578
+// Function ID: 11579
+// Name: MessageDataSnowflakeUtils
 // Dependencies: [2]
 // Exports: castNativeSyntheticEventData, getNativeSyntheticEventData
 
-// Module 11552 (castNativeSyntheticEventData)
-import set from "set" /* 2 */;
+// Module 11578 (MessageDataSnowflakeUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/messages/native/snowflake/MessageDataSnowflakeUtils.tsx");
+const result = size.fileFinishedImporting("modules/messages/native/snowflake/MessageDataSnowflakeUtils.tsx");
 
 export function castNativeSyntheticEventData(arg0) {
   return arg0;
 }
-export const getNativeSyntheticEventData = function getNativeSyntheticEventData(closure_0) {
-  return closure_0.nativeEvent;
+export const getNativeSyntheticEventData = function getNativeSyntheticEventData(nativeEvent) {
+  return nativeEvent.nativeEvent;
 };

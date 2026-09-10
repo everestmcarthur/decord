@@ -1,61 +1,57 @@
-// Module ID: 13497
-// Function ID: 13498
+// Module ID: 13520
+// Function ID: 13521
 // Name: Footer
-// Dependencies: [19, 17, 21, 4560, 13498, 7182, 4556, 1114, 4975, 5587, 13499, 2]
+// Dependencies: [19, 17, 21, 4574, 13521, 7196, 4570, 1114, 4989, 5601, 13522, 2]
 // Exports: default
 
-// Module 13497 (Footer)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import Button from "Button" /* 4975 */;
-import preloadDefault from "preload" /* 5587 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7182 */;
-import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 13498 */;
-import registerAssetDefault from "registerAsset" /* 13499 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13520 (Footer)
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
+import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 13521 */;
+import _modDef13522 from "module_13522" /* 13522 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ container: { flex: 1, flexDirection: "column", alignItems: "center", width: "100%" }, footerText: { marginBottom: 24 }, button: { marginBottom: 40 }, easterEggSpacing: { position: "absolute", top: 40 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/Footer.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let closure_7 = createStyles.createStyles({ container: { flex: 1, flexDirection: "column", alignItems: "center", width: "100%" }, footerText: { marginBottom: 24 }, button: { marginBottom: 40 }, easterEggSpacing: { position: "absolute", top: 40 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/premium/native/Footer.tsx");
 
 export default function Footer(showSubscribeButton) {
   showSubscribeButton = showSubscribeButton.showSubscribeButton;
-  const tmp = callback2();
-  useOpenPremiumMarketingPaymentDefault(QUICK_SWITCHERDefault.PREMIUM_MARKETING_FOOTER);
-  let obj = { style: items, children: null };
-  items = [tmp.container, showSubscribeButton.style];
+  const tmp = closure_7();
+  useOpenPremiumMarketingPaymentDefault(AnalyticsLocationDefault.PREMIUM_MARKETING_FOOTER);
+  const obj = { style: null, children: null };
+  const items = [tmp.container, showSubscribeButton.style];
+  obj.style = items;
   let tmp8Result = showSubscribeButton;
   if (showSubscribeButton) {
-    obj = { children: null };
-    obj = { style: null, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-    obj[0] = tmp.footerText;
-    const intl = getSystemLocale.intl;
-    obj[3] = intl.string(getSystemLocale.t["2bSPbq"]);
-    const items1 = [callback(Text.Text, obj), ];
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.button;
-    const obj2 = { text: null, variant: "primary", size: "lg", onPress: null, grow: true };
-    obj2[0] = tmp7;
-    obj2[3] = tmp6;
-    obj1[1] = callback(Button.Button, obj2);
-    items1[1] = callback(tmp9, obj1);
-    obj[0] = items1;
-    tmp8Result = tmp8(closure_5, obj);
+    const obj2 = { children: null };
+    const obj3 = { style: tmp.footerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+    const intl = util.intl;
+    obj3.children = intl.string(util.t["2bSPbq"]);
+    const items1 = [React4(Text_Text.Text, obj3), ];
+    const obj4 = { style: tmp.button, children: null };
+    const obj5 = { text: tmp7, variant: "primary", size: "lg", onPress: tmp6, grow: true };
+    obj4.children = React4(components_Button_Button.Button, obj5);
+    items1[1] = React4(tmp9, obj4);
+    obj2.children = items1;
+    tmp8Result = tmp8(hasOwnProperty, obj2);
   }
   const items2 = [tmp8Result, ];
   let easterEggSpacing = null;
-  const tmp14 = callback;
-  const tmp4 = useOpenPremiumMarketingPaymentDefault;
+  const tmp14 = React4;
   if (!showSubscribeButton) {
     easterEggSpacing = tmp.easterEggSpacing;
   }
-  const tmp2Result = preloadDefault;
-  items2[1] = tmp14(tmp2Result, { style: easterEggSpacing, source: registerAssetDefault });
-  obj[1] = items2;
-  return closure_6(View, obj);
+  const tmp2Result = FastImageDefault;
+  items2[1] = tmp14(tmp2Result, { style: easterEggSpacing, source: _modDef13522 });
+  obj.children = items2;
+  return timestampProducer(View, obj);
 };

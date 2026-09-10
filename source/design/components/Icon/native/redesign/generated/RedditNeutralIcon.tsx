@@ -1,26 +1,26 @@
-// Module ID: 8897
-// Function ID: 8898
+// Module ID: 8924
+// Function ID: 8925
 // Name: RedditNeutralIcon
-// Dependencies: [19, 21, 576, 4261, 8898, 2]
+// Dependencies: [19, 21, 576, 4274, 8925, 2]
 // Exports: RedditNeutralIcon
 
-// Module 8897 (RedditNeutralIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 8898 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 8924 (RedditNeutralIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod8925 from "module_8925" /* 8925 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/RedditNeutralIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/RedditNeutralIcon.tsx");
 
 export const RedditNeutralIcon = function RedditNeutralIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8925, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

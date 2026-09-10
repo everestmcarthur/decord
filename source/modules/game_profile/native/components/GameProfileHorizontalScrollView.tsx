@@ -1,25 +1,25 @@
-// Module ID: 8725
-// Function ID: 8726
-// Dependencies: [19, 17, 21, 6655, 2]
+// Module ID: 8753
+// Function ID: 8754
+// Name: GameProfileHorizontalScrollView
+// Dependencies: [19, 17, 21, 6669, 2]
 
-// Module 8725
-import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+// Module 8753 (GameProfileHorizontalScrollView)
+import LegacyBaseButton from "LegacyBaseButton" /* 6669 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
-  let obj = LegacyBaseButton;
-  const nativeGesture = obj.useNativeGesture({ disallowInterruption: true });
-  obj = { gesture: nativeGesture, children: null };
-  obj = { ref };
+require = fn;
+const ScrollView = fn(17).ScrollView;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileHorizontalScrollView.tsx");
+
+export default noop.forwardRef((arg0, ref) => {
+  const nativeGesture = LegacyBaseButton.useNativeGesture({ disallowInterruption: true });
+  const obj2 = { gesture: nativeGesture, children: null };
+  const obj3 = { ref };
   const merged = Object.assign(arg0);
-  obj.horizontal = true;
-  obj.nestedScrollEnabled = true;
-  obj[1] = <ScrollView ref={arg1} />;
-  return jsx(LegacyBaseButton.GestureDetector, { ref });
+  obj3.horizontal = true;
+  obj3.nestedScrollEnabled = true;
+  obj2.children = <ScrollView ref={arg1} />;
+  return jsx(LegacyBaseButton.GestureDetector, { gesture: nativeGesture, children: null });
 });
-const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileHorizontalScrollView.tsx");
-
-export default forwardRefResult;

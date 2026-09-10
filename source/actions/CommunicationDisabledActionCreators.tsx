@@ -1,81 +1,72 @@
-// Module ID: 11847
-// Function ID: 11848
-// Dependencies: [5, 4153, 5520, 2]
+// Module ID: 11873
+// Function ID: 11874
+// Name: CommunicationDisabledActionCreators
+// Dependencies: [5, 4166, 5534, 2]
 
-// Module 11847
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+// Module 11873 (CommunicationDisabledActionCreators)
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const result = require("set").fileFinishedImporting("actions/CommunicationDisabledActionCreators.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("actions/CommunicationDisabledActionCreators.tsx");
 
 export default {
-  setCommunicationDisabledDuration(closure_1_0, c1, value, current) {
-    closure_0 = closure_1_0;
-    closure_1 = c1;
-    const callback = value;
+  setCommunicationDisabledDuration(arg0, id, value, current, arg4, arg5) {
+    closure_0 = arg0;
+    closure_1 = id;
+    asyncGeneratorStep = value;
     closure_3 = current;
     closure_4 = arg4;
     closure_5 = arg5;
-    return callback(function*() {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
+    return (async (arg0, value) => {
+      if (guildId === 2) {
+        guildId = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
       } else {
         try {
-          v0 = 2;
-          if (0 === dependencyMap) {
+          guildId = 2;
+          if (0 === userId) {
             if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
+              guildId = 3;
+              throw value;
             } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+              guildId = 3;
+              const obj5 = { value, done: true };
+              return obj5;
             } else {
               let toISOStringResult = null;
-              if (null != closure_1_2) {
-                obj1 = v0(4153)();
-                toISOStringResult = obj1.add(tmp21, "s").toISOString();
-                const addResult = obj1.add(tmp21, "s");
+              if (null != duration) {
+                const obj2 = guildId(userId[1])();
+                toISOStringResult = guildId(userId[1])().add(tmp20, "s").toISOString();
+                const addResult = guildId(userId[1])().add(tmp20, "s");
               }
-              obj1 = { guildId: null, userId: null, communicationDisabledUntilTimestamp: null, duration: null, reason: null, location: null, moderatorReportId: null };
-              obj1[0] = v0;
-              obj1[1] = dependencyMap;
-              obj1[2] = toISOStringResult;
-              obj1[3] = closure_1_2;
-              obj1[4] = closure_1_3;
-              obj1[5] = closure_1_4;
-              obj1[6] = closure_1_5;
-              dependencyMap = 1;
-              v0 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = v0(5520).setCommunicationDisabledUntil(obj1);
-              return obj2;
+              const obj6 = { guildId, userId, communicationDisabledUntilTimestamp: toISOStringResult, duration, reason, location: _location, moderatorReportId };
+              userId = 1;
+              guildId = 1;
+              const obj7 = { value: guildId(userId[2]).setCommunicationDisabledUntil(obj6), done: false };
+              return obj7;
             }
           } else if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
+            guildId = 3;
+            throw value;
           } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            guildId = 3;
+            const obj = { value, done: true };
             return obj;
           } else {
-            v0 = 3;
+            guildId = 3;
             return { value: "HermesInternal", done: null };
           }
         } catch (tmp15) {
-          v0 = tmp;
+          guildId = tmp;
           throw tmp15;
         }
       }

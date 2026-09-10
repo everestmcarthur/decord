@@ -1,41 +1,42 @@
-// Module ID: 14839
-// Function ID: 14840
-// Name: radio
-// Dependencies: [19, 7975, 14840, 1935, 11473, 1114, 14842, 2]
+// Module ID: 14865
+// Function ID: 14866
+// Name: DirectMessageSpamFilterSetting
+// Dependencies: [19, 7989, 14866, 1935, 11500, 1114, 14868, 2]
 
-// Module 14839 (radio)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import closure_2 from "noop" /* 19 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 14865 (DirectMessageSpamFilterSetting)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import ModerationUtils from "ModerationUtils" /* 14866 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const SettingBuilders = fn(11500);
+const radio = SettingBuilders.createRadio({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.tiCXaH);
+    const intl = util.intl;
+    return intl.string(util.t.tiCXaH);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(7989).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useOptions: function useDmSpamFilterSettingOptions() {
-    return React.useMemo(() => {
-      const dmSpamOptions = callback(table[2]).generateDmSpamOptions();
+    return noop.useMemo(() => {
+      const dmSpamOptions = ModerationUtils.generateDmSpamOptions();
       return dmSpamOptions.map((value) => ({ value: value.value, label: value.name, subLabel: value.desc }));
     }, []);
   },
-  useValue: require("useDerivedDmSpamFilterSettingValue").useDerivedDmSpamFilterSettingValue,
+  useValue: fn(14868).useDerivedDmSpamFilterSettingValue,
   onValueChange: function onDmSpamFilterSettingValueChange(arg0) {
-    const DmSpamFilterV2 = explicitContentFromProto.DmSpamFilterV2;
+    const DmSpamFilterV2 = UserSettings.DmSpamFilterV2;
     DmSpamFilterV2.updateSetting(Number(arg0));
   },
   useSearchTerms() {
-    const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t.H9XOl3), ];
-    const intl2 = getSystemLocale.intl;
-    items[1] = intl2.string(getSystemLocale.t.k4W40P);
+    const intl = util.intl;
+    const items = [intl.string(util.t.H9XOl3), ];
+    const intl2 = util.intl;
+    items[1] = intl2.string(util.t.k4W40P);
     return items;
   }
-};
-createToggle = createToggle.createRadio(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DirectMessageSpamFilterSetting.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DirectMessageSpamFilterSetting.tsx");
 
-export default createToggle;
+export default radio;

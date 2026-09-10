@@ -1,64 +1,64 @@
-// Module ID: 16877
-// Function ID: 16878
-// Dependencies: [32, 19, 17, 21, 4560, 576, 9797, 1114, 16878, 16894, 9798, 12620, 11901, 2]
+// Module ID: 16914
+// Function ID: 16915
+// Name: MessageRequestsScreenWithTabs
+// Dependencies: [32, 19, 17, 21, 4574, 576, 9824, 1114, 16915, 16931, 9825, 12646, 11927, 2]
 
-// Module 16877
-import ThemesDefault from "Themes" /* 576 */;
-import PendingMessageRequestRowDefault from "PendingMessageRequestRow" /* 16878 */;
-import PendingSpamMessageRequestRowDefault from "PendingSpamMessageRequestRow" /* 16894 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16914 (MessageRequestsScreenWithTabs)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import SegmentedControlState from "SegmentedControlState" /* 9824 */;
+import SegmentedControl from "SegmentedControl" /* 9825 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11927 */;
+import SegmentedControlPages from "SegmentedControlPages" /* 12646 */;
+import MessageRequestListDefault from "MessageRequestList" /* 16915 */;
+import SpamMessageListDefault from "SpamMessageList" /* 16931 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c4 = importAllResult;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = { REQUEST: "REQUEST", SPAM: "SPAM" };
-let obj = { container: null, messageRequestContent: null, tabContainer: null };
-obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
-obj[0] = obj;
-obj[1] = { flex: 1 };
-createCacheKey = { minHeight: 32, paddingHorizontal: ThemesDefault.space.PX_16 };
-obj[2] = createCacheKey;
-let closure_9 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo((navigation) => {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const constants = { REQUEST: "REQUEST", SPAM: "SPAM" };
+const createStyles = fn(4574);
+let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, messageRequestContent: { flex: 1 }, tabContainer: null };
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+obj.tabContainer = { minHeight: 32, paddingHorizontal: nativeDefault.space.PX_16 };
+let closure_9 = createStyles.createStyles(obj);
+let obj4 = { minHeight: 32, paddingHorizontal: nativeDefault.space.PX_16 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/message_requests/screens/MessageRequestsScreenWithTabs.tsx");
+
+export default noop.memo((navigation) => {
   navigation = navigation.navigation;
-  importDefault = undefined;
-  const tmp = callback4();
-  const tmp2 = callback(importAllResult.useState(0), 2);
-  importDefault = tmp2[1];
+  closure_1 = undefined;
+  const tmp = closure_9();
+  [obj2.pageWidth, closure_1] = noop.useState(0);
   const items = [navigation];
-  callback = importAllResult.useCallback((channelId) => navigation.push("preview", { channelId }), items);
-  const callback1 = importAllResult.useCallback((nativeEvent) => {
-    callback(nativeEvent.nativeEvent.layout.width);
+  const callback = noop.useCallback((channelId) => navigation.push("preview", { channelId }), items);
+  const callback1 = noop.useCallback((nativeEvent) => {
+    closure_1(nativeEvent.nativeEvent.layout.width);
   }, []);
-  let obj = navigation(9797);
-  obj = { items: null, pageWidth: null, defaultIndex: 0 };
-  obj = { label: null, id: null, page: null };
-  const intl = navigation(1114).intl;
-  obj[0] = intl.string(navigation(1114).t["7RFcXZ"]);
-  obj[1] = constants.REQUEST;
-  obj[2] = callback2(PendingMessageRequestRowDefault, { goToMessageRequestPreview: callback });
-  const items1 = [obj, ];
-  obj1 = { label: null, id: null, page: null };
-  const intl2 = navigation(1114).intl;
-  obj1[0] = intl2.string(navigation(1114).t.ulKXHp);
-  obj1[1] = constants.SPAM;
-  obj1[2] = callback2(PendingSpamMessageRequestRowDefault, { goToMessageRequestPreview: callback });
-  items1[1] = obj1;
-  obj[0] = items1;
-  obj[1] = tmp2[0];
-  const segmentedControlState = obj.useSegmentedControlState(obj);
-  const obj2 = { style: tmp.container, children: null };
-  const items2 = [callback2(View, { style: tmp.tabContainer, onLayout: callback1, children: callback2(navigation(9798).SegmentedControl, { state: segmentedControlState }) }), , ];
-  const obj3 = { style: tmp.tabContainer, onLayout: callback1, children: callback2(navigation(9798).SegmentedControl, { state: segmentedControlState }) };
-  items2[1] = callback2(View, { style: tmp.messageRequestContent, children: callback2(navigation(12620).SegmentedControlPages, { state: segmentedControlState }) });
-  items2[2] = callback2(navigation(11901).TTIFirstContentfulPaint, { label: "message_requests" });
-  obj2[1] = items2;
-  return callback3(View, obj2);
+  const obj2 = { items: null, pageWidth: null, defaultIndex: 0 };
+  const obj3 = { label: null, id: null, page: null };
+  const intl = util.intl;
+  obj3.label = intl.string(util.t["7RFcXZ"]);
+  obj3.id = constants.REQUEST;
+  obj3.page = timestampProducer(MessageRequestListDefault, { goToMessageRequestPreview: callback });
+  const items1 = [obj3, ];
+  const obj4 = { label: null, id: null, page: null };
+  const intl2 = util.intl;
+  obj4.label = intl2.string(util.t.ulKXHp);
+  obj4.id = constants.SPAM;
+  obj4.page = timestampProducer(SpamMessageListDefault, { goToMessageRequestPreview: callback });
+  items1[1] = obj4;
+  obj2.items = items1;
+  const segmentedControlState = SegmentedControlState.useSegmentedControlState(obj2);
+  const obj5 = { style: tmp.container, children: null };
+  const items2 = [timestampProducer(View, { style: tmp.tabContainer, onLayout: callback1, children: timestampProducer(SegmentedControl.SegmentedControl, { state: segmentedControlState }) }), , ];
+  const obj6 = { style: tmp.tabContainer, onLayout: callback1, children: timestampProducer(SegmentedControl.SegmentedControl, { state: segmentedControlState }) };
+  items2[1] = timestampProducer(View, { style: tmp.messageRequestContent, children: timestampProducer(SegmentedControlPages.SegmentedControlPages, { state: segmentedControlState }) });
+  items2[2] = timestampProducer(TTIFirstContentfulPaint.TTIFirstContentfulPaint, { label: "message_requests" });
+  obj5.children = items2;
+  return React5(View, obj5);
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/message_requests/screens/MessageRequestsScreenWithTabs.tsx");
-
-export default memoResult;

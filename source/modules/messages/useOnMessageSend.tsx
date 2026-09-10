@@ -1,20 +1,22 @@
-// Module ID: 16757
-// Function ID: 16758
+// Module ID: 16794
+// Function ID: 16795
 // Name: useOnMessageSend
 // Dependencies: [19, 1074, 573, 2]
 // Exports: default
 
-// Module 16757 (useOnMessageSend)
-import closure_2 from "noop" /* 19 */;
-import { MessageStates } from "ME" /* 1074 */;
+// Module 16794 (useOnMessageSend)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/messages/useOnMessageSend.tsx");
+const MessageStates = fn(1074).MessageStates;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/useOnMessageSend.tsx");
 
 export default function useOnMessageSend(arg0) {
   closure_0 = arg0;
-  closure_1 = tmp;
+  dependencyMap = tmp;
   const items = [arg0, arg1];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     function handleMessage(channelId) {
       let tmp2 = undefined !== handleMessageCreate;
       if (tmp2) {
@@ -27,7 +29,7 @@ export default function useOnMessageSend(arg0) {
     function handleMessageCreate(optimistic) {
       optimistic = optimistic.optimistic;
       if (!optimistic) {
-        optimistic = optimistic.message.state === closure_1_3.SENDING;
+        optimistic = optimistic.message.state === constants.SENDING;
       }
       if (optimistic) {
         if (!tmp3) {
@@ -36,17 +38,15 @@ export default function useOnMessageSend(arg0) {
         tmp3 = undefined !== handleMessageCreate && optimistic.channelId !== tmp2;
       }
     }
-    const subscription = callback(573).subscribe("MESSAGE_CREATE", handleMessageCreate);
-    let obj = callback(573);
-    const subscription1 = callback(573).subscribe("UPLOAD_START", handleMessage);
-    let obj2 = callback(573);
-    const subscription2 = callback(573).subscribe("CALL_CREATE", handleMessage);
+    const subscription = closure_0(573).subscribe("MESSAGE_CREATE", handleMessageCreate);
+    let obj = closure_0(573);
+    const subscription1 = closure_0(573).subscribe("UPLOAD_START", handleMessage);
+    let obj2 = closure_0(573);
+    const subscription2 = closure_0(573).subscribe("CALL_CREATE", handleMessage);
     return () => {
-      handleMessage(handleMessageCreate[2]).unsubscribe("MESSAGE_CREATE", handleMessageCreate);
-      const obj = handleMessage(handleMessageCreate[2]);
-      handleMessage(handleMessageCreate[2]).unsubscribe("UPLOAD_START", handleMessage);
-      const obj2 = handleMessage(handleMessageCreate[2]);
-      handleMessage(handleMessageCreate[2]).unsubscribe("CALL_CREATE", handleMessage);
+      DispatcherDefault.unsubscribe("MESSAGE_CREATE", handleMessageCreate);
+      DispatcherDefault.unsubscribe("UPLOAD_START", handleMessage);
+      DispatcherDefault.unsubscribe("CALL_CREATE", handleMessage);
     };
   }, items);
 };

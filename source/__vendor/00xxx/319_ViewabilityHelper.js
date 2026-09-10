@@ -5,8 +5,8 @@
 
 // Module 319 (ViewabilityHelper)
 import _createClassDefault from "_createClass" /* 42 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "_classCallCheck" /* 41 */;
+import _slicedToArray from "module_32" /* 32 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 const ViewabilityHelper = arg1;
 class ViewabilityHelper {
@@ -26,17 +26,18 @@ class ViewabilityHelper {
     return;
   }
 }
+const entry = {
+  key: "dispose",
+  value: function dispose() {
+    const _timers = this._timers;
+    const item = _timers.forEach(clearTimeout);
+  }
+};
 let items = [
-  {
-    key: "dispose",
-    value: function dispose() {
-      const _timers = this._timers;
-      const item = _timers.forEach(clearTimeout);
-    }
-  },
+  entry,
   {
     key: "computeViewableItems",
-    value: function computeViewableItems(getItemCount, arg1, arg2, getCellMetrics, arg4) {
+    value: function computeViewableItems(getItemCount, arg1, arg2, getCellMetrics, renderRange) {
       const itemCount = getItemCount.getItemCount(getItemCount.data);
       ({ itemVisiblePercentThreshold, viewAreaCoveragePercentThreshold } = this._config);
       let tmp3 = itemVisiblePercentThreshold;
@@ -52,19 +53,16 @@ let items = [
       if (0 === itemCount) {
         return items;
       } else {
-        let tmp7 = arg4;
-        if (!arg4) {
-          let obj = { first: 0, last: null };
-          obj[1] = itemCount - 1;
+        let tmp7 = renderRange;
+        if (!renderRange) {
+          const obj = { first: 0, last: itemCount - 1 };
           tmp7 = obj;
         }
         ({ first, last } = tmp7);
         if (last >= itemCount) {
           const _console = console;
           const _JSON = JSON;
-          obj = { renderRange: null, itemCount: null };
-          obj[0] = arg4;
-          obj[1] = itemCount;
+          const obj3 = { renderRange, itemCount };
           console.warn(`Invalid render range computing viewability ${JSON.stringify(obj2)}`);
           return [];
         } else {
@@ -72,8 +70,6 @@ let items = [
           if (first <= last) {
             while (true) {
               let cellMetrics = getCellMetrics.getCellMetrics(first, getItemCount);
-              let tmp8 = first;
-              let tmp9 = num2;
               let tmp10 = num2;
               if (!cellMetrics) {
                 first = first + 1;
@@ -128,10 +124,11 @@ let items = [
   },
   {
     key: "onUpdate",
-    value: function onUpdate(getItemCount, arg1, arg2, getCellMetrics, closure_2, closure_3) {
-      let self = this;
-      self = this;
+    value: function onUpdate(getItemCount, arg1, arg2, getCellMetrics, arg4, fn, renderRange) {
+      const self = this;
       closure_1 = getItemCount;
+      closure_2 = arg4;
+      closure_3 = fn;
       const itemCount = getItemCount.getItemCount(getItemCount.data);
       if (!this._config.waitForInteraction) {
         if (0 !== itemCount) {
@@ -139,7 +136,7 @@ let items = [
             let items = [];
             let viewableItems = items;
             if (itemCount) {
-              viewableItems = self.computeViewableItems(getItemCount, arg1, arg2, getCellMetrics, arg6);
+              viewableItems = self.computeViewableItems(getItemCount, arg1, arg2, getCellMetrics, renderRange);
               items = viewableItems;
             }
             if (self._viewableIndices.length !== items.length) {
@@ -154,7 +151,7 @@ let items = [
                 let _timers = self._timers;
                 _timers.add(timerId);
               } else {
-                self._onUpdateSync(getItemCount, items, closure_3, closure_2);
+                self._onUpdateSync(getItemCount, items, fn, arg4);
               }
             } else {
               const _viewableIndices = self._viewableIndices;
@@ -178,54 +175,49 @@ let items = [
   },
   {
     key: "_onUpdateSync",
-    value: function _onUpdateSync(closure_1, items, closure_3, closure_2) {
-      let self = this;
-      self = this;
-      closure_0 = closure_2;
-      const found = items.filter((arg0) => {
+    value: function _onUpdateSync(getItemCount, items, fn, arg3) {
+      const self = this;
+      closure_1 = getItemCount;
+      closure_0 = arg3;
+      const found = items.filter((item) => {
         const _viewableIndices = self._viewableIndices;
-        return _viewableIndices.includes(arg0);
+        return _viewableIndices.includes(item);
       });
       const _viewableItems = this._viewableItems;
-      const map = new Map(found.map((arg0) => {
-        const tmp = callback(arg0, true, closure_1);
+      const map = new Map(found.map((item) => {
+        const tmp = closure_0(item, true, closure_1);
         const items = [tmp.key, tmp];
         return items;
       }));
       items = [];
       while (tmp !== undefined) {
-        let tmp3 = self;
-        let tmp4 = self(tmp2, 2);
+        let tmp4 = _slicedToArray(tmp2, 2);
         let tmp5 = tmp4[1];
         if (!_viewableItems.has(tmp4[0])) {
-          let tmp6 = tmp5;
           let arr = items.push(tmp5);
         }
         continue;
       }
       tmp = map[Symbol.iterator]();
       while (tmp8 !== undefined) {
-        let tmp10 = self;
-        let tmp11 = self(tmp9, 2);
+        let tmp11 = _slicedToArray(tmp9, 2);
         let tmp12 = tmp11[1];
         if (!map.has(tmp11[0])) {
           let obj = {};
-          let tmp13 = tmp12;
-          let tmp14 = obj;
           let merged = Object.assign(tmp12);
           obj.isViewable = false;
-          arr = items.push(obj);
+          let arr2 = items.push(obj);
         }
         continue;
       }
       if (items.length > 0) {
         self._viewableItems = map;
-        obj = { viewableItems: null, changed: null, viewabilityConfig: null };
+        const obj2 = { viewableItems: null, changed: null, viewabilityConfig: null };
         const _Array = Array;
-        obj[0] = Array.from(map.values());
-        obj[1] = items;
-        obj[2] = self._config;
-        closure_3(obj);
+        obj2.viewableItems = Array.from(map.values());
+        obj2.changed = items;
+        obj2.viewabilityConfig = self._config;
+        fn(obj2);
       }
     }
   }

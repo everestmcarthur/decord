@@ -1,48 +1,49 @@
-// Module ID: 7090
-// Function ID: 7091
+// Module ID: 7104
+// Function ID: 7105
 // Name: MemberVerificationAlertUpdate
-// Dependencies: [19, 17, 1074, 21, 4560, 4994, 1114, 4255, 7091, 4556, 2]
+// Dependencies: [19, 17, 1074, 21, 4574, 5008, 1114, 4268, 7105, 4570, 2]
 // Exports: default
 
-// Module 7090 (MemberVerificationAlertUpdate)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import componentDidMountDefault from "componentDidMount" /* 4994 */;
-import registerAssetDefault from "registerAsset" /* 7091 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { DownloadLinks } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 7104 (MemberVerificationAlertUpdate)
+import util from "util" /* 1114 */;
+import LinkingDefault from "Linking" /* 4268 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import common_AlertDefault from "common/Alert" /* 5008 */;
+import _modDef7105 from "module_7105" /* 7105 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ headerImage: { marginLeft: "auto", marginRight: "auto", marginTop: 8 }, header: { marginTop: 24, textAlign: "center" }, text: { marginVertical: 8, lineHeight: 18, textAlign: "center" } });
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertUpdate.tsx");
+require = fn;
+const Image = fn(17).Image;
+const DownloadLinks = fn(1074).DownloadLinks;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let closure_7 = createStyles.createStyles({ headerImage: { marginLeft: "auto", marginRight: "auto", marginTop: 8 }, header: { marginTop: 24, textAlign: "center" }, text: { marginVertical: 8, lineHeight: 18, textAlign: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertUpdate.tsx");
 
 export default function MemberVerificationAlertUpdate(onClose) {
-  const tmp = callback3();
-  let obj = {};
+  const tmp = closure_7();
+  const obj = {};
   const merged = Object.assign(onClose);
-  const intl = getSystemLocale.intl;
-  obj.confirmText = intl.string(getSystemLocale.t.b8siyY);
-  const intl2 = getSystemLocale.intl;
-  obj.cancelText = intl2.string(getSystemLocale.t["ETE/oC"]);
+  const intl = util.intl;
+  obj.confirmText = intl.string(util.t.b8siyY);
+  const intl2 = util.intl;
+  obj.cancelText = intl2.string(util.t["ETE/oC"]);
   obj.onConfirm = function onConfirm() {
-    return callback(table[7]).openURL(constants.IOS);
+    return LinkingDefault.openURL(constants.IOS);
   };
   obj.onCancel = onClose.onClose;
-  obj = { source: registerAssetDefault, style: tmp.headerImage };
-  const items = [callback(Image, obj), , ];
-  obj = { style: tmp.header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl3 = getSystemLocale.intl;
-  obj[3] = intl3.string(getSystemLocale.t.kkjNHU);
-  items[1] = callback(Text.Text, obj);
-  obj1 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl4 = getSystemLocale.intl;
-  obj1[3] = intl4.string(getSystemLocale.t.gnkqzQ);
-  items[2] = callback(Text.Text, obj1);
+  const tmp2 = common_AlertDefault;
+  const items = [hasOwnProperty(Image, { source: _modDef7105, style: tmp.headerImage }), , ];
+  const obj3 = { style: tmp.header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+  const intl3 = util.intl;
+  obj3.children = intl3.string(util.t.kkjNHU);
+  items[1] = hasOwnProperty(Text_Text.Text, obj3);
+  const obj4 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
+  const intl4 = util.intl;
+  obj4.children = intl4.string(util.t.gnkqzQ);
+  items[2] = hasOwnProperty(Text_Text.Text, obj4);
   obj.children = items;
-  return callback2(componentDidMountDefault, obj);
+  return timestampProducer(tmp2, obj);
 };

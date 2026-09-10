@@ -1,26 +1,26 @@
-// Module ID: 7880
-// Function ID: 7881
+// Module ID: 7894
+// Function ID: 7895
 // Name: PhoneCallIcon
-// Dependencies: [19, 21, 576, 4261, 7881, 2]
+// Dependencies: [19, 21, 576, 4274, 7895, 2]
 // Exports: PhoneCallIcon
 
-// Module 7880 (PhoneCallIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 7881 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 7894 (PhoneCallIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod7895 from "module_7895" /* 7895 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/PhoneCallIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/PhoneCallIcon.tsx");
 
 export const PhoneCallIcon = function PhoneCallIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7895, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

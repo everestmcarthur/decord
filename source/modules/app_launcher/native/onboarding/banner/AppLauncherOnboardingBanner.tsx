@@ -1,33 +1,31 @@
-// Module ID: 12052
-// Function ID: 12053
+// Module ID: 12078
+// Function ID: 12079
 // Name: AppLauncherOnboardingBanner
-// Dependencies: [19, 21, 1943, 12053, 12067, 12069, 2]
+// Dependencies: [19, 21, 1943, 12079, 12093, 12095, 2]
 // Exports: default
 
-// Module 12052 (AppLauncherOnboardingBanner)
-import noopAll from "noop" /* 19 */;
-import DismissibleContent from "DismissibleContent" /* 1943 */;
-import ActivitiesBannerDefault from "ActivitiesBanner" /* 12053 */;
-import AppsBanerDefault from "AppsBaner" /* 12067 */;
-import BotsBannerDefault from "BotsBanner" /* 12069 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 12078 (AppLauncherOnboardingBanner)
+import dismissible_content from "dismissible_content" /* 1943 */;
+import ActivitiesBannerDefault from "ActivitiesBanner" /* 12079 */;
+import AppsBannerDefault from "AppsBanner" /* 12093 */;
+import BotsBannerDefault from "BotsBanner" /* 12095 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/banner/AppLauncherOnboardingBanner.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/banner/AppLauncherOnboardingBanner.tsx");
 
 export default function AppLauncherOnboardingBanner(arg0) {
   ({ context, visibleContent } = arg0);
-  if (DismissibleContent.DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER === visibleContent) {
-    let obj = { context: null };
-    obj[0] = context;
-    return jsx(ActivitiesBannerDefault, { context: null });
+  if (dismissible_content.DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER === visibleContent) {
+    const obj2 = { context };
+    return jsx(ActivitiesBannerDefault, { context });
   } else if (tmp(1943).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER === visibleContent) {
-    return jsx(AppsBanerDefault, {});
+    return jsx(AppsBannerDefault, {});
   } else if (tmp(1943).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER === visibleContent) {
-    obj = { context: null };
-    obj[0] = context;
-    return jsx(BotsBannerDefault, { context: null });
+    const obj = { context };
+    return jsx(BotsBannerDefault, { context });
   } else {
     return null;
   }

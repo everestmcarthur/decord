@@ -1,26 +1,26 @@
-// Module ID: 7209
-// Function ID: 7210
+// Module ID: 7223
+// Function ID: 7224
 // Name: ChevronSmallRightIcon
-// Dependencies: [19, 21, 576, 4261, 5613, 2]
+// Dependencies: [19, 21, 576, 4274, 5627, 2]
 // Exports: ChevronSmallRightIcon
 
-// Module 7209 (ChevronSmallRightIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 5613 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 7223 (ChevronSmallRightIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod5627 from "module_5627" /* 5627 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx");
 
 export const ChevronSmallRightIcon = function ChevronSmallRightIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5627, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

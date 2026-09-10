@@ -1,17 +1,17 @@
-// Module ID: 6221
-// Function ID: 6222
+// Module ID: 6235
+// Function ID: 6236
 // Name: LeafIllocon
-// Dependencies: [21, 5587, 6222, 2]
+// Dependencies: [21, 5601, 6236, 2]
 // Exports: LeafIllocon
 
-// Module 6221 (LeafIllocon)
-import set from "set" /* 2 */;
+// Module 6235 (LeafIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 6222 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6236 from "module_6236" /* 6236 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/LeafIllocon.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/LeafIllocon.native.tsx");
 
 export const LeafIllocon = function LeafIllocon(size) {
   let num = size.size;
@@ -19,13 +19,13 @@ export const LeafIllocon = function LeafIllocon(size) {
   if (num === undefined) {
     num = 64;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef6236 };
+  obj.source = obj2;
   const items = [{ width: num, height: num }];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { uri: metadataDefault });
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

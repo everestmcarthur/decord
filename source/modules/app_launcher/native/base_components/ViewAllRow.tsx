@@ -1,39 +1,38 @@
-// Module ID: 12098
-// Function ID: 12099
+// Module ID: 12124
+// Function ID: 12125
 // Name: ViewAllRow
-// Dependencies: [19, 17, 21, 4560, 5605, 1114, 4556, 2]
+// Dependencies: [19, 17, 21, 4574, 5619, 1114, 4570, 2]
 // Exports: default
 
-// Module 12098 (ViewAllRow)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import TableRowInner from "TableRowInner" /* 5605 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12124 (ViewAllRow)
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import TableRow from "TableRow" /* 5619 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-let closure_4 = createCacheKey.createStyles({ expandCTALabelContainer: { alignItems: "center" } });
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/base_components/ViewAllRow.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_4 = createStyles.createStyles({ expandCTALabelContainer: { alignItems: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/ViewAllRow.tsx");
 
 export default function ViewAllRow(title) {
   title = title.title;
   let formatToPlainStringResult;
   if (null != title) {
     const intl = tmp3(1114).intl;
-    let obj = { title: null };
-    obj[0] = title;
+    const obj = { title };
     formatToPlainStringResult = intl.formatToPlainString(tmp3(1114).t["bj/2kV"], obj);
   }
-  obj = { accessibilityLabel: formatToPlainStringResult, label: null, onPress: null, end: true };
-  obj = { style: callback().expandCTALabelContainer, children: null };
-  obj1 = { color: "text-brand", variant: "text-md/semibold", children: null };
+  const obj2 = { accessibilityLabel: formatToPlainStringResult, label: null, onPress: null, end: true };
+  const obj3 = { style: closure_4().expandCTALabelContainer, children: null };
+  const obj4 = { color: "text-brand", variant: "text-md/semibold", children: null };
   const intl2 = tmp3(1114).intl;
-  obj1[2] = intl2.format(getSystemLocale.t.gVw57p, {});
-  obj[1] = jsx(Text.Text, { color: "text-brand", variant: "text-md/semibold", children: null });
-  obj[1] = <View style={callback().expandCTALabelContainer}>{null}</View>;
-  obj[2] = title.onPress;
-  return jsx(TableRowInner.TableRow, { style: callback().expandCTALabelContainer, children: null });
+  obj4.children = intl2.format(util.t.gVw57p, {});
+  obj3.children = jsx(Text_Text.Text, { color: "text-brand", variant: "text-md/semibold", children: null });
+  obj2.label = <View style={closure_4().expandCTALabelContainer}>{null}</View>;
+  obj2.onPress = title.onPress;
+  return jsx(TableRow.TableRow, { accessibilityLabel: formatToPlainStringResult, label: null, onPress: null, end: true });
 };

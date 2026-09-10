@@ -1,17 +1,20 @@
-// Module ID: 4205
-// Function ID: 4206
-// Name: GuildMemberFlags
-// Dependencies: [2021, 4187, 1384, 504, 2]
+// Module ID: 4218
+// Function ID: 4219
+// Name: AutomodPermissionUtils
+// Dependencies: [2021, 4200, 1384, 504, 2]
 // Exports: getAutomodQuarantinedGuildMemberFlags, getAutomodQuarantinedProfileFlags, getAutomodReason, hasAutomodQuarantinedProfile, useCurrentUserAutomodQuaratinedProfile
 
-// Module 4205 (GuildMemberFlags)
-import closure_2 from "trackCommunicationDisabled" /* 2021 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4187 */;
+// Module 4218 (AutomodPermissionUtils)
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 
-const require = arg1;
+const require = globalThis.__r;
+
+const require = fn;
+const GuildMemberFlags = fn(4200).GuildMemberFlags;
 let items = [, , ];
 ({ AUTOMOD_QUARANTINED_BIO: arr[0], AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME: arr[1], AUTOMOD_QUARANTINED_SERVER_TAG: arr[2] } = GuildMemberFlags);
-const result = require("set").fileFinishedImporting("modules/guild_automod/AutomodPermissionUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_automod/AutomodPermissionUtils.tsx");
 
 export const AUTOMOD_QUARANTINED_PROFILE_FLAGS = items;
 export const getAutomodQuarantinedProfileFlags = function getAutomodQuarantinedProfileFlags(flags) {
@@ -21,13 +24,13 @@ export const getAutomodQuarantinedProfileFlags = function getAutomodQuarantinedP
     let set = new Set();
   } else {
     const _Set = Set;
-    set = new Set(items.reduce((arr) => {
+    set = new Set(items.reduce((arr, item) => {
       let num = flags;
       if (flags == null) {
         num = 0;
       }
-      if (obj.hasFlag(num, arg1)) {
-        arr.push(arg1);
+      if (obj.hasFlag(num, item)) {
+        arr.push(item);
       }
       return arr;
     }, []));
@@ -45,13 +48,13 @@ export const getAutomodQuarantinedGuildMemberFlags = function getAutomodQuaranti
       set = new Set();
     } else {
       const _Set = Set;
-      set = new Set(items.reduce((arr) => {
+      set = new Set(items.reduce((arr, item) => {
         let num = flags;
         if (flags == null) {
           num = 0;
         }
-        if (obj.hasFlag(num, arg1)) {
-          arr.push(arg1);
+        if (obj.hasFlag(num, item)) {
+          arr.push(item);
         }
         return arr;
       }, []));
@@ -78,12 +81,12 @@ export const hasAutomodQuarantinedProfile = function hasAutomodQuarantinedProfil
   if (tmp) {
     let someResult = null != member.flags;
     if (someResult) {
-      someResult = items.some((arg0) => {
+      someResult = items.some((item) => {
         let num = selfMember.flags;
         if (num == null) {
           num = 0;
         }
-        return selfMember(closure_1_1[2]).hasFlag(num, arg0);
+        return selfMember(dependencyMap[2]).hasFlag(num, item);
       });
     }
     tmp = someResult;
@@ -91,23 +94,23 @@ export const hasAutomodQuarantinedProfile = function hasAutomodQuarantinedProfil
   return tmp;
 };
 export const useCurrentUserAutomodQuaratinedProfile = function useCurrentUserAutomodQuaratinedProfile(guild_id) {
-  const _require = guild_id;
-  items = [closure_2];
+  _require = guild_id;
+  items = [GuildMemberStore];
   const items1 = [guild_id];
-  return _require(504).useStateFromStores(items, () => {
+  return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null != selfMember;
     if (tmp2) {
-      selfMember = closure_1_2.getSelfMember(tmp);
+      selfMember = GuildMemberStore.getSelfMember(tmp);
       let tmp5 = null != selfMember;
       if (tmp5) {
         let someResult = null != selfMember.flags;
         if (someResult) {
-          someResult = closure_1_4.some((arg0) => {
+          someResult = items.some((item) => {
             let num = selfMember.flags;
             if (num == null) {
               num = 0;
             }
-            return selfMember(closure_1_1[2]).hasFlag(num, arg0);
+            return selfMember(dependencyMap[2]).hasFlag(num, item);
           });
         }
         tmp5 = someResult;

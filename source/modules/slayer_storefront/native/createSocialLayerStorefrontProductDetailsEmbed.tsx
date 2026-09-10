@@ -1,136 +1,135 @@
-// Module ID: 11536
-// Function ID: 11537
+// Module ID: 11562
+// Function ID: 11563
 // Name: createSocialLayerStorefrontProductDetailsEmbed
-// Dependencies: [32, 19, 4788, 5510, 1074, 7736, 7945, 1114, 11537, 7231, 7226, 3417, 9371, 4548, 10803, 1116, 504, 1369, 7168, 2]
+// Dependencies: [32, 19, 4802, 5524, 1074, 7750, 7959, 1114, 11563, 7245, 7240, 3430, 9398, 4562, 10830, 1116, 504, 1369, 7182, 2]
 // Exports: createSocialLayerStorefrontProductDetailsEmbed, useFetchSocialLayerStorefrontProductDetailsEmbedData
 
-// Module 11536 (createSocialLayerStorefrontProductDetailsEmbed)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import getPrice from "getPrice" /* 7226 */;
-import useSKUPrice from "useSKUPrice" /* 7231 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7945 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "addApplication" /* 4788 */;
-import closure_6 from "addSku" /* 5510 */;
-import { PaymentGateways } from "ME" /* 1074 */;
-import { InviteTypes } from "InviteSendStates" /* 7736 */;
+// Module 11562 (createSocialLayerStorefrontProductDetailsEmbed)
+import util from "util" /* 1114 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1116 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7240 */;
+import StorefrontUtils from "StorefrontUtils" /* 7245 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7959 */;
+import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10830 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import ApplicationStore from "ApplicationStore" /* 4802 */;
+import SKUStore from "SKUStore" /* 5524 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const PaymentGateways = fn(1074).PaymentGateways;
+const InviteTypes = fn(7750).InviteTypes;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx");
 
 export const createSocialLayerStorefrontProductDetailsEmbed = function createSocialLayerStorefrontProductDetailsEmbed(theme) {
   ({ skuId, guildOrApplication } = theme);
   ({ colors, baseColors } = getEmbedThemeColorsDefault(theme.theme));
-  let obj = closure_6;
-  const value = closure_6.get(skuId);
+  value = SKUStore.get(skuId);
   let applicationId;
   if (value != null) {
     applicationId = value.applicationId;
   }
-  application = application.getApplication(applicationId);
-  const isFetchingResult = obj.isFetching(skuId);
+  const application = ApplicationStore.getApplication(applicationId);
+  const isFetchingResult = SKUStore.isFetching(skuId);
   let result = null != applicationId;
   const tmp3 = getEmbedThemeColorsDefault(theme.theme);
   if (result) {
     result = obj2.isFetchingApplication(applicationId);
   }
-  const didFetchingSkuFailResult = obj.didFetchingSkuFail(skuId);
+  const didFetchingSkuFailResult = SKUStore.didFetchingSkuFail(skuId);
   let name;
   if (application != null) {
     name = application.name;
   }
   if (name == null) {
-    const intl = getSystemLocale.intl;
-    let str = intl.string(getSystemLocale.t.vyaWs7);
-    name = str.toUpperCase();
+    const intl = util.intl;
+    name = intl.string(util.t.vyaWs7).toUpperCase();
+    const str = intl.string(util.t.vyaWs7);
   }
   if (!isFetchingResult) {
     if (null == value) {
       return null;
     } else {
       if (null != application) {
-        if (tmp(11537)(application)) {
+        if (tmp(11563)(application)) {
           if ("guild" !== guildOrApplication.type) {
-            const result1 = useSKUPrice.isSlayerSkuAvailableOnThisPlatform(value);
-            const obj4 = useSKUPrice;
-            const str4 = getPrice.getCardImageURL(value);
-            str = undefined;
+            const result1 = StorefrontUtils.isSlayerSkuAvailableOnThisPlatform(value);
+            const str4 = SlayerStorefrontUtils.getCardImageURL(value);
+            let str1;
             if (str4 != null) {
-              str = str4.toString();
+              str1 = str4.toString();
             }
-            if (str == null) {
-              str = application.getIconURL(64);
+            if (str1 == null) {
+              str1 = application.getIconURL(64);
             }
-            obj = {};
+            const obj3 = {};
             const merged = Object.assign(baseColors);
-            obj.headerText = name;
-            obj.headerColor = colors.headerColor;
-            obj.titleText = value.name;
-            obj.titleColor = colors.titleColor;
+            obj3.headerText = name;
+            obj3.headerColor = colors.headerColor;
+            obj3.titleText = value.name;
+            obj3.titleColor = colors.titleColor;
             const intl2 = tmp12(1114).intl;
-            obj.subtitle = intl2.string(getSystemLocale.t.V91tvy);
-            obj.subtitleColor = colors.subtitleColor;
-            obj.thumbnailUrl = str;
-            obj.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
+            obj3.subtitle = intl2.string(util.t.V91tvy);
+            obj3.subtitleColor = colors.subtitleColor;
+            obj3.thumbnailUrl = str1;
+            obj3.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
             const intl3 = tmp12(1114).intl;
             const string = intl3.string;
             if (result1) {
               let stringResult = string(tmp12(1114).t.boqtTA);
             } else {
-              stringResult = string(tmp(3417).BKf0MM);
+              stringResult = string(tmp(3430).BKf0MM);
             }
-            obj.acceptLabelText = stringResult;
+            obj3.acceptLabelText = stringResult;
             let prop;
             if (result1) {
               prop = colors.acceptLabelGreenColor;
             }
-            obj.acceptLabelColor = prop;
-            obj.acceptLabelBackgroundColor = result1 ? colors.acceptLabelGreenBackgroundColor : colors.acceptBlurpleLabelBackgroundColor;
-            obj.embedCanBeTapped = true;
-            obj.canBeAccepted = true;
-            obj.type = InviteTypes.GUILD;
-            return obj;
+            obj3.acceptLabelColor = prop;
+            obj3.acceptLabelBackgroundColor = result1 ? colors.acceptLabelGreenBackgroundColor : colors.acceptBlurpleLabelBackgroundColor;
+            obj3.embedCanBeTapped = true;
+            obj3.canBeAccepted = true;
+            obj3.type = InviteTypes.GUILD;
+            return obj3;
           }
         }
       }
       return null;
     }
   }
-  obj = {};
+  const obj6 = {};
   const merged1 = Object.assign(baseColors);
-  obj.headerText = name;
+  obj6.headerText = name;
   ({ resolvingGradientEnd: obj7.resolvingGradientEnd, resolvingGradientStart: obj7.resolvingGradientStart } = colors);
-  obj.type = InviteTypes.GUILD;
-  return obj;
+  obj6.type = InviteTypes.GUILD;
+  return obj6;
 };
 export const useFetchSocialLayerStorefrontProductDetailsEmbedData = function useFetchSocialLayerStorefrontProductDetailsEmbedData(stateFromStores) {
-  const _require = stateFromStores;
+  _require = stateFromStores;
   const storeFront = country(first[12]).useNativeIAPPayments().storeFront;
   country = undefined;
   if (storeFront != null) {
     country = storeFront.country;
   }
   let items = [stateFromStores];
-  let tmp4 = callback(React.useMemo(() => {
+  let tmp4 = _slicedToArray(noop.useMemo(() => {
     let items = [[], []];
-    return stateFromStores.reduce((arg0, arg1) => {
-      [arr, arr2] = arg0;
-      const iter = arg1.codedLinks[Symbol.iterator]();
+    return stateFromStores.reduce((acc, item) => {
+      [arr, arr2] = acc;
+      const iter = item.codedLinks[Symbol.iterator]();
       while (iter !== undefined) {
         ({ type, code } = nextResult);
         let tmp2 = type;
-        let tmp3 = callback;
-        let tmp4 = table;
-        if (type === callback(table[13]).CodedLinkType.SOCIAL_LAYER_STOREFRONT) {
-          let tmp8 = code;
-          arr = arr.push(code.split("-"));
-        } else {
-          let tmp5 = type;
-          if (tmp2 === tmp3(tmp4[13]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
-            let tmp6 = code;
-            arr = arr2.push(code.split("-"));
-          }
+        let tmp3 = stateFromStores;
+        let tmp4 = first;
+        if (type === stateFromStores(first[13]).CodedLinkType.SOCIAL_LAYER_STOREFRONT) {
+          let arr3 = arr.push(code.split("-"));
+        } else if (tmp2 === tmp3(tmp4[13]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
+          let arr5 = arr2.push(code.split("-"));
         }
         continue;
       }
@@ -139,114 +138,78 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedData = function use
     }, items);
   }, items), 2);
   first = tmp4[0];
-  callback = tmp6;
+  _slicedToArray = tmp6;
   let items1 = [first, tmp4[1], country];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     while (tmp2 !== undefined) {
-      let tmp4 = lib;
-      let tmp5 = lib(tmp3, 2);
-      first = tmp5[0];
+      [first, tmp8] = tmp3;
       let tmp7 = first;
-      let tmp8 = tmp5[1];
-      let tmp9 = closure_1_6;
-      let isFetchingResult = null != closure_1_6.get(first);
+      let isFetchingResult = null != SKUStore.get(first);
       if (!isFetchingResult) {
-        let tmp11 = closure_1_6;
-        let tmp12 = first;
-        isFetchingResult = closure_1_6.isFetching(tmp7);
+        isFetchingResult = SKUStore.isFetching(tmp7);
       }
       if (!isFetchingResult) {
-        let tmp13 = closure_1_6;
-        let tmp14 = first;
-        isFetchingResult = closure_1_6.didFetchingSkuFail(tmp7);
+        isFetchingResult = SKUStore.didFetchingSkuFail(tmp7);
       }
       if (!isFetchingResult) {
-        let tmp15 = stateFromStores;
-        let tmp16 = first;
-        let obj = stateFromStores(first[14]);
-        let tmp17 = tmp8;
-        let tmp18 = first;
-        obj = { withGoogleSkuIds: null, countryCode: null, paymentGateway: null };
-        let tmp19 = stateFromStores;
-        let tmp20 = first;
-        let obj3 = stateFromStores(first[15]);
-        obj[0] = obj3.isAndroid();
-        let tmp21 = country;
-        obj[1] = country;
-        let tmp22 = stateFromStores;
-        let tmp23 = first;
-        let obj4 = stateFromStores(first[15]);
+        let obj = SocialLayerStorefrontActionCreators;
+        let obj2 = { withGoogleSkuIds: null, countryCode: null, paymentGateway: null };
+        let obj3 = utils_PlatformUtils;
+        obj2.withGoogleSkuIds = obj3.isAndroid();
+        obj2.countryCode = country;
+        let obj4 = utils_PlatformUtils;
         let APPLE;
         if (obj4.isIOS()) {
-          let tmp25 = closure_1_7;
-          APPLE = closure_1_7.APPLE;
+          APPLE = PaymentGateways.APPLE;
         }
-        obj[2] = APPLE;
-        let socialLayerStorefrontSku = obj.fetchSocialLayerStorefrontSku(tmp8, tmp7, obj);
+        obj2.paymentGateway = APPLE;
+        let socialLayerStorefrontSku = obj.fetchSocialLayerStorefrontSku(tmp8, tmp7, obj2);
       }
       continue;
     }
     for (const item10057 of closure_3) {
-      let tmp27 = lib;
-      let tmp28 = lib(item10057, 2);
-      let first1 = tmp28[0];
+      [first1, tmp31] = item10057;
       let tmp30 = first1;
-      let tmp31 = tmp28[1];
-      let tmp32 = closure_1_6;
-      let isFetchingResult1 = null != closure_1_6.get(first1);
+      let isFetchingResult1 = null != SKUStore.get(first1);
       if (!isFetchingResult1) {
-        let tmp34 = closure_1_6;
-        let tmp35 = first1;
-        isFetchingResult1 = closure_1_6.isFetching(tmp30);
+        isFetchingResult1 = SKUStore.isFetching(tmp30);
       }
       if (!isFetchingResult1) {
-        let tmp36 = closure_1_6;
-        let tmp37 = first1;
-        isFetchingResult1 = closure_1_6.didFetchingSkuFail(tmp30);
+        isFetchingResult1 = SKUStore.didFetchingSkuFail(tmp30);
       }
       if (!isFetchingResult1) {
-        let tmp38 = stateFromStores;
-        let tmp39 = first;
-        let obj5 = stateFromStores(first[14]);
-        let tmp40 = tmp31;
-        let tmp41 = first1;
-        obj = { withGoogleSkuIds: null, countryCode: null, paymentGateway: null };
-        let tmp42 = stateFromStores;
-        let tmp43 = first;
-        let obj7 = stateFromStores(first[15]);
-        obj[0] = obj7.isAndroid();
-        let tmp44 = country;
-        obj[1] = country;
-        let tmp45 = stateFromStores;
-        let tmp46 = first;
-        let obj8 = stateFromStores(first[15]);
+        let obj5 = SocialLayerStorefrontActionCreators;
+        let obj6 = { withGoogleSkuIds: null, countryCode: null, paymentGateway: null };
+        let obj7 = utils_PlatformUtils;
+        obj6.withGoogleSkuIds = obj7.isAndroid();
+        obj6.countryCode = country;
+        let obj8 = utils_PlatformUtils;
         let APPLE1;
         if (obj8.isIOS()) {
-          let tmp48 = closure_1_7;
-          APPLE1 = closure_1_7.APPLE;
+          APPLE1 = PaymentGateways.APPLE;
         }
-        obj[2] = APPLE1;
-        let socialLayerStorefrontSkuForApplication = obj5.fetchSocialLayerStorefrontSkuForApplication(tmp31, tmp30, obj);
+        obj6.paymentGateway = APPLE1;
+        let socialLayerStorefrontSkuForApplication = obj5.fetchSocialLayerStorefrontSkuForApplication(tmp31, tmp30, obj6);
       }
       continue;
     }
   }, items1);
   let obj = country(first[12]);
   const tmp = country;
-  const items2 = [closure_6];
+  const items2 = [SKUStore];
   const items3 = [tmp4[1], first];
-  const stateFromStoresArray = _require(first[16]).useStateFromStoresArray(items2, () => {
+  const stateFromStoresArray = require("initialize").useStateFromStoresArray(items2, () => {
     const items = [
-      ...first.map((arg0) => {
-        [tmp] = arg0;
-        return store.get(tmp);
+      ...first.map((item) => {
+        [tmp] = item;
+        return closure_1_6.get(tmp);
       }),
-      ...closure_3.map((arg0) => {
-        [tmp] = arg0;
-        return store.get(tmp);
+      ...closure_3.map((item) => {
+        [tmp] = item;
+        return closure_1_6.get(tmp);
       })
     ];
-    const found = items.filter(stateFromStores(first[17]).isNotNullish);
+    const found = items.filter(GlobalUtils.isNotNullish);
     const items1 = [...new Set(found.map((applicationId) => applicationId.applicationId))];
     return items1;
   }, items3);

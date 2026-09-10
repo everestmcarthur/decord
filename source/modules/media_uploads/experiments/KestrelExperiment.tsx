@@ -1,16 +1,18 @@
-// Module ID: 5179
-// Function ID: 5180
-// Name: KESTREL_GA_UPLOAD_LIMIT_MB
+// Module ID: 5193
+// Function ID: 5194
+// Name: KestrelExperiment
 // Dependencies: [1433, 2]
 // Exports: getEffectiveKestrelLimit, getKestrelConfig, getKestrelVariantName
 
-// Module 5179 (KESTREL_GA_UPLOAD_LIMIT_MB)
-import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 5193 (KestrelExperiment)
+import ApexExperiment_mod from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-04-kestrel", kind: "user", defaultConfig: { enabled: false, threshold: 0 }, variations: { 0: { enabled: false, threshold: 0 }, 1: { enabled: true, threshold: 15 }, 2: { enabled: true, threshold: 20 }, 3: { enabled: true, threshold: 25 } } });
-let closure_1 = ApexExperiment.createApexExperiment({ name: "2026-08-kestrel-ga", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
-const result = set.fileFinishedImporting("modules/media_uploads/experiments/KestrelExperiment.tsx");
+let ApexExperiment = ApexExperiment_mod;
+let config = ApexExperiment.createApexExperiment({ name: "2026-04-kestrel", kind: "user", defaultConfig: { enabled: false, threshold: 0 }, variations: { 0: { enabled: false, threshold: 0 }, 1: { enabled: true, threshold: 15 }, 2: { enabled: true, threshold: 20 }, 3: { enabled: true, threshold: 25 } } });
+let ApexExperiment = ApexExperiment_mod;
+const config2 = ApexExperiment.createApexExperiment({ name: "2026-08-kestrel-ga", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
+const result = size.fileFinishedImporting("modules/media_uploads/experiments/KestrelExperiment.tsx");
 
 export const KESTREL_GA_UPLOAD_LIMIT_MB = 20;
 export const getKestrelConfig = function getKestrelConfig(location) {
@@ -18,12 +20,10 @@ export const getKestrelConfig = function getKestrelConfig(location) {
   if (config2.getConfig({ location: _location }).enabled) {
     return { enabled: true, threshold: 20, isGA: true };
   } else {
-    let obj = { location: null };
-    obj[0] = _location;
+    const obj = { location: _location };
     config = config.getConfig(obj);
-    obj = { enabled: null, threshold: null, isGA: false };
-    ({ enabled: obj2[0], threshold: obj2[1] } = config);
-    return obj;
+    ({ enabled: obj2.enabled, threshold: obj2.threshold } = config);
+    return { enabled: null, threshold: null, isGA: false };
   }
 };
 export const getEffectiveKestrelLimit = function getEffectiveKestrelLimit(kestrelConfig, maxFileSize) {

@@ -1,69 +1,65 @@
-// Module ID: 14718
-// Function ID: 14719
-// Name: route
-// Dependencies: [17, 7975, 1074, 21, 4560, 576, 14719, 14720, 14721, 1943, 5605, 11473, 1114, 14722, 14685, 14723, 2]
+// Module ID: 14744
+// Function ID: 14745
+// Name: AccountAgeGroupSetting
+// Dependencies: [17, 7989, 1074, 21, 4574, 576, 14745, 14746, 14747, 1943, 5619, 11500, 1114, 14748, 14711, 14749, 2]
 
-// Module 14718 (route)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 576 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import DismissibleContent from "DismissibleContent" /* 1943 */;
-import TableRowInner from "TableRowInner" /* 5605 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import useIsTinyBroncoSettingsEnabled from "useIsTinyBroncoSettingsEnabled" /* 14685 */;
-import AgeGroupState from "AgeGroupState" /* 14719 */;
-import isTinyBroncoAnnouncementCountry from "isTinyBroncoAnnouncementCountry" /* 14720 */;
-import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 14721 */;
+// Module 14744 (AccountAgeGroupSetting)
+import _mod17 from "module_17" /* 17 */;
+import nativeDefault from "native" /* 576 */;
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import dismissible_content from "dismissible_content" /* 1943 */;
+import TableRow from "TableRow" /* 5619 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14711 */;
+import useAgeGroupPresentation from "useAgeGroupPresentation" /* 14745 */;
+import TinyBroncoAccountStatusVisibility from "TinyBroncoAccountStatusVisibility" /* 14746 */;
+import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 14747 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import createToggle from "createToggle" /* 11473 */;
-import useAlwaysShow from "useAlwaysShow" /* 14722 */;
+import createStyles from "createStyles" /* 4574 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import DismissibleBadgeUtils from "DismissibleBadgeUtils" /* 14748 */;
+import size from "module_2" /* 2 */;
 
-const View = get_ActivityIndicator.View;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let obj = { trailing: { flexDirection: "row", alignItems: "center", flexShrink: 1 }, badge: null };
-obj = { marginLeft: 0, marginRight: ThemesDefault.space.PX_4 };
-obj[1] = obj;
-let closure_6 = createCacheKey.createStyles(obj);
-const obj1 = {
+const require = globalThis.__r;
+
+const View = _mod17.View;
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+let obj = { trailing: { flexDirection: "row", alignItems: "center", flexShrink: 1 }, badge: { marginLeft: 0, marginRight: nativeDefault.space.PX_4 } };
+let closure_6 = createStyles.createStyles(obj);
+let obj3 = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.piqs0o);
+    const intl = util.intl;
+    return intl.string(util.t.piqs0o);
   },
-  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
+  parent: SettingsConstants.MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountAgeGroupTrailing() {
-    const tmp = callback2();
-    let obj = AgeGroupState;
-    const ageGroupValueLabel = obj.useAgeGroupValueLabel();
-    const shouldShowTinyBroncoAccountStatus = isTinyBroncoAnnouncementCountry.useShouldShowTinyBroncoAccountStatus();
-    obj = { style: tmp.trailing, children: null };
+    const tmp = closure_6();
+    const ageGroupValueLabel = useAgeGroupPresentation.useAgeGroupValueLabel();
+    const shouldShowTinyBroncoAccountStatus = TinyBroncoAccountStatusVisibility.useShouldShowTinyBroncoAccountStatus();
+    const obj3 = { style: tmp.trailing, children: null };
     let tmp8 = shouldShowTinyBroncoAccountStatus;
     if (shouldShowTinyBroncoAccountStatus) {
-      obj = { dismissibleContent: null, containerStyle: null, noGradient: true };
-      obj[0] = tmp2(1943).DismissibleContent.TINY_BRONCO_SETTINGS;
-      obj[1] = tmp.badge;
-      tmp8 = callback(DismissiblePremiumNewBadgeDefault, obj);
-      const tmp11 = DismissiblePremiumNewBadgeDefault;
+      const obj4 = { dismissibleContent: tmp2(1943).DismissibleContent.TINY_BRONCO_SETTINGS, containerStyle: tmp.badge, noGradient: true };
+      tmp8 = React4(DismissiblePremiumNewBadgeDefault, obj4);
     }
-    const items = [tmp8, callback(TableRowInner.TableRow.TrailingText, { text: ageGroupValueLabel })];
-    obj[1] = items;
-    return closure_5(View, obj);
+    const items = [tmp8, React4(TableRow.TableRow.TrailingText, { text: ageGroupValueLabel })];
+    obj3.children = items;
+    return hasOwnProperty(View, obj3);
   },
   usePreNavigationAction: null,
   usePredicate: null,
   screen: null
 };
-obj1[3] = useAlwaysShow.createDismissibleBadgePreNavigationAction(DismissibleContent.DismissibleContent.TINY_BRONCO_SETTINGS, isTinyBroncoAnnouncementCountry.useShouldShowTinyBroncoAccountStatus);
-obj1[4] = useIsTinyBroncoSettingsEnabled.useIsTinyBroncoSettingsEnabled;
-obj1[5] = {
-  route: ME.UserSettingsSections.AGE_GROUP,
+obj3.usePreNavigationAction = DismissibleBadgeUtils.createDismissibleBadgePreNavigationAction(dismissible_content.DismissibleContent.TINY_BRONCO_SETTINGS, TinyBroncoAccountStatusVisibility.useShouldShowTinyBroncoAccountStatus);
+obj3.usePredicate = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled;
+obj3.screen = {
+  route: Constants.UserSettingsSections.AGE_GROUP,
   getComponent() {
-    return require(14723) /* SettingsAgeGroupHeader */.default;
+    return require("SettingsAgeGroupScreen").default;
   }
 };
-const route = createToggle.createRoute(obj1);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountAgeGroupSetting.tsx");
+const route = SettingBuilders.createRoute(obj3);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountAgeGroupSetting.tsx");
 
 export default route;

@@ -1,27 +1,21 @@
-// Module ID: 7171
-// Function ID: 7172
-// Name: accountLinkAuthorizationStarted
+// Module ID: 7185
+// Function ID: 7186
+// Name: AccountLinkingActionCreators
 // Dependencies: [573, 2]
 // Exports: accountLinkAuthorizationCompleted, accountLinkAuthorizationStarted, devtoolsSetGloballyDisabledAuthorizationFlows
 
-// Module 7171 (accountLinkAuthorizationStarted)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 7185 (AccountLinkingActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/application_account_linking/AccountLinkingActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/application_account_linking/AccountLinkingActionCreators.tsx");
 
 export const accountLinkAuthorizationStarted = function accountLinkAuthorizationStarted(id, accountLinkCallbacks) {
-  let obj = dispatcherDefault;
-  obj = { type: "ACCOUNT_LINK_AUTHORIZATION_STARTED", applicationId: id, accountLinkCallbacks };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "ACCOUNT_LINK_AUTHORIZATION_STARTED", applicationId: id, accountLinkCallbacks });
 };
 export const accountLinkAuthorizationCompleted = function accountLinkAuthorizationCompleted(applicationId) {
-  let obj = dispatcherDefault;
-  obj = { type: "ACCOUNT_LINK_AUTHORIZATION_COMPLETED", applicationId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "ACCOUNT_LINK_AUTHORIZATION_COMPLETED", applicationId });
 };
 export const devtoolsSetGloballyDisabledAuthorizationFlows = function devtoolsSetGloballyDisabledAuthorizationFlows(flows) {
-  let obj = dispatcherDefault;
-  obj = { type: "ACCOUNT_LINK_DEVTOOLS_SET_GLOBALLY_DISBLED_FLOWS", flows };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "ACCOUNT_LINK_DEVTOOLS_SET_GLOBALLY_DISBLED_FLOWS", flows });
 };

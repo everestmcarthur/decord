@@ -1,25 +1,30 @@
-// Module ID: 8370
-// Function ID: 8371
-// Name: isLinkTrusted
-// Dependencies: [8371, 1957, 1979, 8372, 4781, 4209, 2011, 1074, 4257, 4904, 1114, 1242, 8373, 8374, 8375, 8377, 4249, 12952, 12956, 5001, 12957, 12959, 2]
+// Module ID: 8398
+// Function ID: 8399
+// Name: MaskedLinkUtils
+// Dependencies: [8399, 1957, 1979, 8400, 4795, 4222, 2011, 1074, 4270, 4918, 1114, 1242, 8401, 8402, 8403, 8405, 4262, 12978, 12982, 5015, 12983, 12985, 2]
 // Exports: handleClick, isLinkTrusted
 
-// Module 8370 (isLinkTrusted)
-import closure_3 from "isBlockedDomain" /* 8371 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "createGuildRecordFromRust" /* 1979 */;
-import closure_6 from "set" /* 8372 */;
-import closure_7 from "reinjectEphemerals" /* 4781 */;
-import closure_8 from "markAllUserIdListsStale" /* 4209 */;
-import closure_9 from "handleConnectionOpen" /* 2011 */;
-import ME from "ME" /* 1074 */;
+// Module 8398 (MaskedLinkUtils)
+import openURLDefault from "openURL" /* 4262 */;
+import LinkAnalyticsUtilsDefault from "LinkAnalyticsUtils" /* 8403 */;
+import BlockedDomainStore from "BlockedDomainStore" /* 8399 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import MaskedLinkStore from "MaskedLinkStore" /* 8400 */;
+import MessageStore from "MessageStore" /* 4795 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
-const require = arg1;
-({ ChannelTypes: c10, AnalyticEvents: unpackModuleId, GuildFeatures: closure_12, MessageFlags: map1 } = ME);
-let result = require("set").fileFinishedImporting("utils/MaskedLinkUtils.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const Constants = fn(1074);
+({ ChannelTypes: c10, AnalyticEvents: closure_11, GuildFeatures: closure_12, MessageFlags: map1 } = Constants);
+const size = fn(2);
+let result = size.fileFinishedImporting("utils/MaskedLinkUtils.tsx");
 
 export const isLinkTrusted = function isLinkTrusted(arg0, arg1) {
-  const channel = store.getChannel(channelId.getChannelId());
+  const channel = ChannelStore.getChannel(SelectedChannelStore.getChannelId());
   let tmp = null != channel;
   if (tmp) {
     tmp = channel.type === constants.DM;
@@ -29,7 +34,7 @@ export const isLinkTrusted = function isLinkTrusted(arg0, arg1) {
     if (str == null) {
       str = "";
     }
-    tmp = !friend.isFriend(str);
+    tmp = !RelationshipStore.isFriend(str);
   }
   let tmp4 = !tmp;
   if (!tmp) {
@@ -37,47 +42,49 @@ export const isLinkTrusted = function isLinkTrusted(arg0, arg1) {
   }
   return tmp4;
 };
-export const handleClick = function handleClick(href, preventDefault) {
+export const handleClick = function handleClick(href, preventDefault, arg2, contextKey) {
   let items = arg2;
   if (arg2 === undefined) {
     items = [];
   }
-  let _require;
+  _require = undefined;
   channelId = undefined;
   dependencyMap = undefined;
-  let guild_id;
-  let store;
+  ChannelStore = undefined;
   let message_id;
   let channel_id;
-  guild_id = undefined;
+  let guild_id1;
   ({ trusted, onClick, onConfirm: c0, onCancel, shouldConfirm, messageId, channelId } = href);
-  let obj = channelId(4257);
-  const sanitizeUrlResult = obj.sanitizeUrl(href.href);
+  if (onCancel == null) {
+    onCancel = () => {
+
+    };
+  }
+  const sanitizeUrlResult = channelId(4270).sanitizeUrl(href.href);
   if (null == sanitizeUrlResult) {
     if (null != preventDefault) {
       preventDefault.preventDefault();
     }
-    let tmp3Result = tmp3(4904);
-    obj = { title: null, body: null, isDismissable: true, contextKey: null };
-    const intl = _require(1114).intl;
-    obj[0] = intl.string(_require(1114).t.x87gan);
-    const intl2 = _require(1114).intl;
-    obj = { url: null };
-    obj[0] = href.href;
-    obj[1] = intl2.format(_require(1114).t["9rqRwl"], obj);
-    obj[3] = arg3;
-    tmp3Result.show(obj);
+    let obj2 = { title: null, body: null, isDismissable: true, contextKey: null };
+    const intl = require("util").intl;
+    obj2.title = intl.string(require("util").t.x87gan);
+    const intl2 = require("util").intl;
+    const obj3 = { url: href.href };
+    obj2.body = intl2.format(require("util").t["9rqRwl"], obj3);
+    obj2.contextKey = contextKey;
+    tmp3(4918).show(obj2);
+    onCancel();
   } else {
     dependencyMap = sanitizeUrlResult;
     try {
       const _decodeURI = decodeURI;
       decodeURI(sanitizeUrlResult);
       let tmp8 = sanitizeUrlResult;
-      guild_id = null;
-      store = false;
+      guild_id1 = null;
+      ChannelStore = false;
       message_id = messageId;
       channel_id = channelId;
-      guild_id = null;
+      guild_id1 = null;
       let tmp11 = null;
       let tmp12 = channelId;
       let tmp13 = messageId;
@@ -90,24 +97,24 @@ export const handleClick = function handleClick(href, preventDefault) {
         flag2 = false;
         tmp14 = null;
         if (null != channelId) {
-          const message = guild_id.getMessage(channelId, messageId);
-          const basicChannel = store.getBasicChannel(channelId);
-          guild_id = undefined;
+          const message = guild_id1.getMessage(channelId, messageId);
+          const basicChannel = ChannelStore.getBasicChannel(channelId);
+          guild_id1 = undefined;
           if (basicChannel != null) {
-            guild_id = basicChannel.guild_id;
+            guild_id1 = basicChannel.guild_id;
           }
-          if (guild_id == null) {
-            guild_id = null;
+          if (guild_id1 == null) {
+            guild_id1 = null;
           }
-          const guild = message_id.getGuild(guild_id);
-          let guild_id1;
+          const guild = message_id.getGuild(guild_id1);
+          let guild_id2;
           if (message != null) {
             const messageReference = message.messageReference;
             if (messageReference != null) {
-              guild_id1 = messageReference.guild_id;
+              guild_id2 = messageReference.guild_id;
             }
           }
-          let tmp22 = null != guild_id1;
+          let tmp22 = null != guild_id2;
           if (tmp22) {
             let webhookId;
             if (message != null) {
@@ -123,20 +130,21 @@ export const handleClick = function handleClick(href, preventDefault) {
             tmp22 = hasFlagResult;
           }
           if (tmp22) {
-            tmp22 = null != guild_id;
+            tmp22 = null != guild_id1;
           }
           if (tmp22) {
-            let guild_id2;
+            let guild_id3;
             if (message != null) {
               const messageReference2 = message.messageReference;
               if (messageReference2 != null) {
-                guild_id2 = messageReference2.guild_id;
+                guild_id3 = messageReference2.guild_id;
               }
             }
-            if (null != guild_id2) {
+            if (null != guild_id3) {
               message_id = message.messageReference.message_id;
               channel_id = message.messageReference.channel_id;
-              guild_id = message.messageReference.guild_id;
+              const guild_id = message.messageReference.guild_id;
+              guild_id1 = guild_id;
               let tmp27 = guild_id;
               let tmp28 = channel_id;
               let tmp29 = message_id;
@@ -167,20 +175,20 @@ export const handleClick = function handleClick(href, preventDefault) {
               }
               tmp37 = tmp22;
             }
-            store = tmp37;
+            ChannelStore = tmp37;
             flag2 = tmp37;
             tmp11 = tmp27;
             tmp12 = tmp28;
             tmp13 = tmp29;
-            tmp14 = guild_id;
+            tmp14 = guild_id1;
           }
-          tmp27 = guild_id;
+          tmp27 = guild_id1;
           tmp28 = channelId;
           tmp29 = messageId;
         }
       }
       if (null != channelId) {
-        const channel = store.getChannel(channelId);
+        const channel = ChannelStore.getChannel(channelId);
         let guildId;
         if (channel != null) {
           guildId = channel.getGuildId();
@@ -195,66 +203,52 @@ export const handleClick = function handleClick(href, preventDefault) {
           hasItem1 = features2.has(constants3.DISCOVERABLE);
         }
         if (hasItem1) {
-          tmp3Result = tmp3(1242);
-          obj1 = { url_domain: null, guild_id: null, channel_id: null };
-          let obj4 = _require(8373);
-          obj1[0] = obj4.getHostname(tmp8);
-          obj1[1] = guild1.id;
-          obj1[2] = channel.id;
-          tmp3Result.track(constants2.URL_CLICKED, obj1);
+          const obj4 = { url_domain: null, guild_id: null, channel_id: null };
+          const tmp3Result8 = tmp3(1242);
+          obj4.url_domain = require("MaskedLinkStoreMethodsAdditional").getHostname(tmp8);
+          obj4.guild_id = guild1.id;
+          obj4.channel_id = channel.id;
+          tmp3Result8.track(constants2.URL_CLICKED, obj4);
+          const obj5 = require("MaskedLinkStoreMethodsAdditional");
         }
-        if (tmp3(8374)(channelId)) {
-          const obj2 = { cta_type: "inline_link", target: null };
-          obj2[1] = tmp8;
-          tmp3(1242).track(constants2.CHANGE_LOG_CTA_CLICKED, obj2);
-          const tmp3Result1 = tmp3(1242);
+        if (tmp3(8402)(channelId)) {
+          const obj6 = { cta_type: "inline_link", target: tmp8 };
+          tmp3(1242).track(constants2.CHANGE_LOG_CTA_CLICKED, obj6);
+          const tmp3Result9 = tmp3(1242);
         }
       }
-      tmp3(8375).trackLinkClicked(tmp8);
+      tmp3(8403).trackLinkClicked(tmp8);
       if (null == onClick) {
-        const obj3 = { skipExtensionCheck: "a", analyticsLocations: "<string:264830979>", messageId: "<string:264962051>", channelId: "<string:4179492867>" };
-        obj3[1] = items;
-        obj3[2] = messageId;
-        obj3[3] = channelId;
-        const defaultResult = _require(8377).default(tmp8, obj3);
+        const obj7 = { skipExtensionCheck: "a", analyticsLocations: items, messageId, channelId };
+        const defaultResult = require("getOnClick").default(tmp8, obj7);
       }
-      if (onCancel == null) {
-        onCancel = () => {
-
-        };
-      }
-      if (null !== guild_id.isBlockedDomain(tmp8)) {
+      if (null !== guild_id1.isBlockedDomain(tmp8)) {
         if (preventDefault != null) {
           preventDefault.preventDefault();
         }
-        tmp3(12952).show(tmp8);
+        tmp3(12978).show(tmp8);
+        onCancel();
       } else {
         let trustedResult = trusted;
         if (typeof trusted === "function") {
           trustedResult = trusted();
         }
         if (!trustedResult) {
-          const TRUSTED_URLS = _require(12956).TRUSTED_URLS;
+          const TRUSTED_URLS = require("TrustedURLs").TRUSTED_URLS;
           trustedResult = TRUSTED_URLS.has(tmp8);
         }
-        const protocol = _require(8373).getProtocol(tmp8);
+        const protocol = require("MaskedLinkStoreMethodsAdditional").getProtocol(tmp8);
         let tmp55 = "http:" === protocol;
         if (!tmp55) {
           tmp55 = "https:" === protocol;
         }
         function handleConfirm() {
           if (closure_4) {
-            let obj = channelId(_undefined[14]);
-            obj = { messageId: null, channelId: null, guildId: null, sourceChannelId: null, sourceGuildId: null };
-            obj[0] = message_id;
-            obj[1] = channelId;
-            obj[2] = guild_id;
-            obj[3] = channel_id;
-            obj[4] = guild_id;
-            const result = obj.trackAnnouncementMessageLinkClicked(obj);
+            const obj2 = { messageId: message_id, channelId, guildId: guild_id1, sourceChannelId: channel_id, sourceGuildId: guild_id1 };
+            const result = LinkAnalyticsUtilsDefault.trackAnnouncementMessageLinkClicked(obj2);
           }
           if (null == c0) {
-            channelId(_undefined[16])(_undefined);
+            openURLDefault(c2);
           } else {
             tmp9();
           }
@@ -264,46 +258,31 @@ export const handleClick = function handleClick(href, preventDefault) {
             preventDefault.preventDefault();
           }
           if (tmp56) {
-            obj4 = { url: null, trustUrl: null, onConfirm: null, onCancel: null, isProtocol: true, contextKey: null };
-            obj4[0] = tmp8;
-            obj4[1] = tmp53(12959).trustProtocol;
-            obj4[2] = handleConfirm;
-            obj4[3] = onCancel;
-            obj4[5] = arg3;
-            tmp3(12957).show(obj4);
-            const tmp3Result4 = tmp3(12957);
+            const obj8 = { url: tmp8, trustUrl: tmp53(12985).trustProtocol, onConfirm: handleConfirm, onCancel, isProtocol: true, contextKey };
+            tmp3(12983).show(obj8);
+            const tmp3Result12 = tmp3(12983);
           } else {
-            const punycodeLinkResult = tmp53(5001).punycodeLink(tmp8);
+            const punycodeLinkResult = tmp53(5015).punycodeLink(tmp8);
             let displayTarget = tmp8;
             if (null != punycodeLinkResult) {
               displayTarget = punycodeLinkResult.displayTarget;
             }
-            const tmp53Result = tmp53(5001);
-            const obj5 = { url: null, trustUrl: null, onConfirm: null, onCancel: null, isProtocol: false, contextKey: null };
-            obj5[0] = displayTarget;
-            obj5[1] = tmp53(12959).trustDomain;
-            obj5[2] = handleConfirm;
-            obj5[3] = onCancel;
-            obj5[5] = arg3;
-            tmp3(12957).show(obj5);
-            const tmp3Result5 = tmp3(12957);
+            const tmp53Result = tmp53(5015);
+            const obj9 = { url: displayTarget, trustUrl: tmp53(12985).trustDomain, onConfirm: handleConfirm, onCancel, isProtocol: false, contextKey };
+            tmp3(12983).show(obj9);
+            const tmp3Result13 = tmp3(12983);
           }
         }
         if (null == preventDefault) {
           handleConfirm();
         } else if (flag2) {
-          const obj6 = { messageId: null, channelId: null, guildId: null, sourceChannelId: null, sourceGuildId: null };
-          obj6[0] = tmp13;
-          obj6[1] = channelId;
-          obj6[2] = tmp14;
-          obj6[3] = tmp12;
-          obj6[4] = tmp11;
-          let result = tmp3(8375).trackAnnouncementMessageLinkClicked(obj6);
-          const tmp3Result6 = tmp3(8375);
+          const obj11 = { messageId: tmp13, channelId, guildId: tmp14, sourceChannelId: tmp12, sourceGuildId: tmp11 };
+          let result = tmp3(8403).trackAnnouncementMessageLinkClicked(obj11);
+          const tmp3Result14 = tmp3(8403);
         }
-        const obj10 = _require(8373);
+        const obj10 = require("MaskedLinkStoreMethodsAdditional");
       }
-      const tmp3Result2 = tmp3(8375);
+      const tmp3Result10 = tmp3(8403);
     } catch (err) {
       const _encodeURI = encodeURI;
       const encodeURIResult = encodeURI(tmp2);

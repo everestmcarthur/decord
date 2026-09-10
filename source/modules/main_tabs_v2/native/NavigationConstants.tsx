@@ -1,11 +1,11 @@
-// Module ID: 15944
-// Function ID: 15945
-// Name: StackNavigationAnimationSettings
+// Module ID: 15974
+// Function ID: 15975
+// Name: NavigationConstants
 // Dependencies: [2]
 
-// Module 15944 (StackNavigationAnimationSettings)
-import set from "set" /* 2 */;
+// Module 15974 (NavigationConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/NavigationConstants.tsx");
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/NavigationConstants.tsx");
 
 export const StackNavigationAnimationSettings = { animation: "simple_push", duration: 250, fullScreenGestureEnabled: true };

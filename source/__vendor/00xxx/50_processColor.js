@@ -2,13 +2,15 @@
 // Function ID: 51
 // Name: processColor
 // Dependencies: [51, 52]
+// Exports: default
 
 // Module 50 (processColor)
 import normalizeColor from "normalizeColor" /* 51 */;
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.default = function processColor(arg0) {
+
+export default function processColor(arg0) {
   if (null == arg0) {
     return arg0;
   } else {
@@ -26,7 +28,6 @@ arg5.default = function processColor(arg0) {
       }
       return tmp4;
     }
-    const obj = normalizeColor;
     tmp = require;
   }
 };

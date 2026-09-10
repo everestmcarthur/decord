@@ -1,50 +1,51 @@
-// Module ID: 9171
-// Function ID: 9172
+// Module ID: 9198
+// Function ID: 9199
 // Name: SecureFramesStreamVerificationBottomSheet
-// Dependencies: [19, 4599, 1074, 21, 504, 9166, 8361, 9172, 1114, 9155, 2]
+// Dependencies: [19, 4613, 1074, 21, 504, 9193, 8389, 9199, 1114, 9182, 2]
 // Exports: default
 
-// Module 9171 (SecureFramesStreamVerificationBottomSheet)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "initialize" /* 4599 */;
-import { AnalyticsSections } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 9198 (SecureFramesStreamVerificationBottomSheet)
+import showShareActionSheet from "showShareActionSheet" /* 8389 */;
+import SecureFramesTracking from "SecureFramesTracking" /* 9193 */;
+import noop from "module_19" /* 19 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4613 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/rtc/native/SecureFramesStreamVerificationBottomSheet.tsx");
+require = fn;
+const AnalyticsSections = fn(1074).AnalyticsSections;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/rtc/native/SecureFramesStreamVerificationBottomSheet.tsx");
 
 export default function SecureFramesStreamVerificationBottomSheet(channelId) {
   channelId = channelId.channelId;
   const streamKey = channelId.streamKey;
-  let obj = channelId(504);
-  const items = [closure_4];
+  const items = [StreamRTCConnectionStore];
   const items1 = [channelId];
-  const stateFromStores = obj.useStateFromStores(items, () => {
-    const secureFramesState = closure_1_4.getSecureFramesState(streamKey);
+  const stateFromStores = channelId(504).useStateFromStores(items, () => {
+    const secureFramesState = StreamRTCConnectionStore.getSecureFramesState(streamKey);
     let epochAuthenticator;
     if (secureFramesState != null) {
       epochAuthenticator = secureFramesState.epochAuthenticator;
     }
     return epochAuthenticator;
   });
-  const callback = React.useCallback((message) => {
-    let obj = channelId(closure_1_2[5]);
-    obj = { channelId };
-    const result = obj.trackE2EEStreamVerificationShareClicked(obj);
-    obj = { message };
-    channelId(closure_1_2[6]).showShareActionSheet(obj, closure_1_5.SECURE_FRAMES_STREAM_BOTTOM_SHEET);
+  const callback = noop.useCallback((message) => {
+    const result = SecureFramesTracking.trackE2EEStreamVerificationShareClicked({ channelId });
+    const obj2 = { channelId };
+    showShareActionSheet.showShareActionSheet({ message }, AnalyticsSections.SECURE_FRAMES_STREAM_BOTTOM_SHEET);
   }, items1);
-  obj = { title: null, subtitle: null, footer: null, epochAuthenticator: null, onShareClick: null };
+  let obj2 = { title: null, subtitle: null, footer: null, epochAuthenticator: null, onShareClick: null };
+  let obj = channelId(504);
   const intl = channelId(1114).intl;
-  obj[0] = intl.string(channelId(1114).t.QogHld);
+  obj2.title = intl.string(channelId(1114).t.QogHld);
   const intl2 = channelId(1114).intl;
-  obj[1] = intl2.string(channelId(1114).t.qODBkW);
+  obj2.subtitle = intl2.string(channelId(1114).t.qODBkW);
   const intl3 = channelId(1114).intl;
-  obj = { helpArticle: null };
-  const tmp3 = streamKey(9172);
-  obj[0] = channelId(9155).getSecureFramesHelpdeskArticle();
-  obj[2] = intl3.format(channelId(1114).t["H3+ktv"], obj);
-  obj[3] = stateFromStores;
-  obj[4] = callback;
-  return <tmp3 helpArticle={null} />;
+  const obj3 = { helpArticle: null };
+  const tmp3 = streamKey(9199);
+  obj3.helpArticle = channelId(9182).getSecureFramesHelpdeskArticle();
+  obj2.footer = intl3.format(channelId(1114).t["H3+ktv"], obj3);
+  obj2.epochAuthenticator = stateFromStores;
+  obj2.onShareClick = callback;
+  return <tmp3 title={null} subtitle={null} footer={null} epochAuthenticator={null} onShareClick={null} />;
 };

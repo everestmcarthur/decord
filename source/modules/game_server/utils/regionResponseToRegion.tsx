@@ -1,13 +1,13 @@
-// Module ID: 12491
-// Function ID: 12492
+// Module ID: 12517
+// Function ID: 12518
 // Name: regionResponseToRegion
 // Dependencies: [2]
 // Exports: default
 
-// Module 12491 (regionResponseToRegion)
-import set from "set" /* 2 */;
+// Module 12517 (regionResponseToRegion)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/game_server/utils/regionResponseToRegion.tsx");
+const result = size.fileFinishedImporting("modules/game_server/utils/regionResponseToRegion.tsx");
 
 export default function regionResponseToRegion(id) {
   return { id: id.id, name: id.name, countryCode: id.country_code, pingUrl: id.ping_url, enabled: id.enabled };

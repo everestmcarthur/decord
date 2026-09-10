@@ -1,156 +1,135 @@
-// Module ID: 14680
-// Function ID: 14681
+// Module ID: 14706
+// Function ID: 14707
 // Name: WebAuthnNameStep
-// Dependencies: [5, 32, 19, 17, 14660, 21, 4560, 1483, 6597, 4259, 1114, 10657, 4520, 8598, 1178, 4975, 2]
+// Dependencies: [5, 32, 19, 17, 14686, 21, 4574, 1483, 6611, 4272, 1114, 10684, 4534, 8626, 1178, 4989, 2]
 // Exports: default
 
-// Module 14680 (WebAuthnNameStep)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
+// Module 14706 (WebAuthnNameStep)
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
 import useNavigation from "useNavigation" /* 1483 */;
-import Button2 from "Button" /* 4975 */;
-import Form from "Form" /* 8598 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { WebAuthnScreens } from "WebAuthnScreens" /* 14660 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import Form from "Form" /* 8626 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles({ margin: { margin: 16 } });
-const result = require("set").fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnNameStep.tsx");
+require = fn;
+const View = fn(17).View;
+const WebAuthnScreens = fn(14686).WebAuthnScreens;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4574);
+let closure_10 = createStyles.createStyles({ margin: { margin: 16 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnNameStep.tsx");
 
 export default function WebAuthnNameStep(arg0) {
   ({ ticket: require, credential: importDefault, name } = arg0);
-  dependencyMap = undefined;
   closure_3 = undefined;
-  let callback;
-  let first;
-  function _onPress() {
-    const self = this;
-    const tmp = callback(function*() {
-      if (v03 === 2) {
-        v03 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
+  _slicedToArray = undefined;
+  value = undefined;
+  closure_6 = async function _onPress(arg0, value) {
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c4 = 2;
+        if (0 === v3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            c3 = 2;
+            asyncGeneratorStep(true);
+            v3 = 3;
+            c4 = 1;
+            const obj5 = { value: tmp4(tmp32[8]).finishRegisterWebAuthnCredential(noop, require, importDefault), done: false };
+            return obj5;
+          }
+        } else if (1 === tmp8) {
+          c3 = 0;
+          closure_128_3(false);
+          throw tmp32;
+        } else if (2 === tmp8) {
+          c3 = 1;
+          closure_128_4(tmp32.body.message);
+          c3 = 0;
+          closure_128_3(false);
+          c4 = 3;
+          const obj6 = { value: undefined, done: true };
+          return obj6;
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c3 = 0;
+          closure_128_3(false);
+          c4 = 3;
+          const obj = { value, done: true };
           return obj;
         } else {
+          c3 = 0;
+          closure_128_3(false);
+          const obj8 = { key: "WEBAUTHN_CREDENTIAL_REGISTER_SUCCESS_TOAST_KEY", content: null, icon: null, IconComponent: null, iconColor: "status-success" };
+          const intl = tmp4(tmp32[10]).intl;
+          obj8.content = intl.string(tmp4(tmp32[10]).t.j3d5qI);
+          obj8.icon = v3(tmp32[11]);
+          obj8.IconComponent = tmp4(tmp32[12]).CircleCheckIcon;
+          v3(tmp32[9]).open(obj8);
+          closure_128_2.push(constants.SUCCESS, {});
+          c4 = 3;
           return { value: "HermesInternal", done: null };
         }
-      } else {
-        try {
-          v03 = 2;
-          if (0 === v0) {
-            if (arg0 === 1) {
-              v03 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v03 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_0 = tmp4;
-              let v02 = 2;
-              v02(true);
-              let obj2 = closure_1_0(closure_1_2[8]);
-              v0 = 3;
-              v03 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj2.finishRegisterWebAuthnCredential(closure_1_5, closure_1_0, v0);
-              return obj1;
-            }
-          } else if (1 === tmp8) {
-            v02 = 0;
-            v02(false);
-            throw arr;
-          } else if (2 === tmp8) {
-            v02 = 1;
-            v03(arr.body.message);
-            v02 = 0;
-            v02(false);
-            v03 = 3;
-            obj2 = { value: null, done: true };
-            obj2[0] = undefined;
-            return obj2;
-          } else if (arg0 === 1) {
-            v03 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v02 = 0;
-            v02(false);
-            v03 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            v02 = 0;
-            v02(false);
-            const obj3 = { key: "WEBAUTHN_CREDENTIAL_REGISTER_SUCCESS_TOAST_KEY", content: null, icon: null, IconComponent: null, iconColor: "status-success" };
-            const intl = closure_1_0(closure_1_2[10]).intl;
-            obj3[1] = intl.string(closure_1_0(closure_1_2[10]).t.j3d5qI);
-            obj3[2] = v0(closure_1_2[11]);
-            obj3[3] = closure_1_0(closure_1_2[12]).CircleCheckIcon;
-            v0(closure_1_2[9]).open(obj3);
-            arr = arr.push(closure_1_7.SUCCESS, {});
-            v03 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp32) {
-          arr = tmp32;
-          if (tmp5 === v02) {
-            v03 = tmp3;
-            throw tmp32;
-          } else if (tmp2 === tmp34) {
-            v0 = tmp2;
-          } else {
-            v0 = tmp;
-          }
+      } catch (tmp32) {
+        if (tmp5 === c3) {
+          c4 = tmp3;
+          throw tmp32;
+        } else if (tmp2 === tmp34) {
+          v3 = tmp2;
+        } else {
+          v3 = tmp;
         }
       }
-    });
-    closure_6 = tmp;
-    const apply = tmp.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
     }
-    return applyArgumentsResult;
-  }
-  let tmp = callback4();
-  let obj = useNavigation;
-  dependencyMap = obj.useNavigation();
-  const tmp6 = callback(first.useState(false), 2);
-  closure_3 = tmp6[1];
-  [tmp8, c4] = callback(first.useState(null), 2);
+  };
+  const tmp = closure_10();
+  dependencyMap = useNavigation.useNavigation();
+  [obj3.disabled, closure_3] = value.useState(false);
+  const tmp5 = _slicedToArray;
+  [tmp8, c4] = _slicedToArray(value.useState(null), 2);
   if (name == null) {
     name = "";
   }
-  const tmp5Result = callback(first.useState(name), 2);
-  first = tmp5Result[0];
-  obj = { children: null };
-  obj = { showTopContainer: false, value: first, onChange: tmp5Result[1], style: tmp.margin, error: tmp8, title: null, placeholder: null, disabled: null, clearButtonVisibility: null, autoFocus: true, showBorder: true, required: true, large: true };
+  const tmp5Result = tmp5(value.useState(name), 2);
+  value = tmp5Result[0];
+  let obj2 = { children: null };
+  const obj3 = { showTopContainer: false, value, onChange: tmp5Result[1], style: tmp.margin, error: tmp8, title: null, placeholder: null, disabled: null, clearButtonVisibility: null, autoFocus: true, showBorder: true, required: true, large: true };
   let intl = tmp2(1114).intl;
-  obj[5] = intl.string(getSystemLocale.t["Jzd+z/"]);
+  obj3.title = intl.string(util.t["Jzd+z/"]);
   const intl2 = tmp2(1114).intl;
-  obj[6] = intl2.string(getSystemLocale.t["I/sJtJ"]);
-  obj[7] = tmp6[0];
-  obj[8] = Button.ClearButtonVisibility.WITH_CONTENT;
-  const items = [callback2(Form.FormInput, obj), callback2(Form.FormDivider, {}), ];
-  obj1 = { style: tmp.margin, children: null };
-  let obj2 = {
+  obj3.placeholder = intl2.string(util.t["I/sJtJ"]);
+  obj3.clearButtonVisibility = native.ClearButtonVisibility.WITH_CONTENT;
+  const items = [closure_8(Form.FormInput, obj3), closure_8(Form.FormDivider, {}), ];
+  let obj4 = { style: tmp.margin, children: null };
+  let obj5 = {
     onPress() {
       const self = this;
-      const apply = _onPress.apply;
+      const apply = closure_6.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -163,10 +142,10 @@ export default function WebAuthnNameStep(arg0) {
     size: "lg"
   };
   const intl3 = tmp2(1114).intl;
-  obj2[1] = intl3.string(getSystemLocale.t["5dyZ1S"]);
-  obj2[2] = "" === first;
-  obj1[1] = callback2(Button2.Button, obj2);
-  items[2] = callback2(_onPress, obj1);
-  obj[0] = items;
-  return callback3(Form.Form, obj);
+  obj5.text = intl3.string(util.t["5dyZ1S"]);
+  obj5.disabled = "" === value;
+  obj4.children = closure_8(components_Button_Button.Button, obj5);
+  items[2] = closure_8(closure_6, obj4);
+  obj2.children = items;
+  return closure_9(Form.Form, obj2);
 };

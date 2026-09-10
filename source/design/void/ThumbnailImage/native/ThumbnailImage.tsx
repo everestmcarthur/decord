@@ -1,20 +1,20 @@
-// Module ID: 14102
-// Function ID: 14103
-// Name: LocalImageThumbnail
-// Dependencies: [19, 17, 21, 1115, 14103, 2]
+// Module ID: 14125
+// Function ID: 14126
+// Name: ThumbnailImage
+// Dependencies: [19, 17, 21, 1115, 14126, 2]
 // Exports: default
 
-// Module 14102 (LocalImageThumbnail)
-import noopAll from "noop" /* 19 */;
-import { Image as _default } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import set from "set" /* 1115 */;
+// Module 14125 (ThumbnailImage)
+import noop from "module_19" /* 19 */;
 
-noopAll;
-if (set.isAndroid()) {
-  _default = require("__INTERNAL_VIEW_CONFIG").default;
+let _default = fn(17).Image;
+const jsx = fn(21).jsx;
+const PlatformUtils = fn(1115);
+if (PlatformUtils.isAndroid()) {
+  _default = fn(14126).default;
 }
-const result = set.fileFinishedImporting("design/void/ThumbnailImage/native/ThumbnailImage.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/ThumbnailImage/native/ThumbnailImage.tsx");
 
 export default function LocalImageThumbnail(arg0) {
   const merged = Object.assign(arg0);

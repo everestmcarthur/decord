@@ -1,21 +1,21 @@
-// Module ID: 11101
-// Function ID: 11102
-// Name: items
-// Dependencies: [19, 21, 9953, 11102, 2]
+// Module ID: 11128
+// Function ID: 11129
+// Name: SpendEarnOrbsLottie
+// Dependencies: [19, 21, 9980, 11129, 2]
 
-// Module 11101 (items)
-import LottieIcon from "LottieIcon" /* 9953 */;
-import registerAsset from "registerAsset" /* 11102 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+// Module 11128 (SpendEarnOrbsLottie)
+import LottieIcon from "LottieIcon" /* 9980 */;
+import _mod11129 from "module_11129" /* 11129 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let closure_3 = ["Orbs-Spend_DarkTheme", "Orbs-Earn_DarkTheme"];
+require = fn;
+const jsx = fn(21).jsx;
+const layers = ["Orbs-Spend_DarkTheme", "Orbs-Earn_DarkTheme"];
 const items = [{ name: "earn", start: 0, duration: 180 }, { name: "spend", start: 240, duration: 180 }];
-const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
-  const merged = Object.assign(arg0);
-  return jsx(LottieIcon.LottieIcon, { dotLottie: registerAsset, ref, layers: closure_3, markers: items });
-});
-const result = require("set").fileFinishedImporting("design/components/LottieIcon/native/generated/SpendEarnOrbsLottie.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/LottieIcon/native/generated/SpendEarnOrbsLottie.tsx");
 
-export const SpendEarnOrbsLottie = forwardRefResult;
+export const SpendEarnOrbsLottie = noop.forwardRef((arg0, ref) => {
+  const merged = Object.assign(arg0);
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod11129, ref, layers, markers: items });
+});

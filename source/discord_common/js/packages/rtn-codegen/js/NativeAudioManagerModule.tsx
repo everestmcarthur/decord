@@ -1,20 +1,20 @@
-// Module ID: 9092
-// Function ID: 9093
-// Name: enforcing
+// Module ID: 9119
+// Function ID: 9120
+// Name: NativeAudioManagerModule
 // Dependencies: [17, 2]
 // Exports: getInvalidAndroidDevice
 
-// Module 9092 (enforcing)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 9119 (NativeAudioManagerModule)
+import _mod17 from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
 
-const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
-let obj = { SPEAKERPHONE: "SPEAKERPHONE", WIRED_HEADSET: "WIRED_HEADSET", EARPIECE: "EARPIECE", BLUETOOTH_HEADSET: "BLUETOOTH_HEADSET", INVALID: "INVALID" };
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
+const AudioDeviceType = { SPEAKERPHONE: "SPEAKERPHONE", WIRED_HEADSET: "WIRED_HEADSET", EARPIECE: "EARPIECE", BLUETOOTH_HEADSET: "BLUETOOTH_HEADSET", INVALID: "INVALID" };
 const enforcing = TurboModuleRegistry.getEnforcing("NativeAudioManagerModule");
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeAudioManagerModule.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeAudioManagerModule.tsx");
 
 export default enforcing;
-export const AudioDeviceType = obj;
+export { AudioDeviceType };
 export const getInvalidAndroidDevice = function getInvalidAndroidDevice() {
   obj = { deviceType: 0, simpleDeviceType: obj.INVALID, deviceId: -1, deviceName: "Invalid" };
   return obj;

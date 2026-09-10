@@ -1,12 +1,12 @@
-// Module ID: 8635
-// Function ID: 8636
-// Name: ReportNames
+// Module ID: 8663
+// Function ID: 8664
+// Name: MenuTypes
 // Dependencies: [2]
 
-// Module 8635 (ReportNames)
-import set from "set" /* 2 */;
+// Module 8663 (MenuTypes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/in_app_reports/MenuTypes.tsx");
+const result = size.fileFinishedImporting("modules/in_app_reports/MenuTypes.tsx");
 
 export const ReportNames = { GUILD: "guild", GUILD_DISCOVERY: "guild_discovery", GUILD_DIRECTORY_ENTRY: "guild_directory_entry", MESSAGE: "message", STAGE_CHANNEL: "stage_channel", GUILD_SCHEDULED_EVENT: "guild_scheduled_event", FIRST_DM: "first_dm", USER: "user", APPLICATION: "application", WIDGET: "widget" };
 export const ModeratorReportNames = { MESSAGE: "report_to_mod_message" };

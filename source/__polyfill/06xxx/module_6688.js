@@ -1,6 +1,9 @@
 // Module ID: 6688
 // Function ID: 6689
-// Dependencies: []
+// Dependencies: [19]
 
 // Module 6688
-arg5.ActionType = { REANIMATED_WORKLET: 1, NATIVE_ANIMATED_EVENT: 2, JS_FUNCTION_OLD_API: 3, JS_FUNCTION_NEW_API: 4, NATIVE_DETECTOR: 5, VIRTUAL_DETECTOR: 6 };
+import noop from "module_19" /* 19 */;
+
+
+export default noop.createContext(false);

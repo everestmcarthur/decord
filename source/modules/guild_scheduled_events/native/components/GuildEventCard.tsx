@@ -1,44 +1,47 @@
-// Module ID: 9813
-// Function ID: 9814
-// Name: GuildEventCardControls
-// Dependencies: [19, 17, 4583, 7526, 1963, 21, 4560, 576, 9777, 5433, 504, 9709, 5607, 8410, 9801, 2]
+// Module ID: 9840
+// Function ID: 9841
+// Name: GuildEventCard
+// Dependencies: [19, 17, 4597, 7540, 1963, 21, 4574, 576, 9804, 5447, 504, 9736, 5621, 8438, 9828, 2]
 
-// Module 9813 (GuildEventCardControls)
-import ThemesDefault from "Themes" /* 576 */;
-import ButtonGroup from "ButtonGroup" /* 5433 */;
-import usePrimaryActionButtonType from "usePrimaryActionButtonType" /* 9777 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "createRTCConnection" /* 4583 */;
-import { isGuildScheduledEventActive as closure_5 } from "scheduledEventSort" /* 7526 */;
-import { AGE_VERIFICATION_STAGE_CHANNEL_TYPES as closure_6 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1963 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 9840 (GuildEventCard)
+import nativeDefault from "native" /* 576 */;
+import ButtonGroup from "ButtonGroup" /* 5447 */;
+import GuildEventCardComponents from "GuildEventCardComponents" /* 9804 */;
+import noop from "module_19" /* 19 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
 
-require = arg1;
+const require = globalThis.__r;
+
+require = fn;
 function GuildEventCardControls(onCloseAction) {
   ({ event, isConnected } = onCloseAction);
-  let obj = usePrimaryActionButtonType;
-  const primaryActionButtonType = obj.usePrimaryActionButtonType(event, isConnected);
-  obj = { direction: "horizontal", style: styles().actionContainer, children: null };
-  const items = [callback2(usePrimaryActionButtonType.GuildEventCardPrimaryAction, { event, onCloseAction: onCloseAction.onCloseAction, isConnected }), , ];
-  let tmp6Result = primaryActionButtonType === usePrimaryActionButtonType.PrimaryActionType.START;
+  const tmp = styles();
+  const primaryActionButtonType = GuildEventCardComponents.usePrimaryActionButtonType(event, isConnected);
+  const obj2 = { direction: "horizontal", style: tmp.actionContainer, children: null };
+  const items = [React5(GuildEventCardComponents.GuildEventCardPrimaryAction, { event, onCloseAction: onCloseAction.onCloseAction, isConnected }), , ];
+  let tmp6Result = primaryActionButtonType === GuildEventCardComponents.PrimaryActionType.START;
   if (tmp6Result) {
-    obj = { event: null };
-    obj[0] = event;
-    tmp6Result = tmp6(tmp2(9777).GuildEventCardRSVPAction, obj);
+    const obj3 = { event };
+    tmp6Result = tmp6(tmp2(9804).GuildEventCardRSVPAction, obj3);
   }
   items[1] = tmp6Result;
-  items[2] = callback2(usePrimaryActionButtonType.GuildEventShareAction, { event });
-  obj[2] = items;
-  return closure_8(ButtonGroup.ButtonGroup, obj);
+  items[2] = React5(GuildEventCardComponents.GuildEventShareAction, { event });
+  obj2.children = items;
+  return React6(ButtonGroup.ButtonGroup, obj2);
 }
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-let obj = { actionContainer: null };
-obj = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: 0 };
-obj[0] = obj;
-const styles = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo((event) => {
+const View = fn(17).View;
+let closure_5 = fn(7540).isGuildScheduledEventActive;
+fn(1963).AGE_VERIFICATION_STAGE_CHANNEL_TYPES;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+let obj = { actionContainer: { paddingTop: nativeDefault.space.PX_16, paddingBottom: 0 } };
+const styles = createStyles.createStyles(obj);
+let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingBottom: 0 };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventCard.tsx");
+
+export default noop.memo((event) => {
   event = event.event;
   ({ onPress: importDefault, onCloseAction, hideControls } = event);
   if (hideControls === undefined) {
@@ -52,70 +55,62 @@ const memoResult = importAllResult.memo((event) => {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  let channel_id;
-  channel_id = event.channel_id;
-  let obj = event(channel_id[10]);
-  const items = [closure_4];
+  const channel_id = event.channel_id;
+  const items = [RTCConnectionStore];
   const items1 = [channel_id];
-  let stateFromStores = obj.useStateFromStores(items, () => {
-    let isConnectedResult = closure_1_4.isConnected();
+  let stateFromStores = event(channel_id[10]).useStateFromStores(items, () => {
+    let isConnectedResult = RTCConnectionStore.isConnected();
     if (isConnectedResult) {
-      isConnectedResult = closure_1_4.getChannelId() === channel_id;
+      isConnectedResult = RTCConnectionStore.getChannelId() === channel_id;
     }
     return isConnectedResult;
   }, items1);
   if (stateFromStores) {
-    stateFromStores = callback(event);
+    stateFromStores = closure_5(event);
   }
   function handlePress() {
-    if (closure_1 != null) {
+    if (importDefault != null) {
       tmp(event);
     }
   }
+  const obj = event(channel_id[10]);
   const result = event(channel_id[11]).recurrenceRuleFromServer(event.recurrence_rule);
-  obj = { accessible: false, onPress: handlePress, children: null };
-  const items2 = [callback2(event(channel_id[8]).GuildEventCardHeader, { event, isNew: flag2 }), callback2(event(channel_id[8]).GuildEventCardMetaInfo, { event, onTitlePress: handlePress }), , , , ];
+  const obj2 = { accessible: false, onPress: handlePress, children: null };
+  const items2 = [closure_7(event(channel_id[8]).GuildEventCardHeader, { event, isNew: flag2 }), closure_7(event(channel_id[8]).GuildEventCardMetaInfo, { event, onTitlePress: handlePress }), , , , ];
   let hasItem = !flag;
   if (!flag) {
     hasItem = set.has(event.entity_type);
   }
   if (hasItem) {
-    obj = { noBackground: true, onConfirmPress: null, channelId: null };
-    obj[1] = onCloseAction;
-    obj[2] = channel_id;
-    hasItem = tmp6(importDefault(tmp2[13]), obj);
+    const obj3 = { noBackground: true, onConfirmPress: onCloseAction, channelId: channel_id };
+    hasItem = tmp6(require("StageChannelAgeVerificationNotice"), obj3);
   }
   items2[2] = hasItem;
-  items2[3] = callback2(event(channel_id[8]).GuildEventSimpleLocation, { event });
+  items2[3] = closure_7(event(channel_id[8]).GuildEventSimpleLocation, { event });
   let tmp6Result = null;
   if (!hideControls) {
-    obj1 = { event: null, onCloseAction: null, isConnected: null };
-    obj1[0] = event;
-    obj1[1] = onCloseAction;
-    obj1[2] = stateFromStores;
-    tmp6Result = tmp6(GuildEventCardControls, obj1);
+    const obj4 = { event, onCloseAction, isConnected: stateFromStores };
+    tmp6Result = tmp6(GuildEventCardControls, obj4);
   }
   items2[4] = tmp6Result;
-  tmp6Result = null != result;
-  if (tmp6Result) {
-    const obj2 = { guildId: null, recurrenceRule: null, guildEventId: null, onRecurrencePress: null };
-    obj2[0] = event.guild_id;
-    obj2[1] = result;
-    obj2[2] = event.id;
-    obj2[3] = function onRecurrencePress(arg0) {
-      let tmpResult;
-      if (closure_1 != null) {
-        tmpResult = tmp(event, arg0);
-      }
-      return tmpResult;
+  let tmp6Result2 = null != result;
+  if (tmp6Result2) {
+    const obj5 = {
+      guildId: event.guild_id,
+      recurrenceRule: result,
+      guildEventId: event.id,
+      onRecurrencePress(arg0) {
+          let tmpResult;
+          if (importDefault != null) {
+            tmpResult = tmp(event, arg0);
+          }
+          return tmpResult;
+        }
     };
-    tmp6Result = tmp6(importDefault(tmp2[14]), obj2);
+    tmp6Result2 = tmp6(require("GuildEventRecurrences"), obj5);
   }
-  items2[5] = tmp6Result;
-  obj[2] = closure_8(View, { children: items2 });
-  return callback2(event(channel_id[12]).Card, obj);
+  items2[5] = tmp6Result2;
+  obj2.children = closure_8(View, { children: items2 });
+  return closure_7(event(channel_id[12]).Card, obj2);
 });
-let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventCard.tsx");
-
-export default memoResult;
 export const useGuildEventCardStyles = styles;

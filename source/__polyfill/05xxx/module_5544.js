@@ -1,0 +1,15 @@
+// Module ID: 5544
+// Function ID: 5545
+// Dependencies: [5545, 5548]
+
+// Module 5544
+import _mod5545 from "module_5545" /* 5545 */;
+
+const require = globalThis.__r;
+
+for (const key10016 in require("module_5548")) {
+  arg5[key10016] = require("module_5548")[key10016];
+  continue;
+}
+
+export default _mod5545.LottieView;

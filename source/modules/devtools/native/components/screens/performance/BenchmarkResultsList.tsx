@@ -1,19 +1,20 @@
-// Module ID: 15737
-// Function ID: 15738
+// Module ID: 15767
+// Function ID: 15768
 // Name: BenchmarkResultsList
-// Dependencies: [19, 21, 5687, 5605, 15733, 2]
+// Dependencies: [19, 21, 5701, 5619, 15763, 2]
 // Exports: default
 
-// Module 15737 (BenchmarkResultsList)
-import noopAll from "noop" /* 19 */;
-import TableRowInner from "TableRowInner" /* 5605 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 15767 (BenchmarkResultsList)
+import TableRow from "TableRow" /* 5619 */;
+import TableRowGroup from "TableRowGroup" /* 5701 */;
+import startFrameMonitor from "startFrameMonitor" /* 15763 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: obj1, jsxs: c3 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/performance/BenchmarkResultsList.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c2, jsxs: c3 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/native/components/screens/performance/BenchmarkResultsList.tsx");
 
 export default function BenchmarkResultsList(results) {
   results = results.results;
@@ -23,33 +24,32 @@ export default function BenchmarkResultsList(results) {
     const items = [
       results.map((kind) => {
           if ("mount" === kind.kind) {
-            let obj = { label: null, subLabel: null };
-            ({ label: obj[0], elapsedMs } = kind);
+            const obj = { label: null, subLabel: null };
+            ({ label: obj.label, elapsedMs } = kind);
             const _HermesInternal = HermesInternal;
-            obj[1] = "" + elapsedMs.toFixed(1) + " ms total";
-            let tmp5 = callback2(callback(5605).TableRow, obj, kind.id);
+            obj.subLabel = "" + elapsedMs.toFixed(1) + " ms total";
+            let tmp5 = closure_1_2(TableRow.TableRow, obj, kind.id);
           } else {
-            obj = { label: null, subLabel: null };
+            const obj2 = { label: null, subLabel: null };
             const meanMs = kind.meanMs;
             const toFixedResult = meanMs.toFixed(1);
             const worstMs = kind.worstMs;
             const _HermesInternal2 = HermesInternal;
-            obj[0] = "Scroll \u00B7 mean " + toFixedResult + " ms \u00B7 worst " + worstMs.toFixed(1) + " ms";
+            obj2.label = "Scroll \u00B7 mean " + toFixedResult + " ms \u00B7 worst " + worstMs.toFixed(1) + " ms";
             ({ dropped, frames } = kind);
-            const FRAME_BUDGET_MS = callback(15733).FRAME_BUDGET_MS;
+            const FRAME_BUDGET_MS = startFrameMonitor.FRAME_BUDGET_MS;
             const _HermesInternal3 = HermesInternal;
-            obj[1] = "" + dropped + "/" + frames + " frames over " + FRAME_BUDGET_MS.toFixed(1) + " ms";
-            tmp5 = callback2(callback(5605).TableRow, obj, kind.id);
+            obj2.subLabel = "" + dropped + "/" + frames + " frames over " + FRAME_BUDGET_MS.toFixed(1) + " ms";
+            tmp5 = closure_1_2(TableRow.TableRow, obj2, kind.id);
           }
           return tmp5;
         }),
 
     ];
-    obj = { label: "Clear results", variant: "danger", arrow: true, onPress: null };
-    obj[3] = tmp;
-    items[1] = callback(TableRowInner.TableRow, obj);
-    obj[2] = items;
-    tmp2 = callback2(TableRowGroupTitle.TableRowGroup, obj);
+    let obj2 = { label: "Clear results", variant: "danger", arrow: true, onPress: tmp };
+    items[1] = React2(TableRow.TableRow, obj2);
+    obj.children = items;
+    tmp2 = React3(TableRowGroup.TableRowGroup, obj);
   }
   return tmp2;
 };

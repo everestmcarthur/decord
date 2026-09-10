@@ -1,14 +1,14 @@
-// Module ID: 13641
-// Function ID: 13642
-// Name: enforcing
+// Module ID: 13664
+// Function ID: 13665
+// Name: NativeFastConnectModule
 // Dependencies: [17, 2]
 
-// Module 13641 (enforcing)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 13664 (NativeFastConnectModule)
+import _mod17 from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
 
-const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 const enforcing = TurboModuleRegistry.getEnforcing("NativeFastConnectModule");
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeFastConnectModule.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeFastConnectModule.tsx");
 
 export default enforcing;

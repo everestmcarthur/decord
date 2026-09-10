@@ -1,26 +1,26 @@
-// Module ID: 5076
-// Function ID: 5077
+// Module ID: 5090
+// Function ID: 5091
 // Name: TextWarningIcon
-// Dependencies: [19, 21, 576, 4261, 5044, 2]
+// Dependencies: [19, 21, 576, 4274, 5058, 2]
 // Exports: TextWarningIcon
 
-// Module 5076 (TextWarningIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 5044 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 5090 (TextWarningIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod5058 from "module_5058" /* 5058 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/TextWarningIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/TextWarningIcon.tsx");
 
 export const TextWarningIcon = function TextWarningIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5058, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

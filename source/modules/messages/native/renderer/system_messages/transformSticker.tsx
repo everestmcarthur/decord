@@ -1,48 +1,50 @@
-// Module ID: 7998
-// Function ID: 7999
+// Module ID: 8012
+// Function ID: 8013
 // Name: transformSticker
-// Dependencies: [1938, 4899, 7999, 7951, 1114, 1935, 2]
+// Dependencies: [1938, 4913, 8013, 7965, 1114, 1935, 2]
 // Exports: transformSticker
 
-// Module 7998 (transformSticker)
-import set from "set" /* 2 */;
-import STICKER_PICKER_TAB_PANEL_ID from "STICKER_PICKER_TAB_PANEL_ID" /* 1938 */;
+// Module 8012 (transformSticker)
+import util from "util" /* 1114 */;
+import StickersConstants from "StickersConstants" /* 1938 */;
+import size from "module_2" /* 2 */;
 
-const StickerAnimationSettings = STICKER_PICKER_TAB_PANEL_ID.StickerAnimationSettings;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/transformSticker.tsx");
+const require = globalThis.__r;
 
-export const transformSticker = function transformSticker(tmp5Result1) {
-  const AnimateStickers = _require(1935).AnimateStickers;
-  _require = tmp5Result1;
-  let obj = {};
+const StickerAnimationSettings = StickersConstants.StickerAnimationSettings;
+const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/transformSticker.tsx");
+
+export const transformSticker = function transformSticker(tmp5Result8) {
+  const AnimateStickers = require("UserSettings").AnimateStickers;
+  _require = tmp5Result8;
+  const obj = {};
   const setting = AnimateStickers.getSetting();
-  const merged = Object.assign(tmp5Result1);
-  let str = tmp5Result1.id;
+  const merged = Object.assign(tmp5Result8);
+  let str = tmp5Result8.id;
   if (str == null) {
     str = "";
   }
   obj.asset = str;
-  let tmpResult = tmp(4899);
-  obj = { isPreview: !tmp5 };
-  let str2 = tmpResult.getStickerAssetUrl(tmp5Result1, obj);
+  let str2 = require("StickersUtils").getStickerAssetUrl(tmp5Result8, { isPreview: setting !== StickerAnimationSettings.ALWAYS_ANIMATE });
   if (str2 == null) {
     str2 = "";
   }
   obj.url = str2;
-  const NativeLottieRenderMode = tmp(7999).NativeLottieRenderMode;
+  const NativeLottieRenderMode = tmp(8013).NativeLottieRenderMode;
   obj.renderMode = setting === StickerAnimationSettings.ALWAYS_ANIMATE ? NativeLottieRenderMode.LOOP : NativeLottieRenderMode.STILL;
-  tmpResult = tmp(7951);
-  obj = {
+  const obj2 = { isPreview: setting !== StickerAnimationSettings.ALWAYS_ANIMATE };
+  const tmpResult = require("StickersUtils");
+  const obj3 = {
     expensive() {
-      const intl = tmp5Result1(closure_1_1[4]).intl;
-      return intl.formatToPlainString(tmp5Result1(closure_1_1[4]).t.rk6pOw, { stickerName: tmp5Result1.name });
+      const intl = util.intl;
+      return intl.formatToPlainString(util.t.rk6pOw, { stickerName: tmp5Result8.name });
     },
     cheap: null
   };
   let intl = tmp(1114).intl;
-  obj[1] = intl.string(_require(1114).t["fT+Yjp"]);
-  obj.accessibilityLabel = tmpResult.getAccessibilityLabelOrCheapFallbackUnsafe(obj);
+  obj3.cheap = intl.string(require("util").t["fT+Yjp"]);
+  obj.accessibilityLabel = require("getAccessibilityLabelOrCheapFallbackUnsafe").getAccessibilityLabelOrCheapFallbackUnsafe(obj3);
   const intl2 = tmp(1114).intl;
-  obj.accessibilityHint = intl2.string(_require(1114).t.GCEruV);
+  obj.accessibilityHint = intl2.string(require("util").t.GCEruV);
   return obj;
 };

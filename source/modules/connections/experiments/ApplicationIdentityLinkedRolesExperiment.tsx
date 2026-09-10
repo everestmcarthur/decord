@@ -1,16 +1,18 @@
-// Module ID: 17644
-// Function ID: 17645
-// Name: experiment
-// Dependencies: [4474, 2]
+// Module ID: 17677
+// Function ID: 17678
+// Name: ApplicationIdentityLinkedRolesExperiment
+// Dependencies: [4488, 2]
 // Exports: useApplicationIdentityLinkedRolesEnabled
 
-// Module 17644 (experiment)
-import set from "set" /* 2 */;
-import createExperiment from "createExperiment" /* 4474 */;
+// Module 17677 (ApplicationIdentityLinkedRolesExperiment)
+import createExperiment from "module_4488" /* 4488 */;
+import size from "module_2" /* 2 */;
 
+const obj = { kind: "guild", id: "2026-04_application_identity_linked_roles", label: "Application Identity Linked Roles", defaultConfig: { enabled: false }, treatments: null };
 const items = [{ id: 1, label: "Enable Application Identity Linked Roles", config: { enabled: true } }];
-const experiment = createExperiment.createExperiment({ kind: "guild", id: "2026-04_application_identity_linked_roles", label: "Application Identity Linked Roles", defaultConfig: { enabled: false }, treatments: items });
-const result = set.fileFinishedImporting("modules/connections/experiments/ApplicationIdentityLinkedRolesExperiment.tsx");
+obj.treatments = items;
+const experiment = createExperiment.createExperiment(obj);
+const result = size.fileFinishedImporting("modules/connections/experiments/ApplicationIdentityLinkedRolesExperiment.tsx");
 
 export const ApplicationIdentityLinkedRolesExperiment = experiment;
 export const useApplicationIdentityLinkedRolesEnabled = function useApplicationIdentityLinkedRolesEnabled(guildId, location) {

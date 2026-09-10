@@ -1,27 +1,27 @@
-// Module ID: 13678
-// Function ID: 13679
+// Module ID: 13701
+// Function ID: 13702
 // Name: isClipsEnabled
-// Dependencies: [1914, 13679, 504, 2]
+// Dependencies: [1914, 13702, 504, 2]
 // Exports: isClipsEnabled, useIsClipsEnabled
 
-// Module 13678 (isClipsEnabled)
-import apexExperiment from "apexExperiment" /* 13679 */;
-import closure_2 from "_migrateDefaultStorage" /* 1914 */;
+// Module 13701 (isClipsEnabled)
+import ClipsExperiment from "ClipsExperiment" /* 13702 */;
+import ClipsStore from "ClipsStore" /* 1914 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/clips/isClipsEnabled.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/clips/isClipsEnabled.tsx");
 
 export const isClipsEnabled = function isClipsEnabled() {
-  let clipsEnabled = apexExperiment.areClipsAvailable();
+  let clipsEnabled = ClipsExperiment.areClipsAvailable();
   if (clipsEnabled) {
-    clipsEnabled = state.getState().clipsSettings.clipsEnabled;
+    clipsEnabled = ClipsStore.getState().clipsSettings.clipsEnabled;
   }
   return clipsEnabled;
 };
 export const useIsClipsEnabled = function useIsClipsEnabled() {
-  let isClipsAvailable = apexExperiment.useIsClipsAvailable();
-  const obj = apexExperiment;
-  const items = [closure_2];
+  let isClipsAvailable = ClipsExperiment.useIsClipsAvailable();
+  const items = [ClipsStore];
   if (isClipsAvailable) {
     isClipsAvailable = obj2.useStateFromStores(items, () => state.getState().clipsSettings.clipsEnabled);
   }

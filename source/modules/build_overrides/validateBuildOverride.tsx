@@ -1,40 +1,41 @@
-// Module ID: 13225
-// Function ID: 13226
+// Module ID: 13248
+// Function ID: 13249
 // Name: validateBuildOverride
 // Dependencies: [32, 502, 1363, 1074, 1114, 12, 2]
 // Exports: default
 
-// Module 13225 (validateBuildOverride)
-import applyDefault from "apply" /* 12 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "fetchFingerprint" /* 502 */;
-import { BUILD_OVERRIDE_TARGET_NAMES as closure_5 } from "BUILD_OVERRIDE_TARGET_NAMES" /* 1363 */;
-import { PublicReleaseChannels } from "ME" /* 1074 */;
+// Module 13248 (validateBuildOverride)
+import _modDef12 from "module_12" /* 12 */;
+import util from "util" /* 1114 */;
+import _slicedToArray from "module_32" /* 32 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/build_overrides/validateBuildOverride.tsx");
+require = fn;
+let closure_5 = fn(1363).BUILD_OVERRIDE_TARGET_NAMES;
+const PublicReleaseChannels = fn(1074).PublicReleaseChannels;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/build_overrides/validateBuildOverride.tsx");
 
-export default function validateBuildOverride(targetBuildOverride, items1) {
+export default function validateBuildOverride(targetBuildOverride, items3, arg2) {
   if (null != targetBuildOverride) {
-    if (null != items1) {
+    if (null != items3) {
       ({ releaseChannel, expiresAt, validForUserIds, allowedVersions } = targetBuildOverride);
       const _Object = Object;
       const keys = Object.keys(targetBuildOverride.targetBuildOverride);
-      if (0 === obj12.intersection(keys, items1).length) {
-        let obj = { valid: false, reason: null };
-        const intl5 = getSystemLocale.intl;
-        obj = { requestedTargets: null };
-        const mapped = keys.map((arg0) => {
-          let str = table[arg0];
+      if (0 === obj12.intersection(keys, items3).length) {
+        const obj2 = { valid: false, reason: null };
+        const intl5 = util.intl;
+        const obj3 = { requestedTargets: null };
+        const mapped = keys.map((item) => {
+          let str = closure_1_5[item];
           if (str == null) {
             str = "unknown";
           }
           return str;
         });
-        obj[0] = mapped.join(", ");
-        obj[1] = intl5.formatToPlainString(getSystemLocale.t.wySUzv, obj);
-        return obj;
+        obj3.requestedTargets = mapped.join(", ");
+        obj2.reason = intl5.formatToPlainString(util.t.wySUzv, obj3);
+        return obj2;
       } else {
         if (null != releaseChannel) {
           const _window = window;
@@ -47,12 +48,11 @@ export default function validateBuildOverride(targetBuildOverride, items1) {
               formatted = "" + formatted1 + releaseChannel.slice(1);
               const str5 = releaseChannel.charAt(0);
             }
-            obj1 = { valid: false, reason: null };
-            const intl4 = getSystemLocale.intl;
-            const obj2 = { releaseChannel: null };
-            obj2[0] = formatted;
-            obj1[1] = intl4.formatToPlainString(getSystemLocale.t.GOEF0C, obj2);
-            return obj1;
+            const obj4 = { valid: false, reason: null };
+            const intl4 = util.intl;
+            const obj5 = { releaseChannel: formatted };
+            obj4.reason = intl4.formatToPlainString(util.t.GOEF0C, obj5);
+            return obj4;
           }
         }
         if (null != allowedVersions) {
@@ -64,14 +64,11 @@ export default function validateBuildOverride(targetBuildOverride, items1) {
           } else {
             const iter = allowedVersions[Symbol.iterator]();
             while (iter !== undefined) {
-              let tmp6 = callback;
-              let tmp7 = callback(str3.split("."), 2);
+              let tmp7 = _slicedToArray(str3.split("."), 2);
               let first = tmp7[0];
               if ("*" === tmp7[1]) {
-                let tmp9 = first;
                 if (tmp2 === first) {
                   flag = true;
-                  let tmp10 = iter;
                   iter.return();
                   break;
                 }
@@ -82,11 +79,10 @@ export default function validateBuildOverride(targetBuildOverride, items1) {
             str3 = iter.next();
           }
           if (!flag) {
-            obj = { valid: false, reason: null };
-            const intl = getSystemLocale.intl;
-            const obj3 = { releaseChannel: null };
-            obj3[0] = allowedVersions.join(", ");
-            obj[1] = intl.formatToPlainString(getSystemLocale.t.GOEF0C, obj3);
+            const obj = { valid: false, reason: null };
+            const intl = util.intl;
+            const obj6 = { releaseChannel: allowedVersions.join(", ") };
+            obj.reason = intl.formatToPlainString(util.t.GOEF0C, obj6);
             return obj;
           }
         }
@@ -99,27 +95,27 @@ export default function validateBuildOverride(targetBuildOverride, items1) {
         if (null != time) {
           const _Date2 = Date;
           if (time < Date.now()) {
-            const obj4 = { valid: false, reason: null };
-            const intl3 = getSystemLocale.intl;
-            obj4[1] = intl3.string(getSystemLocale.t["8eRE6S"]);
-            let obj5 = obj4;
+            const obj7 = { valid: false, reason: null };
+            const intl3 = util.intl;
+            obj7.reason = intl3.string(util.t["8eRE6S"]);
+            let obj8 = obj7;
           }
-          return obj5;
+          return obj8;
         }
         if (validForUserIds.length > 0) {
-          if (!validForUserIds.includes(id.getId())) {
-            obj5 = { valid: false, reason: null };
-            const intl2 = getSystemLocale.intl;
-            obj5[1] = intl2.string(getSystemLocale.t.qZgV0a);
+          if (!validForUserIds.includes(AuthenticationStore.getId())) {
+            obj8 = { valid: false, reason: null };
+            const intl2 = util.intl;
+            obj8.reason = intl2.string(util.t.qZgV0a);
           }
         }
-        obj5 = { valid: true };
+        obj8 = { valid: true };
       }
-      obj12 = applyDefault;
+      obj12 = _modDef12;
     }
   }
-  const obj6 = { valid: false, reason: null };
-  const intl6 = getSystemLocale.intl;
-  obj6[1] = intl6.string(getSystemLocale.t.d34xi4);
-  return obj6;
+  const obj9 = { valid: false, reason: null };
+  const intl6 = util.intl;
+  obj9.reason = intl6.string(util.t.d34xi4);
+  return obj9;
 };

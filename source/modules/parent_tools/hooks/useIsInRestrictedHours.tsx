@@ -1,19 +1,20 @@
-// Module ID: 17300
-// Function ID: 17301
+// Module ID: 17331
+// Function ID: 17332
 // Name: useIsInRestrictedHours
-// Dependencies: [1371, 7537, 504, 17301, 2]
+// Dependencies: [1371, 7551, 504, 17332, 2]
 // Exports: default
 
-// Module 17300 (useIsInRestrictedHours)
+// Module 17331 (useIsInRestrictedHours)
 import initialize from "initialize" /* 504 */;
-import scheduleUpcomingWarning from "scheduleUpcomingWarning" /* 17301 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
-import closure_3 from "freshTeenActivityWithMap" /* 7537 */;
+import RestrictedHoursManager from "RestrictedHoursManager" /* 17332 */;
+import UserStore from "UserStore" /* 1371 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7551 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useIsInRestrictedHours.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useIsInRestrictedHours.tsx");
 
 export default function useIsInRestrictedHours() {
-  const items = [closure_2, closure_3];
-  return initialize.useStateFromStores(items, scheduleUpcomingWarning.getCurrentRestrictedHoursState);
+  const items = [UserStore, FamilyCenterStore];
+  return initialize.useStateFromStores(items, RestrictedHoursManager.getCurrentRestrictedHoursState);
 };

@@ -1,15 +1,15 @@
-// Module ID: 13807
-// Function ID: 13808
+// Module ID: 13830
+// Function ID: 13831
 // Name: zipWithNext
 // Dependencies: [2]
 // Exports: default
 
-// Module 13807 (zipWithNext)
-import set from "set" /* 2 */;
+// Module 13830 (zipWithNext)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("lib/zipWithNext.tsx");
+const result = size.fileFinishedImporting("lib/zipWithNext.tsx");
 
-export default function zipWithNext(arg0, arg1) {
+export default function zipWithNext(arg0, fn) {
   let length;
   if (arg0.length < 2) {
     return [];
@@ -20,7 +20,7 @@ export default function zipWithNext(arg0, arg1) {
     if (1 < arg0.length) {
       do {
         let tmp2 = arg0[num2];
-        let arr = items.push(arg1(first, tmp2));
+        let arr = items.push(fn(first, tmp2));
         num2 = num2 + 1;
         first = tmp2;
         length = arg0.length;

@@ -1,38 +1,46 @@
 // Module ID: 3689
 // Function ID: 3690
-// Dependencies: [2036, 2035]
+// Dependencies: [3690, 3691, 3692, 3693, 3694]
 
 // Module 3689
-import buildMatchPatternFn from "buildMatchPatternFn" /* 2036 */;
-import buildMatchFn from "buildMatchFn" /* 2035 */;
+import module_3690 from "module_3690" /* 3690 */;
+import module_3691 from "module_3691" /* 3691 */;
+import module_3692 from "module_3692" /* 3692 */;
+import date_mod from "module_3693" /* 3693 */;
+import date_mod from "module_3694" /* 3694 */;
 
-if (!buildMatchPatternFn) {
-  let obj = { default: null };
-  obj[0] = buildMatchPatternFn;
+if (!module_3690) {
+  const obj = { default: module_3690 };
+  let tmp3 = obj;
 } else {
-  obj = buildMatchPatternFn;
+  tmp3 = module_3690;
 }
-if (!buildMatchFn) {
-  obj = { default: null };
-  obj[0] = buildMatchFn;
-  let obj2 = obj;
+if (!module_3691) {
+  const obj2 = { default: module_3691 };
+  let tmp5 = obj2;
 } else {
-  obj2 = buildMatchFn;
+  tmp5 = module_3691;
 }
-obj2 = {
-  matchPattern: /^(\d+)(º)?/i,
-  parsePattern: /\d+/i,
-  valueCallback(joined) {
-    return parseInt(joined, 10);
-  }
-};
-const items = [/^ac/i, /^dc/i];
-const items1 = [/^(antes de cristo|antes de la era com[uú]n)/i, /^(despu[eé]s de cristo|era com[uú]n)/i];
-const items2 = [/1/i, /2/i, /3/i, /4/i];
-const items3 = [/^e/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i];
-const items4 = [/^en/i, /^feb/i, /^mar/i, /^abr/i, /^may/i, /^jun/i, /^jul/i, /^ago/i, /^sep/i, /^oct/i, /^nov/i, /^dic/i];
-const items5 = [/^d/i, /^l/i, /^m/i, /^m/i, /^j/i, /^v/i, /^s/i];
-const items6 = [/^do/i, /^lu/i, /^ma/i, /^mi/i, /^ju/i, /^vi/i, /^sa/i];
+if (!module_3692) {
+  const obj3 = { default: module_3692 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_3692;
+}
+let date = date_mod;
+if (!date) {
+  const obj4 = { default: date };
+  let tmp9 = obj4;
+} else {
+  tmp9 = date;
+}
+let date = date_mod;
+if (!date) {
+  const obj5 = { default: date };
+  let tmp11 = obj5;
+} else {
+  tmp11 = date;
+}
 
-export default { ordinalNumber: obj.default(obj2), era: obj2.default({ matchPatterns: obj3, defaultMatchWidth: "wide", parsePatterns: { any: items, wide: items1 }, defaultParseWidth: "any" }), quarter: obj2.default(obj4), month: obj2.default({ matchPatterns: obj6, defaultMatchWidth: "wide", parsePatterns: { narrow: items3, any: items4 }, defaultParseWidth: "any" }), day: obj2.default({ matchPatterns: obj7, defaultMatchWidth: "wide", parsePatterns: { narrow: items5, any: items6 }, defaultParseWidth: "any" }), dayPeriod: obj2.default({ matchPatterns: obj8, defaultMatchWidth: "any", parsePatterns: { any: obj9 }, defaultParseWidth: "any" }) };
+export default { code: "el", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
 export default exports.default;

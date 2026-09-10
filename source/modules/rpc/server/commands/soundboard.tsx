@@ -1,134 +1,125 @@
-// Module ID: 14510
-// Function ID: 14511
-// Name: RPC_LOCAL_SCOPE
-// Dependencies: [5, 5012, 1371, 4465, 1085, 8339, 7338, 5020, 9562, 7373, 7344, 9559, 7375, 7182, 2]
+// Module ID: 14535
+// Function ID: 14536
+// Name: soundboard
+// Dependencies: [5, 5026, 1371, 4479, 1085, 8367, 7352, 5034, 9589, 7387, 7358, 9586, 7389, 7196, 2]
 
-// Module 14510 (RPC_LOCAL_SCOPE)
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9562 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleSoundCreateOrUpdate" /* 5012 */;
-import closure_5 from "mergeGuildAvatar" /* 1371 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4465 */;
-import sum from "sum" /* 1085 */;
+// Module 14535 (soundboard)
+import SoundboardActionCreators from "SoundboardActionCreators" /* 7352 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9589 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import SoundboardStore from "SoundboardStore" /* 5026 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-({ RPC_SCOPE_CONFIG, RPC_LOCAL_SCOPE } = RPC_SCOPE_CONFIG);
-({ RPCCommands, RPCErrors: closure_6 } = sum);
+require = fn;
+let Constants = fn(4479);
+({ RPC_SCOPE_CONFIG, RPC_LOCAL_SCOPE } = Constants);
+Constants = fn(1085);
+({ RPCCommands, RPCErrors: metroRequire } = Constants);
 let obj = {};
-obj = { scope: null, handler: null };
-obj = {};
-let items = [require("set").OAuth2Scopes.RPC, RPC_LOCAL_SCOPE];
-obj[RPC_SCOPE_CONFIG.ANY] = items;
-obj[0] = obj;
-obj[1] = function handler() {
-  return callback(function*() {
+let obj2 = { scope: null, handler: null };
+let obj3 = {};
+let items = [fn(8367).OAuth2Scopes.RPC, RPC_LOCAL_SCOPE];
+obj3[RPC_SCOPE_CONFIG.ANY] = items;
+obj2.scope = obj3;
+obj2.handler = function handler() {
+  return (async () => {
     closure_1 = tmp5;
-    let sounds2 = tmp2;
-    const obj2 = closure_1_0(table[6]);
-    yield obj2.maybeFetchSoundboardSounds();
-    sounds2 = sounds.getSounds();
-    closure_1 = [];
-    const item = sounds2.forEach((arr) => arr.forEach((arg0) => arr.push(closure_1_0(closure_1_2[7]).soundboardSoundToAPI(arg0))));
-    return closure_1;
+    closure_0 = tmp2;
+    await SoundboardActionCreators.maybeFetchSoundboardSounds();
+    const sounds = closure_129_4.getSounds();
+    closure_128_1 = [];
+    const item = sounds.forEach((arr) => arr.forEach((item) => closure_1_1.push(closure_2_0(closure_2_2[7]).soundboardSoundToAPI(item))));
+    return closure_128_1;
   })();
 };
-obj[RPCCommands.GET_SOUNDBOARD_SOUNDS] = obj;
-let obj1 = { scope: null, validation: null, handler: null };
-let obj2 = {};
-const items1 = [require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC_VOICE_WRITE];
-obj2[RPC_SCOPE_CONFIG.ALL] = items1;
-obj1[0] = obj2;
-obj1[1] = function validation(string) {
-  let obj = createRpcJoiSchemaObjectDefault(string);
-  obj = { guild_id: string.string(), sound_id: string.string() };
-  return obj.required().keys(obj);
+obj[RPCCommands.GET_SOUNDBOARD_SOUNDS] = obj2;
+let obj4 = { scope: null, validation: null, handler: null };
+let obj5 = {};
+const items1 = [fn(8367).OAuth2Scopes.RPC, fn(8367).OAuth2Scopes.RPC_VOICE_WRITE];
+obj5[RPC_SCOPE_CONFIG.ALL] = items1;
+obj4.scope = obj5;
+obj4.validation = function validation(string) {
+  const obj = createRpcJoiSchemaObjectDefault(string);
+  const requiredResult = createRpcJoiSchemaObjectDefault(string).required();
+  return requiredResult.keys({ guild_id: string.string(), sound_id: string.string() });
 };
-obj1[2] = function handler(args) {
+obj4.handler = function handler(args) {
   ({ guild_id: require, sound_id: importDefault } = args.args);
-  return callback(function*() {
+  return (async (arg0, value) => {
     if (c3 === 2) {
       c3 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
         c3 = 2;
-        if (0 === closure_2) {
+        if (0 === dependencyMap) {
           if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            let sound = tmp5;
-            let currentUser = tmp2;
-            currentUser = undefined;
-            sound = undefined;
-            closure_2 = undefined;
-            c3 = undefined;
-            closure_2 = 1;
+            let currentUser2;
+            let sound2;
+            closure_128_2 = undefined;
+            closure_128_3 = undefined;
+            dependencyMap = 1;
             c3 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = closure_1_0(id[6]).maybeFetchSoundboardSounds();
-            return obj1;
+            const obj5 = { value: tmp2(7352).maybeFetchSoundboardSounds(), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
           c3 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
-          currentUser = closure_1_5.getCurrentUser();
-          sound = closure_1_4.getSound(currentUser, sound);
-          closure_2 = closure_1_1(id[9])();
-          let result = null != sound;
+          currentUser2 = currentUser.getCurrentUser();
+          sound2 = sound.getSound(closure_129_0, closure_129_1);
+          closure_128_2 = tmp5(7387)();
+          let result = null != sound2;
           if (result) {
-            result = null != currentUser;
+            result = null != currentUser2;
           }
           if (result) {
-            obj = closure_1_0(id[10]);
-            result = obj.canUseSoundboardSound(currentUser, sound, closure_2);
+            result = tmp2(7358).canUseSoundboardSound(currentUser2, sound2, closure_128_2);
+            const obj = tmp2(7358);
           }
-          c3 = result;
-          if (null == closure_2) {
-            let obj3 = { errorCode: null };
-            obj3[0] = closure_1_6.INVALID_CHANNEL;
-            const tmp52 = new closure_1_1(id[11])(obj3, "Invalid Channel.");
+          closure_128_3 = result;
+          if (null == closure_128_2) {
+            const obj8 = { errorCode: constants.INVALID_CHANNEL };
+            const tmp52 = new tmp5(9586)(obj8, "Invalid Channel.");
             throw tmp52;
-          } else if (c3) {
-            if (tmp75(tmp76[12])(closure_2)) {
-              if (null != closure_1_1) {
-                obj3 = closure_1_0(id[10]);
-                const items = [closure_1_1(id[13]).RPC];
-                obj3.playSound(closure_1_1, id.id, items);
+          } else if (closure_128_3) {
+            if (tmp74(7389)(closure_128_2)) {
+              if (null != sound2) {
+                const items = [tmp5(7196).RPC];
+                tmp2(7358).playSound(sound2, closure_128_2.id, items);
+                const obj4 = tmp2(7358);
               }
               c3 = 3;
               return { value: "HermesInternal", done: null };
             } else {
-              const obj4 = { errorCode: null };
-              obj4[0] = closure_1_6.INVALID_PERMISSIONS;
-              const tmp32 = new closure_1_1(id[11])(obj4, "Invalid Permissions.");
+              const obj9 = { errorCode: constants.INVALID_PERMISSIONS };
+              const tmp32 = new tmp5(9586)(obj9, "Invalid Permissions.");
               throw tmp32;
             }
           } else {
-            const obj5 = { errorCode: null };
-            obj5[0] = closure_1_6.INVALID_SOUND;
-            const tmp22 = new tmp75(tmp76[11])(obj5, "Invalid Sound.");
+            const obj10 = { errorCode: constants.INVALID_SOUND };
+            const tmp22 = new tmp74(9586)(obj10, "Invalid Sound.");
             throw tmp22;
           }
         }
@@ -139,7 +130,8 @@ obj1[2] = function handler(args) {
     }
   })();
 };
-obj[RPCCommands.PLAY_SOUNDBOARD_SOUND] = obj1;
-let result = require("set").fileFinishedImporting("modules/rpc/server/commands/soundboard.tsx");
+obj[RPCCommands.PLAY_SOUNDBOARD_SOUND] = obj4;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/rpc/server/commands/soundboard.tsx");
 
 export default obj;

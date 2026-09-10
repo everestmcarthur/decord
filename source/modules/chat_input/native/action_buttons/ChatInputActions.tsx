@@ -1,85 +1,82 @@
-// Module ID: 12239
-// Function ID: 12240
+// Module ID: 12265
+// Function ID: 12266
 // Name: ChatInputActions
-// Dependencies: [32, 19, 11966, 1074, 21, 4560, 576, 4980, 7872, 4262, 6625, 4427, 1609, 12240, 7845, 4971, 5151, 1114, 10658, 5087, 10643, 12241, 5106, 10117, 12213, 12215, 7847, 1242, 4296, 8671, 12243, 4267, 12244, 12245, 12249, 2]
+// Dependencies: [32, 19, 11992, 1074, 21, 4574, 576, 4994, 7886, 4275, 6639, 4441, 1609, 12266, 7859, 4985, 5165, 1114, 10685, 5101, 10670, 12267, 5120, 10144, 12239, 12241, 7861, 1242, 4310, 8699, 12269, 4280, 12270, 12271, 12275, 2]
 
-// Module 12239 (ChatInputActions)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import TextAreaCta from "TextAreaCta" /* 11966 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12265 (ChatInputActions)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import mergeProps from "mergeProps" /* 4280 */;
+import ImageIcon from "ImageIcon" /* 5101 */;
+import AppsIcon from "AppsIcon" /* 5120 */;
+import ImagePickerUtils from "ImagePickerUtils" /* 5165 */;
+import AttachmentIcon from "AttachmentIcon" /* 10144 */;
+import PollsIcon from "PollsIcon" /* 10670 */;
+import CameraIcon from "CameraIcon" /* 10685 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12239 */;
+import ThreadPlusIcon from "ThreadPlusIcon" /* 12267 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 12269 */;
+import MediaKeyboardButtonIcon from "MediaKeyboardButtonIcon" /* 12270 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c4 = importAllResult;
-({ ChatInputActionType: c5, ChatInputOmniButtonActionType: closure_6 } = TextAreaCta);
-({ jsx: closure_8, Fragment: c9 } = jsxProd);
-let obj = { actions: { flexDirection: "row", alignItems: "center" }, themedChatInput: null, buttonWrapper: null, activeBrand: null };
-obj = { backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BG };
-obj[1] = obj;
-createCacheKey = { maxHeight: require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT + require("MINIMUM_HIT_AREA").SMALL_BUTTON_PADDING };
-obj[2] = createCacheKey;
-obj[3] = { tintColor: ThemesDefault.colors.CHAT_INPUT_ACTION_ICON_ACTIVE_TINT };
-let closure_10 = createCacheKey.createStyles(obj);
-let closure_11 = { code: "function ChatInputActionsTsx1(){return{opacity:1};}" };
-const forwardRefResult = importAllResult.forwardRef((canStartThreads, ref) => {
+require = fn;
+const ChatInputConstants = fn(11992);
+({ ChatInputActionType: hasOwnProperty, ChatInputOmniButtonActionType: metroRequire } = ChatInputConstants);
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsxProd = fn(21);
+({ jsx: closure_8, Fragment: closure_9 } = jsxProd);
+const createStyles = fn(4574);
+let obj = { actions: { flexDirection: "row", alignItems: "center" }, themedChatInput: { backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG }, buttonWrapper: null, activeBrand: null };
+let obj3 = { backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG };
+obj.buttonWrapper = { maxHeight: fn(4994).SMALL_BUTTON_HEIGHT + fn(4994).SMALL_BUTTON_PADDING };
+let obj4 = { maxHeight: fn(4994).SMALL_BUTTON_HEIGHT + fn(4994).SMALL_BUTTON_PADDING };
+obj.activeBrand = { tintColor: nativeDefault.colors.CHAT_INPUT_ACTION_ICON_ACTIVE_TINT };
+let closure_10 = createStyles.createStyles(obj);
+let __initData = { code: "function ChatInputActionsTsx1(){return{opacity:1};}" };
+const forwardRefResult = noop.forwardRef((canStartThreads, ref) => {
   canStartThreads = canStartThreads.canStartThreads;
   const channel = canStartThreads.channel;
   const isAppLauncherEnabled = canStartThreads.isAppLauncherEnabled;
   ({ keyboardType, onPressAction } = canStartThreads);
-  ({ shouldPhotosButtonBeDisabled: closure_4, canUpload } = canStartThreads);
+  ({ shouldPhotosButtonBeDisabled: noop, canUpload } = canStartThreads);
   const canPostPolls = canStartThreads.canPostPolls;
   const onPollsPress = canStartThreads.onPollsPress;
   const onAttachPress = canStartThreads.onAttachPress;
   ({ photosButtonExternalRef: closure_9, onContextMenuOpen } = canStartThreads);
-  closure_11 = undefined;
-  closure_12 = undefined;
-  closure_13 = undefined;
-  let keyboardWillOpen;
-  closure_15 = undefined;
-  let canUseScheduledMessages;
   c17 = undefined;
   c18 = undefined;
-  closure_19 = undefined;
-  closure_20 = undefined;
-  closure_21 = undefined;
-  closure_22 = undefined;
-  closure_23 = undefined;
-  closure_24 = undefined;
   let tmp = onContextMenuOpen();
-  closure_11 = tmp;
+  __initData = tmp;
+  closure_12 = canStartThreads(isAppLauncherEnabled[8]).useClientThemesOverride(tmp.themedChatInput);
   let obj = canStartThreads(isAppLauncherEnabled[8]);
-  closure_12 = obj.useClientThemesOverride(tmp.themedChatInput);
-  obj1 = canStartThreads(isAppLauncherEnabled[9]);
-  const token = obj1.useToken(channel(isAppLauncherEnabled[6]).modules.mobile.CHAT_INPUT_ACTION_BUTTON_GAP);
+  const token = canStartThreads(isAppLauncherEnabled[9]).useToken(channel(isAppLauncherEnabled[6]).modules.mobile.CHAT_INPUT_ACTION_BUTTON_GAP);
   closure_13 = channel(isAppLauncherEnabled[10])({ includeCustomKeyboard: true });
-  keyboardWillOpen = canStartThreads(isAppLauncherEnabled[11]).useKeyboardContextForType(canStartThreads(isAppLauncherEnabled[12]).KeyboardTypes.SYSTEM).keyboardWillOpen;
+  let obj2 = canStartThreads(isAppLauncherEnabled[9]);
+  const tmp4 = channel;
+  const keyboardWillOpen = canStartThreads(isAppLauncherEnabled[11]).useKeyboardContextForType(canStartThreads(isAppLauncherEnabled[12]).KeyboardTypes.SYSTEM).keyboardWillOpen;
   const tmp6 = channel(isAppLauncherEnabled[13])(channel);
   closure_15 = tmp6;
   let obj3 = canStartThreads(isAppLauncherEnabled[11]);
-  const tmp4 = channel;
-  canUseScheduledMessages = canStartThreads(isAppLauncherEnabled[14]).useCanUseScheduledMessages();
+  const canUseScheduledMessages = canStartThreads(isAppLauncherEnabled[14]).useCanUseScheduledMessages();
   let obj4 = canStartThreads(isAppLauncherEnabled[14]);
-  [c17, c18] = onPressAction(importAllResult.useState(false), 2);
-  const tmp9 = onPressAction(importAllResult.useState(true), 2);
+  [c17, c18] = onPressAction(noop.useState(false), 2);
+  const tmp9 = onPressAction(noop.useState(true), 2);
   closure_19 = tmp9[1];
-  closure_20 = importAllResult.useRef(null);
-  const imperativeHandle = importAllResult.useImperativeHandle(ref, importAllResult.useMemo(() => {
+  closure_20 = noop.useRef(null);
+  const imperativeHandle = noop.useImperativeHandle(ref, noop.useMemo(() => {
     closure_0 = {
       onDismissActions(arg0) {
-        callback2(arg0);
-        callback3(false);
+        closure_1_18(arg0);
+        closure_1_19(false);
       },
       onShowActions(arg0) {
-        callback2(arg0);
-        callback3(true);
+        closure_1_18(arg0);
+        closure_1_19(true);
       },
       focusPhotosButton() {
-        let obj = callback(closure_1_2[15]);
-        obj = { ref: closure_20, delay: 0 };
-        const result = obj.setAccessibilityFocus(obj);
+        const result = canStartThreads(isAppLauncherEnabled[15]).setAccessibilityFocus({ ref, delay: 0 });
       }
     };
     return {
@@ -89,106 +86,102 @@ const forwardRefResult = importAllResult.forwardRef((canStartThreads, ref) => {
     };
   }, []).showActionsImperativeApi);
   let items = [canPostPolls, canStartThreads, isAppLauncherEnabled, canUpload, tmp6, canUseScheduledMessages, channel.id, onPressAction, onPollsPress, onAttachPress];
-  closure_21 = importAllResult.useMemo(() => {
+  noop.useMemo(() => {
     let result = canUpload;
     if (canUpload) {
       result = !closure_15;
     }
     if (result) {
-      let obj = canStartThreads(isAppLauncherEnabled[16]);
-      result = obj.isImageCaptureIntentSupported();
+      result = ImagePickerUtils.isImageCaptureIntentSupported();
     }
     const items = [];
     if (result) {
-      obj = { label: null, IconComponent: null, action: null };
-      const intl = canStartThreads(isAppLauncherEnabled[17]).intl;
-      obj[0] = intl.string(canStartThreads(isAppLauncherEnabled[17]).t.uje3P9);
-      obj[1] = canStartThreads(isAppLauncherEnabled[18]).CameraIcon;
-      obj[2] = function action() {
-        return callback({}, closure_1_5.CAMERA);
-      };
-      items.push(obj);
-    }
-    if (canUpload) {
-      obj = { label: null, IconComponent: null, action: null };
-      const intl2 = canStartThreads(isAppLauncherEnabled[17]).intl;
-      obj[0] = intl2.string(canStartThreads(isAppLauncherEnabled[17]).t.Zmm6dN);
-      obj[1] = canStartThreads(isAppLauncherEnabled[19]).ImageIcon;
-      obj[2] = function action() {
-        return callback({}, closure_1_5.ALL_PHOTOS);
-      };
-      items.push(obj);
-    }
-    if (canPostPolls) {
-      obj1 = { label: null, IconComponent: null, action: null };
-      const intl3 = canStartThreads(isAppLauncherEnabled[17]).intl;
-      obj1[0] = intl3.string(canStartThreads(isAppLauncherEnabled[17]).t.RgIi2B);
-      obj1[1] = canStartThreads(isAppLauncherEnabled[20]).PollsIcon;
-      obj1[2] = onPollsPress;
-      items.push(obj1);
-    }
-    if (canStartThreads) {
       const obj2 = { label: null, IconComponent: null, action: null };
-      const intl4 = canStartThreads(isAppLauncherEnabled[17]).intl;
-      obj2[0] = intl4.string(canStartThreads(isAppLauncherEnabled[17]).t["7Xm5QI"]);
-      obj2[1] = canStartThreads(isAppLauncherEnabled[21]).ThreadPlusIcon;
-      obj2[2] = function action() {
-        return callback({}, closure_1_5.THREAD);
+      const intl = util.intl;
+      obj2.label = intl.string(util.t.uje3P9);
+      obj2.IconComponent = CameraIcon.CameraIcon;
+      obj2.action = function action() {
+        return onPressAction({}, canUpload.CAMERA);
       };
       items.push(obj2);
     }
-    if (isAppLauncherEnabled) {
+    if (canUpload) {
       const obj3 = { label: null, IconComponent: null, action: null };
-      const intl5 = canStartThreads(isAppLauncherEnabled[17]).intl;
-      obj3[0] = intl5.string(canStartThreads(isAppLauncherEnabled[17]).t.PHjkRE);
-      obj3[1] = canStartThreads(isAppLauncherEnabled[22]).AppsIcon;
-      obj3[2] = function action() {
-        return callback({}, closure_1_5.APPS);
+      const intl2 = util.intl;
+      obj3.label = intl2.string(util.t.Zmm6dN);
+      obj3.IconComponent = ImageIcon.ImageIcon;
+      obj3.action = function action() {
+        return onPressAction({}, canUpload.ALL_PHOTOS);
       };
       items.push(obj3);
     }
-    if (canUpload) {
+    if (canPostPolls) {
       const obj4 = { label: null, IconComponent: null, action: null };
-      const intl6 = canStartThreads(isAppLauncherEnabled[17]).intl;
-      obj4[0] = intl6.string(canStartThreads(isAppLauncherEnabled[17]).t["8Hvr3+"]);
-      obj4[1] = canStartThreads(isAppLauncherEnabled[23]).AttachmentIcon;
-      obj4[2] = onAttachPress;
+      const intl3 = util.intl;
+      obj4.label = intl3.string(util.t.RgIi2B);
+      obj4.IconComponent = PollsIcon.PollsIcon;
+      obj4.action = onPollsPress;
       items.push(obj4);
     }
-    if (canUseScheduledMessages) {
+    if (canStartThreads) {
       const obj5 = { label: null, IconComponent: null, action: null };
-      const intl7 = canStartThreads(isAppLauncherEnabled[17]).intl;
-      obj5[0] = intl7.string(canStartThreads(isAppLauncherEnabled[17]).t["3+ii4F"]);
-      obj5[1] = canStartThreads(isAppLauncherEnabled[24]).CalendarPlusIcon;
-      obj5[2] = function action() {
-        return closure_1_0(closure_1_2[25]).openScheduleMessageActionSheet(id.id, closure_1_0(closure_1_2[26]).ScheduledMessageEntryPoint.ATTACH_MENU);
+      const intl4 = util.intl;
+      obj5.label = intl4.string(util.t["7Xm5QI"]);
+      obj5.IconComponent = ThreadPlusIcon.ThreadPlusIcon;
+      obj5.action = function action() {
+        return onPressAction({}, canUpload.THREAD);
       };
       items.push(obj5);
+    }
+    if (isAppLauncherEnabled) {
+      const obj6 = { label: null, IconComponent: null, action: null };
+      const intl5 = util.intl;
+      obj6.label = intl5.string(util.t.PHjkRE);
+      obj6.IconComponent = AppsIcon.AppsIcon;
+      obj6.action = function action() {
+        return onPressAction({}, canUpload.APPS);
+      };
+      items.push(obj6);
+    }
+    if (canUpload) {
+      const obj7 = { label: null, IconComponent: null, action: null };
+      const intl6 = util.intl;
+      obj7.label = intl6.string(util.t["8Hvr3+"]);
+      obj7.IconComponent = AttachmentIcon.AttachmentIcon;
+      obj7.action = onAttachPress;
+      items.push(obj7);
+    }
+    if (canUseScheduledMessages) {
+      const obj8 = { label: null, IconComponent: null, action: null };
+      const intl7 = util.intl;
+      obj8.label = intl7.string(util.t["3+ii4F"]);
+      obj8.IconComponent = CalendarPlusIcon.CalendarPlusIcon;
+      obj8.action = function action() {
+        return canStartThreads(isAppLauncherEnabled[25]).openScheduleMessageActionSheet(id.id, canStartThreads(isAppLauncherEnabled[26]).ScheduledMessageEntryPoint.ATTACH_MENU);
+      };
+      items.push(obj8);
     }
     return items;
   }, items);
   let items1 = [onContextMenuOpen];
-  closure_22 = importAllResult.useCallback(() => {
-    let obj = channel(isAppLauncherEnabled[27]);
-    obj = { type: canPostPolls.OPENED };
-    obj.track(onPollsPress.CHAT_INPUT_OMNI_BUTTON_ACTION, obj);
+  const onOpen = noop.useCallback(() => {
+    AnalyticsUtilsDefault.track(AnalyticEvents.CHAT_INPUT_OMNI_BUTTON_ACTION, { type: constants.OPENED });
     if (onContextMenuOpen != null) {
       onContextMenuOpen();
     }
   }, items1);
-  closure_23 = importAllResult.useCallback((arg0) => {
+  const onClose = noop.useCallback((arg0) => {
     if (arg0) {
-      let obj = channel(isAppLauncherEnabled[27]);
-      obj = { type: null };
-      obj[0] = canPostPolls.CLOSED;
-      obj.track(onPollsPress.CHAT_INPUT_OMNI_BUTTON_ACTION, obj);
+      const obj2 = { type: canPostPolls.CLOSED };
+      channel(isAppLauncherEnabled[27]).track(onPollsPress.CHAT_INPUT_OMNI_BUTTON_ACTION, obj2);
+      const obj = channel(isAppLauncherEnabled[27]);
     }
   }, []);
   const items2 = [];
-  obj = { type: canUpload.PHOTOS, active: null };
-  const tmp8 = onPressAction(importAllResult.useState(false), 2);
-  obj[1] = keyboardType === canStartThreads(isAppLauncherEnabled[12]).KeyboardTypes.MEDIA || keyboardType === canStartThreads(isAppLauncherEnabled[12]).KeyboardTypes.APP_LAUNCHER;
-  items2.push(obj);
+  let obj5 = { type: canUpload.PHOTOS, active: null };
+  const tmp8 = onPressAction(noop.useState(false), 2);
+  obj5.active = keyboardType === canStartThreads(isAppLauncherEnabled[12]).KeyboardTypes.MEDIA || keyboardType === canStartThreads(isAppLauncherEnabled[12]).KeyboardTypes.APP_LAUNCHER;
+  items2.push(obj5);
   closure_24 = !tmp9[0];
   const tmp11 = keyboardType === canStartThreads(isAppLauncherEnabled[12]).KeyboardTypes.MEDIA || keyboardType === canStartThreads(isAppLauncherEnabled[12]).KeyboardTypes.APP_LAUNCHER;
   class X {
@@ -198,106 +191,92 @@ const forwardRefResult = importAllResult.forwardRef((canStartThreads, ref) => {
   }
   X.__closure = {};
   X.__workletHash = 13622805272332;
-  X.__initData = closure_11;
-  obj = { children: null };
+  X.__initData = __initData;
+  let obj6 = { children: null };
   const animatedStyle = canStartThreads(isAppLauncherEnabled[28]).useAnimatedStyle(X);
-  obj1 = {
-    style: items3,
-    children: items2.map((arg0, arg1) => {
-      ({ type, active } = arg0);
+  let obj7 = {
+    style: null,
+    children: items2.map((item, index) => {
+      ({ type, active } = item);
       if (canUpload.PHOTOS === type) {
         if (length.length > 0) {
-          let obj = { items: null, triggerOnLongPress: true, align: "above", onOpen: null, onClose: null, children: null };
-          obj[0] = tmp31;
-          obj[3] = closure_22;
-          obj[4] = closure_23;
-          obj[5] = function children(arg0) {
-            ({ ref, accessibilityActions, onAccessibilityAction } = arg0);
-            let obj = { ref: null, accessibilityLabel: null, accessibilityHint: null, accessibilityState: null, accessibilityActions: null, onAccessibilityAction: null, active: null, activeIconStyle: null, disabled: null, IconComponent: null, onPress: null };
-            const tmp = channel(isAppLauncherEnabled[30]);
-            const items = [ref, closure_1_20, closure_1_9];
-            const items1 = [...items.filter(Boolean)];
-            obj[0] = canStartThreads(isAppLauncherEnabled[31]).mergeRefs.apply(items1);
-            const intl = canStartThreads(isAppLauncherEnabled[17]).intl;
-            obj[1] = intl.string(canStartThreads(isAppLauncherEnabled[17]).t.aDZSuz);
-            const intl2 = canStartThreads(isAppLauncherEnabled[17]).intl;
-            obj[2] = intl2.string(canStartThreads(isAppLauncherEnabled[17]).t.o7j1jA);
-            obj = { expanded: active };
-            obj[3] = obj;
-            obj[4] = accessibilityActions;
-            obj[5] = onAccessibilityAction;
-            obj[6] = active;
-            obj[7] = closure_1_11.activeBrand;
-            obj[8] = closure_1_4;
-            obj[9] = canStartThreads(isAppLauncherEnabled[32]).MediaKeyboardButtonIcon;
-            obj[10] = function onPress(arg0) {
-              return callback(arg0, closure_1_5.PHOTOS);
-            };
-            return onAttachPress(tmp, obj);
+          const obj2 = {
+            items: tmp31,
+            triggerOnLongPress: true,
+            align: "above",
+            onOpen,
+            onClose,
+            children(arg0) {
+                  ({ ref, accessibilityActions, onAccessibilityAction } = arg0);
+                  const obj = { ref: null, accessibilityLabel: null, accessibilityHint: null, accessibilityState: null, accessibilityActions: null, onAccessibilityAction: null, active: null, activeIconStyle: null, disabled: null, IconComponent: null, onPress: null };
+                  const tmp = ChatInputActionButtonDefault;
+                  const items = [ref, closure_20, closure_2_9];
+                  const items1 = [...items.filter(Boolean)];
+                  obj.ref = mergeProps.mergeRefs.apply(items1);
+                  const intl = util.intl;
+                  obj.accessibilityLabel = intl.string(util.t.aDZSuz);
+                  const intl2 = util.intl;
+                  obj.accessibilityHint = intl2.string(util.t.o7j1jA);
+                  obj.accessibilityState = { expanded: active };
+                  obj.accessibilityActions = accessibilityActions;
+                  obj.onAccessibilityAction = onAccessibilityAction;
+                  obj.active = active;
+                  obj.activeIconStyle = activeBrand.activeBrand;
+                  obj.disabled = disabled;
+                  obj.IconComponent = MediaKeyboardButtonIcon.MediaKeyboardButtonIcon;
+                  obj.onPress = function onPress(arg0) {
+                    return closure_1_3(arg0, constants.PHOTOS);
+                  };
+                  return React6(tmp, obj);
+                }
           };
-          let tmp44Result = onAttachPress(canStartThreads(isAppLauncherEnabled[29]).ContextMenu, obj, arg1);
+          let tmp44Result = onAttachPress(canStartThreads(isAppLauncherEnabled[29]).ContextMenu, obj2, index);
         } else {
           if (null != closure_9) {
-            let obj4 = canStartThreads(tmp46[31]);
-            let mergeRefsResult = obj4.mergeRefs(closure_20, tmp48);
+            let mergeRefsResult = canStartThreads(tmp46[31]).mergeRefs(closure_20, tmp48);
+            const obj5 = canStartThreads(tmp46[31]);
           } else {
             mergeRefsResult = closure_20;
           }
-          obj = { ref: null, accessibilityLabel: null, accessibilityHint: null, accessibilityState: null, active: null, activeIconStyle: null, disabled: null, IconComponent: null, onPress: null };
-          obj[0] = mergeRefsResult;
+          const obj3 = { ref: mergeRefsResult, accessibilityLabel: null, accessibilityHint: null, accessibilityState: null, active: null, activeIconStyle: null, disabled: null, IconComponent: null, onPress: null };
           let intl2 = canStartThreads(tmp46[17]).intl;
-          obj[1] = intl2.string(canStartThreads(isAppLauncherEnabled[17]).t.aDZSuz);
+          obj3.accessibilityLabel = intl2.string(canStartThreads(isAppLauncherEnabled[17]).t.aDZSuz);
           const intl3 = canStartThreads(tmp46[17]).intl;
-          obj[2] = intl3.string(canStartThreads(isAppLauncherEnabled[17]).t.o7j1jA);
-          obj1 = { expanded: null };
-          obj1[0] = active;
-          obj[3] = obj1;
-          obj[4] = active;
-          obj[5] = closure_11.activeBrand;
-          obj[6] = closure_4;
-          obj[7] = canStartThreads(isAppLauncherEnabled[32]).MediaKeyboardButtonIcon;
-          obj[8] = function onPress(arg0) {
-            return callback(arg0, closure_1_5.PHOTOS);
+          obj3.accessibilityHint = intl3.string(canStartThreads(isAppLauncherEnabled[17]).t.o7j1jA);
+          const obj4 = { expanded: active };
+          obj3.accessibilityState = obj4;
+          obj3.active = active;
+          obj3.activeIconStyle = activeBrand.activeBrand;
+          obj3.disabled = disabled;
+          obj3.IconComponent = canStartThreads(isAppLauncherEnabled[32]).MediaKeyboardButtonIcon;
+          obj3.onPress = function onPress(arg0) {
+            return onPressAction(arg0, canUpload.PHOTOS);
           };
-          tmp44Result = onAttachPress(channel(isAppLauncherEnabled[30]), obj, arg1);
-          const tmp44 = onAttachPress;
+          tmp44Result = onAttachPress(channel(isAppLauncherEnabled[30]), obj3, index);
           const tmp47 = channel(isAppLauncherEnabled[30]);
         }
         return tmp44Result;
       } else if (tmp.APPS === type) {
-        const obj2 = { accessible: null, active: null, channel: null, onPress: null, styleButton: null, styleActiveIcon: null };
-        obj2[0] = !closure_24;
-        obj2[1] = active;
-        obj2[2] = channel;
-        obj2[3] = onPressAction;
-        obj2[4] = closure_12;
-        obj2[5] = closure_11.activeBrand;
-        return onAttachPress(channel(isAppLauncherEnabled[33]), obj2, arg1);
+        const obj6 = { accessible: !closure_24, active, channel, onPress: onPressAction, styleButton, styleActiveIcon: activeBrand.activeBrand };
+        return onAttachPress(channel(isAppLauncherEnabled[33]), obj6, index);
       } else if (tmp.ALL_PHOTOS === type) {
-        const obj3 = { accessibilityLabel: null, accessible: null, accessibilityState: null, active: null, activeIconStyle: null, disabled: null, IconComponent: null, onPress: null, style: null };
+        const obj7 = { accessibilityLabel: null, accessible: null, accessibilityState: null, active: null, activeIconStyle: null, disabled: null, IconComponent: null, onPress: null, style: null };
         let intl = canStartThreads(isAppLauncherEnabled[17]).intl;
-        obj3[0] = intl.string(canStartThreads(isAppLauncherEnabled[17]).t.ZT24In);
-        obj3[1] = !closure_24;
-        obj4 = { expanded: null };
-        obj4[0] = active;
-        obj3[2] = obj4;
-        obj3[3] = active;
-        obj3[4] = closure_11.activeBrand;
-        obj3[5] = !canUpload;
-        obj3[6] = canStartThreads(isAppLauncherEnabled[19]).ImageIcon;
-        obj3[7] = function onPress(arg0) {
-          return callback(arg0, closure_1_5.ALL_PHOTOS);
+        obj7.accessibilityLabel = intl.string(canStartThreads(isAppLauncherEnabled[17]).t.ZT24In);
+        obj7.accessible = !closure_24;
+        const obj8 = { expanded: active };
+        obj7.accessibilityState = obj8;
+        obj7.active = active;
+        obj7.activeIconStyle = activeBrand.activeBrand;
+        obj7.disabled = !canUpload;
+        obj7.IconComponent = canStartThreads(isAppLauncherEnabled[19]).ImageIcon;
+        obj7.onPress = function onPress(arg0) {
+          return onPressAction(arg0, canUpload.ALL_PHOTOS);
         };
-        obj3[8] = closure_12;
-        return onAttachPress(channel(isAppLauncherEnabled[30]), obj3, arg1);
+        obj7.style = styleButton;
+        return onAttachPress(channel(isAppLauncherEnabled[30]), obj7, index);
       } else {
-        obj = { accessible: null, canStartThreads: null, channel: null, onPress: null, styleButtonWrapper: null, styleButton: null, shouldShowThread: null };
-        obj[0] = !closure_24;
-        obj[1] = active;
-        obj[2] = channel;
-        obj[3] = onPressAction;
-        obj[4] = closure_11.buttonWrapper;
-        obj[5] = closure_12;
+        let obj = { accessible: !closure_24, canStartThreads: active, channel, onPress: onPressAction, styleButtonWrapper: activeBrand.buttonWrapper, styleButton, shouldShowThread: null };
         let tmp12 = true === active;
         if (tmp12) {
           let tmp13 = closure_13;
@@ -309,18 +288,19 @@ const forwardRefResult = importAllResult.forwardRef((canStartThreads, ref) => {
           }
           tmp12 = tmp13;
         }
-        obj[6] = tmp12;
+        obj.shouldShowThread = tmp12;
         return onAttachPress(channel(isAppLauncherEnabled[34]), obj, "gift-or-thread");
       }
     })
   };
-  items3 = [tmp.actions, animatedStyle, { gap: token }];
-  obj[0] = onAttachPress(tmp4(isAppLauncherEnabled[28]).View, obj1);
-  return onAttachPress(closure_9, obj);
+  const items3 = [tmp.actions, animatedStyle, { gap: token }];
+  obj7.style = items3;
+  obj6.children = onAttachPress(tmp4(isAppLauncherEnabled[28]).View, obj7);
+  return onAttachPress(closure_9, obj6);
 });
 forwardRefResult.displayName = "ChatInputActions";
-let obj2 = { tintColor: ThemesDefault.colors.CHAT_INPUT_ACTION_ICON_ACTIVE_TINT };
-const memoResult = importAllResult.memo(forwardRefResult);
-let result = require("set").fileFinishedImporting("modules/chat_input/native/action_buttons/ChatInputActions.tsx");
+let obj5 = { tintColor: nativeDefault.colors.CHAT_INPUT_ACTION_ICON_ACTIVE_TINT };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/chat_input/native/action_buttons/ChatInputActions.tsx");
 
-export default memoResult;
+export default noop.memo(forwardRefResult);

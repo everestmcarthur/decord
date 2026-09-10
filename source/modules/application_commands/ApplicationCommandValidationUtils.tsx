@@ -1,65 +1,62 @@
-// Module ID: 12159
-// Function ID: 12160
-// Name: validateOptionContent
-// Dependencies: [4999, 7523, 9417, 1114, 12160, 2]
+// Module ID: 12185
+// Function ID: 12186
+// Name: ApplicationCommandValidationUtils
+// Dependencies: [5013, 7537, 9444, 1114, 12186, 2]
 // Exports: getValidationResults
 
-// Module 12159 (validateOptionContent)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 4999 */;
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7523 */;
-import getString from "getString" /* 9417 */;
-import validateNumericOptionRangeDefault from "validateNumericOptionRange" /* 12160 */;
+// Module 12185 (ApplicationCommandValidationUtils)
+import util from "util" /* 1114 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5013 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7537 */;
+import ApplicationCommandOptionUtils from "ApplicationCommandOptionUtils" /* 9444 */;
+import ApplicationCommandValidatorsDefault from "ApplicationCommandValidators" /* 12186 */;
+import size from "module_2" /* 2 */;
 
 function validateOptionContent(allowEmptyValues) {
   ({ option, content, guildId, channelId, commandOrigin } = allowEmptyValues);
   if (commandOrigin === undefined) {
-    commandOrigin = ApplicationCommandSectionType.CommandOrigin.CHAT;
+    commandOrigin = ApplicationCommandTypes.CommandOrigin.CHAT;
   }
   let str = "";
   if (null != content) {
-    let obj = getString;
-    obj = { content: null };
-    obj[0] = content;
-    str = obj.getString(obj, "content").trim();
-    const str3 = obj.getString(obj, "content");
+    const obj2 = { content };
+    str = ApplicationCommandOptionUtils.getString(obj2, "content").trim();
+    const str3 = ApplicationCommandOptionUtils.getString(obj2, "content");
   }
   const required = option.required;
   if (null == content) {
     if (required) {
-      obj = { success: false, error: null };
-      const intl2 = getSystemLocale.intl;
-      obj[1] = intl2.string(getSystemLocale.t.JZJQL2);
-      obj1 = obj;
+      const obj3 = { success: false, error: null };
+      const intl2 = util.intl;
+      obj3.error = intl2.string(util.t.JZJQL2);
+      let obj4 = obj3;
     } else {
-      obj1 = { success: true };
+      obj4 = { success: true };
     }
-    return obj1;
+    return obj4;
   } else if ("" === str) {
     if (allowEmptyValues.allowEmptyValues) {
-      let obj2 = { success: true };
+      let obj5 = { success: true };
     } else {
-      const obj3 = { success: false, error: null };
+      const obj6 = { success: false, error: null };
       if (required) {
-        const intl = getSystemLocale.intl;
-        obj3[1] = intl.string(getSystemLocale.t.JZJQL2);
-        obj2 = obj3;
+        const intl = util.intl;
+        obj6.error = intl.string(util.t.JZJQL2);
+        obj5 = obj6;
       } else {
-        obj3[1] = getValidationErrorText(option);
-        obj2 = obj3;
+        obj6.error = getValidationErrorText(option);
+        obj5 = obj6;
       }
     }
-    return obj2;
+    return obj5;
   } else {
     if (content.length > 1) {
-      const obj4 = { type: "text", text: null };
-      obj4[1] = str;
-      let first = obj4;
+      const obj7 = { type: "text", text: str };
+      let first = obj7;
     } else {
       first = content[0];
     }
-    const tmp8 = validateNumericOptionRangeDefault;
+    const tmp8 = ApplicationCommandValidatorsDefault;
     const tmp15 = tmp8[option.type](first, option, channelId, guildId, commandOrigin);
     if (!tmp16) {
       tmp15.error = getValidationErrorText(option);
@@ -67,24 +64,18 @@ function validateOptionContent(allowEmptyValues) {
     return tmp15;
   }
 }
-const getValidationErrorText = TRUE_OPTION_NAME.getValidationErrorText;
-const result = set.fileFinishedImporting("modules/application_commands/ApplicationCommandValidationUtils.tsx");
+const getValidationErrorText = ApplicationCommandConstants.getValidationErrorText;
+const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandValidationUtils.tsx");
 
-export const getValidationResults = function getValidationResults(activeCommand, optionValues, guild_id, id, arg4) {
-  let obj = {};
+export const getValidationResults = function getValidationResults(activeCommand, optionValues, guild_id, id, allowEmptyValues) {
+  const obj = {};
   const options = activeCommand.options;
   if (null == options) {
     return obj;
   } else {
     for (const item10012 of options) {
-      let tmp3 = validateOptionContent;
-      obj = { option: null, content: null, guildId: null, channelId: null, allowEmptyValues: null };
-      obj[0] = item10012;
-      obj[1] = arg1[item10012.name];
-      obj[2] = arg2;
-      obj[3] = arg3;
-      obj[4] = arg4;
-      obj[item10012.name] = validateOptionContent(obj);
+      let obj2 = { option: item10012, content: arg1[item10012.name], guildId: arg2, channelId: arg3, allowEmptyValues: arg4 };
+      obj[item10012.name] = validateOptionContent(obj2);
       continue;
     }
     return obj;

@@ -1,129 +1,129 @@
-// Module ID: 10755
-// Function ID: 10756
-// Name: PremiumGiftPlanSelectPromotionDetails
-// Dependencies: [19, 17, 10670, 1373, 1085, 21, 576, 4560, 5524, 504, 10747, 9375, 10756, 10757, 8838, 9389, 9387, 4556, 1114, 9396, 4975, 10758, 4271, 4987, 10759, 1925, 2]
+// Module ID: 10782
+// Function ID: 10783
+// Name: PremiumGiftFeaturesCard
+// Dependencies: [19, 17, 10697, 1373, 1085, 21, 576, 4574, 5538, 504, 10774, 9402, 10783, 10784, 8865, 9416, 9414, 4570, 1114, 9423, 4989, 10785, 4284, 5001, 10786, 1925, 2]
 
-// Module 10755 (PremiumGiftPlanSelectPromotionDetails)
+// Module 10782 (PremiumGiftFeaturesCard)
 import initialize from "initialize" /* 504 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import isNullOrEmpty from "isNullOrEmpty" /* 1925 */;
-import ManaContext from "ManaContext" /* 4271 */;
-import Text from "Text" /* 4556 */;
-import Button from "Button" /* 4975 */;
-import LinearGradientDefault from "LinearGradient" /* 4987 */;
-import createTextStyleDefault from "createTextStyle" /* 5524 */;
-import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9375 */;
-import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 9387 */;
-import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9389 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 9396 */;
-import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10756 */;
-import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10757 */;
-import useThemeAndReducedMotionAwareAssetUrl from "useThemeAndReducedMotionAwareAssetUrl" /* 10758 */;
-import PremiumGiftPromotionDetailsBaseDefault from "PremiumGiftPromotionDetailsBase" /* 10759 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "createEmptyPromotionsByType" /* 10670 */;
-import GuildFeatures from "GuildFeatures" /* 1373 */;
-import { Fonts } from "sum" /* 1085 */;
-import jsxProd from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import StringUtils from "StringUtils" /* 1925 */;
+import native from "native" /* 4284 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import LinearGradientDefault from "LinearGradient" /* 5001 */;
+import TextStylesDefault from "TextStyles" /* 5538 */;
+import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9402 */;
+import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 9414 */;
+import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9416 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 9423 */;
+import MarketingComponentType from "MarketingComponentType" /* 10774 */;
+import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10783 */;
+import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10784 */;
+import MarketingComponentHooks from "MarketingComponentHooks" /* 10785 */;
+import PremiumGiftPromotionDetailsDefault from "PremiumGiftPromotionDetails" /* 10786 */;
+import noop from "module_19" /* 19 */;
+import PromotionsStore from "PromotionsStore" /* 10697 */;
 
-require = arg1;
+require = fn;
 function PremiumGiftPlanSelectPromotionDetails(config) {
   config = config.config;
   ({ numClaimableRewards, isSelected, onPress } = config);
-  obj = useThemeAndReducedMotionAwareAssetUrl;
-  const themeAndReducedMotionAwareAssetUrl = obj.useThemeAndReducedMotionAwareAssetUrl(config.avatarAsset, true);
-  obj = { style: callback2(config.isLargeSize).promotionDetailsContainer, colors: [4294967102, 4294967053], children: null };
-  const tmp = callback2(config.isLargeSize);
-  const tmp6 = closure_9;
-  obj = { imageUrl: themeAndReducedMotionAwareAssetUrl, title: null, subtitle: null, subtitleColor: "text-default", shouldAnimate: null };
+  const tmp = closure_14(config.isLargeSize);
+  const themeAndReducedMotionAwareAssetUrl = MarketingComponentHooks.useThemeAndReducedMotionAwareAssetUrl(config.avatarAsset, true);
+  const obj2 = { style: tmp.promotionDetailsContainer, colors: [4294967102, 4294967053], children: null };
+  const tmp6 = React7;
+  const obj3 = { imageUrl: themeAndReducedMotionAwareAssetUrl, title: null, subtitle: null, subtitleColor: "text-default", shouldAnimate: null };
   const tmp7 = LinearGradientDefault;
-  let obj3 = isNullOrEmpty;
-  if (obj3.isNullOrEmpty(config.header)) {
+  const tmp8 = PremiumGiftPromotionDetailsDefault;
+  if (obj4.isNullOrEmpty(config.header)) {
     const intl = tmp2(1114).intl;
     let header = intl.string(tmp2(1114).t.OEtqpm);
   } else {
     header = config.header;
   }
-  obj[1] = header;
-  const tmp8 = PremiumGiftPromotionDetailsBaseDefault;
+  obj3.title = header;
+  obj4 = StringUtils;
   if (tmp2Result.isNullOrEmpty(config.mobileBody)) {
     const intl2 = tmp2(1114).intl;
-    obj1 = { availableCount: null };
-    obj1[0] = numClaimableRewards;
-    let mobileBody = intl2.formatToPlainString(tmp2(1114).t["2h5M+X"], obj1);
+    const obj5 = { availableCount: numClaimableRewards };
+    let mobileBody = intl2.formatToPlainString(tmp2(1114).t["2h5M+X"], obj5);
   } else {
     mobileBody = config.mobileBody;
   }
-  obj2 = { theme: "dark", children: null };
-  obj[2] = mobileBody;
-  obj[4] = isSelected;
-  const items = [closure_8(tmp8, obj), ];
-  obj3 = { variant: "primary-overlay", text: null, onPress: null };
+  const obj6 = { theme: "dark", children: null };
+  obj3.subtitle = mobileBody;
+  obj3.shouldAnimate = isSelected;
+  const items = [React6(tmp8, obj3), ];
+  const obj7 = { variant: "primary-overlay", text: null, onPress: null };
   const intl3 = tmp2(1114).intl;
-  obj3[1] = intl3.string(getSystemLocale.t.Ve9Ge6);
-  obj3[2] = onPress;
-  items[1] = closure_8(Button.Button, obj3);
-  obj[2] = items;
-  obj2[1] = tmp6(tmp7, obj);
-  return closure_8(ManaContext.ThemeContextProvider, obj2);
+  obj7.text = intl3.string(util.t.Ve9Ge6);
+  obj7.onPress = onPress;
+  items[1] = React6(components_Button_Button.Button, obj7);
+  obj2.children = items;
+  obj6.children = tmp6(tmp7, obj2);
+  return React6(native.ThemeContextProvider, obj6);
 }
-({ PremiumTypes: c5, SubscriptionIntervalTypes: closure_6 } = GuildFeatures);
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let obj = { default: null, compact: null, smallCompact: null };
-obj = { paddingVertical: ThemesDefault.space.PX_8 };
-obj[0] = obj;
-obj[1] = { paddingVertical: ThemesDefault.space.PX_4 };
-obj[2] = { paddingVertical: 2 };
-let obj2 = { default: null, compact: null, smallCompact: null };
-let obj1 = { paddingVertical: ThemesDefault.space.PX_4 };
-obj2[0] = { marginTop: ThemesDefault.space.PX_24 };
-let obj3 = { marginTop: ThemesDefault.space.PX_24 };
-obj2[1] = { marginTop: ThemesDefault.space.PX_12 };
-let obj4 = { marginTop: ThemesDefault.space.PX_12 };
-obj2[2] = { marginTop: ThemesDefault.space.PX_8 };
-let obj6 = { default: null, compact: null, smallCompact: null };
-let obj5 = { marginTop: ThemesDefault.space.PX_8 };
-obj6[0] = { marginTop: ThemesDefault.space.PX_8 };
-const obj7 = { marginTop: ThemesDefault.space.PX_8 };
-obj6[1] = { marginTop: ThemesDefault.space.PX_12 };
-const obj8 = { marginTop: ThemesDefault.space.PX_12 };
-obj6[2] = { marginTop: ThemesDefault.space.PX_8 };
-const obj10 = { default: null, compact: null, smallCompact: null };
-const obj9 = { marginTop: ThemesDefault.space.PX_8 };
-obj10[0] = { marginTop: ThemesDefault.space.PX_24 };
-const obj11 = { marginTop: ThemesDefault.space.PX_24 };
-obj10[1] = { marginTop: ThemesDefault.space.PX_12 };
-const obj12 = { marginTop: ThemesDefault.space.PX_12 };
-obj10[2] = { marginTop: ThemesDefault.space.PX_8 };
-let closure_14 = createCacheKey.createStyles(() => {
+const View = fn(17).View;
+const PremiumConstants = fn(1373);
+({ PremiumTypes: hasOwnProperty, SubscriptionIntervalTypes: metroRequire } = PremiumConstants);
+const Fonts = fn(1085).Fonts;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+let obj = { default: { paddingVertical: nativeDefault.space.PX_8 }, compact: null, smallCompact: null };
+let obj2 = { paddingVertical: nativeDefault.space.PX_8 };
+obj.compact = { paddingVertical: nativeDefault.space.PX_4 };
+obj.smallCompact = { paddingVertical: 2 };
+let obj4 = { default: null, compact: null, smallCompact: null };
+let obj3 = { paddingVertical: nativeDefault.space.PX_4 };
+obj4.default = { marginTop: nativeDefault.space.PX_24 };
+let obj5 = { marginTop: nativeDefault.space.PX_24 };
+obj4.compact = { marginTop: nativeDefault.space.PX_12 };
+let obj6 = { marginTop: nativeDefault.space.PX_12 };
+obj4.smallCompact = { marginTop: nativeDefault.space.PX_8 };
+let obj8 = { default: null, compact: null, smallCompact: null };
+let obj7 = { marginTop: nativeDefault.space.PX_8 };
+obj8.default = { marginTop: nativeDefault.space.PX_8 };
+let obj9 = { marginTop: nativeDefault.space.PX_8 };
+obj8.compact = { marginTop: nativeDefault.space.PX_12 };
+const obj10 = { marginTop: nativeDefault.space.PX_12 };
+obj8.smallCompact = { marginTop: nativeDefault.space.PX_8 };
+const obj12 = { default: null, compact: null, smallCompact: null };
+const obj11 = { marginTop: nativeDefault.space.PX_8 };
+obj12.default = { marginTop: nativeDefault.space.PX_24 };
+const obj13 = { marginTop: nativeDefault.space.PX_24 };
+obj12.compact = { marginTop: nativeDefault.space.PX_12 };
+const obj14 = { marginTop: nativeDefault.space.PX_12 };
+obj12.smallCompact = { marginTop: nativeDefault.space.PX_8 };
+const createStyles = fn(4574);
+let closure_14 = createStyles.createStyles(() => {
   obj = { card: null, logo: null, pricing: null, featureTitle: null, features: null, button: null, featureIcon: null, featureText: null, promotionDetailsContainer: null };
-  obj = { justifyContent: "flex-start", borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BG_SURFACE_RAISED };
-  const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
-  obj[0] = obj;
-  obj = { marginTop: ThemesDefault.space.PX_40, marginStart: ThemesDefault.space.PX_24 };
-  obj[1] = obj;
-  obj[2] = { maxWidth: 140, marginStart: ThemesDefault.space.PX_24 };
-  obj1 = { maxWidth: 140, marginStart: ThemesDefault.space.PX_24 };
-  obj[3] = { marginStart: ThemesDefault.space.PX_24 };
-  obj2 = { marginStart: ThemesDefault.space.PX_24 };
-  obj[4] = { marginTop: ThemesDefault.space.PX_8, marginHorizontal: ThemesDefault.space.PX_24 };
-  const obj3 = { marginTop: ThemesDefault.space.PX_8, marginHorizontal: ThemesDefault.space.PX_24 };
-  obj[5] = { marginHorizontal: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_24 };
-  obj[6] = { width: 24, height: 24 };
-  const obj5 = {};
-  const obj4 = { marginHorizontal: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_24 };
-  const merged1 = Object.assign(createTextStyleDefault(Fonts.PRIMARY_NORMAL, ThemesDefault.colors.WHITE, 16));
-  obj5.marginStart = -8;
-  obj[7] = obj5;
-  const tmp2 = createTextStyleDefault;
-  obj[8] = { marginHorizontal: ThemesDefault.space.PX_24, marginTop: ThemesDefault.space.PX_20, marginBottom: ThemesDefault.space.PX_32, padding: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.sm };
+  const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
+  obj.card = { justifyContent: "flex-start", borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BG_SURFACE_RAISED };
+  const obj2 = { justifyContent: "flex-start", borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BG_SURFACE_RAISED };
+  obj.logo = { marginTop: nativeDefault.space.PX_40, marginStart: nativeDefault.space.PX_24 };
+  const obj3 = { marginTop: nativeDefault.space.PX_40, marginStart: nativeDefault.space.PX_24 };
+  obj.pricing = { maxWidth: 140, marginStart: nativeDefault.space.PX_24 };
+  obj4 = { maxWidth: 140, marginStart: nativeDefault.space.PX_24 };
+  obj.featureTitle = { marginStart: nativeDefault.space.PX_24 };
+  const obj5 = { marginStart: nativeDefault.space.PX_24 };
+  obj.features = { marginTop: nativeDefault.space.PX_8, marginHorizontal: nativeDefault.space.PX_24 };
+  const obj6 = { marginTop: nativeDefault.space.PX_8, marginHorizontal: nativeDefault.space.PX_24 };
+  obj.button = { marginHorizontal: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_24 };
+  obj.featureIcon = { width: 24, height: 24 };
+  obj8 = {};
+  const obj7 = { marginHorizontal: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_24 };
+  const merged1 = Object.assign(TextStylesDefault(Fonts.PRIMARY_NORMAL, nativeDefault.colors.WHITE, 16));
+  obj8.marginStart = -8;
+  obj.featureText = obj8;
+  obj.promotionDetailsContainer = { marginHorizontal: nativeDefault.space.PX_24, marginTop: nativeDefault.space.PX_20, marginBottom: nativeDefault.space.PX_32, padding: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm };
   return obj;
 });
-const obj13 = { marginTop: ThemesDefault.space.PX_8 };
-const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant) {
+const obj15 = { marginTop: nativeDefault.space.PX_8 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftFeaturesCard.tsx");
+
+export default noop.memo(function PremiumGiftFeaturesCard(variant) {
   ({ premiumType, onPress, style, claimableRewards, isSelected } = variant);
   if (isSelected === undefined) {
     isSelected = true;
@@ -132,11 +132,11 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
   if (str === undefined) {
     str = "default";
   }
-  const merged = Object.assign(variant, Object.create(null));
+  const merged = Object.assign(variant, Object.assign({ premiumType: 0, onPress: 0, style: 0, claimableRewards: 0, isSelected: 0, variant: 0 }));
   obj = initialize;
-  const items = [closure_4];
+  const items = [PromotionsStore];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    marketingComponentByType = marketingComponentByType.getMarketingComponentByType(callback(table[10]).MarketingComponentType.GIFT_PLAN_SELECTION_CARD_BANNER);
+    marketingComponentByType = marketingComponentByType.getMarketingComponentByType(MarketingComponentType.MarketingComponentType.GIFT_PLAN_SELECTION_CARD_BANNER);
     let prop = null;
     if (null != marketingComponentByType) {
       prop = null;
@@ -150,62 +150,61 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
   if (tmp5) {
     tmp5 = 1 === claimableRewards.length;
   }
-  const tmp6 = callback2(tmp5);
+  const tmp6 = closure_14(tmp5);
   const tmp8 = usePremiumFeaturesDefault(premiumType);
   const tmp9 = usePremiumProductPricingStringDefault(premiumType, constants.MONTH);
   let tmp11 = useShouldShowGiftingPromotionDecoDefault(premiumType) && null != claimableRewards;
   if (tmp11) {
     tmp11 = claimableRewards.length > 0;
   }
-  obj = { style: items1, children: null };
-  items1 = [tmp6.card, style];
-  obj = { premiumType, style: items2 };
-  items2 = [tmp6.card, style];
+  const obj2 = { style: null, children: null };
+  const items1 = [tmp6.card, style];
+  obj2.style = items1;
+  const obj3 = { premiumType, style: null };
+  const items2 = [tmp6.card, style];
+  obj3.style = items2;
   const tmp10 = usePremiumProductPricingStringDefault(premiumType, constants.YEAR);
-  const tmp14 = closure_9;
+  const tmp14 = React7;
   const merged1 = Object.assign(merged);
-  const items3 = [callback(PremiumFeaturesWumpusDefault, { premiumType }), callback(PremiumFeaturesLogoDefault, { style: tmp6.logo, premiumType }), , , , , ];
-  obj2 = { style: items4, variant: "text-sm/medium", color: "text-overlay-light", children: null };
-  items4 = [tmp6.pricing, obj6[str]];
+  const items3 = [React6(PremiumFeaturesWumpusDefault, { premiumType }), , , , , , ];
+  obj4 = { style: tmp6.logo, premiumType };
+  items3[1] = React6(PremiumFeaturesLogoDefault, obj4);
+  const obj5 = { style: null, variant: "text-sm/medium", color: "text-overlay-light", children: null };
+  const items4 = [tmp6.pricing, obj8[str]];
+  obj5.style = items4;
   const intl = tmp2(1114).intl;
-  obj2[3] = intl.format(getSystemLocale.t.Ob6fwp, { monthlyPrice: tmp9, yearlyPrice: tmp10 });
-  items3[2] = callback(Text.Text, obj2);
-  const obj3 = { style: items5, variant: "heading-sm/bold", color: "text-overlay-light", children: null };
-  items5 = [tmp6.featureTitle, obj2[str]];
+  obj5.children = intl.format(util.t.Ob6fwp, { monthlyPrice: tmp9, yearlyPrice: tmp10 });
+  items3[2] = React6(Text_Text.Text, obj5);
+  const obj6 = { style: null, variant: "heading-sm/bold", color: "text-overlay-light", children: null };
+  const items5 = [tmp6.featureTitle, obj4[str]];
+  obj6.style = items5;
   const intl2 = tmp2(1114).intl;
-  obj3[3] = intl2.string(getSystemLocale.t.JgsVht);
-  items3[3] = callback(Text.Text, obj3);
-  items3[4] = callback(PremiumFeatureListDefault, { style: tmp6.features, features: tmp8, iconStyle: tmp6.featureIcon, labelStyle: tmp6.featureText, rowStyle: obj[str] });
-  items3[5] = callback(View, { style: { flexGrow: 1 } });
+  obj6.children = intl2.string(util.t.JgsVht);
+  items3[3] = React6(Text_Text.Text, obj6);
+  items3[4] = React6(PremiumFeatureListDefault, { style: tmp6.features, features: tmp8, iconStyle: tmp6.featureIcon, labelStyle: tmp6.featureText, rowStyle: obj[str] });
+  items3[5] = React6(View, { style: { flexGrow: 1 } });
   if (tmp11) {
     if (null != stateFromStores) {
-      if (premiumType === closure_5.TIER_2) {
-        const obj5 = { config: null, numClaimableRewards: null, isLargeSize: null, isSelected: null, onPress: null };
-        obj5[0] = stateFromStores;
-        obj5[1] = claimableRewards.length;
-        obj5[2] = tmp5;
-        obj5[3] = isSelected;
-        obj5[4] = onPress;
-        let tmp12Result = tmp12(PremiumGiftPlanSelectPromotionDetails, obj5);
+      if (premiumType === hasOwnProperty.TIER_2) {
+        obj8 = { config: stateFromStores, numClaimableRewards: claimableRewards.length, isLargeSize: tmp5, isSelected, onPress };
+        let tmp12Result = tmp12(PremiumGiftPlanSelectPromotionDetails, obj8);
       }
       items3[6] = tmp12Result;
-      obj.children = items3;
-      obj[1] = tmp14(tmp7Result, obj);
-      return tmp12(tmp13, obj);
+      obj3.children = items3;
+      obj2.children = tmp14(tmp7Result, obj3);
+      return tmp12(tmp13, obj2);
     }
   }
-  obj6 = { style: items6, children: null };
-  items6 = [tmp6.button, obj10[str]];
-  if (premiumType === closure_5.TIER_0) {
+  const obj9 = { style: null, children: null };
+  const items6 = [tmp6.button, obj12[str]];
+  obj9.style = items6;
+  if (premiumType === hasOwnProperty.TIER_0) {
     const intl4 = tmp2(1114).intl;
     let stringResult = intl4.string(tmp2(1114).t.rk4Uu8);
   } else {
     const intl3 = tmp2(1114).intl;
     stringResult = intl3.string(tmp2(1114).t.Ve9Ge6);
   }
-  obj6[1] = callback(Button.Button, { variant: "primary-overlay", text: stringResult, onPress });
-  tmp12Result = tmp12(tmp13, obj6);
+  obj9.children = React6(components_Button_Button.Button, { variant: "primary-overlay", text: stringResult, onPress });
+  tmp12Result = tmp12(tmp13, obj9);
 });
-const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftFeaturesCard.tsx");
-
-export default memoResult;

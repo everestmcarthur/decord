@@ -1,16 +1,16 @@
-// Module ID: 10309
-// Function ID: 10310
+// Module ID: 10336
+// Function ID: 10337
 // Name: getEmojiPickerDataRowItemNativeSection
-// Dependencies: [10308, 2]
+// Dependencies: [10335, 2]
 // Exports: default
 
-// Module 10309 (getEmojiPickerDataRowItemNativeSection)
-import set from "set" /* 2 */;
-import useEmojiPickerData from "useEmojiPickerData" /* 10308 */;
+// Module 10336 (getEmojiPickerDataRowItemNativeSection)
+import useEmojiPickerData from "useEmojiPickerData" /* 10335 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/emoji_picker/native/components/data/getEmojiPickerDataRowItemNativeSection.tsx");
+const result = size.fileFinishedImporting("modules/emoji_picker/native/components/data/getEmojiPickerDataRowItemNativeSection.tsx");
 
-export default function getEmojiPickerDataRowItemNativeSection(isSectionNitroLocked) {
+export default function getEmojiPickerDataRowItemNativeSection(isSectionNitroLocked, hasPremiumInlineRoadblockHeader, hasPremiumInlineRoadblockFooter) {
   let flag = isSectionNitroLocked.isSectionNitroLocked;
   ({ label, guildId, emojiCount, emojisDisabled, emojisHidden } = isSectionNitroLocked);
   if (flag === undefined) {
@@ -22,6 +22,6 @@ export default function getEmojiPickerDataRowItemNativeSection(isSectionNitroLoc
     const _Array = Array;
     items = Array.from(emojisDisabled);
   }
-  const obj = { type: useEmojiPickerData.EmojiPickerItemType.NATIVE_SECTION, title: label, guildId, emojiCount, emojisDisabled: items, emojisHidden: Array.from(emojisHidden), isSectionNitroLocked: flag, hasPremiumInlineRoadblockHeader: arg1, hasPremiumInlineRoadblockFooter: arg2 };
+  const obj = { type: useEmojiPickerData.EmojiPickerItemType.NATIVE_SECTION, title: label, guildId, emojiCount, emojisDisabled: items, emojisHidden: Array.from(emojisHidden), isSectionNitroLocked: flag, hasPremiumInlineRoadblockHeader, hasPremiumInlineRoadblockFooter };
   return obj;
 };

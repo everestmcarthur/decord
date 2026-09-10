@@ -1,10 +1,10 @@
-// Module ID: 4780
-// Function ID: 4781
-// Name: isFeatureTeenByDefault
+// Module ID: 4794
+// Function ID: 4795
+// Name: RegionalFeatureConfigModels
 // Dependencies: [2]
 
-// Module 4780 (isFeatureTeenByDefault)
-import set from "set" /* 2 */;
+// Module 4794 (RegionalFeatureConfigModels)
+import size from "module_2" /* 2 */;
 
 class SettingsConfig {
   constructor(arg0) {
@@ -80,31 +80,36 @@ prototype3["shouldCollectAppStoreSignal"] = function shouldCollectAppStoreSignal
   return this.appStore.shouldCollectSignal;
 };
 RegionalFeatureConfig["fromConnectionOpen"] = function fromConnectionOpen(regionalFeatureConfig) {
-  if (typeof SettingsConfig !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof SettingsConfig === "function") {
+    const obj = Object.create(SettingsConfig.prototype);
+    obj.teenByDefault = tmp2;
+    if (typeof AgeVerificationConfig === "function") {
+      const obj4 = Object.create(AgeVerificationConfig.prototype);
+      obj4.gatedFeatures = tmp4;
+      if (typeof AppStoreConfig === "function") {
+        const obj5 = Object.create(tmp7.prototype);
+        obj5.shouldCollectSignal = true === tmp8;
+        if (typeof tmp === "function") {
+          const obj6 = Object.create(tmp.prototype);
+          obj6.settings = obj;
+          obj6.ageVerification = obj4;
+          obj6.appStore = obj5;
+          return obj6;
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+        const tmp10 = true === tmp8;
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  let obj = Object.create(SettingsConfig.prototype);
-  obj.teenByDefault = regionalFeatureConfig.teen_by_default_settings;
-  if (typeof AgeVerificationConfig !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  obj = Object.create(AgeVerificationConfig.prototype);
-  obj.gatedFeatures = regionalFeatureConfig.age_gated_features;
-  if (typeof AppStoreConfig !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  obj1 = Object.create(AppStoreConfig.prototype);
-  obj1.shouldCollectSignal = true === regionalFeatureConfig.should_collect_app_store_signal;
-  if (typeof RegionalFeatureConfig !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj2 = Object.create(RegionalFeatureConfig.prototype);
-  obj2.settings = obj;
-  obj2.ageVerification = obj;
-  obj2.appStore = obj1;
-  return obj2;
 };
-const result = set.fileFinishedImporting("modules/regional_feature_config/RegionalFeatureConfigModels.tsx");
+const result = size.fileFinishedImporting("modules/regional_feature_config/RegionalFeatureConfigModels.tsx");
 
 export { SettingsConfig };
 export { AgeVerificationConfig };

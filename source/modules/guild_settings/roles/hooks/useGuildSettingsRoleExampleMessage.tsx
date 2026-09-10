@@ -1,37 +1,41 @@
-// Module ID: 17632
-// Function ID: 17633
+// Module ID: 17665
+// Function ID: 17666
 // Name: useGuildSettingsRoleExampleMessage
-// Dependencies: [19, 1385, 1074, 4783, 7752, 1114, 8181, 13297, 2]
+// Dependencies: [19, 1385, 1074, 4797, 7766, 1114, 8207, 13320, 2]
 // Exports: useGuildSettingsRoleExampleMessage
 
-// Module 17632 (useGuildSettingsRoleExampleMessage)
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "createdAt" /* 1385 */;
-import { MessageStates } from "ME" /* 1074 */;
+// Module 17665 (useGuildSettingsRoleExampleMessage)
+import util from "util" /* 1114 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4797 */;
+import createMessageDefault from "createMessage" /* 7766 */;
+import UserActionCreatorsAll from "UserActionCreators" /* 8207 */;
+import noop from "module_19" /* 19 */;
+import UserRecord from "UserRecord" /* 1385 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_settings/roles/hooks/useGuildSettingsRoleExampleMessage.tsx");
+require = fn;
+const MessageStates = fn(1074).MessageStates;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/roles/hooks/useGuildSettingsRoleExampleMessage.tsx");
 
 export const useGuildSettingsRoleExampleMessage = function useGuildSettingsRoleExampleMessage(intl) {
-  closure_0 = intl;
+  const content = intl;
   const items = [intl];
-  return React.useMemo(() => {
-    let obj = intl(closure_1_3[3]);
-    obj = {};
-    obj = { channelId: "1337", content: intl };
-    const merged = Object.assign(closure_1_1(closure_1_3[4])(obj));
-    obj.state = closure_1_6.SENT;
-    obj.id = "31337";
-    const messageRecord = obj.createMessageRecord(obj);
-    obj1 = { id: "313337", username: null, discriminator: "0000", bot: false };
-    intl = intl(closure_1_3[5]).intl;
-    obj1[1] = intl.string(intl(closure_1_3[5]).t.cqpybK);
-    const tmp3 = new closure_1_5(obj1);
+  return noop.useMemo(() => {
+    const obj2 = {};
+    const merged = Object.assign(createMessageDefault({ channelId: "1337", content }));
+    obj2.state = MessageStates.SENT;
+    obj2.id = "31337";
+    const messageRecord = MessageRecordUtils.createMessageRecord(obj2);
+    const obj4 = { id: "313337", username: null, discriminator: "0000", bot: false };
+    const intl = util.intl;
+    obj4.username = intl.string(util.t.cqpybK);
+    const tmp3 = new UserRecord(obj4);
     messageRecord.author = tmp3;
-    const insertStaticUserResult = closure_1_2(closure_1_3[6]).insertStaticUser(tmp3);
+    const obj3 = { channelId: "1337", content };
+    const insertStaticUserResult = UserActionCreatorsAll.insertStaticUser(tmp3);
     if (null != insertStaticUserResult) {
       messageRecord.author = insertStaticUserResult;
-      messageRecord.author.getAvatarURL = () => callback(table[7]);
+      messageRecord.author.getAvatarURL = () => closure_1_1(closure_1_3[7]);
     }
     return messageRecord;
   }, items);

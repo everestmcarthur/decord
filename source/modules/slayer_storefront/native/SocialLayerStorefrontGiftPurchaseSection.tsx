@@ -1,69 +1,71 @@
-// Module ID: 11008
-// Function ID: 11009
+// Module ID: 11035
+// Function ID: 11036
 // Name: SocialLayerStorefrontGiftPurchaseSection
-// Dependencies: [32, 19, 17, 7424, 1371, 1074, 1373, 21, 4560, 576, 6981, 7168, 504, 1242, 11009, 10819, 1115, 573, 10802, 1114, 10825, 4556, 4975, 2]
+// Dependencies: [32, 19, 17, 7438, 1371, 1074, 1373, 21, 4574, 576, 6995, 7182, 504, 1242, 11036, 10846, 1115, 573, 10829, 1114, 10852, 4570, 4989, 2]
 // Exports: default
 
-// Module 11008 (SocialLayerStorefrontGiftPurchaseSection)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { useNativeCheckoutStore } from "context" /* 7424 */;
-import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import { GiftingOrigin } from "GuildFeatures" /* 1373 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11035 (SocialLayerStorefrontGiftPurchaseSection)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import nativeDefault from "native" /* 576 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10829 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let closure_12 = createCacheKey.createStyles((arg0) => {
-  let obj = { container: null, legalCopy: null };
-  obj = { paddingBottom: ThemesDefault.space.PX_12 + arg0, paddingTop: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-  const merged = Object.assign(ThemesDefault.shadows.SHADOW_TOP_HIGH);
-  obj[0] = obj;
-  obj = { display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_4 };
-  obj[1] = obj;
+require = fn;
+const View = fn(17).View;
+let useNativeCheckoutStore = fn(7438).useNativeCheckoutStore;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const GiftingOrigin = fn(1373).GiftingOrigin;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(4574);
+let closure_12 = createStyles.createStyles((arg0) => {
+  const obj = { container: null, legalCopy: null };
+  const merged = Object.assign(nativeDefault.shadows.SHADOW_TOP_HIGH);
+  obj.container = { paddingBottom: nativeDefault.space.PX_12 + arg0, paddingTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+  const obj2 = { paddingBottom: nativeDefault.space.PX_12 + arg0, paddingTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+  obj.legalCopy = { display: "flex", flexDirection: "column", gap: nativeDefault.space.PX_4 };
   return obj;
 });
-let result = require("set").fileFinishedImporting("modules/slayer_storefront/native/SocialLayerStorefrontGiftPurchaseSection.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/slayer_storefront/native/SocialLayerStorefrontGiftPurchaseSection.tsx");
 
 export default function SocialLayerStorefrontGiftPurchaseSection(disabled) {
   const skuId = disabled.skuId;
   const sku = disabled.sku;
   const giftOptions = disabled.giftOptions;
-  ({ giftingOrigin: closure_3, analyticsLocations } = disabled);
-  closure_5 = undefined;
+  ({ giftingOrigin: _slicedToArray, analyticsLocations } = disabled);
+  let recipient;
   useNativeCheckoutStore = undefined;
   closure_7 = undefined;
   c8 = undefined;
-  closure_9 = undefined;
-  let callback;
+  let onPurchaseError;
   closure_11 = undefined;
-  const tmp3 = callback2(sku(giftOptions[10])().insets.bottom);
-  let obj = skuId(giftOptions[11]);
+  const tmp3 = closure_12(sku(giftOptions[10])().insets.bottom);
   let applicationId;
   if (sku != null) {
     applicationId = sku.applicationId;
   }
-  const getOrFetchApplication = obj.useGetOrFetchApplication(applicationId);
-  let tmp4Result = tmp4(tmp2[12]);
+  const getOrFetchApplication = skuId(giftOptions[11]).useGetOrFetchApplication(applicationId);
+  let obj = skuId(giftOptions[11]);
   const items = [closure_7];
-  closure_5 = tmp4Result.useStateFromStores(items, () => user.getUser(giftOptions.recipient_id));
+  recipient = skuId(giftOptions[12]).useStateFromStores(items, () => UserStore.getUser(giftOptions.recipient_id));
   const tmp7 = useNativeCheckoutStore((analyticsFields) => analyticsFields.analyticsFields);
   useNativeCheckoutStore = tmp7;
-  const tmp8 = useNativeCheckoutStore((setCheckoutFailed) => setCheckoutFailed.setCheckoutFailed);
+  let tmp8 = useNativeCheckoutStore((setCheckoutFailed) => setCheckoutFailed.setCheckoutFailed);
   closure_7 = tmp8;
-  [tmp10, c8] = callback(analyticsLocations.useState(false), 2);
-  closure_9 = analyticsLocations.useRef(false);
+  const tmp4Result = skuId(giftOptions[12]);
+  [tmp10, c8] = analyticsLocations.useState(false);
+  analyticsLocations.useRef(false);
   const items1 = [tmp7, tmp8];
-  callback = analyticsLocations.useCallback(() => {
+  onPurchaseError = analyticsLocations.useCallback(() => {
     if (ref.current) {
       tmp.current = false;
-      sku(giftOptions[13]).track(_undefined.PAYMENT_FLOW_FAILED, closure_6);
-      user();
-      const obj = sku(giftOptions[13]);
+      AnalyticsUtilsDefault.track(AnalyticEvents.PAYMENT_FLOW_FAILED, closure_6);
+      closure_7();
     }
     _undefined(false);
   }, items1);
@@ -71,60 +73,58 @@ export default function SocialLayerStorefrontGiftPurchaseSection(disabled) {
   sku(giftOptions[14])(tmp12, giftOptions);
   const items2 = [giftOptions];
   const memo = analyticsLocations.useMemo(() => ({ isGift: true, options: giftOptions }), items2);
-  obj = { skuId, sku, giftParams: memo, analyticsLoadId: tmp7.load_id, analyticsLocations, orderId: null, analyticsData: null, onPurchaseComplete: null, onPurchaseError: null, onPurchasePending: null };
+  let obj2 = { skuId, sku, giftParams: memo, analyticsLoadId: tmp7.load_id, analyticsLocations, orderId: null, analyticsData: null, onPurchaseComplete: null, onPurchaseError: null, onPurchasePending: null };
   let id;
-  let tmp9 = callback(analyticsLocations.useState(false), 2);
+  let tmp9 = _slicedToArray(analyticsLocations.useState(false), 2);
   if (tmp12 != null) {
     id = tmp12.id;
   }
-  obj[5] = id;
-  obj[6] = tmp7;
-  obj[7] = function onPurchaseComplete() {
-    ref.current = false;
-    let obj = skuId(giftOptions[16]);
+  obj2.orderId = id;
+  obj2.analyticsData = tmp7;
+  obj2.onPurchaseComplete = function onPurchaseComplete() {
+    closure_9.current = false;
     if (obj.isIOS()) {
-      sku(tmp2[13]).track(_undefined.PAYMENT_FLOW_SUCCEEDED, closure_6);
-      const obj2 = sku(tmp2[13]);
+      AnalyticsUtilsDefault.track(AnalyticEvents.PAYMENT_FLOW_SUCCEEDED, closure_6);
     }
     _undefined(false);
     let tmp9 = null == giftOptions.recipient_id;
     if (!tmp9) {
-      tmp9 = closure_3 !== ref.USER_PROFILE_WISHLIST && tmp10 !== ref.DM_CHANNEL_WISHLIST;
-      const tmp11 = closure_3 !== ref.USER_PROFILE_WISHLIST && tmp10 !== ref.DM_CHANNEL_WISHLIST;
+      tmp9 = _slicedToArray !== GiftingOrigin.USER_PROFILE_WISHLIST && tmp10 !== GiftingOrigin.DM_CHANNEL_WISHLIST;
+      const tmp11 = _slicedToArray !== GiftingOrigin.USER_PROFILE_WISHLIST && tmp10 !== GiftingOrigin.DM_CHANNEL_WISHLIST;
     }
     if (!tmp9) {
-      obj = { type: "WISHLIST_GIFT_SENT", skuId: null, recipientId: null };
-      obj[1] = skuId;
-      obj[2] = giftOptions.recipient_id;
-      sku(tmp2[17]).dispatch(obj);
-      const obj3 = sku(tmp2[17]);
+      const obj4 = { type: "WISHLIST_GIFT_SENT", skuId, recipientId: tmp8.recipient_id };
+      DispatcherDefault.dispatch(obj4);
     }
-    obj = { skuId, orbsReward: null, recipient: null, analyticsLocations: null };
+    obj = PlatformUtils;
+    tmp8 = giftOptions;
+    const obj5 = { skuId, orbsReward: null, recipient: null, analyticsLocations: null };
     let orbsReward;
     if (sku != null) {
       orbsReward = sku.orbsReward;
     }
-    obj[1] = orbsReward;
-    obj[2] = closure_5;
-    obj[3] = analyticsLocations;
-    const result = skuId(giftOptions[18]).openSocialLayerStorefrontProductGiftPurchaseSuccessModal(obj);
-    result.then(skuId(giftOptions[18]).closeSocialLayerStorefrontGiftModal);
+    obj5.orbsReward = orbsReward;
+    obj5.recipient = recipient;
+    obj5.analyticsLocations = analyticsLocations;
+    const result = SocialLayerStorefrontNativeActionCreators.openSocialLayerStorefrontProductGiftPurchaseSuccessModal(obj5);
+    result.then(SocialLayerStorefrontNativeActionCreators.closeSocialLayerStorefrontGiftModal);
   };
-  obj[8] = callback;
-  obj[9] = function onPurchasePending() {
+  obj2.onPurchaseError = onPurchaseError;
+  obj2.onPurchasePending = function onPurchasePending() {
 
   };
-  closure_11 = sku(giftOptions[15])(obj);
+  closure_11 = sku(giftOptions[15])(obj2);
   const intl = tmp4(tmp2[19]).intl;
   const stringResult = intl.string(skuId(giftOptions[19]).t.ouo4FK);
-  obj = { style: tmp3.container, children: null };
-  obj1 = { style: tmp3.legalCopy, children: null };
-  tmp4Result = tmp4(tmp2[20]);
-  const mobileFinePrintMessageForApplication = tmp4Result.getMobileFinePrintMessageForApplication(getOrFetchApplication, stringResult, { shouldAppendDisclaimer: true });
-  obj1[1] = mobileFinePrintMessageForApplication.map((children) => callback(skuId(giftOptions[21]).Text, { variant: "text-xs/normal", color: "text-muted", children }, arg1));
+  let obj3 = { style: tmp3.container, children: null };
+  let obj4 = { style: tmp3.legalCopy, children: null };
+  const tmp18 = closure_11;
+  const tmpResult = sku(giftOptions[15]);
+  const mobileFinePrintMessageForApplication = skuId(giftOptions[20]).getMobileFinePrintMessageForApplication(getOrFetchApplication, stringResult, { shouldAppendDisclaimer: true });
+  obj4.children = mobileFinePrintMessageForApplication.map((children, index) => callback(skuId(giftOptions[21]).Text, { variant: "text-xs/normal", color: "text-muted", children }, index));
   const items3 = [
-    callback(closure_5, obj1),
-    callback(skuId(giftOptions[22]).Button, {
+    onPurchaseError(recipient, obj4),
+    onPurchaseError(skuId(giftOptions[22]).Button, {
       variant: "active",
       disabled: disabled.isPurchaseDisabled,
       loading: tmp10,
@@ -132,10 +132,10 @@ export default function SocialLayerStorefrontGiftPurchaseSection(disabled) {
       onPress() {
         closure_9.current = true;
         _undefined(true);
-        callback().catch(callback);
+        closure_11().catch(callback);
       }
     })
   ];
-  obj[1] = items3;
-  return closure_11(closure_5, obj);
+  obj3.children = items3;
+  return tmp18(recipient, obj3);
 };

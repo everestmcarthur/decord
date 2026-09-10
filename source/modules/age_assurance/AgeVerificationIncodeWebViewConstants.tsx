@@ -1,19 +1,19 @@
-// Module ID: 8414
-// Function ID: 8415
-// Name: AGE_VERIFICATION_INCODE_PATH
+// Module ID: 8442
+// Function ID: 8443
+// Name: AgeVerificationIncodeWebViewConstants
 // Dependencies: [2]
 // Exports: buildIncodeFallbackSessionInjection, buildIncodeParamsInjection, parseIncodeWebViewMessage, postIncodeCaptureComplete, postIncodeFallbackRequest, postIncodeResult, readInjectedIncodeParams
 
-// Module 8414 (AGE_VERIFICATION_INCODE_PATH)
-import set from "set" /* 2 */;
+// Module 8442 (AgeVerificationIncodeWebViewConstants)
+import size from "module_2" /* 2 */;
 
 let c0 = "__DISCORD_AGE_VERIFICATION_INCODE_PARAMS__";
 let c1 = "Verification.Result";
 let c2 = "Verification.CaptureComplete";
 let c3 = "Verification.FallbackRequest";
 let c4 = "__DISCORD_APPLY_INCODE_FALLBACK_SESSION__";
-let obj = { COMPLETED: "completed", CANCELLED: "cancelled", ERROR: "error" };
-const result = set.fileFinishedImporting("modules/age_assurance/AgeVerificationIncodeWebViewConstants.tsx");
+const AgeVerificationIncodeResultStatus = { COMPLETED: "completed", CANCELLED: "cancelled", ERROR: "error" };
+const result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationIncodeWebViewConstants.tsx");
 
 export const AGE_VERIFICATION_INCODE_PATH = "/age-verification/incode";
 export const AGE_VERIFICATION_INCODE_PARAMS_KEY = "__DISCORD_AGE_VERIFICATION_INCODE_PARAMS__";
@@ -22,7 +22,7 @@ export const VERIFICATION_RESULT_EVENT_TYPE = "Verification.Result";
 export const VERIFICATION_CAPTURE_COMPLETE_EVENT_TYPE = "Verification.CaptureComplete";
 export const VERIFICATION_FALLBACK_REQUEST_EVENT_TYPE = "Verification.FallbackRequest";
 export const INCODE_FALLBACK_SESSION_CALLBACK_KEY = "__DISCORD_APPLY_INCODE_FALLBACK_SESSION__";
-export const AgeVerificationIncodeResultStatus = obj;
+export { AgeVerificationIncodeResultStatus };
 export const readInjectedIncodeParams = function readInjectedIncodeParams() {
   if (null != window[c0]) {
     if (typeof tmp === "object") {
@@ -37,19 +37,15 @@ export const readInjectedIncodeParams = function readInjectedIncodeParams() {
               tmp2 = null;
               if (typeof interviewId === "string") {
                 if (null == theme) {
-                  obj = { apiUrl: null, sessionToken: null, consentId: null, interviewId: null, theme: null, method: null };
-                  obj[0] = apiUrl;
-                  obj[1] = sessionToken;
-                  obj[2] = consentId;
-                  obj[3] = interviewId;
+                  const obj = { apiUrl, sessionToken, consentId, interviewId, theme: null, method: null };
                   if (theme == null) {
                     theme = null;
                   }
-                  obj[4] = theme;
+                  obj.theme = theme;
                   if (method == null) {
                     method = null;
                   }
-                  obj[5] = method;
+                  obj.method = method;
                   tmp2 = obj;
                 } else {
                   tmp2 = null;
@@ -67,7 +63,7 @@ export const readInjectedIncodeParams = function readInjectedIncodeParams() {
   return null;
 };
 export const buildIncodeParamsInjection = function buildIncodeParamsInjection(arg0, arg1) {
-  obj = {};
+  const obj = {};
   const merged = Object.assign(arg0);
   obj.schemaVersion = 2;
   const json = JSON.stringify(JSON.stringify(obj));
@@ -91,9 +87,8 @@ export const parseIncodeWebViewMessage = function parseIncodeWebViewMessage(str)
       if (typeof parsed.interviewId === "string") {
         tmp10 = null;
         if (0 !== parsed.interviewId.length) {
-          obj = { kind: "capture_complete", interviewId: null };
-          obj[1] = parsed.interviewId;
-          tmp10 = obj;
+          const obj2 = { kind: "capture_complete", interviewId: parsed.interviewId };
+          tmp10 = obj2;
         }
       }
       return tmp10;
@@ -107,9 +102,8 @@ export const parseIncodeWebViewMessage = function parseIncodeWebViewMessage(str)
         if (typeof parsed.previousInterviewId === "string") {
           tmp9 = null;
           if (0 !== parsed.previousInterviewId.length) {
-            obj = { kind: "fallback_request", previousInterviewId: null };
-            obj[1] = parsed.previousInterviewId;
-            tmp9 = obj;
+            const obj3 = { kind: "fallback_request", previousInterviewId: parsed.previousInterviewId };
+            tmp9 = obj3;
           }
         }
         return tmp9;
@@ -128,8 +122,7 @@ export const parseIncodeWebViewMessage = function parseIncodeWebViewMessage(str)
             }
             return tmp8;
           }
-          obj = { kind: "result", status: null };
-          obj[1] = status;
+          obj = { kind: "result", status };
           tmp8 = obj;
         }
       }

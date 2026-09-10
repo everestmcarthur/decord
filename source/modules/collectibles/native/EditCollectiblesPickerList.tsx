@@ -1,26 +1,24 @@
-// Module ID: 13179
-// Function ID: 13180
+// Module ID: 13202
+// Function ID: 13203
 // Name: EditCollectiblesPickerList
-// Dependencies: [32, 19, 17, 21, 4560, 13174, 4556, 12, 8879, 2]
+// Dependencies: [32, 19, 17, 21, 4574, 13197, 4570, 12, 8906, 2]
 // Exports: EditCollectiblesPickerList
 
-// Module 13179 (EditCollectiblesPickerList)
-import Text from "Text" /* 4556 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13202 (EditCollectiblesPickerList)
+import Text_Text from "Text/Text" /* 4570 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let c3 = importAllResult;
-({ ActivityIndicator: c4, View: c5 } = get_ActivityIndicator);
-let obj = { list: { flex: 1, marginTop: 12 }, listContent: { paddingBottom: 88 }, loadingContainer: { paddingVertical: 80, alignItems: "center" }, header: null };
-obj = { paddingHorizontal: require("useCollectibleListLayout").GUTTER_SIZE, paddingTop: 10, paddingBottom: 5 };
-obj[3] = obj;
-let closure_7 = createCacheKey.createStyles(obj);
-let closure_8 = importAllResult.memo((children) => <closure_5 style={callback().header}>{jsx(Text.Heading, { variant: "heading-sm/medium", color: "mobile-text-heading-primary", children: arg0.header })}</closure_5>);
-const result = require("set").fileFinishedImporting("modules/collectibles/native/EditCollectiblesPickerList.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj = { list: { flex: 1, marginTop: 12 }, listContent: { paddingBottom: 88 }, loadingContainer: { paddingVertical: 80, alignItems: "center" }, header: { paddingHorizontal: fn(13197).GUTTER_SIZE, paddingTop: 10, paddingBottom: 5 } };
+let closure_7 = createStyles.createStyles(obj);
+let closure_8 = noop.memo((children) => <hasOwnProperty style={closure_7().header}>{jsx(Text_Text.Heading, { variant: "heading-sm/medium", color: "mobile-text-heading-primary", children: arg0.header })}</hasOwnProperty>);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/EditCollectiblesPickerList.tsx");
 
 export const EditCollectiblesPickerList = function EditCollectiblesPickerList(sections) {
   sections = sections.sections;
@@ -32,12 +30,10 @@ export const EditCollectiblesPickerList = function EditCollectiblesPickerList(se
   }
   let listContent = sections.contentContainerStyle;
   c4 = undefined;
-  let num;
-  const tmp = callback();
-  let obj = flag;
-  num = 0;
+  const tmp = closure_7();
+  let num = 0;
   [tmp3, c4] = renderRow(flag.useState(0), 2);
-  callback = flag.useCallback((nativeEvent) => {
+  const callback = flag.useCallback((nativeEvent) => {
     _undefined(nativeEvent.nativeEvent.layout.width);
   }, []);
   if (tmp3 > 0) {
@@ -51,13 +47,13 @@ export const EditCollectiblesPickerList = function EditCollectiblesPickerList(se
     if (flag) {
       return items;
     } else {
-      let item = items.forEach((header) => {
+      let item = sections.forEach((header) => {
         items = header;
         items.push({ type: "header", key: "header-" + header.section, header: header.header });
         const obj = { type: "header", key: "header-" + header.section, header: header.header };
-        const obj2 = items(closure_1_1[7]);
-        const item = items(closure_1_1[7]).chunk(header.items, items(closure_1_1[5]).ROW_SIZE).forEach((items) => {
-          header.push({ type: "row", key: "row-" + header.section + "-" + arg1, items });
+        const obj2 = items(12);
+        const item = items(12).chunk(header.items, items(13197).ROW_SIZE).forEach((items, index) => {
+          items.push({ type: "row", key: "row-" + header.section + "-" + index, items });
         });
       });
       return items;
@@ -66,39 +62,30 @@ export const EditCollectiblesPickerList = function EditCollectiblesPickerList(se
   const callback1 = obj.useCallback((item) => {
     item = item.item;
     if ("header" === item.type) {
-      let obj = { header: null };
-      obj[0] = item.header;
-      let tmp4 = closure_1_6(closure_1_8, obj);
+      const obj2 = { header: item.header };
+      let tmp4 = <closure_8 header={item.header} />;
     } else {
-      obj = { items: null, size: null, selectedSkuId: null };
-      obj[0] = item.items;
-      obj[1] = num;
-      obj[2] = selectedSkuId;
+      const obj = { items: item.items, size: num, selectedSkuId };
       tmp4 = renderRow(obj);
     }
     return tmp4;
   }, items1);
   const callback2 = obj.useCallback((type) => type.type, []);
-  obj = { style: null, children: null };
+  let obj2 = { style: null, children: null };
   if (flag) {
-    obj[0] = tmp.loadingContainer;
-    obj[1] = tmp12(c4, { animating: true, size: "large" });
-    let tmp17 = obj;
+    obj2.style = tmp.loadingContainer;
+    obj2.children = tmp12(c4, { animating: true, size: "large" });
+    let tmp17 = obj2;
   } else {
-    obj[0] = tmp.list;
-    obj = { data: null, renderItem: null, getItemType: null, keyExtractor: null, extraData: null, contentContainerStyle: null, onLayout: null, keyboardShouldPersistTaps: "always" };
-    obj[0] = memo;
-    obj[1] = callback1;
-    obj[2] = callback2;
-    obj[3] = tmp11;
-    obj[4] = selectedSkuId;
+    obj2.style = tmp.list;
+    const obj3 = { data: memo, renderItem: callback1, getItemType: callback2, keyExtractor: tmp11, extraData: selectedSkuId, contentContainerStyle: null, onLayout: null, keyboardShouldPersistTaps: "always" };
     if (listContent == null) {
       listContent = tmp.listContent;
     }
-    obj[5] = listContent;
-    obj[6] = callback;
-    obj[1] = tmp12(sections(selectedSkuId[8]).BottomSheetFlashList, obj);
-    tmp17 = obj;
+    obj3.contentContainerStyle = listContent;
+    obj3.onLayout = callback;
+    obj2.children = tmp12(sections(selectedSkuId[8]).BottomSheetFlashList, obj3);
+    tmp17 = obj2;
   }
   return <num {...tmp17} />;
 };

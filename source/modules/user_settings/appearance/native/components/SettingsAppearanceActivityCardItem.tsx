@@ -1,57 +1,56 @@
-// Module ID: 15296
-// Function ID: 15297
-// Name: ActivityCardItem
-// Dependencies: [19, 17, 2025, 15297, 21, 4296, 1178, 4560, 576, 563, 8818, 5587, 4556, 1880, 15298, 15299, 15300, 2]
+// Module ID: 15325
+// Function ID: 15326
+// Name: SettingsAppearanceActivityCardItem
+// Dependencies: [19, 17, 2025, 15326, 21, 4310, 1178, 4574, 576, 563, 8847, 5601, 4570, 1880, 15327, 15328, 15329, 2]
 // Exports: default
 
-// Module 15296 (ActivityCardItem)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_4 from "_getSystemLocale" /* 2025 */;
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 15297 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importDefaultResult from "module_4296" /* 4296 */;
+// Module 15325 (SettingsAppearanceActivityCardItem)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import ClipViewDefault from "ClipView" /* 8847 */;
+import noop from "module_19" /* 19 */;
+import LocaleStore from "LocaleStore" /* 2025 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
 
-const require = arg1;
-noopAll;
+const require = globalThis.__r;
+
+require = fn;
+get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-({ HAPPENING_NOW_BADGE_SIZE, HAPPENING_NOW_CONTENT_HEIGHT, HAPPENING_NOW_CARD_HEIGHT, HAPPENING_NOW_CARD_MARGIN_RIGHT, HAPPENING_NOW_CARD_PADDING, HAPPENING_NOW_CARD_PADDING_RIGHT } = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = importDefaultResult.createAnimatedComponent(require("Button").Icon);
-let obj = { card: null, cardBadgeWrapper: null, cardImage: null, cardBadge: null, cardImageAssetContainer: null, cardImageAssetBackground: null, cardImageAsset: null, shiftedAvatar: null, userCounter: null };
-obj = { borderRadius: ThemesDefault.radii.lg, borderWidth: StyleSheet.hairlineWidth, padding: HAPPENING_NOW_CARD_PADDING, paddingRight: HAPPENING_NOW_CARD_PADDING_RIGHT, marginRight: HAPPENING_NOW_CARD_MARGIN_RIGHT, height: HAPPENING_NOW_CARD_HEIGHT, flexDirection: "row", alignItems: "center" };
-obj[0] = obj;
-obj[1] = { position: "absolute", top: 0, right: 0 };
-createCacheKey = { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.md, position: "relative" };
-obj[2] = createCacheKey;
-obj[3] = { display: "flex", alignItems: "center", justifyContent: "center", width: HAPPENING_NOW_BADGE_SIZE, height: HAPPENING_NOW_BADGE_SIZE, borderTopRightRadius: 15, borderBottomLeftRadius: ThemesDefault.radii.md };
-const obj2 = { display: "flex", alignItems: "center", justifyContent: "center", width: HAPPENING_NOW_BADGE_SIZE, height: HAPPENING_NOW_BADGE_SIZE, borderTopRightRadius: 15, borderBottomLeftRadius: ThemesDefault.radii.md };
-obj[4] = { height: "100%", backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BG, borderRadius: ThemesDefault.radii.sm };
-let obj3 = { height: "100%", backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BG, borderRadius: ThemesDefault.radii.sm };
-obj[5] = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: ThemesDefault.radii.sm };
-let obj4 = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: ThemesDefault.radii.sm };
-obj[6] = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
-obj[7] = { marginLeft: -4 };
-let obj5 = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
-obj[8] = { flexDirection: "row", alignItems: "center", justifyContent: "center", marginLeft: -4, height: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.XSMALL_20], minWidth: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.XSMALL_20], borderRadius: ThemesDefault.radii.round, paddingHorizontal: 4, paddingTop: 1 };
-let closure_8 = createCacheKey.createStyles(obj);
-let obj6 = { flexDirection: "row", alignItems: "center", justifyContent: "center", marginLeft: -4, height: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.XSMALL_20], minWidth: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.XSMALL_20], borderRadius: ThemesDefault.radii.round, paddingHorizontal: 4, paddingTop: 1 };
-const result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceActivityCardItem.tsx");
+const HappeningNowConstants = fn(15326);
+({ HAPPENING_NOW_BADGE_SIZE, HAPPENING_NOW_CONTENT_HEIGHT, HAPPENING_NOW_CARD_HEIGHT, HAPPENING_NOW_CARD_MARGIN_RIGHT, HAPPENING_NOW_CARD_PADDING, HAPPENING_NOW_CARD_PADDING_RIGHT } = HappeningNowConstants);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(1178).Icon);
+const createStyles = fn(4574);
+let obj = { card: { borderRadius: nativeDefault.radii.lg, borderWidth: StyleSheet.hairlineWidth, padding: HAPPENING_NOW_CARD_PADDING, paddingRight: HAPPENING_NOW_CARD_PADDING_RIGHT, marginRight: HAPPENING_NOW_CARD_MARGIN_RIGHT, height: HAPPENING_NOW_CARD_HEIGHT, flexDirection: "row", alignItems: "center" }, cardBadgeWrapper: { position: "absolute", top: 0, right: 0 }, cardImage: null, cardBadge: null, cardImageAssetContainer: null, cardImageAssetBackground: null, cardImageAsset: null, shiftedAvatar: null, userCounter: null };
+let obj3 = { borderRadius: nativeDefault.radii.lg, borderWidth: StyleSheet.hairlineWidth, padding: HAPPENING_NOW_CARD_PADDING, paddingRight: HAPPENING_NOW_CARD_PADDING_RIGHT, marginRight: HAPPENING_NOW_CARD_MARGIN_RIGHT, height: HAPPENING_NOW_CARD_HEIGHT, flexDirection: "row", alignItems: "center" };
+obj.cardImage = { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.md, position: "relative" };
+let size = { display: "flex", alignItems: "center", justifyContent: "center", width: HAPPENING_NOW_BADGE_SIZE, height: HAPPENING_NOW_BADGE_SIZE, borderTopRightRadius: 15, borderBottomLeftRadius: nativeDefault.radii.md };
+obj.cardBadge = size;
+let obj4 = { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.md, position: "relative" };
+obj.cardImageAssetContainer = { height: "100%", backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG, borderRadius: nativeDefault.radii.sm };
+const size1 = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: nativeDefault.radii.sm };
+obj.cardImageAssetBackground = size1;
+const size2 = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE };
+obj.cardImageAsset = size2;
+obj.shiftedAvatar = { marginLeft: -4 };
+let obj5 = { height: "100%", backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG, borderRadius: nativeDefault.radii.sm };
+obj.userCounter = { flexDirection: "row", alignItems: "center", justifyContent: "center", marginLeft: -4, height: fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.XSMALL_20], minWidth: fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.XSMALL_20], borderRadius: nativeDefault.radii.round, paddingHorizontal: 4, paddingTop: 1 };
+let closure_8 = createStyles.createStyles(obj);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceActivityCardItem.tsx");
 
 export default function ActivityCardItem(arg0) {
   ({ avatars, animatedStyles } = arg0);
-  let _require;
-  let substr;
+  _require = undefined;
   let num3;
   ({ kind, title, subtitle, image } = arg0);
-  let obj = _require(num3[9]);
-  let items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
-  const tmp4 = callback2();
+  let items = [LocaleStore];
+  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => locale.locale);
+  const tmp4 = closure_8();
   _require = tmp4;
-  substr = undefined;
+  let substr;
   if (avatars != null) {
     substr = avatars.slice(0, 3);
   }
@@ -64,70 +63,70 @@ export default function ActivityCardItem(arg0) {
   }
   let mapped = null;
   if (null != avatars) {
-    mapped = substr.map((source) => {
+    mapped = substr.map((source, index) => {
       const diff = substr.length - 1;
-      let obj = { source, size: lib(num3[6]).AvatarSizes.XSMALL_20 };
-      const tmp5 = closure_1_5(lib(num3[6]).Avatar, obj);
-      let shiftedAvatar;
-      if (0 !== arg1) {
-        shiftedAvatar = lib.shiftedAvatar;
+      const tmp5 = hasOwnProperty(native.Avatar, { source, size: native.AvatarSizes.XSMALL_20 });
+      shiftedAvatar = undefined;
+      if (0 !== index) {
+        shiftedAvatar = shiftedAvatar.shiftedAvatar;
       }
-      obj = { style: shiftedAvatar, children: null };
-      if (arg1 !== diff) {
-        obj = { cutouts: null, children: null };
-        obj1 = { shape: null, x: null, y: -2, size: null };
-        obj1[0] = tmp3(tmp4[10]).CutoutShape.Circle;
-        obj1[1] = tmp3(tmp4[6]).AVATAR_SIZE_MAP[tmp3(undefined, tmp4[6]).AvatarSizes.XSMALL_20] - 4 - 2;
-        obj1[3] = tmp3(tmp4[6]).AVATAR_SIZE_MAP[tmp3(undefined, tmp4[6]).AvatarSizes.XSMALL_20] + 4;
-        const items = [obj1];
-        obj[0] = items;
-        obj[1] = tmp5;
-        let tmp2Result = tmp2(substr(tmp4[10]), obj);
-        const tmp12 = substr(tmp4[10]);
+      const obj2 = { style: shiftedAvatar, children: null };
+      if (index !== diff) {
+        const obj3 = { cutouts: null, children: null };
+        const point = { shape: tmp3(8847).CutoutShape.Circle, x: tmp3(1178).AVATAR_SIZE_MAP[tmp3(undefined, 1178).AvatarSizes.XSMALL_20] - 4 - 2, y: -2, size: tmp3(1178).AVATAR_SIZE_MAP[tmp3(undefined, 1178).AvatarSizes.XSMALL_20] + 4 };
+        const items = [point];
+        obj3.cutouts = items;
+        obj3.children = tmp5;
+        let tmp2Result = tmp2(ClipViewDefault, obj3);
       } else {
         tmp2Result = tmp5;
       }
-      obj[1] = tmp2Result;
-      return closure_1_5(closure_1_3, obj, arg1);
+      obj2.children = tmp2Result;
+      return hasOwnProperty(React3, obj2, index);
     });
   }
-  obj = { style: items1, children: null };
-  items1 = [tmp4.card, , ];
+  let obj2 = { style: null, children: null };
+  const items1 = [tmp4.card, , ];
   ({ borderStrong: arr3[1], bgRaised: arr3[2] } = animatedStyles);
-  obj = { style: items2, children: callback(closure_3, { style: tmp4.cardImageAssetBackground, children: callback(substr(num3[11]), obj2) }) };
-  items2 = [, ];
+  obj2.style = items1;
+  let obj3 = { style: null, children: null };
+  const items2 = [, ];
   ({ cardImageAssetContainer: arr4[0], cardImage: arr4[1] } = tmp4);
-  const items3 = [callback(closure_3, obj), , ];
-  const obj3 = { style: { flexDirection: "row" }, children: null };
-  const items4 = [callback(closure_3, { style: { flexDirection: "row" }, children: mapped }), ];
+  obj3.style = items2;
+  const obj4 = { style: tmp4.cardImageAssetBackground, children: closure_5(substr(num3[11]), { style: tmp4.cardImageAsset, source: image }) };
+  obj3.children = closure_5(closure_3, obj4);
+  const items3 = [closure_5(closure_3, obj3), , ];
+  const obj6 = { style: { flexDirection: "row" }, children: null };
+  const items4 = [closure_5(closure_3, { style: { flexDirection: "row" }, children: mapped }), ];
   let tmp8Result = null;
   if (num3 > 0) {
-    const obj4 = { style: null, children: null };
+    const obj7 = { style: null, children: null };
     const items5 = [tmp4.userCounter, animatedStyles.bgModStrong];
-    obj4[0] = items5;
-    const obj5 = { animated: true, variant: "text-xxs/semibold", allowFontScaling: false, style: null, children: null };
-    obj5[3] = animatedStyles.textNormal;
+    obj7.style = items5;
+    const obj8 = { animated: true, variant: "text-xxs/semibold", allowFontScaling: false, style: animatedStyles.textNormal, children: null };
     const items6 = ["+", tmp(tmp2[13]).humanizeValue(num3, stateFromStores)];
-    obj5[4] = items6;
-    obj4[1] = tmp6(tmp(tmp2[12]).Text, obj5);
-    tmp8Result = tmp8(tmp7(tmp2[5]).View, obj4);
+    obj8.children = items6;
+    obj7.children = tmp6(tmp(tmp2[12]).Text, obj8);
+    tmp8Result = tmp8(tmp7(tmp2[5]).View, obj7);
     const tmpResult = tmp(tmp2[13]);
   }
-  const obj6 = { children: null };
+  const obj9 = { children: null };
   items4[1] = tmp8Result;
-  obj3[1] = items4;
-  const items7 = [closure_6(closure_3, obj3), callback(_require(num3[14]).HappeningNowCardHeader, { animated: true, style: animatedStyles.headerPrimary, children: title }), callback(_require(num3[14]).HappeningNowCardSubtitle, { animated: true, style: animatedStyles.headerSecondary, children: subtitle })];
-  obj6[0] = items7;
-  items3[1] = closure_6(closure_3, obj6);
-  const obj9 = { style: tmp4.cardBadgeWrapper, children: null };
-  const obj10 = { style: items8, children: null };
-  items8 = [tmp4.cardBadge, animatedStyles.bgModSubtle];
-  obj1 = { style: tmp4.cardImageAssetBackground, children: callback(substr(num3[11]), obj2) };
-  const obj7 = { animated: true, style: animatedStyles.headerPrimary, children: title };
-  const obj8 = { animated: true, style: animatedStyles.headerSecondary, children: subtitle };
-  obj10[1] = callback(closure_7, { style: animatedStyles.activityIcon, size: _require(num3[6]).Icon.Sizes.REFRESH_SMALL_16, resizeMode: "stretch", source: substr("activity" === kind ? num3[15] : num3[16]) });
-  obj9[1] = callback(substr(num3[5]).View, obj10);
-  items3[2] = callback(closure_3, obj9);
-  obj[1] = items3;
-  return closure_6(substr(num3[5]).View, obj);
+  obj6.children = items4;
+  const items7 = [closure_6(closure_3, obj6), closure_5(require("HappeningNowCard").HappeningNowCardHeader, { animated: true, style: animatedStyles.headerPrimary, children: title }), closure_5(require("HappeningNowCard").HappeningNowCardSubtitle, { animated: true, style: animatedStyles.headerSecondary, children: subtitle })];
+  obj9.children = items7;
+  items3[1] = closure_6(closure_3, obj9);
+  const obj12 = { style: tmp4.cardBadgeWrapper, children: null };
+  const obj13 = { style: null, children: null };
+  const items8 = [tmp4.cardBadge, animatedStyles.bgModSubtle];
+  obj13.style = items8;
+  const obj = require("useStateFromStores");
+  const obj10 = { animated: true, style: animatedStyles.headerPrimary, children: title };
+  const obj11 = { animated: true, style: animatedStyles.headerSecondary, children: subtitle };
+  const obj5 = { style: tmp4.cardImageAsset, source: image };
+  obj13.children = closure_5(closure_7, { style: animatedStyles.activityIcon, size: require("native").Icon.Sizes.REFRESH_SMALL_16, resizeMode: "stretch", source: substr("activity" === kind ? num3[15] : num3[16]) });
+  obj12.children = closure_5(substr(num3[5]).View, obj13);
+  items3[2] = closure_5(closure_3, obj12);
+  obj2.children = items3;
+  return closure_6(substr(num3[5]).View, obj2);
 };

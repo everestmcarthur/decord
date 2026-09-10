@@ -1,23 +1,27 @@
-// Module ID: 13004
-// Function ID: 13005
+// Module ID: 13030
+// Function ID: 13031
 // Name: useEntryActivityAndApplication
-// Dependencies: [32, 1956, 13005, 504, 7168, 2]
+// Dependencies: [32, 1956, 13031, 504, 7182, 2]
 // Exports: default
 
-// Module 13004 (useEntryActivityAndApplication)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "participantFromServer" /* 1956 */;
-import closure_5 from "entryToKey" /* 13005 */;
+// Module 13030 (useEntryActivityAndApplication)
+import _slicedToArray from "module_32" /* 32 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
+import ContentInventoryActivityStore from "ContentInventoryActivityStore" /* 13031 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/content_inventory/useEntryActivityAndApplication.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/content_inventory/useEntryActivityAndApplication.tsx");
 
 export default function useEntryActivityAndApplication(extra) {
-  const _require = extra;
-  let obj = _require(504);
-  const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getMatchingActivity(closure_0));
+  _require = extra;
+  const items = [ContentInventoryActivityStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => ContentInventoryActivityStore.getMatchingActivity(closure_0));
   let application_id;
+  const obj = require("initialize");
+  const tmp = _require;
   if (stateFromStores != null) {
     application_id = stateFromStores.application_id;
   }
@@ -27,25 +31,22 @@ export default function useEntryActivityAndApplication(extra) {
     application_id1 = extra.extra.application_id;
   }
   items1[1] = application_id1;
-  const tmp7 = callback(first(7168)(items1), 2);
-  first = tmp7[0];
-  obj = { activity: stateFromStores, embeddedActivity: null, anyMatchingApplication: null, activityApplication: null, fallbackApplication: null };
-  const tmp = _require;
-  const tmp4 = first(7168);
-  const items2 = [closure_4];
-  obj[1] = _require(504).useStateFromStores(items2, () => {
+  [activityApplication, obj2.fallbackApplication] = activityApplication(7182)(items1);
+  const obj2 = { activity: stateFromStores, embeddedActivity: null, anyMatchingApplication: null, activityApplication: null, fallbackApplication: null };
+  const tmp4 = activityApplication(7182);
+  const items2 = [EmbeddedActivitiesStore];
+  obj2.embeddedActivity = tmp(504).useStateFromStores(items2, () => {
     let id;
     if (first != null) {
       id = first.id;
     }
-    return closure_1_4.getEmbeddedActivityForUserId(extra.author_id, id);
+    return EmbeddedActivitiesStore.getEmbeddedActivityForUserId(extra.author_id, id);
   });
-  let tmp10 = first;
-  if (first == null) {
+  let tmp10 = activityApplication;
+  if (activityApplication == null) {
     tmp10 = tmp9;
   }
-  obj[2] = tmp10;
-  obj[3] = first;
-  obj[4] = tmp7[1];
-  return obj;
+  obj2.anyMatchingApplication = tmp10;
+  obj2.activityApplication = activityApplication;
+  return obj2;
 };

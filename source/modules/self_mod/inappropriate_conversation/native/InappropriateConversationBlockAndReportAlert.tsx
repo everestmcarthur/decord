@@ -1,13 +1,13 @@
-// Module ID: 11393
-// Function ID: 11394
+// Module ID: 11420
+// Function ID: 11421
 // Name: InappropriateConversationBlockAndReportAlert
-// Dependencies: [19, 21, 11375, 11394, 1114, 2]
+// Dependencies: [19, 21, 11402, 11421, 1114, 2]
 
-// Module 11393 (InappropriateConversationBlockAndReportAlert)
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 11420 (InappropriateConversationBlockAndReportAlert)
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11402 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = fn;
 class InappropriateConversationBlockAndReportAlert {
   constructor(arg0) {
     channelId = global.channelId;
@@ -26,9 +26,7 @@ class InappropriateConversationBlockAndReportAlert {
     items[2] = senderId;
     items[3] = warningType;
     callback = senderId.useCallback((cta) => {
-      let obj = channelId(warningType[2]);
-      obj = { channelId, warningId, senderId, warningType, cta };
-      obj.trackCtaEvent(obj);
+      SafetyWarningUtils.trackCtaEvent({ channelId, warningId, senderId, warningType, cta });
     }, items);
     closure_8 = callback;
     items1 = [, ];
@@ -58,13 +56,15 @@ class InappropriateConversationBlockAndReportAlert {
       callback(analyticsBlockAndReportContext);
     }, items3);
     obj = { userId: senderId, channelId, onClose: global.onClose, onCancel: callback1, onBlock: callback2, onBlockAndReport: callback3, blockButtonVariant: "primary", description: null };
-    tmp5 = require("ConfirmBlockUserAlert");
-    intl = require("getSystemLocale").intl;
-    obj[7] = intl.string(require("getSystemLocale").t["5NhTvu"]);
+    tmp5 = warningId(warningType[3]);
+    intl = channelId(warningType[4]).intl;
+    obj.description = intl.string(channelId(warningType[4]).t["5NhTvu"]);
     return analyticsBlockContext(tmp5, obj);
   }
 }
-const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/InappropriateConversationBlockAndReportAlert.tsx");
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/InappropriateConversationBlockAndReportAlert.tsx");
 
 export default InappropriateConversationBlockAndReportAlert;
 export { InappropriateConversationBlockAndReportAlert };

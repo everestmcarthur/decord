@@ -1,24 +1,22 @@
-// Module ID: 14608
-// Function ID: 14609
-// Name: showGenericProfileUpdateFailureToast
-// Dependencies: [4259, 6992, 576, 2]
+// Module ID: 14633
+// Function ID: 14634
+// Name: showInvalidProfileUpdateToastNative
+// Dependencies: [4272, 7006, 576, 2]
 // Exports: showGenericGuildProfileUpdateFailureToast, showGenericProfileUpdateFailureToast
 
-// Module 14608 (showGenericProfileUpdateFailureToast)
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 576 */;
-import dispatcherDefault from "dispatcher" /* 4259 */;
-import registerAssetDefault from "registerAsset" /* 6992 */;
+// Module 14633 (showInvalidProfileUpdateToastNative)
+import nativeDefault from "native" /* 576 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
+import _modDef7006 from "module_7006" /* 7006 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/user_settings/profiles/native/showInvalidProfileUpdateToastNative.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/profiles/native/showInvalidProfileUpdateToastNative.tsx");
 
 export const showGenericProfileUpdateFailureToast = function showGenericProfileUpdateFailureToast(avatar) {
-  let obj = dispatcherDefault;
-  obj = { key: "USER_SETTINGS_UPDATE_FAILURE", content: avatar, icon: registerAssetDefault, iconColor: ThemesDefault.colors.ICON_FEEDBACK_CRITICAL, recolorLegacyIcon: true };
-  obj.open(obj);
+  const obj = ToastActionCreatorsDefault;
+  obj.open({ key: "USER_SETTINGS_UPDATE_FAILURE", content: avatar, icon: _modDef7006, iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, recolorLegacyIcon: true });
 };
 export const showGenericGuildProfileUpdateFailureToast = function showGenericGuildProfileUpdateFailureToast(avatar) {
-  let obj = dispatcherDefault;
-  obj = { key: "USER_SETTINGS_UPDATE_FAILURE", content: avatar, icon: registerAssetDefault, iconColor: ThemesDefault.colors.ICON_FEEDBACK_CRITICAL, recolorLegacyIcon: true };
-  obj.open(obj);
+  const obj = ToastActionCreatorsDefault;
+  obj.open({ key: "USER_SETTINGS_UPDATE_FAILURE", content: avatar, icon: _modDef7006, iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, recolorLegacyIcon: true });
 };

@@ -1,31 +1,31 @@
-// Module ID: 14994
-// Function ID: 14995
-// Name: route
-// Dependencies: [1074, 11473, 1114, 9380, 13504, 2]
+// Module ID: 15020
+// Function ID: 15021
+// Name: PremiumGuildBoostingSetting
+// Dependencies: [1074, 11500, 1114, 9407, 13527, 2]
 
-// Module 14994 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import BoostGemIcon from "BoostGemIcon" /* 9380 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15020 (PremiumGuildBoostingSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import BoostGemIcon from "BoostGemIcon" /* 9407 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const require = globalThis.__r;
+
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["+CbP2v"]);
+    const intl = util.intl;
+    return intl.string(util.t["+CbP2v"]);
   },
   parent: null,
   IconComponent: BoostGemIcon.BoostGemIcon,
-  screen: obj
-};
-obj = {
-  route: ME.UserSettingsSections.GUILD_BOOSTING,
-  getComponent() {
-    return require(13504) /* componentDidMount */.default;
+  screen: {
+    route: Constants.UserSettingsSections.GUILD_BOOSTING,
+    getComponent() {
+      return require("UserSettingsPremiumGuildSubscriptions").default;
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/PremiumGuildBoostingSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/PremiumGuildBoostingSetting.tsx");
 
 export default route;

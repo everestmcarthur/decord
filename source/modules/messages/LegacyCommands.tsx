@@ -1,99 +1,104 @@
-// Module ID: 12000
-// Function ID: 12001
-// Name: action
-// Dependencies: [32, 5459, 4781, 1074, 1935, 9308, 4257, 7764, 4211, 7456, 4740, 2]
+// Module ID: 12026
+// Function ID: 12027
+// Name: LegacyCommands
+// Dependencies: [32, 5473, 4795, 1074, 1935, 9335, 4270, 7778, 4224, 7470, 4754, 2]
 // Exports: handleLegacyCommands
 
-// Module 12000 (action)
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import MAX_REACTIONS from "MAX_REACTIONS" /* 4211 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4740 */;
-import trackInviteDefault from "trackInvite" /* 7456 */;
-import checkReactionResponse from "checkReactionResponse" /* 7764 */;
-import _modDef9308 from "module_9308" /* 9308 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "getEmojiToGroupId" /* 5459 */;
-import closure_5 from "reinjectEphemerals" /* 4781 */;
-import ME from "ME" /* 1074 */;
-import importDefaultResult from "t" /* 4257 */;
+// Module 12026 (LegacyCommands)
+import UserSettings from "UserSettings" /* 1935 */;
+import ReactionUtils from "ReactionUtils" /* 4224 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4754 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7470 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 7778 */;
+import ChangeNicknameActionCreatorsDefault from "ChangeNicknameActionCreators" /* 9335 */;
+import _slicedToArray from "module_32" /* 32 */;
+import EmojiStore from "EmojiStore" /* 5473 */;
+import MessageStore from "MessageStore" /* 4795 */;
+import t_mod from "module_4270" /* 4270 */;
 
-require = arg1;
-({ AnalyticEvents: closure_6, MARKDOWN_SPOILER_WRAPPER: error, ME: closure_8 } = ME);
+require = fn;
+const Constants = fn(1074);
+({ AnalyticEvents: metroRequire, MARKDOWN_SPOILER_WRAPPER: closure_7, ME: closure_8 } = Constants);
 const re9 = /\\([*?+/])/g;
-obj = { tts: obj, me: obj, tableflip: obj1, unflip: obj2, shrug: obj3, nick: obj4, reaction: null, searchReplace: null, spoiler: null };
-obj = {
-  action() {
-    obj = { tts: null };
-    const EnableTTSCommand = explicitContentFromProto.EnableTTSCommand;
-    obj[0] = EnableTTSCommand.getSetting();
-    return obj;
-  }
+const COMMANDS = {
+  tts: {
+    action() {
+      const obj = { tts: null };
+      const EnableTTSCommand = UserSettings.EnableTTSCommand;
+      obj.tts = EnableTTSCommand.getSetting();
+      return obj;
+    }
+  },
+  me: {
+    action(arg0) {
+      return { content: "_" + arg0 + "_" };
+    }
+  },
+  tableflip: {
+    action(arg0) {
+      const obj = { content: "" + arg0 + " (\u256F\u00B0\u25A1\u00B0)\u256F\uFE35 \u253B\u2501\u253B".trim() };
+      return obj;
+    }
+  },
+  unflip: {
+    action(arg0) {
+      const obj = { content: "" + arg0 + " \u252C\u2500\u252C\u30CE( \u00BA _ \u00BA\u30CE)".trim() };
+      return obj;
+    }
+  },
+  shrug: {
+    action(arg0) {
+      const obj = { content: "" + arg0 + " \u00AF\\_(\u30C4)_/\u00AF".trim() };
+      return obj;
+    }
+  },
+  nick: {
+    action(arg0, channel) {
+      channel = channel.channel;
+      if (null != channel.guild_id) {
+        const obj = ChangeNicknameActionCreatorsDefault;
+        obj.changeNickname(channel.guild_id, channel.id, React6, arg0);
+        return { content: "" };
+      }
+    }
+  },
+  reaction: null,
+  searchReplace: null,
+  spoiler: null
 };
-obj = {
-  action(arg0) {
-    return { content: "_" + arg0 + "_" };
-  }
-};
-const obj5 = {
-  match: importDefaultResult.anyScopeRegex(/^\+:(.+?): *$/),
-  action(str, channel) {
-    channel = channel.channel;
-    if (!channel.isEdit) {
-      if (closure_5.hasPresent(channel.id)) {
-        const messages = obj.getMessages(channel.id);
-        const lastResult = messages.last();
-        if (null != lastResult) {
-          if (null != lastResult.id) {
-            disambiguatedEmojiContext = disambiguatedEmojiContext.getDisambiguatedEmojiContext(channel.guild_id);
-            const trimmed = str.trim();
-            const byName = disambiguatedEmojiContext.getByName(trimmed.slice(2, -1));
-            if (null != byName) {
-              const obj3 = checkReactionResponse;
-              obj3.addReaction(channel.id, lastResult.id, MAX_REACTIONS.toReactionEmoji(byName));
-              return { content: "" };
-            }
+let obj2 = { match: null, action: null };
+let t = t_mod;
+obj2.match = t.anyScopeRegex(/^\+:(.+?): *$/);
+obj2.action = function action(str, channel) {
+  channel = channel.channel;
+  if (!channel.isEdit) {
+    if (MessageStore.hasPresent(channel.id)) {
+      const messages = obj.getMessages(channel.id);
+      const lastResult = messages.last();
+      if (null != lastResult) {
+        if (null != lastResult.id) {
+          const disambiguatedEmojiContext = EmojiStore.getDisambiguatedEmojiContext(channel.guild_id);
+          const trimmed = str.trim();
+          const byName = disambiguatedEmojiContext.getByName(trimmed.slice(2, -1));
+          if (null != byName) {
+            const obj3 = ReactionActionCreators;
+            obj3.addReaction(channel.id, lastResult.id, ReactionUtils.toReactionEmoji(byName));
+            return { content: "" };
           }
         }
       }
-      obj = closure_5;
     }
+    obj = MessageStore;
   }
 };
-obj[6] = obj5;
-const obj6 = { match: null, action: null };
-obj1 = {
-  action(arg0) {
-    obj = { content: "" + arg0 + " (\u256F\u00B0\u25A1\u00B0)\u256F\uFE35 \u253B\u2501\u253B".trim() };
-    return obj;
-  }
-};
-obj2 = {
-  action(arg0) {
-    obj = { content: "" + arg0 + " \u252C\u2500\u252C\u30CE( \u00BA _ \u00BA\u30CE)".trim() };
-    return obj;
-  }
-};
-obj3 = {
-  action(arg0) {
-    obj = { content: "" + arg0 + " \u00AF\\_(\u30C4)_/\u00AF".trim() };
-    return obj;
-  }
-};
-obj4 = {
-  action(arg0, channel) {
-    channel = channel.channel;
-    if (null != channel.guild_id) {
-      obj = _modDef9308;
-      obj.changeNickname(channel.guild_id, channel.id, closure_8, arg0);
-      return { content: "" };
-    }
-  }
-};
-obj6[0] = importDefaultResult.anyScopeRegex(/^s\/([^\/\\]*(?:\\.[^\/\\]*)*)\/([^\/\\]*(?:\\.[^\/\\]*)*)(?:\/([g]*))?$/);
-obj6[1] = function action(str, channel) {
+COMMANDS.reaction = obj2;
+let obj3 = { match: null, action: null };
+let t = t_mod;
+obj3.match = t.anyScopeRegex(/^s\/([^\/\\]*(?:\\.[^\/\\]*)*)\/([^\/\\]*(?:\\.[^\/\\]*)*)(?:\/([g]*))?$/);
+obj3.action = function action(str, channel) {
   channel = channel.channel;
   if (!channel.isEdit) {
-    const lastEditableMessage = closure_5.getLastEditableMessage(channel.id);
+    const lastEditableMessage = MessageStore.getLastEditableMessage(channel.id);
     if (null != lastEditableMessage) {
       if (null != lastEditableMessage.id) {
         const self = this;
@@ -101,7 +106,7 @@ obj6[1] = function action(str, channel) {
         if (match == null) {
           match = [];
         }
-        [r10014, str, str2, str3] = callback(Array.from(match), 4);
+        [r10014, str, str2, str3] = Array.from(match);
         let parts;
         if (str3 != null) {
           parts = str3.split("");
@@ -109,8 +114,8 @@ obj6[1] = function action(str, channel) {
         if (parts == null) {
           parts = [];
         }
-        const replaced = str.replace(closure_9, (arg0, arg1) => arg1);
-        const replaced1 = str2.replace(closure_9, (arg0, arg1) => arg1);
+        const replaced = str.replace(re9, (arg0, arg1) => arg1);
+        const replaced1 = str2.replace(re9, (arg0, arg1) => arg1);
         if (parts.includes("g")) {
           let str7 = str6.replaceAll(replaced, replaced1);
         } else {
@@ -118,39 +123,34 @@ obj6[1] = function action(str, channel) {
         }
         if (null == str7) {
           if (0 === lastEditableMessage.attachments.length) {
-            obj = trackInviteDefault;
-            obj.deleteMessage(channel.id, lastEditableMessage.id);
+            MessageActionCreatorsDefault.deleteMessage(channel.id, lastEditableMessage.id);
           }
           return { content: "" };
         }
         if (str7 !== lastEditableMessage.content) {
-          obj = { content: null };
-          obj[0] = str7;
-          trackInviteDefault.editMessage(channel.id, lastEditableMessage.id, obj);
-          const obj2 = trackInviteDefault;
+          const obj3 = { content: str7 };
+          MessageActionCreatorsDefault.editMessage(channel.id, lastEditableMessage.id, obj3);
         }
-        const tmp5 = callback(Array.from(match), 4);
+        const tmp5 = _slicedToArray(Array.from(match), 4);
       }
     }
     return { content: "" };
   }
 };
-obj[7] = obj6;
-obj[8] = {
+COMMANDS.searchReplace = obj3;
+COMMANDS.spoiler = {
   action(arg0) {
-    obj = { content: callback2(arg0).trim() };
+    const obj = { content: React5(arg0).trim() };
     return obj;
   }
 };
-Object.setPrototypeOf(obj, null);
-const importDefaultResult1 = importDefaultResult;
-const result = require("set").fileFinishedImporting("modules/messages/LegacyCommands.tsx");
+Object.setPrototypeOf(COMMANDS, null);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/LegacyCommands.tsx");
 
-export const COMMANDS = obj;
+export { COMMANDS };
 export const handleLegacyCommands = function handleLegacyCommands(text, arg1) {
   for (const key10005 in obj) {
-    let tmp7 = key10005;
-    let tmp8 = obj;
     let str = obj[key10005];
     if (null == str.match) {
       continue;
@@ -163,14 +163,9 @@ export const handleLegacyCommands = function handleLegacyCommands(text, arg1) {
       if (!isMatch) {
         continue;
       } else {
-        let tmp2 = arg1;
-        let tmp3 = importDefault;
-        let tmp4 = dependencyMap;
-        obj = collectGuildAnalyticsMetadataDefault;
-        let tmp5 = constants;
-        obj = { command: null };
-        obj[0] = key10005;
-        let trackWithMetadataResult = obj.trackWithMetadata(constants.SLASH_COMMAND_USED, obj);
+        let obj = AppAnalyticsUtilsDefault;
+        let obj2 = { command: key10005 };
+        let trackWithMetadataResult = obj.trackWithMetadata(constants.SLASH_COMMAND_USED, obj2);
         return str.action(arg0, arg1);
       }
     }

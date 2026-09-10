@@ -1,34 +1,37 @@
-// Module ID: 11427
-// Function ID: 11428
+// Module ID: 11454
+// Function ID: 11455
 // Name: useShowChannelOptInNotice
-// Dependencies: [4741, 1074, 1964, 7535, 504, 7222, 2]
+// Dependencies: [4755, 1074, 1964, 7549, 504, 7236, 2]
 // Exports: default
 
-// Module 11427 (useShowChannelOptInNotice)
-import closure_2 from "updateUserGuildSettingsInternal" /* 4741 */;
-import { NULL_STRING_GUILD_ID } from "ME" /* 1074 */;
-import { ChannelFlags } from "set" /* 1964 */;
+// Module 11454 (useShowChannelOptInNotice)
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4755 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/opt_in_channels/useShowChannelOptInNotice.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const NULL_STRING_GUILD_ID = fn(1074).NULL_STRING_GUILD_ID;
+const ChannelFlags = fn(1964).ChannelFlags;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/opt_in_channels/useShowChannelOptInNotice.tsx");
 
 export default function useShowChannelOptInNotice(getGuildId) {
-  const _require = getGuildId;
+  _require = getGuildId;
   let guildId;
   if (getGuildId != null) {
     guildId = getGuildId.getGuildId();
   }
-  let optInEnabledForGuild = _require(7535).useOptInEnabledForGuild(null != guildId ? getGuildId.guild_id : NULL_STRING_GUILD_ID);
-  let tmpResult = tmp(504);
-  const items = [closure_2];
-  const stateFromStores = tmpResult.useStateFromStores(items, () => {
+  let optInEnabledForGuild = require("isOptInEnabled").useOptInEnabledForGuild(null != guildId ? getGuildId.guild_id : NULL_STRING_GUILD_ID);
+  const obj = require("isOptInEnabled");
+  const items = [UserGuildSettingsStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let result = null != closure_0;
     if (result) {
-      result = closure_1_2.isChannelRecordOrParentOptedIn(tmp);
+      result = UserGuildSettingsStore.isChannelRecordOrParentOptedIn(tmp);
     }
     return result;
   });
-  tmpResult = tmp(7222);
+  const tmpResult = require("initialize");
   let guild_id;
   if (getGuildId != null) {
     guild_id = getGuildId.guild_id;
@@ -36,7 +39,7 @@ export default function useShowChannelOptInNotice(getGuildId) {
   if (guild_id == null) {
     guild_id = NULL_STRING_GUILD_ID;
   }
-  let canSeeOnboardingHome = tmpResult.useCanSeeOnboardingHome(guild_id);
+  let canSeeOnboardingHome = require("OnboardingHomeUtils").useCanSeeOnboardingHome(guild_id);
   if (null == getGuildId) {
     return false;
   } else {
@@ -54,5 +57,5 @@ export default function useShowChannelOptInNotice(getGuildId) {
     }
     return optInEnabledForGuild;
   }
-  const obj = _require(7535);
+  const tmpResult2 = require("OnboardingHomeUtils");
 };

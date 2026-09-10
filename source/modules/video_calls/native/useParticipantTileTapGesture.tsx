@@ -1,14 +1,14 @@
-// Module ID: 9597
-// Function ID: 9598
+// Module ID: 9624
+// Function ID: 9625
 // Name: useParticipantTileTapGesture
-// Dependencies: [6655, 2]
+// Dependencies: [6669, 2]
 // Exports: default
 
-// Module 9597 (useParticipantTileTapGesture)
-import set from "set" /* 2 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
+// Module 9624 (useParticipantTileTapGesture)
+import LegacyBaseButton from "LegacyBaseButton" /* 6669 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/video_calls/native/useParticipantTileTapGesture.tsx");
+const result = size.fileFinishedImporting("modules/video_calls/native/useParticipantTileTapGesture.tsx");
 
 export default function useParticipantTileTapGesture(arg0) {
   ({ onSingleTapStart, onDoubleTapStart } = arg0);

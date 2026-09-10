@@ -1,53 +1,54 @@
-// Module ID: 15700
-// Function ID: 15701
+// Module ID: 15730
+// Function ID: 15731
 // Name: OrbCheckoutMenu
-// Dependencies: [32, 19, 21, 4560, 4763, 13156, 1896, 4259, 5607, 4556, 6606, 4975, 2]
+// Dependencies: [32, 19, 21, 4574, 4777, 13181, 1896, 4272, 5621, 4570, 6620, 4989, 2]
 // Exports: default
 
-// Module 15700 (OrbCheckoutMenu)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15730 (OrbCheckoutMenu)
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ textInput: { marginBottom: 16 }, title: { marginBottom: 8 } });
-const result = require("set").fileFinishedImporting("modules/virtual_currency/native/OrbCheckoutMenu.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let closure_7 = createStyles.createStyles({ textInput: { marginBottom: 16 }, title: { marginBottom: 8 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/virtual_currency/native/OrbCheckoutMenu.tsx");
 
 export default function OrbCheckoutMenu() {
-  const tmp = callback4();
-  const tmp2 = callback(React.useState("1409898407849365565"), 2);
-  const first = tmp2[0];
-  closure_1 = tmp2[1];
-  const items = [first];
-  callback = React.useCallback(() => {
+  const tmp = closure_7();
+  [value, closure_1] = noop.useState("1409898407849365565");
+  const items = [value];
+  const callback = noop.useCallback(() => {
     if (null != first) {
-      let obj = callback(closure_1_2[4]);
-      obj = { skuId: null, analyticsLocations: null, onCheckoutSuccess: null };
-      obj[0] = tmp;
-      obj[1] = [];
-      obj[2] = function onCheckoutSuccess() {
-        callback(table[7]).open({ key: "ORB_CHECKOUT_SUCCESS", content: "Successfully redeemed item with Orbs" });
+      const obj2 = {
+        skuId: tmp,
+        analyticsLocations: [],
+        onCheckoutSuccess() {
+            closure_1_1(closure_1_2[7]).open({ key: "ORB_CHECKOUT_SUCCESS", content: "Successfully redeemed item with Orbs" });
+          }
       };
-      obj.pushLazy(first(closure_1_2[6])(closure_1_2[5], closure_1_2.paths), obj);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13181, dependencyMap.paths), obj2);
     }
   }, items);
   let obj = { children: null };
-  obj = { style: tmp.title, variant: "text-md/bold", children: "Redeem SKU for Orbs" };
-  const items1 = [callback2(first(4556).Text, obj), , , ];
-  obj = {
-    containerStyle: tmp.textInput,
-    label: "SKU ID",
-    value: first,
-    onChange(arg0) {
-      return callback(arg0);
-    },
-    isClearable: true
-  };
-  items1[1] = callback2(first(6606).TextInput, obj);
-  items1[2] = callback2(first(4556).Text, { style: tmp.title, variant: "text-md/bold", children: "Checkout will open with the orb price of the product, if it exists" });
-  items1[3] = callback2(first(4975).Button, { text: "Open Orbs Checkout", variant: "primary", onPress: callback, disabled: null == first });
-  obj[0] = items1;
-  return callback3(first(5607).Card, obj);
+  const items1 = [
+    closure_5(value(4570).Text, { style: tmp.title, variant: "text-md/bold", children: "Redeem SKU for Orbs" }),
+    closure_5(value(6620).TextInput, {
+      containerStyle: tmp.textInput,
+      label: "SKU ID",
+      value,
+      onChange(arg0) {
+        return closure_1(arg0);
+      },
+      isClearable: true
+    }),
+    closure_5(value(4570).Text, { style: tmp.title, variant: "text-md/bold", children: "Checkout will open with the orb price of the product, if it exists" }),
+    closure_5(value(4989).Button, { text: "Open Orbs Checkout", variant: "primary", onPress: callback, disabled: null == value })
+  ];
+  obj.children = items1;
+  return closure_6(value(5621).Card, obj);
 };

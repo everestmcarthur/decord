@@ -1,12 +1,12 @@
-// Module ID: 14562
-// Function ID: 14563
-// Name: timestamp
+// Module ID: 14587
+// Function ID: 14588
+// Name: MainNavigationLogger
 // Dependencies: [3, 2]
 
-// Module 14562 (timestamp)
-import timestampDefault from "timestamp" /* 3 */;
+// Module 14587 (MainNavigationLogger)
+import LoggerDefault from "Logger" /* 3 */;
 
-const tmp2 = new timestampDefault("MainNavigationLogger");
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/helpers/MainNavigationLogger.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/helpers/MainNavigationLogger.tsx");
 
-export default tmp2;
+export default new LoggerDefault("MainNavigationLogger");

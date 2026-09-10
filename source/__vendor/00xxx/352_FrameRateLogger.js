@@ -4,12 +4,13 @@
 // Dependencies: [353]
 
 // Module 352 (FrameRateLogger)
-import FrameRateLoggerDefault from "FrameRateLogger" /* 353 */;
+import _modDef353 from "module_353" /* 353 */;
 
-for (const key10016 in require("FrameRateLogger")) {
-  let tmp2 = key10016;
-  arg5[key10016] = require("FrameRateLogger")[key10016];
+const require = globalThis.__r;
+
+for (const key10016 in require("module_353")) {
+  arg5[key10016] = require("module_353")[key10016];
   continue;
 }
 
-export default FrameRateLoggerDefault;
+export default _modDef353;

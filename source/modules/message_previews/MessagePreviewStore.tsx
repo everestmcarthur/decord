@@ -1,73 +1,74 @@
-// Module ID: 13722
-// Function ID: 13723
-// Name: initialize
-// Dependencies: [32, 1957, 4781, 3, 504, 573, 13723, 5276, 2]
+// Module ID: 13745
+// Function ID: 13746
+// Name: message_previews/MessagePreviewStore
+// Dependencies: [32, 1957, 4795, 3, 504, 573, 13746, 5290, 2]
 
-// Module 13722 (initialize)
-import timestampDefault from "timestamp" /* 3 */;
+// Module 13745 (message_previews/MessagePreviewStore)
+import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "reinjectEphemerals" /* 4781 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import requireSortedDescending from "requireSortedDescending" /* 5290 */;
+import PreviewData from "PreviewData" /* 13746 */;
+import _slicedToArray from "module_32" /* 32 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import MessageStore from "MessageStore" /* 4795 */;
 
-let object = arg1;
+require = fn;
 let c6 = -Infinity;
-let closure_7 = new timestampDefault("MessagePreviewStore");
+let closure_7 = new LoggerDefault("MessagePreviewStore");
 const Store = initializeDefault.Store;
 class MessagePreviewStore extends Store {
   constructor() {
     closure_0 = undefined;
     obj = {
       CONNECTION_OPEN(arg0) {
-            return obj.handleConnectionOpen(arg0);
+            return closure_0.handleConnectionOpen(arg0);
           },
       GUILD_CREATE(arg0) {
-            return obj.handleGuildCreate(arg0);
+            return closure_0.handleGuildCreate(arg0);
           },
       GUILD_DELETE(arg0) {
-            return obj.handleGuildDelete(arg0);
+            return closure_0.handleGuildDelete(arg0);
           },
       LOAD_MESSAGES_SUCCESS(arg0) {
-            return obj.handleLoadMessagesSuccess(arg0);
+            return closure_0.handleLoadMessagesSuccess(arg0);
           },
       LOCAL_MESSAGES_LOADED(arg0) {
-            return obj.handleLocalMessagesLoaded(arg0);
+            return closure_0.handleLocalMessagesLoaded(arg0);
           },
       LOGOUT(arg0) {
-            return obj.handleLogout(arg0);
+            return closure_0.handleLogout(arg0);
           },
       MESSAGE_CREATE(arg0) {
-            return obj.handleMessageCreate(arg0);
+            return closure_0.handleMessageCreate(arg0);
           },
       MESSAGE_DELETE(arg0) {
-            return obj.handleMessageDelete(arg0);
+            return closure_0.handleMessageDelete(arg0);
           },
       MESSAGE_PREVIEWS_LOADED(arg0) {
-            return obj.handleMessagePreviewsLoaded(arg0);
+            return closure_0.handleMessagePreviewsLoaded(arg0);
           },
       MESSAGE_PREVIEWS_LOCALLY_LOADED(guildId) {
-            return obj.handleMessagePreviewsLocallyLoaded(guildId);
+            return closure_0.handleMessagePreviewsLocallyLoaded(guildId);
           },
       MESSAGE_UPDATE(arg0) {
-            return obj.handleMessageUpdate(arg0);
+            return closure_0.handleMessageUpdate(arg0);
           },
       THREAD_LIST_SYNC(arg0) {
-            return obj.handleThreadListSync(arg0);
+            return closure_0.handleThreadListSync(arg0);
           }
     };
-    tmp2 = new tmp2(require("dispatcher"), obj, new.target, tmp2, tmp, new.target, undefined);
-    // ThrowIfThisInitialized (0x7c)
-    closure_0 = tmp2;
+    tmp21 = new tmp2(closure_1(closure_2[5]), obj, new.target, tmp2, tmp, new.target, undefined);
+    closure_0 = tmp21;
     map = new Map();
-    tmp2.guilds = map;
-    tmp2.generation = 0;
-    return tmp2;
+    tmp21.guilds = map;
+    tmp21.generation = 0;
+    return tmp21;
   }
 }
 const prototype = MessagePreviewStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_4, closure_5);
+  this.waitFor(ChannelStore, MessageStore);
 };
 prototype["isLatest"] = function isLatest(arg0, arg1) {
   let tmp = arg0;
@@ -75,7 +76,7 @@ prototype["isLatest"] = function isLatest(arg0, arg1) {
   if (arg0 == null) {
     tmp = null;
   }
-  const value = guilds.get(tmp);
+  value = guilds.get(tmp);
   let flag;
   if (value != null) {
     flag = value.isLatest(arg1, this.generation);
@@ -85,9 +86,9 @@ prototype["isLatest"] = function isLatest(arg0, arg1) {
   }
   return flag;
 };
-prototype["isLocalFetchNeeded"] = function isLocalFetchNeeded(closure_1_0) {
+prototype["isLocalFetchNeeded"] = function isLocalFetchNeeded(arg0) {
   const guilds = this.guilds;
-  const value = guilds.get(closure_1_0);
+  value = guilds.get(arg0);
   let flag;
   if (value != null) {
     flag = value.localNeeded;
@@ -99,7 +100,7 @@ prototype["isLocalFetchNeeded"] = function isLocalFetchNeeded(closure_1_0) {
 };
 prototype["message"] = function message(arg0, arg1) {
   const guilds = this.guilds;
-  const value = guilds.get(arg0);
+  value = guilds.get(arg0);
   let messageRecordResult;
   if (value != null) {
     messageRecordResult = value.messageRecord(arg1);
@@ -109,12 +110,12 @@ prototype["message"] = function message(arg0, arg1) {
   }
   return messageRecordResult;
 };
-prototype["data"] = function data(guildId, items, arg2) {
+prototype["data"] = function data(guildId) {
   const self = this;
   const guilds = this.guilds;
   if (!guilds.has(guildId)) {
     const guilds2 = self.guilds;
-    const previewData = new object(13723).PreviewData();
+    const previewData = new PreviewData.PreviewData();
     const result = guilds2.set(guildId, previewData);
   }
   const guilds3 = self.guilds;
@@ -177,7 +178,7 @@ prototype["handleMessageDelete"] = function handleMessageDelete(guildId) {
     messageIdResult = dataResult.messageId(guildId.channelId);
   }
   if (messageIdResult === guildId.id) {
-    messages = messages.getMessages(guildId.channelId);
+    const messages = MessageStore.getMessages(guildId.channelId);
     let lastResult = null;
     if (!messages.hasMoreAfter) {
       lastResult = messages.last();
@@ -223,12 +224,12 @@ prototype["handleThreadListSync"] = function handleThreadListSync(guildId) {
   this.data(guildId.guildId).putMany(mostRecentMessages, this.generation);
 };
 prototype["handleLoadMessagesSuccess"] = function handleLoadMessagesSuccess(channelId) {
-  const basicChannel = store.getBasicChannel(channelId.channelId);
+  const basicChannel = ChannelStore.getBasicChannel(channelId.channelId);
   if (null == basicChannel) {
     return false;
   } else {
     const self = this;
-    const result = object(5276).requireSortedDescending(channelId.messages);
+    const result = requireSortedDescending.requireSortedDescending(channelId.messages);
     if (!channelId.isAfter) {
       if (!channelId.isBefore) {
         if (!channelId.hasMoreAfter) {
@@ -241,7 +242,6 @@ prototype["handleLoadMessagesSuccess"] = function handleLoadMessagesSuccess(chan
         }
       }
     }
-    const obj3 = object(5276);
     let first1 = channelId.messages[0];
     if (first1 == null) {
       first1 = null;
@@ -251,11 +251,10 @@ prototype["handleLoadMessagesSuccess"] = function handleLoadMessagesSuccess(chan
   }
 };
 prototype["handleLocalMessagesLoaded"] = function handleLocalMessagesLoaded(channelId) {
-  const basicChannel = store.getBasicChannel(channelId.channelId);
+  const basicChannel = ChannelStore.getBasicChannel(channelId.channelId);
   if (null != basicChannel) {
     const self = this;
-    const result = object(5276).requireSortedDescending(channelId.messages);
-    const obj = object(5276);
+    const result = requireSortedDescending.requireSortedDescending(channelId.messages);
     let first = channelId.messages[0];
     if (first == null) {
       first = null;
@@ -271,7 +270,6 @@ prototype["handleMessagePreviewsLoaded"] = function handleMessagePreviewsLoaded(
   for (const item10024 of tmp2) {
     let tmp3 = item10024;
     if (!dataResult.isLatest(item10024.channel_id, self.generation)) {
-      let tmp4 = item10024;
       let putResult = dataResult.put(tmp3.channel_id, tmp3, self.generation);
     }
     continue;
@@ -281,14 +279,10 @@ prototype["handleMessagePreviewsLocallyLoaded"] = function handleMessagePreviews
   closure_7.verbose("adding local previews (guildId: " + guildId.guildId + ", messages: " + guildId.messages.length + ")");
   const dataResult = this.data(guildId.guildId);
   while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
+    let tmp5 = _slicedToArray(tmp3, 2);
     [tmp6, tmp8] = tmp5;
     let tmp7 = tmp6;
     if (!dataResult.has(tmp6)) {
-      let tmp9 = tmp6;
-      let tmp10 = tmp8;
-      let tmp11 = c6;
       let putResult = dataResult.put(tmp7, tmp8, c6);
     }
     continue;
@@ -300,88 +294,87 @@ function handleLogout() {
   guilds.clear();
 }
 prototype["handleLogout"] = handleLogout;
-object = undefined;
-object = new Object(dispatcherDefault, {
+const object = new Object(DispatcherDefault, {
   CONNECTION_OPEN(arg0) {
-    return obj.handleConnectionOpen(arg0);
+    return closure_0.handleConnectionOpen(arg0);
   },
   GUILD_CREATE(arg0) {
-    return obj.handleGuildCreate(arg0);
+    return closure_0.handleGuildCreate(arg0);
   },
   GUILD_DELETE(arg0) {
-    return obj.handleGuildDelete(arg0);
+    return closure_0.handleGuildDelete(arg0);
   },
   LOAD_MESSAGES_SUCCESS(arg0) {
-    return obj.handleLoadMessagesSuccess(arg0);
+    return closure_0.handleLoadMessagesSuccess(arg0);
   },
   LOCAL_MESSAGES_LOADED(arg0) {
-    return obj.handleLocalMessagesLoaded(arg0);
+    return closure_0.handleLocalMessagesLoaded(arg0);
   },
   LOGOUT(arg0) {
-    return obj.handleLogout(arg0);
+    return closure_0.handleLogout(arg0);
   },
   MESSAGE_CREATE(arg0) {
-    return obj.handleMessageCreate(arg0);
+    return closure_0.handleMessageCreate(arg0);
   },
   MESSAGE_DELETE(arg0) {
-    return obj.handleMessageDelete(arg0);
+    return closure_0.handleMessageDelete(arg0);
   },
   MESSAGE_PREVIEWS_LOADED(arg0) {
-    return obj.handleMessagePreviewsLoaded(arg0);
+    return closure_0.handleMessagePreviewsLoaded(arg0);
   },
   MESSAGE_PREVIEWS_LOCALLY_LOADED(guildId) {
-    return obj.handleMessagePreviewsLocallyLoaded(guildId);
+    return closure_0.handleMessagePreviewsLocallyLoaded(guildId);
   },
   MESSAGE_UPDATE(arg0) {
-    return obj.handleMessageUpdate(arg0);
+    return closure_0.handleMessageUpdate(arg0);
   },
   THREAD_LIST_SYNC(arg0) {
-    return obj.handleThreadListSync(arg0);
+    return closure_0.handleThreadListSync(arg0);
   }
-}, tmp, MessagePreviewStore, Object, prototype, new.target, undefined, handleLogout, globalThis, arg1);
-// ThrowIfThisInitialized (0x7c)
+}, tmp, MessagePreviewStore, Object, prototype, new.target, undefined, handleLogout, globalThis, fn);
+let closure_129_0 = object;
 let obj = {
   CONNECTION_OPEN(arg0) {
-    return obj.handleConnectionOpen(arg0);
+    return closure_0.handleConnectionOpen(arg0);
   },
   GUILD_CREATE(arg0) {
-    return obj.handleGuildCreate(arg0);
+    return closure_0.handleGuildCreate(arg0);
   },
   GUILD_DELETE(arg0) {
-    return obj.handleGuildDelete(arg0);
+    return closure_0.handleGuildDelete(arg0);
   },
   LOAD_MESSAGES_SUCCESS(arg0) {
-    return obj.handleLoadMessagesSuccess(arg0);
+    return closure_0.handleLoadMessagesSuccess(arg0);
   },
   LOCAL_MESSAGES_LOADED(arg0) {
-    return obj.handleLocalMessagesLoaded(arg0);
+    return closure_0.handleLocalMessagesLoaded(arg0);
   },
   LOGOUT(arg0) {
-    return obj.handleLogout(arg0);
+    return closure_0.handleLogout(arg0);
   },
   MESSAGE_CREATE(arg0) {
-    return obj.handleMessageCreate(arg0);
+    return closure_0.handleMessageCreate(arg0);
   },
   MESSAGE_DELETE(arg0) {
-    return obj.handleMessageDelete(arg0);
+    return closure_0.handleMessageDelete(arg0);
   },
   MESSAGE_PREVIEWS_LOADED(arg0) {
-    return obj.handleMessagePreviewsLoaded(arg0);
+    return closure_0.handleMessagePreviewsLoaded(arg0);
   },
   MESSAGE_PREVIEWS_LOCALLY_LOADED(guildId) {
-    return obj.handleMessagePreviewsLocallyLoaded(guildId);
+    return closure_0.handleMessagePreviewsLocallyLoaded(guildId);
   },
   MESSAGE_UPDATE(arg0) {
-    return obj.handleMessageUpdate(arg0);
+    return closure_0.handleMessageUpdate(arg0);
   },
   THREAD_LIST_SYNC(arg0) {
-    return obj.handleThreadListSync(arg0);
+    return closure_0.handleThreadListSync(arg0);
   }
 };
-let tmp3 = new timestampDefault("MessagePreviewStore");
+let tmp3 = new LoggerDefault("MessagePreviewStore");
 object.guilds = new Map();
 object.generation = 0;
-const map = new Map();
-let result = require("set").fileFinishedImporting("modules/message_previews/MessagePreviewStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/message_previews/MessagePreviewStore.tsx");
 
 export default object;

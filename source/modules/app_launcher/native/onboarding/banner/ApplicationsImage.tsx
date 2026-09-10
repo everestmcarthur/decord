@@ -1,69 +1,68 @@
-// Module ID: 12054
-// Function ID: 12055
+// Module ID: 12080
+// Function ID: 12081
 // Name: ApplicationsImage
-// Dependencies: [19, 17, 21, 4560, 576, 12055, 5587, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 12081, 5601, 2]
 // Exports: default
 
-// Module 12054 (ApplicationsImage)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import preloadDefault from "preload" /* 5587 */;
-import handleApplicationSelected from "handleApplicationSelected" /* 12055 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12080 (ApplicationsImage)
+import nativeDefault from "native" /* 576 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12081 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { appIconContainer: null, appIconLeftContainer: null, appIconRightContainer: null, appIcon: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.sm + 3, position: "absolute", padding: 3 };
-createCacheKey[0] = createCacheKey;
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { appIconContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.sm + 3, position: "absolute", padding: 3 }, appIconLeftContainer: null, appIconRightContainer: null, appIcon: null };
+let obj4 = { transform: null };
 let items = [{ rotate: "-10deg" }];
-createCacheKey[1] = { transform: items };
+obj4.transform = items;
+obj2.appIconLeftContainer = obj4;
+let obj5 = { left: nativeDefault.space.PX_32, transform: null };
 let items1 = [{ rotate: "15deg" }];
-createCacheKey[2] = { left: ThemesDefault.space.PX_32, transform: items1 };
-let obj1 = { left: ThemesDefault.space.PX_32, transform: items1 };
-createCacheKey[3] = { borderRadius: ThemesDefault.radii.sm, width: 36, height: 36 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const obj2 = { borderRadius: ThemesDefault.radii.sm, width: 36, height: 36 };
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/banner/ApplicationsImage.tsx");
+obj5.transform = items1;
+obj2.appIconRightContainer = obj5;
+let size = { borderRadius: nativeDefault.radii.sm, width: 36, height: 36 };
+obj2.appIcon = size;
+let closure_7 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/banner/ApplicationsImage.tsx");
 
 export default function ApplicationsImage(arg0) {
   ({ firstApplication, secondApplication } = arg0);
-  const tmp = callback3();
+  const tmp = closure_7();
   let appLauncherIconSource = null;
   if (null != firstApplication) {
-    let obj = handleApplicationSelected;
-    appLauncherIconSource = obj.getAppLauncherIconSource(firstApplication);
+    appLauncherIconSource = AppLauncherNativeUtils.getAppLauncherIconSource(firstApplication);
   }
   let appLauncherIconSource1 = null;
   if (null != secondApplication) {
-    obj1 = handleApplicationSelected;
-    appLauncherIconSource1 = obj1.getAppLauncherIconSource(secondApplication);
+    appLauncherIconSource1 = AppLauncherNativeUtils.getAppLauncherIconSource(secondApplication);
   }
   let tmp8 = null != appLauncherIconSource;
   if (tmp8) {
-    obj = { style: null, source: null };
-    obj[0] = tmp.appIcon;
-    obj[1] = appLauncherIconSource;
-    tmp8 = callback(preloadDefault, obj);
+    const obj3 = { style: tmp.appIcon, source: appLauncherIconSource };
+    tmp8 = React4(FastImageDefault, obj3);
   }
   let tmp12 = null != appLauncherIconSource1;
   if (tmp12) {
-    obj = { style: null, source: null };
-    obj[0] = tmp.appIcon;
-    obj[1] = appLauncherIconSource1;
-    tmp12 = callback(preloadDefault, obj);
+    const obj4 = { style: tmp.appIcon, source: appLauncherIconSource1 };
+    tmp12 = React4(FastImageDefault, obj4);
   }
-  obj1 = { children: null };
+  const obj5 = { children: null };
+  const obj6 = { style: null, children: tmp12 };
   const items = [, ];
   ({ appIconContainer: arr[0], appIconLeftContainer: arr[1] } = tmp);
-  const items1 = [callback(View, { style: items, children: tmp12 }), ];
+  obj6.style = items;
+  const items1 = [React4(View, obj6), ];
+  const obj7 = { style: null, children: tmp8 };
   const items2 = [, ];
   ({ appIconContainer: arr3[0], appIconRightContainer: arr3[1] } = tmp);
-  items1[1] = callback(View, { style: items2, children: tmp8 });
-  obj1[0] = items1;
-  return callback2(closure_5, obj1);
+  obj7.style = items2;
+  items1[1] = React4(View, obj7);
+  obj5.children = items1;
+  return timestampProducer(hasOwnProperty, obj5);
 };
 export const APP_ICON_SIZE = 36;

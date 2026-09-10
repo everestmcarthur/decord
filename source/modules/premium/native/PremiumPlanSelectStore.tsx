@@ -1,23 +1,28 @@
-// Module ID: 13547
-// Function ID: 13548
-// Name: usePremiumPlanSelectStore
+// Module ID: 13570
+// Function ID: 13571
+// Name: PremiumPlanSelectStore
 // Dependencies: [560, 1249, 2]
 // Exports: setIsPurchasing
 
-// Module 13547 (usePremiumPlanSelectStore)
-import set from "set" /* 2 */;
-import keys from "keys" /* 560 */;
+// Module 13570 (PremiumPlanSelectStore)
+import module_560 from "module_560" /* 560 */;
+import size from "module_2" /* 2 */;
 
-const obj = keys.create(() => ({ isPurchasing: false, purchasingProductId: null }));
-const result = set.fileFinishedImporting("modules/premium/native/PremiumPlanSelectStore.tsx");
+const require = globalThis.__r;
 
-export const usePremiumPlanSelectStore = obj;
-export const setIsPurchasing = function setIsPurchasing(arg0) {
-  const _require = arg0;
+const usePremiumPlanSelectStore = module_560.create(() => ({ isPurchasing: false, purchasingProductId: null }));
+const result = size.fileFinishedImporting("modules/premium/native/PremiumPlanSelectStore.tsx");
+
+export { usePremiumPlanSelectStore };
+export const setIsPurchasing = function setIsPurchasing(isPurchasing) {
+  _require = isPurchasing;
   let tmp = arg1;
   if (arg1 === undefined) {
     tmp = null;
   }
   dependencyMap = tmp;
-  _require(1249).batchUpdates(() => closure_1_2.setState({ isPurchasing: closure_0, purchasingProductId: c1 }));
+  require("ReactBatchUpdates").batchUpdates(() => {
+    const obj = { isPurchasing, purchasingProductId };
+    return obj.setState(obj);
+  });
 };

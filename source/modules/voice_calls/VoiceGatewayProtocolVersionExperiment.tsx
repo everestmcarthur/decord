@@ -1,24 +1,25 @@
-// Module ID: 14082
-// Function ID: 14083
-// Name: apexExperiment
+// Module ID: 14105
+// Function ID: 14106
+// Name: VoiceGatewayProtocolVersionExperiment
 // Dependencies: [1433, 2]
 // Exports: getVoiceGatewayProtocolVersion
 
-// Module 14082 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 14105 (VoiceGatewayProtocolVersionExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-let obj = { 1: null };
-obj[1] = { enabled: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-04-voice-gateway-protocol-version", kind: "user", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/voice_calls/VoiceGatewayProtocolVersionExperiment.tsx");
+let obj = { name: "2026-04-voice-gateway-protocol-version", kind: "user", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj.variations = obj2;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/voice_calls/VoiceGatewayProtocolVersionExperiment.tsx");
 
 export default apexExperiment;
 export const getVoiceGatewayProtocolVersion = function getVoiceGatewayProtocolVersion(supportsSfuUpdate) {
   let num = 9;
   if (supportsSfuUpdate.supportsSfuUpdate) {
-    const obj = { location: null };
-    obj[0] = tmp;
+    const obj = { location: tmp };
     num = 9;
     if (apexExperiment.getConfig(obj).enabled) {
       num = 10;

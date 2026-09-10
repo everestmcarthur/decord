@@ -1,17 +1,19 @@
-// Module ID: 13287
-// Function ID: 13288
+// Module ID: 13310
+// Function ID: 13311
 // Name: useRefreshSavedMessages
-// Dependencies: [19, 11710, 2]
+// Dependencies: [19, 11736, 2]
 // Exports: default
 
-// Module 13287 (useRefreshSavedMessages)
-import closure_2 from "noop" /* 19 */;
+// Module 13310 (useRefreshSavedMessages)
+import SavedMessagesActions from "SavedMessagesActions" /* 11736 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/saved_messages/useRefreshSavedMessages.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/saved_messages/useRefreshSavedMessages.tsx");
 
 export default function useRefreshSavedMessages() {
-  const effect = React.useEffect(() => {
-    const andUpdateSavedMessages = callback(table[1]).fetchAndUpdateSavedMessages();
+  const effect = noop.useEffect(() => {
+    const andUpdateSavedMessages = SavedMessagesActions.fetchAndUpdateSavedMessages();
   }, []);
 };

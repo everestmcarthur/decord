@@ -1,22 +1,21 @@
-// Module ID: 17817
-// Function ID: 17818
-// Name: apexExperiment
+// Module ID: 17850
+// Function ID: 17851
+// Name: QuestFetchReconnectJitterExperiment
 // Dependencies: [1090, 1433, 2]
 // Exports: getQuestFetchReconnectJitterConfig
 
-// Module 17817 (apexExperiment)
-import set from "set" /* 2 */;
-import setDefault from "set" /* 1090 */;
+// Module 17850 (QuestFetchReconnectJitterExperiment)
+import DurationsDefault from "Durations" /* 1090 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-let obj = { questFetchJitterMs: 5 * setDefault.Millis.SECOND, questHomeHeroJitterMs: 5 * setDefault.Millis.SECOND };
-obj = { name: "2026-06-quest-fetch-reconnect-jitter", kind: "user", defaultConfig: obj, variations: null };
-obj = { 1: null };
-obj[1] = { questFetchJitterMs: 60 * setDefault.Millis.SECOND, questHomeHeroJitterMs: 60 * setDefault.Millis.SECOND };
-obj[3] = obj;
-const apexExperiment = ApexExperiment.createApexExperiment(obj);
-const obj1 = { questFetchJitterMs: 60 * setDefault.Millis.SECOND, questHomeHeroJitterMs: 60 * setDefault.Millis.SECOND };
-const result = set.fileFinishedImporting("modules/quests/experiments/QuestFetchReconnectJitterExperiment.tsx");
+const obj = { questFetchJitterMs: 5 * DurationsDefault.Millis.SECOND, questHomeHeroJitterMs: 5 * DurationsDefault.Millis.SECOND };
+const obj2 = { name: "2026-06-quest-fetch-reconnect-jitter", kind: "user", defaultConfig: obj, variations: null };
+const obj3 = { 1: null };
+obj3[1] = { questFetchJitterMs: 60 * DurationsDefault.Millis.SECOND, questHomeHeroJitterMs: 60 * DurationsDefault.Millis.SECOND };
+obj2.variations = obj3;
+const apexExperiment = ApexExperiment.createApexExperiment(obj2);
+const result = size.fileFinishedImporting("modules/quests/experiments/QuestFetchReconnectJitterExperiment.tsx");
 
 export default apexExperiment;
 export const DEFAULT_QUEST_FETCH_JITTER_CONFIG = obj;

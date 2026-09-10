@@ -1,40 +1,43 @@
-// Module ID: 15006
-// Function ID: 15007
-// Dependencies: [19, 5444, 21, 11525, 15007, 15064, 11790, 11933, 2]
+// Module ID: 15032
+// Function ID: 15033
+// Name: BountiesModal
+// Dependencies: [19, 21, 15033, 15034, 15091, 11816, 11959, 2]
 
-// Module 15006
-import importAllResult from "noop" /* 19 */;
-import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 5444 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 15032 (BountiesModal)
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
+const require = fn;
+const jsx = fn(21).jsx;
 const bounty_main = "bounty_main";
-const memoResult = importAllResult.memo(function BountiesModal(bountyId) {
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModal.tsx");
+
+export default noop.memo(function BountiesModal(bountyId) {
   bountyId = bountyId.bountyId;
   const sourceQuestContent = bountyId.sourceQuestContent;
-  let verticalScrollEnabled;
-  let obj = bountyId(verticalScrollEnabled[3]);
-  verticalScrollEnabled = obj.useBountiesExperience(QuestsExperimentLocations.VIDEO_MODAL_MOBILE).verticalScrollEnabled;
-  const items = [bountyId, sourceQuestContent, verticalScrollEnabled];
-  const memo = importAllResult.useMemo(() => ({
-    [closure_1_6]: {
+  const variant = bountyId.variant;
+  const items = [bountyId, sourceQuestContent, variant];
+  const memo = noop.useMemo(() => ({
+    [closure_2_5]: {
       fullscreen: true,
       headerLeft() {
         return null;
       },
       render() {
-        return closure_1_5(closure_1_1(closure_2 ? closure_1_2[4] : closure_1_2[5]), { bountyId: closure_0, sourceQuestContent: closure_1 });
+        if (closure_1_2 === bountyId(variant[2]).BountiesModalVariant.VERTICAL_SCROLL) {
+          const obj2 = { bountyId, sourceQuestContent };
+          let tmp6 = jsx(sourceQuestContent(tmp[3]), { bountyId, sourceQuestContent });
+        } else {
+          const obj = { bountyId, sourceQuestContent };
+          tmp6 = jsx(sourceQuestContent(tmp[4]), { bountyId, sourceQuestContent });
+        }
+        return tmp6;
       }
     }
   }), items);
-  const layoutEffect = importAllResult.useLayoutEffect(() => {
-    bountyId(verticalScrollEnabled[6]).applyOrientationLock("PORTRAIT");
-    return bountyId(verticalScrollEnabled[6]).restoreDefaultOrientationLock;
+  const layoutEffect = noop.useLayoutEffect(() => {
+    bountyId(variant[5]).applyOrientationLock("PORTRAIT");
+    return bountyId(variant[5]).restoreDefaultOrientationLock;
   }, []);
-  obj = { hideTitle: true, initialRouteName: bounty_main, screens: memo, viewStyle: { backgroundColor: "#000000" } };
-  return jsx(bountyId(verticalScrollEnabled[7]).Modal, { hideTitle: true, initialRouteName: bounty_main, screens: memo, viewStyle: { backgroundColor: "#000000" } });
+  return jsx(bountyId(variant[6]).Modal, { hideTitle: true, initialRouteName: bounty_main, screens: memo, viewStyle: { backgroundColor: "#000000" } });
 });
-const result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModal.tsx");
-
-export default memoResult;

@@ -1,229 +1,218 @@
-// Module ID: 13527
-// Function ID: 13528
-// Name: FEATURES_PREMIUM_GUILD_USER
-// Dependencies: [19, 17, 5438, 1373, 21, 4560, 576, 13506, 1114, 9380, 13528, 13529, 13531, 9757, 13532, 8762, 13533, 10119, 13534, 12534, 13535, 9376, 13536, 10240, 504, 13421, 13537, 4495, 13326, 4411, 13335, 13336, 4556, 9396, 13541, 13542, 13543, 2]
+// Module ID: 13550
+// Function ID: 13551
+// Name: GuildBoostingUpsell
+// Dependencies: [19, 17, 5452, 1373, 21, 4574, 576, 13529, 1114, 9407, 13551, 13552, 13554, 9784, 13555, 8790, 13556, 10146, 13557, 12560, 13558, 9403, 13559, 10267, 504, 13444, 13560, 4509, 13349, 4425, 13358, 13359, 4570, 9423, 13564, 13565, 13566, 2]
 // Exports: default
 
-// Module 13527 (FEATURES_PREMIUM_GUILD_USER)
-import noopAll from "noop" /* 19 */;
+// Module 13550 (GuildBoostingUpsell)
 import initialize from "initialize" /* 504 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
-import useThemeDefault from "useTheme" /* 4495 */;
-import Text from "Text" /* 4556 */;
-import ReactionIcon from "ReactionIcon" /* 8762 */;
-import UploadIcon from "UploadIcon" /* 9376 */;
-import BoostGemIcon from "BoostGemIcon" /* 9380 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 9396 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 9757 */;
-import StickerIcon from "StickerIcon" /* 10119 */;
-import StarIcon from "StarIcon" /* 10240 */;
-import HeadphonesIcon from "HeadphonesIcon" /* 12534 */;
-import getSubscriptionPlansLoaded from "getSubscriptionPlansLoaded" /* 13421 */;
-import registerAssetDefault from "registerAsset" /* 13506 */;
-import registerAssetDefault2 from "registerAsset" /* 13528 */;
-import registerAssetDefault3 from "registerAsset" /* 13531 */;
-import registerAssetDefault4 from "registerAsset" /* 13532 */;
-import registerAssetDefault5 from "registerAsset" /* 13533 */;
-import registerAssetDefault6 from "registerAsset" /* 13534 */;
-import registerAssetDefault7 from "registerAsset" /* 13535 */;
-import registerAssetDefault8 from "registerAsset" /* 13536 */;
-import getGuildSubscriptionNoGuildsSource from "getGuildSubscriptionNoGuildsSource" /* 13537 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "insertUnsortedGuilds" /* 5438 */;
-import { FractionalPremiumStates } from "GuildFeatures" /* 1373 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import shared from "shared" /* 4425 */;
+import useThemeDefault from "useTheme" /* 4509 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import ReactionIcon from "ReactionIcon" /* 8790 */;
+import UploadIcon from "UploadIcon" /* 9403 */;
+import BoostGemIcon from "BoostGemIcon" /* 9407 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 9423 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9784 */;
+import StickerIcon from "StickerIcon" /* 10146 */;
+import StarIcon from "StarIcon" /* 10267 */;
+import HeadphonesIcon from "HeadphonesIcon" /* 12560 */;
+import _modDef13349 from "module_13349" /* 13349 */;
+import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 13444 */;
+import _modDef13529 from "module_13529" /* 13529 */;
+import _modDef13551 from "module_13551" /* 13551 */;
+import BoostTier3Icon from "BoostTier3Icon" /* 13552 */;
+import _modDef13554 from "module_13554" /* 13554 */;
+import _modDef13555 from "module_13555" /* 13555 */;
+import _modDef13556 from "module_13556" /* 13556 */;
+import _modDef13557 from "module_13557" /* 13557 */;
+import _modDef13558 from "module_13558" /* 13558 */;
+import _modDef13559 from "module_13559" /* 13559 */;
+import GuildSubscriptionNoGuilds from "GuildSubscriptionNoGuilds" /* 13560 */;
+import noop from "module_19" /* 19 */;
+import SortedGuildStore from "SortedGuildStore" /* 5452 */;
 
-require = arg1;
-noopAll;
-({ View: c3, Image: c4, StyleSheet } = get_ActivityIndicator);
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { root: { paddingHorizontal: 16, paddingVertical: 32 }, title: { marginTop: 16 }, features: { marginTop: 16 }, cardText: { lineHeight: 20, marginTop: 8, textAlign: "center" }, guildList: { marginTop: 16 }, logoPremiumGuild: { resizeMode: "contain", width: "100%", height: 34, maxWidth: 320, marginTop: 16 }, imgPremiumGuild: { width: 95, height: 65 }, imgNoGuilds: { width: 178, height: 112, marginTop: 32 }, header: { alignItems: "center" }, upsell: null, subscriptionUpsell: null };
-createCacheKey = { marginTop: 32, paddingTop: 16, borderTopWidth: 2 * StyleSheet.hairlineWidth, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[9] = createCacheKey;
-createCacheKey[10] = { marginTop: 32 };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, Image: closure_4, StyleSheet } = get_ActivityIndicator);
+const FractionalPremiumStates = fn(1373).FractionalPremiumStates;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { root: { paddingHorizontal: 16, paddingVertical: 32 }, title: { marginTop: 16 }, features: { marginTop: 16 }, cardText: { lineHeight: 20, marginTop: 8, textAlign: "center" }, guildList: { marginTop: 16 }, logoPremiumGuild: { resizeMode: "contain", width: "100%", height: 34, maxWidth: 320, marginTop: 16 }, imgPremiumGuild: { width: 95, height: 65 }, imgNoGuilds: { width: 178, height: 112, marginTop: 32 }, header: { alignItems: "center" }, upsell: { marginTop: 32, paddingTop: 16, borderTopWidth: 2 * StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE }, subscriptionUpsell: { marginTop: 32 } };
+let closure_9 = createStyles.createStyles(obj2);
 class FEATURES_PREMIUM_GUILD_USER {
   constructor() {
-    obj = { icon: require("registerAsset"), label: null, IconComponent: null, color: null };
-    intl = require("getSystemLocale").intl;
-    obj[1] = intl.string(require("getSystemLocale").t["GS+bL0"]);
-    obj[2] = require("BoostGemIcon").BoostGemIcon;
-    obj[3] = require("Themes").unsafe_rawColors.GUILD_BOOSTING_PINK;
+    obj = { icon: closure_1(closure_2[7]), label: null, IconComponent: null, color: null };
+    intl = closure_0(closure_2[8]).intl;
+    obj.label = intl.string(closure_0(closure_2[8]).t["GS+bL0"]);
+    obj.IconComponent = closure_0(closure_2[9]).BoostGemIcon;
+    obj.color = closure_1(closure_2[6]).unsafe_rawColors.GUILD_BOOSTING_PINK;
     items = [, , ];
     items[0] = obj;
-    obj = { icon: require("registerAsset"), label: null, IconComponent: null };
-    intl2 = require("getSystemLocale").intl;
-    obj[1] = intl2.string(require("getSystemLocale").t.a7LWeM);
-    obj[2] = function IconComponent(arg0) {
+    obj1 = { icon: closure_1(closure_2[10]), label: null, IconComponent: null };
+    intl2 = closure_0(closure_2[8]).intl;
+    obj1.label = intl2.string(closure_0(closure_2[8]).t.a7LWeM);
+    obj1.IconComponent = function IconComponent(arg0) {
       const obj = {};
       const merged = Object.assign(arg0);
-      obj.color = callback2(576).unsafe_rawColors.GUILD_BOOSTING_PINK;
-      return callback3(callback(13529).BoostTier3Icon, obj);
+      obj.color = nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK;
+      return closure_1_7(BoostTier3Icon.BoostTier3Icon, obj);
     };
-    items[1] = obj;
-    obj1 = { icon: require("registerAsset"), label: null, color: null, IconComponent: null };
-    intl3 = require("getSystemLocale").intl;
-    obj1[1] = intl3.string(require("getSystemLocale").t.E76jz8);
-    obj1[2] = require("Themes").unsafe_rawColors.YELLOW_300;
-    obj1[3] = require("ShieldUserIcon").ShieldUserIcon;
-    items[2] = obj1;
+    items[1] = obj1;
+    obj4 = { icon: closure_1(closure_2[12]), label: null, color: null, IconComponent: null };
+    intl3 = closure_0(closure_2[8]).intl;
+    obj4.label = intl3.string(closure_0(closure_2[8]).t.E76jz8);
+    obj4.color = closure_1(closure_2[6]).unsafe_rawColors.YELLOW_300;
+    obj4.IconComponent = closure_0(closure_2[13]).ShieldUserIcon;
+    items[2] = obj4;
     return items;
   }
 }
-const result = require("set").fileFinishedImporting("components_native/premium/GuildBoostingUpsell.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/premium/GuildBoostingUpsell.tsx");
 
 export default function GuildBoostingUpsell(arg0) {
   ({ fractionalState, isInReverseTrial } = arg0);
   ({ onLearnMorePremium, hasAvailableSlots } = arg0);
-  const tmp = callback2();
-  let obj = initialize;
-  const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => flattenedGuildIds.getFlattenedGuildIds().length > 0);
-  obj1 = getSubscriptionPlansLoaded;
-  const subscriptionPlansLoaded = obj1.useSubscriptionPlansLoaded();
-  let obj2 = getGuildSubscriptionNoGuildsSource;
-  const guildSubscriptionNoGuildsSource = obj2.useGuildSubscriptionNoGuildsSource();
+  const tmp = closure_9();
+  const items = [SortedGuildStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => flattenedGuildIds.getFlattenedGuildIds().length > 0);
+  const subscriptionPlansLoaded = useSubscriptionPlansLoaded.useSubscriptionPlansLoaded();
+  const guildSubscriptionNoGuildsSource = GuildSubscriptionNoGuilds.useGuildSubscriptionNoGuildsSource();
   if (fractionalState !== FractionalPremiumStates.NONE) {
     if (!isInReverseTrial) {
       let tmp11Result = null;
     }
     return tmp11Result;
   }
-  obj = { style: tmp.root, children: null };
-  obj = { style: tmp.header, children: null };
-  obj1 = { style: tmp.imgPremiumGuild, source: tmp7(13326) };
-  const items1 = [callback(closure_4, obj1), , , ];
-  obj2 = { style: tmp.logoPremiumGuild, source: null };
+  const obj4 = { style: tmp.root, children: null };
+  const obj5 = { style: tmp.header, children: null };
   const tmp8 = useThemeDefault();
   const tmp9 = FractionalPremiumStates;
+  const items1 = [React5(React4, { style: tmp.imgPremiumGuild, source: _modDef13349 }), , , ];
+  const obj7 = { style: tmp.logoPremiumGuild, source: null };
+  const obj6 = { style: tmp.imgPremiumGuild, source: _modDef13349 };
   if (tmp2Result.isThemeDark(tmp8)) {
-    let tmp7Result = tmp7(13335);
+    let tmp7Result = tmp7(13358);
   } else {
-    tmp7Result = tmp7(13336);
+    tmp7Result = tmp7(13359);
   }
-  obj2[1] = tmp7Result;
-  items1[1] = callback(closure_4, obj2);
-  const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  obj7.source = tmp7Result;
+  items1[1] = React5(React4, obj7);
+  const obj8 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = tmp2(1114).intl;
-  obj3[4] = intl.string(getSystemLocale.t.hw6WTd);
-  items1[2] = callback(Text.Text, obj3);
-  const obj4 = { style: tmp.cardText, variant: "text-md/medium", children: null };
+  obj8.children = intl.string(util.t.hw6WTd);
+  items1[2] = React5(Text_Text.Text, obj8);
+  const obj9 = { style: tmp.cardText, variant: "text-md/medium", children: null };
   const intl2 = tmp2(1114).intl;
-  obj4[2] = intl2.string(getSystemLocale.t.K5jBdG);
-  items1[3] = callback(Text.Text, obj4);
-  obj[1] = items1;
-  const items2 = [closure_8(closure_3, obj), , , , , ];
-  const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  obj9.children = intl2.string(util.t.K5jBdG);
+  items1[3] = React5(Text_Text.Text, obj9);
+  obj5.children = items1;
+  const items2 = [React6(React3, obj5), , , , , ];
+  const obj10 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl3 = tmp2(1114).intl;
-  obj5[4] = intl3.string(getSystemLocale.t.RvfRTB);
-  items2[1] = callback(Text.Text, obj5);
-  const obj6 = { style: tmp.features, features: null };
-  tmp7Result = tmp7(9396);
-  obj6[1] = FEATURES_PREMIUM_GUILD_USER();
-  items2[2] = callback(tmp7Result, obj6);
-  const obj7 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  obj10.children = intl3.string(util.t.RvfRTB);
+  items2[1] = React5(Text_Text.Text, obj10);
+  const obj11 = { style: tmp.features, features: null };
+  tmp2Result = shared;
+  obj11.features = FEATURES_PREMIUM_GUILD_USER();
+  items2[2] = React5(PremiumFeatureListDefault, obj11);
+  const obj12 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl4 = tmp2(1114).intl;
-  obj7[4] = intl4.string(getSystemLocale.t["/pVhjb"]);
-  items2[3] = callback(Text.Text, obj7);
-  const obj8 = { style: tmp.features, features: null };
-  const obj9 = { icon: null, label: null, IconComponent: null, color: null };
-  tmp2Result = AccessibilityAnnouncer;
-  obj9[0] = registerAssetDefault4;
+  obj12.children = intl4.string(util.t["/pVhjb"]);
+  items2[3] = React5(Text_Text.Text, obj12);
+  const obj13 = { style: tmp.features, features: null };
+  const obj14 = { icon: null, label: null, IconComponent: null, color: null };
+  const tmp7Result3 = PremiumFeatureListDefault;
+  obj14.icon = _modDef13555;
   const intl5 = tmp2(1114).intl;
-  obj9[1] = intl5.string(getSystemLocale.t.Ts7BVI);
-  obj9[2] = ReactionIcon.ReactionIcon;
-  obj9[3] = ThemesDefault.unsafe_rawColors.PREMIUM_PERK_YELLOW;
-  const items3 = [obj9, , , , ];
-  const obj10 = { icon: registerAssetDefault5, label: null, IconComponent: null, color: null };
+  obj14.label = intl5.string(util.t.Ts7BVI);
+  obj14.IconComponent = ReactionIcon.ReactionIcon;
+  obj14.color = nativeDefault.unsafe_rawColors.PREMIUM_PERK_YELLOW;
+  const items3 = [obj14, , , , ];
+  const obj15 = { icon: _modDef13556, label: null, IconComponent: null, color: null };
   const intl6 = tmp2(1114).intl;
-  obj10[1] = intl6.string(getSystemLocale.t.QcJbt6);
-  obj10[2] = StickerIcon.StickerIcon;
-  obj10[3] = ThemesDefault.unsafe_rawColors.PREMIUM_PERK_PURPLE;
-  items3[1] = obj10;
-  const obj11 = { icon: registerAssetDefault6, label: null, color: "#4173da", IconComponent: null };
+  obj15.label = intl6.string(util.t.QcJbt6);
+  obj15.IconComponent = StickerIcon.StickerIcon;
+  obj15.color = nativeDefault.unsafe_rawColors.PREMIUM_PERK_PURPLE;
+  items3[1] = obj15;
+  const obj16 = { icon: _modDef13557, label: null, color: "#4173da", IconComponent: null };
   const intl7 = tmp2(1114).intl;
-  obj11[1] = intl7.string(getSystemLocale.t.rFNkf5);
-  obj11[3] = HeadphonesIcon.HeadphonesIcon;
-  items3[2] = obj11;
-  const obj12 = { icon: registerAssetDefault7, label: null, IconComponent: null, color: null };
+  obj16.label = intl7.string(util.t.rFNkf5);
+  obj16.IconComponent = HeadphonesIcon.HeadphonesIcon;
+  items3[2] = obj16;
+  const obj17 = { icon: _modDef13558, label: null, IconComponent: null, color: null };
   const intl8 = tmp2(1114).intl;
-  obj12[1] = intl8.string(getSystemLocale.t["BpjjS/"]);
-  obj12[2] = UploadIcon.UploadIcon;
-  obj12[3] = ThemesDefault.unsafe_rawColors.GUILD_BOOSTING_PINK;
-  items3[3] = obj12;
-  const obj13 = { icon: registerAssetDefault8, label: null, IconComponent: null, color: null };
+  obj17.label = intl8.string(util.t["BpjjS/"]);
+  obj17.IconComponent = UploadIcon.UploadIcon;
+  obj17.color = nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK;
+  items3[3] = obj17;
+  const obj18 = { icon: _modDef13559, label: null, IconComponent: null, color: null };
   const intl9 = tmp2(1114).intl;
-  obj13[1] = intl9.string(getSystemLocale.t["9g5Lgb"]);
-  obj13[2] = StarIcon.StarIcon;
-  obj13[3] = ThemesDefault.unsafe_rawColors.PREMIUM_PERK_GOLD;
-  items3[4] = obj13;
-  obj8[1] = items3;
-  items2[4] = callback(PremiumFeatureListDefault, obj8);
-  const obj14 = { style: tmp.upsell, children: null };
+  obj18.label = intl9.string(util.t["9g5Lgb"]);
+  obj18.IconComponent = StarIcon.StarIcon;
+  obj18.color = nativeDefault.unsafe_rawColors.PREMIUM_PERK_GOLD;
+  items3[4] = obj18;
+  obj13.features = items3;
+  items2[4] = React5(PremiumFeatureListDefault, obj13);
+  const obj19 = { style: tmp.upsell, children: null };
   let tmp13Result = null;
   if (subscriptionPlansLoaded) {
     tmp13Result = null;
     if (fractionalState === tmp9.NONE) {
-      tmp13Result = tmp13(tmp7(13541), {});
+      tmp13Result = tmp13(tmp7(13564), {});
     }
   }
   const items4 = [tmp13Result, , ];
   if (isInReverseTrial) {
     items4[1] = null;
-    tmp13Result = null;
+    let tmp13Result2 = null;
     if (subscriptionPlansLoaded) {
-      const obj15 = { onLearnMorePremium: null, style: null };
-      obj15[0] = onLearnMorePremium;
-      obj15[1] = tmp.subscriptionUpsell;
-      tmp13Result = tmp13(tmp7(13543), obj15);
+      const obj20 = { onLearnMorePremium, style: tmp.subscriptionUpsell };
+      tmp13Result2 = tmp13(tmp7(13566), obj20);
     }
-    items4[2] = tmp13Result;
-    obj14[1] = items4;
-    items2[5] = tmp11(tmp12, obj14);
-    obj[1] = items2;
-    tmp11Result = tmp11(tmp12, obj);
+    items4[2] = tmp13Result2;
+    obj19.children = items4;
+    items2[5] = tmp11(tmp12, obj19);
+    obj4.children = items2;
+    tmp11Result = tmp11(tmp12, obj4);
   } else {
-    const obj16 = { children: null };
+    const obj21 = { children: null };
     if (stateFromStores) {
-      const obj17 = { style: null, variant: "text-md/medium", children: null };
-      obj17[0] = tmp.cardText;
+      const obj22 = { style: tmp.cardText, variant: "text-md/medium", children: null };
       const intl12 = tmp2(1114).intl;
-      obj17[2] = intl12.string(tmp2(1114).t.WRzob8);
-      const items5 = [tmp13(tmp2(4556).Text, obj17), , ];
-      const obj18 = { style: null, variant: "text-md/bold", children: null };
+      obj22.children = intl12.string(tmp2(1114).t.WRzob8);
+      const items5 = [tmp13(tmp2(4570).Text, obj22), , ];
+      const obj23 = { style: null, variant: "text-md/bold", children: null };
       const items6 = [tmp.cardText];
-      obj18[0] = items6;
+      obj23.style = items6;
       const intl13 = tmp2(1114).intl;
-      obj18[2] = intl13.string(tmp2(1114).t.j4bXcm);
-      items5[1] = tmp13(tmp2(4556).Text, obj18);
-      const obj19 = { style: null };
-      obj19[0] = tmp.guildList;
-      items5[2] = tmp13(tmp7(13542), obj19);
-      obj16[0] = items5;
-      let tmp19 = obj16;
+      obj23.children = intl13.string(tmp2(1114).t.j4bXcm);
+      items5[1] = tmp13(tmp2(4570).Text, obj23);
+      const obj24 = { style: tmp.guildList };
+      items5[2] = tmp13(tmp7(13565), obj24);
+      obj21.children = items5;
+      let tmp19 = obj21;
     } else {
-      const obj20 = { style: null, source: null };
-      obj20[0] = tmp.imgNoGuilds;
-      obj20[1] = guildSubscriptionNoGuildsSource;
-      const items7 = [tmp13(tmp14, obj20), , ];
-      const obj21 = { style: null, variant: "text-md/bold", children: null };
+      const obj25 = { style: tmp.imgNoGuilds, source: guildSubscriptionNoGuildsSource };
+      const items7 = [tmp13(tmp14, obj25), , ];
+      const obj26 = { style: null, variant: "text-md/bold", children: null };
       const items8 = [tmp.cardText];
-      obj21[0] = items8;
+      obj26.style = items8;
       const intl10 = tmp2(1114).intl;
-      obj21[2] = intl10.string(tmp2(1114).t.FHm4bZ);
-      items7[1] = tmp13(tmp2(4556).Text, obj21);
-      const obj22 = { style: null, variant: "text-md/medium", children: null };
-      obj22[0] = tmp.cardText;
+      obj26.children = intl10.string(tmp2(1114).t.FHm4bZ);
+      items7[1] = tmp13(tmp2(4570).Text, obj26);
+      const obj27 = { style: tmp.cardText, variant: "text-md/medium", children: null };
       const intl11 = tmp2(1114).intl;
-      obj22[2] = intl11.string(tmp2(1114).t.PSLiiu);
-      items7[2] = tmp13(tmp2(4556).Text, obj22);
-      obj16[0] = items7;
-      tmp19 = obj16;
+      obj27.children = intl11.string(tmp2(1114).t.PSLiiu);
+      items7[2] = tmp13(tmp2(4570).Text, obj27);
+      obj21.children = items7;
+      tmp19 = obj21;
     }
-    tmp11Result = tmp11(tmp12, tmp19);
+    tmp11(tmp12, tmp19);
   }
 };
 export { FEATURES_PREMIUM_GUILD_USER };

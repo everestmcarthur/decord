@@ -1,39 +1,38 @@
 // Module ID: 2004
 // Function ID: 2005
-// Name: getUserId
+// Name: StartupData
 // Dependencies: [17, 1115, 2005, 2]
 // Exports: getUserId, setUserId
 
-// Module 2004 (getUserId)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set2 from "set" /* 1115 */;
-import enforcingDefault from "enforcing" /* 2005 */;
+// Module 2004 (StartupData)
+import _mod17 from "module_17" /* 17 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import NativeAppDatabaseModuleDefault from "NativeAppDatabaseModule" /* 2005 */;
+import size from "module_2" /* 2 */;
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-const result = set.fileFinishedImporting("modules/app_database/system/StartupData.native.tsx");
+const NativeModules = _mod17.NativeModules;
+const result = size.fileFinishedImporting("modules/app_database/system/StartupData.native.tsx");
 
 export const getUserId = function getUserId() {
   if (obj.isAndroid()) {
-    let userId = enforcingDefault.getConstants().userId;
+    const userId = NativeAppDatabaseModuleDefault.getConstants().userId;
     let tmp6 = null;
     if (null != userId) {
       tmp6 = userId;
     }
     return tmp6;
   } else {
-    userId = NativeModules.DCDAppDatabase.userId;
-    if (userId == null) {
-      userId = null;
+    let userId1 = NativeModules.DCDAppDatabase.userId;
+    if (userId1 == null) {
+      userId1 = null;
     }
-    return userId;
+    return userId1;
   }
-  obj = set2;
+  obj = PlatformUtils;
 };
 export const setUserId = function setUserId(id) {
   if (obj.isAndroid()) {
-    enforcingDefault.setUserId(id);
-    const obj2 = enforcingDefault;
+    NativeAppDatabaseModuleDefault.setUserId(id);
   } else {
     const DCDAppDatabase = NativeModules.DCDAppDatabase;
     DCDAppDatabase.setUserId(id);

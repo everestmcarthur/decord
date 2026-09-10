@@ -1,29 +1,29 @@
-// Module ID: 7096
-// Function ID: 7097
-// Name: shouldShowOnboarding
+// Module ID: 7110
+// Function ID: 7111
+// Name: GuildOnboardingStore
 // Dependencies: [1074, 504, 1982, 573, 2]
 // Exports: isOnboarding
 
-// Module 7096 (shouldShowOnboarding)
-import set from "set" /* 2 */;
+// Module 7110 (GuildOnboardingStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import ME2 from "ME" /* 1074 */;
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1982 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 1074 */;
+import FavoritesUtils from "FavoritesUtils" /* 1982 */;
+import size from "module_2" /* 2 */;
 
-const ME = ME2.ME;
-let obj = { STARTED: "started", READY: "ready", COMPLETED: "completed", NOT_APPLICABLE: "not_applicable" };
-let closure_4 = {};
+const ME = Constants.ME;
+const GuildOnboardingStatus = { STARTED: "started", READY: "ready", COMPLETED: "completed", NOT_APPLICABLE: "not_applicable" };
+const dependencyMap = {};
 let closure_5 = {};
 const Store = initializeDefault.Store;
 class GuildOnboardingStore extends Store {
 }
 const prototype = GuildOnboardingStore.prototype;
-prototype["shouldShowOnboarding"] = function shouldShowOnboarding(c0) {
-  let tmp = c0 !== ME;
+prototype["shouldShowOnboarding"] = function shouldShowOnboarding(guildId) {
+  let tmp = guildId !== ME;
   if (tmp) {
-    obj = getFavoritesAwareGuildName;
-    tmp = !obj.isFavoritesGuildId(c0);
+    const obj = FavoritesUtils;
+    tmp = !obj.isFavoritesGuildId(guildId);
   }
   if (tmp) {
     let hasItem = null != tmp5;
@@ -44,14 +44,14 @@ prototype["resetOnboardingStatus"] = function resetOnboardingStatus(arg0) {
   closure_5[arg0] = "cover";
 };
 prototype["getCurrentOnboardingStep"] = function getCurrentOnboardingStep(arg0) {
-  let str = table[arg0];
+  let str = closure_5[arg0];
   if (str == null) {
     str = "cover";
   }
   return str;
 };
 GuildOnboardingStore.displayName = "GuildOnboardingStore";
-obj = {
+const guildOnboardingStore = new GuildOnboardingStore(DispatcherDefault, {
   LOGOUT: function handleReset() {
     closure_4 = {};
     closure_5 = {};
@@ -84,12 +84,11 @@ obj = {
   CONNECTION_OPEN: function handleResetOnboardingStep() {
     closure_5 = {};
   }
-};
-const guildOnboardingStore = new GuildOnboardingStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("modules/guild_onboarding/GuildOnboardingStore.tsx");
+});
+const result = size.fileFinishedImporting("modules/guild_onboarding/GuildOnboardingStore.tsx");
 
 export default guildOnboardingStore;
-export const GuildOnboardingStatus = obj;
+export { GuildOnboardingStatus };
 export const isOnboarding = function isOnboarding(arg0) {
   let hasItem = null != arg0;
   if (hasItem) {

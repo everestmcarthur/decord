@@ -1,11 +1,11 @@
-// Module ID: 17232
-// Function ID: 17233
-// Dependencies: [17233, 17281, 2]
+// Module ID: 17263
+// Function ID: 17264
+// Dependencies: [17264, 17312, 2]
 
-// Module 17232
-import set from "set" /* 2 */;
-import getMessage from "getMessage" /* 17233 */;
-import I18nLinkDefault from "I18nLink" /* 17281 */;
+// Module 17263
+import i18n from "i18n" /* 17264 */;
+import updateRulesDefault from "updateRules" /* 17312 */;
+import size from "module_2" /* 2 */;
 
-getMessage.setUpdateRules(I18nLinkDefault);
-const result = set.fileFinishedImporting("i18n/native/index.tsx");
+const updateRules = i18n.setUpdateRules(updateRulesDefault);
+const result = size.fileFinishedImporting("i18n/native/index.tsx");

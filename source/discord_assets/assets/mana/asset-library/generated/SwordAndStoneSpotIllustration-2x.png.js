@@ -1,12 +1,11 @@
-// Module ID: 6534
-// Function ID: 6535
-// Name: metadata
+// Module ID: 6548
+// Function ID: 6549
 // Dependencies: [2]
 
-// Module 6534 (metadata)
-import set from "set" /* 2 */;
+// Module 6548
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SwordAndStoneSpotIllustration-2x.png.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SwordAndStoneSpotIllustration-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/dea7c023a9e63aaa18c0df6a018cff9eb901cf0c88f473da3570fc206dc939f2.png";
 export const metadata = { fileBytes: 23189 };

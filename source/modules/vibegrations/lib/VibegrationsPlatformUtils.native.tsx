@@ -1,20 +1,22 @@
-// Module ID: 16591
-// Function ID: 16592
-// Dependencies: [1895, 13720, 9692, 2]
+// Module ID: 16622
+// Function ID: 16623
+// Name: VibegrationsPlatformUtils
+// Dependencies: [1895, 13743, 9719, 2]
 
-// Module 16591
-import NativeModulesDefault from "NativeModules" /* 9692 */;
-import closure_2 from "getState" /* 1895 */;
-import { LocalNotificationTypes } from "LocalNotificationTypes" /* 13720 */;
+// Module 16622 (VibegrationsPlatformUtils)
+import PushNotificationDefault from "PushNotification" /* 9719 */;
+import AppStateStore from "AppStateStore" /* 1895 */;
 
-let result = require("set").fileFinishedImporting("modules/vibegrations/lib/VibegrationsPlatformUtils.native.tsx");
+const LocalNotificationTypes = fn(13743).LocalNotificationTypes;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsPlatformUtils.native.tsx");
 
 export default {
   openVibegrationsAppInstallModal() {
     return Promise.resolve();
   },
   isWindowFocused() {
-    return "active" === state.getState();
+    return "active" === AppStateStore.getState();
   },
   areTurnNotificationsDisabled() {
     return false;
@@ -22,33 +24,30 @@ export default {
   presentTurnNotification(arg0) {
     ({ projectId, guildId } = arg0);
     ({ title, body } = arg0);
-    let obj = NativeModulesDefault;
-    obj = { category: "local", alertTitle: title, alertBody: body, userInfo: null };
-    obj = { type: LocalNotificationTypes.VIBEGRATIONS, projectId, channel_id: projectId };
+    const obj2 = { category: "local", alertTitle: title, alertBody: body, userInfo: null };
     if (null != guildId) {
-      obj1 = { guildId: null };
-      obj1[0] = guildId;
-      let obj2 = obj1;
+      const obj4 = { guildId };
+      let obj5 = obj4;
     } else {
-      obj2 = {};
+      obj5 = {};
     }
-    const merged = Object.assign(obj2);
-    obj[3] = obj;
-    const result = obj.presentLocalNotification(obj);
+    const merged = Object.assign(obj5);
+    obj2.userInfo = { type: LocalNotificationTypes.VIBEGRATIONS, projectId, channel_id: projectId };
+    const result = PushNotificationDefault.presentLocalNotification(obj2);
   },
-  relayPreviewCapture(closure_0, id, arg2) {
+  relayPreviewCapture() {
     return Promise.resolve({ status: "unavailable" });
   },
-  relayPreviewControl(closure_0, id, request, arg3) {
+  relayPreviewControl() {
     return Promise.resolve({ status: "unavailable" });
   },
-  releasePreviewControl(closure_0) {
+  releasePreviewControl() {
 
   },
-  beginPreviewOperation(projectId) {
+  beginPreviewOperation() {
 
   },
-  endPreviewOperation(projectId) {
+  endPreviewOperation() {
 
   }
 };

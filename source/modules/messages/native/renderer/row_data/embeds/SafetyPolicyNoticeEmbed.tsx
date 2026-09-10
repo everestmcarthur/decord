@@ -1,23 +1,23 @@
-// Module ID: 13249
-// Function ID: 13250
-// Name: createSafetyPolicyNoticeEmbed
-// Dependencies: [17, 1074, 8419, 4153, 1114, 7946, 8594, 2]
+// Module ID: 13272
+// Function ID: 13273
+// Name: SafetyPolicyNoticeEmbed
+// Dependencies: [17, 1074, 8447, 4166, 1114, 7960, 8622, 2]
 // Exports: createSafetyPolicyNoticeEmbed
 
-// Module 13249 (createSafetyPolicyNoticeEmbed)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import hooksDefault from "hooks" /* 4153 */;
-import frozen from "frozen" /* 7946 */;
-import SafetyHubView from "SafetyHubView" /* 8419 */;
-import registerAssetDefault from "registerAsset" /* 8594 */;
+// Module 13272 (SafetyPolicyNoticeEmbed)
+import _mod17 from "module_17" /* 17 */;
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import _modDef4166 from "module_4166" /* 4166 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7960 */;
+import SafetyHubConstants from "SafetyHubConstants" /* 8447 */;
+import _modDef8622 from "module_8622" /* 8622 */;
+import size from "module_2" /* 2 */;
 
-const Image = get_ActivityIndicator.Image;
-const MessageEmbedTypes = ME.MessageEmbedTypes;
-const SafetyHubPolicyNoticeKeys = SafetyHubView.SafetyHubPolicyNoticeKeys;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/SafetyPolicyNoticeEmbed.tsx");
+const Image = _mod17.Image;
+const MessageEmbedTypes = Constants.MessageEmbedTypes;
+const SafetyHubPolicyNoticeKeys = SafetyHubConstants.SafetyHubPolicyNoticeKeys;
+const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/SafetyPolicyNoticeEmbed.tsx");
 
 export const createSafetyPolicyNoticeEmbed = function createSafetyPolicyNoticeEmbed(message) {
   if (null != message.embeds) {
@@ -56,21 +56,20 @@ export const createSafetyPolicyNoticeEmbed = function createSafetyPolicyNoticeEm
         }
         if (null != rawValue) {
           if (null != parsed) {
-            let obj = { titleText: null, titleIcon: null, subtitleText: null, descriptionText: null, ctaText: null, classificationId: null };
-            const intl = getSystemLocale.intl;
-            obj[0] = intl.string(getSystemLocale.t["4CxGXi"]);
-            obj[1] = frozen.getAssetUriForEmbed(Image.resolveAssetSource(registerAssetDefault));
-            const intl2 = getSystemLocale.intl;
-            obj = { daysAgo: null };
-            const obj2 = frozen;
-            const obj4 = hooksDefault();
-            obj[0] = obj4.diff(hooksDefault.unix(parsed), "days");
-            obj[2] = intl2.formatToPlainString(getSystemLocale.t.eevFb6, obj);
-            const intl3 = getSystemLocale.intl;
-            obj[3] = intl3.string(getSystemLocale.t["5CLb0A"]);
-            const intl4 = getSystemLocale.intl;
-            obj[4] = intl4.string(getSystemLocale.t.zKnzwm);
-            obj[5] = rawValue;
+            const obj = { titleText: null, titleIcon: null, subtitleText: null, descriptionText: null, ctaText: null, classificationId: null };
+            const intl = util.intl;
+            obj.titleText = intl.string(util.t["4CxGXi"]);
+            obj.titleIcon = renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(_modDef8622));
+            const intl2 = util.intl;
+            const obj3 = { daysAgo: null };
+            const obj4 = _modDef4166();
+            obj3.daysAgo = obj4.diff(_modDef4166.unix(parsed), "days");
+            obj.subtitleText = intl2.formatToPlainString(util.t.eevFb6, obj3);
+            const intl3 = util.intl;
+            obj.descriptionText = intl3.string(util.t["5CLb0A"]);
+            const intl4 = util.intl;
+            obj.ctaText = intl4.string(util.t.zKnzwm);
+            obj.classificationId = rawValue;
             return obj;
           }
         }

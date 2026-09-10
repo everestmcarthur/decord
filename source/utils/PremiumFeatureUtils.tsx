@@ -1,24 +1,22 @@
-// Module ID: 9364
-// Function ID: 9365
-// Name: getUserMaxFileSize
-// Dependencies: [1372, 1074, 1373, 1885, 5130, 2]
+// Module ID: 9391
+// Function ID: 9392
+// Name: PremiumFeatureUtils
+// Dependencies: [1372, 1074, 1373, 1885, 5144, 2]
 // Exports: getUserMaxFileSize
 
-// Module 9364 (getUserMaxFileSize)
-import isPremiumAtLeast from "isPremiumAtLeast" /* 1885 */;
-import closure_2 from "setActualFromUser" /* 1372 */;
-import ME from "ME" /* 1074 */;
-import GuildFeatures from "GuildFeatures" /* 1373 */;
+// Module 9391 (PremiumFeatureUtils)
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1885 */;
+import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1372 */;
 
-require = arg1;
+require = fn;
 function getUserMaxFileSize(currentUser) {
   if (null == currentUser) {
-    return closure_3;
+    return React3;
   } else {
-    premiumTypeOverride = premiumTypeOverride.getPremiumTypeOverride();
+    const premiumTypeOverride = OverridePremiumTypeStore.getPremiumTypeOverride();
     if (currentUser.isStaff()) {
-      if (premiumTypeOverride === closure_7) {
-        let tmp2 = closure_4;
+      if (premiumTypeOverride === React5) {
+        let tmp2 = React4;
       }
       return tmp2;
     }
@@ -27,22 +25,25 @@ function getUserMaxFileSize(currentUser) {
       let obj = dependencyMap;
       if (obj2.isPremium(currentUser)) {
         if (currentUser.premiumType === TIER_2.TIER_2) {
-          const nitroFileUploadLimitBytes = getNitroFileUploadLimitBytes(5130);
+          const nitroFileUploadLimitBytes = getNitroFileUploadLimitBytes(5144);
           getNitroFileUploadLimitBytes = nitroFileUploadLimitBytes.getNitroFileUploadLimitBytes;
           obj = { location: "getUserMaxFileSize" };
           let fileSize = getNitroFileUploadLimitBytes(obj);
         } else {
-          fileSize = table[currentUser.premiumType].fileSize;
+          fileSize = timestampProducer[currentUser.premiumType].fileSize;
         }
       }
-      obj2 = isPremiumAtLeast;
+      obj2 = PremiumTypeUtils;
     }
-    tmp2 = closure_3;
+    tmp2 = React3;
   }
 }
-({ MAX_ATTACHMENT_SIZE: c3, MAX_STAFF_ATTACHMENT_SIZE: c4 } = ME);
-({ PremiumTypes: c5, PremiumUserLimits: closure_6, UNSELECTED_PREMIUM_TYPE_OVERRIDE: error } = GuildFeatures);
-const result = require("set").fileFinishedImporting("utils/PremiumFeatureUtils.tsx");
+const Constants = fn(1074);
+({ MAX_ATTACHMENT_SIZE: c3, MAX_STAFF_ATTACHMENT_SIZE: closure_4 } = Constants);
+const PremiumConstants = fn(1373);
+({ PremiumTypes: hasOwnProperty, PremiumUserLimits: metroRequire, UNSELECTED_PREMIUM_TYPE_OVERRIDE: closure_7 } = PremiumConstants);
+const size = fn(2);
+const result = size.fileFinishedImporting("utils/PremiumFeatureUtils.tsx");
 
 export default { getUserMaxFileSize };
 export { getUserMaxFileSize };

@@ -1,30 +1,26 @@
-// Module ID: 15826
-// Function ID: 15827
-// Name: onChange
+// Module ID: 15856
+// Function ID: 15857
+// Name: VisibilitySensor
 // Dependencies: [19, 17, 21, 1477, 2]
 // Exports: default
 
-// Module 15826 (onChange)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import noop from "noop" /* 19 */;
-import closure_4 from "noop" /* 19 */;
+// Module 15856 (VisibilitySensor)
+import _mod17 from "module_17" /* 17 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
+import noop_mod from "module_19" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
+import size from "module_2" /* 2 */;
 
-({ useEffect: obj1, useRef: c3 } = noop);
-const View = get_ActivityIndicator.View;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-const result = set.fileFinishedImporting("modules/collectibles/native/VisibilitySensor.tsx");
+let noop = noop_mod;
+({ useEffect: c2, useRef: c3 } = noop);
+let noop = noop_mod;
+const View = _mod17.View;
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const result = size.fileFinishedImporting("modules/collectibles/native/VisibilitySensor.tsx");
 
 export default function _default(onChange) {
   onChange = onChange.onChange;
-  dependencyMap = undefined;
-  let callback;
-  let width;
-  let height;
-  closure_5 = undefined;
-  callback = undefined;
-  function stopWatching(closure_5, arg1) {
+  function stopWatching() {
     if (null !== ref.current) {
       const _clearInterval = clearInterval;
       clearInterval(tmp.current);
@@ -32,22 +28,21 @@ export default function _default(onChange) {
     }
   }
   ({ children, resetKey } = onChange);
-  let tmp = width(null);
-  dependencyMap = tmp;
-  callback = width(false);
-  const size = onChange(1477)();
-  width = size.width;
-  height = size.height;
-  closure_5 = width(null);
+  let tmp = React3(null);
+  closure_1 = tmp;
+  closure_2 = React3(false);
+  const size = useWindowDimensionsDefault();
+  const width = size.width;
+  const height = size.height;
+  React3(null);
   const items = [resetKey];
-  callback(() => {
+  React2(() => {
     closure_2.current = false;
   }, items);
   const items1 = [onChange];
-  callback = height.useCallback((arg0, arg1) => {
+  const callback = noop.useCallback((arg0, arg1) => {
     closure_0 = arg0;
-    closure_1 = arg1;
-    if (null === ref.current) {
+    if (null === arg1.current) {
       const _setInterval = setInterval;
       tmp.current = setInterval(() => {
         if (null !== ref.current) {
@@ -55,17 +50,17 @@ export default function _default(onChange) {
           current.measure((arg0, arg1, arg2, arg3, arg4, arg5) => {
             let tmp = arg5 + arg3 > 0;
             if (tmp) {
-              tmp = arg5 < closure_1;
+              tmp = arg5 < ref;
             }
             if (tmp) {
-              tmp = arg4 < closure_0;
+              tmp = arg4 < closure_1_0;
             }
             if (tmp) {
               tmp = arg4 + arg2 > 0;
             }
-            if (tmp !== closure_1_2.current) {
-              closure_1_2.current = tmp;
-              closure_1_0(tmp);
+            if (tmp !== ref2.current) {
+              ref2.current = tmp;
+              closure_0(tmp);
             }
           });
         }
@@ -73,12 +68,12 @@ export default function _default(onChange) {
     }
   }, items1);
   const items2 = [callback, height, width];
-  callback(() => {
+  React2(() => {
     callback(width, height);
     return stopWatching;
   }, items2);
   const obj = { collapsable: false, ref: tmp, children: null };
-  const items3 = [children, callback(closure_5, {})];
-  obj[2] = items3;
-  return stopWatching(closure_5, obj);
+  const items3 = [children, timestampProducer(View, {})];
+  obj.children = items3;
+  return React5(View, obj);
 };

@@ -1,116 +1,110 @@
-// Module ID: 13967
-// Function ID: 13968
-// Name: ReportModal
-// Dependencies: [32, 19, 17, 13968, 21, 4560, 576, 1611, 4556, 4255, 1114, 5687, 5604, 4975, 5624, 11836, 7000, 2]
+// Module ID: 13990
+// Function ID: 13991
+// Name: GuildAntiRaidReportModal
+// Dependencies: [32, 19, 17, 13991, 21, 4574, 576, 1611, 4570, 4268, 1114, 5701, 5618, 4989, 5638, 11862, 7014, 2]
 // Exports: default
 
-// Module 13967 (ReportModal)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 13990 (GuildAntiRaidReportModal)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import Text from "Text" /* 4556 */;
-import Button from "Button" /* 4975 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import getReportRaidHelpArticleURL from "getReportRaidHelpArticleURL" /* 13968 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import NavigatorHeader from "NavigatorHeader" /* 5638 */;
+import TableRowGroup from "TableRowGroup" /* 5701 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function ReportModal(onSubmit) {
   ({ raidTypes: require, onChange: importDefault } = onSubmit);
-  dependencyMap = undefined;
-  closure_3 = undefined;
-  const tmp = callback4();
+  const tmp = closure_12();
   dependencyMap = tmp;
   const items = [tmp];
-  closure_3 = React.useCallback((arg0) => closure_1_9(closure_1_0(formRow[8]).Text, { style: formRow.formRow, variant: "text-md/semibold", color: "interactive-text-active", children: closure_1_7(arg0) }), items);
-  let obj = { style: tmp.container, children: null };
-  const callback = React.useCallback(() => {
-    callback(formRow[9]).openURL(callback3());
+  closure_3 = noop.useCallback((arg0) => React7(Text_Text.Text, { style: formRow.formRow, variant: "text-md/semibold", color: "interactive-text-active", children: React5(arg0) }), items);
+  const obj = { style: tmp.container, children: null };
+  const callback = noop.useCallback(() => {
+    require("Linking").openURL(closure_1_6());
   }, []);
-  obj = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.format(getSystemLocale.t.Hg8Ee7, { onClick: callback });
-  const items1 = [callback2(Text.Text, obj), , ];
-  obj = {
+  const obj2 = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
+  const intl = util.intl;
+  obj2.children = intl.format(util.t.Hg8Ee7, { onClick: callback });
+  const items1 = [closure_9(Text_Text.Text, obj2), , ];
+  const obj3 = {
     style: tmp.formBody,
-    children: callback2(TableRowGroupTitle.TableRowGroup, {
+    children: closure_9(TableRowGroup.TableRowGroup, {
       hasIcons: false,
-      children: closure_8.map((arg0, arg1) => {
-        closure_0 = arg0;
-        return closure_1_9(closure_1_0(formRow[12]).TableCheckboxRow, {
-          start: 0 === arg1,
-          end: arg1 === closure_1_8.length - 1,
-          label: callback2(arg0),
-          checked: closure_0.includes(arg0),
+      children: length.map((item, index) => {
+        closure_0 = item;
+        return closure_1_9(require("TableCheckboxRow").TableCheckboxRow, {
+          start: 0 === index,
+          end: index === length.length - 1,
+          label: closure_3(item),
+          checked: closure_0.includes(item),
           onPress() {
-            return closure_1_1(closure_0);
+            return importDefault(closure_0);
           }
-        }, arg0);
+        }, item);
       })
     })
   };
-  items1[1] = callback2(View, obj);
-  const obj2 = { style: items2, children: null };
-  items2 = [tmp.submitButtonContainer, ];
-  obj1 = {
+  items1[1] = closure_9(View, obj3);
+  const obj5 = { style: null, children: null };
+  const items2 = [tmp.submitButtonContainer, ];
+  const obj4 = {
     hasIcons: false,
-    children: closure_8.map((arg0, arg1) => {
-      closure_0 = arg0;
-      return closure_1_9(closure_1_0(formRow[12]).TableCheckboxRow, {
-        start: 0 === arg1,
-        end: arg1 === closure_1_8.length - 1,
-        label: callback2(arg0),
-        checked: closure_0.includes(arg0),
+    children: length.map((item, index) => {
+      closure_0 = item;
+      return closure_1_9(require("TableCheckboxRow").TableCheckboxRow, {
+        start: 0 === index,
+        end: index === length.length - 1,
+        label: closure_3(item),
+        checked: closure_0.includes(item),
         onPress() {
-          return closure_1_1(closure_0);
+          return importDefault(closure_0);
         }
-      }, arg0);
+      }, item);
     })
   };
   items2[1] = { paddingBottom: useSafeAreaInsetsDefault().bottom + 16 };
-  const obj4 = { size: "md", text: null, onPress: null };
-  const intl2 = getSystemLocale.intl;
-  obj4[1] = intl2.string(getSystemLocale.t.geKm7t);
-  obj4[2] = onSubmit.onSubmit;
-  obj2[1] = callback2(Button.Button, obj4);
-  items1[2] = callback2(View, obj2);
-  obj[1] = items1;
-  return callback3(View, obj);
+  obj5.style = items2;
+  const obj7 = { size: "md", text: null, onPress: null };
+  const intl2 = util.intl;
+  obj7.text = intl2.string(util.t.geKm7t);
+  obj7.onPress = onSubmit.onSubmit;
+  obj5.children = closure_9(components_Button_Button.Button, obj7);
+  items1[2] = closure_9(View, obj5);
+  obj.children = items1;
+  return closure_10(View, obj);
 }
-({ getReportRaidHelpArticleURL: closure_6, getReportRaidTypeLabel: error, REPORT_RAID_OPTIONS: closure_8 } = getReportRaidHelpArticleURL);
-({ jsx: c9, jsxs: c10 } = jsxProd);
+const View = fn(17).View;
+const GuildReportRaidModalConstants = fn(13991);
+({ getReportRaidHelpArticleURL: metroRequire, getReportRaidTypeLabel: closure_7, REPORT_RAID_OPTIONS: closure_8 } = GuildReportRaidModalConstants);
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const REPORT_RAID = "REPORT_RAID";
-createCacheKey = { container: null, headerSubtitle: null, formBody: null, formRow: null, submitButtonContainer: null };
-createCacheKey = { flex: 1, paddingHorizontal: 16, paddingVertical: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", paddingTop: 8 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { textAlign: "center", marginTop: 8 };
-createCacheKey[2] = { marginTop: 24 };
-createCacheKey[3] = { paddingVertical: 2 };
-createCacheKey[4] = { position: "absolute", bottom: 0, left: 0, right: 0, paddingHorizontal: 16, paddingVertical: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-let closure_12 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { position: "absolute", bottom: 0, left: 0, right: 0, paddingHorizontal: 16, paddingVertical: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-let result = require("set").fileFinishedImporting("modules/guild_antiraid/native/GuildAntiRaidReportModal.tsx");
+const createStyles = fn(4574);
+let obj2 = { container: { flex: 1, paddingHorizontal: 16, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", paddingTop: 8 }, headerSubtitle: { textAlign: "center", marginTop: 8 }, formBody: { marginTop: 24 }, formRow: { paddingVertical: 2 }, submitButtonContainer: null };
+const rect = { position: "absolute", bottom: 0, left: 0, right: 0, paddingHorizontal: 16, paddingVertical: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj2.submitButtonContainer = rect;
+let closure_12 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_antiraid/native/GuildAntiRaidReportModal.tsx");
 
 export default function GuildAntiRaidReportModal(onCloseModal) {
   onCloseModal = onCloseModal.onCloseModal;
   const guildId = onCloseModal.guildId;
-  let first;
-  let callback;
-  const tmp = callback(React.useState([]), 2);
-  first = tmp[0];
-  callback = tmp[1];
+  first = undefined;
+  _slicedToArray = undefined;
+  [first, _slicedToArray] = noop.useState([]);
   const items = [onCloseModal, first, guildId];
-  const memo = React.useMemo(() => {
-    closure_0 = onSubmit;
+  const memo = noop.useMemo(() => {
+    const raidTypes = first;
     function onChange(arg0) {
       closure_0 = arg0;
-      callback2((arr) => {
+      closure_1_3((arr) => {
         if (arr.includes(closure_0)) {
-          let found = arr.filter((arg0) => arg0 !== closure_0);
+          let found = arr.filter((item) => item !== closure_1_0);
         } else {
           found = [];
           found[HermesBuiltin.arraySpread(arr, 0)] = closure_0;
@@ -118,22 +112,22 @@ export default function GuildAntiRaidReportModal(onCloseModal) {
         return found;
       });
     }
-    onSubmit = function onSubmit() {
-      const result = callback(onSubmit[15]).trackReportRaidViewed(onChange, onSubmit);
-      const obj = callback(onSubmit[15]);
-      callback(onSubmit[15]).handleReportRaid(onChange);
-      callback();
-    };
+    function onSubmit() {
+      const result = onCloseModal(first[15]).trackReportRaidViewed(onChange, onSubmit);
+      const obj = onCloseModal(first[15]);
+      onCloseModal(first[15]).handleReportRaid(onChange);
+      raidTypes();
+    }
     let obj = {};
-    obj = { ignoreKeyboard: true, title: null, headerLeft: null, render: null };
-    const intl = onCloseModal(first[10]).intl;
-    obj[1] = intl.string(onCloseModal(first[10]).t.uYPGsS);
-    obj[2] = onCloseModal(first[14]).getHeaderCloseButton(closure_0);
-    obj[3] = function render() {
-      return closure_1_9(closure_1_13, { raidTypes: closure_0, onChange, onSubmit });
+    const obj2 = { ignoreKeyboard: true, title: null, headerLeft: null, render: null };
+    const intl = util.intl;
+    obj2.title = intl.string(util.t.uYPGsS);
+    obj2.headerLeft = NavigatorHeader.getHeaderCloseButton(onCloseModal);
+    obj2.render = function render() {
+      return closure_2_9(ReportModal, { raidTypes, onChange, onSubmit });
     };
-    obj[closure_1_11] = obj;
+    obj[REPORT_RAID] = obj2;
     return obj;
   }, items);
-  return callback2(onCloseModal(first[16]).Navigator, { screens: memo, initialRouteName: REPORT_RAID, headerStatusBarHeight: guildId(first[7])().top });
+  return closure_9(onCloseModal(first[16]).Navigator, { screens: memo, initialRouteName: REPORT_RAID, headerStatusBarHeight: guildId(first[7])().top });
 };

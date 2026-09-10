@@ -1,28 +1,28 @@
 // Module ID: 1947
 // Function ID: 1948
-// Name: set
+// Name: DismissibleContentFrameworkStore
 // Dependencies: [1074, 3, 1948, 1944, 1242, 504, 573, 2]
 
-// Module 1947 (set)
-import timestampDefault from "timestamp" /* 3 */;
+// Module 1947 (DismissibleContentFrameworkStore)
+import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import ME from "ME" /* 1074 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import isSingleUseDismissibleContent from "isSingleUseDismissibleContent" /* 1944 */;
-import set2 from "set" /* 1948 */;
-import set from "set" /* 2 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import DismissibleContentTypes from "DismissibleContentTypes" /* 1944 */;
+import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 1948 */;
+import size from "module_2" /* 2 */;
 
-const AnalyticEvents = ME.AnalyticEvents;
-let closure_4 = new timestampDefault("DCF");
+const AnalyticEvents = Constants.AnalyticEvents;
+const logger = new LoggerDefault("DCF");
 let c5 = false;
 let obj = { numberOfDCsShownToday: 0, dailyCapPeriodStart: null, dismissibleContentSeenDuringSession: null, dailyCapOverridden: false, newUserMinAgeRequiredOverridden: false, renderedAtTimestamps: null, lastDismissed: null, seenForGuildId: null };
+const tmp2 = new LoggerDefault("DCF");
+obj.dismissibleContentSeenDuringSession = new Set();
 let set = new Set();
-obj[2] = set;
-const tmp2 = new timestampDefault("DCF");
-obj[5] = new Map();
+obj.renderedAtTimestamps = new Map();
 let map = new Map();
-obj[7] = new Map();
+obj.seenForGuildId = new Map();
 const PersistedStore = initializeDefault.PersistedStore;
 class DismissibleContentFrameworkStore extends PersistedStore {
 }
@@ -44,9 +44,6 @@ prototype["initialize"] = function initialize(numberOfDCsShownToday) {
       flag = false;
     }
     obj.newUserMinAgeRequiredOverridden = flag;
-    const tmp = obj;
-    const tmp3 = obj;
-    const tmp4 = obj;
   }
   obj.dismissibleContentSeenDuringSession = new Set();
   const set = new Set();
@@ -57,7 +54,7 @@ prototype["getState"] = function getState() {
   return obj;
 };
 Object.defineProperty(prototype, "dailyCapOverridden", {
-  get: function dailyCapOverridden(FlashList, arg1) {
+  get: function dailyCapOverridden() {
     return obj.dailyCapOverridden;
   },
   set: undefined
@@ -74,25 +71,25 @@ Object.defineProperty(prototype, "lastDismissed", {
   },
   set: undefined
 });
-prototype["getRenderedAtTimestamp"] = function getRenderedAtTimestamp(closure_0) {
+prototype["getRenderedAtTimestamp"] = function getRenderedAtTimestamp(arg0) {
   const renderedAtTimestamps = obj.renderedAtTimestamps;
-  return renderedAtTimestamps.get(closure_0);
+  return renderedAtTimestamps.get(arg0);
 };
-prototype["hasUserHitDCCap"] = function hasUserHitDCCap(PASSWORDLESS_UPSELL, closure_1) {
+prototype["hasUserHitDCCap"] = function hasUserHitDCCap(PASSWORDLESS_UPSELL, guildId) {
   if (null != PASSWORDLESS_UPSELL) {
-    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = set2.CONTENT_TYPES_WITH_BYPASS_FATIGUE;
+    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = DismissibleContentFatigueConfig.CONTENT_TYPES_WITH_BYPASS_FATIGUE;
     return false;
   }
   if (null != PASSWORDLESS_UPSELL) {
-    let result = null != closure_1;
+    let result = null != guildId;
     if (result) {
-      obj = isSingleUseDismissibleContent;
+      obj = DismissibleContentTypes;
       result = obj.isGuildDismissibleContent(PASSWORDLESS_UPSELL);
     }
     if (result) {
-      if (null != closure_1) {
+      if (null != guildId) {
         const seenForGuildId = obj.seenForGuildId;
-        const value = seenForGuildId.get(closure_1);
+        value = seenForGuildId.get(guildId);
         if (tmp9) {
           return false;
         }
@@ -123,9 +120,8 @@ prototype["hasUserHitDCCap"] = function hasUserHitDCCap(PASSWORDLESS_UPSELL, clo
   }
   if (tmp17) {
     c5 = true;
-    obj = { shown_dcs: null };
-    obj[0] = obj.numberOfDCsShownToday;
-    logger.info("Daily cap in effect, suppressing fatigable content until tomorrow", obj);
+    const obj2 = { shown_dcs: obj.numberOfDCsShownToday };
+    logger.info("Daily cap in effect, suppressing fatigable content until tomorrow", obj2);
   }
   return obj.numberOfDCsShownToday >= 3;
 };
@@ -138,7 +134,7 @@ const items = [
   }
 ];
 DismissibleContentFrameworkStore.migrations = items;
-obj = {
+const dismissibleContentFrameworkStore = new DismissibleContentFrameworkStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
     c5 = false;
     obj = {};
@@ -159,10 +155,10 @@ obj = {
     ({ dismissibleContent, guildId } = arg0);
     const renderedAtTimestamps = obj.renderedAtTimestamps;
     const result = renderedAtTimestamps.set(dismissibleContent, new Date().getTime());
-    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = set2.CONTENT_TYPES_WITH_BYPASS_FATIGUE;
+    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = DismissibleContentFatigueConfig.CONTENT_TYPES_WITH_BYPASS_FATIGUE;
     if (!CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(dismissibleContent)) {
       if (!obj.dailyCapOverridden) {
-        let result1 = isSingleUseDismissibleContent.isGuildDismissibleContent(dismissibleContent);
+        let result1 = DismissibleContentTypes.isGuildDismissibleContent(dismissibleContent);
         if (result1) {
           result1 = null != guildId;
         }
@@ -190,27 +186,23 @@ obj = {
             }
             obj.numberOfDCsShownToday = obj.numberOfDCsShownToday + 1;
             if (3 === obj.numberOfDCsShownToday) {
-              obj = { dismissible_content: null, shown_dcs: null };
-              obj[0] = dismissibleContent;
-              obj[1] = obj.numberOfDCsShownToday;
+              obj = { dismissible_content: dismissibleContent, shown_dcs: null };
+              obj.shown_dcs = obj.numberOfDCsShownToday;
               logger.info("Daily cap reached", obj);
             }
             if (obj.numberOfDCsShownToday > 3) {
-              obj = { cap_type: "daily_cap", dismissible_content: null, shown_dcs: null };
-              obj[1] = dismissibleContent;
-              obj[2] = obj.numberOfDCsShownToday;
-              expandEventPropertiesDefault.track(AnalyticEvents.DCF_CAP_EXCEEDED, obj);
-              const obj7 = expandEventPropertiesDefault;
+              const obj2 = { cap_type: "daily_cap", dismissible_content: dismissibleContent, shown_dcs: obj.numberOfDCsShownToday };
+              AnalyticsUtilsDefault.track(AnalyticEvents.DCF_CAP_EXCEEDED, obj2);
             }
           } else {
             const seenForGuildId = obj.seenForGuildId;
-            const value = seenForGuildId.get(guildId);
-            const tmp10 = null != value && value.has(dismissibleContent);
+            value2 = seenForGuildId.get(guildId);
+            const tmp10 = null != value2 && value2.has(dismissibleContent);
           }
         } else {
           const dismissibleContentSeenDuringSession = obj.dismissibleContentSeenDuringSession;
         }
-        const tmp2Result = isSingleUseDismissibleContent;
+        const tmp2Result = DismissibleContentTypes;
       }
     }
   },
@@ -224,9 +216,7 @@ obj = {
     dismissibleContent = dismissibleContent.dismissibleContent;
     let tmp3 = null;
     if (null != dismissibleContent) {
-      obj = { content: null, guildId: null };
-      obj[0] = dismissibleContent;
-      obj[1] = tmp;
+      obj = { content: dismissibleContent, guildId: tmp };
       tmp3 = obj;
     }
     obj.lastDismissed = tmp3;
@@ -240,8 +230,7 @@ obj = {
     obj.seenForGuildId = new Map();
     obj.lastDismissed = null;
   }
-};
-const dismissibleContentFrameworkStore = new DismissibleContentFrameworkStore(dispatcherDefault, obj);
-let result = set.fileFinishedImporting("modules/dismissible_content/DismissibleContentFrameworkStore.tsx");
+});
+let result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentFrameworkStore.tsx");
 
 export default dismissibleContentFrameworkStore;

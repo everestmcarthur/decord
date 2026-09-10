@@ -1,86 +1,71 @@
-// Module ID: 16282
-// Function ID: 16283
+// Module ID: 16312
+// Function ID: 16313
 // Name: NsfwGateGuildSidebar
-// Dependencies: [19, 17, 2021, 1979, 1371, 10301, 1074, 21, 4560, 576, 504, 1242, 9301, 16138, 1178, 5524, 16283, 1114, 2024, 2]
+// Dependencies: [19, 17, 2021, 1979, 1371, 10328, 1074, 21, 4574, 576, 504, 1242, 9328, 16168, 1178, 5538, 16313, 1114, 2024, 2]
 // Exports: default
 
-// Module 16282 (NsfwGateGuildSidebar)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "trackCommunicationDisabled" /* 2021 */;
-import closure_6 from "createGuildRecordFromRust" /* 1979 */;
-import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import { NsfwGateSource } from "NsfwGateSource" /* 10301 */;
-import ME from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16312 (NsfwGateGuildSidebar)
+import nativeDefault from "native" /* 576 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 9328 */;
+import noop from "module_19" /* 19 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-({ AnalyticEvents: c9, HelpdeskArticles: c10, Fonts: unpackModuleId } = ME);
+require = fn;
+const View = fn(17).View;
+const NsfwGateSource = fn(10328).NsfwGateSource;
+const Constants = fn(1074);
+({ AnalyticEvents: closure_9, HelpdeskArticles: c10, Fonts: closure_11 } = Constants);
+const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-createCacheKey = { container: null, emptyStateContainer: null, emptyStateImageContainer: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.PANEL_BG };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1 };
-createCacheKey[2] = { marginBottom: 16 };
-let closure_14 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/age_gate/native/components/NsfwGateGuildSidebar.tsx");
+const createStyles = fn(4574);
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.PANEL_BG }, emptyStateContainer: { flex: 1 }, emptyStateImageContainer: { marginBottom: 16 } };
+let closure_14 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/age_gate/native/components/NsfwGateGuildSidebar.tsx");
 
 export default function NsfwGateGuildSidebar(guildId) {
   guildId = guildId.guildId;
-  let stateFromStores;
   let currentUser;
-  const tmp = callback3();
-  let obj = guildId(currentUser[10]);
-  const items = [closure_6];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getGuild(guildId));
-  currentUser = currentUser.getCurrentUser();
+  const tmp = closure_14();
+  const items = [GuildStore];
+  const stateFromStores = guildId(currentUser[10]).useStateFromStores(items, () => GuildStore.getGuild(guildId));
+  currentUser = UserStore.getCurrentUser();
   const items1 = [guildId, stateFromStores, currentUser];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let tmp2 = null != currentUser;
     if (tmp2) {
       tmp2 = null != stateFromStores;
     }
     if (tmp2) {
-      let obj = stateFromStores(currentUser[11]);
-      obj = { guild_id: null, user_id: null, is_member: null, is_user_opted_in_to_age_restricted_servers: null, source: null };
-      obj[0] = guildId;
-      obj[1] = tmp.id;
-      obj[2] = closure_1_5.isMember(guildId, tmp.id);
+      const obj2 = { guild_id: guildId, user_id: tmp.id, is_member: GuildMemberStore.isMember(guildId, tmp.id), is_user_opted_in_to_age_restricted_servers: null, source: null };
       let nsfwAllowed = tmp.nsfwAllowed;
       if (nsfwAllowed) {
-        nsfwAllowed = guildId(tmp5[12]).getViewNsfwGuildsOrDefault();
-        const obj3 = guildId(tmp5[12]);
+        nsfwAllowed = AgeRestrictedContentSettingsUtils.getViewNsfwGuildsOrDefault();
       }
-      obj[3] = nsfwAllowed;
-      obj[4] = closure_1_8.GUILD_SIDEBAR;
-      obj.track(closure_1_9.GUILD_NSFW_GATE_VIEWED, obj);
-      tmp5 = currentUser;
+      obj2.is_user_opted_in_to_age_restricted_servers = nsfwAllowed;
+      obj2.source = NsfwGateSource.GUILD_SIDEBAR;
+      AnalyticsUtilsDefault.track(constants.GUILD_NSFW_GATE_VIEWED, obj2);
     }
   }, items1);
   let tmp7 = null;
   if (null != stateFromStores) {
-    obj = { style: null, children: null };
+    let obj2 = { style: null, children: null };
     const items2 = [tmp.container, guildId.style];
-    obj[0] = items2;
-    obj = { guild: null, showExtraButtons: false };
-    obj[0] = stateFromStores;
-    const items3 = [callback(stateFromStores(tmp3[13]), obj), ];
-    obj1 = { imageStyle: null, titleStyle: null, containerStyle: null, source: null, title: null, body: null };
-    obj1[0] = tmp.emptyStateImageContainer;
-    obj1[1] = stateFromStores(tmp3[15])(constants2.DISPLAY_EXTRABOLD, undefined, 16);
-    obj1[2] = tmp.emptyStateContainer;
-    obj1[3] = stateFromStores(tmp3[16]);
+    obj2.style = items2;
+    let obj3 = { guild: stateFromStores, showExtraButtons: false };
+    const items3 = [closure_12(stateFromStores(tmp3[13]), obj3), ];
+    const obj4 = { imageStyle: tmp.emptyStateImageContainer, titleStyle: stateFromStores(tmp3[15])(constants3.DISPLAY_EXTRABOLD, undefined, 16), containerStyle: tmp.emptyStateContainer, source: stateFromStores(tmp3[16]), title: null, body: null };
     const intl = tmp2(tmp3[17]).intl;
-    obj1[4] = intl.string(tmp2(tmp3[17]).t.bAVpRR);
+    obj4.title = intl.string(tmp2(tmp3[17]).t.bAVpRR);
     const intl2 = tmp2(tmp3[17]).intl;
-    const obj2 = { helpURL: null };
-    obj2[0] = stateFromStores(tmp3[18]).getArticleURL(constants.NSFW_GUILD_GUIDELINES);
-    obj1[5] = intl2.format(tmp2(tmp3[17]).t.NQuXf0, obj2);
-    items3[1] = callback(tmp2(tmp3[14]).RefreshEmptyState, obj1);
-    obj[1] = items3;
-    tmp7 = callback2(View, obj);
+    const obj5 = { helpURL: stateFromStores(tmp3[18]).getArticleURL(constants2.NSFW_GUILD_GUIDELINES) };
+    obj4.body = intl2.format(tmp2(tmp3[17]).t.NQuXf0, obj5);
+    items3[1] = closure_12(tmp2(tmp3[14]).RefreshEmptyState, obj4);
+    obj2.children = items3;
+    tmp7 = closure_13(View, obj2);
     const obj6 = stateFromStores(tmp3[18]);
   }
   return tmp7;

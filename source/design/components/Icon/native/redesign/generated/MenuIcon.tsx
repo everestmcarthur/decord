@@ -1,26 +1,26 @@
-// Module ID: 15841
-// Function ID: 15842
+// Module ID: 15871
+// Function ID: 15872
 // Name: MenuIcon
-// Dependencies: [19, 21, 576, 4261, 15842, 2]
+// Dependencies: [19, 21, 576, 4274, 15872, 2]
 // Exports: MenuIcon
 
-// Module 15841 (MenuIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 15842 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 15871 (MenuIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod15872 from "module_15872" /* 15872 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/MenuIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/MenuIcon.tsx");
 
 export const MenuIcon = function MenuIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15872, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

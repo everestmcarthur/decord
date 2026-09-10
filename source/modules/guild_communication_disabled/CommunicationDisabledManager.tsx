@@ -1,26 +1,25 @@
-// Module ID: 12467
-// Function ID: 12468
-// Name: clearGuildMemberTimeout
-// Dependencies: [2021, 1371, 4188, 573, 7118, 2]
+// Module ID: 12493
+// Function ID: 12494
+// Name: CommunicationDisabledManager
+// Dependencies: [2021, 1371, 4201, 573, 7132, 2]
 
-// Module 12467 (clearGuildMemberTimeout)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import isCommunicationDisabled from "isCommunicationDisabled" /* 4188 */;
-import initializeDefault from "initialize" /* 7118 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 2021 */;
-import closure_5 from "trackCommunicationDisabled" /* 2021 */;
-import closure_6 from "mergeGuildAvatar" /* 1371 */;
+// Module 12493 (CommunicationDisabledManager)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4201 */;
+import GuildMemberStore_mod from "GuildMemberStore" /* 2021 */;
+import UserStore from "UserStore" /* 1371 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
+import size from "module_2" /* 2 */;
 
-function clearGuildMemberTimeout(closure_2, closure_1) {
-  member = member.getMember(closure_2, closure_1);
-  user = user.getUser(closure_1);
+function clearGuildMemberTimeout(guildId, arg1) {
+  const member = GuildMemberStore.getMember(guildId, arg1);
+  const user = UserStore.getUser(arg1);
   if (null != member) {
     if (null != user) {
       if (!obj6.isMemberCommunicationDisabled(member)) {
-        let obj = {};
+        const obj = {};
         const merged = Object.assign(member);
-        obj.guildId = closure_2;
+        obj.guildId = guildId;
         let username = member.nick;
         if (username == null) {
           username = user.username;
@@ -30,9 +29,9 @@ function clearGuildMemberTimeout(closure_2, closure_1) {
         obj.avatar = avatar;
         let tmp5;
         if (null != member.avatarDecoration) {
-          obj = {};
+          const obj2 = {};
           const merged1 = Object.assign(member.avatarDecoration);
-          tmp5 = obj;
+          tmp5 = obj2;
         }
         obj.avatarDecoration = tmp5;
         const premiumSince = member.premiumSince;
@@ -42,26 +41,26 @@ function clearGuildMemberTimeout(closure_2, closure_1) {
           flag = false;
         }
         obj.isPending = flag;
-        obj = {};
+        const obj3 = {};
         const merged2 = Object.assign(user);
         const email = user.email;
-        obj.email = email;
+        obj3.email = email;
         const phone = user.phone;
-        obj.phone = phone;
-        obj.user = obj;
+        obj3.phone = phone;
+        obj.user = obj3;
         obj.communicationDisabledUntil = null;
-        obj1 = { type: "GUILD_MEMBER_UPDATE" };
+        const obj5 = { type: "GUILD_MEMBER_UPDATE" };
         const merged3 = Object.assign(obj);
-        dispatcherDefault.dispatch(obj1);
-        const obj4 = dispatcherDefault;
+        DispatcherDefault.dispatch(obj5);
       }
-      obj6 = isCommunicationDisabled;
+      obj6 = CommunicationDisabledUtils;
     }
   }
 }
-({ getGuildIdFromCommunicationDisabledUserKey: c3, getUserIdFromCommunicationDisabledUserKey: c4 } = trackCommunicationDisabled);
-let c7 = null;
-initializeDefault;
+let GuildMemberStore = GuildMemberStore_mod;
+({ getGuildIdFromCommunicationDisabledUserKey: c3, getUserIdFromCommunicationDisabledUserKey: closure_4 } = GuildMemberStore);
+let GuildMemberStore = GuildMemberStore_mod;
+let closure_7 = null;
 class CommunicationDisabledManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -74,19 +73,19 @@ prototype["_initialize"] = function _initialize() {
   const interval = setInterval(() => {
     communicationDisabledUserMap = communicationDisabledUserMap.getCommunicationDisabledUserMap();
     const keys = Object.keys(communicationDisabledUserMap);
-    const item = keys.forEach((arg0) => {
-      const tmp = closure_1_3(arg0);
-      const tmp2 = closure_1_4(arg0);
-      if (!obj.isCommunicationDisabled(communicationDisabledUserMap[arg0])) {
-        closure_1_8(tmp, tmp2);
+    const item = keys.forEach((item) => {
+      const tmp = closure_2_3(item);
+      const tmp2 = closure_2_4(item);
+      if (!obj.isCommunicationDisabled(communicationDisabledUserMap[item])) {
+        clearGuildMemberTimeout(tmp, tmp2);
       }
     });
   }, 10000);
 };
 prototype["_terminate"] = function _terminate() {
-  clearInterval(c7);
+  clearInterval(closure_7);
 };
 const communicationDisabledManager = new CommunicationDisabledManager();
-const result = set.fileFinishedImporting("modules/guild_communication_disabled/CommunicationDisabledManager.tsx");
+const result = size.fileFinishedImporting("modules/guild_communication_disabled/CommunicationDisabledManager.tsx");
 
 export default communicationDisabledManager;

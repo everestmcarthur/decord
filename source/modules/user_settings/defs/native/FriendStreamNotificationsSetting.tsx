@@ -1,34 +1,25 @@
-// Module ID: 15499
-// Function ID: 15500
-// Name: toggle
-// Dependencies: [7975, 11473, 1114, 1935, 15500, 2]
+// Module ID: 15529
+// Function ID: 15530
+// Name: FriendStreamNotificationsSetting
+// Dependencies: [7989, 11500, 1114, 1935, 15530, 2]
 
-// Module 15499 (toggle)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import onGoLiveNotificationSettingsChanged from "onGoLiveNotificationSettingsChanged" /* 15500 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15529 (FriendStreamNotificationsSetting)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import GoLiveNotificationUtils from "GoLiveNotificationUtils" /* 15530 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-const toggle = createToggle.createToggle({
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.FEFn90);
+    const intl = util.intl;
+    return intl.string(util.t.FEFn90);
   },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: explicitContentFromProto.StreamNotificationsEnabled.useSetting,
-  onValueChange: onGoLiveNotificationSettingsChanged.onGoLiveNotificationSettingsChanged
+  parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
+  useValue: UserSettings.StreamNotificationsEnabled.useSetting,
+  onValueChange: GoLiveNotificationUtils.onGoLiveNotificationSettingsChanged
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.FEFn90);
-  },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: explicitContentFromProto.StreamNotificationsEnabled.useSetting,
-  onValueChange: onGoLiveNotificationSettingsChanged.onGoLiveNotificationSettingsChanged
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/FriendStreamNotificationsSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/FriendStreamNotificationsSetting.tsx");
 
 export default toggle;

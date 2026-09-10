@@ -4,12 +4,13 @@
 // Dependencies: [481]
 
 // Module 480 (PushNotificationManager)
-import PushNotificationManagerDefault from "PushNotificationManager" /* 481 */;
+import _modDef481 from "module_481" /* 481 */;
 
-for (const key10016 in require("PushNotificationManager")) {
-  let tmp2 = key10016;
-  arg5[key10016] = require("PushNotificationManager")[key10016];
+const require = globalThis.__r;
+
+for (const key10016 in require("module_481")) {
+  arg5[key10016] = require("module_481")[key10016];
   continue;
 }
 
-export default PushNotificationManagerDefault;
+export default _modDef481;

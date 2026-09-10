@@ -1,15 +1,15 @@
 // Module ID: 1219
 // Function ID: 1220
-// Name: ExpressionPickerViewType
+// Name: ExpressionPickerConstants
 // Dependencies: [2]
 
-// Module 1219 (ExpressionPickerViewType)
-import set from "set" /* 2 */;
+// Module 1219 (ExpressionPickerConstants)
+import size from "module_2" /* 2 */;
 
 const obj = { EMOJI: "emoji", GIF: "gif", STICKER: "sticker", SOUNDBOARD: "soundboard" };
 const items = [, , ];
 ({ EMOJI: arr[0], GIF: arr[1], STICKER: arr[2] } = obj);
-const result = set.fileFinishedImporting("modules/expression_picker/ExpressionPickerConstants.tsx");
+const result = size.fileFinishedImporting("modules/expression_picker/ExpressionPickerConstants.tsx");
 
 export const ExpressionPickerViewType = obj;
 export const CHAT_INPUT_BUTTON_CLASSNAME = "expression-picker-chat-input-button";

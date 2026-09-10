@@ -1,14 +1,13 @@
-// Module ID: 4410
-// Function ID: 4411
-// Name: hslToRgb
+// Module ID: 4424
+// Function ID: 4425
+// Name: utils/Color
 // Dependencies: [32, 2]
 
-// Module 4410 (hslToRgb)
-import closure_0 from "_slicedToArray" /* 32 */;
+// Module 4424 (utils/Color)
+import _slicedToArray from "module_32" /* 32 */;
 
 function hslToRgb(alpha) {
   const hue = alpha.hue;
-  closure_0 = undefined;
   const result = alpha.lightness / 255;
   const result1 = alpha.saturation / 255;
   const result2 = (1 - Math.abs(2 * result - 1)) * result1;
@@ -32,8 +31,9 @@ function hslToRgb(alpha) {
   } else {
     items5 = [result2, 0, result3];
   }
-  const mapped = items5.map((arg0) => Math.round(255 * (arg0 + closure_0)));
-  return { red: mapped[0], green: mapped[1], blue: mapped[2], alpha: alpha.alpha };
+  const mapped = items5.map((item) => Math.round(255 * (item + closure_0)));
+  const color = { red: mapped[0], green: mapped[1], blue: mapped[2], alpha: alpha.alpha };
+  return color;
 }
 const re2 = /^#[0-9a-f]{3,8}$/i;
 const re3 = /^((?:rgb|hsl)a?)\s*\(([^)]*)\)/i;
@@ -42,7 +42,7 @@ class Color {
   constructor(arg0, arg1, arg2, arg3) {
     obj = Object.create(new.target.prototype);
     obj.red = global;
-    obj.green = arg1;
+    obj.green = fn;
     obj.blue = importDefault;
     obj.alpha = importAll;
     return obj;
@@ -51,21 +51,21 @@ class Color {
 const prototype = Color.prototype;
 prototype["toHexString"] = function toHexString() {
   const self = this;
-  let str = Math.round(this.red);
-  str = str.toString(16);
-  let str2 = Math.round(this.green);
-  const str1 = str2.toString(16);
-  str2 = Math.round(this.blue).toString(16);
-  let text = str;
+  const str = Math.round(this.red);
+  const str1 = Math.round(this.red).toString(16);
+  const str2 = Math.round(this.green);
+  const str7 = Math.round(this.green).toString(16);
+  const str3 = Math.round(this.blue);
+  let text = str1;
   if (this.red <= 15.5) {
     text = `0${tmp}`;
   }
-  let text2 = str1;
+  let text2 = str7;
   const text1 = `#${tmp4}`;
   if (self.green <= 15.5) {
     text2 = `0${tmp2}`;
   }
-  let text3 = str2;
+  let text3 = Math.round(this.blue).toString(16);
   const sum = text1 + text2;
   if (self.blue <= 15.5) {
     text3 = `0${tmp3}`;
@@ -74,25 +74,25 @@ prototype["toHexString"] = function toHexString() {
 };
 Color["parseString"] = function parseString(str) {
   const self = this;
-  if (null != str.match(closure_3)) {
+  if (null != str.match(re3)) {
     let parseColorFnStringResult = self.parseColorFnString(str);
-  } else if (null != str.match(closure_2)) {
+  } else if (null != str.match(re2)) {
     parseColorFnStringResult = self.parseHexString(str);
   }
   return parseColorFnStringResult;
 };
 Color["parseRgbString"] = function parseRgbString(arg0) {
   if ("transparent" === arg0) {
-    if (typeof Color !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (typeof Color === "function") {
+      const obj = Object.create(Color.prototype);
+      obj.red = 0;
+      obj.green = 0;
+      obj.blue = 0;
+      obj.alpha = 0;
+      let parseColorFnStringResult = obj;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    const obj = Object.create(Color.prototype);
-    obj.red = 0;
-    obj.green = 0;
-    obj.blue = 0;
-    obj.alpha = 0;
-    let parseColorFnStringResult = obj;
-    const tmp2 = Color;
   } else {
     const self = this;
     parseColorFnStringResult = this.parseColorFnString(arg0);
@@ -100,19 +100,19 @@ Color["parseRgbString"] = function parseRgbString(arg0) {
   return parseColorFnStringResult;
 };
 Color["parseHexString"] = function parseHexString(str) {
-  if (null != str.match(closure_2)) {
+  if (null != str.match(re2)) {
     const items = [6, 8];
     if (!items.includes(str.length)) {
       const replaced = str.replace("#", "");
       let str3 = replaced;
       if (replaced.length < 6) {
-        [tmp3, tmp4, tmp5, tmp6] = callback(replaced, 4);
+        [tmp3, tmp4, tmp5, tmp6] = replaced;
         const sum = tmp3 + tmp3 + tmp4 + tmp4 + tmp5 + tmp5;
         str3 = sum;
         if (null != tmp6) {
           str3 = sum + (tmp6 + tmp6);
         }
-        const tmp2 = callback(replaced, 4);
+        const tmp2 = _slicedToArray(replaced, 4);
       }
       const match = str3.match(/.{1,2}/g);
       if (null != match) {
@@ -127,52 +127,52 @@ Color["parseHexString"] = function parseHexString(str) {
           const _parseInt = parseInt;
           num4 = parseInt(match[3], 16) / 255;
         }
-        if (typeof Color !== "function") {
-          HermesBuiltin.throwTypeError();
+        if (typeof Color === "function") {
+          const obj = Object.create(tmp11.prototype);
+          obj.red = parsed;
+          obj.green = parsed1;
+          obj.blue = parsed2;
+          obj.alpha = num4;
+          return obj;
+        } else {
+          throw new TypeError("Trying to call a non-function");
         }
-        const obj = Object.create(Color.prototype);
-        obj.red = parsed;
-        obj.green = parsed1;
-        obj.blue = parsed2;
-        obj.alpha = num4;
-        return obj;
       }
     }
   }
 };
 Color["parseColorFnString"] = function parseColorFnString(str) {
-  let match = str.match(closure_3);
+  let match = str.match(re3);
   if (match == null) {
     match = [];
   }
-  const tmp = str(match, 3);
-  str = tmp[1];
+  [, str] = match;
   if (null != str) {
     if (null != str2) {
       const parts = str2.split(/\s*[,/\s]\s*/);
-      const mapped = parts.map((str) => str.replace(",", "").trim());
-      const found = mapped.filter((arg0) => "" !== arg0);
-      const mapped1 = found.map((arg0, arg1) => {
-        if (obj.test(arg0)) {
-          if (3 === arg1) {
+      const mapped = parts.map((item) => item.replace(",", "").trim());
+      const found = mapped.filter((item) => "" !== item);
+      const mapped1 = found.map((item, index) => {
+        if (obj.test(item)) {
+          if (3 === index) {
             const _parseFloat5 = parseFloat;
-            let result = parseFloat(arg0) / 100;
+            let result = parseFloat(item) / 100;
           } else {
             const _parseFloat4 = parseFloat;
-            result = 255 * parseFloat(arg0) / 100;
+            result = 255 * parseFloat(item) / 100;
           }
         } else {
-          if ("h" !== str[arg1]) {
+          if ("h" !== str[index]) {
             const _parseFloat = parseFloat;
-            let parsed = parseFloat(arg0);
+            let parsed = parseFloat(item);
           } else {
-            if (obj2.test(arg0)) {
+            if (obj2.test(item)) {
               const _parseFloat3 = parseFloat;
-              parsed = 360 * parseFloat(arg0);
+              parsed = 360 * parseFloat(item);
             } else {
-              if (obj3.test(arg0)) {
+              if (obj3.test(item)) {
                 const _parseFloat2 = parseFloat;
-                parsed = 57.3 * parseFloat(arg0);
+                parsed = 57.3 * parseFloat(item);
               }
               obj3 = /rad$/;
             }
@@ -182,33 +182,35 @@ Color["parseColorFnString"] = function parseColorFnString(str) {
         }
       });
       if ("hsl" === str.substr(0, 3)) {
-        let obj = { hue: null, saturation: null, lightness: null, alpha: null };
-        [obj[0], obj[1], obj[2], obj[3]] = mapped1;
-        ({ red, green, blue, alpha } = hslToRgb(obj));
-        if (typeof Color !== "function") {
-          HermesBuiltin.throwTypeError();
+        const obj = { hue: null, saturation: null, lightness: null, alpha: null };
+        [obj.hue, obj.saturation, obj.lightness, obj.alpha] = mapped1;
+        hslToRgb(obj);
+        if (typeof Color === "function") {
+          let obj3 = Object.create(Color.prototype);
+          obj3.red = tmp11;
+          obj3.green = tmp12;
+          obj3.blue = tmp13;
+          obj3.alpha = tmp14;
+          return obj3;
+        } else {
+          throw new TypeError("Trying to call a non-function");
         }
-        obj = Object.create(Color.prototype);
-        obj.red = red;
-        obj.green = green;
-        obj.blue = blue;
-        obj.alpha = alpha;
-        return obj;
       } else {
         let num2 = 1;
         [tmp4, tmp5, tmp6] = mapped1;
         if (typeof mapped1[3] === "number") {
           num2 = mapped1[3];
         }
-        if (typeof Color !== "function") {
-          HermesBuiltin.throwTypeError();
+        if (typeof Color === "function") {
+          const obj4 = Object.create(tmp3.prototype);
+          obj4.red = tmp4;
+          obj4.green = tmp5;
+          obj4.blue = tmp6;
+          obj4.alpha = num2;
+          return obj4;
+        } else {
+          throw new TypeError("Trying to call a non-function");
         }
-        obj = Object.create(tmp3.prototype);
-        obj.red = tmp4;
-        obj.green = tmp5;
-        obj.blue = tmp6;
-        obj.alpha = num2;
-        return obj;
       }
     }
   }
@@ -228,10 +230,8 @@ prototype["toHSL"] = function toHSL() {
     num = diff / (1 - Math.abs(2 * result3 - 1));
   }
   if (0 === diff) {
-    let obj = { hue: 0, saturation: null, lightness: null, alpha: null };
-    obj[1] = num;
-    obj[2] = result3;
-    obj[3] = alpha;
+    const obj2 = { hue: 0, saturation: num, lightness: result3, alpha };
+    let obj = obj2;
   } else {
     if (result === bound) {
       let num3 = (result1 - result2) / diff % 6;
@@ -243,11 +243,7 @@ prototype["toHSL"] = function toHSL() {
         num3 = (result1 - result2) / diff + 4;
       }
     }
-    obj = { hue: null, saturation: null, lightness: null, alpha: null };
-    obj[0] = 60 * num3;
-    obj[1] = num;
-    obj[2] = result3;
-    obj[3] = alpha;
+    obj = { hue: 60 * num3, saturation: num, lightness: result3, alpha };
   }
   return obj;
 };
@@ -277,7 +273,8 @@ prototype["getRelativeLuminance"] = function getRelativeLuminance() {
   }
   return result4 + result6 + 0.0722 * result7;
 };
-let result = require("set").fileFinishedImporting("utils/Color.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("utils/Color.tsx");
 
 export default Color;
 export { hslToRgb };

@@ -1,14 +1,14 @@
-// Module ID: 10654
-// Function ID: 10655
-// Name: frozen
+// Module ID: 10681
+// Function ID: 10682
+// Name: DeviceConstants
 // Dependencies: [2]
 
-// Module 10654 (frozen)
-import set from "set" /* 2 */;
+// Module 10681 (DeviceConstants)
+import size from "module_2" /* 2 */;
 
 const frozen = Object.freeze({ VIDEO: "ALAssetTypeVideo", PHOTO: "ALAssetTypePhoto" });
 const frozen1 = Object.freeze({ VIDEO: "video", IMAGE: "image" });
-const result = set.fileFinishedImporting("modules/device/native/DeviceConstants.tsx");
+const result = size.fileFinishedImporting("modules/device/native/DeviceConstants.tsx");
 
 export const ALAssetsType = frozen;
 export const DeviceMediaType = frozen1;

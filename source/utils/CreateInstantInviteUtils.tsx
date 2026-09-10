@@ -1,22 +1,23 @@
-// Module ID: 17797
-// Function ID: 17798
-// Name: getInvitableChannelForGuild
-// Dependencies: [2012, 4199, 1074, 2]
+// Module ID: 17830
+// Function ID: 17831
+// Name: CreateInstantInviteUtils
+// Dependencies: [2012, 4212, 1074, 2]
 // Exports: getInvitableChannelForGuild
 
-// Module 17797 (getInvitableChannelForGuild)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import comparator from "comparator" /* 2012 */;
-import closure_2 from "comparator" /* 2012 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4199 */;
+// Module 17830 (CreateInstantInviteUtils)
+import Constants from "Constants" /* 1074 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 2012 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
+import size from "module_2" /* 2 */;
 
-({ GUILD_SELECTABLE_CHANNELS_KEY: c0, GUILD_VOCAL_CHANNELS_KEY: closure_1 } = comparator);
-const Permissions = ME.Permissions;
-const result = set.fileFinishedImporting("utils/CreateInstantInviteUtils.tsx");
+let GuildChannelStore = GuildChannelStore_mod;
+({ GUILD_SELECTABLE_CHANNELS_KEY: closure_0, GUILD_VOCAL_CHANNELS_KEY: closure_1 } = GuildChannelStore);
+let GuildChannelStore = GuildChannelStore_mod;
+const Permissions = Constants.Permissions;
+const result = size.fileFinishedImporting("utils/CreateInstantInviteUtils.tsx");
 
 export const getInvitableChannelForGuild = function getInvitableChannelForGuild(guildId) {
-  channels = channels.getChannels(guildId);
-  const items = [...channels[closure_1]];
-  return items.find((channel) => closure_3.can(constants.CREATE_INSTANT_INVITE, channel.channel));
+  const channels = GuildChannelStore.getChannels(guildId);
+  const items = [...channels[closure_1_1]];
+  return items.find((channel) => PermissionStore.can(constants.CREATE_INSTANT_INVITE, channel.channel));
 };

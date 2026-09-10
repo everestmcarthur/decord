@@ -1,32 +1,30 @@
-// Module ID: 11797
-// Function ID: 11798
-// Name: showModal
-// Dependencies: [7324, 4763, 11798, 1896, 573, 2]
+// Module ID: 11823
+// Function ID: 11824
+// Name: guild_templates/GuildTemplateActionCreators
+// Dependencies: [7338, 4777, 11824, 1896, 573, 2]
 
-// Module 11797 (showModal)
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 11823 (guild_templates/GuildTemplateActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import _modDef4763 from "module_4763" /* 4763 */;
-import mapDefault from "map" /* 7324 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import GuildTemplateActionCreatorsDefault from "GuildTemplateActionCreators" /* 7338 */;
 
-require = arg1;
+require = fn;
 const GUILD_TEMPLATE_MODAL_KEY = "GUILD_TEMPLATE_MODAL_KEY";
 let obj = {};
-const merged = Object.assign(mapDefault);
+const GuildTemplateActionCreators = Object.assign(GuildTemplateActionCreatorsDefault);
 obj.showModal = function showModal(code) {
-  let obj = _modDef4763;
-  obj = { code };
-  obj.pushLazy(asyncRequireImpl(11798, dependencyMap.paths), obj, GUILD_TEMPLATE_MODAL_KEY);
-  obj = { type: "GUILD_TEMPLATE_MODAL_SHOW", code };
-  dispatcherDefault.dispatch(obj);
-  const obj3 = dispatcherDefault;
-  const guildTemplate = mapDefault.resolveGuildTemplate(code);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11824, dependencyMap.paths), { code }, GUILD_TEMPLATE_MODAL_KEY);
+  const obj2 = { code };
+  DispatcherDefault.dispatch({ type: "GUILD_TEMPLATE_MODAL_SHOW", code });
+  const obj4 = { type: "GUILD_TEMPLATE_MODAL_SHOW", code };
+  const guildTemplate = GuildTemplateActionCreatorsDefault.resolveGuildTemplate(code);
 };
 obj.hideModal = function hideModal() {
-  _modDef4763.popWithKey(GUILD_TEMPLATE_MODAL_KEY);
-  const obj = _modDef4763;
-  dispatcherDefault.dispatch({ type: "GUILD_TEMPLATE_MODAL_HIDE" });
+  ModalActionCreatorsDefault.popWithKey(GUILD_TEMPLATE_MODAL_KEY);
+  DispatcherDefault.dispatch({ type: "GUILD_TEMPLATE_MODAL_HIDE" });
 };
-const result = require("set").fileFinishedImporting("modules/guild_templates/native/GuildTemplateActionCreators.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_templates/native/GuildTemplateActionCreators.tsx");
 
 export default obj;

@@ -1,17 +1,17 @@
-// Module ID: 5927
-// Function ID: 5928
+// Module ID: 5941
+// Function ID: 5942
 // Name: DisplayNameStylesV2AbstractUI
-// Dependencies: [21, 5587, 5928, 2]
+// Dependencies: [21, 5601, 5942, 2]
 // Exports: DisplayNameStylesV2AbstractUI
 
-// Module 5927 (DisplayNameStylesV2AbstractUI)
-import set from "set" /* 2 */;
+// Module 5941 (DisplayNameStylesV2AbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 5928 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5942 from "module_5942" /* 5942 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/DisplayNameStylesV2AbstractUI.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/DisplayNameStylesV2AbstractUI.native.tsx");
 
 export const DisplayNameStylesV2AbstractUI = function DisplayNameStylesV2AbstractUI(width) {
   let num = width.width;
@@ -27,14 +27,14 @@ export const DisplayNameStylesV2AbstractUI = function DisplayNameStylesV2Abstrac
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
-  obj = { width: num * num3, height: num2 * num3 };
-  const items = [obj];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { width: num * num3, height: num2 * num3 });
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef5942 };
+  obj.source = obj2;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

@@ -1,32 +1,34 @@
-// Module ID: 7161
-// Function ID: 7162
+// Module ID: 7175
+// Function ID: 7176
 // Name: ApplicationConnectionCard
-// Dependencies: [19, 4788, 1074, 21, 504, 7162, 7163, 1114, 7165, 7172, 1242, 4740, 7177, 2]
+// Dependencies: [19, 4802, 1074, 21, 504, 7176, 7177, 1114, 7179, 7186, 1242, 4754, 7191, 2]
 // Exports: default
 
-// Module 7161 (ApplicationConnectionCard)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "addApplication" /* 4788 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 7175 (ApplicationConnectionCard)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4754 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 7177 */;
+import noop from "module_19" /* 19 */;
+import ApplicationStore from "ApplicationStore" /* 4802 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/guild_onboarding/native/ApplicationConnectionCard.tsx");
+require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_onboarding/native/ApplicationConnectionCard.tsx");
 
 export default function ApplicationConnectionCard(connection) {
   connection = connection.connection;
   const guildId = connection.guildId;
   const _location = connection.location;
-  let stateFromStores;
   let analyticsLocations;
   let startAuthorization;
-  let obj = connection(_location[4]);
   const items = [analyticsLocations];
   const items1 = [connection.application_id];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = connection(_location[4]).useStateFromStores(items, () => {
     let application = null;
     if (null != connection.application_id) {
-      application = analyticsLocations.getApplication(tmp.application_id);
+      application = ApplicationStore.getApplication(tmp.application_id);
     }
     return application;
   }, items1);
@@ -38,17 +40,16 @@ export default function ApplicationConnectionCard(connection) {
       result = null == connection.application_id;
     }
     if (!result) {
-      result = analyticsLocations.isFetchingApplication(connection.application_id);
+      result = ApplicationStore.isFetchingApplication(connection.application_id);
     }
     if (!result) {
-      result = analyticsLocations.didFetchingApplicationFail(connection.application_id);
+      result = ApplicationStore.didFetchingApplicationFail(connection.application_id);
     }
     if (!result) {
-      const application = connection(_location[6]).fetchApplication(connection.application_id);
+      const application = ApplicationActionCreators.fetchApplication(connection.application_id);
       application.catch(() => {
 
       });
-      const obj = connection(_location[6]);
     }
   }, items2);
   let name;
@@ -62,22 +63,23 @@ export default function ApplicationConnectionCard(connection) {
   const tmp7 = guildId(_location[8])(stateFromStores);
   startAuthorization = tmp7.startAuthorization;
   ({ hasAlreadyLinked, canStartAuthorization, fetched } = tmp7);
-  obj = { game: stateFromStores, size: connection(_location[9]).GameIconSizes.SMALL };
+  const obj3 = { game: stateFromStores, size: null };
+  let obj = connection(_location[4]);
+  let obj2 = stateFromStores;
+  obj3.size = connection(_location[9]).GameIconSizes.SMALL;
   const items3 = [startAuthorization, guildId, connection.application_id, _location, analyticsLocations];
-  const obj2 = stateFromStores;
   const tmp4Result = guildId(_location[9]);
   const callback = obj2.useCallback(() => {
-    let obj = guildId(_location[10]);
-    obj = {};
-    const merged = Object.assign(connection(_location[11]).collectGuildAnalyticsMetadata(guildId));
-    obj.connection_type = "application";
+    const obj2 = {};
+    const obj = AnalyticsUtilsDefault;
+    const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
+    obj2.connection_type = "application";
     const application_id = connection.application_id;
-    obj.application_id = application_id;
-    obj.location = _location;
-    obj.track(startAuthorization.GUILD_ONBOARDING_CONNECTION_CLICKED, obj);
-    obj = { analyticsLocations };
-    startAuthorization(obj);
+    obj2.application_id = application_id;
+    obj2.location = _location;
+    obj.track(AnalyticEvents.GUILD_ONBOARDING_CONNECTION_CLICKED, obj2);
+    startAuthorization({ analyticsLocations });
   }, items3);
-  obj = { displayName: name, description: connection.description, icon: jsx(guildId(_location[9]), { game: stateFromStores, size: connection(_location[9]).GameIconSizes.SMALL }), isLoading: !fetched, isConnected: hasAlreadyLinked, canConnect: canStartAuthorization, onConnect: callback };
-  return jsx(guildId(_location[12]), { displayName: name, description: connection.description, icon: jsx(guildId(_location[9]), { game: stateFromStores, size: connection(_location[9]).GameIconSizes.SMALL }), isLoading: !fetched, isConnected: hasAlreadyLinked, canConnect: canStartAuthorization, onConnect: callback });
+  const tmp9 = jsx(guildId(_location[9]), { game: stateFromStores, size: null });
+  return jsx(guildId(_location[12]), { displayName: name, description: connection.description, icon: jsx(guildId(_location[9]), { game: stateFromStores, size: null }), isLoading: !fetched, isConnected: hasAlreadyLinked, canConnect: canStartAuthorization, onConnect: callback });
 };

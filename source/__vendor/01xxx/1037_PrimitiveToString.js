@@ -2,9 +2,11 @@
 // Function ID: 1038
 // Name: PrimitiveToString
 // Dependencies: []
+// Exports: PrimitiveToString
 
 // Module 1037 (PrimitiveToString)
-arg5.PrimitiveToString = function PrimitiveToString(arg0) {
+
+export const PrimitiveToString = function PrimitiveToString(arg0) {
   if (null === arg0) {
     return "";
   } else {

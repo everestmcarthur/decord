@@ -1,61 +1,60 @@
-// Module ID: 11654
-// Function ID: 11655
+// Module ID: 11680
+// Function ID: 11681
 // Name: PublicGuildAnnouncementProfile
-// Dependencies: [19, 17, 21, 4560, 576, 7150, 5587, 8034, 1178, 11655, 4556, 1114, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 7164, 5601, 8049, 1178, 11681, 4570, 1114, 2]
 // Exports: default
 
-// Module 11654 (PublicGuildAnnouncementProfile)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import Text from "Text" /* 4556 */;
-import preloadDefault from "preload" /* 5587 */;
-import Background from "Background" /* 7150 */;
-import isPublicSystemMessage from "isPublicSystemMessage" /* 8034 */;
-import registerAssetDefault from "registerAsset" /* 11655 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11680 (PublicGuildAnnouncementProfile)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7164 */;
+import PublicGuildsUtils from "PublicGuildsUtils" /* 8049 */;
+import _modDef11681 from "module_11681" /* 11681 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { content: { padding: 16 }, avatar: null, nameWrapper: null, headerText: null, description: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.lg, height: 80, width: 80, marginVertical: 16 };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { flexDirection: "row", alignItems: "center" };
-createCacheKey[3] = { marginLeft: 8 };
-createCacheKey[4] = { marginTop: 8 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/public_guilds/native/components/PublicGuildAnnouncementProfile.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { content: { padding: 16 }, avatar: null, nameWrapper: null, headerText: null, description: null };
+let size = { borderRadius: nativeDefault.radii.lg, height: 80, width: 80, marginVertical: 16 };
+obj2.avatar = size;
+obj2.nameWrapper = { flexDirection: "row", alignItems: "center" };
+obj2.headerText = { marginLeft: 8 };
+obj2.description = { marginTop: 8 };
+let closure_6 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/public_guilds/native/components/PublicGuildAnnouncementProfile.tsx");
 
 export default function PublicGuildAnnouncementProfile() {
-  const tmp = callback3();
-  let obj = { startExpanded: true, children: null };
-  obj = { style: tmp.content, children: null };
-  obj = { style: tmp.avatar, source: null };
-  let obj3 = isPublicSystemMessage;
-  obj[1] = obj3.getPublicSystemMessageAvatar();
-  const items = [callback(preloadDefault, obj), , , ];
-  obj1 = { style: tmp.nameWrapper, children: null };
-  const tmp2 = preloadDefault;
-  const items1 = [callback(Button.Icon, { source: registerAssetDefault, disableColor: true }), ];
-  obj3 = { style: tmp.headerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale.intl;
-  obj3[3] = intl.string(getSystemLocale.t.xfAlNx);
-  items1[1] = callback(Text.Text, obj3);
-  obj1[1] = items1;
-  items[1] = callback2(View, obj1);
-  const obj4 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj4[3] = intl2.string(getSystemLocale.t.BUZ0sl);
-  items[2] = callback(Text.Text, obj4);
-  const obj5 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl3 = getSystemLocale.intl;
-  obj5[3] = intl3.string(getSystemLocale.t.w5beJH);
-  items[3] = callback(Text.Text, obj5);
-  obj[1] = items;
-  obj[1] = callback2(View, obj);
-  return callback(Background.BottomSheet, obj);
+  const tmp = closure_6();
+  const obj = { startExpanded: true, children: null };
+  const obj2 = { style: tmp.content, children: null };
+  const obj3 = { style: tmp.avatar, source: null };
+  const tmp2 = FastImageDefault;
+  obj3.source = PublicGuildsUtils.getPublicSystemMessageAvatar();
+  const items = [React4(tmp2, obj3), , , ];
+  const obj5 = { style: tmp.nameWrapper, children: null };
+  const items1 = [React4(native.Icon, { source: _modDef11681, disableColor: true }), ];
+  const obj7 = { style: tmp.headerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const intl = util.intl;
+  obj7.children = intl.string(util.t.xfAlNx);
+  items1[1] = React4(Text_Text.Text, obj7);
+  obj5.children = items1;
+  items[1] = hasOwnProperty(View, obj5);
+  const obj8 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  const intl2 = util.intl;
+  obj8.children = intl2.string(util.t.BUZ0sl);
+  items[2] = React4(Text_Text.Text, obj8);
+  const obj9 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  const intl3 = util.intl;
+  obj9.children = intl3.string(util.t.w5beJH);
+  items[3] = React4(Text_Text.Text, obj9);
+  obj2.children = items;
+  obj.children = hasOwnProperty(View, obj2);
+  return React4(Sheet_BottomSheet.BottomSheet, obj);
 };

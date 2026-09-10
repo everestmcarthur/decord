@@ -1,34 +1,33 @@
-// Module ID: 9778
-// Function ID: 9779
-// Name: canEveryoneRoleViewEvent
-// Dependencies: [1962, 1957, 2012, 1979, 4199, 7526, 1963, 1074, 4204, 9779, 504, 2]
+// Module ID: 9805
+// Function ID: 9806
+// Name: useCanInviteForGuildEvent
+// Dependencies: [1962, 1957, 2012, 1979, 4212, 7540, 1963, 1074, 4217, 9806, 504, 2]
 // Exports: default
 
-// Module 9778 (canEveryoneRoleViewEvent)
-import applyOverwritesAll from "applyOverwrites" /* 4204 */;
-import canViewInviteModal from "canViewInviteModal" /* 9779 */;
-import closure_3 from "handleStageInstanceCreateOrUpdate" /* 1962 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "comparator" /* 2012 */;
-import closure_6 from "createGuildRecordFromRust" /* 1979 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4199 */;
-import { isGuildEventEnded } from "scheduledEventSort" /* 7526 */;
-import { GuildScheduledEventEntityTypes as closure_9 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1963 */;
-import { Permissions } from "ME" /* 1074 */;
+// Module 9805 (useCanInviteForGuildEvent)
+import PermissionUtilsAll from "PermissionUtils" /* 4217 */;
+import canViewInviteModal from "canViewInviteModal" /* 9806 */;
+import StageInstanceStore from "StageInstanceStore" /* 1962 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildChannelStore from "GuildChannelStore" /* 2012 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
 
-require = arg1;
+const require = globalThis.__r;
+
+require = fn;
 function canEveryoneRoleViewEvent(guildEvent, items1) {
   let tmp = items1;
   if (items1 === undefined) {
-    const items = [closure_4];
+    const items = [ChannelStore];
     tmp = items;
   }
   [obj] = tmp;
   let tmp3 = guildEvent;
   if ("entity_type" in guildEvent) {
-    obj = { entityType: null, channelId: null };
-    ({ entity_type: obj2[0], channel_id: obj2[1] } = guildEvent);
-    tmp3 = obj;
+    ({ entity_type: obj2.entityType, channel_id: obj2.channelId } = guildEvent);
+    tmp3 = { entityType: null, channelId: null };
+    const obj4 = { entityType: null, channelId: null };
   }
   if (tmp3.entityType === constants.EXTERNAL) {
     return true;
@@ -36,16 +35,15 @@ function canEveryoneRoleViewEvent(guildEvent, items1) {
     const channel = obj.getChannel(tmp4);
     let canEveryoneRoleResult = null != channel;
     if (canEveryoneRoleResult) {
-      canEveryoneRoleResult = applyOverwritesAll.canEveryoneRole(Permissions.VIEW_CHANNEL, channel);
-      const obj3 = applyOverwritesAll;
+      canEveryoneRoleResult = PermissionUtilsAll.canEveryoneRole(Permissions.VIEW_CHANNEL, channel);
     }
     return canEveryoneRoleResult;
   }
 }
-function isGuildEventInvitable(guildEvent) {
-  let tmp = arg1;
-  if (arg1 === undefined) {
-    const items = [closure_5, closure_4, closure_6, closure_3];
+function isGuildEventInvitable(guildEvent, items) {
+  let tmp = items;
+  if (items === undefined) {
+    items = [GuildChannelStore, ChannelStore, GuildStore, StageInstanceStore];
     tmp = items;
   }
   [obj, obj2, obj3, obj4] = tmp;
@@ -61,7 +59,7 @@ function isGuildEventInvitable(guildEvent) {
     const guild = obj3.getGuild(guildEvent.guild_id);
     const stageInstanceByChannel = obj4.getStageInstanceByChannel(channel_id);
     const obj5 = canViewInviteModal;
-    let canViewInviteModalResult = obj5.canViewInviteModal(closure_7, guild, defaultChannel, stageInstanceByChannel);
+    let canViewInviteModalResult = obj5.canViewInviteModal(PermissionStore, guild, defaultChannel, stageInstanceByChannel);
     if (canViewInviteModalResult) {
       let tmp17 = null != defaultChannel;
       if (tmp17) {
@@ -73,15 +71,19 @@ function isGuildEventInvitable(guildEvent) {
     return canViewInviteModalResult;
   }
 }
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useCanInviteForGuildEvent.tsx");
+const isGuildEventEnded = fn(7540).isGuildEventEnded;
+const constants = fn(1963).GuildScheduledEventEntityTypes;
+const Permissions = fn(1074).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/useCanInviteForGuildEvent.tsx");
 
 export default function useCanInviteForGuildEvent(arg0) {
-  const _require = arg0;
-  let items = [closure_5, closure_4, closure_6, closure_3];
+  _require = arg0;
+  let items = [GuildChannelStore, ChannelStore, GuildStore, StageInstanceStore];
   const items1 = [arg0];
-  return _require(504).useStateFromStores(items, () => {
-    const items = [closure_1_5, closure_1_4, closure_1_6, closure_1_3];
-    return closure_1_12(closure_0, items);
+  return require("initialize").useStateFromStores(items, () => {
+    const items = [GuildChannelStore, ChannelStore, GuildStore, StageInstanceStore];
+    return isGuildEventInvitable(closure_0, items);
   }, items1);
 };
 export { canEveryoneRoleViewEvent };

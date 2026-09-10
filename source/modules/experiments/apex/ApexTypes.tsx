@@ -1,15 +1,16 @@
 // Module ID: 1436
 // Function ID: 1437
-// Name: INSTALLATION_UNIT_ID
+// Name: apex/ApexTypes
 // Dependencies: [2, 1239]
 
-// Module 1436 (INSTALLATION_UNIT_ID)
-import set from "set" /* 2 */;
+// Module 1436 (apex/ApexTypes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/experiments/apex/ApexTypes.tsx");
-for (const key10018 in require("UnitType")) {
-  let tmp3 = key10018;
-  arg5[key10018] = require("UnitType")[key10018];
+const require = globalThis.__r;
+
+const result = size.fileFinishedImporting("modules/experiments/apex/ApexTypes.tsx");
+for (const key10018 in require("ApexTypes")) {
+  arg5[key10018] = require("ApexTypes")[key10018];
   continue;
 }
 

@@ -1,14 +1,14 @@
-// Module ID: 8576
-// Function ID: 8577
+// Module ID: 8604
+// Function ID: 8605
 // Name: NativePlayAgeSignalsModule
 // Dependencies: [17, 2]
 
-// Module 8576 (NativePlayAgeSignalsModule)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 8604 (NativePlayAgeSignalsModule)
+import _mod17 from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
 
-const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 const value = TurboModuleRegistry.get("NativePlayAgeSignalsModule");
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativePlayAgeSignalsModule.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativePlayAgeSignalsModule.tsx");
 
 export default value;

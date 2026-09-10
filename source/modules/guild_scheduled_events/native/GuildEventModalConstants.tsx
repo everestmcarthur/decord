@@ -1,13 +1,13 @@
-// Module ID: 9704
-// Function ID: 9705
-// Name: CREATE_GUILD_EVENT_MODAL_KEY
+// Module ID: 9731
+// Function ID: 9732
+// Name: GuildEventModalConstants
 // Dependencies: [2]
 // Exports: isGuildEventValid
 
-// Module 9704 (CREATE_GUILD_EVENT_MODAL_KEY)
-import set from "set" /* 2 */;
+// Module 9731 (GuildEventModalConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_scheduled_events/native/GuildEventModalConstants.tsx");
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/GuildEventModalConstants.tsx");
 
 export const CREATE_GUILD_EVENT_MODAL_KEY = "create-guild-event-modal";
 export const START_EVENT_MODAL_KEY = "start-event-modal";

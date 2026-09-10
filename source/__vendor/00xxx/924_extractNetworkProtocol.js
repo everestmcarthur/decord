@@ -5,9 +5,12 @@
 // Exports: extractNetworkProtocol, getBrowserPerformanceAPI, isMeasurementValue, listenForWebVitalReportEvents, msToSec, startAndEndSpan, startStandaloneWebVitalSpan, supportsWebVital
 
 // Module 924 (extractNetworkProtocol)
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 682 */;
-import WINDOW from "WINDOW" /* 904 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import _mod682 from "module_682" /* 682 */;
+import _mod904 from "module_904" /* 904 */;
+import _mod925 from "module_925" /* 925 */;
+import _slicedToArray from "module_32" /* 32 */;
+
+const require = globalThis.__r;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
@@ -20,20 +23,14 @@ export const extractNetworkProtocol = function extractNetworkProtocol(nextHopPro
   while (iter !== undefined) {
     let tmp2 = nextResult;
     if ("/" === nextResult) {
-      let tmp8 = callback;
-      let num = 2;
-      let tmp9 = callback(nextHopProtocol.split("/"), 2);
+      let tmp9 = _slicedToArray(nextHopProtocol.split("/"), 2);
       [str, str2] = tmp9;
-      let tmp10 = iter;
       iter.return();
       break;
     } else {
       let _isNaN = isNaN;
       let _Number = Number;
-      let tmp3 = nextResult;
-      let tmp4 = str3;
       if (isNaN(Number(tmp2))) {
-        let tmp7 = nextResult;
         str3 = `${tmp2}`;
         continue;
       } else {
@@ -43,26 +40,21 @@ export const extractNetworkProtocol = function extractNetworkProtocol(nextHopPro
           str4 = str3;
         }
         str = str4;
-        let tmp5 = str3;
         str2 = nextHopProtocol.split(str3)[1];
-        let tmp6 = iter;
         iter.return();
         break;
       }
       break;
     }
-    let tmp11 = str3;
     if (str3 === nextHopProtocol) {
       str = str3;
     }
-    let obj = { name: null, version: null };
-    obj[0] = str;
-    obj[1] = str2;
+    let obj = { name: str, version: str2 };
     return obj;
   }
 };
 export const getBrowserPerformanceAPI = function getBrowserPerformanceAPI() {
-  return WINDOW.WINDOW.addEventListener && WINDOW.WINDOW.performance;
+  return _mod904.WINDOW.addEventListener && _mod904.WINDOW.performance;
 };
 export const isMeasurementValue = function isMeasurementValue(deviceMemory) {
   let isFiniteResult = typeof deviceMemory === "number";
@@ -73,15 +65,15 @@ export const isMeasurementValue = function isMeasurementValue(deviceMemory) {
   return isFiniteResult;
 };
 export const listenForWebVitalReportEvents = function listenForWebVitalReportEvents(on, arg1) {
-  const _require = arg1;
+  closure_0 = arg1;
   c2 = false;
-  _require(925).onHidden(() => {
+  _mod925.onHidden(() => {
     let tmp = !c2;
     if (!c2) {
-      tmp = closure_1;
+      tmp = spanId;
     }
     if (tmp) {
-      callback("pagehide", closure_1);
+      closure_0("pagehide", spanId);
     }
     c2 = true;
   });
@@ -93,32 +85,32 @@ export const listenForWebVitalReportEvents = function listenForWebVitalReportEve
     if (!isRedirect) {
       let tmp3 = !c2;
       if (!c2) {
-        tmp3 = closure_1;
+        tmp3 = spanId;
       }
       if (tmp3) {
-        callback("navigation", closure_1);
+        closure_0("navigation", spanId);
       }
       c2 = true;
-      callback2();
-      callback3();
+      closure_3();
+      closure_4();
     }
   });
   closure_4 = on.on("afterStartPageLoadSpan", (spanContext) => {
-    const spanId = spanContext.spanContext().spanId;
-    callback3();
+    spanId = spanContext.spanContext().spanId;
+    closure_4();
   });
 };
 export const msToSec = function msToSec(duration) {
   return duration / 1000;
 };
 export const startAndEndSpan = function startAndEndSpan(activeSpan, sum, sum1, arg3) {
-  const _require = sum;
+  _require = sum;
   dependencyMap = sum1;
   if (arg3 == null) {
-    HermesBuiltin.throwTypeError();
+    throw new TypeError("Cannot destructure 'undefined' or 'null'.");
   } else {
     closure_2 = Object.assign(arg3, undefined);
-    const start_timestamp = _require(682).spanToJSON(activeSpan).start_timestamp;
+    const start_timestamp = require("module_682").spanToJSON(activeSpan).start_timestamp;
     let tmp = start_timestamp;
     if (start_timestamp) {
       tmp = start_timestamp > sum;
@@ -129,23 +121,19 @@ export const startAndEndSpan = function startAndEndSpan(activeSpan, sum, sum1, a
     if (tmp) {
       activeSpan.updateStartTime(sum);
     }
-    const obj2 = _require(682);
-    const tmp6 = _require;
-    return _require(682).withActiveSpan(activeSpan, () => {
-      let obj = sum(sum1[1]);
-      obj = { startTime: sum };
+    const obj2 = require("module_682");
+    return require("module_682").withActiveSpan(activeSpan, () => {
       const merged = Object.assign(closure_2);
-      const startInactiveSpanResult = obj.startInactiveSpan(obj);
+      const startInactiveSpanResult = _mod682.startInactiveSpan({ startTime });
       if (startInactiveSpanResult) {
-        startInactiveSpanResult.end(sum1);
+        startInactiveSpanResult.end(closure_1);
       }
       return startInactiveSpanResult;
     });
   }
 };
 export const startStandaloneWebVitalSpan = function startStandaloneWebVitalSpan(arg0) {
-  let obj = registerSpanErrorInstrumentation;
-  const client = obj.getClient();
+  const client = _mod682.getClient();
   if (client) {
     ({ attributes, name, transaction, startTime } = arg0);
     const options = client.getOptions();
@@ -154,42 +142,31 @@ export const startStandaloneWebVitalSpan = function startStandaloneWebVitalSpan(
     if (integrationByName != null) {
       const replayId = integrationByName.getReplayId();
     }
-    let tmpResult = tmp(682);
-    const currentScope = tmpResult.getCurrentScope();
+    const currentScope = tmp(682).getCurrentScope();
     const user = currentScope.getUser();
     if (undefined !== user) {
       const tmp9 = user.email || user.id || user.ip_address;
     }
     try {
       const profile_id = currentScope.getScopeData().contexts.profile.profile_id;
-      obj = { release: null, environment: null, user: null, profile_id: null, replay_id: null, transaction: null, "user_agent.original": null, "client.address": null };
-      obj[0] = release;
-      obj[1] = environment;
-      obj[2] = tmp8;
-      obj[3] = profile_id;
-      obj[4] = replayId;
-      obj[5] = transaction;
+      const obj2 = { release, environment, user: tmp8, profile_id, replay_id: replayId, transaction, "user_agent.original": null, "client.address": null };
       const _navigator = tmp(904).WINDOW.navigator;
       let userAgent;
       if (_navigator != null) {
         userAgent = _navigator.userAgent;
       }
-      obj[6] = userAgent;
+      obj2["user_agent.original"] = userAgent;
       let str2;
       if (sendDefaultPii) {
         str2 = "{{auto}}";
       }
-      obj[7] = str2;
+      obj2["client.address"] = str2;
       const merged = Object.assign(attributes);
-      tmpResult = tmp(682);
-      obj = { name: null, attributes: null, startTime: null, experimental: null };
-      obj[0] = name;
-      obj[1] = obj;
-      obj[2] = startTime;
-      obj[3] = { standalone: true };
-      return tmpResult.startInactiveSpan(obj);
+      const obj3 = { name, attributes: obj2, startTime, experimental: { standalone: true } };
+      return tmp(682).startInactiveSpan(obj3);
     } catch (err) {
     }
+    const tmpResult = tmp(682);
   }
 };
 export const supportsWebVital = function supportsWebVital(arg0) {

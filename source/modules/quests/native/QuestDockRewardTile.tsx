@@ -1,28 +1,28 @@
-// Module ID: 11776
-// Function ID: 11777
-// Dependencies: [32, 19, 17, 4552, 21, 4560, 576, 1115, 504, 11290, 8307, 5587, 2]
+// Module ID: 11802
+// Function ID: 11803
+// Name: QuestDockRewardTile
+// Dependencies: [32, 19, 17, 4566, 21, 4574, 576, 1115, 504, 11317, 8335, 5601, 2]
 
-// Module 11776
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11802 (QuestDockRewardTile)
+import nativeDefault from "native" /* 576 */;
+import AssetUtils from "AssetUtils" /* 11317 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-const require = arg1;
-let c4 = importAllResult;
-({ AppState: c5, View: closure_6 } = get_ActivityIndicator);
-let closure_9 = createCacheKey.createStyles(() => {
-  let obj = { container: null, video: null, image: null };
-  obj = { borderRadius: ThemesDefault.radii.sm, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };
-  obj[0] = obj;
-  obj[1] = { overflow: "hidden", height: "100%", width: "100%" };
-  obj[2] = { height: "100%", width: "100%" };
+require = fn;
+get_ActivityIndicator = fn(17);
+({ AppState: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_9 = createStyles.createStyles(() => {
+  const obj = { container: { borderRadius: nativeDefault.radii.sm, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" }, video: { overflow: "hidden", height: "100%", width: "100%" }, image: { height: "100%", width: "100%" } };
   return obj;
 });
-const memoResult = importAllResult.memo(function QuestDockRewardTile(assetUrl) {
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/QuestDockRewardTile.tsx");
+
+export default noop.memo(function QuestDockRewardTile(assetUrl) {
   assetUrl = assetUrl.assetUrl;
   const isAnimatedAsset = assetUrl.isAnimatedAsset;
   const height = assetUrl.height;
@@ -34,19 +34,21 @@ const memoResult = importAllResult.memo(function QuestDockRewardTile(assetUrl) {
   }
   let withAnimation = assetUrl.withAnimation;
   if (withAnimation === undefined) {
-    let obj = assetUrl(height[7]);
-    withAnimation = obj.isIOS();
+    withAnimation = assetUrl(height[7]).isIOS();
+    const obj = assetUrl(height[7]);
   }
-  obj1 = assetUrl(height[8]);
-  const items = [closure_7];
-  const stateFromStores = obj1.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  const tmp6 = callback();
-  [tmp8, c4] = width(undefined.useState("active" === currentState.currentState), 2);
+  noop = undefined;
+  const items = [AccessibilityStore];
+  const stateFromStores = assetUrl(height[8]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const tmp6 = closure_9();
+  const obj2 = assetUrl(height[8]);
+  const tmp3 = assetUrl;
+  [tmp8, c4] = width(noop.useState("active" === currentState.currentState), 2);
   const items1 = [isAnimatedAsset];
-  const effect = importAllResult.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (isAnimatedAsset) {
-      closure_0 = closure_1_5.addEventListener("change", (arg0) => {
-        callback("active" === arg0);
+      closure_0 = currentState.addEventListener("change", (event) => {
+        closure_1_4("active" === event);
       });
       return () => {
         closure_0.remove();
@@ -54,21 +56,19 @@ const memoResult = importAllResult.memo(function QuestDockRewardTile(assetUrl) {
     }
   }, items1);
   const items2 = [assetUrl, width, height];
-  const memo = importAllResult.useMemo(() => {
-    let obj = assetUrl(height[9]);
-    obj = { assetUrl, width, height };
-    return obj.getScaledImageUrl(obj);
+  const memo = noop.useMemo(() => {
+    const size = { assetUrl, width, height };
+    return AssetUtils.getScaledImageUrl(size);
   }, items2);
-  obj = { accessibilityLabel, style: items3, children: null };
-  items3 = [tmp6.container, { height, width }, style];
+  const obj3 = { accessibilityLabel, style: null, children: null };
+  const items3 = [tmp6.container, { height, width }, style];
+  obj3.style = items3;
   if (isAnimatedAsset) {
     if (withAnimation) {
-      obj = { style: null, source: null, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants", poster: null, resizeMode: "cover", paused: null, muted: true };
-      obj[0] = tmp6.video;
-      obj1 = { uri: null };
-      obj1[0] = assetUrl;
-      obj[1] = obj1;
-      obj[5] = memo;
+      const obj4 = { style: tmp6.video, source: null, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants", poster: null, resizeMode: "cover", paused: null, muted: true };
+      const obj5 = { uri: assetUrl };
+      obj4.source = obj5;
+      obj4.poster = memo;
       let tmp14 = !tmp8;
       if (tmp8) {
         tmp14 = flag;
@@ -76,14 +76,11 @@ const memoResult = importAllResult.memo(function QuestDockRewardTile(assetUrl) {
       if (!tmp14) {
         tmp14 = stateFromStores;
       }
-      obj[7] = tmp14;
-      let tmp11Result = tmp11(assetUrl(tmp4[10]).VideoComponent, obj);
+      obj4.paused = tmp14;
+      let tmp11Result = tmp11(tmp3(tmp4[10]).VideoComponent, obj4);
     }
-    obj[2] = tmp11Result;
-    return tmp11(tmp12, obj);
+    obj3.children = tmp11Result;
+    return tmp11(tmp12, obj3);
   }
   tmp11Result = tmp11(isAnimatedAsset(tmp4[11]), { source: { uri: memo }, style: tmp6.image });
 });
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestDockRewardTile.tsx");
-
-export default memoResult;

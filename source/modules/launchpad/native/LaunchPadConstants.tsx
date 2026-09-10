@@ -1,18 +1,19 @@
-// Module ID: 11469
-// Function ID: 11470
-// Name: LAUNCH_PAD_SPRING_CONFIG
-// Dependencies: [17, 1115, 4539, 2]
+// Module ID: 11496
+// Function ID: 11497
+// Name: LaunchPadConstants
+// Dependencies: [17, 1115, 4553, 2]
 
-// Module 11469 (LAUNCH_PAD_SPRING_CONFIG)
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4539 */;
-import set from "set" /* 1115 */;
+// Module 11496 (LaunchPadConstants)
+import _mod17 from "module_17" /* 17 */;
+import DeviceUtils from "DeviceUtils" /* 4553 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import size_mod from "module_2" /* 2 */;
 
-const Dimensions = get_ActivityIndicator.Dimensions;
-const size = Dimensions.get("screen");
+const Dimensions = _mod17.Dimensions;
+let size = Dimensions.get("screen");
 let num = 24;
-if (!set.isAndroid()) {
-  const _module1 = DCDDeviceManager;
+if (!PlatformUtils.isAndroid()) {
+  const _module1 = DeviceUtils;
   let num2 = 13;
   if (!_module1.isIpadOS()) {
     const _Math = Math;
@@ -20,7 +21,8 @@ if (!set.isAndroid()) {
   }
   num = num2;
 }
-const result = set.fileFinishedImporting("modules/launchpad/native/LaunchPadConstants.tsx");
+let size = size_mod;
+const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadConstants.tsx");
 
 export const LAUNCH_PAD_SPRING_CONFIG = { damping: 20, stiffness: 280, mass: 0.5, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001 };
 export const LAUNCH_PAD_PULL_TAB_HEIGHT = 96;

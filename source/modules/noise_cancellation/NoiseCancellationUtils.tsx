@@ -1,29 +1,30 @@
-// Module ID: 9999
-// Function ID: 10000
-// Name: getNoiseCancellationDeferredToSystem
-// Dependencies: [1908, 10000, 504, 2]
+// Module ID: 10026
+// Function ID: 10027
+// Name: NoiseCancellationUtils
+// Dependencies: [1908, 10027, 504, 2]
 // Exports: getNoiseCancellationDeferredToSystem, useNoiseCancellationDeferredToSystem
 
-// Module 9999 (getNoiseCancellationDeferredToSystem)
+// Module 10026 (NoiseCancellationUtils)
 import initialize from "initialize" /* 504 */;
-import setDefault from "set" /* 10000 */;
-import closure_3 from "_detectH265HardwareDecode" /* 1908 */;
+import getEffectiveNoiseCancellationDefault from "getEffectiveNoiseCancellation" /* 10027 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/noise_cancellation/NoiseCancellationUtils.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/noise_cancellation/NoiseCancellationUtils.tsx");
 
-export const getNoiseCancellationDeferredToSystem = function getNoiseCancellationDeferredToSystem(closure_3) {
-  let obj = closure_3;
-  if (closure_3 === undefined) {
-    obj = closure_3;
+export const getNoiseCancellationDeferredToSystem = function getNoiseCancellationDeferredToSystem(MediaEngineStore) {
+  let obj = MediaEngineStore;
+  if (MediaEngineStore === undefined) {
+    obj = MediaEngineStore;
   }
   const systemMicrophoneMode = obj.getSystemMicrophoneMode();
-  return !setDefault(true, systemMicrophoneMode);
+  return !getEffectiveNoiseCancellationDefault(true, systemMicrophoneMode);
 };
 export const useNoiseCancellationDeferredToSystem = function useNoiseCancellationDeferredToSystem() {
-  const items = [closure_3];
+  const items = [MediaEngineStore];
   return initialize.useStateFromStores(items, () => {
     systemMicrophoneMode = systemMicrophoneMode.getSystemMicrophoneMode();
-    return !callback(table[1])(true, systemMicrophoneMode);
+    return !getEffectiveNoiseCancellationDefault(true, systemMicrophoneMode);
   });
 };

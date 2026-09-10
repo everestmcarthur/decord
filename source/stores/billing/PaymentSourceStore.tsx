@@ -1,28 +1,29 @@
-// Module ID: 4221
-// Function ID: 4222
-// Name: handlePaymentSourceUpdate
-// Dependencies: [4222, 504, 573, 2]
+// Module ID: 4234
+// Function ID: 4235
+// Name: PaymentSourceStore
+// Dependencies: [4235, 504, 573, 2]
 
-// Module 4221 (handlePaymentSourceUpdate)
+// Module 4234 (PaymentSourceStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_0 from "createFromServer" /* 4222 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import PaymentSourceRecord from "PaymentSourceRecord" /* 4235 */;
 
 function handlePaymentSourceUpdate(paymentSource) {
   paymentSource = paymentSource.paymentSource;
   const obj = {};
-  const merged = Object.assign(obj);
+  const merged = Object.assign(closure_1);
   obj[paymentSource.id] = paymentSource;
+  closure_1 = obj;
   let isDefault = paymentSource.isDefault;
   if (!isDefault) {
     const _Object = Object;
-    isDefault = 1 === Object.keys(obj).length;
+    isDefault = 1 === Object.keys(closure_1).length;
   }
   if (isDefault) {
     const id = paymentSource.id;
   }
 }
-let closure_1 = {};
+const dependencyMap = {};
 let c2 = null;
 let c3 = false;
 const Store = initializeDefault.Store;
@@ -75,7 +76,7 @@ prototype["getPaymentSource"] = function getPaymentSource(paymentSourceId) {
   return dependencyMap[paymentSourceId];
 };
 PaymentSourceStore.displayName = "PaymentSourceStore";
-const paymentSourceStore = new PaymentSourceStore(dispatcherDefault, {
+const paymentSourceStore = new PaymentSourceStore(DispatcherDefault, {
   BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: handlePaymentSourceUpdate,
   BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS: handlePaymentSourceUpdate,
   BILLING_PAYMENT_SOURCE_FETCH_SUCCESS: handlePaymentSourceUpdate,
@@ -84,12 +85,9 @@ const paymentSourceStore = new PaymentSourceStore(dispatcherDefault, {
     closure_1 = {};
     let id = null;
     for (const item10009 of paymentSources) {
-      let tmp2 = closure_1;
-      let tmp3 = closure_0;
       let tmp = item10009;
-      closure_1[item10009.id] = closure_0.createFromServer(item10009);
+      closure_1[item10009.id] = PaymentSourceRecord.createFromServer(item10009);
       if (item10009.default) {
-        let tmp4 = item10009;
         id = tmp.id;
       }
       continue;
@@ -104,16 +102,17 @@ const paymentSourceStore = new PaymentSourceStore(dispatcherDefault, {
     c3 = true;
   },
   BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS: function handlePaymentSourceRemove(id) {
-    const obj = {};
-    const merged = Object.assign(obj);
+    const merged = Object.assign(closure_1);
+    closure_1 = {};
     delete tmp[tmp2];
-    if (first === id.id) {
+    if (c2 === id.id) {
       const _Object = Object;
-      const keys = Object.keys(obj);
-      first = null;
+      const keys = Object.keys(closure_1);
+      let first = null;
       if (0 !== keys.length) {
         first = keys[0];
       }
+      c2 = first;
     }
   },
   LOGOUT: function handleLogout() {
@@ -122,6 +121,7 @@ const paymentSourceStore = new PaymentSourceStore(dispatcherDefault, {
     c3 = false;
   }
 });
-const result = require("set").fileFinishedImporting("stores/billing/PaymentSourceStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/billing/PaymentSourceStore.tsx");
 
 export default paymentSourceStore;

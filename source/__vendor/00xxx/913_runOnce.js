@@ -2,16 +2,18 @@
 // Function ID: 914
 // Name: runOnce
 // Dependencies: []
+// Exports: runOnce
 
 // Module 913 (runOnce)
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.runOnce = (arg0) => {
+
+export (arg0) => {
   closure_0 = arg0;
   c1 = false;
   return () => {
     if (!c1) {
-      callback();
+      closure_0();
       c1 = true;
     }
   };
-};
+}

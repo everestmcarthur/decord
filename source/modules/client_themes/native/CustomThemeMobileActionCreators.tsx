@@ -1,28 +1,24 @@
-// Module ID: 11952
-// Function ID: 11953
-// Name: updateCustomTheme
+// Module ID: 11978
+// Function ID: 11979
+// Name: CustomThemeMobileActionCreators
 // Dependencies: [573, 2]
 // Exports: clearPreviewTheme, previewCustomTheme, resetCustomTheme, updateCustomTheme
 
-// Module 11952 (updateCustomTheme)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 11978 (CustomThemeMobileActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/client_themes/native/CustomThemeMobileActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/client_themes/native/CustomThemeMobileActionCreators.tsx");
 
 export const updateCustomTheme = function updateCustomTheme(customThemeSettings, customThemeBaseTheme) {
-  let obj = dispatcherDefault;
-  obj = { type: "UPDATE_CUSTOM_THEME", customTheme: customThemeSettings, theme: customThemeBaseTheme };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "UPDATE_CUSTOM_THEME", customTheme: customThemeSettings, theme: customThemeBaseTheme });
 };
 export const resetCustomTheme = function resetCustomTheme() {
-  dispatcherDefault.dispatch({ type: "RESET_CUSTOM_THEME" });
+  DispatcherDefault.dispatch({ type: "RESET_CUSTOM_THEME" });
 };
 export const previewCustomTheme = function previewCustomTheme(previewCustomTheme) {
-  let obj = dispatcherDefault;
-  obj = { type: "PREVIEW_CUSTOM_THEME", previewCustomTheme };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "PREVIEW_CUSTOM_THEME", previewCustomTheme });
 };
 export const clearPreviewTheme = function clearPreviewTheme() {
-  dispatcherDefault.dispatch({ type: "CLEAR_PREVIEW_CUSTOM_THEME" });
+  DispatcherDefault.dispatch({ type: "CLEAR_PREVIEW_CUSTOM_THEME" });
 };

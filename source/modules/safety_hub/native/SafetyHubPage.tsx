@@ -1,191 +1,180 @@
-// Module ID: 14771
-// Function ID: 14772
-// Name: handleLogInClick
-// Dependencies: [19, 17, 8430, 8419, 1074, 21, 6593, 11888, 504, 1178, 1114, 4556, 4975, 4560, 576, 14772, 11915, 11887, 14768, 4992, 11886, 1242, 7602, 7607, 4527, 14773, 1896, 14774, 14776, 2]
+// Module ID: 14797
+// Function ID: 14798
+// Name: SafetyHubPage
+// Dependencies: [19, 17, 8458, 8447, 1074, 21, 6607, 11914, 504, 1178, 1114, 4570, 4989, 4574, 576, 14798, 11941, 11913, 14794, 5006, 11912, 1242, 7616, 7621, 4541, 14799, 1896, 14800, 14802, 2]
 // Exports: default
 
-// Module 14771 (handleLogInClick)
+// Module 14797 (SafetyHubPage)
 import initialize from "initialize" /* 504 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import Button2 from "Button" /* 4975 */;
-import handleLogoutDefault from "handleLogout" /* 6593 */;
-import _modDef11888 from "module_11888" /* 11888 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8430 */;
-import { AgeCheckStatus } from "SafetyHubView" /* 8419 */;
-import ME from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6607 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 7616 */;
+import MetricEvents from "MetricEvents" /* 7621 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 11912 */;
+import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 11914 */;
+import noop from "module_19" /* 19 */;
+import SafetyHubStore from "SafetyHubStore" /* 8458 */;
 
-require = arg1;
+const require = globalThis.__r;
+
+const util = hyh4ls(1114);
+const native = hyh4ls(1178);
+const components_Button_Button = hyh4ls(4989);
+require = fn;
 function handleLogInClick() {
-  handleLogoutDefault.closeSuspendedUser();
+  AuthenticationActionCreatorsDefault.closeSuspendedUser();
 }
 function handleRetryClick() {
-  _modDef11888.openV2("");
+  AutomatedUnderageAppealModalActionCreatorsDefault.openV2("");
 }
 function AutomatedUnderageAppealStatus() {
   let hyh4ls = require;
   let formatResult = dependencyMap;
-  let obj = initialize;
-  const items = [closure_8];
-  const stateFromStores = obj.useStateFromStores(items, () => uiStore.getAgeCheckStatus());
+  const items = [SafetyHubStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => uiStore.getAgeCheckStatus());
   initialize;
-  [][0] = closure_8;
+  [][0] = SafetyHubStore;
   if (stateFromStores === AgeCheckStatus.NONE) {
     return null;
   } else if (stateFromStores === tmp5.SUCCESS) {
-    obj = { messageType: null, children: null };
-    obj[0] = Button.HelpMessageTypes.SUCCESS;
-    const intl10 = getSystemLocale.intl;
-    hyh4ls = getSystemLocale.t.hyh4ls;
-    obj = { loginHook: null };
-    obj[0] = function loginHook(children) {
-      return callback2(callback(table[11]).Text, {
-        variant: "text-sm/medium",
-        color: "text-link",
-        onPress() {
-          return callback(table[6]).logout("safety_hub_page_appeal_success", constants.LOGIN);
-        },
-        children
-      });
+    const obj2 = { messageType: native.HelpMessageTypes.SUCCESS, children: null };
+    const intl10 = util.intl;
+    hyh4ls = util.t.hyh4ls;
+    const obj3 = {
+      loginHook(children) {
+          return closure_1_12(Text_Text.Text, {
+            variant: "text-sm/medium",
+            color: "text-link",
+            onPress() {
+              return closure_1_1(closure_1_3[6]).logout("safety_hub_page_appeal_success", constants.LOGIN);
+            },
+            children
+          });
+        }
     };
-    formatResult = intl10.format(hyh4ls, obj);
-    obj[1] = formatResult;
-    let tmp18Result = callback(Button.HelpMessage, obj);
+    formatResult = intl10.format(hyh4ls, obj3);
+    obj2.children = formatResult;
+    let tmp18Result = closure_1_12(native.HelpMessage, obj2);
   } else if (stateFromStores === tmp5.VERIFIED) {
-    obj1 = { messageType: null, button: null, children: null };
-    obj1[0] = Button.HelpMessageTypes.SUCCESS;
-    const obj2 = { variant: "secondary", size: "sm", text: null, onPress: null };
-    const intl8 = getSystemLocale.intl;
-    obj2[2] = intl8.string(getSystemLocale.t["2jvQ6K"]);
-    obj2[3] = handleLogInClick;
-    obj1[1] = callback(Button2.Button, obj2);
-    const intl9 = getSystemLocale.intl;
-    obj1[2] = intl9.string(getSystemLocale.t["2Qe65J"]);
-    tmp18Result = callback(Button.HelpMessage, obj1);
+    const obj4 = { messageType: native.HelpMessageTypes.SUCCESS, button: null, children: null };
+    const obj5 = { variant: "secondary", size: "sm", text: null, onPress: null };
+    const intl8 = util.intl;
+    obj5.text = intl8.string(util.t["2jvQ6K"]);
+    obj5.onPress = handleLogInClick;
+    obj4.button = closure_1_12(components_Button_Button.Button, obj5);
+    const intl9 = util.intl;
+    obj4.children = intl9.string(util.t["2Qe65J"]);
+    tmp18Result = closure_1_12(native.HelpMessage, obj4);
   } else if (stateFromStores === tmp5.VERIFIED_OTHER_VIOLATIONS_REMAIN) {
-    const obj3 = { messageType: null, children: null };
-    obj3[0] = Button.HelpMessageTypes.SUCCESS;
-    const intl7 = getSystemLocale.intl;
-    obj3[1] = intl7.string(getSystemLocale.t.Ie7p1Q);
-    tmp18Result = callback(Button.HelpMessage, obj3);
+    const obj6 = { messageType: native.HelpMessageTypes.SUCCESS, children: null };
+    const intl7 = util.intl;
+    obj6.children = intl7.string(util.t.Ie7p1Q);
+    tmp18Result = closure_1_12(native.HelpMessage, obj6);
   } else if (stateFromStores === tmp5.ERROR) {
-    const obj4 = { messageType: null, children: null };
-    obj4[0] = Button.HelpMessageTypes.ERROR;
-    const intl6 = getSystemLocale.intl;
-    obj4[1] = intl6.string(getSystemLocale.t["4sILBU"]);
-    tmp18Result = callback(Button.HelpMessage, obj4);
+    const obj7 = { messageType: native.HelpMessageTypes.ERROR, children: null };
+    const intl6 = util.intl;
+    obj7.children = intl6.string(util.t["4sILBU"]);
+    tmp18Result = closure_1_12(native.HelpMessage, obj7);
   } else if (stateFromStores === tmp5.FAILURE) {
-    const obj5 = { messageType: null, children: null };
-    obj5[0] = Button.HelpMessageTypes.ERROR;
-    const intl5 = getSystemLocale.intl;
-    obj5[1] = intl5.string(getSystemLocale.t["40R63o"]);
-    tmp18Result = callback(Button.HelpMessage, obj5);
+    const obj8 = { messageType: native.HelpMessageTypes.ERROR, children: null };
+    const intl5 = util.intl;
+    obj8.children = intl5.string(util.t["40R63o"]);
+    tmp18Result = closure_1_12(native.HelpMessage, obj8);
   } else if (stateFromStores === tmp5.UNDERAGE) {
-    const obj6 = { messageType: null, button: null, children: null };
-    obj6[0] = Button.HelpMessageTypes.ERROR;
-    const obj7 = { variant: "secondary", size: "sm", text: null, onPress: null };
-    const intl3 = getSystemLocale.intl;
-    obj7[2] = intl3.string(getSystemLocale.t.IcA9iD);
-    obj7[3] = handleRetryClick;
-    obj6[1] = callback(Button2.Button, obj7);
-    const intl4 = getSystemLocale.intl;
-    obj6[2] = intl4.string(getSystemLocale.t.dqbMbn);
-    tmp18Result = callback(Button.HelpMessage, obj6);
+    const obj9 = { messageType: native.HelpMessageTypes.ERROR, button: null, children: null };
+    const obj10 = { variant: "secondary", size: "sm", text: null, onPress: null };
+    const intl3 = util.intl;
+    obj10.text = intl3.string(util.t.IcA9iD);
+    obj10.onPress = handleRetryClick;
+    obj9.button = closure_1_12(components_Button_Button.Button, obj10);
+    const intl4 = util.intl;
+    obj9.children = intl4.string(util.t.dqbMbn);
+    tmp18Result = closure_1_12(native.HelpMessage, obj9);
   } else if (stateFromStores === tmp5.UNDERAGE_MANUAL_REVIEW) {
-    const obj8 = { messageType: null, button: null, children: null };
-    obj8[0] = Button.HelpMessageTypes.ERROR;
-    const obj9 = { variant: "secondary", size: "sm", text: null, onPress: null };
-    const intl = getSystemLocale.intl;
-    obj9[2] = intl.string(getSystemLocale.t.NkTGsC);
-    obj9[3] = handleRetryClick;
-    obj8[1] = callback(Button2.Button, obj9);
-    const intl2 = getSystemLocale.intl;
-    obj8[2] = intl2.string(getSystemLocale.t.VTgFYh);
-    tmp18Result = callback(Button.HelpMessage, obj8);
+    const obj11 = { messageType: native.HelpMessageTypes.ERROR, button: null, children: null };
+    const obj12 = { variant: "secondary", size: "sm", text: null, onPress: null };
+    const intl = util.intl;
+    obj12.text = intl.string(util.t.NkTGsC);
+    obj12.onPress = handleRetryClick;
+    obj11.button = closure_1_12(components_Button_Button.Button, obj12);
+    const intl2 = util.intl;
+    obj11.children = intl2.string(util.t.VTgFYh);
+    tmp18Result = closure_1_12(native.HelpMessage, obj11);
   } else {
-    const obj10 = { messageType: null, children: null };
-    obj10[0] = Button.HelpMessageTypes.INFO;
-    const intl11 = getSystemLocale.intl;
-    const t = getSystemLocale.t;
-    obj10[1] = intl11.string(tmp4 ? t.PU8nMu : t["nhhy/R"]);
-    tmp18Result = callback(Button.HelpMessage, obj10);
-    const tmp18 = callback;
+    const obj13 = { messageType: native.HelpMessageTypes.INFO, children: null };
+    const intl11 = util.intl;
+    const t = util.t;
+    obj13.children = intl11.string(tmp4 ? t.PU8nMu : t["nhhy/R"]);
+    tmp18Result = closure_1_12(native.HelpMessage, obj13);
   }
 }
-({ View: c5, ActivityIndicator: closure_6, ScrollView: error } = get_ActivityIndicator);
-({ AnalyticEvents: c10, Routes: unpackModuleId } = ME);
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, ActivityIndicator: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+const AgeCheckStatus = fn(8447).AgeCheckStatus;
+const Constants = fn(1074);
+({ AnalyticEvents: c10, Routes: closure_11 } = Constants);
+const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-createCacheKey = { container: null, loadingIndicator: null, body: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_12 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { display: "flex", justifyContent: "center", alignItems: "center" };
-createCacheKey[2] = { gap: ThemesDefault.space.PX_8 };
-let closure_17 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { gap: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/safety_hub/native/SafetyHubPage.tsx");
+const createStyles = fn(4574);
+let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12 }, loadingIndicator: { display: "flex", justifyContent: "center", alignItems: "center" }, body: null };
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12 };
+obj2.body = { gap: nativeDefault.space.PX_8 };
+let closure_17 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_hub/native/SafetyHubPage.tsx");
 
 export default function SafetyHubPage(visible) {
   visible = visible.visible;
   importDefault = undefined;
-  closure_2 = undefined;
   let safetyHubFetchError;
-  const tmp = callback3();
-  let obj = visible(safetyHubFetchError[16]);
-  importDefault = obj.useSafetyHubInitialized();
-  obj1 = visible(safetyHubFetchError[17]);
-  closure_2 = obj1.useSafetyHubAccountStanding();
+  const tmp = closure_17();
   const tmp2 = importDefault;
-  const tmp4 = importDefault(safetyHubFetchError[15])();
+  const tmp4 = require("useSafetyHubLoading")();
   const tmp5 = visible;
+  importDefault = visible(safetyHubFetchError[16]).useSafetyHubInitialized();
+  const obj = visible(safetyHubFetchError[16]);
+  const state = visible(safetyHubFetchError[17]).useSafetyHubAccountStanding();
+  let obj2 = visible(safetyHubFetchError[17]);
   safetyHubFetchError = visible(safetyHubFetchError[18]).useSafetyHubFetchError();
-  importDefault(safetyHubFetchError[19])(() => {
-    let obj = lib(safetyHubFetchError[20]);
-    const safetyHubData = obj.getSafetyHubData();
-    if (callback) {
-      obj = { account_standing: null };
-      obj[0] = lib.state;
-      callback(tmp[21]).track(closure_1_10.SAFETY_HUB_VIEWED, obj);
-      const obj2 = callback(tmp[21]);
-      obj = { name: null };
-      obj[0] = visible(tmp[23]).MetricEvents.SAFETY_HUB_VIEW;
-      callback(tmp[22]).increment(obj);
-      const obj4 = callback(tmp[22]);
+  require("useMountEffect")(() => {
+    const safetyHubData = SafetyHubActionCreatorsAll.getSafetyHubData();
+    if (closure_1) {
+      const obj3 = { account_standing: state.state };
+      AnalyticsUtilsDefault.track(constants.SAFETY_HUB_VIEWED, obj3);
+      const obj5 = { name: MetricEvents.MetricEvents.SAFETY_HUB_VIEW };
+      MonitoringAgentDefault.increment(obj5);
     }
   });
   const items = [safetyHubFetchError, visible];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (visible) {
       if (null != safetyHubFetchError) {
-        callback(safetyHubFetchError[24]).openLazy(visible(safetyHubFetchError[26])(safetyHubFetchError[25], safetyHubFetchError.paths), "SafetyHubErrorActionSheet", {});
-        const obj2 = callback(safetyHubFetchError[24]);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14799, dependencyMap.paths), "SafetyHubErrorActionSheet", {});
       }
     }
-    callback(safetyHubFetchError[24]).hideActionSheet("SafetyHubErrorActionSheet");
+    ActionSheetActionCreatorsDefault.hideActionSheet("SafetyHubErrorActionSheet");
   }, items);
   if (tmp4) {
-    obj = { style: null, children: null };
+    let obj4 = { style: null, children: null };
     const items1 = [, ];
     ({ container: arr4[0], loadingIndicator: arr4[1] } = tmp);
-    obj[0] = items1;
-    obj[1] = callback(closure_6, { animating: true, size: "large" });
-    let tmp9 = callback(closure_5, obj);
+    obj4.style = items1;
+    obj4.children = closure_12(closure_6, { animating: true, size: "large" });
+    let tmp9 = closure_12(closure_5, obj4);
   } else {
     tmp9 = null;
     if (null == safetyHubFetchError) {
-      obj = { style: null, children: null };
-      obj[0] = tmp.container;
-      obj1 = { style: null, children: null };
-      obj1[0] = tmp.body;
-      const items2 = [callback(AutomatedUnderageAppealStatus, {}), callback(tmp2(tmp3[27]), {})];
-      obj1[1] = items2;
-      const items3 = [callback2(closure_5, obj1), callback(tmp5(tmp3[28]).ConnectedSafetyHubViolationsContainer, {})];
-      obj[1] = items3;
-      tmp9 = callback2(closure_7, obj);
+      let obj5 = { style: tmp.container, children: null };
+      const obj6 = { style: tmp.body, children: null };
+      const items2 = [closure_12(AutomatedUnderageAppealStatus, {}), closure_12(tmp2(tmp3[27]), {})];
+      obj6.children = items2;
+      const items3 = [closure_13(closure_5, obj6), closure_12(tmp5(tmp3[28]).ConnectedSafetyHubViolationsContainer, {})];
+      obj5.children = items3;
+      tmp9 = closure_13(closure_7, obj5);
     }
   }
   return tmp9;

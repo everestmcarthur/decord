@@ -1,124 +1,118 @@
-// Module ID: 15831
-// Function ID: 15832
-// Name: subblock
-// Dependencies: [19, 17, 7542, 1076, 1074, 21, 4560, 1483, 8772, 504, 15821, 15826, 5123, 1114, 576, 1242, 7541, 7182, 7554, 8837, 2]
+// Module ID: 15861
+// Function ID: 15862
+// Name: FeaturedCategorySubblock
+// Dependencies: [19, 17, 7556, 1076, 1074, 21, 4574, 1483, 8800, 504, 15851, 15856, 5137, 1114, 576, 1242, 7555, 7196, 7568, 8864, 2]
 // Exports: default
 
-// Module 15831 (subblock)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import onChangeDefault from "onChange" /* 15826 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "updateCategoriesAndProducts" /* 7542 */;
-import { CollectiblesMobileShopScreen as closure_5 } from "items" /* 1076 */;
-import ME from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15861 (FeaturedCategorySubblock)
+import nativeDefault from "native" /* 576 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7555 */;
+import VisibilitySensorDefault from "VisibilitySensor" /* 15856 */;
+import noop from "module_19" /* 19 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7556 */;
 
-const require = arg1;
-noopAll;
-({ AnalyticEvents: closure_6, UserSettingsSections: error } = ME);
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles({ container: { position: "relative" }, bannerImage: { width: "100%", aspectRatio: 2.237580993520518, resizeMode: "contain" }, limitedTimeBadge: { position: "absolute", bottom: "68%", left: "3%", zIndex: 1 } });
-let result = require("set").fileFinishedImporting("modules/collectibles/native/FeaturedCategorySubblock.tsx");
+require = fn;
+const Image = fn(17).Image;
+let closure_5 = fn(1076).CollectiblesMobileShopScreen;
+const Constants = fn(1074);
+({ AnalyticEvents: metroRequire, UserSettingsSections: closure_7 } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4574);
+let closure_10 = createStyles.createStyles({ container: { position: "relative" }, bannerImage: { width: "100%", aspectRatio: 2.237580993520518, resizeMode: "contain" }, limitedTimeBadge: { position: "absolute", bottom: "68%", left: "3%", zIndex: 1 } });
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/native/FeaturedCategorySubblock.tsx");
 
 export default function _default(subblock) {
   subblock = subblock.subblock;
-  importDefault = undefined;
-  dependencyMap = undefined;
-  let stateFromStores;
-  const tmp = callback();
-  let obj = subblock(1483);
-  importDefault = obj.useNavigation();
-  obj1 = subblock(8772);
-  dependencyMap = obj1.useCollectiblesAnalyticsContext();
+  const tmp = closure_10();
+  importDefault = subblock(1483).useNavigation();
+  const obj = subblock(1483);
+  dependencyMap = subblock(8800).useCollectiblesAnalyticsContext();
   const assetUrl = subblock.assetUrl;
-  let obj2 = subblock(504);
-  let items = [closure_4];
-  stateFromStores = obj2.useStateFromStores(items, () => closure_1_4.getCategoryByStoreListingId(subblock.categoryStoreListingId));
-  let obj3 = subblock(15821);
+  let obj2 = subblock(8800);
+  let items = [CollectiblesCategoryStore];
+  const stateFromStores = subblock(504).useStateFromStores(items, () => CollectiblesCategoryStore.getCategoryByStoreListingId(subblock.categoryStoreListingId));
+  let obj3 = subblock(504);
   let unpublishedAt = subblock.unpublishedAt;
   if (unpublishedAt == null) {
-    unpublishedAt = undefined;
+    let unpublishedAt1;
     if (stateFromStores != null) {
-      unpublishedAt = stateFromStores.unpublishedAt;
+      unpublishedAt1 = stateFromStores.unpublishedAt;
     }
+    unpublishedAt = unpublishedAt1;
   }
   let date = null;
   if (null != unpublishedAt) {
     const _Date = Date;
     date = new Date(unpublishedAt);
   }
-  obj = { onChange: obj3.useTrackProductCardImpression(subblock.categoryStoreListingId, "mobile_home", "featured_block").handleCardVisibilityChange, children: null };
-  obj = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, activeOpacity: 0.8, androidRippleConfig: null, hitSlop: 8, onPress: null, style: null, children: null };
+  let obj5 = { onChange: subblock(15851).useTrackProductCardImpression(subblock.categoryStoreListingId, "mobile_home", "featured_block").handleCardVisibilityChange, children: null };
+  let obj4 = subblock(15851);
+  const obj6 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, activeOpacity: 0.8, androidRippleConfig: null, hitSlop: 8, onPress: null, style: null, children: null };
   const intl = tmp2(1114).intl;
-  obj1 = { category: subblock.name };
-  obj[1] = intl.formatToPlainString(subblock(1114).t.FNtLb3, obj1);
+  obj6.accessibilityLabel = intl.formatToPlainString(subblock(1114).t.FNtLb3, { category: subblock.name });
   const intl2 = tmp2(1114).intl;
-  obj[2] = intl2.string(subblock(1114).t.F8ma9x);
-  obj2 = { radius: ThemesDefault.radii.lg };
-  obj[4] = obj2;
-  obj[6] = function onPress() {
-    let obj = navigation(table[15]);
+  obj6.accessibilityHint = intl2.string(subblock(1114).t.F8ma9x);
+  const obj7 = { category: subblock.name };
+  const tmp12 = VisibilitySensorDefault;
+  const tmp13 = closure_9;
+  obj6.androidRippleConfig = { radius: nativeDefault.radii.lg };
+  obj6.onPress = function onPress() {
     let sessionId;
-    if (table != null) {
+    if (closure_2 != null) {
       sessionId = tmp3.sessionId;
     }
-    obj = { collectibles_shop_session_id: sessionId, sku_id: subblock.categoryStoreListingId, page_type: "mobile_home", page_section: null, page_category: null, tile_type: "FEATURED_BLOCK", tile_position: null, cta_name: null };
+    const obj2 = { collectibles_shop_session_id: sessionId, sku_id: subblock.categoryStoreListingId, page_type: "mobile_home", page_section: null, page_category: null, tile_type: "FEATURED_BLOCK", tile_position: null, cta_name: null };
     let pageSection;
-    if (table != null) {
+    if (closure_2 != null) {
       pageSection = tmp3.pageSection;
     }
-    obj[3] = pageSection;
+    obj2.page_section = pageSection;
     let pageCategory;
-    if (table != null) {
+    if (closure_2 != null) {
       pageCategory = tmp3.pageCategory;
     }
-    obj[4] = pageCategory;
+    obj2.page_category = pageCategory;
     let tilePosition;
-    if (table != null) {
+    if (closure_2 != null) {
       tilePosition = tmp3.tilePosition;
     }
-    obj[6] = String(tilePosition);
-    obj.track(closure_1_6.COLLECTIBLES_SHOP_ELEMENT_CLICKED, obj);
+    obj2.tile_position = String(tilePosition);
+    AnalyticsUtilsDefault.track(constants.COLLECTIBLES_SHOP_ELEMENT_CLICKED, obj2);
     if (null != stateFromStores) {
       if (tmp9.isOrbsExclusive) {
-        obj = { analyticsLocations: null, analyticsSource: null, screen: null };
-        const items = [tmp(tmp2[17]).COLLECTIBLES_SHOP];
-        obj[0] = items;
-        obj[1] = tmp(tmp2[17]).COLLECTIBLES_SHOP;
-        obj[2] = closure_1_5.ORBS;
-        const result = subblock(tmp2[16]).openCollectiblesShopMobile(obj);
-        const obj4 = subblock(tmp2[16]);
+        const obj3 = { analyticsLocations: null, analyticsSource: null, screen: null };
+        const items = [tmp(7196).COLLECTIBLES_SHOP];
+        obj3.analyticsLocations = items;
+        obj3.analyticsSource = tmp(7196).COLLECTIBLES_SHOP;
+        obj3.screen = constants.ORBS;
+        const result = CollectiblesActionCreators.openCollectiblesShopMobile(obj3);
       } else {
-        obj1 = { category: null, analyticsContext: null };
-        obj1[0] = tmp9;
-        obj1[1] = tmp3;
-        navigation.navigate(closure_1_7.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS, obj1);
+        const obj5 = { category: tmp9, analyticsContext: tmp3 };
+        navigation.navigate(constants2.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS, obj5);
       }
     }
   };
-  obj[7] = tmp.container;
+  obj6.style = tmp.container;
   let tmp11Result = null != assetUrl;
   if (tmp11Result) {
-    obj3 = { source: null, style: null };
-    let obj4 = { uri: null };
-    obj4[0] = assetUrl;
-    obj3[0] = obj4;
-    obj3[1] = tmp.bannerImage;
-    tmp11Result = tmp11(stateFromStores, obj3);
+    const obj9 = { source: null, style: null };
+    const obj10 = { uri: assetUrl };
+    obj9.source = obj10;
+    obj9.style = tmp.bannerImage;
+    tmp11Result = tmp11(stateFromStores, obj9);
   }
   const items1 = [tmp11Result, ];
-  const tmp12 = onChangeDefault;
-  const tmp13 = closure_9;
-  let result = subblock(7554).shouldShowLimitedTimeBadge(date);
+  const obj8 = { radius: nativeDefault.radii.lg };
+  let result = subblock(7568).shouldShowLimitedTimeBadge(date);
   if (result) {
-    const obj5 = { style: null };
-    obj5[0] = tmp.limitedTimeBadge;
-    result = tmp11(tmp2(8837).LimitedTimeBadge, obj5);
+    const obj11 = { style: tmp.limitedTimeBadge };
+    result = tmp11(tmp2(8864).LimitedTimeBadge, obj11);
   }
   items1[1] = result;
-  obj[8] = items1;
-  obj[1] = tmp13(subblock(5123).PressableOpacity, obj);
-  return closure_8(tmp12, obj);
+  obj6.children = items1;
+  obj5.children = tmp13(subblock(5137).PressableOpacity, obj6);
+  return closure_8(tmp12, obj5);
 };

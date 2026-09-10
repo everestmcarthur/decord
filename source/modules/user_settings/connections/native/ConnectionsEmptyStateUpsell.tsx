@@ -1,113 +1,112 @@
-// Module ID: 14962
-// Function ID: 14963
-// Name: EmptyStateCard
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 4495, 9257, 14963, 14964, 1396, 4411, 5607, 1178, 4527, 14960, 1896, 4556, 7503, 1611, 4973, 1114, 2]
+// Module ID: 14988
+// Function ID: 14989
+// Name: ConnectionsEmptyStateUpsell
+// Dependencies: [19, 17, 1074, 21, 4574, 576, 4509, 9284, 14989, 14990, 1396, 4425, 5621, 1178, 4541, 14986, 1896, 4570, 7517, 1611, 4987, 1114, 2]
 // Exports: default
 
-// Module 14962 (EmptyStateCard)
-import ThemesDefault from "Themes" /* 576 */;
+// Module 14988 (ConnectionsEmptyStateUpsell)
+import nativeDefault from "native" /* 576 */;
+import AvatarUtils from "AvatarUtils" /* 1396 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import Text from "Text" /* 4556 */;
-import PressableCard from "PressableCard" /* 5607 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { AnalyticsLocations } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import shared from "shared" /* 4425 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Card from "Card" /* 5621 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9284 */;
+import ConnectionsTracking from "ConnectionsTracking" /* 14989 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function EmptyStateCard(platform) {
   platform = platform.platform;
   importDefault = undefined;
   let connectionBackgroundColor;
-  const tmp = callback3();
-  const tmp3 = importDefault(connectionBackgroundColor[6])();
+  const tmp = closure_8();
+  const tmp3 = require("useTheme")();
   importDefault = tmp3;
   const items = [platform];
-  const callback = React.useCallback(() => {
-    let obj = { platformType: platform.type, location: closure_1_5.CONNECTIONS_EMPTY_STATE };
-    callback(connectionBackgroundColor[7])(obj);
-    obj = { platformType: platform.type };
-    const result = platform(connectionBackgroundColor[8]).trackEmptyStateCardClicked(obj);
+  const callback = noop.useCallback(() => {
+    authorizeConnectionDefault({ platformType: platform.type, location: AnalyticsLocations.CONNECTIONS_EMPTY_STATE });
+    const result = ConnectionsTracking.trackEmptyStateCardClicked({ platformType: platform.type });
   }, items);
-  let obj = platform(connectionBackgroundColor[9]);
-  connectionBackgroundColor = obj.getConnectionBackgroundColor(platform.type);
+  connectionBackgroundColor = platform(connectionBackgroundColor[9]).getConnectionBackgroundColor(platform.type);
   const items1 = [connectionBackgroundColor, platform.icon.darkPNG, platform.icon.lightPNG, platform.icon.whitePNG, tmp3];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     if (null != connectionBackgroundColor) {
       let whitePNG = platform.icon.whitePNG;
     } else {
       const icon = platform.icon;
-      whitePNG = platform(connectionBackgroundColor[11]).isThemeDark(closure_1) ? icon.darkPNG : icon.lightPNG;
-      const tmpResult = platform(connectionBackgroundColor[11]);
+      whitePNG = shared.isThemeDark(closure_1) ? icon.darkPNG : icon.lightPNG;
+      const tmpResult = shared;
     }
-    return platform(connectionBackgroundColor[10]).makeSource(whitePNG);
+    return AvatarUtils.makeSource(whitePNG);
   }, items1);
-  obj = { onPress: callback, style: tmp.card, border: "strong", children: null };
+  const obj2 = { onPress: callback, style: tmp.card, border: "strong", children: null };
   const items2 = [tmp.iconContainer, ];
   let tmp10 = null != platform.color;
   if (tmp10) {
-    obj = { backgroundColor: null };
-    obj[0] = connectionBackgroundColor;
-    tmp10 = obj;
+    const obj3 = { backgroundColor: connectionBackgroundColor };
+    tmp10 = obj3;
   }
+  const obj4 = { style: items2, children: closure_6(platform(connectionBackgroundColor[13]).Icon, { style: tmp.icon, source: memo, resizeMode: "contain", disableColor: true, accessibilityLabel: platform.name }) };
   items2[1] = tmp10;
-  obj[3] = closure_6(View, { style: items2, children: closure_6(platform(connectionBackgroundColor[13]).Icon, obj2) });
-  return closure_6(platform(connectionBackgroundColor[12]).Card, obj);
+  obj2.children = closure_6(View, obj4);
+  return closure_6(platform(connectionBackgroundColor[12]).Card, obj2);
 }
 function OtherConnectionsCard(count) {
-  const callback = React.useCallback(() => {
-    callback2(paths[14]).openLazy(callback(paths[16])(paths[15], paths.paths), "AddConnection");
+  const callback = noop.useCallback(() => {
+    require("ActionSheetActionCreators").openLazy(require("asyncRequireImpl")(paths[15], paths.paths), "AddConnection");
   }, []);
-  let obj = { onPress: callback, style: callback3().card, border: "strong", children: null };
-  obj = { variant: "text-md/medium", color: "interactive-text-default", children: "+" + count.count };
-  obj[3] = callback(Text.Text, obj);
-  return callback(PressableCard.Card, obj);
+  const obj = { onPress: callback, style: closure_8().card, border: "strong", children: null };
+  const tmp = closure_8();
+  obj.children = timestampProducer(Text_Text.Text, { variant: "text-md/medium", color: "interactive-text-default", children: "+" + count.count });
+  return timestampProducer(Card.Card, obj);
 }
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles(() => {
-  let obj = { container: { flex: 1, alignItems: "center" }, content: { flex: 1, width: "100%", maxWidth: 260, alignItems: "center", justifyContent: "center" }, card: { flex: 1, maxHeight: 76, maxWidth: 76, aspectRatio: 1, alignItems: "center", justifyContent: "center", padding: 12 }, textContainer: { marginTop: 32 }, text: { textAlign: "center" }, iconContainer: null, icon: null };
-  obj = { flex: 1, maxHeight: 52, maxWidth: 52, aspectRatio: 1, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", padding: 8 };
-  obj[5] = obj;
-  obj[6] = { flex: 1, aspectRatio: 1 };
+const View = fn(17).View;
+const AnalyticsLocations = fn(1074).AnalyticsLocations;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let closure_8 = createStyles.createStyles(() => {
+  const obj = { container: { flex: 1, alignItems: "center" }, content: { flex: 1, width: "100%", maxWidth: 260, alignItems: "center", justifyContent: "center" }, card: { flex: 1, maxHeight: 76, maxWidth: 76, aspectRatio: 1, alignItems: "center", justifyContent: "center", padding: 12 }, textContainer: { marginTop: 32 }, text: { textAlign: "center" }, iconContainer: { flex: 1, maxHeight: 52, maxWidth: 52, aspectRatio: 1, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center", padding: 8 }, icon: { flex: 1, aspectRatio: 1 } };
   return obj;
 });
-let result = require("set").fileFinishedImporting("modules/user_settings/connections/native/ConnectionsEmptyStateUpsell.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/connections/native/ConnectionsEmptyStateUpsell.tsx");
 
 export default function ConnectionsEmptyStateUpsell() {
-  const tmp = callback3();
-  let obj = emptyStatePlatforms(7503);
-  emptyStatePlatforms = obj.useEmptyStatePlatforms();
+  const tmp = closure_8();
+  emptyStatePlatforms = emptyStatePlatforms(7517).useEmptyStatePlatforms();
   const items = [emptyStatePlatforms];
-  const memo = React.useMemo(() => emptyStatePlatforms.slice(0, 3), items);
+  const memo = noop.useMemo(() => emptyStatePlatforms.slice(0, 3), items);
   const items1 = [emptyStatePlatforms];
-  const memo1 = React.useMemo(() => emptyStatePlatforms.slice(3, 5), items1);
-  obj = { style: null, children: null };
+  const memo1 = noop.useMemo(() => emptyStatePlatforms.slice(3, 5), items1);
+  const obj2 = { style: null, children: null };
   const items2 = [tmp.container, ];
-  obj = { paddingBottom: useSafeAreaInsetsDefault().bottom };
-  items2[1] = obj;
-  obj[0] = items2;
-  obj1 = { style: tmp.content, children: null };
-  const obj2 = { spacing: 16, direction: "vertical", align: "center", style: tmp.textContainer, children: null };
-  const items3 = [callback(emptyStatePlatforms(4973).Stack, { spacing: 16, justify: "center", direction: "horizontal", children: memo.map((platform) => callback(closure_9, { platform }, platform.type)) }), ];
-  const obj4 = { spacing: 16, justify: "center", direction: "horizontal", children: null };
-  const items4 = [memo1.map((platform) => callback(closure_9, { platform }, platform.type)), callback(OtherConnectionsCard, { count: emptyStatePlatforms.length - 5 })];
-  obj4[3] = items4;
-  items3[1] = callback2(emptyStatePlatforms(4973).Stack, obj4);
-  obj2[4] = items3;
-  const items5 = [callback2(emptyStatePlatforms(4973).Stack, obj2), ];
-  const obj6 = { spacing: 8, align: "center", style: tmp.textContainer, children: null };
-  const obj7 = { variant: "text-lg/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
+  const obj = emptyStatePlatforms(7517);
+  items2[1] = { paddingBottom: useSafeAreaInsetsDefault().bottom };
+  obj2.style = items2;
+  const obj4 = { style: tmp.content, children: null };
+  const obj5 = { spacing: 16, direction: "vertical", align: "center", style: tmp.textContainer, children: null };
+  const obj3 = { paddingBottom: useSafeAreaInsetsDefault().bottom };
+  const items3 = [closure_6(emptyStatePlatforms(4987).Stack, { spacing: 16, justify: "center", direction: "horizontal", children: memo.map((platform) => closure_1_6(EmptyStateCard, { platform }, platform.type)) }), ];
+  const obj7 = { spacing: 16, justify: "center", direction: "horizontal", children: null };
+  const items4 = [memo1.map((platform) => closure_1_6(EmptyStateCard, { platform }, platform.type)), closure_6(OtherConnectionsCard, { count: emptyStatePlatforms.length - 5 })];
+  obj7.children = items4;
+  items3[1] = closure_7(emptyStatePlatforms(4987).Stack, obj7);
+  obj5.children = items3;
+  const items5 = [closure_7(emptyStatePlatforms(4987).Stack, obj5), ];
+  const obj9 = { spacing: 8, align: "center", style: tmp.textContainer, children: null };
+  const obj10 = { variant: "text-lg/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
   const intl = emptyStatePlatforms(1114).intl;
-  obj7[3] = intl.string(emptyStatePlatforms(1114).t.JlrHXb);
-  const items6 = [callback(emptyStatePlatforms(4556).Text, obj7), ];
-  const obj8 = { variant: "text-md/medium", color: "text-default", style: tmp.text, children: null };
+  obj10.children = intl.string(emptyStatePlatforms(1114).t.JlrHXb);
+  const items6 = [closure_6(emptyStatePlatforms(4570).Text, obj10), ];
+  const obj11 = { variant: "text-md/medium", color: "text-default", style: tmp.text, children: null };
   const intl2 = emptyStatePlatforms(1114).intl;
-  obj8[3] = intl2.string(emptyStatePlatforms(1114).t.XijaQP);
-  items6[1] = callback(emptyStatePlatforms(4556).Text, obj8);
-  obj6[3] = items6;
-  items5[1] = callback2(emptyStatePlatforms(4973).Stack, obj6);
-  obj1[1] = items5;
-  obj[1] = callback2(View, obj1);
-  return callback(View, obj);
+  obj11.children = intl2.string(emptyStatePlatforms(1114).t.XijaQP);
+  items6[1] = closure_6(emptyStatePlatforms(4570).Text, obj11);
+  obj9.children = items6;
+  items5[1] = closure_7(emptyStatePlatforms(4987).Stack, obj9);
+  obj4.children = items5;
+  obj2.children = closure_7(View, obj4);
+  return closure_6(View, obj2);
 };

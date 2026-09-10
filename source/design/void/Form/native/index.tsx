@@ -1,58 +1,59 @@
-// Module ID: 8598
-// Function ID: 8599
+// Module ID: 8626
+// Function ID: 8627
 // Name: Form
-// Dependencies: [2, 7138, 7141, 7146, 7147, 8599, 8603, 8604, 8605, 7148, 8606, 7139, 7143, 7137, 8607, 8609, 7140, 8610, 8611, 8608, 8612, 8613, 7136, 8614, 8615, 8616]
+// Dependencies: [2, 7152, 7155, 7160, 7161, 8627, 8631, 8632, 8633, 7162, 8634, 7153, 7157, 7151, 8635, 8637, 7154, 8638, 8639, 8636, 8640, 8641, 7150, 8642, 8643, 8644]
 
-// Module 8598 (Form)
-import set from "set" /* 2 */;
-import FormCheckboxRowDefault from "FormCheckboxRow" /* 7136 */;
-import _modDef7137 from "module_7137" /* 7137 */;
-import contextDefault from "context" /* 7138 */;
-import FormLabelDefault from "FormLabel" /* 7139 */;
-import FormSubLabelDefault from "FormSubLabel" /* 7140 */;
-import FormArrowDefault from "FormArrow" /* 7141 */;
-import FormRadioDefault from "FormRadio" /* 7143 */;
-import FormCheckboxDefault from "FormCheckbox" /* 7146 */;
-import RowCheckmarkDefault from "RowCheckmark" /* 7147 */;
-import FormIconDefault from "FormIcon" /* 7148 */;
-import FormCTADefault from "FormCTA" /* 8599 */;
-import FormCTAButtonDefault from "FormCTAButton" /* 8603 */;
-import DividerDefault from "Divider" /* 8604 */;
-import FormHintDefault from "FormHint" /* 8605 */;
-import _modDef8606 from "module_8606" /* 8606 */;
-import FormSectionDefault from "FormSection" /* 8607 */;
-import FormTitleDefault from "FormTitle" /* 8608 */;
-import OptionButtonDefault from "OptionButton" /* 8609 */;
-import FormSwitchDefault from "FormSwitch" /* 8610 */;
-import FormTextColors from "FormTextColors" /* 8611 */;
-import FormTextColorsDefault from "FormTextColors" /* 8611 */;
-import FormSwitchRowDefault from "FormSwitchRow" /* 8612 */;
-import FormRadioRowDefault from "FormRadioRow" /* 8613 */;
-import FormRadioGroupDefault from "FormRadioGroup" /* 8614 */;
-import FormSliderRowDefault from "FormSliderRow" /* 8615 */;
-import CardSectionDefault from "CardSection" /* 8616 */;
+// Module 8626 (Form)
+import FormCheckboxRowDefault from "FormCheckboxRow" /* 7150 */;
+import FormRowDefault from "FormRow" /* 7151 */;
+import Form_FormDefault from "Form/Form" /* 7152 */;
+import FormLabelDefault from "FormLabel" /* 7153 */;
+import FormSubLabelDefault from "FormSubLabel" /* 7154 */;
+import FormArrowDefault from "FormArrow" /* 7155 */;
+import Form_FormRadioDefault from "Form/FormRadio" /* 7157 */;
+import Form_FormCheckboxDefault from "Form/FormCheckbox" /* 7160 */;
+import FormCheckmarkDefault from "FormCheckmark" /* 7161 */;
+import FormIconDefault from "FormIcon" /* 7162 */;
+import FormCTADefault from "FormCTA" /* 8627 */;
+import FormCTAButtonDefault from "FormCTAButton" /* 8631 */;
+import FormDividerDefault from "FormDivider" /* 8632 */;
+import FormHintDefault from "FormHint" /* 8633 */;
+import FormInputDefault from "FormInput" /* 8634 */;
+import FormSectionDefault from "FormSection" /* 8635 */;
+import FormTitleDefault from "FormTitle" /* 8636 */;
+import FormSelectDefault from "FormSelect" /* 8637 */;
+import Form_FormSwitchDefault from "Form/FormSwitch" /* 8638 */;
+import FormText from "FormText" /* 8639 */;
+import FormSwitchRowDefault from "FormSwitchRow" /* 8640 */;
+import FormRadioRowDefault from "FormRadioRow" /* 8641 */;
+import FormRadioGroupDefault from "FormRadioGroup" /* 8642 */;
+import FormSliderRowDefault from "FormSliderRow" /* 8643 */;
+import CardSectionDefault from "CardSection" /* 8644 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("design/void/Form/native/index.tsx");
+const FormTextDefault = FormText;
 
-export const Form = contextDefault;
+const result = size.fileFinishedImporting("design/void/Form/native/index.tsx");
+
+export const Form = Form_FormDefault;
 export const FormArrow = FormArrowDefault;
-export const FormCheckbox = FormCheckboxDefault;
-export const FormCheckmark = RowCheckmarkDefault;
+export const FormCheckbox = Form_FormCheckboxDefault;
+export const FormCheckmark = FormCheckmarkDefault;
 export const FormCTA = FormCTADefault;
 export const FormCTAButton = FormCTAButtonDefault;
-export const FormDivider = DividerDefault;
+export const FormDivider = FormDividerDefault;
 export const FormHint = FormHintDefault;
 export const FormIcon = FormIconDefault;
-export const FormInput = _modDef8606;
+export const FormInput = FormInputDefault;
 export const FormLabel = FormLabelDefault;
-export const FormRadio = FormRadioDefault;
-export const FormRow = _modDef7137;
+export const FormRadio = Form_FormRadioDefault;
+export const FormRow = FormRowDefault;
 export const FormSection = FormSectionDefault;
-export const FormSelect = OptionButtonDefault;
+export const FormSelect = FormSelectDefault;
 export const FormSubLabel = FormSubLabelDefault;
-export const FormSwitch = FormSwitchDefault;
-export const FormText = FormTextColorsDefault;
-export const FormTextColors = FormTextColors.FormTextColors;
+export const FormSwitch = Form_FormSwitchDefault;
+export const FormText = FormTextDefault;
+export const FormTextColors = FormText.FormTextColors;
 export const FormTitle = FormTitleDefault;
 export const FormSwitchRow = FormSwitchRowDefault;
 export const FormRadioRow = FormRadioRowDefault;

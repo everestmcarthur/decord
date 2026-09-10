@@ -1,12 +1,11 @@
-// Module ID: 17428
-// Function ID: 17429
-// Name: _initialize
-// Dependencies: [7118, 2]
+// Module ID: 17459
+// Function ID: 17460
+// Name: MetricKitManager
+// Dependencies: [7132, 2]
 
-// Module 17428 (_initialize)
-import initializeDefault from "initialize" /* 7118 */;
+// Module 17459 (MetricKitManager)
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-initializeDefault;
 class MetricKitManager extends tmp2 {
 }
 const prototype = MetricKitManager.prototype;
@@ -17,6 +16,7 @@ prototype["_terminate"] = function _terminate() {
 
 };
 const metricKitManager = new MetricKitManager();
-const result = require("set").fileFinishedImporting("modules/metric_kit_tracker/native/MetricKitManager.android.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/metric_kit_tracker/native/MetricKitManager.android.tsx");
 
 export default metricKitManager;

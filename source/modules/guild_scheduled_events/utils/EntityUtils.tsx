@@ -1,24 +1,25 @@
-// Module ID: 9710
-// Function ID: 9711
-// Name: getChannelFromEvent
+// Module ID: 9737
+// Function ID: 9738
+// Name: EntityUtils
 // Dependencies: [1957, 1963, 2]
 // Exports: getChannelFromEvent, getChannelTypeFromEntity, getLocationFromEvent, getLocationFromEventData
 
-// Module 9710 (getChannelFromEvent)
-import closure_0 from "ensureGuildLoaded" /* 1957 */;
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1963 */;
+// Module 9737 (EntityUtils)
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-({ GuildScheduledEventEntityTypes: closure_1, EntityChannelTypes: obj1 } = GUILD_EVENT_MAX_NAME_LENGTH);
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/utils/EntityUtils.tsx");
+const GuildScheduledEventsConstants = fn(1963);
+({ GuildScheduledEventEntityTypes: closure_1, EntityChannelTypes: c2 } = GuildScheduledEventsConstants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/utils/EntityUtils.tsx");
 
 export const getChannelFromEvent = function getChannelFromEvent(entity_type) {
-  let tmp2 = entity_type.entity_type in closure_2;
+  let tmp2 = entity_type.entity_type in React2;
   if (tmp2) {
     tmp2 = null != tmp;
   }
   let tmp4;
   if (tmp2) {
-    channel = channel.getChannel(entity_type.channel_id);
+    const channel = ChannelStore.getChannel(entity_type.channel_id);
     tmp4 = channel;
   }
   return tmp4;
@@ -55,7 +56,7 @@ export const getLocationFromEventData = function getLocationFromEventData(guildE
 };
 export const getChannelTypeFromEntity = function getChannelTypeFromEntity(entityType) {
   if (entityType === constants.VOICE) {
-    const tmp2 = table[entityType];
+    const tmp2 = React2[entityType];
   }
   return tmp2;
 };

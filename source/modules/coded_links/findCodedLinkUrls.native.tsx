@@ -1,24 +1,25 @@
-// Module ID: 4549
-// Function ID: 4550
+// Module ID: 4563
+// Function ID: 4564
 // Name: findCodedLinkUrls
-// Dependencies: [4550, 7989, 4996, 13849, 13850, 2]
+// Dependencies: [4564, 8003, 5010, 13872, 13873, 2]
 // Exports: default
 
-// Module 4549 (findCodedLinkUrls)
-import set from "set" /* 2 */;
-import trimTrailingPunctuationDefault from "trimTrailingPunctuation" /* 13850 */;
+// Module 4563 (findCodedLinkUrls)
+import MarkupTypes from "MarkupTypes" /* 5010 */;
+import findCodedLinkUrlsUsingRegexDefault from "findCodedLinkUrlsUsingRegex" /* 13873 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/coded_links/findCodedLinkUrls.native.tsx");
+const result = size.fileFinishedImporting("modules/coded_links/findCodedLinkUrls.native.tsx");
 
 export default function findCodedLinkUrls(content) {
   if (obj.isFindCodedLinksRegexEnabled()) {
-    let items = trimTrailingPunctuationDefault(content);
+    let items = findCodedLinkUrlsUsingRegexDefault(content);
   } else {
     items = [];
-    const _default = tmp(4550).default;
-    const parseToASTResult = tmp(4550).default.parseToAST(content, true, { allowLinks: true });
-    tmp(7989).walkAst(parseToASTResult, (type) => {
-      let tmp = type.type === items(closure_1_2[2]).AST_KEY.LINK && typeof type.target === "string";
+    const _default = tmp(4564).default;
+    const parseToASTResult = tmp(4564).default.parseToAST(content, true, { allowLinks: true });
+    tmp(8003).walkAst(parseToASTResult, (type) => {
+      let tmp = type.type === MarkupTypes.AST_KEY.LINK && typeof type.target === "string";
       if (tmp) {
         tmp = type.target.length > 0;
       }
@@ -26,7 +27,7 @@ export default function findCodedLinkUrls(content) {
         items.push(type.target);
       }
     });
-    const tmpResult = tmp(7989);
+    const tmpResult = tmp(8003);
   }
   return items;
 };

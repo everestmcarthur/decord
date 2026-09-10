@@ -1,30 +1,32 @@
-// Module ID: 13103
-// Function ID: 13104
-// Name: setSendState
+// Module ID: 13129
+// Function ID: 13130
+// Name: GuildInviteSendStateStore
 // Dependencies: [560, 1249, 2]
 // Exports: setSendState
 
-// Module 13103 (setSendState)
-import set from "set" /* 2 */;
-import keys from "keys" /* 560 */;
+// Module 13129 (GuildInviteSendStateStore)
+import module_560 from "module_560" /* 560 */;
+import size from "module_2" /* 2 */;
 
-let obj = keys.create(() => ({}));
-const result = set.fileFinishedImporting("modules/instant_invite/GuildInviteSendStateStore.tsx");
+const require = globalThis.__r;
+
+const useGuildInviteSendStates = module_560.create(() => ({}));
+const result = size.fileFinishedImporting("modules/instant_invite/GuildInviteSendStateStore.tsx");
 
 export const setSendState = function setSendState(arg0, arg1, arg2) {
-  const _require = arg0;
+  _require = arg0;
   dependencyMap = arg1;
   closure_2 = arg2;
-  _require(1249).batchUpdates(() => {
-    state.setState((arg0) => {
-      obj = {};
+  require("ReactBatchUpdates").batchUpdates(() => {
+    obj.setState((arg0) => {
+      const obj = {};
       const merged = Object.assign(arg0);
-      obj = {};
-      const merged1 = Object.assign(arg0[closure_0]);
-      obj[closure_1] = closure_2;
-      obj[closure_0] = obj;
+      const obj2 = {};
+      const merged1 = Object.assign(arg0[closure_1_0]);
+      obj2[closure_1_1] = closure_1_2;
+      obj[closure_1_0] = obj2;
       return obj;
     });
   });
 };
-export const useGuildInviteSendStates = obj;
+export { useGuildInviteSendStates };

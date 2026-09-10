@@ -1,38 +1,37 @@
-// Module ID: 15468
-// Function ID: 15469
-// Name: toggle
-// Dependencies: [1185, 7975, 504, 15466, 1935, 11473, 1114, 2]
+// Module ID: 15497
+// Function ID: 15498
+// Name: DataSavingModeSetting
+// Dependencies: [1185, 7989, 504, 15495, 1935, 11500, 1114, 2]
 
-// Module 15468 (toggle)
+// Module 15497 (DataSavingModeSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import UserSettingsText from "UserSettingsText" /* 15466 */;
-import closure_2 from "CHANNEL_SIDEBAR_WIDTH" /* 1185 */;
-import createToggle from "createToggle" /* 11473 */;
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import UserSettingsText from "UserSettingsText" /* 15495 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const SettingBuilders = fn(11500);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.ix8XIj);
+    const intl = util.intl;
+    return intl.string(util.t.ix8XIj);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.CHAT,
+  parent: fn(7989).MobileUserSettings.CHAT,
   useValue: function useDataSavingModeSettingValue() {
-    const items = [closure_2];
+    const items = [UnsyncedUserSettingsStore];
     return initialize.useStateFromStores(items, () => dataSavingMode.dataSavingMode);
   },
-  onValueChange: function onDataSavingModeSettingValueChange(arg0) {
-    let obj = UserSettingsText;
-    obj = { videoUploadQuality: closure_2.videoUploadQuality, viewImageDescriptions: null, lowQualityImageMode: null, dataSavingMode: null };
-    const ViewImageDescriptions = explicitContentFromProto.ViewImageDescriptions;
-    obj[1] = ViewImageDescriptions.getSetting();
-    obj[2] = closure_2.lowQualityImageMode;
-    obj[3] = arg0;
-    obj.setDataSavingMode(obj);
+  onValueChange: function onDataSavingModeSettingValueChange(dataSavingMode) {
+    const obj2 = { videoUploadQuality: UnsyncedUserSettingsStore.videoUploadQuality, viewImageDescriptions: null, lowQualityImageMode: null, dataSavingMode: null };
+    const ViewImageDescriptions = UserSettings.ViewImageDescriptions;
+    obj2.viewImageDescriptions = ViewImageDescriptions.getSetting();
+    obj2.lowQualityImageMode = UnsyncedUserSettingsStore.lowQualityImageMode;
+    obj2.dataSavingMode = dataSavingMode;
+    UserSettingsText.setDataSavingMode(obj2);
   }
-};
-createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DataSavingModeSetting.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DataSavingModeSetting.tsx");
 
-export default createToggle;
+export default toggle;

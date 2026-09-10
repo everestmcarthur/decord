@@ -1,20 +1,21 @@
-// Module ID: 14684
-// Function ID: 14685
-// Name: useIs2FAEnabled
+// Module ID: 14710
+// Function ID: 14711
+// Name: SettingsAccountUtils
 // Dependencies: [502, 1371, 563, 2]
 // Exports: useIs2FAEnabled, useIsTOTPEnabled, useIsUserVerified
 
-// Module 14684 (useIs2FAEnabled)
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 563 */;
-import closure_2 from "fetchFingerprint" /* 502 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
+// Module 14710 (SettingsAccountUtils)
+import useStateFromStores from "useStateFromStores" /* 563 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/account/native/SettingsAccountUtils.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/account/native/SettingsAccountUtils.tsx");
 
 export const useIs2FAEnabled = function useIs2FAEnabled() {
-  const items = [closure_3];
-  return defaultAreStatesEqual.useStateFromStores(items, () => {
+  const items = [UserStore];
+  return useStateFromStores.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;
     if (currentUser != null) {
@@ -27,12 +28,12 @@ export const useIs2FAEnabled = function useIs2FAEnabled() {
   });
 };
 export const useIsTOTPEnabled = function useIsTOTPEnabled() {
-  const items = [closure_2];
-  return defaultAreStatesEqual.useStateFromStores(items, () => closure_2.hasTOTPEnabled());
+  const items = [AuthenticationStore];
+  return useStateFromStores.useStateFromStores(items, () => AuthenticationStore.hasTOTPEnabled());
 };
 export const useIsUserVerified = function useIsUserVerified() {
-  const items = [closure_3];
-  return defaultAreStatesEqual.useStateFromStores(items, () => {
+  const items = [UserStore];
+  return useStateFromStores.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;
     if (currentUser != null) {

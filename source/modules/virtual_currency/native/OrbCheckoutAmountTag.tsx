@@ -1,49 +1,44 @@
-// Module ID: 11017
-// Function ID: 11018
+// Module ID: 11044
+// Function ID: 11045
 // Name: OrbCheckoutAmountTag
-// Dependencies: [17, 21, 4560, 576, 8842, 4556, 1114, 2]
+// Dependencies: [17, 21, 4574, 576, 8869, 4570, 1114, 2]
 // Exports: default
 
-// Module 11017 (OrbCheckoutAmountTag)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Text from "Text" /* 4556 */;
-import OrbsIcon from "OrbsIcon" /* 8842 */;
+// Module 11044 (OrbCheckoutAmountTag)
+import _mod17 from "module_17" /* 17 */;
+import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import OrbsIcon from "OrbsIcon" /* 8869 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import createStyles from "createStyles" /* 4574 */;
+import size from "module_2" /* 2 */;
 
-const View = get_ActivityIndicator.View;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-let obj = { orbAmountTag: null, orbsIcon: null };
-obj = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
-obj[0] = obj;
-obj[1] = { width: 14, height: 14 };
-let closure_5 = createCacheKey.createStyles(obj);
-const result = set.fileFinishedImporting("modules/virtual_currency/native/OrbCheckoutAmountTag.tsx");
+const View = _mod17.View;
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+let obj = { orbAmountTag: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, orbsIcon: { width: 14, height: 14 } };
+let closure_5 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/virtual_currency/native/OrbCheckoutAmountTag.tsx");
 
 export default function OrbCheckoutAmountTag(orbAmount) {
   orbAmount = orbAmount.orbAmount;
-  const tmp = callback2();
-  let obj = { style: tmp.orbAmountTag, children: null };
-  obj = { size: "custom", color: "icon-strong", style: tmp.orbsIcon };
-  const items = [callback(OrbsIcon.OrbsIcon, obj), ];
+  const tmp = closure_5();
+  const obj = { style: tmp.orbAmountTag, children: null };
+  const items = [React3(OrbsIcon.OrbsIcon, { size: "custom", color: "icon-strong", style: tmp.orbsIcon }), ];
   if (null == orbAmount) {
     const intl2 = tmp5(1114).intl;
     let stringResult = intl2.string(tmp5(1114).t.pfChQr);
   } else {
     const intl = tmp5(1114).intl;
-    obj = { orbAmount: null };
-    obj[0] = orbAmount;
-    stringResult = intl.formatToPlainString(tmp5(1114).t.W4DfeF, obj);
+    const obj3 = { orbAmount };
+    stringResult = intl.formatToPlainString(tmp5(1114).t.W4DfeF, obj3);
   }
-  obj1 = { variant: "text-md/semibold", accessibilityLabel: stringResult, children: null };
+  const obj4 = { variant: "text-md/semibold", accessibilityLabel: stringResult, children: null };
   let str = "--";
   if (null != orbAmount) {
     str = orbAmount;
   }
-  obj1[2] = str;
-  items[1] = callback(Text.Text, obj1);
-  obj[1] = items;
-  return closure_4(View, obj);
+  obj4.children = str;
+  items[1] = React3(Text_Text.Text, obj4);
+  obj.children = items;
+  return React4(View, obj);
 };

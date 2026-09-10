@@ -1,17 +1,17 @@
-// Module ID: 6177
-// Function ID: 6178
+// Module ID: 6191
+// Function ID: 6192
 // Name: GoatIllocon
-// Dependencies: [21, 5587, 6178, 2]
+// Dependencies: [21, 5601, 6192, 2]
 // Exports: GoatIllocon
 
-// Module 6177 (GoatIllocon)
-import set from "set" /* 2 */;
+// Module 6191 (GoatIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 6178 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6192 from "module_6192" /* 6192 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GoatIllocon.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/GoatIllocon.native.tsx");
 
 export const GoatIllocon = function GoatIllocon(size) {
   let num = size.size;
@@ -19,13 +19,13 @@ export const GoatIllocon = function GoatIllocon(size) {
   if (num === undefined) {
     num = 64;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef6192 };
+  obj.source = obj2;
   const items = [{ width: num, height: num }];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { uri: metadataDefault });
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

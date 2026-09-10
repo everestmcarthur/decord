@@ -1,156 +1,150 @@
-// Module ID: 16761
-// Function ID: 16762
-// Dependencies: [19, 4901, 4900, 1607, 1074, 1482, 12040, 21, 1242, 4296, 4427, 1609, 16762, 4262, 576, 9551, 16763, 12162, 10640, 5138, 4425, 5128, 1115, 5127, 10638, 12201, 1114, 5106, 5073, 10643, 10117, 5087, 10645, 16764, 16765, 10647, 16766, 10648, 2]
+// Module ID: 16798
+// Function ID: 16799
+// Name: MediaKeyboard
+// Dependencies: [19, 4915, 4914, 1607, 1074, 1482, 12066, 21, 1242, 4310, 4441, 1609, 16799, 4275, 576, 9578, 16800, 12188, 10667, 5152, 4439, 5142, 1115, 5141, 10665, 12227, 1114, 5120, 5087, 10670, 10144, 5101, 10672, 16801, 16802, 10674, 16803, 10675, 2]
 
-// Module 16761
-import importAllResult from "noop" /* 19 */;
-import { DraftType } from "handleChanged" /* 4901 */;
-import closure_5 from "map" /* 4900 */;
-import DRAG_HANDLE from "DRAG_HANDLE" /* 1607 */;
-import ME from "ME" /* 1074 */;
-import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1482 */;
-import { KEYBOARD_ANIMATION_CONFIG } from "KEYBOARD_ANIMATION_DURATION" /* 12040 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 16798 (MediaKeyboard)
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import ChatInputUtils from "ChatInputUtils" /* 4439 */;
+import ThreadIcon from "ThreadIcon" /* 5087 */;
+import ImageIcon from "ImageIcon" /* 5101 */;
+import AppsIcon from "AppsIcon" /* 5120 */;
+import Upload from "Upload" /* 5142 */;
+import AttachmentIcon from "AttachmentIcon" /* 10144 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10667 */;
+import PollsIcon from "PollsIcon" /* 10670 */;
+import MediaKeyboardBottomSheetHeaderSimpleDefault from "MediaKeyboardBottomSheetHeaderSimple" /* 10672 */;
+import MediaKeyboardBottomSheetActionsDefault from "MediaKeyboardBottomSheetActions" /* 10674 */;
+import PollCreationModalActionCreators from "PollCreationModalActionCreators" /* 12227 */;
+import MediaKeyboardAccessoriesContainerDefault from "MediaKeyboardAccessoriesContainer" /* 16801 */;
+import MediaKeyboardFloatingSendDefault from "MediaKeyboardFloatingSend" /* 16802 */;
+import noop from "module_19" /* 19 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 4914 */;
 
-const require = arg1;
-let c3 = importAllResult;
-({ MediaKeyboardTarget: closure_6, MediaPickerActionSheetEngagedActions: error } = DRAG_HANDLE);
-({ AnalyticEvents: closure_8, ChatInputComponentViewedTypes: c9 } = ME);
+require = fn;
+const DraftType = fn(4915).DraftType;
+const MediaKeyboardConstants = fn(1607);
+({ MediaKeyboardTarget: metroRequire, MediaPickerActionSheetEngagedActions: closure_7 } = MediaKeyboardConstants);
+const Constants = fn(1074);
+({ AnalyticEvents: closure_8, ChatInputComponentViewedTypes: closure_9 } = Constants);
+const AppLauncherRouteName = fn(1482).AppLauncherRouteName;
+const KEYBOARD_ANIMATION_CONFIG = fn(12066).KEYBOARD_ANIMATION_CONFIG;
+const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const memoResult = importAllResult.memo(function MediaKeyboard(channel) {
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboard.tsx");
+
+export default noop.memo(function MediaKeyboard(channel) {
   channel = channel.channel;
   const chatInputRef = channel.chatInputRef;
-  let ref;
   let sharedValue;
-  let sharedValue1;
-  let keyboardContextForType;
-  let token;
-  let isAppLauncherEnabled;
-  closure_8 = undefined;
-  let allowedExtensions;
-  let validateFilenames;
-  let showInvalidFileTypeAlert;
-  let memo;
-  let canStartThreads;
-  let memo1;
-  closure_15 = undefined;
   let items = [, ];
   ({ id: arr[0], guild_id: arr[1] } = channel);
   ({ onClose, transitionState } = channel);
   const effect = sharedValue.useEffect(() => {
-    let obj = chatInputRef(ref[8]);
-    obj = { type: allowedExtensions.MEDIA_PICKER, channel_id: channel.id, guild_id: channel.guild_id };
-    obj.track(closure_8.CHAT_INPUT_COMPONENT_VIEWED, obj);
+    AnalyticsUtilsDefault.track(constants.CHAT_INPUT_COMPONENT_VIEWED, { type: constants2.MEDIA_PICKER, channel_id: channel.id, guild_id: channel.guild_id });
   }, items);
-  ref = sharedValue.useRef(null);
+  let ref = sharedValue.useRef(null);
+  sharedValue = channel(ref[9]).useSharedValue(-1);
   let obj = channel(ref[9]);
-  sharedValue = obj.useSharedValue(-1);
-  sharedValue1 = channel(ref[9]).useSharedValue(0);
+  const sharedValue1 = channel(ref[9]).useSharedValue(0);
   let obj2 = channel(ref[9]);
-  keyboardContextForType = channel(ref[10]).useKeyboardContextForType(channel(ref[11]).KeyboardTypes.MEDIA);
+  const keyboardContextForType = channel(ref[10]).useKeyboardContextForType(channel(ref[11]).KeyboardTypes.MEDIA);
   let obj3 = channel(ref[10]);
-  const obj4 = channel(ref[12]);
-  token = channel(ref[13]).useToken(chatInputRef(ref[14]).modules.mobile.MEDIA_KEYBOARD_SEND_VERTICAL_INSET);
+  let obj4 = channel(ref[12]);
+  const token = channel(ref[13]).useToken(chatInputRef(ref[14]).modules.mobile.MEDIA_KEYBOARD_SEND_VERTICAL_INSET);
   let obj5 = channel(ref[13]);
-  isAppLauncherEnabled = channel(ref[15]).getIsAppLauncherEnabled(channel);
+  const isAppLauncherEnabled = channel(ref[15]).getIsAppLauncherEnabled(channel);
   let tmp8 = chatInputRef(ref[16])({ channel, context: keyboardContextForType });
   closure_8 = tmp8;
   let obj6 = channel(ref[15]);
   const fileTypeFiltering = channel(ref[17]).useFileTypeFiltering(tmp8.fileTypes);
-  allowedExtensions = fileTypeFiltering.allowedExtensions;
-  validateFilenames = fileTypeFiltering.validateFilenames;
-  showInvalidFileTypeAlert = fileTypeFiltering.showInvalidFileTypeAlert;
+  const allowedExtensions = fileTypeFiltering.allowedExtensions;
+  const validateFilenames = fileTypeFiltering.validateFilenames;
+  const showInvalidFileTypeAlert = fileTypeFiltering.showInvalidFileTypeAlert;
   let items1 = [sharedValue, channel, chatInputRef, keyboardContextForType, ref, tmp8, allowedExtensions, validateFilenames, showInvalidFileTypeAlert];
-  memo = sharedValue.useMemo(() => {
+  const memo = sharedValue.useMemo(() => {
     function onRestoreKeyboard() {
-      if (closure_5.target !== closure_1_6.APP_LAUNCHER) {
+      if (keyboardContextForType.target !== token.APP_LAUNCHER) {
         const current = onSelectFiles.current;
-        const obj = { type: null, context: null };
-        obj[0] = onRestoreKeyboard(onSelectItem[11]).KeyboardTypes.MEDIA;
-        obj[1] = tmp;
+        const obj = { type: channel(ref[11]).KeyboardTypes.MEDIA, context: tmp };
         current.openCustomKeyboard(obj);
       }
     }
     function onSelectFiles(items, IMAGE_PICKER) {
-      if (closure_5.target === closure_1_6.CHAT) {
-        onRestoreKeyboard(onSelectItem[18]).addImagesFromPicker(onRestoreKeyboard.id, items, IMAGE_PICKER);
-        const obj3 = onRestoreKeyboard(onSelectItem[18]);
+      if (keyboardContextForType.target === token.CHAT) {
+        channel(ref[18]).addImagesFromPicker(onRestoreKeyboard.id, items, IMAGE_PICKER);
+        const obj3 = channel(ref[18]);
       } else if (tmp.target === tmp2.COMMAND) {
-        if (closure_9.length > 0) {
-          items = [onRestoreKeyboard(onSelectItem[19]).getFileFromUploadItem(items[0]).filename];
-          if (!callback(items)) {
-            return callback2();
+        if (extensions.length > 0) {
+          items = [channel(ref[19]).getFileFromUploadItem(items[0]).filename];
+          if (!validateFilenames(items)) {
+            return showInvalidFileTypeAlert();
           }
-          const obj = onRestoreKeyboard(onSelectItem[19]);
+          const obj = channel(ref[19]);
         }
-        const obj2 = onRestoreKeyboard(onSelectItem[18]);
+        const obj2 = channel(ref[18]);
         const result = obj2.addAttachmentForCommand(onRestoreKeyboard.id, onSelectFiles, items[0], tmp, IMAGE_PICKER);
       }
     }
     function onSelectItem(arg0) {
       ({ channelId, item, isIncluded } = arg0);
-      let obj = onSelectFiles(onSelectItem[8]);
-      obj = { action: closure_1_7.MEDIA_SELECTED };
-      obj.track(closure_1_8.MEDIA_PICKER_ACTION_SHEET_ENGAGED, obj);
-      if (closure_5.target === closure_1_6.CHAT) {
-        const obj5 = onRestoreKeyboard(tmp[18]);
+      chatInputRef(ref[8]).track(closure_8.MEDIA_PICKER_ACTION_SHEET_ENGAGED, { action: isAppLauncherEnabled.MEDIA_SELECTED });
+      if (keyboardContextForType.target === token.CHAT) {
+        const obj5 = channel(tmp[18]);
         const result = obj5.handleSelectKeyboardItem(channelId, item, isIncluded, false);
       } else if (tmp3.target === tmp4.COMMAND) {
-        const result1 = onRestoreKeyboard(tmp[18]).mediaNodeToUploadItem(item);
-        if (closure_9.length > 0) {
-          let tmp19Result = tmp19(tmp[19]);
-          const items = [tmp19Result.getFileFromUploadItem(result1).filename];
-          if (!callback(items)) {
-            return callback2();
+        const result1 = channel(tmp[18]).mediaNodeToUploadItem(item);
+        if (extensions.length > 0) {
+          const items = [tmp19(tmp[19]).getFileFromUploadItem(result1).filename];
+          if (!validateFilenames(items)) {
+            return showInvalidFileTypeAlert();
           }
+          const tmp19Result = tmp19(tmp[19]);
         }
-        tmp19Result = tmp19(tmp[18]);
-        const result2 = tmp19Result.addAttachmentForCommand(channelId, onSelectFiles, result1, tmp3, tmp19(tmp[21]).UploadOrigin.IMAGE_PICKER);
-        const obj6 = onRestoreKeyboard(tmp[18]);
+        const tmp19Result2 = channel(tmp[18]);
+        const result2 = tmp19Result2.addAttachmentForCommand(channelId, onSelectFiles, result1, tmp3, tmp19(tmp[21]).UploadOrigin.IMAGE_PICKER);
+        const obj6 = channel(tmp[18]);
       }
     }
     return {
       onAttachPress() {
-        let obj = channel(ref[18]);
-        obj = {};
         const FILE_ATTACHMENT = channel(ref[21]).UploadOrigin.FILE_ATTACHMENT;
-        obj = {
+        const merged = Object.assign({
           channel: onRestoreKeyboard,
           uploadLimit: closure_1_8.uploadLimit,
-          extensions: closure_1_9,
+          extensions,
           onDismissKeyboard() {
-            return IMAGE_PICKER(table[20]).dismissKeyboard();
+            return IMAGE_PICKER(onSelectItem[20]).dismissKeyboard();
           },
           onRestoreKeyboard: FILE_ATTACHMENT,
           onSelectFiles(arg0) {
-            return closure_1_1(arg0, IMAGE_PICKER);
+            return onSelectFiles(arg0, IMAGE_PICKER);
           }
-        };
-        const merged = Object.assign(obj);
-        obj.handleAttachFile(obj);
+        });
+        channel(ref[18]).handleAttachFile({});
       },
       onPressCamera(previewType) {
-        let obj = channel(ref[18]);
-        obj = {};
+        const obj2 = {};
         const IMAGE_PICKER = channel(ref[21]).UploadOrigin.IMAGE_PICKER;
-        obj = {
+        const merged = Object.assign({
           channel: onRestoreKeyboard,
           uploadLimit: closure_1_8.uploadLimit,
-          extensions: closure_1_9,
+          extensions,
           onDismissKeyboard() {
-            return IMAGE_PICKER(table[20]).dismissKeyboard();
+            return IMAGE_PICKER(onSelectItem[20]).dismissKeyboard();
           },
           onRestoreKeyboard: IMAGE_PICKER,
           onSelectFiles(arg0) {
-            return closure_1_1(arg0, IMAGE_PICKER);
+            return onSelectFiles(arg0, IMAGE_PICKER);
           }
-        };
-        const merged = Object.assign(obj);
-        obj.previewType = previewType;
-        obj.handleCameraDialog(obj);
+        });
+        obj2.previewType = previewType;
+        channel(ref[18]).handleCameraDialog(obj2);
       },
       onPressHeader() {
-        if (0 === closure_3.get()) {
+        if (0 === sharedValue.get()) {
           const current2 = onSelectItem.current;
           if (current2 != null) {
             current2.expand();
@@ -163,24 +157,35 @@ const memoResult = importAllResult.memo(function MediaKeyboard(channel) {
         }
       },
       onViewAll() {
-        let obj = channel(ref[18]);
-        obj = {};
+        const obj2 = {};
         const IMAGE_PICKER = channel(ref[21]).UploadOrigin.IMAGE_PICKER;
-        obj = {
+        const merged = Object.assign({
           channel: onRestoreKeyboard,
           uploadLimit: closure_1_8.uploadLimit,
-          extensions: closure_1_9,
+          extensions,
           onDismissKeyboard() {
-            return IMAGE_PICKER(table[20]).dismissKeyboard();
+            return IMAGE_PICKER(onSelectItem[20]).dismissKeyboard();
           },
           onRestoreKeyboard: IMAGE_PICKER,
           onSelectFiles(arg0) {
-            return closure_1_1(arg0, IMAGE_PICKER);
+            return onSelectFiles(arg0, IMAGE_PICKER);
+          }
+        });
+        obj2.draftType = closure_1_8.draftType;
+        channel(ref[18]).handleViewAllDialog(obj2);
+        const obj = channel(ref[18]);
+        const obj3 = {
+          channel: onRestoreKeyboard,
+          uploadLimit: closure_1_8.uploadLimit,
+          extensions,
+          onDismissKeyboard() {
+            return IMAGE_PICKER(onSelectItem[20]).dismissKeyboard();
+          },
+          onRestoreKeyboard: IMAGE_PICKER,
+          onSelectFiles(arg0) {
+            return onSelectFiles(arg0, IMAGE_PICKER);
           }
         };
-        const merged = Object.assign(obj);
-        obj.draftType = closure_1_8.draftType;
-        obj.handleViewAllDialog(obj);
         if (obj4.isAndroid()) {
           const current = onSelectItem.current;
           if (current != null) {
@@ -189,9 +194,8 @@ const memoResult = importAllResult.memo(function MediaKeyboard(channel) {
         }
       },
       onManageLimited() {
-        let obj = channel(ref[18]);
-        obj = { onDismissKeyboard: channel(ref[20]).dismissKeyboard, onRestoreKeyboard };
-        const result = obj.handleLimitedPickerDialog(obj);
+        const obj = MediaKeyboardUtils;
+        const result = obj.handleLimitedPickerDialog({ onDismissKeyboard: ChatInputUtils.dismissKeyboard, onRestoreKeyboard });
       },
       onPressItem(channelId) {
         onSelectItem({ channelId: channelId.channelId, item: channelId.item, isIncluded: channelId.isIncluded });
@@ -200,56 +204,53 @@ const memoResult = importAllResult.memo(function MediaKeyboard(channel) {
         channelId = channelId.channelId;
         const item = channelId.item;
         const isIncluded = channelId.isIncluded;
-        let fn;
-        let obj = channel(ref[18]);
-        const result = obj.mediaNodeToUploadItem(item);
+        let onRemove;
+        const result = channel(ref[18]).mediaNodeToUploadItem(item);
         const cloudUpload = new channel(ref[23]).CloudUpload(result, channelId);
         let upload;
         if (isIncluded) {
           upload = keyboardContextForType.getUpload(channelId, cloudUpload.id, sharedValue1.ChannelMessage);
         }
-        fn = undefined;
+        onRemove = undefined;
         if (null != upload) {
-          fn = () => channel(ref[18]).handleSelectKeyboardItem(channelId, item, isIncluded, false);
+          onRemove = () => MediaKeyboardUtils.handleSelectKeyboardItem(channelId, item, isIncluded, false);
         }
-        obj = { channelId, disableAddDescription: null == upload, disableSpoiler: null == upload, upload: null, onAdd: null, onEdit: null, onRemove: null };
+        const obj2 = { channelId, disableAddDescription: null == upload, disableSpoiler: null == upload, upload: null, onAdd: null, onEdit: null, onRemove: null };
         let tmp8 = upload;
+        const obj = channel(ref[18]);
         if (upload == null) {
           tmp8 = cloudUpload;
         }
-        obj[3] = tmp8;
+        obj2.upload = tmp8;
         let fn2;
         if (null == upload) {
-          fn2 = () => isIncluded({ channelId, item, isIncluded });
+          fn2 = () => onSelectItem({ channelId, item, isIncluded });
         }
-        obj[4] = fn2;
-        obj[5] = function onEdit(arg0) {
+        obj2.onAdd = fn2;
+        obj2.onEdit = function onEdit(arg0) {
           if (fn != null) {
             tmp();
           }
           const items = [arg0];
-          item(items, channel(ref[21]).UploadOrigin.IMAGE_EDITOR);
+          onSelectFiles(items, Upload.UploadOrigin.IMAGE_EDITOR);
         };
-        obj[6] = fn;
-        chatInputRef(ref[24])(obj);
+        obj2.onRemove = onRemove;
+        chatInputRef(ref[24])(obj2);
       },
       onPollsPress() {
-        let obj = chatInputRef(ref[8]);
-        obj = { type: allowedExtensions.POLLS, channel_id: onRestoreKeyboard.id, guild_id: onRestoreKeyboard.guild_id };
-        obj.track(constants.CHAT_INPUT_COMPONENT_VIEWED, obj);
-        const current = onSelectFiles.current;
+        AnalyticsUtilsDefault.track(constants.CHAT_INPUT_COMPONENT_VIEWED, { type: constants2.POLLS, channel_id: channel.id, guild_id: channel.guild_id });
+        const current = chatInputRef.current;
         current.closeCustomKeyboard();
-        obj = { channel: onRestoreKeyboard, onCancel: onRestoreKeyboard };
-        channel(ref[25]).openCreatePollModal(obj);
+        const obj2 = { type: constants2.POLLS, channel_id: channel.id, guild_id: channel.guild_id };
+        PollCreationModalActionCreators.openCreatePollModal({ channel, onCancel: onRestoreKeyboard });
       },
       onAppsPress() {
         const current = onSelectFiles.current;
-        obj = { type: onRestoreKeyboard(onSelectItem[11]).KeyboardTypes.APP_LAUNCHER, context: obj };
-        obj = { initialRouteName: closure_1_10.HOME };
+        const obj = { type: channel(ref[11]).KeyboardTypes.APP_LAUNCHER, context: { initialRouteName: validateFilenames.HOME } };
         current.openCustomKeyboard(obj);
       },
-      onThreadPress(arg0) {
-        onRestoreKeyboard(onSelectItem[18]).handleSelectThread(onRestoreKeyboard, onSelectFiles);
+      onThreadPress() {
+        channel(ref[18]).handleSelectThread(onRestoreKeyboard, onSelectFiles);
       },
       onSend() {
         const current = onSelectItem.current;
@@ -261,87 +262,87 @@ const memoResult = importAllResult.memo(function MediaKeyboard(channel) {
       }
     };
   }, items1);
-  canStartThreads = tmp8.canStartThreads;
+  const canStartThreads = tmp8.canStartThreads;
   let items2 = [memo, , , , ];
   ({ uploadDisabled: arr3[1], canPostPolls: arr3[2] } = tmp8);
   items2[3] = isAppLauncherEnabled;
   items2[4] = canStartThreads;
-  memo1 = sharedValue.useMemo(() => {
+  const memo1 = sharedValue.useMemo(() => {
     if (isAppLauncherEnabled) {
-      let obj = { text: null, IconComponent: null, onPress: null, disabled: false };
-      const intl = channel(ref[26]).intl;
-      obj[0] = intl.string(channel(ref[26]).t.PHjkRE);
-      obj[1] = channel(ref[27]).AppsIcon;
-      obj[2] = memo.onAppsPress;
+      const obj = { text: null, IconComponent: null, onPress: null, disabled: false };
+      const intl = util.intl;
+      obj.text = intl.string(util.t.PHjkRE);
+      obj.IconComponent = AppsIcon.AppsIcon;
+      obj.onPress = memo.onAppsPress;
       const items = [obj];
       let items1 = items;
     } else {
       items1 = [];
     }
     if (canStartThreads) {
-      obj = { text: null, IconComponent: null, onPress: null, disabled: false };
-      const intl2 = channel(ref[26]).intl;
-      obj[0] = intl2.string(channel(ref[26]).t["7Xm5QI"]);
-      obj[1] = channel(ref[28]).ThreadIcon;
-      obj[2] = memo.onThreadPress;
-      const items2 = [obj];
+      const obj2 = { text: null, IconComponent: null, onPress: null, disabled: false };
+      const intl2 = util.intl;
+      obj2.text = intl2.string(util.t["7Xm5QI"]);
+      obj2.IconComponent = ThreadIcon.ThreadIcon;
+      obj2.onPress = memo.onThreadPress;
+      const items2 = [obj2];
       let items3 = items2;
     } else {
       items3 = [];
     }
-    obj = { text: null, IconComponent: null, onPress: null, disabled: null };
-    const intl3 = channel(ref[26]).intl;
-    obj[0] = intl3.string(channel(ref[26]).t.RgIi2B);
-    obj[1] = channel(ref[29]).PollsIcon;
-    obj[2] = memo.onPollsPress;
-    obj[3] = !closure_8.canPostPolls;
-    const items4 = [obj, ...items1];
-    obj1 = { text: null, IconComponent: null, onPress: null, disabled: null };
-    const intl4 = channel(ref[26]).intl;
-    obj1[0] = intl4.string(channel(ref[26]).t["8Hvr3+"]);
-    obj1[1] = channel(ref[30]).AttachmentIcon;
-    obj1[2] = memo.onAttachPress;
-    obj1[3] = closure_8.uploadDisabled;
-    items4[tmp15] = obj1;
-    const obj2 = { text: null, IconComponent: null, onPress: null, disabled: null };
-    const intl5 = channel(ref[26]).intl;
-    obj2[0] = intl5.string(channel(ref[26]).t.Zmm6dN);
-    obj2[1] = channel(ref[31]).ImageIcon;
-    obj2[2] = memo.onViewAll;
-    obj2[3] = closure_8.uploadDisabled;
-    const items5 = [obj2, ...items4];
+    const obj3 = { text: null, IconComponent: null, onPress: null, disabled: null };
+    const intl3 = util.intl;
+    obj3.text = intl3.string(util.t.RgIi2B);
+    obj3.IconComponent = PollsIcon.PollsIcon;
+    obj3.onPress = memo.onPollsPress;
+    obj3.disabled = !closure_8.canPostPolls;
+    const items4 = [obj3, ...items1];
+    const obj4 = { text: null, IconComponent: null, onPress: null, disabled: null };
+    const intl4 = util.intl;
+    obj4.text = intl4.string(util.t["8Hvr3+"]);
+    obj4.IconComponent = AttachmentIcon.AttachmentIcon;
+    obj4.onPress = memo.onAttachPress;
+    obj4.disabled = closure_8.uploadDisabled;
+    items4[tmp15] = obj4;
+    const obj5 = { text: null, IconComponent: null, onPress: null, disabled: null };
+    const intl5 = util.intl;
+    obj5.text = intl5.string(util.t.Zmm6dN);
+    obj5.IconComponent = ImageIcon.ImageIcon;
+    obj5.onPress = memo.onViewAll;
+    obj5.disabled = closure_8.uploadDisabled;
+    const items5 = [obj5, ...items4];
     return items5;
   }, items2);
-  closure_15 = sharedValue.useRef(null);
+  ref = sharedValue.useRef(null);
   let items3 = [memo];
   let items4 = [sharedValue, sharedValue1, memo, channel.id, tmp8, memo1, token];
-  const callback = sharedValue.useCallback((animatedIndex) => memo(chatInputRef(ref[32]), { animatedIndex: animatedIndex.animatedIndex, onPress: memo.onPressHeader }), items3);
+  const callback = sharedValue.useCallback((animatedIndex) => closure_2_12(MediaKeyboardBottomSheetHeaderSimpleDefault, { animatedIndex: animatedIndex.animatedIndex, onPress: memo.onPressHeader }), items3);
   const callback1 = sharedValue.useCallback((animateOnMount) => {
     let flag = animateOnMount.animateOnMount;
     if (flag === undefined) {
       flag = false;
     }
-    let obj = { animateOnMount: flag, animatedIndex: sharedValue, animatedPosition: sharedValue1, initialPosition: animateOnMount.initialPosition, children: null };
-    obj = { ref: closure_15, animatedIndex: sharedValue, channelId: channel.id, draftType: closure_8.draftType, onSend: memo.onSend };
-    const items = [memo(chatInputRef(ref[34]), obj), ];
-    obj = {
-      canPostPolls: closure_8.canPostPolls,
-      onHeightChange(arg0) {
-        const current = ref.current;
-        let setInsetFabResult;
-        if (current != null) {
-          setInsetFabResult = current.setInsetFab(arg0 + closure_6);
-        }
-        return setInsetFabResult;
-      },
-      uploadDisabled: closure_8.uploadDisabled,
-      overflowButtons: memo1
-    };
-    items[1] = memo(chatInputRef(ref[35]), obj);
-    obj[4] = items;
-    return canStartThreads(chatInputRef(ref[33]), obj);
+    const obj = { animateOnMount: flag, animatedIndex: sharedValue, animatedPosition: sharedValue1, initialPosition: animateOnMount.initialPosition, children: null };
+    const items = [
+      closure_2_12(MediaKeyboardFloatingSendDefault, { ref, animatedIndex: sharedValue, channelId: channel.id, draftType: closure_8.draftType, onSend: memo.onSend }),
+      closure_2_12(MediaKeyboardBottomSheetActionsDefault, {
+        canPostPolls: closure_8.canPostPolls,
+        onHeightChange(arg0) {
+          const current = ref.current;
+          let setInsetFabResult;
+          if (current != null) {
+            setInsetFabResult = current.setInsetFab(arg0 + token);
+          }
+          return setInsetFabResult;
+        },
+        uploadDisabled: closure_8.uploadDisabled,
+        overflowButtons: memo1
+      })
+    ];
+    obj.children = items;
+    return map1(MediaKeyboardAccessoriesContainerDefault, obj);
   }, items4);
-  obj = {
+  const obj8 = {
     animationConfigs: showInvalidFileTypeAlert,
     animatedIndex: sharedValue,
     animatedPosition: sharedValue1,
@@ -358,10 +359,6 @@ const memoResult = importAllResult.memo(function MediaKeyboard(channel) {
     children: null
   };
   const obj7 = channel(ref[17]);
-  obj = { channel, draftType: tmp8.draftType, onPressCamera: memo.onPressCamera, onAttachPress: memo.onAttachPress, onPressItem: memo.onPressItem, onLongPressItem: memo.onLongPressItem, onViewAll: memo.onViewAll, onManageLimited: memo.onManageLimited, includedUploadIds: tmp8.includedUploadIds, extensions: allowedExtensions, allowCamera: fileTypeFiltering.mediaFilesAllowed, uploadDisabled: tmp8.uploadDisabled, uploadLimit: tmp8.uploadLimit, disableWhenReachedLimit: tmp8.disableWhenReachedLimit };
-  obj[10] = memo(chatInputRef(ref[37]), obj);
-  return memo(chatInputRef(ref[36]), obj);
+  obj8.children = memo(chatInputRef(ref[37]), { channel, draftType: tmp8.draftType, onPressCamera: memo.onPressCamera, onAttachPress: memo.onAttachPress, onPressItem: memo.onPressItem, onLongPressItem: memo.onLongPressItem, onViewAll: memo.onViewAll, onManageLimited: memo.onManageLimited, includedUploadIds: tmp8.includedUploadIds, extensions: allowedExtensions, allowCamera: fileTypeFiltering.mediaFilesAllowed, uploadDisabled: tmp8.uploadDisabled, uploadLimit: tmp8.uploadLimit, disableWhenReachedLimit: tmp8.disableWhenReachedLimit });
+  return memo(chatInputRef(ref[36]), obj8);
 });
-let result = require("set").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboard.tsx");
-
-export default memoResult;

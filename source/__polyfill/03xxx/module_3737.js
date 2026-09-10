@@ -1,40 +1,65 @@
 // Module ID: 3737
 // Function ID: 3738
-// Dependencies: [2035, 2036]
+// Dependencies: [2033]
 
 // Module 3737
-import buildMatchFn from "buildMatchFn" /* 2035 */;
-import buildMatchPatternFn from "buildMatchPatternFn" /* 2036 */;
+import module_2033 from "module_2033" /* 2033 */;
 
-if (!buildMatchFn) {
-  let obj = { default: null };
-  obj[0] = buildMatchFn;
+if (!module_2033) {
+  const obj2 = { default: module_2033 };
+  let obj = obj2;
 } else {
-  obj = buildMatchFn;
+  obj = module_2033;
 }
-if (!buildMatchPatternFn) {
-  obj = { default: null };
-  obj[0] = buildMatchPatternFn;
-  let obj2 = obj;
-} else {
-  obj2 = buildMatchPatternFn;
-}
-obj2 = {
-  matchPattern: /^(\d+)(-oji)?/i,
-  parsePattern: /\d+/i,
-  valueCallback(joined) {
-    return parseInt(joined, 10);
-  }
+const date = {
+  ordinalNumber(arg0, unit) {
+    const NumberResult = Number(arg0);
+    unit = undefined;
+    if (null != unit) {
+      unit = unit.unit;
+    }
+    const StringResult = String(unit);
+    if ("year" === StringResult) {
+      const concat9 = "".concat;
+      return "".concat(NumberResult, "\u5E74");
+    } else if ("quarter" === StringResult) {
+      const concat8 = "\u7B2C".concat;
+      return "\u7B2C".concat(NumberResult, "\u56DB\u534A\u671F");
+    } else if ("month" === StringResult) {
+      const concat7 = "".concat;
+      return "".concat(NumberResult, "\u6708");
+    } else if ("week" === StringResult) {
+      const concat6 = "\u7B2C".concat;
+      return "\u7B2C".concat(NumberResult, "\u9031");
+    } else if ("date" === StringResult) {
+      const concat5 = "".concat;
+      return "".concat(NumberResult, "\u65E5");
+    } else if ("hour" === StringResult) {
+      const concat4 = "".concat;
+      return "".concat(NumberResult, "\u6642");
+    } else if ("minute" === StringResult) {
+      const concat3 = "".concat;
+      return "".concat(NumberResult, "\u5206");
+    } else if ("second" === StringResult) {
+      const concat2 = "".concat;
+      return "".concat(NumberResult, "\u79D2");
+    } else {
+      const concat = "".concat;
+      return "".concat(NumberResult);
+    }
+  },
+  era: obj.default({ values: { narrow: ["BC", "AC"], abbreviated: ["\u7D00\u5143\u524D", "\u897F\u66A6"], wide: ["\u7D00\u5143\u524D", "\u897F\u66A6"] }, defaultWidth: "wide" }),
+  quarter: obj.default({
+    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["Q1", "Q2", "Q3", "Q4"], wide: ["\u7B2C1\u56DB\u534A\u671F", "\u7B2C2\u56DB\u534A\u671F", "\u7B2C3\u56DB\u534A\u671F", "\u7B2C4\u56DB\u534A\u671F"] },
+    defaultWidth: "wide",
+    argumentCallback(arg0) {
+      return Number(arg0) - 1;
+    }
+  }),
+  month: obj.default({ values: { narrow: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], abbreviated: ["1\u6708", "2\u6708", "3\u6708", "4\u6708", "5\u6708", "6\u6708", "7\u6708", "8\u6708", "9\u6708", "10\u6708", "11\u6708", "12\u6708"], wide: ["1\u6708", "2\u6708", "3\u6708", "4\u6708", "5\u6708", "6\u6708", "7\u6708", "8\u6708", "9\u6708", "10\u6708", "11\u6708", "12\u6708"] }, defaultWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["\u65E5", "\u6708", "\u706B", "\u6C34", "\u6728", "\u91D1", "\u571F"], short: ["\u65E5", "\u6708", "\u706B", "\u6C34", "\u6728", "\u91D1", "\u571F"], abbreviated: ["\u65E5", "\u6708", "\u706B", "\u6C34", "\u6728", "\u91D1", "\u571F"], wide: ["\u65E5\u66DC\u65E5", "\u6708\u66DC\u65E5", "\u706B\u66DC\u65E5", "\u6C34\u66DC\u65E5", "\u6728\u66DC\u65E5", "\u91D1\u66DC\u65E5", "\u571F\u66DC\u65E5"] }, defaultWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "\u5348\u524D", pm: "\u5348\u5F8C", midnight: "\u6DF1\u591C", noon: "\u6B63\u5348", morning: "\u671D", afternoon: "\u5348\u5F8C", evening: "\u591C", night: "\u6DF1\u591C" }, abbreviated: { am: "\u5348\u524D", pm: "\u5348\u5F8C", midnight: "\u6DF1\u591C", noon: "\u6B63\u5348", morning: "\u671D", afternoon: "\u5348\u5F8C", evening: "\u591C", night: "\u6DF1\u591C" }, wide: { am: "\u5348\u524D", pm: "\u5348\u5F8C", midnight: "\u6DF1\u591C", noon: "\u6B63\u5348", morning: "\u671D", afternoon: "\u5348\u5F8C", evening: "\u591C", night: "\u6DF1\u591C" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "\u5348\u524D", pm: "\u5348\u5F8C", midnight: "\u6DF1\u591C", noon: "\u6B63\u5348", morning: "\u671D", afternoon: "\u5348\u5F8C", evening: "\u591C", night: "\u6DF1\u591C" }, abbreviated: { am: "\u5348\u524D", pm: "\u5348\u5F8C", midnight: "\u6DF1\u591C", noon: "\u6B63\u5348", morning: "\u671D", afternoon: "\u5348\u5F8C", evening: "\u591C", night: "\u6DF1\u591C" }, wide: { am: "\u5348\u524D", pm: "\u5348\u5F8C", midnight: "\u6DF1\u591C", noon: "\u6B63\u5348", morning: "\u671D", afternoon: "\u5348\u5F8C", evening: "\u591C", night: "\u6DF1\u591C" } }, defaultFormattingWidth: "wide" })
 };
-const items = [/prieš/i, /(po|mūsų)/i];
-const items1 = [/^pr/i, /^(po|m)/i];
-const items2 = [/1/i, /2/i, /3/i, /4/i];
-const items3 = [/I$/i, /II$/i, /III/i, /IV/i];
-const items4 = [/^s/i, /^v/i, /^k/i, /^b/i, /^g/i, /^b/i, /^l/i, /^r/i, /^r/i, /^s/i, /^l/i, /^g/i];
-const items5 = [/^saus/i, /^vas/i, /^kov/i, /^bal/i, /^geg/i, /^birž/i, /^liep/i, /^rugp/i, /^rugs/i, /^spal/i, /^lapkr/i, /^gruod/i];
-const items6 = [/^s/i, /^p/i, /^a/i, /^t/i, /^k/i, /^p/i, /^š/i];
-const items7 = [/^se/i, /^pi/i, /^an/i, /^tr/i, /^ke/i, /^pe/i, /^še/i];
-const items8 = [/^sk/i, /^pr/i, /^an/i, /^tr/i, /^kt/i, /^pn/i, /^št/i];
 
-export default { ordinalNumber: obj2.default(obj2), era: obj.default({ matchPatterns: obj3, defaultMatchWidth: "wide", parsePatterns: { wide: items, any: items1 }, defaultParseWidth: "any" }), quarter: obj.default(obj4), month: obj.default({ matchPatterns: obj6, defaultMatchWidth: "wide", parsePatterns: { narrow: items4, any: items5 }, defaultParseWidth: "any" }), day: obj.default({ matchPatterns: obj7, defaultMatchWidth: "wide", parsePatterns: { narrow: items6, wide: items7, any: items8 }, defaultParseWidth: "any" }), dayPeriod: obj.default({ matchPatterns: obj8, defaultMatchWidth: "any", parsePatterns: { narrow: obj9, any: obj10 }, defaultParseWidth: "any" }) };
+export default date;
 export default exports.default;

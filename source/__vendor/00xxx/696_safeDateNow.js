@@ -2,6 +2,7 @@
 // Function ID: 697
 // Name: safeDateNow
 // Dependencies: [686]
+// Exports: safeDateNow, safeMathRandom, withRandomSafeContext
 
 // Module 696 (safeDateNow)
 import _mod686 from "module_686" /* 686 */;
@@ -9,7 +10,8 @@ import _mod686 from "module_686" /* 686 */;
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.safeDateNow = function safeDateNow() {
+
+export const safeDateNow = function safeDateNow() {
   const fn = () => Date.now();
   if (undefined !== c2) {
     if (tmp) {
@@ -34,7 +36,7 @@ arg5.safeDateNow = function safeDateNow() {
     timestamp1 = Date.now();
   }
 };
-arg5.safeMathRandom = function safeMathRandom() {
+export const safeMathRandom = function safeMathRandom() {
   const fn = () => Math.random();
   if (undefined !== c2) {
     if (tmp) {
@@ -59,9 +61,9 @@ arg5.safeMathRandom = function safeMathRandom() {
     random1 = Math.random();
   }
 };
-arg5.withRandomSafeContext = function withRandomSafeContext(arg0) {
+export const withRandomSafeContext = function withRandomSafeContext(fn) {
   if (undefined !== c2) {
-    return tmp ? tmp(arg0) : arg0();
+    return tmp ? tmp(fn) : fn();
   } else {
     const _Symbol = Symbol;
     const forResult = Symbol.for("__SENTRY_SAFE_RANDOM_ID_WRAPPER__");
@@ -69,11 +71,11 @@ arg5.withRandomSafeContext = function withRandomSafeContext(arg0) {
     if (forResult in GLOBAL_OBJ) {
       if (typeof GLOBAL_OBJ[forResult] === "function") {
         c2 = tmp8;
-        let tmp8Result = tmp8(arg0);
+        let tmp8Result = tmp8(fn);
       }
       return tmp8Result;
     }
     c2 = null;
-    tmp8Result = arg0();
+    tmp8Result = fn();
   }
 };

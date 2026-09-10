@@ -1,17 +1,16 @@
-// Module ID: 11966
-// Function ID: 11967
-// Name: TextAreaCta
+// Module ID: 11992
+// Function ID: 11993
+// Name: ChatInputConstants
 // Dependencies: [1178, 2]
 
-// Module 11966 (TextAreaCta)
-import set from "set" /* 2 */;
-import Button from "Button" /* 1178 */;
+// Module 11992 (ChatInputConstants)
+import native from "native" /* 1178 */;
+import size from "module_2" /* 2 */;
 
-let obj = { easing: Button.STANDARD_EASING, duration: 250 };
-obj = { easing: Button.STANDARD_EASING, duration: 50 };
-obj = { easing: Button.STANDARD_EASING, duration: 100 };
-const obj1 = { easing: Button.STANDARD_EASING, duration: 200 };
-const result = set.fileFinishedImporting("modules/chat_input/native/ChatInputConstants.tsx");
+const obj = { easing: native.STANDARD_EASING, duration: 250 };
+const obj2 = { easing: native.STANDARD_EASING, duration: 50 };
+const obj3 = { easing: native.STANDARD_EASING, duration: 100 };
+const result = size.fileFinishedImporting("modules/chat_input/native/ChatInputConstants.tsx");
 
 export const TextAreaCta = { CHANNEL_LIST: "channel_list", CHANNEL_LINK: "channel_link", BACK_TO_HOME: "back_to_home", VERIFY_PHONE: "verify_phone", VERIFY_EMAIL: "verify_email", JOIN_GUILD: "join_guild", FOLLOW_ANNOUNCEMENT: "follow_announcement", BACK_TO_DISCOVERY: "back_to_discovery", MEMBER_VERIFICATION: "member_verification", MEMBER_VERIFICATION_CONFIRMED: "member_verification_confirmed", MEMBER_VERIFICATION_REJECTED: "member_verification_rejected", UNBLOCK: "unblock" };
 export const ChatInputActionType = { PHOTOS: 0, [0]: "PHOTOS", APPS: 1, [1]: "APPS", THREAD: 2, [2]: "THREAD", NITRO_GIFT: 3, [3]: "NITRO_GIFT", ALL_PHOTOS: 4, [4]: "ALL_PHOTOS", CAMERA: 5, [5]: "CAMERA" };
@@ -27,8 +26,8 @@ export const CHAT_INPUT_HORIZONTAL_PADDING_PARENT = 4;
 export const CHAT_INPUT_HEIGHT = 54;
 export const CHAT_INPUT_TIMING_CONFIG = obj;
 export const CHAT_INPUT_FLOATING_COLLAPSED_SCALE = 0.5;
-export const CHAT_INPUT_FLOATING_EXIT_TIMING_CONFIG = obj;
-export const CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG = obj;
-export const CHAT_INPUT_FLOATING_ENTER_OPACITY_TIMING_CONFIG = obj1;
+export const CHAT_INPUT_FLOATING_EXIT_TIMING_CONFIG = obj2;
+export const CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG = obj3;
+export const CHAT_INPUT_FLOATING_ENTER_OPACITY_TIMING_CONFIG = { easing: native.STANDARD_EASING, duration: 200 };
 export const CHAT_INPUT_FLOATING_BOUNCE_SPRING_CONFIG = { mass: 0.5, damping: 13, stiffness: 400 };
 export const CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS = 50;

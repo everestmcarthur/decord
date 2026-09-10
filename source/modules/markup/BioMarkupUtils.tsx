@@ -1,50 +1,63 @@
-// Module ID: 9424
-// Function ID: 9425
-// Name: parseBioReact
-// Dependencies: [4997, 4998, 4551, 1437, 7987, 4550, 4257, 12, 2]
+// Module ID: 9451
+// Function ID: 9452
+// Name: BioMarkupUtils
+// Dependencies: [5011, 5012, 4565, 1437, 8001, 4564, 4270, 12, 2]
 // Exports: getOrParseBioAST, parseBioReact, parseBioReactWithCachedAST
 
-// Module 9424 (parseBioReact)
+// Module 9451 (BioMarkupUtils)
 import privDefault from "priv" /* 1437 */;
-import tDefault from "t" /* 4257 */;
-import MarkupTextDefault from "MarkupText" /* 4551 */;
-import parseLinkDefault from "parseLink" /* 4998 */;
-import MarkupText from "MarkupText" /* 4551 */;
-import importDefaultResult from "combineMarkupRules" /* 4997 */;
-import importAllResult from "reactParserFor" /* 7987 */;
-import importDefaultResult1 from "get defaultRules" /* 4550 */;
-import importDefaultResult3 from "apply" /* 12 */;
+import _modDef4270 from "module_4270" /* 4270 */;
+import MarkupReactRulesDefault from "MarkupReactRules" /* 4565 */;
+import MarkupRulesDefault from "MarkupRules" /* 5012 */;
+import combineMarkupRules_mod from "combineMarkupRules" /* 5011 */;
+import MarkupParser_mod from "MarkupParser" /* 8001 */;
+import MarkupUtils from "MarkupUtils" /* 4564 */;
+import apply from "module_12" /* 12 */;
 
-const items = [parseLinkDefault.PROFILE_BIO_RULES, MarkupTextDefault({ enableBuildOverrides: false, mustConfirmExternalLink: true }), ];
-items[2] = MarkupText.createFetchingGameMentionRule();
-const importDefaultResultResult = importDefaultResult(items);
+let combineMarkupRules = combineMarkupRules_mod;
+const items = [MarkupRulesDefault.PROFILE_BIO_RULES, MarkupReactRulesDefault({ enableBuildOverrides: false, mustConfirmExternalLink: true }), ];
+const MarkupReactRules = fn(4565);
+items[2] = MarkupReactRules.createFetchingGameMentionRule();
+const importDefaultResultResult = combineMarkupRules(items);
+let c2 = importDefaultResultResult;
 let closure_3 = new privDefault({ max: 2000 });
 let closure_4 = { allowGameMentions: true };
-let tmp4 = new privDefault({ max: 2000 });
-let closure_5 = importAllResult.reactParserFor(importDefaultResultResult);
-let closure_6 = importDefaultResult1.astParserFor(importDefaultResultResult);
-const importAllResult1 = importAllResult;
-const importDefaultResult2 = importDefaultResult;
-const items1 = [importDefaultResult3.omit(importDefaultResultResult, ["link", "url", "autolink", "customEmoji", "emoji", "commandMention"]), ];
-MarkupText = {
-  react() {
-    return null;
+let MarkupParser = MarkupParser_mod;
+let closure_5 = MarkupParser.reactParserFor(importDefaultResultResult);
+let closure_6 = MarkupUtils.astParserFor(importDefaultResultResult);
+let MarkupParser = MarkupParser_mod;
+let combineMarkupRules = combineMarkupRules_mod;
+const items1 = [
+  apply.omit(importDefaultResultResult, ["link", "url", "autolink", "customEmoji", "emoji", "commandMention"]),
+  {
+    emoji: {
+      react() {
+        return null;
+      }
+    }
+  }
+];
+let obj2 = {
+  emoji: {
+    react() {
+      return null;
+    }
   }
 };
-items1[1] = { emoji: MarkupText };
-const reactParserForResult = importAllResult1.reactParserFor(importDefaultResult2(items1));
-let result = require("set").fileFinishedImporting("modules/markup/BioMarkupUtils.tsx");
+let tmp4 = new privDefault({ max: 2000 });
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/markup/BioMarkupUtils.tsx");
 
-export const parseBioReact = function parseBioReact(arg0, arg1, arg2) {
+export const parseBioReact = function parseBioReact(bio, arg1, arg2, arg3) {
   const merged = Object.assign(closure_4);
   const merged1 = Object.assign(arg2);
-  return callback(arg0, arg1, {}, arg3);
+  return closure_5(bio, arg1, {}, arg3);
 };
 export const getOrParseBioAST = function getOrParseBioAST(arg0) {
-  let value = store.get(arg0);
+  value = closure_3.get(arg0);
   if (null == value) {
-    const tmp3 = callback2(arg0, true);
-    const result = store.set(arg0, tmp3);
+    const tmp3 = closure_6(arg0, true);
+    const result = closure_3.set(arg0, tmp3);
     value = tmp3;
   }
   return value;
@@ -53,15 +66,15 @@ export const parseBioReactWithCachedAST = function parseBioReactWithCachedAST(de
   if (0 === description.trim().length) {
     return null;
   } else {
-    let value = store.get(description);
+    value = closure_3.get(description);
     if (null == value) {
-      const tmp4 = callback2(description, true);
+      const tmp4 = closure_6(description, true);
       const result = obj.set(description, tmp4);
       value = tmp4;
     }
-    obj = store;
-    const obj2 = tDefault;
-    return obj2.reactFor(tDefault.ruleOutput(closure_2, "react"))(value);
+    obj = closure_3;
+    const obj2 = _modDef4270;
+    return obj2.reactFor(_modDef4270.ruleOutput(importDefaultResultResult, "react"))(value);
   }
 };
-export const parseBioReactWithoutScrolling = reactParserForResult;
+export const parseBioReactWithoutScrolling = MarkupParser.reactParserFor(combineMarkupRules(items1));

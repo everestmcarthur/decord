@@ -1,137 +1,113 @@
-// Module ID: 17828
-// Function ID: 17829
-// Name: _fetchBasicGuild
-// Dependencies: [5, 1979, 7955, 1074, 573, 1272, 2]
+// Module ID: 17861
+// Function ID: 17862
+// Name: BasicGuildActionCreators
+// Dependencies: [5, 1979, 7969, 1074, 573, 1272, 2]
 // Exports: fetchBasicGuild
 
-// Module 17828 (_fetchBasicGuild)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createGuildRecordFromRust" /* 1979 */;
-import closure_5 from "getGuild" /* 7955 */;
-import { Endpoints } from "ME" /* 1074 */;
-import set from "set" /* 2 */;
+// Module 17861 (BasicGuildActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import BasicGuildStore from "BasicGuildStore" /* 7969 */;
 
-const require = arg1;
-function _fetchBasicGuild() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    return (function*(arg0, body) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === guildOrStatus) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              dependencyMap = tmp4;
-              body = tmp8;
-              body = undefined;
-              if (null == guild.getGuild(callback)) {
-                if (null == guildOrStatus.getGuildOrStatus(tmp57)) {
-                  if (!closure_1_7.has(tmp57)) {
-                    let obj5 = closure_1_1(closure_1_2[4]);
-                    obj1 = { type: "BASIC_GUILD_FETCH", guildId: null };
-                    obj1[1] = tmp57;
-                    obj5.dispatch(obj1);
-                    closure_1_7.add(tmp57);
-                    guild = 2;
-                    const HTTP = callback(closure_1_2[5]).HTTP;
-                    const obj2 = { url: null, rejectWithError: true };
-                    obj2[0] = c6.GUILD_BASIC(tmp57);
-                    guildOrStatus = 3;
-                    c6 = 1;
-                    let obj3 = { value: null, done: false };
-                    obj3[0] = HTTP.get(obj2);
-                    return obj3;
-                  }
-                }
-              }
-              c6 = 3;
-            }
-          } else if (1 !== tmp8) {
-            if (2 === tmp8) {
-              guild = 1;
-              obj3 = body(573);
-              const obj4 = { type: "BASIC_GUILD_FETCH_FAILURE", guildId: null };
-              obj4[1] = callback;
-              obj3.dispatch(obj4);
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              guild = 0;
-              set.delete(callback);
-              c6 = 3;
-              obj5 = { value: null, done: true };
-              obj5[0] = body;
-              return obj5;
-            } else {
-              body = body.body;
-              obj = body(573);
-              const obj6 = { type: "BASIC_GUILD_FETCH_SUCCESS", guildId: null, guildInfo: null };
-              obj6[1] = callback;
-              obj6[2] = body;
-              obj.dispatch(obj6);
-              guild = 1;
-            }
-            guild = 0;
-            set.delete(callback);
-          }
-          guild = 0;
-          set.delete(callback);
-          throw closure_3;
-        } catch (tmp48) {
-          closure_3 = tmp48;
-          if (tmp5 === guild) {
-            c6 = tmp3;
-            throw tmp48;
-          } else if (tmp2 === tmp50) {
-            guildOrStatus = tmp2;
-          } else {
-            guildOrStatus = tmp;
-          }
-        }
-      }
-    })();
-  });
-  closure_8 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+require = fn;
+let closure_8 = async function _fetchBasicGuild(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp7 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    applyArgumentsResult = apply(self, arguments);
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp4;
+          closure_1 = tmp8;
+          closure_129_0 = closure_0;
+          let body;
+          if (null == guild.getGuild(closure_0)) {
+            if (null == guildOrStatus.getGuildOrStatus(tmp56)) {
+              if (!set.has(tmp56)) {
+                const obj5 = { type: "BASIC_GUILD_FETCH", guildId: tmp56 };
+                DispatcherDefault.dispatch(obj5);
+                set.add(tmp56);
+                c4 = 2;
+                const HTTP = HTTPUtils.HTTP;
+                const obj7 = { url: Endpoints.GUILD_BASIC(tmp56), rejectWithError: true };
+                c5 = 3;
+                c6 = 1;
+                const obj8 = { value: HTTP.get(obj7), done: false };
+                return obj8;
+              }
+            }
+          }
+          c6 = 3;
+        }
+      } else if (1 !== tmp8) {
+        if (2 === tmp8) {
+          c4 = 1;
+          const obj9 = { type: "BASIC_GUILD_FETCH_FAILURE", guildId: closure_129_0 };
+          closure_130_1(closure_130_2[4]).dispatch(obj9);
+          const obj4 = closure_130_1(closure_130_2[4]);
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 0;
+          closure_130_7.delete(closure_129_0);
+          c6 = 3;
+          const obj10 = { value, done: true };
+          return obj10;
+        } else {
+          body = value.body;
+          const obj11 = { type: "BASIC_GUILD_FETCH_SUCCESS", guildId: closure_129_0, guildInfo: body };
+          closure_130_1(closure_130_2[4]).dispatch(obj11);
+          c4 = 1;
+          const obj = closure_130_1(closure_130_2[4]);
+        }
+        c4 = 0;
+        closure_130_7.delete(closure_129_0);
+      }
+      c4 = 0;
+      closure_130_7.delete(closure_129_0);
+      throw closure_3;
+    } catch (tmp48) {
+      closure_3 = tmp48;
+      if (tmp5 === c4) {
+        c6 = tmp3;
+        throw tmp48;
+      } else if (tmp2 === tmp50) {
+        c5 = tmp2;
+      } else {
+        c5 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
-let set = new Set();
-const result = set.fileFinishedImporting("modules/guild/BasicGuildActionCreators.tsx");
+};
+const Endpoints = fn(1074).Endpoints;
+const set = new Set();
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild/BasicGuildActionCreators.tsx");
 
-export const fetchBasicGuild = function fetchBasicGuild(guild_id) {
+export const fetchBasicGuild = function fetchBasicGuild() {
   const self = this;
-  const apply = _fetchBasicGuild.apply;
+  const apply = closure_8.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

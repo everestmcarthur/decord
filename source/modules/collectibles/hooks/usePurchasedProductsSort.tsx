@@ -1,27 +1,29 @@
-// Module ID: 15080
-// Function ID: 15081
+// Module ID: 15107
+// Function ID: 15108
 // Name: usePurchasedProductsSort
-// Dependencies: [19, 7558, 1889, 7553, 563, 2]
+// Dependencies: [19, 7572, 1889, 7567, 563, 2]
 // Exports: usePurchasedProductsSort
 
-// Module 15080 (usePurchasedProductsSort)
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import closure_3 from "map" /* 7558 */;
+// Module 15107 (usePurchasedProductsSort)
+import _mod19 from "module_19" /* 19 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7572 */;
+import size from "module_2" /* 2 */;
 
-let useMemo = noop.useMemo;
+const require = globalThis.__r;
+
+let useMemo = _mod19.useMemo;
 let closure_4 = { NOT_PURCHASED: 0, [0]: "NOT_PURCHASED", PARTIAL_OWNED_BUNDLE: 1, [1]: "PARTIAL_OWNED_BUNDLE", PURCHASED: 2, [2]: "PURCHASED" };
-const result = set.fileFinishedImporting("modules/collectibles/hooks/usePurchasedProductsSort.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/hooks/usePurchasedProductsSort.tsx");
 
 export const usePurchasedProductsSort = function usePurchasedProductsSort(memo) {
-  const _require = memo;
-  let items = [closure_3];
-  stateFromStores = _require(stateFromStores[4]).useStateFromStores(items, () => purchases.purchases);
+  _require = memo;
+  let items = [CollectiblesPurchaseStore];
+  stateFromStores = require("useStateFromStores").useStateFromStores(items, () => purchases.purchases);
   const items1 = [stateFromStores];
   const tmp2 = useMemo(() => {
     const items = [...stateFromStores];
-    return items.map((arg0) => {
-      [tmp] = arg0;
+    return items.map((item) => {
+      [tmp] = item;
       return tmp;
     });
   }, items1);
@@ -30,13 +32,12 @@ export const usePurchasedProductsSort = function usePurchasedProductsSort(memo) 
   return useMemo(() => {
     let items = [...closure_0];
     return items.sort((type, type2) => {
-      let obj = closure_2;
-      obj = closure_2;
-      if (type.type === closure_1_0(closure_1_1[2]).CollectiblesItemType.BUNDLE) {
+      const obj = closure_1_2;
+      if (type.type === closure_0(stateFromStores[2]).CollectiblesItemType.BUNDLE) {
         const items = type.items;
         if (items.some((skuId) => obj.includes(skuId.skuId))) {
-          let NOT_PURCHASED = closure_1_4.PARTIAL_OWNED_BUNDLE;
-          let tmp4 = closure_1_4;
+          let NOT_PURCHASED = constants.PARTIAL_OWNED_BUNDLE;
+          let tmp4 = constants;
         }
         if (type2.type === tmp(tmp2[2]).CollectiblesItemType.BUNDLE) {
           const items2 = type2.items;
@@ -45,23 +46,20 @@ export const usePurchasedProductsSort = function usePurchasedProductsSort(memo) 
           }
           return NOT_PURCHASED - PARTIAL_OWNED_BUNDLE;
         }
-        let tmpResult = tmp(tmp2[3]);
         if (tmpResult.getIsVariantProduct(type2)) {
           const variants2 = type2.variants;
           variants2.every((skuId) => obj.includes(skuId.skuId)) ? tmp4.PURCHASED : tmp4.NOT_PURCHASED;
         } else {
           PARTIAL_OWNED_BUNDLE = obj.includes(type2.skuId) ? tmp4.PURCHASED : tmp4.NOT_PURCHASED;
         }
+        tmpResult = tmp(tmp2[3]);
       }
-      tmpResult = tmp(tmp2[3]);
-      if (tmpResult.getIsVariantProduct(type)) {
+      if (tmpResult2.getIsVariantProduct(type)) {
         const variants = type.variants;
         if (variants.every((skuId) => obj.includes(skuId.skuId))) {
           let NOT_PURCHASED2 = tmp5.PURCHASED;
-          let tmp6 = tmp5;
         } else {
           NOT_PURCHASED2 = tmp5.NOT_PURCHASED;
-          tmp6 = tmp5;
         }
       } else if (obj.includes(type.skuId)) {
         NOT_PURCHASED = tmp3.PURCHASED;

@@ -1,14 +1,17 @@
-// Module ID: 10199
-// Function ID: 10200
-// Name: addValue
+// Module ID: 10226
+// Function ID: 10227
+// Name: ComponentProfiler
 // Dependencies: [19, 21, 2]
 // Exports: clearComponentRenderStats, default, dumpStats, getComponentRenderStats, pauseComponentProfiler, resetComponentProfiler, resumeComponentProfiler, serializeComponentRenderAverages
 
-// Module 10199 (addValue)
-import closure_0 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 10226 (ComponentProfiler)
+import noop from "module_19" /* 19 */;
 
+const jsx = fn(21).jsx;
 class StatCollector {
+  constructor() {
+    return Object.assign({ totalMicroseconds: 0, count: 0, minMicroseconds: null, maxMicroseconds: null });
+  }
 }
 const prototype = StatCollector.prototype;
 prototype["addValue"] = function addValue(arg0) {
@@ -37,28 +40,30 @@ Object.defineProperty(prototype, "mean", {
 });
 let closure_3 = {};
 let c4 = true;
-const result = require("set").fileFinishedImporting("modules/profiling/ComponentProfiler.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/profiling/ComponentProfiler.tsx");
 
 export default function ComponentProfiler(arg0) {
   ({ id, children } = arg0);
-  return <React.Profiler id={id} onRender={React.useCallback((arg0, arg1, arg2) => {
-    if (closure_4) {
+  return <noop.Profiler id={id} onRender={noop.useCallback((arg0, arg1, arg2) => {
+    if (closure_1_4) {
       if (!(arg0 in dependencyMap)) {
-        if (typeof closure_2 !== "function") {
-          HermesBuiltin.throwTypeError();
+        if (typeof StatCollector === "function") {
+          const obj = { mount: Object.assign({ totalMicroseconds: 0, count: 0, minMicroseconds: null, maxMicroseconds: null }), update: null, nestedUpdate: null };
+          if (typeof tmp4 === "function") {
+            obj.update = Object.assign({ totalMicroseconds: 0, count: 0, minMicroseconds: null, maxMicroseconds: null });
+            if (typeof tmp4 === "function") {
+              obj.nestedUpdate = Object.assign({ totalMicroseconds: 0, count: 0, minMicroseconds: null, maxMicroseconds: null });
+              tmp3[arg0] = obj;
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        } else {
+          throw new TypeError("Trying to call a non-function");
         }
-        const obj = { mount: null, update: null, nestedUpdate: null };
-        obj[0] = Object.create(closure_2.prototype);
-        if (typeof closure_2 !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        obj[1] = Object.create(closure_2.prototype);
-        if (typeof closure_2 !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        obj[2] = Object.create(closure_2.prototype);
-        dependencyMap[arg0] = obj;
-        const tmp3 = dependencyMap;
       }
       if ("mount" === arg1) {
         const mount = dependencyMap[arg0].mount;
@@ -71,7 +76,7 @@ export default function ComponentProfiler(arg0) {
         nestedUpdate.addValue(arg2);
       }
     }
-  }, [])}>{children}</React.Profiler>;
+  }, [])}>{children}</noop.Profiler>;
 };
 export { StatCollector };
 export function clearComponentRenderStats() {
@@ -136,59 +141,54 @@ export const serializeComponentRenderAverages = function serializeComponentRende
   ${"|" + tmp + "|" + tmp2 + "|" + tmp3 + "|" + tmp4 + "|" + tmp5 + "|" + tmp6 + "|" + obj7.padEnd(20, " ") + "|\n"}`;
     const entries = Object.entries(closure_3);
     str = `Component Render Stats (microseconds):
-  ${"|" + tmp + "|" + tmp2 + "|" + tmp3 + "|" + tmp4 + "|" + tmp5 + "|" + tmp6 + "|" + obj7.padEnd(20, " ") + "|\n"}${arr.map((arg0) => {
-      [arr, tmp] = arg0;
+  ${"|" + tmp + "|" + tmp2 + "|" + tmp3 + "|" + tmp4 + "|" + tmp5 + "|" + tmp6 + "|" + obj7.padEnd(20, " ") + "|\n"}${arr.map((item) => {
+      [arr, tmp] = item;
       let num = 20;
       if (arr.length <= 20) {
         num = arr.length;
       }
       const substr = arr.substring(0, num);
-      let str = tmp.mount.count;
-      str = str.toString();
+      const str1 = tmp.mount.count.toString();
       let num2 = 8;
-      if (str.length <= 8) {
-        num2 = str.length;
+      if (str1.length <= 8) {
+        num2 = str1.length;
       }
-      const substr1 = str.substring(0, num2);
+      const substr1 = str1.substring(0, num2);
       const padEndResult = substr.padEnd(20, " ");
-      let str2 = tmp.mount.mean;
-      const str1 = str2.toString();
+      const str7 = tmp.mount.mean.toString();
       let num3 = 20;
-      if (str1.length <= 20) {
-        num3 = str1.length;
+      if (str7.length <= 20) {
+        num3 = str7.length;
       }
-      const substr2 = str1.substring(0, num3);
+      const substr2 = str7.substring(0, num3);
       const padEndResult1 = substr1.padEnd(8, " ");
-      let str3 = tmp.update.count;
-      str2 = str3.toString();
+      const str8 = tmp.update.count.toString();
       let num4 = 8;
-      if (str2.length <= 8) {
-        num4 = str2.length;
+      if (str8.length <= 8) {
+        num4 = str8.length;
       }
-      const substr3 = str2.substring(0, num4);
+      const substr3 = str8.substring(0, num4);
       const padEndResult2 = substr2.padEnd(20, " ");
-      let str4 = tmp.update.mean;
-      str3 = str4.toString();
+      const str9 = tmp.update.mean.toString();
       let num5 = 20;
-      if (str3.length <= 20) {
-        num5 = str3.length;
+      if (str9.length <= 20) {
+        num5 = str9.length;
       }
-      const substr4 = str3.substring(0, num5);
+      const substr4 = str9.substring(0, num5);
       const padEndResult3 = substr3.padEnd(8, " ");
-      let str5 = tmp.nestedUpdate.count;
-      str4 = str5.toString();
+      const str10 = tmp.nestedUpdate.count.toString();
       let num6 = 8;
-      if (str4.length <= 8) {
-        num6 = str4.length;
+      if (str10.length <= 8) {
+        num6 = str10.length;
       }
-      const substr5 = str4.substring(0, num6);
+      const substr5 = str10.substring(0, num6);
       const padEndResult4 = substr4.padEnd(20, " ");
-      str5 = tmp.nestedUpdate.mean.toString();
+      const str11 = tmp.nestedUpdate.mean.toString();
       let num7 = 20;
-      if (str5.length <= 20) {
-        num7 = str5.length;
+      if (str11.length <= 20) {
+        num7 = str11.length;
       }
-      const substr6 = str5.substring(0, num7);
+      const substr6 = str11.substring(0, num7);
       return "|" + padEndResult + "|" + padEndResult1 + "|" + padEndResult2 + "|" + padEndResult3 + "|" + padEndResult4 + "|" + substr5.padEnd(8, " ") + "|" + substr6.padEnd(20, " ") + "|\n";
     })}`;
     const padEndResult5 = substr5.padEnd(8, " ");

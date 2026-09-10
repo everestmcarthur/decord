@@ -1,63 +1,58 @@
-// Module ID: 14137
-// Function ID: 14138
+// Module ID: 14160
+// Function ID: 14161
 // Name: ActionSheetPresenter
-// Dependencies: [32, 19, 17, 4251, 1074, 21, 8773, 1250, 4527, 4972, 7152, 4958, 504, 12427, 4911, 2]
+// Dependencies: [32, 19, 17, 4264, 1074, 21, 8801, 1250, 4541, 4986, 7166, 4972, 504, 12453, 4925, 2]
 // Exports: ActionSheetPresenter
 
-// Module 14137 (ActionSheetPresenter)
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "setContent" /* 4251 */;
-import { NOOP } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 14160 (ActionSheetPresenter)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import ActionSheetStore from "ActionSheetStore" /* 4264 */;
 
-const require = arg1;
-let c4 = importAllResult;
-let closure_9 = importAllResult.forwardRef((sheetKey, ref) => {
+const require = fn;
+const StyleSheet = fn(17).StyleSheet;
+const NOOP = fn(1074).NOOP;
+const jsx = fn(21).jsx;
+let closure_9 = noop.forwardRef((sheetKey, ref) => {
   sheetKey = sheetKey.sheetKey;
-  let first;
+  transitionState = undefined;
   dependencyMap = undefined;
-  let callback;
-  callback = undefined;
-  closure_5 = undefined;
-  let callback1;
+  let registerDismissHandler;
   let callback2;
   ({ content, impressionName, impressionProperties, zIndex } = sheetKey);
-  const tmp = callback(callback.useState("visible"), 2);
-  first = tmp[0];
-  dependencyMap = tmp[1];
-  callback = callback.useRef(callback2);
-  callback = callback.useCallback((current) => {
+  [transitionState, dependencyMap] = registerDismissHandler.useState("visible");
+  _slicedToArray = registerDismissHandler.useRef(callback2);
+  registerDismissHandler = registerDismissHandler.useCallback((current) => {
     closure_3.current = current;
   }, []);
-  closure_5 = callback.useRef(callback2);
-  callback1 = callback.useCallback(() => {
+  registerDismissHandler.useRef(callback2);
+  const callback1 = registerDismissHandler.useCallback(() => {
     ref2.current();
   }, []);
-  let obj = { type: sheetKey(1250).ImpressionTypes.HALFSHEET, name: impressionName, properties: impressionProperties };
-  first(8773)(obj);
-  const imperativeHandle = callback.useImperativeHandle(ref, () => ({
+  const obj = { type: sheetKey(1250).ImpressionTypes.HALFSHEET, name: impressionName, properties: impressionProperties };
+  transitionState(8801)(obj);
+  const imperativeHandle = registerDismissHandler.useImperativeHandle(ref, () => ({
     componentDidEnter() {
-      callback("visible");
+      closure_1_2("visible");
     },
     componentWillLeave(current) {
-      callback("exiting");
-      closure_5.current = current;
+      closure_1_2("exiting");
+      ref2.current = current;
     },
     componentDidLeave() {
-      callback("exited");
-      closure_5.current = closure_1_7;
+      closure_1_2("exited");
+      ref2.current = callback2;
     }
   }), []);
   const items = [sheetKey];
-  callback2 = callback.useCallback(() => {
-    first(table[8]).hideActionSheet(sheetKey);
+  callback2 = registerDismissHandler.useCallback(() => {
+    ActionSheetActionCreatorsDefault.hideActionSheet(sheetKey);
   }, items);
-  const items1 = [first, callback2, callback1, callback];
+  const items1 = [transitionState, callback2, callback1, registerDismissHandler];
   const items2 = [callback2];
-  const memo = callback.useMemo(() => ({ transitionState: first, close: callback2, onLeave: callback1, registerDismissHandler: callback }), items1);
-  const callback3 = callback.useCallback(() => {
+  const memo = registerDismissHandler.useMemo(() => ({ transitionState, close: callback2, onLeave: callback1, registerDismissHandler }), items1);
+  const callback3 = registerDismissHandler.useCallback(() => {
     const current = ref.current;
     if (current != null) {
       current();
@@ -65,23 +60,23 @@ let closure_9 = importAllResult.forwardRef((sheetKey, ref) => {
     callback2();
     return true;
   }, items2);
-  first(4972)(callback3);
-  obj = { value: memo, children: jsx(sheetKey(4958).Dialog, { dialogKey: sheetKey, onDismiss: callback2, zIndex, children: content }) };
-  return jsx(first(7152).Provider, { value: memo, children: jsx(sheetKey(4958).Dialog, { dialogKey: sheetKey, onDismiss: callback2, zIndex, children: content }) });
+  transitionState(4986)(callback3);
+  const tmp5 = transitionState(8801);
+  return jsx(transitionState(7166).Provider, { value: memo, children: jsx(sheetKey(4972).Dialog, { dialogKey: sheetKey, onDismiss: callback2, zIndex, children: content }) });
 });
-let result = require("set").fileFinishedImporting("design/components/Sheet/native/ActionSheetPresenter.native.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("design/components/Sheet/native/ActionSheetPresenter.native.tsx");
 
 export const ActionSheetPresenter = function ActionSheetPresenter(appEntryKey) {
   appEntryKey = appEntryKey.appEntryKey;
   const items = [appEntryKey];
-  const effect = importAllResult.useEffect(() => () => {
-    const result = closure_1_1(closure_1_2[8]).resetActionSheetsForAppEntryKey(closure_0);
+  const effect = noop.useEffect(() => () => {
+    const result = ActionSheetActionCreatorsDefault.resetActionSheetsForAppEntryKey(appEntryKey);
   }, items);
-  let obj = appEntryKey(504);
-  const items1 = [closure_6];
-  const stateFromStoresArray = obj.useStateFromStoresArray(items1, () => stack.getStack(), []);
+  const items1 = [ActionSheetStore];
+  const stateFromStoresArray = appEntryKey(504).useStateFromStoresArray(items1, () => stack.getStack(), []);
   const found = stateFromStoresArray.filter((appEntryKey) => appEntryKey.appEntryKey === appEntryKey);
-  const mapped = found.map((content) => callback(closure_9, { sheetKey: content.key, content: content.content, impressionName: content.impressionName, impressionProperties: content.impressionProperties, zIndex: content.zIndex }, content.key));
-  obj = { style: StyleSheet.absoluteFill, component: appEntryKey(4911).TransitionGroupOverlayView, children: mapped };
-  return jsx(appEntryKey(12427).TransitionGroup, { style: StyleSheet.absoluteFill, component: appEntryKey(4911).TransitionGroupOverlayView, children: mapped });
+  const mapped = found.map((content) => <closure_1_9 key={arg0.key} sheetKey={arg0.key} content={arg0.content} impressionName={arg0.impressionName} impressionProperties={arg0.impressionProperties} zIndex={arg0.zIndex} />);
+  const obj = appEntryKey(504);
+  return jsx(appEntryKey(12453).TransitionGroup, { style: StyleSheet.absoluteFill, component: appEntryKey(4925).TransitionGroupOverlayView, children: mapped });
 };

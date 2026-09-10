@@ -1,54 +1,49 @@
-// Module ID: 15221
-// Function ID: 15222
+// Module ID: 15250
+// Function ID: 15251
 // Name: ResubscribedAlert
-// Dependencies: [19, 17, 21, 4560, 576, 4994, 1114, 15222, 1178, 4556, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 5008, 1114, 15251, 1178, 4570, 2]
 // Exports: default
 
-// Module 15221 (ResubscribedAlert)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import Text from "Text" /* 4556 */;
-import componentDidMountDefault from "componentDidMount" /* 4994 */;
-import registerAssetDefault from "registerAsset" /* 15222 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15250 (ResubscribedAlert)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import common_AlertDefault from "common/Alert" /* 5008 */;
+import _modDef15251 from "module_15251" /* 15251 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ View: c3, Image: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: null, body: null, centerText: null, headerImage: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { alignItems: "center", textAlign: "center" };
-createCacheKey[2] = { textAlign: "center" };
-createCacheKey[3] = { width: 87, height: 87 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/manage_subscriptions/ResubscribedAlert.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, Image: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL }, body: { alignItems: "center", textAlign: "center" }, centerText: { textAlign: "center" }, headerImage: { width: 87, height: 87 } };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/manage_subscriptions/ResubscribedAlert.tsx");
 
 export default function ResubscribedAlert(onClose) {
-  const tmp = callback3();
-  let obj = { confirmText: null, onConfirm: null, style: null, children: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["NX+WJN"]);
-  obj[1] = onClose.onClose;
-  obj[2] = tmp.container;
-  obj = { style: tmp.body, children: null };
-  obj = { source: registerAssetDefault, style: tmp.headerImage };
-  const items = [callback(closure_4, obj), callback(Button.Spacer, { size: 27 }), , , ];
-  obj1 = { variant: "text-lg/semibold", color: "mobile-text-heading-primary", style: tmp.centerText, children: null };
-  const intl2 = getSystemLocale.intl;
-  obj1[3] = intl2.string(getSystemLocale.t.oPV2cy);
-  items[2] = callback(Text.Text, obj1);
-  items[3] = callback(Button.Spacer, { size: 12 });
-  const obj2 = { variant: "text-md/normal", color: "mobile-text-heading-primary", style: tmp.centerText, children: null };
-  const intl3 = getSystemLocale.intl;
-  obj2[3] = intl3.string(getSystemLocale.t.DdRizV);
-  items[4] = callback(Text.Text, obj2);
-  obj[1] = items;
-  obj[3] = callback2(closure_3, obj);
-  return callback(componentDidMountDefault, obj);
+  const tmp = closure_7();
+  const obj = { confirmText: null, onConfirm: null, style: null, children: null };
+  const intl = util.intl;
+  obj.confirmText = intl.string(util.t["NX+WJN"]);
+  obj.onConfirm = onClose.onClose;
+  obj.style = tmp.container;
+  const obj2 = { style: tmp.body, children: null };
+  const tmp2 = common_AlertDefault;
+  const items = [hasOwnProperty(React4, { source: _modDef15251, style: tmp.headerImage }), hasOwnProperty(native.Spacer, { size: 27 }), , , ];
+  const obj4 = { variant: "text-lg/semibold", color: "mobile-text-heading-primary", style: tmp.centerText, children: null };
+  const intl2 = util.intl;
+  obj4.children = intl2.string(util.t.oPV2cy);
+  items[2] = hasOwnProperty(Text_Text.Text, obj4);
+  items[3] = hasOwnProperty(native.Spacer, { size: 12 });
+  const obj5 = { variant: "text-md/normal", color: "mobile-text-heading-primary", style: tmp.centerText, children: null };
+  const intl3 = util.intl;
+  obj5.children = intl3.string(util.t.DdRizV);
+  items[4] = hasOwnProperty(Text_Text.Text, obj5);
+  obj2.children = items;
+  obj.children = timestampProducer(React3, obj2);
+  return hasOwnProperty(tmp2, obj);
 };

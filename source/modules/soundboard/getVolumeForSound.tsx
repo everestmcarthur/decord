@@ -1,21 +1,22 @@
-// Module ID: 14543
-// Function ID: 14544
+// Module ID: 14568
+// Function ID: 14569
 // Name: getVolumeForSound
-// Dependencies: [1908, 5015, 1935, 2]
+// Dependencies: [1908, 5029, 1935, 2]
 // Exports: default, getPerceptualSoundboardVolume
 
-// Module 14543 (getVolumeForSound)
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import perceptualToAmplitude from "perceptualToAmplitude" /* 5015 */;
-import closure_2 from "_detectH265HardwareDecode" /* 1908 */;
+// Module 14568 (getVolumeForSound)
+import UserSettings from "UserSettings" /* 1935 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5029 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/soundboard/getVolumeForSound.tsx");
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/soundboard/getVolumeForSound.tsx");
 
 export default function getVolumeForSound(arg0, USER) {
   let tmp = USER;
   if (USER === undefined) {
-    const SoundboardSettings = explicitContentFromProto.SoundboardSettings;
+    const SoundboardSettings = UserSettings.SoundboardSettings;
     const setting = SoundboardSettings.getSetting();
     let num;
     if (setting != null) {
@@ -26,13 +27,13 @@ export default function getVolumeForSound(arg0, USER) {
     }
     tmp = num;
   }
-  const result = perceptualToAmplitude.amplitudeToPerceptual(tmp) / 100;
-  return Math.min(arg0 * result * Math.min(outputVolume.getOutputVolume() / 100, 1), 1);
+  const result = PerceptualVolumeUtils.amplitudeToPerceptual(tmp) / 100;
+  return Math.min(arg0 * result * Math.min(MediaEngineStore.getOutputVolume() / 100, 1), 1);
 };
 export const getPerceptualSoundboardVolume = function getPerceptualSoundboardVolume(USER) {
   let num = USER;
   if (USER == null) {
     num = 100;
   }
-  return perceptualToAmplitude.amplitudeToPerceptual(num) / 100;
+  return PerceptualVolumeUtils.amplitudeToPerceptual(num) / 100;
 };

@@ -1,17 +1,14 @@
-// Module ID: 8428
-// Function ID: 8429
-// Name: AgeVerifyScreen
-// Dependencies: [19, 8412, 21, 8418, 4417, 4773, 8298, 4560, 576, 4763, 7377, 1114, 7000, 2]
+// Module ID: 8456
+// Function ID: 8457
+// Name: AgeVerificationModal
+// Dependencies: [19, 8440, 21, 8446, 4431, 4787, 8326, 4574, 576, 4777, 7391, 1114, 7014, 2]
 // Exports: default
 
-// Module 8428 (AgeVerifyScreen)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { AGE_VERIFICATION_MODAL_KEY as closure_4 } from "set" /* 8412 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 8456 (AgeVerificationModal)
+import nativeDefault from "native" /* 576 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+const require = fn;
 function AgeVerifyScreen(uri) {
   const onComplete = uri.onComplete;
   const onClose = uri.onClose;
@@ -25,14 +22,14 @@ function AgeVerifyScreen(uri) {
   }, items);
   const items1 = [callback];
   const callback1 = callback.useCallback(() => {
-    if (obj.isModalOpen(closure_1_4)) {
+    if (obj.isModalOpen(closure_4)) {
       callback();
     }
   }, items1);
   const obj = onComplete(isSuspendedUser[3]);
   const watchAgeVerificationStatusChange = onComplete(isSuspendedUser[5]).useWatchAgeVerificationStatusChange(callback1);
   const items2 = [callback, isSuspendedUser];
-  const onMessage = callback.useCallback((nativeEvent) => {
+  const callback2 = callback.useCallback((nativeEvent) => {
     if (null != nativeEvent.nativeEvent.data) {
       try {
         if (typeof nativeEvent.nativeEvent.data === "string") {
@@ -56,51 +53,51 @@ function AgeVerifyScreen(uri) {
       }
     }
   }, items2);
-  return jsx(onClose(isSuspendedUser[6]), { allowsInlineMediaPlayback: true, javaScriptEnabled: true, source: { uri: uri.webviewUrl }, onMessage, injectedJavaScript: "\n  window.addEventListener('message', function(event) {\n    window.ReactNativeWebView.postMessage(event.data);\n  }, true);\n" });
+  return jsx(onClose(isSuspendedUser[6]), { allowsInlineMediaPlayback: true, javaScriptEnabled: true, source: { uri: uri.webviewUrl }, onMessage: callback2, injectedJavaScript: "\n  window.addEventListener('message', function(event) {\n    window.ReactNativeWebView.postMessage(event.data);\n  }, true);\n" });
 }
-let closure_6 = { VERIFY_AGE: "VERIFY_AGE" };
-createCacheKey = { headerStyle: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
-createCacheKey[0] = createCacheKey;
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/age_assurance/native/AgeVerificationModal.tsx");
+let closure_4 = fn(8440).AGE_VERIFICATION_MODAL_KEY;
+const jsx = fn(21).jsx;
+const constants = { VERIFY_AGE: "VERIFY_AGE" };
+const createStyles = fn(4574);
+const obj2 = { headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationModal.tsx");
 
 export default function AgeVerificationModal(webviewUrl) {
   webviewUrl = webviewUrl.webviewUrl;
   const onComplete = webviewUrl.onComplete;
   const onClose = webviewUrl.onClose;
-  let React;
-  c4 = undefined;
-  const tmp = callback();
-  React = tmp;
+  const tmp = closure_8();
+  noop = tmp;
   let intl = webviewUrl(onClose[11]).intl;
   const stringResult = intl.string(webviewUrl(onClose[11]).t.wJVyYR);
   c4 = stringResult;
   const items = [tmp, webviewUrl, onComplete, onClose, stringResult];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
+    closure_2 = onClose;
     function handleClose() {
-      dependencyMap();
-      let arr = callback2(4763);
-      arr = arr.pop();
+      closure_2();
+      onComplete(onClose[9]).pop();
     }
     return {
-      [closure_1_6.VERIFY_AGE]: {
-        headerStyle: handleClose.headerStyle,
-        headerTitle: c4,
+      [closure_2_6.VERIFY_AGE]: {
+        headerStyle: headerStyle.headerStyle,
+        headerTitle,
         headerLeft() {
           const obj = { onPress: handleClose, text: null };
-          const intl = callback(1114).intl;
-          obj[1] = intl.string(callback(1114).t.cpT0Cq);
-          return closure_1_5(callback(7377).HeaderActionButton, obj);
+          const intl = webviewUrl(onClose[11]).intl;
+          obj.text = intl.string(webviewUrl(onClose[11]).t.cpT0Cq);
+          return jsx(webviewUrl(onClose[10]).HeaderActionButton, { onPress: handleClose, text: null });
         },
         render() {
-          return closure_1_5(closure_1_7, { webviewUrl: closure_0, onComplete: closure_1, onClose: handleClose });
+          return <AgeVerifyScreen webviewUrl={webviewUrl} onComplete={onComplete} onClose={handleClose} />;
         }
       }
     };
   }, items);
   let obj = { screens: memo, initialRouteName: constants.VERIFY_AGE, headerBackTitle: null };
   const intl2 = webviewUrl(onClose[11]).intl;
-  obj[2] = intl2.string(webviewUrl(onClose[11]).t["13/7kX"]);
+  obj.headerBackTitle = intl2.string(webviewUrl(onClose[11]).t["13/7kX"]);
   return jsx(webviewUrl(onClose[12]).Navigator, { screens: memo, initialRouteName: constants.VERIFY_AGE, headerBackTitle: null });
 };

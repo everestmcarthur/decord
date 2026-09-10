@@ -1,74 +1,66 @@
-// Module ID: 9656
-// Function ID: 9657
+// Module ID: 9683
+// Function ID: 9684
 // Name: EmbeddedActivityBackgroundImageWithOverlay
-// Dependencies: [32, 19, 17, 21, 4560, 576, 9657, 2]
+// Dependencies: [32, 19, 17, 21, 4574, 576, 9684, 2]
 // Exports: default
 
-// Module 9656 (EmbeddedActivityBackgroundImageWithOverlay)
-import ThemesDefault from "Themes" /* 576 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9657 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9683 (EmbeddedActivityBackgroundImageWithOverlay)
+import nativeDefault from "native" /* 576 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9684 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-({ ImageBackground: c4, View: c5, StyleSheet: closure_6 } = get_ActivityIndicator);
-createCacheKey = { overlay: null };
-createCacheKey = { flex: 1, opacity: 0.6, backgroundColor: ThemesDefault.colors.BLACK };
-createCacheKey[0] = createCacheKey;
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let closure_9 = ["embedded_background"];
-const result = require("set").fileFinishedImporting("modules/activities/native/EmbeddedActivityBackgroundImageWithOverlay.tsx");
+get_ActivityIndicator = fn(17);
+({ ImageBackground: closure_4, View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { overlay: { flex: 1, opacity: 0.6, backgroundColor: nativeDefault.colors.BLACK } };
+let closure_8 = createStyles.createStyles(obj2);
+const names = ["embedded_background"];
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/native/EmbeddedActivityBackgroundImageWithOverlay.tsx");
 
 export default function EmbeddedActivityBackgroundImageWithOverlay(arg0) {
   ({ application, dimensionsStyle, borderRadius, resizeMode } = arg0);
   if (resizeMode === undefined) {
     resizeMode = "contain";
   }
-  importDefault = undefined;
-  const tmp2 = callback(React.useState(false), 2);
-  importDefault = tmp2[1];
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
+  closure_0 = tmp2[1];
   let str;
-  const tmp = callback2();
+  const tmp = closure_8();
   if (application != null) {
     str = application.id;
   }
   if (str == null) {
     str = "";
   }
-  let obj = { applicationId: str, names: closure_9, size: 1024 };
-  const url = useEmbeddedActivityBackgroundDefault(obj).url;
+  const url = useEmbeddedActivityBackgroundDefault({ applicationId: str, names, size: 1024 }).url;
   let tmp7Result = null;
   if (!tmp2[0]) {
     tmp7Result = null;
     if (null != url) {
       tmp7Result = null;
       if ("" !== url) {
-        obj = { resizeMode: null, source: null, style: null, imageStyle: null, onError: null, children: null };
-        obj[0] = resizeMode;
-        obj = { uri: null };
-        obj[0] = url;
-        obj[1] = obj;
+        const obj2 = { resizeMode, source: null, style: null, imageStyle: null, onError: null, children: null };
+        const obj3 = { uri: url };
+        obj2.source = obj3;
         if (dimensionsStyle == null) {
           dimensionsStyle = absoluteFillObject.absoluteFillObject;
         }
-        obj[2] = dimensionsStyle;
-        obj1 = { borderRadius: null };
-        obj1[0] = borderRadius;
-        obj[3] = obj1;
-        obj[4] = function onError() {
-          return callback(true);
+        obj2.style = dimensionsStyle;
+        const obj4 = { borderRadius };
+        obj2.imageStyle = obj4;
+        obj2.onError = function onError() {
+          return closure_0(true);
         };
-        const obj2 = { style: null };
+        const obj5 = { style: null };
         const items = [tmp.overlay, ];
-        const obj3 = { borderRadius: null };
-        obj3[0] = borderRadius;
-        items[1] = obj3;
-        obj2[0] = items;
-        obj[5] = <closure_5 style={null} />;
-        tmp7Result = tmp7(closure_4, obj);
-        const tmp8 = closure_4;
+        const obj6 = { borderRadius };
+        items[1] = obj6;
+        obj5.style = items;
+        obj2.children = <hasOwnProperty style={null} />;
+        tmp7Result = tmp7(React4, obj2);
       }
     }
   }

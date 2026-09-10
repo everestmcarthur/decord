@@ -1,42 +1,38 @@
-// Module ID: 9618
-// Function ID: 9619
-// Name: result
-// Dependencies: [19, 17, 21, 1115, 4262, 576, 5577, 2]
+// Module ID: 9645
+// Function ID: 9646
+// Name: MessageLoadingSpinner
+// Dependencies: [19, 17, 21, 1115, 4275, 576, 5591, 2]
 // Exports: default
 
-// Module 9618 (result)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import map from "map" /* 4262 */;
-import ActivityIndicator from "ActivityIndicator" /* 5577 */;
-import { jsx } from "jsxProd" /* 21 */;
-import set from "set" /* 1115 */;
+// Module 9645 (MessageLoadingSpinner)
+import nativeDefault from "native" /* 576 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5591 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
+require = fn;
+const jsx = fn(21).jsx;
+const PlatformUtils = fn(1115);
 let result = null;
-if (!set.isAndroid()) {
-  result = require("get ActivityIndicator").requireNativeComponent("DCDMessageLoadingSpinner");
+if (!PlatformUtils.isAndroid()) {
+  result = fn(17).requireNativeComponent("DCDMessageLoadingSpinner");
 }
-let c4 = result;
-const result1 = set.fileFinishedImporting("components_native/common/MessageLoadingSpinner.tsx");
+const size = fn(2);
+const result1 = size.fileFinishedImporting("components_native/common/MessageLoadingSpinner.tsx");
 
 export default function MessageLoadingSpinner(color) {
-  let obj = map;
   color = color.color;
   if (color == null) {
-    color = obj.useToken(ThemesDefault.colors.BACKGROUND_BRAND);
+    color = obj.useToken(nativeDefault.colors.BACKGROUND_BRAND);
   }
-  if (null != closure_4) {
-    obj = {};
+  if (null != result) {
+    const obj2 = {};
     const merged = Object.assign(color);
-    obj.color = color;
+    obj2.color = color;
     let tmp8 = <tmp3 />;
   } else {
-    obj = { animating: null };
-    obj[0] = color.animate;
+    const obj3 = { animating: color.animate };
     const merged1 = Object.assign(color);
-    tmp8 = jsx(ActivityIndicator.ActivityIndicator, { animating: null });
+    tmp8 = jsx(ActivityIndicator_ActivityIndicator.ActivityIndicator, { animating: color.animate });
   }
   return tmp8;
 };

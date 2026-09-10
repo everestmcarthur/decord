@@ -1,17 +1,18 @@
-// Module ID: 14873
-// Function ID: 14874
+// Module ID: 14899
+// Function ID: 14900
 // Name: useUserAgeGroup
-// Dependencies: [7537, 504, 2]
+// Dependencies: [7551, 504, 2]
 // Exports: default
 
-// Module 14873 (useUserAgeGroup)
+// Module 14899 (useUserAgeGroup)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "freshTeenActivityWithMap" /* 7537 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7551 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useUserAgeGroup.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useUserAgeGroup.tsx");
 
 export default function useUserAgeGroup() {
-  const items = [closure_2];
+  const items = [FamilyCenterStore];
   return initialize.useStateFromStores(items, () => ageGroup.getAgeGroup());
 };

@@ -1,65 +1,57 @@
-// Module ID: 8662
-// Function ID: 8663
-// Name: WidgetPreview
-// Dependencies: [19, 17, 21, 4560, 576, 8241, 7630, 8663, 7623, 8679, 4556, 1114, 2]
+// Module ID: 8690
+// Function ID: 8691
+// Name: InAppReportsWidgetPreviewElement
+// Dependencies: [19, 17, 21, 4574, 576, 8267, 7644, 8691, 7637, 8707, 4570, 1114, 2]
 // Exports: default
 
-// Module 8662 (WidgetPreview)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import createDefaultFieldsSection from "createDefaultFieldsSection" /* 7630 */;
-import useSharedStylesDefault from "useSharedStyles" /* 8241 */;
-import PersonalWidgetTextDefault from "PersonalWidgetText" /* 8663 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 8690 (InAppReportsWidgetPreviewElement)
+import nativeDefault from "native" /* 576 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7644 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8267 */;
+import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 8691 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, title: { lineHeight: 16, marginBottom: 8 }, card: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.USER_PROFILE_CONTAINER_BACKGROUND };
-createCacheKey[2] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsWidgetPreviewElement.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, title: { lineHeight: 16, marginBottom: 8 }, card: { backgroundColor: nativeDefault.colors.USER_PROFILE_CONTAINER_BACKGROUND } };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsWidgetPreviewElement.tsx");
 
 export default function WidgetPreview(arg0) {
   ({ widget, userId } = arg0);
-  const tmp = callback3();
-  const tmp4 = useSharedStylesDefault();
-  if (widget instanceof createDefaultFieldsSection.UserProfilePersonalWidget) {
-    let obj = { userId: null, widget: null, disableInteraction: true, cardStyle: null };
-    obj[0] = userId;
-    obj[1] = widget;
+  const tmp = closure_6();
+  const tmp4 = UserProfileSharedStylesDefault();
+  if (widget instanceof UserProfilePersonalWidget.UserProfilePersonalWidget) {
+    const obj = { userId, widget, disableInteraction: true, cardStyle: null };
     const items = [tmp4.card, tmp.card];
-    obj[3] = items;
-    let tmp6 = callback(PersonalWidgetTextDefault, obj);
+    obj.cardStyle = items;
+    let tmp6 = React4(UserProfilePersonalWidgetCardDefault, obj);
   } else {
     tmp6 = null;
     if (tmp5Result.isGameWidget(widget)) {
       tmp6 = null;
       if (widget.games.length > 0) {
-        obj = { userId: null, widget: null, disableInteraction: true, cardStyle: null };
-        obj[0] = userId;
-        obj[1] = widget;
+        const obj2 = { userId, widget, disableInteraction: true, cardStyle: null };
         const items1 = [tmp4.card, tmp.card];
-        obj[3] = items1;
-        tmp6 = callback(tmp5(8679).WidgetSection, obj);
+        obj2.cardStyle = items1;
+        tmp6 = React4(tmp5(8707).WidgetSection, obj2);
       }
     }
-    tmp5Result = tmp5(7623);
+    tmp5Result = tmp5(7637);
   }
   let tmp9 = null;
   if (null !== tmp6) {
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.container;
-    const obj2 = { style: null, accessibilityRole: "header", variant: "text-xs/bold", children: null };
-    obj2[0] = tmp.title;
+    const obj3 = { style: tmp.container, children: null };
+    const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
     const intl = tmp5(1114).intl;
-    obj2[3] = intl.string(tmp5(1114).t.SpsnDY).toUpperCase();
-    const items2 = [callback(tmp5(4556).Text, obj2), tmp6];
-    obj1[1] = items2;
-    tmp9 = callback2(View, obj1);
+    obj4.children = intl.string(tmp5(1114).t.SpsnDY).toUpperCase();
+    const items2 = [React4(tmp5(4570).Text, obj4), tmp6];
+    obj3.children = items2;
+    tmp9 = hasOwnProperty(View, obj3);
     const str = intl.string(tmp5(1114).t.SpsnDY);
   }
   return tmp9;

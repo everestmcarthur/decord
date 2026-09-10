@@ -1,89 +1,84 @@
-// Module ID: 12460
-// Function ID: 12461
-// Dependencies: [19, 17, 4552, 11966, 1074, 21, 4560, 5545, 4384, 12461, 1114, 4740, 5527, 12462, 5680, 5569, 504, 12452, 5529, 12463, 2]
+// Module ID: 12486
+// Function ID: 12487
+// Name: ChatInputGuardGuildMemberVerification
+// Dependencies: [19, 17, 4566, 11992, 1074, 21, 4574, 5559, 4398, 12487, 1114, 4754, 5541, 12488, 5694, 5583, 504, 12478, 5543, 12489, 2]
 
-// Module 12460
-import playDefault from "play" /* 5529 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12452 */;
-import registerAssetDefault from "registerAsset" /* 12461 */;
-import registerAssetDefault2 from "registerAsset" /* 12462 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import { TextAreaCta } from "TextAreaCta" /* 11966 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 12486 (ChatInputGuardGuildMemberVerification)
+import util from "util" /* 1114 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4754 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5541 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5583 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12478 */;
+import _modDef12487 from "module_12487" /* 12487 */;
+import _modDef12488 from "module_12488" /* 12488 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-const require = arg1;
-let closure_8 = createCacheKey.createStyles({ noticeIcon: { height: 36, width: 36, resizeMode: "contain" }, lottieAnimation: { height: 36, width: 36 } });
-const memoResult = importAllResult.memo(function ChatInputGuardGuildMemberVerification(guildId) {
+const LottieAnimationViewDefault = tmp14(5543);
+require = fn;
+const Image = fn(17).Image;
+const TextAreaCta = fn(11992).TextAreaCta;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_8 = createStyles.createStyles({ noticeIcon: { height: 36, width: 36, resizeMode: "contain" }, lottieAnimation: { height: 36, width: 36 } });
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardGuildMemberVerification.tsx");
+
+export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId) {
   guildId = guildId.guildId;
-  const tmp = callback();
-  let obj = guildId(5545);
-  const currentUserGuildJoinRequest = obj.useCurrentUserGuildJoinRequest(guildId);
+  const tmp = closure_8();
+  const currentUserGuildJoinRequest = guildId(5559).useCurrentUserGuildJoinRequest(guildId);
   let applicationStatus;
   if (currentUserGuildJoinRequest != null) {
     applicationStatus = currentUserGuildJoinRequest.applicationStatus;
   }
-  if (guildId(4384).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
-    let tmp8 = registerAssetDefault;
+  if (guildId(4398).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
+    let tmp8 = _modDef12487;
     const intl3 = tmp2(1114).intl;
     let stringResult = intl3.string(tmp2(1114).t.lk30cY);
     let fn = function _() {
-      let obj = closure_1_1(closure_1_2[11]);
-      obj = { cta_type: closure_1_5.MEMBER_VERIFICATION_REJECTED };
-      obj.trackWithMetadata(closure_1_6.TEXT_AREA_CTA_CLICKED, obj);
-      obj = { guildId, canWithdraw: false };
-      const result = guildId(closure_1_2[12]).openMemberVerificationRejectedAlert(obj);
+      AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, { cta_type: TextAreaCta.MEMBER_VERIFICATION_REJECTED });
+      const obj2 = { cta_type: TextAreaCta.MEMBER_VERIFICATION_REJECTED };
+      const result = MemberVerificationAlertActionCreators.openMemberVerificationRejectedAlert({ guildId, canWithdraw: false });
     };
-  } else if (tmp2(4384).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
-    tmp8 = registerAssetDefault2;
+  } else if (tmp2(4398).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
+    tmp8 = _modDef12488;
     const intl2 = tmp2(1114).intl;
     stringResult = intl2.string(tmp2(1114).t["5iLvSx"]);
     fn = function _() {
-      let obj = closure_1_1(closure_1_2[11]);
-      obj = { cta_type: closure_1_5.MEMBER_VERIFICATION_CONFIRMED };
-      obj.trackWithMetadata(closure_1_6.TEXT_AREA_CTA_CLICKED, obj);
-      obj = { guildId, subtitleText: null };
-      const intl = guildId(closure_1_2[10]).intl;
-      obj[1] = intl.string(guildId(closure_1_2[10]).t["13tjTU"]);
-      const result = guildId(closure_1_2[12]).openMemberVerificationCancelPendingAlert(obj);
+      AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, { cta_type: TextAreaCta.MEMBER_VERIFICATION_CONFIRMED });
+      const obj2 = { cta_type: TextAreaCta.MEMBER_VERIFICATION_CONFIRMED };
+      const obj4 = { guildId, subtitleText: null };
+      const intl = util.intl;
+      obj4.subtitleText = intl.string(util.t["13tjTU"]);
+      const result = MemberVerificationAlertActionCreators.openMemberVerificationCancelPendingAlert(obj4);
     };
-    const tmp7 = jsx(tmp2(5680).XSmallIcon, {});
+    const tmp7 = jsx(tmp2(5694).XSmallIcon, {});
   } else {
     let intl = tmp2(1114).intl;
     stringResult = intl.string(tmp2(1114).t.rEBKvg);
     fn = function _() {
-      let obj = closure_1_1(closure_1_2[11]);
-      obj = { cta_type: closure_1_5.MEMBER_VERIFICATION };
-      obj.trackWithMetadata(closure_1_6.TEXT_AREA_CTA_CLICKED, obj);
-      const result = guildId(closure_1_2[15]).openMemberVerificationModal(guildId);
+      AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, { cta_type: TextAreaCta.MEMBER_VERIFICATION });
+      const obj2 = { cta_type: TextAreaCta.MEMBER_VERIFICATION };
+      const result = MemberVerificationModalActionCreators.openMemberVerificationModal(guildId);
     };
   }
-  const items = [closure_4];
+  let obj = guildId(5559);
+  const items = [AccessibilityStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  const tmp14 = importDefault;
   const tmp2Result = guildId(504);
   if (null != tmp8) {
-    obj = { style: null, source: null };
-    obj[0] = tmp.noticeIcon;
-    obj[1] = tmp8;
-    let tmp13Result = tmp13(Image, obj);
+    let obj2 = { style: tmp.noticeIcon, source: tmp8 };
+    let tmp13Result = tmp13(Image, obj2);
   } else {
-    obj = { style: null, source: null, autoPlay: null };
-    obj[0] = tmp.lottieAnimation;
-    obj[1] = tmp2(12463);
-    obj[2] = !stateFromStores;
-    tmp13Result = tmp13(playDefault, obj);
-    const tmp14Result = playDefault;
+    const obj3 = { style: tmp.lottieAnimation, source: tmp2(12489), autoPlay: !stateFromStores };
+    tmp13Result = tmp13(LottieAnimationViewDefault, obj3);
+    const tmp14Result = LottieAnimationViewDefault;
   }
-  obj1 = { type: "simple-action", icon: tmp13Result, message: stringResult, actionIcon: tmp7, actionLabel: null, actionOnPress: null };
+  let obj4 = { type: "simple-action", icon: tmp13Result, message: stringResult, actionIcon: tmp7, actionLabel: null, actionOnPress: null };
   const intl4 = tmp2(1114).intl;
-  obj1[4] = intl4.string(guildId(1114).t["r8/DT+"]);
-  obj1[5] = fn;
+  obj4.actionLabel = intl4.string(guildId(1114).t["r8/DT+"]);
+  obj4.actionOnPress = fn;
   return jsx(ChatInputGuardDefault, { type: "simple-action", icon: tmp13Result, message: stringResult, actionIcon: tmp7, actionLabel: null, actionOnPress: null });
 });
-let result = require("set").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardGuildMemberVerification.tsx");
-
-export default memoResult;

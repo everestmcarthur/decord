@@ -1,58 +1,62 @@
-// Module ID: 9396
-// Function ID: 9397
+// Module ID: 9423
+// Function ID: 9424
 // Name: PremiumFeatureList
-// Dependencies: [19, 17, 1074, 21, 4560, 5524, 576, 8598, 2]
+// Dependencies: [19, 17, 1074, 21, 4574, 5538, 576, 8626, 2]
 // Exports: default
 
-// Module 9396 (PremiumFeatureList)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_2 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importDefaultResult from "createTextStyle" /* 5524 */;
+// Module 9423 (PremiumFeatureList)
+import nativeDefault from "native" /* 576 */;
+import Form from "Form" /* 8626 */;
+import noop from "module_19" /* 19 */;
+import TextStyles from "TextStyles" /* 5538 */;
 
-const require = arg1;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { item: { backgroundColor: "transparent", paddingHorizontal: 0, paddingVertical: 8, flexDirection: "row", alignItems: "center" }, label: null, iconMargin: null };
-createCacheKey = {};
-const merged = Object.assign(importDefaultResult(require("ME").Fonts.PRIMARY_NORMAL, ThemesDefault.colors.TEXT_DEFAULT, 14));
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { marginEnd: ThemesDefault.space.PX_16 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { marginEnd: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("components_native/premium/PremiumFeatureList.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { item: { backgroundColor: "transparent", paddingHorizontal: 0, paddingVertical: 8, flexDirection: "row", alignItems: "center" }, label: null, iconMargin: null };
+const merged = Object.assign(TextStyles(fn(1074).Fonts.PRIMARY_NORMAL, nativeDefault.colors.TEXT_DEFAULT, 14));
+obj2.label = {};
+obj2.iconMargin = { marginEnd: nativeDefault.space.PX_16 };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/premium/PremiumFeatureList.tsx");
 
 export default function PremiumFeatureList(style) {
-  ({ features, separator: require, iconStyle: dependencyMap, labelStyle: closure_2, rowStyle: View } = style);
-  let callback;
-  callback = callback2();
+  ({ features, separator: require, iconStyle: dependencyMap, labelStyle: noop, rowStyle: View } = style);
+  closure_4 = closure_6();
   const found = features.filter((hidden) => !hidden.hidden);
-  return callback(View, {
+  return closure_4(View, {
     style: style.style,
-    children: found.map((IconComponent) => {
-      let obj = { style: items, children: null };
-      items = [lib.item, closure_3];
-      obj = { accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: lib(IconComponent.IconComponent, obj) };
-      obj = { size: "md", color: IconComponent.color, style: items1 };
-      items1 = [lib.iconMargin, closure_1];
-      const items2 = [lib(closure_1_3, obj), ];
-      const items3 = [lib.label, closure_2];
-      items2[1] = lib(closure_1_0(closure_1_1[7]).FormRow.Label, { numberOfLines: 2, style: items3, text: IconComponent.label });
-      obj[1] = items2;
-      const children = [closure_1_5(closure_1_3, obj, arg1), ];
+    children: found.map((color, index) => {
+      const obj = { style: null, children: null };
+      const items = [closure_4.item, closure_1_3];
+      obj.style = items;
+      const obj2 = { accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
+      const obj3 = { size: "md", color: color.color, style: null };
+      const items1 = [closure_4.iconMargin, dependencyMap];
+      obj3.style = items1;
+      obj2.children = React4(color.IconComponent, obj3);
+      const items2 = [React4(View, obj2), ];
+      const obj4 = { numberOfLines: 2, style: null, text: color.label };
+      const items3 = [closure_4.label, closure_1_2];
+      obj4.style = items3;
+      items2[1] = React4(Form.FormRow.Label, obj4);
+      obj.children = items2;
+      const children = [hasOwnProperty(View, obj, index), ];
       let tmp3 = null;
-      if (null != closure_0) {
+      if (null != closure_1_0) {
         tmp3 = null;
         if ("" !== tmp2) {
           tmp3 = null;
-          if (IconComponent.renderSeparatorBelow) {
+          if (color.renderSeparatorBelow) {
             tmp3 = tmp2;
           }
         }
       }
       children[1] = tmp3;
-      return closure_1_5(closure_1_2.Fragment, { children }, arg1);
+      return hasOwnProperty(noop.Fragment, { children }, index);
     })
   });
 };

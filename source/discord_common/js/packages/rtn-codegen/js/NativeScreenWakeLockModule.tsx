@@ -1,14 +1,14 @@
-// Module ID: 9645
-// Function ID: 9646
-// Name: enforcing
+// Module ID: 9672
+// Function ID: 9673
+// Name: NativeScreenWakeLockModule
 // Dependencies: [17, 2]
 
-// Module 9645 (enforcing)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 9672 (NativeScreenWakeLockModule)
+import _mod17 from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
 
-const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 const enforcing = TurboModuleRegistry.getEnforcing("NativeScreenWakeLockModule");
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeScreenWakeLockModule.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeScreenWakeLockModule.tsx");
 
 export default enforcing;

@@ -1,21 +1,21 @@
-// Module ID: 14006
-// Function ID: 14007
-// Name: isHookModuleTooOld
+// Module ID: 14029
+// Function ID: 14030
+// Name: Hook
 // Dependencies: [2]
 // Exports: attachToProcess, cancelAttachToProcess, findSteamProcess, isHookModuleTooOld
 
-// Module 14006 (isHookModuleTooOld)
-import set from "set" /* 2 */;
+// Module 14029 (Hook)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("lib/hook/Hook.native.tsx");
+const result = size.fileFinishedImporting("lib/hook/Hook.native.tsx");
 
 export function isHookModuleTooOld() {
   return true;
 }
-export const attachToProcess = function attachToProcess(soundshareId, arg1) {
+export const attachToProcess = function attachToProcess() {
   return Promise.resolve();
 };
-export const cancelAttachToProcess = function cancelAttachToProcess(soundshareId) {
+export const cancelAttachToProcess = function cancelAttachToProcess() {
   return Promise.resolve();
 };
 export const findSteamProcess = function findSteamProcess() {

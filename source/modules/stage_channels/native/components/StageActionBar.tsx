@@ -1,94 +1,79 @@
-// Module ID: 9949
-// Function ID: 9950
-// Dependencies: [19, 17, 21, 4560, 5415, 9950, 9681, 9588, 9906, 5417, 9903, 10007, 2]
+// Module ID: 9976
+// Function ID: 9977
+// Name: StageActionBar
+// Dependencies: [19, 17, 21, 4574, 5429, 9977, 9708, 9615, 9933, 5431, 9930, 10034, 2]
 
-// Module 9949
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9976 (StageActionBar)
+import StageActionBarButtons from "StageActionBarButtons" /* 9930 */;
+import ChannelCallActionBar from "ChannelCallActionBar" /* 9977 */;
+import ChannelCallMicButton from "ChannelCallMicButton" /* 10034 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
-({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ container: { paddingHorizontal: 12, justifyContent: "center", alignItems: "center", flexDirection: "row", position: "relative" } });
-const memoResult = importAllResult.memo((channel) => {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let closure_8 = createStyles.createStyles({ container: { paddingHorizontal: 12, justifyContent: "center", alignItems: "center", flexDirection: "row", position: "relative" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageActionBar.tsx");
+
+export default noop.memo((channel) => {
   channel = channel.channel;
-  let canModerateRequestToSpeak;
   let actionBarPrimaryButton;
-  importAllResult = undefined;
-  closure_4 = undefined;
-  let callback;
-  callback = undefined;
-  let obj = channel(actionBarPrimaryButton[4]);
-  canModerateRequestToSpeak = obj.useCanModerateRequestToSpeak(channel.id);
-  let tmp = callback2();
+  let tmp = closure_8();
   let tmp2 = channel;
   const tmp3 = actionBarPrimaryButton;
+  const canModerateRequestToSpeak = channel(actionBarPrimaryButton[4]).useCanModerateRequestToSpeak(channel.id);
+  let obj = channel(actionBarPrimaryButton[4]);
   actionBarPrimaryButton = channel(actionBarPrimaryButton[5]).useActionBarPrimaryButton({ channel });
   let obj2 = channel(actionBarPrimaryButton[5]);
   const getActionBarHeight = channel(actionBarPrimaryButton[6]).useGetActionBarHeight(channel.id);
   const tmp7 = canModerateRequestToSpeak(actionBarPrimaryButton[7])(channel.id);
-  importAllResult = tmp7;
+  noop = tmp7;
   let obj3 = channel(actionBarPrimaryButton[6]);
   const tmp8 = channel(actionBarPrimaryButton[8]).useShowStageMusicMuteButton(channel.id) && !tmp7;
   closure_4 = tmp8;
   let obj4 = channel(actionBarPrimaryButton[8]);
   const isStageVideoEnabledResult = tmp2(tmp3[9]).isStageVideoEnabled(channel.guild_id);
-  callback = isStageVideoEnabledResult;
+  c5 = isStageVideoEnabledResult;
   let items = [actionBarPrimaryButton, channel];
-  callback = importAllResult.useCallback((arg0) => {
-    if (actionBarPrimaryButton === channel(actionBarPrimaryButton[5]).ActionBarPrimaryButton.END_STREAM) {
-      let obj = { channel: null, isSmallSize: null };
-      obj[0] = channel;
-      obj[1] = arg0;
-      let tmp4 = _undefined(tmp2(tmp3[5]).DisconnectStreamButton, obj);
+  const callback = noop.useCallback((isSmallSize) => {
+    if (actionBarPrimaryButton === ChannelCallActionBar.ActionBarPrimaryButton.END_STREAM) {
+      const obj2 = { channel, isSmallSize };
+      let tmp4 = hasOwnProperty(tmp2(9977).DisconnectStreamButton, obj2);
     } else {
       tmp4 = null;
-      if (actionBarPrimaryButton === tmp2(tmp3[5]).ActionBarPrimaryButton.END_CALL) {
-        obj = { channel: null, isSmallSize: null };
-        obj[0] = channel;
-        obj[1] = arg0;
-        tmp4 = _undefined(tmp2(tmp3[10]).DisconnectStageButton, obj);
+      if (actionBarPrimaryButton === tmp2(9977).ActionBarPrimaryButton.END_CALL) {
+        const obj = { channel, isSmallSize };
+        tmp4 = hasOwnProperty(tmp2(9930).DisconnectStageButton, obj);
       }
     }
     return tmp4;
   }, items);
   let items1 = [tmp8, channel, canModerateRequestToSpeak, tmp7, callback, isStageVideoEnabledResult];
-  obj = {
+  let obj5 = {
     pointerEvents: "box-none",
-    style: items2,
-    children: importAllResult.useMemo(() => {
+    style: null,
+    children: noop.useMemo(() => {
       if (closure_3) {
-        let tmp24 = _undefined;
-        if (_undefined) {
-          let obj = { channel: null, isSmallSize: null };
-          obj[0] = channel;
-          obj[1] = tmp21;
-          tmp24 = _undefined(channel(actionBarPrimaryButton[5]).VideoButton, obj);
+        let tmp24 = isSmallSize;
+        if (isSmallSize) {
+          const obj2 = { channel, isSmallSize: tmp21 };
+          tmp24 = hasOwnProperty(ChannelCallActionBar.VideoButton, obj2);
         }
         const items = [tmp24, , , , ];
-        obj = { channel: null, isSmallSize: null };
-        obj[0] = channel;
-        obj[1] = _undefined;
-        items[1] = _undefined(channel(actionBarPrimaryButton[11]).ChannelCallMicButton, obj);
-        obj1 = channel(actionBarPrimaryButton[10]);
-        obj1 = { children: null };
-        const obj2 = { channel: null, isSmallSize: null };
-        obj2[0] = channel;
-        obj2[1] = _undefined;
-        items[2] = _undefined(canModerateRequestToSpeak ? obj1.RequestToSpeakListButton : obj1.MoveToAudienceButton, obj2);
-        const obj3 = { channel: null, isSmallSize: null };
-        obj3[0] = channel;
-        obj3[1] = _undefined;
-        items[3] = _undefined(channel(actionBarPrimaryButton[10]).ChatButton, obj3);
-        items[4] = callback(_undefined);
-        obj1[0] = items;
-        closure_1_7(callback, obj1);
-        const tmp22 = closure_1_7;
-        const tmp23 = callback;
-        const tmp33 = _undefined;
-        const tmp37 = canModerateRequestToSpeak ? obj1.RequestToSpeakListButton : obj1.MoveToAudienceButton;
+        const obj3 = { channel, isSmallSize };
+        items[1] = hasOwnProperty(ChannelCallMicButton.ChannelCallMicButton, obj3);
+        const obj4 = { children: null };
+        const obj5 = { channel, isSmallSize };
+        items[2] = hasOwnProperty(canModerateRequestToSpeak ? obj4.RequestToSpeakListButton : obj4.MoveToAudienceButton, obj5);
+        const obj6 = { channel, isSmallSize };
+        items[3] = hasOwnProperty(StageActionBarButtons.ChatButton, obj6);
+        items[4] = callback(isSmallSize);
+        obj4.children = items;
+        React5(timestampProducer, obj4);
+        const tmp37 = canModerateRequestToSpeak ? obj4.RequestToSpeakListButton : obj4.MoveToAudienceButton;
       } else {
         let tmp = closure_4;
         let tmp2 = closure_4;
@@ -96,38 +81,28 @@ const memoResult = importAllResult.memo((channel) => {
           tmp2 = canModerateRequestToSpeak;
         }
         if (tmp) {
-          obj = { channel: null, isSmallSize: null };
-          obj[0] = channel;
-          obj[1] = tmp2;
-          tmp = _undefined(channel(actionBarPrimaryButton[10]).MusicMuteButton, obj);
+          const obj = { channel, isSmallSize: tmp2 };
+          tmp = hasOwnProperty(StageActionBarButtons.MusicMuteButton, obj);
         }
         const items1 = [tmp, , , , ];
-        const obj4 = { channel: null, isSmallSize: null };
-        obj4[0] = channel;
-        obj4[1] = tmp2;
-        items1[1] = _undefined(channel(actionBarPrimaryButton[10]).RequestToSpeakButton, obj4);
+        const obj7 = { channel, isSmallSize: tmp2 };
+        items1[1] = hasOwnProperty(StageActionBarButtons.RequestToSpeakButton, obj7);
         let tmp13 = canModerateRequestToSpeak;
         if (canModerateRequestToSpeak) {
-          const obj5 = { channel: null, isSmallSize: null };
-          obj5[0] = tmp12;
-          obj5[1] = tmp2;
-          tmp13 = _undefined(channel(actionBarPrimaryButton[10]).RequestToSpeakListButton, obj5);
+          const obj8 = { channel: tmp12, isSmallSize: tmp2 };
+          tmp13 = hasOwnProperty(StageActionBarButtons.RequestToSpeakListButton, obj8);
         }
-        const obj6 = { children: null };
+        const obj9 = { children: null };
         items1[2] = tmp13;
-        const obj7 = { channel: null, isSmallSize: null };
-        obj7[0] = channel;
-        obj7[1] = tmp2;
-        items1[3] = _undefined(channel(actionBarPrimaryButton[10]).ChatButton, obj7);
+        const obj10 = { channel, isSmallSize: tmp2 };
+        items1[3] = hasOwnProperty(StageActionBarButtons.ChatButton, obj10);
         items1[4] = callback(tmp2);
-        obj6[0] = items1;
-        return closure_1_7(callback, obj6);
+        obj9.children = items1;
+        return React5(timestampProducer, obj9);
       }
     }, items1)
   };
-  items2 = [tmp.container, { height: getActionBarHeight }];
-  return callback(closure_4, obj);
+  const items2 = [tmp.container, { height: getActionBarHeight }];
+  obj5.style = items2;
+  return c5(closure_4, obj5);
 });
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/StageActionBar.tsx");
-
-export default memoResult;

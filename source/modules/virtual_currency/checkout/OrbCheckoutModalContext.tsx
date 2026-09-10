@@ -1,33 +1,32 @@
-// Module ID: 13157
-// Function ID: 13158
-// Name: useOrbCheckoutModalContextProvider
-// Dependencies: [19, 1371, 5510, 21, 1256, 504, 4218, 11285, 7231, 11047, 7553, 4233, 8863, 2]
+// Module ID: 13182
+// Function ID: 13183
+// Name: OrbCheckoutModalContext
+// Dependencies: [19, 1371, 5524, 21, 1256, 504, 4231, 11312, 7245, 11074, 7567, 4246, 8890, 2]
 // Exports: OrbCheckoutModalContextProvider, useOrbCheckoutModalContext
 
-// Module 13157 (useOrbCheckoutModalContextProvider)
-import set from "set" /* 2 */;
+// Module 13182 (OrbCheckoutModalContext)
 import jsxProd from "jsxProd" /* 21 */;
-import noop from "noop" /* 19 */;
-import closure_6 from "mergeGuildAvatar" /* 1371 */;
-import closure_7 from "addSku" /* 5510 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7567 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
+import SKUStore from "SKUStore" /* 5524 */;
 import v1 from "v1" /* 1256 */;
+import size from "module_2" /* 2 */;
 
-function useOrbCheckoutModalContextProvider(value) {
-  const skuId = value.skuId;
-  const loadId = value.loadId;
-  const onCheckoutSuccess = value.onCheckoutSuccess;
-  let stateFromStores;
+function useOrbCheckoutModalContextProvider(skuId) {
+  skuId = skuId.skuId;
+  const loadId = skuId.loadId;
+  const onCheckoutSuccess = skuId.onCheckoutSuccess;
   let sKUOrbPrice;
-  let callback2;
+  c5 = undefined;
   let redeemVirtualCurrency;
-  ({ onSignFailure, order } = value);
-  let obj = skuId(onCheckoutSuccess[5]);
+  ({ onSignFailure, order } = skuId);
   const items = [redeemVirtualCurrency];
-  stateFromStores = obj.useStateFromStores(items, () => loadId(onCheckoutSuccess[6]).canUseShopDiscounts(redeemVirtualCurrency.getCurrentUser()));
-  obj1 = skuId(onCheckoutSuccess[5]);
-  const items1 = [closure_7];
+  const stateFromStores = skuId(onCheckoutSuccess[5]).useStateFromStores(items, () => loadId(onCheckoutSuccess[6]).canUseShopDiscounts(redeemVirtualCurrency.getCurrentUser()));
+  let obj = skuId(onCheckoutSuccess[5]);
+  const items1 = [SKUStore];
   const items2 = [skuId];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_7.get(skuId), items2);
+  const stateFromStores1 = skuId(onCheckoutSuccess[5]).useStateFromStores(items1, () => SKUStore.get(skuId), items2);
   let productLine = null;
   if (null != stateFromStores1) {
     productLine = stateFromStores1.productLine;
@@ -37,32 +36,28 @@ function useOrbCheckoutModalContextProvider(value) {
     applicationId = stateFromStores1.applicationId;
   }
   if (applicationId == null) {
-    let tmpResult = tmp(tmp2[7]);
-    applicationId = tmpResult.get1PShopApplicationIdForSKU(skuId);
+    applicationId = tmp(tmp2[7]).get1PShopApplicationIdForSKU(skuId);
+    const tmpResult = tmp(tmp2[7]);
   }
-  tmpResult = tmp(tmp2[8]);
-  sKUOrbPrice = tmpResult.useSKUOrbPrice({ sku: stateFromStores1 });
+  let obj2 = skuId(onCheckoutSuccess[5]);
+  sKUOrbPrice = skuId(onCheckoutSuccess[8]).useSKUOrbPrice({ sku: stateFromStores1 });
+  const tmpResult5 = skuId(onCheckoutSuccess[8]);
   const product = skuId(onCheckoutSuccess[9]).useFetchCollectiblesProduct(skuId).product;
-  callback2 = product;
+  c5 = product;
   const items3 = [sKUOrbPrice, product, stateFromStores];
-  const tmp8 = callback2(() => {
+  const tmp8 = c5(() => {
     if (null != sKUOrbPrice) {
-      let obj = { orbPriceAmount: null };
-      obj[0] = tmp.amount;
-      return obj;
+      const obj2 = { orbPriceAmount: tmp.amount };
+      return obj2;
     } else if (null != c5) {
-      obj = skuId(onCheckoutSuccess[10]);
-      obj = { product: null, hasShopDiscount: null };
-      obj[0] = tmp2;
-      obj[1] = stateFromStores;
-      const productOrbPrice = obj.getProductOrbPrice(obj);
+      const obj3 = { product: tmp2, hasShopDiscount: stateFromStores };
+      const productOrbPrice = CollectiblesProductUtils.getProductOrbPrice(obj3);
       let amount = null;
       if (null !== productOrbPrice) {
         amount = productOrbPrice.amount;
       }
-      obj1 = { orbPriceAmount: null };
-      obj1[0] = amount;
-      return obj1;
+      const obj4 = { orbPriceAmount: amount };
+      return obj4;
     } else {
       return null;
     }
@@ -72,19 +67,19 @@ function useOrbCheckoutModalContextProvider(value) {
     orbPriceAmount = tmp8.orbPriceAmount;
   }
   if (null == orbPriceAmount) {
-    obj = { tags: null };
-    obj = { sku_id: null };
-    obj[0] = skuId;
-    obj[0] = obj;
-    const result = tmp(tmp2[11]).captureBillingMessage("Orb price not found for product", obj);
-    const tmpResult2 = tmp(tmp2[11]);
+    let obj3 = { tags: null };
+    let obj4 = { sku_id: skuId };
+    obj3.tags = obj4;
+    const result = tmp(tmp2[11]).captureBillingMessage("Orb price not found for product", obj3);
+    const tmpResult7 = tmp(tmp2[11]);
   }
-  const tmpResult1 = skuId(onCheckoutSuccess[9]);
-  redeemVirtualCurrency = skuId(onCheckoutSuccess[12]).useRedeemVirtualCurrency({ skuId, loadId, order, onSignFailure });
-  redeemVirtualCurrency = redeemVirtualCurrency.redeemVirtualCurrency;
+  const tmpResult6 = skuId(onCheckoutSuccess[9]);
+  const redeemVirtualCurrency1 = skuId(onCheckoutSuccess[12]).useRedeemVirtualCurrency({ skuId, loadId, order, onSignFailure });
+  redeemVirtualCurrency = redeemVirtualCurrency1.redeemVirtualCurrency;
   const items4 = [skuId, loadId, redeemVirtualCurrency, onCheckoutSuccess];
-  ({ isSubmitting, error } = redeemVirtualCurrency);
-  obj1 = {
+  ({ isSubmitting, error } = redeemVirtualCurrency1);
+  const tmpResult8 = skuId(onCheckoutSuccess[12]);
+  return {
     skuId,
     skuProductLine: productLine,
     skuApplicationId: applicationId,
@@ -92,51 +87,47 @@ function useOrbCheckoutModalContextProvider(value) {
     orbProductContext: tmp8,
     onRedeemVirtualCurrency: sKUOrbPrice((arg0) => {
       closure_0 = arg0;
-      redeemVirtualCurrency(closure_0, loadId, (arg0) => {
-        if (closure_1_2 != null) {
-          const obj = { entitlements: null, skuId: null };
-          obj[0] = arg0;
-          obj[1] = callback;
+      redeemVirtualCurrency(closure_0, loadId, (entitlements) => {
+        if (onCheckoutSuccess != null) {
+          const obj = { entitlements, skuId };
           tmp(obj);
         }
-        callback(arg0);
+        closure_0(entitlements);
       });
     }, items4),
     isRedeeming: isSubmitting,
     orbRedemptionError: error
   };
-  return obj1;
 }
-({ useContext: c3, useCallback: c4, useMemo: c5, createContext } = noop);
+({ useContext: c3, useCallback: closure_4, useMemo: hasOwnProperty, createContext } = noop);
 const jsx = jsxProd.jsx;
 let obj = { skuId: "123", skuProductLine: null, skuApplicationId: "r", loadId: "PX_16", analyticsLocations: null, analyticsSourceLocation: null, isRedeeming: null, orbRedemptionError: "lg", orbProductContext: null, onRedeemVirtualCurrency: true };
-obj[3] = v1.v4();
-obj[4] = [];
-obj[9] = function onRedeemVirtualCurrency() {
+obj.loadId = v1.v4();
+obj.analyticsLocations = [];
+obj.onRedeemVirtualCurrency = function onRedeemVirtualCurrency() {
 
 };
-let closure_9 = createContext(obj);
-let result = set.fileFinishedImporting("modules/virtual_currency/checkout/OrbCheckoutModalContext.tsx");
+const redux = createContext(obj);
+let result = size.fileFinishedImporting("modules/virtual_currency/checkout/OrbCheckoutModalContext.tsx");
 
 export { useOrbCheckoutModalContextProvider };
 export const OrbCheckoutModalContextProvider = function OrbCheckoutModalContextProvider(onCheckoutSuccess) {
   ({ skuId, loadId, analyticsLocations } = onCheckoutSuccess);
-  let value = { skuId, loadId, onCheckoutSuccess: onCheckoutSuccess.onCheckoutSuccess };
   ({ analyticsSourceLocation, children } = onCheckoutSuccess);
-  const tmp = useOrbCheckoutModalContextProvider(value);
-  value = { skuId, skuProductLine: tmp.skuProductLine, skuApplicationId: tmp.skuApplicationId, loadId, analyticsLocations: null, analyticsSourceLocation: null, orbProductContext: null, onRedeemVirtualCurrency: null, isRedeeming: null, orbRedemptionError: null };
+  const tmp = useOrbCheckoutModalContextProvider({ skuId, loadId, onCheckoutSuccess: onCheckoutSuccess.onCheckoutSuccess });
+  const obj2 = { skuId, skuProductLine: tmp.skuProductLine, skuApplicationId: tmp.skuApplicationId, loadId, analyticsLocations: null, analyticsSourceLocation: null, orbProductContext: null, onRedeemVirtualCurrency: null, isRedeeming: null, orbRedemptionError: null };
   ({ orbProductContext, onRedeemVirtualCurrency, isRedeeming, orbRedemptionError } = tmp);
   if (analyticsLocations == null) {
     analyticsLocations = [];
   }
-  value[4] = analyticsLocations;
-  value[5] = analyticsSourceLocation;
-  value[6] = orbProductContext;
-  value[7] = onRedeemVirtualCurrency;
-  value[8] = isRedeeming;
-  value[9] = orbRedemptionError;
-  return <redux.Provider value={value}>{children}</redux.Provider>;
+  obj2.analyticsLocations = analyticsLocations;
+  obj2.analyticsSourceLocation = analyticsSourceLocation;
+  obj2.orbProductContext = orbProductContext;
+  obj2.onRedeemVirtualCurrency = onRedeemVirtualCurrency;
+  obj2.isRedeeming = isRedeeming;
+  obj2.orbRedemptionError = orbRedemptionError;
+  return <redux.Provider value={obj2}>{children}</redux.Provider>;
 };
 export const useOrbCheckoutModalContext = function useOrbCheckoutModalContext() {
-  return callback(closure_9);
+  return React3(closure_9);
 };

@@ -4,16 +4,16 @@
 // Dependencies: [600]
 
 // Module 599 (hashClear)
-import getNative from "getNative" /* 600 */;
+import _mod600 from "module_600" /* 600 */;
 
 
 export default function hashClear() {
-  let obj = {};
-  if (getNative) {
-    obj = getNative(null);
+  const obj = {};
+  if (_mod600) {
+    let obj2 = _mod600(null);
   } else {
-    obj = {};
+    obj2 = {};
   }
-  obj.__data__ = obj;
+  obj.__data__ = obj2;
   obj.size = 0;
 };

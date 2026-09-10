@@ -1,16 +1,17 @@
-// Module ID: 16863
-// Function ID: 16864
-// Dependencies: [19, 17, 21, 4560, 13267, 2]
+// Module ID: 16900
+// Function ID: 16901
+// Name: SearchNavigatorPreviewHeader
+// Dependencies: [19, 17, 21, 4574, 13290, 2]
 
-// Module 16863
-import ChannelHeaderDefault from "ChannelHeader" /* 13267 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 16900 (SearchNavigatorPreviewHeader)
+import ChannelHeaderDefault from "ChannelHeader" /* 13290 */;
+import noop from "module_19" /* 19 */;
 
-let closure_4 = createCacheKey.createStyles({ container: { flexShrink: 1, paddingRight: 12, flexDirection: "row", alignItems: "center" } });
-const memoResult = importAllResult.memo((channelId) => <View style={callback().container}>{jsx(ChannelHeaderDefault, { channelId: arg0.channelId, screenIndex: "none", pressable: false, isGuildMemberCountVisible: false, isNavigationScreen: true })}</View>);
-const result = require("set").fileFinishedImporting("modules/search/native/components/navigator/SearchNavigatorPreviewHeader.tsx");
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_4 = createStyles.createStyles({ container: { flexShrink: 1, paddingRight: 12, flexDirection: "row", alignItems: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/navigator/SearchNavigatorPreviewHeader.tsx");
 
-export default memoResult;
+export default noop.memo((channelId) => <View style={closure_4().container}>{jsx(ChannelHeaderDefault, { channelId: arg0.channelId, screenIndex: "none", pressable: false, isGuildMemberCountVisible: false, isNavigationScreen: true })}</View>);

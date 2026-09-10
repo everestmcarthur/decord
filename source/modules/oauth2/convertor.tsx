@@ -1,24 +1,26 @@
-// Module ID: 9251
-// Function ID: 9252
-// Name: convertOAuth2Authorization
+// Module ID: 9278
+// Function ID: 9279
+// Name: convertor
 // Dependencies: [1086, 2]
 // Exports: convertOAuth2Authorization
 
-// Module 9251 (convertOAuth2Authorization)
-import set from "set" /* 2 */;
+// Module 9278 (convertor)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/oauth2/convertor.tsx");
+const result = size.fileFinishedImporting("modules/oauth2/convertor.tsx");
 
-export const convertOAuth2Authorization = function convertOAuth2Authorization(closure_0) {
-  let tmp = closure_0;
-  if (null != closure_0.guilds) {
+export const convertOAuth2Authorization = function convertOAuth2Authorization(guilds) {
+  let tmp = guilds;
+  if (null != guilds.guilds) {
     let obj = {};
-    let merged = Object.assign(closure_0);
-    const guilds = closure_0.guilds;
+    let merged = Object.assign(guilds);
+    guilds = guilds.guilds;
     obj.guilds = guilds.map((permissions) => {
       const obj = {};
       const merged = Object.assign(permissions);
-      obj.permissions = callback(table[0]).deserialize(permissions.permissions);
+      const deserializer = BigFlagUtilsAll;
+      obj.permissions = deserializer.deserialize(permissions.permissions);
       return obj;
     });
     tmp = obj;

@@ -1,24 +1,25 @@
-// Module ID: 16051
-// Function ID: 16052
+// Module ID: 16081
+// Function ID: 16082
 // Name: useMessagesScrollToTop
-// Dependencies: [19, 4552, 4417, 11223, 1484, 2]
+// Dependencies: [19, 4566, 4431, 11250, 1484, 2]
 // Exports: default
 
-// Module 16051 (useMessagesScrollToTop)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+// Module 16081 (useMessagesScrollToTop)
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesScrollToTop.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesScrollToTop.tsx");
 
 export default function useMessagesScrollToTop(listRef) {
   listRef = listRef.listRef;
   const listRefHappeningNow = listRef.listRefHappeningNow;
   const items = [listRef, listRefHappeningNow];
-  const ref = React.useRef(React.useMemo(() => ({
+  const ref = noop.useRef(noop.useMemo(() => ({
     scrollToTopTimeout: -1,
     scrollToTop() {
-      if (null != obj.coerceGuildsRoute(closure_1_1(closure_1_2[3])())) {
+      if (null != obj.coerceGuildsRoute(listRefHappeningNow(11250)())) {
         const self = this;
         if (-1 === this.scrollToTopTimeout) {
           const _setTimeout = setTimeout;
@@ -26,13 +27,12 @@ export default function useMessagesScrollToTop(listRef) {
             if (ref != null) {
               const current = ref.current;
               if (current != null) {
-                current.scrollToTop(!closure_1_4.useReducedMotion);
+                current.scrollToTop(!closure_2_4.useReducedMotion);
               }
             }
             const current2 = ref2.current;
             if (current2 != null) {
-              const obj = { offset: 0, animated: null };
-              obj[1] = !closure_1_4.useReducedMotion;
+              const obj = { offset: 0, animated: !closure_2_4.useReducedMotion };
               current2.scrollToOffset(obj);
             }
           }, 300);

@@ -1,67 +1,55 @@
 // Module ID: 2037
 // Function ID: 2038
-// Name: _preloadAllIntlMessageFiles
-// Dependencies: [5, 1114, 1896, 2038, 2070, 2102, 2134, 2166, 2168, 2170, 2202, 2234, 2266, 2298, 2330, 2332, 2364, 2396, 2428, 2460, 2492, 2494, 2496, 2528, 2530, 2562, 2594, 2626, 2658, 2690, 2722, 2754, 2786, 2818, 2850, 2882, 2914, 2946, 2978, 3010, 3042, 3063, 3095, 3127, 3129, 3161, 3193, 3225, 3257, 3289, 3321, 3353, 3385, 3417, 3449, 3481, 3483, 3515, 3547, 3549, 3581, 3613, 2]
+// Name: preloader
+// Dependencies: [5, 1114, 1896, 2038, 2070, 2102, 2134, 2166, 2168, 2170, 2202, 2234, 2266, 2298, 2330, 2332, 2364, 2396, 2428, 2460, 2492, 2494, 2496, 2528, 2530, 2562, 2594, 2626, 2658, 2690, 2722, 2754, 2786, 2818, 2850, 2882, 2914, 2946, 2978, 3010, 3042, 3074, 3106, 3138, 3140, 3172, 3204, 3236, 3268, 3300, 3332, 3334, 3366, 3398, 3430, 3462, 3494, 3496, 3528, 3560, 3562, 3594, 3626, 2]
 // Exports: preloadAllIntlMessageFiles
 
-// Module 2037 (_preloadAllIntlMessageFiles)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+// Module 2037 (preloader)
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
-function _preloadAllIntlMessageFiles() {
-  const self = this;
-  const tmp = callback(function*() {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
+require = fn;
+let closure_3 = async function _preloadAllIntlMessageFiles(arg0, value) {
+  if (c0 === 2) {
+    c0 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      try {
-        v0 = 2;
-        if (arg0 === 1) {
-          v0 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          v0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          const items = [v0(closure_1_1[2])(closure_1_1[1], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[3], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[4], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[5], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[6], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[7], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[8], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[9], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[10], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[11], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[12], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[13], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[14], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[15], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[16], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[17], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[18], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[19], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[20], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[21], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[22], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[23], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[24], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[25], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[26], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[27], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[28], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[29], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[30], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[31], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[32], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[33], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[34], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[35], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[36], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[37], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[38], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[39], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[40], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[41], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[42], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[43], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[44], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[45], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[46], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[47], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[48], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[49], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[50], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[51], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[52], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[53], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[54], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[55], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[56], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[57], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[58], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[59], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[60], closure_1_1.paths), v0(closure_1_1[2])(closure_1_1[61], closure_1_1.paths)];
-          v0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = Promise.all(items);
-          return obj;
-        }
-      } catch (tmp4) {
-        v0 = tmp;
-        throw tmp4;
-      }
+      return { value: "HermesInternal", done: null };
     }
-  });
-  closure_3 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
-    applyArgumentsResult = apply(self, arguments);
+    try {
+      c0 = 2;
+      if (arg0 === 1) {
+        c0 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c0 = 3;
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        const items = [asyncRequireImpl(dependencyMap[1], dependencyMap.paths), asyncRequireImpl(dependencyMap[3], dependencyMap.paths), asyncRequireImpl(dependencyMap[4], dependencyMap.paths), asyncRequireImpl(dependencyMap[5], dependencyMap.paths), asyncRequireImpl(dependencyMap[6], dependencyMap.paths), asyncRequireImpl(dependencyMap[7], dependencyMap.paths), asyncRequireImpl(dependencyMap[8], dependencyMap.paths), asyncRequireImpl(dependencyMap[9], dependencyMap.paths), asyncRequireImpl(dependencyMap[10], dependencyMap.paths), asyncRequireImpl(dependencyMap[11], dependencyMap.paths), asyncRequireImpl(dependencyMap[12], dependencyMap.paths), asyncRequireImpl(dependencyMap[13], dependencyMap.paths), asyncRequireImpl(dependencyMap[14], dependencyMap.paths), asyncRequireImpl(dependencyMap[15], dependencyMap.paths), asyncRequireImpl(dependencyMap[16], dependencyMap.paths), asyncRequireImpl(dependencyMap[17], dependencyMap.paths), asyncRequireImpl(dependencyMap[18], dependencyMap.paths), asyncRequireImpl(dependencyMap[19], dependencyMap.paths), asyncRequireImpl(dependencyMap[20], dependencyMap.paths), asyncRequireImpl(dependencyMap[21], dependencyMap.paths), asyncRequireImpl(dependencyMap[22], dependencyMap.paths), asyncRequireImpl(dependencyMap[23], dependencyMap.paths), asyncRequireImpl(dependencyMap[24], dependencyMap.paths), asyncRequireImpl(dependencyMap[25], dependencyMap.paths), asyncRequireImpl(dependencyMap[26], dependencyMap.paths), asyncRequireImpl(dependencyMap[27], dependencyMap.paths), asyncRequireImpl(dependencyMap[28], dependencyMap.paths), asyncRequireImpl(dependencyMap[29], dependencyMap.paths), asyncRequireImpl(dependencyMap[30], dependencyMap.paths), asyncRequireImpl(dependencyMap[31], dependencyMap.paths), asyncRequireImpl(dependencyMap[32], dependencyMap.paths), asyncRequireImpl(dependencyMap[33], dependencyMap.paths), asyncRequireImpl(dependencyMap[34], dependencyMap.paths), asyncRequireImpl(dependencyMap[35], dependencyMap.paths), asyncRequireImpl(dependencyMap[36], dependencyMap.paths), asyncRequireImpl(dependencyMap[37], dependencyMap.paths), asyncRequireImpl(dependencyMap[38], dependencyMap.paths), asyncRequireImpl(dependencyMap[39], dependencyMap.paths), asyncRequireImpl(dependencyMap[40], dependencyMap.paths), asyncRequireImpl(dependencyMap[41], dependencyMap.paths), asyncRequireImpl(dependencyMap[42], dependencyMap.paths), asyncRequireImpl(dependencyMap[43], dependencyMap.paths), asyncRequireImpl(dependencyMap[44], dependencyMap.paths), asyncRequireImpl(dependencyMap[45], dependencyMap.paths), asyncRequireImpl(dependencyMap[46], dependencyMap.paths), asyncRequireImpl(dependencyMap[47], dependencyMap.paths), asyncRequireImpl(dependencyMap[48], dependencyMap.paths), asyncRequireImpl(dependencyMap[49], dependencyMap.paths), asyncRequireImpl(dependencyMap[50], dependencyMap.paths), asyncRequireImpl(dependencyMap[51], dependencyMap.paths), asyncRequireImpl(dependencyMap[52], dependencyMap.paths), asyncRequireImpl(dependencyMap[53], dependencyMap.paths), asyncRequireImpl(dependencyMap[54], dependencyMap.paths), asyncRequireImpl(dependencyMap[55], dependencyMap.paths), asyncRequireImpl(dependencyMap[56], dependencyMap.paths), asyncRequireImpl(dependencyMap[57], dependencyMap.paths), asyncRequireImpl(dependencyMap[58], dependencyMap.paths), asyncRequireImpl(dependencyMap[59], dependencyMap.paths), asyncRequireImpl(dependencyMap[60], dependencyMap.paths), asyncRequireImpl(dependencyMap[61], dependencyMap.paths), asyncRequireImpl(dependencyMap[62], dependencyMap.paths)];
+        c0 = 3;
+        const obj = { value: Promise.all(items), done: true };
+        return obj;
+      }
+    } catch (tmp4) {
+      c0 = tmp;
+      throw tmp4;
+    }
   }
-  return applyArgumentsResult;
-}
-const result = require("set").fileFinishedImporting("intl/preloader.tsx");
+};
+const size = fn(2);
+const result = size.fileFinishedImporting("intl/preloader.tsx");
 
 export const preloadAllIntlMessageFiles = function preloadAllIntlMessageFiles() {
   const self = this;
-  const apply = _preloadAllIntlMessageFiles.apply;
+  const apply = closure_3.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

@@ -1,63 +1,61 @@
-// Module ID: 15722
-// Function ID: 15723
+// Module ID: 15752
+// Function ID: 15753
 // Name: ShopSkipCategoriesFilter
-// Dependencies: [19, 17, 7542, 21, 4560, 576, 504, 4973, 4556, 7541, 2]
+// Dependencies: [19, 17, 7556, 21, 4574, 576, 504, 4987, 4570, 7555, 2]
 // Exports: ShopSkipCategoriesFilter
 
-// Module 15722 (ShopSkipCategoriesFilter)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_4 from "updateCategoriesAndProducts" /* 7542 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15752 (ShopSkipCategoriesFilter)
+import nativeDefault from "native" /* 576 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7555 */;
+import noop from "module_19" /* 19 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7556 */;
 
-const require = arg1;
-noopAll;
-({ View: obj1, Pressable: c3 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: null, label: null, stepperContainer: null, stepperButton: null, stepperButtonDisabled: null, valueText: null };
-createCacheKey = { paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginBottom: ThemesDefault.space.PX_8 };
-obj1 = { marginBottom: ThemesDefault.space.PX_8 };
-createCacheKey[2] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
-let obj2 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
-createCacheKey[3] = { width: 32, height: 32, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, justifyContent: "center", alignItems: "center" };
-createCacheKey[4] = { opacity: 0.5 };
-createCacheKey[5] = { minWidth: 40, textAlign: "center" };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { width: 32, height: 32, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, justifyContent: "center", alignItems: "center" };
-const result = require("set").fileFinishedImporting("modules/collectibles/native/tooling/ShopSkipCategoriesFilter.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c2, Pressable: c3 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 }, label: null, stepperContainer: null, stepperButton: null, stepperButtonDisabled: null, valueText: null };
+let obj3 = { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.label = { marginBottom: nativeDefault.space.PX_8 };
+let obj4 = { marginBottom: nativeDefault.space.PX_8 };
+obj2.stepperContainer = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
+let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, justifyContent: "center", alignItems: "center" };
+obj2.stepperButton = size;
+obj2.stepperButtonDisabled = { opacity: 0.5 };
+obj2.valueText = { minWidth: 40, textAlign: "center" };
+let closure_7 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/tooling/ShopSkipCategoriesFilter.tsx");
 
 export const ShopSkipCategoriesFilter = function ShopSkipCategoriesFilter() {
-  const tmp = callback2();
-  let obj = stateFromStores(504);
-  const items = [closure_4];
-  stateFromStores = obj.useStateFromStores(items, () => skipNumCategories.skipNumCategories);
-  obj = { style: tmp.container, children: null };
-  obj = { variant: "text-md/normal", style: tmp.label, children: "Hide first # of categories" };
-  const items1 = [callback(stateFromStores(4556).Text, obj), ];
-  obj1 = { style: tmp.stepperContainer, children: null };
+  const tmp = closure_7();
+  const items = [CollectiblesCategoryStore];
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => skipNumCategories.skipNumCategories);
+  const obj2 = { style: tmp.container, children: null };
+  const items1 = [closure_5(stateFromStores(4570).Text, { variant: "text-md/normal", style: tmp.label, children: "Hide first # of categories" }), ];
+  const obj4 = { style: tmp.stepperContainer, children: null };
   const items2 = [tmp.stepperButton, ];
   let stepperButtonDisabled = tmp5;
   if (stateFromStores <= 0) {
     stepperButtonDisabled = tmp.stepperButtonDisabled;
   }
+  let obj = stateFromStores(504);
+  const obj3 = { variant: "text-md/normal", style: tmp.label, children: "Hide first # of categories" };
   items2[1] = stepperButtonDisabled;
   const items3 = [
-    callback(closure_3, {
+    closure_5(closure_3, {
       style: items2,
       onPress() {
         if (stateFromStores > 0) {
-          stateFromStores(closure_1_1[9]).setSkipNumCategories(tmp - 1);
-          const obj = stateFromStores(closure_1_1[9]);
+          CollectiblesActionCreators.setSkipNumCategories(tmp - 1);
         }
       },
       disabled: stateFromStores <= 0,
-      children: callback(stateFromStores(4556).Text, { variant: "text-lg/semibold", children: "\u2212" })
+      children: closure_5(stateFromStores(4570).Text, { variant: "text-lg/semibold", children: "\u2212" })
     }),
-    callback(stateFromStores(4556).Text, { variant: "text-md/semibold", style: tmp.valueText, children: stateFromStores }),
+    closure_5(stateFromStores(4570).Text, { variant: "text-md/semibold", style: tmp.valueText, children: stateFromStores }),
 
   ];
   const items4 = [tmp.stepperButton, ];
@@ -65,34 +63,32 @@ export const ShopSkipCategoriesFilter = function ShopSkipCategoriesFilter() {
   if (stateFromStores >= 100) {
     stepperButtonDisabled2 = tmp.stepperButtonDisabled;
   }
-  const obj4 = { spacing: 8, children: null };
-  const obj2 = {
+  const obj7 = { spacing: 8, children: null };
+  const obj5 = {
     style: items2,
     onPress() {
       if (stateFromStores > 0) {
-        stateFromStores(closure_1_1[9]).setSkipNumCategories(tmp - 1);
-        const obj = stateFromStores(closure_1_1[9]);
+        CollectiblesActionCreators.setSkipNumCategories(tmp - 1);
       }
     },
     disabled: stateFromStores <= 0,
-    children: callback(stateFromStores(4556).Text, { variant: "text-lg/semibold", children: "\u2212" })
+    children: closure_5(stateFromStores(4570).Text, { variant: "text-lg/semibold", children: "\u2212" })
   };
-  const obj3 = { variant: "text-md/semibold", style: tmp.valueText, children: stateFromStores };
+  const obj6 = { variant: "text-md/semibold", style: tmp.valueText, children: stateFromStores };
   items4[1] = stepperButtonDisabled2;
-  items3[2] = callback(closure_3, {
+  items3[2] = closure_5(closure_3, {
     style: items4,
     onPress() {
       if (stateFromStores < 100) {
-        stateFromStores(closure_1_1[9]).setSkipNumCategories(tmp + 1);
-        const obj = stateFromStores(closure_1_1[9]);
+        CollectiblesActionCreators.setSkipNumCategories(tmp + 1);
       }
     },
     disabled: stateFromStores >= 100,
-    children: callback(stateFromStores(4556).Text, { variant: "text-lg/semibold", children: "+" })
+    children: closure_5(stateFromStores(4570).Text, { variant: "text-lg/semibold", children: "+" })
   });
-  obj1[1] = items3;
-  items1[1] = closure_6(closure_2, obj1);
-  obj4[1] = items1;
-  obj[1] = closure_6(stateFromStores(4973).Stack, obj4);
-  return callback(closure_2, obj);
+  obj4.children = items3;
+  items1[1] = closure_6(closure_2, obj4);
+  obj7.children = items1;
+  obj2.children = closure_6(stateFromStores(4987).Stack, obj7);
+  return closure_5(closure_2, obj2);
 };

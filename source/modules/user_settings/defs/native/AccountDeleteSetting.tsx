@@ -1,37 +1,26 @@
-// Module ID: 14813
-// Function ID: 14814
-// Name: pressable
-// Dependencies: [7975, 14814, 11473, 1114, 2]
+// Module ID: 14839
+// Function ID: 14840
+// Name: AccountDeleteSetting
+// Dependencies: [7989, 14840, 11500, 1114, 2]
 
-// Module 14813 (pressable)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import handleDisableAccountDefault from "handleDisableAccount" /* 14814 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 14839 (AccountDeleteSetting)
+import util from "util" /* 1114 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import handleDisableAccountDefault from "handleDisableAccount" /* 14840 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-const pressable = createToggle.createPressable({
+const pressable = SettingBuilders.createPressable({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["8lQ2rR"]);
+    const intl = util.intl;
+    return intl.string(util.t["8lQ2rR"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
+  parent: SettingsConstants.MobileUserSettings.ACCOUNT,
   variant: "danger",
   onPress: function handlePress() {
     handleDisableAccountDefault(true);
   }
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["8lQ2rR"]);
-  },
-  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
-  variant: "danger",
-  onPress: function handlePress() {
-    handleDisableAccountDefault(true);
-  }
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountDeleteSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountDeleteSetting.tsx");
 
 export default pressable;

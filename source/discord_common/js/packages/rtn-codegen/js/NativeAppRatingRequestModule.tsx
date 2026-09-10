@@ -1,14 +1,14 @@
-// Module ID: 13702
-// Function ID: 13703
-// Name: enforcing
+// Module ID: 13725
+// Function ID: 13726
+// Name: NativeAppRatingRequestModule
 // Dependencies: [17, 2]
 
-// Module 13702 (enforcing)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 13725 (NativeAppRatingRequestModule)
+import _mod17 from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
 
-const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 const enforcing = TurboModuleRegistry.getEnforcing("NativeAppRatingRequestModule");
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeAppRatingRequestModule.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeAppRatingRequestModule.tsx");
 
 export default enforcing;

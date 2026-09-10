@@ -1,41 +1,42 @@
-// Module ID: 9037
-// Function ID: 9038
-// Name: isNonEmptyBoardWidget
-// Dependencies: [19, 7633, 7630, 7623, 9038, 9039, 2]
+// Module ID: 9064
+// Function ID: 9065
+// Name: useDisplayableBoardWidgets
+// Dependencies: [19, 7647, 7644, 7637, 9065, 9066, 2]
 // Exports: useDisplayableBoardWidgets
 
-// Module 9037 (isNonEmptyBoardWidget)
-import toSubmission from "toSubmission" /* 7633 */;
-import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 9039 */;
-import closure_3 from "noop" /* 19 */;
+// Module 9064 (useDisplayableBoardWidgets)
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7647 */;
+import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 9066 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function isNonEmptyBoardWidget(games) {
-  let tmp3 = games instanceof toSubmission.ApplicationWidget;
+  let tmp3 = games instanceof UserProfileApplicationWidgetTypes.ApplicationWidget;
   if (!tmp3) {
-    let tmp4 = games instanceof tmp(7630).UserProfilePersonalWidget;
+    let tmp4 = games instanceof tmp(7644).UserProfilePersonalWidget;
     if (!tmp4) {
-      let isGameWidgetResult = tmp(7623).isGameWidget(games);
+      let isGameWidgetResult = tmp(7637).isGameWidget(games);
       if (isGameWidgetResult) {
         isGameWidgetResult = games.games.length > 0;
       }
       tmp4 = isGameWidgetResult;
-      const tmpResult = tmp(7623);
+      const tmpResult = tmp(7637);
     }
     tmp3 = tmp4;
   }
   return tmp3;
 }
-const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useDisplayableBoardWidgets.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/hooks/useDisplayableBoardWidgets.tsx");
 
 export const useDisplayableBoardWidgets = function useDisplayableBoardWidgets(id) {
-  isMobileGameCollectionExperimentEnabled = isMobileGameCollectionExperimentEnabled(9038).useIsMobileGameCollectionExperimentEnabled("UserProfileWidgetsBoard");
+  isMobileGameCollectionExperimentEnabled = isMobileGameCollectionExperimentEnabled(9065).useIsMobileGameCollectionExperimentEnabled("UserProfileWidgetsBoard");
   const tmp2 = useUserProfileWidgetsDefault(id);
   importDefault = tmp2;
   const items = [isMobileGameCollectionExperimentEnabled, tmp2];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     if (isMobileGameCollectionExperimentEnabled) {
-      let found = closure_1.filter(closure_1_4);
+      let found = closure_1.filter(isNonEmptyBoardWidget);
     } else {
       found = [];
     }

@@ -1,12 +1,11 @@
-// Module ID: 7386
-// Function ID: 7387
-// Name: set
+// Module ID: 7400
+// Function ID: 7401
+// Name: WalletBalanceStore
 // Dependencies: [504, 573, 2]
 
-// Module 7386 (set)
+// Module 7400 (WalletBalanceStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import set from "set" /* 2 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
 let closure_0 = {};
 let set = new Set();
@@ -15,7 +14,7 @@ class WalletBalanceStore extends Store {
 }
 const prototype = WalletBalanceStore.prototype;
 prototype["getBalance"] = function getBalance(arg0) {
-  let tmp = table[arg0];
+  let tmp = closure_0[arg0];
   if (tmp == null) {
     tmp = null;
   }
@@ -25,7 +24,7 @@ prototype["getIsFetching"] = function getIsFetching(arg0) {
   return set.has(arg0);
 };
 WalletBalanceStore.displayName = "WalletBalanceStore";
-const walletBalanceStore = new WalletBalanceStore(dispatcherDefault, {
+const walletBalanceStore = new WalletBalanceStore(DispatcherDefault, {
   BILLING_WALLET_BALANCE_FETCH_START: function handleFetchStart(paymentSourceId) {
     set = new Set(set);
     set.add(paymentSourceId.paymentSourceId);
@@ -34,8 +33,9 @@ const walletBalanceStore = new WalletBalanceStore(dispatcherDefault, {
     set = new Set(set);
     set.delete(currency.paymentSourceId);
     const obj = {};
-    const merged = Object.assign(obj);
+    const merged = Object.assign(closure_0);
     obj[currency.paymentSourceId] = { currency: currency.currency, amount: currency.amount };
+    closure_0 = obj;
   },
   BILLING_WALLET_BALANCE_FETCH_FAIL: function handleFetchFail(paymentSourceId) {
     set = new Set(set);
@@ -43,14 +43,16 @@ const walletBalanceStore = new WalletBalanceStore(dispatcherDefault, {
   },
   WALLET_BALANCE_UPDATE: function handleBalanceUpdate(currency) {
     const obj = {};
-    const merged = Object.assign(obj);
+    const merged = Object.assign(closure_0);
     obj[currency.paymentSourceId] = { currency: currency.currency, amount: currency.balance };
+    closure_0 = obj;
   },
   LOGOUT: function reset() {
     closure_0 = {};
     set = new Set();
   }
 });
-const result = set.fileFinishedImporting("modules/billing/stores/WalletBalanceStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/billing/stores/WalletBalanceStore.tsx");
 
 export default walletBalanceStore;

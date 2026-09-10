@@ -1,14 +1,13 @@
-// Module ID: 17469
-// Function ID: 17470
-// Name: handleFocusParticipant
-// Dependencies: [4583, 4576, 7118, 2]
+// Module ID: 17500
+// Function ID: 17501
+// Name: ParticipantFocusManager
+// Dependencies: [4597, 4590, 7132, 2]
 
-// Module 17469 (handleFocusParticipant)
-import initializeDefault from "initialize" /* 7118 */;
-import closure_0 from "createRTCConnection" /* 4583 */;
-import closure_1 from "getParticipants" /* 4576 */;
+// Module 17500 (ParticipantFocusManager)
+import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4590 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-initializeDefault;
 class ParticipantFocusManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -18,11 +17,11 @@ class ParticipantFocusManager extends tmp2 {
   }
 }
 ParticipantFocusManager.prototype["handleFocusParticipant"] = function handleFocusParticipant() {
-  channelId = channelId.getChannelId();
+  const channelId = RTCConnectionStore.getChannelId();
   if (null != channelId) {
-    channelId = store.getSelectedParticipantId(channelId);
-    const videoParticipants = store.getVideoParticipants(channelId);
-    const rTCConnection = channelId.getRTCConnection();
+    const selectedParticipantId = ChannelRTCStore.getSelectedParticipantId(channelId);
+    const videoParticipants = ChannelRTCStore.getVideoParticipants(channelId);
+    const rTCConnection = RTCConnectionStore.getRTCConnection();
     if (rTCConnection != null) {
       const found = videoParticipants.find((id) => id.id === closure_0 && !id.localVideoDisabled);
       let id;
@@ -34,6 +33,7 @@ ParticipantFocusManager.prototype["handleFocusParticipant"] = function handleFoc
   }
 };
 const participantFocusManager = new ParticipantFocusManager();
-let result = require("set").fileFinishedImporting("modules/calls/ParticipantFocusManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/calls/ParticipantFocusManager.tsx");
 
 export default participantFocusManager;

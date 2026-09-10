@@ -1,20 +1,20 @@
-// Module ID: 12201
-// Function ID: 12202
-// Name: openCreatePollModal
-// Dependencies: [4763, 12202, 1896, 2]
+// Module ID: 12227
+// Function ID: 12228
+// Name: PollCreationModalActionCreators
+// Dependencies: [4777, 12228, 1896, 2]
 // Exports: closeCreatePollModal, openCreatePollModal
 
-// Module 12201 (openCreatePollModal)
-import set from "set" /* 2 */;
+// Module 12227 (PollCreationModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import _modDef4763 from "module_4763" /* 4763 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import size from "module_2" /* 2 */;
 
 let c3 = "create-poll-modal";
-const result = set.fileFinishedImporting("modules/polls/native/PollCreationModalActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/polls/native/PollCreationModalActionCreators.tsx");
 
-export const openCreatePollModal = function openCreatePollModal(closure_0) {
-  _modDef4763.pushLazy(asyncRequireImpl(12202, dependencyMap.paths), closure_0, c3);
+export const openCreatePollModal = function openCreatePollModal(merged) {
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12228, dependencyMap.paths), merged, c3);
 };
 export const closeCreatePollModal = function closeCreatePollModal() {
-  _modDef4763.popWithKey(c3);
+  ModalActionCreatorsDefault.popWithKey(c3);
 };

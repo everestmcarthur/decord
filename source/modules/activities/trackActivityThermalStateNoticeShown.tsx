@@ -1,29 +1,29 @@
-// Module ID: 17056
-// Function ID: 17057
+// Module ID: 17087
+// Function ID: 17088
 // Name: trackActivityThermalStateNoticeShown
-// Dependencies: [1957, 4583, 1956, 1074, 4189, 1242, 2]
+// Dependencies: [1957, 4597, 1956, 1074, 4202, 1242, 2]
 // Exports: trackActivityThermalStateNoticeShown
 
-// Module 17056 (trackActivityThermalStateNoticeShown)
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import getEmbeddedActivityLocationChannelId from "getEmbeddedActivityLocationChannelId" /* 4189 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import closure_4 from "createRTCConnection" /* 4583 */;
-import closure_5 from "participantFromServer" /* 1956 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
+// Module 17087 (trackActivityThermalStateNoticeShown)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4202 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/trackActivityThermalStateNoticeShown.tsx");
+require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/trackActivityThermalStateNoticeShown.tsx");
 
 export const trackActivityThermalStateNoticeShown = function trackActivityThermalStateNoticeShown() {
-  currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
-  let obj = getEmbeddedActivityLocationChannelId;
+  const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
   let _location;
   if (currentEmbeddedActivity != null) {
     _location = currentEmbeddedActivity.location;
   }
-  const embeddedActivityLocationChannelId = obj.getEmbeddedActivityLocationChannelId(_location);
-  basicChannel = basicChannel.getBasicChannel(embeddedActivityLocationChannelId);
+  const embeddedActivityLocationChannelId = embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(_location);
+  const basicChannel = ChannelStore.getBasicChannel(embeddedActivityLocationChannelId);
   let compositeInstanceId;
   if (currentEmbeddedActivity != null) {
     compositeInstanceId = currentEmbeddedActivity.compositeInstanceId;
@@ -32,12 +32,12 @@ export const trackActivityThermalStateNoticeShown = function trackActivityTherma
   if (currentEmbeddedActivity != null) {
     applicationId = currentEmbeddedActivity.applicationId;
   }
-  obj = { channel_id: embeddedActivityLocationChannelId, application_id: applicationId, activity_session_id: compositeInstanceId, guild_id: null, media_session_id: null };
+  const obj3 = { channel_id: embeddedActivityLocationChannelId, application_id: applicationId, activity_session_id: compositeInstanceId, guild_id: null, media_session_id: null };
   let guild_id;
   if (basicChannel != null) {
     guild_id = basicChannel.guild_id;
   }
-  obj[3] = guild_id;
-  obj[4] = mediaSessionId.getMediaSessionId();
-  expandEventPropertiesDefault.track(AnalyticEvents.ACTIVITY_THERMAL_STATE_NOTICE_SHOWN, obj);
+  obj3.guild_id = guild_id;
+  obj3.media_session_id = RTCConnectionStore.getMediaSessionId();
+  AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_THERMAL_STATE_NOTICE_SHOWN, obj3);
 };

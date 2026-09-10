@@ -1,25 +1,21 @@
-// Module ID: 11622
-// Function ID: 11623
+// Module ID: 11648
+// Function ID: 11649
 // Name: openPinnedMessages
-// Dependencies: [10921, 4418, 2]
+// Dependencies: [10948, 4432, 2]
 // Exports: default
 
-// Module 11622 (openPinnedMessages)
-import set from "set" /* 2 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;
-import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 10921 */;
+// Module 11648 (openPinnedMessages)
+import RootNavigationRef from "RootNavigationRef" /* 4432 */;
+import ChannelDetailsConstants from "ChannelDetailsConstants" /* 10948 */;
+import size from "module_2" /* 2 */;
 
-let closure_2 = ChannelDetailsNavigatorScreens.ChannelDetailsNavigatorScreens;
-const result = set.fileFinishedImporting("modules/messages/native/openPinnedMessages.tsx");
+const constants = ChannelDetailsConstants.ChannelDetailsNavigatorScreens;
+const result = size.fileFinishedImporting("modules/messages/native/openPinnedMessages.tsx");
 
-export default function openPinnedMessages(arg0, arg1) {
-  let obj = getRootNavigationRef;
-  const rootNavigationRef = obj.getRootNavigationRef();
+export default function openPinnedMessages(channelId, source) {
+  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   if (tmp) {
-    obj = { initialRouteName: null, channelId: null, source: null };
-    obj[0] = constants.PINNED_MESSAGES;
-    obj[1] = arg0;
-    obj[2] = arg1;
-    rootNavigationRef.navigate("sidebar", obj);
+    const obj2 = { initialRouteName: constants.PINNED_MESSAGES, channelId, source };
+    rootNavigationRef.navigate("sidebar", obj2);
   }
 };

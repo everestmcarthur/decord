@@ -1,9 +1,9 @@
-// Module ID: 14174
-// Function ID: 14175
-// Name: set
+// Module ID: 14199
+// Function ID: 14200
+// Name: CoachmarkConstants
 // Dependencies: [2]
 
-// Module 14174 (set)
-import set from "set" /* 2 */;
+// Module 14199 (CoachmarkConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("design/components/Coachmark/native/CoachmarkConstants.native.tsx");
+const result = size.fileFinishedImporting("design/components/Coachmark/native/CoachmarkConstants.native.tsx");

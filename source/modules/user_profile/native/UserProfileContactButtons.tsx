@@ -1,57 +1,60 @@
-// Module ID: 13128
-// Function ID: 13129
-// Name: FlatFriendButton
-// Dependencies: [19, 17, 4209, 1074, 21, 4560, 576, 4975, 7162, 8190, 13067, 504, 4404, 13129, 4497, 1114, 12624, 9047, 11222, 4527, 4763, 4573, 13131, 8097, 5071, 7880, 13132, 2]
+// Module ID: 13154
+// Function ID: 13155
+// Name: UserProfileContactButtons
+// Dependencies: [19, 17, 4222, 1074, 21, 4574, 576, 4989, 7176, 8216, 13093, 504, 4418, 13155, 4511, 1114, 12650, 9074, 11249, 4541, 4777, 4587, 13157, 8113, 5085, 7894, 13158, 2]
 // Exports: default
 
-// Module 13128 (FlatFriendButton)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 4975 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "markAllUserIdListsStale" /* 4209 */;
-import { RelationshipTypes } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13154 (UserProfileContactButtons)
+import nativeDefault from "native" /* 576 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4587 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9074 */;
+import navigateToLastChannelDefault from "navigateToLastChannel" /* 11249 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12650 */;
+import ConfirmStartCall from "ConfirmStartCall" /* 13158 */;
+import noop from "module_19" /* 19 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
 
-require = arg1;
+require = fn;
 function FlatFriendButton(label) {
   label = label.label;
   ({ icon, hasCustomProfileTheme, isPending } = label);
-  const merged = Object.assign(label, Object.create(null));
+  const merged = Object.assign(label, Object.assign({ icon: 0, label: 0, hasCustomProfileTheme: 0, isPending: 0 }));
   if (false === isPending) {
     let str = "primary";
   } else {
     str = "secondary";
   }
   if ("primary" === str) {
-    let CONTROL_SECONDARY_TEXT_DEFAULT = ThemesDefault.colors.WHITE;
+    let CONTROL_SECONDARY_TEXT_DEFAULT = nativeDefault.colors.WHITE;
   } else {
-    CONTROL_SECONDARY_TEXT_DEFAULT = ThemesDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT;
+    CONTROL_SECONDARY_TEXT_DEFAULT = nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT;
   }
   const merged1 = Object.assign(merged);
-  return callback(Button.Button, { text: label, icon: callback(icon, { color: CONTROL_SECONDARY_TEXT_DEFAULT, size: "xs" }), accessibilityLabel: label, variant: str, size: "md", grow: true });
+  return timestampProducer(components_Button_Button.Button, { text: label, icon: timestampProducer(icon, { color: CONTROL_SECONDARY_TEXT_DEFAULT, size: "xs" }), accessibilityLabel: label, variant: str, size: "md", grow: true });
 }
 function FriendRequestButton(user) {
   user = user.user;
   let newestAnalyticsLocation = user.location;
-  let trackUserProfileAction;
   dependencyMap = undefined;
   let stateFromStores;
-  closure_4 = undefined;
+  let userDisplayName;
   ({ hasCustomProfileTheme, ButtonComponent } = user);
-  let obj = user(8190);
-  trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
+  const trackUserProfileAction = user(8216).useUserProfileAnalyticsContext().trackUserProfileAction;
   if (newestAnalyticsLocation == null) {
-    newestAnalyticsLocation = trackUserProfileAction(7162)().newestAnalyticsLocation;
+    newestAnalyticsLocation = trackUserProfileAction(7176)().newestAnalyticsLocation;
   }
   dependencyMap = { location: newestAnalyticsLocation };
-  let tmp3Result = tmp3(13067);
-  const gameFriendsForUser = tmp3Result.useGameFriendsForUser(user.id);
-  tmp3Result = tmp3(504);
-  const items = [closure_4];
-  stateFromStores = tmp3Result.useStateFromStores(items, () => relationshipType.getRelationshipType(user.id));
-  closure_4 = trackUserProfileAction(4404).useName(user);
+  let obj = user(8216);
+  const tmp = trackUserProfileAction;
+  const gameFriendsForUser = user(13093).useGameFriendsForUser(user.id);
+  const tmp3Result = user(13093);
+  const items = [userDisplayName];
+  stateFromStores = user(504).useStateFromStores(items, () => RelationshipStore.getRelationshipType(user.id));
+  const tmp3Result2 = user(504);
+  userDisplayName = tmp(4418).useName(user);
   if (stateFromStores !== RelationshipTypes.FRIEND) {
     if (stateFromStores !== tmp5.BLOCKED) {
       if (gameFriendsForUser.length > 0) {
@@ -60,9 +63,9 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === tmp5.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(13129).UserClockIcon;
+          let UserPlusIcon = tmp3(13155).UserClockIcon;
         } else {
-          UserPlusIcon = tmp3(4497).UserPlusIcon;
+          UserPlusIcon = tmp3(4511).UserPlusIcon;
         }
         const intl = tmp3(1114).intl;
         const string = intl.string;
@@ -80,67 +83,64 @@ function FriendRequestButton(user) {
         } else {
           string2Result = string2(t2.gc9aSx);
         }
-        obj = { icon: null, label: null, accessibilityHint: null, onPress: null, hasCustomProfileTheme: null, isPending: null };
-        obj[0] = UserPlusIcon;
-        obj[1] = stringResult;
-        obj[2] = string2Result;
-        obj[3] = function onPress() {
-          if (stateFromStores === closure_1_5.PENDING_OUTGOING) {
-            let obj = { userDisplayName: null, onConfirm: null };
-            obj[0] = closure_4;
-            obj[1] = function onConfirm() {
-              callback({ action: "CANCEL_FRIEND_REQUEST" });
-              closure_1_1(closure_1_2[17]).cancelFriendRequest(id.id, closure_2);
-            };
-            const result = user(12624).confirmCancelFriendRequest(obj);
-            const obj3 = user(12624);
-          } else {
-            trackUserProfileAction({ action: "SEND_FRIEND_REQUEST" });
-            obj = trackUserProfileAction(9047);
-            obj = { userId: null, context: null };
-            obj[0] = user.id;
-            obj[1] = dependencyMap;
-            obj.addRelationship(obj);
-          }
+        let obj2 = {
+          icon: UserPlusIcon,
+          label: stringResult,
+          accessibilityHint: string2Result,
+          onPress() {
+                  if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
+                    const obj2 = {
+                      userDisplayName,
+                      onConfirm() {
+                          closure_1_1({ action: "CANCEL_FRIEND_REQUEST" });
+                          trackUserProfileAction(closure_2[17]).cancelFriendRequest(id.id, context);
+                        }
+                    };
+                    const result = UserProfileAlertUtils.confirmCancelFriendRequest(obj2);
+                  } else {
+                    trackUserProfileAction({ action: "SEND_FRIEND_REQUEST" });
+                    const obj4 = { userId: user.id, context };
+                    RelationshipActionCreatorsDefault.addRelationship(obj4);
+                  }
+                },
+          hasCustomProfileTheme,
+          isPending: stateFromStores === tmp5.PENDING_OUTGOING
         };
-        obj[4] = hasCustomProfileTheme;
-        obj[5] = stateFromStores === tmp5.PENDING_OUTGOING;
-        return callback(ButtonComponent, obj);
+        return closure_6(ButtonComponent, obj2);
       }
     }
   }
   return null;
 }
-noopAll;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { threeButtonLayout: null, flexGrow: null, iconButtonGroup: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1 };
-createCacheKey[2] = { flexDirection: "row", gap: ThemesDefault.space.PX_12 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flexDirection: "row", gap: ThemesDefault.space.PX_12 };
-let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileContactButtons.tsx");
+const View = fn(17).View;
+const RelationshipTypes = fn(1074).RelationshipTypes;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { threeButtonLayout: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 }, flexGrow: { flex: 1 }, iconButtonGroup: null };
+let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
+obj2.iconButtonGroup = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileContactButtons.tsx");
 
 export default function UserProfileContactButtons(user) {
   user = user.user;
   ({ disableMessage, disableCalls, hasCustomProfileTheme, style } = user);
-  let trackUserProfileAction;
-  let fn;
-  let obj = user(fn[9]);
-  trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
-  const tmp3 = callback2();
-  obj1 = user(fn[11]);
-  const items = [closure_4];
-  const stateFromStores = obj1.useStateFromStores(items, () => closure_1_4.getRelationshipType(user.id));
-  let obj2 = user(fn[10]);
-  const gameFriendsForUser = obj2.useGameFriendsForUser(user.id);
-  const tmp6 = trackUserProfileAction(fn[22])(user.id, false, () => {
+  let onPress;
+  const trackUserProfileAction = user(onPress[9]).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const tmp3 = closure_8();
+  let obj = user(onPress[9]);
+  const items = [RelationshipStore];
+  const stateFromStores = user(onPress[11]).useStateFromStores(items, () => RelationshipStore.getRelationshipType(user.id));
+  let obj2 = user(onPress[11]);
+  const gameFriendsForUser = user(onPress[10]).useGameFriendsForUser(user.id);
+  const tmp6 = trackUserProfileAction(onPress[22])(user.id, false, () => {
     trackUserProfileAction({ action: "VOICE_CALL" });
-    trackUserProfileAction(fn[18])();
-    trackUserProfileAction(fn[19]).hideAllActionSheets();
+    navigateToLastChannelDefault();
+    ActionSheetActionCreatorsDefault.hideAllActionSheets();
   });
-  fn = tmp6.handlePress;
+  onPress = tmp6.handlePress;
   ({ text, inCall, accessibilityHint } = tmp6);
   let str = "secondary";
   if (hasCustomProfileTheme) {
@@ -150,124 +150,113 @@ export default function UserProfileContactButtons(user) {
   const tmp7 = hasCustomProfileTheme ? colors.WHITE : colors.CONTROL_SECONDARY_TEXT_DEFAULT;
   function handleMessage() {
     trackUserProfileAction({ action: "SEND_MESSAGE" });
-    trackUserProfileAction(fn[18])();
-    let obj = trackUserProfileAction(fn[19]);
-    obj.hideAllActionSheets();
-    trackUserProfileAction(fn[20]).popAll();
-    const obj2 = trackUserProfileAction(fn[20]);
-    obj = { recipientIds: user.id };
-    trackUserProfileAction(fn[21]).openPrivateChannel(obj);
+    navigateToLastChannelDefault();
+    ActionSheetActionCreatorsDefault.hideAllActionSheets();
+    ModalActionCreatorsDefault.popAll();
+    ChannelActionCreatorsDefault.openPrivateChannel({ recipientIds: user.id });
   }
   if (stateFromStores !== RelationshipTypes.FRIEND) {
     if (stateFromStores !== tmp8.BLOCKED) {
       if (stateFromStores !== tmp8.PENDING_INCOMING) {
         if (0 === gameFriendsForUser.length) {
-          obj = { style: null, children: null };
+          const obj4 = { style: null, children: null };
           const items1 = [tmp3.threeButtonLayout, style];
-          obj[0] = items1;
-          obj = { style: null, children: null };
-          obj[0] = tmp3.flexGrow;
-          obj1 = { user: null, location: null, hasCustomProfileTheme: null, ButtonComponent: null };
-          obj1[0] = user;
-          obj1[1] = user.location;
-          obj1[2] = hasCustomProfileTheme;
-          obj1[3] = FlatFriendButton;
-          obj[1] = callback(FriendRequestButton, obj1);
-          const items2 = [callback(View, obj), ];
-          obj2 = { style: null, children: null };
-          obj2[0] = tmp3.iconButtonGroup;
-          const obj3 = { icon: null, accessibilityLabel: null, accessibilityHint: null, variant: null, size: "md", onPress: null, disabled: null };
-          const obj4 = { color: null, size: "xs" };
-          obj4[0] = tmp7;
-          obj3[0] = callback(tmp(tmp2[24]).ChatIcon, obj4);
+          obj4.style = items1;
+          const obj5 = { style: tmp3.flexGrow, children: null };
+          const obj6 = { user, location: user.location, hasCustomProfileTheme, ButtonComponent: FlatFriendButton };
+          obj5.children = closure_6(FriendRequestButton, obj6);
+          const items2 = [closure_6(View, obj5), ];
+          const obj7 = { style: tmp3.iconButtonGroup, children: null };
+          const obj8 = { icon: null, accessibilityLabel: null, accessibilityHint: null, variant: null, size: "md", onPress: null, disabled: null };
+          const obj9 = { color: tmp7, size: "xs" };
+          obj8.icon = closure_6(tmp(tmp2[24]).ChatIcon, obj9);
           const intl7 = tmp(tmp2[15]).intl;
-          obj3[1] = intl7.string(tmp(tmp2[15]).t.zROXEV);
+          obj8.accessibilityLabel = intl7.string(tmp(tmp2[15]).t.zROXEV);
           const intl8 = tmp(tmp2[15]).intl;
-          const obj5 = { name: null };
-          let tmp5Result = tmp5(tmp2[12]);
-          obj5[0] = tmp5Result.getName(user);
-          obj3[2] = intl8.formatToPlainString(tmp(tmp2[15]).t.zFfSFQ, obj5);
-          obj3[3] = str;
-          obj3[5] = handleMessage;
-          obj3[6] = disableMessage;
-          const items3 = [callback(tmp(tmp2[23]).IconButton, obj3), ];
-          const obj6 = { icon: null, accessibilityLabel: null, accessibilityHint: null, variant: null, size: "md", onPress: null, disabled: null };
-          const obj7 = { color: null, size: "xs" };
-          obj7[0] = tmp7;
-          obj6[0] = callback(tmp(tmp2[25]).PhoneCallIcon, obj7);
+          const obj10 = { name: tmp5(tmp2[12]).getName(user) };
+          obj8.accessibilityHint = intl8.formatToPlainString(tmp(tmp2[15]).t.zFfSFQ, obj10);
+          obj8.variant = str;
+          obj8.onPress = handleMessage;
+          obj8.disabled = disableMessage;
+          const items3 = [closure_6(tmp(tmp2[23]).IconButton, obj8), ];
+          const obj11 = { icon: null, accessibilityLabel: null, accessibilityHint: null, variant: null, size: "md", onPress: null, disabled: null };
+          const obj12 = { color: tmp7, size: "xs" };
+          obj11.icon = closure_6(tmp(tmp2[25]).PhoneCallIcon, obj12);
           const intl9 = tmp(tmp2[15]).intl;
-          obj6[1] = intl9.string(tmp(tmp2[15]).t.JJogjm);
+          obj11.accessibilityLabel = intl9.string(tmp(tmp2[15]).t.JJogjm);
           if (accessibilityHint == null) {
             const intl10 = tmp(tmp2[15]).intl;
             accessibilityHint = intl10.string(tmp(tmp2[15]).t.focH1t);
           }
-          obj6[2] = accessibilityHint;
-          obj6[3] = str;
+          obj11.accessibilityHint = accessibilityHint;
+          obj11.variant = str;
           if (!inCall) {
-            fn = () => user(fn[26]).confirmStartCall(fn);
+            onPress = () => ConfirmStartCall.confirmStartCall(fn);
           }
-          obj6[5] = fn;
+          obj11.onPress = onPress;
           if (!disableCalls) {
             disableCalls = null == text;
           }
-          obj6[6] = disableCalls;
-          items3[1] = callback(tmp(tmp2[23]).IconButton, obj6);
-          obj2[1] = items3;
-          items2[1] = closure_7(View, obj2);
-          obj[1] = items2;
-          let tmp9Result = tmp15(tmp16, obj, "three-button-group");
-          const tmp17 = callback;
+          obj11.disabled = disableCalls;
+          items3[1] = closure_6(tmp(tmp2[23]).IconButton, obj11);
+          obj7.children = items3;
+          items2[1] = closure_7(View, obj7);
+          obj4.children = items2;
+          let tmp9Result = tmp15(tmp16, obj4, "three-button-group");
+          const tmp5Result = tmp5(tmp2[12]);
         }
         return tmp9Result;
       }
     }
   }
-  const obj8 = { style: null, children: null };
-  const items4 = [{ flexDirection: "row", gap: trackUserProfileAction(fn[6]).space.PX_12 }, style];
-  obj8[0] = items4;
-  const obj10 = { style: { flex: 1 }, children: null };
-  const obj11 = { text: null, icon: null, accessibilityLabel: null, accessibilityHint: null, variant: null, size: "md", grow: true, onPress: null, disabled: null };
+  const obj13 = { style: null, children: null };
+  const obj3 = user(onPress[10]);
+  const items4 = [{ flexDirection: "row", gap: trackUserProfileAction(onPress[6]).space.PX_12 }, style];
+  obj13.style = items4;
+  const obj15 = { style: { flex: 1 }, children: null };
+  const obj16 = { text: null, icon: null, accessibilityLabel: null, accessibilityHint: null, variant: null, size: "md", grow: true, onPress: null, disabled: null };
   const intl = tmp(tmp2[15]).intl;
-  obj11[0] = intl.string(user(fn[15]).t.zROXEV);
-  obj11[1] = callback(user(fn[24]).ChatIcon, { color: tmp7, size: "xs" });
+  obj16.text = intl.string(user(onPress[15]).t.zROXEV);
+  obj16.icon = closure_6(user(onPress[24]).ChatIcon, { color: tmp7, size: "xs" });
   const intl2 = tmp(tmp2[15]).intl;
-  obj11[2] = intl2.string(user(fn[15]).t.zROXEV);
+  obj16.accessibilityLabel = intl2.string(user(onPress[15]).t.zROXEV);
   const intl3 = tmp(tmp2[15]).intl;
-  const obj12 = { name: null };
-  tmp5Result = tmp5(tmp2[12]);
-  obj12[0] = tmp5Result.getName(user);
-  obj11[3] = intl3.formatToPlainString(user(fn[15]).t.zFfSFQ, obj12);
-  obj11[4] = str;
-  obj11[7] = handleMessage;
-  obj11[8] = disableMessage;
-  obj10[1] = callback(user(fn[7]).Button, obj11);
-  const items5 = [callback(View, obj10), ];
-  const obj13 = { style: { flex: 1 }, children: null };
-  const obj14 = { text: null, icon: null, accessibilityLabel: null, accessibilityHint: null, variant: null, size: "md", grow: true, onPress: null, disabled: null };
+  const obj17 = { name: null };
+  const obj14 = { flexDirection: "row", gap: trackUserProfileAction(onPress[6]).space.PX_12 };
+  const tmp9 = closure_7;
+  obj17.name = trackUserProfileAction(onPress[12]).getName(user);
+  obj16.accessibilityHint = intl3.formatToPlainString(user(onPress[15]).t.zFfSFQ, obj17);
+  obj16.variant = str;
+  obj16.onPress = handleMessage;
+  obj16.disabled = disableMessage;
+  obj15.children = closure_6(user(onPress[7]).Button, obj16);
+  const items5 = [closure_6(View, obj15), ];
+  const obj18 = { style: { flex: 1 }, children: null };
+  const obj19 = { text: null, icon: null, accessibilityLabel: null, accessibilityHint: null, variant: null, size: "md", grow: true, onPress: null, disabled: null };
   const intl4 = tmp(tmp2[15]).intl;
-  obj14[0] = intl4.string(user(fn[15]).t.JJogjm);
-  obj14[1] = callback(user(fn[25]).PhoneCallIcon, { color: tmp7, size: "xs" });
+  obj19.text = intl4.string(user(onPress[15]).t.JJogjm);
+  obj19.icon = closure_6(user(onPress[25]).PhoneCallIcon, { color: tmp7, size: "xs" });
   const intl5 = tmp(tmp2[15]).intl;
-  obj14[2] = intl5.string(user(fn[15]).t.JJogjm);
+  obj19.accessibilityLabel = intl5.string(user(onPress[15]).t.JJogjm);
   let stringResult = accessibilityHint;
   if (accessibilityHint == null) {
     const intl6 = tmp(tmp2[15]).intl;
     stringResult = intl6.string(tmp(tmp2[15]).t.focH1t);
   }
-  obj14[3] = stringResult;
-  obj14[4] = str;
-  let fn2 = fn;
+  obj19.accessibilityHint = stringResult;
+  obj19.variant = str;
+  let fn2 = onPress;
   if (!inCall) {
-    fn2 = () => user(fn[26]).confirmStartCall(fn);
+    fn2 = () => ConfirmStartCall.confirmStartCall(fn);
   }
-  obj14[7] = fn2;
+  obj19.onPress = fn2;
   let tmp13 = disableCalls;
   if (!disableCalls) {
     tmp13 = null == text;
   }
-  obj14[8] = tmp13;
-  obj13[1] = callback(user(fn[7]).Button, obj14);
-  items5[1] = callback(View, obj13);
-  obj8[1] = items5;
-  tmp9Result = closure_7(tmp10, obj8, "two-button-group");
+  obj19.disabled = tmp13;
+  obj18.children = closure_6(user(onPress[7]).Button, obj19);
+  items5[1] = closure_6(View, obj18);
+  obj13.children = items5;
+  tmp9Result = tmp9(tmp10, obj13, "two-button-group");
 };

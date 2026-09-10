@@ -1,81 +1,70 @@
-// Module ID: 15486
-// Function ID: 15487
+// Module ID: 15516
+// Function ID: 15517
 // Name: NotificationPermissionSettingsHeader
-// Dependencies: [19, 17, 1074, 12414, 21, 4560, 576, 12415, 1242, 5607, 9064, 4556, 1114, 4975, 2]
+// Dependencies: [19, 17, 1074, 12440, 21, 4574, 576, 12441, 1242, 5621, 9091, 4570, 1114, 4989, 2]
 // Exports: default
 
-// Module 15486 (NotificationPermissionSettingsHeader)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 1074 */;
-import EventActionType from "EventActionType" /* 12414 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15516 (NotificationPermissionSettingsHeader)
+import nativeDefault from "native" /* 576 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ AnalyticEvents: c5, NOOP: closure_6 } = ME);
-({ EventActionLocation: error, EventActionType: closure_8, NotificationNudgeAnalyticsAction: c9, NotificationNudgeSurface: c10 } = EventActionType);
-({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { container: null, cardContent: null, iconCircle: null, body: null };
-createCacheKey = { paddingTop: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { alignItems: "center" };
-createCacheKey[2] = { width: 48, height: 48, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_8 };
-let obj1 = { width: 48, height: 48, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_8 };
-createCacheKey[3] = { marginBottom: ThemesDefault.space.PX_12, marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
-let closure_13 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { marginBottom: ThemesDefault.space.PX_12, marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
-const result = require("set").fileFinishedImporting("modules/user_settings/notifications/native/NotificationPermissionSettingsHeader.tsx");
+const require = fn;
+const View = fn(17).View;
+const Constants = fn(1074);
+({ AnalyticEvents: hasOwnProperty, NOOP: metroRequire } = Constants);
+const NotificationPermissionConstants = fn(12440);
+({ EventActionLocation: closure_7, EventActionType: closure_8, NotificationNudgeAnalyticsAction: closure_9, NotificationNudgeSurface: c10 } = NotificationPermissionConstants);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { paddingTop: nativeDefault.space.PX_16 }, cardContent: { alignItems: "center" }, iconCircle: null, body: null };
+let size = { width: 48, height: 48, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, alignItems: "center", justifyContent: "center", marginBottom: nativeDefault.space.PX_8 };
+obj2.iconCircle = size;
+let obj3 = { paddingTop: nativeDefault.space.PX_16 };
+obj2.body = { marginBottom: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_8, textAlign: "center" };
+let closure_13 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/notifications/native/NotificationPermissionSettingsHeader.tsx");
 
 export default function NotificationPermissionSettingsHeader() {
-  const tmp = callback3();
-  let obj = canSeePushNotificationNudge(12415);
-  canSeePushNotificationNudge = obj.useCanSeePushNotificationNudge();
+  const tmp = closure_13();
+  canSeePushNotificationNudge = canSeePushNotificationNudge(12441).useCanSeePushNotificationNudge();
   const items = [canSeePushNotificationNudge];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (canSeePushNotificationNudge) {
-      let obj = closure_1_1(closure_1_2[8]);
-      obj = { action: null, prompt_type: null };
-      obj[0] = closure_1_9.IMPRESSION;
-      obj[1] = closure_1_10.NOTIFICATION_SETTINGS_PERMISSION_HEADER;
-      obj.track(closure_1_5.CONTEXTUAL_REMINDER_ACTION, obj);
+      const obj2 = { action: constants2.IMPRESSION, prompt_type: constants3.NOTIFICATION_SETTINGS_PERMISSION_HEADER };
+      AnalyticsUtilsDefault.track(constants.CONTEXTUAL_REMINDER_ACTION, obj2);
     }
   }, items);
   let tmp7 = null;
   if (canSeePushNotificationNudge) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
-    obj = { border: "none", shadow: "none", children: null };
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.cardContent;
-    const obj2 = { style: null, children: null };
-    obj2[0] = tmp.iconCircle;
-    const obj3 = { size: "md", color: null };
-    obj3[1] = ThemesDefault.colors.ICON_STRONG;
-    obj2[1] = callback(tmp2(9064).BellSlashIcon, obj3);
-    const items1 = [callback(View, obj2), , , ];
-    const obj4 = { variant: "heading-lg/bold", color: "text-default", children: null };
+    let obj2 = { style: tmp.container, children: null };
+    const obj3 = { border: "none", shadow: "none", children: null };
+    const obj4 = { style: tmp.cardContent, children: null };
+    const obj5 = { style: tmp.iconCircle, children: null };
+    const obj6 = { size: "md", color: nativeDefault.colors.ICON_STRONG };
+    obj5.children = closure_11(tmp2(9091).BellSlashIcon, obj6);
+    const items1 = [closure_11(View, obj5), , , ];
+    const obj7 = { variant: "heading-lg/bold", color: "text-default", children: null };
     const intl = tmp2(1114).intl;
-    obj4[2] = intl.string(tmp2(1114).t.MUwOvc);
-    items1[1] = callback(tmp2(4556).Text, obj4);
-    const obj5 = { variant: "text-sm/medium", style: null, color: "text-muted", children: null };
-    obj5[1] = tmp.body;
+    obj7.children = intl.string(tmp2(1114).t.MUwOvc);
+    items1[1] = closure_11(tmp2(4570).Text, obj7);
+    const obj8 = { variant: "text-sm/medium", style: tmp.body, color: "text-muted", children: null };
     const intl2 = tmp2(1114).intl;
-    obj5[3] = intl2.string(tmp2(1114).t.G4uKoe);
-    items1[2] = callback(tmp2(4556).Text, obj5);
-    const obj6 = { style: null, children: null };
-    obj6[0] = { alignSelf: "stretch" };
-    const obj7 = { variant: "primary", text: null, onPress: null };
+    obj8.children = intl2.string(tmp2(1114).t.G4uKoe);
+    items1[2] = closure_11(tmp2(4570).Text, obj8);
+    const obj9 = { style: { alignSelf: "stretch" }, children: null };
+    const obj10 = { variant: "primary", text: null, onPress: null };
     const intl3 = tmp2(1114).intl;
-    obj7[1] = intl3.string(tmp2(1114).t["5xWOXv"]);
-    obj7[2] = tmp6;
-    obj6[1] = callback(tmp2(4975).Button, obj7);
-    items1[3] = callback(View, obj6);
-    obj1[1] = items1;
-    obj[2] = callback2(View, obj1);
-    obj[1] = callback(tmp2(5607).Card, obj);
-    tmp7 = callback(View, obj);
+    obj10.text = intl3.string(tmp2(1114).t["5xWOXv"]);
+    obj10.onPress = tmp6;
+    obj9.children = closure_11(tmp2(4989).Button, obj10);
+    items1[3] = closure_11(View, obj9);
+    obj4.children = items1;
+    obj3.children = closure_12(View, obj4);
+    obj2.children = closure_11(tmp2(5621).Card, obj3);
+    tmp7 = closure_11(View, obj2);
   }
   return tmp7;
 };

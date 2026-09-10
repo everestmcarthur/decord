@@ -1,48 +1,46 @@
-// Module ID: 11899
-// Function ID: 11900
-// Name: DCDChatList
-// Dependencies: [19, 4552, 21, 4560, 6655, 11900, 11901, 504, 11277, 2]
+// Module ID: 11925
+// Function ID: 11926
+// Name: Chat
+// Dependencies: [19, 4566, 21, 4574, 6669, 11926, 11927, 504, 11304, 2]
 
-// Module 11899 (DCDChatList)
+// Module 11925 (Chat)
 import initialize from "initialize" /* 504 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 11277 */;
-import __INTERNAL_VIEW_CONFIGDefault2 from "__INTERNAL_VIEW_CONFIG" /* 11900 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11901 */;
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6669 */;
+import ChatNativeComponentDefault from "ChatNativeComponent" /* 11304 */;
+import ChatListNativeComponentDefault from "ChatListNativeComponent" /* 11926 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11927 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-require = arg1;
+require = fn;
 function DCDChatList() {
-  const memo = importAllResult.useMemo(() => {
-    const Gesture = callback(table[4]).Gesture;
+  const memo = noop.useMemo(() => {
+    const Gesture = LegacyBaseButton.Gesture;
     const NativeResult = Gesture.Native();
     return Gesture.Native().disallowInterruption(true).shouldCancelWhenOutside(false);
   }, []);
-  let obj = { gesture: memo, children: null };
-  obj = { style: callback3().chatList, floatingChatInputEnabled: true, children: null };
-  const tmp = callback3();
-  obj[2] = callback(TTIFirstContentfulPaint.TTIFirstContentfulPaint, { label: "chat_list_android" });
-  obj[1] = callback(__INTERNAL_VIEW_CONFIGDefault2, obj);
-  return callback(LegacyBaseButton.GestureDetector, obj);
+  const obj = { gesture: memo, children: null };
+  const obj2 = { style: closure_7().chatList, floatingChatInputEnabled: true, children: null };
+  const tmp = closure_7();
+  obj2.children = hasOwnProperty(TTIFirstContentfulPaint.TTIFirstContentfulPaint, { label: "chat_list_android" });
+  obj.children = hasOwnProperty(ChatListNativeComponentDefault, obj2);
+  return hasOwnProperty(LegacyBaseButton.GestureDetector, obj);
 }
-let c3 = importAllResult;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ chatList: { flex: 1 } });
-const forwardRefResult = importAllResult.forwardRef((children, ref) => {
-  let obj = initialize;
-  const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => roleStyle.roleStyle);
-  obj = {};
-  const merged = Object.assign(children);
-  obj.roleStyle = stateFromStores;
-  obj.ref = ref;
-  const items1 = [callback(DCDChatList, {}), children.children];
-  obj.children = items1;
-  return callback2(__INTERNAL_VIEW_CONFIGDefault, obj);
-});
-const result = require("set").fileFinishedImporting("modules/chat/native/Chat.android.tsx");
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let closure_7 = createStyles.createStyles({ chatList: { flex: 1 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/chat/native/Chat.android.tsx");
 
-export default forwardRefResult;
+export default noop.forwardRef((children, ref) => {
+  const items = [AccessibilityStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => roleStyle.roleStyle);
+  const obj2 = {};
+  const merged = Object.assign(children);
+  obj2.roleStyle = stateFromStores;
+  obj2.ref = ref;
+  const items1 = [hasOwnProperty(DCDChatList, {}), children.children];
+  obj2.children = items1;
+  return timestampProducer(ChatNativeComponentDefault, obj2);
+});

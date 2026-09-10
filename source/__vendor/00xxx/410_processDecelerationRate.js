@@ -2,9 +2,11 @@
 // Function ID: 411
 // Name: processDecelerationRate
 // Dependencies: []
+// Exports: default
 
 // Module 410 (processDecelerationRate)
-arg5.default = function processDecelerationRate(arg0) {
+
+export default function processDecelerationRate(arg0) {
   let num = 0.985;
   if ("normal" !== arg0) {
     let num2 = 0.9;

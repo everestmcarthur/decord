@@ -1,15 +1,15 @@
-// Module ID: 13011
-// Function ID: 13012
+// Module ID: 13037
+// Function ID: 13038
 // Name: shouldShowActivityTimeBar
 // Dependencies: [1074, 2]
 // Exports: default
 
-// Module 13011 (shouldShowActivityTimeBar)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 13037 (shouldShowActivityTimeBar)
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const ActivityTypes = ME.ActivityTypes;
-const result = set.fileFinishedImporting("modules/user_profile/utils/shouldShowActivityTimeBar.tsx");
+const ActivityTypes = Constants.ActivityTypes;
+const result = size.fileFinishedImporting("modules/user_profile/utils/shouldShowActivityTimeBar.tsx");
 
 export default function shouldShowActivityTimeBar(type) {
   let tmp2 = type.type === ActivityTypes.LISTENING || type.type === tmp.WATCHING;

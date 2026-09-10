@@ -1,14 +1,14 @@
-// Module ID: 16229
-// Function ID: 16230
+// Module ID: 16259
+// Function ID: 16260
 // Name: getChannelSubtitleData
 // Dependencies: [1114, 2]
 // Exports: getChannelSubtitleData
 
-// Module 16229 (getChannelSubtitleData)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 16259 (getChannelSubtitleData)
+import util from "util" /* 1114 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/channel/native/getChannelSubtitleData.tsx");
+const result = size.fileFinishedImporting("modules/channel/native/getChannelSubtitleData.tsx");
 
 export const getChannelSubtitleData = function getChannelSubtitleData(subtitle) {
   if (null == subtitle) {
@@ -18,20 +18,19 @@ export const getChannelSubtitleData = function getChannelSubtitleData(subtitle) 
     if ("embedded-activities" !== type) {
       if ("event" !== type) {
         if ("go-live" === type) {
-          let obj = { subtitle: null, type: null };
-          const intl = getSystemLocale.intl;
-          obj[0] = intl.string(getSystemLocale.t.Pa817q);
-          obj[1] = subtitle.type;
-          return obj;
+          const obj2 = { subtitle: null, type: null };
+          const intl = util.intl;
+          obj2.subtitle = intl.string(util.t.Pa817q);
+          obj2.type = subtitle.type;
+          return obj2;
         } else if ("voice" === type) {
-          obj = { subtitle: null, type: null };
-          ({ text: obj[0], type: obj[1] } = subtitle);
+          const obj = { subtitle: null, type: null };
+          ({ text: obj.subtitle, type: obj.type } = subtitle);
           return obj;
         }
       }
     }
-    obj = { subtitle: null, type: null };
-    ({ name: obj3[0], type: obj3[1] } = subtitle);
-    return obj;
+    ({ name: obj3.subtitle, type: obj3.type } = subtitle);
+    return { subtitle: null, type: null };
   }
 };

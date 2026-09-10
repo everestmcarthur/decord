@@ -1,33 +1,34 @@
-// Module ID: 16720
-// Function ID: 16721
+// Module ID: 16757
+// Function ID: 16758
 // Name: useSearchSegmentedControlState
-// Dependencies: [19, 4296, 9797, 2]
+// Dependencies: [19, 4310, 9824, 2]
 // Exports: useSearchSegmentedControlState
 
-// Module 16720 (useSearchSegmentedControlState)
-import closure_2 from "noop" /* 19 */;
+// Module 16757 (useSearchSegmentedControlState)
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = fn;
 let closure_3 = { code: "function useSearchSegmentedControlStateTsx1(){const{visibleTabsStateful}=this.__closure;return visibleTabsStateful;}" };
 let closure_4 = { code: "function useSearchSegmentedControlStateTsx2(){const{visibleTabs,activeIndex}=this.__closure;return visibleTabs.get()[activeIndex.get()];}" };
 let closure_5 = { code: "function useSearchSegmentedControlStateTsx3(){const{visibleTabs}=this.__closure;return visibleTabs.get();}" };
 let closure_6 = { code: "function useSearchSegmentedControlStateTsx4(visibleTabs){const{lastSelectedTab,runOnJS,setActiveIndex}=this.__closure;if(visibleTabs.length===0)return;const lastSelectedTabIndex=visibleTabs.indexOf(lastSelectedTab.get());const targetIndex=Math.max(0,lastSelectedTabIndex);const maxIndex=Math.max(0,visibleTabs.length-1);const nextActiveIndex=Math.min(targetIndex,maxIndex);runOnJS(setActiveIndex)(nextActiveIndex,false);}" };
 let closure_7 = { code: "function useSearchSegmentedControlStateTsx5(){const{selectedTab}=this.__closure;return selectedTab.get();}" };
-let closure_8 = { code: "function useSearchSegmentedControlStateTsx6(selectedTab){const{lastSelectedTab,runOnJS,onSelectedTabChange}=this.__closure;if(selectedTab==null)return;lastSelectedTab.set(selectedTab);runOnJS(onSelectedTabChange)(selectedTab);}" };
-let result = require("set").fileFinishedImporting("modules/search/native/components/tabs/hooks/useSearchSegmentedControlState.tsx");
+const __initData = { code: "function useSearchSegmentedControlStateTsx6(selectedTab){const{lastSelectedTab,runOnJS,onSelectedTabChange}=this.__closure;if(selectedTab==null)return;lastSelectedTab.set(selectedTab);runOnJS(onSelectedTabChange)(selectedTab);}" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/search/native/components/tabs/hooks/useSearchSegmentedControlState.tsx");
 
 export const useSearchSegmentedControlState = function useSearchSegmentedControlState(visibleTabs) {
   visibleTabs = visibleTabs.visibleTabs;
   const onSelectedTabChange = visibleTabs.onSelectedTabChange;
-  let sharedValue;
   let derivedValue;
   let segmentedControlState;
   let activeIndex;
   let setActiveIndex;
   let derivedValue1;
   ({ items, width } = visibleTabs);
+  const sharedValue = visibleTabs(onSelectedTabChange[1]).useSharedValue(visibleTabs[0]);
   let obj = visibleTabs(onSelectedTabChange[1]);
-  sharedValue = obj.useSharedValue(visibleTabs[0]);
   class T {
     constructor() {
       return visibleTabs;
@@ -43,7 +44,7 @@ export const useSearchSegmentedControlState = function useSearchSegmentedControl
   setActiveIndex = segmentedControlState.setActiveIndex;
   const obj3 = visibleTabs(onSelectedTabChange[2]);
   const fn = function x() {
-    const value = derivedValue.get();
+    value = derivedValue.get();
     return value[activeIndex.get(activeIndex)];
   };
   fn.__closure = { visibleTabs: derivedValue, activeIndex };
@@ -64,16 +65,15 @@ export const useSearchSegmentedControlState = function useSearchSegmentedControl
       const bound = Math.max(0, arr.indexOf(sharedValue.get()));
       const _Math3 = Math;
       const bound1 = Math.min(bound, Math.max(0, arr.length - 1));
-      visibleTabs(onSelectedTabChange[1]).runOnJS(setActiveIndex)(bound1, false);
-      const obj = visibleTabs(onSelectedTabChange[1]);
+      ReanimatedRexport.runOnJS(setActiveIndex)(bound1, false);
     }
   };
-  obj = { lastSelectedTab: sharedValue, runOnJS: visibleTabs(onSelectedTabChange[1]).runOnJS, setActiveIndex };
-  fn3.__closure = obj;
+  const obj5 = visibleTabs(onSelectedTabChange[1]);
+  fn3.__closure = { lastSelectedTab: sharedValue, runOnJS: visibleTabs(onSelectedTabChange[1]).runOnJS, setActiveIndex };
   fn3.__workletHash = 13456384876758;
   fn3.__initData = setActiveIndex;
-  const animatedReaction = visibleTabs(onSelectedTabChange[1]).useAnimatedReaction(fn2, fn3);
-  const obj5 = visibleTabs(onSelectedTabChange[1]);
+  const animatedReaction = obj5.useAnimatedReaction(fn2, fn3);
+  const obj6 = { lastSelectedTab: sharedValue, runOnJS: visibleTabs(onSelectedTabChange[1]).runOnJS, setActiveIndex };
   class C {
     constructor() {
       return closure_7.get();
@@ -87,20 +87,20 @@ export const useSearchSegmentedControlState = function useSearchSegmentedControl
       if (null != visibleTabs) {
         tmp = closure_2;
         result = closure_2.set(visibleTabs);
-        tmp3 = visibleTabs;
-        tmp4 = onSelectedTabChange;
-        obj = visibleTabs(onSelectedTabChange[1]);
+        tmp3 = closure_0;
+        tmp4 = closure_1;
+        obj = closure_0(closure_1[1]);
         tmp5 = onSelectedTabChange;
         tmp6 = obj.runOnJS(onSelectedTabChange)(visibleTabs);
       }
       return;
     }
   }
-  obj = { lastSelectedTab: sharedValue, runOnJS: visibleTabs(onSelectedTabChange[1]).runOnJS, onSelectedTabChange };
-  I.__closure = obj;
+  const obj7 = visibleTabs(onSelectedTabChange[1]);
+  I.__closure = { lastSelectedTab: sharedValue, runOnJS: visibleTabs(onSelectedTabChange[1]).runOnJS, onSelectedTabChange };
   I.__workletHash = 8452224388929;
-  I.__initData = closure_8;
-  const animatedReaction1 = visibleTabs(onSelectedTabChange[1]).useAnimatedReaction(C, I);
-  items = [segmentedControlState, derivedValue1];
-  return sharedValue.useMemo(() => ({ segmentedControlState, selectedTab: derivedValue1 }), items);
+  I.__initData = __initData;
+  const animatedReaction1 = obj7.useAnimatedReaction(C, I);
+  const items1 = [segmentedControlState, derivedValue1];
+  return sharedValue.useMemo(() => ({ segmentedControlState, selectedTab: derivedValue1 }), items1);
 };

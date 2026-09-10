@@ -1,75 +1,71 @@
-// Module ID: 17694
-// Function ID: 17695
-// Name: EligibilityChecklistRow
-// Dependencies: [19, 17, 21, 4560, 5587, 17695, 17696, 4556, 4975, 1178, 15220, 2]
+// Module ID: 17727
+// Function ID: 17728
+// Name: EligibilityChecklist
+// Dependencies: [19, 17, 21, 4574, 5601, 17728, 17729, 4570, 4989, 1178, 15249, 2]
 // Exports: default
 
-// Module 17694 (EligibilityChecklistRow)
-import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4556 */;
-import preloadDefault from "preload" /* 5587 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17727 (EligibilityChecklist)
+import Text_Text from "Text/Text" /* 4570 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function EligibilityChecklistRow(item) {
   item = item.item;
-  const tmp = callback2();
+  const tmp = closure_7();
   const items = [tmp.row, ];
   let eligibleRow = item.checked;
   if (eligibleRow) {
     eligibleRow = tmp.eligibleRow;
   }
-  let obj = { style: items, children: null };
+  const obj = { style: items, children: null };
   items[1] = eligibleRow;
-  obj = { style: tmp.rowStatusIcon, source: null };
+  const obj2 = { style: tmp.rowStatusIcon, source: null };
   if (item.checked) {
-    let tmp6Result = tmp6(17695);
+    let tmp6Result = tmp6(17728);
   } else {
-    tmp6Result = tmp6(17696);
+    tmp6Result = tmp6(17729);
   }
-  obj[1] = tmp6Result;
-  const items1 = [closure_4(preloadDefault, obj), ];
-  obj = { style: tmp.rowTextColumn, children: null };
-  const items2 = [closure_4(Text.Text, { style: tmp.rowLabel, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: item.checked ? item.checkedLabel : item.uncheckedLabel }), closure_4(Text.Text, { variant: "text-sm/normal", color: "interactive-text-default", children: item.description }), ];
+  obj2.source = tmp6Result;
+  const items1 = [React4(FastImageDefault, obj2), ];
+  const obj3 = { style: tmp.rowTextColumn, children: null };
+  const items2 = [React4(Text_Text.Text, { style: tmp.rowLabel, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: item.checked ? item.checkedLabel : item.uncheckedLabel }), React4(Text_Text.Text, { variant: "text-sm/normal", color: "interactive-text-default", children: item.description }), ];
   let tmp5Result = null != item.actionHandler && null != item.actionLabel;
   if (tmp5Result) {
-    const obj3 = { style: null, children: null };
-    obj3[0] = tmp.actionButtonWrapper;
-    ({ actionLabel: obj7[0], actionHandler: obj7[1] } = item);
-    obj3[1] = tmp5(tmp10(4975).Button, { text: null, onPress: null, grow: true });
-    tmp5Result = tmp5(tmp4, obj3);
-    const obj4 = { text: null, onPress: null, grow: true };
+    const obj6 = { style: tmp.actionButtonWrapper, children: null };
+    ({ actionLabel: obj7.text, actionHandler: obj7.onPress } = item);
+    obj6.children = tmp5(tmp10(4989).Button, { text: null, onPress: null, grow: true });
+    tmp5Result = tmp5(tmp4, obj6);
+    const obj8 = { text: null, onPress: null, grow: true };
   }
   items2[2] = tmp5Result;
-  obj[1] = items2;
-  items1[1] = closure_5(View, obj);
-  obj[1] = items1;
-  const children = [closure_5(View, obj), ];
+  obj3.children = items2;
+  items1[1] = hasOwnProperty(View, obj3);
+  obj.children = items1;
+  const children = [hasOwnProperty(View, obj), ];
   if (item.isLast) {
-    tmp5Result = tmp5(tmp10(1178).Spacer, { size: 16 });
+    let tmp5Result2 = tmp5(tmp10(1178).Spacer, { size: 16 });
   } else {
-    const obj5 = { style: null };
-    obj5[0] = tmp.divider;
-    tmp5Result = tmp5(tmp6(15220), obj5);
+    const obj15 = { style: tmp.divider };
+    tmp5Result2 = tmp5(tmp6(15249), obj15);
   }
-  children[1] = tmp5Result;
-  return closure_5(closure_6, { children });
+  children[1] = tmp5Result2;
+  return hasOwnProperty(timestampProducer, { children });
 }
-noopAll;
-({ jsx: c4, jsxs: c5, Fragment: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ row: { paddingHorizontal: 24, paddingTop: 16, flex: 0, flexDirection: "row" }, eligibleRow: { opacity: 0.8 }, rowStatusIcon: { height: 20, width: 20, marginRight: 16 }, rowTextColumn: { flex: 1, flexDirection: "column" }, rowLabel: { marginBottom: 4 }, actionButtonWrapper: { marginTop: 12 }, divider: { marginHorizontal: 24 } });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/EligibilityChecklist.tsx");
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let closure_7 = createStyles.createStyles({ row: { paddingHorizontal: 24, paddingTop: 16, flex: 0, flexDirection: "row" }, eligibleRow: { opacity: 0.8 }, rowStatusIcon: { height: 20, width: 20, marginRight: 16 }, rowTextColumn: { flex: 1, flexDirection: "column" }, rowLabel: { marginBottom: 4 }, actionButtonWrapper: { marginTop: 12 }, divider: { marginHorizontal: 24 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/EligibilityChecklist.tsx");
 
 export default function EligibilityChecklist(items) {
   items = items.items;
   if (0 === items.length) {
     return null;
   } else {
-    const obj = { style: null, children: null };
-    obj[0] = tmp;
-    obj[1] = items.map((checkedLabel) => closure_1_4(closure_1_8, { item: checkedLabel, isLast: arg1 === items.length - 1 }, checkedLabel.checkedLabel));
-    return callback(View, obj);
+    const obj = { style: tmp, children: items.map((item, index) => React4(EligibilityChecklistRow, { item, isLast: index === items.length - 1 }, item.checkedLabel)) };
+    return closure_4(View, obj);
   }
 };

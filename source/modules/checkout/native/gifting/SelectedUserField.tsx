@@ -1,58 +1,56 @@
-// Module ID: 10862
-// Function ID: 10863
+// Module ID: 10889
+// Function ID: 10890
 // Name: SelectedUserField
-// Dependencies: [19, 17, 21, 4560, 576, 6621, 1114, 4404, 7051, 1178, 4556, 6616, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 6635, 1114, 4418, 7065, 1178, 4570, 6630, 2]
 // Exports: default
 
-// Module 10862 (SelectedUserField)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import nameFromUserDefault from "nameFromUser" /* 4404 */;
-import useInputStyles from "useInputStyles" /* 6621 */;
-import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7051 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10889 (SelectedUserField)
+import nativeDefault from "native" /* 576 */;
+import UserUtilsDefault from "UserUtils" /* 4418 */;
+import InputFieldContainer from "InputFieldContainer" /* 6635 */;
+import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7065 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ Pressable: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: null, content: null, opener: null, openerWithClearButton: null, searchIcon: null, userPill: null, userPillText: null, clearButton: null };
-createCacheKey = { marginHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row", overflow: "hidden", alignItems: "center", display: "flex" };
-createCacheKey[2] = { flexDirection: "row", alignItems: "center", flex: 1, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: 6 };
-createCacheKey[3] = { paddingRight: 0 };
-const obj1 = { flexDirection: "row", alignItems: "center", flex: 1, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: 6 };
-createCacheKey[4] = { marginRight: ThemesDefault.space.PX_8 };
-let obj2 = { marginRight: ThemesDefault.space.PX_8 };
-createCacheKey[5] = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, paddingVertical: 6, paddingHorizontal: 6 };
-createCacheKey[6] = { marginLeft: 6 };
-let obj3 = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, paddingVertical: 6, paddingHorizontal: 6 };
-createCacheKey[7] = { alignItems: "center", justifyContent: "center", minWidth: 44, minHeight: 44, paddingRight: ThemesDefault.space.PX_16, paddingLeft: ThemesDefault.space.PX_8 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { alignItems: "center", justifyContent: "center", minWidth: 44, minHeight: 44, paddingRight: ThemesDefault.space.PX_16, paddingLeft: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/checkout/native/gifting/SelectedUserField.tsx");
+const require = globalThis.__r;
+
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { marginHorizontal: nativeDefault.space.PX_16 }, content: { flexDirection: "row", overflow: "hidden", alignItems: "center", display: "flex" }, opener: null, openerWithClearButton: null, searchIcon: null, userPill: null, userPillText: null, clearButton: null };
+let obj3 = { marginHorizontal: nativeDefault.space.PX_16 };
+obj2.opener = { flexDirection: "row", alignItems: "center", flex: 1, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: 6 };
+obj2.openerWithClearButton = { paddingRight: 0 };
+let obj4 = { flexDirection: "row", alignItems: "center", flex: 1, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: 6 };
+obj2.searchIcon = { marginRight: nativeDefault.space.PX_8 };
+const obj5 = { marginRight: nativeDefault.space.PX_8 };
+obj2.userPill = { flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, paddingVertical: 6, paddingHorizontal: 6 };
+obj2.userPillText = { marginLeft: 6 };
+let obj6 = { flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, paddingVertical: 6, paddingHorizontal: 6 };
+obj2.clearButton = { alignItems: "center", justifyContent: "center", minWidth: 44, minHeight: 44, paddingRight: nativeDefault.space.PX_16, paddingLeft: nativeDefault.space.PX_8 };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/checkout/native/gifting/SelectedUserField.tsx");
 
 export default function SelectedUserField(onPress) {
   ({ selectedUser, setSelectedUser: require } = onPress);
-  const tmp = callback();
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.content, children: null };
+  const tmp = closure_7();
+  const obj = { style: tmp.container, children: null };
+  const obj2 = { style: tmp.content, children: null };
   const items = [tmp.opener, ];
   let openerWithClearButton = null != selectedUser;
   if (openerWithClearButton) {
     openerWithClearButton = tmp.openerWithClearButton;
   }
-  obj = { style: items, onPress: onPress.onPress, accessibilityRole: "button", accessibilityLabel: null, children: null };
+  const obj3 = { style: items, onPress: onPress.onPress, accessibilityRole: "button", accessibilityLabel: null, children: null };
   items[1] = openerWithClearButton;
   if (null != selectedUser) {
     const intl3 = tmp4(1114).intl;
-    let obj3 = nameFromUserDefault;
-    const _HermesInternal2 = HermesInternal;
-    let combined = "" + intl3.string(tmp4(1114).t.xFn72s) + ", " + obj3.getName(selectedUser);
     const stringResult = intl3.string(tmp4(1114).t.xFn72s);
+    const _HermesInternal2 = HermesInternal;
+    let combined = "" + stringResult + ", " + UserUtilsDefault.getName(selectedUser);
   } else {
     const intl = tmp4(1114).intl;
     const intl2 = tmp4(1114).intl;
@@ -60,49 +58,44 @@ export default function SelectedUserField(onPress) {
     combined = "" + intl.string(tmp4(1114).t.xFn72s) + ", " + intl2.string(tmp4(1114).t.R0vK0N);
     const stringResult1 = intl.string(tmp4(1114).t.xFn72s);
   }
-  obj[3] = combined;
-  const items1 = [closure_5(MagnifyingGlassIcon.MagnifyingGlassIcon, { style: tmp.searchIcon, size: "xs", color: "interactive-text-default" }), ];
+  obj3.accessibilityLabel = combined;
+  const items1 = [hasOwnProperty(MagnifyingGlassIcon.MagnifyingGlassIcon, { style: tmp.searchIcon, size: "xs", color: "interactive-text-default" }), ];
   if (null != selectedUser) {
-    const obj2 = { style: null, children: null };
-    obj2[0] = tmp.userPill;
-    obj3 = { user: null, guildId: "Array", size: -1 };
-    obj3[0] = selectedUser;
-    obj3[2] = tmp4(1178).AvatarSizes.XSMALL_20;
-    const items2 = [tmp2(tmp4(1178).Avatar, obj3), ];
-    const obj4 = { variant: "text-md/medium", style: null, children: null };
-    obj4[1] = tmp.userPillText;
-    obj4[2] = nameFromUserDefault.getName(selectedUser);
-    items2[1] = tmp2(tmp4(4556).Text, obj4);
-    obj2[1] = items2;
-    let tmp2Result = tmp6(tmp3, obj2);
-    const obj10 = nameFromUserDefault;
+    const obj6 = { style: tmp.userPill, children: null };
+    const obj7 = { user: selectedUser, guildId: "Array", size: tmp4(1178).AvatarSizes.XSMALL_20 };
+    const items2 = [tmp2(tmp4(1178).Avatar, obj7), ];
+    const obj8 = { variant: "text-md/medium", style: tmp.userPillText, children: UserUtilsDefault.getName(selectedUser) };
+    items2[1] = tmp2(tmp4(4570).Text, obj8);
+    obj6.children = items2;
+    let tmp2Result1 = tmp6(tmp3, obj6);
   } else {
-    const obj5 = { variant: "text-sm/semibold", color: "text-subtle", style: null, children: null };
-    obj5[2] = tmp.userPillText;
+    const obj9 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.userPillText, children: null };
     const intl4 = tmp4(1114).intl;
-    obj5[3] = intl4.string(tmp4(1114).t.R0vK0N);
-    tmp2Result = tmp2(tmp4(4556).Text, obj5);
+    obj9.children = intl4.string(tmp4(1114).t.R0vK0N);
+    tmp2Result1 = tmp2(tmp4(4570).Text, obj9);
   }
-  items1[1] = tmp2Result;
-  obj[4] = items1;
-  const items3 = [closure_6(closure_3, obj), ];
-  tmp2Result = null;
+  items1[1] = tmp2Result1;
+  obj3.children = items1;
+  const items3 = [timestampProducer(React3, obj3), ];
+  let tmp2Result = null;
   if (null != selectedUser) {
-    const obj6 = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
-    obj6[0] = tmp.clearButton;
-    obj6[1] = function onPress() {
-      return callback(undefined);
+    const obj11 = {
+      style: tmp.clearButton,
+      onPress() {
+          return require(undefined);
+        },
+      accessibilityRole: "button",
+      accessibilityLabel: null,
+      children: null
     };
     const intl5 = tmp4(1114).intl;
-    const obj7 = { text: null };
-    obj7[0] = nameFromUserDefault.getName(selectedUser);
-    obj6[3] = intl5.formatToPlainString(tmp4(1114).t["0Vb9FQ"], obj7);
-    obj6[4] = tmp2(tmp4(6616).CircleXIcon, { size: "xs" });
-    tmp2Result = tmp2(tmp7, obj6);
-    const obj13 = nameFromUserDefault;
+    const obj12 = { text: UserUtilsDefault.getName(selectedUser) };
+    obj11.accessibilityLabel = intl5.formatToPlainString(tmp4(1114).t["0Vb9FQ"], obj12);
+    obj11.children = tmp2(tmp4(6630).CircleXIcon, { size: "xs" });
+    tmp2Result = tmp2(tmp7, obj11);
   }
   items3[1] = tmp2Result;
-  obj[1] = items3;
-  obj[1] = closure_5(useInputStyles.InputFieldContainer, { children: closure_6(closure_4, obj) });
-  return closure_5(closure_4, obj);
+  obj2.children = items3;
+  obj.children = hasOwnProperty(InputFieldContainer.InputFieldContainer, { children: timestampProducer(React4, obj2) });
+  return hasOwnProperty(React4, obj);
 };

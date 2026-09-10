@@ -1,19 +1,21 @@
-// Module ID: 14612
-// Function ID: 14613
+// Module ID: 14637
+// Function ID: 14638
 // Name: useUploadAvatar
-// Dependencies: [5, 19, 1371, 1074, 1373, 563, 9318, 4527, 5138, 4218, 14596, 8169, 8167, 8164, 8166, 2]
+// Dependencies: [5, 19, 1371, 1074, 1373, 563, 9345, 4541, 5152, 4231, 14621, 8195, 8193, 8190, 8192, 2]
 // Exports: default
 
-// Module 14612 (useUploadAvatar)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "mergeGuildAvatar" /* 1371 */;
-import ME from "ME" /* 1074 */;
-import { PremiumUpsellTypes } from "GuildFeatures" /* 1373 */;
+// Module 14637 (useUploadAvatar)
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9345 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-require("noop").useCallback;
-({ AnalyticsPages: closure_6, UPLOAD_MEDIUM_SIZE: error, Base64GIFPrefix: closure_8, AnalyticsSections: c9, UpsellTypes: c10 } = ME);
-let result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useUploadAvatar.tsx");
+const require = fn;
+fn(19).useCallback;
+const Constants = fn(1074);
+({ AnalyticsPages: metroRequire, UPLOAD_MEDIUM_SIZE: closure_7, Base64GIFPrefix: closure_8, AnalyticsSections: closure_9, UpsellTypes: c10 } = Constants);
+const PremiumUpsellTypes = fn(1373).PremiumUpsellTypes;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useUploadAvatar.tsx");
 
 export default function useUploadAvatar(guildId) {
   guildId = guildId.guildId;
@@ -22,112 +24,101 @@ export default function useUploadAvatar(guildId) {
     flag = false;
   }
   const analyticsLocations = guildId.analyticsLocations;
-  let stateFromStores;
   useCallback = undefined;
-  const items = [closure_5];
-  stateFromStores = guildId(analyticsLocations[5]).useStateFromStores(items, () => currentUser.getCurrentUser());
+  const items = [UserStore];
+  const stateFromStores = guildId(analyticsLocations[5]).useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [analyticsLocations];
   const tmp2 = useCallback(() => {
-    let obj = flag(analyticsLocations[6]);
-    obj = { initialUpsellKey: closure_1_10.ANIMATED_AVATAR, analyticsLocation: obj, analyticsProperties: obj1, analyticsLocations };
-    obj = { page: closure_1_6.USER_SETTINGS, section: closure_1_9.SETTINGS_OVERVIEW };
-    const result = obj.handleShowUpsellAlert(obj);
+    const obj2 = { initialUpsellKey: constants3.ANIMATED_AVATAR, analyticsLocation: { page: constants.USER_SETTINGS, section: constants2.SETTINGS_OVERVIEW }, analyticsProperties: { type: PremiumUpsellTypes.ANIMATED_USER_AVATAR_MODAL }, analyticsLocations };
+    const result = PremiumUpsellUtilsDefault.handleShowUpsellAlert(obj2);
   }, items1);
   useCallback = tmp2;
   const items2 = [stateFromStores, guildId, flag, tmp2];
-  return useCallback(stateFromStores(function*() {
+  return useCallback(stateFromStores(function*(arg0, value) {
     if (c3 === 2) {
       c3 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
         c3 = 2;
-        if (0 === originalMd5) {
+        if (0 === dependencyMap) {
           if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
-            let base64 = tmp2;
-            closure_0 = tmp2;
-            closure_0 = undefined;
-            base64 = undefined;
-            originalMd5 = undefined;
-            c3 = undefined;
-            closure_4 = undefined;
-            closure_1_1(4527).hideActionSheet();
-            const obj13 = closure_1_1(4527);
-            obj1 = { size: null };
-            obj1[0] = closure_1_7;
-            originalMd5 = 1;
+            let tmp22 = tmp2;
+            closure_128_0 = undefined;
+            let base64;
+            let originalMd5;
+            closure_128_3 = undefined;
+            closure_128_4 = undefined;
+            tmp22(4541).hideActionSheet();
+            const obj13 = tmp22(4541);
+            const obj6 = { size };
+            dependencyMap = 1;
             c3 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = closure_1_1(5138).openImagePicker(obj1);
-            return obj2;
+            const obj8 = { value: tmp22(5152).openImagePicker(obj6), done: false };
+            return obj8;
           }
         } else if (arg0 === 1) {
           c3 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          let obj3 = { value: null, done: true };
-          obj3[0] = arg1;
-          return obj3;
+          const obj9 = { value, done: true };
+          return obj9;
         } else {
-          closure_0 = arg1;
-          base64 = closure_0.base64;
-          originalMd5 = closure_0.originalMd5;
+          closure_128_0 = value;
+          base64 = closure_128_0.base64;
+          originalMd5 = closure_128_0.originalMd5;
           if (null == base64) {
             c3 = 3;
           } else {
-            let canUseAnimatedAvatarResult = base64;
-            if (!base64) {
-              obj = closure_1_1(4218);
-              canUseAnimatedAvatarResult = obj.canUseAnimatedAvatar(c3);
+            let canUseAnimatedAvatarResult = closure_129_1;
+            if (!closure_129_1) {
+              canUseAnimatedAvatarResult = tmp22(4231).canUseAnimatedAvatar(closure_129_3);
+              const obj = tmp22(4231);
             }
-            c3 = canUseAnimatedAvatarResult;
-            if ((function isGIF(base64) {
-              const regExp = new RegExp("^" + closure_8, "i");
-              return null != base64.match(regExp);
+            closure_128_3 = canUseAnimatedAvatarResult;
+            if ((function isGIF(str) {
+              const regExp = new RegExp("^" + closure_1_8, "i");
+              return null != str.match(regExp);
             })(base64)) {
-              if (!c3) {
-                closure_1_4();
+              if (!closure_128_3) {
+                closure_129_4();
               }
             }
           }
-          obj1 = closure_1_0(14596);
-          const obj4 = { imageUri: null, description: null, originalMd5: null };
-          obj4[0] = base64;
-          obj3 = closure_1_0(8169);
-          obj4[1] = obj3.generateAvatarDescription();
-          obj4[2] = originalMd5;
-          closure_4 = obj1.createPendingImage(obj4);
-          if (closure_1_1) {
-            let tmp28Result = tmp28(8167);
-            tmp28Result.setTryItOutAvatar(closure_1_4);
+          const obj10 = { imageUri: base64, description: null, originalMd5: null };
+          tmp22 = tmp2;
+          const obj2 = tmp2(14621);
+          obj10.description = tmp2(8195).generateAvatarDescription();
+          obj10.originalMd5 = originalMd5;
+          closure_128_4 = obj2.createPendingImage(obj10);
+          if (closure_129_1) {
+            tmp28(8193).setTryItOutAvatar(closure_128_4);
+            const tmp28Result = tmp28(8193);
           } else {
-            tmp28Result = tmp28(8164);
-            const obj5 = { guildId: null, avatar: null };
-            obj5[0] = closure_0;
-            obj5[1] = closure_1_4;
-            tmp28Result.setPendingChanges(obj5);
-            const result = closure_1_0(8166).announcePendingAvatarChange("set");
-            const obj7 = closure_1_0(8166);
+            const obj11 = { guildId: closure_129_0, avatar: closure_128_4 };
+            tmp28(8190).setPendingChanges(obj11);
+            const tmp28Result2 = tmp28(8190);
+            const result = tmp2(8192).announcePendingAvatarChange("set");
+            const obj7 = tmp2(8192);
           }
+          const obj4 = tmp2(8195);
         }
       } catch (tmp38) {
         c3 = tmp;

@@ -1,28 +1,27 @@
-// Module ID: 7038
-// Function ID: 7039
-// Name: runAfterInteractions
-// Dependencies: [17, 4447, 2]
+// Module ID: 7052
+// Function ID: 7053
+// Name: RunAfterInteractionsUtils
+// Dependencies: [17, 4461, 2]
 // Exports: runAfterInteractions
 
-// Module 7038 (runAfterInteractions)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 7052 (RunAfterInteractionsUtils)
+import _mod17 from "module_17" /* 17 */;
+import Timers from "Timers" /* 4461 */;
+import size from "module_2" /* 2 */;
 
 function runAfterInteractions(arg0, MINUTE) {
-  const _require = arg0;
+  closure_0 = arg0;
   let num = MINUTE;
   if (MINUTE === undefined) {
     num = 2000;
   }
-  dependencyMap = undefined;
-  let delayedCall;
-  dependencyMap = delayedCall.runAfterInteractions(() => {
+  closure_1 = InteractionManager.runAfterInteractions(() => {
     delayedCall.cancel();
-    callback();
+    closure_0();
   });
-  delayedCall = new _require(4447).DelayedCall(num, () => {
+  const delayedCall = new Timers.DelayedCall(num, () => {
     closure_1.cancel();
-    callback();
+    closure_0();
   });
   delayedCall.delay();
   return {
@@ -32,8 +31,8 @@ function runAfterInteractions(arg0, MINUTE) {
     }
   };
 }
-const InteractionManager = get_ActivityIndicator.InteractionManager;
-const result = set.fileFinishedImporting("utils/native/RunAfterInteractionsUtils.tsx");
+const InteractionManager = _mod17.InteractionManager;
+const result = size.fileFinishedImporting("utils/native/RunAfterInteractionsUtils.tsx");
 
 export default { runAfterInteractions };
 export { runAfterInteractions };

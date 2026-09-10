@@ -1,25 +1,27 @@
-// Module ID: 5126
-// Function ID: 5127
-// Name: getIsScreenLandscape
+// Module ID: 5140
+// Function ID: 5141
+// Name: useIsScreenLandscape
 // Dependencies: [19, 1478, 1480, 2]
 // Exports: getIsScreenLandscape, useIsScreenLandscape
 
-// Module 5126 (getIsScreenLandscape)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "getDimensionsStoreStateForEntry" /* 1478 */;
+// Module 5140 (useIsScreenLandscape)
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1480 */;
+import noop from "module_19" /* 19 */;
+import DimensionsStore from "DimensionsStore" /* 1478 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/screen/useIsScreenLandscape.native.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/screen/useIsScreenLandscape.native.tsx");
 
 export const getIsScreenLandscape = function getIsScreenLandscape() {
   let str = arg0;
   if (arg0 === undefined) {
     str = "main";
   }
-  return state.getState().byAppEntry[str].screenIsLandscape;
+  return DimensionsStore.getState().byAppEntry[str].screenIsLandscape;
 };
 export const useIsScreenLandscape = function useIsScreenLandscape() {
-  appEntryKey = appEntryKey(1480).useAppEntryKey();
+  const appEntryKey = AppEntryKeyContext.useAppEntryKey();
   const items = [appEntryKey];
-  return state(React.useCallback((arg0) => arg0.byAppEntry[appEntryKey].screenIsLandscape, items));
+  return DimensionsStore(noop.useCallback((arg0) => arg0.byAppEntry[appEntryKey].screenIsLandscape, items));
 };

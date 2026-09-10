@@ -1,74 +1,73 @@
-// Module ID: 7376
-// Function ID: 7377
-// Dependencies: [19, 17, 21, 4560, 5682, 576, 5123, 1114, 1115, 5628, 4556, 7050, 2]
+// Module ID: 7390
+// Function ID: 7391
+// Name: SearchBarNav
+// Dependencies: [19, 17, 21, 4574, 5696, 576, 5137, 1114, 1115, 5642, 4570, 7064, 2]
 
-// Module 7376
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import set from "set" /* 1115 */;
-import PressableBase from "PressableBase" /* 5123 */;
-import SearchField from "SearchField" /* 7050 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 7390 (SearchBarNav)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import Pressables from "Pressables" /* 5137 */;
+import SearchField from "SearchField" /* 7064 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ View: obj1, StyleSheet } = get_ActivityIndicator);
-({ jsx: c3, jsxs: c4 } = jsxProd);
-let obj = { container: null, cancelText: null, cancelIcon: null, flex: null };
-obj = { flexDirection: "row", alignItems: "center", height: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, paddingHorizontal: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderBottomWidth: StyleSheet.hairlineWidth, borderColor: ThemesDefault.colors.BORDER_STRONG };
-obj[0] = obj;
-createCacheKey = { paddingLeft: ThemesDefault.space.PX_16 };
-obj[1] = createCacheKey;
-obj[2] = { marginRight: ThemesDefault.space.PX_16 };
-obj[3] = { flex: 1 };
-let closure_5 = createCacheKey.createStyles(obj);
-let obj2 = { marginRight: ThemesDefault.space.PX_16 };
-const forwardRefResult = importAllResult.forwardRef((onClose, ref) => {
-  const merged = Object.assign(onClose, Object.create(null));
-  const tmp2 = callback();
-  let obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t["ETE/oC"]);
-  obj[2] = onClose.onClose;
-  obj[3] = { top: 8, right: 8, bottom: 8, left: 8 };
-  obj1 = set;
-  if (obj1.isAndroid()) {
-    obj = { style: null };
-    obj[0] = tmp2.cancelIcon;
-    let tmp3Result = tmp3(tmp4(5628).ArrowLargeLeftIcon, obj);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c2, StyleSheet } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4574);
+let obj = { container: { flexDirection: "row", alignItems: "center", height: fn(5696).NAV_BAR_HEIGHT, paddingHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderBottomWidth: StyleSheet.hairlineWidth, borderColor: nativeDefault.colors.BORDER_STRONG }, cancelText: null, cancelIcon: null, flex: null };
+let obj3 = { flexDirection: "row", alignItems: "center", height: fn(5696).NAV_BAR_HEIGHT, paddingHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderBottomWidth: StyleSheet.hairlineWidth, borderColor: nativeDefault.colors.BORDER_STRONG };
+obj.cancelText = { paddingLeft: nativeDefault.space.PX_16 };
+let obj4 = { paddingLeft: nativeDefault.space.PX_16 };
+obj.cancelIcon = { marginRight: nativeDefault.space.PX_16 };
+obj.flex = { flex: 1 };
+let closure_5 = createStyles.createStyles(obj);
+let obj5 = { marginRight: nativeDefault.space.PX_16 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/SearchBarNav.tsx");
+
+export default noop.forwardRef((onClose, ref) => {
+  const merged = Object.assign(onClose, Object.assign({ onClose: 0 }));
+  const tmp2 = closure_5();
+  const obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
+  const intl = util.intl;
+  obj.accessibilityLabel = intl.string(util.t["ETE/oC"]);
+  obj.onPress = onClose.onClose;
+  obj.hitSlop = { top: 8, right: 8, bottom: 8, left: 8 };
+  if (obj2.isAndroid()) {
+    const obj3 = { style: tmp2.cancelIcon };
+    let tmp3Result = tmp3(tmp4(5642).ArrowLargeLeftIcon, obj3);
   } else {
-    obj = { style: null, maxFontSizeMultiplier: 2, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-    obj[0] = tmp2.cancelText;
+    const obj4 = { style: tmp2.cancelText, maxFontSizeMultiplier: 2, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl2 = tmp4(1114).intl;
-    obj[4] = intl2.string(tmp4(1114).t["ETE/oC"]);
-    tmp3Result = tmp3(tmp4(4556).Text, obj);
+    obj4.children = intl2.string(tmp4(1114).t["ETE/oC"]);
+    tmp3Result = tmp3(tmp4(4570).Text, obj4);
   }
-  obj[4] = tmp3Result;
-  tmp3Result = tmp3(PressableBase.PressableOpacity, obj);
-  obj1 = { style: tmp2.container, children: null };
-  let tmp4Result = tmp4(1115);
+  obj.children = tmp3Result;
+  const tmp3Result2 = React3(Pressables.PressableOpacity, obj);
+  const obj5 = { style: tmp2.container, children: null };
+  obj2 = PlatformUtils;
+  const tmp8 = React4;
   let tmp10 = null;
   if (tmp4Result.isAndroid()) {
-    tmp10 = tmp3Result;
+    tmp10 = tmp3Result2;
   }
   const items = [tmp10, , ];
-  const obj2 = { style: tmp2.flex, children: null };
-  const obj3 = { children: null };
+  const obj6 = { style: tmp2.flex, children: null };
+  const obj7 = { children: null };
   const merged1 = Object.assign(merged);
-  obj3[0] = closure_3(SearchField.SearchField, { size: "md", isRound: true, ref });
-  obj2[1] = closure_3(closure_2, obj3);
-  items[1] = closure_3(closure_2, obj2);
-  tmp4Result = tmp4(1115);
+  obj7.children = React3(SearchField.SearchField, { size: "md", isRound: true, ref });
+  obj6.children = React3(React2, obj7);
+  items[1] = React3(React2, obj6);
+  const obj8 = { size: "md", isRound: true, ref };
+  tmp4Result = PlatformUtils;
   let tmp12 = null;
-  if (!tmp4Result.isAndroid()) {
-    tmp12 = tmp3Result;
+  if (!tmp4Result2.isAndroid()) {
+    tmp12 = tmp3Result2;
   }
   items[2] = tmp12;
-  obj1[1] = items;
-  return closure_4(closure_2, obj1);
+  obj5.children = items;
+  return tmp8(React2, obj5);
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/SearchBarNav.tsx");
-
-export default forwardRefResult;

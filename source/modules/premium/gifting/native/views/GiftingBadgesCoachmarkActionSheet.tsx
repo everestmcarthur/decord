@@ -1,169 +1,164 @@
-// Module ID: 16941
-// Function ID: 16942
-// Name: HasBadgeCoachmark
-// Dependencies: [19, 17, 8192, 1954, 21, 4560, 576, 4527, 4418, 7150, 10754, 4556, 1114, 2492, 4975, 10666, 7182, 16942, 11035, 504, 8184, 2]
+// Module ID: 16978
+// Function ID: 16979
+// Name: GiftingBadgesCoachmarkActionSheet
+// Dependencies: [19, 17, 8218, 1954, 21, 4574, 576, 4541, 4432, 7164, 10781, 4570, 1114, 2492, 4989, 10693, 7196, 16979, 11062, 504, 8210, 2]
 // Exports: default
 
-// Module 16941 (HasBadgeCoachmark)
+// Module 16978 (GiftingBadgesCoachmarkActionSheet)
 import initialize from "initialize" /* 504 */;
-import ThemesDefault from "Themes" /* 576 */;
-import messagesProxyDefault from "messagesProxy" /* 2492 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10754 */;
-import metadataDefault from "metadata" /* 16942 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 8192 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import _modDef2492 from "module_2492" /* 2492 */;
+import RootNavigationRef from "RootNavigationRef" /* 4432 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
+import BadgeId from "BadgeId" /* 8210 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 10693 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10781 */;
+import _modDef16979 from "module_16979" /* 16979 */;
+import noop from "module_19" /* 19 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8218 */;
 
-require = arg1;
+require = fn;
 function HasBadgeCoachmark(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   ({ currentTier, giftCount } = markAsDismissed);
-  const tmp = callback3();
+  const tmp = closure_10();
   const items = [markAsDismissed];
   const items1 = [markAsDismissed];
-  const callback = React.useCallback(() => {
-    closure_1_1(closure_1_2[7]).hideActionSheet();
-    markAsDismissed(closure_1_7.TAKE_ACTION);
-    const obj = closure_1_1(closure_1_2[7]);
-    const rootNavigationRef = markAsDismissed(closure_1_2[8]).getRootNavigationRef();
+  const callback = noop.useCallback(() => {
+    ActionSheetActionCreatorsDefault.hideActionSheet();
+    markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+    const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("you");
     }
   }, items);
-  const callback1 = React.useCallback(() => {
-    markAsDismissed(closure_1_7.USER_DISMISS);
+  const callback1 = noop.useCallback(() => {
+    markAsDismissed(ContentDismissActionType.USER_DISMISS);
   }, items1);
   let obj = { startExpanded: true, onDismiss: callback1, children: null };
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.graphicContainer, children: null };
+  const obj2 = { style: tmp.container, children: null };
+  const obj3 = { style: tmp.graphicContainer, children: null };
   let tmp4Result = null != currentTier.simple_icon_url;
   if (tmp4Result) {
-    obj1 = { icon: null, size: 120 };
-    obj1[0] = currentTier.simple_icon_url;
-    tmp4Result = tmp4(GiftingBadgeIconDefault, obj1);
+    const obj4 = { icon: currentTier.simple_icon_url, size: 120 };
+    tmp4Result = tmp4(GiftingBadgeIconDefault, obj4);
   }
-  obj[1] = tmp4Result;
-  const items2 = [closure_8(closure_5, obj), , ];
-  const obj2 = { style: tmp.textContainer, children: null };
-  const obj3 = { style: tmp.text, variant: "heading-xl/bold", color: "text-strong", children: null };
+  obj3.children = tmp4Result;
+  const items2 = [closure_8(closure_5, obj3), , ];
+  const obj5 = { style: tmp.textContainer, children: null };
+  const obj6 = { style: tmp.text, variant: "heading-xl/bold", color: "text-strong", children: null };
   const intl = tmp5(1114).intl;
   let str = currentTier.name;
   if (str == null) {
     str = "";
   }
-  obj3[3] = intl.format(messagesProxyDefault["a+jfuy"], { tierName: str });
-  const items3 = [closure_8(markAsDismissed(4556).Text, obj3), ];
-  const obj4 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
+  obj6.children = intl.format(_modDef2492["a+jfuy"], { tierName: str });
+  const items3 = [closure_8(markAsDismissed(4570).Text, obj6), ];
+  const obj7 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = tmp5(1114).intl;
   if (giftCount == null) {
     giftCount = 0;
   }
-  obj4[3] = intl2.formatToPlainString(messagesProxyDefault.QxRA6w, { giftCount });
-  items3[1] = closure_8(markAsDismissed(4556).Text, obj4);
-  obj2[1] = items3;
-  items2[1] = closure_9(closure_5, obj2);
-  const obj5 = { style: tmp.footer, children: null };
-  const obj6 = { grow: true, text: null, onPress: null };
+  obj7.children = intl2.formatToPlainString(_modDef2492.QxRA6w, { giftCount });
+  items3[1] = closure_8(markAsDismissed(4570).Text, obj7);
+  obj5.children = items3;
+  items2[1] = closure_9(closure_5, obj5);
+  const obj8 = { style: tmp.footer, children: null };
+  const obj9 = { grow: true, text: null, onPress: null };
   const intl3 = tmp5(1114).intl;
-  obj6[1] = intl3.string(markAsDismissed(1114).t.RzWDqY);
-  obj6[2] = callback;
-  obj5[1] = closure_8(markAsDismissed(4975).Button, obj6);
-  items2[2] = closure_8(closure_5, obj5);
-  obj[1] = items2;
-  obj[2] = closure_9(closure_5, obj);
-  return closure_8(markAsDismissed(7150).BottomSheet, obj);
+  obj9.text = intl3.string(markAsDismissed(1114).t.RzWDqY);
+  obj9.onPress = callback;
+  obj8.children = closure_8(markAsDismissed(4989).Button, obj9);
+  items2[2] = closure_8(closure_5, obj8);
+  obj2.children = items2;
+  obj.children = closure_9(closure_5, obj2);
+  return closure_8(markAsDismissed(7164).BottomSheet, obj);
 }
 function NewBadgeCoachmark(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
-  const tmp = callback3();
+  const tmp = closure_10();
   let items = [markAsDismissed];
   const items1 = [markAsDismissed];
-  const callback = React.useCallback(() => {
-    let obj = closure_1_1(closure_1_2[7]);
-    obj.hideActionSheet();
-    markAsDismissed(closure_1_7.TAKE_ACTION);
-    obj = { analyticsLocations: null };
-    const items = [closure_1_1(closure_1_2[16]).GIFTING_BADGE_COACHMARK];
-    obj[0] = items;
-    markAsDismissed(closure_1_2[15]).openGiftModal(obj);
+  const callback = noop.useCallback(() => {
+    ActionSheetActionCreatorsDefault.hideActionSheet();
+    markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+    const obj3 = { analyticsLocations: null };
+    const items = [AnalyticsLocationDefault.GIFTING_BADGE_COACHMARK];
+    obj3.analyticsLocations = items;
+    utils_openGiftModal.openGiftModal(obj3);
   }, items);
-  const callback1 = React.useCallback(() => {
-    markAsDismissed(closure_1_7.USER_DISMISS);
+  const callback1 = noop.useCallback(() => {
+    markAsDismissed(ContentDismissActionType.USER_DISMISS);
   }, items1);
   let obj = { startExpanded: true, onDismiss: callback1, children: null };
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.graphicContainer, children: null };
-  obj1 = { source: { uri: metadataDefault }, style: tmp.newBadgeImage };
-  obj[1] = callback(closure_4, obj1);
-  const items2 = [callback(closure_5, obj), , ];
-  const obj3 = { style: tmp.textContainer, children: null };
-  const obj4 = { style: tmp.text, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
+  const obj2 = { style: tmp.container, children: null };
+  let obj3 = { style: tmp.graphicContainer, children: null };
+  const obj4 = { source: { uri: _modDef16979 }, style: tmp.newBadgeImage };
+  obj3.children = closure_8(closure_4, obj4);
+  const items2 = [closure_8(closure_5, obj3), , ];
+  const obj6 = { style: tmp.textContainer, children: null };
+  const obj7 = { style: tmp.text, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
   const intl = markAsDismissed(1114).intl;
-  obj4[3] = intl.string(messagesProxyDefault.Q2RQka);
-  const items3 = [callback(markAsDismissed(4556).Text, obj4), ];
-  const obj5 = { style: tmp.text, variant: "text-sm/medium", color: "text-muted", children: null };
+  obj7.children = intl.string(_modDef2492.Q2RQka);
+  const items3 = [closure_8(markAsDismissed(4570).Text, obj7), ];
+  const obj8 = { style: tmp.text, variant: "text-sm/medium", color: "text-muted", children: null };
   const intl2 = markAsDismissed(1114).intl;
-  obj5[3] = intl2.string(messagesProxyDefault["3EQnkg"]);
-  items3[1] = callback(markAsDismissed(4556).Text, obj5);
-  obj3[1] = items3;
-  items2[1] = callback2(closure_5, obj3);
-  const obj6 = { style: tmp.footer, children: null };
-  const obj7 = { grow: true, text: null, icon: null, onPress: null };
+  obj8.children = intl2.string(_modDef2492["3EQnkg"]);
+  items3[1] = closure_8(markAsDismissed(4570).Text, obj8);
+  obj6.children = items3;
+  items2[1] = closure_9(closure_5, obj6);
+  const obj9 = { style: tmp.footer, children: null };
+  const obj10 = { grow: true, text: null, icon: null, onPress: null };
   const intl3 = markAsDismissed(1114).intl;
-  obj7[1] = intl3.string(messagesProxyDefault.DZnomS);
-  const obj2 = { uri: metadataDefault };
-  obj7[2] = callback(markAsDismissed(11035).GiftIcon, { size: "sm", color: ThemesDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
-  obj7[3] = callback;
-  obj6[1] = callback(markAsDismissed(4975).Button, obj7);
-  items2[2] = callback(closure_5, obj6);
-  obj[1] = items2;
-  obj[2] = callback2(closure_5, obj);
-  return callback(markAsDismissed(7150).BottomSheet, obj);
+  obj10.text = intl3.string(_modDef2492.DZnomS);
+  const obj5 = { uri: _modDef16979 };
+  obj10.icon = closure_8(markAsDismissed(11062).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
+  obj10.onPress = callback;
+  obj9.children = closure_8(markAsDismissed(4989).Button, obj10);
+  items2[2] = closure_8(closure_5, obj9);
+  obj2.children = items2;
+  obj.children = closure_9(closure_5, obj2);
+  return closure_8(markAsDismissed(7164).BottomSheet, obj);
 }
-({ Image: c4, View: c5 } = get_ActivityIndicator);
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: null, graphicContainer: null, newBadgeImage: null, textContainer: null, text: null, footer: null };
-createCacheKey = { alignItems: "center", paddingHorizontal: 20, paddingBottom: 20, gap: ThemesDefault.space.PX_24 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { height: 188, width: 335, alignItems: "center", justifyContent: "center", padding: ThemesDefault.space.PX_16 };
-createCacheKey[2] = { width: "100%", height: "100%", objectFit: "contain" };
-let obj1 = { height: 188, width: 335, alignItems: "center", justifyContent: "center", padding: ThemesDefault.space.PX_16 };
-createCacheKey[3] = { gap: ThemesDefault.space.PX_8 };
-createCacheKey[4] = { textAlign: "center" };
-createCacheKey[5] = { width: "100%" };
-let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { gap: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/premium/gifting/native/views/GiftingBadgesCoachmarkActionSheet.tsx");
+get_ActivityIndicator = fn(17);
+({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { alignItems: "center", paddingHorizontal: 20, paddingBottom: 20, gap: nativeDefault.space.PX_24 }, graphicContainer: null, newBadgeImage: null, textContainer: null, text: null, footer: null };
+let size = { height: 188, width: 335, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_16 };
+obj2.graphicContainer = size;
+obj2.newBadgeImage = { width: "100%", height: "100%", objectFit: "contain" };
+let obj3 = { alignItems: "center", paddingHorizontal: 20, paddingBottom: 20, gap: nativeDefault.space.PX_24 };
+obj2.textContainer = { gap: nativeDefault.space.PX_8 };
+obj2.text = { textAlign: "center" };
+obj2.footer = { width: "100%" };
+let closure_10 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/gifting/native/views/GiftingBadgesCoachmarkActionSheet.tsx");
 
 export default function GiftingBadgesCoachmarkActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
-  let obj = initialize;
-  const items = [closure_6];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    const obj = { currentTier: getCurrentTier(callback(8184).BadgeId.GIFTING), giftCount: null };
-    ({ getCurrentTier, getSingleRequirementProgress } = closure_6);
-    const singleRequirementProgress = getSingleRequirementProgress(callback(8184).BadgeId.GIFTING);
+  const items = [BadgeDirectoryStore];
+  const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => {
+    const obj = { currentTier: BadgeDirectoryStore.getCurrentTier(BadgeId.BadgeId.GIFTING), giftCount: null };
+    const singleRequirementProgress = BadgeDirectoryStore.getSingleRequirementProgress(BadgeId.BadgeId.GIFTING);
     let current;
     if (singleRequirementProgress != null) {
       current = singleRequirementProgress.current;
     }
-    obj[1] = current;
+    obj.giftCount = current;
     return obj;
   });
   const currentTier = stateFromStoresObject.currentTier;
   if (null != currentTier) {
-    obj = { markAsDismissed: null, currentTier: null, giftCount: null };
-    obj[0] = markAsDismissed;
-    obj[1] = currentTier;
-    obj[2] = tmp2;
-    let tmp5 = callback(HasBadgeCoachmark, obj);
+    const obj2 = { markAsDismissed, currentTier, giftCount: tmp2 };
+    let tmp5 = React6(HasBadgeCoachmark, obj2);
   } else {
-    obj = { markAsDismissed: null };
-    obj[0] = markAsDismissed;
-    tmp5 = callback(NewBadgeCoachmark, obj);
+    const obj3 = { markAsDismissed };
+    tmp5 = React6(NewBadgeCoachmark, obj3);
   }
   return tmp5;
 };

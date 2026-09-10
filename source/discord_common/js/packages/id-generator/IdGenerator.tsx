@@ -1,21 +1,21 @@
 // Module ID: 1252
 // Function ID: 1253
-// Name: generate
+// Name: discord_common/IdGenerator
 // Dependencies: [14, 1253, 2]
 
-// Module 1252 (generate)
-import set from "set" /* 2 */;
+// Module 1252 (discord_common/IdGenerator)
 import IntegerDefault from "Integer" /* 14 */;
 import Buffer from "Buffer" /* 1253 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/id-generator/IdGenerator.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/id-generator/IdGenerator.tsx");
 class IdGenerator {
   constructor() {
-    obj = Object.create(new.target.prototype);
-    obj[0] = Math.floor(4294967296 * Math.random()) | 0;
-    tmp2 = require("Integer");
-    obj[1] = tmp2(Date.now());
-    return obj;
+    merged = Object.assign({ _randomPrefix: null, _creationTime: null, _sequenceNumber: 0 });
+    merged[0] = Math.floor(4294967296 * Math.random()) | 0;
+    tmp2 = closure_1(closure_2[0]);
+    merged[1] = tmp2(Date.now());
+    return merged;
   }
 }
 IdGenerator.prototype["generate"] = function generate(arg0) {

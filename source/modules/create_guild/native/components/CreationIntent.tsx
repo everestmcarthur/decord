@@ -1,94 +1,85 @@
-// Module ID: 12716
-// Function ID: 12717
+// Module ID: 12742
+// Function ID: 12743
 // Name: CreationIntent
-// Dependencies: [19, 17, 6980, 1074, 21, 4560, 5682, 576, 1483, 4962, 4971, 12687, 1242, 7123, 4556, 1114, 5687, 12328, 5692, 2]
+// Dependencies: [19, 17, 6994, 1074, 21, 4574, 5696, 576, 1483, 4976, 4985, 12713, 1242, 7137, 4570, 1114, 5701, 12354, 5706, 2]
 // Exports: default
 
-// Module 12716 (CreationIntent)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 12742 (CreationIntent)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import useNavigation from "useNavigation" /* 1483 */;
-import Text from "Text" /* 4556 */;
-import SCREEN_READER_ENABLED_GETTER from "SCREEN_READER_ENABLED_GETTER" /* 4962 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5692 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import NUXGuildTemplatesAnalytics from "NUXGuildTemplatesAnalytics" /* 6980 */;
-import ME from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 4976 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 4985 */;
+import TableRowGroup from "TableRowGroup" /* 5701 */;
+import native from "native" /* 5706 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7137 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12713 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
-({ CreateGuildModalStates: closure_6, GuildTemplateTriggers: error, NUXGuildTemplatesAnalytics: closure_8 } = NUXGuildTemplatesAnalytics);
-({ AnalyticEvents: c9, AnalyticsLocations: c10 } = ME);
-({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { contentContainer: null, scrollContainer: null, headerContainer: null, headerTitle: null, headerDescription: null, sections: null, skipDescription: null };
-createCacheKey = { flex: 1, marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
-createCacheKey[2] = { alignItems: "center", paddingVertical: 20, paddingHorizontal: 16 };
-createCacheKey[3] = { textAlign: "center", marginBottom: 8 };
-createCacheKey[4] = { lineHeight: 18, textAlign: "center" };
-let obj1 = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
-createCacheKey[5] = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
-createCacheKey[6] = { marginTop: 16, paddingHorizontal: 16, lineHeight: 18, textAlign: "center" };
-let closure_13 = createCacheKey.createStyles(createCacheKey);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
+const CreateGuildConstants = fn(6994);
+({ CreateGuildModalStates: metroRequire, GuildTemplateTriggers: closure_7, NUXGuildTemplatesAnalytics: closure_8 } = CreateGuildConstants);
+const Constants = fn(1074);
+({ AnalyticEvents: closure_9, AnalyticsLocations: c10 } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { contentContainer: { flex: 1, marginTop: fn(5696).NAV_BAR_HEIGHT }, scrollContainer: null, headerContainer: null, headerTitle: null, headerDescription: null, sections: null, skipDescription: null };
+let obj3 = { flex: 1, marginTop: fn(5696).NAV_BAR_HEIGHT };
+obj2.scrollContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+obj2.headerContainer = { alignItems: "center", paddingVertical: 20, paddingHorizontal: 16 };
+obj2.headerTitle = { textAlign: "center", marginBottom: 8 };
+obj2.headerDescription = { lineHeight: 18, textAlign: "center" };
+let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+obj2.sections = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
+obj2.skipDescription = { marginTop: 16, paddingHorizontal: 16, lineHeight: 18, textAlign: "center" };
+let closure_13 = createStyles.createStyles(obj2);
 let closure_14 = Math.random() < 0.5;
-let obj2 = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
-let result = require("set").fileFinishedImporting("modules/create_guild/native/components/CreationIntent.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/create_guild/native/components/CreationIntent.tsx");
 
 export default function CreationIntent(arg0) {
   ({ guildTemplate: require, trigger } = arg0);
-  dependencyMap = undefined;
-  let isScreenReaderEnabled;
-  let ref;
   function onPress(isCommunityIntent) {
-    let obj = trigger(arr[12]);
-    obj = { skipped: null == isCommunityIntent, is_community: null };
+    const obj2 = { skipped: null == isCommunityIntent, is_community: null };
     let flag = isCommunityIntent;
     if (isCommunityIntent == null) {
       flag = false;
     }
-    obj[1] = flag;
-    obj.track(closure_1_9.GUILD_CREATION_INTENT_SELECTED, obj);
-    obj = { guildTemplate: closure_0, isCommunityIntent };
-    arr = arr.push(closure_1_6.CREATE_SERVER, obj);
-    if (closure_1_7.NUF === trigger) {
-      let obj3 = closure_1_0(tmp2[11]);
-      obj3.trackNUFStep(closure_1_8.STEP_CREATION_INTENT, closure_1_8.STEP_GUILD_CREATE, { skip: false });
-      let tmpResult = tmp(tmp2[12]);
+    obj2.is_community = flag;
+    AnalyticsUtilsDefault.track(constants4.GUILD_CREATION_INTENT_SELECTED, obj2);
+    closure_2.push(constants.CREATE_SERVER, { guildTemplate, isCommunityIntent });
+    if (constants2.NUF === trigger) {
+      NewUserAnalyticsUtils.trackNUFStep(constants3.STEP_CREATION_INTENT, constants3.STEP_GUILD_CREATE, { skip: false });
       let id;
       if (tmp5 != null) {
         id = tmp5.id;
       }
-      obj1 = { guild_template_name: null };
-      obj1[0] = id;
-      tmpResult.track(tmp3.CREATE_GUILD_VIEWED, obj1);
+      const obj5 = { guild_template_name: id };
+      tmp(1242).track(tmp3.CREATE_GUILD_VIEWED, obj5);
+      const tmpResult = tmp(1242);
     } else if (tmp8.IN_APP === tmp7) {
-      tmpResult = tmp(tmp2[12]);
-      const obj2 = { type: "Create Guild Step 2", location_section: null };
-      obj2[1] = closure_1_10.CREATE_JOIN_GUILD_MODAL;
-      tmpResult.track(tmp3.OPEN_MODAL, obj2);
-      obj3 = { location_section: null, guild_template_name: null };
-      obj3[0] = closure_1_10.CREATE_JOIN_GUILD_MODAL;
+      const obj6 = { type: "Create Guild Step 2", location_section: constants5.CREATE_JOIN_GUILD_MODAL };
+      tmp(1242).track(tmp3.OPEN_MODAL, obj6);
+      const tmpResult3 = tmp(1242);
+      const obj7 = { location_section: constants5.CREATE_JOIN_GUILD_MODAL, guild_template_name: null };
       let id1;
       if (tmp5 != null) {
         id1 = tmp5.id;
       }
-      obj3[1] = id1;
-      tmp(tmp2[12]).track(tmp3.CREATE_GUILD_VIEWED, obj3);
-      const tmpResult1 = tmp(tmp2[12]);
+      obj7.guild_template_name = id1;
+      tmp(1242).track(tmp3.CREATE_GUILD_VIEWED, obj7);
+      const tmpResult4 = tmp(1242);
     }
   }
-  let tmp = callback3();
-  let obj = useNavigation;
-  dependencyMap = obj.useNavigation();
-  obj1 = SCREEN_READER_ENABLED_GETTER;
-  isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
-  ref = isScreenReaderEnabled.useRef(null);
+  let tmp = closure_13();
+  dependencyMap = useNavigation.useNavigation();
+  const isScreenReaderEnabled = useIsScreenReaderEnabled.useIsScreenReaderEnabled();
+  const ref = isScreenReaderEnabled.useRef(null);
   const items = [isScreenReaderEnabled];
   const effect = isScreenReaderEnabled.useEffect(() => {
     let tmp = isScreenReaderEnabled;
@@ -96,90 +87,84 @@ export default function CreationIntent(arg0) {
       tmp = null != ref.current;
     }
     if (tmp) {
-      let obj = closure_1_0(arr[10]);
-      obj = { ref: null, delay: 100 };
-      obj[0] = ref;
-      const result = obj.setAccessibilityFocus(obj);
+      const obj2 = { ref, delay: 100 };
+      const result = setAccessibilityFocus.setAccessibilityFocus(obj2);
     }
   }, items);
   const items1 = [trigger];
   const effect1 = isScreenReaderEnabled.useEffect(() => {
-    if (closure_1_7.NUF === trigger) {
-      closure_1_0(arr[11]).trackNUFStep(closure_1_8.STEP_GUILD_TEMPLATE, closure_1_8.STEP_CREATION_INTENT, { skip: false });
-      const obj2 = closure_1_0(arr[11]);
+    if (constants2.NUF === trigger) {
+      NewUserAnalyticsUtils.trackNUFStep(constants3.STEP_GUILD_TEMPLATE, constants3.STEP_CREATION_INTENT, { skip: false });
     } else if (tmp2.IN_APP === tmp) {
-      trigger(arr[12]).track(closure_1_9.OPEN_MODAL, { type: "Server Intent Discovery" });
-      const obj = trigger(arr[12]);
+      AnalyticsUtilsDefault.track(constants4.OPEN_MODAL, { type: "Server Intent Discovery" });
     }
   }, items1);
-  obj = { top: true, left: true, right: true, style: tmp.contentContainer, children: null };
-  obj = { style: tmp.scrollContainer, children: null };
-  obj1 = { style: tmp.headerContainer, children: null };
-  let obj2 = { ref, style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale.intl;
-  obj2[5] = intl.string(getSystemLocale.t.f3MvGS);
-  const items2 = [callback(Text.Text, obj2), ];
-  let obj3 = { style: tmp.headerDescription, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj3[3] = intl2.string(getSystemLocale.t.nOzc7w);
-  items2[1] = callback(Text.Text, obj3);
-  obj1[1] = items2;
-  const items3 = [callback2(ref, obj1), , ];
-  const obj4 = { style: tmp.sections, children: null };
-  const obj5 = { hasIcons: true, children: null };
-  const tmp13 = trigger(12328);
-  const obj6 = { Icon: null, message: null, onPress: null };
-  const tmp14 = AccountAgeTier10LargeBadge;
+  const rect = { top: true, left: true, right: true, style: tmp.contentContainer, children: null };
+  const obj3 = { style: tmp.scrollContainer, children: null };
+  let obj4 = { style: tmp.headerContainer, children: null };
+  let obj5 = { ref, style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const intl = util.intl;
+  obj5.children = intl.string(util.t.f3MvGS);
+  const items2 = [closure_11(Text_Text.Text, obj5), ];
+  let obj6 = { style: tmp.headerDescription, variant: "text-sm/medium", color: "text-default", children: null };
+  const intl2 = util.intl;
+  obj6.children = intl2.string(util.t.nOzc7w);
+  items2[1] = closure_11(Text_Text.Text, obj6);
+  obj4.children = items2;
+  const items3 = [closure_12(ref, obj4), , ];
+  let obj7 = { style: tmp.sections, children: null };
+  const obj8 = { hasIcons: true, children: null };
+  const tmp13 = trigger(12354);
+  const obj9 = { Icon: null, message: null, onPress: null };
+  const tmp14 = native;
   if (closure_14) {
-    obj6[0] = tmp14.ChairIllocon;
+    obj9.Icon = tmp14.ChairIllocon;
     const intl5 = tmp2(1114).intl;
-    obj6[1] = intl5.string(tmp2(1114).t.uE7zcu);
-    obj6[2] = function onPress() {
+    obj9.message = intl5.string(tmp2(1114).t.uE7zcu);
+    obj9.onPress = function onPress() {
       onPress(false);
     };
-    const items4 = [tmp8(tmp13, obj6), ];
-    const obj7 = { Icon: null, message: null, onPress: null };
-    let tmp12Result = tmp12(12328);
-    obj7[0] = tmp2(5692).WorldIllocon;
+    const items4 = [tmp8(tmp13, obj9), ];
+    const obj10 = { Icon: tmp2(5706).WorldIllocon, message: null, onPress: null };
     const intl6 = tmp2(1114).intl;
-    obj7[1] = intl6.string(tmp2(1114).t.h9Q1lG);
-    obj7[2] = function onPress() {
+    obj10.message = intl6.string(tmp2(1114).t.h9Q1lG);
+    obj10.onPress = function onPress() {
       onPress(true);
     };
-    items4[1] = tmp8(tmp12Result, obj7);
-    obj5[1] = items4;
-    let tmp16 = obj5;
+    items4[1] = tmp8(tmp12(12354), obj10);
+    obj8.children = items4;
+    let tmp16 = obj8;
+    const tmp12Result = tmp12(12354);
   } else {
-    obj6[0] = tmp14.WorldIllocon;
+    obj9.Icon = tmp14.WorldIllocon;
     const intl3 = tmp2(1114).intl;
-    obj6[1] = intl3.string(tmp2(1114).t.h9Q1lG);
-    obj6[2] = function onPress() {
+    obj9.message = intl3.string(tmp2(1114).t.h9Q1lG);
+    obj9.onPress = function onPress() {
       onPress(true);
     };
-    const items5 = [tmp8(tmp13, obj6), ];
-    const obj8 = { Icon: null, message: null, onPress: null };
-    tmp12Result = tmp12(12328);
-    obj8[0] = tmp2(5692).ChairIllocon;
+    const items5 = [tmp8(tmp13, obj9), ];
+    const obj11 = { Icon: tmp2(5706).ChairIllocon, message: null, onPress: null };
     const intl4 = tmp2(1114).intl;
-    obj8[1] = intl4.string(tmp2(1114).t.uE7zcu);
-    obj8[2] = function onPress() {
+    obj11.message = intl4.string(tmp2(1114).t.uE7zcu);
+    obj11.onPress = function onPress() {
       onPress(false);
     };
-    items5[1] = tmp8(tmp12Result, obj8);
-    obj5[1] = items5;
-    tmp16 = obj5;
+    items5[1] = tmp8(tmp12(12354), obj11);
+    obj8.children = items5;
+    tmp16 = obj8;
+    const tmp12Result2 = tmp12(12354);
   }
-  obj4[1] = callback2(TableRowGroupTitle.TableRowGroup, tmp16);
-  items3[1] = callback(ref, obj4);
-  const obj9 = { style: tmp.skipDescription, variant: "text-sm/medium", color: "text-default", children: null };
+  obj7.children = closure_12(TableRowGroup.TableRowGroup, tmp16);
+  items3[1] = closure_11(ref, obj7);
+  const obj12 = { style: tmp.skipDescription, variant: "text-sm/medium", color: "text-default", children: null };
   const intl7 = tmp2(1114).intl;
-  obj9[3] = intl7.format(getSystemLocale.t["SMc+Gz"], {
-    onSkip(arg0) {
+  obj12.children = intl7.format(util.t["SMc+Gz"], {
+    onSkip() {
       onPress(null);
     }
   });
-  items3[2] = callback(Text.Text, obj9);
-  obj[1] = items3;
-  obj[4] = callback2(onPress, obj);
-  return callback(SafeAreaPaddingView.SafeAreaPaddingView, obj);
+  items3[2] = closure_11(Text_Text.Text, obj12);
+  obj3.children = items3;
+  rect.children = closure_12(onPress, obj3);
+  return closure_11(common_SafeAreaView.SafeAreaPaddingView, rect);
 };

@@ -1,12 +1,12 @@
-// Module ID: 7633
-// Function ID: 7634
-// Name: toSubmission
-// Dependencies: [7622, 2]
+// Module ID: 7647
+// Function ID: 7648
+// Name: UserProfileApplicationWidgetTypes
+// Dependencies: [7636, 2]
 // Exports: isApplicationWidgetWithId
 
-// Module 7633 (toSubmission)
-import set from "set" /* 2 */;
-import WidgetType from "WidgetType" /* 7622 */;
+// Module 7647 (UserProfileApplicationWidgetTypes)
+import WidgetType from "WidgetType" /* 7636 */;
+import size from "module_2" /* 2 */;
 
 let ApplicationWidget;
 class ApplicationWidget {
@@ -14,16 +14,14 @@ class ApplicationWidget {
     ({ id, applicationId } = global);
     obj = Object.create(new.target.prototype);
     obj.id = id;
-    obj.type = require("WidgetType").WidgetType.APPLICATION;
+    obj.type = closure_0(closure_1[0]).WidgetType.APPLICATION;
     obj.applicationId = applicationId;
     return obj;
   }
 }
 const prototype = ApplicationWidget.prototype;
 prototype["toSubmission"] = function toSubmission() {
-  obj = { id: this.id, data: obj };
-  obj = { type: this.type, application_id: this.applicationId };
-  return obj;
+  return { id: this.id, data: { type: this.type, application_id: this.applicationId } };
 };
 prototype["isUpdatable"] = function isUpdatable() {
   return true;
@@ -51,10 +49,10 @@ prototype["getProfileAnalyticsOptions"] = function getProfileAnalyticsOptions() 
 prototype["getProfileEditAnalyticsOptions"] = function getProfileEditAnalyticsOptions() {
   return { widgetEdited: this.type, applicationId: this.applicationId };
 };
-const result = set.fileFinishedImporting("modules/user_profile/UserProfileApplicationWidgetTypes.tsx");
+const result = size.fileFinishedImporting("modules/user_profile/UserProfileApplicationWidgetTypes.tsx");
 
 export { ApplicationWidget };
-export const isApplicationWidgetWithId = function isApplicationWidgetWithId(applicationId) {
+export const isApplicationWidgetWithId = function isApplicationWidgetWithId(applicationId, arg1) {
   let tmp = null != arg1;
   if (tmp) {
     tmp = applicationId instanceof ApplicationWidget;

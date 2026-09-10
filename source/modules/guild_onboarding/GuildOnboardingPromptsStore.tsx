@@ -1,20 +1,19 @@
-// Module ID: 7100
-// Function ID: 7101
-// Name: handleUpdate
-// Dependencies: [2014, 1957, 7096, 7101, 7102, 12, 504, 1090, 11, 573, 2]
+// Module ID: 7114
+// Function ID: 7115
+// Name: GuildOnboardingPromptsStore
+// Dependencies: [2014, 1957, 7110, 7115, 7116, 12, 504, 1090, 11, 573, 2]
 
-// Module 7100 (handleUpdate)
-import applyDefault from "apply" /* 12 */;
+// Module 7114 (GuildOnboardingPromptsStore)
+import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import setDefault from "set" /* 1090 */;
-import closure_3 from "initialize" /* 2014 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "shouldShowOnboarding" /* 7096 */;
-import { GuildOnboardingStatus } from "shouldShowOnboarding" /* 7096 */;
-import { GuildOnboardingMode } from "serverPromptToClientPrompt" /* 7101 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import DefaultChannelUtils from "DefaultChannelUtils" /* 7116 */;
+import ImpersonateStore from "ImpersonateStore" /* 2014 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildOnboardingStore from "GuildOnboardingStore" /* 7110 */;
 
-const require = arg1;
+require = fn;
 function handleUpdate(arg0) {
   ({ guildId, updates } = arg0);
   let prop = updates.onboardingPromptsSeen;
@@ -60,14 +59,11 @@ function handleUpdate(arg0) {
       do {
         let tmp3 = options.options[num];
         let tmp4 = null == tmp2[tmp3.id];
-        let tmp5 = num;
         let flag3 = flag;
         if (tmp4) {
           flag3 = true;
         }
-        obj = {};
-        let tmp6 = obj;
-        let tmp7 = tmp3;
+        let obj = {};
         let merged = Object.assign(tmp3);
         obj.isUnseen = tmp4;
         let arr = items.push(obj);
@@ -76,21 +72,23 @@ function handleUpdate(arg0) {
         flag2 = flag3;
       } while (num < options.options.length);
     }
-    obj = {};
+    obj2 = {};
     const merged1 = Object.assign(options);
-    obj.options = items;
-    obj.hasNewAnswers = flag2;
-    obj.isNew = null == prompts_seen[options.id];
-    return obj;
+    obj2.options = items;
+    obj2.hasNewAnswers = flag2;
+    obj2.isNew = null == prompts_seen[options.id];
+    return obj2;
   });
   const merged = Object.assign(dependencyMap[guildId]);
   const merged1 = Object.assign(updates);
   obj.prompts = mapped;
   dependencyMap[guildId] = obj;
 }
-let closure_8 = {};
-let closure_9 = {};
-let closure_10 = {};
+const GuildOnboardingStatus = fn(7110).GuildOnboardingStatus;
+const GuildOnboardingMode = fn(7115).GuildOnboardingMode;
+const dependencyMap = {};
+const dependencyMap2 = {};
+const dependencyMap3 = {};
 let c11 = false;
 let closure_12 = [];
 let closure_13 = [];
@@ -101,7 +99,7 @@ class GuildOnboardingPromptsStore extends Store {
 }
 const prototype = GuildOnboardingPromptsStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_4, closure_5, closure_3);
+  this.waitFor(ChannelStore, GuildOnboardingStore, ImpersonateStore);
 };
 prototype["getOnboardingPromptsForOnboarding"] = function getOnboardingPromptsForOnboarding(guildId) {
   let onboardingPrompts;
@@ -123,16 +121,16 @@ prototype["getOnboardingPrompts"] = function getOnboardingPrompts(guildId) {
   }
   return prompts;
 };
-prototype["getOnboardingResponses"] = function getOnboardingResponses(closure_0) {
-  if (closure_3.isFullServerPreview(closure_0)) {
-    let onboardingResponses = closure_3.getOnboardingResponses(closure_0);
+prototype["getOnboardingResponses"] = function getOnboardingResponses(id) {
+  if (ImpersonateStore.isFullServerPreview(id)) {
+    let onboardingResponses = ImpersonateStore.getOnboardingResponses(id);
     if (onboardingResponses == null) {
       onboardingResponses = closure_13;
     }
     let responses = Array.from(onboardingResponses);
   } else {
     responses = undefined;
-    if (dependencyMap[closure_0] != null) {
+    if (dependencyMap[id] != null) {
       responses = tmp2.responses;
     }
     if (responses == null) {
@@ -160,26 +158,25 @@ prototype["getOnboardingResponsesForPrompt"] = function getOnboardingResponsesFo
       const self = this;
       const options = found.options;
       const mapped = options.map((id) => id.id);
-      intersectionResult = applyDefault.intersection(mapped, this.getOnboardingResponses(guildId));
-      const obj = applyDefault;
+      intersectionResult = _modDef12.intersection(mapped, this.getOnboardingResponses(guildId));
     }
     return intersectionResult;
   }
 };
-prototype["getEnabledOnboardingPrompts"] = function getEnabledOnboardingPrompts(closure_0) {
-  if (closure_3.isFullServerPreview(closure_0)) {
-    let prompts;
+prototype["getEnabledOnboardingPrompts"] = function getEnabledOnboardingPrompts(item) {
+  if (ImpersonateStore.isFullServerPreview(item)) {
+    let prompts1;
     if (tmp != null) {
-      prompts = tmp.prompts;
+      prompts1 = tmp.prompts;
     }
-    if (prompts == null) {
-      prompts = closure_12;
+    if (prompts1 == null) {
+      prompts1 = closure_12;
     }
-    let tmp2 = prompts;
+    let tmp2 = prompts1;
   } else {
     if (null != tmp) {
       if (tmp.enabled) {
-        prompts = tmp.prompts;
+        let prompts = tmp.prompts;
         if (prompts == null) {
           prompts = closure_12;
         }
@@ -190,9 +187,9 @@ prototype["getEnabledOnboardingPrompts"] = function getEnabledOnboardingPrompts(
   }
   return tmp2;
 };
-prototype["getDefaultChannelIds"] = function getDefaultChannelIds(closure_0) {
+prototype["getDefaultChannelIds"] = function getDefaultChannelIds(id) {
   let defaultChannelIds;
-  if (dependencyMap[closure_0] != null) {
+  if (dependencyMap[id] != null) {
     defaultChannelIds = tmp.defaultChannelIds;
   }
   if (defaultChannelIds == null) {
@@ -200,8 +197,8 @@ prototype["getDefaultChannelIds"] = function getDefaultChannelIds(closure_0) {
   }
   return defaultChannelIds;
 };
-prototype["getEnabled"] = function getEnabled(closure_0) {
-  if (closure_3.isFullServerPreview(closure_0)) {
+prototype["getEnabled"] = function getEnabled(id) {
+  if (ImpersonateStore.isFullServerPreview(id)) {
     let flag = null != tmp;
   } else {
     flag = undefined;
@@ -214,8 +211,8 @@ prototype["getEnabled"] = function getEnabled(closure_0) {
   }
   return flag;
 };
-prototype["getOnboardingPrompt"] = function getOnboardingPrompt(closure_1) {
-  closure_0 = closure_1;
+prototype["getOnboardingPrompt"] = function getOnboardingPrompt(targetId13) {
+  closure_0 = targetId13;
   const values = Object.values(closure_8);
   const mapped = values.map((prompts) => prompts.prompts);
   return mapped.flat().find((id) => id.id === closure_0);
@@ -223,10 +220,10 @@ prototype["getOnboardingPrompt"] = function getOnboardingPrompt(closure_1) {
 prototype["isLoading"] = function isLoading() {
   return c11;
 };
-prototype["shouldFetchPrompts"] = function shouldFetchPrompts(arg0) {
+prototype["shouldFetchPrompts"] = function shouldFetchPrompts(guildId) {
   let HOUR = arg1;
   if (arg1 === undefined) {
-    HOUR = setDefault.Millis.HOUR;
+    HOUR = DurationsDefault.Millis.HOUR;
   }
   if (c11) {
     return false;
@@ -239,13 +236,13 @@ prototype["shouldFetchPrompts"] = function shouldFetchPrompts(arg0) {
     return tmp7;
   }
 };
-prototype["getPendingResponseOptions"] = function getPendingResponseOptions(closure_0) {
-  return dependencyMap2[closure_0];
+prototype["getPendingResponseOptions"] = function getPendingResponseOptions(arg0) {
+  return dependencyMap2[arg0];
 };
-prototype["ackIdForGuild"] = function ackIdForGuild(closure_0) {
-  const enabledOnboardingPrompts = this.getEnabledOnboardingPrompts(closure_0);
-  c0 = "0";
-  let item = enabledOnboardingPrompts.forEach((options) => {
+prototype["ackIdForGuild"] = function ackIdForGuild(item) {
+  const enabledOnboardingPrompts = this.getEnabledOnboardingPrompts(item);
+  let id = "0";
+  item = enabledOnboardingPrompts.forEach((options) => {
     options = options.options;
     const item = options.forEach((id) => {
       if (obj.compare(id.id, id) > 0) {
@@ -256,16 +253,16 @@ prototype["ackIdForGuild"] = function ackIdForGuild(closure_0) {
       id = options.id;
     }
   });
-  return c0;
+  return id;
 };
 prototype["lastFetchedAt"] = function lastFetchedAt(arg0) {
   return dependencyMap3[arg0];
 };
-prototype["isAdvancedMode"] = function isAdvancedMode(closure_0) {
-  let tmp = null != closure_0;
+prototype["isAdvancedMode"] = function isAdvancedMode(guildId) {
+  let tmp = null != guildId;
   if (tmp) {
     let mode;
-    if (dependencyMap[closure_0] != null) {
+    if (dependencyMap[guildId] != null) {
       mode = tmp3.mode;
     }
     tmp = mode === GuildOnboardingMode.ONBOARDING_ADVANCED;
@@ -297,18 +294,18 @@ prototype["getOnboardingConnections"] = function getOnboardingConnections(guildI
       }
       let items = connections;
     } else {
-      connections = tmp.connections;
-      if (connections == null) {
-        connections = [];
+      let connections1 = tmp.connections;
+      if (connections1 == null) {
+        connections1 = [];
       }
       items = [];
-      HermesBuiltin.arraySpread(prop, HermesBuiltin.arraySpread(connections, 0));
+      HermesBuiltin.arraySpread(prop, HermesBuiltin.arraySpread(connections1, 0));
     }
     return items;
   }
 };
 GuildOnboardingPromptsStore.displayName = "GuildOnboardingPromptsStore";
-const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(dispatcherDefault, {
+const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     c11 = false;
     closure_8 = {};
@@ -324,12 +321,11 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(dispatcherDe
   },
   GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: function handleSuccess(guildId) {
     guildId = guildId.guildId;
+    onboardingPromptsSeen = guildId;
     ({ prompts, defaultChannelIds, responses, onboardingPromptsSeen, onboardingResponsesSeen, connections, additionalConnections } = guildId);
     c11 = false;
     ({ enabled, mode, belowRequirements } = guildId);
-    const tmp = onboardingStatus.getOnboardingStatus(guildId) === GuildOnboardingStatus.READY;
-    guildId = onboardingPromptsSeen;
-    responses = onboardingResponsesSeen;
+    const tmp = GuildOnboardingStore.getOnboardingStatus(guildId) === GuildOnboardingStatus.READY;
     const mapped = prompts.map((options) => {
       const items = [];
       let num = 0;
@@ -339,14 +335,11 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(dispatcherDe
         do {
           let tmp3 = options.options[num];
           let tmp4 = null == tmp2[tmp3.id];
-          let tmp5 = num;
           let flag3 = flag;
           if (tmp4) {
             flag3 = true;
           }
-          obj = {};
-          let tmp6 = obj;
-          let tmp7 = tmp3;
+          let obj = {};
           let merged = Object.assign(tmp3);
           obj.isUnseen = tmp4;
           let arr = items.push(obj);
@@ -355,87 +348,76 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(dispatcherDe
           flag2 = flag3;
         } while (num < options.options.length);
       }
-      obj = {};
+      obj2 = {};
       const merged1 = Object.assign(options);
-      obj.options = items;
-      obj.hasNewAnswers = flag2;
-      obj.isNew = null == prompts_seen[options.id];
-      return obj;
+      obj2.options = items;
+      obj2.hasNewAnswers = flag2;
+      obj2.isNew = null == prompts_seen[options.id];
+      return obj2;
     });
-    let obj = {
-      enabled,
-      mode,
-      belowRequirements,
-      prompts: mapped,
-      onboardingPrompts: mapped.filter((inOnboarding) => inOnboarding.inOnboarding),
-      defaultChannelIds: defaultChannelIds.filter((id) => {
-        obj = guildId(obj[4]);
-        return obj.canChannelBeDefault(guildId, id);
-      }),
-      responses: null,
-      onboardingPromptsSeen: null,
-      onboardingResponsesSeen: null,
-      connections: null,
-      additionalConnections: null
-    };
+    const obj = { enabled, mode, belowRequirements, prompts: mapped, onboardingPrompts: mapped.filter((inOnboarding) => inOnboarding.inOnboarding), defaultChannelIds: defaultChannelIds.filter((item) => DefaultChannelUtils.canChannelBeDefault(onboardingPromptsSeen, item)), responses: null, onboardingPromptsSeen: null, onboardingResponsesSeen: null, connections: null, additionalConnections: null };
     let items = responses;
     if (tmp) {
       items = [];
     }
-    obj[6] = items;
-    obj[7] = onboardingPromptsSeen;
-    obj[8] = onboardingResponsesSeen;
+    obj.responses = items;
+    obj.onboardingPromptsSeen = onboardingPromptsSeen;
+    obj.onboardingResponsesSeen = onboardingResponsesSeen;
     if (connections == null) {
       connections = [];
     }
-    obj[9] = connections;
+    obj.connections = connections;
     if (additionalConnections == null) {
       additionalConnections = [];
     }
-    obj[10] = additionalConnections;
+    obj.additionalConnections = additionalConnections;
     dependencyMap[guildId] = obj;
     if (!tmp) {
+      closure_129_0 = guildId;
+      closure_129_1 = responses;
       if (null != dependencyMap2[guildId]) {
-        obj = {};
+        const obj2 = {};
+        closure_129_2 = obj2;
         const _Object = Object;
         const keys = Object.keys(tmp3[guildId]);
-        const item = keys.forEach((arg0) => {
-          if (!options_seen.includes(arg0)) {
-            if (closure_1_9[prompts_seen][arg0]) {
-              obj[arg0] = true;
+        const item = keys.forEach((item) => {
+          if (!options_seen.includes(item)) {
+            if (dependencyMap[prompts_seen][item]) {
+              obj2[item] = true;
             }
           }
-          let hasItem = obj.includes(arg0);
+          let hasItem = options_seen.includes(item);
           if (hasItem) {
-            hasItem = false === closure_1_9[prompts_seen][arg0];
+            hasItem = false === dependencyMap[prompts_seen][item];
           }
           if (hasItem) {
-            obj[arg0] = false;
+            obj2[item] = false;
           }
         });
-        tmp3[guildId] = obj;
-        const found = responses.filter((arg0) => {
-          let tmp = null == obj[arg0];
+        tmp3[guildId] = obj2;
+        const found = responses.filter((item) => {
+          let tmp = null == obj2[item];
           if (!tmp) {
-            tmp = true === obj[arg0];
+            tmp = true === obj2[item];
           }
           return tmp;
         });
+        closure_129_3 = found;
         const _Object2 = Object;
-        const keys1 = Object.keys(obj);
-        const item1 = keys1.forEach((arg0) => {
-          let hasItem = true !== obj[arg0];
+        const keys1 = Object.keys(obj2);
+        const item1 = keys1.forEach((item) => {
+          let hasItem = true !== obj2[item];
           if (!hasItem) {
-            hasItem = options_seen.includes(arg0);
+            hasItem = options_seen.includes(item);
           }
           if (!hasItem) {
-            found.push(arg0);
+            found.push(item);
           }
         });
-        obj = {};
+        const obj3 = {};
         const merged = Object.assign(dependencyMap[guildId]);
-        obj.responses = found;
-        dependencyMap[guildId] = obj;
+        obj3.responses = found;
+        dependencyMap[guildId] = obj3;
       }
     }
     closure_10[guildId] = Date.now();
@@ -446,7 +428,7 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(dispatcherDe
   GUILD_ONBOARDING_SELECT_OPTION: function handleOptionSelect(guildId) {
     guildId = guildId.guildId;
     ({ optionId, selected, removedOptionIds } = guildId);
-    let isFullServerPreviewResult = closure_3.isFullServerPreview(guildId);
+    let isFullServerPreviewResult = ImpersonateStore.isFullServerPreview(guildId);
     if (!isFullServerPreviewResult) {
       let flag = null != dependencyMap[guildId];
       if (flag) {
@@ -455,29 +437,27 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(dispatcherDe
           tmp4 = removedOptionIds.length > 0;
         }
         if (tmp4) {
-          let obj = applyDefault;
-          obj.pullAll(dependencyMap[guildId].responses, removedOptionIds);
+          _modDef12.pullAll(dependencyMap[guildId].responses, removedOptionIds);
         }
         if (selected) {
           const responses = dependencyMap[guildId].responses;
           responses.push(optionId);
         } else {
-          applyDefault.pull(dependencyMap[guildId].responses, optionId);
-          const obj2 = applyDefault;
+          _modDef12.pull(dependencyMap[guildId].responses, optionId);
         }
         if (null == dependencyMap2[guildId]) {
           tmp15[guildId] = {};
         }
         dependencyMap2[guildId][optionId] = selected;
         if (null != removedOptionIds) {
-          const item = removedOptionIds.forEach((arg0) => {
-            closure_1_9[guildId][arg0] = false;
+          const item = removedOptionIds.forEach((item) => {
+            closure_9[guildId][item] = false;
             return false;
           });
         }
-        obj = {};
+        const obj3 = {};
         const merged = Object.assign(tmp15[guildId]);
-        dependencyMap2[guildId] = obj;
+        dependencyMap2[guildId] = obj3;
         flag = true;
       }
       isFullServerPreviewResult = flag;
@@ -488,49 +468,49 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(dispatcherDe
     ({ guildId, options, prompts_seen, options_seen } = arg0);
     prompts_seen = guildId;
     options_seen = options;
-    let obj;
+    let obj2;
     let found;
     if (null != dependencyMap2[guildId]) {
-      obj = {};
+      obj2 = {};
       const _Object = Object;
       const keys = Object.keys(tmp[guildId]);
-      const item = keys.forEach((arg0) => {
-        if (!options_seen.includes(arg0)) {
-          if (closure_1_9[prompts_seen][arg0]) {
-            obj[arg0] = true;
+      const item = keys.forEach((item) => {
+        if (!options_seen.includes(item)) {
+          if (dependencyMap[prompts_seen][item]) {
+            obj2[item] = true;
           }
         }
-        let hasItem = obj.includes(arg0);
+        let hasItem = options_seen.includes(item);
         if (hasItem) {
-          hasItem = false === closure_1_9[prompts_seen][arg0];
+          hasItem = false === dependencyMap[prompts_seen][item];
         }
         if (hasItem) {
-          obj[arg0] = false;
+          obj2[item] = false;
         }
       });
-      tmp[guildId] = obj;
-      found = options.filter((arg0) => {
-        let tmp = null == obj[arg0];
+      tmp[guildId] = obj2;
+      found = options.filter((item) => {
+        let tmp = null == obj2[item];
         if (!tmp) {
-          tmp = true === obj[arg0];
+          tmp = true === obj2[item];
         }
         return tmp;
       });
       const _Object2 = Object;
-      const keys1 = Object.keys(obj);
-      const item1 = keys1.forEach((arg0) => {
-        let hasItem = true !== obj[arg0];
+      const keys1 = Object.keys(obj2);
+      const item1 = keys1.forEach((item) => {
+        let hasItem = true !== obj2[item];
         if (!hasItem) {
-          hasItem = options_seen.includes(arg0);
+          hasItem = options_seen.includes(item);
         }
         if (!hasItem) {
-          found.push(arg0);
+          found.push(item);
         }
       });
-      obj = {};
+      const obj3 = {};
       let merged = Object.assign(dependencyMap[guildId]);
-      obj.responses = found;
-      dependencyMap[guildId] = obj;
+      obj3.responses = found;
+      dependencyMap[guildId] = obj3;
     }
     if (null == dependencyMap[guildId]) {
       return false;
@@ -545,14 +525,11 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(dispatcherDe
           do {
             let tmp3 = options.options[num];
             let tmp4 = null == tmp2[tmp3.id];
-            let tmp5 = num;
             let flag3 = flag;
             if (tmp4) {
               flag3 = true;
             }
-            obj = {};
-            let tmp6 = obj;
-            let tmp7 = tmp3;
+            let obj = {};
             let merged = Object.assign(tmp3);
             obj.isUnseen = tmp4;
             let arr = items.push(obj);
@@ -561,14 +538,14 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(dispatcherDe
             flag2 = flag3;
           } while (num < options.options.length);
         }
-        obj = {};
+        obj2 = {};
         const merged1 = Object.assign(options);
-        obj.options = items;
-        obj.hasNewAnswers = flag2;
-        obj.isNew = null == prompts_seen[options.id];
-        return obj;
+        obj2.options = items;
+        obj2.hasNewAnswers = flag2;
+        obj2.isNew = null == prompts_seen[options.id];
+        return obj2;
       });
-      obj = {};
+      let obj = {};
       let merged1 = Object.assign(tmp2);
       obj.prompts = mapped;
       obj.onboardingPrompts = mapped.filter((inOnboarding) => inOnboarding.inOnboarding);
@@ -603,6 +580,7 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(dispatcherDe
     }
   }
 });
-const result = require("set").fileFinishedImporting("modules/guild_onboarding/GuildOnboardingPromptsStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_onboarding/GuildOnboardingPromptsStore.tsx");
 
 export default guildOnboardingPromptsStore;

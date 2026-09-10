@@ -1,43 +1,39 @@
-// Module ID: 15526
-// Function ID: 15527
+// Module ID: 15556
+// Function ID: 15557
 // Name: AppIcon
-// Dependencies: [19, 17, 9328, 21, 4560, 576, 4495, 4411, 2]
+// Dependencies: [19, 17, 9355, 21, 4574, 576, 4509, 4425, 2]
 // Exports: default
 
-// Module 15526 (AppIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
-import useThemeDefault from "useTheme" /* 4495 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { getIconById } from "items" /* 9328 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15556 (AppIcon)
+import nativeDefault from "native" /* 576 */;
+import useThemeDefault from "useTheme" /* 4509 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ Image: c3, View: c4 } = get_ActivityIndicator);
-createCacheKey = { container: null, image: null };
-createCacheKey = { overflow: "hidden", borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { resizeMode: "contain", height: "100%", width: "100%" };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/app_icons/native/AppIcon.tsx");
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: c3, View: closure_4 } = get_ActivityIndicator);
+const getIconById = fn(9355).getIconById;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { container: { overflow: "hidden", borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, image: { resizeMode: "contain", height: "100%", width: "100%" } };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_icons/native/AppIcon.tsx");
 
 export default function AppIcon(size) {
   let num = size.size;
   if (num === undefined) {
     num = 56;
   }
-  const tmp = callback();
+  const tmp = closure_7();
   const tmp2 = useThemeDefault();
-  let obj = AccessibilityAnnouncer;
+  const tmp3 = getIconById(size.id);
   let num2 = 1;
   if (obj.isThemeDark(tmp2)) {
     num2 = 0;
   }
-  obj = { style: items, children: <closure_3 {...obj} /> };
-  items = [tmp.container, { width: num, height: num, borderWidth: num2 }, size.style];
-  obj = { style: tmp.image, source: getIconById(size.id).iconSource };
-  return <closure_4 style={tmp.image} source={getIconById(arg0.id).iconSource} />;
+  const obj2 = { style: null, children: <React3 style={tmp.image} source={tmp3.iconSource} /> };
+  const items = [tmp.container, { width: num, height: num, borderWidth: num2 }, size.style];
+  obj2.style = items;
+  return <React4 style={null}><React3 style={tmp.image} source={tmp3.iconSource} /></React4>;
 };

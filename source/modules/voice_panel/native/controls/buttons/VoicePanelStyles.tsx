@@ -1,34 +1,33 @@
-// Module ID: 17187
-// Function ID: 17188
-// Name: useVoicePanelButtonStyles
-// Dependencies: [4560, 576, 8265, 2]
+// Module ID: 17218
+// Function ID: 17219
+// Name: VoicePanelStyles
+// Dependencies: [4574, 576, 8295, 2]
 // Exports: useVoicePanelButtonStyles
 
-// Module 17187 (useVoicePanelButtonStyles)
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 576 */;
-import map from "map" /* 8265 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17218 (VoicePanelStyles)
+import nativeDefault from "native" /* 576 */;
+import useStateFromSharedValue from "useStateFromSharedValue" /* 8295 */;
+import createStyles from "createStyles" /* 4574 */;
+import size from "module_2" /* 2 */;
 
-let closure_3 = createCacheKey.createStyles((arg0) => {
-  let obj = { iconBg: { backgroundColor: "transparent" }, iconBgSelected: null, iconBgVoiceMuted: null, iconFill: null, iconFillMuted: null, iconFillRed: null, iconFillSelected: null, iconBadgeIndicator: null };
-  obj = { backgroundColor: ThemesDefault.colors.WHITE };
-  obj[1] = obj;
-  obj = { borderWidth: 1, borderColor: ThemesDefault.colors.BACKGROUND_VOICE_MUTED, backgroundColor: ThemesDefault.colors.BACKGROUND_VOICE_MUTED };
-  obj[2] = obj;
-  const colors = ThemesDefault.colors;
-  obj[3] = { color: arg0 ? colors.INTERACTIVE_TEXT_DEFAULT : colors.ICON_STRONG };
-  obj[4] = { color: ThemesDefault.colors.ICON_MUTED };
-  obj1 = { color: ThemesDefault.colors.ICON_MUTED };
-  obj[5] = { color: ThemesDefault.unsafe_rawColors.RED_400 };
-  const obj2 = { color: ThemesDefault.unsafe_rawColors.RED_400 };
-  obj[6] = { color: ThemesDefault.colors.BLACK };
+let closure_3 = createStyles.createStyles((arg0) => {
+  const obj = { iconBg: { backgroundColor: "transparent" }, iconBgSelected: { backgroundColor: nativeDefault.colors.WHITE }, iconBgVoiceMuted: null, iconFill: null, iconFillMuted: null, iconFillRed: null, iconFillSelected: null, iconBadgeIndicator: null };
+  const obj2 = { backgroundColor: nativeDefault.colors.WHITE };
+  obj.iconBgVoiceMuted = { borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_VOICE_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_VOICE_MUTED };
+  const colors = nativeDefault.colors;
+  obj.iconFill = { color: arg0 ? colors.INTERACTIVE_TEXT_DEFAULT : colors.ICON_STRONG };
+  const obj3 = { borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_VOICE_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_VOICE_MUTED };
+  obj.iconFillMuted = { color: nativeDefault.colors.ICON_MUTED };
+  const obj4 = { color: nativeDefault.colors.ICON_MUTED };
+  obj.iconFillRed = { color: nativeDefault.unsafe_rawColors.RED_400 };
+  const obj5 = { color: nativeDefault.unsafe_rawColors.RED_400 };
+  obj.iconFillSelected = { color: nativeDefault.colors.BLACK };
   const colors2 = tmp(576).colors;
-  obj[7] = { backgroundColor: arg0 ? colors2.CONTROL_BRAND_FOREGROUND : colors2.WHITE };
+  obj.iconBadgeIndicator = { backgroundColor: arg0 ? colors2.CONTROL_BRAND_FOREGROUND : colors2.WHITE };
   return obj;
 });
-const result = set.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelStyles.tsx");
+const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelStyles.tsx");
 
 export const useVoicePanelButtonStyles = function useVoicePanelButtonStyles(wrapperSpecs) {
-  return callback(map.useDerivedStateFromSharedValue(wrapperSpecs, (drawerMode) => drawerMode.drawerMode));
+  return closure_3(useStateFromSharedValue.useDerivedStateFromSharedValue(wrapperSpecs, (drawerMode) => drawerMode.drawerMode));
 };

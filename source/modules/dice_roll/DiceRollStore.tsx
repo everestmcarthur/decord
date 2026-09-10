@@ -1,22 +1,22 @@
-// Module ID: 11963
-// Function ID: 11964
-// Name: INITIAL_STATE
+// Module ID: 11989
+// Function ID: 11990
+// Name: DiceRollStore
 // Dependencies: [560, 2]
 // Exports: useDiceRollState
 
-// Module 11963 (INITIAL_STATE)
-import set from "set" /* 2 */;
-import keys from "keys" /* 560 */;
+// Module 11989 (DiceRollStore)
+import module_560 from "module_560" /* 560 */;
+import size from "module_2" /* 2 */;
 
-let obj = { channelId: null, rolling: false, dismissing: false, diceCount: 1, diceSides: 6, results: null };
-obj = keys.create(() => obj);
-const result = set.fileFinishedImporting("modules/dice_roll/DiceRollStore.tsx");
+const INITIAL_STATE = { channelId: null, rolling: false, dismissing: false, diceCount: 1, diceSides: 6, results: null };
+const obj2 = module_560.create(() => obj);
+const result = size.fileFinishedImporting("modules/dice_roll/DiceRollStore.tsx");
 
-export default obj;
-export const INITIAL_STATE = obj;
+export default obj2;
+export { INITIAL_STATE };
 export const useDiceRollState = function useDiceRollState(channelId) {
   closure_0 = channelId;
-  return obj((channelId) => {
+  return obj2((channelId) => {
     let tmp = null;
     if (channelId.channelId === closure_0) {
       tmp = channelId;

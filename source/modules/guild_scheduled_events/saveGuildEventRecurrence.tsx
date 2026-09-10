@@ -1,33 +1,31 @@
-// Module ID: 9707
-// Function ID: 9708
+// Module ID: 9734
+// Function ID: 9735
 // Name: saveGuildEventRecurrence
-// Dependencies: [9670, 9708, 11, 2]
+// Dependencies: [9697, 9735, 11, 2]
 // Exports: default
 
-// Module 9707 (saveGuildEventRecurrence)
-import set from "set" /* 2 */;
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import getRRule from "getRRule" /* 9670 */;
-import _modDef9708 from "module_9708" /* 9708 */;
+// Module 9734 (saveGuildEventRecurrence)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import ScheduleUtils from "ScheduleUtils" /* 9697 */;
+import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 9735 */;
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("modules/guild_scheduled_events/saveGuildEventRecurrence.tsx");
+let result = size.fileFinishedImporting("modules/guild_scheduled_events/saveGuildEventRecurrence.tsx");
 
 export default function saveGuildEventRecurrence(guild_id, nextRecurrenceIdInEvent, startDate, event_exception_id) {
-  let obj = getRRule;
-  const baseScheduleForRecurrence = obj.getBaseScheduleForRecurrence(nextRecurrenceIdInEvent, guild_id);
+  const baseScheduleForRecurrence = ScheduleUtils.getBaseScheduleForRecurrence(nextRecurrenceIdInEvent, guild_id);
   startDate = null;
   if (!obj2.areDatesIdentical(baseScheduleForRecurrence.startDate, startDate.startDate)) {
     startDate = startDate.startDate;
   }
-  let tmpResult = tmp(9670);
+  obj2 = ScheduleUtils;
   let endDate = null;
   if (!tmpResult.areDatesIdentical(baseScheduleForRecurrence.endDate, startDate.endDate)) {
     endDate = startDate.endDate;
   }
   if (null != event_exception_id) {
-    tmpResult = tmp(9670);
-    const result = tmpResult.areSchedulesIdentical(startDate, baseScheduleForRecurrence);
-    const obj5 = _modDef9708;
+    const result = tmp(9697).areSchedulesIdentical(startDate, baseScheduleForRecurrence);
+    const obj5 = GuildScheduledEventsActionCreatorsDefault;
     if (result) {
       let result1 = obj5.deleteGuildEventException(guild_id.guild_id, guild_id.id, event_exception_id.event_exception_id);
     } else {
@@ -35,35 +33,33 @@ export default function saveGuildEventRecurrence(guild_id, nextRecurrenceIdInEve
       if (startDate != null) {
         toISOStringResult = startDate.toISOString();
       }
-      obj = { scheduled_start_time: null, scheduled_end_time: null, is_canceled: null };
-      obj[0] = toISOStringResult;
+      const obj3 = { scheduled_start_time: toISOStringResult, scheduled_end_time: null, is_canceled: null };
       let toISOStringResult1;
       if (endDate != null) {
         toISOStringResult1 = endDate.toISOString();
       }
-      obj[1] = toISOStringResult1;
-      obj[2] = event_exception_id.is_canceled;
-      result1 = obj5.updateGuildEventException(obj, guild_id.guild_id, guild_id.id, nextRecurrenceIdInEvent);
+      obj3.scheduled_end_time = toISOStringResult1;
+      obj3.is_canceled = event_exception_id.is_canceled;
+      result1 = obj5.updateGuildEventException(obj3, guild_id.guild_id, guild_id.id, nextRecurrenceIdInEvent);
     }
     return result1;
   } else {
-    const extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(nextRecurrenceIdInEvent);
-    const obj7 = DISCORD_EPOCHDefault;
-    obj = { original_scheduled_start_time: null, scheduled_start_time: null, scheduled_end_time: null, is_canceled: false };
+    const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(nextRecurrenceIdInEvent);
+    const obj4 = { original_scheduled_start_time: null, scheduled_start_time: null, scheduled_end_time: null, is_canceled: false };
     const _Date = Date;
     const date = new Date(extractTimestampResult);
-    obj[0] = date.toISOString();
+    obj4.original_scheduled_start_time = date.toISOString();
     let toISOStringResult2;
     if (startDate != null) {
       toISOStringResult2 = startDate.toISOString();
     }
-    obj[1] = toISOStringResult2;
+    obj4.scheduled_start_time = toISOStringResult2;
     let toISOStringResult3;
     if (endDate != null) {
       toISOStringResult3 = endDate.toISOString();
     }
-    obj[2] = toISOStringResult3;
-    return _modDef9708.createGuildEventException(obj, guild_id.guild_id, guild_id.id);
+    obj4.scheduled_end_time = toISOStringResult3;
+    return GuildScheduledEventsActionCreatorsDefault.createGuildEventException(obj4, guild_id.guild_id, guild_id.id);
   }
-  obj2 = getRRule;
+  tmpResult = ScheduleUtils;
 };

@@ -1,107 +1,109 @@
-// Module ID: 14928
-// Function ID: 14929
-// Name: FamilyCenterModalAcceptScreen
-// Dependencies: [19, 17, 21, 4560, 576, 4763, 4258, 1114, 11921, 8421, 8422, 14925, 4504, 4556, 2396, 14895, 11923, 11931, 5433, 4975, 5624, 11933, 2]
+// Module ID: 14954
+// Function ID: 14955
+// Name: FamilyCenterModalAccept
+// Dependencies: [19, 17, 21, 4574, 576, 4777, 4271, 1114, 11947, 8449, 8450, 14951, 4518, 4570, 2396, 14921, 11949, 11957, 5447, 4989, 5638, 11959, 2]
 // Exports: default
 
-// Module 14928 (FamilyCenterModalAcceptScreen)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14954 (FamilyCenterModalAccept)
+import nativeDefault from "native" /* 576 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import NavigatorHeader from "NavigatorHeader" /* 5638 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = fn;
 function FamilyCenterModalAcceptScreen(otherUser) {
   otherUser = otherUser.otherUser;
-  let acceptLinkRequest;
-  const tmp = callback3();
-  const callback = React.useCallback(() => {
-    let arr = acceptLinkRequest(4763);
-    arr = arr.pop();
+  const tmp = closure_7();
+  const callback = noop.useCallback(() => {
+    acceptLinkRequest(4777).pop();
   }, []);
-  const callback1 = React.useCallback(() => {
+  const callback1 = noop.useCallback(() => {
     const intl = otherUser(1114).intl;
-    otherUser(4258).presentFailedToast(intl.string(otherUser(1114).t.R0RpRX));
+    otherUser(4271).presentFailedToast(intl.string(otherUser(1114).t.R0RpRX));
   }, []);
-  let obj = otherUser(11921);
-  const familyCenterActions = obj.useFamilyCenterActions({ onSuccess: callback, onError: callback1 });
-  acceptLinkRequest = familyCenterActions.acceptLinkRequest;
+  const familyCenterActions = otherUser(11947).useFamilyCenterActions({ onSuccess: callback, onError: callback1 });
+  const acceptLinkRequest = familyCenterActions.acceptLinkRequest;
   const isAcceptLoading = familyCenterActions.isAcceptLoading;
   const items = [acceptLinkRequest, otherUser.id];
-  const callback2 = React.useCallback(() => {
+  const callback2 = noop.useCallback(() => {
     acceptLinkRequest(otherUser.id);
   }, items);
-  obj = { children: null };
-  obj = { children: null };
-  obj1 = { style: tmp.header, children: null };
-  const obj2 = { otherUser, iconSrc: acceptLinkRequest(4504), iconStyles: tmp.icon };
-  const items1 = [callback(acceptLinkRequest(14925), obj2), , ];
-  const obj3 = { style: tmp.headerText, variant: "text-lg/bold", children: null };
+  const obj2 = { children: null };
+  const obj3 = { children: null };
+  const obj4 = { style: tmp.header, children: null };
+  const obj5 = { otherUser, iconSrc: null, iconStyles: null };
+  const obj = otherUser(11947);
+  obj5.iconSrc = acceptLinkRequest(4518);
+  obj5.iconStyles = tmp.icon;
+  const items1 = [closure_5(acceptLinkRequest(14951), obj5), , ];
+  const obj6 = { style: tmp.headerText, variant: "text-lg/bold", children: null };
   let intl = otherUser(1114).intl;
-  obj3[2] = intl.string(acceptLinkRequest(2396).rlNJwZ);
-  items1[1] = callback(otherUser(4556).Text, obj3);
-  items1[2] = callback(acceptLinkRequest(14895), { user: otherUser });
-  obj1[1] = items1;
-  const items2 = [callback2(View, obj1), callback(acceptLinkRequest(11923), {}), ];
-  const obj4 = { style: tmp.disclaimer, variant: "text-xs/normal", color: "text-default", children: null };
+  obj6.children = intl.string(acceptLinkRequest(2396).rlNJwZ);
+  items1[1] = closure_5(otherUser(4570).Text, obj6);
+  items1[2] = closure_5(acceptLinkRequest(14921), { user: otherUser });
+  obj4.children = items1;
+  const items2 = [closure_6(View, obj4), closure_5(acceptLinkRequest(11949), {}), ];
+  const obj7 = { style: tmp.disclaimer, variant: "text-xs/normal", color: "text-default", children: null };
   const intl2 = otherUser(1114).intl;
-  obj4[3] = intl2.format(acceptLinkRequest(2396).snlFqR, { username: otherUser.username });
-  items2[2] = callback(otherUser(4556).Text, obj4);
-  obj[0] = items2;
-  const items3 = [callback2(otherUser(8422).ModalContent, obj), ];
-  const obj6 = { children: null };
-  const obj7 = { children: null };
-  const obj8 = { variant: "primary", disabled: isAcceptLoading, loading: isAcceptLoading, text: null, onPress: null };
+  obj7.children = intl2.format(acceptLinkRequest(2396).snlFqR, { username: otherUser.username });
+  items2[2] = closure_5(otherUser(4570).Text, obj7);
+  obj3.children = items2;
+  const items3 = [closure_6(otherUser(8450).ModalContent, obj3), ];
+  const obj9 = { children: null };
+  const obj10 = { children: null };
+  const obj11 = { variant: "primary", disabled: isAcceptLoading, loading: isAcceptLoading, text: null, onPress: null };
   const intl3 = otherUser(1114).intl;
-  obj8[3] = intl3.string(acceptLinkRequest(2396)["wI/jo3"]);
-  obj8[4] = callback2;
-  const items4 = [callback(otherUser(4975).Button, obj8), ];
-  const obj9 = { variant: "tertiary", text: null, onPress: null };
+  obj11.text = intl3.string(acceptLinkRequest(2396)["wI/jo3"]);
+  obj11.onPress = callback2;
+  const items4 = [closure_5(otherUser(4989).Button, obj11), ];
+  const obj12 = { variant: "tertiary", text: null, onPress: null };
   const intl4 = otherUser(1114).intl;
-  obj9[1] = intl4.string(otherUser(1114).t["ETE/oC"]);
-  obj9[2] = acceptLinkRequest(4763).pop;
-  items4[1] = callback(otherUser(4975).Button, obj9);
-  obj7[0] = items4;
-  obj6[0] = callback2(otherUser(5433).ButtonGroup, obj7);
-  items3[1] = callback(otherUser(11931).ModalFooter, obj6);
-  obj[0] = items3;
-  return callback2(otherUser(8421).ModalScreen, obj);
+  obj12.text = intl4.string(otherUser(1114).t["ETE/oC"]);
+  obj12.onPress = acceptLinkRequest(4777).pop;
+  items4[1] = closure_5(otherUser(4989).Button, obj12);
+  obj10.children = items4;
+  obj9.children = closure_6(otherUser(5447).ButtonGroup, obj10);
+  items3[1] = closure_5(otherUser(11957).ModalFooter, obj9);
+  obj2.children = items3;
+  return closure_6(otherUser(8449).ModalScreen, obj2);
 }
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { header: null, headerText: null, icon: null, disclaimer: null };
-createCacheKey = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
-let obj1 = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { header: { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: nativeDefault.space.PX_16 }, headerText: null, icon: null, disclaimer: null };
+let obj3 = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: nativeDefault.space.PX_16 };
+obj2.headerText = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_4 };
+let obj5 = { transform: null, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 let items = [{ rotate: "45deg" }];
-createCacheKey[2] = { transform: items, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-let obj2 = { transform: items, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-createCacheKey[3] = { marginTop: ThemesDefault.space.PX_12 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { marginTop: ThemesDefault.space.PX_12 };
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterModalAccept.tsx");
+obj5.transform = items;
+obj2.icon = obj5;
+let obj4 = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_4 };
+obj2.disclaimer = { marginTop: nativeDefault.space.PX_12 };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterModalAccept.tsx");
 
 export default function FamilyCenterModalAccept(otherUser) {
   otherUser = otherUser.otherUser;
   const items = [otherUser];
-  const memo = React.useMemo(() => {
-    let obj = { ACCEPT: null };
-    obj = {
+  const memo = noop.useMemo(() => {
+    const obj = { ACCEPT: null };
+    const obj2 = {
       headerShown: true,
-      headerLeft: otherUser(closure_1_2[20]).getHeaderCloseButton(closure_1_1(closure_1_2[5]).pop),
+      headerLeft: NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop),
       headerTitle() {
         return null;
       },
       render() {
-        return closure_1_5(closure_1_8, { otherUser: closure_0 });
+        return closure_2_5(FamilyCenterModalAcceptScreen, { otherUser });
       }
     };
-    obj[0] = obj;
+    obj.ACCEPT = obj2;
     return obj;
   }, items);
   let obj = { initialRouteName: "ACCEPT", screens: memo, headerBackTitle: null };
   const intl = otherUser(1114).intl;
-  obj[2] = intl.string(otherUser(1114).t["13/7kX"]);
-  return callback(otherUser(11933).Modal, obj);
+  obj.headerBackTitle = intl.string(otherUser(1114).t["13/7kX"]);
+  return closure_5(otherUser(11959).Modal, obj);
 };

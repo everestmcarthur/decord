@@ -1,30 +1,25 @@
-// Module ID: 11588
-// Function ID: 11589
+// Module ID: 11614
+// Function ID: 11615
 // Name: handleMessagesLongPressChannel
-// Dependencies: [4705, 11589, 2]
+// Dependencies: [4719, 11615, 2]
 // Exports: handleMessagesLongPressChannel
 
-// Module 11588 (handleMessagesLongPressChannel)
-import set from "set" /* 2 */;
-import allowChannelAccess from "allowChannelAccess" /* 4705 */;
-import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 11589 */;
+// Module 11614 (handleMessagesLongPressChannel)
+import ChannelUtils from "ChannelUtils" /* 4719 */;
+import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 11615 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/messages/native/handlers/handleMessagesLongPressChannel.tsx");
+const result = size.fileFinishedImporting("modules/messages/native/handlers/handleMessagesLongPressChannel.tsx");
 
 export const handleMessagesLongPressChannel = function handleMessagesLongPressChannel(data) {
   ({ guildId, channelId, messageId, originalLink } = data.data);
   if (null != channelId) {
     if (originalLink == null) {
-      let obj = allowChannelAccess;
-      originalLink = obj.getChannelPermalink(guildId, channelId, messageId);
+      originalLink = ChannelUtils.getChannelPermalink(guildId, channelId, messageId);
     }
     if (null != originalLink) {
-      obj = { urlString: null, guildId: null, channelId: null, messageId: null };
-      obj[0] = originalLink;
-      obj[1] = guildId;
-      obj[2] = channelId;
-      obj[3] = messageId;
-      showLongPressURLActionSheetDefault(obj);
+      const obj2 = { urlString: originalLink, guildId, channelId, messageId };
+      showLongPressURLActionSheetDefault(obj2);
     }
   }
 };

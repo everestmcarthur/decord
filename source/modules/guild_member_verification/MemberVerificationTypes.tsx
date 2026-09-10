@@ -1,18 +1,18 @@
-// Module ID: 4384
-// Function ID: 4385
-// Name: MAX_RESULTS_PER_PAGE
+// Module ID: 4398
+// Function ID: 4399
+// Name: MemberVerificationTypes
 // Dependencies: [2]
 // Exports: hasNonTermsFormField, isTermsFormField
 
-// Module 4384 (MAX_RESULTS_PER_PAGE)
-import set from "set" /* 2 */;
+// Module 4398 (MemberVerificationTypes)
+import size from "module_2" /* 2 */;
 
-const obj = { TERMS: "TERMS", TEXT_INPUT: "TEXT_INPUT", PARAGRAPH: "PARAGRAPH", MULTIPLE_CHOICE: "MULTIPLE_CHOICE", VERIFICATION: "VERIFICATION" };
-const result = set.fileFinishedImporting("modules/guild_member_verification/MemberVerificationTypes.tsx");
+const VerificationFormFieldTypes = { TERMS: "TERMS", TEXT_INPUT: "TEXT_INPUT", PARAGRAPH: "PARAGRAPH", MULTIPLE_CHOICE: "MULTIPLE_CHOICE", VERIFICATION: "VERIFICATION" };
+const result = size.fileFinishedImporting("modules/guild_member_verification/MemberVerificationTypes.tsx");
 
 export const MAX_RESULTS_PER_PAGE = 25;
 export const MAX_VISIBLE_PAGES = 4;
-export const VerificationFormFieldTypes = obj;
+export { VerificationFormFieldTypes };
 export const UserVerificationFieldPlatforms = { EMAIL: "email", PHONE: "phone" };
 export const GuildJoinRequestSortOrders = { TIMESTAMP_DESC: "NEWEST", TIMESTAMP_ASC: "OLDEST" };
 export const GuildJoinRequestApplicationStatuses = { STARTED: "STARTED", SUBMITTED: "SUBMITTED", REJECTED: "REJECTED", APPROVED: "APPROVED" };

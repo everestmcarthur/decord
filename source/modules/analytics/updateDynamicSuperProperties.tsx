@@ -1,21 +1,20 @@
-// Module ID: 17284
-// Function ID: 17285
+// Module ID: 17315
+// Function ID: 17316
 // Name: updateDynamicSuperProperties
-// Dependencies: [7461, 1250, 11305, 2]
+// Dependencies: [7475, 1250, 11332, 2]
 // Exports: updateDynamicSuperProperties
 
-// Module 17284 (updateDynamicSuperProperties)
-import set from "set" /* 2 */;
-import encodeProperties from "encodeProperties" /* 1250 */;
-import trackHeartbeat from "trackHeartbeat" /* 7461 */;
-import _modDef11305 from "module_11305" /* 11305 */;
+// Module 17315 (updateDynamicSuperProperties)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7475 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 11332 */;
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("modules/analytics/updateDynamicSuperProperties.tsx");
+let result = size.fileFinishedImporting("modules/analytics/updateDynamicSuperProperties.tsx");
 
 export const updateDynamicSuperProperties = function updateDynamicSuperProperties() {
-  let obj = trackHeartbeat;
-  const activeSessionUnsafe = obj.getActiveSessionUnsafe();
-  const superProperties = encodeProperties.getSuperProperties();
+  const activeSessionUnsafe = SessionHeartbeatScheduler.getActiveSessionUnsafe();
+  const superProperties = discord_common_AnalyticsUtils.getSuperProperties();
   let uuid;
   if (activeSessionUnsafe != null) {
     uuid = activeSessionUnsafe.uuid;
@@ -24,22 +23,20 @@ export const updateDynamicSuperProperties = function updateDynamicSuperPropertie
   if (superProperties != null) {
     prop = superProperties.client_heartbeat_session_id;
   }
-  obj = {};
+  const obj3 = {};
   if (uuid !== prop) {
-    obj.client_heartbeat_session_id = uuid;
+    obj3.client_heartbeat_session_id = uuid;
   }
-  const obj2 = encodeProperties;
-  const tmp = require;
-  const state = _modDef11305.getState();
+  const state = DiscordAppStateDefault.getState();
   let client_app_state;
   if (superProperties != null) {
     client_app_state = superProperties.client_app_state;
   }
   if (state !== client_app_state) {
-    obj.client_app_state = state;
+    obj3.client_app_state = state;
   }
-  if (Object.keys(obj).length > 0) {
-    const result = encodeProperties.extendSuperProperties(obj);
-    const tmpResult = encodeProperties;
+  if (Object.keys(obj3).length > 0) {
+    const result = discord_common_AnalyticsUtils.extendSuperProperties(obj3);
+    const tmpResult = discord_common_AnalyticsUtils;
   }
 };

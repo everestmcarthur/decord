@@ -1,62 +1,60 @@
-// Module ID: 15568
-// Function ID: 15569
-// Name: UserSettingsDebugLogsFiltersActionSheet
-// Dependencies: [19, 21, 7198, 7149, 1114, 5687, 5605, 5685, 5688, 1178, 4527, 2]
+// Module ID: 15598
+// Function ID: 15599
+// Name: UserSettingsDebugLogsActionSheet
+// Dependencies: [19, 21, 7211, 7163, 1114, 5701, 5619, 5699, 5702, 1178, 4541, 2]
 // Exports: openUserSettingsDebugLogsFiltersActionSheet
 
-// Module 15568 (UserSettingsDebugLogsFiltersActionSheet)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
-import TableRowInner from "TableRowInner" /* 5605 */;
-import context from "context" /* 5685 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
-import TableRadioRow from "TableRadioRow" /* 5688 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 7149 */;
-import ActionSheet from "ActionSheet" /* 7198 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 15598 (UserSettingsDebugLogsActionSheet)
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import TableRow from "TableRow" /* 5619 */;
+import TableRadioGroup from "TableRadioGroup" /* 5699 */;
+import TableRowGroup from "TableRowGroup" /* 5701 */;
+import TableRadioRow from "TableRadioRow" /* 5702 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7163 */;
+import ActionSheet from "ActionSheet" /* 7211 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function UserSettingsDebugLogsFiltersActionSheet(arg0) {
   ({ sortOrder, onSortOrderChanged, onRefresh } = arg0);
-  let obj = { header: null, children: null };
-  obj = { title: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["+B9e11"]);
-  obj[0] = callback(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj);
-  obj = { hasIcons: false, children: null };
-  obj1 = { label: null, onPress: null };
-  const intl2 = getSystemLocale.intl;
-  obj1[0] = intl2.string(getSystemLocale.t.wzzjk9);
-  obj1[1] = onRefresh;
-  obj[1] = callback(TableRowInner.TableRow, obj1);
-  const items = [callback(TableRowGroupTitle.TableRowGroup, obj), , ];
-  const obj2 = { title: null, defaultValue: null, onChange: null, hasIcons: false, children: null };
-  const intl3 = getSystemLocale.intl;
-  obj2[0] = intl3.string(getSystemLocale.t.gePre2);
-  obj2[1] = sortOrder;
-  obj2[2] = onSortOrderChanged;
-  const obj3 = { label: null, value: "newest" };
-  const intl4 = getSystemLocale.intl;
-  obj3[0] = intl4.string(getSystemLocale.t.eoXe0r);
-  const items1 = [callback(TableRadioRow.TableRadioRow, obj3), ];
-  const obj4 = { label: null, value: "oldest" };
-  const intl5 = getSystemLocale.intl;
-  obj4[0] = intl5.string(getSystemLocale.t.mmeWUF);
-  items1[1] = callback(TableRadioRow.TableRadioRow, obj4);
-  obj2[4] = items1;
-  items[1] = callback2(context.TableRadioGroup, obj2);
-  items[2] = callback(Button.Spacer, { size: 0 });
-  obj[1] = items;
-  return callback2(ActionSheet.ActionSheet, obj);
+  const obj = { header: null, children: null };
+  const obj2 = { title: null };
+  const intl = util.intl;
+  obj2.title = intl.string(util.t["+B9e11"]);
+  obj.header = React3(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
+  const obj3 = { hasIcons: false, children: null };
+  const obj4 = { label: null, onPress: null };
+  const intl2 = util.intl;
+  obj4.label = intl2.string(util.t.wzzjk9);
+  obj4.onPress = onRefresh;
+  obj3.children = React3(TableRow.TableRow, obj4);
+  const items = [React3(TableRowGroup.TableRowGroup, obj3), , ];
+  const obj5 = { title: null, defaultValue: null, onChange: null, hasIcons: false, children: null };
+  const intl3 = util.intl;
+  obj5.title = intl3.string(util.t.gePre2);
+  obj5.defaultValue = sortOrder;
+  obj5.onChange = onSortOrderChanged;
+  const obj6 = { label: null, value: "newest" };
+  const intl4 = util.intl;
+  obj6.label = intl4.string(util.t.eoXe0r);
+  const items1 = [React3(TableRadioRow.TableRadioRow, obj6), ];
+  const obj7 = { label: null, value: "oldest" };
+  const intl5 = util.intl;
+  obj7.label = intl5.string(util.t.mmeWUF);
+  items1[1] = React3(TableRadioRow.TableRadioRow, obj7);
+  obj5.children = items1;
+  items[1] = React4(TableRadioGroup.TableRadioGroup, obj5);
+  items[2] = React3(native.Spacer, { size: 0 });
+  obj.children = items;
+  return React4(ActionSheet.ActionSheet, obj);
 }
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/user_settings/dev_tools/native/UserSettingsDebugLogsActionSheet.tsx");
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/dev_tools/native/UserSettingsDebugLogsActionSheet.tsx");
 
 export const openUserSettingsDebugLogsFiltersActionSheet = function openUserSettingsDebugLogsFiltersActionSheet(arg0) {
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = { default: UserSettingsDebugLogsFiltersActionSheet };
-  obj.openLazy(Promise.resolve(obj), "UserSettingsDebugLogsFiltersActionSheet", arg0);
+  ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: UserSettingsDebugLogsFiltersActionSheet }), "UserSettingsDebugLogsFiltersActionSheet", arg0);
 };

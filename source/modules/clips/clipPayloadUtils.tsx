@@ -1,19 +1,22 @@
-// Module ID: 5131
-// Function ID: 5132
-// Name: getClipCreatedAt
-// Dependencies: [32, 5132, 1074, 4585, 5133, 1242, 2]
+// Module ID: 5145
+// Function ID: 5146
+// Name: clipPayloadUtils
+// Dependencies: [32, 5146, 1074, 4599, 5147, 1242, 2]
 // Exports: getClipCreatedAt, getClipEventsTimeline, getClipParticipantIds, getClipSyncTimestamp
 
-// Module 5131 (getClipCreatedAt)
-import closure_3 from "_slicedToArray" /* 32 */;
-import result from "result" /* 5132 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import { SpeakingFlags } from "DesktopSources" /* 4585 */;
+// Module 5145 (clipPayloadUtils)
+import _slicedToArray from "module_32" /* 32 */;
 
-const require = arg1;
-({ CLIPS_MAX_PARTICIPANTS: c4, CLIPS_MAX_TIMELINE_EVENTS: c5, ClipSignalTypes: closure_6, GameEventType: error, CLIP_RUNTIME: closure_8 } = result);
-let obj = { UNKNOWN: 0, [0]: "UNKNOWN", KILL: 1, [1]: "KILL", MULTIKILL: 2, [2]: "MULTIKILL", DEATH: 3, [3]: "DEATH" };
-result = require("set").fileFinishedImporting("modules/clips/clipPayloadUtils.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const ClipsConstants = fn(5146);
+({ CLIPS_MAX_PARTICIPANTS: closure_4, CLIPS_MAX_TIMELINE_EVENTS: hasOwnProperty, ClipSignalTypes: metroRequire, GameEventType: closure_7, CLIP_RUNTIME: closure_8 } = ClipsConstants);
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const SpeakingFlags = fn(4599).SpeakingFlags;
+const ServerClipGameEventType = { UNKNOWN: 0, [0]: "UNKNOWN", KILL: 1, [1]: "KILL", MULTIKILL: 2, [2]: "MULTIKILL", DEATH: 3, [3]: "DEATH" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/clips/clipPayloadUtils.tsx");
 
 export const getClipCreatedAt = function getClipCreatedAt(createdAt) {
   return new Date(createdAt).toISOString();
@@ -36,11 +39,11 @@ export const getClipSyncTimestamp = function getClipSyncTimestamp(clip) {
   }
 };
 export const getClipParticipantIds = function getClipParticipantIds(users) {
-  return users.slice(0, closure_4);
+  return users.slice(0, React4);
 };
-export const ServerClipGameEventType = obj;
+export { ServerClipGameEventType };
 export const getClipEventsTimeline = function getClipEventsTimeline(clip) {
-  const _require = clip;
+  _require = clip;
   const timeline = clip.timeline;
   let num;
   if (timeline != null) {
@@ -58,14 +61,13 @@ export const getClipEventsTimeline = function getClipEventsTimeline(clip) {
     if (null != timestamp) {
       let editMetadata = clip.editMetadata;
       if (editMetadata == null) {
-        obj = { start: 0, end: null };
-        obj[1] = clip.length / 1000;
+        const obj = { start: 0, end: clip.length / 1000 };
         editMetadata = obj;
       }
       const diff = clip.decision.timestamp - clip.length;
       const sum = diff + 1000 * editMetadata.end;
       const sum1 = diff + 1000 * editMetadata.start;
-      closure_1 = _require(5133).isGameEventsOnPlayerEnabled("getClipEventsTimeline");
+      closure_1 = require("GameEventsOnPlayerExperiment").isGameEventsOnPlayerEnabled("getClipEventsTimeline");
       const timeline1 = clip.timeline;
       const found = timeline1.filter((signal) => {
         editMetadata = editMetadata.editMetadata;
@@ -75,12 +77,12 @@ export const getClipEventsTimeline = function getClipEventsTimeline(clip) {
         }
         let tmp2 = false !== voiceAudio;
         if (tmp2) {
-          tmp2 = signal.signal.type === closure_1_6.SPEAKING;
+          tmp2 = signal.signal.type === constants.SPEAKING;
         }
         if (!tmp2) {
           let tmp4 = closure_1;
           if (closure_1) {
-            tmp4 = signal.signal.type === closure_1_6.GAME_EVENT;
+            tmp4 = signal.signal.type === constants.GAME_EVENT;
           }
           tmp2 = tmp4;
         }
@@ -95,32 +97,24 @@ export const getClipEventsTimeline = function getClipEventsTimeline(clip) {
         new Map();
         for (const item10061 of sorted) {
           let tmp16 = item10061;
-          let tmp17 = constants;
-          let tmp18 = constants;
           if (item10061.signal.type !== constants.SPEAKING) {
             continue;
           } else {
-            let tmp19 = item10061;
             if (tmp16.timestamp >= sum1) {
-              let tmp23 = obj5;
               obj5.return();
               break;
             } else {
-              let tmp20 = item10061;
-              let tmp21 = SpeakingFlags;
               let result = map.set(tmp16.signal.userId, (tmp16.signal.speakingFlags & SpeakingFlags.VOICE) === SpeakingFlags.VOICE);
             }
             break;
           }
-          let tmp25 = map;
-          let num4 = 2;
           let tmp24 = __exception;
           tmp10[Symbol.iterator]().return();
           throw tmp24;
         }
         const tmp10 = map;
       }
-      const obj2 = _require(5133);
+      const obj2 = require("GameEventsOnPlayerExperiment");
     }
   }
 };

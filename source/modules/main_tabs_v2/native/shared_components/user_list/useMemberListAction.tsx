@@ -1,26 +1,30 @@
-// Module ID: 11594
-// Function ID: 11595
+// Module ID: 11620
+// Function ID: 11621
 // Name: useMemberListAction
-// Dependencies: [32, 19, 17, 1957, 4199, 4209, 1371, 10218, 1074, 21, 4560, 563, 9743, 7049, 11595, 11604, 11605, 1114, 10036, 10037, 4380, 1943, 11607, 11612, 7380, 11613, 1874, 9825, 8600, 2]
+// Dependencies: [32, 19, 17, 1957, 4212, 4222, 1371, 10245, 1074, 21, 4574, 563, 9770, 7063, 11621, 11630, 11631, 1114, 10063, 10064, 4394, 1943, 11633, 11638, 7394, 11639, 1874, 9852, 8628, 2]
 // Exports: default
 
-// Module 11594 (useMemberListAction)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "ensureGuildLoaded" /* 1957 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_8 from "markAllUserIdListsStale" /* 4209 */;
-import closure_9 from "mergeGuildAvatar" /* 1371 */;
-import ME from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11620 (useMemberListAction)
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11621 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-({ Permissions: c10, AnalyticsSections: unpackModuleId, InstantInviteSources: closure_12 } = ME);
-let closure_14 = { listActionRenderer: "jsxs", listActionHeight: "channel" };
-let closure_15 = createCacheKey.createStyles({ wrapper: { paddingTop: require("PX_24").USERS_LIST_PADDING_BETWEEN_SECTIONS } });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const View = fn(17).View;
+const Constants = fn(1074);
+({ Permissions: c10, AnalyticsSections: closure_11, InstantInviteSources: closure_12 } = Constants);
+const jsx = fn(21).jsx;
+let closure_14 = { listActionRenderer: "Array", listActionHeight: "PX_16" };
+const createStyles = fn(4574);
+let closure_15 = createStyles.createStyles({ wrapper: { paddingTop: fn(10245).USERS_LIST_PADDING_BETWEEN_SECTIONS } });
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx");
 
 export default function useMemberListAction(channel) {
   channel = channel.channel;
@@ -28,19 +32,18 @@ export default function useMemberListAction(channel) {
   if (flag === undefined) {
     flag = false;
   }
-  importDefault = undefined;
   let stateFromStores;
-  let callback;
-  let React;
+  _slicedToArray = undefined;
+  noop = undefined;
   let flag2;
   let flag3;
   let id;
-  let friend;
-  let first;
-  let constants;
-  callback = undefined;
+  RelationshipStore = undefined;
+  first = undefined;
+  constants = undefined;
+  let onLayout;
   let callback1;
-  let tmp = callback2();
+  let tmp = closure_15();
   importDefault = tmp;
   const items = [first];
   stateFromStores = channel(stateFromStores[11]).useStateFromStores(items, () => {
@@ -50,7 +53,7 @@ export default function useMemberListAction(channel) {
     }
     let tmp2 = null;
     if (isDMResult) {
-      const user = first.getUser(obj.getRecipientId());
+      const user = UserStore.getUser(obj.getRecipientId());
       let username;
       if (user != null) {
         username = user.username;
@@ -64,18 +67,18 @@ export default function useMemberListAction(channel) {
     canResult = channel(tmp3[12]).isPrivateGuildChannel(channel);
     const tmp2Result = channel(tmp3[12]);
   }
-  callback = canResult;
+  _slicedToArray = canResult;
   let tmp7 = null != channel && !flag;
   if (tmp7) {
     if (canResult) {
       tmp7 = canResult;
     } else if (channel.isDM()) {
-      let isFriendResult = friend.isFriend(channel.getRecipientId());
+      let isFriendResult = RelationshipStore.isFriend(channel.getRecipientId());
     } else {
       isFriendResult = channel.isMultiUserDM() || id.can(constants.CREATE_INSTANT_INVITE, channel);
     }
   }
-  React = tmp7;
+  noop = tmp7;
   flag2 = undefined;
   if (channel != null) {
     flag2 = channel.isDM();
@@ -94,14 +97,12 @@ export default function useMemberListAction(channel) {
   if (channel != null) {
     id = channel.id;
   }
-  const tmp13 = importDefault(stateFromStores[13])();
-  friend = tmp13;
-  const tmp14 = callback(React.useState(undefined), 2);
-  first = tmp14[0];
-  constants = tmp14[1];
-  callback = React.useCallback((nativeEvent) => {
+  const tmp13 = require("useScaledRowHeight")();
+  RelationshipStore = tmp13;
+  [first, constants] = noop.useState(undefined);
+  onLayout = noop.useCallback((nativeEvent) => {
     const height = nativeEvent.nativeEvent.layout.height;
-    callback((arg0) => {
+    closure_10((arg0) => {
       let tmp = arg0;
       if (arg0 == null) {
         tmp = height;
@@ -110,118 +111,110 @@ export default function useMemberListAction(channel) {
     });
   }, []);
   const items1 = [id];
-  callback1 = React.useCallback(() => {
+  callback1 = noop.useCallback(() => {
     if (null != id) {
-      lib(stateFromStores[14])(tmp, callback.MEMBER_LIST);
+      openGroupDMAddMembersDefault(tmp, constants2.MEMBER_LIST);
     }
   }, items1);
-  const items2 = [canResult, id, callback1, flag2, flag3, first, callback, stateFromStores, tmp13, tmp7, tmp];
-  return React.useMemo(() => {
+  const items2 = [canResult, id, callback1, flag2, flag3, first, onLayout, stateFromStores, tmp13, tmp7, tmp];
+  return noop.useMemo(() => {
     if (null != id) {
       if (c4) {
         if (flag2) {
-          let obj = { iconSource: null, IconComponent: null, label: null, sublabel: null, handlePress: null };
-          obj[0] = lib(stateFromStores[15]);
-          obj[1] = channel(stateFromStores[16]).ChatPlusIcon;
+          let obj2 = { iconSource: closure_1(stateFromStores[15]), IconComponent: channel(stateFromStores[16]).ChatPlusIcon, label: null, sublabel: null, handlePress: null };
           const intl4 = channel(stateFromStores[17]).intl;
-          obj[2] = intl4.string(channel(stateFromStores[17]).t["3hF1W4"]);
+          obj2.label = intl4.string(channel(stateFromStores[17]).t["3hF1W4"]);
           let formatToPlainStringResult;
           if (null != stateFromStores) {
             const intl5 = channel(stateFromStores[17]).intl;
-            obj = { recipient: null };
-            obj[0] = tmp35;
-            formatToPlainStringResult = intl5.formatToPlainString(channel(stateFromStores[17]).t["Sh/xNN"], obj);
+            let obj3 = { recipient: tmp35 };
+            formatToPlainStringResult = intl5.formatToPlainString(channel(stateFromStores[17]).t["Sh/xNN"], obj3);
           }
-          obj[3] = formatToPlainStringResult;
-          obj[4] = callback1;
-          let tmp12 = obj;
+          obj2.sublabel = formatToPlainStringResult;
+          obj2.handlePress = callback1;
+          let tmp12 = obj2;
         } else {
-          obj = { iconSource: null, IconComponent: null, label: null, handlePress: null };
+          let obj = { iconSource: null, IconComponent: null, label: null, handlePress: null };
           if (flag3) {
-            obj[0] = lib(stateFromStores[18]);
-            obj[1] = channel(stateFromStores[19]).GroupPlusIcon;
+            obj.iconSource = closure_1(stateFromStores[18]);
+            obj.IconComponent = channel(stateFromStores[19]).GroupPlusIcon;
             const intl3 = channel(stateFromStores[17]).intl;
-            obj[2] = intl3.string(channel(stateFromStores[17]).t["LR+Ptf"]);
-            obj[3] = function handlePress() {
-              if (null != closure_1_6.getChannel(closure_7)) {
-                const groupDMAddMembersAction = callback(closure_1_2[14]).getGroupDMAddMembersAction(closure_7, closure_1_11.MEMBER_LIST);
+            obj.label = intl3.string(channel(stateFromStores[17]).t["LR+Ptf"]);
+            obj.handlePress = function handlePress() {
+              if (null != flag3.getChannel(id)) {
+                const groupDMAddMembersAction = channel(stateFromStores[14]).getGroupDMAddMembersAction(id, callback.MEMBER_LIST);
                 if ("open" === groupDMAddMembersAction) {
-                  let tmp8Result = tmp8(tmp9[20]);
                   if (tmp8Result.UNSAFE_isDismissibleContentDismissed(tmp8(tmp9[21]).DismissibleContent.GDM_INVITE_REMINDER)) {
-                    callback3();
+                    onClick();
                   } else {
-                    const obj = { onClick: null };
-                    obj[0] = callback3;
-                    callback2(tmp9[22])(obj);
+                    const obj = { onClick };
+                    closure_1(tmp9[22])(obj);
                   }
+                  tmp8Result = tmp8(tmp9[20]);
                 } else {
-                  tmp8Result = tmp8(tmp9[14]);
-                  const result = tmp8Result.showGroupDMAddMembersRoadblock(groupDMAddMembersAction, tmp10.MEMBER_LIST);
+                  const result = tmp8(tmp9[14]).showGroupDMAddMembersRoadblock(groupDMAddMembersAction, tmp10.MEMBER_LIST);
+                  const tmp8Result2 = tmp8(tmp9[14]);
                 }
-                const obj4 = callback(closure_1_2[14]);
-                tmp10 = closure_1_11;
+                const obj4 = channel(stateFromStores[14]);
+                tmp10 = callback;
               }
             };
             tmp12 = obj;
           } else if (c3) {
-            obj[0] = tmp4(tmp5[23]);
-            obj[1] = channel(stateFromStores[24]).SettingsIcon;
+            obj.iconSource = tmp4(tmp5[23]);
+            obj.IconComponent = channel(stateFromStores[24]).SettingsIcon;
             const intl2 = channel(stateFromStores[17]).intl;
-            obj[2] = intl2.string(channel(stateFromStores[17]).t.z9Mqln);
-            obj[3] = function handlePress() {
-              channel = closure_1_6.getChannel(closure_7);
+            obj.label = intl2.string(channel(stateFromStores[17]).t.z9Mqln);
+            obj.handlePress = function handlePress() {
+              channel = flag3.getChannel(id);
               if (null != channel) {
-                const result = callback(closure_1_2[25]).openChannelMembersActionSheet(channel.id, channel.guild_id);
-                const obj = callback(closure_1_2[25]);
+                const result = channel(stateFromStores[25]).openChannelMembersActionSheet(channel.id, channel.guild_id);
+                const obj = channel(stateFromStores[25]);
               }
             };
             tmp12 = obj;
           } else {
-            obj[0] = tmp4(tmp5[18]);
-            obj[1] = channel(stateFromStores[19]).GroupPlusIcon;
+            obj.iconSource = tmp4(tmp5[18]);
+            obj.IconComponent = channel(stateFromStores[19]).GroupPlusIcon;
             const intl = channel(stateFromStores[17]).intl;
-            obj[2] = intl.string(channel(stateFromStores[17]).t["Ab/6S0"]);
-            obj[3] = function handlePress() {
-              channel = closure_1_6.getChannel(closure_7);
+            obj.label = intl.string(channel(stateFromStores[17]).t["Ab/6S0"]);
+            obj.handlePress = function handlePress() {
+              channel = flag3.getChannel(id);
               if (null != channel) {
-                let obj = callback(closure_1_2[26]);
-                const result = obj.dismissGlobalKeyboard();
-                obj = { source: null };
-                obj[0] = closure_1_12.CHAT_SIDEBAR;
-                const result1 = callback(closure_1_2[27]).showInstantInviteActionSheet(channel, obj);
-                const obj2 = callback(closure_1_2[27]);
+                const result = channel(stateFromStores[26]).dismissGlobalKeyboard();
+                const obj = channel(stateFromStores[26]);
+                const obj3 = { source: callback1.CHAT_SIDEBAR };
+                const result1 = channel(stateFromStores[27]).showInstantInviteActionSheet(channel, obj3);
+                const obj2 = channel(stateFromStores[27]);
               }
             };
             tmp12 = obj;
           }
         }
-        obj1 = { style: null, onLayout: null, children: null };
-        obj1[0] = lib.wrapper;
-        obj1[1] = callback;
+        let obj4 = { style: closure_1.wrapper, onLayout, children: null };
         ({ label, iconSource, IconComponent, handlePress, sublabel } = tmp12);
-        let obj2 = { icon: null, onPress: null, label: null, subLabel: null, arrow: true };
-        const obj3 = { source: null, IconComponent: null };
-        obj3[0] = iconSource;
-        obj3[1] = IconComponent;
-        obj2[0] = closure_1_13(channel(stateFromStores[28]).RowButton.Icon, obj3);
-        obj2[1] = handlePress;
-        obj2[2] = label;
-        obj2[3] = sublabel;
-        obj1[2] = closure_1_13(channel(stateFromStores[28]).RowButton, obj2);
-        closure_0 = closure_1_13(flag2, obj1);
-        lib = closure_8 + lib.wrapper.paddingTop;
-        let obj4 = { listActionRenderer: null, listActionHeight: null };
-        obj4[0] = function listActionRenderer() {
-          return closure_0;
+        const obj5 = { icon: null, onPress: null, label: null, subLabel: null, arrow: true };
+        const obj6 = { source: iconSource, IconComponent };
+        obj5.icon = jsx(channel(stateFromStores[28]).RowButton.Icon, { source: iconSource, IconComponent });
+        obj5.onPress = handlePress;
+        obj5.label = label;
+        obj5.subLabel = sublabel;
+        obj4.children = jsx(channel(stateFromStores[28]).RowButton, { icon: null, onPress: null, label: null, subLabel: null, arrow: true });
+        closure_0 = <flag2 style={closure_1.wrapper} onLayout={onLayout}>{null}</flag2>;
+        closure_1 = closure_8 + closure_1.wrapper.paddingTop;
+        const obj7 = {
+          listActionRenderer() {
+                return closure_0;
+              },
+          listActionHeight() {
+                let tmp = first;
+                if (first == null) {
+                  tmp = closure_1;
+                }
+                return tmp;
+              }
         };
-        obj4[1] = function listActionHeight() {
-          let tmp = closure_1_9;
-          if (closure_1_9 == null) {
-            tmp = closure_1;
-          }
-          return tmp;
-        };
-        return obj4;
+        return obj7;
       }
     }
     return closure_1_14;

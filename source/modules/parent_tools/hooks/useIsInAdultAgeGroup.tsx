@@ -1,17 +1,18 @@
-// Module ID: 8651
-// Function ID: 8652
+// Module ID: 8679
+// Function ID: 8680
 // Name: useIsInAdultAgeGroup
-// Dependencies: [7537, 504, 2]
+// Dependencies: [7551, 504, 2]
 // Exports: default
 
-// Module 8651 (useIsInAdultAgeGroup)
+// Module 8679 (useIsInAdultAgeGroup)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "freshTeenActivityWithMap" /* 7537 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7551 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useIsInAdultAgeGroup.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useIsInAdultAgeGroup.tsx");
 
 export default function useIsInAdultAgeGroup() {
-  const items = [closure_2];
+  const items = [FamilyCenterStore];
   return "adult" === initialize.useStateFromStores(items, () => ageGroup.getAgeGroup());
 };

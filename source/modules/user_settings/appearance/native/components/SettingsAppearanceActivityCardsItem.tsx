@@ -1,30 +1,45 @@
-// Module ID: 15295
-// Function ID: 15296
-// Name: ActivityCardsItem
-// Dependencies: [19, 21, 8879, 576, 15296, 2]
+// Module ID: 15324
+// Function ID: 15325
+// Name: SettingsAppearanceActivityCardsItem
+// Dependencies: [19, 21, 8906, 576, 15325, 2]
 // Exports: default
 
-// Module 15295 (ActivityCardsItem)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 15324 (SettingsAppearanceActivityCardsItem)
+import nativeDefault from "native" /* 576 */;
+import SettingsAppearanceActivityCardItemDefault from "SettingsAppearanceActivityCardItem" /* 15325 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceActivityCardsItem.tsx");
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceActivityCardsItem.tsx");
 
 export default function ActivityCardsItem(animatedStyles) {
   animatedStyles = animatedStyles.animatedStyles;
-  let obj = { contentContainerStyle: null, data: null, renderItem: null, keyExtractor: null, showsHorizontalScrollIndicator: false, horizontal: true };
-  obj = { paddingVertical: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 };
-  obj[0] = obj;
-  obj[1] = animatedStyles.cards;
-  obj[2] = function renderItem(item) {
-    const merged = Object.assign(item.item);
-    return closure_1_3(closure_1_1(closure_1_2[4]), { animatedStyles });
+  const obj = {
+    contentContainerStyle: { paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 },
+    data: animatedStyles.cards,
+    renderItem(item) {
+      const merged = Object.assign(item.item);
+      return jsx(SettingsAppearanceActivityCardItemDefault, { animatedStyles });
+    },
+    keyExtractor(title) {
+      return title.title;
+    },
+    showsHorizontalScrollIndicator: false,
+    horizontal: true
   };
-  obj[3] = function keyExtractor(title) {
-    return title.title;
-  };
-  return jsx(animatedStyles(8879).FlashList, { paddingVertical: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 });
+  return jsx(animatedStyles(8906).FlashList, {
+    contentContainerStyle: { paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 },
+    data: animatedStyles.cards,
+    renderItem(item) {
+      const merged = Object.assign(item.item);
+      return jsx(SettingsAppearanceActivityCardItemDefault, { animatedStyles });
+    },
+    keyExtractor(title) {
+      return title.title;
+    },
+    showsHorizontalScrollIndicator: false,
+    horizontal: true
+  });
 };

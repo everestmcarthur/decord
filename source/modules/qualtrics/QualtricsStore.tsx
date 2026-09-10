@@ -1,33 +1,32 @@
-// Module ID: 4755
-// Function ID: 4756
-// Name: map
+// Module ID: 4769
+// Function ID: 4770
+// Name: QualtricsStore
 // Dependencies: [504, 573, 2]
 
-// Module 4755 (map)
+// Module 4769 (QualtricsStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
-let obj = { surveys: new Map() };
+const obj = { surveys: new Map() };
 const Store = initializeDefault.Store;
 class QualtricsStore extends Store {
 }
 QualtricsStore.prototype["getSurvey"] = function getSurvey(arg0) {
   const surveys = obj.surveys;
-  let value = surveys.get(arg0);
+  value = surveys.get(arg0);
   if (value == null) {
     value = null;
   }
   return value;
 };
 QualtricsStore.displayName = "QualtricsStore";
-obj = {
+const qualtricsStore = new QualtricsStore(DispatcherDefault, {
   QUALTRICS_SURVEY_FETCH_SUCCESS: function handleSurveyFetchSuccess(surveyId) {
     const surveys = obj.surveys;
     const result = surveys.set(surveyId.surveyId, surveyId.surveyDetails);
   }
-};
-const qualtricsStore = new QualtricsStore(dispatcherDefault, obj);
-const map = new Map();
-let result = require("set").fileFinishedImporting("modules/qualtrics/QualtricsStore.tsx");
+});
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/qualtrics/QualtricsStore.tsx");
 
 export default qualtricsStore;

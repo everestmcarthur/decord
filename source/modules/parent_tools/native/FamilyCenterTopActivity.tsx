@@ -1,122 +1,115 @@
-// Module ID: 14899
-// Function ID: 14900
+// Module ID: 14925
+// Function ID: 14926
 // Name: FamilyCenterTopActivity
-// Dependencies: [19, 17, 1371, 7537, 21, 4560, 576, 563, 4527, 14900, 1896, 14901, 9055, 1114, 2396, 4556, 1178, 5584, 2]
+// Dependencies: [19, 17, 1371, 7551, 21, 4574, 576, 563, 4541, 14926, 1896, 14927, 9082, 1114, 2396, 4570, 1178, 5598, 2]
 // Exports: default
 
-// Module 14899 (FamilyCenterTopActivity)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1371 */;
-import closure_6 from "freshTeenActivityWithMap" /* 7537 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14925 (FamilyCenterTopActivity)
+import nativeDefault from "native" /* 576 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import GuildIcon from "GuildIcon" /* 5598 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7551 */;
 
-const require = arg1;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, section: null, avatarList: null, touchableHitBox: null, guildAvatar: null, guildAvatarText: null };
-createCacheKey = { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_8 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1 };
-createCacheKey[2] = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_4, flexWrap: "wrap", paddingTop: ThemesDefault.space.PX_12, paddingBottom: ThemesDefault.space.PX_12 };
-createCacheKey[3] = { width: "100%", alignItems: "flex-start" };
-let obj1 = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_4, flexWrap: "wrap", paddingTop: ThemesDefault.space.PX_12, paddingBottom: ThemesDefault.space.PX_12 };
-createCacheKey[4] = { borderRadius: ThemesDefault.radii.md, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST };
-createCacheKey[5] = { fontSize: 12 };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { borderRadius: ThemesDefault.radii.md, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST };
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterTopActivity.tsx");
+const require = globalThis.__r;
+const GuildIconDefault = GuildIcon;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+const obj2 = { container: { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 }, section: { flex: 1 }, avatarList: null, touchableHitBox: null, guildAvatar: null, guildAvatarText: null };
+let obj3 = { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 };
+obj2.avatarList = { display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_4, flexWrap: "wrap", paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_12 };
+obj2.touchableHitBox = { width: "100%", alignItems: "flex-start" };
+let obj4 = { display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_4, flexWrap: "wrap", paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_12 };
+obj2.guildAvatar = { borderRadius: nativeDefault.radii.md, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST };
+obj2.guildAvatarText = { fontSize: 12 };
+let closure_9 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterTopActivity.tsx");
 
 export default function FamilyCenterTopActivity() {
-  const tmp = callback2();
-  const _require = tmp;
-  let obj = _require(stateFromStores1[7]);
-  const items = [closure_6];
-  const stateFromStores = obj.useStateFromStores(items, () => authStore.getTopUserActivities());
-  obj1 = _require(stateFromStores1[7]);
-  const items1 = [closure_6];
-  stateFromStores1 = obj1.useStateFromStores(items1, () => authStore.getTopGuildActivities());
+  const tmp = closure_9();
+  _require = tmp;
+  const items = [FamilyCenterStore];
+  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => authStore.getTopUserActivities());
+  let obj = require("useStateFromStores");
+  const items1 = [FamilyCenterStore];
+  stateFromStores1 = require("useStateFromStores").useStateFromStores(items1, () => authStore.getTopGuildActivities());
   const items2 = [stateFromStores];
   [][0] = stateFromStores1;
-  const callback = React.useCallback(() => {
-    let obj = stateFromStores(stateFromStores1[8]);
-    obj = { topUserActivities: stateFromStores };
-    obj.openLazy(callback(stateFromStores1[10])(stateFromStores1[9], stateFromStores1.paths), "FamilyCenterTopUsers", obj);
+  const callback = noop.useCallback(() => {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14926, dependencyMap.paths), "FamilyCenterTopUsers", { topUserActivities: stateFromStores });
   }, items2);
   if (0 !== stateFromStores.length) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
+    const obj3 = { style: tmp.container, children: null };
     let tmp9 = stateFromStores.length > 0;
     if (tmp9) {
-      obj = { style: null, children: null };
-      obj[0] = tmp.section;
-      obj1 = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
-      obj1[0] = tmp.touchableHitBox;
-      obj1[1] = callback;
+      const obj4 = { style: tmp.section, children: null };
+      const obj5 = { style: tmp.touchableHitBox, onPress: callback, accessibilityRole: "button", accessibilityLabel: null, children: null };
       const intl = tmp2(tmp3[13]).intl;
-      obj1[3] = intl.string(stateFromStores(tmp3[14]).BxbvS7);
-      const obj2 = { variant: "text-sm/semibold", children: null };
+      obj5.accessibilityLabel = intl.string(stateFromStores(tmp3[14]).BxbvS7);
+      const obj6 = { variant: "text-sm/semibold", children: null };
       const intl2 = tmp2(tmp3[13]).intl;
-      obj2[1] = intl2.string(stateFromStores(tmp3[14]).BxbvS7);
-      const items3 = [callback(tmp2(tmp3[15]).Text, obj2), ];
-      const obj3 = { style: null, children: null };
-      obj3[0] = tmp.avatarList;
-      obj3[1] = stateFromStores.map((user_id) => {
-        user = user.getUser(user_id.user_id);
-        let tmp2 = null;
-        if (null != user) {
-          const obj = { user: null, size: null, guildId: "Array" };
-          obj[0] = user;
-          obj[1] = callback(stateFromStores1[16]).AvatarSizes.SMALL;
-          tmp2 = callback2(callback(stateFromStores1[16]).Avatar, obj, user.id);
-        }
-        return tmp2;
-      });
-      items3[1] = callback(tmp8, obj3);
-      obj1[4] = items3;
-      obj[1] = tmp7(stateFromStores(tmp3[12]), obj1);
-      tmp9 = callback(tmp8, obj);
+      obj6.children = intl2.string(stateFromStores(tmp3[14]).BxbvS7);
+      const items3 = [closure_7(tmp2(tmp3[15]).Text, obj6), ];
+      const obj7 = {
+        style: tmp.avatarList,
+        children: stateFromStores.map((user_id) => {
+              user = user.getUser(user_id.user_id);
+              let tmp2 = null;
+              if (null != user) {
+                const obj = { user, size: closure_0(stateFromStores1[16]).AvatarSizes.SMALL, guildId: "Array" };
+                tmp2 = closure_1_7(closure_0(stateFromStores1[16]).Avatar, obj, user.id);
+              }
+              return tmp2;
+            })
+      };
+      items3[1] = closure_7(tmp8, obj7);
+      obj5.children = items3;
+      obj4.children = tmp7(stateFromStores(tmp3[12]), obj5);
+      tmp9 = closure_7(tmp8, obj4);
       const tmp12 = stateFromStores(tmp3[12]);
     }
     const items4 = [tmp9, ];
     let tmp13 = stateFromStores1.length > 0;
     if (tmp13) {
-      const obj4 = { style: null, children: null };
-      obj4[0] = tmp.section;
-      const obj5 = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
-      obj5[0] = tmp.touchableHitBox;
-      obj5[1] = tmp5;
+      const obj8 = { style: tmp.section, children: null };
+      const obj9 = { style: tmp.touchableHitBox, onPress: tmp5, accessibilityRole: "button", accessibilityLabel: null, children: null };
       const intl3 = tmp2(tmp3[13]).intl;
-      obj5[3] = intl3.string(stateFromStores(tmp3[14]).Lq9Set);
-      const obj6 = { variant: "text-sm/semibold", children: null };
+      obj9.accessibilityLabel = intl3.string(stateFromStores(tmp3[14]).Lq9Set);
+      const obj10 = { variant: "text-sm/semibold", children: null };
       const intl4 = tmp2(tmp3[13]).intl;
-      obj6[1] = intl4.string(stateFromStores(tmp3[14]).Lq9Set);
-      const items5 = [callback(tmp2(tmp3[15]).Text, obj6), ];
-      const obj7 = { style: null, children: null };
-      obj7[0] = tmp.avatarList;
-      obj7[1] = stateFromStores1.map((guild_id) => {
-        const guild = closure_1_6.getGuild(guild_id.guild_id);
-        let tmp2 = null;
-        if (null != guild) {
-          const obj = { style: null, textStyle: null, guild: null, size: null };
-          ({ guildAvatar: obj[0], guildAvatarText: obj[1] } = callback);
-          obj[2] = guild;
-          obj[3] = callback(stateFromStores1[17]).GuildIconSizes.SMALL;
-          tmp2 = closure_1_7(stateFromStores(stateFromStores1[17]), obj, guild.id);
-          const tmp6 = stateFromStores(stateFromStores1[17]);
-        }
-        return tmp2;
-      });
-      items5[1] = callback(tmp8, obj7);
-      obj5[4] = items5;
-      obj4[1] = tmp7(stateFromStores(tmp3[12]), obj5);
-      tmp13 = callback(tmp8, obj4);
+      obj10.children = intl4.string(stateFromStores(tmp3[14]).Lq9Set);
+      const items5 = [closure_7(tmp2(tmp3[15]).Text, obj10), ];
+      const obj11 = {
+        style: tmp.avatarList,
+        children: stateFromStores1.map((guild_id) => {
+              const guild = FamilyCenterStore.getGuild(guild_id.guild_id);
+              let tmp2 = null;
+              if (null != guild) {
+                const obj = { style: null, textStyle: null, guild: null, size: null };
+                ({ guildAvatar: obj.style, guildAvatarText: obj.textStyle } = closure_0);
+                obj.guild = guild;
+                obj.size = GuildIcon.GuildIconSizes.SMALL;
+                tmp2 = React5(GuildIconDefault, obj, guild.id);
+              }
+              return tmp2;
+            })
+      };
+      items5[1] = closure_7(tmp8, obj11);
+      obj9.children = items5;
+      obj8.children = tmp7(stateFromStores(tmp3[12]), obj9);
+      tmp13 = closure_7(tmp8, obj8);
       const tmp16 = stateFromStores(tmp3[12]);
     }
     items4[1] = tmp13;
-    obj[1] = items4;
-    let tmp7Result = tmp7(tmp8, obj);
+    obj3.children = items4;
+    let tmp7Result = tmp7(tmp8, obj3);
   } else {
     tmp7Result = null;
   }

@@ -1,15 +1,15 @@
-// Module ID: 9803
-// Function ID: 9804
+// Module ID: 9830
+// Function ID: 9831
 // Name: usePrevValue
 // Dependencies: [19, 2]
 // Exports: default
 
-// Module 9803 (usePrevValue)
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
+// Module 9830 (usePrevValue)
+import _mod19 from "module_19" /* 19 */;
+import size from "module_2" /* 2 */;
 
-const useRef = noop.useRef;
-const result = set.fileFinishedImporting("../discord_common/js/shared/hooks/usePrevValue.tsx");
+const useRef = _mod19.useRef;
+const result = size.fileFinishedImporting("../discord_common/js/shared/hooks/usePrevValue.tsx");
 
 export default function usePrevValue(current) {
   const tmp = useRef(null);

@@ -1,25 +1,26 @@
-// Module ID: 17462
-// Function ID: 17463
-// Name: prototype
-// Dependencies: [7118, 17463, 2]
+// Module ID: 17493
+// Function ID: 17494
+// Name: ParentalConsentManager
+// Dependencies: [7132, 17494, 2]
 
-// Module 17462 (prototype)
-import initializeDefault from "initialize" /* 7118 */;
+// Module 17493 (ParentalConsentManager)
+import AppStoreAgeSignalReport from "AppStoreAgeSignalReport" /* 17494 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-const require = arg1;
-initializeDefault;
-let prototype = function ParentalConsentManager() {
+require = fn;
+const prototype = function ParentalConsentManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {
     CONNECTION_OPEN_SUPPLEMENTAL() {
-      return callback(table[1]).beginAppStoreAgeSignalReport();
+      return AppStoreAgeSignalReport.beginAppStoreAgeSignalReport();
     }
   };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
-const result = require("set").fileFinishedImporting("modules/age_assurance/native/ParentalConsentManager.tsx");
+const prototype1 = new prototype();
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/age_assurance/native/ParentalConsentManager.tsx");
 
-export default prototype;
+export default prototype1;

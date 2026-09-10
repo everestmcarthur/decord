@@ -1,19 +1,19 @@
-// Module ID: 7287
-// Function ID: 7288
-// Name: reset
+// Module ID: 7301
+// Function ID: 7302
+// Name: GuildThreadSubscriptions
 // Dependencies: [1437, 2]
 
-// Module 7287 (reset)
-import set2 from "set" /* 2 */;
+// Module 7301 (GuildThreadSubscriptions)
 import privDefault from "priv" /* 1437 */;
+import size from "module_2" /* 2 */;
 
-let result = set2.fileFinishedImporting("lib/guild/GuildThreadSubscriptions.tsx");
+let result = size.fileFinishedImporting("lib/guild/GuildThreadSubscriptions.tsx");
 class GuildThreadSubscriptions {
   constructor(arg0) {
-    obj = Object.create(new.target.prototype);
-    obj[0] = {};
-    obj._onChange = global;
-    return obj;
+    merged = Object.assign({ _subscriptions: null });
+    merged[0] = {};
+    merged._onChange = global;
+    return merged;
   }
 }
 const prototype = GuildThreadSubscriptions.prototype;
@@ -26,11 +26,8 @@ prototype["get"] = function get(arg0) {
 prototype["getSubscribedThreadIds"] = function getSubscribedThreadIds() {
   const set = new Set();
   for (const key10010 in this._subscriptions) {
-    let tmp3 = key10010;
     let obj2 = this._subscriptions[key10010];
     let keys = obj2.keys();
-    let tmp5 = keys;
-    let tmp = keys;
     for (const item10012 of keys) {
       let addResult = set.add(item10012);
       continue;

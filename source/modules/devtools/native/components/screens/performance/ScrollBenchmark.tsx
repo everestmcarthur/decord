@@ -1,18 +1,18 @@
-// Module ID: 15738
-// Function ID: 15739
+// Module ID: 15768
+// Function ID: 15769
 // Name: ScrollBenchmark
-// Dependencies: [19, 21, 15735, 5605, 2]
+// Dependencies: [19, 21, 15765, 5619, 2]
 // Exports: default
 
-// Module 15738 (ScrollBenchmark)
-import noopAll from "noop" /* 19 */;
-import TableRowInner from "TableRowInner" /* 5605 */;
-import useFrameMonitorDefault from "useFrameMonitor" /* 15735 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 15768 (ScrollBenchmark)
+import TableRow from "TableRow" /* 5619 */;
+import useFrameMonitorDefault from "useFrameMonitor" /* 15765 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/performance/ScrollBenchmark.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/native/components/screens/performance/ScrollBenchmark.tsx");
 
 export default function ScrollBenchmark(subLabel) {
   let str = subLabel.subLabel;
@@ -30,10 +30,10 @@ export default function ScrollBenchmark(subLabel) {
   if (monitoring) {
     str3 = "danger";
   }
-  obj[2] = str3;
+  obj.variant = str3;
   if (monitoring) {
     start = tmp.stop;
   }
-  obj[4] = start;
-  return jsx(TableRowInner.TableRow, { label: str2, subLabel: str, variant: null, arrow: true, onPress: null });
+  obj.onPress = start;
+  return jsx(TableRow.TableRow, { label: str2, subLabel: str, variant: null, arrow: true, onPress: null });
 };

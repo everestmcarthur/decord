@@ -1,70 +1,67 @@
-// Module ID: 16611
-// Function ID: 16612
+// Module ID: 16643
+// Function ID: 16644
 // Name: VibegrationsSecretRequestCard
-// Dependencies: [19, 17, 21, 4560, 576, 4527, 16612, 4556, 1114, 3547, 4975, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 4541, 16644, 4570, 1114, 3560, 4989, 2]
 // Exports: default
 
-// Module 16611 (VibegrationsSecretRequestCard)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16643 (VibegrationsSecretRequestCard)
+import nativeDefault from "native" /* 576 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4541 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import VibegrationsSecretsSheet from "VibegrationsSecretsSheet" /* 16644 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { card: null, chips: null, chip: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.md, padding: ThemesDefault.space.PX_12, marginTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_8 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_4 };
-let obj1 = { flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_4 };
-createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.round, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.round, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4 };
-const result = require("set").fileFinishedImporting("modules/vibegrations/native/VibegrationsSecretRequestCard.tsx");
+const VibegrationsSecretsSheetDefault = VibegrationsSecretsSheet;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, chips: null, chip: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
+obj2.chips = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_4 };
+let obj4 = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_4 };
+obj2.chip = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.round, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4 };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/vibegrations/native/VibegrationsSecretRequestCard.tsx");
 
 export default function VibegrationsSecretRequestCard(projectId) {
   projectId = projectId.projectId;
   const request = projectId.request;
-  dependencyMap = undefined;
-  const tmp = callback2();
+  const tmp = closure_7();
   dependencyMap = tmp;
   const items = [projectId, request];
   let obj = { style: tmp.card, children: null };
-  const callback = React.useCallback(() => {
-    let obj = projectId(chip[5]);
-    obj = { content: closure_1_5(request(chip[6]), obj), key: projectId(chip[6]).VIBEGRATIONS_SECRETS_SHEET_KEY };
-    obj = { projectId, request };
-    obj.showActionSheet(obj);
+  const callback = noop.useCallback(() => {
+    const obj2 = { content: hasOwnProperty(VibegrationsSecretsSheetDefault, { projectId, request }), key: VibegrationsSecretsSheet.VIBEGRATIONS_SECRETS_SHEET_KEY };
+    ActionSheetActionCreators.showActionSheet(obj2);
   }, items);
-  obj = { variant: "text-xs/semibold", color: "text-muted", children: null };
+  let obj2 = { variant: "text-xs/semibold", color: "text-muted", children: null };
   const intl = projectId(1114).intl;
-  obj[2] = intl.string(request(3547)["/e28TK"]);
-  const items1 = [callback(projectId(4556).Text, obj), , , ];
+  obj2.children = intl.string(request(3560)["/e28TK"]);
+  const items1 = [closure_5(projectId(4570).Text, obj2), , , ];
   if (null != request.note) {
     if ("" !== request.note) {
       let note = request.note;
     }
-    obj = { variant: "text-sm/normal", color: "text-default", children: null };
-    obj[2] = note;
-    items1[1] = tmp5(tmp9, obj);
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.chips;
+    const obj3 = { variant: "text-sm/normal", color: "text-default", children: note };
+    items1[1] = tmp5(tmp9, obj3);
+    const obj4 = { style: tmp.chips, children: null };
     const fields = request.fields;
-    obj1[1] = fields.map((children) => {
-      obj = { style: chip.chip, children: closure_1_5(projectId(chip[7]).Text, obj) };
-      obj = { variant: "text-xs/medium", color: "text-default", children: children.label };
-      return closure_1_5(closure_1_4, obj, children.name);
+    obj4.children = fields.map((children) => {
+      const obj = { style: chip.chip, children: hasOwnProperty(Text_Text.Text, { variant: "text-xs/medium", color: "text-default", children: children.label }) };
+      return hasOwnProperty(View, obj, children.name);
     });
-    items1[2] = tmp5(tmp4, obj1);
-    const obj2 = { variant: "secondary", size: "sm", onPress: null, text: null };
-    obj2[2] = callback;
+    items1[2] = tmp5(tmp4, obj4);
+    const obj5 = { variant: "secondary", size: "sm", onPress: callback, text: null };
     const intl3 = tmp6(1114).intl;
-    obj2[3] = intl3.string(tmp8(3547)["gVV+HX"]);
-    items1[3] = tmp5(tmp6(4975).Button, obj2);
-    obj[1] = items1;
+    obj5.text = intl3.string(tmp8(3560)["gVV+HX"]);
+    items1[3] = tmp5(tmp6(4989).Button, obj5);
+    obj.children = items1;
     return closure_6(tmp4, obj);
   }
   const intl2 = tmp6(1114).intl;
-  note = intl2.string(tmp8(3547).jxvtin);
+  note = intl2.string(tmp8(3560).jxvtin);
 };

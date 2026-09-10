@@ -1,16 +1,16 @@
-// Module ID: 8743
-// Function ID: 8744
-// Name: showInvite
-// Dependencies: [8744, 573, 8378, 2]
+// Module ID: 8771
+// Function ID: 8772
+// Name: DisplayedInviteActionCreators
+// Dependencies: [8772, 573, 8406, 2]
 // Exports: clearDisplayedInvite, showInvite
 
-// Module 8743 (showInvite)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import generateAcceptInviteOptionsDefault from "generateAcceptInviteOptions" /* 8378 */;
-import getDisplayedInviteCode from "getDisplayedInviteCode" /* 8744 */;
+// Module 8771 (DisplayedInviteActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8406 */;
+import DisplayedInviteStore from "DisplayedInviteStore" /* 8772 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("actions/native/DisplayedInviteActionCreators.tsx");
+const result = size.fileFinishedImporting("actions/native/DisplayedInviteActionCreators.tsx");
 
 export const showInvite = function showInvite(code, username, arg2) {
   let obj = arg2;
@@ -18,12 +18,11 @@ export const showInvite = function showInvite(code, username, arg2) {
     obj = {};
   }
   ({ deeplinkAttemptId, location: _location } = obj);
-  getDisplayedInviteCode;
-  obj = { type: "DISPLAYED_INVITE_SHOW", code, username, deeplinkAttemptId };
-  dispatcherDefault.dispatch(obj);
-  const obj2 = dispatcherDefault;
-  const invite = generateAcceptInviteOptionsDefault.resolveInvite(code, _location);
+  DisplayedInviteStore;
+  DispatcherDefault.dispatch({ type: "DISPLAYED_INVITE_SHOW", code, username, deeplinkAttemptId });
+  const obj3 = { type: "DISPLAYED_INVITE_SHOW", code, username, deeplinkAttemptId };
+  const invite = InstantInviteActionCreatorsDefault.resolveInvite(code, _location);
 };
 export const clearDisplayedInvite = function clearDisplayedInvite() {
-  dispatcherDefault.dispatch({ type: "DISPLAYED_INVITE_CLEAR" });
+  DispatcherDefault.dispatch({ type: "DISPLAYED_INVITE_CLEAR" });
 };

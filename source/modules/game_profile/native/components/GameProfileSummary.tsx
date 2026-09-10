@@ -1,46 +1,44 @@
-// Module ID: 8737
-// Function ID: 8738
+// Module ID: 8765
+// Function ID: 8766
 // Name: GameProfileSummary
-// Dependencies: [32, 19, 17, 21, 4560, 8691, 1114, 4556, 2]
+// Dependencies: [32, 19, 17, 21, 4574, 8719, 1114, 4570, 2]
 // Exports: default
 
-// Module 8737 (GameProfileSummary)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 8765 (GameProfileSummary)
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8719 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ View: c4, Pressable: c5 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ container: { flexDirection: "column" } });
-const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileSummary.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, Pressable: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let closure_8 = createStyles.createStyles({ container: { flexDirection: "column" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileSummary.tsx");
 
 export default function GameProfileSummary(arg0) {
   ({ game, trackAction } = arg0);
-  let first;
-  let callback;
-  let first1;
+  first = undefined;
+  _slicedToArray = undefined;
+  first1 = undefined;
   closure_4 = undefined;
-  const tmp2 = callback(first1.useState(false), 2);
-  first = tmp2[0];
-  callback = tmp2[1];
-  const tmp4 = callback(first1.useState(null), 2);
-  first1 = tmp4[0];
-  closure_4 = tmp4[1];
+  [first, _slicedToArray] = first1.useState(false);
+  [first1, closure_4] = first1.useState(null);
   const items = [first1];
   const items1 = [first, trackAction];
-  callback = first1.useCallback((nativeEvent) => {
+  const callback = first1.useCallback((nativeEvent) => {
     if (null == first1) {
-      callback2(nativeEvent.nativeEvent.lines.length > 3);
+      closure_4(nativeEvent.nativeEvent.lines.length > 3);
     }
   }, items);
   let summaryLocalized;
   const callback1 = first1.useCallback(() => {
-    const GameProfileTrackActionActions = trackAction(first[5]).GameProfileTrackActionActions;
+    const GameProfileTrackActionActions = GameProfileAnalyticUtils.GameProfileTrackActionActions;
     trackAction(first ? GameProfileTrackActionActions.ShowLess : GameProfileTrackActionActions.ShowMore);
-    callback(!first);
+    closure_2(!first);
   }, items1);
   if (game != null) {
     summaryLocalized = game.summaryLocalized;
@@ -58,26 +56,19 @@ export default function GameProfileSummary(arg0) {
     const intl = trackAction(first[6]).intl;
     const t = trackAction(first[6]).t;
     const stringResult = intl.string(first ? t["6MwJo/"] : t.lBeKY2);
-    let obj = { style: null, children: null };
-    obj[0] = tmp.container;
-    obj = { variant: "text-md/normal", color: "interactive-text-active", lineClamp: null, onTextLayout: null, children: null };
-    obj[2] = num;
-    obj[3] = callback;
-    obj[4] = summaryLocalized;
-    const items2 = [closure_6(trackAction(first[7]).Text, obj), ];
+    const obj = { style: tmp.container, children: null };
+    const obj2 = { variant: "text-md/normal", color: "interactive-text-active", lineClamp: num, onTextLayout: callback, children: summaryLocalized };
+    const items2 = [closure_6(trackAction(first[7]).Text, obj2), ];
     let tmp13Result = null;
     if (first1) {
-      obj = { onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
-      obj[0] = callback1;
-      obj[2] = stringResult;
-      obj1 = { variant: "text-md/medium", color: "text-brand", children: null };
-      obj1[2] = stringResult;
-      obj[3] = tmp13(tmp16(tmp17[7]).Text, obj1);
-      tmp13Result = tmp13(closure_5, obj);
+      const obj3 = { onPress: callback1, accessibilityRole: "button", accessibilityLabel: stringResult, children: null };
+      const obj4 = { variant: "text-md/medium", color: "text-brand", children: stringResult };
+      obj3.children = tmp13(tmp16(tmp17[7]).Text, obj4);
+      tmp13Result = tmp13(closure_5, obj3);
     }
     items2[1] = tmp13Result;
-    obj[1] = items2;
+    obj.children = items2;
     return closure_7(closure_4, obj);
   }
-  tmp = callback2();
+  tmp = closure_8();
 };

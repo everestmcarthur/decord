@@ -1,31 +1,32 @@
-// Module ID: 7565
-// Function ID: 7566
-// Name: fromServer
-// Dependencies: [7566, 2]
+// Module ID: 7579
+// Function ID: 7580
+// Name: CollectiblesMarketingBadgeRecord
+// Dependencies: [7580, 2]
 
-// Module 7565 (fromServer)
-import set from "set" /* 2 */;
-import CollectiblesMarketingType from "CollectiblesMarketingType" /* 7566 */;
+// Module 7579 (CollectiblesMarketingBadgeRecord)
+import CollectiblesMarketingType from "CollectiblesMarketingType" /* 7580 */;
+import size from "module_2" /* 2 */;
 
-let prototype;
-prototype = function CollectiblesMarketingBadgeRecord(arg0) {
+const prototype = function CollectiblesMarketingBadgeRecord(arg0) {
   const obj = Object.create(new.target.prototype);
   obj.type = CollectiblesMarketingType.CollectiblesMarketingType.BADGE;
   ({ dismissibleContent: tmp.dismissibleContent, version: tmp.version, refTargetBackground: tmp.refTargetBackground, badgeIcon: tmp.badgeIcon, badgeText: tmp.badgeText, showHoverGradient: tmp.showHoverGradient } = arg0);
   return obj;
 }.prototype;
 prototype["fromServer"] = function fromServer(arg0) {
-  let obj = {};
+  const obj = {};
   const merged = Object.assign(arg0);
   ({ dismissible_content: obj.dismissibleContent, ref_target_background: obj.refTargetBackground, badge_icon: obj.badgeIcon, badge_text: obj.badgeText, show_hover_gradient: obj.showHoverGradient } = arg0);
-  if (typeof prototype !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof prototype === "function") {
+    const obj2 = Object.create(tmp.prototype);
+    obj2.type = CollectiblesMarketingType.CollectiblesMarketingType.BADGE;
+    ({ dismissibleContent: tmp3.dismissibleContent, version: tmp3.version, refTargetBackground: tmp3.refTargetBackground, badgeIcon: tmp3.badgeIcon, badgeText: tmp3.badgeText, showHoverGradient: tmp3.showHoverGradient } = obj);
+    return obj2;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  obj = Object.create(prototype.prototype);
-  obj.type = CollectiblesMarketingType.CollectiblesMarketingType.BADGE;
-  ({ dismissibleContent: tmp3.dismissibleContent, version: tmp3.version, refTargetBackground: tmp3.refTargetBackground, badgeIcon: tmp3.badgeIcon, badgeText: tmp3.badgeText, showHoverGradient: tmp3.showHoverGradient } = obj);
-  return obj;
+  tmp = prototype;
 };
-const result = set.fileFinishedImporting("modules/collectibles/records/CollectiblesMarketingBadgeRecord.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/records/CollectiblesMarketingBadgeRecord.tsx");
 
 export const CollectiblesMarketingBadgeRecord = prototype;

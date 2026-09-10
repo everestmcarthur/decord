@@ -1,22 +1,22 @@
-// Module ID: 10898
-// Function ID: 10899
+// Module ID: 10925
+// Function ID: 10926
 // Name: VoiceActivityStatus
-// Dependencies: [19, 21, 4560, 10899, 10890, 1114, 2]
+// Dependencies: [19, 21, 4574, 10926, 10917, 1114, 2]
 // Exports: default
 
-// Module 10898 (VoiceActivityStatus)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import ActivityStatusTextDefault from "ActivityStatusText" /* 10890 */;
-import UserProfileVoiceActivityIconDefault from "UserProfileVoiceActivityIcon" /* 10899 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10925 (VoiceActivityStatus)
+import util from "util" /* 1114 */;
+import ActivityStatusTextDefault from "ActivityStatusText" /* 10917 */;
+import UserProfileVoiceActivityIconDefault from "UserProfileVoiceActivityIcon" /* 10926 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ icon: { flexShrink: 0 } });
-const result = require("set").fileFinishedImporting("modules/activity_status/native/VoiceActivityStatus.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let closure_6 = createStyles.createStyles({ icon: { flexShrink: 0 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activity_status/native/VoiceActivityStatus.tsx");
 
 export default function VoiceActivityStatus(hideText) {
   ({ channel, textStyle, maxFontSizeMultiplier, hideIcon } = hideText);
@@ -30,49 +30,43 @@ export default function VoiceActivityStatus(hideText) {
   if (!hideIcon) {
     let tmp5 = !hideIcon;
     if (!hideIcon) {
-      let obj = { channel: null, size: "xxs", color: "status-positive", style: null };
-      obj[0] = channel;
+      const obj = { channel, size: "xxs", color: "status-positive", style: null };
       const items = [tmp.icon, hideText.iconStyle];
-      obj[3] = items;
-      tmp5 = callback(UserProfileVoiceActivityIconDefault, obj);
+      obj.style = items;
+      tmp5 = React3(UserProfileVoiceActivityIconDefault, obj);
     }
     const items1 = [tmp5, ];
     if (flag) {
-      obj = { children: null };
+      const obj2 = { children: null };
       items1[1] = tmp9;
-      obj[0] = items1;
-      let tmp3Result = tmp3(tmp4, obj);
+      obj2.children = items1;
+      let tmp3Result = tmp3(tmp4, obj2);
     } else {
       if (!channel.isDM()) {
         if (!channel.isGroupDM()) {
           const tmp14 = ActivityStatusTextDefault;
-          obj = { style: null, maxFontSizeMultiplier: null, children: null };
-          obj[0] = textStyle;
-          obj[1] = maxFontSizeMultiplier;
-          const intl = getSystemLocale.intl;
+          const obj3 = { style: textStyle, maxFontSizeMultiplier, children: null };
+          const intl = util.intl;
           const string = intl.string;
-          const t = getSystemLocale.t;
+          const t = util.t;
           if (isGuildStageVoiceResult) {
-            obj[2] = string(t.QygGCN);
-            let tmp11Result = tmp11(tmp14, obj);
+            obj3.children = string(t.QygGCN);
+            let tmp11Result = tmp11(tmp14, obj3);
           } else {
-            obj[2] = string(t.msxteM);
-            tmp11Result = tmp11(tmp14, obj);
+            obj3.children = string(t.msxteM);
+            tmp11Result = tmp11(tmp14, obj3);
           }
           isGuildStageVoiceResult = channel.isGuildStageVoice();
         }
       }
-      obj1 = { style: null, maxFontSizeMultiplier: null, children: null };
-      obj1[0] = textStyle;
-      obj1[1] = maxFontSizeMultiplier;
+      const obj4 = { style: textStyle, maxFontSizeMultiplier, children: null };
       textStyle = require;
-      maxFontSizeMultiplier = getSystemLocale.intl;
-      obj1[2] = maxFontSizeMultiplier.string(getSystemLocale.t["9FaEzi"]);
-      tmp11Result = callback(ActivityStatusTextDefault, obj1);
-      const tmp20 = ActivityStatusTextDefault;
+      maxFontSizeMultiplier = util.intl;
+      obj4.children = maxFontSizeMultiplier.string(util.t["9FaEzi"]);
+      tmp11Result = React3(ActivityStatusTextDefault, obj4);
     }
-    tmp3 = closure_5;
-    tmp4 = closure_4;
+    tmp3 = hasOwnProperty;
+    tmp4 = React4;
   } else {
     tmp3Result = null;
   }

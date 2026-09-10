@@ -1,48 +1,48 @@
-// Module ID: 17013
-// Function ID: 17014
-// Name: usePIPAvoidanceSpecs
-// Dependencies: [4296, 16692, 17014, 9500, 16913, 17015, 11359, 2]
+// Module ID: 17044
+// Function ID: 17045
+// Name: pip/usePIPAvoidanceSpecs
+// Dependencies: [4310, 16729, 17045, 9527, 16950, 17046, 11386, 2]
 // Exports: default
 
-// Module 17013 (usePIPAvoidanceSpecs)
-import set from "set" /* 2 */;
+// Module 17044 (pip/usePIPAvoidanceSpecs)
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11386 */;
+import getPIPBottomOffsetForPIPModeDefault from "getPIPBottomOffsetForPIPMode" /* 16950 */;
+import getAdjustedBottomOffsetsDefault from "getAdjustedBottomOffsets" /* 17046 */;
+import size from "module_2" /* 2 */;
 
-let closure_3 = { code: "function usePIPAvoidanceSpecsTsx1(){const{keyboardHeight,safeArea,screenName}=this.__closure;return{keyboardHeight:keyboardHeight.get(),safeAreaBottom:safeArea.bottom,screenName:screenName.get()};}" };
-let closure_4 = { code: "function usePIPAvoidanceSpecsTsx2(props,previous){const{cheapWorkletShallowEqual,getPIPBottomOffsetForPIPMode,getAdjustedBottomOffsets,updateSharedValueIfChanged,pipAvoidanceSpecs}=this.__closure;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const{keyboardHeight:keyboardHeight,safeAreaBottom:safeAreaBottom,screenName:screenName}=props;const screenBottomOffset=getPIPBottomOffsetForPIPMode(screenName);const{bottomOffset:bottomOffset}=getAdjustedBottomOffsets({screenBottomOffset:screenBottomOffset,safeAreaBottom:safeAreaBottom,keyboardHeight:keyboardHeight});updateSharedValueIfChanged(pipAvoidanceSpecs,{top:0,bottom:bottomOffset});}" };
-const result = set.fileFinishedImporting("modules/activities/panel/native/pip/usePIPAvoidanceSpecs.tsx");
+const require = globalThis.__r;
+
+let __initData = { code: "function usePIPAvoidanceSpecsTsx1(){const{keyboardHeight,safeArea,screenName}=this.__closure;return{keyboardHeight:keyboardHeight.get(),safeAreaBottom:safeArea.bottom,screenName:screenName.get()};}" };
+const __initData2 = { code: "function usePIPAvoidanceSpecsTsx2(props,previous){const{cheapWorkletShallowEqual,getPIPBottomOffsetForPIPMode,getAdjustedBottomOffsets,updateSharedValueIfChanged,pipAvoidanceSpecs}=this.__closure;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const{keyboardHeight:keyboardHeight,safeAreaBottom:safeAreaBottom,screenName:screenName}=props;const screenBottomOffset=getPIPBottomOffsetForPIPMode(screenName);const{bottomOffset:bottomOffset}=getAdjustedBottomOffsets({screenBottomOffset:screenBottomOffset,safeAreaBottom:safeAreaBottom,keyboardHeight:keyboardHeight});updateSharedValueIfChanged(pipAvoidanceSpecs,{top:0,bottom:bottomOffset});}" };
+const result = size.fileFinishedImporting("modules/activities/panel/native/pip/usePIPAvoidanceSpecs.tsx");
 
 export default function usePIPAvoidanceSpecs(safeArea) {
-  const _require = safeArea;
-  let obj = _require(4296);
-  const sharedValue = obj.useSharedValue({ top: 0, bottom: 0 });
-  const tmp2 = sharedValue(16692)();
+  _require = safeArea;
+  const sharedValue = require("ReanimatedRexport").useSharedValue({ top: 0, bottom: 0 });
+  const tmp2 = sharedValue(16729)();
   dependencyMap = tmp2;
-  const tmp3 = sharedValue(17014)();
-  closure_3 = tmp3;
+  const tmp3 = sharedValue(17045)();
+  __initData = tmp3;
+  const obj = require("ReanimatedRexport");
   const fn = function n() {
     return { keyboardHeight: closure_2.get(), safeAreaBottom: safeArea.bottom, screenName: closure_3.get() };
   };
   fn.__closure = { keyboardHeight: tmp2, safeArea, screenName: tmp3 };
   fn.__workletHash = 9790941132204;
-  fn.__initData = closure_3;
+  fn.__initData = __initData;
   const fn2 = function f(safeAreaState, current) {
-    let obj = safeArea(closure_2[3]);
     if (!obj.cheapWorkletShallowEqual(safeAreaState, current)) {
       ({ keyboardHeight, safeAreaBottom, screenName } = safeAreaState);
-      obj = { screenBottomOffset: null, safeAreaBottom: null, keyboardHeight: null };
-      obj[0] = sharedValue(tmp2[4])(screenName);
-      obj[1] = safeAreaBottom;
-      obj[2] = keyboardHeight;
-      obj = { top: 0, bottom: null };
-      obj[1] = sharedValue(tmp2[5])(obj).bottomOffset;
-      sharedValue(tmp2[6])(sharedValue, obj);
-      const tmp4 = sharedValue(tmp2[4])(screenName);
+      const obj2 = { screenBottomOffset: getPIPBottomOffsetForPIPModeDefault(screenName), safeAreaBottom, keyboardHeight };
+      const rect = { top: 0, bottom: getAdjustedBottomOffsetsDefault(obj2).bottomOffset };
+      updateSharedValueIfChangedDefault(sharedValue, rect);
+      const tmp4 = getPIPBottomOffsetForPIPModeDefault(screenName);
     }
   };
-  obj = { cheapWorkletShallowEqual: _require(9500).cheapWorkletShallowEqual, getPIPBottomOffsetForPIPMode: sharedValue(16913), getAdjustedBottomOffsets: sharedValue(17015), updateSharedValueIfChanged: sharedValue(11359), pipAvoidanceSpecs: sharedValue };
-  fn2.__closure = obj;
+  let obj2 = require("ReanimatedRexport");
+  fn2.__closure = { cheapWorkletShallowEqual: require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, getPIPBottomOffsetForPIPMode: sharedValue(16950), getAdjustedBottomOffsets: sharedValue(17046), updateSharedValueIfChanged: sharedValue(11386), pipAvoidanceSpecs: sharedValue };
   fn2.__workletHash = 643938425459;
-  fn2.__initData = closure_4;
-  const animatedReaction = _require(4296).useAnimatedReaction(fn, fn2);
+  fn2.__initData = __initData2;
+  const animatedReaction = obj2.useAnimatedReaction(fn, fn2);
   return sharedValue;
 };

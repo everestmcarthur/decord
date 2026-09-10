@@ -1,67 +1,56 @@
-// Module ID: 10660
-// Function ID: 10661
-// Name: FOOTER_HEIGHT
-// Dependencies: [19, 17, 21, 4560, 576, 10649, 4556, 1114, 4975, 10661, 2]
+// Module ID: 10687
+// Function ID: 10688
+// Name: MediaKeyboardFooter
+// Dependencies: [19, 17, 21, 4574, 576, 10676, 4570, 1114, 4989, 10688, 2]
 
-// Module 10660 (FOOTER_HEIGHT)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import Button from "Button" /* 4975 */;
-import _modDef10649 from "module_10649" /* 10649 */;
-import registerAssetDefault from "registerAsset" /* 10661 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 10687 (MediaKeyboardFooter)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import _modDef10688 from "module_10688" /* 10688 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ View: c3, Image: c4, ActivityIndicator: c5 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let obj = { container: null, label: null, buttonWrapper: null, loadingSpinner: null };
-obj = { padding: ThemesDefault.space.PX_16, height: 280, alignItems: "center" };
-obj[0] = obj;
-obj[1] = { textAlign: "center", marginBottom: 16 };
-createCacheKey = { marginBottom: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_48 };
-obj[2] = createCacheKey;
-obj[3] = { color: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, margin: ThemesDefault.space.PX_16 };
-let closure_8 = createCacheKey.createStyles(obj);
-let obj2 = { color: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, margin: ThemesDefault.space.PX_16 };
-const memoResult = importAllResult.memo(function MediaKeyboardFooter(arg0) {
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, Image: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+const obj = { container: { padding: nativeDefault.space.PX_16, height: 280, alignItems: "center" }, label: { textAlign: "center", marginBottom: 16 }, buttonWrapper: null, loadingSpinner: null };
+let obj3 = { padding: nativeDefault.space.PX_16, height: 280, alignItems: "center" };
+obj.buttonWrapper = { marginBottom: nativeDefault.space.PX_32, height: nativeDefault.space.PX_48 };
+let obj4 = { marginBottom: nativeDefault.space.PX_32, height: nativeDefault.space.PX_48 };
+obj.loadingSpinner = { color: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, margin: nativeDefault.space.PX_16 };
+let closure_8 = createStyles.createStyles(obj);
+let obj5 = { color: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, margin: nativeDefault.space.PX_16 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardFooter.tsx");
+
+export default noop.memo(function MediaKeyboardFooter(arg0) {
   ({ disabled, onViewAll } = arg0);
-  const tmp = callback3();
-  let obj = _modDef10649;
+  const tmp = closure_8();
   if (obj.useHasReachedEnd()) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
-    obj = { variant: "text-sm/normal", style: null, children: null };
-    obj[1] = tmp.label;
-    const intl = getSystemLocale.intl;
-    obj[2] = intl.string(getSystemLocale.t.mKSwAW);
-    const items = [callback(Text.Text, obj), , ];
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.buttonWrapper;
-    const obj2 = { variant: "primary", size: "sm", onPress: null, text: null, disabled: null };
-    obj2[2] = onViewAll;
-    const intl2 = getSystemLocale.intl;
-    obj2[3] = intl2.string(getSystemLocale.t.ZT24In);
-    obj2[4] = disabled;
-    obj1[1] = callback(Button.Button, obj2);
-    items[1] = callback(closure_3, obj1);
-    const obj3 = { source: null };
-    obj3[0] = registerAssetDefault;
-    items[2] = callback(closure_4, obj3);
-    obj[1] = items;
-    let tmp6 = callback2(closure_3, obj);
+    const obj2 = { style: tmp.container, children: null };
+    const obj3 = { variant: "text-sm/normal", style: tmp.label, children: null };
+    const intl = util.intl;
+    obj3.children = intl.string(util.t.mKSwAW);
+    const items = [timestampProducer(Text_Text.Text, obj3), , ];
+    const obj4 = { style: tmp.buttonWrapper, children: null };
+    const obj5 = { variant: "primary", size: "sm", onPress: onViewAll, text: null, disabled: null };
+    const intl2 = util.intl;
+    obj5.text = intl2.string(util.t.ZT24In);
+    obj5.disabled = disabled;
+    obj4.children = timestampProducer(components_Button_Button.Button, obj5);
+    items[1] = timestampProducer(React3, obj4);
+    const obj6 = { source: _modDef10688 };
+    items[2] = timestampProducer(React4, obj6);
+    obj2.children = items;
+    let tmp6 = React5(React3, obj2);
   } else {
-    const obj4 = { style: null, size: "large", color: null };
-    obj4[0] = tmp.loadingSpinner;
-    obj4[2] = tmp.loadingSpinner.color;
-    tmp6 = callback(closure_5, obj4);
+    const obj7 = { style: tmp.loadingSpinner, size: "large", color: tmp.loadingSpinner.color };
+    tmp6 = timestampProducer(hasOwnProperty, obj7);
   }
   return tmp6;
 });
-const result = require("set").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardFooter.tsx");
-
-export default memoResult;
 export const FOOTER_HEIGHT = 280;

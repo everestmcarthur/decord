@@ -1,22 +1,21 @@
-// Module ID: 12715
-// Function ID: 12716
-// Name: GUILD_TEMPLATE_ICONS
-// Dependencies: [12330, 12334, 12332, 12333, 12335, 12336, 12331, 5692, 2]
+// Module ID: 12741
+// Function ID: 12742
+// Name: CreateGuildIcons
+// Dependencies: [12356, 12360, 12358, 12359, 12361, 12362, 12357, 5706, 2]
 
-// Module 12715 (GUILD_TEMPLATE_ICONS)
-import set from "set" /* 2 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5692 */;
-import registerAssetDefault from "registerAsset" /* 12330 */;
-import registerAssetDefault2 from "registerAsset" /* 12331 */;
-import registerAssetDefault3 from "registerAsset" /* 12332 */;
-import registerAssetDefault4 from "registerAsset" /* 12333 */;
-import registerAssetDefault5 from "registerAsset" /* 12334 */;
-import registerAssetDefault6 from "registerAsset" /* 12335 */;
-import registerAssetDefault7 from "registerAsset" /* 12336 */;
+// Module 12741 (CreateGuildIcons)
+import native from "native" /* 5706 */;
+import _modDef12356 from "module_12356" /* 12356 */;
+import _modDef12357 from "module_12357" /* 12357 */;
+import _modDef12358 from "module_12358" /* 12358 */;
+import _modDef12359 from "module_12359" /* 12359 */;
+import _modDef12360 from "module_12360" /* 12360 */;
+import _modDef12361 from "module_12361" /* 12361 */;
+import _modDef12362 from "module_12362" /* 12362 */;
+import size from "module_2" /* 2 */;
 
-let obj = { CREATE: registerAssetDefault, GAMING: registerAssetDefault5, FRIENDS: registerAssetDefault3, STUDY: registerAssetDefault4, CLUBS: registerAssetDefault6, CREATORS: registerAssetDefault7, LOCAL_COMMUNITY: registerAssetDefault2, SCHOOL_CLUB: registerAssetDefault6 };
-obj = { CREATE: AccountAgeTier10LargeBadge.PencilIllocon, GAMING: AccountAgeTier10LargeBadge.ControllerIllocon, FRIENDS: AccountAgeTier10LargeBadge.HeartIllocon, STUDY: AccountAgeTier10LargeBadge.AppleIllocon, CLUBS: AccountAgeTier10LargeBadge.BookIllocon, CREATORS: AccountAgeTier10LargeBadge.PaintIllocon, LOCAL_COMMUNITY: AccountAgeTier10LargeBadge.LeafIllocon, SCHOOL_CLUB: AccountAgeTier10LargeBadge.BookIllocon };
-const result = set.fileFinishedImporting("modules/create_guild/native/CreateGuildIcons.tsx");
+const obj = { CREATE: _modDef12356, GAMING: _modDef12360, FRIENDS: _modDef12358, STUDY: _modDef12359, CLUBS: _modDef12361, CREATORS: _modDef12362, LOCAL_COMMUNITY: _modDef12357, SCHOOL_CLUB: _modDef12361 };
+const result = size.fileFinishedImporting("modules/create_guild/native/CreateGuildIcons.tsx");
 
 export const GUILD_TEMPLATE_ICONS = obj;
-export const GUILD_TEMPLATE_ICON_COMPONENTS = obj;
+export const GUILD_TEMPLATE_ICON_COMPONENTS = { CREATE: native.PencilIllocon, GAMING: native.ControllerIllocon, FRIENDS: native.HeartIllocon, STUDY: native.AppleIllocon, CLUBS: native.BookIllocon, CREATORS: native.PaintIllocon, LOCAL_COMMUNITY: native.LeafIllocon, SCHOOL_CLUB: native.BookIllocon };

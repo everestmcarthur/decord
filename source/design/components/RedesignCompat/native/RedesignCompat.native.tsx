@@ -1,15 +1,16 @@
-// Module ID: 5686
-// Function ID: 5687
-// Name: context
+// Module ID: 5700
+// Function ID: 5701
+// Name: RedesignCompat
 // Dependencies: [19, 21, 2]
 // Exports: RedesignCompat
 
-// Module 5686 (context)
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+// Module 5700 (RedesignCompat)
+import noop from "module_19" /* 19 */;
 
-const context = importAllResult.createContext(false);
-const result = require("set").fileFinishedImporting("design/components/RedesignCompat/native/RedesignCompat.native.tsx");
+const jsx = fn(21).jsx;
+const context = noop.createContext(false);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/RedesignCompat/native/RedesignCompat.native.tsx");
 
 export const RedesignCompatContext = context;
 export const RedesignCompat = function RedesignCompat(children) {

@@ -5,12 +5,12 @@
 
 // Module 209 (NativeEventEmitter)
 import _createClassDefault from "_createClass" /* 42 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
-let NativeEventEmitter = importDefault;
+const NativeEventEmitter = importDefault;
 class NativeEventEmitter {
   constructor(arg0) {
-    tmp = closure_2(this, NativeEventEmitter);
+    tmp = c2(this, NativeEventEmitter);
     tmp2 = global && typeof global.addListener === "function";
     tmp3 = global && typeof global.removeListeners === "function";
     if (global) {
@@ -38,32 +38,31 @@ class NativeEventEmitter {
     return;
   }
 }
-let items = [
-  {
-    key: "addListener",
-    value: function addListener(arg0, arg1, arg2) {
-      const self = this;
-      let _nativeModule = this._nativeModule;
-      if (_nativeModule != null) {
-        _nativeModule.addListener(arg0);
-      }
-      let obj = NativeEventEmitter(self[2]);
-      NativeEventEmitter = obj.addListener(arg0, arg1, arg2);
-      obj = {
-        remove() {
-          if (null != c0) {
-            const _nativeModule = self._nativeModule;
-            if (_nativeModule != null) {
-              _nativeModule.removeListeners(1);
-            }
-            c0.remove();
-            c0 = null;
-          }
-        }
-      };
-      return obj;
+const entry = {
+  key: "addListener",
+  value: function addListener(arg0, arg1, arg2) {
+    const self = this;
+    let _nativeModule = this._nativeModule;
+    if (_nativeModule != null) {
+      _nativeModule.addListener(arg0);
     }
-  },
+    c0 = NativeEventEmitter(92).addListener(arg0, arg1, arg2);
+    return {
+      remove() {
+        if (null != _null) {
+          const _nativeModule = self._nativeModule;
+          if (_nativeModule != null) {
+            _nativeModule.removeListeners(1);
+          }
+          _null.remove();
+          _null = null;
+        }
+      }
+    };
+  }
+};
+let items = [
+  entry,
   {
     key: "emit",
     value: function emit(arg0) {

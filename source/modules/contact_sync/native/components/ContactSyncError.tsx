@@ -1,46 +1,47 @@
-// Module ID: 12698
-// Function ID: 12699
+// Module ID: 12724
+// Function ID: 12725
 // Name: ContactSyncError
-// Dependencies: [19, 21, 4560, 4296, 4561, 4556, 2]
+// Dependencies: [19, 21, 4574, 4310, 4575, 4570, 2]
 // Exports: default
 
-// Module 12698 (ContactSyncError)
-import noopAll from "noop" /* 19 */;
-import _modDef4296 from "module_4296" /* 4296 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12724 (ContactSyncError)
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4310 */;
+import timing from "timing" /* 4575 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-let closure_4 = createCacheKey.createStyles({ container: { justifyContent: "center" }, error: { paddingHorizontal: 16, textAlign: "center" } });
-let closure_5 = { code: "function ContactSyncErrorTsx1(){const{withTiming,hasError,ERROR_HEIGHT}=this.__closure;return{height:withTiming(hasError?ERROR_HEIGHT:0)};}" };
-const result = require("set").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncError.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_4 = createStyles.createStyles({ container: { justifyContent: "center" }, error: { paddingHorizontal: 16, textAlign: "center" } });
+const __initData = { code: "function ContactSyncErrorTsx1(){const{withTiming,hasError,ERROR_HEIGHT}=this.__closure;return{height:withTiming(hasError?ERROR_HEIGHT:0)};}" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncError.tsx");
 
 export default function ContactSyncError(error) {
   error = error.error;
-  let _require;
-  const tmp = callback();
+  _require = undefined;
+  const tmp = closure_4();
   let tmp2 = null != error;
   if (tmp2) {
     tmp2 = "" !== error;
   }
   _require = tmp2;
-  let obj = _require(4296);
   const fn = function l() {
-    let obj = callback(closure_1_2[4]);
     let num = 0;
-    if (callback) {
+    if (closure_0) {
       num = 44;
     }
-    obj = { height: obj.withTiming(num) };
-    return obj;
+    return { height: timing.withTiming(num) };
   };
-  obj = { withTiming: _require(4561).withTiming, hasError: tmp2, ERROR_HEIGHT: 44 };
-  fn.__closure = obj;
+  let obj = require("ReanimatedRexport");
+  fn.__closure = { withTiming: require("timing").withTiming, hasError: tmp2, ERROR_HEIGHT: 44 };
   fn.__workletHash = 14558247431913;
-  fn.__initData = closure_5;
+  fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  obj = { style: items, children: jsx(_require(4556).Text, obj1) };
-  items = [tmp.container, error.style, animatedStyle];
-  return jsx(_modDef4296.View, { style: items, children: jsx(_require(4556).Text, obj1) });
+  const obj3 = { style: null, children: jsx(require("Text/Text").Text, { variant: "text-sm/medium", color: "text-feedback-critical", style: tmp.error, children: error }) };
+  const items = [tmp.container, error.style, animatedStyle];
+  obj3.style = items;
+  return jsx(ReanimatedRexportDefault.View, { style: null, children: jsx(require("Text/Text").Text, { variant: "text-sm/medium", color: "text-feedback-critical", style: tmp.error, children: error }) });
 };

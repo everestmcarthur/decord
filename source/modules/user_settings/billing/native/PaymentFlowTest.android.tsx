@@ -1,60 +1,58 @@
-// Module ID: 15695
-// Function ID: 15696
-// Name: TestView
-// Dependencies: [32, 19, 17, 1371, 21, 4560, 576, 563, 4973, 4556, 5607, 6606, 4975, 4527, 15696, 1896, 6981, 10827, 2]
+// Module ID: 15725
+// Function ID: 15726
+// Name: PaymentFlowTest
+// Dependencies: [32, 19, 17, 1371, 21, 4574, 576, 563, 4987, 4570, 5621, 6620, 4989, 4541, 15726, 1896, 6995, 10854, 2]
 
-// Module 15695 (TestView)
-import ThemesDefault from "Themes" /* 576 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6981 */;
-import NativePaymentContextProvider from "NativePaymentContextProvider" /* 10827 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "mergeGuildAvatar" /* 1371 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15725 (PaymentFlowTest)
+import nativeDefault from "native" /* 576 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6995 */;
+import NativePaymentContext from "NativePaymentContext" /* 10854 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+require = fn;
 function TestView() {
-  const tmp = callback2();
-  let obj = importAllResult;
-  const tmp3 = first2(importAllResult.useState("1341506443580276736"), 2);
-  const first = tmp3[0];
+  const tmp = closure_9();
+  const tmp3 = first2(noop.useState("1341506443580276736"), 2);
+  value = tmp3[0];
   closure_1 = tmp3[1];
-  obj1 = first(first1[7]);
-  const items = [closure_6];
-  const stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const items = [UserStore];
+  const stateFromStores = value(first1[7]).useStateFromStores(items, () => currentUser.getCurrentUser());
   let id;
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  let tmp2Result = tmp2(importAllResult.useState(id), 2);
+  const tmp2Result = first2(noop.useState(id), 2);
   first1 = tmp2Result[0];
-  tmp2Result = tmp2(obj.useState(undefined), 2);
-  first2 = tmp2Result[0];
-  obj = { spacing: 16, style: tmp.container, children: null };
-  const items1 = [callback(first(first1[9]).Text, { variant: "text-lg/bold", children: "Android Payment Flow Test" }), ];
-  obj = { style: tmp.title, variant: "text-md/bold", children: "Gift Purchase SKU" };
-  const items2 = [callback(first(first1[9]).Text, obj), , , , ];
-  obj1 = {
-    containerStyle: tmp.textInput,
-    label: "SKU ID",
-    value: first,
-    placeholder: "Default: 1341506443580276736 (Anime Shy)",
-    onChange(arg0) {
-      return callback(arg0);
-    },
-    isClearable: true
-  };
-  items2[1] = callback(first(first1[11]).TextInput, obj1);
-  items2[2] = callback(first(first1[11]).TextInput, { containerStyle: tmp.textInput, label: "Gift Recipient ID", value: first1, placeholder: "Recipient User ID", onChange: tmp2Result[1], isClearable: true });
-  items2[3] = callback(first(first1[11]).TextInput, { containerStyle: tmp.textInput, label: "Gift Message (Optional)", value: first2, placeholder: "Here's a gift for you!", onChange: tmp2Result[1], isClearable: true });
-  let tmp15 = null === first;
+  const tmp2Result2 = first2(noop.useState(undefined), 2);
+  first2 = tmp2Result2[0];
+  let obj3 = { spacing: 16, style: tmp.container, children: null };
+  const items1 = [closure_7(value(first1[9]).Text, { variant: "text-lg/bold", children: "Android Payment Flow Test" }), ];
+  const items2 = [
+    closure_7(value(first1[9]).Text, { style: tmp.title, variant: "text-md/bold", children: "Gift Purchase SKU" }),
+    closure_7(value(first1[11]).TextInput, {
+      containerStyle: tmp.textInput,
+      label: "SKU ID",
+      value,
+      placeholder: "Default: 1341506443580276736 (Anime Shy)",
+      onChange(arg0) {
+        return closure_1(arg0);
+      },
+      isClearable: true
+    }),
+    closure_7(value(first1[11]).TextInput, { containerStyle: tmp.textInput, label: "Gift Recipient ID", value: first1, placeholder: "Recipient User ID", onChange: tmp2Result[1], isClearable: true }),
+    closure_7(value(first1[11]).TextInput, { containerStyle: tmp.textInput, label: "Gift Message (Optional)", value: first2, placeholder: "Here's a gift for you!", onChange: tmp2Result2[1], isClearable: true }),
+
+  ];
+  let tmp15 = null === value;
   if (!tmp15) {
     tmp15 = null === first1;
   }
-  const obj4 = { children: null };
-  items2[4] = callback(first(first1[12]).Button, {
+  const obj8 = { children: null };
+  items2[4] = closure_7(value(first1[12]).Button, {
     disabled: tmp15,
     text: "Send Gift",
     onPress() {
@@ -63,40 +61,35 @@ function TestView() {
         tmp2 = null != first1;
       }
       if (tmp2) {
-        const obj = { selectedSkuId: null, requestType: "giftSku", giftRecipientId: null, giftMessage: null };
-        obj[0] = first;
-        obj[2] = first1;
-        obj[3] = first2;
-        callback(first1[13]).hideActionSheet();
-        const obj2 = callback(first1[13]);
-        callback(first1[13]).openLazy(first(first1[15])(first1[14], first1.paths), "SimpleRequestOTPActionSheet", obj);
-        const obj3 = callback(first1[13]);
+        const obj = { selectedSkuId: first, requestType: "giftSku", giftRecipientId: first1, giftMessage: first2 };
+        ActionSheetActionCreatorsDefault.hideActionSheet();
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15726, dependencyMap.paths), "SimpleRequestOTPActionSheet", obj);
       }
     }
   });
-  obj4[0] = items2;
-  items1[1] = closure_8(first(first1[10]).Card, obj4);
-  obj[2] = items1;
-  return closure_8(first(first1[8]).Stack, obj);
+  obj8.children = items2;
+  items1[1] = closure_8(value(first1[10]).Card, obj8);
+  obj3.children = items1;
+  return closure_8(value(first1[8]).Stack, obj3);
 }
-let c4 = importAllResult;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-let obj = { wrap: null, container: null, textInput: null, title: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-obj[0] = obj;
-createCacheKey = { padding: ThemesDefault.space.PX_16 };
-obj[1] = createCacheKey;
-obj[2] = { marginBottom: 16 };
-obj[3] = { marginBottom: 8 };
-let closure_9 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function PaymentFlowTest() {
-  const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets;
-  let obj = { skuIDs: [], activeSubscription: null, children: null };
-  obj = { style: callback2().wrap, contentContainerStyle: obj, children: callback(TestView, {}) };
-  obj = { paddingBottom: insets.bottom, paddingTop: insets.top, paddingLeft: insets.left, paddingRight: insets.right };
-  obj[2] = callback(ScrollView, obj);
-  return callback(NativePaymentContextProvider.NativePaymentContextProvider, obj);
-});
-const result = require("set").fileFinishedImporting("modules/user_settings/billing/native/PaymentFlowTest.android.tsx");
+const ScrollView = fn(17).ScrollView;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+let obj = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: null, textInput: null, title: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj.container = { padding: nativeDefault.space.PX_16 };
+obj.textInput = { marginBottom: 16 };
+obj.title = { marginBottom: 8 };
+let closure_9 = createStyles.createStyles(obj);
+const obj4 = { padding: nativeDefault.space.PX_16 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/billing/native/PaymentFlowTest.android.tsx");
 
-export default memoResult;
+export default noop.memo(function PaymentFlowTest() {
+  const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets;
+  const obj = { skuIDs: [], activeSubscription: null, children: null };
+  const tmp = closure_9();
+  obj.children = React5(ScrollView, { style: closure_9().wrap, contentContainerStyle: { paddingBottom: insets.bottom, paddingTop: insets.top, paddingLeft: insets.left, paddingRight: insets.right }, children: React5(TestView, {}) });
+  return React5(NativePaymentContext.NativePaymentContextProvider, obj);
+});

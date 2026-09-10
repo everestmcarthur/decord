@@ -1,34 +1,37 @@
-// Module ID: 8455
-// Function ID: 8456
+// Module ID: 8483
+// Function ID: 8484
 // Name: MethodPathIcon
-// Dependencies: [19, 17, 21, 4560, 576, 4262, 8456, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 4275, 8484, 2]
 // Exports: default
 
-// Module 8455 (MethodPathIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import inlineStylesDefault from "inlineStyles" /* 8456 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 8483 (MethodPathIcon)
+import nativeDefault from "native" /* 576 */;
+import inlineStyles from "inlineStyles" /* 8484 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-createCacheKey = { container: null };
-createCacheKey = { width: ThemesDefault.modules.mobile.TABLE_ROW_ICON_SIZE, height: ThemesDefault.modules.mobile.TABLE_ROW_ICON_SIZE, justifyContent: "center", alignItems: "center", borderRadius: ThemesDefault.radii.lg };
-createCacheKey[0] = createCacheKey;
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/age_assurance/native/MethodPathIcon.tsx");
+const require = globalThis.__r;
+const inlineStylesDefault = inlineStyles;
+
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { container: null };
+let size = { width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, height: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.lg };
+obj2.container = size;
+let closure_5 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/age_assurance/native/MethodPathIcon.tsx");
 
 export default function MethodPathIcon(icon) {
-  let _require;
-  let obj = _require(4262);
-  _require = obj.useToken(ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT);
-  obj = { style: callback().container, children: null };
-  obj = { width: 24, height: 24, viewBox: "0 0 24 24", children: null };
+  _require = undefined;
+  const tmp = closure_5();
+  _require = require("useToken").useToken(nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT);
+  const obj2 = { style: tmp.container, children: null };
+  const size = { width: 24, height: 24, viewBox: "0 0 24 24", children: null };
   const paths = icon.icon.paths;
-  const tmp = callback();
-  obj[3] = paths.map((d) => closure_1_4(callback(closure_1_2[6]).Path, { d: d.d, fill: callback, fillRule: d.fillRule }, d.d));
-  obj[1] = jsx(inlineStylesDefault, { width: 24, height: 24, viewBox: "0 0 24 24", children: null });
-  return <View width={24} height={24} viewBox="0 0 24 24">{null}</View>;
+  const obj = require("useToken");
+  size.children = paths.map((d) => jsx(inlineStyles.Path, { d: d.d, fill, fillRule: d.fillRule }, d.d));
+  obj2.children = jsx(inlineStylesDefault, { width: 24, height: 24, viewBox: "0 0 24 24", children: null });
+  return <View style={tmp.container}>{null}</View>;
 };

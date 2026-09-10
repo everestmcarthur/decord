@@ -1,27 +1,14 @@
-// Module ID: 7349
-// Function ID: 7350
-// Name: VoiceChannelEffectAnimationType
-// Dependencies: [1371, 7348, 7350, 7351, 7352, 7353, 7354, 7355, 7356, 7357, 7358, 7359, 7360, 7361, 7362, 7363, 7364, 7365, 7366, 7367, 7368, 7369, 7370, 7371, 12, 1430, 1396, 4213, 4217, 1114, 2]
+// Module ID: 7363
+// Function ID: 7364
+// Name: VoiceChannelEffectsUtils
+// Dependencies: [1371, 7362, 7364, 7365, 7366, 7367, 7368, 7369, 7370, 7371, 7372, 7373, 7374, 7375, 7376, 7377, 7378, 7379, 7380, 7381, 7382, 7383, 7384, 7385, 12, 1430, 1396, 4226, 4230, 1114, 2]
 // Exports: getEffectAnnouncement, getEffectUrl, sampleAnimationId
 
-// Module 7349 (VoiceChannelEffectAnimationType)
-import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4213 */;
-import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4217 */;
-import _modDef7350 from "module_7350" /* 7350 */;
-import _modDef7351 from "module_7351" /* 7351 */;
-import _modDef7352 from "module_7352" /* 7352 */;
-import _modDef7353 from "module_7353" /* 7353 */;
-import _modDef7354 from "module_7354" /* 7354 */;
-import _modDef7355 from "module_7355" /* 7355 */;
-import _modDef7356 from "module_7356" /* 7356 */;
-import _modDef7357 from "module_7357" /* 7357 */;
-import _modDef7358 from "module_7358" /* 7358 */;
-import _modDef7359 from "module_7359" /* 7359 */;
-import _modDef7360 from "module_7360" /* 7360 */;
-import _modDef7361 from "module_7361" /* 7361 */;
-import _modDef7362 from "module_7362" /* 7362 */;
-import _modDef7363 from "module_7363" /* 7363 */;
+// Module 7363 (VoiceChannelEffectsUtils)
+import util from "util" /* 1114 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1430 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4226 */;
 import _modDef7364 from "module_7364" /* 7364 */;
 import _modDef7365 from "module_7365" /* 7365 */;
 import _modDef7366 from "module_7366" /* 7366 */;
@@ -30,45 +17,56 @@ import _modDef7368 from "module_7368" /* 7368 */;
 import _modDef7369 from "module_7369" /* 7369 */;
 import _modDef7370 from "module_7370" /* 7370 */;
 import _modDef7371 from "module_7371" /* 7371 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
-import VoiceChannelEffectAnimationType from "VoiceChannelEffectAnimationType" /* 7348 */;
-import importDefaultResult from "apply" /* 12 */;
+import _modDef7372 from "module_7372" /* 7372 */;
+import _modDef7373 from "module_7373" /* 7373 */;
+import _modDef7374 from "module_7374" /* 7374 */;
+import _modDef7375 from "module_7375" /* 7375 */;
+import _modDef7376 from "module_7376" /* 7376 */;
+import _modDef7377 from "module_7377" /* 7377 */;
+import _modDef7378 from "module_7378" /* 7378 */;
+import _modDef7379 from "module_7379" /* 7379 */;
+import _modDef7380 from "module_7380" /* 7380 */;
+import _modDef7381 from "module_7381" /* 7381 */;
+import _modDef7382 from "module_7382" /* 7382 */;
+import _modDef7383 from "module_7383" /* 7383 */;
+import _modDef7384 from "module_7384" /* 7384 */;
+import _modDef7385 from "module_7385" /* 7385 */;
+import UserStore from "UserStore" /* 1371 */;
+import apply from "module_12" /* 12 */;
 
-const require = arg1;
-({ EMOJI_SIZE: c4, VoiceChannelEffectAnimationType } = VoiceChannelEffectAnimationType);
-const items = [_modDef7350];
-const items1 = [_modDef7351, _modDef7352, _modDef7353, _modDef7354, _modDef7355, _modDef7356, _modDef7357, _modDef7358, _modDef7359, _modDef7360, _modDef7361, _modDef7362, _modDef7363, _modDef7364, _modDef7365, _modDef7366, _modDef7367, _modDef7368, _modDef7369, _modDef7370, _modDef7371];
-let obj = { [VoiceChannelEffectAnimationType.BASIC]: items, [VoiceChannelEffectAnimationType.PREMIUM]: items1 };
-const memoizeResult = importDefaultResult.memoize((arg0) => {
-  closure_0 = arg0;
-  return new Promise((arg0) => {
-    closure_0 = arg0;
-    const image = new globalThis.Image();
-    image.src = closure_0;
-    image.crossOrigin = "Anonymous";
-    image.onload = () => {
-      const result = closure_2_4 * callback(closure_2_2[25]).getDevicePixelRatio();
-      if (image.width === result) {
-        if (tmp2.height === result) {
-          callback(callback);
-        }
-      }
-      const element = <canvas />;
-      element.width = result;
-      element.height = result;
-      const context = element.getContext("2d");
-      if (context != null) {
-        context.drawImage(tmp2, 0, 0);
-      }
-      callback(element.toDataURL("image/png"));
-    };
-  });
-});
-let result = require("set").fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsUtils.tsx");
+require = fn;
+const VoiceChannelEffectsConstants = fn(7362);
+({ EMOJI_SIZE: closure_4, VoiceChannelEffectAnimationType } = VoiceChannelEffectsConstants);
+const items = [_modDef7364];
+const items1 = [_modDef7365, _modDef7366, _modDef7367, _modDef7368, _modDef7369, _modDef7370, _modDef7371, _modDef7372, _modDef7373, _modDef7374, _modDef7375, _modDef7376, _modDef7377, _modDef7378, _modDef7379, _modDef7380, _modDef7381, _modDef7382, _modDef7383, _modDef7384, _modDef7385];
+const AnimationTypeToAnimations = { [VoiceChannelEffectAnimationType.BASIC]: items, [VoiceChannelEffectAnimationType.PREMIUM]: items1 };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsUtils.tsx");
 
 export const CUSTOM_CALL_SOUND_ANIMATION_RANGE = { start: 10, end: 15 };
-export const AnimationTypeToAnimations = obj;
-export const getResizedEmojiData = memoizeResult;
+export { AnimationTypeToAnimations };
+export const getResizedEmojiData = apply.memoize((src) => new Promise((arg0) => {
+  src = arg0;
+  const image = new globalThis.Image();
+  image.src = src;
+  image.crossOrigin = "Anonymous";
+  image.onload = () => {
+    const result = React4 * ImageLoaderUtils.getDevicePixelRatio();
+    if (image.width === result) {
+      if (tmp2.height === result) {
+        closure_0(closure_0);
+      }
+    }
+    const element = <canvas />;
+    element.width = result;
+    element.height = result;
+    const context = element.getContext("2d");
+    if (context != null) {
+      context.drawImage(tmp2, 0, 0);
+    }
+    closure_0(element.toDataURL("image/png"));
+  };
+}));
 export const sampleAnimationId = function sampleAnimationId(BASIC, CUSTOM_CALL_SOUND_ANIMATION_RANGE) {
   if (null != CUSTOM_CALL_SOUND_ANIMATION_RANGE) {
     if (BASIC === VoiceChannelEffectAnimationType.PREMIUM) {
@@ -83,120 +81,114 @@ export const sampleAnimationId = function sampleAnimationId(BASIC, CUSTOM_CALL_S
 export const getEffectUrl = function getEffectUrl(emoji) {
   let tmp = arg1;
   if (arg1 === undefined) {
-    tmp = closure_4;
+    tmp = React4;
   }
   if (null != emoji.id) {
-    obj = { id: null, animated: null, size: null };
-    ({ id: obj5[0], animated } = emoji);
+    const obj3 = { id: null, animated: null, size: null };
+    ({ id: obj5.id, animated } = emoji);
     if (animated == null) {
       animated = false;
     }
-    obj[1] = animated;
-    obj[2] = tmp;
-    return getAvatarURLDefault.getEmojiURL(obj);
+    obj3.animated = animated;
+    obj3.size = tmp;
+    return AvatarUtilsDefault.getEmojiURL(obj3);
   } else {
-    obj = parseRawEmojiObjectDefault;
-    const result = obj.convertSurrogateToName(emoji.name, false);
-    const byName = parseRawEmojiObjectDefault.getByName(result);
+    const result = UnicodeEmojisDefault.convertSurrogateToName(emoji.name, false);
+    const tmp2 = importDefault;
+    const byName = UnicodeEmojisDefault.getByName(result);
     let str = "";
     if (null != byName) {
-      str = getEmojiUnavailableReasonDefault.getURL(byName.surrogates);
-      const tmp2Result = getEmojiUnavailableReasonDefault;
+      str = tmp2(4230).getURL(byName.surrogates);
+      const tmp2Result = tmp2(4230);
     }
     return str;
   }
 };
-export const getEffectAnnouncement = function getEffectAnnouncement(closure_7) {
-  if (closure_7.length < 1) {
+export const getEffectAnnouncement = function getEffectAnnouncement(items) {
+  if (items.length < 1) {
     return "";
   } else {
     let emojiName = "userId";
     let yZYxzF = dependencyMap;
-    const mapped = importDefaultResult(closure_7).map((arg0) => {
-      let tmp = arg0[emojiName];
+    const mapped = apply(items).map((item) => {
+      let tmp = item[emojiName];
       if (tmp == null) {
         tmp = null;
       }
       return tmp;
     });
-    const found = mapped.filter((arg0) => null != arg0);
-    const arr = importDefaultResult(closure_7);
-    obj = found.uniq().value();
+    const found = mapped.filter((item) => null != item);
+    const arr = apply(items);
+    let obj3 = found.uniq().value();
     emojiName = "emojiName";
     const iter = found.uniq();
-    const mapped1 = importDefaultResult(closure_7).map((arg0) => {
-      let tmp = arg0[emojiName];
+    const mapped1 = apply(items).map((item) => {
+      let tmp = item[emojiName];
       if (tmp == null) {
         tmp = null;
       }
       return tmp;
     });
-    const found1 = mapped1.filter((arg0) => null != arg0);
-    const arr3 = importDefaultResult(closure_7);
-    const valueResult = found1.uniq().value();
-    if (valueResult.length < 2) {
+    const found1 = mapped1.filter((item) => null != item);
+    const arr3 = apply(items);
+    const valueResult2 = found1.uniq().value();
+    if (valueResult2.length < 2) {
       let str2;
-      if (valueResult != null) {
-        str2 = valueResult[0];
+      if (valueResult2 != null) {
+        str2 = valueResult2[0];
       }
       if (str2 == null) {
         str2 = "";
       }
       let joined = str2;
     } else {
-      joined = valueResult.join(", ");
+      joined = valueResult2.join(", ");
     }
-    if (obj.length < 1) {
+    if (obj3.length < 1) {
       return "";
-    } else if (1 === obj.length) {
-      const intl2 = emojiName(1114).intl;
-      yZYxzF = emojiName(1114).t.yZYxzF;
-      const user = authStore.getUser(obj[0]);
+    } else if (1 === obj3.length) {
+      const intl2 = util.intl;
+      yZYxzF = util.t.yZYxzF;
+      const user = UserStore.getUser(obj3[0]);
       let username;
       if (user != null) {
         username = user.username;
       }
-      obj = { firstUsername: null, emojiNames: null };
-      obj[0] = username;
-      obj[1] = joined;
-      let formatToPlainStringResult = intl2.formatToPlainString(yZYxzF, obj);
-    } else if (2 === obj.length) {
-      const intl = emojiName(1114).intl;
-      const user1 = authStore.getUser(obj[0]);
+      obj3 = { firstUsername: username, emojiNames: joined };
+      let formatToPlainStringResult = intl2.formatToPlainString(yZYxzF, obj3);
+    } else if (2 === obj3.length) {
+      const intl = util.intl;
+      const user1 = UserStore.getUser(obj3[0]);
       let username1;
       if (user1 != null) {
         username1 = user1.username;
       }
-      obj = { firstUsername: null, secondUsername: null, emojiNames: null };
-      obj[0] = username1;
-      const user2 = authStore.getUser(obj[1]);
+      const obj4 = { firstUsername: username1, secondUsername: null, emojiNames: null };
+      const user2 = UserStore.getUser(obj3[1]);
       let username2;
       if (user2 != null) {
         username2 = user2.username;
       }
-      obj[1] = username2;
-      obj[2] = joined;
-      formatToPlainStringResult = intl.formatToPlainString(emojiName(1114).t["8rmtbd"], obj);
-      const obj2 = authStore;
+      obj4.secondUsername = username2;
+      obj4.emojiNames = joined;
+      formatToPlainStringResult = intl.formatToPlainString(util.t["8rmtbd"], obj4);
     } else {
-      const intl3 = emojiName(1114).intl;
-      const user3 = authStore.getUser(obj[0]);
+      const intl3 = util.intl;
+      const user3 = UserStore.getUser(obj3[0]);
       let username3;
       if (user3 != null) {
         username3 = user3.username;
       }
-      obj = { firstUsername: null, secondUsername: null, count: null, emojiNames: null };
-      obj[0] = username3;
-      const user4 = authStore.getUser(obj[1]);
+      const obj = { firstUsername: username3, secondUsername: null, count: null, emojiNames: null };
+      const user4 = UserStore.getUser(obj3[1]);
       let username4;
       if (user4 != null) {
         username4 = user4.username;
       }
-      obj[1] = username4;
-      obj[2] = obj.length - 2;
-      obj[3] = joined;
-      formatToPlainStringResult = intl3.formatToPlainString(emojiName(1114).t["/okjv0"], obj);
-      const obj7 = authStore;
+      obj.secondUsername = username4;
+      obj.count = obj3.length - 2;
+      obj.emojiNames = joined;
+      formatToPlainStringResult = intl3.formatToPlainString(util.t["/okjv0"], obj);
     }
     const iter2 = found1.uniq();
   }

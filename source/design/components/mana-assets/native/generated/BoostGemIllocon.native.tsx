@@ -1,17 +1,17 @@
-// Module ID: 5801
-// Function ID: 5802
+// Module ID: 5815
+// Function ID: 5816
 // Name: BoostGemIllocon
-// Dependencies: [21, 5587, 5802, 2]
+// Dependencies: [21, 5601, 5816, 2]
 // Exports: BoostGemIllocon
 
-// Module 5801 (BoostGemIllocon)
-import set from "set" /* 2 */;
+// Module 5815 (BoostGemIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 5802 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5816 from "module_5816" /* 5816 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/BoostGemIllocon.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BoostGemIllocon.native.tsx");
 
 export const BoostGemIllocon = function BoostGemIllocon(size) {
   let num = size.size;
@@ -19,13 +19,13 @@ export const BoostGemIllocon = function BoostGemIllocon(size) {
   if (num === undefined) {
     num = 64;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef5816 };
+  obj.source = obj2;
   const items = [{ width: num, height: num }];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { uri: metadataDefault });
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

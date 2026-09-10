@@ -1,77 +1,79 @@
-// Module ID: 17726
-// Function ID: 17727
+// Module ID: 17759
+// Function ID: 17760
 // Name: FormGuildGatingModeSelector
-// Dependencies: [19, 17, 21, 4560, 17727, 4905, 1114, 4556, 17729, 11809, 17730, 2]
+// Dependencies: [19, 17, 21, 4574, 17760, 4919, 1114, 4570, 17762, 11835, 17763, 2]
 // Exports: default
 
-// Module 17726 (FormGuildGatingModeSelector)
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17759 (FormGuildGatingModeSelector)
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4919 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ container: { padding: 16 }, space: { height: 8 }, alertHeader: { paddingBottom: 16 } });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormGuildGatingModeSelector.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let closure_8 = createStyles.createStyles({ container: { padding: 16 }, space: { height: 8 }, alertHeader: { paddingBottom: 16 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormGuildGatingModeSelector.tsx");
 
 export default function FormGuildGatingModeSelector(isFullServerGating) {
   isFullServerGating = isFullServerGating.isFullServerGating;
   const onChange = isFullServerGating.onChange;
-  dependencyMap = undefined;
-  const tmp = callback3();
+  const tmp = closure_8();
   dependencyMap = tmp;
-  let obj = isFullServerGating(17727);
-  const roleSubscriptionSettingsDisabled = obj.useRoleSubscriptionSettingsDisabled();
+  const roleSubscriptionSettingsDisabled = isFullServerGating(17760).useRoleSubscriptionSettingsDisabled();
   let items = [onChange];
   const items1 = [onChange, isFullServerGating, tmp];
-  const callback = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     onChange(false);
   }, items);
-  obj = { style: tmp.container, accessibilityRole: "radiogroup", accessibilityState: { disabled: roleSubscriptionSettingsDisabled }, children: null };
-  const callback1 = React.useCallback(() => {
+  let obj2 = { style: tmp.container, accessibilityRole: "radiogroup", accessibilityState: { disabled: roleSubscriptionSettingsDisabled }, children: null };
+  const callback1 = noop.useCallback(() => {
     if (!isFullServerGating) {
-      let obj = onChange(alertHeader[5]);
-      obj = { confirmText: null, children: null };
-      const intl = isFullServerGating(alertHeader[6]).intl;
-      obj[0] = intl.string(isFullServerGating(alertHeader[6]).t["NX+WJN"]);
-      obj = { children: null };
-      obj1 = { style: null, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
-      obj1[0] = alertHeader.alertHeader;
-      const intl2 = isFullServerGating(alertHeader[6]).intl;
-      obj1[3] = intl2.string(isFullServerGating(alertHeader[6]).t.dmVoOz);
-      const items = [closure_1_5(isFullServerGating(alertHeader[7]).Text, obj1), ];
-      const obj2 = { variant: "text-md/normal", children: null };
-      const intl3 = isFullServerGating(alertHeader[6]).intl;
-      obj2[1] = intl3.string(isFullServerGating(alertHeader[6]).t.mtwzdD);
-      items[1] = closure_1_5(isFullServerGating(alertHeader[7]).Text, obj2);
-      obj[0] = items;
-      obj[1] = closure_1_7(closure_1_6, obj);
-      obj.show(obj);
+      const obj2 = { confirmText: null, children: null };
+      const intl = util.intl;
+      obj2.confirmText = intl.string(util.t["NX+WJN"]);
+      const obj3 = { children: null };
+      const obj4 = { style: alertHeader.alertHeader, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
+      const intl2 = util.intl;
+      obj4.children = intl2.string(util.t.dmVoOz);
+      const items = [hasOwnProperty(Text_Text.Text, obj4), ];
+      const obj5 = { variant: "text-md/normal", children: null };
+      const intl3 = util.intl;
+      obj5.children = intl3.string(util.t.mtwzdD);
+      items[1] = hasOwnProperty(Text_Text.Text, obj5);
+      obj3.children = items;
+      obj2.children = React5(timestampProducer, obj3);
+      actions_AlertActionCreatorsDefault.show(obj2);
     }
     onChange(true);
   }, items1);
-  obj = { icon: onChange(11809), title: null, description: null, selected: null, onPress: null, disabled: null };
+  let obj3 = { icon: null, title: null, description: null, selected: null, onPress: null, disabled: null };
+  let obj = isFullServerGating(17760);
+  obj3.icon = onChange(11835);
   let intl = isFullServerGating(1114).intl;
-  obj[1] = intl.string(isFullServerGating(1114).t.rXqxhF);
+  obj3.title = intl.string(isFullServerGating(1114).t.rXqxhF);
   let intl2 = isFullServerGating(1114).intl;
-  obj[2] = intl2.string(isFullServerGating(1114).t.yQiJne);
-  obj[3] = !isFullServerGating;
-  obj[4] = callback;
-  obj[5] = roleSubscriptionSettingsDisabled;
-  const items2 = [callback(onChange(17729), obj), callback(View, { style: tmp.space }), ];
-  let obj2 = { icon: null, title: null, description: null, selected: null, onPress: null, disabled: null };
-  obj1 = { style: tmp.space };
-  const tmp5 = onChange(17729);
-  obj2[0] = onChange(17730);
+  obj3.description = intl2.string(isFullServerGating(1114).t.yQiJne);
+  obj3.selected = !isFullServerGating;
+  obj3.onPress = callback;
+  obj3.disabled = roleSubscriptionSettingsDisabled;
+  const items2 = [closure_5(onChange(17762), obj3), closure_5(View, { style: tmp.space }), ];
+  let obj5 = { icon: null, title: null, description: null, selected: null, onPress: null, disabled: null };
+  let obj4 = { style: tmp.space };
+  const tmp5 = onChange(17762);
+  obj5.icon = onChange(17763);
   let intl3 = isFullServerGating(1114).intl;
-  obj2[1] = intl3.string(isFullServerGating(1114).t.WzC9s6);
+  obj5.title = intl3.string(isFullServerGating(1114).t.WzC9s6);
   const intl4 = isFullServerGating(1114).intl;
-  obj2[2] = intl4.string(isFullServerGating(1114).t.WmagiB);
-  obj2[3] = isFullServerGating;
-  obj2[4] = callback1;
-  obj2[5] = roleSubscriptionSettingsDisabled;
-  items2[2] = callback(onChange(17729), obj2);
-  obj[3] = items2;
-  return callback2(View, obj);
+  obj5.description = intl4.string(isFullServerGating(1114).t.WmagiB);
+  obj5.selected = isFullServerGating;
+  obj5.onPress = callback1;
+  obj5.disabled = roleSubscriptionSettingsDisabled;
+  items2[2] = closure_5(onChange(17762), obj5);
+  obj2.children = items2;
+  return closure_7(View, obj2);
 };

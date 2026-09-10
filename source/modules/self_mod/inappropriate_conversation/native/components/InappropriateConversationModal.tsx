@@ -1,238 +1,233 @@
-// Module ID: 15725
-// Function ID: 15726
-// Name: IntroScreen
-// Dependencies: [32, 19, 17, 1371, 11368, 21, 4560, 576, 504, 4404, 1483, 5692, 4556, 1114, 4975, 11375, 15726, 11381, 5624, 11399, 4763, 11376, 7000, 2]
+// Module ID: 15755
+// Function ID: 15756
+// Name: InappropriateConversationModal
+// Dependencies: [32, 19, 17, 1371, 11395, 21, 4574, 576, 504, 4418, 1483, 5706, 4570, 1114, 4989, 11402, 15756, 11408, 5638, 11426, 4777, 11403, 7014, 2]
 // Exports: default
 
-// Module 15725 (IntroScreen)
+// Module 15755 (InappropriateConversationModal)
 import initialize from "initialize" /* 504 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import useNavigation from "useNavigation" /* 1483 */;
-import nameFromUserDefault from "nameFromUser" /* 4404 */;
-import Text from "Text" /* 4556 */;
-import Button from "Button" /* 4975 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5692 */;
-import SafetyTipsContainerDefault from "SafetyTipsContainer" /* 11381 */;
-import TakeActionButtonsDefault from "TakeActionButtons" /* 15726 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { useState } from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "mergeGuildAvatar" /* 1371 */;
-import LOCATION_CONTEXT_MOBILE from "LOCATION_CONTEXT_MOBILE" /* 11368 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import UserUtilsDefault from "UserUtils" /* 4418 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import native from "native" /* 5706 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11402 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11403 */;
+import SafetyTipsSectionDefault from "SafetyTipsSection" /* 11408 */;
+import TakeActionScreenDefault from "TakeActionScreen" /* 15756 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+require = fn;
 function IntroScreen(arg0) {
   ({ warningId: require, senderId: importDefault, trackAnalyticsEvent: dependencyMap } = arg0);
-  closure_3 = undefined;
-  const tmp = callback4();
-  let obj = initialize;
-  const items = [closure_8];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getUser(closure_1));
-  obj1 = nameFromUserDefault;
-  const name = obj1.getName(stateFromStores);
-  let obj2 = useNavigation;
-  closure_3 = obj2.useNavigation();
-  obj = { style: tmp.container, children: null };
-  const items1 = [callback2(AccountAgeTier10LargeBadge.TrafficConeSpotIllustration, {}), , ];
-  obj = { style: tmp.warningText, children: null };
-  obj1 = { variant: "heading-xl/semibold", style: tmp.takeoverHeader, accessibilityRole: "header", children: null };
-  const intl = getSystemLocale.intl;
-  obj1[3] = intl.string(getSystemLocale.t.sSMgC6);
-  const items2 = [callback2(Text.Text, obj1), ];
-  obj2 = { variant: "text-md/medium", style: tmp.takeoverDescription, children: null };
-  const intl2 = getSystemLocale.intl;
-  obj2[2] = intl2.format(getSystemLocale.t.q2QrTY, { username: name });
-  items2[1] = callback2(Text.Text, obj2);
-  obj[1] = items2;
-  items1[1] = callback3(closure_7, obj);
-  const obj3 = { style: tmp.ctaContainer, children: null };
-  const obj4 = { variant: "primary", size: "lg", text: null, grow: true, onPress: null };
-  const intl3 = getSystemLocale.intl;
-  obj4[2] = intl3.string(getSystemLocale.t["+o4Q7e"]);
-  obj4[4] = function onPress() {
-    callback(closure_1_0(closure_1_2[15]).CtaEventTypes.USER_TAKEOVER_MODAL_TAKE_ACTION);
+  const tmp = closure_15();
+  const items = [UserStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => UserStore.getUser(senderId));
+  const name = UserUtilsDefault.getName(stateFromStores);
+  closure_3 = useNavigation.useNavigation();
+  const obj4 = { style: tmp.container, children: null };
+  const items1 = [closure_13(native.TrafficConeSpotIllustration, {}), , ];
+  const obj5 = { style: tmp.warningText, children: null };
+  const obj6 = { variant: "heading-xl/semibold", style: tmp.takeoverHeader, accessibilityRole: "header", children: null };
+  const intl = util.intl;
+  obj6.children = intl.string(util.t.sSMgC6);
+  const items2 = [closure_13(Text_Text.Text, obj6), ];
+  const obj7 = { variant: "text-md/medium", style: tmp.takeoverDescription, children: null };
+  const intl2 = util.intl;
+  obj7.children = intl2.format(util.t.q2QrTY, { username: name });
+  items2[1] = closure_13(Text_Text.Text, obj7);
+  obj5.children = items2;
+  items1[1] = closure_14(closure_7, obj5);
+  const obj8 = { style: tmp.ctaContainer, children: null };
+  const obj9 = { variant: "primary", size: "lg", text: null, grow: true, onPress: null };
+  const intl3 = util.intl;
+  obj9.text = intl3.string(util.t["+o4Q7e"]);
+  obj9.onPress = function onPress() {
+    closure_3.push("TAKE_ACTION", { warningId, senderId });
+    dependencyMap(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_TAKE_ACTION);
   };
-  const items3 = [callback2(Button.Button, obj4), ];
-  const obj5 = { variant: "secondary", size: "lg", text: null, grow: true, onPress: null };
-  const intl4 = getSystemLocale.intl;
-  obj5[2] = intl4.string(getSystemLocale.t.xLkGzP);
-  obj5[4] = function onPress() {
-    callback(closure_1_0(closure_1_2[15]).CtaEventTypes.USER_TAKEOVER_MODAL_SAFETY_TIPS);
+  const items3 = [closure_13(components_Button_Button.Button, obj9), ];
+  const obj10 = { variant: "secondary", size: "lg", text: null, grow: true, onPress: null };
+  const intl4 = util.intl;
+  obj10.text = intl4.string(util.t.xLkGzP);
+  obj10.onPress = function onPress() {
+    closure_3.push("SAFETY_TIPS");
+    dependencyMap(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_SAFETY_TIPS);
   };
-  items3[1] = callback2(Button.Button, obj5);
-  obj3[1] = items3;
-  items1[2] = callback3(closure_7, obj3);
-  obj[1] = items1;
-  return callback3(closure_7, obj);
+  items3[1] = closure_13(components_Button_Button.Button, obj10);
+  obj8.children = items3;
+  items1[2] = closure_14(closure_7, obj8);
+  obj4.children = items1;
+  return closure_14(closure_7, obj4);
 }
 function TakeActionScreen(arg0) {
   ({ senderId, isReported, channelId, setReported, trackAnalyticsEvent } = arg0);
-  const tmp = callback4();
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.warningText, children: null };
-  obj = { variant: "heading-xl/semibold", style: tmp.takeoverHeader, accessibilityRole: "header", children: null };
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.string(getSystemLocale.t["mWO+ys"]);
-  const items = [callback2(Text.Text, obj), ];
-  obj1 = { variant: "text-md/medium", style: tmp.takeoverDescription, children: null };
-  const intl2 = getSystemLocale.intl;
-  obj1[2] = intl2.string(getSystemLocale.t.S0XtKF);
-  items[1] = callback2(Text.Text, obj1);
-  obj[1] = items;
-  const items1 = [callback3(closure_7, obj), callback2(TakeActionButtonsDefault, { senderId, channelId, isReported, setReported, trackAnalyticsEvent })];
-  obj[1] = items1;
-  return callback3(closure_7, obj);
+  const tmp = closure_15();
+  const obj = { style: tmp.container, children: null };
+  const obj2 = { style: tmp.warningText, children: null };
+  const obj3 = { variant: "heading-xl/semibold", style: tmp.takeoverHeader, accessibilityRole: "header", children: null };
+  const intl = util.intl;
+  obj3.children = intl.string(util.t["mWO+ys"]);
+  const items = [map1(Text_Text.Text, obj3), ];
+  const obj4 = { variant: "text-md/medium", style: tmp.takeoverDescription, children: null };
+  const intl2 = util.intl;
+  obj4.children = intl2.string(util.t.S0XtKF);
+  items[1] = map1(Text_Text.Text, obj4);
+  obj2.children = items;
+  const items1 = [closure_1_14(React5, obj2), map1(TakeActionScreenDefault, { senderId, channelId, isReported, setReported, trackAnalyticsEvent })];
+  obj.children = items1;
+  return closure_1_14(React5, obj);
 }
 function SafetyTipsScreen() {
-  const tmp = callback4();
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.safetyTips, children: null };
-  obj = { showHeader: true, description: null, safetyTips: null };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t.DJMZX6);
-  const tmp2 = SafetyTipsContainerDefault;
-  obj[2] = callback().map((children) => callback2(callback(table[12]).Text, { variant: "text-sm/medium", children }, arg1));
-  obj[1] = callback2(tmp2, obj);
-  obj[1] = callback2(closure_7, obj);
-  return callback2(closure_7, obj);
+  const tmp = closure_15();
+  const obj = { style: tmp.container, children: null };
+  const obj2 = { style: tmp.safetyTips, children: null };
+  const obj3 = { showHeader: true, description: null, safetyTips: null };
+  const intl = util.intl;
+  obj3.description = intl.string(util.t.DJMZX6);
+  const tmp2 = SafetyTipsSectionDefault;
+  obj3.safetyTips = closure_1_12().map((children, index) => closure_1_13(Text_Text.Text, { variant: "text-sm/medium", children }, index));
+  obj2.children = map1(tmp2, obj3);
+  obj.children = map1(React5, obj2);
+  return map1(React5, obj);
 }
 function CrisisTextLineScreen(trackAnalyticsEvent) {
   trackAnalyticsEvent = trackAnalyticsEvent.trackAnalyticsEvent;
-  const tmp = callback4();
-  let obj = { style: tmp.container, children: null };
-  const items = [callback2(trackAnalyticsEvent(5692).SafetyChatSpotIllustration, {}), , ];
-  obj = { style: tmp.warningText, children: null };
-  obj = { variant: "heading-xl/semibold", style: tmp.takeoverHeader, accessibilityRole: "header", children: null };
+  const tmp = closure_15();
+  const obj = { style: tmp.container, children: null };
+  const items = [closure_13(trackAnalyticsEvent(5706).SafetyChatSpotIllustration, {}), , ];
+  const obj2 = { style: tmp.warningText, children: null };
+  const obj3 = { variant: "heading-xl/semibold", style: tmp.takeoverHeader, accessibilityRole: "header", children: null };
   const intl = trackAnalyticsEvent(1114).intl;
-  obj[3] = intl.string(trackAnalyticsEvent(1114).t.NUMAsF);
-  const items1 = [callback2(trackAnalyticsEvent(4556).Text, obj), ];
-  obj1 = { variant: "text-md/medium", style: tmp.takeoverDescription, children: null };
+  obj3.children = intl.string(trackAnalyticsEvent(1114).t.NUMAsF);
+  const items1 = [closure_13(trackAnalyticsEvent(4570).Text, obj3), ];
+  const obj4 = { variant: "text-md/medium", style: tmp.takeoverDescription, children: null };
   const intl2 = trackAnalyticsEvent(1114).intl;
-  obj1[2] = intl2.string(trackAnalyticsEvent(1114).t.uicS5l);
-  items1[1] = callback2(trackAnalyticsEvent(4556).Text, obj1);
-  obj[1] = items1;
-  items[1] = callback3(closure_7, obj);
-  const obj2 = { style: tmp.ctaContainer, children: null };
-  const obj3 = { variant: "secondary", size: "lg", text: null, grow: true, onPress: null };
+  obj4.children = intl2.string(trackAnalyticsEvent(1114).t.uicS5l);
+  items1[1] = closure_13(trackAnalyticsEvent(4570).Text, obj4);
+  obj2.children = items1;
+  items[1] = closure_14(closure_7, obj2);
+  const obj5 = { style: tmp.ctaContainer, children: null };
+  const obj6 = { variant: "secondary", size: "lg", text: null, grow: true, onPress: null };
   const intl3 = trackAnalyticsEvent(1114).intl;
-  obj3[2] = intl3.string(trackAnalyticsEvent(1114).t.lkUb4S);
-  obj3[4] = function onPress() {
-    closure_1_6.openURL(closure_1_9);
-    trackAnalyticsEvent(trackAnalyticsEvent(closure_1_2[15]).CtaEventTypes.USER_TAKEOVER_MODAL_CTL_SMS);
+  obj6.text = intl3.string(trackAnalyticsEvent(1114).t.lkUb4S);
+  obj6.onPress = function onPress() {
+    timestampProducer.openURL(React7);
+    trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_CTL_SMS);
   };
-  const items2 = [callback2(trackAnalyticsEvent(4975).Button, obj3), ];
-  const obj4 = { variant: "secondary", size: "lg", text: null, grow: true, onPress: null };
+  const items2 = [closure_13(trackAnalyticsEvent(4989).Button, obj6), ];
+  const obj7 = { variant: "secondary", size: "lg", text: null, grow: true, onPress: null };
   const intl4 = trackAnalyticsEvent(1114).intl;
-  obj4[2] = intl4.string(trackAnalyticsEvent(1114).t.ogLlvy);
-  obj4[4] = function onPress() {
-    closure_1_6.openURL(closure_1_10);
-    trackAnalyticsEvent(trackAnalyticsEvent(closure_1_2[15]).CtaEventTypes.USER_TAKEOVER_MODAL_CTL_WEB);
+  obj7.text = intl4.string(trackAnalyticsEvent(1114).t.ogLlvy);
+  obj7.onPress = function onPress() {
+    timestampProducer.openURL(closure_2_10);
+    trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_CTL_WEB);
   };
-  items2[1] = callback2(trackAnalyticsEvent(4975).Button, obj4);
-  obj2[1] = items2;
-  items[2] = callback3(closure_7, obj2);
-  obj[1] = items;
-  return callback3(closure_7, obj);
+  items2[1] = closure_13(trackAnalyticsEvent(4989).Button, obj7);
+  obj5.children = items2;
+  items[2] = closure_14(closure_7, obj5);
+  obj.children = items;
+  return closure_14(closure_7, obj);
 }
-({ Linking: closure_6, View: error } = get_ActivityIndicator);
-({ CRISIS_TEXT_LINE_SMS_URI: c9, CRISIS_TEXT_LINE_URL: c10, TAKEOVER_MODAL_KEY: unpackModuleId, getInappropriateConversationsSafetyTips: closure_12 } = LOCATION_CONTEXT_MOBILE);
+const useState = fn(19).useState;
+get_ActivityIndicator = fn(17);
+({ Linking: metroRequire, View: closure_7 } = get_ActivityIndicator);
+const Constants = fn(11395);
+({ CRISIS_TEXT_LINE_SMS_URI: closure_9, CRISIS_TEXT_LINE_URL: c10, TAKEOVER_MODAL_KEY: closure_11, getInappropriateConversationsSafetyTips: closure_12 } = Constants);
+const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-createCacheKey = { container: null, warningText: null, ctaContainer: null, takeoverHeader: null, takeoverDescription: null, safetyTips: null };
-createCacheKey = { display: "flex", alignItems: "center", justifyContent: "center", padding: ThemesDefault.space.PX_32, gap: ThemesDefault.space.PX_16, height: "100%" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginBottom: ThemesDefault.space.PX_16, display: "flex", alignItems: "center", gap: ThemesDefault.space.PX_4 };
-let obj1 = { marginBottom: ThemesDefault.space.PX_16, display: "flex", alignItems: "center", gap: ThemesDefault.space.PX_4 };
-createCacheKey[2] = { display: "flex", alignItems: "center", alignSelf: "stretch", gap: ThemesDefault.space.PX_16 };
-createCacheKey[3] = { textAlign: "center", maxWidth: 268 };
-createCacheKey[4] = { textAlign: "center" };
-createCacheKey[5] = { alignSelf: "stretch" };
-let closure_15 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { display: "flex", alignItems: "center", alignSelf: "stretch", gap: ThemesDefault.space.PX_16 };
-let result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/components/InappropriateConversationModal.tsx");
+const createStyles = fn(4574);
+let obj2 = { container: { display: "flex", alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16, height: "100%" }, warningText: null, ctaContainer: null, takeoverHeader: null, takeoverDescription: null, safetyTips: null };
+let obj3 = { display: "flex", alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16, height: "100%" };
+obj2.warningText = { marginBottom: nativeDefault.space.PX_16, display: "flex", alignItems: "center", gap: nativeDefault.space.PX_4 };
+let obj4 = { marginBottom: nativeDefault.space.PX_16, display: "flex", alignItems: "center", gap: nativeDefault.space.PX_4 };
+obj2.ctaContainer = { display: "flex", alignItems: "center", alignSelf: "stretch", gap: nativeDefault.space.PX_16 };
+obj2.takeoverHeader = { textAlign: "center", maxWidth: 268 };
+obj2.takeoverDescription = { textAlign: "center" };
+obj2.safetyTips = { alignSelf: "stretch" };
+let closure_15 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/components/InappropriateConversationModal.tsx");
 
 export default function InappropriateConversationModal(channelId) {
   channelId = channelId.channelId;
-  let warningId = channelId;
-  warningId = channelId.warningId;
-  let senderId = warningId;
+  const warningId = channelId.warningId;
   const warningType = channelId.warningType;
-  channelId = warningType;
-  senderId = channelId.senderId;
-  let React;
-  let callback;
-  [tmp2, tmp3] = senderId(callback(false), 2);
-  let obj = warningId(channelId[19]);
-  const tmp4 = null != obj.useSafetyToolsButtonTooltipForChannel(channelId);
-  React = tmp4;
+  const senderId = channelId.senderId;
+  let memo;
+  [tmp2, tmp3] = senderId(memo(false), 2);
+  const tmp = senderId(memo(false), 2);
+  const tmp4 = null != channelId(warningType[19]).useSafetyToolsButtonTooltipForChannel(channelId);
+  noop = tmp4;
   let items = [channelId, warningId, warningType, senderId, tmp4];
-  const memo = React.useMemo(() => ({ channelId: warningId, senderId, warningId: senderId, warningType: channelId, isNudgeWarning: closure_4 }), items);
-  callback = memo;
+  memo = noop.useMemo(() => ({ channelId, senderId, warningId, warningType, isNudgeWarning }), items);
   const items1 = [channelId, warningId, memo];
   const items2 = [memo];
-  callback = React.useCallback(() => {
-    let obj = senderId(channelId[20]);
-    obj.popWithKey(closure_1_11);
-    const items = [senderId];
-    const result = warningId(channelId[21]).dismissChannelSafetyWarnings(warningId, items);
-    const obj2 = warningId(channelId[21]);
-    obj = {};
-    const merged = Object.assign(callback);
-    obj.cta = warningId(channelId[15]).CtaEventTypes.USER_TAKEOVER_MODAL_DISMISS;
-    warningId(channelId[15]).trackCtaEvent(obj);
+  const callback = noop.useCallback(() => {
+    ModalActionCreatorsDefault.popWithKey(closure_2_11);
+    const items = [warningId];
+    const result = ChannelSafetyWarningsActionCreators.dismissChannelSafetyWarnings(channelId, items);
+    const obj4 = {};
+    const merged = Object.assign(memo);
+    obj4.cta = SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_DISMISS;
+    SafetyWarningUtils.trackCtaEvent(obj4);
   }, items1);
-  const effect = React.useEffect(() => {
-    let obj = warningId(channelId[15]);
-    obj = {};
-    const merged = Object.assign(callback);
-    obj.viewName = warningId(channelId[15]).ViewNameTypes.SAFETY_TAKEOVER_MODAL;
-    obj.trackNamedViewEvent(obj);
+  const effect = noop.useEffect(() => {
+    const obj2 = {};
+    const merged = Object.assign(memo);
+    obj2.viewName = SafetyWarningUtils.ViewNameTypes.SAFETY_TAKEOVER_MODAL;
+    SafetyWarningUtils.trackNamedViewEvent(obj2);
   }, items2);
   const items3 = [channelId, warningId, senderId, warningType, tmp4];
-  const callback1 = React.useCallback((cta) => {
-    let obj = warningId(channelId[15]);
-    obj = { channelId: warningId, warningId: senderId, senderId, warningType: channelId, cta, isNudgeWarning: closure_4 };
-    obj.trackCtaEvent(obj);
+  const callback1 = noop.useCallback((cta) => {
+    SafetyWarningUtils.trackCtaEvent({ channelId, warningId, senderId, warningType, cta, isNudgeWarning });
   }, items3);
-  obj = { screens: null, initialRouteName: "INTRO" };
-  senderId = tmp2;
-  React = tmp3;
-  obj = { title: "", fullscreen: true, headerRight: null, headerLeft: null };
-  let obj3 = warningId(channelId[18]);
-  obj[2] = obj3.getHeaderCloseButton(() => callback());
-  let obj4 = warningId(channelId[18]);
-  obj[3] = obj4.getHeaderBackButton();
-  obj1 = { INTRO: null, TAKE_ACTION: null, SAFETY_TIPS: null, CRISIS_TEXT_LINE: null };
-  let obj2 = {};
-  let merged = Object.assign(obj);
-  obj2.headerLeft = function headerLeft() {
+  let obj2 = { screens: null, initialRouteName: "INTRO" };
+  closure_129_0 = warningId;
+  closure_129_1 = senderId;
+  closure_129_2 = channelId;
+  closure_129_3 = tmp2;
+  closure_129_4 = tmp3;
+  closure_129_5 = callback;
+  closure_129_6 = callback1;
+  const obj3 = { title: "", fullscreen: true, headerRight: null, headerLeft: null };
+  let obj = channelId(warningType[19]);
+  obj3.headerRight = channelId(warningType[18]).getHeaderCloseButton(() => memo());
+  let obj4 = channelId(warningType[18]);
+  obj3.headerLeft = channelId(warningType[18]).getHeaderBackButton();
+  const obj6 = { INTRO: null, TAKE_ACTION: null, SAFETY_TIPS: null, CRISIS_TEXT_LINE: null };
+  const obj7 = {};
+  let merged = Object.assign(obj3);
+  obj7.headerLeft = function headerLeft() {
     return null;
   };
-  obj2.render = function render() {
-    return closure_1_13(closure_1_16, { warningId, senderId, trackAnalyticsEvent: callback1 });
+  obj7.render = function render() {
+    return map1(IntroScreen, { warningId: channelId, senderId: warningId, trackAnalyticsEvent });
   };
-  obj1[0] = obj2;
-  obj3 = {};
-  const merged1 = Object.assign(obj);
-  obj3.render = function render() {
-    return closure_1_13(closure_1_17, { senderId, channelId, isReported: senderId, setReported: closure_4, trackAnalyticsEvent: callback1 });
+  obj6.INTRO = obj7;
+  const obj8 = {};
+  const merged1 = Object.assign(obj3);
+  obj8.render = function render() {
+    return map1(TakeActionScreen, { senderId: warningId, channelId: warningType, isReported: senderId, setReported, trackAnalyticsEvent });
   };
-  obj1[1] = obj3;
-  obj4 = {};
-  const merged2 = Object.assign(obj);
-  obj4.render = function render() {
-    return callback(closure_18, {});
+  obj6.TAKE_ACTION = obj8;
+  const obj9 = {};
+  const merged2 = Object.assign(obj3);
+  obj9.render = function render() {
+    return closure_1_13(SafetyTipsScreen, {});
   };
-  obj1[2] = obj4;
-  const obj5 = {};
-  const merged3 = Object.assign(obj);
-  obj5.render = function render() {
-    return closure_1_13(closure_1_19, { trackAnalyticsEvent: callback1 });
+  obj6.SAFETY_TIPS = obj9;
+  const obj10 = {};
+  const merged3 = Object.assign(obj3);
+  obj10.render = function render() {
+    return map1(CrisisTextLineScreen, { trackAnalyticsEvent });
   };
-  obj1[3] = obj5;
-  obj[0] = obj1;
-  return callback2(warningId(channelId[22]).Navigator, obj);
+  obj6.CRISIS_TEXT_LINE = obj10;
+  obj2.screens = obj6;
+  return closure_13(channelId(warningType[22]).Navigator, obj2);
 };

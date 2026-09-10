@@ -1,19 +1,19 @@
-// Module ID: 10296
-// Function ID: 10297
+// Module ID: 10323
+// Function ID: 10324
 // Name: useExpressionPickerListWidth
-// Dependencies: [1219, 7151, 1477, 1611, 2]
+// Dependencies: [1219, 7165, 1477, 1611, 2]
 // Exports: default
 
-// Module 10296 (useExpressionPickerListWidth)
-import set from "set" /* 2 */;
-import ExpressionPickerViewType from "ExpressionPickerViewType" /* 1219 */;
+// Module 10323 (useExpressionPickerListWidth)
+import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1219 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import ACTION_SHEET_START_HEIGHT_RATIO from "ACTION_SHEET_START_HEIGHT_RATIO" /* 7151 */;
+import ActionSheetConstants from "ActionSheetConstants" /* 7165 */;
+import size from "module_2" /* 2 */;
 
-const PADDING_HORIZONTAL = ExpressionPickerViewType.PADDING_HORIZONTAL;
-const ACTION_SHEET_MAX_WIDTH = ACTION_SHEET_START_HEIGHT_RATIO.ACTION_SHEET_MAX_WIDTH;
-const result = set.fileFinishedImporting("modules/expression_picker/native/useExpressionPickerListWidth.native.tsx");
+const PADDING_HORIZONTAL = ExpressionPickerConstants.PADDING_HORIZONTAL;
+const ACTION_SHEET_MAX_WIDTH = ActionSheetConstants.ACTION_SHEET_MAX_WIDTH;
+const result = size.fileFinishedImporting("modules/expression_picker/native/useExpressionPickerListWidth.native.tsx");
 
 export default function useExpressionPickerListWidth(arg0) {
   const rect = useSafeAreaInsetsDefault();

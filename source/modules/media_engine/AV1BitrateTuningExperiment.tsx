@@ -1,15 +1,17 @@
-// Module ID: 13817
-// Function ID: 13818
-// Name: apexExperiment
+// Module ID: 13840
+// Function ID: 13841
+// Name: AV1BitrateTuningExperiment
 // Dependencies: [1433, 2]
 
-// Module 13817 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 13840 (AV1BitrateTuningExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null, 2: { bitrate: 3000000 } };
-obj[2] = { bitrate: 2500000 };
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-05-av1-bitrate-tuning", kind: "user", defaultConfig: { bitrate: 3500000 }, variations: obj });
-const result = set.fileFinishedImporting("modules/media_engine/AV1BitrateTuningExperiment.tsx");
+const obj = { name: "2026-05-av1-bitrate-tuning", kind: "user", defaultConfig: { bitrate: 3500000 }, variations: null };
+const obj2 = { 1: null, 2: { bitrate: 3000000 } };
+obj2[2] = { bitrate: 2500000 };
+obj.variations = obj2;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/media_engine/AV1BitrateTuningExperiment.tsx");
 
 export const AV1StreamBitrateReductionExperiment = apexExperiment;

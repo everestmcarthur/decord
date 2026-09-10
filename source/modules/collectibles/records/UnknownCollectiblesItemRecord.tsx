@@ -1,39 +1,38 @@
-// Module ID: 7550
-// Function ID: 7551
-// Name: fromServer
+// Module ID: 7564
+// Function ID: 7565
+// Name: UnknownCollectiblesItemRecord
 // Dependencies: [1888, 1889, 2]
 // Exports: isUnknownCollectiblesItemRecord
 
-// Module 7550 (fromServer)
-import fromServerDefault from "fromServer" /* 1888 */;
+// Module 7564 (UnknownCollectiblesItemRecord)
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
+import BaseCollectiblesItemRecord from "BaseCollectiblesItemRecord" /* 1888 */;
 
-require = arg1;
-fromServerDefault;
-let prototype;
-prototype = function UnknownCollectiblesItemRecord(arg0) {
-  tmp = new tmp(arg0, new.target, tmp, new.target);
-  // ThrowIfThisInitialized (0x7c)
-  tmp.type = CollectiblesItemType.CollectiblesItemType.NONE;
-  return tmp;
+require = fn;
+const prototype = function UnknownCollectiblesItemRecord(arg0) {
+  const tmp2 = new tmp(arg0, new.target, tmp, new.target);
+  tmp2.type = CollectiblesItemType.CollectiblesItemType.NONE;
+  return tmp2;
 }.prototype;
 class prototype extends tmp2 {
 }
 prototype["fromServer"] = function fromServer(arg0) {
   const obj = {};
-  let tmp2 = prototype;
   const fromServerResult = super.fromServer(arg0);
   const merged = Object.assign(fromServerResult);
   obj.type = CollectiblesItemType.CollectiblesItemType.NONE;
-  if (typeof prototype !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof prototype === "function") {
+    const tmp22 = new tmp2(obj, fromServerResult, this, tmp, obj);
+    tmp22.type = CollectiblesItemType.CollectiblesItemType.NONE;
+    return tmp22;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  tmp2 = new tmp2(obj, fromServerResult, this, prototype, obj);
-  // ThrowIfThisInitialized (0x7c)
-  tmp2.type = CollectiblesItemType.CollectiblesItemType.NONE;
-  return tmp2;
+  tmp = prototype;
+  tmp2 = prototype;
 };
-const result = require("set").fileFinishedImporting("modules/collectibles/records/UnknownCollectiblesItemRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/records/UnknownCollectiblesItemRecord.tsx");
 
 export default prototype;
 export const isUnknownCollectiblesItemRecord = function isUnknownCollectiblesItemRecord(arg0) {

@@ -1,26 +1,28 @@
-// Module ID: 8684
-// Function ID: 8685
+// Module ID: 8712
+// Function ID: 8713
 // Name: useResolveGame
-// Dependencies: [19, 7168, 7309, 2]
+// Dependencies: [19, 7182, 7323, 2]
 // Exports: default
 
-// Module 8684 (useResolveGame)
-import closure_2 from "noop" /* 19 */;
+// Module 8712 (useResolveGame)
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7182 */;
+import useGame from "useGame" /* 7323 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/games/hooks/useResolveGame.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/games/hooks/useResolveGame.tsx");
 
 export default function useResolveGame(arg0) {
   ({ applicationId, gameId } = arg0);
   let getOrFetchApplication;
-  let obj = gameId(getOrFetchApplication[1]);
   let tmp3;
   if (null == gameId) {
     tmp3 = applicationId;
   }
-  getOrFetchApplication = obj.useGetOrFetchApplication(tmp3);
+  getOrFetchApplication = useGetOrFetchApplications.useGetOrFetchApplication(tmp3);
   const items = [gameId, getOrFetchApplication];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     let tmp = gameId;
     if (null == gameId) {
       let canonicalGameId = null;
@@ -32,13 +34,13 @@ export default function useResolveGame(arg0) {
     }
     return tmp;
   }, items);
-  const game = gameId(getOrFetchApplication[2]).useGame(memo);
+  const game = useGame.useGame(memo);
   let data = game.data;
-  obj = { gameId: memo, gameRecord: null, isLoading: null };
+  const obj2 = { gameId: memo, gameRecord: null, isLoading: null };
   if (data == null) {
     data = null;
   }
-  obj[1] = data;
-  obj[2] = null == gameId && null != applicationId && null == getOrFetchApplication || game.isLoading;
-  return obj;
+  obj2.gameRecord = data;
+  obj2.isLoading = null == gameId && null != applicationId && null == getOrFetchApplication || game.isLoading;
+  return obj2;
 };

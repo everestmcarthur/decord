@@ -4,7 +4,7 @@
 // Dependencies: [30]
 
 // Module 180 (NativeMicrotasksCxx)
-import getAll from "get" /* 30 */;
+import get from "module_30" /* 30 */;
 
 
-export default getAll.getEnforcing("NativeMicrotasksCxx");
+export default get.getEnforcing("NativeMicrotasksCxx");

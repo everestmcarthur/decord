@@ -2,43 +2,43 @@
 // Function ID: 283
 // Name: dispatchNativeEvent
 // Dependencies: [283, 66, 149, 134, 286, 135]
+// Exports: default
 
 // Module 282 (dispatchNativeEvent)
-import map from "map" /* 66 */;
-import getHandler from "getHandler" /* 283 */;
+import customBubblingEventTypes from "customBubblingEventTypes" /* 66 */;
+import _mod283 from "module_283" /* 283 */;
+import _modDef286 from "module_286" /* 286 */;
 
 require = arg1;
-const module = arg2;
+importDefault = arg2;
 const dependencyMap = arg6;
-arg5.default = function dispatchNativeEvent(self, arg1, timeStamp) {
-  let obj = getHandler;
-  const result = obj.processResponderEvent(arg1, self, timeStamp);
-  let tmp4 = map.customBubblingEventTypes[arg1];
-  const tmp5 = map.customDirectEventTypes[arg1];
+
+export default function dispatchNativeEvent(self, arg1, timeStamp) {
+  const result = _mod283.processResponderEvent(arg1, self, timeStamp);
+  let tmp4 = customBubblingEventTypes.customBubblingEventTypes[arg1];
+  const tmp5 = customBubblingEventTypes.customDirectEventTypes[arg1];
   if (null != tmp4) {
     let tmp6 = null != tmp4;
     if (tmp6) {
       tmp6 = true !== tmp4.phasedRegistrationNames.skipBubbling;
     }
-    let tmpResult = tmp(149);
-    const result1 = tmpResult.topLevelTypeToEventType(arg1);
-    obj = { bubbles: null, cancelable: true };
-    obj[0] = tmp6;
+    const result1 = tmp(149).topLevelTypeToEventType(arg1);
+    const obj2 = { bubbles: tmp6, cancelable: true };
     let timestamp = timeStamp.timeStamp;
     if (timestamp == null) {
       timestamp = timeStamp.timestamp;
     }
     if (typeof timestamp === "number") {
-      tmpResult = tmp(134);
-      const result2 = tmpResult.setEventInitTimeStamp(obj, timestamp);
+      const result2 = tmp(134).setEventInitTimeStamp(obj2, timestamp);
+      const tmpResult4 = tmp(134);
     }
-    let tmp9 = module(286);
+    const tmpResult = tmp(149);
     if (tmp4 == null) {
       tmp4 = tmp5;
     }
-    tmp9 = new tmp9(result1, obj, timeStamp, tmp4);
-    tmp(135).dispatchTrustedEvent(self, tmp9);
-    const tmpResult1 = tmp(135);
+    const tmp92 = new _modDef286(result1, obj2, timeStamp, tmp4);
+    tmp(135).dispatchTrustedEvent(self, tmp92);
+    const tmpResult5 = tmp(135);
   }
-  getHandler.rethrowCaughtError();
+  _mod283.rethrowCaughtError();
 };

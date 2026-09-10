@@ -1,41 +1,36 @@
-// Module ID: 13907
-// Function ID: 13908
+// Module ID: 13930
+// Function ID: 13931
 // Name: ShareEmbed
-// Dependencies: [19, 17, 21, 4560, 576, 5577, 4556, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 5591, 4570, 2]
 // Exports: default
 
-// Module 13907 (ShareEmbed)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_2 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13930 (ShareEmbed)
+import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5591 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ Image: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
-createCacheKey = { container: null, containerRevamp: null, thumbnail: null, contentContainer: null, authorView: null, authorThumbnail: null, loadingSpinner: null };
-createCacheKey = { flexDirection: "row", height: 80, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderColor: ThemesDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderWidth: 0 };
-createCacheKey[2] = { width: 80 };
-createCacheKey[3] = { flex: 1, flexDirection: "column", justifyContent: "center", paddingLeft: 12, paddingRight: 24 };
-createCacheKey[4] = { flexDirection: "row", alignItems: "center", marginBottom: 3 };
-createCacheKey[5] = { height: 16, width: 16, borderRadius: ThemesDefault.radii.sm, marginRight: 4 };
-createCacheKey[6] = { flex: 1 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { height: 16, width: 16, borderRadius: ThemesDefault.radii.sm, marginRight: 4 };
-const result = require("set").fileFinishedImporting("modules/share/native/ShareEmbed.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: c3, View: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { flexDirection: "row", height: 80, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderColor: nativeDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: nativeDefault.radii.sm, overflow: "hidden" }, containerRevamp: { borderWidth: 0 }, thumbnail: { width: 80 }, contentContainer: { flex: 1, flexDirection: "column", justifyContent: "center", paddingLeft: 12, paddingRight: 24 }, authorView: { flexDirection: "row", alignItems: "center", marginBottom: 3 }, authorThumbnail: null, loadingSpinner: null };
+let size = { height: 16, width: 16, borderRadius: nativeDefault.radii.sm, marginRight: 4 };
+obj2.authorThumbnail = size;
+obj2.loadingSpinner = { flex: 1 };
+let closure_8 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/share/native/ShareEmbed.tsx");
 
 export default function ShareEmbed(embed) {
   embed = embed.embed;
   const isLoadingEmbed = embed.isLoadingEmbed;
-  let React;
-  let memo3;
-  let tmp = callback();
-  React = tmp;
+  let tmp = closure_8();
+  noop = tmp;
   let items = [embed];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     if (null != embed) {
       const thumbnail = tmp.thumbnail;
       let url;
@@ -51,25 +46,23 @@ export default function ShareEmbed(embed) {
         url = url1;
       }
       if (null != url) {
-        const obj = { uri: null };
-        obj[0] = url;
+        const obj = { uri: url };
         return obj;
       }
     }
   }, items);
   const items1 = [isLoadingEmbed, tmp];
-  let memo1 = React.useMemo(() => {
+  let memo1 = noop.useMemo(() => {
     let tmp = null;
     if (isLoadingEmbed) {
-      const obj = { style: null };
-      obj[0] = closure_2.loadingSpinner;
-      tmp = closure_1_5(embed(isLoadingEmbed[5]).ActivityIndicator, obj);
+      const obj = { style: closure_2.loadingSpinner };
+      tmp = hasOwnProperty(ActivityIndicator_ActivityIndicator.ActivityIndicator, obj);
     }
     return tmp;
   }, items1);
   const items2 = [embed, tmp];
   const items3 = [embed];
-  const memo2 = React.useMemo(() => {
+  const memo2 = noop.useMemo(() => {
     let author;
     if (embed != null) {
       author = embed.author;
@@ -81,42 +74,36 @@ export default function ShareEmbed(embed) {
       if (icon_url == null) {
         icon_url = author.icon_url;
       }
-      let obj = { style: null, children: null };
-      obj[0] = closure_2.authorView;
+      const obj = { style: closure_2.authorView, children: null };
       let tmp5 = null != icon_url;
       if (tmp5) {
-        obj = { style: null, source: null, resizeMode: "cover" };
-        obj[0] = tmp4.authorThumbnail;
-        obj = { uri: null };
-        obj[0] = icon_url;
-        obj[1] = obj;
-        tmp5 = closure_1_5(memo3, obj);
+        const obj2 = { style: tmp4.authorThumbnail, source: null, resizeMode: "cover" };
+        const obj3 = { uri: icon_url };
+        obj2.source = obj3;
+        tmp5 = hasOwnProperty(React3, obj2);
       }
       const items = [tmp5, ];
-      obj1 = { variant: "text-xs/semibold", color: "mobile-text-heading-primary", ellipsizeMode: "tail", lineClamp: 1, children: null };
-      obj1[4] = author.name;
-      items[1] = closure_1_5(embed(isLoadingEmbed[6]).Text, obj1);
-      obj[1] = items;
-      return closure_1_6(closure_1_4, obj);
+      const obj4 = { variant: "text-xs/semibold", color: "mobile-text-heading-primary", ellipsizeMode: "tail", lineClamp: 1, children: author.name };
+      items[1] = hasOwnProperty(Text_Text.Text, obj4);
+      obj.children = items;
+      return timestampProducer(React4, obj);
     }
   }, items2);
-  memo3 = React.useMemo(() => {
+  const memo3 = noop.useMemo(() => {
     let title;
     if (embed != null) {
       title = embed.title;
     }
     let tmp2 = null;
     if (null != title) {
-      const obj = { style: null, variant: "text-xs/semibold", color: "mobile-text-heading-primary", lineClamp: 1, ellipsizeMode: "tail", children: null };
-      obj[0] = { marginVertical: 1 };
-      obj[5] = title;
-      tmp2 = closure_1_5(embed(isLoadingEmbed[6]).Text, obj);
+      const obj = { style: { marginVertical: 1 }, variant: "text-xs/semibold", color: "mobile-text-heading-primary", lineClamp: 1, ellipsizeMode: "tail", children: title };
+      tmp2 = hasOwnProperty(Text_Text.Text, obj);
     }
     return tmp2;
   }, items3);
   const items4 = [embed, memo3];
   [][0] = embed;
-  const memo4 = React.useMemo(() => {
+  const memo4 = noop.useMemo(() => {
     if (embed != null) {
       const description = embed.description;
     }
@@ -124,10 +111,8 @@ export default function ShareEmbed(embed) {
     if (null == memo3) {
       tmp = null;
       if (null != description) {
-        const obj = { style: null, variant: "text-xs/medium", color: "text-default", lineClamp: 1, ellipsizeMode: "tail", children: null };
-        obj[0] = { marginVertical: 1 };
-        obj[5] = description;
-        tmp = closure_1_5(embed(isLoadingEmbed[6]).Text, obj);
+        const obj = { style: { marginVertical: 1 }, variant: "text-xs/medium", color: "text-default", lineClamp: 1, ellipsizeMode: "tail", children: description };
+        tmp = hasOwnProperty(Text_Text.Text, obj);
       }
     }
     return tmp;
@@ -140,30 +125,26 @@ export default function ShareEmbed(embed) {
     }
     let obj = { style: null, children: null };
     items5[1] = containerRevamp;
-    obj[0] = items5;
+    obj.style = items5;
     if (!isLoadingEmbed) {
       let tmp9Result = null != memo;
       if (tmp9Result) {
-        obj = { style: null, source: null, resizeMode: "cover" };
-        obj[0] = tmp.thumbnail;
-        obj[1] = memo;
-        tmp9Result = tmp9(memo3, obj);
+        let obj2 = { style: tmp.thumbnail, source: memo, resizeMode: "cover" };
+        tmp9Result = tmp9(memo3, obj2);
       }
-      obj = { children: null };
+      let obj3 = { children: null };
       const items6 = [tmp9Result, ];
-      obj1 = { style: null, children: null };
-      obj1[0] = tmp.contentContainer;
+      let obj4 = { style: tmp.contentContainer, children: null };
       const items7 = [memo2, memo3, memo4, tmp7];
-      obj1[1] = items7;
-      items6[1] = closure_6(tmp10, obj1);
-      obj[0] = items6;
-      memo1 = tmp12(closure_7, obj);
-      const tmp13 = closure_7;
+      obj4.children = items7;
+      items6[1] = closure_6(tmp10, obj4);
+      obj3.children = items6;
+      memo1 = tmp12(closure_7, obj3);
     }
-    obj[1] = memo1;
-    tmp9Result = tmp9(tmp10, obj);
+    obj.children = memo1;
+    let tmp9Result2 = tmp9(tmp10, obj);
   } else {
-    tmp9Result = null;
+    tmp9Result2 = null;
   }
-  return tmp9Result;
+  return tmp9Result2;
 };

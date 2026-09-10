@@ -1,18 +1,18 @@
-// Module ID: 9574
-// Function ID: 9575
-// Name: leaveFrame
-// Dependencies: [9515, 1074, 4465, 7118, 9523, 9529, 1242, 573, 2]
+// Module ID: 9601
+// Function ID: 9602
+// Name: FramesManager
+// Dependencies: [9542, 1074, 4479, 7132, 9550, 1242, 573, 2]
 
-// Module 9574 (leaveFrame)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import initializeDefault from "initialize" /* 7118 */;
-import closure_3 from "map" /* 9515 */;
-import ME from "ME" /* 1074 */;
-import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4465 */;
+// Module 9601 (FramesManager)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import FramesStore from "FramesStore" /* 9542 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-let require = arg1;
-({ AnalyticEvents: c4, RPCCloseCodes: c5 } = ME);
-initializeDefault;
+let require = fn;
+const Constants = fn(1074);
+({ AnalyticEvents: closure_4, RPCCloseCodes: hasOwnProperty } = Constants);
+const TransportTypes = fn(4479).TransportTypes;
 class FramesManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -23,28 +23,28 @@ class FramesManager extends tmp3 {
           },
       FRAME_LAUNCH(arg0) {
             ({ applicationId, analyticsContext } = arg0);
-            const result = applyArgumentsResult(9523).trackFrameSessionStart(applicationId, analyticsContext);
+            const result = applyArgumentsResult(9550).trackFrameSessionStart(applicationId, analyticsContext);
           },
-      FRAME_LAUNCH_FAIL(applicationId) {
-            const result = applyArgumentsResult(9529).discardPendingFrameLaunch(applicationId.applicationId);
+      FRAME_LAUNCH_FAIL(arg0) {
+            ({ applicationId, error, analyticsContext } = arg0);
+            const result = applyArgumentsResult(9550).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
           },
       FRAME_STOP(applicationId) {
-            applyArgumentsResult(9523).trackFrameSessionEnd(applicationId.applicationId);
+            applyArgumentsResult(9550).trackFrameSessionEnd(applicationId.applicationId);
           }
     };
     applyArgumentsResult.handleRPCDisconnect = function handleRPCDisconnect(arg0) {
       ({ reason, source } = arg0);
       if (null != reason) {
-        if (source.type === closure_1_6.POST_MESSAGE) {
-          const frameByIframeId = closure_1_3.getFrameByIframeId(source.iframeId);
+        if (source.type === TransportTypes.POST_MESSAGE) {
+          const frameByIframeId = FramesStore.getFrameByIframeId(source.iframeId);
           if (null != frameByIframeId) {
             applyArgumentsResult.leaveFrame(frameByIframeId.id);
-            if (reason.code !== closure_1_5.CLOSE_NORMAL) {
-              let obj = closure_1_1(closure_1_2[6]);
-              obj = { rpc_close_code: null, rpc_message: null, application_id: null };
-              ({ code: obj2[0], message: obj2[1] } = reason);
-              obj[2] = frameByIframeId.applicationId;
-              obj.track(closure_1_4.ACTIVITY_CLOSED_RPC_ERROR, obj);
+            if (reason.code !== constants2.CLOSE_NORMAL) {
+              const obj4 = { rpc_close_code: null, rpc_message: null, application_id: null };
+              ({ code: obj2.rpc_close_code, message: obj2.rpc_message } = reason);
+              obj4.application_id = frameByIframeId.applicationId;
+              AnalyticsUtilsDefault.track(constants.ACTIVITY_CLOSED_RPC_ERROR, obj4);
               const result = obj3.showRPCDisconnectErrorUI(reason);
             }
             obj3 = applyArgumentsResult;
@@ -56,15 +56,15 @@ class FramesManager extends tmp3 {
   }
 }
 FramesManager.prototype["leaveFrame"] = function leaveFrame(frameId) {
-  frame = frame.getFrame(frameId);
+  const frame = FramesStore.getFrame(frameId);
   if (null != frame) {
-    let obj = dispatcherDefault;
-    obj = { type: "FRAME_STOP", applicationId: null, frameId: null };
-    ({ applicationId: obj2[1], id: obj2[2] } = frame);
-    obj.dispatch(obj);
+    ({ applicationId: obj2.applicationId, id: obj2.frameId } = frame);
+    DispatcherDefault.dispatch({ type: "FRAME_STOP", applicationId: null, frameId: null });
+    const obj3 = { type: "FRAME_STOP", applicationId: null, frameId: null };
   }
 };
 FramesManager.displayName = "FramesManager";
-let result = require("set").fileFinishedImporting("modules/frames/FramesManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/frames/FramesManager.tsx");
 
 export default FramesManager;

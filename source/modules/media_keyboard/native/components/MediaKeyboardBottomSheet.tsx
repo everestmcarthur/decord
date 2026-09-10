@@ -1,77 +1,77 @@
-// Module ID: 16766
-// Function ID: 16767
-// Name: MediaKeyboardBackground
-// Dependencies: [32, 19, 17, 1607, 1074, 21, 1608, 1115, 4560, 576, 1114, 12084, 4271, 4413, 6627, 4297, 4528, 4529, 1242, 4962, 4971, 4296, 4992, 1611, 4959, 4425, 2]
+// Module ID: 16803
+// Function ID: 16804
+// Name: MediaKeyboardBottomSheet
+// Dependencies: [32, 19, 17, 1607, 1074, 21, 1608, 1115, 4574, 576, 1114, 12110, 4284, 4427, 6641, 4311, 4542, 4543, 1242, 4976, 4985, 4310, 5006, 1611, 4973, 4439, 2]
 
-// Module 16766 (MediaKeyboardBackground)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import DRAG_HANDLE from "DRAG_HANDLE" /* 1607 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import isMetaQuest from "isMetaQuest" /* 1608 */;
-import set from "set" /* 1115 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16803 (MediaKeyboardBottomSheet)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import ChatInputUtils from "ChatInputUtils" /* 4439 */;
+import HapticUtils from "HapticUtils" /* 4542 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4543 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function MediaKeyboardBackground(arg0) {
   ({ pointerEvents, style } = arg0);
   const obj = { pointerEvents, accessible: true, accessibilityRole: "adjustable", accessibilityLabel: null, style: null };
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.string(getSystemLocale.t.XONG6A);
-  const items = [style, callback3().background];
-  obj[4] = items;
-  return callback2(View, obj);
+  const intl = util.intl;
+  obj.accessibilityLabel = intl.string(util.t.XONG6A);
+  const items = [style, closure_13().background];
+  obj.style = items;
+  return React7(View, obj);
 }
-let c4 = importAllResult;
-({ HEADER_HANDLE_HEIGHT: closure_6, MediaPickerActionSheetEngagedActions: error } = DRAG_HANDLE);
-({ jsx: c9, jsxs: c10 } = jsxProd);
-let closure_11 = isMetaQuest.isMetaQuest();
-let closure_12 = set.isIOS();
-let obj = { background: null };
-obj = { backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, borderRadius: ThemesDefault.modules.mobile.MOBILE_MEDIA_KEYBOARD_TOP_BORDER_RADIUS };
-obj[0] = obj;
-let closure_13 = createCacheKey.createStyles(obj);
-let closure_15 = { code: "function MediaKeyboardBottomSheetTsx1(){const{animatedIndex}=this.__closure;return animatedIndex.get()>=0;}" };
-let closure_16 = { code: "function MediaKeyboardBottomSheetTsx2(isOpen,wasOpen){const{IS_IOS,runOnJS,handleSheetOpenChange}=this.__closure;if(IS_IOS&&isOpen!==wasOpen&&(wasOpen!=null||isOpen)){runOnJS(handleSheetOpenChange)(isOpen);}}" };
-let closure_17 = { code: "function MediaKeyboardBottomSheetTsx3(){const{animatedIndex}=this.__closure;return Math.max(animatedIndex.get(),0)>0;}" };
-let closure_18 = { code: "function MediaKeyboardBottomSheetTsx4(result,previous){const{runOnJS,setAccessibilityViewIsModal}=this.__closure;if(result===previous)return;runOnJS(setAccessibilityViewIsModal)(result);}" };
-let result = set.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardBottomSheet.tsx");
+const View = fn(17).View;
+const MediaKeyboardConstants = fn(1607);
+({ HEADER_HANDLE_HEIGHT: metroRequire, MediaPickerActionSheetEngagedActions: closure_7 } = MediaKeyboardConstants);
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const MetaQuestUtils = fn(1608);
+let closure_11 = MetaQuestUtils.isMetaQuest();
+const PlatformUtils = fn(1115);
+const IS_IOS = PlatformUtils.isIOS();
+const createStyles = fn(4574);
+let obj = { background: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, borderRadius: nativeDefault.modules.mobile.MOBILE_MEDIA_KEYBOARD_TOP_BORDER_RADIUS } };
+let closure_13 = createStyles.createStyles(obj);
+const __initData = { code: "function MediaKeyboardBottomSheetTsx1(){const{animatedIndex}=this.__closure;return animatedIndex.get()>=0;}" };
+const __initData2 = { code: "function MediaKeyboardBottomSheetTsx2(isOpen,wasOpen){const{IS_IOS,runOnJS,handleSheetOpenChange}=this.__closure;if(IS_IOS&&isOpen!==wasOpen&&(wasOpen!=null||isOpen)){runOnJS(handleSheetOpenChange)(isOpen);}}" };
+const __initData3 = { code: "function MediaKeyboardBottomSheetTsx3(){const{animatedIndex}=this.__closure;return Math.max(animatedIndex.get(),0)>0;}" };
+const __initData4 = { code: "function MediaKeyboardBottomSheetTsx4(result,previous){const{runOnJS,setAccessibilityViewIsModal}=this.__closure;if(result===previous)return;runOnJS(setAccessibilityViewIsModal)(result);}" };
+let obj5 = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, borderRadius: nativeDefault.modules.mobile.MOBILE_MEDIA_KEYBOARD_TOP_BORDER_RADIUS };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardBottomSheet.tsx");
 
-export default importAllResult.memo(function MediaKeyboardBottomSheet(animatedIndex) {
+export default noop.memo(function MediaKeyboardBottomSheet(animatedIndex) {
   animatedIndex = animatedIndex.animatedIndex;
   const bottomSheetRef = animatedIndex.bottomSheetRef;
   const onClose = animatedIndex.onClose;
-  let callback = animatedIndex.onAccessibilityFocusRestore;
-  importAllResult = undefined;
-  let isScreenReaderEnabled;
-  closure_6 = undefined;
+  _slicedToArray = animatedIndex.onAccessibilityFocusRestore;
+  handleHeight = undefined;
   let ref;
-  closure_8 = undefined;
-  closure_9 = undefined;
+  let ref2;
   let callback3;
   ({ accessoriesComponent, animatedPosition, children, handleComponent, transitionState, animationConfigs, overlayComponent } = animatedIndex);
   const tmp4 = bottomSheetRef(onClose[11])({ forceMaxHeight: false });
   const tmp6 = transitionState === animatedIndex(onClose[12]).TransitionStates.YEETED;
-  importAllResult = tmp6;
-  let obj = importAllResult;
-  let tmp = callback3();
-  callback = importAllResult.useCallback((arg0) => {
+  noop = tmp6;
+  let tmp = closure_13();
+  const callback = noop.useCallback((arg0) => {
     const merged = Object.assign(arg0);
-    return ref2(closure_14, {});
+    return ref2(MediaKeyboardBackground, {});
   }, []);
   const items = [tmp6, onClose];
-  const callback1 = importAllResult.useCallback((arg0) => {
+  const callback1 = noop.useCallback((arg0) => {
     const obj = {};
     const merged = Object.assign(arg0);
     obj.ViewComponent = bottomSheetRef(onClose[15]);
     obj.pressBehavior = "collapse";
     return ref2(animatedIndex(onClose[14]).BottomSheetBackdrop, obj);
   }, []);
-  const callback2 = importAllResult.useCallback((arg0, arg1) => {
+  const callback2 = noop.useCallback((arg0, arg1) => {
     if (closure_4) {
       if (-1 !== arg1) {
         if (onClose != null) {
@@ -84,25 +84,22 @@ export default importAllResult.memo(function MediaKeyboardBottomSheet(animatedIn
       tmp = 0 === arg0;
     }
     if (tmp) {
-      let obj = animatedIndex(onClose[16]);
-      const result = obj.triggerHapticFeedback(bottomSheetRef(onClose[17]).IMPACT_LIGHT);
-      obj = { action: null };
-      obj[0] = ref.FULLY_EXPANDED;
-      bottomSheetRef(onClose[18]).track(ref.MEDIA_PICKER_ACTION_SHEET_ENGAGED, obj);
-      const obj2 = bottomSheetRef(onClose[18]);
+      const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+      const obj3 = { action: constants.FULLY_EXPANDED };
+      AnalyticsUtilsDefault.track(AnalyticEvents.MEDIA_PICKER_ACTION_SHEET_ENGAGED, obj3);
     }
   }, items);
-  obj1 = animatedIndex(onClose[19]);
-  isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
+  const tmp7 = bottomSheetRef(onClose[13])();
+  const isScreenReaderEnabled = animatedIndex(onClose[19]).useIsScreenReaderEnabled();
   let tmp12 = isScreenReaderEnabled;
   if (!isScreenReaderEnabled) {
     tmp12 = tmp6;
   }
-  const tmp13 = callback(obj.useState(false), 2);
-  closure_6 = tmp14;
-  ref = obj.useRef(null);
-  closure_8 = obj.useRef(false);
-  closure_9 = obj.useRef(null);
+  const tmp13 = _slicedToArray(noop.useState(false), 2);
+  handleHeight = tmp14;
+  obj.useRef(null);
+  ref = obj.useRef(false);
+  ref2 = obj.useRef(null);
   const items1 = [isScreenReaderEnabled];
   callback3 = obj.useCallback((arg0) => {
     if (null != ref2.current) {
@@ -118,18 +115,16 @@ export default importAllResult.memo(function MediaKeyboardBottomSheet(animatedIn
       if (tmp5) {
         const _setTimeout = setTimeout;
         tmp.current = setTimeout(() => {
-          closure_9.current = null;
-          closure_8.current = true;
-          let obj = closure_1_0(closure_1_2[20]);
-          obj = { ref: closure_7 };
-          const result = obj.setAccessibilityFocus(obj);
+          ref2.current = null;
+          closure_1_8.current = true;
+          const result = animatedIndex(onClose[20]).setAccessibilityFocus({ ref });
         }, 100);
       }
     } else {
       ref.current = false;
     }
   }, items1);
-  let tmp5Result = tmp5(tmp3[21]);
+  let obj2 = animatedIndex(onClose[19]);
   class T {
     constructor() {
       return animatedIndex.get() >= 0;
@@ -137,11 +132,11 @@ export default importAllResult.memo(function MediaKeyboardBottomSheet(animatedIn
   }
   T.__closure = { animatedIndex };
   T.__workletHash = 14174017487042;
-  T.__initData = closure_15;
+  T.__initData = __initData;
   class D {
     constructor(arg0, arg1) {
-      tmp = closure_1_12;
-      if (closure_1_12) {
+      tmp = closure_12;
+      if (closure_12) {
         tmp = animatedIndex !== arg1;
       }
       if (tmp) {
@@ -150,21 +145,21 @@ export default importAllResult.memo(function MediaKeyboardBottomSheet(animatedIn
         tmp = tmp3;
       }
       if (tmp) {
-        tmp4 = animatedIndex;
-        tmp5 = onClose;
-        obj = animatedIndex(onClose[21]);
+        tmp4 = closure_0;
+        tmp5 = closure_2;
+        obj = closure_0(closure_2[21]);
         tmp6 = closure_10;
         tmp7 = obj.runOnJS(closure_10)(animatedIndex);
       }
       return;
     }
   }
-  obj = { IS_IOS: closure_12, runOnJS: tmp5(tmp3[21]).runOnJS, handleSheetOpenChange: callback3 };
-  D.__closure = obj;
+  const tmp5Result = animatedIndex(onClose[21]);
+  D.__closure = { IS_IOS, runOnJS: animatedIndex(onClose[21]).runOnJS, handleSheetOpenChange: callback3 };
   D.__workletHash = 12464478404147;
-  D.__initData = closure_16;
+  D.__initData = __initData2;
   const animatedReaction = tmp5Result.useAnimatedReaction(T, D);
-  tmp5Result = tmp5(tmp3[21]);
+  let obj3 = { IS_IOS, runOnJS: animatedIndex(onClose[21]).runOnJS, handleSheetOpenChange: callback3 };
   class H {
     constructor() {
       return Math.max(animatedIndex.get(), 0) > 0;
@@ -172,24 +167,23 @@ export default importAllResult.memo(function MediaKeyboardBottomSheet(animatedIn
   }
   H.__closure = { animatedIndex };
   H.__workletHash = 12101028946794;
-  H.__initData = closure_17;
+  H.__initData = __initData3;
   const fn = function w(arg0, arg1) {
     if (arg0 !== arg1) {
-      animatedIndex(onClose[21]).runOnJS(closure_6)(arg0);
-      const obj = animatedIndex(onClose[21]);
+      ReanimatedRexport.runOnJS(closure_6)(arg0);
     }
   };
-  obj = { runOnJS: tmp5(tmp3[21]).runOnJS, setAccessibilityViewIsModal: tmp14 };
-  fn.__closure = obj;
+  const tmp5Result2 = animatedIndex(onClose[21]);
+  fn.__closure = { runOnJS: animatedIndex(onClose[21]).runOnJS, setAccessibilityViewIsModal: tmp13[1] };
   fn.__workletHash = 4587285719468;
-  fn.__initData = closure_18;
-  const animatedReaction1 = tmp5Result.useAnimatedReaction(H, fn);
+  fn.__initData = __initData4;
+  const animatedReaction1 = tmp5Result2.useAnimatedReaction(H, fn);
   bottomSheetRef(onClose[22])(() => () => {
     if (null != ref.current) {
       const _clearTimeout = clearTimeout;
       clearTimeout(tmp.current);
     }
-    if (closure_2 != null) {
+    if (onClose != null) {
       tmp4();
     }
   });
@@ -202,8 +196,8 @@ export default importAllResult.memo(function MediaKeyboardBottomSheet(animatedIn
         const _setTimeout = setTimeout;
         const timeout = setTimeout(() => {
           let tmp;
-          if (callback != null) {
-            tmp = callback();
+          if (onClose != null) {
+            tmp = onClose();
           }
           return tmp;
         }, 500);
@@ -213,44 +207,44 @@ export default importAllResult.memo(function MediaKeyboardBottomSheet(animatedIn
       }
     }
   }, items2);
-  const tmp7 = bottomSheetRef(onClose[13])();
+  const obj4 = { runOnJS: animatedIndex(onClose[21]).runOnJS, setAccessibilityViewIsModal: tmp13[1] };
   ({ left, right } = bottomSheetRef(onClose[23])());
-  obj1 = { gradient: tmp7, children: null };
-  let obj2 = { style: { marginLeft: left, marginRight: right }, BodyComponent: null, ref: null, animationConfigs: null, animatedIndex: null, animatedPosition: null, enableContentPanningGesture: null, enableHandlePanningGesture: null, handleComponent: null, backgroundComponent: null, backgroundStyle: null, backdropComponent: null, onAnimate: null, handleHeight: null, onClose: null };
+  const obj5 = { gradient: tmp7, children: null };
+  const obj6 = { style: { marginLeft: left, marginRight: right }, BodyComponent: null, ref: null, animationConfigs: null, animatedIndex: null, animatedPosition: null, enableContentPanningGesture: null, enableHandlePanningGesture: null, handleComponent: null, backgroundComponent: null, backgroundStyle: null, backdropComponent: null, onAnimate: null, handleHeight: null, onClose: null };
   const tmp21 = bottomSheetRef(onClose[23])();
   const tmp22 = callback3;
-  obj2[1] = bottomSheetRef(onClose[15]);
-  obj2[2] = bottomSheetRef;
-  obj2[3] = animationConfigs;
-  obj2[4] = animatedIndex;
-  obj2[5] = animatedPosition;
+  obj6.BodyComponent = bottomSheetRef(onClose[15]);
+  obj6.ref = bottomSheetRef;
+  obj6.animationConfigs = animationConfigs;
+  obj6.animatedIndex = animatedIndex;
+  obj6.animatedPosition = animatedPosition;
   let tmp25 = !tmp12;
   if (!tmp12) {
     tmp25 = !closure_11;
   }
-  obj2[6] = tmp25;
-  obj2[7] = !tmp12;
-  obj2[8] = handleComponent;
-  obj2[9] = callback;
-  obj2[10] = tmp.background;
-  obj2[11] = callback1;
-  obj2[12] = callback2;
-  obj2[13] = closure_6;
-  obj2[14] = onClose;
+  obj6.enableContentPanningGesture = tmp25;
+  obj6.enableHandlePanningGesture = !tmp12;
+  obj6.handleComponent = handleComponent;
+  obj6.backgroundComponent = callback;
+  obj6.backgroundStyle = tmp.background;
+  obj6.backdropComponent = callback1;
+  obj6.onAnimate = callback2;
+  obj6.handleHeight = handleHeight;
+  obj6.onClose = onClose;
   let merged = Object.assign(tmp4);
-  obj2.children = closure_9(animatedIndex(onClose[24]).AccessibilityViewAnimated, {
+  obj6.children = ref2(animatedIndex(onClose[24]).AccessibilityViewAnimated, {
     ref,
     nativeID: "media-keyboard-sheet",
     onAccessibilityEscape() {
       if (closure_3 != null) {
         tmp();
       }
-      animatedIndex(onClose[25]).dismissKeyboard();
+      ChatInputUtils.dismissKeyboard();
     },
     accessibilityViewIsModal: tmp13[0],
     children
   });
-  const items3 = [closure_9(bottomSheetRef(onClose[14]), obj2), accessoriesComponent(tmp4), overlayComponent];
-  obj1[1] = items3;
-  return tmp22(animatedIndex(onClose[12]).ThemeContextProvider, obj1);
+  const items3 = [ref2(bottomSheetRef(onClose[14]), obj6), accessoriesComponent(tmp4), overlayComponent];
+  obj5.children = items3;
+  return tmp22(animatedIndex(onClose[12]).ThemeContextProvider, obj5);
 });

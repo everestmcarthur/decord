@@ -1,29 +1,27 @@
-// Module ID: 5570
-// Function ID: 5571
-// Dependencies: [5059, 1074, 1242, 5547, 4763, 5571, 1896, 2]
+// Module ID: 5584
+// Function ID: 5585
+// Name: guild_member_verification/MemberVerificationModalActionCreators
+// Dependencies: [5073, 1074, 1242, 5561, 4777, 5585, 1896, 2]
 
-// Module 5570
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+// Module 5584 (guild_member_verification/MemberVerificationModalActionCreators)
+import Constants from "Constants" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import _modDef4763 from "module_4763" /* 4763 */;
-import _fetchVerificationFormDefault from "_fetchVerificationForm" /* 5547 */;
-import items from "items" /* 5059 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import MemberVerificationActionCreatorsDefault from "MemberVerificationActionCreators" /* 5561 */;
+import MemberVerificationConstants from "MemberVerificationConstants" /* 5073 */;
+import size from "module_2" /* 2 */;
 
-({ MEMBER_VERIFICATION_TYPE: c3, IN_APP_MEMBER_VERIFICATION_MODAL_KEY: c4 } = items);
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationModalActionCreators.tsx");
+({ MEMBER_VERIFICATION_TYPE: c3, IN_APP_MEMBER_VERIFICATION_MODAL_KEY: closure_4 } = MemberVerificationConstants);
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationModalActionCreators.tsx");
 
 export default {
   openMemberVerificationModal(guildId, connect) {
-    let obj = _fetchVerificationFormDefault;
-    const verificationForm = obj.fetchVerificationForm(guildId);
-    obj = { type: closure_3, guild_id: guildId };
-    expandEventPropertiesDefault.track(AnalyticEvents.OPEN_MODAL, obj);
-    const obj2 = expandEventPropertiesDefault;
-    obj = { guildId, onClose: connect };
-    _modDef4763.pushLazy(asyncRequireImpl(5571, dependencyMap.paths), obj, closure_4);
+    const verificationForm = MemberVerificationActionCreatorsDefault.fetchVerificationForm(guildId);
+    AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type, guild_id: guildId });
+    const obj3 = { type, guild_id: guildId };
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(5585, dependencyMap.paths), { guildId, onClose: connect }, React4);
   },
   closeMemberVerificationModal() {
     let flag = arg0;
@@ -31,11 +29,9 @@ export default {
       flag = false;
     }
     if (!flag) {
-      let obj = expandEventPropertiesDefault;
-      obj = { type: null };
-      obj[0] = closure_3;
-      obj.track(AnalyticEvents.MODAL_DISMISSED, obj);
+      const obj2 = { type };
+      AnalyticsUtilsDefault.track(AnalyticEvents.MODAL_DISMISSED, obj2);
     }
-    _modDef4763.popWithKey(closure_4);
+    ModalActionCreatorsDefault.popWithKey(React4);
   }
 };

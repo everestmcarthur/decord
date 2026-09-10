@@ -1,16 +1,10 @@
 // Module ID: 14330
 // Function ID: 14331
-// Dependencies: [14311, 14331]
+// Dependencies: [14331, 14335]
 
 // Module 14330
-import _mod14311 from "module_14311" /* 14311 */;
-import all from "all" /* 14331 */;
+import _mod14331 from "module_14331" /* 14331 */;
+import _mod14335 from "module_14335" /* 14335 */;
 
 
-export default (arg0, arg1) => {
-  let tmp4;
-  if (!_mod14311(arg0[arg1])) {
-    tmp4 = all(tmp);
-  }
-  return tmp4;
-};
+export default (arg0) => _mod14331(_mod14335(arg0));

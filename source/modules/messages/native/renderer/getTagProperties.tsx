@@ -1,19 +1,18 @@
-// Module ID: 8033
-// Function ID: 8034
+// Module ID: 8048
+// Function ID: 8049
 // Name: getTagProperties
-// Dependencies: [17, 4553, 8034, 1114, 8036, 8038, 2]
+// Dependencies: [17, 4567, 8049, 1114, 8051, 8053, 2]
 // Exports: default
 
-// Module 8033 (getTagProperties)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4553 */;
-import isPublicSystemMessage from "isPublicSystemMessage" /* 8034 */;
-import isCrosspostDefault from "isCrosspost" /* 8036 */;
+// Module 8048 (getTagProperties)
+import _mod17 from "module_17" /* 17 */;
+import MessageConstants from "MessageConstants" /* 4567 */;
+import isCrosspostDefault from "isCrosspost" /* 8051 */;
+import size from "module_2" /* 2 */;
 
-const Image = get_ActivityIndicator.Image;
-const MessageTagTypes = MESSAGE_GROUP_SPACING.MessageTagTypes;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/getTagProperties.tsx");
+const Image = _mod17.Image;
+const MessageTagTypes = MessageConstants.MessageTagTypes;
+const result = size.fileFinishedImporting("modules/messages/native/renderer/getTagProperties.tsx");
 
 export default function getTagProperties(arg0) {
   ({ message, isSystemDM } = arg0);
@@ -23,7 +22,6 @@ export default function getTagProperties(arg0) {
   ({ channel, colors } = arg0);
   const author = message.author;
   const isVerifiedBotResult = author.isVerifiedBot();
-  let obj = isPublicSystemMessage;
   if (!obj.isPublicSystemMessage(message)) {
     if (!isSystemDM) {
       if (isCrosspostDefault(message)) {
@@ -38,7 +36,7 @@ export default function getTagProperties(arg0) {
           const intl = tmp2(1114).intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(tmp4(8038)).uri;
+            uri = Image.resolveAssetSource(tmp4(8053)).uri;
           }
           flag = isVerifiedBotResult;
           stringResult = intl.string(tmp2(1114).t["9RNkeF"]);
@@ -66,15 +64,9 @@ export default function getTagProperties(arg0) {
         const intl6 = tmp2(1114).intl;
         stringResult2 = intl6.string(tmp2(1114).t.fyE8sH);
       }
-      obj = { tagText: null, tagAccessibilityLabel: null, tagVerified: null, tagTextColor: "Boolean", tagBackgroundColor: "padding", tagType: "Array", tagIconUrl: "GEN_AI_INVOKE_AGENT_OPERATION_ATTRIBUTE", opTagText: "r", opTagTextColor: "_abortController", opTagBackgroundColor: "INTERACTION_MODAL_SUBMIT" };
-      obj[0] = stringResult;
-      obj[1] = null;
-      obj[2] = flag;
-      obj[5] = SYSTEM_DM_TAG_SYSTEM_TYPE;
-      obj[6] = tmp5;
-      obj[7] = stringResult2;
-      ({ opTagTextColor: obj3[8], opTagBackgroundColor: obj3[9] } = colors);
-      return obj;
+      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "accessible", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: false, opTagBackgroundColor: false };
+      ({ opTagTextColor: obj3.opTagTextColor, opTagBackgroundColor: obj3.opTagBackgroundColor } = colors);
+      return obj2;
     } else {
       if (!tmp2Result.isPublicSystemMessage(message)) {
         if (!isSystemDM) {
@@ -93,7 +85,7 @@ export default function getTagProperties(arg0) {
       }
       const intl5 = tmp2(1114).intl;
       stringResult3 = intl5.string(tmp2(1114).t["7s687k"]);
-      tmp2Result = tmp2(8034);
+      tmp2Result = tmp2(8049);
     }
   }
   const intl3 = tmp2(1114).intl;

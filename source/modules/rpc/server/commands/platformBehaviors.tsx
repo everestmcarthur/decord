@@ -1,16 +1,16 @@
-// Module ID: 14509
-// Function ID: 14510
-// Name: sum
+// Module ID: 14534
+// Function ID: 14535
+// Name: platformBehaviors
 // Dependencies: [1085, 2]
 
-// Module 14509 (sum)
-import set from "set" /* 2 */;
-import sum from "sum" /* 1085 */;
+// Module 14534 (platformBehaviors)
+import Constants from "Constants" /* 1085 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/rpc/server/commands/platformBehaviors.tsx");
+const result = size.fileFinishedImporting("modules/rpc/server/commands/platformBehaviors.tsx");
 
 export default {
-  [sum.RPCCommands.GET_PLATFORM_BEHAVIORS]: {
+  [Constants.RPCCommands.GET_PLATFORM_BEHAVIORS]: {
     handler() {
       return { iosKeyboardResizesView: true };
     }

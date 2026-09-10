@@ -1,14 +1,14 @@
-// Module ID: 5148
-// Function ID: 5149
-// Name: enforcing
+// Module ID: 5162
+// Function ID: 5163
+// Name: NativeDeviceSettingsModule
 // Dependencies: [17, 2]
 
-// Module 5148 (enforcing)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 5162 (NativeDeviceSettingsModule)
+import _mod17 from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
 
-const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 const enforcing = TurboModuleRegistry.getEnforcing("NativeDeviceSettingsModule");
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeDeviceSettingsModule.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeDeviceSettingsModule.tsx");
 
 export default enforcing;

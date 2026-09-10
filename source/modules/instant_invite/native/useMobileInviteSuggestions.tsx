@@ -1,71 +1,65 @@
-// Module ID: 9837
-// Function ID: 9838
+// Module ID: 9864
+// Function ID: 9865
 // Name: useMobileInviteSuggestions
-// Dependencies: [32, 19, 2021, 1979, 9838, 4584, 7736, 1074, 1085, 504, 1242, 9851, 9852, 2]
+// Dependencies: [32, 19, 2021, 1979, 9865, 4598, 7750, 1074, 1085, 504, 1242, 9878, 9879, 2]
 // Exports: default
 
-// Module 9837 (useMobileInviteSuggestions)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "trackCommunicationDisabled" /* 2021 */;
-import closure_6 from "createGuildRecordFromRust" /* 1979 */;
-import closure_7 from "compareRowsByMatchScore" /* 9838 */;
-import closure_8 from "getVoiceStatesForGuild" /* 4584 */;
-import { InviteTargetTypes } from "InviteSendStates" /* 7736 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import { NOOP_NULL } from "sum" /* 1085 */;
+// Module 9864 (useMobileInviteSuggestions)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9865 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4598 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/instant_invite/native/useMobileInviteSuggestions.tsx");
+const require = globalThis.__r;
 
-export default function useMobileInviteSuggestions(arg0, arg1, arg2, arg3) {
-  const _require = arg0;
-  closure_1 = arg1;
+const require = fn;
+const InviteTargetTypes = fn(7750).InviteTargetTypes;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const NOOP_NULL = fn(1085).NOOP_NULL;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/instant_invite/native/useMobileInviteSuggestions.tsx");
+
+export default function useMobileInviteSuggestions(arg0, _location, arg2, application_id) {
+  _require = arg0;
   dependencyMap = arg2;
-  const callback = arg3;
-  let items = [closure_7, closure_8];
-  const tmp = callback(_require(504).useStateFromStoresArray(items, () => {
-    const items = [store.getInviteSuggestionRows(), ];
+  _slicedToArray = application_id;
+  let items = [closure_7, SortedVoiceStateStore];
+  [rows, closure_5] = require("initialize").useStateFromStoresArray(items, () => {
+    const items = [InviteSuggestionsStore.getInviteSuggestionRows(), ];
     let voiceStatesForChannel = null;
     if (null != closure_0) {
-      voiceStatesForChannel = closure_1_8.getVoiceStatesForChannel(tmp);
+      voiceStatesForChannel = SortedVoiceStateStore.getVoiceStatesForChannel(tmp);
     }
     items[1] = voiceStatesForChannel;
     return items;
-  }), 2);
-  const rows = tmp[0];
-  closure_5 = tmp[1];
-  const tmp3 = callback(rows.useState(true), 2);
-  const isFetchingRows = tmp3[0];
-  closure_7 = tmp3[1];
-  const items1 = [rows, arg0, isFetchingRows, arg3, arg1];
+  });
+  [isFetchingRows, closure_7] = rows.useState(true);
+  const items1 = [rows, arg0, isFetchingRows, application_id, _location];
   const effect = rows.useEffect(() => {
     if (!isFetchingRows) {
-      const initialCounts = store.getInitialCounts();
-      let obj = callback(1242);
-      obj = { location: null, num_suggestions: null, guild_id: null, num_friends: null, num_dms: null, num_group_dms: null, application_id: null };
-      obj[0] = callback;
-      obj[1] = rows.length;
-      obj[2] = lib.guild_id;
-      ({ numFriends: obj2[3], numDms: obj2[4], numGroupDms: obj2[5] } = initialCounts);
-      obj[6] = closure_3;
-      obj.track(closure_1_10.INVITE_SUGGESTION_OPENED, obj);
+      const initialCounts = InviteSuggestionsStore.getInitialCounts();
+      const obj3 = { location: _location, num_suggestions: rows.length, guild_id: closure_0.guild_id, num_friends: null, num_dms: null, num_group_dms: null, application_id: null };
+      ({ numFriends: obj2.num_friends, numDms: obj2.num_dms, numGroupDms: obj2.num_group_dms } = initialCounts);
+      obj3.application_id = application_id;
+      AnalyticsUtilsDefault.track(AnalyticEvents.INVITE_SUGGESTION_OPENED, obj3);
     }
   }, items1);
   const items2 = [arg0, arg2];
   const effect1 = rows.useEffect(() => {
-    store(true);
+    closure_7(true);
     let isGuildVoiceResult = !tmp3;
-    if (dependencyMap !== closure_1_9.EMBEDDED_APPLICATION) {
+    if (dependencyMap !== constants.EMBEDDED_APPLICATION) {
       isGuildVoiceResult = set.isGuildVoice();
     }
     if (isGuildVoiceResult) {
-      let obj = lib(9851);
-      obj = { location: "useMobileInviteSuggestions", guildId: null };
-      obj[1] = set.guild_id;
-      isGuildVoiceResult = obj.getGuildMembersInMobileVCInvitesExperiment(obj);
+      const obj2 = { location: "useMobileInviteSuggestions", guildId: set.guild_id };
+      isGuildVoiceResult = closure_0(9878).getGuildMembersInMobileVCInvitesExperiment(obj2);
+      const obj = closure_0(9878);
     }
-    if (dependencyMap !== closure_1_9.EMBEDDED_APPLICATION) {
+    if (dependencyMap !== constants.EMBEDDED_APPLICATION) {
       if (!isGuildVoiceResult) {
         let memberIds = closure_5.getMemberIds(set.guild_id);
       }
@@ -79,15 +73,11 @@ export default function useMobileInviteSuggestions(arg0, arg1, arg2, arg3) {
           set.add(user.user.id);
         });
       }
-      obj = { omitUserIds: null, guild: null, channel: null, inviteTargetType: null };
-      obj[0] = set;
-      obj[1] = isFetchingRows.getGuild(set.guild_id);
-      obj[2] = set;
-      obj[3] = dependencyMap;
-      const inviteSuggestions = lib(9852).loadInviteSuggestions(obj);
-      const obj3 = lib(9852);
-      inviteSuggestions.catch(closure_1_11).finally(() => {
-        callback(false);
+      const obj4 = { omitUserIds: set, guild: isFetchingRows.getGuild(set.guild_id), channel: set, inviteTargetType: dependencyMap };
+      const inviteSuggestions = closure_0(9879).loadInviteSuggestions(obj4);
+      const obj3 = closure_0(9879);
+      inviteSuggestions.catch(NOOP_NULL).finally(() => {
+        closure_1_7(false);
       });
     }
     memberIds = [];

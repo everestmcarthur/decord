@@ -1,52 +1,44 @@
-// Module ID: 11376
-// Function ID: 11377
-// Name: dismissChannelSafetyWarnings
-// Dependencies: [10920, 1074, 573, 1272, 2]
+// Module ID: 11403
+// Function ID: 11404
+// Name: ChannelSafetyWarningsActionCreators
+// Dependencies: [10947, 1074, 573, 1272, 2]
 // Exports: acknowledgeChannelSafetyWarningTooltip, clearChannelSafetyWarnings, dismissChannelSafetyWarnings, markAsStrangerDanger, reportFalsePositive, setChannelSafetyWarningFeedback
 
-// Module 11376 (dismissChannelSafetyWarnings)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import ME from "ME" /* 1074 */;
-import sendRequest from "sendRequest" /* 1272 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 10920 */;
+// Module 11403 (ChannelSafetyWarningsActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 1074 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10947 */;
+import size from "module_2" /* 2 */;
 
-const SafetyWarningTypes = handleConnectionOpen.SafetyWarningTypes;
-const Endpoints = ME.Endpoints;
-const result = set.fileFinishedImporting("modules/self_mod/ChannelSafetyWarningsActionCreators.tsx");
+const SafetyWarningTypes = ChannelSafetyWarningsStore.SafetyWarningTypes;
+const Endpoints = Constants.Endpoints;
+const result = size.fileFinishedImporting("modules/self_mod/ChannelSafetyWarningsActionCreators.tsx");
 
 export const dismissChannelSafetyWarnings = function dismissChannelSafetyWarnings(channelId, items) {
-  let obj = dispatcherDefault;
-  obj = { type: "DISMISS_CHANNEL_SAFETY_WARNINGS", channelId, warningIds: items };
-  obj.dispatch(obj);
-  const HTTP = sendRequest.HTTP;
-  obj = { url: Endpoints.CHANNEL_SAFETY_WARNINGS_ACK(channelId), body: obj1, oldFormErrors: true, rejectWithError: sendRequest.rejectWithMigratedError() };
-  return HTTP.post(obj);
+  DispatcherDefault.dispatch({ type: "DISMISS_CHANNEL_SAFETY_WARNINGS", channelId, warningIds: items });
+  const HTTP = HTTPUtils.HTTP;
+  const request = { url: Endpoints.CHANNEL_SAFETY_WARNINGS_ACK(channelId), body: { warning_ids: items }, oldFormErrors: true, rejectWithError: null };
+  const obj2 = { type: "DISMISS_CHANNEL_SAFETY_WARNINGS", channelId, warningIds: items };
+  request.rejectWithError = HTTPUtils.rejectWithMigratedError();
+  return HTTP.post(request);
 };
 export const setChannelSafetyWarningFeedback = function setChannelSafetyWarningFeedback(channelId, warningId, feedbackType) {
-  let obj = dispatcherDefault;
-  obj = { type: "CHANNEL_SAFETY_WARNING_FEEDBACK", channelId, warningId, feedbackType };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "CHANNEL_SAFETY_WARNING_FEEDBACK", channelId, warningId, feedbackType });
 };
 export const clearChannelSafetyWarnings = function clearChannelSafetyWarnings(channelId) {
-  let obj = dispatcherDefault;
-  obj = { type: "CLEAR_CHANNEL_SAFETY_WARNINGS", channelId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "CLEAR_CHANNEL_SAFETY_WARNINGS", channelId });
 };
 export const acknowledgeChannelSafetyWarningTooltip = function acknowledgeChannelSafetyWarningTooltip(channelId) {
-  let obj = dispatcherDefault;
-  obj = { type: "ACKNOWLEDGE_CHANNEL_SAFETY_WARNING_TOOLTIP", channelId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "ACKNOWLEDGE_CHANNEL_SAFETY_WARNING_TOOLTIP", channelId });
 };
 export const reportFalsePositive = function reportFalsePositive(arg0) {
-  const HTTP = sendRequest.HTTP;
-  const obj = { url: Endpoints.SAFETY_WARNING_FALSE_POSITIVE(arg0), rejectWithError: sendRequest.rejectWithMigratedError() };
+  const HTTP = HTTPUtils.HTTP;
+  const obj = { url: Endpoints.SAFETY_WARNING_FALSE_POSITIVE(arg0), rejectWithError: HTTPUtils.rejectWithMigratedError() };
   return HTTP.post(obj);
 };
 export const markAsStrangerDanger = function markAsStrangerDanger(id) {
-  const HTTP = sendRequest.HTTP;
-  obj = { url: Endpoints.ADD_SAFETY_WARNING(id), body: obj, rejectWithError: null };
-  obj = { safety_warning_type: SafetyWarningTypes.STRANGER_DANGER };
-  obj[2] = sendRequest.rejectWithMigratedError();
-  return HTTP.post(obj);
+  const HTTP = HTTPUtils.HTTP;
+  const request = { url: Endpoints.ADD_SAFETY_WARNING(id), body: { safety_warning_type: SafetyWarningTypes.STRANGER_DANGER }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+  return HTTP.post(request);
 };

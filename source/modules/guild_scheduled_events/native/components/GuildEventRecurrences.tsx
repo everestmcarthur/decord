@@ -1,25 +1,26 @@
-// Module ID: 9801
-// Function ID: 9802
+// Module ID: 9828
+// Function ID: 9829
 // Name: GuildEventRecurrences
-// Dependencies: [19, 17, 21, 4560, 576, 9802, 4556, 1114, 11, 9804, 4975, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 9829, 4570, 1114, 11, 9831, 4989, 2]
 // Exports: default
 
-// Module 9801 (GuildEventRecurrences)
-import ThemesDefault from "Themes" /* 576 */;
-import useGuildEventRecurrencesDefault from "useGuildEventRecurrences" /* 9802 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9828 (GuildEventRecurrences)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import nativeDefault from "native" /* 576 */;
+import useGuildEventRecurrencesDefault from "useGuildEventRecurrences" /* 9829 */;
+import GuildEventRecurrenceDefault from "GuildEventRecurrence" /* 9831 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: { marginTop: 16 }, scrollView: null };
-createCacheKey = { marginTop: 8, marginBottom: 8, borderRadius: ThemesDefault.radii.sm, maxHeight: 140 };
-createCacheKey[1] = createCacheKey;
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventRecurrences.tsx");
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { marginTop: 16 }, scrollView: { marginTop: 8, marginBottom: 8, borderRadius: nativeDefault.radii.sm, maxHeight: 140 } };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventRecurrences.tsx");
 
 export default function GuildEventRecurrences(guildEventId) {
   guildEventId = guildEventId.guildEventId;
@@ -28,32 +29,33 @@ export default function GuildEventRecurrences(guildEventId) {
   c4 = undefined;
   ({ guildId, recurrenceRule, hideViewMoreButton } = guildEventId);
   ref = ref.useRef(null);
-  const tmp2 = callback2();
+  const tmp2 = closure_8();
   ({ recurrenceStartTimes, canViewMoreRecurrences, updateRecurrenceStartTimes: c4 } = useGuildEventRecurrencesDefault(guildEventId, guildId, recurrenceRule));
-  let obj = { style: tmp2.container, children: null };
-  obj = { variant: "heading-md/semibold", children: null };
+  const obj = { style: tmp2.container, children: null };
+  const obj2 = { variant: "heading-md/semibold", children: null };
   const intl = guildEventId(1114).intl;
-  obj[1] = intl.string(guildEventId(1114).t["D/jjoa"]);
-  const items = [callback(guildEventId(4556).Text, obj), , ];
-  obj = {
+  obj2.children = intl.string(guildEventId(1114).t["D/jjoa"]);
+  const items = [closure_6(guildEventId(4570).Text, obj2), , ];
+  const tmp4 = useGuildEventRecurrencesDefault(guildEventId, guildId, recurrenceRule);
+  const tmp5 = closure_7;
+  const tmp6 = c4;
+  const tmp7 = closure_6;
+  items[1] = closure_6(closure_5, {
     style: tmp2.scrollView,
     ref,
     children: recurrenceStartTimes.map((getTime) => {
-      let obj = closure_1_1(closure_1_2[8]);
-      const fromTimestampResult = obj.fromTimestamp(getTime.getTime());
-      obj = { recurrenceId: fromTimestampResult, guildEventId, onPress: closure_1, isActive: fromTimestampResult === closure_2 };
-      return closure_1_6(closure_1_1(closure_1_2[9]), obj, fromTimestampResult);
+      const fromTimestampResult = SnowflakeUtilsDefault.fromTimestamp(getTime.getTime());
+      return timestampProducer(GuildEventRecurrenceDefault, { recurrenceId: fromTimestampResult, guildEventId, onPress, isActive: fromTimestampResult === dependencyMap }, fromTimestampResult);
     })
-  };
-  items[1] = callback(closure_5, obj);
+  });
   if (canViewMoreRecurrences) {
     canViewMoreRecurrences = !hideViewMoreButton;
   }
   if (canViewMoreRecurrences) {
-    obj1 = { text: null, onPress: null, size: "sm" };
+    const obj4 = { text: null, onPress: null, size: "sm" };
     const intl2 = tmp8(1114).intl;
-    obj1[0] = intl2.string(tmp8(1114).t["8O7Hpy"]);
-    obj1[1] = function onPress(stopPropagation) {
+    obj4.text = intl2.string(tmp8(1114).t["8O7Hpy"]);
+    obj4.onPress = function onPress(stopPropagation) {
       stopPropagation.stopPropagation();
       _undefined();
       const current = ref.current;
@@ -61,9 +63,9 @@ export default function GuildEventRecurrences(guildEventId) {
         current.scrollToEnd();
       }
     };
-    canViewMoreRecurrences = callback(tmp8(4975).Button, obj1);
+    canViewMoreRecurrences = tmp7(tmp8(4989).Button, obj4);
   }
   items[2] = canViewMoreRecurrences;
-  obj[1] = items;
-  return closure_7(c4, obj);
+  obj.children = items;
+  return tmp5(tmp6, obj);
 };

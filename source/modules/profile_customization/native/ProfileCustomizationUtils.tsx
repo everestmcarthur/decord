@@ -1,25 +1,22 @@
-// Module ID: 8247
-// Function ID: 8248
-// Name: useUserProfileBannerBackgroundColor
-// Dependencies: [1396, 8248, 1091, 2]
+// Module ID: 8273
+// Function ID: 8274
+// Name: profile_customization/ProfileCustomizationUtils
+// Dependencies: [1396, 8274, 1091, 2]
 // Exports: getAvatarSource, useUserProfileBannerBackgroundColor
 
-// Module 8247 (useUserProfileBannerBackgroundColor)
-import set from "set" /* 2 */;
-import int2hslRaw from "int2hslRaw" /* 1091 */;
-import getAvatarURL2 from "getAvatarURL" /* 1396 */;
-import useDominantRGBFromImage from "useDominantRGBFromImage" /* 8248 */;
+// Module 8273 (profile_customization/ProfileCustomizationUtils)
+import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
+import AvatarUtils from "AvatarUtils" /* 1396 */;
+import VideoBackground from "VideoBackground" /* 8274 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/profile_customization/native/ProfileCustomizationUtils.tsx");
+const result = size.fileFinishedImporting("modules/profile_customization/native/ProfileCustomizationUtils.tsx");
 
 export const useUserProfileBannerBackgroundColor = function useUserProfileBannerBackgroundColor(arg0) {
   ({ user, pendingAvatarSrc, displayProfile } = arg0);
   if (null == user) {
-    const obj3 = useDominantRGBFromImage;
-    const memoizedImageSourceResult = useDominantRGBFromImage.memoizedImageSource(null);
-    const obj4 = int2hslRaw;
+    const memoizedImageSourceResult = VideoBackground.memoizedImageSource(null);
     let primaryColor;
-    const obj5 = useDominantRGBFromImage;
     if (displayProfile != null) {
       primaryColor = displayProfile.primaryColor;
     }
@@ -30,32 +27,29 @@ export const useUserProfileBannerBackgroundColor = function useUserProfileBanner
   } else if (null == pendingAvatarSrc) {
     pendingAvatarSrc = user.getAvatarURL(tmp, 80);
   } else if (pendingAvatarSrc == null) {
-    let obj = getAvatarURL2;
-    obj = {};
+    const obj2 = {};
     const merged = Object.assign(user);
-    obj.avatar = null;
-    pendingAvatarSrc = obj.getUserAvatarURL(obj);
+    obj2.avatar = null;
+    pendingAvatarSrc = AvatarUtils.getUserAvatarURL(obj2);
   }
 };
-export const getAvatarSource = function getAvatarSource(getAvatarURL) {
+export const getAvatarSource = function getAvatarSource(getAvatarURL, arg1, arg2, arg3) {
   if (null == getAvatarURL) {
     return null;
   } else {
     let userAvatarURL = arg2;
     if (undefined === arg2) {
-      let memoizedImageSourceResult = useDominantRGBFromImage.memoizedImageSource(getAvatarURL.getAvatarURL(arg1, 80, !arg3));
-      const obj4 = useDominantRGBFromImage;
+      let memoizedImageSourceResult = VideoBackground.memoizedImageSource(getAvatarURL.getAvatarURL(arg1, 80, !arg3));
       const tmp2 = !arg3;
     } else {
-      let obj = useDominantRGBFromImage;
       if (userAvatarURL == null) {
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(getAvatarURL);
-        obj.avatar = null;
-        userAvatarURL = tmp3(1396).getUserAvatarURL(obj);
+        obj2.avatar = null;
+        userAvatarURL = tmp3(1396).getUserAvatarURL(obj2);
         const tmp3Result = tmp3(1396);
       }
-      memoizedImageSourceResult = obj.memoizedImageSource(userAvatarURL);
+      memoizedImageSourceResult = VideoBackground.memoizedImageSource(userAvatarURL);
       tmp3 = require;
     }
   }

@@ -1,39 +1,38 @@
-// Module ID: 15306
-// Function ID: 15307
-// Name: route
-// Dependencies: [1183, 1186, 7975, 1074, 504, 11473, 1114, 15307, 15308, 2]
+// Module ID: 15335
+// Function ID: 15336
+// Name: LightModeThemeSetting
+// Dependencies: [1183, 1186, 7989, 1074, 504, 11500, 1114, 15336, 15337, 2]
 
-// Module 15306 (route)
+// Module 15335 (LightModeThemeSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import useSyncedModeThemeName from "useSyncedModeThemeName" /* 15307 */;
-import closure_2 from "handleThemeChange" /* 1183 */;
-import { SystemTheme } from "SystemThemeState" /* 1186 */;
-import createToggle from "createToggle" /* 11473 */;
+import util from "util" /* 1114 */;
+import useSyncedModeThemeName from "useSyncedModeThemeName" /* 15336 */;
+import ThemeStore from "ThemeStore" /* 1183 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const SystemTheme = fn(1186).SystemTheme;
+const SettingBuilders = fn(11500);
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.NoFvjZ);
+    const intl = util.intl;
+    return intl.string(util.t.NoFvjZ);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
+  parent: fn(7989).MobileUserSettings.APPEARANCE,
   usePredicate: function useSyncedModePickerVisible() {
-    const items = [closure_2];
+    const items = [ThemeStore];
     return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   },
   useTrailing() {
     return useSyncedModeThemeName.useSyncedModeThemeName(SystemTheme.LIGHT);
   },
-  screen: createToggle
-};
-createToggle = {
-  route: require("ME").UserSettingsSections.APPEARANCE_LIGHT_MODE_THEME_PICKER,
-  getComponent() {
-    return require(15308) /* SettingsAppearanceLightModeThemePickerScreen */.default;
+  screen: {
+    route: fn(1074).UserSettingsSections.APPEARANCE_LIGHT_MODE_THEME_PICKER,
+    getComponent() {
+      return require("SettingsAppearanceLightModeThemePickerScreen").default;
+    }
   }
-};
-createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/LightModeThemeSetting.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/LightModeThemeSetting.tsx");
 
-export default createToggle;
+export default route;

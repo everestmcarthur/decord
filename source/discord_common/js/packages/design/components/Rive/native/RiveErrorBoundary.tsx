@@ -1,12 +1,12 @@
-// Module ID: 4345
-// Function ID: 4346
-// Name: getDerivedStateFromError
-// Dependencies: [19, 4341, 2]
+// Module ID: 4359
+// Function ID: 4360
+// Name: RiveErrorBoundary
+// Dependencies: [19, 4355, 2]
 
-// Module 4345 (getDerivedStateFromError)
-import noopAll from "noop" /* 19 */;
+// Module 4359 (RiveErrorBoundary)
+import _modAll19 from "module_19" /* 19 */;
 
-const Component = noopAll.Component;
+const Component = _modAll19.Component;
 class RiveErrorBoundary extends Component {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -15,7 +15,7 @@ class RiveErrorBoundary extends Component {
   }
 }
 const prototype = RiveErrorBoundary.prototype;
-RiveErrorBoundary["getDerivedStateFromError"] = function getDerivedStateFromError(closure_4) {
+RiveErrorBoundary["getDerivedStateFromError"] = function getDerivedStateFromError() {
   return { hasError: true };
 };
 prototype["componentDidCatch"] = function componentDidCatch(arg0) {
@@ -38,7 +38,8 @@ prototype["render"] = function render() {
   }
   return children;
 };
-RiveErrorBoundary.contextType = require("context").ManaContext;
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/RiveErrorBoundary.tsx");
+RiveErrorBoundary.contextType = fn(4355).ManaContext;
+const size = fn(2);
+const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/RiveErrorBoundary.tsx");
 
 export { RiveErrorBoundary };

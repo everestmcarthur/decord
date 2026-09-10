@@ -1,11 +1,11 @@
-// Module ID: 7715
-// Function ID: 7716
+// Module ID: 7729
+// Function ID: 7730
 // Name: QuestTaskJoinOperator
 // Dependencies: [2]
 
-// Module 7715 (QuestTaskJoinOperator)
-import set from "set" /* 2 */;
+// Module 7729 (QuestTaskJoinOperator)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestTaskJoinOperator.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestTaskJoinOperator.tsx");
 
 export const QuestTaskJoinOperator = { AND: "and", OR: "or" };

@@ -1,26 +1,27 @@
-// Module ID: 17839
-// Function ID: 17840
-// Name: AVErrorStreamViewLowFPSDefinition
-// Dependencies: [4576, 4582, 502, 4599, 1074, 17840, 4612, 9114, 9115, 17837, 2]
+// Module ID: 17872
+// Function ID: 17873
+// Name: AVErrorStreamViewLowFPS
+// Dependencies: [4590, 4596, 502, 4613, 1074, 17873, 4626, 9141, 9142, 17870, 2]
 
-// Module 17839 (AVErrorStreamViewLowFPSDefinition)
-import closure_2 from "getParticipants" /* 4576 */;
-import closure_3 from "reset" /* 4582 */;
-import closure_4 from "fetchFingerprint" /* 502 */;
-import closure_5 from "initialize" /* 4599 */;
-import { ApplicationStreamStates } from "ME" /* 1074 */;
+// Module 17872 (AVErrorStreamViewLowFPS)
+import StreamKeyUtils from "StreamKeyUtils" /* 4626 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4590 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4596 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4613 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamViewLowFPS.tsx");
+require = fn;
+const ApplicationStreamStates = fn(1074).ApplicationStreamStates;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamViewLowFPS.tsx");
 
 export const AVErrorStreamViewLowFPSDefinition = {
   getActiveErrors() {
     let reduced = null;
     if (obj.getReportInboundErrors()) {
-      allActiveStreams = allActiveStreams.getAllActiveStreams();
+      const allActiveStreams = ApplicationStreamingStore.getAllActiveStreams();
       reduced = allActiveStreams.reduce((arr, ownerId) => {
-        let obj = callback(table[6]);
-        rTCConnection = rTCConnection.getRTCConnection(obj.encodeStreamKey(ownerId));
+        rTCConnection = rTCConnection.getRTCConnection(StreamKeyUtils.encodeStreamKey(ownerId));
         let mediaEngineConnectionId;
         if (rTCConnection != null) {
           mediaEngineConnectionId = rTCConnection.getMediaEngineConnectionId();
@@ -30,33 +31,32 @@ export const AVErrorStreamViewLowFPSDefinition = {
         } else {
           if (ownerId.ownerId !== id.getId()) {
             if (ownerId.state !== constants.PAUSED) {
-              let tmpResult = tmp(tmp2[5]);
-              const accumulatedStatsWithMinDatapoints = tmpResult.getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, ownerId.ownerId);
+              const accumulatedStatsWithMinDatapoints = tmp(tmp2[5]).getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, ownerId.ownerId);
               if (null == accumulatedStatsWithMinDatapoints) {
                 return arr;
               } else {
-                tmpResult = tmp(tmp2[6]);
-                participant = participant.getParticipant(ownerId.channelId, tmpResult.encodeStreamKey(ownerId));
+                participant = participant.getParticipant(ownerId.channelId, tmp(tmp2[6]).encodeStreamKey(ownerId));
                 if (null == participant) {
                   return arr;
                 } else {
                   const maxQuality = tmp(tmp2[7]).getMaxQuality(participant);
                   if (null != maxQuality) {
-                    if (accumulatedStatsWithMinDatapoints.short.frameRate < tmpResult2.getWarningFrameRate(maxQuality.maxFrameRate)) {
-                      obj = { type: null };
-                      obj[0] = tmp(tmp2[8]).AVError.STREAM_VIEW_LOW_FPS;
-                      const tmpResult3 = tmp(tmp2[9]);
-                      const merged = Object.assign(tmpResult3.getStreamErrorContext(tmp(tmp2[6]).encodeStreamKey(ownerId)));
-                      arr.push(obj);
-                      const tmpResult4 = tmp(tmp2[6]);
+                    if (accumulatedStatsWithMinDatapoints.short.frameRate < tmpResult9.getWarningFrameRate(maxQuality.maxFrameRate)) {
+                      const obj2 = { type: tmp(tmp2[8]).AVError.STREAM_VIEW_LOW_FPS };
+                      const tmpResult10 = tmp(tmp2[9]);
+                      const merged = Object.assign(tmpResult10.getStreamErrorContext(tmp(tmp2[6]).encodeStreamKey(ownerId)));
+                      arr.push(obj2);
+                      const tmpResult11 = tmp(tmp2[6]);
                     } else {
-                      const tmpResult5 = tmp(tmp2[5]);
+                      const tmpResult12 = tmp(tmp2[5]);
                     }
-                    tmpResult2 = tmp(tmp2[5]);
+                    tmpResult9 = tmp(tmp2[5]);
                   }
                   return arr;
                 }
+                const tmpResult7 = tmp(tmp2[6]);
               }
+              const tmpResult = tmp(tmp2[5]);
             }
           }
           return arr;

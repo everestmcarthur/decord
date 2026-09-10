@@ -1,32 +1,33 @@
-// Module ID: 11014
-// Function ID: 11015
+// Module ID: 11041
+// Function ID: 11042
 // Name: useCollectiblesExternalGatewayFacet
-// Dependencies: [19, 1371, 504, 8853, 2]
+// Dependencies: [19, 1371, 504, 8880, 2]
 // Exports: default
 
-// Module 11014 (useCollectiblesExternalGatewayFacet)
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
+// Module 11041 (useCollectiblesExternalGatewayFacet)
+import _mod19 from "module_19" /* 19 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8880 */;
+import UserStore from "UserStore" /* 1371 */;
+import size from "module_2" /* 2 */;
 
-const useMemo = noop.useMemo;
-const result = set.fileFinishedImporting("modules/collectibles/native/hooks/useCollectiblesExternalGatewayFacet.android.tsx");
+const require = globalThis.__r;
+
+const useMemo = _mod19.useMemo;
+const result = size.fileFinishedImporting("modules/collectibles/native/hooks/useCollectiblesExternalGatewayFacet.android.tsx");
 
 export default function useCollectiblesExternalGatewayFacet(arg0) {
-  const _require = arg0;
-  let items = [closure_3];
-  stateFromStores = _require(stateFromStores[2]).useStateFromStores(items, () => currentUser.getCurrentUser());
+  _require = arg0;
+  let items = [UserStore];
+  stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [stateFromStores, arg0];
   return useMemo(() => {
-    let obj = callback(stateFromStores[3]);
-    const collectibleGoogleSkuId = obj.getCollectibleGoogleSkuId(callback, stateFromStores);
+    const collectibleGoogleSkuId = collectibles_CollectiblesUtils.getCollectibleGoogleSkuId(closure_0, stateFromStores);
     if (null != collectibleGoogleSkuId) {
-      obj = { line_items: null };
-      obj = { external_product_id: null };
-      obj[0] = collectibleGoogleSkuId;
-      const items = [obj];
-      obj[0] = items;
-      return obj;
+      const obj2 = { line_items: null };
+      const obj3 = { external_product_id: collectibleGoogleSkuId };
+      const items = [obj3];
+      obj2.line_items = items;
+      return obj2;
     }
   }, items1);
 };

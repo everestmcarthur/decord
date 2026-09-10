@@ -1,13 +1,13 @@
-// Module ID: 8004
-// Function ID: 8005
+// Module ID: 8018
+// Function ID: 8019
 // Name: getNumSubscriptionsPurchasedFromSystemMessage
 // Dependencies: [2]
 // Exports: default
 
-// Module 8004 (getNumSubscriptionsPurchasedFromSystemMessage)
-import set from "set" /* 2 */;
+// Module 8018 (getNumSubscriptionsPurchasedFromSystemMessage)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/premium/getNumSubscriptionsPurchasedFromSystemMessage.tsx");
+const result = size.fileFinishedImporting("modules/premium/getNumSubscriptionsPurchasedFromSystemMessage.tsx");
 
 export default function getNumSubscriptionsPurchasedFromSystemMessage(content) {
   const NumberResult = Number(content.content);

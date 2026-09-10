@@ -1,27 +1,26 @@
-// Module ID: 9516
-// Function ID: 9517
-// Name: FrameLayoutModes
+// Module ID: 9543
+// Function ID: 9544
+// Name: FramesConstants
 // Dependencies: [2]
 // Exports: asLaunched, getChannelIdForSurface, getFrameIntentForSurface, getPipOrientationLockStateForFrame, isLaunched, makeFrameId
 
-// Module 9516 (FrameLayoutModes)
-import set from "set" /* 2 */;
+// Module 9543 (FramesConstants)
+import size from "module_2" /* 2 */;
 
-let obj = { MAIN: 0, [0]: "MAIN", APP_CHANNEL: 1, [1]: "APP_CHANNEL" };
-obj = { type: obj.MAIN };
-obj = { MAIN: 0, [0]: "MAIN", INLINE: 1, [1]: "INLINE" };
-const result = set.fileFinishedImporting("modules/frames/FramesConstants.tsx");
+const EmbeddedSurfaceType = { MAIN: 0, [0]: "MAIN", APP_CHANNEL: 1, [1]: "APP_CHANNEL" };
+const obj3 = { MAIN: 0, [0]: "MAIN", INLINE: 1, [1]: "INLINE" };
+const result = size.fileFinishedImporting("modules/frames/FramesConstants.tsx");
 
 export const FrameLayoutModes = { FOCUSED: 0, [0]: "FOCUSED", PIP: 1, [1]: "PIP" };
-export const EmbeddedSurfaceType = obj;
-export const MAIN_SURFACE = obj;
-export const FrameIntent = obj;
+export { EmbeddedSurfaceType };
+export const MAIN_SURFACE = { type: EmbeddedSurfaceType.MAIN };
+export const FrameIntent = obj3;
 export const getFrameIntentForSurface = function getFrameIntentForSurface(type) {
   type = type.type;
   if (obj.MAIN === type) {
-    return obj.MAIN;
+    return obj3.MAIN;
   } else if (tmp.APP_CHANNEL === type) {
-    return obj.INLINE;
+    return obj3.INLINE;
   }
 };
 export const makeFrameId = function makeFrameId(arg0, type) {

@@ -1,18 +1,18 @@
-// Module ID: 17331
-// Function ID: 17332
+// Module ID: 17362
+// Function ID: 17363
 // Name: openChangelog
-// Dependencies: [2010, 4417, 4763, 15545, 1896, 2]
+// Dependencies: [2010, 4431, 4777, 15575, 1896, 2]
 // Exports: openChangelog
 
-// Module 17331 (openChangelog)
-import set from "set" /* 2 */;
+// Module 17362 (openChangelog)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import CHANGELOG_MODAL_KEY2 from "CHANGELOG_MODAL_KEY" /* 2010 */;
-import coerceMainRoute from "coerceMainRoute" /* 4417 */;
-import _modDef4763 from "module_4763" /* 4763 */;
+import ChangelogConstants from "ChangelogConstants" /* 2010 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4431 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import size from "module_2" /* 2 */;
 
-const CHANGELOG_MODAL_KEY = CHANGELOG_MODAL_KEY2.CHANGELOG_MODAL_KEY;
-const result = set.fileFinishedImporting("modules/changelog/openChangelog.native.tsx");
+const CHANGELOG_MODAL_KEY = ChangelogConstants.CHANGELOG_MODAL_KEY;
+const result = size.fileFinishedImporting("modules/changelog/openChangelog.native.tsx");
 
 export const openChangelog = function openChangelog() {
   let flag = arg0;
@@ -21,11 +21,9 @@ export const openChangelog = function openChangelog() {
   }
   let isModalOpenResult = !flag;
   if (!flag) {
-    isModalOpenResult = coerceMainRoute.isModalOpen();
-    const obj = coerceMainRoute;
+    isModalOpenResult = NavigationRouteUtils.isModalOpen();
   }
   if (!isModalOpenResult) {
-    _modDef4763.pushLazy(asyncRequireImpl(15545, dependencyMap.paths), {}, CHANGELOG_MODAL_KEY);
-    const obj2 = _modDef4763;
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15575, dependencyMap.paths), {}, CHANGELOG_MODAL_KEY);
   }
 };

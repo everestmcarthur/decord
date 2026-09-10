@@ -1,14 +1,16 @@
-// Module ID: 17862
-// Function ID: 17863
-// Name: experiment
-// Dependencies: [4474, 2]
+// Module ID: 17895
+// Function ID: 17896
+// Name: NativeIntentsExperiment
+// Dependencies: [4488, 2]
 
-// Module 17862 (experiment)
-import set from "set" /* 2 */;
-import createExperiment from "createExperiment" /* 4474 */;
+// Module 17895 (NativeIntentsExperiment)
+import createExperiment from "module_4488" /* 4488 */;
+import size from "module_2" /* 2 */;
 
+const obj = { kind: "user", id: "2025-06_native_intents", label: "Native Intents", defaultConfig: { searchEnabled: false, clearEnabled: false, activityEnabled: false }, treatments: null };
 const items = [{ id: 1, label: "All enabled", config: { searchEnabled: true, clearEnabled: true, activityEnabled: true } }, { id: 2, label: "Clear Only", config: { searchEnabled: false, clearEnabled: true, activityEnabled: false } }, { id: 3, label: "Activities Only", config: { searchEnabled: false, clearEnabled: false, activityEnabled: true } }, { id: 4, label: "Activities and Clear", config: { searchEnabled: false, clearEnabled: true, activityEnabled: true } }];
-const experiment = createExperiment.createExperiment({ kind: "user", id: "2025-06_native_intents", label: "Native Intents", defaultConfig: { searchEnabled: false, clearEnabled: false, activityEnabled: false }, treatments: items });
-const result = set.fileFinishedImporting("modules/native_intents/NativeIntentsExperiment.tsx");
+obj.treatments = items;
+const experiment = createExperiment.createExperiment(obj);
+const result = size.fileFinishedImporting("modules/native_intents/NativeIntentsExperiment.tsx");
 
 export default experiment;

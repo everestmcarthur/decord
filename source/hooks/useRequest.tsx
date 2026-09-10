@@ -1,41 +1,41 @@
-// Module ID: 12207
-// Function ID: 12208
+// Module ID: 12233
+// Function ID: 12234
 // Name: useRequest
-// Dependencies: [5, 32, 19, 1114, 4462, 2]
+// Dependencies: [5, 32, 19, 1114, 4476, 2]
 // Exports: default
 
-// Module 12207 (useRequest)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
+// Module 12233 (useRequest)
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("hooks/useRequest.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("hooks/useRequest.tsx");
 
 export default function useRequest(arg0) {
   closure_0 = arg0;
-  const tmp = callback2(React.useState(false), 2);
+  const tmp = _slicedToArray(noop.useState(false), 2);
   closure_1 = tmp[1];
-  const tmp2 = callback2(React.useState(null), 2);
+  const tmp2 = _slicedToArray(noop.useState(null), 2);
   closure_2 = tmp2[1];
   let items = [arg0];
   const items1 = [
-    React.useCallback(callback(() => {
+    noop.useCallback(asyncGeneratorStep(async () => {
       closure_0 = [...arguments];
       c5 = 0;
       c6 = 0;
       c4 = 0;
-      const iter = (function*() {
+      const iter = (async (arg0, value) => {
         if (c6 === 2) {
           c6 = 3;
-          HermesBuiltin.throwTypeError();
+          throw new TypeError("Generator functions may not be called on executing generators");
         } else if (tmp8 === 3) {
           if (arg0 === 1) {
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -45,15 +45,13 @@ export default function useRequest(arg0) {
             if (0 === c5) {
               if (arg0 === 1) {
                 c6 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 c6 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
-                const callback2 = tmp4;
-                let lib = tmp6;
+                closure_129_0 = closure_0;
                 c5 = 1;
                 c6 = 1;
                 return { value: "PX_16", done: true };
@@ -61,62 +59,57 @@ export default function useRequest(arg0) {
             } else if (1 === tmp9) {
               if (arg0 === 1) {
                 c6 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 c6 = 3;
-                obj1 = { value: null, done: true };
-                obj1[0] = arg1;
-                return obj1;
+                const obj4 = { value, done: true };
+                return obj4;
               } else {
                 c4 = 2;
-                callback2(null);
-                lib(true);
+                closure_130_2(null);
+                closure_130_1(true);
                 const items = [];
-                HermesBuiltin.arraySpread(callback, 0);
+                HermesBuiltin.arraySpread(closure_129_0, 0);
                 c5 = 4;
                 c6 = 1;
-                const obj2 = { value: null, done: false };
-                obj2[0] = HermesBuiltin.apply(items, undefined);
-                return obj2;
+                const obj5 = { value: HermesBuiltin.apply(items, undefined), done: false };
+                return obj5;
               }
             } else if (2 === tmp9) {
               c4 = 0;
-              lib(false);
+              closure_130_1(false);
               throw closure_3;
             } else if (3 === tmp9) {
               c4 = 1;
-              lib = closure_3;
-              const intl = callback(closure_1_2[3]).intl;
-              if (lib.message === intl.string(callback(closure_1_2[3]).t.N2yb9a)) {
+              closure_129_1 = closure_3;
+              const intl = closure_0(tmp4[3]).intl;
+              if (closure_129_1.message === intl.string(closure_0(tmp4[3]).t.N2yb9a)) {
                 c4 = 0;
-                closure_1_1(false);
+                closure_130_1(false);
                 c6 = 3;
                 return { value: "HermesInternal", done: null };
               } else {
-                if (lib instanceof closure_1_1(closure_1_2[4])) {
-                  let tmp37 = lib;
+                if (closure_129_1 instanceof tmp6(tmp4[4])) {
+                  let tmp37 = closure_129_1;
                 } else {
-                  tmp37 = new closure_1_1(closure_1_2[4])(lib);
+                  tmp37 = new tmp6(tmp4[4])(closure_129_1);
                 }
-                closure_1_2(tmp37);
-                const tmp26 = closure_1_2;
+                closure_130_2(tmp37);
               }
             } else if (arg0 === 1) {
               c6 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c4 = 0;
-              lib(false);
+              closure_130_1(false);
               c6 = 3;
-              const obj3 = { value: null, done: true };
-              obj3[0] = arg1;
-              return obj3;
+              const obj6 = { value, done: true };
+              return obj6;
             } else {
               c4 = 0;
-              lib(false);
+              closure_130_1(false);
               c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              const obj = { value, done: true };
               return obj;
             }
           } catch (tmp60) {

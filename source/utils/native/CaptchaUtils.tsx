@@ -1,37 +1,42 @@
-// Module ID: 17292
-// Function ID: 17293
-// Name: CaptchaManager
-// Dependencies: [19, 17, 2025, 1183, 1074, 21, 1242, 7602, 7607, 504, 1256, 1326, 17293, 11282, 4763, 17294, 1896, 2]
+// Module ID: 17323
+// Function ID: 17324
+// Name: CaptchaUtils
+// Dependencies: [19, 17, 2025, 1183, 1074, 21, 1242, 7616, 7621, 504, 1256, 1326, 17324, 11309, 4777, 17325, 1896, 2]
 // Exports: InlineHcaptcha
 
-// Module 17292 (CaptchaManager)
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import convertStringArrayToSkemaErrorItems from "convertStringArrayToSkemaErrorItems" /* 1326 */;
-import siteKeyDefault from "siteKey" /* 17293 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "_getSystemLocale" /* 2025 */;
-import closure_6 from "handleThemeChange" /* 1183 */;
-import ME from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 17323 (CaptchaUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import V8APIError from "V8APIError" /* 1326 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 7616 */;
+import MetricEvents from "MetricEvents" /* 7621 */;
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 11309 */;
+import siteKeyDefault from "siteKey" /* 17324 */;
+import noop from "module_19" /* 19 */;
+import LocaleStore from "LocaleStore" /* 2025 */;
+import ThemeStore from "ThemeStore" /* 1183 */;
 
-require = arg1;
-({ Keyboard: c4, NativeModules, NativeEventEmitter } = get_ActivityIndicator);
-({ CaptchaEvent: error, RECAPTCHA_SITE_KEY: closure_8, AnalyticEvents: c9 } = ME);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Keyboard: closure_4, NativeModules, NativeEventEmitter } = get_ActivityIndicator);
+const Constants = fn(1074);
+({ CaptchaEvent: closure_7, RECAPTCHA_SITE_KEY: closure_8, AnalyticEvents: closure_9 } = Constants);
+const jsx = fn(21).jsx;
 const CaptchaManager = NativeModules.CaptchaManager;
 const nativeEventEmitter = new NativeEventEmitter(CaptchaManager);
-const result = require("set").fileFinishedImporting("utils/native/CaptchaUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("utils/native/CaptchaUtils.tsx");
 
 export default {
   showCaptcha() {
     let RECAPTCHA = arg0;
     if (arg0 === undefined) {
-      RECAPTCHA = convertStringArrayToSkemaErrorItems.CaptchaTypes.RECAPTCHA;
+      RECAPTCHA = V8APIError.CaptchaTypes.RECAPTCHA;
     }
     const self = this;
-    closure_4.dismiss();
-    expandEventPropertiesDefault.track(constants.OPEN_MODAL, { type: "CAPTCHA" });
-    if (RECAPTCHA === convertStringArrayToSkemaErrorItems.CaptchaTypes.HCAPTCHA) {
+    React4.dismiss();
+    AnalyticsUtilsDefault.track(constants.OPEN_MODAL, { type: "CAPTCHA" });
+    if (RECAPTCHA === V8APIError.CaptchaTypes.HCAPTCHA) {
       if (null != arg1) {
         let showHcaptchaResult = self.showHcaptcha(arg1, arg2);
       }
@@ -42,84 +47,66 @@ export default {
   closeCaptcha() {
     CaptchaManager.closeCaptcha();
   },
-  showHcaptcha(arg0, arg1) {
+  showHcaptcha(arg0, rqdata) {
     closure_0 = arg0;
-    closure_1 = arg1;
-    return new Promise((arg0, arg1) => {
-      const callback = arg0;
-      const callback2 = arg1;
-      let obj = callback(closure_1_2[10]);
-      const v4Result = obj.v4();
+    return new Promise((sitekey, arg1) => {
+      rqdata = arg1;
+      const v4Result = sitekey(paths[10]).v4();
       closure_2 = v4Result;
-      let HCAPTCHA = callback(closure_1_2[11]).CaptchaTypes.HCAPTCHA;
-      obj1 = callback2(closure_1_2[6]);
-      obj = { captcha_event_name: "initial-load", captcha_service: HCAPTCHA, sitekey: callback, captcha_flow_key: v4Result };
-      obj1.track(closure_1_9.CAPTCHA_EVENT, obj);
-      obj = { name: callback(closure_1_2[8]).MetricEvents.CAPTCHA_EVENT, tags: null };
+      let HCAPTCHA = sitekey(paths[11]).CaptchaTypes.HCAPTCHA;
+      let obj = sitekey(paths[10]);
+      rqdata(paths[6]).track(constants.CAPTCHA_EVENT, { captcha_event_name: "initial-load", captcha_service: HCAPTCHA, sitekey, captcha_flow_key: v4Result });
+      let obj2 = rqdata(paths[6]);
+      let obj3 = { captcha_event_name: "initial-load", captcha_service: HCAPTCHA, sitekey, captcha_flow_key: v4Result };
+      let obj5 = { name: sitekey(paths[8]).MetricEvents.CAPTCHA_EVENT, tags: null };
       let items = ["event_name:" + "initial-load", "captcha_service:" + HCAPTCHA];
-      obj[1] = items;
-      callback2(closure_1_2[7]).increment(obj);
-      const obj4 = callback2(closure_1_2[7]);
-      obj1 = {
-        siteKey: callback,
+      obj5.tags = items;
+      rqdata(paths[7]).increment(obj5);
+      let obj4 = rqdata(paths[7]);
+      rqdata(paths[14]).pushLazy(sitekey(paths[16])(paths[15], paths.paths), {
+        siteKey: sitekey,
         onMessage(nativeEvent) {
-          let data;
+          let data1;
           if (nativeEvent != null) {
-            data = nativeEvent.nativeEvent.data;
+            data1 = nativeEvent.nativeEvent.data;
           }
-          if (null != data) {
-            data = nativeEvent.nativeEvent.data;
-            if (data !== callback(closure_2_2[13]).CaptchaError.CANCEL) {
-              if (data !== tmp17(closure_2_2[13]).CaptchaError.ERROR) {
-                if (data !== tmp17(closure_2_2[13]).CaptchaError.EXPIRED) {
-                  const HCAPTCHA2 = tmp17(closure_2_2[11]).CaptchaTypes.HCAPTCHA;
-                  let obj = { captcha_event_name: "verify", captcha_service: null, sitekey: null, captcha_flow_key: null };
-                  obj[1] = HCAPTCHA2;
-                  obj[2] = callback;
-                  obj[3] = closure_2;
-                  callback2(closure_2_2[6]).track(closure_2_9.CAPTCHA_EVENT, obj);
-                  const obj7 = callback2(closure_2_2[6]);
-                  obj = { name: null, tags: null };
-                  obj[0] = tmp17(closure_2_2[8]).MetricEvents.CAPTCHA_EVENT;
+          if (null != data1) {
+            const data = nativeEvent.nativeEvent.data;
+            if (data !== SharedCaptchaUtils.CaptchaError.CANCEL) {
+              if (data !== tmp17(11309).CaptchaError.ERROR) {
+                if (data !== tmp17(11309).CaptchaError.EXPIRED) {
+                  const HCAPTCHA2 = tmp17(1326).CaptchaTypes.HCAPTCHA;
+                  const obj2 = { captcha_event_name: "verify", captcha_service: HCAPTCHA2, sitekey, captcha_flow_key: v4Result };
+                  AnalyticsUtilsDefault.track(constants.CAPTCHA_EVENT, obj2);
+                  const obj4 = { name: tmp17(7621).MetricEvents.CAPTCHA_EVENT, tags: null };
                   const _HermesInternal3 = HermesInternal;
                   const items = ["event_name:" + "verify", ];
                   const _HermesInternal4 = HermesInternal;
                   items[1] = "captcha_service:" + HCAPTCHA2;
-                  obj[1] = items;
-                  callback2(closure_2_2[7]).increment(obj);
-                  callback(data);
-                  const obj9 = callback2(closure_2_2[7]);
+                  obj4.tags = items;
+                  MonitoringAgentDefault.increment(obj4);
+                  sitekey(data);
                 }
               }
             }
-            const HCAPTCHA = tmp17(closure_2_2[11]).CaptchaTypes.HCAPTCHA;
-            obj = callback2(closure_2_2[6]);
-            obj1 = { captcha_event_name: null, captcha_service: null, sitekey: null, captcha_flow_key: null };
-            obj1[0] = data;
-            obj1[1] = HCAPTCHA;
-            obj1[2] = callback;
-            obj1[3] = closure_2;
-            obj.track(closure_2_9.CAPTCHA_EVENT, obj1);
-            let obj2 = callback2(closure_2_2[7]);
-            obj2 = { name: null, tags: null };
-            obj2[0] = callback(closure_2_2[8]).MetricEvents.CAPTCHA_EVENT;
+            const HCAPTCHA = tmp17(1326).CaptchaTypes.HCAPTCHA;
+            const obj6 = { captcha_event_name: data, captcha_service: HCAPTCHA, sitekey, captcha_flow_key: v4Result };
+            AnalyticsUtilsDefault.track(constants.CAPTCHA_EVENT, obj6);
+            const obj8 = { name: MetricEvents.MetricEvents.CAPTCHA_EVENT, tags: null };
             const _HermesInternal = HermesInternal;
             const items1 = ["event_name:" + data, ];
             const _HermesInternal2 = HermesInternal;
             items1[1] = "captcha_service:" + HCAPTCHA;
-            obj2[1] = items1;
-            obj2.increment(obj2);
-            const obj3 = { reason: null };
-            obj3[0] = data;
-            callback2(closure_2_2[6]).track(closure_2_9.CAPTCHA_FAILED, obj3);
-            callback2(data);
-            const obj5 = callback2(closure_2_2[6]);
+            obj8.tags = items1;
+            MonitoringAgentDefault.increment(obj8);
+            const obj10 = { reason: data };
+            AnalyticsUtilsDefault.track(constants.CAPTCHA_FAILED, obj10);
+            closure_1(data);
           }
-          callback2(closure_2_2[14]).pop();
+          ModalActionCreatorsDefault.pop();
         },
-        rqdata: callback2
-      };
-      callback2(closure_1_2[14]).pushLazy(callback(closure_1_2[16])(closure_1_2[15], closure_1_2.paths), obj1, "hcaptcha");
+        rqdata
+      }, "hcaptcha");
     });
   },
   showRecaptcha() {
@@ -127,44 +114,40 @@ export default {
     return new Promise((arg0, arg1) => {
       closure_0 = arg0;
       closure_1 = arg1;
-      let obj = self(closure_1_2[10]);
-      const v4Result = obj.v4();
+      const v4Result = self(1256).v4();
       closure_2 = v4Result;
-      const HCAPTCHA = self(closure_1_2[11]).CaptchaTypes.HCAPTCHA;
-      obj = { captcha_event_name: "initial-load", captcha_service: HCAPTCHA, sitekey: closure_1_8, captcha_flow_key: v4Result };
-      closure_1_1(closure_1_2[6]).track(closure_1_9.CAPTCHA_EVENT, obj);
-      const obj2 = closure_1_1(closure_1_2[6]);
-      obj = { name: self(closure_1_2[8]).MetricEvents.CAPTCHA_EVENT, tags: null };
+      const HCAPTCHA = self(1326).CaptchaTypes.HCAPTCHA;
+      let obj = self(1256);
+      AnalyticsUtilsDefault.track(constants2.CAPTCHA_EVENT, { captcha_event_name: "initial-load", captcha_service: HCAPTCHA, sitekey, captcha_flow_key: v4Result });
+      let obj3 = { captcha_event_name: "initial-load", captcha_service: HCAPTCHA, sitekey, captcha_flow_key: v4Result };
+      const obj5 = { name: self(7621).MetricEvents.CAPTCHA_EVENT, tags: null };
       let items = ["event_name:" + "initial-load", "captcha_service:" + HCAPTCHA];
-      obj[1] = items;
-      closure_1_1(closure_1_2[7]).increment(obj);
-      closure_1_11.showCaptcha(closure_1_8, closure_1_6.theme, "https://cdn.discordapp.com/recaptcha/ios.html");
-      closure_1_12.addListener(closure_1_7.SOLVED, (arg0) => {
-        lib.closeCaptcha();
-        const RECAPTCHA = self(closure_2_2[11]).CaptchaTypes.RECAPTCHA;
-        let obj = closure_2_1(closure_2_2[6]);
-        obj = { captcha_event_name: "verify", captcha_service: RECAPTCHA, sitekey: closure_2_8, captcha_flow_key: closure_2 };
-        obj.track(closure_2_9.CAPTCHA_EVENT, obj);
-        obj = { name: self(closure_2_2[8]).MetricEvents.CAPTCHA_EVENT, tags: null };
+      obj5.tags = items;
+      MonitoringAgentDefault.increment(obj5);
+      CaptchaManager.showCaptcha(sitekey, theme.theme, "https://cdn.discordapp.com/recaptcha/ios.html");
+      nativeEventEmitter.addListener(constants.SOLVED, (arg0) => {
+        self.closeCaptcha();
+        const RECAPTCHA = V8APIError.CaptchaTypes.RECAPTCHA;
+        AnalyticsUtilsDefault.track(constants.CAPTCHA_EVENT, { captcha_event_name: "verify", captcha_service: RECAPTCHA, sitekey, captcha_flow_key: v4Result });
+        const obj2 = { captcha_event_name: "verify", captcha_service: RECAPTCHA, sitekey, captcha_flow_key: v4Result };
+        const obj4 = { name: MetricEvents.MetricEvents.CAPTCHA_EVENT, tags: null };
         const items = ["event_name:" + "verify", "captcha_service:" + RECAPTCHA];
-        obj[1] = items;
-        closure_2_1(closure_2_2[7]).increment(obj);
-        lib(arg0);
+        obj4.tags = items;
+        MonitoringAgentDefault.increment(obj4);
+        closure_0(arg0);
       });
-      closure_1_12.addListener(closure_1_7.EXPIRED, () => {
-        lib.closeCaptcha();
-        const EXPIRED = self(closure_2_2[13]).CaptchaError.EXPIRED;
-        const RECAPTCHA = self(closure_2_2[11]).CaptchaTypes.RECAPTCHA;
-        let obj = closure_2_1(closure_2_2[6]);
-        obj = { captcha_event_name: EXPIRED, captcha_service: RECAPTCHA, sitekey: closure_2_8, captcha_flow_key: closure_2 };
-        obj.track(closure_2_9.CAPTCHA_EVENT, obj);
-        obj = { name: self(closure_2_2[8]).MetricEvents.CAPTCHA_EVENT, tags: null };
+      nativeEventEmitter.addListener(constants.EXPIRED, () => {
+        self.closeCaptcha();
+        const EXPIRED = SharedCaptchaUtils.CaptchaError.EXPIRED;
+        const RECAPTCHA = V8APIError.CaptchaTypes.RECAPTCHA;
+        AnalyticsUtilsDefault.track(constants.CAPTCHA_EVENT, { captcha_event_name: EXPIRED, captcha_service: RECAPTCHA, sitekey, captcha_flow_key: v4Result });
+        const obj2 = { captcha_event_name: EXPIRED, captcha_service: RECAPTCHA, sitekey, captcha_flow_key: v4Result };
+        const obj4 = { name: MetricEvents.MetricEvents.CAPTCHA_EVENT, tags: null };
         const items = ["event_name:" + EXPIRED, "captcha_service:" + RECAPTCHA];
-        obj[1] = items;
-        closure_2_1(closure_2_2[7]).increment(obj);
-        const obj3 = closure_2_1(closure_2_2[7]);
-        closure_2_1(closure_2_2[6]).track(closure_2_9.CAPTCHA_FAILED, { reason: "expired" });
-        callback(self(closure_2_2[13]).CaptchaError.EXPIRED);
+        obj4.tags = items;
+        MonitoringAgentDefault.increment(obj4);
+        AnalyticsUtilsDefault.track(constants.CAPTCHA_FAILED, { reason: "expired" });
+        closure_1(SharedCaptchaUtils.CaptchaError.EXPIRED);
       });
     });
   }
@@ -172,134 +155,102 @@ export default {
 export const InlineHcaptcha = function InlineHcaptcha(siteKey) {
   siteKey = siteKey.siteKey;
   ({ onVerify: importDefault, onError: dependencyMap } = siteKey);
-  const merged = Object.assign(siteKey, Object.create(null));
-  let React;
+  const merged = Object.assign(siteKey, Object.assign({ siteKey: 0, onVerify: 0, onError: 0 }));
+  let items = [LocaleStore];
+  const stateFromStores = siteKey(504).useStateFromStores(items, () => locale.locale);
   let obj = siteKey(504);
-  let items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
   const v4Result = siteKey(1256).v4();
-  React = v4Result;
+  noop = v4Result;
   let items1 = [v4Result, siteKey];
-  const effect = React.useEffect(() => {
-    const HCAPTCHA = siteKey(closure_1_2[11]).CaptchaTypes.HCAPTCHA;
-    let obj = closure_1_1(closure_1_2[6]);
-    obj = { captcha_event_name: "initial-load", captcha_service: HCAPTCHA, sitekey: siteKey, captcha_flow_key: c3 };
-    obj.track(closure_1_9.CAPTCHA_EVENT, obj);
-    obj = { name: siteKey(closure_1_2[8]).MetricEvents.CAPTCHA_EVENT, tags: null };
+  const effect = noop.useEffect(() => {
+    const HCAPTCHA = V8APIError.CaptchaTypes.HCAPTCHA;
+    AnalyticsUtilsDefault.track(constants.CAPTCHA_EVENT, { captcha_event_name: "initial-load", captcha_service: HCAPTCHA, sitekey: siteKey, captcha_flow_key });
+    const obj2 = { captcha_event_name: "initial-load", captcha_service: HCAPTCHA, sitekey: siteKey, captcha_flow_key };
+    const obj4 = { name: MetricEvents.MetricEvents.CAPTCHA_EVENT, tags: null };
     const items = ["event_name:" + "initial-load", "captcha_service:" + HCAPTCHA];
-    obj[1] = items;
-    closure_1_1(closure_1_2[7]).increment(obj);
+    obj4.tags = items;
+    MonitoringAgentDefault.increment(obj4);
   }, items1);
-  obj = {
+  let obj2 = siteKey(1256);
+  let obj3 = {
     siteKey,
     onMessage(nativeEvent) {
       if (null != nativeEvent.nativeEvent.data) {
         const data = nativeEvent.nativeEvent.data;
-        if (data !== siteKey(closure_1_2[13]).CaptchaError.CANCEL) {
-          if (data !== tmp10(tmp11[13]).CaptchaError.ERROR) {
-            if (data !== tmp10(tmp11[13]).CaptchaError.EXPIRED) {
-              const HCAPTCHA2 = tmp10(tmp11[11]).CaptchaTypes.HCAPTCHA;
-              let obj = { captcha_event_name: "verify", captcha_service: null, sitekey: null, captcha_flow_key: null };
-              obj[1] = HCAPTCHA2;
-              obj[2] = siteKey;
-              obj[3] = c3;
-              closure_1_1(tmp11[6]).track(closure_1_9.CAPTCHA_EVENT, obj);
-              const obj7 = closure_1_1(tmp11[6]);
-              obj = { name: null, tags: null };
-              obj[0] = tmp10(tmp11[8]).MetricEvents.CAPTCHA_EVENT;
+        if (data !== SharedCaptchaUtils.CaptchaError.CANCEL) {
+          if (data !== tmp10(11309).CaptchaError.ERROR) {
+            if (data !== tmp10(11309).CaptchaError.EXPIRED) {
+              const HCAPTCHA2 = tmp10(1326).CaptchaTypes.HCAPTCHA;
+              const obj2 = { captcha_event_name: "verify", captcha_service: HCAPTCHA2, sitekey: siteKey, captcha_flow_key };
+              AnalyticsUtilsDefault.track(constants.CAPTCHA_EVENT, obj2);
+              const obj4 = { name: tmp10(7621).MetricEvents.CAPTCHA_EVENT, tags: null };
               const _HermesInternal3 = HermesInternal;
               const items = ["event_name:" + "verify", ];
               const _HermesInternal4 = HermesInternal;
               items[1] = "captcha_service:" + HCAPTCHA2;
-              obj[1] = items;
-              closure_1_1(tmp11[7]).increment(obj);
-              callback(data);
-              const obj9 = closure_1_1(tmp11[7]);
+              obj4.tags = items;
+              MonitoringAgentDefault.increment(obj4);
+              closure_1_1(data);
             }
           }
         }
-        const HCAPTCHA = tmp10(tmp11[11]).CaptchaTypes.HCAPTCHA;
-        obj = closure_1_1(tmp11[6]);
-        obj1 = { captcha_event_name: null, captcha_service: null, sitekey: null, captcha_flow_key: null };
-        obj1[0] = data;
-        obj1[1] = HCAPTCHA;
-        obj1[2] = siteKey;
-        obj1[3] = c3;
-        obj.track(closure_1_9.CAPTCHA_EVENT, obj1);
-        let obj2 = closure_1_1(tmp11[7]);
-        obj2 = { name: null, tags: null };
-        obj2[0] = siteKey(closure_1_2[8]).MetricEvents.CAPTCHA_EVENT;
+        const HCAPTCHA = tmp10(1326).CaptchaTypes.HCAPTCHA;
+        const obj6 = { captcha_event_name: data, captcha_service: HCAPTCHA, sitekey: siteKey, captcha_flow_key };
+        AnalyticsUtilsDefault.track(constants.CAPTCHA_EVENT, obj6);
+        const obj8 = { name: MetricEvents.MetricEvents.CAPTCHA_EVENT, tags: null };
         const _HermesInternal = HermesInternal;
         const items1 = ["event_name:" + data, ];
         const _HermesInternal2 = HermesInternal;
         items1[1] = "captcha_service:" + HCAPTCHA;
-        obj2[1] = items1;
-        obj2.increment(obj2);
-        const obj3 = { reason: null };
-        obj3[0] = data;
-        closure_1_1(closure_1_2[6]).track(closure_1_9.CAPTCHA_FAILED, obj3);
-        if (callback2 != null) {
-          callback2(data);
+        obj8.tags = items1;
+        MonitoringAgentDefault.increment(obj8);
+        const obj10 = { reason: data };
+        AnalyticsUtilsDefault.track(constants.CAPTCHA_FAILED, obj10);
+        if (dependencyMap != null) {
+          dependencyMap(data);
         }
-        const obj5 = closure_1_1(closure_1_2[6]);
       }
     },
     languageCode: stateFromStores
   };
-  let obj2 = siteKey(1256);
   const merged1 = Object.assign(merged);
   return jsx(siteKeyDefault, {
     siteKey,
     onMessage(nativeEvent) {
       if (null != nativeEvent.nativeEvent.data) {
         const data = nativeEvent.nativeEvent.data;
-        if (data !== siteKey(closure_1_2[13]).CaptchaError.CANCEL) {
-          if (data !== tmp10(tmp11[13]).CaptchaError.ERROR) {
-            if (data !== tmp10(tmp11[13]).CaptchaError.EXPIRED) {
-              const HCAPTCHA2 = tmp10(tmp11[11]).CaptchaTypes.HCAPTCHA;
-              let obj = { captcha_event_name: "verify", captcha_service: null, sitekey: null, captcha_flow_key: null };
-              obj[1] = HCAPTCHA2;
-              obj[2] = siteKey;
-              obj[3] = c3;
-              closure_1_1(tmp11[6]).track(closure_1_9.CAPTCHA_EVENT, obj);
-              const obj7 = closure_1_1(tmp11[6]);
-              obj = { name: null, tags: null };
-              obj[0] = tmp10(tmp11[8]).MetricEvents.CAPTCHA_EVENT;
+        if (data !== SharedCaptchaUtils.CaptchaError.CANCEL) {
+          if (data !== tmp10(11309).CaptchaError.ERROR) {
+            if (data !== tmp10(11309).CaptchaError.EXPIRED) {
+              const HCAPTCHA2 = tmp10(1326).CaptchaTypes.HCAPTCHA;
+              const obj2 = { captcha_event_name: "verify", captcha_service: HCAPTCHA2, sitekey: siteKey, captcha_flow_key };
+              AnalyticsUtilsDefault.track(constants.CAPTCHA_EVENT, obj2);
+              const obj4 = { name: tmp10(7621).MetricEvents.CAPTCHA_EVENT, tags: null };
               const _HermesInternal3 = HermesInternal;
               const items = ["event_name:" + "verify", ];
               const _HermesInternal4 = HermesInternal;
               items[1] = "captcha_service:" + HCAPTCHA2;
-              obj[1] = items;
-              closure_1_1(tmp11[7]).increment(obj);
-              callback(data);
-              const obj9 = closure_1_1(tmp11[7]);
+              obj4.tags = items;
+              MonitoringAgentDefault.increment(obj4);
+              closure_1_1(data);
             }
           }
         }
-        const HCAPTCHA = tmp10(tmp11[11]).CaptchaTypes.HCAPTCHA;
-        obj = closure_1_1(tmp11[6]);
-        obj1 = { captcha_event_name: null, captcha_service: null, sitekey: null, captcha_flow_key: null };
-        obj1[0] = data;
-        obj1[1] = HCAPTCHA;
-        obj1[2] = siteKey;
-        obj1[3] = c3;
-        obj.track(closure_1_9.CAPTCHA_EVENT, obj1);
-        let obj2 = closure_1_1(tmp11[7]);
-        obj2 = { name: null, tags: null };
-        obj2[0] = siteKey(closure_1_2[8]).MetricEvents.CAPTCHA_EVENT;
+        const HCAPTCHA = tmp10(1326).CaptchaTypes.HCAPTCHA;
+        const obj6 = { captcha_event_name: data, captcha_service: HCAPTCHA, sitekey: siteKey, captcha_flow_key };
+        AnalyticsUtilsDefault.track(constants.CAPTCHA_EVENT, obj6);
+        const obj8 = { name: MetricEvents.MetricEvents.CAPTCHA_EVENT, tags: null };
         const _HermesInternal = HermesInternal;
         const items1 = ["event_name:" + data, ];
         const _HermesInternal2 = HermesInternal;
         items1[1] = "captcha_service:" + HCAPTCHA;
-        obj2[1] = items1;
-        obj2.increment(obj2);
-        const obj3 = { reason: null };
-        obj3[0] = data;
-        closure_1_1(closure_1_2[6]).track(closure_1_9.CAPTCHA_FAILED, obj3);
-        if (callback2 != null) {
-          callback2(data);
+        obj8.tags = items1;
+        MonitoringAgentDefault.increment(obj8);
+        const obj10 = { reason: data };
+        AnalyticsUtilsDefault.track(constants.CAPTCHA_FAILED, obj10);
+        if (dependencyMap != null) {
+          dependencyMap(data);
         }
-        const obj5 = closure_1_1(closure_1_2[6]);
       }
     },
     languageCode: stateFromStores

@@ -1,32 +1,32 @@
-// Module ID: 15414
-// Function ID: 15415
-// Name: useEnableSwitchIconsSettingValue
-// Dependencies: [4552, 7975, 504, 11473, 1114, 14440, 2]
+// Module ID: 15443
+// Function ID: 15444
+// Name: EnableSwitchIconsSetting
+// Dependencies: [4566, 7989, 504, 11500, 1114, 14465, 2]
 // Exports: useEnableSwitchIconsSettingValue
 
-// Module 15414 (useEnableSwitchIconsSettingValue)
+// Module 15443 (EnableSwitchIconsSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import createToggle from "createToggle" /* 11473 */;
+import util from "util" /* 1114 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-require = arg1;
+require = fn;
 function useEnableSwitchIconsSettingValue() {
-  const items = [closure_2];
+  const items = [AccessibilityStore];
   return initialize.useStateFromStores(items, () => isSwitchIconsEnabled.isSwitchIconsEnabled);
 }
-createToggle = {
+const SettingBuilders = fn(11500);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["S3z+pV"]);
+    const intl = util.intl;
+    return intl.string(util.t["S3z+pV"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7989).MobileUserSettings.ACCESSIBILITY,
   useValue: useEnableSwitchIconsSettingValue,
-  onValueChange: require("setFontSize").setSwitchIconsEnabled,
+  onValueChange: fn(14465).setSwitchIconsEnabled,
   hasIcon: true
-};
-createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/EnableSwitchIconsSetting.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/EnableSwitchIconsSetting.tsx");
 
-export default createToggle;
+export default toggle;
 export { useEnableSwitchIconsSettingValue };

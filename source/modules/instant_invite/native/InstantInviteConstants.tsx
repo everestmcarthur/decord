@@ -1,15 +1,14 @@
-// Module ID: 9830
-// Function ID: 9831
-// Name: SHARE_APPS_KEY
+// Module ID: 9857
+// Function ID: 9858
+// Name: InstantInviteConstants
 // Dependencies: [2]
 
-// Module 9830 (SHARE_APPS_KEY)
-import set from "set" /* 2 */;
+// Module 9857 (InstantInviteConstants)
+import size from "module_2" /* 2 */;
 
-let obj = { TWITTER: "twitter", WHATSAPP: "whatsapp", GMAIL: "googlegmail", LINE: "line", MESSENGER: "fb-messenger", TELEGRAM: "tg" };
-obj = { [obj.TWITTER]: (arg0) => "twitter://post?message=" + arg0, [obj.WHATSAPP]: (arg0) => "whatsapp://send?text=" + arg0, [obj.GMAIL]: (arg0, arg1) => "googlegmail://co?subject=" + arg0 + "&body=" + arg1, [obj.LINE]: (arg0) => "https://line.me/R/msg/text/?" + arg0, [obj.MESSENGER]: (arg0) => "fb-messenger://share/?link=" + arg0, [obj.TELEGRAM]: (arg0, arg1) => "https://telegram.me/share/url?url=" + arg1 + "&text=" + arg0 };
-const result = set.fileFinishedImporting("modules/instant_invite/native/InstantInviteConstants.tsx");
+const obj = { TWITTER: "twitter", WHATSAPP: "whatsapp", GMAIL: "googlegmail", LINE: "line", MESSENGER: "fb-messenger", TELEGRAM: "tg" };
+const result = size.fileFinishedImporting("modules/instant_invite/native/InstantInviteConstants.tsx");
 
 export const SHARE_APPS_KEY = obj;
-export const SHARE_URLS = obj;
+export const SHARE_URLS = { [obj.TWITTER]: (arg0) => "twitter://post?message=" + arg0, [obj.WHATSAPP]: (arg0) => "whatsapp://send?text=" + arg0, [obj.GMAIL]: (arg0, arg1) => "googlegmail://co?subject=" + arg0 + "&body=" + arg1, [obj.LINE]: (arg0) => "https://line.me/R/msg/text/?" + arg0, [obj.MESSENGER]: (arg0) => "fb-messenger://share/?link=" + arg0, [obj.TELEGRAM]: (arg0, arg1) => "https://telegram.me/share/url?url=" + arg1 + "&text=" + arg0 };
 export const IOS_COPY_TO_PASTEBOARD = "CopyToPasteboard";

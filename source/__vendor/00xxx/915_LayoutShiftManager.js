@@ -4,15 +4,16 @@
 // Dependencies: [41, 42]
 
 // Module 915 (LayoutShiftManager)
-import LayoutShiftManager from "_classCallCheck" /* 41 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
+let _classCallCheck = _classCallCheck_mod;
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 class LayoutShiftManager {
   constructor() {
     self = this;
     tmp = LayoutShiftManager;
-    tmp2 = LayoutShiftManager(this, LayoutShiftManager);
+    tmp2 = closure_0(this, LayoutShiftManager);
     __init = LayoutShiftManager.prototype.__init;
     call = __init.call;
     if (typeof call === "unknown") {
@@ -30,13 +31,15 @@ class LayoutShiftManager {
     return;
   }
 }
+_classCallCheck = LayoutShiftManager;
+const entry = {
+  key: "__init",
+  value: function __init() {
+    this._sessionValue = 0;
+  }
+};
 let items = [
-  {
-    key: "__init",
-    value: function __init() {
-      this._sessionValue = 0;
-    }
-  },
+  entry,
   {
     key: "__init2",
     value: function __init2() {

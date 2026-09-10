@@ -1,6 +1,21 @@
 // Module ID: 6915
 // Function ID: 6916
-// Dependencies: []
+// Dependencies: [19]
+// Exports: useUnmountFlag
 
 // Module 6915
-arg5.RenderTargetOptions = { Cell: "Cell", StickyHeader: "StickyHeader", Measurement: "Measurement" };
+import noop from "module_19" /* 19 */;
+
+({ useRef: closure_0, useLayoutEffect: closure_1 } = noop);
+
+export const useUnmountFlag = () => {
+  const tmp = React(false);
+  closure_0 = tmp;
+  framebus(() => {
+    closure_0.current = false;
+    return () => {
+      closure_1_0.current = true;
+    };
+  }, []);
+  return tmp;
+};

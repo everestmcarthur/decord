@@ -1,28 +1,28 @@
-// Module ID: 15763
-// Function ID: 15764
-// Name: route
-// Dependencies: [7975, 1074, 11473, 15764, 2]
+// Module ID: 15793
+// Function ID: 15794
+// Name: DesignSystemsButtonGroupSetting
+// Dependencies: [7989, 1074, 11500, 15794, 2]
 
-// Module 15763 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15793 (DesignSystemsButtonGroupSetting)
+import Constants from "Constants" /* 1074 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const require = globalThis.__r;
+
+const route = SettingBuilders.createRoute({
   useTitle() {
     return "Button Group";
   },
-  parent: MobileUserSettings.MobileUserSettings.DESIGN_SYSTEMS,
-  screen: obj
-};
-obj = {
-  route: ME.UserSettingsSections.DESIGN_SYSTEM_BUTTON_GROUP,
-  getComponent() {
-    return require(15764) /* UserSettingsDesignSystemButtonGroup */.default;
+  parent: SettingsConstants.MobileUserSettings.DESIGN_SYSTEMS,
+  screen: {
+    route: Constants.UserSettingsSections.DESIGN_SYSTEM_BUTTON_GROUP,
+    getComponent() {
+      return require("UserSettingsDesignSystemButtonGroup").default;
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemsButtonGroupSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemsButtonGroupSetting.tsx");
 
 export default route;

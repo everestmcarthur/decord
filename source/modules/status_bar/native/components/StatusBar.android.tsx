@@ -1,14 +1,14 @@
-// Module ID: 9486
-// Function ID: 9487
-// Name: componentDidMount
-// Dependencies: [17, 9487, 2]
+// Module ID: 9513
+// Function ID: 9514
+// Name: StatusBar
+// Dependencies: [17, 9514, 2]
 
-// Module 9486 (componentDidMount)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import pushStackEntryDefault from "pushStackEntry" /* 9487 */;
+// Module 9513 (StatusBar)
+import _mod17 from "module_17" /* 17 */;
+import StatusBarManagerDefault from "StatusBarManager" /* 9514 */;
+import size from "module_2" /* 2 */;
 
-const StatusBar = get_ActivityIndicator.StatusBar;
+const StatusBar = _mod17.StatusBar;
 class StatusBarAndroid extends StatusBar {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -18,18 +18,18 @@ class StatusBarAndroid extends StatusBar {
 }
 const prototype = StatusBarAndroid.prototype;
 prototype["componentDidMount"] = function componentDidMount() {
-  this._stackEntry = pushStackEntryDefault.pushStackEntry(this.props);
+  this._stackEntry = StatusBarManagerDefault.pushStackEntry(this.props);
 };
 prototype["componentDidUpdate"] = function componentDidUpdate() {
-  this._stackEntry = pushStackEntryDefault.replaceStackEntry(this._stackEntry, this.props);
+  this._stackEntry = StatusBarManagerDefault.replaceStackEntry(this._stackEntry, this.props);
 };
 prototype["componentWillUnmount"] = function componentWillUnmount() {
-  pushStackEntryDefault.popStackEntry(this._stackEntry);
+  StatusBarManagerDefault.popStackEntry(this._stackEntry);
   this._stackEntry = null;
 };
 prototype["render"] = function render() {
   return null;
 };
-const result = set.fileFinishedImporting("modules/status_bar/native/components/StatusBar.android.tsx");
+const result = size.fileFinishedImporting("modules/status_bar/native/components/StatusBar.android.tsx");
 
 export default StatusBarAndroid;

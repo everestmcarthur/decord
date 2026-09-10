@@ -1,10 +1,10 @@
-// Module ID: 8105
-// Function ID: 8106
-// Name: nodeToText
+// Module ID: 8131
+// Function ID: 8132
+// Name: redactRestrictedContent
 // Dependencies: [2]
 
-// Module 8105 (nodeToText)
-import set from "set" /* 2 */;
+// Module 8131 (redactRestrictedContent)
+import size from "module_2" /* 2 */;
 
 function nodeToText(content) {
   let str = "";
@@ -17,7 +17,6 @@ function nodeToText(content) {
         const mapped = content.map(nodeToText);
         let str2 = mapped.join("");
       } else if (typeof content.content === "string") {
-        str2 = content.content;
       } else {
         str2 = "";
         if (null != content.content) {
@@ -28,7 +27,7 @@ function nodeToText(content) {
   }
   return str;
 }
-const result = set.fileFinishedImporting("modules/messages/native/renderer/redactRestrictedContent.tsx");
+const result = size.fileFinishedImporting("modules/messages/native/renderer/redactRestrictedContent.tsx");
 function redactRestrictedContent(content) {
   if (null != content) {
     if (typeof content !== "string") {
@@ -39,24 +38,24 @@ function redactRestrictedContent(content) {
         if ("link" !== content.type) {
           if ("attachmentLink" !== content.type) {
             if ("customEmoji" === content.type) {
-              let obj = { type: "text", content: null };
+              const obj2 = { type: "text", content: null };
               const _HermesInternal = HermesInternal;
-              obj[1] = ":" + content.alt + ":";
-              return obj;
+              obj2.content = ":" + content.alt + ":";
+              return obj2;
             } else {
               let tmp = content;
               if (null != content.content) {
-                obj = {};
+                const obj = {};
                 const merged = Object.assign(content);
                 obj.content = redactRestrictedContent(content.content);
                 tmp = obj;
               }
               let tmp6 = tmp;
               if (null != content.items) {
-                obj = {};
+                const obj3 = {};
                 const merged1 = Object.assign(tmp);
-                obj.items = redactRestrictedContent(content.items);
-                tmp6 = obj;
+                obj3.items = redactRestrictedContent(content.items);
+                tmp6 = obj3;
               }
               return tmp6;
             }
@@ -73,22 +72,19 @@ function redactRestrictedContent(content) {
               const mapped = content.map(nodeToText);
               let str7 = mapped.join("");
             } else if (typeof content.content === "string") {
-              str7 = content.content;
             } else {
               str7 = "";
               if (null != content.content) {
                 const content1 = content.content;
-                let str5 = "";
+                const str5 = "";
                 if (null != content1) {
                   if (typeof content1 === "string") {
-                    str5 = content1;
                   } else {
                     const _Array3 = Array;
                     if (Array.isArray(content1)) {
                       const mapped1 = content1.map(nodeToText);
                       let str6 = mapped1.join("");
                     } else if (typeof content1.content === "string") {
-                      str6 = content1.content;
                     } else {
                       str6 = "";
                       if (null != content1.content) {
@@ -97,14 +93,12 @@ function redactRestrictedContent(content) {
                     }
                   }
                 }
-                str7 = str5;
               }
             }
           }
         }
-        obj1 = { type: "inlineCode", content: null };
-        obj1[1] = str4;
-        return obj1;
+        const obj4 = { type: "inlineCode", content: str4 };
+        return obj4;
       }
     }
   }

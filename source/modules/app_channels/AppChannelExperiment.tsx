@@ -1,15 +1,17 @@
-// Module ID: 9739
-// Function ID: 9740
-// Name: apexExperiment
+// Module ID: 9766
+// Function ID: 9767
+// Name: AppChannelExperiment
 // Dependencies: [1433, 2]
 
-// Module 9739 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 9766 (AppChannelExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null };
-obj[1] = { enabled: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ kind: "guild", name: "2026-07-app-channels", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/app_channels/AppChannelExperiment.tsx");
+const obj = { kind: "guild", name: "2026-07-app-channels", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj.variations = obj2;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/app_channels/AppChannelExperiment.tsx");
 
 export default apexExperiment;

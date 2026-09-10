@@ -1,26 +1,25 @@
-// Module ID: 16364
-// Function ID: 16365
+// Module ID: 16395
+// Function ID: 16396
 // Name: NonCollapsableGestureDetector
-// Dependencies: [109, 19, 17, 21, 6655, 2]
+// Dependencies: [109, 19, 17, 21, 6669, 2]
 // Exports: NonCollapsableGestureDetector
 
-// Module 16364 (NonCollapsableGestureDetector)
-import noopAll from "noop" /* 19 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16395 (NonCollapsableGestureDetector)
+import LegacyBaseButton from "LegacyBaseButton" /* 6669 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 let closure_2 = ["children"];
-noopAll;
-let closure_6 = { flex: 1 };
-const result = require("set").fileFinishedImporting("modules/gesture_handlers/native/NonCollapsableGestureDetector.tsx");
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const style = { flex: 1 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/gesture_handlers/native/NonCollapsableGestureDetector.tsx");
 
 export const NonCollapsableGestureDetector = function NonCollapsableGestureDetector(children) {
-  let obj = {};
-  const merged = Object.assign(callback(children, closure_2));
-  obj = { style: closure_6, collapsable: false, children: children.children };
-  obj.children = <View style={closure_6} collapsable={false}>{arg0.children}</View>;
-  return jsx(LegacyBaseButton.GestureDetector, { style: closure_6, collapsable: false, children: children.children });
+  const obj = {};
+  const merged = Object.assign(_objectWithoutProperties(children, closure_2));
+  obj.children = <View style={style} collapsable={false}>{arg0.children}</View>;
+  return jsx(LegacyBaseButton.GestureDetector, {});
 };

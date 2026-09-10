@@ -1,49 +1,49 @@
-// Module ID: 10184
-// Function ID: 10185
-// Dependencies: [19, 17, 21, 4560, 576, 1114, 4571, 4491, 10175, 10185, 10112, 2]
+// Module ID: 10211
+// Function ID: 10212
+// Name: MessageFailedToSendNotification
+// Dependencies: [19, 17, 21, 4574, 576, 1114, 4585, 4505, 10202, 10212, 10139, 2]
 
-// Module 10184
-import ThemesDefault from "Themes" /* 576 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10211 (MessageFailedToSendNotification)
+import nativeDefault from "native" /* 576 */;
+import Client from "Client" /* 4505 */;
+import transitionToChannel from "transitionToChannel" /* 4585 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
 let obj = { iconContainer: null };
-obj = { width: 40, height: 40, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, display: "flex", justifyContent: "center", alignItems: "center", borderRadius: ThemesDefault.radii.md };
-obj[0] = obj;
-let closure_6 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function MessageFailedToSendNotification(notification) {
+let size = { width: 40, height: 40, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, display: "flex", justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.md };
+obj.iconContainer = size;
+let closure_6 = createStyles.createStyles(obj);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_notifications/native/MessageFailedToSendNotification.tsx");
+
+export default noop.memo(function MessageFailedToSendNotification(notification) {
   notification = notification.notification;
   let channelId;
-  let messageId;
   let obj = { type: "simple", text: null };
   const intl = channelId(1114).intl;
-  obj[1] = intl.string(channelId(1114).t.Q0x94X);
+  obj.text = intl.string(channelId(1114).t.Q0x94X);
   channelId = notification.channelId;
-  messageId = notification.messageId;
+  const messageId = notification.messageId;
   const items = [channelId, messageId];
-  const callback = importAllResult.useCallback(() => {
-    let obj = channelId(closure_1_2[6]);
-    obj = { jumpType: channelId(closure_1_2[7]).JumpType.INSTANT };
-    obj.transitionToMessage(channelId, messageId, obj);
+  const callback = noop.useCallback(() => {
+    const obj = transitionToChannel;
+    obj.transitionToMessage(channelId, messageId, { jumpType: Client.JumpType.INSTANT });
   }, items);
-  obj = { icon: null, children: null, header: null, onPress: null, notification: null };
-  obj = { style: callback().iconContainer, children: null };
-  const tmp = callback();
-  obj[1] = jsx(channelId(10185).RetryIcon, { size: "md", color: messageId(576).colors.ICON_SUBTLE });
-  obj[0] = <View style={callback().iconContainer}>{null}</View>;
-  const obj2 = { text: null };
+  const obj2 = { icon: null, children: null, header: null, onPress: null, notification: null };
+  const obj3 = { style: closure_6().iconContainer, children: null };
+  const tmp = closure_6();
+  obj3.children = jsx(channelId(10212).RetryIcon, { size: "md", color: messageId(576).colors.ICON_SUBTLE });
+  obj2.icon = <View style={closure_6().iconContainer}>{null}</View>;
+  const obj5 = { text: null };
   const intl2 = channelId(1114).intl;
-  obj2[0] = intl2.string(channelId(1114).t.xxRPOT);
-  obj[1] = jsx(channelId(10112).SystemMessageText, { text: null });
-  obj[2] = obj;
-  obj[3] = callback;
-  obj[4] = notification;
-  return jsx(channelId(10175).NotificationPressable, { style: callback().iconContainer, children: null });
+  obj5.text = intl2.string(channelId(1114).t.xxRPOT);
+  obj2.children = jsx(channelId(10139).SystemMessageText, { text: null });
+  obj2.header = obj;
+  obj2.onPress = callback;
+  obj2.notification = notification;
+  return jsx(channelId(10202).NotificationPressable, { icon: null, children: null, header: null, onPress: null, notification: null });
 });
-const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/MessageFailedToSendNotification.tsx");
-
-export default memoResult;

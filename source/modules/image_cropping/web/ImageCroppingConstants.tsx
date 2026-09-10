@@ -1,16 +1,16 @@
-// Module ID: 6986
-// Function ID: 6987
-// Name: UploadTypes
-// Dependencies: [6987, 2]
+// Module ID: 7000
+// Function ID: 7001
+// Name: ImageCroppingConstants
+// Dependencies: [7001, 2]
 
-// Module 6986 (UploadTypes)
-import set from "set" /* 2 */;
-import VideoFilterType from "VideoFilterType" /* 6987 */;
+// Module 7000 (ImageCroppingConstants)
+import VideoBackgroundConstants from "VideoBackgroundConstants" /* 7001 */;
+import size from "module_2" /* 2 */;
 
-const BACKGROUND_REPLACEMENT_SIZE = VideoFilterType.BACKGROUND_REPLACEMENT_SIZE;
+const BACKGROUND_REPLACEMENT_SIZE = VideoBackgroundConstants.BACKGROUND_REPLACEMENT_SIZE;
 const result = BACKGROUND_REPLACEMENT_SIZE.width / BACKGROUND_REPLACEMENT_SIZE.height;
 const result1 = 432 / result;
-const result2 = set.fileFinishedImporting("modules/image_cropping/web/ImageCroppingConstants.tsx");
+const result2 = size.fileFinishedImporting("modules/image_cropping/web/ImageCroppingConstants.tsx");
 
 export const UploadTypes = { AVATAR: "AVATAR", BANNER: "BANNER", GUILD_BANNER: "GUILD_BANNER", VIDEO_BACKGROUND: "VIDEO_BACKGROUND", SCHEDULED_EVENT_IMAGE: "SCHEDULED_EVENT_IMAGE", HOME_HEADER: "HOME_HEADER", AVATAR_DECORATION: "AVATAR_DECORATION", GUILD_ICON: "GUILD_ICON", PERSONAL_WIDGET_COVER: "PERSONAL_WIDGET_COVER", PERSONAL_WIDGET_FIELD: "PERSONAL_WIDGET_FIELD" };
 export const EDITING_CONTAINER_WIDTH = 432;

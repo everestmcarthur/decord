@@ -1,23 +1,22 @@
-// Module ID: 12003
-// Function ID: 12004
-// Name: prototype
-// Dependencies: [4462, 2]
+// Module ID: 12029
+// Function ID: 12030
+// Name: UploaderError
+// Dependencies: [4476, 2]
 
-// Module 12003 (prototype)
-import prototypeDefault from "prototype" /* 4462 */;
+// Module 12029 (UploaderError)
+import APIError from "APIError" /* 4476 */;
 
-prototypeDefault;
-const prototype = function UploaderError(body) {
-  tmp = new tmp(body, arg1, new.target, tmp, new.target);
-  // ThrowIfThisInitialized (0x7c)
-  tmp.attachments = [];
+const prototype = function UploaderError(body, arg1) {
+  const tmp2 = new tmp(body, arg1, new.target, tmp, new.target);
+  tmp2.attachments = [];
   if (tmp3) {
-    tmp.attachments = body.body.attachments;
+    tmp2.attachments = body.body.attachments;
   }
-  return tmp;
+  return tmp2;
 }.prototype;
 class prototype extends tmp2 {
 }
-const result = require("set").fileFinishedImporting("modules/errors/UploaderError.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/errors/UploaderError.tsx");
 
 export default prototype;

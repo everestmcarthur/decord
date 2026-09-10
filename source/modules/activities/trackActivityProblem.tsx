@@ -1,16 +1,16 @@
-// Module ID: 17362
-// Function ID: 17363
+// Module ID: 17393
+// Function ID: 17394
 // Name: trackActivityProblem
 // Dependencies: [1074, 1242, 2]
 // Exports: default
 
-// Module 17362 (trackActivityProblem)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+// Module 17393 (trackActivityProblem)
+import Constants from "Constants" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import size from "module_2" /* 2 */;
 
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/activities/trackActivityProblem.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/activities/trackActivityProblem.tsx");
 
 export default function trackActivityProblem(arg0) {
   ({ channel, activityApplication, analyticsData } = arg0);
@@ -22,32 +22,31 @@ export default function trackActivityProblem(arg0) {
   if (rating === undefined) {
     rating = null;
   }
-  let obj = expandEventPropertiesDefault;
-  obj = { reason: problem, guild_id: null, channel_id: null, application_id: null, application_name: null, location: null, rating: null, feedback: null, embedded_activity_location_kind: null, rtc_connection_id: null, media_session_id: null };
+  const obj3 = { reason: problem, guild_id: null, channel_id: null, application_id: null, application_name: null, location: null, rating: null, feedback: null, embedded_activity_location_kind: null, rtc_connection_id: null, media_session_id: null };
   let guildId;
   if (channel != null) {
     guildId = channel.getGuildId();
   }
-  obj[1] = guildId;
+  obj3.guild_id = guildId;
   let id;
   if (channel != null) {
     id = channel.id;
   }
-  obj[2] = id;
+  obj3.channel_id = id;
   let id1;
   if (activityApplication != null) {
     id1 = activityApplication.id;
   }
-  obj[3] = id1;
+  obj3.application_id = id1;
   let name;
   if (activityApplication != null) {
     name = activityApplication.name;
   }
-  obj[4] = name;
-  obj[5] = _location;
-  obj[6] = rating;
-  obj[7] = feedback;
-  obj[8] = embeddedActivityLocation.kind;
-  ({ rtc_connection_id: obj2[9], media_session_id: obj2[10] } = analyticsData);
-  obj.track(AnalyticEvents.ACTIVITY_REPORT_PROBLEM, obj);
+  obj3.application_name = name;
+  obj3.location = _location;
+  obj3.rating = rating;
+  obj3.feedback = feedback;
+  obj3.embedded_activity_location_kind = embeddedActivityLocation.kind;
+  ({ rtc_connection_id: obj2.rtc_connection_id, media_session_id: obj2.media_session_id } = analyticsData);
+  AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_REPORT_PROBLEM, obj3);
 };

@@ -1,23 +1,21 @@
-// Module ID: 10101
-// Function ID: 10102
-// Name: dispatcher
+// Module ID: 10128
+// Function ID: 10129
+// Name: InAppNotificationActionCreators
 // Dependencies: [573, 2]
 
-// Module 10101 (dispatcher)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 10128 (InAppNotificationActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("actions/native/InAppNotificationActionCreators.tsx");
+const result = size.fileFinishedImporting("actions/native/InAppNotificationActionCreators.tsx");
 
 export default {
   enqueueNotification(buildResult) {
-    let obj = dispatcherDefault;
-    obj = { type: "ENQUEUE_IN_APP_NOTIFICATION", notification: buildResult };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "ENQUEUE_IN_APP_NOTIFICATION", notification: buildResult });
   },
   clearNotification() {
-    dispatcherDefault.wait(() => {
-      callback(table[0]).dispatch({ type: "CLEAR_IN_APP_NOTIFICATION" });
+    DispatcherDefault.wait(() => {
+      DispatcherDefault.dispatch({ type: "CLEAR_IN_APP_NOTIFICATION" });
     });
   }
 };

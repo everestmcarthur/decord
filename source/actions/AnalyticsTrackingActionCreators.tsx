@@ -1,17 +1,15 @@
-// Module ID: 15312
-// Function ID: 15313
-// Name: track
+// Module ID: 15341
+// Function ID: 15342
+// Name: actions/AnalyticsTrackingActionCreators
 // Dependencies: [573, 2]
 // Exports: track
 
-// Module 15312 (track)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 15341 (actions/AnalyticsTrackingActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("actions/AnalyticsTrackingActionCreators.tsx");
+const result = size.fileFinishedImporting("actions/AnalyticsTrackingActionCreators.tsx");
 
 export const track = function track(event, properties) {
-  let obj = dispatcherDefault;
-  obj = { type: "TRACK", event, properties };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "TRACK", event, properties });
 };

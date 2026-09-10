@@ -1,25 +1,25 @@
-// Module ID: 12100
-// Function ID: 12101
+// Module ID: 12126
+// Function ID: 12127
 // Name: TrackSectionHeader
-// Dependencies: [9413, 8773, 1250, 2]
+// Dependencies: [9440, 8801, 1250, 2]
 // Exports: default
 
-// Module 12100 (TrackSectionHeader)
-import encodeProperties from "encodeProperties" /* 1250 */;
-import trackImpressionDefault from "trackImpression" /* 8773 */;
-import closure_3 from "handleDismissWithDismissed" /* 9413 */;
+// Module 12126 (TrackSectionHeader)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8801 */;
+import AppLauncherStore from "AppLauncherStore" /* 9440 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/TrackSectionHeader.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/TrackSectionHeader.tsx");
 
 export default function TrackSectionHeader(viewed) {
   viewed = viewed.viewed;
   ({ sectionName, numItems, numVisibleItems, children } = viewed);
-  let obj = { type: encodeProperties.ImpressionTypes.VIEW, name: encodeProperties.ImpressionNames.APP_LAUNCHER_SECTION, properties: null };
-  obj = { section_name: sectionName, num_items: numItems, num_visible_items: numVisibleItems, source: closure_3.entrypoint() };
-  obj[2] = obj;
-  obj = { disableTrack: !viewed };
+  const obj = { type: discord_common_AnalyticsUtils.ImpressionTypes.VIEW, name: discord_common_AnalyticsUtils.ImpressionNames.APP_LAUNCHER_SECTION, properties: null };
+  const tmp = useTrackImpressionDefault;
+  obj.properties = { section_name: sectionName, num_items: numItems, num_visible_items: numVisibleItems, source: AppLauncherStore.entrypoint() };
   const items = [viewed];
-  trackImpressionDefault(obj, obj, items);
+  tmp(obj, { disableTrack: !viewed }, items);
   return children;
 };

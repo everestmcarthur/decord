@@ -1,19 +1,23 @@
-// Module ID: 10829
-// Function ID: 10830
+// Module ID: 10856
+// Function ID: 10857
 // Name: SocialLayerStorefrontGiftModal
-// Dependencies: [19, 5510, 1074, 21, 504, 7162, 7182, 1115, 9370, 4992, 1242, 10802, 4231, 10830, 1114, 10827, 10809, 10831, 11007, 11008, 2]
+// Dependencies: [19, 5524, 1074, 21, 504, 7176, 7196, 1115, 9397, 5006, 1242, 10829, 4244, 10857, 1114, 10854, 10836, 10858, 11034, 11035, 2]
 // Exports: default
 
-// Module 10829 (SocialLayerStorefrontGiftModal)
-import noopAll from "noop" /* 19 */;
-import closure_3 from "addSku" /* 5510 */;
-import ME from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 10856 (SocialLayerStorefrontGiftModal)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10829 */;
+import SocialLayerStorefrontGiftProductDetailsDefault from "SocialLayerStorefrontGiftProductDetails" /* 11034 */;
+import SocialLayerStorefrontGiftPurchaseSectionDefault from "SocialLayerStorefrontGiftPurchaseSection" /* 11035 */;
+import noop from "module_19" /* 19 */;
+import SKUStore from "SKUStore" /* 5524 */;
 
-const require = arg1;
-noopAll;
-({ AnalyticEvents: c4, PaymentGateways: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/slayer_storefront/native/SocialLayerStorefrontGiftModal.tsx");
+require = fn;
+const Constants = fn(1074);
+({ AnalyticEvents: closure_4, PaymentGateways: hasOwnProperty } = Constants);
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/slayer_storefront/native/SocialLayerStorefrontGiftModal.tsx");
 
 export default function SocialLayerStorefrontGiftModal(skuId) {
   skuId = skuId.skuId;
@@ -22,17 +26,17 @@ export default function SocialLayerStorefrontGiftModal(skuId) {
   let analyticsLocations2;
   productLine = skuId;
   let tmp = applicationId;
-  let obj = skuId(applicationId[4]);
   const items = [analyticsLocations2];
   const items1 = [skuId];
-  applicationId = obj.useStateFromStores(items, () => analyticsLocations2.get(skuId), items1);
+  applicationId = skuId(applicationId[4]).useStateFromStores(items, () => SKUStore.get(skuId), items1);
   let tmp2 = giftingOrigin;
   const items2 = [];
+  const obj = skuId(applicationId[4]);
   const tmp3 = giftingOrigin(applicationId[5]);
   items2[HermesBuiltin.arraySpread(analyticsLocations, 0)] = giftingOrigin(applicationId[6]).SLAYER_STOREFRONT_NATIVE_GIFT_MODAL;
   analyticsLocations2 = tmp3(items2).analyticsLocations;
-  obj1 = skuId(applicationId[7]);
-  if (obj1.isIOS()) {
+  const arraySpreadResult = HermesBuiltin.arraySpread(analyticsLocations, 0);
+  if (obj2.isIOS()) {
     let GOOGLE = tmp5.APPLE_ADVANCED_COMMERCE;
     let APPLE_ADVANCED_COMMERCE = tmp5;
   } else {
@@ -42,69 +46,66 @@ export default function SocialLayerStorefrontGiftModal(skuId) {
   const GiftACOMOrderExperiment = productLine(tmp[8]).GiftACOMOrderExperiment;
   let enabled = GiftACOMOrderExperiment.useConfig({ location: "SocialLayerStorefrontGiftModal" }).enabled;
   tmp2(tmp[9])(() => {
-    let obj = giftingOrigin(applicationId[10]);
-    obj = { location_stack: analyticsLocations2, type: skuId(applicationId[11]).SOCIAL_LAYER_STOREFRONT_GIFT_MODAL_KEY, sku_id: skuId, application_id: null };
+    const obj2 = { location_stack: analyticsLocations2, type: SocialLayerStorefrontNativeActionCreators.SOCIAL_LAYER_STOREFRONT_GIFT_MODAL_KEY, sku_id: skuId, application_id: null };
     applicationId = undefined;
     if (applicationId != null) {
       applicationId = applicationId.applicationId;
     }
-    obj[3] = applicationId;
-    obj.track(closure_1_4.OPEN_MODAL, obj);
+    obj2.application_id = applicationId;
+    AnalyticsUtilsDefault.track(constants.OPEN_MODAL, obj2);
   });
   if (null == applicationId) {
     return null;
   } else {
     if (productLineResult.isSocialLayerStorefrontGiftingSupported()) {
-      obj = { skuIDs: null, activeSubscription: null, children: null };
-      obj[0] = [];
-      obj = { paymentGateway: null, orderRequired: null, skuIds: null, isGift: true, activeSubscription: null, onOrderRetryCancellation: null, checkoutAnalyticsFields: null, analyticsInitialStep: "gift_customization", children: null };
-      obj[0] = GOOGLE;
-      let tmp2Result = tmp2(tmp[16]);
+      const obj4 = { skuIDs: [], activeSubscription: null, children: null };
+      const obj5 = { paymentGateway: GOOGLE, orderRequired: null, skuIds: null, isGift: true, activeSubscription: null, onOrderRetryCancellation: null, checkoutAnalyticsFields: null, analyticsInitialStep: "gift_customization", children: null };
       if (enabled) {
         APPLE_ADVANCED_COMMERCE = APPLE_ADVANCED_COMMERCE.APPLE_ADVANCED_COMMERCE;
         enabled = GOOGLE === APPLE_ADVANCED_COMMERCE;
       }
-      obj[1] = enabled;
+      obj5.orderRequired = enabled;
       const items3 = [skuId];
-      obj[2] = items3;
-      obj[5] = productLine(tmp[11]).closeSocialLayerStorefrontGiftModal;
-      enabled = { is_gift: true, location_stack: null, payment_type: "sku", sku_id: null, sku_type: null, sku_product_line: null, application_id: null };
-      enabled[1] = analyticsLocations2;
-      enabled[3] = skuId;
-      ({ type: obj3[4], productLine } = applicationId);
-      enabled[5] = productLine;
+      obj5.skuIds = items3;
+      obj5.onOrderRetryCancellation = productLine(tmp[11]).closeSocialLayerStorefrontGiftModal;
+      enabled = { is_gift: true, location_stack: analyticsLocations2, payment_type: "sku", sku_id: skuId, sku_type: null, sku_product_line: null, application_id: null };
+      ({ type: obj3.sku_type, productLine } = applicationId);
+      enabled.sku_product_line = productLine;
       applicationId = applicationId.applicationId;
-      enabled[6] = applicationId;
-      obj[6] = enabled;
+      enabled.application_id = applicationId;
+      obj5.checkoutAnalyticsFields = enabled;
       tmp2 = tmp2(tmp[17]);
-      obj1 = { skuId: null, analyticsLocations: null, lockedRecipientUser: null, onGiftModalDismiss: null, giftingOrigin: null, validateRecipient: null, renderProductDetails: null, renderPurchaseSection: null };
-      obj1[0] = skuId;
-      obj1[1] = analyticsLocations2;
-      obj1[2] = skuId.lockedRecipientUser;
-      obj1[3] = onGiftModalDismiss;
-      obj1[4] = giftingOrigin;
-      obj1[5] = function validateRecipient(id, arg1) {
-        return Promise.resolve(true);
+      const obj6 = {
+        skuId,
+        analyticsLocations: analyticsLocations2,
+        lockedRecipientUser: skuId.lockedRecipientUser,
+        onGiftModalDismiss,
+        giftingOrigin,
+        validateRecipient() {
+              return Promise.resolve(true);
+            },
+        renderProductDetails: null,
+        renderPurchaseSection: null
       };
-      giftingOrigin = function renderProductDetails(arg0) {
-        return closure_1_6(giftingOrigin(applicationId[18]), { sku: applicationId });
+      giftingOrigin = function renderProductDetails() {
+        return jsx(SocialLayerStorefrontGiftProductDetailsDefault, { sku: applicationId });
       };
-      obj1[6] = giftingOrigin;
-      obj1[7] = function renderPurchaseSection(arg0) {
+      obj6.renderProductDetails = giftingOrigin;
+      obj6.renderPurchaseSection = function renderPurchaseSection(arg0) {
         ({ isPurchaseDisabled, giftOptions } = arg0);
-        return closure_1_6(giftingOrigin(applicationId[19]), { skuId, sku: applicationId, isPurchaseDisabled, giftOptions, giftingOrigin, analyticsLocations: analyticsLocations2 });
+        return jsx(SocialLayerStorefrontGiftPurchaseSectionDefault, { skuId, sku: applicationId, isPurchaseDisabled, giftOptions, giftingOrigin, analyticsLocations: analyticsLocations2 });
       };
-      tmp = tmp7(tmp2, obj1);
-      obj[8] = tmp;
-      obj[2] = tmp7(tmp2Result, obj, skuId);
-      let tmp7Result = tmp7(productLine(tmp[15]).NativePaymentContextProvider, obj);
+      tmp = tmp7(tmp2, obj6);
+      obj5.children = tmp;
+      obj4.children = tmp7(tmp2(tmp[16]), obj5, skuId);
+      let tmp7Result = tmp7(productLine(tmp[15]).NativePaymentContextProvider, obj4);
+      const tmp2Result = tmp2(tmp[16]);
     } else {
-      const obj2 = { onDismiss: null, title: null };
-      obj2[0] = onGiftModalDismiss;
-      tmp2Result = tmp2(tmp[13]);
+      const obj7 = { onDismiss: onGiftModalDismiss, title: null };
       const intl = productLine(tmp[14]).intl;
-      obj2[1] = intl.string(productLine(tmp[14]).t["JCFN/y"]);
-      tmp7Result = tmp7(tmp2Result, obj2);
+      obj7.title = intl.string(productLine(tmp[14]).t["JCFN/y"]);
+      tmp7Result = tmp7(tmp2(tmp[13]), obj7);
+      const tmp2Result2 = tmp2(tmp[13]);
     }
     productLineResult = productLine(tmp[12]);
   }

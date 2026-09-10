@@ -1,28 +1,28 @@
-// Module ID: 7578
-// Function ID: 7579
-// Name: fromServer
-// Dependencies: [7573, 2]
+// Module ID: 7592
+// Function ID: 7593
+// Name: GameServerHostingBannerBlockRecord
+// Dependencies: [7587, 2]
 
-// Module 7578 (fromServer)
-import set from "set" /* 2 */;
-import ShopBlockType from "ShopBlockType" /* 7573 */;
+// Module 7592 (GameServerHostingBannerBlockRecord)
+import ShopBlockType from "ShopBlockType" /* 7587 */;
+import size from "module_2" /* 2 */;
 
-let prototype;
-prototype = function GameServerHostingBannerBlockRecord(is_dismissible) {
+const prototype = function GameServerHostingBannerBlockRecord(is_dismissible) {
   const obj = Object.create(new.target.prototype);
   obj.type = ShopBlockType.ShopBlockType.GAME_SERVER_HOSTING_BANNER;
   obj.isDismissible = is_dismissible.is_dismissible;
   return obj;
 }.prototype;
 prototype["fromServer"] = function fromServer(is_dismissible) {
-  if (typeof prototype !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof prototype === "function") {
+    const obj = Object.create(tmp.prototype);
+    obj.type = ShopBlockType.ShopBlockType.GAME_SERVER_HOSTING_BANNER;
+    obj.isDismissible = is_dismissible.is_dismissible;
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const obj = Object.create(prototype.prototype);
-  obj.type = ShopBlockType.ShopBlockType.GAME_SERVER_HOSTING_BANNER;
-  obj.isDismissible = is_dismissible.is_dismissible;
-  return obj;
 };
-const result = set.fileFinishedImporting("modules/collectibles/records/GameServerHostingBannerBlockRecord.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/records/GameServerHostingBannerBlockRecord.tsx");
 
 export const GameServerHostingBannerBlockRecord = prototype;

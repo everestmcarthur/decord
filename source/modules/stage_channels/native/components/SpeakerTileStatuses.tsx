@@ -1,42 +1,42 @@
-// Module ID: 10055
-// Function ID: 10056
-// Name: VoiceStatus
-// Dependencies: [19, 17, 1908, 4579, 5421, 21, 4560, 576, 504, 10012, 9631, 9632, 1178, 10056, 10057, 6969, 2]
+// Module ID: 10082
+// Function ID: 10083
+// Name: SpeakerTileStatuses
+// Dependencies: [19, 17, 1908, 4593, 5435, 21, 4574, 576, 504, 10039, 9658, 9659, 1178, 10083, 10084, 6983, 2]
 // Exports: BlockedStatus, IgnoredStatus
 
-// Module 10055 (VoiceStatus)
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 1178 */;
-import registerAssetDefault from "registerAsset" /* 6969 */;
-import registerAssetDefault2 from "registerAsset" /* 10057 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "_detectH265HardwareDecode" /* 1908 */;
-import closure_5 from "updateVoiceState" /* 4579 */;
-import closure_6 from "buildStageChannelUserRoles" /* 5421 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10082 (SpeakerTileStatuses)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import _modDef6983 from "module_6983" /* 6983 */;
+import _modDef10084 from "module_10084" /* 10084 */;
+import noop from "module_19" /* 19 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import VoiceStateStore from "VoiceStateStore" /* 4593 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5435 */;
 
-require = arg1;
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
 let obj = { voiceStatusWrapper: null, moderatorStatusWrapper: null, restricted: null };
-obj = { position: "absolute", top: 4, left: 4, backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.md, width: 24, height: 24, justifyContent: "center", alignItems: "center" };
-obj[0] = obj;
-createCacheKey = { position: "absolute", top: 4, right: 4, backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.md, width: 24, height: 24, justifyContent: "center", alignItems: "center" };
-obj[1] = createCacheKey;
-obj[2] = { marginEnd: ThemesDefault.space.PX_4 };
-let closure_8 = createCacheKey.createStyles(obj);
-const obj2 = { marginEnd: ThemesDefault.space.PX_4 };
-const memoResult = importAllResult.memo((userId) => {
+let size = { position: "absolute", top: 4, left: 4, backgroundColor: nativeDefault.colors.WHITE, borderRadius: nativeDefault.radii.md, width: 24, height: 24, justifyContent: "center", alignItems: "center" };
+obj.voiceStatusWrapper = size;
+const size1 = { position: "absolute", top: 4, right: 4, backgroundColor: nativeDefault.colors.WHITE, borderRadius: nativeDefault.radii.md, width: 24, height: 24, justifyContent: "center", alignItems: "center" };
+obj.moderatorStatusWrapper = size1;
+obj.restricted = { marginEnd: nativeDefault.space.PX_4 };
+let closure_8 = createStyles.createStyles(obj);
+let obj3 = { marginEnd: nativeDefault.space.PX_4 };
+const memoResult = noop.memo((userId) => {
   userId = userId.userId;
   const channelId = userId.channelId;
-  let obj = userId(504);
-  const items = [closure_4];
+  const tmp = closure_8();
+  const items = [MediaEngineStore];
   const items1 = [userId];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.isLocalMute(userId), items1);
-  const tmp = callback();
-  const items2 = [closure_5];
+  const stateFromStores = userId(504).useStateFromStores(items, () => MediaEngineStore.isLocalMute(userId), items1);
+  const obj = userId(504);
+  const items2 = [VoiceStateStore];
   const items3 = [channelId, userId];
-  const stateFromStores1 = userId(504).useStateFromStores(items2, () => closure_1_5.getVoiceStateForChannel(channelId, userId), items3);
+  const stateFromStores1 = userId(504).useStateFromStores(items2, () => VoiceStateStore.getVoiceStateForChannel(channelId, userId), items3);
   let flag;
   if (stateFromStores1 != null) {
     flag = stateFromStores1.isVoiceMuted();
@@ -52,66 +52,59 @@ const memoResult = importAllResult.memo((userId) => {
     flag2 = false;
   }
   if (stateFromStores) {
-    let tmp5 = channelId(10012);
+    let tmp5 = channelId(10039);
     let flag3 = true;
   } else if (flag2) {
-    tmp5 = channelId(9631);
+    tmp5 = channelId(9658);
     flag3 = false;
   } else {
     flag3 = false;
     if (flag) {
-      tmp5 = channelId(9632);
+      tmp5 = channelId(9659);
       flag3 = false;
     }
   }
   let tmp9 = null;
   if (null != tmp5) {
-    obj = { style: null, children: null };
+    const obj3 = { style: null, children: null };
     const items4 = [tmp.voiceStatusWrapper, userId.style];
-    obj[0] = items4;
-    obj = { source: null, size: null, color: null, disableColor: null };
-    obj[0] = tmp5;
-    obj[1] = tmp2(1178).Icon.Sizes.SMALL;
-    obj[2] = channelId(576).unsafe_rawColors.BLACK;
-    obj[3] = flag3;
-    obj[1] = jsx(tmp2(1178).Icon, { source: null, size: null, color: null, disableColor: null });
-    tmp9 = <View source={null} size={null} color={null} disableColor={null} />;
+    obj3.style = items4;
+    const obj4 = { source: tmp5, size: tmp2(1178).Icon.Sizes.SMALL, color: channelId(576).unsafe_rawColors.BLACK, disableColor: flag3 };
+    obj3.children = jsx(tmp2(1178).Icon, { source: tmp5, size: tmp2(1178).Icon.Sizes.SMALL, color: channelId(576).unsafe_rawColors.BLACK, disableColor: flag3 });
+    tmp9 = <View style={null}>{null}</View>;
   }
   return tmp9;
 });
-const memoResult1 = importAllResult.memo((userId) => {
+size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/SpeakerTileStatuses.tsx");
+
+export const VoiceStatus = memoResult;
+export const ModeratorStatus = noop.memo((userId) => {
   userId = userId.userId;
   const channelId = userId.channelId;
-  let obj = userId(504);
-  const items = [closure_6];
+  const tmp = closure_8();
+  const items = [StageChannelRoleStore];
   const items1 = [channelId, userId];
   let tmp4;
-  if (obj.useStateFromStores(items, () => closure_1_6.isModerator(userId, channelId), items1)) {
-    tmp4 = channelId(10056);
+  if (obj.useStateFromStores(items, () => StageChannelRoleStore.isModerator(userId, channelId), items1)) {
+    tmp4 = channelId(10083);
   }
   let tmp6 = null;
   if (null != tmp4) {
-    obj = { style: null, children: null };
+    const obj2 = { style: null, children: null };
     const items2 = [tmp.moderatorStatusWrapper, userId.style];
-    obj[0] = items2;
-    obj = { source: null, size: null, color: null };
-    obj[0] = tmp4;
-    obj[1] = tmp2(1178).Icon.Sizes.SMALL;
-    obj[2] = channelId(576).unsafe_rawColors.BLACK;
-    obj[1] = jsx(tmp2(1178).Icon, { source: null, size: null, color: null });
-    tmp6 = <View source={null} size={null} color={null} />;
+    obj2.style = items2;
+    const obj3 = { source: tmp4, size: tmp2(1178).Icon.Sizes.SMALL, color: channelId(576).unsafe_rawColors.BLACK };
+    obj2.children = jsx(tmp2(1178).Icon, { source: tmp4, size: tmp2(1178).Icon.Sizes.SMALL, color: channelId(576).unsafe_rawColors.BLACK });
+    tmp6 = <View style={null}>{null}</View>;
   }
   return tmp6;
 });
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/SpeakerTileStatuses.tsx");
-
-export const VoiceStatus = memoResult;
-export const ModeratorStatus = memoResult1;
 export const BlockedStatus = function BlockedStatus() {
-  const tmp = callback();
-  return jsx(Button.Icon, { style: callback().restricted, source: registerAssetDefault2, size: Button.Icon.Sizes.EXTRA_SMALL, color: ThemesDefault.unsafe_rawColors.RED_400 });
+  const tmp = closure_8();
+  return jsx(native.Icon, { style: closure_8().restricted, source: _modDef10084, size: native.Icon.Sizes.EXTRA_SMALL, color: nativeDefault.unsafe_rawColors.RED_400 });
 };
 export const IgnoredStatus = function IgnoredStatus() {
-  const tmp = callback();
-  return jsx(Button.Icon, { style: callback().restricted, source: registerAssetDefault, size: Button.Icon.Sizes.EXTRA_SMALL });
+  const tmp = closure_8();
+  return jsx(native.Icon, { style: closure_8().restricted, source: _modDef6983, size: native.Icon.Sizes.EXTRA_SMALL });
 };

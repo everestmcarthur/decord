@@ -1,25 +1,26 @@
-// Module ID: 4539
-// Function ID: 4540
-// Name: DCDDeviceManager
+// Module ID: 4553
+// Function ID: 4554
+// Name: DeviceUtils
 // Dependencies: [17, 1115, 1343, 510, 2]
 // Exports: getDevice, getDeviceBrand, getDeviceInfo, getDeviceManufacturer, getDeviceMediaPerformanceClass, getDeviceModel, getDeviceProduct, getIsRunningOnSimulator, getMaxCpuFreq, getRamSize, getSmallestScreenWidthDp, getSocName, getSystemVersion, getSystemVersionMajor, getSystemVersionMinor, getTimeZone, isGestureNavigationEnabled, isIpadOS, isOrientationLockSupported
 
-// Module 4539 (DCDDeviceManager)
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import enforcingDefault from "enforcing" /* 1343 */;
-import set from "set" /* 1115 */;
+// Module 4553 (DeviceUtils)
+import _mod17 from "module_17" /* 17 */;
+import NativeDeviceModuleDefault from "NativeDeviceModule" /* 1343 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import size from "module_2" /* 2 */;
 
-if (set.isAndroid()) {
-  const importDefaultResult = enforcingDefault;
+if (PlatformUtils.isAndroid()) {
+  const importDefaultResult = NativeDeviceModuleDefault;
   let constants;
   if (importDefaultResult != null) {
     constants = importDefaultResult.getConstants();
   }
   let DCDDeviceManager = constants;
 } else {
-  DCDDeviceManager = get_ActivityIndicator.NativeModules.DCDDeviceManager;
+  DCDDeviceManager = _mod17.NativeModules.DCDDeviceManager;
 }
-let c4 = null;
+let closure_4 = null;
 const mediaPerformanceClass = "mediaPerformanceClass";
 function getSystemVersion() {
   return DCDDeviceManager.systemVersion;
@@ -27,7 +28,7 @@ function getSystemVersion() {
 function getDevice() {
   return DCDDeviceManager.device;
 }
-let result = set.fileFinishedImporting("utils/native/DeviceUtils.tsx");
+let result = size.fileFinishedImporting("utils/native/DeviceUtils.tsx");
 
 export const isIpadOS = function isIpadOS() {
   return "iPad" === DCDDeviceManager.deviceModel;
@@ -50,7 +51,6 @@ export const getSystemVersionMajor = function getSystemVersionMajor() {
     }
     return num2;
   }
-  const str = DCDDeviceManager.systemVersion;
 };
 export const getSystemVersionMinor = function getSystemVersionMinor() {
   const match = DCDDeviceManager.systemVersion.match(/\d+/g);
@@ -84,15 +84,14 @@ export const getDeviceMediaPerformanceClass = function getDeviceMediaPerformance
     let tmp5 = null == mediaPerformanceClass2;
     if (tmp5) {
       const Storage = tmp(510).Storage;
-      const value = Storage.get(mediaPerformanceClass);
+      value = Storage.get(mediaPerformanceClass);
       mediaPerformanceClass2 = value;
       tmp5 = null == value;
     }
     if (tmp5) {
-      mediaPerformanceClass2 = enforcingDefault.getMediaPerformanceClass();
+      mediaPerformanceClass2 = NativeDeviceModuleDefault.getMediaPerformanceClass();
       const Storage2 = tmp(510).Storage;
       const result = Storage2.set(mediaPerformanceClass, mediaPerformanceClass2);
-      const obj2 = enforcingDefault;
     }
     tmp3 = mediaPerformanceClass2;
   }

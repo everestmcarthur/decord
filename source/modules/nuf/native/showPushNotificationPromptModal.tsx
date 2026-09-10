@@ -1,28 +1,32 @@
-// Module ID: 16001
-// Function ID: 16002
+// Module ID: 16031
+// Function ID: 16032
 // Name: showPushNotificationPromptModal
-// Dependencies: [12413, 12709, 4763, 16002, 1896, 12416, 2]
+// Dependencies: [12439, 12735, 4777, 16032, 1896, 12442, 2]
 // Exports: showPushNotificationPromptModal
 
-// Module 16001 (showPushNotificationPromptModal)
-import set from "set" /* 2 */;
-import _modDef4763 from "module_4763" /* 4763 */;
-import set2 from "set" /* 12413 */;
-import NewUserTypes from "NewUserTypes" /* 12709 */;
+// Module 16031 (showPushNotificationPromptModal)
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12439 */;
+import NUFConstants from "NUFConstants" /* 12735 */;
+import size from "module_2" /* 2 */;
 
-const PermissionStateType = set2.PermissionStateType;
-let closure_4 = NewUserTypes.NUF_NOTIFICATION_MODAL_KEY;
-let result = set.fileFinishedImporting("modules/nuf/native/showPushNotificationPromptModal.tsx");
+const PermissionStateType = PushNotificationPermissionStore.PermissionStateType;
+let closure_4 = NUFConstants.NUF_NOTIFICATION_MODAL_KEY;
+let result = size.fileFinishedImporting("modules/nuf/native/showPushNotificationPromptModal.tsx");
 
 export const showPushNotificationPromptModal = function showPushNotificationPromptModal(onComplete) {
   onComplete = onComplete.onComplete;
-  let obj = _modDef4763;
-  obj = {
+  ModalActionCreatorsDefault.pushLazy(onComplete(1896)(16032, dependencyMap.paths), {
     onComplete() {
-      closure_1_1(closure_1_2[2]).popWithKey(closure_1_4);
+      ModalActionCreatorsDefault.popWithKey(closure_4);
+      onComplete();
+    }
+  }, closure_4);
+  const obj2 = {
+    onComplete() {
+      ModalActionCreatorsDefault.popWithKey(closure_4);
       onComplete();
     }
   };
-  obj.pushLazy(onComplete(1896)(16002, dependencyMap.paths), obj, closure_4);
-  const result = onComplete(12416).setPushPermissionState(PermissionStateType.PROMPT_SEEN);
+  const result = onComplete(12442).setPushPermissionState(PermissionStateType.PROMPT_SEEN);
 };

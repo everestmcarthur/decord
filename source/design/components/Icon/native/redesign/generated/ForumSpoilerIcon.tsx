@@ -1,26 +1,26 @@
-// Module ID: 5083
-// Function ID: 5084
+// Module ID: 5097
+// Function ID: 5098
 // Name: ForumSpoilerIcon
-// Dependencies: [19, 21, 576, 4261, 5051, 2]
+// Dependencies: [19, 21, 576, 4274, 5065, 2]
 // Exports: ForumSpoilerIcon
 
-// Module 5083 (ForumSpoilerIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 5051 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 5097 (ForumSpoilerIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod5065 from "module_5065" /* 5065 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/ForumSpoilerIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/ForumSpoilerIcon.tsx");
 
 export const ForumSpoilerIcon = function ForumSpoilerIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5065, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

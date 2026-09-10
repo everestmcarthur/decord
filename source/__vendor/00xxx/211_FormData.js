@@ -5,35 +5,38 @@
 
 // Module 211 (FormData)
 import _createClassDefault from "_createClass" /* 42 */;
-import FormData from "_classCallCheck" /* 41 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 
+let _classCallCheck = _classCallCheck_mod;
 class FormData {
   constructor() {
-    tmp = FormData(this, FormData);
+    tmp = closure_0(this, FormData);
     this._parts = [];
     return;
   }
 }
+_classCallCheck = FormData;
+const entry = {
+  key: "append",
+  value: function append(arg0, arg1) {
+    const _parts = this._parts;
+    const items = [arg0, arg1];
+    _parts.push(items);
+  }
+};
 let items = [
-  {
-    key: "append",
-    value: function append(arg0, arg1) {
-      const _parts = this._parts;
-      const items = [arg0, arg1];
-      _parts.push(items);
-    }
-  },
+  entry,
   {
     key: "getAll",
     value: function getAll(arg0) {
       closure_0 = arg0;
       const _parts = this._parts;
-      const found = _parts.filter((arg0) => {
-        [tmp] = arg0;
+      const found = _parts.filter((item) => {
+        [tmp] = item;
         return tmp === closure_0;
       });
-      return found.map((arg0) => {
-        [, tmp] = arg0;
+      return found.map((item) => {
+        [, tmp] = item;
         return tmp;
       });
     }
@@ -42,9 +45,9 @@ let items = [
     key: "getParts",
     value: function getParts() {
       const _parts = this._parts;
-      return _parts.map((arg0) => {
-        [tmp, tmp2] = arg0;
-        let obj = { "content-disposition": `form-data; name="${tmp}"` };
+      return _parts.map((item) => {
+        [tmp, tmp2] = item;
+        const obj = { "content-disposition": `form-data; name="${tmp}"` };
         if (typeof tmp2 === "object") {
           const _Array = Array;
           if (!Array.isArray(tmp2)) {
@@ -53,20 +56,19 @@ let items = [
                 const _encodeURIComponent = encodeURIComponent;
                 const _HermesInternal = HermesInternal;
                 obj["content-disposition"] = obj["content-disposition"] + "; filename=\"" + encodeURIComponent(tmp2.name.replace(/\//g, "_")) + "\"";
-                const str = tmp2.name;
               }
               if (typeof tmp2.type === "string") {
                 obj["content-type"] = tmp2.type;
               }
-              obj = {};
+              let obj2 = {};
               const merged = Object.assign(tmp2);
-              obj.headers = obj;
-              obj.fieldName = tmp;
+              obj2.headers = obj;
+              obj2.fieldName = tmp;
             }
-            return obj;
+            return obj2;
           }
         }
-        obj = { string: String(tmp2), headers: obj, fieldName: tmp };
+        obj2 = { string: String(tmp2), headers: obj, fieldName: tmp };
       });
     }
   }

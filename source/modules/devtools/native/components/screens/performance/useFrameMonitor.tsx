@@ -1,45 +1,47 @@
-// Module ID: 15735
-// Function ID: 15736
+// Module ID: 15765
+// Function ID: 15766
 // Name: useFrameMonitor
-// Dependencies: [32, 19, 15733, 2]
+// Dependencies: [32, 19, 15763, 2]
 // Exports: default
 
-// Module 15735 (useFrameMonitor)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+// Module 15765 (useFrameMonitor)
+import startFrameMonitor from "startFrameMonitor" /* 15763 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/performance/useFrameMonitor.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/native/components/screens/performance/useFrameMonitor.tsx");
 
-export default function useFrameMonitor(first) {
-  closure_0 = first;
-  const monitoring = callback(React.useState(false), 2);
+export default function useFrameMonitor(set) {
+  let current = set;
+  const monitoring = _slicedToArray(noop.useState(false), 2);
   closure_1 = monitoring[1];
-  callback = React.useRef(null);
-  React = React.useRef(first);
-  const items = [first];
-  const effect = React.useEffect(() => {
-    closure_3.current = closure_0;
+  _slicedToArray = noop.useRef(null);
+  noop = noop.useRef(set);
+  const items = [set];
+  const effect = noop.useEffect(() => {
+    closure_3.current = current;
   }, items);
-  const start = React.useCallback(() => {
-    const current = ref.current;
+  const start = noop.useCallback(() => {
+    current = ref.current;
     if (current != null) {
       current.stop();
     }
-    ref.current = callback(15733).startFrameMonitor();
-    dependencyMap(true);
+    ref.current = startFrameMonitor.startFrameMonitor();
+    closure_1(true);
   }, []);
-  const stop = React.useCallback(() => {
-    const current = ref.current;
+  const stop = noop.useCallback(() => {
+    current = ref.current;
     if (null != current) {
       ref.current = null;
-      dependencyMap(false);
+      closure_1(false);
       ref2.current(current.stop());
       const stopResult = current.stop();
     }
   }, []);
-  const effect1 = React.useEffect(() => () => {
-    const current = ref.current;
+  const effect1 = noop.useEffect(() => () => {
+    current = ref.current;
     if (current != null) {
       current.stop();
     }

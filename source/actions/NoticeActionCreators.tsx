@@ -1,24 +1,21 @@
-// Module ID: 16808
-// Function ID: 16809
-// Name: dispatcher
+// Module ID: 16845
+// Function ID: 16846
+// Name: NoticeActionCreators
 // Dependencies: [573, 2]
 
-// Module 16808 (dispatcher)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 16845 (NoticeActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("actions/NoticeActionCreators.tsx");
+const result = size.fileFinishedImporting("actions/NoticeActionCreators.tsx");
 
 export default {
   show(type, message, buttonText, callback, id) {
-    let obj = dispatcherDefault;
-    obj = { id, type, message, buttonText, callback };
-    obj.dispatch({ type: "NOTICE_SHOW", notice: obj });
+    const obj2 = { type: "NOTICE_SHOW", notice: { id, type, message, buttonText, callback } };
+    DispatcherDefault.dispatch(obj2);
   },
   dismiss(arg0) {
-    let obj = dispatcherDefault;
-    obj = { type: "NOTICE_DISMISS" };
     const merged = Object.assign(arg0);
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "NOTICE_DISMISS" });
   }
 };

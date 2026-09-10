@@ -1,27 +1,28 @@
-// Module ID: 9411
-// Function ID: 9412
+// Module ID: 9438
+// Function ID: 9439
 // Name: isApplicationAgeRestricted
-// Dependencies: [4788, 9412, 5112, 2]
+// Dependencies: [4802, 9439, 5126, 2]
 // Exports: default
 
-// Module 9411 (isApplicationAgeRestricted)
-import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 5112 */;
-import getUnitIdDefault from "getUnitId" /* 9412 */;
-import closure_3 from "addApplication" /* 4788 */;
+// Module 9438 (isApplicationAgeRestricted)
+import utils from "utils" /* 5126 */;
+import AgeRestrictedApplicationCommandsExperimentDefault from "AgeRestrictedApplicationCommandsExperiment" /* 9439 */;
+import ApplicationStore from "ApplicationStore" /* 4802 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/applications/utils/isApplicationAgeRestricted.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/applications/utils/isApplicationAgeRestricted.tsx");
 
 export default function isApplicationAgeRestricted(arg0) {
   if (obj.getConfig({ location: "isApplicationAgeRestricted" }).enabled) {
-    application = application.getApplication(arg0);
+    const application = ApplicationStore.getApplication(arg0);
     let prop;
     if (application != null) {
       prop = application.contentClassification;
     }
-    return isAgeRestrictedContentClassification.isAgeRestrictedContentClassification(prop);
+    return utils.isAgeRestrictedContentClassification(prop);
   } else {
     return false;
   }
-  obj = getUnitIdDefault;
+  obj = AgeRestrictedApplicationCommandsExperimentDefault;
 };

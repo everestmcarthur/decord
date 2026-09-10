@@ -1,15 +1,15 @@
-// Module ID: 8674
-// Function ID: 8675
-// Name: uid
-// Dependencies: [4764, 5598, 2]
+// Module ID: 8702
+// Function ID: 8703
+// Name: UID
+// Dependencies: [4778, 5612, 2]
 // Exports: UID, uid, useUID
 
-// Module 8674 (uid)
-import set from "set" /* 2 */;
-import uniqueIdDefault from "uniqueId" /* 4764 */;
-import useInitialValueDefault from "useInitialValue" /* 5598 */;
+// Module 8702 (UID)
+import uniqueIdDefault from "uniqueId" /* 4778 */;
+import useInitialValueDefault from "useInitialValue" /* 5612 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/core/web/UID.tsx");
+const result = size.fileFinishedImporting("modules/core/web/UID.tsx");
 
 export const uid = function uid() {
   let str = arg0;
@@ -19,8 +19,8 @@ export const uid = function uid() {
   return uniqueIdDefault(str);
 };
 export const useUID = function useUID() {
-  return useInitialValueDefault(() => callback(table[0])("uid_"));
+  return useInitialValueDefault(() => uniqueIdDefault("uid_"));
 };
 export const UID = function UID(children) {
-  return children.children(useInitialValueDefault(() => callback(table[0])("uid_")));
+  return children.children(useInitialValueDefault(() => uniqueIdDefault("uid_")));
 };

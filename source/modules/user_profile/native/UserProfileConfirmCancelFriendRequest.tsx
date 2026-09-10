@@ -1,38 +1,38 @@
-// Module ID: 12625
-// Function ID: 12626
+// Module ID: 12651
+// Function ID: 12652
 // Name: UserProfileConfirmCancelFriendRequest
-// Dependencies: [19, 21, 4910, 1114, 4910, 2]
+// Dependencies: [19, 21, 4924, 1114, 4924, 2]
 // Exports: default
 
-// Module 12625 (UserProfileConfirmCancelFriendRequest)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4910 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 12651 (UserProfileConfirmCancelFriendRequest)
+import util from "util" /* 1114 */;
+import AlertModal from "AlertModal" /* 4924 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: obj1, jsxs: c3 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileConfirmCancelFriendRequest.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c2, jsxs: c3 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileConfirmCancelFriendRequest.tsx");
 
 export default function UserProfileConfirmCancelFriendRequest(arg0) {
   ({ userDisplayName, onConfirm } = arg0);
-  let obj = { title: null, content: null, actions: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["bTfA//"]);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.formatToPlainString(getSystemLocale.t["72FwjH"], { name: userDisplayName });
-  obj = { children: null };
-  obj = { variant: "destructive", text: null, onPress: null };
-  const intl3 = getSystemLocale.intl;
-  obj[1] = intl3.string(getSystemLocale.t["bTfA//"]);
-  obj[2] = onConfirm;
-  const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "cancel-friend-request"), ];
-  obj1 = { variant: "secondary", text: null };
-  const intl4 = getSystemLocale.intl;
-  obj1[1] = intl4.string(getSystemLocale.t["eN6+rI"]);
-  items[1] = callback(getAlertModalItemKey.AlertActionButton, obj1, "nevermind");
-  obj[0] = items;
-  obj[2] = callback2(getAlertModalItemKey.AlertActions, obj);
-  return callback(getAlertModalItemKey.AlertModal, obj);
+  const obj = { title: null, content: null, actions: null };
+  const intl = util.intl;
+  obj.title = intl.string(util.t["bTfA//"]);
+  const intl2 = util.intl;
+  obj.content = intl2.formatToPlainString(util.t["72FwjH"], { name: userDisplayName });
+  const obj2 = { children: null };
+  const obj3 = { variant: "destructive", text: null, onPress: null };
+  const intl3 = util.intl;
+  obj3.text = intl3.string(util.t["bTfA//"]);
+  obj3.onPress = onConfirm;
+  const items = [React2(AlertModal.AlertActionButton, obj3, "cancel-friend-request"), ];
+  const obj4 = { variant: "secondary", text: null };
+  const intl4 = util.intl;
+  obj4.text = intl4.string(util.t["eN6+rI"]);
+  items[1] = React2(AlertModal.AlertActionButton, obj4, "nevermind");
+  obj2.children = items;
+  obj.actions = React3(AlertModal.AlertActions, obj2);
+  return React2(AlertModal.AlertModal, obj);
 };

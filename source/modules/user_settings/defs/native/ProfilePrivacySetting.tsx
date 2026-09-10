@@ -1,130 +1,72 @@
-// Module ID: 14853
-// Function ID: 14854
-// Name: radio
-// Dependencies: [7975, 1935, 13079, 14854, 4527, 14855, 1896, 1114, 1187, 11473, 2]
+// Module ID: 14879
+// Function ID: 14880
+// Name: ProfilePrivacySetting
+// Dependencies: [7989, 1935, 13105, 14880, 4541, 14881, 1896, 1114, 1187, 11500, 2]
 
-// Module 14853 (radio)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import create from "create" /* 1187 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import apexExperiment from "apexExperiment" /* 13079 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 14879 (ProfilePrivacySetting)
+import util from "util" /* 1114 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import PrivateProfilesExperiment from "PrivateProfilesExperiment" /* 13105 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-const radio = createToggle.createRadio({
+const radio = SettingBuilders.createRadio({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Qnf32C);
+    const intl = util.intl;
+    return intl.string(util.t.Qnf32C);
   },
-  parent: MobileUserSettings.MobileUserSettings.DATA_AND_PRIVACY,
+  parent: SettingsConstants.MobileUserSettings.DATA_AND_PRIVACY,
   useValue() {
-    const ProfileVisibility = explicitContentFromProto.ProfileVisibility;
+    const ProfileVisibility = UserSettings.ProfileVisibility;
     return ProfileVisibility.useSetting();
   },
   onValueChange(arg0) {
     const NumberResult = Number(arg0);
-    const ProfileVisibility = explicitContentFromProto.ProfileVisibility;
+    const ProfileVisibility = UserSettings.ProfileVisibility;
     const setting = ProfileVisibility.getSetting();
-    const ProfileVisibility2 = explicitContentFromProto.ProfileVisibility;
+    const ProfileVisibility2 = UserSettings.ProfileVisibility;
     ProfileVisibility2.updateSetting(NumberResult);
-    let obj = apexExperiment;
     if (obj.getIsInPrivateProfilesExperiment("ProfilePrivacySetting")) {
-      const profileToActivityUpsell = tmp2(14854).computeProfileToActivityUpsell(setting, NumberResult);
+      const profileToActivityUpsell = tmp2(14880).computeProfileToActivityUpsell(setting, NumberResult);
       if (null != profileToActivityUpsell) {
-        obj = { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null };
-        ({ direction: obj4[0], affectedGuildIds: obj4[1], settingName: obj4[2], mappedActivityValue: obj4[3] } = profileToActivityUpsell);
-        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp2(1896)(14855, dependencyMap.paths), "ProfileToActivityPrivacyUpsellActionSheet", obj);
-        const obj3 = ACTION_SHEET_HEIGHT_HALFDefault;
+        ({ direction: obj4.direction, affectedGuildIds: obj4.affectedGuildIds, settingName: obj4.settingName, mappedActivityValue: obj4.mappedActivityValue } = profileToActivityUpsell);
+        ActionSheetActionCreatorsDefault.openLazy(tmp2(1896)(14881, dependencyMap.paths), "ProfileToActivityPrivacyUpsellActionSheet", { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null });
+        const obj2 = { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null };
       }
-      const tmp2Result = tmp2(14854);
+      const tmp2Result = tmp2(14880);
     }
   },
   useOptions() {
-    let obj = { label: null, subLabel: null, value: null };
-    const intl = getSystemLocale.intl;
-    obj[0] = intl.string(getSystemLocale.t.Boxc8R);
-    const intl2 = getSystemLocale.intl;
-    obj[1] = intl2.string(getSystemLocale.t["nLj+nc"]);
-    obj[2] = create.ProfileVisibility.FRIENDS_AND_ALL_GUILDS;
+    const obj = { label: null, subLabel: null, value: null };
+    const intl = util.intl;
+    obj.label = intl.string(util.t.Boxc8R);
+    const intl2 = util.intl;
+    obj.subLabel = intl2.string(util.t["nLj+nc"]);
+    obj.value = preloaded_user_settings.ProfileVisibility.FRIENDS_AND_ALL_GUILDS;
     const items = [obj, , ];
-    obj = { label: null, subLabel: null, value: null };
-    const intl3 = getSystemLocale.intl;
-    obj[0] = intl3.string(getSystemLocale.t.YOIKBt);
-    const intl4 = getSystemLocale.intl;
-    obj[1] = intl4.string(getSystemLocale.t.y0JZ4s);
-    obj[2] = create.ProfileVisibility.FRIENDS_AND_SMALL_GUILDS;
-    items[1] = obj;
-    obj = { label: null, subLabel: null, value: null };
-    const intl5 = getSystemLocale.intl;
-    obj[0] = intl5.string(getSystemLocale.t.u0nlJv);
-    const intl6 = getSystemLocale.intl;
-    obj[1] = intl6.string(getSystemLocale.t["4jnKHu"]);
-    obj[2] = create.ProfileVisibility.FRIENDS_ONLY;
-    items[2] = obj;
+    const obj2 = { label: null, subLabel: null, value: null };
+    const intl3 = util.intl;
+    obj2.label = intl3.string(util.t.YOIKBt);
+    const intl4 = util.intl;
+    obj2.subLabel = intl4.string(util.t.y0JZ4s);
+    obj2.value = preloaded_user_settings.ProfileVisibility.FRIENDS_AND_SMALL_GUILDS;
+    items[1] = obj2;
+    const obj3 = { label: null, subLabel: null, value: null };
+    const intl5 = util.intl;
+    obj3.label = intl5.string(util.t.u0nlJv);
+    const intl6 = util.intl;
+    obj3.subLabel = intl6.string(util.t["4jnKHu"]);
+    obj3.value = preloaded_user_settings.ProfileVisibility.FRIENDS_ONLY;
+    items[2] = obj3;
     return items;
   },
   usePredicate() {
-    return apexExperiment.useIsInPrivateProfilesExperiment("ProfilePrivacySetting");
+    return PrivateProfilesExperiment.useIsInPrivateProfilesExperiment("ProfilePrivacySetting");
   }
 });
-let obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Qnf32C);
-  },
-  parent: MobileUserSettings.MobileUserSettings.DATA_AND_PRIVACY,
-  useValue() {
-    const ProfileVisibility = explicitContentFromProto.ProfileVisibility;
-    return ProfileVisibility.useSetting();
-  },
-  onValueChange(arg0) {
-    const NumberResult = Number(arg0);
-    const ProfileVisibility = explicitContentFromProto.ProfileVisibility;
-    const setting = ProfileVisibility.getSetting();
-    const ProfileVisibility2 = explicitContentFromProto.ProfileVisibility;
-    ProfileVisibility2.updateSetting(NumberResult);
-    let obj = apexExperiment;
-    if (obj.getIsInPrivateProfilesExperiment("ProfilePrivacySetting")) {
-      const profileToActivityUpsell = tmp2(14854).computeProfileToActivityUpsell(setting, NumberResult);
-      if (null != profileToActivityUpsell) {
-        obj = { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null };
-        ({ direction: obj4[0], affectedGuildIds: obj4[1], settingName: obj4[2], mappedActivityValue: obj4[3] } = profileToActivityUpsell);
-        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp2(1896)(14855, dependencyMap.paths), "ProfileToActivityPrivacyUpsellActionSheet", obj);
-        const obj3 = ACTION_SHEET_HEIGHT_HALFDefault;
-      }
-      const tmp2Result = tmp2(14854);
-    }
-  },
-  useOptions() {
-    let obj = { label: null, subLabel: null, value: null };
-    const intl = getSystemLocale.intl;
-    obj[0] = intl.string(getSystemLocale.t.Boxc8R);
-    const intl2 = getSystemLocale.intl;
-    obj[1] = intl2.string(getSystemLocale.t["nLj+nc"]);
-    obj[2] = create.ProfileVisibility.FRIENDS_AND_ALL_GUILDS;
-    const items = [obj, , ];
-    obj = { label: null, subLabel: null, value: null };
-    const intl3 = getSystemLocale.intl;
-    obj[0] = intl3.string(getSystemLocale.t.YOIKBt);
-    const intl4 = getSystemLocale.intl;
-    obj[1] = intl4.string(getSystemLocale.t.y0JZ4s);
-    obj[2] = create.ProfileVisibility.FRIENDS_AND_SMALL_GUILDS;
-    items[1] = obj;
-    obj = { label: null, subLabel: null, value: null };
-    const intl5 = getSystemLocale.intl;
-    obj[0] = intl5.string(getSystemLocale.t.u0nlJv);
-    const intl6 = getSystemLocale.intl;
-    obj[1] = intl6.string(getSystemLocale.t["4jnKHu"]);
-    obj[2] = create.ProfileVisibility.FRIENDS_ONLY;
-    items[2] = obj;
-    return items;
-  },
-  usePredicate() {
-    return apexExperiment.useIsInPrivateProfilesExperiment("ProfilePrivacySetting");
-  }
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/ProfilePrivacySetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ProfilePrivacySetting.tsx");
 
 export default radio;

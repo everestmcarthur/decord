@@ -1,21 +1,22 @@
-// Module ID: 11700
-// Function ID: 11701
-// Name: useForwardPreviewContent
-// Dependencies: [4199, 504, 4897, 2]
+// Module ID: 11726
+// Function ID: 11727
+// Name: ForwardPreviewUtils
+// Dependencies: [4212, 504, 4911, 2]
 // Exports: useForwardPreviewContent
 
-// Module 11700 (useForwardPreviewContent)
-import closure_2 from "getUncachedChannelPermissions" /* 4199 */;
+// Module 11726 (ForwardPreviewUtils)
+import EmbedUtils from "EmbedUtils" /* 4911 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/forwarding/ForwardPreviewUtils.tsx");
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/forwarding/ForwardPreviewUtils.tsx");
 
 export const useForwardPreviewContent = function useForwardPreviewContent(message) {
   message = message.message;
   ({ channel: dependencyMap, forwardOptions } = message);
-  let onlyAttachmentIds;
   let onlyEmbedIndices;
-  onlyAttachmentIds = undefined;
+  let onlyAttachmentIds;
   if (forwardOptions != null) {
     onlyAttachmentIds = forwardOptions.onlyAttachmentIds;
   }
@@ -24,44 +25,44 @@ export const useForwardPreviewContent = function useForwardPreviewContent(messag
     onlyEmbedIndices = forwardOptions.onlyEmbedIndices;
   }
   const first = message.messageSnapshots[0];
-  message = undefined;
+  let message1;
   if (first != null) {
-    message = first.message;
+    message1 = first.message;
   }
-  let attachments = message.attachments;
+  if (message1 == null) {
+    message1 = message;
+  }
+  let attachments = message1.attachments;
   if (null != onlyAttachmentIds) {
-    const attachments1 = message.attachments;
+    const attachments1 = message1.attachments;
     attachments = attachments1.filter((id) => onlyAttachmentIds.includes(id.id));
   } else if (null != onlyEmbedIndices) {
     attachments = [];
   }
   const items = [];
-  let obj = message(504);
   const items1 = [onlyAttachmentIds];
   if (obj.useStateFromStores(items1, () => {
-    let shouldStripEmbedsResult = null != closure_1;
+    let shouldStripEmbedsResult = null != dependencyMap;
     if (shouldStripEmbedsResult) {
-      shouldStripEmbedsResult = !message(closure_1_1[2]).canEmbedLinks(tmp, onlyAttachmentIds);
-      const obj = message(closure_1_1[2]);
+      shouldStripEmbedsResult = !EmbedUtils.canEmbedLinks(tmp, PermissionStore);
     }
     if (shouldStripEmbedsResult) {
-      shouldStripEmbedsResult = message(closure_1_1[2]).shouldStripEmbeds(message);
-      const obj2 = message(closure_1_1[2]);
+      shouldStripEmbedsResult = EmbedUtils.shouldStripEmbeds(message);
     }
     return shouldStripEmbedsResult;
   })) {
     let tmp6 = null != onlyEmbedIndices;
     if (!tmp6) {
-      let tmp7 = "" === message.content;
+      let tmp7 = "" === message1.content;
       if (tmp7) {
         tmp7 = items.length > 0;
       }
       tmp6 = tmp7;
     }
-    let result = message;
+    let result = message1;
     if (tmp6) {
       const mapped = items.map((url) => url.url);
-      result = message.set("content", mapped.join("\n"));
+      result = message1.set("content", mapped.join("\n"));
     }
     let tmp8 = "" === result.content;
     if (tmp8) {
@@ -76,17 +77,13 @@ export const useForwardPreviewContent = function useForwardPreviewContent(messag
     if (tmp8) {
       result1 = result.set("content", result.embeds[0].rawDescription);
     }
-    obj = { attachments: null, embeds: null, hasContent: null, contentMessage: null };
-    obj[0] = attachments;
-    obj[1] = items;
-    obj[2] = "" !== result1.content && null == onlyAttachmentIds;
-    obj[3] = result1;
-    return obj;
+    let obj2 = { attachments, embeds: items, hasContent: "" !== result1.content && null == onlyAttachmentIds, contentMessage: result1 };
+    return obj2;
   } else {
-    let embeds = message.embeds;
+    let embeds = message1.embeds;
     if (null != onlyEmbedIndices) {
-      const embeds1 = message.embeds;
-      embeds = embeds1.filter((arg0, arg1) => onlyEmbedIndices.includes(arg1));
+      const embeds1 = message1.embeds;
+      embeds = embeds1.filter((item, index) => onlyEmbedIndices.includes(index));
     } else if (null != onlyAttachmentIds) {
       embeds = [];
     }

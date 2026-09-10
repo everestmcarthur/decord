@@ -5,9 +5,8 @@
 // Exports: horizontalOrDefault, initialNumToRenderOrDefault, maxToRenderPerBatchOrDefault, onEndReachedThresholdOrDefault, onStartReachedThresholdOrDefault, windowSizeOrDefault
 
 // Module 320 (horizontalOrDefault)
-import noopAll from "noop" /* 19 */;
+import noop from "module_19" /* 19 */;
 
-noopAll;
 
 export const horizontalOrDefault = function horizontalOrDefault(horizontal) {
   let flag = horizontal;

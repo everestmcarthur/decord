@@ -1,17 +1,17 @@
-// Module ID: 9847
-// Function ID: 9848
-// Name: HeaderRecord
-// Dependencies: [5515, 2]
+// Module ID: 9874
+// Function ID: 9875
+// Name: AutocompleterConstants
+// Dependencies: [5529, 2]
 // Exports: createHeaderResult
 
-// Module 9847 (HeaderRecord)
-import set from "set" /* 2 */;
-import HeaderRecord from "HeaderRecord" /* 5515 */;
+// Module 9874 (AutocompleterConstants)
+import AutocompleterConstants from "autocompleter/AutocompleterConstants" /* 5529 */;
+import size from "module_2" /* 2 */;
 
-({ HeaderRecord: c0, AutocompleterResultTypes: closure_1 } = HeaderRecord);
-const result = set.fileFinishedImporting("modules/autocompleter/createAutocompleterResult.tsx");
+({ HeaderRecord: closure_0, AutocompleterResultTypes: closure_1 } = AutocompleterConstants);
+const result = size.fileFinishedImporting("modules/autocompleter/createAutocompleterResult.tsx");
 
 export const createHeaderResult = function createHeaderResult(intl) {
-  const obj = { type: constants.HEADER, record: new closure_0(intl), score: 0 };
+  const obj = { type: constants.HEADER, record: new React(intl), score: 0 };
   return obj;
 };

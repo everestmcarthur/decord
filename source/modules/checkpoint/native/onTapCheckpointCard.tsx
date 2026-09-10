@@ -1,28 +1,28 @@
-// Module ID: 11943
-// Function ID: 11944
+// Module ID: 11969
+// Function ID: 11970
 // Name: onTapCheckpointCard
-// Dependencies: [1957, 1074, 1242, 4740, 2]
+// Dependencies: [1957, 1074, 1242, 4754, 2]
 // Exports: onTapCheckpointCard
 
-// Module 11943 (onTapCheckpointCard)
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
+// Module 11969 (onTapCheckpointCard)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4754 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/checkpoint/native/onTapCheckpointCard.tsx");
+require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/checkpoint/native/onTapCheckpointCard.tsx");
 
 export const onTapCheckpointCard = function onTapCheckpointCard(message) {
-  channel = channel.getChannel(message.message.channel_id);
-  let obj = expandEventPropertiesDefault;
-  obj = { other_user_id: message.authorId };
-  const merged = Object.assign(collectGuildAnalyticsMetadata.collectChannelAnalyticsMetadata(channel));
-  const obj3 = collectGuildAnalyticsMetadata;
+  const channel = ChannelStore.getChannel(message.message.channel_id);
+  const obj = AnalyticsUtilsDefault;
+  const obj2 = { other_user_id: message.authorId };
+  const merged = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(channel));
   let guild_id;
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const merged1 = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guild_id));
-  obj.track(AnalyticEvents.CHECKPOINT_CARD_CLICKED, obj);
+  const merged1 = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guild_id));
+  obj.track(AnalyticEvents.CHECKPOINT_CARD_CLICKED, obj2);
 };

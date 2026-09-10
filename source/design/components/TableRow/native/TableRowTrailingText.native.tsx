@@ -1,18 +1,18 @@
-// Module ID: 5614
-// Function ID: 5615
+// Module ID: 5628
+// Function ID: 5629
 // Name: TableRowTrailingText
-// Dependencies: [19, 21, 4556, 2]
+// Dependencies: [19, 21, 4570, 2]
 // Exports: TableRowTrailingText
 
-// Module 5614 (TableRowTrailingText)
-import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4556 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 5628 (TableRowTrailingText)
+import Text_Text from "Text/Text" /* 4570 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/TableRow/native/TableRowTrailingText.native.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/TableRow/native/TableRowTrailingText.native.tsx");
 
 export const TableRowTrailingText = function TableRowTrailingText(children) {
-  return jsx(Text.Text, { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, children: children.text });
+  return jsx(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, children: children.text });
 };

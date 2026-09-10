@@ -1,30 +1,33 @@
-// Module ID: 16023
-// Function ID: 16024
+// Module ID: 16053
+// Function ID: 16054
 // Name: useMessagesSpecs
-// Dependencies: [109, 19, 1074, 4982, 1611, 16024, 16033, 16045, 576, 2]
+// Dependencies: [109, 19, 1074, 4996, 1611, 16054, 16063, 16075, 576, 2]
 // Exports: default
 
-// Module 16023 (useMessagesSpecs)
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "noop" /* 19 */;
-import { DM_WIDTH } from "ME" /* 1074 */;
+// Module 16053 (useMessagesSpecs)
+import nativeDefault from "native" /* 576 */;
+import MessagesHeader from "MessagesHeader" /* 16054 */;
+import MessagesItemChannel from "MessagesItemChannel" /* 16063 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 16075 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = fn;
 let closure_3 = ["height"];
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesSpecs.tsx");
+const DM_WIDTH = fn(1074).DM_WIDTH;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesSpecs.tsx");
 
 export default function useMessagesSpecs() {
-  fontScale = fontScale(4982).useFontScale();
+  fontScale = fontScale(4996).useFontScale();
   top = top(1611)().top;
   const items = [fontScale, top];
-  return React.useMemo(() => {
-    let obj = fontScale(closure_1_2[5]);
-    const messagesHeaderHeight = obj.getMessagesHeaderHeight(fontScale);
-    const messagesItemChannelSizes = fontScale(closure_1_2[6]).getMessagesItemChannelSizes(fontScale);
-    obj = { headerSize: messagesHeaderHeight, listTop: top + messagesHeaderHeight, listLeft: closure_1_6, listItemHeight: messagesItemChannelSizes.height, listItemSizes: closure_1_4(messagesItemChannelSizes, closure_1_3), listItemSuggestedFriendHeight: null, scrollIndicatorInsetEnd: null };
-    const obj2 = fontScale(closure_1_2[6]);
-    obj[5] = fontScale(closure_1_2[7]).getMessagesItemSuggestedFriendHeight(fontScale);
-    obj[6] = top(closure_1_2[8]).space.PX_4;
-    return obj;
+  return noop.useMemo(() => {
+    const messagesHeaderHeight = MessagesHeader.getMessagesHeaderHeight(fontScale);
+    const messagesItemChannelSizes = MessagesItemChannel.getMessagesItemChannelSizes(fontScale);
+    const obj3 = { headerSize: messagesHeaderHeight, listTop: top + messagesHeaderHeight, listLeft: DM_WIDTH, listItemHeight: messagesItemChannelSizes.height, listItemSizes: _objectWithoutProperties(messagesItemChannelSizes, closure_3), listItemSuggestedFriendHeight: null, scrollIndicatorInsetEnd: null };
+    obj3.listItemSuggestedFriendHeight = MessagesItemSuggestedFriend.getMessagesItemSuggestedFriendHeight(fontScale);
+    obj3.scrollIndicatorInsetEnd = nativeDefault.space.PX_4;
+    return obj3;
   }, items);
 };

@@ -1,28 +1,28 @@
-// Module ID: 14194
-// Function ID: 14195
-// Name: future
-// Dependencies: [9298, 2]
+// Module ID: 14219
+// Function ID: 14220
+// Name: awaitExperiments
+// Dependencies: [9325, 2]
 // Exports: beginLoadedExperimentsTimeout, getPromise, onExperimentsLoaded
 
-// Module 14194 (future)
-import set from "set" /* 2 */;
-import Future from "Future" /* 9298 */;
+// Module 14219 (awaitExperiments)
+import Future from "Future" /* 9325 */;
+import size from "module_2" /* 2 */;
 
 const future = new Future.Future();
-let c1 = null;
-const result = set.fileFinishedImporting("modules/app_startup/awaitExperiments.tsx");
+let closure_1 = null;
+const result = size.fileFinishedImporting("modules/app_startup/awaitExperiments.tsx");
 
 export const beginLoadedExperimentsTimeout = function beginLoadedExperimentsTimeout() {
   const timeout = setTimeout(() => {
-    closure_0.resolve();
+    future.resolve();
     c1 = null;
   }, 1000);
 };
 export const onExperimentsLoaded = function onExperimentsLoaded() {
-  if (null != c1) {
+  if (null != closure_1) {
     future.resolve();
     const _clearTimeout = clearTimeout;
-    clearTimeout(c1);
+    clearTimeout(closure_1);
   }
 };
 export const getPromise = function getPromise() {

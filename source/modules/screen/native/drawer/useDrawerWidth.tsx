@@ -1,31 +1,31 @@
-// Module ID: 11533
-// Function ID: 11534
-// Name: sum
-// Dependencies: [1074, 4422, 4420, 2]
+// Module ID: 11559
+// Function ID: 11560
+// Name: useDrawerWidth
+// Dependencies: [1074, 4436, 4434, 2]
 // Exports: getDrawerWidth, useDrawerWidth
 
-// Module 11533 (sum)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import useChatLayout from "useChatLayout" /* 4420 */;
-import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4422 */;
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4422 */;
+// Module 11559 (useDrawerWidth)
+import Constants from "Constants" /* 1074 */;
+import useChatLayout from "useChatLayout" /* 4434 */;
+import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4436 */;
+import size from "module_2" /* 2 */;
 
-const DM_WIDTH = ME.DM_WIDTH;
+const useBaseAppContainerDimensionsDefault = useBaseAppContainerDimensions;
+
+const DM_WIDTH = Constants.DM_WIDTH;
 const sum = 260 + DM_WIDTH;
 let c3 = sum;
 let closure_4 = 300 + DM_WIDTH;
-const result = set.fileFinishedImporting("modules/screen/native/drawer/useDrawerWidth.tsx");
+const result = size.fileFinishedImporting("modules/screen/native/drawer/useDrawerWidth.tsx");
 
 export const DRAWER_LEFT_WIDTH_MIN = sum;
 export const getDrawerWidth = function getDrawerWidth() {
   const width = useBaseAppContainerDimensions.getBaseAppContainerDimensions().width;
-  const obj = useBaseAppContainerDimensions;
   const chatLayout = useChatLayout.getChatLayout();
   if (!chatLayout.isChatBesideChannelList) {
     return width;
   } else if (tmp2) {
-    let bound = closure_3;
+    let bound = sum;
   } else {
     const _Math = Math;
     bound = Math.min(closure_4, width - 32);
@@ -36,7 +36,7 @@ export const useDrawerWidth = function useDrawerWidth() {
   if (!tmp.isChatBesideChannelList) {
     return width;
   } else if (tmp2) {
-    let bound = closure_3;
+    let bound = sum;
   } else {
     const _Math = Math;
     bound = Math.min(closure_4, width - 32);

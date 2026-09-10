@@ -1,34 +1,34 @@
-// Module ID: 15257
-// Function ID: 15258
-// Name: toggle
-// Dependencies: [9985, 7975, 504, 1114, 11473, 9996, 2]
+// Module ID: 15286
+// Function ID: 15287
+// Name: AndroidMobileOverlaySetting
+// Dependencies: [10012, 7989, 504, 1114, 11500, 10023, 2]
 
-// Module 15257 (toggle)
+// Module 15286 (AndroidMobileOverlaySetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import dispatcherDefault from "dispatcher" /* 9996 */;
-import closure_2 from "getUserAgnosticState" /* 9985 */;
-import createToggle from "createToggle" /* 11473 */;
+import util from "util" /* 1114 */;
+import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 10023 */;
+import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 10012 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const SettingBuilders = fn(11500);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["9CSZJm"]);
+    const intl = util.intl;
+    return intl.string(util.t["9CSZJm"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
+  parent: fn(7989).MobileUserSettings.VOICE,
   useValue: function useAndroidMobileOverlaySettingValue() {
-    const items = [closure_2];
+    const items = [MobileVoiceOverlayStore];
     return initialize.useStateFromStores(items, () => enabled.getEnabled());
   },
-  onValueChange: dispatcherDefault.setEnabled,
+  onValueChange: MobileVoiceOverlayActionCreatorsDefault.setEnabled,
   useDescription: function useAndroidMobileOverlaySettingDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Wfoivk);
+    const intl = util.intl;
+    return intl.string(util.t.Wfoivk);
   },
-  usePredicate: require("getUserAgnosticState").isMobileOverlaySupported
-};
-createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AndroidMobileOverlaySetting.tsx");
+  usePredicate: fn(10012).isMobileOverlaySupported
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AndroidMobileOverlaySetting.tsx");
 
-export default createToggle;
+export default toggle;

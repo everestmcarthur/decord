@@ -1,44 +1,43 @@
-// Module ID: 16752
-// Function ID: 16753
-// Name: trackFriendsListViewed
-// Dependencies: [1074, 16753, 1242, 7465, 2]
+// Module ID: 16789
+// Function ID: 16790
+// Name: trackFriendListViewed
+// Dependencies: [1074, 16790, 1242, 7479, 2]
 // Exports: default
 
-// Module 16752 (trackFriendsListViewed)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import isClickstreamEnabled from "isClickstreamEnabled" /* 7465 */;
-import getTrackFriendsListViewedDataDefault from "getTrackFriendsListViewedData" /* 16753 */;
+// Module 16789 (trackFriendListViewed)
+import Constants from "Constants" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import Clickstream from "Clickstream" /* 7479 */;
+import getTrackFriendsListViewedDataDefault from "getTrackFriendsListViewedData" /* 16790 */;
+import size from "module_2" /* 2 */;
 
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/app_analytics/track/friends_list_viewed/trackFriendListViewed.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/app_analytics/track/friends_list_viewed/trackFriendListViewed.tsx");
 
 export default function trackFriendsListViewed(source) {
   let str = source.tab_opened;
   const tmp = getTrackFriendsListViewedDataDefault();
-  let obj = expandEventPropertiesDefault;
-  obj = { tab_opened: str, source: source.source };
   const merged = Object.assign(tmp);
-  obj.track(AnalyticEvents.FRIENDS_LIST_VIEWED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.FRIENDS_LIST_VIEWED, { tab_opened: str, source: source.source });
+  const obj2 = { tab_opened: str, source: source.source };
   if (str == null) {
     str = "tabless";
   }
-  obj = { tab_opened: str, num_friends: null, now_playing_visible: null, now_playing_num_cards: null };
+  const obj4 = { tab_opened: str, num_friends: null, now_playing_visible: null, now_playing_num_cards: null };
   let num = tmp.num_friends;
   if (num == null) {
     num = 0;
   }
-  obj[1] = num;
+  obj4.num_friends = num;
   let flag = tmp.now_playing_visible;
   if (flag == null) {
     flag = false;
   }
-  obj[2] = flag;
+  obj4.now_playing_visible = flag;
   let num2 = tmp.now_playing_num_cards;
   if (num2 == null) {
     num2 = 0;
   }
-  obj[3] = num2;
-  isClickstreamEnabled.trackClickstream(AnalyticEvents.FRIENDS_LIST_VIEWED_CLICKSTREAM, obj);
+  obj4.now_playing_num_cards = num2;
+  Clickstream.trackClickstream(AnalyticEvents.FRIENDS_LIST_VIEWED_CLICKSTREAM, obj4);
 };

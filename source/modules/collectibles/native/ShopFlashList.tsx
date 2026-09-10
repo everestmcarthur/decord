@@ -1,44 +1,42 @@
-// Module ID: 15843
-// Function ID: 15844
-// Name: ShopEmptyState
-// Dependencies: [19, 21, 4560, 576, 15816, 8879, 1178, 8232, 1114, 2]
+// Module ID: 15873
+// Function ID: 15874
+// Name: ShopFlashList
+// Dependencies: [19, 21, 4574, 576, 15846, 8906, 1178, 8258, 1114, 2]
 // Exports: default
 
-// Module 15843 (ShopEmptyState)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import getNoResultsSource from "getNoResultsSource" /* 8232 */;
-import noop from "noop" /* 8879 */;
-import INITIAL_SCROLL_DELAY_MS from "INITIAL_SCROLL_DELAY_MS" /* 15816 */;
-import closure_2 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15873 (ShopFlashList)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import generated_NoResults from "generated/NoResults" /* 8258 */;
+import _mod8906 from "module_8906" /* 8906 */;
+import useScrollToInitialIndexOnce from "useScrollToInitialIndexOnce" /* 15846 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function ShopEmptyState() {
-  const obj = { style: { marginTop: 42 }, Illustration: getNoResultsSource.NoResults, body: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.eAn6z2);
-  return jsx(Button.EmptyState, { style: { marginTop: 42 }, Illustration: getNoResultsSource.NoResults, body: null });
+  const obj = { style: { marginTop: 42 }, Illustration: generated_NoResults.NoResults, body: null };
+  const intl = util.intl;
+  obj.body = intl.string(util.t.eAn6z2);
+  return jsx(native.EmptyState, { style: { marginTop: 42 }, Illustration: generated_NoResults.NoResults, body: null });
 }
-createCacheKey = { contentContainer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-createCacheKey[0] = createCacheKey;
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/collectibles/native/ShopFlashList.tsx");
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+const obj2 = { contentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
+let closure_4 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/ShopFlashList.tsx");
 
 export default function ShopFlashList(initialScrollIndex) {
   initialScrollIndex = initialScrollIndex.initialScrollIndex;
   ({ data, renderItem, getItemType } = initialScrollIndex);
-  const ref = React.useRef(null);
-  let obj = INITIAL_SCROLL_DELAY_MS;
+  const ref = noop.useRef(null);
+  const tmp2 = closure_4();
   let tmp5 = null != initialScrollIndex;
   if (tmp5) {
     tmp5 = initialScrollIndex > 0;
   }
-  obj = { shouldScroll: tmp5, initialScrollIndex, flashListRef: ref, afterMs: tmp3(15816).INITIAL_SCROLL_DELAY_MS };
-  const scrollToInitialIndexOnce = obj.useScrollToInitialIndexOnce(obj);
-  obj = { ref, data, renderItem, showsVerticalScrollIndicator: false, ListEmptyComponent: ShopEmptyState, initialScrollIndex, getItemType, contentContainerStyle: callback().contentContainer };
-  return jsx(noop.FlashList, { ref, data, renderItem, showsVerticalScrollIndicator: false, ListEmptyComponent: ShopEmptyState, initialScrollIndex, getItemType, contentContainerStyle: callback().contentContainer });
+  const obj = useScrollToInitialIndexOnce;
+  const scrollToInitialIndexOnce = obj.useScrollToInitialIndexOnce({ shouldScroll: tmp5, initialScrollIndex, flashListRef: ref, afterMs: useScrollToInitialIndexOnce.INITIAL_SCROLL_DELAY_MS });
+  return jsx(_mod8906.FlashList, { ref, data, renderItem, showsVerticalScrollIndicator: false, ListEmptyComponent: ShopEmptyState, initialScrollIndex, getItemType, contentContainerStyle: tmp2.contentContainer });
 };

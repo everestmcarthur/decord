@@ -1,12 +1,11 @@
-// Module ID: 6290
-// Function ID: 6291
-// Name: vanityUrl
+// Module ID: 6304
+// Function ID: 6305
 // Dependencies: [2]
 
-// Module 6290 (vanityUrl)
-import set from "set" /* 2 */;
+// Module 6304
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroRubyBadgeLargeBadge-2x.png.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroRubyBadgeLargeBadge-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/a1cf423cfd81011b2b670b309f15dad86f21956a425b053343a93215b69f5f3e.png";
 export const vanityUrl = "https://cdn.discordapp.com/assets/mana/asset-library/generated/NitroRubyBadgeLargeBadge-2x.png";

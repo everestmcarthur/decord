@@ -1,32 +1,34 @@
-// Module ID: 16641
-// Function ID: 16642
-// Dependencies: [19, 17, 21, 4560, 6981, 4272, 4556, 2]
+// Module ID: 16673
+// Function ID: 16674
+// Name: pages/ErrorScreen
+// Dependencies: [19, 17, 21, 4574, 6995, 4285, 4570, 2]
 
-// Module 16641
-import Text from "Text" /* 4556 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6981 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16673 (pages/ErrorScreen)
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4285 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6995 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let c3 = importAllResult;
-let closure_6 = createCacheKey.createStyles({ container: { justifyContent: "center", alignItems: "center", height: "100%", display: "flex" }, text: { textAlign: "center", width: "75%" } });
-const memoResult = importAllResult.memo((text) => {
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_6 = createStyles.createStyles({ container: { justifyContent: "center", alignItems: "center", height: "100%", display: "flex" }, text: { textAlign: "center", width: "75%" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/ErrorScreen.tsx");
+
+export default noop.memo((text) => {
   text = text.text;
   require = text;
-  const tmp = callback();
+  const tmp = closure_6();
   const items = [text];
-  const effect = importAllResult.useEffect(() => {
-    const AccessibilityAnnouncer = text(closure_1_2[5]).AccessibilityAnnouncer;
-    AccessibilityAnnouncer.announce(closure_0, "polite");
+  const effect = noop.useEffect(() => {
+    const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
+    AccessibilityAnnouncer.announce(text, "polite");
   }, items);
-  obj = { style: items1, children: jsx(Text.Text, obj) };
-  items1 = [tmp.container, { paddingBottom: useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom }];
-  obj = { variant: "text-sm/medium", color: "text-muted", style: tmp.text, children: text };
-  return <View variant="text-sm/medium" color="text-muted" style={tmp.text}>{text}</View>;
+  const obj = { style: null, children: null };
+  const items1 = [tmp.container, { paddingBottom: useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom }];
+  obj.style = items1;
+  obj.children = jsx(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", style: tmp.text, children: text });
+  return <View style={null}>{null}</View>;
 });
-const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/ErrorScreen.tsx");
-
-export default memoResult;

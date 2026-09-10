@@ -1,23 +1,24 @@
-// Module ID: 9175
-// Function ID: 9176
+// Module ID: 9202
+// Function ID: 9203
 // Name: useIsSecureFramesUIEnabled
-// Dependencies: [1957, 4583, 9157, 504, 2]
+// Dependencies: [1957, 4597, 9184, 504, 2]
 // Exports: useIsSecureFramesUIEnabled
 
-// Module 9175 (useIsSecureFramesUIEnabled)
-import closure_2 from "ensureGuildLoaded" /* 1957 */;
-import closure_3 from "createRTCConnection" /* 4583 */;
-import { END_TO_END_ENCRYPTION_DISABLED as closure_4 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9157 */;
+// Module 9202 (useIsSecureFramesUIEnabled)
+import ChannelStore from "ChannelStore" /* 1957 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesUIEnabled.tsx");
+const require = fn;
+let closure_4 = fn(9184).END_TO_END_ENCRYPTION_DISABLED;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesUIEnabled.tsx");
 
 export const useIsSecureFramesUIEnabled = function useIsSecureFramesUIEnabled(channelId) {
   channelId = channelId.channelId;
-  let items = [closure_3, closure_2];
+  let items = [RTCConnectionStore, ChannelStore];
   const items1 = [channelId];
   return channelId(504).useStateFromStores(items, () => {
-    const items = [closure_1_3, closure_1_2];
+    const items = [RTCConnectionStore, ChannelStore];
     [obj, obj2] = items;
     let flag = false;
     if (null != channelId) {
@@ -35,7 +36,7 @@ export const useIsSecureFramesUIEnabled = function useIsSecureFramesUIEnabled(ch
             }
             let tmp4 = null != version;
             if (tmp4) {
-              tmp4 = version !== closure_1_4;
+              tmp4 = version !== closure_4;
             }
             flag = tmp4;
           }

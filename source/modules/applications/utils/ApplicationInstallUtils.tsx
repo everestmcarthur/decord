@@ -1,16 +1,17 @@
-// Module ID: 9423
-// Function ID: 9424
-// Name: canInstallApplication
-// Dependencies: [9295, 4999, 9250, 2]
+// Module ID: 9450
+// Function ID: 9451
+// Name: ApplicationInstallUtils
+// Dependencies: [9322, 5013, 9277, 2]
 // Exports: canInstallApplication, isAppUserInstallable, shouldInstallApplicationOnDemand
 
-// Module 9423 (canInstallApplication)
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9250 */;
-import closure_2 from "getIndexKey" /* 9295 */;
-import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 4999 */;
+// Module 9450 (ApplicationInstallUtils)
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9277 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9322 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/applications/utils/ApplicationInstallUtils.tsx");
+require = fn;
+const BuiltInSectionId = fn(5013).BuiltInSectionId;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/applications/utils/ApplicationInstallUtils.tsx");
 
 export const canInstallApplication = function canInstallApplication(application) {
   const integrationTypesConfig = application.integrationTypesConfig;
@@ -84,20 +85,19 @@ export const shouldInstallApplicationOnDemand = function shouldInstallApplicatio
   if (!tmp) {
     let tmp6 = applicationId !== BuiltInSectionId.BUILT_IN;
     if (tmp6) {
-      let obj = closure_2;
-      const result = closure_2.hasUserStateApplication(applicationId);
+      const result = ApplicationCommandIndexStore.hasUserStateApplication(applicationId);
       let tmp8 = !result;
       if (!result) {
         let tmp9 = null == channel;
         if (!tmp9) {
-          obj = { applicationId: null, channelId: null, guildId: null };
-          obj[0] = applicationId;
-          ({ id: obj2[1], guild_id: obj2[2] } = channel);
-          tmp9 = !obj.hasContextStateApplication(obj);
+          const obj3 = { applicationId, channelId: null, guildId: null };
+          ({ id: obj2.channelId, guild_id: obj2.guildId } = channel);
+          tmp9 = !obj.hasContextStateApplication(obj3);
         }
         tmp8 = tmp9;
       }
       tmp6 = tmp8;
+      obj = ApplicationCommandIndexStore;
     }
     tmp4 = tmp6;
   }

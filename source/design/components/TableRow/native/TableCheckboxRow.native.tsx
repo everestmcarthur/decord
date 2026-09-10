@@ -1,15 +1,21 @@
-// Module ID: 5604
-// Function ID: 5605
+// Module ID: 5618
+// Function ID: 5619
 // Name: TableCheckboxRow
-// Dependencies: [19, 21, 4296, 4264, 4277, 5605, 5617, 2]
+// Dependencies: [19, 21, 4310, 4277, 4292, 5619, 5631, 2]
 // Exports: TableCheckboxRow
 
-// Module 5604 (TableCheckboxRow)
-import closure_2 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 5618 (TableCheckboxRow)
+import native from "native" /* 4277 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4292 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import TableRow from "TableRow" /* 5619 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("design/components/TableRow/native/TableCheckboxRow.native.tsx");
+const FormCheckbox = tmp2(5631);
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("design/components/TableRow/native/TableCheckboxRow.native.tsx");
 
 export const TableCheckboxRow = function TableCheckboxRow(checked) {
   checked = checked.checked;
@@ -18,44 +24,38 @@ export const TableCheckboxRow = function TableCheckboxRow(checked) {
     disabled = false;
   }
   const onPress = checked.onPress;
-  const merged = Object.assign(checked, Object.create(null));
-  let sharedValue;
-  let obj = checked(onPress[2]);
-  sharedValue = obj.useSharedValue(0);
+  const merged = Object.assign(checked, Object.assign({ checked: 0, label: 0, subLabel: 0, disabled: 0, onPress: 0, accessibilityHint: 0 }));
+  const sharedValue = ReanimatedRexport.useSharedValue(0);
   const items = [sharedValue];
   const items1 = [onPress, sharedValue, checked];
-  const callback = sharedValue.useCallback(() => {
+  const callback = noop.useCallback(() => {
     const result = sharedValue.set(1);
   }, items);
-  const callback1 = sharedValue.useCallback(() => {
+  const callback1 = noop.useCallback(() => {
     const result = sharedValue.set(0);
     onPress(!checked);
   }, items1);
-  const nodeText = checked(onPress[3]).getNodeText(label);
-  const obj2 = checked(onPress[3]);
-  const tmp2 = checked;
-  const tmp3 = onPress;
-  const nodeText1 = checked(onPress[3]).getNodeText(subLabel);
-  const obj3 = checked(onPress[3]);
-  const checkboxA11yNative = checked(onPress[4]).useCheckboxA11yNative({ checked, disabled });
+  const nodeText = native.getNodeText(label);
+  const nodeText1 = native.getNodeText(subLabel);
+  const checkboxA11yNative = useA11yRolesNative.useCheckboxA11yNative({ checked, disabled });
   ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
-  obj = {};
+  const obj5 = {};
   const merged1 = Object.assign(merged);
-  obj.arrow = false;
-  obj.label = label;
-  obj.subLabel = subLabel;
-  obj.disabled = disabled;
-  obj.accessibilityState = accessibilityState;
-  obj.accessible = true;
-  obj.accessibilityRole = accessibilityRole;
+  obj5.arrow = false;
+  obj5.label = label;
+  obj5.subLabel = subLabel;
+  obj5.disabled = disabled;
+  obj5.accessibilityState = accessibilityState;
+  obj5.accessible = true;
+  obj5.accessibilityRole = accessibilityRole;
   let str = nodeText1;
   if (nodeText1 == null) {
     str = "";
   }
-  obj.accessibilityLabel = "" + nodeText + ", " + str;
-  obj.accessibilityHint = checked.accessibilityHint;
-  obj.onPressIn = callback;
-  obj.onPress = callback1;
-  obj.trailing = jsx(tmp2(tmp3[6]).FormCheckbox, { checked });
-  return jsx(checked(onPress[5]).TableRow, {});
+  obj5.accessibilityLabel = "" + nodeText + ", " + str;
+  obj5.accessibilityHint = checked.accessibilityHint;
+  obj5.onPressIn = callback;
+  obj5.onPress = callback1;
+  obj5.trailing = jsx(FormCheckbox.FormCheckbox, { checked });
+  return jsx(TableRow.TableRow, {});
 };

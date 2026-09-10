@@ -1,80 +1,65 @@
-// Module ID: 17736
-// Function ID: 17737
-// Name: Header
-// Dependencies: [19, 17, 21, 4560, 576, 7123, 4556, 15220, 1114, 1611, 4975, 1483, 2]
+// Module ID: 17769
+// Function ID: 17770
+// Name: GuildRoleSubscriptionTierEditStep
+// Dependencies: [19, 17, 21, 4574, 576, 7137, 4570, 15249, 1114, 1611, 4989, 1483, 2]
 // Exports: default
 
-// Module 17736 (Header)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 17769 (GuildRoleSubscriptionTierEditStep)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import useNavigation from "useNavigation" /* 1483 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import Text from "Text" /* 4556 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
-import FormSeparatorDefault from "FormSeparator" /* 15220 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7137 */;
+import FormSeparatorDefault from "FormSeparator" /* 15249 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function Header(arg0) {
   ({ description, title } = arg0);
-  const tmp = callback3();
-  let obj = { top: true, style: tmp.headerContainer, children: null };
-  obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: title };
-  const items = [callback(Text.Text, obj), , ];
-  obj = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: description };
-  items[1] = callback(Text.Text, obj);
-  items[2] = callback(FormSeparatorDefault, { style: tmp.separator });
-  obj[2] = items;
-  return callback2(SafeAreaPaddingView.SafeAreaPaddingView, obj);
+  const tmp = closure_8();
+  const obj = { top: true, style: tmp.headerContainer, children: null };
+  const items = [timestampProducer(Text_Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: title }), timestampProducer(Text_Text.Text, { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: description }), timestampProducer(FormSeparatorDefault, { style: tmp.separator })];
+  obj.children = items;
+  return React5(common_SafeAreaView.SafeAreaPaddingView, obj);
 }
 function Footer(arg0) {
   ({ canProceedToNextStep, nextStep, onProceed, submitting } = arg0);
   if (null == nextStep) {
-    const intl2 = getSystemLocale.intl;
-    let stringResult = intl2.string(getSystemLocale.t["4cAsqe"]);
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t["4cAsqe"]);
     let tmp5 = require;
   } else {
-    const intl = getSystemLocale.intl;
-    stringResult = intl.string(getSystemLocale.t["bm6P5/"]);
+    const intl = util.intl;
+    stringResult = intl.string(util.t["bm6P5/"]);
     tmp5 = require;
   }
-  let obj = { style: null, children: null };
-  const items = [callback3().footerContainer, ];
-  obj = { paddingBottom: useSafeAreaInsetsDefault().bottom };
-  items[1] = obj;
-  obj[0] = items;
-  obj = { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed };
-  obj[1] = callback(tmp5(4975).Button, obj);
-  return callback(closure_4, obj);
+  const obj = { style: null, children: null };
+  const items = [closure_8().footerContainer, ];
+  const tmp = closure_8();
+  items[1] = { paddingBottom: useSafeAreaInsetsDefault().bottom };
+  obj.style = items;
+  obj.children = timestampProducer(tmp5(4989).Button, { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed });
+  return timestampProducer(React4, obj);
 }
-({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, scrollContainer: null, headerContainer: null, title: null, subtitle: null, separator: null, footerContainer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, height: "100%" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexGrow: 1 };
-createCacheKey[2] = { position: "relative", paddingTop: 48, paddingBottom: 8, paddingHorizontal: 16, alignItems: "center" };
-createCacheKey[3] = { marginTop: 12, textAlign: "center" };
-createCacheKey[4] = { marginTop: 8, textAlign: "center" };
-createCacheKey[5] = { marginTop: 24 };
-createCacheKey[6] = { width: "100%", padding: 16 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierEditStep.tsx");
+get_ActivityIndicator = fn(17);
+({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: "100%" }, scrollContainer: { flexGrow: 1 }, headerContainer: { position: "relative", paddingTop: 48, paddingBottom: 8, paddingHorizontal: 16, alignItems: "center" }, title: { marginTop: 12, textAlign: "center" }, subtitle: { marginTop: 8, textAlign: "center" }, separator: { marginTop: 24 }, footerContainer: { width: "100%", padding: 16 } };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierEditStep.tsx");
 
 export default function GuildRoleSubscriptionTierEditStep(scrollable) {
-  const merged = Object.assign(scrollable, Object.create(null));
-  let navigation;
-  let nextStep;
-  let onProceed;
-  const tmp2 = callback3();
-  let obj = navigation(onProceed[11]);
-  navigation = obj.useNavigation();
-  nextStep = merged.nextStep;
-  onProceed = merged.onProceed;
+  const merged = Object.assign(scrollable, Object.assign({ scrollable: 0 }));
+  const tmp2 = closure_8();
+  const navigation = useNavigation.useNavigation();
+  const nextStep = merged.nextStep;
+  const onProceed = merged.onProceed;
   const items = [navigation, nextStep, onProceed];
-  const callback = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     if (null != onProceed) {
       tmp();
     } else if (null != nextStep) {
@@ -82,33 +67,31 @@ export default function GuildRoleSubscriptionTierEditStep(scrollable) {
     }
   }, items);
   if (false !== scrollable.scrollable) {
-    obj = { style: null, children: null };
-    obj[0] = tmp2.container;
-    obj = {};
+    const obj2 = { style: tmp2.container, children: null };
+    const obj3 = {};
     const merged1 = Object.assign(merged);
-    const items1 = [callback(Header, obj), , ];
-    obj1 = { keyboardShouldPersistTaps: "handled", showsVerticalScrollIndicator: false, alwaysBounceVertical: false, contentContainerStyle: null, children: null };
+    const items1 = [timestampProducer(Header, obj3), , ];
+    const obj4 = { keyboardShouldPersistTaps: "handled", showsVerticalScrollIndicator: false, alwaysBounceVertical: false, contentContainerStyle: null, children: null };
     const items2 = [tmp2.scrollContainer];
-    obj1[3] = items2;
-    obj1[4] = merged.children;
-    items1[1] = callback(closure_5, obj1);
-    const obj2 = {};
-    const merged2 = Object.assign(merged);
-    obj2.onProceed = callback;
-    items1[2] = callback(Footer, obj2);
-    obj[1] = items1;
-    let obj3 = obj;
-  } else {
-    obj3 = { style: null, children: null };
-    obj3[0] = tmp2.container;
-    const obj4 = {};
-    const merged3 = Object.assign(merged);
-    const items3 = [callback(Header, obj4), merged.children, ];
+    obj4.contentContainerStyle = items2;
+    obj4.children = merged.children;
+    items1[1] = timestampProducer(hasOwnProperty, obj4);
     const obj5 = {};
-    const merged4 = Object.assign(merged);
+    const merged2 = Object.assign(merged);
     obj5.onProceed = callback;
-    items3[2] = callback(Footer, obj5);
-    obj3[1] = items3;
+    items1[2] = timestampProducer(Footer, obj5);
+    obj2.children = items1;
+    let obj6 = obj2;
+  } else {
+    obj6 = { style: tmp2.container, children: null };
+    const obj7 = {};
+    const merged3 = Object.assign(merged);
+    const items3 = [timestampProducer(Header, obj7), merged.children, ];
+    const obj8 = {};
+    const merged4 = Object.assign(merged);
+    obj8.onProceed = callback;
+    items3[2] = timestampProducer(Footer, obj8);
+    obj6.children = items3;
   }
-  return closure_7(closure_4, obj3);
+  return React5(React4, obj6);
 };

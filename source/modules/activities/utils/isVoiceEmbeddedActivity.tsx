@@ -1,35 +1,36 @@
-// Module ID: 9531
-// Function ID: 9532
+// Module ID: 9560
+// Function ID: 9561
 // Name: isVoiceEmbeddedActivity
-// Dependencies: [502, 1957, 2011, 4579, 1094, 2]
+// Dependencies: [502, 1957, 2011, 4593, 1094, 2]
 // Exports: default
 
-// Module 9531 (isVoiceEmbeddedActivity)
-import set from "set" /* 1094 */;
-import closure_2 from "fetchFingerprint" /* 502 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import closure_4 from "handleConnectionOpen" /* 2011 */;
-import closure_5 from "updateVoiceState" /* 4579 */;
+// Module 9560 (isVoiceEmbeddedActivity)
+import ChannelTypes from "ChannelTypes" /* 1094 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import VoiceStateStore from "VoiceStateStore" /* 4593 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/utils/isVoiceEmbeddedActivity.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/utils/isVoiceEmbeddedActivity.tsx");
 
 export default function isVoiceEmbeddedActivity(arg0) {
   let obj = arg1;
   if (arg1 === undefined) {
-    obj = closure_3;
+    obj = ChannelStore;
   }
   const channel = obj.getChannel(arg0);
   let tmp3 = null != channel;
   if (tmp3) {
-    let tmp6 = channel.type === set.ChannelTypes.GUILD_VOICE;
+    let tmp6 = channel.type === ChannelTypes.ChannelTypes.GUILD_VOICE;
     if (!tmp6) {
       let isPrivateResult = channel.isPrivate();
       if (isPrivateResult) {
         let tmp8 = channel.id === tmp2;
         if (!tmp8) {
-          voiceStatesForChannel = voiceStatesForChannel.getVoiceStatesForChannel(channel.id);
-          tmp8 = null != voiceStatesForChannel[id.getId(id)];
+          const voiceStatesForChannel = VoiceStateStore.getVoiceStatesForChannel(channel.id);
+          tmp8 = null != voiceStatesForChannel[AuthenticationStore.getId(AuthenticationStore)];
         }
         isPrivateResult = tmp8;
       }

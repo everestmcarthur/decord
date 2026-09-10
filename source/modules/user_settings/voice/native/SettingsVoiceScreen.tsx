@@ -1,139 +1,141 @@
-// Module ID: 15250
-// Function ID: 15251
-// Name: KrispLogo
-// Dependencies: [19, 17, 1908, 7975, 1074, 21, 2024, 4560, 4495, 4411, 10003, 10004, 1114, 6655, 10002, 4556, 9999, 11473, 14692, 2]
+// Module ID: 15279
+// Function ID: 15280
+// Name: SettingsVoiceScreen
+// Dependencies: [19, 17, 1908, 7989, 1074, 21, 2024, 4574, 4509, 4425, 10030, 10031, 1114, 6669, 10029, 4570, 10026, 11500, 14718, 2]
 // Exports: default
 
-// Module 15250 (KrispLogo)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
-import Text from "Text" /* 4556 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
-import getNoiseCancellationDeferredToSystem from "getNoiseCancellationDeferredToSystem" /* 9999 */;
-import handleKrispLinkPressed from "handleKrispLinkPressed" /* 10002 */;
-import _modDef14692 from "module_14692" /* 14692 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "_detectH265HardwareDecode" /* 1908 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 7975 */;
-import { HelpdeskArticles } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importDefaultResult from "combined" /* 2024 */;
+// Module 15279 (SettingsVoiceScreen)
+import util from "util" /* 1114 */;
+import useThemeDefault from "useTheme" /* 4509 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6669 */;
+import KrispLogo2 from "KrispLogo" /* 10029 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import SettingLayoutDefault from "SettingLayout" /* 14718 */;
+import noop from "module_19" /* 19 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import HelpdeskUtils from "HelpdeskUtils" /* 2024 */;
 
-require = arg1;
+require = fn;
 function KrispLogo() {
-  const tmp = callback3();
-  let obj = AccessibilityAnnouncer;
+  const tmp = closure_13();
+  const tmp4 = useThemeDefault();
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = tmp2(10003);
+    let tmp2Result = tmp2(10030);
   } else {
-    tmp2Result = tmp2(10004);
+    tmp2Result = tmp2(10031);
   }
-  obj = { style: tmp.krisp, children: null };
-  obj = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
+  const obj2 = { style: tmp.krisp, children: null };
+  const obj3 = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
   const intl = tmp5(1114).intl;
-  obj[2] = intl.string(getSystemLocale.t.vFiCSx);
-  const items = [callback(closure_5, obj), ];
-  obj1 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
+  obj3.accessibilityLabel = intl.string(util.t.vFiCSx);
+  const items = [React7(hasOwnProperty, obj3), ];
+  const obj4 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
   const intl2 = tmp5(1114).intl;
-  obj1[1] = intl2.string(getSystemLocale.t.hvVgAZ);
-  obj1[2] = handleKrispLinkPressed.handleKrispLinkPressed;
-  const obj2 = { variant: "text-sm/medium", color: "text-link", children: null };
+  obj4.accessibilityLabel = intl2.string(util.t.hvVgAZ);
+  obj4.onPress = KrispLogo2.handleKrispLinkPressed;
+  const obj5 = { variant: "text-sm/medium", color: "text-link", children: null };
   const intl3 = tmp5(1114).intl;
-  obj2[2] = intl3.string(getSystemLocale.t.hvVgAZ);
-  obj1[3] = callback(Text.Text, obj2);
-  items[1] = callback(LegacyBaseButton.LegacyPressable, obj1);
-  obj[1] = items;
-  return callback2(closure_4, obj);
+  obj5.children = intl3.string(util.t.hvVgAZ);
+  obj4.children = React7(Text_Text.Text, obj5);
+  items[1] = React7(LegacyBaseButton.LegacyPressable, obj4);
+  obj2.children = items;
+  return closure_1_10(React4, obj2);
 }
 function SystemProcessingSubLabel() {
-  let obj = getNoiseCancellationDeferredToSystem;
   let tmp3 = null;
   if (obj.useNoiseCancellationDeferredToSystem()) {
-    obj = { variant: "text-sm/medium", children: null };
+    const obj2 = { variant: "text-sm/medium", children: null };
     const intl = tmp(1114).intl;
-    obj = { onSettingsClick: null };
-    obj[0] = function onSettingsClick() {
-      mediaEngine = mediaEngine.getMediaEngine();
-      const result = mediaEngine.showSystemCaptureConfigurationUI("microphone_modes");
+    const obj3 = {
+      onSettingsClick() {
+          mediaEngine = mediaEngine.getMediaEngine();
+          const result = mediaEngine.showSystemCaptureConfigurationUI("microphone_modes");
+        }
     };
-    obj[1] = intl.format(tmp(1114).t.EUNgko, obj);
-    tmp3 = callback(tmp(4556).Text, obj);
+    obj2.children = intl.format(tmp(1114).t.EUNgko, obj3);
+    tmp3 = React7(tmp(4570).Text, obj2);
   }
   return tmp3;
 }
-({ View: c4, Image: c5 } = get_ActivityIndicator);
-({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
-let closure_12 = "" + importDefaultResult.getArticleURL(HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING) + "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm";
-let closure_13 = createCacheKey.createStyles({ krisp: { marginTop: 8, flexDirection: "row", alignItems: "center" }, logo: { marginRight: 8, height: 30, width: 67 } });
-let result = require("set").fileFinishedImporting("modules/user_settings/voice/native/SettingsVoiceScreen.tsx");
+get_ActivityIndicator = fn(17);
+({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
+const MobileUserSettings = fn(7989).MobileUserSettings;
+const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
+let closure_12 = "" + HelpdeskUtils.getArticleURL(HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING) + "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm";
+const createStyles = fn(4574);
+let closure_13 = createStyles.createStyles({ krisp: { marginTop: 8, flexDirection: "row", alignItems: "center" }, logo: { marginRight: 8, height: 30, width: 67 } });
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/voice/native/SettingsVoiceScreen.tsx");
 
 export default function SettingsVoiceScreen() {
-  const node = React.useMemo(() => {
-    let obj = callback(11473);
-    obj = { sections: null };
-    obj = { label: null, settings: null };
-    const intl = callback(1114).intl;
-    obj[0] = intl.string(callback(1114).t.LKCupB);
+  const node = noop.useMemo(() => {
+    const obj2 = { sections: null };
+    const obj3 = { label: null, settings: null };
+    const intl = util.intl;
+    obj3.label = intl.string(util.t.LKCupB);
     const items = [, , ];
     ({ INPUT_MODE: arr[0], AUTO_VOICE_SENSITIVITY: arr[1], VOICE_SENSITIVITY: arr[2] } = constants);
-    obj[1] = items;
-    const items1 = [obj, , , , , , , ];
-    obj1 = { label: null, settings: null, subLabel: null };
-    const intl2 = callback(1114).intl;
-    obj1[0] = intl2.string(callback(1114).t.UXxPGB);
+    obj3.settings = items;
+    const items1 = [obj3, , , , , , , ];
+    const obj4 = { label: null, settings: null, subLabel: null };
+    const intl2 = util.intl;
+    obj4.label = intl2.string(util.t.UXxPGB);
     const items2 = [, ];
     ({ OUTPUT_VOLUME: arr3[0], STREAM_OUTPUT_VOLUME: arr3[1] } = constants);
-    obj1[1] = items2;
-    const intl3 = callback(1114).intl;
-    obj1[2] = intl3.format(callback(1114).t["V+B3FH"], { guideURL: closure_12 });
-    items1[1] = obj1;
-    const obj3 = { label: null, settings: null, subLabel: null };
-    const intl4 = callback(1114).intl;
-    obj3[0] = intl4.string(callback(1114).t.xbMc8r);
+    obj4.settings = items2;
+    const intl3 = util.intl;
+    obj4.subLabel = intl3.format(util.t["V+B3FH"], { guideURL });
+    items1[1] = obj4;
+    const obj6 = { label: null, settings: null, subLabel: null };
+    const intl4 = util.intl;
+    obj6.label = intl4.string(util.t.xbMc8r);
     const items3 = [constants.SOUNDBOARD_VOLUME];
-    obj3[1] = items3;
-    const intl5 = callback(1114).intl;
-    const obj4 = { helpCenterArticle: null };
-    let obj7 = callback2(2024);
-    obj4[0] = obj7.getArticleURL(constants2.SOUNDBOARD);
-    obj3[2] = intl5.format(callback(1114).t.BPbGq7, obj4);
-    items1[2] = obj3;
-    const obj5 = { label: null, settings: null };
-    const intl6 = callback(1114).intl;
-    obj5[0] = intl6.string(callback(1114).t.bNqkD9);
-    const items4 = [constants.ANDROID_MOBILE_OVERLAY];
-    obj5[1] = items4;
-    items1[3] = obj5;
-    const obj6 = { settings: items5, subLabel: null };
-    items5 = [constants.NOISE_SUPPRESSION_KRISP];
-    obj7 = { children: null };
-    const items6 = [callback3(closure_15, {}), callback3(closure_14, {})];
-    obj7[0] = items6;
-    obj6[1] = callback4(closure_11, obj7);
-    items1[4] = obj6;
-    const obj8 = { label: null, settings: null };
-    const intl7 = callback(1114).intl;
-    obj8[0] = intl7.string(callback(1114).t.t8Qhib);
-    const items7 = [constants.NOISE_SUPPRESSION];
-    obj8[1] = items7;
-    items1[5] = obj8;
+    obj6.settings = items3;
+    const intl5 = util.intl;
+    const obj7 = { helpCenterArticle: null };
+    const obj = SettingBuilders;
+    const obj5 = { guideURL };
+    obj7.helpCenterArticle = HelpdeskUtils.getArticleURL(constants2.SOUNDBOARD);
+    obj6.subLabel = intl5.format(util.t.BPbGq7, obj7);
+    items1[2] = obj6;
     const obj9 = { label: null, settings: null };
-    const intl8 = callback(1114).intl;
-    obj9[0] = intl8.string(callback(1114).t["6I6GUv"]);
+    const intl6 = util.intl;
+    obj9.label = intl6.string(util.t.bNqkD9);
+    const items4 = [constants.ANDROID_MOBILE_OVERLAY];
+    obj9.settings = items4;
+    items1[3] = obj9;
+    const obj10 = { settings: null, subLabel: null };
+    const items5 = [constants.NOISE_SUPPRESSION_KRISP];
+    obj10.settings = items5;
+    const obj11 = { children: null };
+    const items6 = [closure_1_9(SystemProcessingSubLabel, {}), closure_1_9(KrispLogo, {})];
+    obj11.children = items6;
+    obj10.subLabel = closure_1_10(closure_1_11, obj11);
+    items1[4] = obj10;
+    const obj12 = { label: null, settings: null };
+    const intl7 = util.intl;
+    obj12.label = intl7.string(util.t.t8Qhib);
+    const items7 = [constants.NOISE_SUPPRESSION];
+    obj12.settings = items7;
+    items1[5] = obj12;
+    const obj13 = { label: null, settings: null };
+    const intl8 = util.intl;
+    obj13.label = intl8.string(util.t["6I6GUv"]);
     const items8 = [, , , ];
     ({ ECHO_CANCELLATION: arr9[0], SIDECHAIN_COMPRESSION: arr9[1], AUTOMATIC_GAIN_CONTROL: arr9[2], ADVANCED_VOICE_ACTIVITY: arr9[3] } = constants);
-    obj9[1] = items8;
-    items1[6] = obj9;
-    const obj10 = { label: null, settings: null };
-    const intl9 = callback(1114).intl;
-    obj10[0] = intl9.string(callback(1114).t.OBwCXF);
+    obj13.settings = items8;
+    items1[6] = obj13;
+    const obj14 = { label: null, settings: null };
+    const intl9 = util.intl;
+    obj14.label = intl9.string(util.t.OBwCXF);
     const items9 = [constants.DISABLE_STREAM_PREVIEWS];
-    obj10[1] = items9;
-    items1[7] = obj10;
-    obj[0] = items1;
-    return obj.createList(obj);
+    obj14.settings = items9;
+    items1[7] = obj14;
+    obj2.sections = items1;
+    return obj.createList(obj2);
   }, []);
-  return callback(_modDef14692, { node });
+  return React7(SettingLayoutDefault, { node });
 };

@@ -1,21 +1,21 @@
-// Module ID: 10906
-// Function ID: 10907
+// Module ID: 10933
+// Function ID: 10934
 // Name: useDisplayNameStylesAccessibleColors
-// Dependencies: [19, 4552, 504, 1390, 10907, 4409, 672, 2]
+// Dependencies: [19, 4566, 504, 1390, 10934, 4423, 672, 2]
 // Exports: useDisplayNameStylesAccessibleColors
 
-// Module 10906 (useDisplayNameStylesAccessibleColors)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+// Module 10933 (useDisplayNameStylesAccessibleColors)
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesAccessibleColors.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesAccessibleColors.tsx");
 
 export const useDisplayNameStylesAccessibleColors = function useDisplayNameStylesAccessibleColors(displayNameStyles) {
   displayNameStyles = displayNameStyles.displayNameStyles;
   const backgroundColor = displayNameStyles.backgroundColor;
   let stateFromStores;
-  let effectId;
   let displayNameStylesEffectConfig;
   let items = [displayNameStylesEffectConfig];
   stateFromStores = displayNameStyles(stateFromStores[2]).useStateFromStores(items, () => {
@@ -25,14 +25,14 @@ export const useDisplayNameStylesAccessibleColors = function useDisplayNameStyle
     }
     return num;
   });
-  effectId = undefined;
+  let effectId;
   if (displayNameStyles != null) {
     effectId = displayNameStyles.effectId;
   }
   if (effectId == null) {
     effectId = tmp(tmp2[3]).DisplayNameEffect.SOLID;
   }
-  let obj = displayNameStyles(stateFromStores[2]);
+  const obj = displayNameStyles(stateFromStores[2]);
   displayNameStylesEffectConfig = displayNameStyles(stateFromStores[4]).useDisplayNameStylesEffectConfig(effectId);
   const items1 = [displayNameStyles, effectId, displayNameStylesEffectConfig.minContrastRatio, stateFromStores, backgroundColor];
   return effectId.useMemo(() => {
@@ -40,18 +40,17 @@ export const useDisplayNameStylesAccessibleColors = function useDisplayNameStyle
       let items = [];
     } else {
       const colors = tmp.colors;
-      items = colors.map((arg0) => {
-        let obj = closure_1_0(closure_1_2[5]);
-        obj = { foreground: closure_1_1(closure_1_2[6])(arg0), background: null, ratio: null, saturationFactor: null };
-        if (closure_3 === closure_1_0(closure_1_2[3]).DisplayNameEffect.TOON) {
+      items = colors.map((item) => {
+        const obj2 = { foreground: backgroundColor(stateFromStores[6])(item), background: null, ratio: null, saturationFactor: null };
+        if (effectId === displayNameStyles(stateFromStores[3]).DisplayNameEffect.TOON) {
           let tmp4 = tmp2(tmp[6])("#333");
         } else {
-          tmp4 = tmp2(tmp[6])(closure_1);
+          tmp4 = tmp2(tmp[6])(closure_1_1);
         }
-        obj[1] = tmp4;
-        obj[2] = minContrastRatio.minContrastRatio;
-        obj[3] = closure_2;
-        const accessibleForegroundColor = obj.getAccessibleForegroundColor(obj);
+        obj2.background = tmp4;
+        obj2.ratio = minContrastRatio.minContrastRatio;
+        obj2.saturationFactor = saturationFactor;
+        const accessibleForegroundColor = displayNameStyles(stateFromStores[5]).getAccessibleForegroundColor(obj2);
         return accessibleForegroundColor.hex();
       });
     }

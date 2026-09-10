@@ -1,13 +1,13 @@
-// Module ID: 9534
-// Function ID: 9535
+// Module ID: 9561
+// Function ID: 9562
 // Name: isActivitySupportedOnClientPlatform
 // Dependencies: [1115, 1894, 2]
 // Exports: default
 
-// Module 9534 (isActivitySupportedOnClientPlatform)
-import set from "set" /* 2 */;
+// Module 9561 (isActivitySupportedOnClientPlatform)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/activities/utils/isActivitySupportedOnClientPlatform.tsx");
+const result = size.fileFinishedImporting("modules/activities/utils/isActivitySupportedOnClientPlatform.tsx");
 
 export default function isActivitySupportedOnClientPlatform(arr) {
   if (obj.isIOS()) {

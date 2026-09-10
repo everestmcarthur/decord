@@ -1,15 +1,17 @@
-// Module ID: 8081
-// Function ID: 8082
-// Name: apexExperiment
+// Module ID: 8096
+// Function ID: 8097
+// Name: MobileFriendAnniversaryExperiment
 // Dependencies: [1433, 2]
 
-// Module 8081 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 8096 (MobileFriendAnniversaryExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null };
-obj[1] = { enabled: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-06-mobile-friendship-anniversary", kind: "user", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/premium/gifting/native/MobileFriendAnniversaryExperiment.tsx");
+const obj = { name: "2026-06-mobile-friendship-anniversary", kind: "user", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj.variations = obj2;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/premium/gifting/native/MobileFriendAnniversaryExperiment.tsx");
 
 export default apexExperiment;

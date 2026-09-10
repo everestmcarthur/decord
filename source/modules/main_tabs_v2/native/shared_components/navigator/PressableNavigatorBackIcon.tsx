@@ -1,42 +1,43 @@
-// Module ID: 7865
-// Function ID: 7866
+// Module ID: 7879
+// Function ID: 7880
 // Name: PressableNavigatorBackIcon
-// Dependencies: [19, 17, 1957, 7636, 2011, 21, 4560, 1178, 576, 504, 4378, 7866, 5123, 1114, 7867, 7868, 2]
+// Dependencies: [19, 17, 1957, 7650, 2011, 21, 4574, 1178, 576, 504, 4392, 7880, 5137, 1114, 7881, 7882, 2]
 
-// Module 7865 (PressableNavigatorBackIcon)
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 1178 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "ensureGuildLoaded" /* 1957 */;
-import closure_7 from "updateGuildUnreadSentinel" /* 7636 */;
-import closure_8 from "handleConnectionOpen" /* 2011 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 7879 (PressableNavigatorBackIcon)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7650 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
-require = arg1;
-let c3 = importAllResult;
-({ View: c4, Image: c5 } = get_ActivityIndicator);
-({ jsx: c9, jsxs: c10 } = jsxProd);
-let closure_11 = createCacheKey.createStyles(() => {
-  let obj = { maskWrapper: null, maskStroke: null, actionButtonPressable: null, actionButtonIcon: null };
-  obj = { position: "absolute", minWidth: Button.BADGE_SIZE, height: Button.BADGE_SIZE, top: 10, left: 8, flexShrink: 0, flexGrow: 1, zIndex: 100 };
-  obj[0] = obj;
-  obj = { backgroundColor: ThemesDefault.colors.PANEL_BG };
-  obj[1] = obj;
-  obj[2] = { padding: 8, zIndex: 100, borderRadius: 20 };
-  obj[3] = { tintColor: ThemesDefault.colors.ICON_SUBTLE };
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4574);
+let closure_11 = createStyles.createStyles(() => {
+  const obj = { maskWrapper: null, maskStroke: null, actionButtonPressable: null, actionButtonIcon: null };
+  const rect = { position: "absolute", minWidth: native.BADGE_SIZE, height: native.BADGE_SIZE, top: 10, left: 8, flexShrink: 0, flexGrow: 1, zIndex: 100 };
+  obj.maskWrapper = rect;
+  obj.maskStroke = { backgroundColor: nativeDefault.colors.PANEL_BG };
+  obj.actionButtonPressable = { padding: 8, zIndex: 100, borderRadius: 20 };
+  const obj2 = { backgroundColor: nativeDefault.colors.PANEL_BG };
+  obj.actionButtonIcon = { tintColor: nativeDefault.colors.ICON_SUBTLE };
   return obj;
 });
-const forwardRefResult = importAllResult.forwardRef((navigation, ref) => {
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorBackIcon.tsx");
+
+export const PressableNavigatorBackIcon = noop.forwardRef((navigation, ref) => {
   navigation = navigation.navigation;
   const onPress = navigation.onPress;
-  const merged = Object.assign(navigation, Object.create(null));
+  const merged = Object.assign(navigation, Object.assign({ navigation: 0, onPress: 0 }));
   let stateFromStores;
-  const tmp2 = callback();
-  let obj = navigation(stateFromStores[9]);
-  const items = [closure_7, closure_8, closure_6];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  const tmp2 = closure_11();
+  const items = [GuildReadStateStore, SelectedChannelStore, ChannelStore];
+  stateFromStores = navigation(stateFromStores[9]).useStateFromStores(items, () => {
     totalMentionCount = totalMentionCount.getTotalMentionCount();
     currentlySelectedChannelId = currentlySelectedChannelId.getCurrentlySelectedChannelId();
     if (null == currentlySelectedChannelId) {
@@ -54,27 +55,26 @@ const forwardRefResult = importAllResult.forwardRef((navigation, ref) => {
     }
     obj = totalMentionCount;
   });
-  obj1 = importAllResult;
   const items1 = [stateFromStores];
-  const memo = importAllResult.useMemo(() => {
+  const memo = noop.useMemo(() => {
     if (stateFromStores >= 10) {
       if (tmp < 100) {
-        let obj = { minWidth: null };
-        obj[0] = navigation(stateFromStores[7]).BADGE_SIZE + 8;
+        const obj2 = { minWidth: native.BADGE_SIZE + 8 };
+        let obj = obj2;
       } else {
-        obj = { minWidth: null };
-        obj[0] = navigation(stateFromStores[7]).BADGE_SIZE + 12;
+        obj = { minWidth: native.BADGE_SIZE + 12 };
       }
       return obj;
     }
   }, items1);
-  let obj2 = navigation(stateFromStores[10]);
-  let backgroundColor = obj2.useGradientValue(navigation(stateFromStores[10]).GradientPercentage.START);
+  let obj = navigation(stateFromStores[9]);
+  let obj2 = noop;
+  let backgroundColor = navigation(stateFromStores[10]).useGradientValue(navigation(stateFromStores[10]).GradientPercentage.START);
   if (null == backgroundColor) {
     backgroundColor = tmp2.maskStroke.backgroundColor;
   }
   const items2 = [navigation, onPress];
-  callback = obj1.useCallback(() => {
+  const callback = obj2.useCallback(() => {
     if (null == onPress) {
       if (navigation != null) {
         obj.goBack();
@@ -84,41 +84,33 @@ const forwardRefResult = importAllResult.forwardRef((navigation, ref) => {
       tmp();
     }
   }, items2);
-  obj = { ref };
+  const obj3 = navigation(stateFromStores[10]);
+  const obj4 = { ref };
   const merged1 = Object.assign(merged);
-  obj.accessibilityRole = "button";
+  obj4.accessibilityRole = "button";
   if (stateFromStores > 0) {
     const intl2 = tmp3(tmp4[13]).intl;
-    obj = { mentionCount: null };
-    obj[0] = stateFromStores;
-    let formatToPlainStringResult = intl2.formatToPlainString(tmp3(tmp4[13]).t.vxFYaM, obj);
+    const obj5 = { mentionCount: stateFromStores };
+    let formatToPlainStringResult = intl2.formatToPlainString(tmp3(tmp4[13]).t.vxFYaM, obj5);
   } else {
     const intl = tmp3(tmp4[13]).intl;
     formatToPlainStringResult = intl.string(tmp3(tmp4[13]).t["13/7kX"]);
   }
-  obj.accessibilityLabel = formatToPlainStringResult;
-  obj.onPress = callback;
-  obj.style = tmp2.actionButtonPressable;
-  obj1 = { source: tmp9(tmp4[14]), style: obj2 };
-  obj2 = { tintColor: tmp2.actionButtonIcon.tintColor };
-  const items3 = [closure_9(closure_5, obj1), ];
+  obj4.accessibilityLabel = formatToPlainStringResult;
+  obj4.onPress = callback;
+  obj4.style = tmp2.actionButtonPressable;
+  const tmp10 = onPress(stateFromStores[11]);
+  const items3 = [closure_9(closure_5, { source: onPress(stateFromStores[14]), style: { tintColor: tmp2.actionButtonIcon.tintColor } }), ];
   let tmp8Result = null;
   if (stateFromStores > 0) {
-    const obj3 = { style: null, children: null };
-    obj3[0] = tmp2.maskWrapper;
-    const obj4 = { value: null, maxValue: 99, backgroundColor: null, unread: false, style: null };
-    obj4[0] = stateFromStores;
-    obj4[2] = backgroundColor;
-    obj4[4] = memo;
-    obj3[1] = tmp8(tmp9(tmp4[15]), obj4);
-    tmp8Result = tmp8(tmp14, obj3);
+    const obj7 = { style: tmp2.maskWrapper, children: null };
+    const obj8 = { value: stateFromStores, maxValue: 99, backgroundColor, unread: false, style: memo };
+    obj7.children = tmp8(tmp9(tmp4[15]), obj8);
+    tmp8Result = tmp8(tmp14, obj7);
   }
-  const obj5 = { children: null };
+  const obj9 = { children: null };
   items3[1] = tmp8Result;
-  obj.children = closure_10(closure_4, { children: items3 });
-  obj5[0] = closure_9(navigation(stateFromStores[12]).PressableOpacity, obj);
-  return closure_9(onPress(stateFromStores[11]), obj5);
+  obj4.children = closure_10(closure_4, { children: items3 });
+  obj9.children = closure_9(navigation(stateFromStores[12]).PressableOpacity, obj4);
+  return closure_9(tmp10, obj9);
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorBackIcon.tsx");
-
-export const PressableNavigatorBackIcon = forwardRefResult;

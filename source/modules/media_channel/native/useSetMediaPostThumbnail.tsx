@@ -1,23 +1,28 @@
-// Module ID: 11241
-// Function ID: 11242
+// Module ID: 11268
+// Function ID: 11269
 // Name: useSetMediaPostThumbnail
-// Dependencies: [19, 4901, 4900, 563, 5128, 9312, 4527, 2]
+// Dependencies: [19, 4915, 4914, 563, 5142, 9339, 4541, 2]
 // Exports: default
 
-// Module 11241 (useSetMediaPostThumbnail)
-import closure_3 from "noop" /* 19 */;
-import { DraftType } from "handleChanged" /* 4901 */;
-import closure_5 from "map" /* 4900 */;
+// Module 11268 (useSetMediaPostThumbnail)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9339 */;
+import noop from "module_19" /* 19 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 4914 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/media_channel/native/useSetMediaPostThumbnail.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const DraftType = fn(4915).DraftType;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_channel/native/useSetMediaPostThumbnail.tsx");
 
 export default function useSetMediaPostThumbnail(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   closure_1 = arg1;
-  const items = [closure_5];
-  stateFromStores = _require(stateFromStores[3]).useStateFromStores(items, () => {
-    const uploads = closure_1_5.getUploads(closure_0, closure_1_4.ChannelMessage);
+  const items = [UploadAttachmentStore];
+  stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
+    const uploads = UploadAttachmentStore.getUploads(closure_0, DraftType.ChannelMessage);
     let found = uploads.find((item) => {
       let platform;
       if (item != null) {
@@ -26,7 +31,7 @@ export default function useSetMediaPostThumbnail(arg0, arg1) {
           platform = item.platform;
         }
       }
-      let tmp2 = platform === callback(table[4]).UploadPlatform.REACT_NATIVE;
+      let tmp2 = platform === closure_1_0(stateFromStores[4]).UploadPlatform.REACT_NATIVE;
       if (tmp2) {
         tmp2 = true === item.isThumbnail;
       }
@@ -38,9 +43,9 @@ export default function useSetMediaPostThumbnail(arg0, arg1) {
     return found;
   });
   const items1 = [stateFromStores, arg0, arg1];
-  return React.useCallback(() => {
+  return noop.useCallback(() => {
     let id;
-    if (callback != null) {
+    if (closure_1 != null) {
       id = tmp.id;
     }
     if (null != id) {
@@ -53,8 +58,8 @@ export default function useSetMediaPostThumbnail(arg0, arg1) {
         tmp4 = tmp24.id !== id1;
       }
       if (tmp4) {
-        let obj = callback(stateFromStores[5]);
-        obj.update(closure_0, tmp24.id, closure_1_4.ChannelMessage, { thumbnail: false });
+        const obj = UploadAttachmentActionCreatorsDefault;
+        obj.update(closure_0, tmp24.id, DraftType.ChannelMessage, { thumbnail: false });
       }
       let flag;
       if (tmp != null) {
@@ -63,16 +68,14 @@ export default function useSetMediaPostThumbnail(arg0, arg1) {
       if (flag == null) {
         flag = false;
       }
-      const obj2 = callback(stateFromStores[5]);
+      const obj2 = UploadAttachmentActionCreatorsDefault;
       let id2;
       if (tmp != null) {
         id2 = tmp.id;
       }
-      obj = { thumbnail: null, spoiler: false };
-      obj[0] = !flag;
-      obj2.update(closure_0, id2, closure_1_4.ChannelMessage, obj);
-      callback(stateFromStores[6]).hideActionSheet();
-      const obj4 = callback(stateFromStores[6]);
+      const obj3 = { thumbnail: !flag, spoiler: false };
+      obj2.update(closure_0, id2, DraftType.ChannelMessage, obj3);
+      ActionSheetActionCreatorsDefault.hideActionSheet();
     }
   }, items1);
 };

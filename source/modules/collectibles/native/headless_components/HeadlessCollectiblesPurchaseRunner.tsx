@@ -1,38 +1,37 @@
-// Module ID: 13169
-// Function ID: 13170
+// Module ID: 13192
+// Function ID: 13193
 // Name: HeadlessCollectiblesPurchaseRunner
-// Dependencies: [19, 7424, 13170, 2]
+// Dependencies: [19, 7438, 13193, 2]
 // Exports: HeadlessCollectiblesPurchaseRunner
 
-// Module 13169 (HeadlessCollectiblesPurchaseRunner)
-import closure_2 from "noop" /* 19 */;
-import { useNativeCheckoutStore } from "context" /* 7424 */;
+// Module 13192 (HeadlessCollectiblesPurchaseRunner)
+import useHandleBuyNowDefault from "useHandleBuyNow" /* 13193 */;
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/collectibles/native/headless_components/HeadlessCollectiblesPurchaseRunner.tsx");
+const useNativeCheckoutStore = fn(7438).useNativeCheckoutStore;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/headless_components/HeadlessCollectiblesPurchaseRunner.tsx");
 
 export const HeadlessCollectiblesPurchaseRunner = function HeadlessCollectiblesPurchaseRunner(attempt) {
   attempt = attempt.attempt;
-  dependencyMap = undefined;
-  let React;
   let handleBuyNow;
-  closure_4 = undefined;
   ({ product, analyticsLocations, onBuy, onBuySettled, stageCollectibleChangeForEditProfile } = attempt);
-  const tmp = handleBuyNow((orderRecord) => orderRecord.orderRecord);
-  dependencyMap = tmp;
-  const tmp2 = handleBuyNow((orderRequired) => orderRequired.orderRequired);
-  React = tmp2;
+  const tmp = useNativeCheckoutStore((orderRecord) => orderRecord.orderRecord);
+  closure_1 = tmp;
+  const tmp2 = useNativeCheckoutStore((orderRequired) => orderRequired.orderRequired);
+  closure_2 = tmp2;
   const obj = { product, analyticsLocations, onBuy, orderId: null, onBuySettled: null, stageCollectibleChangeForEditProfile: null };
   let id;
   if (tmp != null) {
     id = tmp.id;
   }
-  obj[3] = id;
-  obj[4] = onBuySettled;
-  obj[5] = stageCollectibleChangeForEditProfile;
-  handleBuyNow = attempt(13170)(obj).handleBuyNow;
-  closure_4 = React.useRef(0);
+  obj.orderId = id;
+  obj.onBuySettled = onBuySettled;
+  obj.stageCollectibleChangeForEditProfile = stageCollectibleChangeForEditProfile;
+  handleBuyNow = useHandleBuyNowDefault(obj).handleBuyNow;
+  noop.useRef(0);
   const items = [attempt, handleBuyNow, tmp, tmp2];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (ref.current !== attempt) {
       let tmp3 = closure_2;
       if (closure_2) {

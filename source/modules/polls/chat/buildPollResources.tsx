@@ -1,16 +1,16 @@
-// Module ID: 11727
-// Function ID: 11728
-// Dependencies: [11723, 12, 2]
+// Module ID: 11753
+// Function ID: 11754
+// Name: buildPollResources
+// Dependencies: [11749, 12, 2]
 
-// Module 11727
-import set from "set" /* 2 */;
-import buildPlatformPollResources from "buildPlatformPollResources" /* 11723 */;
-import apply from "apply" /* 12 */;
+// Module 11753 (buildPollResources)
+import buildPlatformPollResources from "buildPlatformPollResources" /* 11749 */;
+import apply from "module_12" /* 12 */;
+import size from "module_2" /* 2 */;
 
-const memoizeResult = apply.memoize(function buildPollResources(arg0) {
+const result = size.fileFinishedImporting("modules/polls/chat/buildPollResources.tsx");
+
+export default apply.memoize(function buildPollResources(arg0) {
   ({ theme, layoutType } = arg0);
   return buildPlatformPollResources.buildPlatformPollResources(theme, layoutType);
 }, (theme) => "" + theme.theme + ":" + theme.layoutType);
-const result = set.fileFinishedImporting("modules/polls/chat/buildPollResources.tsx");
-
-export default memoizeResult;

@@ -1,30 +1,29 @@
-// Module ID: 11019
-// Function ID: 11020
+// Module ID: 11046
+// Function ID: 11047
 // Name: useMobileCollectiblesPurchaseSKU
-// Dependencies: [1371, 504, 8853, 10820, 2]
+// Dependencies: [1371, 504, 8880, 10847, 2]
 // Exports: default
 
-// Module 11019 (useMobileCollectiblesPurchaseSKU)
+// Module 11046 (useMobileCollectiblesPurchaseSKU)
 import initialize from "initialize" /* 504 */;
-import hasAtLeastOneGPlaySynced from "hasAtLeastOneGPlaySynced" /* 8853 */;
-import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 10820 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8880 */;
+import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 10847 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/native/hooks/useMobileCollectiblesPurchaseSKU.android.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/hooks/useMobileCollectiblesPurchaseSKU.android.tsx");
 
 export default function useMobileCollectiblesPurchaseSKU(product) {
   product = product.product;
-  const merged = Object.assign(product, Object.create(null));
-  let obj = initialize;
-  const items = [closure_3];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const collectibleGoogleSkuId = hasAtLeastOneGPlaySynced.getCollectibleGoogleSkuId(product, stateFromStores);
-  obj = {};
-  const obj2 = hasAtLeastOneGPlaySynced;
+  const merged = Object.assign(product, Object.assign({ product: 0 }));
+  const items = [UserStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const collectibleGoogleSkuId = collectibles_CollectiblesUtils.getCollectibleGoogleSkuId(product, stateFromStores);
+  const obj3 = {};
   const merged1 = Object.assign(merged);
-  obj.skuId = product.skuId;
-  obj.platformSkuId = collectibleGoogleSkuId;
-  obj.isFreeForStaffSelfPurchase = true;
-  return useMobilePurchaseSKUDefault(obj);
+  obj3.skuId = product.skuId;
+  obj3.platformSkuId = collectibleGoogleSkuId;
+  obj3.isFreeForStaffSelfPurchase = true;
+  return useMobilePurchaseSKUDefault(obj3);
 };

@@ -1,38 +1,44 @@
-// Module ID: 15806
-// Function ID: 15807
+// Module ID: 15836
+// Function ID: 15837
 // Name: ProfileCustomizationTryItOutSettingScreen
-// Dependencies: [19, 17, 1371, 1074, 1373, 21, 4560, 576, 7162, 7182, 504, 10740, 8159, 8187, 7554, 15340, 15341, 8167, 1388, 1242, 14591, 2]
+// Dependencies: [19, 17, 1371, 1074, 1373, 21, 4574, 576, 7176, 7196, 504, 10767, 8185, 8213, 7568, 15369, 15370, 8193, 1388, 1242, 14616, 2]
 // Exports: default
 
-// Module 15806 (ProfileCustomizationTryItOutSettingScreen)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "mergeGuildAvatar" /* 1371 */;
-import ME from "ME" /* 1074 */;
-import { PremiumUpsellTypes } from "GuildFeatures" /* 1373 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15836 (ProfileCustomizationTryItOutSettingScreen)
+import nativeDefault from "native" /* 576 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1388 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7568 */;
+import UserProfileActionCreators from "UserProfileActionCreators" /* 8193 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8213 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-({ View: c4, ActivityIndicator: c5, StyleSheet } = get_ActivityIndicator);
-({ AnalyticEvents: error, AnalyticsPages: closure_8 } = ME);
-createCacheKey = { container: null, activityIndicator: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, ActivityIndicator: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
+const Constants = fn(1074);
+({ AnalyticEvents: closure_7, AnalyticsPages: closure_8 } = Constants);
+const PremiumUpsellTypes = fn(1373).PremiumUpsellTypes;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { container: null, activityIndicator: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { height: "100%", alignItems: "center", justifyContent: "center" };
-let closure_11 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/user_settings/premium/native/ProfileCustomizationTryItOutSettingScreen.tsx");
+obj2.container = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+obj2.activityIndicator = { height: "100%", alignItems: "center", justifyContent: "center" };
+let closure_11 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/premium/native/ProfileCustomizationTryItOutSettingScreen.tsx");
 
 export default function ProfileCustomizationTryItOutSettingScreen() {
-  let tmp = callback();
+  let tmp = closure_11();
   const tmp2 = stateFromStores;
   const tmp4 = stateFromStores(categories[8]);
   ({ analyticsLocations, sourceAnalyticsLocations } = stateFromStores(categories[8])(stateFromStores(categories[9]).USER_SETTINGS_TRY_OUT_PREMIUM));
-  let obj = sourceAnalyticsLocations(categories[10]);
+  const tmp4Result = stateFromStores(categories[8])(stateFromStores(categories[9]).USER_SETTINGS_TRY_OUT_PREMIUM);
+  const tmp6 = sourceAnalyticsLocations;
   const items = [visibleEffectOrder];
-  stateFromStores = obj.useStateFromStores(items, () => visibleEffectOrder.getCurrentUser());
+  stateFromStores = sourceAnalyticsLocations(categories[10]).useStateFromStores(items, () => visibleEffectOrder.getCurrentUser());
   const tmp8 = stateFromStores(categories[11])();
   categories = tmp8.categories;
   const tmp9 = stateFromStores(categories[12])({ isTryItOut: true, analyticsLocations });
@@ -41,53 +47,45 @@ export default function ProfileCustomizationTryItOutSettingScreen() {
   const items1 = [stateFromStores];
   const effect = pendingAvatarDecoration.useEffect(() => {
     if (null != stateFromStores) {
-      stateFromStores(categories[13])(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
-      const tmp3 = stateFromStores(categories[13]);
+      maybeFetchUserProfileDefault(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
     }
   }, items1);
   const items2 = [pendingAvatarDecoration, setPendingAvatarDecoration, categories];
   const effect1 = pendingAvatarDecoration.useEffect(() => {
     if (undefined === pendingAvatarDecoration) {
-      const avatarDecorationsFromCategories = sourceAnalyticsLocations(categories[14]).getAvatarDecorationsFromCategories(categories);
+      const avatarDecorationsFromCategories = CollectiblesUtils.getAvatarDecorationsFromCategories(categories);
       const _Math = Math;
       const _Math2 = Math;
       setPendingAvatarDecoration(avatarDecorationsFromCategories[Math.floor(Math, Math.random(Math) * avatarDecorationsFromCategories.length)]);
-      const obj = sourceAnalyticsLocations(categories[14]);
     }
   }, items2);
-  obj1 = sourceAnalyticsLocations(categories[15]);
-  const visibleFontOrder = obj1.useVisibleFontOrder();
-  let obj2 = sourceAnalyticsLocations(categories[16]);
-  visibleEffectOrder = obj2.useVisibleEffectOrder();
+  let obj = sourceAnalyticsLocations(categories[10]);
+  const visibleFontOrder = sourceAnalyticsLocations(categories[15]).useVisibleFontOrder();
+  let obj2 = sourceAnalyticsLocations(categories[15]);
+  visibleEffectOrder = sourceAnalyticsLocations(categories[16]).useVisibleEffectOrder();
   const items3 = [visibleFontOrder, visibleEffectOrder];
   const effect2 = pendingAvatarDecoration.useEffect(() => {
-    const obj = sourceAnalyticsLocations(categories[17]);
-    const result = obj.setTryItOutDisplayNameStyles(sourceAnalyticsLocations(categories[18]).generateRandomDisplayNameStyles(visibleFontOrder, visibleEffectOrder));
+    const obj = UserProfileActionCreators;
+    const result = obj.setTryItOutDisplayNameStyles(DisplayNameStylesUtils.generateRandomDisplayNameStyles(visibleFontOrder, visibleEffectOrder));
   }, items3);
   const items4 = [sourceAnalyticsLocations];
   const effect3 = pendingAvatarDecoration.useEffect(() => {
-    let obj = stateFromStores(categories[19]);
-    obj = { type: closure_1_9.PREMIUM_PROFILE_TRY_IT_OUT, location: obj, location_stack: sourceAnalyticsLocations };
-    obj = { page: closure_1_8.USER_SETTINGS };
-    obj.track(closure_1_7.PREMIUM_UPSELL_VIEWED, obj);
+    const obj2 = { type: PremiumUpsellTypes.PREMIUM_PROFILE_TRY_IT_OUT, location: { page: constants2.USER_SETTINGS }, location_stack: sourceAnalyticsLocations };
+    AnalyticsUtilsDefault.track(constants.PREMIUM_UPSELL_VIEWED, obj2);
   }, items4);
   if (null == stateFromStores) {
     return null;
   } else if (tmp8.isFetching) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.activityIndicator;
+    const obj4 = { style: tmp.activityIndicator, children: null };
     tmp = visibleFontOrder;
-    obj[1] = <visibleFontOrder animating size="large" />;
-    let tmp18 = <setPendingAvatarDecoration style={null}>{null}</setPendingAvatarDecoration>;
+    obj4.children = <visibleFontOrder animating size="large" />;
+    let tmp18 = <setPendingAvatarDecoration style={tmp.activityIndicator}>{null}</setPendingAvatarDecoration>;
   } else if (undefined !== pendingAvatarDecoration) {
-    obj = { value: null, children: null };
-    obj[0] = analyticsLocations;
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.container;
-    obj2 = { currentUser: null, isTryItOut: true };
-    obj2[0] = stateFromStores;
-    obj1[1] = jsx(tmp2(tmp3[20]), { currentUser: null, isTryItOut: true });
-    obj[1] = <setPendingAvatarDecoration style={null}>{null}</setPendingAvatarDecoration>;
-    tmp18 = jsx(sourceAnalyticsLocations(tmp3[8]).AnalyticsLocationProvider, { value: null, children: null });
+    const obj5 = { value: analyticsLocations, children: null };
+    const obj6 = { style: tmp.container, children: null };
+    const obj7 = { currentUser: stateFromStores, isTryItOut: true };
+    obj6.children = jsx(tmp2(tmp3[20]), { currentUser: stateFromStores, isTryItOut: true });
+    obj5.children = <setPendingAvatarDecoration style={tmp.container}>{null}</setPendingAvatarDecoration>;
+    tmp18 = jsx(tmp6(tmp3[8]).AnalyticsLocationProvider, { value: analyticsLocations, children: null });
   }
 };

@@ -1,25 +1,28 @@
-// Module ID: 10251
-// Function ID: 10252
+// Module ID: 10278
+// Function ID: 10279
 // Name: markChannelUnread
-// Dependencies: [4575, 10252, 504, 2]
+// Dependencies: [4589, 10279, 504, 2]
 // Exports: default, useCanMarkChannelUnread
 
-// Module 10251 (markChannelUnread)
-import _markUnreadDefault from "_markUnread" /* 10252 */;
-import closure_3 from "generateOldThreadCutoff" /* 4575 */;
-import { ReadState } from "generateOldThreadCutoff" /* 4575 */;
+// Module 10278 (markChannelUnread)
+import markUnreadDefault from "markUnread" /* 10279 */;
+import ReadStateStore from "ReadStateStore" /* 4589 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/channel/markChannelUnread.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const ReadState = fn(4589).ReadState;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel/markChannelUnread.tsx");
 
 export default function markChannelUnread(arg0) {
   const lastMessageId = ReadState.get(arg0).lastMessageId;
   if (null != lastMessageId) {
-    _markUnreadDefault(arg0, lastMessageId);
+    markUnreadDefault(arg0, lastMessageId);
   }
 };
 export const useCanMarkChannelUnread = function useCanMarkChannelUnread(channel) {
-  const _require = channel;
-  const items = [closure_3];
-  return _require(504).useStateFromStores(items, () => closure_1_3.canBeUnread(id.id) && closure_1_3.hasLastMessage(id.id) && !id.isCategory());
+  _require = channel;
+  const items = [ReadStateStore];
+  return require("initialize").useStateFromStores(items, () => ReadStateStore.canBeUnread(id.id) && ReadStateStore.hasLastMessage(id.id) && !id.isCategory());
 };

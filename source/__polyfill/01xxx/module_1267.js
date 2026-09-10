@@ -13,4 +13,5 @@ if (randomUUID) {
   const _crypto2 = crypto;
   randomUUID = randomUUID2.bind(crypto);
 }
-arg5.default = { randomUUID };
+
+export default { randomUUID };

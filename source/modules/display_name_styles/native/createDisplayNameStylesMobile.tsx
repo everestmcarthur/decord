@@ -1,20 +1,21 @@
-// Module ID: 7963
-// Function ID: 7964
+// Module ID: 7977
+// Function ID: 7978
 // Name: createDisplayNameStylesMobile
-// Dependencies: [4552, 2021, 1371, 1391, 2]
+// Dependencies: [4566, 2021, 1371, 1391, 2]
 // Exports: createDisplayNameStylesMobile, getDisplayNameFontIdForMobileUser
 
-// Module 7963 (createDisplayNameStylesMobile)
+// Module 7977 (createDisplayNameStylesMobile)
 import DisplayNameFont from "DisplayNameFont" /* 1391 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import closure_3 from "trackCommunicationDisabled" /* 2021 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/display_name_styles/native/createDisplayNameStylesMobile.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/display_name_styles/native/createDisplayNameStylesMobile.tsx");
 
 export const createDisplayNameStylesMobile = function createDisplayNameStylesMobile(author, member) {
-  const currentUser = authStore.getCurrentUser();
+  const currentUser = UserStore.getCurrentUser();
   let displayNameStyles = author.displayNameStyles;
   if (tmp2) {
     displayNameStyles = currentUser.displayNameStyles;
@@ -34,9 +35,8 @@ export const createDisplayNameStylesMobile = function createDisplayNameStylesMob
     fontId = fontId1;
   }
   if (null != fontId) {
-    if (closure_2.displayNameStylesEnabled) {
-      const obj = { fontId: null };
-      obj[0] = fontId;
+    if (AccessibilityStore.displayNameStylesEnabled) {
+      const obj = { fontId };
       return obj;
     }
   }
@@ -45,9 +45,9 @@ export const getDisplayNameFontIdForMobileUser = function getDisplayNameFontIdFo
   if (null != user) {
     let member = null;
     if (null != guildId) {
-      member = member.getMember(guildId, user.id);
+      member = GuildMemberStore.getMember(guildId, user.id);
     }
-    const currentUser = authStore.getCurrentUser();
+    const currentUser = UserStore.getCurrentUser();
     let displayNameStyles = user.displayNameStyles;
     if (tmp6) {
       displayNameStyles = currentUser.displayNameStyles;
@@ -68,9 +68,8 @@ export const getDisplayNameFontIdForMobileUser = function getDisplayNameFontIdFo
     }
     let tmp9;
     if (null != fontId) {
-      if (closure_2.displayNameStylesEnabled) {
-        const obj = { fontId: null };
-        obj[0] = fontId;
+      if (AccessibilityStore.displayNameStylesEnabled) {
+        const obj = { fontId };
         tmp9 = obj;
       }
     }

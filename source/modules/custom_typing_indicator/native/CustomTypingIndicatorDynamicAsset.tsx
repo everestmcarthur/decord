@@ -1,28 +1,30 @@
-// Module ID: 11974
-// Function ID: 11975
+// Module ID: 12000
+// Function ID: 12001
 // Name: CustomTypingIndicatorDynamicAsset
-// Dependencies: [19, 17, 21, 4560, 4973, 5587, 4556, 1114, 11975, 2]
+// Dependencies: [19, 17, 21, 4574, 4987, 5601, 4570, 1114, 12001, 2]
 // Exports: default
 
-// Module 11974 (CustomTypingIndicatorDynamicAsset)
-import noopAll from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12000 (CustomTypingIndicatorDynamicAsset)
+import FastImageDefault from "FastImage" /* 5601 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles((width, gap) => {
-  const emojiRow = { flexDirection: "row", gap };
-  const emoji = { width, height: width };
-  return { emojiRow, emoji, text: { flexShrink: 1 } };
+const require = globalThis.__r;
+
+const require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let closure_6 = createStyles.createStyles((width, gap) => {
+  const obj = { emojiRow: { flexDirection: "row", gap }, emoji: { width, height: width }, text: { flexShrink: 1 } };
+  return obj;
 });
-const result = require("set").fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorDynamicAsset.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorDynamicAsset.tsx");
 
 export default function CustomTypingIndicatorDynamicAsset(arg0) {
   ({ spacing, emojiGap, emojiSource } = arg0);
-  let _require;
+  _require = undefined;
   ({ name, suggestion, emojiSize, textVariant, textColor, textStyle, lineClamp, style } = arg0);
   if (emojiGap == null) {
     emojiGap = spacing;
@@ -30,20 +32,29 @@ export default function CustomTypingIndicatorDynamicAsset(arg0) {
   const tmpResult = closure_6(emojiSize, emojiGap);
   _require = tmpResult;
   let obj = { direction: "horizontal", spacing, align: "center", justify: "flex-start", style, children: null };
-  obj = {
+  const items = [
+    closure_4(View, {
+      style: tmpResult.emojiRow,
+      children: emojiSource.map((uri, index) => {
+        const obj = { fadeDuration: 0, source: { uri }, style: emoji.emoji };
+        return React4(FastImageDefault, obj, index);
+      })
+    }),
+
+  ];
+  const obj3 = { variant: textVariant, color: textColor, lineClamp, includeFontPadding: true, style: null, children: null };
+  const items1 = [tmpResult.text, textStyle];
+  obj3.style = items1;
+  const intl = require("util").intl;
+  const obj2 = {
     style: tmpResult.emojiRow,
-    children: emojiSource.map((uri) => {
-      obj = { fadeDuration: 0, source: obj, style: emoji.emoji };
-      obj = { uri };
-      return closure_1_4(closure_1_1(closure_1_2[5]), obj, arg1);
+    children: emojiSource.map((uri, index) => {
+      const obj = { fadeDuration: 0, source: { uri }, style: emoji.emoji };
+      return React4(FastImageDefault, obj, index);
     })
   };
-  const items = [callback(View, obj), ];
-  obj = { variant: textVariant, color: textColor, lineClamp, includeFontPadding: true, style: items1, children: null };
-  items1 = [tmpResult.text, textStyle];
-  const intl = _require(1114).intl;
-  obj[5] = intl.format(_require(11975).getCustomTypingIndicatorSuggestionWithNameMessage(suggestion), { name });
-  items[1] = callback(_require(4556).Text, obj);
-  obj[5] = items;
-  return callback2(_require(4973).Stack, obj);
+  obj3.children = intl.format(require("CustomTypingIndicatorUtils").getCustomTypingIndicatorSuggestionWithNameMessage(suggestion), { name });
+  items[1] = closure_4(require("Text/Text").Text, obj3);
+  obj.children = items;
+  return closure_5(require("Stack/Stack").Stack, obj);
 };

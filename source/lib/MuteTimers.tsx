@@ -1,13 +1,13 @@
-// Module ID: 4202
-// Function ID: 4203
-// Name: reset
+// Module ID: 4215
+// Function ID: 4216
+// Name: MuteTimers
 // Dependencies: [2]
 // Exports: computeIsMuted, isTemporarilyMuted
 
-// Module 4202 (reset)
-import set from "set" /* 2 */;
+// Module 4215 (MuteTimers)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("lib/MuteTimers.tsx");
+const result = size.fileFinishedImporting("lib/MuteTimers.tsx");
 class MuteTimers {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -18,7 +18,7 @@ class MuteTimers {
 const prototype = MuteTimers.prototype;
 prototype["reset"] = function reset() {
   const values = Object.values(this.timers);
-  const item = values.forEach((arg0) => clearTimeout(arg0));
+  const item = values.forEach((item) => clearTimeout(item));
   this.timers = {};
 };
 prototype["setTimer"] = function setTimer(id, muteConfig, arg2) {

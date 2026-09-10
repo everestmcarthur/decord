@@ -1,41 +1,43 @@
-// Module ID: 12205
-// Function ID: 12206
-// Name: PollDurationRadioGroup
-// Dependencies: [19, 21, 12204, 4272, 4527, 5685, 1114, 5688, 7198, 2]
+// Module ID: 12231
+// Function ID: 12232
+// Name: PollDurationActionSheet
+// Dependencies: [19, 21, 12230, 4285, 4541, 5699, 1114, 5702, 7211, 2]
 // Exports: default
 
-// Module 12205 (PollDurationRadioGroup)
-import ActionSheet from "ActionSheet" /* 7198 */;
-import usePollDurationOptionsDefault from "usePollDurationOptions" /* 12204 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 12231 (PollDurationActionSheet)
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4285 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import ActionSheet from "ActionSheet" /* 7211 */;
+import usePollDurationOptionsDefault from "usePollDurationOptions" /* 12230 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function PollDurationRadioGroup(onChange) {
   onChange = onChange.onChange;
-  importDefault = undefined;
   const tmp = usePollDurationOptionsDefault();
   importDefault = tmp;
   const items = [tmp, onChange];
-  const callback = React.useCallback((arg0) => {
+  const callback = noop.useCallback((arg0) => {
     onChange(arg0);
-    const AccessibilityAnnouncer = onChange(closure_1_2[3]).AccessibilityAnnouncer;
-    AccessibilityAnnouncer.announce(dependencyMap[arg0]);
-    dependencyMap(closure_1_2[4]).hideActionSheet();
+    const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
+    AccessibilityAnnouncer.announce(closure_1[arg0]);
+    ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items);
   const obj = { title: null, hasIcons: false, onChange: null, defaultValue: null, children: null };
   const intl = onChange(1114).intl;
-  obj[0] = intl.string(onChange(1114).t["0ZStp9"]);
-  obj[2] = callback;
-  obj[3] = onChange.selectedDuration;
+  obj.title = intl.string(onChange(1114).t["0ZStp9"]);
+  obj.onChange = callback;
+  obj.defaultValue = onChange.selectedDuration;
   const entries = Object.entries(tmp);
-  obj[4] = entries.map((arg0) => {
-    [tmp, tmp2] = arg0;
-    return callback(onChange(table[7]).TableRadioRow, { value: parseInt(tmp), label: tmp2 }, tmp);
+  obj.children = entries.map((item) => {
+    [tmp, tmp2] = item;
+    return jsx(onChange(dependencyMap[7]).TableRadioRow, { value: parseInt(tmp), label: tmp2 }, tmp);
   });
-  return jsx(onChange(5685).TableRadioGroup, { title: null, hasIcons: false, onChange: null, defaultValue: null, children: null });
+  return jsx(onChange(5699).TableRadioGroup, { title: null, hasIcons: false, onChange: null, defaultValue: null, children: null });
 }
-const result = require("set").fileFinishedImporting("modules/polls/native/PollDurationActionSheet.tsx");
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/polls/native/PollDurationActionSheet.tsx");
 
 export default function PollDurationActionSheet(arg0) {
   ({ selectedDuration, onChange } = arg0);

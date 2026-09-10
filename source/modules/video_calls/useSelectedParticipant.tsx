@@ -1,17 +1,20 @@
-// Module ID: 9475
-// Function ID: 9476
+// Module ID: 9502
+// Function ID: 9503
 // Name: useSelectedParticipant
-// Dependencies: [4576, 504, 2]
+// Dependencies: [4590, 504, 2]
 // Exports: default
 
-// Module 9475 (useSelectedParticipant)
-import closure_2 from "getParticipants" /* 4576 */;
+// Module 9502 (useSelectedParticipant)
+import ChannelRTCStore from "ChannelRTCStore" /* 4590 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/video_calls/useSelectedParticipant.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/useSelectedParticipant.tsx");
 
 export default function useSelectedParticipant(arg0) {
-  const _require = arg0;
-  const items = [closure_2];
-  return _require(504).useStateFromStores(items, () => closure_1_2.getSelectedParticipant(id.id));
+  _require = arg0;
+  const items = [ChannelRTCStore];
+  return require("initialize").useStateFromStores(items, () => ChannelRTCStore.getSelectedParticipant(id.id));
 };

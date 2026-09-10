@@ -1,28 +1,29 @@
-// Module ID: 15874
-// Function ID: 15875
+// Module ID: 15904
+// Function ID: 15905
 // Name: useUserSafetySettingsSelectedGuildId
-// Dependencies: [1979, 15872, 1074, 504, 2]
+// Dependencies: [1979, 15902, 1074, 504, 2]
 // Exports: useAllServersOptionSelected, useIsSelectedGuildAHub, useUserSafetySettingsSelectedGuildId
 
-// Module 15874 (useUserSafetySettingsSelectedGuildId)
-import closure_2 from "createGuildRecordFromRust" /* 1979 */;
-import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 15872 */;
-import { GuildFeatures } from "ME" /* 1074 */;
+// Module 15904 (useUserSafetySettingsSelectedGuildId)
+import GuildStore from "GuildStore" /* 1979 */;
 
-const require = arg1;
-({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: c3, useUserSafetySettingsSelectedGuildStore: c4 } = GUILD_SELECT_ALL_SERVERS_OPTION_ID);
-const result = require("set").fileFinishedImporting("modules/user_settings/privacy_and_safety/useUserSafetySettingsSelectedGuildId.tsx");
+const require = fn;
+const UserSettingsSafetySelectedGuildStore = fn(15902);
+({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: c3, useUserSafetySettingsSelectedGuildStore: closure_4 } = UserSettingsSafetySelectedGuildStore);
+const GuildFeatures = fn(1074).GuildFeatures;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/privacy_and_safety/useUserSafetySettingsSelectedGuildId.tsx");
 
 export const useUserSafetySettingsSelectedGuildId = function useUserSafetySettingsSelectedGuildId() {
-  return callback().selectedGuildId;
+  return React4().selectedGuildId;
 };
 export const useAllServersOptionSelected = function useAllServersOptionSelected() {
-  return callback().selectedGuildId === closure_3;
+  return React4().selectedGuildId === React3;
 };
 export const useIsSelectedGuildAHub = function useIsSelectedGuildAHub() {
-  const selectedGuildId = callback().selectedGuildId;
-  const items = [closure_2];
-  const stateFromStores = selectedGuildId(504).useStateFromStores(items, () => closure_1_2.getGuild(selectedGuildId));
+  const selectedGuildId = closure_4().selectedGuildId;
+  const items = [GuildStore];
+  const stateFromStores = selectedGuildId(504).useStateFromStores(items, () => GuildStore.getGuild(selectedGuildId));
   let flag;
   if (stateFromStores != null) {
     const features = stateFromStores.features;

@@ -1,40 +1,43 @@
-// Module ID: 10168
-// Function ID: 10169
+// Module ID: 10195
+// Function ID: 10196
 // Name: NotificationSettingsMessageUnread
-// Dependencies: [19, 17, 21, 4560, 576, 10162, 4556, 1114, 5123, 10169, 10160, 4527, 10171, 1896, 10154, 10173, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 10189, 4570, 1114, 5137, 10196, 10187, 4541, 10198, 1896, 10181, 10200, 2]
 // Exports: NotificationSettingsChannelMessageUnread, NotificationSettingsGuildMessageUnread
 
-// Module 10168 (NotificationSettingsMessageUnread)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import NotificationSettingsMockChannelsDefault from "NotificationSettingsMockChannels" /* 10169 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10195 (NotificationSettingsMessageUnread)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Pressables from "Pressables" /* 5137 */;
+import notificationSettingsPresetOptionUtils from "notificationSettingsPresetOptionUtils" /* 10189 */;
+import NotificationSettingsMockChannelsDefault from "NotificationSettingsMockChannels" /* 10196 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+const require = globalThis.__r;
+
+require = fn;
 function NotificationSettingsMessageUnread(onPress) {
-  const _require = onPress;
-  const tmp = callback3();
-  let obj = _require(10162);
-  const unreadSelectOptions = obj.getUnreadSelectOptions();
+  const tmp = closure_6();
+  const unreadSelectOptions = notificationSettingsPresetOptionUtils.getUnreadSelectOptions();
   const found = unreadSelectOptions.find((value) => value.value === onPress.setting);
-  obj = { style: onPress.style, children: null };
-  obj = { style: tmp.header, children: null };
-  obj1 = { variant: "text-sm/semibold", color: "text-default", style: tmp.headerTitle, children: null };
-  const intl = _require(1114).intl;
-  obj1[3] = intl.string(_require(1114).t.Tqd1Af);
-  const items = [callback(_require(4556).Text, obj1), ];
-  const obj2 = { variant: "text-xs/semibold", color: "text-default", children: null };
-  const intl2 = _require(1114).intl;
-  obj2[2] = intl2.string(_require(1114).t.RpQgm5);
-  items[1] = callback(_require(4556).Text, obj2);
-  obj[1] = items;
-  const items1 = [callback2(View, obj), ];
-  const obj3 = { onPress: onPress.onCustomize, activeOpacity: 0.6, children: null };
-  const obj4 = { style: tmp.card, children: null };
-  const items2 = [callback(NotificationSettingsMockChannelsDefault, { unreadSetting: onPress.setting }), , ];
-  const obj6 = { variant: "text-sm/medium", style: tmp.label, children: null };
+  const obj2 = { style: onPress.style, children: null };
+  const obj3 = { style: tmp.header, children: null };
+  const obj4 = { variant: "text-sm/semibold", color: "text-default", style: tmp.headerTitle, children: null };
+  const intl = util.intl;
+  obj4.children = intl.string(util.t.Tqd1Af);
+  const items = [React4(Text_Text.Text, obj4), ];
+  const obj5 = { variant: "text-xs/semibold", color: "text-default", children: null };
+  const intl2 = util.intl;
+  obj5.children = intl2.string(util.t.RpQgm5);
+  items[1] = React4(Text_Text.Text, obj5);
+  obj3.children = items;
+  const items1 = [hasOwnProperty(View, obj3), ];
+  const obj6 = { onPress: onPress.onCustomize, activeOpacity: 0.6, children: null };
+  const obj7 = { style: tmp.card, children: null };
+  const items2 = [React4(NotificationSettingsMockChannelsDefault, { unreadSetting: onPress.setting }), , ];
+  const obj9 = { variant: "text-sm/medium", style: tmp.label, children: null };
   let str;
   if (found != null) {
     str = found.label;
@@ -42,56 +45,49 @@ function NotificationSettingsMessageUnread(onPress) {
   if (str == null) {
     str = "unset";
   }
-  obj6[2] = str;
-  items2[1] = callback(_require(4556).Text, obj6);
-  const obj7 = { onPress: onPress.onCustomize, children: null };
-  const obj8 = { variant: "text-sm/semibold", style: tmp.cta, color: "text-brand", children: null };
+  obj9.children = str;
+  items2[1] = React4(Text_Text.Text, obj9);
+  const obj10 = { onPress: onPress.onCustomize, children: null };
+  const obj11 = { variant: "text-sm/semibold", style: tmp.cta, color: "text-brand", children: null };
   const intl3 = tmp2(1114).intl;
-  const items3 = [intl3.string(_require(1114).t.yxiV9W), " "];
-  obj8[3] = items3;
-  obj7[1] = callback2(_require(4556).Text, obj8);
-  items2[2] = callback(_require(5123).PressableOpacity, obj7);
-  obj4[1] = items2;
-  obj3[2] = callback2(View, obj4);
-  items1[1] = callback(_require(5123).PressableOpacity, obj3);
-  obj[1] = items1;
-  return callback2(View, obj);
+  const items3 = [intl3.string(util.t.yxiV9W), " "];
+  obj11.children = items3;
+  obj10.children = hasOwnProperty(Text_Text.Text, obj11);
+  items2[2] = React4(Pressables.PressableOpacity, obj10);
+  obj7.children = items2;
+  obj6.children = hasOwnProperty(View, obj7);
+  items1[1] = React4(Pressables.PressableOpacity, obj6);
+  obj2.children = items1;
+  return hasOwnProperty(View, obj2);
 }
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { card: null, cta: null, label: null, header: null, headerTitle: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 20, borderWidth: 1, padding: 14 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginTop: 4, textAlign: "center" };
-createCacheKey[2] = { marginTop: 8, textAlign: "center" };
-createCacheKey[3] = { marginBottom: 8 };
-createCacheKey[4] = { marginBottom: 4 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageUnread.tsx");
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 20, borderWidth: 1, padding: 14 }, cta: { marginTop: 4, textAlign: "center" }, label: { marginTop: 8, textAlign: "center" }, header: { marginBottom: 8 }, headerTitle: { marginBottom: 4 } };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageUnread.tsx");
 
 export const NotificationSettingsGuildMessageUnread = function NotificationSettingsGuildMessageUnread(style) {
-  const _require = style;
-  let obj = {
+  _require = style;
+  const obj = {
     style: style.style,
-    setting: _require(10160).useGuildPresetSettings(style.guildId).unread,
+    setting: require("notificationSettingsGuildFlagUtils").useGuildPresetSettings(style.guildId).unread,
     onCustomize() {
-      let obj = closure_1_1(closure_1_2[11]);
-      obj = { guildId: style.guildId };
-      obj.openLazy(style(closure_1_2[13])(closure_1_2[12], closure_1_2.paths), "MessageUnreadActionSheet", obj);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10198, dependencyMap.paths), "MessageUnreadActionSheet", { guildId: style.guildId });
     }
   };
-  return callback(NotificationSettingsMessageUnread, obj);
+  return closure_4(NotificationSettingsMessageUnread, obj);
 };
 export const NotificationSettingsChannelMessageUnread = function NotificationSettingsChannelMessageUnread(style) {
-  const _require = style;
-  let obj = {
+  _require = style;
+  const obj = {
     style: style.style,
-    setting: _require(10154).useChannelPresetSettings(style.channel).unread,
+    setting: require("notficationSettingsChannelFlagUtils").useChannelPresetSettings(style.channel).unread,
     onCustomize() {
-      let obj = closure_1_1(closure_1_2[11]);
-      obj = { channel: style.channel };
-      obj.openLazy(style(closure_1_2[13])(closure_1_2[15], closure_1_2.paths), "MessageUnreadActionSheet", obj);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10200, dependencyMap.paths), "MessageUnreadActionSheet", { channel: style.channel });
     }
   };
-  return callback(NotificationSettingsMessageUnread, obj);
+  return closure_4(NotificationSettingsMessageUnread, obj);
 };

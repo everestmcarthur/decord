@@ -1,20 +1,21 @@
-// Module ID: 9504
-// Function ID: 9505
-// Name: CircleWithCutout
-// Dependencies: [19, 21, 8456, 2]
+// Module ID: 9531
+// Function ID: 9532
+// Name: CircleWithCutoutUtils
+// Dependencies: [19, 21, 8484, 2]
 // Exports: default, getBadgeLeft, getBadgeTop, getCutoutCenterX, getCutoutCenterY
 
-// Module 9504 (CircleWithCutout)
-import noopAll from "noop" /* 19 */;
-import inlineStyles from "inlineStyles" /* 8456 */;
-import inlineStylesDefault from "inlineStyles" /* 8456 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 9531 (CircleWithCutoutUtils)
+import inlineStyles from "inlineStyles" /* 8484 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
+const inlineStylesDefault = inlineStyles;
+
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
 let closure_5 = Math.PI / 180;
-let result = require("set").fileFinishedImporting("modules/voice_panel/native/shared/CircleWithCutoutUtils.tsx");
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/voice_panel/native/shared/CircleWithCutoutUtils.tsx");
 
 export default function CircleWithCutout(arg0) {
   ({ circleRadius, cutoutPositionInDegrees } = arg0);
@@ -22,22 +23,22 @@ export default function CircleWithCutout(arg0) {
   ({ cutoutRadius, enableCutout, circleFillColor } = arg0);
   const sum = circleRadius + circleRadius * Math.sin(cutoutPositionInDegrees * closure_5);
   const diff = circleRadius - circleRadius * Math.cos(cutoutPositionInDegrees * closure_5);
-  let obj = { height: result, width: result, children: null };
-  obj = { children: null };
-  obj = { id: "mask", children: null };
-  const items = [callback(inlineStyles.Rect, { width: result, height: result, fill: "white" }), callback(inlineStyles.Circle, { cx: sum, cy: diff, r: cutoutRadius, fill: "black" })];
-  obj[1] = items;
-  obj[0] = callback2(inlineStyles.Mask, obj);
-  const items1 = [callback(inlineStyles.Defs, obj), ];
-  obj1 = { cx: circleRadius, cy: circleRadius, r: circleRadius, fill: circleFillColor, mask: null };
+  const size = { height: result, width: result, children: null };
+  const obj = { children: null };
+  const obj2 = { id: "mask", children: null };
+  const items = [React3(inlineStyles.Rect, { width: result, height: result, fill: "white" }), React3(inlineStyles.Circle, { cx: sum, cy: diff, r: cutoutRadius, fill: "black" })];
+  obj2.children = items;
+  obj.children = React4(inlineStyles.Mask, obj2);
+  const items1 = [React3(inlineStyles.Defs, obj), ];
+  const obj3 = { cx: circleRadius, cy: circleRadius, r: circleRadius, fill: circleFillColor, mask: null };
   let str;
   if (enableCutout) {
     str = "url(#mask)";
   }
-  obj1[4] = str;
-  items1[1] = callback(inlineStyles.Circle, obj1);
-  obj[2] = items1;
-  return callback2(inlineStylesDefault, obj);
+  obj3.mask = str;
+  items1[1] = React3(inlineStyles.Circle, obj3);
+  size.children = items1;
+  return React4(inlineStylesDefault, size);
 };
 export const getBadgeTop = function getBadgeTop(badgeRadius, buttonRadius, arg2) {
   return buttonRadius - buttonRadius * Math.cos(arg2 * closure_5) - badgeRadius;

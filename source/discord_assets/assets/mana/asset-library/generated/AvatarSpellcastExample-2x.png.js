@@ -1,12 +1,11 @@
-// Module ID: 5778
-// Function ID: 5779
-// Name: metadata
+// Module ID: 5792
+// Function ID: 5793
 // Dependencies: [2]
 
-// Module 5778 (metadata)
-import set from "set" /* 2 */;
+// Module 5792
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarSpellcastExample-2x.png.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarSpellcastExample-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/6703a20e50bd0abaf010d25f0e8da789877bf0171adb56b6886112fc537e19ce.png";
 export const metadata = { fileBytes: 20776 };

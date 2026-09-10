@@ -1,65 +1,66 @@
-// Module ID: 7935
-// Function ID: 7936
-// Name: generateBlockedGroupRowData
-// Dependencies: [7933, 1085, 12, 4411, 576, 4409, 7936, 2]
+// Module ID: 7949
+// Function ID: 7950
+// Name: BlockedGroup
+// Dependencies: [7947, 1085, 12, 4425, 576, 4423, 7950, 2]
 // Exports: generateBlockedGroupRowData
 
-// Module 7935 (generateBlockedGroupRowData)
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 576 */;
-import sum from "sum" /* 1085 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
-import Changeset from "Changeset" /* 7933 */;
-import processColorOrThrow from "processColorOrThrow" /* 7936 */;
-import apply from "apply" /* 12 */;
+// Module 7949 (BlockedGroup)
+import nativeDefault from "native" /* 576 */;
+import Constants from "Constants" /* 1085 */;
+import shared from "shared" /* 4425 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 7947 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 7950 */;
+import apply from "module_12" /* 12 */;
+import size from "module_2" /* 2 */;
 
-const SeparatorAction = Changeset.SeparatorAction;
-const UNSAFE_Colors = sum.UNSAFE_Colors;
+const SeparatorAction = RowGeneratorConstants.SeparatorAction;
+const UNSAFE_Colors = Constants.UNSAFE_Colors;
 let closure_5 = apply.memoize((arg0) => {
-  let obj = AccessibilityAnnouncer;
   let str = "#DBE0E4";
   if (obj.isThemeDark(arg0)) {
-    str = ThemesDefault.unsafe_rawColors.PRIMARY_700;
+    str = nativeDefault.unsafe_rawColors.PRIMARY_700;
   }
-  let tmpResult = tmp(4411);
+  obj = shared;
   let str2 = "#FAFAFA";
   if (tmpResult.isThemeDark(arg0)) {
-    str2 = ThemesDefault.unsafe_rawColors.PRIMARY_630;
+    str2 = nativeDefault.unsafe_rawColors.PRIMARY_630;
   }
-  tmpResult = tmp(4411);
-  if (tmpResult.isThemeDark(arg0)) {
-    let GREY1 = tmp(4409).hexWithOpacity(ThemesDefault.unsafe_rawColors.PRIMARY_300, 0.6);
-    const tmpResult1 = tmp(4409);
+  tmpResult = shared;
+  if (tmpResult6.isThemeDark(arg0)) {
+    let GREY1 = tmp(4423).hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_300, 0.6);
+    const tmpResult7 = tmp(4423);
   } else {
     GREY1 = UNSAFE_Colors.GREY1;
   }
-  obj = { borderColor: processColorOrThrow.processColorOrThrow(str), backgroundColor: null, color: null };
-  const tmpResult2 = processColorOrThrow;
-  obj[1] = processColorOrThrow.processColorOrThrow(str2);
-  const tmpResult3 = processColorOrThrow;
-  obj[2] = processColorOrThrow.processColorOrThrow(GREY1);
-  return obj;
+  const obj2 = { borderColor: null, backgroundColor: null, color: null };
+  tmpResult6 = shared;
+  obj2.borderColor = RowGeneratorStyleSheet.processColorOrThrow(str);
+  const tmpResult8 = RowGeneratorStyleSheet;
+  obj2.backgroundColor = RowGeneratorStyleSheet.processColorOrThrow(str2);
+  const tmpResult9 = RowGeneratorStyleSheet;
+  obj2.color = RowGeneratorStyleSheet.processColorOrThrow(GREY1);
+  return obj2;
 });
-const result = set.fileFinishedImporting("modules/messages/native/renderer/rows/BlockedGroup.tsx");
+const result = size.fileFinishedImporting("modules/messages/native/renderer/rows/BlockedGroup.tsx");
 
 export const generateBlockedGroupRowData = function generateBlockedGroupRowData(canUncollapse, theme, self) {
-  closure_0 = self;
+  const _self = self;
   ({ content, context } = canUncollapse);
   canUncollapse = !("canUncollapse" in canUncollapse);
   ({ changeType, message, text, revealed, rowType } = canUncollapse);
   if (!canUncollapse) {
     canUncollapse = canUncollapse.canUncollapse;
   }
-  let obj = {};
-  const merged = Object.assign(callback(theme));
+  const obj = {};
+  const merged = Object.assign(closure_5(theme));
   obj.type = rowType;
-  obj.content = content.map((arg0) => _self.generate(arg0));
-  obj = { type: SeparatorAction.TOGGLE_BLOCKED_MESSAGES, context: null };
+  obj.content = content.map((item) => _self.generate(item));
+  const obj2 = { type: SeparatorAction.TOGGLE_BLOCKED_MESSAGES, context: null };
   if (context == null) {
     context = message.id;
   }
-  obj[1] = context;
-  obj.button = { action: obj };
+  obj2.context = context;
+  obj.button = { action: obj2 };
   obj.changeType = changeType;
   obj.text = text;
   obj.revealed = revealed;

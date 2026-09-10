@@ -1,18 +1,19 @@
-// Module ID: 13988
-// Function ID: 13989
+// Module ID: 14011
+// Function ID: 14012
 // Name: isActivityParticipantCurrentUserCurrentSession
 // Dependencies: [502, 2]
 // Exports: isActivityParticipantCurrentUserCurrentSession
 
-// Module 13988 (isActivityParticipantCurrentUserCurrentSession)
-import closure_0 from "fetchFingerprint" /* 502 */;
+// Module 14011 (isActivityParticipantCurrentUserCurrentSession)
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-const result = require("set").fileFinishedImporting("modules/activities/isActivityParticipantCurrentUserCurrentSession.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/isActivityParticipantCurrentUserCurrentSession.tsx");
 
 export const isActivityParticipantCurrentUserCurrentSession = function isActivityParticipantCurrentUserCurrentSession(userId) {
   let obj = arg1;
   if (arg1 === undefined) {
-    obj = closure_0;
+    obj = AuthenticationStore;
   }
   const id = obj.getId();
   let tmp3 = userId.userId === id;

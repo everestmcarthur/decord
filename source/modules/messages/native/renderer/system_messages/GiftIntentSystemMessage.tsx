@@ -1,36 +1,34 @@
-// Module ID: 8076
-// Function ID: 8077
-// Name: createGiftIntentSystemMessage
-// Dependencies: [4560, 576, 8077, 7964, 8085, 7946, 7949, 2]
+// Module ID: 8091
+// Function ID: 8092
+// Name: GiftIntentSystemMessage
+// Dependencies: [4574, 576, 8092, 7978, 8100, 7960, 7963, 2]
 // Exports: createGiftIntentSystemMessage
 
-// Module 8076 (createGiftIntentSystemMessage)
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 576 */;
-import registerAssetDefault from "registerAsset" /* 7949 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7964 */;
-import createGiftIntentEmbed from "createGiftIntentEmbed" /* 8077 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 8091 (GiftIntentSystemMessage)
+import nativeDefault from "native" /* 576 */;
+import _modDef7963 from "module_7963" /* 7963 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7978 */;
+import GiftIntentEmbed from "GiftIntentEmbed" /* 8092 */;
+import createStyles from "createStyles" /* 4574 */;
+import size from "module_2" /* 2 */;
 
-let closure_3 = createCacheKey.createNativeStyleProperties({ iconTintColor: ThemesDefault.colors.BACKGROUND_BRAND, iconDividerColor: ThemesDefault.colors.ICON_STRONG });
-let obj = { iconTintColor: ThemesDefault.colors.BACKGROUND_BRAND, iconDividerColor: ThemesDefault.colors.ICON_STRONG };
-const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/GiftIntentSystemMessage.tsx");
+let closure_3 = createStyles.createNativeStyleProperties({ iconTintColor: nativeDefault.colors.BACKGROUND_BRAND, iconDividerColor: nativeDefault.colors.ICON_STRONG });
+const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/GiftIntentSystemMessage.tsx");
 
 export const createGiftIntentSystemMessage = function createGiftIntentSystemMessage(message) {
   ({ message, theme } = message);
-  let obj = createGiftIntentEmbed;
-  const giftIntentEmbed = obj.createGiftIntentEmbed(message, theme);
+  const giftIntentEmbed = GiftIntentEmbed.createGiftIntentEmbed(message, theme);
   if (null == giftIntentEmbed) {
     return null;
   } else {
-    obj = {};
+    const obj3 = {};
     const merged = Object.assign(createCommonMessageDefault(message));
-    obj.giftIntentInfo = giftIntentEmbed;
-    let tmpResult = tmp(8085);
-    obj.ephemeralIndication = tmpResult.createEphemeralIndication(message);
-    tmpResult = tmp(7946);
-    obj.iconUrl = tmpResult.getAssetUriForEmbed(registerAssetDefault);
-    ({ iconTintColor: obj2.iconTintColor, iconDividerColor: obj2.iconDividerColor } = callback(theme));
-    return obj;
+    obj3.giftIntentInfo = giftIntentEmbed;
+    const tmp5 = closure_3(theme);
+    obj3.ephemeralIndication = tmp(8100).createEphemeralIndication(message);
+    const tmpResult = tmp(8100);
+    obj3.iconUrl = tmp(7960).getAssetUriForEmbed(_modDef7963);
+    ({ iconTintColor: obj2.iconTintColor, iconDividerColor: obj2.iconDividerColor } = tmp5);
+    return obj3;
   }
 };

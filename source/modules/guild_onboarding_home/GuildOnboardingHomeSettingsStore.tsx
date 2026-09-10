@@ -1,12 +1,11 @@
-// Module ID: 4747
-// Function ID: 4748
-// Name: handleSettingsLoadSuccess
+// Module ID: 4761
+// Function ID: 4762
+// Name: GuildOnboardingHomeSettingsStore
 // Dependencies: [504, 573, 2]
 
-// Module 4747 (handleSettingsLoadSuccess)
+// Module 4761 (GuildOnboardingHomeSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import set from "set" /* 2 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
 function handleSettingsLoadSuccess(arg0) {
   ({ homeSettings, guildId } = arg0);
@@ -25,11 +24,11 @@ function handleSettingsLoadSuccess(arg0) {
     set.delete(guildId);
   }
 }
-let obj = { enabled: false };
+const NO_SETTINGS = { enabled: false };
 let closure_1 = [];
-let closure_2 = {};
-let set = new Set();
-let closure_4 = {};
+const dependencyMap = {};
+const set = new Set();
+const dependencyMap2 = {};
 const Store = initializeDefault.Store;
 class GuildOnboardingHomeSettingsStore extends Store {
 }
@@ -45,40 +44,37 @@ prototype["getSettings"] = function getSettings(arg0) {
   }
   return tmp;
 };
-prototype["getNewMemberActions"] = function getNewMemberActions(closure_0) {
+prototype["getNewMemberActions"] = function getNewMemberActions(guildId) {
   let tmp = null;
   let tmp2 = null;
-  if (null != closure_0) {
+  if (null != guildId) {
     const self = this;
-    const settings = this.getSettings(closure_0);
+    const settings = this.getSettings(guildId);
     let newMemberActions;
     if (settings != tmp) {
       newMemberActions = settings.newMemberActions;
     }
     tmp2 = null;
     if (tmp != newMemberActions) {
-      if (tmp == dependencyMap2[closure_0]) {
+      if (tmp == dependencyMap2[guildId]) {
         let newMemberActions1;
-        if (dependencyMap[closure_0] != tmp) {
+        if (dependencyMap[guildId] != tmp) {
           newMemberActions1 = tmp8.newMemberActions;
         }
         tmp = null;
         if (!tmp10) {
-          tmp5[closure_0] = newMemberActions1;
-          tmp = tmp5[closure_0];
+          tmp5[guildId] = newMemberActions1;
+          tmp = tmp5[guildId];
         }
-        let tmp6 = tmp;
         tmp10 = tmp == newMemberActions1;
-      } else {
-        tmp6 = tmp5[closure_0];
       }
     }
   }
   return tmp2;
 };
-prototype["getActionForChannel"] = function getActionForChannel(c0, c1) {
-  closure_0 = c1;
-  const settings = this.getSettings(c0);
+prototype["getActionForChannel"] = function getActionForChannel(guildId, channelId) {
+  closure_0 = channelId;
+  const settings = this.getSettings(guildId);
   let found = null;
   if (null != settings) {
     let newMemberActions = settings.newMemberActions;
@@ -92,9 +88,9 @@ prototype["getActionForChannel"] = function getActionForChannel(c0, c1) {
 prototype["hasMemberAction"] = function hasMemberAction(id, id2) {
   return null != this.getActionForChannel(id, id2);
 };
-prototype["getResourceChannels"] = function getResourceChannels(closure_0) {
+prototype["getResourceChannels"] = function getResourceChannels(guildId) {
   let resourceChannels;
-  if (dependencyMap[closure_0] != null) {
+  if (dependencyMap[guildId] != null) {
     resourceChannels = tmp.resourceChannels;
   }
   if (resourceChannels == null) {
@@ -102,13 +98,13 @@ prototype["getResourceChannels"] = function getResourceChannels(closure_0) {
   }
   return resourceChannels;
 };
-prototype["getResourceForChannel"] = function getResourceForChannel(closure_0, channelId) {
+prototype["getResourceForChannel"] = function getResourceForChannel(guildId, channelId) {
   closure_0 = channelId;
-  if (null == closure_0) {
+  if (null == guildId) {
     return null;
   } else {
     const self = this;
-    const resourceChannels = this.getResourceChannels(closure_0);
+    const resourceChannels = this.getResourceChannels(guildId);
     let found = null;
     if (resourceChannels !== closure_1) {
       found = resourceChannels.find((channelId) => channelId.channelId === closure_0);
@@ -175,7 +171,7 @@ prototype["getNewMemberAction"] = function getNewMemberAction(arg0, arg1) {
   return tmp;
 };
 GuildOnboardingHomeSettingsStore.displayName = "GuildOnboardingHomeSettingsStore";
-obj = {
+const guildOnboardingHomeSettingsStore = new GuildOnboardingHomeSettingsStore(DispatcherDefault, {
   GUILD_HOME_SETTINGS_FETCH_START: function handleSettingsFetchStart(guildId) {
     set.add(guildId.guildId);
   },
@@ -196,16 +192,16 @@ obj = {
     if (null == dependencyMap[resourceChannel.guildId]) {
       return false;
     } else {
-      let resourceChannels = tmp.resourceChannels;
-      if (resourceChannels == null) {
-        resourceChannels = [];
+      let resourceChannels1 = tmp.resourceChannels;
+      if (resourceChannels1 == null) {
+        resourceChannels1 = [];
       }
-      tmp.resourceChannels = resourceChannels;
-      resourceChannels = tmp.resourceChannels;
+      tmp.resourceChannels = resourceChannels1;
+      const resourceChannels = tmp.resourceChannels;
       const findIndexResult = resourceChannels.findIndex((channelId) => channelId.channelId === resourceChannel.channelId);
       let flag = -1 !== findIndexResult;
       if (flag) {
-        obj = {};
+        const obj = {};
         const merged = Object.assign(resourceChannel);
         tmp.resourceChannels[findIndexResult] = obj;
         flag = true;
@@ -218,16 +214,16 @@ obj = {
     if (null == dependencyMap[action.guildId]) {
       return false;
     } else {
-      let newMemberActions = tmp.newMemberActions;
-      if (newMemberActions == null) {
-        newMemberActions = [];
+      let newMemberActions1 = tmp.newMemberActions;
+      if (newMemberActions1 == null) {
+        newMemberActions1 = [];
       }
-      tmp.newMemberActions = newMemberActions;
-      newMemberActions = tmp.newMemberActions;
+      tmp.newMemberActions = newMemberActions1;
+      const newMemberActions = tmp.newMemberActions;
       const findIndexResult = newMemberActions.findIndex((channelId) => channelId.channelId === action.channelId);
       let flag = -1 !== findIndexResult;
       if (flag) {
-        obj = {};
+        const obj = {};
         const merged = Object.assign(action);
         tmp.newMemberActions[findIndexResult] = obj;
         flag = true;
@@ -246,9 +242,9 @@ obj = {
       delete tmp2[tmp];
     }
   }
-};
-const guildOnboardingHomeSettingsStore = new GuildOnboardingHomeSettingsStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("modules/guild_onboarding_home/GuildOnboardingHomeSettingsStore.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_onboarding_home/GuildOnboardingHomeSettingsStore.tsx");
 
 export default guildOnboardingHomeSettingsStore;
-export const NO_SETTINGS = obj;
+export { NO_SETTINGS };

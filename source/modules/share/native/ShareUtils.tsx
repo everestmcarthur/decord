@@ -1,149 +1,129 @@
-// Module ID: 13905
-// Function ID: 13906
-// Name: _sendShareMessage
-// Dependencies: [5, 4901, 4553, 4259, 11258, 9312, 7777, 5128, 5127, 7682, 9298, 7456, 2]
+// Module ID: 13928
+// Function ID: 13929
+// Name: ShareUtils
+// Dependencies: [5, 4915, 4567, 4272, 11285, 9339, 7791, 5142, 5141, 7696, 9325, 7470, 2]
 // Exports: sendShareMessage, showInformationToast
 
-// Module 13905 (_sendShareMessage)
-import dispatcherDefault from "dispatcher" /* 4259 */;
-import registerAssetDefault from "registerAsset" /* 11258 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { DraftType } from "handleChanged" /* 4901 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4553 */;
+// Module 13928 (ShareUtils)
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
+import _modDef11285 from "module_11285" /* 11285 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
-function _sendShareMessage() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c4 = 0;
-    c5 = 0;
-    const iter = (function*(arg0) {
-      if (constants === 2) {
-        constants = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          constants = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              constants = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              constants = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let id = tmp4;
-              dependencyMap = 0;
-              let lib;
-              let lib2;
-              dependencyMap = undefined;
-              ({ attachments: c0, channel: c1, comment: c2 } = lib);
-              id = undefined;
-              c4 = undefined;
-              constants = undefined;
-              let future;
-              c4 = 1;
-              constants = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp4) {
-            if (arg0 === 1) {
-              constants = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              constants = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              id = lib2.id;
-              c4 = lib.map((uri) => {
-                const cloudUpload = new _undefined(_undefined2[8]).CloudUpload({ uri: uri.uri, originalUri: uri.uri, mimeType: uri.mimeType, filename: uri.name, platform: _undefined(_undefined2[7]).UploadPlatform.REACT_NATIVE, width: uri.width, height: uri.height }, _var.id);
-                return cloudUpload;
-              });
-              lib2 = dependencyMap;
-              if (dependencyMap == null) {
-                lib2 = "";
-              }
-              constants = lib2(7682).parse(lib2, lib2);
-              if (c4.length > 0) {
-                let obj2 = lib2(9312);
-                obj2.clearAll(id, c4.ChannelMessage);
-              }
-              future = new lib(9298).Future();
-              let obj3 = lib2(7456);
-              obj2 = { location: null, doNotNotifyOnError: true, attachmentsToUpload: null, onAttachmentUploadError: null };
-              obj2[0] = constants.SHARE_MODAL;
-              obj2[2] = c4;
-              obj2[3] = function onAttachmentUploadError() {
-                future.reject(undefined);
-                let obj = _var(_undefined2[5]);
-                obj = { channelId: id, uploads: c4, draftType: c4.ChannelMessage, resetState: true };
-                obj.setUploads(obj);
-                _var(_undefined2[6]).saveDraft(id, _undefined2, c4.ChannelMessage);
-              };
-              c4 = 2;
-              constants = 1;
-              obj3 = { value: null, done: false };
-              obj3[0] = obj3.sendMessage(lib2.id, constants, false, obj2);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            constants = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            constants = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            future.resolve(undefined);
-            constants = 3;
-            obj = { value: null, done: true };
-            obj[0] = future.promise;
-            return obj;
-          }
-        } catch (tmp36) {
-          constants = tmp;
-          throw tmp36;
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_6 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+const require = fn;
+let closure_6 = async function _sendShareMessage(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    applyArgumentsResult = apply(self, arguments);
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          const channelId = tmp4;
+          c2 = 0;
+          closure_130_0 = undefined;
+          closure_130_1 = undefined;
+          closure_130_2 = undefined;
+          ({ attachments: closure_130_0, channel: closure_130_1, comment: closure_130_2 } = closure_0);
+          let id;
+          closure_130_4 = undefined;
+          closure_130_5 = undefined;
+          closure_130_6 = undefined;
+          c4 = 1;
+          c5 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          id = closure_130_1.id;
+          closure_130_4 = closure_130_0.map((uri) => {
+            const size = { uri: uri.uri, originalUri: uri.uri, mimeType: uri.mimeType, filename: uri.name, platform: closure_0(5142).UploadPlatform.REACT_NATIVE, width: uri.width, height: uri.height };
+            const cloudUpload = new closure_0(5141).CloudUpload(size, closure_1_1.id);
+            return cloudUpload;
+          });
+          c1 = closure_130_2;
+          if (closure_130_2 == null) {
+            c1 = "";
+          }
+          closure_130_5 = closure_131_1(closure_131_2[9]).parse(closure_130_1, c1);
+          if (closure_130_4.length > 0) {
+            closure_131_1(closure_131_2[5]).clearAll(id, closure_131_4.ChannelMessage);
+            const obj3 = closure_131_1(closure_131_2[5]);
+          }
+          const future = new closure_131_0(closure_131_2[10]).Future();
+          closure_130_6 = future;
+          const obj4 = closure_131_1(closure_131_2[11]);
+          const obj7 = {
+            location: closure_131_5.SHARE_MODAL,
+            doNotNotifyOnError: true,
+            attachmentsToUpload: closure_130_4,
+            onAttachmentUploadError() {
+                      closure_1_6.reject(undefined);
+                      c1(9339).setUploads({ channelId, uploads, draftType: uploads.ChannelMessage, resetState: true });
+                      const obj = c1(9339);
+                      const obj2 = { channelId, uploads, draftType: uploads.ChannelMessage, resetState: true };
+                      c1(7791).saveDraft(channelId, dependencyMap, uploads.ChannelMessage);
+                    }
+          };
+          c4 = 2;
+          c5 = 1;
+          const obj8 = { value: obj4.sendMessage(closure_130_1.id, closure_130_5, false, obj7), done: false };
+          return obj8;
+        }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        const obj9 = { value, done: true };
+        return obj9;
+      } else {
+        closure_130_6.resolve(undefined);
+        c5 = 3;
+        let obj = { value: closure_130_6.promise, done: true };
+        return obj;
+      }
+    } catch (tmp36) {
+      c5 = tmp;
+      throw tmp36;
+    }
   }
-  return applyArgumentsResult;
-}
-const result = require("set").fileFinishedImporting("modules/share/native/ShareUtils.tsx");
+};
+const DraftType = fn(4915).DraftType;
+const MessageSendLocation = fn(4567).MessageSendLocation;
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/share/native/ShareUtils.tsx");
 
 export const showInformationToast = function showInformationToast(intl3) {
-  let obj = dispatcherDefault;
-  obj = { key: "INFORMATION_TOAST-" + intl3, content: intl3, icon: registerAssetDefault };
-  obj.open(obj);
+  const obj = ToastActionCreatorsDefault;
+  obj.open({ key: "INFORMATION_TOAST-" + intl3, content: intl3, icon: _modDef11285 });
 };
-export const sendShareMessage = function sendShareMessage(arg0) {
+export const sendShareMessage = function sendShareMessage() {
   const self = this;
-  const apply = _sendShareMessage.apply;
+  const apply = closure_6.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

@@ -1,32 +1,31 @@
-// Module ID: 17062
-// Function ID: 17063
-// Name: openSoundboardSoundPickerActionSheet
-// Dependencies: [1074, 4527, 17063, 1896, 1109, 4380, 1943, 2]
+// Module ID: 17093
+// Function ID: 17094
+// Name: soundboard/SoundboardActionCreators
+// Dependencies: [1074, 4541, 17094, 1896, 1109, 4394, 1943, 2]
 // Exports: openSoundboardSoundPickerActionSheet, showSoundboardSoundPickerActionSheet
 
-// Module 17062 (openSoundboardSoundPickerActionSheet)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import ComponentDispatcher from "ComponentDispatcher" /* 1109 */;
+// Module 17093 (soundboard/SoundboardActionCreators)
+import Constants from "Constants" /* 1074 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import DismissibleContent from "DismissibleContent" /* 1943 */;
-import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4380 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
+import dismissible_content from "dismissible_content" /* 1943 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4394 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import size from "module_2" /* 2 */;
 
-const ComponentActions = ME.ComponentActions;
-let result = set.fileFinishedImporting("modules/soundboard/native/SoundboardActionCreators.tsx");
+const ComponentActions = Constants.ComponentActions;
+let result = size.fileFinishedImporting("modules/soundboard/native/SoundboardActionCreators.tsx");
 
 export const openSoundboardSoundPickerActionSheet = function openSoundboardSoundPickerActionSheet(arg0) {
   ({ channel, analyticsSource, initialScrollLocation } = arg0);
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(17063, dependencyMap.paths), "SoundboardSoundPickerActionSheet", { channel, analyticsSource, initialScrollLocation });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17094, dependencyMap.paths), "SoundboardSoundPickerActionSheet", { channel, analyticsSource, initialScrollLocation });
 };
 export const showSoundboardSoundPickerActionSheet = function showSoundboardSoundPickerActionSheet(arg0) {
   ({ channel, analyticsSource } = arg0);
-  const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
+  const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
   ComponentDispatch.dispatch(ComponentActions.TOGGLE_CALL_CONTROL_DRAWER);
-  let obj = UNSAFE_isDismissibleContentDismissed;
-  const result = obj.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent.DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE);
-  obj = { channel, analyticsSource };
-  ({ channel: channel2, analyticsSource: analyticsSource2, initialScrollLocation } = obj);
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(17063, dependencyMap.paths), "SoundboardSoundPickerActionSheet", { channel: channel2, analyticsSource: analyticsSource2, initialScrollLocation });
+  const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE);
+  ({ channel: channel2, analyticsSource: analyticsSource2, initialScrollLocation } = { channel, analyticsSource });
+  const obj2 = { channel, analyticsSource };
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17094, dependencyMap.paths), "SoundboardSoundPickerActionSheet", { channel: channel2, analyticsSource: analyticsSource2, initialScrollLocation });
 };

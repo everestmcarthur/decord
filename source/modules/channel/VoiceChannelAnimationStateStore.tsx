@@ -1,25 +1,24 @@
-// Module ID: 13689
-// Function ID: 13690
-// Name: resetAllState
-// Dependencies: [32, 4381, 4579, 504, 573, 2]
+// Module ID: 13712
+// Function ID: 13713
+// Name: VoiceChannelAnimationStateStore
+// Dependencies: [32, 4395, 4593, 504, 573, 2]
 
-// Module 13689 (resetAllState)
+// Module 13712 (VoiceChannelAnimationStateStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "handleConnectionOpen" /* 4381 */;
-import closure_2 from "updateVoiceState" /* 4579 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import _slicedToArray from "module_32" /* 32 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
+import VoiceStateStore from "VoiceStateStore" /* 4593 */;
 
 function resetAllState() {
   (function clearAllTimers() {
-    const keys = Object.keys(table);
+    const keys = Object.keys(closure_5);
     for (const item10009 of keys) {
       let _clearTimeout = clearTimeout;
-      let tmp2 = table;
-      let clearTimeoutResult = clearTimeout(table[item10009]);
+      let clearTimeoutResult = clearTimeout(closure_5[item10009]);
       continue;
     }
-    table = {};
+    closure_5 = {};
   })();
   closure_4 = {};
 }
@@ -34,11 +33,9 @@ function updateChannelAnimationState(arg0, arg1) {
   const bound = Math.max(0, num + arg1);
   if (0 === num) {
     if (bound > 0) {
-      obj = { style: null, userCount: null };
-      obj[0] = obj.GENTLE_AMBIENT_WITH_INTRO;
-      obj[1] = bound;
-      dependencyMap[arg0] = obj;
-      closure_0 = arg0;
+      const obj2 = { style: obj.GENTLE_AMBIENT_WITH_INTRO, userCount: bound };
+      dependencyMap[arg0] = obj2;
+      closure_129_0 = arg0;
       if (null != dependencyMap2[arg0]) {
         const _clearTimeout3 = clearTimeout;
         clearTimeout(dependencyMap2[arg0]);
@@ -46,12 +43,12 @@ function updateChannelAnimationState(arg0, arg1) {
       }
       const _setTimeout2 = setTimeout;
       dependencyMap2[arg0] = setTimeout(() => {
-        if (null != closure_1_4[closure_0]) {
-          obj = {};
+        if (null != closure_4[closure_0]) {
+          const obj = {};
           const merged = Object.assign(tmp4);
-          obj.style = closure_1_3.GENTLE_AMBIENT;
-          closure_1_4[tmp3] = obj;
-          closure_1_9.emitChange();
+          obj.style = obj.GENTLE_AMBIENT;
+          closure_4[tmp3] = obj;
+          voiceChannelAnimationStateStoreClass.emitChange();
         }
         delete tmp[tmp2];
       }, 2000);
@@ -61,10 +58,8 @@ function updateChannelAnimationState(arg0, arg1) {
   }
   if (num > 0) {
     if (bound > num) {
-      obj = { style: null, userCount: null };
-      obj[0] = obj.HIGH_CONTRAST;
-      obj[1] = bound;
-      dependencyMap[arg0] = obj;
+      const obj3 = { style: obj.HIGH_CONTRAST, userCount: bound };
+      dependencyMap[arg0] = obj3;
       closure_0 = arg0;
       if (null != dependencyMap2[arg0]) {
         const _clearTimeout2 = clearTimeout;
@@ -73,12 +68,12 @@ function updateChannelAnimationState(arg0, arg1) {
       }
       const _setTimeout = setTimeout;
       dependencyMap2[arg0] = setTimeout(() => {
-        if (null != closure_1_4[closure_0]) {
-          obj = {};
+        if (null != closure_4[closure_0]) {
+          const obj = {};
           const merged = Object.assign(tmp4);
-          obj.style = closure_1_3.GENTLE_AMBIENT;
-          closure_1_4[tmp3] = obj;
-          closure_1_9.emitChange();
+          obj.style = obj.GENTLE_AMBIENT;
+          closure_4[tmp3] = obj;
+          voiceChannelAnimationStateStoreClass.emitChange();
         }
         delete tmp[tmp2];
       }, 2000);
@@ -106,28 +101,27 @@ function updateChannelAnimationState(arg0, arg1) {
 }
 function handleConnectionOpenOrLogout() {
   (function clearAllTimers() {
-    const keys = Object.keys(table);
+    const keys = Object.keys(closure_5);
     for (const item10009 of keys) {
       let _clearTimeout = clearTimeout;
-      let tmp2 = table;
-      let clearTimeoutResult = clearTimeout(table[item10009]);
+      let clearTimeoutResult = clearTimeout(closure_5[item10009]);
       continue;
     }
-    table = {};
+    closure_5 = {};
   })();
   closure_4 = {};
   return true;
 }
-let obj = { GENTLE_AMBIENT: "GENTLE_AMBIENT", GENTLE_AMBIENT_WITH_INTRO: "GENTLE_AMBIENT_WITH_INTRO", HIGH_CONTRAST: "HIGH_CONTRAST" };
-let closure_4 = {};
-let closure_5 = {};
-let c6 = null;
+const AnimationStyle = { GENTLE_AMBIENT: "GENTLE_AMBIENT", GENTLE_AMBIENT_WITH_INTRO: "GENTLE_AMBIENT_WITH_INTRO", HIGH_CONTRAST: "HIGH_CONTRAST" };
+const dependencyMap = {};
+const dependencyMap2 = {};
+let guildId = null;
 const Store = initializeDefault.Store;
 class VoiceChannelAnimationStateStoreClass extends Store {
 }
 const prototype = VoiceChannelAnimationStateStoreClass.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_2, closure_1);
+  this.waitFor(VoiceStateStore, SelectedGuildStore);
 };
 prototype["getAnimationStyle"] = function getAnimationStyle(arg0) {
   let style;
@@ -150,31 +144,27 @@ prototype["getUserCount"] = function getUserCount(arg0) {
   return num;
 };
 VoiceChannelAnimationStateStoreClass.displayName = "VoiceChannelAnimationStateStore";
-obj = {
+const voiceChannelAnimationStateStoreClass = new VoiceChannelAnimationStateStoreClass(DispatcherDefault, {
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(arg0) {
-    guildId = guildId.getGuildId();
+    guildId = SelectedGuildStore.getGuildId();
     let tmp2 = guildId !== guildId;
     if (tmp2) {
       tmp2 = null != guildId;
     }
-    obj = {};
+    const obj = {};
     const iter = arg0.voiceStates[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp5 = nextResult;
       if (nextResult.guildId === guildId) {
-        let tmp6 = nextResult;
         if (null != tmp5.oldChannelId) {
-          let tmp7 = nextResult;
           let num = obj[tmp5.oldChannelId];
           if (num == null) {
             num = 0;
           }
           obj[tmp5.oldChannelId] = num - 1;
         }
-        let tmp8 = nextResult;
         if (null != tmp5.channelId) {
-          let tmp9 = nextResult;
           let num2 = obj[tmp5.channelId];
           if (num2 == null) {
             num2 = 0;
@@ -187,9 +177,7 @@ obj = {
     let flag = false;
     const entries = Object.entries(obj);
     while (tmp11 !== undefined) {
-      let tmp13 = callback;
-      let tmp14 = callback(tmp12, 2);
-      let tmp15 = updateChannelAnimationState;
+      let tmp14 = _slicedToArray(tmp12, 2);
       if (updateChannelAnimationState(tmp14[0], tmp14[1])) {
         flag = true;
       }
@@ -205,38 +193,32 @@ obj = {
       return false;
     } else {
       resetAllState();
-      obj = {};
+      const obj2 = {};
       const _Object2 = Object;
-      const values = Object.values(voiceStates.getVoiceStates(guildId));
+      const values = Object.values(VoiceStateStore.getVoiceStates(guildId));
       const iter = values[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
         let tmp4 = nextResult;
         if (null != nextResult.channelId) {
-          let tmp5 = nextResult;
-          let num = obj[tmp4.channelId];
+          let num = obj2[tmp4.channelId];
           if (num == null) {
             num = 0;
           }
-          obj[tmp4.channelId] = num + 1;
+          obj2[tmp4.channelId] = num + 1;
         }
         continue;
       }
       const _Object = Object;
-      const entries = Object.entries(obj);
+      const entries = Object.entries(obj2);
       const tmp8 = entries[Symbol.iterator]();
       while (tmp8 !== undefined) {
-        let tmp12 = callback;
-        let tmp13 = callback(tmp10, 2);
+        let tmp13 = _slicedToArray(tmp10, 2);
         [tmp14, tmp15] = tmp13;
         if (tmp15 > 0) {
-          let tmp17 = closure_4;
-          let tmp18 = tmp14;
-          obj = { style: null, userCount: null };
-          let tmp19 = obj;
-          obj[0] = obj.GENTLE_AMBIENT;
-          let tmp20 = tmp15;
-          obj[1] = tmp16;
+          let obj = { style: null, userCount: null };
+          obj.style = obj.GENTLE_AMBIENT;
+          obj.userCount = tmp16;
           closure_4[tmp14] = obj;
         }
         continue;
@@ -246,9 +228,9 @@ obj = {
   },
   CONNECTION_OPEN: handleConnectionOpenOrLogout,
   LOGOUT: handleConnectionOpenOrLogout
-};
-const voiceChannelAnimationStateStoreClass = new VoiceChannelAnimationStateStoreClass(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/channel/VoiceChannelAnimationStateStore.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel/VoiceChannelAnimationStateStore.tsx");
 
 export default voiceChannelAnimationStateStoreClass;
-export const AnimationStyle = obj;
+export { AnimationStyle };

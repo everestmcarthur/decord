@@ -1,66 +1,64 @@
-// Module ID: 16849
-// Function ID: 16850
-// Name: getWebhookEmptySource
-// Dependencies: [19, 17, 21, 8233, 16850, 16851, 16852, 4411, 2]
+// Module ID: 16886
+// Function ID: 16887
+// Name: WebhookEmpty
+// Dependencies: [19, 17, 21, 8259, 16887, 16888, 16889, 4425, 2]
 // Exports: WebhookEmpty, getWebhookEmptySource, useWebhookEmptySource
 
-// Module 16849 (getWebhookEmptySource)
-import noopAll from "noop" /* 19 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
-import getIllustrationSource from "getIllustrationSource" /* 8233 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16886 (WebhookEmpty)
+import shared from "shared" /* 4425 */;
+import _mod8259 from "module_8259" /* 8259 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/WebhookEmpty.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/WebhookEmpty.tsx");
 
 export const getWebhookEmptySource = function getWebhookEmptySource(theme) {
-  let obj = getIllustrationSource;
-  obj = {
+  return _mod8259.getIllustrationSource(theme, {
     dark() {
-      return callback(16850);
+      return require("module_16887");
     },
     darker() {
-      return callback(16851);
+      return require("module_16888");
     },
     light() {
-      return callback(16852);
+      return require("module_16889");
     }
-  };
-  return obj.getIllustrationSource(theme, obj);
+  });
 };
 export const useWebhookEmptySource = function useWebhookEmptySource() {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = shared;
+  return _mod8259.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return callback(16850);
+      return require("module_16887");
     },
     darker() {
-      return callback(16851);
+      return require("module_16888");
     },
     light() {
-      return callback(16852);
+      return require("module_16889");
     }
-  };
-  return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  });
 };
 export const WebhookEmpty = function WebhookEmpty(arg0) {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = shared;
+  const obj4 = {};
+  const illustrationSource = _mod8259.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return callback(16850);
+      return require("module_16887");
     },
     darker() {
-      return callback(16851);
+      return require("module_16888");
     },
     light() {
-      return callback(16852);
+      return require("module_16889");
     }
-  };
-  obj = {};
-  const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  });
   const merged = Object.assign(arg0);
-  obj.source = illustrationSource;
+  obj4.source = illustrationSource;
   return <Image />;
 };

@@ -1,29 +1,30 @@
-// Module ID: 12109
-// Function ID: 12110
-// Name: CommandRowIcon
-// Dependencies: [5, 32, 19, 21, 12032, 9294, 11997, 7523, 5612, 4975, 1114, 4505, 2]
+// Module ID: 12135
+// Function ID: 12136
+// Name: CommandRowButton
+// Dependencies: [5, 32, 19, 21, 12058, 9321, 12023, 7537, 5626, 4989, 1114, 4519, 2]
 // Exports: default, useCommandRowSend
 
-// Module 12109 (CommandRowIcon)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 12135 (CommandRowButton)
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/base_components/CommandRowButton.tsx");
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/CommandRowButton.tsx");
 
 export default function CommandRowIcon(hasOptions) {
   if (hasOptions.hasOptions) {
-    let tmp3Result = tmp3(tmp4(5612).TableRowArrow, {});
+    let tmp3Result = tmp3(tmp4(5626).TableRowArrow, {});
   } else {
     const obj = { size: "sm", text: null, onPress: null, icon: null, iconPosition: "end", grow: false, variant: "tertiary", disabled: null };
     const intl = tmp4(1114).intl;
-    obj[1] = intl.string(tmp4(1114).t.TXNS7S);
-    obj[2] = tmp2;
-    obj[3] = tmp3(tmp4(4505).SendMessageIcon, { size: "sm" });
-    obj[7] = tmp;
-    tmp3Result = tmp3(tmp4(4975).Button, obj);
+    obj.text = intl.string(tmp4(1114).t.TXNS7S);
+    obj.onPress = tmp2;
+    obj.icon = tmp3(tmp4(4519).SendMessageIcon, { size: "sm" });
+    obj.disabled = tmp;
+    tmp3Result = tmp3(tmp4(4989).Button, obj);
   }
   return tmp3Result;
 };
@@ -42,20 +43,18 @@ export const useCommandRowSend = function useCommandRowSend(command) {
   }
   const tmp2 = tryExecuteCommand(sectionName.useState(false), 2);
   closure_5 = tmp2[1];
-  let obj = command(beforeExecuteCommand[4]);
-  commandContext = obj.useCommandContext(command.context);
+  commandContext = command(beforeExecuteCommand[4]).useCommandContext(command.context);
   const items = [onExecuteCommand, command, commandContext, beforeExecuteCommand, sectionName];
-  callback = sectionName.useCallback(onExecuteCommand(function*() {
+  callback = sectionName.useCallback(onExecuteCommand(function*(arg0, value) {
     if (c4 === 2) {
       c4 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -65,57 +64,52 @@ export const useCommandRowSend = function useCommandRowSend(command) {
         if (0 === dependencyMap) {
           if (arg0 === 1) {
             c4 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
-            closure_0 = tmp3;
-            closure_1_5(true);
-            if (dependencyMap != null) {
-              dependencyMap();
+            closure_5(true);
+            if (beforeExecuteCommand != null) {
+              beforeExecuteCommand();
             }
             c3 = 1;
-            obj1 = closure_1_0(9294);
-            obj1 = { command: null, optionValues: null, context: null, sectionName: null, commandOrigin: null };
-            obj1[0] = closure_1_0;
-            obj1[1] = closure_1_0(11997).parseOptionValuesForSend(closure_1_6.channel, closure_1_0, {});
-            obj1[2] = closure_1_6;
-            obj1[3] = c4;
-            obj1[4] = closure_1_0(7523).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
+            const obj6 = { command, optionValues: null, context: null, sectionName: null, commandOrigin: null };
+            const obj2 = tmp3(9321);
+            obj6.optionValues = tmp3(12023).parseOptionValuesForSend(commandContext.channel, command, {});
+            obj6.context = commandContext;
+            obj6.sectionName = sectionName;
+            obj6.commandOrigin = tmp3(7537).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
             dependencyMap = 2;
             c4 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = obj1.executeAppLauncherCommand(obj1);
-            return obj2;
+            const obj7 = { value: obj2.executeAppLauncherCommand(obj6), done: false };
+            return obj7;
           }
         } else if (1 === tmp7) {
           c3 = 0;
-          callback2(false);
-          throw callback;
+          closure_128_5(false);
+          throw closure_2;
         } else if (arg0 === 1) {
           c4 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c3 = 0;
-          callback2(false);
+          closure_128_5(false);
           c4 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          const obj = { value, done: true };
           return obj;
         } else {
-          if (callback != null) {
-            callback();
+          if (closure_128_2 != null) {
+            closure_128_2();
           }
           c3 = 0;
-          callback2(false);
+          closure_128_5(false);
           c4 = 3;
           return { value: "HermesInternal", done: null };
         }
       } catch (tmp27) {
-        callback = tmp27;
+        closure_2 = tmp27;
         if (tmp4 === c3) {
           c4 = tmp2;
           throw tmp27;
@@ -125,17 +119,14 @@ export const useCommandRowSend = function useCommandRowSend(command) {
       }
     }
   }), items);
-  obj = {
-    hasOptions: options.length > 0,
-    sending: tmp2[0],
-    onPressSend: sectionName.useCallback(() => {
-      if (null != tryExecuteCommand) {
-        tmp(callback);
-      } else {
-        callback();
-      }
-    }, items1)
-  };
-  items1 = [tryExecuteCommand, callback];
-  return obj;
+  let obj2 = { hasOptions: options.length > 0, sending: tmp2[0], onPressSend: null };
+  const items1 = [tryExecuteCommand, callback];
+  obj2.onPressSend = sectionName.useCallback(() => {
+    if (null != tryExecuteCommand) {
+      tmp(callback);
+    } else {
+      callback();
+    }
+  }, items1);
+  return obj2;
 };

@@ -1,63 +1,55 @@
-// Module ID: 11289
-// Function ID: 11290
-// Name: bountyCtaFromServer
-// Dependencies: [11290, 2]
+// Module ID: 11316
+// Function ID: 11317
+// Name: BountyTypes
+// Dependencies: [11317, 2]
 // Exports: bountyCtaFromServer, bountyFromServer
 
-// Module 11289 (bountyCtaFromServer)
-import set from "set" /* 2 */;
-import resolveAsset from "resolveAsset" /* 11290 */;
+// Module 11316 (BountyTypes)
+import AssetUtils from "AssetUtils" /* 11317 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/ads/BountyTypes.tsx");
+const result = size.fileFinishedImporting("modules/ads/BountyTypes.tsx");
 
 export const bountyCtaFromServer = function bountyCtaFromServer(url) {
-  let obj = { url: url.url, buttonLabel: url.button_label, android: null, ios: null };
+  const obj = { url: url.url, buttonLabel: url.button_label, android: null, ios: null };
   let tmp;
   if (null != url.android) {
-    obj = { androidAppId: null };
-    obj[0] = url.android.android_app_id;
-    tmp = obj;
+    const obj2 = { androidAppId: url.android.android_app_id };
+    tmp = obj2;
   }
-  obj[2] = tmp;
+  obj.android = tmp;
   let tmp2;
   if (null != url.ios) {
-    obj = { iosAppId: null };
-    obj[0] = url.ios.ios_app_id;
-    tmp2 = obj;
+    const obj3 = { iosAppId: url.ios.ios_app_id };
+    tmp2 = obj3;
   }
-  obj[3] = tmp2;
+  obj.ios = tmp2;
   return obj;
 };
 export const bountyFromServer = function bountyFromServer(creative_content) {
-  let obj = { id: creative_content.id, advertiserName: creative_content.advertiser_name, productName: creative_content.product_name, productIcon: null, videoPreview: null, imagePreview: null, videoHls: null, cta: null, rewardTimerSeconds: null };
-  obj1 = resolveAsset;
-  obj[3] = obj1.resolveOptionalAdCreativeCdnUrl(creative_content.product_icon);
-  obj[4] = resolveAsset.resolveOptionalAdCreativeCdnUrl(creative_content.video_preview);
-  const obj3 = resolveAsset;
-  obj[5] = resolveAsset.resolveOptionalAdCreativeCdnUrl(creative_content.image_preview);
-  const obj4 = resolveAsset;
-  obj[6] = resolveAsset.resolveAdCreativeCdnUrl(creative_content.video_hls);
+  const obj = { id: creative_content.id, advertiserName: creative_content.advertiser_name, productName: creative_content.product_name, productIcon: AssetUtils.resolveOptionalAdCreativeCdnUrl(creative_content.product_icon), videoPreview: null, imagePreview: null, videoHls: null, cta: null, rewardTimerSeconds: null };
+  obj.videoPreview = AssetUtils.resolveOptionalAdCreativeCdnUrl(creative_content.video_preview);
+  obj.imagePreview = AssetUtils.resolveOptionalAdCreativeCdnUrl(creative_content.image_preview);
+  obj.videoHls = AssetUtils.resolveAdCreativeCdnUrl(creative_content.video_hls);
   const cta = creative_content.cta;
-  obj = { url: cta.url, buttonLabel: cta.button_label, android: null, ios: null };
+  const obj6 = { url: cta.url, buttonLabel: cta.button_label, android: null, ios: null };
   let tmp;
   if (null != cta.android) {
-    obj = { androidAppId: null };
-    obj[0] = cta.android.android_app_id;
-    tmp = obj;
+    const obj7 = { androidAppId: cta.android.android_app_id };
+    tmp = obj7;
   }
-  obj[2] = tmp;
+  obj6.android = tmp;
   let tmp2;
   if (null != cta.ios) {
-    obj1 = { iosAppId: null };
-    obj1[0] = cta.ios.ios_app_id;
-    tmp2 = obj1;
+    const obj8 = { iosAppId: cta.ios.ios_app_id };
+    tmp2 = obj8;
   }
-  obj[3] = tmp2;
-  obj[7] = obj;
+  obj6.ios = tmp2;
+  obj.cta = obj6;
   let num = creative_content.reward_timer_seconds;
   if (num == null) {
     num = 15;
   }
-  obj[8] = num;
+  obj.rewardTimerSeconds = num;
   return obj;
 };

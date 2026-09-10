@@ -1,77 +1,77 @@
-// Module ID: 9199
-// Function ID: 9200
-// Name: getBadgeTooltip
-// Dependencies: [8748, 1114, 8747, 2]
+// Module ID: 9226
+// Function ID: 9227
+// Name: GuildBadgeConstants
+// Dependencies: [8776, 1114, 8775, 2]
 // Exports: getBadgeTooltip
 
-// Module 9199 (getBadgeTooltip)
-import set from "set" /* 2 */;
-import BadgeCategory from "BadgeCategory" /* 8747 */;
-import GuildVisibility from "GuildVisibility" /* 8748 */;
+// Module 9226 (GuildBadgeConstants)
+import BadgeCategory from "BadgeCategory" /* 8775 */;
+import GuildTraits from "GuildTraits" /* 8776 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_badge/GuildBadgeConstants.tsx");
+const result = size.fileFinishedImporting("modules/guild_badge/GuildBadgeConstants.tsx");
 
-export const getBadgeTooltip = function getBadgeTooltip(arg0, arg1) {
-  if (arg1 === GuildVisibility.GuildVisibility.PUBLIC) {
+export const getBadgeTooltip = function getBadgeTooltip(badgeCategory, visibility) {
+  if (visibility === GuildTraits.GuildVisibility.PUBLIC) {
     const intl3 = tmp(1114).intl;
     let stringResult = intl3.string(tmp(1114).t.op2cJ6);
-  } else if (arg1 === tmp(8748).GuildVisibility.APPLY_TO_JOIN) {
+  } else if (visibility === tmp(8776).GuildVisibility.APPLY_TO_JOIN) {
     const intl2 = tmp(1114).intl;
     stringResult = intl2.string(tmp(1114).t.YwZfbt);
   } else {
     const intl = tmp(1114).intl;
     stringResult = intl.string(tmp(1114).t.TME4LJ);
   }
-  if (BadgeCategory.BadgeCategory.STAFF === arg0) {
-    let obj = { tooltipTitle: null, tooltipSubtitle: null, tooltipDescription: null };
-    const intl14 = tmp(1114).intl;
-    obj[0] = intl14.string(tmp(1114).t.lMrv96);
-    const intl15 = tmp(1114).intl;
-    obj[1] = intl15.string(tmp(1114).t.lMrv96);
-    const intl16 = tmp(1114).intl;
-    obj[2] = intl16.string(tmp(1114).t.lMrv96);
-    return obj;
-  } else if (tmp(8747).BadgeCategory.VERIFIED === arg0) {
-    obj = { tooltipTitle: null, tooltipSubtitle: null, tooltipDescription: null };
-    const intl12 = tmp(1114).intl;
-    obj[0] = intl12.string(tmp(1114).t.K7iRig);
-    const intl13 = tmp(1114).intl;
-    obj[1] = intl13.string(tmp(1114).t.iCehw9);
-    obj[2] = stringResult;
-    return obj;
-  } else if (tmp(8747).BadgeCategory.PARTNERED === arg0) {
-    obj1 = { tooltipTitle: null, tooltipSubtitle: null, tooltipDescription: null };
-    const intl10 = tmp(1114).intl;
-    obj1[0] = intl10.string(tmp(1114).t.K7iRig);
-    const intl11 = tmp(1114).intl;
-    obj1[1] = intl11.string(tmp(1114).t.hfYfEE);
-    obj1[2] = stringResult;
-    return obj1;
-  } else if (tmp(8747).BadgeCategory.VERIFIED_AND_PARTNERED === arg0) {
+  if (BadgeCategory.BadgeCategory.STAFF === badgeCategory) {
     const obj2 = { tooltipTitle: null, tooltipSubtitle: null, tooltipDescription: null };
-    const intl8 = tmp(1114).intl;
-    obj2[0] = intl8.string(tmp(1114).t.K7iRig);
-    const intl9 = tmp(1114).intl;
-    obj2[1] = intl9.string(tmp(1114).t["TX+iFC"]);
-    obj2[2] = stringResult;
+    const intl14 = tmp(1114).intl;
+    obj2.tooltipTitle = intl14.string(tmp(1114).t.lMrv96);
+    const intl15 = tmp(1114).intl;
+    obj2.tooltipSubtitle = intl15.string(tmp(1114).t.lMrv96);
+    const intl16 = tmp(1114).intl;
+    obj2.tooltipDescription = intl16.string(tmp(1114).t.lMrv96);
     return obj2;
-  } else if (tmp(8747).BadgeCategory.COMMUNITY === arg0) {
-    const obj3 = { tooltipTitle: null, tooltipDescription: null };
-    const intl7 = tmp(1114).intl;
-    obj3[0] = intl7.string(tmp(1114).t.K7iRig);
-    obj3[1] = stringResult;
+  } else if (tmp(8775).BadgeCategory.VERIFIED === badgeCategory) {
+    const obj3 = { tooltipTitle: null, tooltipSubtitle: null, tooltipDescription: null };
+    const intl12 = tmp(1114).intl;
+    obj3.tooltipTitle = intl12.string(tmp(1114).t.K7iRig);
+    const intl13 = tmp(1114).intl;
+    obj3.tooltipSubtitle = intl13.string(tmp(1114).t.iCehw9);
+    obj3.tooltipDescription = stringResult;
     return obj3;
-  } else if (tmp(8747).BadgeCategory.DISCOVERABLE === arg0) {
-    const obj4 = { tooltipTitle: null, tooltipDescription: null };
-    const intl5 = tmp(1114).intl;
-    obj4[0] = intl5.string(tmp(1114).t.K7iRig);
-    const intl6 = tmp(1114).intl;
-    obj4[1] = intl6.string(tmp(1114).t.op2cJ6);
+  } else if (tmp(8775).BadgeCategory.PARTNERED === badgeCategory) {
+    const obj4 = { tooltipTitle: null, tooltipSubtitle: null, tooltipDescription: null };
+    const intl10 = tmp(1114).intl;
+    obj4.tooltipTitle = intl10.string(tmp(1114).t.K7iRig);
+    const intl11 = tmp(1114).intl;
+    obj4.tooltipSubtitle = intl11.string(tmp(1114).t.hfYfEE);
+    obj4.tooltipDescription = stringResult;
     return obj4;
+  } else if (tmp(8775).BadgeCategory.VERIFIED_AND_PARTNERED === badgeCategory) {
+    const obj5 = { tooltipTitle: null, tooltipSubtitle: null, tooltipDescription: null };
+    const intl8 = tmp(1114).intl;
+    obj5.tooltipTitle = intl8.string(tmp(1114).t.K7iRig);
+    const intl9 = tmp(1114).intl;
+    obj5.tooltipSubtitle = intl9.string(tmp(1114).t["TX+iFC"]);
+    obj5.tooltipDescription = stringResult;
+    return obj5;
+  } else if (tmp(8775).BadgeCategory.COMMUNITY === badgeCategory) {
+    const obj6 = { tooltipTitle: null, tooltipDescription: null };
+    const intl7 = tmp(1114).intl;
+    obj6.tooltipTitle = intl7.string(tmp(1114).t.K7iRig);
+    obj6.tooltipDescription = stringResult;
+    return obj6;
+  } else if (tmp(8775).BadgeCategory.DISCOVERABLE === badgeCategory) {
+    const obj7 = { tooltipTitle: null, tooltipDescription: null };
+    const intl5 = tmp(1114).intl;
+    obj7.tooltipTitle = intl5.string(tmp(1114).t.K7iRig);
+    const intl6 = tmp(1114).intl;
+    obj7.tooltipDescription = intl6.string(tmp(1114).t.op2cJ6);
+    return obj7;
   } else {
-    obj = { tooltipTitle: null };
+    const obj = { tooltipTitle: null };
     const intl4 = tmp(1114).intl;
-    obj[0] = intl4.string(tmp(1114).t["iZRkC/"]);
+    obj.tooltipTitle = intl4.string(tmp(1114).t["iZRkC/"]);
     return obj;
   }
 };

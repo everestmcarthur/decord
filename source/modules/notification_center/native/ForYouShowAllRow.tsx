@@ -1,96 +1,93 @@
-// Module ID: 16448
-// Function ID: 16449
+// Module ID: 16479
+// Function ID: 16480
 // Name: ForYouShowAllRow
-// Dependencies: [19, 17, 1074, 12703, 21, 4560, 10126, 576, 1115, 1483, 1242, 1178, 4982, 16443, 5123, 16444, 14180, 4556, 1114, 7142, 2]
+// Dependencies: [19, 17, 1074, 12729, 21, 4574, 10153, 576, 1115, 1483, 1242, 1178, 4996, 16474, 5137, 16475, 14205, 4570, 1114, 7156, 2]
 // Exports: ForYouSuggestedFriendShowAllRow
 
-// Module 16448 (ForYouShowAllRow)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import set from "set" /* 1115 */;
-import Button from "Button" /* 1178 */;
-import Text from "Text" /* 4556 */;
-import getFontScale from "getFontScale" /* 4982 */;
-import PressableBase from "PressableBase" /* 5123 */;
-import registerAssetDefault from "registerAsset" /* 7142 */;
-import getLayoutStyles from "getLayoutStyles" /* 10126 */;
-import AvatarDuoPile from "AvatarDuoPile" /* 14180 */;
-import renderChannelPressableWrapper from "renderChannelPressableWrapper" /* 16443 */;
-import renderChannelWrapper from "renderChannelWrapper" /* 16444 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import { Sections } from "SuggestedFriendSource" /* 12703 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16479 (ForYouShowAllRow)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import native from "native" /* 1178 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import useFontScale from "useFontScale" /* 4996 */;
+import Pressables from "Pressables" /* 5137 */;
+import _modDef7156 from "module_7156" /* 7156 */;
+import ChannelListLayout from "ChannelListLayout" /* 10153 */;
+import AvatarDuoPile from "AvatarDuoPile" /* 14205 */;
+import ChannelPressableWrapper from "ChannelPressableWrapper" /* 16474 */;
+import ChannelWrapper from "ChannelWrapper" /* 16475 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function ForYouShowAllRow(panelVariant) {
   panelVariant = panelVariant.panelVariant;
   ({ children, count, onPress } = panelVariant);
   if (panelVariant === undefined) {
     panelVariant = false;
   }
-  let obj = getLayoutStyles;
-  const layout = obj.useMessagesTabLayout(panelVariant);
-  const tmp4 = callback2(layout);
-  obj1 = getLayoutStyles;
-  const layoutStyles = obj1.getLayoutStyles(layout);
-  let obj2 = getFontScale;
-  const fontScale = obj2.useFontScale();
-  let obj3 = renderChannelPressableWrapper;
-  obj = { accessibilityRole: "button", underlayColor: tmp4.rowActive.backgroundColor, onPress, style: items, children: null };
-  items = [tmp4.pressable, { borderRadius: layoutStyles.container.borderRadius }];
-  let obj5 = renderChannelWrapper;
-  obj = { style: tmp4.avatar, children: null };
-  const obj8 = getLayoutStyles;
-  const tmp8 = closure_9;
-  const tmp9 = closure_8;
-  const AvatarSizes = Button.AvatarSizes;
-  obj1 = { children: null };
-  obj2 = { size: getLayoutStyles.isLayoutCompact(layout) ? AvatarSizes.XSMALL_20 : AvatarSizes.SMALL, "aria-label": "", children };
-  obj[1] = closure_7(AvatarDuoPile.AvatarDuoPile, obj2);
-  const items1 = [closure_7(View, obj), , ];
-  obj3 = { style: tmp4.textContainer, children: null };
-  const obj4 = { lineClamp: 1, variant: layoutStyles.channelName.text.variant, color: "text-brand", style: tmp4.nameText, children: null };
+  const layout = ChannelListLayout.useMessagesTabLayout(panelVariant);
+  const tmp4 = closure_10(layout);
+  const layoutStyles = ChannelListLayout.getLayoutStyles(layout);
+  const fontScale = useFontScale.useFontScale();
+  const obj5 = { accessibilityRole: "button", underlayColor: tmp4.rowActive.backgroundColor, onPress, style: null, children: null };
+  const items = [tmp4.pressable, { borderRadius: layoutStyles.container.borderRadius }];
+  obj5.style = items;
+  const obj4 = ChannelPressableWrapper;
+  const obj7 = { style: tmp4.avatar, children: null };
+  const obj6 = ChannelWrapper;
+  const tmp8 = React7;
+  const tmp9 = React6;
+  const AvatarSizes = native.AvatarSizes;
+  const obj9 = { children: null };
+  const isLayoutCompactResult = ChannelListLayout.isLayoutCompact(layout);
+  obj7.children = React5(AvatarDuoPile.AvatarDuoPile, { size: ChannelListLayout.isLayoutCompact(layout) ? AvatarSizes.XSMALL_20 : AvatarSizes.SMALL, "aria-label": "", children });
+  const items1 = [React5(View, obj7), , ];
+  const obj11 = { style: tmp4.textContainer, children: null };
+  const obj12 = { lineClamp: 1, variant: layoutStyles.channelName.text.variant, color: "text-brand", style: tmp4.nameText, children: null };
   const intl = tmp(1114).intl;
-  obj4[4] = intl.format(getSystemLocale.t.NrzztX, { count });
-  obj3[1] = closure_7(Text.Text, obj4);
-  items1[1] = closure_7(View, obj3);
-  obj5 = { style: tmp4.icon, color: tmp4.iconColor.color, source: registerAssetDefault, size: tmp(1178).IconSizes.CUSTOM };
-  items1[2] = closure_7(Button.Icon, obj5);
-  obj1[0] = items1;
-  obj[4] = obj5.renderChannelWrapper(tmp8(tmp9, obj1), { layout, fontScale, panelVariant });
-  return obj3.renderChannelPressableWrapper(closure_7(PressableBase.PressableHighlight, obj), { layout, panelVariant });
+  obj12.children = intl.format(util.t.NrzztX, { count });
+  obj11.children = React5(Text_Text.Text, obj12);
+  items1[1] = React5(View, obj11);
+  const obj10 = { size: ChannelListLayout.isLayoutCompact(layout) ? AvatarSizes.XSMALL_20 : AvatarSizes.SMALL, "aria-label": "", children };
+  items1[2] = React5(native.Icon, { style: tmp4.icon, color: tmp4.iconColor.color, source: _modDef7156, size: native.IconSizes.CUSTOM });
+  obj9.children = items1;
+  obj5.children = obj6.renderChannelWrapper(tmp8(tmp9, obj9), { layout, fontScale, panelVariant });
+  return obj4.renderChannelPressableWrapper(React5(Pressables.PressableHighlight, obj5), { layout, panelVariant });
 }
-({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles((layout) => {
-  let obj = getLayoutStyles;
-  const layoutStyles = obj.getLayoutStyles(layout);
-  obj1 = getLayoutStyles;
-  const sizeStyle = obj1.makeSizeStyle(layoutStyles.icon.wrapper.size);
-  obj = { rowActive: null, pressable: null, textContainer: null, nameText: null, avatar: null, icon: null, iconColor: null };
-  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-  obj[0] = obj;
-  obj[1] = { flex: 1 };
-  obj1 = { flexDirection: "column", flexGrow: 2, flexShrink: 2, alignSelf: "center", overflow: "hidden", marginTop: -2, marginRight: ThemesDefault.space.PX_8 };
-  obj[2] = obj1;
+const View = fn(17).View;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const Sections = fn(12729).Sections;
+const jsxProd = fn(21);
+({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4574);
+let closure_10 = createStyles.createStyles((layout) => {
+  const layoutStyles = ChannelListLayout.getLayoutStyles(layout);
+  const sizeStyle = ChannelListLayout.makeSizeStyle(layoutStyles.icon.wrapper.size);
+  const obj3 = { rowActive: null, pressable: null, textContainer: null, nameText: null, avatar: null, icon: null, iconColor: null };
+  obj3.rowActive = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+  obj3.pressable = { flex: 1 };
+  const obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+  obj3.textContainer = { flexDirection: "column", flexGrow: 2, flexShrink: 2, alignSelf: "center", overflow: "hidden", marginTop: -2, marginRight: nativeDefault.space.PX_8 };
+  const obj5 = { flexDirection: "column", flexGrow: 2, flexShrink: 2, alignSelf: "center", overflow: "hidden", marginTop: -2, marginRight: nativeDefault.space.PX_8 };
   let num = 0;
   if (obj6.isAndroid()) {
     num = 2;
   }
-  obj[3] = { flexShrink: 1, marginBottom: num };
-  const obj2 = { position: "relative", borderRadius: ThemesDefault.radii.round, justifyContent: "center", alignItems: "center", flexShrink: 0, flexGrow: 0 };
+  obj3.nameText = { flexShrink: 1, marginBottom: num };
+  const obj7 = { position: "relative", borderRadius: nativeDefault.radii.round, justifyContent: "center", alignItems: "center", flexShrink: 0, flexGrow: 0 };
   const merged = Object.assign(sizeStyle);
-  obj2.marginRight = layoutStyles.icon.margin.marginRight + 4;
-  obj[4] = obj2;
-  obj6 = set;
-  obj[5] = { width: 8, height: 32, paddingRight: ThemesDefault.space.PX_24 };
-  const obj3 = { width: 8, height: 32, paddingRight: ThemesDefault.space.PX_24 };
-  obj[6] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-  return obj;
+  obj7.marginRight = layoutStyles.icon.margin.marginRight + 4;
+  obj3.avatar = obj7;
+  const size = { width: 8, height: 32, paddingRight: tmp4(576).space.PX_24 };
+  obj3.icon = size;
+  obj6 = PlatformUtils;
+  obj3.iconColor = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+  return obj3;
 });
-const result = require("set").fileFinishedImporting("modules/notification_center/native/ForYouShowAllRow.tsx");
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/notification_center/native/ForYouShowAllRow.tsx");
 
 export const ForYouSuggestedFriendShowAllRow = function ForYouSuggestedFriendShowAllRow(suggestedFriends) {
   suggestedFriends = suggestedFriends.suggestedFriends;
@@ -98,34 +95,31 @@ export const ForYouSuggestedFriendShowAllRow = function ForYouSuggestedFriendSho
   if (flag === undefined) {
     flag = false;
   }
-  let navigation;
   let messagesTabLayout;
+  const navigation = suggestedFriends(messagesTabLayout[9]).useNavigation();
   let obj = suggestedFriends(messagesTabLayout[9]);
-  navigation = obj.useNavigation();
   messagesTabLayout = suggestedFriends(messagesTabLayout[6]).useMessagesTabLayout(flag);
   const items = [navigation, suggestedFriends];
   const items1 = [messagesTabLayout, suggestedFriends];
-  const callback = React.useCallback(() => {
-    let obj = navigation(messagesTabLayout[10]);
-    obj = { section_id: closure_1_6.FRIEND_SUGGESTIONS, truncated_count: 2, expanded_count: suggestedFriends.length, location: "NotificationsTab" };
-    obj.track(closure_1_5.FRIEND_FINDER_SECTION_EXPANDED, obj);
+  const callback = noop.useCallback(() => {
+    AnalyticsUtilsDefault.track(AnalyticEvents.FRIEND_FINDER_SECTION_EXPANDED, { section_id: Sections.FRIEND_SUGGESTIONS, truncated_count: 2, expanded_count: suggestedFriends.length, location: "NotificationsTab" });
     navigation.navigate("friends", { screen: "suggested-friends", params: { presentation: "card" } });
   }, items);
-  obj = {
-    children: React.useMemo(() => {
+  let obj2 = suggestedFriends(messagesTabLayout[6]);
+  return closure_7(ForYouShowAllRow, {
+    children: noop.useMemo(() => {
       const substr = suggestedFriends.slice(2, 4);
       return substr.map((user) => {
-        const obj = { user: user.user, guildId: "Array", size: -1 };
-        const obj2 = closure_1_0(closure_1_2[6]);
-        const tmp = closure_1_7;
-        const AvatarSizes = closure_1_0(closure_1_2[11]).AvatarSizes;
-        obj[2] = closure_1_0(closure_1_2[6]).isLayoutCompact(closure_2) ? AvatarSizes.XSMALL_20 : AvatarSizes.SMALL;
-        return tmp(closure_1_0(closure_1_2[11]).Avatar, obj, user.user.id);
+        const obj = { user: user.user, guildId: "Array", size: 301990146 };
+        const obj2 = suggestedFriends(messagesTabLayout[6]);
+        const tmp = closure_2_7;
+        const AvatarSizes = suggestedFriends(messagesTabLayout[11]).AvatarSizes;
+        obj.size = suggestedFriends(messagesTabLayout[6]).isLayoutCompact(closure_1_2) ? AvatarSizes.XSMALL_20 : AvatarSizes.SMALL;
+        return tmp(suggestedFriends(messagesTabLayout[11]).Avatar, obj, user.user.id);
       });
     }, items1),
     count: suggestedFriends.length,
     onPress: callback,
     panelVariant: flag
-  };
-  return callback(ForYouShowAllRow, obj);
+  });
 };

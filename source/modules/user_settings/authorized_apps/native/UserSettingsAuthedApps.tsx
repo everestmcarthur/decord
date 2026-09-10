@@ -1,140 +1,133 @@
-// Module ID: 14941
-// Function ID: 14942
+// Module ID: 14967
+// Function ID: 14968
 // Name: UserSettingsAuthedApps
-// Dependencies: [19, 17, 7107, 1074, 21, 576, 4560, 9246, 8891, 9436, 4515, 1611, 504, 1483, 1484, 7170, 4556, 1114, 5687, 1396, 5605, 12060, 6990, 6995, 2]
+// Dependencies: [19, 17, 7121, 1074, 21, 576, 4574, 9273, 8918, 9463, 4529, 1611, 504, 1483, 1484, 7184, 4570, 1114, 5701, 1396, 5619, 12086, 7004, 7009, 2]
 // Exports: DisclosureIcon, default
 
-// Module 14941 (UserSettingsAuthedApps)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "recomputeFromAppTokens" /* 7107 */;
-import { FetchState } from "recomputeFromAppTokens" /* 7107 */;
-import ME from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14967 (UserSettingsAuthedApps)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import TableRowGroup from "TableRowGroup" /* 5701 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7004 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7009 */;
+import applications from "applications" /* 9273 */;
+import noop from "module_19" /* 19 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7121 */;
 
-const require = arg1;
-({ View: c4, ActivityIndicator: c5, FlatList: closure_6 } = get_ActivityIndicator);
-({ AnalyticsPages: c9, UserSettingsSections: c10 } = ME);
-({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const PX_24 = ThemesDefault.space.PX_24;
-createCacheKey = { spinner: { padding: 16 }, emptyText: { marginTop: 24 }, emptyContainer: { padding: 16 }, container: null, headerDescription: null, appListHeader: null };
-createCacheKey = { paddingHorizontal: 16, paddingTop: ThemesDefault.space.PX_24 };
-createCacheKey[3] = createCacheKey;
-createCacheKey[4] = { marginTop: 12 };
-createCacheKey[5] = { marginTop: 24 };
-let closure_15 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/user_settings/authorized_apps/native/UserSettingsAuthedApps.tsx");
+const require = globalThis.__r;
+
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, ActivityIndicator: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
+const FetchState = fn(7121).FetchState;
+const Constants = fn(1074);
+({ AnalyticsPages: closure_9, UserSettingsSections: c10 } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
+const PX_24 = nativeDefault.space.PX_24;
+const createStyles = fn(4574);
+let obj2 = { spinner: { padding: 16 }, emptyText: { marginTop: 24 }, emptyContainer: { padding: 16 }, container: { paddingHorizontal: 16, paddingTop: nativeDefault.space.PX_24 }, headerDescription: { marginTop: 12 }, appListHeader: { marginTop: 24 } };
+let closure_15 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/authorized_apps/native/UserSettingsAuthedApps.tsx");
 
 export default function UserSettingsAuthedApps() {
-  const tmp = callback3();
-  const _require = tmp;
-  let obj = _require(navigation[12]);
-  let items = [closure_7];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ fetchState: authStore.getFetchState(), appAuthTokens: authStore.getNewestTokensForNonChildrenApplications() }));
+  const tmp = closure_15();
+  _require = tmp;
+  let items = [AuthorizedAppsStore];
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({ fetchState: authStore.getFetchState(), appAuthTokens: authStore.getNewestTokensForNonChildrenApplications() }));
   const appAuthTokens = stateFromStoresObject.appAuthTokens;
-  obj1 = _require(navigation[13]);
-  navigation = obj1.useNavigation();
-  let obj2 = _require(navigation[14]);
-  const focusEffect = obj2.useFocusEffect(React.useCallback(() => appAuthTokens(navigation[15]).fetch(), []));
+  let obj = require("initialize");
+  navigation = require("useNavigation").useNavigation();
+  let obj2 = require("useNavigation");
+  const focusEffect = require("Link").useFocusEffect(noop.useCallback(() => appAuthTokens(navigation[15]).fetch(), []));
   let items1 = [navigation];
-  React = React.useCallback((item) => {
+  noop = noop.useCallback((item) => {
     item = item.item;
     const index = item.index;
+    const applicationIconSource = appAuthTokens(navigation[19]).getApplicationIconSource({ id: item.application.id, icon: item.application.icon });
     let obj = appAuthTokens(navigation[19]);
-    obj = { id: item.application.id, icon: item.application.icon };
-    const applicationIconSource = obj.getApplicationIconSource(obj);
-    obj = {
+    const obj2 = { id: item.application.id, icon: item.application.icon };
+    return closure_1_11(closure_0(navigation[20]).TableRow, {
       icon: closure_1_11(appAuthTokens(navigation[21]), { iconSource: applicationIconSource, iconBorderRadius: 6 }),
       label: item.application.name,
       onPress() {
-        let obj = appAuthTokens(navigation[22]);
-        obj.setSection(closure_2_10.AUTHORIZED_APP);
-        obj1 = item(navigation[23]);
-        obj = { destinationPane: closure_2_10.AUTHORIZED_APP, source: obj, applicationId: item.application.id };
-        obj = { page: closure_2_9.USER_SETTINGS };
-        const result = obj1.trackUserSettingsPaneViewed(obj);
-        obj1 = { oauth2Token: item };
-        closure_1_2.push(closure_2_10.AUTHORIZED_APP, obj1);
+        UserSettingsModalActionCreatorsDefault.setSection(constants2.AUTHORIZED_APP);
+        const obj3 = { destinationPane: constants2.AUTHORIZED_APP, source: { page: constants.USER_SETTINGS }, applicationId: item.application.id };
+        const result = UserSettingsUtils.trackUserSettingsPaneViewed(obj3);
+        navigation.push(constants2.AUTHORIZED_APP, { oauth2Token: item });
       },
       arrow: true,
       start: 0 === index,
       end: index === item.numItems - 1
-    };
-    return closure_1_11(lib(navigation[20]).TableRow, obj, item.id);
+    }, item.id);
   }, items1);
   if (null != appAuthTokens) {
     if (stateFromStoresObject.fetchState === FetchState.FETCHED) {
       function renderHeader() {
-        let obj = { children: null };
-        obj = { children: null };
-        obj = { color: "mobile-text-heading-primary", variant: "heading-md/semibold", children: null };
-        const intl = lib(navigation[17]).intl;
-        obj[2] = intl.string(lib(navigation[17]).t.HU3RFw);
-        const items = [closure_1_11(lib(navigation[16]).Text, obj), ];
-        obj1 = { style: lib.headerDescription, variant: "heading-sm/medium", children: null };
-        const intl2 = lib(navigation[17]).intl;
-        obj1[2] = intl2.string(lib(navigation[17]).t.Nu5Yi0);
-        items[1] = closure_1_11(lib(navigation[16]).Text, obj1);
-        obj[0] = items;
-        const items1 = [closure_1_12(closure_1_4, obj), ];
-        const obj2 = { style: lib.appListHeader, children: null };
-        const obj3 = { title: null };
-        const intl3 = lib(navigation[17]).intl;
-        obj3[0] = intl3.string(lib(navigation[17]).t.PHjkRE);
-        obj2[1] = closure_1_11(lib(navigation[18]).TableRowGroupTitle, obj3);
-        items1[1] = closure_1_11(closure_1_4, obj2);
-        obj[0] = items1;
-        return closure_1_12(closure_1_13, obj);
+        const obj = { children: null };
+        const obj2 = { children: null };
+        const obj3 = { color: "mobile-text-heading-primary", variant: "heading-md/semibold", children: null };
+        const intl = util.intl;
+        obj3.children = intl.string(util.t.HU3RFw);
+        const items = [closure_2_11(Text_Text.Text, obj3), ];
+        const obj4 = { style: closure_0.headerDescription, variant: "heading-sm/medium", children: null };
+        const intl2 = util.intl;
+        obj4.children = intl2.string(util.t.Nu5Yi0);
+        items[1] = closure_2_11(Text_Text.Text, obj4);
+        obj2.children = items;
+        const items1 = [closure_2_12(React4, obj2), ];
+        const obj5 = { style: closure_0.appListHeader, children: null };
+        const obj6 = { title: null };
+        const intl3 = util.intl;
+        obj6.title = intl3.string(util.t.PHjkRE);
+        obj5.children = closure_2_11(TableRowGroup.TableRowGroupTitle, obj6);
+        items1[1] = closure_2_11(React4, obj5);
+        obj.children = items1;
+        return closure_2_12(map1, obj);
       }
       if (0 === appAuthTokens.length) {
-        obj = { style: null, children: null };
-        obj[0] = tmp.emptyContainer;
+        let obj4 = { style: tmp.emptyContainer, children: null };
         const items2 = [renderHeader(), ];
-        obj = { color: "mobile-text-heading-primary", style: null, variant: "heading-md/extrabold", children: null };
-        obj[1] = tmp.emptyText;
+        let obj5 = { color: "mobile-text-heading-primary", style: tmp.emptyText, variant: "heading-md/extrabold", children: null };
         let intl = tmp3(tmp2[17]).intl;
-        obj[3] = intl.string(tmp3(tmp2[17]).t["E+SM6T"]);
-        items2[1] = callback(tmp3(tmp2[16]).Text, obj);
-        obj[1] = items2;
-        let tmp10 = callback2(closure_4, obj);
+        obj5.children = intl.string(tmp3(tmp2[17]).t["E+SM6T"]);
+        items2[1] = closure_11(tmp3(tmp2[16]).Text, obj5);
+        obj4.children = items2;
+        let tmp10 = closure_12(closure_4, obj4);
       } else {
-        obj1 = { contentContainerStyle: null, ListHeaderComponent: null, renderItem: null, data: null };
+        let obj6 = { contentContainerStyle: null, ListHeaderComponent: null, renderItem: null, data: null };
         const items3 = [tmp.container, ];
-        obj2 = { paddingBottom: null };
-        obj2[0] = appAuthTokens(navigation[11])().bottom + PX_24;
-        items3[1] = obj2;
-        obj1[0] = items3;
-        obj1[1] = renderHeader();
-        obj1[2] = function renderItem(item) {
-          return callback({ item: item.item, index: item.index, numItems: appAuthTokens.length });
+        const obj7 = { paddingBottom: appAuthTokens(navigation[11])().bottom + PX_24 };
+        items3[1] = obj7;
+        obj6.contentContainerStyle = items3;
+        obj6.ListHeaderComponent = renderHeader();
+        obj6.renderItem = function renderItem(item) {
+          return closure_3({ item: item.item, index: item.index, numItems: appAuthTokens.length });
         };
-        obj1[3] = appAuthTokens.sort((id, id2) => Number(id2.id) - Number(id.id));
-        tmp10 = callback(closure_6, obj1);
+        obj6.data = appAuthTokens.sort((id, id2) => Number(id2.id) - Number(id.id));
+        tmp10 = closure_11(closure_6, obj6);
       }
     }
     return tmp10;
   }
-  tmp10 = callback(closure_5, { style: tmp.spinner, animating: true, size: "large" });
+  tmp10 = closure_11(closure_5, { style: tmp.spinner, animating: true, size: "large" });
 };
 export const DisclosureIcon = function DisclosureIcon(disclosure) {
   disclosure = disclosure.disclosure;
   const style = disclosure.style;
   const items = [disclosure, style];
-  return React.useMemo(() => {
-    if (disclosure(closure_1_2[7]).ApplicationDisclosureType.IP_LOCATION === disclosure) {
-      let obj = { style: null, size: "xs" };
-      obj[0] = style;
-      return closure_1_11(tmp2(tmp3[8]).GlobeEarthIcon, obj);
-    } else if (tmp2(tmp3[7]).ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === tmp) {
-      obj = { style: null, size: "xs" };
-      obj[0] = style;
-      return closure_1_11(tmp2(tmp3[9]).EmbedIcon, obj);
+  return noop.useMemo(() => {
+    if (applications.ApplicationDisclosureType.IP_LOCATION === disclosure) {
+      const obj2 = { style, size: "xs" };
+      return closure_2_11(tmp2(8918).GlobeEarthIcon, obj2);
+    } else if (tmp2(9273).ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === tmp) {
+      const obj3 = { style, size: "xs" };
+      return closure_2_11(tmp2(9463).EmbedIcon, obj3);
     } else {
-      obj = { style: null, size: "xs" };
-      obj[0] = style;
-      return closure_1_11(tmp2(tmp3[10]).CircleInformationIcon, obj);
+      const obj = { style, size: "xs" };
+      return closure_2_11(tmp2(4529).CircleInformationIcon, obj);
     }
     tmp = disclosure;
   }, items);

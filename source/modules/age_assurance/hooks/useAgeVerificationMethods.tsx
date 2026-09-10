@@ -1,57 +1,54 @@
-// Module ID: 8587
-// Function ID: 8588
+// Module ID: 8615
+// Function ID: 8616
 // Name: useAgeVerificationMethods
-// Dependencies: [5, 32, 19, 8453, 8412, 504, 4773, 8413, 8440, 7602, 7607, 8588, 8417, 1114, 2]
+// Dependencies: [5, 32, 19, 8481, 8440, 504, 4787, 8441, 8468, 7616, 7621, 8616, 8445, 1114, 2]
 // Exports: default
 
-// Module 8587 (useAgeVerificationMethods)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import closure_6 from "initialize" /* 8453 */;
-import set from "set" /* 8412 */;
+// Module 8615 (useAgeVerificationMethods)
+import util from "util" /* 1114 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 7616 */;
+import MetricEvents from "MetricEvents" /* 7621 */;
+import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8445 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import AgeVerificationStore from "AgeVerificationStore" /* 8481 */;
 
-const require = arg1;
-({ VERIFICATION_METHOD_TITLE_MAP: error, VerificationMethod: closure_8 } = set);
-let result = set.fileFinishedImporting("modules/age_assurance/hooks/useAgeVerificationMethods.tsx");
+require = fn;
+const AgeVerificationConstants = fn(8440);
+({ VERIFICATION_METHOD_TITLE_MAP: closure_7, VerificationMethod: closure_8 } = AgeVerificationConstants);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/age_assurance/hooks/useAgeVerificationMethods.tsx");
 
 export default function useAgeVerificationMethods(onGoogleWalletSelect) {
   onGoogleWalletSelect = onGoogleWalletSelect.onGoogleWalletSelect;
-  let methods;
   let initiateAgeVerification;
-  let first;
-  let callback;
+  first = undefined;
+  _slicedToArray = undefined;
   ({ onClose, classificationId } = onGoogleWalletSelect);
+  let items = [AgeVerificationStore];
+  const stateFromStoresObject = onGoogleWalletSelect(initiateAgeVerification[5]).useStateFromStoresObject(items, () => ({ methods: AgeVerificationStore.methods, loading: AgeVerificationStore.loading }));
+  const methods = stateFromStoresObject.methods;
   let obj = onGoogleWalletSelect(initiateAgeVerification[5]);
-  let items = [closure_6];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ methods: closure_6.methods, loading: closure_6.loading }));
-  methods = stateFromStoresObject.methods;
-  obj = { onComplete: onClose, entryPoint: onGoogleWalletSelect(initiateAgeVerification[7]).AgeVerificationModalEntryPoint.EXPRESSIVE_GET_STARTED, shouldShowExpressiveModal: true, classificationId };
-  initiateAgeVerification = onGoogleWalletSelect(initiateAgeVerification[6]).useInitiateAgeVerification(obj).initiateAgeVerification;
-  const tmp2 = callback(React.useState(false), 2);
-  first = tmp2[0];
-  callback = tmp2[1];
-  const effect = React.useEffect(() => {
+  let obj2 = onGoogleWalletSelect(initiateAgeVerification[6]);
+  initiateAgeVerification = obj2.useInitiateAgeVerification({ onComplete: onClose, entryPoint: onGoogleWalletSelect(initiateAgeVerification[7]).AgeVerificationModalEntryPoint.EXPRESSIVE_GET_STARTED, shouldShowExpressiveModal: true, classificationId }).initiateAgeVerification;
+  [first, _slicedToArray] = noop.useState(false);
+  const effect = noop.useEffect(() => {
     c0 = false;
     let result = onGoogleWalletSelect(initiateAgeVerification[8]).checkGoogleWalletAvailable();
-    result.then((arg0) => {
+    result.then((result) => {
       if (!c0) {
-        let result = arg0;
-        let obj = methods(initiateAgeVerification[9]);
-        obj = { name: null, tags: null };
-        obj[0] = onGoogleWalletSelect(initiateAgeVerification[10]).MetricEvents.GOOGLE_WALLET_AVAILABILITY_CHECK;
+        const obj2 = { name: MetricEvents.MetricEvents.GOOGLE_WALLET_AVAILABILITY_CHECK, tags: null };
         const _HermesInternal = HermesInternal;
-        const items = ["available:" + arg0];
-        obj[1] = items;
-        obj.increment(obj);
-        if (arg0) {
-          result = tmp4(tmp3[11]).isGoogleWalletEnabled("age_verification_methods");
-          const tmp4Result = tmp4(tmp3[11]);
+        const items = ["available:" + result];
+        obj2.tags = items;
+        MonitoringAgentDefault.increment(obj2);
+        if (result) {
+          result = tmp4(8616).isGoogleWalletEnabled("age_verification_methods");
+          const tmp4Result = tmp4(8616);
         }
-        closure_1_4(result);
-        tmp3 = initiateAgeVerification;
-        tmp4 = onGoogleWalletSelect;
-        const tmp7 = closure_1_4;
+        closure_4(result);
+        tmp4 = require;
       }
     });
     return () => {
@@ -59,89 +56,78 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
     };
   }, []);
   const items1 = [methods];
-  const effect1 = React.useEffect(() => {
+  const effect1 = noop.useEffect(() => {
     if (null == methods) {
-      const ageVerificationMethods = onGoogleWalletSelect(initiateAgeVerification[12]).getAgeVerificationMethods();
-      const obj = onGoogleWalletSelect(initiateAgeVerification[12]);
+      const ageVerificationMethods = AgeVerificationURLActionCreators.getAgeVerificationMethods();
     }
   }, items1);
   const items2 = [methods, first, onGoogleWalletSelect, initiateAgeVerification];
-  obj = {
-    ageVerificationMethods: React.useMemo(() => {
+  let obj3 = { onComplete: onClose, entryPoint: onGoogleWalletSelect(initiateAgeVerification[7]).AgeVerificationModalEntryPoint.EXPRESSIVE_GET_STARTED, shouldShowExpressiveModal: true, classificationId };
+  return {
+    ageVerificationMethods: noop.useMemo(() => {
       let found1;
       if (methods != null) {
-        const found = methods.filter((arg0) => arg0 !== constants.GOOGLE_WALLET);
-        const mapped = found.map((arg0) => {
-          closure_0 = arg0;
-          if (null == closure_1_7[arg0]) {
+        const found = methods.filter((item) => item !== constants.GOOGLE_WALLET);
+        const mapped = found.map((id) => {
+          if (null == closure_1_7[id]) {
             return null;
           } else {
-            let obj = { id: null, title: null, description: null, onClick: null };
-            obj[0] = arg0;
+            let obj = { id, title: null, description: null, onClick: null };
             ({ title, description } = tmp);
-            const intl = closure_1_0(closure_1_2[13]).intl;
-            obj[1] = intl.string(title);
-            const intl2 = closure_1_0(closure_1_2[13]).intl;
-            obj[2] = intl2.string(description);
-            closure_1 = closure_1_3((arg0) => {
-              closure_0 = arg0;
-              c2 = 0;
-              c1 = 0;
-              return (function*(arg0) {
-                if (c1 === 2) {
-                  c1 = 3;
-                  HermesBuiltin.throwTypeError();
-                } else if (tmp3 === 3) {
-                  if (arg0 === 1) {
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    let obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
-                  } else {
-                    return { value: "HermesInternal", done: null };
-                  }
+            const intl = onGoogleWalletSelect(1114).intl;
+            obj.title = intl.string(title);
+            const intl2 = onGoogleWalletSelect(1114).intl;
+            obj.description = intl2.string(description);
+            closure_1 = first(function*(arg0, value) {
+              if (c1 === 2) {
+                c1 = 3;
+                throw new TypeError("Generator functions may not be called on executing generators");
+              } else if (tmp3 === 3) {
+                if (arg0 === 1) {
+                  throw value;
+                } else if (arg0 === 2) {
+                  const obj2 = { value, done: true };
+                  return obj2;
                 } else {
-                  try {
-                    c1 = 2;
-                    if (0 === v0) {
-                      if (arg0 === 1) {
-                        c1 = 3;
-                        throw arg1;
-                      } else if (arg0 === 2) {
-                        c1 = 3;
-                        obj = { value: null, done: true };
-                        obj[0] = arg1;
-                        return obj;
-                      } else {
-                        const obj5 = callback(closure_2_2[7]);
-                        const result = obj5.trackAgeVerificationModalClicked(callback, callback(closure_2_2[7]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, callback(closure_2_2[7]).AgeVerificationModalCta.METHOD_SELECT, callback);
-                        v0 = 1;
-                        c1 = 1;
-                        obj1 = { value: null, done: false };
-                        obj1[0] = v0(callback);
-                        return obj1;
-                      }
-                    } else if (arg0 === 1) {
+                  return { value: "HermesInternal", done: null };
+                }
+              } else {
+                try {
+                  c1 = 2;
+                  if (0 === v1) {
+                    if (arg0 === 1) {
                       c1 = 3;
-                      throw arg1;
+                      throw value;
                     } else if (arg0 === 2) {
                       c1 = 3;
-                      obj = { value: null, done: true };
-                      obj[0] = arg1;
-                      return obj;
+                      const obj3 = { value, done: true };
+                      return obj3;
                     } else {
-                      c1 = 3;
-                      return { value: "HermesInternal", done: null };
+                      const obj5 = id(8441);
+                      const result = obj5.trackAgeVerificationModalClicked(id, id(8441).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, id(8441).AgeVerificationModalCta.METHOD_SELECT, id);
+                      v1 = 1;
+                      c1 = 1;
+                      const obj4 = { value: v1(id), done: false };
+                      return obj4;
                     }
-                  } catch (tmp5) {
-                    c1 = tmp;
-                    throw tmp5;
+                  } else if (arg0 === 1) {
+                    c1 = 3;
+                    throw value;
+                  } else if (arg0 === 2) {
+                    c1 = 3;
+                    const obj = { value, done: true };
+                    return obj;
+                  } else {
+                    c1 = 3;
+                    return { value: "HermesInternal", done: null };
                   }
+                } catch (tmp5) {
+                  c1 = tmp;
+                  throw tmp5;
                 }
-              })();
+              }
             });
-            obj[3] = function() {
+            obj.onClick = function() {
               const self = this;
               const apply = closure_1.apply;
               if (typeof apply === "unknown") {
@@ -154,26 +140,25 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
             return obj;
           }
         });
-        found1 = mapped.filter((arg0) => null != arg0);
+        found1 = mapped.filter((item) => null != item);
       }
       if (found1 == null) {
         found1 = [];
       }
       if (first) {
         if (null != onGoogleWalletSelect) {
-          if (null != closure_1_7[closure_1_8.GOOGLE_WALLET]) {
-            let obj = { id: null, title: null, description: null, onClick: null };
-            obj[0] = tmp3.GOOGLE_WALLET;
-            let intl = onGoogleWalletSelect(initiateAgeVerification[13]).intl;
-            obj[1] = intl.string(tmp4.title);
-            let intl2 = onGoogleWalletSelect(initiateAgeVerification[13]).intl;
-            obj[2] = intl2.string(tmp4.description);
-            obj[3] = function onClick(modalSessionId) {
-              let obj = closure_1_1(closure_1_2[9]);
-              obj = { name: closure_1_0(closure_1_2[10]).MetricEvents.GOOGLE_WALLET_METHOD_SELECTED };
-              obj.increment(obj);
-              const result = closure_1_0(closure_1_2[7]).trackAgeVerificationModalClicked(modalSessionId, closure_1_0(closure_1_2[7]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, closure_1_0(closure_1_2[7]).AgeVerificationModalCta.METHOD_SELECT, closure_1_8.GOOGLE_WALLET);
-              callback();
+          if (null != React5[constants.GOOGLE_WALLET]) {
+            let obj = { id: tmp3.GOOGLE_WALLET, title: null, description: null, onClick: null };
+            let intl = util.intl;
+            obj.title = intl.string(tmp4.title);
+            let intl2 = util.intl;
+            obj.description = intl2.string(tmp4.description);
+            obj.onClick = function onClick(modalSessionId) {
+              const obj = methods(initiateAgeVerification[9]);
+              obj.increment({ name: onGoogleWalletSelect(initiateAgeVerification[10]).MetricEvents.GOOGLE_WALLET_METHOD_SELECTED });
+              const obj2 = { name: onGoogleWalletSelect(initiateAgeVerification[10]).MetricEvents.GOOGLE_WALLET_METHOD_SELECTED };
+              const result = onGoogleWalletSelect(initiateAgeVerification[7]).trackAgeVerificationModalClicked(modalSessionId, onGoogleWalletSelect(initiateAgeVerification[7]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, onGoogleWalletSelect(initiateAgeVerification[7]).AgeVerificationModalCta.METHOD_SELECT, constants.GOOGLE_WALLET);
+              closure_1_0();
             };
             const items = [];
             items[HermesBuiltin.arraySpread(found1, 0)] = obj;
@@ -185,5 +170,4 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
     }, items2),
     loading: stateFromStoresObject.loading
   };
-  return obj;
 };

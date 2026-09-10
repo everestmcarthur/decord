@@ -1,15 +1,15 @@
-// Module ID: 15952
-// Function ID: 15953
-// Name: isUnderageAnonymous
+// Module ID: 15982
+// Function ID: 15983
+// Name: AgeGateStore
 // Dependencies: [1098, 504, 573, 2]
 
-// Module 15952 (isUnderageAnonymous)
-import set from "set" /* 2 */;
+// Module 15982 (AgeGateStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import result2 from "result" /* 1098 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import AgeGateConstants from "AgeGateConstants" /* 1098 */;
+import size from "module_2" /* 2 */;
 
-const AGE_GATE_REGISTER_TIMEOUT_MS = result2.AGE_GATE_REGISTER_TIMEOUT_MS;
+const AGE_GATE_REGISTER_TIMEOUT_MS = AgeGateConstants.AGE_GATE_REGISTER_TIMEOUT_MS;
 let c0 = false;
 const Store = initializeDefault.Store;
 class AgeGateStore extends Store {
@@ -18,7 +18,7 @@ AgeGateStore.prototype["isUnderageAnonymous"] = function isUnderageAnonymous() {
   return c0;
 };
 AgeGateStore.displayName = "AgeGateStore";
-const ageGateStore = new AgeGateStore(dispatcherDefault, {
+const ageGateStore = new AgeGateStore(DispatcherDefault, {
   AGE_GATE_PREVENT_UNDERAGE_REGISTRATION: function handleMarkUnderageAnonymous() {
     c0 = true;
     const timestamp = Date.now();
@@ -27,6 +27,6 @@ const ageGateStore = new AgeGateStore(dispatcherDefault, {
     c0 = false;
   }
 });
-const result = set.fileFinishedImporting("modules/age_gate/AgeGateStore.tsx");
+const result = size.fileFinishedImporting("modules/age_gate/AgeGateStore.tsx");
 
 export default ageGateStore;

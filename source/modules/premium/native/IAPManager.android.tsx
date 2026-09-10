@@ -1,13 +1,12 @@
-// Module ID: 17390
-// Function ID: 17391
-// Name: prototype
-// Dependencies: [7118, 2]
+// Module ID: 17421
+// Function ID: 17422
+// Name: IAPManager
+// Dependencies: [7132, 2]
 
-// Module 17390 (prototype)
-import initializeDefault from "initialize" /* 7118 */;
+// Module 17421 (IAPManager)
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-initializeDefault;
-let prototype = function IAPManager() {
+const prototype = function IAPManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {
     POST_CONNECTION_OPEN() {
@@ -21,7 +20,8 @@ let prototype = function IAPManager() {
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
-const result = require("set").fileFinishedImporting("modules/premium/native/IAPManager.android.tsx");
+const prototype1 = new prototype();
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/IAPManager.android.tsx");
 
-export default prototype;
+export default prototype1;

@@ -1,14 +1,29 @@
-// Module ID: 16058
-// Function ID: 16059
-// Dependencies: [19, 21, 16059, 16033, 16099, 16100, 16045, 16043, 16048, 16060, 16098, 16101, 16103, 2]
+// Module ID: 16088
+// Function ID: 16089
+// Name: MessagesLegendList
+// Dependencies: [19, 21, 16089, 16063, 16129, 16130, 16075, 16073, 16078, 16090, 16128, 16131, 16133, 2]
 
-// Module 16058
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16088 (MessagesLegendList)
+import MessagesItemChannel from "MessagesItemChannel" /* 16063 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 16073 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 16075 */;
+import useMessagesData from "useMessagesData" /* 16078 */;
+import MessagesItemHappeningNowDefault from "MessagesItemHappeningNow" /* 16090 */;
+import MessagesItemEmptyStateDefault from "MessagesItemEmptyState" /* 16128 */;
+import MessagesItemSeparator from "MessagesItemSeparator" /* 16129 */;
+import MessagesItemSuggestedFriendsHeader from "MessagesItemSuggestedFriendsHeader" /* 16130 */;
+import MessagesItemAddFriendsWidgetDefault from "MessagesItemAddFriendsWidget" /* 16131 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
-const memoResult = importAllResult.memo(importAllResult.forwardRef(function MessagesLegendList(listItemHeight, ref) {
+const MessagesItemSeparatorDefault = MessagesItemSeparator;
+const MessagesItemSuggestedFriendsHeaderDefault = MessagesItemSuggestedFriendsHeader;
+
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesLegendList.tsx");
+
+export default noop.memo(noop.forwardRef(function MessagesLegendList(listItemHeight, ref) {
   ({ data, insetEnd } = listItemHeight);
   const estimatedItemSize = listItemHeight.listItemHeight;
   const listItemSuggestedFriendHeight = listItemHeight.listItemSuggestedFriendHeight;
@@ -17,24 +32,16 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Mess
   const listTop = listItemHeight.listTop;
   const scrollIndicatorInsetBottom = listItemHeight.scrollIndicatorInsetBottom;
   const scrollPosition = listItemHeight.scrollPosition;
-  let friendSuggestions;
-  let renderHeader;
-  let renderFooter;
-  let setAddedFriendSuggestions;
-  ref = undefined;
-  let friendsHeaderIndex;
-  let friendsHeaderOffset;
-  let estimatedHeaderSize;
-  friendSuggestions = data.friendSuggestions;
-  renderHeader = data.renderHeader;
-  renderFooter = data.renderFooter;
-  setAddedFriendSuggestions = data.setAddedFriendSuggestions;
+  const friendSuggestions = data.friendSuggestions;
+  const renderHeader = data.renderHeader;
+  const renderFooter = data.renderFooter;
+  const setAddedFriendSuggestions = data.setAddedFriendSuggestions;
   ({ accessibilityLabel, handleScrollAnimated, recycleItems } = listItemHeight);
   ref = listLeft.useRef(null);
-  data = estimatedItemSize(listItemSuggestedFriendHeight[2])(data, { listItemHeight: estimatedItemSize });
-  friendsHeaderIndex = data.friendsHeaderIndex;
-  friendsHeaderOffset = data.friendsHeaderOffset;
-  estimatedHeaderSize = data.listHeaderHeight;
+  const data2 = estimatedItemSize(listItemSuggestedFriendHeight[2])(data, { listItemHeight: estimatedItemSize });
+  const friendsHeaderIndex = data2.friendsHeaderIndex;
+  const friendsHeaderOffset = data2.friendsHeaderOffset;
+  const estimatedHeaderSize = data2.listHeaderHeight;
   let items = [estimatedHeaderSize];
   const imperativeHandle = listLeft.useImperativeHandle(ref, () => ({
     scrollToTop() {
@@ -44,9 +51,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Mess
       }
       const current = ref.current;
       if (current != null) {
-        const obj = { offset: null, animated: null };
-        obj[0] = closure_15;
-        obj[1] = flag;
+        const obj = { offset, animated: flag };
         current.scrollToOffset(obj);
       }
     }
@@ -58,29 +63,20 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Mess
     if ("favorite" !== kind) {
       if ("channel" !== kind) {
         if ("separator" === kind) {
-          return listRefHappeningNow(estimatedItemSize(listItemSuggestedFriendHeight[4]), {});
+          return jsx(MessagesItemSeparatorDefault, {});
         } else if ("friendsHeader" === kind) {
-          let obj = { scrollPosition: null, stickyAt: null, stickyTop: null, stickyLeft: null };
-          obj[0] = scrollPosition;
-          obj[1] = friendsHeaderOffset;
-          obj[2] = listTop;
-          obj[3] = listLeft;
-          return listRefHappeningNow(estimatedItemSize(listItemSuggestedFriendHeight[5]), obj);
+          const obj2 = { scrollPosition, stickyAt: friendsHeaderOffset, stickyTop: listTop, stickyLeft: listLeft };
+          return jsx(MessagesItemSuggestedFriendsHeaderDefault, { scrollPosition, stickyAt: friendsHeaderOffset, stickyTop: listTop, stickyLeft: listLeft });
         } else if ("suggestedFriend" === kind) {
-          obj = { height: null, suggestedFriend: null, onAddFriendSuggestions: null };
-          obj[0] = listItemSuggestedFriendHeight;
-          obj[1] = friendSuggestions[item.row];
-          obj[2] = setAddedFriendSuggestions;
-          return listRefHappeningNow(insetEnd(listItemSuggestedFriendHeight[6]).MessagesItemSuggestedFriendLegend, obj);
+          const obj3 = { height: listItemSuggestedFriendHeight, suggestedFriend: friendSuggestions[item.row], onAddFriendSuggestions: setAddedFriendSuggestions };
+          return jsx(MessagesItemSuggestedFriend.MessagesItemSuggestedFriendLegend, { height: listItemSuggestedFriendHeight, suggestedFriend: friendSuggestions[item.row], onAddFriendSuggestions: setAddedFriendSuggestions });
         } else if ("placeholder" === kind) {
-          obj = { row: null, height: null };
-          obj[0] = item.row;
-          obj[1] = estimatedItemSize;
-          return listRefHappeningNow(estimatedItemSize(listItemSuggestedFriendHeight[7]), obj);
+          const obj = { row: item.row, height: estimatedItemSize };
+          return jsx(MessagesItemPlaceholderDefault, { row: item.row, height: estimatedItemSize });
         }
       }
     }
-    return listRefHappeningNow(insetEnd(listItemSuggestedFriendHeight[3]).MessagesItemChannelLegend, { channelId: item.channelId, placeholderHeight: estimatedItemSize, row: item.row });
+    return jsx(MessagesItemChannel.MessagesItemChannelLegend, { channelId: item.channelId, placeholderHeight: estimatedItemSize, row: item.row });
   }, items1);
   const items2 = [estimatedItemSize, listItemSuggestedFriendHeight];
   const getItemType = listLeft.useCallback((kind) => kind.kind, []);
@@ -91,9 +87,9 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Mess
       if ("channel" !== kind) {
         if ("placeholder" !== kind) {
           if ("separator" === kind) {
-            return insetEnd(listItemSuggestedFriendHeight[4]).MESSAGES_ITEM_SEPERATOR_HEIGHT;
+            return MessagesItemSeparator.MESSAGES_ITEM_SEPERATOR_HEIGHT;
           } else if ("friendsHeader" === kind) {
-            return insetEnd(listItemSuggestedFriendHeight[5]).MESSAGES_ITEM_SUGGESTED_FRIENDS_HEADER_HEIGHT;
+            return MessagesItemSuggestedFriendsHeader.MESSAGES_ITEM_SUGGESTED_FRIENDS_HEADER_HEIGHT;
           } else if ("suggestedFriend" === kind) {
             return listItemSuggestedFriendHeight;
           }
@@ -132,23 +128,21 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Mess
   }, items3);
   const items5 = [renderFooter];
   const ListHeaderComponent = listLeft.useMemo(() => {
-    if (insetEnd(listItemSuggestedFriendHeight[8]).MessagesDataHeader.HappeningNow === renderHeader) {
-      const obj = { listRef: null };
-      obj[0] = listRefHappeningNow;
-      return listRefHappeningNow(estimatedItemSize(tmp3[9]), obj);
-    } else if (tmp2(tmp3[8]).MessagesDataHeader.EmptyState === tmp) {
-      return listRefHappeningNow(estimatedItemSize(tmp3[10]), {});
+    if (useMessagesData.MessagesDataHeader.HappeningNow === renderHeader) {
+      const obj = { listRef: listRefHappeningNow };
+      return jsx(MessagesItemHappeningNowDefault, { listRef: listRefHappeningNow });
+    } else if (useMessagesData.MessagesDataHeader.EmptyState === tmp) {
+      return jsx(MessagesItemEmptyStateDefault, {});
     } else {
       return null;
     }
     tmp = renderHeader;
-    tmp2 = insetEnd;
   }, items4);
   const items6 = [friendsHeaderIndex];
   const ListFooterComponent = listLeft.useMemo(() => {
     let tmp = null;
     if (renderFooter) {
-      tmp = listRefHappeningNow(estimatedItemSize(listItemSuggestedFriendHeight[11]), {});
+      tmp = jsx(MessagesItemAddFriendsWidgetDefault, {});
     }
     return tmp;
   }, items5);
@@ -164,8 +158,5 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Mess
   const items8 = [scrollIndicatorInsetBottom];
   const contentContainerStyle = listLeft.useMemo(() => ({ paddingBottom: insetEnd }), items7);
   const scrollIndicatorInsets = listLeft.useMemo(() => ({ bottom: scrollIndicatorInsetBottom }), items8);
-  return listRefHappeningNow(insetEnd(listItemSuggestedFriendHeight[12]).AnimatedLegendList, { ref, accessibilityLabel, contentContainerStyle, data: data.listData, estimatedHeaderSize, estimatedItemSize, getFixedItemSize, getItemType, keyExtractor, ListFooterComponent, ListHeaderComponent, onScroll, recycleItems, renderItem, scrollIndicatorInsets, stickyHeaderIndices });
+  return listRefHappeningNow(insetEnd(listItemSuggestedFriendHeight[12]).AnimatedLegendList, { ref, accessibilityLabel, contentContainerStyle, data: data2.listData, estimatedHeaderSize, estimatedItemSize, getFixedItemSize, getItemType, keyExtractor, ListFooterComponent, ListHeaderComponent, onScroll, recycleItems, renderItem, scrollIndicatorInsets, stickyHeaderIndices });
 }));
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesLegendList.tsx");
-
-export default memoResult;

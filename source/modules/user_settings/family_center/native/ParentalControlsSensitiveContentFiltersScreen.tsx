@@ -1,42 +1,44 @@
-// Module ID: 15894
-// Function ID: 15895
-// Name: UserSettingsSensitiveContentFilters
-// Dependencies: [19, 7975, 21, 1114, 11473, 14692, 2]
+// Module ID: 15924
+// Function ID: 15925
+// Name: ParentalControlsSensitiveContentFiltersScreen
+// Dependencies: [19, 7989, 21, 1114, 11500, 14718, 2]
 // Exports: default
 
-// Module 15894 (UserSettingsSensitiveContentFilters)
-import _modDef14692 from "module_14692" /* 14692 */;
-import closure_3 from "noop" /* 19 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 7975 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 15924 (ParentalControlsSensitiveContentFiltersScreen)
+import util from "util" /* 1114 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import SettingLayoutDefault from "SettingLayout" /* 14718 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/family_center/native/ParentalControlsSensitiveContentFiltersScreen.tsx");
+require = fn;
+const MobileUserSettings = fn(7989).MobileUserSettings;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/family_center/native/ParentalControlsSensitiveContentFiltersScreen.tsx");
 
 export default function UserSettingsSensitiveContentFilters() {
-  const node = React.useMemo(() => {
-    let obj = callback(11473);
-    obj = { sections: null };
-    obj = { label: null, settings: null, subLabel: null };
-    const intl = callback(1114).intl;
-    obj[0] = intl.string(callback(1114).t.GYpoAq);
+  const node = noop.useMemo(() => {
+    const obj2 = { sections: null };
+    const obj3 = { label: null, settings: null, subLabel: null };
+    const intl = util.intl;
+    obj3.label = intl.string(util.t.GYpoAq);
     const items = [, ];
-    ({ PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_FRIENDS_DMS: arr[0], PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_NON_FRIENDS_DMS: arr[1] } = closure_4);
-    obj[1] = items;
-    const intl2 = callback(1114).intl;
-    obj[2] = intl2.string(callback(1114).t.Wnojv1);
-    const items1 = [obj, ];
-    obj1 = { label: null, settings: null, subLabel: null };
-    const intl3 = callback(1114).intl;
-    obj1[0] = intl3.string(callback(1114).t["16/3Bi"]);
+    ({ PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_FRIENDS_DMS: arr[0], PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_NON_FRIENDS_DMS: arr[1] } = MobileUserSettings);
+    obj3.settings = items;
+    const intl2 = util.intl;
+    obj3.subLabel = intl2.string(util.t.Wnojv1);
+    const items1 = [obj3, ];
+    const obj4 = { label: null, settings: null, subLabel: null };
+    const intl3 = util.intl;
+    obj4.label = intl3.string(util.t["16/3Bi"]);
     const items2 = [, ];
-    ({ PARENTAL_CONTROLS_GORE_MEDIA_FILTERS_FRIENDS_DMS: arr3[0], PARENTAL_CONTROLS_GORE_MEDIA_FILTERS_NON_FRIENDS_DMS: arr3[1] } = closure_4);
-    obj1[1] = items2;
-    const intl4 = callback(1114).intl;
-    obj1[2] = intl4.string(callback(1114).t.XgH9eh);
-    items1[1] = obj1;
-    obj[0] = items1;
-    return obj.createList(obj);
+    ({ PARENTAL_CONTROLS_GORE_MEDIA_FILTERS_FRIENDS_DMS: arr3[0], PARENTAL_CONTROLS_GORE_MEDIA_FILTERS_NON_FRIENDS_DMS: arr3[1] } = MobileUserSettings);
+    obj4.settings = items2;
+    const intl4 = util.intl;
+    obj4.subLabel = intl4.string(util.t.XgH9eh);
+    items1[1] = obj4;
+    obj2.sections = items1;
+    return SettingBuilders.createList(obj2);
   }, []);
-  return jsx(_modDef14692, { node });
+  return jsx(SettingLayoutDefault, { node });
 };

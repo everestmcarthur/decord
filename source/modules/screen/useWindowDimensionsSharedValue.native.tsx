@@ -1,25 +1,27 @@
-// Module ID: 12037
-// Function ID: 12038
-// Name: mutable
-// Dependencies: [4296, 1477, 12038, 11359, 2]
+// Module ID: 12063
+// Function ID: 12064
+// Name: useWindowDimensionsSharedValue
+// Dependencies: [4310, 1477, 12064, 11386, 2]
 // Exports: default, getWindowDimensionsWorklet
 
-// Module 12037 (mutable)
-import set from "set" /* 2 */;
-import uDefault from "u" /* 11359 */;
-import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 12038 */;
-import module_4296 from "module_4296" /* 4296 */;
-import useWindowDimensions from "useWindowDimensions" /* 1477 */;
+// Module 12063 (useWindowDimensionsSharedValue)
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11386 */;
+import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 12064 */;
+import ReanimatedRexport_mod from "ReanimatedRexport" /* 4310 */;
+import useWindowDimensions_mod from "useWindowDimensions" /* 1477 */;
+import size from "module_2" /* 2 */;
 
-let obj = {};
+let ReanimatedRexport = ReanimatedRexport_mod;
+let useWindowDimensions = useWindowDimensions_mod;
 const merged = Object.assign(useWindowDimensions.getWindowDimensions());
-const mutable = module_4296.makeMutable(obj);
-obj = {};
+const mutable = ReanimatedRexport.makeMutable({});
+let ReanimatedRexport = ReanimatedRexport_mod;
+let useWindowDimensions = useWindowDimensions_mod;
 const merged1 = Object.assign(useWindowDimensions.getWindowDimensions({ ignoreKeyboard: true }));
-const mutable1 = module_4296.makeMutable(obj);
+const mutable1 = ReanimatedRexport.makeMutable({});
 subscribeToWindowDimensionsDefault((arg0, arg1) => {
-  uDefault(mutable, arg0);
-  uDefault(mutable1, arg1);
+  updateSharedValueIfChangedDefault(mutable, arg0);
+  updateSharedValueIfChangedDefault(mutable1, arg1);
 });
 function getWindowDimensionsWorklet(arg0) {
   let ignoreKeyboard;
@@ -27,7 +29,7 @@ function getWindowDimensionsWorklet(arg0) {
     ignoreKeyboard = tmp.ignoreKeyboard;
   }
   if (true === ignoreKeyboard) {
-    let value = mutable1.get();
+    value = mutable1.get();
   } else {
     value = mutable.get();
   }
@@ -36,7 +38,7 @@ function getWindowDimensionsWorklet(arg0) {
 getWindowDimensionsWorklet.__closure = { windowDimensionsSharedValueIgnoringKeyboard: mutable1, windowDimensionsSharedValue: mutable };
 getWindowDimensionsWorklet.__workletHash = 17271034964949;
 getWindowDimensionsWorklet.__initData = { code: "function getWindowDimensionsWorklet_useWindowDimensionsSharedValueNativeTsx1(params=undefined){const{windowDimensionsSharedValueIgnoringKeyboard,windowDimensionsSharedValue}=this.__closure;return(params===null||params===void 0?void 0:params.ignoreKeyboard)===true?windowDimensionsSharedValueIgnoringKeyboard.get():windowDimensionsSharedValue.get();}" };
-const result = set.fileFinishedImporting("modules/screen/useWindowDimensionsSharedValue.native.tsx");
+const result = size.fileFinishedImporting("modules/screen/useWindowDimensionsSharedValue.native.tsx");
 
 export default function useWindowDimensionsSharedValue() {
   let ignoreKeyboard;

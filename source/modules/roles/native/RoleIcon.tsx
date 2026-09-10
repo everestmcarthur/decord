@@ -1,38 +1,41 @@
-// Module ID: 7188
-// Function ID: 7189
+// Module ID: 7219
+// Function ID: 7220
 // Name: RoleIcon
-// Dependencies: [19, 17, 21, 1178, 2]
+// Dependencies: [19, 17, 21, 1115, 4570, 2]
 // Exports: default
 
-// Module 7188 (RoleIcon)
-import noopAll from "noop" /* 19 */;
-import Button from "Button" /* 1178 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 7219 (RoleIcon)
+import Text_Text from "Text/Text" /* 4570 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/roles/native/RoleIcon.tsx");
+require = fn;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+const PlatformUtils = fn(1115);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/roles/native/RoleIcon.tsx");
 
 export default function RoleIcon(arg0) {
-  ({ source, unicodeEmoji, size } = arg0);
+  ({ src, unicodeEmoji, size } = arg0);
   if (size === undefined) {
     size = 20;
   }
-  let obj = { height: size, width: size, resizeMode: "contain" };
-  if (null != source) {
-    obj = { source: null, style: null };
-    obj[0] = source;
-    obj[1] = obj;
-    let tmp = <Image source={null} style={null} />;
+  const size1 = { height: size, width: size };
+  const obj = { fontFamily: "System", fontSize: size * num, lineHeight: "call", textAlign: "<string:4294865153>", width: size, marginBottom: "<string:1358954889>" };
+  if (null != src) {
+    const obj2 = { resizeMode: "contain", source: null, style: null };
+    const obj3 = { uri: src };
+    obj2.source = obj3;
+    obj2.style = size1;
+    let tmp = <Image resizeMode="contain" source={null} style={null} />;
   } else {
     tmp = null;
     if (null != unicodeEmoji) {
-      obj = { adjustsFontSizeToFit: true, style: null, children: null };
-      const items = [obj, { fontFamily: "System", fontSize: size, marginBottom: -2 }];
-      obj[1] = items;
-      obj[2] = unicodeEmoji.surrogates;
-      tmp = jsx(Button.LegacyText, { adjustsFontSizeToFit: true, style: null, children: null });
+      const obj4 = { allowFontScaling: false, color: "none", style: null, variant: "text-lg/normal", children: null };
+      const items = [size1, obj];
+      obj4.style = items;
+      obj4.children = unicodeEmoji.surrogates;
+      tmp = jsx(Text_Text.Text, { allowFontScaling: false, color: "none", style: null, variant: "text-lg/normal", children: null });
     }
   }
   return tmp;

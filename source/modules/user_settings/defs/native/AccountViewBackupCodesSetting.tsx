@@ -1,33 +1,34 @@
-// Module ID: 14798
-// Function ID: 14799
-// Name: route
-// Dependencies: [19, 7975, 1074, 14683, 1114, 1178, 14799, 11473, 14684, 14682, 2]
+// Module ID: 14824
+// Function ID: 14825
+// Name: AccountViewBackupCodesSetting
+// Dependencies: [19, 7989, 1074, 14709, 1114, 1178, 14825, 11500, 14710, 14708, 2]
 
-// Module 14798 (route)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_3 from "noop" /* 19 */;
-import ME from "ME" /* 1074 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 14824 (AccountViewBackupCodesSetting)
+import util from "util" /* 1114 */;
+import MFAActionCreatorsDefault from "MFAActionCreators" /* 14709 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ NOOP_NULL: c4, UserSettingsSections } = ME);
-createToggle = {
+require = fn;
+const Constants = fn(1074);
+({ NOOP_NULL: closure_4, UserSettingsSections } = Constants);
+const SettingBuilders = fn(11500);
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.xZEzbu);
+    const intl = util.intl;
+    return intl.string(util.t.xZEzbu);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
-  usePredicate: require("useIs2FAEnabled").useIs2FAEnabled,
+  parent: fn(7989).MobileUserSettings.ACCOUNT,
+  usePredicate: fn(14710).useIs2FAEnabled,
   usePreNavigationAction: function useOnViewBackups() {
-    return React.useCallback((arg0) => {
-      const callback = arg0;
+    return noop.useCallback((arg0) => {
+      closure_0 = arg0;
       let obj = {
         onSubmit(password) {
-          const result = closure_1_1(closure_1_2[3]).sendMFABackupCodesVerificationKeyEmail(password);
+          const result = MFAActionCreatorsDefault.sendMFABackupCodesVerificationKeyEmail(password);
           return result.then(() => {
             const obj = {
               onSubmit(verificationKey) {
-                return callback(table[3]).confirmViewBackupCodes(verificationKey, false);
+                return closure_1_1(closure_1_2[3]).confirmViewBackupCodes(verificationKey, false);
               },
               title: null,
               helpText: null,
@@ -39,20 +40,20 @@ createToggle = {
               confirmColor: null,
               useKeyboardAwareWrapper: true
             };
-            const intl = closure_1_0(closure_1_2[4]).intl;
-            obj[1] = intl.string(closure_1_0(closure_1_2[4]).t["mGppp/"]);
-            const intl2 = closure_1_0(closure_1_2[4]).intl;
-            obj[2] = intl2.string(closure_1_0(closure_1_2[4]).t["37S9yU"]);
-            const intl3 = closure_1_0(closure_1_2[4]).intl;
-            obj[3] = intl3.string(closure_1_0(closure_1_2[4]).t.TjGb4Q);
-            obj[5] = closure_0;
-            const intl4 = closure_1_0(closure_1_2[4]).intl;
-            obj[7] = intl4.string(closure_1_0(closure_1_2[4]).t.geKm7t);
-            obj[8] = closure_1_0(closure_1_2[5]).ButtonColors.BRAND;
-            closure_1_1(closure_1_2[6])(obj);
+            const intl = onSuccess(1114).intl;
+            obj.title = intl.string(onSuccess(1114).t["mGppp/"]);
+            const intl2 = onSuccess(1114).intl;
+            obj.helpText = intl2.string(onSuccess(1114).t["37S9yU"]);
+            const intl3 = onSuccess(1114).intl;
+            obj.inputLabel = intl3.string(onSuccess(1114).t.TjGb4Q);
+            obj.onSuccess = onSuccess;
+            const intl4 = onSuccess(1114).intl;
+            obj.actionText = intl4.string(onSuccess(1114).t.geKm7t);
+            obj.confirmColor = onSuccess(1178).ButtonColors.BRAND;
+            closure_2_1(14825)(obj);
           });
         },
-        onSuccess: closure_4,
+        onSuccess,
         title: null,
         inputLabel: null,
         closeOnSuccess: false,
@@ -60,26 +61,25 @@ createToggle = {
         confirmColor: null,
         useKeyboardAwareWrapper: true
       };
-      let intl = callback(1114).intl;
-      obj[2] = intl.string(callback(1114).t.PsQmzU);
-      let intl2 = callback(1114).intl;
-      obj[3] = intl2.string(callback(1114).t["CIGa+7"]);
-      let intl3 = callback(1114).intl;
-      obj[5] = intl3.string(callback(1114).t.PDTjLN);
-      obj[6] = callback(1178).ButtonColors.BRAND;
-      callback2(14799)(obj);
+      let intl = closure_0(1114).intl;
+      obj.title = intl.string(closure_0(1114).t.PsQmzU);
+      let intl2 = closure_0(1114).intl;
+      obj.inputLabel = intl2.string(closure_0(1114).t["CIGa+7"]);
+      let intl3 = closure_0(1114).intl;
+      obj.actionText = intl3.string(closure_0(1114).t.PDTjLN);
+      obj.confirmColor = closure_0(1178).ButtonColors.BRAND;
+      closure_1(14825)(obj);
       return false;
     }, []);
   },
-  screen: createToggle
-};
-createToggle = {
-  route: UserSettingsSections.ACCOUNT_CONFIRM_VIEW_BACKUP_CODES,
-  getComponent() {
-    return require(14682) /* CodeRow */.default;
+  screen: {
+    route: UserSettingsSections.ACCOUNT_CONFIRM_VIEW_BACKUP_CODES,
+    getComponent() {
+      return require("UserSettingsAccountBackupCodes").default;
+    }
   }
-};
-createToggle = createToggle.createRoute(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountViewBackupCodesSetting.tsx");
+});
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountViewBackupCodesSetting.tsx");
 
-export default createToggle;
+export default route;

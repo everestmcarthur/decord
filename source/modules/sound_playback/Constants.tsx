@@ -1,11 +1,11 @@
-// Module ID: 9096
-// Function ID: 9097
-// Name: SoundOutputChannel
+// Module ID: 9123
+// Function ID: 9124
+// Name: Constants
 // Dependencies: [2]
 
-// Module 9096 (SoundOutputChannel)
-import set from "set" /* 2 */;
+// Module 9123 (Constants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/sound_playback/Constants.tsx");
+const result = size.fileFinishedImporting("modules/sound_playback/Constants.tsx");
 
 export const SoundOutputChannel = { DEFAULT: "default", VOICE: "voice" };

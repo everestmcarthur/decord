@@ -1,28 +1,28 @@
-// Module ID: 15775
-// Function ID: 15776
-// Name: route
-// Dependencies: [7975, 1074, 11473, 15776, 2]
+// Module ID: 15805
+// Function ID: 15806
+// Name: DesignSystemSegmentedControlSetting
+// Dependencies: [7989, 1074, 11500, 15806, 2]
 
-// Module 15775 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15805 (DesignSystemSegmentedControlSetting)
+import Constants from "Constants" /* 1074 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const require = globalThis.__r;
+
+const route = SettingBuilders.createRoute({
   useTitle() {
     return "Segmented Control";
   },
-  parent: MobileUserSettings.MobileUserSettings.DESIGN_SYSTEMS,
-  screen: obj
-};
-obj = {
-  route: ME.UserSettingsSections.DESIGN_SYSTEM_SEGMENTED_CONTROL,
-  getComponent() {
-    return require(15776) /* UserSettingsDesignSystemSegmentedControl */.default;
+  parent: SettingsConstants.MobileUserSettings.DESIGN_SYSTEMS,
+  screen: {
+    route: Constants.UserSettingsSections.DESIGN_SYSTEM_SEGMENTED_CONTROL,
+    getComponent() {
+      return require("UserSettingsDesignSystemSegmentedControl").default;
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemSegmentedControlSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemSegmentedControlSetting.tsx");
 
 export default route;

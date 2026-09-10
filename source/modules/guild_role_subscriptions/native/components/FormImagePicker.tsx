@@ -1,23 +1,22 @@
-// Module ID: 17733
-// Function ID: 17734
-// Name: pickImage
-// Dependencies: [5, 19, 17, 21, 4560, 576, 5138, 1430, 9055, 1114, 5587, 17734, 10255, 4556, 4975, 2]
+// Module ID: 17766
+// Function ID: 17767
+// Name: FormImagePicker
+// Dependencies: [5, 19, 17, 21, 4574, 576, 5152, 1430, 9082, 1114, 5601, 17767, 10282, 4570, 4989, 2]
 // Exports: default
 
-// Module 17733 (pickImage)
-import ThemesDefault from "Themes" /* 576 */;
-import preloadDefault from "preload" /* 5587 */;
-import renderDefault from "render" /* 9055 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17766 (FormImagePicker)
+import nativeDefault from "native" /* 576 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1430 */;
+import utils_UploadUtilsDefault from "utils/UploadUtils" /* 5152 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9082 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = fn;
 function pickImage() {
   const self = this;
-  const apply = _pickImage.apply;
+  const apply = closure_11.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -25,86 +24,67 @@ function pickImage() {
   }
   return applyArgumentsResult;
 }
-function _pickImage() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c3 = 0;
-    c4 = 0;
-    return (function*(arg0, base64) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw base64;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = base64;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+let closure_11 = async function _pickImage(size, arg1) {
+  closure_1 = arg1;
+  c3 = 0;
+  c4 = 0;
+  return (async (arg0, value) => {
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw base64;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = base64;
-              return obj;
-            } else {
-              closure_2 = tmp2;
-              const callback = base64;
-              base64 = undefined;
-              let obj2 = callback2(closure_1_2[6]);
-              obj1 = { size: null };
-              obj1[0] = callback;
-              c3 = 1;
-              c4 = 1;
-              obj2 = { value: null, done: false };
-              obj2[0] = obj2.openImagePicker(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
             c4 = 3;
-            throw base64;
+            throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj3 = { value: null, done: true };
-            obj3[0] = base64;
-            return obj3;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            base64 = base64.base64;
-            if (null != base64) {
-              obj = { uri: null };
-              obj[0] = base64;
-              callback(obj);
-            }
-            c4 = 3;
-            return { value: "HermesInternal", done: null };
+            closure_2 = tmp2;
+            closure_130_0 = closure_1;
+            let base64;
+            obj5 = { size };
+            c3 = 1;
+            c4 = 1;
+            const obj6 = { value: utils_UploadUtilsDefault.openImagePicker(obj5), done: false };
+            return obj6;
           }
-        } catch (tmp17) {
-          c4 = tmp;
-          throw tmp17;
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj7 = { value, done: true };
+          return obj7;
+        } else {
+          base64 = value.base64;
+          if (null != base64) {
+            const obj = { uri: base64 };
+            closure_130_0(obj);
+          }
+          c4 = 3;
+          return { value: "HermesInternal", done: null };
         }
+      } catch (tmp17) {
+        c4 = tmp;
+        throw tmp17;
       }
-    })();
-  });
-  closure_11 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
+    }
+  })();
+};
 class ImagePickerIcon {
   constructor(arg0) {
     ({ style, image } = global);
@@ -121,19 +101,18 @@ class ImagePickerIcon {
     tmp2 = "center" === previewResizeMode ? tmp.imageCentered : tmp.image;
     tmp7 = setImage;
     memo = closure_4.useMemo(() => {
-      let uri;
+      let uri1;
       if (image != null) {
-        uri = tmp.uri;
+        uri1 = tmp.uri;
       }
-      if (null != uri) {
-        uri = tmp.uri;
+      if (null != uri1) {
+        const uri = tmp.uri;
         if (!uri.startsWith("data:")) {
           if (null != size) {
-            const obj = image(closure_1_2[7]);
+            const obj = ImageLoaderUtils;
             const _HermesInternal = HermesInternal;
-            let uri2 = tmp.uri + "?size=" + obj.getBestMediaProxySize(tmp3 * image(closure_1_2[7]).getDevicePixelRatio());
+            let uri2 = tmp.uri + "?size=" + obj.getBestMediaProxySize(tmp3 * ImageLoaderUtils.getDevicePixelRatio());
             tmp.uri = uri2;
-            const obj2 = image(closure_1_2[7]);
           }
           return uri2;
         }
@@ -144,12 +123,12 @@ class ImagePickerIcon {
     tmp6 = imageUploadSize;
     obj = { accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, onPress: null, style: null, disabled: null, children: null };
     tmp9 = image;
-    tmp8 = require("render");
-    intl = require("getSystemLocale").intl;
-    obj[1] = intl.string(require("getSystemLocale").t.HNo5cG);
-    obj[2] = { disabled: flag };
-    obj[3] = function onPress() {
-      return closure_1_10(closure_1, closure_2);
+    tmp8 = imageUploadSize(setImage[8]);
+    intl = image(setImage[9]).intl;
+    obj.accessibilityLabel = intl.string(image(setImage[9]).t.HNo5cG);
+    obj.accessibilityState = { disabled: flag };
+    obj.onPress = function onPress() {
+      return pickImage(importDefault, dependencyMap);
     };
     items1 = [, , , , ];
     items1[0] = tmp.image;
@@ -161,29 +140,29 @@ class ImagePickerIcon {
     }
     items1[3] = disabled;
     items1[4] = style;
-    obj[4] = items1;
-    obj[5] = flag;
+    obj.style = items1;
+    obj.disabled = flag;
     if (null != image) {
       tmp12 = jsx;
-      obj = { style: null, resizeMode: null, source: null };
+      obj1 = { style: null, resizeMode: null, source: null };
       items2 = [, , ];
       items2[0] = tmp2;
       items2[1] = style;
       items2[2] = tmp3;
-      obj[0] = items2;
-      tmp6Result = require("preload");
+      obj1.style = items2;
+      tmp6Result = tmp6(tmp7[10]);
       if (previewResizeMode == null) {
         previewResizeMode = "cover";
       }
-      obj[1] = previewResizeMode;
-      obj1 = { uri: null };
-      obj1[0] = memo;
-      obj[2] = obj1;
-      tmp12Result = tmp12(tmp6Result, obj);
+      obj1.resizeMode = previewResizeMode;
+      obj5 = { uri: null };
+      obj5.uri = memo;
+      obj1.source = obj5;
+      tmp12Result = tmp12(tmp6Result, obj1);
       tmp10 = tmp12;
     } else {
       tmp10 = jsx;
-      tmp12Result = jsx(require("ImagePlusIcon").ImagePlusIcon, {});
+      tmp12Result = jsx(tmp9(tmp7[11]).ImagePlusIcon, {});
     }
     items3 = [, ];
     items3[0] = tmp12Result;
@@ -195,37 +174,39 @@ class ImagePickerIcon {
       if (standalone) {
         standalone = tmp.standaloneIcon;
       }
-      obj2 = { style: null, children: null };
+      obj6 = { style: null, children: null };
       items4[1] = standalone;
-      obj2[0] = items4;
-      obj2[1] = tmp10(require("PencilIcon").PencilIcon, { color: "#292b30", size: "sm" });
-      tmp10Result = tmp10(tmp15, obj2);
+      obj6.style = items4;
+      obj6.children = tmp10(tmp9(tmp7[12]).PencilIcon, { color: "#292b30", size: "sm" });
+      tmp10Result = tmp10(tmp15, obj6);
     }
     items3[1] = tmp10Result;
-    obj[6] = items3;
+    obj.children = items3;
     return tmp5(tmp8, obj);
   }
 }
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { imageSelectionRow: { flexDirection: "row", justifyContent: "space-between", marginHorizontal: 16 }, buttonColumn: { flex: 1, flexDirection: "column", marginEnd: 16 }, imageDescription: { flexWrap: "wrap", marginBottom: 16 }, image: { alignSelf: "center", width: 84, height: 84 }, imageCentered: { alignSelf: "center", width: 20, height: 20 }, imageCircle: { borderRadius: 42 }, imageSquircle: null, imageContainerEmpty: null, editImageIcon: null, standaloneIcon: null, disabled: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.sm };
-createCacheKey[6] = createCacheKey;
-createCacheKey[7] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-createCacheKey[8] = { alignItems: "center", backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: ThemesDefault.radii.lg, top: 0, height: 24, justifyContent: "center", right: 0, padding: 4, position: "absolute", width: 24 };
-createCacheKey[9] = { top: -4, right: -4 };
-createCacheKey[10] = { opacity: 0.3 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { CIRCLE: 0, [0]: "CIRCLE", SQUIRCLE: 1, [1]: "SQUIRCLE" };
-let obj2 = { alignItems: "center", backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: ThemesDefault.radii.lg, top: 0, height: 24, justifyContent: "center", right: 0, padding: 4, position: "absolute", width: 24 };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormImagePicker.tsx");
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { imageSelectionRow: { flexDirection: "row", justifyContent: "space-between", marginHorizontal: 16 }, buttonColumn: { flex: 1, flexDirection: "column", marginEnd: 16 }, imageDescription: { flexWrap: "wrap", marginBottom: 16 }, image: { alignSelf: "center", width: 84, height: 84 }, imageCentered: { alignSelf: "center", width: 20, height: 20 }, imageCircle: { borderRadius: 42 }, imageSquircle: { borderRadius: nativeDefault.radii.sm }, imageContainerEmpty: null, editImageIcon: null, standaloneIcon: null, disabled: null };
+let obj3 = { borderRadius: nativeDefault.radii.sm };
+obj2.imageContainerEmpty = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+let size = { alignItems: "center", backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: nativeDefault.radii.lg, top: 0, height: 24, justifyContent: "center", right: 0, padding: 4, position: "absolute", width: 24 };
+obj2.editImageIcon = size;
+obj2.standaloneIcon = { top: -4, right: -4 };
+obj2.disabled = { opacity: 0.3 };
+const React6 = createStyles.createStyles(obj2);
+let obj5 = { CIRCLE: 0, [0]: "CIRCLE", SQUIRCLE: 1, [1]: "SQUIRCLE" };
+size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormImagePicker.tsx");
 
 export default function FormImagePicker(children) {
   const imageUploadSize = children.imageUploadSize;
   ({ image, setImage } = children);
   const disabled = children.disabled;
-  const merged = Object.assign(children, Object.create(null));
-  const tmp2 = callback4();
+  const merged = Object.assign(children, Object.assign({ description: 0, imageUploadSize: 0, image: 0, setImage: 0, disabled: 0 }));
+  const tmp2 = closure_8();
   if (null == image) {
     const intl2 = imageUploadSize(1114).intl;
     let stringResult = intl2.string(imageUploadSize(1114).t.bGPfSp);
@@ -235,32 +216,31 @@ export default function FormImagePicker(children) {
     stringResult = intl.string(imageUploadSize(1114).t["0KOido"]);
     tmp6 = imageUploadSize;
   }
-  let obj = { style: tmp2.imageSelectionRow, children: null };
-  obj = { style: tmp2.buttonColumn, children: null };
-  obj = { style: tmp2.imageDescription, variant: "text-sm/medium", color: "text-default", children: children.description };
+  const obj = { style: tmp2.imageSelectionRow, children: null };
+  const obj2 = { style: tmp2.buttonColumn, children: null };
   const items = [
-    callback2(tmp6(4556).Text, obj),
-    callback2(tmp6(4975).Button, {
+    closure_6(tmp6(4570).Text, { style: tmp2.imageDescription, variant: "text-sm/medium", color: "text-default", children: children.description }),
+    closure_6(tmp6(4989).Button, {
       text: stringResult,
       variant: "secondary",
       onPress() {
-        return closure_1_10(imageUploadSize, setImage);
+        return pickImage(imageUploadSize, setImage);
       },
       size: "md",
       disabled
     })
   ];
-  obj[1] = items;
-  const items1 = [callback3(View, obj), ];
-  const obj2 = {};
+  obj2.children = items;
+  const items1 = [closure_7(View, obj2), ];
+  obj5 = {};
   const merged1 = Object.assign(merged);
-  obj2.disabled = disabled;
-  obj2.imageUploadSize = imageUploadSize;
-  obj2.image = image;
-  obj2.setImage = setImage;
-  items1[1] = callback2(ImagePickerIcon, obj2);
-  obj[1] = items1;
-  return callback3(View, obj);
+  obj5.disabled = disabled;
+  obj5.imageUploadSize = imageUploadSize;
+  obj5.image = image;
+  obj5.setImage = setImage;
+  items1[1] = closure_6(ImagePickerIcon, obj5);
+  obj.children = items1;
+  return closure_7(View, obj);
 };
-export const PreviewShape = obj3;
+export const PreviewShape = obj5;
 export { ImagePickerIcon };

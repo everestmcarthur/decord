@@ -1,78 +1,71 @@
-// Module ID: 12564
-// Function ID: 12565
+// Module ID: 12590
+// Function ID: 12591
 // Name: GuildPowerupsWarning
-// Dependencies: [19, 17, 21, 4560, 576, 8095, 12565, 6610, 4556, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 8111, 12591, 6624, 4570, 2]
 // Exports: default
 
-// Module 12564 (GuildPowerupsWarning)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12590 (GuildPowerupsWarning)
+import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: null, contentContainer: null, warningText: null, text: null };
-createCacheKey = { flexDirection: "row", alignItems: "flex-start", padding: ThemesDefault.space.PX_24, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_WARNING, borderWidth: 1, borderColor: ThemesDefault.colors.STATUS_WARNING, borderRadius: ThemesDefault.radii.lg, gap: ThemesDefault.space.PX_8, overflow: "hidden" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, gap: ThemesDefault.space.PX_4, alignItems: "center" };
-let obj1 = { flex: 1, gap: ThemesDefault.space.PX_4, alignItems: "center" };
-createCacheKey[2] = { marginTop: ThemesDefault.space.PX_4 };
-createCacheKey[3] = { textAlign: "center" };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { marginTop: ThemesDefault.space.PX_4 };
-const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsWarning.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { flexDirection: "row", alignItems: "flex-start", padding: nativeDefault.space.PX_24, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, borderWidth: 1, borderColor: nativeDefault.colors.STATUS_WARNING, borderRadius: nativeDefault.radii.lg, gap: nativeDefault.space.PX_8, overflow: "hidden" }, contentContainer: null, warningText: null, text: null };
+let obj3 = { flexDirection: "row", alignItems: "flex-start", padding: nativeDefault.space.PX_24, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, borderWidth: 1, borderColor: nativeDefault.colors.STATUS_WARNING, borderRadius: nativeDefault.radii.lg, gap: nativeDefault.space.PX_8, overflow: "hidden" };
+obj2.contentContainer = { flex: 1, gap: nativeDefault.space.PX_4, alignItems: "center" };
+let obj4 = { flex: 1, gap: nativeDefault.space.PX_4, alignItems: "center" };
+obj2.warningText = { marginTop: nativeDefault.space.PX_4 };
+obj2.text = { textAlign: "center" };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsWarning.tsx");
 
 export default function GuildPowerupsWarning(warnings) {
   warnings = warnings.warnings;
-  let _require;
-  let manaTypeConsolidationExperiment;
   ({ guildId, powerupNames } = warnings);
-  const tmp = callback2();
+  const tmp = closure_6();
   _require = tmp;
-  let obj = _require(8095);
-  manaTypeConsolidationExperiment = obj.useManaTypeConsolidationExperiment("GuildPowerupsWarning");
+  const manaTypeConsolidationExperiment = require("ManaTypeConsolidationExperiment").useManaTypeConsolidationExperiment("GuildPowerupsWarning");
+  let obj = require("ManaTypeConsolidationExperiment");
+  const tmp5 = manaTypeConsolidationExperiment;
   let tmp10Result = null;
   if (tmp6.shouldShow) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
-    obj = { style: null, children: null };
-    obj[0] = tmp.contentContainer;
-    obj1 = { color: null, size: "md" };
-    obj1[0] = manaTypeConsolidationExperiment(576).colors.TEXT_FEEDBACK_WARNING;
-    let items = [callback(tmp2(6610).CircleErrorIcon, obj1), , , ];
-    const obj2 = { variant: "text-md/semibold", color: "text-feedback-warning", style: null, children: null };
-    obj2[2] = tmp.text;
-    obj2[3] = tmp7;
-    items[1] = callback(tmp2(4556).Text, obj2);
+    const obj2 = { style: tmp.container, children: null };
+    const obj3 = { style: tmp.contentContainer, children: null };
+    const obj4 = { color: tmp5(576).colors.TEXT_FEEDBACK_WARNING, size: "md" };
+    let items = [closure_4(tmp2(6624).CircleErrorIcon, obj4), , , ];
+    const obj5 = { variant: "text-md/semibold", color: "text-feedback-warning", style: tmp.text, children: tmp7 };
+    items[1] = closure_4(tmp2(4570).Text, obj5);
     let str = "text-sm/medium";
     if (manaTypeConsolidationExperiment) {
       str = "experimental/body-sm/normal";
     }
-    const obj3 = { variant: null, style: null, children: null };
-    obj3[0] = str;
-    obj3[1] = tmp.text;
-    obj3[2] = tmp8;
-    items[2] = callback(tmp2(4556).Text, obj3);
+    const obj6 = { variant: str, style: tmp.text, children: tmp8 };
+    items[2] = closure_4(tmp2(4570).Text, obj6);
     let mapped;
     if (warnings != null) {
-      mapped = warnings.map((children) => {
+      mapped = warnings.map((children, index) => {
         let str = "text-sm/medium";
         if (manaTypeConsolidationExperiment) {
           str = "experimental/body-sm/normal";
         }
+        const obj = { variant: str, color: "text-feedback-warning", style: null, children };
         const items = [, ];
-        ({ warningText: arr[0], text: arr[1] } = callback);
-        return closure_1_4(callback(closure_1_2[8]).Text, { variant: str, color: "text-feedback-warning", style: items, children }, "warning-" + arg1);
+        ({ warningText: arr[0], text: arr[1] } = closure_0);
+        obj.style = items;
+        return React4(Text_Text.Text, obj, "warning-" + index);
       });
     }
     items[3] = mapped;
-    obj[1] = items;
-    obj[1] = closure_5(View, obj);
-    tmp10Result = tmp10(tmp11, obj);
-    const tmp12 = closure_5;
+    obj3.children = items;
+    obj2.children = closure_5(View, obj3);
+    tmp10Result = tmp10(tmp11, obj2);
   }
   return tmp10Result;
 };

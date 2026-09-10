@@ -1,52 +1,51 @@
-// Module ID: 17755
-// Function ID: 17756
-// Name: resetImperatively
-// Dependencies: [1244, 1249, 4184, 2]
+// Module ID: 17788
+// Function ID: 17789
+// Name: GuildRoleSubscriptionBenefitEditorModalStateStore
+// Dependencies: [1244, 1249, 4197, 2]
 // Exports: initializeImperatively, resetImperatively, useDescriptionState, useEmojiIdState, useEmojiNameState, useNameState, useRefIdState
 
-// Module 17755 (resetImperatively)
-import set from "set" /* 2 */;
-import isIterable from "isIterable" /* 4184 */;
-import identity from "identity" /* 1244 */;
+// Module 17788 (GuildRoleSubscriptionBenefitEditorModalStateStore)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import _mod4197 from "module_4197" /* 4197 */;
+import identity from "module_1244" /* 1244 */;
+import size from "module_2" /* 2 */;
 
-let closure_2 = Object.freeze({ name: "", emojiId: "paddingHorizontal", emojiName: "split", description: "it", refId: "Array" });
+let closure_2 = Object.freeze({ name: "", emojiId: "paddingHorizontal", emojiName: "paths", description: "it", refId: "Array" });
 let closure_3 = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;
   const obj = {};
   const merged = Object.assign(closure_2);
   obj.setEmojiId = function setEmojiId(emoji_id) {
-    const callback = emoji_id;
-    callback(closure_1_1[1]).batchUpdates(() => emoji_id({ emojiId: emoji_id }));
+    const emojiId = emoji_id;
+    emojiId(1249).batchUpdates(() => emojiId({ emojiId }));
   };
   obj.setEmojiName = function setEmojiName(emoji_name) {
-    const callback = emoji_name;
-    callback(closure_1_1[1]).batchUpdates(() => emoji_name({ emojiName: emoji_name }));
+    const emojiName = emoji_name;
+    emojiName(1249).batchUpdates(() => emojiName({ emojiName }));
   };
-  obj.setName = function setName(arg0) {
-    const callback = arg0;
-    callback(closure_1_1[1]).batchUpdates(() => callback({ name: callback }));
+  obj.setName = function setName(name) {
+    name(1249).batchUpdates(() => name({ name }));
   };
   obj.setDescription = function setDescription(description) {
-    const callback = description;
-    callback(closure_1_1[1]).batchUpdates(() => description({ description }));
+    description(1249).batchUpdates(() => description({ description }));
   };
   obj.setRefId = function setRefId(ref_id) {
-    const callback = ref_id;
-    callback(closure_1_1[1]).batchUpdates(() => callback({ refId: callback }));
+    const refId = ref_id;
+    refId(1249).batchUpdates(() => refId({ refId }));
   };
   obj.reset = function reset() {
-    callback(closure_1_1[1]).batchUpdates(() => callback(closure_1_2));
+    ReactBatchUpdates.batchUpdates(() => closure_1_0(closure_2_2));
   };
   return obj;
 });
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModalStateStore.tsx");
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModalStateStore.tsx");
 
 export const resetImperatively = function resetImperatively() {
-  const state = store.getState();
+  const state = closure_3.getState();
   state.reset();
 };
 export const initializeImperatively = function initializeImperatively(benefit) {
-  const state = store.getState();
+  const state = closure_3.getState();
   ({ setDescription, setEmojiId, setEmojiName, setName, setRefId } = state);
   state.reset();
   if (null != benefit.description) {
@@ -60,37 +59,37 @@ export const initializeImperatively = function initializeImperatively(benefit) {
   }
 };
 export const useDescriptionState = function useDescriptionState() {
-  return store((arg0) => {
+  return closure_3((arg0) => {
     const items = [, ];
     ({ description: arr[0], setDescription: arr[1] } = arg0);
     return items;
-  }, isIterable.shallow);
+  }, _mod4197.shallow);
 };
 export const useEmojiIdState = function useEmojiIdState() {
-  return store((arg0) => {
+  return closure_3((arg0) => {
     const items = [, ];
     ({ emojiId: arr[0], setEmojiId: arr[1] } = arg0);
     return items;
-  }, isIterable.shallow);
+  }, _mod4197.shallow);
 };
 export const useEmojiNameState = function useEmojiNameState() {
-  return store((arg0) => {
+  return closure_3((arg0) => {
     const items = [, ];
     ({ emojiName: arr[0], setEmojiName: arr[1] } = arg0);
     return items;
-  }, isIterable.shallow);
+  }, _mod4197.shallow);
 };
 export const useNameState = function useNameState() {
-  return store((arg0) => {
+  return closure_3((arg0) => {
     const items = [, ];
     ({ name: arr[0], setName: arr[1] } = arg0);
     return items;
-  }, isIterable.shallow);
+  }, _mod4197.shallow);
 };
 export const useRefIdState = function useRefIdState() {
-  return store((arg0) => {
+  return closure_3((arg0) => {
     const items = [, ];
     ({ refId: arr[0], setRefId: arr[1] } = arg0);
     return items;
-  }, isIterable.shallow);
+  }, _mod4197.shallow);
 };

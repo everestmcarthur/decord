@@ -1,85 +1,91 @@
-// Module ID: 15929
-// Function ID: 15930
-// Name: VisualEffectViewOverrideOverlay_
-// Dependencies: [19, 17, 4559, 574, 21, 4560, 576, 4296, 4974, 4978, 8598, 15930, 15932, 15933, 10901, 5680, 504, 15693, 2]
+// Module ID: 15959
+// Function ID: 15960
+// Name: VEVOO
+// Dependencies: [19, 17, 4573, 574, 21, 4574, 576, 4310, 4988, 4992, 8626, 15960, 15962, 15963, 10928, 5694, 504, 15723, 2]
 
-// Module 15929 (VisualEffectViewOverrideOverlay_)
-import initialize from "initialize" /* 504 */;
-import ThemesDefault from "Themes" /* 576 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "getUserAgnosticState" /* 4559 */;
-import { DEV_WIDGET_SIZE } from "STORAGE_KEY_LOG_DISPATCHES" /* 574 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 15959 (VEVOO)
+import nativeDefault from "native" /* 576 */;
+import spring from "spring" /* 4988 */;
+import springPresets from "springPresets" /* 4992 */;
+import noop from "module_19" /* 19 */;
+import DevSettingsStore from "DevSettingsStore" /* 4573 */;
 
-require = arg1;
+const require = globalThis.__r;
+
+require = fn;
 function VisualEffectViewOverrideOverlay_(arg0) {
   const x = arg0.x;
-  const _require = x;
+  _require = x;
   const y = arg0.y;
   importDefault = y;
   let PX_8;
-  const tmp = callback3();
-  PX_8 = importDefault(PX_8[6]).space.PX_8;
-  let obj = _require(PX_8[7]);
+  const tmp = closure_8();
+  PX_8 = require("native").space.PX_8;
   const fn = function _() {
-    const obj = { top: null, left: null };
-    const sum = closure_1.get() - PX_8 + closure_1_5;
-    obj[0] = x(PX_8[8]).withSpring(sum, x(PX_8[9]).springUnclamped);
-    const obj2 = x(PX_8[8]);
-    const diff = x.get() - PX_8;
-    obj[1] = x(PX_8[8]).withSpring(diff, x(PX_8[9]).springUnclamped);
-    return obj;
+    const rect = { top: null, left: null };
+    const sum = closure_1.get() - PX_8 + DEV_WIDGET_SIZE;
+    rect.top = spring.withSpring(sum, springPresets.springUnclamped);
+    const diff = closure_0.get() - PX_8;
+    rect.left = spring.withSpring(diff, springPresets.springUnclamped);
+    return rect;
   };
-  obj = { withSpring: _require(PX_8[8]).withSpring, y, px8: PX_8, DEV_WIDGET_SIZE, springUnclamped: _require(PX_8[9]).springUnclamped, x };
-  fn.__closure = obj;
+  const point = { withSpring: require("spring").withSpring, y, px8: PX_8, DEV_WIDGET_SIZE, springUnclamped: require("springPresets").springUnclamped, x };
+  fn.__closure = point;
   fn.__workletHash = 8104480272354;
-  fn.__initData = closure_9;
-  const animatedStyle = obj.useAnimatedStyle(fn);
-  obj = { style: items, children: null };
-  items = [tmp.wrapper, animatedStyle];
-  obj1 = { style: tmp.scrollView, children: null };
-  let obj2 = { title: "Blur View Global Overrides", sectionBodyStyle: tmp.scrollViewContent, children: null };
-  const items1 = [callback(importDefault(PX_8[11]), {}), callback(importDefault(PX_8[12]), {}), callback(importDefault(PX_8[13]), {})];
-  obj2[2] = items1;
-  obj1[1] = callback2(_require(PX_8[10]).FormSection, obj2);
-  const items2 = [callback(ScrollView, obj1), ];
-  const obj3 = { styles: tmp.close, type: "neutral", IconComponent: _require(PX_8[15]).XSmallIcon, onPress: arg0.onClose, accessibilityLabel: "Close" };
-  items2[1] = callback(importDefault(PX_8[14]), obj3);
-  obj[1] = items2;
-  return callback2(importDefault(PX_8[7]).View, obj);
+  fn.__initData = __initData;
+  const animatedStyle = require("ReanimatedRexport").useAnimatedStyle(fn);
+  let obj2 = { style: null, children: null };
+  const items = [tmp.wrapper, animatedStyle];
+  obj2.style = items;
+  const obj3 = { style: tmp.scrollView, children: null };
+  const obj4 = { title: "Blur View Global Overrides", sectionBodyStyle: tmp.scrollViewContent, children: null };
+  const items1 = [closure_6(require("VEVOOPropBlurAmount"), {}), closure_6(require("VEVOOPropTintColor"), {}), closure_6(require("VEVOOPropBlurEffectName"), {})];
+  obj4.children = items1;
+  obj3.children = closure_7(require("Form").FormSection, obj4);
+  const items2 = [closure_6(ScrollView, obj3), ];
+  const obj5 = { styles: tmp.close, type: "neutral", IconComponent: null, onPress: null, accessibilityLabel: "Close" };
+  const obj = require("ReanimatedRexport");
+  obj5.IconComponent = require("XSmallIcon").XSmallIcon;
+  obj5.onPress = arg0.onClose;
+  items2[1] = closure_6(require("ActionButton"), obj5);
+  obj2.children = items2;
+  return closure_7(require("ReanimatedRexport").View, obj2);
 }
-({ jsx: closure_6, jsxs: error } = jsxProd);
-const styles = createCacheKey.createStyles({ zeroPadding: { paddingVertical: 0, paddingHorizontal: 0 }, zeroPaddingVertical: { paddingVertical: 0 }, zeroPaddingHorizontal: { paddingHorizontal: 0 }, zeroHeight: { height: 0 }, enabledSwitchStyle: { alignSelf: "flex-start" } });
+const ScrollView = fn(17).ScrollView;
+const DEV_WIDGET_SIZE = fn(574).DEV_WIDGET_SIZE;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+let createStyles = fn(4574);
+const styles = createStyles.createStyles({ zeroPadding: { paddingVertical: 0, paddingHorizontal: 0 }, zeroPaddingVertical: { paddingVertical: 0 }, zeroPaddingHorizontal: { paddingHorizontal: 0 }, zeroHeight: { height: 0 }, enabledSwitchStyle: { alignSelf: "flex-start" } });
+createStyles = fn(4574);
 let obj = { wrapper: null, scrollView: null, scrollViewContent: null, close: null };
-obj = { borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 1, backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_660, borderRadius: ThemesDefault.radii.lg, position: "absolute", top: 0, left: 0, width: 300, height: 400 };
-let merged = Object.assign(ThemesDefault.shadows.SHADOW_MOBILE_NAVIGATOR_X);
-obj[0] = obj;
-createCacheKey = { borderRadius: ThemesDefault.radii.lg, paddingTop: ThemesDefault.space.PX_24, overflow: "hidden" };
-obj[1] = createCacheKey;
-createCacheKey = { paddingBottom: ThemesDefault.space.PX_24 };
-obj[2] = createCacheKey;
-const merged1 = Object.assign(ThemesDefault.shadows.SHADOW_LOW_HOVER);
-obj[3] = { position: "absolute", right: ThemesDefault.space.PX_8, top: ThemesDefault.space.PX_8 };
-let closure_8 = createCacheKey.createStyles(obj);
-let closure_9 = { code: "function VEVOOTsx1(){const{withSpring,y,px8,DEV_WIDGET_SIZE,springUnclamped,x}=this.__closure;return{top:withSpring(y.get()-px8+DEV_WIDGET_SIZE,springUnclamped),left:withSpring(x.get()-px8,springUnclamped)};}" };
-let obj3 = { position: "absolute", right: ThemesDefault.space.PX_8, top: ThemesDefault.space.PX_8 };
-const memoResult = importAllResult.memo(function VisualEffectViewOverrideOverlay(arg0) {
-  let obj = initialize;
-  const items = [closure_4];
+let size = { borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_660, borderRadius: nativeDefault.radii.lg, position: "absolute", top: 0, left: 0, width: 300, height: 400 };
+let merged = Object.assign(nativeDefault.shadows.SHADOW_MOBILE_NAVIGATOR_X);
+obj.wrapper = size;
+obj.scrollView = { borderRadius: nativeDefault.radii.lg, paddingTop: nativeDefault.space.PX_24, overflow: "hidden" };
+let obj4 = { borderRadius: nativeDefault.radii.lg, paddingTop: nativeDefault.space.PX_24, overflow: "hidden" };
+obj.scrollViewContent = { paddingBottom: nativeDefault.space.PX_24 };
+let rect = { position: "absolute", right: nativeDefault.space.PX_8, top: nativeDefault.space.PX_8 };
+const merged1 = Object.assign(nativeDefault.shadows.SHADOW_LOW_HOVER);
+obj.close = rect;
+let closure_8 = createStyles.createStyles(obj);
+const __initData = { code: "function VEVOOTsx1(){const{withSpring,y,px8,DEV_WIDGET_SIZE,springUnclamped,x}=this.__closure;return{top:withSpring(y.get()-px8+DEV_WIDGET_SIZE,springUnclamped),left:withSpring(x.get()-px8,springUnclamped)};}" };
+let obj5 = { paddingBottom: nativeDefault.space.PX_24 };
+size = fn(2);
+const result = size.fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOO.tsx");
+
+export default noop.memo(function VisualEffectViewOverrideOverlay(arg0) {
+  const items = [DevSettingsStore];
   let tmp = null;
-  if (obj.useStateFromStores(items, () => closure_4.get("visual_effect_view_overrides"))) {
-    obj = { onClose: null };
-    obj[0] = function onClose() {
-      callback(table[17]).toggle("visual_effect_view_overrides", false);
+  if (obj.useStateFromStores(items, () => DevSettingsStore.get("visual_effect_view_overrides"))) {
+    const obj2 = {
+      onClose() {
+          require("DevSettingsActions").toggle("visual_effect_view_overrides", false);
+        }
     };
     const merged = Object.assign(arg0);
-    tmp = callback(VisualEffectViewOverrideOverlay_, obj);
+    tmp = timestampProducer(VisualEffectViewOverrideOverlay_, obj2);
   }
   return tmp;
 });
-const result = require("set").fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOO.tsx");
-
-export default memoResult;
 export const useVisualEffectViewOverrideSharedStyles = styles;

@@ -1,12 +1,11 @@
-// Module ID: 14444
-// Function ID: 14445
-// Name: _initialize
+// Module ID: 14469
+// Function ID: 14470
+// Name: CallKitManager
 // Dependencies: [1898, 2]
 
-// Module 14444 (_initialize)
-import initializeDefault from "initialize" /* 1898 */;
+// Module 14469 (CallKitManager)
+import LifecycleManager from "LifecycleManager" /* 1898 */;
 
-initializeDefault;
 class CallKitLifecycleManager extends tmp2 {
 }
 const prototype = CallKitLifecycleManager.prototype;
@@ -17,6 +16,7 @@ prototype["_terminate"] = function _terminate() {
 
 };
 const callKitLifecycleManager = new CallKitLifecycleManager();
-const result = require("set").fileFinishedImporting("modules/calls/mobile/CallKitManager.android.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/calls/mobile/CallKitManager.android.tsx");
 
 export default callKitLifecycleManager;

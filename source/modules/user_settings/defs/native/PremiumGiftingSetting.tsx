@@ -1,55 +1,54 @@
-// Module ID: 14995
-// Function ID: 14996
-// Name: route
-// Dependencies: [19, 1074, 21, 7417, 11438, 13472, 1178, 11473, 1114, 11035, 4231, 13558, 2]
+// Module ID: 15021
+// Function ID: 15022
+// Name: PremiumGiftingSetting
+// Dependencies: [19, 1074, 21, 7431, 11465, 13495, 1178, 11500, 1114, 11062, 4244, 13581, 2]
 
-// Module 14995 (route)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import isPremiumGiftingSupported from "isPremiumGiftingSupported" /* 4231 */;
-import useEligibleActiveOutboundPromotions from "useEligibleActiveOutboundPromotions" /* 13472 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15021 (PremiumGiftingSetting)
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import BillingPlatformUtils from "BillingPlatformUtils" /* 4244 */;
+import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7431 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11465 */;
+import PromotionsHooks from "PromotionsHooks" /* 13495 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const jsx = fn(21).jsx;
+const SettingBuilders = fn(11500);
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["jcSP+g"]);
+    const intl = util.intl;
+    return intl.string(util.t["jcSP+g"]);
   },
   parent: null,
-  IconComponent: require("GiftIcon").GiftIcon,
+  IconComponent: fn(11062).GiftIcon,
   usePredicate() {
-    return isPremiumGiftingSupported.isPremiumGiftingSupported();
+    return BillingPlatformUtils.isPremiumGiftingSupported();
   },
   usePreNavigationAction: function useCanNavigateToPaymentSetting() {
-    return React.useCallback(() => {
-      const isPaymentsBlocked = callback(table[3]).getIsPaymentsBlocked();
+    return noop.useCallback(() => {
+      const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
       let flag = !isPaymentsBlocked;
       if (isPaymentsBlocked) {
-        callback2(table[4])();
+        openBlockedPaymentsCountryActionSheetDefault();
         flag = false;
       }
       return flag;
     }, []);
   },
   useTrailing: function usePremiumGiftingSettingTrailing() {
-    let obj = useEligibleActiveOutboundPromotions;
-    const unseenOutboundPromotions = obj.useUnseenOutboundPromotions();
-    obj = { value: unseenOutboundPromotions.length };
-    return jsx(Button.Badge, { value: unseenOutboundPromotions.length });
+    const unseenOutboundPromotions = PromotionsHooks.useUnseenOutboundPromotions();
+    return jsx(native.Badge, { value: unseenOutboundPromotions.length });
   },
   unsearchable: true,
-  screen: createToggle
-};
-createToggle = {
-  route: require("ME").UserSettingsSections.PREMIUM_GIFTING,
-  getComponent() {
-    return require(13558) /* GiftingSectionTitle */.default;
+  screen: {
+    route: fn(1074).UserSettingsSections.PREMIUM_GIFTING,
+    getComponent() {
+      return require("UserSettingsPremiumGifting").default;
+    }
   }
-};
-createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/PremiumGiftingSetting.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/PremiumGiftingSetting.tsx");
 
-export default createToggle;
+export default route;

@@ -1,29 +1,28 @@
-// Module ID: 9511
-// Function ID: 9512
+// Module ID: 9538
+// Function ID: 9539
 // Name: canLaunchFrame
-// Dependencies: [1074, 9294, 8861, 2]
+// Dependencies: [1074, 9321, 8888, 2]
 // Exports: canLaunchFrame
 
-// Module 9511 (canLaunchFrame)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getShelfBadgeTypeIfActive from "getShelfBadgeTypeIfActive" /* 9294 */;
+// Module 9538 (canLaunchFrame)
+import Constants from "Constants" /* 1074 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9321 */;
+import size from "module_2" /* 2 */;
 
-const ApplicationFlags = ME.ApplicationFlags;
-const result = set.fileFinishedImporting("modules/frames/utils/canLaunchFrame.tsx");
+const ApplicationFlags = Constants.ApplicationFlags;
+const result = size.fileFinishedImporting("modules/frames/utils/canLaunchFrame.tsx");
 
 export const canLaunchFrame = function canLaunchFrame(application) {
   if (null != application) {
     if (obj.isRealApplication(application)) {
-      let tmpResult = tmp(8861);
-      let hasApplicationFlagResult = tmpResult.hasApplicationFlag(application, ApplicationFlags.EMBEDDED);
-      tmpResult = tmp(8861);
+      let hasApplicationFlagResult = tmp(8888).hasApplicationFlag(application, ApplicationFlags.EMBEDDED);
+      const tmpResult = tmp(8888);
       if (hasApplicationFlagResult) {
-        hasApplicationFlagResult = tmpResult.hasApplicationFlag(application, ApplicationFlags.CONTEXTLESS_ACTIVITY);
+        hasApplicationFlagResult = tmpResult2.hasApplicationFlag(application, ApplicationFlags.CONTEXTLESS_ACTIVITY);
       }
       return hasApplicationFlagResult;
     }
-    obj = getShelfBadgeTypeIfActive;
+    obj = AppLauncherUtils;
   }
   return false;
 };

@@ -1,53 +1,53 @@
-// Module ID: 12436
-// Function ID: 12437
-// Name: AttachedCoachmark
-// Dependencies: [19, 17, 1954, 21, 4560, 1114, 12224, 11132, 2]
+// Module ID: 12462
+// Function ID: 12463
+// Name: ScheduledMessageDraftCoachmark
+// Dependencies: [19, 17, 1954, 21, 4574, 1114, 12250, 11159, 2]
 // Exports: default
 
-// Module 12436 (AttachedCoachmark)
-import useCoachmark from "useCoachmark" /* 11132 */;
-import closure_3 from "noop" /* 19 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12462 (ScheduledMessageDraftCoachmark)
+import util from "util" /* 1114 */;
+import useCoachmark from "useCoachmark" /* 11159 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function AttachedCoachmark(buttonRef) {
-  const merged = Object.assign(buttonRef, Object.create(null));
+  const merged = Object.assign(buttonRef, Object.assign({ buttonRef: 0 }));
   const coachmark = useCoachmark.useCoachmark(buttonRef.buttonRef, merged);
   return null;
 }
-let closure_7 = createCacheKey.createStyles({ image: { width: 100, height: 80 } });
-const result = require("set").fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessageDraftCoachmark.tsx");
+const Image = fn(17).Image;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_7 = createStyles.createStyles({ image: { width: 100, height: 80 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessageDraftCoachmark.tsx");
 
 export default function ScheduledMessageDraftCoachmark(onDismiss) {
   onDismiss = onDismiss.onDismiss;
-  closure_1 = undefined;
   ({ buttonRef, isVisible } = onDismiss);
-  const tmp = callback();
+  const tmp = closure_7();
   closure_1 = tmp;
   const items = [onDismiss, tmp.image];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     const obj = { title: null, description: null, position: "top", offsetY: 4, visible: true, onDismiss: null, renderImgComponent: null };
-    const intl = onDismiss(closure_1_2[5]).intl;
-    obj[0] = intl.string(onDismiss(closure_1_2[5]).t.Pu7sCU);
-    const intl2 = onDismiss(closure_1_2[5]).intl;
-    obj[1] = intl2.format(onDismiss(closure_1_2[5]).t.Juk17F, {});
-    obj[5] = function onDismiss() {
-      return callback(closure_1_5.USER_DISMISS);
+    const intl = util.intl;
+    obj.title = intl.string(util.t.Pu7sCU);
+    const intl2 = util.intl;
+    obj.description = intl2.format(util.t.Juk17F, {});
+    obj.onDismiss = function onDismiss() {
+      return onDismiss(constants.USER_DISMISS);
     };
-    obj[6] = function renderImgComponent() {
-      return closure_1_6(closure_1_4, { source: closure_1_1(closure_1_2[6]), style: image.image });
+    obj.renderImgComponent = function renderImgComponent() {
+      return <Image source={closure_1(dependencyMap[6])} style={closure_1_1.image} />;
     };
     return obj;
   }, items);
   let tmp3 = null;
   if (isVisible) {
-    let obj = { buttonRef: null };
-    obj[0] = buttonRef;
+    let obj = { buttonRef };
     const merged = Object.assign(memo);
-    tmp3 = <AttachedCoachmark buttonRef={null} />;
+    tmp3 = <AttachedCoachmark buttonRef={buttonRef} />;
   }
   return tmp3;
 };

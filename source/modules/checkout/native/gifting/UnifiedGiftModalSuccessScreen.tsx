@@ -1,78 +1,76 @@
-// Module ID: 11020
-// Function ID: 11021
+// Module ID: 11047
+// Function ID: 11048
 // Name: UnifiedGiftModalSuccessScreen
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 11021, 10748, 4763, 11032, 1896, 7382, 4994, 4556, 1114, 4976, 2]
+// Dependencies: [19, 17, 1074, 21, 4574, 576, 11048, 10775, 4777, 11059, 1896, 7396, 5008, 4570, 1114, 4990, 2]
 // Exports: default
 
-// Module 11020 (UnifiedGiftModalSuccessScreen)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { UserSettingsSections } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11047 (UnifiedGiftModalSuccessScreen)
+import nativeDefault from "native" /* 576 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import openUserSettings from "openUserSettings" /* 7396 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { alertContainer: null, image: null, title: null, description: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_24, paddingBottom: ThemesDefault.space.PX_24, alignItems: "center" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { position: "relative", top: -50 };
-createCacheKey[2] = { marginTop: -ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_8 };
-let obj1 = { marginTop: -ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_8 };
-createCacheKey[3] = { marginBottom: ThemesDefault.space.PX_24 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { marginBottom: ThemesDefault.space.PX_24 };
-const result = require("set").fileFinishedImporting("modules/checkout/native/gifting/UnifiedGiftModalSuccessScreen.tsx");
+require = fn;
+const Image = fn(17).Image;
+const UserSettingsSections = fn(1074).UserSettingsSections;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { alertContainer: { paddingHorizontal: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_24, alignItems: "center" }, image: { position: "relative", top: -50 }, title: null, description: null };
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_24, alignItems: "center" };
+obj2.title = { marginTop: -nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_8 };
+let obj4 = { marginTop: -nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_8 };
+obj2.description = { marginBottom: nativeDefault.space.PX_24 };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/checkout/native/gifting/UnifiedGiftModalSuccessScreen.tsx");
 
 export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
   giftBadgeProgress = giftBadgeProgress.giftBadgeProgress;
   const onClose = giftBadgeProgress.onClose;
   let enabled;
-  const tmp = callback2();
+  const tmp = closure_8();
   const GiftingBadgeExperiment = giftBadgeProgress(enabled[7]).GiftingBadgeExperiment;
   enabled = GiftingBadgeExperiment.useConfig({ location: "UnifiedGiftModalSuccessScreen" }).enabled;
   const items = [enabled, giftBadgeProgress, onClose];
-  const callback = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     onClose();
     let tmp2 = enabled;
     if (enabled) {
       tmp2 = null != giftBadgeProgress;
     }
     if (tmp2) {
-      let obj = onClose(enabled[8]);
-      obj = { giftBadgeProgress: null };
-      obj[0] = giftBadgeProgress;
-      obj.pushLazy(giftBadgeProgress(enabled[10])(enabled[9], enabled.paths), obj, "collectibles_shop_gift_badge_modal");
+      const obj2 = { giftBadgeProgress };
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11059, dependencyMap.paths), obj2, "collectibles_shop_gift_badge_modal");
     }
   }, items);
   const items1 = [onClose];
-  const callback1 = React.useCallback(() => {
+  const callback1 = noop.useCallback(() => {
     onClose();
-    let obj = giftBadgeProgress(enabled[11]);
-    obj = { screen: closure_1_5.PREMIUM_GIFTING, params: {} };
-    obj.openUserSettings(obj);
+    openUserSettings.openUserSettings({ screen: UserSettingsSections.PREMIUM_GIFTING, params: {} });
   }, items1);
   let obj = { onClose: callback, noDefaultButtons: true, style: tmp.alertContainer, children: null };
-  obj = { source: giftBadgeProgress(enabled[6]).GIFT_STYLE_IMG[giftBadgeProgress.giftStyle], style: tmp.image };
-  const items2 = [callback(Image, obj), , , ];
-  obj = { variant: "heading-lg/bold", style: tmp.title, children: null };
+  let obj2 = { source: giftBadgeProgress(enabled[6]).GIFT_STYLE_IMG[giftBadgeProgress.giftStyle], style: tmp.image };
+  const tmp6 = closure_7;
+  const items2 = [closure_6(Image, obj2), , , ];
+  const obj3 = { variant: "heading-lg/bold", style: tmp.title, children: null };
   const intl = giftBadgeProgress(enabled[14]).intl;
-  obj[2] = intl.string(giftBadgeProgress(enabled[14]).t.MqZXbv);
-  items2[1] = callback(giftBadgeProgress(enabled[13]).Text, obj);
-  obj1 = { variant: "text-md/medium", style: tmp.description, children: null };
+  obj3.children = intl.string(giftBadgeProgress(enabled[14]).t.MqZXbv);
+  items2[1] = closure_6(giftBadgeProgress(enabled[13]).Text, obj3);
+  const obj4 = { variant: "text-md/medium", style: tmp.description, children: null };
   const intl2 = giftBadgeProgress(enabled[14]).intl;
-  obj1[2] = intl2.format(giftBadgeProgress(enabled[14]).t.YS2J4S, { onClick: callback1 });
-  items2[2] = callback(giftBadgeProgress(enabled[13]).Text, obj1);
-  const obj2 = { onPress: callback, text: null, textVariant: "text-md/semibold", grow: true };
+  obj4.children = intl2.format(giftBadgeProgress(enabled[14]).t.YS2J4S, { onClick: callback1 });
+  items2[2] = closure_6(giftBadgeProgress(enabled[13]).Text, obj4);
+  const obj5 = { onPress: callback, text: null, textVariant: "text-md/semibold", grow: true };
   if (enabled) {
     if (null != giftBadgeProgress) {
       let cpT0Cq = tmp2(tmp3[14]).t.PDTjLN;
     }
-    obj2[1] = tmp9(cpT0Cq);
-    items2[3] = callback(giftBadgeProgress(enabled[15]).BaseTextButton, obj2);
-    obj[3] = items2;
-    return closure_7(tmp7, obj);
+    obj5.text = tmp9(cpT0Cq);
+    items2[3] = closure_6(giftBadgeProgress(enabled[15]).BaseTextButton, obj5);
+    obj.children = items2;
+    return tmp6(tmp7, obj);
   }
   cpT0Cq = tmp2(tmp3[14]).t.cpT0Cq;
 };

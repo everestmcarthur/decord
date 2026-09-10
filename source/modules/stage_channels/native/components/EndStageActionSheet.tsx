@@ -1,68 +1,63 @@
-// Module ID: 9086
-// Function ID: 9087
+// Module ID: 9113
+// Function ID: 9114
 // Name: EndStageActionSheet
-// Dependencies: [19, 17, 5414, 1074, 21, 4560, 576, 4527, 9087, 8596, 1178, 1114, 4556, 4975, 8398, 2]
+// Dependencies: [19, 17, 5428, 1074, 21, 4574, 576, 4541, 9114, 8624, 1178, 1114, 4570, 4989, 8426, 2]
 // Exports: default
 
-// Module 9086 (EndStageActionSheet)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import ScrollHandlingActionSheetDefault from "ScrollHandlingActionSheet" /* 8596 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { EXPLICIT_END_STAGE_SHEET_KEY as closure_4 } from "MAX_STAGE_TOPIC_LENGTH" /* 5414 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9113 (EndStageActionSheet)
+import nativeDefault from "native" /* 576 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import StageChannelActionCreators from "StageChannelActionCreators" /* 8426 */;
+import ScrollHandlingActionSheetDefault from "ScrollHandlingActionSheet" /* 8624 */;
+import CallsUtils from "CallsUtils" /* 9114 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { paddingVertical: 24, paddingHorizontal: 16, alignItems: "center" }, title: null, subtitle: null, cancelButton: null, confirmButton: null };
-createCacheKey = { fontSize: 24, fontFamily: require("ME").Fonts.PRIMARY_BOLD, textAlign: "center", color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { marginTop: 8, textAlign: "center" };
-createCacheKey[3] = { marginTop: 24, alignSelf: "stretch" };
-createCacheKey[4] = { marginTop: 8, alignSelf: "stretch" };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/EndStageActionSheet.tsx");
+require = fn;
+const View = fn(17).View;
+let closure_4 = fn(5428).EXPLICIT_END_STAGE_SHEET_KEY;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { paddingVertical: 24, paddingHorizontal: 16, alignItems: "center" }, title: { fontSize: 24, fontFamily: fn(1074).Fonts.PRIMARY_BOLD, textAlign: "center", color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, subtitle: { marginTop: 8, textAlign: "center" }, cancelButton: { marginTop: 24, alignSelf: "stretch" }, confirmButton: { marginTop: 8, alignSelf: "stretch" } };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/EndStageActionSheet.tsx");
 
 export default function EndStageActionSheet(channel) {
   channel = channel.channel;
-  const tmp = callback3();
+  const tmp = closure_7();
   let obj = { children: null };
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.title, accessibilityRole: "header", children: null };
+  let obj2 = { style: tmp.container, children: null };
+  const obj3 = { style: tmp.title, accessibilityRole: "header", children: null };
   const intl = channel(1114).intl;
-  obj[2] = intl.string(channel(1114).t.pADdJu);
-  const items = [callback(channel(1178).LegacyText, obj), , , ];
-  obj1 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: null };
+  obj3.children = intl.string(channel(1114).t.pADdJu);
+  const items = [closure_5(channel(1178).LegacyText, obj3), , , ];
+  const obj4 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: null };
   const intl2 = channel(1114).intl;
-  obj1[3] = intl2.string(channel(1114).t.mT7jwN);
-  items[1] = callback(channel(4556).Text, obj1);
-  let obj2 = { style: tmp.cancelButton, children: null };
-  const obj3 = { variant: "secondary", text: null, onPress: null };
+  obj4.children = intl2.string(channel(1114).t.mT7jwN);
+  items[1] = closure_5(channel(4570).Text, obj4);
+  const obj5 = { style: tmp.cancelButton, children: null };
+  const obj6 = { variant: "secondary", text: null, onPress: null };
   const intl3 = channel(1114).intl;
-  obj3[1] = intl3.string(channel(1114).t.xTwqz2);
-  obj3[2] = function handleClose() {
-    closure_1_1(closure_1_2[7]).hideActionSheet(closure_1_4);
-    const obj = closure_1_1(closure_1_2[7]);
-    channel(closure_1_2[8]).handleDisconnect(channel);
+  obj6.text = intl3.string(channel(1114).t.xTwqz2);
+  obj6.onPress = function handleClose() {
+    ActionSheetActionCreatorsDefault.hideActionSheet(closure_4);
+    CallsUtils.handleDisconnect(channel);
   };
-  obj2[1] = callback(channel(4975).Button, obj3);
-  items[2] = callback(View, obj2);
-  const obj4 = { style: tmp.confirmButton, children: null };
-  const obj5 = { variant: "destructive", text: null, onPress: null };
+  obj5.children = closure_5(channel(4989).Button, obj6);
+  items[2] = closure_5(View, obj5);
+  const obj7 = { style: tmp.confirmButton, children: null };
+  const obj8 = { variant: "destructive", text: null, onPress: null };
   const intl4 = channel(1114).intl;
-  obj5[1] = intl4.string(channel(1114).t.wnWqGg);
-  obj5[2] = function onPress() {
-    channel(closure_1_2[14]).endStage(channel);
-    const obj = channel(closure_1_2[14]);
-    closure_1_1(closure_1_2[7]).hideActionSheet(closure_1_4);
-    const obj2 = closure_1_1(closure_1_2[7]);
-    channel(closure_1_2[8]).handleDisconnect(channel);
+  obj8.text = intl4.string(channel(1114).t.wnWqGg);
+  obj8.onPress = function onPress() {
+    StageChannelActionCreators.endStage(channel);
+    ActionSheetActionCreatorsDefault.hideActionSheet(closure_4);
+    CallsUtils.handleDisconnect(channel);
   };
-  obj4[1] = callback(channel(4975).Button, obj5);
-  items[3] = callback(View, obj4);
-  obj[1] = items;
-  obj[0] = callback2(View, obj);
-  return callback(ScrollHandlingActionSheetDefault, obj);
+  obj7.children = closure_5(channel(4989).Button, obj8);
+  items[3] = closure_5(View, obj7);
+  obj2.children = items;
+  obj.children = closure_6(View, obj2);
+  return closure_5(ScrollHandlingActionSheetDefault, obj);
 };

@@ -1,30 +1,32 @@
-// Module ID: 13895
-// Function ID: 13896
-// Dependencies: [4476, 4199, 1074, 1114, 504, 13896, 2]
+// Module ID: 13918
+// Function ID: 13919
+// Name: RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec
+// Dependencies: [4490, 4212, 1074, 1114, 504, 13919, 2]
 
-// Module 13895
+// Module 13918 (RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_2 from "getHash" /* 4476 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4199 */;
-import ME from "ME" /* 1074 */;
+import util from "util" /* 1114 */;
+import ExperimentStore from "ExperimentStore" /* 4490 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
 
-require = arg1;
-({ GuildFeatures: c4, Permissions: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/ui/RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec.tsx");
+require = fn;
+const Constants = fn(1074);
+({ GuildFeatures: closure_4, Permissions: hasOwnProperty } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/ui/RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec.tsx");
 
 export default {
   title() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.aTFQKh);
+    const intl = util.intl;
+    return intl.string(util.t.aTFQKh);
   },
   description() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.oTbFQg);
+    const intl = util.intl;
+    return intl.string(util.t.oTbFQg);
   },
   canCreateGuild: false,
   useIsGuildSupported() {
-    const items = [closure_2, closure_3];
+    const items = [ExperimentStore, PermissionStore];
     return initialize.useStateFromStores(items, () => (features) => {
       features = features.features;
       let hasItem = features.has(constants.ROLE_SUBSCRIPTIONS_ENABLED);
@@ -33,11 +35,11 @@ export default {
         hasItem = !features2.has(constants.CREATOR_MONETIZABLE_RESTRICTED);
       }
       if (hasItem) {
-        hasItem = closure_3.can(constants2.ADMINISTRATOR, features);
+        hasItem = closure_1_3.can(constants2.ADMINISTRATOR, features);
       }
       if (hasItem) {
-        hasItem = callback(table[5]).isGuildEligibleForTierTemplates(features.id);
-        const obj = callback(table[5]);
+        hasItem = closure_1_0(dependencyMap[5]).isGuildEligibleForTierTemplates(features.id);
+        const obj = closure_1_0(dependencyMap[5]);
       }
       return hasItem;
     }, []);

@@ -1,57 +1,54 @@
-// Module ID: 12953
-// Function ID: 12954
+// Module ID: 12979
+// Function ID: 12980
 // Name: BlockedDomainActionSheet
-// Dependencies: [19, 21, 4560, 576, 7150, 4973, 5692, 4556, 1114, 12954, 4975, 4527, 2]
+// Dependencies: [19, 21, 4574, 576, 7164, 4987, 5706, 4570, 1114, 12980, 4989, 4541, 2]
 // Exports: default
 
-// Module 12953 (BlockedDomainActionSheet)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import Stack from "Stack" /* 4973 */;
-import Button from "Button" /* 4975 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5692 */;
-import Background from "Background" /* 7150 */;
-import URLCallout from "URLCallout" /* 12954 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12979 (BlockedDomainActionSheet)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Stack_Stack from "Stack/Stack" /* 4987 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import native from "native" /* 5706 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7164 */;
+import URLCallout from "URLCallout" /* 12980 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { container: null, title: null, warningMessage: null };
-createCacheKey = { padding: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { textAlign: "center" };
-createCacheKey[2] = { textAlign: "center" };
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/blocked_domains/components/native/BlockedDomainActionSheet.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { padding: nativeDefault.space.PX_16 }, title: { textAlign: "center" }, warningMessage: { textAlign: "center" } };
+let closure_5 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/blocked_domains/components/native/BlockedDomainActionSheet.tsx");
 
 export default function BlockedDomainActionSheet(url) {
-  const tmp = callback3();
-  let obj = { startExpanded: true, children: null };
-  obj = { spacing: 16, justify: "center", align: "center", style: tmp.container, children: null };
-  obj = { spacing: 8, justify: "center", align: "center", children: null };
-  const items = [callback(AccountAgeTier10LargeBadge.TrafficConeSpotIllustration, {}), , ];
-  obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale.intl;
-  obj1[4] = intl.string(getSystemLocale.t["2B3wj8"]);
-  items[1] = callback(Text.Text, obj1);
-  const obj2 = { style: tmp.warningMessage, variant: "text-md/medium", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj2[2] = intl2.format(getSystemLocale.t.jnHyYU, {});
-  items[2] = callback(Text.Text, obj2);
-  obj[3] = items;
-  const items1 = [callback2(Stack.Stack, obj), callback(URLCallout.URLCallout, { url: url.url }), ];
-  const obj3 = { grow: true, text: null, onPress: null };
-  const intl3 = getSystemLocale.intl;
-  obj3[1] = intl3.string(getSystemLocale.t["/g10LC"]);
-  obj3[2] = function onPress() {
-    return callback(table[11]).hideActionSheet();
+  const tmp = closure_5();
+  const obj = { startExpanded: true, children: null };
+  const obj2 = { spacing: 16, justify: "center", align: "center", style: tmp.container, children: null };
+  const obj3 = { spacing: 8, justify: "center", align: "center", children: null };
+  const items = [React3(native.TrafficConeSpotIllustration, {}), , ];
+  const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+  const intl = util.intl;
+  obj4.children = intl.string(util.t["2B3wj8"]);
+  items[1] = React3(Text_Text.Text, obj4);
+  const obj5 = { style: tmp.warningMessage, variant: "text-md/medium", children: null };
+  const intl2 = util.intl;
+  obj5.children = intl2.format(util.t.jnHyYU, {});
+  items[2] = React3(Text_Text.Text, obj5);
+  obj3.children = items;
+  const items1 = [React4(Stack_Stack.Stack, obj3), React3(URLCallout.URLCallout, { url: url.url }), ];
+  const obj6 = { grow: true, text: null, onPress: null };
+  const intl3 = util.intl;
+  obj6.text = intl3.string(util.t["/g10LC"]);
+  obj6.onPress = function onPress() {
+    return ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  items1[2] = callback(Button.Button, obj3);
-  obj[4] = items1;
-  obj[1] = callback2(Stack.Stack, obj);
-  return callback(Background.BottomSheet, obj);
+  items1[2] = React3(components_Button_Button.Button, obj6);
+  obj2.children = items1;
+  obj.children = React4(Stack_Stack.Stack, obj2);
+  return React3(Sheet_BottomSheet.BottomSheet, obj);
 };

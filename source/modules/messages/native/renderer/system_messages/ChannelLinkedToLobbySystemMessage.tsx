@@ -1,52 +1,47 @@
-// Module ID: 8043
-// Function ID: 8044
-// Name: createChannelLinkedToLobbySystemMessage
-// Dependencies: [4788, 1074, 7953, 7960, 7962, 2024, 1114, 7964, 2]
+// Module ID: 8058
+// Function ID: 8059
+// Name: ChannelLinkedToLobbySystemMessage
+// Dependencies: [4802, 1074, 7967, 7974, 7976, 2024, 1114, 7978, 2]
 // Exports: createChannelLinkedToLobbySystemMessage
 
-// Module 8043 (createChannelLinkedToLobbySystemMessage)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import resultDefault from "result" /* 7953 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7960 */;
-import closure_3 from "addApplication" /* 4788 */;
-import { HelpdeskArticles } from "ME" /* 1074 */;
+// Module 8058 (ChannelLinkedToLobbySystemMessage)
+import util from "util" /* 1114 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 7967 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7974 */;
+import ApplicationStore from "ApplicationStore" /* 4802 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/ChannelLinkedToLobbySystemMessage.tsx");
+require = fn;
+const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/ChannelLinkedToLobbySystemMessage.tsx");
 
 export const createChannelLinkedToLobbySystemMessage = function createChannelLinkedToLobbySystemMessage(message) {
   message = message.message;
   ({ roleStyle, theme } = message);
-  const tmp3 = resultDefault(theme);
+  const tmp3 = resolveMessageContentColorsDefault(theme);
   let str = message.applicationId;
   if (str == null) {
     str = "";
   }
-  application = application.getApplication(str);
+  const application = ApplicationStore.getApplication(str);
   if (null == application) {
     return null;
   } else {
-    let obj = getMessageAuthorWithProcessedColor;
-    const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-    obj = { username: null, usernameOnClick: null, applicationName: null, applicationNameOnClick: null, urlOnClick: null };
-    obj[0] = messageAuthorWithProcessedColor.nick;
-    obj = { message: null, author: null, roleStyle: null };
-    obj[0] = message;
-    obj[1] = messageAuthorWithProcessedColor;
-    obj[2] = roleStyle;
-    obj[1] = tmp(7962)(obj);
-    obj[2] = application.name;
-    obj1 = { linkColor: null, medium: true };
-    obj1[0] = tmp3.defaultUsernameColor;
-    obj[3] = obj1;
-    const obj2 = { action: "bindOpenUrl", url: null, linkColor: null, medium: true };
-    obj2[1] = tmp(2024).getArticleURL(HelpdeskArticles.LINKED_LOBBIES);
-    obj2[2] = tmp3.linkColor;
-    obj[4] = obj2;
-    const obj3 = { content: null };
-    const intl = getSystemLocale.intl;
-    obj3[0] = intl.formatToParts(getSystemLocale.t.gZfhOw, obj);
-    const merged = Object.assign(tmp(7964)(message));
-    return obj3;
+    const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
+    const obj2 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: null, applicationName: null, applicationNameOnClick: null, urlOnClick: null };
+    const obj3 = { message, author: messageAuthorWithProcessedColor, roleStyle };
+    obj2.usernameOnClick = tmp(7976)(obj3);
+    obj2.applicationName = application.name;
+    const obj4 = { linkColor: tmp3.defaultUsernameColor, medium: true };
+    obj2.applicationNameOnClick = obj4;
+    const obj5 = { action: "bindOpenUrl", url: null, linkColor: null, medium: true };
+    obj5.url = tmp(2024).getArticleURL(HelpdeskArticles.LINKED_LOBBIES);
+    obj5.linkColor = tmp3.linkColor;
+    obj2.urlOnClick = obj5;
+    const obj6 = { content: null };
+    const intl = util.intl;
+    obj6.content = intl.formatToParts(util.t.gZfhOw, obj2);
+    const merged = Object.assign(tmp(7978)(message));
+    return obj6;
   }
 };

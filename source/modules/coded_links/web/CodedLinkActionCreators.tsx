@@ -1,27 +1,24 @@
-// Module ID: 11436
-// Function ID: 11437
+// Module ID: 11463
+// Function ID: 11464
+// Name: CodedLinkActionCreators
 // Dependencies: [1081, 573, 2]
 
-// Module 11436
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import CONFERENCE_MODE_ENABLED2 from "CONFERENCE_MODE_ENABLED" /* 1081 */;
+// Module 11463 (CodedLinkActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import ConferenceModeConstants from "ConferenceModeConstants" /* 1081 */;
+import size from "module_2" /* 2 */;
 
-const CONFERENCE_MODE_ENABLED = CONFERENCE_MODE_ENABLED2.CONFERENCE_MODE_ENABLED;
-const result = set.fileFinishedImporting("modules/coded_links/web/CodedLinkActionCreators.tsx");
+const CONFERENCE_MODE_ENABLED = ConferenceModeConstants.CONFERENCE_MODE_ENABLED;
+const result = size.fileFinishedImporting("modules/coded_links/web/CodedLinkActionCreators.tsx");
 
 export default {
   openNativeAppModal(arg0, arg1) {
 
   },
   nativeModalOpened(code) {
-    let obj = dispatcherDefault;
-    obj = { type: "NATIVE_APP_MODAL_OPENED", code };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "NATIVE_APP_MODAL_OPENED", code });
   },
   nativeModalOpenFailed(code) {
-    let obj = dispatcherDefault;
-    obj = { type: "NATIVE_APP_MODAL_OPEN_FAILED", code };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "NATIVE_APP_MODAL_OPEN_FAILED", code });
   }
 };

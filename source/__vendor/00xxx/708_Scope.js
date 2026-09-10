@@ -4,14 +4,14 @@
 // Dependencies: [41, 42, 694, 696, 709, 710, 692, 703, 697, 711, 695, 688, 689]
 
 // Module 708 (Scope)
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 const Scope = require;
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 class Scope {
   constructor() {
-    tmp = closure_2(this, Scope);
+    tmp = c2(this, Scope);
     this._notifyingListeners = false;
     this._scopeListeners = [];
     this._eventProcessors = [];
@@ -24,73 +24,75 @@ class Scope {
     this._contexts = {};
     this._sdkProcessingMetadata = {};
     obj = { traceId: null, sampleRand: null };
-    obj2 = require("generateSpanId");
-    obj[0] = obj2.generateTraceId();
-    obj3 = require("safeDateNow");
-    obj[1] = obj3.safeMathRandom();
+    obj2 = closure_0(closure_1[2]);
+    obj.traceId = obj2.generateTraceId();
+    obj3 = closure_0(closure_1[3]);
+    obj.sampleRand = obj3.safeMathRandom();
     this._propagationContext = obj;
     return;
   }
 }
-let items = [
-  {
-    key: "clone",
-    value: function clone() {
-      const self = this;
-      let obj = Object.create(Scope.prototype);
-      callback(obj, Scope);
-      obj._notifyingListeners = false;
-      obj._scopeListeners = [];
-      obj._eventProcessors = [];
-      obj._breadcrumbs = [];
-      obj._attachments = [];
-      obj._user = {};
-      obj._tags = {};
-      obj._attributes = {};
-      obj._extra = {};
-      obj._contexts = {};
-      obj._sdkProcessingMetadata = {};
-      obj = { traceId: null, sampleRand: null };
-      obj1 = Scope(694);
-      obj[0] = obj1.generateTraceId();
-      let obj2 = Scope(696);
-      obj[1] = obj2.safeMathRandom();
-      obj._propagationContext = obj;
-      const items = [...this._breadcrumbs];
-      obj._breadcrumbs = items;
-      obj = {};
-      const merged = Object.assign(this._tags);
-      obj._tags = obj;
-      obj1 = {};
-      const merged1 = Object.assign(this._attributes);
-      obj._attributes = obj1;
-      obj2 = {};
-      const merged2 = Object.assign(this._extra);
-      obj._extra = obj2;
-      const merged3 = Object.assign(this._contexts);
-      obj._contexts = {};
-      if (this._contexts.flags) {
-        const obj4 = { values: null };
-        const items1 = [];
-        HermesBuiltin.arraySpread(self._contexts.flags.values, 0);
-        obj4[0] = items1;
-        obj._contexts.flags = obj4;
-      }
-      ({ _user: tmp._user, _level: tmp._level, _session: tmp._session, _transactionName: tmp._transactionName, _fingerprint: tmp._fingerprint } = self);
-      const items2 = [...self._eventProcessors];
-      obj._eventProcessors = items2;
-      obj._attachments = [...self._attachments];
-      const merged4 = Object.assign(self._sdkProcessingMetadata);
-      obj._sdkProcessingMetadata = {};
-      const merged5 = Object.assign(self._propagationContext);
-      obj._propagationContext = {};
-      ({ _client: tmp._client, _lastEventId: tmp._lastEventId } = self);
-      let tmp3Result = tmp3(709);
-      tmp3Result = tmp3(709);
-      tmp3Result._setSpanForScope(obj, tmp3Result._getSpanForScope(self));
-      return obj;
+const entry = {
+  key: "clone",
+  value: function clone() {
+    const self = this;
+    const obj4 = Object.create(Scope.prototype);
+    _classCallCheck(obj4, Scope);
+    obj4._notifyingListeners = false;
+    obj4._scopeListeners = [];
+    obj4._eventProcessors = [];
+    obj4._breadcrumbs = [];
+    obj4._attachments = [];
+    obj4._user = {};
+    obj4._tags = {};
+    obj4._attributes = {};
+    obj4._extra = {};
+    obj4._contexts = {};
+    obj4._sdkProcessingMetadata = {};
+    const obj = { traceId: Scope(694).generateTraceId(), sampleRand: null };
+    const obj2 = Scope(694);
+    obj.sampleRand = Scope(696).safeMathRandom();
+    obj4._propagationContext = obj;
+    const items = [...this._breadcrumbs];
+    obj4._breadcrumbs = items;
+    const merged = Object.assign(this._tags);
+    obj4._tags = {};
+    const merged1 = Object.assign(this._attributes);
+    obj4._attributes = {};
+    const merged2 = Object.assign(this._extra);
+    obj4._extra = {};
+    const merged3 = Object.assign(this._contexts);
+    obj4._contexts = {};
+    if (this._contexts.flags) {
+      const obj9 = { values: null };
+      const items1 = [];
+      HermesBuiltin.arraySpread(self._contexts.flags.values, 0);
+      obj9.values = items1;
+      obj4._contexts.flags = obj9;
     }
-  },
+    ({ _user: tmp._user, _level: tmp._level, _session: tmp._session, _transactionName: tmp._transactionName, _fingerprint: tmp._fingerprint } = self);
+    const items2 = [...self._eventProcessors];
+    obj4._eventProcessors = items2;
+    obj4._attachments = [...self._attachments];
+    const merged4 = Object.assign(self._sdkProcessingMetadata);
+    obj4._sdkProcessingMetadata = {};
+    const merged5 = Object.assign(self._propagationContext);
+    obj4._propagationContext = {};
+    ({ _client: tmp._client, _lastEventId: tmp._lastEventId } = self);
+    const obj10 = {};
+    const obj11 = {};
+    const obj3 = Scope(696);
+    const obj5 = {};
+    const obj6 = {};
+    const obj7 = {};
+    const obj8 = {};
+    const tmp3Result = Scope(709);
+    tmp3Result._setSpanForScope(obj4, Scope(709)._getSpanForScope(self));
+    return obj4;
+  }
+};
+let items = [
+  entry,
   {
     key: "setClient",
     value: function setClient(_client) {
@@ -132,16 +134,14 @@ let items = [
   },
   {
     key: "setUser",
-    value: function setUser(arg0) {
-      let obj = arg0;
-      if (!arg0) {
-        obj = { email: "has", id: "add", ip_address: "current", username: "Math" };
+    value: function setUser(user) {
+      if (!user) {
+        user = { email: "Array", id: "flexDirection", ip_address: "y", username: "HermesInternal" };
       }
       const self = this;
-      this._user = obj;
+      this._user = user;
       if (this._session) {
-        obj = { user: null };
-        obj[0] = arg0;
+        const obj = { user };
         Scope(710).updateSession(self._session, obj);
         const obj2 = Scope(710);
       }
@@ -289,10 +289,10 @@ let items = [
         if (obj instanceof Scope) {
           let scopeData = obj.getScopeData();
         } else {
-          obj1 = Scope(692);
-          if (obj1.isPlainObject(obj)) {
+          if (obj2.isPlainObject(obj)) {
             scopeData = fn;
           }
+          obj2 = Scope(692);
         }
         if (!scopeData) {
           scopeData = {};
@@ -302,22 +302,22 @@ let items = [
           fingerprint = [];
         }
         const propagationContext = scopeData.propagationContext;
-        obj = {};
+        const obj3 = {};
         const merged = Object.assign(self._tags);
         const merged1 = Object.assign(tags);
-        self._tags = obj;
-        obj = {};
+        self._tags = obj3;
+        const obj4 = {};
         const merged2 = Object.assign(self._attributes);
         const merged3 = Object.assign(attributes);
-        self._attributes = obj;
-        obj1 = {};
+        self._attributes = obj4;
+        const obj5 = {};
         const merged4 = Object.assign(self._extra);
         const merged5 = Object.assign(extra);
-        self._extra = obj1;
-        const obj2 = {};
+        self._extra = obj5;
+        const obj6 = {};
         const merged6 = Object.assign(self._contexts);
         const merged7 = Object.assign(contexts);
-        self._contexts = obj2;
+        self._contexts = obj6;
         let length = user;
         if (user) {
           const _Object = Object;
@@ -344,15 +344,15 @@ let items = [
   {
     key: "clear",
     value: function clear() {
-      let obj = { _breadcrumbs: [], _tags: {}, _attributes: {}, _extra: {}, _user: {}, _contexts: {}, _level: undefined, _transactionName: undefined, _fingerprint: undefined, _session: undefined };
+      const obj = { _breadcrumbs: [], _tags: {}, _attributes: {}, _extra: {}, _user: {}, _contexts: {}, _level: undefined, _transactionName: undefined, _fingerprint: undefined, _session: undefined };
       Scope(709)._setSpanForScope(obj, undefined);
       obj._attachments = [];
-      obj = { traceId: null, sampleRand: null };
+      const obj3 = { traceId: null, sampleRand: null };
       const obj2 = Scope(709);
-      obj[0] = Scope(694).generateTraceId();
+      obj3.traceId = Scope(694).generateTraceId();
       const obj4 = Scope(694);
-      obj[1] = Scope(696).safeMathRandom();
-      const result = obj.setPropagationContext(obj);
+      obj3.sampleRand = Scope(696).safeMathRandom();
+      const result = obj.setPropagationContext(obj3);
       const result1 = obj._notifyScopeListeners();
       return obj;
     }
@@ -365,8 +365,7 @@ let items = [
       if (num <= 0) {
         return self;
       } else {
-        const obj = { timestamp: null };
-        obj[0] = Scope(703).dateTimestampInSeconds();
+        const obj = { timestamp: Scope(703).dateTimestampInSeconds() };
         const merged = Object.assign(message);
         if (message.message) {
           message = Scope(697).truncate(message.message, 2048);
@@ -423,7 +422,7 @@ let items = [
     key: "getScopeData",
     value: function getScopeData() {
       const self = this;
-      const obj = { breadcrumbs: this._breadcrumbs, attachments: this._attachments, contexts: this._contexts, tags: this._tags, attributes: this._attributes, extra: this._extra, user: this._user, level: this._level, fingerprint: tmp, eventProcessors: self._eventProcessors, propagationContext: self._propagationContext, sdkProcessingMetadata: self._sdkProcessingMetadata, transactionName: self._transactionName, span: Scope(709)._getSpanForScope(self) };
+      const obj = { breadcrumbs: this._breadcrumbs, attachments: this._attachments, contexts: this._contexts, tags: this._tags, attributes: this._attributes, extra: this._extra, user: this._user, level: this._level, fingerprint: this._fingerprint || [], eventProcessors: self._eventProcessors, propagationContext: self._propagationContext, sdkProcessingMetadata: self._sdkProcessingMetadata, transactionName: self._transactionName, span: Scope(709)._getSpanForScope(self) };
       return obj;
     }
   },
@@ -449,26 +448,24 @@ let items = [
   },
   {
     key: "captureException",
-    value: function captureException(arg0, event_id) {
+    value: function captureException(originalException, event_id) {
       event_id = undefined;
       if (event_id != null) {
         event_id = event_id.event_id;
       }
       if (!event_id) {
-        let obj = Scope(695);
-        event_id = obj.uuid4();
+        event_id = Scope(695).uuid4();
+        const obj = Scope(695);
       }
       const self = this;
       if (this._client) {
         const _Error = Error;
-        error = new Error("Sentry syntheticException");
+        const error = new Error("Sentry syntheticException");
         const _client = self._client;
-        obj = { originalException: null, syntheticException: null };
-        obj[0] = arg0;
-        obj[1] = error;
+        const obj2 = { originalException, syntheticException: error };
         const merged = Object.assign(event_id);
-        obj.event_id = event_id;
-        _client.captureException(arg0, obj, self);
+        obj2.event_id = event_id;
+        _client.captureException(originalException, obj2, self);
         return event_id;
       } else {
         if (Scope(688).DEBUG_BUILD) {
@@ -481,14 +478,14 @@ let items = [
   },
   {
     key: "captureMessage",
-    value: function captureMessage(arg0, arg1, event_id) {
+    value: function captureMessage(originalException, arg1, event_id) {
       event_id = undefined;
       if (event_id != null) {
         event_id = event_id.event_id;
       }
       if (!event_id) {
-        let obj = Scope(695);
-        event_id = obj.uuid4();
+        event_id = Scope(695).uuid4();
+        const obj = Scope(695);
       }
       const self = this;
       if (this._client) {
@@ -498,15 +495,13 @@ let items = [
         }
         if (syntheticException == null) {
           const _Error = Error;
-          syntheticException = new Error(arg0);
+          syntheticException = new Error(originalException);
         }
         const _client = self._client;
-        obj = { originalException: null, syntheticException: null };
-        obj[0] = arg0;
-        obj[1] = syntheticException;
+        const obj2 = { originalException, syntheticException };
         const merged = Object.assign(event_id);
-        obj.event_id = event_id;
-        _client.captureMessage(arg0, arg1, obj, self);
+        obj2.event_id = event_id;
+        _client.captureMessage(originalException, arg1, obj2, self);
         return event_id;
       } else {
         if (Scope(688).DEBUG_BUILD) {
@@ -525,16 +520,16 @@ let items = [
         event_id = event_id.event_id;
       }
       if (!event_id) {
-        let obj = Scope(695);
-        event_id = obj.uuid4();
+        event_id = Scope(695).uuid4();
+        const obj = Scope(695);
       }
       const self = this;
       if (this._client) {
         const _client = self._client;
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(event_id);
-        obj.event_id = event_id;
-        _client.captureEvent(arg0, obj, self);
+        obj2.event_id = event_id;
+        _client.captureEvent(arg0, obj2, self);
       } else {
         if (Scope(688).DEBUG_BUILD) {
           const debug = tmp4(689).debug;
@@ -548,13 +543,12 @@ let items = [
   {
     key: "_notifyScopeListeners",
     value: function _notifyScopeListeners() {
-      let self = this;
-      self = this;
+      const self = this;
       if (!this._notifyingListeners) {
         self._notifyingListeners = true;
         const _scopeListeners = self._scopeListeners;
-        const item = _scopeListeners.forEach((arg0) => {
-          arg0(self);
+        const item = _scopeListeners.forEach((fn) => {
+          fn(self);
         });
         self._notifyingListeners = false;
       }

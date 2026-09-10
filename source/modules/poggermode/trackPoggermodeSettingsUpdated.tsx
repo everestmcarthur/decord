@@ -1,14 +1,14 @@
-// Module ID: 7833
-// Function ID: 7834
-// Name: getScreenshakeLocationName
-// Dependencies: [7679, 1074, 12, 1242, 2]
+// Module ID: 7847
+// Function ID: 7848
+// Name: trackPoggermodeSettingsUpdated
+// Dependencies: [7693, 1074, 12, 1242, 2]
 
-// Module 7833 (getScreenshakeLocationName)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import ConfettiLocation from "ConfettiLocation" /* 7679 */;
-import importDefaultResult from "apply" /* 12 */;
+// Module 7847 (trackPoggermodeSettingsUpdated)
+import Constants from "Constants" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import PoggermodeConstants from "PoggermodeConstants" /* 7693 */;
+import apply from "module_12" /* 12 */;
+import size from "module_2" /* 2 */;
 
 function getScreenshakeLocationName(arg0) {
   if (constants.CHAT_INPUT === arg0) {
@@ -30,37 +30,34 @@ function getConfettiLocationName(arg0) {
     return "call_tile";
   }
 }
-({ ShakeLocation: obj1, ConfettiLocation: c3 } = ConfettiLocation);
-const AnalyticEvents = ME.AnalyticEvents;
-const throttleResult = importDefaultResult.throttle((arg0) => {
-  ({ enabled, combosEnabled, combosRequiredCount, screenshakeEnabled, shakeIntensity, screenshakeEnabledLocations, confettiEnabled, confettiSize, confettiCount, confettiEnabledLocations } = arg0);
-  let obj = expandEventPropertiesDefault;
-  obj = { enabled, combos_enabled: combosEnabled, combos_required_count: combosRequiredCount, screenshake_enabled: screenshakeEnabled, shake_intensity: shakeIntensity, screenshake_enabled_locations: null, confetti_enabled: null, confetti_size: null, confetti_count: null, confetti_enabled_locations: null };
-  importDefault = getScreenshakeLocationName;
-  const entries = Object.entries(screenshakeEnabledLocations);
-  const found = entries.filter((arg0) => {
-    [, tmp] = arg0;
-    return tmp;
-  });
-  obj[5] = found.map((arg0) => {
-    [tmp] = arg0;
-    return callback(Number.parseInt(tmp));
-  });
-  obj[6] = confettiEnabled;
-  obj[7] = confettiSize;
-  obj[8] = confettiCount;
-  importDefault = getConfettiLocationName;
-  const entries1 = Object.entries(confettiEnabledLocations);
-  const found1 = entries1.filter((arg0) => {
-    [, tmp] = arg0;
-    return tmp;
-  });
-  obj[9] = found1.map((arg0) => {
-    [tmp] = arg0;
-    return callback(Number.parseInt(tmp));
-  });
-  obj.track(AnalyticEvents.POGGERMODE_SETTINGS_UPDATED, obj);
-}, 5000);
-const result = set.fileFinishedImporting("modules/poggermode/trackPoggermodeSettingsUpdated.tsx");
+({ ShakeLocation: c2, ConfettiLocation: c3 } = PoggermodeConstants);
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/poggermode/trackPoggermodeSettingsUpdated.tsx");
 
-export default throttleResult;
+export default apply.throttle((arg0) => {
+  ({ enabled, combosEnabled, combosRequiredCount, screenshakeEnabled, shakeIntensity, screenshakeEnabledLocations, confettiEnabled, confettiSize, confettiCount, confettiEnabledLocations } = arg0);
+  const obj2 = { enabled, combos_enabled: combosEnabled, combos_required_count: combosRequiredCount, screenshake_enabled: screenshakeEnabled, shake_intensity: shakeIntensity, screenshake_enabled_locations: null, confetti_enabled: null, confetti_size: null, confetti_count: null, confetti_enabled_locations: null };
+  const entries = Object.entries(screenshakeEnabledLocations);
+  const found = entries.filter((item) => {
+    [, tmp] = item;
+    return tmp;
+  });
+  obj2.screenshake_enabled_locations = found.map((item) => {
+    [tmp] = item;
+    return closure_0(Number.parseInt(tmp));
+  });
+  obj2.confetti_enabled = confettiEnabled;
+  obj2.confetti_size = confettiSize;
+  obj2.confetti_count = confettiCount;
+  closure_0 = getConfettiLocationName;
+  const entries1 = Object.entries(confettiEnabledLocations);
+  const found1 = entries1.filter((item) => {
+    [, tmp] = item;
+    return tmp;
+  });
+  obj2.confetti_enabled_locations = found1.map((item) => {
+    [tmp] = item;
+    return closure_0(Number.parseInt(tmp));
+  });
+  AnalyticsUtilsDefault.track(AnalyticEvents.POGGERMODE_SETTINGS_UPDATED, obj2);
+}, 5000);

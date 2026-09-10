@@ -1,43 +1,41 @@
-// Module ID: 9787
-// Function ID: 9788
-// Name: getGuildScheduledEventHeaderProps
-// Dependencies: [7526, 1963, 9670, 576, 9788, 1114, 8627, 9789, 2]
+// Module ID: 9814
+// Function ID: 9815
+// Name: GuildScheduledEventHeaderUtils
+// Dependencies: [7540, 1963, 9697, 576, 9815, 1114, 8655, 9816, 2]
 // Exports: getGuildScheduledEventHeaderProps
 
-// Module 9787 (getGuildScheduledEventHeaderProps)
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 576 */;
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1963 */;
-import getRRule from "getRRule" /* 9670 */;
-import registerAssetDefault from "registerAsset" /* 9788 */;
-import scheduledEventSort from "scheduledEventSort" /* 7526 */;
+// Module 9814 (GuildScheduledEventHeaderUtils)
+import nativeDefault from "native" /* 576 */;
+import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 1963 */;
+import _modDef9815 from "module_9815" /* 9815 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7540 */;
+import size from "module_2" /* 2 */;
 
-({ isGuildEventEnded: c3, isGuildScheduledEventActive: c4 } = scheduledEventSort);
-let closure_5 = GUILD_EVENT_MAX_NAME_LENGTH.GuildScheduledEventEntityTypes;
-const result = set.fileFinishedImporting("modules/guild_scheduled_events/native/GuildScheduledEventHeaderUtils.tsx");
+({ isGuildEventEnded: c3, isGuildScheduledEventActive: closure_4 } = GuildScheduledEventStore);
+const constants = GuildScheduledEventsConstants.GuildScheduledEventEntityTypes;
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/GuildScheduledEventHeaderUtils.tsx");
 
 export const getGuildScheduledEventHeaderProps = function getGuildScheduledEventHeaderProps(eventTimeData) {
   ({ startDateTimeString, diffMinutes, currentOrPastEvent, upcomingEvent } = eventTimeData.eventTimeData);
   ({ event, recurrenceId } = eventTimeData);
   ({ isStage, theme, isCanceled } = eventTimeData);
-  let obj = getRRule;
   if (null != recurrenceId) {
     let tmp5 = obj.getNextRecurrenceIdInEvent(event) === recurrenceId;
     if (tmp5) {
-      tmp5 = callback2(event);
+      tmp5 = React4(event);
     }
     let tmp4 = tmp5;
   } else {
-    tmp4 = callback2(event);
+    tmp4 = React4(event);
   }
-  const tmp7 = callback(event);
-  const ICON_SUBTLE = ThemesDefault.colors.ICON_SUBTLE;
-  let tmp8Result = registerAssetDefault;
+  const tmp7 = React3(event);
+  const ICON_SUBTLE = nativeDefault.colors.ICON_SUBTLE;
+  let tmp8Result = _modDef9815;
   if (tmp4) {
     const intl4 = tmp(1114).intl;
     let stringResult = intl4.string(tmp(1114).t["X2K3/4"]);
     if (isStage) {
-      tmp8Result = tmp8(8627);
+      tmp8Result = tmp8(8655);
     }
     let entity_type;
     if (event != null) {
@@ -49,40 +47,41 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
     }
     let ICON_FEEDBACK_CRITICAL = tmp8(576).colors.ICON_FEEDBACK_POSITIVE;
     let stringResult1 = stringResult;
+    let tmp8Result3 = tmp8Result;
   } else if (tmp7) {
-    tmp8Result = tmp8(9789);
+    tmp8Result3 = tmp8(9816);
     stringResult1 = startDateTimeString;
     ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
   } else if (currentOrPastEvent) {
-    tmp8Result = tmp8(9789);
+    tmp8Result3 = tmp8(9816);
     const intl3 = tmp(1114).intl;
     stringResult1 = intl3.string(tmp(1114).t.WINqKV);
     ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
   } else {
+    tmp8Result3 = tmp8Result;
     stringResult1 = startDateTimeString;
     ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
     if (upcomingEvent) {
       if (diffMinutes > 0) {
         const intl2 = tmp(1114).intl;
-        obj = { minutes: null };
-        obj[0] = diffMinutes;
-        let formatToPlainStringResult = intl2.formatToPlainString(tmp(1114).t.PQlCWk, obj);
+        const obj2 = { minutes: diffMinutes };
+        let formatToPlainStringResult = intl2.formatToPlainString(tmp(1114).t.PQlCWk, obj2);
       } else {
         const intl = tmp(1114).intl;
         formatToPlainStringResult = intl.string(tmp(1114).t.WINqKV);
       }
       stringResult1 = formatToPlainStringResult;
-      tmp8Result = tmp8(9789);
+      tmp8Result3 = tmp8(9816);
       ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
-      const tmp8Result1 = tmp8(9789);
+      const tmp8Result4 = tmp8(9816);
     }
   }
   if (isCanceled) {
     ICON_FEEDBACK_CRITICAL = tmp8(576).colors.ICON_FEEDBACK_CRITICAL;
   }
-  obj = { icon: tmp8Result, text: stringResult1, color: null, shouldChangeTextColor: null };
+  const obj3 = { icon: tmp8Result3, text: stringResult1, color: null, shouldChangeTextColor: null };
   const internal = tmp8(576).internal;
-  obj[2] = internal.resolveSemanticColor(theme, ICON_FEEDBACK_CRITICAL);
+  obj3.color = internal.resolveSemanticColor(theme, ICON_FEEDBACK_CRITICAL);
   let tmp17 = !tmp7;
   if (!tmp7) {
     if (!tmp4) {
@@ -93,6 +92,6 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
     }
     tmp17 = tmp4;
   }
-  obj[3] = tmp17;
-  return obj;
+  obj3.shouldChangeTextColor = tmp17;
+  return obj3;
 };

@@ -1,34 +1,37 @@
-// Module ID: 5004
-// Function ID: 5005
+// Module ID: 5018
+// Function ID: 5019
 // Name: useHasEnhancedRoleColors
 // Dependencies: [1979, 1074, 504, 2]
 // Exports: default, getHasEnhancedRoleColors, getHasEnhancedRoleColorsForRole, useHasEnhancedRoleColorsForRole
 
-// Module 5004 (useHasEnhancedRoleColors)
-import closure_2 from "createGuildRecordFromRust" /* 1979 */;
-import { GuildFeatures } from "ME" /* 1074 */;
+// Module 5018 (useHasEnhancedRoleColors)
+import GuildStore from "GuildStore" /* 1979 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useHasEnhancedRoleColors.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const GuildFeatures = fn(1074).GuildFeatures;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useHasEnhancedRoleColors.tsx");
 
 export default function useHasEnhancedRoleColors(arg0) {
-  const _require = arg0;
-  const items = [closure_2];
-  return _require(504).useStateFromStores(items, () => {
-    const guild = closure_1_2.getGuild(closure_0);
+  _require = arg0;
+  const items = [GuildStore];
+  return require("initialize").useStateFromStores(items, () => {
+    const guild = GuildStore.getGuild(closure_0);
     let hasItem = null != guild;
     if (hasItem) {
       const features = guild.features;
-      hasItem = features.has(closure_1_3.ENHANCED_ROLE_COLORS);
+      hasItem = features.has(GuildFeatures.ENHANCED_ROLE_COLORS);
     }
     return hasItem;
   });
 };
-export const getHasEnhancedRoleColors = function getHasEnhancedRoleColors(guildId, id) {
-  if (null == guildId) {
+export const getHasEnhancedRoleColors = function getHasEnhancedRoleColors(guildId1) {
+  if (null == guildId1) {
     return false;
   } else {
-    const guild = store.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId1);
     let hasItem = null != guild;
     if (hasItem) {
       const features = guild.features;
@@ -37,21 +40,21 @@ export const getHasEnhancedRoleColors = function getHasEnhancedRoleColors(guildI
     return hasItem;
   }
 };
-export const useHasEnhancedRoleColorsForRole = function useHasEnhancedRoleColorsForRole(guildId, role) {
-  const _require = guildId;
-  const items = [closure_2];
-  return _require(504).useStateFromStores(items, () => {
-    const guild = closure_1_2.getGuild(closure_0);
+export const useHasEnhancedRoleColorsForRole = function useHasEnhancedRoleColorsForRole(guildId) {
+  _require = guildId;
+  const items = [GuildStore];
+  return require("initialize").useStateFromStores(items, () => {
+    const guild = GuildStore.getGuild(closure_0);
     let hasItem = null != guild;
     if (hasItem) {
       const features = guild.features;
-      hasItem = features.has(closure_1_3.ENHANCED_ROLE_COLORS);
+      hasItem = features.has(GuildFeatures.ENHANCED_ROLE_COLORS);
     }
     return hasItem;
   });
 };
-export const getHasEnhancedRoleColorsForRole = function getHasEnhancedRoleColorsForRole(id, role) {
-  const guild = store.getGuild(id);
+export const getHasEnhancedRoleColorsForRole = function getHasEnhancedRoleColorsForRole(id) {
+  const guild = GuildStore.getGuild(id);
   let hasItem = null != guild;
   if (hasItem) {
     const features = guild.features;

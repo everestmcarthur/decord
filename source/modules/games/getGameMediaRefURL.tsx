@@ -5,13 +5,13 @@
 // Exports: default
 
 // Module 1924 (getGameMediaRefURL)
-import set from "set" /* 2 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
-import getSizedImageProxyURL from "getSizedImageProxyURL" /* 1929 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import ImageProxyUtils from "ImageProxyUtils" /* 1929 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/games/getGameMediaRefURL.tsx");
+const result = size.fileFinishedImporting("modules/games/getGameMediaRefURL.tsx");
 
-export default function getGameMediaRefURL(arg0, type, size) {
+export default function getGameMediaRefURL(id, type, size) {
   if (null == type) {
     return null;
   } else {
@@ -19,37 +19,32 @@ export default function getGameMediaRefURL(arg0, type, size) {
     if ("hash" === type) {
       let tmp8 = null;
       if (!obj3.isNullOrEmpty(type.value)) {
-        let obj = { id: null, hash: null };
-        obj[0] = arg0;
-        obj[1] = type.value;
+        const obj2 = { id, hash: type.value };
         const merged = Object.assign(size);
-        let gameAssetURL = getAvatarURLDefault.getGameAssetURL(obj);
+        let gameAssetURL = AvatarUtilsDefault.getGameAssetURL(obj2);
         if (gameAssetURL == null) {
           gameAssetURL = null;
         }
         tmp8 = gameAssetURL;
-        const obj4 = getAvatarURLDefault;
       }
       return tmp8;
     } else if ("url" === type) {
-      obj = getSizedImageProxyURL;
       size = undefined;
       if (size != null) {
         size = size.size;
       }
-      obj = { size: null, keepAspectRatio: null, format: null };
-      obj[0] = size;
+      const obj5 = { size, keepAspectRatio: null, format: null };
       let keepAspectRatio;
       if (size != null) {
         keepAspectRatio = size.keepAspectRatio;
       }
-      obj[1] = keepAspectRatio;
+      obj5.keepAspectRatio = keepAspectRatio;
       let format;
       if (size != null) {
         format = size.format;
       }
-      obj[2] = format;
-      return obj.getSizedImageAssetURL(type.value, obj);
+      obj5.format = format;
+      return ImageProxyUtils.getSizedImageAssetURL(type.value, obj5);
     } else {
       return null;
     }

@@ -1,81 +1,75 @@
-// Module ID: 13768
-// Function ID: 13769
+// Module ID: 13791
+// Function ID: 13792
 // Name: VoiceActionSheet
-// Dependencies: [19, 17, 4584, 21, 4560, 7162, 7182, 504, 4417, 4767, 13769, 13770, 7198, 13780, 13783, 13784, 4965, 13787, 2]
+// Dependencies: [19, 17, 4598, 21, 4574, 7176, 7196, 504, 4431, 4781, 13792, 13793, 7211, 13803, 13806, 13807, 4979, 13810, 2]
 // Exports: default
 
-// Module 13768 (VoiceActionSheet)
-import contextDefault from "context" /* 7162 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7182 */;
-import _initializeDefault from "_initialize" /* 13770 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "getVoiceStatesForGuild" /* 4584 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13791 (VoiceActionSheet)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4431 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7176 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
+import VoiceActionSheetManagerDefault from "VoiceActionSheetManager" /* 13792 */;
+import noop from "module_19" /* 19 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4598 */;
 
-const require = arg1;
-({ View: c4, StyleSheet } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: { flex: 1 }, visualEffectView: null };
-createCacheKey = {};
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, StyleSheet } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+const obj2 = { container: { flex: 1 }, visualEffectView: null };
+let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-createCacheKey.overflow = "hidden";
-createCacheKey[1] = createCacheKey;
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceActionSheet.tsx");
+obj3.overflow = "hidden";
+obj2.visualEffectView = obj3;
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceActionSheet.tsx");
 
 export default function VoiceActionSheet(channel) {
   channel = channel.channel;
-  let tmp = callback3();
-  let obj = channel(504);
-  const items = [closure_5];
+  const tmp = closure_8();
+  const tmp4 = useAnalyticsLocationsDefault;
+  const items = [SortedVoiceStateStore];
   const items1 = [channel];
-  const stateFromStores = obj.useStateFromStores(items, () => 0 === closure_1_5.countVoiceStatesForChannel(channel.id));
-  const effect = React.useEffect(() => {
-    const obj = channel(closure_1_2[8]);
-    const tmp = closure_1_2;
+  const stateFromStores = channel(504).useStateFromStores(items, () => 0 === SortedVoiceStateStore.countVoiceStatesForChannel(channel.id));
+  const effect = noop.useEffect(() => {
+    const obj = NavigationRouteUtils;
     if (!obj.isModalOpen(obj2.getVoiceChannelKey(channel.id))) {
-      closure_1_1(tmp[10]).initialize(channel);
-      const obj3 = closure_1_1(tmp[10]);
+      VoiceActionSheetManagerDefault.initialize(channel);
     }
     return () => {
-      callback(table[10]).terminate();
+      closure_1_1(closure_1_2[10]).terminate();
     };
   }, items1);
-  obj1 = _initializeDefault;
-  if (obj1.requiresVoiceChannelsOnboard()) {
-    obj = { children: null };
-    obj = { channel: null };
-    obj[0] = channel;
-    obj[0] = callback(tmp2(13780), obj);
-    let children = callback(tmp5(7198).ActionSheet, obj);
-    let tmp8 = callback;
+  let obj = channel(504);
+  if (obj2.requiresVoiceChannelsOnboard()) {
+    let obj3 = { children: null };
+    const obj4 = { channel };
+    obj3.children = closure_6(tmp2(13803), obj4);
+    let children = closure_6(tmp5(7211).ActionSheet, obj3);
+    let tmp8 = closure_6;
   } else if (stateFromStores) {
-    obj1 = { children: null };
-    const obj2 = { channel: null };
-    obj2[0] = channel;
-    const items2 = [callback(tmp2(13783), obj2), ];
-    let obj3 = { channel: null };
-    obj3[0] = channel;
-    items2[1] = callback(tmp2(13784), obj3);
-    obj1[0] = items2;
-    children = callback2(tmp5(7198).ActionSheet, obj1);
-    tmp8 = callback;
+    const obj5 = { children: null };
+    const obj6 = { channel };
+    const items2 = [closure_6(tmp2(13806), obj6), ];
+    const obj7 = { channel };
+    items2[1] = closure_6(tmp2(13807), obj7);
+    obj5.children = items2;
+    children = closure_7(tmp5(7211).ActionSheet, obj5);
+    tmp8 = closure_6;
   } else {
-    tmp8 = callback;
-    const obj4 = { scrollable: true, startExpanded: true, children: null };
-    const obj5 = { style: null, children: null };
-    obj5[0] = tmp.container;
-    const obj6 = { blurTheme: "dark", style: null };
-    obj6[1] = tmp.visualEffectView;
-    const items3 = [callback(tmp2(4965), obj6), ];
-    const obj7 = { channel: null };
-    obj7[0] = channel;
-    items3[1] = callback(tmp2(13787), obj7);
-    obj5[1] = items3;
-    obj4[2] = callback2(closure_4, obj5);
-    children = callback(tmp5(7198).ActionSheet, obj4);
+    tmp8 = closure_6;
+    const obj8 = { scrollable: true, startExpanded: true, children: null };
+    const obj9 = { style: tmp.container, children: null };
+    const obj10 = { blurTheme: "dark", style: tmp.visualEffectView };
+    const items3 = [closure_6(tmp2(4979), obj10), ];
+    const obj11 = { channel };
+    items3[1] = closure_6(tmp2(13810), obj11);
+    obj9.children = items3;
+    obj8.children = closure_7(closure_4, obj9);
+    children = closure_6(tmp5(7211).ActionSheet, obj8);
   }
-  return tmp8(channel(7162).AnalyticsLocationProvider, { value: contextDefault(QUICK_SWITCHERDefault.VOICE_ACTION_SHEET).analyticsLocations, children });
+  return tmp8(channel(7176).AnalyticsLocationProvider, { value: tmp4(AnalyticsLocationDefault.VOICE_ACTION_SHEET).analyticsLocations, children });
 };

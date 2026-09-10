@@ -1,29 +1,32 @@
-// Module ID: 12485
-// Function ID: 12486
+// Module ID: 12511
+// Function ID: 12512
 // Name: useLoadGuildPowerups
-// Dependencies: [19, 4473, 12486, 12492, 2]
+// Dependencies: [19, 4487, 12512, 12518, 2]
 // Exports: default
 
-// Module 12485 (useLoadGuildPowerups)
-import closure_2 from "noop" /* 19 */;
+// Module 12511 (useLoadGuildPowerups)
+import GameServerActionCreators from "GameServerActionCreators" /* 12512 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12518 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useLoadGuildPowerups.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useLoadGuildPowerups.tsx");
 
 export default function useLoadGuildPowerups(guildId) {
-  const _require = guildId;
-  gameServerEnabled = _require(gameServerEnabled[1]).useGameServerEnabled(guildId, "useLoadGuildPowerups");
+  _require = guildId;
+  gameServerEnabled = require("GameServerExperiment").useGameServerEnabled(guildId, "useLoadGuildPowerups");
   const items = [guildId, gameServerEnabled];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (gameServerEnabled) {
-      const gameServerCatalog = guildId(gameServerEnabled[2]).fetchGameServerCatalog(guildId);
-      const obj = guildId(gameServerEnabled[2]);
+      const gameServerCatalog = GameServerActionCreators.fetchGameServerCatalog(closure_0);
     }
   }, items);
   const items1 = [guildId];
-  const effect1 = React.useEffect(() => {
-    const powerupCatalogForGuild = guildId(gameServerEnabled[3]).fetchPowerupCatalogForGuild(guildId);
-    const obj = guildId(gameServerEnabled[3]);
-    const guildBoostEntitlements = guildId(gameServerEnabled[3]).fetchGuildBoostEntitlements(guildId);
+  const effect1 = noop.useEffect(() => {
+    const powerupCatalogForGuild = GuildPowerupsActionCreators.fetchPowerupCatalogForGuild(closure_0);
+    const guildBoostEntitlements = GuildPowerupsActionCreators.fetchGuildBoostEntitlements(closure_0);
   }, items1);
 };

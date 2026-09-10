@@ -1,16 +1,15 @@
-// Module ID: 12931
-// Function ID: 12932
-// Name: _initialize
-// Dependencies: [1957, 4381, 1898, 573, 7321, 1369, 2]
+// Module ID: 12957
+// Function ID: 12958
+// Name: StageLurkingManager
+// Dependencies: [1957, 4395, 1898, 573, 7335, 1369, 2]
 
-// Module 12931 (_initialize)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import initializeDefault from "initialize" /* 1898 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import closure_4 from "handleConnectionOpen" /* 4381 */;
+// Module 12957 (StageLurkingManager)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
+import LifecycleManager from "LifecycleManager" /* 1898 */;
 
-let require = arg1;
-initializeDefault;
+let require = fn;
 class StageLurkingManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -18,7 +17,7 @@ class StageLurkingManager extends tmp2 {
     applyArgumentsResult.handleVoiceChannelSelect = function handleVoiceChannelSelect(arg0) {
       ({ channelId, guildId } = arg0);
       if (null != channelId) {
-        const channel = closure_1_3.getChannel(channelId);
+        const channel = ChannelStore.getChannel(channelId);
       }
       applyArgumentsResult.terminate();
       let tmp3 = null;
@@ -30,10 +29,10 @@ class StageLurkingManager extends tmp2 {
       }
       const result = applyArgumentsResult.handleDisconnectFromStageChannel(tmp3);
     };
-    applyArgumentsResult.handleDisconnectFromStageChannel = function handleDisconnectFromStageChannel(arg0) {
+    applyArgumentsResult.handleDisconnectFromStageChannel = function handleDisconnectFromStageChannel(guildId) {
       guildId = guildId.getGuildId();
-      const items = [guildId, arg0];
-      applyArgumentsResult(7321).stopLurkingAll(items.filter(applyArgumentsResult(1369).isNotNullish));
+      const items = [guildId, guildId];
+      applyArgumentsResult(7335).stopLurkingAll(items.filter(applyArgumentsResult(1369).isNotNullish));
     };
     applyArgumentsResult.handleLogout = function handleLogout() {
       applyArgumentsResult.terminate();
@@ -44,16 +43,15 @@ class StageLurkingManager extends tmp2 {
 }
 const prototype = StageLurkingManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const subscription = dispatcherDefault.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect);
-  const obj = dispatcherDefault;
-  const subscription1 = dispatcherDefault.subscribe("LOGOUT", this.handleLogout);
+  const subscription = DispatcherDefault.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect);
+  const subscription1 = DispatcherDefault.subscribe("LOGOUT", this.handleLogout);
 };
 prototype["_terminate"] = function _terminate() {
-  dispatcherDefault.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect);
-  const obj = dispatcherDefault;
-  dispatcherDefault.unsubscribe("LOGOUT", this.handleLogout);
+  DispatcherDefault.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect);
+  DispatcherDefault.unsubscribe("LOGOUT", this.handleLogout);
 };
 const stageLurkingManager = new StageLurkingManager();
-let result = require("set").fileFinishedImporting("modules/stage_channels/StageLurkingManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/stage_channels/StageLurkingManager.tsx");
 
 export default stageLurkingManager;

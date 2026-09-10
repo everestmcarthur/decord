@@ -1,22 +1,22 @@
-// Module ID: 17834
-// Function ID: 17835
-// Name: setDifference
-// Dependencies: [109, 4582, 2011, 4579, 9601, 3, 17835, 7118, 9115, 573, 17855, 2]
+// Module ID: 17867
+// Function ID: 17868
+// Name: AVErrorManager
+// Dependencies: [109, 4596, 2011, 4593, 9628, 3, 17868, 7132, 9142, 573, 17888, 2]
 
-// Module 17834 (setDifference)
-import timestampDefault from "timestamp" /* 3 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import initializeDefault from "initialize" /* 7118 */;
-import mapped from "mapped" /* 9115 */;
-import ErrorDefinitions from "ErrorDefinitions" /* 17835 */;
-import getCurrentScreenshareCaptureMethod from "getCurrentScreenshareCaptureMethod" /* 17855 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "reset" /* 4582 */;
-import closure_6 from "handleConnectionOpen" /* 2011 */;
-import closure_7 from "updateVoiceState" /* 4579 */;
-import closure_8 from "isAVErrorContextOfType" /* 9601 */;
+// Module 17867 (AVErrorManager)
+import LoggerDefault from "Logger" /* 3 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import AVError from "AVError" /* 9142 */;
+import ErrorDefinitions from "ErrorDefinitions" /* 17868 */;
+import AVErrorAnalytics from "AVErrorAnalytics" /* 17888 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4596 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import VoiceStateStore from "VoiceStateStore" /* 4593 */;
+import AVErrorStore from "AVErrorStore" /* 9628 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-require = arg1;
+require = fn;
 function setDifference(set, set2) {
   set = new Set();
   const iter = set[Symbol.iterator]();
@@ -24,7 +24,6 @@ function setDifference(set, set2) {
   while (iter !== undefined) {
     let tmp2 = nextResult;
     if (!set2.has(nextResult)) {
-      let tmp3 = nextResult;
       let addResult = set.add(tmp2);
     }
     continue;
@@ -40,8 +39,7 @@ function makeErrorKey(item10044) {
   return "" + item10044.type + ":" + errorContextKey;
 }
 let closure_3 = ["type"];
-let closure_9 = new timestampDefault("AVErrorManager");
-initializeDefault;
+const logger = new LoggerDefault("AVErrorManager");
 class AVErrorManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -51,41 +49,34 @@ class AVErrorManager extends tmp3 {
 }
 const prototype = AVErrorManager.prototype;
 prototype["updateActiveErrors"] = function updateActiveErrors() {
-  let activeErrors;
-  voiceChannelId = voiceChannelId.getVoiceChannelId();
+  let voiceChannelId = SelectedChannelStore.getVoiceChannelId();
   if (voiceChannelId == null) {
     voiceChannelId = null;
   }
   let tmp2 = null;
   if (null != voiceChannelId) {
-    voiceStateForChannel = voiceStateForChannel.getVoiceStateForChannel(voiceChannelId);
+    let voiceStateForChannel = VoiceStateStore.getVoiceStateForChannel(voiceChannelId);
     if (voiceStateForChannel == null) {
       voiceStateForChannel = null;
     }
     tmp2 = voiceStateForChannel;
   }
-  allActiveStreams = allActiveStreams.getAllActiveStreams();
+  const allActiveStreams = ApplicationStreamingStore.getAllActiveStreams();
   const map = new Map();
   const values = Object.values(ErrorDefinitions.ErrorDefinitions);
   const iter = values[Symbol.iterator]();
   while (iter !== undefined) {
-    let obj = { voiceChannelId: null, voiceState: null, activeStreams: null };
-    obj[0] = voiceChannelId;
-    obj[1] = tmp2;
-    obj[2] = allActiveStreams;
-    activeErrors = nextResult.getActiveErrors(obj);
+    let obj = { voiceChannelId, voiceState: tmp2, activeStreams: allActiveStreams };
+    let activeErrors = nextResult.getActiveErrors(obj);
     if (null != activeErrors) {
-      let tmp9 = tmp8;
-      let tmp10 = activeErrors;
       for (const item10044 of activeErrors) {
-        let tmp11 = makeErrorKey;
         let result = map.set(makeErrorKey(item10044), item10044);
         continue;
       }
     }
     continue;
   }
-  const activeErrors1 = activeErrors.getActiveErrors();
+  const activeErrors1 = AVErrorStore.getActiveErrors();
   if (activeErrors1 instanceof Map) {
     if (0 !== map.size) {
       const _Set = Set;
@@ -95,12 +86,9 @@ prototype["updateActiveErrors"] = function updateActiveErrors() {
       if (set.size > set1.size) {
         const tmp24 = setDifference(set, set1);
         for (const item10093 of tmp24) {
-          let value = map.get(item10093);
+          value = map.get(item10093);
           if (null != value) {
-            let tmp29 = require;
-            let tmp30 = dependencyMap;
-            let obj5 = mapped;
-            let tmp31 = value;
+            let obj5 = AVError;
             let reportAVErrorResult = obj5.reportAVError(tmp28);
           }
           continue;
@@ -110,24 +98,18 @@ prototype["updateActiveErrors"] = function updateActiveErrors() {
         const tmp47 = setDifference(set1, set);
         const tmp49 = tmp47[Symbol.iterator]();
         while (tmp49 !== undefined) {
-          value = activeErrors1.get(tmp34);
-          let tmp37 = value;
-          if (null != value) {
-            let tmp38 = value;
-            let tmp39 = callback;
-            let tmp40 = closure_3;
-            let tmp41 = logger;
+          value2 = activeErrors1.get(tmp34);
+          let tmp37 = value2;
+          if (null != value2) {
             let _JSON = JSON;
             let _HermesInternal2 = HermesInternal;
-            let infoResult = logger.info("Error resolved: " + tmp37.type + " " + JSON.stringify(callback(tmp37, closure_3)));
+            let infoResult = logger.info("Error resolved: " + tmp37.type + " " + JSON.stringify(_objectWithoutProperties(tmp37, closure_3)));
           }
           continue;
         }
       }
-      obj = { type: "ACTIVE_AV_ERRORS_CHANGED", activeErrors: null };
-      obj[1] = map;
-      dispatcherDefault.dispatch(obj);
-      const obj6 = dispatcherDefault;
+      const obj2 = { type: "ACTIVE_AV_ERRORS_CHANGED", activeErrors: map };
+      DispatcherDefault.dispatch(obj2);
     }
   } else {
     const _Object = Object;
@@ -138,10 +120,10 @@ prototype["updateActiveErrors"] = function updateActiveErrors() {
 };
 prototype["handleReportAVError"] = function handleReportAVError(arg0) {
   ({ error, context } = arg0);
-  const result = getCurrentScreenshareCaptureMethod.sendAVErrorAnalyticsEvent(error, context);
+  const result = AVErrorAnalytics.sendAVErrorAnalyticsEvent(error, context);
 };
 const aVErrorManager = new AVErrorManager();
-let tmp2 = new timestampDefault("AVErrorManager");
-let result = require("set").fileFinishedImporting("modules/errors/av_errors/AVErrorManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/errors/av_errors/AVErrorManager.tsx");
 
 export default aVErrorManager;

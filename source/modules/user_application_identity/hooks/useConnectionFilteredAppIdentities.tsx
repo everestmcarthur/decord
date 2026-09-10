@@ -1,57 +1,56 @@
-// Module ID: 13085
-// Function ID: 13086
+// Module ID: 13111
+// Function ID: 13112
 // Name: useConnectionFilteredAppIdentities
-// Dependencies: [19, 1921, 9029, 2]
+// Dependencies: [19, 1921, 9056, 2]
 // Exports: default
 
-// Module 13085 (useConnectionFilteredAppIdentities)
-import closure_2 from "noop" /* 19 */;
-import { APPLICATION_IDENTITY_CONNECTIONS_ALLOWED_APPLICATIONS as closure_3 } from "items" /* 1921 */;
+// Module 13111 (useConnectionFilteredAppIdentities)
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_application_identity/hooks/useConnectionFilteredAppIdentities.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+let closure_3 = fn(1921).APPLICATION_IDENTITY_CONNECTIONS_ALLOWED_APPLICATIONS;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_application_identity/hooks/useConnectionFilteredAppIdentities.tsx");
 
 export default function useConnectionFilteredAppIdentities(arg0) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
-  let _require;
   let data;
   const includeHidden = obj.includeHidden;
   _require = tmp;
-  const userApplicationIdentities = _require(data[2]).useUserApplicationIdentities(arg0);
+  const userApplicationIdentities = require("UserApplicationIdentityActionCreators").useUserApplicationIdentities(arg0);
   data = userApplicationIdentities.data;
-  obj = {
-    isLoading: userApplicationIdentities.isLoading,
-    filteredAppIdentities: React.useMemo(() => {
-      let items = data;
-      if (data == null) {
-        items = [];
-      }
-      return items.filter((profile) => {
-        closure_0 = profile;
-        let someResult = closure_1_3.some((applicationId) => {
-          let migrationExperimentEnabled = applicationId.applicationId === profile.application_id;
-          if (migrationExperimentEnabled) {
-            migrationExperimentEnabled = applicationId.getMigrationExperimentEnabled("useConnectionFilteredAppIdentities");
-          }
-          return migrationExperimentEnabled;
-        });
-        if (someResult) {
-          someResult = null != profile.profile;
+  const obj3 = { isLoading: userApplicationIdentities.isLoading, filteredAppIdentities: null };
+  let items = [data, undefined !== includeHidden && includeHidden];
+  obj3.filteredAppIdentities = noop.useMemo(() => {
+    let items = data;
+    if (data == null) {
+      items = [];
+    }
+    return items.filter((profile) => {
+      let someResult = closure_2_3.some((applicationId) => {
+        let migrationExperimentEnabled = applicationId.applicationId === profile.application_id;
+        if (migrationExperimentEnabled) {
+          migrationExperimentEnabled = applicationId.getMigrationExperimentEnabled("useConnectionFilteredAppIdentities");
         }
-        if (someResult) {
-          someResult = null != profile.profile.username;
-        }
-        if (someResult) {
-          someResult = true === profile.profile.connection_visible || closure_0;
-          const tmp4 = true === profile.profile.connection_visible || closure_0;
-        }
-        return someResult;
+        return migrationExperimentEnabled;
       });
-    }, items)
-  };
-  items = [data, undefined !== includeHidden && includeHidden];
-  return obj;
+      if (someResult) {
+        someResult = null != profile.profile;
+      }
+      if (someResult) {
+        someResult = null != profile.profile.username;
+      }
+      if (someResult) {
+        someResult = true === profile.profile.connection_visible || closure_1_0;
+        const tmp4 = true === profile.profile.connection_visible || closure_1_0;
+      }
+      return someResult;
+    });
+  }, items);
+  return obj3;
 };

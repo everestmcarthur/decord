@@ -1,12 +1,12 @@
-// Module ID: 4547
-// Function ID: 4548
-// Name: set
+// Module ID: 4561
+// Function ID: 4562
+// Name: RegexUtils
 // Dependencies: [2]
 
-// Module 4547 (set)
-import set from "set" /* 2 */;
+// Module 4561 (RegexUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("utils/RegexUtils.tsx");
+const result = size.fileFinishedImporting("utils/RegexUtils.tsx");
 
 export default {
   escape(str) {

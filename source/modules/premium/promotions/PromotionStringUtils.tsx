@@ -1,33 +1,33 @@
-// Module ID: 13406
-// Function ID: 13407
-// Name: useFormatStringWithCommonPremiumParams
-// Dependencies: [4223, 1373, 504, 4218, 7234, 1114, 2024, 2]
+// Module ID: 13429
+// Function ID: 13430
+// Name: PromotionStringUtils
+// Dependencies: [4236, 1373, 504, 4231, 7248, 1114, 2024, 2]
 // Exports: getHelpArticleLinkProps, useFormatStringWithCommonPremiumParams
 
-// Module 13406 (useFormatStringWithCommonPremiumParams)
+// Module 13429 (PromotionStringUtils)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import combinedDefault from "combined" /* 2024 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4218 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 7234 */;
-import closure_3 from "addSubscriptionPlan" /* 4223 */;
-import GuildFeatures from "GuildFeatures" /* 1373 */;
+import util from "util" /* 1114 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4231 */;
+import PriceUtils from "PriceUtils" /* 7248 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4236 */;
 
-require = arg1;
-({ PremiumSubscriptionSKUs: c4, SubscriptionPlans: c5 } = GuildFeatures);
-const result = require("set").fileFinishedImporting("modules/premium/promotions/PromotionStringUtils.tsx");
+require = fn;
+const PremiumConstants = fn(1373);
+({ PremiumSubscriptionSKUs: closure_4, SubscriptionPlans: hasOwnProperty } = PremiumConstants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/promotions/PromotionStringUtils.tsx");
 
 export const useFormatStringWithCommonPremiumParams = function useFormatStringWithCommonPremiumParams(body) {
   let str = "...";
-  const items = [closure_3];
+  const items = [SubscriptionPlanStore];
   const stateFromStores = initialize.useStateFromStores(items, () => loadedForSKU.isLoadedForSKU(TIER_2.TIER_2));
   if (-1 !== body.indexOf("{price}")) {
     if (stateFromStores) {
       try {
-        const defaultPrice = getPremiumPlanItemDefault.getDefaultPrice(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
-        const obj2 = getPremiumPlanItemDefault;
-        str = formatSingleCurrencyPrice.formatPrice(defaultPrice.amount, defaultPrice.currency);
-        const tmpResult = formatSingleCurrencyPrice;
+        const defaultPrice = PremiumUtilsDefault.getDefaultPrice(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
+        str = PriceUtils.formatPrice(defaultPrice.amount, defaultPrice.currency);
+        const tmpResult = PriceUtils;
       } catch (err) {
       }
     }
@@ -35,12 +35,12 @@ export const useFormatStringWithCommonPremiumParams = function useFormatStringWi
   return body.replace(/\{price\}/g, str);
 };
 export const getHelpArticleLinkProps = function getHelpArticleLinkProps(helpArticle, helpArticleId) {
-  let id;
+  let id1;
   if (helpArticle != null) {
-    id = helpArticle.id;
+    id1 = helpArticle.id;
   }
-  id = helpArticleId;
-  if (null != id) {
+  let id = helpArticleId;
+  if (null != id1) {
     id = helpArticleId;
     if ("" !== helpArticle.id) {
       id = helpArticle.id;
@@ -49,20 +49,18 @@ export const getHelpArticleLinkProps = function getHelpArticleLinkProps(helpArti
   if ("" === id) {
     return null;
   } else {
-    let linkText;
+    let linkText1;
     if (helpArticle != null) {
-      linkText = helpArticle.linkText;
+      linkText1 = helpArticle.linkText;
     }
-    if (null != linkText) {
+    if (null != linkText1) {
       if ("" !== helpArticle.linkText) {
-        linkText = helpArticle.linkText;
+        let linkText = helpArticle.linkText;
       }
-      const obj = { url: null, linkText: null };
-      obj[0] = combinedDefault.getArticleURL(id);
-      obj[1] = linkText;
+      const obj = { url: HelpdeskUtilsDefault.getArticleURL(id), linkText };
       return obj;
     }
-    const intl = getSystemLocale.intl;
-    linkText = intl.string(getSystemLocale.t["sBp+u0"]);
+    const intl = util.intl;
+    linkText = intl.string(util.t["sBp+u0"]);
   }
 };

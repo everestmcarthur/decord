@@ -1,17 +1,17 @@
-// Module ID: 5773
-// Function ID: 5774
+// Module ID: 5787
+// Function ID: 5788
 // Name: AvatarNellyExample
-// Dependencies: [21, 5587, 5774, 2]
+// Dependencies: [21, 5601, 5788, 2]
 // Exports: AvatarNellyExample
 
-// Module 5773 (AvatarNellyExample)
-import set from "set" /* 2 */;
+// Module 5787 (AvatarNellyExample)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 5774 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5788 from "module_5788" /* 5788 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/AvatarNellyExample.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/AvatarNellyExample.native.tsx");
 
 export const AvatarNellyExample = function AvatarNellyExample(width) {
   let num = width.width;
@@ -27,14 +27,14 @@ export const AvatarNellyExample = function AvatarNellyExample(width) {
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
-  obj = { width: num * num3, height: num2 * num3 };
-  const items = [obj];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { width: num * num3, height: num2 * num3 });
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef5788 };
+  obj.source = obj2;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

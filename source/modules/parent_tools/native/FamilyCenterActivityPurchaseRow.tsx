@@ -1,40 +1,36 @@
-// Module ID: 14904
-// Function ID: 14905
+// Module ID: 14930
+// Function ID: 14931
 // Name: FamilyCenterActivityPurchaseRow
-// Dependencies: [19, 17, 21, 4560, 576, 8173, 14905, 7234, 14906, 4556, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 8199, 14931, 7248, 14932, 4570, 2]
 // Exports: default
 
-// Module 14904 (FamilyCenterActivityPurchaseRow)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 8173 */;
-import getCollectibleTypeName from "getCollectibleTypeName" /* 14905 */;
-import AvatarDecorationPreviewImageDefault from "AvatarDecorationPreviewImage" /* 14906 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14930 (FamilyCenterActivityPurchaseRow)
+import nativeDefault from "native" /* 576 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 8199 */;
+import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 14931 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: null, textContainer: null };
-createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { display: "flex", flexDirection: "column", flexShrink: 1 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityPurchaseRow.tsx");
+const FamilyCenterActivityItemPreviewDefault = tmp2(14932);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { display: "flex", flexDirection: "row", alignItems: "center", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 }, textContainer: { display: "flex", flexDirection: "column", flexShrink: 1 } };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityPurchaseRow.tsx");
 
 export default function FamilyCenterActivityPurchaseRow(arg0) {
   ({ skuId, subscriptionPlanId } = arg0);
   ({ total, currency } = arg0);
-  const tmp = callback();
+  const tmp = closure_6();
   let product = useCollectiblesDataDefault(skuId).product;
-  let obj = getCollectibleTypeName;
   let tmp6 = product;
   if (product == null) {
     tmp6 = null;
   }
-  const purchaseDisplayInfo = obj.getPurchaseDisplayInfo(tmp6, subscriptionPlanId);
+  const purchaseDisplayInfo = FamilyCenterActivityPurchaseRowUtils.getPurchaseDisplayInfo(tmp6, subscriptionPlanId);
   ({ displayName, typeName, isSubscription } = purchaseDisplayInfo);
   if (null != skuId) {
     if (!isSubscription) {
@@ -47,35 +43,29 @@ export default function FamilyCenterActivityPurchaseRow(arg0) {
     return null;
   } else {
     let combined = displayName;
-    const tmp5Result = tmp5(7234);
+    const tmp5Result = tmp5(7248);
     if (null != typeName) {
       const _HermesInternal = HermesInternal;
       combined = "" + displayName + " \u2022 " + typeName;
     }
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
-    obj = { displayName: null, product: null, isSubscription: null, subscriptionPlanId: null };
-    obj[0] = displayName;
-    const formatPriceResult = tmp5(7234).formatPrice(total, currency);
+    const obj2 = { style: tmp.container, children: null };
+    const obj3 = { displayName, product: null, isSubscription: null, subscriptionPlanId: null };
+    const formatPriceResult = tmp5(7248).formatPrice(total, currency);
     if (product == null) {
       product = null;
     }
-    obj[1] = product;
-    obj[2] = isSubscription;
-    obj[3] = subscriptionPlanId;
-    const items = [closure_4(AvatarDecorationPreviewImageDefault, obj), ];
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.textContainer;
-    const obj2 = { variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: null };
-    obj2[4] = combined;
-    const items1 = [closure_4(tmp5(4556).Text, obj2), ];
-    const obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
-    obj3[2] = formatPriceResult;
-    items1[1] = closure_4(tmp5(4556).Text, obj3);
-    obj1[1] = items1;
-    items[1] = closure_5(View, obj1);
-    obj[1] = items;
-    return closure_5(View, obj);
+    obj3.product = product;
+    obj3.isSubscription = isSubscription;
+    obj3.subscriptionPlanId = subscriptionPlanId;
+    const items = [React4(FamilyCenterActivityItemPreviewDefault, obj3), ];
+    const obj4 = { style: tmp.textContainer, children: null };
+    const obj5 = { variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: combined };
+    const items1 = [React4(tmp5(4570).Text, obj5), ];
+    const obj6 = { variant: "text-xs/medium", color: "text-muted", children: formatPriceResult };
+    items1[1] = React4(tmp5(4570).Text, obj6);
+    obj4.children = items1;
+    items[1] = hasOwnProperty(View, obj4);
+    obj2.children = items;
+    return hasOwnProperty(View, obj2);
   }
-  const tmp2 = importDefault;
 };

@@ -1,46 +1,482 @@
-// Module ID: 10133
-// Function ID: 10134
-// Name: inlineChannelMentionReact
-// Dependencies: [19, 21, 8096, 1178, 1369, 2]
+// Module ID: 10160
+// Function ID: 10161
+// Name: MarkupInlineChannelMentionRules
+// Dependencies: [19, 21, 8112, 1178, 1369, 2]
 // Exports: createInlineChannelReact, inlineChannelMentionReact, inlineChannelReact
 
-// Module 10133 (inlineChannelMentionReact)
-import noopAll from "noop" /* 19 */;
-import { jsxs } from "jsxProd" /* 21 */;
+// Module 10160 (MarkupInlineChannelMentionRules)
+import noop from "module_19" /* 19 */;
 
-let c0 = arg1;
-noopAll;
-c0 = "\u{1F4AC}";
-const result = require("set").fileFinishedImporting("modules/markup/native/MarkupInlineChannelMentionRules.tsx");
+const jsxs = fn(21).jsxs;
+let c0 = "\u{1F4AC}";
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/markup/native/MarkupInlineChannelMentionRules.tsx");
 
-export const inlineChannelMentionReact = function inlineChannelMentionReact(inContent, output, key) {
+export const inlineChannelMentionReact = function inlineChannelMentionReact(inContent, fn, key) {
   if (null == inContent.inContent) {
-    let smartOutputResult = u1F4AC(8096).smartOutput(inContent, output, key);
-    const obj3 = u1F4AC(8096);
+    let smartOutputResult = u1F4AC(8112).smartOutput(inContent, fn, key);
+    const obj3 = u1F4AC(8112);
   } else {
     const obj = { children: null };
-    const items = [output(inContent.inContent, key), " \u203A ", u1F4AC(8096).smartOutput(inContent, output, key)];
-    obj[0] = items;
+    const items = [fn(inContent.inContent, key), " \u203A ", u1F4AC(8112).smartOutput(inContent, fn, key)];
+    obj.children = items;
     smartOutputResult = jsxs(u1F4AC(1178).LegacyText, { children: null }, key.key);
-    const obj2 = u1F4AC(8096);
+    const obj2 = u1F4AC(8112);
   }
   return smartOutputResult;
 };
 export function createInlineChannelReact(arg0) {
-  let str = arg0;
   if (arg0 === undefined) {
-    str = "\u{1F4AC}";
+    let str = "\u{1F4AC}";
   }
-  return (arg0, output, key) => {
-    const obj = { children: null };
-    const items = [str, str(closure_1_1[2]).smartOutput(tmp2, output, key), undefined];
-    obj[0] = items;
-    closure_1_2(str(closure_1_1[3]).LegacyText, obj, key.key);
+  return (iconType, output, key) => {
+    iconType = iconType.iconType;
+    switch (iconType) {
+      case "text":
+        let str2 = "#";
+        str = undefined;
+        let tmp9 = str(1178);
+        let obj2 = { children: null };
+        let items = [str2, , ];
+        let obj3 = str(8112);
+        let smartOutputResult = obj3.smartOutput(iconType, output, key);
+        items[1] = smartOutputResult;
+        items[2] = str;
+        obj2.children = items;
+        let tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+        return tmp13;
+      case "text-nsfw":
+        str2 = "#";
+        str = undefined;
+        tmp9 = str(1178);
+        obj2 = { children: null };
+        items = [str2, , ];
+        obj3 = str(8112);
+        smartOutputResult = obj3.smartOutput(iconType, output, key);
+        items[1] = smartOutputResult;
+        items[2] = str;
+        obj2.children = items;
+        tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+        return tmp13;
+      case "text-spoiler":
+        str2 = "#";
+        str = undefined;
+        tmp9 = str(1178);
+        obj2 = { children: null };
+        items = [str2, , ];
+        obj3 = str(8112);
+        smartOutputResult = obj3.smartOutput(iconType, output, key);
+        items[1] = smartOutputResult;
+        items[2] = str;
+        obj2.children = items;
+        tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+        return tmp13;
+      case "announcement":
+        str2 = "#";
+        str = undefined;
+        tmp9 = str(1178);
+        obj2 = { children: null };
+        items = [str2, , ];
+        obj3 = str(8112);
+        smartOutputResult = obj3.smartOutput(iconType, output, key);
+        items[1] = smartOutputResult;
+        items[2] = str;
+        obj2.children = items;
+        tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+        return tmp13;
+      case "announcement-nsfw":
+        str2 = "#";
+        str = undefined;
+        tmp9 = str(1178);
+        obj2 = { children: null };
+        items = [str2, , ];
+        obj3 = str(8112);
+        smartOutputResult = obj3.smartOutput(iconType, output, key);
+        items[1] = smartOutputResult;
+        items[2] = str;
+        obj2.children = items;
+        tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+        return tmp13;
+      case "announcement-spoiler":
+        str2 = "#";
+        str = undefined;
+        tmp9 = str(1178);
+        obj2 = { children: null };
+        items = [str2, , ];
+        obj3 = str(8112);
+        smartOutputResult = obj3.smartOutput(iconType, output, key);
+        items[1] = smartOutputResult;
+        items[2] = str;
+        obj2.children = items;
+        tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+        return tmp13;
+      case "forum":
+        str2 = "#";
+        str = undefined;
+        tmp9 = str(1178);
+        obj2 = { children: null };
+        items = [str2, , ];
+        obj3 = str(8112);
+        smartOutputResult = obj3.smartOutput(iconType, output, key);
+        items[1] = smartOutputResult;
+        items[2] = str;
+        obj2.children = items;
+        tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+        return tmp13;
+      case "forum-nsfw":
+        str2 = "#";
+        str = undefined;
+        tmp9 = str(1178);
+        obj2 = { children: null };
+        items = [str2, , ];
+        obj3 = str(8112);
+        smartOutputResult = obj3.smartOutput(iconType, output, key);
+        items[1] = smartOutputResult;
+        items[2] = str;
+        obj2.children = items;
+        tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+        return tmp13;
+      case "forum-spoiler":
+        str2 = "#";
+        str = undefined;
+        tmp9 = str(1178);
+        obj2 = { children: null };
+        items = [str2, , ];
+        obj3 = str(8112);
+        smartOutputResult = obj3.smartOutput(iconType, output, key);
+        items[1] = smartOutputResult;
+        items[2] = str;
+        obj2.children = items;
+        tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+        return tmp13;
+      case "media":
+        str2 = "#";
+        str = undefined;
+        tmp9 = str(1178);
+        obj2 = { children: null };
+        items = [str2, , ];
+        obj3 = str(8112);
+        smartOutputResult = obj3.smartOutput(iconType, output, key);
+        items[1] = smartOutputResult;
+        items[2] = str;
+        obj2.children = items;
+        tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+        return tmp13;
+      case "media-nsfw":
+        str2 = "#";
+        str = undefined;
+        tmp9 = str(1178);
+        obj2 = { children: null };
+        items = [str2, , ];
+        obj3 = str(8112);
+        smartOutputResult = obj3.smartOutput(iconType, output, key);
+        items[1] = smartOutputResult;
+        items[2] = str;
+        obj2.children = items;
+        tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+        return tmp13;
+      case "app":
+        str2 = "#";
+        str = undefined;
+        tmp9 = str(1178);
+        obj2 = { children: null };
+        items = [str2, , ];
+        obj3 = str(8112);
+        smartOutputResult = obj3.smartOutput(iconType, output, key);
+        items[1] = smartOutputResult;
+        items[2] = str;
+        obj2.children = items;
+        tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+        return tmp13;
+      case "app-nsfw":
+        str2 = "#";
+        str = undefined;
+        tmp9 = str(1178);
+        obj2 = { children: null };
+        items = [str2, , ];
+        obj3 = str(8112);
+        smartOutputResult = obj3.smartOutput(iconType, output, key);
+        items[1] = smartOutputResult;
+        items[2] = str;
+        obj2.children = items;
+        tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+        return tmp13;
+      case "app-spoiler":
+        str2 = "#";
+        str = undefined;
+        tmp9 = str(1178);
+        obj2 = { children: null };
+        items = [str2, , ];
+        obj3 = str(8112);
+        smartOutputResult = obj3.smartOutput(iconType, output, key);
+        items[1] = smartOutputResult;
+        items[2] = str;
+        obj2.children = items;
+        tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+        return tmp13;
+      case "thread":
+        str = "\"";
+        str2 = "\"";
+      break;
+      case "post":
+        str = "\"";
+        str2 = "\"";
+      break;
+      case "message":
+        str2 = str;
+      break;
+      case "voice":
+      break;
+      case "voice-locked":
+      break;
+      case "voice-nsfw":
+      break;
+      case "voice-spoiler":
+      break;
+      case "stage":
+      break;
+      case "stage-locked":
+      break;
+      case "locked":
+      break;
+      case "guide":
+      break;
+      case "home":
+      break;
+      case "browse":
+      break;
+      case "customize":
+      break;
+      case "linked-roles":
+      break;
+      default:
+        str(1369).assertNever(iconType);
+        const obj = str(1369);
+    }
   };
 }
-export const inlineChannelReact = (arg0, output, key) => {
-  const obj = { children: null };
-  const items = [str, str(closure_1_1[2]).smartOutput(tmp2, output, key), undefined];
-  obj[0] = items;
-  closure_1_2(str(closure_1_1[3]).LegacyText, obj, key.key);
+export const inlineChannelReact = (iconType, output, key) => {
+  iconType = iconType.iconType;
+  switch (iconType) {
+    case "text":
+      let str2 = "#";
+      str = undefined;
+      let tmp9 = str(1178);
+      let obj2 = { children: null };
+      let items = [str2, , ];
+      let obj3 = str(8112);
+      let smartOutputResult = obj3.smartOutput(iconType, output, key);
+      items[1] = smartOutputResult;
+      items[2] = str;
+      obj2.children = items;
+      let tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+      return tmp13;
+    case "text-nsfw":
+      str2 = "#";
+      str = undefined;
+      tmp9 = str(1178);
+      obj2 = { children: null };
+      items = [str2, , ];
+      obj3 = str(8112);
+      smartOutputResult = obj3.smartOutput(iconType, output, key);
+      items[1] = smartOutputResult;
+      items[2] = str;
+      obj2.children = items;
+      tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+      return tmp13;
+    case "text-spoiler":
+      str2 = "#";
+      str = undefined;
+      tmp9 = str(1178);
+      obj2 = { children: null };
+      items = [str2, , ];
+      obj3 = str(8112);
+      smartOutputResult = obj3.smartOutput(iconType, output, key);
+      items[1] = smartOutputResult;
+      items[2] = str;
+      obj2.children = items;
+      tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+      return tmp13;
+    case "announcement":
+      str2 = "#";
+      str = undefined;
+      tmp9 = str(1178);
+      obj2 = { children: null };
+      items = [str2, , ];
+      obj3 = str(8112);
+      smartOutputResult = obj3.smartOutput(iconType, output, key);
+      items[1] = smartOutputResult;
+      items[2] = str;
+      obj2.children = items;
+      tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+      return tmp13;
+    case "announcement-nsfw":
+      str2 = "#";
+      str = undefined;
+      tmp9 = str(1178);
+      obj2 = { children: null };
+      items = [str2, , ];
+      obj3 = str(8112);
+      smartOutputResult = obj3.smartOutput(iconType, output, key);
+      items[1] = smartOutputResult;
+      items[2] = str;
+      obj2.children = items;
+      tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+      return tmp13;
+    case "announcement-spoiler":
+      str2 = "#";
+      str = undefined;
+      tmp9 = str(1178);
+      obj2 = { children: null };
+      items = [str2, , ];
+      obj3 = str(8112);
+      smartOutputResult = obj3.smartOutput(iconType, output, key);
+      items[1] = smartOutputResult;
+      items[2] = str;
+      obj2.children = items;
+      tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+      return tmp13;
+    case "forum":
+      str2 = "#";
+      str = undefined;
+      tmp9 = str(1178);
+      obj2 = { children: null };
+      items = [str2, , ];
+      obj3 = str(8112);
+      smartOutputResult = obj3.smartOutput(iconType, output, key);
+      items[1] = smartOutputResult;
+      items[2] = str;
+      obj2.children = items;
+      tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+      return tmp13;
+    case "forum-nsfw":
+      str2 = "#";
+      str = undefined;
+      tmp9 = str(1178);
+      obj2 = { children: null };
+      items = [str2, , ];
+      obj3 = str(8112);
+      smartOutputResult = obj3.smartOutput(iconType, output, key);
+      items[1] = smartOutputResult;
+      items[2] = str;
+      obj2.children = items;
+      tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+      return tmp13;
+    case "forum-spoiler":
+      str2 = "#";
+      str = undefined;
+      tmp9 = str(1178);
+      obj2 = { children: null };
+      items = [str2, , ];
+      obj3 = str(8112);
+      smartOutputResult = obj3.smartOutput(iconType, output, key);
+      items[1] = smartOutputResult;
+      items[2] = str;
+      obj2.children = items;
+      tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+      return tmp13;
+    case "media":
+      str2 = "#";
+      str = undefined;
+      tmp9 = str(1178);
+      obj2 = { children: null };
+      items = [str2, , ];
+      obj3 = str(8112);
+      smartOutputResult = obj3.smartOutput(iconType, output, key);
+      items[1] = smartOutputResult;
+      items[2] = str;
+      obj2.children = items;
+      tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+      return tmp13;
+    case "media-nsfw":
+      str2 = "#";
+      str = undefined;
+      tmp9 = str(1178);
+      obj2 = { children: null };
+      items = [str2, , ];
+      obj3 = str(8112);
+      smartOutputResult = obj3.smartOutput(iconType, output, key);
+      items[1] = smartOutputResult;
+      items[2] = str;
+      obj2.children = items;
+      tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+      return tmp13;
+    case "app":
+      str2 = "#";
+      str = undefined;
+      tmp9 = str(1178);
+      obj2 = { children: null };
+      items = [str2, , ];
+      obj3 = str(8112);
+      smartOutputResult = obj3.smartOutput(iconType, output, key);
+      items[1] = smartOutputResult;
+      items[2] = str;
+      obj2.children = items;
+      tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+      return tmp13;
+    case "app-nsfw":
+      str2 = "#";
+      str = undefined;
+      tmp9 = str(1178);
+      obj2 = { children: null };
+      items = [str2, , ];
+      obj3 = str(8112);
+      smartOutputResult = obj3.smartOutput(iconType, output, key);
+      items[1] = smartOutputResult;
+      items[2] = str;
+      obj2.children = items;
+      tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+      return tmp13;
+    case "app-spoiler":
+      str2 = "#";
+      str = undefined;
+      tmp9 = str(1178);
+      obj2 = { children: null };
+      items = [str2, , ];
+      obj3 = str(8112);
+      smartOutputResult = obj3.smartOutput(iconType, output, key);
+      items[1] = smartOutputResult;
+      items[2] = str;
+      obj2.children = items;
+      tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+      return tmp13;
+    case "thread":
+      str = "\"";
+      str2 = "\"";
+    break;
+    case "post":
+      str = "\"";
+      str2 = "\"";
+    break;
+    case "message":
+      str2 = str;
+    break;
+    case "voice":
+    break;
+    case "voice-locked":
+    break;
+    case "voice-nsfw":
+    break;
+    case "voice-spoiler":
+    break;
+    case "stage":
+    break;
+    case "stage-locked":
+    break;
+    case "locked":
+    break;
+    case "guide":
+    break;
+    case "home":
+    break;
+    case "browse":
+    break;
+    case "customize":
+    break;
+    case "linked-roles":
+    break;
+    default:
+      str(1369).assertNever(iconType);
+      const obj = str(1369);
+  }
 };

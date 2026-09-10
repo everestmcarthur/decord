@@ -1,26 +1,26 @@
-// Module ID: 12779
-// Function ID: 12780
-// Name: SpecialNavigationPath
-// Dependencies: [1074, 4392, 2]
+// Module ID: 12805
+// Function ID: 12806
+// Name: NavigationPathUtils
+// Dependencies: [1074, 4406, 2]
 // Exports: getSelectedSpecialNavigationPath, useSelectedSpecialNavigationPath
 
-// Module 12779 (SpecialNavigationPath)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import _extends from "_extends" /* 4392 */;
+// Module 12805 (NavigationPathUtils)
+import Constants from "Constants" /* 1074 */;
+import _mod4406 from "module_4406" /* 4406 */;
+import size from "module_2" /* 2 */;
 
-const Routes = ME.Routes;
-let obj = { FRIENDS: 0, [0]: "FRIENDS" };
-const result = set.fileFinishedImporting("modules/navbars/native/NavigationPathUtils.tsx");
+const Routes = Constants.Routes;
+const SpecialNavigationPath = { FRIENDS: 0, [0]: "FRIENDS" };
+const result = size.fileFinishedImporting("modules/navbars/native/NavigationPathUtils.tsx");
 
-export const SpecialNavigationPath = obj;
+export { SpecialNavigationPath };
 export const getSelectedSpecialNavigationPath = function getSelectedSpecialNavigationPath(pathname) {
   if (pathname.pathname === Routes.FRIENDS) {
     return obj.FRIENDS;
   }
 };
 export const useSelectedSpecialNavigationPath = function useSelectedSpecialNavigationPath() {
-  obj = _extends;
+  const obj = _mod4406;
   let FRIENDS;
   if (obj.useLocation().pathname === Routes.FRIENDS) {
     FRIENDS = obj.FRIENDS;

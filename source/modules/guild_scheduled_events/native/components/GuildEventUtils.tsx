@@ -1,23 +1,23 @@
-// Module ID: 9774
-// Function ID: 9775
-// Name: getEventLocationIconSource
-// Dependencies: [9710, 9719, 5028, 9720, 2]
+// Module ID: 9801
+// Function ID: 9802
+// Name: GuildEventUtils
+// Dependencies: [9737, 9746, 5042, 9747, 2]
 // Exports: getEventLocationIconComponent, getEventLocationIconSource
 
-// Module 9774 (getEventLocationIconSource)
-import set from "set" /* 2 */;
-import getChannelIcon from "getChannelIcon" /* 5028 */;
-import registerAssetDefault from "registerAsset" /* 9719 */;
+// Module 9801 (GuildEventUtils)
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5042 */;
+import _modDef9746 from "module_9746" /* 9746 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventUtils.tsx");
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventUtils.tsx");
 
 export const getEventLocationIconSource = function getEventLocationIconSource(event, channel, stateFromStores2) {
   if (null != obj.getLocationFromEvent(event)) {
-    let tmp4 = registerAssetDefault;
+    let tmp4 = _modDef9746;
   } else {
     tmp4 = null;
     if (null != channel) {
-      const tmpResult = getChannelIcon;
+      const tmpResult = utils_ChannelUtils;
       if (stateFromStores2) {
         let channelIcon = tmpResult.getChannelIcon(channel);
       } else {
@@ -29,11 +29,11 @@ export const getEventLocationIconSource = function getEventLocationIconSource(ev
 };
 export const getEventLocationIconComponent = function getEventLocationIconComponent(event, channel, stateFromStores1) {
   if (null != obj.getLocationFromEvent(event)) {
-    let LocationIcon = tmp(9720).LocationIcon;
+    let LocationIcon = tmp(9747).LocationIcon;
   } else {
     LocationIcon = null;
     if (null != channel) {
-      const tmpResult = tmp(5028);
+      const tmpResult = tmp(5042);
       if (stateFromStores1) {
         let channelIconComponent = tmpResult.getChannelIconComponent(channel);
       } else {

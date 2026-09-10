@@ -1,15 +1,15 @@
-// Module ID: 8073
-// Function ID: 8074
-// Name: apexExperiment
+// Module ID: 8088
+// Function ID: 8089
+// Name: VoiceUserAffinityExperiment
 // Dependencies: [1433, 2]
 // Exports: getVoiceUserAffinitySortType, useVoiceUserAffinitySortType
 
-// Module 8073 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 8088 (VoiceUserAffinityExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2025-08-voice-user-affinity", defaultConfig: { enabled: false }, variations: { 0: { enabled: false, sortType: "PX_16" }, 1: { enabled: true, sortType: "vc_probability" }, 2: { enabled: true, sortType: "communication_probability" } } });
-const result = set.fileFinishedImporting("modules/user_affinities/VoiceUserAffinityExperiment.tsx");
+const result = size.fileFinishedImporting("modules/user_affinities/VoiceUserAffinityExperiment.tsx");
 
 export default apexExperiment;
 export const getVoiceUserAffinitySortType = function getVoiceUserAffinitySortType(location) {

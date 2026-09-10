@@ -1,31 +1,29 @@
-// Module ID: 7277
-// Function ID: 7278
-// Name: handleLoadThreadsSuccess
-// Dependencies: [7278, 1371, 11, 4783, 504, 573, 2]
+// Module ID: 7291
+// Function ID: 7292
+// Name: ForumPostMessagesStore
+// Dependencies: [7292, 1371, 11, 4797, 504, 573, 2]
 
-// Module 7277 (handleLoadThreadsSuccess)
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+// Module 7291 (ForumPostMessagesStore)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4783 */;
-import closure_3 from "handleConnectionOpenOrResumed" /* 7278 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4797 */;
+import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 7292 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+require = fn;
 function handleLoadThreadsSuccess(arg0) {
   ({ threads, firstMessages } = arg0);
   if (null == firstMessages) {
     return false;
   } else {
     for (const item10008 of threads) {
-      let tmp3 = closure_5;
       closure_5[item10008.id] = { loaded: true, firstMessage: null };
       continue;
     }
     const iter = firstMessages[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      let tmp8 = storeFirstMessage;
       let tmp9 = storeFirstMessage(nextResult.channel_id, nextResult);
       continue;
     }
@@ -34,8 +32,7 @@ function handleLoadThreadsSuccess(arg0) {
 function storeFirstMessage(channel_id, nextResult) {
   let messageRecord = null;
   if (null != nextResult) {
-    messageRecord = createMinimalMessageRecord.createMessageRecord(nextResult);
-    const obj = createMinimalMessageRecord;
+    messageRecord = MessageRecordUtils.createMessageRecord(nextResult);
   }
   closure_5[channel_id] = { loaded: true, firstMessage: messageRecord };
 }
@@ -46,21 +43,19 @@ function handleReaction(colors) {
       if (tmp2 !== tmp5.firstMessage.id) {
         return false;
       } else {
-        const currentUser = authStore.getCurrentUser();
+        const currentUser = UserStore.getCurrentUser();
         if (tmp4) {
           if (!tmp6) {
             return false;
           }
         }
-        let obj = {};
+        const obj = {};
         const merged = Object.assign(tmp5);
         dependencyMap[channelId] = obj;
         if ("MESSAGE_REACTION_ADD" === tmp) {
           const firstMessage2 = tmp5.firstMessage;
-          obj = { colors: null, reactionType: null };
-          obj[0] = colors.colors;
-          obj[1] = reactionType;
-          let addReactionResult = firstMessage2.addReaction(emoji, tmp6, obj);
+          const obj2 = { colors: colors.colors, reactionType };
+          let addReactionResult = firstMessage2.addReaction(emoji, tmp6, obj2);
         } else {
           const firstMessage = tmp5.firstMessage;
           addReactionResult = firstMessage.removeReaction(emoji, tmp6, reactionType);
@@ -71,13 +66,13 @@ function handleReaction(colors) {
   }
   return false;
 }
-let closure_5 = {};
+const dependencyMap = {};
 const Store = initializeDefault.Store;
 class ForumPostMessagesStore extends Store {
 }
 const prototype = ForumPostMessagesStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_3, closure_4);
+  this.waitFor(GuildSubscriptionsStore, UserStore);
 };
 prototype["isLoading"] = function isLoading(arg0) {
   let loaded;
@@ -93,7 +88,7 @@ prototype["getMessage"] = function getMessage(arg0) {
   return dependencyMap[arg0];
 };
 ForumPostMessagesStore.displayName = "ForumPostMessagesStore";
-const forumPostMessagesStore = new ForumPostMessagesStore(dispatcherDefault, {
+const forumPostMessagesStore = new ForumPostMessagesStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     closure_5 = {};
   },
@@ -101,18 +96,15 @@ const forumPostMessagesStore = new ForumPostMessagesStore(dispatcherDefault, {
     isPushNotification = isPushNotification.isPushNotification;
     let tmp = !isPushNotification;
     if (!isPushNotification) {
-      let obj = DISCORD_EPOCHDefault;
-      const tmp4 = isPushNotification.message.id === obj.castChannelIdAsMessageId(isPushNotification.message.channel_id);
+      const tmp4 = isPushNotification.message.id === SnowflakeUtilsDefault.castChannelIdAsMessageId(isPushNotification.message.channel_id);
       if (tmp4) {
         const message = isPushNotification.message;
         let messageRecord = null;
         if (null != message) {
-          messageRecord = createMinimalMessageRecord.createMessageRecord(message);
-          const obj2 = createMinimalMessageRecord;
+          messageRecord = MessageRecordUtils.createMessageRecord(message);
         }
-        obj = { loaded: true, firstMessage: null };
-        obj[1] = messageRecord;
-        closure_5[isPushNotification.message.channel_id] = obj;
+        const obj3 = { loaded: true, firstMessage: messageRecord };
+        closure_5[isPushNotification.message.channel_id] = obj3;
       }
       tmp = tmp4;
     }
@@ -122,18 +114,17 @@ const forumPostMessagesStore = new ForumPostMessagesStore(dispatcherDefault, {
     if (message.message.id !== message.message.channel_id) {
       return false;
     } else {
-      const obj4 = DISCORD_EPOCHDefault;
+      const obj4 = SnowflakeUtilsDefault;
       const tmp12 = dependencyMap[obj4.castMessageIdAsChannelId(obj4, message.message.id)];
       let tmp8 = null != tmp12;
       if (tmp8) {
         if (null != tmp12.firstMessage) {
           const obj = {};
-          const result = DISCORD_EPOCHDefault.castMessageIdAsChannelId(message.message.id);
+          const result = SnowflakeUtilsDefault.castMessageIdAsChannelId(message.message.id);
           const merged = Object.assign(tmp12);
-          const tmp10Result = DISCORD_EPOCHDefault;
-          obj.firstMessage = createMinimalMessageRecord.updateMessageRecord(tmp12.firstMessage, message.message);
+          const tmp10Result = SnowflakeUtilsDefault;
+          obj.firstMessage = MessageRecordUtils.updateMessageRecord(tmp12.firstMessage, message.message);
           dependencyMap[result] = obj;
-          const obj3 = createMinimalMessageRecord;
         }
         tmp8 = tmp;
       }
@@ -146,12 +137,12 @@ const forumPostMessagesStore = new ForumPostMessagesStore(dispatcherDefault, {
     } else {
       closure_5[id.channelId] = { loaded: true, firstMessage: null };
     }
-    obj = DISCORD_EPOCHDefault;
+    obj = SnowflakeUtilsDefault;
   },
   THREAD_CREATE: function handleThreadCreate(channel) {
     let tmp = null == dependencyMap[channel.channel.id];
     if (tmp) {
-      const result = subscribedToThreads.isSubscribedToThreads(channel.channel.guild_id);
+      const result = GuildSubscriptionsStore.isSubscribedToThreads(channel.channel.guild_id);
       if (result) {
         dependencyMap[channel.channel.id] = { loaded: true, firstMessage: null };
       }
@@ -205,7 +196,7 @@ const forumPostMessagesStore = new ForumPostMessagesStore(dispatcherDefault, {
         if (tmp !== tmp3.firstMessage.id) {
           return false;
         } else {
-          const currentUser = authStore.getCurrentUser();
+          const currentUser = UserStore.getCurrentUser();
           const firstMessage = tmp3.firstMessage;
           let id;
           if (currentUser != null) {
@@ -223,19 +214,14 @@ const forumPostMessagesStore = new ForumPostMessagesStore(dispatcherDefault, {
   LOAD_FORUM_POSTS: function handlePostChannelLoadData(threads) {
     threads = threads.threads;
     for (const key10006 in threads) {
-      let tmp5 = key10006;
       let first_message = threads[key10006].first_message;
       let messageRecord = null;
       if (null != first_message) {
-        let tmp = require;
-        let tmp2 = dependencyMap;
-        let obj = createMinimalMessageRecord;
+        let obj = MessageRecordUtils;
         messageRecord = obj.createMessageRecord(first_message);
       }
-      let tmp4 = closure_5;
-      obj = { loaded: true, firstMessage: null };
-      obj[1] = messageRecord;
-      closure_5[key10006] = obj;
+      let obj2 = { loaded: true, firstMessage: messageRecord };
+      closure_5[key10006] = obj2;
       continue;
     }
   },
@@ -245,17 +231,15 @@ const forumPostMessagesStore = new ForumPostMessagesStore(dispatcherDefault, {
     ({ channelId, messages } = arg0);
     let tmp2 = null != tmp;
     if (tmp2) {
-      let obj = DISCORD_EPOCHDefault;
-      tmp2 = tmp.id === obj.castChannelIdAsMessageId(channelId);
+      tmp2 = tmp.id === SnowflakeUtilsDefault.castChannelIdAsMessageId(channelId);
     }
     if (tmp2) {
-      obj = { loaded: true, firstMessage: null };
-      obj[1] = createMinimalMessageRecord.createMessageRecord(tmp);
-      closure_5[channelId] = obj;
-      const obj3 = createMinimalMessageRecord;
+      const obj2 = { loaded: true, firstMessage: MessageRecordUtils.createMessageRecord(tmp) };
+      closure_5[channelId] = obj2;
     }
   }
 });
-let result = require("set").fileFinishedImporting("modules/forums/ForumPostMessagesStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/forums/ForumPostMessagesStore.tsx");
 
 export default forumPostMessagesStore;

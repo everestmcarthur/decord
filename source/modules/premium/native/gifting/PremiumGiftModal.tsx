@@ -1,200 +1,193 @@
-// Module ID: 10667
-// Function ID: 10668
+// Module ID: 10694
+// Function ID: 10695
 // Name: PremiumGiftModal
-// Dependencies: [32, 19, 1371, 21, 10668, 4560, 576, 504, 8781, 1114, 5624, 10669, 11045, 11048, 11076, 2492, 11033, 10666, 7182, 7162, 5598, 1256, 4763, 4231, 10830, 10704, 11226, 7000, 2]
+// Dependencies: [32, 19, 1371, 21, 10695, 4574, 576, 504, 8809, 1114, 5638, 10696, 11072, 11075, 11103, 2492, 11060, 10693, 7196, 7176, 5612, 1256, 4777, 4244, 10857, 10731, 11253, 7014, 2]
 // Exports: default
 
-// Module 10667 (PremiumGiftModal)
-import ThemesDefault from "Themes" /* 576 */;
-import useInitialValueDefault from "useInitialValue" /* 5598 */;
-import contextDefault from "context" /* 7162 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "mergeGuildAvatar" /* 1371 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10694 (PremiumGiftModal)
+import nativeDefault from "native" /* 576 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10695 */;
+import PremiumGiftPlanSelectDefault from "PremiumGiftPlanSelect" /* 10696 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-let obj = { PLAN_SELECT: "PremiumGiftPlanSelect", REWARD_SELECT: "GiftingSKUSelect", CUSTOMIZATION: "PremiumGiftCustomization", SUCCESS: "PremiumGiftSuccess", GIFTING_BADGE: "GiftingBadgePostPurchase" };
-obj = { [PLAN_SELECT]: require("PaymentFlowStep").PaymentFlowStep.SKU_SELECT, [REWARD_SELECT]: require("PaymentFlowStep").PaymentFlowStep.REWARD_SKU_SELECT, [CUSTOMIZATION]: require("PaymentFlowStep").PaymentFlowStep.PLAN_SELECT, [SUCCESS]: require("PaymentFlowStep").PaymentFlowStep.CONFIRM, [GIFTING_BADGE]: require("PaymentFlowStep").PaymentFlowStep.CONFIRM };
-({ PLAN_SELECT, REWARD_SELECT, CUSTOMIZATION, SUCCESS, GIFTING_BADGE } = obj);
-obj = { header: { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" } };
-let closure_9 = createCacheKey.createStyles(obj);
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" };
-const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftModal.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const PremiumGiftScreens = { PLAN_SELECT: "PremiumGiftPlanSelect", REWARD_SELECT: "GiftingSKUSelect", CUSTOMIZATION: "PremiumGiftCustomization", SUCCESS: "PremiumGiftSuccess", GIFTING_BADGE: "GiftingBadgePostPurchase" };
+let obj2 = { [PLAN_SELECT]: fn(10695).PaymentFlowStep.SKU_SELECT, [REWARD_SELECT]: fn(10695).PaymentFlowStep.REWARD_SKU_SELECT, [CUSTOMIZATION]: fn(10695).PaymentFlowStep.PLAN_SELECT, [SUCCESS]: fn(10695).PaymentFlowStep.CONFIRM, [GIFTING_BADGE]: fn(10695).PaymentFlowStep.CONFIRM };
+({ PLAN_SELECT, REWARD_SELECT, CUSTOMIZATION, SUCCESS, GIFTING_BADGE } = PremiumGiftScreens);
+const createStyles = fn(4574);
+let obj4 = { header: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" } };
+let closure_9 = createStyles.createStyles(obj4);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftModal.tsx");
 
 export default function PremiumGiftModal(analyticsLocations) {
   ({ recipientUserId, premiumType, analyticsLocation } = analyticsLocations);
-  recipientUserId = analyticsLocation;
   analyticsLocations = analyticsLocations.analyticsLocations;
-  importDefault = analyticsLocations;
   ({ initialRoute, onDismiss } = analyticsLocations);
-  dependencyMap = onDismiss;
-  let callback;
   closure_4 = undefined;
   ({ planInterval, order } = analyticsLocations);
-  const tmp3 = useInitialValueDefault(() => recipientUserId(_undefined2[21]).v4());
-  callback = tmp3;
-  obj = closure_4;
+  const tmp3 = analyticsLocations(onDismiss[20])(() => analyticsLocation(onDismiss[21]).v4());
+  _slicedToArray = tmp3;
   let items = [tmp3, analyticsLocation, analyticsLocations];
   if (initialRoute != null) {
     const items1 = [onDismiss];
-    callback = obj.useCallback(() => {
-      let arr = _undefined(_undefined2[22]);
-      arr = arr.pop();
-      if (_undefined2 != null) {
-        _undefined2();
+    const callback = obj.useCallback(() => {
+      ModalActionCreatorsDefault.pop();
+      if (onDismiss != null) {
+        onDismiss();
       }
     }, items1);
-    importDefault = undefined;
-    dependencyMap = undefined;
-    callback = undefined;
-    closure_4 = undefined;
-    let shouldShowWishlistInDMGifting;
-    const tmp10 = callback2();
-    obj1 = recipientUserId(504);
-    const items2 = [shouldShowWishlistInDMGifting];
-    const stateFromStores = obj1.useStateFromStores(items2, () => {
+    closure_129_0 = recipientUserId;
+    closure_129_1 = undefined;
+    closure_129_2 = undefined;
+    closure_129_3 = undefined;
+    closure_129_4 = undefined;
+    const tmp10 = closure_9();
+    obj2 = analyticsLocation(tmp2[7]);
+    const items2 = [UserStore];
+    const stateFromStores = obj2.useStateFromStores(items2, () => {
       let user = null;
-      if (null != recipientUserId) {
-        user = shouldShowWishlistInDMGifting.getUser(tmp);
+      if (null != analyticsLocation) {
+        user = UserStore.getUser(tmp);
       }
       return user;
     });
-    let obj2 = recipientUserId(8781);
-    const fetchWishlistAndProfileInfoForUser = obj2.useFetchWishlistAndProfileInfoForUser(recipientUserId);
-    ({ wishlist: c1, userProfile: c2, wishlistId: c3, error: closure_4 } = fetchWishlistAndProfileInfoForUser);
-    let obj3 = recipientUserId(8781);
-    obj = { isGift: true, giftRecipient: null, isSocialLayerStorefrontEnabled: false };
-    obj[1] = stateFromStores;
-    shouldShowWishlistInDMGifting = obj3.useShouldShowWishlistInDMGifting(obj);
+    const fetchWishlistAndProfileInfoForUser = analyticsLocation(tmp2[8]).useFetchWishlistAndProfileInfoForUser(recipientUserId);
+    ({ wishlist: closure_129_1, userProfile: closure_129_2, wishlistId: closure_129_3, error: closure_129_4 } = fetchWishlistAndProfileInfoForUser);
+    const obj3 = analyticsLocation(tmp2[8]);
+    const obj5 = { isGift: true, giftRecipient: stateFromStores, isSocialLayerStorefrontEnabled: false };
+    const shouldShowWishlistInDMGifting = analyticsLocation(tmp2[8]).useShouldShowWishlistInDMGifting(obj5);
+    closure_129_5 = shouldShowWishlistInDMGifting;
     if (shouldShowWishlistInDMGifting) {
-      obj = { title: null, headerLeft: null, headerStyle: null, render: null };
-      const intl = tmp11(1114).intl;
-      obj[0] = intl.string(tmp11(1114).t["JCFN/y"]);
-      let tmp11Result = tmp11(5624);
-      obj[1] = tmp11Result.getHeaderCloseButton(callback);
-      obj[2] = tmp10.header;
-      obj[3] = function render() {
-        return callback2(_undefined(_undefined2[11]), { shouldUseDMWishlistGiftingDesign: true, isLoadingWishlist: false });
+      const obj6 = { title: null, headerLeft: null, headerStyle: null, render: null };
+      const intl = tmp11(tmp2[9]).intl;
+      obj6.title = intl.string(tmp11(tmp2[9]).t["JCFN/y"]);
+      obj6.headerLeft = tmp11(tmp2[10]).getHeaderCloseButton(callback);
+      obj6.headerStyle = tmp10.header;
+      obj6.render = function render() {
+        return jsx(analyticsLocations(onDismiss[11]), { shouldUseDMWishlistGiftingDesign: true, isLoadingWishlist: false });
       };
-      obj1 = obj;
+      let obj7 = obj6;
+      const tmp11Result = tmp11(tmp2[10]);
     } else {
-      obj1 = { title: "", headerShown: false, render: null };
-      obj1[2] = function render() {
-        let isLoadingWishlist = null != recipientUserId;
-        if (isLoadingWishlist) {
-          isLoadingWishlist = !shouldShowWishlistInDMGifting;
-        }
-        if (isLoadingWishlist) {
-          isLoadingWishlist = null == closure_4;
-        }
-        if (isLoadingWishlist) {
-          let tmp7 = null == _undefined2;
-          if (!tmp7) {
-            let tmp9 = null != c3;
-            if (tmp9) {
-              tmp9 = null == _undefined;
+      obj7 = {
+        title: "",
+        headerShown: false,
+        render() {
+              let isLoadingWishlist = null != analyticsLocation;
+              if (isLoadingWishlist) {
+                isLoadingWishlist = !UserStore;
+              }
+              if (isLoadingWishlist) {
+                isLoadingWishlist = null == closure_4;
+              }
+              if (isLoadingWishlist) {
+                let tmp7 = null == onDismiss;
+                if (!tmp7) {
+                  let tmp9 = null != closure_3;
+                  if (tmp9) {
+                    tmp9 = null == analyticsLocations;
+                  }
+                  tmp7 = tmp9;
+                }
+                isLoadingWishlist = tmp7;
+              }
+              return jsx(PremiumGiftPlanSelectDefault, { shouldUseDMWishlistGiftingDesign: false, isLoadingWishlist });
             }
-            tmp7 = tmp9;
-          }
-          isLoadingWishlist = tmp7;
-        }
-        return closure_1_6(_undefined(_undefined2[11]), { shouldUseDMWishlistGiftingDesign: false, isLoadingWishlist });
       };
     }
-    obj2 = {};
-    obj2[obj.PLAN_SELECT] = obj1;
+    const obj8 = {};
+    obj8[obj.PLAN_SELECT] = obj7;
     if (initialRoute === obj.REWARD_SELECT) {
-      tmp11Result = tmp11(5624);
-      let headerCloseButton = tmp11Result.getHeaderCloseButton(callback);
+      let headerCloseButton = tmp11(tmp2[10]).getHeaderCloseButton(callback);
+      const tmp11Result8 = tmp11(tmp2[10]);
     } else {
-      headerCloseButton = tmp11(5624).getHeaderBackButton();
-      const tmp11Result1 = tmp11(5624);
+      headerCloseButton = tmp11(tmp2[10]).getHeaderBackButton();
+      const tmp11Result9 = tmp11(tmp2[10]);
     }
-    obj3 = { title: "", headerLeft: null, headerStyle: null, render: null };
-    obj3[1] = headerCloseButton;
-    obj3[2] = tmp10.header;
-    obj3[3] = function render(arg0) {
-      ({ defaultHighlightedReward, allRewards, claimableRewards, onSelect } = arg0);
-      return callback2(_undefined(_undefined2[12]), { defaultHighlightedReward, allRewards, claimableRewards, onSelect });
+    const obj9 = {
+      title: "",
+      headerLeft: headerCloseButton,
+      headerStyle: tmp10.header,
+      render(arg0) {
+          ({ defaultHighlightedReward, allRewards, claimableRewards, onSelect } = arg0);
+          return jsx(analyticsLocations(onDismiss[12]), { defaultHighlightedReward, allRewards, claimableRewards, onSelect });
+        }
     };
-    obj2[obj.REWARD_SELECT] = obj3;
+    obj8[obj.REWARD_SELECT] = obj9;
     if (initialRoute === obj.CUSTOMIZATION) {
-      let headerCloseButton1 = tmp11(5624).getHeaderCloseButton(callback);
-      const tmp11Result2 = tmp11(5624);
+      let headerCloseButton1 = tmp11(tmp2[10]).getHeaderCloseButton(callback);
+      const tmp11Result10 = tmp11(tmp2[10]);
     } else {
-      headerCloseButton1 = tmp11(5624).getHeaderBackButton();
-      const tmp11Result3 = tmp11(5624);
+      headerCloseButton1 = tmp11(tmp2[10]).getHeaderBackButton();
+      const tmp11Result11 = tmp11(tmp2[10]);
     }
-    const obj4 = { title: "", headerLeft: null, headerStyle: null, render: null };
-    obj4[1] = headerCloseButton1;
-    obj4[2] = tmp10.header;
-    obj4[3] = function render() {
-      return callback2(_undefined(_undefined2[13]), {});
+    const obj10 = {
+      title: "",
+      headerLeft: headerCloseButton1,
+      headerStyle: tmp10.header,
+      render() {
+          return jsx(analyticsLocations(onDismiss[13]), {});
+        }
     };
-    obj2[obj.CUSTOMIZATION] = obj4;
-    const obj5 = { title: "", headerLeft: null, headerStyle: null, render: null };
-    obj5[1] = recipientUserId(5624).getHeaderCloseButton(callback);
-    obj5[2] = tmp10.header;
-    obj5[3] = function render() {
-      return callback2(_undefined(_undefined2[14]), {});
+    obj8[obj.CUSTOMIZATION] = obj10;
+    const obj11 = { title: "", headerLeft: null, headerStyle: null, render: null };
+    const obj4 = analyticsLocation(tmp2[8]);
+    obj11.headerLeft = analyticsLocation(tmp2[10]).getHeaderCloseButton(callback);
+    obj11.headerStyle = tmp10.header;
+    obj11.render = function render() {
+      return jsx(analyticsLocations(onDismiss[14]), {});
     };
-    obj2[obj.SUCCESS] = obj5;
-    const obj6 = { title: null, headerLeft: null, headerTransparent: true, headerStyle: null, render: null };
-    const intl2 = tmp11(1114).intl;
-    obj6[0] = intl2.string(tmp(2492).roVAey);
-    const tmp11Result4 = recipientUserId(5624);
-    obj6[1] = recipientUserId(5624).getHeaderCloseButton(callback);
-    obj6[3] = { backgroundColor: "transparent", shadowColor: "transparent" };
-    obj6[4] = function render(currentProgress) {
-      return callback2(_undefined(_undefined2[16]), {
+    obj8[obj.SUCCESS] = obj11;
+    const obj12 = { title: null, headerLeft: null, headerTransparent: true, headerStyle: null, render: null };
+    const intl2 = tmp11(tmp2[9]).intl;
+    obj12.title = intl2.string(tmp(tmp2[15]).roVAey);
+    const tmp11Result12 = analyticsLocation(tmp2[10]);
+    obj12.headerLeft = analyticsLocation(tmp2[10]).getHeaderCloseButton(callback);
+    obj12.headerStyle = { backgroundColor: "transparent", shadowColor: "transparent" };
+    obj12.render = function render(currentProgress) {
+      return jsx(analyticsLocations(onDismiss[16]), {
         currentProgress: currentProgress.currentProgress,
-        onSendGift(arg0) {
-          obj = callback(10666);
-          obj = { analyticsLocations: null };
-          const items = [callback2(7182).GIFTING_BADGE_POST_PURCHASE];
-          obj[0] = items;
-          obj.openGiftModal(obj);
+        onSendGift() {
+          obj2 = { analyticsLocations: null };
+          const items = [analyticsLocations(7196).GIFTING_BADGE_POST_PURCHASE];
+          obj2.analyticsLocations = items;
+          analyticsLocation(10693).openGiftModal(obj2);
         }
       });
     };
-    obj2[obj.GIFTING_BADGE] = obj6;
-    const tmp21 = callback(obj.useState(obj[initialRoute]), 2);
+    obj8[obj.GIFTING_BADGE] = obj12;
+    const tmp21 = _slicedToArray(obj.useState(obj2[initialRoute]), 2);
     closure_4 = tmp22;
-    const tmp11Result5 = recipientUserId(5624);
-    if (tmp11Result6.isPremiumGiftingSupported()) {
-      const obj7 = { value: null, children: null };
-      obj7[0] = contextDefault(analyticsLocations).analyticsLocations;
-      const obj8 = { basePurchaseAnalytics: null, recipientUserId: null, onClose: null, setCurrentAnalyticsStep: null, premiumType: null, planInterval: null, initialOrder: null, children: null };
-      obj8[0] = tmp4;
-      obj8[1] = recipientUserId;
-      obj8[2] = callback;
-      obj8[3] = tmp22;
-      obj8[4] = premiumType;
-      obj8[5] = planInterval;
-      obj8[6] = order;
-      const obj9 = { currentStep: null, children: null };
-      obj9[0] = tmp21[0];
-      let tmpResult = tmp(11226);
-      const obj10 = { initialRouteName: null, screens: null, onStateChange: null };
-      obj10[0] = initialRoute;
-      obj10[1] = obj2;
-      obj10[2] = function onStateChange(arg0) {
-        if (null != arg0) {
-          callback(closure_1_8[arg0.routes[arg0.index].name]);
-        }
+    const tmp11Result13 = analyticsLocation(tmp2[10]);
+    if (tmp11Result14.isPremiumGiftingSupported()) {
+      const obj13 = { value: analyticsLocations(onDismiss[19])(analyticsLocations).analyticsLocations, children: null };
+      const obj14 = { basePurchaseAnalytics: tmp4, recipientUserId, onClose: callback, setCurrentAnalyticsStep: tmp22, premiumType, planInterval, initialOrder: order, children: null };
+      const obj15 = { currentStep: tmp21[0], children: null };
+      const obj16 = {
+        initialRouteName: initialRoute,
+        screens: obj8,
+        onStateChange(arg0) {
+              if (null != arg0) {
+                closure_4(obj2[arg0.routes[arg0.index].name]);
+              }
+            }
       };
-      obj9[1] = tmp23(tmp11(7000).Navigator, obj10);
-      obj8[7] = tmp23(tmpResult, obj9);
-      obj7[1] = tmp23(tmp11(10704).NativeGiftContextProvider, obj8);
-      let tmp23Result = tmp23(tmp11(7162).AnalyticsLocationProvider, obj7);
+      obj15.children = tmp23(tmp11(tmp2[27]).Navigator, obj16);
+      obj14.children = tmp23(tmp(tmp2[26]), obj15);
+      obj13.children = tmp23(tmp11(tmp2[25]).NativeGiftContextProvider, obj14);
+      let tmp23Result = tmp23(tmp11(tmp2[19]).AnalyticsLocationProvider, obj13);
+      const tmpResult = tmp(tmp2[26]);
     } else {
-      const obj11 = { title: null };
-      tmpResult = tmp(10830);
-      const intl3 = tmp11(1114).intl;
-      obj11[0] = intl3.string(tmp11(1114).t["JCFN/y"]);
-      tmp23Result = tmp23(tmpResult, obj11);
+      const obj17 = { title: null };
+      const intl3 = tmp11(tmp2[9]).intl;
+      obj17.title = intl3.string(tmp11(tmp2[9]).t["JCFN/y"]);
+      tmp23Result = tmp23(tmp(tmp2[24]), obj17);
+      const tmpResult2 = tmp(tmp2[24]);
     }
     return tmp23Result;
   } else if (null != premiumType) {
@@ -203,4 +196,4 @@ export default function PremiumGiftModal(analyticsLocations) {
     PLAN_SELECT = obj.PLAN_SELECT;
   }
 };
-export const PremiumGiftScreens = obj;
+export { PremiumGiftScreens };

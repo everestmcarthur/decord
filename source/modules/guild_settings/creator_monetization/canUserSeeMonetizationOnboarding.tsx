@@ -1,29 +1,29 @@
-// Module ID: 7259
-// Function ID: 7260
+// Module ID: 7273
+// Function ID: 7274
 // Name: canUserSeeMonetizationOnboarding
-// Dependencies: [1371, 7260, 7261, 4192, 2]
+// Dependencies: [1371, 7274, 7275, 4205, 2]
 // Exports: canUserSeeMonetizationOnboarding
 
-// Module 7259 (canUserSeeMonetizationOnboarding)
-import isRestrictedFromShowingGuildPurchaseEntryPoints from "isRestrictedFromShowingGuildPurchaseEntryPoints" /* 4192 */;
-import computeGuildRoleSubscriptionSettingsVisibility from "computeGuildRoleSubscriptionSettingsVisibility" /* 7260 */;
-import set from "set" /* 7261 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
+// Module 7273 (canUserSeeMonetizationOnboarding)
+import CreatorMonetizationRestrictionsUtils from "CreatorMonetizationRestrictionsUtils" /* 4205 */;
+import GuildRoleSubscriptionSettingUtils from "GuildRoleSubscriptionSettingUtils" /* 7274 */;
+import CreatorMonetizationEligibilityExperimentUtils from "CreatorMonetizationEligibilityExperimentUtils" /* 7275 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_settings/creator_monetization/canUserSeeMonetizationOnboarding.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/creator_monetization/canUserSeeMonetizationOnboarding.tsx");
 
-export const canUserSeeMonetizationOnboarding = function canUserSeeMonetizationOnboarding(closure_2) {
-  currentUser = currentUser.getCurrentUser();
+export const canUserSeeMonetizationOnboarding = function canUserSeeMonetizationOnboarding(guild) {
+  const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
-  let obj = computeGuildRoleSubscriptionSettingsVisibility;
-  obj = { guild: closure_2, isOwner: closure_2.ownerId === id, canManageGuildRoleSubscriptions: computeGuildRoleSubscriptionSettingsVisibility.canManageGuildRoleSubscriptions(closure_2), isUserInCreatorMonetizationEligibleCountry: null, shouldRestrictUpdatingRoleSubscriptionSettings: null };
-  const obj3 = computeGuildRoleSubscriptionSettingsVisibility;
-  obj[3] = set.isUserInCreatorMonetizationEligibleCountry();
-  const obj4 = set;
-  obj[4] = isRestrictedFromShowingGuildPurchaseEntryPoints.shouldRestrictUpdatingCreatorMonetizationSettings(closure_2.id);
-  return obj.canSeeGuildRoleSubscriptionSettings(obj);
+  const obj2 = { guild, isOwner: guild.ownerId === id, canManageGuildRoleSubscriptions: null, isUserInCreatorMonetizationEligibleCountry: null, shouldRestrictUpdatingRoleSubscriptionSettings: null };
+  const obj = GuildRoleSubscriptionSettingUtils;
+  obj2.canManageGuildRoleSubscriptions = GuildRoleSubscriptionSettingUtils.canManageGuildRoleSubscriptions(guild);
+  obj2.isUserInCreatorMonetizationEligibleCountry = CreatorMonetizationEligibilityExperimentUtils.isUserInCreatorMonetizationEligibleCountry();
+  obj2.shouldRestrictUpdatingRoleSubscriptionSettings = CreatorMonetizationRestrictionsUtils.shouldRestrictUpdatingCreatorMonetizationSettings(guild.id);
+  return obj.canSeeGuildRoleSubscriptionSettings(obj2);
 };

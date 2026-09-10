@@ -1,24 +1,22 @@
-// Module ID: 11012
-// Function ID: 11013
-// Name: ShopGiftModalKey
-// Dependencies: [4763, 11013, 1896, 2]
+// Module ID: 11039
+// Function ID: 11040
+// Name: openGiftModal
+// Dependencies: [4777, 11040, 1896, 2]
 // Exports: closeShopGiftModal, openShopGiftModal
 
-// Module 11012 (ShopGiftModalKey)
-import set from "set" /* 2 */;
+// Module 11039 (openGiftModal)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import _modDef4763 from "module_4763" /* 4763 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import size from "module_2" /* 2 */;
 
 let c3 = "Shop Gift Modal";
-const result = set.fileFinishedImporting("modules/collectibles/native/openGiftModal.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/native/openGiftModal.tsx");
 
 export const ShopGiftModalKey = "Shop Gift Modal";
-export const openShopGiftModal = function openShopGiftModal(arg0) {
-  ({ navigationParams, skuId, analyticsLocations, lockedRecipientUser, onGiftModalDismiss, giftingOrigin } = arg0);
-  let obj = _modDef4763;
-  obj = { skuId, analyticsLocations, lockedRecipientUser, onGiftModalDismiss, giftingOrigin };
-  obj.pushLazy(asyncRequireImpl(11013, dependencyMap.paths), obj, c3, navigationParams);
+export const openShopGiftModal = function openShopGiftModal(items1) {
+  ({ navigationParams, skuId, analyticsLocations, lockedRecipientUser, onGiftModalDismiss, giftingOrigin } = items1);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11040, dependencyMap.paths), { skuId, analyticsLocations, lockedRecipientUser, onGiftModalDismiss, giftingOrigin }, c3, navigationParams);
 };
 export const closeShopGiftModal = function closeShopGiftModal() {
-  _modDef4763.popWithKey(c3);
+  ModalActionCreatorsDefault.popWithKey(c3);
 };

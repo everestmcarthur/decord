@@ -1,49 +1,50 @@
-// Module ID: 17208
-// Function ID: 17209
+// Module ID: 17239
+// Function ID: 17240
 // Name: VoicePanelDrawerToggleButton
-// Dependencies: [19, 21, 4560, 576, 17187, 17173, 17188, 5589, 11158, 13577, 2]
+// Dependencies: [19, 21, 4574, 576, 17218, 17204, 17219, 5603, 11185, 13600, 2]
 // Exports: default
 
-// Module 17208 (VoicePanelDrawerToggleButton)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import setDefault from "set" /* 5589 */;
-import useDrawerToggleDefault from "useDrawerToggle" /* 17173 */;
-import useVoicePanelButtonStyles from "useVoicePanelButtonStyles" /* 17187 */;
-import AnimatedButtonWrapperDefault from "AnimatedButtonWrapper" /* 17188 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17239 (VoicePanelDrawerToggleButton)
+import nativeDefault from "native" /* 576 */;
+import NativeViewDefault from "NativeView" /* 5603 */;
+import useDrawerToggleDefault from "useDrawerToggle" /* 17204 */;
+import VoicePanelStyles from "VoicePanelStyles" /* 17218 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 17219 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { circle: null, iconContainer: null };
-createCacheKey = { width: "100%", height: "100%", borderRadius: ThemesDefault.radii.round };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { position: "absolute", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" };
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelDrawerToggleButton.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { circle: null, iconContainer: null };
+let size = { width: "100%", height: "100%", borderRadius: nativeDefault.radii.round };
+obj2.circle = size;
+obj2.iconContainer = { position: "absolute", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" };
+let closure_5 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelDrawerToggleButton.tsx");
 
 export default function VoicePanelDrawerToggleButton(arg0) {
   ({ props, openTab, wrapperSpecs } = arg0);
-  const tmp = callback2();
-  let obj = useVoicePanelButtonStyles;
-  const voicePanelButtonStyles = obj.useVoicePanelButtonStyles(wrapperSpecs);
+  const tmp = closure_5();
+  const voicePanelButtonStyles = VoicePanelStyles.useVoicePanelButtonStyles(wrapperSpecs);
   ({ isDrawerOpen, handlePress, accessibilityLabel } = useDrawerToggleDefault(openTab));
-  obj = { onPress: handlePress, props, accessibilityLabel, children: null };
+  const element = { onPress: handlePress, props, accessibilityLabel, children: null };
   const tmp5 = useDrawerToggleDefault(openTab);
-  const tmp6 = closure_4;
+  const tmp6 = React4;
+  const obj2 = { style: null };
   const items = [tmp.circle, { backgroundColor: voicePanelButtonStyles.iconBg.backgroundColor }];
-  const items1 = [callback(setDefault, { style: items }), ];
-  obj = { style: tmp.iconContainer, children: null };
-  const tmp7 = AnimatedButtonWrapperDefault;
+  obj2.style = items;
+  const items1 = [React3(NativeViewDefault, obj2), ];
+  const obj3 = { style: tmp.iconContainer, children: null };
+  const tmp7 = VoicePanelAnimatedButtonWrapperDefault;
   if (isDrawerOpen) {
-    let ChevronSmallUpIcon = tmp2(11158).ChevronSmallDownIcon;
+    let ChevronSmallUpIcon = tmp2(11185).ChevronSmallDownIcon;
   } else {
-    ChevronSmallUpIcon = tmp2(13577).ChevronSmallUpIcon;
+    ChevronSmallUpIcon = tmp2(13600).ChevronSmallUpIcon;
   }
-  obj[1] = callback(ChevronSmallUpIcon, { color: voicePanelButtonStyles.iconFill.color });
-  items1[1] = callback(setDefault, obj);
-  obj[3] = items1;
-  return tmp6(tmp7, obj);
+  obj3.children = React3(ChevronSmallUpIcon, { color: voicePanelButtonStyles.iconFill.color });
+  items1[1] = React3(NativeViewDefault, obj3);
+  element.children = items1;
+  return tmp6(tmp7, element);
 };

@@ -1,51 +1,56 @@
-// Module ID: 12553
-// Function ID: 12554
+// Module ID: 12579
+// Function ID: 12580
 // Name: usePowerupGroupConfig
-// Dependencies: [19, 1979, 504, 8165, 1114, 2428, 12554, 12555, 1369, 2]
+// Dependencies: [19, 1979, 504, 8191, 1114, 2428, 12580, 12581, 1369, 2]
 // Exports: default
 
-// Module 12553 (usePowerupGroupConfig)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createGuildRecordFromRust" /* 1979 */;
+// Module 12579 (usePowerupGroupConfig)
+import util from "util" /* 1114 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import _modDef2428 from "module_2428" /* 2428 */;
+import GuildTagUtils from "GuildTagUtils" /* 8191 */;
+import _modDef12580 from "module_12580" /* 12580 */;
+import _modDef12581 from "module_12581" /* 12581 */;
+import noop from "module_19" /* 19 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/native/hooks/usePowerupGroupConfig.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/usePowerupGroupConfig.tsx");
 
 export default function usePowerupGroupConfig(arg0, arg1) {
-  const _require = arg0;
-  closure_1 = arg1;
-  const items = [closure_4];
-  stateFromStores = _require(stateFromStores[2]).useStateFromStores(items, () => {
-    const guild = closure_1_4.getGuild(callback);
+  _require = arg0;
+  const group = arg1;
+  const items = [GuildStore];
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
+    const guild = GuildStore.getGuild(closure_0);
     let guildSupportsTagsResult = null != guild;
     if (guildSupportsTagsResult) {
-      guildSupportsTagsResult = callback(stateFromStores[3]).guildSupportsTags(guild);
-      const obj = callback(stateFromStores[3]);
+      guildSupportsTagsResult = GuildTagUtils.guildSupportsTags(guild);
     }
     return guildSupportsTagsResult;
   });
   const items1 = [arg1, stateFromStores];
-  return React.useMemo(() => {
-    if ("guildTagsBadgePacks" === lib.group) {
-      let obj = { title: null, description: null, image: null, disabledReason: null, badge: "HermesInternal", forceStaticImages: "HermesInternal" };
-      const intl = callback(stateFromStores[4]).intl;
-      obj[0] = intl.string(lib(stateFromStores[5]).KC9HRW);
-      const intl2 = callback(stateFromStores[4]).intl;
-      obj[1] = intl2.string(lib(stateFromStores[5]).GJiSmP);
-      obj = { staticUrl: null, animatedUrl: null };
-      obj[0] = lib(stateFromStores[6]);
-      obj[1] = lib(stateFromStores[7]);
-      obj[2] = obj;
+  return noop.useMemo(() => {
+    if ("guildTagsBadgePacks" === group.group) {
+      const obj2 = { title: null, description: null, image: null, disabledReason: null, badge: "HermesInternal", forceStaticImages: "HermesInternal" };
+      const intl = util.intl;
+      obj2.title = intl.string(_modDef2428.KC9HRW);
+      const intl2 = util.intl;
+      obj2.description = intl2.string(_modDef2428.GJiSmP);
+      const obj3 = { staticUrl: _modDef12580, animatedUrl: _modDef12581 };
+      obj2.image = obj3;
       let stringResult;
       if (!stateFromStores) {
-        const intl3 = callback(stateFromStores[4]).intl;
-        stringResult = intl3.string(lib(stateFromStores[5]).lvk1Gc);
+        const intl3 = util.intl;
+        stringResult = intl3.string(_modDef2428.lvk1Gc);
       }
-      obj[3] = stringResult;
-      return obj;
+      obj2.disabledReason = stringResult;
+      return obj2;
     } else {
-      obj = callback(stateFromStores[8]);
-      obj.assertNever(tmp.group);
+      GlobalUtils.assertNever(tmp.group);
     }
   }, items1);
 };

@@ -1,36 +1,36 @@
-// Module ID: 14549
-// Function ID: 14550
-// Name: _initialize
-// Dependencies: [4559, 1898, 573, 7541, 7591, 2]
+// Module ID: 14574
+// Function ID: 14575
+// Name: CollectiblesMarketingManager
+// Dependencies: [4573, 1898, 573, 7555, 7605, 2]
 
-// Module 14549 (_initialize)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import initializeDefault from "initialize" /* 1898 */;
-import closure_3 from "getUserAgnosticState" /* 4559 */;
+// Module 14574 (CollectiblesMarketingManager)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7555 */;
+import CollectiblesMarketingReleaseType2 from "CollectiblesMarketingReleaseType" /* 7605 */;
+import DevSettingsStore from "DevSettingsStore" /* 4573 */;
+import LifecycleManager from "LifecycleManager" /* 1898 */;
 
-const require = arg1;
-initializeDefault;
+require = fn;
 class CollectiblesMarketingManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
-      const value = closure_3.get("shop_include_unpublished");
-      let obj = callback(7541);
-      const CollectiblesMarketingReleaseType = callback(7591).CollectiblesMarketingReleaseType;
-      obj = { release: value ? CollectiblesMarketingReleaseType.BETA : CollectiblesMarketingReleaseType.PROD };
-      const collectiblesMarketings = obj.fetchCollectiblesMarketings(obj);
+      value = DevSettingsStore.get("shop_include_unpublished");
+      const CollectiblesMarketingReleaseType = CollectiblesMarketingReleaseType2.CollectiblesMarketingReleaseType;
+      const collectiblesMarketings = CollectiblesActionCreators.fetchCollectiblesMarketings({ release: value ? CollectiblesMarketingReleaseType.BETA : CollectiblesMarketingReleaseType.PROD });
     };
     return applyArgumentsResult;
   }
 }
 const prototype = CollectiblesMarketingManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const subscription = dispatcherDefault.subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
+  const subscription = DispatcherDefault.subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
 };
 prototype["_terminate"] = function _terminate() {
-  dispatcherDefault.unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
+  DispatcherDefault.unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
 };
 const collectiblesMarketingManager = new CollectiblesMarketingManager();
-const result = require("set").fileFinishedImporting("modules/collectibles/CollectiblesMarketingManager.native.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/CollectiblesMarketingManager.native.tsx");
 
 export default collectiblesMarketingManager;

@@ -1,27 +1,27 @@
-// Module ID: 15423
-// Function ID: 15424
-// Name: route
-// Dependencies: [2025, 1074, 504, 1114, 11473, 15424, 15426, 2]
+// Module ID: 15452
+// Function ID: 15453
+// Name: LanguageSetting
+// Dependencies: [2025, 1074, 504, 1114, 11500, 15453, 15455, 2]
 
-// Module 15423 (route)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_2 from "_getSystemLocale" /* 2025 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15452 (LanguageSetting)
+import util from "util" /* 1114 */;
+import LocaleStore from "LocaleStore" /* 2025 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const SettingBuilders = fn(11500);
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.IHMsPn);
+    const intl = util.intl;
+    return intl.string(util.t.IHMsPn);
   },
   parent: null,
-  IconComponent: require("LanguageIcon").LanguageIcon,
+  IconComponent: fn(15453).LanguageIcon,
   useTrailing: function useLanguageSettingTrailing() {
-    const items = [closure_2];
-    _require = _require(504).useStateFromStores(items, () => locale.locale);
-    const obj = _require(504);
+    const items = [LocaleStore];
+    _require = require("initialize").useStateFromStores(items, () => locale.locale);
+    const obj = require("initialize");
     const tmp = _require;
-    const availableLocales = _require(1114).getAvailableLocales();
+    const availableLocales = require("util").getAvailableLocales();
     const found = availableLocales.find((value) => value.value === closure_0);
     let stringResult = null;
     if (null != found) {
@@ -30,15 +30,14 @@ createToggle = {
     }
     return stringResult;
   },
-  screen: createToggle
-};
-createToggle = {
-  route: require("ME").UserSettingsSections.LANGUAGE,
-  getComponent() {
-    return require(15426) /* handleLanguageChange */.default;
+  screen: {
+    route: fn(1074).UserSettingsSections.LANGUAGE,
+    getComponent() {
+      return require("UserSettingsLocale").default;
+    }
   }
-};
-createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/LanguageSetting.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/LanguageSetting.tsx");
 
-export default createToggle;
+export default route;

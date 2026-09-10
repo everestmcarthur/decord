@@ -1,97 +1,100 @@
-// Module ID: 11779
-// Function ID: 11780
-// Name: useTrackQuestEventWithImpression
-// Dependencies: [19, 1074, 11491, 7718, 7699, 7729, 7728, 7677, 1256, 1115, 7734, 5447, 5451, 1242, 2]
+// Module ID: 11805
+// Function ID: 11806
+// Name: AnalyticsHooks
+// Dependencies: [19, 1074, 11518, 7732, 7713, 7743, 7742, 7691, 1256, 1115, 7748, 5461, 5465, 1242, 2]
 // Exports: useBountyCarouselEmptyStateAnalytics, useQuestHomeEntrypointAnalyticsEvents, useQuestsEmbedFallbackAnalytics, useTrackAdContentClickedWithImpression, useTrackAdContentEventWithImpression, useTrackQuestContentClickedWithImpression, useTrackQuestEventWithImpression
 
-// Module 11779 (useTrackQuestEventWithImpression)
-import closure_3 from "noop" /* 19 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
+// Module 11805 (AnalyticsHooks)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import v1 from "v1" /* 1256 */;
+import AdCreativeType from "AdCreativeType" /* 5465 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7691 */;
+import QuestDataUtils from "QuestDataUtils" /* 7713 */;
+import AnalyticsActions from "AnalyticsActions" /* 7732 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7742 */;
+import QuestHomeSearchSession from "QuestHomeSearchSession" /* 7748 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/quests/lib/analytics/AnalyticsHooks.tsx");
+require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/quests/lib/analytics/AnalyticsHooks.tsx");
 
 export const useTrackQuestEventWithImpression = function useTrackQuestEventWithImpression() {
-  getQuestImpressionId = getQuestImpressionId(11491).useGetQuestImpressionId();
+  getQuestImpressionId = getQuestImpressionId(11518).useGetQuestImpressionId();
   const items = [getQuestImpressionId];
-  return React.useCallback((properties) => {
-    let obj = callback(closure_1_2[3]);
-    obj = {};
+  return noop.useCallback((properties) => {
+    const obj2 = {};
     const merged = Object.assign(properties);
-    obj = {};
+    const obj3 = {};
     const merged1 = Object.assign(properties.properties);
-    obj.impression_id = callback();
-    obj.properties = obj;
-    obj.trackQuestEvent(obj);
+    obj3.impression_id = callback();
+    obj2.properties = obj3;
+    AnalyticsActions.trackQuestEvent(obj2);
   }, items);
 };
 export const useTrackQuestContentClickedWithImpression = function useTrackQuestContentClickedWithImpression() {
-  const getQuestImpressionId = callback(11491).useGetQuestImpressionId();
-  callback = getQuestImpressionId;
+  const getQuestImpressionId = callback(11518).useGetQuestImpressionId();
+  closure_129_0 = getQuestImpressionId;
   const items = [getQuestImpressionId];
-  callback = React.useCallback((properties) => {
-    let obj = callback(closure_1_2[3]);
-    obj = {};
+  callback = noop.useCallback((properties) => {
+    const obj2 = {};
     const merged = Object.assign(properties);
-    obj = {};
+    const obj3 = {};
     const merged1 = Object.assign(properties.properties);
-    obj.impression_id = callback();
-    obj.properties = obj;
-    obj.trackQuestEvent(obj);
+    obj3.impression_id = callback();
+    obj2.properties = obj3;
+    AnalyticsActions.trackQuestEvent(obj2);
   }, items);
   const items1 = [callback];
-  return React.useCallback((questId) => {
+  return noop.useCallback((questId) => {
     questId = questId.questId;
     const questContent = questId.questContent;
     ({ questContentCTA: closure_2, questContentPosition: closure_3, questContentRowIndex: closure_4, trackGuildAndChannelMetadata: closure_5, sourceQuestContent } = questId);
-    let adMetadataSealed;
-    let adTrafficMetadataSealed;
-    adMetadataSealed = callback(closure_1_2[4]).getAdMetadataSealed(sourceQuestContent);
-    let obj = callback(closure_1_2[4]);
-    adTrafficMetadataSealed = callback(closure_1_2[4]).getAdTrafficMetadataSealed(sourceQuestContent, questId);
-    const obj2 = callback(closure_1_2[4]);
-    let obj3 = callback(closure_1_2[5]);
-    const adUser = obj3.getAdUser(callback(closure_1_2[6]).getQuestContentName(questContent));
+    const adMetadataSealed = callback(7713).getAdMetadataSealed(sourceQuestContent);
+    let obj = callback(7713);
+    const adTrafficMetadataSealed = callback(7713).getAdTrafficMetadataSealed(sourceQuestContent, questId);
+    let obj2 = callback(7713);
+    let obj3 = callback(7743);
+    const adUser = obj3.getAdUser(callback(7742).getQuestContentName(questContent));
     adUser.then((advertisingId) => {
-      let obj = { questId, event: closure_2_4.QUEST_CONTENT_CLICKED, properties: null, trackGuildAndChannelMetadata: null, shouldExtendSession: null, sourceQuestContent: null };
-      obj = {};
-      const merged = Object.assign(callback(closure_2_2[6]).getContentProperties(questContent, closure_3, closure_4));
-      const merged1 = Object.assign(closure_2_1(closure_2_2[7])());
-      obj.cta_name = closure_2;
-      const obj3 = callback(closure_2_2[6]);
-      const tmp = questId;
+      const obj = { questId, event: AnalyticEvents.QUEST_CONTENT_CLICKED, properties: null, trackGuildAndChannelMetadata: null, shouldExtendSession: null, sourceQuestContent: null };
+      const obj2 = {};
+      const merged = Object.assign(AnalyticsTypes.getContentProperties(questContent, closure_1_3, closure_1_4));
+      const merged1 = Object.assign(getDeviceMetadataDefault());
+      obj2.cta_name = cta_name;
+      const tmp = callback;
       const tmp4 = questContent;
-      obj.click_id = callback(closure_2_2[8]).v4();
+      obj2.click_id = v1.v4();
       advertisingId = null;
       if (null != advertisingId) {
-        let tmp2Result = tmp2(tmp3[9]);
         advertisingId = null;
         if (tmp2Result.isIOS()) {
           advertisingId = advertisingId.advertisingId;
         }
+        tmp2Result = tmp2(1115);
       }
-      obj.apple_advertising_id = advertisingId;
+      obj2.apple_advertising_id = advertisingId;
       let advertisingId1 = null;
       if (null != advertisingId) {
-        tmp2Result = tmp2(tmp3[9]);
         advertisingId1 = null;
-        if (tmp2Result.isAndroid()) {
+        if (tmp2Result4.isAndroid()) {
           advertisingId1 = advertisingId.advertisingId;
         }
+        tmp2Result4 = tmp2(1115);
       }
-      obj.android_advertising_id = advertisingId1;
+      obj2.android_advertising_id = advertisingId1;
       let tmp9 = null;
       if (null != closure_7) {
         tmp9 = closure_7;
       }
-      obj.metadata_sealed = tmp9;
+      obj2.metadata_sealed = tmp9;
       let tmp10 = null;
       if (null != closure_8) {
         tmp10 = closure_8;
       }
-      obj.traffic_metadata_sealed = tmp10;
-      const obj4 = callback(closure_2_2[8]);
-      const currentQuestHomeSearchSession = callback(closure_2_2[10]).getCurrentQuestHomeSearchSession();
+      obj2.traffic_metadata_sealed = tmp10;
+      const currentQuestHomeSearchSession = QuestHomeSearchSession.getCurrentQuestHomeSearchSession();
       let uuid;
       if (currentQuestHomeSearchSession != null) {
         uuid = currentQuestHomeSearchSession.uuid;
@@ -99,80 +102,76 @@ export const useTrackQuestContentClickedWithImpression = function useTrackQuestC
       if (uuid == null) {
         uuid = null;
       }
-      obj.search_session_id = uuid;
-      obj[2] = obj;
-      obj[3] = closure_5;
-      const tmp2Result1 = callback(closure_2_2[10]);
-      obj[4] = callback(closure_2_2[4]).isBillableQuestContent(tmp4);
-      obj[5] = sourceQuestContent;
+      obj2.search_session_id = uuid;
+      obj.properties = obj2;
+      obj.trackGuildAndChannelMetadata = trackGuildAndChannelMetadata;
+      const tmp2Result5 = QuestHomeSearchSession;
+      obj.shouldExtendSession = QuestDataUtils.isBillableQuestContent(tmp4);
+      obj.sourceQuestContent = sourceQuestContent;
       tmp(obj);
     });
   }, items1);
 };
 export const useTrackAdContentEventWithImpression = function useTrackAdContentEventWithImpression() {
-  getQuestImpressionId = getQuestImpressionId(11491).useGetQuestImpressionId();
+  getQuestImpressionId = getQuestImpressionId(11518).useGetQuestImpressionId();
   const items = [getQuestImpressionId];
-  return React.useCallback((properties) => {
-    let obj = callback(closure_1_2[3]);
-    obj = {};
+  return noop.useCallback((properties) => {
+    const obj2 = {};
     const merged = Object.assign(properties);
-    obj = {};
+    const obj3 = {};
     const merged1 = Object.assign(properties.properties);
-    obj.impression_id = callback();
-    obj.properties = obj;
-    obj.trackAdContentEvent(obj);
+    obj3.impression_id = callback();
+    obj2.properties = obj3;
+    AnalyticsActions.trackAdContentEvent(obj2);
   }, items);
 };
 export const useTrackAdContentClickedWithImpression = function useTrackAdContentClickedWithImpression() {
-  const getQuestImpressionId = callback(11491).useGetQuestImpressionId();
-  callback = getQuestImpressionId;
+  const getQuestImpressionId = callback(11518).useGetQuestImpressionId();
+  closure_129_0 = getQuestImpressionId;
   const items = [getQuestImpressionId];
-  callback = React.useCallback((properties) => {
-    let obj = callback(closure_1_2[3]);
-    obj = {};
+  callback = noop.useCallback((properties) => {
+    const obj2 = {};
     const merged = Object.assign(properties);
-    obj = {};
+    const obj3 = {};
     const merged1 = Object.assign(properties.properties);
-    obj.impression_id = callback();
-    obj.properties = obj;
-    obj.trackAdContentEvent(obj);
+    obj3.impression_id = callback();
+    obj2.properties = obj3;
+    AnalyticsActions.trackAdContentEvent(obj2);
   }, items);
   const items1 = [callback];
-  return React.useCallback((arg0) => {
+  return noop.useCallback((arg0) => {
     ({ adContentId: callback, relatedQuestId: closure_1, adCreativeType: closure_2, questContent } = arg0);
     ({ questContentCTA: closure_4, questContentPosition: closure_5, questContentRowIndex: closure_6, trackGuildAndChannelMetadata: closure_7, sourceQuestContent: closure_8 } = arg0);
-    let obj = callback(closure_1_2[5]);
-    const adUser = obj.getAdUser(callback(closure_1_2[6]).getQuestContentName(questContent));
+    let obj = callback(7743);
+    const adUser = obj.getAdUser(callback(7742).getQuestContentName(questContent));
     adUser.then((advertisingId) => {
-      let obj = { adContentId: closure_0, relatedQuestId: closure_1, adCreativeType: closure_2, event: closure_2_4.QUEST_CONTENT_CLICKED, properties: null, trackGuildAndChannelMetadata: null, shouldExtendSession: null, sourceQuestContent: null };
-      obj = {};
-      const merged = Object.assign(callback(closure_2_2[6]).getContentProperties(questContent, closure_5, closure_6));
-      const merged1 = Object.assign(closure_2_1(closure_2_2[7])());
-      obj.cta_name = closure_4;
-      const obj3 = callback(closure_2_2[6]);
-      const tmp = closure_1_0;
+      const obj = { adContentId, relatedQuestId, adCreativeType, event: AnalyticEvents.QUEST_CONTENT_CLICKED, properties: null, trackGuildAndChannelMetadata: null, shouldExtendSession: null, sourceQuestContent: null };
+      const obj2 = {};
+      const merged = Object.assign(AnalyticsTypes.getContentProperties(questContent, closure_1_5, closure_1_6));
+      const merged1 = Object.assign(getDeviceMetadataDefault());
+      obj2.cta_name = cta_name;
+      const tmp = callback;
       const tmp4 = questContent;
-      obj.click_id = callback(closure_2_2[8]).v4();
+      obj2.click_id = v1.v4();
       advertisingId = null;
       if (null != advertisingId) {
-        let tmp2Result = tmp2(tmp3[9]);
         advertisingId = null;
         if (tmp2Result.isIOS()) {
           advertisingId = advertisingId.advertisingId;
         }
+        tmp2Result = tmp2(1115);
       }
-      obj.apple_advertising_id = advertisingId;
+      obj2.apple_advertising_id = advertisingId;
       let advertisingId1 = null;
       if (null != advertisingId) {
-        tmp2Result = tmp2(tmp3[9]);
         advertisingId1 = null;
-        if (tmp2Result.isAndroid()) {
+        if (tmp2Result4.isAndroid()) {
           advertisingId1 = advertisingId.advertisingId;
         }
+        tmp2Result4 = tmp2(1115);
       }
-      obj.android_advertising_id = advertisingId1;
-      const obj4 = callback(closure_2_2[8]);
-      const currentQuestHomeSearchSession = callback(closure_2_2[10]).getCurrentQuestHomeSearchSession();
+      obj2.android_advertising_id = advertisingId1;
+      const currentQuestHomeSearchSession = QuestHomeSearchSession.getCurrentQuestHomeSearchSession();
       let uuid;
       if (currentQuestHomeSearchSession != null) {
         uuid = currentQuestHomeSearchSession.uuid;
@@ -180,12 +179,12 @@ export const useTrackAdContentClickedWithImpression = function useTrackAdContent
       if (uuid == null) {
         uuid = null;
       }
-      obj.search_session_id = uuid;
-      obj[4] = obj;
-      obj[5] = closure_7;
-      const tmp2Result1 = callback(closure_2_2[10]);
-      obj[6] = callback(closure_2_2[4]).isBillableQuestContent(tmp4);
-      obj[7] = closure_8;
+      obj2.search_session_id = uuid;
+      obj.properties = obj2;
+      obj.trackGuildAndChannelMetadata = trackGuildAndChannelMetadata;
+      const tmp2Result5 = QuestHomeSearchSession;
+      obj.shouldExtendSession = QuestDataUtils.isBillableQuestContent(tmp4);
+      obj.sourceQuestContent = sourceQuestContent;
       tmp(obj);
     });
   }, items1);
@@ -194,81 +193,64 @@ export const useQuestsEmbedFallbackAnalytics = function useQuestsEmbedFallbackAn
   closure_0 = arg0;
   closure_1 = arg1;
   const items = [arg0, arg1];
-  const effect = React.useEffect(() => {
-    const result = callback(closure_1_2[3]).trackQuestEmbedFallbackViewed(closure_1, callback);
+  const effect = noop.useEffect(() => {
+    const result = AnalyticsActions.trackQuestEmbedFallbackViewed(closure_1, closure_0);
   }, items);
 };
 export const useBountyCarouselEmptyStateAnalytics = function useBountyCarouselEmptyStateAnalytics(reason) {
   closure_0 = reason;
   const items = [reason];
-  const effect = React.useEffect(() => {
-    if (null != callback) {
-      const result = callback(closure_1_2[3]).trackBountyCarouselEmptyStateViewed(tmp);
-      const obj = callback(closure_1_2[3]);
+  const effect = noop.useEffect(() => {
+    if (null != closure_0) {
+      const result = AnalyticsActions.trackBountyCarouselEmptyStateViewed(tmp);
     }
   }, items);
 };
 export const useQuestHomeEntrypointAnalyticsEvents = function useQuestHomeEntrypointAnalyticsEvents(questHomeHero) {
   questHomeHero = questHomeHero.questHomeHero;
   const shouldShowQuestHomeHeroContent = questHomeHero.shouldShowQuestHomeHeroContent;
-  dependencyMap = undefined;
   let memo;
-  let callback;
-  let callback1;
-  let callback2;
-  let callback3;
-  let callback4;
-  const QuestContent = questHomeHero(5447).QuestContent;
+  const QuestContent = questHomeHero(5461).QuestContent;
   const tmp = shouldShowQuestHomeHeroContent ? QuestContent.QUEST_HOME_ENTRYPOINT_THEMED : QuestContent.QUEST_HOME_ENTRYPOINT;
   dependencyMap = tmp;
   const items = [tmp];
   memo = memo.useMemo(() => {
-    const contentProperties = questHomeHero(7728).getContentProperties(dependencyMap);
+    const contentProperties = AnalyticsTypes.getContentProperties(closure_2);
     delete tmp[tmp2];
     return contentProperties;
   }, items);
   const items1 = [questHomeHero, shouldShowQuestHomeHeroContent, tmp, memo];
-  callback = memo.useCallback((arg0) => {
+  const callback = memo.useCallback((event) => {
     if (null != questHomeHero) {
       if (shouldShowQuestHomeHeroContent) {
-        let obj = { adContentId: null, adCreativeType: null, event: null, properties: null, sourceQuestContent: null };
-        obj[0] = tmp.id;
-        obj[1] = questHomeHero(5451).AdCreativeType.QUEST_HOME_HERO;
-        obj[2] = arg0;
-        obj[3] = memo;
-        obj[4] = dependencyMap;
-        questHomeHero(7718).trackAdContentEvent(obj);
-        const obj2 = questHomeHero(7718);
+        const obj3 = { adContentId: tmp.id, adCreativeType: AdCreativeType.AdCreativeType.QUEST_HOME_HERO, event, properties: memo, sourceQuestContent };
+        AnalyticsActions.trackAdContentEvent(obj3);
       }
     }
-    obj = shouldShowQuestHomeHeroContent(1242);
-    obj.track(arg0, memo);
+    AnalyticsUtilsDefault.track(event, memo);
   }, items1);
   const items2 = [callback];
-  callback1 = memo.useCallback(() => {
-    callback(callback.QUEST_HOVER);
+  const callback1 = memo.useCallback(() => {
+    callback(AnalyticEvents.QUEST_HOVER);
   }, items2);
   const items3 = [callback];
-  callback2 = memo.useCallback(() => {
-    callback(callback.QUEST_HOVER_OFF);
+  const callback2 = memo.useCallback(() => {
+    callback(AnalyticEvents.QUEST_HOVER_OFF);
   }, items3);
-  callback3 = memo.useCallback(() => {
-    shouldShowQuestHomeHeroContent(1242).track(callback.QUEST_HOME_ONBOARDING_POPOVER_RENDERED);
+  const callback3 = memo.useCallback(() => {
+    shouldShowQuestHomeHeroContent(sourceQuestContent[13]).track(callback.QUEST_HOME_ONBOARDING_POPOVER_RENDERED);
   }, []);
   const items4 = [memo, questHomeHero];
-  callback4 = memo.useCallback(() => {
-    let obj = shouldShowQuestHomeHeroContent(1242);
-    obj = { is_targeted: false };
+  const callback4 = memo.useCallback(() => {
     const merged = Object.assign(memo);
     if (null != questHomeHero) {
-      obj = { ad_content_id: null };
-      obj[0] = tmp2.id;
-      obj1 = obj;
+      const obj3 = { ad_content_id: tmp2.id };
+      let obj4 = obj3;
     } else {
-      obj1 = {};
+      obj4 = {};
     }
-    const merged1 = Object.assign(obj1);
-    obj.track(callback.QUEST_CONTENT_CLICKED, obj);
+    const merged1 = Object.assign(obj4);
+    AnalyticsUtilsDefault.track(AnalyticEvents.QUEST_CONTENT_CLICKED, { is_targeted: false });
   }, items4);
   const items5 = [callback1, callback2, callback3, callback4];
   return memo.useMemo(() => ({ handleMouseEnter: callback1, handleMouseLeave: callback2, handleOnboardingPopoutRender: callback3, handleEntrypointClick: callback4 }), items5);

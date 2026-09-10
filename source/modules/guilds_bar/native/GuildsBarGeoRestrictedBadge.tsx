@@ -1,30 +1,32 @@
-// Module ID: 16350
-// Function ID: 16351
-// Dependencies: [19, 17, 21, 4560, 576, 5441, 5587, 12268, 2]
+// Module ID: 16381
+// Function ID: 16382
+// Name: GuildsBarGeoRestrictedBadge
+// Dependencies: [19, 17, 21, 4574, 576, 5455, 5601, 12294, 2]
 
-// Module 16350
-import ThemesDefault from "Themes" /* 576 */;
-import preloadDefault from "preload" /* 5587 */;
-import registerAssetDefault from "registerAsset" /* 12268 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 16381 (GuildsBarGeoRestrictedBadge)
+import nativeDefault from "native" /* 576 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef12294 from "module_12294" /* 12294 */;
+import noop from "module_19" /* 19 */;
 
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
 let obj = { badgeImageContainer: null, badgeImage: null };
-obj = { position: "absolute", bottom: -3, right: -3, height: 22, width: 22, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, backgroundColor: ThemesDefault.colors.STATUS_WARNING_BACKGROUND, borderWidth: 3, borderRadius: 11, justifyContent: "center", alignItems: "center", overflow: "hidden" };
-obj[0] = obj;
-createCacheKey = { height: 16, width: 16, opacity: require("result").DARK_1_LIGHT_08, tintColor: ThemesDefault.colors.BLACK };
-obj[1] = createCacheKey;
-let closure_4 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function GuildsBarGeoRestrictedBadge(style) {
-  const tmp = callback();
-  let obj = { style: items, pointerEvents: "none", children: null };
-  items = [tmp.badgeImageContainer, style.style];
-  obj = { source: registerAssetDefault, style: tmp.badgeImage };
-  obj[2] = jsx(preloadDefault, { source: registerAssetDefault, style: tmp.badgeImage });
-  return <View source={registerAssetDefault} style={tmp.badgeImage} />;
-});
-const result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarGeoRestrictedBadge.tsx");
+let size = { position: "absolute", bottom: -3, right: -3, height: 22, width: 22, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, backgroundColor: nativeDefault.colors.STATUS_WARNING_BACKGROUND, borderWidth: 3, borderRadius: 11, justifyContent: "center", alignItems: "center", overflow: "hidden" };
+obj.badgeImageContainer = size;
+const size1 = { height: 16, width: 16, opacity: fn(5455).DARK_1_LIGHT_08, tintColor: nativeDefault.colors.BLACK };
+obj.badgeImage = size1;
+let closure_4 = createStyles.createStyles(obj);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarGeoRestrictedBadge.tsx");
 
-export default memoResult;
+export default noop.memo(function GuildsBarGeoRestrictedBadge(style) {
+  const tmp = closure_4();
+  const obj = { style: null, pointerEvents: "none", children: null };
+  const items = [tmp.badgeImageContainer, style.style];
+  obj.style = items;
+  const obj2 = { source: _modDef12294, style: tmp.badgeImage };
+  obj.children = jsx(FastImageDefault, { source: _modDef12294, style: tmp.badgeImage });
+  return <View style={null} pointerEvents="none">{null}</View>;
+});

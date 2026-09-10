@@ -1,29 +1,34 @@
-// Module ID: 16669
-// Function ID: 16670
-// Name: FileOrLinkGridPlaceholderItem
-// Dependencies: [19, 21, 16649, 4982, 4296, 16670, 2]
+// Module ID: 16706
+// Function ID: 16707
+// Name: FileOrLinkGridPlaceholder
+// Dependencies: [19, 21, 16681, 4996, 4310, 16707, 2]
 // Exports: default
 
-// Module 16669 (FileOrLinkGridPlaceholderItem)
-import _modDef4296 from "module_4296" /* 4296 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16706 (FileOrLinkGridPlaceholder)
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4310 */;
+import useFontScale from "useFontScale" /* 4996 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 16681 */;
+import SearchListCard from "SearchListCard" /* 16707 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/FileOrLinkGridPlaceholder.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/FileOrLinkGridPlaceholder.tsx");
 
 export default function FileOrLinkGridPlaceholderItem(imageStyle) {
   imageStyle = imageStyle.imageStyle;
-  let width;
-  importDefault = undefined;
-  let obj = width(16649);
-  const placeholderAnimatedStyle = obj.usePlaceholderAnimatedStyle(true);
-  width = imageStyle.width;
-  const sum = imageStyle.height + 108 * width(4982).useFontScale();
-  importDefault = sum;
+  const placeholderAnimatedStyle = usePlaceholderStyles.usePlaceholderAnimatedStyle(true);
+  const width = imageStyle.width;
+  const sum = imageStyle.height + 108 * useFontScale.useFontScale();
+  c1 = sum;
   const items = [width, sum];
-  const memo = React.useMemo(() => ({ width, height: c1 }), items);
-  obj = { style: items1, pointerEvents: "none", children: jsx(width(16670).SearchListCardContainer, { containerStyle: memo }) };
-  items1 = [imageStyle.containerStyle, placeholderAnimatedStyle];
-  return jsx(_modDef4296.View, { style: items1, pointerEvents: "none", children: jsx(width(16670).SearchListCardContainer, { containerStyle: memo }) });
+  const memo = noop.useMemo(() => {
+    const size = { width, height };
+    return size;
+  }, items);
+  const obj3 = { style: null, pointerEvents: "none", children: jsx(SearchListCard.SearchListCardContainer, { containerStyle: memo }) };
+  const items1 = [imageStyle.containerStyle, placeholderAnimatedStyle];
+  obj3.style = items1;
+  return jsx(ReanimatedRexportDefault.View, { style: null, pointerEvents: "none", children: jsx(SearchListCard.SearchListCardContainer, { containerStyle: memo }) });
 };

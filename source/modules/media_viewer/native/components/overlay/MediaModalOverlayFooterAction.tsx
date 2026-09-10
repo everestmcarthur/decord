@@ -1,60 +1,57 @@
-// Module ID: 12974
-// Function ID: 12975
+// Module ID: 13000
+// Function ID: 13001
 // Name: MediaModalOverlayFooterAction
-// Dependencies: [19, 17, 21, 4560, 576, 7123, 1115, 4965, 12967, 4975, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 7137, 1115, 4979, 12993, 4989, 2]
 // Exports: MediaModalOverlayFooterAction
 
-// Module 12974 (MediaModalOverlayFooterAction)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import isBlurDisabledDefault from "isBlurDisabled" /* 4965 */;
-import Button from "Button" /* 4975 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
-import ObscuredViewDefault from "ObscuredView" /* 12967 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13000 (MediaModalOverlayFooterAction)
+import nativeDefault from "native" /* 576 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 4979 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7137 */;
+import MediaViewerThumbnailsDefault from "MediaViewerThumbnails" /* 12993 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ StyleSheet: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, buttonContainer: null };
-createCacheKey = { paddingTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_8 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_16 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { paddingHorizontal: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayFooterAction.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, buttonContainer: null };
+let obj3 = { paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
+obj2.buttonContainer = { paddingHorizontal: nativeDefault.space.PX_16 };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayFooterAction.tsx");
 
 export const MediaModalOverlayFooterAction = function MediaModalOverlayFooterAction(arg0) {
   ({ footerAction, sliderElement, syncer } = arg0);
-  const tmp = callback2();
-  let obj = { bottom: true, left: true, right: true, style: tmp.container, children: null };
+  const tmp = closure_8();
+  const rect = { bottom: true, left: true, right: true, style: tmp.container, children: null };
   if (null != sliderElement) {
     let isIOSResult = tmp4(1115).isIOS();
     if (isIOSResult) {
-      obj = { blurTheme: "dark", style: null };
-      obj[1] = absoluteFill.absoluteFill;
-      isIOSResult = callback(isBlurDisabledDefault, obj);
+      const obj = { blurTheme: "dark", style: absoluteFill.absoluteFill };
+      isIOSResult = hasOwnProperty(VisualEffectViewDefault, obj);
     }
     const items = [isIOSResult, sliderElement, ];
     let tmp12 = null;
     if (tmp2) {
-      obj = { syncer: null };
-      obj[0] = syncer;
-      tmp12 = callback(ObscuredViewDefault, obj);
+      const obj2 = { syncer };
+      tmp12 = hasOwnProperty(MediaViewerThumbnailsDefault, obj2);
     }
-    obj1 = { children: null };
+    const obj3 = { children: null };
     items[2] = tmp12;
-    obj1[0] = items;
-    let tmp3Result = tmp3(closure_6, obj1);
+    obj3.children = items;
+    let tmp3Result = tmp3(timestampProducer, obj3);
     const tmp4Result = tmp4(1115);
-    const tmp7 = closure_6;
   } else {
     tmp3Result = null;
   }
-  const items1 = [tmp3Result, callback(closure_4, { style: tmp.buttonContainer, children: callback(Button.Button, obj3) })];
-  obj[4] = items1;
-  return closure_7(SafeAreaPaddingView.SafeAreaPaddingView, obj);
+  const items1 = [tmp3Result, ];
+  const obj4 = { style: tmp.buttonContainer, children: hasOwnProperty(components_Button_Button.Button, { size: "lg", text: footerAction.text, onPress: footerAction.onPress }) };
+  items1[1] = hasOwnProperty(React4, obj4);
+  rect.children = items1;
+  return React5(common_SafeAreaView.SafeAreaPaddingView, rect);
 };

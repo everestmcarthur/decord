@@ -1,12 +1,11 @@
-// Module ID: 5916
-// Function ID: 5917
-// Name: metadata
+// Module ID: 5930
+// Function ID: 5931
 // Dependencies: [2]
 
-// Module 5916 (metadata)
-import set from "set" /* 2 */;
+// Module 5930
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DiscordWordmarkLogo-2x.png.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DiscordWordmarkLogo-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/45ed32a773bddd2a994bbaa20cd49260ce7dadbc7c6b19d9e48768354b5aeec1.png";
 export const metadata = { fileBytes: 2892 };

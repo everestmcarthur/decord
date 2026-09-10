@@ -1,14 +1,14 @@
-// Module ID: 4424
-// Function ID: 4425
-// Name: enforcing
+// Module ID: 4438
+// Function ID: 4439
+// Name: NativeTTIManagerModule
 // Dependencies: [17, 2]
 
-// Module 4424 (enforcing)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 4438 (NativeTTIManagerModule)
+import _mod17 from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
 
-const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 const enforcing = TurboModuleRegistry.getEnforcing("NativeTTIManagerModule");
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx");
 
 export default enforcing;

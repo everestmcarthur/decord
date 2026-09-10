@@ -1,96 +1,80 @@
-// Module ID: 15518
-// Function ID: 15519
+// Module ID: 15548
+// Function ID: 15549
+// Name: NotificationActionCreators
 // Dependencies: [1074, 1242, 573, 2]
 
-// Module 15518
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import ME from "ME" /* 1074 */;
+// Module 15548 (NotificationActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-({ DesktopNotificationTypes: obj1, NotificationPermissionTypes: c3, AnalyticEvents: c4 } = ME);
-const result = set.fileFinishedImporting("actions/NotificationActionCreators.tsx");
+({ DesktopNotificationTypes: c2, NotificationPermissionTypes: c3, AnalyticEvents: closure_4 } = Constants);
+const result = size.fileFinishedImporting("actions/NotificationActionCreators.tsx");
 
 export default {
   setDesktopType(desktopType) {
-    let obj = expandEventPropertiesDefault;
-    obj = { notifications_enabled: desktopType === constants.ALL };
-    obj.track(constants3.LOCAL_SETTINGS_UPDATED, obj);
-    obj = { type: "NOTIFICATIONS_SET_DESKTOP_TYPE", desktopType };
-    dispatcherDefault.dispatch(obj);
+    AnalyticsUtilsDefault.track(constants3.LOCAL_SETTINGS_UPDATED, { notifications_enabled: desktopType === constants.ALL });
+    const obj2 = { notifications_enabled: desktopType === constants.ALL };
+    DispatcherDefault.dispatch({ type: "NOTIFICATIONS_SET_DESKTOP_TYPE", desktopType });
   },
   setTTSType(ttsType) {
-    let obj = expandEventPropertiesDefault;
-    obj = { tts_type: ttsType.toString() };
-    obj.track(constants3.LOCAL_SETTINGS_UPDATED, obj);
-    obj = { type: "NOTIFICATIONS_SET_TTS_TYPE", ttsType };
-    dispatcherDefault.dispatch(obj);
+    const obj = AnalyticsUtilsDefault;
+    obj.track(constants3.LOCAL_SETTINGS_UPDATED, { tts_type: ttsType.toString() });
+    const obj2 = { tts_type: ttsType.toString() };
+    DispatcherDefault.dispatch({ type: "NOTIFICATIONS_SET_TTS_TYPE", ttsType });
   },
   setDisabledSounds(disabled_sounds) {
-    let obj = expandEventPropertiesDefault;
-    obj = { disabled_sounds };
-    obj.track(constants3.LOCAL_SETTINGS_UPDATED, obj);
-    obj = { type: "NOTIFICATIONS_SET_DISABLED_SOUNDS", sounds: disabled_sounds };
-    dispatcherDefault.dispatch(obj);
+    AnalyticsUtilsDefault.track(constants3.LOCAL_SETTINGS_UPDATED, { disabled_sounds });
+    const obj2 = { disabled_sounds };
+    DispatcherDefault.dispatch({ type: "NOTIFICATIONS_SET_DISABLED_SOUNDS", sounds: disabled_sounds });
   },
   toggleDisableAllSounds(all_sounds_enabled) {
-    let obj = expandEventPropertiesDefault;
-    obj = { all_sounds_enabled: !all_sounds_enabled };
-    obj.track(constants3.LOCAL_SETTINGS_UPDATED, obj);
-    dispatcherDefault.dispatch({ type: "NOTIFICATIONS_TOGGLE_ALL_DISABLED" });
+    AnalyticsUtilsDefault.track(constants3.LOCAL_SETTINGS_UPDATED, { all_sounds_enabled: !all_sounds_enabled });
+    const obj2 = { all_sounds_enabled: !all_sounds_enabled };
+    DispatcherDefault.dispatch({ type: "NOTIFICATIONS_TOGGLE_ALL_DISABLED" });
   },
   setDisableUnreadBadge(disableUnreadBadge) {
-    let obj = expandEventPropertiesDefault;
-    obj = { unread_badge_enabled: !disableUnreadBadge };
-    obj.track(constants3.LOCAL_SETTINGS_UPDATED, obj);
-    obj = { type: "NOTIFICATIONS_SET_DISABLE_UNREAD_BADGE", disableUnreadBadge };
-    dispatcherDefault.dispatch(obj);
+    AnalyticsUtilsDefault.track(constants3.LOCAL_SETTINGS_UPDATED, { unread_badge_enabled: !disableUnreadBadge });
+    const obj2 = { unread_badge_enabled: !disableUnreadBadge };
+    DispatcherDefault.dispatch({ type: "NOTIFICATIONS_SET_DISABLE_UNREAD_BADGE", disableUnreadBadge });
   },
   setTaskbarFlash(show_taskbar_flash) {
-    let obj = expandEventPropertiesDefault;
-    obj = { show_taskbar_flash };
-    obj.track(constants3.LOCAL_SETTINGS_UPDATED, obj);
-    obj = { type: "NOTIFICATIONS_SET_TASKBAR_FLASH", taskbarFlash: show_taskbar_flash };
-    dispatcherDefault.dispatch(obj);
+    AnalyticsUtilsDefault.track(constants3.LOCAL_SETTINGS_UPDATED, { show_taskbar_flash });
+    const obj2 = { show_taskbar_flash };
+    DispatcherDefault.dispatch({ type: "NOTIFICATIONS_SET_TASKBAR_FLASH", taskbarFlash: show_taskbar_flash });
   },
-  setNotifyMessagesInSelectedChannel(notify) {
-    let obj = expandEventPropertiesDefault;
-    obj = { notify_messages_in_selected_channel: notify };
-    obj.track(constants3.LOCAL_SETTINGS_UPDATED, obj);
-    obj = { type: "NOTIFICATIONS_SET_NOTIFY_MESSAGES_IN_SELECTED_CHANNEL", notify };
-    dispatcherDefault.dispatch(obj);
+  setNotifyMessagesInSelectedChannel(notify_messages_in_selected_channel) {
+    AnalyticsUtilsDefault.track(constants3.LOCAL_SETTINGS_UPDATED, { notify_messages_in_selected_channel });
+    const obj2 = { notify_messages_in_selected_channel };
+    DispatcherDefault.dispatch({ type: "NOTIFICATIONS_SET_NOTIFY_MESSAGES_IN_SELECTED_CHANNEL", notify: notify_messages_in_selected_channel });
   },
-  setScreenDowntimeReminder(screenDowntimeReminder) {
-    let obj = expandEventPropertiesDefault;
-    obj = { screen_downtime_reminder: screenDowntimeReminder };
-    obj.track(constants3.LOCAL_SETTINGS_UPDATED, obj);
-    obj = { type: "NOTIFICATIONS_SET_SCREEN_DOWNTIME_REMINDER", screenDowntimeReminder };
-    dispatcherDefault.dispatch(obj);
+  setScreenDowntimeReminder(screen_downtime_reminder) {
+    AnalyticsUtilsDefault.track(constants3.LOCAL_SETTINGS_UPDATED, { screen_downtime_reminder });
+    const obj2 = { screen_downtime_reminder };
+    DispatcherDefault.dispatch({ type: "NOTIFICATIONS_SET_SCREEN_DOWNTIME_REMINDER", screenDowntimeReminder: screen_downtime_reminder });
   },
   setPermissionsState(enabled, source) {
-    let obj = expandEventPropertiesDefault;
-    obj = { enabled: enabled === constants2.ENABLED, source };
-    obj.track(constants3.ENABLE_NOTIFICATIONS, obj);
-    obj = { type: "NOTIFICATIONS_SET_PERMISSION_STATE", enabled, source };
-    dispatcherDefault.dispatch(obj);
+    AnalyticsUtilsDefault.track(constants3.ENABLE_NOTIFICATIONS, { enabled: enabled === constants2.ENABLED, source });
+    const obj2 = { enabled: enabled === constants2.ENABLED, source };
+    DispatcherDefault.dispatch({ type: "NOTIFICATIONS_SET_PERMISSION_STATE", enabled, source });
   },
-  showNotification(icon, title, body, trackingProps) {
+  showNotification(icon, title, body, trackingProps, arg4) {
     importDefault = arg4;
-    let obj = dispatcherDefault;
-    obj = { type: "NOTIFICATION_CREATE", icon, title, body, trackingProps, options: null };
-    obj = {};
+    const obj2 = { type: "NOTIFICATION_CREATE", icon, title, body, trackingProps, options: null };
+    const obj3 = {};
     const merged = Object.assign(arg4);
-    obj.onClick = function onClick(arg0) {
-      const onClick = lib.onClick;
+    obj3.onClick = function onClick(arg0) {
+      onClick = onClick.onClick;
       if (onClick != null) {
         onClick(arg0);
       }
-      lib(closure_1_1[2]).dispatch({ type: "NOTIFICATION_CLICK" });
+      DispatcherDefault.dispatch({ type: "NOTIFICATION_CLICK" });
     };
-    obj[5] = obj;
-    obj.dispatch(obj);
+    obj2.options = obj3;
+    DispatcherDefault.dispatch(obj2);
   },
   clickedNotification() {
-    dispatcherDefault.dispatch({ type: "NOTIFICATION_CLICK" });
+    DispatcherDefault.dispatch({ type: "NOTIFICATION_CLICK" });
   }
 };

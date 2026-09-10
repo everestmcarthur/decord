@@ -1,171 +1,157 @@
-// Module ID: 11732
-// Function ID: 11733
+// Module ID: 11758
+// Function ID: 11759
 // Name: AppInteractionInfoActionSheet
-// Dependencies: [19, 17, 1385, 1979, 1371, 21, 4560, 1611, 11733, 9250, 504, 8181, 5584, 4556, 1114, 5123, 8179, 1178, 7150, 2]
+// Dependencies: [19, 17, 1385, 1979, 1371, 21, 4574, 1611, 11759, 9277, 504, 8207, 5598, 4570, 1114, 5137, 8205, 1178, 7164, 2]
 // Exports: default
 
-// Module 11732 (AppInteractionInfoActionSheet)
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "createdAt" /* 1385 */;
-import closure_6 from "createGuildRecordFromRust" /* 1979 */;
-import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11758 (AppInteractionInfoActionSheet)
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8205 */;
+import UserActionCreators from "UserActionCreators" /* 8207 */;
+import ContextMenuSubmenuActionSheetHeaderDefault from "ContextMenuSubmenuActionSheetHeader" /* 11759 */;
+import noop from "module_19" /* 19 */;
+import UserRecord from "UserRecord" /* 1385 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles({ itemContainer: { flexDirection: "row", paddingVertical: 12, paddingHorizontal: 16, alignItems: "center" }, itemLabel: { flexDirection: "column", alignItems: "flex-start", paddingLeft: 12 } });
-const result = require("set").fileFinishedImporting("modules/applications/native/AppInteractionInfoActionSheet.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4574);
+let closure_10 = createStyles.createStyles({ itemContainer: { flexDirection: "row", paddingVertical: 12, paddingHorizontal: 16, alignItems: "center" }, itemLabel: { flexDirection: "column", alignItems: "flex-start", paddingLeft: 12 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/applications/native/AppInteractionInfoActionSheet.tsx");
 
 export default function AppInteractionInfoActionSheet(message) {
   message = message.message;
   ({ guildId, onBack } = message);
   dependencyMap = undefined;
-  let React;
-  let id;
+  noop = undefined;
   let stateFromStores;
-  closure_6 = undefined;
-  let tmp = callback3();
-  let obj = React;
+  let id;
+  let tmp = closure_10();
   const items = [onBack];
   const interactionMetadata = message.interactionMetadata;
   let tmp5;
-  const memo = React.useMemo(() => closure_1_8(onBack(11733), { onBack }), items);
+  const memo = noop.useMemo(() => React6(ContextMenuSubmenuActionSheetHeaderDefault, { onBack }), items);
   if (interactionMetadata != null) {
-    tmp5 = interactionMetadata.authorizing_integration_owners[message(undefined, 9250).ApplicationIntegrationType.USER_INSTALL];
+    tmp5 = interactionMetadata.authorizing_integration_owners[message(undefined, 9277).ApplicationIntegrationType.USER_INSTALL];
   }
   dependencyMap = tmp5;
   const interactionMetadata2 = message.interactionMetadata;
   let tmp7;
   if (interactionMetadata2 != null) {
-    tmp7 = interactionMetadata2.authorizing_integration_owners[message(undefined, 9250).ApplicationIntegrationType.GUILD_INSTALL];
+    tmp7 = interactionMetadata2.authorizing_integration_owners[message(undefined, 9277).ApplicationIntegrationType.GUILD_INSTALL];
   }
-  React = tmp7;
+  noop = tmp7;
   const interactionMetadata3 = message.interactionMetadata;
   id = undefined;
   if (interactionMetadata3 != null) {
     id = interactionMetadata3.user.id;
   }
-  obj1 = message(504);
-  const items1 = [closure_7];
-  stateFromStores = obj1.useStateFromStores(items1, () => closure_1_7.getUser(closure_2));
-  let obj2 = message(504);
-  const items2 = [closure_6];
-  const stateFromStores1 = obj2.useStateFromStores(items2, () => guild.getGuild(closure_3));
-  let obj3 = message(504);
-  const items3 = [closure_7];
-  const stateFromStores2 = obj3.useStateFromStores(items3, () => closure_1_7.getUser(id));
-  closure_6 = stateFromStores2;
+  const items1 = [UserStore];
+  stateFromStores = message(504).useStateFromStores(items1, () => UserStore.getUser(closure_2));
+  let obj = noop;
+  const obj2 = message(504);
+  const tmp2 = onBack;
+  const items2 = [id];
+  const stateFromStores1 = message(504).useStateFromStores(items2, () => GuildStore.getGuild(closure_3));
+  const obj3 = message(504);
+  const items3 = [UserStore];
+  const stateFromStores2 = message(504).useStateFromStores(items3, () => UserStore.getUser(id));
+  id = stateFromStores2;
   const items4 = [stateFromStores, tmp5];
   const effect = obj.useEffect(() => {
     let tmp = null == stateFromStores;
     if (tmp) {
-      tmp = null != dependencyMap;
+      tmp = null != closure_2;
     }
     if (tmp) {
-      const user = message(8181).getUser(dependencyMap);
-      const obj = message(8181);
+      const user = UserActionCreators.getUser(closure_2);
     }
   }, items4);
   let tmp15 = stateFromStores2;
   if (null == stateFromStores2) {
     const interactionMetadata4 = message.interactionMetadata;
     let user;
-    let tmp16 = stateFromStores;
     if (interactionMetadata4 != null) {
       user = interactionMetadata4.user;
     }
-    tmp16 = new tmp16(user);
-    closure_6 = tmp16;
-    tmp15 = tmp16;
+    const tmp162 = new stateFromStores(user);
+    id = tmp162;
+    tmp15 = tmp162;
   }
   if (null != stateFromStores1) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.itemContainer;
-    obj = { guild: null, size: null };
-    obj[0] = stateFromStores1;
-    obj[1] = tmp10(5584).GuildIconSizes.SMALL_32;
-    const items5 = [callback(onBack(5584), obj), ];
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.itemLabel;
-    obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-    obj2[2] = stateFromStores1.name;
-    const items6 = [callback(tmp10(4556).Text, obj2), ];
-    obj3 = { variant: "text-xs/medium", color: "text-subtle", children: null };
+    const obj5 = { style: tmp.itemContainer, children: null };
+    const obj6 = { guild: stateFromStores1, size: tmp10(5598).GuildIconSizes.SMALL_32 };
+    const items5 = [closure_8(tmp2(5598), obj6), ];
+    const obj7 = { style: tmp.itemLabel, children: null };
+    const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: stateFromStores1.name };
+    const items6 = [closure_8(tmp10(4570).Text, obj8), ];
+    const obj9 = { variant: "text-xs/medium", color: "text-subtle", children: null };
     const intl2 = tmp10(1114).intl;
-    const obj4 = { application: null };
-    obj4[0] = message.author.username;
-    obj3[2] = intl2.format(tmp10(1114).t.ShLXXB, obj4);
-    items6[1] = callback(tmp10(4556).Text, obj3);
-    obj1[1] = items6;
-    items5[1] = callback2(id, obj1);
-    obj[1] = items5;
-    let tmp26 = callback2(id, obj);
-    const tmp2Result = onBack(5584);
+    const obj10 = { application: message.author.username };
+    obj9.children = intl2.format(tmp10(1114).t.ShLXXB, obj10);
+    items6[1] = closure_8(tmp10(4570).Text, obj9);
+    obj7.children = items6;
+    items5[1] = closure_9(id, obj7);
+    obj5.children = items5;
+    let tmp26 = closure_9(id, obj5);
+    const tmp2Result = tmp2(5598);
   } else {
     tmp26 = null;
     if (null != stateFromStores) {
-      const obj5 = { onPress: null, children: null };
-      obj5[0] = function onPress() {
-        return onBack(8179)({ userId: stateFromStores.id, channelId: message.channel_id });
+      const obj11 = {
+        onPress() {
+              return showUserProfileActionSheetDefault({ userId: stateFromStores.id, channelId: message.channel_id });
+            },
+        children: null
       };
-      const obj6 = { style: null, children: null };
-      obj6[0] = tmp.itemContainer;
-      const obj7 = { user: null, size: null, guildId: null };
-      obj7[0] = stateFromStores;
-      obj7[1] = tmp10(1178).AvatarSizes.REFRESH_MEDIUM_32;
-      obj7[2] = guildId;
-      const items7 = [callback(tmp10(1178).Avatar, obj7), ];
-      const obj8 = { style: null, children: null };
-      obj8[0] = tmp.itemLabel;
-      const obj9 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-      obj9[2] = stateFromStores.username;
-      const items8 = [callback(tmp10(4556).Text, obj9), ];
-      const obj10 = { variant: "text-xs/medium", color: "text-subtle", children: null };
+      const obj12 = { style: tmp.itemContainer, children: null };
+      const obj13 = { user: stateFromStores, size: tmp10(1178).AvatarSizes.REFRESH_MEDIUM_32, guildId };
+      const items7 = [closure_8(tmp10(1178).Avatar, obj13), ];
+      const obj14 = { style: tmp.itemLabel, children: null };
+      const obj15 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: stateFromStores.username };
+      const items8 = [closure_8(tmp10(4570).Text, obj15), ];
+      const obj16 = { variant: "text-xs/medium", color: "text-subtle", children: null };
       const intl = tmp10(1114).intl;
-      const obj11 = { application: null };
-      obj11[0] = message.author.username;
-      obj10[2] = intl.format(tmp10(1114).t.ShLXXB, obj11);
-      items8[1] = callback(tmp10(4556).Text, obj10);
-      obj8[1] = items8;
-      items7[1] = callback2(id, obj8);
-      obj6[1] = items7;
-      obj5[1] = callback2(id, obj6);
-      tmp26 = callback(tmp10(5123).PressableOpacity, obj5);
+      const obj17 = { application: message.author.username };
+      obj16.children = intl.format(tmp10(1114).t.ShLXXB, obj17);
+      items8[1] = closure_8(tmp10(4570).Text, obj16);
+      obj14.children = items8;
+      items7[1] = closure_9(id, obj14);
+      obj12.children = items7;
+      obj11.children = closure_9(id, obj12);
+      tmp26 = closure_8(tmp10(5137).PressableOpacity, obj11);
     }
   }
-  const obj12 = { header: memo, bodyStyles: { paddingBottom: onBack(1611)().bottom }, children: null };
+  const obj18 = { header: memo, bodyStyles: { paddingBottom: onBack(1611)().bottom }, children: null };
   const items9 = [tmp26, ];
   let tmp32 = null;
   if (null != tmp15) {
-    const obj13 = { onPress: null, children: null };
-    obj13[0] = function onPress() {
-      return onBack(8179)({ userId: guild.id, channelId: message.channel_id });
+    const obj19 = {
+      onPress() {
+          return showUserProfileActionSheetDefault({ userId: id.id, channelId: message.channel_id });
+        },
+      children: null
     };
-    const obj14 = { style: null, children: null };
-    obj14[0] = tmp.itemContainer;
-    const obj15 = { user: null, size: null, guildId: null };
-    obj15[0] = tmp15;
-    obj15[1] = tmp10(1178).AvatarSizes.REFRESH_MEDIUM_32;
-    obj15[2] = guildId;
-    const items10 = [callback(tmp10(1178).Avatar, obj15), ];
-    const obj16 = { style: null, children: null };
-    obj16[0] = tmp.itemLabel;
-    const obj17 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-    obj17[2] = tmp15.username;
-    const items11 = [callback(tmp10(4556).Text, obj17), ];
-    const obj18 = { variant: "text-xs/medium", color: "text-subtle", children: null };
+    const obj20 = { style: tmp.itemContainer, children: null };
+    const obj21 = { user: tmp15, size: tmp10(1178).AvatarSizes.REFRESH_MEDIUM_32, guildId };
+    const items10 = [closure_8(tmp10(1178).Avatar, obj21), ];
+    const obj22 = { style: tmp.itemLabel, children: null };
+    const obj23 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp15.username };
+    const items11 = [closure_8(tmp10(4570).Text, obj23), ];
+    const obj24 = { variant: "text-xs/medium", color: "text-subtle", children: null };
     const intl3 = tmp10(1114).intl;
-    obj18[2] = intl3.string(tmp10(1114).t["04gxNg"]);
-    items11[1] = callback(tmp10(4556).Text, obj18);
-    obj16[1] = items11;
-    items10[1] = tmp31(id, obj16);
-    obj14[1] = items10;
-    obj13[1] = tmp31(id, obj14);
-    tmp32 = callback(tmp10(5123).PressableOpacity, obj13);
+    obj24.children = intl3.string(tmp10(1114).t["04gxNg"]);
+    items11[1] = closure_8(tmp10(4570).Text, obj24);
+    obj22.children = items11;
+    items10[1] = tmp31(id, obj22);
+    obj20.children = items10;
+    obj19.children = tmp31(id, obj20);
+    tmp32 = closure_8(tmp10(5137).PressableOpacity, obj19);
   }
   items9[1] = tmp32;
-  obj12[2] = items9;
-  return callback2(message(7150).BottomSheet, obj12);
+  obj18.children = items9;
+  return closure_9(message(7164).BottomSheet, obj18);
 };

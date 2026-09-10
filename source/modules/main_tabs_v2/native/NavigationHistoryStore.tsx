@@ -1,15 +1,16 @@
-// Module ID: 7328
-// Function ID: 7329
-// Name: getIdFromHistoryItem
-// Dependencies: [1957, 504, 573, 4418, 4417, 4420, 2]
+// Module ID: 7342
+// Function ID: 7343
+// Name: NavigationHistoryStore
+// Dependencies: [1957, 504, 573, 4432, 4431, 4434, 2]
 // Exports: getNavigationHistory, handleHistoryStoreNavigationChange
 
-// Module 7328 (getIdFromHistoryItem)
+// Module 7342 (NavigationHistoryStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_2 from "ensureGuildLoaded" /* 1957 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import RootNavigationRef from "RootNavigationRef" /* 4432 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-const require = arg1;
+require = fn;
 function getIdFromHistoryItem(str) {
   return str.replace(regExp, "");
 }
@@ -17,7 +18,7 @@ function removeHistoryItem(arg0) {
   closure_0 = arg0;
   let flag = map.delete(arg0);
   if (flag) {
-    arr = arr.filter((arg0) => arg0 !== combined);
+    history = history.filter((item) => item !== combined);
     flag = true;
   }
   return flag;
@@ -26,7 +27,7 @@ function handleChannelDelete(channel) {
   const combined = "" + c3 + channel.channel.id;
   let flag = map.delete(combined);
   if (flag) {
-    arr = arr.filter((arg0) => arg0 !== combined);
+    history = history.filter((item) => item !== combined);
     flag = true;
   }
   return flag;
@@ -34,14 +35,14 @@ function handleChannelDelete(channel) {
 let c3 = "channel-";
 let c4 = "guild-";
 const regExp = new RegExp("^(?:" + "channel-" + "|" + "guild-" + ")");
-let closure_6 = [];
+let history = [];
 const map = new Map();
 const PersistedStore = initializeDefault.PersistedStore;
 class NavigationHistoryStore extends PersistedStore {
 }
 const prototype = NavigationHistoryStore.prototype;
 prototype["initialize"] = function initialize(history) {
-  this.waitFor(closure_2);
+  this.waitFor(ChannelStore);
   map.clear();
   history = undefined;
   if (history != null) {
@@ -51,28 +52,27 @@ prototype["initialize"] = function initialize(history) {
     history = [];
   }
   for (const item10015 of history) {
-    let tmp3 = map;
     let result = map.set(item10015, undefined);
     continue;
   }
   closure_6 = Array.from(map.keys());
 };
 prototype["getState"] = function getState() {
-  return { history: closure_6 };
+  return { history };
 };
 prototype["getLastHistory"] = function getLastHistory() {
   let num = arg0;
   if (arg0 === undefined) {
     num = 1;
   }
-  return arr[arr.length - num];
+  return history[history.length - num];
 };
 prototype["getLastFocusedTimestampForHistoryItem"] = function getLastFocusedTimestampForHistoryItem(arg0) {
   return map.get(arg0);
 };
 NavigationHistoryStore.displayName = "NavigationHistoryStore";
 NavigationHistoryStore.persistKey = "NavigationHistoryStore";
-const navigationHistoryStore = new NavigationHistoryStore(dispatcherDefault, {
+const navigationHistoryStore = new NavigationHistoryStore(DispatcherDefault, {
   LOGOUT() {
     closure_6 = [];
     map.clear();
@@ -92,20 +92,13 @@ const navigationHistoryStore = new NavigationHistoryStore(dispatcherDefault, {
       const nextResult = iter.next();
       while (iter !== undefined) {
         let tmp3 = nextResult;
-        let tmp4 = c3;
         if (nextResult.startsWith(c3)) {
-          let tmp5 = getIdFromHistoryItem;
-          let tmp6 = nextResult;
-          let tmp7 = basicChannel;
-          basicChannel = basicChannel.getBasicChannel(getIdFromHistoryItem(tmp3));
+          let basicChannel = ChannelStore.getBasicChannel(getIdFromHistoryItem(tmp3));
           let tmp10 = null != basicChannel;
           if (tmp10) {
-            let tmp11 = basicChannel;
             tmp10 = tmp9.guild_id !== guild.id;
           }
           if (!tmp10) {
-            let tmp12 = removeHistoryItem;
-            let tmp13 = nextResult;
             if (removeHistoryItem(tmp3)) {
               flag = true;
             }
@@ -117,25 +110,24 @@ const navigationHistoryStore = new NavigationHistoryStore(dispatcherDefault, {
     }
   }
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/NavigationHistoryStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/NavigationHistoryStore.tsx");
 
 export default navigationHistoryStore;
 export const CHANNEL_PREFIX = "channel-";
 export const GUILD_PREFIX = "guild-";
 export { getIdFromHistoryItem };
 export const handleHistoryStoreNavigationChange = function handleHistoryStoreNavigationChange() {
-  const rootNavigationRef = combined2(4418).getRootNavigationRef();
+  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   if (null != rootNavigationRef) {
     const currentRoute = rootNavigationRef.getCurrentRoute();
     if (null != currentRoute) {
       if (null != currentRoute.params) {
-        let tmpResult = tmp(4417);
-        const coerceChannelRouteResult = tmpResult.coerceChannelRoute(currentRoute);
+        const coerceChannelRouteResult = tmp(4431).coerceChannelRoute(currentRoute);
         if (null == coerceChannelRouteResult) {
-          tmpResult = tmp(4417);
-          const coerceGuildsRouteResult = tmpResult.coerceGuildsRoute(currentRoute);
+          const coerceGuildsRouteResult = tmp(4431).coerceGuildsRoute(currentRoute);
           if (null != coerceGuildsRouteResult) {
-            if (tmpResult1.getChatLayout().isChatLockedOpen) {
+            if (tmpResult4.getChatLayout().isChatLockedOpen) {
               const params = coerceGuildsRouteResult.params;
               let channelId;
               if (params != null) {
@@ -144,18 +136,18 @@ export const handleHistoryStoreNavigationChange = function handleHistoryStoreNav
               if (null != channelId) {
                 const _HermesInternal = HermesInternal;
                 const combined = "" + c3 + channelId;
-                combined2 = combined;
+                let combined2 = combined;
                 if (map.has(combined)) {
-                  arr = arr.filter((arg0) => arg0 !== combined2);
+                  history = history.filter((item) => item !== combined2);
                 }
-                if (null != arr[arr.length - 1]) {
+                if (null != history[history.length - 1]) {
                   const _Date3 = Date;
                   const result = obj4.set(tmp30, Date.now());
                 }
                 const result1 = obj4.set(combined, undefined);
-                arr = arr.push(combined);
-                if (arr.length > 100) {
-                  arr = arr.shift();
+                history.push(combined);
+                if (history.length > 100) {
+                  history.shift();
                 }
                 navigationHistoryStore.emitChange();
               }
@@ -170,38 +162,40 @@ export const handleHistoryStoreNavigationChange = function handleHistoryStoreNav
               const combined1 = "" + c4 + guildId;
               combined2 = combined1;
               if (map.has(combined1)) {
-                arr = arr.filter((arg0) => arg0 !== combined2);
+                history = history.filter((item) => item !== combined2);
               }
-              if (null != arr[arr.length - 1]) {
+              if (null != history[history.length - 1]) {
                 const _Date2 = Date;
                 const result2 = obj8.set(tmp52, Date.now());
               }
               const result3 = obj8.set(combined1, undefined);
-              arr.push(combined1);
-              if (arr.length > 100) {
-                arr.shift();
+              history.push(combined1);
+              if (history.length > 100) {
+                history.shift();
               }
               navigationHistoryStore.emitChange();
             }
-            tmpResult1 = tmp(4420);
+            tmpResult4 = tmp(4434);
           }
+          const tmpResult3 = tmp(4431);
         } else {
           const _HermesInternal2 = HermesInternal;
           combined2 = "" + c3 + coerceChannelRouteResult.params.channelId;
           if (map.has(combined2)) {
-            arr = arr.filter((arg0) => arg0 !== combined2);
+            history = history.filter((item) => item !== combined2);
           }
-          if (null != arr[arr.length - 1]) {
+          if (null != history[history.length - 1]) {
             const _Date = Date;
             const result4 = obj6.set(tmp47, Date.now());
           }
           const result5 = obj6.set(combined2, undefined);
-          arr.push(combined2);
-          if (arr.length > 100) {
-            arr.shift();
+          history.push(combined2);
+          if (history.length > 100) {
+            history.shift();
           }
           navigationHistoryStore.emitChange();
         }
+        const tmpResult = tmp(4431);
       }
     }
   }

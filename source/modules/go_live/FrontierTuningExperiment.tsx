@@ -1,40 +1,40 @@
-// Module ID: 4699
-// Function ID: 4700
-// Dependencies: [4607, 1434, 2]
+// Module ID: 4713
+// Function ID: 4714
+// Name: FrontierTuningExperiment
+// Dependencies: [4621, 1434, 2]
 
-// Module 4699
-import set from "set" /* 2 */;
-import RESOLUTION_720 from "RESOLUTION_720" /* 4607 */;
-import importDefaultResult from "getUnitId" /* 1434 */;
+// Module 4713 (FrontierTuningExperiment)
+import StreamSettingsConstants from "StreamSettingsConstants" /* 4621 */;
+import ApexExperiment from "apex/ApexExperiment" /* 1434 */;
+import size from "module_2" /* 2 */;
 
-let obj = { maxBitrate: null, maxResolution: null, maxFPS: null, maskReportedQuality: false };
-obj = {};
-({ ApplicationStreamFPS, ApplicationStreamResolutions } = RESOLUTION_720);
-const merged = Object.assign(obj);
-obj.maxResolution = ApplicationStreamResolutions.RESOLUTION_1080;
-obj.maxFPS = ApplicationStreamFPS.FPS_30;
-obj = { name: "2026-05-frontier-tuning", kind: "guild", defaultConfig: obj, variations: null };
-const obj1 = { 1: null, 2: null, 3: null, 4: null };
+const obj = { maxBitrate: null, maxResolution: null, maxFPS: null, maskReportedQuality: false };
 const obj2 = {};
-const merged1 = Object.assign(obj);
-obj2.maxBitrate = 3500000;
-obj2.maskReportedQuality = true;
-obj1[1] = obj2;
-const obj3 = {};
-const merged2 = Object.assign(obj);
-obj3.maxBitrate = 5000000;
-obj3.maskReportedQuality = true;
-obj1[2] = obj3;
-const obj4 = {};
-const merged3 = Object.assign(obj);
-obj4.maxBitrate = 3500000;
-obj1[3] = obj4;
+({ ApplicationStreamFPS, ApplicationStreamResolutions } = StreamSettingsConstants);
+const merged = Object.assign(obj);
+obj2.maxResolution = ApplicationStreamResolutions.RESOLUTION_1080;
+obj2.maxFPS = ApplicationStreamFPS.FPS_30;
+const obj3 = { name: "2026-05-frontier-tuning", kind: "guild", defaultConfig: obj, variations: null };
+const obj4 = { 1: null, 2: null, 3: null, 4: null };
 const obj5 = {};
-const merged4 = Object.assign(obj);
-obj5.maxBitrate = 5000000;
-obj1[4] = obj5;
-obj[3] = obj1;
-const importDefaultResultResult = importDefaultResult(obj);
-const result = set.fileFinishedImporting("modules/go_live/FrontierTuningExperiment.tsx");
+const merged1 = Object.assign(obj2);
+obj5.maxBitrate = 3500000;
+obj5.maskReportedQuality = true;
+obj4[1] = obj5;
+const obj6 = {};
+const merged2 = Object.assign(obj2);
+obj6.maxBitrate = 5000000;
+obj6.maskReportedQuality = true;
+obj4[2] = obj6;
+const obj7 = {};
+const merged3 = Object.assign(obj2);
+obj7.maxBitrate = 3500000;
+obj4[3] = obj7;
+const obj8 = {};
+const merged4 = Object.assign(obj2);
+obj8.maxBitrate = 5000000;
+obj4[4] = obj8;
+obj3.variations = obj4;
+const result = size.fileFinishedImporting("modules/go_live/FrontierTuningExperiment.tsx");
 
-export default importDefaultResultResult;
+export default ApexExperiment(obj3);

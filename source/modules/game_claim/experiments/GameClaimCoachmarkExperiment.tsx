@@ -1,16 +1,18 @@
-// Module ID: 16265
-// Function ID: 16266
-// Name: experiment
-// Dependencies: [4474, 2]
+// Module ID: 16295
+// Function ID: 16296
+// Name: GameClaimCoachmarkExperiment
+// Dependencies: [4488, 2]
 // Exports: useGameClaimCoachmarkEnabled
 
-// Module 16265 (experiment)
-import set from "set" /* 2 */;
-import createExperiment from "createExperiment" /* 4474 */;
+// Module 16295 (GameClaimCoachmarkExperiment)
+import createExperiment from "module_4488" /* 4488 */;
+import size from "module_2" /* 2 */;
 
+const obj = { kind: "guild", id: "2026-02_game_claim_coachmark", label: "Game Claim Coachmark", defaultConfig: { enabled: false }, treatments: null };
 const items = [{ id: 1, label: "Enable Game Claim Coachmark", config: { enabled: true } }];
-const experiment = createExperiment.createExperiment({ kind: "guild", id: "2026-02_game_claim_coachmark", label: "Game Claim Coachmark", defaultConfig: { enabled: false }, treatments: items });
-const result = set.fileFinishedImporting("modules/game_claim/experiments/GameClaimCoachmarkExperiment.tsx");
+obj.treatments = items;
+const experiment = createExperiment.createExperiment(obj);
+const result = size.fileFinishedImporting("modules/game_claim/experiments/GameClaimCoachmarkExperiment.tsx");
 
 export const GameClaimCoachmarkExperiment = experiment;
 export const useGameClaimCoachmarkEnabled = function useGameClaimCoachmarkEnabled(guildId, useCanShowGameClaimCoachmark) {

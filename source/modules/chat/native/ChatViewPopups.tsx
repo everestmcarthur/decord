@@ -1,13 +1,15 @@
-// Module ID: 12652
-// Function ID: 12653
+// Module ID: 12678
+// Function ID: 12679
 // Name: ChatViewPopups
-// Dependencies: [19, 12653, 12657, 12665, 2]
+// Dependencies: [19, 12679, 12683, 12691, 2]
 
-// Module 12652 (ChatViewPopups)
-import useIsHubRealNamePromptShowingDefault from "useIsHubRealNamePromptShowing" /* 12653 */;
-import importAllResult from "noop" /* 19 */;
+// Module 12678 (ChatViewPopups)
+import useIsHubRealNamePromptShowingDefault from "useIsHubRealNamePromptShowing" /* 12679 */;
+import WelcomeScreenUtils from "WelcomeScreenUtils" /* 12683 */;
+import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 12691 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = fn;
 class ChatViewPopups {
   constructor(arg0) {
     guildId = global.guildId;
@@ -15,9 +17,9 @@ class ChatViewPopups {
     closure_2 = undefined;
     closure_3 = undefined;
     closure_1 = closure_3.useRef(false);
-    tmp = require("useIsHubRealNamePromptShowing")(guildId);
+    tmp = closure_1(closure_2[1])(guildId);
     closure_2 = tmp;
-    obj = require("useShowWelcomeModal");
+    obj = guildId(closure_2[2]);
     showWelcomeModal = obj.useShowWelcomeModal(guildId, global.channelId);
     closure_3 = showWelcomeModal;
     items = [, , ];
@@ -26,25 +28,25 @@ class ChatViewPopups {
     items[2] = tmp;
     effect = closure_3.useEffect(() => {
       if (!ref.current) {
-        if (dependencyMap) {
-          let obj = { guildId: null, onHide: null };
-          obj[0] = guildId;
-          obj[1] = function onHide() {
-            closure_1.current = false;
-            return false;
+        if (closure_2) {
+          const obj2 = {
+            guildId,
+            onHide() {
+                  ref.current = false;
+                  return false;
+                }
           };
-          ref(12665).open(obj);
+          GuildDirectoryNicknameUpsellModalActionCreatorsDefault.open(obj2);
           tmp.current = true;
-          const obj3 = ref(12665);
         } else if (showWelcomeModal) {
-          obj = guildId(12657);
-          obj = { guildId: null, onHide: null };
-          obj[0] = guildId;
-          obj[1] = function onHide() {
-            closure_1.current = false;
-            return false;
+          const obj4 = {
+            guildId,
+            onHide() {
+                  ref.current = false;
+                  return false;
+                }
           };
-          const result = obj.openWelcomeActionSheet(obj);
+          const result = WelcomeScreenUtils.openWelcomeActionSheet(obj4);
           tmp.current = true;
         }
       }
@@ -52,9 +54,8 @@ class ChatViewPopups {
     return null;
   }
 }
-let c3 = importAllResult;
-const memoResult = importAllResult.memo(ChatViewPopups);
-let result = require("set").fileFinishedImporting("modules/chat/native/ChatViewPopups.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/chat/native/ChatViewPopups.tsx");
 
-export default memoResult;
+export default noop.memo(ChatViewPopups);
 export { ChatViewPopups };

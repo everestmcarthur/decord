@@ -1,29 +1,28 @@
-// Module ID: 15329
-// Function ID: 15330
-// Name: items
-// Dependencies: [32, 19, 1074, 1954, 21, 1943, 7388, 1178, 1114, 11473, 15330, 15332, 2]
+// Module ID: 15358
+// Function ID: 15359
+// Name: AccessibilitySetting
+// Dependencies: [32, 19, 1074, 1954, 21, 1943, 7402, 1178, 1114, 11500, 15359, 15361, 2]
 
-// Module 15329 (items)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7388 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15358 (AccessibilitySetting)
+import util from "util" /* 1114 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7402 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let items = [require("DismissibleContent").DismissibleContent.MOBILE_ACCESSIBILITY_COLOR_SETTINGS];
-createToggle = {
+require = fn;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsx = fn(21).jsx;
+let items = [fn(1943).DismissibleContent.MOBILE_ACCESSIBILITY_COLOR_SETTINGS];
+const SettingBuilders = fn(11500);
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.G0neg7);
+    const intl = util.intl;
+    return intl.string(util.t.G0neg7);
   },
   parent: null,
-  IconComponent: require("AccessibilityIcon").AccessibilityIcon,
+  IconComponent: fn(15359).AccessibilityIcon,
   useTrailing() {
-    let obj = useSelectedDismissibleContent;
-    [tmp4, r10012] = callback(obj.useSelectedDismissibleContent(items), 2);
+    [tmp4, r10012] = useSelectedDismissibleContent.useSelectedDismissibleContent(items);
     let tmp5 = null;
     if (null != tmp4) {
       let hasItem;
@@ -32,44 +31,43 @@ createToggle = {
       }
       tmp5 = null;
       if (hasItem) {
-        obj = { text: null };
+        const obj3 = { text: null };
         const intl = tmp(1114).intl;
-        obj[0] = intl.string(tmp(1114).t.y2b7CA);
+        obj3.text = intl.string(tmp(1114).t.y2b7CA);
         tmp5 = jsx(tmp(1178).TextBadge, { text: null });
       }
     }
     return tmp5;
   },
   usePreNavigationAction() {
-    const tmp = callback(first(7388).useSelectedDismissibleContent(items), 2);
+    const tmp = _slicedToArray(first(7402).useSelectedDismissibleContent(items), 2);
     first = tmp[0];
     dependencyMap = tmp3;
     items = [tmp[1], first];
-    return React.useCallback(() => {
+    return noop.useCallback(() => {
       let tmp2 = null != first;
       if (tmp2) {
         let hasItem;
-        if (closure_1_6 != null) {
+        if (items != null) {
           hasItem = obj.includes(tmp);
         }
         tmp2 = hasItem;
-        obj = closure_1_6;
+        obj = items;
       }
       if (tmp2) {
-        callback(closure_1_4.TAKE_ACTION);
+        closure_1(ContentDismissActionType.TAKE_ACTION);
       }
       return true;
     }, items);
   },
-  screen: createToggle
-};
-createToggle = {
-  route: require("ME").UserSettingsSections.ACCESSIBILITY,
-  getComponent() {
-    return require(15332) /* SettingsAccessibilityScreen */.default;
+  screen: {
+    route: fn(1074).UserSettingsSections.ACCESSIBILITY,
+    getComponent() {
+      return require("SettingsAccessibilityScreen").default;
+    }
   }
-};
-createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccessibilitySetting.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccessibilitySetting.tsx");
 
-export default createToggle;
+export default route;

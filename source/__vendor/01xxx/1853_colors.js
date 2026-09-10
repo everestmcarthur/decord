@@ -4,7 +4,7 @@
 // Dependencies: [17]
 
 // Module 1853 (colors)
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
 ({ Platform, PlatformColor } = get_ActivityIndicator);
 

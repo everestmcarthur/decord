@@ -1,70 +1,77 @@
-// Module ID: 16502
-// Function ID: 16503
-// Name: AddEmojiButton
-// Dependencies: [32, 19, 17, 7306, 1957, 5413, 4199, 1074, 1374, 21, 4211, 7764, 4560, 576, 1115, 4409, 504, 4573, 7456, 11126, 5123, 1114, 8762, 4556, 11264, 1091, 1396, 11257, 10900, 11321, 11693, 11739, 16494, 5071, 7763, 7971, 11666, 8351, 11685, 11674, 4262, 4987, 672, 7209, 2]
+// Module ID: 16533
+// Function ID: 16534
+// Name: ICYMICardInteractionRow
+// Dependencies: [32, 19, 17, 7320, 1957, 5427, 4212, 1074, 1374, 21, 4224, 7778, 4574, 576, 1115, 4423, 504, 4587, 7470, 11153, 5137, 1114, 8790, 4570, 11291, 1091, 1396, 11284, 10927, 11348, 11719, 11765, 16525, 5085, 7777, 7985, 11692, 8379, 11711, 11700, 4275, 5001, 672, 7223, 2]
 // Exports: default, onAddReaction, useThread
 
-// Module 16502 (AddEmojiButton)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import set from "set" /* 1115 */;
-import MAX_REACTIONS from "MAX_REACTIONS" /* 4211 */;
-import hexToRgba from "hexToRgba" /* 4409 */;
-import PressableBase from "PressableBase" /* 5123 */;
-import checkReactionResponse from "checkReactionResponse" /* 7764 */;
-import ForwardingIconDefault from "ForwardingIcon" /* 11693 */;
-import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 11739 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "updateState" /* 7306 */;
-import closure_9 from "ensureGuildLoaded" /* 1957 */;
-import closure_10 from "recomputeGuild" /* 5413 */;
-import closure_11 from "getUncachedChannelPermissions" /* 4199 */;
-import ME from "ME" /* 1074 */;
-import { EmojiIntention } from "set" /* 1374 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16533 (ICYMICardInteractionRow)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import ReactionUtils from "ReactionUtils" /* 4224 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4587 */;
+import Pressables from "Pressables" /* 5137 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7470 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7777 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 7778 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 7985 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8379 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11153 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11284 */;
+import PendingReplyActionCreators from "PendingReplyActionCreators" /* 11700 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 11711 */;
+import ForwardingIconDefault from "ForwardingIcon" /* 11719 */;
+import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 11765 */;
+import ICYMIShared from "ICYMIShared" /* 16525 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7320 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 5427 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
 
-require = arg1;
+const require = globalThis.__r;
+
+const ColorUtils = tmp4(4423);
+require = fn;
 function AddEmojiButton(channel) {
   channel = channel.channel;
   const onPressEmoji = channel.onPressEmoji;
   ({ showText, disabled, handleItemInteracted } = channel);
-  const tmp = callback3();
+  const tmp = closure_20();
   const items = [channel, onPressEmoji, handleItemInteracted];
-  const callback = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     handleItemInteracted("press_reaction_picker", { actionGestureType: "press", actionTargetElement: "reaction_picker_button", actionIntentType: "open", actionDestinationType: null });
-    let obj = channel(handleItemInteracted[19]);
-    obj = { pickerIntention: closure_1_15.REACTION, autoFocus: false, startExpanded: false, onPressEmoji, channel, guildId: null };
+    const obj2 = { pickerIntention: EmojiIntention.REACTION, autoFocus: false, startExpanded: false, onPressEmoji, channel, guildId: null };
     let guild_id;
     if (channel != null) {
       guild_id = channel.guild_id;
     }
-    obj[5] = guild_id;
-    const result = obj.openEmojiPickerActionSheet(obj);
+    obj2.guildId = guild_id;
+    const result = openEmojiPickerActionSheet.openEmojiPickerActionSheet(obj2);
   }, items);
-  let obj = { onPress: callback, style: null, accessible: true, accessibilityLabel: null, disabled: null, children: null };
+  const obj = { onPress: callback, style: null, accessible: true, accessibilityLabel: null, disabled: null, children: null };
   const items1 = [, , ];
   ({ emojiContainer: arr2[0], addEmojiContainer: arr2[1] } = tmp);
-  disabled = null;
+  let disabled1 = null;
   if (disabled) {
-    disabled = tmp.disabled;
+    disabled1 = tmp.disabled;
   }
-  items1[2] = disabled;
-  obj[1] = items1;
+  items1[2] = disabled1;
+  obj.style = items1;
   const intl = tmp4(tmp5[21]).intl;
-  obj[3] = intl.string(channel(handleItemInteracted[21]).t.lfIHs4);
-  obj[4] = disabled;
-  const items2 = [callback(channel(handleItemInteracted[22]).ReactionIcon, { size: "sm" }), ];
+  obj.accessibilityLabel = intl.string(channel(handleItemInteracted[21]).t.lfIHs4);
+  obj.disabled = disabled;
+  const items2 = [closure_16(channel(handleItemInteracted[22]).ReactionIcon, { size: "sm" }), ];
   if (showText) {
-    obj = { variant: "text-sm/semibold", color: "redesign-button-tertiary-text", children: null };
+    let obj2 = { variant: "text-sm/semibold", color: "redesign-button-tertiary-text", children: null };
     const intl2 = tmp4(tmp5[21]).intl;
-    obj[2] = intl2.string(tmp4(tmp5[21]).t.m9O1gd);
-    showText = callback(tmp4(tmp5[23]).Text, obj);
+    obj2.children = intl2.string(tmp4(tmp5[21]).t.m9O1gd);
+    showText = closure_16(tmp4(tmp5[23]).Text, obj2);
   }
   items2[1] = showText;
-  obj[5] = items2;
+  obj.children = items2;
   return closure_17(channel(handleItemInteracted[20]).PressableOpacity, obj);
 }
 function EmojiReaction(count) {
@@ -74,16 +81,14 @@ function EmojiReaction(count) {
   const isBurstReaction = count.isBurstReaction;
   const handleItemInteracted = count.handleItemInteracted;
   let emoji;
-  const tmp = callback3();
-  let obj = messageId(reaction[24]);
+  const tmp = closure_20();
   let burst_colors = reaction.burst_colors;
   if (burst_colors == null) {
     burst_colors = [];
   }
-  const emojiColorPalette = obj.useEmojiColorPalette(burst_colors);
+  const emojiColorPalette = messageId(reaction[24]).useEmojiColorPalette(burst_colors);
   let str = "";
   if (null != emojiColorPalette) {
-    let tmp2Result = tmp2(tmp3[25]);
     let backgroundColor;
     if (emojiColorPalette != null) {
       backgroundColor = emojiColorPalette.backgroundColor;
@@ -95,27 +100,27 @@ function EmojiReaction(count) {
     if (num == null) {
       num = 0.15;
     }
-    let str2 = tmp2Result.hex2rgb(backgroundColor, num);
+    let str2 = tmp2(tmp3[25]).hex2rgb(backgroundColor, num);
     if (str2 == null) {
       str2 = "";
     }
     str = str2;
+    const tmp2Result = tmp2(tmp3[25]);
   }
-  obj = { backgroundColor: str, borderColor: null };
+  let obj2 = { backgroundColor: str, borderColor: null };
   let backgroundColor1;
   if (emojiColorPalette != null) {
     backgroundColor1 = emojiColorPalette.backgroundColor;
   }
-  obj[1] = backgroundColor1;
+  obj2.borderColor = backgroundColor1;
   let accentColor;
   if (emojiColorPalette != null) {
     accentColor = emojiColorPalette.accentColor;
   }
   let tmp8 = null;
   if (null != accentColor) {
-    obj = { color: null };
-    obj[0] = emojiColorPalette.accentColor;
-    tmp8 = obj;
+    const obj3 = { color: emojiColorPalette.accentColor };
+    tmp8 = obj3;
   }
   emoji = reaction.emoji;
   let selectedInnerTextContainer = isBurstReaction ? reaction.me_burst : reaction.me;
@@ -123,13 +128,13 @@ function EmojiReaction(count) {
   if (selectedInnerTextContainer) {
     selected = tmp.selected;
   }
-  tmp2Result = tmp2(tmp3[16]);
-  const items = [closure_10];
+  let obj = messageId(reaction[24]);
+  const items = [GuildVerificationStore];
   const items1 = [emoji];
-  const stateFromStores = tmp2Result.useStateFromStores(items, () => {
+  const stateFromStores = messageId(reaction[16]).useStateFromStores(items, () => {
     let canChatInGuildResult = null != channel.guild_id;
     if (canChatInGuildResult) {
-      canChatInGuildResult = closure_1_10.canChatInGuild(tmp.guild_id);
+      canChatInGuildResult = GuildVerificationStore.canChatInGuild(tmp.guild_id);
     }
     return canChatInGuildResult;
   });
@@ -137,130 +142,126 @@ function EmojiReaction(count) {
   const memo = handleItemInteracted.useMemo(() => {
     let tmp2;
     if (null != emoji.id) {
-      let obj = { uri: null };
-      obj = { id: null, animated: null, size: 48 };
-      ({ id: obj3[0], animated: obj3[1] } = emoji);
-      obj[0] = channel(reaction[26]).getEmojiURL(obj);
+      const obj = { uri: null };
+      ({ id: obj3.id, animated: obj3.animated } = emoji);
+      obj.uri = AvatarUtilsDefault.getEmojiURL({ id: null, animated: null, size: 48 });
       tmp2 = obj;
-      const obj2 = channel(reaction[26]);
+      const obj4 = { id: null, animated: null, size: 48 };
     }
     return tmp2;
   }, items1);
   const callback = handleItemInteracted.useCallback(() => {
     handleItemInteracted("press_reaction", { actionGestureType: "press", actionTargetElement: "toggle_existing_reaction_button", actionIntentType: "react", actionDestinationType: null });
-    const result = messageId(reaction[27]).handleAddOrRemoveReaction(messageId, channel, reaction, isBurstReaction, messageId(reaction[11]).ReactionLocations.MESSAGE);
+    const result = messages_MessagesUtils.handleAddOrRemoveReaction(messageId, channel, reaction, isBurstReaction, ReactionActionCreators.ReactionLocations.MESSAGE);
   }, items2);
   const items3 = [tmp.emojiContainer, selected, ];
   let tmp14 = isBurstReaction;
   if (isBurstReaction) {
-    tmp14 = obj;
+    tmp14 = obj2;
   }
-  obj1 = { style: items3, onPress: callback, accessible: true, accessibilityLabel: emoji.name, disabled: !stateFromStores, children: null };
+  let obj4 = { style: items3, onPress: callback, accessible: true, accessibilityLabel: emoji.name, disabled: !stateFromStores, children: null };
   items3[2] = tmp14;
   const items4 = [tmp.innerEmojiContainer, ];
   let selectedInnerEmojiContainer = selectedInnerTextContainer;
   if (selectedInnerTextContainer) {
     selectedInnerEmojiContainer = tmp.selectedInnerEmojiContainer;
   }
-  let obj2 = { style: items4, children: null };
+  const obj5 = { style: items4, children: null };
   items4[1] = selectedInnerEmojiContainer;
   if (null == emoji.id) {
-    const obj3 = { variant: "text-md/medium", color: "interactive-text-default", style: null, allowFontScaling: false, children: null };
+    const obj6 = { variant: "text-md/medium", color: "interactive-text-default", style: null, allowFontScaling: false, children: null };
     const items5 = [, ];
     ({ defaultEmoji: arr8[0], emojiText: arr8[1] } = tmp);
-    obj3[2] = items5;
-    obj3[4] = emoji.name;
-    let tmp15Result = tmp15(tmp2(tmp3[23]).Text, obj3);
+    obj6.style = items5;
+    obj6.children = emoji.name;
+    let tmp15Result = tmp15(tmp2(tmp3[23]).Text, obj6);
   } else {
-    if (tmp2Result1.isAndroid()) {
-      const obj4 = { style: null, source: null };
+    if (tmp2Result4.isAndroid()) {
+      const obj7 = { style: null, source: null };
       const items6 = [, ];
       ({ defaultEmoji: arr7[0], emojiImage: arr7[1] } = tmp);
-      obj4[0] = items6;
-      obj4[1] = memo;
-      tmp15Result = tmp15(closure_6, obj4);
+      obj7.style = items6;
+      obj7.source = memo;
+      tmp15Result = tmp15(closure_6, obj7);
     } else {
-      const obj5 = { emoji: null, size: null, style: null, animate: true };
-      obj5[0] = emoji;
-      obj5[1] = c19;
-      obj5[2] = tmp.defaultEmoji;
-      tmp15Result = tmp15(channel(tmp3[28]), obj5);
+      const obj8 = { emoji, size: v20, style: tmp.defaultEmoji, animate: true };
+      tmp15Result = tmp15(channel(tmp3[28]), obj8);
     }
-    tmp2Result1 = tmp2(tmp3[14]);
+    tmp2Result4 = tmp2(tmp3[14]);
   }
-  obj2[1] = tmp15Result;
-  const items7 = [closure_16(emoji, obj2), ];
+  obj5.children = tmp15Result;
+  const items7 = [closure_16(emoji, obj5), ];
   const items8 = [tmp.innerTextContainer, ];
   if (selectedInnerTextContainer) {
     selectedInnerTextContainer = tmp.selectedInnerTextContainer;
   }
-  const obj6 = { style: items8, children: null };
+  const obj9 = { style: items8, children: null };
   items8[1] = selectedInnerTextContainer;
-  const obj7 = { animate: true, count: count.count, textStyle: null, textVariant: "text-md/semibold" };
+  const obj10 = { animate: true, count: count.count, textStyle: null, textVariant: "text-md/semibold" };
   let tmp22 = null;
+  const tmp13 = closure_17;
+  const tmp2Result3 = messageId(reaction[16]);
   if (isBurstReaction) {
     tmp22 = tmp8;
   }
-  obj7[2] = tmp22;
-  obj6[1] = closure_16(channel(reaction[29]), obj7);
-  items7[1] = closure_16(emoji, obj6);
-  obj1[5] = items7;
-  return closure_17(messageId(reaction[20]).PressableOpacity, obj1);
+  obj10.textStyle = tmp22;
+  obj9.children = closure_16(channel(reaction[29]), obj10);
+  items7[1] = closure_16(emoji, obj9);
+  obj4.children = items7;
+  return tmp13(messageId(reaction[20]).PressableOpacity, obj4);
 }
 function ForwardButton(disabled) {
   disabled = disabled.disabled;
-  const tmp = callback3();
+  const tmp = closure_20();
   const obj = { onPress: disabled.onPress, style: null, accessible: true, disabled: null, accessibilityLabel: null, children: null };
   const items = [, , ];
   ({ emojiContainer: arr[0], addEmojiContainer: arr[1] } = tmp);
-  disabled = null;
+  let disabled1 = null;
   if (disabled) {
-    disabled = tmp.disabled;
+    disabled1 = tmp.disabled;
   }
-  items[2] = disabled;
-  obj[1] = items;
-  obj[3] = disabled;
+  items[2] = disabled1;
+  obj.style = items;
+  obj.disabled = disabled;
   const intl = tmp3(1114).intl;
-  obj[4] = intl.string(getSystemLocale.t.xIUfJS);
-  obj[5] = closure_16(ForwardingIconDefault, { size: "sm" });
-  return closure_16(PressableBase.PressableOpacity, obj);
+  obj.accessibilityLabel = intl.string(util.t.xIUfJS);
+  obj.children = value2(ForwardingIconDefault, { size: "sm" });
+  return value2(Pressables.PressableOpacity, obj);
 }
 function ReplyButton(disabled) {
   disabled = disabled.disabled;
-  const tmp = callback3();
+  const tmp = closure_20();
   const obj = { onPress: disabled.onPress, style: null, accessible: true, disabled: null, accessibilityLabel: null, children: null };
   const items = [, , ];
   ({ emojiContainer: arr[0], addEmojiContainer: arr[1] } = tmp);
-  disabled = null;
+  let disabled1 = null;
   if (disabled) {
-    disabled = tmp.disabled;
+    disabled1 = tmp.disabled;
   }
-  items[2] = disabled;
-  obj[1] = items;
-  obj[3] = disabled;
+  items[2] = disabled1;
+  obj.style = items;
+  obj.disabled = disabled;
   const intl = tmp3(1114).intl;
-  obj[4] = intl.string(getSystemLocale.t["5NwaNY"]);
-  obj[5] = closure_16(ArrowAngleLeftUpIcon.ArrowAngleLeftUpIcon, { size: "sm" });
-  return closure_16(PressableBase.PressableOpacity, obj);
+  obj.accessibilityLabel = intl.string(util.t["5NwaNY"]);
+  obj.children = value2(ArrowAngleLeftUpIcon.ArrowAngleLeftUpIcon, { size: "sm" });
+  return value2(Pressables.PressableOpacity, obj);
 }
 function ThreadAsCommentsButton(parentMessage) {
   parentMessage = parentMessage.parentMessage;
   const threadData = parentMessage.threadData;
   ({ style, handleItemInteracted } = parentMessage);
-  const tmp = callback3();
-  let obj = parentMessage(handleItemInteracted[16]);
-  const items = [closure_11];
+  const tmp = closure_20();
+  const items = [PermissionStore];
   const items1 = [parentMessage, threadData.thread, handleItemInteracted];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_11.canWithPartialContext(closure_1_13.VIEW_CHANNEL, { channelId: parentMessage.id }));
-  const callback = React.useCallback(() => {
+  const stateFromStores = parentMessage(handleItemInteracted[16]).useStateFromStores(items, () => PermissionStore.canWithPartialContext(constants2.VIEW_CHANNEL, { channelId: parentMessage.id }));
+  const callback = noop.useCallback(() => {
     handleItemInteracted("press_comments", { actionGestureType: "press", actionTargetElement: "thread_comments_button", actionIntentType: "navigate", actionDestinationType: "channel" });
     let tmp2 = null != parentMessage;
     if (tmp2) {
       tmp2 = null != threadData.thread;
     }
     if (tmp2) {
-      parentMessage(handleItemInteracted[32]).navigateToPost(obj.getChannelId(), threadData.thread.guild_id, obj.id);
-      const obj2 = parentMessage(handleItemInteracted[32]);
+      ICYMIShared.navigateToPost(obj.getChannelId(), threadData.thread.guild_id, obj.id);
     }
   }, items1);
   if (stateFromStores) {
@@ -271,90 +272,83 @@ function ThreadAsCommentsButton(parentMessage) {
           if (threadData.messageCount <= 9) {
             str = threadData.messageCount;
           }
-          obj = { style: null, onPress: null, children: null };
+          let obj2 = { style: null, onPress: null, children: null };
           const items2 = [tmp.comments, style];
-          obj[0] = items2;
-          obj[1] = callback;
-          obj = { style: null, children: null };
-          obj[0] = tmp.commentCount;
-          obj1 = { style: null };
-          obj1[0] = tmp.commentsIcon;
-          const items3 = [callback(tmp2(tmp3[33]).ChatIcon, obj1), ];
-          let obj2 = { variant: "text-md/semibold", color: "text-strong", children: null };
-          obj2[2] = str;
-          items3[1] = callback(tmp2(tmp3[23]).Text, obj2);
-          obj[1] = items3;
-          obj[2] = callback2(closure_5, obj);
-          return callback(tmp2(tmp3[20]).PressableHighlight, obj);
+          obj2.style = items2;
+          obj2.onPress = callback;
+          const obj3 = { style: tmp.commentCount, children: null };
+          const obj4 = { style: tmp.commentsIcon };
+          const items3 = [closure_16(tmp2(tmp3[33]).ChatIcon, obj4), ];
+          const obj5 = { variant: "text-md/semibold", color: "text-strong", children: str };
+          items3[1] = closure_16(tmp2(tmp3[23]).Text, obj5);
+          obj3.children = items3;
+          obj2.children = closure_17(closure_5, obj3);
+          return closure_16(tmp2(tmp3[20]).PressableHighlight, obj2);
         }
       }
-      const obj3 = { style: null, onPress: null, children: null };
+      const obj6 = { style: null, onPress: null, children: null };
       const items4 = [tmp.comments, style];
-      obj3[0] = items4;
-      obj3[1] = callback;
-      const obj4 = { style: null, children: null };
-      obj4[0] = tmp.commentCount;
-      const obj5 = { style: null };
-      obj5[0] = tmp.commentsIcon;
-      obj4[1] = callback(tmp2(tmp3[33]).ChatIcon, obj5);
-      obj3[2] = callback(closure_5, obj4);
-      return callback(tmp2(tmp3[20]).PressableHighlight, obj3);
+      obj6.style = items4;
+      obj6.onPress = callback;
+      const obj7 = { style: tmp.commentCount, children: null };
+      const obj8 = { style: tmp.commentsIcon };
+      obj7.children = closure_16(tmp2(tmp3[33]).ChatIcon, obj8);
+      obj6.children = closure_16(closure_5, obj7);
+      return closure_16(tmp2(tmp3[20]).PressableHighlight, obj6);
     }
   }
   return null;
 }
-({ View: c5, Image: closure_6, ScrollView: error } = get_ActivityIndicator);
-({ MessageFlags: closure_12, Permissions: map1, HorizontalGradient: closure_14 } = ME);
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+const Constants = fn(1074);
+({ MessageFlags: closure_12, Permissions: map1, HorizontalGradient: closure_14 } = Constants);
+const EmojiIntention = fn(1374).EmojiIntention;
+const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17, Fragment: closure_18 } = jsxProd);
 let c19 = 20;
-let closure_20 = createCacheKey.createStyles(() => {
-  let obj = { container: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", justifyContent: "space-between" }, replyForwardButtonContainer: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 6 }, emojisRowContainer: { position: "relative", flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 6 }, emojisContainer: { position: "relative", flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 6 }, emojiContainer: null, innerEmojiContainer: null, selectedInnerEmojiContainer: null, addEmojiContainer: null, disabled: null, defaultEmoji: null, emojiText: null, selectedInnerTextContainer: null, innerTextContainer: null, emojiImage: null, selected: null, gradient: null, overflowChevron: null, comments: null, commentCount: null, commentsIcon: null };
-  obj = { flexDirection: "row", backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: ThemesDefault.radii.sm, flexShrink: 3, paddingHorizontal: 8, gap: 6 };
-  obj[4] = obj;
-  obj[5] = { paddingVertical: 5 };
-  obj[6] = { paddingVertical: 4 };
-  obj[7] = { minHeight: 30, alignItems: "center" };
-  obj[8] = { opacity: 0.4 };
-  obj = { width: c19, height: c19 };
-  obj[9] = obj;
-  let obj3 = set;
+const createStyles = fn(4574);
+let closure_20 = createStyles.createStyles(() => {
+  const obj = { container: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", justifyContent: "space-between" }, replyForwardButtonContainer: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 6 }, emojisRowContainer: { position: "relative", flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 6 }, emojisContainer: { position: "relative", flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 6 }, emojiContainer: { flexDirection: "row", backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: nativeDefault.radii.sm, flexShrink: 3, paddingHorizontal: 8, gap: 6 }, innerEmojiContainer: { paddingVertical: 5 }, selectedInnerEmojiContainer: { paddingVertical: 4 }, addEmojiContainer: { minHeight: 30, alignItems: "center" }, disabled: { opacity: 0.4 }, defaultEmoji: null, emojiText: null, selectedInnerTextContainer: null, innerTextContainer: null, emojiImage: null, selected: null, gradient: null, overflowChevron: null, comments: null, commentCount: null, commentsIcon: null };
+  const size = { width: v20, height: v20 };
+  obj.defaultEmoji = size;
+  const obj2 = { flexDirection: "row", backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: nativeDefault.radii.sm, flexShrink: 3, paddingHorizontal: 8, gap: 6 };
   let num = 16;
-  if (!obj3.isAndroid()) {
+  if (!obj4.isAndroid()) {
     num = tmp3;
   }
-  obj[10] = { lineHeight: num, fontSize: 16, textAlign: "center", paddingTop: 2 };
-  obj[11] = { paddingBottom: 3.5 };
-  obj[12] = { alignSelf: "flex-end", paddingBottom: 4.5 };
-  obj[13] = { resizeMode: "contain", width: c19, height: c19 };
-  obj1 = { borderColor: ThemesDefault.unsafe_rawColors.BRAND_560, borderWidth: 1, paddingHorizontal: 7, backgroundColor: hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BRAND_500, 0.3) };
-  obj[14] = obj1;
-  obj[15] = { position: "absolute", right: 0, top: 0, bottom: 0, width: 48 };
-  obj[16] = { position: "absolute", right: 0 };
-  const tmp4 = require;
-  const tmp4Result = hexToRgba;
-  obj[17] = { paddingVertical: 6, paddingHorizontal: 8, backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: ThemesDefault.radii.sm, display: "flex", flexDirection: "row", alignItems: "center", gap: 8 };
-  obj[18] = { display: "flex", flexDirection: "row", alignItems: "center", gap: 4, justifySelf: "end" };
-  obj3 = { width: 20, height: 20, tintColor: tmp(576).colors.INTERACTIVE_TEXT_DEFAULT };
-  obj[19] = obj3;
+  obj.emojiText = { lineHeight: num, fontSize: 16, textAlign: "center", paddingTop: 2 };
+  obj.selectedInnerTextContainer = { paddingBottom: 3.5 };
+  obj.innerTextContainer = { alignSelf: "flex-end", paddingBottom: 4.5 };
+  obj.emojiImage = { resizeMode: "contain", width: v20, height: v20 };
+  const obj3 = { borderColor: nativeDefault.unsafe_rawColors.BRAND_560, borderWidth: 1, paddingHorizontal: 7, backgroundColor: null };
+  obj4 = PlatformUtils;
+  obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BRAND_500, 0.3);
+  obj.selected = obj3;
+  obj.gradient = { position: "absolute", right: 0, top: 0, bottom: 0, width: 48 };
+  obj.overflowChevron = { position: "absolute", right: 0 };
+  const tmp4Result = ColorUtils;
+  obj.comments = { paddingVertical: 6, paddingHorizontal: 8, backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: nativeDefault.radii.sm, display: "flex", flexDirection: "row", alignItems: "center", gap: 8 };
+  obj.commentCount = { display: "flex", flexDirection: "row", alignItems: "center", gap: 4, justifySelf: "end" };
+  const size1 = { width: 20, height: 20, tintColor: tmp(576).colors.INTERACTIVE_TEXT_DEFAULT };
+  obj.commentsIcon = size1;
   return obj;
 });
-let result = require("set").fileFinishedImporting("modules/icymi/native/ICYMICardInteractionRow.tsx");
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/icymi/native/ICYMICardInteractionRow.tsx");
 
 export default function ICYMICardInteractionRow(message) {
   message = message.message;
-  guild = message;
   let channel = message.channel;
-  message = channel;
   ({ guild, hideAdditionalButtons } = message);
   if (hideAdditionalButtons === undefined) {
     hideAdditionalButtons = false;
   }
-  let flag2 = hideAdditionalButtons;
   let flag = message.isKeyMessage;
   if (flag === undefined) {
     flag = false;
   }
-  flag2 = message.inForum;
+  let flag2 = message.inForum;
   if (flag2 === undefined) {
     flag2 = false;
   }
@@ -364,199 +358,181 @@ export default function ICYMICardInteractionRow(message) {
   }
   let id = message.id;
   const itemType = message.itemType;
-  let obj;
+  let obj3;
   let memo;
   let canForwardMessage;
   let stateFromStores;
-  let callback;
+  let handleItemInteracted;
   c12 = undefined;
-  let tmp = callback3();
-  obj = guild(flag2[16]);
+  let tmp = closure_20();
+  closure_129_0 = guild;
+  closure_129_1 = message;
+  closure_129_2 = flag2;
   let items = [canForwardMessage, memo];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    if (null != message) {
-      if (null != guild) {
-        let channel = canForwardMessage.getChannel(tmp.id);
+  const stateFromStoresObject = message(hideAdditionalButtons[16]).useStateFromStoresObject(items, () => {
+    if (null != channel) {
+      if (null != message) {
+        channel = ChannelStore.getChannel(tmp.id);
         if (channel == null) {
           channel = null;
         }
-        obj = { thread: null, messageCount: null, mostRecentMessage: null };
-        obj[0] = channel;
-        let num = memo.getCount(tmp.id);
+        let obj = { thread: channel, messageCount: null, mostRecentMessage: null };
+        let num = ThreadMessageStore.getCount(tmp.id);
         if (num == null) {
           num = 0;
         }
-        obj[1] = num;
-        obj[2] = memo.getMostRecentMessage(tmp.id);
-        const obj2 = memo;
+        obj.messageCount = num;
+        obj.mostRecentMessage = ThreadMessageStore.getMostRecentMessage(tmp.id);
       }
       return obj;
     }
     obj = { thread: null, messageCount: 0, mostRecentMessage: null };
   });
-  obj1 = str;
-  id = undefined;
+  let id1;
   ({ thread, messageCount, mostRecentMessage } = stateFromStoresObject);
   if (guild != null) {
-    id = guild.id;
+    id1 = guild.id;
   }
-  const items1 = [id, flag2, message, guild];
+  const items1 = [id1, flag2, message, guild];
   const effect = str.useEffect(() => {
-    obj = message;
-    let tmp = null != message;
+    let tmp = null != channel;
     if (tmp) {
-      tmp = null != guild;
+      tmp = null != message;
     }
     if (tmp) {
-      tmp = obj.hasFlag(_undefined.HAS_THREAD) || flag2;
-      const tmp4 = obj.hasFlag(_undefined.HAS_THREAD) || flag2;
+      tmp = obj.hasFlag(constants.HAS_THREAD) || hideAdditionalButtons;
+      const tmp4 = obj.hasFlag(constants.HAS_THREAD) || hideAdditionalButtons;
     }
     if (tmp) {
-      tmp = null == memo.getMostRecentMessage(obj.id);
+      tmp = null == ThreadMessageStore.getMostRecentMessage(obj.id);
     }
     if (tmp) {
-      message(flag2[17]).preload(guild.id, obj.id);
-      const obj2 = message(flag2[17]);
-      obj = { channelId: null, isPreload: true, limit: 25 };
-      obj[0] = obj.id;
-      const messages = message(flag2[18]).fetchMessages(obj);
-      const obj3 = message(flag2[18]);
+      ChannelActionCreatorsDefault.preload(message.id, obj.id);
+      const obj4 = { channelId: obj.id, isPreload: true, limit: 25 };
+      const messages = MessageActionCreatorsDefault.fetchMessages(obj4);
     }
   }, items1);
-  obj = { thread, messageCount, mostRecentMessage };
+  obj3 = { thread, messageCount, mostRecentMessage };
   const items2 = [message.reactions];
-  memo = obj1.useMemo(() => {
+  memo = obj2.useMemo(() => {
     const items = [];
-    const reactions = items.reactions;
+    const reactions = message.reactions;
     const item = reactions.forEach((me_vote) => {
       if (null == me_vote.me_vote) {
         if (me_vote.burst_count > 0) {
-          obj = {};
+          const obj = {};
           const merged = Object.assign(me_vote);
-          obj.type = items(closure_1_2[34]).ReactionTypes.BURST;
+          obj.type = message(hideAdditionalButtons[34]).ReactionTypes.BURST;
           items.push(obj);
         }
         if (me_vote.count > 0) {
-          obj = {};
+          const obj2 = {};
           const merged1 = Object.assign(me_vote);
-          obj.type = items(closure_1_2[34]).ReactionTypes.NORMAL;
-          items.push(obj);
+          obj2.type = message(hideAdditionalButtons[34]).ReactionTypes.NORMAL;
+          items.push(obj2);
         }
       }
     });
     return items;
   }, items2);
   const items3 = [channel];
-  const memo1 = obj1.useMemo(() => {
-    let tmp2 = null != message;
+  const memo1 = obj2.useMemo(() => {
+    let tmp2 = null != channel;
     if (tmp2) {
-      tmp2 = message(flag2[35])(tmp);
+      tmp2 = canAddNewReactionsDefault(tmp);
     }
     return tmp2;
   }, items3);
-  let tmp2Result = tmp2(tmp3[36]);
-  canForwardMessage = tmp2Result.useCanForwardMessage(message);
-  tmp2Result = tmp2(tmp3[16]);
-  const items4 = [callback];
-  stateFromStores = tmp2Result.useStateFromStores(items4, () => callback.can(closure_1_13.SEND_MESSAGES, message));
-  const items5 = [hideAdditionalButtons, obj.messageCount, memo.length, stateFromStores, canForwardMessage];
-  const memo2 = obj1.useMemo(() => {
+  let obj = message(hideAdditionalButtons[16]);
+  canForwardMessage = message(hideAdditionalButtons[36]).useCanForwardMessage(message);
+  const tmp2Result = message(hideAdditionalButtons[36]);
+  const items4 = [handleItemInteracted];
+  stateFromStores = message(hideAdditionalButtons[16]).useStateFromStores(items4, () => PermissionStore.can(constants2.SEND_MESSAGES, channel));
+  const items5 = [hideAdditionalButtons, obj3.messageCount, memo.length, stateFromStores, canForwardMessage];
+  const memo2 = obj2.useMemo(() => {
     let num = 4;
-    if (flag2) {
+    if (hideAdditionalButtons) {
       num = 6;
     }
     let diff = num;
-    if (obj.messageCount > 0) {
+    if (obj3.messageCount > 0) {
       diff = num - 1;
     }
     let num3 = 0;
     if (memo.length > diff) {
       num3 = memo.length - diff;
     }
-    obj = { hasOverflow: num3 > 0, showReplyForwardButtons: null, showThreadAsComments: null };
+    const obj = { hasOverflow: num3 > 0, showReplyForwardButtons: null, showThreadAsComments: null };
     let tmp5 = !tmp;
-    if (!flag2) {
+    if (!hideAdditionalButtons) {
       let tmp6 = stateFromStores;
       if (!stateFromStores) {
         tmp6 = canForwardMessage;
       }
       tmp5 = tmp6;
     }
-    obj[1] = tmp5;
-    obj[2] = obj.messageCount > 0;
+    obj.showReplyForwardButtons = tmp5;
+    obj.showThreadAsComments = obj3.messageCount > 0;
     return obj;
   }, items5);
   ({ hasOverflow, showReplyForwardButtons, showThreadAsComments } = memo2);
   const items6 = [id, itemType];
-  callback = obj1.useCallback((open_profile, actionParameters) => {
-    obj = message(flag2[37]);
-    obj.itemInteracted(id, itemType, open_profile);
-    obj = { itemId: id, itemType, actionParameters };
-    message(flag2[37]).feedItemActioned(obj);
+  handleItemInteracted = obj2.useCallback((open_profile, actionParameters) => {
+    ICYMIActionCreatorsDefault.itemInteracted(id, itemType, open_profile);
+    ICYMIActionCreatorsDefault.feedItemActioned({ itemId: id, itemType, actionParameters });
   }, items6);
-  const items7 = [channel.id, message.id, callback];
-  const items8 = [message, callback];
-  const callback1 = obj1.useCallback((byName) => {
+  const items7 = [channel.id, message.id, handleItemInteracted];
+  const items8 = [message, handleItemInteracted];
+  const callback1 = obj2.useCallback((byName, burst) => {
     callback("press_reaction", { actionGestureType: "press", actionTargetElement: "add_new_reaction_button", actionIntentType: "open", actionDestinationType: null });
-    id = message.id;
-    const id2 = guild.id;
+    id = channel.id;
+    const id2 = message.id;
     if (null != byName) {
-      obj = guild(flag2[10]);
-      const obj2 = guild(flag2[11]);
-      obj = { burst: null };
-      obj[0] = arg1;
-      obj2.addReaction(id, id2, obj.toReactionEmoji(byName), guild(flag2[11]).ReactionLocations.MESSAGE, obj);
-      const toReactionEmojiResult = obj.toReactionEmoji(byName);
+      const obj2 = ReactionActionCreators;
+      obj3 = { burst };
+      obj2.addReaction(id, id2, ReactionUtils.toReactionEmoji(byName), ReactionActionCreators.ReactionLocations.MESSAGE, obj3);
+      const toReactionEmojiResult = ReactionUtils.toReactionEmoji(byName);
     }
   }, items7);
-  const items9 = [channel, message, callback];
-  const callback2 = obj1.useCallback(() => {
+  const items9 = [channel, message, handleItemInteracted];
+  const callback2 = obj2.useCallback(() => {
     callback("press_forward", { actionGestureType: "press", actionTargetElement: "forward_button", actionIntentType: "share", actionDestinationType: "channel" });
-    obj = guild(flag2[38]);
-    obj = { message: guild, source: "icymi-tab" };
-    obj.openForwardModal(obj);
+    ForwardModalUtils.openForwardModal({ message, source: "icymi-tab" });
   }, items8);
   const items10 = [str, flag];
-  callback3 = obj1.useCallback(() => {
+  const callback3 = obj2.useCallback(() => {
     callback("press_reply", { actionGestureType: "press", actionTargetElement: "reply_button", actionIntentType: "reply", actionDestinationType: "channel" });
-    obj = guild(flag2[32]);
-    obj.navigateToPost(message.id, message.guild_id, guild.id);
-    obj = { channel: message, message: guild, shouldMention: true, showMentionToggle: true };
-    const pendingReply = guild(flag2[39]).createPendingReply(obj);
+    ICYMIShared.navigateToPost(channel.id, channel.guild_id, message.id);
+    const pendingReply = PendingReplyActionCreators.createPendingReply({ channel, message, shouldMention: true, showMentionToggle: true });
   }, items9);
-  const memo3 = obj1.useMemo(() => {
+  const memo3 = obj2.useMemo(() => {
     if (flag) {
-      return message(flag2[13]).colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT;
+      return nativeDefault.colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT;
     } else if ("primary" === "primary") {
-      return message(flag2[13]).colors.CARD_BACKGROUND_DEFAULT;
+      return nativeDefault.colors.CARD_BACKGROUND_DEFAULT;
     } else if ("secondary" === tmp) {
-      return message(flag2[13]).colors.CARD_SECONDARY_BG;
+      return nativeDefault.colors.CARD_SECONDARY_BG;
     } else if ("base" === tmp) {
-      return message(flag2[13]).colors.BACKGROUND_BASE_LOW;
+      return nativeDefault.colors.BACKGROUND_BASE_LOW;
     }
   }, items10);
-  const token = guild(flag2[40]).useToken(memo3);
-  const tmp2Result1 = guild(flag2[40]);
-  [tmp18, c12] = flag(obj1.useState(true), 2);
-  [][0] = callback;
-  const callback4 = obj1.useCallback((nativeEvent) => {
+  const tmp2Result3 = message(hideAdditionalButtons[16]);
+  const token = message(hideAdditionalButtons[40]).useToken(memo3);
+  const tmp2Result4 = message(hideAdditionalButtons[40]);
+  [tmp18, c12] = flag(str.useState(true), 2);
+  [][0] = handleItemInteracted;
+  const callback4 = obj2.useCallback((nativeEvent) => {
     nativeEvent = nativeEvent.nativeEvent;
     _undefined(nativeEvent.contentOffset.x + nativeEvent.layoutMeasurement.width < nativeEvent.contentSize.width);
   }, []);
   if (0 !== memo.length) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.emojisRowContainer;
+    let obj4 = { style: tmp.container, children: null };
+    const obj5 = { style: tmp.emojisRowContainer, children: null };
     if (memo.length > 0) {
-      let obj2 = { style: null, children: null };
+      const obj6 = { style: null, children: null };
       const items11 = [tmp.emojisContainer];
-      obj2[0] = items11;
-      let obj3 = { horizontal: true, scrollEnabled: null, contentContainerStyle: null, onScroll: null, onScrollEndDrag: null, showsHorizontalScrollIndicator: false, children: null };
-      obj3[1] = hasOverflow;
-      obj3[2] = { gap: 6 };
-      obj3[3] = callback4;
-      obj3[4] = tmp20;
+      obj6.style = items11;
+      const obj7 = { horizontal: true, scrollEnabled: hasOverflow, contentContainerStyle: { gap: 6 }, onScroll: callback4, onScrollEndDrag: tmp20, showsHorizontalScrollIndicator: false, children: null };
       let tmp25Result = !hideAdditionalButtons;
       if (!hideAdditionalButtons) {
         let tmp28 = showReplyForwardButtons;
@@ -566,39 +542,31 @@ export default function ICYMICardInteractionRow(message) {
         tmp25Result = tmp28;
       }
       if (tmp25Result) {
-        const obj4 = { style: null, children: null };
-        obj4[0] = tmp.replyForwardButtonContainer;
+        const obj8 = { style: tmp.replyForwardButtonContainer, children: null };
         if (showThreadAsComments) {
-          const obj5 = { threadData: null, parentMessage: null, handleItemInteracted: null };
-          obj5[0] = obj;
-          obj5[1] = message;
-          obj5[2] = callback;
-          showThreadAsComments = tmp22(ThreadAsCommentsButton, obj5);
+          const obj9 = { threadData: obj3, parentMessage: message, handleItemInteracted };
+          showThreadAsComments = tmp22(ThreadAsCommentsButton, obj9);
         }
         const items12 = [showThreadAsComments, ];
         if (showReplyForwardButtons) {
-          const obj6 = { children: null };
-          const obj7 = { onPress: null, disabled: null };
-          obj7[0] = callback3;
-          obj7[1] = !stateFromStores;
-          const items13 = [tmp22(ReplyButton, obj7), ];
-          const obj8 = { onPress: null, disabled: null };
-          obj8[0] = callback2;
-          obj8[1] = !canForwardMessage;
-          items13[1] = tmp22(ForwardButton, obj8);
-          obj6[0] = items13;
-          showReplyForwardButtons = tmp25(closure_18, obj6);
+          const obj10 = { children: null };
+          const obj11 = { onPress: callback3, disabled: !stateFromStores };
+          const items13 = [tmp22(ReplyButton, obj11), ];
+          const obj12 = { onPress: callback2, disabled: !canForwardMessage };
+          items13[1] = tmp22(ForwardButton, obj12);
+          obj10.children = items13;
+          showReplyForwardButtons = tmp25(closure_18, obj10);
         }
         items12[1] = showReplyForwardButtons;
-        obj4[1] = items12;
-        tmp25Result = tmp25(tmp23, obj4);
+        obj8.children = items12;
+        tmp25Result = tmp25(tmp23, obj8);
       }
       const items14 = [
         tmp25Result,
-        memo.map((reaction) => {
-              obj = { messageId: guild.id, channel: message, reaction, count: reaction.type === guild(flag2[34]).ReactionTypes.BURST ? reaction.burst_count : reaction.count, isBurstReaction: reaction.type === guild(flag2[34]).ReactionTypes.BURST, handleItemInteracted: callback };
-              obj = { children: tmp(closure_1_22, obj) };
-              return closure_1_16(id, obj, "reaction-" + arg1);
+        memo.map((reaction, index) => {
+              const obj = { messageId: message.id, channel, reaction, count: reaction.type === MessageReactionsTypes.ReactionTypes.BURST ? reaction.burst_count : reaction.count, isBurstReaction: reaction.type === MessageReactionsTypes.ReactionTypes.BURST, handleItemInteracted };
+              const obj2 = { children: value2(EmojiReaction, obj) };
+              return value2(hasOwnProperty, obj2, "reaction-" + index);
             }),
 
       ];
@@ -606,85 +574,76 @@ export default function ICYMICardInteractionRow(message) {
       if (!hideAdditionalButtons) {
         tmp22Result = null;
         if (memo1) {
-          const obj9 = { channel: null, onPressEmoji: null, handleItemInteracted: null };
-          obj9[0] = channel;
-          obj9[1] = callback1;
-          obj9[2] = callback;
-          tmp22Result = tmp22(AddEmojiButton, obj9);
+          const obj13 = { channel, onPressEmoji: callback1, handleItemInteracted };
+          tmp22Result = tmp22(AddEmojiButton, obj13);
         }
       }
       items14[2] = tmp22Result;
-      obj3[6] = items14;
-      const items15 = [closure_17(obj, obj3), ];
-      tmp25Result = null;
+      obj7.children = items14;
+      const items15 = [closure_17(obj3, obj7), ];
+      let tmp25Result3 = null;
       if (hasOverflow) {
-        tmp25Result = null;
+        tmp25Result3 = null;
         if (tmp18) {
-          const obj10 = { children: null };
-          const obj11 = { style: null, start: null, end: null, colors: null, locations: null };
-          obj11[0] = tmp.gradient;
-          ({ START: obj18[1], END: obj18[2] } = closure_14);
-          const tmp38 = message(tmp3[41]);
-          const obj19 = message(tmp3[42])(token);
-          const items16 = [message(tmp3[42])(token).alpha(0).hex(), token, token];
-          obj11[3] = items16;
-          obj11[4] = [0, 0.8, 1];
-          const items17 = [tmp22(tmp38, obj11), ];
-          const obj12 = { style: null, size: "xs", color: "icon-muted" };
+          const obj14 = { children: null };
+          const obj15 = { style: tmp.gradient, start: null, end: null, colors: null, locations: null };
+          ({ START: obj18.start, END: obj18.end } = closure_14);
+          const tmp38 = channel(tmp3[41]);
+          const obj19 = channel(tmp3[42])(token);
+          const items16 = [channel(tmp3[42])(token).alpha(0).hex(), token, token];
+          obj15.colors = items16;
+          obj15.locations = [0, 0.8, 1];
+          const items17 = [tmp22(tmp38, obj15), ];
+          const obj16 = { style: null, size: "xs", color: "icon-muted" };
           const items18 = [tmp.overflowChevron];
-          obj12[0] = items18;
-          items17[1] = tmp22(tmp2(tmp3[43]).ChevronSmallRightIcon, obj12);
-          obj10[0] = items17;
-          tmp25Result = tmp25(closure_18, obj10);
-          const alphaResult = message(tmp3[42])(token).alpha(0);
+          obj16.style = items18;
+          items17[1] = tmp22(tmp2(tmp3[43]).ChevronSmallRightIcon, obj16);
+          obj14.children = items17;
+          tmp25Result3 = tmp25(closure_18, obj14);
+          const alphaResult = channel(tmp3[42])(token).alpha(0);
         }
       }
-      items15[1] = tmp25Result;
-      obj2[1] = items15;
-      let tmp25Result1 = tmp25(tmp23, obj2);
-      const tmp26 = obj;
+      items15[1] = tmp25Result3;
+      obj6.children = items15;
+      let tmp25Result4 = tmp25(tmp23, obj6);
     } else {
-      tmp25Result1 = null;
+      tmp25Result4 = null;
     }
-    obj1[1] = tmp25Result1;
-    obj[1] = closure_16(id, obj1);
-    tmp22Result = tmp22(tmp23, obj);
+    obj5.children = tmp25Result4;
+    obj4.children = closure_16(id, obj5);
+    let tmp22Result2 = tmp22(tmp23, obj4);
   } else {
-    tmp22Result = null;
+    tmp22Result2 = null;
   }
-  return tmp22Result;
+  return tmp22Result2;
 };
-export const onAddReaction = function onAddReaction(arg0, arg1, byName) {
+export const onAddReaction = function onAddReaction(arg0, arg1, byName, burst) {
   if (null != byName) {
-    let obj = MAX_REACTIONS;
-    const obj2 = checkReactionResponse;
-    obj = { burst: null };
-    obj[0] = arg3;
-    obj2.addReaction(arg0, arg1, obj.toReactionEmoji(byName), checkReactionResponse.ReactionLocations.MESSAGE, obj);
-    const toReactionEmojiResult = obj.toReactionEmoji(byName);
+    const obj2 = ReactionActionCreators;
+    const obj3 = { burst };
+    obj2.addReaction(arg0, arg1, ReactionUtils.toReactionEmoji(byName), ReactionActionCreators.ReactionLocations.MESSAGE, obj3);
+    const toReactionEmojiResult = ReactionUtils.toReactionEmoji(byName);
   }
 };
-export const useThread = function useThread(id) {
-  const _require = id;
+export const useThread = function useThread(id, arg1, arg2) {
+  _require = id;
   closure_1 = arg1;
   dependencyMap = arg2;
-  const items = [closure_9, closure_8];
-  const stateFromStoresObject = _require(504).useStateFromStoresObject(items, () => {
-    if (null != message) {
-      if (null != guild) {
-        let channel = canForwardMessage.getChannel(tmp.id);
+  const items = [ChannelStore, ThreadMessageStore];
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
+    if (null != channel) {
+      if (null != message) {
+        channel = ChannelStore.getChannel(tmp.id);
         if (channel == null) {
           channel = null;
         }
-        obj = { thread: null, messageCount: null, mostRecentMessage: null };
-        obj[0] = channel;
-        let num = memo.getCount(tmp.id);
+        let obj = { thread: channel, messageCount: null, mostRecentMessage: null };
+        let num = ThreadMessageStore.getCount(tmp.id);
         if (num == null) {
           num = 0;
         }
-        obj[1] = num;
-        obj[2] = memo.getMostRecentMessage(tmp.id);
-        const obj2 = memo;
+        obj.messageCount = num;
+        obj.mostRecentMessage = ThreadMessageStore.getMostRecentMessage(tmp.id);
       }
       return obj;
     }
@@ -696,26 +655,22 @@ export const useThread = function useThread(id) {
     id = id.id;
   }
   const items1 = [id, arg2, arg1, id];
-  const effect = React.useEffect(() => {
-    obj = message;
-    let tmp = null != message;
+  const effect = noop.useEffect(() => {
+    let tmp = null != channel;
     if (tmp) {
-      tmp = null != guild;
+      tmp = null != message;
     }
     if (tmp) {
-      tmp = obj.hasFlag(_undefined.HAS_THREAD) || flag2;
-      const tmp4 = obj.hasFlag(_undefined.HAS_THREAD) || flag2;
+      tmp = obj.hasFlag(constants.HAS_THREAD) || hideAdditionalButtons;
+      const tmp4 = obj.hasFlag(constants.HAS_THREAD) || hideAdditionalButtons;
     }
     if (tmp) {
-      tmp = null == memo.getMostRecentMessage(obj.id);
+      tmp = null == ThreadMessageStore.getMostRecentMessage(obj.id);
     }
     if (tmp) {
-      message(flag2[17]).preload(guild.id, obj.id);
-      const obj2 = message(flag2[17]);
-      obj = { channelId: null, isPreload: true, limit: 25 };
-      obj[0] = obj.id;
-      const messages = message(flag2[18]).fetchMessages(obj);
-      const obj3 = message(flag2[18]);
+      ChannelActionCreatorsDefault.preload(message.id, obj.id);
+      const obj4 = { channelId: obj.id, isPreload: true, limit: 25 };
+      const messages = MessageActionCreatorsDefault.fetchMessages(obj4);
     }
   }, items1);
   return { thread, messageCount, mostRecentMessage };

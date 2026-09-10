@@ -1,71 +1,69 @@
-// Module ID: 13888
-// Function ID: 13889
+// Module ID: 13911
+// Function ID: 13912
 // Name: ActivateDeviceSuccess
-// Dependencies: [19, 17, 21, 4560, 1114, 9243, 5587, 1396, 13887, 4556, 4975, 2]
+// Dependencies: [19, 17, 21, 4574, 1114, 9270, 5601, 1396, 13910, 4570, 4989, 2]
 // Exports: ActivateDeviceSuccess
 
-// Module 13888 (ActivateDeviceSuccess)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import getAvatarURL from "getAvatarURL" /* 1396 */;
-import Text from "Text" /* 4556 */;
-import Button from "Button" /* 4975 */;
-import preloadDefault from "preload" /* 5587 */;
-import innerContentDefault from "innerContent" /* 13887 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13911 (ActivateDeviceSuccess)
+import util from "util" /* 1114 */;
+import AvatarUtils from "AvatarUtils" /* 1396 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import scopes2 from "scopes" /* 9270 */;
+import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles" /* 13910 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5, Fragment: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ image: { width: 300, height: 200, alignSelf: "center" } });
-const result = require("set").fileFinishedImporting("modules/activate_device/native/ActivateDeviceSuccess.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let closure_7 = createStyles.createStyles({ image: { width: 300, height: 200, alignSelf: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activate_device/native/ActivateDeviceSuccess.tsx");
 
 export const ActivateDeviceSuccess = function ActivateDeviceSuccess(onComplete) {
   ({ data, successImage } = onComplete);
   if (null != data.twoWayLinkCode) {
-    const intl2 = getSystemLocale.intl;
-    let stringResult = intl2.string(getSystemLocale.t.QhATl2);
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t.QhATl2);
   } else {
     const scopes = data.scopes;
     stringResult = null;
-    if (scopes.some((arg0) => callback(table[5]).isSocialLayerUmbrellaScope(arg0))) {
-      const intl = getSystemLocale.intl;
-      stringResult = intl.string(getSystemLocale.t.vBPvK3);
+    if (scopes.some((item) => scopes2.isSocialLayerUmbrellaScope(item))) {
+      const intl = util.intl;
+      stringResult = intl.string(util.t.vBPvK3);
     }
   }
   let tmp9 = null;
   if (null != successImage) {
-    let obj = { source: null, style: null, resizeMode: "contain" };
-    obj1 = getAvatarURL;
-    obj[0] = obj1.makeSource(successImage);
-    obj[1] = tmp.image;
-    tmp9 = callback(preloadDefault, obj);
-    const tmp13 = preloadDefault;
+    const obj = { source: null, style: null, resizeMode: "contain" };
+    const tmp13 = FastImageDefault;
+    obj.source = AvatarUtils.makeSource(successImage);
+    obj.style = tmp.image;
+    tmp9 = React4(tmp13, obj);
   }
   const items = [tmp9, , ];
-  obj = { style: innerContentDefault.innerContent, children: null };
-  obj = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: innerContentDefault.centerText, children: null };
-  const intl3 = getSystemLocale.intl;
-  obj[3] = intl3.string(getSystemLocale.t.qDtJmD);
-  const items1 = [callback(Text.Text, obj), ];
+  const obj3 = { style: ActivateDeviceSharedStylesDefault.innerContent, children: null };
+  const obj4 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: ActivateDeviceSharedStylesDefault.centerText, children: null };
+  const intl3 = util.intl;
+  obj4.children = intl3.string(util.t.qDtJmD);
+  const items1 = [React4(Text_Text.Text, obj4), ];
   let tmp18Result = null;
   if (null != stringResult) {
-    obj1 = { variant: "text-md/medium", color: "text-default", style: null, children: null };
-    obj1[2] = innerContentDefault.centerText;
-    obj1[3] = stringResult;
-    tmp18Result = tmp18(tmp19(4556).Text, obj1);
+    const obj5 = { variant: "text-md/medium", color: "text-default", style: ActivateDeviceSharedStylesDefault.centerText, children: stringResult };
+    tmp18Result = tmp18(tmp19(4570).Text, obj5);
   }
-  const obj2 = { children: null };
+  const obj6 = { children: null };
   items1[1] = tmp18Result;
-  obj[1] = items1;
-  items[1] = closure_5(View, obj);
-  const obj3 = { size: "lg", text: null, onPress: null, grow: true };
+  obj3.children = items1;
+  items[1] = hasOwnProperty(View, obj3);
+  const obj7 = { size: "lg", text: null, onPress: null, grow: true };
   const intl4 = tmp19(1114).intl;
-  obj3[1] = intl4.string(getSystemLocale.t.cpT0Cq);
-  obj3[2] = onComplete.onComplete;
-  items[2] = callback(Button.Button, obj3);
-  obj2[0] = items;
-  return closure_5(closure_6, obj2);
+  obj7.text = intl4.string(util.t.cpT0Cq);
+  obj7.onPress = onComplete.onComplete;
+  items[2] = React4(components_Button_Button.Button, obj7);
+  obj6.children = items;
+  return hasOwnProperty(timestampProducer, obj6);
 };

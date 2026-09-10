@@ -1,44 +1,30 @@
-// Module ID: 15580
-// Function ID: 15581
-// Name: pressable
-// Dependencies: [15581, 11473, 15578, 14584, 14845, 2]
+// Module ID: 15610
+// Function ID: 15611
+// Name: ShowDevToolsSetting
+// Dependencies: [15611, 11500, 15608, 14609, 14871, 2]
 
-// Module 15580 (pressable)
-import set from "set" /* 2 */;
-import navigateToDevTools from "navigateToDevTools" /* 14584 */;
-import useStaffOrDeveloperSettingPredicate from "useStaffOrDeveloperSettingPredicate" /* 14845 */;
-import StaffBadgeIcon from "StaffBadgeIcon" /* 15578 */;
-import DevToolsScreens from "DevToolsScreens" /* 15581 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15610 (ShowDevToolsSetting)
+import DevToolsNavigator from "DevToolsNavigator" /* 14609 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14871 */;
+import StaffBadgeIcon from "StaffBadgeIcon" /* 15608 */;
+import DevToolsScreens from "DevToolsScreens" /* 15611 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-const pressable = createToggle.createPressable({
+const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "Show Dev Tools";
   },
   parent: null,
   IconComponent: StaffBadgeIcon.StaffBadgeIcon,
-  onPress: navigateToDevTools.navigateToDevTools,
-  usePredicate: useStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate,
+  onPress: DevToolsNavigator.navigateToDevTools,
+  usePredicate: useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate,
   useSearchTerms: function getAdditionalSearchTerms() {
     const items = [...Object.values(DevToolsScreens.DevToolsScreens), ...Object.values(DevToolsScreens.PerformanceTestingScreens)];
     return items.map((headerTitle) => headerTitle.headerTitle);
   },
   withArrow: true
 });
-const obj = {
-  useTitle() {
-    return "Show Dev Tools";
-  },
-  parent: null,
-  IconComponent: StaffBadgeIcon.StaffBadgeIcon,
-  onPress: navigateToDevTools.navigateToDevTools,
-  usePredicate: useStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate,
-  useSearchTerms: function getAdditionalSearchTerms() {
-    const items = [...Object.values(DevToolsScreens.DevToolsScreens), ...Object.values(DevToolsScreens.PerformanceTestingScreens)];
-    return items.map((headerTitle) => headerTitle.headerTitle);
-  },
-  withArrow: true
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/ShowDevToolsSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ShowDevToolsSetting.tsx");
 
 export default pressable;

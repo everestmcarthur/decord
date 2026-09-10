@@ -1,91 +1,74 @@
-// Module ID: 12731
-// Function ID: 12732
+// Module ID: 12757
+// Function ID: 12758
 // Name: HubEmailConnectionModal
-// Dependencies: [19, 12723, 21, 4560, 5682, 5624, 12732, 1250, 12735, 12738, 12740, 12741, 12742, 12745, 7123, 1483, 5598, 12747, 7000, 1114, 2]
+// Dependencies: [19, 12749, 21, 4574, 5696, 5638, 12758, 1250, 12761, 12764, 12766, 12767, 12768, 12771, 7137, 1483, 5612, 12773, 7014, 1114, 2]
 // Exports: HubEmailConnectionScreen, default
 
-// Module 12731 (HubEmailConnectionModal)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 12757 (HubEmailConnectionModal)
+import util from "util" /* 1114 */;
 import useNavigation from "useNavigation" /* 1483 */;
-import useInitialValueDefault from "useInitialValue" /* 5598 */;
-import NavigationStack from "NavigationStack" /* 7000 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
-import { HubEmailConnectionSteps } from "HubEmailConnectionSteps" /* 12723 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import useInitialValueDefault from "useInitialValue" /* 5612 */;
+import NavigatorHeader from "NavigatorHeader" /* 5638 */;
+import Navigator from "Navigator" /* 7014 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7137 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { safeArea: null };
-createCacheKey = { marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, flex: 1 };
-createCacheKey[0] = createCacheKey;
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/hub/native/components/HubEmailConnectionModal.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const HubEmailConnectionSteps = fn(12749).HubEmailConnectionSteps;
+let jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { safeArea: { marginTop: fn(5696).NAV_BAR_HEIGHT, flex: 1 } };
+let closure_5 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/hub/native/components/HubEmailConnectionModal.tsx");
 
 export default function HubEmailConnectionModal(arg0) {
   ({ isNestedNavigator: require, onCloseExtra: importDefault, invite: dependencyMap, displayStudentPrompt: HubEmailConnectionSteps } = arg0);
-  jsx = undefined;
-  let obj = useNavigation;
-  jsx = obj.useNavigation();
+  jsx = useNavigation.useNavigation();
   ({ screens, initialRouteStack } = useInitialValueDefault(() => {
     function handleClose() {
       let flag = arg0;
       if (arg0 === undefined) {
         flag = false;
       }
-      if (closure_1 != null) {
+      if (closure_1_1 != null) {
         tmp(true === flag);
       }
-      if (closure_0) {
+      if (closure_1_0) {
         navigation.goBack();
       } else {
-        closure_1_1(closure_1_2[17]).close();
-        const obj = closure_1_1(closure_1_2[17]);
+        require("HubEmailConnectionModalActionCreators").close();
+        const obj = require("HubEmailConnectionModalActionCreators");
       }
     }
     const items = [];
     const push = items.push;
     let obj = { name: null, params: null };
-    if (closure_3) {
-      obj[0] = tmp.STUDENT_PROMPT;
-      obj = { onClose: null };
-      obj[0] = handleClose;
-      obj[1] = obj;
+    if (closure_1_3) {
+      obj.name = tmp.STUDENT_PROMPT;
+      const obj2 = { onClose: handleClose };
+      obj.params = obj2;
       push(obj);
     } else {
-      obj[0] = tmp.VERIFY_EMAIL;
-      obj = { invite: null, onClose: null };
-      obj[0] = closure_2;
-      obj[1] = handleClose;
-      obj[1] = obj;
+      obj.name = tmp.VERIFY_EMAIL;
+      const obj3 = { invite, onClose: handleClose };
+      obj.params = obj3;
       push(obj);
     }
-    let obj3 = closure_1_0(closure_1_2[5]);
-    if (closure_0) {
-      let headerBackButton = obj3.getHeaderBackButton(handleClose);
-      let tmp8 = tmp6;
+    const obj4 = NavigatorHeader;
+    if (closure_1_0) {
+      let headerBackButton = obj4.getHeaderBackButton(handleClose);
       let tmp9 = tmp5;
     } else {
-      headerBackButton = obj3.getHeaderCloseButton(handleClose);
-      tmp8 = tmp6;
+      headerBackButton = obj4.getHeaderCloseButton(handleClose);
       tmp9 = tmp5;
     }
-    obj1 = { screens: null, initialRouteStack: null };
-    const obj2 = { [closure_1_3.STUDENT_PROMPT]: obj3 };
-    obj3 = {
-      fullscreen: true,
-      headerLeft: headerBackButton,
-      headerTitle() {
-        return null;
-      },
-      render(arg0) {
-        const merged = Object.assign(arg0);
-        return navigation(callback(12732), {});
-      }
-    };
-    obj2[closure_1_3.VERIFY_EMAIL] = {
-      impressionName: tmp9(tmp8[7]).ImpressionNames.HUB_EMAIL_SIGNUP,
+    const obj5 = { screens: null, initialRouteStack: null };
+    const obj6 = { [closure_2_3.STUDENT_PROMPT]: obj7 };
+    obj6[HubEmailConnectionSteps.VERIFY_EMAIL] = {
+      impressionName: tmp9(1250).ImpressionNames.HUB_EMAIL_SIGNUP,
       impressionProperties(invite) {
         return { has_invite: null != invite.invite };
       },
@@ -96,67 +79,67 @@ export default function HubEmailConnectionModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(callback(12735), {});
+        return navigation(closure_1_1(12761), {});
       }
     };
-    obj2[closure_1_3.EMAIL_WAITLIST] = {
+    obj6[HubEmailConnectionSteps.EMAIL_WAITLIST] = {
       fullscreen: true,
       headerTitle() {
         return null;
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(callback(12738), {});
+        return navigation(closure_1_1(12764), {});
       }
     };
-    obj2[closure_1_3.SUBMIT_SCHOOL] = {
+    obj6[HubEmailConnectionSteps.SUBMIT_SCHOOL] = {
       fullscreen: true,
       headerTitle() {
         return null;
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(callback(12740), {});
+        return navigation(closure_1_1(12766), {});
       }
     };
-    obj2[closure_1_3.SELECT_SCHOOL] = {
+    obj6[HubEmailConnectionSteps.SELECT_SCHOOL] = {
       fullscreen: true,
       headerTitle() {
         return null;
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(callback(12741), {});
+        return navigation(closure_1_1(12767), {});
       }
     };
-    obj2[closure_1_3.VERIFY_PIN] = {
+    obj6[HubEmailConnectionSteps.VERIFY_PIN] = {
       fullscreen: true,
       headerTitle() {
         return null;
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(callback(12742), {});
+        return navigation(closure_1_1(12768), {});
       }
     };
-    obj2[closure_1_3.SELECT_SCHOOL_SEARCH] = {
+    obj6[HubEmailConnectionSteps.SELECT_SCHOOL_SEARCH] = {
       fullscreen: true,
       headerShown: false,
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(callback(12745), {});
+        return navigation(closure_1_1(12771), {});
       }
     };
-    obj1[0] = obj2;
-    obj1[1] = items;
-    return obj1;
+    obj5.screens = obj6;
+    obj5.initialRouteStack = items;
+    return obj5;
   }));
-  obj = { screens, initialRouteStack, headerBackTitle: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t["13/7kX"]);
-  return jsx(NavigationStack.Navigator, { screens, initialRouteStack, headerBackTitle: null });
+  let obj2 = { screens, initialRouteStack, headerBackTitle: null };
+  const intl = util.intl;
+  obj2.headerBackTitle = intl.string(util.t["13/7kX"]);
+  return jsx(Navigator.Navigator, { screens, initialRouteStack, headerBackTitle: null });
 };
 export const HubEmailConnectionScreen = function HubEmailConnectionScreen(children) {
-  const tmp = callback();
-  return jsx(SafeAreaPaddingView.SafeAreaPaddingView, { top: true, style: callback().safeArea, children: children.children });
+  const tmp = closure_5();
+  return jsx(common_SafeAreaView.SafeAreaPaddingView, { top: true, style: closure_5().safeArea, children: children.children });
 };

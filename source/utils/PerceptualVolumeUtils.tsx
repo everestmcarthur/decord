@@ -1,13 +1,13 @@
-// Module ID: 5015
-// Function ID: 5016
-// Name: perceptualToAmplitude
-// Dependencies: [2, 5016]
+// Module ID: 5029
+// Function ID: 5030
+// Name: PerceptualVolumeUtils
+// Dependencies: [2, 5030]
 
-// Module 5015 (perceptualToAmplitude)
-import set from "set" /* 2 */;
-import perceptualToAmplitude from "perceptualToAmplitude" /* 5016 */;
+// Module 5029 (PerceptualVolumeUtils)
+import perceptual_volume_PerceptualVolumeUtils from "perceptual_volume/PerceptualVolumeUtils" /* 5030 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("utils/PerceptualVolumeUtils.tsx");
+const result = size.fileFinishedImporting("utils/PerceptualVolumeUtils.tsx");
 
-export const perceptualToAmplitude = perceptualToAmplitude.perceptualToAmplitude;
-export const amplitudeToPerceptual = perceptualToAmplitude.amplitudeToPerceptual;
+export const perceptualToAmplitude = perceptual_volume_PerceptualVolumeUtils.perceptualToAmplitude;
+export const amplitudeToPerceptual = perceptual_volume_PerceptualVolumeUtils.amplitudeToPerceptual;

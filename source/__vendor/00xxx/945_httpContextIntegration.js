@@ -4,15 +4,15 @@
 // Dependencies: [682, 893]
 
 // Module 945 (httpContextIntegration)
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 682 */;
+import ignoreNextOnError from "ignoreNextOnError" /* 893 */;
+import registerSpanErrorInstrumentation from "module_682" /* 682 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const httpContextIntegration = registerSpanErrorInstrumentation.defineIntegration(() => ({
   name: "HttpContext",
   preprocessEvent(request) {
-    const httpRequestData = callback(table[1]).getHttpRequestData();
-    let obj = {};
+    const httpRequestData = ignoreNextOnError.getHttpRequestData();
     const merged = Object.assign(httpRequestData.headers);
     request = request.request;
     let headers;
@@ -20,10 +20,10 @@ export const httpContextIntegration = registerSpanErrorInstrumentation.defineInt
       headers = request.headers;
     }
     const merged1 = Object.assign(headers);
-    obj = {};
+    const obj2 = {};
     const merged2 = Object.assign(httpRequestData);
     const merged3 = Object.assign(request.request);
-    obj.headers = obj;
-    request.request = obj;
+    obj2.headers = {};
+    request.request = obj2;
   }
 }));

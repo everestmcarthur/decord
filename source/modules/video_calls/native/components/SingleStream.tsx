@@ -1,44 +1,45 @@
-// Module ID: 10030
-// Function ID: 10031
+// Module ID: 10057
+// Function ID: 10058
 // Name: SingleStream
-// Dependencies: [19, 9472, 21, 9599, 9609, 4761, 2]
+// Dependencies: [19, 9499, 21, 9626, 9636, 4775, 2]
 // Exports: default
 
-// Module 10030 (SingleStream)
-import noopAll from "noop" /* 19 */;
-import StreamTextOverlayDefault from "StreamTextOverlay" /* 9599 */;
-import VoiceChatDrawerState from "VoiceChatDrawerState" /* 9472 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 10057 (SingleStream)
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4775 */;
+import StreamTileDefault from "StreamTile" /* 9626 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ toggleFocus: c3, resetFocus: c4 } = VoiceChatDrawerState);
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/SingleStream.tsx");
+const require = fn;
+const ChannelCallStore = fn(9499);
+({ toggleFocus: c3, resetFocus: closure_4 } = ChannelCallStore);
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/components/SingleStream.tsx");
 
 export default function SingleStream(channel) {
   channel = channel.channel;
   const obj = {
     gestureEnabled: true,
-    resizeMode: channel(9609).ResizeMode.CONTAIN,
+    resizeMode: channel(9636).ResizeMode.CONTAIN,
     onSingleTap() {
-      callback();
+      closure_1_3();
     },
     onDoubleTap() {
-      closure_1_4();
-      const participant = closure_1_1(closure_1_2[5]).selectParticipant(channel.id, null);
+      React4();
+      const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
     },
     participant: channel.participant,
     style: { flex: 1 }
   };
-  return jsx(StreamTextOverlayDefault, {
+  return jsx(StreamTileDefault, {
     gestureEnabled: true,
-    resizeMode: channel(9609).ResizeMode.CONTAIN,
+    resizeMode: channel(9636).ResizeMode.CONTAIN,
     onSingleTap() {
-      callback();
+      closure_1_3();
     },
     onDoubleTap() {
-      closure_1_4();
-      const participant = closure_1_1(closure_1_2[5]).selectParticipant(channel.id, null);
+      React4();
+      const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
     },
     participant: channel.participant,
     style: { flex: 1 }

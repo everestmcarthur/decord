@@ -1,33 +1,33 @@
-// Module ID: 15893
-// Function ID: 15894
-// Name: route
-// Dependencies: [7975, 1074, 11473, 1114, 5081, 15894, 2]
+// Module ID: 15923
+// Function ID: 15924
+// Name: ParentalControlsSensitiveContentFilterSetting
+// Dependencies: [7989, 1074, 11500, 1114, 5095, 15924, 2]
 
-// Module 15893 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 5081 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15923 (ParentalControlsSensitiveContentFilterSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 5095 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const require = globalThis.__r;
+
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["Hj/But"]);
+    const intl = util.intl;
+    return intl.string(util.t["Hj/But"]);
   },
   IconComponent: ImageWarningIcon.ImageWarningIcon,
-  parent: MobileUserSettings.MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
-  screen: obj,
+  parent: SettingsConstants.MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  screen: {
+    route: Constants.UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
+    getComponent() {
+      return require("ParentalControlsSensitiveContentFiltersScreen").default;
+    }
+  },
   unsearchable: true
-};
-obj = {
-  route: ME.UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
-  getComponent() {
-    return require(15894) /* UserSettingsSensitiveContentFilters */.default;
-  }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsSensitiveContentFilterSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsSensitiveContentFilterSetting.tsx");
 
 export default route;

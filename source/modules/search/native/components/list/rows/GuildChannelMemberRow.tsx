@@ -1,18 +1,18 @@
-// Module ID: 16681
-// Function ID: 16682
+// Module ID: 16718
+// Function ID: 16719
 // Name: GuildChannelMemberRow
-// Dependencies: [19, 21, 10873, 2]
+// Dependencies: [19, 21, 10900, 2]
 // Exports: default
 
-// Module 16681 (GuildChannelMemberRow)
-import noopAll from "noop" /* 19 */;
-import UserRowSubLabelDefault from "UserRowSubLabel" /* 10873 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16718 (GuildChannelMemberRow)
+import UserRowDefault from "UserRow" /* 10900 */;
+import noop from "module_19" /* 19 */;
 
-noopAll;
-const result = require("set").fileFinishedImporting("modules/search/native/components/list/rows/GuildChannelMemberRow.tsx");
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/list/rows/GuildChannelMemberRow.tsx");
 
 export default function GuildChannelMemberRow(arg0) {
   const merged = Object.assign(arg0);
-  return jsx(UserRowSubLabelDefault, {});
+  return jsx(UserRowDefault, {});
 };

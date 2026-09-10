@@ -1,12 +1,12 @@
-// Module ID: 12506
-// Function ID: 12507
-// Name: getUnitId
+// Module ID: 12532
+// Function ID: 12533
+// Name: BoostToUnlockMobileCoachmarkExperiment
 // Dependencies: [1434, 2]
 
-// Module 12506 (getUnitId)
-import getUnitIdDefault from "getUnitId" /* 1434 */;
+// Module 12532 (BoostToUnlockMobileCoachmarkExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
 
-const tmp2 = getUnitIdDefault({ name: "2026-03-boost-to-unlock-mobile-coachmark", kind: "user", defaultConfig: { showCoachmark: false }, variations: { 0: { showCoachmark: false }, 1: { showCoachmark: true } } });
-const result = require("set").fileFinishedImporting("modules/guild_boosting/experiments/BoostToUnlockMobileCoachmarkExperiment.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_boosting/experiments/BoostToUnlockMobileCoachmarkExperiment.tsx");
 
-export default tmp2;
+export default apex_ApexExperimentDefault({ name: "2026-03-boost-to-unlock-mobile-coachmark", kind: "user", defaultConfig: { showCoachmark: false }, variations: { 0: { showCoachmark: false }, 1: { showCoachmark: true } } });

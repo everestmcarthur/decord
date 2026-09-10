@@ -1,22 +1,25 @@
-// Module ID: 7104
-// Function ID: 7105
-// Name: waitForOnboardingCompletion
-// Dependencies: [2021, 4187, 1384, 7105, 2]
+// Module ID: 7118
+// Function ID: 7119
+// Name: doGuildOnboardingHelpers
+// Dependencies: [2021, 4200, 1384, 7119, 2]
 // Exports: waitForOnboardingCompletion
 
-// Module 7104 (waitForOnboardingCompletion)
-import closure_3 from "trackCommunicationDisabled" /* 2021 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4187 */;
+// Module 7118 (doGuildOnboardingHelpers)
+import FlagUtils from "FlagUtils" /* 1384 */;
+import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7119 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/guild_onboarding/doGuildOnboardingHelpers.tsx");
+require = fn;
+const GuildMemberFlags = fn(4200).GuildMemberFlags;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_onboarding/doGuildOnboardingHelpers.tsx");
 
 export const waitForOnboardingCompletion = function waitForOnboardingCompletion(arg0) {
   closure_0 = arg0;
   return new Promise((arg0) => {
     closure_0 = arg0;
-    const result = closure_1_3.addConditionalChangeListener(() => {
-      const selfMember = closure_2_3.getSelfMember(callback);
+    const result = GuildMemberStore.addConditionalChangeListener(() => {
+      const selfMember = GuildMemberStore.getSelfMember(closure_0);
       let num;
       if (selfMember != null) {
         num = selfMember.flags;
@@ -24,13 +27,12 @@ export const waitForOnboardingCompletion = function waitForOnboardingCompletion(
       if (num == null) {
         num = 0;
       }
-      const hasFlagResult = callback(closure_2_2[2]).hasFlag(num, closure_2_4.COMPLETED_ONBOARDING);
+      const hasFlagResult = FlagUtils.hasFlag(num, GuildMemberFlags.COMPLETED_ONBOARDING);
       let flag = !hasFlagResult;
       if (hasFlagResult) {
-        closure_2_1(closure_2_2[3]).finishOnboarding(callback);
-        callback();
+        GuildOnboardingActionCreatorsDefault.finishOnboarding(closure_0);
+        closure_0();
         flag = false;
-        const obj2 = closure_2_1(closure_2_2[3]);
       }
       return flag;
     });

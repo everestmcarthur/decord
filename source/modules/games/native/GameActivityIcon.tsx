@@ -1,30 +1,31 @@
-// Module ID: 9188
-// Function ID: 9189
-// Dependencies: [19, 17, 21, 4560, 576, 4271, 8568, 4411, 5587, 1396, 2]
+// Module ID: 9215
+// Function ID: 9216
+// Name: GameActivityIcon
+// Dependencies: [19, 17, 21, 4574, 576, 4284, 8596, 4425, 5601, 1396, 2]
 
-// Module 9188
-import ThemesDefault from "Themes" /* 576 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9215 (GameActivityIcon)
+import nativeDefault from "native" /* 576 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
-let obj = { icon: null };
-obj = { borderRadius: ThemesDefault.radii.xs };
-obj[0] = obj;
-let closure_6 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function GameActivityIcon(style) {
+const require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+const obj = { icon: { borderRadius: nativeDefault.radii.xs } };
+let closure_6 = createStyles.createStyles(obj);
+let obj3 = { borderRadius: nativeDefault.radii.xs };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/games/native/GameActivityIcon.tsx");
+
+export default noop.memo(function GameActivityIcon(style) {
   ({ game, size, onShown } = style);
   style = style.style;
-  let iconURL;
-  const tmp = callback();
-  let obj = onShown(4271);
-  iconURL = game.getIconURL(size);
-  obj = { width: size, height: size };
+  const tmp = closure_6();
+  const iconURL = game.getIconURL(size);
+  const size1 = { width: size, height: size };
   const items = [iconURL, onShown];
-  const effect = importAllResult.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (null != iconURL) {
       if (onShown != null) {
         tmp();
@@ -35,32 +36,27 @@ const memoResult = importAllResult.memo(function GameActivityIcon(style) {
     if ("none" === style.fallback) {
       return null;
     } else {
-      obj = { size: "custom", style: null, color: null };
-      const items1 = [tmp.icon, obj];
-      obj[1] = items1;
-      let tmp2Result = tmp2(4411);
-      const colors = iconURL(576).colors;
-      obj[2] = tmp2Result.isThemeDark(obj.useThemeContext().theme) ? colors.WHITE : colors.BLACK;
-      jsx(tmp2(8568).UnknownGameIcon, { size: "custom", style: null, color: null });
-      const isThemeDarkResult = tmp2Result.isThemeDark(obj.useThemeContext().theme);
+      const obj2 = { size: "custom", style: null, color: null };
+      const items1 = [tmp.icon, size1];
+      obj2.style = items1;
+      const tmp2Result = tmp2(4425);
+      const colors = nativeDefault.colors;
+      obj2.color = tmp2(4425).isThemeDark(obj.useThemeContext().theme) ? colors.WHITE : colors.BLACK;
+      jsx(tmp2(8596).UnknownGameIcon, { size: "custom", style: null, color: null });
+      const isThemeDarkResult = tmp2(4425).isThemeDark(obj.useThemeContext().theme);
     }
   } else {
-    obj1 = { source: null, style: null };
-    tmp2Result = tmp2(1396);
-    obj1[0] = tmp2Result.makeSource(iconURL);
-    const items2 = [tmp.icon, obj];
-    obj1[1] = items2;
-    const tmp9 = jsx(iconURL(5587), { source: null, style: null });
+    const obj3 = { source: null, style: null };
+    const tmp6 = jsx;
+    obj3.source = tmp2(1396).makeSource(iconURL);
+    const items2 = [tmp.icon, size1];
+    obj3.style = items2;
+    const tmp9 = <tmp8 source={null} style={null} />;
     let tmp6Result = tmp9;
     if (null != style) {
-      const obj2 = { style: null, children: null };
-      obj2[0] = style;
-      obj2[1] = tmp9;
-      tmp6Result = <View style={null}>{null}</View>;
+      const obj4 = { style, children: tmp9 };
+      tmp6Result = tmp6(View, obj4);
     }
     return tmp6Result;
   }
 });
-const result = require("set").fileFinishedImporting("modules/games/native/GameActivityIcon.tsx");
-
-export default memoResult;

@@ -1,19 +1,19 @@
-// Module ID: 11423
-// Function ID: 11424
+// Module ID: 11450
+// Function ID: 11451
 // Name: UnreadSettingNoticeImpressionTracking
-// Dependencies: [8773, 1250, 2]
+// Dependencies: [8801, 1250, 2]
 // Exports: default
 
-// Module 11423 (UnreadSettingNoticeImpressionTracking)
-import set from "set" /* 2 */;
-import encodeProperties from "encodeProperties" /* 1250 */;
-import trackImpressionDefault from "trackImpression" /* 8773 */;
+// Module 11450 (UnreadSettingNoticeImpressionTracking)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8801 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/notifications/settings_unread_notice/UnreadSettingNoticeImpressionTracking.tsx");
+const result = size.fileFinishedImporting("modules/notifications/settings_unread_notice/UnreadSettingNoticeImpressionTracking.tsx");
 
 export default function UnreadSettingNoticeImpressionTracking(id) {
-  const obj = { type: encodeProperties.ImpressionTypes.VIEW, name: encodeProperties.ImpressionNames.NOTIFICATION_SETTING_UNREAD_NUDGE };
+  const obj = { type: discord_common_AnalyticsUtils.ImpressionTypes.VIEW, name: discord_common_AnalyticsUtils.ImpressionNames.NOTIFICATION_SETTING_UNREAD_NUDGE };
   const items = [id.id];
-  trackImpressionDefault(obj, undefined, items);
+  useTrackImpressionDefault(obj, undefined, items);
   return null;
 };

@@ -1,26 +1,24 @@
-// Module ID: 7544
-// Function ID: 7545
-// Name: fromServer
-// Dependencies: [32, 7545, 7546, 7551, 1076, 1074, 5513, 1889, 2]
+// Module ID: 7558
+// Function ID: 7559
+// Name: CollectiblesProductRecord
+// Dependencies: [32, 7559, 7560, 7565, 1076, 1074, 5527, 1889, 2]
 
-// Module 7544 (fromServer)
-import getPricesFromServerDefault from "getPricesFromServer" /* 5513 */;
-import fromServerDefault from "fromServer" /* 7551 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "fromServer" /* 7545 */;
-import createCollectiblesItemsFromServerResponse from "createCollectiblesItemsFromServerResponse" /* 7546 */;
-import { REWARD_CATEGORY_AND_REWARD_SKU_IDS as closure_7 } from "items" /* 1076 */;
-import ME from "ME" /* 1074 */;
+// Module 7558 (CollectiblesProductRecord)
+import getPricesFromServerDefault from "getPricesFromServer" /* 5527 */;
+import _slicedToArray from "module_32" /* 32 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7559 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7565 */;
 
-const require = arg1;
-({ createCollectiblesItemsFromServerResponse: c5, transformSKUToCollectiblesItem: closure_6 } = createCollectiblesItemsFromServerResponse);
-fromServerDefault;
-({ PREMIUM_TYPE_NONE: closure_8, PriceSetAssignmentPurchaseTypes: c9 } = ME);
+const require = fn;
+const CollectiblesItemRecord = fn(7560);
+({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } = CollectiblesItemRecord);
+let closure_7 = fn(1076).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
+const Constants = fn(1074);
+({ PREMIUM_TYPE_NONE: closure_8, PriceSetAssignmentPurchaseTypes: closure_9 } = Constants);
 let CollectiblesProductRecord;
 class CollectiblesProductRecord extends tmp3 {
   constructor(arg0) {
     tmp = new CollectiblesProductRecord(global, new.target);
-    // ThrowIfThisInitialized (0x7c)
     ({ summary: tmp.summary, type: tmp.type, premiumType: tmp.premiumType, items: tmp.items, categorySkuId: tmp.categorySkuId, isCategoryReward: tmp.isCategoryReward, prices: tmp.prices, bundledProducts: tmp.bundledProducts, previewAssets: tmp.previewAssets, googleSkuIds: tmp.googleSkuIds, variants: tmp.variants, eligibleOffers: tmp.eligibleOffers, badgeOverride: tmp.badgeOverride, hideBadge: tmp.hideBadge, isFirstParty: tmp.isFirstParty, baseVariantName: tmp.baseVariantName, variantLabel: tmp.variantLabel } = global);
     return tmp;
   }
@@ -28,32 +26,31 @@ class CollectiblesProductRecord extends tmp3 {
 CollectiblesProductRecord["fromServer"] = function fromServer(arg0) {
   ({ premium_type, bundled_products, preview_assets, variants } = arg0);
   ({ type, category_sku_id, prices, badge_override, hide_badge, is_first_party } = arg0);
-  let obj = Object.create(null);
-  const merged = Object.assign(arg0, obj);
-  obj = {};
-  let tmp4 = CollectiblesProductRecord;
-  const fromServerResult = super.fromServer(merged);
-  const merged1 = Object.assign(fromServerResult);
+  const merged = Object.assign({ type: 0, premium_type: 0, category_sku_id: 0, prices: 0, bundled_products: 0, preview_assets: 0, variants: 0, badge_override: 0, hide_badge: 0, is_first_party: 0 });
+  const merged1 = Object.assign(arg0, merged);
+  const obj = {};
+  const fromServerResult = super.fromServer(merged1);
+  const merged2 = Object.assign(fromServerResult);
   obj.type = type;
   let tmp8 = null;
-  if (premium_type !== closure_8) {
+  if (premium_type !== React6) {
     tmp8 = premium_type;
   }
   obj.premiumType = tmp8;
   obj.categorySkuId = category_sku_id;
-  obj.isCategoryReward = closure_7.some((rewardSkuId) => rewardSkuId.rewardSkuId === merged.sku_id);
+  obj.isCategoryReward = closure_7.some((rewardSkuId) => rewardSkuId.rewardSkuId === merged1.sku_id);
   obj.prices = getPricesFromServerDefault(prices);
-  obj.items = callback2(merged.items);
+  obj.items = hasOwnProperty(merged1.items);
   let mapped;
   if (bundled_products != null) {
-    mapped = bundled_products.map(fromServer.fromServer);
+    mapped = bundled_products.map(CollectiblesBundledProductRecord.fromServer);
   }
   obj.bundledProducts = mapped;
   let tmp11;
   if (null != preview_assets) {
-    obj = { fgStatic: null, fgAnimated: null, bgStatic: null, bgAnimated: null };
-    ({ fg_static: obj2[0], fg_animated: obj2[1], bg_static: obj2[2], bg_animated: obj2[3] } = preview_assets);
-    tmp11 = obj;
+    ({ fg_static: obj2.fgStatic, fg_animated: obj2.fgAnimated, bg_static: obj2.bgStatic, bg_animated: obj2.bgAnimated } = preview_assets);
+    tmp11 = { fgStatic: null, fgAnimated: null, bgStatic: null, bgAnimated: null };
+    const obj3 = { fgStatic: null, fgAnimated: null, bgStatic: null, bgAnimated: null };
   }
   obj.previewAssets = tmp11;
   let mapped1;
@@ -61,20 +58,23 @@ CollectiblesProductRecord["fromServer"] = function fromServer(arg0) {
     mapped1 = variants.map(prototype.fromServer);
   }
   obj.variants = mapped1;
-  ({ google_sku_ids: obj.googleSkuIds, eligible_offers: obj.eligibleOffers } = merged);
+  ({ google_sku_ids: obj.googleSkuIds, eligible_offers: obj.eligibleOffers } = merged1);
   obj.badgeOverride = badge_override;
   obj.hideBadge = hide_badge;
   obj.isFirstParty = is_first_party;
-  if (typeof CollectiblesProductRecord !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof tmp3 === "function") {
+    const tmp42 = new tmp4(obj, fromServerResult, merged, this, tmp7);
+    ({ summary: tmp17.summary, type: tmp17.type, premiumType: tmp17.premiumType, items: tmp17.items, categorySkuId: tmp17.categorySkuId, isCategoryReward: tmp17.isCategoryReward, prices: tmp17.prices, bundledProducts: tmp17.bundledProducts, previewAssets: tmp17.previewAssets, googleSkuIds: tmp17.googleSkuIds, variants: tmp17.variants, eligibleOffers: tmp17.eligibleOffers, badgeOverride: tmp17.badgeOverride, hideBadge: tmp17.hideBadge, isFirstParty: tmp17.isFirstParty, baseVariantName: tmp17.baseVariantName, variantLabel: tmp17.variantLabel } = obj);
+    return tmp42;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  tmp4 = new tmp4(obj, fromServerResult, obj, this, closure_8);
-  // ThrowIfThisInitialized (0x7c)
-  ({ summary: tmp14.summary, type: tmp14.type, premiumType: tmp14.premiumType, items: tmp14.items, categorySkuId: tmp14.categorySkuId, isCategoryReward: tmp14.isCategoryReward, prices: tmp14.prices, bundledProducts: tmp14.bundledProducts, previewAssets: tmp14.previewAssets, googleSkuIds: tmp14.googleSkuIds, variants: tmp14.variants, eligibleOffers: tmp14.eligibleOffers, badgeOverride: tmp14.badgeOverride, hideBadge: tmp14.hideBadge, isFirstParty: tmp14.isFirstParty, baseVariantName: tmp14.baseVariantName, variantLabel: tmp14.variantLabel } = obj);
-  return tmp4;
+  tmp3 = CollectiblesProductRecord;
+  tmp4 = CollectiblesProductRecord;
+  tmp7 = React6;
 };
 CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefrontProductRecord(skus, arg1) {
-  const _require = skus;
+  _require = skus;
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -103,23 +103,23 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
       }
       if (skus.skus.length > 1) {
         if (!tmp5) {
-          let type = _require(first[7]).CollectiblesItemType.VARIANTS_GROUP;
+          let type = require("CollectiblesItemType").CollectiblesItemType.VARIANTS_GROUP;
         }
-        obj = callback3(first);
-        if (obj == null) {
-          obj = {};
+        let obj2 = closure_6(first);
+        if (obj2 == null) {
+          obj2 = {};
         }
-        let items = obj.items;
-        const first1 = callback(first.selectedOptions, 1)[0];
-        obj = { storeListingId: null, skuId: null, name: null, summary: null, styles: null, type: null, baseVariantName: null, variantLabel: null, premiumType: null, items: null, categorySkuId: null, isCategoryReward: null, prices: null, badgeOverride: null, hideBadge: null, previewAssets: null, variants: null, googleSkuIds: null, eligibleOffers: null, isFirstParty: null, bundledProducts: null };
-        ({ id: obj3[0], id: obj3[1] } = first);
-        ({ name: obj3[2], summary: obj3[3], primaryCollectionStyles: obj3[4] } = skus);
-        obj[5] = type;
+        let items = obj2.items;
+        const first1 = _slicedToArray(first.selectedOptions, 1)[0];
+        const obj4 = { storeListingId: null, skuId: null, name: null, summary: null, styles: null, type: null, baseVariantName: null, variantLabel: null, premiumType: null, items: null, categorySkuId: null, isCategoryReward: null, prices: null, badgeOverride: null, hideBadge: null, previewAssets: null, variants: null, googleSkuIds: null, eligibleOffers: null, isFirstParty: null, bundledProducts: null };
+        ({ id: obj3.storeListingId, id: obj3.skuId } = first);
+        ({ name: obj3.name, summary: obj3.summary, primaryCollectionStyles: obj3.styles } = skus);
+        obj4.type = type;
         let name;
         if (tmp5) {
           name = skus.name;
         }
-        obj[6] = name;
+        obj4.baseVariantName = name;
         let tmp13;
         if (tmp5) {
           let str;
@@ -131,19 +131,19 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
           }
           tmp13 = str;
         }
-        obj[7] = tmp13;
+        obj4.variantLabel = tmp13;
         let premiumType = collectibles.premiumType;
-        items = closure_8;
-        premiumType = null;
+        let items1 = closure_8;
+        let premiumType1 = null;
         if (premiumType !== closure_8) {
-          premiumType = collectibles.premiumType;
+          premiumType1 = collectibles.premiumType;
         }
-        obj[8] = premiumType;
+        obj4.premiumType = premiumType1;
         if (items == null) {
-          items = [obj.item];
-          items = items.filter((arg0) => null != arg0);
+          items1 = [obj2.item];
+          items = items1.filter((item) => null != item);
         }
-        obj[9] = items;
+        obj4.items = items;
         let str2 = skus.primaryCollectionId;
         if (str2 == null) {
           str2 = collectibles.categorySkuId;
@@ -151,13 +151,13 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
         if (str2 == null) {
           str2 = "";
         }
-        obj[10] = str2;
-        obj[11] = closure_7.some((rewardSkuId) => rewardSkuId.rewardSkuId === first.id);
-        obj[12] = first.prices;
-        ({ badgeOverride: obj3[13], hideBadge: obj3[14] } = skus);
+        obj4.categorySkuId = str2;
+        obj4.isCategoryReward = closure_7.some((rewardSkuId) => rewardSkuId.rewardSkuId === first.id);
+        obj4.prices = first.prices;
+        ({ badgeOverride: obj3.badgeOverride, hideBadge: obj3.hideBadge } = skus);
         const previewAssetPaths = first.previewAssetPaths;
-        obj[15] = previewAssetPaths;
-        let str3 = _require(first[7]).CollectiblesItemType.VARIANTS_GROUP;
+        obj4.previewAssets = previewAssetPaths;
+        let str3 = require("CollectiblesItemType").CollectiblesItemType.VARIANTS_GROUP;
         let found1;
         if (type === str3) {
           const skus1 = skus.skus;
@@ -171,15 +171,13 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
             if (null == collectibles) {
               return null;
             } else {
-              let obj = closure_1_6(tenantMetadata);
+              let obj = timestampProducer(tenantMetadata);
               if (obj == null) {
                 obj = {};
               }
               ({ items, item } = obj);
-              first = closure_1_3(tenantMetadata.selectedOptions, 1)[0];
-              obj = { baseVariantName: null, baseVariantSkuId: null, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "call", items: "coc", categorySkuId: "appSharingSettings", isCategoryReward: "trackThreadBrowserTab", prices: "as", previewAssets: "isArray", googleSkuIds: "burst", eligibleOffers: "isArray", variants: "office_worker_tone2", bundledProducts: "r", isFirstParty: "onLeave" };
-              obj[0] = skus.name;
-              obj[1] = first.id;
+              first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
+              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "accessible", items: false, categorySkuId: false, isCategoryReward: false, prices: false, previewAssets: false, googleSkuIds: false, eligibleOffers: false, variants: false, bundledProducts: false, isFirstParty: false };
               let str;
               if (first != null) {
                 str = first.optionValue;
@@ -187,26 +185,26 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               if (str == null) {
                 str = "";
               }
-              obj[2] = str;
+              obj3.variantLabel = str;
               let str2 = collectibles.optionSelectorDisplayValue;
               if (str2 == null) {
                 str2 = "";
               }
-              obj[3] = str2;
-              ({ id: obj2[4], id: obj2[5], name: obj2[6], summary: obj2[7] } = tenantMetadata);
-              ({ type: obj2[9], premiumType } = collectibles);
-              items = closure_1_8;
-              premiumType = null;
-              if (premiumType !== closure_1_8) {
-                premiumType = collectibles.premiumType;
+              obj3.variantValue = str2;
+              ({ id: obj2.storeListingId, id: obj2.skuId, name: obj2.name, summary: obj2.summary } = tenantMetadata);
+              ({ type: obj2.type, premiumType } = collectibles);
+              let items1 = React6;
+              let premiumType1 = null;
+              if (premiumType !== React6) {
+                premiumType1 = collectibles.premiumType;
               }
-              obj[10] = premiumType;
+              obj3.premiumType = premiumType1;
               if (items == null) {
-                items = [item];
-                item = (arg0) => null != arg0;
-                items = items.filter(item);
+                items1 = [item];
+                item = (item) => null != item;
+                items = items1.filter(item);
               }
-              obj[11] = items;
+              obj3.items = items;
               let str3 = skus.primaryCollectionId;
               if (str3 == null) {
                 str3 = collectibles.categorySkuId;
@@ -214,44 +212,45 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               if (str3 == null) {
                 str3 = "";
               }
-              obj[12] = str3;
-              obj[13] = closure_1_7.some((rewardSkuId) => rewardSkuId.rewardSkuId === tenantMetadata.id);
-              ({ prices: obj2[14], previewAssetPaths } = tenantMetadata);
-              obj[15] = previewAssetPaths;
+              obj3.categorySkuId = str3;
+              obj3.isCategoryReward = closure_7.some((rewardSkuId) => rewardSkuId.rewardSkuId === tenantMetadata.id);
+              ({ prices: obj2.prices, previewAssetPaths } = tenantMetadata);
+              obj3.previewAssets = previewAssetPaths;
               let googleSkuIds = tenantMetadata.googleSkuIds;
               if (googleSkuIds == null) {
-                obj = {};
+                const obj5 = {};
                 item = "";
-                obj[closure_1_9.MOBILE] = "";
-                obj[closure_1_9.MOBILE_PREMIUM_TIER_2] = "";
-                googleSkuIds = obj;
+                obj5[React7.MOBILE] = "";
+                obj5[React7.MOBILE_PREMIUM_TIER_2] = "";
+                googleSkuIds = obj5;
               }
-              obj[16] = googleSkuIds;
-              obj[17] = tenantMetadata.eligibleOffers;
-              obj[20] = collectibles.isFirstParty;
-              if (typeof closure_1_10 !== "function") {
-                HermesBuiltin.throwTypeError();
+              obj3.googleSkuIds = googleSkuIds;
+              obj3.eligibleOffers = tenantMetadata.eligibleOffers;
+              obj3.isFirstParty = collectibles.isFirstParty;
+              if (typeof tmp5 === "function") {
+                const tmp16 = new prototype(obj3, tmp, premiumType, items1, premiumType1, item);
+                ({ baseVariantName: tmp16.baseVariantName, baseVariantSkuId: tmp16.baseVariantSkuId, variantLabel: tmp16.variantLabel, variantValue: tmp16.variantValue } = obj3);
+                return tmp16;
+              } else {
+                throw new TypeError("Trying to call a non-function");
               }
-              const tmp16 = new closure_1_14(obj, tmp, premiumType, items, premiumType, item);
-              // ThrowIfThisInitialized (0x7c)
-              ({ baseVariantName: tmp16.baseVariantName, baseVariantSkuId: tmp16.baseVariantSkuId, variantLabel: tmp16.variantLabel, variantValue: tmp16.variantValue } = obj);
-              return tmp16;
+              tmp5 = prototype;
             }
           });
-          found1 = str3.filter((arg0) => null != arg0);
+          found1 = str3.filter((item) => null != item);
         }
-        obj[16] = found1;
+        obj4.variants = found1;
         let googleSkuIds = first.googleSkuIds;
         if (googleSkuIds == null) {
-          obj1 = {};
+          const obj7 = {};
           str3 = "";
-          obj1[closure_9.MOBILE] = "";
-          obj1[closure_9.MOBILE_PREMIUM_TIER_2] = "";
-          googleSkuIds = obj1;
+          obj7[closure_9.MOBILE] = "";
+          obj7[closure_9.MOBILE_PREMIUM_TIER_2] = "";
+          googleSkuIds = obj7;
         }
-        obj[17] = googleSkuIds;
-        obj[18] = first.eligibleOffers;
-        obj[19] = collectibles.isFirstParty;
+        obj4.googleSkuIds = googleSkuIds;
+        obj4.eligibleOffers = first.eligibleOffers;
+        obj4.isFirstParty = collectibles.isFirstParty;
         const bundledSkus = first.bundledSkus;
         let found2;
         if (bundledSkus != null) {
@@ -261,40 +260,38 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
             if (tenantMetadata != null) {
               collectibles = tenantMetadata.collectibles;
             }
-            let tmp3 = null;
+            let tmp32 = null;
             if (null != collectibles) {
-              const obj = { type: null, premiumType: null, name: null, skuId: null, summary: null, prices: null };
-              obj[0] = collectibles.type;
+              const obj = { type: collectibles.type, premiumType: null, name: null, skuId: null, summary: null, prices: null };
               let premiumType = null;
-              tmp3 = closure_4;
-              if (collectibles.premiumType !== closure_8) {
+              if (collectibles.premiumType !== closure_1_8) {
                 premiumType = collectibles.premiumType;
               }
-              obj[1] = premiumType;
-              ({ name: obj[2], id: obj[3], summary: obj[4], prices: obj[5] } = tenantMetadata);
-              tmp3 = new tmp3(obj);
+              obj.premiumType = premiumType;
+              ({ name: obj.name, id: obj.skuId, summary: obj.summary, prices: obj.prices } = tenantMetadata);
+              tmp32 = new CollectiblesBundledProductRecord(obj);
             }
-            return tmp3;
+            return tmp32;
           });
-          found2 = mapped.filter((arg0) => null != arg0);
+          found2 = mapped.filter((item) => null != item);
         }
-        obj[20] = found2;
-        if (typeof CollectiblesProductRecord !== "function") {
-          HermesBuiltin.throwTypeError();
+        obj4.bundledProducts = found2;
+        if (typeof tmp11 === "function") {
+          const tmp26 = new CollectiblesProductRecord(obj4, tmp, premiumType, items1, tmp15, type, str3);
+          ({ summary: tmp26.summary, type: tmp26.type, premiumType: tmp26.premiumType, items: tmp26.items, categorySkuId: tmp26.categorySkuId, isCategoryReward: tmp26.isCategoryReward, prices: tmp26.prices, bundledProducts: tmp26.bundledProducts, previewAssets: tmp26.previewAssets, googleSkuIds: tmp26.googleSkuIds, variants: tmp26.variants, eligibleOffers: tmp26.eligibleOffers, badgeOverride: tmp26.badgeOverride, hideBadge: tmp26.hideBadge, isFirstParty: tmp26.isFirstParty, baseVariantName: tmp26.baseVariantName, variantLabel: tmp26.variantLabel } = obj4);
+          return tmp26;
+        } else {
+          throw new TypeError("Trying to call a non-function");
         }
-        const tmp26 = new CollectiblesProductRecord(obj, tmp, premiumType, items, closure_7, type, str3);
-        // ThrowIfThisInitialized (0x7c)
-        ({ summary: tmp26.summary, type: tmp26.type, premiumType: tmp26.premiumType, items: tmp26.items, categorySkuId: tmp26.categorySkuId, isCategoryReward: tmp26.isCategoryReward, prices: tmp26.prices, bundledProducts: tmp26.bundledProducts, previewAssets: tmp26.previewAssets, googleSkuIds: tmp26.googleSkuIds, variants: tmp26.variants, eligibleOffers: tmp26.eligibleOffers, badgeOverride: tmp26.badgeOverride, hideBadge: tmp26.hideBadge, isFirstParty: tmp26.isFirstParty, baseVariantName: tmp26.baseVariantName, variantLabel: tmp26.variantLabel } = obj);
-        return tmp26;
+        tmp11 = CollectiblesProductRecord;
+        tmp15 = closure_7;
       }
       type = collectibles.type;
     }
   }
 };
-let prototype;
-prototype = function CollectiblesVariantProductRecord(arg0) {
+const prototype = function CollectiblesVariantProductRecord(arg0) {
   const tmp = new prototype(arg0, new.target);
-  // ThrowIfThisInitialized (0x7c)
   ({ baseVariantName: tmp.baseVariantName, baseVariantSkuId: tmp.baseVariantSkuId, variantLabel: tmp.variantLabel, variantValue: tmp.variantValue } = arg0);
   return tmp;
 }.prototype;
@@ -302,24 +299,25 @@ class prototype extends CollectiblesProductRecord {
 }
 prototype["fromServer"] = function fromServer(arg0) {
   ({ base_variant_name, base_variant_sku_id, variant_label, variant_value } = arg0);
-  let obj = Object.create(null);
-  obj = {};
-  let tmp2 = prototype;
-  const fromServerResult = super.fromServer(Object.assign(arg0, obj));
-  const merged = Object.assign(fromServerResult);
+  const merged = Object.assign({ base_variant_name: 0, base_variant_sku_id: 0, variant_label: 0, variant_value: 0 });
+  const obj = {};
+  const fromServerResult = super.fromServer(Object.assign(arg0, merged));
+  const merged1 = Object.assign(fromServerResult);
   obj.baseVariantName = base_variant_name;
   obj.baseVariantSkuId = base_variant_sku_id;
   obj.variantLabel = variant_label;
   obj.variantValue = variant_value;
-  if (typeof prototype !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof prototype === "function") {
+    const tmp22 = new tmp2(obj, fromServerResult, merged);
+    ({ baseVariantName: tmp8.baseVariantName, baseVariantSkuId: tmp8.baseVariantSkuId, variantLabel: tmp8.variantLabel, variantValue: tmp8.variantValue } = obj);
+    return tmp22;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  tmp2 = new tmp2(obj, fromServerResult, obj);
-  // ThrowIfThisInitialized (0x7c)
-  ({ baseVariantName: tmp5.baseVariantName, baseVariantSkuId: tmp5.baseVariantSkuId, variantLabel: tmp5.variantLabel, variantValue: tmp5.variantValue } = obj);
-  return tmp2;
+  tmp2 = prototype;
 };
-const result = require("set").fileFinishedImporting("modules/collectibles/records/CollectiblesProductRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/records/CollectiblesProductRecord.tsx");
 
 export default CollectiblesProductRecord;
 export const CollectiblesVariantProductRecord = prototype;

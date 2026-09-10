@@ -1,29 +1,28 @@
-// Module ID: 16874
-// Function ID: 16875
-// Name: Modal
-// Dependencies: [109, 19, 17, 1074, 21, 4560, 576, 4763, 8773, 1250, 7475, 1611, 16875, 1115, 16759, 2]
+// Module ID: 16911
+// Function ID: 16912
+// Name: modal/ModalScreen
+// Dependencies: [109, 19, 17, 1074, 21, 4574, 576, 4777, 8801, 1250, 7489, 1611, 16912, 1115, 16796, 2]
 // Exports: default
 
-// Module 16874 (Modal)
-import ThemesDefault from "Themes" /* 576 */;
+// Module 16911 (modal/ModalScreen)
+import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import trackImpressionDefault from "trackImpression" /* 8773 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { NOOP } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8801 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+const require = fn;
 let closure_3 = ["impressionName", "impressionProperties"];
-({ View: closure_6, StyleSheet: error } = get_ActivityIndicator);
-({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { containerWithPadding: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-createCacheKey[0] = createCacheKey;
-let closure_11 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/modal/ModalScreen.tsx");
+get_ActivityIndicator = fn(17);
+({ View: metroRequire, StyleSheet: closure_7 } = get_ActivityIndicator);
+const NOOP = fn(1074).NOOP;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4574);
+const obj2 = { containerWithPadding: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
+let closure_11 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/modal/ModalScreen.tsx");
 
 export default function Modal(route) {
   const modal = route.route.params.modal;
@@ -33,25 +32,23 @@ export default function Modal(route) {
     props = {};
   }
   ({ impressionName, impressionProperties } = props);
-  const tmp = callback3();
-  obj1 = React;
-  const callback = React.useCallback(() => {
-    let arr = callback(4763);
-    arr = arr.pop();
+  const tmp = closure_11();
+  const callback = noop.useCallback(() => {
+    closure_1(4777).pop();
   }, []);
-  let obj = { type: null, name: null, properties: null };
-  const tmp2 = callback(props, closure_3);
-  obj[0] = modal(1250).ImpressionTypes.MODAL;
-  obj[1] = impressionName;
-  obj[2] = impressionProperties;
-  trackImpressionDefault(obj);
+  const obj = { type: null, name: null, properties: null };
+  const tmp2 = _objectWithoutProperties(props, closure_3);
+  obj.type = modal(1250).ImpressionTypes.MODAL;
+  obj.name = impressionName;
+  obj.properties = impressionProperties;
+  useTrackImpressionDefault(obj);
   let callbacks = modal.callbacks;
   let onExited;
   if (callbacks != null) {
     onExited = callbacks.onExited;
   }
-  importDefault = React.useRef(onExited);
-  const effect = obj1.useEffect(() => {
+  importDefault = noop.useRef(onExited);
+  const effect = obj2.useEffect(() => {
     const callbacks = modal.callbacks;
     let onExited;
     if (callbacks != null) {
@@ -59,7 +56,7 @@ export default function Modal(route) {
     }
     closure_1.current = onExited;
   });
-  const effect1 = obj1.useEffect(() => () => {
+  const effect1 = obj2.useEffect(() => () => {
     const current = ref.current;
     let currentResult;
     if (current != null) {
@@ -67,40 +64,39 @@ export default function Modal(route) {
     }
     return currentResult;
   }, []);
-  const layoutEffect = obj1.useLayoutEffect(() => modal(7475).trackAppUIViewed("ModalScreen"), []);
-  const tmp6 = trackImpressionDefault;
+  const layoutEffect = obj2.useLayoutEffect(() => modal(7489).trackAppUIViewed("ModalScreen"), []);
   ({ left, right } = useSafeAreaInsetsDefault());
-  let tmp7Result = tmp7(16875);
+  const tmp13 = useSafeAreaInsetsDefault();
   const items = [absoluteFillObject.absoluteFillObject, ];
   let tmp16;
   if (!tmp7Result.shouldExcludeSafeAreaForModalKey(modal.key)) {
     const items1 = [tmp.containerWithPadding, ];
-    obj = { paddingLeft: null, paddingRight: null };
-    obj[0] = left;
-    obj[1] = right;
-    items1[1] = obj;
+    const obj3 = { paddingLeft: left, paddingRight: right };
+    items1[1] = obj3;
     tmp16 = items1;
   }
-  obj1 = { style: items, onAccessibilityEscape: null, children: null };
+  const obj4 = { style: items, onAccessibilityEscape: null, children: null };
   items[1] = tmp16;
   if (modal.closable) {
-    let pop = tmp4(4763).pop;
+    let pop = tmp4(4777).pop;
   } else {
     pop = NOOP;
   }
-  obj1[1] = pop;
-  const obj2 = {};
+  obj4.onAccessibilityEscape = pop;
+  const obj5 = {};
   const merged = Object.assign(tmp2);
-  obj2.style = undefined;
-  obj2.transitionState = null;
-  obj2.onClose = callback;
+  obj5.style = undefined;
+  obj5.transitionState = null;
+  obj5.onClose = callback;
   const items2 = [<modal.modal />, ];
-  tmp7Result = tmp7(1115);
-  let isIOSResult = tmp7Result.isIOS();
+  const tmp14 = closure_10;
+  const tmp15 = closure_6;
+  tmp7Result = modal(16912);
+  let isIOSResult = modal(1115).isIOS();
   if (isIOSResult) {
-    isIOSResult = callback2(tmp7(16759).PortalKeyboardRenderer, { portal: false });
+    isIOSResult = closure_9(tmp7(16796).PortalKeyboardRenderer, { portal: false });
   }
   items2[1] = isIOSResult;
-  obj1[2] = items2;
-  return closure_10(closure_6, obj1);
+  obj4.children = items2;
+  return tmp14(tmp15, obj4);
 };

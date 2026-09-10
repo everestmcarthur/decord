@@ -1,13 +1,13 @@
-// Module ID: 13765
-// Function ID: 13766
-// Name: apexExperiment
+// Module ID: 13788
+// Function ID: 13789
+// Name: ContentClassificationPresenceFilterExperiment
 // Dependencies: [1433, 2]
 
-// Module 13765 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 13788 (ContentClassificationPresenceFilterExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-02-content-classification-presence-filter", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
-const result = set.fileFinishedImporting("modules/presence/ContentClassificationPresenceFilterExperiment.tsx");
+const result = size.fileFinishedImporting("modules/presence/ContentClassificationPresenceFilterExperiment.tsx");
 
 export const ContentClassificationPresenceFilterExperiment = apexExperiment;

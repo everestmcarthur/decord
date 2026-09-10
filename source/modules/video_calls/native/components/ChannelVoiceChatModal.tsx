@@ -1,38 +1,41 @@
-// Module ID: 10970
-// Function ID: 10971
+// Module ID: 10997
+// Function ID: 10998
 // Name: ChannelVoiceChatModal
-// Dependencies: [19, 21, 4713, 4761, 10929, 5097, 4443, 10081, 2]
+// Dependencies: [19, 21, 4727, 4775, 10956, 5111, 4457, 10108, 2]
 // Exports: default
 
-// Module 10970 (ChannelVoiceChatModal)
-import computeChannelNameDefault from "computeChannelName" /* 4713 */;
-import _modDef10929 from "module_10929" /* 10929 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 10997 (ChannelVoiceChatModal)
+import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 4457 */;
+import useChannelNameDefault from "useChannelName" /* 4727 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4775 */;
+import ChannelVoiceChatDefault from "ChannelVoiceChat" /* 10108 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10956 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/ChannelVoiceChatModal.tsx");
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/components/ChannelVoiceChatModal.tsx");
 
 export default function ChannelVoiceChatModal(channel) {
   channel = channel.channel;
-  const tmp2 = computeChannelNameDefault(channel);
+  const tmp2 = useChannelNameDefault(channel);
   const items = [channel.id];
-  const effect = React.useEffect(() => {
-    closure_1_1(closure_1_2[3]).updateChatOpen(channel.id, true);
+  const effect = noop.useEffect(() => {
+    ChannelRTCActionCreatorsDefault.updateChatOpen(channel.id, true);
     return () => {
-      closure_1_1(closure_1_2[3]).updateChatOpen(id.id, false);
+      ChannelRTCActionCreatorsDefault.updateChatOpen(id.id, false);
     };
   }, items);
   let str = tmp2;
   if (tmp2 == null) {
     str = "";
   }
-  const tmp5 = _modDef10929;
-  return <tmp5 screenKey="StageVoiceChat" title={str} titleIcon={jsx(channel(5097).StageIcon, { size: "sm" })} render={function render() {
+  return <tmp5 screenKey="StageVoiceChat" title={str} titleIcon={jsx(channel(5111).StageIcon, { size: "sm" })} render={function render() {
     let guild_id = channel.guild_id;
     if (guild_id == null) {
       guild_id = null;
     }
-    return closure_1_4(closure_1_1(closure_1_2[6]).Provider, { value: guild_id, children: closure_1_4(closure_1_1(closure_1_2[7]), { channel, inModal: true }) });
+    return jsx(GuildThemeGuildIdOverrideContextDefault.Provider, { value: guild_id, children: jsx(ChannelVoiceChatDefault, { channel, inModal: true }) });
   }} />;
 };

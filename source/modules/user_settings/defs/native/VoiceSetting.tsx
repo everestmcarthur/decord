@@ -1,25 +1,25 @@
-// Module ID: 15249
-// Function ID: 15250
-// Name: route
-// Dependencies: [1908, 1074, 504, 1114, 11473, 10010, 15250, 2]
+// Module ID: 15278
+// Function ID: 15279
+// Name: VoiceSetting
+// Dependencies: [1908, 1074, 504, 1114, 11500, 10037, 15279, 2]
 
-// Module 15249 (route)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_2 from "_detectH265HardwareDecode" /* 1908 */;
-import ME from "ME" /* 1074 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15278 (VoiceSetting)
+import util from "util" /* 1114 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
-require = arg1;
-({ InputModes: c3, UserSettingsSections } = ME);
-createToggle = {
+require = fn;
+const Constants = fn(1074);
+({ InputModes: c3, UserSettingsSections } = Constants);
+const SettingBuilders = fn(11500);
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.K3lovD);
+    const intl = util.intl;
+    return intl.string(util.t.K3lovD);
   },
   parent: null,
-  IconComponent: require("MicrophoneIcon").MicrophoneIcon,
+  IconComponent: fn(10037).MicrophoneIcon,
   useTrailing: function useVoiceSettingTrailing() {
-    const items = [closure_2];
+    const items = [MediaEngineStore];
     if (obj.useStateFromStores(items, () => mode.getMode()) === constants.PUSH_TO_TALK) {
       const intl2 = tmp(1114).intl;
       let stringResult = intl2.string(tmp(1114).t.Q8gkVL);
@@ -29,20 +29,19 @@ createToggle = {
     }
     return stringResult;
   },
-  screen: createToggle,
+  screen: {
+    route: UserSettingsSections.VOICE,
+    getComponent() {
+      return require("SettingsVoiceScreen").default;
+    }
+  },
   useSearchTerms() {
-    const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t.nuFtHH)];
+    const intl = util.intl;
+    const items = [intl.string(util.t.nuFtHH)];
     return items;
   }
-};
-createToggle = {
-  route: UserSettingsSections.VOICE,
-  getComponent() {
-    return require(15250) /* KrispLogo */.default;
-  }
-};
-createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/VoiceSetting.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/VoiceSetting.tsx");
 
-export default createToggle;
+export default route;

@@ -1,27 +1,29 @@
-// Module ID: 7317
-// Function ID: 7318
-// Name: showSimpleLoadingModal
-// Dependencies: [4763, 7318, 1896, 2]
+// Module ID: 7331
+// Function ID: 7332
+// Name: SimpleLoadingModal
+// Dependencies: [4777, 7332, 1896, 2]
 // Exports: showSimpleLoadingModal
 
-// Module 7317 (showSimpleLoadingModal)
-import set from "set" /* 2 */;
-import _modDef4763 from "module_4763" /* 4763 */;
+// Module 7331 (SimpleLoadingModal)
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/mobile_web_handoff/native/SimpleLoadingModal.tsx");
+const require = globalThis.__r;
+
+const result = size.fileFinishedImporting("modules/mobile_web_handoff/native/SimpleLoadingModal.tsx");
 
 export const showSimpleLoadingModal = function showSimpleLoadingModal(c3, arg1) {
-  const _require = c3;
+  _require = c3;
   importDefault = arg1;
-  let obj = _modDef4763;
-  obj = {};
+  const obj = ModalActionCreatorsDefault;
+  const obj2 = {};
   const merged = Object.assign(arg1);
-  obj.onDismissed = function onDismissed() {
-    lib(closure_1_2[0]).popWithKey(closure_0);
-    const onDismissed = lib.onDismissed;
+  obj2.onDismissed = function onDismissed() {
+    ModalActionCreatorsDefault.popWithKey(closure_0);
+    onDismissed = onDismissed.onDismissed;
     if (onDismissed != null) {
       onDismissed();
     }
   };
-  obj.pushLazy(_require(1896)(7318, dependencyMap.paths), obj, c3, { animation: "none" });
+  obj.pushLazy(require("asyncRequireImpl")(7332, dependencyMap.paths), obj2, c3, { animation: "none" });
 };

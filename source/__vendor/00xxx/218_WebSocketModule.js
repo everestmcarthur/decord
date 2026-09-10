@@ -4,12 +4,13 @@
 // Dependencies: [219]
 
 // Module 218 (WebSocketModule)
-import WebSocketModuleDefault from "WebSocketModule" /* 219 */;
+import _modDef219 from "module_219" /* 219 */;
 
-for (const key10016 in require("WebSocketModule")) {
-  let tmp2 = key10016;
-  arg5[key10016] = require("WebSocketModule")[key10016];
+const require = globalThis.__r;
+
+for (const key10016 in require("module_219")) {
+  arg5[key10016] = require("module_219")[key10016];
   continue;
 }
 
-export default WebSocketModuleDefault;
+export default _modDef219;

@@ -1,38 +1,41 @@
-// Module ID: 9819
-// Function ID: 9820
-// Name: useCanSendStageStartNotification
-// Dependencies: [4480, 4199, 1085, 504, 2]
+// Module ID: 9846
+// Function ID: 9847
+// Name: LiveStageNotificationsUtils
+// Dependencies: [4494, 4212, 1085, 504, 2]
 // Exports: useCanSendStageStartNotification, useDefaultSendStartStageNotificationToggle
 
-// Module 9819 (useCanSendStageStartNotification)
-import closure_2 from "handleInviteData" /* 4480 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4199 */;
-import { Permissions } from "sum" /* 1085 */;
+// Module 9846 (LiveStageNotificationsUtils)
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4494 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/stage_channels/LiveStageNotificationsUtils.tsx");
+const require = globalThis.__r;
 
-export const useCanSendStageStartNotification = function useCanSendStageStartNotification(first) {
-  const _require = first;
-  const items = [closure_3];
-  const items1 = [first];
-  return _require(504).useStateFromStores(items, () => {
+const require = fn;
+const Permissions = fn(1085).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/LiveStageNotificationsUtils.tsx");
+
+export const useCanSendStageStartNotification = function useCanSendStageStartNotification(arg0) {
+  _require = arg0;
+  const items = [PermissionStore];
+  const items1 = [arg0];
+  return require("initialize").useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
-      canResult = closure_1_3.can(closure_1_4.MENTION_EVERYONE, tmp);
+      canResult = PermissionStore.can(Permissions.MENTION_EVERYONE, tmp);
     }
     return canResult;
   }, items1);
 };
-export const useDefaultSendStartStageNotificationToggle = function useDefaultSendStartStageNotificationToggle(first) {
-  let guild_id;
-  if (first != null) {
-    guild_id = first.guild_id;
+export const useDefaultSendStartStageNotificationToggle = function useDefaultSendStartStageNotificationToggle(guild_id) {
+  guild_id = undefined;
+  if (guild_id != null) {
+    guild_id = guild_id.guild_id;
   }
-  const items = [closure_2];
+  const items = [GuildMemberCountStore];
   const items1 = [guild_id];
-  const stateFromStores = guild_id(504).useStateFromStores(items, () => closure_1_2.getMemberCount(guild_id), items1);
-  let tmp3 = null == first;
+  const stateFromStores = guild_id(504).useStateFromStores(items, () => GuildMemberCountStore.getMemberCount(guild_id), items1);
+  let tmp3 = null == guild_id;
   if (!tmp3) {
     let tmp4 = null == stateFromStores;
     if (!tmp4) {

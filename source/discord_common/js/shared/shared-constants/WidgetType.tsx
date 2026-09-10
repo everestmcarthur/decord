@@ -1,11 +1,11 @@
-// Module ID: 7622
-// Function ID: 7623
+// Module ID: 7636
+// Function ID: 7637
 // Name: WidgetType
 // Dependencies: [2]
 
-// Module 7622 (WidgetType)
-import set from "set" /* 2 */;
+// Module 7636 (WidgetType)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/WidgetType.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/WidgetType.tsx");
 
 export const WidgetType = { CURRENT_GAMES: "current_games", WANT_TO_PLAY_GAMES: "want_to_play_games", PLAYED_GAMES: "played_games", FAVORITE_GAMES: "favorite_games", APPLICATION: "application", PERSONAL: "personal", CLIPS_GALLERY: "clips_gallery" };

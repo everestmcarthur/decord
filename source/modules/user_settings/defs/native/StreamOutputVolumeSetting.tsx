@@ -1,32 +1,32 @@
-// Module ID: 15255
-// Function ID: 15256
-// Name: volumeSlider
-// Dependencies: [4582, 502, 1908, 7975, 504, 4615, 38, 9094, 9987, 11473, 1114, 2]
+// Module ID: 15284
+// Function ID: 15285
+// Name: StreamOutputVolumeSetting
+// Dependencies: [4596, 502, 1908, 7989, 504, 4629, 38, 9121, 10014, 11500, 1114, 2]
 
-// Module 15255 (volumeSlider)
+// Module 15284 (StreamOutputVolumeSetting)
 import _modDef38 from "module_38" /* 38 */;
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4615 */;
-import trackDeviceChangedDefault from "trackDeviceChanged" /* 9094 */;
-import apexExperimentDefault from "apexExperiment" /* 9987 */;
-import closure_3 from "reset" /* 4582 */;
-import closure_4 from "fetchFingerprint" /* 502 */;
-import closure_5 from "_detectH265HardwareDecode" /* 1908 */;
-import createToggle from "createToggle" /* 11473 */;
+import util from "util" /* 1114 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4629 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9121 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 10014 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4596 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const SettingBuilders = fn(11500);
+const volumeSlider = SettingBuilders.createVolumeSlider({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.pEAl4b);
+    const intl = util.intl;
+    return intl.string(util.t.pEAl4b);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
+  parent: fn(7989).MobileUserSettings.VOICE,
   maximum: 200,
   useValue: function useStreamVolumeSettingValue() {
-    let items = [closure_3, closure_4, closure_5];
+    let items = [ApplicationStreamingStore, AuthenticationStore, MediaEngineStore];
     return initialize.useStateFromStores(items, () => {
-      const items = [closure_3, closure_4];
+      const items = [ApplicationStreamingStore, AuthenticationStore];
       [obj, obj2] = items;
       const lastActiveStream = obj.getLastActiveStream();
       let tmp2 = null;
@@ -38,13 +38,13 @@ createToggle = {
       }
       let num = 0;
       if (null != tmp2) {
-        num = localVolume.getLocalVolume(tmp2.ownerId, callback(table[5]).MediaEngineContextTypes.STREAM);
+        num = localVolume.getLocalVolume(tmp2.ownerId, BaseConnectionEvent.MediaEngineContextTypes.STREAM);
       }
       return num;
     });
   },
   onValueChange: function onStreamValueSettingValueChange(arg0) {
-    const items = [closure_3, closure_4];
+    const items = [ApplicationStreamingStore, AuthenticationStore];
     [obj, obj2] = items;
     const lastActiveStream = obj.getLastActiveStream();
     let tmp2 = null;
@@ -55,14 +55,13 @@ createToggle = {
       }
     }
     _modDef38(null != tmp2, "Can not set stream volume without active stream");
-    trackDeviceChangedDefault.setLocalVolume(tmp2.ownerId, arg0, BaseConnectionEvent.MediaEngineContextTypes.STREAM);
+    AudioActionCreatorsDefault.setLocalVolume(tmp2.ownerId, arg0, BaseConnectionEvent.MediaEngineContextTypes.STREAM);
   },
   usePredicate: function useHasStreamVolumeSetting() {
-    const obj = apexExperimentDefault;
-    let items = [closure_3, closure_4];
-    const obj2 = initialize;
+    const obj = MobileAudioOutputExperimentDefault;
+    let items = [ApplicationStreamingStore, AuthenticationStore];
     return initialize.useStateFromStores(items, () => {
-      const items = [closure_3, closure_4];
+      const items = [ApplicationStreamingStore, AuthenticationStore];
       [obj, obj2] = items;
       const lastActiveStream = obj.getLastActiveStream();
       let tmp2 = null;
@@ -76,14 +75,14 @@ createToggle = {
     }) && obj.getConfig({ location: "StreamOutputVolumeSetting" }).audioOutputPresent;
   },
   useSearchTerms() {
-    const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t["3182VD"]), ];
-    const intl2 = getSystemLocale.intl;
-    items[1] = intl2.string(getSystemLocale.t["DGq/PR"]);
+    const intl = util.intl;
+    const items = [intl.string(util.t["3182VD"]), ];
+    const intl2 = util.intl;
+    items[1] = intl2.string(util.t["DGq/PR"]);
     return items;
   }
-};
-createToggle = createToggle.createVolumeSlider(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/StreamOutputVolumeSetting.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/StreamOutputVolumeSetting.tsx");
 
-export default createToggle;
+export default volumeSlider;

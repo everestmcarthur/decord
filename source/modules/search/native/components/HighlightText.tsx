@@ -1,28 +1,28 @@
-// Module ID: 10131
-// Function ID: 10132
+// Module ID: 10158
+// Function ID: 10159
 // Name: HighlightText
-// Dependencies: [19, 1074, 21, 4560, 4409, 576, 1178, 2]
+// Dependencies: [19, 1074, 21, 4574, 4423, 576, 1178, 2]
 // Exports: default
 
-// Module 10131 (HighlightText)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 1178 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import hexToRgba from "hexToRgba" /* 4409 */;
+// Module 10158 (HighlightText)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { text: null };
-createCacheKey = { fontFamily: require("ME").Fonts.PRIMARY_BOLD, backgroundColor: null, color: null };
-createCacheKey[1] = hexToRgba.hexOpacityToRgba(ThemesDefault.unsafe_rawColors.YELLOW_300, 0.3);
-createCacheKey[2] = ThemesDefault.colors.TEXT_STRONG;
-createCacheKey[0] = createCacheKey;
-let closure_3 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/search/native/components/HighlightText.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+const obj2 = { text: null };
+const obj3 = { fontFamily: fn(1074).Fonts.PRIMARY_BOLD, backgroundColor: null, color: null };
+const ColorUtils = fn(4423);
+obj3.backgroundColor = ColorUtils.hexOpacityToRgba(nativeDefault.unsafe_rawColors.YELLOW_300, 0.3);
+obj3.color = nativeDefault.colors.TEXT_STRONG;
+obj2.text = obj3;
+let closure_3 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/HighlightText.tsx");
 
 export default function HighlightText(children) {
-  const tmp = callback();
-  return jsx(Button.LegacyText, { style: callback().text, children: children.children });
+  const tmp = closure_3();
+  return jsx(native.LegacyText, { style: closure_3().text, children: children.children });
 };

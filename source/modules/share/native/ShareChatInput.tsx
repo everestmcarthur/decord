@@ -1,40 +1,45 @@
-// Module ID: 11706
-// Function ID: 11707
+// Module ID: 11732
+// Function ID: 11733
 // Name: ShareChatInput
-// Dependencies: [32, 19, 17, 1074, 21, 4560, 576, 1115, 9309, 8606, 1114, 5123, 8762, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4574, 576, 1115, 9336, 8634, 1114, 5137, 8790, 2]
 // Exports: default
 
-// Module 11706 (ShareChatInput)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import set from "set" /* 1115 */;
+// Module 11732 (ShareChatInput)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Pressables from "Pressables" /* 5137 */;
+import ReactionIcon from "ReactionIcon" /* 8790 */;
+import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9336 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, chatInput: null, chatText: null, inputPlaceholder: null, emojiButton: null, focused: null };
-createCacheKey = { flex: 1, flexDirection: "row", backgroundColor: ThemesDefault.colors.SHARE_CHAT_INPUT_BACKGROUND, borderRadius: ThemesDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS, borderWidth: ThemesDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: ThemesDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, paddingHorizontal: ThemesDefault.space.PX_12 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, paddingVertical: 0, paddingHorizontal: ThemesDefault.space.PX_4, maxHeight: 80 };
-const obj2 = { fontSize: 16, lineHeight: 20, fontFamily: require("ME").Fonts.PRIMARY_NORMAL, color: ThemesDefault.colors.TEXT_STRONG, paddingTop: null, paddingBottom: null };
+const FormInputDefault = tmp2(8634);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { flex: 1, flexDirection: "row", backgroundColor: nativeDefault.colors.SHARE_CHAT_INPUT_BACKGROUND, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, paddingHorizontal: nativeDefault.space.PX_12 }, chatInput: null, chatText: null, inputPlaceholder: null, emojiButton: null, focused: null };
+let obj3 = { flex: 1, flexDirection: "row", backgroundColor: nativeDefault.colors.SHARE_CHAT_INPUT_BACKGROUND, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, paddingHorizontal: nativeDefault.space.PX_12 };
+obj2.chatInput = { flex: 1, paddingVertical: 0, paddingHorizontal: nativeDefault.space.PX_4, maxHeight: 80 };
+const obj5 = { fontSize: 16, lineHeight: 20, fontFamily: fn(1074).Fonts.PRIMARY_NORMAL, color: nativeDefault.colors.TEXT_STRONG, paddingTop: null, paddingBottom: null };
+const PlatformUtils = fn(1115);
 let num = 2;
-if (set.isAndroid()) {
+if (PlatformUtils.isAndroid()) {
   num = 0;
 }
-obj2[4] = ThemesDefault.space.PX_8 + num;
-obj2[5] = ThemesDefault.space.PX_8;
-createCacheKey[2] = obj2;
-const obj1 = { flex: 1, paddingVertical: 0, paddingHorizontal: ThemesDefault.space.PX_4, maxHeight: 80 };
-createCacheKey[3] = { color: ThemesDefault.colors.TEXT_MUTED };
-const obj3 = { color: ThemesDefault.colors.TEXT_MUTED };
-createCacheKey[4] = { paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_8, alignSelf: "flex-end" };
-set = { borderColor: ThemesDefault.colors.MOBILE_CHATINPUT_BORDER_ACTIVE };
-createCacheKey[5] = set;
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = set.fileFinishedImporting("modules/share/native/ShareChatInput.tsx");
+obj5.paddingTop = nativeDefault.space.PX_8 + num;
+obj5.paddingBottom = nativeDefault.space.PX_8;
+obj2.chatText = obj5;
+const obj4 = { flex: 1, paddingVertical: 0, paddingHorizontal: nativeDefault.space.PX_4, maxHeight: 80 };
+obj2.inputPlaceholder = { color: nativeDefault.colors.TEXT_MUTED };
+const obj7 = { color: nativeDefault.colors.TEXT_MUTED };
+obj2.emojiButton = { paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8, alignSelf: "flex-end" };
+const obj8 = { paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8, alignSelf: "flex-end" };
+obj2.focused = { borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_ACTIVE };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/share/native/ShareChatInput.tsx");
 
 export default function ShareChatInput(onFocus) {
   onFocus = onFocus.onFocus;
@@ -44,54 +49,53 @@ export default function ShareChatInput(onFocus) {
   if (flag === undefined) {
     flag = false;
   }
-  dependencyMap = undefined;
-  const tmp = callback3();
-  const tmp2 = onBlur;
-  const tmp4 = onBlur(9309)();
-  [focused, c2] = callback(React.useState(false), 2);
+  c2 = undefined;
+  const tmp = closure_8();
+  const tmp4 = useMessageMaxLengthDefault();
+  [focused, c2] = noop.useState(false);
   const items = [onFocus];
   const items1 = [onBlur];
-  callback = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     _undefined(true);
     onFocus();
   }, items);
   const items2 = [tmp.container, ];
-  const callback1 = React.useCallback(() => {
+  const callback1 = noop.useCallback(() => {
     _undefined(false);
     onBlur();
   }, items1);
   if (focused) {
     focused = tmp.focused;
   }
-  let obj = { style: items2, children: null };
+  const obj = { style: items2, children: null };
   items2[1] = focused;
-  obj = { ref: inputRef, maxLength: tmp4, placeholder: null, placeholderTextColor: null, accessibilityLabel: null, onSubmitEditing: null, onSelectionChange: null, style: null, value: null, onChange: null, onFocus: null, onBlur: null, multiline: true, showBorder: false, showTopContainer: false, textAlignVertical: "center", inputTextStyle: null, editable: null };
-  const tmp5 = callback(React.useState(false), 2);
-  const tmp8 = closure_7;
+  const obj2 = { ref: inputRef, maxLength: tmp4, placeholder: null, placeholderTextColor: null, accessibilityLabel: null, onSubmitEditing: null, onSelectionChange: null, style: null, value: null, onChange: null, onFocus: null, onBlur: null, multiline: true, showBorder: false, showTopContainer: false, textAlignVertical: "center", inputTextStyle: null, editable: null };
+  const tmp5 = _slicedToArray(noop.useState(false), 2);
+  const tmp8 = React5;
   const tmp9 = View;
-  const intl = onFocus(1114).intl;
-  obj[2] = intl.string(onFocus(1114).t.ZroO3G);
-  obj[3] = tmp.inputPlaceholder.color;
-  const intl2 = onFocus(1114).intl;
-  obj[4] = intl2.string(onFocus(1114).t["/+MXmw"]);
-  obj[5] = onSend;
-  obj[6] = onSelectionChange;
-  obj[7] = tmp.chatInput;
-  obj[8] = text;
-  obj[9] = onChange;
-  obj[10] = callback;
-  obj[11] = callback1;
-  obj[16] = tmp.chatText;
-  obj[17] = !flag;
-  const items3 = [callback2(tmp2(8606), obj), ];
-  obj = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, disabled: null, children: null };
-  const intl3 = onFocus(1114).intl;
-  obj[0] = intl3.string(onFocus(1114).t.iZ7Mz9);
-  obj[2] = onPressEmoji;
-  obj[3] = tmp.emojiButton;
-  obj[4] = flag;
-  obj[5] = callback2(onFocus(8762).ReactionIcon, { size: "md" });
-  items3[1] = callback2(onFocus(5123).PressableOpacity, obj);
-  obj[1] = items3;
+  const intl = util.intl;
+  obj2.placeholder = intl.string(util.t.ZroO3G);
+  obj2.placeholderTextColor = tmp.inputPlaceholder.color;
+  const intl2 = util.intl;
+  obj2.accessibilityLabel = intl2.string(util.t["/+MXmw"]);
+  obj2.onSubmitEditing = onSend;
+  obj2.onSelectionChange = onSelectionChange;
+  obj2.style = tmp.chatInput;
+  obj2.value = text;
+  obj2.onChange = onChange;
+  obj2.onFocus = callback;
+  obj2.onBlur = callback1;
+  obj2.inputTextStyle = tmp.chatText;
+  obj2.editable = !flag;
+  const items3 = [timestampProducer(FormInputDefault, obj2), ];
+  const obj3 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, disabled: null, children: null };
+  const intl3 = util.intl;
+  obj3.accessibilityLabel = intl3.string(util.t.iZ7Mz9);
+  obj3.onPress = onPressEmoji;
+  obj3.style = tmp.emojiButton;
+  obj3.disabled = flag;
+  obj3.children = timestampProducer(ReactionIcon.ReactionIcon, { size: "md" });
+  items3[1] = timestampProducer(Pressables.PressableOpacity, obj3);
+  obj.children = items3;
   return tmp8(tmp9, obj);
 };

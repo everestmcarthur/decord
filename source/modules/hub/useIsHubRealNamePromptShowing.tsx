@@ -1,37 +1,41 @@
-// Module ID: 12653
-// Function ID: 12654
+// Module ID: 12679
+// Function ID: 12680
 // Name: useIsHubRealNamePromptShowing
-// Dependencies: [19, 12654, 2021, 1979, 1371, 1074, 12655, 504, 12656, 2]
+// Dependencies: [19, 12680, 2021, 1979, 1371, 1074, 12681, 504, 12682, 2]
 // Exports: default
 
-// Module 12653 (useIsHubRealNamePromptShowing)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "initialize" /* 12654 */;
-import closure_5 from "trackCommunicationDisabled" /* 2021 */;
-import closure_6 from "createGuildRecordFromRust" /* 1979 */;
-import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import { GuildFeatures } from "ME" /* 1074 */;
-import { GuildPrompts } from "GuildPrompts" /* 12655 */;
+// Module 12679 (useIsHubRealNamePromptShowing)
+import GuildPromptsActionCreatorsDefault from "GuildPromptsActionCreators" /* 12682 */;
+import noop from "module_19" /* 19 */;
+import GuildPromptsStore from "GuildPromptsStore" /* 12680 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/hub/useIsHubRealNamePromptShowing.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const GuildFeatures = fn(1074).GuildFeatures;
+const GuildPrompts = fn(12681).GuildPrompts;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/hub/useIsHubRealNamePromptShowing.tsx");
 
 export default function useIsHubRealNamePromptShowing(arg0) {
-  const _require = arg0;
-  const items = [closure_6, closure_4, closure_7, closure_5];
-  const stateFromStores = _require(504).useStateFromStores(items, () => {
-    const guild = closure_1_6.getGuild(closure_0);
+  _require = arg0;
+  const items = [GuildStore, GuildPromptsStore, UserStore, GuildMemberStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
+    const guild = GuildStore.getGuild(closure_0);
     let hasItem;
     if (guild != null) {
       const features = guild.features;
-      hasItem = features.has(closure_1_8.HUB);
+      hasItem = features.has(GuildFeatures.HUB);
     }
     if (true !== hasItem) {
       return null;
-    } else if (true === closure_1_4.hasViewedPrompt(closure_1_9.REAL_NAME_PROMPT, guild.id)) {
+    } else if (true === GuildPromptsStore.hasViewedPrompt(GuildPrompts.REAL_NAME_PROMPT, guild.id)) {
       return null;
     } else {
-      const currentUser = closure_1_7.getCurrentUser();
+      const currentUser = UserStore.getCurrentUser();
       if (null == currentUser) {
         return null;
       } else {
@@ -39,7 +43,7 @@ export default function useIsHubRealNamePromptShowing(arg0) {
         if (currentUser != null) {
           id = currentUser.id;
         }
-        const member = closure_1_5.getMember(guild.id, id);
+        const member = GuildMemberStore.getMember(guild.id, id);
         let nick;
         if (member != null) {
           nick = member.nick;
@@ -49,15 +53,14 @@ export default function useIsHubRealNamePromptShowing(arg0) {
     }
   });
   const items1 = [stateFromStores, arg0];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let tmp2 = null != closure_0;
     if (tmp2) {
       tmp2 = null != stateFromStores;
     }
     if (tmp2) {
       if (!stateFromStores) {
-        stateFromStores(closure_1_2[8]).viewPrompt(closure_1_9.REAL_NAME_PROMPT, closure_0);
-        const obj = stateFromStores(closure_1_2[8]);
+        GuildPromptsActionCreatorsDefault.viewPrompt(GuildPrompts.REAL_NAME_PROMPT, closure_0);
       }
     }
   }, items1);

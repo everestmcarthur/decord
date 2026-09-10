@@ -1,18 +1,18 @@
-// Module ID: 10686
-// Function ID: 10687
-// Name: create
-// Dependencies: [32, 1188, 10685, 10683, 10675, 2]
+// Module ID: 10713
+// Function ID: 10714
+// Name: gift_plan_selection_card_banner
+// Dependencies: [32, 1188, 10712, 10710, 10702, 2]
 
-// Module 10686 (create)
+// Module 10713 (gift_plan_selection_card_banner)
 import _mod1188 from "module_1188" /* 1188 */;
-import create from "create" /* 10675 */;
-import create2 from "create" /* 10683 */;
-import create3 from "create" /* 10685 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType } from "module_1188" /* 1188 */;
+import localized_string from "localized_string" /* 10702 */;
+import gradient from "gradient" /* 10710 */;
+import theme_aware_asset from "theme_aware_asset" /* 10712 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
-let obj = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", NORMAL: 1, [1]: "NORMAL", LARGE_TILTED: 2, [2]: "LARGE_TILTED" };
+require = fn;
+const GiftPlanSelectionCardBanner_AssetVariant = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", NORMAL: 1, [1]: "NORMAL", LARGE_TILTED: 2, [2]: "LARGE_TILTED" };
+const MessageType = fn(1188).MessageType;
 class GiftPlanSelectionCardBanner$Type extends MessageType {
   constructor() {
     items = [, , , , , , , , , , , , , , , ];
@@ -24,7 +24,7 @@ class GiftPlanSelectionCardBanner$Type extends MessageType {
       name: "avatar_asset",
       kind: "message",
       T() {
-            return callback(10685).ThemeAwareAsset;
+            return require("theme_aware_asset").ThemeAwareAsset;
           }
     };
     items[4] = { no: 5, name: "banner_asset_url", kind: "scalar", T: 9 };
@@ -35,7 +35,7 @@ class GiftPlanSelectionCardBanner$Type extends MessageType {
       name: "gradient",
       kind: "message",
       T() {
-            return callback(10683).Gradient;
+            return require("gradient").Gradient;
           }
     };
     items[8] = {
@@ -43,7 +43,7 @@ class GiftPlanSelectionCardBanner$Type extends MessageType {
       name: "banner_asset",
       kind: "message",
       T() {
-            return callback(10685).ThemeAwareAsset;
+            return require("theme_aware_asset").ThemeAwareAsset;
           }
     };
     items[9] = {
@@ -51,7 +51,7 @@ class GiftPlanSelectionCardBanner$Type extends MessageType {
       name: "background_asset",
       kind: "message",
       T() {
-            return callback(10685).ThemeAwareAsset;
+            return require("theme_aware_asset").ThemeAwareAsset;
           }
     };
     items[10] = {
@@ -59,7 +59,7 @@ class GiftPlanSelectionCardBanner$Type extends MessageType {
       name: "card_asset",
       kind: "message",
       T() {
-            return callback(10685).ThemeAwareAsset;
+            return require("theme_aware_asset").ThemeAwareAsset;
           }
     };
     items[11] = {
@@ -67,7 +67,7 @@ class GiftPlanSelectionCardBanner$Type extends MessageType {
       name: "mobile_banner_asset",
       kind: "message",
       T() {
-            return callback(10685).ThemeAwareAsset;
+            return require("theme_aware_asset").ThemeAwareAsset;
           }
     };
     items[12] = {
@@ -75,7 +75,7 @@ class GiftPlanSelectionCardBanner$Type extends MessageType {
       name: "header_localized",
       kind: "message",
       T() {
-            return callback(10675).LocalizedString;
+            return require("localized_string").LocalizedString;
           }
     };
     items[13] = {
@@ -83,52 +83,50 @@ class GiftPlanSelectionCardBanner$Type extends MessageType {
       name: "desktop_body_localized",
       kind: "message",
       T() {
-            return callback(10675).LocalizedString;
+            return require("localized_string").LocalizedString;
           }
     };
     obj = { no: 15, name: "mobile_body_localized", kind: "message", T: null };
     class T {
       constructor() {
-        return require("create").LocalizedString;
+        return closure_1_0(closure_1_1[4]).LocalizedString;
       }
     }
-    obj[3] = T;
+    obj.T = T;
     items[14] = obj;
     items[15] = {
       no: 16,
       name: "asset_variant",
       kind: "enum",
       T() {
-            const items = ["discord_protos.premium_marketing.v1.GiftPlanSelectionCardBanner.AssetVariant", closure_3, "ASSET_VARIANT_"];
+            const items = ["discord_protos.premium_marketing.v1.GiftPlanSelectionCardBanner.AssetVariant", GiftPlanSelectionCardBanner_AssetVariant, "ASSET_VARIANT_"];
             return items;
           }
     };
-    tmp = new tmp("discord_protos.premium_marketing.v1.GiftPlanSelectionCardBanner", items, T);
-    // ThrowIfThisInitialized (0x7c)
-    return tmp;
+    tmp1 = new tmp("discord_protos.premium_marketing.v1.GiftPlanSelectionCardBanner", items, T);
+    return tmp1;
   }
 }
 const prototype = GiftPlanSelectionCardBanner$Type.prototype;
 prototype["create"] = function create(arr) {
-  obj = { header: "", desktopBody: "", mobileBody: "", bannerAssetUrl: "", backgroundAssetUrl: "", cardAssetUrl: "", assetVariant: 0 };
+  const obj = { header: "", desktopBody: "", mobileBody: "", bannerAssetUrl: "", backgroundAssetUrl: "", cardAssetUrl: "", assetVariant: 0 };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
     const result = _mod1188.reflectionMergePartial(this, obj, arr);
     const tmpResult = _mod1188;
   }
   return obj;
 };
-prototype["internalBinaryRead"] = function internalBinaryRead(pos) {
+prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, arg2, arg3) {
   const self = this;
-  obj = arg3;
+  let obj = arg3;
   if (arg3 == null) {
     obj = self.create();
   }
   if (pos.pos < pos.pos + arg1) {
-    [r10019, r10020] = callback(pos.tag(), 2);
-    const tmp3 = callback(pos.tag(), 2);
+    [r10019, r10020] = pos.tag();
+    const tmp3 = _slicedToArray(pos.tag(), 2);
   }
   return obj;
 };
@@ -146,7 +144,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wri
     const tagResult2 = tag.tag(3, _mod1188.WireType.LengthDelimited);
   }
   if (header.avatarAsset) {
-    const ThemeAwareAsset = create3.ThemeAwareAsset;
+    const ThemeAwareAsset = theme_aware_asset.ThemeAwareAsset;
     const tagResult3 = tag.tag(4, _mod1188.WireType.LengthDelimited);
     const joined = ThemeAwareAsset.internalBinaryWrite(header.avatarAsset, tag.tag(4, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = ThemeAwareAsset.internalBinaryWrite(header.avatarAsset, tag.tag(4, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -164,49 +162,49 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wri
     const tagResult6 = tag.tag(7, _mod1188.WireType.LengthDelimited);
   }
   if (header.gradient) {
-    const Gradient = create2.Gradient;
+    const Gradient = gradient.Gradient;
     const tagResult7 = tag.tag(8, _mod1188.WireType.LengthDelimited);
     const joined1 = Gradient.internalBinaryWrite(header.gradient, tag.tag(8, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = Gradient.internalBinaryWrite(header.gradient, tag.tag(8, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.bannerAsset) {
-    const ThemeAwareAsset2 = create3.ThemeAwareAsset;
+    const ThemeAwareAsset2 = theme_aware_asset.ThemeAwareAsset;
     const tagResult8 = tag.tag(9, _mod1188.WireType.LengthDelimited);
     const joined2 = ThemeAwareAsset2.internalBinaryWrite(header.bannerAsset, tag.tag(9, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult2 = ThemeAwareAsset2.internalBinaryWrite(header.bannerAsset, tag.tag(9, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.backgroundAsset) {
-    const ThemeAwareAsset3 = create3.ThemeAwareAsset;
+    const ThemeAwareAsset3 = theme_aware_asset.ThemeAwareAsset;
     const tagResult9 = tag.tag(10, _mod1188.WireType.LengthDelimited);
     const joined3 = ThemeAwareAsset3.internalBinaryWrite(header.backgroundAsset, tag.tag(10, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult3 = ThemeAwareAsset3.internalBinaryWrite(header.backgroundAsset, tag.tag(10, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.cardAsset) {
-    const ThemeAwareAsset4 = create3.ThemeAwareAsset;
+    const ThemeAwareAsset4 = theme_aware_asset.ThemeAwareAsset;
     const tagResult10 = tag.tag(11, _mod1188.WireType.LengthDelimited);
     const joined4 = ThemeAwareAsset4.internalBinaryWrite(header.cardAsset, tag.tag(11, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult4 = ThemeAwareAsset4.internalBinaryWrite(header.cardAsset, tag.tag(11, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.mobileBannerAsset) {
-    const ThemeAwareAsset5 = create3.ThemeAwareAsset;
+    const ThemeAwareAsset5 = theme_aware_asset.ThemeAwareAsset;
     const tagResult11 = tag.tag(12, _mod1188.WireType.LengthDelimited);
     const joined5 = ThemeAwareAsset5.internalBinaryWrite(header.mobileBannerAsset, tag.tag(12, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult5 = ThemeAwareAsset5.internalBinaryWrite(header.mobileBannerAsset, tag.tag(12, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.headerLocalized) {
-    const LocalizedString = create.LocalizedString;
+    const LocalizedString = localized_string.LocalizedString;
     const tagResult12 = tag.tag(13, _mod1188.WireType.LengthDelimited);
     const joined6 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(13, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult6 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(13, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.desktopBodyLocalized) {
-    const LocalizedString2 = create.LocalizedString;
+    const LocalizedString2 = localized_string.LocalizedString;
     const tagResult13 = tag.tag(14, _mod1188.WireType.LengthDelimited);
     const joined7 = LocalizedString2.internalBinaryWrite(header.desktopBodyLocalized, tag.tag(14, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult7 = LocalizedString2.internalBinaryWrite(header.desktopBodyLocalized, tag.tag(14, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.mobileBodyLocalized) {
-    const LocalizedString3 = create.LocalizedString;
+    const LocalizedString3 = localized_string.LocalizedString;
     const tagResult14 = tag.tag(15, _mod1188.WireType.LengthDelimited);
     const joined8 = LocalizedString3.internalBinaryWrite(header.mobileBodyLocalized, tag.tag(15, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult8 = LocalizedString3.internalBinaryWrite(header.mobileBodyLocalized, tag.tag(15, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -226,7 +224,8 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wri
   return tag;
 };
 const giftPlanSelectionCardBannerType = new GiftPlanSelectionCardBanner$Type();
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_plan_selection_card_banner.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_plan_selection_card_banner.tsx");
 
-export const GiftPlanSelectionCardBanner_AssetVariant = obj;
+export { GiftPlanSelectionCardBanner_AssetVariant };
 export const GiftPlanSelectionCardBanner = giftPlanSelectionCardBannerType;

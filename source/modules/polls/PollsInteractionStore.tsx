@@ -1,13 +1,16 @@
-// Module ID: 11432
-// Function ID: 11433
-// Name: useMessagePollInteractions
+// Module ID: 11459
+// Function ID: 11460
+// Name: PollsInteractionStore
 // Dependencies: [1244, 1249, 558, 11, 2]
 // Exports: clearChannelPollState, clearPollState, getPollState, updatePollState, useChannelPollInteractions, useMessagePollInteractions
 
-// Module 11432 (useMessagePollInteractions)
-import set from "set" /* 2 */;
-import shallowEqualDefault from "shallowEqual" /* 558 */;
-import identity from "identity" /* 1244 */;
+// Module 11459 (PollsInteractionStore)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
+import identity from "module_1244" /* 1244 */;
+import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 let closure_3 = {};
 let closure_4 = identity.createWithEqualityFn((arg0) => {
@@ -16,114 +19,111 @@ let closure_4 = identity.createWithEqualityFn((arg0) => {
     pollsByChannelId: {},
     pollsByMessageId: {},
     updatePollState(arg0, arg1, arg2) {
-      const callback = arg0;
+      closure_0 = arg0;
       closure_1 = arg1;
       closure_2 = arg2;
-      callback(closure_1_2[1]).batchUpdates(() => {
-        callback((pollsByChannelId) => {
+      closure_0(dependencyMap[1]).batchUpdates(() => {
+        closure_0((pollsByChannelId) => {
           let tmp4;
-          if (pollsByChannelId.pollsByChannelId[closure_0] != null) {
-            tmp4 = tmp3[closure_1];
+          if (pollsByChannelId.pollsByChannelId[closure_1_0] != null) {
+            tmp4 = tmp3[closure_1_1];
           }
-          const tmpResult = closure_2(tmp4);
-          let obj = { pollsByChannelId: null, pollsByMessageId: null };
-          obj = {};
+          const tmpResult = closure_1_2(tmp4);
+          const obj = { pollsByChannelId: null, pollsByMessageId: null };
+          const obj2 = {};
           const merged = Object.assign(pollsByChannelId.pollsByChannelId);
-          obj = {};
+          const obj3 = {};
           const merged1 = Object.assign(pollsByChannelId.pollsByChannelId[tmp2]);
-          obj[closure_1] = tmpResult;
-          obj[closure_0] = obj;
-          obj[0] = obj;
-          obj1 = {};
+          obj3[closure_1_1] = tmpResult;
+          obj2[closure_1_0] = obj3;
+          obj.pollsByChannelId = obj2;
+          const obj4 = {};
           const merged2 = Object.assign(pollsByChannelId.pollsByMessageId);
-          obj1[closure_1] = tmpResult;
-          obj[1] = obj1;
+          obj4[closure_1_1] = tmpResult;
+          obj.pollsByMessageId = obj4;
           return obj;
         });
       });
     }
   };
 });
-const result = set.fileFinishedImporting("modules/polls/PollsInteractionStore.tsx");
+const result = size.fileFinishedImporting("modules/polls/PollsInteractionStore.tsx");
 
 export const useMessagePollInteractions = function useMessagePollInteractions(arg0) {
   closure_0 = arg0;
-  return store((arg0) => {
-    closure_0 = arg0;
+  return closure_4((arg0) => {
+    const pollsByMessageId = arg0;
     const obj = {};
-    const item = closure_0.forEach((arg0) => {
-      if (null != pollsByMessageId.pollsByMessageId[arg0]) {
-        obj[arg0] = tmp;
+    const item = pollsByMessageId.forEach((item) => {
+      if (null != pollsByMessageId.pollsByMessageId[item]) {
+        obj[item] = tmp;
       }
     });
     return obj;
-  }, shallowEqualDefault);
+  }, discord_common_shallowEqualDefault);
 };
 export const useChannelPollInteractions = function useChannelPollInteractions(arg0) {
   closure_0 = arg0;
-  return store((arg0) => {
+  return closure_4((arg0) => {
     let tmp = arg0.pollsByChannelId[closure_0];
     if (tmp == null) {
-      tmp = closure_1_3;
+      tmp = closure_3;
     }
     return tmp;
-  }, shallowEqualDefault);
+  }, discord_common_shallowEqualDefault);
 };
 export const clearChannelPollState = function clearChannelPollState(arg0) {
-  const _require = arg0;
-  _require(1249).batchUpdates(() => {
-    closure_1_4.setState((arg0) => {
+  _require = arg0;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    state.setState((arg0) => {
       ({ pollsByChannelId, pollsByMessageId } = arg0);
-      pollsByMessageId = undefined;
-      let tmp3 = pollsByChannelId[pollsByMessageId];
+      let obj2;
+      let tmp3 = pollsByChannelId[closure_1_0];
       if (tmp3 == null) {
-        tmp3 = closure_1_3;
+        tmp3 = closure_2_3;
       }
-      pollsByMessageId = closure_1_1(closure_1_2[3]);
-      const keys = pollsByMessageId.keys(tmp3);
-      pollsByMessageId = {};
+      const keys = SnowflakeUtilsDefault.keys(tmp3);
+      obj2 = {};
       const merged = Object.assign(pollsByMessageId);
-      const item = keys.forEach((arg0) => {
+      const item = keys.forEach((item) => {
         delete tmp2[tmp];
       });
       const merged1 = Object.assign(pollsByChannelId);
       delete tmp2[tmp];
-      return { pollsByChannelId: {}, pollsByMessageId };
+      return { pollsByChannelId: {}, pollsByMessageId: obj2 };
     });
   });
 };
 export const clearPollState = function clearPollState(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   closure_1 = arg1;
-  _require(1249).batchUpdates(() => {
-    closure_1_4.setState((arg0) => {
+  require("ReactBatchUpdates").batchUpdates(() => {
+    state.setState((arg0) => {
       ({ pollsByChannelId, pollsByMessageId } = arg0);
-      let obj = pollsByChannelId[closure_0];
+      let obj = pollsByChannelId[closure_1_0];
       if (obj == null) {
         obj = {};
       }
-      obj = {};
       const merged = Object.assign(obj);
       delete tmp3[tmp];
-      obj = {};
       const merged1 = Object.assign(pollsByMessageId);
       delete tmp2[tmp];
-      obj1 = { pollsByChannelId: null, pollsByMessageId: null };
-      const obj2 = {};
+      const obj4 = { pollsByChannelId: null, pollsByMessageId: null };
+      const obj5 = {};
       const merged2 = Object.assign(pollsByChannelId);
-      obj2[closure_0] = obj;
-      obj1[0] = obj2;
-      obj1[1] = obj;
-      return obj1;
+      obj5[closure_1_0] = {};
+      obj4.pollsByChannelId = obj5;
+      obj4.pollsByMessageId = {};
+      return obj4;
     });
   });
 };
 export const updatePollState = function updatePollState(arg0, arg1, arg2) {
-  const state = store.getState();
+  const state = closure_4.getState();
   state.updatePollState(arg0, arg1, arg2);
 };
 export const getPollState = function getPollState(channelId, id) {
-  const tmp = store.getState().pollsByChannelId[channelId];
+  const tmp = closure_4.getState().pollsByChannelId[channelId];
   let tmp2;
   if (tmp != null) {
     tmp2 = tmp[id];

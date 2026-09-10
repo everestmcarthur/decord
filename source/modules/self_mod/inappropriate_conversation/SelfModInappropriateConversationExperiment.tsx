@@ -1,15 +1,16 @@
-// Module ID: 10973
-// Function ID: 10974
-// Name: InappropriateConversationExperiment
+// Module ID: 11000
+// Function ID: 11001
+// Name: SelfModInappropriateConversationExperiment
 // Dependencies: [1434, 2]
 // Exports: isEligibleForInappropriateConversationWarning, useIsEligibleForInappropriateConversationWarning
 
-// Module 10973 (InappropriateConversationExperiment)
-import getUnitIdDefault from "getUnitId" /* 1434 */;
+// Module 11000 (SelfModInappropriateConversationExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
 
-const tmp2 = getUnitIdDefault({ name: "2026-04-inappropriate-conversations-prescan", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
+const tmp2 = apex_ApexExperimentDefault({ name: "2026-04-inappropriate-conversations-prescan", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 let closure_0 = tmp2;
-const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/SelfModInappropriateConversationExperiment.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/SelfModInappropriateConversationExperiment.tsx");
 
 export const InappropriateConversationExperiment = tmp2;
 export const isEligibleForInappropriateConversationWarning = function isEligibleForInappropriateConversationWarning(location) {

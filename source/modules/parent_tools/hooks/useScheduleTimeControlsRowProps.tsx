@@ -1,44 +1,42 @@
-// Module ID: 14913
-// Function ID: 14914
+// Module ID: 14939
+// Function ID: 14940
 // Name: useScheduleTimeControlsRowProps
-// Dependencies: [21, 4556, 1114, 2396, 2]
+// Dependencies: [21, 4570, 1114, 2396, 2]
 // Exports: default
 
-// Module 14913 (useScheduleTimeControlsRowProps)
-import set from "set" /* 2 */;
+// Module 14939 (useScheduleTimeControlsRowProps)
 import jsxProd from "jsxProd" /* 21 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 2396 */;
-import Text from "Text" /* 4556 */;
+import util from "util" /* 1114 */;
+import _modDef2396 from "module_2396" /* 2396 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("modules/parent_tools/hooks/useScheduleTimeControlsRowProps.tsx");
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useScheduleTimeControlsRowProps.tsx");
 
 export default function useScheduleTimeControlsRowProps(arr) {
   if (0 === arr.length) {
-    let obj = { subLabel: null, trailing: "a" };
-    obj = { variant: "text-xs/medium", color: "text-muted", children: null };
-    const intl = getSystemLocale.intl;
-    obj[2] = intl.string(messagesProxyDefault.fOBIZH);
-    obj[0] = jsx(Text.Text, { variant: "text-xs/medium", color: "text-muted", children: null });
-    return obj;
+    const obj2 = { subLabel: null, trailing: "a" };
+    const obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
+    const intl = util.intl;
+    obj3.children = intl.string(_modDef2396.fOBIZH);
+    obj2.subLabel = jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", children: null });
+    return obj2;
   } else {
-    obj1 = { subLabel: null, trailing: null };
-    const intl2 = getSystemLocale.intl;
-    const obj2 = { count: null };
-    obj2[0] = arr.length;
-    obj1[0] = intl2.formatToPlainString(messagesProxyDefault.XfwcpX, obj2);
-    const intl3 = getSystemLocale.intl;
+    const obj4 = { subLabel: null, trailing: null };
+    const intl2 = util.intl;
+    const obj5 = { count: arr.length };
+    obj4.subLabel = intl2.formatToPlainString(_modDef2396.XfwcpX, obj5);
+    const intl3 = util.intl;
     const string = intl3.string;
-    const tmp11 = messagesProxyDefault;
+    const tmp11 = _modDef2396;
     if (someResult) {
       let stringResult = string(tmp11["8vDHRq"]);
     } else {
       stringResult = string(tmp11["4z9fN+"]);
     }
-    obj = { variant: "text-sm/medium", color: "text-muted", children: null };
-    obj[2] = stringResult;
-    obj1[1] = jsx(Text.Text, { variant: "text-sm/medium", color: "text-muted", children: null });
-    return obj1;
+    const obj = { variant: "text-sm/medium", color: "text-muted", children: stringResult };
+    obj4.trailing = jsx(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: stringResult });
+    return obj4;
   }
 };

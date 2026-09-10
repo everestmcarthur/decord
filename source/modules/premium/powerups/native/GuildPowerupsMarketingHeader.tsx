@@ -1,48 +1,48 @@
-// Module ID: 13580
-// Function ID: 13581
-// Name: PerkText
-// Dependencies: [19, 17, 4449, 21, 4560, 576, 672, 4556, 13581, 12492, 12517, 1114, 2428, 13582, 2]
+// Module ID: 13603
+// Function ID: 13604
+// Name: GuildPowerupsMarketingHeader
+// Dependencies: [19, 17, 4463, 21, 4574, 576, 672, 4570, 13604, 12518, 12543, 1114, 2428, 13605, 2]
 // Exports: default
 
-// Module 13580 (PerkText)
-import ThemesDefault from "Themes" /* 576 */;
-import nDefault from "n" /* 672 */;
-import Text from "Text" /* 4556 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12517 */;
-import setDefault from "set" /* 13581 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "calculateAppliedBoosts" /* 4449 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13603 (GuildPowerupsMarketingHeader)
+import nativeDefault from "native" /* 576 */;
+import _modDef672 from "module_672" /* 672 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12518 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12543 */;
+import useMarketablePowerupPerksDefault from "useMarketablePowerupPerks" /* 13604 */;
+import noop from "module_19" /* 19 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4463 */;
 
-require = arg1;
+require = fn;
 function PerkText(children) {
-  return jsx(Text.Text, { color: "text-overlay-light", variant: "text-sm/semibold", children: children.powerup.title });
+  return jsx(Text_Text.Text, { color: "text-overlay-light", variant: "text-sm/semibold", children: children.powerup.title });
 }
-createCacheKey = { container: null, text: null };
-createCacheKey = { padding: ThemesDefault.space.PX_12, backgroundColor: null };
-let obj4 = nDefault("#000000");
-createCacheKey[1] = nDefault("#000000").alpha(0.18).hex();
-createCacheKey[0] = createCacheKey;
-let obj1 = { textAlign: "center", color: null };
-const alphaResult = nDefault("#000000").alpha(0.18);
-const obj7 = nDefault("#FFFFFF");
-obj1[1] = nDefault("#FFFFFF").alpha(0.5).hex();
-createCacheKey[1] = obj1;
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const alphaResult1 = nDefault("#FFFFFF").alpha(0.5);
-const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsMarketingHeader.tsx");
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { container: null, text: null };
+let obj3 = { padding: nativeDefault.space.PX_12, backgroundColor: null };
+let obj4 = _modDef672("#000000");
+obj3.backgroundColor = _modDef672("#000000").alpha(0.18).hex();
+obj2.container = obj3;
+let obj5 = { textAlign: "center", color: null };
+const alphaResult = _modDef672("#000000").alpha(0.18);
+let obj7 = _modDef672("#FFFFFF");
+obj5.color = _modDef672("#FFFFFF").alpha(0.5).hex();
+obj2.text = obj5;
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsMarketingHeader.tsx");
 
 export default function GuildPowerupsMarketingHeader(guild) {
   guild = guild.guild;
-  const tmp = callback();
-  const arr = setDefault(guild.id);
+  const tmp = closure_7();
+  const arr = useMarketablePowerupPerksDefault(guild.id);
   const items = [guild.id];
-  const effect = React.useEffect(() => {
-    if (closure_1_5.shouldFetchCatalogForGuild(guild.id)) {
-      const powerupCatalogForGuild = guild(closure_1_2[9]).fetchPowerupCatalogForGuild(guild.id);
-      const obj = guild(closure_1_2[9]);
+  const effect = noop.useEffect(() => {
+    if (GuildPowerupsStore.shouldFetchCatalogForGuild(guild.id)) {
+      const powerupCatalogForGuild = GuildPowerupsActionCreators.fetchPowerupCatalogForGuild(guild.id);
     }
   }, items);
   if (useHasAllocateBoostPermissionDefault(guild.id)) {
@@ -54,39 +54,34 @@ export default function GuildPowerupsMarketingHeader(guild) {
       num = 0;
     }
     if (0 !== num) {
-      let obj = { style: null, children: null };
-      obj[0] = tmp.container;
-      obj = { style: null, variant: "text-sm/semibold", children: null };
-      obj[0] = tmp.text;
+      let obj = { style: tmp.container, children: null };
+      const obj2 = { style: tmp.text, variant: "text-sm/semibold", children: null };
       const intl = guild(1114).intl;
       let str2 = "";
       if (null != arr) {
         str2 = "";
         if (0 !== arr.length) {
-          let first = tmp2(13582)(arr);
+          let first = tmp2(13605)(arr);
           if (1 === first.length) {
-            obj = { powerup: null };
+            const obj3 = { powerup: null };
             first = first[0];
-            obj[0] = first;
-            let formatResult = tmp6(PerkText, obj);
+            obj3.powerup = first;
+            let formatResult = tmp6(PerkText, obj3);
           } else {
             const intl2 = guild(1114).intl;
-            obj1 = { perk1: null, perk2: null };
-            const obj2 = { powerup: null };
-            obj2[0] = first[0];
-            obj1[0] = tmp6(PerkText, obj2);
-            const obj3 = { powerup: null };
-            obj3[0] = first[1];
-            obj1[1] = tmp6(PerkText, obj3);
-            formatResult = intl2.format(tmp2(2428).MNO3sG, obj1);
+            const obj4 = { perk1: null, perk2: null };
+            const obj5 = { powerup: first[0] };
+            obj4.perk1 = tmp6(PerkText, obj5);
+            const obj6 = { powerup: first[1] };
+            obj4.perk2 = tmp6(PerkText, obj6);
+            formatResult = intl2.format(tmp2(2428).MNO3sG, obj4);
           }
         }
       }
-      const obj4 = { perks: null };
-      obj4[0] = str2;
-      obj[2] = intl.format(tmp2(2428)["7lwpzR"], obj4);
-      obj[1] = jsx(guild(4556).Text, { style: null, variant: "text-sm/semibold", children: null });
-      return <View style={null} variant="text-sm/semibold">{null}</View>;
+      const obj7 = { perks: str2 };
+      obj2.children = intl.format(tmp2(2428)["7lwpzR"], obj7);
+      obj.children = jsx(guild(4570).Text, { style: tmp.text, variant: "text-sm/semibold", children: null });
+      return <View style={tmp.container}>{null}</View>;
     }
   }
 };

@@ -1,22 +1,32 @@
-// Module ID: 8606
-// Function ID: 8607
-// Dependencies: [19, 1074, 21, 4560, 576, 1115, 4271, 4411, 5686, 7085, 6606, 1178, 2]
+// Module ID: 8634
+// Function ID: 8635
+// Name: FormInput
+// Dependencies: [19, 1074, 21, 4574, 576, 1115, 4284, 4425, 5700, 7099, 6620, 1178, 2]
 
-// Module 8606
-import ThemesDefault from "Themes" /* 576 */;
-import importAllResult from "noop" /* 19 */;
-import { KeyboardThemes } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 8634 (FormInput)
+import nativeDefault from "native" /* 576 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import native2 from "native" /* 4284 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let obj = { inputViewContainer: { paddingVertical: 13, paddingHorizontal: 15 }, placeholderText: null, inputText: null };
-obj = { color: ThemesDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
-obj[1] = obj;
-createCacheKey = { color: ThemesDefault.colors.TEXT_DEFAULT };
-obj[2] = createCacheKey;
-let closure_5 = createCacheKey.createStyles(obj);
-const forwardRefResult = importAllResult.forwardRef((helpText, ref) => {
+const native = TextArea(1178);
+const shared = TextArea(4425);
+const RedesignCompat = TextArea(5700);
+const TextInput = TextArea(6620);
+const TextArea2 = TextArea(7099);
+require = fn;
+const KeyboardThemes = fn(1074).KeyboardThemes;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj = { inputViewContainer: { paddingVertical: 13, paddingHorizontal: 15 }, placeholderText: { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT }, inputText: null };
+let obj3 = { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
+obj.inputText = { color: nativeDefault.colors.TEXT_DEFAULT };
+let closure_5 = createStyles.createStyles(obj);
+const obj4 = { color: nativeDefault.colors.TEXT_DEFAULT };
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/Form/native/FormInput.tsx");
+
+export default noop.forwardRef((helpText, ref) => {
   ({ onChange, keyboardAppearance, value, title } = helpText);
   ({ keyboardType, style, inputTextStyle } = helpText);
   if (title === undefined) {
@@ -52,8 +62,7 @@ const forwardRefResult = importAllResult.forwardRef((helpText, ref) => {
   }
   ({ clearButtonVisibility, autoCapitalize, autoCorrect, showBorder } = helpText);
   if (showBorder === undefined) {
-    let obj = _require(ref[5]);
-    showBorder = obj.isAndroid();
+    showBorder = PlatformUtils.isAndroid();
   }
   let flag5 = helpText.showCharactersRemaining;
   if (flag5 === undefined) {
@@ -67,21 +76,21 @@ const forwardRefResult = importAllResult.forwardRef((helpText, ref) => {
   if (flag7 === undefined) {
     flag7 = true;
   }
-  let onEndEditing = Object.assign(helpText, Object.create(null));
-  _require = undefined;
+  let onEndEditing = Object.assign(helpText, Object.assign({ onChange: 0, keyboardAppearance: 0, keyboardType: 0, style: 0, inputTextStyle: 0, value: 0, title: 0, helpText: 0, error: 0, placeholder: 0, secureTextEntry: 0, disabled: 0, multiline: 0, autoFocus: 0, numberOfLines: 0, clearButtonVisibility: 0, autoCapitalize: 0, autoCorrect: 0, showBorder: 0, showCharactersRemaining: 0, enableAndroidSanitizedInputWorkaround: 0, allowRedesignTextInput: 0 }));
+  closure_0 = undefined;
   ref = undefined;
   let ref1;
-  let color = callback();
-  let TextArea = _require;
-  obj = ref;
-  _require(ref[6]);
+  let color = closure_5();
+  let TextArea = require;
+  let obj2 = dependencyMap;
+  native2;
   if (null != keyboardAppearance) {
-    const tmp7 = ref1.useContext(TextArea(obj[8]).RedesignCompatContext) && flag7;
-    _require = tmp7;
+    const tmp7 = noop.useContext(RedesignCompat.RedesignCompatContext) && flag7;
+    closure_0 = tmp7;
     let tmp8 = !flag6;
     if (flag6) {
-      tmp8 = !TextArea(obj[5]).isAndroid();
-      const TextAreaResult = TextArea(obj[5]);
+      tmp8 = !PlatformUtils.isAndroid();
+      const TextAreaResult = PlatformUtils;
     }
     let tmp9 = !tmp8;
     if (tmp8) {
@@ -91,13 +100,13 @@ const forwardRefResult = importAllResult.forwardRef((helpText, ref) => {
       let str2 = keyboardType;
     } else {
       str2 = "visible-password";
-      const TextAreaResult1 = TextArea(obj[5]);
+      const TextAreaResult1 = PlatformUtils;
     }
     ref = obj4.useRef(null);
     ref1 = obj4.useRef(null);
     const imperativeHandle = obj4.useImperativeHandle(ref, () => ({
       isFocused() {
-        const current = closure_0 ? closure_1 : closure_2.current;
+        const current = closure_1_0 ? ref : ref1.current;
         let isFocusedResult;
         if (current != null) {
           isFocusedResult = current.isFocused();
@@ -105,25 +114,25 @@ const forwardRefResult = importAllResult.forwardRef((helpText, ref) => {
         return true === isFocusedResult;
       },
       focus() {
-        const current = closure_0 ? closure_1 : closure_2.current;
+        const current = closure_1_0 ? ref : ref1.current;
         if (current != null) {
           current.focus();
         }
       },
       blur() {
-        const current = closure_0 ? closure_1 : closure_2.current;
+        const current = closure_1_0 ? ref : ref1.current;
         if (current != null) {
           current.blur();
         }
       },
       setText(arg0) {
-        const current = closure_0 ? closure_1 : closure_2.current;
+        const current = closure_1_0 ? ref : ref1.current;
         if (current != null) {
           current.setText(arg0);
         }
       },
       getText() {
-        const current = closure_0 ? closure_1 : closure_2.current;
+        const current = closure_1_0 ? ref : ref1.current;
         let str;
         if (current != null) {
           str = current.getText();
@@ -134,19 +143,19 @@ const forwardRefResult = importAllResult.forwardRef((helpText, ref) => {
         return str;
       },
       measure(arg0) {
-        const current = closure_0 ? closure_1 : closure_2.current;
+        const current = closure_1_0 ? ref : ref1.current;
         if (current != null) {
           current.measure(arg0);
         }
       },
       measureInWindow(arg0) {
-        const current = closure_0 ? closure_1 : closure_2.current;
+        const current = closure_1_0 ? ref : ref1.current;
         if (current != null) {
           current.measureInWindow(arg0);
         }
       },
       measureLayout(arg0, arg1, arg2) {
-        const current = closure_0 ? closure_1 : closure_2.current;
+        const current = closure_1_0 ? ref : ref1.current;
         if (current != null) {
           current.measureLayout(arg0, arg1, arg2);
         }
@@ -154,51 +163,29 @@ const forwardRefResult = importAllResult.forwardRef((helpText, ref) => {
     }));
     if (tmp7) {
       if (flag3) {
-        TextArea = TextArea(obj[9]).TextArea;
-        obj = { ref: null, returnKeyType: "default", onChange: null, keyboardAppearance: null, keyboardType: null, placeholderTextColor: null, placeholder: null, secureTextEntry: null, isDisabled: null, autoFocus: null, autoCapitalize: null, autoCorrect: null, maxLength: null, onEndEditing: null, value: null, errorMessage: null };
-        obj[0] = ref;
-        obj[2] = onChange;
-        obj[3] = keyboardAppearance;
-        obj[4] = str2;
+        TextArea = TextArea2.TextArea;
+        obj2 = { ref, returnKeyType: "default", onChange, keyboardAppearance, keyboardType: str2, placeholderTextColor: null, placeholder: null, secureTextEntry: null, isDisabled: null, autoFocus: null, autoCapitalize: null, autoCorrect: null, maxLength: null, onEndEditing: null, value: null, errorMessage: null };
         color = color.placeholderText.color;
-        obj[5] = color;
-        obj[6] = placeholder;
-        obj[7] = tmp9;
-        obj[8] = flag2;
-        obj[9] = flag4;
-        obj[10] = autoCapitalize;
-        obj[11] = autoCorrect;
+        obj2.placeholderTextColor = color;
+        obj2.placeholder = placeholder;
+        obj2.secureTextEntry = tmp9;
+        obj2.isDisabled = flag2;
+        obj2.autoFocus = flag4;
+        obj2.autoCapitalize = autoCapitalize;
+        obj2.autoCorrect = autoCorrect;
         autoCorrect = onEndEditing.maxLength;
-        obj[12] = autoCorrect;
+        obj2.maxLength = autoCorrect;
         onEndEditing = onEndEditing.onEndEditing;
-        obj[13] = onEndEditing;
-        obj[14] = value;
-        obj[15] = error;
-        let tmp14Result = tmp14(TextArea, obj);
+        obj2.onEndEditing = onEndEditing;
+        obj2.value = value;
+        obj2.errorMessage = error;
+        let tmp14Result = tmp14(TextArea, obj2);
       } else {
-        obj = { ref: null, returnKeyType: "done", onChange: null, keyboardAppearance: null, keyboardType: null, placeholderTextColor: null, placeholder: null, secureTextEntry: null, isDisabled: null, autoFocus: null, autoCapitalize: null, autoCorrect: null, onEndEditing: null, value: null, errorMessage: null };
-        obj[0] = ref;
-        obj[2] = onChange;
-        obj[3] = keyboardAppearance;
-        obj[4] = str2;
-        obj[5] = color.placeholderText.color;
-        obj[6] = placeholder;
-        obj[7] = tmp9;
-        obj[8] = flag2;
-        obj[9] = flag4;
-        obj[10] = autoCapitalize;
-        obj[11] = autoCorrect;
-        obj[12] = onEndEditing.onEndEditing;
-        obj[13] = value;
-        obj[14] = error;
-        tmp14Result = tmp14(TextArea(obj[10]).TextInput, obj);
-        const tmp18 = value;
+        const obj3 = { ref, returnKeyType: "done", onChange, keyboardAppearance, keyboardType: str2, placeholderTextColor: color.placeholderText.color, placeholder, secureTextEntry: tmp9, isDisabled: flag2, autoFocus: flag4, autoCapitalize, autoCorrect, onEndEditing: onEndEditing.onEndEditing, value, errorMessage: error };
+        tmp14Result = tmp14(TextInput.TextInput, obj3);
       }
     } else {
-      obj1 = { ref: null, inputTextColor: null, multiline: null, returnKeyType: null, onChangeText: null, keyboardAppearance: null, keyboardType: null, placeholderTextColor: null, title: null, helpText: null, error: null, placeholder: null, secureTextEntry: null, disabled: null, autoFocus: null, numberOfLines: null, autoCapitalize: null, autoCorrect: null, showBorder: null, showCharactersRemaining: null, style: null, inputTextStyle: null, value: null, clearButtonVisibility: null };
-      obj1[0] = ref1;
-      obj1[1] = color.inputText.color;
-      obj1[2] = flag3;
+      const obj5 = { ref: ref1, inputTextColor: color.inputText.color, multiline: flag3, returnKeyType: null, onChangeText: null, keyboardAppearance: null, keyboardType: null, placeholderTextColor: null, title: null, helpText: null, error: null, placeholder: null, secureTextEntry: null, disabled: null, autoFocus: null, numberOfLines: null, autoCapitalize: null, autoCorrect: null, showBorder: null, showCharactersRemaining: null, style: null, inputTextStyle: null, value: null, clearButtonVisibility: null };
       if (null != onEndEditing.returnKeyType) {
         let str3 = onEndEditing.returnKeyType;
       } else {
@@ -207,47 +194,44 @@ const forwardRefResult = importAllResult.forwardRef((helpText, ref) => {
           str3 = "default";
         }
       }
-      obj1[3] = str3;
-      obj1[4] = onChange;
-      obj1[5] = keyboardAppearance;
-      obj1[6] = str2;
-      obj1[7] = color.placeholderText.color;
-      obj1[8] = title;
-      obj1[9] = str;
+      obj5.returnKeyType = str3;
+      obj5.onChangeText = onChange;
+      obj5.keyboardAppearance = keyboardAppearance;
+      obj5.keyboardType = str2;
+      obj5.placeholderTextColor = color.placeholderText.color;
+      obj5.title = title;
+      obj5.helpText = str;
       let str4 = error;
       if (error == null) {
         str4 = "";
       }
-      obj1[10] = str4;
-      obj1[11] = placeholder;
-      obj1[12] = tmp9;
-      obj1[13] = flag2;
-      obj1[14] = flag4;
-      obj1[15] = num;
-      obj1[16] = autoCapitalize;
-      obj1[17] = autoCorrect;
-      obj1[18] = showBorder;
-      obj1[19] = flag5;
+      obj5.error = str4;
+      obj5.placeholder = placeholder;
+      obj5.secureTextEntry = tmp9;
+      obj5.disabled = flag2;
+      obj5.autoFocus = flag4;
+      obj5.numberOfLines = num;
+      obj5.autoCapitalize = autoCapitalize;
+      obj5.autoCorrect = autoCorrect;
+      obj5.showBorder = showBorder;
+      obj5.showCharactersRemaining = flag5;
       const items = [color.inputViewContainer, style];
-      obj1[20] = items;
-      obj1[21] = inputTextStyle;
+      obj5.style = items;
+      obj5.inputTextStyle = inputTextStyle;
       let str5 = value;
       if (value == null) {
         str5 = "";
       }
-      obj1[22] = str5;
+      obj5.value = str5;
       if (flag3) {
-        clearButtonVisibility = TextArea(obj[11]).ClearButtonVisibility.NEVER;
+        clearButtonVisibility = native.ClearButtonVisibility.NEVER;
       }
-      obj1[23] = clearButtonVisibility;
+      obj5.clearButtonVisibility = clearButtonVisibility;
       const merged = Object.assign(onEndEditing);
-      return tmp14(TextArea(obj[11]).InputView, obj1);
+      return tmp14(native.InputView, obj5);
     }
   } else {
-    TextArea(obj[7]).isThemeDark(tmp4) ? KeyboardThemes.DARK : KeyboardThemes.LIGHT;
-    const TextAreaResult2 = TextArea(obj[7]);
+    shared.isThemeDark(tmp4) ? KeyboardThemes.DARK : KeyboardThemes.LIGHT;
+    const TextAreaResult2 = shared;
   }
 });
-const result = require("set").fileFinishedImporting("design/void/Form/native/FormInput.tsx");
-
-export default forwardRefResult;

@@ -1,23 +1,22 @@
-// Module ID: 15814
-// Function ID: 15815
+// Module ID: 15844
+// Function ID: 15845
 // Name: useCollectiblesShopDeepLinkProps
-// Dependencies: [19, 7542, 7559, 504, 7553, 2]
+// Dependencies: [19, 7556, 7573, 504, 7567, 2]
 // Exports: useCollectiblesShopDeepLinkProps
 
-// Module 15814 (useCollectiblesShopDeepLinkProps)
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import closure_3 from "updateCategoriesAndProducts" /* 7542 */;
-import closure_4 from "items" /* 7559 */;
+// Module 15844 (useCollectiblesShopDeepLinkProps)
+import _mod19 from "module_19" /* 19 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7556 */;
+import CollectiblesShopStore from "CollectiblesShopStore" /* 7573 */;
+import size from "module_2" /* 2 */;
 
-const useMemo = noop.useMemo;
+const useMemo = _mod19.useMemo;
 let closure_5 = {};
-const result = set.fileFinishedImporting("modules/collectibles/native/useCollectiblesShopDeepLinkProps.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/native/useCollectiblesShopDeepLinkProps.tsx");
 
 export const useCollectiblesShopDeepLinkProps = function useCollectiblesShopDeepLinkProps(categories) {
   categories = categories.categories;
   const products = categories.products;
-  let initialCategorySkuId;
   let initialBaseProductSkuId;
   let initialVariantIndex;
   const items = [initialBaseProductSkuId, initialVariantIndex];
@@ -33,8 +32,8 @@ export const useCollectiblesShopDeepLinkProps = function useCollectiblesShopDeep
         const productByStoreListingId = obj.getProductByStoreListingId(product.variantGroupStoreListingId);
         let isVariantProduct = null != productByStoreListingId;
         if (isVariantProduct) {
-          isVariantProduct = initialProductSkuId(products[4]).getIsVariantProduct(productByStoreListingId);
-          const obj2 = initialProductSkuId(products[4]);
+          isVariantProduct = categories(products[4]).getIsVariantProduct(productByStoreListingId);
+          const obj2 = categories(products[4]);
         }
         initialVariantIndex = 0;
         initialBaseProductSkuId = initialProductSkuId;
@@ -53,34 +52,31 @@ export const useCollectiblesShopDeepLinkProps = function useCollectiblesShopDeep
     }
     return { initialCategorySkuId, initialBaseProductSkuId, initialVariantIndex };
   });
-  initialCategorySkuId = stateFromStoresObject.initialCategorySkuId;
+  let initialCategorySkuId = stateFromStoresObject.initialCategorySkuId;
   initialBaseProductSkuId = stateFromStoresObject.initialBaseProductSkuId;
   initialVariantIndex = stateFromStoresObject.initialVariantIndex;
   const items1 = [initialBaseProductSkuId, initialVariantIndex, initialCategorySkuId, products, categories];
   return initialCategorySkuId(() => {
     if (null != initialBaseProductSkuId) {
       if (null != initialCategorySkuId) {
-        let obj = { initialProductSkuId: null, initialVariantIndex: null, initialCategorySkuId: null, productIndex: null, categoryIndex: null };
-        obj[0] = tmp;
-        obj[1] = initialVariantIndex;
-        obj[2] = tmp6;
+        let obj2 = { initialProductSkuId: tmp, initialVariantIndex, initialCategorySkuId: tmp6, productIndex: null, categoryIndex: null };
         let bound;
         if (null != products) {
           const _Math = Math;
-          bound = Math.max(0, obj3.findIndex((skuId) => skuId.skuId === closure_3));
+          bound = Math.max(0, obj3.findIndex((skuId) => skuId.skuId === initialBaseProductSkuId));
         }
-        obj[3] = bound;
-        obj = categories;
+        obj2.productIndex = bound;
         let bound1;
         if (null != categories) {
           const _Math2 = Math;
-          bound1 = Math.max(0, obj.findIndex((skuId) => skuId.skuId === closure_2));
+          bound1 = Math.max(0, obj.findIndex((skuId) => skuId.skuId === initialCategorySkuId));
         }
-        obj[4] = bound1;
+        obj2.categoryIndex = bound1;
+        obj = categories;
         obj3 = products;
       }
-      return obj;
+      return obj2;
     }
-    obj = closure_1_5;
+    obj2 = closure_5;
   }, items1);
 };

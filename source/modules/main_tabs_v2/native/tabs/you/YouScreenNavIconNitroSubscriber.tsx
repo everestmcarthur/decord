@@ -1,33 +1,34 @@
-// Module ID: 16800
-// Function ID: 16801
-// Dependencies: [32, 19, 7452, 13417, 1954, 21, 8056, 504, 7388, 1943, 16795, 16797, 8667, 1114, 2]
+// Module ID: 16837
+// Function ID: 16838
+// Name: YouScreenNavIconNitroSubscriber
+// Dependencies: [32, 19, 7466, 13440, 1954, 21, 8071, 504, 7402, 1943, 16832, 16834, 8695, 1114, 2]
 
-// Module 16800
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import closure_5 from "emitChanges" /* 7452 */;
-import closure_6 from "zustandStore" /* 13417 */;
-import { NitroHomeSectionId } from "zustandStore" /* 13417 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16837 (YouScreenNavIconNitroSubscriber)
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7466 */;
+import PremiumNitroNavigationStore from "PremiumNitroNavigationStore" /* 13440 */;
 
-const require = arg1;
-let c4 = importAllResult;
-const memoResult = importAllResult.memo(function SubscriberNitroIcon(onPress) {
+const require = fn;
+const NitroHomeSectionId = fn(13440).NitroHomeSectionId;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouScreenNavIconNitroSubscriber.tsx");
+
+export default noop.memo(function SubscriberNitroIcon(onPress) {
   onPress = onPress.onPress;
-  let showReferralNotificationDot = onPress.showReferralNotificationDot;
-  showReferralNotificationDot = undefined;
+  let showReferralNotificationDot;
   dependencyMap = undefined;
-  let callback;
-  let obj = onPress(8056);
+  _slicedToArray = undefined;
   if (showReferralNotificationDot) {
     showReferralNotificationDot = obj.useIsEligibleSenderForReferralProgram(!showReferralNotificationDot);
   }
-  let tmpResult = tmp(504);
-  const items = [closure_5];
+  obj = onPress(8071);
+  const items = [ReferralTrialStore];
   const items1 = [showReferralNotificationDot];
-  const stateFromStores = tmpResult.useStateFromStores(items, () => closure_1_5.getReferralsRemaining({ bypassFetch: !showReferralNotificationDot }), items1);
-  tmpResult = tmp(7388);
+  const stateFromStores = onPress(504).useStateFromStores(items, () => ReferralTrialStore.getReferralsRemaining({ bypassFetch: !showReferralNotificationDot }), items1);
+  const tmpResult = onPress(504);
   let prop = null;
   if (showReferralNotificationDot) {
     prop = null;
@@ -38,28 +39,26 @@ const memoResult = importAllResult.memo(function SubscriberNitroIcon(onPress) {
       }
     }
   }
-  obj = { cooldownDurationMs: tmp(16795).REFERRAL_NITRO_BUTTON_RED_DOT_COOLDOWN_MS };
-  const tmp5 = callback(tmpResult.useSelectedTimeRecurringDismissibleContent(prop, obj, undefined, true), 2);
+  const tmpResult2 = onPress(7402);
+  const tmp5 = _slicedToArray(tmpResult2.useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: onPress(16832).REFERRAL_NITRO_BUTTON_RED_DOT_COOLDOWN_MS }, undefined, true), 2);
   dependencyMap = tmp6;
   const tmp7 = tmp5[0] === onPress(1943).DismissibleContent.REFERRAL_PROGRAM_ENTRYPOINT_NITRO_BUTTON_NOTIFICATION;
-  callback = tmp7;
+  _slicedToArray = tmp7;
   const items2 = [tmp7, tmp5[1], onPress];
-  callback = importAllResult.useCallback(() => {
+  const callback = noop.useCallback(() => {
     if (closure_3) {
-      callback(closure_1_8.TAKE_ACTION);
-      const obj = { scrollToSectionId: null };
-      obj[0] = closure_1_7.REFERRAL_PROGRAM;
-      closure_1_6.setState(obj);
+      closure_2(ContentDismissActionType.TAKE_ACTION);
+      const obj = { scrollToSectionId: NitroHomeSectionId.REFERRAL_PROGRAM };
+      PremiumNitroNavigationStore.setState(obj);
     }
     onPress();
   }, items2);
-  obj = { IconComponent: onPress(8667).NitroWheelIcon, accessibilityLabel: null, onPress: null, showRedDot: null };
+  const obj3 = { IconComponent: null, accessibilityLabel: null, onPress: null, showRedDot: null };
+  const obj2 = { cooldownDurationMs: onPress(16832).REFERRAL_NITRO_BUTTON_RED_DOT_COOLDOWN_MS };
+  obj3.IconComponent = onPress(8695).NitroWheelIcon;
   const intl = tmp(1114).intl;
-  obj[1] = intl.string(onPress(1114).t.Ipxkog);
-  obj[2] = callback;
-  obj[3] = tmp7;
-  return jsx(showReferralNotificationDot(16797), { IconComponent: onPress(8667).NitroWheelIcon, accessibilityLabel: null, onPress: null, showRedDot: null });
+  obj3.accessibilityLabel = intl.string(onPress(1114).t.Ipxkog);
+  obj3.onPress = callback;
+  obj3.showRedDot = tmp7;
+  return jsx(showReferralNotificationDot(16834), { IconComponent: null, accessibilityLabel: null, onPress: null, showRedDot: null });
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouScreenNavIconNitroSubscriber.tsx");
-
-export default memoResult;

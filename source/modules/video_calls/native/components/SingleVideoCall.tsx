@@ -1,27 +1,29 @@
-// Module ID: 10031
-// Function ID: 10032
+// Module ID: 10058
+// Function ID: 10059
 // Name: SingleVideoCall
-// Dependencies: [19, 9472, 21, 1611, 7162, 9628, 1178, 9609, 4761, 8179, 2]
+// Dependencies: [19, 9499, 21, 1611, 7176, 9655, 1178, 9636, 4775, 8205, 2]
 // Exports: default
 
-// Module 10031 (SingleVideoCall)
-import closure_3 from "noop" /* 19 */;
-import VoiceChatDrawerState from "VoiceChatDrawerState" /* 9472 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 10058 (SingleVideoCall)
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4775 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8205 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ resetFocus: c4, toggleFocus: c5 } = VoiceChatDrawerState);
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/SingleVideoCall.tsx");
+const require = fn;
+const ChannelCallStore = fn(9499);
+({ resetFocus: closure_4, toggleFocus: hasOwnProperty } = ChannelCallStore);
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/components/SingleVideoCall.tsx");
 
 export default function SingleVideoCall(channel) {
   channel = channel.channel;
   let bottom;
   let right;
-  let analyticsLocations;
   const rect = bottom(right[3])();
   bottom = rect.bottom;
   right = rect.right;
-  analyticsLocations = bottom(right[4])().analyticsLocations;
+  const analyticsLocations = bottom(right[4])().analyticsLocations;
   const items = [right, bottom];
   const memo = analyticsLocations.useMemo(() => ({ marginRight: right, marginBottom: bottom }), items);
   const obj = {
@@ -30,13 +32,13 @@ export default function SingleVideoCall(channel) {
     avatarSize: channel(right[6]).AvatarSizes.PROFILE,
     resizeMode: channel(right[7]).ResizeMode.AUTO,
     statusStyle: memo,
-    onSingleTap: closure_5,
+    onSingleTap,
     onDoubleTap() {
-      closure_1_4();
-      const participant = bottom(right[8]).selectParticipant(channel.id, null);
+      React4();
+      const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
     },
     onLongPress(user) {
-      bottom(right[9])({ userId: user.user.id, channelId: channel.id, isVoiceContext: true, sourceAnalyticsLocations: analyticsLocations });
+      showUserProfileActionSheetDefault({ userId: user.user.id, channelId: channel.id, isVoiceContext: true, sourceAnalyticsLocations: analyticsLocations });
     }
   };
   return jsx(bottom(right[5]), {
@@ -45,13 +47,13 @@ export default function SingleVideoCall(channel) {
     avatarSize: channel(right[6]).AvatarSizes.PROFILE,
     resizeMode: channel(right[7]).ResizeMode.AUTO,
     statusStyle: memo,
-    onSingleTap: closure_5,
+    onSingleTap,
     onDoubleTap() {
-      closure_1_4();
-      const participant = bottom(right[8]).selectParticipant(channel.id, null);
+      React4();
+      const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
     },
     onLongPress(user) {
-      bottom(right[9])({ userId: user.user.id, channelId: channel.id, isVoiceContext: true, sourceAnalyticsLocations: analyticsLocations });
+      showUserProfileActionSheetDefault({ userId: user.user.id, channelId: channel.id, isVoiceContext: true, sourceAnalyticsLocations: analyticsLocations });
     }
   });
 };

@@ -1,74 +1,74 @@
-// Module ID: 9858
-// Function ID: 9859
-// Name: stateFromStores
-// Dependencies: [19, 17, 9826, 21, 4560, 576, 504, 1178, 9859, 1114, 6939, 5123, 7380, 4556, 9827, 4975, 2]
+// Module ID: 9885
+// Function ID: 9886
+// Name: InstantInviteEmptyState
+// Dependencies: [19, 17, 9853, 21, 4574, 576, 504, 1178, 9886, 1114, 6953, 5137, 7394, 4570, 9854, 4989, 2]
 // Exports: default
 
-// Module 9858 (stateFromStores)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import ClearButtonDefault from "ClearButton" /* 6939 */;
-import registerAssetDefault from "registerAsset" /* 9859 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "updateWithLatestInvite" /* 9826 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9885 (InstantInviteEmptyState)
+import nativeDefault from "native" /* 576 */;
+import FreeFormTextInputDefault from "FreeFormTextInput" /* 6953 */;
+import _modDef9886 from "module_9886" /* 9886 */;
+import noop from "module_19" /* 19 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 9853 */;
 
-const require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { padding: 16 }, emptyStateContainer: { padding: 0, marginBottom: 16 }, emptyStateArt: { marginBottom: 16 }, emptyStateTitle: { marginBottom: 4 }, linkContainer: { maxWidth: "100%", flexDirection: "row", marginBottom: 8, gap: 8 }, inviteInput: { flexShrink: 1 }, expireCaption: { marginBottom: 16 }, settingsButton: null };
-createCacheKey = { width: 48, height: 48, justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs };
-createCacheKey[7] = createCacheKey;
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/instant_invite/native/components/InstantInviteEmptyState.tsx");
+const require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { padding: 16 }, emptyStateContainer: { padding: 0, marginBottom: 16 }, emptyStateArt: { marginBottom: 16 }, emptyStateTitle: { marginBottom: 4 }, linkContainer: { maxWidth: "100%", flexDirection: "row", marginBottom: 8, gap: 8 }, inviteInput: { flexShrink: 1 }, expireCaption: { marginBottom: 16 }, settingsButton: null };
+let size = { width: 48, height: 48, justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs };
+obj2.settingsButton = size;
+let closure_7 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/instant_invite/native/components/InstantInviteEmptyState.tsx");
 
 export default function _default(link) {
   let str = link.link;
   let stateFromStores;
   ({ onCopy, onShare, onPressSettings } = link);
-  const tmp = callback2();
-  let obj = stateFromStores(504);
-  const items = [closure_4];
-  stateFromStores = obj.useStateFromStores(items, () => inviteSettings.getInviteSettings());
-  obj = { style: tmp.container, children: null };
-  obj = { containerStyle: tmp.emptyStateContainer, imageStyle: tmp.emptyStateArt, titleStyle: tmp.emptyStateTitle, source: registerAssetDefault, title: null, body: null };
+  const tmp = closure_7();
+  const items = [CreateInviteModalStore];
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => inviteSettings.getInviteSettings());
+  const obj2 = { style: tmp.container, children: null };
+  const obj3 = { containerStyle: tmp.emptyStateContainer, imageStyle: tmp.emptyStateArt, titleStyle: tmp.emptyStateTitle, source: _modDef9886, title: null, body: null };
   const intl = stateFromStores(1114).intl;
-  obj[4] = intl.string(stateFromStores(1114).t.tQc0l8);
+  obj3.title = intl.string(stateFromStores(1114).t.tQc0l8);
   const intl2 = stateFromStores(1114).intl;
-  obj[5] = intl2.string(stateFromStores(1114).t.DXgdcD);
-  const items1 = [callback(stateFromStores(1178).RefreshEmptyState, obj), , , ];
-  obj1 = { style: tmp.linkContainer, children: null };
-  const obj2 = { accessibilityRole: "button", onPress: onCopy, editable: false, value: null, style: null, forceAccessibleContainer: true, clearButtonVisibility: null };
+  obj3.body = intl2.string(stateFromStores(1114).t.DXgdcD);
+  const items1 = [closure_5(stateFromStores(1178).RefreshEmptyState, obj3), , , ];
+  const obj4 = { style: tmp.linkContainer, children: null };
+  const obj5 = { accessibilityRole: "button", onPress: onCopy, editable: false, value: null, style: null, forceAccessibleContainer: true, clearButtonVisibility: null };
+  const obj = stateFromStores(504);
   if (str == null) {
     str = "";
   }
-  obj2[3] = str;
-  obj2[4] = tmp.inviteInput;
-  obj2[6] = stateFromStores(1178).ClearButtonVisibility.NEVER;
-  const items2 = [callback(ClearButtonDefault, obj2), ];
-  const obj3 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, children: null };
+  obj5.value = str;
+  obj5.style = tmp.inviteInput;
+  obj5.clearButtonVisibility = stateFromStores(1178).ClearButtonVisibility.NEVER;
+  const items2 = [closure_5(FreeFormTextInputDefault, obj5), ];
+  const obj6 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, children: null };
   const intl3 = tmp2(1114).intl;
-  obj3[0] = intl3.string(stateFromStores(1114).t["3D5yo/"]);
-  obj3[2] = onPressSettings;
-  obj3[3] = tmp.settingsButton;
-  obj3[4] = callback(stateFromStores(7380).SettingsIcon, {});
-  items2[1] = callback(stateFromStores(5123).PressableOpacity, obj3);
-  obj1[1] = items2;
-  items1[1] = closure_6(View, obj1);
-  const obj4 = { style: tmp.expireCaption, variant: "text-xs/medium", color: "text-muted", children: null };
+  obj6.accessibilityLabel = intl3.string(stateFromStores(1114).t["3D5yo/"]);
+  obj6.onPress = onPressSettings;
+  obj6.style = tmp.settingsButton;
+  obj6.children = closure_5(stateFromStores(7394).SettingsIcon, {});
+  items2[1] = closure_5(stateFromStores(5137).PressableOpacity, obj6);
+  obj4.children = items2;
+  items1[1] = closure_6(View, obj4);
+  const obj7 = { style: tmp.expireCaption, variant: "text-xs/medium", color: "text-muted", children: null };
   if (null == stateFromStores) {
-    obj4[3] = null;
-    items1[2] = tmp7(tmp10, obj4);
-    const obj5 = { text: null, onPress: null };
+    obj7.children = null;
+    items1[2] = tmp7(tmp10, obj7);
+    const obj8 = { text: null, onPress: null };
     const intl5 = tmp2(1114).intl;
-    obj5[0] = intl5.string(tmp2(1114).t.Ej3B3Y);
-    obj5[1] = onShare;
-    items1[3] = tmp7(tmp2(4975).Button, obj5);
-    obj[1] = items1;
-    return tmp5(tmp6, obj);
+    obj8.text = intl5.string(tmp2(1114).t.Ej3B3Y);
+    obj8.onPress = onShare;
+    items1[3] = tmp7(tmp2(4989).Button, obj8);
+    obj2.children = items1;
+    return tmp5(tmp6, obj2);
   } else {
-    const maxAgeOptionByValue = tmp8(9827).getMaxAgeOptionByValue(stateFromStores.maxAge);
+    const maxAgeOptionByValue = tmp8(9854).getMaxAgeOptionByValue(stateFromStores.maxAge);
     let str2 = "";
     let str3 = "";
     if (null != maxAgeOptionByValue) {
@@ -78,7 +78,7 @@ export default function _default(link) {
       }
       str3 = descriptiveLabel;
     }
-    const getMaxUsesOptions = tmp8(9827).getMaxUsesOptions;
+    const getMaxUsesOptions = tmp8(9854).getMaxUsesOptions;
     const found = getMaxUsesOptions.find((value) => value.value === stateFromStores.maxUses);
     if (null != found) {
       str2 = found.descriptiveLabel;
@@ -89,10 +89,8 @@ export default function _default(link) {
       dqPWMN = tmp2(1114).t.dqPWMN;
     }
     const intl4 = tmp2(1114).intl;
-    const obj6 = { maxAge: null, maxUses: null };
-    obj6[0] = str3;
-    obj6[1] = str2;
-    intl4.format(dqPWMN, obj6);
-    const tmp8Result = tmp8(9827);
+    const obj9 = { maxAge: str3, maxUses: str2 };
+    intl4.format(dqPWMN, obj9);
+    const tmp8Result = tmp8(9854);
   }
 };

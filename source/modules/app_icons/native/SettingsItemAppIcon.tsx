@@ -1,43 +1,37 @@
-// Module ID: 15525
-// Function ID: 15526
+// Module ID: 15555
+// Function ID: 15556
 // Name: SettingsItemAppIcon
-// Dependencies: [19, 9328, 21, 4560, 576, 13367, 9329, 10823, 15526, 2]
+// Dependencies: [19, 9355, 21, 4574, 576, 13390, 9356, 10850, 15556, 2]
 // Exports: default
 
-// Module 15525 (SettingsItemAppIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import FreemiumAppIconIds from "FreemiumAppIconIds" /* 9329 */;
-import ClydeIcon from "ClydeIcon" /* 10823 */;
-import fetchCurrentAppIcon from "fetchCurrentAppIcon" /* 13367 */;
-import AppIconDefault from "AppIcon" /* 15526 */;
-import { getIconById } from "items" /* 9328 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15555 (SettingsItemAppIcon)
+import nativeDefault from "native" /* 576 */;
+import AppIconTypes from "AppIconTypes" /* 9356 */;
+import AppIconUtils from "AppIconUtils" /* 13390 */;
+import AppIconDefault from "AppIcon" /* 15556 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { icon: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.round };
-createCacheKey[0] = createCacheKey;
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/app_icons/native/SettingsItemAppIcon.tsx");
+const ClydeIcon = tmp4(10850);
+require = fn;
+const getIconById = fn(9355).getIconById;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { icon: { borderRadius: nativeDefault.radii.round } };
+let closure_5 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_icons/native/SettingsItemAppIcon.tsx");
 
 export default function SettingsItemAppIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  let obj = fetchCurrentAppIcon;
-  const currentAppIcon = obj.useCurrentAppIcon();
-  const tmp3 = callback();
-  const tmp4 = require;
-  if (currentAppIcon !== FreemiumAppIconIds.FreemiumAppIconIds.DEFAULT) {
+  const tmp3 = closure_5();
+  const currentAppIcon = AppIconUtils.useCurrentAppIcon();
+  if (currentAppIcon !== AppIconTypes.FreemiumAppIconIds.DEFAULT) {
     if (null != tmp7) {
-      obj = { style: null, id: null, size: 32 };
-      obj[0] = tmp3.icon;
-      obj[1] = currentAppIcon;
-      let tmp11 = jsx(AppIconDefault, { style: null, id: null, size: 32 });
+      const obj2 = { style: tmp3.icon, id: currentAppIcon, size: 32 };
+      let tmp11 = jsx(AppIconDefault, { style: tmp3.icon, id: currentAppIcon, size: 32 });
     }
     return tmp11;
   }

@@ -1,15 +1,15 @@
-// Module ID: 4418
-// Function ID: 4419
-// Name: getRootNavigationRef
+// Module ID: 4432
+// Function ID: 4433
+// Name: RootNavigationRef
 // Dependencies: [1484, 2]
 // Exports: getRootNavigationRef
 
-// Module 4418 (getRootNavigationRef)
-import set from "set" /* 2 */;
-import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1484 */;
+// Module 4432 (RootNavigationRef)
+import Link from "Link" /* 1484 */;
+import size from "module_2" /* 2 */;
 
-let closure_0 = createStandardNavigationFactories.createNavigationContainerRef();
-const result = set.fileFinishedImporting("modules/main_tabs_v2/RootNavigationRef.native.tsx");
+let closure_0 = Link.createNavigationContainerRef();
+const result = size.fileFinishedImporting("modules/main_tabs_v2/RootNavigationRef.native.tsx");
 
 export function getRootNavigationRef() {
   return closure_0;

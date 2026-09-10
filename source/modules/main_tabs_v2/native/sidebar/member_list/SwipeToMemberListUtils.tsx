@@ -1,21 +1,21 @@
-// Module ID: 11471
-// Function ID: 11472
-// Name: useIsSwipeToMemberListEnabled
-// Dependencies: [11472, 1187, 2]
+// Module ID: 11498
+// Function ID: 11499
+// Name: SwipeToMemberListUtils
+// Dependencies: [11499, 1187, 2]
 // Exports: isSwipeToMemberListEnabled, useIsSwipeToMemberListEnabled
 
-// Module 11471 (useIsSwipeToMemberListEnabled)
-import set from "set" /* 2 */;
-import create from "create" /* 1187 */;
-import useSwipeToReplySettingValue from "useSwipeToReplySettingValue" /* 11472 */;
+// Module 11498 (SwipeToMemberListUtils)
+import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import ChatGestureSettings from "ChatGestureSettings" /* 11499 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/member_list/SwipeToMemberListUtils.tsx");
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/member_list/SwipeToMemberListUtils.tsx");
 
 export const useIsSwipeToMemberListEnabled = function useIsSwipeToMemberListEnabled() {
-  const swipeToReplySettingValue = useSwipeToReplySettingValue.useSwipeToReplySettingValue();
-  return swipeToReplySettingValue === create.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS;
+  const swipeToReplySettingValue = ChatGestureSettings.useSwipeToReplySettingValue();
+  return swipeToReplySettingValue === preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS;
 };
 export const isSwipeToMemberListEnabled = function isSwipeToMemberListEnabled() {
-  const swipeToReplySettingValue = useSwipeToReplySettingValue.getSwipeToReplySettingValue();
-  return swipeToReplySettingValue === create.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS;
+  const swipeToReplySettingValue = ChatGestureSettings.getSwipeToReplySettingValue();
+  return swipeToReplySettingValue === preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS;
 };

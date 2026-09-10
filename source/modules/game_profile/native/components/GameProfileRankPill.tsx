@@ -1,53 +1,51 @@
-// Module ID: 8721
-// Function ID: 8722
+// Module ID: 8749
+// Function ID: 8750
 // Name: GameProfileRankPill
-// Dependencies: [19, 17, 21, 4560, 576, 8722, 4556, 1114, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 8750, 4570, 1114, 2]
 // Exports: default
 
-// Module 8721 (GameProfileRankPill)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import TrophyIcon from "TrophyIcon" /* 8722 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 8749 (GameProfileRankPill)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import TrophyIcon from "TrophyIcon" /* 8750 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { flex: 1, flexDirection: "row", alignItems: "flex-end" }, gameRankPill: null };
-createCacheKey = { flexDirection: "row", backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.round, paddingHorizontal: ThemesDefault.space.PX_8, alignItems: "center", gap: ThemesDefault.space.PX_4 };
-const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
-createCacheKey[1] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileRankPill.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { flex: 1, flexDirection: "row", alignItems: "flex-end" }, gameRankPill: null };
+const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
+obj2.gameRankPill = { flexDirection: "row", backgroundColor: nativeDefault.colors.WHITE, borderRadius: nativeDefault.radii.round, paddingHorizontal: nativeDefault.space.PX_8, alignItems: "center", gap: nativeDefault.space.PX_4 };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileRankPill.tsx");
 
 export default function GameProfileRankPill(arg0) {
   ({ rank, compact } = arg0);
   if (compact === undefined) {
     compact = false;
   }
-  const tmp = callback2();
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.gameRankPill, children: null };
-  obj = { size: "xxs", color: ThemesDefault.colors.BLACK };
-  const items = [callback(TrophyIcon.TrophyIcon, obj), ];
-  const intl = getSystemLocale.intl;
+  const tmp = closure_6();
+  const obj = { style: tmp.container, children: null };
+  const obj2 = { style: tmp.gameRankPill, children: null };
+  const items = [React4(TrophyIcon.TrophyIcon, { size: "xxs", color: nativeDefault.colors.BLACK }), ];
+  const intl = util.intl;
   const formatToPlainString = intl.formatToPlainString;
-  const t = getSystemLocale.t;
+  const t = util.t;
   if (compact) {
-    obj1 = { rank: null };
-    obj1[0] = rank;
-    let str = formatToPlainString(t.UA6RoE, obj1);
+    const obj4 = { rank };
+    let str = formatToPlainString(t.UA6RoE, obj4);
   } else {
-    const obj2 = { rank: null };
-    obj2[0] = rank;
-    str = formatToPlainString(t.ehZXlZ, obj2);
+    const obj5 = { rank };
+    str = formatToPlainString(t.ehZXlZ, obj5);
   }
-  items[1] = callback(Text.Text, { variant: "text-xs/bold", color: "text-overlay-dark", children: str.toUpperCase() });
-  obj[1] = items;
-  obj[1] = closure_5(View, obj);
-  return callback(View, obj);
+  const obj3 = { size: "xxs", color: nativeDefault.colors.BLACK };
+  const tmp4 = hasOwnProperty;
+  items[1] = React4(Text_Text.Text, { variant: "text-xs/bold", color: "text-overlay-dark", children: str.toUpperCase() });
+  obj2.children = items;
+  obj.children = tmp4(View, obj2);
+  return React4(View, obj);
 };

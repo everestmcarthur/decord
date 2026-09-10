@@ -1,29 +1,30 @@
-// Module ID: 10256
-// Function ID: 10257
-// Name: openCreateForumPostModal
-// Dependencies: [7767, 4763, 10257, 1896, 2]
+// Module ID: 10283
+// Function ID: 10284
+// Name: ForumComposerModalActionCreators
+// Dependencies: [7781, 4777, 10284, 1896, 2]
 // Exports: closeCreateForumPostModal, openCreateForumPostModal
 
-// Module 10256 (openCreateForumPostModal)
-import set from "set" /* 2 */;
+// Module 10283 (ForumComposerModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import _modDef4763 from "module_4763" /* 4763 */;
-import trackForumChannelSeenBatch from "trackForumChannelSeenBatch" /* 7767 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import tracking_Tracking from "tracking/Tracking" /* 7781 */;
+import size from "module_2" /* 2 */;
 
 let c3 = "create-forum-post";
-let result = set.fileFinishedImporting("modules/forums/native/composer/ForumComposerModalActionCreators.tsx");
+let result = size.fileFinishedImporting("modules/forums/native/composer/ForumComposerModalActionCreators.tsx");
 
 export const openCreateForumPostModal = function openCreateForumPostModal(guildId) {
-  let obj = trackForumChannelSeenBatch;
-  obj = { guildId: guildId.guildId, channelId: guildId.parentChannelId, location: guildId.analyticsLocationObject };
-  const result = obj.trackMobileForumComposerOpened(obj);
+  const result = tracking_Tracking.trackMobileForumComposerOpened({ guildId: guildId.guildId, channelId: guildId.parentChannelId, location: guildId.analyticsLocationObject });
   if (!tmp4) {
-    obj = { guildId: null, channelId: null };
-    ({ guildId: obj4[0], parentChannelId: obj4[1] } = guildId);
-    const result1 = tmp(7767).trackForumCreateNewPostStarted(obj);
-    const tmpResult = tmp(7767);
+    ({ guildId: obj4.guildId, parentChannelId: obj4.channelId } = guildId);
+    const result1 = tmp(7781).trackForumCreateNewPostStarted({ guildId: null, channelId: null });
+    const obj3 = { guildId: null, channelId: null };
+    const tmpResult = tmp(7781);
   }
-  _modDef4763.pushLazy(asyncRequireImpl(10257, dependencyMap.paths), guildId, c3);
+  const obj2 = { guildId: guildId.guildId, channelId: guildId.parentChannelId, location: guildId.analyticsLocationObject };
+  const tmp2 = dependencyMap;
+  tmp4 = null != guildId.isEdit && guildId.isEdit;
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10284, tmp2.paths), guildId, c3);
 };
 export const closeCreateForumPostModal = function closeCreateForumPostModal() {
   let flag = arg0;
@@ -31,8 +32,7 @@ export const closeCreateForumPostModal = function closeCreateForumPostModal() {
     flag = false;
   }
   if (!flag) {
-    const result = trackForumChannelSeenBatch.trackMobileForumComposerDismissed();
-    const obj = trackForumChannelSeenBatch;
+    const result = tracking_Tracking.trackMobileForumComposerDismissed();
   }
-  _modDef4763.popWithKey(c3);
+  ModalActionCreatorsDefault.popWithKey(c3);
 };

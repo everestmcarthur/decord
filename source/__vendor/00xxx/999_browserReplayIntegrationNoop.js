@@ -2,6 +2,7 @@
 // Function ID: 1000
 // Name: browserReplayIntegrationNoop
 // Dependencies: [867, 1000]
+// Exports: browserReplayIntegration
 
 // Module 999 (browserReplayIntegrationNoop)
 import init from "init" /* 1000 */;
@@ -11,35 +12,39 @@ const dependencyMap = arg6;
 function browserReplayIntegrationNoop() {
 
 }
-arg5.browserReplayIntegration = () => {
+
+export const browserReplayIntegration = () => {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
   }
   if (obj2.notWeb()) {
-    if (typeof browserReplayIntegrationNoop !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (typeof browserReplayIntegrationNoop === "function") {
+      const obj3 = {
+        name: "Replay",
+        start() {
+
+            },
+        startBuffering() {
+
+            },
+        stop() {
+              return Promise.resolve();
+            },
+        flush() {
+              return Promise.resolve();
+            },
+        getReplayId() {
+
+            },
+        getRecordingMode() {
+
+            }
+      };
+      let replayIntegrationResult = obj3;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    obj = { name: "Replay", start: null, startBuffering: null, stop: null, flush: null, getReplayId: null, getRecordingMode: null };
-    obj[1] = function start() {
-
-    };
-    obj[2] = function startBuffering() {
-
-    };
-    obj[3] = function stop() {
-      return Promise.resolve();
-    };
-    obj[4] = function flush() {
-      return Promise.resolve();
-    };
-    obj[5] = function getReplayId() {
-
-    };
-    obj[6] = function getRecordingMode() {
-
-    };
-    let replayIntegrationResult = obj;
   } else {
     const _Object = Object;
     let mask = obj.mask;
@@ -47,15 +52,15 @@ arg5.browserReplayIntegration = () => {
     if (!mask) {
       mask = [];
     }
-    obj = { mask: null, unmask: null };
+    const obj4 = { mask: null, unmask: null };
     const items = [".sentry-react-native-mask"];
     HermesBuiltin.arraySpread(mask, 1);
-    obj[0] = items;
+    obj4.mask = items;
     const tmp8 = obj.unmask || [];
     const items1 = [".sentry-react-native-unmask:not(.sentry-react-native-mask *) > *"];
     HermesBuiltin.arraySpread(tmp8, 1);
-    obj[1] = items1;
-    replayIntegrationResult = init.replayIntegration(Object.assign(merged, obj));
+    obj4.unmask = items1;
+    replayIntegrationResult = init.replayIntegration(Object.assign(merged, obj4));
     const tmpResult = init;
   }
   return replayIntegrationResult;

@@ -1,96 +1,83 @@
-// Module ID: 14636
-// Function ID: 14637
-// Name: PX_8
-// Dependencies: [19, 17, 7549, 8222, 21, 576, 4560, 13174, 14635, 13175, 7182, 8827, 2]
+// Module ID: 14662
+// Function ID: 14663
+// Name: EditProfileFrameSection
+// Dependencies: [19, 17, 7563, 8248, 21, 576, 4574, 13197, 14661, 13198, 7196, 8856, 2]
 
-// Module 14636 (PX_8)
-import ThemesDefault from "Themes" /* 576 */;
-import useCollectibleListLayout from "useCollectibleListLayout" /* 13174 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { isProfileFrameRecord } from "fromServer" /* 7549 */;
-import { PROFILE_FRAME_ASPECT_RATIO as closure_6 } from "PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO" /* 8222 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14662 (EditProfileFrameSection)
+import nativeDefault from "native" /* 576 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
+import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8856 */;
+import useCollectibleListLayout from "useCollectibleListLayout" /* 13197 */;
+import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 13198 */;
+import useProfileFrameSections from "useProfileFrameSections" /* 14661 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let c3 = importAllResult;
-({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
-const PX_8 = ThemesDefault.space.PX_8;
-let obj = { row: null, rowSpacer: null, previewContainer: null };
-obj = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: require("useCollectibleListLayout").GUTTER_SIZE };
-obj[0] = obj;
-createCacheKey = { height: require("useCollectibleListLayout").GUTTER_SIZE };
-obj[1] = createCacheKey;
-obj[2] = { width: "100%", height: "100%", paddingVertical: PX_8, overflow: "hidden", alignItems: "center", justifyContent: "center" };
-let closure_11 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo((arg0) => {
+require = fn;
+const View = fn(17).View;
+const isProfileFrameRecord = fn(7563).isProfileFrameRecord;
+let closure_6 = fn(8248).PROFILE_FRAME_ASPECT_RATIO;
+const jsxProd = fn(21);
+({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+const PX_8 = nativeDefault.space.PX_8;
+const createStyles = fn(4574);
+let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13197).GUTTER_SIZE }, rowSpacer: null, previewContainer: null };
+let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13197).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(13197).GUTTER_SIZE };
+obj.previewContainer = { width: "100%", height: "100%", paddingVertical: PX_8, overflow: "hidden", alignItems: "center", justifyContent: "center" };
+let closure_11 = createStyles.createStyles(obj);
+const memoResult = noop.memo((arg0) => {
   ({ items, selectedSkuId: require, setSelectedProfileFrame } = arg0);
-  ({ guildId: dependencyMap, size: closure_3 } = arg0);
-  closure_4 = undefined;
-  const tmp = callback3();
-  items = [setSelectedProfileFrame];
-  closure_4 = importAllResult.useCallback(() => {
+  ({ guildId: dependencyMap, size: noop } = arg0);
+  const tmp = closure_11();
+  const items1 = [setSelectedProfileFrame];
+  const onPress = noop.useCallback(() => {
     setSelectedProfileFrame(null);
-  }, items);
+  }, items1);
   let obj = { children: null };
-  obj = { style: tmp.row, children: null };
-  const items1 = [...items, null, null];
-  const substr = items1.slice(0, useCollectibleListLayout.ROW_SIZE);
-  obj[1] = substr.map((skuId) => {
-    if (skuId === closure_1_0(closure_1_2[8]).NONE_ITEM) {
-      let obj = { size: null, onPress: null, isSelected: null, asDefault: null };
-      obj[0] = closure_3;
-      obj[1] = closure_4;
-      obj[2] = null == closure_0;
-      obj[3] = null != closure_2;
-      return closure_1_7(tmp(tmp2[9]).EditCollectiblesListItemNone, obj, "none");
-    } else if (skuId === tmp(tmp2[8]).SHOP_ITEM) {
-      obj = { size: null, analyticsSource: null };
-      obj[0] = closure_3;
-      obj[1] = setSelectedProfileFrame(tmp2[10]).EDIT_PROFILE_FRAME_SHEET;
-      return closure_1_7(tmp(tmp2[9]).EditCollectiblesListItemShop, obj, "shop");
-    } else if (closure_1_5(skuId)) {
-      obj1 = { profileFrame: null, isSelected: null, setSelectedProfileFrame: null, size: null };
-      obj1[0] = skuId;
-      obj1[1] = closure_0 === skuId.skuId;
-      obj1[2] = setSelectedProfileFrame;
-      obj1[3] = closure_3;
-      return closure_1_7(closure_1_12, obj1, skuId.skuId);
+  let obj2 = { style: tmp.row, children: null };
+  const items2 = [...items, null, null];
+  const substr = items2.slice(0, useCollectibleListLayout.ROW_SIZE);
+  obj2.children = substr.map((profileFrame, index) => {
+    if (profileFrame === useProfileFrameSections.NONE_ITEM) {
+      const obj2 = { size: width, onPress, isSelected: null == closure_1_0, asDefault: null != dependencyMap };
+      return React5(tmp(13198).EditCollectiblesListItemNone, obj2, "none");
+    } else if (profileFrame === tmp(14661).SHOP_ITEM) {
+      const obj3 = { size: width, analyticsSource: AnalyticsLocationDefault.EDIT_PROFILE_FRAME_SHEET };
+      return React5(tmp(13198).EditCollectiblesListItemShop, obj3, "shop");
+    } else if (isProfileFrameRecord(profileFrame)) {
+      const obj4 = { profileFrame, isSelected: closure_1_0 === profileFrame.skuId, setSelectedProfileFrame, size: width };
+      return React5(memoResult1, obj4, profileFrame.skuId);
     } else {
-      obj = { style: null };
-      const obj2 = { height: null, width: null };
-      obj2[0] = closure_3;
-      obj2[1] = closure_3;
-      obj[0] = obj2;
-      return closure_1_7(closure_4, obj, arg1);
+      const obj = { style: null };
+      const size = { height: width, width };
+      obj.style = size;
+      return React5(View, obj, index);
     }
   });
-  const items2 = [callback(closure_4, obj), ];
-  obj = { style: tmp.rowSpacer };
-  items2[1] = callback(closure_4, obj);
-  obj[0] = items2;
-  return callback2(closure_8, obj);
+  const items3 = [closure_7(onPress, obj2), closure_7(onPress, { style: tmp.rowSpacer })];
+  obj.children = items3;
+  return closure_9(closure_8, obj);
 });
 memoResult.displayName = "EditProfileFrameRow";
-const memoResult1 = importAllResult.memo((isSelected) => {
+const memoResult1 = noop.memo((isSelected) => {
   const profileFrame = isSelected.profileFrame;
   const setSelectedProfileFrame = isSelected.setSelectedProfileFrame;
   const size = isSelected.size;
   const items = [setSelectedProfileFrame, profileFrame];
-  const callback = importAllResult.useCallback(() => {
+  const callback = noop.useCallback(() => {
     setSelectedProfileFrame({ skuId: profileFrame.skuId, type: profileFrame.type });
   }, items);
-  let obj = { skuId: profileFrame.skuId, isSelected: isSelected.isSelected, onPress: callback, size, accessibilityLabel: profileFrame.label, children: null };
-  obj = { style: callback3().previewContainer, children: null };
-  obj = { profileFrame, previewWidth: size * closure_6, previewHeight: size - 2 * PX_8, profileBackgroundColor: null };
-  const tmp = callback3();
-  obj[3] = setSelectedProfileFrame(576).colors.BACKGROUND_BASE_LOW;
-  obj[1] = callback(setSelectedProfileFrame(8827), obj);
-  obj[5] = callback(View, obj);
-  return callback(profileFrame(13175).EditCollectiblesListItemProduct, obj);
+  const obj = { skuId: profileFrame.skuId, isSelected: isSelected.isSelected, onPress: callback, size, accessibilityLabel: profileFrame.label, children: null };
+  const obj2 = { style: closure_11().previewContainer, children: null };
+  const obj3 = { profileFrame, previewWidth: size * closure_6, previewHeight: size - 2 * PX_8, profileBackgroundColor: null };
+  const tmp = closure_11();
+  obj3.profileBackgroundColor = nativeDefault.colors.BACKGROUND_BASE_LOW;
+  obj2.children = React5(ProfileFrameSamplePreviewDefault, obj3);
+  obj.children = React5(View, obj2);
+  return React5(CollectiblesEditUserProfileListItems.EditCollectiblesListItemProduct, obj);
 });
 memoResult1.displayName = "EditProfileFrameItem";
-const result = require("set").fileFinishedImporting("modules/collectibles/profile_frames/native/EditProfileFrameSection.tsx");
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/profile_frames/native/EditProfileFrameSection.tsx");
 
 export const EditProfileFrameRow = memoResult;

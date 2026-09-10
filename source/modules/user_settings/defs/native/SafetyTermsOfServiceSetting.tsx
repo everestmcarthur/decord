@@ -1,39 +1,28 @@
-// Module ID: 15876
-// Function ID: 15877
-// Name: pressable
-// Dependencies: [7975, 1074, 4255, 11473, 1114, 2]
+// Module ID: 15906
+// Function ID: 15907
+// Name: SafetyTermsOfServiceSetting
+// Dependencies: [7989, 1074, 4268, 11500, 1114, 2]
 
-// Module 15876 (pressable)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import _modDef4255 from "module_4255" /* 4255 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15906 (SafetyTermsOfServiceSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import LinkingDefault from "Linking" /* 4268 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-const MarketingURLs = ME.MarketingURLs;
-const pressable = createToggle.createPressable({
+const MarketingURLs = Constants.MarketingURLs;
+const pressable = SettingBuilders.createPressable({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.lfC1KR);
+    const intl = util.intl;
+    return intl.string(util.t.lfC1KR);
   },
-  parent: MobileUserSettings.MobileUserSettings.DATA_AND_PRIVACY,
+  parent: SettingsConstants.MobileUserSettings.DATA_AND_PRIVACY,
   onPress: function onTermsOfServicePress() {
-    _modDef4255.openURL(MarketingURLs.TERMS);
+    LinkingDefault.openURL(MarketingURLs.TERMS);
   },
   withArrow: true
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.lfC1KR);
-  },
-  parent: MobileUserSettings.MobileUserSettings.DATA_AND_PRIVACY,
-  onPress: function onTermsOfServicePress() {
-    _modDef4255.openURL(MarketingURLs.TERMS);
-  },
-  withArrow: true
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/SafetyTermsOfServiceSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/SafetyTermsOfServiceSetting.tsx");
 
 export default pressable;

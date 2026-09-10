@@ -1,23 +1,24 @@
-// Module ID: 15674
-// Function ID: 15675
-// Dependencies: [4560, 5682, 576, 2]
+// Module ID: 15704
+// Function ID: 15705
+// Name: MfaScreenUtils
+// Dependencies: [4574, 5696, 576, 2]
 
-// Module 15674
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 576 */;
-import NAV_BAR_HEIGHT2 from "NAV_BAR_HEIGHT" /* 5682 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15704 (MfaScreenUtils)
+import nativeDefault from "native" /* 576 */;
+import NavigatorConstants from "NavigatorConstants" /* 5696 */;
+import createStyles from "createStyles" /* 4574 */;
+import size from "module_2" /* 2 */;
 
 let obj = { useScreenStyles: null };
-obj[0] = createCacheKey.createStyles((arg0) => {
-  const NAV_BAR_HEIGHT = NAV_BAR_HEIGHT2.NAV_BAR_HEIGHT;
+obj.useScreenStyles = createStyles.createStyles((arg0) => {
+  const NAV_BAR_HEIGHT = NavigatorConstants.NAV_BAR_HEIGHT;
   if (arg0) {
     let diff = NAV_BAR_HEIGHT;
   } else {
-    diff = NAV_BAR_HEIGHT - NAV_BAR_HEIGHT2.STATUS_BAR_HEIGHT;
+    diff = NAV_BAR_HEIGHT - NavigatorConstants.STATUS_BAR_HEIGHT;
   }
-  let obj = { marginTop: diff, marginLeft: null, marginRight: null, paddingBottom: null, flex: 1, flexDirection: "column", justifyContent: "space-between", alignItems: "stretch" };
-  const space = ThemesDefault.space;
+  const obj = { marginTop: diff, marginLeft: null, marginRight: null, paddingBottom: null, flex: 1, flexDirection: "column", justifyContent: "space-between", alignItems: "stretch" };
+  const space = nativeDefault.space;
   if (arg0) {
     let PX_16 = space.PX_24;
     let tmp6 = tmp5;
@@ -25,33 +26,32 @@ obj[0] = createCacheKey.createStyles((arg0) => {
     PX_16 = space.PX_16;
     tmp6 = tmp5;
   }
-  obj[1] = PX_16;
+  obj.marginLeft = PX_16;
   const space2 = tmp6(576).space;
-  obj[2] = arg0 ? space2.PX_24 : space2.PX_16;
+  obj.marginRight = arg0 ? space2.PX_24 : space2.PX_16;
   const space3 = tmp6(576).space;
-  obj = { contentContainer: obj, mfaContainerHeader: null, mfaContainerHeaderText: null, inputContainer: arg0 ? space3.PX_24 : space3.PX_16, smsContainer: null, smsInput: null, radioItem: null, submit: null };
-  obj = { flexDirection: "column", alignItems: "center", paddingBottom: tmp6(576).space.PX_24 };
-  obj[1] = obj;
+  const obj2 = { contentContainer: obj, mfaContainerHeader: { flexDirection: "column", alignItems: "center", paddingBottom: tmp6(576).space.PX_24 }, mfaContainerHeaderText: null, inputContainer: null, smsContainer: null, smsInput: null, radioItem: null, submit: null };
+  obj.paddingBottom = arg0 ? space3.PX_24 : space3.PX_16;
   let num = 0;
   if (!arg0) {
     num = tmp6(576).space.PX_32;
   }
-  obj1 = { marginHorizontal: num, marginTop: null, textAlign: "center" };
+  const obj4 = { marginHorizontal: num, marginTop: null, textAlign: "center" };
   let num2 = 0;
   if (!arg0) {
     num2 = tmp6(576).space.PX_12;
   }
-  obj1[1] = num2;
-  obj[2] = obj1;
-  obj[3] = { flexDirection: "column", alignSelf: "stretch" };
-  obj[4] = { flexDirection: "column", alignSelf: "stretch" };
-  obj[5] = { flexDirection: "row", alignSelf: "stretch" };
-  obj[6] = { backgroundColor: tmp6(576).colors.BACKGROUND_SURFACE_HIGH, borderRadius: tmp6(576).radii.md };
-  const obj2 = { backgroundColor: tmp6(576).colors.BACKGROUND_SURFACE_HIGH, borderRadius: tmp6(576).radii.md };
-  const tmp = require;
-  obj[7] = { paddingTop: tmp6(576).space.PX_24 };
-  return obj;
+  obj4.marginTop = num2;
+  obj2.mfaContainerHeaderText = obj4;
+  obj2.inputContainer = { flexDirection: "column", alignSelf: "stretch" };
+  obj2.smsContainer = { flexDirection: "column", alignSelf: "stretch" };
+  obj2.smsInput = { flexDirection: "row", alignSelf: "stretch" };
+  const obj3 = { flexDirection: "column", alignItems: "center", paddingBottom: tmp6(576).space.PX_24 };
+  obj2.radioItem = { backgroundColor: tmp6(576).colors.BACKGROUND_SURFACE_HIGH, borderRadius: tmp6(576).radii.md };
+  const obj5 = { backgroundColor: tmp6(576).colors.BACKGROUND_SURFACE_HIGH, borderRadius: tmp6(576).radii.md };
+  obj2.submit = { paddingTop: tmp6(576).space.PX_24 };
+  return obj2;
 });
-const result = set.fileFinishedImporting("modules/mfa/native/MfaScreenUtils.tsx");
+const result = size.fileFinishedImporting("modules/mfa/native/MfaScreenUtils.tsx");
 
 export default obj;

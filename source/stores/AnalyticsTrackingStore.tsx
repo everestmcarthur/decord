@@ -1,25 +1,47 @@
-// Module ID: 7460
-// Function ID: 7461
-// Name: result
-// Dependencies: [502, 1074, 1250, 573, 7461, 1242, 7472, 7473, 2]
+// Module ID: 7474
+// Function ID: 7475
+// Name: stores/AnalyticsTrackingStore
+// Dependencies: [502, 1074, 1250, 573, 7475, 1242, 7486, 7487, 2]
 
-// Module 7460 (result)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import expandEventProperties from "expandEventProperties" /* 1242 */;
-import encodeProperties2 from "encodeProperties" /* 1250 */;
-import trackHeartbeat from "trackHeartbeat" /* 7461 */;
-import importDefaultResult from "fetchFingerprint" /* 502 */;
-import encodeProperties from "encodeProperties" /* 1250 */;
+// Module 7474 (stores/AnalyticsTrackingStore)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import AnalyticsUtils2 from "AnalyticsUtils" /* 1242 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7475 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-require = arg1;
-encodeProperties = {
-  dispatcher: dispatcherDefault,
-  actionHandler: encodeProperties,
-  TRACKING_URL: require("ME").Endpoints.TRACK,
-  waitFor: items,
-  getFingerprint: importDefaultResult.getFingerprint,
+require = fn;
+const AnalyticsUtils = fn(1250);
+const obj2 = {
+  dispatcher: DispatcherDefault,
+  actionHandler: {
+    CONNECTION_OPEN(arg0) {
+      return discord_common_AnalyticsUtils.AnalyticsActionHandlers.handleConnectionOpen(arg0);
+    },
+    OVERLAY_INITIALIZE(arg0) {
+      return discord_common_AnalyticsUtils.AnalyticsActionHandlers.handleConnectionOpen(arg0);
+    },
+    CURRENT_USER_UPDATE(arg0) {
+      return discord_common_AnalyticsUtils.AnalyticsActionHandlers.handleConnectionOpen(arg0);
+    },
+    CONNECTION_CLOSED() {
+      return discord_common_AnalyticsUtils.AnalyticsActionHandlers.handleConnectionClosed();
+    },
+    FINGERPRINT() {
+      return discord_common_AnalyticsUtils.AnalyticsActionHandlers.handleFingerprint();
+    },
+    TRACK(arg0) {
+      return discord_common_AnalyticsUtils.AnalyticsActionHandlers.handleTrack(arg0);
+    },
+    SET_ANALYTICS_TOKEN(arg0) {
+      return discord_common_AnalyticsUtils.AnalyticsActionHandlers.handleSetAnalyticsToken(arg0);
+    }
+  },
+  TRACKING_URL: fn(1074).Endpoints.TRACK,
+  waitFor: null,
+  getFingerprint: AuthenticationStore.getFingerprint,
   getSessionId() {
-    const session = trackHeartbeat.getSession();
+    const session = SessionHeartbeatScheduler.getSession();
     return session.then((uuid) => {
       let sessionId;
       if (uuid != null) {
@@ -29,36 +51,15 @@ encodeProperties = {
     });
   },
   getLaunchSignature() {
-    return expandEventProperties.launchSignature;
+    return AnalyticsUtils2.launchSignature;
   },
-  scheduleWhenIdle: require("setOriginWindow").requestSafeIdleCallback,
-  sendUnloadRequest: require("sendUnloadRequest").sendUnloadRequest
+  scheduleWhenIdle: fn(7486).requestSafeIdleCallback,
+  sendUnloadRequest: fn(7487).sendUnloadRequest
 };
-encodeProperties = {
-  CONNECTION_OPEN(arg0) {
-    return encodeProperties2.AnalyticsActionHandlers.handleConnectionOpen(arg0);
-  },
-  OVERLAY_INITIALIZE(arg0) {
-    return encodeProperties2.AnalyticsActionHandlers.handleConnectionOpen(arg0);
-  },
-  CURRENT_USER_UPDATE(arg0) {
-    return encodeProperties2.AnalyticsActionHandlers.handleConnectionOpen(arg0);
-  },
-  CONNECTION_CLOSED() {
-    return encodeProperties2.AnalyticsActionHandlers.handleConnectionClosed();
-  },
-  FINGERPRINT() {
-    return encodeProperties2.AnalyticsActionHandlers.handleFingerprint();
-  },
-  TRACK(arg0) {
-    return encodeProperties2.AnalyticsActionHandlers.handleTrack(arg0);
-  },
-  SET_ANALYTICS_TOKEN(arg0) {
-    return encodeProperties2.AnalyticsActionHandlers.handleSetAnalyticsToken(arg0);
-  }
-};
-items = [importDefaultResult];
-encodeProperties = encodeProperties.analyticsTrackingStoreMaker(encodeProperties);
-const result1 = require("set").fileFinishedImporting("stores/AnalyticsTrackingStore.tsx");
+const items = [AuthenticationStore];
+obj2.waitFor = items;
+const result = AnalyticsUtils.analyticsTrackingStoreMaker(obj2);
+const size = fn(2);
+const result1 = size.fileFinishedImporting("stores/AnalyticsTrackingStore.tsx");
 
-export default encodeProperties;
+export default result;

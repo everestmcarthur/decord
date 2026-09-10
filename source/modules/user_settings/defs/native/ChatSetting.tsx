@@ -1,31 +1,31 @@
-// Module ID: 15459
-// Function ID: 15460
-// Name: route
-// Dependencies: [1074, 11473, 1114, 15460, 15462, 2]
+// Module ID: 15488
+// Function ID: 15489
+// Name: ChatSetting
+// Dependencies: [1074, 11500, 1114, 15489, 15491, 2]
 
-// Module 15459 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import ImageTextIcon from "ImageTextIcon" /* 15460 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15488 (ChatSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import ImageTextIcon from "ImageTextIcon" /* 15489 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const require = globalThis.__r;
+
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["/VQax8"]);
+    const intl = util.intl;
+    return intl.string(util.t["/VQax8"]);
   },
   parent: null,
   IconComponent: ImageTextIcon.ImageTextIcon,
-  screen: obj
-};
-obj = {
-  route: ME.UserSettingsSections.TEXT,
-  getComponent() {
-    return require(15462) /* VideoUploadQualityNitroUpsell */.default;
+  screen: {
+    route: Constants.UserSettingsSections.TEXT,
+    getComponent() {
+      return require("SettingsChatScreen").default;
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/ChatSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ChatSetting.tsx");
 
 export default route;

@@ -1,17 +1,16 @@
-// Module ID: 17431
-// Function ID: 17432
-// Name: _initialize
-// Dependencies: [1371, 13633, 7118, 573, 13634, 2]
+// Module ID: 17462
+// Function ID: 17463
+// Name: MultiAccountManager
+// Dependencies: [1371, 13656, 7132, 573, 13657, 2]
 
-// Module 17431 (_initialize)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import initializeDefault from "initialize" /* 7118 */;
-import noop from "noop" /* 13634 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
-import closure_4 from "initialize" /* 13633 */;
+// Module 17462 (MultiAccountManager)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import GatewaySocket from "GatewaySocket" /* 13657 */;
+import UserStore from "UserStore" /* 1371 */;
+import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 13656 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-require = arg1;
-initializeDefault;
+require = fn;
 class MultiAccountManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -25,11 +24,11 @@ class MultiAccountManager extends tmp2 {
           }
     };
     applyArgumentsResult.handleConnectionOpen = function handleConnectionOpen() {
-      let switchResult = closure_1_4.getSwitchResult();
+      let switchResult = MultiAccountSwitchStore.getSwitchResult();
       if (null != switchResult) {
-        const currentUser = closure_1_3.getCurrentUser();
+        const currentUser = UserStore.getCurrentUser();
         if (null != currentUser) {
-          let obj = closure_0;
+          let obj = applyArgumentsResult;
           if (switchResult.success) {
             switchResult = obj.onSwitchSuccess(currentUser, switchResult.navigateHome);
             let obj2 = obj;
@@ -37,7 +36,7 @@ class MultiAccountManager extends tmp2 {
             obj.onSwitchError(currentUser);
             obj2 = obj;
           }
-          obj = applyArgumentsResult(closure_1_2[4]);
+          obj = GatewaySocket;
           const result = obj.setAccountSwitchUserId(null);
           obj2.onSwitchComplete();
         }
@@ -48,11 +47,11 @@ class MultiAccountManager extends tmp2 {
 }
 const prototype = MultiAccountManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const subscription = dispatcherDefault.subscribe("CONNECTION_OPEN", this.handleConnectionOpen);
+  const subscription = DispatcherDefault.subscribe("CONNECTION_OPEN", this.handleConnectionOpen);
   this.handleConnectionOpen();
 };
 prototype["_terminate"] = function _terminate() {
-  dispatcherDefault.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen);
+  DispatcherDefault.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen);
 };
 prototype["handleLogout"] = function handleLogout(isSwitchingAccount) {
   if (isSwitchingAccount.isSwitchingAccount) {
@@ -61,8 +60,9 @@ prototype["handleLogout"] = function handleLogout(isSwitchingAccount) {
   }
 };
 prototype["handleMultiAccountSwitchStart"] = function handleMultiAccountSwitchStart(targetUserId) {
-  const result = noop.setAccountSwitchUserId(targetUserId.targetUserId);
+  const result = GatewaySocket.setAccountSwitchUserId(targetUserId.targetUserId);
 };
-let result = require("set").fileFinishedImporting("modules/multi_account/MultiAccountManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/multi_account/MultiAccountManager.tsx");
 
 export default MultiAccountManager;

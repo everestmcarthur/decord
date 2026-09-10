@@ -1,37 +1,110 @@
 // Module ID: 4095
 // Function ID: 4096
-// Dependencies: [2035, 2036]
+// Dependencies: [4034, 4096, 3664, 3667]
+// Exports: default
 
 // Module 4095
-import buildMatchFn from "buildMatchFn" /* 2035 */;
-import buildMatchPatternFn from "buildMatchPatternFn" /* 2036 */;
+import subDays_mod from "subDays" /* 4034 */;
+import subMonths_mod from "subMonths" /* 4096 */;
+import requiredArgs_mod from "requiredArgs" /* 3664 */;
+import module_3667_mod from "module_3667" /* 3667 */;
 
-if (!buildMatchFn) {
-  let obj = { default: null };
-  obj[0] = buildMatchFn;
-} else {
-  obj = buildMatchFn;
-}
-if (!buildMatchPatternFn) {
-  obj = { default: null };
-  obj[0] = buildMatchPatternFn;
-  let obj2 = obj;
-} else {
-  obj2 = buildMatchPatternFn;
-}
-obj2 = {
-  matchPattern: /^(\d+)(-?(е|й|є|а|я))?/i,
-  parsePattern: /\d+/i,
-  valueCallback(joined) {
-    return parseInt(joined, 10);
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      _typeof = function _typeof(arg0) {
+        return typeof arg0;
+      };
+    }
+    return _typeof(arg0);
   }
-};
-const items = [/^д/i, /^н/i];
-const items1 = [/1/i, /2/i, /3/i, /4/i];
-const items2 = [/^с/i, /^л/i, /^б/i, /^к/i, /^т/i, /^ч/i, /^л/i, /^с/i, /^в/i, /^ж/i, /^л/i, /^г/i];
-const items3 = [/^сі/i, /^лю/i, /^б/i, /^к/i, /^т/i, /^ч/i, /^лип/i, /^се/i, /^в/i, /^ж/i, /^лис/i, /^г/i];
-const items4 = [/^н/i, /^п/i, /^в/i, /^с/i, /^ч/i, /^п/i, /^с/i];
-const items5 = [/^н/i, /^п[он]/i, /^в/i, /^с[ер]/i, /^ч/i, /^п\W*?[ят]/i, /^с[уб]/i];
+  _typeof = function _typeof(arg0) {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
+        }
+        return str;
+      }
+    }
+    str = typeof arg0;
+  };
+}
+let subDays = subDays_mod;
+if (!subDays) {
+  const obj = { default: subDays };
+  let tmp3 = obj;
+} else {
+  tmp3 = subDays;
+}
+subDays = tmp3;
+let subMonths = subMonths_mod;
+if (!subMonths) {
+  const obj2 = { default: subMonths };
+  let tmp5 = obj2;
+} else {
+  tmp5 = subMonths;
+}
+subMonths = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
+let module_3667 = module_3667_mod;
+if (!module_3667) {
+  const obj4 = { default: module_3667 };
+  let tmp9 = obj4;
+} else {
+  tmp9 = module_3667;
+}
+module_3667 = tmp9;
 
-export default { ordinalNumber: obj2.default(obj2), era: obj.default({ matchPatterns: obj3, defaultMatchWidth: "wide", parsePatterns: { any: items }, defaultParseWidth: "any" }), quarter: obj.default(obj4), month: obj.default({ matchPatterns: obj6, defaultMatchWidth: "wide", parsePatterns: { narrow: items2, any: items3 }, defaultParseWidth: "any" }), day: obj.default({ matchPatterns: obj7, defaultMatchWidth: "wide", parsePatterns: { narrow: items4, any: items5 }, defaultParseWidth: "any" }), dayPeriod: obj.default({ matchPatterns: obj8, defaultMatchWidth: "wide", parsePatterns: { any: obj9 }, defaultParseWidth: "any" }) };
+export default function sub(arg0, years) {
+  requiredArgs.default(2, arguments);
+  if (years) {
+    if ("object" === _typeof(years)) {
+      let num = 0;
+      if (years.years) {
+        num = module_3667.default(years.years);
+      }
+      let num2 = 0;
+      if (years.months) {
+        num2 = module_3667.default(years.months);
+      }
+      let num3 = 0;
+      if (years.weeks) {
+        num3 = module_3667.default(years.weeks);
+      }
+      let num4 = 0;
+      if (years.days) {
+        num4 = module_3667.default(years.days);
+      }
+      let num5 = 0;
+      if (years.hours) {
+        num5 = module_3667.default(years.hours);
+      }
+      let num6 = 0;
+      if (years.minutes) {
+        num6 = module_3667.default(years.minutes);
+      }
+      let num7 = 0;
+      if (years.seconds) {
+        num7 = module_3667.default(years.seconds);
+      }
+      const _Date = Date;
+      const sum = num7 + 60 * (num6 + 60 * num5);
+      const date = new Date(subDays.default(subMonths.default(arg0, num2 + 12 * num), num4 + 7 * num3).getTime() - 1000 * sum);
+      return date;
+    }
+  }
+  return new Date(NaN);
+};
 export default exports.default;

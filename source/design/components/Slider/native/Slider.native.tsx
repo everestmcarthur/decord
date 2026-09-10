@@ -1,72 +1,68 @@
-// Module ID: 14181
-// Function ID: 14182
+// Module ID: 14206
+// Function ID: 14207
 // Name: Slider
-// Dependencies: [19, 17, 21, 4560, 576, 4528, 4529, 8278, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 4542, 4543, 8306, 2]
 // Exports: Slider
 
-// Module 14181 (Slider)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14206 (Slider)
+import nativeDefault from "native" /* 576 */;
+import HapticUtils from "HapticUtils" /* 4542 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4543 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { flex: 1, flexDirection: "row", alignItems: "center" }, slider: { flex: 1 }, minimumTrackTintColor: null, maximumTrackTintColor: null, startIcon: null, endIcon: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
-createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { backgroundColor: ThemesDefault.colors.SLIDER_TRACK_BACKGROUND };
-let obj1 = { backgroundColor: ThemesDefault.colors.SLIDER_TRACK_BACKGROUND };
-createCacheKey[4] = { marginRight: ThemesDefault.space.PX_8 };
-const obj2 = { marginRight: ThemesDefault.space.PX_8 };
-createCacheKey[5] = { marginLeft: ThemesDefault.space.PX_8 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const obj3 = { marginLeft: ThemesDefault.space.PX_8 };
-let result = require("set").fileFinishedImporting("design/components/Slider/native/Slider.native.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { flex: 1, flexDirection: "row", alignItems: "center" }, slider: { flex: 1 }, minimumTrackTintColor: { backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED }, maximumTrackTintColor: null, startIcon: null, endIcon: null };
+let obj3 = { backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
+obj2.maximumTrackTintColor = { backgroundColor: nativeDefault.colors.SLIDER_TRACK_BACKGROUND };
+let obj4 = { backgroundColor: nativeDefault.colors.SLIDER_TRACK_BACKGROUND };
+obj2.startIcon = { marginRight: nativeDefault.space.PX_8 };
+const obj5 = { marginRight: nativeDefault.space.PX_8 };
+obj2.endIcon = { marginLeft: nativeDefault.space.PX_8 };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("design/components/Slider/native/Slider.native.tsx");
 
 export const Slider = function Slider(step) {
   ({ startIcon, endIcon, onValueChange } = step);
   step = step.step;
-  const merged = Object.assign(step, Object.create(null));
-  const tmp2 = callback2();
+  const merged = Object.assign(step, Object.assign({ startIcon: 0, endIcon: 0, style: 0, onValueChange: 0, step: 0 }));
+  const tmp2 = closure_7();
   const items = [step, onValueChange];
   let obj = { style: tmp2.container, children: null };
   let tmp6 = null;
-  const callback = React.useCallback((arg0) => {
+  const callback = noop.useCallback((arg0) => {
     if (null != step) {
-      const result = onValueChange(closure_1_2[5]).triggerHapticFeedback(step(closure_1_2[6]).IMPACT_LIGHT);
-      const obj = onValueChange(closure_1_2[5]);
+      const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
     }
     if (onValueChange != null) {
       tmp5(arg0);
     }
   }, items);
   if (null != startIcon) {
-    obj = { style: null, children: null };
-    obj[0] = tmp2.startIcon;
-    obj[1] = startIcon;
-    tmp6 = callback(tmp5, obj);
+    const obj2 = { style: tmp2.startIcon, children: startIcon };
+    tmp6 = closure_5(tmp5, obj2);
   }
   const items1 = [tmp6, , ];
-  obj = {};
+  const obj3 = {};
   const merged1 = Object.assign(merged);
   const items2 = [tmp2.slider, step.style];
-  obj.style = items2;
-  obj.step = step;
-  obj.onValueChange = callback;
-  obj.minimumTrackTintColor = tmp2.minimumTrackTintColor.backgroundColor;
-  obj.maximumTrackTintColor = tmp2.maximumTrackTintColor.backgroundColor;
-  obj.tapToSeek = true;
-  items1[1] = callback(step(8278), obj);
+  obj3.style = items2;
+  obj3.step = step;
+  obj3.onValueChange = callback;
+  obj3.minimumTrackTintColor = tmp2.minimumTrackTintColor.backgroundColor;
+  obj3.maximumTrackTintColor = tmp2.maximumTrackTintColor.backgroundColor;
+  obj3.tapToSeek = true;
+  items1[1] = closure_5(step(8306), obj3);
   let tmp8Result = null;
   if (null != endIcon) {
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp2.endIcon;
-    obj1[1] = endIcon;
-    tmp8Result = callback(tmp5, obj1);
+    const obj4 = { style: tmp2.endIcon, children: endIcon };
+    tmp8Result = closure_5(tmp5, obj4);
   }
   items1[2] = tmp8Result;
-  obj[1] = items1;
+  obj.children = items1;
   return closure_6(View, obj);
 };

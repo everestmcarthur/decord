@@ -1,35 +1,38 @@
-// Module ID: 12560
-// Function ID: 12561
+// Module ID: 12586
+// Function ID: 12587
 // Name: useGuildPowerupTier3OverrideConfig
 // Dependencies: [1979, 1074, 504, 1114, 2428, 2]
 // Exports: default
 
-// Module 12560 (useGuildPowerupTier3OverrideConfig)
-import messagesProxyDefault from "messagesProxy" /* 2428 */;
-import closure_3 from "createGuildRecordFromRust" /* 1979 */;
-import { GuildFeatures } from "ME" /* 1074 */;
+// Module 12586 (useGuildPowerupTier3OverrideConfig)
+import _modDef2428 from "module_2428" /* 2428 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupTier3OverrideConfig.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const GuildFeatures = fn(1074).GuildFeatures;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupTier3OverrideConfig.tsx");
 
 export default function useGuildPowerupTier3OverrideConfig(arg0) {
-  const _require = arg0;
-  let obj = _require(504);
-  const items = [closure_3];
+  _require = arg0;
+  const items = [GuildStore];
   if (obj.useStateFromStores(items, () => {
-    const guild = closure_1_3.getGuild(closure_0);
+    const guild = GuildStore.getGuild(closure_0);
     let hasItem;
     if (guild != null) {
       const features = guild.features;
-      hasItem = features.has(closure_1_4.PREMIUM_TIER_3_OVERRIDE);
+      hasItem = features.has(GuildFeatures.PREMIUM_TIER_3_OVERRIDE);
     }
     return true === hasItem;
   })) {
-    obj = { shouldShow: true, text: null };
-    const intl = _require(1114).intl;
-    obj[1] = intl.string(messagesProxyDefault.l9n4QZ);
+    const obj2 = { shouldShow: true, text: null };
+    const intl = require("util").intl;
+    obj2.text = intl.string(_modDef2428.l9n4QZ);
+    let obj3 = obj2;
   } else {
-    obj = { shouldShow: false, text: "" };
+    obj3 = { shouldShow: false, text: "" };
   }
-  return obj;
+  return obj3;
 };

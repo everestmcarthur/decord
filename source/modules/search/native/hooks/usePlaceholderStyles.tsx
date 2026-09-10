@@ -1,27 +1,33 @@
-// Module ID: 16649
-// Function ID: 16650
-// Name: useFullscreenPlaceholderCount
-// Dependencies: [4552, 7878, 1477, 504, 4296, 4561, 1178, 2]
+// Module ID: 16681
+// Function ID: 16682
+// Name: usePlaceholderStyles
+// Dependencies: [4566, 7892, 1477, 504, 4310, 4575, 1178, 2]
 // Exports: useFullscreenPlaceholderCount, usePlaceholderAnimatedStyle
 
-// Module 16649 (useFullscreenPlaceholderCount)
+// Module 16681 (usePlaceholderStyles)
+import native from "native" /* 1178 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import { FADE_LAYOUT_ANIMATION_DURATION as closure_4 } from "MessageEmbedTypes" /* 7878 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import timing from "timing" /* 4575 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-const require = arg1;
-let closure_5 = { code: "function usePlaceholderStylesTsx1(){const{useReducedMotion,visible,withRepeat,withSequence,withTiming,STANDARD_EASING,FADE_LAYOUT_ANIMATION_DURATION}=this.__closure;if(useReducedMotion){return{opacity:visible?1:0};}if(visible){return{opacity:withRepeat(withSequence(withTiming(0.5,{duration:0}),withTiming(1,{duration:1300,easing:STANDARD_EASING}),withTiming(0.5,{duration:1300,easing:STANDARD_EASING})),-1)};}return{opacity:withTiming(0,{duration:FADE_LAYOUT_ANIMATION_DURATION})};}" };
-const result = require("set").fileFinishedImporting("modules/search/native/hooks/usePlaceholderStyles.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const duration = fn(7892).FADE_LAYOUT_ANIMATION_DURATION;
+const __initData = { code: "function usePlaceholderStylesTsx1(){const{useReducedMotion,visible,withRepeat,withSequence,withTiming,STANDARD_EASING,FADE_LAYOUT_ANIMATION_DURATION}=this.__closure;if(useReducedMotion){return{opacity:visible?1:0};}if(visible){return{opacity:withRepeat(withSequence(withTiming(0.5,{duration:0}),withTiming(1,{duration:1300,easing:STANDARD_EASING}),withTiming(0.5,{duration:1300,easing:STANDARD_EASING})),-1)};}return{opacity:withTiming(0,{duration:FADE_LAYOUT_ANIMATION_DURATION})};}" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/hooks/usePlaceholderStyles.tsx");
 
 export const useFullscreenPlaceholderCount = function useFullscreenPlaceholderCount(arg0) {
   ({ placeholderHeight, numColumns } = arg0);
   return Math.ceil(useWindowDimensionsDefault({ ignoreKeyboard: true }).height / placeholderHeight) * numColumns;
 };
 export const usePlaceholderAnimatedStyle = function usePlaceholderAnimatedStyle(visible) {
-  const _require = visible;
-  let obj = _require(504);
-  const items = [closure_3];
-  const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  _require = visible;
+  const items = [AccessibilityStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  let obj = require("initialize");
   class A {
     constructor() {
       obj = { opacity: null };
@@ -31,56 +37,56 @@ export const usePlaceholderAnimatedStyle = function usePlaceholderAnimatedStyle(
         if (tmp) {
           num5 = 1;
         }
-        obj[0] = num5;
+        obj.opacity = num5;
         tmp5 = obj;
       } else {
         tmp2 = closure_0;
-        tmp3 = closure_1_2;
+        tmp3 = closure_2;
         if (tmp) {
           tmp2Result = tmp2(tmp3[4]);
           tmp6 = closure_0;
-          tmp7 = closure_1_2;
-          obj5 = closure_0(closure_1_2[4]);
+          tmp7 = closure_2;
+          obj5 = closure_0(closure_2[4]);
           tmp8 = closure_0;
-          tmp9 = closure_1_2;
-          obj6 = closure_0(closure_1_2[5]);
+          tmp9 = closure_2;
+          obj6 = closure_0(closure_2[5]);
           num2 = 0.5;
           tmp11 = closure_0;
-          tmp12 = closure_1_2;
+          tmp12 = closure_2;
           withTimingResult = obj6.withTiming(0.5, { duration: 0 });
-          obj7 = closure_0(closure_1_2[5]);
-          obj = { duration: 1300, easing: null };
+          obj7 = closure_0(closure_2[5]);
+          obj1 = { duration: 1300, easing: null };
           tmp13 = closure_0;
-          tmp14 = closure_1_2;
-          obj[1] = closure_0(closure_1_2[6]).STANDARD_EASING;
+          tmp14 = closure_2;
+          obj1.easing = closure_0(closure_2[6]).STANDARD_EASING;
           num3 = 1;
           tmp16 = closure_0;
-          tmp17 = closure_1_2;
-          withTimingResult1 = obj7.withTiming(1, obj);
-          obj9 = closure_0(closure_1_2[5]);
-          obj1 = { duration: 1300, easing: null };
+          tmp17 = closure_2;
+          withTimingResult1 = obj7.withTiming(1, obj1);
+          obj9 = closure_0(closure_2[5]);
+          obj11 = { duration: 1300, easing: null };
           tmp18 = closure_0;
-          tmp19 = closure_1_2;
-          obj1[1] = closure_0(closure_1_2[6]).STANDARD_EASING;
+          tmp19 = closure_2;
+          obj11.easing = closure_0(closure_2[6]).STANDARD_EASING;
           num4 = -1;
-          obj[0] = tmp2Result.withRepeat(obj5.withSequence(withTimingResult, withTimingResult1, obj9.withTiming(0.5, obj1)), -1);
+          obj.opacity = tmp2Result.withRepeat(obj5.withSequence(withTimingResult, withTimingResult1, obj9.withTiming(0.5, obj11)), -1);
           tmp5 = obj;
         } else {
           tmp2Result1 = tmp2(tmp3[5]);
-          obj2 = { duration: null };
-          tmp4 = closure_1_4;
-          obj2[0] = closure_1_4;
+          obj12 = { duration: null };
+          tmp4 = closure_4;
+          obj12.duration = closure_4;
           num = 0;
-          obj[0] = tmp2Result1.withTiming(0, obj2);
+          obj.opacity = tmp2Result1.withTiming(0, obj12);
           tmp5 = obj;
         }
       }
       return tmp5;
     }
   }
-  obj = { useReducedMotion: stateFromStores, visible, withRepeat: _require(4296).withRepeat, withSequence: _require(4296).withSequence, withTiming: _require(4561).withTiming, STANDARD_EASING: _require(1178).STANDARD_EASING, FADE_LAYOUT_ANIMATION_DURATION: closure_4 };
-  A.__closure = obj;
+  let obj2 = require("ReanimatedRexport");
+  A.__closure = { useReducedMotion: stateFromStores, visible, withRepeat: require("ReanimatedRexport").withRepeat, withSequence: require("ReanimatedRexport").withSequence, withTiming: require("timing").withTiming, STANDARD_EASING: require("native").STANDARD_EASING, FADE_LAYOUT_ANIMATION_DURATION: duration };
   A.__workletHash = 9750536800906;
-  A.__initData = closure_5;
-  return _require(4296).useAnimatedStyle(A);
+  A.__initData = __initData;
+  return obj2.useAnimatedStyle(A);
 };

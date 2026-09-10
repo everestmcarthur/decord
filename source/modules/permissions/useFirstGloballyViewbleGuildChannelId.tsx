@@ -1,32 +1,31 @@
-// Module ID: 16065
-// Function ID: 16066
+// Module ID: 16095
+// Function ID: 16096
 // Name: useFirstGloballyViewbleGuildChannelId
-// Dependencies: [2012, 1085, 504, 4204, 2]
+// Dependencies: [2012, 1085, 504, 4217, 2]
 // Exports: useFirstGloballyViewbleGuildChannelId
 
-// Module 16065 (useFirstGloballyViewbleGuildChannelId)
-import closure_3 from "comparator" /* 2012 */;
-import { Permissions } from "sum" /* 1085 */;
+// Module 16095 (useFirstGloballyViewbleGuildChannelId)
+import PermissionUtilsAll from "PermissionUtils" /* 4217 */;
+import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/permissions/useFirstGloballyViewbleGuildChannelId.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const Permissions = fn(1085).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/permissions/useFirstGloballyViewbleGuildChannelId.tsx");
 
 export const useFirstGloballyViewbleGuildChannelId = function useFirstGloballyViewbleGuildChannelId(guildId) {
-  const _require = guildId;
-  const items = [closure_3];
+  _require = guildId;
+  const items = [GuildChannelStore];
   const items1 = [guildId];
-  return _require(504).useStateFromStores(items, () => {
+  return require("initialize").useStateFromStores(items, () => {
     if (null != closure_0) {
-      const selectableChannels = closure_1_3.getSelectableChannels(tmp);
+      const selectableChannels = GuildChannelStore.getSelectableChannels(tmp);
       for (const item10010 of selectableChannels) {
         let channel = item10010.channel;
-        let tmp6 = channel;
-        let tmp7 = closure_1_1;
-        let tmp8 = closure_1_2;
-        let obj2 = closure_1_1(closure_1_2[3]);
-        let tmp9 = closure_1_4;
-        if (obj2.canEveryone(closure_1_4.VIEW_CHANNEL, channel)) {
-          let tmp10 = obj;
+        let obj2 = PermissionUtilsAll;
+        if (obj2.canEveryone(Permissions.VIEW_CHANNEL, channel)) {
           obj.return();
           return channel.id;
         }

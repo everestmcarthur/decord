@@ -1,28 +1,31 @@
-// Module ID: 17009
-// Function ID: 17010
-// Dependencies: [19, 1957, 2011, 1956, 21, 504, 4189, 1094, 17010, 17019, 2]
+// Module ID: 17040
+// Function ID: 17041
+// Name: ActivityPanelContainer
+// Dependencies: [19, 1957, 2011, 1956, 21, 504, 4202, 1094, 17041, 17050, 2]
 
-// Module 17009
-import initialize from "initialize" /* 504 */;
-import BaseActivityPanelControllerDefault from "BaseActivityPanelController" /* 17010 */;
-import renderActivityOrPIPDefault from "renderActivityOrPIP" /* 17019 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import closure_4 from "handleConnectionOpen" /* 2011 */;
-import closure_5 from "participantFromServer" /* 1956 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+// Module 17040 (ActivityPanelContainer)
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4202 */;
+import ActivityPanelControllerDefault from "ActivityPanelController" /* 17041 */;
+import ActivityPanelUIDefault from "ActivityPanelUI" /* 17050 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 
-require = arg1;
-const memoResult = importAllResult.memo(function ActivityPanelContainer() {
-  let obj = initialize;
-  const items = [closure_5, closure_3, closure_4];
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/panel/native/ActivityPanelContainer.tsx");
+
+export default noop.memo(function ActivityPanelContainer() {
+  const items = [EmbeddedActivitiesStore, ChannelStore, SelectedChannelStore];
   let tmp2 = null;
   if (obj.useStateFromStores(items, () => {
     connectedActivityLocation = connectedActivityLocation.getConnectedActivityLocation();
     if (null == connectedActivityLocation) {
       return false;
     } else {
-      const embeddedActivityLocationChannelId = callback(table[6]).getEmbeddedActivityLocationChannelId(connectedActivityLocation);
+      const embeddedActivityLocationChannelId = embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(connectedActivityLocation);
       if (null == embeddedActivityLocationChannelId) {
         return false;
       } else {
@@ -45,18 +48,12 @@ const memoResult = importAllResult.memo(function ActivityPanelContainer() {
         }
         return tmp4;
       }
-      const obj2 = callback(table[6]);
-      tmp8 = callback;
-      tmp9 = table;
+      tmp8 = require;
+      tmp9 = dependencyMap;
     }
   }, [])) {
-    obj = { children: null };
-    obj[0] = jsx(renderActivityOrPIPDefault, {});
-    tmp2 = jsx(BaseActivityPanelControllerDefault, { children: null });
-    const tmp5 = BaseActivityPanelControllerDefault;
+    let obj2 = { children: jsx(ActivityPanelUIDefault, {}) };
+    tmp2 = jsx(ActivityPanelControllerDefault, { children: jsx(ActivityPanelUIDefault, {}) });
   }
   return tmp2;
 });
-const result = require("set").fileFinishedImporting("modules/activities/panel/native/ActivityPanelContainer.tsx");
-
-export default memoResult;

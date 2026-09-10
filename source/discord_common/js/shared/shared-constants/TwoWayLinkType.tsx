@@ -1,15 +1,13 @@
-// Module ID: 9236
-// Function ID: 9237
-// Name: set
+// Module ID: 9263
+// Function ID: 9264
+// Name: TwoWayLinkType
 // Dependencies: [2]
 
-// Module 9236 (set)
-import set from "set" /* 2 */;
+// Module 9263 (TwoWayLinkType)
+import size from "module_2" /* 2 */;
 
-const obj = { ALL: null };
-let set = new Set(["desktop", "device_code", "mobile", "web"]);
-obj[0] = set;
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/TwoWayLinkType.tsx");
+const obj = { ALL: new Set(["desktop", "device_code", "mobile", "web"]) };
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/TwoWayLinkType.tsx");
 
 export const TwoWayLinkType = { MOBILE: "mobile", DESKTOP: "desktop", WEB: "web", DEVICE_CODE: "device_code" };
 export const TwoWayLinkTypeSets = obj;

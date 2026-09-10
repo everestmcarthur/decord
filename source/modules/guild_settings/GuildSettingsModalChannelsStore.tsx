@@ -1,38 +1,33 @@
-// Module ID: 16146
-// Function ID: 16147
-// Name: sortCategoryList
-// Dependencies: [109, 1961, 2012, 4199, 1074, 7112, 1982, 12, 504, 573, 2]
+// Module ID: 16176
+// Function ID: 16177
+// Name: GuildSettingsModalChannelsStore
+// Dependencies: [109, 1961, 2012, 4212, 1074, 7126, 1982, 12, 504, 573, 2]
 
-// Module 16146 (sortCategoryList)
+// Module 16176 (GuildSettingsModalChannelsStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import getFlattenedChannelListDefault from "getFlattenedChannelList" /* 7112 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import createChannelRecord from "createChannelRecord" /* 1961 */;
-import comparator from "comparator" /* 2012 */;
-import closure_9 from "comparator" /* 2012 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4199 */;
-import ME from "ME" /* 1074 */;
-import importDefaultResult from "apply" /* 12 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 7126 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 2012 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
+import apply from "module_12" /* 12 */;
 
-const require = arg1;
+const require = fn;
 function sortCategoryList(channel, channel2) {
   channel = channel.channel;
   const type = channel.type;
   channel2 = channel2.channel;
   const type2 = channel2.type;
   if (type !== type2) {
-    if (!callback(type)) {
-      if (callback2(type)) {
+    if (!hasOwnProperty(type)) {
+      if (timestampProducer(type)) {
         return num;
       }
       num = 1;
       if (type === constants.GUILD_TEXT) {
         num = -1;
       }
-      const tmp2 = callback2;
     }
-    const tmp = callback;
   }
   num = channel.position - channel2.position;
 }
@@ -40,16 +35,15 @@ function setIndex(arg0, index) {
   arg0.index = index;
 }
 function buildSortedChannels() {
-  const _null = { _categories: [], null: [] };
+  _null = { _categories: [], null: [] };
   const keys = Object.keys(closure_19);
-  const item = keys.forEach((arg0) => {
-    if (null != table[arg0]) {
+  const item = keys.forEach((item) => {
+    if (null != closure_1_19[item]) {
       if (null != _categories) {
         if (tmp.type === constants.GUILD_CATEGORY) {
           _categories = _categories._categories;
-          let obj = { channel: null, index: -1 };
-          obj[0] = tmp;
-          let arr = _categories.push(obj);
+          const obj2 = { channel: tmp, index: -1 };
+          _categories.push(obj2);
           if (null == _categories[tmp.id]) {
             _categories[tmp.id] = [];
           }
@@ -62,36 +56,34 @@ function buildSortedChannels() {
           if (null == _categories[StringResult]) {
             _categories[StringResult] = [];
           }
-          arr = _categories[StringResult];
-          obj = { channel: null, index: -1 };
-          obj[0] = tmp;
-          arr = arr.push(obj);
+          const obj = { channel: tmp, index: -1 };
+          _categories[StringResult].push(obj);
         }
       }
     }
   });
   let _categories = _null._categories;
   let sorted = _categories.sort(sortCategoryList);
-  _categories = _null._categories;
-  const item1 = _categories.forEach((channel) => {
+  const _categories1 = _null._categories;
+  const item1 = _categories1.forEach((channel) => {
     channel = channel.channel;
     if (null != _categories) {
       if (null != channel) {
         if (null != _categories[channel.id]) {
-          const sorted = obj.sort(closure_20);
+          const sorted = obj.sort(sortCategoryList);
         }
       }
     }
   });
-  const item2 = getFlattenedChannelListDefault(_null._categories, _null).forEach(setIndex);
+  const item2 = getFlattedChannelListDefault(_null._categories, _null).forEach(setIndex);
   if (null != _null) {
-    const arr4 = getFlattenedChannelListDefault(_null._categories, _null, (channel) => {
+    const arr4 = getFlattedChannelListDefault(_null._categories, _null, (channel) => {
       channel = channel.channel;
       let tmp = channel.type === constants.GUILD_CATEGORY;
       if (!tmp) {
-        let hasItem = null != _null;
+        let hasItem = null != set;
         if (hasItem) {
-          hasItem = _null.has(channel.type);
+          hasItem = set.has(channel.type);
         }
         tmp = hasItem;
       }
@@ -101,18 +93,21 @@ function buildSortedChannels() {
   }
 }
 let closure_3 = ["lock_permissions", "id"];
-({ isGuildSelectableChannelType: c5, isGuildVocalChannelType: closure_6 } = createChannelRecord);
-({ GUILD_SELECTABLE_CHANNELS_KEY: error, GUILD_VOCAL_CHANNELS_KEY: closure_8 } = comparator);
-({ ChannelTypes: unpackModuleId, Permissions: closure_12 } = ME);
+const ChannelRecord = fn(1961);
+({ isGuildSelectableChannelType: hasOwnProperty, isGuildVocalChannelType: metroRequire } = ChannelRecord);
+let GuildChannelStore = fn(2012);
+({ GUILD_SELECTABLE_CHANNELS_KEY: closure_7, GUILD_VOCAL_CHANNELS_KEY: closure_8 } = GuildChannelStore);
+let GuildChannelStore = GuildChannelStore_mod;
+const Constants = fn(1074);
+({ ChannelTypes: closure_11, Permissions: closure_12 } = Constants);
 let c13 = null;
-let c14 = null;
+let closure_14 = null;
 let c15 = null;
 let c16 = null;
 let c17 = null;
-let c18 = null;
 let closure_19 = {};
-let closure_23 = importDefaultResult.debounce(() => {
-  const channels = store.getChannels(c13);
+let closure_23 = apply.debounce(() => {
+  const channels = GuildChannelStore.getChannels(c13);
   if (channels !== channels) {
     closure_19 = {};
     const item = channels[closure_7].forEach((channel) => {
@@ -125,22 +120,19 @@ let closure_23 = importDefaultResult.debounce(() => {
       closure_19[channel.id] = channel;
       return channel;
     });
-    _require = _require(1982).isFavoritesGuildId(c13);
+    _require = require("FavoritesUtils").isFavoritesGuildId(c13);
     const item2 = channels[constants.GUILD_CATEGORY].forEach((channel) => {
       channel = channel.channel;
       let canResult = "null" === channel.id || closure_0;
       if (!canResult) {
-        canResult = closure_1_10.can(closure_1_12.VIEW_CHANNEL, channel);
+        canResult = PermissionStore.can(constants2.VIEW_CHANNEL, channel);
       }
       if (canResult) {
         closure_19[channel.id] = channel;
       }
     });
     buildSortedChannels();
-    const arr = channels[closure_7];
-    const arr2 = channels[closure_8];
-    const arr3 = channels[constants.GUILD_CATEGORY];
-    const obj = _require(1982);
+    const obj = require("FavoritesUtils");
   }
   guildSettingsModalChannelsStoreClass.emitChange();
 }, 500);
@@ -149,17 +141,17 @@ class GuildSettingsModalChannelsStoreClass extends Store {
 }
 const prototype = GuildSettingsModalChannelsStoreClass.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_9, closure_10);
-  const items = [closure_9];
+  this.waitFor(GuildChannelStore, PermissionStore);
+  const items = [GuildChannelStore];
   this.syncWith(items, () => {
-    callback();
+    closure_1_23();
     return false;
   });
 };
-prototype["initGuild"] = function initGuild(closure_6) {
-  closure_13 = closure_6;
-  let _require;
-  const channels = store.getChannels(closure_13);
+prototype["initGuild"] = function initGuild(id) {
+  closure_13 = id;
+  _require = undefined;
+  const channels = GuildChannelStore.getChannels(closure_13);
   if (channels !== channels) {
     closure_19 = {};
     const item = channels[closure_7].forEach((channel) => {
@@ -172,59 +164,55 @@ prototype["initGuild"] = function initGuild(closure_6) {
       closure_19[channel.id] = channel;
       return channel;
     });
-    _require = _require(1982).isFavoritesGuildId(closure_13);
+    _require = require("FavoritesUtils").isFavoritesGuildId(closure_13);
     const item2 = channels[constants.GUILD_CATEGORY].forEach((channel) => {
       channel = channel.channel;
       let canResult = "null" === channel.id || closure_0;
       if (!canResult) {
-        canResult = closure_1_10.can(closure_1_12.VIEW_CHANNEL, channel);
+        canResult = PermissionStore.can(constants2.VIEW_CHANNEL, channel);
       }
       if (canResult) {
         closure_19[channel.id] = channel;
       }
     });
     buildSortedChannels();
-    const arr = channels[closure_7];
-    const arr2 = channels[closure_8];
-    const arr3 = channels[constants.GUILD_CATEGORY];
-    const obj = _require(1982);
+    const obj = require("FavoritesUtils");
   }
 };
 Object.defineProperty(prototype, "channels", {
-  get: function channels(c0) {
+  get: function channels() {
     return c15;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "order", {
   get: function order() {
-    return c14;
+    return closure_14;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "sortingType", {
-  get: function sortingType(arg0) {
+  get: function sortingType() {
     return c17;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "channelList", {
   get: function channelList() {
-    return c18;
+    return arr;
   },
   set: undefined
 });
-prototype["getLocalChannel"] = function getLocalChannel(id) {
-  return table[id];
+prototype["getLocalChannel"] = function getLocalChannel(order) {
+  return closure_19[order];
 };
 GuildSettingsModalChannelsStoreClass.displayName = "GuildSettingsModalChannelsStore";
-const guildSettingsModalChannelsStoreClass = new GuildSettingsModalChannelsStoreClass(dispatcherDefault, {
+const guildSettingsModalChannelsStoreClass = new GuildSettingsModalChannelsStoreClass(DispatcherDefault, {
   GUILD_SETTINGS_MODAL_CHANNELS_TERMINATE: function handleTerminate() {
     c13 = null;
-    c14 = null;
+    closure_14 = null;
     c15 = null;
     c17 = null;
-    c18 = null;
     c16 = null;
   },
   GUILD_SETTINGS_MODAL_CHANNELS_START_REORDER: function handleStartReorder(sortingType) {
@@ -234,14 +222,15 @@ const guildSettingsModalChannelsStoreClass = new GuildSettingsModalChannelsStore
     } else {
       const _Set = Set;
       const set = new Set(sortingType);
+      c17 = set;
       if (null != _null) {
-        const arr = getFlattenedChannelListDefault(_null._categories, _null, (channel) => {
+        arr = getFlattedChannelListDefault(_null._categories, _null, (channel) => {
           channel = channel.channel;
           let tmp = channel.type === constants.GUILD_CATEGORY;
           if (!tmp) {
-            let hasItem = null != _null;
+            let hasItem = null != set;
             if (hasItem) {
-              hasItem = _null.has(channel.type);
+              hasItem = set.has(channel.type);
             }
             tmp = hasItem;
           }
@@ -254,13 +243,13 @@ const guildSettingsModalChannelsStoreClass = new GuildSettingsModalChannelsStore
   GUILD_SETTINGS_MODAL_CHANNELS_STOP_REORDER: function handleStopReorder() {
     c17 = null;
     if (null != _null) {
-      const arr = getFlattenedChannelListDefault(_null._categories, _null, (channel) => {
+      arr = getFlattedChannelListDefault(_null._categories, _null, (channel) => {
         channel = channel.channel;
         let tmp = channel.type === constants.GUILD_CATEGORY;
         if (!tmp) {
-          let hasItem = null != _null;
+          let hasItem = null != set;
           if (hasItem) {
-            hasItem = _null.has(channel.type);
+            hasItem = set.has(channel.type);
           }
           tmp = hasItem;
         }
@@ -274,76 +263,13 @@ const guildSettingsModalChannelsStoreClass = new GuildSettingsModalChannelsStore
     const item = updates.forEach((id) => {
       if (null != dependencyMap[id.id]) {
         ({ lock_permissions, id } = id);
-        dependencyMap[id.id] = dependencyMap[id.id].merge(callback(id, closure_3));
-        const obj = dependencyMap[id.id];
+        dependencyMap[id.id] = dependencyMap[id.id].merge(_objectWithoutProperties(id, closure_1_3));
       }
     });
     buildSortedChannels();
   }
 });
-let obj = {
-  GUILD_SETTINGS_MODAL_CHANNELS_TERMINATE: function handleTerminate() {
-    c13 = null;
-    c14 = null;
-    c15 = null;
-    c17 = null;
-    c18 = null;
-    c16 = null;
-  },
-  GUILD_SETTINGS_MODAL_CHANNELS_START_REORDER: function handleStartReorder(sortingType) {
-    sortingType = sortingType.sortingType;
-    if (null == _null) {
-      return false;
-    } else {
-      const _Set = Set;
-      const set = new Set(sortingType);
-      if (null != _null) {
-        const arr = getFlattenedChannelListDefault(_null._categories, _null, (channel) => {
-          channel = channel.channel;
-          let tmp = channel.type === constants.GUILD_CATEGORY;
-          if (!tmp) {
-            let hasItem = null != _null;
-            if (hasItem) {
-              hasItem = _null.has(channel.type);
-            }
-            tmp = hasItem;
-          }
-          return tmp;
-        });
-        closure_14 = arr.map((channel) => channel.channel.id);
-      }
-    }
-  },
-  GUILD_SETTINGS_MODAL_CHANNELS_STOP_REORDER: function handleStopReorder() {
-    c17 = null;
-    if (null != _null) {
-      const arr = getFlattenedChannelListDefault(_null._categories, _null, (channel) => {
-        channel = channel.channel;
-        let tmp = channel.type === constants.GUILD_CATEGORY;
-        if (!tmp) {
-          let hasItem = null != _null;
-          if (hasItem) {
-            hasItem = _null.has(channel.type);
-          }
-          tmp = hasItem;
-        }
-        return tmp;
-      });
-      closure_14 = arr.map((channel) => channel.channel.id);
-    }
-  },
-  GUILD_SETTINGS_MODAL_LOCAL_SORT_CHANGE: function handleLocalSortChange(updates) {
-    updates = updates.updates;
-    const item = updates.forEach((id) => {
-      if (null != dependencyMap[id.id]) {
-        ({ lock_permissions, id } = id);
-        dependencyMap[id.id] = dependencyMap[id.id].merge(callback(id, closure_3));
-        const obj = dependencyMap[id.id];
-      }
-    });
-    buildSortedChannels();
-  }
-};
-const result = require("set").fileFinishedImporting("modules/guild_settings/GuildSettingsModalChannelsStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/GuildSettingsModalChannelsStore.tsx");
 
 export default guildSettingsModalChannelsStoreClass;

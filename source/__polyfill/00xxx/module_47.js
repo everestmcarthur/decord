@@ -3,4 +3,5 @@
 // Dependencies: []
 
 // Module 47
-arg5.default = ErrorUtils.ErrorUtils;
+
+export default ErrorUtils.ErrorUtils;

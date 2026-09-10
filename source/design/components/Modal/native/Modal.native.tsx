@@ -1,24 +1,24 @@
-// Module ID: 11933
-// Function ID: 11934
+// Module ID: 11959
+// Function ID: 11960
 // Name: Modal
-// Dependencies: [19, 21, 1611, 7000, 5682, 2]
+// Dependencies: [19, 21, 1611, 7014, 5696, 2]
 // Exports: Modal
 
-// Module 11933 (Modal)
-import noopAll from "noop" /* 19 */;
+// Module 11959 (Modal)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT" /* 5682 */;
-import NavigationStack from "NavigationStack" /* 7000 */;
-import { jsx } from "jsxProd" /* 21 */;
+import NavigatorConstants from "NavigatorConstants" /* 5696 */;
+import Navigator from "Navigator" /* 7014 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Modal/native/Modal.native.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Modal/native/Modal.native.tsx");
 
 export const Modal = function Modal(arg0) {
-  let obj = {};
+  const obj = {};
   const merged = Object.assign(arg0);
-  obj = { height: NAV_BAR_HEIGHT.NAV_BAR_HEIGHT + useSafeAreaInsetsDefault().top };
-  obj.headerStyle = obj;
-  return jsx(NavigationStack.Navigator, { height: NAV_BAR_HEIGHT.NAV_BAR_HEIGHT + useSafeAreaInsetsDefault().top });
+  const tmp = useSafeAreaInsetsDefault();
+  obj.headerStyle = { height: NavigatorConstants.NAV_BAR_HEIGHT + useSafeAreaInsetsDefault().top };
+  return jsx(Navigator.Navigator, {});
 };

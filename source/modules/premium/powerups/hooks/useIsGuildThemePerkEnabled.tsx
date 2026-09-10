@@ -1,38 +1,42 @@
-// Module ID: 16162
-// Function ID: 16163
+// Module ID: 16192
+// Function ID: 16193
 // Name: useIsGuildThemePerkEnabled
-// Dependencies: [1979, 4449, 1074, 504, 4453, 2]
+// Dependencies: [1979, 4463, 1074, 504, 4467, 2]
 // Exports: default
 
-// Module 16162 (useIsGuildThemePerkEnabled)
-import closure_2 from "createGuildRecordFromRust" /* 1979 */;
-import closure_3 from "calculateAppliedBoosts" /* 4449 */;
-import { GuildFeatures } from "ME" /* 1074 */;
+// Module 16192 (useIsGuildThemePerkEnabled)
+import Powerups from "Powerups" /* 4467 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4463 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useIsGuildThemePerkEnabled.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const GuildFeatures = fn(1074).GuildFeatures;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useIsGuildThemePerkEnabled.tsx");
 
 export default function useIsGuildThemePerkEnabled(arg0) {
-  const _require = arg0;
-  const items = [closure_2, closure_3];
+  _require = arg0;
+  const items = [GuildStore, GuildPowerupsStore];
   const items1 = [arg0];
-  return _require(504).useStateFromStores(items, () => {
-    let tmp2 = null != callback;
+  return require("initialize").useStateFromStores(items, () => {
+    let tmp2 = null != closure_0;
     if (tmp2) {
-      const guild = closure_1_2.getGuild(tmp);
+      const guild = GuildStore.getGuild(tmp);
       let hasItem;
       if (guild != null) {
         const features = guild.features;
-        hasItem = features.has(closure_1_4.GUILD_THEME);
+        hasItem = features.has(GuildFeatures.GUILD_THEME);
       }
       let tmp7 = true === hasItem;
       if (!tmp7) {
-        const stateForGuild = closure_1_3.getStateForGuild(tmp);
+        const stateForGuild = GuildPowerupsStore.getStateForGuild(tmp);
         let tmp10;
         if (stateForGuild != null) {
           const unlockedPowerups = stateForGuild.unlockedPowerups;
           if (unlockedPowerups != null) {
-            tmp10 = unlockedPowerups[callback(undefined, closure_1_1[4]).GUILD_POWERUP_GUILD_THEME_SKU_ID];
+            tmp10 = unlockedPowerups[Powerups.GUILD_POWERUP_GUILD_THEME_SKU_ID];
           }
         }
         tmp7 = null != tmp10;

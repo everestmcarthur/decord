@@ -1,19 +1,18 @@
-// Module ID: 12329
-// Function ID: 12330
-// Name: GUILD_TEMPLATE_ICONS
-// Dependencies: [12330, 12331, 12332, 12333, 12334, 12335, 12336, 2]
+// Module ID: 12355
+// Function ID: 12356
+// Name: GuildDirectoryTemplatesIcons
+// Dependencies: [12356, 12357, 12358, 12359, 12360, 12361, 12362, 2]
 
-// Module 12329 (GUILD_TEMPLATE_ICONS)
-import set from "set" /* 2 */;
-import registerAssetDefault from "registerAsset" /* 12330 */;
-import registerAssetDefault2 from "registerAsset" /* 12331 */;
-import registerAssetDefault3 from "registerAsset" /* 12332 */;
-import registerAssetDefault4 from "registerAsset" /* 12333 */;
-import registerAssetDefault5 from "registerAsset" /* 12334 */;
-import registerAssetDefault6 from "registerAsset" /* 12335 */;
-import registerAssetDefault7 from "registerAsset" /* 12336 */;
+// Module 12355 (GuildDirectoryTemplatesIcons)
+import _modDef12356 from "module_12356" /* 12356 */;
+import _modDef12357 from "module_12357" /* 12357 */;
+import _modDef12358 from "module_12358" /* 12358 */;
+import _modDef12359 from "module_12359" /* 12359 */;
+import _modDef12360 from "module_12360" /* 12360 */;
+import _modDef12361 from "module_12361" /* 12361 */;
+import _modDef12362 from "module_12362" /* 12362 */;
+import size from "module_2" /* 2 */;
 
-const obj = { CREATE: registerAssetDefault, HUB_SCHOOL_CLUB: registerAssetDefault2, HUB_STUDY: registerAssetDefault3, HUB_CLASS: registerAssetDefault4, HUB_SOCIAL: registerAssetDefault5, HUB_MAJOR: registerAssetDefault6, HUB_DORM: registerAssetDefault7 };
-const result = set.fileFinishedImporting("modules/directory_channels/native/GuildDirectoryTemplatesIcons.tsx");
+const result = size.fileFinishedImporting("modules/directory_channels/native/GuildDirectoryTemplatesIcons.tsx");
 
-export const GUILD_TEMPLATE_ICONS = obj;
+export const GUILD_TEMPLATE_ICONS = { CREATE: _modDef12356, HUB_SCHOOL_CLUB: _modDef12357, HUB_STUDY: _modDef12358, HUB_CLASS: _modDef12359, HUB_SOCIAL: _modDef12360, HUB_MAJOR: _modDef12361, HUB_DORM: _modDef12362 };

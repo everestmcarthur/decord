@@ -1,45 +1,44 @@
-// Module ID: 16639
-// Function ID: 16640
-// Name: SearchFreezeContainer
-// Dependencies: [19, 17, 12343, 21, 4560, 16525, 504, 16640, 16727, 2]
+// Module ID: 16671
+// Function ID: 16672
+// Name: SearchScreenLayout
+// Dependencies: [19, 17, 12369, 21, 4574, 16556, 504, 16672, 16764, 2]
 
-// Module 16639 (SearchFreezeContainer)
-import jsxDefault from "jsx" /* 16525 */;
-import NoSearchResultsScreenDefault from "NoSearchResultsScreen" /* 16640 */;
-import _modDef16727 from "module_16727" /* 16727 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "prototype" /* 12343 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 16671 (SearchScreenLayout)
+import AppFreezerDefault from "AppFreezer" /* 16556 */;
+import SearchTabsLayoutDefault from "SearchTabsLayout" /* 16672 */;
+import AutocompleteScreenDefault from "AutocompleteScreen" /* 16764 */;
+import noop from "module_19" /* 19 */;
+import SearchQueryStore from "SearchQueryStore" /* 12369 */;
 
-const require = arg1;
+const require = fn;
 function SearchFreezeContainer(visible) {
   visible = visible.visible;
   ({ children, containerStyle } = visible);
-  const tmp = callback3();
-  let obj = { manualFreeze: !visible, placeholder: null, children: null };
-  const items = [containerStyle, ];
-  obj = { style: items, "aria-hidden": !visible, children };
-  items[1] = visible ? tmp.visible : tmp.hidden;
-  obj[2] = closure_5(View, obj);
-  return closure_5(jsxDefault, obj);
+  const tmp = closure_8();
+  const obj = { manualFreeze: !visible, placeholder: null, children: null };
+  const items = [containerStyle, visible ? tmp.visible : tmp.hidden];
+  obj.children = hasOwnProperty(View, { style: items, "aria-hidden": !visible, children });
+  return hasOwnProperty(AppFreezerDefault, obj);
 }
-({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ hidden: { opacity: 0 }, visible: { flex: 1 } });
-const memoResult = importAllResult.memo((width) => {
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let closure_8 = createStyles.createStyles({ hidden: { opacity: 0 }, visible: { flex: 1 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/layout/SearchScreenLayout.tsx");
+
+export default noop.memo((width) => {
   const searchContext = width.searchContext;
   const containerStyle = width.containerStyle;
-  let obj = searchContext(504);
-  const items = [closure_4];
+  const items = [SearchQueryStore];
   const items1 = [searchContext];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.isAutocompleteVisible(searchContext), items1);
-  obj = { children: null };
-  obj = { visible: !stateFromStores, containerStyle, children: callback(NoSearchResultsScreenDefault, { searchContext, width: width.width }) };
-  const items2 = [callback(SearchFreezeContainer, obj), callback(SearchFreezeContainer, { visible: stateFromStores, containerStyle, children: callback(_modDef16727, { searchContext }) })];
-  obj[0] = items2;
-  return callback2(closure_6, obj);
+  const stateFromStores = searchContext(504).useStateFromStores(items, () => SearchQueryStore.isAutocompleteVisible(searchContext), items1);
+  const obj2 = { children: null };
+  const obj = searchContext(504);
+  const items2 = [closure_5(SearchFreezeContainer, { visible: !stateFromStores, containerStyle, children: closure_5(SearchTabsLayoutDefault, { searchContext, width: width.width }) }), ];
+  const obj3 = { visible: !stateFromStores, containerStyle, children: closure_5(SearchTabsLayoutDefault, { searchContext, width: width.width }) };
+  items2[1] = closure_5(SearchFreezeContainer, { visible: stateFromStores, containerStyle, children: closure_5(AutocompleteScreenDefault, { searchContext }) });
+  obj2.children = items2;
+  return closure_7(closure_6, obj2);
 });
-const result = require("set").fileFinishedImporting("modules/search/native/components/layout/SearchScreenLayout.tsx");
-
-export default memoResult;

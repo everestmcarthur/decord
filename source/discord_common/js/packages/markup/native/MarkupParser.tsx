@@ -1,14 +1,14 @@
-// Module ID: 7988
-// Function ID: 7989
-// Name: saferParse
-// Dependencies: [7989, 4257, 2]
+// Module ID: 8002
+// Function ID: 8003
+// Name: markup/MarkupParser
+// Dependencies: [8003, 4270, 2]
 
-// Module 7988 (saferParse)
-import set from "set" /* 2 */;
-import tDefault from "t" /* 4257 */;
-import collectAst from "collectAst" /* 7989 */;
+// Module 8002 (markup/MarkupParser)
+import _modDef4270 from "module_4270" /* 4270 */;
+import MarkupASTUtils from "MarkupASTUtils" /* 8003 */;
+import size from "module_2" /* 2 */;
 
-function saferParse(arg0, arg1, inline) {
+function saferParse(fn, arg1, inline, arg3, arg4) {
   let text = arg1;
   let tmp6 = arg3;
   if (arg3 === undefined) {
@@ -20,11 +20,9 @@ function saferParse(arg0, arg1, inline) {
 
   `;
     }
-    const tmp8 = arg0(text, inline);
-    const flattenAstResult = collectAst.flattenAst(inline, tmp8);
-    const obj = collectAst;
-    const obj2 = collectAst;
-    ({ hasBailedAst, ast } = collectAst.constrainAst(flattenAstResult));
+    const tmp8 = fn(text, inline);
+    const flattenAstResult = MarkupASTUtils.flattenAst(inline, tmp8);
+    ({ hasBailedAst, ast } = MarkupASTUtils.constrainAst(flattenAstResult));
     if (tmp6) {
       ast = tmp6(ast, inline.inline, hasBailedAst);
     }
@@ -38,11 +36,11 @@ function saferParse(arg0, arg1, inline) {
     hasBailedAst = false;
   }
 }
-const result = set.fileFinishedImporting("../discord_common/js/packages/markup/native/MarkupParser.tsx");
+let result = size.fileFinishedImporting("../discord_common/js/packages/markup/native/MarkupParser.tsx");
 
 export default {
   astParserFor(importDefaultResultResult) {
-    closure_0 = tDefault.parserFor(importDefaultResultResult);
+    closure_0 = _modDef4270.parserFor(importDefaultResultResult);
     return (arg0, inline) => {
       let str = arg0;
       if (arg0 === undefined) {
@@ -56,16 +54,23 @@ export default {
       if (arg3 === undefined) {
         tmp = null;
       }
-      obj = { inline };
       const merged = Object.assign(obj);
-      return closure_1_3(closure_0, str, obj, tmp, !inline);
+      const tmp3 = saferParse(closure_0, str, { inline }, tmp, !inline);
+      let result = tmp3;
+      if (!obj.formatInline) {
+        const _Array = Array;
+        result = tmp3;
+        if (Array.isArray(tmp3)) {
+          result = MarkupASTUtils.reinsertConsumedListSeparators(tmp3);
+        }
+      }
+      return result;
     };
   },
   reactParserFor(importDefaultResultResult) {
-    closure_0 = tDefault.parserFor(importDefaultResultResult);
-    let obj = tDefault;
-    const obj2 = tDefault;
-    importDefault = obj2.reactFor(tDefault.ruleOutput(importDefaultResultResult, "react"));
+    closure_0 = _modDef4270.parserFor(importDefaultResultResult);
+    let obj2 = _modDef4270;
+    importDefault = obj2.reactFor(_modDef4270.ruleOutput(importDefaultResultResult, "react"));
     return () => {
       let str = arg0;
       if (arg0 === undefined) {
@@ -84,12 +89,11 @@ export default {
         tmp = null;
       }
       if (str.trim()) {
-        obj = { inline: null };
-        obj[0] = flag;
+        const obj2 = { inline: flag };
         const merged = Object.assign(obj);
         return ((arg0, arg1) => {
           try {
-            return callback(arg0, arg1);
+            return closure_1_1(arg0, arg1);
           } catch (tmp4) {
             const message = tmp4.message;
             let hasItem;
@@ -97,13 +101,13 @@ export default {
               hasItem = message.includes("Cannot convert undefined");
             }
             if (hasItem) {
-              const markupParserNodeTypeError = new closure_1_0(closure_1_2[0]).MarkupParserNodeTypeError(tmp);
+              const markupParserNodeTypeError = new closure_0(dependencyMap[0]).MarkupParserNodeTypeError(tmp);
               throw markupParserNodeTypeError;
             } else {
               throw tmp4;
             }
           }
-        })(closure_1_3(closure_0, str, obj, tmp, !flag), obj);
+        })(saferParse(closure_0, str, obj2, tmp, !flag), obj2);
       } else {
         return null;
       }

@@ -1,14 +1,16 @@
-// Module ID: 17161
-// Function ID: 17162
-// Name: getUnitId
+// Module ID: 17192
+// Function ID: 17193
+// Name: GameTagOnVoiceTileExperiment
 // Dependencies: [1434, 2]
 
-// Module 17161 (getUnitId)
-import getUnitIdDefault from "getUnitId" /* 1434 */;
+// Module 17192 (GameTagOnVoiceTileExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
 
-const obj = { 1: null };
-obj[1] = { showGameTag: true };
-const tmp2 = getUnitIdDefault({ kind: "user", name: "2026-08-game-tag-on-mobile-voice-call-tiles", defaultConfig: { showGameTag: false }, variations: obj });
-const result = require("set").fileFinishedImporting("modules/game_profile/GameTagOnVoiceTileExperiment.tsx");
+const obj = { kind: "user", name: "2026-08-game-tag-on-mobile-voice-call-tiles", defaultConfig: { showGameTag: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { showGameTag: true };
+obj.variations = obj2;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_profile/GameTagOnVoiceTileExperiment.tsx");
 
-export default tmp2;
+export default apex_ApexExperimentDefault(obj);

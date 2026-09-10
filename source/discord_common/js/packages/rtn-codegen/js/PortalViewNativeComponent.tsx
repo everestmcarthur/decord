@@ -1,19 +1,18 @@
-// Module ID: 8268
-// Function ID: 8269
-// Name: __INTERNAL_VIEW_CONFIG
+// Module ID: 8297
+// Function ID: 8298
+// Name: PortalViewNativeComponent
 // Dependencies: [106, 65, 2]
 
-// Module 8268 (__INTERNAL_VIEW_CONFIG)
-import set from "set" /* 2 */;
+// Module 8297 (PortalViewNativeComponent)
 import weakSet from "weakSet" /* 106 */;
-import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
+import module_65 from "module_65" /* 65 */;
+import size from "module_2" /* 2 */;
 
-let obj = { uiViewClassName: "DCDPortalView", directEventTypes: { topPortalViewLoaded: { registrationName: "onPortalViewLoaded" } }, validAttributes: null };
-obj = { portal: true };
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "DCDPortalView", directEventTypes: { topPortalViewLoaded: { registrationName: "onPortalViewLoaded" } }, validAttributes: null };
 const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onPortalViewLoaded: true }));
-obj[2] = obj;
-const value = setRuntimeConfigProvider.get("DCDPortalView", () => obj);
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/PortalViewNativeComponent.tsx");
+__INTERNAL_VIEW_CONFIG.validAttributes = { portal: true };
+const value = module_65.get("DCDPortalView", () => obj);
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/PortalViewNativeComponent.tsx");
 
 export default value;
-export const __INTERNAL_VIEW_CONFIG = obj;
+export { __INTERNAL_VIEW_CONFIG };

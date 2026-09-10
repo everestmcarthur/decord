@@ -1,19 +1,19 @@
-// Module ID: 14757
-// Function ID: 14758
+// Module ID: 14783
+// Function ID: 14784
 // Name: handleOpenAgeGatedContentSupportArticle
-// Dependencies: [14686, 8411, 2024, 2]
+// Dependencies: [14712, 8439, 2024, 2]
 // Exports: handleOpenAgeGatedContentSupportArticle
 
-// Module 14757 (handleOpenAgeGatedContentSupportArticle)
-import set from "set" /* 2 */;
-import combinedDefault from "combined" /* 2024 */;
-import openIncodeAgeVerificationModalDefault from "openIncodeAgeVerificationModal" /* 8411 */;
-import TINY_BRONCO_BLOG_URL from "TINY_BRONCO_BLOG_URL" /* 14686 */;
+// Module 14783 (handleOpenAgeGatedContentSupportArticle)
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8439 */;
+import TinyBroncoConstants from "TinyBroncoConstants" /* 14712 */;
+import size from "module_2" /* 2 */;
 
-let closure_2 = TINY_BRONCO_BLOG_URL.TINY_BRONCO_SUPPORT_ARTICLE_ID;
-const result = set.fileFinishedImporting("modules/tiny_bronco/handleOpenAgeGatedContentSupportArticle.tsx");
+let closure_2 = TinyBroncoConstants.TINY_BRONCO_SUPPORT_ARTICLE_ID;
+const result = size.fileFinishedImporting("modules/tiny_bronco/handleOpenAgeGatedContentSupportArticle.tsx");
 
 export const handleOpenAgeGatedContentSupportArticle = function handleOpenAgeGatedContentSupportArticle() {
-  const obj = openIncodeAgeVerificationModalDefault;
-  obj.openUrl(combinedDefault.getArticleURL(closure_2));
+  const obj = AgeVerificationActionCreatorsDefault;
+  obj.openUrl(HelpdeskUtilsDefault.getArticleURL(closure_2));
 };

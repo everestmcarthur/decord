@@ -1,13 +1,13 @@
-// Module ID: 7782
-// Function ID: 7783
+// Module ID: 7796
+// Function ID: 7797
 // Name: convertServerThreadMember
 // Dependencies: [2]
 // Exports: default
 
-// Module 7782 (convertServerThreadMember)
-import set from "set" /* 2 */;
+// Module 7796 (convertServerThreadMember)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/threads/convertServerThreadMember.tsx");
+const result = size.fileFinishedImporting("modules/threads/convertServerThreadMember.tsx");
 
 export default function convertServerThreadMember(id) {
   return { id: id.id, userId: id.user_id, flags: id.flags, muted: id.muted, muteConfig: id.mute_config, joinTimestamp: id.join_timestamp };

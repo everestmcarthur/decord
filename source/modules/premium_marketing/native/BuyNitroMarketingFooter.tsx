@@ -1,44 +1,43 @@
-// Module ID: 13412
-// Function ID: 13413
+// Module ID: 13435
+// Function ID: 13436
 // Name: BuyNitroMarketingFooter
-// Dependencies: [17, 21, 4560, 576, 6655, 13391, 7182, 2]
+// Dependencies: [17, 21, 4574, 576, 6669, 13414, 7196, 2]
 // Exports: default
 
-// Module 13412 (BuyNitroMarketingFooter)
-import set from "set" /* 2 */;
+// Module 13435 (BuyNitroMarketingFooter)
 import jsxProd from "jsxProd" /* 21 */;
-import ThemesDefault from "Themes" /* 576 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7182 */;
-import BuyNitroPurchaseButtonDefault from "BuyNitroPurchaseButton" /* 13391 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6669 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
+import BuyNitroPurchaseButtonDefault from "BuyNitroPurchaseButton" /* 13414 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
+import createStyles from "createStyles" /* 4574 */;
+import size from "module_2" /* 2 */;
 
 ({ Platform, View: c3 } = get_ActivityIndicator);
 const jsx = jsxProd.jsx;
 let obj = { footer: null };
-obj = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_12, paddingBottom: 0, backgroundColor: null, borderTopColor: null, borderTopWidth: 1 };
-const PX_24 = ThemesDefault.space.PX_24;
-obj[3] = ThemesDefault.colors.BACKGROUND_BASE_LOWER;
-obj[4] = ThemesDefault.colors.BORDER_SUBTLE;
-obj[0] = obj;
-let closure_5 = createCacheKey.createStyles(obj);
-const result = set.fileFinishedImporting("modules/premium_marketing/native/BuyNitroMarketingFooter.tsx");
+let obj2 = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12, paddingBottom: 0, backgroundColor: null, borderTopColor: null, borderTopWidth: 1 };
+const PX_24 = nativeDefault.space.PX_24;
+obj2.backgroundColor = nativeDefault.colors.BACKGROUND_BASE_LOWER;
+obj2.borderTopColor = nativeDefault.colors.BORDER_SUBTLE;
+obj.footer = obj2;
+let closure_5 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/premium_marketing/native/BuyNitroMarketingFooter.tsx");
 
 export default function BuyNitroMarketingFooter(arg0) {
   ({ planSelection, applicationId, onPaymentSuccess, onPaymentDismiss } = arg0);
-  let obj = LegacyBaseButton;
-  const panGesture = obj.usePanGesture({ activeOffsetY: [-8, 8] });
-  obj = { gesture: panGesture, children: null };
-  obj = { style: callback().footer, collapsable: false, children: null };
-  obj1 = { location: null, planSelection: null, applicationId: null, onPaymentSuccess: null, onPaymentDismiss: null };
-  const tmp = callback();
-  obj1[0] = QUICK_SWITCHERDefault.PREMIUM_MARKETING_FOOTER;
-  obj1[1] = planSelection;
-  obj1[2] = applicationId;
-  obj1[3] = onPaymentSuccess;
-  obj1[4] = onPaymentDismiss;
-  obj[2] = jsx(BuyNitroPurchaseButtonDefault, { location: null, planSelection: null, applicationId: null, onPaymentSuccess: null, onPaymentDismiss: null });
-  obj[1] = <closure_3 style={callback().footer} collapsable={false}>{null}</closure_3>;
-  return jsx(LegacyBaseButton.GestureDetector, { style: callback().footer, collapsable: false, children: null });
+  const tmp = closure_5();
+  const panGesture = LegacyBaseButton.usePanGesture({ activeOffsetY: [-8, 8] });
+  const obj2 = { gesture: panGesture, children: null };
+  const obj3 = { style: tmp.footer, collapsable: false, children: null };
+  const obj4 = { location: null, planSelection: null, applicationId: null, onPaymentSuccess: null, onPaymentDismiss: null };
+  obj4.location = AnalyticsLocationDefault.PREMIUM_MARKETING_FOOTER;
+  obj4.planSelection = planSelection;
+  obj4.applicationId = applicationId;
+  obj4.onPaymentSuccess = onPaymentSuccess;
+  obj4.onPaymentDismiss = onPaymentDismiss;
+  obj3.children = jsx(BuyNitroPurchaseButtonDefault, { location: null, planSelection: null, applicationId: null, onPaymentSuccess: null, onPaymentDismiss: null });
+  obj2.children = <React3 style={tmp.footer} collapsable={false}>{null}</React3>;
+  return jsx(LegacyBaseButton.GestureDetector, { gesture: panGesture, children: null });
 };

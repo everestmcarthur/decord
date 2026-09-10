@@ -1,85 +1,42 @@
-// Module ID: 8406
-// Function ID: 8407
-// Name: _startStageInstance
+// Module ID: 8434
+// Function ID: 8435
+// Name: StageInstanceActionCreators
 // Dependencies: [5, 1074, 1272, 2]
 // Exports: endStageInstance, startStageInstance, updateStageInstance
 
-// Module 8406 (_startStageInstance)
-import sendRequest from "sendRequest" /* 1272 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 1074 */;
+// Module 8434 (StageInstanceActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-require = arg1;
-function _startStageInstance() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2, arg3, arg4) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    closure_3 = arg3;
-    closure_4 = arg4;
-    c6 = 0;
-    c5 = 0;
-    return (function*(arg0, body) {
-      const HTTP = callback(1272).HTTP;
-      obj1 = { url: null, body: null, rejectWithError: null };
-      obj1[0] = constants.STAGE_INSTANCES;
-      const obj2 = { channel_id: null, topic: null, privacy_level: null, guild_scheduled_event_id: null, send_start_notification: null };
-      obj2[0] = callback;
-      obj2[1] = dependencyMap;
-      obj2[2] = closure_2;
-      obj2[3] = closure_4;
-      obj2[4] = constants;
-      obj1[1] = obj2;
-      obj1[2] = callback(1272).rejectWithMigratedError();
-      yield HTTP.post(obj1);
-      return body.body;
-    })();
-  });
-  closure_4 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _updateStageInstance() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c4 = 0;
-    c3 = 0;
-    return (function*(arg0, body) {
-      const HTTP = callback(1272).HTTP;
-      obj1 = { url: null, body: null, rejectWithError: null };
-      obj1[0] = c3.STAGE_INSTANCE(callback);
-      const obj2 = { topic: null, privacy_level: null };
-      obj2[0] = dependencyMap;
-      obj2[1] = closure_2;
-      obj1[1] = obj2;
-      obj1[2] = callback(1272).rejectWithMigratedError();
-      yield HTTP.patch(obj1);
-      return body.body;
-    })();
-  });
-  closure_5 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-const result = require("set").fileFinishedImporting("modules/stage_channels/StageInstanceActionCreators.tsx");
+require = fn;
+let closure_4 = async function _startStageInstance(channel_id, topic, privacy_level, send_start_notification, guild_scheduled_event_id) {
+  c6 = 0;
+  c5 = 0;
+  return (async (arg0, value, arg2, arg3, arg4) => {
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: constants.STAGE_INSTANCES, body: { channel_id, topic, privacy_level, guild_scheduled_event_id, send_start_notification }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    await HTTP.post(request);
+    return value.body;
+  })();
+};
+let closure_5 = async function _updateStageInstance(arg0, topic, privacy_level) {
+  closure_0 = arg0;
+  c4 = 0;
+  c3 = 0;
+  return (async (arg0, value, arg2) => {
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: Endpoints.STAGE_INSTANCE(closure_0), body: { topic, privacy_level }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    await HTTP.patch(request);
+    return value.body;
+  })();
+};
+const Endpoints = fn(1074).Endpoints;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/StageInstanceActionCreators.tsx");
 
-export const startStageInstance = function startStageInstance(channel_id, c4, GUILD_ONLY, flag, c5) {
+export const startStageInstance = function startStageInstance() {
   const self = this;
-  const apply = _startStageInstance.apply;
+  const apply = closure_4.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -87,9 +44,9 @@ export const startStageInstance = function startStageInstance(channel_id, c4, GU
   }
   return applyArgumentsResult;
 };
-export const updateStageInstance = function updateStageInstance(id, arg1, arg2) {
+export const updateStageInstance = function updateStageInstance() {
   const self = this;
-  const apply = _updateStageInstance.apply;
+  const apply = closure_5.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -98,7 +55,7 @@ export const updateStageInstance = function updateStageInstance(id, arg1, arg2) 
   return applyArgumentsResult;
 };
 export const endStageInstance = function endStageInstance(id) {
-  const HTTP = sendRequest.HTTP;
-  const obj = { url: Endpoints.STAGE_INSTANCE(id), rejectWithError: sendRequest.rejectWithMigratedError() };
+  const HTTP = HTTPUtils.HTTP;
+  const obj = { url: Endpoints.STAGE_INSTANCE(id), rejectWithError: HTTPUtils.rejectWithMigratedError() };
   return HTTP.del(obj);
 };

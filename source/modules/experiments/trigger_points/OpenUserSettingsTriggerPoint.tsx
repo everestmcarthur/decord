@@ -1,14 +1,14 @@
-// Module ID: 16907
-// Function ID: 16908
-// Name: commonTriggerPointConfiguration
-// Dependencies: [4477, 10814, 2]
+// Module ID: 16944
+// Function ID: 16945
+// Name: OpenUserSettingsTriggerPoint
+// Dependencies: [4491, 10841, 2]
 
-// Module 16907 (commonTriggerPointConfiguration)
-import set from "set" /* 2 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4477 */;
-import registeredExperimentIds from "registeredExperimentIds" /* 10814 */;
+// Module 16944 (OpenUserSettingsTriggerPoint)
+import ExperimentConstants from "ExperimentConstants" /* 4491 */;
+import Helpers from "Helpers" /* 10841 */;
+import size from "module_2" /* 2 */;
 
-const commonTriggerPointConfiguration = new registeredExperimentIds.CommonTriggerPointConfiguration([], ExperimentBuckets.CommonTriggerPoints.OPEN_USER_SETTINGS, { location: "open user settings" });
-const result = set.fileFinishedImporting("modules/experiments/trigger_points/OpenUserSettingsTriggerPoint.tsx");
+const commonTriggerPointConfiguration = new Helpers.CommonTriggerPointConfiguration([], ExperimentConstants.CommonTriggerPoints.OPEN_USER_SETTINGS, { location: "open user settings" });
+const result = size.fileFinishedImporting("modules/experiments/trigger_points/OpenUserSettingsTriggerPoint.tsx");
 
 export const OpenUserSettingsTriggerPoint = commonTriggerPointConfiguration;

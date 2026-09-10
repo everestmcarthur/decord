@@ -2,6 +2,7 @@
 // Function ID: 790
 // Name: resolve
 // Dependencies: []
+// Exports: basename, dirname, isAbsolute, join, relative
 
 // Module 789 (resolve)
 function resolve() {
@@ -14,9 +15,7 @@ function resolve() {
   let str2 = "";
   if (-1 <= diff) {
     while (true) {
-      let tmp2 = diff;
       let tmp3 = flag;
-      let tmp4 = str;
       let str3 = "/";
       if (0 <= diff) {
         str3 = items[diff];
@@ -49,15 +48,13 @@ function resolve() {
     str4 = "/";
   }
   const parts = str2.split("/");
-  const found = parts.filter((arg0) => arg0);
+  const found = parts.filter((item) => item);
   let diff2 = found.length - 1;
   let num = 0;
   let num2 = 0;
   if (0 <= diff2) {
     do {
       let tmp8 = found[diff2];
-      let tmp9 = diff2;
-      let tmp10 = num;
       if ("." === tmp8) {
         let spliceResult = found.splice(diff2, 1);
         let sum = num;
@@ -92,15 +89,13 @@ function normalizePath(str) {
   let tmp14;
   const substr = str.slice(-1);
   const parts = str.split("/");
-  const found = parts.filter((arg0) => arg0);
+  const found = parts.filter((item) => item);
   let diff = found.length - 1;
   let num = 0;
   let num2 = 0;
   if (0 <= diff) {
     do {
       let tmp4 = found[diff];
-      let tmp5 = diff;
-      let tmp6 = num;
       if ("." === tmp4) {
         let spliceResult = found.splice(diff, 1);
         let sum = num;
@@ -154,13 +149,14 @@ function normalizePath(str) {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const re0 = /^(\S+:\\|\/?)([\s\S]*?)((?:\.{1,2}|[^/\\]+?|)(\.[^./\\]*|))(?:[/\\]*)$/;
-arg5.basename = function basename(arr) {
+
+export const basename = function basename(arr, arg1) {
   let combined = arr;
   if (arr.length > 1024) {
     const _HermesInternal = HermesInternal;
     combined = "<truncated>" + arr.slice(-1024);
   }
-  const match = regex.exec(combined);
+  const match = re0.exec(combined);
   if (match) {
     let substr = match.slice(1);
   } else {
@@ -176,13 +172,13 @@ arg5.basename = function basename(arr) {
   }
   return substr1;
 };
-arg5.dirname = function dirname(arr) {
+export const dirname = function dirname(arr) {
   let combined = arr;
   if (arr.length > 1024) {
     const _HermesInternal = HermesInternal;
     combined = "<truncated>" + arr.slice(-1024);
   }
-  const match = regex.exec(combined);
+  const match = re0.exec(combined);
   if (match) {
     let substr = match.slice(1);
   } else {
@@ -199,18 +195,18 @@ arg5.dirname = function dirname(arr) {
   }
   return str2;
 };
-arg5.isAbsolute = function isAbsolute(str) {
+export const isAbsolute = function isAbsolute(str) {
   return "/" === str.charAt(0);
 };
-arg5.join = function join() {
+export const join = function join() {
   const items = [...arguments];
   return normalizePath(items.join("/"));
 };
-arg5.normalizePath = normalizePath;
-arg5.relative = function relative(arg0, arg1) {
+export { normalizePath };
+export const relative = function relative(arg0, arg1) {
   let length;
-  let arr = resolve(arg0);
-  const str = arr.slice(1);
+  const arr = resolve(arg0);
+  const str = resolve(arg0).slice(1);
   const arr2 = resolve(arg1);
   const parts = str.split("/");
   let num = 0;
@@ -307,7 +303,7 @@ arg5.relative = function relative(arg0, arg1) {
   let sum2 = tmp12;
   if (tmp12 < items.length) {
     do {
-      arr = items2.push("..");
+      let arr3 = items2.push("..");
       sum2 = sum2 + 1;
       length = items.length;
     } while (sum2 < length);
@@ -315,4 +311,4 @@ arg5.relative = function relative(arg0, arg1) {
   const combined = items2.concat(items1.slice(tmp12));
   return combined.join("/");
 };
-arg5.resolve = resolve;
+export { resolve };

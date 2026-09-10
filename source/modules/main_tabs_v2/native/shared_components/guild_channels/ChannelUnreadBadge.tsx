@@ -1,30 +1,33 @@
-// Module ID: 16036
-// Function ID: 16037
-// Dependencies: [19, 17, 10123, 4742, 21, 4560, 10126, 4982, 7869, 2]
+// Module ID: 16066
+// Function ID: 16067
+// Name: ChannelUnreadBadge
+// Dependencies: [19, 17, 10150, 4756, 21, 4574, 10153, 4996, 7883, 2]
 
-// Module 16036
-import getFontScale from "getFontScale" /* 4982 */;
-import DEFAULT_BADGE_SIZEDefault from "DEFAULT_BADGE_SIZE" /* 7869 */;
-import getLayoutStyles from "getLayoutStyles" /* 10126 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 10123 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4742 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 16066 (ChannelUnreadBadge)
+import useFontScale from "useFontScale" /* 4996 */;
+import BadgeDefault from "Badge" /* 7883 */;
+import ChannelListLayout from "ChannelListLayout" /* 10153 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let closure_7 = createCacheKey.createStyles({ unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" }, unreadBadgePanel: { marginLeft: -16 } });
-const memoResult = importAllResult.memo(function ChannelUnreadBadge(panelVariant) {
+require = fn;
+const View = fn(17).View;
+const MUTED_OPACITY_CONTENT = fn(10150).MUTED_OPACITY_CONTENT;
+const UnreadSetting = fn(4756).UnreadSetting;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_7 = createStyles.createStyles({ unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" }, unreadBadgePanel: { marginLeft: -16 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelUnreadBadge.tsx");
+
+export default noop.memo(function ChannelUnreadBadge(panelVariant) {
   let flag = panelVariant.panelVariant;
   ({ unread, resolvedUnreadSetting, muted, isThread, layout, launchpad } = panelVariant);
   if (flag === undefined) {
     flag = false;
   }
-  const tmp = callback();
-  let obj = getLayoutStyles;
-  const layoutStyles = obj.getLayoutStyles(layout, launchpad);
-  getFontScale;
+  const tmp = closure_7();
+  const layoutStyles = ChannelListLayout.getLayoutStyles(layout, launchpad);
+  useFontScale;
   let tmp8Result = null;
   if (unread) {
     const items = [tmp.unreadBadge, , , ];
@@ -34,31 +37,25 @@ const memoResult = importAllResult.memo(function ChannelUnreadBadge(panelVariant
     }
     items[1] = unreadBadgePanel;
     const unreadBadge = layoutStyles.unreadBadge;
-    obj = { style: null, children: null };
+    const obj2 = { style: null, children: null };
     items[2] = isThread ? unreadBadge.positionThread : unreadBadge.position;
-    items[3] = tmp2(10126).makeSizeStyle(layoutStyles.unreadBadge.size);
-    obj[0] = items;
-    obj = { classic: null, size: null, badgeStyle: null };
-    obj[0] = flag;
-    const tmp2Result = tmp2(10126);
+    items[3] = tmp2(10153).makeSizeStyle(layoutStyles.unreadBadge.size);
+    obj2.style = items;
+    const obj3 = { classic: flag, size: null, badgeStyle: null };
+    const tmp2Result = tmp2(10153);
     const tmp9 = View;
     const _Math = Math;
-    obj[1] = tmp2(7869).CHANNEL_BADGE_SIZE * Math.max(tmp6, 1);
+    obj3.size = tmp2(7883).CHANNEL_BADGE_SIZE * Math.max(tmp6, 1);
     if (resolvedUnreadSetting !== UnreadSetting.ALL_MESSAGES) {
       let num2 = MUTED_OPACITY_CONTENT;
     } else {
       num2 = 1;
     }
-    obj1 = { opacity: null };
-    obj1[0] = num2;
-    const items1 = [obj1];
-    obj[2] = items1;
-    obj[1] = jsx(DEFAULT_BADGE_SIZEDefault, { classic: null, size: null, badgeStyle: null });
-    tmp8Result = tmp8(tmp9, obj);
-    const tmp12 = DEFAULT_BADGE_SIZEDefault;
+    const obj4 = { opacity: num2 };
+    const items1 = [obj4];
+    obj3.badgeStyle = items1;
+    obj2.children = jsx(BadgeDefault, { classic: flag, size: null, badgeStyle: null });
+    tmp8Result = tmp8(tmp9, obj2);
   }
   return tmp8Result;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelUnreadBadge.tsx");
-
-export default memoResult;

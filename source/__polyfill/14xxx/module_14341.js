@@ -1,22 +1,26 @@
 // Module ID: 14341
 // Function ID: 14342
-// Dependencies: [14307, 14328, 14342, 14352, 14353]
+// Dependencies: [14325, 14326, 14342]
 
 // Module 14341
-import call from "call" /* 14307 */;
-import all from "all" /* 14328 */;
-import f2 from "f" /* 14342 */;
-import all2 from "all" /* 14352 */;
-import _mod14353 from "module_14353" /* 14353 */;
+import _mod14325 from "module_14325" /* 14325 */;
+import _mod14326 from "module_14326" /* 14326 */;
+import _mod14342 from "module_14342" /* 14342 */;
 
-let closure_2 = call([].concat);
+let prop = _mod14325["__core-js_shared__"];
+if (!prop) {
+  prop = _mod14326("__core-js_shared__", {});
+}
+let versions = prop.versions;
+if (!versions) {
+  const items = [];
+  prop.versions = items;
+  versions = items;
+}
+let str2 = "global";
+if (_mod14342) {
+  str2 = "pure";
+}
+versions.push({ version: "3.41.0", mode: str2, copyright: "\u00A9 2014-2025 Denis Pushkarev (zloirock.ru)", license: "https://github.com/zloirock/core-js/blob/v3.41.0/LICENSE", source: "https://github.com/zloirock/core-js" });
 
-export default all("Reflect", "ownKeys") || (function ownKeys(arg0) {
-  const fResult = f2.f(all2(arg0));
-  const f = _mod14353.f;
-  let tmp2 = fResult;
-  if (f) {
-    tmp2 = callback(fResult, f(arg0));
-  }
-  return tmp2;
-});
+export default prop;

@@ -1,56 +1,51 @@
-// Module ID: 8615
-// Function ID: 8616
+// Module ID: 8643
+// Function ID: 8644
 // Name: FormSliderRow
-// Dependencies: [19, 17, 21, 4560, 5686, 5607, 4556, 8278, 7137, 2]
+// Dependencies: [19, 17, 21, 4574, 5700, 5621, 4570, 8306, 7151, 2]
 // Exports: default
 
-// Module 8615 (FormSliderRow)
-import context2 from "context" /* 5686 */;
-import _modDef7137 from "module_7137" /* 7137 */;
-import _modDef8278 from "module_8278" /* 8278 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 8643 (FormSliderRow)
+import RedesignCompat from "RedesignCompat" /* 5700 */;
+import FormRowDefault from "FormRow" /* 7151 */;
+import _modDef8306 from "module_8306" /* 8306 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ labels: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, slider: { marginStart: -4, marginTop: 8 } });
-const result = require("set").fileFinishedImporting("design/void/Form/native/FormSliderRow.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let closure_8 = createStyles.createStyles({ labels: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, slider: { marginStart: -4, marginTop: 8 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/Form/native/FormSliderRow.tsx");
 
 export default function FormSliderRow(arg0) {
   ({ label, trailing } = arg0);
-  const merged = Object.assign(arg0, Object.create(null));
-  const context = React.useContext(context2.RedesignCompatContext);
-  const tmp5 = callback2();
+  const merged = Object.assign(arg0, Object.assign({ label: 0, trailing: 0 }));
+  const context = noop.useContext(RedesignCompat.RedesignCompatContext);
+  const tmp5 = closure_8();
   if (context) {
-    let obj = { children: null };
-    obj = { style: null, children: null };
-    obj[0] = tmp5.labels;
-    obj1 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-    obj1[2] = label;
-    const items = [callback(tmp2(4556).Text, obj1), trailing];
-    obj[1] = items;
-    const items1 = [tmp6(View, obj), ];
-    const obj2 = {};
+    const obj2 = { children: null };
+    const obj3 = { style: tmp5.labels, children: null };
+    const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: label };
+    const items = [hasOwnProperty(tmp2(4570).Text, obj4), trailing];
+    obj3.children = items;
+    const items1 = [tmp6(View, obj3), ];
+    const obj5 = {};
     const merged1 = Object.assign(merged);
-    obj2.style = tmp5.slider;
-    items1[1] = callback(_modDef8278, obj2);
-    obj[0] = items1;
-    let tmp6Result = tmp6(tmp2(5607).Card, obj);
-    const tmp18 = _modDef8278;
+    obj5.style = tmp5.slider;
+    items1[1] = hasOwnProperty(_modDef8306, obj5);
+    obj2.children = items1;
+    let tmp6Result = tmp6(tmp2(5621).Card, obj2);
   } else {
-    obj = { children: null };
-    const obj3 = { label: null, trailing: null };
-    obj3[0] = label;
-    obj3[1] = trailing;
-    const items2 = [callback(_modDef7137, obj3), ];
-    const obj4 = {};
+    const obj = { children: null };
+    const obj6 = { label, trailing };
+    const items2 = [hasOwnProperty(FormRowDefault, obj6), ];
+    const obj7 = {};
     const merged2 = Object.assign(merged);
-    items2[1] = callback(_modDef8278, obj4);
-    obj[0] = items2;
-    tmp6Result = tmp6(closure_7, obj);
-    const tmp10 = _modDef8278;
+    items2[1] = hasOwnProperty(_modDef8306, obj7);
+    obj.children = items2;
+    tmp6Result = tmp6(React5, obj);
   }
   return tmp6Result;
 };

@@ -1,25 +1,25 @@
-// Module ID: 8757
-// Function ID: 8758
-// Name: toAnnouncementMessages
-// Dependencies: [4210, 1894, 4791, 4710, 8758, 4783, 8759, 1114, 1365, 2]
+// Module ID: 8785
+// Function ID: 8786
+// Name: AnnouncementMessageUtils
+// Dependencies: [4223, 1894, 4805, 4724, 8786, 4797, 8787, 1114, 1365, 2]
 // Exports: getPollExpiryLabel, getPosterUrl, toAnnouncementMessages
 
-// Module 8757 (toAnnouncementMessages)
-import set from "set" /* 2 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1365 */;
-import hasFlag from "hasFlag" /* 4210 */;
-import formatExpirationLabel from "formatExpirationLabel" /* 8759 */;
+// Module 8785 (AnnouncementMessageUtils)
+import URLUtilsDefault from "URLUtils" /* 1365 */;
+import MessageRecord from "MessageRecord" /* 4223 */;
+import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 8787 */;
+import size from "module_2" /* 2 */;
 
-const isMessageComponentsV2 = hasFlag.isMessageComponentsV2;
+const isMessageComponentsV2 = MessageRecord.isMessageComponentsV2;
 const re4 = /^#{1,3}\s+(.+)$/;
 const re5 = /^https?:\/\/\S+$/;
-let result = set.fileFinishedImporting("modules/game_profile/AnnouncementMessageUtils.tsx");
+let result = size.fileFinishedImporting("modules/game_profile/AnnouncementMessageUtils.tsx");
 
 export const toAnnouncementMessages = function toAnnouncementMessages(messages) {
   return messages.map((reactions) => {
-    let obj = found4(found6[5]);
-    const tmp2Result = found5(found6[4])(obj.createMessageRecord(reactions));
-    if (callback(tmp2Result)) {
+    const tmp2 = found5(found6[4]);
+    const tmp2Result = tmp2(found4(found6[5]).createMessageRecord(reactions));
+    if (closure_3(tmp2Result)) {
       const components = tmp2Result.components;
       const found = components.filter((type) => type.type === found4(found6[1]).ComponentType.TEXT_DISPLAY);
       const mapped = found.map((content) => content.content);
@@ -52,7 +52,7 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
         joined = content;
       }
     }
-    if (callback(tmp2Result)) {
+    if (closure_3(tmp2Result)) {
       const components1 = tmp2Result.components;
       const found1 = components1.find((type) => type.type === found4(found6[1]).ComponentType.MEDIA_GALLERY);
       let media;
@@ -63,16 +63,14 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
         }
       }
       if (null != media) {
-        let tmp3Result = tmp3(tmp[2]);
-        const unfurledMediaItemType = tmp3Result.getUnfurledMediaItemType(media);
+        const unfurledMediaItemType = tmp3(tmp[2]).getUnfurledMediaItemType(media);
         if ("INVALID" !== unfurledMediaItemType) {
-          obj = {};
+          const obj2 = {};
           const merged = Object.assign(media);
-          obj.type = unfurledMediaItemType;
-          obj = { message: null };
-          obj[0] = tmp2Result;
-          obj.sourceMetadata = obj;
-          let result = obj;
+          obj2.type = unfurledMediaItemType;
+          const obj3 = { message: tmp2Result };
+          obj2.sourceMetadata = obj3;
+          let result = obj2;
         }
         const index = joined.indexOf("\n");
         let str9 = joined;
@@ -81,25 +79,22 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
         }
         const match = str9.match(closure_4);
         if (null != match) {
-          obj1 = { title: null, body: null };
-          obj1[0] = match[1].trim();
+          const obj4 = { title: match[1].trim(), body: null };
           let str11 = "";
           if (!tmp28) {
             const substr = joined.slice(index + 1);
             str11 = substr.trimStart();
           }
-          obj1[1] = str11;
-          let obj2 = obj1;
-          const str10 = match[1];
+          obj4.body = str11;
+          let obj5 = obj4;
         } else {
-          obj2 = { body: null };
-          obj2[0] = joined;
+          obj5 = { body: joined };
         }
         reactions = reactions.reactions;
         let num5;
-        ({ title, body } = obj2);
+        ({ title, body } = obj5);
         if (reactions != null) {
-          num5 = reactions.reduce((arg0, count) => arg0 + count.count, 0);
+          num5 = reactions.reduce((acc, count) => acc + count.count, 0);
         }
         if (num5 == null) {
           num5 = 0;
@@ -155,90 +150,72 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
                 iconProxyURL1 = iconURL1;
               }
               ({ url, color } = first2);
-              const obj3 = { authorName: null, authorIconUrl: null, providerName: null, providerIconUrl: null, url: null, color: null };
-              obj3[0] = name;
-              obj3[1] = iconProxyURL;
-              obj3[2] = text;
-              obj3[3] = iconProxyURL1;
-              obj3[4] = url;
-              obj3[5] = color;
-              tmp34 = obj3;
+              const obj6 = { authorName: name, authorIconUrl: iconProxyURL, providerName: text, providerIconUrl: iconProxyURL1, url, color };
+              tmp34 = obj6;
             }
             tmp32 = tmp34;
           }
         }
-        const obj4 = { id: null, media: null, title: null, body: null, content: null, timestamp: null, reactionCount: null, embedSource: null, poll: null };
-        obj4[0] = tmp2Result.id;
-        obj4[1] = result;
-        obj4[2] = title;
-        obj4[3] = body;
-        obj4[4] = joined;
-        obj4[5] = reactions.timestamp;
-        obj4[6] = num5;
-        obj4[7] = tmp32;
-        obj4[8] = tmp2Result.poll;
-        return obj4;
+        const obj7 = { id: tmp2Result.id, media: result, title, body, content: joined, timestamp: reactions.timestamp, reactionCount: num5, embedSource: tmp32, poll: tmp2Result.poll };
+        return obj7;
       }
     }
     const attachments = tmp2Result.attachments;
     const found2 = attachments.find((content_type) => found4(found6[3]).isImageContentType(content_type.content_type));
     if (null != found2) {
-      tmp3Result = tmp3(tmp[2]);
-      result = tmp3Result.messageAttachmentToMediaItem(found2, tmp2Result);
+      result = tmp3(tmp[2]).messageAttachmentToMediaItem(found2, tmp2Result);
+      const tmp3Result6 = tmp3(tmp[2]);
     } else {
       const attachments1 = tmp2Result.attachments;
       const found3 = attachments1.find((content_type) => found4(found6[3]).isVideoContentType(content_type.content_type));
       if (null != found3) {
         result = tmp3(tmp[2]).messageAttachmentToMediaItem(found3, tmp2Result);
-        const tmp3Result1 = tmp3(tmp[2]);
+        const tmp3Result7 = tmp3(tmp[2]);
       } else {
-        let embeds = tmp2Result.embeds;
-        found4 = embeds.find((video) => null != video.video && null != video.thumbnail);
+        const embeds1 = tmp2Result.embeds;
+        found4 = embeds1.find((video) => null != video.video && null != video.thumbnail);
         let thumbnail;
         if (found4 != null) {
           thumbnail = found4.thumbnail;
         }
         if (null != thumbnail) {
-          const obj5 = { message: null, identifier: null };
-          obj5[0] = tmp2Result;
-          const obj6 = { type: "embed", embedIndex: null };
+          const obj8 = { message: tmp2Result, identifier: null };
+          const obj9 = { type: "embed", embedIndex: null };
           const embeds3 = tmp2Result.embeds;
-          obj6[1] = embeds3.findIndex((arg0) => arg0 === found4);
-          obj5[1] = obj6;
-          result = tmp3(tmp[2]).embedMediaToMediaItem(found4.thumbnail, obj5, "IMAGE");
-          const tmp3Result2 = tmp3(tmp[2]);
+          obj9.embedIndex = embeds3.findIndex((item) => item === found4);
+          obj8.identifier = obj9;
+          result = tmp3(tmp[2]).embedMediaToMediaItem(found4.thumbnail, obj8, "IMAGE");
+          const tmp3Result8 = tmp3(tmp[2]);
         } else {
-          const embeds1 = tmp2Result.embeds;
-          found5 = embeds1.find((image) => null != image.image);
+          const embeds4 = tmp2Result.embeds;
+          found5 = embeds4.find((image) => null != image.image);
           let image;
           if (found5 != null) {
             image = found5.image;
           }
           if (null != image) {
-            const obj7 = { message: null, identifier: null };
-            obj7[0] = tmp2Result;
-            const obj8 = { type: "embed", embedIndex: null };
-            let embeds2 = tmp2Result.embeds;
-            obj8[1] = embeds2.findIndex((arg0) => arg0 === found5);
-            obj7[1] = obj8;
-            result = tmp3(tmp[2]).embedMediaToMediaItem(found5.image, obj7, "IMAGE");
-            const tmp3Result3 = tmp3(tmp[2]);
+            const obj10 = { message: tmp2Result, identifier: null };
+            const obj11 = { type: "embed", embedIndex: null };
+            const embeds2 = tmp2Result.embeds;
+            obj11.embedIndex = embeds2.findIndex((item) => item === found5);
+            obj10.identifier = obj11;
+            result = tmp3(tmp[2]).embedMediaToMediaItem(found5.image, obj10, "IMAGE");
+            const tmp3Result9 = tmp3(tmp[2]);
           } else {
-            embeds2 = tmp2Result.embeds;
-            found6 = embeds2.find((thumbnail) => null != thumbnail.thumbnail);
+            const embeds5 = tmp2Result.embeds;
+            found6 = embeds5.find((thumbnail) => null != thumbnail.thumbnail);
             let thumbnail1;
             if (found6 != null) {
               thumbnail1 = found6.thumbnail;
             }
             if (null != thumbnail1) {
-              const obj9 = { message: null, identifier: null };
-              obj9[0] = tmp2Result;
-              const obj10 = { type: "embed", embedIndex: null };
-              embeds = tmp2Result.embeds;
-              obj10[1] = embeds.findIndex((arg0) => arg0 === found6);
-              obj9[1] = obj10;
-              result = tmp3(tmp[2]).embedMediaToMediaItem(found6.thumbnail, obj9, "IMAGE");
-              const tmp3Result4 = tmp3(tmp[2]);
+              const obj12 = { message: tmp2Result, identifier: null };
+              const obj13 = { type: "embed", embedIndex: null };
+              const embeds = tmp2Result.embeds;
+              obj13.embedIndex = embeds.findIndex((item) => item === found6);
+              obj12.identifier = obj13;
+              result = tmp3(tmp[2]).embedMediaToMediaItem(found6.thumbnail, obj12, "IMAGE");
+              const tmp3Result10 = tmp3(tmp[2]);
             }
           }
         }
@@ -247,7 +224,7 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
   });
 };
 export const getPollExpiryLabel = function getPollExpiryLabel(poll) {
-  let result = formatExpirationLabel.formatExpirationLabel(poll.expiry);
+  let result = useFormattedExpirationLabel.formatExpirationLabel(poll.expiry);
   if (result == null) {
     const intl = tmp(1114).intl;
     result = intl.string(tmp(1114).t["e+J3JZ"]);
@@ -255,8 +232,8 @@ export const getPollExpiryLabel = function getPollExpiryLabel(poll) {
   return result;
 };
 export const getPosterUrl = function getPosterUrl(proxyUrl, arg1, c12) {
-  let str = isDiscordProxiedAssetUrlDefault.toURLSafe(proxyUrl);
-  str = null;
+  const str = URLUtilsDefault.toURLSafe(proxyUrl);
+  let str1 = null;
   if (null != str) {
     const searchParams = str.searchParams;
     searchParams.append("format", "webp");
@@ -268,7 +245,7 @@ export const getPosterUrl = function getPosterUrl(proxyUrl, arg1, c12) {
       const searchParams3 = str.searchParams;
       searchParams3.append("height", c12.toString());
     }
-    str = str.toString();
+    str1 = str.toString();
   }
-  return str;
+  return str1;
 };

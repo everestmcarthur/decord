@@ -1,18 +1,18 @@
-// Module ID: 15248
-// Function ID: 15249
-// Name: componentDidMount
-// Dependencies: [19, 17, 21, 4560, 4271, 5577, 2]
+// Module ID: 15277
+// Function ID: 15278
+// Name: UntouchableAlert
+// Dependencies: [19, 17, 21, 4574, 4284, 5591, 2]
 
-// Module 15248 (componentDidMount)
-import ActivityIndicator from "ActivityIndicator" /* 5577 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 15277 (UntouchableAlert)
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5591 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let closure_4 = createCacheKey.createLegacyClassComponentStyles({ container: { flex: 1, alignItems: "center", justifyContent: "center" } });
-const PureComponent = importAllResult.PureComponent;
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_4 = createStyles.createLegacyClassComponentStyles({ container: { flex: 1, alignItems: "center", justifyContent: "center" } });
+const PureComponent = noop.PureComponent;
 class UntouchableAlert extends PureComponent {
 }
 const prototype = UntouchableAlert.prototype;
@@ -39,14 +39,13 @@ prototype["closeAlert"] = function closeAlert() {
 prototype["render"] = function render() {
   let tmp2 = null;
   if (this.props.loading) {
-    const obj = { style: null, children: null };
-    obj[0] = tmp.container;
-    obj[1] = jsx(ActivityIndicator.ActivityIndicator, {});
-    tmp2 = <View style={null}>{null}</View>;
+    const obj = { style: tmp.container, children: jsx(ActivityIndicator_ActivityIndicator.ActivityIndicator, {}) };
+    tmp2 = <View style={tmp.container}>{jsx(ActivityIndicator_ActivityIndicator.ActivityIndicator, {})}</View>;
   }
   return tmp2;
 };
-UntouchableAlert.contextType = require("ManaContext").ThemeContext;
-const result = require("set").fileFinishedImporting("components_native/common/UntouchableAlert.tsx");
+UntouchableAlert.contextType = fn(4284).ThemeContext;
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/common/UntouchableAlert.tsx");
 
 export default UntouchableAlert;

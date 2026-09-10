@@ -1,19 +1,19 @@
-// Module ID: 7892
-// Function ID: 7893
-// Name: getExperimentVariantsForDevTools
-// Dependencies: [7893, 4481, 2]
+// Module ID: 7906
+// Function ID: 7907
+// Name: ExperimentDevToolsUtils
+// Dependencies: [7907, 4495, 2]
 // Exports: getExperimentVariantsForDevTools
 
-// Module 7892 (getExperimentVariantsForDevTools)
-import set from "set" /* 2 */;
-import trackExposureToExperiment from "trackExposureToExperiment" /* 4481 */;
-import create from "create" /* 7893 */;
+// Module 7906 (ExperimentDevToolsUtils)
+import ExperimentManager from "ExperimentManager" /* 4495 */;
+import experiment2 from "experiment" /* 7907 */;
+import size from "module_2" /* 2 */;
 
-const obj = { id: -1, label: "Not Eligible", shortLabel: "Not Eligible", type: create.Variation_Type.OVERRIDE };
-const result = set.fileFinishedImporting("modules/experiments/devtools/ExperimentDevToolsUtils.tsx");
+const obj = { id: -1, label: "Not Eligible", shortLabel: "Not Eligible", type: experiment2.Variation_Type.OVERRIDE };
+const result = size.fileFinishedImporting("modules/experiments/devtools/ExperimentDevToolsUtils.tsx");
 
 export const getExperimentVariantsForDevTools = function getExperimentVariantsForDevTools(experiment) {
-  if (experiment.system !== trackExposureToExperiment.ExperimentSystem.APEX) {
+  if (experiment.system !== ExperimentManager.ExperimentSystem.APEX) {
     let variants = experiment.variants;
   } else {
     const items = [obj];

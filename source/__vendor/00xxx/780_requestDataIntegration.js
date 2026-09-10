@@ -4,6 +4,8 @@
 // Dependencies: [752, 781, 782]
 
 // Module 780 (requestDataIntegration)
+import _mod781 from "module_781" /* 781 */;
+import _mod782 from "module_782" /* 782 */;
 import setupIntegration from "setupIntegration" /* 752 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -14,11 +16,10 @@ export const requestDataIntegration = setupIntegration.defineIntegration(() => {
   if (arg0 === undefined) {
     obj = {};
   }
-  obj = undefined;
-  obj = {};
+  let obj2 = {};
   let merged = Object.assign(closure_2);
   let merged1 = Object.assign(obj.include);
-  obj = {
+  return {
     name: "RequestData",
     processEvent(sdkProcessingMetadata, arg1, getOptions) {
       let prop = sdkProcessingMetadata.sdkProcessingMetadata;
@@ -26,7 +27,7 @@ export const requestDataIntegration = setupIntegration.defineIntegration(() => {
         prop = {};
       }
       const normalizedRequest = prop.normalizedRequest;
-      obj = {};
+      const obj = {};
       const merged = Object.assign(obj2);
       let sendDefaultPii = obj2.ip;
       if (sendDefaultPii == null) {
@@ -34,70 +35,66 @@ export const requestDataIntegration = setupIntegration.defineIntegration(() => {
       }
       obj.ip = sendDefaultPii;
       if (normalizedRequest) {
-        obj = {};
-        const merged1 = Object.assign(sdkProcessingMetadata.request);
-        obj2 = undefined;
-        obj1 = {};
         obj2 = {};
+        const merged1 = Object.assign(sdkProcessingMetadata.request);
+        const obj3 = {};
+        const obj4 = {};
         const merged2 = Object.assign(normalizedRequest.headers);
         if (obj.headers) {
-          obj1.headers = obj2;
+          obj3.headers = obj4;
           if (!obj.cookies) {
             delete tmp2[tmp];
           }
           if (!obj.ip) {
-            const ipHeaderNames = obj(closure_1_1[1]).ipHeaderNames;
-            const item = ipHeaderNames.forEach((arg0) => {
+            const ipHeaderNames = _mod781.ipHeaderNames;
+            const item = ipHeaderNames.forEach((item) => {
               delete tmp2[tmp];
             });
           }
         }
-        obj1.method = normalizedRequest.method;
+        obj3.method = normalizedRequest.method;
         if (obj.url) {
-          obj1.url = normalizedRequest.url;
+          obj3.url = normalizedRequest.url;
         }
         if (obj.cookies) {
           let cookies = normalizedRequest.cookies;
           if (!cookies) {
             let parseCookieResult;
-            if (obj2.cookie) {
-              parseCookieResult = obj(closure_1_1[2]).parseCookie(obj2.cookie);
-              const obj7 = obj(closure_1_1[2]);
+            if (obj4.cookie) {
+              parseCookieResult = _mod782.parseCookie(obj4.cookie);
             }
             cookies = parseCookieResult;
           }
           if (!cookies) {
             cookies = {};
           }
-          obj1.cookies = cookies;
+          obj3.cookies = cookies;
         }
         if (obj.query_string) {
-          obj1.query_string = normalizedRequest.query_string;
+          obj3.query_string = normalizedRequest.query_string;
         }
         if (obj.data) {
-          obj1.data = normalizedRequest.data;
+          obj3.data = normalizedRequest.data;
         }
-        const merged3 = Object.assign(obj1);
-        sdkProcessingMetadata.request = obj;
+        const merged3 = Object.assign(obj3);
+        sdkProcessingMetadata.request = obj2;
         if (obj.ip) {
           let ipAddress = normalizedRequest.headers;
           if (ipAddress) {
-            ipAddress = obj(closure_1_1[1]).getClientIPAddress(normalizedRequest.headers);
-            const obj8 = obj(closure_1_1[1]);
+            ipAddress = _mod781.getClientIPAddress(normalizedRequest.headers);
           }
           if (!ipAddress) {
             ipAddress = prop.ipAddress;
           }
           if (ipAddress) {
-            const obj3 = {};
+            const obj5 = {};
             const merged4 = Object.assign(sdkProcessingMetadata.user);
-            obj3.ip_address = ipAddress;
-            sdkProcessingMetadata.user = obj3;
+            obj5.ip_address = ipAddress;
+            sdkProcessingMetadata.user = obj5;
           }
         }
       }
       return sdkProcessingMetadata;
     }
   };
-  return obj;
 });

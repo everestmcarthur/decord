@@ -1,28 +1,25 @@
-// Module ID: 12114
-// Function ID: 12115
-// Name: AppInThisServer
-// Dependencies: [19, 17, 21, 4560, 576, 12092, 1369, 4556, 1114, 5123, 12055, 8907, 9414, 12060, 2]
+// Module ID: 12140
+// Function ID: 12141
+// Name: InThisServerSection
+// Dependencies: [19, 17, 21, 4574, 576, 12118, 1369, 4570, 1114, 5137, 12081, 8934, 9441, 12086, 2]
 // Exports: default
 
-// Module 12114 (AppInThisServer)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
-import Text from "Text" /* 4556 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12140 (InThisServerSection)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9441 */;
+import AppLauncherHomeTypes from "AppLauncherHomeTypes" /* 12118 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function AppInThisServer(onAppSelected) {
   onAppSelected = onAppSelected.onAppSelected;
-  let application;
-  const tmp = callback2();
-  application = onAppSelected.appItem.application;
-  let obj = onAppSelected(12055);
-  const appLauncherIconSource = obj.getAppLauncherIconSource(application);
-  obj = {
+  const tmp = closure_7();
+  const application = onAppSelected.appItem.application;
+  const appLauncherIconSource = onAppSelected(12081).getAppLauncherIconSource(application);
+  const obj2 = {
     accessible: true,
     accessibilityLabel: application.name,
     accessibilityRole: "button",
@@ -32,9 +29,7 @@ function AppInThisServer(onAppSelected) {
         tmp2 = null != application;
       }
       if (tmp2) {
-        const obj = { application: null, sectionName: null };
-        obj[0] = application;
-        obj[1] = onAppSelected(closure_1_2[12]).AppLauncherSectionName.APPS_IN_THIS_SERVER;
+        const obj = { application, sectionName: AppLauncherTypes.AppLauncherSectionName.APPS_IN_THIS_SERVER };
         onAppSelected(obj);
       }
     },
@@ -43,85 +38,83 @@ function AppInThisServer(onAppSelected) {
   };
   let tmp6 = null;
   if (null != appLauncherIconSource) {
-    obj = { iconSource: null, wrapperStyle: null, iconSize: 36 };
-    obj[0] = appLauncherIconSource;
-    obj[1] = tmp.iconContainer;
-    tmp6 = callback(application(12060), obj);
+    const obj3 = { iconSource: appLauncherIconSource, wrapperStyle: tmp.iconContainer, iconSize: 36 };
+    tmp6 = closure_5(application(12086), obj3);
   }
-  const items = [tmp6, callback(onAppSelected(4556).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: application.name })];
-  obj[5] = items;
-  return closure_6(onAppSelected(8907).PressableScale, obj, application.id);
+  const items = [tmp6, closure_5(onAppSelected(4570).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: application.name })];
+  obj2.children = items;
+  return closure_6(onAppSelected(8934).PressableScale, obj2, application.id);
 }
-noopAll;
-({ View: c3, ScrollView: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { marginBottom: 16 }, headerContainer: { justifyContent: "center" }, viewAll: { position: "absolute", right: 0 }, scrollView: { marginTop: 8, overflow: "visible" }, scrollViewContentContainer: { gap: 8 }, appCardContainer: null, iconContainer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_APP_LAUNCHER_ROW_DEFAULT, borderRadius: ThemesDefault.radii.lg, paddingLeft: 12, paddingRight: 12, paddingVertical: 12, flexDirection: "row", justifyContent: "center", alignItems: "center" };
-createCacheKey[5] = createCacheKey;
-createCacheKey[6] = { marginEnd: 12, justifyContent: "space-around" };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/InThisServerSection.tsx");
+get_ActivityIndicator = fn(17);
+({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { marginBottom: 16 }, headerContainer: { justifyContent: "center" }, viewAll: { position: "absolute", right: 0 }, scrollView: { marginTop: 8, overflow: "visible" }, scrollViewContentContainer: { gap: 8 }, appCardContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_APP_LAUNCHER_ROW_DEFAULT, borderRadius: nativeDefault.radii.lg, paddingLeft: 12, paddingRight: 12, paddingVertical: 12, flexDirection: "row", justifyContent: "center", alignItems: "center" }, iconContainer: { marginEnd: 12, justifyContent: "space-around" } };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/InThisServerSection.tsx");
 
 export default function InThisServerSection(arg0) {
   ({ items, onAppSelected: require, onViewAllSelected: importDefault } = arg0);
   dependencyMap = undefined;
-  items = undefined;
   let mapped1;
-  let tmp = callback2();
-  items = [];
+  let tmp = closure_7();
+  const items1 = [];
   if (0 === items.length) {
     return null;
   } else {
     const item = items.forEach((type) => {
-      if (type.type === closure_1_0(_undefined[5]).AppLauncherHomeListItemType.RECOMMENDATION_APP) {
-        items.push(type);
+      if (type.type === AppLauncherHomeTypes.AppLauncherHomeListItemType.RECOMMENDATION_APP) {
+        items1.push(type);
       }
-      if (type.type === closure_1_0(_undefined[5]).AppLauncherHomeListItemType.VIEW_ALL) {
+      if (type.type === AppLauncherHomeTypes.AppLauncherHomeListItemType.VIEW_ALL) {
         closure_2 = type;
       }
     });
-    const substr = items.slice(0, 8);
-    const mapped = substr.map((appItem) => closure_1_5(closure_1_8, { appItem, onAppSelected: closure_0 }, appItem.application.id));
+    const substr = items1.slice(0, 8);
+    const mapped = substr.map((appItem) => hasOwnProperty(AppInThisServer, { appItem, onAppSelected }, appItem.application.id));
     mapped1 = undefined;
-    const found = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
+    const found = mapped.filter(GlobalUtils.isNotNullish);
     if (dependencyMap != null) {
       const applications = dependencyMap.applications;
-      mapped1 = applications.map((arg0) => arg0);
+      mapped1 = applications.map((item) => item);
     }
-    let obj = { style: null, children: null };
-    obj[0] = tmp.container;
-    obj = { style: null, children: null };
-    obj[0] = tmp.headerContainer;
-    obj = { variant: "text-lg/bold", color: "mobile-text-heading-primary", children: null };
+    const obj = { style: tmp.container, children: null };
+    const obj2 = { style: tmp.headerContainer, children: null };
+    const obj3 = { variant: "text-lg/bold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp11(1114).intl;
-    obj[2] = intl.string(getSystemLocale.t.oJyzCu);
-    const items1 = [callback(Text.Text, obj), ];
+    obj3.children = intl.string(util.t.oJyzCu);
+    const items2 = [closure_5(Text_Text.Text, obj3), ];
     let tmp5Result = null != dependencyMap;
     if (tmp5Result) {
-      obj1 = { style: null, onPress: null, accessibilityRole: "button", children: null };
-      obj1[0] = tmp.viewAll;
-      obj1[1] = function onPress() {
-        let tmp = null != mapped1;
-        if (tmp) {
-          tmp = callback();
-        }
-        return tmp;
+      const obj4 = {
+        style: tmp.viewAll,
+        onPress() {
+              let tmp = null != mapped1;
+              if (tmp) {
+                tmp = importDefault();
+              }
+              return tmp;
+            },
+        accessibilityRole: "button",
+        children: null
       };
-      const obj2 = { variant: "text-sm/medium", color: "text-brand", children: null };
+      const obj5 = { variant: "text-sm/medium", color: "text-brand", children: null };
       const intl2 = tmp11(1114).intl;
-      obj2[2] = intl2.string(tmp11(1114).t["/qG8v7"]);
-      obj1[3] = tmp5(tmp11(4556).Text, obj2);
-      tmp5Result = tmp5(tmp11(5123).PressableOpacity, obj1);
+      obj5.children = intl2.string(tmp11(1114).t["/qG8v7"]);
+      obj4.children = tmp5(tmp11(4570).Text, obj5);
+      tmp5Result = tmp5(tmp11(5137).PressableOpacity, obj4);
     }
-    items1[1] = tmp5Result;
-    obj[1] = items1;
-    const items2 = [closure_6(items, obj), ];
-    const obj3 = { style: null, contentContainerStyle: null, horizontal: true, showsHorizontalScrollIndicator: false, children: null };
-    ({ scrollView: obj6[0], scrollViewContentContainer: obj6[1] } = tmp);
-    obj3[4] = found;
-    items2[1] = callback(mapped1, obj3);
-    obj[1] = items2;
-    return closure_6(items, obj);
+    items2[1] = tmp5Result;
+    obj2.children = items2;
+    const items3 = [closure_6(items1, obj2), ];
+    const obj11 = { style: null, contentContainerStyle: null, horizontal: true, showsHorizontalScrollIndicator: false, children: null };
+    ({ scrollView: obj6.style, scrollViewContentContainer: obj6.contentContainerStyle } = tmp);
+    obj11.children = found;
+    items3[1] = closure_5(mapped1, obj11);
+    obj.children = items3;
+    return closure_6(items1, obj);
   }
 };
 export const IN_THIS_SERVER_ITEM_MAX = 8;

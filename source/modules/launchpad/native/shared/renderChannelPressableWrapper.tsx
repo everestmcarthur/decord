@@ -1,18 +1,18 @@
-// Module ID: 16981
-// Function ID: 16982
-// Name: items
-// Dependencies: [19, 17, 21, 16980, 2]
+// Module ID: 17017
+// Function ID: 17018
+// Name: renderChannelPressableWrapper
+// Dependencies: [19, 17, 21, 16698, 2]
 // Exports: default
 
-// Module 16981 (items)
-import noopAll from "noop" /* 19 */;
-import getLayoutStyleDefault from "getLayoutStyle" /* 16980 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 17017 (renderChannelPressableWrapper)
+import getLayoutStylesDefault from "getLayoutStyles" /* 16698 */;
+import noop from "module_19" /* 19 */;
 
-noopAll;
-const items = [getLayoutStyleDefault().layout.margin, { flex: 1, flexDirection: "row", alignItems: "center" }];
-const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/renderChannelPressableWrapper.tsx");
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const items = [getLayoutStylesDefault().layout.margin, { flex: 1, flexDirection: "row", alignItems: "center" }];
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/launchpad/native/shared/renderChannelPressableWrapper.tsx");
 
 export default function renderChannelPressableWrapper(children) {
   return <View style={items}>{arg0}</View>;

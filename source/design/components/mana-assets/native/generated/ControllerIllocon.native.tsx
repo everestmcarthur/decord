@@ -1,17 +1,17 @@
-// Module ID: 5873
-// Function ID: 5874
+// Module ID: 5887
+// Function ID: 5888
 // Name: ControllerIllocon
-// Dependencies: [21, 5587, 5874, 2]
+// Dependencies: [21, 5601, 5888, 2]
 // Exports: ControllerIllocon
 
-// Module 5873 (ControllerIllocon)
-import set from "set" /* 2 */;
+// Module 5887 (ControllerIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 5874 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5888 from "module_5888" /* 5888 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ControllerIllocon.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ControllerIllocon.native.tsx");
 
 export const ControllerIllocon = function ControllerIllocon(size) {
   let num = size.size;
@@ -19,13 +19,13 @@ export const ControllerIllocon = function ControllerIllocon(size) {
   if (num === undefined) {
     num = 64;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef5888 };
+  obj.source = obj2;
   const items = [{ width: num, height: num }];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { uri: metadataDefault });
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

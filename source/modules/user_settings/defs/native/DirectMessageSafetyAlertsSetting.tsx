@@ -1,24 +1,24 @@
-// Module ID: 14837
-// Function ID: 14838
-// Name: toggle
-// Dependencies: [7975, 11882, 10973, 10976, 11473, 1114, 10975, 14838, 2]
+// Module ID: 14863
+// Function ID: 14864
+// Name: DirectMessageSafetyAlertsSetting
+// Dependencies: [7989, 11908, 11000, 11003, 11500, 1114, 11002, 14864, 2]
 
-// Module 14837 (toggle)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import MobileUserSettings2 from "MobileUserSettings" /* 7975 */;
-import InappropriateConversationExperiment from "InappropriateConversationExperiment" /* 10973 */;
-import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 10975 */;
-import InappropriateConversationsDefaultOn from "InappropriateConversationsDefaultOn" /* 10976 */;
-import useUserIsConsideredAdultDefault from "useUserIsConsideredAdult" /* 11882 */;
-import updateDmSafetyAlertsSetting from "updateDmSafetyAlertsSetting" /* 14838 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 14863 (DirectMessageSafetyAlertsSetting)
+import util from "util" /* 1114 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 11000 */;
+import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 11002 */;
+import InappropriateConversationsDefaultOn from "InappropriateConversationsDefaultOn" /* 11003 */;
+import useUserIsConsideredAdultDefault from "useUserIsConsideredAdult" /* 11908 */;
+import updateDmSafetyAlertsSetting from "updateDmSafetyAlertsSetting" /* 14864 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-const MobileUserSettings = MobileUserSettings2.MobileUserSettings;
-const toggle = createToggle.createToggle({
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.qFsx5q);
+    const intl = util.intl;
+    return intl.string(util.t.qFsx5q);
   },
   parent() {
     return MobileUserSettings.CONTENT_AND_SOCIAL;
@@ -30,8 +30,7 @@ const toggle = createToggle.createToggle({
     if (flag == null) {
       flag = true;
     }
-    const isEligibleForInappropriateConversationWarning = InappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning({ location: "user_settings_mobile_redesign" });
-    const obj = InappropriateConversationExperiment;
+    const isEligibleForInappropriateConversationWarning = SelfModInappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning({ location: "user_settings_mobile_redesign" });
     let tmp4 = !flag;
     const isEligibleForInappropriateConversationDefaultOn = InappropriateConversationsDefaultOn.useIsEligibleForInappropriateConversationDefaultOn({ location: "user_settings_mobile_redesign" });
     if (!flag) {
@@ -43,34 +42,6 @@ const toggle = createToggle.createToggle({
     return tmp4;
   }
 });
-let obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.qFsx5q);
-  },
-  parent() {
-    return MobileUserSettings.CONTENT_AND_SOCIAL;
-  },
-  useValue: useSafetyAlertsSettingOrDefault.useSafetyAlertsSettingOrDefault,
-  onValueChange: updateDmSafetyAlertsSetting.updateDmSafetyAlertsSetting,
-  usePredicate: function useHasDmSafetyAlertsSetting() {
-    let flag = useUserIsConsideredAdultDefault();
-    if (flag == null) {
-      flag = true;
-    }
-    const isEligibleForInappropriateConversationWarning = InappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning({ location: "user_settings_mobile_redesign" });
-    const obj = InappropriateConversationExperiment;
-    let tmp4 = !flag;
-    const isEligibleForInappropriateConversationDefaultOn = InappropriateConversationsDefaultOn.useIsEligibleForInappropriateConversationDefaultOn({ location: "user_settings_mobile_redesign" });
-    if (!flag) {
-      tmp4 = isEligibleForInappropriateConversationWarning;
-    }
-    if (tmp4) {
-      tmp4 = !isEligibleForInappropriateConversationDefaultOn;
-    }
-    return tmp4;
-  }
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/DirectMessageSafetyAlertsSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DirectMessageSafetyAlertsSetting.tsx");
 
 export default toggle;

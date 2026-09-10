@@ -1,17 +1,16 @@
-// Module ID: 4580
-// Function ID: 4581
-// Name: isVoiceMuted
+// Module ID: 4594
+// Function ID: 4595
+// Name: VoiceStateRecord
 // Dependencies: [1386, 2]
 
-// Module 4580 (isVoiceMuted)
-import toJSDefault from "toJS" /* 1386 */;
+// Module 4594 (VoiceStateRecord)
+import Record from "Record" /* 1386 */;
 
-toJSDefault;
-const result = require("set").fileFinishedImporting("records/VoiceStateRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("records/VoiceStateRecord.tsx");
 class VoiceStateRecord extends tmp2 {
   constructor(arg0) {
     tmp2 = new VoiceStateRecord(tmp, new.target);
-    // ThrowIfThisInitialized (0x7c)
     tmp3 = global.userId || "";
     tmp2.userId = tmp3;
     tmp2.channelId = global.channelId || null;

@@ -1,19 +1,20 @@
-// Module ID: 17067
-// Function ID: 17068
-// Name: sortSoundsOldestToNewestCreationDate
+// Module ID: 17098
+// Function ID: 17099
+// Name: useSoundOrganizer
 // Dependencies: [11, 2]
 // Exports: useSoundOrganizer
 
-// Module 17067 (sortSoundsOldestToNewestCreationDate)
-import set from "set" /* 2 */;
+// Module 17098 (useSoundOrganizer)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import size from "module_2" /* 2 */;
 
-function sortSoundsOldestToNewestCreationDate(value2) {
+function sortSoundsOldestToNewestCreationDate(value7) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
   }
-  const items = [...value2];
-  const sorted = items.sort((soundId, soundId2) => callback(table[0]).compare(soundId.soundId, soundId2.soundId));
+  const items = [...value7];
+  const sorted = items.sort((soundId, soundId2) => SnowflakeUtilsDefault.compare(soundId.soundId, soundId2.soundId));
   let sorted1 = sorted;
   if (flag) {
     const items1 = [];
@@ -36,7 +37,7 @@ function sortSoundsOldestToNewestCreationDate(value2) {
   }
   return sorted1;
 }
-const result = set.fileFinishedImporting("modules/soundboard/useSoundOrganizer.tsx");
+const result = size.fileFinishedImporting("modules/soundboard/useSoundOrganizer.tsx");
 
 export { sortSoundsOldestToNewestCreationDate };
 export function useSoundOrganizer() {

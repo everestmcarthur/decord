@@ -1,12 +1,11 @@
-// Module ID: 11980
-// Function ID: 11981
-// Name: metadata
+// Module ID: 12006
+// Function ID: 12007
 // Dependencies: [2]
 
-// Module 11980 (metadata)
-import set from "set" /* 2 */;
+// Module 12006
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/EmojiWumpEyesExample-1x.png.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/EmojiWumpEyesExample-1x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/8479eb6aded192ee835ac85e230cb5ea765d127433a49afb65ea0b408c406d29.png";
 export const metadata = { fileBytes: 4300 };

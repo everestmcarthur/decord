@@ -1,22 +1,23 @@
 // Module ID: 2528
 // Function ID: 2529
-// Name: messagesProxy
 // Dependencies: [1120, 2529, 1155, 2]
 
-// Module 2528 (messagesProxy)
-import set from "set" /* 2 */;
-import loadJsonAsset from "loadJsonAsset" /* 1120 */;
-import registerAsset from "registerAsset" /* 2529 */;
-import module_1155 from "module_1155" /* 1155 */;
+// Module 2528
+import AssetJsonUtils from "AssetJsonUtils" /* 1120 */;
+import _mod2529 from "module_2529" /* 2529 */;
+import module_1155_mod from "module_1155" /* 1155 */;
+import size from "module_2" /* 2 */;
 
+let module_1155 = module_1155_mod;
 const loader = module_1155.createLoader({
   () => {
-    const jsonAsset = loadJsonAsset.loadJsonAsset(registerAsset);
-    return jsonAsset.then((arg0) => ({ default: arg0 }));
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2529);
+    return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
+let module_1155 = module_1155_mod;
 const messagesProxy = module_1155.makeMessagesProxy(loader);
-const result = set.fileFinishedImporting("modules/report_to_mod/ReportToMod.messages.js");
+const result = size.fileFinishedImporting("modules/report_to_mod/ReportToMod.messages.js");
 
 export default messagesProxy;
 export const messagesLoader = loader;

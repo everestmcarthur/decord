@@ -1,28 +1,29 @@
-// Module ID: 16978
-// Function ID: 16979
+// Module ID: 17015
+// Function ID: 17016
 // Name: isGuildSelectable
-// Dependencies: [1962, 4582, 7636, 4741, 2]
+// Dependencies: [1962, 4596, 7650, 4755, 2]
 // Exports: default
 
-// Module 16978 (isGuildSelectable)
-import closure_0 from "handleStageInstanceCreateOrUpdate" /* 1962 */;
-import closure_1 from "reset" /* 4582 */;
-import closure_2 from "updateGuildUnreadSentinel" /* 7636 */;
-import closure_3 from "updateUserGuildSettingsInternal" /* 4741 */;
+// Module 17015 (isGuildSelectable)
+import StageInstanceStore from "StageInstanceStore" /* 1962 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4596 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7650 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4755 */;
 
-const result = require("set").fileFinishedImporting("modules/launchpad/native/isGuildSelectable.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/launchpad/native/isGuildSelectable.tsx");
 
 export default function isGuildSelectable(id) {
-  const stageInstancesByGuild = id;
-  const isMutedResult = muted.isMuted(id);
+  closure_0 = id;
+  const isMutedResult = UserGuildSettingsStore.isMuted(id);
   let tmp2 = !isMutedResult;
   if (!isMutedResult) {
-    let hasUnreadResult = closure_2.hasUnread(id);
+    let hasUnreadResult = GuildReadStateStore.hasUnread(id);
     if (!hasUnreadResult) {
       const _Object = Object;
-      let someResult = Object.keys(stageInstancesByGuild.getStageInstancesByGuild(id)).length > 0;
+      let someResult = Object.keys(StageInstanceStore.getStageInstancesByGuild(id)).length > 0;
       if (!someResult) {
-        allApplicationStreams = allApplicationStreams.getAllApplicationStreams();
+        const allApplicationStreams = ApplicationStreamingStore.getAllApplicationStreams();
         someResult = allApplicationStreams.some((guildId) => guildId.guildId === closure_0);
       }
       hasUnreadResult = someResult;

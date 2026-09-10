@@ -1,57 +1,53 @@
-// Module ID: 11866
-// Function ID: 11867
-// Name: getPromiseableActionHandlers
-// Dependencies: [19, 11867, 21, 4763, 11871, 1896, 4905, 11874, 2]
+// Module ID: 11892
+// Function ID: 11893
+// Name: GuildAutomodActionActionCreators
+// Dependencies: [19, 11893, 21, 4777, 11897, 1896, 4919, 11900, 2]
 // Exports: getPromiseableActionHandlers, openAutomodProfileQuarantineAlert, openConfirmRemoveMentionRaid, openRaidResolveModal, openSubmitFeedback
 
-// Module 11866 (getPromiseableActionHandlers)
-import noopAll from "noop" /* 19 */;
+// Module 11892 (GuildAutomodActionActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import _modDef4763 from "module_4763" /* 4763 */;
-import _modDef4905 from "module_4905" /* 4905 */;
-import AutomodEventType from "AutomodEventType" /* 11867 */;
-import { jsx } from "jsxProd" /* 21 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4919 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ AutomodActionType: c3, SUBMIT_FEEDBACK_MODAL_KEY: c4 } = AutomodEventType);
-const result = require("set").fileFinishedImporting("modules/guild_automod/GuildAutomodActionActionCreators.native.tsx");
+require = fn;
+const Constants = fn(11893);
+({ AutomodActionType: c3, SUBMIT_FEEDBACK_MODAL_KEY: closure_4 } = Constants);
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_automod/GuildAutomodActionActionCreators.native.tsx");
 
 export const getPromiseableActionHandlers = function getPromiseableActionHandlers() {
-  return { [closure_3.BLOCK_MESSAGE]: null, [closure_3.FLAG_TO_CHANNEL]: null, [closure_3.USER_COMMUNICATION_DISABLED]: null };
+  return { [closure_1_3.BLOCK_MESSAGE]: null, [closure_1_3.FLAG_TO_CHANNEL]: null, [closure_1_3.USER_COMMUNICATION_DISABLED]: null };
 };
 export const openSubmitFeedback = function openSubmitFeedback(messageId, content, decisionId, channel) {
-  let obj = _modDef4763;
-  obj = {
+  const obj2 = {
     onCloseModal() {
-      callback(table[3]).popWithKey(closure_4);
+      ModalActionCreatorsDefault.popWithKey(closure_1_4);
     },
-    automodDecision: obj
+    automodDecision: { messageId, messageContent: content, decisionId, channel }
   };
-  obj = { messageId, messageContent: content, decisionId, channel };
-  obj.pushLazy(asyncRequireImpl(11871, dependencyMap.paths), obj, closure_4);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11897, dependencyMap.paths), obj2, React4);
 };
 export function openRaidResolveModal() {
 
 }
-export function openConfirmRemoveMentionRaid(arg0) {
+export function openConfirmRemoveMentionRaid() {
 
 }
 export const openAutomodProfileQuarantineAlert = function openAutomodProfileQuarantineAlert(guildId) {
   closure_0 = guildId;
-  let obj = _modDef4905;
-  obj = {
+  actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return guildId(closure_1_2[5])(closure_1_2[7], closure_1_2.paths).then((arg0) => {
-        closure_0 = arg0.default;
+      return asyncRequireImpl(11900, dependencyMap.paths).then((result) => {
+        closure_0 = result.default;
         return (arg0) => {
           const obj = {};
           const merged = Object.assign(arg0);
-          obj.guildId = closure_0;
-          return closure_2_5(closure_0, obj);
+          obj.guildId = guildId;
+          return <closure_0 />;
         };
       });
     }
-  };
-  obj.openLazy(obj);
+  });
 };

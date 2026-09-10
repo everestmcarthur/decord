@@ -4,8 +4,8 @@
 // Dependencies: [17]
 
 // Module 1621 (RNCSafeAreaContext)
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import _mod17 from "module_17" /* 17 */;
 
-const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 
 export default TurboModuleRegistry.get("RNCSafeAreaContext");

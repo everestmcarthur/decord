@@ -1,60 +1,61 @@
-// Module ID: 11910
-// Function ID: 11911
+// Module ID: 11936
+// Function ID: 11937
 // Name: AppealIngestionRequestSent
-// Dependencies: [19, 17, 8419, 21, 4560, 11893, 1114, 11891, 11911, 4556, 11905, 2]
+// Dependencies: [19, 17, 8447, 21, 4574, 11919, 1114, 11917, 11937, 4570, 11931, 2]
 // Exports: default
 
-// Module 11910 (AppealIngestionRequestSent)
-import noopAll from "noop" /* 19 */;
-import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 11905 */;
-import registerAssetDefault from "registerAsset" /* 11911 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import SafetyHubView from "SafetyHubView" /* 8419 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11936 (AppealIngestionRequestSent)
+import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 11931 */;
+import _modDef11937 from "module_11937" /* 11937 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ View: c3, Image: c4 } = get_ActivityIndicator);
-({ SafetyHubAnalyticsActions: c5, SafetyHubLinks: closure_6 } = SafetyHubView);
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-let closure_9 = createCacheKey.createStyles({ container: { flex: 1, padding: 8 }, actionsHeader: { marginTop: 31, marginBottom: 16 }, checkboxPng: { width: 86, height: 78.33, marginLeft: -2, alignSelf: "center" } });
-const result = require("set").fileFinishedImporting("modules/safety_hub/native/AppealIngestionRequestSent.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, Image: closure_4 } = get_ActivityIndicator);
+const SafetyHubConstants = fn(8447);
+({ SafetyHubAnalyticsActions: hasOwnProperty, SafetyHubLinks: metroRequire } = SafetyHubConstants);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+let closure_9 = createStyles.createStyles({ container: { flex: 1, padding: 8 }, actionsHeader: { marginTop: 31, marginBottom: 16 }, checkboxPng: { width: 86, height: 78.33, marginLeft: -2, alignSelf: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionRequestSent.tsx");
 
 export default function AppealIngestionRequestSent() {
-  let obj = _require(11893);
-  _require = obj.useEmitAppealIngestionEvent();
-  const tmp = callback3();
-  const intl = _require(1114).intl;
-  const intl2 = _require(1114).intl;
-  const stringResult = intl.string(_require(1114).t.QMbTSu);
-  obj = { children: null };
-  obj = { style: tmp.container, children: null };
-  const stringResult1 = intl2.string(_require(1114).t.Qdx8AP);
-  const items = [callback(closure_4, { source: registerAssetDefault, style: tmp.checkboxPng }), callback(_require(11891).AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: stringResult1 }), , , ];
-  const obj2 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", style: tmp.actionsHeader, children: null };
-  const intl3 = _require(1114).intl;
-  obj2[3] = intl3.string(_require(1114).t["9BRc1N"]);
-  items[2] = callback(_require(4556).Text, obj2);
-  const obj3 = { text: null, url: null, onPress: null };
-  obj1 = { source: registerAssetDefault, style: tmp.checkboxPng };
-  const intl4 = _require(1114).intl;
-  obj3[0] = intl4.string(_require(1114).t.PxL38B);
-  obj3[1] = constants.COMMUNITY_GUIDELINES;
-  obj3[2] = function onPress() {
-    return callback(closure_1_5.ClickCommunityGuidelinesLink);
+  _require = require("useEmitAppealIngestionEvent").useEmitAppealIngestionEvent();
+  const tmp = closure_9();
+  const intl = require("util").intl;
+  const obj = require("useEmitAppealIngestionEvent");
+  const intl2 = require("util").intl;
+  const stringResult = intl.string(require("util").t.QMbTSu);
+  const obj2 = { children: null };
+  const obj3 = { style: tmp.container, children: null };
+  const stringResult1 = intl2.string(require("util").t.Qdx8AP);
+  const items = [closure_7(closure_4, { source: _modDef11937, style: tmp.checkboxPng }), closure_7(require("AppealIngestionModal").AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: stringResult1 }), , , ];
+  const obj5 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", style: tmp.actionsHeader, children: null };
+  const intl3 = require("util").intl;
+  obj5.children = intl3.string(require("util").t["9BRc1N"]);
+  items[2] = closure_7(require("Text/Text").Text, obj5);
+  const obj6 = { text: null, url: null, onPress: null };
+  const obj4 = { source: _modDef11937, style: tmp.checkboxPng };
+  const intl4 = require("util").intl;
+  obj6.text = intl4.string(require("util").t.PxL38B);
+  obj6.url = constants.COMMUNITY_GUIDELINES;
+  obj6.onPress = function onPress() {
+    return closure_0(hasOwnProperty.ClickCommunityGuidelinesLink);
   };
-  items[3] = callback(AppealIngestionExternalLinkDefault, obj3);
-  const obj4 = { text: null, url: null, onPress: null };
-  const tmp4 = AppealIngestionExternalLinkDefault;
-  const intl5 = _require(1114).intl;
-  obj4[0] = intl5.string(_require(1114).t.qC3XKa);
-  obj4[1] = constants.WARNING_SYSTEM_HELPCENTER_LINK;
-  obj4[2] = function onPress() {
-    return callback(closure_1_5.ClickWarningSystemHelpcenterLink);
+  items[3] = closure_7(AppealIngestionExternalLinkDefault, obj6);
+  const obj7 = { text: null, url: null, onPress: null };
+  const intl5 = require("util").intl;
+  obj7.text = intl5.string(require("util").t.qC3XKa);
+  obj7.url = constants.WARNING_SYSTEM_HELPCENTER_LINK;
+  obj7.onPress = function onPress() {
+    return closure_0(hasOwnProperty.ClickWarningSystemHelpcenterLink);
   };
-  items[4] = callback(AppealIngestionExternalLinkDefault, obj4);
-  obj[1] = items;
-  obj[0] = callback2(closure_3, obj);
-  return callback(_require(11891).AppealIngestionModalScreen, obj);
+  items[4] = closure_7(AppealIngestionExternalLinkDefault, obj7);
+  obj3.children = items;
+  obj2.children = closure_8(closure_3, obj3);
+  return closure_7(require("AppealIngestionModal").AppealIngestionModalScreen, obj2);
 };

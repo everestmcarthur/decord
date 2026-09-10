@@ -1,48 +1,49 @@
-// Module ID: 12187
-// Function ID: 12188
+// Module ID: 12213
+// Function ID: 12214
 // Name: AppLauncherRoleOption
-// Dependencies: [32, 19, 2015, 21, 563, 12180, 4527, 12185, 1896, 12185, 2]
+// Dependencies: [32, 19, 2015, 21, 563, 12206, 4541, 12211, 1896, 12211, 2]
 // Exports: default
 
-// Module 12187 (AppLauncherRoleOption)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "createGuildRoleRecordFromRust" /* 2015 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 12213 (AppLauncherRoleOption)
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import AppLauncherRoleListActionSheet from "AppLauncherRoleListActionSheet" /* 12211 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/options/role/AppLauncherRoleOption.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/options/role/AppLauncherRoleOption.tsx");
 
 export default function AppLauncherRoleOption(option) {
   option = option.option;
   ({ initialValue: importDefault, onRolePress } = option);
-  ({ onActionSheetDismiss: closure_3, channel } = option);
+  ({ onActionSheetDismiss: _slicedToArray, channel } = option);
   const onPress = option.onPress;
-  let guild_id;
-  let first;
+  first = undefined;
   closure_8 = undefined;
-  let stateFromStores;
-  guild_id = channel.guild_id;
+  const guild_id = channel.guild_id;
   ({ style, autoFocus, hasError } = option);
-  let tmp = callback(channel.useState(() => {
+  [first, closure_8] = channel.useState(() => {
     let roleId = null;
-    if (null != closure_1) {
+    if (null != importDefault) {
       roleId = null;
       if ("roleMention" === tmp.type) {
         roleId = tmp.roleId;
       }
     }
     return roleId;
-  }), 2);
-  first = tmp[0];
-  closure_8 = tmp[1];
-  let obj = option(onRolePress[4]);
+  });
   const items = [onPress];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = option(onRolePress[4]).useStateFromStores(items, () => {
     if (null != first) {
       let role;
       if (null != guild_id) {
-        role = onPress.getRole(tmp2, tmp);
+        role = GuildRoleStore.getRole(tmp2, tmp);
       }
       return role;
     }
@@ -57,30 +58,32 @@ export default function AppLauncherRoleOption(option) {
       onRolePress({ role: null });
     }
   }, items1);
-  obj = { style, option, hasError, selected: null != stateFromStores, selectedItemName: null, onPress: null, leading: null, autoFocus: null };
+  const obj2 = { style, option, hasError, selected: null != stateFromStores, selectedItemName: null, onPress: null, leading: null, autoFocus: null };
   let name;
+  let obj = option(onRolePress[4]);
+  const tmp3 = option;
+  const tmp4 = onRolePress;
   if (null != stateFromStores) {
     name = stateFromStores.name;
   }
-  obj[4] = name;
-  obj[5] = function onPress() {
+  obj2.selectedItemName = name;
+  obj2.onPress = function onPress() {
     if (onPress != null) {
       tmp();
     }
-    let obj = closure_1_1(onRolePress[6]);
-    obj = {
+    const obj = ActionSheetActionCreatorsDefault;
+    obj.openLazy(asyncRequireImpl(12211, dependencyMap.paths), AppLauncherRoleListActionSheet.APP_LAUNCHER_ROLE_LIST_ACTION_SHEET_KEY, {
       option,
       channel,
       onRolePress(role) {
         role = role.role;
-        callback2(role.id);
-        callback({ role });
+        closure_1_8(role.id);
+        onRolePress({ role });
       },
-      onActionSheetDismiss: closure_3
-    };
-    obj.openLazy(option(onRolePress[8])(onRolePress[7], onRolePress.paths), option(onRolePress[9]).APP_LAUNCHER_ROLE_LIST_ACTION_SHEET_KEY, obj);
+      onActionSheetDismiss
+    });
   };
-  obj[6] = guild_id(option(onRolePress[9]).RoleIcon, { role: stateFromStores });
-  obj[7] = autoFocus;
-  return guild_id(importDefault(onRolePress[5]), obj);
+  obj2.leading = guild_id(tmp3(tmp4[9]).RoleIcon, { role: stateFromStores });
+  obj2.autoFocus = autoFocus;
+  return guild_id(require("AppLauncherSelectOptionFormRow"), obj2);
 };

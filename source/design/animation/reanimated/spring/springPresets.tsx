@@ -1,13 +1,13 @@
-// Module ID: 4978
-// Function ID: 4979
-// Name: SUBTLE_SPRING
-// Dependencies: [2, 4979]
+// Module ID: 4992
+// Function ID: 4993
+// Name: springPresets
+// Dependencies: [2, 4993]
 
-// Module 4978 (SUBTLE_SPRING)
-import set from "set" /* 2 */;
-import SUBTLE_SPRING from "SUBTLE_SPRING" /* 4979 */;
+// Module 4992 (springPresets)
+import SUBTLE_SPRING from "SUBTLE_SPRING" /* 4993 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("design/animation/reanimated/spring/springPresets.tsx");
+const result = size.fileFinishedImporting("design/animation/reanimated/spring/springPresets.tsx");
 
 export const SUBTLE_SPRING = SUBTLE_SPRING.SUBTLE_SPRING;
 export const ON_PRESS_SPRING = { mass: 1, overshootClamping: true, damping: 27, stiffness: 300 };

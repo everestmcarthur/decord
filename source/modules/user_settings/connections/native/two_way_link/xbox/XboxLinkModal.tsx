@@ -1,119 +1,120 @@
-// Module ID: 9223
-// Function ID: 9224
-// Name: CloseButton
-// Dependencies: [19, 9224, 1074, 21, 7377, 6992, 9222, 1114, 9225, 9232, 9233, 9237, 9445, 9450, 9451, 9231, 9274, 7000, 2]
+// Module ID: 9250
+// Function ID: 9251
+// Name: XboxLinkModal
+// Dependencies: [19, 9251, 1074, 21, 7391, 7006, 9249, 1114, 9252, 9259, 9260, 9264, 9472, 9477, 9478, 9258, 9301, 7014, 2]
 // Exports: default
 
-// Module 9223 (CloseButton)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import registerAssetDefault from "registerAsset" /* 6992 */;
-import HeaderActionButton from "HeaderActionButton" /* 7377 */;
-import closure_3 from "noop" /* 19 */;
-import { XboxLinkModalScenes } from "XboxLinkModalScenes" /* 9224 */;
-import { PlatformTypes } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 9250 (XboxLinkModal)
+import util from "util" /* 1114 */;
+import _modDef7006 from "module_7006" /* 7006 */;
+import HeaderActionButton from "HeaderActionButton" /* 7391 */;
+import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 9249 */;
+import XboxLinkEducationDefault from "XboxLinkEducation" /* 9477 */;
+import XboxLinkErrorDefault from "XboxLinkError" /* 9478 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function CloseButton() {
   const obj = {
-    source: registerAssetDefault,
+    source: _modDef7006,
     onPress() {
-      return callback(table[6]).hideModal();
+      return XboxLinkModalActionCreatorsDefault.hideModal();
     },
     accessibilityLabel: null
   };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.cpT0Cq);
+  const intl = util.intl;
+  obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
   return jsx(HeaderActionButton.HeaderActionButton, {
-    source: registerAssetDefault,
+    source: _modDef7006,
     onPress() {
-      return callback(table[6]).hideModal();
+      return XboxLinkModalActionCreatorsDefault.hideModal();
     },
     accessibilityLabel: null
   });
 }
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkModal.tsx");
+const XboxLinkModalScenes = fn(9251).XboxLinkModalScenes;
+const PlatformTypes = fn(1074).PlatformTypes;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkModal.tsx");
 
 export default function XboxLinkModal(locationStack) {
   let twoWayLinkStyles;
-  let obj = twoWayLinkStyles(9231);
-  twoWayLinkStyles = obj.useTwoWayLinkStyles();
+  twoWayLinkStyles = twoWayLinkStyles(9258).useTwoWayLinkStyles();
   const items = [twoWayLinkStyles];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     function onClose() {
-      return callback(9222).hideModal();
+      return closure_1_1(9249).hideModal();
     }
     function blank() {
       return null;
     }
-    let obj = {
-      headerLeft: blank,
-      headerRight: closure_1_7,
-      headerTitle: blank,
-      headerStyle: onClose.navHeader,
-      render() {
-        return callback2(callback(9225), {});
-      }
-    };
-    obj = {
-      headerLeft: blank,
-      headerRight: closure_1_7,
-      headerStyle: onClose.navHeader,
-      headerTitle() {
-        return callback2(onClose(9232).TwoWayLinkStepHeader, { idx: 1, total: 2 });
-      },
-      render() {
-        return callback2(callback(9233), {});
-      }
-    };
-    obj = {
-      headerLeft: blank,
-      headerRight: closure_1_7,
-      headerStyle: onClose.navHeader,
-      headerTitle() {
-        return callback2(onClose(9232).TwoWayLinkStepHeader, { idx: 2, total: 2 });
-      },
-      render(arg0) {
-        ({ callbackCode, callbackState } = arg0);
-        return callback2(callback(9237), { callbackCode, callbackState });
-      }
-    };
     return {
-      [closure_1_4.LANDING]: obj,
-      [closure_1_4.PRE_CONNECT]: obj,
-      [closure_1_4.DISCORD_CONSENT]: obj,
-      [closure_1_4.SUCCESS]: {
+      [closure_2_4.LANDING]: {
         headerLeft: blank,
-        headerRight: closure_1_7,
+        headerRight: CloseButton,
         headerTitle: blank,
-        headerStyle: onClose.navHeader,
+        headerStyle: twoWayLinkStyles.navHeader,
         render() {
-          return callback2(callback(9445), {});
+          return closure_1_6(closure_1_1(9252), {});
         }
       },
-      [closure_1_4.EDUCATION]: {
+      [closure_2_4.PRE_CONNECT]: {
         headerLeft: blank,
-        headerRight: closure_1_7,
-        headerTitle: blank,
-        headerStyle: onClose.navHeader,
+        headerRight: CloseButton,
+        headerStyle: twoWayLinkStyles.navHeader,
+        headerTitle() {
+          return closure_1_6(onClose(9259).TwoWayLinkStepHeader, { idx: 1, total: 2 });
+        },
         render() {
-          return closure_1_6(closure_1_1(closure_1_2[13]), { onClose });
+          return closure_1_6(closure_1_1(9260), {});
         }
       },
-      [closure_1_4.ERROR]: {
+      [closure_2_4.DISCORD_CONSENT]: {
         headerLeft: blank,
-        headerRight: closure_1_7,
+        headerRight: CloseButton,
+        headerStyle: twoWayLinkStyles.navHeader,
+        headerTitle() {
+          return closure_1_6(onClose(9259).TwoWayLinkStepHeader, { idx: 2, total: 2 });
+        },
+        render(arg0) {
+          ({ callbackCode, callbackState } = arg0);
+          return closure_1_6(closure_1_1(9264), { callbackCode, callbackState });
+        }
+      },
+      [closure_2_4.SUCCESS]: {
+        headerLeft: blank,
+        headerRight: CloseButton,
         headerTitle: blank,
-        headerStyle: onClose.navHeader,
+        headerStyle: twoWayLinkStyles.navHeader,
         render() {
-          return closure_1_6(closure_1_1(closure_1_2[14]), { onClose });
+          return closure_1_6(closure_1_1(9472), {});
+        }
+      },
+      [closure_2_4.EDUCATION]: {
+        headerLeft: blank,
+        headerRight: CloseButton,
+        headerTitle: blank,
+        headerStyle: twoWayLinkStyles.navHeader,
+        render() {
+          return jsx(XboxLinkEducationDefault, { onClose });
+        }
+      },
+      [closure_2_4.ERROR]: {
+        headerLeft: blank,
+        headerRight: CloseButton,
+        headerTitle: blank,
+        headerStyle: twoWayLinkStyles.navHeader,
+        render() {
+          return jsx(XboxLinkErrorDefault, { onClose });
         }
       }
     };
   }, items);
-  const accountLinkStepTracking = twoWayLinkStyles(9274).useAccountLinkStepTracking(PlatformTypes.XBOX, locationStack.locationStack);
-  obj = { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: XboxLinkModalScenes.LANDING, headerBackTitle: null };
+  const obj = twoWayLinkStyles(9258);
+  const accountLinkStepTracking = twoWayLinkStyles(9301).useAccountLinkStepTracking(PlatformTypes.XBOX, locationStack.locationStack);
+  const obj3 = { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: XboxLinkModalScenes.LANDING, headerBackTitle: null };
   const intl = twoWayLinkStyles(1114).intl;
-  obj[3] = intl.string(twoWayLinkStyles(1114).t["13/7kX"]);
-  return jsx(twoWayLinkStyles(7000).Navigator, { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: XboxLinkModalScenes.LANDING, headerBackTitle: null });
+  obj3.headerBackTitle = intl.string(twoWayLinkStyles(1114).t["13/7kX"]);
+  return jsx(twoWayLinkStyles(7014).Navigator, { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: XboxLinkModalScenes.LANDING, headerBackTitle: null });
 };

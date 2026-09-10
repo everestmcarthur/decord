@@ -1,74 +1,73 @@
-// Module ID: 15909
-// Function ID: 15910
-// Name: radio
-// Dependencies: [19, 7975, 1187, 1114, 1935, 15910, 14854, 4527, 15911, 1896, 11473, 2]
+// Module ID: 15939
+// Function ID: 15940
+// Name: ActivityPrivacyDefaultSharingSetting
+// Dependencies: [19, 7989, 1187, 1114, 1935, 15940, 14880, 4541, 15941, 1896, 11500, 2]
 
-// Module 15909 (radio)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
-import useIsInActivityPrivacyCopyExperiment from "useIsInActivityPrivacyCopyExperiment" /* 15910 */;
-import closure_3 from "noop" /* 19 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15939 (ActivityPrivacyDefaultSharingSetting)
+import util from "util" /* 1114 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import ActivityPrivacyMatchingExperiment from "ActivityPrivacyMatchingExperiment" /* 15940 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const SettingBuilders = fn(11500);
+const radio = SettingBuilders.createRadio({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.vpgck1);
+    const intl = util.intl;
+    return intl.string(util.t.vpgck1);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(7989).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   usePredicate() {
-    return useIsInActivityPrivacyCopyExperiment.useIsInActivityPrivacyCopyExperiment("ActivityPrivacyDefaultSharingSetting");
+    return ActivityPrivacyMatchingExperiment.useIsInActivityPrivacyCopyExperiment("ActivityPrivacyDefaultSharingSetting");
   },
   useOptions() {
-    return React.useMemo(() => {
-      let obj = { value: callback(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF, label: null, subLabel: null };
-      const intl = callback(1114).intl;
-      obj[1] = intl.string(callback(1114).t.FzgQna);
-      const intl2 = callback(1114).intl;
-      obj[2] = intl2.string(callback(1114).t.SQxoyc);
+    return noop.useMemo(() => {
+      const obj = { value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF, label: null, subLabel: null };
+      const intl = util.intl;
+      obj.label = intl.string(util.t.FzgQna);
+      const intl2 = util.intl;
+      obj.subLabel = intl2.string(util.t.SQxoyc);
       const items = [obj, , ];
-      obj = { value: callback(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS, label: null, subLabel: null };
-      const intl3 = callback(1114).intl;
-      obj[1] = intl3.string(callback(1114).t["1hvuGH"]);
-      const intl4 = callback(1114).intl;
-      obj[2] = intl4.string(callback(1114).t.odUCPE);
-      items[1] = obj;
-      obj = { value: callback(1187).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON, label: null };
-      const intl5 = callback(1114).intl;
-      obj[1] = intl5.string(callback(1114).t.fQc5la);
-      items[2] = obj;
+      const obj2 = { value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS, label: null, subLabel: null };
+      const intl3 = util.intl;
+      obj2.label = intl3.string(util.t["1hvuGH"]);
+      const intl4 = util.intl;
+      obj2.subLabel = intl4.string(util.t.odUCPE);
+      items[1] = obj2;
+      const obj3 = { value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON, label: null };
+      const intl5 = util.intl;
+      obj3.label = intl5.string(util.t.fQc5la);
+      items[2] = obj3;
       return items;
     }, []);
   },
   useValue() {
-    const DefaultGuildsActivityRestrictedV2 = explicitContentFromProto.DefaultGuildsActivityRestrictedV2;
+    const DefaultGuildsActivityRestrictedV2 = UserSettings.DefaultGuildsActivityRestrictedV2;
     return DefaultGuildsActivityRestrictedV2.useSetting();
   },
   onValueChange(arg0) {
     const NumberResult = Number(arg0);
-    const DefaultGuildsActivityRestrictedV2 = explicitContentFromProto.DefaultGuildsActivityRestrictedV2;
+    const DefaultGuildsActivityRestrictedV2 = UserSettings.DefaultGuildsActivityRestrictedV2;
     const setting = DefaultGuildsActivityRestrictedV2.getSetting();
-    const DefaultGuildsActivityRestrictedV22 = explicitContentFromProto.DefaultGuildsActivityRestrictedV2;
+    const DefaultGuildsActivityRestrictedV22 = UserSettings.DefaultGuildsActivityRestrictedV2;
     DefaultGuildsActivityRestrictedV22.updateSetting(NumberResult);
-    let obj = useIsInActivityPrivacyCopyExperiment;
     if (obj.getIsInActivityPrivacyUpsellExperiment("ActivityPrivacyDefaultSharingSetting")) {
-      let tmp2Result = tmp2(14854);
-      const affectedGuilds = tmp2Result.computeAffectedGuilds(setting, NumberResult);
+      const affectedGuilds = tmp2(14880).computeAffectedGuilds(setting, NumberResult);
       if (null != affectedGuilds) {
-        tmp2Result = tmp2(14854);
-        const activityRestrictionSettingName = tmp2Result.getActivityRestrictionSettingName(NumberResult);
-        obj = { direction: null, affectedGuildIds: null, settingName: null };
-        ({ direction: obj5[0], affectedGuildIds: obj5[1] } = affectedGuilds);
-        obj[2] = activityRestrictionSettingName;
-        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp2(1896)(15911, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj);
-        const obj4 = ACTION_SHEET_HEIGHT_HALFDefault;
+        const activityRestrictionSettingName = tmp2(14880).getActivityRestrictionSettingName(NumberResult);
+        const tmp2Result2 = tmp2(14880);
+        const obj2 = { direction: null, affectedGuildIds: null, settingName: null };
+        ({ direction: obj5.direction, affectedGuildIds: obj5.affectedGuildIds } = affectedGuilds);
+        obj2.settingName = activityRestrictionSettingName;
+        ActionSheetActionCreatorsDefault.openLazy(tmp2(1896)(15941, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj2);
       }
+      const tmp2Result = tmp2(14880);
     }
   }
-};
-createToggle = createToggle.createRadio(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ActivityPrivacyDefaultSharingSetting.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ActivityPrivacyDefaultSharingSetting.tsx");
 
-export default createToggle;
+export default radio;

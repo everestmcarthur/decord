@@ -1,56 +1,55 @@
-// Module ID: 11163
-// Function ID: 11164
+// Module ID: 11190
+// Function ID: 11191
 // Name: useMobileTenureBadgeImages
-// Dependencies: [1373, 11164, 11165, 11166, 11167, 11168, 11169, 11170, 11171, 11172, 11173, 11174, 11175, 11176, 11177, 11178, 11179, 11180, 11181, 11182, 11183, 11184, 11185, 11186, 11187, 2]
+// Dependencies: [1373, 11191, 11192, 11193, 11194, 11195, 11196, 11197, 11198, 11199, 11200, 11201, 11202, 11203, 11204, 11205, 11206, 11207, 11208, 11209, 11210, 11211, 11212, 11213, 11214, 2]
 // Exports: getMobileTenureBadgeImages, useMobileTenureBadgeImages
 
-// Module 11163 (useMobileTenureBadgeImages)
-import set from "set" /* 2 */;
-import GuildFeatures from "GuildFeatures" /* 1373 */;
-import registerAssetDefault from "registerAsset" /* 11164 */;
-import metadataDefault from "metadata" /* 11165 */;
-import metadataDefault2 from "metadata" /* 11166 */;
-import registerAssetDefault2 from "registerAsset" /* 11167 */;
-import metadataDefault3 from "metadata" /* 11168 */;
-import metadataDefault4 from "metadata" /* 11169 */;
-import registerAssetDefault3 from "registerAsset" /* 11170 */;
-import metadataDefault5 from "metadata" /* 11171 */;
-import metadataDefault6 from "metadata" /* 11172 */;
-import registerAssetDefault4 from "registerAsset" /* 11173 */;
-import metadataDefault7 from "metadata" /* 11174 */;
-import metadataDefault8 from "metadata" /* 11175 */;
-import registerAssetDefault5 from "registerAsset" /* 11176 */;
-import metadataDefault9 from "metadata" /* 11177 */;
-import metadataDefault10 from "metadata" /* 11178 */;
-import registerAssetDefault6 from "registerAsset" /* 11179 */;
-import metadataDefault11 from "metadata" /* 11180 */;
-import metadataDefault12 from "metadata" /* 11181 */;
-import registerAssetDefault7 from "registerAsset" /* 11182 */;
-import metadataDefault13 from "metadata" /* 11183 */;
-import metadataDefault14 from "metadata" /* 11184 */;
-import registerAssetDefault8 from "registerAsset" /* 11185 */;
-import metadataDefault15 from "metadata" /* 11186 */;
-import metadataDefault16 from "metadata" /* 11187 */;
+// Module 11190 (useMobileTenureBadgeImages)
+import PremiumConstants from "PremiumConstants" /* 1373 */;
+import _modDef11191 from "module_11191" /* 11191 */;
+import _modDef11192 from "module_11192" /* 11192 */;
+import _modDef11193 from "module_11193" /* 11193 */;
+import _modDef11194 from "module_11194" /* 11194 */;
+import _modDef11195 from "module_11195" /* 11195 */;
+import _modDef11196 from "module_11196" /* 11196 */;
+import _modDef11197 from "module_11197" /* 11197 */;
+import _modDef11198 from "module_11198" /* 11198 */;
+import _modDef11199 from "module_11199" /* 11199 */;
+import _modDef11200 from "module_11200" /* 11200 */;
+import _modDef11201 from "module_11201" /* 11201 */;
+import _modDef11202 from "module_11202" /* 11202 */;
+import _modDef11203 from "module_11203" /* 11203 */;
+import _modDef11204 from "module_11204" /* 11204 */;
+import _modDef11205 from "module_11205" /* 11205 */;
+import _modDef11206 from "module_11206" /* 11206 */;
+import _modDef11207 from "module_11207" /* 11207 */;
+import _modDef11208 from "module_11208" /* 11208 */;
+import _modDef11209 from "module_11209" /* 11209 */;
+import _modDef11210 from "module_11210" /* 11210 */;
+import _modDef11211 from "module_11211" /* 11211 */;
+import _modDef11212 from "module_11212" /* 11212 */;
+import _modDef11213 from "module_11213" /* 11213 */;
+import _modDef11214 from "module_11214" /* 11214 */;
+import size from "module_2" /* 2 */;
 
-const TieredTenureBadge = GuildFeatures.TieredTenureBadge;
-let obj = {};
-obj = { small: registerAssetDefault, medium: metadataDefault, large: metadataDefault2 };
-obj[TieredTenureBadge.PREMIUM_TENURE_1_MONTH] = obj;
-obj = { small: registerAssetDefault2, medium: metadataDefault3, large: metadataDefault4 };
-obj[TieredTenureBadge.PREMIUM_TENURE_3_MONTH] = obj;
-obj[TieredTenureBadge.PREMIUM_TENURE_6_MONTH] = { small: registerAssetDefault3, medium: metadataDefault5, large: metadataDefault6 };
-const obj1 = { small: registerAssetDefault3, medium: metadataDefault5, large: metadataDefault6 };
-obj[TieredTenureBadge.PREMIUM_TENURE_12_MONTH] = { small: registerAssetDefault4, medium: metadataDefault7, large: metadataDefault8 };
-const obj2 = { small: registerAssetDefault4, medium: metadataDefault7, large: metadataDefault8 };
-obj[TieredTenureBadge.PREMIUM_TENURE_24_MONTH] = { small: registerAssetDefault5, medium: metadataDefault9, large: metadataDefault10 };
-const obj3 = { small: registerAssetDefault5, medium: metadataDefault9, large: metadataDefault10 };
-obj[TieredTenureBadge.PREMIUM_TENURE_36_MONTH] = { small: registerAssetDefault6, medium: metadataDefault11, large: metadataDefault12 };
-const obj4 = { small: registerAssetDefault6, medium: metadataDefault11, large: metadataDefault12 };
-obj[TieredTenureBadge.PREMIUM_TENURE_60_MONTH] = { small: registerAssetDefault7, medium: metadataDefault13, large: metadataDefault14 };
-const obj5 = { small: registerAssetDefault7, medium: metadataDefault13, large: metadataDefault14 };
-obj[TieredTenureBadge.PREMIUM_TENURE_72_MONTH] = { small: registerAssetDefault8, medium: metadataDefault15, large: metadataDefault16 };
-const obj6 = { small: registerAssetDefault8, medium: metadataDefault15, large: metadataDefault16 };
-const result = set.fileFinishedImporting("modules/premium/tiered_tenure_badging/native/hooks/useMobileTenureBadgeImages.tsx");
+const TieredTenureBadge = PremiumConstants.TieredTenureBadge;
+const obj = {};
+obj[TieredTenureBadge.PREMIUM_TENURE_1_MONTH] = { small: _modDef11191, medium: _modDef11192, large: _modDef11193 };
+const obj2 = { small: _modDef11191, medium: _modDef11192, large: _modDef11193 };
+obj[TieredTenureBadge.PREMIUM_TENURE_3_MONTH] = { small: _modDef11194, medium: _modDef11195, large: _modDef11196 };
+const obj3 = { small: _modDef11194, medium: _modDef11195, large: _modDef11196 };
+obj[TieredTenureBadge.PREMIUM_TENURE_6_MONTH] = { small: _modDef11197, medium: _modDef11198, large: _modDef11199 };
+const obj4 = { small: _modDef11197, medium: _modDef11198, large: _modDef11199 };
+obj[TieredTenureBadge.PREMIUM_TENURE_12_MONTH] = { small: _modDef11200, medium: _modDef11201, large: _modDef11202 };
+const obj5 = { small: _modDef11200, medium: _modDef11201, large: _modDef11202 };
+obj[TieredTenureBadge.PREMIUM_TENURE_24_MONTH] = { small: _modDef11203, medium: _modDef11204, large: _modDef11205 };
+const obj6 = { small: _modDef11203, medium: _modDef11204, large: _modDef11205 };
+obj[TieredTenureBadge.PREMIUM_TENURE_36_MONTH] = { small: _modDef11206, medium: _modDef11207, large: _modDef11208 };
+const obj7 = { small: _modDef11206, medium: _modDef11207, large: _modDef11208 };
+obj[TieredTenureBadge.PREMIUM_TENURE_60_MONTH] = { small: _modDef11209, medium: _modDef11210, large: _modDef11211 };
+const obj8 = { small: _modDef11209, medium: _modDef11210, large: _modDef11211 };
+obj[TieredTenureBadge.PREMIUM_TENURE_72_MONTH] = { small: _modDef11212, medium: _modDef11213, large: _modDef11214 };
+const result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/native/hooks/useMobileTenureBadgeImages.tsx");
 
 export const useMobileTenureBadgeImages = function useMobileTenureBadgeImages(id) {
   let tmp = null;

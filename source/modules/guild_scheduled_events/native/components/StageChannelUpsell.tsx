@@ -1,114 +1,110 @@
-// Module ID: 9734
-// Function ID: 9735
+// Module ID: 9761
+// Function ID: 9762
 // Name: StageChannelUpsell
-// Dependencies: [32, 19, 17, 1961, 9735, 9704, 1074, 21, 4560, 576, 5123, 1178, 6992, 9736, 4556, 1114, 4975, 4763, 9737, 1896, 4527, 2]
+// Dependencies: [32, 19, 17, 1961, 9762, 9731, 1074, 21, 4574, 576, 5137, 1178, 7006, 9763, 4570, 1114, 4989, 4777, 9764, 1896, 4541, 2]
 // Exports: default
 
-// Module 9734 (StageChannelUpsell)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import Text from "Text" /* 4556 */;
-import Button2 from "Button" /* 4975 */;
-import PressableBase from "PressableBase" /* 5123 */;
-import registerAssetDefault from "registerAsset" /* 6992 */;
-import registerAssetDefault2 from "registerAsset" /* 9736 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { createChannelRecord } from "createChannelRecord" /* 1961 */;
-import { useStageChannelUpsellCardStore as closure_7 } from "useStageChannelUpsellCardStore" /* 9735 */;
-import { CREATE_GUILD_EVENT_MODAL_KEY as closure_8 } from "CREATE_GUILD_EVENT_MODAL_KEY" /* 9704 */;
-import { ChannelTypes } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9761 (StageChannelUpsell)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import Pressables from "Pressables" /* 5137 */;
+import _modDef7006 from "module_7006" /* 7006 */;
+import _modDef9763 from "module_9763" /* 9763 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ Image: c4, View: c5 } = get_ActivityIndicator);
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const createChannelRecord = fn(1961).createChannelRecord;
+let closure_7 = fn(9762).useStageChannelUpsellCardStore;
+let closure_8 = fn(9731).CREATE_GUILD_EVENT_MODAL_KEY;
+const ChannelTypes = fn(1074).ChannelTypes;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const CREATE_CHANNEL_MODAL_KEY = "CREATE_CHANNEL_MODAL_KEY";
-createCacheKey = { container: null, image: null, closeContainer: null, header: null, description: null, button: null };
-createCacheKey = { flexDirection: "column", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 16, margin: 16, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginBottom: 16 };
-createCacheKey[2] = { position: "absolute", top: 14, right: 14 };
-createCacheKey[3] = { lineHeight: 20, marginBottom: 4 };
-createCacheKey[4] = { textAlign: "center", marginBottom: 4 };
-createCacheKey[5] = { marginTop: 12, alignSelf: "stretch" };
-let closure_13 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/StageChannelUpsell.tsx");
+const createStyles = fn(4574);
+let obj2 = { container: { flexDirection: "column", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 16, margin: 16, borderRadius: nativeDefault.radii.sm }, image: { marginBottom: 16 }, closeContainer: { position: "absolute", top: 14, right: 14 }, header: { lineHeight: 20, marginBottom: 4 }, description: { textAlign: "center", marginBottom: 4 }, button: { marginTop: 12, alignSelf: "stretch" } };
+let closure_13 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/StageChannelUpsell.tsx");
 
 export default function StageChannelUpsell(arg0) {
   ({ guildId: require, onCreate: importDefault } = arg0);
-  dependencyMap = undefined;
-  let tmp = callback5();
-  const tmp2 = callback(callback2(), 2);
+  let tmp = closure_13();
+  const tmp2 = _slicedToArray(closure_7(), 2);
   dependencyMap = tmp3;
   let tmp4 = null;
   if (!tmp2[0]) {
-    let obj = { style: null, children: null };
-    obj[0] = tmp.container;
-    obj = { onPress: null, accessibilityRole: "button", style: null, children: null };
-    obj[0] = tmp3;
-    obj[2] = tmp.closeContainer;
-    obj = { source: null };
-    obj[0] = registerAssetDefault;
-    obj[3] = callback3(Button.Icon, obj);
-    const items = [callback3(PressableBase.PressableOpacity, obj), , , , , ];
-    obj1 = { source: null, style: null };
-    obj1[0] = registerAssetDefault2;
-    obj1[1] = tmp.image;
-    items[1] = callback3(closure_4, obj1);
-    let obj2 = { style: null, variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
-    obj2[0] = tmp.header;
-    const intl = getSystemLocale.intl;
-    obj2[3] = intl.string(getSystemLocale.t.Sx8Ezi);
-    items[2] = callback3(Text.Text, obj2);
-    const obj3 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
-    obj3[0] = tmp.description;
-    const intl2 = getSystemLocale.intl;
-    obj3[3] = intl2.string(getSystemLocale.t.JUzPhm);
-    items[3] = callback3(Text.Text, obj3);
-    const obj4 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
-    obj4[0] = tmp.description;
-    const intl3 = getSystemLocale.intl;
-    const obj5 = { suggestionsHook: null };
-    obj5[0] = function suggestionsHook(children) {
-      return callback2(callback(lib[14]).Text, { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children }, arg1);
+    let obj = { style: tmp.container, children: null };
+    let obj2 = { onPress: tmp3, accessibilityRole: "button", style: tmp.closeContainer, children: null };
+    let obj3 = { source: _modDef7006 };
+    obj2.children = closure_10(native.Icon, obj3);
+    const items = [closure_10(Pressables.PressableOpacity, obj2), , , , , ];
+    const obj4 = { source: _modDef9763, style: tmp.image };
+    items[1] = closure_10(closure_4, obj4);
+    const obj5 = { style: tmp.header, variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
+    const intl = util.intl;
+    obj5.children = intl.string(util.t.Sx8Ezi);
+    items[2] = closure_10(Text_Text.Text, obj5);
+    const obj6 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+    const intl2 = util.intl;
+    obj6.children = intl2.string(util.t.JUzPhm);
+    items[3] = closure_10(Text_Text.Text, obj6);
+    const obj7 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+    const intl3 = util.intl;
+    const obj8 = {
+      suggestionsHook(children, arg1) {
+          return closure_1_10(guildId(4570).Text, { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children }, arg1);
+        }
     };
-    obj4[3] = intl3.format(getSystemLocale.t.Vh7rP7, obj5);
-    items[4] = callback3(Text.Text, obj4);
-    const obj6 = { style: null, children: null };
-    obj6[0] = tmp.button;
-    const obj7 = { variant: "secondary", size: "md", text: null, onPress: null };
-    const intl4 = getSystemLocale.intl;
-    obj7[2] = intl4.string(getSystemLocale.t["X/3SyA"]);
-    obj7[3] = function onPress() {
-      let obj = closure_1_1(lib[17]);
-      obj.popWithKey(closure_1_8);
-      obj = {
-        guildId: closure_0,
-        channelType: closure_1_9.GUILD_STAGE_VOICE,
+    obj7.children = intl3.format(util.t.Vh7rP7, obj8);
+    items[4] = closure_10(Text_Text.Text, obj7);
+    const obj9 = { style: tmp.button, children: null };
+    const obj10 = { variant: "secondary", size: "md", text: null, onPress: null };
+    const intl4 = util.intl;
+    obj10.text = intl4.string(util.t["X/3SyA"]);
+    obj10.onPress = function onPress() {
+      ModalActionCreatorsDefault.popWithKey(closure_8);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9764, dependencyMap.paths), {
+        guildId,
+        channelType: ChannelTypes.GUILD_STAGE_VOICE,
         onChannelCreated(id) {
-          const tmp = closure_1_6({ id, type: closure_1_9.GUILD_STAGE_VOICE });
+          const tmp = createChannelRecord({ id, type: constants.GUILD_STAGE_VOICE });
           if (null != tmp) {
-            callback(tmp);
+            closure_1_1(tmp);
           }
         },
         onClose() {
-          callback(table[17]).popWithKey(closure_12);
+          closure_1_1(dependencyMap[17]).popWithKey(closure_1_12);
+        }
+      }, CREATE_CHANNEL_MODAL_KEY);
+      dependencyMap();
+      const obj3 = {
+        guildId,
+        channelType: ChannelTypes.GUILD_STAGE_VOICE,
+        onChannelCreated(id) {
+          const tmp = createChannelRecord({ id, type: constants.GUILD_STAGE_VOICE });
+          if (null != tmp) {
+            closure_1_1(tmp);
+          }
+        },
+        onClose() {
+          closure_1_1(dependencyMap[17]).popWithKey(closure_1_12);
         }
       };
-      closure_1_1(lib[17]).pushLazy(closure_1_0(lib[19])(lib[18], lib.paths), obj, closure_1_12);
-      lib();
-      const obj2 = closure_1_1(lib[17]);
-      closure_1_1(lib[20]).hideActionSheet();
+      ActionSheetActionCreatorsDefault.hideActionSheet();
     };
-    obj6[1] = callback3(Button2.Button, obj7);
-    items[5] = callback3(closure_5, obj6);
-    obj[1] = items;
-    tmp4 = callback4(closure_5, obj);
+    obj9.children = closure_10(components_Button_Button.Button, obj10);
+    items[5] = closure_10(closure_5, obj9);
+    obj.children = items;
+    tmp4 = closure_11(closure_5, obj);
   }
   return tmp4;
 };

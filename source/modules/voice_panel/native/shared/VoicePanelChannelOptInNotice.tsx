@@ -1,34 +1,33 @@
-// Module ID: 17118
-// Function ID: 17119
-// Dependencies: [19, 21, 7113, 5589, 5605, 1114, 5611, 13846, 2]
+// Module ID: 17149
+// Function ID: 17150
+// Name: VoicePanelChannelOptInNotice
+// Dependencies: [19, 21, 7127, 5603, 5619, 1114, 5625, 13869, 2]
 
-// Module 17118
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 17149 (VoicePanelChannelOptInNotice)
+import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7127 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
-const memoResult = importAllResult.memo(function VoicePanelChannelOptInNotice(channel) {
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelChannelOptInNotice.tsx");
+
+export default noop.memo(function VoicePanelChannelOptInNotice(channel) {
   channel = channel.channel;
   const analyticsSection = channel.analyticsSection;
   const items = [channel, analyticsSection];
-  const callback = importAllResult.useCallback(() => {
-    let obj = channel(closure_1_2[2]);
-    obj = { section: analyticsSection };
-    obj.setOptInChannel(channel.guild_id, channel.id, true, obj);
+  const callback = noop.useCallback(() => {
+    OptInChannelsActionCreators.setOptInChannel(channel.guild_id, channel.id, true, { section: analyticsSection });
   }, items);
-  let obj = { style: channel.style, children: null };
-  obj = { label: null, subLabel: null, icon: null, onPress: null, start: true, end: true, arrow: true };
+  const obj = { style: channel.style, children: null };
+  const obj2 = { label: null, subLabel: null, icon: null, onPress: null, start: true, end: true, arrow: true };
   const intl = channel(1114).intl;
-  obj[0] = intl.string(channel(1114).t["9mysCh"]);
+  obj2.label = intl.string(channel(1114).t["9mysCh"]);
   const intl2 = channel(1114).intl;
-  obj[1] = intl2.string(channel(1114).t.PDUCIN);
-  obj = { IconComponent: channel(13846).ChannelListMagnifyingGlassIcon };
-  obj[2] = jsx(channel(5611).TableRowIcon, { IconComponent: channel(13846).ChannelListMagnifyingGlassIcon });
-  obj[3] = callback;
-  obj[1] = jsx(channel(5605).TableRow, { IconComponent: channel(13846).ChannelListMagnifyingGlassIcon });
-  return jsx(analyticsSection(5589), { IconComponent: channel(13846).ChannelListMagnifyingGlassIcon });
+  obj2.subLabel = intl2.string(channel(1114).t.PDUCIN);
+  const tmp2 = analyticsSection(5603);
+  obj2.icon = jsx(channel(5625).TableRowIcon, { IconComponent: channel(13869).ChannelListMagnifyingGlassIcon });
+  obj2.onPress = callback;
+  obj.children = jsx(channel(5619).TableRow, { label: null, subLabel: null, icon: null, onPress: null, start: true, end: true, arrow: true });
+  return <tmp2 style={arg0.style}>{null}</tmp2>;
 });
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelChannelOptInNotice.tsx");
-
-export default memoResult;

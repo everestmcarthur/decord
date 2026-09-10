@@ -1,11 +1,11 @@
-// Module ID: 8356
-// Function ID: 8357
+// Module ID: 8384
+// Function ID: 8385
 // Name: ContentInventoryAuthorType
 // Dependencies: [2]
 
-// Module 8356 (ContentInventoryAuthorType)
-import set from "set" /* 2 */;
+// Module 8384 (ContentInventoryAuthorType)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ContentInventoryAuthorType.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ContentInventoryAuthorType.tsx");
 
 export const ContentInventoryAuthorType = { AUTHOR_TYPE_UNSPECIFIED: 0, [0]: "AUTHOR_TYPE_UNSPECIFIED", USER: 1, [1]: "USER" };

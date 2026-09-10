@@ -1,11 +1,11 @@
-// Module ID: 7512
-// Function ID: 7513
+// Module ID: 7526
+// Function ID: 7527
 // Name: AutomodQuarantineEventMessageEmbedKeys
 // Dependencies: [2]
 
-// Module 7512 (AutomodQuarantineEventMessageEmbedKeys)
-import set from "set" /* 2 */;
+// Module 7526 (AutomodQuarantineEventMessageEmbedKeys)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/AutomodQuarantineEventMessageEmbedKeys.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/AutomodQuarantineEventMessageEmbedKeys.tsx");
 
 export const AutomodQuarantineEventMessageEmbedKeys = { MESSAGE_SEND: "message_send", GUILD_JOIN: "guild_join", USERNAME_UPDATE: "username_update", CLAN_TAG_UPDATE: "clan_tag_update" };

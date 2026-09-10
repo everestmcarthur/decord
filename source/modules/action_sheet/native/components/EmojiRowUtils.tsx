@@ -1,21 +1,21 @@
-// Module ID: 11734
-// Function ID: 11735
-// Name: shouldShowEmojiRow
+// Module ID: 11760
+// Function ID: 11761
+// Name: EmojiRowUtils
 // Dependencies: [1074, 1384, 2]
 // Exports: shouldShowEmojiRow
 
-// Module 11734 (shouldShowEmojiRow)
-import set from "set" /* 2 */;
-import hasFlag from "hasFlag" /* 1384 */;
-import ME from "ME" /* 1074 */;
+// Module 11760 (EmojiRowUtils)
+import FlagUtils from "FlagUtils" /* 1384 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-({ MessageFlags: obj1, MessageStates: c3, MessageTypes: c4 } = ME);
-const result = set.fileFinishedImporting("modules/action_sheet/native/components/EmojiRowUtils.tsx");
+({ MessageFlags: c2, MessageStates: c3, MessageTypes: closure_4 } = Constants);
+const result = size.fileFinishedImporting("modules/action_sheet/native/components/EmojiRowUtils.tsx");
 
-export const shouldShowEmojiRow = function shouldShowEmojiRow(closure_8, message, closure_10) {
-  let tmp = closure_8;
-  if (closure_8) {
-    tmp = closure_10;
+export const shouldShowEmojiRow = function shouldShowEmojiRow(arg0, message, arg2) {
+  let tmp = arg0;
+  if (arg0) {
+    tmp = arg2;
   }
   if (tmp) {
     tmp = message.state !== constants2.SEND_FAILED;
@@ -27,8 +27,7 @@ export const shouldShowEmojiRow = function shouldShowEmojiRow(closure_8, message
     tmp = message.type !== constants3.THREAD_STARTER_MESSAGE;
   }
   if (tmp) {
-    tmp = !hasFlag.hasFlag(message.flags, constants.EPHEMERAL);
-    const obj = hasFlag;
+    tmp = !FlagUtils.hasFlag(message.flags, constants.EPHEMERAL);
   }
   return tmp;
 };

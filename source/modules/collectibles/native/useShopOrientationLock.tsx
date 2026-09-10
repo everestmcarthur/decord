@@ -1,20 +1,22 @@
-// Module ID: 15809
-// Function ID: 15810
+// Module ID: 15839
+// Function ID: 15840
 // Name: useShopOrientationLock
-// Dependencies: [19, 11790, 2]
+// Dependencies: [19, 11816, 2]
 // Exports: useShopOrientationLock
 
-// Module 15809 (useShopOrientationLock)
-import closure_2 from "noop" /* 19 */;
+// Module 15839 (useShopOrientationLock)
+import applyOrientationLock from "applyOrientationLock" /* 11816 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/collectibles/native/useShopOrientationLock.tsx");
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/native/useShopOrientationLock.tsx");
 
 export const useShopOrientationLock = function useShopOrientationLock() {
-  const effect = React.useEffect(() => {
-    callback(table[1]).applyOrientationLock("PORTRAIT", true);
+  const effect = noop.useEffect(() => {
+    applyOrientationLock.applyOrientationLock("PORTRAIT", true);
     return () => {
-      const result = callback(table[1]).releaseOrientationLock({ unlockAfterRotatingToPreviousLock: false });
+      const result = closure_1_0(closure_1_1[1]).releaseOrientationLock({ unlockAfterRotatingToPreviousLock: false });
     };
   }, []);
 };

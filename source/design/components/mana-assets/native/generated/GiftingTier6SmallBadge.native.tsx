@@ -1,17 +1,17 @@
-// Module ID: 6175
-// Function ID: 6176
+// Module ID: 6189
+// Function ID: 6190
 // Name: GiftingTier6SmallBadge
-// Dependencies: [21, 5587, 6176, 2]
+// Dependencies: [21, 5601, 6190, 2]
 // Exports: GiftingTier6SmallBadge
 
-// Module 6175 (GiftingTier6SmallBadge)
-import set from "set" /* 2 */;
+// Module 6189 (GiftingTier6SmallBadge)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import vanityUrlDefault from "vanityUrl" /* 6176 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6190 from "module_6190" /* 6190 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GiftingTier6SmallBadge.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/GiftingTier6SmallBadge.native.tsx");
 
 export const GiftingTier6SmallBadge = function GiftingTier6SmallBadge(width) {
   let num = width.width;
@@ -27,14 +27,14 @@ export const GiftingTier6SmallBadge = function GiftingTier6SmallBadge(width) {
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: vanityUrlDefault };
-  obj[1] = obj;
-  obj = { width: num * num3, height: num2 * num3 };
-  const items = [obj];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { width: num * num3, height: num2 * num3 });
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef6190 };
+  obj.source = obj2;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

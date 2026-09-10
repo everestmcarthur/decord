@@ -1,12 +1,12 @@
-// Module ID: 8420
-// Function ID: 8421
-// Name: ContentIdType
+// Module ID: 8448
+// Function ID: 8449
+// Name: SafetyHubModels
 // Dependencies: [2]
 
-// Module 8420 (ContentIdType)
-import set from "set" /* 2 */;
+// Module 8448 (SafetyHubModels)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/safety_hub/SafetyHubModels.tsx");
+const result = size.fileFinishedImporting("modules/safety_hub/SafetyHubModels.tsx");
 
 export const ContentIdType = { MESSAGE: "message" };
 export const MemberType = { OWNER: 1, [1]: "OWNER", MEMBER: 2, [2]: "MEMBER" };

@@ -1,28 +1,28 @@
-// Module ID: 11493
-// Function ID: 11494
-// Name: isIosAttributionEligible
-// Dependencies: [11494, 1115, 7699, 11496, 2]
+// Module ID: 11520
+// Function ID: 11521
+// Name: IosAttributionEligibility
+// Dependencies: [11521, 1115, 7713, 11523, 2]
 // Exports: getIosAttributionClickFramework, isCampaignIosAttributionEnabled, isIosAttributionEligible
 
-// Module 11493 (isIosAttributionEligible)
-import set from "set" /* 2 */;
-import set2 from "set" /* 1115 */;
-import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7699 */;
-import apexExperiment from "apexExperiment" /* 11494 */;
+// Module 11520 (IosAttributionEligibility)
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import QuestDataUtils from "QuestDataUtils" /* 7713 */;
+import apexExperiment from "apexExperiment" /* 11521 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/ads/ios_attribution/IosAttributionEligibility.tsx");
+const result = size.fileFinishedImporting("modules/ads/ios_attribution/IosAttributionEligibility.tsx");
 
 export const isIosAttributionEligible = function isIosAttributionEligible() {
   const IosAttributionFeatureGate = apexExperiment.IosAttributionFeatureGate;
   let enabled = IosAttributionFeatureGate.getConfig({ location: "quest_ios_attribution" }).enabled;
   if (enabled) {
-    enabled = set2.isIOS();
-    const tmpResult = set2;
+    enabled = PlatformUtils.isIOS();
+    const tmpResult = PlatformUtils;
   }
   return enabled;
 };
-export const isCampaignIosAttributionEnabled = function isCampaignIosAttributionEnabled(sourceQuestContent, adContentId) {
-  const adContext = getQuestDeliveryDataForPlacement.getAdContext(sourceQuestContent, adContentId);
+export const isCampaignIosAttributionEnabled = function isCampaignIosAttributionEnabled(sourceQuestContent, item) {
+  const adContext = QuestDataUtils.getAdContext(sourceQuestContent, item);
   let prop;
   if (adContext != null) {
     prop = adContext.is_campaign_ios_attribution_enabled;
@@ -33,24 +33,24 @@ export const getIosAttributionClickFramework = function getIosAttributionClickFr
   const IosAttributionFeatureGate = apexExperiment.IosAttributionFeatureGate;
   let enabled = IosAttributionFeatureGate.getConfig({ location: "quest_ios_attribution" }).enabled;
   if (enabled) {
-    let tmpResult = tmp(1115);
-    enabled = tmpResult.isIOS();
+    enabled = tmp(1115).isIOS();
+    const tmpResult = tmp(1115);
   }
   let activeIosAttributionFramework = null;
   if (enabled) {
     activeIosAttributionFramework = null;
     if (arg0) {
-      tmpResult = tmp(7699);
-      const adContext = tmpResult.getAdContext(sourceQuestContent, adContentId);
+      const adContext = tmp(7713).getAdContext(sourceQuestContent, adContentId);
       let prop;
       if (adContext != null) {
         prop = adContext.is_campaign_ios_attribution_enabled;
       }
       activeIosAttributionFramework = null;
       if (true === prop) {
-        activeIosAttributionFramework = tmp(11496).getActiveIosAttributionFramework();
-        const tmpResult1 = tmp(11496);
+        activeIosAttributionFramework = tmp(11523).getActiveIosAttributionFramework();
+        const tmpResult4 = tmp(11523);
       }
+      const tmpResult3 = tmp(7713);
     }
   }
   return activeIosAttributionFramework;

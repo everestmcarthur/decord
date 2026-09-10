@@ -1,16 +1,16 @@
-// Module ID: 17358
-// Function ID: 17359
+// Module ID: 17389
+// Function ID: 17390
 // Name: shouldShowLogUploadForCategory
-// Dependencies: [11631, 2]
+// Dependencies: [11657, 2]
 // Exports: shouldShowLogUploadForCategory
 
-// Module 17358 (shouldShowLogUploadForCategory)
-import set from "set" /* 2 */;
-import FeedbackRating2 from "FeedbackRating" /* 11631 */;
+// Module 17389 (shouldShowLogUploadForCategory)
+import Constants from "Constants" /* 11657 */;
+import size from "module_2" /* 2 */;
 
-const FeedbackRating = FeedbackRating2.FeedbackRating;
+const FeedbackRating = Constants.FeedbackRating;
 let closure_1 = {};
-const result = set.fileFinishedImporting("modules/feedback/shouldShowLogUploadForCategory.tsx");
+const result = size.fileFinishedImporting("modules/feedback/shouldShowLogUploadForCategory.tsx");
 
 export const shouldShowLogUploadForCategory = function shouldShowLogUploadForCategory(rating, category, reason) {
   if (rating !== FeedbackRating.BAD) {
@@ -22,7 +22,7 @@ export const shouldShowLogUploadForCategory = function shouldShowLogUploadForCat
     return false;
   } else {
     let num2 = 0.01;
-    if (null != table[category]) {
+    if (null != closure_1[category]) {
       let num3 = tmp2[reason.value];
       if (num3 == null) {
         num3 = 0.01;

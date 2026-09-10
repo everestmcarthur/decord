@@ -1,61 +1,59 @@
-// Module ID: 9194
-// Function ID: 9195
+// Module ID: 9221
+// Function ID: 9222
 // Name: RestrictedGuildProfileView
-// Dependencies: [19, 17, 21, 9195, 4495, 4262, 576, 4987, 5584, 4556, 1114, 2]
+// Dependencies: [19, 17, 21, 9222, 4509, 4275, 576, 5001, 5598, 4570, 1114, 2]
 // Exports: default
 
-// Module 9194 (RestrictedGuildProfileView)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import map from "map" /* 4262 */;
-import useThemeDefault from "useTheme" /* 4495 */;
-import Text from "Text" /* 4556 */;
-import LinearGradientDefault from "LinearGradient" /* 4987 */;
-import GuildIconSizes from "GuildIconSizes" /* 5584 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;
-import GuildProfileBackground from "GuildProfileBackground" /* 9195 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 9221 (RestrictedGuildProfileView)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import useToken from "useToken" /* 4275 */;
+import useThemeDefault from "useTheme" /* 4509 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import LinearGradientDefault from "LinearGradient" /* 5001 */;
+import GuildIcon from "GuildIcon" /* 5598 */;
+import GuildProfileView from "GuildProfileView" /* 9222 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/guild_profile/native/components/RestrictedGuildProfileView.tsx");
+const GuildIconDefault = GuildIcon;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_profile/native/components/RestrictedGuildProfileView.tsx");
 
 export default function RestrictedGuildProfileView() {
-  let obj = GuildProfileBackground;
-  const styles = obj.useStyles();
-  obj1 = map;
-  obj = { style: styles.container, children: null };
-  const token = obj1.useToken(ThemesDefault.colors.BACKGROUND_BASE_LOWEST);
-  obj = { style: styles.colorBanner, start: null, end: null, colors: null };
+  const styles = GuildProfileView.useStyles();
   const tmp2 = useThemeDefault();
-  obj[1] = GuildProfileBackground.DiagonalGradient.START;
-  obj[2] = GuildProfileBackground.DiagonalGradient.END;
-  let obj4 = GuildProfileBackground;
-  obj[3] = obj4.getBackgroundForProfile(tmp2, token);
-  const items = [callback(LinearGradientDefault, obj), , ];
-  obj1 = { style: styles.header, children: null };
-  const obj2 = { style: styles.avatarBackground, children: null };
-  const obj3 = { size: null, value: "?", selected: false, textStyle: null };
+  const obj3 = { style: styles.container, children: null };
+  const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOWEST);
+  const obj4 = { style: styles.colorBanner, start: null, end: null, colors: null };
+  obj4.start = GuildProfileView.DiagonalGradient.START;
+  obj4.end = GuildProfileView.DiagonalGradient.END;
   const tmp4 = LinearGradientDefault;
-  obj3[0] = GuildIconSizes.GuildIconSizes.XXLARGE;
-  obj3[3] = styles.restrictedAcronym;
-  obj2[1] = callback(GuildIconSizesDefault, obj3);
-  obj1[1] = callback(View, obj2);
-  items[1] = callback(View, obj1);
-  obj4 = { style: styles.body, children: null };
-  const obj5 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale.intl;
-  obj5[2] = intl.string(getSystemLocale.t.wZmueu);
-  const items1 = [callback(Text.Text, obj5), ];
-  const obj6 = { variant: "text-md/medium", color: "text-subtle", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj6[2] = intl2.string(getSystemLocale.t["8mfCqY"]);
-  items1[1] = callback(Text.Text, obj6);
-  obj4[1] = items1;
-  items[2] = callback2(View, obj4);
-  obj[1] = items;
-  return callback2(View, obj);
+  obj4.colors = GuildProfileView.getBackgroundForProfile(tmp2, token);
+  const items = [React4(tmp4, obj4), , ];
+  const obj6 = { style: styles.header, children: null };
+  const obj7 = { style: styles.avatarBackground, children: null };
+  const obj8 = { size: null, value: "?", selected: false, textStyle: null };
+  obj8.size = GuildIcon.GuildIconSizes.XXLARGE;
+  obj8.textStyle = styles.restrictedAcronym;
+  obj7.children = React4(GuildIconDefault, obj8);
+  obj6.children = React4(View, obj7);
+  items[1] = React4(View, obj6);
+  const obj9 = { style: styles.body, children: null };
+  const obj10 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  const intl = util.intl;
+  obj10.children = intl.string(util.t.wZmueu);
+  const items1 = [React4(Text_Text.Text, obj10), ];
+  const obj11 = { variant: "text-md/medium", color: "text-subtle", children: null };
+  const intl2 = util.intl;
+  obj11.children = intl2.string(util.t["8mfCqY"]);
+  items1[1] = React4(Text_Text.Text, obj11);
+  obj9.children = items1;
+  items[2] = hasOwnProperty(View, obj9);
+  obj3.children = items;
+  return hasOwnProperty(View, obj3);
 };

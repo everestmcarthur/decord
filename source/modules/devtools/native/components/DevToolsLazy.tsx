@@ -1,111 +1,109 @@
-// Module ID: 14582
-// Function ID: 14583
-// Name: NativeModules
-// Dependencies: [5, 19, 17, 7720, 7719, 21, 1115, 14583, 14584, 1896, 504, 14578, 15928, 2]
+// Module ID: 14607
+// Function ID: 14608
+// Name: DevToolsLazy
+// Dependencies: [5, 19, 17, 7734, 7733, 21, 1115, 14608, 14609, 1896, 504, 14603, 15958, 2]
 // Exports: default
 
-// Module 14582 (NativeModules)
-import enforcingDefault from "enforcing" /* 14583 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "noop" /* 19 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "init" /* 7720 */;
-import closure_6 from "initialize" /* 7719 */;
-import { jsx } from "jsxProd" /* 21 */;
-import set from "set" /* 1115 */;
+// Module 14607 (DevToolsLazy)
+import NativeKeyCommandsModuleDefault from "NativeKeyCommandsModule" /* 14608 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
+import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7734 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7733 */;
 
-const require = arg1;
-if (set.isAndroid()) {
-  let keyModifierControl = enforcingDefault.getConstants().keyModifierControl;
-  const importDefaultResult = enforcingDefault;
+const require = fn;
+const NativeModules = fn(17).NativeModules;
+const jsx = fn(21).jsx;
+const PlatformUtils = fn(1115);
+if (PlatformUtils.isAndroid()) {
+  let keyModifierControl = NativeKeyCommandsModuleDefault.getConstants().keyModifierControl;
+  const importDefaultResult = NativeKeyCommandsModuleDefault;
 } else {
   keyModifierControl = NativeModules.KeyCommandsView.keyModifierControl;
 }
-set = {
-  input: "o",
-  modifierFlags: keyModifierControl,
-  eventName: "keyCommandShowDevTools",
-  discoverabilityTitle: "Open DevTools Panel",
-  onKeyCommand() {
-    return callback(function*() {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          v0 = 2;
-          if (0 === paths) {
-            if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              paths = 1;
-              v0 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = v0(paths[9])(paths[8], paths.paths);
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
+let items = [
+  {
+    input: "o",
+    modifierFlags: keyModifierControl,
+    eventName: "keyCommandShowDevTools",
+    discoverabilityTitle: "Open DevTools Panel",
+    onKeyCommand() {
+      return (async (arg0, value) => {
+        if (c0 === 2) {
+          c0 = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp3 === 3) {
+          if (arg0 === 1) {
+            throw value;
           } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
-            arg1.navigateToDevTools();
-            v0 = 3;
             return { value: "HermesInternal", done: null };
           }
-        } catch (tmp8) {
-          v0 = tmp;
-          throw tmp8;
+        } else {
+          try {
+            c0 = 2;
+            if (0 === c1) {
+              if (arg0 === 1) {
+                c0 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c0 = 3;
+                const obj3 = { value, done: true };
+                return obj3;
+              } else {
+                c1 = 1;
+                c0 = 1;
+                const obj4 = { value: require("asyncRequireImpl")(paths[8], paths.paths), done: false };
+                return obj4;
+              }
+            } else if (arg0 === 1) {
+              c0 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c0 = 3;
+              const obj = { value, done: true };
+              return obj;
+            } else {
+              value.navigateToDevTools();
+              c0 = 3;
+              return { value: "HermesInternal", done: null };
+            }
+          } catch (tmp8) {
+            c0 = tmp;
+            throw tmp8;
+          }
         }
-      }
-    })();
+      })();
+    }
   }
-};
-let items = [set];
-let result = set.fileFinishedImporting("modules/devtools/native/components/DevToolsLazy.tsx");
+];
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/devtools/native/components/DevToolsLazy.tsx");
 
 export default function DevToolsLazy() {
-  items = [closure_5];
+  items = [DeveloperExperimentStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => isDeveloper.isDeveloper);
   const obj = stateFromStores(504);
   const tmp = stateFromStores;
-  const items1 = [closure_6];
+  const items1 = [DevToolsSettingsStore];
   const stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () => showDevWidget.showDevWidget);
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (obj.isIOS()) {
-      closure_1_5.addChangeListener(() => {
-        const NSUserDefaultsBridge = closure_1_4.NSUserDefaultsBridge;
+      DeveloperExperimentStore.addChangeListener(() => {
+        NSUserDefaultsBridge = NSUserDefaultsBridge.NSUserDefaultsBridge;
         if (NSUserDefaultsBridge != null) {
-          const result = NSUserDefaultsBridge.setIsDiscordDeveloper(closure_0);
+          const result = NSUserDefaultsBridge.setIsDiscordDeveloper(stateFromStores);
         }
       });
     }
   });
   const obj2 = stateFromStores(504);
-  const keyCommands = stateFromStores(14578).useKeyCommands(stateFromStores ? items : []);
+  const keyCommands = stateFromStores(14603).useKeyCommands(stateFromStores ? items : []);
   if (stateFromStores) {
     if (stateFromStores1) {
-      return jsx(tmp(15928).default, {});
+      return jsx(tmp(15958).default, {});
     }
   }
   return null;

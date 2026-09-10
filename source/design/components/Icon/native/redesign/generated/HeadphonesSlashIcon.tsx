@@ -1,26 +1,26 @@
-// Module ID: 9128
-// Function ID: 9129
+// Module ID: 9155
+// Function ID: 9156
 // Name: HeadphonesSlashIcon
-// Dependencies: [19, 21, 576, 4261, 9129, 2]
+// Dependencies: [19, 21, 576, 4274, 9156, 2]
 // Exports: HeadphonesSlashIcon
 
-// Module 9128 (HeadphonesSlashIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 9129 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 9155 (HeadphonesSlashIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod9156 from "module_9156" /* 9156 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/HeadphonesSlashIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/HeadphonesSlashIcon.tsx");
 
 export const HeadphonesSlashIcon = function HeadphonesSlashIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9156, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

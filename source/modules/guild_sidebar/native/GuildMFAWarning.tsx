@@ -1,28 +1,24 @@
-// Module ID: 16202
-// Function ID: 16203
-// Name: handlePress
-// Dependencies: [5, 19, 17, 1074, 21, 4560, 576, 10124, 2024, 1896, 4255, 5123, 16203, 4556, 1114, 1178, 2]
+// Module ID: 16232
+// Function ID: 16233
+// Name: GuildMFAWarning
+// Dependencies: [5, 19, 17, 1074, 21, 4574, 576, 10151, 2024, 1896, 4268, 5137, 16233, 4570, 1114, 1178, 2]
 // Exports: default, getScaledGuildMFAWarningHeight
 
-// Module 16202 (handlePress)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import Text from "Text" /* 4556 */;
-import PressableBase from "PressableBase" /* 5123 */;
-import map from "map" /* 10124 */;
-import registerAssetDefault from "registerAsset" /* 16203 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16232 (GuildMFAWarning)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Pressables from "Pressables" /* 5137 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10151 */;
+import _modDef16233 from "module_16233" /* 16233 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function handlePress() {
   const self = this;
-  const apply = _handlePress.apply;
+  const apply = closure_10.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -30,104 +26,88 @@ function handlePress() {
   }
   return applyArgumentsResult;
 }
-function _handlePress() {
-  const self = this;
-  const tmp = callback(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
+let closure_10 = async function _handlePress(arg0, value) {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      try {
-        c3 = 2;
-        if (0 === paths) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const callback = tmp5;
-            let articleURL = tmp2;
-            articleURL = undefined;
-            paths = 1;
-            c3 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = closure_1_0(paths[9])(paths[8], paths.paths);
-            return obj1;
-          }
-        } else if (arg0 === 1) {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c3 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
           c3 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          articleURL = arg1.default;
-          obj = callback(paths[10]);
-          obj.openURL(articleURL.getArticleURL(constants.SETTING_UP_TWO_FACTOR));
-          c3 = 3;
-          return { value: "HermesInternal", done: null };
+          closure_1 = tmp5;
+          closure_0 = tmp2;
+          closure_128_0 = undefined;
+          c2 = 1;
+          c3 = 1;
+          const obj4 = { value: require("asyncRequireImpl")(paths[8], paths.paths), done: false };
+          return obj4;
         }
-      } catch (tmp17) {
-        c3 = tmp;
-        throw tmp17;
+      } else if (arg0 === 1) {
+        c3 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c3 = 3;
+        const obj5 = { value, done: true };
+        return obj5;
+      } else {
+        closure_128_0 = value.default;
+        closure_129_1(closure_129_2[10]).openURL(closure_128_0.getArticleURL(closure_129_5.SETTING_UP_TWO_FACTOR));
+        c3 = 3;
+        return { value: "HermesInternal", done: null };
       }
+    } catch (tmp17) {
+      c3 = tmp;
+      throw tmp17;
     }
-  });
-  closure_10 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
   }
-  return applyArgumentsResult;
-}
-noopAll;
-({ HelpdeskArticles: c5, Fonts } = ME);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { MFAWarning: null, MFAWarningIcon: null, MFAWarningLink: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 10, alignItems: "center" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginVertical: 10, width: 98, height: 53 };
-createCacheKey[2] = { color: ThemesDefault.unsafe_rawColors.BLUE_345, fontFamily: Fonts.PRIMARY_SEMIBOLD };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { color: ThemesDefault.unsafe_rawColors.BLUE_345, fontFamily: Fonts.PRIMARY_SEMIBOLD };
-const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/GuildMFAWarning.tsx");
+};
+const Image = fn(17).Image;
+const Constants = fn(1074);
+({ HelpdeskArticles: hasOwnProperty, Fonts } = Constants);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { MFAWarning: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 10, alignItems: "center" }, MFAWarningIcon: { marginVertical: 10, width: 98, height: 53 }, MFAWarningLink: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 10, alignItems: "center" };
+obj2.MFAWarningLink = { color: nativeDefault.unsafe_rawColors.BLUE_345, fontFamily: Fonts.PRIMARY_SEMIBOLD };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_sidebar/native/GuildMFAWarning.tsx");
 
 export default function GuildMFAWarning() {
-  const tmp = callback4();
-  let obj = { accessibilityRole: "button", style: tmp.MFAWarning, onPress: handlePress, children: null };
-  obj = { style: tmp.MFAWarningIcon, source: registerAssetDefault };
-  const items = [callback2(Image, obj), ];
-  obj = { variant: "text-xs/medium", color: "text-default", children: null };
-  const intl = getSystemLocale.intl;
-  const items1 = [intl.string(getSystemLocale.t.ZIf8Ag), ];
-  obj1 = { style: tmp.MFAWarningLink, children: null };
-  const intl2 = getSystemLocale.intl;
-  const items2 = [" ", intl2.string(getSystemLocale.t.hvVgAZ)];
-  obj1[1] = items2;
-  items1[1] = callback3(Button.LegacyText, obj1);
-  obj[2] = items1;
-  items[1] = callback3(Text.Text, obj);
-  obj[3] = items;
-  return callback3(PressableBase.PressableOpacity, obj);
+  const tmp = closure_8();
+  const obj = { accessibilityRole: "button", style: tmp.MFAWarning, onPress: handlePress, children: null };
+  const items = [timestampProducer(Image, { style: tmp.MFAWarningIcon, source: _modDef16233 }), ];
+  const obj3 = { variant: "text-xs/medium", color: "text-default", children: null };
+  const intl = util.intl;
+  const items1 = [intl.string(util.t.ZIf8Ag), ];
+  const obj4 = { style: tmp.MFAWarningLink, children: null };
+  const intl2 = util.intl;
+  const items2 = [" ", intl2.string(util.t.hvVgAZ)];
+  obj4.children = items2;
+  items1[1] = React5(native.LegacyText, obj4);
+  obj3.children = items1;
+  items[1] = React5(Text_Text.Text, obj3);
+  obj.children = items;
+  return React5(Pressables.PressableOpacity, obj);
 };
 export const getScaledGuildMFAWarningHeight = function getScaledGuildMFAWarningHeight(fontScale) {
-  return 83 + 5 * map.scaleTextLineHeight("text-xs/medium", fontScale) + 10 + 10;
+  return 83 + 5 * useScaledTextLineHeight.scaleTextLineHeight("text-xs/medium", fontScale) + 10 + 10;
 };

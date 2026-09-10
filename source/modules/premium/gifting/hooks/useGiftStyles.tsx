@@ -1,15 +1,15 @@
-// Module ID: 10706
-// Function ID: 10707
+// Module ID: 10733
+// Function ID: 10734
 // Name: useGiftStyles
 // Dependencies: [1373, 2]
 // Exports: useGiftStyles
 
-// Module 10706 (useGiftStyles)
-import set from "set" /* 2 */;
-import GuildFeatures from "GuildFeatures" /* 1373 */;
+// Module 10733 (useGiftStyles)
+import PremiumConstants from "PremiumConstants" /* 1373 */;
+import size from "module_2" /* 2 */;
 
-const PremiumGiftStyles = GuildFeatures.PremiumGiftStyles;
-const result = set.fileFinishedImporting("modules/premium/gifting/hooks/useGiftStyles.tsx");
+const PremiumGiftStyles = PremiumConstants.PremiumGiftStyles;
+const result = size.fileFinishedImporting("modules/premium/gifting/hooks/useGiftStyles.tsx");
 
 export const useGiftStyles = function useGiftStyles() {
   const items = [PremiumGiftStyles.STANDARD_BOX];

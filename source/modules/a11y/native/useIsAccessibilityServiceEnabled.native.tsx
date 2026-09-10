@@ -1,38 +1,38 @@
-// Module ID: 7952
-// Function ID: 7953
-// Name: ACCESSIBILITY_SERVICE_ENABLED_GETTER
-// Dependencies: [560, 4908, 4962, 2]
+// Module ID: 7966
+// Function ID: 7967
+// Name: useIsAccessibilityServiceEnabled
+// Dependencies: [560, 4922, 4976, 2]
 // Exports: getIsAccessibilityServiceEnabled, useIsAccessibilityServiceEnabled
 
-// Module 7952 (ACCESSIBILITY_SERVICE_ENABLED_GETTER)
-import set from "set" /* 2 */;
-import enforcingDefault from "enforcing" /* 4908 */;
-import SCREEN_READER_ENABLED_GETTER from "SCREEN_READER_ENABLED_GETTER" /* 4962 */;
-import keys from "keys" /* 560 */;
+// Module 7966 (useIsAccessibilityServiceEnabled)
+import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 4922 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 4976 */;
+import module_560 from "module_560" /* 560 */;
+import size from "module_2" /* 2 */;
 
 function ACCESSIBILITY_SERVICE_ENABLED_GETTER(accessibilityServiceEnabled) {
   return accessibilityServiceEnabled.accessibilityServiceEnabled;
 }
-let closure_4 = keys.create((arg0) => {
+const state = module_560.create((arg0) => {
   closure_0 = arg0;
-  let obj = enforcingDefault;
-  const result = obj.onAccessibilityServiceEnabledChanged((accessibilityServiceEnabled) => {
-    callback({ accessibilityServiceEnabled });
+  const result = NativeDeviceAccessibilityModuleDefault.onAccessibilityServiceEnabledChanged((accessibilityServiceEnabled) => {
+    closure_0({ accessibilityServiceEnabled });
   });
-  obj = { accessibilityServiceEnabled: enforcingDefault.isAccessibilityServiceEnabled() };
-  return obj;
+  const obj2 = { accessibilityServiceEnabled: null };
+  obj2.accessibilityServiceEnabled = NativeDeviceAccessibilityModuleDefault.isAccessibilityServiceEnabled();
+  return obj2;
 });
-let result = set.fileFinishedImporting("modules/a11y/native/useIsAccessibilityServiceEnabled.native.tsx");
+let result = size.fileFinishedImporting("modules/a11y/native/useIsAccessibilityServiceEnabled.native.tsx");
 
 export const getIsAccessibilityServiceEnabled = function getIsAccessibilityServiceEnabled() {
-  let accessibilityServiceEnabled = SCREEN_READER_ENABLED_GETTER.getIsScreenReaderEnabled();
+  let accessibilityServiceEnabled = useIsScreenReaderEnabled.getIsScreenReaderEnabled();
   if (!accessibilityServiceEnabled) {
     accessibilityServiceEnabled = state.getState().accessibilityServiceEnabled;
   }
   return accessibilityServiceEnabled;
 };
 export const useIsAccessibilityServiceEnabled = function useIsAccessibilityServiceEnabled() {
-  let isScreenReaderEnabled = SCREEN_READER_ENABLED_GETTER.useIsScreenReaderEnabled();
+  let isScreenReaderEnabled = useIsScreenReaderEnabled.useIsScreenReaderEnabled();
   if (!isScreenReaderEnabled) {
     isScreenReaderEnabled = state(ACCESSIBILITY_SERVICE_ENABLED_GETTER);
   }

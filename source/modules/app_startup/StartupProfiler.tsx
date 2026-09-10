@@ -1,60 +1,55 @@
-// Module ID: 11538
-// Function ID: 11539
-// Name: setLevels
+// Module ID: 11564
+// Function ID: 11565
+// Name: StartupProfiler
 // Dependencies: [19, 21, 10, 2]
 // Exports: default
 
-// Module 11538 (setLevels)
-import closure_2 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 11564 (StartupProfiler)
+import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
+import noop from "module_19" /* 19 */;
 
-let obj = { App: "App", AppContainer: "AppContainer", MainNavigator: "MainNavigator", StackNavigator: "StackNavigator", MainTabs: "MainTabs", MainDrawers: "MainDrawers", PrivateChannels: "PrivateChannels", Members: "Members", LeftPanel: "LeftPanel", Guilds: "Guilds", Channels: "Channels", RightPanel: "RightPanel", CenterPanel: "CenterPanel", Channel: "Channel", ChatView: "ChatView", Messages: "Messages" };
-obj = {};
+const jsx = fn(21).jsx;
+const obj = { App: "App", AppContainer: "AppContainer", MainNavigator: "MainNavigator", StackNavigator: "StackNavigator", MainTabs: "MainTabs", MainDrawers: "MainDrawers", PrivateChannels: "PrivateChannels", Members: "Members", LeftPanel: "LeftPanel", Guilds: "Guilds", Channels: "Channels", RightPanel: "RightPanel", CenterPanel: "CenterPanel", Channel: "Channel", ChatView: "ChatView", Messages: "Messages" };
+let obj2 = {};
 function setLevels(obj, arg1) {
   for (const key10006 in arg0) {
-    let tmp = key10006;
-    let tmp2 = obj;
-    obj[key10006] = arg1;
-    let tmp3 = setLevels;
+    obj2[key10006] = arg1;
     let tmp4 = setLevels(arg0[key10006], arg1 + " ");
     continue;
   }
 }
-obj = { [obj.App]: { [obj.AppContainer]: { [obj.MainNavigator]: { [obj.StackNavigator]: { [obj.MainTabs]: { [obj.MainDrawers]: { [obj.LeftPanel]: { [obj.Guilds]: {}, [obj.Channels]: {} }, [obj.RightPanel]: { [obj.Members]: {} }, [obj.CenterPanel]: { [obj.Channel]: { [obj.ChatView]: { [obj.Messages]: {} } } } } } } } } } };
-for (const key10073 in obj) {
-  let tmp5 = key10073;
-  obj[key10073] = "";
-  let tmp6 = obj[key10073];
-  let tmp7 = tmp6;
+const obj3 = { [obj.App]: { [obj.AppContainer]: { [obj.MainNavigator]: { [obj.StackNavigator]: { [obj.MainTabs]: { [obj.MainDrawers]: { [obj.LeftPanel]: { [obj.Guilds]: {}, [obj.Channels]: {} }, [obj.RightPanel]: { [obj.Members]: {} }, [obj.CenterPanel]: { [obj.Channel]: { [obj.ChatView]: { [obj.Messages]: {} } } } } } } } } } };
+for (const key10073 in obj3) {
+  obj2[key10073] = "";
+  let tmp6 = obj3[key10073];
   let keys = Object.keys();
   if (keys === undefined) {
     continue;
   } else {
     let tmp3 = keys[tmp];
     while (tmp3 !== undefined) {
-      let tmp9 = tmp3;
-      obj[tmp3] = " ";
+      obj2[tmp3] = " ";
       let setLevelsResult = setLevels(tmp6[tmp3], "  ");
       continue;
     }
   }
   continue;
 }
-const result = require("set").fileFinishedImporting("modules/app_startup/StartupProfiler.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_startup/StartupProfiler.tsx");
 
 export default function StartupProfiler(children) {
   const profile = children.profile;
-  obj = profile(10);
-  obj.mark("\u{1F3A8}", "" + obj[profile] + profile + " render");
-  obj = {
+  profile(10).mark("\u{1F3A8}", "" + obj2[profile] + profile + " render");
+  obj2 = {
     id: profile,
     onRender(arg0, arg1, arg2) {
-      profile(closure_1_1[2]).mark("\u{1F3A8}", "" + closure_1_4[profile] + profile + " " + arg1, arg2);
+      AppStartPerformanceDefault.mark("\u{1F3A8}", "" + obj2[profile] + profile + " " + arg1, arg2);
     },
     children: children.children
   };
-  return <Profiler.Profiler id={profile} onRender={function onRender(arg0, arg1, arg2) {
-    profile(closure_1_1[2]).mark("\u{1F3A8}", "" + closure_1_4[profile] + profile + " " + arg1, arg2);
-  }}>{arg0.children}</Profiler.Profiler>;
+  return <noop.Profiler id={profile} onRender={function onRender(arg0, arg1, arg2) {
+    AppStartPerformanceDefault.mark("\u{1F3A8}", "" + obj2[profile] + profile + " " + arg1, arg2);
+  }}>{arg0.children}</noop.Profiler>;
 };
 export const Profiles = obj;

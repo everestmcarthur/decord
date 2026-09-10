@@ -1,28 +1,31 @@
-// Module ID: 8775
-// Function ID: 8776
+// Module ID: 8803
+// Function ID: 8804
 // Name: useWishlistNUXActionSheet
-// Dependencies: [19, 7621, 502, 1954, 504, 4380, 1943, 1945, 4527, 8776, 1896, 2]
+// Dependencies: [19, 7635, 502, 1954, 504, 4394, 1943, 1945, 4541, 8804, 1896, 2]
 // Exports: default, useHasNeverWishlisted
 
-// Module 8775 (useWishlistNUXActionSheet)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createUserWidgetFromServer" /* 7621 */;
-import closure_5 from "fetchFingerprint" /* 502 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
+// Module 8803 (useWishlistNUXActionSheet)
+import noop from "module_19" /* 19 */;
+import UserProfileStore from "UserProfileStore" /* 7635 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/collectibles/native/useWishlistNUXActionSheet.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/native/useWishlistNUXActionSheet.tsx");
 
 export default function useWishlistNUXActionSheet() {
-  let obj = _require(504);
-  const items = [closure_5];
-  _require = obj.useStateFromStores(items, () => id.getId());
-  const items1 = [closure_4];
-  const stateFromStores = _require(504).useStateFromStores(items1, () => closure_1_4.getFirstWishlistId(closure_0));
-  let obj2 = _require(504);
-  const items2 = [closure_4];
-  let stateFromStores1 = _require(504).useStateFromStores(items2, () => {
-    const userProfile = closure_1_4.getUserProfile(closure_0);
+  const items = [AuthenticationStore];
+  _require = require("initialize").useStateFromStores(items, () => id.getId());
+  let obj = require("initialize");
+  const items1 = [UserProfileStore];
+  const stateFromStores = require("initialize").useStateFromStores(items1, () => UserProfileStore.getFirstWishlistId(closure_0));
+  let obj2 = require("initialize");
+  const items2 = [UserProfileStore];
+  let stateFromStores1 = require("initialize").useStateFromStores(items2, () => {
+    const userProfile = UserProfileStore.getUserProfile(closure_0);
     let tmp2 = null != userProfile;
     if (tmp2) {
       tmp2 = userProfile.fetchEndedAt > 0;
@@ -32,34 +35,33 @@ export default function useWishlistNUXActionSheet() {
   if (stateFromStores1) {
     stateFromStores1 = null == stateFromStores;
   }
-  const obj3 = _require(504);
+  let obj3 = require("initialize");
   if (stateFromStores1) {
     stateFromStores1 = !tmpResult.useIsDismissibleContentDismissed_UNSAFE(tmp(1943).DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET);
   }
-  obj = {
+  tmpResult = require("DismissibleContentUnsafeUtils");
+  return {
     shouldShowWishlistNUXActionSheet: stateFromStores1,
-    showWishlistNUXActionSheet: React.useCallback((product) => {
-      let obj = callback(paths[7]);
-      const result = obj.trackDismissibleContentShown(callback(paths[6]).DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET);
-      obj = { product };
-      callback2(paths[8]).openLazy(callback(paths[10])(paths[9], paths.paths), "WishlistNUXAddedItemActionSheet", obj, "stack");
-      const obj2 = callback2(paths[8]);
-      obj = { dismissAction: constants.USER_DISMISS, forceTrack: true };
-      const result1 = callback(paths[5]).UNSAFE_markDismissibleContentAsDismissed(callback(paths[6]).DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET, obj);
+    showWishlistNUXActionSheet: noop.useCallback((product) => {
+      const result = closure_0(paths[7]).trackDismissibleContentShown(closure_0(paths[6]).DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET);
+      const obj = closure_0(paths[7]);
+      require("ActionSheetActionCreators").openLazy(closure_0(paths[10])(paths[9], paths.paths), "WishlistNUXAddedItemActionSheet", { product }, "stack");
+      const obj2 = require("ActionSheetActionCreators");
+      const obj3 = { product };
+      const result1 = closure_0(paths[5]).UNSAFE_markDismissibleContentAsDismissed(closure_0(paths[6]).DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET, { dismissAction: constants.USER_DISMISS, forceTrack: true });
     }, [])
   };
-  return obj;
 };
 export const useHasNeverWishlisted = function useHasNeverWishlisted() {
-  const items = [closure_5];
-  _require = _require(504).useStateFromStores(items, () => id.getId());
-  const obj = _require(504);
-  const items1 = [closure_4];
-  const stateFromStores = _require(504).useStateFromStores(items1, () => closure_1_4.getFirstWishlistId(closure_0));
-  const obj2 = _require(504);
-  const items2 = [closure_4];
-  let stateFromStores1 = _require(504).useStateFromStores(items2, () => {
-    const userProfile = closure_1_4.getUserProfile(closure_0);
+  const items = [AuthenticationStore];
+  _require = require("initialize").useStateFromStores(items, () => id.getId());
+  const obj = require("initialize");
+  const items1 = [UserProfileStore];
+  const stateFromStores = require("initialize").useStateFromStores(items1, () => UserProfileStore.getFirstWishlistId(closure_0));
+  const obj2 = require("initialize");
+  const items2 = [UserProfileStore];
+  let stateFromStores1 = require("initialize").useStateFromStores(items2, () => {
+    const userProfile = UserProfileStore.getUserProfile(closure_0);
     let tmp2 = null != userProfile;
     if (tmp2) {
       tmp2 = userProfile.fetchEndedAt > 0;

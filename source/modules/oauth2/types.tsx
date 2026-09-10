@@ -1,11 +1,11 @@
-// Module ID: 9252
-// Function ID: 9253
-// Name: OAuth2Prompts
+// Module ID: 9279
+// Function ID: 9280
+// Name: types
 // Dependencies: [2]
 
-// Module 9252 (OAuth2Prompts)
-import set from "set" /* 2 */;
+// Module 9279 (types)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/oauth2/types.tsx");
+const result = size.fileFinishedImporting("modules/oauth2/types.tsx");
 
 export const OAuth2Prompts = { NONE: "none", CONSENT: "consent" };

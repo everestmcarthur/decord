@@ -1,12 +1,11 @@
-// Module ID: 6214
-// Function ID: 6215
-// Name: metadata
+// Module ID: 6228
+// Function ID: 6229
 // Dependencies: [2]
 
-// Module 6214 (metadata)
-import set from "set" /* 2 */;
+// Module 6228
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/KeyRingSpotIllustration-2x.png.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/KeyRingSpotIllustration-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/5c1637faa05e71c8293ed8bde9cc5ebee2e41d54f6ebad1763565319856bdab3.png";
 export const metadata = { fileBytes: 23693 };

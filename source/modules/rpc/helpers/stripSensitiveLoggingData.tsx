@@ -1,16 +1,16 @@
-// Module ID: 9556
-// Function ID: 9557
+// Module ID: 9583
+// Function ID: 9584
 // Name: stripSensitiveLoggingData
 // Dependencies: [1074, 2]
 // Exports: default
 
-// Module 9556 (stripSensitiveLoggingData)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 9583 (stripSensitiveLoggingData)
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const RPCCommands = ME.RPCCommands;
+const RPCCommands = Constants.RPCCommands;
 let c1 = "<removed>";
-const result = set.fileFinishedImporting("modules/rpc/helpers/stripSensitiveLoggingData.tsx");
+const result = size.fileFinishedImporting("modules/rpc/helpers/stripSensitiveLoggingData.tsx");
 
 export default function stripSensitiveLoggingData(arg0) {
   let obj = {};
@@ -33,32 +33,31 @@ export default function stripSensitiveLoggingData(arg0) {
       const cmd2 = merged3.cmd;
       if (RPCCommands.AUTHENTICATE !== cmd2) {
         if (RPCCommands.GET_PROVIDER_ACCESS_TOKEN !== cmd2) {
-          obj = {};
+          const obj2 = {};
           const merged1 = Object.assign(merged3);
         }
       }
-      obj = {};
+      const obj3 = {};
       const merged2 = Object.assign(merged3);
-      obj1 = {};
+      const obj4 = {};
       merged3 = Object.assign(merged3.data);
-      obj1.access_token = c1;
-      obj.data = obj1;
+      obj4.access_token = access_token;
+      obj3.data = obj4;
     }
   } else {
     const cmd = obj.cmd;
     if (RPCCommands.AUTHENTICATE !== cmd) {
       if (RPCCommands.GET_PROVIDER_ACCESS_TOKEN !== cmd) {
-        let obj2 = {};
+        const obj5 = {};
         const merged4 = Object.assign(obj);
       }
     }
-    const obj3 = {};
+    const obj6 = {};
     const merged5 = Object.assign(obj);
-    const obj4 = {};
+    const obj7 = {};
     const merged6 = Object.assign(obj.args);
-    obj = c1;
-    obj4.access_token = c1;
-    obj3.args = obj4;
-    obj2 = obj3;
+    obj = access_token;
+    obj7.access_token = access_token;
+    obj6.args = obj7;
   }
 };

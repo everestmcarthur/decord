@@ -1,23 +1,21 @@
-// Module ID: 14667
-// Function ID: 14668
+// Module ID: 14693
+// Function ID: 14694
 // Name: PasskeyUpsellFullModal
-// Dependencies: [19, 14660, 21, 14663, 11933, 2]
+// Dependencies: [19, 14686, 21, 14689, 11959, 2]
 // Exports: default
 
-// Module 14667 (PasskeyUpsellFullModal)
-import noopAll from "noop" /* 19 */;
-import Modal from "Modal" /* 11933 */;
-import getScreens from "getScreens" /* 14663 */;
-import { WebAuthnScreens } from "WebAuthnScreens" /* 14660 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 14693 (PasskeyUpsellFullModal)
+import Modal from "Modal" /* 11959 */;
+import WebAuthnScreens2 from "WebAuthnScreens" /* 14689 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/webauthn/native/PasskeyUpsellFullModal.tsx");
+require = fn;
+const WebAuthnScreens = fn(14686).WebAuthnScreens;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/webauthn/native/PasskeyUpsellFullModal.tsx");
 
 export default function PasskeyUpsellFullModal() {
-  let obj = getScreens;
-  const screens = obj.getScreens({ isModal: true });
-  obj = { screens, initialRouteName: WebAuthnScreens.MODAL_UPSELL };
+  const screens = WebAuthnScreens2.getScreens({ isModal: true });
   return jsx(Modal.Modal, { screens, initialRouteName: WebAuthnScreens.MODAL_UPSELL });
 };

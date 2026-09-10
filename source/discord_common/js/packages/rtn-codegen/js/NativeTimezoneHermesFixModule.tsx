@@ -1,14 +1,14 @@
-// Module ID: 4244
-// Function ID: 4245
-// Name: enforcing
+// Module ID: 4257
+// Function ID: 4258
+// Name: NativeTimezoneHermesFixModule
 // Dependencies: [17, 2]
 
-// Module 4244 (enforcing)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 4257 (NativeTimezoneHermesFixModule)
+import _mod17 from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
 
-const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 const enforcing = TurboModuleRegistry.getEnforcing("NativeTimezoneHermesFixModule");
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeTimezoneHermesFixModule.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeTimezoneHermesFixModule.tsx");
 
 export default enforcing;

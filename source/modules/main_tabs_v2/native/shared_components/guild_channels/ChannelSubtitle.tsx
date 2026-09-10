@@ -1,66 +1,56 @@
-// Module ID: 16659
-// Function ID: 16660
-// Name: ChannelSubtitle
-// Dependencies: [19, 21, 10126, 4556, 16229, 10121, 2]
+// Module ID: 16691
+// Function ID: 16692
+// Name: guild_channels/ChannelSubtitle
+// Dependencies: [19, 21, 10153, 4570, 16259, 10148, 2]
 // Exports: renderChannelSubtitle
 
-// Module 16659 (ChannelSubtitle)
-import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4556 */;
-import getLayoutStyles from "getLayoutStyles" /* 10126 */;
-import getChannelSubtitleData from "getChannelSubtitleData" /* 16229 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16691 (guild_channels/ChannelSubtitle)
+import Text_Text from "Text/Text" /* 4570 */;
+import ChannelListLayout from "ChannelListLayout" /* 10153 */;
+import getChannelSubtitleData from "getChannelSubtitleData" /* 16259 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function ChannelSubtitle(arg0) {
   ({ muted, textProps } = arg0);
   ({ connected, channelId, guildId, layout, subtitle } = arg0);
-  let obj = getChannelSubtitleData;
-  const channelSubtitleData = obj.getChannelSubtitleData(subtitle);
+  const channelSubtitleData = getChannelSubtitleData.getChannelSubtitleData(subtitle);
   if (null == channelSubtitleData) {
     return null;
   } else {
-    obj = {};
+    const obj2 = {};
     const merged = Object.assign(textProps);
-    obj = { content: null, muted: null, channelId: null, guildId: null, layout: null, color: "text-muted", disableAnimatedEmoji: null };
-    obj[0] = channelSubtitleData.subtitle;
+    const obj3 = { content: channelSubtitleData.subtitle, muted: null, channelId: null, guildId: null, layout: null, color: "text-muted", disableAnimatedEmoji: null };
     if (muted == null) {
       muted = false;
     }
-    obj[1] = muted;
-    obj[2] = channelId;
-    obj[3] = guildId;
-    obj[4] = layout;
-    obj[6] = !("voice" === channelSubtitleData.type && connected);
-    obj.children = tmp(10121).renderMessagePreviewMarkup(obj);
-    return jsx(tmp(4556).Text, { content: null, muted: null, channelId: null, guildId: null, layout: null, color: "text-muted", disableAnimatedEmoji: null });
+    obj3.muted = muted;
+    obj3.channelId = channelId;
+    obj3.guildId = guildId;
+    obj3.layout = layout;
+    obj3.disableAnimatedEmoji = !("voice" === channelSubtitleData.type && connected);
+    obj2.children = tmp(10148).renderMessagePreviewMarkup(obj3);
+    return jsx(tmp(4570).Text, {});
   }
 }
-noopAll;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelSubtitle.tsx");
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelSubtitle.tsx");
 
 export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
   ({ subtitle, layout } = arg0);
   if (null == subtitle) {
     return null;
   } else {
-    let obj = { variant: null, color: "text-muted", lineClamp: 1, maxFontSizeMultiplier: 1.75 };
-    obj[0] = getLayoutStyles.getLayoutStyles(layout).messagePreview.text.variant;
+    const obj2 = { variant: ChannelListLayout.getLayoutStyles(layout).messagePreview.text.variant, color: "text-muted", lineClamp: 1, maxFontSizeMultiplier: 1.75 };
     if (typeof subtitle === "string") {
-      obj = {};
-      const merged = Object.assign(obj);
+      const obj = {};
+      const merged = Object.assign(obj2);
       obj.children = subtitle;
-      let tmp9 = jsx(Text.Text, {});
+      let tmp9 = jsx(Text_Text.Text, {});
     } else {
-      obj = { channelId: null, guildId: null, layout: null, subtitle: null, muted: null, connected: null, textProps: null };
-      obj[0] = tmp2;
-      obj[1] = tmp3;
-      obj[2] = layout;
-      obj[3] = subtitle;
-      obj[4] = tmp;
-      obj[5] = tmp4;
-      obj[6] = obj;
-      tmp9 = <ChannelSubtitle channelId={null} guildId={null} layout={null} subtitle={null} muted={null} connected={null} textProps={null} />;
+      const obj4 = { channelId: tmp2, guildId: tmp3, layout, subtitle, muted: tmp, connected: tmp4, textProps: obj2 };
+      tmp9 = <ChannelSubtitle channelId={tmp2} guildId={tmp3} layout={layout} subtitle={subtitle} muted={tmp} connected={tmp4} textProps={obj2} />;
     }
     return tmp9;
   }

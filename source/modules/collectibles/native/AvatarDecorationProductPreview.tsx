@@ -1,41 +1,35 @@
-// Module ID: 13143
-// Function ID: 13144
+// Module ID: 13168
+// Function ID: 13169
 // Name: AvatarDecorationProductPreview
-// Dependencies: [19, 17, 21, 4560, 8178, 8171, 1114, 1178, 2]
+// Dependencies: [19, 17, 21, 4574, 8204, 8197, 1114, 1178, 2]
 // Exports: default
 
-// Module 13143 (AvatarDecorationProductPreview)
-import noopAll from "noop" /* 19 */;
-import firstAvatarDecoration2 from "firstAvatarDecoration" /* 8171 */;
-import useCurrentUser from "useCurrentUser" /* 8178 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13168 (AvatarDecorationProductPreview)
+import useShopProductItems from "useShopProductItems" /* 8197 */;
+import useCurrentUser from "useCurrentUser" /* 8204 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-let closure_4 = createCacheKey.createStyles({ fullSizePreview: { flex: 1, alignItems: "center", justifyContent: "center" } });
-const result = require("set").fileFinishedImporting("modules/collectibles/native/AvatarDecorationProductPreview.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_4 = createStyles.createStyles({ fullSizePreview: { flex: 1, alignItems: "center", justifyContent: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/AvatarDecorationProductPreview.tsx");
 
 export default function AvatarDecorationProductPreview(product) {
-  let obj = useCurrentUser;
-  const currentUser = obj.useCurrentUser();
-  obj1 = firstAvatarDecoration2;
-  const firstAvatarDecoration = obj1.useShopProductItems(product.product).firstAvatarDecoration;
+  const tmp = closure_4();
+  const currentUser = useCurrentUser.useCurrentUser();
+  const firstAvatarDecoration = useShopProductItems.useShopProductItems(product.product).firstAvatarDecoration;
   let tmp5 = null;
   if (null != firstAvatarDecoration) {
-    obj = { style: null, pointerEvents: "box-none", accessibilityLabel: null, accessibilityRole: "image", accessible: true, children: null };
-    obj[0] = tmp.fullSizePreview;
+    const obj3 = { style: tmp.fullSizePreview, pointerEvents: "box-none", accessibilityLabel: null, accessibilityRole: "image", accessible: true, children: null };
     const intl = tmp2(1114).intl;
-    obj = { a11y_text: null };
-    obj[0] = firstAvatarDecoration.label;
-    obj[2] = intl.formatToPlainString(tmp2(1114).t.Do2lxE, obj);
-    obj1 = { user: null, guildId: "r", size: true, avatarDecoration: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L3dlYi9vcmJfd2FsbGV0L21lc3NhZ2Vz", animate: null };
-    obj1[0] = currentUser;
-    obj1[2] = tmp2(1178).AvatarSizes.GIFT_START;
-    obj1[3] = firstAvatarDecoration;
-    obj[5] = jsx(tmp2(1178).Avatar, { user: null, guildId: "r", size: true, avatarDecoration: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L3dlYi9vcmJfd2FsbGV0L21lc3NhZ2Vz", animate: null });
-    tmp5 = <View a11y_text={null} />;
+    const obj4 = { a11y_text: firstAvatarDecoration.label };
+    obj3.accessibilityLabel = intl.formatToPlainString(tmp2(1114).t.Do2lxE, obj4);
+    const obj5 = { user: currentUser, guildId: "r", size: tmp2(1178).AvatarSizes.GIFT_START, avatarDecoration: firstAvatarDecoration, animate: null };
+    obj3.children = jsx(tmp2(1178).Avatar, { user: currentUser, guildId: "r", size: tmp2(1178).AvatarSizes.GIFT_START, avatarDecoration: firstAvatarDecoration, animate: null });
+    tmp5 = <View style={tmp.fullSizePreview} pointerEvents="box-none" accessibilityLabel={null} accessibilityRole="image" accessible>{null}</View>;
   }
   return tmp5;
 };

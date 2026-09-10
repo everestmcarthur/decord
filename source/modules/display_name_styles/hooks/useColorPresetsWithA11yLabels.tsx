@@ -1,26 +1,27 @@
-// Module ID: 15348
-// Function ID: 15349
+// Module ID: 15377
+// Function ID: 15378
 // Name: useColorPresetsWithA11yLabels
 // Dependencies: [19, 1389, 1114, 2786, 1091, 2]
 // Exports: default
 
-// Module 15348 (useColorPresetsWithA11yLabels)
-import closure_3 from "noop" /* 19 */;
-import { getColorPresetsForEffect } from "items3" /* 1389 */;
+// Module 15377 (useColorPresetsWithA11yLabels)
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/display_name_styles/hooks/useColorPresetsWithA11yLabels.tsx");
+const require = fn;
+const getColorPresetsForEffect = fn(1389).getColorPresetsForEffect;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/display_name_styles/hooks/useColorPresetsWithA11yLabels.tsx");
 
 export default function useColorPresetsWithA11yLabels(arg0) {
   closure_0 = arg0;
   const items = [arg0];
-  return React.useMemo(() => closure_1_4(closure_0).map((arr) => {
-    let obj = { colors: arr, a11yLabel: null };
-    const intl = callback(1114).intl;
-    obj = { number: arg1 + 1, hexList: null };
-    const mapped = arr.map(callback(1091).int2hex);
-    obj[1] = mapped.join(", ");
-    obj[1] = intl.formatToPlainString(callback2(2786).FHfTsV, obj);
+  return noop.useMemo(() => getColorPresetsForEffect(closure_0).map((colors, index) => {
+    const obj = { colors, a11yLabel: null };
+    const intl = closure_1_0(1114).intl;
+    const obj2 = { number: index + 1, hexList: null };
+    const mapped = colors.map(closure_1_0(1091).int2hex);
+    obj2.hexList = mapped.join(", ");
+    obj.a11yLabel = intl.formatToPlainString(closure_1_1(2786).FHfTsV, obj2);
     return obj;
   }), items);
 };

@@ -1,18 +1,19 @@
-// Module ID: 7775
-// Function ID: 7776
+// Module ID: 7789
+// Function ID: 7790
 // Name: trackChannelOpenedClickstream
-// Dependencies: [1957, 1074, 1964, 7465, 2]
+// Dependencies: [1957, 1074, 1964, 7479, 2]
 // Exports: default
 
-// Module 7775 (trackChannelOpenedClickstream)
-import isClickstreamEnabled from "isClickstreamEnabled" /* 7465 */;
-import closure_2 from "ensureGuildLoaded" /* 1957 */;
-import ME from "ME" /* 1074 */;
-import { StaticChannelRoute } from "set" /* 1964 */;
+// Module 7789 (trackChannelOpenedClickstream)
+import Clickstream from "Clickstream" /* 7479 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-require = arg1;
-({ ChannelTypes: c3, AnalyticEvents: c4 } = ME);
-const result = require("set").fileFinishedImporting("modules/app_analytics/track/channel_opened/trackChannelOpenedClickstream.tsx");
+require = fn;
+const Constants = fn(1074);
+({ ChannelTypes: c3, AnalyticEvents: closure_4 } = Constants);
+const StaticChannelRoute = fn(1964).StaticChannelRoute;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_analytics/track/channel_opened/trackChannelOpenedClickstream.tsx");
 
 export default function trackChannelOpenedClickstream(channelId) {
   channelId = channelId.channelId;
@@ -27,10 +28,8 @@ export default function trackChannelOpenedClickstream(channelId) {
                   if (tmp.MEMBER_SAFETY !== channelId) {
                     if (tmp.GUILD_ONBOARDING !== channelId) {
                       if (tmp.GUILD_BOOSTS !== channelId) {
-                        let obj = isClickstreamEnabled;
-                        obj = { channel_id: null, channel_type: null };
-                        obj[0] = channelId;
-                        channel = channel.getChannel(channelId);
+                        const obj2 = { channel_id: channelId, channel_type: null };
+                        const channel = ChannelStore.getChannel(channelId);
                         let type;
                         if (channel != null) {
                           type = channel.type;
@@ -38,8 +37,8 @@ export default function trackChannelOpenedClickstream(channelId) {
                         if (type == null) {
                           type = constants.UNKNOWN;
                         }
-                        obj[1] = type;
-                        obj.trackClickstream(constants2.CHANNEL_OPENED_CLICKSTREAM, obj);
+                        obj2.channel_type = type;
+                        Clickstream.trackClickstream(constants2.CHANNEL_OPENED_CLICKSTREAM, obj2);
                       }
                     }
                   }

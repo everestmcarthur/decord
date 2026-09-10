@@ -1,16 +1,16 @@
-// Module ID: 6950
-// Function ID: 6951
-// Name: prototype
+// Module ID: 6964
+// Function ID: 6965
+// Name: WebAuthnTypes
 // Dependencies: [2]
 
-// Module 6950 (prototype)
-import set from "set" /* 2 */;
+// Module 6964 (WebAuthnTypes)
+import size from "module_2" /* 2 */;
 
 const prototype = function IgnorableWebAuthnError() {
   return HermesBuiltin.applyArguments(new.target, new.target);
 }.prototype;
 class prototype extends Error {
 }
-const result = set.fileFinishedImporting("modules/webauthn/WebAuthnTypes.tsx");
+const result = size.fileFinishedImporting("modules/webauthn/WebAuthnTypes.tsx");
 
 export const IgnorableWebAuthnError = prototype;

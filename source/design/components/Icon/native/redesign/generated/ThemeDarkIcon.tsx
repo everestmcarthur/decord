@@ -1,26 +1,26 @@
-// Module ID: 11325
-// Function ID: 11326
+// Module ID: 11352
+// Function ID: 11353
 // Name: ThemeDarkIcon
-// Dependencies: [19, 21, 576, 4261, 11326, 2]
+// Dependencies: [19, 21, 576, 4274, 11353, 2]
 // Exports: ThemeDarkIcon
 
-// Module 11325 (ThemeDarkIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 11326 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 11352 (ThemeDarkIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod11353 from "module_11353" /* 11353 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/ThemeDarkIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/ThemeDarkIcon.tsx");
 
 export const ThemeDarkIcon = function ThemeDarkIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11353, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

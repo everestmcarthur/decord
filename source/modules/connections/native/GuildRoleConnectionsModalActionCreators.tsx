@@ -1,37 +1,34 @@
-// Module ID: 11574
-// Function ID: 11575
-// Name: openGuildRoleConnectionsModal
-// Dependencies: [4763, 11575, 1896, 4527, 11567, 2]
+// Module ID: 11600
+// Function ID: 11601
+// Name: GuildRoleConnectionsModalActionCreators
+// Dependencies: [4777, 11601, 1896, 4541, 11593, 2]
 // Exports: makeGuildRoleConnectionsConnectAccountsActionSheetKey, openGuildRoleConnectionsConnectAccountModal, openGuildRoleConnectionsModal
 
-// Module 11574 (openGuildRoleConnectionsModal)
-import set from "set" /* 2 */;
+// Module 11600 (GuildRoleConnectionsModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
-import _modDef4763 from "module_4763" /* 4763 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import size from "module_2" /* 2 */;
 
 const ROLE_CONNECTIONS_MODAL_KEY = "ROLE_CONNECTIONS_MODAL_KEY";
-const result = set.fileFinishedImporting("modules/connections/native/GuildRoleConnectionsModalActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/connections/native/GuildRoleConnectionsModalActionCreators.tsx");
 
 export const openGuildRoleConnectionsModal = function openGuildRoleConnectionsModal(guildId) {
   const onClose = guildId.onClose;
-  let obj = _modDef4763;
-  obj = {
+  ModalActionCreatorsDefault.pushLazy(onClose(1896)(11601, dependencyMap.paths), {
     guildId: guildId.guildId,
     onClose() {
-      closure_1_1(closure_1_2[0]).popWithKey(closure_1_3);
+      ModalActionCreatorsDefault.popWithKey(ROLE_CONNECTIONS_MODAL_KEY);
       if (onClose != null) {
         onClose();
       }
     }
-  };
-  obj.pushLazy(onClose(1896)(11575, dependencyMap.paths), obj, ROLE_CONNECTIONS_MODAL_KEY);
+  }, ROLE_CONNECTIONS_MODAL_KEY);
 };
 export const makeGuildRoleConnectionsConnectAccountsActionSheetKey = function makeGuildRoleConnectionsConnectAccountsActionSheetKey(id) {
   return "GuildRoleConnectionsConnectAccountsActionSheet-" + id;
 };
-export const openGuildRoleConnectionsConnectAccountModal = function openGuildRoleConnectionsConnectAccountModal(id, guildId) {
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = { role: id, guildId };
-  obj.openLazy(asyncRequireImpl(11567, dependencyMap.paths), "GuildRoleConnectionsConnectAccountsActionSheet-" + id.id, obj);
+export const openGuildRoleConnectionsConnectAccountModal = function openGuildRoleConnectionsConnectAccountModal(verificationRole, guildId) {
+  const obj = ActionSheetActionCreatorsDefault;
+  obj.openLazy(asyncRequireImpl(11593, dependencyMap.paths), "GuildRoleConnectionsConnectAccountsActionSheet-" + verificationRole.id, { role: verificationRole, guildId });
 };

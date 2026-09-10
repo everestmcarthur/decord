@@ -2,9 +2,11 @@
 // Function ID: 1652
 // Name: mockedRequestAnimationFrame
 // Dependencies: []
+// Exports: mockedRequestAnimationFrame
 
 // Module 1651 (mockedRequestAnimationFrame)
-arg5.mockedRequestAnimationFrame = function mockedRequestAnimationFrame(arg0) {
+
+export const mockedRequestAnimationFrame = function mockedRequestAnimationFrame(arg0) {
   closure_0 = arg0;
-  return setTimeout(() => callback(performance.now()), 0);
+  return setTimeout(() => closure_0(performance.now()), 0);
 };

@@ -1,11 +1,11 @@
-// Module ID: 13854
-// Function ID: 13855
-// Name: SHARE_SCREEN_MODAL_KEY
+// Module ID: 13877
+// Function ID: 13878
+// Name: ShareScreenConstants
 // Dependencies: [2]
 
-// Module 13854 (SHARE_SCREEN_MODAL_KEY)
-import set from "set" /* 2 */;
+// Module 13877 (ShareScreenConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/share/native/ShareScreenConstants.tsx");
+const result = size.fileFinishedImporting("modules/share/native/ShareScreenConstants.tsx");
 
 export const SHARE_SCREEN_MODAL_KEY = "share_screen_modal";

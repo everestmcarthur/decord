@@ -1,63 +1,59 @@
-// Module ID: 10314
-// Function ID: 10315
-// Name: NSFWRow
-// Dependencies: [19, 17, 10295, 21, 4560, 576, 1178, 8156, 4556, 1114, 10312, 2]
+// Module ID: 10341
+// Function ID: 10342
+// Name: EmojiPickerListComponents
+// Dependencies: [19, 17, 10322, 21, 4574, 576, 1178, 8182, 4570, 1114, 10339, 2]
 
-// Module 10314 (NSFWRow)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import Text from "Text" /* 4556 */;
-import registerAssetDefault from "registerAsset" /* 8156 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10312 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import IMAGE_SIZE from "IMAGE_SIZE" /* 10295 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10341 (EmojiPickerListComponents)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import _modDef8182 from "module_8182" /* 8182 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10339 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ LABEL_BOTTOM_PADDING, LABEL_TOP_PADDING, NSFW_ROW_HEIGHT } = IMAGE_SIZE);
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let obj = { section: null, nsfwContainer: null, nsfwText: null };
-obj = { justifyContent: "center", overflow: "hidden", backgroundColor: ThemesDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT, paddingTop: LABEL_TOP_PADDING, paddingBottom: LABEL_BOTTOM_PADDING };
-obj[0] = obj;
-createCacheKey = { flexDirection: "row", height: NSFW_ROW_HEIGHT, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.sm, marginLeft: 12, marginRight: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
-obj[1] = createCacheKey;
-obj[2] = { marginLeft: 4, textAlign: "center" };
-let closure_6 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(() => {
-  const tmp = callback3();
-  let obj = { style: tmp.nsfwContainer, children: null };
-  obj = { source: registerAssetDefault, size: Button.Icon.Sizes.SMALL };
-  const items = [callback(Button.Icon, obj), ];
-  obj = { style: tmp.nsfwText, variant: "text-sm/normal", color: "interactive-text-active", children: null };
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.string(getSystemLocale.t.SLzV5z);
-  items[1] = callback(Text.Text, obj);
-  obj[1] = items;
-  return callback2(View, obj);
+require = fn;
+const View = fn(17).View;
+const EmojiPickerListConstants = fn(10322);
+({ LABEL_BOTTOM_PADDING, LABEL_TOP_PADDING, NSFW_ROW_HEIGHT } = EmojiPickerListConstants);
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj = { section: { justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT, paddingTop: LABEL_TOP_PADDING, paddingBottom: LABEL_BOTTOM_PADDING }, nsfwContainer: null, nsfwText: null };
+let obj3 = { justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT, paddingTop: LABEL_TOP_PADDING, paddingBottom: LABEL_BOTTOM_PADDING };
+obj.nsfwContainer = { flexDirection: "row", height: NSFW_ROW_HEIGHT, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, marginLeft: 12, marginRight: 12, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
+obj.nsfwText = { marginLeft: 4, textAlign: "center" };
+let closure_6 = createStyles.createStyles(obj);
+const obj4 = { flexDirection: "row", height: NSFW_ROW_HEIGHT, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, marginLeft: 12, marginRight: 12, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
+const memoResult = noop.memo(() => {
+  const tmp = closure_6();
+  const obj = { style: tmp.nsfwContainer, children: null };
+  const items = [React4(native.Icon, { source: _modDef8182, size: native.Icon.Sizes.SMALL }), ];
+  const obj3 = { style: tmp.nsfwText, variant: "text-sm/normal", color: "interactive-text-active", children: null };
+  const intl = util.intl;
+  obj3.children = intl.string(util.t.SLzV5z);
+  items[1] = React4(Text_Text.Text, obj3);
+  obj.children = items;
+  return hasOwnProperty(View, obj);
 });
-const memoResult1 = importAllResult.memo((useTier0UpsellContent) => {
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListComponents.tsx");
+
+export const NSFWRow = memoResult;
+export const Section = noop.memo((useTier0UpsellContent) => {
   ({ label, isSectionNitroLocked } = useTier0UpsellContent);
-  let obj = { style: callback3().section, children: null };
+  const obj = { style: closure_6().section, children: null };
   if (isSectionNitroLocked) {
-    obj = { useTier0UpsellContent: null };
-    obj[0] = useTier0UpsellContent.useTier0UpsellContent;
-    isSectionNitroLocked = callback(PremiumUpsellGradientBackground.PremiumUpsellGradientBackground, obj);
+    const obj2 = { useTier0UpsellContent: useTier0UpsellContent.useTier0UpsellContent };
+    isSectionNitroLocked = React4(PremiumUpsellGradientBackground.PremiumUpsellGradientBackground, obj2);
   }
   const items = [isSectionNitroLocked, ];
   let tmp6 = null;
   if ("" !== label) {
-    obj = { lineClamp: 1, color: "interactive-text-default", variant: "heading-sm/semibold", children: null };
-    obj[3] = label;
-    tmp6 = callback(Text.Text, obj);
+    const obj3 = { lineClamp: 1, color: "interactive-text-default", variant: "heading-sm/semibold", children: label };
+    tmp6 = React4(Text_Text.Text, obj3);
   }
   items[1] = tmp6;
-  obj[1] = items;
-  return closure_5(View, obj);
+  obj.children = items;
+  return hasOwnProperty(View, obj);
 });
-const result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListComponents.tsx");
-
-export const NSFWRow = memoResult;
-export const Section = memoResult1;

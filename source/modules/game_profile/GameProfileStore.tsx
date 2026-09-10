@@ -1,11 +1,11 @@
-// Module ID: 8687
-// Function ID: 8688
-// Name: getSimilarGames
+// Module ID: 8715
+// Function ID: 8716
+// Name: GameProfileStore
 // Dependencies: [504, 573, 2]
 
-// Module 8687 (getSimilarGames)
+// Module 8715 (GameProfileStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
 let closure_0 = {};
 let closure_1 = {};
@@ -20,37 +20,37 @@ class GameProfileStore extends Store {
 }
 const prototype = GameProfileStore.prototype;
 prototype["getSimilarGames"] = function getSimilarGames(arg0) {
-  return table[arg0];
+  return closure_0[arg0];
 };
 prototype["getShopCollectionSkuIds"] = function getShopCollectionSkuIds(arg0) {
-  return table2[arg0];
+  return closure_1[arg0];
 };
 prototype["hasShopCollectionBeenFetched"] = function hasShopCollectionBeenFetched(arg0) {
-  let flag = table3[arg0];
+  let flag = closure_2[arg0];
   if (flag == null) {
     flag = false;
   }
   return flag;
 };
 prototype["isShopCollectionFetching"] = function isShopCollectionFetching(arg0) {
-  let flag = table4[arg0];
+  let flag = closure_3[arg0];
   if (flag == null) {
     flag = false;
   }
   return flag;
 };
 prototype["getAnnouncements"] = function getAnnouncements(arg0) {
-  return table5[arg0];
+  return closure_4[arg0];
 };
 prototype["hasAnnouncementsBeenFetched"] = function hasAnnouncementsBeenFetched(arg0) {
-  let flag = table6[arg0];
+  let flag = closure_5[arg0];
   if (flag == null) {
     flag = false;
   }
   return flag;
 };
 prototype["isAnnouncementsFetching"] = function isAnnouncementsFetching(arg0) {
-  let flag = table7[arg0];
+  let flag = closure_6[arg0];
   if (flag == null) {
     flag = false;
   }
@@ -60,7 +60,7 @@ prototype["getPendingReturn"] = function getPendingReturn() {
   return c7;
 };
 GameProfileStore.displayName = "GameProfileStore";
-const gameProfileStore = new GameProfileStore(dispatcherDefault, {
+const gameProfileStore = new GameProfileStore(DispatcherDefault, {
   GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS: function handleGetSimilarGamesSuccess(gameId) {
     closure_0[gameId.gameId] = gameId.games;
   },
@@ -94,21 +94,21 @@ const gameProfileStore = new GameProfileStore(dispatcherDefault, {
   },
   GAME_PROFILE_SET_PENDING_RETURN: function handleSetPendingReturn(arg0) {
     ({ gameId, channelId, initialScrollOffset } = arg0);
-    gameId = undefined;
+    let gameId1;
     if (_null != null) {
-      gameId = _null.gameId;
+      gameId1 = _null.gameId;
     }
-    if (gameId === gameId) {
-      channelId = undefined;
+    if (gameId1 === gameId) {
+      let channelId1;
       if (_null != null) {
-        channelId = _null.channelId;
+        channelId1 = _null.channelId;
       }
-      if (channelId === channelId) {
-        initialScrollOffset = undefined;
+      if (channelId1 === channelId) {
+        let initialScrollOffset1;
         if (_null != null) {
-          initialScrollOffset = _null.initialScrollOffset;
+          initialScrollOffset1 = _null.initialScrollOffset;
         }
-        if (initialScrollOffset === initialScrollOffset) {
+        if (initialScrollOffset1 === initialScrollOffset) {
           return false;
         }
       }
@@ -124,6 +124,7 @@ const gameProfileStore = new GameProfileStore(dispatcherDefault, {
     return false;
   }
 });
-const result = require("set").fileFinishedImporting("modules/game_profile/GameProfileStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_profile/GameProfileStore.tsx");
 
 export default gameProfileStore;

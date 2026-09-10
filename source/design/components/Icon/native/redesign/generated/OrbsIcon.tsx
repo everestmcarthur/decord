@@ -1,26 +1,26 @@
-// Module ID: 8842
-// Function ID: 8843
+// Module ID: 8869
+// Function ID: 8870
 // Name: OrbsIcon
-// Dependencies: [19, 21, 576, 4261, 8843, 2]
+// Dependencies: [19, 21, 576, 4274, 8870, 2]
 // Exports: OrbsIcon
 
-// Module 8842 (OrbsIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 8843 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 8869 (OrbsIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod8870 from "module_8870" /* 8870 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/OrbsIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/OrbsIcon.tsx");
 
 export const OrbsIcon = function OrbsIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8870, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

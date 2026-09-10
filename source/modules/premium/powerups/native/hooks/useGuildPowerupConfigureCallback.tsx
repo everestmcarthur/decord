@@ -1,39 +1,39 @@
-// Module ID: 12548
-// Function ID: 12549
+// Module ID: 12574
+// Function ID: 12575
 // Name: useGuildPowerupConfigureCallback
-// Dependencies: [19, 1074, 4527, 12521, 4453, 9068, 9072, 38, 2]
+// Dependencies: [19, 1074, 4541, 12547, 4467, 9095, 9099, 38, 2]
 // Exports: default
 
-// Module 12548 (useGuildPowerupConfigureCallback)
-import closure_3 from "noop" /* 19 */;
-import ME from "ME" /* 1074 */;
+// Module 12574 (useGuildPowerupConfigureCallback)
+import Powerups from "Powerups" /* 4467 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import openGuildPowerupsBottomSheet from "openGuildPowerupsBottomSheet" /* 12547 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ GuildSettingsSections: c4, AnalyticsSections: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupConfigureCallback.tsx");
+require = fn;
+const Constants = fn(1074);
+({ GuildSettingsSections: closure_4, AnalyticsSections: hasOwnProperty } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupConfigureCallback.tsx");
 
 export default function useGuildPowerupConfigureCallback(arg0, skuId) {
   closure_0 = arg0;
-  closure_1 = skuId;
   const items = [arg0, skuId.skuId];
-  return React.useCallback(() => {
-    skuId(closure_1_2[2]).hideActionSheet(callback(closure_1_2[3]).GUILD_POWERUPS_BOTTOM_SHEET_KEY);
+  return noop.useCallback(() => {
+    ActionSheetActionCreatorsDefault.hideActionSheet(openGuildPowerupsBottomSheet.GUILD_POWERUPS_BOTTOM_SHEET_KEY);
     skuId = skuId.skuId;
-    if (callback(closure_1_2[4]).GUILD_POWERUP_ROLE_COLOR_SKU_ID === skuId) {
-      let tmpResult = tmp(tmp2[5]);
-      tmpResult.open(callback, closure_1_4.ROLES, closure_1_5.GUILD_POWERUPS_OVERVIEW_CARD);
-    } else if (tmp3(tmp2[4]).GUILD_POWERUP_TAG_SKU_ID === skuId) {
-      if (tmp3Result.canUseMobileServerTagSettings(callback)) {
-        tmpResult = tmp(tmp2[5]);
-        tmpResult.open(tmp9, closure_1_4.TAG, closure_1_5.GUILD_POWERUPS_OVERVIEW_CARD);
+    if (Powerups.GUILD_POWERUP_ROLE_COLOR_SKU_ID === skuId) {
+      tmp(9095).open(closure_0, constants.ROLES, constants2.GUILD_POWERUPS_OVERVIEW_CARD);
+    } else if (tmp3(4467).GUILD_POWERUP_TAG_SKU_ID === skuId) {
+      if (tmp3Result.canUseMobileServerTagSettings(closure_0)) {
+        tmp(9095).open(tmp9, constants.TAG, constants2.GUILD_POWERUPS_OVERVIEW_CARD);
       }
-      tmp3Result = tmp3(tmp2[6]);
-      tmp9 = callback;
+      tmp3Result = tmp3(9099);
+      tmp9 = closure_0;
     } else {
       const _HermesInternal = HermesInternal;
-      tmp(tmp2[7])(false, "Unsupported powerup SKU ID: " + tmp5.skuId);
+      tmp(38)(false, "Unsupported powerup SKU ID: " + tmp5.skuId);
     }
-    const obj = skuId(closure_1_2[2]);
     tmp5 = skuId;
   }, items);
 };

@@ -1,9 +1,11 @@
 // Module ID: 5200
 // Function ID: 5201
-// Dependencies: [5201]
+// Dependencies: [5201, 5213, 5221]
 
 // Module 5200
-import _mod5201 from "module_5201" /* 5201 */;
+import FILE_TYPES_REQUIRED_ADDITIONAL_CHECK from "FILE_TYPES_REQUIRED_ADDITIONAL_CHECK" /* 5201 */;
+import _mod5213 from "module_5213" /* 5213 */;
+import _mod5221 from "module_5221" /* 5221 */;
 
 const self = this;
 let self2 = this;
@@ -18,32 +20,32 @@ if (self2) {
   if (!fn) {
     fn = (obj, exports) => {
       for (const key10007 in arg0) {
-        let tmp5 = key10007;
         let tmp6 = "default" === key10007;
         if (tmp6) {
           if (tmp6) {
             continue;
           } else {
-            let tmp3 = self2;
             let tmp4 = self2(arg1, arg0, key10007);
             continue;
           }
           continue;
         } else {
           let _Object = Object;
+          hasOwnProperty = Object.prototype.hasOwnProperty;
           let call = hasOwnProperty.call;
           if (typeof call === "unknown") {
             let hasOwnPropertyResult = hasOwnProperty(key10007);
           } else {
             hasOwnPropertyResult = call(arg1, key10007);
           }
-          let tmp2 = hasOwnPropertyResult;
         }
       }
     };
   }
   const _Object2 = Object;
-  fn(_mod5201, exports);
+  fn(FILE_TYPES_REQUIRED_ADDITIONAL_CHECK, exports);
+  fn(_mod5213, exports);
+  fn(_mod5221, exports);
 } else {
   let _Object = Object;
 }

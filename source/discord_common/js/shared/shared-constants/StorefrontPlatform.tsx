@@ -1,11 +1,11 @@
-// Module ID: 10826
-// Function ID: 10827
+// Module ID: 10853
+// Function ID: 10854
 // Name: StorefrontPlatform
 // Dependencies: [2]
 
-// Module 10826 (StorefrontPlatform)
-import set from "set" /* 2 */;
+// Module 10853 (StorefrontPlatform)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/StorefrontPlatform.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/StorefrontPlatform.tsx");
 
 export const StorefrontPlatform = { DESKTOP: "desktop", XBOX: "xbox", PLAYSTATION: "playstation", SWITCH: "switch", APPLE_ARCADE: "apple arcade", NETFLIX: "netflix", AMAZON_KIDS_PLUS: "amazon kids+" };

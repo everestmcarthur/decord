@@ -1,28 +1,32 @@
-// Module ID: 14911
-// Function ID: 14912
-// Name: useChangeSpendingLimitFormState
-// Dependencies: [5, 32, 19, 7537, 14828, 504, 7235, 14830, 2]
+// Module ID: 14937
+// Function ID: 14938
+// Name: ChangeSpendingLimitFormState
+// Dependencies: [5, 32, 19, 7551, 14854, 504, 7249, 14856, 2]
 // Exports: useChangeSpendingLimitFormState
 
-// Module 14911 (useChangeSpendingLimitFormState)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "freshTeenActivityWithMap" /* 7537 */;
+// Module 14937 (ChangeSpendingLimitFormState)
+import SpendingLimitUtils from "SpendingLimitUtils" /* 14856 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7551 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/parent_tools/ChangeSpendingLimitFormState.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/ChangeSpendingLimitFormState.tsx");
 
 export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFormState(teenId) {
-  const _require = teenId;
-  let ParentalControlledSpendingLimit = _require(controlledSetting[4]).ParentalControlledSpendingLimit;
+  _require = teenId;
+  let ParentalControlledSpendingLimit = require("ParentalControlledUserSettings").ParentalControlledSpendingLimit;
   controlledSetting = ParentalControlledSpendingLimit.useControlledSetting(teenId);
-  let obj = _require(controlledSetting[5]);
   const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => store.getSpendingLimit());
+  const stateFromStores = require("initialize").useStateFromStores(items, () => closure_5.getSpendingLimit());
+  let obj = require("initialize");
   const items1 = [closure_5];
-  const stateFromStores1 = _require(controlledSetting[5]).useStateFromStores(items1, () => {
-    const monthlyPurchases = store.getMonthlyPurchases();
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
+    const monthlyPurchases = closure_5.getMonthlyPurchases();
     let total_amount;
     if (monthlyPurchases != null) {
       total_amount = monthlyPurchases.total_amount;
@@ -52,11 +56,11 @@ export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFo
     num = 2;
   }
   const items2 = [formatted];
-  const memo = React.useMemo(() => teenId(controlledSetting[7]).getCurrencySymbol(formatted), items2);
-  const memo1 = React.useMemo(tmp(tmp2[7]).getNextRenewalDateLabel, []);
-  let obj2 = _require(controlledSetting[5]);
+  const memo = noop.useMemo(() => SpendingLimitUtils.getCurrencySymbol(formatted), items2);
+  const memo1 = noop.useMemo(tmp(tmp2[7]).getNextRenewalDateLabel, []);
+  let obj2 = require("initialize");
   const tmp10 = num;
-  [tmp12, closure_4] = num(React.useState(() => {
+  [tmp12, noop] = num(noop.useState(() => {
     let str = "";
     if (null != controlledSetting) {
       const _String = String;
@@ -66,7 +70,7 @@ export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFo
   }), 2);
   const items3 = [num];
   let tmp14 = "" === tmp12;
-  const callback = React.useCallback((arg0) => callback(teenId(controlledSetting[7]).sanitizeAmountInput(arg0, num)), items3);
+  const callback = noop.useCallback((arg0) => noop(SpendingLimitUtils.sanitizeAmountInput(arg0, num)), items3);
   if (tmp14) {
     tmp14 = null != controlledSetting;
   }
@@ -87,22 +91,21 @@ export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFo
     const _Math = Math;
     rounded = Math.round(parsed * 10 ** num);
   }
-  const tmp10Result = tmp10(React.useState(false), 2);
+  const tmp10Result = tmp10(noop.useState(false), 2);
   closure_8 = tmp10Result[1];
   const items4 = [tmp18, tmp14, rounded, teenId, formatted];
-  obj = { amountInput: tmp12, handleAmountChange: callback, currency: formatted, currencySymbol: memo, exponent: num, isClearingCap: tmp14, isOverspending: null, canSave: null, isSubmitting: null, renewalDate: null, monthlySpend: null, save: null };
+  let obj4 = { amountInput: tmp12, handleAmountChange: callback, currency: formatted, currencySymbol: memo, exponent: num, isClearingCap: tmp14, isOverspending: null, canSave: null, isSubmitting: null, renewalDate: null, monthlySpend: null, save: null };
   let tmp23 = null != stateFromStores1;
-  const callback1 = obj3.useCallback(formatted(function*() {
+  const callback1 = obj3.useCallback(formatted(function*(arg0, value) {
     if (c4 === 2) {
       c4 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -112,34 +115,28 @@ export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFo
         if (0 === dependencyMap) {
           if (arg0 === 1) {
             c4 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            closure_0 = tmp3;
-            if (closure_1_6) {
-              closure_1_8(true);
+            if (closure_6) {
+              closure_8(true);
               c3 = 1;
-              if (closure_1_5) {
-                const ParentalControlledSpendingLimit2 = closure_1_0(14828).ParentalControlledSpendingLimit;
+              if (closure_5) {
+                const ParentalControlledSpendingLimit2 = tmp3(14854).ParentalControlledSpendingLimit;
                 dependencyMap = 2;
                 c4 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = ParentalControlledSpendingLimit2.updateControlledSetting(closure_1_0, null);
-                return obj1;
-              } else if (null != closure_1_7) {
-                const ParentalControlledSpendingLimit = closure_1_0(14828).ParentalControlledSpendingLimit;
-                const obj2 = { amount: null, currency: null };
-                obj2[0] = tmp16;
-                obj2[1] = closure_1_2;
+                const obj4 = { value: ParentalControlledSpendingLimit2.updateControlledSetting(tmp3, null), done: false };
+                return obj4;
+              } else if (null != rounded) {
+                const ParentalControlledSpendingLimit = tmp3(14854).ParentalControlledSpendingLimit;
+                const obj5 = { amount: tmp16, currency: formatted };
                 dependencyMap = 3;
                 c4 = 1;
-                const obj3 = { value: null, done: false };
-                obj3[0] = ParentalControlledSpendingLimit.updateControlledSetting(closure_1_0, obj2);
-                return obj3;
+                const obj6 = { value: ParentalControlledSpendingLimit.updateControlledSetting(tmp3, obj5), done: false };
+                return obj6;
               }
             }
             c4 = 3;
@@ -147,33 +144,31 @@ export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFo
           }
         } else if (1 === tmp7) {
           c3 = 0;
-          callback(false);
+          closure_128_8(false);
           throw closure_2;
         } else if (2 === tmp7) {
           if (arg0 === 1) {
             c4 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 0;
-            callback(false);
+            closure_128_8(false);
             c4 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
+            const obj7 = { value, done: true };
+            return obj7;
           }
         } else if (arg0 === 1) {
           c4 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c3 = 0;
-          callback(false);
+          closure_128_8(false);
           c4 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          const obj = { value, done: true };
           return obj;
         }
         c3 = 0;
-        callback(false);
+        closure_128_8(false);
       } catch (tmp27) {
         closure_2 = tmp27;
         if (tmp4 === c3) {
@@ -194,11 +189,11 @@ export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFo
   if (tmp23) {
     tmp23 = rounded <= stateFromStores1;
   }
-  obj[6] = tmp23;
-  obj[7] = tmp18;
-  obj[8] = tmp10Result[0];
-  obj[9] = memo1;
-  obj[10] = stateFromStores1;
-  obj[11] = callback1;
-  return obj;
+  obj4.isOverspending = tmp23;
+  obj4.canSave = tmp18;
+  obj4.isSubmitting = tmp10Result[0];
+  obj4.renewalDate = memo1;
+  obj4.monthlySpend = stateFromStores1;
+  obj4.save = callback1;
+  return obj4;
 };

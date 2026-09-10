@@ -1,19 +1,19 @@
-// Module ID: 15784
-// Function ID: 15785
+// Module ID: 15814
+// Function ID: 15815
 // Name: UserSettingsDesignSystemToast
-// Dependencies: [19, 17, 21, 4560, 2]
+// Dependencies: [19, 17, 21, 4574, 2]
 // Exports: default
 
-// Module 15784 (UserSettingsDesignSystemToast)
-import noopAll from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15814 (UserSettingsDesignSystemToast)
+import noop from "module_19" /* 19 */;
 
-noopAll;
-let closure_2 = createCacheKey.createStyles({ container: { padding: 16, flex: 1, alignItems: "center" } });
-const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemToast.tsx");
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_2 = createStyles.createStyles({ container: { padding: 16, flex: 1, alignItems: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemToast.tsx");
 
 export default function UserSettingsDesignSystemToast() {
-  return <View style={callback().container} />;
+  return <View style={closure_2().container} />;
 };

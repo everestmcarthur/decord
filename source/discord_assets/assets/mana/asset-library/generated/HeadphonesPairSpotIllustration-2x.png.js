@@ -1,12 +1,11 @@
-// Module ID: 6190
-// Function ID: 6191
-// Name: metadata
+// Module ID: 6204
+// Function ID: 6205
 // Dependencies: [2]
 
-// Module 6190 (metadata)
-import set from "set" /* 2 */;
+// Module 6204
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/HeadphonesPairSpotIllustration-2x.png.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/HeadphonesPairSpotIllustration-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/d4dd74bba54845b5f005c2258235d8bd1f7d1f3b178cad77ad514c6cb9f8f149.png";
 export const metadata = { fileBytes: 39731 };

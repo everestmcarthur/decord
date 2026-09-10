@@ -1,56 +1,54 @@
-// Module ID: 4752
-// Function ID: 4753
-// Name: overrideSurvey
-// Dependencies: [4751, 1074, 573, 1242, 4753, 1250, 1969, 1272, 2]
+// Module ID: 4766
+// Function ID: 4767
+// Name: SurveyActionCreators
+// Dependencies: [4765, 1074, 573, 1242, 4767, 1250, 1969, 1272, 2]
 // Exports: overrideSurvey, surveyFetch, surveyHide, surveySeen
 
-// Module 4752 (overrideSurvey)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import encodeProperties from "encodeProperties" /* 1250 */;
-import sendRequest from "sendRequest" /* 1272 */;
-import _modDef4753 from "module_4753" /* 4753 */;
-import closure_3 from "fetchSurveyIfNeeded" /* 4751 */;
-import { SURVEY_REFETCH_INTERVAL } from "fetchSurveyIfNeeded" /* 4751 */;
-import ME from "ME" /* 1074 */;
+// Module 4766 (SurveyActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import TypeUtils from "TypeUtils" /* 1969 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4767 */;
+import SurveyStore from "SurveyStore" /* 4765 */;
 
-require = arg1;
-({ AnalyticEvents: c5, NoticeTypes: closure_6, Endpoints: error } = ME);
-const result = require("set").fileFinishedImporting("actions/SurveyActionCreators.tsx");
+const require = globalThis.__r;
 
-export const overrideSurvey = function overrideSurvey(id) {
-  let obj = dispatcherDefault;
-  obj = { type: "SURVEY_OVERRIDE", id, isActionTriggered: arg1 };
-  obj.dispatch(obj);
+require = fn;
+const SURVEY_REFETCH_INTERVAL = fn(4765).SURVEY_REFETCH_INTERVAL;
+const Constants = fn(1074);
+({ AnalyticEvents: hasOwnProperty, NoticeTypes: metroRequire, Endpoints: closure_7 } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("actions/SurveyActionCreators.tsx");
+
+export const overrideSurvey = function overrideSurvey(id, isActionTriggered) {
+  DispatcherDefault.dispatch({ type: "SURVEY_OVERRIDE", id, isActionTriggered });
 };
-export const surveyHide = function surveyHide(key, arg1) {
-  let obj = dispatcherDefault;
-  obj = { type: "SURVEY_HIDE", key };
-  obj.dispatch(obj);
-  const track = expandEventPropertiesDefault.track;
-  if (arg1) {
-    obj = { notice_type: null, survey_id: null, dismissed: null };
-    obj[0] = constants.SURVEY;
-    obj[1] = key;
-    obj[2] = arg1;
-    track(tmp3.APP_NOTICE_CLOSED, obj);
+export const surveyHide = function surveyHide(key, dismissed) {
+  DispatcherDefault.dispatch({ type: "SURVEY_HIDE", key });
+  const obj2 = { type: "SURVEY_HIDE", key };
+  const track = AnalyticsUtilsDefault.track;
+  if (dismissed) {
+    const obj3 = { notice_type: constants.SURVEY, survey_id: key, dismissed };
+    track(tmp3.APP_NOTICE_CLOSED, obj3);
   } else {
-    obj1 = { notice_type: null };
-    obj1[0] = constants.SURVEY;
-    track(tmp3.APP_NOTICE_PRIMARY_CTA_OPENED, obj1);
+    const obj4 = { notice_type: constants.SURVEY };
+    track(tmp3.APP_NOTICE_PRIMARY_CTA_OPENED, obj4);
   }
 };
 export const surveyFetch = function surveyFetch(surveyOverride, disable_auto_seen) {
-  let obj = {};
+  const obj = {};
   if (null != surveyOverride) {
     obj.survey_override = surveyOverride;
   }
   if (null != disable_auto_seen) {
     obj.disable_auto_seen = disable_auto_seen;
   }
-  obj = { url: closure_7.USER_SURVEY, query: obj, trackedActionData: null, rejectWithError: null };
-  obj = {
-    event: encodeProperties.NetworkActionNames.USER_SURVEY_FETCH,
+  const request = { url: React5.USER_SURVEY, query: obj, trackedActionData: null, rejectWithError: null };
+  const obj2 = TrackedHTTPUtilsDefault;
+  request.trackedActionData = {
+    event: discord_common_AnalyticsUtils.NetworkActionNames.USER_SURVEY_FETCH,
     properties(body) {
       let survey;
       if (body != null) {
@@ -63,13 +61,28 @@ export const surveyFetch = function surveyFetch(surveyOverride, disable_auto_see
       if (survey != null) {
         key = survey.key;
       }
-      return callback(1969).exact({ key });
+      return require("TypeUtils").exact({ key });
     }
   };
-  obj[2] = obj;
-  const obj2 = _modDef4753;
-  obj[3] = sendRequest.rejectWithMigratedError();
-  const value = obj2.get(obj);
+  const obj3 = {
+    event: discord_common_AnalyticsUtils.NetworkActionNames.USER_SURVEY_FETCH,
+    properties(body) {
+      let survey;
+      if (body != null) {
+        body = body.body;
+        if (body != null) {
+          survey = body.survey;
+        }
+      }
+      let key;
+      if (survey != null) {
+        key = survey.key;
+      }
+      return require("TypeUtils").exact({ key });
+    }
+  };
+  request.rejectWithError = HTTPUtils.rejectWithMigratedError();
+  value = obj2.get(request);
   return value.then((body) => {
     let survey;
     if (body != null) {
@@ -78,7 +91,7 @@ export const surveyFetch = function surveyFetch(surveyOverride, disable_auto_see
         survey = body.survey;
       }
     }
-    callback2(573).dispatch({ type: "SURVEY_FETCHED", survey });
+    DispatcherDefault.dispatch({ type: "SURVEY_FETCHED", survey });
     let survey1;
     if (body != null) {
       const body2 = body.body;
@@ -88,38 +101,33 @@ export const surveyFetch = function surveyFetch(surveyOverride, disable_auto_see
     }
     return survey1;
   }, () => {
-    callback2(573).dispatch({ type: "SURVEY_FETCHED", survey: null });
+    DispatcherDefault.dispatch({ type: "SURVEY_FETCHED", survey: null });
   });
 };
 export const surveySeen = function surveySeen(key) {
-  const _require = key;
-  lastSeenTimestamp = lastSeenTimestamp.getLastSeenTimestamp();
+  _require = key;
+  const lastSeenTimestamp = SurveyStore.getLastSeenTimestamp();
   if (null !== lastSeenTimestamp) {
     if (null != lastSeenTimestamp) {
       const _Date = Date;
     }
   }
-  let obj = dispatcherDefault;
-  obj = { type: "SURVEY_SEEN", key };
-  obj.dispatch(obj);
-  obj = { url: closure_7.USER_SURVEY_SEEN(key), trackedActionData: null, rejectWithError: null };
-  const obj3 = _modDef4753;
-  obj[1] = {
-    event: _require(1250).NetworkActionNames.USER_SURVEY_SEEN,
+  DispatcherDefault.dispatch({ type: "SURVEY_SEEN", key });
+  const obj2 = { type: "SURVEY_SEEN", key };
+  const obj4 = { url: closure_7.USER_SURVEY_SEEN(key), trackedActionData: null, rejectWithError: null };
+  const obj3 = TrackedHTTPUtilsDefault;
+  obj4.trackedActionData = {
+    event: require("discord_common/AnalyticsUtils").NetworkActionNames.USER_SURVEY_SEEN,
     properties() {
-      let obj = key(closure_1_2[6]);
-      obj = { key };
-      return obj.exact(obj);
+      return TypeUtils.exact({ key });
     }
   };
-  obj1 = {
-    event: _require(1250).NetworkActionNames.USER_SURVEY_SEEN,
+  const obj5 = {
+    event: require("discord_common/AnalyticsUtils").NetworkActionNames.USER_SURVEY_SEEN,
     properties() {
-      let obj = key(closure_1_2[6]);
-      obj = { key };
-      return obj.exact(obj);
+      return TypeUtils.exact({ key });
     }
   };
-  obj[2] = _require(1272).rejectWithMigratedError();
-  return obj3.post(obj);
+  obj4.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
+  return obj3.post(obj4);
 };

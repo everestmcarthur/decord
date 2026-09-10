@@ -4,12 +4,13 @@
 // Dependencies: [490]
 
 // Module 489 (ToastAndroid)
-import ToastAndroidDefault from "ToastAndroid" /* 490 */;
+import _modDef490 from "module_490" /* 490 */;
 
-for (const key10013 in require("ToastAndroid")) {
-  let tmp2 = key10013;
-  arg5[key10013] = require("ToastAndroid")[key10013];
+const require = globalThis.__r;
+
+for (const key10013 in require("module_490")) {
+  arg5[key10013] = require("module_490")[key10013];
   continue;
 }
 
-export default ToastAndroidDefault;
+export default _modDef490;

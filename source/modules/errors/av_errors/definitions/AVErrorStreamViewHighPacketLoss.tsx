@@ -1,24 +1,25 @@
-// Module ID: 17841
-// Function ID: 17842
-// Name: AVErrorStreamViewHighPacketLossDefinition
-// Dependencies: [4582, 502, 4599, 17840, 4612, 9115, 17837, 2]
+// Module ID: 17874
+// Function ID: 17875
+// Name: AVErrorStreamViewHighPacketLoss
+// Dependencies: [4596, 502, 4613, 17873, 4626, 9142, 17870, 2]
 
-// Module 17841 (AVErrorStreamViewHighPacketLossDefinition)
-import closure_2 from "reset" /* 4582 */;
-import closure_3 from "fetchFingerprint" /* 502 */;
-import closure_4 from "initialize" /* 4599 */;
+// Module 17874 (AVErrorStreamViewHighPacketLoss)
+import StreamKeyUtils from "StreamKeyUtils" /* 4626 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4596 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4613 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamViewHighPacketLoss.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamViewHighPacketLoss.tsx");
 
 export const AVErrorStreamViewHighPacketLossDefinition = {
   getActiveErrors() {
     let reduced = null;
     if (obj.getReportInboundErrors()) {
-      allActiveStreams = allActiveStreams.getAllActiveStreams();
+      const allActiveStreams = ApplicationStreamingStore.getAllActiveStreams();
       reduced = allActiveStreams.reduce((arr, ownerId) => {
-        let obj = callback(table[4]);
-        rTCConnection = rTCConnection.getRTCConnection(obj.encodeStreamKey(ownerId));
+        rTCConnection = rTCConnection.getRTCConnection(StreamKeyUtils.encodeStreamKey(ownerId));
         let mediaEngineConnectionId;
         if (rTCConnection != null) {
           mediaEngineConnectionId = rTCConnection.getMediaEngineConnectionId();
@@ -28,16 +29,14 @@ export const AVErrorStreamViewHighPacketLossDefinition = {
         } else if (ownerId.ownerId === id.getId()) {
           return arr;
         } else {
-          let tmpResult = tmp(tmp2[3]);
-          const accumulatedStatsWithMinDatapoints = tmpResult.getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, ownerId.ownerId);
+          const accumulatedStatsWithMinDatapoints = tmp(tmp2[3]).getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, ownerId.ownerId);
           if (null != accumulatedStatsWithMinDatapoints) {
             if (10 < 100 * accumulatedStatsWithMinDatapoints.short.packetLossRate) {
-              obj = { type: null };
-              obj[0] = tmp(tmp2[5]).AVError.STREAM_VIEW_HIGH_PACKET_LOSS;
-              tmpResult = tmp(tmp2[6]);
-              const merged = Object.assign(tmpResult.getStreamErrorContext(tmp(tmp2[4]).encodeStreamKey(ownerId)));
-              arr.push(obj);
-              const tmpResult1 = tmp(tmp2[4]);
+              const obj2 = { type: tmp(tmp2[5]).AVError.STREAM_VIEW_HIGH_PACKET_LOSS };
+              const tmpResult3 = tmp(tmp2[6]);
+              const merged = Object.assign(tmpResult3.getStreamErrorContext(tmp(tmp2[4]).encodeStreamKey(ownerId)));
+              arr.push(obj2);
+              const tmpResult4 = tmp(tmp2[4]);
             }
           }
           return arr;

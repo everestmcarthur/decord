@@ -1,81 +1,91 @@
-// Module ID: 17883
-// Function ID: 17884
+// Module ID: 17916
+// Function ID: 17917
 // Name: AgeVerificationScreen
-// Dependencies: [19, 17, 1371, 1074, 21, 4560, 1256, 17876, 504, 8587, 17870, 1894, 8413, 17879, 5692, 1114, 2690, 2946, 8411, 2024, 14179, 6593, 4556, 8589, 2]
+// Dependencies: [19, 17, 1371, 1074, 21, 4574, 1256, 17909, 504, 8615, 17903, 1894, 8441, 17912, 5706, 1114, 2690, 2946, 8439, 2024, 14204, 6607, 4570, 8617, 2]
 // Exports: default
 
-// Module 17883 (AgeVerificationScreen)
-import closure_3 from "noop" /* 19 */;
-import { Pressable } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1371 */;
-import { HelpdeskArticles } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17916 (AgeVerificationScreen)
+import Server from "Server" /* 1894 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8441 */;
+import types from "types" /* 17903 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-let closure_8 = createCacheKey.createStyles({ helpLink: { textAlign: "center" } });
-let result = require("set").fileFinishedImporting("modules/safety_flows/native/tasks/AgeVerificationScreen.tsx");
+require = fn;
+const Pressable = fn(17).Pressable;
+const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_8 = createStyles.createStyles({ helpLink: { textAlign: "center" } });
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/safety_flows/native/tasks/AgeVerificationScreen.tsx");
 
 export default function AgeVerificationScreen() {
-  const memo = React.useMemo(() => memo(stateFromStores[6]).v4(), []);
+  const memo = noop.useMemo(() => memo(stateFromStores[6]).v4(), []);
+  const tmp2 = closure_8();
+  const onTaskComplete = memo(stateFromStores[7]).useOnTaskComplete();
   let obj = memo(stateFromStores[7]);
-  const onTaskComplete = obj.useOnTaskComplete();
-  obj1 = memo(stateFromStores[8]);
-  const items = [closure_5];
-  stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
-  obj = {
+  const items = [UserStore];
+  stateFromStores = memo(stateFromStores[8]).useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj2 = memo(stateFromStores[8]);
+  const obj3 = {
     onClose() {
-      return onTaskComplete({ type: memo(stateFromStores[10]).TaskInputType.Empty });
+      return onTaskComplete({ type: types.TaskInputType.Empty });
     }
   };
-  const tmp2 = callback();
   const items1 = [onTaskComplete, stateFromStores];
-  ({ loading, ageVerificationMethods } = onTaskComplete(stateFromStores[9])(obj));
-  const effect = React.useEffect(() => {
+  ({ loading, ageVerificationMethods } = onTaskComplete(stateFromStores[9])({
+    onClose() {
+      return onTaskComplete({ type: types.TaskInputType.Empty });
+    }
+  }));
+  const effect = noop.useEffect(() => {
     let prop;
     if (stateFromStores != null) {
       prop = stateFromStores.ageVerificationStatus;
     }
-    if (prop !== memo(stateFromStores[11]).AgeVerificationStatusUkAndAusOnly.UNVERIFIED) {
-      const obj = { type: null };
-      obj[0] = memo(stateFromStores[10]).TaskInputType.Empty;
+    if (prop !== Server.AgeVerificationStatusUkAndAusOnly.UNVERIFIED) {
+      const obj = { type: types.TaskInputType.Empty };
       onTaskComplete(obj);
     }
   }, items1);
   const items2 = [memo];
-  const effect1 = React.useEffect(() => {
-    const result = memo(stateFromStores[12]).trackAgeVerificationModalViewed(memo, memo(stateFromStores[12]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, memo(stateFromStores[12]).AgeVerificationModalEntryPoint.SAFETY_FLOWS);
+  const effect1 = noop.useEffect(() => {
+    const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalViewed(memo, AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.SAFETY_FLOWS);
   }, items2);
-  obj = { ImageComponent: null, title: null, subtitle: null, footer: null, submitting: null, children: null };
-  const tmp5 = onTaskComplete(stateFromStores[9])(obj);
-  obj[0] = jsx(memo(stateFromStores[14]).ShieldSpotIllustration, {});
+  const obj4 = { ImageComponent: null, title: null, subtitle: null, footer: null, submitting: null, children: null };
+  const tmp5 = onTaskComplete(stateFromStores[9])({
+    onClose() {
+      return onTaskComplete({ type: types.TaskInputType.Empty });
+    }
+  });
+  obj4.ImageComponent = jsx(memo(stateFromStores[14]).ShieldSpotIllustration, {});
   const intl = memo(stateFromStores[15]).intl;
-  obj[1] = intl.string(onTaskComplete(stateFromStores[16])["dSkE/A"]);
+  obj4.title = intl.string(onTaskComplete(stateFromStores[16])["dSkE/A"]);
   const intl2 = memo(stateFromStores[15]).intl;
-  obj1 = {
+  obj4.subtitle = intl2.format(onTaskComplete(stateFromStores[17]).RpMIT0, {
     handleOnHelpUrlHook() {
       const obj = onTaskComplete(stateFromStores[18]);
       obj.openUrl(onTaskComplete(stateFromStores[19]).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
     }
-  };
-  obj[2] = intl2.format(onTaskComplete(stateFromStores[17]).RpMIT0, obj1);
-  const obj2 = { children: null };
-  const obj3 = {
+  });
+  const obj6 = { children: null };
+  const obj7 = {
     accessibilityRole: "button",
     onPress() {
       onTaskComplete(stateFromStores[21]).logout("age_verification_screen");
     },
     children: null
   };
-  const obj4 = { variant: "text-sm/medium", color: "text-link", style: tmp2.helpLink, children: null };
+  const obj8 = { variant: "text-sm/medium", color: "text-link", style: tmp2.helpLink, children: null };
   const intl3 = memo(stateFromStores[15]).intl;
-  obj4[3] = intl3.string(memo(stateFromStores[15]).t["2jxGer"]);
-  obj3[2] = jsx(memo(stateFromStores[22]).Text, { variant: "text-sm/medium", color: "text-link", style: tmp2.helpLink, children: null });
-  obj2[0] = <Pressable accessibilityRole="button" onPress={function onPress() {
+  obj8.children = intl3.string(memo(stateFromStores[15]).t["2jxGer"]);
+  obj7.children = jsx(memo(stateFromStores[22]).Text, { variant: "text-sm/medium", color: "text-link", style: tmp2.helpLink, children: null });
+  obj6.children = <Pressable accessibilityRole="button" onPress={function onPress() {
     onTaskComplete(stateFromStores[21]).logout("age_verification_screen");
   }}>{null}</Pressable>;
-  obj[3] = jsx(memo(stateFromStores[20]).ModalDisclaimer, { children: null });
-  obj[4] = loading;
-  obj[5] = jsx(memo(stateFromStores[23]).AgeVerificationMethodsContainer, { ageVerificationMethods, modalSessionId: memo });
+  obj4.footer = jsx(memo(stateFromStores[20]).ModalDisclaimer, { children: null });
+  obj4.submitting = loading;
+  obj4.children = jsx(memo(stateFromStores[23]).AgeVerificationMethodsContainer, { ageVerificationMethods, modalSessionId: memo });
   return jsx(onTaskComplete(stateFromStores[13]), { ImageComponent: null, title: null, subtitle: null, footer: null, submitting: null, children: null });
 };

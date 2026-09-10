@@ -1,31 +1,32 @@
-// Module ID: 15829
-// Function ID: 15830
-// Name: ShopCardGridItem
-// Dependencies: [19, 17, 7542, 21, 4560, 8769, 8772, 15828, 12, 2]
+// Module ID: 15859
+// Function ID: 15860
+// Name: CollectiblesShopCardsGrid
+// Dependencies: [19, 17, 7556, 21, 4574, 8797, 8800, 15858, 12, 2]
 // Exports: default
 
-// Module 15829 (ShopCardGridItem)
-import CollectiblesShopCardInternalV2Default from "CollectiblesShopCardInternalV2" /* 8769 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "updateCategoriesAndProducts" /* 7542 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15859 (CollectiblesShopCardsGrid)
+import _modDef12 from "module_12" /* 12 */;
+import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 8797 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8800 */;
+import noop from "module_19" /* 19 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7556 */;
 
-const require = arg1;
+require = fn;
 function ShopCardGridItem(index) {
   index = index.index;
   const items = [index];
   ({ product, cardWidth, preferVCPrice, unpublishedAt, disableBundleStaticBackground, muteBundleStaticBackground } = index);
-  const memo = React.useMemo(() => ({ tilePosition: index }), items);
-  return jsx(index(8772).CollectiblesAnalyticsProvider, { newValue: memo, children: jsx(CollectiblesShopCardInternalV2Default, { unpublishedAt, product, cardWidth, preferVCPrice, disableBundleStaticBackground, muteBundleStaticBackground }) });
+  const memo = noop.useMemo(() => ({ tilePosition: index }), items);
+  return jsx(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, { newValue: memo, children: jsx(CollectiblesShopCardV2Default, { unpublishedAt, product, cardWidth, preferVCPrice, disableBundleStaticBackground, muteBundleStaticBackground }) });
 }
-({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
-createCacheKey = { rowContainer: null };
-createCacheKey = { flexDirection: "row", gap: require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_GAP };
-createCacheKey[0] = createCacheKey;
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardsGrid.tsx");
+get_ActivityIndicator = fn(17);
+({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { rowContainer: { flexDirection: "row", gap: fn(8797).COLLECTIBLES_SHOP_CARD_GAP } };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardsGrid.tsx");
 
 export default function CollectiblesShopCardsGrid(accessibilityLabel) {
   const products = accessibilityLabel.products;
@@ -33,42 +34,38 @@ export default function CollectiblesShopCardsGrid(accessibilityLabel) {
   if (scrollEnabled === undefined) {
     scrollEnabled = false;
   }
-  ({ disableBundleStaticBackground: closure_3, muteBundleStaticBackground: closure_4 } = accessibilityLabel);
-  closure_5 = undefined;
-  let columns;
-  let cardWidth;
+  ({ disableBundleStaticBackground: noop, muteBundleStaticBackground: closure_4 } = accessibilityLabel);
   ({ onScroll, paddingTop, paddingBottom } = accessibilityLabel);
-  closure_5 = callback();
-  let obj = products(15828);
-  const cardLayout = obj.useCardLayout();
-  columns = cardLayout.columns;
-  cardWidth = cardLayout.cardWidth;
+  const rowContainer = closure_8();
+  const cardLayout = products(15858).useCardLayout();
+  const columns = cardLayout.columns;
+  const cardWidth = cardLayout.cardWidth;
   const items = [products, columns];
-  const memo = React.useMemo(() => closure_1_1(closure_1_2[8]).chunk(products, columns), items);
-  obj = { accessibilityLabel: accessibilityLabel.accessibilityLabel, accessibilityRole: "list", scrollEnabled, showsVerticalScrollIndicator: false, onScroll, contentContainerStyle: null, children: null };
-  obj = { gap: products(8769).COLLECTIBLES_SHOP_CARD_GAP, paddingTop, paddingBottom, width: cardLayout.rowWidth, alignSelf: "center" };
-  obj[5] = obj;
-  obj[6] = memo.map((arr) => {
-    closure_0 = arg1;
-    return cardWidth(closure_1_4, {
+  const memo = noop.useMemo(() => _modDef12.chunk(products, columns), items);
+  const obj2 = { accessibilityLabel: accessibilityLabel.accessibilityLabel, accessibilityRole: "list", scrollEnabled, showsVerticalScrollIndicator: false, onScroll, contentContainerStyle: null, children: null };
+  let obj = products(15858);
+  obj2.contentContainerStyle = { gap: products(8797).COLLECTIBLES_SHOP_CARD_GAP, paddingTop, paddingBottom, width: cardLayout.rowWidth, alignSelf: "center" };
+  obj2.children = memo.map((arr, index) => {
+    closure_0 = index;
+    return cardWidth(muteBundleStaticBackground, {
       style: rowContainer.rowContainer,
-      children: arr.map((product) => {
-        let categoryForProduct = closure_1_1;
-        if (closure_1_1 == null) {
-          categoryForProduct = columns.getCategoryForProduct(product.skuId);
+      children: arr.map((product, index) => {
+        let categoryForProduct = importDefault;
+        if (importDefault == null) {
+          categoryForProduct = CollectiblesCategoryStore.getCategoryForProduct(product.skuId);
         }
-        const obj = { product, index: closure_0 * closure_1_6 + arg1, cardWidth: closure_1_7, unpublishedAt: null, preferVCPrice: null, disableBundleStaticBackground: null, muteBundleStaticBackground: null };
+        const obj = { product, index: closure_0 * columns + index, cardWidth, unpublishedAt: null, preferVCPrice: null, disableBundleStaticBackground: null, muteBundleStaticBackground: null };
         let unpublishedAt;
         if (categoryForProduct != null) {
           unpublishedAt = categoryForProduct.unpublishedAt;
         }
-        obj[3] = unpublishedAt;
-        obj[4] = closure_1_2;
-        obj[5] = closure_1_3;
-        obj[6] = closure_1_4;
-        return cardWidth(closure_2_9, obj, product.skuId);
+        obj.unpublishedAt = unpublishedAt;
+        obj.preferVCPrice = preferVCPrice;
+        obj.disableBundleStaticBackground = disableBundleStaticBackground;
+        obj.muteBundleStaticBackground = muteBundleStaticBackground;
+        return <ShopCardGridItem key={arg0.skuId} product={arg0} index={closure_0 * columns + arg1} cardWidth={cardWidth} unpublishedAt={null} preferVCPrice={null} disableBundleStaticBackground={null} muteBundleStaticBackground={null} />;
       })
-    }, arg1);
+    }, index);
   });
-  return cardWidth(closure_5, obj);
+  return cardWidth(rowContainer, obj2);
 };

@@ -1,54 +1,30 @@
 // Module ID: 6852
 // Function ID: 6853
-// Dependencies: [6853, 6854, 6855, 6914, 6915, 6916, 6917, 6921, 6922, 6875, 6923, 6924, 6919, 6918, 6925, 6876, 6926]
+// Dependencies: [19, 6642]
+// Exports: useBottomSheetTimingConfigs
 
 // Module 6852
-import _mod6854 from "module_6854" /* 6854 */;
-import FlashList from "FlashList" /* 6855 */;
-import useLayoutState from "useLayoutState" /* 6875 */;
-import context from "context" /* 6876 */;
-import _mod6914 from "module_6914" /* 6914 */;
-import _mod6915 from "module_6915" /* 6915 */;
-import FlashListDefault from "FlashList" /* 6916 */;
-import getFormattedString from "getFormattedString" /* 6917 */;
-import Cancellable from "Cancellable" /* 6918 */;
-import JSFPSMonitor from "JSFPSMonitor" /* 6919 */;
-import useDataMultiplier from "useDataMultiplier" /* 6921 */;
-import runScrollBenchmark from "runScrollBenchmark" /* 6922 */;
-import useRecyclingState from "useRecyclingState" /* 6923 */;
-import useMappingHelper from "useMappingHelper" /* 6924 */;
-import _modDef6925 from "module_6925" /* 6925 */;
-import LayoutCommitObserver from "LayoutCommitObserver" /* 6926 */;
-import isNewArch from "isNewArch" /* 6853 */;
+import _mod19 from "module_19" /* 19 */;
+import value2 from "value2" /* 6642 */;
 
-if (isNewArch.isNewArch()) {
-  exports.FlashList = FlashList.FlashList;
-  exports.FlashListRef = _mod6914.FlashListRef;
-  exports.FlashListProps = _mod6915.FlashListProps;
-  exports.ListRenderItem = _mod6915.ListRenderItem;
-  exports.ListRenderItemInfo = _mod6915.ListRenderItemInfo;
-  exports.RenderTarget = _mod6915.RenderTarget;
-  exports.RenderTargetOptions = _mod6915.RenderTargetOptions;
-  exports.AnimatedFlashList = FlashListDefault;
-  exports.useBenchmark = getFormattedString.useBenchmark;
-  exports.BenchmarkParams = getFormattedString.BenchmarkParams;
-  exports.BenchmarkResult = getFormattedString.BenchmarkResult;
-  exports.useDataMultiplier = useDataMultiplier.useDataMultiplier;
-  exports.useFlatListBenchmark = runScrollBenchmark.useFlatListBenchmark;
-  exports.FlatListBenchmarkParams = runScrollBenchmark.FlatListBenchmarkParams;
-  exports.useLayoutState = useLayoutState.useLayoutState;
-  exports.useRecyclingState = useRecyclingState.useRecyclingState;
-  exports.useMappingHelper = useMappingHelper.useMappingHelper;
-  exports.JSFPSMonitor = JSFPSMonitor.JSFPSMonitor;
-  exports.JSFPSResult = JSFPSMonitor.JSFPSResult;
-  exports.autoScroll = Cancellable.autoScroll;
-  exports.Cancellable = Cancellable.Cancellable;
-  exports.ViewToken = _modDef6925;
-  exports.useFlashListContext = context.useFlashListContext;
-  exports.LayoutCommitObserver = LayoutCommitObserver.LayoutCommitObserver;
-  exports.LayoutCommitObserverProps = LayoutCommitObserver.LayoutCommitObserverProps;
-} else {
-  const _Error = Error;
-  const error = new Error(_mod6854.ErrorMessages.flashListV2OnlySupportsNewArchitecture);
-  throw error;
-}
+const useMemo = _mod19.useMemo;
+
+export const useBottomSheetTimingConfigs = (arg0) => {
+  const easing = arg0;
+  const items = [, , ];
+  ({ duration: arr[0], easing: arr[1], reduceMotion: arr[2] } = arg0);
+  return useMemo(() => {
+    let ANIMATION_EASING = easing.easing;
+    if (!ANIMATION_EASING) {
+      ANIMATION_EASING = value2.ANIMATION_EASING;
+    }
+    const obj = { easing: ANIMATION_EASING, duration: null, reduceMotion: null };
+    let ANIMATION_DURATION = tmp.duration;
+    if (!ANIMATION_DURATION) {
+      ANIMATION_DURATION = value2.ANIMATION_DURATION;
+    }
+    obj.duration = ANIMATION_DURATION;
+    obj.reduceMotion = easing.reduceMotion;
+    return obj;
+  }, items);
+};

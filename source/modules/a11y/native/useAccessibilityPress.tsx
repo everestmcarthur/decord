@@ -1,34 +1,34 @@
-// Module ID: 9764
-// Function ID: 9765
+// Module ID: 9791
+// Function ID: 9792
 // Name: useAccessibilityPress
 // Dependencies: [19, 2]
 // Exports: default
 
-// Module 9764 (useAccessibilityPress)
-import closure_0 from "noop" /* 19 */;
+// Module 9791 (useAccessibilityPress)
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/a11y/native/useAccessibilityPress.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/a11y/native/useAccessibilityPress.tsx");
 
-export default function useAccessibilityPress(first) {
-  const React = first;
-  closure_1 = arg1;
-  closure_2 = React.useRef(first);
-  let items = [first];
-  const effect = React.useEffect(() => {
-    closure_2.current = closure_0;
+export default function useAccessibilityPress(set, label) {
+  const current = set;
+  closure_2 = noop.useRef(set);
+  let items = [set];
+  const effect = noop.useEffect(() => {
+    closure_2.current = current;
   }, items);
-  const items1 = [arg1];
-  return React.useMemo(() => {
-    let obj = {
+  const items1 = [label];
+  return noop.useMemo(() => {
+    const obj = {
       onAccessibilityAction(nativeEvent) {
         if ("activate" === nativeEvent.nativeEvent.actionName) {
           ref.current();
         }
       },
-      accessibilityActions: items
+      accessibilityActions: null
     };
-    obj = { name: "activate", label: closure_1 };
-    items = [obj];
+    const items = [{ name: "activate", label }];
+    obj.accessibilityActions = items;
     return obj;
   }, items1);
 };

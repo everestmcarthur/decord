@@ -1,13 +1,12 @@
-// Module ID: 17427
-// Function ID: 17428
-// Name: handleLogout
-// Dependencies: [7118, 7834, 2]
+// Module ID: 17458
+// Function ID: 17459
+// Name: MessageQueueManager
+// Dependencies: [7132, 7848, 2]
 
-// Module 17427 (handleLogout)
-import initializeDefault from "initialize" /* 7118 */;
-import itemsDefault from "items" /* 7834 */;
+// Module 17458 (MessageQueueManager)
+import MessageQueueDefault from "MessageQueue" /* 7848 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-initializeDefault;
 class MessageQueueManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -16,9 +15,10 @@ class MessageQueueManager extends tmp2 {
   }
 }
 MessageQueueManager.prototype["handleLogout"] = function handleLogout() {
-  itemsDefault.clear();
+  MessageQueueDefault.clear();
 };
 const messageQueueManager = new MessageQueueManager();
-const result = require("set").fileFinishedImporting("modules/messages/MessageQueueManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/MessageQueueManager.tsx");
 
 export default messageQueueManager;

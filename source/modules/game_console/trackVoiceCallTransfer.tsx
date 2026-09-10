@@ -1,38 +1,38 @@
-// Module ID: 9459
-// Function ID: 9460
+// Module ID: 9486
+// Function ID: 9487
 // Name: trackVoiceCallTransfer
-// Dependencies: [1957, 4583, 4578, 1074, 1242, 2]
+// Dependencies: [1957, 4597, 4592, 1074, 1242, 2]
 // Exports: default
 
-// Module 9459 (trackVoiceCallTransfer)
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import closure_2 from "ensureGuildLoaded" /* 1957 */;
-import closure_3 from "createRTCConnection" /* 4583 */;
-import closure_4 from "handleUpdate" /* 4578 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
+// Module 9486 (trackVoiceCallTransfer)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
+import SessionsStore from "SessionsStore" /* 4592 */;
 
-const result = require("set").fileFinishedImporting("modules/game_console/trackVoiceCallTransfer.tsx");
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_console/trackVoiceCallTransfer.tsx");
 
-export default function trackVoiceCallTransfer(arg0, arg1, sessionId) {
-  let obj = expandEventPropertiesDefault;
+export default function trackVoiceCallTransfer(channel_id, target_platform, sessionId) {
   let str = "discord_client";
   if (null != sessionId) {
-    sessionById = sessionById.getSessionById(sessionId);
+    const sessionById = SessionsStore.getSessionById(sessionId);
     let os;
     if (sessionById != null) {
       os = sessionById.clientInfo.os;
     }
     str = os;
   }
-  obj = { source_platform: str, guild_id: null, channel_id: null, rtc_connection_id: null, target_platform: null };
-  channel = channel.getChannel(arg0);
+  const obj2 = { source_platform: str, guild_id: null, channel_id: null, rtc_connection_id: null, target_platform: null };
+  const channel = ChannelStore.getChannel(channel_id);
   let guild_id;
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  obj[1] = guild_id;
-  obj[2] = arg0;
-  obj[3] = rTCConnectionId.getRTCConnectionId();
-  obj[4] = arg1;
-  obj.track(AnalyticEvents.VOICE_CALL_TRANSFER, obj);
+  obj2.guild_id = guild_id;
+  obj2.channel_id = channel_id;
+  obj2.rtc_connection_id = RTCConnectionStore.getRTCConnectionId();
+  obj2.target_platform = target_platform;
+  AnalyticsUtilsDefault.track(AnalyticEvents.VOICE_CALL_TRANSFER, obj2);
 };

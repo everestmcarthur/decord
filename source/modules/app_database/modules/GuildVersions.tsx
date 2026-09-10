@@ -1,18 +1,18 @@
-// Module ID: 7653
-// Function ID: 7654
-// Name: getCommittedVersions
+// Module ID: 7667
+// Function ID: 7668
+// Name: GuildVersions
 // Dependencies: [32, 5, 1979, 3, 1986, 1369, 2]
 
-// Module 7653 (getCommittedVersions)
-import timestampDefault from "timestamp" /* 3 */;
-import itemsDefault from "items" /* 1986 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "createGuildRecordFromRust" /* 1979 */;
-import set from "set" /* 2 */;
+// Module 7667 (GuildVersions)
+import LoggerDefault from "Logger" /* 3 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 1986 */;
+import _slicedToArray from "module_32" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-let set = arg1;
-let closure_6 = new timestampDefault("GuildVersions");
+require = fn;
+let closure_6 = new LoggerDefault("GuildVersions");
 class GuildVersions {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -67,89 +67,82 @@ class GuildVersions {
 }
 const prototype = GuildVersions.prototype;
 prototype["getCommittedVersions"] = function getCommittedVersions() {
-  return callback2(function*() {
-    if (logger === 2) {
-      logger = 3;
-      HermesBuiltin.throwTypeError();
+  return (async (arg0, value) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        logger = 2;
+        c6 = 2;
         if (0 === c5) {
           if (arg0 === 1) {
-            logger = 3;
-            throw arg1;
+            c6 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            logger = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            c6 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_2 = tmp3;
             closure_1 = tmp7;
-            closure_0 = undefined;
+            closure_129_0 = undefined;
             c4 = 1;
-            let obj3 = closure_1_1(closure_1_2[4]);
-            const guildVersionsResult = obj3.guildVersions();
+            const guildVersionsResult = DatabaseDaosDefault.guildVersions();
             if (null == guildVersionsResult) {
               c4 = 0;
-              logger = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = {};
-              return obj1;
+              c6 = 3;
+              const obj5 = { value: {}, done: true };
+              return obj5;
             } else {
               c5 = 2;
-              logger = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = guildVersionsResult.getMany();
-              return obj2;
+              c6 = 1;
+              const obj6 = { value: guildVersionsResult.getMany(), done: false };
+              return obj6;
             }
           }
         } else if (1 === tmp7) {
           c4 = 0;
-          closure_1 = closure_3;
-          logger.warn("couldn't load guild versions", closure_1);
-          logger = 3;
-          obj3 = { value: null, done: true };
-          obj3[0] = {};
-          return obj3;
+          closure_129_1 = closure_3;
+          closure_130_6.warn("couldn't load guild versions", closure_129_1);
+          c6 = 3;
+          const obj7 = { value: {}, done: true };
+          return obj7;
         } else if (arg0 === 1) {
-          logger = 3;
-          throw arg1;
+          c6 = 3;
+          throw value;
         } else if (arg0 === 2) {
           c4 = 0;
-          logger = 3;
-          const obj4 = { value: null, done: true };
-          obj4[0] = arg1;
-          return obj4;
+          c6 = 3;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
-          closure_0 = arg1.map((arg0) => {
+          closure_129_0 = value.map((item) => {
             const items = [, ];
-            ({ id: arr[0], version: arr[1] } = arg0);
+            ({ id: arr[0], version: arr[1] } = item);
             return items;
           });
-          if (closure_0 == null) {
+          closure_0 = closure_129_0;
+          if (closure_129_0 == null) {
             closure_0 = [];
           }
           c4 = 0;
-          logger = 3;
-          obj = { value: null, done: true };
-          obj[0] = Object.fromEntries(closure_0);
+          c6 = 3;
+          const obj = { value: Object.fromEntries(closure_0), done: true };
           return obj;
         }
       } catch (tmp20) {
         closure_3 = tmp20;
         if (tmp4 === c4) {
-          logger = tmp2;
+          c6 = tmp2;
           throw tmp20;
         } else {
           c5 = tmp;
@@ -158,7 +151,7 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
     }
   })();
 };
-prototype["remove"] = function remove(id) {
+prototype["remove"] = function remove(id, arg1) {
   this.deleteWith(id);
   this.commit(arg1);
 };
@@ -169,14 +162,10 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
   while (iter !== undefined) {
     let tmp2 = nextResult;
     if ("unavailable" !== nextResult.data_mode) {
-      let tmp3 = nextResult;
       let items = [tmp2];
       let updateWithResult = self.updateWith(tmp2.id, items);
     }
-    let tmp5 = guild;
-    let tmp6 = nextResult;
-    if (null == guild.getGuild(tmp2.id)) {
-      let tmp7 = nextResult;
+    if (null == GuildStore.getGuild(tmp2.id)) {
       let removeResult = self.remove(tmp2.id, arg1);
     }
     continue;
@@ -187,7 +176,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen(unavailableGui
   const self = this;
   this.reset();
   const items = [...unavailableGuilds.unavailableGuilds];
-  const result = itemsDefault.guildVersionsTransaction(database);
+  const result = DatabaseDaosDefault.guildVersionsTransaction(database);
   result.deleteAllExcept(items);
   for (const item10029 of tmp3) {
     let items1 = [item10029];
@@ -196,7 +185,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen(unavailableGui
   }
   self.commit(database);
 };
-prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
+prototype["handleGuildCreate"] = function handleGuildCreate(guild, arg1) {
   const self = this;
   guild = guild.guild;
   const id = guild.guild.id;
@@ -209,8 +198,7 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   } else if ("update" === op) {
     writes = emojis.writes;
   } else {
-    set(1369).assertNever(emojis);
-    const obj = set(1369);
+    GlobalUtils.assertNever(emojis);
   }
   this.updateWith(id, writes);
   const stickers = guild.stickers;
@@ -220,8 +208,7 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   } else if ("update" === op2) {
     writes2 = stickers.writes;
   } else {
-    set(1369).assertNever(stickers);
-    const obj2 = set(1369);
+    GlobalUtils.assertNever(stickers);
   }
   self.updateWith(id, writes2);
   const channels = guild.channels;
@@ -231,8 +218,7 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   } else if ("update" === op3) {
     writes3 = channels.writes;
   } else {
-    set(1369).assertNever(channels);
-    const obj3 = set(1369);
+    GlobalUtils.assertNever(channels);
   }
   self.updateWith(id, writes3);
   const roles = guild.roles;
@@ -242,13 +228,12 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   } else if ("update" === op4) {
     writes4 = roles.writes;
   } else {
-    set(1369).assertNever(roles);
-    const obj4 = set(1369);
+    GlobalUtils.assertNever(roles);
   }
   self.updateWith(id, writes4);
   self.commit(arg1);
 };
-prototype["handleGuildUpdate"] = function handleGuildUpdate(guild) {
+prototype["handleGuildUpdate"] = function handleGuildUpdate(guild, arg1) {
   guild = guild.guild;
   const id = guild.guild.id;
   const items = [guild];
@@ -258,29 +243,29 @@ prototype["handleGuildUpdate"] = function handleGuildUpdate(guild) {
   this.updateWith(id, guild.roles);
   this.commit(arg1);
 };
-prototype["handleGuildDelete"] = function handleGuildDelete(guild) {
+prototype["handleGuildDelete"] = function handleGuildDelete(guild, arg1) {
   this.deleteWith(guild.guild.id);
   this.commit(arg1);
 };
-prototype["handleGuildRoleChange"] = function handleGuildRoleChange(role) {
+prototype["handleGuildRoleChange"] = function handleGuildRoleChange(role, arg1) {
   const items = [role.role];
   this.updateWith(role.guildId, items);
   this.commit(arg1);
 };
-prototype["handleGuildRoleDelete"] = function handleGuildRoleDelete(version) {
+prototype["handleGuildRoleDelete"] = function handleGuildRoleDelete(version, arg1) {
   const items = [{ version: version.version }];
   this.updateWith(version.guildId, items);
   this.commit(arg1);
 };
-prototype["handleGuildEmojisUpdate"] = function handleGuildEmojisUpdate(guildId) {
+prototype["handleGuildEmojisUpdate"] = function handleGuildEmojisUpdate(guildId, arg1) {
   this.updateWith(guildId.guildId, guildId.emojis);
   this.commit(arg1);
 };
-prototype["handleGuildStickersUpdate"] = function handleGuildStickersUpdate(guildId) {
+prototype["handleGuildStickersUpdate"] = function handleGuildStickersUpdate(guildId, arg1) {
   this.updateWith(guildId.guildId, guildId.stickers);
   this.commit(arg1);
 };
-prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
+prototype["handleChannelCreate"] = function handleChannelCreate(channel, arg1) {
   const self = this;
   if (null != channel.channel.guild_id) {
     const items = [channel.channel];
@@ -295,7 +280,6 @@ prototype["handleChannelUpdates"] = function handleChannelUpdates(arg0, arg1) {
   while (iter !== undefined) {
     let tmp2 = nextResult;
     if (null != nextResult.guild_id) {
-      let tmp3 = nextResult;
       let items = [tmp2];
       let updateWithResult = self.updateWith(tmp2.guild_id, items);
     }
@@ -303,7 +287,7 @@ prototype["handleChannelUpdates"] = function handleChannelUpdates(arg0, arg1) {
   }
   self.commit(arg1);
 };
-prototype["handleChannelDelete"] = function handleChannelDelete(channel) {
+prototype["handleChannelDelete"] = function handleChannelDelete(channel, arg1) {
   const self = this;
   if (null != channel.channel.guild_id) {
     const items = [channel.channel];
@@ -346,7 +330,6 @@ prototype["updateWith"] = function updateWith(arg0, arg1) {
 };
 prototype["computeLatestVersion"] = function computeLatestVersion(bound, arg1) {
   while (tmp2 !== undefined) {
-    let tmp4 = bound;
     let num = tmp3.version;
     if (num == null) {
       num = 0;
@@ -359,25 +342,21 @@ prototype["computeLatestVersion"] = function computeLatestVersion(bound, arg1) {
 prototype["commit"] = function commit(database) {
   const self = this;
   if (this.pending.size > 0) {
-    const result = itemsDefault.guildVersionsTransaction(database);
+    const result = DatabaseDaosDefault.guildVersionsTransaction(database);
     const pending2 = self.pending;
     const tmp21 = pending2[Symbol.iterator]();
     while (tmp21 !== undefined) {
-      let tmp4 = callback;
-      let tmp5 = callback(tmp2, 2);
+      let tmp5 = _slicedToArray(tmp2, 2);
       [tmp6, tmp7] = tmp5;
       let tmp8 = tmp7;
       if (null != tmp7) {
         let obj = { id: null, version: null };
-        let tmp12 = tmp6;
-        obj[0] = tmp6;
-        let tmp13 = tmp7;
-        obj[1] = tmp8;
+        obj.id = tmp6;
+        obj.version = tmp8;
         let putResult = result.put(obj);
         let committed2 = self.committed;
         let result1 = committed2.set(tmp6, tmp8);
       } else {
-        let tmp9 = tmp6;
         let deleteResult = result.delete(tmp6);
         let committed = self.committed;
         let deleteResult1 = committed.delete(tmp6);
@@ -386,15 +365,15 @@ prototype["commit"] = function commit(database) {
     }
     const pending = self.pending;
     pending.clear();
-    const obj2 = itemsDefault;
   }
 };
-set = Object.create(GuildVersions.prototype);
-let tmp2 = new timestampDefault("GuildVersions");
-set.pending = new Map();
+let obj2 = Object.create(GuildVersions.prototype);
+let closure_129_0 = obj2;
+let tmp2 = new LoggerDefault("GuildVersions");
+obj2.pending = new Map();
 let map = new Map();
-set.committed = new Map();
-set.actions = {
+obj2.committed = new Map();
+obj2.actions = {
   BACKGROUND_SYNC(arg0, arg1) {
     return obj.handleBackgroundSync(arg0, arg1);
   },
@@ -435,7 +414,8 @@ set.actions = {
     return obj.handleGuildUpdate(arg0, arg1);
   }
 };
-let result = set.fileFinishedImporting("modules/app_database/modules/GuildVersions.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/app_database/modules/GuildVersions.tsx");
 
-export default set;
+export default obj2;
 export { GuildVersions };

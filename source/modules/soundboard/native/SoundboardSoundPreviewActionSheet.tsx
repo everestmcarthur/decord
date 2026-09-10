@@ -1,89 +1,83 @@
-// Module ID: 17079
-// Function ID: 17080
+// Module ID: 17110
+// Function ID: 17111
 // Name: SoundboardSoundPreviewActionSheet
-// Dependencies: [32, 19, 17, 1957, 1371, 5012, 1074, 21, 4560, 576, 1115, 17077, 17076, 17062, 504, 7338, 7344, 1242, 4975, 10240, 10246, 1114, 10140, 8628, 7198, 7130, 11939, 4556, 5095, 8274, 2]
+// Dependencies: [32, 19, 17, 1957, 1371, 5026, 1074, 21, 4574, 576, 1115, 17108, 17107, 17093, 504, 7352, 7358, 1242, 4989, 10267, 10273, 1114, 10167, 8656, 7211, 7144, 11965, 4570, 5109, 8302, 2]
 // Exports: default
 
-// Module 17079 (SoundboardSoundPreviewActionSheet)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "ensureGuildLoaded" /* 1957 */;
-import closure_8 from "mergeGuildAvatar" /* 1371 */;
-import closure_9 from "handleSoundCreateOrUpdate" /* 5012 */;
-import ME from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import set from "set" /* 1115 */;
+// Module 17110 (SoundboardSoundPreviewActionSheet)
+import nativeDefault from "native" /* 576 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 7352 */;
+import SoundboardUtils from "SoundboardUtils" /* 7358 */;
+import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 17093 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import UserStore from "UserStore" /* 1371 */;
+import SoundboardStore from "SoundboardStore" /* 5026 */;
 
-const require = arg1;
-({ View: c5, Image: closure_6 } = get_ActivityIndicator);
-({ AnalyticEvents: c10, AnalyticsObjects: unpackModuleId } = ME);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
+const Constants = fn(1074);
+({ AnalyticEvents: c10, AnalyticsObjects: closure_11 } = Constants);
+const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-createCacheKey = { soundPresentation: null, soundPresentationPlaying: null, emoji: null, emojiFastImage: null, emojiText: null, text: null, buttonContainer: null, star: null, primaryIcon: null };
-createCacheKey = { borderWidth: 2, borderColor: "transparent", borderRadius: ThemesDefault.radii.lg, paddingBottom: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderColor: ThemesDefault.colors.STATUS_SPEAKING };
-let obj1 = { borderColor: ThemesDefault.colors.STATUS_SPEAKING };
-createCacheKey[2] = { marginTop: ThemesDefault.space.PX_16, width: 64, height: 64, alignSelf: "center" };
-createCacheKey[3] = { width: 128, height: 128 };
+const createStyles = fn(4574);
+let obj2 = { soundPresentation: { borderWidth: 2, borderColor: "transparent", borderRadius: nativeDefault.radii.lg, paddingBottom: nativeDefault.space.PX_16 }, soundPresentationPlaying: null, emoji: null, emojiFastImage: null, emojiText: null, text: null, buttonContainer: null, star: null, primaryIcon: null };
+let obj3 = { borderWidth: 2, borderColor: "transparent", borderRadius: nativeDefault.radii.lg, paddingBottom: nativeDefault.space.PX_16 };
+obj2.soundPresentationPlaying = { borderColor: nativeDefault.colors.STATUS_SPEAKING };
+let size = { marginTop: nativeDefault.space.PX_16, width: 64, height: 64, alignSelf: "center" };
+obj2.emoji = size;
+obj2.emojiFastImage = { width: 128, height: 128 };
+const PlatformUtils = fn(1115);
 let num;
-if (set.isIOS()) {
+if (PlatformUtils.isIOS()) {
   num = 60;
 }
-createCacheKey[4] = { fontSize: num, lineHeight: 74 };
-let obj2 = { marginTop: ThemesDefault.space.PX_16, width: 64, height: 64, alignSelf: "center" };
-createCacheKey[5] = { marginTop: ThemesDefault.space.PX_16, alignSelf: "center" };
-let obj3 = { marginTop: ThemesDefault.space.PX_16, alignSelf: "center" };
-createCacheKey[6] = { gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_24 };
-set = { width: 16, height: 16, tintColor: ThemesDefault.colors.TEXT_DEFAULT };
-createCacheKey[7] = set;
-let obj4 = { gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_24 };
-createCacheKey[8] = { width: 16, height: 16, tintColor: ThemesDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
-let closure_15 = createCacheKey.createStyles(createCacheKey);
-let result = set.fileFinishedImporting("modules/soundboard/native/SoundboardSoundPreviewActionSheet.tsx");
+obj2.emojiText = { fontSize: num, lineHeight: 74 };
+let obj4 = { borderColor: nativeDefault.colors.STATUS_SPEAKING };
+obj2.text = { marginTop: nativeDefault.space.PX_16, alignSelf: "center" };
+let obj5 = { marginTop: nativeDefault.space.PX_16, alignSelf: "center" };
+obj2.buttonContainer = { gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_24 };
+const size1 = { width: 16, height: 16, tintColor: nativeDefault.colors.TEXT_DEFAULT };
+obj2.star = size1;
+const size2 = { width: 16, height: 16, tintColor: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
+obj2.primaryIcon = size2;
+let closure_15 = createStyles.createStyles(obj2);
+size = fn(2);
+let result = size.fileFinishedImporting("modules/soundboard/native/SoundboardSoundPreviewActionSheet.tsx");
 
 export default function SoundboardSoundPreviewActionSheet(channel) {
   channel = channel.channel;
   const sound = channel.sound;
   const soundGridLocation = channel.soundGridLocation;
   const analyticsSource = channel.analyticsSource;
-  let id;
-  let soundboardSoundPreviewMenuEnabled;
   onLockedPress = undefined;
-  let callback;
   let stateFromStores;
   let stateFromStores1;
   c10 = undefined;
-  let stateFromStores3;
-  let primaryIcon = callback();
-  id = channel.id;
+  let primaryIcon = closure_15();
+  let id = channel.id;
   let stringResult1 = soundGridLocation;
+  const soundboardSoundPreviewMenuEnabled = channel(soundGridLocation[11]).useSoundboardSoundPreviewMenuEnabled("SoundboardSoundPreviewActionSheet");
   let obj = channel(soundGridLocation[11]);
-  soundboardSoundPreviewMenuEnabled = obj.useSoundboardSoundPreviewMenuEnabled("SoundboardSoundPreviewActionSheet");
-  obj1 = channel(soundGridLocation[12]);
-  const soundboardSoundLock = obj1.useSoundboardSoundLock(sound, channel);
+  const soundboardSoundLock = channel(soundGridLocation[12]).useSoundboardSoundLock(sound, channel);
   ({ isLocked, onLockedPress } = soundboardSoundLock);
-  let obj2 = id;
   let items = [channel, soundGridLocation, soundboardSoundPreviewMenuEnabled, analyticsSource];
-  callback = id.useCallback(() => {
+  const onDismiss = id.useCallback(() => {
     if (soundboardSoundPreviewMenuEnabled) {
-      let obj = channel(soundGridLocation[13]);
-      obj = { channel: null, analyticsSource: null, initialScrollLocation: null };
-      obj[0] = channel;
-      obj[1] = analyticsSource;
-      obj[2] = soundGridLocation;
-      const result = obj.openSoundboardSoundPickerActionSheet(obj);
+      const obj2 = { channel, analyticsSource, initialScrollLocation: soundGridLocation };
+      const result = soundboard_SoundboardActionCreators.openSoundboardSoundPickerActionSheet(obj2);
     }
   }, items);
-  const items1 = [onLockedPress, callback];
+  const items1 = [onLockedPress, onDismiss];
   const callback1 = id.useCallback(() => {
-    onLockedPress(() => callback());
+    onLockedPress(() => onDismiss());
   }, items1);
-  let obj3 = channel(soundGridLocation[14]);
+  let obj2 = channel(soundGridLocation[12]);
   const items2 = [stateFromStores];
-  stateFromStores = obj3.useStateFromStores(items2, () => {
+  stateFromStores = channel(soundGridLocation[14]).useStateFromStores(items2, () => {
     const currentUser = stateFromStores.getCurrentUser();
     id = undefined;
     if (currentUser != null) {
@@ -93,21 +87,22 @@ export default function SoundboardSoundPreviewActionSheet(channel) {
   });
   let obj4 = channel(soundGridLocation[14]);
   const items3 = [stateFromStores1];
-  stateFromStores1 = obj4.useStateFromStores(items3, () => stateFromStores1.isFavoriteSound(sound.soundId));
-  let obj5 = channel(soundGridLocation[14]);
+  stateFromStores1 = channel(soundGridLocation[14]).useStateFromStores(items3, () => SoundboardStore.isFavoriteSound(sound.soundId));
+  const obj5 = channel(soundGridLocation[14]);
   const items4 = [stateFromStores1];
   const items5 = [sound];
-  const stateFromStores2 = obj5.useStateFromStores(items4, () => stateFromStores1.isPlayingSound(sound.soundId), items5);
-  let obj6 = channel(soundGridLocation[14]);
+  const stateFromStores2 = channel(soundGridLocation[14]).useStateFromStores(items4, () => SoundboardStore.isPlayingSound(sound.soundId), items5);
+  const obj6 = channel(soundGridLocation[14]);
   const items6 = [stateFromStores1];
   const items7 = [stateFromStores];
-  stateFromStores3 = obj6.useStateFromStores(items6, () => {
+  let stateFromStores3 = channel(soundGridLocation[14]).useStateFromStores(items6, () => {
     let isUserPlayingSoundsResult = null != stateFromStores;
     if (isUserPlayingSoundsResult) {
-      isUserPlayingSoundsResult = stateFromStores1.isUserPlayingSounds(tmp);
+      isUserPlayingSoundsResult = SoundboardStore.isUserPlayingSounds(tmp);
     }
     return isUserPlayingSoundsResult;
   }, items7);
+  const obj7 = channel(soundGridLocation[14]);
   [tmp12, c10] = analyticsSource(id.useState(false), 2);
   let tmp13 = !tmp12;
   if (!tmp12) {
@@ -119,60 +114,53 @@ export default function SoundboardSoundPreviewActionSheet(channel) {
   stateFromStores3 = tmp12;
   const items8 = [stateFromStores1, sound];
   const items9 = [id, sound, tmp12];
-  const callback2 = obj2.useCallback(() => {
+  const callback2 = obj3.useCallback(() => {
     if (stateFromStores1) {
-      let tmpResult = tmp(tmp2[15]);
-      tmpResult.removeFavoriteSound(sound.soundId);
+      tmp(7352).removeFavoriteSound(sound.soundId);
+      const tmpResult = tmp(7352);
     } else {
-      tmpResult = tmp(tmp2[16]);
-      let obj = { sound: null, location: null };
-      obj[0] = sound;
-      obj = { object: null };
-      obj[0] = stateFromStores3.SOUNDBOARD_SOUND;
-      obj[1] = obj;
-      tmpResult.trackSoundFavorited(obj);
-      channel(soundGridLocation[15]).addFavoriteSound(sound.soundId);
-      const obj4 = channel(soundGridLocation[15]);
+      const obj = { sound, location: null };
+      const obj2 = { object: constants2.SOUNDBOARD_SOUND };
+      obj.location = obj2;
+      tmp(7358).trackSoundFavorited(obj);
+      const tmpResult2 = tmp(7358);
+      SoundboardActionCreators.addFavoriteSound(sound.soundId);
     }
   }, items8);
   const items10 = [sound, id, analyticsSource];
-  const callback3 = obj2.useCallback(() => {
+  const callback3 = obj3.useCallback(() => {
     if (!stateFromStores3) {
       _undefined(true);
-      let obj = sound(soundGridLocation[17]);
-      obj = { sound_id: null, sound_name: null, sound_guild_id: null, location_guild_id: null };
-      ({ soundId: obj2[0], name: obj2[1], guildId: obj2[2] } = sound);
-      channel = callback.getChannel(id);
+      const obj4 = { sound_id: null, sound_name: null, sound_guild_id: null, location_guild_id: null };
+      ({ soundId: obj2.sound_id, name: obj2.sound_name, guildId: obj2.sound_guild_id } = sound);
+      channel = ChannelStore.getChannel(id);
       let guild_id;
       if (channel != null) {
         guild_id = channel.guild_id;
       }
-      obj[3] = guild_id;
-      obj.track(_undefined.EXPRESSION_PICKER_SOUNDBOARD_SOUND_PREVIEWED, obj);
-      channel(soundGridLocation[15]).playSoundLocally(id, sound);
-      const obj3 = channel(soundGridLocation[15]);
-      const tmp4 = soundGridLocation;
+      obj4.location_guild_id = guild_id;
+      AnalyticsUtilsDefault.track(constants.EXPRESSION_PICKER_SOUNDBOARD_SOUND_PREVIEWED, obj4);
       const tmp6 = sound;
       const tmp8 = id;
+      SoundboardActionCreators.playSoundLocally(tmp8, tmp6);
     }
   }, items9);
-  const callback4 = obj2.useCallback(() => {
+  const callback4 = obj3.useCallback(() => {
     _undefined(false);
     const items = [analyticsSource];
-    channel(soundGridLocation[16]).playSound(sound, id, items);
+    SoundboardUtils.playSound(sound, id, items);
   }, items10);
   let str = "primary";
   if (soundboardSoundPreviewMenuEnabled) {
     str = "secondary";
   }
-  obj = { variant: str, icon: null, text: null, onPress: null };
+  const obj8 = { variant: str, icon: null, text: null, onPress: null };
   if (stateFromStores1) {
     let StarOutlineIcon = tmp(stringResult1[19]).StarIcon;
   } else {
     StarOutlineIcon = tmp(stringResult1[20]).StarOutlineIcon;
   }
-  obj = { style: primaryIcon.star };
-  obj[1] = closure_12(StarOutlineIcon, obj);
+  obj8.icon = closure_12(StarOutlineIcon, { style: primaryIcon.star });
   const intl = tmp(stringResult1[21]).intl;
   const string = intl.string;
   const t = tmp(stringResult1[21]).t;
@@ -181,58 +169,58 @@ export default function SoundboardSoundPreviewActionSheet(channel) {
   } else {
     stringResult = string(t.yZFibY);
   }
-  obj[2] = stringResult;
-  obj[3] = callback2;
-  let tmp17Result = tmp17(tmp(stringResult1[18]).Button, obj);
+  obj8.text = stringResult;
+  obj8.onPress = callback2;
+  const tmp17Result = closure_12(channel(stringResult1[18]).Button, obj8);
   if (tmp12) {
-    obj1 = { style: null };
-    obj1[0] = primaryIcon.star;
-    tmp17Result = tmp17(tmp(stringResult1[22]).WaveformIcon, obj1);
+    const obj10 = { style: primaryIcon.star };
+    let tmp17Result3 = tmp17(tmp(stringResult1[22]).WaveformIcon, obj10);
   } else {
-    obj2 = { style: null, source: null };
-    obj2[0] = primaryIcon.star;
-    obj2[1] = sound(stringResult1[23]);
-    tmp17Result = tmp17(onLockedPress, obj2);
+    const obj11 = { style: primaryIcon.star, source: sound(stringResult1[23]) };
+    tmp17Result3 = tmp17(onLockedPress, obj11);
   }
-  obj3 = { variant: "secondary", icon: tmp17Result, text: null, onPress: null };
+  const obj12 = { variant: "secondary", icon: tmp17Result3, text: null, onPress: null };
   const intl2 = tmp(stringResult1[21]).intl;
   const t2 = tmp(stringResult1[21]).t;
-  obj3[2] = intl2.string(tmp12 ? t2.diasud : t2.Kd4uxG);
-  obj3[3] = callback3;
-  const tmp17Result1 = closure_12(channel(stringResult1[18]).Button, obj3);
-  obj4 = { startExpanded: true, onDismiss: callback, children: null };
+  obj12.text = intl2.string(tmp12 ? t2.diasud : t2.Kd4uxG);
+  obj12.onPress = callback3;
+  const tmp17Result4 = closure_12(channel(stringResult1[18]).Button, obj12);
+  const obj13 = { startExpanded: true, onDismiss, children: null };
   const items11 = [primaryIcon.soundPresentation, ];
   let prop = null;
   if (tmp13) {
     prop = primaryIcon.soundPresentationPlaying;
   }
-  obj5 = { style: items11, accessible: true, accessibilityLabel: sound.name, accessibilityValue: null, children: null };
+  const obj14 = { style: items11, accessible: true, accessibilityLabel: sound.name, accessibilityValue: null, children: null };
   items11[1] = prop;
   let tmp27;
   if (tmp13) {
-    obj6 = { text: null };
+    const obj15 = { text: null };
     const intl3 = tmp(stringResult1[21]).intl;
-    obj6[0] = intl3.string(tmp(stringResult1[21]).t.diasud);
-    tmp27 = obj6;
+    obj15.text = intl3.string(tmp(stringResult1[21]).t.diasud);
+    tmp27 = obj15;
   }
-  obj5[3] = tmp27;
-  const obj7 = { fastImageStyle: items12, textEmojiStyle: items13, src: null, name: null };
-  items12 = [, ];
+  obj14.accessibilityValue = tmp27;
+  const obj16 = { fastImageStyle: null, textEmojiStyle: null, src: null, name: null };
+  const items12 = [, ];
   ({ emoji: arr13[0], emojiFastImage: arr13[1] } = primaryIcon);
-  items13 = [, ];
+  obj16.fastImageStyle = items12;
+  const items13 = [, ];
   ({ emoji: arr14[0], emojiText: arr14[1] } = primaryIcon);
+  obj16.textEmojiStyle = items13;
+  const obj9 = { style: primaryIcon.star };
   const tmp11 = analyticsSource(id.useState(false), 2);
-  obj7[2] = sound(stringResult1[26])(sound, 64);
+  obj16.src = sound(stringResult1[26])(sound, 64);
   let str2 = sound.emojiName;
   if (str2 == null) {
     str2 = "";
   }
-  obj7[3] = str2;
-  const items14 = [closure_12(sound(stringResult1[25]), obj7), closure_12(channel(stringResult1[27]).Text, { style: primaryIcon.text, variant: "heading-lg/extrabold", children: sound.name })];
-  obj5[4] = items14;
-  const items15 = [closure_13(soundboardSoundPreviewMenuEnabled, obj5), ];
-  const obj9 = { style: primaryIcon.buttonContainer, children: null };
-  const obj10 = { children: null };
+  obj16.name = str2;
+  const items14 = [closure_12(sound(stringResult1[25]), obj16), closure_12(channel(stringResult1[27]).Text, { style: primaryIcon.text, variant: "heading-lg/extrabold", children: sound.name })];
+  obj14.children = items14;
+  const items15 = [closure_13(soundboardSoundPreviewMenuEnabled, obj14), ];
+  const obj18 = { style: primaryIcon.buttonContainer, children: null };
+  const obj19 = { children: null };
   if (soundboardSoundPreviewMenuEnabled) {
     let Button = tmp(stringResult1[18]).Button;
     if (isLocked) {
@@ -240,29 +228,29 @@ export default function SoundboardSoundPreviewActionSheet(channel) {
     } else {
       PlayIcon = tmp(stringResult1[29]).PlayIcon;
     }
-    const obj11 = { variant: "primary", icon: null, text: null, disabled: null, accessibilityHint: null, onPress: null, onPressDisabled: null };
-    const obj12 = { style: null };
+    const obj20 = { variant: "primary", icon: null, text: null, disabled: null, accessibilityHint: null, onPress: null, onPressDisabled: null };
+    const obj21 = { style: null };
     primaryIcon = primaryIcon.primaryIcon;
-    obj12[0] = primaryIcon;
-    obj11[1] = tmp17(PlayIcon, obj12);
+    obj21.style = primaryIcon;
+    obj20.icon = tmp17(PlayIcon, obj21);
     const intl4 = tmp(stringResult1[21]).intl;
     stringResult1 = intl4.string(tmp(stringResult1[21]).t.RscU7I);
-    obj11[2] = stringResult1;
-    obj11[3] = isLocked;
-    obj11[4] = soundboardSoundLock.lockedAccessibilityHint;
-    obj11[5] = callback4;
-    obj11[6] = callback1;
-    Button = tmp17(Button, obj11);
-    const items16 = [Button, tmp17Result1, tmp17Result];
-    obj10[0] = items16;
+    obj20.text = stringResult1;
+    obj20.disabled = isLocked;
+    obj20.accessibilityHint = soundboardSoundLock.lockedAccessibilityHint;
+    obj20.onPress = callback4;
+    obj20.onPressDisabled = callback1;
+    Button = tmp17(Button, obj20);
+    const items16 = [Button, tmp17Result4, tmp17Result];
+    obj19.children = items16;
   } else {
-    const items17 = [tmp17Result, tmp17Result1];
-    obj10[0] = items17;
-    const obj13 = { children: null };
-    obj9[1] = tmp24(tmp29, obj10);
-    items15[1] = tmp17(tmp25, obj9);
-    obj13[0] = items15;
-    obj4[2] = tmp24(tmp25, obj13);
-    return tmp17(tmp(stringResult1[24]).ActionSheet, obj4);
+    const items17 = [tmp17Result, tmp17Result4];
+    obj19.children = items17;
+    const obj22 = { children: null };
+    obj18.children = tmp24(tmp29, obj19);
+    items15[1] = tmp17(tmp25, obj18);
+    obj22.children = items15;
+    obj13.children = tmp24(tmp25, obj22);
+    return tmp17(tmp(stringResult1[24]).ActionSheet, obj13);
   }
 };

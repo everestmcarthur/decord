@@ -1,14 +1,14 @@
-// Module ID: 12623
-// Function ID: 12624
-// Name: getListSummaryLabel
+// Module ID: 12649
+// Function ID: 12650
+// Name: ListUtils
 // Dependencies: [1114, 2]
 // Exports: getListSummaryLabel
 
-// Module 12623 (getListSummaryLabel)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 12649 (ListUtils)
+import util from "util" /* 1114 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("utils/ListUtils.tsx");
+const result = size.fileFinishedImporting("utils/ListUtils.tsx");
 
 export const getListSummaryLabel = function getListSummaryLabel(names, length) {
   let first = names;
@@ -18,26 +18,26 @@ export const getListSummaryLabel = function getListSummaryLabel(names, length) {
   if (0 === length) {
     return "";
   } else if (1 === length) {
-    const intl4 = getSystemLocale.intl;
-    let obj = { first: null };
+    const intl4 = util.intl;
+    const obj4 = { first: null };
     first = first[0];
-    obj[0] = first;
-    let formatToPlainStringResult = intl4.formatToPlainString(getSystemLocale.t["8s9z8P"], obj);
+    obj4.first = first;
+    let formatToPlainStringResult = intl4.formatToPlainString(util.t["8s9z8P"], obj4);
   } else if (2 === length) {
-    const intl3 = getSystemLocale.intl;
-    obj = { first: null, second: null };
-    [obj3[0], obj3[1]] = first;
-    formatToPlainStringResult = intl3.formatToPlainString(getSystemLocale.t["i0K/dw"], obj);
+    const intl3 = util.intl;
+    [obj3.first, obj3.second] = first;
+    formatToPlainStringResult = intl3.formatToPlainString(util.t["i0K/dw"], { first: null, second: null });
+    const obj7 = { first: null, second: null };
   } else if (3 === length) {
-    const intl2 = getSystemLocale.intl;
-    [obj2[0], obj2[1], obj2[2]] = first;
-    formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale.t["/KSOKY"], { first: null, second: null, third: null });
-    obj1 = { first: null, second: null, third: null };
+    const intl2 = util.intl;
+    [obj2.first, obj2.second, obj2.third] = first;
+    formatToPlainStringResult = intl2.formatToPlainString(util.t["/KSOKY"], { first: null, second: null, third: null });
+    const obj8 = { first: null, second: null, third: null };
   } else {
-    const intl = getSystemLocale.intl;
-    obj = { first: null, second: null, third: null, count: null };
-    [obj[0], obj[1], obj[2]] = first;
-    obj[3] = length - 3;
-    formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t.xpU76u, obj);
+    const intl = util.intl;
+    const obj = { first: null, second: null, third: null, count: null };
+    [obj.first, obj.second, obj.third] = first;
+    obj.count = length - 3;
+    formatToPlainStringResult = intl.formatToPlainString(util.t.xpU76u, obj);
   }
 };

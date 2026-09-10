@@ -1,15 +1,15 @@
-// Module ID: 13631
-// Function ID: 13632
+// Module ID: 13654
+// Function ID: 13655
 // Name: stopSyncingUserActivity
 // Dependencies: [573, 2]
 // Exports: default
 
-// Module 13631 (stopSyncingUserActivity)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 13654 (stopSyncingUserActivity)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/activities/utils/stopSyncingUserActivity.tsx");
+const result = size.fileFinishedImporting("modules/activities/utils/stopSyncingUserActivity.tsx");
 
 export default function stopSyncingUserActivity() {
-  dispatcherDefault.dispatch({ type: "ACTIVITY_SYNC_STOP" });
+  DispatcherDefault.dispatch({ type: "ACTIVITY_SYNC_STOP" });
 };

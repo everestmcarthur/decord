@@ -1,24 +1,27 @@
-// Module ID: 14175
-// Function ID: 14176
+// Module ID: 14200
+// Function ID: 14201
 // Name: useAccessibilityNativeStackFocusTracking
-// Dependencies: [19, 4909, 4907, 2]
+// Dependencies: [19, 4923, 4921, 2]
 // Exports: useAccessibilityNativeStackFocusTracking
 
-// Module 14175 (useAccessibilityNativeStackFocusTracking)
-import closure_2 from "noop" /* 19 */;
+// Module 14200 (useAccessibilityNativeStackFocusTracking)
+import setAccessibilityFocusPreviousDefault from "setAccessibilityFocusPrevious" /* 4921 */;
+import markAccessibilityFocusDefault from "markAccessibilityFocus" /* 4923 */;
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("design/components/Navigator/native/useAccessibilityNativeStackFocusTracking.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Navigator/native/useAccessibilityNativeStackFocusTracking.tsx");
 
 export const useAccessibilityNativeStackFocusTracking = function useAccessibilityNativeStackFocusTracking() {
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     c0 = false;
     return {
       transitionStart(data) {
         if (data.data.closing) {
-          callback(closure_1_1[1])();
-        } else if (callback) {
-          callback = false;
-          callback(closure_1_1[2])();
+          markAccessibilityFocusDefault();
+        } else if (c0) {
+          c0 = false;
+          setAccessibilityFocusPreviousDefault();
         }
       },
       beforeRemove() {

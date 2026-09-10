@@ -1,55 +1,53 @@
-// Module ID: 9839
-// Function ID: 9840
-// Name: handleConnectionOpen
-// Dependencies: [5108, 5506, 1183, 502, 1957, 4901, 2012, 2021, 1979, 4199, 4575, 2011, 4381, 4741, 1074, 9840, 12, 9849, 5442, 1114, 9850, 1369, 510, 504, 573, 2]
+// Module ID: 9866
+// Function ID: 9867
+// Name: QuickSwitcherStore
+// Dependencies: [5122, 5520, 1183, 502, 1957, 4915, 2012, 2021, 1979, 4212, 4589, 2011, 4395, 4755, 1074, 9867, 12, 9876, 5456, 1114, 9877, 1369, 510, 504, 573, 2]
 
-// Module 9839 (handleConnectionOpen)
-import applyDefault from "apply" /* 12 */;
+// Module 9866 (QuickSwitcherStore)
+import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import sortByMatchScore from "sortByMatchScore" /* 9840 */;
-import sortByMatchScoreDefault from "sortByMatchScore" /* 9840 */;
-import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9849 */;
-import closure_4 from "set" /* 5108 */;
-import closure_5 from "rebuild" /* 5506 */;
-import closure_6 from "handleThemeChange" /* 1183 */;
-import closure_7 from "fetchFingerprint" /* 502 */;
-import closure_8 from "ensureGuildLoaded" /* 1957 */;
-import closure_9 from "handleChanged" /* 4901 */;
-import { DraftType } from "handleChanged" /* 4901 */;
-import closure_11 from "comparator" /* 2012 */;
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 2012 */;
-import closure_13 from "trackCommunicationDisabled" /* 2021 */;
-import closure_14 from "createGuildRecordFromRust" /* 1979 */;
-import closure_15 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_16 from "generateOldThreadCutoff" /* 4575 */;
-import closure_17 from "handleConnectionOpen" /* 2011 */;
-import closure_18 from "handleConnectionOpen" /* 4381 */;
-import closure_19 from "updateUserGuildSettingsInternal" /* 4741 */;
-import ME from "ME" /* 1074 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import sortByMatchScore from "sortByMatchScore" /* 9867 */;
+import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9876 */;
+import ReadStateUtils from "ReadStateUtils" /* 9877 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 5122 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5520 */;
+import ThemeStore from "ThemeStore" /* 1183 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import DraftStore from "DraftStore" /* 4915 */;
+import GuildChannelStore from "GuildChannelStore" /* 2012 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
+import ReadStateStore from "ReadStateStore" /* 4589 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4755 */;
 
-require = arg1;
+const sortByMatchScoreDefault = sortByMatchScore;
+
+require = fn;
 function handleConnectionOpen() {
-  let tmp = store3.getGuildCount() >= 3;
+  let tmp = GuildStore.getGuildCount() >= 3;
   if (!tmp) {
-    tmp = applyDefault.size(mutablePrivateChannels.getMutablePrivateChannels()) >= 20;
-    const obj = applyDefault;
+    tmp = _modDef12.size(ChannelStore.getMutablePrivateChannels()) >= 20;
   }
   closure_25 = tmp;
   closure_30 = [];
 }
-function generateResultFromId(arg0) {
-  const tmp2 = createAutocompleterResultForChannelIdDefault(arg0);
+function generateResultFromId(found) {
+  const tmp2 = createAutocompleterResultForChannelIdDefault(found);
   if (null == tmp2) {
     return null;
   } else {
     if (tmp3) {
-      if (tmp2.type !== tmp7(9840).AutocompleterResultTypes.USER) {
+      if (tmp2.type !== tmp7(9867).AutocompleterResultTypes.USER) {
         return null;
       }
-    } else if (null != c26) {
-      if (c26 !== tmp2.type) {
+    } else if (null != queryMode) {
+      if (queryMode !== tmp2.type) {
         return null;
       }
     }
@@ -57,73 +55,69 @@ function generateResultFromId(arg0) {
   }
 }
 function generateInitialResults() {
-  let obj = store4;
-  const guildId = store4.getGuildId();
-  channelId = channelId.getChannelId();
-  if (channelId(set[15]).AutocompleterResultTypes.USER_GLOBAL !== c26) {
+  const guildId = SelectedGuildStore.getGuildId();
+  const channelId1 = SelectedChannelStore.getChannelId();
+  if (channelId1(set[15]).AutocompleterResultTypes.USER_GLOBAL !== queryMode) {
     if (tmp4(tmp5[15]).AutocompleterResultTypes.USER !== tmp3) {
       if (tmp4(tmp5[15]).AutocompleterResultTypes.APPLICATION === tmp3) {
-        return importDefault(tmp5[18]).queryApplications({ query: "", limit: 100, fuzzy: true });
+        return require("AutocompleteUtils").queryApplications({ query: "", limit: 100, fuzzy: true });
       } else if (tmp4(tmp5[15]).AutocompleterResultTypes.GAME_PROFILE === tmp3) {
         return [];
       } else if (tmp4(tmp5[15]).AutocompleterResultTypes.GUILD === tmp3) {
-        return importDefault(tmp5[18]).queryGuilds({ query: "", limit: 100, fuzzy: true });
+        return require("AutocompleteUtils").queryGuilds({ query: "", limit: 100, fuzzy: true });
       } else if (tmp4(tmp5[15]).AutocompleterResultTypes.TEXT_CHANNEL === tmp3) {
-        obj = { query: "", guildId: null, limit: 100, fuzzy: true, allowEmptyQueries: true };
-        obj[1] = obj.getGuildId();
-        return importDefault(tmp5[18]).queryChannels(obj);
+        const obj2 = { query: "", guildId: obj.getGuildId(), limit: 100, fuzzy: true, allowEmptyQueries: true };
+        return require("AutocompleteUtils").queryChannels(obj2);
       } else if (tmp4(tmp5[15]).AutocompleterResultTypes.VOICE_CHANNEL === tmp3) {
-        obj = { query: "", guildId: null, limit: 100, fuzzy: true, filter: null, type: null, allowEmptyQueries: true };
-        obj[1] = obj.getGuildId();
-        obj[4] = function filter() {
-          return true;
+        const obj3 = {
+          query: "",
+          guildId: obj.getGuildId(),
+          limit: 100,
+          fuzzy: true,
+          filter() {
+                  return true;
+                },
+          type: GUILD_VOCAL_CHANNELS_KEY,
+          allowEmptyQueries: true
         };
-        obj[5] = GUILD_VOCAL_CHANNELS_KEY;
-        return importDefault(tmp5[18]).queryChannels(obj);
+        return require("AutocompleteUtils").queryChannels(obj3);
       } else {
         const _Set = Set;
         set = new Set();
         let items = [];
         let num = 1;
-        if (1 < closure_31.length) {
+        if (1 < found.length) {
           do {
-            let tmp6 = generateResultFromId;
-            let tmp7 = closure_31;
-            let tmp8 = generateResultFromId(closure_31[num]);
-            let tmp9 = num;
+            let tmp8 = generateResultFromId(found[num]);
             if (null != tmp8) {
-              let tmp44 = channelId;
+              let tmp44 = channelId1;
               let tmp45 = set;
-              let canResult = tmp8.type !== channelId(set[15]).AutocompleterResultTypes.TEXT_CHANNEL;
+              let canResult = tmp8.type !== channelId1(set[15]).AutocompleterResultTypes.TEXT_CHANNEL;
               if (canResult) {
                 canResult = tmp8.type !== tmp44(tmp45[15]).AutocompleterResultTypes.VOICE_CHANNEL;
               }
               if (!canResult) {
-                let tmp11 = closure_15;
-                let tmp12 = constants;
-                canResult = closure_15.can(constants.VIEW_CHANNEL, tmp8.record);
+                canResult = PermissionStore.can(constants.VIEW_CHANNEL, tmp8.record);
               }
               if (canResult) {
                 let arr = items.push(tmp8);
                 if (set.size < 3) {
-                  let tmp14 = closure_31;
-                  let addResult = set.add(closure_31[num]);
+                  let addResult = set.add(found[num]);
                 }
               }
             }
             num = num + 1;
-            let tmp16 = closure_31;
-          } while (num < closure_31.length);
+          } while (num < found.length);
         }
         const items1 = [];
-        let arr1 = (function getDrafts(arg0) {
+        const arr2 = (function getDrafts(arg0) {
           closure_0 = arg0;
           const items = [];
           recentlyEditedDrafts = recentlyEditedDrafts.getRecentlyEditedDrafts(ChannelMessage.ChannelMessage);
           const item = recentlyEditedDrafts.forEach((channelId) => {
             channelId = channelId.channelId;
-            if (!callback(channelId)) {
-              const tmp3 = items(closure_1_2[17])(channelId);
+            if (!closure_0(channelId)) {
+              const tmp3 = items(set[17])(channelId);
               let tmp5 = null;
               if (null != tmp3) {
                 if (tmp8) {
@@ -133,48 +127,44 @@ function generateInitialResults() {
                   }
                 } else {
                   tmp5 = tmp3;
-                  if (null != closure_1_26) {
+                  if (null != queryMode) {
                     tmp5 = tmp3;
-                    if (closure_1_26 !== tmp3.type) {
+                    if (queryMode !== tmp3.type) {
                       tmp5 = null;
                     }
                   }
                 }
-                const tmp6 = closure_1_26;
-                tmp8 = closure_1_26 === callback(tmp2[15]).AutocompleterResultTypes.USER || closure_1_26 === callback(tmp2[15]).AutocompleterResultTypes.USER_GLOBAL;
+                tmp8 = queryMode === channelId1(tmp2[15]).AutocompleterResultTypes.USER || queryMode === channelId1(tmp2[15]).AutocompleterResultTypes.USER_GLOBAL;
               }
               if (null != tmp5) {
-                const obj = { record: null, channelId: null };
-                obj[0] = tmp5;
-                obj[1] = channelId;
+                const obj = { record: tmp5, channelId };
                 items.push(obj);
-                const tmp15 = callback;
               }
             }
           });
           return items;
         })((arg0) => {
-          let hasItem = arg0 === channelId;
+          let hasItem = arg0 === channelId1;
           if (!hasItem) {
             hasItem = set.has(arg0);
           }
           return hasItem;
         });
-        if (arr1.length > 0) {
-          const intl2 = channelId(set[19]).intl;
-          items1.push(channelId(set[15]).createHeaderResult(intl2.string(channelId(set[19]).t["4B63jZ"])));
-          for (const item10048 of arr1) {
+        if (arr2.length > 0) {
+          const intl2 = channelId1(set[19]).intl;
+          items1.push(channelId1(set[15]).createHeaderResult(intl2.string(channelId1(set[19]).t["4B63jZ"])));
+          for (const item10048 of arr2) {
             let addResult1 = set.add(item10048.channelId);
-            arr1 = items1.push(item10048.record);
+            let arr4 = items1.push(item10048.record);
             continue;
           }
-          const obj12 = channelId(set[15]);
+          const obj12 = channelId1(set[15]);
         }
-        mentionChannelIds = mentionChannelIds.getMentionChannelIds();
-        const found = mentionChannelIds.filter((arg0) => {
-          let tmp = arg0 !== channelId;
+        const mentionChannelIds = ReadStateStore.getMentionChannelIds();
+        found = mentionChannelIds.filter((item) => {
+          let tmp = item !== channelId1;
           if (tmp) {
-            tmp = !set.has(arg0);
+            tmp = !set.has(item);
           }
           return tmp;
         });
@@ -183,63 +173,58 @@ function generateInitialResults() {
         if (0 <= diff) {
           do {
             let tmp22 = found[diff];
-            let tmp23 = diff;
             if (null != tmp22) {
-              let tmp24 = generateResultFromId;
               let tmp25 = generateResultFromId(tmp22);
               if (null != tmp25) {
-                obj1 = { channelId: null, result: null };
-                obj1[0] = tmp22;
-                obj1[1] = tmp25;
-                let arr2 = items2.push(obj1);
+                let obj5 = { channelId: tmp22, result: tmp25 };
+                let arr5 = items2.push(obj5);
               }
             }
             diff = diff - 1;
           } while (0 <= diff);
         }
         if (items2.length > 0) {
-          const intl3 = channelId(set[19]).intl;
-          items1.push(channelId(set[15]).createHeaderResult(intl3.string(channelId(set[19]).t["61Df13"])));
+          const intl3 = channelId1(set[19]).intl;
+          items1.push(channelId1(set[15]).createHeaderResult(intl3.string(channelId1(set[19]).t["61Df13"])));
           for (const item10075 of items2) {
             ({ result, channelId } = item10075);
             let addResult2 = set.add(result.record.id);
             let addResult3 = set.add(channelId);
-            let arr4 = items1.push(result);
+            let arr7 = items1.push(result);
             continue;
           }
-          const obj13 = channelId(set[15]);
+          const obj13 = channelId1(set[15]);
         }
         let combined = items1;
         if (null != guildId) {
-          selectableChannelIds = selectableChannelIds.getSelectableChannelIds(guildId);
-          const found1 = selectableChannelIds.filter((id) => {
-            const channel = closure_1_8.getChannel(id);
+          const selectableChannelIds = GuildChannelStore.getSelectableChannelIds(guildId);
+          const found1 = selectableChannelIds.filter((item) => {
+            const channel = ChannelStore.getChannel(item);
             let hasItem = null == channel;
             if (!hasItem) {
-              hasItem = id === channelId;
+              hasItem = item === channelId1;
             }
             if (!hasItem) {
-              hasItem = set.has(id);
+              hasItem = set.has(item);
             }
             if (!hasItem) {
-              hasItem = closure_1_19.isChannelMuted(channel.guild_id, id);
+              hasItem = UserGuildSettingsStore.isChannelMuted(channel.guild_id, item);
             }
             if (!hasItem) {
               let isChannelMutedResult = null != channel.parent_id;
               if (isChannelMutedResult) {
-                isChannelMutedResult = closure_1_19.isChannelMuted(channel.guild_id, channel.parent_id);
+                isChannelMutedResult = UserGuildSettingsStore.isChannelMuted(channel.guild_id, channel.parent_id);
               }
               hasItem = isChannelMutedResult;
             }
             let hasImportantUnread = !hasItem;
             if (!hasItem) {
-              hasImportantUnread = channelId(set[20]).getHasImportantUnread(channel);
-              const obj = channelId(set[20]);
+              hasImportantUnread = ReadStateUtils.getHasImportantUnread(channel);
             }
             return hasImportantUnread;
           });
-          const mapped = found1.map((arg0) => {
-            const tmp2 = callback(set[17])(arg0);
+          const mapped = found1.map((item) => {
+            const tmp2 = closure_1(set[17])(item);
             let tmp3 = null;
             if (null != tmp2) {
               if (tmp6) {
@@ -249,47 +234,41 @@ function generateInitialResults() {
                 }
               } else {
                 tmp3 = tmp2;
-                if (null != closure_26) {
+                if (null != queryMode) {
                   tmp3 = tmp2;
-                  if (closure_26 !== tmp2.type) {
+                  if (queryMode !== tmp2.type) {
                     tmp3 = null;
                   }
                 }
               }
-              const tmp4 = closure_26;
-              tmp6 = closure_26 === channelId(tmp[15]).AutocompleterResultTypes.USER || closure_26 === channelId(tmp[15]).AutocompleterResultTypes.USER_GLOBAL;
+              tmp6 = queryMode === channelId1(tmp[15]).AutocompleterResultTypes.USER || queryMode === channelId1(tmp[15]).AutocompleterResultTypes.USER_GLOBAL;
             }
             return tmp3;
           });
-          const found2 = mapped.filter(channelId(set[21]).isNotNullish);
+          const found2 = mapped.filter(channelId1(set[21]).isNotNullish);
           const _Object = Object;
-          const values = Object.values(activeJoinedUnreadThreadsForGuild.getActiveJoinedUnreadThreadsForGuild(guildId));
-          let item = values.forEach((obj) => {
+          const values = Object.values(ActiveJoinedThreadsStore.getActiveJoinedUnreadThreadsForGuild(guildId));
+          let item = values.forEach((item) => {
             for (const key10004 in arg0) {
-              let tmp11 = key10004;
-              let tmp12 = callback;
-              let tmp13 = set;
-              let tmp14 = callback(set[17])(key10004);
+              let tmp14 = createAutocompleterResultForChannelIdDefault(key10004);
               let tmp5 = null;
               if (null != tmp14) {
-                let tmp2 = channelId;
-                let tmp = closure_1_26;
-                let tmp3 = closure_1_26 === channelId(tmp13[15]).AutocompleterResultTypes.USER;
+                let tmp2 = require;
+                let tmp = queryMode;
+                let tmp3 = queryMode === sortByMatchScore.AutocompleterResultTypes.USER;
                 if (!tmp3) {
-                  tmp3 = tmp === tmp2(tmp13[15]).AutocompleterResultTypes.USER_GLOBAL;
+                  tmp3 = tmp === tmp2(9867).AutocompleterResultTypes.USER_GLOBAL;
                 }
                 if (tmp3) {
                   tmp5 = tmp14;
-                  if (tmp14.type !== tmp2(tmp13[15]).AutocompleterResultTypes.USER) {
+                  if (tmp14.type !== tmp2(9867).AutocompleterResultTypes.USER) {
                     tmp5 = null;
                   }
                 } else {
-                  let tmp4 = closure_1_26;
                   tmp5 = tmp14;
-                  if (null != closure_1_26) {
-                    let tmp6 = closure_1_26;
+                  if (null != queryMode) {
                     tmp5 = tmp14;
-                    if (closure_1_26 !== tmp14.type) {
+                    if (queryMode !== tmp14.type) {
                       tmp5 = null;
                     }
                   }
@@ -297,13 +276,11 @@ function generateInitialResults() {
               }
               let hasItem = null == tmp5;
               if (!hasItem) {
-                let tmp8 = set;
                 hasItem = set.has(tmp5.record.id);
               }
               if (hasItem) {
                 continue;
               } else {
-                let tmp9 = found2;
                 let arr = found2.push(tmp5);
                 continue;
               }
@@ -327,48 +304,47 @@ function generateInitialResults() {
         }
         let tmp33 = combined;
         if (items.length > 0) {
-          const intl4 = channelId(set[19]).intl;
-          const items3 = [channelId(set[15]).createHeaderResult(intl4.string(channelId(set[19]).t["80lOZ1"]))];
+          const intl4 = channelId1(set[19]).intl;
+          const items3 = [channelId1(set[15]).createHeaderResult(intl4.string(channelId1(set[19]).t["80lOZ1"]))];
           HermesBuiltin.arraySpread(items, 1);
           const items4 = [];
           HermesBuiltin.arraySpread(combined, HermesBuiltin.arraySpread(items3, 0));
           tmp33 = items4;
-          const obj14 = channelId(set[15]);
+          const obj14 = channelId1(set[15]);
         }
         return tmp33;
       }
     }
   }
-  importDefault = store2.getId();
-  const recentlyTalked = importDefault(set[18]).getRecentlyTalked(channelId, 100);
+  importDefault = AuthenticationStore.getId();
+  const recentlyTalked = require("AutocompleteUtils").getRecentlyTalked(channelId1, 100);
   return recentlyTalked.filter((record) => record.record.id !== closure_1);
 }
 function handleQuickSwitcherShow(arg0) {
   ({ query, queryMode } = arg0);
   const trimmed = query.trim();
-  const guildId = store4.getGuildId();
-  const items = ["user:" + store2.getId()];
+  const guildId = SelectedGuildStore.getGuildId();
+  const items = ["user:" + AuthenticationStore.getId()];
   const set = new Set(items);
   if (null != guildId) {
     const _HermesInternal = HermesInternal;
     set.add("guild:" + guildId);
   }
   closure_32 = Date.now();
-  let tmp13 = store;
-  if (store == null) {
-    tmp13 = sortByMatchScoreDefault;
+  let tmp132 = _null;
+  if (_null == null) {
     const items1 = [sortByMatchScore.AutocompleterResultTypes.USER, sortByMatchScore.AutocompleterResultTypes.GROUP_DM, sortByMatchScore.AutocompleterResultTypes.TEXT_CHANNEL, sortByMatchScore.AutocompleterResultTypes.GUILD, sortByMatchScore.AutocompleterResultTypes.APPLICATION, sortByMatchScore.AutocompleterResultTypes.GAME_PROFILE, sortByMatchScore.AutocompleterResultTypes.LINK, sortByMatchScore.AutocompleterResultTypes.IN_APP_NAVIGATION];
     let num = 5;
     if (null != queryMode) {
       num = 100;
     }
-    const obj = { frecencyBoosters: true, blacklist: null, allowSnowflake: true };
-    obj[1] = set;
-    tmp13 = new tmp13(tmp14, items1, num, obj, 100);
+    const obj = { frecencyBoosters: true, blacklist: set, allowSnowflake: true };
+    tmp132 = new sortByMatchScoreDefault(tmp14, items1, num, obj, 100);
   }
-  store = tmp13;
+  _null = tmp132;
   c28 = null;
-  store.search(trimmed);
+  c29 = trimmed.length;
+  _null.search(trimmed);
 }
 function handleUserSearchUpdate(arr, str) {
   str = str.trim();
@@ -376,7 +352,7 @@ function handleUserSearchUpdate(arr, str) {
     arr = generateInitialResults();
   }
   let flag = false;
-  if (arr.length === arr.length) {
+  if (arr.length === length.length) {
     let num2 = 0;
     flag = true;
     if (0 < arr.length) {
@@ -398,116 +374,120 @@ function handleUserSearchUpdate(arr, str) {
   }
   if (!flag) {
     let DOWN = require;
-    if (sortByMatchScore.AutocompleterResultTypes.USER_GLOBAL !== c26) {
-      if (DOWN(9840).AutocompleterResultTypes.USER !== tmp7) {
-        if (DOWN(9840).AutocompleterResultTypes.TEXT_CHANNEL === tmp7) {
+    if (sortByMatchScore.AutocompleterResultTypes.USER_GLOBAL !== queryMode) {
+      if (DOWN(9867).AutocompleterResultTypes.USER !== tmp7) {
+        if (DOWN(9867).AutocompleterResultTypes.TEXT_CHANNEL === tmp7) {
           const intl5 = DOWN(1114).intl;
-          arr = arr.unshift(DOWN(9840).createHeaderResult(intl5.string(DOWN(1114).t.W26k4V)));
+          arr.unshift(DOWN(9867).createHeaderResult(intl5.string(DOWN(1114).t.W26k4V)));
           let items = arr;
-          const DOWNResult = DOWN(9840);
-        } else if (DOWN(9840).AutocompleterResultTypes.VOICE_CHANNEL === tmp7) {
+          const DOWNResult = DOWN(9867);
+        } else if (DOWN(9867).AutocompleterResultTypes.VOICE_CHANNEL === tmp7) {
           const intl4 = DOWN(1114).intl;
-          arr = arr.unshift(DOWN(9840).createHeaderResult(intl4.string(DOWN(1114).t.zUoI5C)));
+          arr.unshift(DOWN(9867).createHeaderResult(intl4.string(DOWN(1114).t.zUoI5C)));
           items = arr;
-          const DOWNResult1 = DOWN(9840);
-        } else if (DOWN(9840).AutocompleterResultTypes.GUILD === tmp7) {
+          const DOWNResult1 = DOWN(9867);
+        } else if (DOWN(9867).AutocompleterResultTypes.GUILD === tmp7) {
           const intl3 = DOWN(1114).intl;
-          arr.unshift(DOWN(9840).createHeaderResult(intl3.string(DOWN(1114).t.olADPs)));
+          arr.unshift(DOWN(9867).createHeaderResult(intl3.string(DOWN(1114).t.olADPs)));
           items = arr;
-          const DOWNResult2 = DOWN(9840);
-        } else if (DOWN(9840).AutocompleterResultTypes.APPLICATION === tmp7) {
+          const DOWNResult2 = DOWN(9867);
+        } else if (DOWN(9867).AutocompleterResultTypes.APPLICATION === tmp7) {
           const intl2 = DOWN(1114).intl;
-          arr.unshift(DOWN(9840).createHeaderResult(intl2.string(DOWN(1114).t.VwK1ld)));
+          arr.unshift(DOWN(9867).createHeaderResult(intl2.string(DOWN(1114).t.VwK1ld)));
           items = arr;
-          const DOWNResult3 = DOWN(9840);
-        } else if (DOWN(9840).AutocompleterResultTypes.GAME_PROFILE === tmp7) {
+          const DOWNResult3 = DOWN(9867);
+        } else if (DOWN(9867).AutocompleterResultTypes.GAME_PROFILE === tmp7) {
           const intl = DOWN(1114).intl;
-          arr.unshift(DOWN(9840).createHeaderResult(intl.string(DOWN(1114).t.gEp2SG)));
+          arr.unshift(DOWN(9867).createHeaderResult(intl.string(DOWN(1114).t.gEp2SG)));
           items = arr;
-          const DOWNResult4 = DOWN(9840);
+          const DOWNResult4 = DOWN(9867);
         } else {
-          const found = arr.filter((type) => type.type === callback(9840).AutocompleterResultTypes.GAME_PROFILE);
+          found = arr.filter((type) => type.type === sortByMatchScore.AutocompleterResultTypes.GAME_PROFILE);
           const substr = found.slice(0, 3);
           items = [];
-          HermesBuiltin.arraySpread(substr, HermesBuiltin.arraySpread(arr.filter((type) => type.type !== callback(9840).AutocompleterResultTypes.GAME_PROFILE), 0));
+          HermesBuiltin.arraySpread(substr, HermesBuiltin.arraySpread(arr.filter((type) => type.type !== sortByMatchScore.AutocompleterResultTypes.GAME_PROFILE), 0));
           arr = items;
         }
-        if (str !== str) {
+        if (str !== c28) {
+          c28 = str;
           const _Math = Math;
-          closure_29 = Math.max(str.length, closure_29);
-          str = DOWN(9840).findNextSelectedResult;
-          DOWN = DOWN(9840).FindResultDirections.DOWN;
-          closure_23 = str(DOWN, -1, arr);
-          const DOWNResult5 = DOWN(9840);
+          c29 = Math.max(str.length, c29);
+          str = DOWN(9867).findNextSelectedResult;
+          DOWN = DOWN(9867).FindResultDirections.DOWN;
+          selectedIndex = str(DOWN, -1, arr);
+          const DOWNResult5 = DOWN(9867);
         } else {
           let tmp31 = null != tmp29;
           if (tmp31) {
-            tmp31 = tmp29.type === DOWN(9840).AutocompleterResultTypes.HEADER;
+            tmp31 = tmp29.type === DOWN(9867).AutocompleterResultTypes.HEADER;
           }
           if (tmp31) {
-            closure_23 = DOWN(9840).findNextSelectedResult(DOWN(9840).FindResultDirections.DOWN, closure_23, arr);
-            const DOWNResult6 = DOWN(9840);
+            selectedIndex = DOWN(9867).findNextSelectedResult(DOWN(9867).FindResultDirections.DOWN, selectedIndex, arr);
+            const DOWNResult6 = DOWN(9867);
           }
         }
         quickSwitcherStoreClass.emitChange();
       }
     }
     let guild = null;
-    if (c26 !== DOWN(9840).AutocompleterResultTypes.USER_GLOBAL) {
-      guild = store3.getGuild(store4.getGuildId());
+    if (queryMode !== DOWN(9867).AutocompleterResultTypes.USER_GLOBAL) {
+      guild = GuildStore.getGuild(SelectedGuildStore.getGuildId());
     }
     if (null != guild) {
       const intl7 = DOWN(1114).intl;
       const obj = { name: null };
       guild = guild.name;
-      obj[0] = guild;
+      obj.name = guild;
       let formatToPlainStringResult = intl7.formatToPlainString(DOWN(1114).t.FREzQs, obj);
     } else {
       const intl6 = DOWN(1114).intl;
       formatToPlainStringResult = intl6.string(DOWN(1114).t.XFYW1o);
     }
-    arr.unshift(DOWN(9840).createHeaderResult(formatToPlainStringResult));
-    const DOWNResult7 = DOWN(9840);
+    arr.unshift(DOWN(9867).createHeaderResult(formatToPlainStringResult));
+    const DOWNResult7 = DOWN(9867);
+    length = arr;
   }
 }
 function handleQuickSwitcherHide() {
   c28 = null;
   c29 = 0;
   closure_30 = [];
-  if (null != store) {
-    store.destroy();
-    store = null;
+  if (null != _null) {
+    _null.destroy();
+    _null = null;
   }
 }
 function handleGameAutocompleteSettled() {
-  if (null == store) {
+  if (null == _null) {
     return false;
   } else {
-    store.refreshGameProfiles();
+    _null.refreshGameProfiles();
   }
 }
-({ CHANNEL_NOTICE_SHOW_DELAY: closure_20, Permissions: closure_21 } = ME);
+const DraftType = fn(4915).DraftType;
+const GUILD_VOCAL_CHANNELS_KEY = fn(2012).GUILD_VOCAL_CHANNELS_KEY;
+const Constants = fn(1074);
+({ CHANNEL_NOTICE_SHOW_DELAY: closure_20, Permissions: closure_21 } = Constants);
 const seenQSTutorial = "seenQSTutorial";
-let c23 = 0;
+let selectedIndex = 0;
 let c24 = false;
-let c25 = false;
-let c26 = null;
-let closure_27 = [];
+let closure_25 = false;
+const queryMode = null;
+let results = [];
 let c28 = null;
 let c29 = 0;
-let closure_30 = [];
-let closure_31 = [];
-let c32 = null;
+let found = [];
+let closure_32 = null;
 const PersistedStore = initializeDefault.PersistedStore;
 class QuickSwitcherStoreClass extends PersistedStore {
 }
 const prototype = QuickSwitcherStoreClass.prototype;
 prototype["initialize"] = function initialize(channelHistory) {
-  this.waitFor(closure_5, closure_7, closure_8, closure_9, closure_4, closure_11, closure_13, closure_14, closure_15, closure_16, closure_17, closure_18, closure_6, closure_19);
-  const items = [closure_6];
+  this.waitFor(ActiveJoinedThreadsStore, AuthenticationStore, ChannelStore, DraftStore, GameAutocompleteStore, GuildChannelStore, GuildMemberStore, GuildStore, PermissionStore, ReadStateStore, SelectedChannelStore, SelectedGuildStore, ThemeStore, UserGuildSettingsStore);
+  const items = [ThemeStore];
   this.syncWith(items, () => true);
   const Storage = Storage2.Storage;
-  closure_24 = Storage.get(seenQSTutorial) || false;
+  c24 = Storage.get(seenQSTutorial) || false;
   channelHistory = undefined;
   if (channelHistory != null) {
     channelHistory = channelHistory.channelHistory;
@@ -515,81 +495,81 @@ prototype["initialize"] = function initialize(channelHistory) {
   if (channelHistory == null) {
     channelHistory = [];
   }
+  found = channelHistory;
 };
 prototype["getState"] = function getState() {
-  return { channelHistory: closure_31 };
+  return { channelHistory: found };
 };
 prototype["isOpen"] = function isOpen() {
-  return null != closure_3;
+  return null != c3;
 };
 prototype["getResultTotals"] = function getResultTotals(GROUP_DM) {
-  closure_0 = GROUP_DM;
-  if (null == store) {
+  if (null == _null) {
     return 0;
   } else if (null == GROUP_DM) {
-    const results = store.results;
-    let reduced = results.reduce((arg0, type) => {
-      let sum = arg0;
-      if (type.type !== GROUP_DM(table[15]).AutocompleterResultTypes.HEADER) {
-        sum = arg0 + 1;
+    results = _null.results;
+    let reduced = results.reduce((acc, type) => {
+      let sum = acc;
+      if (type.type !== GROUP_DM(dependencyMap[15]).AutocompleterResultTypes.HEADER) {
+        sum = acc + 1;
       }
       return sum;
     }, 0);
   } else {
-    const results1 = store.results;
-    reduced = results1.reduce((arg0, type) => {
-      let sum = arg0;
+    const results1 = _null.results;
+    reduced = results1.reduce((acc, type) => {
+      let sum = acc;
       if (type.type === closure_0) {
-        sum = arg0 + 1;
+        sum = acc + 1;
       }
       return sum;
     }, 0);
   }
 };
 prototype["channelNoticePredicate"] = function channelNoticePredicate(arg0, arg1) {
-  let tmp = c25;
-  if (c25) {
-    tmp = Date.now() - arg1 >= closure_20;
+  let tmp = closure_25;
+  if (closure_25) {
+    tmp = Date.now() - arg1 >= closure_1_20;
   }
   return tmp;
 };
 prototype["getFrequentGuilds"] = function getFrequentGuilds() {
   let queryGuildsResult = null;
-  if (null != store) {
-    queryGuildsResult = store.queryGuilds("", 100);
+  if (null != _null) {
+    queryGuildsResult = _null.queryGuilds("", 100);
   }
   return queryGuildsResult;
 };
 prototype["getFrequentGuildsLength"] = function getFrequentGuildsLength() {
   let num = 0;
-  if (null != store) {
-    num = store.queryGuilds("", 100).length;
+  if (null != _null) {
+    num = _null.queryGuilds("", 100).length;
   }
   return num;
 };
 prototype["getChannelHistory"] = function getChannelHistory() {
-  return closure_31;
+  return found;
 };
 prototype["getLastShowTimestamp"] = function getLastShowTimestamp() {
-  return c32;
+  return closure_32;
 };
 prototype["getProps"] = function getProps() {
-  const obj = { theme: theme.theme, query: null, queryMode: null, results: null, selectedIndex: null, seenTutorial: null, maxQueryLength: null };
+  const obj = { theme: ThemeStore.theme, query: null, queryMode: null, results: null, selectedIndex: null, seenTutorial: null, maxQueryLength: null };
   let str = "";
-  if (null != store) {
-    str = store.query;
+  if (null != _null) {
+    str = _null.query;
   }
-  obj[1] = str;
-  obj[2] = c26;
-  obj[3] = closure_27;
-  obj[4] = c23;
-  obj[5] = c24;
-  obj[6] = c29;
+  obj.query = str;
+  obj.queryMode = queryMode;
+  obj.results = results;
+  obj.selectedIndex = selectedIndex;
+  obj.seenTutorial = seenTutorial;
+  obj.maxQueryLength = maxQueryLength;
   return obj;
 };
 QuickSwitcherStoreClass.displayName = "QuickSwitcherStore";
 QuickSwitcherStoreClass.persistKey = "QuickSwitcherStore";
-const quickSwitcherStoreClass = new QuickSwitcherStoreClass(dispatcherDefault, {
+const quickSwitcherStoreClass = new QuickSwitcherStoreClass(DispatcherDefault, {
   CONNECTION_OPEN: handleConnectionOpen,
   CONNECTION_OPEN_SUPPLEMENTAL: handleConnectionOpen,
   QUICKSWITCHER_SHOW: handleQuickSwitcherShow,
@@ -600,17 +580,17 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(dispatcherDefault, {
   QUICKSWITCHER_SEARCH: function handleQuickSwitcherSearch(arg0) {
     ({ query, queryMode } = arg0);
     const trimmed = query.trim();
-    if (null == store) {
+    if (null == _null) {
       return false;
     } else {
       if (queryMode !== queryMode) {
         if (null == queryMode) {
           const items = [sortByMatchScore.AutocompleterResultTypes.USER, sortByMatchScore.AutocompleterResultTypes.GROUP_DM, sortByMatchScore.AutocompleterResultTypes.TEXT_CHANNEL, sortByMatchScore.AutocompleterResultTypes.GUILD, sortByMatchScore.AutocompleterResultTypes.APPLICATION, sortByMatchScore.AutocompleterResultTypes.GAME_PROFILE, sortByMatchScore.AutocompleterResultTypes.LINK, sortByMatchScore.AutocompleterResultTypes.IN_APP_NAVIGATION];
-          store.setResultTypes(items);
+          _null.setResultTypes(items);
           let tmp6 = require;
         } else {
           if (tmp2) {
-            const items1 = [tmp31(9840).AutocompleterResultTypes.USER];
+            const items1 = [tmp31(9867).AutocompleterResultTypes.USER];
             setResultTypes(items1);
             tmp6 = tmp31;
           } else {
@@ -624,31 +604,30 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(dispatcherDefault, {
         if (null != queryMode) {
           num = 100;
         }
-        store.setLimit(num);
-        const guildId = store4.getGuildId();
-        if (queryMode === tmp6(9840).AutocompleterResultTypes.USER) {
+        _null.setLimit(num);
+        const guildId = SelectedGuildStore.getGuildId();
+        if (queryMode === tmp6(9867).AutocompleterResultTypes.USER) {
           if (null != guildId) {
-            let obj = { userFilters: null };
-            obj = { guild: null, friends: true };
-            obj[0] = guildId;
-            obj[0] = obj;
-            store.setOptions(obj, true);
+            const obj = { userFilters: null };
+            const obj2 = { guild: guildId, friends: true };
+            obj.userFilters = obj2;
+            _null.setOptions(obj, true);
           }
         }
-        if (queryMode === tmp6(9840).AutocompleterResultTypes.VOICE_CHANNEL) {
-          store.setOptions({ voiceChannelGuildFilter: null }, true);
+        if (queryMode === tmp6(9867).AutocompleterResultTypes.VOICE_CHANNEL) {
+          _null.setOptions({ voiceChannelGuildFilter: null }, true);
         } else {
-          store.setOptions({ userFilters: null, voiceChannelGuildFilter: "a" }, true);
+          _null.setOptions({ userFilters: null, voiceChannelGuildFilter: "a" }, true);
         }
       }
       if (queryMode === sortByMatchScore.AutocompleterResultTypes.USER) {
-        let guildId1 = store4.getGuildId();
+        let guildId1 = SelectedGuildStore.getGuildId();
         if (guildId1 == null) {
           guildId1 = null;
         }
-        store.search(trimmed, guildId1);
+        _null.search(trimmed, guildId1);
       } else {
-        store.search(trimmed, undefined);
+        _null.search(trimmed, undefined);
       }
     }
   },
@@ -669,7 +648,7 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(dispatcherDefault, {
     if (null == channelId) {
       return false;
     } else {
-      found = found.filter((arg0) => arg0 !== channelId);
+      found = found.filter((item) => item !== channelId);
       found.unshift(channelId);
       if (found.length > 8) {
         found.length = 8;
@@ -679,7 +658,8 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(dispatcherDefault, {
   GAME_AUTOCOMPLETE_FETCH_SUCCESS: handleGameAutocompleteSettled,
   GAME_AUTOCOMPLETE_FETCH_FAILURE: handleGameAutocompleteSettled
 });
-let result = require("set").fileFinishedImporting("modules/quickswitcher/QuickSwitcherStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/quickswitcher/QuickSwitcherStore.tsx");
 
 export default quickSwitcherStoreClass;
 export { generateResultFromId };

@@ -1,44 +1,47 @@
-// Module ID: 9751
-// Function ID: 9752
+// Module ID: 9778
+// Function ID: 9779
 // Name: AppChannelApplicationActionSheet
-// Dependencies: [19, 21, 9748, 4527, 7198, 7149, 1114, 5685, 5688, 9752, 9750, 2]
+// Dependencies: [19, 21, 9775, 4541, 7211, 7163, 1114, 5699, 5702, 9779, 9777, 2]
 // Exports: default
 
-// Module 9751 (AppChannelApplicationActionSheet)
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 9778 (AppChannelApplicationActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import AppChannelApplicationIconDefault from "AppChannelApplicationIcon" /* 9777 */;
+import getAppChannelApplicationUnsupportedTextDefault from "getAppChannelApplicationUnsupportedText" /* 9779 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_channels/native/AppChannelApplicationActionSheet.tsx");
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_channels/native/AppChannelApplicationActionSheet.tsx");
 
 export default function AppChannelApplicationActionSheet(arg0) {
   ({ selectedApplicationId, onChange } = arg0);
   ({ guildId, channelId } = arg0);
-  let obj = onChange(9748);
-  const options = obj.useAppChannelApplicationOptions(guildId, channelId, selectedApplicationId).options;
+  const options = onChange(9775).useAppChannelApplicationOptions(guildId, channelId, selectedApplicationId).options;
   const items = [onChange];
-  const callback = React.useCallback((arg0) => {
+  const callback = noop.useCallback((arg0) => {
     onChange(arg0);
-    closure_1_1(closure_1_2[3]).hideActionSheet();
+    ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items);
-  obj = { header: null, children: null };
-  obj = { title: null };
+  const obj2 = { header: null, children: null };
+  const obj3 = { title: null };
   const intl = onChange(1114).intl;
-  obj[0] = intl.string(onChange(1114).t.F2FMFR);
-  obj[0] = jsx(onChange(7149).BottomSheetTitleHeader, { title: null });
-  obj1 = { accessibilityLabel: null, value: null, onChange: null, hasIcons: true, children: null };
+  obj3.title = intl.string(onChange(1114).t.F2FMFR);
+  obj2.header = jsx(onChange(7163).BottomSheetTitleHeader, { title: null });
+  const obj4 = { accessibilityLabel: null, value: null, onChange: null, hasIcons: true, children: null };
   const intl2 = onChange(1114).intl;
-  obj1[0] = intl2.string(onChange(1114).t.F2FMFR);
+  obj4.accessibilityLabel = intl2.string(onChange(1114).t.F2FMFR);
   if (selectedApplicationId == null) {
     selectedApplicationId = "";
   }
-  obj1[1] = selectedApplicationId;
-  obj1[2] = callback;
-  obj1[4] = options.map((arg0) => {
-    ({ application, status } = arg0);
-    return callback2(onChange(5688).TableRadioRow, { value: application.id, label: application.name, subLabel: callback(9752)(status), disabled: !status.supported, icon: callback2(callback(9750), { application }) }, application.id);
+  obj4.value = selectedApplicationId;
+  obj4.onChange = callback;
+  obj4.children = options.map((item) => {
+    ({ application, status } = item);
+    return jsx(onChange(5702).TableRadioRow, { value: application.id, label: application.name, subLabel: getAppChannelApplicationUnsupportedTextDefault(status), disabled: !status.supported, icon: jsx(AppChannelApplicationIconDefault, { application }) }, application.id);
   });
-  obj[1] = jsx(onChange(5685).TableRadioGroup, { accessibilityLabel: null, value: null, onChange: null, hasIcons: true, children: null });
-  return jsx(onChange(7198).ActionSheet, { title: null });
+  obj2.children = jsx(onChange(5699).TableRadioGroup, { accessibilityLabel: null, value: null, onChange: null, hasIcons: true, children: null });
+  return jsx(onChange(7211).ActionSheet, { header: null, children: null });
 };
 export const APP_CHANNEL_APPLICATION_ACTION_SHEET_KEY = "AppChannelApplicationActionSheet";

@@ -1,30 +1,30 @@
-// Module ID: 12067
-// Function ID: 12068
-// Name: AppsBaner
-// Dependencies: [19, 17, 21, 4560, 12068, 12065, 1114, 2]
+// Module ID: 12093
+// Function ID: 12094
+// Name: AppsBanner
+// Dependencies: [19, 17, 21, 4574, 12094, 12091, 1114, 2]
 // Exports: default
 
-// Module 12067 (AppsBaner)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import BannerBaseDefault from "BannerBase" /* 12065 */;
-import SvgComponentDefault from "SvgComponent" /* 12068 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12093 (AppsBanner)
+import util from "util" /* 1114 */;
+import BannerBaseDefault from "BannerBase" /* 12091 */;
+import OnboardingAppsRocketDefault from "OnboardingAppsRocket" /* 12094 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-let closure_5 = createCacheKey.createStyles({ rocketIconContainer: { position: "absolute", top: -20 }, rocketIcon: { width: 90, height: 90 } });
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/banner/AppsBanner.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_5 = createStyles.createStyles({ rocketIconContainer: { position: "absolute", top: -20 }, rocketIcon: { width: 90, height: 90 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/banner/AppsBanner.tsx");
 
 export default function AppsBaner() {
-  const tmp = callback();
-  obj = { style: tmp.rocketIconContainer, children: jsx(SvgComponentDefault, obj) };
-  obj = { style: tmp.rocketIcon };
-  obj = { image: <View style={tmp.rocketIcon} />, text: null };
-  const tmp2 = <View image={<View style={tmp.rocketIcon} />} text={null} />;
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t.sjRwMJ);
-  return jsx(BannerBaseDefault, { image: <View style={tmp.rocketIcon} />, text: null });
+  const tmp = closure_5();
+  const obj = { style: tmp.rocketIconContainer, children: jsx(OnboardingAppsRocketDefault, { style: tmp.rocketIcon }) };
+  const obj3 = { image: <View style={tmp.rocketIconContainer}>{jsx(OnboardingAppsRocketDefault, { style: tmp.rocketIcon })}</View>, text: null };
+  const obj2 = { style: tmp.rocketIcon };
+  const tmp2 = <View style={tmp.rocketIconContainer}>{jsx(OnboardingAppsRocketDefault, { style: tmp.rocketIcon })}</View>;
+  const intl = util.intl;
+  obj3.text = intl.string(util.t.sjRwMJ);
+  return jsx(BannerBaseDefault, { image: <View style={tmp.rocketIconContainer}>{jsx(OnboardingAppsRocketDefault, { style: tmp.rocketIcon })}</View>, text: null });
 };

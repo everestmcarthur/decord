@@ -1,21 +1,21 @@
-// Module ID: 8861
-// Function ID: 8862
-// Name: getApplicationFlags
+// Module ID: 8888
+// Function ID: 8889
+// Name: ApplicationFlagUtils
 // Dependencies: [1918, 1086, 2]
 // Exports: hasApplicationFlag
 
-// Module 8861 (getApplicationFlags)
-import fromStringAll from "fromString" /* 1086 */;
-import closure_2 from "createExecutable" /* 1918 */;
+// Module 8888 (ApplicationFlagUtils)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
+import ApplicationRecord from "ApplicationRecord" /* 1918 */;
 
 function getApplicationFlags(application) {
   if (null == application) {
-    let flags = fromStringAll.deserialize(0);
-    const obj2 = fromStringAll;
+    const deserializer2 = BigFlagUtilsAll;
+    let flags = deserializer2.deserialize(0);
   } else {
     let tmp5 = null != application;
     if (tmp5) {
-      let tmp2 = application instanceof closure_2;
+      let tmp2 = application instanceof ApplicationRecord;
       if (!tmp2) {
         tmp2 = "flags" in application && typeof application.flags === "bigint";
         const tmp3 = "flags" in application && typeof application.flags === "bigint";
@@ -32,6 +32,7 @@ function getApplicationFlags(application) {
     if (tmp5) {
       flags = application.flags;
     } else {
+      const deserializer = BigFlagUtilsAll;
       let num = application.flags_new;
       if (num == null) {
         num = application.flags;
@@ -39,15 +40,15 @@ function getApplicationFlags(application) {
       if (num == null) {
         num = 0;
       }
-      flags = fromStringAll.deserialize(num);
-      const obj = fromStringAll;
+      flags = deserializer.deserialize(num);
     }
   }
   return flags;
 }
-const result = require("set").fileFinishedImporting("modules/applications/utils/ApplicationFlagUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/applications/utils/ApplicationFlagUtils.tsx");
 
 export { getApplicationFlags };
 export const hasApplicationFlag = function hasApplicationFlag(application, EMBEDDED) {
-  return fromStringAll.has(getApplicationFlags(application), EMBEDDED);
+  return BigFlagUtilsAll.has(getApplicationFlags(application), EMBEDDED);
 };

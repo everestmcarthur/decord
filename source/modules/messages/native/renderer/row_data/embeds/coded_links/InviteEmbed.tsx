@@ -1,97 +1,90 @@
-// Module ID: 13212
-// Function ID: 13213
-// Name: createInviteEmbed
-// Dependencies: [4544, 1371, 1074, 7736, 13213, 7735, 13215, 13216, 13217, 13219, 13221, 11311, 11312, 2]
+// Module ID: 13235
+// Function ID: 13236
+// Name: InviteEmbed
+// Dependencies: [4558, 1371, 1074, 7750, 13236, 7749, 13238, 13239, 13240, 13242, 13244, 11338, 11339, 2]
 // Exports: createInviteEmbed
 
-// Module 13212 (createInviteEmbed)
-import InviteTypes2 from "InviteTypes" /* 7735 */;
-import createResolvingGuildInvite from "createResolvingGuildInvite" /* 13213 */;
-import closure_2 from "updateInvite" /* 4544 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
-import ME from "ME" /* 1074 */;
-import { InviteTypes } from "InviteSendStates" /* 7736 */;
+// Module 13235 (InviteEmbed)
+import InviteTypeUtils from "InviteTypeUtils" /* 7749 */;
+import invite_GuildInvite from "invite/GuildInvite" /* 13236 */;
+import InviteStore from "InviteStore" /* 4558 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-({ InviteStates: c4, AbortCodes: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/InviteEmbed.tsx");
+require = fn;
+const Constants = fn(1074);
+({ InviteStates: closure_4, AbortCodes: hasOwnProperty } = Constants);
+const InviteTypes = fn(7750).InviteTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/InviteEmbed.tsx");
 
-export const createInviteEmbed = function createInviteEmbed(closure_0, code, closure_2) {
-  let obj = invite;
-  invite = invite.getInvite(code);
+export const createInviteEmbed = function createInviteEmbed(author, code, theme) {
+  const invite = InviteStore.getInvite(code);
   if (null == invite) {
     return null;
   } else {
-    currentUser = currentUser.getCurrentUser();
+    const currentUser = UserStore.getCurrentUser();
     if (currentUser != null) {
-      let id = currentUser.id;
+      const id = currentUser.id;
     }
     if (invite.state === constants.RESOLVING) {
-      return createResolvingGuildInvite.createResolvingGuildInvite(closure_2);
+      return invite_GuildInvite.createResolvingGuildInvite(theme);
     } else {
       if (invite.state !== tmp5.EXPIRED) {
         if (invite.state !== tmp5.BANNED) {
           if (invite.state === tmp5.ERROR) {
             const inviteError = obj.getInviteError(code);
             if (null == inviteError) {
-              let erroredGuildInvite = createResolvingGuildInvite.createErroredGuildInvite(code, tmp28, closure_2);
-              const obj15 = createResolvingGuildInvite;
+              let erroredGuildInvite = invite_GuildInvite.createErroredGuildInvite(code, tmp28, theme);
             } else if (inviteError.code === constants2.INVITES_DISABLED) {
-              erroredGuildInvite = createResolvingGuildInvite.createDisabledGuildInvite(invite, closure_2);
-              const obj14 = createResolvingGuildInvite;
+              erroredGuildInvite = invite_GuildInvite.createDisabledGuildInvite(invite, theme);
             } else {
-              erroredGuildInvite = createResolvingGuildInvite.createErroredGuildInvite(code, tmp28, closure_2);
-              const obj13 = createResolvingGuildInvite;
+              erroredGuildInvite = invite_GuildInvite.createErroredGuildInvite(code, tmp28, theme);
             }
             return erroredGuildInvite;
           } else {
-            const inviteType = InviteTypes2.getInviteType(invite);
+            const inviteType = InviteTypeUtils.getInviteType(invite);
             if (InviteTypes.GROUP_DM === inviteType) {
-              let tmp29Result = tmp29(13215);
-              return tmp29Result.createGroupDMInvite(invite, tmp28, closure_2);
+              return tmp29(13238).createGroupDMInvite(invite, tmp28, theme);
             } else if (tmp32.FRIEND === inviteType) {
-              tmp29Result = tmp29(13216);
-              return tmp29Result.createFriendInvite(invite, tmp28, id, closure_2);
+              const tmp29Result10 = tmp29(13239);
+              return tmp29Result10.createFriendInvite(invite, tmp28, id, theme);
             } else {
-              const guildInviteExtendedType = tmp29(7735).getGuildInviteExtendedType(invite);
-              if (tmp29(7735).GuildInviteExtendedType.EVENT === guildInviteExtendedType) {
-                return tmp29(13217).createGuildScheduledEventInviteEmbed(invite, closure_2);
-              } else if (tmp29(7735).GuildInviteExtendedType.APPLICATION === guildInviteExtendedType) {
-                obj = { inviteCode: null, theme: null };
-                obj[0] = invite.code;
-                obj[1] = closure_2;
-                return tmp29(13219).createEmbeddedActivityInviteEmbed(obj);
-              } else if (tmp29(7735).GuildInviteExtendedType.PROFILE === guildInviteExtendedType) {
-                return tmp29(13221).createGuildProfileInvite(invite, closure_2);
-              } else if (tmp29(7735).GuildInviteExtendedType.VOICE_CHANNEL === guildInviteExtendedType) {
+              const guildInviteExtendedType = tmp29(7749).getGuildInviteExtendedType(invite);
+              if (tmp29(7749).GuildInviteExtendedType.EVENT === guildInviteExtendedType) {
+                return tmp29(13240).createGuildScheduledEventInviteEmbed(invite, theme);
+              } else if (tmp29(7749).GuildInviteExtendedType.APPLICATION === guildInviteExtendedType) {
+                const obj2 = { inviteCode: invite.code, theme };
+                return tmp29(13242).createEmbeddedActivityInviteEmbed(obj2);
+              } else if (tmp29(7749).GuildInviteExtendedType.PROFILE === guildInviteExtendedType) {
+                return tmp29(13244).createGuildProfileInvite(invite, theme);
+              } else if (tmp29(7749).GuildInviteExtendedType.VOICE_CHANNEL === guildInviteExtendedType) {
                 const guild = invite.guild;
-                id = undefined;
+                let id1;
                 if (guild != null) {
-                  id = guild.id;
+                  id1 = guild.id;
                 }
-                if (null != id) {
-                  obj = { guildId: null, location: "mobile_invite_embed" };
-                  obj[0] = id;
-                  if (tmp29Result5.getVoiceChannelListInviteExperiment(obj).enabled) {
-                    const voiceChannelListInviteEmbed = tmp29(11312).createVoiceChannelListInviteEmbed(invite, closure_2);
+                if (null != id1) {
+                  const obj3 = { guildId: id1, location: "mobile_invite_embed" };
+                  if (tmp29Result15.getVoiceChannelListInviteExperiment(obj3).enabled) {
+                    const voiceChannelListInviteEmbed = tmp29(11339).createVoiceChannelListInviteEmbed(invite, theme);
                     if (null != voiceChannelListInviteEmbed) {
                       return voiceChannelListInviteEmbed;
                     }
-                    const tmp29Result6 = tmp29(11312);
+                    const tmp29Result16 = tmp29(11339);
                   }
-                  tmp29Result5 = tmp29(11311);
+                  tmp29Result15 = tmp29(11338);
                 }
-                return tmp29(13213).createGuildInvite(invite, tmp28, closure_2);
+                return tmp29(13236).createGuildInvite(invite, tmp28, theme);
               } else {
-                return tmp29(13213).createGuildInvite(invite, tmp28, closure_2);
+                return tmp29(13236).createGuildInvite(invite, tmp28, theme);
               }
-              const tmp29Result1 = tmp29(7735);
+              const tmp29Result11 = tmp29(7749);
             }
-            const obj18 = InviteTypes2;
           }
         }
       }
-      return createResolvingGuildInvite.createExpiredGuildInvite(closure_0, id === tmp4, closure_2);
+      return invite_GuildInvite.createExpiredGuildInvite(author, id === tmp4, theme);
     }
   }
+  obj = InviteStore;
 };

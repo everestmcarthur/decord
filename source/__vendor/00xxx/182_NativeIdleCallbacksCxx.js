@@ -4,7 +4,7 @@
 // Dependencies: [30]
 
 // Module 182 (NativeIdleCallbacksCxx)
-import getAll from "get" /* 30 */;
+import get from "module_30" /* 30 */;
 
 
-export default getAll.getEnforcing("NativeIdleCallbacksCxx");
+export default get.getEnforcing("NativeIdleCallbacksCxx");

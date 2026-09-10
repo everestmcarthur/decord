@@ -1,14 +1,13 @@
-// Module ID: 17491
-// Function ID: 17492
-// Name: prototype
-// Dependencies: [7118, 17492, 2]
+// Module ID: 17522
+// Function ID: 17523
+// Name: StaffMemberPreloaderManager
+// Dependencies: [7132, 17523, 2]
 
-// Module 17491 (prototype)
-import initializeDefault from "initialize" /* 7118 */;
+// Module 17522 (StaffMemberPreloaderManager)
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-let require = arg1;
-initializeDefault;
-let prototype = function StaffMemberPreloaderManager() {
+let require = fn;
+const prototype = function StaffMemberPreloaderManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   applyArgumentsResult.actions = {
@@ -17,13 +16,14 @@ let prototype = function StaffMemberPreloaderManager() {
     }
   };
   applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
-    applyArgumentsResult(table[1]).preloadStaffMembers();
+    applyArgumentsResult(dependencyMap[1]).preloadStaffMembers();
   };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
-const result = require("set").fileFinishedImporting("modules/staff/StaffMemberPreloaderManager.tsx");
+const prototype1 = new prototype();
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/staff/StaffMemberPreloaderManager.tsx");
 
-export default prototype;
+export default prototype1;

@@ -1,74 +1,65 @@
-// Module ID: 11587
-// Function ID: 11588
+// Module ID: 11613
+// Function ID: 11614
 // Name: UserProfileSection
-// Dependencies: [19, 17, 21, 4560, 576, 4271, 7184, 4409, 8604, 4556, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 4284, 7198, 4423, 8632, 4570, 2]
 // Exports: default
 
-// Module 11587 (UserProfileSection)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import ManaContext from "ManaContext" /* 4271 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 7184 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11613 (UserProfileSection)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 4284 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 7198 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { titleContainer: { flexDirection: "row", marginBottom: 12, justifyContent: "space-between" }, title: { flexDirection: "row" }, section: { marginHorizontal: 12, marginTop: 12, marginBottom: 8 }, contentContainer: null };
-createCacheKey = { borderWidth: 1, borderRadius: ThemesDefault.radii.sm, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[3] = createCacheKey;
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileSection.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4574);
+const obj2 = { titleContainer: { flexDirection: "row", marginBottom: 12, justifyContent: "space-between" }, title: { flexDirection: "row" }, section: { marginHorizontal: 12, marginTop: 12, marginBottom: 8 }, contentContainer: { borderWidth: 1, borderRadius: nativeDefault.radii.sm, borderColor: nativeDefault.colors.BORDER_SUBTLE } };
+let closure_5 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileSection.tsx");
 
 export default function UserProfileSection(title) {
   title = title.title;
   ({ headerIcon, trailingIcon, showContainer, children, style } = title);
-  const merged = Object.assign(title, Object.create(null));
-  const tmp2 = callback2();
-  let obj = ManaContext;
-  const themeContext = obj.useThemeContext();
+  const merged = Object.assign(title, Object.assign({ title: 0, headerIcon: 0, trailingIcon: 0, showContainer: 0, children: 0, style: 0 }));
+  const tmp2 = closure_5();
+  const themeContext = native.useThemeContext();
   ({ theme, primaryColor } = themeContext);
-  obj1 = useProfileThemeValues;
-  const profileThemeValues = obj1.useProfileThemeValues(theme);
-  obj = {};
+  const profileThemeValues = useProfileThemeValues.useProfileThemeValues(theme);
+  const obj3 = {};
   const merged1 = Object.assign(tmp2.contentContainer);
   if (null != primaryColor) {
     if (null != profileThemeValues) {
-      let borderColor = tmp3(4409).hexOpacityToRgba(tmp3(8604).DIVIDER_COLORS[theme], profileThemeValues.dividerOpacity);
-      const tmp3Result = tmp3(4409);
+      let borderColor = tmp3(4423).hexOpacityToRgba(tmp3(8632).DIVIDER_COLORS[theme], profileThemeValues.dividerOpacity);
+      const tmp3Result = tmp3(4423);
     }
-    obj.borderColor = borderColor;
-    obj = { style: null };
+    obj3.borderColor = borderColor;
+    const obj4 = { style: null };
     const items = [tmp2.section, style];
-    obj[0] = items;
+    obj4.style = items;
     const merged2 = Object.assign(merged);
     let tmp8Result = null;
     if (null != title) {
-      obj1 = { style: null, children: null };
-      obj1[0] = tmp2.titleContainer;
-      const obj2 = { style: null, children: null };
-      obj2[0] = tmp2.title;
-      const obj3 = { variant: "eyebrow", accessibilityRole: "header", children: null };
-      obj3[2] = title;
-      const items1 = [callback(tmp3(4556).Text, obj3), headerIcon];
-      obj2[1] = items1;
-      const items2 = [tmp8(tmp9, obj2), trailingIcon];
-      obj1[1] = items2;
-      tmp8Result = tmp8(tmp9, obj1);
+      const obj5 = { style: tmp2.titleContainer, children: null };
+      const obj6 = { style: tmp2.title, children: null };
+      const obj7 = { variant: "eyebrow", accessibilityRole: "header", children: title };
+      const items1 = [React3(tmp3(4570).Text, obj7), headerIcon];
+      obj6.children = items1;
+      const items2 = [tmp8(tmp9, obj6), trailingIcon];
+      obj5.children = items2;
+      tmp8Result = tmp8(tmp9, obj5);
     }
     const items3 = [tmp8Result, ];
     let tmp16 = null;
     if (showContainer) {
-      tmp16 = obj;
+      tmp16 = obj3;
     }
-    const obj4 = { style: null, children: null };
-    obj4[0] = tmp16;
-    obj4[1] = children;
-    items3[1] = callback(View, obj4);
-    obj.children = items3;
-    return closure_4(View, obj);
+    const obj8 = { style: tmp16, children };
+    items3[1] = React3(View, obj8);
+    obj4.children = items3;
+    return React4(View, obj4);
   }
   borderColor = tmp2.contentContainer.borderColor;
 };

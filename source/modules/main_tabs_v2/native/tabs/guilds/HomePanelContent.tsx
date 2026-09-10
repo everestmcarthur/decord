@@ -1,82 +1,93 @@
-// Module ID: 16284
-// Function ID: 16285
-// Name: HomeDrawerPanelContent
-// Dependencies: [19, 17, 16026, 1074, 21, 4560, 16025, 16285, 16030, 7874, 4262, 576, 4296, 2]
+// Module ID: 16314
+// Function ID: 16315
+// Name: HomePanelContent
+// Dependencies: [19, 17, 16056, 1074, 21, 4574, 16055, 16315, 16060, 7888, 4275, 576, 4310, 1116, 4985, 2]
 
-// Module 16284 (HomeDrawerPanelContent)
-import context from "context" /* 16025 */;
-import _modDef16285 from "module_16285" /* 16285 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "withEqualityFn" /* 16026 */;
-import { DM_WIDTH } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 16314 (HomePanelContent)
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 4985 */;
+import GuildsBarDefault from "GuildsBar" /* 16315 */;
+import noop from "module_19" /* 19 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 16056 */;
 
-require = arg1;
+require = fn;
 function HomeDrawerPanelContent() {
-  const tmp = callback();
-  let obj = panelTranslateX(isClientThemeOrCustomThemeActive[8]);
-  const drawerOpen = obj.useDrawerOpen();
-  obj1 = panelTranslateX(isClientThemeOrCustomThemeActive[6]);
-  const homeDrawerState = obj1.useHomeDrawerState();
-  panelTranslateX = homeDrawerState.panelTranslateX;
-  const tmp5 = token1((maxX) => maxX.maxX);
-  importDefault = tmp5;
-  isClientThemeOrCustomThemeActive = panelTranslateX(isClientThemeOrCustomThemeActive[9]).useIsClientThemeOrCustomThemeActive();
-  const obj3 = panelTranslateX(isClientThemeOrCustomThemeActive[9]);
-  const tmp2 = isClientThemeOrCustomThemeActive;
-  const token = panelTranslateX(isClientThemeOrCustomThemeActive[10]).useToken(importDefault(isClientThemeOrCustomThemeActive[11]).colors.BACKGROUND_BASE_LOWEST);
-  const obj4 = panelTranslateX(isClientThemeOrCustomThemeActive[10]);
-  const tmp7 = importDefault;
-  token1 = panelTranslateX(isClientThemeOrCustomThemeActive[10]).useToken(importDefault(isClientThemeOrCustomThemeActive[11]).colors.PANEL_BG);
-  const obj5 = panelTranslateX(isClientThemeOrCustomThemeActive[10]);
-  const fn = function t() {
+  const tmp = closure_8();
+  const drawerOpen = ref(16060).useDrawerOpen();
+  ref = isClientThemeOrCustomThemeActive.useRef(null);
+  let obj = ref(16060);
+  const homeDrawerState = ref(16055).useHomeDrawerState();
+  const panelTranslateX = homeDrawerState.panelTranslateX;
+  const tmp6 = token1((maxX) => maxX.maxX);
+  dependencyMap = tmp6;
+  let obj2 = ref(16055);
+  isClientThemeOrCustomThemeActive = ref(7888).useIsClientThemeOrCustomThemeActive();
+  const obj3 = ref(7888);
+  const token = ref(4275).useToken(panelTranslateX(576).colors.BACKGROUND_BASE_LOWEST);
+  const obj4 = ref(4275);
+  const tmp8 = panelTranslateX;
+  token1 = ref(4275).useToken(panelTranslateX(576).colors.PANEL_BG);
+  const obj5 = ref(4275);
+  const fn = function n() {
     if (!isClientThemeOrCustomThemeActive) {
-      if (closure_1 > 0) {
+      if (closure_2 > 0) {
         let obj = { backgroundColor: null };
         const items = [0, tmp];
         const items1 = [token, token1];
-        obj[0] = panelTranslateX(isClientThemeOrCustomThemeActive[12]).interpolateColor(panelTranslateX.get(), items, items1);
-        const obj2 = panelTranslateX(isClientThemeOrCustomThemeActive[12]);
+        obj.backgroundColor = ReanimatedRexport.interpolateColor(panelTranslateX.get(), items, items1);
       }
       return obj;
     }
     obj = { backgroundColor: "transparent" };
   };
-  obj = { isGradientTheme: isClientThemeOrCustomThemeActive, maxX: tmp5, interpolateColor: panelTranslateX(isClientThemeOrCustomThemeActive[12]).interpolateColor, panelTranslateX, baseLowest: token, panelBg: token1 };
-  fn.__closure = obj;
+  const obj6 = ref(4310);
+  fn.__closure = { isGradientTheme: isClientThemeOrCustomThemeActive, maxX: tmp6, interpolateColor: ref(4310).interpolateColor, panelTranslateX, baseLowest: token, panelBg: token1 };
   fn.__workletHash = 10232644858711;
-  fn.__initData = closure_8;
-  const animatedStyle = panelTranslateX(isClientThemeOrCustomThemeActive[12]).useAnimatedStyle(fn);
-  obj = { style: items, children: null };
-  items = [tmp.container, animatedStyle];
-  obj1 = { style: items1, children: tmp11(tmp7(tmp2[7]), { enableHome: true }) };
-  items1 = [drawerOpen ? tmp.guildsListContainerGestured : tmp.guildLisetContainerDefault, homeDrawerState.guildsBarDrawerStyle];
-  obj[1] = jsx(importDefault(isClientThemeOrCustomThemeActive[12]).View, { style: items1, children: tmp11(tmp7(tmp2[7]), { enableHome: true }) });
-  return jsx(importDefault(isClientThemeOrCustomThemeActive[12]).View, { style: items, children: null });
+  fn.__initData = __initData;
+  const animatedStyle = obj6.useAnimatedStyle(fn);
+  ref = isClientThemeOrCustomThemeActive.useRef(false);
+  let items = [drawerOpen];
+  const effect = isClientThemeOrCustomThemeActive.useEffect(() => {
+    if (obj.isIOS()) {
+      if (ref.current) {
+        const obj2 = { ref, delay: 100 };
+        const result = setAccessibilityFocus.setAccessibilityFocus(obj2);
+        const tmpResult = setAccessibilityFocus;
+      } else {
+        tmp3.current = true;
+      }
+    }
+  }, items);
+  const obj8 = { style: null, children: null };
+  let items1 = [tmp.container, animatedStyle];
+  obj8.style = items1;
+  const obj9 = { ref, style: null, children: jsx(tmp8(16315), { enableHome: true }) };
+  const items2 = [drawerOpen ? tmp.guildsListContainerGestured : tmp.guildLisetContainerDefault, homeDrawerState.guildsBarDrawerStyle];
+  obj9.style = items2;
+  obj8.children = jsx(panelTranslateX(4310).View, { ref, style: null, children: jsx(tmp8(16315), { enableHome: true }) });
+  return jsx(panelTranslateX(4310).View, { style: null, children: null });
 }
-let closure_7 = createCacheKey.createStyles((width) => {
-  const guildLisetContainerDefault = { flex: 1, width };
-  return { container: { flex: 1 }, guildsListContainerGestured: { flex: 1 }, guildLisetContainerDefault };
+const View = fn(17).View;
+const DM_WIDTH = fn(1074).DM_WIDTH;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_8 = createStyles.createStyles((width) => {
+  const obj = { container: { flex: 1 }, guildsListContainerGestured: { flex: 1 }, guildLisetContainerDefault: { flex: 1, width } };
+  return obj;
 });
-let closure_8 = { code: "function HomePanelContentTsx1(){const{isGradientTheme,maxX,interpolateColor,panelTranslateX,baseLowest,panelBg}=this.__closure;if(isGradientTheme||maxX<=0){return{backgroundColor:'transparent'};}return{backgroundColor:interpolateColor(panelTranslateX.get(),[0,maxX],[baseLowest,panelBg])};}" };
-const memoResult = importAllResult.memo(() => {
-  const tmp = callback(DM_WIDTH);
-  let obj = context;
+const __initData = { code: "function HomePanelContentTsx1(){const{isGradientTheme,maxX,interpolateColor,panelTranslateX,baseLowest,panelBg}=this.__closure;if(isGradientTheme||maxX<=0){return{backgroundColor:'transparent'};}return{backgroundColor:interpolateColor(panelTranslateX.get(),[0,maxX],[baseLowest,panelBg])};}" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/HomePanelContent.tsx");
+
+export const HomePanelContent = noop.memo(() => {
+  const tmp = closure_8(DM_WIDTH);
   if (obj.useIsHomeDrawerEnabled()) {
     let tmp3Result = tmp3(HomeDrawerPanelContent, {});
   } else {
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
-    obj = { style: null, children: null };
-    obj[0] = tmp.guildLisetContainerDefault;
-    obj[1] = tmp3(_modDef16285, {});
-    obj[1] = tmp3(View, obj);
-    tmp3Result = tmp3(View, obj);
+    const obj2 = { style: tmp.container, children: null };
+    const obj3 = { style: tmp.guildLisetContainerDefault, children: tmp3(GuildsBarDefault, {}) };
+    obj2.children = tmp3(View, obj3);
+    tmp3Result = tmp3(View, obj2);
   }
   return tmp3Result;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/HomePanelContent.tsx");
-
-export const HomePanelContent = memoResult;

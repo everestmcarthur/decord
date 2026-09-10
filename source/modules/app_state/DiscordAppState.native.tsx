@@ -1,23 +1,25 @@
-// Module ID: 11305
-// Function ID: 11306
+// Module ID: 11332
+// Function ID: 11333
+// Name: DiscordAppState
 // Dependencies: [1895, 504, 2]
 
-// Module 11305
+// Module 11332 (DiscordAppState)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "getState" /* 1895 */;
+import AppStateStore from "AppStateStore" /* 1895 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_state/DiscordAppState.native.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_state/DiscordAppState.native.tsx");
 
 export default {
-  canUIRequestGatewaySocket(arg0) {
-    return "active" === store.getState();
+  canUIRequestGatewaySocket() {
+    return "active" === AppStateStore.getState();
   },
   getState() {
-    return store.getState();
+    return AppStateStore.getState();
   },
   useCanUIRequestGatewaySocket() {
-    const items = [closure_2];
+    const items = [AppStateStore];
     return initialize.useStateFromStores(items, () => "active" === state.getState());
   }
 };

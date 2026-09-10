@@ -1,19 +1,19 @@
-// Module ID: 16027
-// Function ID: 16028
-// Name: HOME_DRAWER_SETTLE_TIMING
-// Dependencies: [4296, 2]
+// Module ID: 16057
+// Function ID: 16058
+// Name: HomeDrawerAnimations
+// Dependencies: [4310, 2]
 
-// Module 16027 (HOME_DRAWER_SETTLE_TIMING)
-import set from "set" /* 2 */;
-import _mod4296 from "module_4296" /* 4296 */;
+// Module 16057 (HomeDrawerAnimations)
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import size from "module_2" /* 2 */;
 
-let obj = { duration: 280, easing: null };
-const Easing = _mod4296.Easing;
-obj[1] = Easing.out(_mod4296.Easing.cubic);
-obj = { duration: 180, easing: null };
-const Easing2 = _mod4296.Easing;
-obj[1] = Easing2.out(_mod4296.Easing.cubic);
-const result = set.fileFinishedImporting("modules/home_drawer/native/HomeDrawerAnimations.tsx");
+const obj = { duration: 280, easing: null };
+const Easing = ReanimatedRexport.Easing;
+obj.easing = Easing.out(ReanimatedRexport.Easing.cubic);
+const obj2 = { duration: 180, easing: null };
+const Easing2 = ReanimatedRexport.Easing;
+obj2.easing = Easing2.out(ReanimatedRexport.Easing.cubic);
+const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerAnimations.tsx");
 
 export const HOME_DRAWER_SETTLE_TIMING = obj;
-export const HOME_DRAWER_SNAP_TIMING = obj;
+export const HOME_DRAWER_SNAP_TIMING = obj2;

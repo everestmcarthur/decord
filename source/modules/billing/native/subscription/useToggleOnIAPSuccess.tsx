@@ -1,24 +1,28 @@
-// Module ID: 10812
-// Function ID: 10813
+// Module ID: 10839
+// Function ID: 10840
 // Name: useToggleOnIAPSuccess
 // Dependencies: [32, 19, 573, 2]
 // Exports: default
 
-// Module 10812 (useToggleOnIAPSuccess)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+// Module 10839 (useToggleOnIAPSuccess)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/billing/native/subscription/useToggleOnIAPSuccess.tsx");
+const require = globalThis.__r;
+
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/billing/native/subscription/useToggleOnIAPSuccess.tsx");
 
 export default function useToggleOnIAPSuccess() {
   function toggleFlip() {
-    callback((arg0) => !arg0);
+    importDefault((arg0) => !arg0);
   }
-  [tmp2, importDefault] = callback(React.useState(false), 2);
-  const effect = React.useEffect(() => {
-    const subscription = closure_1_0(toggleFlip[2]).subscribe("IAP_PURCHASE_PRODUCT_SUCCESS", toggleFlip);
+  [tmp2, importDefault] = noop.useState(false);
+  const effect = noop.useEffect(() => {
+    const subscription = DispatcherDefault.subscribe("IAP_PURCHASE_PRODUCT_SUCCESS", toggleFlip);
     return () => {
-      closure_1_0(closure_1_1[2]).unsubscribe("IAP_PURCHASE_PRODUCT_SUCCESS", closure_1);
+      require("Dispatcher").unsubscribe("IAP_PURCHASE_PRODUCT_SUCCESS", closure_1_1);
     };
   }, []);
   return tmp2;

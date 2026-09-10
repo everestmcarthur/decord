@@ -1,21 +1,22 @@
-// Module ID: 12938
-// Function ID: 12939
-// Dependencies: [4544, 12, 12747, 2]
+// Module ID: 12964
+// Function ID: 12965
+// Name: HubUtils
+// Dependencies: [4558, 12, 12773, 2]
 
-// Module 12938
-import _modDef12747 from "module_12747" /* 12747 */;
-import closure_2 from "updateInvite" /* 4544 */;
-import importDefaultResult from "apply" /* 12 */;
+// Module 12964 (HubUtils)
+import HubEmailConnectionModalActionCreatorsDefault from "HubEmailConnectionModalActionCreators" /* 12773 */;
+import InviteStore from "InviteStore" /* 4558 */;
+import apply from "module_12" /* 12 */;
 
-let closure_3 = importDefaultResult.throttle((code) => {
-  invite = invite.getInvite(code.code);
-  _modDef12747.open({ invite });
+let closure_3 = apply.throttle((code) => {
+  const invite = InviteStore.getInvite(code.code);
+  HubEmailConnectionModalActionCreatorsDefault.open({ invite });
 }, 1000, { trailing: false });
-const obj = {
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/hub/HubUtils.native.tsx");
+
+export default {
   onOpenHubInvite(invite) {
-    callback(invite);
+    closure_3(invite);
   }
 };
-const result = require("set").fileFinishedImporting("modules/hub/HubUtils.native.tsx");
-
-export default obj;

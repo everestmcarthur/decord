@@ -1,17 +1,17 @@
-// Module ID: 6355
-// Function ID: 6356
+// Module ID: 6369
+// Function ID: 6370
 // Name: PottedPlantIllocon
-// Dependencies: [21, 5587, 6356, 2]
+// Dependencies: [21, 5601, 6370, 2]
 // Exports: PottedPlantIllocon
 
-// Module 6355 (PottedPlantIllocon)
-import set from "set" /* 2 */;
+// Module 6369 (PottedPlantIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 6356 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6370 from "module_6370" /* 6370 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/PottedPlantIllocon.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/PottedPlantIllocon.native.tsx");
 
 export const PottedPlantIllocon = function PottedPlantIllocon(size) {
   let num = size.size;
@@ -19,13 +19,13 @@ export const PottedPlantIllocon = function PottedPlantIllocon(size) {
   if (num === undefined) {
     num = 64;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef6370 };
+  obj.source = obj2;
   const items = [{ width: num, height: num }];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { uri: metadataDefault });
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

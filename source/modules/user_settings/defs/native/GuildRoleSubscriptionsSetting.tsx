@@ -1,38 +1,38 @@
-// Module ID: 15207
-// Function ID: 15208
-// Name: route
-// Dependencies: [7975, 1074, 15208, 15209, 11473, 1114, 15210, 15212, 2]
+// Module ID: 15236
+// Function ID: 15237
+// Name: GuildRoleSubscriptionsSetting
+// Dependencies: [7989, 1074, 15237, 15238, 11500, 1114, 15239, 15241, 2]
 
-// Module 15207 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS" /* 15208 */;
-import useUserRoleSubscriptionRelationshipDefault from "useUserRoleSubscriptionRelationship" /* 15209 */;
-import TicketIcon from "TicketIcon" /* 15210 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15236 (GuildRoleSubscriptionsSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import GuildRoleSubscriptionsConstants from "GuildRoleSubscriptionsConstants" /* 15237 */;
+import useUserRoleSubscriptionRelationshipDefault from "useUserRoleSubscriptionRelationship" /* 15238 */;
+import TicketIcon from "TicketIcon" /* 15239 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-let closure_3 = MAX_SUBSCRIPTION_TIERS.UserGuildRoleSubscriptionRelationship;
-obj = {
+const require = globalThis.__r;
+
+const constants = GuildRoleSubscriptionsConstants.UserGuildRoleSubscriptionRelationship;
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.trSpHX);
+    const intl = util.intl;
+    return intl.string(util.t.trSpHX);
   },
-  parent: MobileUserSettings.MobileUserSettings.PREMIUM,
+  parent: SettingsConstants.MobileUserSettings.PREMIUM,
   IconComponent: TicketIcon.TicketIcon,
   usePredicate: function useHasGuildRoleSubscriptionsSetting() {
     return useUserRoleSubscriptionRelationshipDefault() === constants.SUBSCRIBED;
   },
-  screen: obj
-};
-obj = {
-  route: ME.UserSettingsSections.GUILD_ROLE_SUBSCRIPTIONS,
-  getComponent() {
-    return require(15212) /* GuildRoleSubscriptionsSectionHeader */.default;
+  screen: {
+    route: Constants.UserSettingsSections.GUILD_ROLE_SUBSCRIPTIONS,
+    getComponent() {
+      return require("UserSettingsGuildRoleSubscriptions").default;
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/GuildRoleSubscriptionsSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/GuildRoleSubscriptionsSetting.tsx");
 
 export default route;

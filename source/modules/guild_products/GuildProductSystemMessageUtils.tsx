@@ -1,22 +1,22 @@
-// Module ID: 7994
-// Function ID: 7995
-// Name: getGuildProductPurchaseSystemMessageContentMobile
+// Module ID: 8008
+// Function ID: 8009
+// Name: GuildProductSystemMessageUtils
 // Dependencies: [1074, 1114, 2]
 // Exports: getGuildProductPurchaseSystemMessageContentMobile
 
-// Module 7994 (getGuildProductPurchaseSystemMessageContentMobile)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 8008 (GuildProductSystemMessageUtils)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import size from "module_2" /* 2 */;
 
-const NOOP = ME.NOOP;
-const result = set.fileFinishedImporting("modules/guild_products/GuildProductSystemMessageUtils.tsx");
+const NOOP = Constants.NOOP;
+const result = size.fileFinishedImporting("modules/guild_products/GuildProductSystemMessageUtils.tsx");
 
 export const getGuildProductPurchaseSystemMessageContentMobile = function getGuildProductPurchaseSystemMessageContentMobile(username) {
   let usernameHook = username.usernameOnClickHandler;
   if (usernameHook === undefined) {
     usernameHook = NOOP;
   }
-  const intl = getSystemLocale.intl;
-  return intl.formatToParts(getSystemLocale.t["w4iXs+"], { username: username.username, usernameHook, productName: username.productName });
+  const intl = util.intl;
+  return intl.formatToParts(util.t["w4iXs+"], { username: username.username, usernameHook, productName: username.productName });
 };

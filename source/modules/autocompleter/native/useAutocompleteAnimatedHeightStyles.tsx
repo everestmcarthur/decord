@@ -1,31 +1,35 @@
-// Module ID: 12397
-// Function ID: 12398
+// Module ID: 12423
+// Function ID: 12424
 // Name: useAutocompleteAnimatedHeightStyles
-// Dependencies: [4426, 4296, 4561, 4564, 2]
+// Dependencies: [4440, 4310, 4575, 4578, 2]
 // Exports: default
 
-// Module 12397 (useAutocompleteAnimatedHeightStyles)
-import set from "set" /* 2 */;
+// Module 12423 (useAutocompleteAnimatedHeightStyles)
+import timing from "timing" /* 4575 */;
+import timingPresets from "timingPresets" /* 4578 */;
+import size from "module_2" /* 2 */;
 
-let closure_2 = { code: "function useAutocompleteAnimatedHeightStylesTsx1(){const{withTiming,height,timingStandard,isFrozenSharedValue}=this.__closure;return{height:withTiming(height,timingStandard),display:!isFrozenSharedValue.get()?'flex':'none'};}" };
-const result = set.fileFinishedImporting("modules/autocompleter/native/useAutocompleteAnimatedHeightStyles.tsx");
+const require = globalThis.__r;
 
-export default function useAutocompleteAnimatedHeightStyles(height) {
-  const _require = height;
-  let obj = _require(isScreenIndexFrozenSharedValue[0]);
-  isScreenIndexFrozenSharedValue = obj.useIsScreenIndexFrozenSharedValue(arg1);
+const __initData = { code: "function useAutocompleteAnimatedHeightStylesTsx1(){const{withTiming,height,timingStandard,isFrozenSharedValue}=this.__closure;return{height:withTiming(height,timingStandard),display:!isFrozenSharedValue.get()?'flex':'none'};}" };
+const result = size.fileFinishedImporting("modules/autocompleter/native/useAutocompleteAnimatedHeightStyles.tsx");
+
+export default function useAutocompleteAnimatedHeightStyles(height, arg1) {
+  _require = height;
+  isScreenIndexFrozenSharedValue = require("ScreenIndexFrozen").useIsScreenIndexFrozenSharedValue(arg1);
+  let obj = require("ScreenIndexFrozen");
   const fn = function s() {
-    const obj = { height: height(isScreenIndexFrozenSharedValue[2]).withTiming(height, height(isScreenIndexFrozenSharedValue[3]).timingStandard), display: null };
+    const obj = { height: timing.withTiming(closure_0, timingPresets.timingStandard), display: null };
     let str = "flex";
     if (isScreenIndexFrozenSharedValue.get()) {
       str = "none";
     }
-    obj[1] = str;
+    obj.display = str;
     return obj;
   };
-  obj = { withTiming: _require(isScreenIndexFrozenSharedValue[2]).withTiming, height, timingStandard: _require(isScreenIndexFrozenSharedValue[3]).timingStandard, isFrozenSharedValue: isScreenIndexFrozenSharedValue };
-  fn.__closure = obj;
+  const obj2 = require("ReanimatedRexport");
+  fn.__closure = { withTiming: require("timing").withTiming, height, timingStandard: require("timingPresets").timingStandard, isFrozenSharedValue: isScreenIndexFrozenSharedValue };
   fn.__workletHash = 3862216441966;
-  fn.__initData = closure_2;
-  return _require(isScreenIndexFrozenSharedValue[1]).useAnimatedStyle(fn);
+  fn.__initData = __initData;
+  return obj2.useAnimatedStyle(fn);
 };

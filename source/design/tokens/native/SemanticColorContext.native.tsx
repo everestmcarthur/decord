@@ -1,55 +1,45 @@
-// Module ID: 4263
-// Function ID: 4264
-// Name: getSemanticColorContextFromThemeContext
-// Dependencies: [1091, 672, 4264, 4270, 4378, 2]
+// Module ID: 4276
+// Function ID: 4277
+// Name: SemanticColorContext
+// Dependencies: [1091, 672, 4277, 4283, 4392, 2]
 // Exports: getSemanticColorContextFromThemeContext
 
-// Module 4263 (getSemanticColorContextFromThemeContext)
-import set from "set" /* 2 */;
-import nDefault from "n" /* 672 */;
-import getGradientThemeFromFlags from "getGradientThemeFromFlags" /* 4270 */;
-import getGradientColorByPercentage from "getGradientColorByPercentage" /* 4378 */;
+// Module 4276 (SemanticColorContext)
+import _modDef672 from "module_672" /* 672 */;
+import getGradientThemeFromFlags from "getGradientThemeFromFlags" /* 4283 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4392 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("design/tokens/native/SemanticColorContext.native.tsx");
+const result = size.fileFinishedImporting("design/tokens/native/SemanticColorContext.native.tsx");
 
 export const getSemanticColorContextFromThemeContext = function getSemanticColorContextFromThemeContext(themeContext) {
-  let obj = getGradientThemeFromFlags;
   const primaryColor = themeContext.primaryColor;
-  const gradientThemeFromFlags = obj.getGradientThemeFromFlags(themeContext);
+  const gradientThemeFromFlags = getGradientThemeFromFlags.getGradientThemeFromFlags(themeContext);
   ({ contrast, saturation, enabledExperiments } = themeContext);
-  obj1 = getGradientColorByPercentage;
-  let gradientThemeMetadata = obj1.getGradientThemeMetadata(gradientThemeFromFlags, themeContext.gradient);
+  let gradientThemeMetadata = client_themes_ClientThemesUtils.getGradientThemeMetadata(gradientThemeFromFlags, themeContext.gradient);
   if (null != primaryColor) {
     ({ primaryColor: primaryColor2, secondaryColor } = themeContext);
     let tmp9 = null;
     if (null != primaryColor2) {
-      let tmpResult = tmp(1091);
-      const int2hexResult = tmpResult.int2hex(primaryColor2);
-      tmpResult = tmp(1091);
+      const int2hexResult = tmp(1091).int2hex(primaryColor2);
+      const tmpResult = tmp(1091);
       if (secondaryColor == null) {
         secondaryColor = primaryColor2;
       }
-      const int2hexResult1 = tmpResult.int2hex(secondaryColor);
-      const obj5 = nDefault(int2hexResult);
-      const mixResult = nDefault(int2hexResult).mix(int2hexResult1, 0.5);
-      const hexResult = nDefault(int2hexResult).mix(int2hexResult1, 0.5).hex();
+      const int2hexResult1 = tmp(1091).int2hex(secondaryColor);
+      const tmpResult3 = tmp(1091);
+      const obj5 = _modDef672(int2hexResult);
+      const mixResult = _modDef672(int2hexResult).mix(int2hexResult1, 0.5);
+      const hexResult = _modDef672(int2hexResult).mix(int2hexResult1, 0.5).hex();
       let str = "dark";
-      if (tmpResult1.isThemeLight(tmp10)) {
+      if (tmpResult4.isThemeLight(tmp10)) {
         str = "light";
       }
-      obj = { theme: null, colors: null };
-      obj[0] = str;
-      obj = { "gradient.start": null, "gradient.mid": null, "gradient.end": null, "gradient.top": null, "gradient.bottom": null, "gradient.primary": null, "gradient.secondary": null };
-      obj[0] = int2hexResult;
-      obj[1] = hexResult;
-      obj[2] = int2hexResult1;
-      obj[3] = int2hexResult;
-      obj[4] = int2hexResult1;
-      obj[5] = int2hexResult;
-      obj[6] = int2hexResult1;
-      obj[1] = obj;
-      tmp9 = obj;
-      tmpResult1 = tmp(4264);
+      const obj3 = { theme: str, colors: null };
+      const obj4 = { "gradient.start": int2hexResult, "gradient.mid": hexResult, "gradient.end": int2hexResult1, "gradient.top": int2hexResult, "gradient.bottom": int2hexResult1, "gradient.primary": int2hexResult, "gradient.secondary": int2hexResult1 };
+      obj3.colors = obj4;
+      tmp9 = obj3;
+      tmpResult4 = tmp(4277);
     }
     gradientThemeMetadata = tmp9;
   }
@@ -58,13 +48,13 @@ export const getSemanticColorContextFromThemeContext = function getSemanticColor
   if (null == primaryColor) {
     num3 = contrast;
   }
-  obj1 = { contrast: num3, saturation: null, gradient: null, isProfileTheme: null, enabledExperiments: null };
+  const obj6 = { contrast: num3, saturation: null, gradient: null, isProfileTheme: null, enabledExperiments: null };
   if (null == primaryColor) {
     num2 = saturation;
   }
-  obj1[1] = num2;
-  obj1[2] = gradientThemeMetadata;
-  obj1[3] = null != primaryColor;
-  obj1[4] = enabledExperiments;
-  return obj1;
+  obj6.saturation = num2;
+  obj6.gradient = gradientThemeMetadata;
+  obj6.isProfileTheme = null != primaryColor;
+  obj6.enabledExperiments = enabledExperiments;
+  return obj6;
 };

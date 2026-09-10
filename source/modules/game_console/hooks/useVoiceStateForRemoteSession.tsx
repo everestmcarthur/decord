@@ -1,20 +1,21 @@
-// Module ID: 9220
-// Function ID: 9221
+// Module ID: 9247
+// Function ID: 9248
 // Name: useVoiceStateForRemoteSession
-// Dependencies: [502, 4579, 4577, 504, 2]
+// Dependencies: [502, 4593, 4591, 504, 2]
 // Exports: default
 
-// Module 9220 (useVoiceStateForRemoteSession)
+// Module 9247 (useVoiceStateForRemoteSession)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "fetchFingerprint" /* 502 */;
-import closure_3 from "updateVoiceState" /* 4579 */;
-import closure_4 from "set" /* 4577 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import VoiceStateStore from "VoiceStateStore" /* 4593 */;
+import GameConsoleStore from "GameConsoleStore" /* 4591 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/game_console/hooks/useVoiceStateForRemoteSession.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_console/hooks/useVoiceStateForRemoteSession.tsx");
 
 export default function useVoiceStateForRemoteSession() {
-  const items = [closure_2, closure_3, closure_4];
+  const items = [AuthenticationStore, VoiceStateStore, GameConsoleStore];
   return initialize.useStateFromStores(items, () => {
     id = id.getId();
     voiceStateForSession = voiceStateForSession.getVoiceStateForSession(id, remoteSessionId.getRemoteSessionId());

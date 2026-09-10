@@ -1,17 +1,17 @@
-// Module ID: 5929
-// Function ID: 5930
+// Module ID: 5943
+// Function ID: 5944
 // Name: DogIllocon
-// Dependencies: [21, 5587, 5930, 2]
+// Dependencies: [21, 5601, 5944, 2]
 // Exports: DogIllocon
 
-// Module 5929 (DogIllocon)
-import set from "set" /* 2 */;
+// Module 5943 (DogIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 5930 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5944 from "module_5944" /* 5944 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/DogIllocon.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/DogIllocon.native.tsx");
 
 export const DogIllocon = function DogIllocon(size) {
   let num = size.size;
@@ -19,13 +19,13 @@ export const DogIllocon = function DogIllocon(size) {
   if (num === undefined) {
     num = 64;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef5944 };
+  obj.source = obj2;
   const items = [{ width: num, height: num }];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { uri: metadataDefault });
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

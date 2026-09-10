@@ -1,28 +1,27 @@
-// Module ID: 17691
-// Function ID: 17692
+// Module ID: 17724
+// Function ID: 17725
 // Name: useIsMFAEnabled
-// Dependencies: [9069, 1371, 1074, 563, 2]
+// Dependencies: [9096, 1371, 1074, 563, 2]
 // Exports: useIsMFAEnabled
 
-// Module 17691 (useIsMFAEnabled)
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 563 */;
-import closure_2 from "handleFormInit" /* 9069 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
-import { MFALevels } from "ME" /* 1074 */;
+// Module 17724 (useIsMFAEnabled)
+import useStateFromStores from "useStateFromStores" /* 563 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9096 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useIsMFAEnabled.tsx");
+require = fn;
+const MFALevels = fn(1074).MFALevels;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useIsMFAEnabled.tsx");
 
 export const useIsMFAEnabled = function useIsMFAEnabled() {
-  let obj = defaultAreStatesEqual;
-  const items = [closure_3];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const items1 = [closure_2];
+  const items = [UserStore];
+  const stateFromStores = useStateFromStores.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const items1 = [GuildSettingsStore];
   let mfaEnabled;
-  const stateFromStores1 = defaultAreStatesEqual.useStateFromStores(items1, () => props.getProps().mfaLevel);
+  const stateFromStores1 = useStateFromStores.useStateFromStores(items1, () => props.getProps().mfaLevel);
   if (stateFromStores != null) {
     mfaEnabled = stateFromStores.mfaEnabled;
   }
-  obj = { isUserMFAEnabled: true === mfaEnabled, isModerationMFAEnabled: stateFromStores1 === MFALevels.ELEVATED };
-  return obj;
+  return { isUserMFAEnabled: true === mfaEnabled, isModerationMFAEnabled: stateFromStores1 === MFALevels.ELEVATED };
 };

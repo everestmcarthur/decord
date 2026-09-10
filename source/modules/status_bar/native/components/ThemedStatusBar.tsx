@@ -1,46 +1,42 @@
-// Module ID: 14580
-// Function ID: 14581
+// Module ID: 14605
+// Function ID: 14606
 // Name: ThemedStatusBar
-// Dependencies: [19, 1183, 502, 21, 504, 4417, 4411, 9684, 9486, 2]
+// Dependencies: [19, 1183, 502, 21, 504, 4431, 4425, 9711, 9513, 2]
 // Exports: default
 
-// Module 14580 (ThemedStatusBar)
-import noopAll from "noop" /* 19 */;
+// Module 14605 (ThemedStatusBar)
 import initialize from "initialize" /* 504 */;
-import coerceMainRoute from "coerceMainRoute" /* 4417 */;
-import componentDidMountDefault from "componentDidMount" /* 9486 */;
-import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 9684 */;
-import closure_3 from "handleThemeChange" /* 1183 */;
-import closure_4 from "fetchFingerprint" /* 502 */;
-import { jsx } from "jsxProd" /* 21 */;
+import shared from "shared" /* 4425 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4431 */;
+import StatusBarDefault from "StatusBar" /* 9513 */;
+import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 9711 */;
+import noop from "module_19" /* 19 */;
+import ThemeStore from "ThemeStore" /* 1183 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/status_bar/native/components/ThemedStatusBar.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/status_bar/native/components/ThemedStatusBar.tsx");
 
 export default function ThemedStatusBar() {
-  let obj = initialize;
-  const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => authenticated.isAuthenticated());
-  const isModalOpen = coerceMainRoute.useIsModalOpen();
-  const obj2 = coerceMainRoute;
-  const items1 = [closure_3];
-  const stateFromStores1 = initialize.useStateFromStores(items1, () => callback(table[6]).isThemeDark(theme.theme));
-  const obj3 = initialize;
+  const items = [AuthenticationStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => authenticated.isAuthenticated());
+  const isModalOpen = NavigationRouteUtils.useIsModalOpen();
+  const items1 = [ThemeStore];
+  const stateFromStores1 = initialize.useStateFromStores(items1, () => shared.isThemeDark(theme.theme));
   const globalStatusIndicatorState = useGlobalStatusIndicatorState.useGlobalStatusIndicatorState();
   if (!stateFromStores) {
-    obj = { barStyle: null };
-    obj[0] = "light-content";
-    return jsx(componentDidMountDefault, { barStyle: null });
+    const obj5 = { barStyle: "light-content" };
+    return jsx(StatusBarDefault, { barStyle: "light-content" });
   } else if (isModalOpen) {
     let str2 = "dark-content";
     if (stateFromStores1) {
       str2 = "light-content";
     }
-    let str = str2;
   } else {
     if (!globalStatusIndicatorState.isVisible) {
-      str = "dark-content";
+      let str = "dark-content";
     }
     str = "light-content";
   }

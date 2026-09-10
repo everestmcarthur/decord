@@ -1,34 +1,33 @@
-// Module ID: 12590
-// Function ID: 12591
+// Module ID: 12616
+// Function ID: 12617
 // Name: getBoostRowMessageText
-// Dependencies: [1114, 2428, 12585, 2]
+// Dependencies: [1114, 2428, 12611, 2]
 // Exports: default
 
-// Module 12590 (getBoostRowMessageText)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 2428 */;
-import BOOST_EXPIRING_DISPLAY_WINDOW_DAYS from "BOOST_EXPIRING_DISPLAY_WINDOW_DAYS" /* 12585 */;
+// Module 12616 (getBoostRowMessageText)
+import util from "util" /* 1114 */;
+import _modDef2428 from "module_2428" /* 2428 */;
+import getBoostLifecyclePhase from "getBoostLifecyclePhase" /* 12611 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/premium/powerups/utils/getBoostRowMessageText.tsx");
+const result = size.fileFinishedImporting("modules/premium/powerups/utils/getBoostRowMessageText.tsx");
 
 export default function getBoostRowMessageText(phase) {
   phase = phase.phase;
   if ("gave" === phase) {
-    const intl3 = getSystemLocale.intl;
-    return intl3.string(messagesProxyDefault.plwH8d);
+    const intl3 = util.intl;
+    return intl3.string(_modDef2428.plwH8d);
   } else if ("expiring" === phase) {
-    const intl2 = getSystemLocale.intl;
+    const intl2 = util.intl;
     let endsAt = phase.boost.endsAt;
     if (endsAt == null) {
       const _Date = Date;
-      endsAt = new Date(phase.sortKey + BOOST_EXPIRING_DISPLAY_WINDOW_DAYS.BOOST_EXPIRING_DISPLAY_WINDOW_MS);
+      endsAt = new Date(phase.sortKey + getBoostLifecyclePhase.BOOST_EXPIRING_DISPLAY_WINDOW_MS);
     }
-    const obj = { date: null };
-    obj[0] = endsAt;
-    return intl2.formatToPlainString(messagesProxyDefault.vct4l8, obj);
+    const obj = { date: endsAt };
+    return intl2.formatToPlainString(_modDef2428.vct4l8, obj);
   } else if ("expired" === phase) {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.hSXjlI);
+    const intl = util.intl;
+    return intl.string(_modDef2428.hSXjlI);
   }
 };

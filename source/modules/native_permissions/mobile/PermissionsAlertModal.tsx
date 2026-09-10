@@ -1,33 +1,33 @@
-// Module ID: 5149
-// Function ID: 5150
+// Module ID: 5163
+// Function ID: 5164
 // Name: PermissionsAlertModal
-// Dependencies: [19, 21, 4910, 4910, 1114, 2]
+// Dependencies: [19, 21, 4924, 4924, 1114, 2]
 // Exports: default
 
-// Module 5149 (PermissionsAlertModal)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4910 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 5163 (PermissionsAlertModal)
+import util from "util" /* 1114 */;
+import AlertModal from "AlertModal" /* 4924 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: obj1, jsxs: c3 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/native_permissions/mobile/PermissionsAlertModal.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c2, jsxs: c3 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/native_permissions/mobile/PermissionsAlertModal.tsx");
 
 export default function PermissionsAlertModal(arg0) {
   ({ title, body, onConfirm } = arg0);
-  let obj = { title, content: body, actions: null };
-  obj = { children: null };
-  obj = { onPress: onConfirm, text: null };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t.jVcuVY);
-  const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "confirm"), ];
-  obj1 = { variant: "secondary", text: null };
-  const intl2 = getSystemLocale.intl;
-  obj1[1] = intl2.string(getSystemLocale.t.cpT0Cq);
-  items[1] = callback(getAlertModalItemKey.AlertActionButton, obj1, "close");
-  obj[0] = items;
-  obj[2] = callback2(getAlertModalItemKey.AlertActions, obj);
-  return callback(getAlertModalItemKey.AlertModal, obj);
+  const obj = { title, content: body, actions: null };
+  const obj2 = { children: null };
+  const obj3 = { onPress: onConfirm, text: null };
+  const intl = util.intl;
+  obj3.text = intl.string(util.t.jVcuVY);
+  const items = [React2(AlertModal.AlertActionButton, obj3, "confirm"), ];
+  const obj4 = { variant: "secondary", text: null };
+  const intl2 = util.intl;
+  obj4.text = intl2.string(util.t.cpT0Cq);
+  items[1] = React2(AlertModal.AlertActionButton, obj4, "close");
+  obj2.children = items;
+  obj.actions = React3(AlertModal.AlertActions, obj2);
+  return React2(AlertModal.AlertModal, obj);
 };

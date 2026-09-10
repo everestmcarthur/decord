@@ -1,18 +1,18 @@
-// Module ID: 6985
-// Function ID: 6986
-// Name: SafetyScannedUploadSurface
-// Dependencies: [6986, 2]
+// Module ID: 6999
+// Function ID: 7000
+// Name: safetyScannedUploadSurfaces
+// Dependencies: [7000, 2]
 // Exports: getSafetyScannedUploadSurfaceForProfileCustomization
 
-// Module 6985 (SafetyScannedUploadSurface)
-import set from "set" /* 2 */;
-import UploadTypes2 from "UploadTypes" /* 6986 */;
+// Module 6999 (safetyScannedUploadSurfaces)
+import ImageCroppingConstants from "ImageCroppingConstants" /* 7000 */;
+import size from "module_2" /* 2 */;
 
-const UploadTypes = UploadTypes2.UploadTypes;
-const obj = { USER_DEFAULT_PROFILE_AVATAR: "USER_DEFAULT_PROFILE_AVATAR", USER_DEFAULT_PROFILE_BANNER: "USER_DEFAULT_PROFILE_BANNER", USER_GUILD_PROFILE_AVATAR: "USER_GUILD_PROFILE_AVATAR", USER_GUILD_PROFILE_BANNER: "USER_GUILD_PROFILE_BANNER", GUILD_ICON: "GUILD_ICON", GUILD_BANNER: "GUILD_BANNER", GUILD_DISCOVERY_SPLASH: "GUILD_DISCOVERY_SPLASH", GUILD_INVITE_SPLASH: "GUILD_INVITE_SPLASH", EMOJI: "EMOJI", STICKER: "STICKER" };
-const result = set.fileFinishedImporting("lib/uploader_inline/safetyScannedUploadSurfaces.tsx");
+const UploadTypes = ImageCroppingConstants.UploadTypes;
+const SafetyScannedUploadSurface = { USER_DEFAULT_PROFILE_AVATAR: "USER_DEFAULT_PROFILE_AVATAR", USER_DEFAULT_PROFILE_BANNER: "USER_DEFAULT_PROFILE_BANNER", USER_GUILD_PROFILE_AVATAR: "USER_GUILD_PROFILE_AVATAR", USER_GUILD_PROFILE_BANNER: "USER_GUILD_PROFILE_BANNER", GUILD_ICON: "GUILD_ICON", GUILD_BANNER: "GUILD_BANNER", GUILD_DISCOVERY_SPLASH: "GUILD_DISCOVERY_SPLASH", GUILD_INVITE_SPLASH: "GUILD_INVITE_SPLASH", EMOJI: "EMOJI", STICKER: "STICKER" };
+const result = size.fileFinishedImporting("lib/uploader_inline/safetyScannedUploadSurfaces.tsx");
 
-export const SafetyScannedUploadSurface = obj;
+export { SafetyScannedUploadSurface };
 export const getSafetyScannedUploadSurfaceForProfileCustomization = function getSafetyScannedUploadSurfaceForProfileCustomization(arg0, arg1) {
   if (UploadTypes.AVATAR === arg0) {
     if (null != arg1) {

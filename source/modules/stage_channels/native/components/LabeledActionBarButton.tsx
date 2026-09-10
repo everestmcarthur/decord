@@ -1,52 +1,46 @@
-// Module ID: 10015
-// Function ID: 10016
-// Name: IconPosition
-// Dependencies: [19, 17, 1085, 21, 4560, 5441, 576, 5123, 1178, 2]
+// Module ID: 10042
+// Function ID: 10043
+// Name: LabeledActionBarButton
+// Dependencies: [19, 17, 1085, 21, 4574, 5455, 576, 5137, 1178, 2]
 // Exports: LabeledActionButton
 
-// Module 10015 (IconPosition)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 1178 */;
-import PressableBase from "PressableBase" /* 5123 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10042 (LabeledActionBarButton)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import Pressables from "Pressables" /* 5137 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ Image: obj1, View: c3 } = get_ActivityIndicator);
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { buttonContainer: null, container: null, containerWithLabel: null, pressable: null, buttonContent: null, buttonText: null, rightTextMargin: null };
-createCacheKey = { minHeight: 56, minWidth: 56, alignItems: "center", justifyContent: "center", borderRadius: 28, backgroundColor: require("result").ACTION_BAR_BUTTON_BACKGROUND };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginHorizontal: 12 };
-createCacheKey[2] = { minWidth: "50%", maxWidth: "70%", flexShrink: 1 };
-createCacheKey[3] = { marginHorizontal: 12, borderRadius: 28 };
-createCacheKey[4] = { display: "flex", flexDirection: "row", alignItems: "center" };
-createCacheKey[5] = { marginStart: 8, fontSize: 14, color: ThemesDefault.colors.WHITE, fontFamily: require("sum").Fonts.PRIMARY_SEMIBOLD, paddingStart: 3 };
-createCacheKey[6] = { marginStart: 0, marginEnd: 8 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { LEFT: 0, [0]: "LEFT", RIGHT: 1, [1]: "RIGHT" };
-obj1 = { marginStart: 8, fontSize: 14, color: ThemesDefault.colors.WHITE, fontFamily: require("sum").Fonts.PRIMARY_SEMIBOLD, paddingStart: 3 };
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/LabeledActionBarButton.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: c2, View: c3 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { buttonContainer: { minHeight: 56, minWidth: 56, alignItems: "center", justifyContent: "center", borderRadius: 28, backgroundColor: fn(5455).ACTION_BAR_BUTTON_BACKGROUND }, container: { marginHorizontal: 12 }, containerWithLabel: { minWidth: "50%", maxWidth: "70%", flexShrink: 1 }, pressable: { marginHorizontal: 12, borderRadius: 28 }, buttonContent: { display: "flex", flexDirection: "row", alignItems: "center" }, buttonText: null, rightTextMargin: null };
+let obj3 = { minHeight: 56, minWidth: 56, alignItems: "center", justifyContent: "center", borderRadius: 28, backgroundColor: fn(5455).ACTION_BAR_BUTTON_BACKGROUND };
+obj2.buttonText = { marginStart: 8, fontSize: 14, color: nativeDefault.colors.WHITE, fontFamily: fn(1085).Fonts.PRIMARY_SEMIBOLD, paddingStart: 3 };
+obj2.rightTextMargin = { marginStart: 0, marginEnd: 8 };
+let closure_6 = createStyles.createStyles(obj2);
+let obj5 = { LEFT: 0, [0]: "LEFT", RIGHT: 1, [1]: "RIGHT" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/LabeledActionBarButton.tsx");
 
-export const IconPosition = obj2;
+export const IconPosition = obj5;
 export const LabeledActionButton = function LabeledActionButton(children) {
   ({ backgroundColor, imageStyle, source, disabled, label, iconPosition } = children);
   if (iconPosition === undefined) {
-    iconPosition = obj2.LEFT;
+    iconPosition = obj5.LEFT;
   }
-  const merged = Object.assign(children, Object.create(null));
-  const tmp3 = callback();
+  const merged = Object.assign(children, Object.assign({ backgroundColor: 0, imageStyle: 0, children: 0, source: 0, disabled: 0, label: 0, iconPosition: 0 }));
+  const tmp3 = closure_6();
   const items = [tmp3.container, ];
   let containerWithLabel = null;
   if (null != label) {
     containerWithLabel = tmp3.containerWithLabel;
   }
-  let obj = { style: items, children: null };
+  const obj = { style: items, children: null };
   items[1] = containerWithLabel;
-  obj = { accessibilityRole: "button", disabled, style: tmp3.pressable };
+  const obj2 = { accessibilityRole: "button", disabled, style: tmp3.pressable };
   const merged1 = Object.assign(merged);
   const items1 = [tmp3.buttonContainer, , ];
   let num = 1;
@@ -56,53 +50,48 @@ export const LabeledActionButton = function LabeledActionButton(children) {
   items1[1] = { opacity: num };
   let tmp11 = null;
   if (null != backgroundColor) {
-    obj = { backgroundColor: null };
-    obj[0] = backgroundColor;
-    tmp11 = obj;
+    const obj3 = { backgroundColor };
+    tmp11 = obj3;
   }
-  obj1 = { style: items1, children: null };
+  const obj4 = { style: items1, children: null };
   items1[2] = tmp11;
   const items2 = [tmp3.buttonContent, ];
-  obj2 = null;
+  obj5 = null;
   if (null != label) {
-    obj2 = { paddingHorizontal: 16 };
+    obj5 = { paddingHorizontal: 16 };
   }
-  const obj3 = { style: items2, children: null };
-  items2[1] = obj2;
-  let tmp4Result = iconPosition === obj2.LEFT;
+  const obj6 = { style: items2, children: null };
+  items2[1] = obj5;
+  let tmp4Result = iconPosition === obj5.LEFT;
   if (tmp4Result) {
-    const obj4 = { source: null, style: null };
-    obj4[0] = source;
-    obj4[1] = imageStyle;
-    tmp4Result = tmp4(closure_2, obj4);
+    const obj7 = { source, style: imageStyle };
+    tmp4Result = tmp4(React2, obj7);
   }
   const items3 = [tmp4Result, , ];
-  tmp4Result = null;
+  let tmp4Result3 = null;
   if (null != label) {
     const items4 = [tmp3.buttonText, ];
     let rightTextMargin = iconPosition === tmp12.RIGHT;
     if (rightTextMargin) {
       rightTextMargin = tmp3.rightTextMargin;
     }
-    const obj5 = { numberOfLines: 2, style: null, children: null };
+    const obj8 = { numberOfLines: 2, style: null, children: null };
     items4[1] = rightTextMargin;
-    obj5[1] = items4;
-    obj5[2] = label;
-    tmp4Result = tmp4(Button.LegacyText, obj5);
+    obj8.style = items4;
+    obj8.children = label;
+    tmp4Result3 = tmp4(native.LegacyText, obj8);
   }
-  items3[1] = tmp4Result;
-  let tmp4Result1 = iconPosition === tmp12.RIGHT;
-  if (tmp4Result1) {
-    const obj6 = { source: null, style: null };
-    obj6[0] = source;
-    obj6[1] = imageStyle;
-    tmp4Result1 = tmp4(closure_2, obj6);
+  items3[1] = tmp4Result3;
+  let tmp4Result4 = iconPosition === tmp12.RIGHT;
+  if (tmp4Result4) {
+    const obj9 = { source, style: imageStyle };
+    tmp4Result4 = tmp4(React2, obj9);
   }
-  items3[2] = tmp4Result1;
-  obj3[1] = items3;
-  const items5 = [closure_5(closure_3, obj3), children.children];
-  obj1[1] = items5;
-  obj.children = closure_5(closure_3, obj1);
-  obj[1] = closure_4(PressableBase.PressableOpacity, obj);
-  return closure_4(closure_3, obj);
+  items3[2] = tmp4Result4;
+  obj6.children = items3;
+  const items5 = [hasOwnProperty(React3, obj6), children.children];
+  obj4.children = items5;
+  obj2.children = hasOwnProperty(React3, obj4);
+  obj.children = React4(Pressables.PressableOpacity, obj2);
+  return React4(React3, obj);
 };

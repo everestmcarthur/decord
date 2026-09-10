@@ -1,70 +1,66 @@
-// Module ID: 8159
-// Function ID: 8160
+// Module ID: 8185
+// Function ID: 8186
 // Name: usePendingAvatarSettings
-// Dependencies: [19, 8160, 8163, 563, 8164, 8166, 8167, 2]
+// Dependencies: [19, 8186, 8189, 563, 8190, 8192, 8193, 2]
 // Exports: default
 
-// Module 8159 (usePendingAvatarSettings)
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import closure_4 from "handleFormOpen" /* 8160 */;
+// Module 8185 (usePendingAvatarSettings)
+import _mod19 from "module_19" /* 19 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8190 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8192 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8186 */;
+import size from "module_2" /* 2 */;
 
-noop.useCallback;
-let result = set.fileFinishedImporting("modules/user_profile/hooks/usePendingAvatarSettings.tsx");
+_mod19.useCallback;
+let result = size.fileFinishedImporting("modules/user_profile/hooks/usePendingAvatarSettings.tsx");
 
 export default function usePendingAvatarSettings(isTryItOut) {
   isTryItOut = isTryItOut.isTryItOut;
   const guildId = isTryItOut.guildId;
-  dependencyMap = undefined;
-  const tmp2 = guildId(8163)(isTryItOut.analyticsLocations);
+  const tmp2 = guildId(8189)(isTryItOut.analyticsLocations);
   dependencyMap = tmp2;
-  let obj = isTryItOut(563);
-  const items = [closure_4];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    let obj = closure_1_4;
+  const items = [UserProfileSettingsStore];
+  const stateFromStoresObject = isTryItOut(563).useStateFromStoresObject(items, () => {
     if (isTryItOut) {
       const tryItOutChanges = obj.getTryItOutChanges();
-      obj = { pendingAvatar: null, pendingAvatarDecoration: null, pendingErrors: null };
-      ({ tryItOutAvatar: obj3[0], tryItOutAvatarDecoration: obj3[1] } = tryItOutChanges);
-      obj[2] = closure_1_4.getErrors(guildId).avatarDecoration;
-      return obj;
+      const obj5 = { pendingAvatar: null, pendingAvatarDecoration: null, pendingErrors: null };
+      ({ tryItOutAvatar: obj3.pendingAvatar, tryItOutAvatarDecoration: obj3.pendingAvatarDecoration } = tryItOutChanges);
+      obj5.pendingErrors = UserProfileSettingsStore.getErrors(guildId).avatarDecoration;
+      return obj5;
     } else {
       const pendingChanges = obj.getPendingChanges(guildId);
-      obj = { pendingAvatar: null, pendingAvatarDecoration: null, pendingErrors: null };
-      ({ pendingAvatar: obj2[0], pendingAvatarDecoration: obj2[1] } = pendingChanges);
-      obj[2] = closure_1_4.getErrors(guildId).avatarDecoration;
-      return obj;
+      const obj6 = { pendingAvatar: null, pendingAvatarDecoration: null, pendingErrors: null };
+      ({ pendingAvatar: obj2.pendingAvatar, pendingAvatarDecoration: obj2.pendingAvatarDecoration } = pendingChanges);
+      obj6.pendingErrors = UserProfileSettingsStore.getErrors(guildId).avatarDecoration;
+      return obj6;
     }
   });
   const items1 = [guildId];
   ({ pendingAvatar, pendingAvatarDecoration, pendingErrors } = stateFromStoresObject);
   let setTryItOutAvatar = useCallback((avatar) => {
-    let obj = isTryItOut(8164);
-    obj = { guildId, avatar };
-    obj.setPendingChanges(obj);
+    UserProfileSettingsActionCreators.setPendingChanges({ guildId, avatar });
+    const obj2 = { guildId, avatar };
     let str = "set";
     if (null == avatar) {
       str = "remove";
     }
-    const result = isTryItOut(8166).announcePendingAvatarChange(str);
+    const result = ProfileCustomizationUtils.announcePendingAvatarChange(str);
   }, items1);
   const items2 = [tmp2, guildId];
   let setTryItOutAvatarDecoration = useCallback((avatarDecoration) => {
-    let obj = isTryItOut(8164);
-    obj = { guildId, avatarDecoration };
-    obj.setPendingChanges(obj);
+    UserProfileSettingsActionCreators.setPendingChanges({ guildId, avatarDecoration });
     if (null != avatarDecoration) {
-      dependencyMap(avatarDecoration);
+      closure_2(avatarDecoration);
     }
   }, items2);
-  obj = { pendingAvatar, pendingAvatarDecoration, pendingErrors, setPendingAvatar: null, setPendingAvatarDecoration: null };
+  let obj2 = { pendingAvatar, pendingAvatarDecoration, pendingErrors, setPendingAvatar: null, setPendingAvatarDecoration: null };
   if (isTryItOut) {
-    setTryItOutAvatar = tmp3(8167).setTryItOutAvatar;
+    setTryItOutAvatar = tmp3(8193).setTryItOutAvatar;
   }
-  obj[3] = setTryItOutAvatar;
+  obj2.setPendingAvatar = setTryItOutAvatar;
   if (isTryItOut) {
-    setTryItOutAvatarDecoration = tmp3(8167).setTryItOutAvatarDecoration;
+    setTryItOutAvatarDecoration = tmp3(8193).setTryItOutAvatarDecoration;
   }
-  obj[4] = setTryItOutAvatarDecoration;
-  return obj;
+  obj2.setPendingAvatarDecoration = setTryItOutAvatarDecoration;
+  return obj2;
 };

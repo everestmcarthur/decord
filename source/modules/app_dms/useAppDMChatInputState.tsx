@@ -1,34 +1,34 @@
-// Module ID: 13265
-// Function ID: 13266
-// Name: items
-// Dependencies: [19, 9295, 4788, 7621, 1918, 1371, 1074, 1894, 504, 8187, 573, 7168, 2]
+// Module ID: 13288
+// Function ID: 13289
+// Name: useAppDMChatInputState
+// Dependencies: [19, 9322, 4802, 7635, 1918, 1371, 1074, 1894, 504, 8213, 573, 7182, 2]
 // Exports: default
 
-// Module 13265 (items)
-import closure_3 from "noop" /* 19 */;
-import { useQueryState } from "getIndexKey" /* 9295 */;
-import closure_5 from "addApplication" /* 4788 */;
-import closure_6 from "createUserWidgetFromServer" /* 7621 */;
-import closure_7 from "createExecutable" /* 1918 */;
-import closure_8 from "mergeGuildAvatar" /* 1371 */;
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 1074 */;
+// Module 13288 (useAppDMChatInputState)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8213 */;
+import noop from "module_19" /* 19 */;
+import ApplicationStore from "ApplicationStore" /* 4802 */;
+import UserProfileStore from "UserProfileStore" /* 7635 */;
+import ApplicationRecord from "ApplicationRecord" /* 1918 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-let items = [require("PermissionOverwriteType").ApplicationCommandType.PRIMARY_ENTRY_POINT, require("PermissionOverwriteType").ApplicationCommandType.CHAT, require("PermissionOverwriteType").ApplicationCommandType.MESSAGE, require("PermissionOverwriteType").ApplicationCommandType.USER];
-const result = require("set").fileFinishedImporting("modules/app_dms/useAppDMChatInputState.tsx");
+const require = fn;
+const useQueryState = fn(9322).useQueryState;
+const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
+let items = [fn(1894).ApplicationCommandType.PRIMARY_ENTRY_POINT, fn(1894).ApplicationCommandType.CHAT, fn(1894).ApplicationCommandType.MESSAGE, fn(1894).ApplicationCommandType.USER];
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_dms/useAppDMChatInputState.tsx");
 
 export default function useAppDMChatInputState(context) {
-  let channel;
-  let memo;
   let stateFromStores;
   let application;
-  channel = context.context.channel;
-  let obj = application;
+  const channel = context.context.channel;
   items = [channel];
-  memo = application.useMemo(() => {
+  const memo = application.useMemo(() => {
     if (null != channel) {
       if (true === obj.isDM()) {
-        const user = closure_1_8.getUser(obj.getRecipientId());
+        const user = UserStore.getUser(obj.getRecipientId());
         let tmp3 = null;
         if (undefined !== user) {
           tmp3 = null;
@@ -41,16 +41,16 @@ export default function useAppDMChatInputState(context) {
     }
     return null;
   }, items);
-  obj1 = channel(stateFromStores[8]);
-  const items1 = [closure_5];
-  stateFromStores = obj1.useStateFromStores(items1, () => {
+  const items1 = [ApplicationStore];
+  stateFromStores = channel(stateFromStores[8]).useStateFromStores(items1, () => {
     let id;
     if (memo != null) {
       id = memo.id;
     }
-    return closure_1_5.getAppIdForBotUserId(id);
+    return ApplicationStore.getAppIdForBotUserId(id);
   });
-  const items2 = [closure_6];
+  let obj2 = channel(stateFromStores[8]);
+  const items2 = [UserProfileStore];
   const stateFromStores1 = channel(stateFromStores[8]).useStateFromStores(items2, () => {
     let tmp2;
     if (null !== memo) {
@@ -58,7 +58,7 @@ export default function useAppDMChatInputState(context) {
       if (tmp != null) {
         id = tmp.id;
       }
-      const userProfile = closure_1_6.getUserProfile(id);
+      const userProfile = UserProfileStore.getUserProfile(id);
       application = undefined;
       if (userProfile != null) {
         application = userProfile.application;
@@ -82,10 +82,9 @@ export default function useAppDMChatInputState(context) {
         id = memo.id;
       }
       if (id == null) {
-        id = closure_1_9;
+        id = EMPTY_STRING_SNOWFLAKE_ID;
       }
-      memo(stateFromStores[9])(id, undefined, { withMutualGuilds: true });
-      const tmp3 = memo(stateFromStores[9]);
+      maybeFetchUserProfileDefault(id, undefined, { withMutualGuilds: true });
     }
   }, items3);
   let id1;
@@ -99,20 +98,17 @@ export default function useAppDMChatInputState(context) {
       id = tmp.id;
     }
     if (null != id) {
-      let obj = memo(stateFromStores[10]);
-      obj = { type: "APP_DM_OPEN", botUserId: null };
-      obj[1] = tmp.id;
-      obj.dispatch(obj);
+      const obj2 = { type: "APP_DM_OPEN", botUserId: tmp.id };
+      DispatcherDefault.dispatch(obj2);
     }
   }, items4);
-  obj = { commandTypes: items };
-  obj = { applicationId: stateFromStores, allowFetch: null, allowApplicationState: true };
+  const obj5 = { applicationId: stateFromStores, allowFetch: null, allowApplicationState: true };
   let id2;
   if (memo != null) {
     id2 = memo.id;
   }
-  obj[1] = null != id2;
-  const descriptors = useQueryState({ channel, type: "channel" }, obj, obj).descriptors;
+  obj5.allowFetch = null != id2;
+  const descriptors = useQueryState({ channel, type: "channel" }, { commandTypes: items }, obj5).descriptors;
   const found = descriptors.find((application) => {
     application = application.application;
     let id;
@@ -129,21 +125,19 @@ export default function useAppDMChatInputState(context) {
   let memo1 = obj.useMemo(() => {
     let fromServer;
     if (null != application) {
-      fromServer = closure_1_7.createFromServer(tmp);
+      fromServer = ApplicationRecord.createFromServer(tmp);
     }
     return fromServer;
   }, items5);
   const obj3 = channel(stateFromStores[8]);
-  const tmp10 = useQueryState;
-  let tmp2 = channel;
-  let tmp3 = stateFromStores;
+  const obj4 = { commandTypes: items };
   if (null == memo1) {
     const tmp15 = stateFromStores;
   }
   if (memo1 == null) {
     memo1 = tmp2Result.useGetOrFetchApplication(tmp15);
   }
-  obj1 = { application: memo1, isAppDM: null };
+  const obj6 = { application: memo1, isAppDM: null };
   let flag;
   if (memo != null) {
     flag = memo.bot;
@@ -151,6 +145,6 @@ export default function useAppDMChatInputState(context) {
   if (flag == null) {
     flag = false;
   }
-  obj1[1] = flag;
-  return obj1;
+  obj6.isAppDM = flag;
+  return obj6;
 };

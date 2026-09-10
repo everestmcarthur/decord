@@ -1,18 +1,21 @@
-// Module ID: 11370
-// Function ID: 11371
+// Module ID: 11397
+// Function ID: 11398
 // Name: useIsSpamMessageRequest
-// Dependencies: [7220, 504, 2]
+// Dependencies: [7234, 504, 2]
 // Exports: useIsSpamMessageRequest
 
-// Module 11370 (useIsSpamMessageRequest)
-import closure_2 from "processChannel" /* 7220 */;
+// Module 11397 (useIsSpamMessageRequest)
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7234 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/message_request/hooks/useIsSpamMessageRequest.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/message_request/hooks/useIsSpamMessageRequest.tsx");
 
 export const useIsSpamMessageRequest = function useIsSpamMessageRequest(id) {
-  const _require = id;
-  const items = [closure_2];
+  _require = id;
+  const items = [SpamMessageRequestStore];
   const items1 = [id];
-  return _require(504).useStateFromStores(items, () => closure_1_2.isSpam(closure_0), items1);
+  return require("initialize").useStateFromStores(items, () => SpamMessageRequestStore.isSpam(closure_0), items1);
 };

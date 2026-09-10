@@ -1,17 +1,17 @@
-// Module ID: 6245
-// Function ID: 6246
+// Module ID: 6259
+// Function ID: 6260
 // Name: MoneyBagIllocon
-// Dependencies: [21, 5587, 6246, 2]
+// Dependencies: [21, 5601, 6260, 2]
 // Exports: MoneyBagIllocon
 
-// Module 6245 (MoneyBagIllocon)
-import set from "set" /* 2 */;
+// Module 6259 (MoneyBagIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 6246 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6260 from "module_6260" /* 6260 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/MoneyBagIllocon.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/MoneyBagIllocon.native.tsx");
 
 export const MoneyBagIllocon = function MoneyBagIllocon(size) {
   let num = size.size;
@@ -19,13 +19,13 @@ export const MoneyBagIllocon = function MoneyBagIllocon(size) {
   if (num === undefined) {
     num = 64;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef6260 };
+  obj.source = obj2;
   const items = [{ width: num, height: num }];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { uri: metadataDefault });
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

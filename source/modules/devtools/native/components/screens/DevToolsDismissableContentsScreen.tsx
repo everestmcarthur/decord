@@ -1,124 +1,119 @@
-// Module ID: 15618
-// Function ID: 15619
-// Name: DismissableContentsEmpty
-// Dependencies: [32, 19, 17, 1947, 21, 4560, 576, 1943, 15619, 7201, 5687, 10242, 5605, 1940, 4518, 5612, 15620, 7050, 4556, 10322, 5517, 1611, 9936, 504, 15014, 15015, 8879, 2]
+// Module ID: 15648
+// Function ID: 15649
+// Name: DevToolsDismissableContentsScreen
+// Dependencies: [32, 19, 17, 1947, 21, 4574, 576, 1943, 15649, 7214, 5701, 10269, 5619, 1940, 4532, 5626, 15650, 7064, 4570, 10349, 5531, 1611, 9963, 504, 15041, 15042, 8906, 2]
 // Exports: default
 
-// Module 15618 (DismissableContentsEmpty)
-import ThemesDefault from "Themes" /* 576 */;
+// Module 15648 (DevToolsDismissableContentsScreen)
+import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import updateUserGuildSettings from "updateUserGuildSettings" /* 1940 */;
-import DismissibleContent from "DismissibleContent" /* 1943 */;
-import TrashIcon from "TrashIcon" /* 4518 */;
-import Text from "Text" /* 4556 */;
-import TableRowInner from "TableRowInner" /* 5605 */;
-import TableRowArrow from "TableRowArrow" /* 5612 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
-import SearchField from "SearchField" /* 7050 */;
-import TableSwitchRow from "TableSwitchRow" /* 7201 */;
-import handleDCShownToUser from "handleDCShownToUser" /* 10242 */;
-import getSearchEmptySource from "getSearchEmptySource" /* 10322 */;
-import useToggleDismissibleContentDismissStateDefault from "useToggleDismissibleContentDismissState" /* 15619 */;
-import DoubleCheckmarkIcon from "DoubleCheckmarkIcon" /* 15620 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "set" /* 1947 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 1940 */;
+import dismissible_content from "dismissible_content" /* 1943 */;
+import TrashIcon from "TrashIcon" /* 4532 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import fuzzysearchDefault from "fuzzysearch" /* 5531 */;
+import TableRow from "TableRow" /* 5619 */;
+import TableRowArrow from "TableRowArrow" /* 5626 */;
+import TableRowGroup from "TableRowGroup" /* 5701 */;
+import SearchField from "SearchField" /* 7064 */;
+import TableSwitchRow from "TableSwitchRow" /* 7214 */;
+import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 10269 */;
+import SearchEmpty from "SearchEmpty" /* 10349 */;
+import useBountiesAutoScroll from "useBountiesAutoScroll" /* 15042 */;
+import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 15649 */;
+import DoubleCheckmarkIcon from "DoubleCheckmarkIcon" /* 15650 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 1947 */;
 
-require = arg1;
+require = fn;
 function DismissableContentsEmpty() {
-  let obj = { style: callback4().emptyState, children: null };
-  obj = { style: null, variant: "heading-lg/semibold", children: "No results found" };
-  obj = { marginBottom: ThemesDefault.space.PX_16 };
-  obj[0] = obj;
-  const items = [callback2(Text.Text, obj), callback2(getSearchEmptySource.SearchEmpty, {})];
-  obj[1] = items;
-  return callback3(View, obj);
+  const obj = { style: closure_10().emptyState, children: null };
+  const obj2 = { style: { marginBottom: nativeDefault.space.PX_16 }, variant: "heading-lg/semibold", children: "No results found" };
+  const items = [React5(Text_Text.Text, obj2), React5(SearchEmpty.SearchEmpty, {})];
+  obj.children = items;
+  return React6(View, obj);
 }
-let c4 = importAllResult;
-({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
-let obj = { container: null, contentContainer: null, headerSection: null, search: null, sectionHeader: null, emptyState: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
-obj[0] = obj;
-createCacheKey = { padding: ThemesDefault.space.PX_16 };
-obj[1] = createCacheKey;
-obj[2] = { paddingBottom: ThemesDefault.space.PX_16 };
-let obj2 = { paddingBottom: ThemesDefault.space.PX_16 };
-obj[3] = { paddingBottom: ThemesDefault.space.PX_8 };
-let obj3 = { paddingBottom: ThemesDefault.space.PX_8 };
-obj[4] = { paddingBottom: ThemesDefault.space.PX_8 };
-let obj4 = { paddingBottom: ThemesDefault.space.PX_8 };
-obj[5] = { marginVertical: ThemesDefault.space.PX_32, justifyContent: "center", alignItems: "center" };
-let closure_10 = createCacheKey.createStyles(obj);
-let closure_11 = importAllResult.memo((content) => {
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+const createStyles = fn(4574);
+let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, contentContainer: null, headerSection: null, search: null, sectionHeader: null, emptyState: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+obj.contentContainer = { padding: nativeDefault.space.PX_16 };
+let obj4 = { padding: nativeDefault.space.PX_16 };
+obj.headerSection = { paddingBottom: nativeDefault.space.PX_16 };
+let obj5 = { paddingBottom: nativeDefault.space.PX_16 };
+obj.search = { paddingBottom: nativeDefault.space.PX_8 };
+let obj6 = { paddingBottom: nativeDefault.space.PX_8 };
+obj.sectionHeader = { paddingBottom: nativeDefault.space.PX_8 };
+let obj7 = { paddingBottom: nativeDefault.space.PX_8 };
+obj.emptyState = { marginVertical: nativeDefault.space.PX_32, justifyContent: "center", alignItems: "center" };
+let closure_10 = createStyles.createStyles(obj);
+let closure_11 = noop.memo((content) => {
   const label = content.content;
   ({ start, end } = content);
-  ({ isDismissed, handleToggleDismissState } = useToggleDismissibleContentDismissStateDefault(DismissibleContent.DismissibleContent[label]));
-  return callback2(TableSwitchRow.TableSwitchRow, { start, end, onValueChange, value, label });
+  ({ isDismissed, handleToggleDismissState } = toggleDismissibleContentDismissStateDefault(dismissible_content.DismissibleContent[label]));
+  return React5(TableSwitchRow.TableSwitchRow, { start, end, onValueChange, value, label });
 });
-let closure_12 = importAllResult.memo((arg0) => {
+let closure_12 = noop.memo((arg0) => {
   ({ dailyCapOverridden, newUserMinAgeRequiredOverridden, forceBountiesSwipeUpNux, initialSearchQuery, onForceBountiesSwipeUpNuxChange, onSearchChange } = arg0);
-  const tmp = callback4();
-  let obj = { children: null };
-  obj = { style: tmp.headerSection, children: null };
-  obj = { title: "Global Overrides", hasIcons: false, children: null };
-  const items = [callback2(TableSwitchRow.TableSwitchRow, { onValueChange: handleDCShownToUser.overrideDismissibleContentFramework, value: dailyCapOverridden, label: "Daily limit", subLabel: "When enabled, bypass the daily limit of dismissible content shown" }), , ];
-  obj1 = { onValueChange: handleDCShownToUser.overrideDismissibleContentFramework, value: dailyCapOverridden, label: "Daily limit", subLabel: "When enabled, bypass the daily limit of dismissible content shown" };
-  items[1] = callback2(TableSwitchRow.TableSwitchRow, { onValueChange: handleDCShownToUser.overrideNewUserMinAgeRequired, value: newUserMinAgeRequiredOverridden, label: "New user account minimum age", subLabel: "When enabled, bypass the minimum age requirement for new user accounts" });
-  items[2] = callback2(TableSwitchRow.TableSwitchRow, { onValueChange: onForceBountiesSwipeUpNuxChange, value: forceBountiesSwipeUpNux, label: "Force bounties swipe-up NUX", subLabel: "When enabled, treat bounties swipe-up NUX as shown so scroll affordances always appear. Reopen the bounties modal after toggling." });
-  obj[2] = items;
-  obj[1] = callback3(TableRowGroupTitle.TableRowGroup, obj);
-  const items1 = [callback2(View, obj), , , ];
-  const obj3 = { style: tmp.headerSection, children: null };
-  const obj4 = { title: "Bulk actions", hasIcons: true, children: null };
-  const obj2 = { onValueChange: handleDCShownToUser.overrideNewUserMinAgeRequired, value: newUserMinAgeRequiredOverridden, label: "New user account minimum age", subLabel: "When enabled, bypass the minimum age requirement for new user accounts" };
-  const items2 = [callback2(TableRowInner.TableRow, { label: "Clear all dismissed dismissible contents", onPress: updateUserGuildSettings.clearDismissedContents, icon: callback2(TrashIcon.TrashIcon, {}), trailing: callback2(TableRowArrow.TableRowArrow, {}) }), , ];
-  const obj5 = { label: "Clear all dismissed dismissible contents", onPress: updateUserGuildSettings.clearDismissedContents, icon: callback2(TrashIcon.TrashIcon, {}), trailing: callback2(TableRowArrow.TableRowArrow, {}) };
-  items2[1] = callback2(TableRowInner.TableRow, { label: "Clear all guild dismissed dismissible contents", onPress: updateUserGuildSettings.clearGuildDismissedContents, icon: callback2(TrashIcon.TrashIcon, {}), trailing: callback2(TableRowArrow.TableRowArrow, {}) });
-  const obj6 = { label: "Clear all guild dismissed dismissible contents", onPress: updateUserGuildSettings.clearGuildDismissedContents, icon: callback2(TrashIcon.TrashIcon, {}), trailing: callback2(TableRowArrow.TableRowArrow, {}) };
-  items2[2] = callback2(TableRowInner.TableRow, { label: "Dismiss all dismissible contents", onPress: updateUserGuildSettings.checkAllDismissedContents, icon: callback2(DoubleCheckmarkIcon.DoubleCheckmarkIcon, {}), trailing: callback2(TableRowArrow.TableRowArrow, {}) });
-  obj4[2] = items2;
-  obj3[1] = callback3(TableRowGroupTitle.TableRowGroup, obj4);
-  items1[1] = callback2(View, obj3);
-  const obj7 = { label: "Dismiss all dismissible contents", onPress: updateUserGuildSettings.checkAllDismissedContents, icon: callback2(DoubleCheckmarkIcon.DoubleCheckmarkIcon, {}), trailing: callback2(TableRowArrow.TableRowArrow, {}) };
-  items1[2] = callback2(View, { style: tmp.search, children: callback2(SearchField.SearchField, { size: "md", defaultValue: initialSearchQuery, onChange: onSearchChange }) });
-  items1[3] = callback2(Text.Text, { style: tmp.sectionHeader, variant: "text-sm/semibold", color: "text-default", children: "Dismissible Contents" });
-  obj[0] = items1;
-  return callback3(closure_9, obj);
+  const tmp = closure_10();
+  const obj = { children: null };
+  const obj2 = { style: tmp.headerSection, children: null };
+  const obj3 = { title: "Global Overrides", hasIcons: false, children: null };
+  const items = [React5(TableSwitchRow.TableSwitchRow, { onValueChange: DismissibleContentFrameworkActionCreators.overrideDismissibleContentFramework, value: dailyCapOverridden, label: "Daily limit", subLabel: "When enabled, bypass the daily limit of dismissible content shown" }), , ];
+  const obj4 = { onValueChange: DismissibleContentFrameworkActionCreators.overrideDismissibleContentFramework, value: dailyCapOverridden, label: "Daily limit", subLabel: "When enabled, bypass the daily limit of dismissible content shown" };
+  items[1] = React5(TableSwitchRow.TableSwitchRow, { onValueChange: DismissibleContentFrameworkActionCreators.overrideNewUserMinAgeRequired, value: newUserMinAgeRequiredOverridden, label: "New user account minimum age", subLabel: "When enabled, bypass the minimum age requirement for new user accounts" });
+  items[2] = React5(TableSwitchRow.TableSwitchRow, { onValueChange: onForceBountiesSwipeUpNuxChange, value: forceBountiesSwipeUpNux, label: "Force bounties swipe-up NUX", subLabel: "When enabled, treat bounties swipe-up NUX as shown so scroll affordances always appear. Reopen the bounties modal after toggling." });
+  obj3.children = items;
+  obj2.children = React6(TableRowGroup.TableRowGroup, obj3);
+  const items1 = [React5(View, obj2), , , ];
+  const obj6 = { style: tmp.headerSection, children: null };
+  const obj7 = { title: "Bulk actions", hasIcons: true, children: null };
+  const obj5 = { onValueChange: DismissibleContentFrameworkActionCreators.overrideNewUserMinAgeRequired, value: newUserMinAgeRequiredOverridden, label: "New user account minimum age", subLabel: "When enabled, bypass the minimum age requirement for new user accounts" };
+  const items2 = [React5(TableRow.TableRow, { label: "Clear all dismissed dismissible contents", onPress: UserSettingsProtoActionCreators.clearDismissedContents, icon: React5(TrashIcon.TrashIcon, {}), trailing: React5(TableRowArrow.TableRowArrow, {}) }), , ];
+  const obj8 = { label: "Clear all dismissed dismissible contents", onPress: UserSettingsProtoActionCreators.clearDismissedContents, icon: React5(TrashIcon.TrashIcon, {}), trailing: React5(TableRowArrow.TableRowArrow, {}) };
+  items2[1] = React5(TableRow.TableRow, { label: "Clear all guild dismissed dismissible contents", onPress: UserSettingsProtoActionCreators.clearGuildDismissedContents, icon: React5(TrashIcon.TrashIcon, {}), trailing: React5(TableRowArrow.TableRowArrow, {}) });
+  const obj9 = { label: "Clear all guild dismissed dismissible contents", onPress: UserSettingsProtoActionCreators.clearGuildDismissedContents, icon: React5(TrashIcon.TrashIcon, {}), trailing: React5(TableRowArrow.TableRowArrow, {}) };
+  items2[2] = React5(TableRow.TableRow, { label: "Dismiss all dismissible contents", onPress: UserSettingsProtoActionCreators.checkAllDismissedContents, icon: React5(DoubleCheckmarkIcon.DoubleCheckmarkIcon, {}), trailing: React5(TableRowArrow.TableRowArrow, {}) });
+  obj7.children = items2;
+  obj6.children = React6(TableRowGroup.TableRowGroup, obj7);
+  items1[1] = React5(View, obj6);
+  const obj10 = { label: "Dismiss all dismissible contents", onPress: UserSettingsProtoActionCreators.checkAllDismissedContents, icon: React5(DoubleCheckmarkIcon.DoubleCheckmarkIcon, {}), trailing: React5(TableRowArrow.TableRowArrow, {}) };
+  items1[2] = React5(View, { style: tmp.search, children: React5(SearchField.SearchField, { size: "md", defaultValue: initialSearchQuery, onChange: onSearchChange }) });
+  items1[3] = React5(Text_Text.Text, { style: tmp.sectionHeader, variant: "text-sm/semibold", color: "text-default", children: "Dismissible Contents" });
+  obj.children = items1;
+  return React6(React7, obj);
 });
-let obj5 = { marginVertical: ThemesDefault.space.PX_32, justifyContent: "center", alignItems: "center" };
-let result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsDismissableContentsScreen.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsDismissableContentsScreen.tsx");
 
 export default function DevToolsDismissableContentsScreen() {
-  const tmp = callback4();
-  const ref = first.useRef(null);
-  importDefault = first.useRef(0);
-  let obj = ref(9936);
+  const tmp = closure_10();
+  const ref = initialSearchQuery.useRef(null);
+  importDefault = initialSearchQuery.useRef(0);
   let tmp2 = useSafeAreaInsetsDefault();
-  [dependencyMap, tmp5] = callback(obj.useLocalStorageState("devtools-dc-search", ""), 2);
-  callback = tmp5;
-  first = callback(first.useState(() => {
-    let str = closure_2;
-    if (closure_2 == null) {
+  let obj = ref(9963);
+  [dependencyMap, tmp5] = ref(9963).useLocalStorageState("devtools-dc-search", "");
+  _slicedToArray = tmp5;
+  initialSearchQuery = _slicedToArray(initialSearchQuery.useState(() => {
+    let str = dependencyMap;
+    if (dependencyMap == null) {
       str = "";
     }
     return str;
   }), 1)[0];
-  const tmp7 = callback(first.useState(() => {
-    let str = closure_2;
-    if (closure_2 == null) {
+  [first1, closure_6] = initialSearchQuery.useState(() => {
+    let str = closure_1_2;
+    if (closure_1_2 == null) {
       str = "";
     }
     const items = [];
-    for (const key10013 in ref(closure_1_2[7]).DismissibleContent) {
-      let tmp9 = key10013;
+    for (const key10013 in dismissible_content.DismissibleContent) {
       let isNaNResult = tmp;
       if (!tmp) {
-        let tmp2 = ref;
-        let tmp3 = closure_1_2;
-        let tmp4 = ref(closure_1_2[20]);
+        let tmp4 = fuzzysearchDefault;
         let formatted = str.toLowerCase();
         isNaNResult = tmp4(formatted, key10013.toLowerCase());
       }
@@ -135,51 +130,45 @@ export default function DevToolsDismissableContentsScreen() {
       }
       continue;
     }
-    const sorted = items.sort((localeCompare) => localeCompare.localeCompare(arg1));
+    const sorted = items.sort((localeCompare, arg1) => localeCompare.localeCompare(arg1));
     return items;
-  }), 2);
-  const first1 = tmp7[0];
-  closure_6 = tmp7[1];
-  obj1 = ref(504);
+  });
+  let tmp4 = _slicedToArray(ref(9963).useLocalStorageState("devtools-dc-search", ""), 2);
   let items = [closure_6];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({ dailyCapOverridden: closure_6.dailyCapOverridden, newUserMinAgeRequiredOverridden: closure_6.newUserMinAgeRequiredOverridden }));
+  const stateFromStoresObject = ref(504).useStateFromStoresObject(items, () => ({ dailyCapOverridden: closure_6.dailyCapOverridden, newUserMinAgeRequiredOverridden: closure_6.newUserMinAgeRequiredOverridden }));
   const dailyCapOverridden = stateFromStoresObject.dailyCapOverridden;
   const newUserMinAgeRequiredOverridden = stateFromStoresObject.newUserMinAgeRequiredOverridden;
-  let tmp4 = callback(obj.useLocalStorageState("devtools-dc-search", ""), 2);
-  let tmp9 = callback(ref(15014).useForceBountiesSwipeUpNux(), 2);
+  const obj2 = ref(504);
+  let tmp9 = _slicedToArray(ref(15041).useForceBountiesSwipeUpNux(), 2);
   const first2 = tmp9[0];
-  callback4 = tmp11;
+  closure_10 = tmp11;
   const items1 = [tmp9[1]];
-  callback = first.useCallback((arg0) => {
-    callback(arg0);
+  const onForceBountiesSwipeUpNuxChange = initialSearchQuery.useCallback((arg0) => {
+    closure_10(arg0);
     if (arg0) {
-      const result = ref(closure_1_2[25]).clearDismissedScrollAffordanceBountyIds();
-      const obj = ref(closure_1_2[25]);
+      const result = useBountiesAutoScroll.clearDismissedScrollAffordanceBountyIds();
     }
   }, items1);
-  const callback1 = first.useCallback(() => {
+  const callback1 = initialSearchQuery.useCallback(() => {
     let current = ref.current;
     const animationFrame = requestAnimationFrame(() => {
-      current = current.current;
+      current = ref.current;
       if (current != null) {
-        const obj = { offset: null, animated: false };
-        obj[0] = current;
+        const obj = { offset: current, animated: false };
         current.scrollToOffset(obj);
       }
     });
   }, []);
   const items2 = [tmp5, callback1];
-  const callback2 = first.useCallback((str) => {
+  const callback2 = initialSearchQuery.useCallback((str) => {
     let tmp5;
     tmp5(str);
     const items = [];
-    for (const key10015 in ref(closure_1_2[7]).DismissibleContent) {
-      let tmp13 = key10015;
+    for (const key10015 in dismissible_content.DismissibleContent) {
       let isNaNResult = tmp3;
       if (!tmp3) {
-        let tmp4 = ref;
-        tmp5 = closure_1_2;
-        let tmp6 = ref(closure_1_2[20]);
+        tmp5 = dependencyMap;
+        let tmp6 = fuzzysearchDefault;
         let formatted = arg0.toLowerCase();
         isNaNResult = tmp6(formatted, key10015.toLowerCase());
       }
@@ -196,33 +185,33 @@ export default function DevToolsDismissableContentsScreen() {
       }
       continue;
     }
-    const sorted = items.sort((localeCompare) => localeCompare.localeCompare(arg1));
+    const sorted = items.sort((localeCompare, arg1) => localeCompare.localeCompare(arg1));
     closure_6(items);
     callback1();
   }, items2);
-  const items3 = [dailyCapOverridden, newUserMinAgeRequiredOverridden, first2, first, callback, callback2];
-  const callback3 = first.useCallback((nativeEvent) => {
+  const items3 = [dailyCapOverridden, newUserMinAgeRequiredOverridden, first2, initialSearchQuery, onForceBountiesSwipeUpNuxChange, callback2];
+  const callback3 = initialSearchQuery.useCallback((nativeEvent) => {
     closure_1.current = nativeEvent.nativeEvent.contentOffset.y;
   }, []);
   const items4 = [first1.length];
-  const memo = first.useMemo(() => dailyCapOverridden(callback1, { dailyCapOverridden, newUserMinAgeRequiredOverridden, forceBountiesSwipeUpNux: true === first2, initialSearchQuery: first, onForceBountiesSwipeUpNuxChange: callback, onSearchChange: callback2 }), items3);
-  obj = { style: tmp.container, children: null };
-  callback4 = first.useCallback((content) => {
+  const memo = initialSearchQuery.useMemo(() => React5(closure_12, { dailyCapOverridden, newUserMinAgeRequiredOverridden, forceBountiesSwipeUpNux: true === first2, initialSearchQuery, onForceBountiesSwipeUpNuxChange, onSearchChange: callback2 }), items3);
+  const obj4 = { style: tmp.container, children: null };
+  const callback4 = initialSearchQuery.useCallback((content) => {
     const index = content.index;
-    return dailyCapOverridden(callback, { content: content.item, start: 0 === index, end: index === first1.length - 1 });
+    return React5(closure_11, { content: content.item, start: 0 === index, end: index === first1.length - 1 });
   }, items4);
-  obj = { ref, data: first1, contentContainerStyle: null, keyboardShouldPersistTaps: "handled", keyboardDismissMode: "on-drag", automaticallyAdjustKeyboardInsets: true, ListHeaderComponent: null, ListEmptyComponent: null, keyExtractor: null, renderItem: null, onScroll: null, scrollEventThrottle: 16 };
+  const obj5 = { ref, data: first1, contentContainerStyle: null, keyboardShouldPersistTaps: "handled", keyboardDismissMode: "on-drag", automaticallyAdjustKeyboardInsets: true, ListHeaderComponent: null, ListEmptyComponent: null, keyExtractor: null, renderItem: null, onScroll: null, scrollEventThrottle: 16 };
   const items5 = [tmp.contentContainer, ];
-  obj1 = { paddingBottom: tmp2.bottom + ThemesDefault.space.PX_16 };
-  items5[1] = obj1;
-  obj[2] = items5;
-  obj[6] = memo;
-  obj[7] = callback2;
-  obj[8] = function keyExtractor(arg0) {
+  const obj3 = ref(15041);
+  items5[1] = { paddingBottom: tmp2.bottom + nativeDefault.space.PX_16 };
+  obj5.contentContainerStyle = items5;
+  obj5.ListHeaderComponent = memo;
+  obj5.ListEmptyComponent = callback2;
+  obj5.keyExtractor = function keyExtractor(arg0) {
     return arg0;
   };
-  obj[9] = callback4;
-  obj[10] = callback3;
-  obj[1] = dailyCapOverridden(ref(8879).FlashList, obj);
-  return dailyCapOverridden(first1, obj);
+  obj5.renderItem = callback4;
+  obj5.onScroll = callback3;
+  obj4.children = dailyCapOverridden(ref(8906).FlashList, obj5);
+  return dailyCapOverridden(first1, obj4);
 };

@@ -1,18 +1,18 @@
-// Module ID: 12264
-// Function ID: 12265
+// Module ID: 12290
+// Function ID: 12291
 // Name: getChatInputPositionStyle
 // Dependencies: [17, 1115, 2]
 // Exports: default
 
-// Module 12264 (getChatInputPositionStyle)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set2 from "set" /* 1115 */;
+// Module 12290 (getChatInputPositionStyle)
+import _mod17 from "module_17" /* 17 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import size from "module_2" /* 2 */;
 
 let obj = {};
-const merged = Object.assign(get_ActivityIndicator.StyleSheet.absoluteFillObject);
+const merged = Object.assign(_mod17.StyleSheet.absoluteFillObject);
 obj.top = undefined;
-const result = set.fileFinishedImporting("modules/chat_input/native/getChatInputPositionStyle.tsx");
+const result = size.fileFinishedImporting("modules/chat_input/native/getChatInputPositionStyle.tsx");
 
 export default function getChatInputPositionStyle() {
   obj = arg0;
@@ -24,7 +24,7 @@ export default function getChatInputPositionStyle() {
     if (obj2.isIOS()) {
       tmp = obj;
     }
-    obj2 = set2;
+    obj2 = PlatformUtils;
   }
   return tmp;
 };

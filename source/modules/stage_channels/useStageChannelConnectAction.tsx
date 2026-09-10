@@ -1,16 +1,16 @@
-// Module ID: 9679
-// Function ID: 9680
+// Module ID: 9706
+// Function ID: 9707
 // Name: useStageChannelConnectAction
-// Dependencies: [8396, 9675, 2]
+// Dependencies: [8424, 9702, 2]
 // Exports: default, useStageChannelStartEvent
 
-// Module 9679 (useStageChannelConnectAction)
-import set from "set" /* 2 */;
-import useStageChannelIsLiveDefault from "useStageChannelIsLive" /* 8396 */;
-import useCurrentUserStageRolesDefault from "useCurrentUserStageRoles" /* 9675 */;
+// Module 9706 (useStageChannelConnectAction)
+import useStateChannelIsLiveDefault from "useStateChannelIsLive" /* 8424 */;
+import useCurrentUserStageRolesDefault from "useCurrentUserStageRoles" /* 9702 */;
+import size from "module_2" /* 2 */;
 
-const obj = { NORMAL: 0, [0]: "NORMAL", START_EVENT: 1, [1]: "START_EVENT" };
-const result = set.fileFinishedImporting("modules/stage_channels/useStageChannelConnectAction.tsx");
+const ChannelConnectAction = { NORMAL: 0, [0]: "NORMAL", START_EVENT: 1, [1]: "START_EVENT" };
+const result = size.fileFinishedImporting("modules/stage_channels/useStageChannelConnectAction.tsx");
 
 export default function useStageChannelConnectAction(arg0) {
   if (!tmp) {
@@ -21,7 +21,7 @@ export default function useStageChannelConnectAction(arg0) {
   }
   NORMAL = obj.NORMAL;
 };
-export const ChannelConnectAction = obj;
+export { ChannelConnectAction };
 export const useStageChannelStartEvent = function useStageChannelStartEvent(id) {
-  return { isLive: useStageChannelIsLiveDefault(id), isModerator: useCurrentUserStageRolesDefault(id, true).moderator };
+  return { isLive: useStateChannelIsLiveDefault(id), isModerator: useCurrentUserStageRolesDefault(id, true).moderator };
 };

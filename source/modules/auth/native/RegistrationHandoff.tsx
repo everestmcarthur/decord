@@ -1,14 +1,14 @@
-// Module ID: 15947
-// Function ID: 15948
-// Name: setRegistrationHandoff
+// Module ID: 15977
+// Function ID: 15978
+// Name: RegistrationHandoff
 // Dependencies: [2]
 // Exports: clearRegistrationHandoff, hasRegistrationHandoff, setRegistrationHandoff
 
-// Module 15947 (setRegistrationHandoff)
-import set from "set" /* 2 */;
+// Module 15977 (RegistrationHandoff)
+import size from "module_2" /* 2 */;
 
 let c0 = false;
-const result = set.fileFinishedImporting("modules/auth/native/RegistrationHandoff.tsx");
+const result = size.fileFinishedImporting("modules/auth/native/RegistrationHandoff.tsx");
 
 export function setRegistrationHandoff() {
   c0 = true;

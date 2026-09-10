@@ -2,6 +2,7 @@
 // Function ID: 860
 // Name: vercelWaitUntil
 // Dependencies: [686]
+// Exports: vercelWaitUntil
 
 // Module 859 (vercelWaitUntil)
 import _mod686 from "module_686" /* 686 */;
@@ -9,11 +10,12 @@ import _mod686 from "module_686" /* 686 */;
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.vercelWaitUntil = function vercelWaitUntil(arg0) {
+
+export const vercelWaitUntil = function vercelWaitUntil(arg0) {
   if (typeof globalThis.EdgeRuntime === "string") {
     const _Symbol = Symbol;
     const tmp7 = _mod686.GLOBAL_OBJ[Symbol.for(Symbol, "@vercel/request-context")];
-    let value;
+    value = undefined;
     if (tmp7 != null) {
       const get = tmp7.get;
       if (get != null) {

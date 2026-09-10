@@ -1,26 +1,26 @@
-// Module ID: 14997
-// Function ID: 14998
+// Module ID: 15023
+// Function ID: 15024
 // Name: QuestsIcon
-// Dependencies: [19, 21, 576, 4261, 14998, 2]
+// Dependencies: [19, 21, 576, 4274, 15024, 2]
 // Exports: QuestsIcon
 
-// Module 14997 (QuestsIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 14998 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 15023 (QuestsIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod15024 from "module_15024" /* 15024 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/QuestsIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/QuestsIcon.tsx");
 
 export const QuestsIcon = function QuestsIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15024, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

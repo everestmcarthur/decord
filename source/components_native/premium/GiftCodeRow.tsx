@@ -1,38 +1,40 @@
-// Module ID: 13567
-// Function ID: 13568
-// Name: handleRevoke
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 4271, 11435, 4799, 8361, 6621, 4556, 4975, 1114, 4153, 1178, 2]
+// Module ID: 13590
+// Function ID: 13591
+// Name: GiftCodeRow
+// Dependencies: [19, 17, 1074, 21, 4574, 576, 4284, 11462, 4813, 8389, 6635, 4570, 4989, 1114, 4166, 1178, 2]
 
-// Module 13567 (handleRevoke)
-import ThemesDefault from "Themes" /* 576 */;
-import resolveGiftCodeDefault from "resolveGiftCode" /* 11435 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { AnalyticsSections } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 13590 (GiftCodeRow)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 4813 */;
+import showShareActionSheet from "showShareActionSheet" /* 8389 */;
+import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11462 */;
+import noop from "module_19" /* 19 */;
 
-let require = arg1;
-({ View: c3, TouchableWithoutFeedback: c4, StyleSheet } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { giftCodeRow: { paddingHorizontal: 16 }, giftCodeRowLegacy: null, giftCodeShare: null, giftCodeInput: null, giftCodeInputContent: null, giftCodeShareButton: null, codeText: null, subTextRow: null, expiryText: null, revokeHint: null, firstRow: null, buttonContainer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginVertical: 8, padding: 8, borderRadius: ThemesDefault.radii.xs, borderWidth: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT };
-let obj1 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginVertical: 8, padding: 8, borderRadius: ThemesDefault.radii.xs, borderWidth: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT };
-createCacheKey[3] = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
-let obj2 = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
-createCacheKey[4] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: ThemesDefault.space.PX_8 };
-createCacheKey[5] = { marginLeft: 12 };
-createCacheKey[6] = { flexShrink: 1 };
-createCacheKey[7] = { marginBottom: 8, flexDirection: "row", alignItems: "center" };
-createCacheKey[8] = { fontSize: 12, lineHeight: 16 };
-let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: ThemesDefault.space.PX_8 };
-createCacheKey[9] = { color: ThemesDefault.unsafe_rawColors.BLUE_345 };
-createCacheKey[10] = { borderWidth: 0 };
-createCacheKey[11] = { flexShrink: 0, flexGrow: 1 };
-let closure_8 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
-const PureComponent = importAllResult.PureComponent;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, TouchableWithoutFeedback: closure_4, StyleSheet } = get_ActivityIndicator);
+const AnalyticsSections = fn(1074).AnalyticsSections;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { giftCodeRow: { paddingHorizontal: 16 }, giftCodeRowLegacy: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, giftCodeShare: null, giftCodeInput: null, giftCodeInputContent: null, giftCodeShareButton: null, codeText: null, subTextRow: null, expiryText: null, revokeHint: null, firstRow: null, buttonContainer: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj2.giftCodeShare = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginVertical: 8, padding: 8, borderRadius: nativeDefault.radii.xs, borderWidth: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT };
+let obj4 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginVertical: 8, padding: 8, borderRadius: nativeDefault.radii.xs, borderWidth: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT };
+obj2.giftCodeInput = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_4 };
+let obj5 = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_4 };
+obj2.giftCodeInputContent = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: nativeDefault.space.PX_8 };
+obj2.giftCodeShareButton = { marginLeft: 12 };
+obj2.codeText = { flexShrink: 1 };
+obj2.subTextRow = { marginBottom: 8, flexDirection: "row", alignItems: "center" };
+obj2.expiryText = { fontSize: 12, lineHeight: 16 };
+const obj6 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: nativeDefault.space.PX_8 };
+obj2.revokeHint = { color: nativeDefault.unsafe_rawColors.BLUE_345 };
+obj2.firstRow = { borderWidth: 0 };
+obj2.buttonContainer = { flexShrink: 0, flexGrow: 1 };
+let closure_8 = createStyles.createLegacyClassComponentStyles(obj2);
+const PureComponent = noop.PureComponent;
 class GiftCodeRow extends PureComponent {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -40,13 +42,11 @@ class GiftCodeRow extends PureComponent {
     applyArgumentsResult.handleShare = function handleShare() {
       ({ giftCode, sku } = applyArgumentsResult.props);
       if (tmp) {
-        let obj = applyArgumentsResult(closure_1_2[8]);
-        obj.trackGiftCodeCopy(giftCode, sku);
-        obj = { url: null };
-        const obj2 = applyArgumentsResult(closure_1_2[9]);
-        obj[0] = applyArgumentsResult(closure_1_2[8]).getGiftCodeURL(giftCode.code);
-        obj2.showShareActionSheet(obj, closure_1_5.GIFT_CODE_ROW);
-        const obj4 = applyArgumentsResult(closure_1_2[8]);
+        GiftCodeUtils.trackGiftCodeCopy(giftCode, sku);
+        const obj3 = { url: null };
+        const obj2 = showShareActionSheet;
+        obj3.url = GiftCodeUtils.getGiftCodeURL(giftCode.code);
+        obj2.showShareActionSheet(obj3, AnalyticsSections.GIFT_CODE_ROW);
       }
     };
     return applyArgumentsResult;
@@ -54,11 +54,11 @@ class GiftCodeRow extends PureComponent {
 }
 const prototype = GiftCodeRow.prototype;
 prototype["handleRevoke"] = function handleRevoke(code) {
-  resolveGiftCodeDefault.revokeGiftCode(code);
+  GiftCodeActionCreatorsDefault.revokeGiftCode(code);
 };
 prototype["render"] = function render() {
   const self = this;
-  const tmp = callback2(this.context);
+  const tmp = closure_8(this.context);
   importDefault = tmp;
   const props = this.props;
   const giftCode = props.giftCode;
@@ -69,57 +69,58 @@ prototype["render"] = function render() {
   }
   let obj = { style: items, children: null };
   items[1] = firstRow;
-  obj = { style: tmp.giftCodeInput, children: null };
-  obj = { children: null };
-  obj1 = { style: tmp.giftCodeInputContent, children: null };
-  const obj2 = { variant: "text-sm/normal", style: tmp.codeText, lineClamp: 1, children: null };
-  let obj5 = giftCode(self[8]);
-  obj2[3] = obj5.getGiftCodeURL(giftCode.code);
-  const items1 = [callback(giftCode(self[11]).Text, obj2), ];
-  const obj3 = { style: items2, children: null };
-  items2 = [, ];
+  let obj2 = { style: tmp.giftCodeInput, children: null };
+  const obj3 = { children: null };
+  const obj4 = { style: tmp.giftCodeInputContent, children: null };
+  const obj5 = { variant: "text-sm/normal", style: tmp.codeText, lineClamp: 1, children: giftCode(self[8]).getGiftCodeURL(giftCode.code) };
+  const items1 = [closure_6(giftCode(self[11]).Text, obj5), ];
+  const obj7 = { style: null, children: null };
+  const items2 = [, ];
   ({ buttonContainer: arr3[0], giftCodeShareButton: arr3[1] } = tmp);
-  const obj4 = { size: "sm", text: null, onPress: null };
+  obj7.style = items2;
+  const obj8 = { size: "sm", text: null, onPress: null };
   const intl = giftCode(self[13]).intl;
-  obj4[1] = intl.string(giftCode(self[13]).t.h5EvZM);
-  obj4[2] = this.handleShare;
-  obj3[1] = callback(giftCode(self[12]).Button, obj4);
-  items1[1] = callback(closure_3, obj3);
-  obj1[1] = items1;
-  obj[0] = closure_7(closure_3, obj1);
-  obj[1] = callback(giftCode(self[10]).InputFieldContainer, obj);
-  const items3 = [callback(closure_3, obj), ];
-  obj5 = { style: tmp.subTextRow, children: null };
+  obj8.text = intl.string(giftCode(self[13]).t.h5EvZM);
+  obj8.onPress = this.handleShare;
+  obj7.children = closure_6(giftCode(self[12]).Button, obj8);
+  items1[1] = closure_6(closure_3, obj7);
+  obj4.children = items1;
+  obj3.children = closure_7(closure_3, obj4);
+  obj2.children = closure_6(giftCode(self[10]).InputFieldContainer, obj3);
+  const items3 = [closure_6(closure_3, obj2), ];
+  const obj9 = { style: tmp.subTextRow, children: null };
   let tmp5Result = null;
   if (null != giftCode.expiresAt) {
-    const obj6 = { variant: "text-xs/normal", color: "text-subtle", children: null };
+    const obj10 = { variant: "text-xs/normal", color: "text-subtle", children: null };
     const intl2 = tmp6(tmp7[13]).intl;
-    const obj7 = { hours: null, revokeHook: null };
+    const obj11 = { hours: null, revokeHook: null };
     const expiresAt = giftCode.expiresAt;
-    obj7[0] = expiresAt.diff(importDefault(tmp7[14])(), "h");
-    obj7[1] = function revokeHook(children) {
-      obj = {
+    obj11.hours = expiresAt.diff(require("module_4166")(), "h");
+    obj11.revokeHook = function revokeHook(children, arg1) {
+      const obj = {
         accessibilityRole: "button",
         onPress() {
-          return closure_2.handleRevoke(code.code);
+          return self.handleRevoke(code.code);
         },
-        children: closure_1_6(giftCode(self[15]).LegacyText, obj)
+        children: null
       };
-      obj = { style: items, children };
-      items = [, ];
+      const obj2 = { style: null, children };
+      const items = [, ];
       ({ expiryText: arr[0], revokeHint: arr[1] } = closure_1);
-      return closure_1_6(closure_1_4, obj, arg1);
+      obj2.style = items;
+      obj.children = timestampProducer(native.LegacyText, obj2);
+      return timestampProducer(React4, obj, arg1);
     };
-    obj6[2] = intl2.format(tmp6(tmp7[13]).t.b1BfWD, obj7);
-    tmp5Result = tmp5(tmp6(tmp7[11]).Text, obj6);
+    obj10.children = intl2.format(tmp6(tmp7[13]).t.b1BfWD, obj11);
+    tmp5Result = tmp5(tmp6(tmp7[11]).Text, obj10);
   }
-  obj5[1] = tmp5Result;
-  items3[1] = callback(closure_3, obj5);
-  obj[1] = items3;
+  obj9.children = tmp5Result;
+  items3[1] = closure_6(closure_3, obj9);
+  obj.children = items3;
   return closure_7(closure_3, obj);
 };
-GiftCodeRow.contextType = require("ManaContext").ThemeContext;
-let obj4 = { color: ThemesDefault.unsafe_rawColors.BLUE_345 };
-const result = require("set").fileFinishedImporting("components_native/premium/GiftCodeRow.tsx");
+GiftCodeRow.contextType = fn(4284).ThemeContext;
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/premium/GiftCodeRow.tsx");
 
 export default GiftCodeRow;

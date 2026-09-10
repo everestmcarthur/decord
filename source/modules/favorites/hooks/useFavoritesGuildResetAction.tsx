@@ -1,40 +1,41 @@
-// Module ID: 16142
-// Function ID: 16143
+// Module ID: 16172
+// Function ID: 16173
 // Name: useFavoritesGuildResetAction
-// Dependencies: [19, 4381, 1074, 1935, 10229, 1982, 1100, 10228, 1114, 3225, 2]
+// Dependencies: [19, 4395, 1074, 1935, 10256, 1982, 1100, 10255, 1114, 3236, 2]
 // Exports: default
 
-// Module 16142 (useFavoritesGuildResetAction)
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import messagesProxyDefault from "messagesProxy" /* 3225 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 10229 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleConnectionOpen" /* 4381 */;
-import { Routes } from "ME" /* 1074 */;
+// Module 16172 (useFavoritesGuildResetAction)
+import UserSettings from "UserSettings" /* 1935 */;
+import FavoritesUtils from "FavoritesUtils" /* 1982 */;
+import _modDef3236 from "module_3236" /* 3236 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10255 */;
+import noop from "module_19" /* 19 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildResetAction.tsx");
+require = fn;
+const Routes = fn(1074).Routes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildResetAction.tsx");
 
 export default function useFavoritesGuildResetAction() {
-  const DeveloperMode = explicitContentFromProto.DeveloperMode;
+  const DeveloperMode = UserSettings.DeveloperMode;
   let hasAccess = DeveloperMode.useSetting();
-  let obj = useFavoritesAccess;
-  const callback = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     if (obj.isFavoritesGuildId(guildId.getGuildId())) {
-      let tmpResult = tmp(tmp2[6]);
-      tmpResult.transitionTo(constants.ME);
+      tmp(tmp2[6]).transitionTo(constants.ME);
+      const tmpResult = tmp(tmp2[6]);
     }
-    tmpResult = tmp(tmp2[7]);
-    tmpResult.resetFavoritesGuild();
+    obj = FavoritesUtils;
+    FavoritesActionCreators.resetFavoritesGuild();
   }, []);
   if (hasAccess) {
     hasAccess = obj.useFavoritesAccess().hasAccess;
   }
-  obj = { isAvailable: hasAccess, label: null, subLabel: null, perform: null };
+  const obj2 = { isAvailable: hasAccess, label: null, subLabel: null, perform: null };
   const intl = tmp(1114).intl;
-  obj[1] = intl.string(messagesProxyDefault.YkET6R);
+  obj2.label = intl.string(_modDef3236.YkET6R);
   const intl2 = tmp(1114).intl;
-  obj[2] = intl2.string(messagesProxyDefault.ZzcwNk);
-  obj[3] = callback;
-  return obj;
+  obj2.subLabel = intl2.string(_modDef3236.ZzcwNk);
+  obj2.perform = callback;
+  return obj2;
 };

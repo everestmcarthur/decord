@@ -1,29 +1,23 @@
-// Module ID: 16663
-// Function ID: 16664
-// Name: ChannelContentComponent
-// Dependencies: [19, 17, 10123, 4742, 21, 4560, 1115, 10126, 5062, 16664, 5095, 8593, 16121, 4556, 2]
+// Module ID: 16695
+// Function ID: 16696
+// Name: ChannelContent
+// Dependencies: [19, 17, 10150, 4756, 21, 4574, 1115, 10153, 5076, 16696, 5109, 8621, 16151, 4570, 2]
 // Exports: renderChannelContent
 
-// Module 16663 (ChannelContentComponent)
-import isRoleRequiredDefault from "isRoleRequired" /* 5062 */;
-import getLayoutStyles from "getLayoutStyles" /* 10126 */;
-import SubscriptionGatedChannelIconDefault from "SubscriptionGatedChannelIcon" /* 16121 */;
-import _modDef16664 from "module_16664" /* 16664 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4742 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import set from "set" /* 1115 */;
+// Module 16695 (ChannelContent)
+import isRoleRequiredDefault from "isRoleRequired" /* 5076 */;
+import ChannelListLayout from "ChannelListLayout" /* 10153 */;
+import guild_channels_ChannelTitleDefault from "guild_channels/ChannelTitle" /* 16696 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+const GuildRoleSubscriptionGatedChannelIconDefault = tmp13(16151);
+require = fn;
 function ChannelContentComponent(arg0) {
   ({ subtitle, resolvedUnreadSetting, locked, lastMessageTimestampString, channel, layout, mentionCount, mentionBadge, isSubscriptionGated } = arg0);
   ({ name, unread, muted, connected, needSubscriptionToAccess } = arg0);
-  const tmp = callback2();
-  let obj = getLayoutStyles;
+  const tmp = closure_8();
   let tmp10Result = null != channel;
-  const layoutStyles = obj.getLayoutStyles(layout);
+  const layoutStyles = ChannelListLayout.getLayoutStyles(layout);
   if (tmp10Result) {
     if (!locked) {
       locked = isRoleRequiredDefault(channel);
@@ -33,34 +27,34 @@ function ChannelContentComponent(arg0) {
   if (channel != null) {
     let isNSFWResult = channel.isNSFW();
   }
-  const isValidElementResult = validElement.isValidElement(subtitle);
-  let obj14 = null != lastMessageTimestampString;
-  let tmp10Result2 = obj14;
-  if (obj14) {
-    tmp10Result2 = null == mentionBadge;
+  const isValidElementResult = noop.isValidElement(subtitle);
+  let obj17 = null != lastMessageTimestampString;
+  let tmp10Result6 = obj17;
+  if (obj17) {
+    tmp10Result6 = null == mentionBadge;
   }
-  obj = { style: tmp.channelContent, children: null };
-  obj = { style: tmp.channelContainer, children: null };
+  const obj2 = { style: tmp.channelContent, children: null };
+  const obj3 = { style: tmp.channelContainer, children: null };
   const items = [tmp.leftBox, ];
   let str = "center";
   if (isValidElementResult) {
     str = "space-between";
   }
-  obj1 = { style: items, children: null };
+  const obj4 = { style: items, children: null };
   items[1] = { justifyContent: str };
   let num = 0;
-  if (tmp10Result2) {
+  if (tmp10Result6) {
     num = 30;
   }
-  const obj2 = { style: { flexDirection: "row", paddingRight: num, alignItems: "center" }, children: null };
-  const obj3 = { title: name, muted, unread, resolvedUnreadSetting: null, connected: null, layout: null };
+  const obj5 = { style: { flexDirection: "row", paddingRight: num, alignItems: "center" }, children: null };
+  const obj6 = { title: name, muted, unread, resolvedUnreadSetting: null, connected: null, layout: null };
   if (resolvedUnreadSetting == null) {
     resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
   }
-  obj3[3] = resolvedUnreadSetting;
-  obj3[4] = connected;
-  obj3[5] = layout;
-  const items1 = [closure_6(_modDef16664, obj3), ];
+  obj6.resolvedUnreadSetting = resolvedUnreadSetting;
+  obj6.connected = connected;
+  obj6.layout = layout;
+  const items1 = [timestampProducer(guild_channels_ChannelTitleDefault, obj6), ];
   let tmp12Result = tmp10Result;
   if (!tmp10Result) {
     tmp12Result = isNSFWResult;
@@ -74,36 +68,32 @@ function ChannelContentComponent(arg0) {
         num3 = 2;
       }
     }
-    const obj4 = { style: null, children: null };
-    const obj5 = { maxWidth: null };
-    obj5[0] = 14 * num3;
-    items2[1] = obj5;
-    obj4[0] = items2;
+    const obj7 = { style: null, children: null };
+    const obj8 = { maxWidth: 14 * num3 };
+    items2[1] = obj8;
+    obj7.style = items2;
     if (tmp10Result) {
-      const obj6 = { size: "xxs", color: "icon-muted", style: null };
-      obj6[2] = tmp.channelTraitIcon;
-      tmp10Result = tmp10(tmp2(5095).LockIcon, obj6);
+      const obj9 = { size: "xxs", color: "icon-muted", style: tmp.channelTraitIcon };
+      tmp10Result = tmp10(tmp2(5109).LockIcon, obj9);
     }
     const items3 = [tmp10Result, , ];
     if (isNSFWResult) {
-      const obj7 = { size: "xxs", color: "icon-muted", style: null };
-      obj7[2] = tmp.channelTraitIcon;
-      isNSFWResult = tmp10(tmp2(8593).WarningIcon, obj7);
+      const obj10 = { size: "xxs", color: "icon-muted", style: tmp.channelTraitIcon };
+      isNSFWResult = tmp10(tmp2(8621).WarningIcon, obj10);
     }
     items3[1] = isNSFWResult;
     if (isSubscriptionGated) {
-      const obj8 = { locked: null, isInMainTabsExperiment: true };
-      obj8[0] = needSubscriptionToAccess;
-      isSubscriptionGated = tmp10(SubscriptionGatedChannelIconDefault, obj8);
+      const obj11 = { locked: needSubscriptionToAccess, isInMainTabsExperiment: true };
+      isSubscriptionGated = tmp10(GuildRoleSubscriptionGatedChannelIconDefault, obj11);
     }
     items3[2] = isSubscriptionGated;
-    obj4[1] = items3;
-    tmp12Result = tmp12(tmp11, obj4);
+    obj7.children = items3;
+    tmp12Result = tmp12(tmp11, obj7);
   }
   items1[1] = tmp12Result;
-  obj2[1] = items1;
-  const items4 = [closure_7(View, obj2), ];
-  tmp10Result = null;
+  obj5.children = items1;
+  const items4 = [React5(View, obj5), ];
+  let tmp10Result4 = null;
   if (isValidElementResult) {
     if (mentionCount == null) {
       mentionCount = 0;
@@ -112,64 +102,66 @@ function ChannelContentComponent(arg0) {
     if (mentionCount > 0) {
       num5 = 20;
     }
-    const obj9 = { style: null, children: null };
-    const obj10 = { paddingRight: null };
-    obj10[0] = num5;
-    const items5 = [obj10, ];
-    const obj11 = { marginTop: null };
-    obj11[0] = layoutStyles.messagePreview.margin.marginTop;
-    items5[1] = obj11;
-    obj9[0] = items5;
-    obj9[1] = subtitle;
-    tmp10Result = tmp10(tmp11, obj9);
+    const obj12 = { style: null, children: null };
+    const obj13 = { paddingRight: num5 };
+    const items5 = [obj13, ];
+    const obj14 = { marginTop: layoutStyles.messagePreview.margin.marginTop };
+    items5[1] = obj14;
+    obj12.style = items5;
+    obj12.children = subtitle;
+    tmp10Result4 = tmp10(tmp11, obj12);
   }
-  items4[1] = tmp10Result;
-  obj1[1] = items4;
-  const items6 = [closure_7(View, obj1), ];
-  const obj12 = { style: tmp10Result2 ? tmp.rightContentAbsolute : tmp.rightBox, children: null };
-  let tmp10Result1 = obj14;
-  if (obj14) {
-    const obj13 = { variant: "text-xs/medium", color: "text-muted", style: null, maxFontSizeMultiplier: 1.75, children: null };
-    obj13[2] = { marginLeft: "auto" };
-    obj13[4] = lastMessageTimestampString;
-    tmp10Result1 = tmp10(tmp2(4556).Text, obj13);
+  items4[1] = tmp10Result4;
+  obj4.children = items4;
+  const items6 = [React5(View, obj4), ];
+  const obj15 = { style: tmp10Result6 ? tmp.rightContentAbsolute : tmp.rightBox, children: null };
+  let tmp10Result5 = obj17;
+  if (obj17) {
+    const obj16 = { variant: "text-xs/medium", color: "text-muted", style: { marginLeft: "auto" }, maxFontSizeMultiplier: 1.75, children: lastMessageTimestampString };
+    tmp10Result5 = tmp10(tmp2(4570).Text, obj16);
   }
-  const items7 = [tmp10Result1, , ];
+  const items7 = [tmp10Result5, , ];
   const items8 = [{ alignItems: "center", paddingLeft: 4 }, ];
-  if (obj14) {
-    obj14 = { marginTop: 5 };
+  if (obj17) {
+    obj17 = { marginTop: 5 };
   }
-  items8[1] = obj14;
-  items7[1] = closure_6(View, { style: items8, children: mentionBadge });
-  if (tmp10Result2) {
-    const obj15 = { style: null };
-    obj15[0] = { flex: 1 };
-    tmp10Result2 = tmp10(tmp11, obj15);
+  items8[1] = obj17;
+  items7[1] = timestampProducer(View, { style: items8, children: mentionBadge });
+  if (tmp10Result6) {
+    const obj18 = { style: { flex: 1 } };
+    tmp10Result6 = tmp10(tmp11, obj18);
   }
-  items7[2] = tmp10Result2;
-  obj12[1] = items7;
-  items6[1] = closure_7(View, obj12);
-  obj[1] = items6;
-  obj[1] = closure_7(View, obj);
-  return closure_6(View, obj);
+  items7[2] = tmp10Result6;
+  obj15.children = items7;
+  items6[1] = React5(View, obj15);
+  obj3.children = items6;
+  obj2.children = React5(View, obj3);
+  return timestampProducer(View, obj2);
 }
-({ jsx: closure_6, jsxs: error } = jsxProd);
+const View = fn(17).View;
+const UnreadSetting = fn(4756).UnreadSetting;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let PlatformUtils = fn(1115);
 let num = -1;
-if (set.isIOS()) {
+if (PlatformUtils.isIOS()) {
   num = 2;
 }
-createCacheKey = { channelContent: { flex: 1, marginTop: num }, channelContainer: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, leftBox: { flexDirection: "column", alignItems: "flex-start", flexShrink: 1 }, rightBox: { flexDirection: "column", alignItems: "flex-end" }, rightContentAbsolute: { position: "absolute", right: 0, top: 0 }, channelTraits: { display: "flex", flexDirection: "row", alignItems: "center" }, channelTraitIcon: null };
-createCacheKey = { opacity: require("hairlineWidth").SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
+let obj3 = { channelContent: { flex: 1, marginTop: num }, channelContainer: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, leftBox: { flexDirection: "column", alignItems: "flex-start", flexShrink: 1 }, rightBox: { flexDirection: "column", alignItems: "flex-end" }, rightContentAbsolute: { position: "absolute", right: 0, top: 0 }, channelTraits: { display: "flex", flexDirection: "row", alignItems: "center" }, channelTraitIcon: null };
+let obj4 = { opacity: fn(10150).SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
+PlatformUtils = fn(1115);
 let num2 = 0;
-if (set.isAndroid()) {
+if (PlatformUtils.isAndroid()) {
   num2 = 2;
 }
-createCacheKey[2] = num2;
-createCacheKey[6] = createCacheKey;
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelContent.tsx");
+obj4.marginTop = num2;
+obj3.channelTraitIcon = obj4;
+let closure_8 = createStyles.createStyles(obj3);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelContent.tsx");
 
 export const renderChannelContent = function renderChannelContent(arg0) {
   const merged = Object.assign(arg0);
-  return callback(ChannelContentComponent, {});
+  return timestampProducer(ChannelContentComponent, {});
 };

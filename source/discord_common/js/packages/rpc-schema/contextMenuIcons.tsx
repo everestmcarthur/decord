@@ -1,11 +1,11 @@
-// Module ID: 14482
-// Function ID: 14483
-// Name: CONTEXT_MENU_ICON_NAMES
+// Module ID: 14507
+// Function ID: 14508
+// Name: contextMenuIcons
 // Dependencies: [2]
 
-// Module 14482 (CONTEXT_MENU_ICON_NAMES)
-import set from "set" /* 2 */;
+// Module 14507 (contextMenuIcons)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/rpc-schema/contextMenuIcons.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/rpc-schema/contextMenuIcons.tsx");
 
 export const CONTEXT_MENU_ICON_NAMES = ["add", "remove", "check", "close", "copy", "link", "edit", "delete", "share", "download", "upload", "send", "refresh", "retry", "exit", "search", "filter", "settings", "wrench", "home", "compass", "globe", "more", "info", "question", "warning", "bug", "shield", "lock", "eye", "eye_slash", "bell", "bell_slash", "clock", "calendar", "image", "video", "file", "folder", "book", "clipboard", "list", "inbox", "tag", "bookmark", "flag", "star", "heart", "microphone", "play", "pause", "user", "chat", "crown", "trophy", "medal", "game_controller", "dice", "puzzle", "sparkles", "gift", "fire", "lightbulb", "robot", "paint_palette"];

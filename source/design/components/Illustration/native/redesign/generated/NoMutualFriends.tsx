@@ -1,66 +1,64 @@
-// Module ID: 12614
-// Function ID: 12615
-// Name: getNoMutualFriendsSource
-// Dependencies: [19, 17, 21, 8233, 12615, 12616, 12617, 4411, 2]
+// Module ID: 12640
+// Function ID: 12641
+// Name: NoMutualFriends
+// Dependencies: [19, 17, 21, 8259, 12641, 12642, 12643, 4425, 2]
 // Exports: NoMutualFriends, getNoMutualFriendsSource, useNoMutualFriendsSource
 
-// Module 12614 (getNoMutualFriendsSource)
-import noopAll from "noop" /* 19 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
-import getIllustrationSource from "getIllustrationSource" /* 8233 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 12640 (NoMutualFriends)
+import shared from "shared" /* 4425 */;
+import _mod8259 from "module_8259" /* 8259 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/NoMutualFriends.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/NoMutualFriends.tsx");
 
 export const getNoMutualFriendsSource = function getNoMutualFriendsSource(theme) {
-  let obj = getIllustrationSource;
-  obj = {
+  return _mod8259.getIllustrationSource(theme, {
     dark() {
-      return callback(12615);
+      return require("module_12641");
     },
     darker() {
-      return callback(12616);
+      return require("module_12642");
     },
     light() {
-      return callback(12617);
+      return require("module_12643");
     }
-  };
-  return obj.getIllustrationSource(theme, obj);
+  });
 };
 export const useNoMutualFriendsSource = function useNoMutualFriendsSource() {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = shared;
+  return _mod8259.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return callback(12615);
+      return require("module_12641");
     },
     darker() {
-      return callback(12616);
+      return require("module_12642");
     },
     light() {
-      return callback(12617);
+      return require("module_12643");
     }
-  };
-  return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  });
 };
 export const NoMutualFriends = function NoMutualFriends(arg0) {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = shared;
+  const obj4 = {};
+  const illustrationSource = _mod8259.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return callback(12615);
+      return require("module_12641");
     },
     darker() {
-      return callback(12616);
+      return require("module_12642");
     },
     light() {
-      return callback(12617);
+      return require("module_12643");
     }
-  };
-  obj = {};
-  const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  });
   const merged = Object.assign(arg0);
-  obj.source = illustrationSource;
+  obj4.source = illustrationSource;
   return <Image />;
 };

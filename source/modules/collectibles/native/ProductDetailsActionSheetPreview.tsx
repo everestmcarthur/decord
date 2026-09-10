@@ -1,60 +1,51 @@
-// Module ID: 13139
-// Function ID: 13140
+// Module ID: 13164
+// Function ID: 13165
 // Name: ProductDetailsActionSheetPreview
-// Dependencies: [32, 19, 17, 21, 4560, 576, 1889, 13140, 13142, 2]
+// Dependencies: [32, 19, 17, 21, 4574, 576, 1889, 13165, 13167, 2]
 // Exports: default
 
-// Module 13139 (ProductDetailsActionSheetPreview)
-import ThemesDefault from "Themes" /* 576 */;
-import memoDefault from "memo" /* 13140 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13164 (ProductDetailsActionSheetPreview)
+import nativeDefault from "native" /* 576 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
+import BundleProductDetailsActionSheetPreviewDefault from "BundleProductDetailsActionSheetPreview" /* 13165 */;
+import IndividualProductPreview from "IndividualProductPreview" /* 13167 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-const require = arg1;
-({ useCallback: c4, useState: c5 } = noop);
-createCacheKey = { previewContainer: { flex: 1 }, previewDivider: null };
-createCacheKey = { borderBottomColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderBottomWidth: 1, paddingBottom: ThemesDefault.space.PX_16, flex: 1 };
-createCacheKey[1] = createCacheKey;
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetPreview.tsx");
+require = fn;
+const noop = fn(19);
+({ useCallback: closure_4, useState: hasOwnProperty } = noop);
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { previewContainer: { flex: 1 }, previewDivider: { borderBottomColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderBottomWidth: 1, paddingBottom: nativeDefault.space.PX_16, flex: 1 } };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetPreview.tsx");
 
 export default function ProductDetailsActionSheetPreview(onBundleActiveItemChange) {
   ({ product, handlePreviewPress, onTrackPress } = onBundleActiveItemChange);
-  let _require;
-  const tmp = callback4();
-  [tmp3, c0] = callback(callback3(0), 2);
-  const tmp2 = callback(callback3(0), 2);
-  let obj = {
+  c0 = undefined;
+  const tmp = closure_8();
+  [tmp3, c0] = hasOwnProperty(0);
+  const tmp2 = _slicedToArray(hasOwnProperty(0), 2);
+  const obj = {
     style: tmp.previewContainer,
-    onLayout: callback2((nativeEvent) => {
+    onLayout: React4((nativeEvent) => {
       _undefined(nativeEvent.nativeEvent.layout.width);
     }, []),
     children: null
   };
-  if (product.type === _require(1889).CollectiblesItemType.BUNDLE) {
-    obj = { product: null, width: null, handlePreviewPress: null, onTrackPress: null, onActiveItemChange: null };
-    obj[0] = product;
-    obj[1] = tmp3;
-    obj[2] = handlePreviewPress;
-    obj[3] = onTrackPress;
-    obj[4] = onBundleActiveItemChange.onBundleActiveItemChange;
-    let tmp7Result = tmp7(memoDefault, obj);
+  if (product.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
+    const obj2 = { product, width: tmp3, handlePreviewPress, onTrackPress, onActiveItemChange: onBundleActiveItemChange.onBundleActiveItemChange };
+    let tmp7Result = tmp7(BundleProductDetailsActionSheetPreviewDefault, obj2);
   } else {
-    obj = { style: null, children: null };
-    obj[0] = tmp.previewDivider;
-    obj1 = { product: null, width: null, handlePreviewPress: null, onTrackPress: null };
-    obj1[0] = product;
-    obj1[1] = tmp3;
-    obj1[2] = handlePreviewPress;
-    obj1[3] = onTrackPress;
-    obj[1] = tmp7(_require(13142).IndividualProductPreview, obj1);
-    tmp7Result = tmp7(tmp8, obj);
+    const obj3 = { style: tmp.previewDivider, children: null };
+    const obj4 = { product, width: tmp3, handlePreviewPress, onTrackPress };
+    obj3.children = tmp7(IndividualProductPreview.IndividualProductPreview, obj4);
+    tmp7Result = tmp7(tmp8, obj3);
   }
-  obj[2] = tmp7Result;
-  return <View style={tmp.previewContainer} onLayout={callback2((nativeEvent) => {
+  obj.children = tmp7Result;
+  return <View style={tmp.previewContainer} onLayout={React4((nativeEvent) => {
     _undefined(nativeEvent.nativeEvent.layout.width);
   }, [])}>{null}</View>;
 };

@@ -1,19 +1,22 @@
-// Module ID: 15172
-// Function ID: 15173
-// Name: clearTimeoutTimer
-// Dependencies: [1074, 1242, 7602, 7607, 11305, 2]
+// Module ID: 15199
+// Function ID: 15200
+// Name: QuestHomeRoundtripTracker
+// Dependencies: [1074, 1242, 7616, 7621, 11332, 2]
 
-// Module 15172 (clearTimeoutTimer)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import setDefault from "set" /* 7602 */;
-import set2 from "set" /* 7607 */;
-import _modDef11305 from "module_11305" /* 11305 */;
+// Module 15199 (QuestHomeRoundtripTracker)
+import Constants from "Constants" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 7616 */;
+import MetricEvents from "MetricEvents" /* 7621 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 11332 */;
+import size from "module_2" /* 2 */;
 
-const AnalyticEvents = ME.AnalyticEvents;
+const AnalyticEvents = Constants.AnalyticEvents;
 let c4 = 30000;
 class QuestHomeRoundtripTracker {
+  constructor() {
+    return Object.assign({ startTime: null, timeoutTimer: null });
+  }
 }
 const prototype = QuestHomeRoundtripTracker.prototype;
 prototype["clearTimeoutTimer"] = function clearTimeoutTimer() {
@@ -24,25 +27,21 @@ prototype["clearTimeoutTimer"] = function clearTimeoutTimer() {
     self.timeoutTimer = null;
   }
 };
-prototype["sendMetric"] = function sendMetric(timeout, duration) {
-  let obj = expandEventPropertiesDefault;
-  obj = { timeout, duration };
-  obj.track(AnalyticEvents.QUEST_HOME_ROUNDTRIP, obj);
+prototype["sendMetric"] = function sendMetric(timeout, duration, arg2) {
+  AnalyticsUtilsDefault.track(AnalyticEvents.QUEST_HOME_ROUNDTRIP, { timeout, duration });
   if (Math.random() <= 0.1) {
-    obj = { name: null, tags: null };
-    obj[0] = set2.MetricEvents.QUEST_HOME_ROUNDTRIP;
+    const obj3 = { name: MetricEvents.MetricEvents.QUEST_HOME_ROUNDTRIP, tags: null };
     const _HermesInternal = HermesInternal;
     const items = ["includes_bounties:" + arg2, ];
     const _HermesInternal2 = HermesInternal;
     items[1] = "timeout:" + timeout;
-    obj[1] = items;
-    setDefault.distribution(obj, duration);
-    const tmpResult = setDefault;
+    obj3.tags = items;
+    MonitoringAgentDefault.distribution(obj3, duration);
+    const tmpResult = MonitoringAgentDefault;
   }
 };
 prototype["startTracking"] = function startTracking() {
-  let self = this;
-  self = this;
+  const self = this;
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -85,13 +84,13 @@ prototype["stopTracking"] = function stopTracking() {
       const _Math2 = Math;
       self.sendMetric(flag2, Math.min(rounded, c4), flag);
     }
-    obj2 = _modDef11305;
+    obj2 = DiscordAppStateDefault;
   }
 };
 prototype["clearTracking"] = function clearTracking() {
   this.clearTimeoutTimer();
   this.startTime = null;
 };
-const result = set.fileFinishedImporting("modules/quests/QuestHomeRoundtripTracker.tsx");
+const result = size.fileFinishedImporting("modules/quests/QuestHomeRoundtripTracker.tsx");
 
-export default Object.create(QuestHomeRoundtripTracker.prototype);
+export default Object.assign({ startTime: null, timeoutTimer: null });

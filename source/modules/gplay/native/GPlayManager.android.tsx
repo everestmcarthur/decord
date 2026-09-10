@@ -1,48 +1,40 @@
-// Module ID: 10713
-// Function ID: 10714
-// Name: handleConnectionStateUpdated
-// Dependencies: [109, 5, 19, 17, 7420, 7421, 502, 4224, 7237, 9373, 7238, 1074, 4542, 1373, 21, 3, 7240, 573, 9372, 1241, 4153, 7429, 4233, 4884, 1242, 4905, 1114, 10714, 1896, 4763, 7412, 2]
+// Module ID: 10740
+// Function ID: 10741
+// Name: GPlayManager
+// Dependencies: [109, 5, 19, 17, 7434, 7435, 502, 4237, 7251, 9400, 7252, 1074, 4556, 1373, 21, 3, 7254, 573, 9399, 1241, 4166, 7443, 4246, 4898, 1242, 4919, 1114, 10741, 1896, 4777, 7426, 2]
 
-// Module 10713 (handleConnectionStateUpdated)
-import timestampDefault from "timestamp" /* 3 */;
-import noopAll from "noop" /* 19 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import getPlanIdForProduct from "getPlanIdForProduct" /* 9372 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "asyncGeneratorStep" /* 5 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 7420 */;
-import usePremiumPlanPurchasedStore from "usePremiumPlanPurchasedStore" /* 7421 */;
-import closure_9 from "fetchFingerprint" /* 502 */;
-import closure_10 from "reset" /* 4224 */;
-import closure_11 from "updateProduct" /* 7237 */;
-import { useGPlayAnalyticsStore } from "setGPlayAnalytics" /* 9373 */;
-import GPlayConnectionState from "GPlayConnectionState" /* 7238 */;
-import ME from "ME" /* 1074 */;
-import { OrderStatus } from "CustomCheckoutFlow" /* 4542 */;
-import { SubscriptionPlanInfo } from "GuildFeatures" /* 1373 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 10740 (GPlayManager)
+import LoggerDefault from "Logger" /* 3 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 4898 */;
+import GPlayActionCreators from "GPlayActionCreators" /* 9399 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
+import GiftPromotionStore from "GiftPromotionStore" /* 7434 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import SubscriptionStore from "SubscriptionStore" /* 4237 */;
+import IAPStore from "IAPStore" /* 7251 */;
 
-require = arg1;
+require = fn;
 function handleConnectionStateUpdated(connectionState) {
   connectionState = connectionState.connectionState;
-  dispatcherDefault.dispatch({ type: "GPLAY_UPDATE_CONNECTION_STATE", connectionState });
+  DispatcherDefault.dispatch({ type: "GPLAY_UPDATE_CONNECTION_STATE", connectionState });
   if (connectionState === constants.CONNECTED) {
-    const userCountry = getPlanIdForProduct.loadUserCountry();
-    userCountry.finally(() => callback(table[18]).ensureSkusLoaded(closure_30));
-    const obj2 = getPlanIdForProduct;
+    const userCountry = GPlayActionCreators.loadUserCountry();
+    userCountry.finally(() => GPlayActionCreators.ensureSkusLoaded(items));
   }
 }
 function handleConnectionOpen() {
-  getPlanIdForProduct.ensureSkusLoaded(items);
+  GPlayActionCreators.ensureSkusLoaded(items);
 }
 function handlePurchaseStateUpdated(arg0) {
   ({ billingResult, isActivePurchase } = arg0);
-  dispatcherDefault.dispatch({ type: "GPLAY_UPDATE_PURCHASE_STATE", billingResult, isActivePurchase });
+  DispatcherDefault.dispatch({ type: "GPLAY_UPDATE_PURCHASE_STATE", billingResult, isActivePurchase });
 }
 function handlePurchaseUpdated() {
   const self = this;
-  const apply = _handlePurchaseUpdated.apply;
+  const apply = closure_35.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -50,368 +42,336 @@ function handlePurchaseUpdated() {
   }
   return applyArgumentsResult;
 }
-function _handlePurchaseUpdated() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c6 = 0;
-    c7 = 0;
-    c5 = 0;
-    const iter = (function*(arg0) {
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          if (arg0 === 1) {
-            c7 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            c5 = 1;
-            while (true) {
-              let tmp8 = dependencyMap;
-              let tmp9 = closure_9;
-              if (null == closure_9) {
-                break;
-              } else {
-                let tmp10 = dependencyMap;
-                let tmp11 = closure_9;
-                if (null == closure_9.pendingDowngrade) {
-                  break;
-                } else {
-                  let tmp18 = dependencyMap;
-                  let tmp19 = closure_3;
-                  let tmp20 = callback;
-                  let tmp21 = dependencyMap;
-                  let obj4 = callback(573);
-                  obj = { type: "GPLAY_UPDATE_PENDING_DOWNGRADE", pendingDowngrade: null };
-                  let tmp22 = closure_9;
-                  obj[1] = closure_9.pendingDowngrade;
-                  let dispatchResult = obj4.dispatch(obj);
-                  let tmp24 = lib;
-                  let tmp25 = dependencyMap;
-                  let obj7 = lib(4884);
-                  c6 = 8;
-                  let num4 = 1;
-                  c7 = 1;
-                  obj1 = { value: null, done: false };
-                  obj1[0] = obj7.fetchSubscriptions();
-                  return obj1;
-                }
-              }
-              let tmp12 = dependencyMap;
-              let tmp13 = lib;
-              let tmp14 = closure_3;
-              if (lib.isActive) {
-                let tmp17 = callback2;
-                c6 = 10;
-                let num3 = 1;
-                c7 = 1;
-                let obj2 = { value: null, done: false };
-                obj2[0] = callback2();
-                return obj2;
-              } else {
-                let tmp15 = lib;
-                let tmp16 = dependencyMap;
-                obj1 = lib(4884);
-                c6 = 9;
-                let num2 = 1;
-                c7 = 1;
-                let obj3 = { value: null, done: false };
-                obj3[0] = obj1.fetchSubscriptions();
-                return obj3;
-              }
-            }
-          } else {
-            c5 = 0;
-            obj4 = { type: "GPLAY_VERIFICATION_END", productId: null };
-            obj4[1] = lib.productId;
-            callback(573).dispatch(obj4);
-            c7 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp26) {
-          closure_4 = tmp26;
-          if (tmp4 === c5) {
-            c7 = tmp3;
-            throw tmp26;
-          } else if (tmp2 === tmp28) {
-            c6 = tmp;
-          } else if (tmp === tmp28) {
-            c6 = tmp3;
-          } else {
-            c6 = tmp5;
-          }
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_35 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function handleDowngradeCommand() {
-  const self = this;
-  const apply = _handleDowngradeCommand.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _handleDowngradeCommand() {
-  let self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    const iter = (function*(arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_2 = tmp4;
-              c1 = 0;
-              let downgradeCommand;
-              downgradeCommand = downgradeCommand.downgradeCommand;
-              c3 = 1;
-              c4 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else {
-            if (1 === tmp4) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                obj1 = { value: null, done: true };
-                obj1[0] = arg1;
-                return obj1;
-              } else if (constants.EXECUTE === downgradeCommand) {
-                c3 = 2;
-                c4 = 1;
-                const obj2 = { value: null, done: false };
-                obj2[0] = (function executePendingDowngrade() {
-                  const self = this;
-                  const apply = closure_38.apply;
-                  if (typeof apply === "unknown") {
-                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                  } else {
-                    applyArgumentsResult = apply(self, arguments);
-                  }
-                  return applyArgumentsResult;
-                })();
-                return obj2;
-              } else if (constants.CLEAR === tmp27) {
-                callback();
-              } else {
-                const _Error = Error;
-                const _HermesInternal = HermesInternal;
-                error = new Error("Invalid downgrade state " + downgradeCommand);
-                throw error;
-              }
-            } else if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            }
-            c4 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp19) {
-          c4 = tmp;
-          throw tmp19;
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_37 = tmp;
-  let apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _executePendingDowngrade() {
-  const self = this;
-  const tmp = callback(function*() {
-    if (c5 === 2) {
-      c5 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp7 === 3) {
+let closure_35 = async function _handlePurchaseUpdated(arg0) {
+  let purchase = arg0;
+  c6 = 0;
+  c7 = 0;
+  c5 = 0;
+  let iter = (async (arg0, value) => {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp10 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let lib = tmp4;
-            let pendingDowngrade = tmp8;
-            pendingDowngrade = undefined;
-            pendingDowngrade = closure_1_11.getPendingDowngrade();
-            if (null != pendingDowngrade) {
-              c3 = 2;
-              closure_1_1(closure_1_2[17]).dispatch({ type: "GPLAY_UPDATE_IS_DOWNGRADING", isDowngrading: true });
-              const obj13 = closure_1_1(closure_1_2[17]);
-              c4 = 3;
-              c5 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(closure_1_2[18]).downgradeSubscription(pendingDowngrade);
-              return obj1;
-            } else {
-              c5 = 3;
-            }
-          }
-        } else if (1 !== tmp8) {
-          if (2 === tmp8) {
-            c3 = 1;
-            lib = dependencyMap;
-            let obj5 = pendingDowngrade(4233);
-            const result = obj5.captureBillingException(lib);
-            let obj6 = lib(4905);
-            const obj2 = { title: null, body: null };
-            const intl = pendingDowngrade(1114).intl;
-            obj2[0] = intl.string(pendingDowngrade(1114).t["U+H+kd"]);
-            const intl2 = pendingDowngrade(1114).intl;
-            obj2[1] = intl2.string(pendingDowngrade(1114).t.LFFx5G);
-            obj6.show(obj2);
-            let newSubscriptionSkuId;
-            if (pendingDowngrade != null) {
-              newSubscriptionSkuId = pendingDowngrade.newSubscriptionSkuId;
-            }
-            let obj3 = { location: "executePendingDowngrade", product_id: null, purchase_token: null, error: null };
-            obj3[1] = newSubscriptionSkuId;
-            let purchaseToken;
-            if (pendingDowngrade != null) {
-              purchaseToken = pendingDowngrade.purchaseToken;
-            }
-            obj3[2] = purchaseToken;
-            obj3[3] = lib.message;
-            lib(1242).track(constants.GPLAY_PURCHASE_FAILED, obj3);
-            const obj9 = lib(1242);
-          } else if (3 === tmp8) {
+        c7 = 2;
+        switch (c6) {
+          case 0:
             if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
+              c7 = 3;
+              throw value;
             } else if (arg0 === 2) {
-              c3 = 0;
-              obj3 = lib(573);
-              obj3.dispatch({ type: "GPLAY_UPDATE_IS_DOWNGRADING", isDowngrading: false });
-              c5 = 3;
-              const obj4 = { value: null, done: true };
-              obj4[0] = arg1;
+              c7 = 3;
+              const obj4 = { value, done: true };
               return obj4;
             } else {
-              callback();
-              c4 = 4;
-              c5 = 1;
-              obj5 = { value: null, done: false };
-              obj5[0] = callback2();
-              return obj5;
+              closure_3 = tmp4;
+              closure_2 = tmp11;
+              let purchase2;
+              purchase2 = purchase.purchase;
+              closure_130_1 = undefined;
+              let giftOptionsForKey;
+              closure_130_3 = undefined;
+              closure_130_4 = undefined;
+              let planIdForGift;
+              closure_130_6 = undefined;
+              closure_130_7 = undefined;
+              let id;
+              closure_130_9 = undefined;
+              closure_130_10 = undefined;
+              closure_130_11 = undefined;
+              c6 = 1;
+              c7 = 1;
+              return { value: "PX_16", done: true };
             }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 0;
-            obj = lib(573);
-            obj.dispatch({ type: "GPLAY_UPDATE_IS_DOWNGRADING", isDowngrading: false });
-            c5 = 3;
-            obj6 = { value: null, done: true };
-            obj6[0] = arg1;
-            return obj6;
-          } else {
-            c3 = 1;
-          }
-          c3 = 0;
-          lib(573).dispatch({ type: "GPLAY_UPDATE_IS_DOWNGRADING", isDowngrading: false });
-          const obj11 = lib(573);
+          break;
+          case 1:
+            if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c7 = 3;
+              const obj6 = { value, done: true };
+              return obj6;
+            } else if (closure_131_11.isPurchasingProduct(purchase2.productId)) {
+              c7 = 3;
+              return { value: "HermesInternal", done: null };
+            } else {
+              closure_130_1 = closure_131_12.getState().analyticsByProductId[purchase2.productId];
+              giftOptionsForKey = closure_131_25[purchase2.productId];
+              closure_130_3 = closure_131_1(closure_131_2[19]).v3(purchase2.purchaseToken);
+              if (null != giftOptionsForKey) {
+                const obj9 = { type: "GIFT_PROMOTION_GIFT_OPTIONS_CACHE_ACTION", key: closure_130_3, giftOptions: null };
+                const obj10 = {};
+                const merged = Object.assign(giftOptionsForKey);
+                obj9.giftOptions = obj10;
+                closure_131_1(closure_131_2[17]).dispatch(obj9);
+                const obj39 = closure_131_1(closure_131_2[17]);
+              } else {
+                giftOptionsForKey = closure_131_6.getGiftOptionsForKey(closure_130_3);
+              }
+              c5 = 2;
+              const obj38 = closure_131_1(closure_131_2[19]);
+              const obj12 = { type: "GPLAY_VERIFICATION_START", productId: purchase2.productId };
+              closure_131_1(closure_131_2[17]).dispatch(obj12);
+              const IAPProductIds = closure_131_0(closure_131_2[16]).IAPProductIds;
+              if (IAPProductIds.includes(purchase2.productId)) {
+                c5 = 3;
+                const obj48 = closure_131_1(closure_131_2[20])();
+                closure_130_4 = closure_131_1(closure_131_2[20])().subtract(closure_131_0(closure_131_2[21]).DRAFT_ORDER_LOOKBACK_DAYS, "days").toISOString();
+                const subtractResult = closure_131_1(closure_131_2[20])().subtract(closure_131_0(closure_131_2[21]).DRAFT_ORDER_LOOKBACK_DAYS, "days");
+                planIdForGift = closure_131_0(closure_131_2[16]).getPlanIdForGift(purchase2.productId);
+                let tmp202;
+                if (null != planIdForGift) {
+                  let skuId;
+                  if (closure_131_20[planIdForGift] != null) {
+                    skuId = tmp207.skuId;
+                  }
+                  tmp202 = skuId;
+                }
+                closure_130_6 = tmp202;
+                const obj50 = closure_131_0(closure_131_2[16]);
+                const obj14 = { status: closure_131_19.DRAFT, createdAfter: closure_130_4, skuId: closure_130_6, paymentGateway: closure_131_18.GOOGLE, isGift: true };
+                c6 = 5;
+                c7 = 1;
+                const obj16 = { value: closure_131_0(closure_131_2[21]).getOrders(obj14), done: false };
+                return obj16;
+              } else if (purchase2.purchaseState === closure_131_15.PENDING) {
+                c5 = 0;
+                const obj17 = { type: "GPLAY_VERIFICATION_END", productId: purchase2.productId };
+                closure_131_1(closure_131_2[17]).dispatch(obj17);
+                c7 = 3;
+                return { value: "HermesInternal", done: null };
+              } else {
+                c6 = 7;
+                c7 = 1;
+                const obj18 = { value: closure_131_0(closure_131_2[18]).verifyPurchase(purchase2, giftOptionsForKey), done: false };
+                return obj18;
+              }
+              const obj42 = closure_131_1(closure_131_2[17]);
+            }
+          break;
+          case 2:
+            c5 = 0;
+            const obj19 = { type: "GPLAY_VERIFICATION_END", productId: purchase2.productId };
+            closure_131_1(closure_131_2[17]).dispatch(obj19);
+            throw closure_4;
+          case 3:
+            c5 = 1;
+            closure_130_13 = closure_4;
+            const obj20 = { tags: null };
+            const obj22 = { productId: purchase2.productId };
+            obj20.tags = obj22;
+            const result = closure_131_0(closure_131_2[22]).captureBillingException(closure_130_13, obj20);
+            const _HermesInternal3 = HermesInternal;
+            closure_131_22.error("[handlePurchaseUpdated] Error verifying purchase " + purchase2.productId + ": " + closure_130_13.message);
+            const obj29 = closure_131_0(closure_131_2[22]);
+            const obj24 = { type: "GPLAY_PURCHASE_VERIFICATION_FAILED", productId: purchase2.productId };
+            closure_131_1(closure_131_2[17]).dispatch(obj24);
+            closure_1 = closure_130_1;
+            if (closure_130_1 == null) {
+              closure_1 = {};
+            }
+            closure_130_10 = closure_1;
+            const succeededOnlyFields = closure_130_10.succeededOnlyFields;
+            closure_130_11 = closure_131_4(closure_130_10, closure_131_3);
+            const obj32 = closure_131_1(closure_131_2[17]);
+            const obj25 = {};
+            const merged1 = Object.assign(closure_130_11);
+            obj25.location = "handlePurchaseUpdated";
+            obj25.product_id = purchase2.productId;
+            obj25.purchase_token = purchase2.purchaseToken;
+            obj25.error = closure_130_13.message;
+            closure_131_1(closure_131_2[24]).track(closure_131_16.GPLAY_PURCHASE_FAILED, obj25);
+            c5 = 0;
+            const obj34 = closure_131_1(closure_131_2[24]);
+            const obj27 = { type: "GPLAY_VERIFICATION_END", productId: purchase2.productId };
+            closure_131_1(closure_131_2[17]).dispatch(obj27);
+            const obj56 = closure_131_1(closure_131_2[17]);
+          break;
+          case 4:
+            c5 = 2;
+            closure_130_12 = closure_4;
+            const obj28 = { tags: { source: "GPlayManager_handlePurchaseUpdated_sign" }, extra: null };
+            const obj30 = { productId: purchase2.productId };
+            obj28.extra = obj30;
+            const result1 = closure_131_0(closure_131_2[22]).captureBillingException(closure_130_12, obj28);
+            const _HermesInternal2 = HermesInternal;
+            closure_131_22.error("[handlePurchaseUpdated] Failed to find or sign order: " + closure_130_12.message);
+            const obj26 = closure_131_0(closure_131_2[22]);
+          break;
+          case 5:
+            if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 0;
+              const obj31 = { type: "GPLAY_VERIFICATION_END", productId: purchase2.productId };
+              closure_131_1(closure_131_2[17]).dispatch(obj31);
+              c7 = 3;
+              const obj33 = { value, done: true };
+              return obj33;
+            } else {
+              closure_130_7 = value;
+              if (closure_130_7.length > 0) {
+                id = closure_130_7[0].id;
+                const obj35 = { orderId: id, productId: purchase2.productId, skuId: closure_130_6 };
+                closure_131_22.info("[handlePurchaseUpdated] Signing order from backend query", obj35);
+                c6 = 6;
+                c7 = 1;
+                const obj37 = { value: closure_131_0(closure_131_2[21]).markOrderAsSigningInProgress(id), done: false };
+                return obj37;
+              } else {
+                const obj40 = { productId: purchase2.productId, skuId: closure_130_6 };
+                closure_131_22.warn("[handlePurchaseUpdated] No draft order found for signing", obj40);
+                c5 = 2;
+              }
+            }
+          break;
+          case 6:
+            if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 0;
+              const obj41 = { type: "GPLAY_VERIFICATION_END", productId: purchase2.productId };
+              closure_131_1(closure_131_2[17]).dispatch(obj41);
+              c7 = 3;
+              const obj43 = { value, done: true };
+              return obj43;
+            }
+          break;
+          case 7:
+            if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 0;
+              const obj45 = { type: "GPLAY_VERIFICATION_END", productId: purchase2.productId };
+              closure_131_1(closure_131_2[17]).dispatch(obj45);
+              c7 = 3;
+              const obj47 = { value, done: true };
+              return obj47;
+            } else {
+              closure_130_9 = value;
+              let tmp14 = null != closure_130_9;
+              if (tmp14) {
+                tmp14 = null != giftOptionsForKey;
+              }
+              if (tmp14) {
+                const obj49 = { type: "GIFT_PROMOTION_GIFT_OPTIONS_CLEAR_CACHE_ACTION", key: closure_130_3 };
+                closure_131_1(closure_131_2[17]).dispatch(obj49);
+                const productId = purchase2.productId;
+                delete tmp8[tmp7];
+                const obj3 = closure_131_1(closure_131_2[17]);
+              }
+              if (null != closure_130_9) {
+                const obj52 = { type: "GPLAY_PURCHASE_VERIFIED", productId: purchase2.productId };
+                closure_131_1(closure_131_2[17]).dispatch(obj52);
+                const obj5 = closure_131_1(closure_131_2[17]);
+              }
+              if (null != closure_130_9) {
+                const SubscriptionProductIds = closure_131_0(closure_131_2[16]).SubscriptionProductIds;
+                if (!SubscriptionProductIds.includes(purchase2.productId)) {
+                  const result2 = closure_131_0(closure_131_2[18]).sendPaymentCompleteAnalytics(purchase2);
+                  const _HermesInternal = HermesInternal;
+                  closure_131_22.info("[handlePurchaseUpdated] One Time Purchase verified and consumed: " + purchase2.productId);
+                  c5 = 1;
+                  const obj7 = closure_131_0(closure_131_2[18]);
+                }
+              }
+              if (null != closure_130_9) {
+                if (null != closure_130_9.pendingDowngrade) {
+                  const obj53 = { type: "GPLAY_UPDATE_PENDING_DOWNGRADE", pendingDowngrade: closure_130_9.pendingDowngrade };
+                  closure_131_1(closure_131_2[17]).dispatch(obj53);
+                  const obj11 = closure_131_1(closure_131_2[17]);
+                  c6 = 8;
+                  c7 = 1;
+                  const obj54 = { value: closure_131_0(closure_131_2[23]).fetchSubscriptions(), done: false };
+                  return obj54;
+                }
+              }
+              if (purchase2.isActive) {
+                c6 = 10;
+                c7 = 1;
+                const obj55 = { value: closure_131_40(), done: false };
+                return obj55;
+              } else {
+                c6 = 9;
+                c7 = 1;
+                const obj57 = { value: closure_131_0(closure_131_2[23]).fetchSubscriptions(), done: false };
+                return obj57;
+              }
+            }
+          break;
+          case 8:
+            if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 0;
+              const obj59 = { type: "GPLAY_VERIFICATION_END", productId: purchase2.productId };
+              closure_131_1(closure_131_2[17]).dispatch(obj59);
+              c7 = 3;
+              const obj60 = { value, done: true };
+              return obj60;
+            }
+          break;
+          case 9:
+            if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 0;
+              const obj61 = { type: "GPLAY_VERIFICATION_END", productId: purchase2.productId };
+              closure_131_1(closure_131_2[17]).dispatch(obj61);
+              c7 = 3;
+              const obj = { value, done: true };
+              return obj;
+            }
+          break;
+          default:
+            if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 0;
+              const obj63 = { type: "GPLAY_VERIFICATION_END", productId: purchase2.productId };
+              closure_131_1(closure_131_2[17]).dispatch(obj63);
+              c7 = 3;
+              const obj65 = { value, done: true };
+              return obj65;
+            }
         }
-        c3 = 0;
-        lib(573).dispatch({ type: "GPLAY_UPDATE_IS_DOWNGRADING", isDowngrading: false });
-        throw dependencyMap;
-      } catch (tmp64) {
-        dependencyMap = tmp64;
-        if (tmp5 === c3) {
-          c5 = tmp3;
-          throw tmp64;
-        } else if (tmp2 === tmp66) {
-          c4 = tmp2;
+      } catch (tmp230) {
+        closure_4 = tmp230;
+        if (tmp5 === c5) {
+          c7 = tmp3;
+          throw tmp230;
+        } else if (tmp2 === tmp232) {
+          c6 = tmp;
+        } else if (tmp === tmp232) {
+          c6 = tmp3;
         } else {
-          c4 = tmp;
+          c6 = tmp6;
         }
       }
     }
-  });
-  closure_38 = tmp;
-  const apply = tmp.apply;
+  })();
+  iter.next();
+  return iter;
+};
+function handleDowngradeCommand() {
+  const self = this;
+  const apply = closure_37.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -419,12 +379,178 @@ function _executePendingDowngrade() {
   }
   return applyArgumentsResult;
 }
+let closure_37 = async function _handleDowngradeCommand(arg0) {
+  let downgradeCommand = arg0;
+  c3 = 0;
+  c4 = 0;
+  let iter = (async (arg0, value) => {
+    if (1 === tmp4) {
+      if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        return { value, done: true };
+      } else if (closure_130_14.EXECUTE === downgradeCommand2) {
+        c3 = 2;
+        c4 = 1;
+        return {
+          value: (function executePendingDowngrade() {
+                const self = this;
+                const apply = closure_1_38.apply;
+                if (typeof apply === "unknown") {
+                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                } else {
+                  applyArgumentsResult = apply(self, arguments);
+                }
+                return applyArgumentsResult;
+              })(),
+          done: false
+        };
+      } else if (closure_130_14.CLEAR === tmp26) {
+        closure_130_39();
+      } else {
+        const _Error = Error;
+        const _HermesInternal = HermesInternal;
+        const error = new Error("Invalid downgrade state " + downgradeCommand2);
+        throw error;
+      }
+    } else if (arg0 === 1) {
+      c4 = 3;
+      throw value;
+    } else if (arg0 === 2) {
+      c4 = 3;
+      return { value, done: true };
+    }
+    await "HermesInternal";
+    downgradeCommand2 = downgradeCommand.downgradeCommand;
+    return "PX_16";
+  })();
+  iter.next();
+  return iter;
+};
+let closure_38 = async function _executePendingDowngrade(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp7 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_1 = tmp4;
+          closure_0 = tmp8;
+          closure_128_0 = undefined;
+          pendingDowngrade = pendingDowngrade.getPendingDowngrade();
+          closure_128_0 = pendingDowngrade;
+          if (null != pendingDowngrade) {
+            c3 = 2;
+            DispatcherDefault.dispatch({ type: "GPLAY_UPDATE_IS_DOWNGRADING", isDowngrading: true });
+            c4 = 3;
+            c5 = 1;
+            const obj5 = { value: GPlayActionCreators.downgradeSubscription(pendingDowngrade), done: false };
+            return obj5;
+          } else {
+            c5 = 3;
+          }
+        }
+      } else if (1 !== tmp8) {
+        if (2 === tmp8) {
+          c3 = 1;
+          closure_128_1 = closure_2;
+          const result = closure_129_0(closure_129_2[22]).captureBillingException(closure_128_1);
+          const obj6 = closure_129_0(closure_129_2[22]);
+          const obj8 = { title: null, body: null };
+          const intl = closure_129_0(closure_129_2[26]).intl;
+          obj8.title = intl.string(closure_129_0(closure_129_2[26]).t["U+H+kd"]);
+          const intl2 = closure_129_0(closure_129_2[26]).intl;
+          obj8.body = intl2.string(closure_129_0(closure_129_2[26]).t.LFFx5G);
+          closure_129_1(closure_129_2[25]).show(obj8);
+          const obj7 = closure_129_1(closure_129_2[25]);
+          let newSubscriptionSkuId;
+          if (closure_128_0 != null) {
+            newSubscriptionSkuId = closure_128_0.newSubscriptionSkuId;
+          }
+          const obj10 = { location: "executePendingDowngrade", product_id: newSubscriptionSkuId, purchase_token: null, error: null };
+          let purchaseToken;
+          if (closure_128_0 != null) {
+            purchaseToken = closure_128_0.purchaseToken;
+          }
+          obj10.purchase_token = purchaseToken;
+          obj10.error = closure_128_1.message;
+          closure_129_1(closure_129_2[24]).track(closure_129_16.GPLAY_PURCHASE_FAILED, obj10);
+          const obj9 = closure_129_1(closure_129_2[24]);
+        } else if (3 === tmp8) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 0;
+            closure_129_1(closure_129_2[17]).dispatch({ type: "GPLAY_UPDATE_IS_DOWNGRADING", isDowngrading: false });
+            c5 = 3;
+            const obj15 = { value, done: true };
+            return obj15;
+          } else {
+            closure_129_39();
+            c4 = 4;
+            c5 = 1;
+            const obj16 = { value: closure_129_40(), done: false };
+            return obj16;
+          }
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 0;
+          closure_129_1(closure_129_2[17]).dispatch({ type: "GPLAY_UPDATE_IS_DOWNGRADING", isDowngrading: false });
+          c5 = 3;
+          const obj17 = { value, done: true };
+          return obj17;
+        } else {
+          c3 = 1;
+        }
+        c3 = 0;
+        closure_129_1(closure_129_2[17]).dispatch({ type: "GPLAY_UPDATE_IS_DOWNGRADING", isDowngrading: false });
+        const obj11 = closure_129_1(closure_129_2[17]);
+      }
+      c3 = 0;
+      closure_129_1(closure_129_2[17]).dispatch({ type: "GPLAY_UPDATE_IS_DOWNGRADING", isDowngrading: false });
+      throw closure_2;
+    } catch (tmp64) {
+      closure_2 = tmp64;
+      if (tmp5 === c3) {
+        c5 = tmp3;
+        throw tmp64;
+      } else if (tmp2 === tmp66) {
+        c4 = tmp2;
+      } else {
+        c4 = tmp;
+      }
+    }
+  }
+};
 function clearPendingDowngrade() {
-  dispatcherDefault.dispatch({ type: "GPLAY_UPDATE_PENDING_DOWNGRADE", pendingDowngrade: null });
+  DispatcherDefault.dispatch({ type: "GPLAY_UPDATE_PENDING_DOWNGRADE", pendingDowngrade: null });
 }
 function fetchAndAlertActiveSubscription() {
   const self = this;
-  const apply = _fetchAndAlertActiveSubscription.apply;
+  const apply = closure_41.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -432,261 +558,237 @@ function fetchAndAlertActiveSubscription() {
   }
   return applyArgumentsResult;
 }
-function _fetchAndAlertActiveSubscription() {
-  const self = this;
-  const tmp = callback(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
+let closure_41 = async function _fetchAndAlertActiveSubscription(arg0, value) {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj3 = { value, done: true };
+      return obj3;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c3 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          closure_1 = tmp5;
+          closure_0 = tmp2;
+          let premiumTypeSubscription;
+          c2 = 1;
+          c3 = 1;
+          const obj5 = { value: actions_BillingActionCreators.fetchSubscriptions(), done: false };
+          return obj5;
+        }
+      } else if (arg0 === 1) {
+        c3 = 3;
+        throw value;
       } else if (arg0 === 2) {
-        obj = { value: null, done: true };
-        obj[0] = arg1;
+        c3 = 3;
+        let obj = { value, done: true };
         return obj;
+      } else {
+        premiumTypeSubscription = closure_129_10.getPremiumTypeSubscription();
+        if (null == premiumTypeSubscription) {
+          const _Error = Error;
+          const intl = closure_129_0(closure_129_2[26]).intl;
+          const error = new Error(intl.string(closure_129_0(closure_129_2[26]).t.PjfUXe));
+          throw error;
+        } else {
+          closure_129_7();
+          closure_129_8(() => {
+            closure_1(paths[25]).openLazy({
+              importer() {
+                return closure_2_0(paths[28])(paths[27], paths.paths).then((result) => {
+                  closure_0 = result.default;
+                  return (arg0) => {
+                    closure_0 = arg0;
+                    const obj = {};
+                    const merged = Object.assign(arg0);
+                    obj.subscription = subscription;
+                    obj.onClose = function onClose() { ... };
+                    return closure_3_21(closure_0, obj);
+                  };
+                });
+              }
+            });
+          });
+          c3 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      }
+    } catch (tmp24) {
+      c3 = tmp;
+      throw tmp24;
+    }
+  }
+};
+function handleAppStateUpdated() {
+  const self = this;
+  const apply = closure_43.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_43 = async function _handleAppStateUpdated(arg0) {
+  let state = arg0;
+  c5 = 0;
+  c6 = 0;
+  c4 = 0;
+  let iter = (async (arg0, value) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        c3 = 2;
-        if (0 === dependencyMap) {
+        c6 = 2;
+        if (0 === c5) {
           if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
+            c6 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            c6 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
+            closure_2 = tmp3;
             closure_1 = tmp5;
-            let callback = tmp2;
-            callback = undefined;
-            obj1 = closure_1_0(4884);
-            dependencyMap = 1;
-            c3 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = obj1.fetchSubscriptions();
-            return obj1;
+            let state2;
+            state2 = state.state;
+            c5 = 1;
+            c6 = 1;
+            return { value: "PX_16", done: true };
           }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
         } else {
-          callback = premiumTypeSubscription.getPremiumTypeSubscription();
-          if (null == callback) {
-            const _Error = Error;
-            const intl = callback(1114).intl;
-            error = new Error(intl.string(callback(1114).t.PjfUXe));
-            throw error;
-          } else {
-            callback2();
-            callback3(() => {
-              obj = tmp5(table[25]);
-              obj = {
-                importer() {
-                  return closure_1_0(closure_1_2[28])(closure_1_2[27], closure_1_2.paths).then((arg0) => {
-                    closure_0 = arg0.default;
-                    return () => { ... };
-                  });
-                }
-              };
-              obj.openLazy(obj);
-            });
-            c3 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        }
-      } catch (tmp24) {
-        c3 = tmp;
-        throw tmp24;
-      }
-    }
-  });
-  closure_41 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function handleAppStateUpdated() {
-  const self = this;
-  const apply = _handleAppStateUpdated.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _handleAppStateUpdated() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    const iter = (function*(arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
+          if (1 === tmp8) {
             if (arg0 === 1) {
               c6 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const table = tmp3;
-              closure_1 = tmp5;
-              let state;
-              state = state.state;
-              c5 = 1;
-              c6 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else {
-            if (1 === tmp8) {
-              if (arg0 === 1) {
-                c6 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c6 = 3;
-                obj1 = { value: null, done: true };
-                obj1[0] = arg1;
-                return obj1;
-              } else if (ready.isReady()) {
-                if (authenticated.isAuthenticated()) {
-                  if (state === constants.ACTIVE) {
-                    obj1 = state(table[18]);
-                    obj1.ensureSkusLoaded(closure_30);
-                    c4 = 1;
-                    c5 = 3;
-                    c6 = 1;
-                    const obj2 = { value: null, done: false };
-                    obj2[0] = closure_23.loadPurchases();
-                    return obj2;
-                  }
+              const obj5 = { value, done: true };
+              return obj5;
+            } else if (closure_130_11.isReady()) {
+              if (closure_130_9.isAuthenticated()) {
+                if (state2 === closure_130_17.ACTIVE) {
+                  closure_130_0(closure_130_2[18]).ensureSkusLoaded(closure_130_30);
+                  c4 = 1;
+                  c5 = 3;
+                  c6 = 1;
+                  const obj6 = { value: closure_130_23.loadPurchases(), done: false };
+                  return obj6;
                 }
               }
-            } else {
-              if (2 === tmp8) {
-                c4 = 0;
-                closure_23.open();
-              } else if (arg0 === 1) {
-                c6 = 3;
-                throw arg1;
-              } else if (arg0 !== 2) {
-                c4 = 0;
-              }
-              c4 = 0;
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
             }
-            c6 = 3;
-          }
-        } catch (tmp27) {
-          closure_3 = tmp27;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp27;
           } else {
-            c5 = tmp;
+            if (2 === tmp8) {
+              c4 = 0;
+              closure_130_23.open();
+            } else if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 !== 2) {
+              c4 = 0;
+            }
+            c4 = 0;
+            c6 = 3;
+            const obj = { value, done: true };
+            return obj;
           }
+          c6 = 3;
+        }
+      } catch (tmp27) {
+        closure_3 = tmp27;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp27;
+        } else {
+          c5 = tmp;
         }
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_43 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
+    }
+  })();
+  iter.next();
+  return iter;
+};
 let closure_3 = ["succeededOnlyFields"];
-noopAll;
+get_ActivityIndicator = fn(17);
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);
-({ setPaymentSuccess: error, showOldPaymentFlowSuccess: closure_8 } = usePremiumPlanPurchasedStore);
-({ GPlayConnectionState: map1, GPlayDowngradeCommand: closure_14, GPlayPurchaseState: closure_15 } = GPlayConnectionState);
-({ AnalyticEvents: closure_16, AppStates: closure_17, PaymentGateways: closure_18 } = ME);
-let closure_22 = new timestampDefault("GPlayManager.android");
+const PremiumPlanPurchasedStore = fn(7435);
+({ setPaymentSuccess: closure_7, showOldPaymentFlowSuccess: closure_8 } = PremiumPlanPurchasedStore);
+const useGPlayAnalyticsStore = fn(9400).useGPlayAnalyticsStore;
+let Constants = fn(7252);
+({ GPlayConnectionState: map1, GPlayDowngradeCommand: closure_14, GPlayPurchaseState: closure_15 } = Constants);
+Constants = fn(1074);
+({ AnalyticEvents: closure_16, AppStates: closure_17, PaymentGateways: closure_18 } = Constants);
+const OrderStatus = fn(4556).OrderStatus;
+const SubscriptionPlanInfo = fn(1373).SubscriptionPlanInfo;
+const jsx = fn(21).jsx;
+let closure_22 = new LoggerDefault("GPlayManager.android");
 const BillingManager = NativeModules.BillingManager;
 const nativeEventEmitter = new NativeEventEmitter(BillingManager);
-let obj = {};
-let c26 = null;
-let c27 = null;
-let c28 = null;
-let c29 = null;
-const items = [require("SubscriptionPlans").ProductIds.PREMIUM_TIER_2_MONTHLY];
-obj = {
-  giftInfoOptionsCache: obj,
+const giftInfoOptionsCache = {};
+let closure_26 = null;
+let closure_27 = null;
+let closure_28 = null;
+let closure_29 = null;
+const items = [fn(7254).ProductIds.PREMIUM_TIER_2_MONTHLY];
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/gplay/native/GPlayManager.android.tsx");
+
+export default {
+  giftInfoOptionsCache,
   initialize() {
     closure_26 = nativeEventEmitter.addListener("billing-manager-connection-state-updated", handleConnectionStateUpdated);
     closure_27 = nativeEventEmitter.addListener("billing-manager-purchase-state-updated", handlePurchaseStateUpdated);
     closure_28 = nativeEventEmitter.addListener("billing-manager-purchase-updated", handlePurchaseUpdated);
     closure_29 = nativeEventEmitter.addListener("billing-manager-downgrade-command", handleDowngradeCommand);
-    const subscription = dispatcherDefault.subscribe("APP_STATE_UPDATE", handleAppStateUpdated);
-    obj = dispatcherDefault;
-    const subscription1 = dispatcherDefault.subscribe("CONNECTION_OPEN", handleConnectionOpen);
+    const subscription = DispatcherDefault.subscribe("APP_STATE_UPDATE", handleAppStateUpdated);
+    const subscription1 = DispatcherDefault.subscribe("CONNECTION_OPEN", handleConnectionOpen);
     BillingManager.open();
   },
   terminate() {
     BillingManager.close();
-    if (c26 != null) {
+    if (closure_26 != null) {
       obj.remove();
     }
-    if (c27 != null) {
+    if (closure_27 != null) {
       obj2.remove();
     }
-    if (c28 != null) {
+    if (closure_28 != null) {
       obj3.remove();
     }
-    if (c29 != null) {
+    if (closure_29 != null) {
       obj4.remove();
     }
-    dispatcherDefault.unsubscribe("APP_STATE_UPDATE", handleAppStateUpdated);
-    obj = c26;
-    obj2 = c27;
-    obj3 = c28;
-    obj4 = c29;
-    const obj5 = dispatcherDefault;
-    dispatcherDefault.unsubscribe("CONNECTION_OPEN", handleConnectionOpen);
+    DispatcherDefault.unsubscribe("APP_STATE_UPDATE", handleAppStateUpdated);
+    obj = closure_26;
+    obj2 = closure_27;
+    obj3 = closure_28;
+    obj4 = closure_29;
+    DispatcherDefault.unsubscribe("CONNECTION_OPEN", handleConnectionOpen);
   }
 };
-const tmp7 = new timestampDefault("GPlayManager.android");
-let result = require("set").fileFinishedImporting("modules/gplay/native/GPlayManager.android.tsx");
-
-export default obj;

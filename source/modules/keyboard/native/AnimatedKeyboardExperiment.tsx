@@ -1,22 +1,23 @@
-// Module ID: 11355
-// Function ID: 11356
-// Name: apexExperiment
+// Module ID: 11382
+// Function ID: 11383
+// Name: AnimatedKeyboardExperiment
 // Dependencies: [1433, 1115, 2]
 // Exports: isAnimatedAndroidKeyboard
 
-// Module 11355 (apexExperiment)
-import set from "set" /* 2 */;
-import set2 from "set" /* 1115 */;
+// Module 11382 (AnimatedKeyboardExperiment)
+import PlatformUtils from "PlatformUtils" /* 1115 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-let obj = { 1: null };
-obj[1] = { enabled: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2025-08-animated-keyboard-android", kind: "user", defaultConfig: { enabled: false }, variations: obj });
+let obj = { name: "2025-08-animated-keyboard-android", kind: "user", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj.variations = obj2;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const enabled = apexExperiment.getConfig({ location: "isAnimatedKeyboardEnabled" }).enabled;
-const result = set.fileFinishedImporting("modules/keyboard/native/AnimatedKeyboardExperiment.tsx");
+const result = size.fileFinishedImporting("modules/keyboard/native/AnimatedKeyboardExperiment.tsx");
 
 export const AnimatedKeyboardExperiment = apexExperiment;
 export const isAnimatedAndroidKeyboard = function isAnimatedAndroidKeyboard() {
-  const obj = set2;
-  return set2.isAndroid() && enabled;
+  return PlatformUtils.isAndroid() && enabled;
 };

@@ -1,24 +1,25 @@
-// Module ID: 17728
-// Function ID: 17729
-// Name: context
-// Dependencies: [19, 21, 7253, 2]
+// Module ID: 17761
+// Function ID: 17762
+// Name: CreatorMonetizationSettingsDisabledContext
+// Dependencies: [19, 21, 7267, 2]
 // Exports: CreatorMonetizationSettingsDisabledContextProvider, useCreatorMonetizationSettingsDisabled
 
-// Module 17728 (context)
-import useShouldHideGuildPurchaseEntryPoints from "useShouldHideGuildPurchaseEntryPoints" /* 7253 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 17761 (CreatorMonetizationSettingsDisabledContext)
+import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 7267 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let context = importAllResult.createContext(undefined);
-const result = require("set").fileFinishedImporting("modules/creator_monetization/CreatorMonetizationSettingsDisabledContext.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+let context = noop.createContext(undefined);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/creator_monetization/CreatorMonetizationSettingsDisabledContext.tsx");
 
 export default context;
 export const useCreatorMonetizationSettingsDisabled = function useCreatorMonetizationSettingsDisabled() {
-  context = importAllResult.useContext(context);
+  context = noop.useContext(context);
   if (null == context) {
     const _Error = Error;
-    error = new Error("useCreatorMonetizationSettingsDisabled must be used within a CreatorMonetizationSettingsDisabledContext");
+    const error = new Error("useCreatorMonetizationSettingsDisabled must be used within a CreatorMonetizationSettingsDisabledContext");
     throw error;
   } else {
     return context;
@@ -26,7 +27,5 @@ export const useCreatorMonetizationSettingsDisabled = function useCreatorMonetiz
 };
 export const CreatorMonetizationSettingsDisabledContextProvider = function CreatorMonetizationSettingsDisabledContextProvider(arg0) {
   ({ guildId, children } = arg0);
-  let obj = useShouldHideGuildPurchaseEntryPoints;
-  obj = { value: obj.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId).shouldRestrictUpdatingCreatorMonetizationSettings, children };
-  return <context.Provider value={obj.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId).shouldRestrictUpdatingCreatorMonetizationSettings}>{children}</context.Provider>;
+  return <context.Provider value={CreatorMonetizationRestrictionsHooks.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId).shouldRestrictUpdatingCreatorMonetizationSettings}>{children}</context.Provider>;
 };

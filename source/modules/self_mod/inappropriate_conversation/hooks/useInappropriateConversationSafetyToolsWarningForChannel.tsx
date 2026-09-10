@@ -1,22 +1,20 @@
-// Module ID: 11400
-// Function ID: 11401
+// Module ID: 11427
+// Function ID: 11428
 // Name: useInappropriateConversationSafetyToolsWarningForChannel
-// Dependencies: [10973, 10975, 10977, 2]
+// Dependencies: [11000, 11002, 11004, 2]
 // Exports: useInappropriateConversationSafetyToolsWarningForChannel
 
-// Module 11400 (useInappropriateConversationSafetyToolsWarningForChannel)
-import set from "set" /* 2 */;
-import InappropriateConversationExperiment from "InappropriateConversationExperiment" /* 10973 */;
-import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 10975 */;
-import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10977 */;
+// Module 11427 (useInappropriateConversationSafetyToolsWarningForChannel)
+import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 11000 */;
+import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 11002 */;
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 11004 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationSafetyToolsWarningForChannel.tsx");
+const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationSafetyToolsWarningForChannel.tsx");
 
 export const useInappropriateConversationSafetyToolsWarningForChannel = function useInappropriateConversationSafetyToolsWarningForChannel(channelId) {
-  const isEligibleForInappropriateConversationWarning = InappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning({ location: "safety-tools-button" });
-  const obj = InappropriateConversationExperiment;
+  const isEligibleForInappropriateConversationWarning = SelfModInappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning({ location: "safety-tools-button" });
   const safetyAlertsSettingOrDefault = useSafetyAlertsSettingOrDefault.useSafetyAlertsSettingOrDefault();
-  const obj2 = useSafetyAlertsSettingOrDefault;
   const inappropriateConversationWarningsForChannel = useInappropriateConversationWarningsForChannel.useInappropriateConversationWarningsForChannel(channelId);
   if (isEligibleForInappropriateConversationWarning) {
     if (safetyAlertsSettingOrDefault) {

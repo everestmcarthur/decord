@@ -1,35 +1,30 @@
-// Module ID: 13293
-// Function ID: 13294
+// Module ID: 13316
+// Function ID: 13317
 // Name: ForLaterCardReminderHeader
-// Dependencies: [21, 11716, 12221, 4523, 2]
+// Dependencies: [21, 11742, 12247, 4537, 2]
 // Exports: ForLaterCardReminderHeader
 
-// Module 13293 (ForLaterCardReminderHeader)
-import set from "set" /* 2 */;
+// Module 13316 (ForLaterCardReminderHeader)
 import jsxProd from "jsxProd" /* 21 */;
-import _savedMessageJumpToMessage from "_savedMessageJumpToMessage" /* 11716 */;
+import SavedMessageUtils from "SavedMessageUtils" /* 11742 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("modules/saved_messages/native/ForLaterCardReminderHeader.tsx");
+const result = size.fileFinishedImporting("modules/saved_messages/native/ForLaterCardReminderHeader.tsx");
 
 export const ForLaterCardReminderHeader = function ForLaterCardReminderHeader(savedMessage) {
   savedMessage = savedMessage.savedMessage;
   ({ throttledNow, actions } = savedMessage);
-  let obj = _savedMessageJumpToMessage;
   let dueAt;
   if (savedMessage != null) {
     dueAt = savedMessage.saveData.dueAt;
   }
-  obj = { dueAt, now: throttledNow, type: tmp(11716).DueInStringTypes.SHORT };
-  const dueInString = obj.useDueInString(obj);
+  const obj = SavedMessageUtils;
+  const dueInString = obj.useDueInString({ dueAt, now: throttledNow, type: SavedMessageUtils.DueInStringTypes.SHORT });
   let tmp7 = null;
   if (null != savedMessage.saveData.dueAt) {
-    obj = { IconComponent: null, label: null, isCritical: null, actions: null };
-    obj[0] = tmp(4523).ClockIcon;
-    obj[1] = tmp5;
-    obj[2] = tmp6;
-    obj[3] = actions;
-    tmp7 = jsx(tmp(12221).ForLaterCardStatusHeader, { IconComponent: null, label: null, isCritical: null, actions: null });
+    const obj3 = { IconComponent: tmp(4537).ClockIcon, label: tmp5, isCritical: tmp6, actions };
+    tmp7 = jsx(tmp(12247).ForLaterCardStatusHeader, { IconComponent: tmp(4537).ClockIcon, label: tmp5, isCritical: tmp6, actions });
   }
   return tmp7;
 };

@@ -1,26 +1,26 @@
 // Module ID: 1395
 // Function ID: 1396
-// Name: parseStoreCountry
+// Name: StoreCountryUtils
 // Dependencies: [2]
 // Exports: parseStoreCountry
 
-// Module 1395 (parseStoreCountry)
-import set from "set" /* 2 */;
+// Module 1395 (StoreCountryUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/billing/utils/StoreCountryUtils.tsx");
+const result = size.fileFinishedImporting("modules/billing/utils/StoreCountryUtils.tsx");
 
 export const parseStoreCountry = function parseStoreCountry(storeCountry) {
   let tmp = storeCountry;
   if (null != storeCountry) {
     const obj = { country: null, setAt: null, isLocked: null };
-    ({ country: obj[0], set_at } = storeCountry);
+    ({ country: obj.country, set_at } = storeCountry);
     if (set_at == null) {
       set_at = storeCountry.setAt;
     }
     if (set_at == null) {
       set_at = null;
     }
-    obj[1] = set_at;
+    obj.setAt = set_at;
     let flag = storeCountry.is_locked;
     if (flag == null) {
       flag = storeCountry.isLocked;
@@ -28,7 +28,7 @@ export const parseStoreCountry = function parseStoreCountry(storeCountry) {
     if (flag == null) {
       flag = false;
     }
-    obj[2] = flag;
+    obj.isLocked = flag;
     tmp = obj;
   }
   return tmp;

@@ -1,69 +1,66 @@
-// Module ID: 16560
-// Function ID: 16561
+// Module ID: 16591
+// Function ID: 16592
 // Name: ResourcesRow
-// Dependencies: [19, 17, 16561, 21, 4560, 576, 16562, 12288, 4527, 16563, 1896, 5123, 4556, 1114, 2]
+// Dependencies: [19, 17, 16592, 21, 4574, 576, 16593, 12314, 4541, 16594, 1896, 5137, 4570, 1114, 2]
 // Exports: default
 
-// Module 16560 (ResourcesRow)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 16562 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import { ONBOARDING_HOME_RESOURCES_SHEET_KEY as closure_4 } from "ONBOARDING_HOME_RESOURCES_SHEET_KEY" /* 16561 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16591 (ResourcesRow)
+import nativeDefault from "native" /* 576 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12314 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 16593 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { display: "flex", flexDirection: "row", paddingBottom: 8, marginBottom: 16 }, channelItem: null };
-createCacheKey = { display: "flex", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.round, marginLeft: 8, paddingVertical: 8, paddingHorizontal: 12 };
-createCacheKey[1] = createCacheKey;
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/native/ResourcesRow.tsx");
+require = fn;
+const ScrollView = fn(17).ScrollView;
+let closure_4 = fn(16592).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { display: "flex", flexDirection: "row", paddingBottom: 8, marginBottom: 16 }, channelItem: { display: "flex", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.round, marginLeft: 8, paddingVertical: 8, paddingHorizontal: 12 } };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_onboarding_home/native/ResourcesRow.tsx");
 
 export default function ResourcesRow(guildId) {
   guildId = guildId.guildId;
-  importDefault = undefined;
-  const tmp = callback2();
+  const tmp = closure_7();
   importDefault = tmp;
   const arr = useResourceChannelsDefault(guildId);
   let obj = { horizontal: true, style: tmp.container, children: null };
   const substr = arr.slice(0, 2);
   const items = [
     substr.map((children) => {
-      closure_0 = children;
-      let obj = {
-        style: lib.channelItem,
+      const channelId = children;
+      const obj = {
+        style: channelItem.channelItem,
         onPress() {
-          const homeResourceChannel = guildId(closure_2_2[7]).selectHomeResourceChannel(channelId, channelId.channelId);
+          const homeResourceChannel = GuildOnboardingHomeActionCreators.selectHomeResourceChannel(guildId, channelId.channelId);
         },
-        children: null
+        children: closure_1_5(guildId(4570).Text, { variant: "text-md/medium", color: "text-default", children: children.title })
       };
-      obj = { variant: "text-md/medium", color: "text-default", children: children.title };
-      obj[2] = closure_1_5(guildId(closure_1_2[12]).Text, obj);
-      return closure_1_5(guildId(closure_1_2[11]).PressableOpacity, obj, children.channelId);
+      return closure_1_5(guildId(5137).PressableOpacity, obj, children.channelId);
     }),
 
   ];
   let tmp6 = null;
   if (tmp3) {
-    obj = { style: null, onPress: null, children: null };
-    obj[0] = tmp.channelItem;
-    obj[1] = function onPress() {
-      let obj = lib(closure_1_2[8]);
-      obj = { guildId };
-      obj.openLazy(guildId(closure_1_2[10])(closure_1_2[9], closure_1_2.paths), closure_1_4, obj);
+    const obj2 = {
+      style: tmp.channelItem,
+      onPress() {
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16594, dependencyMap.paths), closure_4, { guildId });
+        },
+      children: null
     };
-    obj = { variant: "text-md/medium", color: "text-default", children: null };
+    const obj3 = { variant: "text-md/medium", color: "text-default", children: null };
     const intl = guildId(1114).intl;
-    obj1 = { count: null };
-    obj1[0] = arr.length - 2;
-    obj[2] = intl.format(guildId(1114).t.F6iMs4, obj1);
-    obj[2] = callback(guildId(4556).Text, obj);
-    tmp6 = callback(guildId(5123).PressableOpacity, obj);
+    const obj4 = { count: arr.length - 2 };
+    obj3.children = intl.format(guildId(1114).t.F6iMs4, obj4);
+    obj2.children = closure_5(guildId(4570).Text, obj3);
+    tmp6 = closure_5(guildId(5137).PressableOpacity, obj2);
   }
   items[1] = tmp6;
-  obj[2] = items;
+  obj.children = items;
   return closure_6(ScrollView, obj);
 };

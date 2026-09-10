@@ -1,12 +1,12 @@
-// Module ID: 7348
-// Function ID: 7349
-// Name: VoiceChannelEffectAnimationType
+// Module ID: 7362
+// Function ID: 7363
+// Name: VoiceChannelEffectsConstants
 // Dependencies: [2]
 
-// Module 7348 (VoiceChannelEffectAnimationType)
-import set from "set" /* 2 */;
+// Module 7362 (VoiceChannelEffectsConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsConstants.tsx");
+const result = size.fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsConstants.tsx");
 
 export const VoiceChannelEffectAnimationType = { PREMIUM: 0, [0]: "PREMIUM", BASIC: 1, [1]: "BASIC" };
 export const EMOJI_SIZE = 32;

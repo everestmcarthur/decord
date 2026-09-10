@@ -1,20 +1,19 @@
-// Module ID: 16935
-// Function ID: 16936
-// Name: onInitializeSync
-// Dependencies: [4224, 1074, 1115, 504, 573, 2]
+// Module ID: 16972
+// Function ID: 16973
+// Name: GooglePlayPriceChangeStore
+// Dependencies: [4237, 1074, 1115, 504, 573, 2]
 
-// Module 16935 (onInitializeSync)
+// Module 16972 (GooglePlayPriceChangeStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_2 from "reset" /* 4224 */;
-import set from "set" /* 2 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import SubscriptionStore from "SubscriptionStore" /* 4237 */;
 
-const require = arg1;
+const require = fn;
 function onInitializeSync() {
-  let priceChange = null;
+  priceChange = null;
   c4 = false;
   if (obj.isAndroid()) {
-    premiumSubscription = premiumSubscription.getPremiumSubscription();
+    const premiumSubscription = SubscriptionStore.getPremiumSubscription();
     if (premiumSubscription != null) {
       priceChange = premiumSubscription.priceChange;
     }
@@ -37,18 +36,18 @@ function onInitializeSync() {
   }
 }
 let items = [, , ];
-({ ACTIVE: arr[0], PAST_DUE: arr[1], UNPAID: arr[2] } = require("ME").SubscriptionStatusTypes);
-let set = new Set(items);
+({ ACTIVE: arr[0], PAST_DUE: arr[1], UNPAID: arr[2] } = fn(1074).SubscriptionStatusTypes);
+const set = new Set(items);
 let c4 = false;
-let c5 = null;
+let priceChange = null;
 const Store = initializeDefault.Store;
 class GooglePlayPriceChangeStore extends Store {
 }
 const prototype = GooglePlayPriceChangeStore.prototype;
 prototype["initialize"] = function initialize() {
-  const items = [closure_2];
+  const items = [SubscriptionStore];
   this.syncWith(items, onInitializeSync);
-  this.waitFor(closure_2);
+  this.waitFor(SubscriptionStore);
 };
 Object.defineProperty(prototype, "shouldShowGooglePlayPriceChange", {
   get: function shouldShowGooglePlayPriceChange() {
@@ -58,12 +57,13 @@ Object.defineProperty(prototype, "shouldShowGooglePlayPriceChange", {
 });
 Object.defineProperty(prototype, "priceChangeRecord", {
   get: function priceChangeRecord() {
-    return c5;
+    return priceChange;
   },
   set: undefined
 });
 GooglePlayPriceChangeStore.displayName = "GooglePlayPriceChangeStore";
-const googlePlayPriceChangeStore = new GooglePlayPriceChangeStore(dispatcherDefault, {});
-const result = set.fileFinishedImporting("modules/premium/native/google_play_price_changes/GooglePlayPriceChangeStore.tsx");
+const googlePlayPriceChangeStore = new GooglePlayPriceChangeStore(DispatcherDefault, {});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/google_play_price_changes/GooglePlayPriceChangeStore.tsx");
 
 export default googlePlayPriceChangeStore;

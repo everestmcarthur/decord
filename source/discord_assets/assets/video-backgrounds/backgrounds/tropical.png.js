@@ -1,12 +1,11 @@
-// Module ID: 9109
-// Function ID: 9110
-// Name: metadata
+// Module ID: 9136
+// Function ID: 9137
 // Dependencies: [2]
 
-// Module 9109 (metadata)
-import set from "set" /* 2 */;
+// Module 9136
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/video-backgrounds/backgrounds/tropical.png.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/video-backgrounds/backgrounds/tropical.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/cc4247f477caba753bfda3b66dd480a417c59ccd741b3809fedbfc3c8bdd49fd.png";
 export const metadata = { fileBytes: 345245 };

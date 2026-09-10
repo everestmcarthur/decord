@@ -1,33 +1,33 @@
-// Module ID: 12153
-// Function ID: 12154
+// Module ID: 12179
+// Function ID: 12180
 // Name: CommandListSortButton
-// Dependencies: [19, 17, 12139, 1182, 21, 4560, 576, 1114, 5123, 4527, 12154, 1896, 4556, 11158, 2]
+// Dependencies: [19, 17, 12165, 1182, 21, 4574, 576, 1114, 5137, 4541, 12180, 1896, 4570, 11185, 2]
 // Exports: default
 
-// Module 12153 (CommandListSortButton)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { CommandListSortOrder } from "CommandListSortOrder" /* 12139 */;
-import { ANDROID_FOREGROUND_RIPPLE } from "semanticColor" /* 1182 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12179 (CommandListSortButton)
+import nativeDefault from "native" /* 576 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, button: null };
-createCacheKey = { overflow: "hidden", borderRadius: ThemesDefault.radii.xxl };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { gap: 4, flexDirection: "row", alignItems: "center", paddingHorizontal: 12, paddingVertical: 4, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { gap: 4, flexDirection: "row", alignItems: "center", paddingHorizontal: 12, paddingVertical: 4, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/sort/CommandListSortButton.tsx");
+require = fn;
+const View = fn(17).View;
+const CommandListSortOrder = fn(12165).CommandListSortOrder;
+const ANDROID_FOREGROUND_RIPPLE = fn(1182).ANDROID_FOREGROUND_RIPPLE;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { overflow: "hidden", borderRadius: nativeDefault.radii.xxl }, button: null };
+const obj3 = { overflow: "hidden", borderRadius: nativeDefault.radii.xxl };
+obj2.button = { gap: 4, flexDirection: "row", alignItems: "center", paddingHorizontal: 12, paddingVertical: 4, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/sort/CommandListSortButton.tsx");
 
 export default function CommandListSortButton(sortOrder) {
   sortOrder = sortOrder.sortOrder;
   const onSortOptionPress = sortOrder.onSortOptionPress;
-  const tmp = callback3();
+  const tmp = closure_8();
   if (CommandListSortOrder.POPULAR === sortOrder) {
     const intl2 = sortOrder(1114).intl;
     let stringResult = intl2.string(sortOrder(1114).t.SzxiqK);
@@ -35,29 +35,25 @@ export default function CommandListSortButton(sortOrder) {
     const intl = sortOrder(1114).intl;
     stringResult = intl.string(sortOrder(1114).t.m8xsti);
   }
-  let obj = {
+  const obj = {
     accessibilityRole: "button",
     androidRippleConfig: ANDROID_FOREGROUND_RIPPLE,
     activeOpacity: 0.8,
     style: tmp.container,
     onPress() {
-      let obj = onSortOptionPress(closure_1_2[9]);
-      obj = {
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12180, dependencyMap.paths), "CommandListSortActionSheet", {
         sortOrder,
         onSortOptionPress,
         onClose() {
-          callback(table[9]).hideActionSheet("CommandListSortActionSheet");
+          onSortOptionPress(closure_1_2[9]).hideActionSheet("CommandListSortActionSheet");
         }
-      };
-      obj.openLazy(sortOrder(closure_1_2[11])(closure_1_2[10], closure_1_2.paths), "CommandListSortActionSheet", obj);
+      });
     },
     children: null
   };
-  obj = { style: tmp.button, children: null };
-  const items = [callback(sortOrder(4556).Text, { variant: "text-sm/medium", color: "text-default", children: stringResult }), ];
-  obj = { size: "xs", color: onSortOptionPress(576).colors.TEXT_DEFAULT };
-  items[1] = callback(sortOrder(11158).ChevronSmallDownIcon, obj);
-  obj[1] = items;
-  obj[5] = callback2(View, obj);
-  return callback(sortOrder(5123).PressableOpacity, obj);
+  const obj2 = { style: tmp.button, children: null };
+  const items = [closure_6(sortOrder(4570).Text, { variant: "text-sm/medium", color: "text-default", children: stringResult }), closure_6(sortOrder(11185).ChevronSmallDownIcon, { size: "xs", color: onSortOptionPress(576).colors.TEXT_DEFAULT })];
+  obj2.children = items;
+  obj.children = closure_7(View, obj2);
+  return closure_6(sortOrder(5137).PressableOpacity, obj);
 };

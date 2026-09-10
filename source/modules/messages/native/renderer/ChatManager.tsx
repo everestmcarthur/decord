@@ -1,16 +1,16 @@
-// Module ID: 11543
-// Function ID: 11544
-// Name: getPreviousMessages
-// Dependencies: [7933, 11544, 1332, 2]
+// Module ID: 11569
+// Function ID: 11570
+// Name: ChatManager
+// Dependencies: [7947, 11570, 1332, 2]
 
-// Module 11543 (getPreviousMessages)
-import set from "set" /* 2 */;
-import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 1332 */;
-import getEmbeddedActivityKeyDefault from "getEmbeddedActivityKey" /* 11544 */;
-import Changeset from "Changeset" /* 7933 */;
+// Module 11569 (ChatManager)
+import _modDef1332 from "module_1332" /* 1332 */;
+import getEmbeddedActivityKeyDefault from "getEmbeddedActivityKey" /* 11570 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 7947 */;
+import size from "module_2" /* 2 */;
 
-({ Changeset: obj1, RowType: c3 } = Changeset);
-const result = set.fileFinishedImporting("modules/messages/native/renderer/ChatManager.tsx");
+({ Changeset: c2, RowType: c3 } = RowGeneratorConstants);
+const result = size.fileFinishedImporting("modules/messages/native/renderer/ChatManager.tsx");
 class ChatManager {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -94,33 +94,33 @@ prototype["setup"] = function setup(messages) {
   }
   self.maybeRemove = length === self.messages.length;
 };
-prototype["determineChangeTypeForUploadProgress"] = function determineChangeTypeForUploadProgress(items) {
+prototype["determineChangeTypeForUploadProgress"] = function determineChangeTypeForUploadProgress(compressionProgress) {
   let self = this;
-  if (null != this.uploadProgressIds[items.id]) {
-    items = tmp.items;
+  if (null != this.uploadProgressIds[compressionProgress.id]) {
+    const items = tmp.items;
     let length;
     if (items != null) {
       length = items.length;
     }
-    const items1 = items.items;
+    const items1 = compressionProgress.items;
     let length1;
     if (items1 != null) {
       length1 = items1.length;
     }
     if (length === length1) {
-      if (tmp.compressionProgress === items.compressionProgress) {
-        if (tmp.progress === items.progress) {
-          if (tmp.currentSize === items.currentSize) {
+      if (tmp.compressionProgress === compressionProgress.compressionProgress) {
+        if (tmp.progress === compressionProgress.progress) {
+          if (tmp.currentSize === compressionProgress.currentSize) {
             let UPDATE = constants.NOOP;
           }
         }
       }
     }
-    self = items.id;
-    self.uploadProgressIds[self] = items;
+    self = compressionProgress.id;
+    self.uploadProgressIds[self] = compressionProgress;
     UPDATE = constants.UPDATE;
   } else {
-    self.uploadProgressIds[items.id] = items;
+    self.uploadProgressIds[compressionProgress.id] = compressionProgress;
     return constants.INSERT;
   }
 };
@@ -167,7 +167,7 @@ prototype["determineChangeType"] = function determineChangeType(forceRender) {
             hasItem = updateMessageIds.has(message.id);
           }
           if (!hasItem) {
-            INSERT = isUndefinedOrNullDefault(tmp, message) ? tmp5.NOOP : tmp5.UPDATE;
+            INSERT = _modDef1332(tmp, message) ? tmp5.NOOP : tmp5.UPDATE;
           }
         }
         INSERT = constants.UPDATE;
@@ -194,9 +194,6 @@ prototype["createChangeset"] = function createChangeset() {
     let num3 = 0;
     if (0 < self._rows.length) {
       while (true) {
-        let tmp = num;
-        let tmp2 = num2;
-        let tmp3 = num3;
         if (num3 !== self.rows.length) {
           if (num !== self._rows.length) {
             let tmp12 = self._rows[num];
@@ -208,7 +205,6 @@ prototype["createChangeset"] = function createChangeset() {
                 let INSERT = tmp14.INSERT;
                 tmp13.index = num3 + num2;
                 let arr = items.push(tmp13);
-                let num6 = 1;
                 let sum = num3 + 1;
                 let sum1 = num;
                 let sum3 = num2;
@@ -220,8 +216,7 @@ prototype["createChangeset"] = function createChangeset() {
                 if (tmp13.type !== tmp24.LOADING) {
                   if (tmp13.changeType !== tmp14.NOOP) {
                     tmp13.index = num3 + num2;
-                    arr = items.push(tmp13);
-                    let num7 = 1;
+                    let arr7 = items.push(tmp13);
                     sum1 = num + 1;
                     sum = num3 + 1;
                     sum3 = num2;
@@ -242,8 +237,7 @@ prototype["createChangeset"] = function createChangeset() {
                     }
                     tmp13.changeType = tmp14.UPDATE;
                     tmp13.index = num3 + num2;
-                    let arr1 = items.push(tmp13);
-                    let num8 = 1;
+                    let arr8 = items.push(tmp13);
                     sum1 = num + 1;
                     sum = num3 + 1;
                     sum3 = num2;
@@ -251,17 +245,14 @@ prototype["createChangeset"] = function createChangeset() {
                 }
               }
             }
-            let obj = { changeType: null, index: null };
-            obj[0] = tmp14.REMOVE;
+            let obj2 = { changeType: tmp14.REMOVE, index: null };
             let sum2 = num3 + num2;
-            obj[1] = sum2;
-            let arr2 = items.push(obj);
+            obj2.index = sum2;
+            let arr9 = items.push(obj2);
             if (0 < sum2) {
-              let num9 = 1;
               let tmp22 = items[sum2 - 1];
               let maybeRemove = tmp22.changeType !== tmp14.NOOP;
               if (!maybeRemove) {
-                let tmp23 = constants2;
                 maybeRemove = tmp22.type !== constants2.MESSAGE;
               }
               if (!maybeRemove) {
@@ -271,28 +262,23 @@ prototype["createChangeset"] = function createChangeset() {
                 tmp22.changeType = tmp14.UPDATE;
               }
             }
-            let num10 = 1;
             sum1 = num + 1;
             sum3 = num2 + 1;
             sum = num3;
           } else {
             let tmp9 = self.rows[num3];
-            let tmp10 = constants;
             tmp9.changeType = constants.INSERT;
             tmp9.index = num3 + num2;
-            let arr3 = items.push(tmp9);
-            let num5 = 1;
+            let arr10 = items.push(tmp9);
             sum = num3 + 1;
             sum1 = num;
             sum3 = num2;
           }
         } else {
-          obj = { changeType: null, index: null };
-          let tmp4 = constants;
-          obj[0] = constants.REMOVE;
-          obj[1] = num3 + num2;
-          let arr4 = items.push(obj);
-          let num4 = 1;
+          let obj = { changeType: null, index: null };
+          obj.changeType = constants.REMOVE;
+          obj.index = num3 + num2;
+          let arr11 = items.push(obj);
           sum3 = num2 + 1;
           sum1 = num + 1;
           sum = num3;

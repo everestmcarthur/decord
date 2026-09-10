@@ -1,18 +1,19 @@
-// Module ID: 16999
-// Function ID: 17000
-// Dependencies: [19, 21, 4560, 16404, 2]
+// Module ID: 17030
+// Function ID: 17031
+// Name: LaunchPadNotificationCenter
+// Dependencies: [19, 21, 4574, 16435, 2]
 
-// Module 16999
-import goBackDefault from "goBack" /* 16404 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 17030 (LaunchPadNotificationCenter)
+import notifications_NotificationsDefault from "notifications/Notifications" /* 16435 */;
+import noop from "module_19" /* 19 */;
 
-let closure_3 = createCacheKey.createStyles({ wrapper: { height: "100%" } });
-const memoResult = importAllResult.memo(function NotificationsContent() {
-  const tmp = callback();
-  return jsx(goBackDefault, { style: callback().wrapper, nestedInLaunchPad: true });
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_3 = createStyles.createStyles({ wrapper: { height: "100%" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadNotificationCenter.tsx");
+
+export default noop.memo(function NotificationsContent() {
+  const tmp = closure_3();
+  return jsx(notifications_NotificationsDefault, { style: closure_3().wrapper, nestedInLaunchPad: true });
 });
-const result = require("set").fileFinishedImporting("modules/launchpad/native/LaunchPadNotificationCenter.tsx");
-
-export default memoResult;

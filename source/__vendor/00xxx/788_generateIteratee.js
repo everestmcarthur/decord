@@ -5,29 +5,30 @@
 // Exports: generateIteratee
 
 // Module 788 (generateIteratee)
+import resolve from "resolve" /* 789 */;
 import setupIntegration from "setupIntegration" /* 752 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const generateIteratee = function generateIteratee(arg0) {
   ({ isBrowser: require, root: dependencyMap, prefix: closure_2 } = arg0);
-  return (filename) => {
-    if (filename.filename) {
-      let isMatch = /^[a-zA-Z]:\\/.test(filename.filename);
+  return (root) => {
+    if (root.filename) {
+      let isMatch = /^[a-zA-Z]:\\/.test(root.filename);
       if (!isMatch) {
-        filename = filename.filename;
+        const filename = root.filename;
         let hasItem = filename.includes("\\");
         if (hasItem) {
-          const filename2 = filename.filename;
+          const filename2 = root.filename;
           hasItem = !filename2.includes("/");
         }
         isMatch = hasItem;
       }
       if (fn) {
         if (root) {
-          filename = filename.filename;
-          if (0 === filename.indexOf(tmp13)) {
-            filename.filename = filename.replace(tmp13, prefix);
+          const filename1 = root.filename;
+          if (0 === filename1.indexOf(tmp13)) {
+            root.filename = filename1.replace(tmp13, prefix);
           }
         }
       } else if (isMatch) {
@@ -37,19 +38,19 @@ export const generateIteratee = function generateIteratee(arg0) {
         } else {
           replaced = str3;
         }
-        const obj2 = fn(root[2]);
+        const obj2 = resolve;
         if (root) {
           let relativeResult = obj2.relative(tmp7, replaced);
         } else {
           relativeResult = obj2.basename(replaced);
         }
         const _HermesInternal = HermesInternal;
-        filename.filename = "" + prefix + relativeResult;
+        root.filename = "" + prefix + relativeResult;
         tmp7 = root;
       }
-      return filename;
+      return root;
     } else {
-      return filename;
+      return root;
     }
   };
 };
@@ -65,24 +66,23 @@ export const rewriteFramesIntegration = setupIntegration.defineIntegration(() =>
   }
   fn = obj.iteratee;
   if (!fn) {
-    fn = tmp3;
-    fn = (filename) => {
-      if (filename.filename) {
-        let isMatch = /^[a-zA-Z]:\\/.test(filename.filename);
+    fn = (root) => {
+      if (root.filename) {
+        let isMatch = /^[a-zA-Z]:\\/.test(root.filename);
         if (!isMatch) {
-          filename = filename.filename;
+          const filename = root.filename;
           let hasItem = filename.includes("\\");
           if (hasItem) {
-            const filename2 = filename.filename;
+            const filename2 = root.filename;
             hasItem = !filename2.includes("/");
           }
           isMatch = hasItem;
         }
         if (fn) {
           if (root) {
-            filename = filename.filename;
-            if (0 === filename.indexOf(tmp13)) {
-              filename.filename = filename.replace(tmp13, prefix);
+            const filename1 = root.filename;
+            if (0 === filename1.indexOf(tmp13)) {
+              root.filename = filename1.replace(tmp13, prefix);
             }
           }
         } else if (isMatch) {
@@ -92,23 +92,23 @@ export const rewriteFramesIntegration = setupIntegration.defineIntegration(() =>
           } else {
             replaced = str3;
           }
-          const obj2 = fn(root[2]);
+          const obj2 = resolve;
           if (root) {
             let relativeResult = obj2.relative(tmp7, replaced);
           } else {
             relativeResult = obj2.basename(replaced);
           }
           const _HermesInternal = HermesInternal;
-          filename.filename = "" + prefix + relativeResult;
+          root.filename = "" + prefix + relativeResult;
           tmp7 = root;
         }
-        return filename;
+        return root;
       } else {
-        return filename;
+        return root;
       }
     };
   }
-  obj = {
+  return {
     name: "RewriteFrames",
     processEvent(exception) {
       exception = exception.exception;
@@ -120,34 +120,34 @@ export const rewriteFramesIntegration = setupIntegration.defineIntegration(() =>
       if (exception) {
         tmp2 = (function _processExceptionsEvent(exception) {
           try {
-            let obj = {};
+            const obj = {};
             let merged = Object.assign(exception);
-            obj = {};
+            let obj2 = {};
             let merged1 = Object.assign(exception.exception);
             const values = exception.exception.values;
-            obj.values = values.map((stacktrace) => {
-              let obj = {};
+            obj2.values = values.map((stacktrace) => {
               const merged = Object.assign(stacktrace);
               stacktrace = stacktrace.stacktrace;
               if (stacktrace) {
                 const stacktrace2 = stacktrace.stacktrace;
-                obj = {};
+                const obj2 = {};
                 const merged1 = Object.assign(stacktrace2);
                 let mapped;
                 if (stacktrace2 != null) {
                   const frames = stacktrace2.frames;
                   if (frames != null) {
-                    mapped = frames.map((arg0) => callback(arg0));
+                    mapped = frames.map((item) => closure_1_0(item));
                   }
                 }
-                obj = { stacktrace: null, frames: mapped };
-                obj[0] = obj;
-                stacktrace = obj;
+                const obj3 = { stacktrace: null };
+                obj2.frames = mapped;
+                obj3.stacktrace = obj2;
+                stacktrace = obj3;
               }
               const merged2 = Object.assign(stacktrace);
-              return obj;
+              return {};
             });
-            obj.exception = obj;
+            obj.exception = obj2;
             return obj;
           } catch (err) {
             return tmp;
@@ -157,5 +157,4 @@ export const rewriteFramesIntegration = setupIntegration.defineIntegration(() =>
       return tmp2;
     }
   };
-  return obj;
 });

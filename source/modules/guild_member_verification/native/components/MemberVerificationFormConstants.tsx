@@ -1,15 +1,15 @@
-// Module ID: 5573
-// Function ID: 5574
-// Name: BANNER_RATIO_HEIGHT_16_9
+// Module ID: 5587
+// Function ID: 5588
+// Name: MemberVerificationFormConstants
 // Dependencies: [1477, 2]
 // Exports: useBannerHeight
 
-// Module 5573 (BANNER_RATIO_HEIGHT_16_9)
-import set from "set" /* 2 */;
+// Module 5587 (MemberVerificationFormConstants)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
+import size from "module_2" /* 2 */;
 
 let c2 = 0.5625;
-const result = set.fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationFormConstants.tsx");
+const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationFormConstants.tsx");
 
 export const BANNER_RATIO_HEIGHT_16_9 = 0.5625;
 export const AVATAR_SIZE = 76;

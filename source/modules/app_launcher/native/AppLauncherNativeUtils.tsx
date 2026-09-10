@@ -1,26 +1,32 @@
-// Module ID: 12055
-// Function ID: 12056
-// Name: handleApplicationSelected
-// Dependencies: [19, 1957, 1371, 1482, 1074, 4999, 4740, 7523, 12056, 7521, 1894, 7778, 1884, 9294, 1396, 11220, 9624, 12061, 7168, 9520, 4528, 2]
+// Module ID: 12081
+// Function ID: 12082
+// Name: AppLauncherNativeUtils
+// Dependencies: [19, 1957, 1371, 1482, 1074, 5013, 4754, 7537, 12082, 7535, 1894, 7792, 1884, 9321, 1396, 11247, 9651, 12087, 7182, 9547, 4542, 2]
 // Exports: getAppLauncherIconSource, getInitialOptionValues, handleApplicationCommandSelected, handleApplicationSelected, handleViewAllSelected, useHandleActivityItemSelected, useLogAppLauncherEmptyStateView
 
-// Module 12055 (handleApplicationSelected)
-import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
-import registerAssetDefault from "registerAsset" /* 1884 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
-import setActiveCommandAll from "setActiveCommand" /* 7778 */;
-import getShelfBadgeTypeIfActive from "getShelfBadgeTypeIfActive" /* 9294 */;
-import Placeholder from "Placeholder" /* 12056 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import closure_6 from "mergeGuildAvatar" /* 1371 */;
-import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1482 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 4999 */;
+// Module 12081 (AppLauncherNativeUtils)
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import _modDef1884 from "module_1884" /* 1884 */;
+import Server from "Server" /* 1894 */;
+import HapticUtils from "HapticUtils" /* 4542 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4754 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7535 */;
+import ApplicationCommandActionCreatorsAll from "ApplicationCommandActionCreators" /* 7792 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9321 */;
+import FrecencySection from "FrecencySection" /* 12082 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-({ APP_LAUNCHER_BUILT_IN_SECTION_ICON: error, AppLauncherRouteName: closure_8 } = APP_LAUNCHER_BUILT_IN_SECTION_ICON);
-let result = require("set").fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeUtils.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const AppLauncherNativeConstants = fn(1482);
+({ APP_LAUNCHER_BUILT_IN_SECTION_ICON: closure_7, AppLauncherRouteName: closure_8 } = AppLauncherNativeConstants);
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const BuiltInSectionId = fn(5013).BuiltInSectionId;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeUtils.tsx");
 
 export const handleApplicationSelected = function handleApplicationSelected(entrypoint) {
   ({ application, navigation, sectionName, navigates } = entrypoint);
@@ -29,57 +35,51 @@ export const handleApplicationSelected = function handleApplicationSelected(entr
     navigates = true;
   }
   entrypoint = entrypoint.entrypoint;
-  let obj = collectGuildAnalyticsMetadata;
-  obj = { location: _location, section: null, application_id: null, section_name: null, query: null, search_results_position: null, source: null };
+  const obj2 = { location: _location, section: null, application_id: null, section_name: null, query: null, search_results_position: null, source: null };
   if (application.id === BuiltInSectionId.BUILT_IN) {
-    let APP = tmp(7523).ApplicationCommandTriggerSections.BUILT_IN;
+    let APP = tmp(7537).ApplicationCommandTriggerSections.BUILT_IN;
   } else {
-    APP = tmp(7523).ApplicationCommandTriggerSections.APP;
+    APP = tmp(7537).ApplicationCommandTriggerSections.APP;
   }
-  obj[1] = APP;
+  obj2.section = APP;
   let id = application.id;
   if (id == null) {
     id = null;
   }
-  obj[2] = id;
-  obj[3] = sectionName;
-  obj[4] = query;
-  obj[5] = searchResultsPosition;
-  obj[6] = entrypoint;
-  obj.trackWithMetadata(AnalyticEvents.APPLICATION_COMMAND_SECTION_SELECTED, obj);
+  obj2.application_id = id;
+  obj2.section_name = sectionName;
+  obj2.query = query;
+  obj2.search_results_position = searchResultsPosition;
+  obj2.source = entrypoint;
+  AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.APPLICATION_COMMAND_SECTION_SELECTED, obj2);
   if (navigates) {
-    obj = { application: null, context: null, installOnDemand: null, sectionName: null, entrypoint: null };
-    obj[0] = application;
-    obj[1] = context;
-    obj[2] = installOnDemand;
-    obj[3] = sectionName;
-    obj[4] = entrypoint;
-    navigation.navigate(constants.APPLICATION_VIEW, obj);
+    const obj3 = { application, context, installOnDemand, sectionName, entrypoint };
+    navigation.navigate(constants.APPLICATION_VIEW, obj3);
   }
 };
 export const handleViewAllSelected = function handleViewAllSelected(arg0) {
   ({ navigation, sectionName, applications, sectionItemType, commands } = arg0);
   ({ location: _location, context, sectionOverallPosition, sectionDescriptors, title, promotedApplicationIds } = arg0);
-  let obj = collectGuildAnalyticsMetadata;
-  obj = { section_name: sectionName, num: sectionItemType === Placeholder.SectionItemType.APPS ? applications.length : commands.length };
-  obj.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_SECTION_VIEW_MORE, obj);
+  const obj = AppAnalyticsUtils;
+  obj.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_SECTION_VIEW_MORE, { section_name: sectionName, num: sectionItemType === FrecencySection.SectionItemType.APPS ? applications.length : commands.length });
   navigation.navigate(constants.APP_LIST_VIEW, { analyticsLocation: _location, context, sectionName, sectionOverallPosition, applications, sectionItemType, commands, sectionDescriptors, title, promotedApplicationIds });
 };
 export const handleApplicationCommandSelected = function handleApplicationCommandSelected(arg0) {
   ({ location: _location, context, command } = arg0);
   ({ section, sectionDescriptors, query, navigation, installOnDemand, sectionName, entrypoint } = arg0);
   ({ searchResultsPosition, onCommandExecuted } = arg0);
-  let obj = command(7521);
-  obj = { command, location: _location, triggerSection: command(7521).getCommandTriggerSection(section), queryLength: query.length, sectionName, query, searchResultsPosition, source: entrypoint };
-  obj.trackCommandSelected(obj);
-  if (command.type === command(1894).ApplicationCommandType.PRIMARY_ENTRY_POINT) {
-    obj = { application: null, context: null, installOnDemand: null, sectionName: null, entrypoint: null };
-    obj[0] = section.application;
-    obj[1] = context;
-    obj[2] = installOnDemand;
-    obj[3] = sectionName;
-    obj[4] = entrypoint;
-    navigation.navigate(constants.APPLICATION_VIEW, obj);
+  const obj2 = { command, location: _location, triggerSection: null, queryLength: null, sectionName: null, query: null, searchResultsPosition: null, source: null };
+  const obj = ApplicationCommandUtils;
+  obj2.triggerSection = ApplicationCommandUtils.getCommandTriggerSection(section);
+  obj2.queryLength = query.length;
+  obj2.sectionName = sectionName;
+  obj2.query = query;
+  obj2.searchResultsPosition = searchResultsPosition;
+  obj2.source = entrypoint;
+  obj.trackCommandSelected(obj2);
+  if (command.type === Server.ApplicationCommandType.PRIMARY_ENTRY_POINT) {
+    const obj5 = { application: section.application, context, installOnDemand, sectionName, entrypoint };
+    navigation.navigate(constants.APPLICATION_VIEW, obj5);
   } else {
     let tmp5 = section;
     if (section.id === BuiltInSectionId.FRECENCY) {
@@ -90,17 +90,9 @@ export const handleApplicationCommandSelected = function handleApplicationComman
       }
     }
     if ("channel" === context.type) {
-      const result = setActiveCommandAll.setAppLauncherActiveCommand(context.channel.id, command);
-      obj1 = { command: null, section: null, context: null, installOnDemand: null, sectionName: null, analyticsLocation: null, onCommandExecuted: null };
-      obj1[0] = command;
-      obj1[1] = tmp5;
-      obj1[2] = context;
-      obj1[3] = installOnDemand;
-      obj1[4] = sectionName;
-      obj1[5] = _location;
-      obj1[6] = onCommandExecuted;
-      navigation.navigate(constants.COMMAND_VIEW, obj1);
-      const obj4 = setActiveCommandAll;
+      const result = ApplicationCommandActionCreatorsAll.setAppLauncherActiveCommand(context.channel.id, command);
+      const obj6 = { command, section: tmp5, context, installOnDemand, sectionName, analyticsLocation: _location, onCommandExecuted };
+      navigation.navigate(constants.COMMAND_VIEW, obj6);
     }
   }
 };
@@ -108,18 +100,17 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
   option = option.option;
   ({ prefilledValues, roles } = option);
   let found;
-  found = undefined;
   if (prefilledValues != null) {
     found = prefilledValues.find((name) => name.name === option.name && name.type === tmp.type);
   }
   const type = option.type;
-  if (option(1894).ApplicationCommandOptionType.BOOLEAN === type) {
+  if (Server.ApplicationCommandOptionType.BOOLEAN === type) {
     if (null != found) {
-      let obj = { type: "text", text: null };
+      const obj2 = { type: "text", text: null };
       const _String8 = String;
       const _Boolean = Boolean;
-      obj[1] = String(Boolean(found.value));
-      const items = [obj];
+      obj2.text = String(Boolean(found.value));
+      const items = [obj2];
       let items1 = items;
     } else {
       items1 = [{ type: "text", text: "false" }];
@@ -132,11 +123,11 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
           if (tmp2(1894).ApplicationCommandOptionType.CHANNEL === type) {
             if (null != found) {
               const _String5 = String;
-              if (null != channel.getChannel(String(found.value))) {
-                obj = { type: "channelMention", channelId: null };
+              if (null != ChannelStore.getChannel(String(found.value))) {
+                const obj3 = { type: "channelMention", channelId: null };
                 const _String6 = String;
-                obj[1] = String(found.value);
-                const items2 = [obj];
+                obj3.channelId = String(found.value);
+                const items2 = [obj3];
                 let items3 = items2;
               }
               return items3;
@@ -145,11 +136,11 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
           } else if (tmp2(1894).ApplicationCommandOptionType.USER === type) {
             if (null != found) {
               const _String3 = String;
-              if (null != authStore.getUser(String(found.value))) {
-                obj1 = { type: "userMention", userId: null };
+              if (null != UserStore.getUser(String(found.value))) {
+                const obj4 = { type: "userMention", userId: null };
                 const _String4 = String;
-                obj1[1] = String(found.value);
-                const items4 = [obj1];
+                obj4.userId = String(found.value);
+                const items4 = [obj4];
                 let items5 = items4;
               }
               return items5;
@@ -159,9 +150,8 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
             if (null != found) {
               if (typeof found.value === "string") {
                 if (found.value in roles) {
-                  const obj2 = { type: "roleMention", roleId: null };
-                  obj2[1] = found.value;
-                  const items6 = [obj2];
+                  const obj5 = { type: "roleMention", roleId: found.value };
+                  const items6 = [obj5];
                   let items7 = items6;
                 }
                 return items7;
@@ -176,17 +166,16 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
               } else {
                 if (typeof found.value === "string") {
                   if (found.value in roles) {
-                    const obj3 = { type: "roleMention", roleId: null };
-                    obj3[1] = found.value;
-                    const items9 = [obj3];
+                    const obj6 = { type: "roleMention", roleId: found.value };
+                    const items9 = [obj6];
                     return items9;
                   }
                 }
                 const _String = String;
-                if (null != authStore.getUser(String(found.value))) {
-                  obj = { type: "userMention", userId: null };
+                if (null != UserStore.getUser(String(found.value))) {
+                  const obj = { type: "userMention", userId: null };
                   const _String2 = String;
-                  obj[1] = String(found.value);
+                  obj.userId = String(found.value);
                   const items10 = [obj];
                   return items10;
                 }
@@ -203,18 +192,18 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
     }
     if (null != found) {
       if (null == option.choices) {
-        const obj4 = { type: "text", text: null };
+        const obj7 = { type: "text", text: null };
         const _String7 = String;
-        obj4[1] = String(found.value);
-        const items13 = [obj4];
+        obj7.text = String(found.value);
+        const items13 = [obj7];
         return items13;
       } else {
-        let choices = option.choices;
+        const choices = option.choices;
         if (choices.some((value) => value.value === found.value)) {
-          const obj5 = { type: "text", text: null };
-          choices = option.choices;
-          obj5[1] = choices.find((value) => value.value === found.value).displayName;
-          const items14 = [obj5];
+          const obj8 = { type: "text", text: null };
+          const choices1 = option.choices;
+          obj8.text = choices1.find((value) => value.value === found.value).displayName;
+          const items14 = [obj8];
           return items14;
         }
       }
@@ -225,32 +214,28 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
 };
 export const getAppLauncherIconSource = function getAppLauncherIconSource(application) {
   if (null == application) {
-    let applicationIconSource = registerAssetDefault;
+    let applicationIconSource = _modDef1884;
   } else {
-    let obj = getShelfBadgeTypeIfActive;
-    const obj2 = getAvatarURLDefault;
+    const obj2 = AvatarUtilsDefault;
     if (isRealApplicationResult) {
-      obj = { id: null, icon: null, bot: null, botIconFirst: false };
-      ({ id: obj3[0], icon: obj3[1], bot: obj3[2] } = application);
-      applicationIconSource = obj2.getApplicationIconSource(obj);
+      ({ id: obj3.id, icon: obj3.icon, bot: obj3.bot } = application);
+      applicationIconSource = obj2.getApplicationIconSource({ id: null, icon: null, bot: null, botIconFirst: false });
+      const obj4 = { id: null, icon: null, bot: null, botIconFirst: false };
     } else {
-      applicationIconSource = obj2.makeSource(closure_7);
+      applicationIconSource = obj2.makeSource(React5);
     }
-    isRealApplicationResult = obj.isRealApplication(application);
+    isRealApplicationResult = AppLauncherUtils.isRealApplication(application);
   }
   return applicationIconSource;
 };
 export const useLogAppLauncherEmptyStateView = function useLogAppLauncherEmptyStateView(COMMAND_NOT_FOUND, query) {
-  const _require = COMMAND_NOT_FOUND;
-  const entrypoint = _require(11220).useAppLauncherContext().entrypoint;
+  _require = COMMAND_NOT_FOUND;
+  const entrypoint = require("AppLauncherContext").useAppLauncherContext().entrypoint;
   const items = [COMMAND_NOT_FOUND, query, entrypoint];
-  const effect = React.useEffect(() => {
-    if (null != COMMAND_NOT_FOUND) {
-      let obj = COMMAND_NOT_FOUND(closure_1_3[6]);
-      obj = { type: null, source: null };
-      obj[0] = tmp;
-      obj[1] = entrypoint;
-      obj.trackWithMetadata(closure_1_9.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, obj);
+  const effect = noop.useEffect(() => {
+    if (null != closure_0) {
+      const obj2 = { type: tmp, source: entrypoint };
+      AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, obj2);
     }
   }, items);
 };
@@ -261,30 +246,27 @@ export const useHandleActivityItemSelected = function useHandleActivityItemSelec
   if (flag === undefined) {
     flag = true;
   }
-  closure_4 = undefined;
   closure_5 = undefined;
+  const analyticsContext = sectionName(entrypoint[16]).useAnalyticsContext();
   let obj = sectionName(entrypoint[16]);
-  const analyticsContext = obj.useAnalyticsContext();
-  closure_4 = sectionName(entrypoint[17]).useActivityAction({ context, applicationId, fetchesApplication: flag });
+  const action = sectionName(entrypoint[17]).useActivityAction({ context, applicationId, fetchesApplication: flag });
   const obj2 = sectionName(entrypoint[17]);
   const getOrFetchApplication = sectionName(entrypoint[18]).useGetOrFetchApplication(applicationId, flag);
   const obj3 = sectionName(entrypoint[18]);
   const entrypointParams = sectionName(entrypoint[15]).useAppLauncherContext().entrypointParams;
   const obj4 = sectionName(entrypoint[15]);
-  obj = {
+  const obj6 = {
     application: getOrFetchApplication,
     context,
-    embeddedActivitiesManager: importDefault(entrypoint[19]),
+    embeddedActivitiesManager: require("EmbeddedActivitiesNativeManager"),
     locationObject: analyticsContext.location,
     onActivityItemSelectedProp(applicationId) {
       applicationId = applicationId.applicationId;
-      if (closure_1 != null) {
-        let obj = { applicationId: null };
-        obj[0] = applicationId;
+      if (importDefault != null) {
+        const obj = { applicationId };
         tmp(obj);
       }
-      obj = { location: closure_2, application_id: applicationId, section_name: sectionName, action: closure_4, source: entrypoint };
-      sectionName(entrypoint[6]).trackWithMetadata(closure_1_9.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, obj);
+      AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, { location: _location, application_id: applicationId, section_name: sectionName, action, source: entrypoint });
     },
     launchingComponentId: fetchesApplication.launchingComponentId,
     commandOrigin: sectionName(entrypoint[7]).CommandOrigin.APPLICATION_LAUNCHER,
@@ -298,18 +280,17 @@ export const useHandleActivityItemSelected = function useHandleActivityItemSelec
   if (entrypointParams != null) {
     customId = entrypointParams.customId;
   }
-  obj[10] = customId;
+  obj6.customId = customId;
   let referrerId;
   if (entrypointParams != null) {
     referrerId = entrypointParams.referrerId;
   }
-  obj[11] = referrerId;
-  closure_5 = sectionName(entrypoint[17]).useOnActivityItemSelected(obj);
-  obj = {
+  obj6.referrerId = referrerId;
+  closure_5 = sectionName(entrypoint[17]).useOnActivityItemSelected(obj6);
+  return {
     handleActivityItemSelected() {
-      const result = sectionName(entrypoint[20]).triggerHapticFeedback(sectionName(entrypoint[20]).HapticFeedbackTypes.IMPACT_MEDIUM);
-      callback();
+      const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
+      closure_5();
     }
   };
-  return obj;
 };

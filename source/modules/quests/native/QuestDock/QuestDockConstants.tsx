@@ -1,24 +1,24 @@
-// Module ID: 15098
-// Function ID: 15099
-// Name: QUEST_DOCK_COLLAPSED_HEIGHT
+// Module ID: 15125
+// Function ID: 15126
+// Name: QuestDockConstants
 // Dependencies: [576, 2]
 
-// Module 15098 (QUEST_DOCK_COLLAPSED_HEIGHT)
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 576 */;
+// Module 15125 (QuestDockConstants)
+import nativeDefault from "native" /* 576 */;
+import size from "module_2" /* 2 */;
 
-let obj = { mass: 0.5, damping: 80, stiffness: 320 };
-obj = {};
+const obj = { mass: 0.5, damping: 80, stiffness: 320 };
+const obj2 = {};
 const merged = Object.assign(obj);
-obj.overshootClamping = true;
-const result = set.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockConstants.tsx");
+obj2.overshootClamping = true;
+const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockConstants.tsx");
 
 export const QUEST_DOCK_COLLAPSED_HEIGHT = 56;
 export const QUEST_DOCK_CLOSED_HEIGHT = 22;
 export const QUEST_DOCK_EXPANDED_HEIGHT = 400;
-export const QUEST_DOCK_EXPANDED_PADDING_BOTTOM = ThemesDefault.space.PX_16;
-export const QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL = ThemesDefault.space.PX_12;
-export const QUEST_DOCK_EXPANDED_ENROLLED_PADDING_TOP = ThemesDefault.space.PX_8;
+export const QUEST_DOCK_EXPANDED_PADDING_BOTTOM = nativeDefault.space.PX_16;
+export const QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL = nativeDefault.space.PX_12;
+export const QUEST_DOCK_EXPANDED_ENROLLED_PADDING_TOP = nativeDefault.space.PX_8;
 export const QUEST_DOCK_COLLAPSED_MAX_WIDTH = 600;
 export const QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED = 8;
 export const QUEST_DOCK_VERTICAL_EDGE_GUTTER_COLLAPSED = 8;
@@ -42,5 +42,5 @@ export const QUEST_DOCK_EXTERNAL_OFFSET_EXPANDED_WITH_YOU_BAR = 56;
 export const QUEST_DOCK_EXTERNAL_OFFSET_CLOSED = 22;
 export const QUEST_DOCK_EXPANDED_CONTENT_PADDING_VERTICAL = 16;
 export const QUEST_DOCK_MODE_CHANGE_PHYSICS = obj;
-export const QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED = obj;
-export const QUEST_DOCK_CONTENT_BORDER_RADII = ThemesDefault.radii.lg;
+export const QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED = obj2;
+export const QUEST_DOCK_CONTENT_BORDER_RADII = nativeDefault.radii.lg;

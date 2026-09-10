@@ -2,21 +2,22 @@
 // Function ID: 694
 // Name: _htmlElementAsString
 // Dependencies: [686, 692]
+// Exports: getComponentName, getLocationHref, htmlTreeAsString
 
 // Module 693 (_htmlElementAsString)
 import _mod686 from "module_686" /* 686 */;
+import _mod692 from "module_692" /* 692 */;
 
 require = arg1;
 const dependencyMap = arg6;
 function _htmlElementAsString(tagName, arr) {
-  const _require = tagName;
   let items = [];
   tagName = undefined;
   if (tagName != null) {
     tagName = tagName.tagName;
   }
   if (tagName) {
-    if (_require(items[0]).GLOBAL_OBJ.HTMLElement) {
+    if (_mod686.GLOBAL_OBJ.HTMLElement) {
       if (tagName instanceof globalThis.HTMLElement) {
         if (tagName.dataset) {
           const dataset = tagName.dataset;
@@ -35,9 +36,9 @@ function _htmlElementAsString(tagName, arr) {
     }
     let mapped = null;
     if (length) {
-      const found = arr.filter((arg0) => tagName.getAttribute(arg0));
-      mapped = found.map((arg0) => {
-        items = [arg0, tagName.getAttribute(arg0)];
+      const found = arr.filter((item) => tagName.getAttribute(item));
+      mapped = found.map((item) => {
+        items = [item, tagName.getAttribute(item)];
         return items;
       });
     }
@@ -46,8 +47,8 @@ function _htmlElementAsString(tagName, arr) {
       length1 = mapped.length;
     }
     if (length1) {
-      const item = mapped.forEach((arg0) => {
-        items.push("[" + arg0[0] + "=\"" + arg0[1] + "\"]");
+      const item = mapped.forEach((item) => {
+        items.push("[" + item[0] + "=\"" + item[1] + "\"]");
       });
     } else {
       if (tagName.id) {
@@ -60,11 +61,11 @@ function _htmlElementAsString(tagName, arr) {
           const tmp14 = parts[Symbol.iterator]();
           while (tmp14 !== undefined) {
             let _HermesInternal2 = HermesInternal;
-            let arr1 = items.push("." + tmp17);
+            let arr3 = items.push("." + tmp17);
             continue;
           }
         }
-        tmp2Result = _require(items[1]);
+        tmp2Result = _mod692;
       }
     }
     const items1 = ["aria-label", "type", "name", "title", "alt"];
@@ -74,13 +75,11 @@ function _htmlElementAsString(tagName, arr) {
       let tmp25 = nextResult;
       let attr = tagName.getAttribute(nextResult);
       if (attr) {
-        let tmp28 = nextResult;
-        let tmp29 = attr;
         let _HermesInternal3 = HermesInternal;
         let str9 = "[";
         let str10 = "=\"";
         let str11 = "\"]";
-        let arr2 = items.push("[" + tmp25 + "=\"" + tmp27 + "\"]");
+        let arr7 = items.push("[" + tmp25 + "=\"" + tmp27 + "\"]");
       }
       continue;
     }
@@ -90,7 +89,8 @@ function _htmlElementAsString(tagName, arr) {
   }
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.getComponentName = function getComponentName(arg0) {
+
+export const getComponentName = function getComponentName(arg0) {
   let parentNode = arg0;
   let num = 0;
   if (_mod686.GLOBAL_OBJ.HTMLElement) {
@@ -108,7 +108,6 @@ arg5.getComponentName = function getComponentName(arg0) {
       if (num < 5) {
         continue;
       } else {
-        let tmp5 = null;
         return null;
       }
     }
@@ -117,14 +116,14 @@ arg5.getComponentName = function getComponentName(arg0) {
     return null;
   }
 };
-arg5.getLocationHref = function getLocationHref() {
+export const getLocationHref = function getLocationHref() {
   try {
     return _mod686.GLOBAL_OBJ.document.location.href;
   } catch (err) {
     return "";
   }
 };
-arg5.htmlTreeAsString = function htmlTreeAsString(arg0) {
+export const htmlTreeAsString = function htmlTreeAsString(arg0) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -160,31 +159,20 @@ arg5.htmlTreeAsString = function htmlTreeAsString(arg0) {
               const parentNode = tmp.parentNode;
               tmp = parentNode;
               while (parentNode) {
-                let tmp18 = sum;
                 let tmp19 = +sum;
                 sum = tmp19 + 1;
                 if (tmp19 >= 5) {
                   break;
                 } else {
-                  let tmp20 = _htmlElementAsString;
-                  let tmp21 = tmp;
-                  let tmp22 = keyAttrs;
                   let tmp23 = _htmlElementAsString(tmp, tmp3);
                   arr2 = tmp23;
                   if ("html" === tmp23) {
                     break;
                   } else {
-                    let tmp24 = sum;
                     if (sum <= 1) {
                       continue;
-                    } else {
-                      let tmp25 = num2;
-                      let tmp26 = items;
-                      let tmp27 = arr2;
-                      let tmp28 = num3;
-                      if (num2 + 3 * items.length + arr2.length >= tmp5) {
-                        break;
-                      }
+                    } else if (num2 + 3 * items.length + arr2.length >= tmp5) {
+                      break;
                     }
                     continue;
                   }

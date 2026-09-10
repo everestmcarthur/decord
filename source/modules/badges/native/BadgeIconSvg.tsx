@@ -1,20 +1,22 @@
-// Module ID: 11196
-// Function ID: 11197
-// Name: normalizeSvgXml
+// Module ID: 11223
+// Function ID: 11224
+// Name: BadgeIconSvg
 // Dependencies: [559, 1090, 2]
 // Exports: getCachedSvgXml, loadSvgXml
 
-// Module 11196 (normalizeSvgXml)
-import set from "set" /* 2 */;
+// Module 11223 (BadgeIconSvg)
+import BackoffDefault from "Backoff" /* 559 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import size from "module_2" /* 2 */;
 
-function normalizeSvgXml(str) {
-  const match = str.match(closure_2);
+function normalizeSvgXml(result) {
+  const match = result.match(re2);
   let first;
   if (match != null) {
     first = match[0];
   }
   if (null != first) {
-    if (!regex.test(first)) {
+    if (!re3.test(first)) {
       const _RegExp = RegExp;
       const _HermesInternal = HermesInternal;
       const regExp = new RegExp("(?:^|\\s)" + "width" + "\\s*=\\s*\"(\\d+(?:\\.\\d+)?)(?:px)?\"", "i");
@@ -31,9 +33,9 @@ function normalizeSvgXml(str) {
         _NaN = Number.NaN;
       }
       const _Number3 = Number;
-      let replaced = str;
+      let replaced = result;
       if (Number.isFinite(_NaN)) {
-        replaced = str;
+        replaced = result;
         if (_NaN > 0) {
           const _RegExp2 = RegExp;
           const _HermesInternal3 = HermesInternal;
@@ -50,58 +52,57 @@ function normalizeSvgXml(str) {
             const _Number4 = Number;
             _NaN2 = Number.NaN;
           }
-          replaced = str;
+          replaced = result;
           if (_NaN === _NaN2) {
             const _HermesInternal2 = HermesInternal;
-            replaced = str.replace(first, first.replace(/<svg\b/i, "<svg viewBox=\"0 0 " + tmp10 + " " + tmp10 + "\""));
+            replaced = result.replace(first, first.replace(/<svg\b/i, "<svg viewBox=\"0 0 " + tmp10 + " " + tmp10 + "\""));
           }
         }
       }
       return replaced;
     }
   }
-  return str;
+  return result;
 }
 const re2 = /<svg\b[^>]*>/i;
 const re3 = /\bviewBox\s*=/i;
 const map = new Map();
 const map1 = new Map();
 const map2 = new Map();
-let result = set.fileFinishedImporting("modules/badges/native/BadgeIconSvg.tsx");
+let result = size.fileFinishedImporting("modules/badges/native/BadgeIconSvg.tsx");
 
 export { normalizeSvgXml };
-export const getCachedSvgXml = function getCachedSvgXml(complex_icon_animated_url) {
-  return map.get(complex_icon_animated_url);
+export const getCachedSvgXml = function getCachedSvgXml(abortController) {
+  return map.get(abortController);
 };
-export const loadSvgXml = function loadSvgXml(arg0, signal) {
-  closure_0 = arg0;
-  let value = map.get(arg0);
+export const loadSvgXml = function loadSvgXml(abortController, signal) {
+  closure_0 = abortController;
+  value = map.get(abortController);
   if (null != value) {
     let resolved = Promise.resolve(value);
   } else {
     let _Date = Date;
     let timestamp = Date.now();
-    let num = map2.get(arg0);
+    let num = map2.get(abortController);
     if (num == null) {
       num = 0;
     }
     if (timestamp < num) {
       let _Error = Error;
       let _HermesInternal = HermesInternal;
-      error = new Error("badge icon fetch is backed off: " + arg0);
+      let error = new Error("badge icon fetch is backed off: " + abortController);
       resolved = Promise.reject(error);
     } else {
       const _fetch = fetch;
-      const obj = { signal: null };
-      obj[0] = signal;
-      const response = fetch(arg0, obj);
+      const obj = { signal };
+      const response = fetch(abortController, obj);
       const nextPromise = response.then((ok) => {
         if (ok.ok) {
           return ok.text();
         } else {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
-          error = new Error("badge icon fetch failed with " + ok.status + ": " + closure_0);
+          const error = new Error("badge icon fetch failed with " + ok.status + ": " + closure_0);
           throw error;
         }
       });
@@ -111,40 +112,39 @@ export const loadSvgXml = function loadSvgXml(arg0, signal) {
         } else {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
-          error = new Error("badge icon fetch failed with " + ok.status + ": " + closure_0);
+          const error = new Error("badge icon fetch failed with " + ok.status + ": " + closure_0);
           throw error;
         }
-      }).then((arg0) => {
-        if (closure_1_2.test(arg0)) {
-          const tmp8 = closure_1_7(arg0);
-          const result = closure_1_4.set(closure_0, tmp8);
-          const value = closure_1_5.get(closure_0);
+      }).then((result) => {
+        if (re2.test(result)) {
+          const tmp8 = normalizeSvgXml(result);
+          result = map.set(closure_0, tmp8);
+          value = map1.get(closure_0);
           if (value != null) {
             value.succeed();
           }
-          closure_1_6.delete(closure_0);
+          map2.delete(closure_0);
           return tmp8;
         } else {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
-          error = new Error("badge icon response was not an svg: " + closure_0);
+          const error = new Error("badge icon response was not an svg: " + closure_0);
           throw error;
         }
-      }).catch((name) => {
-        if ("AbortError" === name.name) {
-          throw name;
+      }).catch((error) => {
+        if ("AbortError" === error.name) {
+          throw error;
         } else {
-          let tmp3 = closure_1_5.get(callback);
-          if (tmp3 == null) {
-            tmp3 = callback(closure_1_1[0]);
-            const result = 10 * callback(closure_1_1[1]).Millis.SECOND;
-            tmp3 = new tmp3(result, callback(closure_1_1[1]).Millis.HOUR, true);
+          let tmp31 = map1.get(closure_0);
+          if (tmp31 == null) {
+            const result = 10 * DurationsDefault.Millis.SECOND;
+            tmp31 = new BackoffDefault(result, DurationsDefault.Millis.HOUR, true);
           }
-          const result1 = closure_1_5.set(tmp13, tmp3);
+          const result1 = map1.set(tmp13, tmp31);
           const _Date = Date;
           const timestamp = Date.now();
-          const result2 = closure_1_6.set(tmp13, timestamp + tmp3.fail());
-          throw name;
+          const result2 = map2.set(tmp13, timestamp + tmp31.fail());
+          throw error;
         }
       });
       const nextPromise1 = response.then((ok) => {
@@ -153,23 +153,23 @@ export const loadSvgXml = function loadSvgXml(arg0, signal) {
         } else {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
-          error = new Error("badge icon fetch failed with " + ok.status + ": " + closure_0);
+          const error = new Error("badge icon fetch failed with " + ok.status + ": " + closure_0);
           throw error;
         }
-      }).then((arg0) => {
-        if (closure_1_2.test(arg0)) {
-          const tmp8 = closure_1_7(arg0);
-          const result = closure_1_4.set(closure_0, tmp8);
-          const value = closure_1_5.get(closure_0);
+      }).then((result) => {
+        if (re2.test(result)) {
+          const tmp8 = normalizeSvgXml(result);
+          result = map.set(closure_0, tmp8);
+          value = map1.get(closure_0);
           if (value != null) {
             value.succeed();
           }
-          closure_1_6.delete(closure_0);
+          map2.delete(closure_0);
           return tmp8;
         } else {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
-          error = new Error("badge icon response was not an svg: " + closure_0);
+          const error = new Error("badge icon response was not an svg: " + closure_0);
           throw error;
         }
       });

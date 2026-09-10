@@ -4,12 +4,13 @@
 // Dependencies: [202]
 
 // Module 201 (BlobModule)
-import BlobModuleDefault from "BlobModule" /* 202 */;
+import _modDef202 from "module_202" /* 202 */;
 
-for (const key10016 in require("BlobModule")) {
-  let tmp2 = key10016;
-  arg5[key10016] = require("BlobModule")[key10016];
+const require = globalThis.__r;
+
+for (const key10016 in require("module_202")) {
+  arg5[key10016] = require("module_202")[key10016];
   continue;
 }
 
-export default BlobModuleDefault;
+export default _modDef202;

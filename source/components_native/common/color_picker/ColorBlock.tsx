@@ -1,21 +1,25 @@
-// Module ID: 14600
-// Function ID: 14601
-// Name: styles
-// Dependencies: [19, 17, 21, 4560, 576, 1091, 5123, 4409, 1178, 11569, 2]
+// Module ID: 14625
+// Function ID: 14626
+// Name: ColorBlock
+// Dependencies: [19, 17, 21, 4574, 576, 1091, 5137, 4423, 1178, 11595, 2]
 
-// Module 14600 (styles)
-import ThemesDefault from "Themes" /* 576 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 14625 (ColorBlock)
+import nativeDefault from "native" /* 576 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
+import _modDef11595 from "module_11595" /* 11595 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let obj = { colorBlock: null };
-obj = { minWidth: 44, height: 44, borderRadius: ThemesDefault.radii.xl, marginHorizontal: 12, marginVertical: 8, justifyContent: "center", alignItems: "center" };
-obj[0] = obj;
-const styles = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo((color) => {
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+const obj = { colorBlock: { minWidth: 44, height: 44, borderRadius: nativeDefault.radii.xl, marginHorizontal: 12, marginVertical: 8, justifyContent: "center", alignItems: "center" } };
+const styles = createStyles.createStyles(obj);
+let obj3 = { minWidth: 44, height: 44, borderRadius: nativeDefault.radii.xl, marginHorizontal: 12, marginVertical: 8, justifyContent: "center", alignItems: "center" };
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/common/color_picker/ColorBlock.tsx");
+
+export default noop.memo((color) => {
   color = color.color;
   ({ style, selected } = color);
   if (selected === undefined) {
@@ -24,67 +28,59 @@ const memoResult = importAllResult.memo((color) => {
   const onSelect = color.onSelect;
   const tmp = styles();
   let unsafe_rawColors = dependencyMap;
-  let obj = color(1091);
-  const v = obj.int2hsv(color).v;
+  const v = utils_ColorUtils.int2hsv(color).v;
   if (null != onSelect) {
-    obj = { accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, onPress: null, style: null, children: null };
-    let tmp2Result = tmp2(4409);
-    tmp2Result = tmp2(1091);
-    obj[1] = tmp2Result.hexToColorName(tmp2Result.int2hex(color), true);
-    obj = { selected: null };
-    obj[0] = selected;
-    obj[2] = obj;
-    obj[3] = function onPress() {
+    const obj2 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, onPress: null, style: null, children: null };
+    const tmp2Result = tmp2(4423);
+    obj2.accessibilityLabel = tmp2Result.hexToColorName(tmp2(1091).int2hex(color), true);
+    const obj3 = { selected };
+    obj2.accessibilityState = obj3;
+    obj2.onPress = function onPress() {
       return onSelect(color);
     };
     const items = [tmp.colorBlock, style, ];
-    obj1 = { backgroundColor: null };
-    obj1[0] = tmp2(1091).int2hex(color);
-    items[2] = obj1;
-    obj[4] = items;
+    const obj4 = { backgroundColor: null };
+    const tmp2Result4 = tmp2(1091);
+    obj4.backgroundColor = tmp2(1091).int2hex(color);
+    items[2] = obj4;
+    obj2.style = items;
     if (!selected) {
-      obj[5] = null;
-      let tmp10Result = tmp6(tmp2(5123).PressableOpacity, obj);
+      obj2.children = null;
+      let tmp10Result1 = tmp6(tmp2(5137).PressableOpacity, obj2);
     } else {
-      const obj2 = { source: null, color: null };
-      obj2[0] = onSelect(11569);
+      const obj5 = { source: _modDef11595, color: null };
       if (v < 0.5) {
         unsafe_rawColors = tmp8(576).unsafe_rawColors;
         let BLACK2 = unsafe_rawColors.WHITE;
       } else {
         BLACK2 = tmp8(576).unsafe_rawColors.BLACK;
       }
-      obj2[1] = BLACK2;
-      tmp6(tmp2(1178).Icon, obj2);
+      obj5.color = BLACK2;
+      tmp6(tmp2(1178).Icon, obj5);
     }
-    const tmp2Result1 = tmp2(1091);
+    const tmp2Result5 = tmp2(1091);
   } else {
-    const obj3 = { style: null, children: null };
+    const obj6 = { style: null, children: null };
     const items1 = [tmp.colorBlock, style, ];
-    const obj4 = { backgroundColor: null };
-    obj4[0] = tmp2(1091).int2hex(color);
-    items1[2] = obj4;
-    obj3[0] = items1;
+    const obj7 = { backgroundColor: tmp2(1091).int2hex(color) };
+    items1[2] = obj7;
+    obj6.style = items1;
     if (!selected) {
-      obj3[1] = null;
-      tmp10Result = tmp10(tmp11, obj3);
+      obj6.children = null;
+      tmp10Result1 = tmp10(tmp11, obj6);
     } else {
-      const obj5 = { source: null, color: null };
-      obj5[0] = onSelect(11569);
+      const obj8 = { source: _modDef11595, color: null };
       if (v < 0.5) {
         let BLACK = tmp3(576).unsafe_rawColors.WHITE;
       } else {
         BLACK = tmp3(576).unsafe_rawColors.BLACK;
       }
-      obj5[1] = BLACK;
-      tmp10Result = tmp10(tmp2(1178).Icon, obj5);
+      obj8.color = BLACK;
+      tmp10(tmp2(1178).Icon, obj8);
     }
     tmp11 = View;
-    const tmp2Result2 = tmp2(1091);
+    const tmp2Result6 = tmp2(1091);
   }
-  return tmp10Result;
+  return tmp10Result1;
 });
-const result = require("set").fileFinishedImporting("components_native/common/color_picker/ColorBlock.tsx");
-
-export default memoResult;
 export const useStyles = styles;

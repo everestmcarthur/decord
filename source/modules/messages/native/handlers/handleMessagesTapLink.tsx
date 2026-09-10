@@ -1,31 +1,47 @@
-// Module ID: 11621
-// Function ID: 11622
-// Name: handleMessagesTapURLLink
-// Dependencies: [9295, 4788, 7938, 11350, 1385, 1957, 4544, 4781, 1371, 1074, 1482, 1964, 6596, 1113, 11619, 4540, 7735, 11620, 8691, 8685, 8370, 11549, 8179, 4527, 9190, 1896, 5411, 4702, 11622, 10924, 11623, 7456, 7182, 11624, 1609, 11625, 4793, 1100, 7992, 11628, 11651, 2]
+// Module ID: 11647
+// Function ID: 11648
+// Name: handleMessagesTapLink
+// Dependencies: [9322, 4802, 7952, 11377, 1385, 1957, 4558, 4795, 1371, 1074, 1482, 1964, 6610, 1113, 11645, 4554, 7749, 11646, 8719, 8713, 8398, 11575, 8205, 4541, 9217, 1896, 5425, 4716, 11648, 10951, 11649, 7470, 7196, 11650, 1609, 11651, 4807, 1100, 8006, 11654, 11677, 2]
 // Exports: handleMessagesTapLink
 
-// Module 11621 (handleMessagesTapURLLink)
-import set from "set" /* 2 */;
-import AbortCodes from "AbortCodes" /* 1113 */;
-import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1482 */;
-import set2 from "set" /* 1964 */;
-import parseQueryDefault from "parseQuery" /* 4540 */;
-import str2 from "str2" /* 6596 */;
-import isLinkTrusted from "isLinkTrusted" /* 8370 */;
-import _mod8685 from "module_8685" /* 8685 */;
-import GameProfileEmbedAction from "GameProfileEmbedAction" /* 8691 */;
-import getIndexKey from "getIndexKey" /* 9295 */;
-import isAlertOrActionSheetOpen from "isAlertOrActionSheetOpen" /* 11549 */;
-import isLinkTrusted2 from "isLinkTrusted" /* 11619 */;
-import closure_4 from "addApplication" /* 4788 */;
-import closure_5 from "handleMessageSendFailedAutomod" /* 7938 */;
-import closure_6 from "handleQuickSwitcherUpdate" /* 11350 */;
-import closure_7 from "createdAt" /* 1385 */;
-import closure_8 from "ensureGuildLoaded" /* 1957 */;
-import closure_9 from "updateInvite" /* 4544 */;
-import closure_10 from "reinjectEphemerals" /* 4781 */;
-import closure_11 from "mergeGuildAvatar" /* 1371 */;
-import ME from "ME" /* 1074 */;
+// Module 11647 (handleMessagesTapLink)
+import router_utils from "router_utils" /* 1100 */;
+import ThreadConstants from "ThreadConstants" /* 1113 */;
+import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1482 */;
+import KeyboardTypes from "KeyboardTypes" /* 1609 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ChannelConstants from "ChannelConstants" /* 1964 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import parseURLDefault from "parseURL" /* 4554 */;
+import StreamActionCreators from "StreamActionCreators" /* 4716 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5425 */;
+import PushNotificationConstants from "PushNotificationConstants" /* 6610 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7470 */;
+import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8006 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8205 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8398 */;
+import GameProfileActionCreators from "GameProfileActionCreators" /* 8713 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8719 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9322 */;
+import showChatGDMCustomizeActionSheetDefault from "showChatGDMCustomizeActionSheet" /* 10951 */;
+import isAlertOrActionSheetOpen from "isAlertOrActionSheetOpen" /* 11575 */;
+import MarkupReactLinkUtils from "MarkupReactLinkUtils" /* 11645 */;
+import openPinnedMessagesDefault from "openPinnedMessages" /* 11648 */;
+import GuildAutomodMessageActionCreators from "GuildAutomodMessageActionCreators" /* 11649 */;
+import ApplicationInteractionInfoUtils from "ApplicationInteractionInfoUtils" /* 11650 */;
+import showExecutedApplicationCommandPopoutDefault from "showExecutedApplicationCommandPopout" /* 11651 */;
+import GuildHighlightsNotificationsActionCreators from "GuildHighlightsNotificationsActionCreators" /* 11654 */;
+import ApplicationStore from "ApplicationStore" /* 4802 */;
+import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 7952 */;
+import SummaryStore from "SummaryStore" /* 11377 */;
+import UserRecord from "UserRecord" /* 1385 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import InviteStore from "InviteStore" /* 4558 */;
+import MessageStore from "MessageStore" /* 4795 */;
+import UserStore from "UserStore" /* 1371 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
 function handleMessagesTapURLLink(data, channelId) {
   let flag = null != data.url;
@@ -36,22 +52,21 @@ function handleMessagesTapURLLink(data, channelId) {
     const node = data.node;
     let flag2 = false;
     if (null != node) {
-      let obj = isLinkTrusted2;
       flag2 = false;
       if (obj.isLinkTrusted(node)) {
-        const payload = parseQueryDefault(tmp).payload;
+        const payload = parseURLDefault(tmp).payload;
         flag2 = false;
-        if (payload.type === constants.INVITE) {
+        if (payload.type === constants2.INVITE) {
           flag2 = false;
           if (null != payload.inviteCode) {
-            invite = invite.getInvite(payload.inviteCode);
+            const invite = InviteStore.getInvite(payload.inviteCode);
             let num = null == invite;
             if (!num) {
-              num = !tmp2(7735).isGuildScheduledEventInviteEmbed(invite);
-              const tmp2Result = tmp2(7735);
+              num = !tmp2(7749).isGuildScheduledEventInviteEmbed(invite);
+              const tmp2Result = tmp2(7749);
             }
             if (!num) {
-              tmp4(11620)(invite);
+              tmp4(11646)(invite);
               num = 0;
             }
             flag2 = !num;
@@ -59,17 +74,18 @@ function handleMessagesTapURLLink(data, channelId) {
         }
         tmp4 = importDefault;
       }
+      obj = MarkupReactLinkUtils;
       tmp2 = require;
     }
     if (!flag2) {
-      const payload2 = parseQueryDefault(data.url).payload;
+      const payload2 = parseURLDefault(data.url).payload;
       let flag3 = false;
-      if (payload2.type === constants.GAME_PROFILE) {
+      if (payload2.type === constants2.GAME_PROFILE) {
         const gameId = payload2.gameId;
         let tmp13;
         if (null != channelId) {
           if (null != data.messageId) {
-            message = message.getMessage(channelId, data.messageId);
+            const message = MessageStore.getMessage(channelId, data.messageId);
             let id;
             if (message != null) {
               id = message.author.id;
@@ -77,73 +93,282 @@ function handleMessagesTapURLLink(data, channelId) {
             tmp13 = id;
           }
         }
-        obj = { gameId: null, source: null, sourceUserId: null, gameProfileModalChecks: null };
-        obj[0] = gameId;
-        obj[1] = GameProfileEmbedAction.GameProfileSources.Deeplink;
-        obj[2] = tmp13;
-        obj = { shouldOpenGameProfile: true, gameId: null };
-        obj[1] = gameId;
-        obj[3] = obj;
-        _mod8685.default.openGameProfileModal(obj);
+        const obj2 = { gameId, source: GameProfileAnalyticUtils.GameProfileSources.Deeplink, sourceUserId: tmp13, gameProfileModalChecks: null };
+        const obj3 = { shouldOpenGameProfile: true, gameId };
+        obj2.gameProfileModalChecks = obj3;
+        GameProfileActionCreators.default.openGameProfileModal(obj2);
         flag3 = true;
-        const _default = _mod8685.default;
+        const _default = GameProfileActionCreators.default;
       }
       flag2 = flag3;
     }
     flag = true;
     if (!flag2) {
-      obj1 = { href: null, trusted: null, messageId: null, channelId: null };
-      obj1[0] = data.url;
+      const obj4 = { href: data.url, trusted: null, messageId: null, channelId: null };
       let isLinkTrustedResult = null != data.node;
       if (isLinkTrustedResult) {
-        isLinkTrustedResult = tmp19(11619).isLinkTrusted(data.node);
-        const tmp19Result = tmp19(11619);
+        isLinkTrustedResult = tmp19(11645).isLinkTrusted(data.node);
+        const tmp19Result = tmp19(11645);
       }
-      obj1[1] = isLinkTrustedResult;
-      obj1[2] = data.messageId;
-      obj1[3] = channelId;
-      isLinkTrusted.handleClick(obj1);
+      obj4.trusted = isLinkTrustedResult;
+      obj4.messageId = data.messageId;
+      obj4.channelId = channelId;
+      MaskedLinkUtils.handleClick(obj4);
       flag = true;
-      const obj5 = isLinkTrusted;
       tmp19 = require;
     }
   }
   return flag;
 }
-const getSection = getIndexKey.getSection;
-({ AnalyticsLocations: closure_12, LinkingTypes: map1, Routes: closure_14 } = ME);
-const AppLauncherRouteName = APP_LAUNCHER_BUILT_IN_SECTION_ICON.AppLauncherRouteName;
-const StaticChannelRoute = set2.StaticChannelRoute;
-const NotificationTypes = str2.NotificationTypes;
-let closure_18 = AbortCodes.OpenThreadAnalyticsLocations;
-const result = set.fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapLink.tsx");
+const getSection = ApplicationCommandIndexStore.getSection;
+({ AnalyticsLocations: closure_12, LinkingTypes: map1, Routes: closure_14 } = Constants);
+const AppLauncherRouteName = AppLauncherNativeConstants.AppLauncherRouteName;
+const StaticChannelRoute = ChannelConstants.StaticChannelRoute;
+const NotificationTypes = PushNotificationConstants.NotificationTypes;
+const constants3 = ThreadConstants.OpenThreadAnalyticsLocations;
+let result = size.fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapLink.tsx");
 
 export { handleMessagesTapURLLink };
 export const handleMessagesTapLink = function handleMessagesTapLink(tapLinkData) {
-  ({ chatInputRef, handleTransitionToThread, message, messageChannel } = tapLinkData);
+  ({ chatInputRef, message, messageChannel } = tapLinkData);
   const data = tapLinkData.tapLinkData.data;
   if (true === tapLinkData.allowWithinModal) {
     let id;
     if (messageChannel != null) {
       id = messageChannel.id;
     }
-    if (!tmp4(data, id)) {
+    if (!tmp5(data, id)) {
       if (null != data.action) {
-        const action = data.action;
-        if (chatInputRef != null) {
-          const current = chatInputRef.current;
-          if (current != null) {
-            let flag = data.addSpace;
-            if (flag == null) {
-              flag = true;
+        switch (data.action) {
+          case "bindUserMenu":
+            ({ userId: obj21.userId, messageChannelId: obj21.channelId, messageId: obj21.messageId } = data);
+            showUserProfileActionSheetDefault({ userId: null, channelId: null, messageId: null });
+            const obj4 = { userId: null, channelId: null, messageId: null };
+          break;
+          case "bindGuildMenu":
+            if (null != data.messageReference) {
+              const guild_id = data.messageReference.guild_id;
+              if (null != guild_id) {
+                const _HermesInternal = HermesInternal;
+                const obj19 = ActionSheetActionCreatorsDefault;
+                const obj9 = { guildId: guild_id };
+                obj19.openLazy(asyncRequireImpl(9217, dependencyMap.paths), "GuildProfileActionSheet:" + guild_id, obj9);
+                const tmp97 = asyncRequireImpl(9217, dependencyMap.paths);
+              }
             }
-            current.insertText(data.text, null, flag);
-          }
+          break;
+          case "bindJoinStream":
+            const stream = data.stream;
+            if (null != stream) {
+              const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(stream.channelId);
+              const result = StreamActionCreators.watchStreamAndTransitionToStream(stream);
+            }
+          break;
+          case "bindOpenPins":
+            openPinnedMessagesDefault(data.messageChannelId, "pinned-message-system-message");
+          break;
+          case "bindOpenGdmCustomizeActionSheet":
+            const obj10 = { channelId: data.messageChannelId };
+            showChatGDMCustomizeActionSheetDefault(obj10);
+          break;
+          case "bindDismissMessage":
+            const message3 = data.message;
+            let id1;
+            if (message3 != null) {
+              id1 = message3.id;
+            }
+            const message1 = GuildAutomodMessageStore.getMessage(id1);
+            let isBlockedEdit;
+            if (message1 != null) {
+              isBlockedEdit = message1.isBlockedEdit;
+            }
+            if (isBlockedEdit) {
+              const message4 = data.message;
+              let id2;
+              if (message4 != null) {
+                id2 = message4.id;
+              }
+              const result1 = GuildAutomodMessageActionCreators.removeAutomodMessageNotice(id2);
+            } else {
+              const result2 = MessageActionCreatorsDefault.dismissAutomatedMessage(data.message);
+            }
+          break;
+          case "bindTapUsername":
+            const obj11 = { userId: null, channelId: null, messageId: null, sourceAnalyticsLocations: null };
+            ({ userId: obj13.userId, messageChannelId: obj13.channelId, messageId: obj13.messageId } = data);
+            const items = [AnalyticsLocationDefault.USERNAME];
+            obj11.sourceAnalyticsLocations = items;
+            showUserProfileActionSheetDefault(obj11);
+          break;
+          case "bindTapCommandName":
+            let interaction;
+            if (message != null) {
+              interaction = message.interaction;
+            }
+            if (null != interaction) {
+              if (null != messageChannel) {
+                const user = UserStore.getUser(data.userId);
+                if (null != user) {
+                  if (obj24.isPrimaryEntryPointCommandMessage(message)) {
+                    if (null != message.applicationId) {
+                      const channel = ChannelStore.getChannel(data.messageChannelId);
+                      if (null != channel) {
+                        const obj12 = { channel, type: "channel" };
+                        const tmp119 = getSection(obj12, message.applicationId);
+                        const descriptor = tmp119.descriptor;
+                        let application;
+                        if (descriptor != null) {
+                          application = descriptor.application;
+                        }
+                        if (null != application) {
+                          if (chatInputRef != null) {
+                            const current4 = chatInputRef.current;
+                            if (current4 != null) {
+                              const obj16 = { type: tmp111(1609).KeyboardTypes.APP_LAUNCHER, context: null };
+                              const obj20 = { initialRouteName: AppLauncherRouteName.APPLICATION_VIEW, initiallyExpanded: true, application: tmp119.descriptor.application, installOnDemand: null };
+                              const isGuildInstalled = tmp119.isGuildInstalled;
+                              let tmp66 = !isGuildInstalled;
+                              if (!isGuildInstalled) {
+                                tmp66 = !tmp119.isUserInstalled;
+                              }
+                              obj20.installOnDemand = tmp66;
+                              obj16.context = obj20;
+                              current4.openCustomKeyboard(obj16);
+                            }
+                          }
+                        } else if (chatInputRef != null) {
+                          const current3 = chatInputRef.current;
+                          if (current3 != null) {
+                            const obj23 = { type: tmp111(1609).KeyboardTypes.APP_LAUNCHER, context: null };
+                            const obj25 = { initialRouteName: AppLauncherRouteName.APPLICATION_VIEW, initiallyExpanded: true, applicationId: message.applicationId, installOnDemand: true };
+                            obj23.context = obj25;
+                            current3.openCustomKeyboard(obj23);
+                          }
+                        }
+                      }
+                    }
+                  } else {
+                    let author;
+                    if (message != null) {
+                      author = message.author;
+                    }
+                    if (null != author) {
+                      const obj26 = { author: null, channelId: null, chatInputRef: null, messageId: null, user: null, applicationUser: null, guildId: null, messageType: null };
+                      const tmp114 = showExecutedApplicationCommandPopoutDefault;
+                      obj26.author = tmp111(4807).getUserAuthor(message.interaction.user, messageChannel);
+                      obj26.channelId = data.messageChannelId;
+                      obj26.chatInputRef = chatInputRef;
+                      obj26.messageId = data.messageId;
+                      obj26.user = user;
+                      let author1;
+                      if (message != null) {
+                        author1 = message.author;
+                      }
+                      const tmp1152 = new UserRecord(author1);
+                      obj26.applicationUser = tmp1152;
+                      const guildId = messageChannel.getGuildId();
+                      obj26.guildId = guildId;
+                      obj26.messageType = data.messageType;
+                      tmp114(obj26);
+                      const tmp111Result = tmp111(4807);
+                    }
+                  }
+                  obj24 = ApplicationInteractionInfoUtils;
+                }
+              }
+            }
+          break;
+          case "bindTapActivityText":
+            const application1 = ApplicationStore.getApplication(data.applicationUserId);
+            if (chatInputRef != null) {
+              const current2 = chatInputRef.current;
+              if (current2 != null) {
+                if (null == application1) {
+                  const obj27 = { type: KeyboardTypes.KeyboardTypes.APP_LAUNCHER, context: null };
+                  const obj28 = { initialRouteName: AppLauncherRouteName.APPLICATION_VIEW, applicationId: data.applicationUserId, initiallyExpanded: true };
+                  obj27.context = obj28;
+                  let obj29 = obj27;
+                } else {
+                  obj29 = { type: KeyboardTypes.KeyboardTypes.APP_LAUNCHER, context: null };
+                  const obj30 = { initialRouteName: AppLauncherRouteName.APPLICATION_VIEW, application: application1, initiallyExpanded: true };
+                  obj29.context = obj30;
+                }
+                current2.openCustomKeyboard(obj29);
+              }
+            }
+          break;
+          case "bindOpenThreadChannel":
+            const channel1 = ChannelStore.getChannel(data.threadId);
+            if (null != channel1) {
+              let guild_id1;
+              if (channel1 != null) {
+                guild_id1 = channel1.guild_id;
+              }
+              tmp(guild_id1, channel1.id, constants3.EMBED);
+            }
+          break;
+          case "bindJumpToMessage":
+            ({ targetChannelId: obj8.channelId, targetMessageId: obj8.messageId, messageId: obj8.returnMessageId } = data);
+            MessageActionCreatorsDefault.jumpToMessage({ channelId: null, messageId: null, flash: true, returnMessageId: null });
+            const obj31 = { channelId: null, messageId: null, flash: true, returnMessageId: null };
+          break;
+          case "bindOpenRoleSubscriptionOverview":
+            router_utils.transitionTo(closure_1_14.CHANNEL(data.guildId, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
+            const obj6 = GuildRoleSubscriptionSystemMessageUtils;
+            const result3 = obj6.trackRoleSubscriptionPurchaseMessageTierClick(data.guildId, data.channelId, data.messageId, data.roleSubscriptionListingId);
+          break;
+          case "bindUserSurvey":
+            const channel2 = ChannelStore.getChannel(data.message.channel_id);
+            let guild_id2;
+            if (channel2 != null) {
+              guild_id2 = channel2.guild_id;
+            }
+            if (null != guild_id2) {
+              const notificationType2 = data.notificationType;
+              if (NotificationTypes.TRENDING_CONTENT_PUSH === notificationType2) {
+                const obj3 = GuildHighlightsNotificationsActionCreators;
+                ({ message: message2, notificationType } = data);
+                const MESSAGE_EMBED = constants.MESSAGE_EMBED;
+                const selectedSummaryResult = SummaryStore.selectedSummary(data.message.channel_id);
+                let str2;
+                if (selectedSummaryResult != null) {
+                  str2 = selectedSummaryResult.id;
+                }
+                if (str2 == null) {
+                  str2 = "unknown";
+                }
+                const obj48 = { summary_id: str2 };
+                const result4 = obj3.openGuildHighlightNotificationForPush(guild_id2, message2, notificationType, MESSAGE_EMBED, obj48);
+              } else if (tmp103.TOP_MESSAGE_PUSH === notificationType2) {
+                const obj2 = GuildHighlightsNotificationsActionCreators;
+                const result5 = obj2.openGuildHighlightNotificationForPush(guild_id2, data.message, data.notificationType, constants.MESSAGE_EMBED);
+              } else {
+                const tmp106 = asyncRequireImpl(11677, dependencyMap.paths);
+                const obj49 = { location: constants.MESSAGE_EMBED, messageId: data.message.id, notificationType: null };
+                let TOP_MESSAGE_PUSH = data.notificationType;
+                if (TOP_MESSAGE_PUSH == null) {
+                  TOP_MESSAGE_PUSH = tmp103.TOP_MESSAGE_PUSH;
+                }
+                obj49.notificationType = TOP_MESSAGE_PUSH;
+                ActionSheetActionCreatorsDefault.openLazy(tmp106, "NotificationSurvey", obj49);
+              }
+            }
+          break;
+          case "bindInsertText":
+            if (chatInputRef != null) {
+              const current = chatInputRef.current;
+              if (current != null) {
+                let flag = data.addSpace;
+                if (flag == null) {
+                  flag = true;
+                }
+                current.insertText(data.text, null, flag);
+              }
+            }
+          break;
         }
       }
     }
-    tmp4 = handleMessagesTapURLLink;
-  } else {
-    const obj = isAlertOrActionSheetOpen;
+    tmp5 = handleMessagesTapURLLink;
   }
 };

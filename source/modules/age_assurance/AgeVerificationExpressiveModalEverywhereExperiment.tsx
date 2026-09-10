@@ -1,17 +1,19 @@
-// Module ID: 8578
-// Function ID: 8579
-// Name: useIsAgeVerificationExpressiveModalEverywhereEnabled
+// Module ID: 8606
+// Function ID: 8607
+// Name: AgeVerificationExpressiveModalEverywhereExperiment
 // Dependencies: [1433, 2]
 // Exports: isAgeVerificationExpressiveModalEverywhereEnabled, useIsAgeVerificationExpressiveModalEverywhereEnabled
 
-// Module 8578 (useIsAgeVerificationExpressiveModalEverywhereEnabled)
-import set from "set" /* 2 */;
+// Module 8606 (AgeVerificationExpressiveModalEverywhereExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null };
-obj[1] = { enabled: true };
-let closure_0 = ApexExperiment.createApexExperiment({ kind: "user", name: "2025-11-age-verification-expressive-everywhere", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/age_assurance/AgeVerificationExpressiveModalEverywhereExperiment.tsx");
+const obj = { kind: "user", name: "2025-11-age-verification-expressive-everywhere", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj.variations = obj2;
+let closure_0 = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationExpressiveModalEverywhereExperiment.tsx");
 
 export const useIsAgeVerificationExpressiveModalEverywhereEnabled = function useIsAgeVerificationExpressiveModalEverywhereEnabled(location) {
   return closure_0.useConfig({ location }).enabled;

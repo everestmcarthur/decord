@@ -1,71 +1,72 @@
-// Module ID: 10058
-// Function ID: 10059
+// Module ID: 10085
+// Function ID: 10086
 // Name: StageSectionHeader
-// Dependencies: [19, 17, 21, 4560, 576, 4296, 4561, 4556, 1178, 7158, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 4310, 4575, 4570, 1178, 7172, 2]
 // Exports: default
 
-// Module 10058 (StageSectionHeader)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import _modDef4296 from "module_4296" /* 4296 */;
-import registerAssetDefault from "registerAsset" /* 7158 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10085 (StageSectionHeader)
+import nativeDefault from "native" /* 576 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4310 */;
+import timing from "timing" /* 4575 */;
+import _modDef7172 from "module_7172" /* 7172 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ TouchableOpacity: c3, View: c4 } = get_ActivityIndicator);
-({ jsxs: c5, jsx: closure_6 } = jsxProd);
-createCacheKey = { section: { height: 48, paddingHorizontal: 4 }, children: { marginLeft: 12 }, collapseButton: { marginLeft: "auto" }, collapseIcon: null, audience: null };
-createCacheKey = { tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-createCacheKey[3] = createCacheKey;
-createCacheKey[4] = { height: 48, flex: 1, flexDirection: "row", alignItems: "center", borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, paddingHorizontal: 4, borderRadius: ThemesDefault.radii.xs };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let closure_8 = { code: "function StageSectionHeaderTsx1(){const{withTiming,collapsed}=this.__closure;return{transform:[{rotate:withTiming(collapsed?'180deg':'0deg',{duration:150})}]};}" };
-let obj1 = { height: 48, flex: 1, flexDirection: "row", alignItems: "center", borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, paddingHorizontal: 4, borderRadius: ThemesDefault.radii.xs };
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/StageSectionHeader.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsxs: hasOwnProperty, jsx: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { section: { height: 48, paddingHorizontal: 4 }, children: { marginLeft: 12 }, collapseButton: { marginLeft: "auto" }, collapseIcon: { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, audience: null };
+let obj3 = { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+obj2.audience = { height: 48, flex: 1, flexDirection: "row", alignItems: "center", borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, paddingHorizontal: 4, borderRadius: nativeDefault.radii.xs };
+let closure_7 = createStyles.createStyles(obj2);
+const __initData = { code: "function StageSectionHeaderTsx1(){const{withTiming,collapsed}=this.__closure;return{transform:[{rotate:withTiming(collapsed?'180deg':'0deg',{duration:150})}]};}" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageSectionHeader.tsx");
 
 export default function StageSectionHeader(collapsed) {
   collapsed = collapsed.collapsed;
   const children = collapsed.children;
   ({ label, count, onToggleCollapse } = collapsed);
-  const tmp = callback2();
-  let obj = collapsed(4296);
+  const tmp = closure_7();
   const fn = function y() {
-    let obj = collapsed(closure_1_2[6]);
     let str = "0deg";
     if (collapsed) {
       str = "180deg";
     }
-    obj = { transform: null };
-    obj = { rotate: obj.withTiming(str, { duration: 150 }) };
-    const items = [obj];
-    obj[0] = items;
-    return obj;
+    const obj2 = { transform: null };
+    const items = [{ rotate: timing.withTiming(str, { duration: 150 }) }];
+    obj2.transform = items;
+    return obj2;
   };
-  obj = { withTiming: collapsed(4561).withTiming, collapsed };
-  fn.__closure = obj;
+  let obj = collapsed(4310);
+  const tmp2 = collapsed;
+  fn.__closure = { withTiming: collapsed(4575).withTiming, collapsed };
   fn.__workletHash = 13855092771739;
-  fn.__initData = closure_8;
-  obj = { style: tmp.section, children: null };
-  obj1 = { style: tmp.audience, onPress: onToggleCollapse, children: null };
+  fn.__initData = __initData;
+  const obj3 = { style: tmp.section, children: null };
+  const obj4 = { style: tmp.audience, onPress: onToggleCollapse, children: null };
   const animatedStyle = obj.useAnimatedStyle(fn);
+  const obj5 = { variant: "text-md/semibold", color: "text-overlay-light", accessibilityRole: "header", children: null };
   let items = [label, " \u2014 ", count];
-  const items1 = [callback(collapsed(4556).Text, { variant: "text-md/semibold", color: "text-overlay-light", accessibilityRole: "header", children: items }), , ];
+  obj5.children = items;
+  const items1 = [closure_5(collapsed(4570).Text, obj5), , ];
   let tmp5Result = null != children;
   if (tmp5Result) {
-    const obj2 = { style: null, children: null };
-    obj2[0] = tmp.children;
-    obj2[1] = children;
-    tmp5Result = tmp5(tmp6, obj2);
+    const obj6 = { style: tmp.children, children };
+    tmp5Result = tmp5(tmp6, obj6);
   }
   items1[1] = tmp5Result;
-  const obj3 = { style: tmp.collapseButton, children: null };
-  const obj4 = { style: animatedStyle, children: closure_6(collapsed(1178).Icon, { source: registerAssetDefault, style: tmp.collapseIcon }) };
-  obj3[1] = closure_6(_modDef4296.View, obj4);
-  items1[2] = closure_6(closure_4, obj3);
-  obj1[2] = items1;
-  obj[1] = callback(closure_3, obj1);
-  return closure_6(closure_4, obj);
+  const obj7 = { style: tmp.collapseButton, children: null };
+  const obj8 = { style: animatedStyle, children: null };
+  let obj2 = { withTiming: collapsed(4575).withTiming, collapsed };
+  const tmp7 = closure_5;
+  const tmp8 = closure_3;
+  obj8.children = closure_6(tmp2(1178).Icon, { source: _modDef7172, style: tmp.collapseIcon });
+  obj7.children = closure_6(ReanimatedRexportDefault.View, obj8);
+  items1[2] = closure_6(closure_4, obj7);
+  obj4.children = items1;
+  obj3.children = tmp7(tmp8, obj4);
+  return closure_6(closure_4, obj3);
 };

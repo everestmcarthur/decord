@@ -1,63 +1,54 @@
-// Module ID: 16461
-// Function ID: 16462
+// Module ID: 16492
+// Function ID: 16493
 // Name: ItemDetailsActionSheet
-// Dependencies: [19, 17, 1957, 1979, 8335, 21, 4560, 576, 504, 4713, 5626, 5584, 1178, 8350, 7198, 11003, 16462, 5687, 5605, 2]
+// Dependencies: [19, 17, 1957, 1979, 8363, 21, 4574, 576, 504, 4727, 5640, 5598, 1178, 8378, 7211, 11030, 16493, 5701, 5619, 2]
 // Exports: default
 
-// Module 16461 (ItemDetailsActionSheet)
-import noopAll from "noop" /* 19 */;
+// Module 16492 (ItemDetailsActionSheet)
 import initialize from "initialize" /* 504 */;
-import ThemesDefault from "Themes" /* 576 */;
-import computeChannelNameDefault from "computeChannelName" /* 4713 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;
-import useDesignToggleDefault from "useDesignToggle" /* 5626 */;
-import ActionSheet from "ActionSheet" /* 7198 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "createGuildRecordFromRust" /* 1979 */;
-import closure_6 from "filterStaffGuild" /* 8335 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import useChannelNameDefault from "useChannelName" /* 4727 */;
+import useDesignToggleDefault from "useDesignToggle" /* 5640 */;
+import ActionSheet from "ActionSheet" /* 7211 */;
+import ActionSheetIconHeader from "ActionSheetIconHeader" /* 11030 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import ICYMIStore from "ICYMIStore" /* 8363 */;
 
-require = arg1;
-noopAll;
-({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { divider: null };
-createCacheKey = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[0] = createCacheKey;
-let closure_10 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/icymi/native/ItemDetailsActionSheet.tsx");
+const GuildIconDefault = tmp5(5598);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
+let closure_10 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/icymi/native/ItemDetailsActionSheet.tsx");
 
 export default function ItemDetailsActionSheet(arg0) {
   ({ guildId: require, channelId: importDefault, id: dependencyMap } = arg0);
-  let obj = initialize;
-  const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getChannel(closure_1));
-  obj1 = initialize;
-  const items1 = [closure_5];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_5.getGuild(closure_0));
-  let obj2 = initialize;
-  const items2 = [closure_6];
-  const stateFromStores2 = obj2.useStateFromStores(items2, () => {
+  const items = [ChannelStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => ChannelStore.getChannel(importDefault));
+  const items1 = [GuildStore];
+  const stateFromStores1 = initialize.useStateFromStores(items1, () => GuildStore.getGuild(require));
+  const tmp6 = useChannelNameDefault(stateFromStores, true);
+  const items2 = [ICYMIStore];
+  const stateFromStores2 = initialize.useStateFromStores(items2, () => {
     let dehydratedItem = null;
-    if (null != closure_2) {
-      dehydratedItem = closure_1_6.getDehydratedItem(tmp);
+    if (null != dependencyMap) {
+      dehydratedItem = ICYMIStore.getDehydratedItem(tmp);
     }
     return dehydratedItem;
   });
-  const tmp5 = importDefault;
-  const tmp6 = computeChannelNameDefault(stateFromStores, true);
   if (null != stateFromStores1) {
-    obj = { guild: null, size: null };
-    obj[0] = stateFromStores1;
-    obj[1] = tmp(5584).GuildIconSizes.LARGE;
-    let tmp9 = callback(GuildIconSizesDefault, obj);
-    const tmp5Result = GuildIconSizesDefault;
+    const obj4 = { guild: stateFromStores1, size: tmp(5598).GuildIconSizes.LARGE };
+    let tmp9 = closure_7(GuildIconDefault, obj4);
+    const tmp5Result = GuildIconDefault;
   } else if (null != stateFromStores) {
-    obj = { size: null, channel: null };
-    obj[0] = tmp(1178).AvatarSizes.LARGE;
-    obj[1] = stateFromStores;
-    tmp9 = callback(tmp(1178).Avatar, obj);
+    const obj5 = { size: tmp(1178).AvatarSizes.LARGE, channel: stateFromStores };
+    tmp9 = closure_7(tmp(1178).Avatar, obj5);
   }
   let result = null != stateFromStores;
   const tmp8 = useDesignToggleDefault("show_icymi_debug_scores");
@@ -65,10 +56,10 @@ export default function ItemDetailsActionSheet(arg0) {
     result = null != stateFromStores1;
   }
   if (result) {
-    result = tmp(8350).isChannelCustomScoreEligible(stateFromStores);
-    const tmpResult = tmp(8350);
+    result = tmp(8378).isChannelCustomScoreEligible(stateFromStores);
+    const tmpResult = tmp(8378);
   }
-  obj1 = { icon: tmp9, title: tmp6, subtitle: null };
+  const obj6 = { icon: tmp9, title: tmp6, subtitle: null };
   let str;
   if (stateFromStores1 != null) {
     str = stateFromStores1.name;
@@ -76,47 +67,41 @@ export default function ItemDetailsActionSheet(arg0) {
   if (str == null) {
     str = "";
   }
-  obj2 = { showGradient: true, startExpanded: true, header: tmp16(tmp(11003).ActionSheetIconHeader, obj1), children: null };
-  obj1[2] = str;
+  const obj7 = { showGradient: true, startExpanded: true, header: closure_7(ActionSheetIconHeader.ActionSheetIconHeader, obj6), children: null };
+  obj6.subtitle = str;
   let tmp16Result = result;
   if (result) {
-    const obj3 = { channel: null, guild: null };
-    obj3[0] = stateFromStores;
-    obj3[1] = stateFromStores1;
-    tmp16Result = tmp16(tmp(16462).ChannelScoreSettings, obj3);
+    const obj8 = { channel: stateFromStores, guild: stateFromStores1 };
+    tmp16Result = tmp16(tmp(16493).ChannelScoreSettings, obj8);
   }
   const items3 = [tmp16Result, , ];
   let tmp15Result = null != stateFromStores2 && null != stateFromStores1;
   if (tmp15Result) {
     if (result) {
-      const obj4 = { style: null };
-      obj4[0] = tmp13.divider;
-      result = tmp16(View, obj4);
+      const obj9 = { style: tmp13.divider };
+      result = tmp16(View, obj9);
     }
-    const obj5 = { children: null };
+    const obj10 = { children: null };
     const items4 = [result, ];
-    const obj6 = { guild: null };
-    obj6[0] = stateFromStores1;
-    items4[1] = tmp16(tmp(16462).GuildScoreSettings, obj6);
-    obj5[0] = items4;
-    tmp15Result = tmp15(closure_8, obj5);
-    const tmp19 = closure_8;
+    const obj11 = { guild: stateFromStores1 };
+    items4[1] = tmp16(tmp(16493).GuildScoreSettings, obj11);
+    obj10.children = items4;
+    tmp15Result = tmp15(closure_8, obj10);
   }
   items3[1] = tmp15Result;
-  tmp16Result = null;
+  let tmp16Result2 = null;
   if (null != stateFromStores2) {
-    tmp16Result = null;
+    tmp16Result2 = null;
     if (tmp8) {
-      const obj7 = { title: "Debug details", hasIcons: false, children: null };
-      const obj8 = { label: null, subLabel: null };
-      obj8[0] = `Total Score: ${tmp7.score}`;
+      const obj12 = { title: "Debug details", hasIcons: false, children: null };
+      const obj13 = { label: `Total Score: ${tmp7.score}`, subLabel: null };
       const _JSON = JSON;
-      obj8[1] = JSON.stringify(stateFromStores2.score_components);
-      obj7[2] = tmp16(tmp(5605).TableRow, obj8);
-      tmp16Result = tmp16(tmp(5687).TableRowGroup, obj7);
+      obj13.subLabel = JSON.stringify(stateFromStores2.score_components);
+      obj12.children = tmp16(tmp(5619).TableRow, obj13);
+      tmp16Result2 = tmp16(tmp(5701).TableRowGroup, obj12);
     }
   }
-  items3[2] = tmp16Result;
-  obj2[3] = items3;
-  return closure_9(ActionSheet.ActionSheet, obj2);
+  items3[2] = tmp16Result2;
+  obj7.children = items3;
+  return closure_9(ActionSheet.ActionSheet, obj7);
 };

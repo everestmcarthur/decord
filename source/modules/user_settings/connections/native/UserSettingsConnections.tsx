@@ -1,78 +1,74 @@
-// Module ID: 14961
-// Function ID: 14962
-// Name: ADD_CONNECTIONS_SHEET_SENTINEL
-// Dependencies: [19, 17, 7107, 502, 5281, 2025, 1074, 21, 4560, 576, 4495, 504, 13085, 7170, 5406, 4527, 14960, 1896, 9257, 14962, 8598, 4973, 14965, 14966, 2]
+// Module ID: 14987
+// Function ID: 14988
+// Name: UserSettingsConnections
+// Dependencies: [19, 17, 7121, 502, 5295, 2025, 1074, 21, 4574, 576, 4509, 504, 13111, 7184, 5420, 4541, 14986, 1896, 9284, 14988, 8626, 4987, 14991, 14992, 2]
 // Exports: UserSettingsConnections
 
-// Module 14961 (ADD_CONNECTIONS_SHEET_SENTINEL)
-import ThemesDefault from "Themes" /* 576 */;
-import useThemeDefault from "useTheme" /* 4495 */;
-import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 13085 */;
-import EmptyStateCardDefault from "EmptyStateCard" /* 14962 */;
-import closure_3 from "noop" /* 19 */;
-import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "recomputeFromAppTokens" /* 7107 */;
-import { FetchState } from "recomputeFromAppTokens" /* 7107 */;
-import closure_7 from "fetchFingerprint" /* 502 */;
-import closure_8 from "set" /* 5281 */;
-import closure_9 from "_getSystemLocale" /* 2025 */;
-import { AnalyticsLocations } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14987 (UserSettingsConnections)
+import nativeDefault from "native" /* 576 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import useThemeDefault from "useTheme" /* 4509 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7184 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9284 */;
+import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 13111 */;
+import ConnectedApplicationIdentityDefault from "ConnectedApplicationIdentity" /* 14991 */;
+import ConnectedAccountDefault from "ConnectedAccount" /* 14992 */;
+import noop from "module_19" /* 19 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7121 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5295 */;
+import LocaleStore from "LocaleStore" /* 2025 */;
 
-const require = arg1;
-({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { flex: { flex: 1 }, form: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: ThemesDefault.space.PX_16 };
-createCacheKey[1] = createCacheKey;
-let closure_13 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/UserSettingsConnections.tsx");
+const ConnectionsEmptyStateUpsellDefault = tmp2(14988);
+require = fn;
+const ActivityIndicator = fn(17).ActivityIndicator;
+const FetchState = fn(7121).FetchState;
+const AnalyticsLocations = fn(1074).AnalyticsLocations;
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { flex: { flex: 1 }, form: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16 } };
+let closure_13 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/connections/native/UserSettingsConnections.tsx");
 
 export const ADD_CONNECTIONS_SHEET_SENTINEL = -1;
 export const UserSettingsConnections = function UserSettingsConnections(selectedPlatformType) {
   selectedPlatformType = selectedPlatformType.selectedPlatformType;
-  importDefault = undefined;
-  dependencyMap = undefined;
-  let authorizedAppsFetchState;
-  let authorizedApps;
-  const tmp = callback3();
+  const tmp = closure_13();
   importDefault = useThemeDefault();
+  const items = [LocaleStore];
+  dependencyMap = selectedPlatformType(504).useStateFromStores(items, () => locale2.locale);
   let obj = selectedPlatformType(504);
-  const items = [closure_9];
-  dependencyMap = obj.useStateFromStores(items, () => locale.locale);
-  obj1 = selectedPlatformType(504);
-  const items1 = [closure_8];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items1, () => ({ fetching: closure_8.isFetching(), accounts: closure_8.getAccounts() }));
+  const items1 = [ConnectedAccountsStore];
+  const stateFromStoresObject = selectedPlatformType(504).useStateFromStoresObject(items1, () => ({ fetching: ConnectedAccountsStore.isFetching(), accounts: ConnectedAccountsStore.getAccounts() }));
   ({ accounts, fetching } = stateFromStoresObject);
-  const items2 = [closure_5];
+  let obj2 = selectedPlatformType(504);
+  const items2 = [AuthorizedAppsStore];
   const stateFromStoresObject1 = selectedPlatformType(504).useStateFromStoresObject(items2, () => ({ authorizedAppsFetchState: authStore.getFetchState(), authorizedApps: authStore.getNewestTokensForNonChildrenApplications() }));
-  authorizedAppsFetchState = stateFromStoresObject1.authorizedAppsFetchState;
-  authorizedApps = stateFromStoresObject1.authorizedApps;
+  const authorizedAppsFetchState = stateFromStoresObject1.authorizedAppsFetchState;
+  const authorizedApps = stateFromStoresObject1.authorizedApps;
   const obj3 = selectedPlatformType(504);
-  const tmp2 = importDefault;
-  const tmp7Result = useConnectionFilteredAppIdentitiesDefault(id.getId(), { includeHidden: true });
+  const tmp7Result = useConnectionFilteredAppIdentitiesDefault(AuthenticationStore.getId(), { includeHidden: true });
   const prop = tmp7Result.filteredAppIdentities;
   const items3 = [authorizedAppsFetchState];
   const effect = authorizedAppsFetchState.useEffect(() => {
-    if (authorizedAppsFetchState === closure_1_6.NOT_FETCHED) {
-      const response = callback(paths[13]).fetch();
-      const obj = callback(paths[13]);
+    if (authorizedAppsFetchState === FetchState.NOT_FETCHED) {
+      const response = AuthorizedAppsActionCreatorsDefault.fetch();
     }
   }, items3);
   const effect1 = authorizedAppsFetchState.useEffect(() => {
-    const response = callback(paths[14]).fetch();
+    const response = theme(locale[14]).fetch();
   }, []);
   const items4 = [selectedPlatformType];
   const effect2 = authorizedAppsFetchState.useEffect(() => {
     if (null != selectedPlatformType) {
       if (-1 === tmp) {
-        callback(paths[15]).openLazy(selectedPlatformType(paths[17])(paths[16], paths.paths), "AddConnection");
-        const obj2 = callback(paths[15]);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14986, dependencyMap.paths), "AddConnection");
       } else {
-        const obj = { platformType: null, location: null };
-        obj[0] = tmp;
-        obj[1] = closure_1_10.USER_SETTINGS;
-        callback(paths[18])(obj);
+        const obj = { platformType: tmp, location: AnalyticsLocations.USER_SETTINGS };
+        authorizeConnectionDefault(obj);
       }
     }
   }, items4);
@@ -80,26 +76,23 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
     if (!tmp7Result.isLoading) {
       if (0 === accounts.length) {
         if (0 === prop.length) {
-          let tmp14 = callback(EmptyStateCardDefault, {});
+          let tmp14 = closure_11(ConnectionsEmptyStateUpsellDefault, {});
         }
       }
-      obj = { style: null, children: null };
-      obj[0] = tmp.form;
-      obj = { spacing: 16, children: null };
+      const obj4 = { style: tmp.form, children: null };
+      const obj5 = { spacing: 16, children: null };
       const items5 = [
-        prop.map((application_id) => {
-              closure_0 = application_id;
-              const obj = { identity: application_id, token: authorizedApps.find((application) => application.application.id === application_id.application_id) };
-              return closure_1_11(callback(paths[22]), obj, "" + application_id.application_id + "-" + application_id.provider_issued_user_id);
+        prop.map((identity) => {
+              const obj = { identity, token: authorizedApps.find((application) => application.application.id === identity.application_id) };
+              return closure_2_11(ConnectedApplicationIdentityDefault, obj, "" + identity.application_id + "-" + identity.provider_issued_user_id);
             }),
-        accounts.map((account) => closure_1_11(callback(paths[23]), { theme: callback, locale: paths, account }, account.id))
+        accounts.map((account) => closure_2_11(ConnectedAccountDefault, { theme, locale, account }, account.id))
       ];
-      obj[1] = items5;
-      obj[1] = callback2(tmp4(4973).Stack, obj);
-      tmp14 = callback(tmp4(8598).Form, obj);
+      obj5.children = items5;
+      obj4.children = closure_12(tmp4(4987).Stack, obj5);
+      tmp14 = closure_11(tmp4(8626).Form, obj4);
     }
     return tmp14;
   }
-  obj1 = { style: tmp.flex, size: "large" };
-  tmp14 = callback(authorizedApps, obj1);
+  tmp14 = closure_11(authorizedApps, { style: tmp.flex, size: "large" });
 };

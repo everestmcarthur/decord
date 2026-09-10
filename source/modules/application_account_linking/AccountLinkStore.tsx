@@ -1,13 +1,12 @@
-// Module ID: 16945
-// Function ID: 16946
-// Name: map
-// Dependencies: [7107, 504, 573, 2]
+// Module ID: 16982
+// Function ID: 16983
+// Name: AccountLinkStore
+// Dependencies: [7121, 504, 573, 2]
 
-// Module 16945 (map)
+// Module 16982 (AccountLinkStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_0 from "recomputeFromAppTokens" /* 7107 */;
-import set from "set" /* 2 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7121 */;
 
 const map = new Map();
 let set = new Set();
@@ -16,7 +15,7 @@ class AccountLinkStore extends Store {
 }
 const prototype = AccountLinkStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_0);
+  this.waitFor(AuthorizedAppsStore);
 };
 prototype["getPendingAuthorizations"] = function getPendingAuthorizations() {
   return map;
@@ -28,14 +27,13 @@ prototype["getGloballyDisabledAuthorizationFlows"] = function getGloballyDisable
   return set;
 };
 AccountLinkStore.displayName = "AccountLinkStore";
-const accountLinkStore = new AccountLinkStore(dispatcherDefault, {
+const accountLinkStore = new AccountLinkStore(DispatcherDefault, {
   ACCOUNT_LINK_AUTHORIZATION_STARTED: function handleAuthorizationStarted(applicationId) {
     if (tmp) {
-      const obj = { applicationId: null, startedAt: null, accountLinkCallbacks: null };
-      obj[0] = applicationId.applicationId;
+      const obj = { applicationId: applicationId.applicationId, startedAt: null, accountLinkCallbacks: null };
       const _Date = Date;
-      obj[1] = Date.now();
-      obj[2] = applicationId.accountLinkCallbacks;
+      obj.startedAt = Date.now();
+      obj.accountLinkCallbacks = applicationId.accountLinkCallbacks;
       const result = map.set(applicationId.applicationId, obj);
     }
   },
@@ -43,6 +41,7 @@ const accountLinkStore = new AccountLinkStore(dispatcherDefault, {
     set = new Set(flows.flows);
   }
 });
-let result = set.fileFinishedImporting("modules/application_account_linking/AccountLinkStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/application_account_linking/AccountLinkStore.tsx");
 
 export default accountLinkStore;

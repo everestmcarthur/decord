@@ -1,29 +1,25 @@
-// Module ID: 14521
-// Function ID: 14522
-// Name: unsupportedCommand
-// Dependencies: [1074, 9559, 2]
+// Module ID: 14546
+// Function ID: 14547
+// Name: unavailableCommand
+// Dependencies: [1074, 9586, 2]
 
-// Module 14521 (unsupportedCommand)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import prototypeDefault from "prototype" /* 9559 */;
+// Module 14546 (unavailableCommand)
+import Constants from "Constants" /* 1074 */;
+import RPCErrorDefault from "RPCError" /* 9586 */;
+import size from "module_2" /* 2 */;
 
-const RPCErrors = ME.RPCErrors;
-let obj = {
+const RPCErrors = Constants.RPCErrors;
+const result = size.fileFinishedImporting("modules/rpc/helpers/unavailableCommand.tsx");
+
+export const unsupportedCommand = {
   handler(cmd) {
-    let tmp = prototypeDefault;
-    tmp = new tmp({ errorCode: RPCErrors.INVALID_COMMAND }, "Unsupported command: " + cmd.cmd);
-    throw tmp;
+    const obj = { errorCode: RPCErrors.INVALID_COMMAND };
+    throw new RPCErrorDefault({ errorCode: RPCErrors.INVALID_COMMAND }, "Unsupported command: " + cmd.cmd);
   }
 };
-obj = {
+export const deprecatedCommand = {
   handler(cmd) {
-    let tmp = prototypeDefault;
-    tmp = new tmp({ errorCode: RPCErrors.INVALID_COMMAND }, "Deprecated command: " + cmd.cmd);
-    throw tmp;
+    const obj = { errorCode: RPCErrors.INVALID_COMMAND };
+    throw new RPCErrorDefault({ errorCode: RPCErrors.INVALID_COMMAND }, "Deprecated command: " + cmd.cmd);
   }
 };
-const result = set.fileFinishedImporting("modules/rpc/helpers/unavailableCommand.tsx");
-
-export const unsupportedCommand = obj;
-export const deprecatedCommand = obj;

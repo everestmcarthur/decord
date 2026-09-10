@@ -1,12 +1,12 @@
-// Module ID: 10879
-// Function ID: 10880
-// Name: RELATIONSHIP_COUNT_ANIMATION_THRESHOLD
+// Module ID: 10906
+// Function ID: 10907
+// Name: Constants
 // Dependencies: [2]
 
-// Module 10879 (RELATIONSHIP_COUNT_ANIMATION_THRESHOLD)
-import set from "set" /* 2 */;
+// Module 10906 (Constants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/people/Constants.tsx");
+const result = size.fileFinishedImporting("modules/people/Constants.tsx");
 
 export const RELATIONSHIP_COUNT_ANIMATION_THRESHOLD = 64;
 export const PEOPLE_LIST_ITEM_HEIGHT = 61;

@@ -1,77 +1,77 @@
-// Module ID: 11696
-// Function ID: 11697
+// Module ID: 11722
+// Function ID: 11723
 // Name: ForwardMessageFooter
-// Dependencies: [32, 19, 4901, 21, 11686, 11689, 504, 7777, 11697, 1114, 11698, 11699, 4975, 11706, 2]
+// Dependencies: [32, 19, 4915, 21, 11712, 11715, 504, 7791, 11723, 1114, 11724, 11725, 4989, 11732, 2]
 // Exports: ForwardMessageFooter
 
-// Module 11696 (ForwardMessageFooter)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "handleChanged" /* 4901 */;
-import { DraftType } from "handleChanged" /* 4901 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 11722 (ForwardMessageFooter)
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 7791 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import DraftStore from "DraftStore" /* 4915 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/forwarding/native/ForwardMessageFooter.tsx");
+const require = fn;
+const DraftType = fn(4915).DraftType;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forwarding/native/ForwardMessageFooter.tsx");
 
 export const ForwardMessageFooter = function ForwardMessageFooter(message) {
   message = message.message;
   ({ selectedDestinations, isSending, onSend } = message);
   let trackForwardEditContextMessageOnce;
-  let first;
-  let React;
+  let text;
+  noop = undefined;
   ({ forwardOptions, sendLabel, canSend } = message);
-  let obj = message(trackForwardEditContextMessageOnce[4]);
-  trackForwardEditContextMessageOnce = obj.useTrackForwardEditContextMessageOnce();
-  obj1 = message(trackForwardEditContextMessageOnce[5]);
-  const selectedDestinationChannel = obj1.useSelectedDestinationChannel(selectedDestinations);
-  const items = [closure_5];
-  const tmp5 = first(React.useState(message(trackForwardEditContextMessageOnce[6]).useStateFromStoresObject(items, () => closure_1_5.getDraft(message.channel_id, closure_1_6.ForwardContextMessage))), 2);
-  first = tmp5[0];
-  React = tmp6;
+  trackForwardEditContextMessageOnce = message(trackForwardEditContextMessageOnce[4]).useTrackForwardEditContextMessageOnce();
+  const obj = message(trackForwardEditContextMessageOnce[4]);
+  const selectedDestinationChannel = message(trackForwardEditContextMessageOnce[5]).useSelectedDestinationChannel(selectedDestinations);
+  const obj2 = message(trackForwardEditContextMessageOnce[5]);
+  const items = [DraftStore];
+  const tmp5 = text(noop.useState(message(trackForwardEditContextMessageOnce[6]).useStateFromStoresObject(items, () => DraftStore.getDraft(message.channel_id, DraftType.ForwardContextMessage))), 2);
+  text = tmp5[0];
+  noop = tmp6;
   const items1 = [message, trackForwardEditContextMessageOnce];
-  const items2 = [first, message.channel_id];
-  const callback = React.useCallback((arg0) => {
-    callback(arg0);
+  const items2 = [text, message.channel_id];
+  const callback = noop.useCallback((arg0) => {
+    closure_4(arg0);
     trackForwardEditContextMessageOnce(message.channel_id, message.id);
   }, items1);
-  const effect = React.useEffect(() => {
-    onSend(trackForwardEditContextMessageOnce[7]).saveDraft(message.channel_id, first, closure_1_6.ForwardContextMessage);
+  const effect = noop.useEffect(() => {
+    DraftActionCreatorsDefault.saveDraft(message.channel_id, first, DraftType.ForwardContextMessage);
   }, items2);
   const obj3 = message(trackForwardEditContextMessageOnce[6]);
   const shareChatInputActions = message(trackForwardEditContextMessageOnce[8]).useShareChatInputActions(tmp6, selectedDestinationChannel);
-  const items3 = [first, message.channel_id, onSend];
+  const items3 = [text, message.channel_id, onSend];
   ({ textInputRef, isInputFocused, handleSelectionChange, handleMessageFocus, handleMessageBlur, handlePressEmoji } = shareChatInputActions);
-  const callback1 = React.useCallback(() => {
-    onSend(trackForwardEditContextMessageOnce[7]).clearDraft(message.channel_id, closure_1_6.ForwardContextMessage);
+  const callback1 = noop.useCallback(() => {
+    DraftActionCreatorsDefault.clearDraft(message.channel_id, DraftType.ForwardContextMessage);
     onSend(first);
   }, items3);
   const obj4 = message(trackForwardEditContextMessageOnce[8]);
   const destinationNamesWithSlowmode = message(trackForwardEditContextMessageOnce[5]).useDestinationNamesWithSlowmode(selectedDestinations);
   let formatToPlainStringResult;
   if (destinationNamesWithSlowmode.length > 0) {
-    if (first.length > 0) {
+    if (text.length > 0) {
       const intl = tmp(tmp2[9]).intl;
-      obj = { count: null, channelNames: null };
-      obj[0] = destinationNamesWithSlowmode.length;
-      obj[1] = destinationNamesWithSlowmode.join(", ");
-      formatToPlainStringResult = intl.formatToPlainString(tmp(tmp2[9]).t.xJFpij, obj);
+      const obj6 = { count: destinationNamesWithSlowmode.length, channelNames: destinationNamesWithSlowmode.join(", ") };
+      formatToPlainStringResult = intl.formatToPlainString(tmp(tmp2[9]).t.xJFpij, obj6);
     }
   }
-  obj = { preview: null, sendButton: null, chatInput: null, warningText: null, avoidKeyboard: null };
+  const obj7 = { preview: null, sendButton: null, chatInput: null, warningText: null, avoidKeyboard: null };
   const obj5 = message(trackForwardEditContextMessageOnce[5]);
   const tmp13 = onSend;
-  obj[0] = jsx(message(trackForwardEditContextMessageOnce[11]).ForwardPreview, { message, channel: selectedDestinationChannel, forwardOptions });
-  obj1 = { variant: "primary", size: "md", text: sendLabel, disabled: !canSend, onPress: null, loading: null };
+  obj7.preview = jsx(message(trackForwardEditContextMessageOnce[11]).ForwardPreview, { message, channel: selectedDestinationChannel, forwardOptions });
+  const obj8 = { variant: "primary", size: "md", text: sendLabel, disabled: !canSend, onPress: null, loading: null };
   let tmp15;
   if (!isSending) {
     tmp15 = callback1;
   }
-  obj1[4] = tmp15;
-  obj1[5] = isSending;
-  obj[1] = jsx(message(trackForwardEditContextMessageOnce[12]).Button, { variant: "primary", size: "md", text: sendLabel, disabled: !canSend, onPress: null, loading: null });
-  obj[2] = jsx(tmp13(trackForwardEditContextMessageOnce[13]), { inputRef: textInputRef, text: first, onChange: callback, onSelectionChange: handleSelectionChange, onFocus: handleMessageFocus, onBlur: handleMessageBlur, onPressEmoji: handlePressEmoji, onSend: callback1 });
-  obj[3] = formatToPlainStringResult;
-  obj[4] = isInputFocused;
+  obj8.onPress = tmp15;
+  obj8.loading = isSending;
+  obj7.sendButton = jsx(message(trackForwardEditContextMessageOnce[12]).Button, { variant: "primary", size: "md", text: sendLabel, disabled: !canSend, onPress: null, loading: null });
+  obj7.chatInput = jsx(tmp13(trackForwardEditContextMessageOnce[13]), { inputRef: textInputRef, text, onChange: callback, onSelectionChange: handleSelectionChange, onFocus: handleMessageFocus, onBlur: handleMessageBlur, onPressEmoji: handlePressEmoji, onSend: callback1 });
+  obj7.warningText = formatToPlainStringResult;
+  obj7.avoidKeyboard = isInputFocused;
   return jsx(onSend(trackForwardEditContextMessageOnce[10]), { preview: null, sendButton: null, chatInput: null, warningText: null, avoidKeyboard: null });
 };

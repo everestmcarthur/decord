@@ -1,89 +1,85 @@
-// Module ID: 12022
-// Function ID: 12023
-// Name: num2
-// Dependencies: [19, 17, 21, 4560, 576, 1115, 7885, 1114, 5071, 4556, 11321, 2]
+// Module ID: 12048
+// Function ID: 12049
+// Name: ForumPostMessageCount
+// Dependencies: [19, 17, 21, 4574, 576, 1115, 7899, 1114, 5085, 4570, 11348, 2]
 // Exports: default
 
-// Module 12022 (num2)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import ChatIcon from "ChatIcon" /* 5071 */;
-import useLoadForumUnreadCounts from "useLoadForumUnreadCounts" /* 7885 */;
-import AnimatedCountDefault from "AnimatedCount" /* 11321 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import set from "set" /* 1115 */;
+// Module 12048 (ForumPostMessageCount)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import ChatIcon from "ChatIcon" /* 5085 */;
+import ForumHooks from "ForumHooks" /* 7899 */;
+import AnimatedCounterDefault from "AnimatedCounter" /* 11348 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { tintColor: ThemesDefault.colors.ICON_MUTED, marginEnd: 4, marginTop: null };
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { tintColor: nativeDefault.colors.ICON_MUTED, marginEnd: 4, marginTop: null };
+let PlatformUtils = fn(1115);
 let num = 0;
-if (set.isAndroid()) {
+if (PlatformUtils.isAndroid()) {
   num = 2;
 }
-createCacheKey = { iconRead: createCacheKey, iconUnread: null, messageUnreadCount: num, container: null };
-let obj1 = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginEnd: 4, marginTop: null };
+let obj4 = { iconRead: obj2, iconUnread: null, messageUnreadCount: null, container: null };
+obj2.marginTop = num;
+let obj5 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginEnd: 4, marginTop: null };
+PlatformUtils = fn(1115);
 let num2 = 0;
-if (set.isAndroid()) {
+if (PlatformUtils.isAndroid()) {
   num2 = 2;
 }
-obj1[2] = num2;
-createCacheKey[1] = obj1;
-createCacheKey[2] = { marginStart: 4 };
-createCacheKey[3] = { flexDirection: "row", alignItems: "center" };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = set.fileFinishedImporting("modules/forums/native/posts/ForumPostMessageCount.tsx");
+obj5.marginTop = num2;
+obj4.iconUnread = obj5;
+obj4.messageUnreadCount = { marginStart: 4 };
+obj4.container = { flexDirection: "row", alignItems: "center" };
+let closure_6 = createStyles.createStyles(obj4);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostMessageCount.tsx");
 
 export default function ForumPostMessageCount(hasUnreads) {
   hasUnreads = hasUnreads.hasUnreads;
   ({ thread, containerStyle } = hasUnreads);
-  const tmp = callback();
-  let obj = useLoadForumUnreadCounts;
-  messageCount = obj.useMessageCount(thread);
-  ({ messageCountText, unreadCount } = messageCount);
+  const tmp = closure_6();
+  const messageCount1 = ForumHooks.useMessageCount(thread);
+  ({ messageCountText, unreadCount } = messageCount1);
   let str = "text-muted";
-  ({ isMaxMessageCount, messageCount } = messageCount);
+  ({ isMaxMessageCount, messageCount } = messageCount1);
   if (hasUnreads) {
     str = "text-default";
   }
-  obj = { style: items, accessibilityLabel: null, children: null };
-  items = [tmp.container, containerStyle];
+  const obj2 = { style: null, accessibilityLabel: null, children: null };
+  const items = [tmp.container, containerStyle];
+  obj2.style = items;
   const intl = tmp2(1114).intl;
-  obj[1] = intl.formatToPlainString(getSystemLocale.t["8M0DrB"], { count: messageCountText });
-  obj = { size: "xs", style: hasUnreads ? tmp.iconUnread : tmp.iconRead, color: null };
+  obj2.accessibilityLabel = intl.formatToPlainString(util.t["8M0DrB"], { count: messageCountText });
+  const obj3 = { size: "xs", style: hasUnreads ? tmp.iconUnread : tmp.iconRead, color: null };
   let str2 = "icon-muted";
   if (hasUnreads) {
     str2 = "interactive-text-default";
   }
-  obj[2] = str2;
-  const items1 = [closure_4(ChatIcon.ChatIcon, obj), , ];
+  obj3.color = str2;
+  const items1 = [React4(ChatIcon.ChatIcon, obj3), , ];
   if (isMaxMessageCount) {
-    obj1 = { variant: "text-sm/semibold", color: null, children: null };
-    obj1[1] = str;
-    obj1[2] = messageCountText;
-    let tmp7Result = tmp7(tmp2(4556).Text, obj1);
+    const obj4 = { variant: "text-sm/semibold", color: str, children: messageCountText };
+    let tmp7Result = tmp7(tmp2(4570).Text, obj4);
   } else {
-    const obj2 = { count: null, textVariant: "text-sm/semibold", textColor: null, animate: false };
-    obj2[0] = messageCount;
-    obj2[2] = str;
-    tmp7Result = tmp7(AnimatedCountDefault, obj2);
+    const obj5 = { count: messageCount, textVariant: "text-sm/semibold", textColor: str, animate: false };
+    tmp7Result = tmp7(AnimatedCounterDefault, obj5);
   }
   items1[1] = tmp7Result;
   let tmp5Result = null != unreadCount;
   if (tmp5Result) {
-    const obj3 = { variant: "text-sm/semibold", color: "text-brand", style: null, children: null };
-    obj3[2] = tmp.messageUnreadCount;
+    const obj6 = { variant: "text-sm/semibold", color: "text-brand", style: tmp.messageUnreadCount, children: null };
     const intl2 = tmp2(1114).intl;
-    const obj4 = { count: null };
-    obj4[0] = unreadCount;
-    const items2 = ["(", intl2.format(tmp2(1114).t.z3PEth, obj4), ")"];
-    obj3[3] = items2;
-    tmp5Result = tmp5(tmp2(4556).Text, obj3);
+    const obj7 = { count: unreadCount };
+    const items2 = ["(", intl2.format(tmp2(1114).t.z3PEth, obj7), ")"];
+    obj6.children = items2;
+    tmp5Result = tmp5(tmp2(4570).Text, obj6);
   }
   items1[2] = tmp5Result;
-  obj[2] = items1;
-  return closure_5(View, obj);
+  obj2.children = items1;
+  return hasOwnProperty(View, obj2);
 };

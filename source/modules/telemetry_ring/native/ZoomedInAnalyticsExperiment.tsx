@@ -1,17 +1,19 @@
 // Module ID: 1900
 // Function ID: 1901
-// Name: apexExperiment
+// Name: ZoomedInAnalyticsExperiment
 // Dependencies: [1433, 2]
 // Exports: isZoomedExperimentEnabled
 
-// Module 1900 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 1900 (ZoomedInAnalyticsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null };
-obj[1] = { enabled: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2025-12-zoomed-analytics", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/telemetry_ring/native/ZoomedInAnalyticsExperiment.tsx");
+const obj = { kind: "user", name: "2025-12-zoomed-analytics", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj.variations = obj2;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/telemetry_ring/native/ZoomedInAnalyticsExperiment.tsx");
 
 export default apexExperiment;
 export const isZoomedExperimentEnabled = function isZoomedExperimentEnabled() {

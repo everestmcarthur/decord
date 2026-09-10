@@ -1,23 +1,25 @@
-// Module ID: 8288
-// Function ID: 8289
+// Module ID: 8316
+// Function ID: 8317
 // Name: MediaModalSheetWrapper
-// Dependencies: [19, 1074, 21, 7152, 4527, 8289, 2]
+// Dependencies: [19, 1074, 21, 7166, 4541, 8317, 2]
 // Exports: default
 
-// Module 8288 (MediaModalSheetWrapper)
-import closure_2 from "noop" /* 19 */;
-import { MEDIA_MODAL_KEY } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 8316 (MediaModalSheetWrapper)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/MediaModalSheetWrapper.tsx");
+const MEDIA_MODAL_KEY = fn(1074).MEDIA_MODAL_KEY;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaModalSheetWrapper.tsx");
 
 export default function MediaModalSheetWrapper(onCloseCallback) {
   onCloseCallback = onCloseCallback.onCloseCallback;
-  const merged = Object.assign(onCloseCallback, Object.create(null));
+  const merged = Object.assign(onCloseCallback, Object.assign({ onCloseCallback: 0 }));
   let context;
-  context = React.useContext(onCloseCallback(context[3]));
+  context = noop.useContext(onCloseCallback(context[3]));
   const items = [context];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let transitionState;
     if (context != null) {
       transitionState = obj.transitionState;
@@ -27,11 +29,11 @@ export default function MediaModalSheetWrapper(onCloseCallback) {
     }
   }, items);
   const items1 = [onCloseCallback];
-  const callback = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     if (onCloseCallback != null) {
       tmp();
     }
-    onCloseCallback(context[4]).hideActionSheet(closure_1_3);
+    ActionSheetActionCreatorsDefault.hideActionSheet(MEDIA_MODAL_KEY);
   }, items1);
   const obj = {};
   const merged1 = Object.assign(merged);

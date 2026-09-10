@@ -1,17 +1,17 @@
-// Module ID: 5793
-// Function ID: 5794
+// Module ID: 5807
+// Function ID: 5808
 // Name: BeeIllocon
-// Dependencies: [21, 5587, 5794, 2]
+// Dependencies: [21, 5601, 5808, 2]
 // Exports: BeeIllocon
 
-// Module 5793 (BeeIllocon)
-import set from "set" /* 2 */;
+// Module 5807 (BeeIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 5794 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5808 from "module_5808" /* 5808 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/BeeIllocon.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BeeIllocon.native.tsx");
 
 export const BeeIllocon = function BeeIllocon(size) {
   let num = size.size;
@@ -19,13 +19,13 @@ export const BeeIllocon = function BeeIllocon(size) {
   if (num === undefined) {
     num = 64;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef5808 };
+  obj.source = obj2;
   const items = [{ width: num, height: num }];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { uri: metadataDefault });
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

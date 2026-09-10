@@ -1,17 +1,17 @@
-// Module ID: 8210
-// Function ID: 8211
+// Module ID: 8236
+// Function ID: 8237
 // Name: computeProfileFrameDimensions
-// Dependencies: [8211, 8208, 8209, 2]
+// Dependencies: [8237, 8234, 8235, 2]
 // Exports: computeProfileFrameDimensions
 
-// Module 8210 (computeProfileFrameDimensions)
-import set from "set" /* 2 */;
+// Module 8236 (computeProfileFrameDimensions)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/collectibles/profile_frames/tooling/computeProfileFrameDimensions.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/profile_frames/tooling/computeProfileFrameDimensions.tsx");
 
-export const computeProfileFrameDimensions = function computeProfileFrameDimensions(closure_4) {
-  innerWidth = innerWidth(8211).DefaultProfileFrameDimensions.INNER_WIDTH;
-  const mapped = closure_4.map((dims) => Math.round(Math.max(0, (dims.dims.width - innerWidth) / 2)));
+export const computeProfileFrameDimensions = function computeProfileFrameDimensions(arr) {
+  innerWidth = innerWidth(8237).DefaultProfileFrameDimensions.INNER_WIDTH;
+  const mapped = arr.map((dims) => Math.round(Math.max(0, (dims.dims.width - innerWidth) / 2)));
   let overflowHorizontal = 0;
   if (mapped.length > 0) {
     const _Math = Math;
@@ -20,15 +20,15 @@ export const computeProfileFrameDimensions = function computeProfileFrameDimensi
     const _Math2 = Math;
     overflowHorizontal = HermesBuiltin.apply(items, Math);
   }
-  const found = closure_4.filter((layer) => {
+  const found = arr.filter((layer) => {
     layer = layer.layer;
-    let tmp3 = layer.type === innerWidth(8208).ProfileFrameLayerType.STAPLE;
+    let tmp3 = layer.type === innerWidth(8234).ProfileFrameLayerType.STAPLE;
     if (tmp3) {
-      tmp3 = layer.anchor === innerWidth(8209).ProfileFrameLayerAnchor.TOP;
+      tmp3 = layer.anchor === innerWidth(8235).ProfileFrameLayerAnchor.TOP;
     }
     return tmp3;
   });
-  const mapped1 = found.map((dims) => Math.max(0, dims.dims.height - (716 - innerWidth(8211).DefaultProfileFrameDimensions.OVERFLOW_TOP)));
+  const mapped1 = found.map((dims) => Math.max(0, dims.dims.height - (716 - innerWidth(8237).DefaultProfileFrameDimensions.OVERFLOW_TOP)));
   let overflowTop = 0;
   if (mapped1.length > 0) {
     const _Math3 = Math;
@@ -37,15 +37,15 @@ export const computeProfileFrameDimensions = function computeProfileFrameDimensi
     const _Math4 = Math;
     overflowTop = HermesBuiltin.apply(items1, Math);
   }
-  const found1 = closure_4.filter((layer) => {
+  const found1 = arr.filter((layer) => {
     layer = layer.layer;
-    let tmp3 = layer.type === innerWidth(8208).ProfileFrameLayerType.STAPLE;
+    let tmp3 = layer.type === innerWidth(8234).ProfileFrameLayerType.STAPLE;
     if (tmp3) {
-      tmp3 = layer.anchor === innerWidth(8209).ProfileFrameLayerAnchor.BOTTOM;
+      tmp3 = layer.anchor === innerWidth(8235).ProfileFrameLayerAnchor.BOTTOM;
     }
     return tmp3;
   });
-  const mapped2 = found1.map((dims) => Math.max(0, dims.dims.height - (424 - innerWidth(8211).DefaultProfileFrameDimensions.OVERFLOW_BOTTOM)));
+  const mapped2 = found1.map((dims) => Math.max(0, dims.dims.height - (424 - innerWidth(8237).DefaultProfileFrameDimensions.OVERFLOW_BOTTOM)));
   let overflowBottom = 0;
   if (mapped2.length > 0) {
     const _Math5 = Math;

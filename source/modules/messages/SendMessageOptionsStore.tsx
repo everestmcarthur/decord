@@ -1,24 +1,24 @@
-// Module ID: 11673
-// Function ID: 11674
-// Name: getOptions
-// Dependencies: [4553, 504, 573, 2]
+// Module ID: 11699
+// Function ID: 11700
+// Name: SendMessageOptionsStore
+// Dependencies: [4567, 504, 573, 2]
 
-// Module 11673 (getOptions)
-import set from "set" /* 2 */;
+// Module 11699 (SendMessageOptionsStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4553 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import MessageConstants from "MessageConstants" /* 4567 */;
+import size from "module_2" /* 2 */;
 
-const MessageSendLocation = MESSAGE_GROUP_SPACING.MessageSendLocation;
+const MessageSendLocation = MessageConstants.MessageSendLocation;
 let closure_1 = {};
 const Store = initializeDefault.Store;
 class SendMessageOptionsStore extends Store {
 }
 SendMessageOptionsStore.prototype["getOptions"] = function getOptions(arg0) {
-  return table[arg0];
+  return closure_1[arg0];
 };
 SendMessageOptionsStore.displayName = "SendMessageOptionsStore";
-const sendMessageOptionsStore = new SendMessageOptionsStore(dispatcherDefault, {
+const sendMessageOptionsStore = new SendMessageOptionsStore(DispatcherDefault, {
   MESSAGE_CREATE: function handleMessageCreate(arg0) {
     ({ message, sendMessageOptions } = arg0);
     if (null != sendMessageOptions) {
@@ -30,7 +30,6 @@ const sendMessageOptionsStore = new SendMessageOptionsStore(dispatcherDefault, {
       }
       obj.location = OTHER;
       closure_1[message.id] = obj;
-      const tmp3 = closure_1;
     }
     let tmp8 = null != message.nonce && message.nonce !== message.id;
     if (tmp8) {
@@ -42,6 +41,6 @@ const sendMessageOptionsStore = new SendMessageOptionsStore(dispatcherDefault, {
     }
   }
 });
-const result = set.fileFinishedImporting("modules/messages/SendMessageOptionsStore.tsx");
+const result = size.fileFinishedImporting("modules/messages/SendMessageOptionsStore.tsx");
 
 export default sendMessageOptionsStore;

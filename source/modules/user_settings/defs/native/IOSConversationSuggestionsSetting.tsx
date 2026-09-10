@@ -1,49 +1,50 @@
-// Module ID: 14852
-// Function ID: 14853
-// Name: toggle
-// Dependencies: [19, 17, 7975, 1244, 1249, 4184, 1115, 3, 11473, 1114, 2]
+// Module ID: 14878
+// Function ID: 14879
+// Name: IOSConversationSuggestionsSetting
+// Dependencies: [19, 17, 7989, 1244, 1249, 4197, 1115, 3, 11500, 1114, 2]
 
-// Module 14852 (toggle)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import set from "set" /* 1115 */;
-import isIterable from "isIterable" /* 4184 */;
-import closure_3 from "noop" /* 19 */;
-import identity from "identity" /* 1244 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 14878 (IOSConversationSuggestionsSetting)
+import LoggerDefault from "Logger" /* 3 */;
+import util from "util" /* 1114 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import _mod4197 from "module_4197" /* 4197 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
+const identity = fn(1244);
 let closure_4 = identity.createWithEqualityFn(() => ({ isEnabled: true }));
-require("get ActivityIndicator").NativeModules.IntentsHandler;
-identity = {
+fn(17).NativeModules.IntentsHandler;
+const SettingBuilders = fn(11500);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.J8foZq);
+    const intl = util.intl;
+    return intl.string(util.t.J8foZq);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(7989).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useIOSConversationSuggestionsSettingValue() {
-    const effect = React.useEffect(() => {
+    const effect = noop.useEffect(() => {
       conversationSuggestionsEnabled = conversationSuggestionsEnabled.getConversationSuggestionsEnabled();
-      conversationSuggestionsEnabled.then((arg0) => {
-        const callback = arg0;
-        callback(table[4]).batchUpdates(() => closure_1_4.setState({ isEnabled: closure_0 }));
+      conversationSuggestionsEnabled.then((result) => {
+        const isEnabled = result;
+        isEnabled(closure_2[4]).batchUpdates(() => state.setState({ isEnabled }));
       });
     }, []);
-    return callback((isEnabled) => isEnabled.isEnabled, isIterable.shallow);
+    return closure_4((isEnabled) => isEnabled.isEnabled, _mod4197.shallow);
   },
   onValueChange: function onIOSConversationSuggestionsSettingValueChange(arg0) {
     const result = IntentsHandler.setConversationSuggestionsEnabled(arg0);
-    result.then((arg0) => {
-      const callback = arg0;
-      callback(1249).batchUpdates(() => closure_1_4.setState({ isEnabled: closure_0 }));
-    }).catch((arg0) => {
-      new callback2(3)("ConversationSuggestions").error("Error suggesting conversations", arg0);
+    result.then((result) => {
+      closure_0 = result;
+      closure_0(1249).batchUpdates(() => state.setState({ isEnabled }));
+    }).catch((error) => {
+      new LoggerDefault("ConversationSuggestions").error("Error suggesting conversations", error);
     });
   },
   usePredicate: function useHasIOSConversationSuggestionsSetting() {
-    return !set.isAndroid();
+    return !PlatformUtils.isAndroid();
   }
-};
-identity = createToggle.createToggle(identity);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/IOSConversationSuggestionsSetting.tsx");
+});
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/IOSConversationSuggestionsSetting.tsx");
 
-export default identity;
+export default toggle;

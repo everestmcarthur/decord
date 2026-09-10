@@ -1,36 +1,30 @@
-// Module ID: 13304
-// Function ID: 13305
+// Module ID: 13327
+// Function ID: 13328
 // Name: PaymentFlowWarningMessage
-// Dependencies: [19, 17, 21, 4560, 576, 5441, 1178, 4556, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 5455, 1178, 4570, 2]
 // Exports: default
 
-// Module 13304 (PaymentFlowWarningMessage)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 1178 */;
-import Text from "Text" /* 4556 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13327 (PaymentFlowWarningMessage)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: null, icon: null, text: null };
-createCacheKey = { padding: 10, marginVertical: 5, borderRadius: ThemesDefault.radii.xs, display: "flex", flexDirection: "row", alignItems: "center", backgroundColor: require("result").DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginRight: 10 };
-createCacheKey[2] = { flexShrink: 1 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/billing/native/PaymentFlowWarningMessage.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+const obj2 = { container: { padding: 10, marginVertical: 5, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", alignItems: "center", backgroundColor: fn(5455).DARK_PRIMARY_630_LIGHT_PRIMARY_230 }, icon: { marginRight: 10 }, text: { flexShrink: 1 } };
+let closure_6 = createStyles.createStyles(obj2);
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/billing/native/PaymentFlowWarningMessage.tsx");
 
 export default function PaymentFlowWarningMessage(children) {
-  const tmp = callback3();
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.icon, color: ThemesDefault.unsafe_rawColors.YELLOW_300, width: 16, height: 16 };
-  const items = [callback(Button.WarningCircle, obj), ];
-  obj = { variant: "text-sm/medium", style: tmp.text, children: children.message };
-  items[1] = callback(Text.Text, obj);
-  obj[1] = items;
-  return callback2(View, obj);
+  const tmp = closure_6();
+  const obj = { style: tmp.container, children: null };
+  const size = { style: tmp.icon, color: nativeDefault.unsafe_rawColors.YELLOW_300, width: 16, height: 16 };
+  const items = [React4(native.WarningCircle, size), React4(Text_Text.Text, { variant: "text-sm/medium", style: tmp.text, children: children.message })];
+  obj.children = items;
+  return hasOwnProperty(View, obj);
 };

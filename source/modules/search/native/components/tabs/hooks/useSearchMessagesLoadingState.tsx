@@ -1,41 +1,41 @@
-// Module ID: 16697
-// Function ID: 16698
+// Module ID: 16734
+// Function ID: 16735
 // Name: useSearchMessagesLoadingState
-// Dependencies: [7281, 12343, 7878, 16649, 504, 12344, 2]
+// Dependencies: [7295, 12369, 7892, 16681, 504, 12370, 2]
 // Exports: useSearchMessagesLoadingState
 
-// Module 16697 (useSearchMessagesLoadingState)
+// Module 16734 (useSearchMessagesLoadingState)
 import initialize from "initialize" /* 504 */;
-import useFullscreenPlaceholderCount from "useFullscreenPlaceholderCount" /* 16649 */;
-import closure_2 from "handleReaction" /* 7281 */;
-import closure_3 from "prototype" /* 12343 */;
-import { SEARCH_TABS_TO_SEARCH_QUERY_LIMITS as closure_4 } from "MessageEmbedTypes" /* 7878 */;
+import SearchUtils from "SearchUtils" /* 12370 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 16681 */;
+import SearchMessageStore from "SearchMessageStore" /* 7295 */;
+import SearchQueryStore from "SearchQueryStore" /* 12369 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/hooks/useSearchMessagesLoadingState.tsx");
+require = fn;
+let closure_4 = fn(7892).SEARCH_TABS_TO_SEARCH_QUERY_LIMITS;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/tabs/hooks/useSearchMessagesLoadingState.tsx");
 
 export const useSearchMessagesLoadingState = function useSearchMessagesLoadingState(arg0) {
   ({ searchContext: require, tab: dependencyMap } = arg0);
-  closure_2 = undefined;
   ({ placeholderHeight, numColumns } = arg0);
-  closure_2 = useFullscreenPlaceholderCount.useFullscreenPlaceholderCount({ placeholderHeight, numColumns });
-  let obj = useFullscreenPlaceholderCount;
-  const items = [closure_3, closure_2];
+  closure_2 = usePlaceholderStyles.useFullscreenPlaceholderCount({ placeholderHeight, numColumns });
+  const items = [SearchQueryStore, closure_2];
   return initialize.useStateFromStoresObject(items, () => {
-    let obj = closure_1_0(closure_1_1[5]);
-    const searchTabFetchId = obj.getSearchTabFetchId(closure_0, closure_1, closure_1_3.getSearchResultsQuery(closure_0));
-    const isInitialFetchComplete = store.getIsInitialFetchComplete(searchTabFetchId);
+    const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(closure_1_0);
+    const searchTabFetchId = SearchUtils.getSearchTabFetchId(closure_1_0, dependencyMap, searchResultsQuery);
+    const isInitialFetchComplete = SearchMessageStore.getIsInitialFetchComplete(searchTabFetchId);
     let isFetching = !tmp5;
     if (isInitialFetchComplete) {
-      isFetching = store.getIsFetching(searchTabFetchId);
+      isFetching = SearchMessageStore.getIsFetching(searchTabFetchId);
     }
-    obj = { isFirstPageLoading: tmp5, isNextPageLoading: isFetching, placeholderCount: null };
+    const obj2 = { isFirstPageLoading: !isInitialFetchComplete, isNextPageLoading: isFetching, placeholderCount: null };
     if (!isInitialFetchComplete) {
-      let num = Math.max(store, closure_1_4[tmp2]);
+      let num = Math.max(closure_2, closure_4[tmp2]);
     } else {
       num = 0;
     }
-    obj[2] = num;
-    return obj;
+    obj2.placeholderCount = num;
+    return obj2;
   });
 };

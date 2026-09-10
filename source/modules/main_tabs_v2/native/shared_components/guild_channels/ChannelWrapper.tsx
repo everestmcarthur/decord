@@ -1,25 +1,24 @@
-// Module ID: 16444
-// Function ID: 16445
-// Name: renderChannelWrapper
-// Dependencies: [19, 17, 21, 10126, 2]
+// Module ID: 16475
+// Function ID: 16476
+// Name: ChannelWrapper
+// Dependencies: [19, 17, 21, 10153, 2]
 // Exports: renderChannelWrapper
 
-// Module 16444 (renderChannelWrapper)
-import noopAll from "noop" /* 19 */;
-import getLayoutStyles from "getLayoutStyles" /* 10126 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16475 (ChannelWrapper)
+import ChannelListLayout from "ChannelListLayout" /* 10153 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelWrapper.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelWrapper.tsx");
 
 export const renderChannelWrapper = function renderChannelWrapper(children, fontScale) {
   ({ channel, layout, launchpad, panelVariant } = fontScale);
   if (panelVariant === undefined) {
     panelVariant = false;
   }
-  let obj = getLayoutStyles;
   let isThreadResult;
   if (channel != null) {
     isThreadResult = channel.isThread();
@@ -27,8 +26,8 @@ export const renderChannelWrapper = function renderChannelWrapper(children, font
   if (isThreadResult) {
     isThreadResult = !launchpad;
   }
-  const scaledChannelRowHeight = obj.getScaledChannelRowHeight(fontScale.fontScale, layout, isThreadResult);
-  const layoutStyles = getLayoutStyles.getLayoutStyles(layout, launchpad);
+  const scaledChannelRowHeight = ChannelListLayout.getScaledChannelRowHeight(fontScale.fontScale, layout, isThreadResult);
+  const layoutStyles = ChannelListLayout.getLayoutStyles(layout, launchpad);
   const items = [{ flex: 1, flexDirection: "row", alignItems: "center", position: "relative" }, , ];
   let isThreadResult1;
   if (channel != null) {
@@ -51,7 +50,6 @@ export const renderChannelWrapper = function renderChannelWrapper(children, font
   } else {
     paddingThread = panelVariant ? container.paddingPanels : container.padding;
   }
-  obj = { style: items, children };
   items[2] = paddingThread;
   return <View style={items}>{arg0}</View>;
 };

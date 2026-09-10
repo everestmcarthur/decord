@@ -1,71 +1,70 @@
-// Module ID: 7124
-// Function ID: 7125
-// Name: PromptHeader
-// Dependencies: [32, 19, 17, 5459, 5572, 1979, 7100, 7097, 1374, 21, 4560, 5682, 576, 1483, 504, 1611, 4262, 672, 7123, 5601, 4556, 1114, 4975, 5547, 4987, 1093, 7106, 7125, 7126, 7130, 1396, 4527, 7135, 1896, 5123, 7158, 2]
+// Module ID: 7138
+// Function ID: 7139
+// Name: GuildOnboardingPrompt
+// Dependencies: [32, 19, 17, 5473, 5586, 1979, 7114, 7111, 1374, 21, 4574, 5696, 576, 1483, 504, 1611, 4275, 672, 7137, 5615, 4570, 1114, 4989, 5561, 5001, 1093, 7120, 7139, 7140, 7144, 1396, 4541, 7149, 1896, 5137, 7172, 2]
 // Exports: DropdownPrompt, MultipleChoicePrompt, RulesPrompt
 
-// Module 7124 (PromptHeader)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
-import Text2 from "Text" /* 4556 */;
-import EmojiDefault from "Emoji" /* 7130 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "getEmojiToGroupId" /* 5459 */;
-import closure_10 from "get" /* 5572 */;
-import closure_11 from "createGuildRecordFromRust" /* 1979 */;
-import closure_12 from "handleUpdate" /* 7100 */;
-import { GuildOnboardingModalStates as closure_13 } from "GUILD_ONBOARDING_MODAL_KEY" /* 7097 */;
-import { EMOJI_URL_BASE_SIZE } from "set" /* 1374 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 7138 (GuildOnboardingPrompt)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import MemberVerificationActionCreatorsDefault from "MemberVerificationActionCreators" /* 5561 */;
+import TermsFieldListDefault from "TermsFieldList" /* 5615 */;
+import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7120 */;
+import EmojiDefault from "Emoji" /* 7144 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import EmojiStore from "EmojiStore" /* 5473 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5586 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7114 */;
 
-require = arg1;
+const require = globalThis.__r;
+
+const AvatarUtilsDefault = tmp8(1396);
+require = fn;
 function PromptHeader(currentPrompt) {
   currentPrompt = currentPrompt.currentPrompt;
   ({ numberOfPrompts, currentPromptIndex } = currentPrompt);
-  const tmp = callback4();
-  let obj = { style: tmp.promptHeader, children: null };
-  obj = { style: tmp.countText, variant: "text-sm/medium", color: "text-muted", children: null };
-  const intl = getSystemLocale.intl;
-  obj = { currentQuestion: currentPromptIndex + 1, questionCount: numberOfPrompts };
-  obj[3] = intl.format(getSystemLocale.t.isV0NW, obj);
-  const items = [callback2(Text2.Text, obj), ];
+  const tmp = closure_18();
+  const obj = { style: tmp.promptHeader, children: null };
+  const obj2 = { style: tmp.countText, variant: "text-sm/medium", color: "text-muted", children: null };
+  const intl = util.intl;
+  obj2.children = intl.format(util.t.isV0NW, { currentQuestion: currentPromptIndex + 1, questionCount: numberOfPrompts });
+  const items = [__initData(Text_Text.Text, obj2), ];
   let required;
   if (currentPrompt != null) {
     required = currentPrompt.required;
   }
   let tmp2Result = null;
   if (required) {
-    obj1 = { children: null };
-    const obj2 = { style: null };
-    obj2[0] = tmp.requiredSeparator;
-    const items1 = [tmp5(tmp4, obj2), ];
-    const obj3 = { variant: "text-sm/medium", color: "text-brand", children: null };
+    const obj4 = { children: null };
+    const obj5 = { style: tmp.requiredSeparator };
+    const items1 = [tmp5(tmp4, obj5), ];
+    const obj6 = { variant: "text-sm/medium", color: "text-brand", children: null };
     const intl2 = tmp6(1114).intl;
-    obj3[2] = intl2.string(tmp6(1114).t.Ur8Vrt);
-    items1[1] = tmp5(tmp6(4556).Text, obj3);
-    obj1[0] = items1;
-    tmp2Result = tmp2(tmp3, obj1);
+    obj6.children = intl2.string(tmp6(1114).t.Ur8Vrt);
+    items1[1] = tmp5(tmp6(4570).Text, obj6);
+    obj4.children = items1;
+    tmp2Result = tmp2(tmp3, obj4);
   }
-  const obj4 = { children: null };
+  const obj7 = { children: null };
   items[1] = tmp2Result;
-  obj[1] = items;
-  const items2 = [closure_16(closure_6, obj), callback2(Text2.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: currentPrompt.title })];
-  obj4[0] = items2;
-  return closure_16(closure_17, obj4);
+  obj.children = items;
+  const items2 = [value2(timestampProducer, obj), __initData(Text_Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: currentPrompt.title })];
+  obj7.children = items2;
+  return value2(closure_1_17, obj7);
 }
 function PromptFooter(onPress) {
   ({ guildId: require, currentPrompt, selectedOptionIds } = onPress);
   const lastPrompt = onPress.lastPrompt;
   let found;
-  const tmp = callback4();
-  let obj = require(found[14]);
-  const items = [closure_11];
+  const tmp = closure_18();
+  const items = [GuildStore];
   let tmp5 = 0 === selectedOptionIds.length;
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_11.getGuild(closure_0));
+  const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(require));
   if (tmp5) {
     let required;
     if (currentPrompt != null) {
@@ -101,60 +100,58 @@ function PromptFooter(onPress) {
   }
   const items1 = [found];
   const items2 = [found];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     if (null != found) {
-      let selectedRoleIds = closure_1_0(found[26]).getSelectedRoleIds(tmp);
-      const obj = closure_1_0(found[26]);
+      let selectedRoleIds = GuildOnboardingUtils.getSelectedRoleIds(tmp);
     } else {
       const _Set = Set;
       selectedRoleIds = new Set();
     }
     return selectedRoleIds;
   }, items1);
-  const memo1 = React.useMemo(() => {
+  const memo1 = noop.useMemo(() => {
     if (null != found) {
-      let selectedChannelIds = closure_1_0(found[26]).getSelectedChannelIds(tmp);
-      const obj = closure_1_0(found[26]);
+      let selectedChannelIds = GuildOnboardingUtils.getSelectedChannelIds(tmp);
     } else {
       const _Set = Set;
       selectedChannelIds = new Set();
     }
     return selectedChannelIds;
   }, items2);
-  obj = { guild: stateFromStores, prompt: currentPrompt, selectedRoleIds: memo, selectedChannelIds: memo1, itemHook: formattedNameHighlight };
-  ({ helpText, helpTextAdditional } = selectedOptionIds(found[27])(obj));
-  const tmp16 = selectedOptionIds(found[27])(obj);
-  const token = require(found[16]).useToken(selectedOptionIds(tmp3[12]).colors.BACKGROUND_BASE_LOWER);
-  let obj3 = selectedOptionIds(tmp3[17])(token);
-  const tmp2Result = require(found[16]);
-  const items3 = [obj3.alpha(0).hex(), ];
-  const alphaResult = obj3.alpha(0);
+  let obj = require("initialize");
+  const obj2 = { guild: stateFromStores, prompt: currentPrompt, selectedRoleIds: memo, selectedChannelIds: memo1, itemHook: formattedNameHighlight };
+  ({ helpText, helpTextAdditional } = selectedOptionIds(found[27])({ guild: stateFromStores, prompt: currentPrompt, selectedRoleIds: memo, selectedChannelIds: memo1, itemHook: formattedNameHighlight }));
+  const tmp16 = selectedOptionIds(found[27])({ guild: stateFromStores, prompt: currentPrompt, selectedRoleIds: memo, selectedChannelIds: memo1, itemHook: formattedNameHighlight });
+  const token = require("useToken").useToken(selectedOptionIds(tmp3[12]).colors.BACKGROUND_BASE_LOWER);
+  const tmp2Result = require("useToken");
+  const obj4 = selectedOptionIds(found[17])(token);
+  const items3 = [selectedOptionIds(found[17])(token).alpha(0).hex(), ];
+  const alphaResult = selectedOptionIds(found[17])(token).alpha(0);
   const obj6 = selectedOptionIds(found[17])(token);
   items3[1] = selectedOptionIds(found[17])(token).alpha(1).hex();
-  obj = { style: tmp.footer, children: null };
-  obj1 = { style: items4, start: null, end: null, colors: null, pointerEvents: "none" };
-  items4 = [tmp.scrollContainerGradient];
+  const obj3 = { style: tmp.footer, children: null };
+  const obj5 = { style: null, start: null, end: null, colors: null, pointerEvents: "none" };
+  const items4 = [tmp.scrollContainerGradient];
+  obj5.style = items4;
   const alphaResult1 = selectedOptionIds(found[17])(token).alpha(1);
-  obj1[1] = require(found[25]).VerticalGradient.START;
-  obj1[2] = require(found[25]).VerticalGradient.END;
-  obj1[3] = items3;
-  const items5 = [callback2(selectedOptionIds(found[24]), obj1), ];
-  const obj2 = { style: tmp.footerContent, children: null };
+  obj5.start = require("ConstantsIOS").VerticalGradient.START;
+  obj5.end = require("ConstantsIOS").VerticalGradient.END;
+  obj5.colors = items3;
+  const items5 = [closure_15(selectedOptionIds(found[24]), obj5), ];
+  const obj7 = { style: tmp.footerContent, children: null };
   let tmp20Result = null;
   if (tmp10) {
-    obj3 = { style: null, variant: "text-xs/medium", color: "text-default", children: null };
-    obj3[0] = tmp.helpText;
+    const obj8 = { style: tmp.helpText, variant: "text-xs/medium", color: "text-default", children: null };
     const intl2 = tmp2(tmp3[21]).intl;
-    obj3[3] = intl2.string(tmp2(tmp3[21]).t.dA1dSf);
-    tmp20Result = tmp20(tmp2(tmp3[20]).Text, obj3);
+    obj8.children = intl2.string(tmp2(tmp3[21]).t.dA1dSf);
+    tmp20Result = tmp20(tmp2(tmp3[20]).Text, obj8);
   }
   const items6 = [tmp20Result, , ];
   if ("" !== helpText) {
-    const obj4 = { style: null, variant: "text-xs/medium", color: "text-default", children: null };
-    obj4[0] = tmp.helpText;
+    const obj9 = { style: tmp.helpText, variant: "text-xs/medium", color: "text-default", children: null };
     const items7 = [helpText, " ", helpTextAdditional];
-    obj4[3] = items7;
-    let tmp18Result = tmp18(tmp2(tmp3[20]).Text, obj4);
+    obj9.children = items7;
+    let tmp18Result = tmp18(tmp2(tmp3[20]).Text, obj9);
   } else {
     tmp18Result = null;
   }
@@ -166,21 +163,20 @@ function PromptFooter(onPress) {
       str4 = "secondary";
     }
   }
-  items6[2] = callback2(require(found[22]).Button, { variant: str4, size: "md", grow: true, text: combined, onPress: onPress.handleOnPress, disabled: tmp10 });
-  obj2[1] = items6;
-  items5[1] = closure_16(closure_6, obj2);
-  obj[1] = items5;
-  return closure_16(closure_6, obj);
+  items6[2] = closure_15(require("components/Button/Button").Button, { variant: str4, size: "md", grow: true, text: combined, onPress: onPress.handleOnPress, disabled: tmp10 });
+  obj7.children = items6;
+  items5[1] = closure_16(closure_6, obj7);
+  obj3.children = items5;
+  return closure_16(closure_6, obj3);
 }
-function formattedNameHighlight(children) {
-  return callback2(Text2.Text, { variant: "text-xs/medium", color: "mobile-text-heading-primary", children }, arg1);
+function formattedNameHighlight(children, arg1) {
+  return __initData(Text_Text.Text, { variant: "text-xs/medium", color: "mobile-text-heading-primary", children }, arg1);
 }
 function DropdownOption(option) {
   option = option.option;
-  const tmp = callback4();
-  let obj = option(504);
-  const items = [closure_9];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const tmp = closure_18();
+  const items = [EmojiStore];
+  const stateFromStores = option(504).useStateFromStores(items, () => {
     const emoji = option.emoji;
     let id;
     if (emoji != null) {
@@ -193,22 +189,25 @@ function DropdownOption(option) {
       if (emoji2 != null) {
         id1 = emoji2.id;
       }
-      usableCustomEmojiById = closure_1_9.getUsableCustomEmojiById(id1);
+      usableCustomEmojiById = EmojiStore.getUsableCustomEmojiById(id1);
     }
     return usableCustomEmojiById;
   });
-  obj = { style: tmp.dropdownPill, children: null };
-  obj = { style: tmp.emojiContainer, children: null };
-  obj1 = { textEmojiStyle: tmp.optionTextEmoji, fastImageStyle: tmp.optionImageEmoji, src: null, name: null };
+  const obj2 = { style: tmp.dropdownPill, children: null };
+  const obj3 = { style: tmp.emojiContainer, children: null };
+  const obj4 = { textEmojiStyle: tmp.optionTextEmoji, fastImageStyle: tmp.optionImageEmoji, src: null, name: null };
   let emojiURL;
+  const obj = option(504);
+  const tmp2 = option;
+  const tmp5 = closure_16;
   if (null != stateFromStores) {
-    const obj2 = { id: null, animated: null, size: null };
-    ({ id: obj6[0], animated: obj6[1] } = stateFromStores);
-    obj2[2] = EMOJI_URL_BASE_SIZE;
-    emojiURL = getAvatarURLDefault.getEmojiURL(obj2);
-    const tmp8Result = getAvatarURLDefault;
+    const obj5 = { id: null, animated: null, size: null };
+    ({ id: obj6.id, animated: obj6.animated } = stateFromStores);
+    obj5.size = EMOJI_URL_BASE_SIZE;
+    emojiURL = AvatarUtilsDefault.getEmojiURL(obj5);
+    const tmp8Result = AvatarUtilsDefault;
   }
-  obj1[2] = emojiURL;
+  obj4.src = emojiURL;
   let emoji = option.emoji;
   let str;
   if (emoji != null) {
@@ -217,117 +216,114 @@ function DropdownOption(option) {
   if (str == null) {
     str = "";
   }
-  obj1[3] = str;
-  obj[1] = closure_15(EmojiDefault, obj1);
-  const items1 = [closure_15(closure_6, obj), closure_15(option(4556).Text, { variant: "text-md/semibold", children: option.title })];
-  obj[1] = items1;
-  return closure_16(closure_6, obj);
+  obj4.name = str;
+  obj3.children = closure_15(EmojiDefault, obj4);
+  const items1 = [closure_15(closure_6, obj3), closure_15(tmp2(4570).Text, { variant: "text-md/semibold", children: option.title })];
+  obj2.children = items1;
+  return tmp5(closure_6, obj2);
 }
-({ Image: c5, View: closure_6, ScrollView: error, FlatList: closure_8 } = get_ActivityIndicator);
+get_ActivityIndicator = fn(17);
+({ Image: hasOwnProperty, View: metroRequire, ScrollView: closure_7, FlatList: closure_8 } = get_ActivityIndicator);
+let closure_13 = fn(7111).GuildOnboardingModalStates;
+const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
+const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-createCacheKey = { flex: { flex: 1 }, container: null, scrollContainer: null, scrollContainerGradient: null, promptHeader: null, requiredSeparator: null, countText: null, title: null, helpText: null, footer: null, footerText: null, footerContent: null, optionTextEmoji: null, optionImageEmoji: null, emojiContainer: null, dropdownContainer: null, emptyDropdownText: null, dropdownPill: null, dropdownIconContainer: null, dropdownIcon: null };
-createCacheKey = { display: "flex", flex: 1, flexGrow: 1, marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, marginBottom: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { display: "flex", flexGrow: 1, justifyContent: "center", paddingHorizontal: 16, paddingTop: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
-createCacheKey[3] = { position: "absolute", height: 48, width: "100%", left: 0, top: -48 };
-createCacheKey[4] = { display: "flex", flexDirection: "row", alignItems: "center", marginBottom: 8 };
-let obj1 = { display: "flex", flexGrow: 1, justifyContent: "center", paddingHorizontal: 16, paddingTop: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
-createCacheKey[5] = { flexShrink: 0, marginHorizontal: 8, color: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, width: 4, height: 4, borderRadius: ThemesDefault.radii.xs };
-createCacheKey[6] = {};
-createCacheKey[7] = { marginBottom: 32 };
-createCacheKey[8] = { marginTop: 8, marginBottom: 8, textAlign: "center" };
-let obj2 = { flexShrink: 0, marginHorizontal: 8, color: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, width: 4, height: 4, borderRadius: ThemesDefault.radii.xs };
-createCacheKey[9] = { display: "flex", flexDirection: "column", justifyContent: "flex-end", alignItems: "center", bottom: 0, paddingBottom: 8, position: "absolute", width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
-createCacheKey[10] = { paddingHorizontal: 16, paddingBottom: 8, paddingTop: 8 };
-createCacheKey[11] = { width: "100%", paddingHorizontal: 16 };
-createCacheKey[12] = { fontSize: 18, lineHeight: 22, marginRight: 6 };
-createCacheKey[13] = { height: 22, width: 22, marginRight: 6 };
-createCacheKey[14] = { display: "flex", alignItems: "center" };
-let obj3 = { display: "flex", flexDirection: "column", justifyContent: "flex-end", alignItems: "center", bottom: 0, paddingBottom: 8, position: "absolute", width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
-createCacheKey[15] = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, padding: 8, paddingRight: 32, minHeight: 48, display: "flex", flexDirection: "row", flexWrap: "wrap", alignItems: "center", position: "relative" };
-createCacheKey[16] = { marginTop: 16 };
-let obj4 = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, padding: 8, paddingRight: 32, minHeight: 48, display: "flex", flexDirection: "row", flexWrap: "wrap", alignItems: "center", position: "relative" };
-createCacheKey[17] = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 6, marginRight: 8, marginTop: 8, display: "flex", flexDirection: "row", alignItems: "center" };
-createCacheKey[18] = { position: "absolute", right: 4, top: 8 };
-createCacheKey[19] = { height: 32, width: 32 };
-let closure_18 = createCacheKey.createStyles(createCacheKey);
-let obj5 = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 6, marginRight: 8, marginTop: 8, display: "flex", flexDirection: "row", alignItems: "center" };
-let result = require("set").fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingPrompt.tsx");
+const createStyles = fn(4574);
+let obj2 = { flex: { flex: 1 }, container: { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(5696).NAV_BAR_HEIGHT, marginBottom: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, scrollContainer: null, scrollContainerGradient: null, promptHeader: null, requiredSeparator: null, countText: null, title: null, helpText: null, footer: null, footerText: null, footerContent: null, optionTextEmoji: null, optionImageEmoji: null, emojiContainer: null, dropdownContainer: null, emptyDropdownText: null, dropdownPill: null, dropdownIconContainer: null, dropdownIcon: null };
+let obj3 = { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(5696).NAV_BAR_HEIGHT, marginBottom: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+obj2.scrollContainer = { display: "flex", flexGrow: 1, justifyContent: "center", paddingHorizontal: 16, paddingTop: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+obj2.scrollContainerGradient = { position: "absolute", height: 48, width: "100%", left: 0, top: -48 };
+obj2.promptHeader = { display: "flex", flexDirection: "row", alignItems: "center", marginBottom: 8 };
+let size = { flexShrink: 0, marginHorizontal: 8, color: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, width: 4, height: 4, borderRadius: nativeDefault.radii.xs };
+obj2.requiredSeparator = size;
+obj2.countText = {};
+obj2.title = { marginBottom: 32 };
+obj2.helpText = { marginTop: 8, marginBottom: 8, textAlign: "center" };
+let obj4 = { display: "flex", flexGrow: 1, justifyContent: "center", paddingHorizontal: 16, paddingTop: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+obj2.footer = { display: "flex", flexDirection: "column", justifyContent: "flex-end", alignItems: "center", bottom: 0, paddingBottom: 8, position: "absolute", width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+obj2.footerText = { paddingHorizontal: 16, paddingBottom: 8, paddingTop: 8 };
+obj2.footerContent = { width: "100%", paddingHorizontal: 16 };
+obj2.optionTextEmoji = { fontSize: 18, lineHeight: 22, marginRight: 6 };
+obj2.optionImageEmoji = { height: 22, width: 22, marginRight: 6 };
+obj2.emojiContainer = { display: "flex", alignItems: "center" };
+let obj5 = { display: "flex", flexDirection: "column", justifyContent: "flex-end", alignItems: "center", bottom: 0, paddingBottom: 8, position: "absolute", width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+obj2.dropdownContainer = { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, padding: 8, paddingRight: 32, minHeight: 48, display: "flex", flexDirection: "row", flexWrap: "wrap", alignItems: "center", position: "relative" };
+obj2.emptyDropdownText = { marginTop: 16 };
+let obj6 = { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, padding: 8, paddingRight: 32, minHeight: 48, display: "flex", flexDirection: "row", flexWrap: "wrap", alignItems: "center", position: "relative" };
+obj2.dropdownPill = { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 6, marginRight: 8, marginTop: 8, display: "flex", flexDirection: "row", alignItems: "center" };
+obj2.dropdownIconContainer = { position: "absolute", right: 4, top: 8 };
+obj2.dropdownIcon = { height: 32, width: 32 };
+let closure_18 = createStyles.createStyles(obj2);
+size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingPrompt.tsx");
 
 export const RulesPrompt = function RulesPrompt(guildId) {
   guildId = guildId.guildId;
-  importDefault = undefined;
   let stateFromStores;
-  let callback;
-  let React;
   c5 = undefined;
-  let START = callback4();
+  let START = closure_18();
   let END = stateFromStores;
+  importDefault = guildId(stateFromStores[13]).useNavigation();
   let obj = guildId(stateFromStores[13]);
-  importDefault = obj.useNavigation();
-  obj1 = guildId(stateFromStores[14]);
-  let items = [closure_10];
-  stateFromStores = obj1.useStateFromStores(items, () => closure_1_10.getRulesPrompt(guildId));
+  let items = [MemberVerificationFormStore];
+  stateFromStores = guildId(stateFromStores[14]).useStateFromStores(items, () => MemberVerificationFormStore.getRulesPrompt(guildId));
   let obj2 = guildId(stateFromStores[14]);
-  const items1 = [closure_11];
-  callback = obj2.useStateFromStores(items1, () => {
-    const guild = closure_1_11.getGuild(guildId);
-    let rulesChannelId;
+  const items1 = [GuildStore];
+  _slicedToArray = guildId(stateFromStores[14]).useStateFromStores(items1, () => {
+    const guild = GuildStore.getGuild(guildId);
+    rulesChannelId = undefined;
     if (guild != null) {
       rulesChannelId = guild.rulesChannelId;
     }
     return rulesChannelId;
   });
   let tmp3 = importDefault;
-  const bottom = importDefault(stateFromStores[15])().bottom;
+  const bottom = require("useSafeAreaInsets")().bottom;
   const sum = 64 + bottom;
   let obj3 = guildId(stateFromStores[14]);
-  const items2 = [closure_10];
-  React = obj3.useStateFromStores(items2, () => closure_1_10.get(guildId));
-  [tmp6, c5] = callback(React.useState(false), 2);
-  let obj4 = guildId(stateFromStores[16]);
-  const token = obj4.useToken(importDefault(stateFromStores[12]).colors.BACKGROUND_BASE_LOWER);
-  let obj5 = importDefault(stateFromStores[17])(token);
-  const tmp5 = callback(React.useState(false), 2);
-  const items3 = [obj5.alpha(0).hex(), ];
-  let obj7 = importDefault(stateFromStores[17])(token);
-  const alphaResult = obj5.alpha(0);
-  items3[1] = obj7.alpha(1).hex();
+  const items2 = [MemberVerificationFormStore];
+  noop = guildId(stateFromStores[14]).useStateFromStores(items2, () => MemberVerificationFormStore.get(guildId));
+  const obj4 = guildId(stateFromStores[14]);
+  [tmp6, c5] = noop.useState(false);
+  const tmp5 = _slicedToArray(noop.useState(false), 2);
+  const token = guildId(stateFromStores[16]).useToken(require("native").colors.BACKGROUND_BASE_LOWER);
+  const obj5 = guildId(stateFromStores[16]);
+  const obj6 = require("module_672")(token);
+  const items3 = [require("module_672")(token).alpha(0).hex(), ];
+  const alphaResult = require("module_672")(token).alpha(0);
+  const obj8 = require("module_672")(token);
+  items3[1] = require("module_672")(token).alpha(1).hex();
   if (null == stateFromStores) {
     return null;
   } else {
     const sum1 = sum + 8;
-    obj = { top: true, style: null, children: null };
+    const obj7 = { top: true, style: null, children: null };
     const items4 = [, ];
     ({ flex: arr5[0], container: arr5[1] } = START);
-    obj[1] = items4;
-    let tmp11Result = closure_6;
-    obj = { style: null, children: null };
-    obj[0] = START.flex;
-    obj1 = { contentContainerStyle: null, data: null, renderItem: null, onEndReached: null };
+    obj7.style = items4;
+    let tmp11Result2 = closure_6;
+    let obj9 = { style: START.flex, children: null };
+    const obj10 = { contentContainerStyle: null, data: null, renderItem: null, onEndReached: null };
     const items5 = [START.scrollContainer, ];
-    obj2 = { paddingBottom: null };
-    obj2[0] = sum1;
-    items5[1] = obj2;
-    obj1[0] = items5;
-    obj1[1] = [0];
-    obj1[2] = function renderItem() {
-      return closure_1_15(arr(stateFromStores[19]), { rules: stateFromStores.values, rulesChannelId: closure_3 });
+    const obj11 = { paddingBottom: sum1 };
+    items5[1] = obj11;
+    obj10.contentContainerStyle = items5;
+    obj10.data = [0];
+    obj10.renderItem = function renderItem() {
+      return __initData(TermsFieldListDefault, { rules: stateFromStores.values, rulesChannelId });
     };
-    obj1[3] = function onEndReached() {
+    obj10.onEndReached = function onEndReached() {
       return _undefined(true);
     };
-    let items6 = [callback2(closure_8, obj1), ];
-    obj3 = { style: null, children: null };
+    let items6 = [closure_15(closure_8, obj10), ];
+    let obj12 = { style: null, children: null };
     const items7 = [, , ];
     ({ footer: arr8[0], footerContent: arr8[1] } = START);
-    obj4 = { paddingBottom: null };
-    obj4[0] = bottom;
-    items7[2] = obj4;
-    obj3[0] = items7;
+    const obj13 = { paddingBottom: bottom };
+    items7[2] = obj13;
+    obj12.style = items7;
     let Text = tmp(END[20]).Text;
-    obj5 = { style: null, variant: "text-xs/medium", children: null };
-    obj5[0] = START.footerText;
+    let obj14 = { style: START.footerText, variant: "text-xs/medium", children: null };
     const intl = tmp(END[21]).intl;
     let intl2 = intl.string;
     let string = tmp(END[21]).t;
@@ -336,125 +332,121 @@ export const RulesPrompt = function RulesPrompt(guildId) {
     } else {
       intl2Result = intl2(string.D0CVAc);
     }
-    obj5[2] = intl2Result;
-    tmp11Result = tmp11(Text, obj5);
-    obj5 = [tmp11Result, ];
-    const obj6 = { variant: "primary", size: "md", grow: true, disabled: null, text: null, onPress: null };
-    obj6[3] = !stringResult;
+    obj14.children = intl2Result;
+    obj14 = [, ];
+    obj14[0] = closure_15(Text, obj14);
+    const obj15 = { variant: "primary", size: "md", grow: true, disabled: !stringResult, text: null, onPress: null };
     intl2 = tmp(END[21]).intl;
     string = intl2.string;
     stringResult = string(tmp(END[21]).t["0KL0ot"]);
-    obj6[4] = stringResult;
-    obj6[5] = function onPress() {
+    obj15.text = stringResult;
+    obj15.onPress = function onPress() {
       let tmp2 = null != stateFromStores;
       if (tmp2) {
         tmp2 = null != closure_4;
       }
       if (tmp2) {
-        let obj = arr(stateFromStores[23]);
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(closure_4);
-        obj = {};
+        const obj3 = {};
         const merged1 = Object.assign(tmp);
-        obj.response = true;
-        const items = [obj];
-        obj.formFields = items;
-        const result = obj.submitVerificationForm(guildId, obj);
-        arr = arr.push(closure_1_13.COMPLETED);
+        obj3.response = true;
+        const items = [obj3];
+        obj2.formFields = items;
+        const result = MemberVerificationActionCreatorsDefault.submitVerificationForm(guildId, obj2);
+        closure_1.push(constants.COMPLETED);
       }
     };
-    Text = tmp11(tmp(END[22]).Button, obj6);
-    obj5[1] = Text;
-    obj3[1] = obj5;
-    obj3 = tmp9(tmp11Result, obj3);
-    items6[1] = obj3;
-    obj[1] = items6;
-    let tmp9Result = tmp9(tmp11Result, obj);
-    obj = [tmp9Result, ];
+    Text = tmp11(tmp(END[22]).Button, obj15);
+    obj14[1] = Text;
+    obj12.children = obj14;
+    obj12 = tmp9(tmp11Result2, obj12);
+    items6[1] = obj12;
+    obj9.children = items6;
+    const tmp11Result = closure_15(Text, obj14);
+    obj9 = [, ];
+    obj9[0] = closure_16(tmp11Result2, obj9);
     tmp3 = tmp3(END[24]);
-    obj7 = { style: null, start: null, end: null, colors: null, pointerEvents: "none" };
+    const obj16 = { style: null, start: null, end: null, colors: null, pointerEvents: "none" };
     const items8 = [START.scrollContainerGradient, ];
-    items6 = { bottom: null };
-    items6[0] = sum1;
+    items6 = { bottom: sum1 };
     items8[1] = items6;
-    obj7[0] = items8;
+    obj16.style = items8;
     START = tmp(END[25]).VerticalGradient.START;
-    obj7[1] = START;
+    obj16.start = START;
     END = tmp(END[25]).VerticalGradient.END;
-    obj7[2] = END;
-    obj7[3] = items3;
-    tmp11Result = tmp11(tmp3, obj7);
-    obj[1] = tmp11Result;
-    obj[2] = obj;
-    tmp9Result = tmp9(tmp(END[18]).SafeAreaPaddingView, obj);
+    obj16.end = END;
+    obj16.colors = items3;
+    tmp11Result2 = tmp11(tmp3, obj16);
+    obj9[1] = tmp11Result2;
+    obj7.children = obj9;
+    closure_16(tmp(END[18]).SafeAreaPaddingView, obj7);
+    const tmp9Result = closure_16(tmp11Result2, obj9);
   }
 };
 export const MultipleChoicePrompt = function MultipleChoicePrompt(guildId) {
   guildId = guildId.guildId;
   const currentPrompt = guildId.currentPrompt;
   const selectOption = guildId.selectOption;
-  let stateFromStoresArray;
   ({ lastPrompt, currentPromptIndex, numberOfPrompts, handleOnPress } = guildId);
-  let obj = guildId(selectOption[14]);
-  const items = [closure_12];
+  const tmp = closure_18();
+  const items = [GuildOnboardingPromptsStore];
   const items1 = [guildId, currentPrompt];
-  stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
+  const stateFromStoresArray = guildId(selectOption[14]).useStateFromStoresArray(items, () => {
     if (null != currentPrompt) {
-      let onboardingResponsesForPrompt = closure_1_12.getOnboardingResponsesForPrompt(guildId, tmp.id);
+      let onboardingResponsesForPrompt = GuildOnboardingPromptsStore.getOnboardingResponsesForPrompt(guildId, tmp.id);
     } else {
       onboardingResponsesForPrompt = [];
     }
     return onboardingResponsesForPrompt;
   }, items1);
-  obj = { children: null };
-  obj = { contentContainerStyle: items2, children: null };
-  items2 = [callback4().scrollContainer, ];
-  const tmp = callback4();
+  const obj2 = { children: null };
+  const obj3 = { contentContainerStyle: null, children: null };
+  const items2 = [tmp.scrollContainer, ];
+  let obj = guildId(selectOption[14]);
   items2[1] = { paddingBottom: 64 + currentPrompt(selectOption[15])().bottom + 48 + 48, position: "relative" };
-  const items3 = [callback2(PromptHeader, { currentPrompt, numberOfPrompts, currentPromptIndex }), ];
-  obj1 = { paddingBottom: 64 + currentPrompt(selectOption[15])().bottom + 48 + 48, position: "relative" };
+  obj3.contentContainerStyle = items2;
+  const items3 = [closure_15(PromptHeader, { currentPrompt, numberOfPrompts, currentPromptIndex }), ];
+  const obj5 = { children: null };
   const options = currentPrompt.options;
-  items3[1] = callback2(closure_6, {
-    children: options.map((id) => {
-      closure_0 = id;
-      const obj = {
-        option: id,
-        guildId: closure_0,
-        onSelect(arg0) {
-          let flag = arg0;
-          if (arg0 == null) {
-            flag = false;
-          }
-          return closure_1_2(closure_1_1.id, id.id, flag);
-        },
-        selected: null
-      };
-      let flag = stateFromStoresArray.includes(id.id);
-      if (flag == null) {
-        flag = false;
-      }
-      obj[3] = flag;
-      return closure_1_15(currentPrompt(selectOption[28]), obj, id.id);
-    })
+  obj5.children = options.map((option) => {
+    guildId = option;
+    const obj = {
+      option,
+      guildId,
+      onSelect(arg0) {
+        let flag = arg0;
+        if (arg0 == null) {
+          flag = false;
+        }
+        return selectOption(currentPrompt.id, option.id, flag);
+      },
+      selected: null
+    };
+    let flag = stateFromStoresArray.includes(option.id);
+    if (flag == null) {
+      flag = false;
+    }
+    obj.selected = flag;
+    return closure_1_15(currentPrompt(selectOption[28]), obj, option.id);
   });
-  obj[1] = items3;
-  const items4 = [callback3(closure_7, obj), callback2(PromptFooter, { guildId, currentPrompt, selectedOptionIds: stateFromStoresArray, handleOnPress, lastPrompt })];
-  obj[0] = items4;
-  return callback3(closure_17, obj);
+  items3[1] = closure_15(closure_6, obj5);
+  obj3.children = items3;
+  const items4 = [closure_16(closure_7, obj3), closure_15(PromptFooter, { guildId, currentPrompt, selectedOptionIds: stateFromStoresArray, handleOnPress, lastPrompt })];
+  obj2.children = items4;
+  return closure_16(closure_17, obj2);
 };
 export const DropdownPrompt = function DropdownPrompt(guildId) {
   guildId = guildId.guildId;
   const currentPrompt = guildId.currentPrompt;
   const selectOption = guildId.selectOption;
-  let stateFromStoresArray;
   ({ lastPrompt, currentPromptIndex, numberOfPrompts, handleOnPress } = guildId);
-  const tmp = callback4();
-  let obj = guildId(selectOption[14]);
-  const items = [closure_12];
+  const tmp = closure_18();
+  const items = [GuildOnboardingPromptsStore];
   const items1 = [guildId, currentPrompt];
-  stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
+  const stateFromStoresArray = guildId(selectOption[14]).useStateFromStoresArray(items, () => {
     if (null != currentPrompt) {
-      let onboardingResponsesForPrompt = closure_1_12.getOnboardingResponsesForPrompt(guildId, tmp.id);
+      let onboardingResponsesForPrompt = GuildOnboardingPromptsStore.getOnboardingResponsesForPrompt(guildId, tmp.id);
     } else {
       onboardingResponsesForPrompt = [];
     }
@@ -468,43 +460,46 @@ export const DropdownPrompt = function DropdownPrompt(guildId) {
     }
   }
   const items2 = [guildId, currentPrompt.id, selectOption];
-  obj = { contentContainerStyle: items3, children: null };
-  items3 = [tmp.scrollContainer, ];
-  obj = { paddingBottom: 64 + currentPrompt(selectOption[15])().bottom + 48 + 48, position: "relative" };
-  items3[1] = obj;
-  const callback = React.useCallback(() => {
-    let obj = currentPrompt(selectOption[31]);
-    obj = {
+  const obj2 = { contentContainerStyle: null, children: null };
+  const items3 = [tmp.scrollContainer, ];
+  const obj = guildId(selectOption[14]);
+  const tmp2 = currentPrompt;
+  items3[1] = { paddingBottom: 64 + currentPrompt(selectOption[15])().bottom + 48 + 48, position: "relative" };
+  obj2.contentContainerStyle = items3;
+  const callback = noop.useCallback(() => {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7149, dependencyMap.paths), "DropdownOptions", {
       guildId,
       promptId: currentPrompt.id,
-      onSelect(id) {
+      onSelect(id, arg1) {
         let flag = arg1;
         if (arg1 == null) {
           flag = false;
         }
-        return closure_2(id.id, id.id, flag);
+        return selectOption(id.id, id.id, flag);
       }
-    };
-    obj.openLazy(guildId(selectOption[33])(selectOption[32], selectOption.paths), "DropdownOptions", obj);
+    });
   }, items2);
-  const items4 = [callback2(PromptHeader, { currentPrompt, numberOfPrompts, currentPromptIndex }), ];
-  obj1 = { style: tmp.dropdownContainer, onPress: callback, children: null };
+  const items4 = [closure_15(PromptHeader, { currentPrompt, numberOfPrompts, currentPromptIndex }), ];
+  const obj4 = { style: tmp.dropdownContainer, onPress: callback, children: null };
   let tmp11Result = 0 === found.length;
   if (tmp11Result) {
-    const obj2 = { style: null, variant: "text-sm/normal", color: "text-muted", children: "No answers selected." };
-    obj2[0] = tmp.emptyDropdownText;
-    tmp11Result = tmp11(tmp4(tmp3[20]).Text, obj2);
+    const obj5 = { style: tmp.emptyDropdownText, variant: "text-sm/normal", color: "text-muted", children: "No answers selected." };
+    tmp11Result = tmp11(tmp4(tmp3[20]).Text, obj5);
   }
-  const obj3 = { children: null };
-  const obj4 = { children: null };
-  const items5 = [tmp11Result, found.map((id) => callback(closure_22, { option: id }, id.id)), ];
-  const obj5 = { style: tmp.dropdownIconContainer, children: callback2(closure_5, { style: tmp.dropdownIcon, source: currentPrompt(selectOption[35]) }) };
-  items5[2] = callback2(closure_6, obj5);
-  obj1[2] = items5;
-  obj4[0] = closure_16(guildId(selectOption[34]).PressableHighlight, obj1);
-  items4[1] = callback2(closure_6, obj4);
-  obj[1] = items4;
-  const items6 = [closure_16(closure_7, obj), callback2(PromptFooter, { guildId, currentPrompt, selectedOptionIds: stateFromStoresArray, handleOnPress, lastPrompt })];
-  obj3[0] = items6;
-  return closure_16(closure_17, obj3);
+  const obj6 = { children: null };
+  const obj7 = { children: null };
+  const items5 = [tmp11Result, found.map((option) => closure_1_15(DropdownOption, { option }, option.id)), ];
+  const obj8 = { style: tmp.dropdownIconContainer, children: null };
+  const obj3 = { paddingBottom: 64 + currentPrompt(selectOption[15])().bottom + 48 + 48, position: "relative" };
+  const tmp10 = closure_7;
+  const tmp9 = closure_17;
+  obj8.children = closure_15(closure_5, { style: tmp.dropdownIcon, source: tmp2(selectOption[35]) });
+  items5[2] = closure_15(closure_6, obj8);
+  obj4.children = items5;
+  obj7.children = closure_16(guildId(selectOption[34]).PressableHighlight, obj4);
+  items4[1] = closure_15(closure_6, obj7);
+  obj2.children = items4;
+  const items6 = [closure_16(tmp10, obj2), closure_15(PromptFooter, { guildId, currentPrompt, selectedOptionIds: stateFromStoresArray, handleOnPress, lastPrompt })];
+  obj6.children = items6;
+  return closure_16(tmp9, obj6);
 };

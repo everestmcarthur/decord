@@ -1,70 +1,65 @@
-// Module ID: 8140
-// Function ID: 8141
-// Name: handleFetchEmbeddedActivityShelfSuccess
+// Module ID: 8166
+// Function ID: 8167
+// Name: ApplicationAssetsStore
 // Dependencies: [12, 504, 573, 2]
 
-// Module 8140 (handleFetchEmbeddedActivityShelfSuccess)
-import applyDefault from "apply" /* 12 */;
+// Module 8166 (ApplicationAssetsStore)
+import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
 function handleFetchEmbeddedActivityShelfSuccess(assets) {
   assets = assets.assets;
   obj = {};
   const merged = Object.assign(obj);
   for (const key10012 in assets) {
-    let tmp2 = key10012;
-    let tmp3 = obj;
     obj[key10012] = obj.FETCH_SUCCESS;
-    let tmp5 = importDefault;
-    let tmp6 = dependencyMap;
     let tmp4 = closure_4;
-    let obj4 = applyDefault;
+    let obj4 = _modDef12;
     let keyByResult = obj4.keyBy(assets[key10012], "name");
     if (keyByResult == null) {
       keyByResult = {};
     }
-    obj = { assets: null, lastUpdated: null };
-    obj[0] = keyByResult;
+    let obj2 = { assets: keyByResult, lastUpdated: null };
     let _Date = Date;
-    obj[1] = Date.now();
-    tmp4[key10012] = obj;
+    obj2.lastUpdated = Date.now();
+    tmp4[key10012] = obj2;
     continue;
   }
 }
 let obj = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCH_SUCCESS: 2, [2]: "FETCH_SUCCESS" };
-let closure_3 = {};
+obj = {};
 let closure_4 = {};
 const Store = initializeDefault.Store;
 class ApplicationAssetsStore extends Store {
 }
 const prototype = ApplicationAssetsStore.prototype;
 prototype["getApplicationAssetFetchState"] = function getApplicationAssetFetchState(id) {
-  let NOT_FETCHED = table[id];
+  let NOT_FETCHED = obj[id];
   if (NOT_FETCHED == null) {
     NOT_FETCHED = obj.NOT_FETCHED;
   }
   return NOT_FETCHED;
 };
 prototype["getFetchingIds"] = function getFetchingIds() {
-  const entries = Object.entries(closure_3);
-  const found = entries.filter((arg0) => {
-    [, tmp] = arg0;
+  const entries = Object.entries(obj);
+  const found = entries.filter((item) => {
+    [, tmp] = item;
     return tmp === constants.FETCHING;
   });
   const items = [
-    ...found.map((arg0) => {
-      [tmp] = arg0;
+    ...found.map((item) => {
+      [tmp] = item;
       return tmp;
     })
   ];
   return items;
 };
-prototype["getApplicationAssets"] = function getApplicationAssets(closure_0) {
-  return table2[closure_0];
+prototype["getApplicationAssets"] = function getApplicationAssets(id) {
+  return closure_4[id];
 };
 ApplicationAssetsStore.displayName = "ApplicationAssetsStore";
-obj = {
+const applicationAssetsStore = new ApplicationAssetsStore(DispatcherDefault, {
   APPLICATION_ASSETS_FETCH: function handleFetchApplicationAssets(applicationId) {
     obj = {};
     const merged = Object.assign(obj);
@@ -78,26 +73,23 @@ obj = {
   APPLICATION_ASSETS_UPDATE: function handleUpdateApplicationAssets(assets) {
     assets = assets.assets;
     if (null != assets) {
-      obj = applyDefault;
-      let keyByResult = obj.keyBy(assets, "name");
+      let keyByResult = _modDef12.keyBy(assets, "name");
       if (keyByResult == null) {
         keyByResult = {};
       }
-      obj = { assets: null, lastUpdated: null };
-      obj[0] = keyByResult;
+      const obj2 = { assets: keyByResult, lastUpdated: null };
       const _Date = Date;
-      obj[1] = Date.now();
-      closure_4[tmp3] = obj;
-      const tmp5 = closure_4;
+      obj2.lastUpdated = Date.now();
+      closure_4[tmp3] = obj2;
     } else {
       delete tmp[tmp2];
     }
   },
   EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS: handleFetchEmbeddedActivityShelfSuccess,
   DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: handleFetchEmbeddedActivityShelfSuccess
-};
-const applicationAssetsStore = new ApplicationAssetsStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/applications/ApplicationAssetsStore.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/applications/ApplicationAssetsStore.tsx");
 
 export default applicationAssetsStore;
 export const FetchState = obj;

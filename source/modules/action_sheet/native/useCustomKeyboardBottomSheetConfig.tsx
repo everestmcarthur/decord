@@ -1,15 +1,18 @@
-// Module ID: 12084
-// Function ID: 12085
+// Module ID: 12110
+// Function ID: 12111
 // Name: useCustomKeyboardBottomSheetConfig
-// Dependencies: [19, 4552, 1115, 1877, 4427, 1609, 1477, 11361, 5598, 11360, 2]
+// Dependencies: [19, 4566, 1115, 1877, 4441, 1609, 1477, 11388, 5612, 11387, 2]
 // Exports: default
 
-// Module 12084 (useCustomKeyboardBottomSheetConfig)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+// Module 12110 (useCustomKeyboardBottomSheetConfig)
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/action_sheet/native/useCustomKeyboardBottomSheetConfig.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/action_sheet/native/useCustomKeyboardBottomSheetConfig.tsx");
 
 export default function useCustomKeyboardBottomSheetConfig(forceMaxHeight) {
   let flag = forceMaxHeight.forceMaxHeight;
@@ -22,28 +25,29 @@ export default function useCustomKeyboardBottomSheetConfig(forceMaxHeight) {
   }
   importDefault = undefined;
   let minimum;
-  let maximum;
-  const tmp2 = importDefault(minimum[6])({ ignoreKeyboard: true });
+  const tmp2 = require("useWindowDimensions")({ ignoreKeyboard: true });
   importDefault = tmp2;
-  let tmp3 = importDefault(minimum[7])();
+  let tmp3 = require("useKeyboardActionSheetHeight")();
   minimum = tmp3.minimum;
-  maximum = tmp3.maximum;
+  const maximum = tmp3.maximum;
   let items = [flag, maximum, minimum];
-  ({ initialPosition, animateOnMount } = importDefault(minimum[8])(() => {
-    let obj = { initialPosition: styles.height - minimum, animateOnMount: false };
+  ({ initialPosition, animateOnMount } = require("useInitialValue")(() => {
+    const obj = { initialPosition: styles.height - minimum, animateOnMount: false };
     let tmp3 = obj;
     if (!obj2.isAndroid()) {
       tmp3 = obj;
-      if (!closure_1_4.useReducedMotion) {
-        let tmpResult = tmp(tmp2[3]);
+      if (!AccessibilityStore.useReducedMotion) {
+        let obj3 = obj;
         if (0 === tmpResult.getSystemKeyboardHeight()) {
-          tmpResult = tmp(tmp2[4]);
-          const keyboardTypePrevious = tmpResult.getKeyboardTypePrevious();
-          if (keyboardTypePrevious === tmp(tmp2[5]).KeyboardTypes.SYSTEM) {
-            obj = { animateOnMount: true };
+          const keyboardTypePrevious = tmp(4441).getKeyboardTypePrevious();
+          obj3 = obj;
+          if (keyboardTypePrevious === tmp(1609).KeyboardTypes.SYSTEM) {
+            obj3 = { animateOnMount: true };
           }
+          const tmpResult2 = tmp(4441);
         }
-        tmp3 = obj;
+        tmp3 = obj3;
+        tmpResult = tmp(1877);
       }
     }
     return tmp3;
@@ -59,36 +63,38 @@ export default function useCustomKeyboardBottomSheetConfig(forceMaxHeight) {
     return items1;
   }, items);
   const tmp = minimum;
-  const tmp4 = importDefault(minimum[8])(() => {
-    let obj = { initialPosition: styles.height - minimum, animateOnMount: false };
+  const tmp4 = require("useInitialValue")(() => {
+    const obj = { initialPosition: styles.height - minimum, animateOnMount: false };
     let tmp3 = obj;
     if (!obj2.isAndroid()) {
       tmp3 = obj;
-      if (!closure_1_4.useReducedMotion) {
-        let tmpResult = tmp(tmp2[3]);
+      if (!AccessibilityStore.useReducedMotion) {
+        let obj3 = obj;
         if (0 === tmpResult.getSystemKeyboardHeight()) {
-          tmpResult = tmp(tmp2[4]);
-          const keyboardTypePrevious = tmpResult.getKeyboardTypePrevious();
-          if (keyboardTypePrevious === tmp(tmp2[5]).KeyboardTypes.SYSTEM) {
-            obj = { animateOnMount: true };
+          const keyboardTypePrevious = tmp(4441).getKeyboardTypePrevious();
+          obj3 = obj;
+          if (keyboardTypePrevious === tmp(1609).KeyboardTypes.SYSTEM) {
+            obj3 = { animateOnMount: true };
           }
+          const tmpResult2 = tmp(4441);
         }
-        tmp3 = obj;
+        tmp3 = obj3;
+        tmpResult = tmp(1877);
       }
     }
     return tmp3;
   });
   const tmp6 = flag;
   const obj2 = flag(minimum[2]);
-  obj[2] = flag(minimum[2]).isAndroid() && undefined;
-  obj[3] = maximum;
-  obj[4] = tmp2.height;
-  obj[6] = initialPosition;
+  obj.accessible = flag(minimum[2]).isAndroid() && undefined;
+  obj.contentHeight = maximum;
+  obj.containerHeight = tmp2.height;
+  obj.initialPosition = initialPosition;
   let str;
   if (tmp6(tmp[9]).IS_SYSTEM_KEYBOARD_EXTERNAL) {
     str = "adjustResize";
   }
-  obj[8] = str;
-  obj[9] = memo;
+  obj.android_keyboardInputMode = str;
+  obj.snapPoints = memo;
   return obj;
 };

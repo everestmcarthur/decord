@@ -1,24 +1,25 @@
-// Module ID: 15104
-// Function ID: 15105
+// Module ID: 15131
+// Function ID: 15132
 // Name: useConnectionBannerHeight
-// Dependencies: [13690, 15101, 13691, 504, 2]
+// Dependencies: [13713, 15128, 13714, 504, 2]
 // Exports: useConnectionBannerHeight
 
-// Module 15104 (useConnectionBannerHeight)
+// Module 15131 (useConnectionBannerHeight)
 import initialize from "initialize" /* 504 */;
-import apexExperimentDefault from "apexExperiment" /* 13691 */;
-import closure_3 from "updateState" /* 13690 */;
-import { ConnectivityIndicatorState as closure_4 } from "updateState" /* 13690 */;
-import { CONNECTION_BANNER_HEIGHT } from "CONNECTION_BANNER_HEIGHT" /* 15101 */;
+import ConnectionIndicatorExperimentDefault from "ConnectionIndicatorExperiment" /* 13714 */;
+import ConnectivityIndicatorStateStore from "ConnectivityIndicatorStateStore" /* 13713 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useConnectionBannerHeight.tsx");
+require = fn;
+const constants = fn(13713).ConnectivityIndicatorState;
+const CONNECTION_BANNER_HEIGHT = fn(15128).CONNECTION_BANNER_HEIGHT;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useConnectionBannerHeight.tsx");
 
 export const useConnectionBannerHeight = function useConnectionBannerHeight() {
-  const config = apexExperimentDefault.useConfig({ location: "useConnectionBannerHeight" });
+  const config = ConnectionIndicatorExperimentDefault.useConfig({ location: "useConnectionBannerHeight" });
   ({ timeoutMs, hidden } = config);
   initialize;
-  [][0] = closure_3;
+  [][0] = ConnectivityIndicatorStateStore;
   let num = 0;
   if (null != timeoutMs) {
     num = 0;

@@ -1,12 +1,12 @@
-// Module ID: 17863
-// Function ID: 17864
-// Name: set
+// Module ID: 17896
+// Function ID: 17897
+// Name: IntentsBindings
 // Dependencies: [2]
 
-// Module 17863 (set)
-import set from "set" /* 2 */;
+// Module 17896 (IntentsBindings)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/native_intents/IntentsBindings.android.tsx");
+const result = size.fileFinishedImporting("modules/native_intents/IntentsBindings.android.tsx");
 
 export default {
   hasSearch() {
@@ -18,19 +18,19 @@ export default {
   clearSearchIndex() {
 
   },
-  deleteSearchDomains(items) {
+  deleteSearchDomains() {
 
   },
-  deleteSearchItems(items) {
+  deleteSearchItems() {
 
   },
-  indexDomains(items) {
+  indexDomains() {
 
   },
   resignActivity() {
 
   },
-  setActivity(arg0) {
+  setActivity() {
 
   }
 };

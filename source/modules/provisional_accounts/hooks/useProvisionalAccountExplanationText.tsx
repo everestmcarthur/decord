@@ -1,39 +1,39 @@
-// Module ID: 12633
-// Function ID: 12634
+// Module ID: 12659
+// Function ID: 12660
 // Name: useProvisionalAccountExplanationText
-// Dependencies: [19, 1074, 12634, 1114, 2024, 2]
+// Dependencies: [19, 1074, 12660, 1114, 2024, 2]
 // Exports: useProvisionalAccountExplanationText
 
-// Module 12633 (useProvisionalAccountExplanationText)
-import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplication" /* 12634 */;
-import closure_3 from "noop" /* 19 */;
-import { HelpdeskArticles } from "ME" /* 1074 */;
+// Module 12659 (useProvisionalAccountExplanationText)
+import util from "util" /* 1114 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
+import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplication" /* 12660 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/provisional_accounts/hooks/useProvisionalAccountExplanationText.tsx");
+require = fn;
+const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/provisional_accounts/hooks/useProvisionalAccountExplanationText.tsx");
 
 export const useProvisionalAccountExplanationText = function useProvisionalAccountExplanationText(renderApplicationName) {
   renderApplicationName = renderApplicationName.renderApplicationName;
-  importDefault = undefined;
   const tmp = useProvisionalAccountApplicationDefault(renderApplicationName.userId);
   importDefault = tmp;
   const items = [tmp, renderApplicationName];
-  return React.useMemo(() => {
-    if (null != callback) {
-      const intl = renderApplicationName(closure_1_2[3]).intl;
-      let obj = { helpdeskArticle: null, applicationName: null };
-      obj[0] = callback(closure_1_2[4]).getArticleURL(closure_1_4.SLAYER_PROVISIONAL_ACCOUNTS);
-      obj[1] = function applicationName() {
-        return callback(closure_1);
+  return noop.useMemo(() => {
+    if (null != closure_1) {
+      const intl = util.intl;
+      const obj = {
+        helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SLAYER_PROVISIONAL_ACCOUNTS),
+        applicationName() {
+            return renderApplicationName(closure_1_1);
+          }
       };
-      let formatResult = intl.format(renderApplicationName(closure_1_2[3]).t.rSUACb, obj);
-      const obj2 = callback(closure_1_2[4]);
+      let formatResult = intl.format(util.t.rSUACb, obj);
     } else {
-      const intl2 = renderApplicationName(closure_1_2[3]).intl;
-      obj = { helpdeskArticle: null };
-      obj[0] = callback(closure_1_2[4]).getArticleURL(closure_1_4.SLAYER_PROVISIONAL_ACCOUNTS);
-      formatResult = intl2.format(renderApplicationName(closure_1_2[3]).t["q+N8L6"], obj);
-      const obj4 = callback(closure_1_2[4]);
+      const intl2 = util.intl;
+      const obj3 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SLAYER_PROVISIONAL_ACCOUNTS) };
+      formatResult = intl2.format(util.t["q+N8L6"], obj3);
     }
     return formatResult;
   }, items);

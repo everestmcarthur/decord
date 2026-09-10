@@ -1,15 +1,16 @@
-// Module ID: 14471
-// Function ID: 14472
+// Module ID: 14496
+// Function ID: 14497
 // Name: getCurrentEmbeddedActivityChannel
 // Dependencies: [1956, 1957, 2]
 // Exports: default
 
-// Module 14471 (getCurrentEmbeddedActivityChannel)
-import closure_0 from "participantFromServer" /* 1956 */;
-import closure_1 from "ensureGuildLoaded" /* 1957 */;
+// Module 14496 (getCurrentEmbeddedActivityChannel)
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-const result = require("set").fileFinishedImporting("modules/rpc/helpers/getCurrentEmbeddedActivityChannel.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rpc/helpers/getCurrentEmbeddedActivityChannel.tsx");
 
 export default function getCurrentEmbeddedActivityChannel() {
-  return channel.getChannel(connectedActivityChannelId.getConnectedActivityChannelId());
+  return ChannelStore.getChannel(EmbeddedActivitiesStore.getConnectedActivityChannelId());
 };

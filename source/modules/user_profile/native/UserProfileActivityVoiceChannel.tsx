@@ -1,50 +1,52 @@
-// Module ID: 13028
-// Function ID: 13029
+// Module ID: 13054
+// Function ID: 13055
 // Name: UserProfileActivityVoiceChannel
-// Dependencies: [17, 4199, 1085, 21, 4560, 1115, 7162, 8190, 4962, 13029, 4713, 504, 5097, 5101, 1114, 5584, 5123, 4259, 7209, 4556, 9775, 4767, 4527, 13030, 1896, 8179, 13031, 1178, 2]
+// Dependencies: [17, 4212, 1085, 21, 4574, 1115, 7176, 8216, 4976, 13055, 4727, 504, 5111, 5115, 1114, 5598, 5137, 4272, 7223, 4570, 9802, 4781, 4541, 13056, 1896, 8205, 13057, 1178, 2]
 // Exports: default
 
-// Module 13028 (UserProfileActivityVoiceChannel)
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import sum from "sum" /* 1085 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4199 */;
+// Module 13054 (UserProfileActivityVoiceChannel)
+import _mod17 from "module_17" /* 17 */;
+import Constants from "Constants" /* 1085 */;
+import native from "native" /* 1178 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4781 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import set from "set" /* 1115 */;
+import createStyles from "createStyles" /* 4574 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import size from "module_2" /* 2 */;
 
-const View = get_ActivityIndicator.View;
-const Permissions = sum.Permissions;
-({ jsx: closure_6, jsxs: error } = jsxProd);
+const View = _mod17.View;
+const Permissions = Constants.Permissions;
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let obj = { container: { flexDirection: "row", alignItems: "center", gap: 4, overflow: "hidden" }, channelButton: { flex: 1, flexDirection: "row", alignItems: "center", gap: 2 }, channelName: null };
 let num = -1;
-if (set.isAndroid()) {
+if (PlatformUtils.isAndroid()) {
   num = -2;
 }
-obj[2] = { flex: 1, overflow: "hidden", marginTop: num };
-let closure_8 = createCacheKey.createStyles(obj);
-const result = set.fileFinishedImporting("modules/user_profile/native/UserProfileActivityVoiceChannel.tsx");
+obj.channelName = { flex: 1, overflow: "hidden", marginTop: num };
+let closure_8 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActivityVoiceChannel.tsx");
 
 export default function UserProfileActivityVoiceChannel(guild) {
   guild = guild.guild;
   const channel = guild.channel;
   const onAction = guild.onAction;
-  let newestAnalyticsLocation;
-  let context;
-  let arr;
-  const tmp = callback();
-  newestAnalyticsLocation = channel(onAction[6])().newestAnalyticsLocation;
+  const tmp = closure_8();
+  const newestAnalyticsLocation = channel(onAction[6])().newestAnalyticsLocation;
+  const context = guild(onAction[7]).useUserProfileAnalyticsContext().context;
   let obj = guild(onAction[7]);
-  context = obj.useUserProfileAnalyticsContext().context;
-  obj1 = guild(onAction[8]);
-  const isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
-  arr = channel(onAction[9])(channel);
+  const isScreenReaderEnabled = guild(onAction[8]).useIsScreenReaderEnabled();
+  const users = channel(onAction[9])(channel);
   const tmp6 = channel(onAction[10])(channel);
-  let obj2 = guild(onAction[11]);
+  const obj2 = guild(onAction[8]);
   const items = [context];
-  const stateFromStores = obj2.useStateFromStores(items, () => {
+  const stateFromStores = guild(onAction[11]).useStateFromStores(items, () => {
     let isPrivateResult = channel.isPrivate();
     if (!isPrivateResult) {
-      isPrivateResult = context.can(arr.CONNECT, channel);
+      isPrivateResult = PermissionStore.can(Permissions.CONNECT, channel);
     }
     return isPrivateResult;
   });
@@ -53,105 +55,92 @@ export default function UserProfileActivityVoiceChannel(guild) {
   } else {
     VoiceNormalIcon = tmp4(tmp3[13]).VoiceNormalIcon;
   }
-  obj = { style: items1, children: null };
-  items1 = [tmp.container, guild.style];
+  const obj4 = { style: null, children: null };
+  const items1 = [tmp.container, guild.style];
+  obj4.style = items1;
   if (isScreenReaderEnabled) {
-    obj = { accessible: true, accessibilityLabel: null, children: null };
+    const obj5 = { accessible: true, accessibilityLabel: null, children: null };
     const intl = tmp4(tmp3[14]).intl;
-    obj1 = { guildName: null };
-    obj1[0] = guild.name;
-    obj[1] = intl.formatToPlainString(tmp4(tmp3[14]).t.xm6W9D, obj1);
-    obj2 = { size: null, guild: null };
-    let tmp2Result = tmp2(tmp3[15]);
-    obj2[0] = tmp4(tmp3[15]).GuildIconSizes.XXSMALL;
-    obj2[1] = guild;
-    obj[2] = tmp10(tmp2Result, obj2);
-    let tmp10Result = tmp10(tmp9, obj);
+    const obj6 = { guildName: guild.name };
+    obj5.accessibilityLabel = intl.formatToPlainString(tmp4(tmp3[14]).t.xm6W9D, obj6);
+    const obj7 = { size: tmp4(tmp3[15]).GuildIconSizes.XXSMALL, guild };
+    obj5.children = tmp10(tmp2(tmp3[15]), obj7);
+    let tmp10Result = tmp10(tmp9, obj5);
     let tmp13 = tmp10;
+    const tmp2Result = tmp2(tmp3[15]);
   } else {
-    const obj3 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
-    obj3[1] = guild.name;
-    obj3[2] = function onPress() {
-      onAction({ action: "PRESS_VOICE_CHANNEL_ICON" });
-      let obj = channel(onAction[17]);
-      obj = {
-        key: "GUILD_NAME_TOAST",
-        content: guild.name,
-        icon() {
-          const obj = { size: closure_1_0(closure_1_2[15]).GuildIconSizes.XSMALL, guild: closure_0 };
-          return closure_1_6(closure_1_1(closure_1_2[15]), obj);
-        }
-      };
-      obj.open(obj);
+    const obj8 = {
+      accessibilityRole: "button",
+      accessibilityLabel: guild.name,
+      onPress() {
+          onAction({ action: "PRESS_VOICE_CHANNEL_ICON" });
+          ToastActionCreatorsDefault.open({
+            key: "GUILD_NAME_TOAST",
+            content: guild.name,
+            icon() {
+              const obj = { size: guild(onAction[15]).GuildIconSizes.XSMALL, guild };
+              return closure_2_6(channel(onAction[15]), obj);
+            }
+          });
+        },
+      children: null
     };
-    const obj4 = { size: null, guild: null };
-    tmp2Result = tmp2(tmp3[15]);
-    obj4[0] = tmp4(tmp3[15]).GuildIconSizes.XXSMALL;
-    obj4[1] = guild;
-    obj3[3] = tmp10(tmp2Result, obj4);
-    tmp10Result = tmp10(tmp4(tmp3[16]).PressableOpacity, obj3);
+    const obj9 = { size: tmp4(tmp3[15]).GuildIconSizes.XXSMALL, guild };
+    obj8.children = tmp10(tmp2(tmp3[15]), obj9);
+    tmp10Result = tmp10(tmp4(tmp3[16]).PressableOpacity, obj8);
     tmp13 = tmp10;
+    const tmp2Result2 = tmp2(tmp3[15]);
   }
   const items2 = [tmp10Result, tmp13(guild(onAction[18]).ChevronSmallRightIcon, { size: "xxs", color: "text-default" }), , ];
   if (stateFromStores) {
-    const obj5 = { style: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, children: null };
-    obj5[0] = tmp.channelButton;
-    const obj6 = { channel: null };
-    obj6[0] = channel;
-    obj5[2] = tmp2(tmp3[20])(obj6);
+    const obj10 = { style: tmp.channelButton, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, children: null };
+    const obj11 = { channel };
+    obj10.accessibilityLabel = tmp2(tmp3[20])(obj11);
     const intl2 = tmp4(tmp3[14]).intl;
-    obj5[3] = intl2.string(tmp4(tmp3[14]).t["9C444m"]);
-    obj5[4] = function onPress() {
+    obj10.accessibilityHint = intl2.string(tmp4(tmp3[14]).t["9C444m"]);
+    obj10.onPress = function onPress() {
       onAction({ action: "OPEN_VOICE_CHANNEL" });
-      guild(onAction[21]).openGuildVoiceModal(channel, newestAnalyticsLocation);
-      const obj = guild(onAction[21]);
-      channel(onAction[22]).hideAllActionSheets();
+      PrivateChannelCallUtils.openGuildVoiceModal(channel, newestAnalyticsLocation);
+      ActionSheetActionCreatorsDefault.hideAllActionSheets();
     };
     const items3 = [tmp13(VoiceNormalIcon, { size: "xxs", color: "text-default" }), ];
-    const obj7 = { style: null, variant: "text-xs/normal", lineClamp: 1, children: null };
-    obj7[0] = tmp.channelName;
-    obj7[3] = tmp6;
-    items3[1] = tmp13(tmp4(tmp3[19]).Text, obj7);
-    obj5[5] = items3;
-    let tmp8Result = tmp8(tmp4(tmp3[16]).PressableOpacity, obj5);
+    const obj12 = { style: tmp.channelName, variant: "text-xs/normal", lineClamp: 1, children: tmp6 };
+    items3[1] = tmp13(tmp4(tmp3[19]).Text, obj12);
+    obj10.children = items3;
+    let tmp8Result = tmp8(tmp4(tmp3[16]).PressableOpacity, obj10);
   } else {
-    const obj8 = { style: null, children: null };
-    obj8[0] = tmp.channelButton;
+    const obj13 = { style: tmp.channelButton, children: null };
     const items4 = [tmp13(VoiceNormalIcon, { size: "xxs", color: "text-default" }), ];
-    const obj9 = { style: null, variant: "text-xs/normal", lineClamp: 1, children: null };
-    obj9[0] = tmp.channelName;
-    obj9[3] = tmp6;
-    items4[1] = tmp13(tmp4(tmp3[19]).Text, obj9);
-    obj8[1] = items4;
-    tmp8Result = tmp8(tmp9, obj8);
+    const obj14 = { style: tmp.channelName, variant: "text-xs/normal", lineClamp: 1, children: tmp6 };
+    items4[1] = tmp13(tmp4(tmp3[19]).Text, obj14);
+    obj13.children = items4;
+    tmp8Result = tmp8(tmp9, obj13);
   }
   items2[2] = tmp8Result;
-  const obj10 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
+  const obj15 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
   const intl3 = tmp4(tmp3[14]).intl;
-  obj10[1] = intl3.formatToPlainString(guild(onAction[14]).t.e95u3C, { count: arr.length });
-  obj10[2] = function onPress() {
+  obj15.accessibilityLabel = intl3.formatToPlainString(guild(onAction[14]).t.e95u3C, { count: users.length });
+  obj15.onPress = function onPress() {
     onAction({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
-    let obj = channel(onAction[22]);
-    obj = {
-      users: arr,
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13056, dependencyMap.paths), "UserProfileActivityVoiceChannelUsers", {
+      users,
       channel,
       onPressUser(userId) {
         const obj = {};
-        const merged = Object.assign(closure_4);
+        const merged = Object.assign(context);
         obj.userId = userId;
-        return closure_1_1(closure_1_2[25])(obj);
+        return channel(onAction[25])(obj);
       }
-    };
-    obj.openLazy(guild(onAction[24])(onAction[23], onAction.paths), "UserProfileActivityVoiceChannelUsers", obj, "stack");
+    }, "stack");
   };
-  const obj12 = { size: guild(onAction[27]).AvatarSizes.SIZE_16, totalCount: arr.length, names: arr.map((username) => username.username), children: null };
-  let substr = arr;
-  if (arr.length > 3) {
-    substr = arr.slice(0, 3);
+  const obj17 = { size: guild(onAction[27]).AvatarSizes.SIZE_16, totalCount: users.length, names: users.map((username) => username.username), children: null };
+  let substr = users;
+  if (users.length > 3) {
+    substr = users.slice(0, 3);
   }
-  obj12[3] = substr.map((id) => closure_1_6(guild(onAction[27]).Avatar, { size: guild(onAction[27]).AvatarSizes.SIZE_16, channel, guildId: guild.id, user: id }, id.id));
-  obj10[3] = tmp13(guild(onAction[26]).AvatarPile, obj12);
-  items2[3] = tmp13(guild(onAction[16]).PressableOpacity, obj10);
-  obj[1] = items2;
-  return closure_7(newestAnalyticsLocation, obj);
+  obj17.children = substr.map((user) => timestampProducer(native.Avatar, { size: native.AvatarSizes.SIZE_16, channel, guildId: guild.id, user }, user.id));
+  obj15.children = tmp13(guild(onAction[26]).AvatarPile, obj17);
+  items2[3] = tmp13(guild(onAction[16]).PressableOpacity, obj15);
+  obj4.children = items2;
+  return closure_7(newestAnalyticsLocation, obj4);
 };

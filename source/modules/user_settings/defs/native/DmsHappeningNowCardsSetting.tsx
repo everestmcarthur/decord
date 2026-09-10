@@ -1,33 +1,24 @@
-// Module ID: 15324
-// Function ID: 15325
-// Name: toggle
-// Dependencies: [7975, 11473, 1114, 1935, 2]
+// Module ID: 15353
+// Function ID: 15354
+// Name: DmsHappeningNowCardsSetting
+// Dependencies: [7989, 11500, 1114, 1935, 2]
 
-// Module 15324 (toggle)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15353 (DmsHappeningNowCardsSetting)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-const toggle = createToggle.createToggle({
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.cSb1ub);
+    const intl = util.intl;
+    return intl.string(util.t.cSb1ub);
   },
-  parent: MobileUserSettings.MobileUserSettings.APPEARANCE,
-  useValue: explicitContentFromProto.HappeningNowCardsDisabled.useSetting,
-  onValueChange: explicitContentFromProto.HappeningNowCardsDisabled.updateSetting
+  parent: SettingsConstants.MobileUserSettings.APPEARANCE,
+  useValue: UserSettings.HappeningNowCardsDisabled.useSetting,
+  onValueChange: UserSettings.HappeningNowCardsDisabled.updateSetting
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.cSb1ub);
-  },
-  parent: MobileUserSettings.MobileUserSettings.APPEARANCE,
-  useValue: explicitContentFromProto.HappeningNowCardsDisabled.useSetting,
-  onValueChange: explicitContentFromProto.HappeningNowCardsDisabled.updateSetting
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/DmsHappeningNowCardsSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DmsHappeningNowCardsSetting.tsx");
 
 export default toggle;

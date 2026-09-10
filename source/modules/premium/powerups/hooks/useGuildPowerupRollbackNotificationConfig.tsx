@@ -1,29 +1,32 @@
-// Module ID: 12501
-// Function ID: 12502
+// Module ID: 12527
+// Function ID: 12528
 // Name: useGuildPowerupRollbackNotificationConfig
-// Dependencies: [4449, 504, 4453, 12502, 1943, 1114, 2428, 12504, 2]
+// Dependencies: [4463, 504, 4467, 12528, 1943, 1114, 2428, 12530, 2]
 // Exports: default
 
-// Module 12501 (useGuildPowerupRollbackNotificationConfig)
-import messagesProxyDefault from "messagesProxy" /* 2428 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12504 */;
-import closure_3 from "calculateAppliedBoosts" /* 4449 */;
+// Module 12527 (useGuildPowerupRollbackNotificationConfig)
+import _modDef2428 from "module_2428" /* 2428 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12530 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4463 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackNotificationConfig.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackNotificationConfig.tsx");
 
 export default function useGuildPowerupRollbackNotificationConfig(guildId, location) {
-  const _require = guildId;
-  let obj = _require(504);
-  const items = [closure_3];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getStateForGuild(closure_0));
+  _require = guildId;
+  const items = [GuildPowerupsStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => GuildPowerupsStore.getStateForGuild(closure_0));
   let tmp4;
   if (stateFromStores != null) {
-    tmp4 = stateFromStores.allPowerups[tmp(undefined, 4453).GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
+    tmp4 = stateFromStores.allPowerups[tmp(undefined, 4467).GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
   }
   if (tmp4 != null) {
     const storeRemovalDate = tmp4.storeRemovalDate;
   }
+  const obj = require("initialize");
   let tmp5 = null;
   if (tmpResult.useShouldShowFileUploadRollback(guildId, location)) {
     tmp5 = null;
@@ -40,28 +43,24 @@ export default function useGuildPowerupRollbackNotificationConfig(guildId, locat
         }
         tmp5 = null;
         if (null != cost) {
-          obj = { dismissibleContent: null, title: null, description: null };
-          obj[0] = tmp(1943).DismissibleContent.FILE_UPLOAD_POWERUP_ROLLBACK_NOTIFICATION;
+          const obj2 = { dismissibleContent: tmp(1943).DismissibleContent.FILE_UPLOAD_POWERUP_ROLLBACK_NOTIFICATION, title: null, description: null };
           const intl = tmp(1114).intl;
-          obj = { dateString: null };
-          obj[0] = getGuildPowerupFormattedDateStringDefault(storeRemovalDate);
-          obj[1] = intl.formatToPlainString(messagesProxyDefault["6e2ry1"], obj);
+          const obj3 = { dateString: getGuildPowerupFormattedDateStringDefault(storeRemovalDate) };
+          obj2.title = intl.formatToPlainString(_modDef2428["6e2ry1"], obj3);
           const intl2 = tmp(1114).intl;
-          obj1 = { startDate: null, endDate: null, perkName: null, boostCount: null };
-          obj1[0] = getGuildPowerupFormattedDateStringDefault(storeRemovalDate);
-          obj1[1] = getGuildPowerupFormattedDateStringDefault(storeRemovalDate);
+          const obj4 = { startDate: getGuildPowerupFormattedDateStringDefault(storeRemovalDate), endDate: getGuildPowerupFormattedDateStringDefault(storeRemovalDate), perkName: null, boostCount: null };
           let title1;
           if (tmp4 != null) {
             title1 = tmp4.title;
           }
-          obj1[2] = title1;
+          obj4.perkName = title1;
           let cost1;
           if (tmp4 != null) {
             cost1 = tmp4.cost;
           }
-          obj1[3] = cost1;
-          obj[2] = intl2.formatToPlainString(messagesProxyDefault.jd8fki, obj1);
-          tmp5 = obj;
+          obj4.boostCount = cost1;
+          obj2.description = intl2.formatToPlainString(_modDef2428.jd8fki, obj4);
+          tmp5 = obj2;
         }
       }
     }

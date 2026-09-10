@@ -1,22 +1,20 @@
-// Module ID: 16008
-// Function ID: 16009
-// Name: getActiveTabsRoute
-// Dependencies: [32, 19, 1957, 2011, 4381, 1074, 1964, 4418, 4417, 4420, 2]
+// Module ID: 16038
+// Function ID: 16039
+// Name: useChannelScreensFromNavigation
+// Dependencies: [32, 19, 1957, 2011, 4395, 1074, 1964, 4432, 4431, 4434, 2]
 // Exports: default, isActiveTabsGuilds
 
-// Module 16008 (getActiveTabsRoute)
-import coerceMainRoute from "coerceMainRoute" /* 4417 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;
-import useChatLayoutDefault from "useChatLayout" /* 4420 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import closure_6 from "handleConnectionOpen" /* 2011 */;
-import closure_7 from "handleConnectionOpen" /* 4381 */;
-import { ME } from "ME" /* 1074 */;
-import { isStaticChannelRoute } from "set" /* 1964 */;
+// Module 16038 (useChannelScreensFromNavigation)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4431 */;
+import RootNavigationRef from "RootNavigationRef" /* 4432 */;
+import useChatLayoutDefault from "useChatLayout" /* 4434 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
 
-require = arg1;
+require = fn;
 function getActiveTabsRoute(coerceTabsRouteResult) {
   if (null != coerceTabsRouteResult) {
     const state3 = coerceTabsRouteResult.state;
@@ -46,13 +44,10 @@ function getActiveTabsRoute(coerceTabsRouteResult) {
         screen = params.screen;
       }
       if (null != screen) {
-        obj = { key: "resolved", name: null, params: null };
-        obj[1] = coerceTabsRouteResult.params.screen;
-        obj[2] = coerceTabsRouteResult.params.params;
-        return obj;
+        const obj2 = { key: "resolved", name: coerceTabsRouteResult.params.screen, params: coerceTabsRouteResult.params.params };
+        return obj2;
       } else {
-        obj = getRootNavigationRef;
-        const rootNavigationRef = obj.getRootNavigationRef();
+        const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
         let isReadyResult;
         if (rootNavigationRef != null) {
           isReadyResult = rootNavigationRef.isReady();
@@ -64,9 +59,9 @@ function getActiveTabsRoute(coerceTabsRouteResult) {
     }
   }
 }
-function resolveBackgroundScreen(index) {
-  obj = coerceMainRoute;
-  const coerceTabsRouteResult = obj.coerceTabsRoute(index.routes[0]);
+function resolveBackgroundScreen(state) {
+  const obj = NavigationRouteUtils;
+  const coerceTabsRouteResult = obj.coerceTabsRoute(state.routes[0]);
   if (null == coerceTabsRouteResult) {
     return [];
   } else {
@@ -74,7 +69,7 @@ function resolveBackgroundScreen(index) {
     if (null == tmp11) {
       return [];
     } else {
-      const coerceGuildsRouteResult = coerceMainRoute.coerceGuildsRoute(tmp11);
+      const coerceGuildsRouteResult = NavigationRouteUtils.coerceGuildsRoute(tmp11);
       if (null == coerceGuildsRouteResult) {
         return [];
       } else {
@@ -91,7 +86,7 @@ function resolveBackgroundScreen(index) {
           return [];
         } else {
           if (!isStaticChannelRoute(channelId)) {
-            if (null == channel.getChannel(channelId)) {
+            if (null == ChannelStore.getChannel(channelId)) {
               return [];
             }
           }
@@ -104,99 +99,93 @@ function resolveBackgroundScreen(index) {
             if (search) {
               let BACKGROUND_SAVED = obj.FALLBACK_RENDERED;
             }
-            obj = { index: 0, type: null, guildId: null, channelId: null, showCreateThread: false };
-            obj[1] = BACKGROUND_SAVED;
-            obj[2] = guildId;
-            obj[3] = channelId;
-            const items = [obj];
+            const obj2 = { index: 0, type: BACKGROUND_SAVED, guildId, channelId, showCreateThread: false };
+            const items = [obj2];
             return items;
           }
           BACKGROUND_SAVED = obj.BACKGROUND_SAVED;
         }
       }
-      const tmpResult = coerceMainRoute;
+      const tmpResult = NavigationRouteUtils;
     }
   }
 }
-function resolveChannelScreens(index, isChatLockedOpen) {
+function resolveChannelScreens(state, isChatLockedOpen) {
   const items = [];
-  for (let num = 0; num <= index.index; num = num + 1) {
-    let tmp = arr2;
-    let tmp2 = dependencyMap;
-    obj = arr2(4417);
-    let coerceChannelRouteResult = obj.coerceChannelRoute(index.routes[num]);
-    let tmp4 = num;
+  for (let num = 0; num <= state.index; num = num + 1) {
+    let obj = NavigationRouteUtils;
+    let coerceChannelRouteResult = obj.coerceChannelRoute(state.routes[num]);
     if (null != coerceChannelRouteResult) {
-      obj = { index: null, type: null, guildId: null, channelId: null, showCreateThread: null };
-      obj[0] = items.length;
-      let tmp5 = obj;
-      obj[1] = obj.DEFAULT;
-      obj[2] = coerceChannelRouteResult.params.guildId;
-      obj[3] = coerceChannelRouteResult.params.channelId;
-      obj[4] = coerceChannelRouteResult.params.showCreateThread;
-      let arr = items.push(obj);
+      let obj2 = { index: items.length, type: null, guildId: null, channelId: null, showCreateThread: null };
+      obj2.type = obj.DEFAULT;
+      obj2.guildId = coerceChannelRouteResult.params.guildId;
+      obj2.channelId = coerceChannelRouteResult.params.channelId;
+      obj2.showCreateThread = coerceChannelRouteResult.params.showCreateThread;
+      let arr = items.push(obj2);
     }
   }
   if (isChatLockedOpen.isChatLockedOpen) {
-    arr2 = resolveBackgroundScreen(index);
+    const arr2 = resolveBackgroundScreen(state);
     if (arr2.length > 0) {
       const items1 = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(arr2, 0);
-      arraySpreadResult = HermesBuiltin.arraySpread(items.map((index) => {
-        obj = {};
-        const merged = Object.assign(index);
-        obj.index = index.index + arr2.length;
+      HermesBuiltin.arraySpread(items.map((item) => {
+        const obj = {};
+        const merged = Object.assign(item);
+        obj.index = item.index + arr2.length;
         return obj;
-      }), arraySpreadResult);
+      }), HermesBuiltin.arraySpread(arr2, 0));
       return items1;
     }
   }
   let tmp8 = items;
   if (items.length <= 0) {
-    tmp8 = resolveBackgroundScreen(index);
+    tmp8 = resolveBackgroundScreen(state);
   }
   return tmp8;
 }
-let obj = { DEFAULT: 0, [0]: "DEFAULT", BACKGROUND_SAVED: 1, [1]: "BACKGROUND_SAVED", FALLBACK_RENDERED: 2, [2]: "FALLBACK_RENDERED" };
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/panels/useChannelScreensFromNavigation.tsx");
+const ME = fn(1074).ME;
+const isStaticChannelRoute = fn(1964).isStaticChannelRoute;
+const ChannelScreenType = { DEFAULT: 0, [0]: "DEFAULT", BACKGROUND_SAVED: 1, [1]: "BACKGROUND_SAVED", FALLBACK_RENDERED: 2, [2]: "FALLBACK_RENDERED" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/useChannelScreensFromNavigation.tsx");
 
 export default function useChannelScreensFromNavigation(arg0) {
   closure_0 = arg0;
   const tmp = useChatLayoutDefault();
   importDefault = tmp;
-  [tmp3, dependencyMap] = callback(React.useState(() => {
-    const arr = closure_1_13(store.getState(), closure_1);
+  [tmp3, dependencyMap] = callback(noop.useState(() => {
+    const arr = resolveChannelScreens(closure_0.getState(), closure_1);
     if (arr.length > 0) {
       return arr;
     } else {
-      let guildId = closure_1_7.getGuildId();
-      const channelId = closure_1_6.getChannelId();
+      let guildId = SelectedGuildStore.getGuildId();
+      const channelId = SelectedChannelStore.getChannelId();
       if (null == channelId) {
         let items = [];
       } else {
-        obj = { index: 0, type: null, guildId: null, channelId: null };
-        obj[1] = closure_1_10.FALLBACK_RENDERED;
+        const obj = { index: 0, type: null, guildId: null, channelId: null };
+        obj.type = obj.FALLBACK_RENDERED;
         if (guildId == null) {
-          guildId = closure_1_8;
+          guildId = ME;
         }
-        obj[2] = guildId;
-        obj[3] = channelId;
+        obj.guildId = guildId;
+        obj.channelId = channelId;
         items = [obj];
       }
     }
   }), 2);
-  callback = React.useCallback((arg0, arg1) => {
+  callback = noop.useCallback((arg0, arg1) => {
     if (null != arg0) {
       if (arg0.length > 0) {
-        callback(arg0);
+        dependencyMap(arg0);
       }
     }
-    const coerceTabsRouteResult = store(closure_1_2[8]).coerceTabsRoute(arg1.routes[0]);
+    const coerceTabsRouteResult = NavigationRouteUtils.coerceTabsRoute(arg1.routes[0]);
     let tmp4;
     if (null != coerceTabsRouteResult) {
-      const tmp6 = closure_1_11(coerceTabsRouteResult);
+      const tmp6 = getActiveTabsRoute(coerceTabsRouteResult);
       if (null != tmp6) {
-        const coerceGuildsRouteResult = store(closure_1_2[8]).coerceGuildsRoute(tmp6);
+        const coerceGuildsRouteResult = NavigationRouteUtils.coerceGuildsRoute(tmp6);
         let guildId;
         if (coerceGuildsRouteResult != null) {
           const params = coerceGuildsRouteResult.params;
@@ -205,18 +194,18 @@ export default function useChannelScreensFromNavigation(arg0) {
           }
         }
         tmp4 = guildId;
-        const tmpResult = store(closure_1_2[8]);
+        const tmpResult = NavigationRouteUtils;
       }
     }
     guildId = tmp4;
-    callback((arg0) => {
+    dependencyMap((arg0) => {
       if (0 === arg0.length) {
         return arg0;
       } else {
         if (null == guildId) {
           let items1 = arg0;
-          if (arg0[0].type !== closure_1_10.FALLBACK_RENDERED) {
-            obj = {};
+          if (arg0[0].type !== constants.FALLBACK_RENDERED) {
+            const obj = {};
             const merged = Object.assign(arg0[0]);
             obj.type = tmp3.FALLBACK_RENDERED;
             const items = [obj];
@@ -228,14 +217,14 @@ export default function useChannelScreensFromNavigation(arg0) {
     });
   }, []);
   let items = [arg0, tmp, callback];
-  const effect = React.useEffect(() => {
-    const state = store.getState();
-    callback(closure_1_13(state, closure_1), state);
+  const effect = noop.useEffect(() => {
+    const state = closure_0.getState();
+    callback(resolveChannelScreens(state, closure_1), state);
   }, items);
   let items1 = [arg0, callback];
-  const effect1 = React.useEffect(() => {
+  const effect1 = noop.useEffect(() => {
     function handleStateChange(data) {
-      callback(closure_1_13(data.data.state, handleStateChange(closure_1_2[9]).getChatLayout()), data.data.state);
+      callback(resolveChannelScreens(data.data.state, handleStateChange(4434).getChatLayout()), data.data.state);
     }
     handleStateChange.addListener("state", handleStateChange);
     return () => {
@@ -244,21 +233,19 @@ export default function useChannelScreensFromNavigation(arg0) {
   }, items1);
   return tmp3;
 };
-export const ChannelScreenType = obj;
+export { ChannelScreenType };
 export { getActiveTabsRoute };
 export const isActiveTabsGuilds = function isActiveTabsGuilds(state) {
-  const coerceTabsRouteResult = coerceMainRoute.coerceTabsRoute(state.routes[0]);
+  const coerceTabsRouteResult = NavigationRouteUtils.coerceTabsRoute(state.routes[0]);
   if (null == coerceTabsRouteResult) {
     return false;
   } else {
     const tmp5 = getActiveTabsRoute(coerceTabsRouteResult);
     let tmp6 = null != tmp5;
     if (tmp6) {
-      tmp6 = null != coerceMainRoute.coerceGuildsRoute(tmp5);
-      const tmpResult = coerceMainRoute;
+      tmp6 = null != NavigationRouteUtils.coerceGuildsRoute(tmp5);
+      const tmpResult = NavigationRouteUtils;
     }
     return tmp6;
   }
-  obj = coerceMainRoute;
-  const tmp = require;
 };

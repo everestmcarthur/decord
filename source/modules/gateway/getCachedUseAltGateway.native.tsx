@@ -1,17 +1,17 @@
-// Module ID: 13640
-// Function ID: 13641
+// Module ID: 13663
+// Function ID: 13664
 // Name: getCachedUseAltGateway
-// Dependencies: [13641, 2]
+// Dependencies: [13664, 2]
 // Exports: default
 
-// Module 13640 (getCachedUseAltGateway)
-import set from "set" /* 2 */;
-import enforcingDefault from "enforcing" /* 13641 */;
+// Module 13663 (getCachedUseAltGateway)
+import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 13664 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/gateway/getCachedUseAltGateway.native.tsx");
+const result = size.fileFinishedImporting("modules/gateway/getCachedUseAltGateway.native.tsx");
 
 export default function getCachedUseAltGateway() {
-  let flag = enforcingDefault.getConstants().useAltGateway;
+  let flag = NativeFastConnectModuleDefault.getConstants().useAltGateway;
   if (flag == null) {
     flag = false;
   }

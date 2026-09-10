@@ -1,27 +1,29 @@
-// Module ID: 8112
-// Function ID: 8113
-// Name: isInteractionComponent
-// Dependencies: [32, 19, 7941, 4200, 1957, 2021, 5413, 1371, 8113, 21, 1894, 4792, 4790, 504, 7977, 7269, 8115, 8116, 573, 4992, 4785, 2]
+// Module ID: 8138
+// Function ID: 8139
+// Name: ComponentStateContext
+// Dependencies: [32, 19, 7955, 4213, 1957, 2021, 5427, 1371, 8139, 21, 1894, 4806, 4804, 504, 7991, 7283, 8141, 8142, 573, 5006, 4799, 2]
 // Exports: ComponentStateContextProvider, useComponentContainerId, useComponentError, useComponentState, useComponentStateContext
 
-// Module 8112 (isInteractionComponent)
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1894 */;
-import ActionComponentState from "ActionComponentState" /* 4792 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import closure_5 from "deleteNonce" /* 7941 */;
-import closure_6 from "initialize" /* 4200 */;
-import closure_7 from "ensureGuildLoaded" /* 1957 */;
-import closure_8 from "trackCommunicationDisabled" /* 2021 */;
-import closure_9 from "recomputeGuild" /* 5413 */;
-import closure_10 from "mergeGuildAvatar" /* 1371 */;
-import closure_11 from "getInteractionComponentStates" /* 8113 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 8138 (ComponentStateContext)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Server from "Server" /* 1894 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 4806 */;
+import useMountEffectDefault from "useMountEffect" /* 5006 */;
+import InteractionUtils from "InteractionUtils" /* 8142 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import InteractionStore from "InteractionStore" /* 7955 */;
+import LurkingStore from "LurkingStore" /* 4213 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 5427 */;
+import UserStore from "UserStore" /* 1371 */;
+import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8139 */;
 
-require = arg1;
+require = fn;
 function isInteractionComponent(type) {
   type = type.type;
-  if (PermissionOverwriteType.ComponentType.BUTTON === type) {
+  if (Server.ComponentType.BUTTON === type) {
     return type.style !== tmp(1894).ButtonStyle.LINK;
   } else {
     if (tmp(1894).ComponentType.STRING_SELECT !== type) {
@@ -46,10 +48,10 @@ function getActionComponentState(interaction, id, shouldDisableInteractiveCompon
   if (shouldDisableInteractiveComponents === undefined) {
     flag = false;
   }
-  let LOADING = ActionComponentState.ActionComponentState.NORMAL;
+  let LOADING = InteractionComponentTypes.ActionComponentState.NORMAL;
   let tmp3 = null != interaction;
   if (tmp3) {
-    tmp3 = interaction.state !== tmp(4790).InteractionState.FAILED;
+    tmp3 = interaction.state !== tmp(4804).InteractionState.FAILED;
   }
   let DISABLED = LOADING;
   if (!tmp3) {
@@ -57,21 +59,21 @@ function getActionComponentState(interaction, id, shouldDisableInteractiveCompon
       flag = isInteractionComponent(id);
     }
     if (flag) {
-      DISABLED = tmp(4792).ActionComponentState.DISABLED;
+      DISABLED = tmp(4806).ActionComponentState.DISABLED;
     }
     return DISABLED;
   } else {
     if (interaction.data.interactionType !== tmp(1894).InteractionTypes.MESSAGE_COMPONENT) {
       if (isInteractionComponent(id)) {
-        LOADING = tmp(4792).ActionComponentState.DISABLED;
+        LOADING = tmp(4806).ActionComponentState.DISABLED;
       }
     }
-    LOADING = tmp(4792).ActionComponentState.LOADING;
+    LOADING = tmp(4806).ActionComponentState.LOADING;
   }
 }
 function useShouldDisableInteractiveComponents(channel_id) {
-  channel = channel.getChannel(channel_id);
-  const items = [closure_9];
+  const channel = ChannelStore.getChannel(channel_id);
+  const items = [GuildVerificationStore];
   const items1 = [channel];
   const stateFromStores = channel(504).useStateFromStores(items, () => {
     let guild_id;
@@ -80,12 +82,12 @@ function useShouldDisableInteractiveComponents(channel_id) {
     }
     let canChatInGuildResult = null == guild_id;
     if (!canChatInGuildResult) {
-      canChatInGuildResult = closure_1_9.canChatInGuild(tmp.guild_id);
+      canChatInGuildResult = GuildVerificationStore.canChatInGuild(tmp.guild_id);
     }
     return canChatInGuildResult;
   }, items1);
   const obj2 = channel(504);
-  const items2 = [closure_6];
+  const items2 = [LurkingStore];
   const items3 = [channel];
   const stateFromStores1 = channel(504).useStateFromStores(items2, () => {
     let guild_id;
@@ -94,14 +96,14 @@ function useShouldDisableInteractiveComponents(channel_id) {
     }
     let isLurkingResult = null != guild_id;
     if (isLurkingResult) {
-      isLurkingResult = closure_1_6.isLurking(tmp.guild_id);
+      isLurkingResult = LurkingStore.isLurking(tmp.guild_id);
     }
     return isLurkingResult;
   }, items3);
   const obj3 = channel(504);
-  const items4 = [closure_8, closure_10];
+  const items4 = [GuildMemberStore, UserStore];
   const stateFromStores2 = channel(504).useStateFromStores(items4, () => {
-    const currentUser = closure_1_10.getCurrentUser();
+    const currentUser = UserStore.getCurrentUser();
     let guild_id;
     if (channel != null) {
       guild_id = tmp2.guild_id;
@@ -114,7 +116,7 @@ function useShouldDisableInteractiveComponents(channel_id) {
         if (tmp2 != null) {
           guild_id1 = tmp2.guild_id;
         }
-        const member = closure_1_8.getMember(guild_id1, currentUser.id);
+        const member = GuildMemberStore.getMember(guild_id1, currentUser.id);
         let isPending;
         if (member != null) {
           isPending = member.isPending;
@@ -132,11 +134,11 @@ function useShouldDisableInteractiveComponents(channel_id) {
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  let tmpResult = tmp(7269);
-  const isThreadModerator = tmpResult.useIsThreadModerator(channel);
-  tmpResult = tmp(7269);
+  const obj5 = channel(7991);
+  const isThreadModerator = channel(7283).useIsThreadModerator(channel);
+  const tmpResult = channel(7283);
   let tmp9 = !stateFromStores;
-  const canUnarchiveThread = tmpResult.useCanUnarchiveThread(channel);
+  const canUnarchiveThread = channel(7283).useCanUnarchiveThread(channel);
   if (stateFromStores) {
     tmp9 = stateFromStores1;
   }
@@ -164,32 +166,32 @@ function useShouldDisableInteractiveComponents(channel_id) {
     tmp9 = isArchivedThreadResult;
   }
   if (!tmp9) {
-    tmp9 = callback(obj5.useCurrentUserCommunicationDisabled(guild_id), 2)[1];
+    tmp9 = _slicedToArray(obj5.useCurrentUserCommunicationDisabled(guild_id), 2)[1];
   }
   return tmp9;
 }
 function useComponentStateForMessage(channel_id, arg1, id) {
-  let _require = channel_id;
-  let stateFromStores = id;
-  let obj = _require(callback[13]);
-  const items = [closure_11];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_11.getInteractionComponentState(id.id, stateFromStores.id));
-  const items1 = [closure_5];
+  _require = channel_id;
+  const items = [LocalInteractionComponentStateStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => LocalInteractionComponentStateStore.getInteractionComponentState(channel_id.id, id.id));
+  let obj = require("initialize");
+  const items1 = [InteractionStore];
   const items2 = [channel_id];
-  const stateFromStores1 = _require(callback[13]).useStateFromStores(items1, () => closure_1_5.getInteraction(closure_0), items2);
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => InteractionStore.getInteraction(closure_0), items2);
   const tmp3 = useShouldDisableInteractiveComponents(channel_id.channel_id) || arg1;
-  _require = id;
-  const context = importAllResult.useContext(closure_18);
-  callback = context;
+  closure_129_0 = id;
+  closure_129_1 = stateFromStores;
+  const context = noop.useContext(closure_18);
+  closure_129_2 = context;
   const items3 = [id, context];
-  callback = importAllResult.useCallback((arg0) => {
+  callback = noop.useCallback((arg0) => {
     let str = "message";
-    if (null != context.modal) {
+    if (null != closure_2.modal) {
       str = "modal";
     }
-    const tmpResult = stateFromStores(context[16])(closure_0, arg0, str);
-    closure_0 = tmpResult;
-    const setValidationErrors = context.setValidationErrors;
+    const tmpResult = id(closure_2[16])(id, arg0, str);
+    id = tmpResult;
+    const setValidationErrors = closure_2.setValidationErrors;
     if (setValidationErrors != null) {
       setValidationErrors((arg0) => {
         const obj = {};
@@ -200,18 +202,18 @@ function useComponentStateForMessage(channel_id, arg1, id) {
     }
     return null == tmpResult;
   }, items3);
-  id = callback;
+  closure_129_3 = callback;
   const items4 = [context.validators, callback, stateFromStores, id.id];
-  const effect = importAllResult.useEffect(() => {
+  const effect = noop.useEffect(() => {
     function currentValidate() {
-      return callback(closure_1);
+      return stateFromStores(id);
     }
-    let validators = context.validators;
+    validators = validators.validators;
     if (validators != null) {
       validators.add(currentValidate);
     }
     return () => {
-      const validators = closure_1_2.validators;
+      validators = validators.validators;
       if (validators != null) {
         validators.delete(currentValidate);
       }
@@ -229,70 +231,61 @@ function useComponentStateForMessage(channel_id, arg1, id) {
   if (id == null) {
     id = channel_id.author.id;
   }
-  obj = {
-    state: stateFromStores,
-    executeStateUpdate: importAllResult.useCallback((arg0) => {
-      if (callback(arg0)) {
-        const channel = closure_1_7.getChannel(id.channel_id);
-        let tmp5 = null != channel;
-        if (tmp5) {
-          tmp5 = null != stateFromStores.customId;
-        }
-        if (tmp5) {
-          let obj = id(callback[17]);
-          obj = { componentType: null, messageId: null, messageFlags: null, customId: null, componentId: null, applicationId: null, channelId: null, guildId: null, localState: null };
-          obj[0] = stateFromStores.type;
-          ({ id: obj2[1], flags: obj2[2] } = id);
-          ({ customId: obj2[3], id: obj2[4] } = stateFromStores);
-          obj[5] = id;
-          ({ id: obj2[6], guild_id: obj2[7] } = channel);
-          obj[8] = arg0;
-          const result = obj.executeMessageComponentInteraction(obj);
-        }
-        return true;
-      } else {
-        return false;
-      }
-    }, items5),
-    isDisabled: null,
-    visualState: null,
-    error: null
-  };
-  items5 = [, , , , , , , ];
+  const obj4 = { state: stateFromStores, executeStateUpdate: null, isDisabled: null, visualState: null, error: null };
+  const items5 = [, , , , , , , ];
   ({ channel_id: arr6[0], flags: arr6[1], id: arr6[2] } = channel_id);
   ({ customId: arr6[3], type: arr6[4], id: arr6[5] } = id);
   items5[6] = id;
   items5[7] = callback;
+  obj4.executeStateUpdate = noop.useCallback((localState) => {
+    if (callback(localState)) {
+      const channel = ChannelStore.getChannel(channel_id.channel_id);
+      let tmp5 = null != channel;
+      if (tmp5) {
+        tmp5 = null != id.customId;
+      }
+      if (tmp5) {
+        const obj3 = { componentType: id.type, messageId: null, messageFlags: null, customId: null, componentId: null, applicationId: null, channelId: null, guildId: null, localState: null };
+        ({ id: obj2.messageId, flags: obj2.messageFlags } = channel_id);
+        ({ customId: obj2.customId, id: obj2.componentId } = id);
+        obj3.applicationId = id;
+        ({ id: obj2.channelId, guild_id: obj2.guildId } = channel);
+        obj3.localState = localState;
+        const result = InteractionUtils.executeMessageComponentInteraction(obj3);
+      }
+      return true;
+    } else {
+      return false;
+    }
+  }, items5);
   let tmp8 = tmp3;
   if (tmp3) {
     tmp8 = isInteractionComponent(id);
   }
-  obj[2] = tmp8;
-  obj[3] = getActionComponentState(stateFromStores1, id, tmp3);
-  obj[4] = tmp7;
-  return obj;
+  obj4.isDisabled = tmp8;
+  obj4.visualState = getActionComponentState(stateFromStores1, id, tmp3);
+  obj4.error = tmp7;
+  return obj4;
 }
-function useComponentStateForModal(customId, id) {
-  let _require = customId;
-  let stateFromStores = id;
-  let context = arg2;
-  let obj = _require(context[13]);
-  const items = [closure_11];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_11.getInteractionComponentState(id.customId, stateFromStores.id));
-  let callback = stateFromStores;
-  _require = id;
-  context = undefined;
-  callback = undefined;
-  context = callback.useContext(closure_18);
+function useComponentStateForModal(customId, id, arg2) {
+  _require = customId;
+  importDefault = id;
+  dependencyMap = arg2;
+  const items = [LocalInteractionComponentStateStore];
+  let stateFromStores = require("initialize").useStateFromStores(items, () => LocalInteractionComponentStateStore.getInteractionComponentState(customId.customId, id.id));
+  closure_129_0 = id;
+  closure_129_1 = stateFromStores;
+  const context = callback.useContext(closure_18);
+  closure_129_2 = context;
   const items1 = [id, context];
   callback = callback.useCallback((arg0) => {
     let str = "message";
-    if (null != context.modal) {
+    if (null != closure_2.modal) {
       str = "modal";
     }
-    const tmpResult = stateFromStores(context[16])(closure_0, arg0, str);
-    closure_0 = tmpResult;
-    const setValidationErrors = context.setValidationErrors;
+    const tmpResult = id(closure_2[16])(id, arg0, str);
+    id = tmpResult;
+    const setValidationErrors = closure_2.setValidationErrors;
     if (setValidationErrors != null) {
       setValidationErrors((arg0) => {
         const obj = {};
@@ -303,17 +296,18 @@ function useComponentStateForModal(customId, id) {
     }
     return null == tmpResult;
   }, items1);
+  closure_129_3 = callback;
   const items2 = [context.validators, callback, stateFromStores, id.id];
   const effect = callback.useEffect(() => {
     function currentValidate() {
-      return callback(closure_1);
+      return stateFromStores(id);
     }
-    let validators = context.validators;
+    validators = validators.validators;
     if (validators != null) {
       validators.add(currentValidate);
     }
     return () => {
-      const validators = closure_1_2.validators;
+      validators = validators.validators;
       if (validators != null) {
         validators.delete(currentValidate);
       }
@@ -328,36 +322,33 @@ function useComponentStateForModal(customId, id) {
     tmp7 = null;
   }
   const items3 = [customId.customId, id.id, callback];
-  const callback1 = callback.useCallback((arg0) => {
-    let tmp = null == arg0;
+  const callback1 = callback.useCallback((state) => {
+    let tmp = null == state;
     if (!tmp) {
-      let obj = stateFromStores(context[18]);
-      obj = { type: "SET_INTERACTION_COMPONENT_STATE", rootContainerId: null, componentId: null, state: null };
-      obj[1] = id.customId;
-      obj[2] = stateFromStores.id;
-      obj[3] = arg0;
-      obj.dispatch(obj);
-      tmp = callback(arg0);
+      const obj2 = { type: "SET_INTERACTION_COMPONENT_STATE", rootContainerId: customId.customId, componentId: id.id, state };
+      DispatcherDefault.dispatch(obj2);
+      tmp = callback(state);
     }
     return tmp;
   }, items3);
-  stateFromStores(context[19])(() => {
-    if (null == callback) {
-      callback1(context);
+  useMountEffectDefault(() => {
+    if (null == stateFromStores) {
+      callback1(closure_2);
     }
   });
   if (stateFromStores == null) {
-    stateFromStores = callback(callback.useState(arg2), 1)[0];
+    stateFromStores = stateFromStores(callback.useState(arg2), 1)[0];
   }
   if (stateFromStores == null) {
     stateFromStores = null;
   }
-  obj = { state: stateFromStores, executeStateUpdate: callback1, isDisabled: false, visualState: _require(tmp2[11]).ActionComponentState.NORMAL, error: tmp7 };
-  return obj;
+  let obj = require("initialize");
+  return { state: stateFromStores, executeStateUpdate: callback1, isDisabled: false, visualState: require("InteractionComponentTypes").ActionComponentState.NORMAL, error: tmp7 };
 }
-let c4 = importAllResult;
-let context = importAllResult.createContext(null);
-let result = require("set").fileFinishedImporting("modules/interaction_components/ComponentStateContext.tsx");
+const jsx = fn(21).jsx;
+const redux = noop.createContext(null);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/interaction_components/ComponentStateContext.tsx");
 
 export { getActionComponentState };
 export { useShouldDisableInteractiveComponents };
@@ -375,64 +366,62 @@ export const ComponentStateContextProvider = function ComponentStateContextProvi
   const items = [message, modal, applicationWidget, flag, validators, validationErrors, setValidationErrors];
   return <redux.Provider value={validationErrors.useMemo(() => {
     if (null != ApplicationWidget) {
-      let obj = { useComponentState: null, channelId: null, containerId: null, message: null, validators: null, getParents: null };
-      obj[0] = closure_1_16.bind(null, tmp, flag);
-      ({ channel_id: obj3[1], id: obj3[2] } = tmp);
-      obj[3] = tmp;
-      obj[4] = validators;
-      obj[5] = function getParents(arg0) {
-        return ApplicationWidget(closure_1_2[20]).getParents(ApplicationWidget.components, arg0);
+      const obj5 = { useComponentState: useComponentStateForMessage.bind(null, tmp, flag), channelId: null, containerId: null, message: null, validators: null, getParents: null };
+      ({ channel_id: obj3.channelId, id: obj3.containerId } = tmp);
+      obj5.message = tmp;
+      obj5.validators = validators;
+      obj5.getParents = function getParents(arg0) {
+        return message(applicationWidget[20]).getParents(ApplicationWidget.components, arg0);
       };
-      return obj;
+      return obj5;
     } else if (null != modal) {
-      obj = { useComponentState: null, channelId: null, containerId: null, modal: null, validators: null, validationErrors: null, setValidationErrors: null, getParents: null };
-      obj[0] = closure_1_17.bind(null, tmp18);
-      ({ channelId: obj2[1], customId: obj2[2] } = tmp18);
-      obj[3] = tmp18;
-      obj[4] = validators;
-      obj[5] = validationErrors;
-      obj[6] = setValidationErrors;
-      obj[7] = function getParents(arg0) {
-        return ApplicationWidget(closure_1_2[20]).getParents(components.components, arg0);
+      const obj6 = { useComponentState: useComponentStateForModal.bind(null, tmp18), channelId: null, containerId: null, modal: null, validators: null, validationErrors: null, setValidationErrors: null, getParents: null };
+      ({ channelId: obj2.channelId, customId: obj2.containerId } = tmp18);
+      obj6.modal = tmp18;
+      obj6.validators = validators;
+      obj6.validationErrors = validationErrors;
+      obj6.setValidationErrors = setValidationErrors;
+      obj6.getParents = function getParents(arg0) {
+        return message(applicationWidget[20]).getParents(components.components, arg0);
       };
-      return obj;
+      return obj6;
     } else if (null != applicationWidget) {
-      obj = { useComponentState: null, containerId: null, applicationWidget: null, validators: null, validationErrors: null, setValidationErrors: null, getParents: null };
+      const obj = { useComponentState: null, containerId: null, applicationWidget: null, validators: null, validationErrors: null, setValidationErrors: null, getParents: null };
       ApplicationWidget = "ApplicationWidget";
-      obj[0] = () => {
-        error = new Error("" + ApplicationWidget + " does not support state");
+      obj.useComponentState = () => {
+        const error = new Error("" + ApplicationWidget + " does not support state");
         throw error;
       };
       const _HermesInternal = HermesInternal;
-      obj[1] = "app-widget-" + tmp19.applicationId;
-      obj[2] = tmp19;
-      obj[3] = validators;
-      obj[4] = validationErrors;
-      obj[5] = setValidationErrors;
-      obj[6] = () => {
-        error = new Error("" + "ApplicationWidget" + " does not support parents");
+      obj.containerId = "app-widget-" + tmp19.applicationId;
+      obj.applicationWidget = tmp19;
+      obj.validators = validators;
+      obj.validationErrors = validationErrors;
+      obj.setValidationErrors = setValidationErrors;
+      obj.getParents = () => {
+        const error = new Error("" + "ApplicationWidget" + " does not support parents");
         throw error;
       };
       return obj;
     } else {
       const _Error = Error;
-      error = new Error("ComponentStateContextProvider requires at least one of message, modal, or applicationWidget");
+      let error = new Error("ComponentStateContextProvider requires at least one of message, modal, or applicationWidget");
       throw error;
     }
   }, items)}>{arg0.children}</redux.Provider>;
 };
 export const useComponentState = function useComponentState(type, arg1) {
-  const context = importAllResult.useContext(closure_18);
+  const context = noop.useContext(closure_18);
   return context.useComponentState(type, arg1);
 };
 export const useComponentStateContext = function useComponentStateContext() {
-  return importAllResult.useContext(closure_18);
+  return noop.useContext(closure_18);
 };
 export const useComponentContainerId = function useComponentContainerId() {
-  return importAllResult.useContext(closure_18).containerId;
+  return noop.useContext(closure_18).containerId;
 };
 export const useComponentError = function useComponentError(component) {
-  const validationErrors = importAllResult.useContext(closure_18).validationErrors;
+  const validationErrors = noop.useContext(closure_18).validationErrors;
   let tmp;
   if (validationErrors != null) {
     tmp = validationErrors[component.id];

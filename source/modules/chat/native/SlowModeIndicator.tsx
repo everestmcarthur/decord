@@ -1,31 +1,35 @@
-// Module ID: 11987
-// Function ID: 11988
-// Dependencies: [19, 7687, 21, 4560, 576, 504, 7688, 4259, 11610, 5123, 4556, 2]
+// Module ID: 12013
+// Function ID: 12014
+// Name: SlowModeIndicator
+// Dependencies: [19, 7701, 21, 4574, 576, 504, 7702, 4272, 11636, 5137, 4570, 2]
 
-// Module 11987
-import ThemesDefault from "Themes" /* 576 */;
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "setCooldown" /* 7687 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12013 (SlowModeIndicator)
+import nativeDefault from "native" /* 576 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
+import SlowmodeUtils from "SlowmodeUtils" /* 7702 */;
+import TimerIcon from "TimerIcon" /* 11636 */;
+import noop from "module_19" /* 19 */;
+import SlowmodeStore from "SlowmodeStore" /* 7701 */;
 
-const require = arg1;
-let c3 = importAllResult;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let obj = { container: { alignItems: "center", flexDirection: "row" }, icon: null };
-obj = { marginLeft: ThemesDefault.space.PX_4 };
-obj[1] = obj;
-let closure_7 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function SlowModeIndicator(channel) {
+require = fn;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj = { container: { alignItems: "center", flexDirection: "row" }, icon: { marginLeft: nativeDefault.space.PX_4 } };
+let closure_7 = createStyles.createStyles(obj);
+let obj3 = { marginLeft: nativeDefault.space.PX_4 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/chat/native/SlowModeIndicator.tsx");
+
+export default noop.memo(function SlowModeIndicator(channel) {
   channel = channel.channel;
   const hasTypingText = channel.hasTypingText;
   const slowmodeType = channel.slowmodeType;
-  let stateFromStores;
   let canBypassSlowmode;
-  const tmp = callback3();
-  let obj = channel(slowmodeType[5]);
+  const tmp = closure_7();
   const items = [canBypassSlowmode];
-  stateFromStores = obj.useStateFromStores(items, () => canBypassSlowmode.getSlowmodeCooldownGuess(channel.id, slowmodeType));
+  const stateFromStores = channel(slowmodeType[5]).useStateFromStores(items, () => SlowmodeStore.getSlowmodeCooldownGuess(channel.id, slowmodeType));
+  let obj = channel(slowmodeType[5]);
   canBypassSlowmode = channel(slowmodeType[6]).useCanBypassSlowmode(channel);
   const items1 = [hasTypingText, canBypassSlowmode, stateFromStores];
   const items2 = [channel.rateLimitPerUser];
@@ -36,20 +40,16 @@ const memoResult = importAllResult.memo(function SlowModeIndicator(channel) {
       }
       return slowmodeIndicatorText;
     }
-    slowmodeIndicatorText = channel(slowmodeType[6]).getSlowmodeIndicatorText(stateFromStores, canBypassSlowmode);
+    slowmodeIndicatorText = SlowmodeUtils.getSlowmodeIndicatorText(stateFromStores, canBypassSlowmode);
   }, items1);
   const callback = stateFromStores.useCallback(() => {
-    let obj = hasTypingText(slowmodeType[7]);
-    obj = { key: "CHANNEL_SLOWMODE_INFO", IconComponent: channel(slowmodeType[8]).TimerIcon, content: channel(slowmodeType[6]).getSlowmodeDescription(channel.rateLimitPerUser) };
-    obj.open(obj);
+    const obj2 = { key: "CHANNEL_SLOWMODE_INFO", IconComponent: TimerIcon.TimerIcon, content: null };
+    const obj = ToastActionCreatorsDefault;
+    obj2.content = SlowmodeUtils.getSlowmodeDescription(channel.rateLimitPerUser);
+    obj.open(obj2);
   }, items2);
-  obj = { onPress: callback, style: tmp.container, children: null };
-  const items3 = [callback(channel(slowmodeType[10]).Text, { lineClamp: 1, allowFontScaling: false, variant: "text-xs/medium", color: "interactive-text-default", children: memo }), ];
-  obj = { style: tmp.icon, size: "xxs" };
-  items3[1] = callback(channel(slowmodeType[8]).TimerIcon, obj);
-  obj[2] = items3;
-  return callback2(channel(slowmodeType[9]).PressableOpacity, obj);
+  const obj3 = { onPress: callback, style: tmp.container, children: null };
+  const items3 = [closure_5(channel(slowmodeType[10]).Text, { lineClamp: 1, allowFontScaling: false, variant: "text-xs/medium", color: "interactive-text-default", children: memo }), closure_5(channel(slowmodeType[8]).TimerIcon, { style: tmp.icon, size: "xxs" })];
+  obj3.children = items3;
+  return closure_6(channel(slowmodeType[9]).PressableOpacity, obj3);
 });
-const result = require("set").fileFinishedImporting("modules/chat/native/SlowModeIndicator.tsx");
-
-export default memoResult;

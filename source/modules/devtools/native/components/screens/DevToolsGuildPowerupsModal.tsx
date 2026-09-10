@@ -1,50 +1,59 @@
-// Module ID: 15703
-// Function ID: 15704
-// Dependencies: [19, 21, 7913, 7000, 7863, 10930, 15704, 2]
+// Module ID: 15733
+// Function ID: 15734
+// Name: DevToolsGuildPowerupsModal
+// Dependencies: [19, 21, 7927, 7014, 7877, 10957, 15734, 2]
 
-// Module 15703
-import setWarningBoostsDefault from "setWarningBoosts" /* 15704 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 7913 */;
-import importAllResult from "noop" /* 19 */;
+// Module 15733 (DevToolsGuildPowerupsModal)
+import HeaderShared from "HeaderShared" /* 7877 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10957 */;
+import DevToolsGuildPowerupsScreenDefault from "DevToolsGuildPowerupsScreen" /* 15734 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let closure_4 = createNativeStackNavigator.createNativeStackNavigator();
-const memoResult = importAllResult.memo(function DevToolsGuildPowerupsModal() {
-  let obj = _require(7000);
-  _require = obj.useAccessibilityNativeStackOptions();
-  obj = {
+const require = globalThis.__r;
+
+require = fn;
+const jsx = fn(21).jsx;
+const NativeStackNavigator = fn(7927);
+let closure_4 = NativeStackNavigator.createNativeStackNavigator();
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsGuildPowerupsModal.tsx");
+
+export default noop.memo(function DevToolsGuildPowerupsModal() {
+  _require = require("Navigator").useAccessibilityNativeStackOptions();
+  const obj2 = {
     screenOptions(navigation) {
       const obj = {
         headerTitle(children) {
-          const merged = Object.assign(children, Object.create(null));
+          const merged = Object.assign(children, Object.assign({ children: 0 }));
           const merged1 = Object.assign(merged);
-          return callback2(callback(table[4]).GenericHeaderTitle, { title: children.children });
+          return closure_1_3(closure_1_0(closure_1_2[4]).GenericHeaderTitle, { title: children.children });
         },
-        headerLeft: callback(closure_1_2[4]).getRenderModalCloseImage(navigation.navigation),
+        headerLeft: HeaderShared.getRenderModalCloseImage(navigation.navigation),
         headerTitleAlign: "center"
       };
-      let merged = Object.assign(callback);
-      let merged1 = Object.assign(closure_1_1(closure_1_2[5])());
+      let merged = Object.assign(closure_0);
+      let merged1 = Object.assign(getNavigationModalPresentationDefault());
       return obj;
     },
     children: null
   };
-  obj = {
-    name: "DevToolsGuildPowerups",
-    options() {
-      return { title: "Guild Powerups" };
-    },
-    component: setWarningBoostsDefault
-  };
+  let obj = require("Navigator");
   ({ Navigator, Screen } = closure_4);
-  obj[1] = <Screen name="DevToolsGuildPowerups" options={function options() {
+  obj2.children = <Screen name="DevToolsGuildPowerups" options={function options() {
     return { title: "Guild Powerups" };
-  }} component={setWarningBoostsDefault} />;
-  return <Navigator name="DevToolsGuildPowerups" options={function options() {
-    return { title: "Guild Powerups" };
-  }} component={setWarningBoostsDefault} />;
+  }} component={DevToolsGuildPowerupsScreenDefault} />;
+  return <Navigator screenOptions={function screenOptions(navigation) {
+    const obj = {
+      headerTitle(children) {
+        const merged = Object.assign(children, Object.assign({ children: 0 }));
+        const merged1 = Object.assign(merged);
+        return closure_1_3(closure_1_0(closure_1_2[4]).GenericHeaderTitle, { title: children.children });
+      },
+      headerLeft: HeaderShared.getRenderModalCloseImage(navigation.navigation),
+      headerTitleAlign: "center"
+    };
+    let merged = Object.assign(closure_0);
+    let merged1 = Object.assign(getNavigationModalPresentationDefault());
+    return obj;
+  }}>{null}</Navigator>;
 });
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsGuildPowerupsModal.tsx");
-
-export default memoResult;

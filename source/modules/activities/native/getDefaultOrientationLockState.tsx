@@ -1,68 +1,65 @@
-// Module ID: 9639
-// Function ID: 9640
-// Name: getIsTabletActivitySurface
-// Dependencies: [4539, 1608, 573, 2]
+// Module ID: 9666
+// Function ID: 9667
+// Name: getDefaultOrientationLockState
+// Dependencies: [1477, 4435, 573, 2]
 // Exports: getDefaultOrientationLockState, getIsTabletActivitySurface, setOrientationLockState
 
-// Module 9639 (getIsTabletActivitySurface)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4539 */;
-import isMetaQuest from "isMetaQuest" /* 1608 */;
+// Module 9666 (getDefaultOrientationLockState)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import useWindowDimensions from "useWindowDimensions" /* 1477 */;
+import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4435 */;
+import size from "module_2" /* 2 */;
 
-let closure_2 = DCDDeviceManager.isIpadOS();
-let closure_3 = isMetaQuest.isMetaQuest();
-const result = set.fileFinishedImporting("modules/activities/native/getDefaultOrientationLockState.tsx");
+const result = size.fileFinishedImporting("modules/activities/native/getDefaultOrientationLockState.tsx");
 
-export function getIsTabletActivitySurface() {
-  let tmp = closure_2;
-  if (!closure_2) {
-    tmp = closure_3;
-  }
-  return tmp;
-}
-export const setOrientationLockState = function setOrientationLockState(embeddedActivityConfig) {
+export const getIsTabletActivitySurface = function getIsTabletActivitySurface() {
+  const size = useWindowDimensions.getWindowDimensions({ ignoreKeyboard: true });
+  const bound = Math.min(size.width, size.height);
+  return bound > useWindowSizeClassifier.WINDOW_SIZE_THRESHOLD_LARGE;
+};
+export const setOrientationLockState = function setOrientationLockState(embeddedActivityConfig, arg1) {
   if (arg1 == null) {
     if (null != embeddedActivityConfig) {
-      let tmp2 = closure_2;
-      if (!closure_2) {
-        tmp2 = closure_3;
-      }
-      embeddedActivityConfig = embeddedActivityConfig.embeddedActivityConfig;
-      if (tmp2) {
+      const size = useWindowDimensions.getWindowDimensions({ ignoreKeyboard: true });
+      const _Math = Math;
+      const bound = Math.min(size.width, size.height);
+      if (bound > useWindowSizeClassifier.WINDOW_SIZE_THRESHOLD_LARGE) {
+        const embeddedActivityConfig2 = embeddedActivityConfig.embeddedActivityConfig;
         let prop;
-        if (!tmp3) {
-          prop = embeddedActivityConfig.tablet_default_orientation_lock_state;
+        if (embeddedActivityConfig2 != null) {
+          prop = embeddedActivityConfig2.tablet_default_orientation_lock_state;
         }
         let default_orientation_lock_state = prop;
-      } else if (!tmp3) {
-        default_orientation_lock_state = embeddedActivityConfig.default_orientation_lock_state;
+      } else {
+        embeddedActivityConfig = embeddedActivityConfig.embeddedActivityConfig;
+        if (embeddedActivityConfig != null) {
+          default_orientation_lock_state = embeddedActivityConfig.default_orientation_lock_state;
+        }
       }
     }
   }
   if (null != arg1) {
-    let obj = dispatcherDefault;
-    obj = { type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE", applicationId: null, lockState: null };
-    obj[1] = embeddedActivityConfig.id;
-    obj[2] = tmp;
-    obj.dispatch(obj);
+    const obj3 = { type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE", applicationId: embeddedActivityConfig.id, lockState: tmp };
+    DispatcherDefault.dispatch(obj3);
   }
 };
 export const getDefaultOrientationLockState = function getDefaultOrientationLockState(application) {
   if (null != application) {
-    let tmp = closure_2;
-    if (!closure_2) {
-      tmp = closure_3;
-    }
-    const embeddedActivityConfig = application.embeddedActivityConfig;
-    if (tmp) {
+    const size = useWindowDimensions.getWindowDimensions({ ignoreKeyboard: true });
+    const _Math = Math;
+    const bound = Math.min(size.width, size.height);
+    if (bound > useWindowSizeClassifier.WINDOW_SIZE_THRESHOLD_LARGE) {
+      const embeddedActivityConfig2 = application.embeddedActivityConfig;
       let prop;
-      if (!tmp2) {
-        prop = embeddedActivityConfig.tablet_default_orientation_lock_state;
+      if (embeddedActivityConfig2 != null) {
+        prop = embeddedActivityConfig2.tablet_default_orientation_lock_state;
       }
       let default_orientation_lock_state = prop;
-    } else if (!tmp2) {
-      default_orientation_lock_state = embeddedActivityConfig.default_orientation_lock_state;
+    } else {
+      const embeddedActivityConfig = application.embeddedActivityConfig;
+      if (embeddedActivityConfig != null) {
+        default_orientation_lock_state = embeddedActivityConfig.default_orientation_lock_state;
+      }
     }
     return default_orientation_lock_state;
   }

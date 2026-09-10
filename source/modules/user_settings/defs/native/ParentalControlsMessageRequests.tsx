@@ -1,35 +1,34 @@
-// Module ID: 15896
-// Function ID: 15897
-// Name: toggle
-// Dependencies: [7537, 7975, 8652, 14828, 15882, 8411, 8413, 14827, 11473, 1114, 2396, 2]
+// Module ID: 15926
+// Function ID: 15927
+// Name: ParentalControlsMessageRequests
+// Dependencies: [7551, 7989, 8680, 14854, 15912, 8439, 8441, 14853, 11500, 1114, 2396, 2]
 
-// Module 15896 (toggle)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 2396 */;
-import openIncodeAgeVerificationModalDefault from "openIncodeAgeVerificationModal" /* 8411 */;
-import useSelectedTeen from "useSelectedTeen" /* 8652 */;
-import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14827 */;
-import result2 from "result" /* 14828 */;
-import shouldAgeVerifyForDMDefaultOff from "shouldAgeVerifyForDMDefaultOff" /* 15882 */;
-import closure_3 from "freshTeenActivityWithMap" /* 7537 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15926 (ParentalControlsMessageRequests)
+import util from "util" /* 1114 */;
+import _modDef2396 from "module_2396" /* 2396 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8439 */;
+import useSelectedTeen from "useSelectedTeen" /* 8680 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14853 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14854 */;
+import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 15912 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7551 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const SettingBuilders = fn(11500);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["3o2ojh"]);
+    const intl = util.intl;
+    return intl.string(util.t["3o2ojh"]);
   },
   useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault["7aYkh1"]);
+    const intl = util.intl;
+    return intl.string(_modDef2396["7aYkh1"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(7989).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue() {
-    const defaultGuildsRestricted = useParentalControlledExplicitContentSettings.useDefaultGuildsRestricted();
-    const obj = useParentalControlledExplicitContentSettings;
+    const defaultGuildsRestricted = useParentalControlSettings.useDefaultGuildsRestricted();
     const selectedTeenId = useSelectedTeen.useSelectedTeenId();
-    const ParentalControlledDefaultMessageRequestRestricted = result2.ParentalControlledDefaultMessageRequestRestricted;
+    const ParentalControlledDefaultMessageRequestRestricted = ParentalControlledUserSettings.ParentalControlledDefaultMessageRequestRestricted;
     let tmp3 = !defaultGuildsRestricted;
     if (!defaultGuildsRestricted) {
       tmp3 = !ParentalControlledDefaultMessageRequestRestricted.useControlledSetting(selectedTeenId);
@@ -37,28 +36,26 @@ createToggle = {
     return tmp3;
   },
   useIsDisabled() {
-    return useParentalControlledExplicitContentSettings.useDefaultGuildsRestricted();
+    return useParentalControlSettings.useDefaultGuildsRestricted();
   },
   onValueChange: function onAllowMessageRequestsFromServerMembersValueChange(arg0) {
-    selectedTeenId = selectedTeenId.getSelectedTeenId();
+    const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {
       if (!arg0) {
-        let obj = shouldAgeVerifyForDMDefaultOff;
         if (obj.shouldAgeVerifyForDMDefaultOff()) {
-          obj = { entryPoint: null };
-          obj[0] = tmp2(8413).AgeVerificationModalEntryPoint.MESSAGE_REQUESTS_SETTINGS;
-          const result = openIncodeAgeVerificationModalDefault.showAgeVerificationGetStartedModal(obj);
-          const obj2 = openIncodeAgeVerificationModalDefault;
+          const obj3 = { entryPoint: tmp2(8441).AgeVerificationModalEntryPoint.MESSAGE_REQUESTS_SETTINGS };
+          const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj3);
         }
+        obj = DefaultDMSettingsExperiment;
         tmp2 = require;
       }
-      const ParentalControlledDefaultMessageRequestRestricted = result2.ParentalControlledDefaultMessageRequestRestricted;
+      const ParentalControlledDefaultMessageRequestRestricted = ParentalControlledUserSettings.ParentalControlledDefaultMessageRequestRestricted;
       const result1 = ParentalControlledDefaultMessageRequestRestricted.updateControlledSetting(selectedTeenId, !arg0);
     }
   },
   unsearchable: true
-};
-createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsMessageRequests.tsx");
+});
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsMessageRequests.tsx");
 
-export default createToggle;
+export default toggle;

@@ -1,22 +1,22 @@
-// Module ID: 5619
-// Function ID: 5620
+// Module ID: 5633
+// Function ID: 5634
 // Name: UserVerification
-// Dependencies: [19, 21, 4560, 4384, 5620, 4556, 1114, 2]
+// Dependencies: [19, 21, 4574, 4398, 5634, 4570, 1114, 2]
 // Exports: default
 
-// Module 5619 (UserVerification)
-import noopAll from "noop" /* 19 */;
-import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4384 */;
-import Text from "Text" /* 4556 */;
-import BaseIdentityVerificationFieldDefault from "BaseIdentityVerificationField" /* 5620 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 5633 (UserVerification)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4398 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import IdentityVerificationFieldDefault from "IdentityVerificationField" /* 5634 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ emailPhoneNote: { marginTop: 8, marginBottom: 12 } });
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/UserVerification.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let closure_6 = createStyles.createStyles({ emailPhoneNote: { marginTop: 8, marginBottom: 12 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/UserVerification.tsx");
 
 export default function UserVerification(arg0) {
   ({ verification, field } = arg0);
@@ -24,32 +24,26 @@ export default function UserVerification(arg0) {
     return null;
   } else {
     const platform = field.platform;
-    let tmp5 = platform === MAX_RESULTS_PER_PAGE.UserVerificationFieldPlatforms.PHONE;
+    let tmp5 = platform === MemberVerificationTypes.UserVerificationFieldPlatforms.PHONE;
     if (tmp5) {
-      let obj = { passesVerification: null, platform: null };
-      obj[0] = verification[tmp12(undefined, 4384).UserVerificationFieldPlatforms.PHONE];
-      obj[1] = tmp12(4384).UserVerificationFieldPlatforms.PHONE;
-      tmp5 = callback(BaseIdentityVerificationFieldDefault, obj);
-      const tmp4 = BaseIdentityVerificationFieldDefault;
+      const obj = { passesVerification: verification[tmp12(undefined, 4398).UserVerificationFieldPlatforms.PHONE], platform: tmp12(4398).UserVerificationFieldPlatforms.PHONE };
+      tmp5 = React3(IdentityVerificationFieldDefault, obj);
     }
     const items = [tmp5, , ];
-    obj = { passesVerification: null, platform: null };
-    obj[0] = verification[MAX_RESULTS_PER_PAGE.UserVerificationFieldPlatforms.EMAIL];
-    obj[1] = MAX_RESULTS_PER_PAGE.UserVerificationFieldPlatforms.EMAIL;
-    items[1] = callback(BaseIdentityVerificationFieldDefault, obj);
-    obj = { style: null, variant: "heading-deprecated-12/medium", color: "text-default", children: null };
-    obj[0] = tmp.emailPhoneNote;
-    if (platform === MAX_RESULTS_PER_PAGE.UserVerificationFieldPlatforms.PHONE) {
+    const obj2 = { passesVerification: verification[MemberVerificationTypes.UserVerificationFieldPlatforms.EMAIL], platform: MemberVerificationTypes.UserVerificationFieldPlatforms.EMAIL };
+    items[1] = React3(IdentityVerificationFieldDefault, obj2);
+    const obj3 = { style: tmp.emailPhoneNote, variant: "heading-deprecated-12/medium", color: "text-default", children: null };
+    if (platform === MemberVerificationTypes.UserVerificationFieldPlatforms.PHONE) {
       const intl2 = tmp12(1114).intl;
       let stringResult = intl2.string(tmp12(1114).t["jMh+TY"]);
     } else {
       const intl = tmp12(1114).intl;
       stringResult = intl.string(tmp12(1114).t.Vgv9ip);
     }
-    obj1 = { children: null };
-    obj[3] = stringResult;
-    items[2] = callback(Text.Text, obj);
-    obj1[0] = items;
-    return closure_5(closure_4, obj1);
+    const obj4 = { children: null };
+    obj3.children = stringResult;
+    items[2] = React3(Text_Text.Text, obj3);
+    obj4.children = items;
+    return hasOwnProperty(React4, obj4);
   }
 };

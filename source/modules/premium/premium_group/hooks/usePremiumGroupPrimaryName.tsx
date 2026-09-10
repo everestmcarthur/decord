@@ -1,16 +1,16 @@
-// Module ID: 13491
-// Function ID: 13492
+// Module ID: 13514
+// Function ID: 13515
 // Name: usePremiumGroupPrimaryName
-// Dependencies: [13492, 13496, 4404, 2]
+// Dependencies: [13515, 13519, 4418, 2]
 // Exports: default
 
-// Module 13491 (usePremiumGroupPrimaryName)
-import set from "set" /* 2 */;
-import nameFromUser from "nameFromUser" /* 4404 */;
-import usePremiumGroupMembershipDefault from "usePremiumGroupMembership" /* 13492 */;
-import usePremiumGroupMembersDefault from "usePremiumGroupMembers" /* 13496 */;
+// Module 13514 (usePremiumGroupPrimaryName)
+import UserUtils from "UserUtils" /* 4418 */;
+import usePremiumGroupMembershipDefault from "usePremiumGroupMembership" /* 13515 */;
+import usePremiumGroupMembersDefault from "usePremiumGroupMembers" /* 13519 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupPrimaryName.tsx");
+const result = size.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupPrimaryName.tsx");
 
 export default function usePremiumGroupPrimaryName() {
   let obj = arg0;
@@ -44,8 +44,7 @@ export default function usePremiumGroupPrimaryName() {
     if (premiumGroupMembers != null) {
       primary1 = premiumGroupMembers.primary;
     }
-    nameFromUserResult = nameFromUser.nameFromUser(primary1);
-    const obj2 = nameFromUser;
+    nameFromUserResult = UserUtils.nameFromUser(primary1);
   }
   return nameFromUserResult;
 };

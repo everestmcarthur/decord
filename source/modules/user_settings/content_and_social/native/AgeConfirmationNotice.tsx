@@ -1,55 +1,58 @@
-// Module ID: 14821
-// Function ID: 14822
+// Module ID: 14847
+// Function ID: 14848
 // Name: AgeConfirmationNotice
-// Dependencies: [19, 17, 8399, 21, 7301, 14691, 4255, 2024, 8411, 8413, 576, 1178, 4975, 1114, 4556, 2]
+// Dependencies: [19, 17, 8427, 21, 7315, 14717, 4268, 2024, 8439, 8441, 576, 1178, 4989, 1114, 4570, 2]
 // Exports: default
 
-// Module 14821 (AgeConfirmationNotice)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import SafetyToastType from "SafetyToastType" /* 8399 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 14847 (AgeConfirmationNotice)
+import nativeDefault from "native" /* 576 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
+import LinkingDefault from "Linking" /* 4268 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import SafetySettingsUtils from "SafetySettingsUtils" /* 14717 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ SafetySettingsNoticeAction: c5, SafetySettingsNoticeType: closure_6 } = SafetyToastType);
-let result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/native/AgeConfirmationNotice.tsx");
+require = fn;
+const View = fn(17).View;
+const Constants = fn(8427);
+({ SafetySettingsNoticeAction: hasOwnProperty, SafetySettingsNoticeType: metroRequire } = Constants);
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/AgeConfirmationNotice.tsx");
 
 export default function AgeConfirmationNotice() {
-  let obj = sensitiveContentFilterHelpArticle(7301);
-  sensitiveContentFilterHelpArticle = obj.useSensitiveContentFilterHelpArticle();
-  const effect = React.useEffect(() => {
-    const result = sensitiveContentFilterHelpArticle(14691).trackSafetySettingsNoticeAnalytics(constants2.AGE_CONFIRMATION_NOTICE, constants.VIEWED);
+  sensitiveContentFilterHelpArticle = sensitiveContentFilterHelpArticle(7315).useSensitiveContentFilterHelpArticle();
+  const effect = noop.useEffect(() => {
+    const result = sensitiveContentFilterHelpArticle(14717).trackSafetySettingsNoticeAnalytics(constants2.AGE_CONFIRMATION_NOTICE, constants.VIEWED);
   }, []);
   const items = [sensitiveContentFilterHelpArticle];
-  importDefault = React.useCallback(() => {
-    const obj = callback(closure_1_2[6]);
-    obj.openURL(callback(closure_1_2[7]).getArticleURL(sensitiveContentFilterHelpArticle));
-    const obj2 = callback(closure_1_2[7]);
-    const result = sensitiveContentFilterHelpArticle(closure_1_2[5]).trackSafetySettingsNoticeAnalytics(closure_1_6.AGE_CONFIRMATION_NOTICE, closure_1_5.LEARN_MORE);
+  importDefault = noop.useCallback(() => {
+    const obj = LinkingDefault;
+    obj.openURL(HelpdeskUtilsDefault.getArticleURL(sensitiveContentFilterHelpArticle));
+    const result = SafetySettingsUtils.trackSafetySettingsNoticeAnalytics(constants2.AGE_CONFIRMATION_NOTICE, constants.LEARN_MORE);
   }, items);
-  obj = { style: null, children: null };
-  obj = { marginBottom: null };
-  const callback = React.useCallback(() => {
-    let obj = callback(8411);
-    obj = { entryPoint: sensitiveContentFilterHelpArticle(8413).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE };
-    const result = obj.showAgeVerificationGetStartedModal(obj);
-    const result1 = sensitiveContentFilterHelpArticle(14691).trackSafetySettingsNoticeAnalytics(constants2.AGE_CONFIRMATION_NOTICE, constants.CONFIRM_AGE);
+  let obj2 = { style: null, children: null };
+  const obj3 = { marginBottom: null };
+  const callback = noop.useCallback(() => {
+    const obj = onPress(8439);
+    const result = obj.showAgeVerificationGetStartedModal({ entryPoint: sensitiveContentFilterHelpArticle(8441).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE });
+    const obj2 = { entryPoint: sensitiveContentFilterHelpArticle(8441).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE };
+    const result1 = sensitiveContentFilterHelpArticle(14717).trackSafetySettingsNoticeAnalytics(constants2.AGE_CONFIRMATION_NOTICE, constants.CONFIRM_AGE);
   }, []);
-  obj[0] = ThemesDefault.space.PX_8;
-  obj[0] = obj;
-  obj1 = { messageType: sensitiveContentFilterHelpArticle(1178).HelpMessageTypes.INFO, borderRadius: ThemesDefault.radii.lg, button: null, children: null };
-  let obj2 = { variant: "secondary", size: "sm", text: null, onPress: null };
+  obj3.marginBottom = nativeDefault.space.PX_8;
+  obj2.style = obj3;
+  const obj4 = { messageType: sensitiveContentFilterHelpArticle(1178).HelpMessageTypes.INFO, borderRadius: nativeDefault.radii.lg, button: null, children: null };
+  const obj5 = { variant: "secondary", size: "sm", text: null, onPress: null };
   const intl = sensitiveContentFilterHelpArticle(1114).intl;
-  obj2[2] = intl.string(sensitiveContentFilterHelpArticle(1114).t.FDSSia);
-  obj2[3] = callback;
-  obj1[2] = jsx(sensitiveContentFilterHelpArticle(4975).Button, { variant: "secondary", size: "sm", text: null, onPress: null });
+  obj5.text = intl.string(sensitiveContentFilterHelpArticle(1114).t.FDSSia);
+  obj5.onPress = callback;
+  obj4.button = jsx(sensitiveContentFilterHelpArticle(4989).Button, { variant: "secondary", size: "sm", text: null, onPress: null });
   const intl2 = sensitiveContentFilterHelpArticle(1114).intl;
-  obj1[3] = intl2.format(sensitiveContentFilterHelpArticle(1114).t.mFgsfg, {
+  obj4.children = intl2.format(sensitiveContentFilterHelpArticle(1114).t.mFgsfg, {
     hook(children) {
-      return closure_1_7(sensitiveContentFilterHelpArticle(closure_1_2[14]).Text, { role: "link", variant: "text-sm/medium", color: "text-link", onPress: closure_1, children });
+      return jsx(Text_Text.Text, { role: "link", variant: "text-sm/medium", color: "text-link", onPress, children });
     }
   });
-  obj[1] = jsx(sensitiveContentFilterHelpArticle(1178).HelpMessage, { messageType: sensitiveContentFilterHelpArticle(1178).HelpMessageTypes.INFO, borderRadius: ThemesDefault.radii.lg, button: null, children: null });
-  return <View marginBottom={null} />;
+  obj2.children = jsx(sensitiveContentFilterHelpArticle(1178).HelpMessage, { messageType: sensitiveContentFilterHelpArticle(1178).HelpMessageTypes.INFO, borderRadius: nativeDefault.radii.lg, button: null, children: null });
+  return <View style={null}>{null}</View>;
 };

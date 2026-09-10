@@ -1,18 +1,19 @@
-// Module ID: 11669
-// Function ID: 11670
+// Module ID: 11695
+// Function ID: 11696
 // Name: isMessagePinnable
-// Dependencies: [4199, 1074, 7270, 7269, 2]
+// Dependencies: [4212, 1074, 7284, 7283, 2]
 // Exports: default
 
-// Module 11669 (isMessagePinnable)
-import useCanStartPrivateThread from "useCanStartPrivateThread" /* 7269 */;
-import isSystemMessageDefault from "isSystemMessage" /* 7270 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4199 */;
-import ME from "ME" /* 1074 */;
+// Module 11695 (isMessagePinnable)
+import ThreadHooks from "ThreadHooks" /* 7283 */;
+import isSystemMessageDefault from "isSystemMessage" /* 7284 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
 
-require = arg1;
-({ ChannelTypes: c4, Permissions: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/messages/isMessagePinnable.tsx");
+require = fn;
+const Constants = fn(1074);
+({ ChannelTypes: closure_4, Permissions: hasOwnProperty } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/isMessagePinnable.tsx");
 
 export default function isMessagePinnable(arg0, isSystemDM) {
   const isSystemDMResult = isSystemDM.isSystemDM();
@@ -20,7 +21,7 @@ export default function isMessagePinnable(arg0, isSystemDM) {
   if (!isSystemDMResult) {
     isActiveChannelOrUnarchivableThread = !isSystemMessageDefault(arg0);
   }
-  let isPrivateResult = closure_3.can(constants2.PIN_MESSAGES, isSystemDM) && closure_3.can(constants2.READ_MESSAGE_HISTORY, isSystemDM);
+  let isPrivateResult = PermissionStore.can(constants2.PIN_MESSAGES, isSystemDM) && PermissionStore.can(constants2.READ_MESSAGE_HISTORY, isSystemDM);
   if (isActiveChannelOrUnarchivableThread) {
     if (!isPrivateResult) {
       isPrivateResult = isSystemDM.isPrivate();
@@ -28,8 +29,7 @@ export default function isMessagePinnable(arg0, isSystemDM) {
     isActiveChannelOrUnarchivableThread = isPrivateResult;
   }
   if (isActiveChannelOrUnarchivableThread) {
-    isActiveChannelOrUnarchivableThread = useCanStartPrivateThread.getIsActiveChannelOrUnarchivableThread(isSystemDM);
-    const obj2 = useCanStartPrivateThread;
+    isActiveChannelOrUnarchivableThread = ThreadHooks.getIsActiveChannelOrUnarchivableThread(isSystemDM);
   }
   if (isActiveChannelOrUnarchivableThread) {
     isActiveChannelOrUnarchivableThread = isSystemDM.type !== constants.GUILD_VOICE;

@@ -1,26 +1,24 @@
-// Module ID: 4566
-// Function ID: 4567
+// Module ID: 4580
+// Function ID: 4581
 // Name: useTypographyVariantRemap
-// Dependencies: [4284, 4567, 2]
+// Dependencies: [4291, 4581, 2]
 // Exports: useTypographyVariantRemap
 
-// Module 4566 (useTypographyVariantRemap)
-import set from "set" /* 2 */;
-import json from "json" /* 4284 */;
-import remapTypographyVariant from "remapTypographyVariant" /* 4567 */;
+// Module 4580 (useTypographyVariantRemap)
+import ThemeContext from "ThemeContext" /* 4291 */;
+import typographyVariantRemap from "typographyVariantRemap" /* 4581 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx");
 
 export const useTypographyVariantRemap = function useTypographyVariantRemap(variant, arg1) {
-  let themeContext = json.useThemeContext();
+  let themeContext = ThemeContext.useThemeContext();
   if (themeContext == null) {
     themeContext = [];
   }
   let enabledExperiments = themeContext.enabledExperiments;
-  const obj = json;
-  const tmp = require;
   if (enabledExperiments == null) {
     enabledExperiments = [];
   }
-  return remapTypographyVariant.remapTypographyVariant(enabledExperiments, variant, arg1);
+  return typographyVariantRemap.remapTypographyVariant(enabledExperiments, variant, arg1);
 };

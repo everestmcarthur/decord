@@ -1,196 +1,149 @@
-// Module ID: 9514
-// Function ID: 9515
+// Module ID: 9541
+// Function ID: 9542
 // Name: _launchFrame
-// Dependencies: [5, 9515, 9516, 9510, 9518, 573, 9509, 9519, 9532, 9572, 2]
+// Dependencies: [5, 9542, 9543, 9537, 9545, 573, 9536, 9546, 9558, 9599, 2]
 // Exports: attachFrameIframe, detachFrameIframe, launchFrame, refreshProxyTicket, resetFrameLayoutModes, setFramePrefersPictureInPictureOnNavigateAway, updateFramePanelMode
 
-// Module 9514 (_launchFrame)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 9518 */;
-import getFramesManagerDefault from "getFramesManager" /* 9572 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "map" /* 9515 */;
-import FrameLayoutModes from "FrameLayoutModes" /* 9516 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 9510 */;
+// Module 9541 (_launchFrame)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9536 */;
+import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 9545 */;
+import getFramesManagerDefault from "getFramesManager" /* 9599 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import FramesStore from "FramesStore" /* 9542 */;
 
-require = arg1;
-function _launchFrame() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    const iter = (function*(arg0) {
-      if (frame2 === 2) {
-        frame2 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          frame2 = 2;
-          if (0 === constants) {
-            if (arg0 === 1) {
-              frame2 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              frame2 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              dependencyMap = tmp3;
-              let callback2 = tmp7;
-              let callback;
-              callback2 = undefined;
-              dependencyMap = undefined;
-              c3 = undefined;
-              let frame;
-              ({ applicationId: c0, surface: c1, customId: c2, referrerId: c3, analyticsContext: c4 } = callback);
-              constants = undefined;
-              frame2 = undefined;
-              let callback3;
-              let lib;
-              let lib2;
-              constants = 1;
-              frame2 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp7) {
-            if (arg0 === 1) {
-              frame2 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              frame2 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              constants = lib2(callback, callback2);
-              frame2 = frame.getFrame(constants);
-              if (null != frame2) {
-                if (frame2.intent === constants.MAIN) {
-                  callback5(constants);
-                  let obj2 = { frameId: null, layoutMode: null };
-                  obj2[0] = constants;
-                  obj2[1] = frame2.FOCUSED;
-                  callback6(obj2);
-                }
-                frame2 = 3;
-                const obj3 = { value: null, done: true };
-                obj3[0] = constants;
-                return obj3;
-              } else {
-                if (lib(callback2) === constants.MAIN) {
-                  let obj7 = callback(9518);
-                  const result = obj7.leaveCurrentEmbeddedActivity();
-                  callback4();
-                }
-                let obj8 = callback2(573);
-                const obj4 = { type: "FRAME_LAUNCH_START", applicationId: null, frameId: null, surface: null };
-                obj4[1] = callback;
-                obj4[2] = constants;
-                obj4[3] = callback2;
-                obj8.dispatch(obj4);
-                frame = 1;
-                let obj10 = callback(9509);
-                constants = 4;
-                frame2 = 1;
-                let obj5 = { value: null, done: false };
-                obj5[0] = obj10.createProxyTicket(callback, callback3(callback2));
-                return obj5;
-              }
-            }
-          } else if (2 === tmp7) {
-            frame = 0;
-            closure_10 = c3;
-            lib = callback2(9519)();
-            obj5 = callback(9532);
-            constants = 3;
-            frame2 = 1;
-            const obj6 = { value: null, done: false };
-            obj6[0] = obj5.getActivityLaunchErrorInfo(closure_10, callback);
-            return obj6;
-          } else if (3 === tmp7) {
-            if (arg0 === 1) {
-              frame2 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              frame2 = 3;
-              obj7 = { value: null, done: true };
-              obj7[0] = arg1;
-              return obj7;
-            } else {
-              lib2 = arg1;
-              lib.showLaunchErrorModal(lib2.message);
-              obj2 = callback2(573);
-              obj8 = { type: "FRAME_LAUNCH_FAIL", applicationId: null, frameId: null, error: null };
-              obj8[1] = callback;
-              obj8[2] = constants;
-              obj8[3] = closure_10;
-              obj2.dispatch(obj8);
-              throw closure_10;
-            }
-          } else if (arg0 === 1) {
-            frame2 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            frame = 0;
-            frame2 = 3;
-            const obj9 = { value: null, done: true };
-            obj9[0] = arg1;
-            return obj9;
-          } else {
-            callback3 = arg1;
-            obj10 = { type: "FRAME_LAUNCH", applicationId: null, frameId: null, surface: null, proxyTicket: null, customId: null, referrerId: null, analyticsContext: null };
-            obj10[1] = callback;
-            obj10[2] = constants;
-            obj10[3] = callback2;
-            obj10[4] = callback3;
-            obj10[5] = dependencyMap;
-            obj10[6] = c3;
-            obj10[7] = frame;
-            callback2(573).dispatch(obj10);
-            frame = 0;
-            frame2 = 3;
-            obj = { value: null, done: true };
-            obj[0] = constants;
-            return obj;
-          }
-        } catch (tmp65) {
-          c3 = tmp65;
-          if (tmp4 === frame) {
-            frame2 = tmp2;
-            throw tmp65;
-          } else {
-            constants = tmp;
-          }
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_11 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+require = fn;
+let closure_11 = async function _launchFrame(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    applyArgumentsResult = apply(self, arguments);
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          closure_2 = tmp3;
+          closure_1 = tmp7;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          ({ applicationId: closure_129_0, surface: closure_129_1, customId: closure_129_2, referrerId: closure_129_3, analyticsContext: closure_129_4 } = closure_0);
+          closure_129_5 = undefined;
+          let frame;
+          closure_129_7 = undefined;
+          closure_129_8 = undefined;
+          closure_129_9 = undefined;
+          c5 = 1;
+          c6 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp7) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          closure_129_5 = closure_130_9(closure_129_0, closure_129_1);
+          frame = closure_130_4.getFrame(closure_129_5);
+          if (null != frame) {
+            if (frame.intent === closure_130_5.MAIN) {
+              closure_130_14(closure_129_5);
+              const obj7 = { frameId: closure_129_5, layoutMode: closure_130_6.FOCUSED };
+              closure_130_15(obj7);
+            }
+            c6 = 3;
+            const obj10 = { value: closure_129_5, done: true };
+            return obj10;
+          } else {
+            if (closure_130_8(closure_129_1) === closure_130_5.MAIN) {
+              const result = closure_130_0(closure_130_2[4]).leaveCurrentEmbeddedActivity();
+              closure_130_12();
+              const obj8 = closure_130_0(closure_130_2[4]);
+            }
+            const obj12 = { type: "FRAME_LAUNCH_START", applicationId: closure_129_0, frameId: closure_129_5, surface: closure_129_1 };
+            closure_130_1(closure_130_2[5]).dispatch(obj12);
+            c4 = 1;
+            const obj9 = closure_130_1(closure_130_2[5]);
+            c5 = 4;
+            c6 = 1;
+            const obj13 = { value: closure_130_0(closure_130_2[6]).createProxyTicket(closure_129_0, closure_130_7(closure_129_1)), done: false };
+            return obj13;
+          }
+        }
+      } else if (2 === tmp7) {
+        c4 = 0;
+        closure_129_10 = closure_3;
+        closure_129_8 = closure_130_1(closure_130_2[7])();
+        c5 = 3;
+        c6 = 1;
+        const obj14 = { value: closure_130_0(closure_130_2[8]).getActivityLaunchErrorInfo(closure_129_10, closure_129_0), done: false };
+        return obj14;
+      } else if (3 === tmp7) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj15 = { value, done: true };
+          return obj15;
+        } else {
+          closure_129_9 = value;
+          closure_129_8.showLaunchErrorModal(closure_129_9.message);
+          const obj16 = { type: "FRAME_LAUNCH_FAIL", applicationId: closure_129_0, frameId: closure_129_5, error: closure_129_10, analyticsContext: closure_129_4 };
+          closure_130_1(closure_130_2[5]).dispatch(obj16);
+          throw closure_129_10;
+        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        c6 = 3;
+        const obj17 = { value, done: true };
+        return obj17;
+      } else {
+        closure_129_7 = value;
+        const obj19 = { type: "FRAME_LAUNCH", applicationId: closure_129_0, frameId: closure_129_5, surface: closure_129_1, proxyTicket: closure_129_7, customId: closure_129_2, referrerId: closure_129_3, analyticsContext: closure_129_4 };
+        closure_130_1(closure_130_2[5]).dispatch(obj19);
+        c4 = 0;
+        c6 = 3;
+        const obj = { value: closure_129_5, done: true };
+        return obj;
+      }
+    } catch (tmp66) {
+      closure_3 = tmp66;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp66;
+      } else {
+        c5 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
+};
 function clearMainFrameSlot() {
-  const mainFrame = store.getMainFrame();
+  const mainFrame = FramesStore.getMainFrame();
   if (null != mainFrame) {
     if (mainFrame.intent === constants.MAIN) {
       getFramesManagerDefault().leaveFrame(mainFrame.id);
@@ -201,36 +154,25 @@ function clearMainFrameSlot() {
   }
 }
 function demoteMainFrame(id) {
-  let obj = store;
-  const mainFrame = store.getMainFrame();
+  const mainFrame = FramesStore.getMainFrame();
   id = undefined;
   if (mainFrame != null) {
     id = mainFrame.id;
   }
   if (id === id) {
-    const frame = obj.getFrame(id);
+    const frame = FramesStore.getFrame(id);
     if (null != frame) {
-      obj1 = dispatcherDefault;
-      obj = { type: "FRAME_UPDATE_LAYOUT_MODE", applicationId: null, frameId: null, layoutMode: null };
-      obj[1] = frame.applicationId;
-      obj[2] = id;
-      obj[3] = constants2.FOCUSED;
-      obj1.dispatch(obj);
+      const obj3 = { type: "FRAME_UPDATE_LAYOUT_MODE", applicationId: frame.applicationId, frameId: id, layoutMode: constants2.FOCUSED };
+      DispatcherDefault.dispatch(obj3);
     }
-    obj = { type: "FRAME_SET_PANEL_MODE", frameId: null, activityPanelMode: null };
-    obj[1] = id;
-    obj[2] = ActivityPanelModes.PANEL;
-    dispatcherDefault.dispatch(obj);
-    const obj4 = dispatcherDefault;
-    obj1 = { type: "FRAME_CLEAR_MAIN_SLOT", frameId: null };
-    obj1[1] = id;
-    dispatcherDefault.dispatch(obj1);
-    const obj6 = dispatcherDefault;
+    const obj5 = { type: "FRAME_SET_PANEL_MODE", frameId: id, activityPanelMode: ActivityPanelModes.PANEL };
+    DispatcherDefault.dispatch(obj5);
+    const obj7 = { type: "FRAME_CLEAR_MAIN_SLOT", frameId: id };
+    DispatcherDefault.dispatch(obj7);
   }
 }
 function promoteFrame(frameId) {
-  let obj = store;
-  let tmp = null != store.getFrame(frameId);
+  let tmp = null != FramesStore.getFrame(frameId);
   if (tmp) {
     const mainFrame = obj.getMainFrame();
     let id;
@@ -243,194 +185,149 @@ function promoteFrame(frameId) {
     const result = leaveCurrentEmbeddedActivity.leaveCurrentEmbeddedActivity();
     let mainFrame1 = obj.getMainFrame();
     if (null == mainFrame1) {
-      mainFrame1 = dispatcherDefault;
-      obj = { type: "FRAME_PROMOTE", frameId: null };
-      obj[1] = frameId;
-      mainFrame1.dispatch(obj);
+      mainFrame1 = DispatcherDefault;
+      const obj3 = { type: "FRAME_PROMOTE", frameId };
+      mainFrame1.dispatch(obj3);
     } else if (mainFrame1.intent !== constants.MAIN) {
       demoteMainFrame(mainFrame1.id);
     }
-    const obj2 = leaveCurrentEmbeddedActivity;
     getFramesManagerDefault().leaveFrame(mainFrame1.id);
     const obj4 = getFramesManagerDefault();
   }
 }
 function updateFrameLayoutMode(frameId) {
   frameId = frameId.frameId;
-  const frame = store.getFrame(frameId);
+  const frame = FramesStore.getFrame(frameId);
   if (null != frame) {
-    let obj = dispatcherDefault;
-    obj = { type: "FRAME_UPDATE_LAYOUT_MODE", applicationId: null, frameId: null, layoutMode: null };
-    obj[1] = frame.applicationId;
-    obj[2] = frameId;
-    obj[3] = frameId.layoutMode;
-    obj.dispatch(obj);
+    const obj2 = { type: "FRAME_UPDATE_LAYOUT_MODE", applicationId: frame.applicationId, frameId, layoutMode: frameId.layoutMode };
+    DispatcherDefault.dispatch(obj2);
   }
 }
-function _refreshProxyTicket() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    return (function*(arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp8 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              dependencyMap = tmp4;
-              let applicationId = tmp6;
-              applicationId = undefined;
-              dependencyMap = undefined;
-              closure_3 = undefined;
-              let frame;
-              frame = frame.getFrame(callback);
-              if (null == frame) {
-                c6 = 3;
-                return { value: false, done: true };
-              } else {
-                applicationId = frame.applicationId;
-                obj1 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: null, frameId: null, refreshing: true };
-                obj1[1] = applicationId;
-                obj1[2] = tmp78;
-                closure_1_1(closure_1_2[5]).dispatch(obj1);
-                frame = 2;
-                const obj20 = closure_1_1(closure_1_2[5]);
-                c5 = 4;
-                c6 = 1;
-                const obj2 = { value: null, done: false };
-                obj2[0] = callback(closure_1_2[6]).createProxyTicket(applicationId, closure_1_7(frame.surface));
-                return obj2;
-              }
-              tmp78 = callback;
-            }
-          } else if (1 === tmp9) {
-            frame = 0;
-            let obj10 = applicationId(573);
-            let obj3 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: null, frameId: null, refreshing: false };
-            obj3[1] = applicationId;
-            obj3[2] = callback;
-            obj10.dispatch(obj3);
-            throw closure_3;
-          } else if (2 === tmp9) {
-            frame = 1;
-            c5 = closure_3;
-            closure_3 = applicationId(9519)();
-            let obj8 = callback(9532);
-            c5 = 3;
-            c6 = 1;
-            const obj4 = { value: null, done: false };
-            obj4[0] = obj8.getActivityLaunchErrorInfo(c5, applicationId);
-            return obj4;
-          } else if (3 === tmp9) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              frame = 0;
-              let obj5 = applicationId(573);
-              obj5 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: null, frameId: null, refreshing: false };
-              obj5[1] = applicationId;
-              obj5[2] = callback;
-              obj5.dispatch(obj5);
-              c6 = 3;
-              const obj6 = { value: null, done: true };
-              obj6[0] = arg1;
-              return obj6;
-            } else {
-              frame = arg1;
-              closure_3.showLaunchErrorModal(frame.message);
-              frame = 0;
-              obj3 = applicationId(573);
-              const obj7 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: null, frameId: null, refreshing: false };
-              obj7[1] = applicationId;
-              obj7[2] = callback;
-              obj3.dispatch(obj7);
-              c6 = 3;
-              return { value: false, done: true };
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            frame = 0;
-            obj = applicationId(573);
-            obj8 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: null, frameId: null, refreshing: false };
-            obj8[1] = applicationId;
-            obj8[2] = callback;
-            obj.dispatch(obj8);
-            c6 = 3;
-            const obj9 = { value: null, done: true };
-            obj9[0] = arg1;
-            return obj9;
-          } else {
-            dependencyMap = arg1;
-            obj10 = { type: "FRAME_UPDATE_PROXY_TICKET", applicationId: null, frameId: null, proxyTicket: null };
-            obj10[1] = applicationId;
-            obj10[2] = callback;
-            obj10[3] = dependencyMap;
-            applicationId(573).dispatch(obj10);
-            frame = 0;
-            const obj16 = applicationId(573);
-            const obj11 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: null, frameId: null, refreshing: false };
-            obj11[1] = applicationId;
-            obj11[2] = callback;
-            applicationId(573).dispatch(obj11);
-            c6 = 3;
-            return { value: true, done: true };
-          }
-        } catch (tmp54) {
-          closure_3 = tmp54;
-          if (tmp5 === frame) {
-            c6 = tmp3;
-            throw tmp54;
-          } else if (tmp2 === tmp56) {
-            c5 = tmp2;
-          } else {
-            c5 = tmp;
-          }
-        }
-      }
-    })();
-  });
-  closure_16 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+let closure_16 = async function _refreshProxyTicket(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp8 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    applyArgumentsResult = apply(self, arguments);
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp4;
+          closure_1 = tmp6;
+          closure_129_0 = closure_0;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          frame = frame.getFrame(closure_0);
+          if (null == frame) {
+            c6 = 3;
+            return { value: false, done: true };
+          } else {
+            const applicationId = frame.applicationId;
+            closure_129_1 = applicationId;
+            const obj5 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId, frameId: tmp77, refreshing: true };
+            DispatcherDefault.dispatch(obj5);
+            c4 = 2;
+            c5 = 4;
+            c6 = 1;
+            const obj7 = { value: EmbeddedActivitiesActionCreators.createProxyTicket(applicationId, React5(frame.surface)), done: false };
+            return obj7;
+          }
+          tmp77 = closure_0;
+        }
+      } else if (1 === tmp9) {
+        c4 = 0;
+        const obj8 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: closure_129_1, frameId: closure_129_0, refreshing: false };
+        closure_130_1(closure_130_2[5]).dispatch(obj8);
+        throw closure_3;
+      } else if (2 === tmp9) {
+        c4 = 1;
+        closure_129_5 = closure_3;
+        closure_129_3 = closure_130_1(closure_130_2[7])();
+        c5 = 3;
+        c6 = 1;
+        const obj10 = { value: closure_130_0(closure_130_2[8]).getActivityLaunchErrorInfo(closure_129_5, closure_129_1), done: false };
+        return obj10;
+      } else if (3 === tmp9) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 0;
+          const obj12 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: closure_129_1, frameId: closure_129_0, refreshing: false };
+          closure_130_1(closure_130_2[5]).dispatch(obj12);
+          c6 = 3;
+          const obj13 = { value, done: true };
+          return obj13;
+        } else {
+          closure_129_4 = value;
+          closure_129_3.showLaunchErrorModal(closure_129_4.message);
+          c4 = 0;
+          const obj14 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: closure_129_1, frameId: closure_129_0, refreshing: false };
+          closure_130_1(closure_130_2[5]).dispatch(obj14);
+          c6 = 3;
+          return { value: false, done: true };
+        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        const obj15 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: closure_129_1, frameId: closure_129_0, refreshing: false };
+        closure_130_1(closure_130_2[5]).dispatch(obj15);
+        c6 = 3;
+        const obj17 = { value, done: true };
+        return obj17;
+      } else {
+        closure_129_2 = value;
+        const obj19 = { type: "FRAME_UPDATE_PROXY_TICKET", applicationId: closure_129_1, frameId: closure_129_0, proxyTicket: closure_129_2 };
+        closure_130_1(closure_130_2[5]).dispatch(obj19);
+        c4 = 0;
+        const obj16 = closure_130_1(closure_130_2[5]);
+        const obj21 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: closure_129_1, frameId: closure_129_0, refreshing: false };
+        closure_130_1(closure_130_2[5]).dispatch(obj21);
+        c6 = 3;
+        return { value: true, done: true };
+      }
+    } catch (tmp54) {
+      closure_3 = tmp54;
+      if (tmp5 === c4) {
+        c6 = tmp3;
+        throw tmp54;
+      } else if (tmp2 === tmp56) {
+        c5 = tmp2;
+      } else {
+        c5 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
-({ FrameIntent: c5, FrameLayoutModes: closure_6, getChannelIdForSurface: error, getFrameIntentForSurface: closure_8, makeFrameId: c9 } = FrameLayoutModes);
-let result = require("set").fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");
+};
+const FramesConstants = fn(9543);
+({ FrameIntent: hasOwnProperty, FrameLayoutModes: metroRequire, getChannelIdForSurface: closure_7, getFrameIntentForSurface: closure_8, makeFrameId: closure_9 } = FramesConstants);
+const ActivityPanelModes = fn(9537).ActivityPanelModes;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");
 
-export const launchFrame = function launchFrame(closure_0) {
+export const launchFrame = function launchFrame() {
   const self = this;
-  const apply = _launchFrame.apply;
+  const apply = closure_11.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -443,41 +340,28 @@ export { demoteMainFrame };
 export { promoteFrame };
 export { updateFrameLayoutMode };
 export const setFramePrefersPictureInPictureOnNavigateAway = function setFramePrefersPictureInPictureOnNavigateAway(frameId, enabled) {
-  let obj = dispatcherDefault;
-  obj = { type: "FRAME_SET_PREFERS_PICTURE_IN_PICTURE_ON_NAVIGATE_AWAY", frameId, enabled };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "FRAME_SET_PREFERS_PICTURE_IN_PICTURE_ON_NAVIGATE_AWAY", frameId, enabled });
 };
 export const updateFramePanelMode = function updateFramePanelMode(id, PIP) {
-  let obj = dispatcherDefault;
-  obj = { type: "FRAME_SET_PANEL_MODE", frameId: id, activityPanelMode: PIP };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "FRAME_SET_PANEL_MODE", frameId: id, activityPanelMode: PIP });
 };
 export const resetFrameLayoutModes = function resetFrameLayoutModes(frameId) {
-  const frame = store.getFrame(frameId);
+  const frame = FramesStore.getFrame(frameId);
   if (null != frame) {
-    let obj = dispatcherDefault;
-    obj = { type: "FRAME_UPDATE_LAYOUT_MODE", applicationId: null, frameId: null, layoutMode: null };
-    obj[1] = frame.applicationId;
-    obj[2] = frameId;
-    obj[3] = constants2.FOCUSED;
-    obj.dispatch(obj);
+    const obj2 = { type: "FRAME_UPDATE_LAYOUT_MODE", applicationId: frame.applicationId, frameId, layoutMode: constants2.FOCUSED };
+    DispatcherDefault.dispatch(obj2);
   }
-  obj = { type: "FRAME_SET_PANEL_MODE", frameId, activityPanelMode: ActivityPanelModes.PANEL };
-  dispatcherDefault.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "FRAME_SET_PANEL_MODE", frameId, activityPanelMode: ActivityPanelModes.PANEL });
 };
 export const attachFrameIframe = function attachFrameIframe(frameId, iframeId) {
-  let obj = dispatcherDefault;
-  obj = { type: "FRAME_IFRAME_MOUNT", frameId, iframeId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "FRAME_IFRAME_MOUNT", frameId, iframeId });
 };
 export const detachFrameIframe = function detachFrameIframe(frameId, iframeId) {
-  let obj = dispatcherDefault;
-  obj = { type: "FRAME_IFRAME_UNMOUNT", frameId, iframeId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "FRAME_IFRAME_UNMOUNT", frameId, iframeId });
 };
 export const refreshProxyTicket = function refreshProxyTicket() {
   const self = this;
-  const apply = _refreshProxyTicket.apply;
+  const apply = closure_16.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

@@ -1,18 +1,19 @@
-// Module ID: 9555
-// Function ID: 9556
-// Dependencies: [3, 9556, 9557, 9563, 9567, 2]
+// Module ID: 9582
+// Function ID: 9583
+// Name: WebViewPostMessageTransport
+// Dependencies: [3, 9583, 9584, 9590, 9594, 2]
 
-// Module 9555
-import timestampDefault from "timestamp" /* 3 */;
-import stripSensitiveLoggingDataDefault from "stripSensitiveLoggingData" /* 9556 */;
-import loggerDefault from "logger" /* 9567 */;
-import importDefaultResult from "map" /* 9557 */;
+// Module 9582 (WebViewPostMessageTransport)
+import LoggerDefault from "Logger" /* 3 */;
+import stripSensitiveLoggingDataDefault from "stripSensitiveLoggingData" /* 9583 */;
+import WebViewWindowProxySocketFactoryDefault from "WebViewWindowProxySocketFactory" /* 9594 */;
+import PostMessageTransport from "PostMessageTransport" /* 9584 */;
 
-importDefaultResult = new importDefaultResult(require("validateSocketClient").validateSocketClient, new timestampDefault("RPCServer:PostMessage"), loggerDefault, (arg0, info, id) => {
+const tmp2 = new LoggerDefault("RPCServer:PostMessage");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rpc/native/server/transports/WebViewPostMessageTransport.tsx");
+
+export default new PostMessageTransport(fn(9590).validateSocketClient, new LoggerDefault("RPCServer:PostMessage"), WebViewWindowProxySocketFactoryDefault, (arg0, info, id) => {
   const combined = "Socket Message: " + id.id;
   info.info(combined, stripSensitiveLoggingDataDefault(arg0));
 });
-const tmp2 = new timestampDefault("RPCServer:PostMessage");
-const result = require("set").fileFinishedImporting("modules/rpc/native/server/transports/WebViewPostMessageTransport.tsx");
-
-export default importDefaultResult;

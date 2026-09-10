@@ -1,27 +1,27 @@
-// Module ID: 9827
-// Function ID: 9828
-// Name: isGuildMember
-// Dependencies: [1956, 1957, 2021, 4575, 4209, 1371, 7218, 1074, 7736, 5442, 9828, 1114, 2]
+// Module ID: 9854
+// Function ID: 9855
+// Name: InstantInviteUtils
+// Dependencies: [1956, 1957, 2021, 4589, 4222, 1371, 7232, 1074, 7750, 5456, 9855, 1114, 2]
 // Exports: generateRowsForQuery, getMostRecentDMedUser, getUsersAlreadyJoined, groupInviteSuggestions, maxAgeString, urgentShareMessageString
 
-// Module 9827 (isGuildMember)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import NOOPDefault from "NOOP" /* 5442 */;
-import closure_3 from "participantFromServer" /* 1956 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "trackCommunicationDisabled" /* 2021 */;
-import closure_6 from "generateOldThreadCutoff" /* 4575 */;
-import closure_7 from "markAllUserIdListsStale" /* 4209 */;
-import closure_8 from "mergeGuildAvatar" /* 1371 */;
-import closure_9 from "makeSortedChannel" /* 7218 */;
-import { ChannelTypes } from "ME" /* 1074 */;
-import { InviteTargetTypes } from "InviteSendStates" /* 7736 */;
+// Module 9854 (InstantInviteUtils)
+import util from "util" /* 1114 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5456 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import ReadStateStore from "ReadStateStore" /* 4589 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
+import UserStore from "UserStore" /* 1371 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7232 */;
 
-require = arg1;
-function isGuildMember(omitGuildId, id) {
-  let isMemberResult = null != omitGuildId;
+const require = globalThis.__r;
+
+require = fn;
+function isGuildMember(dependencyMap, id) {
+  let isMemberResult = null != dependencyMap;
   if (isMemberResult) {
-    isMemberResult = member.isMember(omitGuildId, id);
+    isMemberResult = GuildMemberStore.isMember(dependencyMap, id);
   }
   return isMemberResult;
 }
@@ -29,7 +29,7 @@ function addDmUsers(arg0) {
   ({ omitUserIds, maxRowsWithoutQuery, shownUserIds, rows, counts, limit } = arg0);
   let num = 0;
   ({ omitGuildId, includeGroupDms } = arg0);
-  const privateChannelIds = store2.getPrivateChannelIds();
+  const privateChannelIds = PrivateChannelSortStore.getPrivateChannelIds();
   const iter = privateChannelIds[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -37,73 +37,49 @@ function addDmUsers(arg0) {
     if (null != maxRowsWithoutQuery) {
       if (maxRowsWithoutQuery > 0) {
         if (rows.length >= maxRowsWithoutQuery) {
-          let tmp30 = iter;
           iter.return();
           break;
         }
       }
     }
     if (null != limit) {
-      let tmp4 = num;
       if (num >= limit) {
-        let tmp29 = iter;
         iter.return();
         break;
       }
       break;
     }
-    let tmp5 = store;
-    let tmp6 = nextResult;
-    let channel = store.getChannel(tmp3);
-    obj = channel;
+    let channel = ChannelStore.getChannel(tmp3);
+    let item = channel;
     if (null != channel) {
-      let tmp31 = channel;
-      if (obj.isPrivate()) {
+      if (item.isPrivate()) {
         if (includeGroupDms) {
-          let tmp8 = channel;
-          let tmp9 = ChannelTypes;
-          if (obj.type === ChannelTypes.GROUP_DM) {
-            obj = { type: null, item: null, isSuggested: false };
-            let tmp25 = obj;
-            obj[0] = obj.GROUP_DM;
-            let tmp26 = channel;
-            obj[1] = obj;
-            let arr = rows.push(obj);
+          if (item.type === ChannelTypes.GROUP_DM) {
+            let obj2 = { type: null, item: null, isSuggested: false };
+            obj2.type = item.GROUP_DM;
+            obj2.item = item;
+            let arr = rows.push(obj2);
             counts.numGroupDms = counts.numGroupDms + 1;
-            let tmp28 = num;
             num = num + 1;
           }
         }
-        let tmp10 = closure_6;
-        let tmp11 = channel;
-        if (null != closure_6.lastMessageId(obj.id)) {
-          let tmp32 = channel;
-          let recipientId = obj.getRecipientId();
+        if (null != ReadStateStore.lastMessageId(item.id)) {
+          let recipientId = item.getRecipientId();
           let tmp34 = recipientId;
           if (null != recipientId) {
-            let tmp35 = recipientId;
             if (!omitUserIds.has(tmp34)) {
-              let tmp12 = recipientId;
               if (!shownUserIds.has(tmp34)) {
-                let tmp13 = authStore;
-                let tmp14 = recipientId;
-                let user = authStore.getUser(tmp34);
+                let user = UserStore.getUser(tmp34);
                 let tmp16 = user;
                 if (null != user) {
-                  let tmp17 = user;
                   if (!tmp16.bot) {
-                    let tmp18 = isGuildMember;
-                    let tmp19 = user;
                     if (!isGuildMember(omitGuildId, tmp16.id)) {
-                      let tmp20 = user;
                       let addResult = shownUserIds.add(tmp16.id);
-                      obj = { type: null, item: null, isSuggested: false };
-                      let tmp22 = obj;
-                      obj[0] = obj.DM;
-                      obj[1] = tmp16;
-                      arr = rows.push(obj);
+                      let obj3 = { type: null, item: null, isSuggested: false };
+                      obj3.type = item.DM;
+                      obj3.item = tmp16;
+                      let arr2 = rows.push(obj3);
                       counts.numDms = counts.numDms + 1;
-                      let tmp24 = num;
                       num = num + 1;
                     }
                   }
@@ -119,29 +95,34 @@ function addDmUsers(arg0) {
     continue;
   }
 }
-let obj = { GROUP_DM: "GROUP_DM", DM: "DM", FRIEND: "FRIEND", CHANNEL: "CHANNEL" };
+const ChannelTypes = fn(1074).ChannelTypes;
+const InviteTargetTypes = fn(7750).InviteTargetTypes;
+const RowTypes = { GROUP_DM: "GROUP_DM", DM: "DM", FRIEND: "FRIEND", CHANNEL: "CHANNEL" };
 const minutes = "minutes";
 const hours = "hours";
 const days = "days";
 const never = "never";
-let closure_19 = { [arg1(9828).INVITE_OPTIONS_30_MINUTES.value]: { value: 30, type: "minutes" }, [arg1(9828).INVITE_OPTIONS_1_HOUR.value]: { value: 1, type: "hours" }, [arg1(9828).INVITE_OPTIONS_6_HOURS.value]: { value: 6, type: "hours" }, [arg1(9828).INVITE_OPTIONS_12_HOURS.value]: { value: 12, type: "hours" }, [arg1(9828).INVITE_OPTIONS_1_DAY.value]: { value: 1, type: "days" }, [arg1(9828).INVITE_OPTIONS_7_DAYS.value]: { value: 7, type: "days" }, [arg1(9828).INVITE_OPTIONS_14_DAYS.value]: { value: 14, type: "days" }, [arg1(9828).INVITE_OPTIONS_30_DAYS.value]: { value: 30, type: "days" }, [arg1(9828).INVITE_OPTIONS_60_DAYS.value]: { value: 60, type: "days" }, [arg1(9828).INVITE_OPTIONS_FOREVER.value]: { value: 0, type: "never" } };
-let items = [require("get label").INVITE_OPTIONS_14_DAYS, require("get label").INVITE_OPTIONS_30_DAYS, require("get label").INVITE_OPTIONS_60_DAYS];
-obj = {
+const dependencyMap = { [fn(9855).INVITE_OPTIONS_30_MINUTES.value]: { value: 30, type: "minutes" }, [fn(9855).INVITE_OPTIONS_1_HOUR.value]: { value: 1, type: "hours" }, [fn(9855).INVITE_OPTIONS_6_HOURS.value]: { value: 6, type: "hours" }, [fn(9855).INVITE_OPTIONS_12_HOURS.value]: { value: 12, type: "hours" }, [fn(9855).INVITE_OPTIONS_1_DAY.value]: { value: 1, type: "days" }, [fn(9855).INVITE_OPTIONS_7_DAYS.value]: { value: 7, type: "days" }, [fn(9855).INVITE_OPTIONS_14_DAYS.value]: { value: 14, type: "days" }, [fn(9855).INVITE_OPTIONS_30_DAYS.value]: { value: 30, type: "days" }, [fn(9855).INVITE_OPTIONS_60_DAYS.value]: { value: 60, type: "days" }, [fn(9855).INVITE_OPTIONS_FOREVER.value]: { value: 0, type: "never" } };
+let items = [fn(9855).INVITE_OPTIONS_14_DAYS, fn(9855).INVITE_OPTIONS_30_DAYS, fn(9855).INVITE_OPTIONS_60_DAYS];
+const size = fn(2);
+const result = size.fileFinishedImporting("utils/InstantInviteUtils.tsx");
+
+export default {
   getMaxAgeOptionByValue(label) {
     closure_0 = label;
     items = [...items];
     return items.find((value) => value.value === closure_0) || null;
   },
   getMaxAgeOptions(arg0) {
-    const _require = arg0;
-    const MAX_AGE_OPTIONS = _require(9828).MAX_AGE_OPTIONS;
+    _require = arg0;
+    const MAX_AGE_OPTIONS = require("utils/InstantInviteUtils").MAX_AGE_OPTIONS;
     return MAX_AGE_OPTIONS.filter((value) => {
-      const hasItem = closure_1_20.includes(value);
+      const hasItem = items.includes(value);
       let tmp2 = !hasItem;
       if (hasItem) {
         let hasItem1;
-        if (obj != null) {
-          const includeExperimentalValues = obj.includeExperimentalValues;
+        if (closure_0 != null) {
+          const includeExperimentalValues = closure_0.includeExperimentalValues;
           if (includeExperimentalValues != null) {
             const includes = includeExperimentalValues.includes;
             if (includes != null) {
@@ -154,30 +135,27 @@ obj = {
       return tmp2;
     });
   },
-  getMaxUsesOptions: require("get label").MAX_USES_OPTIONS,
-  INVITE_OPTIONS_FOREVER: require("get label").INVITE_OPTIONS_FOREVER,
-  INVITE_OPTIONS_1_DAY: require("get label").INVITE_OPTIONS_1_DAY,
-  INVITE_OPTIONS_7_DAYS: require("get label").INVITE_OPTIONS_7_DAYS,
-  INVITE_OPTIONS_14_DAYS: require("get label").INVITE_OPTIONS_14_DAYS,
-  INVITE_OPTIONS_30_DAYS: require("get label").INVITE_OPTIONS_30_DAYS,
-  INVITE_OPTIONS_60_DAYS: require("get label").INVITE_OPTIONS_60_DAYS,
-  INVITE_OPTIONS_12_HOURS: require("get label").INVITE_OPTIONS_12_HOURS,
-  INVITE_OPTIONS_6_HOURS: require("get label").INVITE_OPTIONS_6_HOURS,
-  INVITE_OPTIONS_8_HOURS: require("get label").INVITE_OPTIONS_8_HOURS,
-  INVITE_OPTIONS_1_HOUR: require("get label").INVITE_OPTIONS_1_HOUR,
-  INVITE_OPTIONS_30_MINUTES: require("get label").INVITE_OPTIONS_30_MINUTES,
-  INVITE_OPTIONS_UNLIMITED: require("get label").INVITE_OPTIONS_UNLIMITED,
-  INVITE_OPTIONS_ONCE: require("get label").INVITE_OPTIONS_ONCE,
-  INVITE_OPTIONS_5_TIMES: require("get label").INVITE_OPTIONS_5_TIMES,
-  INVITE_OPTIONS_10_TIMES: require("get label").INVITE_OPTIONS_10_TIMES,
-  INVITE_OPTIONS_25_TIMES: require("get label").INVITE_OPTIONS_25_TIMES,
-  INVITE_OPTIONS_50_TIMES: require("get label").INVITE_OPTIONS_50_TIMES,
-  INVITE_OPTIONS_100_TIMES: require("get label").INVITE_OPTIONS_100_TIMES
+  getMaxUsesOptions: fn(9855).MAX_USES_OPTIONS,
+  INVITE_OPTIONS_FOREVER: fn(9855).INVITE_OPTIONS_FOREVER,
+  INVITE_OPTIONS_1_DAY: fn(9855).INVITE_OPTIONS_1_DAY,
+  INVITE_OPTIONS_7_DAYS: fn(9855).INVITE_OPTIONS_7_DAYS,
+  INVITE_OPTIONS_14_DAYS: fn(9855).INVITE_OPTIONS_14_DAYS,
+  INVITE_OPTIONS_30_DAYS: fn(9855).INVITE_OPTIONS_30_DAYS,
+  INVITE_OPTIONS_60_DAYS: fn(9855).INVITE_OPTIONS_60_DAYS,
+  INVITE_OPTIONS_12_HOURS: fn(9855).INVITE_OPTIONS_12_HOURS,
+  INVITE_OPTIONS_6_HOURS: fn(9855).INVITE_OPTIONS_6_HOURS,
+  INVITE_OPTIONS_8_HOURS: fn(9855).INVITE_OPTIONS_8_HOURS,
+  INVITE_OPTIONS_1_HOUR: fn(9855).INVITE_OPTIONS_1_HOUR,
+  INVITE_OPTIONS_30_MINUTES: fn(9855).INVITE_OPTIONS_30_MINUTES,
+  INVITE_OPTIONS_UNLIMITED: fn(9855).INVITE_OPTIONS_UNLIMITED,
+  INVITE_OPTIONS_ONCE: fn(9855).INVITE_OPTIONS_ONCE,
+  INVITE_OPTIONS_5_TIMES: fn(9855).INVITE_OPTIONS_5_TIMES,
+  INVITE_OPTIONS_10_TIMES: fn(9855).INVITE_OPTIONS_10_TIMES,
+  INVITE_OPTIONS_25_TIMES: fn(9855).INVITE_OPTIONS_25_TIMES,
+  INVITE_OPTIONS_50_TIMES: fn(9855).INVITE_OPTIONS_50_TIMES,
+  INVITE_OPTIONS_100_TIMES: fn(9855).INVITE_OPTIONS_100_TIMES
 };
-const result = require("set").fileFinishedImporting("utils/InstantInviteUtils.tsx");
-
-export default obj;
-export const RowTypes = obj;
+export { RowTypes };
 export const generateRowsForQuery = function generateRowsForQuery(arg0) {
   ({ query, inviteTargetType, omitUserIds, suggestedUserIds } = arg0);
   ({ suggestedChannelIds, maxRowsWithoutQuery, omitGuildId } = arg0);
@@ -185,22 +163,16 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
   const rows = [];
   const counts = { numFriends: 0, numDms: 0, numGroupDms: 0, numGuildMembers: 0, numChannels: 0 };
   if ("" === query) {
-    obj = { omitUserIds: null, maxRowsWithoutQuery: null, omitGuildId: null, shownUserIds: null, rows: null, counts: null };
-    obj[0] = omitUserIds;
-    obj[1] = maxRowsWithoutQuery;
-    obj[2] = omitGuildId;
-    obj[3] = set;
-    obj[4] = rows;
-    obj[5] = counts;
+    obj = { omitUserIds, maxRowsWithoutQuery, omitGuildId, shownUserIds: set, rows, counts };
     if (inviteTargetType === InviteTargetTypes.EMBEDDED_APPLICATION) {
-      obj = {};
+      const obj3 = {};
       const merged = Object.assign(obj);
-      obj.includeGroupDms = false;
-      obj.limit = 1;
-      addDmUsers(obj);
-      obj1 = {};
+      obj3.includeGroupDms = false;
+      obj3.limit = 1;
+      addDmUsers(obj3);
+      const obj4 = {};
       const merged1 = Object.assign(obj);
-      obj1.suggestedChannelIds = suggestedChannelIds;
+      obj4.suggestedChannelIds = suggestedChannelIds;
       (function addChannels(arg0) {
         ({ suggestedChannelIds, maxRowsWithoutQuery, rows, counts } = arg0);
         if (null != suggestedChannelIds) {
@@ -211,33 +183,28 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
             if (null != maxRowsWithoutQuery) {
               if (maxRowsWithoutQuery > 0) {
                 if (rows.length >= maxRowsWithoutQuery) {
-                  let tmp12 = iter;
                   iter.return();
                   break;
                 }
                 break;
               }
             }
-            let tmp5 = channel;
-            let tmp6 = nextResult;
             channel = channel.getChannel(tmp4);
             if (null != channel) {
               obj = { type: null, item: null, isSuggested: true };
-              let tmp9 = constants;
-              obj[0] = constants.CHANNEL;
-              let tmp10 = channel;
-              obj[1] = tmp8;
+              obj.type = constants.CHANNEL;
+              obj.item = tmp8;
               let arr = rows.push(obj);
               counts.numChannels = counts.numChannels + 1;
             }
             continue;
           }
         }
-      })(obj1);
+      })(obj4);
     }
-    const obj2 = {};
+    const obj5 = {};
     const merged2 = Object.assign(obj);
-    obj2.suggestedUserIds = suggestedUserIds;
+    obj5.suggestedUserIds = suggestedUserIds;
     (function addSuggestedUsers(arg0) {
       ({ omitUserIds, suggestedUserIds, maxRowsWithoutQuery, shownUserIds, rows, counts } = arg0);
       if (null != suggestedUserIds) {
@@ -248,34 +215,25 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
           if (null != maxRowsWithoutQuery) {
             if (maxRowsWithoutQuery > 0) {
               if (rows.length >= maxRowsWithoutQuery) {
-                let tmp19 = iter;
                 iter.return();
                 break;
               }
               break;
             }
           }
-          let tmp6 = nextResult;
           if (!omitUserIds.has(tmp5)) {
-            let tmp7 = nextResult;
             if (!shownUserIds.has(tmp5)) {
-              let tmp8 = authStore;
-              let tmp9 = nextResult;
               let user = authStore.getUser(tmp5);
               let tmp11 = user;
               let tmp12 = null == user;
               if (!tmp12) {
-                let tmp13 = callback;
-                let tmp14 = user;
-                tmp12 = callback(tmp, tmp11.id);
+                tmp12 = isGuildMember(tmp, tmp11.id);
               }
               if (!tmp12) {
-                let tmp15 = user;
                 let addResult = shownUserIds.add(tmp11.id);
                 obj = { type: null, item: null, isSuggested: true };
-                let tmp17 = constants;
-                obj[0] = constants.FRIEND;
-                obj[1] = tmp11;
+                obj.type = constants.FRIEND;
+                obj.item = tmp11;
                 let arr = rows.push(obj);
                 counts.numFriends = counts.numFriends + 1;
               }
@@ -284,11 +242,11 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
           continue;
         }
       }
-    })(obj2);
-    const obj3 = {};
+    })(obj5);
+    const obj7 = {};
     const merged3 = Object.assign(obj);
-    obj3.includeGroupDms = true;
-    addDmUsers(obj3);
+    obj7.includeGroupDms = true;
+    addDmUsers(obj7);
     (function addFriends(arg0) {
       ({ omitUserIds, maxRowsWithoutQuery, shownUserIds, rows, counts } = arg0);
       friendIDs = friendIDs.getFriendIDs();
@@ -299,32 +257,23 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
         if (null != maxRowsWithoutQuery) {
           if (maxRowsWithoutQuery > 0) {
             if (rows.length >= maxRowsWithoutQuery) {
-              let tmp17 = iter;
               iter.return();
               break;
             }
           }
         }
-        let tmp5 = nextResult;
         if (!omitUserIds.has(tmp4)) {
-          let tmp6 = nextResult;
           if (!shownUserIds.has(tmp4)) {
-            let tmp7 = authStore;
-            let tmp8 = nextResult;
             let user = authStore.getUser(tmp4);
             let tmp10 = user;
             let tmp11 = null == user;
             if (!tmp11) {
-              let tmp12 = callback;
-              let tmp13 = user;
-              tmp11 = callback(tmp, tmp10.id);
+              tmp11 = isGuildMember(tmp, tmp10.id);
             }
             if (!tmp11) {
               obj = { type: null, item: null, isSuggested: false };
-              let tmp14 = constants;
-              obj[0] = constants.FRIEND;
-              let tmp15 = user;
-              obj[1] = tmp10;
+              obj.type = constants.FRIEND;
+              obj.item = tmp10;
               let arr = rows.push(obj);
               counts.numFriends = counts.numFriends + 1;
             }
@@ -334,33 +283,29 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
       }
     })(obj);
   } else {
-    const obj4 = { query: null, rows: null, counts: null };
-    obj4[0] = query;
-    obj4[1] = rows;
-    obj4[2] = counts;
+    const obj9 = { query, rows, counts };
     if (inviteTargetType === InviteTargetTypes.EMBEDDED_APPLICATION) {
-      let obj5 = {};
-      const merged4 = Object.assign(obj4);
-      obj5.inviteTargetType = inviteTargetType;
+      const obj10 = {};
+      const merged4 = Object.assign(obj9);
+      obj10.inviteTargetType = inviteTargetType;
       c0 = undefined;
       importDefault = undefined;
-      ({ rows: c0, counts: c1 } = obj5);
-      if (obj5.inviteTargetType === tmp40.EMBEDDED_APPLICATION) {
-        obj1 = NOOPDefault;
-        const obj6 = { query: null, limit: 3, guildId: "sa" };
-        obj6[0] = tmp44;
-        let item = obj1.queryChannels(obj6).forEach((item) => {
-          _undefined.push({ type: closure_1_12.CHANNEL, item: item.record, isSuggested: false, score: item.score });
+      ({ rows: c0, counts: c1 } = obj10);
+      if (obj10.inviteTargetType === tmp40.EMBEDDED_APPLICATION) {
+        const obj12 = { query: tmp44, limit: 3, guildId: "w" };
+        let item = AutocompleteUtilsDefault.queryChannels(obj12).forEach((record) => {
+          obj = { type: obj.CHANNEL, item: record.record, isSuggested: false, score: record.score };
+          _undefined.push(obj);
           _undefined2.numChannels = _undefined2.numChannels + 1;
         });
-        const queryChannelsResult = obj1.queryChannels(obj6);
+        const queryChannelsResult = AutocompleteUtilsDefault.queryChannels(obj12);
       }
     }
-    let obj7 = {};
-    const merged5 = Object.assign(obj4);
-    obj7.omitUserIds = omitUserIds;
-    obj7.shownUserIds = set;
-    obj7.suggestedUserIds = suggestedUserIds;
+    const obj13 = {};
+    const merged5 = Object.assign(obj9);
+    obj13.omitUserIds = omitUserIds;
+    obj13.shownUserIds = set;
+    obj13.suggestedUserIds = suggestedUserIds;
     (function addQueriedSuggestedUsers(suggestedUserIds) {
       ({ rows: c0, counts: c1, omitUserIds, shownUserIds } = suggestedUserIds);
       suggestedUserIds = suggestedUserIds.suggestedUserIds;
@@ -369,110 +314,96 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
         for (const item10012 of suggestedUserIds) {
           let tmp3 = item10012;
           if (!omitUserIds.has(item10012)) {
-            let tmp4 = item10012;
             if (!shownUserIds.has(tmp3)) {
-              let tmp5 = authStore;
-              let tmp6 = item10012;
               let user = authStore.getUser(tmp3);
               if (null != user) {
-                let tmp9 = user;
                 let arr = items.push(tmp8);
               }
             }
           }
           continue;
         }
+        const obj2 = { query: tmp, members: items, limit: 10 };
         obj = _undefined2(shownUserIds[9]);
-        obj = { query: null, members: null, limit: 10 };
-        obj[0] = tmp;
-        obj[1] = items;
-        const item = obj.queryMemberList(obj).forEach((record) => {
+        const item = _undefined2(shownUserIds[9]).queryMemberList(obj2).forEach((record) => {
           record = record.record;
           shownUserIds.add(record.id);
+          _undefined.push({ type: constants.FRIEND, item: record, isSuggested: true, score: record.score });
           numFriends.numFriends = numFriends.numFriends + 1;
         });
-        const queryMemberListResult = obj.queryMemberList(obj);
+        const queryMemberListResult = _undefined2(shownUserIds[9]).queryMemberList(obj2);
       }
-    })(obj7);
-    const obj8 = {};
-    const merged6 = Object.assign(obj4);
-    obj8.omitUserIds = omitUserIds;
-    obj8.shownUserIds = set;
-    c0 = undefined;
-    importDefault = undefined;
-    dependencyMap = undefined;
-    c3 = undefined;
-    ({ omitUserIds: c0, shownUserIds: c1, rows: c2, counts: c3 } = obj8);
-    obj5 = NOOPDefault;
-    const obj9 = { query: null, limit: 50 };
-    obj9[0] = obj8.query;
-    const item1 = obj5.queryDMUsers(obj9).forEach((record) => {
+    })(obj13);
+    const obj14 = {};
+    const merged6 = Object.assign(obj9);
+    obj14.omitUserIds = omitUserIds;
+    obj14.shownUserIds = set;
+    closure_129_0 = undefined;
+    closure_129_1 = undefined;
+    closure_129_2 = undefined;
+    closure_129_3 = undefined;
+    ({ omitUserIds: closure_129_0, shownUserIds: closure_129_1, rows: closure_129_2, counts: closure_129_3 } = obj14);
+    const obj15 = { query: obj14.query, limit: 50 };
+    const item1 = AutocompleteUtilsDefault.queryDMUsers(obj15).forEach((record) => {
       record = record.record;
       if (!_undefined.has(record.id)) {
-        obj = _undefined2;
         if (!_undefined2.has(record.id)) {
-          const dMFromUserId = closure_1_4.getDMFromUserId(record.id);
+          const dMFromUserId = ChannelStore.getDMFromUserId(record.id);
           let tmp4 = null != dMFromUserId;
           if (tmp4) {
-            tmp4 = null != closure_1_6.lastMessageId(dMFromUserId);
+            tmp4 = null != ReadStateStore.lastMessageId(dMFromUserId);
           }
           if (tmp4) {
             obj.add(record.id);
-            obj = { type: null, item: null, isSuggested: false, score: null };
-            obj[0] = closure_1_12.DM;
-            obj[1] = record;
-            obj[3] = record.score;
-            _undefined3.push(obj);
-            _undefined4.numDms = _undefined4.numDms + 1;
+            const obj2 = { type: obj.DM, item: record, isSuggested: false, score: record.score };
+            dependencyMap.push(obj2);
+            set.numDms = set.numDms + 1;
           }
         }
       }
     });
-    c0 = undefined;
-    importDefault = undefined;
-    ({ rows: c0, counts: c1, query: query2 } = obj4);
-    obj7 = NOOPDefault;
-    let obj10 = { query: null, limit: 50, fuzzy: false };
-    obj10[0] = query2;
-    const queryDMUsersResult = obj5.queryDMUsers(obj9);
-    const item2 = obj7.queryGroupDMs(obj10).forEach((item) => {
-      _undefined.push({ type: closure_1_12.GROUP_DM, item: item.record, isSuggested: false, score: item.score });
+    closure_130_0 = undefined;
+    closure_130_1 = undefined;
+    ({ rows: closure_130_0, counts: closure_130_1, query: query2 } = obj9);
+    const queryDMUsersResult = AutocompleteUtilsDefault.queryDMUsers(obj15);
+    const obj16 = { query: query2, limit: 50, fuzzy: false };
+    const item2 = AutocompleteUtilsDefault.queryGroupDMs(obj16).forEach((record) => {
+      obj = { type: obj.GROUP_DM, item: record.record, isSuggested: false, score: record.score };
+      _undefined.push(obj);
       _undefined2.numGroupDms = _undefined2.numGroupDms + 1;
     });
-    const obj11 = {};
-    const merged7 = Object.assign(obj4);
-    obj11.omitUserIds = omitUserIds;
-    obj11.shownUserIds = set;
-    c0 = undefined;
-    importDefault = undefined;
-    dependencyMap = undefined;
-    c3 = undefined;
-    ({ rows: c0, counts: c1, omitUserIds: c2, shownUserIds: c3, query: query3 } = obj11);
-    obj10 = NOOPDefault;
-    const obj12 = { query: null, limit: 500, _fuzzy: false };
-    obj12[0] = query3;
-    const queryGroupDMsResult = obj7.queryGroupDMs(obj10);
-    const item3 = obj10.queryFriends(obj12).forEach((record) => {
+    const obj17 = {};
+    const merged7 = Object.assign(obj9);
+    obj17.omitUserIds = omitUserIds;
+    obj17.shownUserIds = set;
+    closure_131_0 = undefined;
+    closure_131_1 = undefined;
+    closure_131_2 = undefined;
+    closure_131_3 = undefined;
+    ({ rows: closure_131_0, counts: closure_131_1, omitUserIds: closure_131_2, shownUserIds: closure_131_3, query: query3 } = obj17);
+    const queryGroupDMsResult = AutocompleteUtilsDefault.queryGroupDMs(obj16);
+    const obj18 = { query: query3, limit: 500, _fuzzy: false };
+    const item3 = AutocompleteUtilsDefault.queryFriends(obj18).forEach((record) => {
       record = record.record;
-      let hasItem = _undefined3.has(record.id);
+      let hasItem = dependencyMap.has(record.id);
       if (!hasItem) {
-        hasItem = _undefined4.has(record.id);
+        hasItem = set.has(record.id);
       }
       if (!hasItem) {
-        _undefined4.add(record.id);
+        set.add(record.id);
         obj = { type: null, item: null, isSuggested: false, score: null };
-        obj[0] = closure_1_12.FRIEND;
-        obj[1] = record;
-        obj[3] = record.score;
+        obj.type = obj.FRIEND;
+        obj.item = record;
+        obj.score = record.score;
         _undefined.push(obj);
         _undefined2.numFriends = _undefined2.numFriends + 1;
       }
     });
-    const queryFriendsResult = obj10.queryFriends(obj12);
+    const queryFriendsResult = AutocompleteUtilsDefault.queryFriends(obj18);
   }
   return { rows, counts };
 };
-export const groupInviteSuggestions = function groupInviteSuggestions(arg0, omitGuildId) {
+export const groupInviteSuggestions = function groupInviteSuggestions(arg0, dependencyMap) {
   items = [];
   const items1 = [];
   const iter = arg0[Symbol.iterator]();
@@ -484,56 +415,38 @@ export const groupInviteSuggestions = function groupInviteSuggestions(arg0, omit
     if (obj.FRIEND !== type) {
       if (tmp3.DM !== type) {
         if (tmp3.CHANNEL === type) {
-          let tmp4 = nextResult;
           let arr = items1.push(tmp2);
         }
       }
       continue;
     }
-    let tmp6 = isGuildMember;
-    let tmp7 = nextResult;
-    if (isGuildMember(omitGuildId, tmp2.item.id)) {
-      let tmp10 = nextResult;
-      arr = items.push(tmp2);
+    if (isGuildMember(dependencyMap, tmp2.item.id)) {
+      let arr2 = items.push(tmp2);
     } else {
-      let tmp8 = nextResult;
-      let arr1 = items1.push(tmp2);
+      let arr3 = items1.push(tmp2);
     }
   }
   const items2 = [items, items1];
   return items2;
 };
 export const getMostRecentDMedUser = function getMostRecentDMedUser(set, id) {
-  const privateChannelIds = store2.getPrivateChannelIds();
+  const privateChannelIds = PrivateChannelSortStore.getPrivateChannelIds();
   obj = privateChannelIds[Symbol.iterator]();
   while (obj !== undefined) {
-    let tmp3 = store;
-    let channel = store.getChannel(tmp2);
+    let channel = ChannelStore.getChannel(tmp2);
     let obj2 = channel;
     if (null != channel) {
-      let tmp20 = channel;
       if (obj2.isDM()) {
-        let tmp5 = closure_6;
-        let tmp6 = channel;
-        if (null != closure_6.lastMessageId(obj2.id)) {
-          let tmp7 = channel;
+        if (null != ReadStateStore.lastMessageId(obj2.id)) {
           let recipientId = obj2.getRecipientId();
           let tmp9 = recipientId;
           if (null != recipientId) {
-            let tmp10 = recipientId;
             if (!set.has(tmp9)) {
-              let tmp11 = authStore;
-              let tmp12 = recipientId;
-              let user = authStore.getUser(tmp9);
+              let user = UserStore.getUser(tmp9);
               let tmp14 = user;
               if (null != user) {
-                let tmp15 = user;
                 if (!tmp14.bot) {
-                  let tmp16 = isGuildMember;
-                  let tmp17 = user;
                   if (!isGuildMember(id, tmp14.id)) {
-                    let tmp18 = user;
-                    let tmp19 = obj;
                     obj.return();
                     return tmp14;
                   }
@@ -554,17 +467,14 @@ export const getUsersAlreadyJoined = function getUsersAlreadyJoined(channel) {
   channel = channel.channel;
   if (channel.inviteTargetType === InviteTargetTypes.EMBEDDED_APPLICATION) {
     if (null != channel) {
-      embeddedActivitiesForChannel = embeddedActivitiesForChannel.getEmbeddedActivitiesForChannel(channel.id);
+      const embeddedActivitiesForChannel = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(channel.id);
       for (const item10016 of embeddedActivitiesForChannel) {
-        let tmp7 = item10016;
         if (item10016.applicationId === tmp) {
           let tmp8 = globalThis;
           let _Set = Set;
           let tmp9 = new.target;
           let tmp10 = new.target;
           let set = new Set(item10016.userIds);
-          let tmp12 = set;
-          let tmp13 = obj;
           obj.return();
           return set;
         }
@@ -575,55 +485,47 @@ export const getUsersAlreadyJoined = function getUsersAlreadyJoined(channel) {
 };
 export const maxAgeString = function maxAgeString(maxAge, maxUses) {
   const parsed = parseInt(maxUses, 10);
-  const value = dependencyMap2[maxAge].value;
-  const type = dependencyMap2[maxAge].type;
+  value = dependencyMap[maxAge].value;
+  const type = dependencyMap[maxAge].type;
   if (minutes === type) {
-    const intl4 = getSystemLocale.intl;
+    const intl4 = util.intl;
     if (tmp2) {
       let stringResult = intl4.string(tmp13(1114).t["/WbTXD"]);
     } else {
-      obj = { numUses: null };
-      obj[0] = parsed;
-      stringResult = intl4.formatToPlainString(tmp13(1114).t.eDRWJK, obj);
+      const obj2 = { numUses: parsed };
+      stringResult = intl4.formatToPlainString(tmp13(1114).t.eDRWJK, obj2);
     }
     return stringResult;
   } else if (hours === type) {
-    const intl3 = getSystemLocale.intl;
+    const intl3 = util.intl;
     const formatToPlainString2 = intl3.formatToPlainString;
-    const t2 = getSystemLocale.t;
+    const t2 = util.t;
     if (tmp2) {
-      obj = { numHours: null };
-      obj[0] = value;
-      let formatToPlainString2Result = formatToPlainString2(t2.ZVdJMy, obj);
+      const obj3 = { numHours: value };
+      let formatToPlainString2Result = formatToPlainString2(t2.ZVdJMy, obj3);
     } else {
-      obj1 = { numHours: null, numUses: null };
-      obj1[0] = value;
-      obj1[1] = parsed;
-      formatToPlainString2Result = formatToPlainString2(t2.NgZgAB, obj1);
+      const obj4 = { numHours: value, numUses: parsed };
+      formatToPlainString2Result = formatToPlainString2(t2.NgZgAB, obj4);
     }
     return formatToPlainString2Result;
   } else if (days === type) {
-    const intl2 = getSystemLocale.intl;
+    const intl2 = util.intl;
     const formatToPlainString = intl2.formatToPlainString;
-    const t = getSystemLocale.t;
+    const t = util.t;
     if (tmp2) {
-      const obj2 = { numDays: null };
-      obj2[0] = value;
-      let formatToPlainStringResult = formatToPlainString(t.T96qss, obj2);
+      const obj5 = { numDays: value };
+      let formatToPlainStringResult = formatToPlainString(t.T96qss, obj5);
     } else {
-      const obj3 = { numDays: null, numUses: null };
-      obj3[0] = value;
-      obj3[1] = parsed;
-      formatToPlainStringResult = formatToPlainString(t.TfuB9B, obj3);
+      const obj6 = { numDays: value, numUses: parsed };
+      formatToPlainStringResult = formatToPlainString(t.TfuB9B, obj6);
     }
     return formatToPlainStringResult;
   } else if (never === type) {
-    const intl = getSystemLocale.intl;
+    const intl = util.intl;
     if (tmp2) {
       let stringResult1 = intl.string(tmp4(1114).t.QrHBnC);
     } else {
-      obj = { numUses: null };
-      obj[0] = parsed;
+      obj = { numUses: parsed };
       stringResult1 = intl.formatToPlainString(tmp4(1114).t.yJnTxI, obj);
     }
     return stringResult1;
@@ -631,38 +533,30 @@ export const maxAgeString = function maxAgeString(maxAge, maxUses) {
     return "";
   }
 };
-export const urgentShareMessageString = function urgentShareMessageString(arg0, arg1) {
+export const urgentShareMessageString = function urgentShareMessageString(arg0, link) {
   if (null == arg0) {
-    const intl5 = getSystemLocale.intl;
-    obj = { link: null };
-    obj[0] = arg1;
-    return intl5.formatToPlainString(getSystemLocale.t.RHbY6K, obj);
+    const intl5 = util.intl;
+    const obj2 = { link };
+    return intl5.formatToPlainString(util.t.RHbY6K, obj2);
   } else {
-    const value = dependencyMap2[arg0].value;
-    const type = dependencyMap2[arg0].type;
+    value = dependencyMap[arg0].value;
+    const type = dependencyMap[arg0].type;
     if (minutes === type) {
-      const intl4 = getSystemLocale.intl;
-      obj = { numMinutes: null, link: null };
-      obj[0] = value;
-      obj[1] = arg1;
-      return intl4.formatToPlainString(getSystemLocale.t.N3VHkw, obj);
+      const intl4 = util.intl;
+      const obj3 = { numMinutes: value, link };
+      return intl4.formatToPlainString(util.t.N3VHkw, obj3);
     } else if (hours === type) {
-      const intl3 = getSystemLocale.intl;
-      obj1 = { numHours: null, link: null };
-      obj1[0] = value;
-      obj1[1] = arg1;
-      return intl3.formatToPlainString(getSystemLocale.t["3d9BlG"], obj1);
+      const intl3 = util.intl;
+      const obj4 = { numHours: value, link };
+      return intl3.formatToPlainString(util.t["3d9BlG"], obj4);
     } else if (days === type) {
-      const intl2 = getSystemLocale.intl;
-      const obj2 = { numDays: null, link: null };
-      obj2[0] = value;
-      obj2[1] = arg1;
-      return intl2.formatToPlainString(getSystemLocale.t.gLIlkb, obj2);
+      const intl2 = util.intl;
+      const obj5 = { numDays: value, link };
+      return intl2.formatToPlainString(util.t.gLIlkb, obj5);
     } else {
-      const intl = getSystemLocale.intl;
-      obj = { link: null };
-      obj[0] = arg1;
-      return intl.formatToPlainString(getSystemLocale.t.RHbY6K, obj);
+      const intl = util.intl;
+      obj = { link };
+      return intl.formatToPlainString(util.t.RHbY6K, obj);
     }
   }
 };

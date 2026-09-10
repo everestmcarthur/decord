@@ -1,526 +1,379 @@
-// Module ID: 10393
-// Function ID: 10394
-// Name: _fetchStickerPack
-// Dependencies: [5, 5277, 2025, 4902, 1371, 5502, 1074, 1084, 4802, 1272, 573, 4899, 5169, 1940, 12, 4904, 1114, 2]
+// Module ID: 10420
+// Function ID: 10421
+// Name: StickersActionCreators
+// Dependencies: [5, 5291, 2025, 4916, 1371, 5516, 1074, 1084, 4816, 1272, 573, 4913, 5183, 1940, 12, 4918, 1114, 2]
 // Exports: addStickerPreview, clearStickerPreview, createGuildSticker, deleteGuildSticker, favoriteSticker, fetchGuildStickersWithCreator, fetchSticker, fetchStickerPack, fetchStickerPacks, unfavoriteSticker, updateGuildSticker
 
-// Module 10393 (_fetchStickerPack)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_handleConnectionOpen" /* 5277 */;
-import closure_5 from "_getSystemLocale" /* 2025 */;
-import closure_6 from "handleConnectionOpen" /* 4902 */;
-import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import closure_8 from "loadSavedGuildStickers" /* 5502 */;
-import { Endpoints } from "ME" /* 1074 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 1084 */;
+// Module 10420 (StickersActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import util from "util" /* 1114 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
+import InlineUploaderDefault from "InlineUploader" /* 5183 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5291 */;
+import LocaleStore from "LocaleStore" /* 2025 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4916 */;
+import UserStore from "UserStore" /* 1371 */;
+import StickersStore from "StickersStore" /* 5516 */;
 
-const require = arg1;
-function _fetchStickerPack() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c4 = 0;
-    c5 = 0;
-    return (function*(arg0, body) {
-      closure_3 = tmp2;
-      body = tmp5;
-      obj1 = { url: null, rejectWithError: null };
-      obj1[0] = closure_1_9.STICKER_PACK(callback);
-      const obj8 = callback(closure_1_2[8]);
-      obj1[1] = callback(closure_1_2[9]).rejectWithMigratedError();
-      yield obj8.httpGetWithCountryCodeQuery(obj1);
-      body = body.body;
-      const obj = callback2(body[10]);
-      const obj4 = { type: "STICKER_PACK_FETCH_SUCCESS", packId: null, pack: null, ingestStickers: null };
-      obj4[1] = callback;
-      obj4[2] = body;
-      obj4[3] = callback2;
-      obj.dispatch(obj4);
-      return body;
-    })();
-  });
-  closure_12 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+const require = globalThis.__r;
+
+require = fn;
+let closure_12 = async function _fetchStickerPack() {
+  closure_3 = tmp2;
+  closure_2 = tmp5;
+  closure_130_0 = closure_0;
+  closure_130_1 = closure_1;
+  await require("StoreUtils").httpGetWithCountryCodeQuery({ url: Endpoints.STICKER_PACK(closure_0), rejectWithError: require("HTTPUtils").rejectWithMigratedError() });
+  const body = arg1.body;
+  closure_131_1(closure_131_2[10]).dispatch({ type: "STICKER_PACK_FETCH_SUCCESS", packId: closure_130_0, pack: body, ingestStickers: closure_130_1 });
+  return body;
+};
+let closure_13 = async function _fetchStickerPacks(arg0, value) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _fetchStickerPacks() {
-  const self = this;
-  const tmp = callback(() => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    const iter = (function*(arg0, body) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
+    try {
+      c4 = 2;
+      if (0 === c3) {
         if (arg0 === 1) {
-          throw body;
+          c4 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              dependencyMap = tmp3;
-              let sticker_packs = tmp2;
-              let locale;
-              obj1 = locale;
-              if (locale === undefined) {
-                obj1 = {};
-              }
-              locale = obj1.locale;
-              if (locale === undefined) {
-                locale = closure_1_5.locale;
-              }
-              sticker_packs = undefined;
-              c3 = 1;
-              c4 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else {
-            if (1 === tmp6) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw body;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                const obj2 = { value: null, done: true };
-                obj2[0] = body;
-                return obj2;
-              } else {
-                if (!closure_8.isFetchingStickerPacks) {
-                  if (!closure_8.hasLoadedStickerPacks) {
-                    let obj3 = sticker_packs(573);
-                    obj3.wait(() => {
-                      sticker_packs(tmp3[10]).dispatch({ type: "STICKER_PACKS_FETCH_START" });
-                    });
-                    const HTTP = locale(1272).HTTP;
-                    obj3 = { url: null, query: null, rejectWithError: null };
-                    obj3[0] = constants.STICKER_PACKS;
-                    const obj4 = { locale: null };
-                    obj4[0] = locale;
-                    obj3[1] = obj4;
-                    let obj6 = locale(1272);
-                    obj3[2] = obj6.rejectWithMigratedError();
-                    c3 = 2;
-                    c4 = 1;
-                    const obj5 = { value: null, done: false };
-                    obj5[0] = HTTP.get(obj3);
-                    return obj5;
-                  }
-                }
-                c4 = 3;
-              }
-            } else if (arg0 === 1) {
-              c4 = 3;
-              throw body;
-            } else if (arg0 !== 2) {
-              sticker_packs = body.body.sticker_packs;
-              obj = sticker_packs(573);
-              obj6 = { type: "STICKER_PACKS_FETCH_SUCCESS", packs: null };
-              obj6[1] = sticker_packs;
-              obj.dispatch(obj6);
-            }
-            c4 = 3;
-            const obj7 = { value: null, done: true };
-            obj7[0] = body;
-            return obj7;
+          closure_2 = tmp3;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          let obj5 = closure_0;
+          if (closure_0 === undefined) {
+            obj5 = {};
           }
-        } catch (tmp26) {
-          c4 = tmp;
-          throw tmp26;
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_13 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _fetchSticker() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    return (function*(arg0, body) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
+          locale = obj5.locale;
+          if (locale === undefined) {
+            locale = locale.locale;
+          }
+          closure_129_0 = locale;
+          let sticker_packs;
+          c3 = 1;
+          c4 = 1;
+          return { value: "PX_16", done: true };
         }
       } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              dependencyMap = tmp2;
-              const callback2 = tmp5;
-              body = undefined;
-              const HTTP = callback(closure_1_2[9]).HTTP;
-              obj1 = { url: null, rejectWithError: null };
-              obj1[0] = closure_1_9.STICKER(body);
-              obj1[1] = callback(closure_1_2[9]).rejectWithMigratedError();
-              c3 = 1;
-              c4 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.get(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
+        if (1 === tmp6) {
+          if (arg0 === 1) {
             c4 = 3;
-            throw body;
+            throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            let obj3 = { value: null, done: true };
-            obj3[0] = body;
-            return obj3;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
-            body = body.body;
-            if (obj10.isGuildSticker(body)) {
-              obj3 = callback2(573);
-              const obj4 = { type: "GUILD_STICKER_FETCH_SUCCESS", sticker: null };
-              obj4[1] = body;
-              obj3.dispatch(obj4);
-            } else {
-              obj = body(4899);
-              if (obj.isStandardSticker(body)) {
-                obj1 = callback2(573);
-                const obj5 = { type: "PACK_STICKER_FETCH_SUCCESS", sticker: null };
-                obj5[1] = body;
-                obj1.dispatch(obj5);
-              } else {
-                const _Error = Error;
-                error = new Error("Invalid sticker type");
-                throw error;
+            if (!closure_130_8.isFetchingStickerPacks) {
+              if (!closure_130_8.hasLoadedStickerPacks) {
+                closure_130_1(closure_130_2[10]).wait(() => {
+                  closure_1_1(closure_1_2[10]).dispatch({ type: "STICKER_PACKS_FETCH_START" });
+                });
+                const HTTP = closure_130_0(closure_130_2[9]).HTTP;
+                const request = { url: closure_130_9.STICKER_PACKS, query: null, rejectWithError: null };
+                const obj8 = { locale: closure_129_0 };
+                request.query = obj8;
+                const obj4 = closure_130_1(closure_130_2[10]);
+                request.rejectWithError = closure_130_0(closure_130_2[9]).rejectWithMigratedError();
+                c3 = 2;
+                c4 = 1;
+                const obj9 = { value: HTTP.get(request), done: false };
+                return obj9;
               }
             }
             c4 = 3;
-            obj10 = body(4899);
           }
-        } catch (tmp24) {
-          c4 = tmp;
-          throw tmp24;
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          sticker_packs = value.body.sticker_packs;
+          const obj10 = { type: "STICKER_PACKS_FETCH_SUCCESS", packs: sticker_packs };
+          closure_130_1(closure_130_2[10]).dispatch(obj10);
+          const obj = closure_130_1(closure_130_2[10]);
         }
+        c4 = 3;
+        const obj11 = { value, done: true };
+        return obj11;
       }
-    })();
-  });
-  closure_14 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp26) {
+      c4 = tmp;
+      throw tmp26;
+    }
   }
-  return applyArgumentsResult;
-}
-function _fetchGuildStickersWithCreator() {
-  const self = this;
-  let tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c4 = 0;
-    c5 = 0;
-    return (function*(arg0, body) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+};
+let closure_14 = async function _fetchSticker(arg0, value) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj3 = { value, done: true };
+      return obj3;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
         if (arg0 === 1) {
-          throw body;
+          c4 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
+          c4 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_2 = tmp2;
+          closure_1 = tmp5;
+          let body;
+          const HTTP = require("HTTPUtils").HTTP;
+          const obj6 = { url: Endpoints.STICKER(closure_0), rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
+          c3 = 1;
+          c4 = 1;
+          const obj7 = { value: HTTP.get(obj6), done: false };
+          return obj7;
         }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              closure_3 = tmp2;
-              const table = tmp5;
-              body = undefined;
-              const HTTP = callback(closure_1_2[9]).HTTP;
-              obj1 = { url: null, rejectWithError: null, signal: null };
-              obj1[0] = closure_1_9.GUILD_STICKER_PACKS(callback);
-              obj1[1] = callback(closure_1_2[9]).rejectWithMigratedError();
-              obj1[2] = body;
-              c4 = 1;
-              c5 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.get(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
+        body = value.body;
+        if (obj10.isGuildSticker(body)) {
+          const obj9 = { type: "GUILD_STICKER_FETCH_SUCCESS", sticker: body };
+          closure_130_1(closure_130_2[10]).dispatch(obj9);
+          const obj4 = closure_130_1(closure_130_2[10]);
+        } else {
+          if (obj.isStandardSticker(body)) {
+            const obj11 = { type: "PACK_STICKER_FETCH_SUCCESS", sticker: body };
+            closure_130_1(closure_130_2[10]).dispatch(obj11);
+            const obj2 = closure_130_1(closure_130_2[10]);
+          } else {
+            const _Error = Error;
+            const error = new Error("Invalid sticker type");
+            throw error;
+          }
+          obj = closure_130_0(closure_130_2[11]);
+        }
+        c4 = 3;
+        obj10 = closure_130_0(closure_130_2[11]);
+      }
+    } catch (tmp24) {
+      c4 = tmp;
+      throw tmp24;
+    }
+  }
+};
+let closure_15 = async function _fetchGuildStickersWithCreator(arg0, signal) {
+  closure_0 = arg0;
+  c4 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
             c5 = 3;
-            throw body;
+            throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = body;
+            const obj3 = { value, done: true };
             return obj3;
           } else {
-            body = body.body;
-            obj = body(table[10]);
-            const obj4 = { type: "GUILD_STICKERS_FETCH_SUCCESS", guildId: null, stickers: null };
-            obj4[1] = callback;
-            obj4[2] = body.map((user) => {
-              let tmp = user;
-              if (null != user.user) {
-                const obj = {};
-                const merged = Object.assign(user);
-                obj.user_id = user.user.id;
-                obj.user = user.user;
-                tmp = obj;
-              }
-              return tmp;
-            });
-            obj.dispatch(obj4);
-            c5 = 3;
-            return { value: "HermesInternal", done: null };
+            closure_3 = tmp2;
+            closure_2 = tmp5;
+            closure_130_0 = closure_0;
+            let body;
+            const HTTP = require("HTTPUtils").HTTP;
+            const obj4 = { url: Endpoints.GUILD_STICKER_PACKS(closure_0), rejectWithError: require("HTTPUtils").rejectWithMigratedError(), signal };
+            c4 = 1;
+            c5 = 1;
+            const obj5 = { value: HTTP.get(obj4), done: false };
+            return obj5;
           }
-        } catch (tmp13) {
-          c5 = tmp;
-          throw tmp13;
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          body = value.body;
+          const obj7 = {
+            type: "GUILD_STICKERS_FETCH_SUCCESS",
+            guildId: closure_130_0,
+            stickers: body.map((user) => {
+                    let tmp = user;
+                    if (null != user.user) {
+                      const obj = {};
+                      const merged = Object.assign(user);
+                      obj.user_id = user.user.id;
+                      obj.user = user.user;
+                      tmp = obj;
+                    }
+                    return tmp;
+                  })
+          };
+          closure_131_1(closure_131_2[10]).dispatch(obj7);
+          c5 = 3;
+          return { value: "HermesInternal", done: null };
         }
+      } catch (tmp13) {
+        c5 = tmp;
+        throw tmp13;
       }
-    })();
-  });
-  closure_15 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    }
+  })();
+};
+let closure_16 = async function _deleteGuildSticker(arg0, value) {
+  if (c1 === 2) {
+    c1 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _deleteGuildSticker() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c1 = 0;
-    return (function*(arg0) {
-      if (c1 === 2) {
+    try {
+      c1 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
+          c1 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c1 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          const HTTP = require("HTTPUtils").HTTP;
+          const obj4 = { url: Endpoints.GUILD_STICKER(_require.guild_id, _require.id), rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
+          c2 = 1;
+          c1 = 1;
+          const obj5 = { value: HTTP.del(obj4), done: false };
+          return obj5;
+        }
+      } else if (arg0 === 1) {
         c1 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+        throw value;
+      } else if (arg0 === 2) {
+        c1 = 3;
+        const obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c1 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              c1 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c1 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const HTTP = lib(1272).HTTP;
-              obj1 = { url: null, rejectWithError: null };
-              obj1[0] = closure_1_9.GUILD_STICKER(lib.guild_id, lib.id);
-              obj1[1] = lib(1272).rejectWithMigratedError();
-              dependencyMap = 1;
-              c1 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.del(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c1 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c1 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            c1 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp5) {
-          c1 = tmp;
-          throw tmp5;
-        }
+        c1 = 3;
+        return { value: "HermesInternal", done: null };
       }
-    })();
-  });
-  closure_16 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp5) {
+      c1 = tmp;
+      throw tmp5;
+    }
   }
-  return applyArgumentsResult;
-}
-function _createGuildSticker() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    return (function*(arg0) {
-      const table = tmp2;
-      let lib = tmp5;
-      guildId = guildId.guildId;
-      const HTTP = callback(closure_1_2[9]).HTTP;
-      obj1 = { url: null, body: null, fields: null, attachments: null, headers: null, rejectWithError: null };
-      obj1[0] = closure_1_9.GUILD_STICKER_PACKS(guildId);
-      if ("web" === guildId.platform) {
-        const body = tmp33.body;
-      }
-      obj1[1] = body;
-      if ("mobile" === guildId.platform) {
-        const obj2 = { name: "name", value: null };
-        obj2[1] = tmp33.name;
-        const items = [obj2, , ];
-        const obj3 = { name: "tags", value: null };
-        obj3[1] = tmp33.tags;
-        items[1] = obj3;
-        const obj4 = { name: "description", value: null };
-        obj4[1] = tmp33.description;
-        items[2] = obj4;
-        const tmp11 = items;
-      }
-      obj1[2] = tmp11;
-      if ("mobile" === guildId.platform) {
-        const obj5 = { name: "file", file: null };
-        ({ uri: obj7[0], name: obj7[1], mimeType: obj7[2] } = tmp33);
-        obj5[1] = { uri: null, name: null, type: null };
-        const items1 = [obj5];
-        const tmp12 = items1;
-        const obj6 = { uri: null, name: null, type: null };
-      }
-      obj1[3] = tmp12;
-      const obj7 = closure_1_1(closure_1_2[12]);
-      obj1[4] = obj7.buildHeadersForMd5(guildId.originalMd5);
-      obj1[5] = callback(closure_1_2[9]).rejectWithMigratedError();
-      lib = yield HTTP.post(obj1);
-      const obj9 = { type: "GUILD_STICKERS_CREATE_SUCCESS", guildId: null, sticker: null };
-      obj9[1] = guildId;
-      const obj10 = {};
-      const merged = Object.assign(lib.body);
-      currentUser = currentUser.getCurrentUser();
-      if (currentUser != null) {
-        const id = currentUser.id;
-      }
-      obj10.user_id = id;
-      obj9[2] = obj10;
-      lib(table[10]).dispatch(obj9);
-      return lib.body;
-    })();
-  });
-  closure_17 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+};
+let closure_17 = async function _createGuildSticker() {
+  closure_2 = tmp2;
+  closure_1 = tmp5;
+  const guildId = _require.guildId;
+  closure_129_0 = guildId;
+  const HTTP = require("HTTPUtils").HTTP;
+  const request = { url: Endpoints.GUILD_STICKER_PACKS(guildId), body: null, fields: null, attachments: null, headers: null, rejectWithError: null };
+  if ("web" === _require.platform) {
+    const body = tmp32.body;
   }
-  return applyArgumentsResult;
-}
-function _updateGuildSticker() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c4 = 0;
-    c3 = 0;
-    return (function*(arg0, body) {
-      const HTTP = callback(1272).HTTP;
-      obj1 = { url: null, body: null, rejectWithError: null };
-      obj1[0] = closure_1_9.GUILD_STICKER(callback, closure_1);
-      obj1[1] = dependencyMap;
-      obj1[2] = callback(1272).rejectWithMigratedError();
-      yield HTTP.patch(obj1);
-      return body.body;
-    })();
-  });
-  closure_18 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+  request.body = body;
+  if ("mobile" === _require.platform) {
+    const items = [{ name: "name", value: tmp32.name }, , ];
+    items[1] = { name: "tags", value: tmp32.tags };
+    items[2] = { name: "description", value: tmp32.description };
+    const tmp11 = items;
   }
-  return applyArgumentsResult;
-}
-({ MAX_FAVORITES: c10, UserSettingsDelay: unpackModuleId } = MAX_FAVORITES);
-const result = require("set").fileFinishedImporting("modules/stickers/StickersActionCreators.tsx");
+  request.fields = tmp11;
+  if ("mobile" === _require.platform) {
+    const obj9 = { name: "file", file: null };
+    ({ uri: obj7.uri, name: obj7.name, mimeType: obj7.type } = tmp32);
+    obj9.file = { uri: null, name: null, type: null };
+    const items1 = [obj9];
+    const tmp12 = items1;
+  }
+  request.attachments = tmp12;
+  request.headers = InlineUploaderDefault.buildHeadersForMd5(_require.originalMd5);
+  request.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
+  closure_129_1 = await HTTP.post(request);
+  const obj14 = { type: "GUILD_STICKERS_CREATE_SUCCESS", guildId: closure_129_0, sticker: null };
+  const obj15 = {};
+  const merged = Object.assign(closure_129_1.body);
+  const currentUser = closure_130_7.getCurrentUser();
+  if (currentUser != null) {
+    const id = currentUser.id;
+  }
+  obj15.user_id = id;
+  obj14.sticker = obj15;
+  closure_130_1(closure_130_2[10]).dispatch(obj14);
+  return closure_129_1.body;
+};
+let closure_18 = async function _updateGuildSticker(arg0, arg1, body) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  c4 = 0;
+  c3 = 0;
+  return (async (arg0, value, arg2) => {
+    const HTTP = require("HTTPUtils").HTTP;
+    const request = { url: Endpoints.GUILD_STICKER(closure_0, closure_1), body, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
+    await HTTP.patch(request);
+    return value.body;
+  })();
+};
+const Endpoints = fn(1074).Endpoints;
+const UserSettingsConstants = fn(1084);
+({ MAX_FAVORITES: c10, UserSettingsDelay: closure_11 } = UserSettingsConstants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stickers/StickersActionCreators.tsx");
 
-export const fetchStickerPack = function fetchStickerPack(_847199849233514549, arg1) {
+export const fetchStickerPack = function fetchStickerPack() {
   const self = this;
-  const apply = _fetchStickerPack.apply;
+  const apply = closure_12.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -530,7 +383,7 @@ export const fetchStickerPack = function fetchStickerPack(_847199849233514549, a
 };
 export const fetchStickerPacks = function fetchStickerPacks() {
   const self = this;
-  const apply = _fetchStickerPacks.apply;
+  const apply = closure_13.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -538,9 +391,9 @@ export const fetchStickerPacks = function fetchStickerPacks() {
   }
   return applyArgumentsResult;
 };
-export const fetchSticker = function fetchSticker(id) {
+export const fetchSticker = function fetchSticker() {
   const self = this;
-  const apply = _fetchSticker.apply;
+  const apply = closure_14.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -548,9 +401,9 @@ export const fetchSticker = function fetchSticker(id) {
   }
   return applyArgumentsResult;
 };
-export const fetchGuildStickersWithCreator = function fetchGuildStickersWithCreator(closure_1_0, c1) {
+export const fetchGuildStickersWithCreator = function fetchGuildStickersWithCreator() {
   const self = this;
-  const apply = _fetchGuildStickersWithCreator.apply;
+  const apply = closure_15.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -558,9 +411,9 @@ export const fetchGuildStickersWithCreator = function fetchGuildStickersWithCrea
   }
   return applyArgumentsResult;
 };
-export const deleteGuildSticker = function deleteGuildSticker(arg0) {
+export const deleteGuildSticker = function deleteGuildSticker() {
   const self = this;
-  const apply = _deleteGuildSticker.apply;
+  const apply = closure_16.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -568,9 +421,9 @@ export const deleteGuildSticker = function deleteGuildSticker(arg0) {
   }
   return applyArgumentsResult;
 };
-export const createGuildSticker = function createGuildSticker(arg0) {
+export const createGuildSticker = function createGuildSticker() {
   const self = this;
-  const apply = _createGuildSticker.apply;
+  const apply = closure_17.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -578,9 +431,9 @@ export const createGuildSticker = function createGuildSticker(arg0) {
   }
   return applyArgumentsResult;
 };
-export const updateGuildSticker = function updateGuildSticker(arg0, arg1, arg2) {
+export const updateGuildSticker = function updateGuildSticker() {
   const self = this;
-  const apply = _updateGuildSticker.apply;
+  const apply = closure_18.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -589,66 +442,60 @@ export const updateGuildSticker = function updateGuildSticker(arg0, arg1, arg2) 
   return applyArgumentsResult;
 };
 export const addStickerPreview = function addStickerPreview(channelId, sticker, draftType) {
-  let obj = dispatcherDefault;
-  obj = { type: "ADD_STICKER_PREVIEW", channelId, sticker, draftType };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "ADD_STICKER_PREVIEW", channelId, sticker, draftType });
 };
 export const clearStickerPreview = function clearStickerPreview(channelId, draftType) {
-  let obj = dispatcherDefault;
-  obj = { type: "CLEAR_STICKER_PREVIEW", channelId, draftType };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "CLEAR_STICKER_PREVIEW", channelId, draftType });
 };
-export const favoriteSticker = function favoriteSticker(id) {
-  const _require = id;
-  const FrecencyUserSettingsActionCreators = _require(1940).FrecencyUserSettingsActionCreators;
-  FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", (stickerIds) => {
-    stickerIds = stickerIds.stickerIds;
-    let tmp = stickerIds;
-    if (closure_1_6.totalUnavailableGuilds <= 0) {
-      let found = stickerIds;
-      if (closure_1_4.isConnected()) {
-        found = stickerIds.filter((arg0) => null != stickerById.getStickerById(arg0));
+export const favoriteSticker = function favoriteSticker(sticker) {
+  _require = sticker;
+  const FrecencyUserSettingsActionCreators = require("UserSettingsProtoActionCreators").FrecencyUserSettingsActionCreators;
+  FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", async (stickerIds) => {
+    const stickerIds1 = stickerIds.stickerIds;
+    let tmp = stickerIds1;
+    if (GuildAvailabilityStore.totalUnavailableGuilds <= 0) {
+      let found = stickerIds1;
+      if (GatewayConnectionStore.isConnected()) {
+        found = stickerIds1.filter((item) => null != stickerById.getStickerById(item));
       }
       tmp = found;
     }
     stickerIds.stickerIds = tmp;
-    let obj = closure_1_1(closure_1_2[14]);
-    if (obj.size(stickerIds.stickerIds) >= closure_1_10) {
-      obj = { title: null, body: null };
-      const intl = id(tmp5[16]).intl;
-      obj[0] = intl.string(id(tmp5[16]).t["+XYXtZ"]);
-      const intl2 = id(tmp5[16]).intl;
-      obj = { count: null };
-      obj[0] = tmp6;
-      obj[1] = intl2.formatToPlainString(id(tmp5[16]).t.JaIyFi, obj);
-      closure_1_1(tmp5[15]).show(obj);
+    if (obj.size(stickerIds.stickerIds) >= closure_2_10) {
+      const obj2 = { title: null, body: null };
+      const intl = util.intl;
+      obj2.title = intl.string(util.t["+XYXtZ"]);
+      const intl2 = util.intl;
+      const obj3 = { count: tmp6 };
+      obj2.body = intl2.formatToPlainString(util.t.JaIyFi, obj3);
+      AlertActionCreatorsDefault.show(obj2);
       let flag = false;
-      const tmp4Result = closure_1_1(tmp5[15]);
+      const tmp4Result = AlertActionCreatorsDefault;
     } else {
       stickerIds = stickerIds.stickerIds;
-      const hasItem = stickerIds.includes(id);
+      const hasItem = stickerIds.includes(closure_0);
       flag = !hasItem;
       if (!hasItem) {
-        const stickerIds1 = stickerIds.stickerIds;
-        stickerIds1.push(tmp7);
+        const stickerIds2 = stickerIds.stickerIds;
+        stickerIds2.push(tmp7);
       }
-      tmp7 = id;
+      tmp7 = closure_0;
     }
     return flag;
   }, constants.INFREQUENT_USER_ACTION);
 };
-export const unfavoriteSticker = function unfavoriteSticker(id) {
-  const _require = id;
-  const FrecencyUserSettingsActionCreators = _require(1940).FrecencyUserSettingsActionCreators;
-  FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", (stickerIds) => {
+export const unfavoriteSticker = function unfavoriteSticker(sticker) {
+  _require = sticker;
+  const FrecencyUserSettingsActionCreators = require("UserSettingsProtoActionCreators").FrecencyUserSettingsActionCreators;
+  FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", async (stickerIds) => {
     stickerIds = stickerIds.stickerIds;
-    stickerIds.stickerIds = stickerIds.filter((arg0) => arg0 !== closure_0);
+    stickerIds.stickerIds = stickerIds.filter((item) => item !== sticker);
     const stickerIds1 = stickerIds.stickerIds;
     let tmp = stickerIds1;
-    if (closure_1_6.totalUnavailableGuilds <= 0) {
+    if (GuildAvailabilityStore.totalUnavailableGuilds <= 0) {
       let found = stickerIds1;
-      if (closure_1_4.isConnected()) {
-        found = stickerIds1.filter((arg0) => null != stickerById.getStickerById(arg0));
+      if (GatewayConnectionStore.isConnected()) {
+        found = stickerIds1.filter((item) => null != stickerById.getStickerById(item));
       }
       tmp = found;
     }

@@ -1,18 +1,24 @@
-// Module ID: 9741
-// Function ID: 9742
-// Dependencies: [4741, 1074, 1084, 573, 4753, 1250, 1969, 1272, 7119, 7114, 7323, 2]
+// Module ID: 9768
+// Function ID: 9769
+// Name: CreateChannelActionCreators
+// Dependencies: [4755, 1074, 1084, 573, 4767, 1250, 1969, 1272, 7133, 7128, 7337, 2]
 
-// Module 9741
-import encodeProperties from "encodeProperties" /* 1250 */;
-import sendRequest from "sendRequest" /* 1272 */;
-import _modDef4753 from "module_4753" /* 4753 */;
-import closure_3 from "updateUserGuildSettingsInternal" /* 4741 */;
-import ME from "ME" /* 1074 */;
-import { ChannelNotificationSettingsFlags as closure_7 } from "MAX_FAVORITES" /* 1084 */;
+// Module 9768 (CreateChannelActionCreators)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import TypeUtils from "TypeUtils" /* 1969 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4767 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7128 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7133 */;
+import GuildTemplateTooltipActionCreatorsDefault from "GuildTemplateTooltipActionCreators" /* 7337 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4755 */;
 
-require = arg1;
-({ BITRATE_DEFAULT: c4, ChannelTypes: c5, Endpoints: closure_6 } = ME);
-let result = require("set").fileFinishedImporting("actions/CreateChannelActionCreators.tsx");
+require = fn;
+const Constants = fn(1074);
+({ BITRATE_DEFAULT: closure_4, ChannelTypes: hasOwnProperty, Endpoints: metroRequire } = Constants);
+let closure_7 = fn(1084).ChannelNotificationSettingsFlags;
+const size = fn(2);
+let result = size.fileFinishedImporting("actions/CreateChannelActionCreators.tsx");
 
 export default {
   createChannel(guildId) {
@@ -22,47 +28,46 @@ export default {
       permissionOverwrites = [];
     }
     ({ bitrate, userLimit, parentId, skuId, applicationId, flags, availableTags, gameId } = guildId);
-    let obj = permissionOverwrites(573);
-    obj.dispatch({ type: "CREATE_CHANNEL_MODAL_SUBMIT", guildId, channelType: type });
-    obj = { type, name: guildId.name, permission_overwrites: permissionOverwrites };
+    permissionOverwrites(573).dispatch({ type: "CREATE_CHANNEL_MODAL_SUBMIT", guildId, channelType: type });
+    let obj2 = { type, name: guildId.name, permission_overwrites: permissionOverwrites };
     let tmp4 = null != bitrate;
     if (tmp4) {
       tmp4 = bitrate !== closure_4;
     }
     if (tmp4) {
-      obj.bitrate = bitrate;
+      obj2.bitrate = bitrate;
     }
     let tmp6 = null != userLimit;
     if (tmp6) {
       tmp6 = userLimit > 0;
     }
     if (tmp6) {
-      obj.user_limit = userLimit;
+      obj2.user_limit = userLimit;
     }
     if (null != parentId) {
-      obj.parent_id = parentId;
+      obj2.parent_id = parentId;
     }
     if (null != flags) {
-      obj.flags = flags;
+      obj2.flags = flags;
     }
     let tmp7 = null != availableTags;
     if (tmp7) {
       tmp7 = availableTags.length > 0;
     }
     if (tmp7) {
-      obj.available_tags = availableTags.map((name) => ({ name: name.name, emoji_id: name.emojiId, emoji_name: name.emojiName, moderated: name.moderated }));
+      obj2.available_tags = availableTags.map((name) => ({ name: name.name, emoji_id: name.emojiId, emoji_name: name.emojiName, moderated: name.moderated }));
     }
     if (null != gameId) {
-      obj.game_id = gameId;
+      obj2.game_id = gameId;
     }
     if (type === constants.GUILD_STORE) {
       if (null == skuId) {
         const _Error2 = Error;
-        error = new Error("Unexpected missing SKU");
+        const error = new Error("Unexpected missing SKU");
         throw error;
       } else {
-        obj.sku_id = skuId;
-        obj.branch_id = guildId.branchId;
+        obj2.sku_id = skuId;
+        obj2.branch_id = guildId.branchId;
       }
     }
     if (type === tmp8.GUILD_APP) {
@@ -71,18 +76,17 @@ export default {
         const error1 = new Error("Unexpected missing application");
         throw error1;
       } else {
-        obj.application_id = applicationId;
+        obj2.application_id = applicationId;
       }
     }
-    obj = { url: closure_6.GUILD_CHANNELS(guildId), body: obj, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
-    const tmp = permissionOverwrites;
+    let obj = permissionOverwrites(573);
     tmp8 = constants;
-    const tmpResult = permissionOverwrites(4753);
-    obj[3] = {
+    const request = { url: closure_6.GUILD_CHANNELS(guildId), body: obj2, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
+    const tmpResult = permissionOverwrites(4767);
+    request.trackedActionData = {
       event: guildId(1250).NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
-        let obj = guildId(closure_1_2[6]);
-        obj = { is_private: permissionOverwrites.length > 0, channel_id: null, channel_type: null };
+        const obj2 = { is_private: permissionOverwrites.length > 0, channel_id: null, channel_type: null };
         let id;
         if (body != null) {
           body = body.body;
@@ -90,7 +94,7 @@ export default {
             id = body.id;
           }
         }
-        obj[1] = id;
+        obj2.channel_id = id;
         let type;
         if (body != null) {
           const body2 = body.body;
@@ -98,15 +102,14 @@ export default {
             type = body2.type;
           }
         }
-        obj[2] = type;
-        return obj.exact(obj);
+        obj2.channel_type = type;
+        return TypeUtils.exact(obj2);
       }
     };
-    obj1 = {
+    const obj3 = {
       event: guildId(1250).NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
-        let obj = guildId(closure_1_2[6]);
-        obj = { is_private: permissionOverwrites.length > 0, channel_id: null, channel_type: null };
+        const obj2 = { is_private: permissionOverwrites.length > 0, channel_id: null, channel_type: null };
         let id;
         if (body != null) {
           body = body.body;
@@ -114,7 +117,7 @@ export default {
             id = body.id;
           }
         }
-        obj[1] = id;
+        obj2.channel_id = id;
         let type;
         if (body != null) {
           const body2 = body.body;
@@ -122,36 +125,32 @@ export default {
             type = body2.type;
           }
         }
-        obj[2] = type;
-        return obj.exact(obj);
+        obj2.channel_type = type;
+        return TypeUtils.exact(obj2);
       }
     };
-    obj[4] = guildId(1272).rejectWithMigratedError();
+    request.rejectWithError = guildId(1272).rejectWithMigratedError();
     const obj6 = guildId(1272);
-    return tmpResult.post(obj).then((body) => {
-      if (closure_1_3.isOptInEnabled(guildId)) {
-        let obj = permissionOverwrites(closure_1_2[8]);
-        obj = { flags: null };
-        obj[0] = closure_1_7.OPT_IN_ENABLED;
-        const result = obj.updateChannelOverrideSettings(tmp, body.body.id, obj, guildId(closure_1_2[9]).NotificationLabels.OptedIn);
+    return tmpResult.post(request).then((body) => {
+      if (UserGuildSettingsStore.isOptInEnabled(guildId)) {
+        const obj = NotificationSettingsModalActionCreatorsDefault;
+        const obj2 = { flags: constants.OPT_IN_ENABLED };
+        const result = obj.updateChannelOverrideSettings(tmp, body.body.id, obj2, NotificationSettingsUtils.NotificationLabels.OptedIn);
       }
-      const result1 = permissionOverwrites(closure_1_2[10]).checkGuildTemplateDirty(tmp);
+      const result1 = GuildTemplateTooltipActionCreatorsDefault.checkGuildTemplateDirty(tmp);
       return body;
     }, (body) => {
-      let obj = permissionOverwrites(table[3]);
-      obj = { type: "CREATE_CHANNEL_MODAL_SUBMIT_FAILURE", errors: body.body };
-      obj.dispatch(obj);
+      permissionOverwrites(dependencyMap[3]).dispatch({ type: "CREATE_CHANNEL_MODAL_SUBMIT_FAILURE", errors: body.body });
       throw body;
     });
   },
-  createRoleSubscriptionTemplateChannel(closure_0, name, type, topic) {
-    let obj = _modDef4753;
-    obj = { url: closure_6.GUILD_CHANNELS(closure_0), body: obj, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
-    obj = { name, type, topic };
-    obj[3] = {
-      event: encodeProperties.NetworkActionNames.CHANNEL_CREATE,
+  createRoleSubscriptionTemplateChannel(guildId, name, type, topic) {
+    const request = { url: timestampProducer.GUILD_CHANNELS(guildId), body: { name, type, topic }, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
+    const obj = TrackedHTTPUtilsDefault;
+    let obj2 = { name, type, topic };
+    request.trackedActionData = {
+      event: discord_common_AnalyticsUtils.NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
-        let obj = callback(table[6]);
         let id;
         if (body != null) {
           body = body.body;
@@ -159,7 +158,7 @@ export default {
             id = body.id;
           }
         }
-        obj = { is_private: true, channel_id: id, channel_type: null };
+        const obj2 = { is_private: true, channel_id: id, channel_type: null };
         let type;
         if (body != null) {
           const body2 = body.body;
@@ -167,14 +166,13 @@ export default {
             type = body2.type;
           }
         }
-        obj[2] = type;
-        return obj.exact(obj);
+        obj2.channel_type = type;
+        return TypeUtils.exact(obj2);
       }
     };
-    obj1 = {
-      event: encodeProperties.NetworkActionNames.CHANNEL_CREATE,
+    const obj3 = {
+      event: discord_common_AnalyticsUtils.NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
-        let obj = callback(table[6]);
         let id;
         if (body != null) {
           body = body.body;
@@ -182,7 +180,7 @@ export default {
             id = body.id;
           }
         }
-        obj = { is_private: true, channel_id: id, channel_type: null };
+        const obj2 = { is_private: true, channel_id: id, channel_type: null };
         let type;
         if (body != null) {
           const body2 = body.body;
@@ -190,11 +188,11 @@ export default {
             type = body2.type;
           }
         }
-        obj[2] = type;
-        return obj.exact(obj);
+        obj2.channel_type = type;
+        return TypeUtils.exact(obj2);
       }
     };
-    obj[4] = sendRequest.rejectWithMigratedError();
-    return obj.post(obj);
+    request.rejectWithError = HTTPUtils.rejectWithMigratedError();
+    return obj.post(request);
   }
 };

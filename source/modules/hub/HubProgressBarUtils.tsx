@@ -1,22 +1,23 @@
-// Module ID: 12673
-// Function ID: 12674
-// Name: getHubProgressTitleForStep
-// Dependencies: [19, 1221, 5281, 9836, 1074, 504, 1187, 1114, 1369, 1384, 2]
+// Module ID: 12699
+// Function ID: 12700
+// Name: HubProgressBarUtils
+// Dependencies: [19, 1221, 5295, 9863, 1074, 504, 1187, 1114, 1369, 1384, 2]
 // Exports: getHubProgressTitleForStep, getNextHubProgressStep, useHubProgressBarCompletedSteps
 
-// Module 12673 (getHubProgressTitleForStep)
-import create from "create" /* 1187 */;
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1221 */;
-import closure_4 from "set" /* 5281 */;
-import { HUB_PROGRESS_STEP_ORDER } from "items" /* 9836 */;
-import { PlatformTypes } from "ME" /* 1074 */;
+// Module 12699 (HubProgressBarUtils)
+import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import noop from "module_19" /* 19 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5295 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/hub/HubProgressBarUtils.tsx");
+require = fn;
+const HUB_PROGRESS_STEP_ORDER = fn(9863).HUB_PROGRESS_STEP_ORDER;
+const PlatformTypes = fn(1074).PlatformTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/hub/HubProgressBarUtils.tsx");
 
 export const getHubProgressTitleForStep = function getHubProgressTitleForStep(nextHubProgressStep) {
-  if (create.HubProgressStep.JOIN_GUILD === nextHubProgressStep) {
+  if (preloaded_user_settings.HubProgressStep.JOIN_GUILD === nextHubProgressStep) {
     const intl3 = tmp(1114).intl;
     return intl3.string(tmp(1114).t.iNR25n);
   } else if (tmp(1187).HubProgressStep.INVITE_USER === nextHubProgressStep) {
@@ -36,12 +37,12 @@ export const useHubProgressBarCompletedSteps = function useHubProgressBarComplet
   if (guild != null) {
     id = guild.id;
   }
-  let memo = id;
-  const items = [closure_3];
+  closure_129_0 = id;
+  const items = [UserSettingsProtoStore];
   const stateFromStores = memo(stateFromStores1[5]).useStateFromStores(items, () => {
     let num = 0;
     if (null != memo) {
-      const guilds = closure_1_3.settings.guilds;
+      const guilds = UserSettingsProtoStore.settings.guilds;
       let num2;
       if (guilds != null) {
         if (guilds.guilds[tmp] != null) {
@@ -55,17 +56,14 @@ export const useHubProgressBarCompletedSteps = function useHubProgressBarComplet
     }
     return num;
   });
-  stateFromStores1 = stateFromStores;
+  closure_129_1 = stateFromStores;
   const items1 = [stateFromStores];
-  memo = React.useMemo(() => (function convertHubProgressFlagSetToSet(stateFromStores1) {
+  memo = noop.useMemo(() => (function convertHubProgressFlagSetToSet(stateFromStores1) {
     const set = new Set();
-    for (const item10013 of closure_5) {
-      let tmp2 = callback;
-      let tmp3 = table;
+    for (const item10013 of closure_1_5) {
       let tmp = item10013;
-      let obj2 = callback(table[9]);
+      let obj2 = memo(stateFromStores1[9]);
       if (obj2.hasFlag(arg0, item10013)) {
-        let tmp4 = item10013;
         let addResult = set.add(tmp);
       }
       continue;
@@ -73,14 +71,14 @@ export const useHubProgressBarCompletedSteps = function useHubProgressBarComplet
     return set;
   })(stateFromStores1), items1);
   const obj = memo(stateFromStores1[5]);
-  const items2 = [closure_4];
+  const items2 = [ConnectedAccountsStore];
   stateFromStores1 = memo(stateFromStores1[5]).useStateFromStores(items2, () => null != localAccount.getLocalAccount(constants.CONTACTS));
   const items3 = [memo, stateFromStores1];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     if (stateFromStores1) {
       const _Set = Set;
       const set = new Set(memo);
-      set.add(memo(stateFromStores1[6]).HubProgressStep.CONTACT_SYNC);
+      set.add(preloaded_user_settings.HubProgressStep.CONTACT_SYNC);
       return set;
     } else {
       return memo;
@@ -93,8 +91,6 @@ export const getNextHubProgressStep = function getNextHubProgressStep(hubProgres
     if (arg0.has(item10007)) {
       continue;
     } else {
-      let tmp2 = item10007;
-      let tmp3 = obj;
       obj.return();
       return tmp;
     }

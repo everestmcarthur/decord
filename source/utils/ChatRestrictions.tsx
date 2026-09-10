@@ -1,68 +1,68 @@
-// Module ID: 10262
-// Function ID: 10263
-// Name: items
-// Dependencies: [1074, 10263, 1114, 2]
+// Module ID: 10289
+// Function ID: 10290
+// Name: ChatRestrictions
+// Dependencies: [1074, 10290, 1114, 2]
 
-// Module 10262 (items)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import parsedItemUsesEveryoneRoleDefault from "parsedItemUsesEveryoneRole" /* 10263 */;
+// Module 10289 (ChatRestrictions)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import MentionGuardUtilsDefault from "MentionGuardUtils" /* 10290 */;
+import size from "module_2" /* 2 */;
 
-const TOKEN_REGEX = ME.TOKEN_REGEX;
+const TOKEN_REGEX = Constants.TOKEN_REGEX;
 const items = [
   {
-    check(arg0, getGuildId) {
+    check(arg0, getGuildId, arg2) {
       if (arg2) {
         if (null == getGuildId.getGuildId()) {
           return false;
         } else {
-          const extractEveryoneRoleResult = parsedItemUsesEveryoneRoleDefault.extractEveryoneRole(arg0, getGuildId);
+          const extractEveryoneRoleResult = MentionGuardUtilsDefault.extractEveryoneRole(arg0, getGuildId);
           if (null == extractEveryoneRoleResult) {
             return false;
           } else {
-            let tmp8Result = tmp8(10263);
-            if (tmp8Result.shouldShowEveryoneGuard(extractEveryoneRoleResult, getGuildId)) {
-              tmp8Result = tmp8(10263);
-              const everyoneMemberCountResult = tmp8Result.everyoneMemberCount(extractEveryoneRoleResult, getGuildId);
+            if (tmp9Result.shouldShowEveryoneGuard(extractEveryoneRoleResult, getGuildId)) {
+              const everyoneMemberCountResult = tmp9(10290).everyoneMemberCount(extractEveryoneRoleResult, getGuildId);
               const _Math = Math;
               const _Math2 = Math;
               const _Math3 = Math;
               const powResult = Math.pow(10, Math.floor(Math.log10(everyoneMemberCountResult)));
+              let v47E5Rz = util.t["47E5Rz"];
               if (getGuildId.isForumPost()) {
+                v47E5Rz = tmp6(1114).t.sYW2cy;
               } else if (getGuildId.isThread()) {
+                v47E5Rz = tmp6(1114).t["2YaiQ1"];
               }
-              let obj = { body: null, footer: null };
+              const obj = { body: null, footer: null };
               const intl = tmp6(1114).intl;
-              obj = { role: null, count: null };
-              obj[0] = extractEveryoneRoleResult;
+              const obj2 = { role: extractEveryoneRoleResult, count: null };
               const _Math4 = Math;
               const result = Math.trunc(everyoneMemberCountResult / powResult) * powResult;
-              obj[1] = result.toLocaleString();
-              obj[0] = intl.formatToPlainString(_2YaiQ1, obj);
+              obj2.count = result.toLocaleString();
+              obj.body = intl.formatToPlainString(v47E5Rz, obj2);
               const intl2 = tmp6(1114).intl;
-              obj[1] = intl2.string(getSystemLocale.t.mVyrtu);
+              obj.footer = intl2.string(util.t.mVyrtu);
               return obj;
             } else {
               return false;
             }
+            tmp9Result = tmp9(10290);
           }
-          const obj5 = parsedItemUsesEveryoneRoleDefault;
         }
       } else {
         return false;
       }
     },
     analyticsType: "@Everyone Warning",
-    animation: "applicationId"
+    animation: "accessible"
   },
   {
     check(arg0) {
       let isMatch = TOKEN_REGEX.test(arg0);
       if (isMatch) {
         const obj = { body: null };
-        const intl = getSystemLocale.intl;
-        obj[0] = intl.string(getSystemLocale.t.sTwS1a);
+        const intl = util.intl;
+        obj.body = intl.string(util.t.sTwS1a);
         isMatch = obj;
       }
       return isMatch;
@@ -70,6 +70,6 @@ const items = [
     analyticsType: "API Token Warning"
   }
 ];
-let result = set.fileFinishedImporting("utils/ChatRestrictions.tsx");
+let result = size.fileFinishedImporting("utils/ChatRestrictions.tsx");
 
 export const RESTRICTIONS = items;

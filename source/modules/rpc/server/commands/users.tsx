@@ -1,21 +1,21 @@
-// Module ID: 14507
-// Function ID: 14508
-// Name: RPC_EMBEDDED_APP_SCOPE
-// Dependencies: [1371, 4465, 1074, 14479, 9565, 2]
+// Module ID: 14532
+// Function ID: 14533
+// Name: users
+// Dependencies: [1371, 4479, 1074, 14504, 9592, 2]
 
-// Module 14507 (RPC_EMBEDDED_APP_SCOPE)
-import transformUserDefault from "transformUser" /* 9565 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4465 */;
-import { RPCCommands } from "ME" /* 1074 */;
-import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 14479 */;
+// Module 14532 (users)
+import transformUserDefault from "transformUser" /* 9592 */;
+import UserStore from "UserStore" /* 1371 */;
 
-({ RPC_EMBEDDED_APP_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = RPC_SCOPE_CONFIG);
-let obj = {};
-obj = {
-  scope: { [RPC_SCOPE_CONFIG.ANY]: items },
+const Constants = fn(4479);
+({ RPC_EMBEDDED_APP_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = Constants);
+const RPCCommands = fn(1074).RPCCommands;
+const obj = {};
+const CONTEXT_MENU_ICON_NAMES = fn(14504);
+const obj3 = {
+  scope: null,
   handler(args) {
-    user = user.getUser(args.args.id);
+    const user = UserStore.getUser(args.args.id);
     let tmp2 = null;
     if (null != user) {
       tmp2 = transformUserDefault(user);
@@ -23,8 +23,10 @@ obj = {
     return tmp2;
   }
 };
-items = [RPC_EMBEDDED_APP_SCOPE, RPC_LOCAL_SCOPE];
-obj[RPCCommands.GET_USER] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_USER, obj);
-const result = require("set").fileFinishedImporting("modules/rpc/server/commands/users.tsx");
+const items = [RPC_EMBEDDED_APP_SCOPE, RPC_LOCAL_SCOPE];
+obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items };
+obj[RPCCommands.GET_USER] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_USER, obj3);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rpc/server/commands/users.tsx");
 
 export default obj;

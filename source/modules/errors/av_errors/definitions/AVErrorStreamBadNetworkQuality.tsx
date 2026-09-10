@@ -1,31 +1,32 @@
-// Module ID: 17844
-// Function ID: 17845
-// Name: AVErrorStreamBadNetworkQualityDefinition
-// Dependencies: [4599, 1074, 9115, 17837, 1369, 2]
+// Module ID: 17877
+// Function ID: 17878
+// Name: AVErrorStreamBadNetworkQuality
+// Dependencies: [4613, 1074, 9142, 17870, 1369, 2]
 
-// Module 17844 (AVErrorStreamBadNetworkQualityDefinition)
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
-import closure_2 from "initialize" /* 4599 */;
-import { RTCConnectionQuality } from "ME" /* 1074 */;
+// Module 17877 (AVErrorStreamBadNetworkQuality)
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import AVError from "AVError" /* 9142 */;
+import AVErrorContext from "AVErrorContext" /* 17870 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4613 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamBadNetworkQuality.tsx");
+require = fn;
+const RTCConnectionQuality = fn(1074).RTCConnectionQuality;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamBadNetworkQuality.tsx");
 
 export const AVErrorStreamBadNetworkQualityDefinition = {
   getActiveErrors() {
-    allActiveStreamKeys = allActiveStreamKeys.getAllActiveStreamKeys();
-    const mapped = allActiveStreamKeys.map((streamKey) => {
+    const allActiveStreamKeys = StreamRTCConnectionStore.getAllActiveStreamKeys();
+    const mapped = allActiveStreamKeys.map((item) => {
       let tmp = null;
-      if (quality.getQuality(streamKey) === constants.BAD) {
-        const obj = { type: null };
-        obj[0] = callback(9115).AVError.STREAM_BAD_NETWORK_QUALITY;
-        const merged = Object.assign(callback(17837).getStreamErrorContext(streamKey));
+      if (quality.getQuality(item) === constants.BAD) {
+        const obj = { type: AVError.AVError.STREAM_BAD_NETWORK_QUALITY };
+        const merged = Object.assign(AVErrorContext.getStreamErrorContext(item));
         tmp = obj;
-        const obj2 = callback(17837);
       }
       return tmp;
     });
-    return mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
+    return mapped.filter(GlobalUtils.isNotNullish);
   },
   makeErrorContextKey(streamKey) {
     return "" + streamKey.streamKey + ":" + streamKey.mediaSessionId;

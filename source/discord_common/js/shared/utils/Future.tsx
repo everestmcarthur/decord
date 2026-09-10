@@ -1,12 +1,12 @@
-// Module ID: 9298
-// Function ID: 9299
+// Module ID: 9325
+// Function ID: 9326
 // Name: Future
 // Dependencies: [2]
 
-// Module 9298 (Future)
-import set from "set" /* 2 */;
+// Module 9325 (Future)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/utils/Future.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/utils/Future.tsx");
 
 export const Future = function Future() {
   const obj = Object.create(new.target.prototype);

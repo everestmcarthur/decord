@@ -1,17 +1,17 @@
-// Module ID: 10688
-// Function ID: 10689
-// Name: create
-// Dependencies: [32, 1188, 10683, 10685, 10675, 2]
+// Module ID: 10715
+// Function ID: 10716
+// Name: billing_settings_nitro_gift_banner
+// Dependencies: [32, 1188, 10710, 10712, 10702, 2]
 
-// Module 10688 (create)
+// Module 10715 (billing_settings_nitro_gift_banner)
 import _mod1188 from "module_1188" /* 1188 */;
-import create from "create" /* 10675 */;
-import create2 from "create" /* 10683 */;
-import create3 from "create" /* 10685 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType } from "module_1188" /* 1188 */;
+import localized_string from "localized_string" /* 10702 */;
+import gradient from "gradient" /* 10710 */;
+import theme_aware_asset from "theme_aware_asset" /* 10712 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
+require = fn;
+const MessageType = fn(1188).MessageType;
 class BillingSettingsNitroGiftBanner$Type extends MessageType {
   constructor() {
     items = [, , , , , , , , , , , ];
@@ -24,7 +24,7 @@ class BillingSettingsNitroGiftBanner$Type extends MessageType {
       name: "gradient",
       kind: "message",
       T() {
-            return callback(10683).Gradient;
+            return require("gradient").Gradient;
           }
     };
     items[5] = { no: 6, name: "text_color", kind: "scalar", T: 9 };
@@ -34,7 +34,7 @@ class BillingSettingsNitroGiftBanner$Type extends MessageType {
       name: "asset",
       kind: "message",
       T() {
-            return callback(10685).ThemeAwareAsset;
+            return require("theme_aware_asset").ThemeAwareAsset;
           }
     };
     items[8] = {
@@ -42,7 +42,7 @@ class BillingSettingsNitroGiftBanner$Type extends MessageType {
       name: "background_asset",
       kind: "message",
       T() {
-            return callback(10685).ThemeAwareAsset;
+            return require("theme_aware_asset").ThemeAwareAsset;
           }
     };
     items[9] = {
@@ -50,52 +50,49 @@ class BillingSettingsNitroGiftBanner$Type extends MessageType {
       name: "header_localized",
       kind: "message",
       T() {
-            return callback(10675).LocalizedString;
+            return require("localized_string").LocalizedString;
           }
     };
     obj = { no: 11, name: "body_localized", kind: "message", T: null };
     class T {
       constructor() {
-        return require("create").LocalizedString;
+        return closure_1_0(closure_1_1[4]).LocalizedString;
       }
     }
-    obj[3] = T;
+    obj.T = T;
     items[10] = obj;
     items[11] = {
       no: 12,
       name: "additional_terms_localized",
       kind: "message",
       T() {
-            return callback(10675).LocalizedString;
+            return require("localized_string").LocalizedString;
           }
     };
-    tmp = new tmp("discord_protos.premium_marketing.v1.BillingSettingsNitroGiftBanner", items, T);
-    // ThrowIfThisInitialized (0x7c)
-    return tmp;
+    tmp1 = new tmp("discord_protos.premium_marketing.v1.BillingSettingsNitroGiftBanner", items, T);
+    return tmp1;
   }
 }
-let prototype = BillingSettingsNitroGiftBanner$Type.prototype;
+const prototype = BillingSettingsNitroGiftBanner$Type.prototype;
 prototype["create"] = function create(arr) {
-  let obj = { assetUrl: "", header: "", body: "", backgroundAssetUrl: "", textColor: "", additionalTerms: "" };
+  const obj = { assetUrl: "", header: "", body: "", backgroundAssetUrl: "", textColor: "", additionalTerms: "" };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
     const result = _mod1188.reflectionMergePartial(this, obj, arr);
     const tmpResult = _mod1188;
   }
   return obj;
 };
-prototype["internalBinaryRead"] = function internalBinaryRead(pos) {
+prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, arg2, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
     obj = self.create();
   }
-  const sum = pos.pos + arg1;
-  if (pos.pos < sum) {
-    const LocalizedString = create.LocalizedString;
-    obj.additionalTermsLocalized = LocalizedString.internalBinaryRead(pos, pos.uint32(), arg2, obj.additionalTermsLocalized);
+  if (pos.pos < pos.pos + arg1) {
+    [r10019, r10020] = pos.tag();
+    const tmp3 = _slicedToArray(pos.tag(), 2);
   }
   return obj;
 };
@@ -117,7 +114,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(assetUrl, tag, w
     const tagResult3 = tag.tag(4, _mod1188.WireType.LengthDelimited);
   }
   if (assetUrl.gradient) {
-    const Gradient = create2.Gradient;
+    const Gradient = gradient.Gradient;
     const tagResult4 = tag.tag(5, _mod1188.WireType.LengthDelimited);
     const joined = Gradient.internalBinaryWrite(assetUrl.gradient, tag.tag(5, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = Gradient.internalBinaryWrite(assetUrl.gradient, tag.tag(5, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -131,31 +128,31 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(assetUrl, tag, w
     const tagResult6 = tag.tag(7, _mod1188.WireType.LengthDelimited);
   }
   if (assetUrl.asset) {
-    const ThemeAwareAsset = create3.ThemeAwareAsset;
+    const ThemeAwareAsset = theme_aware_asset.ThemeAwareAsset;
     const tagResult7 = tag.tag(8, _mod1188.WireType.LengthDelimited);
     const joined1 = ThemeAwareAsset.internalBinaryWrite(assetUrl.asset, tag.tag(8, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = ThemeAwareAsset.internalBinaryWrite(assetUrl.asset, tag.tag(8, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (assetUrl.backgroundAsset) {
-    const ThemeAwareAsset2 = create3.ThemeAwareAsset;
+    const ThemeAwareAsset2 = theme_aware_asset.ThemeAwareAsset;
     const tagResult8 = tag.tag(9, _mod1188.WireType.LengthDelimited);
     const joined2 = ThemeAwareAsset2.internalBinaryWrite(assetUrl.backgroundAsset, tag.tag(9, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult2 = ThemeAwareAsset2.internalBinaryWrite(assetUrl.backgroundAsset, tag.tag(9, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (assetUrl.headerLocalized) {
-    const LocalizedString = create.LocalizedString;
+    const LocalizedString = localized_string.LocalizedString;
     const tagResult9 = tag.tag(10, _mod1188.WireType.LengthDelimited);
     const joined3 = LocalizedString.internalBinaryWrite(assetUrl.headerLocalized, tag.tag(10, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult3 = LocalizedString.internalBinaryWrite(assetUrl.headerLocalized, tag.tag(10, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (assetUrl.bodyLocalized) {
-    const LocalizedString2 = create.LocalizedString;
+    const LocalizedString2 = localized_string.LocalizedString;
     const tagResult10 = tag.tag(11, _mod1188.WireType.LengthDelimited);
     const joined4 = LocalizedString2.internalBinaryWrite(assetUrl.bodyLocalized, tag.tag(11, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult4 = LocalizedString2.internalBinaryWrite(assetUrl.bodyLocalized, tag.tag(11, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (assetUrl.additionalTermsLocalized) {
-    const LocalizedString3 = create.LocalizedString;
+    const LocalizedString3 = localized_string.LocalizedString;
     const tagResult11 = tag.tag(12, _mod1188.WireType.LengthDelimited);
     const joined5 = LocalizedString3.internalBinaryWrite(assetUrl.additionalTermsLocalized, tag.tag(12, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult5 = LocalizedString3.internalBinaryWrite(assetUrl.additionalTermsLocalized, tag.tag(12, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -180,7 +177,7 @@ let items = [
     name: "gradient",
     kind: "message",
     T() {
-      return callback(10683).Gradient;
+      return require("gradient").Gradient;
     }
   },
   { no: 6, name: "text_color", kind: "scalar", T: 9 },
@@ -190,7 +187,7 @@ let items = [
     name: "asset",
     kind: "message",
     T() {
-      return callback(10685).ThemeAwareAsset;
+      return require("theme_aware_asset").ThemeAwareAsset;
     }
   },
   {
@@ -198,7 +195,7 @@ let items = [
     name: "background_asset",
     kind: "message",
     T() {
-      return callback(10685).ThemeAwareAsset;
+      return require("theme_aware_asset").ThemeAwareAsset;
     }
   },
   {
@@ -206,7 +203,7 @@ let items = [
     name: "header_localized",
     kind: "message",
     T() {
-      return callback(10675).LocalizedString;
+      return require("localized_string").LocalizedString;
     }
   },
 ,
@@ -215,21 +212,21 @@ let items = [
 let obj = { no: 11, name: "body_localized", kind: "message", T: null };
 class T {
   constructor() {
-    return require("create").LocalizedString;
+    return closure_1_0(closure_1_1[4]).LocalizedString;
   }
 }
-obj[3] = T;
+obj.T = T;
 items[10] = obj;
 items[11] = {
   no: 12,
   name: "additional_terms_localized",
   kind: "message",
   T() {
-    return callback(10675).LocalizedString;
+    return require("localized_string").LocalizedString;
   }
 };
-prototype = new prototype("discord_protos.premium_marketing.v1.BillingSettingsNitroGiftBanner", items, tmp, T, BillingSettingsNitroGiftBanner$Type, prototype, items);
-// ThrowIfThisInitialized (0x7c)
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/billing_settings_nitro_gift_banner.tsx");
+const prototype1 = new prototype("discord_protos.premium_marketing.v1.BillingSettingsNitroGiftBanner", items, tmp, T, BillingSettingsNitroGiftBanner$Type, prototype, items);
+const size = fn(2);
+let result = size.fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/billing_settings_nitro_gift_banner.tsx");
 
-export const BillingSettingsNitroGiftBanner = prototype;
+export const BillingSettingsNitroGiftBanner = prototype1;

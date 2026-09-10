@@ -1,27 +1,28 @@
-// Module ID: 16819
-// Function ID: 16820
+// Module ID: 16856
+// Function ID: 16857
 // Name: getCannotSwapApplicationText
-// Dependencies: [2025, 4199, 4206, 1114, 9253, 2]
+// Dependencies: [2025, 4212, 4219, 1114, 9280, 2]
 // Exports: default
 
-// Module 16819 (getCannotSwapApplicationText)
-import closure_2 from "_getSystemLocale" /* 2025 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4199 */;
+// Module 16856 (getCannotSwapApplicationText)
+import LocaleStore from "LocaleStore" /* 2025 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_channels/getCannotSwapApplicationText.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_channels/getCannotSwapApplicationText.tsx");
 
 export default function getCannotSwapApplicationText(arg0) {
-  const _require = arg0;
-  const prop = _require(4206).SWAP_APP_CHANNEL_APPLICATION_PERMISSION_LIST;
-  const found = prop.filter((arg0) => !closure_1_3.can(arg0, closure_0));
+  _require = arg0;
+  const prop = require("AppChannelPermissions").SWAP_APP_CHANNEL_APPLICATION_PERMISSION_LIST;
+  const found = prop.filter((item) => !PermissionStore.can(item, closure_0));
   if (0 !== found.length) {
     const _Intl = Intl;
-    const listFormat = new Intl.ListFormat(locale.locale);
+    const listFormat = new Intl.ListFormat(LocaleStore.locale);
     const intl = tmp(1114).intl;
-    const obj = { permissions: null, count: null };
-    obj[0] = listFormat.format(found.map(tmp(9253).getPermissionName));
-    obj[1] = found.length;
+    const obj = { permissions: listFormat.format(found.map(tmp(9280).getPermissionName)), count: found.length };
     return intl.formatToPlainString(tmp(1114).t.na1rJc, obj);
   }
 };

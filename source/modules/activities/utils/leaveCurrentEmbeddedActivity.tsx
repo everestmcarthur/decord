@@ -1,21 +1,22 @@
-// Module ID: 9518
-// Function ID: 9519
+// Module ID: 9545
+// Function ID: 9546
 // Name: leaveCurrentEmbeddedActivity
-// Dependencies: [1956, 9519, 2]
+// Dependencies: [1956, 9546, 2]
 // Exports: leaveCurrentEmbeddedActivity
 
-// Module 9518 (leaveCurrentEmbeddedActivity)
-import getEmbeddedActivitiesManagerDefault from "getEmbeddedActivitiesManager" /* 9519 */;
-import closure_2 from "participantFromServer" /* 1956 */;
+// Module 9545 (leaveCurrentEmbeddedActivity)
+import getEmbeddedActivitiesManagerDefault from "getEmbeddedActivitiesManager" /* 9546 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 
-const result = require("set").fileFinishedImporting("modules/activities/utils/leaveCurrentEmbeddedActivity.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/utils/leaveCurrentEmbeddedActivity.tsx");
 
 export const leaveCurrentEmbeddedActivity = function leaveCurrentEmbeddedActivity() {
-  currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
+  const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
   if (null != currentEmbeddedActivity) {
-    let obj = getEmbeddedActivitiesManagerDefault();
-    obj = { location: null, applicationId: null, showFeedback: false };
-    ({ location: obj2[0], applicationId: obj2[1] } = currentEmbeddedActivity);
-    obj.leaveActivity(obj);
+    ({ location: obj2.location, applicationId: obj2.applicationId } = currentEmbeddedActivity);
+    getEmbeddedActivitiesManagerDefault().leaveActivity({ location: null, applicationId: null, showFeedback: false });
+    const obj = getEmbeddedActivitiesManagerDefault();
+    const obj3 = { location: null, applicationId: null, showFeedback: false };
   }
 };

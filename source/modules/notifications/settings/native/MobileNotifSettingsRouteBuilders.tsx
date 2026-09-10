@@ -1,23 +1,23 @@
-// Module ID: 15921
-// Function ID: 15922
-// Name: buildOverviewCategoriesSection
-// Dependencies: [1114, 2722, 15917, 2]
+// Module ID: 15951
+// Function ID: 15952
+// Name: MobileNotifSettingsRouteBuilders
+// Dependencies: [1114, 2722, 15947, 2]
 // Exports: buildCategoryOtherSettingsSection, buildCategoryServerSettingsSection, buildCategorySocialSettingsSection, buildOverviewCategoriesSection, buildRealtimeSettingsSection
 
-// Module 15921 (buildOverviewCategoriesSection)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 2722 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 15917 */;
+// Module 15951 (MobileNotifSettingsRouteBuilders)
+import util from "util" /* 1114 */;
+import _modDef2722 from "module_2722" /* 2722 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 15947 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/notifications/settings/native/MobileNotifSettingsRouteBuilders.tsx");
+const result = size.fileFinishedImporting("modules/notifications/settings/native/MobileNotifSettingsRouteBuilders.tsx");
 
 export const buildOverviewCategoriesSection = function buildOverviewCategoriesSection() {
   const obj = { label: null, settings: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(messagesProxyDefault["/UdAvP"]);
+  const intl = util.intl;
+  obj.label = intl.string(_modDef2722["/UdAvP"]);
   const items = [MobileNotifSettings.MobileNotifSettings.NOTIF_REALTIME, MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SOCIAL, MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SERVER, MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_OTHER];
-  obj[1] = items;
+  obj.settings = items;
   return obj;
 };
 export function buildRealtimeSettingsSection() {
@@ -26,7 +26,7 @@ export function buildRealtimeSettingsSection() {
 export const buildCategorySocialSettingsSection = function buildCategorySocialSettingsSection() {
   const obj = { settings: null };
   const items = [MobileNotifSettings.MobileNotifSettings.NOTIF_REACTIONS, MobileNotifSettings.MobileNotifSettings.NOTIF_MISSED_MESSAGES_LOW, MobileNotifSettings.MobileNotifSettings.NOTIF_MISSED_MESSAGES_DEFAULT, MobileNotifSettings.MobileNotifSettings.NOTIF_VOICE_ACTIVITY_LOW, MobileNotifSettings.MobileNotifSettings.NOTIF_VOICE_ACTIVITY_DEFAULT, MobileNotifSettings.MobileNotifSettings.NOTIF_GAMING_LOW, MobileNotifSettings.MobileNotifSettings.NOTIF_GAMING_DEFAULT];
-  obj[0] = items;
+  obj.settings = items;
   return obj;
 };
 export function buildCategoryServerSettingsSection() {

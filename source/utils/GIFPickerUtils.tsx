@@ -1,25 +1,25 @@
-// Module ID: 10373
-// Function ID: 10374
-// Name: isKlipyProvider
-// Dependencies: [1074, 10372, 2]
+// Module ID: 10400
+// Function ID: 10401
+// Name: GIFPickerUtils
+// Dependencies: [1074, 10399, 2]
 // Exports: calculateAnalyticsMetadata, getGIFThumbnailForFavorite, isKlipyProvider, shouldUseAnimatedWebPThumbnail
 
-// Module 10373 (isKlipyProvider)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import GIF_PROVIDER from "GIF_PROVIDER" /* 10372 */;
+// Module 10400 (GIFPickerUtils)
+import Constants from "Constants" /* 1074 */;
+import GifProvider from "GifProvider" /* 10399 */;
+import size from "module_2" /* 2 */;
 
-const SearchTypes = ME.SearchTypes;
-const result = set.fileFinishedImporting("utils/GIFPickerUtils.tsx");
+const SearchTypes = Constants.SearchTypes;
+const result = size.fileFinishedImporting("utils/GIFPickerUtils.tsx");
 
 export const isKlipyProvider = function isKlipyProvider(arg0) {
-  return arg0 === GIF_PROVIDER.GIF_PROVIDER_EMBED_NAME;
+  return arg0 === GifProvider.GIF_PROVIDER_EMBED_NAME;
 };
 export const shouldUseAnimatedWebPThumbnail = function shouldUseAnimatedWebPThumbnail(arg0) {
-  return arg0 === GIF_PROVIDER.GIF_PROVIDER_EMBED_NAME;
+  return arg0 === GifProvider.GIF_PROVIDER_EMBED_NAME;
 };
 export const getGIFThumbnailForFavorite = function getGIFThumbnailForFavorite(providerName) {
-  if (providerName.providerName === GIF_PROVIDER.GIF_PROVIDER_EMBED_NAME) {
+  if (providerName.providerName === GifProvider.GIF_PROVIDER_EMBED_NAME) {
     const thumbnail = providerName.thumbnail;
     if (null != thumbnail) {
       let uri = thumbnail.proxyURL;
@@ -35,17 +35,18 @@ export const getGIFThumbnailForFavorite = function getGIFThumbnailForFavorite(pr
 };
 export const calculateAnalyticsMetadata = function calculateAnalyticsMetadata(analyticsID, TRENDING_GIFS, arg2) {
   if (null != TRENDING_GIFS) {
-    let obj = {};
-    obj[TRENDING_GIFS] = 1;
+    const obj2 = {};
+    obj2[TRENDING_GIFS] = 1;
+    let obj = obj2;
   } else {
     obj = {};
   }
-  obj = arg2;
+  let obj3 = arg2;
   if (arg2 == null) {
-    obj = {};
+    obj3 = {};
   }
-  ({ offset, limit, results } = obj);
-  obj1 = { search_type: SearchTypes.GIF, load_id: analyticsID, limit, offset, page: null, total_results: null, page_results: null, num_modifiers: null, modifiers: null };
+  ({ offset, limit, results } = obj3);
+  const obj4 = { search_type: SearchTypes.GIF, load_id: analyticsID, limit, offset, page: null, total_results: null, page_results: null, num_modifiers: null, modifiers: null };
   let num2 = 1;
   if (null != limit) {
     num2 = 1;
@@ -54,14 +55,14 @@ export const calculateAnalyticsMetadata = function calculateAnalyticsMetadata(an
       num2 = Math.floor(offset / limit) + 1;
     }
   }
-  obj1[4] = num2;
-  obj1[5] = obj.totalResults;
+  obj4.page = num2;
+  obj4.total_results = obj3.totalResults;
   let tmp2 = null;
   if (null != results) {
     tmp2 = results;
   }
-  obj1[6] = tmp2;
-  obj1[7] = Object.keys(obj).length;
-  obj1[8] = obj;
-  return obj1;
+  obj4.page_results = tmp2;
+  obj4.num_modifiers = Object.keys(obj).length;
+  obj4.modifiers = obj;
+  return obj4;
 };

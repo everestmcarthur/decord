@@ -1,54 +1,58 @@
-// Module ID: 16810
-// Function ID: 16811
-// Name: ConnectedCreateThreadHeaderButton
-// Dependencies: [19, 17, 1957, 10921, 1074, 16646, 21, 7913, 563, 7269, 11227, 7863, 1114, 12777, 1242, 8630, 16811, 7000, 5630, 4418, 1611, 16862, 1115, 16863, 16864, 16865, 16866, 16706, 2]
+// Module ID: 16847
+// Function ID: 16848
+// Name: ChannelDetailsNavigator
+// Dependencies: [19, 17, 1957, 10948, 1074, 16678, 21, 7927, 563, 7283, 11254, 7877, 1114, 12803, 1242, 8658, 16848, 7014, 5644, 4432, 1611, 16899, 1115, 16900, 16901, 16902, 16903, 16743, 2]
 
-// Module 16810 (ConnectedCreateThreadHeaderButton)
-import registerAssetDefault from "registerAsset" /* 12777 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import { ChannelDetailsNavigatorScreens as closure_6 } from "ChannelDetailsNavigatorScreens" /* 10921 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import { SearchNavigatorScreens } from "SearchNavigatorScreens" /* 16646 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 7913 */;
+// Module 16847 (ChannelDetailsNavigator)
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import HeaderShared from "HeaderShared" /* 7877 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 11254 */;
+import _modDef12803 from "module_12803" /* 12803 */;
+import ChannelSettingsModal from "ChannelSettingsModal" /* 16848 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-const require = arg1;
+require = fn;
 function ConnectedCreateThreadHeaderButton(channelId) {
   channelId = channelId.channelId;
-  let obj = channelId(563);
-  const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getChannel(channelId));
+  const items = [ChannelStore];
+  const stateFromStores = channelId(563).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   let tmp2 = null;
   if (null != stateFromStores) {
-    obj = { channel: null };
-    obj[0] = stateFromStores;
-    tmp2 = callback(CreateThreadHeaderButton, obj);
+    const obj2 = { channel: stateFromStores };
+    tmp2 = closure_9(CreateThreadHeaderButton, obj2);
   }
   return tmp2;
 }
 function CreateThreadHeaderButton(channel) {
   channel = channel.channel;
-  let obj = channel(7269);
   [][0] = channel;
-  const canStartThread = obj.useCanStartThread(channel);
+  const canStartThread = channel(7283).useCanStartThread(channel);
   let tmp5 = null;
   if (canStartThread) {
-    obj = { accessibilityLabel: null, onPress: null, source: null };
+    const obj2 = { accessibilityLabel: null, onPress: null, source: null };
     const intl = tmp(1114).intl;
-    obj[0] = intl.string(tmp(1114).t.rBIGBL);
-    obj[1] = tmp4;
-    obj[2] = registerAssetDefault;
-    tmp5 = callback(tmp(7863).HeaderIconButton, obj);
+    obj2.accessibilityLabel = intl.string(tmp(1114).t.rBIGBL);
+    obj2.onPress = tmp4;
+    obj2.source = _modDef12803;
+    tmp5 = closure_9(tmp(7877).HeaderIconButton, obj2);
   }
   return tmp5;
 }
-let c3 = importAllResult;
-({ jsx: c9, jsxs: c10 } = jsxProd);
+const View = fn(17).View;
+const constants = fn(10948).ChannelDetailsNavigatorScreens;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const SearchNavigatorScreens = fn(16678).SearchNavigatorScreens;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let closure_11 = Object.freeze({});
-let closure_12 = createNativeStackNavigator.createNativeStackNavigator();
-const memoResult = importAllResult.memo((navigation) => {
+const NativeStackNavigator = fn(7927);
+let closure_12 = NativeStackNavigator.createNativeStackNavigator();
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsNavigator.tsx");
+
+export default noop.memo((navigation) => {
   navigation = navigation.navigation;
   let params = navigation.route.params;
   const channelId = params.channelId;
@@ -58,34 +62,26 @@ const memoResult = importAllResult.memo((navigation) => {
   if (DETAILS === undefined) {
     DETAILS = constants.DETAILS;
   }
-  let channelSettingsScreensStyles;
   let guildId;
-  let obj = DETAILS;
   const items = [channelId, DETAILS, source];
   const effect = DETAILS.useEffect(() => {
-    const channel = guildId.getChannel(channelId);
+    const channel = ChannelStore.getChannel(channelId);
     if (null != channel) {
-      const obj = { channel_id: null, guild_id: null, channel_type: null, initial_route_name: null, source: null };
-      obj[0] = channel.id;
-      obj[1] = channel.getGuildId();
-      obj[2] = channel.type;
-      obj[3] = DETAILS;
-      obj[4] = source;
-      channelId(source[14]).track(closure_1_7.CHANNEL_SIDEBAR_VIEWED, obj);
-      const obj2 = channelId(source[14]);
+      const obj = { channel_id: channel.id, guild_id: channel.getGuildId(), channel_type: channel.type, initial_route_name: DETAILS, source };
+      AnalyticsUtilsDefault.track(AnalyticEvents.CHANNEL_SIDEBAR_VIEWED, obj);
     }
   }, items);
   const items1 = [navigation];
-  const effect1 = DETAILS.useEffect(() => navigation.addListener("beforeRemove", () => callback(table[15]).close()), items1);
-  obj1 = navigation(source[16]);
-  channelSettingsScreensStyles = obj1.useChannelSettingsScreensStyles();
+  const effect1 = DETAILS.useEffect(() => navigation.addListener("beforeRemove", () => channelId(source[15]).close()), items1);
+  const channelSettingsScreensStyles = navigation(source[16]).useChannelSettingsScreensStyles();
   const items2 = [channelId];
   const memo = DETAILS.useMemo(() => {
-    const initialParams = { channelId };
-    return { initialParams };
+    const obj = { initialParams: { channelId } };
+    return obj;
   }, items2);
-  let obj2 = navigation(source[17]);
-  const accessibilityNativeStackOptions = obj2.useAccessibilityNativeStackOptions();
+  let obj = DETAILS;
+  let obj2 = navigation(source[16]);
+  const accessibilityNativeStackOptions = navigation(source[17]).useAccessibilityNativeStackOptions();
   let channel = guildId.getChannel(channelId);
   guildId = undefined;
   if (channel != null) {
@@ -94,13 +90,13 @@ const memoResult = importAllResult.memo((navigation) => {
   const items3 = [channelId, guildId, channelSettingsScreensStyles];
   const memo1 = obj.useMemo(() => {
     if (null != guildId) {
-      let channelSettingsScreens = navigation(source[16]).getChannelSettingsScreens(channelId, tmp, channelSettingsScreensStyles);
-      const obj2 = navigation(source[16]);
+      let channelSettingsScreens = ChannelSettingsModal.getChannelSettingsScreens(channelId, tmp, channelSettingsScreensStyles);
     } else {
       channelSettingsScreens = {};
     }
     return channelSettingsScreens;
   }, items3);
+  let obj3 = navigation(source[17]);
   navigation(source[18]).useNavigatorBackPressHandler(() => {
     const rootNavigationRef = navigation(source[19]).getRootNavigationRef();
     const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();
@@ -116,37 +112,37 @@ const memoResult = importAllResult.memo((navigation) => {
     return tmp2;
   });
   const rect = channelId(tmp5[20])();
-  obj = { style: items4, children: null };
-  items4 = [channelSettingsScreensStyles.container, { paddingLeft: rect.left, paddingRight: rect.right }];
-  obj = { id: "channel-details-navigator", screenOptions: null, initialRouteName: null, children: null };
-  obj1 = { headerTitle: tmp4(tmp5[11]).renderGenericTitle, headerTitleAlign: "center" };
+  const obj4 = { style: null, children: null };
+  const items4 = [channelSettingsScreensStyles.container, { paddingLeft: rect.left, paddingRight: rect.right }];
+  obj4.style = items4;
+  const obj5 = { id: "channel-details-navigator", screenOptions: null, initialRouteName: null, children: null };
+  const tmp4Result = navigation(source[18]);
   let merged = Object.assign(accessibilityNativeStackOptions);
-  obj[1] = obj1;
-  obj[2] = DETAILS;
-  obj2 = {
-    initialParams: { channelId, search, expandTopic },
-    name: constants.DETAILS,
-    options: { headerShown: false },
-    getComponent() {
-      return navigation(source[21]).default;
-    }
-  };
+  obj5.screenOptions = { headerTitle: navigation(source[11]).renderGenericTitle, headerTitleAlign: "center" };
+  obj5.initialRouteName = DETAILS;
   const items5 = [
-    callback(closure_12.Screen, obj2),
-    callback(closure_12.Screen, {
+    closure_9(Screen.Screen, {
+      initialParams: { channelId, search, expandTopic },
+      name: constants.DETAILS,
+      options: { headerShown: false },
+      getComponent() {
+        return navigation(source[21]).default;
+      }
+    }),
+    closure_9(Screen.Screen, {
       name: SearchNavigatorScreens.SEARCH_CHAT_PREVIEW,
       options(route) {
         route = route.route;
         let obj = {
           header(arg0) {
-            let obj = route(7863);
-            obj = {};
+            const obj2 = {};
             const merged = Object.assign(arg0);
-            obj.shouldHandleSafeArea = route(1115).isAndroid();
-            return obj.renderHeader(obj);
+            const obj = route(7877);
+            obj2.shouldHandleSafeArea = route(1115).isAndroid();
+            return obj.renderHeader(obj2);
           },
           headerTitle() {
-            return closure_1_9(closure_1_1(closure_1_2[23]), { channelId: route.params.channelId });
+            return closure_2_9(channelId(source[23]), { channelId: route.params.channelId });
           },
           headerLeft: route(source[11]).getRenderBackImage(route.navigation)
         };
@@ -156,44 +152,44 @@ const memoResult = importAllResult.memo((navigation) => {
         return navigation(source[24]).default;
       }
     }),
-    callback(closure_12.Screen, {
+    closure_9(Screen.Screen, {
       name: constants.PINNED_MESSAGES,
       initialParams: { channelId },
       options(navigation) {
         navigation = navigation.navigation;
         const obj = { title: null, headerLeft: null };
-        const intl = navigation(source[12]).intl;
-        obj[0] = intl.string(navigation(source[12]).t["mp1N/2"]);
+        const intl = util.intl;
+        obj.title = intl.string(util.t["mp1N/2"]);
         if (DETAILS === navigation.route.name) {
-          let tmpResult = tmp(tmp2[11]);
-          let renderModalCloseImage = tmpResult.getRenderModalCloseImage(navigation);
+          let renderModalCloseImage = tmp(7877).getRenderModalCloseImage(navigation);
+          const tmpResult = tmp(7877);
         } else {
-          tmpResult = tmp(tmp2[11]);
-          renderModalCloseImage = tmpResult.getRenderModalBackImage(navigation);
+          renderModalCloseImage = tmp(7877).getRenderModalBackImage(navigation);
+          const tmpResult2 = tmp(7877);
         }
-        obj[1] = renderModalCloseImage;
+        obj.headerLeft = renderModalCloseImage;
         return obj;
       },
       getComponent() {
         return navigation(source[25]).default;
       }
     }),
-    callback(closure_12.Screen, {
+    closure_9(Screen.Screen, {
       initialParams: { channelId, applicationId },
       name: constants.MUTE,
       options(navigation) {
         navigation = navigation.navigation;
         const obj = { title: null, headerLeft: null };
-        const intl = navigation(source[12]).intl;
-        obj[0] = intl.string(navigation(source[12]).t.w4m945);
+        const intl = util.intl;
+        obj.title = intl.string(util.t.w4m945);
         if (DETAILS === navigation.route.name) {
-          let tmpResult = tmp(tmp2[11]);
-          let renderModalCloseImage = tmpResult.getRenderModalCloseImage(navigation);
+          let renderModalCloseImage = tmp(7877).getRenderModalCloseImage(navigation);
+          const tmpResult = tmp(7877);
         } else {
-          tmpResult = tmp(tmp2[11]);
-          renderModalCloseImage = tmpResult.getRenderModalBackImage(navigation);
+          renderModalCloseImage = tmp(7877).getRenderModalBackImage(navigation);
+          const tmpResult2 = tmp(7877);
         }
-        obj[1] = renderModalCloseImage;
+        obj.headerLeft = renderModalCloseImage;
         return obj;
       },
       getComponent() {
@@ -203,62 +199,57 @@ const memoResult = importAllResult.memo((navigation) => {
   ,
 
   ];
-  const obj6 = {};
+  const obj11 = {};
   const merged1 = Object.assign(memo);
-  obj6.name = constants.THREADS;
-  obj6.options = function options(arg0) {
+  obj11.name = constants.THREADS;
+  obj11.options = function options(arg0) {
     ({ navigation, route } = arg0);
     const obj = { title: null, headerLeft: null, headerRight: null };
-    const intl = navigation(source[12]).intl;
-    obj[0] = intl.string(navigation(source[12]).t.B2panI);
+    const intl = util.intl;
+    obj.title = intl.string(util.t.B2panI);
     if (DETAILS === route.name) {
-      let tmpResult = tmp(tmp2[11]);
-      let renderModalCloseImage = tmpResult.getRenderModalCloseImage(navigation);
+      let renderModalCloseImage = tmp(7877).getRenderModalCloseImage(navigation);
+      const tmpResult = tmp(7877);
     } else {
-      tmpResult = tmp(tmp2[11]);
-      renderModalCloseImage = tmpResult.getRenderModalBackImage(navigation);
+      renderModalCloseImage = tmp(7877).getRenderModalBackImage(navigation);
+      const tmpResult2 = tmp(7877);
     }
-    obj[1] = renderModalCloseImage;
-    obj[2] = function headerRight() {
-      return closure_1_9(closure_1_13, { channelId: route.params.channelId });
+    obj.headerLeft = renderModalCloseImage;
+    obj.headerRight = function headerRight() {
+      return closure_2_9(ConnectedCreateThreadHeaderButton, { channelId: route.params.channelId });
     };
     return obj;
   };
-  obj6.getComponent = function getComponent() {
+  obj11.getComponent = function getComponent() {
     return navigation(source[27]).default;
   };
-  items5[4] = callback(closure_12.Screen, obj6);
+  items5[4] = closure_9(Screen.Screen, obj11);
   const entries = Object.entries(memo1);
-  items5[5] = entries.map((arg0) => {
-    [tmp, ] = arg0;
-    return closure_1_9(closure_1_12.Screen, {
+  items5[5] = entries.map((item) => {
+    [tmp, ] = item;
+    return closure_1_9(Screen.Screen, {
       name: tmp,
       options(navigation) {
         navigation = navigation.navigation;
-        const obj = { title: closure_1.title, headerLeft: null };
-        if (closure_1_3 === closure_0) {
-          let renderModalCloseImage = navigation(source[11]).getRenderModalCloseImage(navigation);
-          const obj3 = navigation(source[11]);
+        const obj = { title: channelId.title, headerLeft: null };
+        if (DETAILS === closure_1_0) {
+          let renderModalCloseImage = HeaderShared.getRenderModalCloseImage(navigation);
         } else {
-          renderModalCloseImage = navigation(source[11]).getRenderModalBackImage(navigation);
-          const obj2 = navigation(source[11]);
+          renderModalCloseImage = HeaderShared.getRenderModalBackImage(navigation);
         }
-        obj[1] = renderModalCloseImage;
+        obj.headerLeft = renderModalCloseImage;
         return obj;
       },
       children(route) {
         let params = route.route.params;
         if (params == null) {
-          params = closure_2_11;
+          params = closure_11;
         }
-        return closure_1.render(params, route.navigation);
+        return channelId.render(params, route.navigation);
       }
     }, tmp);
   });
-  obj[3] = items5;
-  obj[1] = callback2(closure_12.Navigator, obj);
-  return callback(channelSettingsScreensStyles, obj);
+  obj5.children = items5;
+  obj4.children = closure_10(Screen.Navigator, obj5);
+  return closure_9(channelSettingsScreensStyles, obj4);
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsNavigator.tsx");
-
-export default memoResult;

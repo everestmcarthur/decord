@@ -1,39 +1,39 @@
-// Module ID: 8060
-// Function ID: 8061
+// Module ID: 8075
+// Function ID: 8076
 // Name: usePremiumDiscountOffer
-// Dependencies: [7237, 1373, 8061, 7240, 563, 2]
+// Dependencies: [7251, 1373, 8076, 7254, 563, 2]
 // Exports: usePremiumDiscountOffer, usePremiumGroupDiscountOffer
 
-// Module 8060 (usePremiumDiscountOffer)
-import useDiscountOfferDefault from "useDiscountOffer" /* 8061 */;
-import closure_3 from "updateProduct" /* 7237 */;
-import GuildFeatures from "GuildFeatures" /* 1373 */;
+// Module 8075 (usePremiumDiscountOffer)
+import useStateFromStores from "useStateFromStores" /* 563 */;
+import ProductIds from "ProductIds" /* 7254 */;
+import useDiscountOfferDefault from "useDiscountOffer" /* 8076 */;
+import IAPStore from "IAPStore" /* 7251 */;
 
-const require = arg1;
-({ PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID: c4, PREMIUM_TIER_2_REENGAGEMENT_1_MONTH_40_PERCENT_DISCOUNT_ID: c5 } = GuildFeatures);
-const result = require("set").fileFinishedImporting("modules/premium/hooks/usePremiumDiscountOffer.android.tsx");
+require = fn;
+const PremiumConstants = fn(1373);
+({ PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID: closure_4, PREMIUM_TIER_2_REENGAGEMENT_1_MONTH_40_PERCENT_DISCOUNT_ID: hasOwnProperty } = PremiumConstants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/hooks/usePremiumDiscountOffer.android.tsx");
 
 export const usePremiumDiscountOffer = function usePremiumDiscountOffer() {
-  const items = [closure_3];
-  offerIds = offerIds(563).useStateFromStoresObject(items, () => ({ isFetchingProducts: closure_3.isFetchingProducts(), offerIds: closure_3.getOfferIds() })).offerIds;
-  const obj = offerIds(563);
-  const tmp = offerIds;
-  const tmp3 = importDefault;
-  let values = Object.values(offerIds(7240).DiscountIdToProductOfferId[closure_4]);
+  const items = [IAPStore];
+  const offerIds = useStateFromStores.useStateFromStoresObject(items, () => ({ isFetchingProducts: IAPStore.isFetchingProducts(), offerIds: IAPStore.getOfferIds() })).offerIds;
+  const values = Object.values(ProductIds.DiscountIdToProductOfferId[React4]);
   let tmp5 = null;
   if (0 !== values.length) {
     let tmp6 = null;
-    if (values.every((arg0) => offerIds.has(arg0))) {
+    if (values.every((item) => offerIds.has(item))) {
       tmp6 = tmp4;
     }
     tmp5 = tmp6;
   }
-  tmp4 = useDiscountOfferDefault(closure_4);
-  values = Object.values(tmp(7240).DiscountIdToProductOfferId[closure_5]);
+  tmp4 = useDiscountOfferDefault(React4);
+  const values2 = Object.values(ProductIds.DiscountIdToProductOfferId[hasOwnProperty]);
   let tmp8 = null;
-  if (0 !== values.length) {
+  if (0 !== values2.length) {
     let tmp9 = null;
-    if (values.every((arg0) => offerIds.has(arg0))) {
+    if (values2.every((item) => offerIds.has(item))) {
       tmp9 = tmp7;
     }
     tmp8 = tmp9;

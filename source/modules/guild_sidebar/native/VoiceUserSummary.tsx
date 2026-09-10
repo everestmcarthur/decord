@@ -1,62 +1,60 @@
-// Module ID: 16133
-// Function ID: 16134
-// Name: VOICE_USER_SUMMARY_HEIGHT
-// Dependencies: [19, 17, 21, 1178, 4560, 7873, 7872, 5097, 5101, 2]
+// Module ID: 16163
+// Function ID: 16164
+// Name: VoiceUserSummary
+// Dependencies: [19, 17, 21, 1178, 4574, 7887, 7886, 5111, 5115, 2]
 
-// Module 16133 (VOICE_USER_SUMMARY_HEIGHT)
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7873 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16163 (VoiceUserSummary)
+import native from "native" /* 1178 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7887 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = Object.freeze({ direction: require("Button").CutoutDirection.RIGHT, inset: -2 });
-let closure_7 = createCacheKey.createStyles({ container: { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, height: 40 }, containerNoPadding: { flexDirection: "row", alignItems: "center", height: 40 }, iconContainer: { height: 40 }, redesignChannelIcon: { marginRight: 4 }, overflow: { height: 20, paddingHorizontal: 4, paddingVertical: 0, display: "flex", flexDirection: "row", alignItems: "center" }, transparentBorder: { borderColor: "transparent" } });
-let obj = { direction: require("Button").CutoutDirection.RIGHT, inset: -2 };
-const memoResult = importAllResult.memo((guildId) => {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+let closure_6 = Object.freeze({ direction: fn(1178).CutoutDirection.RIGHT, inset: -2 });
+const createStyles = fn(4574);
+let closure_7 = createStyles.createStyles({ container: { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, height: 40 }, containerNoPadding: { flexDirection: "row", alignItems: "center", height: 40 }, iconContainer: { height: 40 }, redesignChannelIcon: { marginRight: 4 }, overflow: { height: 20, paddingHorizontal: 4, paddingVertical: 0, display: "flex", flexDirection: "row", alignItems: "center" }, transparentBorder: { borderColor: "transparent" } });
+let obj = { direction: fn(1178).CutoutDirection.RIGHT, inset: -2 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_sidebar/native/VoiceUserSummary.tsx");
+
+export default noop.memo((guildId) => {
   guildId = guildId.guildId;
   ({ users, max, renderIcon, noPadding, stageIcon } = guildId);
-  const tmp = callback();
+  const tmp = closure_7();
   let transparentBorder = null;
   if (useIsUsingClientThemeDefault()) {
     transparentBorder = tmp.transparentBorder;
   }
-  let obj = guildId(7872);
-  obj = { style: null, children: null };
-  const items = [noPadding ? tmp.containerNoPadding : tmp.container, obj.useClientThemesOverride()];
-  obj[0] = items;
+  const obj2 = { style: null, children: null };
+  const items = [noPadding ? tmp.containerNoPadding : tmp.container, guildId(7886).useClientThemesOverride()];
+  obj2.style = items;
   if (renderIcon) {
     if (stageIcon) {
-      let VoiceNormalIcon = tmp4(5097).StageIcon;
+      let VoiceNormalIcon = tmp4(5111).StageIcon;
     }
-    obj = { size: "sm", color: "channel-icon", style: null };
-    obj[2] = tmp.redesignChannelIcon;
-    const items1 = [tmp7(VoiceNormalIcon, obj), ];
-    obj1 = { offsetAmount: -6, style: null, overflowStyle: null, overflowComponent: null, items: null, max: null, renderItem: null };
-    obj1[1] = tmp.iconContainer;
+    const obj3 = { size: "sm", color: "channel-icon", style: tmp.redesignChannelIcon };
+    const items1 = [tmp7(VoiceNormalIcon, obj3), ];
+    const obj4 = { offsetAmount: -6, style: tmp.iconContainer, overflowStyle: null, overflowComponent: null, items: null, max: null, renderItem: null };
     const items2 = [tmp.overflow, transparentBorder];
-    obj1[2] = items2;
-    obj1[3] = tmp4(1178).OverflowTextSmall;
-    obj1[4] = users;
-    obj1[5] = max;
-    obj1[6] = function renderItem(user) {
-      const obj = { user, guildId, size: guildId(closure_1_2[3]).AvatarSizes.XSMALL_20, cutout: null };
+    obj4.overflowStyle = items2;
+    obj4.overflowComponent = tmp4(1178).OverflowTextSmall;
+    obj4.items = users;
+    obj4.max = max;
+    obj4.renderItem = function renderItem(user, arg1) {
+      const obj = { user, guildId, size: native.AvatarSizes.XSMALL_20, cutout: null };
       let tmp2;
       if (!arg1) {
-        tmp2 = closure_1_6;
+        tmp2 = closure_6;
       }
-      obj[3] = tmp2;
-      return closure_1_4(guildId(closure_1_2[3]).CutoutableAvatarImage, obj);
+      obj.cutout = tmp2;
+      return React4(native.CutoutableAvatarImage, obj);
     };
-    items1[1] = tmp7(tmp4(1178).SummarizedIconRow, obj1);
-    obj[1] = items1;
-    return tmp5(tmp6, obj);
+    items1[1] = tmp7(tmp4(1178).SummarizedIconRow, obj4);
+    obj2.children = items1;
+    return tmp5(tmp6, obj2);
   }
-  VoiceNormalIcon = tmp4(5101).VoiceNormalIcon;
+  VoiceNormalIcon = tmp4(5115).VoiceNormalIcon;
 });
-const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/VoiceUserSummary.tsx");
-
-export default memoResult;
 export const VOICE_USER_SUMMARY_HEIGHT = 40;

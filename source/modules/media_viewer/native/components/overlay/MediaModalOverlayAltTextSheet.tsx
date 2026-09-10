@@ -1,43 +1,40 @@
-// Module ID: 11541
-// Function ID: 11542
-// Name: MediaViewerAltTextSheet
-// Dependencies: [19, 21, 4560, 576, 11542, 5126, 7150, 7149, 1114, 4556, 2]
+// Module ID: 11567
+// Function ID: 11568
+// Name: MediaModalOverlayAltTextSheet
+// Dependencies: [19, 21, 4574, 576, 11568, 5140, 7164, 7163, 1114, 4570, 2]
 // Exports: default
 
-// Module 11541 (MediaViewerAltTextSheet)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 7149 */;
-import Background from "Background" /* 7150 */;
-import useMessagePreviewHeightStore from "useMessagePreviewHeightStore" /* 11542 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11567 (MediaModalOverlayAltTextSheet)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7163 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7164 */;
+import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11568 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { container: null };
-createCacheKey = { padding: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-let closure_3 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayAltTextSheet.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+const obj2 = { container: { padding: nativeDefault.space.PX_16 } };
+let closure_3 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayAltTextSheet.tsx");
 
 export default function MediaViewerAltTextSheet(children) {
-  let obj = useMessagePreviewHeightStore;
-  const messagePreviewCollapsedheight = obj.useMessagePreviewCollapsedheight();
-  const tmp = callback();
+  const tmp = closure_3();
+  const messagePreviewCollapsedheight = useMessagePreviewHeight.useMessagePreviewCollapsedheight();
   let num = 70;
   if (!obj2.useIsScreenLandscape()) {
     num = messagePreviewCollapsedheight + 20 + 50;
   }
-  obj = { header: null, contentStyles: null, children: null };
-  obj = { title: null };
+  const obj3 = { header: null, contentStyles: null, children: null };
+  const obj4 = { title: null };
   const intl = tmp2(1114).intl;
-  obj[0] = intl.string(getSystemLocale.t.J3IOO1);
-  obj[0] = jsx(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title: null });
+  obj4.title = intl.string(util.t.J3IOO1);
+  obj3.header = jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: null });
   const items = [tmp.container, { minHeight: num }];
-  obj[1] = items;
-  obj[2] = jsx(Text.Text, { accessibilityRole: "text", variant: "text-md/normal", children: children.description });
-  return jsx(Background.BottomSheet, { title: null });
+  obj3.contentStyles = items;
+  obj3.children = jsx(Text_Text.Text, { accessibilityRole: "text", variant: "text-md/normal", children: children.description });
+  return jsx(Sheet_BottomSheet.BottomSheet, { header: null, contentStyles: null, children: null });
 };

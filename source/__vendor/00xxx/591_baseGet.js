@@ -4,7 +4,7 @@
 // Dependencies: [592, 589]
 
 // Module 591 (baseGet)
-import toKey from "toKey" /* 589 */;
+import _mod589 from "module_589" /* 589 */;
 import castPath from "castPath" /* 592 */;
 
 
@@ -19,7 +19,7 @@ export default function baseGet(arg0, arg1) {
     tmp = arg0;
     if (0 < length) {
       const sum = num3 + 1;
-      const tmp6 = tmp2[toKey(undefined, arr[num3])];
+      const tmp6 = tmp2[_mod589(undefined, arr[num3])];
       num = sum;
       tmp = tmp6;
       while (null != tmp6) {

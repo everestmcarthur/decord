@@ -1,62 +1,64 @@
-// Module ID: 11206
-// Function ID: 11207
+// Module ID: 11233
+// Function ID: 11234
 // Name: ClearAfterOptionsActionSheet
-// Dependencies: [32, 19, 17, 11120, 21, 4560, 576, 7150, 7149, 1114, 5685, 5688, 11207, 4975, 4527, 2]
+// Dependencies: [32, 19, 17, 11147, 21, 4574, 576, 7164, 7163, 1114, 5699, 5702, 11234, 4989, 4541, 2]
 // Exports: default
 
-// Module 11206 (ClearAfterOptionsActionSheet)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 4975 */;
-import context from "context" /* 5685 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 7149 */;
-import Background from "Background" /* 7150 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { ClearAfterOptions } from "StatusTypes" /* 11120 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11233 (ClearAfterOptionsActionSheet)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import TableRadioGroup from "TableRadioGroup" /* 5699 */;
+import TableRadioRow from "TableRadioRow" /* 5702 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7163 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7164 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { content: null, buttonWrapper: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginTop: ThemesDefault.space.PX_24, paddingBottom: ThemesDefault.space.PX_16 };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { marginTop: ThemesDefault.space.PX_24, paddingBottom: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/custom_status/native/ClearAfterOptionsActionSheet.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const View = fn(17).View;
+const ClearAfterOptions = fn(11147).ClearAfterOptions;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, buttonWrapper: null };
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.buttonWrapper = { marginTop: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_16 };
+let closure_9 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/custom_status/native/ClearAfterOptionsActionSheet.tsx");
 
 export default function ClearAfterOptionsActionSheet(arg0) {
   ({ initialValue, onChange: require } = arg0);
-  closure_1 = undefined;
-  const tmp = callback4();
-  const tmp2 = callback(React.useState(initialValue), 2);
+  const tmp = closure_9();
+  const tmp2 = _slicedToArray(noop.useState(initialValue), 2);
   closure_1 = tmp2[0];
-  let obj = { contentStyles: tmp.content, header: null, children: null };
-  obj = { title: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["5XnRQ+"]);
-  obj[1] = callback2(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj);
-  obj = { onChange: tmp2[1], title: null, defaultValue: null, hasIcons: false, children: null };
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(getSystemLocale.t.E45wvP);
-  obj[2] = initialValue;
-  obj[4] = ClearAfterOptions.map((value) => callback3(callback(5688).TableRadioRow, { value, label: callback2(11207)(value) }, value));
-  const items = [callback2(context.TableRadioGroup, obj), ];
-  obj1 = { style: tmp.buttonWrapper, children: null };
-  const obj2 = {
+  const obj = { contentStyles: tmp.content, header: null, children: null };
+  const obj2 = { title: null };
+  const intl = util.intl;
+  obj2.title = intl.string(util.t["5XnRQ+"]);
+  obj.header = closure_7(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
+  const obj3 = { onChange: tmp2[1], title: null, defaultValue: null, hasIcons: false, children: null };
+  const intl2 = util.intl;
+  obj3.title = intl2.string(util.t.E45wvP);
+  obj3.defaultValue = initialValue;
+  obj3.children = ClearAfterOptions.map((value) => closure_1_7(TableRadioRow.TableRadioRow, { value, label: closure_1(11234)(value) }, value));
+  const items = [closure_7(TableRadioGroup.TableRadioGroup, obj3), ];
+  const obj4 = { style: tmp.buttonWrapper, children: null };
+  const obj5 = {
     onPress() {
-      callback(callback2);
-      callback2(closure_1_2[14]).hideActionSheet();
+      require(closure_1);
+      ActionSheetActionCreatorsDefault.hideActionSheet();
     },
     text: null
   };
-  const intl3 = getSystemLocale.intl;
-  obj2[1] = intl3.string(getSystemLocale.t.TyCVIq);
-  obj1[1] = callback2(Button.Button, obj2);
-  items[1] = callback2(View, obj1);
-  obj[2] = items;
-  return callback3(Background.BottomSheet, obj);
+  const intl3 = util.intl;
+  obj5.text = intl3.string(util.t.TyCVIq);
+  obj4.children = closure_7(components_Button_Button.Button, obj5);
+  items[1] = closure_7(View, obj4);
+  obj.children = items;
+  return closure_8(Sheet_BottomSheet.BottomSheet, obj);
 };

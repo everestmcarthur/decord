@@ -1,86 +1,85 @@
-// Module ID: 14888
-// Function ID: 14889
-// Name: FamilyCenterFeatureRows
-// Dependencies: [19, 17, 21, 4560, 576, 11924, 1114, 2396, 14889, 14890, 12380, 6970, 9866, 14885, 4973, 4556, 5687, 5605, 2]
+// Module ID: 14914
+// Function ID: 14915
+// Name: FamilyCenterFeatureRow
+// Dependencies: [19, 17, 21, 4574, 576, 11950, 1114, 2396, 14915, 14916, 12406, 6984, 9893, 14911, 4987, 4570, 5701, 5619, 2]
 // Exports: default
 
-// Module 14888 (FamilyCenterFeatureRows)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 2396 */;
-import Text from "Text" /* 4556 */;
-import Stack from "Stack" /* 4973 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
-import EyeIcon from "EyeIcon" /* 6970 */;
-import registerAssetDefault from "registerAsset" /* 9866 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11924 */;
-import registerAssetDefault2 from "registerAsset" /* 12380 */;
-import QrCodeIcon from "QrCodeIcon" /* 14885 */;
-import registerAssetDefault3 from "registerAsset" /* 14889 */;
-import ChatCheckIcon from "ChatCheckIcon" /* 14890 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14914 (FamilyCenterFeatureRow)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import _modDef2396 from "module_2396" /* 2396 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Stack_Stack from "Stack/Stack" /* 4987 */;
+import TableRow from "TableRow" /* 5619 */;
+import TableRowGroup from "TableRowGroup" /* 5701 */;
+import EyeIcon from "EyeIcon" /* 6984 */;
+import _modDef9893 from "module_9893" /* 9893 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 11950 */;
+import _modDef12406 from "module_12406" /* 12406 */;
+import QrCodeIcon from "QrCodeIcon" /* 14911 */;
+import _modDef14915 from "module_14915" /* 14915 */;
+import ChatCheckIcon from "ChatCheckIcon" /* 14916 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { tableGroup: null };
-createCacheKey = { marginTop: 20, marginBottom: ThemesDefault.space.PX_24 };
-createCacheKey[0] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterFeatureRow.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { tableGroup: { marginTop: 20, marginBottom: nativeDefault.space.PX_24 } };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterFeatureRow.tsx");
 
 export default function FamilyCenterFeatureRows() {
-  let obj = useAgeSpecificText;
-  const intl = getSystemLocale.intl;
-  const tmp = callback3();
-  const intl2 = getSystemLocale.intl;
-  const ageSpecificText = obj.useAgeSpecificText(intl.string(messagesProxyDefault.qITXhY), intl2.string(messagesProxyDefault.bmhCnL));
-  obj1 = useAgeSpecificText;
-  const intl3 = getSystemLocale.intl;
-  const stringResult = intl.string(messagesProxyDefault.qITXhY);
-  const intl4 = getSystemLocale.intl;
-  const ageSpecificText1 = obj1.useAgeSpecificText(intl3.string(messagesProxyDefault.t7SkFy), intl4.string(messagesProxyDefault["68zfxD"]));
-  let obj2 = useAgeSpecificText;
-  const intl5 = getSystemLocale.intl;
-  const stringResult1 = intl3.string(messagesProxyDefault.t7SkFy);
-  const intl6 = getSystemLocale.intl;
-  obj = { icon: null, IconComponent: null, header: null, description: null };
-  const ageSpecificText2 = obj2.useAgeSpecificText(intl5.string(messagesProxyDefault["+pi4Yt"]), intl6.string(messagesProxyDefault["1xPTwE"]));
-  obj[0] = registerAssetDefault3;
-  obj[1] = ChatCheckIcon.ChatCheckIcon;
-  const intl7 = getSystemLocale.intl;
-  obj[2] = intl7.string(messagesProxyDefault["001l3m"]);
-  obj[3] = ageSpecificText;
-  const items = [obj, , ];
-  obj = { icon: registerAssetDefault2, IconComponent: EyeIcon.EyeIcon, header: null, description: null };
-  const intl8 = getSystemLocale.intl;
-  obj[2] = intl8.string(messagesProxyDefault.yipAeP);
-  obj[3] = ageSpecificText1;
-  items[1] = obj;
-  obj1 = { icon: registerAssetDefault, IconComponent: QrCodeIcon.QrCodeIcon, header: null, description: null };
-  const intl9 = getSystemLocale.intl;
-  obj1[2] = intl9.string(messagesProxyDefault.hhOuMe);
-  obj1[3] = ageSpecificText2;
-  items[2] = obj1;
-  obj2 = { style: tmp.tableGroup, children: null };
-  const obj3 = { spacing: 8, children: null };
-  const obj4 = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-muted", children: null };
-  const intl10 = getSystemLocale.intl;
-  obj4[3] = intl10.string(messagesProxyDefault["6JkHSg"]);
-  const items1 = [callback(Text.Text, obj4), ];
-  const stringResult2 = intl5.string(messagesProxyDefault["+pi4Yt"]);
-  items1[1] = callback(TableRowGroupTitle.TableRowGroup, {
+  const tmp = closure_6();
+  const intl = util.intl;
+  const obj = useAgeSpecificText;
+  const intl2 = util.intl;
+  const ageSpecificText = obj.useAgeSpecificText(intl.string(_modDef2396.qITXhY), intl2.string(_modDef2396.bmhCnL));
+  const stringResult = intl.string(_modDef2396.qITXhY);
+  const intl3 = util.intl;
+  const obj2 = useAgeSpecificText;
+  const intl4 = util.intl;
+  const ageSpecificText1 = obj2.useAgeSpecificText(intl3.string(_modDef2396.t7SkFy), intl4.string(_modDef2396["68zfxD"]));
+  const stringResult1 = intl3.string(_modDef2396.t7SkFy);
+  const intl5 = util.intl;
+  const obj3 = useAgeSpecificText;
+  const intl6 = util.intl;
+  const obj4 = { icon: null, IconComponent: null, header: null, description: null };
+  const ageSpecificText2 = obj3.useAgeSpecificText(intl5.string(_modDef2396["+pi4Yt"]), intl6.string(_modDef2396["1xPTwE"]));
+  obj4.icon = _modDef14915;
+  obj4.IconComponent = ChatCheckIcon.ChatCheckIcon;
+  const intl7 = util.intl;
+  obj4.header = intl7.string(_modDef2396["001l3m"]);
+  obj4.description = ageSpecificText;
+  const items = [obj4, , ];
+  const obj5 = { icon: _modDef12406, IconComponent: EyeIcon.EyeIcon, header: null, description: null };
+  const intl8 = util.intl;
+  obj5.header = intl8.string(_modDef2396.yipAeP);
+  obj5.description = ageSpecificText1;
+  items[1] = obj5;
+  const obj6 = { icon: _modDef9893, IconComponent: QrCodeIcon.QrCodeIcon, header: null, description: null };
+  const intl9 = util.intl;
+  obj6.header = intl9.string(_modDef2396.hhOuMe);
+  obj6.description = ageSpecificText2;
+  items[2] = obj6;
+  const obj7 = { style: tmp.tableGroup, children: null };
+  const obj8 = { spacing: 8, children: null };
+  const obj9 = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-muted", children: null };
+  const intl10 = util.intl;
+  obj9.children = intl10.string(_modDef2396["6JkHSg"]);
+  const items1 = [React4(Text_Text.Text, obj9), ];
+  const stringResult2 = intl5.string(_modDef2396["+pi4Yt"]);
+  items1[1] = React4(TableRowGroup.TableRowGroup, {
     hasIcons: true,
     children: items.map((header) => {
       header = header.header;
       ({ description, icon, IconComponent } = header);
-      return callback2(callback(5605).TableRow, { label: header, subLabel: description, icon: callback2(callback(5605).TableRow.Icon, { source: icon, IconComponent }) }, header);
+      return closure_1_4(TableRow.TableRow, { label: header, subLabel: description, icon: closure_1_4(TableRow.TableRow.Icon, { source: icon, IconComponent }) }, header);
     })
   });
-  obj3[1] = items1;
-  obj2[1] = callback2(Stack.Stack, obj3);
-  return callback(View, obj2);
+  obj8.children = items1;
+  obj7.children = hasOwnProperty(Stack_Stack.Stack, obj8);
+  return React4(View, obj7);
 };

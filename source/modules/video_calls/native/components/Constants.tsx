@@ -1,12 +1,12 @@
-// Module ID: 9478
-// Function ID: 9479
-// Name: PIP_GESTURE_ACTIVE_OFFSET
+// Module ID: 9505
+// Function ID: 9506
+// Name: Constants
 // Dependencies: [2]
 
-// Module 9478 (PIP_GESTURE_ACTIVE_OFFSET)
-import set from "set" /* 2 */;
+// Module 9505 (Constants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/video_calls/native/components/Constants.tsx");
+const result = size.fileFinishedImporting("modules/video_calls/native/components/Constants.tsx");
 
 export const PIP_GESTURE_ACTIVE_OFFSET = 2;
 export const SWIPE_TO_CHAT_ACTIVE_OFFSET = 16;

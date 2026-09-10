@@ -1,20 +1,20 @@
-// Module ID: 11074
-// Function ID: 11075
-// Name: items
-// Dependencies: [11075, 2]
+// Module ID: 11101
+// Function ID: 11102
+// Name: iapProducts
+// Dependencies: [11102, 2]
 
-// Module 11074 (items)
-import set from "set" /* 2 */;
-import items from "items" /* 11075 */;
+// Module 11101 (iapProducts)
+import billing_iapProducts from "billing/iapProducts" /* 11102 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("utils/native/IAPUtils.mock.tsx");
+const result = size.fileFinishedImporting("utils/native/IAPUtils.mock.tsx");
 
 export default {
   loadProducts() {
-    return Promise.resolve(items.copiedIAPProducts);
+    return Promise.resolve(billing_iapProducts.copiedIAPProducts);
   },
   purchaseProduct() {
-    error = new Error("IAPUtils is mocked \u2014 purchases cannot be completed in this build.");
+    const error = new Error("IAPUtils is mocked \u2014 purchases cannot be completed in this build.");
     return Promise.reject(error);
   },
   canMakePayments() {

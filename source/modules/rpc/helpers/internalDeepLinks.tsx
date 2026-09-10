@@ -1,35 +1,34 @@
-// Module ID: 14485
-// Function ID: 14486
-// Name: set
-// Dependencies: [32, 1365, 4249, 8377, 2]
+// Module ID: 14510
+// Function ID: 14511
+// Name: internalDeepLinks
+// Dependencies: [32, 1365, 4262, 8405, 2]
 // Exports: openInternalDeepLink, resolveInternalDeepLink
 
-// Module 14485 (set)
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1365 */;
-import _openURL from "_openURL" /* 4249 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import set from "set" /* 2 */;
+// Module 14510 (internalDeepLinks)
+import URLUtilsDefault from "URLUtils" /* 1365 */;
+import openURL from "openURL" /* 4262 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
-let set = new Set(["channels", "users", "events"]);
+require = fn;
+const set = new Set(["channels", "users", "events"]);
 const set1 = new Set(["", "-"]);
-const result = set.fileFinishedImporting("modules/rpc/helpers/internalDeepLinks.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rpc/helpers/internalDeepLinks.tsx");
 
-export const resolveInternalDeepLink = function resolveInternalDeepLink(closure_1_1) {
-  const toURLSafeResult = isDiscordProxiedAssetUrlDefault.toURLSafe(closure_1_1);
+export const resolveInternalDeepLink = function resolveInternalDeepLink(url) {
+  const toURLSafeResult = URLUtilsDefault.toURLSafe(url);
   if (null == toURLSafeResult) {
     return null;
   } else {
     ({ hostname: hostname2, protocol, host } = toURLSafeResult);
-    let tmpResult = tmp(1365);
     if (tmpResult.isDiscordProtocol(protocol)) {
       ({ hostname, pathname } = toURLSafeResult);
       if (!set1.has(hostname)) {
-        tmpResult = tmp(1365);
-        if (!tmpResult.isDiscordHostname(hostname)) {
+        if (!tmpResult4.isDiscordHostname(hostname)) {
           const _HermesInternal = HermesInternal;
           let combined = "/" + hostname + pathname;
         }
+        tmpResult4 = tmp(1365);
       }
       let combined1 = pathname;
       if (!pathname.startsWith("/")) {
@@ -38,13 +37,13 @@ export const resolveInternalDeepLink = function resolveInternalDeepLink(closure_
       }
       combined = combined1;
     } else {
-      if (!tmpResult1.isDiscordHostname(hostname2)) {
-        if (!tmpResult2.isDiscordLocalhost(host, hostname2)) {
+      if (!tmpResult5.isDiscordHostname(hostname2)) {
+        if (!tmpResult6.isDiscordLocalhost(host, hostname2)) {
           return null;
         }
-        tmpResult2 = tmp(1365);
+        tmpResult6 = tmp(1365);
       }
-      const tmp11 = callback(toURLSafeResult.pathname.split("/"), 2)[1];
+      const tmp11 = _slicedToArray(toURLSafeResult.pathname.split("/"), 2)[1];
       let combined2 = null;
       if (null != tmp11) {
         combined2 = null;
@@ -55,9 +54,10 @@ export const resolveInternalDeepLink = function resolveInternalDeepLink(closure_
       }
       return combined2;
     }
+    tmpResult = tmp(1365);
   }
 };
 export const openInternalDeepLink = function openInternalDeepLink(internalDeepLink) {
-  _openURL.default(internalDeepLink);
+  openURL.default(internalDeepLink);
   return true;
 };

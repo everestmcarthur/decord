@@ -1,61 +1,61 @@
-// Module ID: 16624
-// Function ID: 16625
-// Name: FormSubmitErrorType
-// Dependencies: [1114, 7939, 2]
+// Module ID: 16656
+// Function ID: 16657
+// Name: threads/FormError
+// Dependencies: [1114, 7953, 2]
 // Exports: makeApiNameRequiredError, makeAutomodViolationError, makeEmptyMessageError, makeEmptyTitleError, renderError
 
-// Module 16624 (FormSubmitErrorType)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import getAutomodErrorMessageFromErrorResponse from "getAutomodErrorMessageFromErrorResponse" /* 7939 */;
+// Module 16656 (threads/FormError)
+import util from "util" /* 1114 */;
+import AutomodErrorUtils from "AutomodErrorUtils" /* 7953 */;
+import size from "module_2" /* 2 */;
 
-let obj = { EmptyContent: 0, [0]: "EmptyContent", AutomodViolation: 1, [1]: "AutomodViolation", ApiValidation: 2, [2]: "ApiValidation" };
-const result = set.fileFinishedImporting("modules/threads/FormError.tsx");
+const FormSubmitErrorType = { EmptyContent: 0, [0]: "EmptyContent", AutomodViolation: 1, [1]: "AutomodViolation", ApiValidation: 2, [2]: "ApiValidation" };
+const result = size.fileFinishedImporting("modules/threads/FormError.tsx");
 
-export const FormSubmitErrorType = obj;
+export { FormSubmitErrorType };
 export const makeEmptyTitleError = function makeEmptyTitleError() {
-  const intl = getSystemLocale.intl;
-  let stringResult = intl.string(getSystemLocale.t.uXA573);
+  const intl = util.intl;
+  let stringResult = intl.string(util.t.uXA573);
   obj = { type: obj.EmptyContent, message: null };
   if (stringResult == null) {
     stringResult = null;
   }
-  obj[1] = stringResult;
+  obj.message = stringResult;
   return obj;
 };
 export const makeEmptyMessageError = function makeEmptyMessageError() {
-  const intl = getSystemLocale.intl;
-  let stringResult = intl.string(getSystemLocale.t.kesTVT);
+  const intl = util.intl;
+  let stringResult = intl.string(util.t.kesTVT);
   obj = { type: obj.EmptyContent, message: null };
   if (stringResult == null) {
     stringResult = null;
   }
-  obj[1] = stringResult;
+  obj.message = stringResult;
   return obj;
 };
 export const makeApiNameRequiredError = function makeApiNameRequiredError() {
-  const intl = getSystemLocale.intl;
-  let stringResult = intl.string(getSystemLocale.t.uXA573);
+  const intl = util.intl;
+  let stringResult = intl.string(util.t.uXA573);
   obj = { type: obj.ApiValidation, message: null };
   if (stringResult == null) {
     stringResult = null;
   }
-  obj[1] = stringResult;
+  obj.message = stringResult;
   return obj;
 };
 export const makeAutomodViolationError = function makeAutomodViolationError(errorResponseBody, id) {
-  obj = getAutomodErrorMessageFromErrorResponse;
+  const obj = AutomodErrorUtils;
   id = undefined;
   if (id != null) {
     id = id.id;
   }
   let automodErrorMessageFromErrorResponse = obj.getAutomodErrorMessageFromErrorResponse(errorResponseBody, id);
-  obj = { type: obj.AutomodViolation, message: null };
+  const obj2 = { type: obj.AutomodViolation, message: null };
   if (automodErrorMessageFromErrorResponse == null) {
     automodErrorMessageFromErrorResponse = null;
   }
-  obj[1] = automodErrorMessageFromErrorResponse;
-  return obj;
+  obj2.message = automodErrorMessageFromErrorResponse;
+  return obj2;
 };
 export const renderError = function renderError(type, content) {
   let tmp = null;
@@ -63,7 +63,6 @@ export const renderError = function renderError(type, content) {
     if (type.type === obj.EmptyContent) {
       if (null != content.content) {
         tmp = null;
-        const str = content.content;
       }
     }
     let message = type.message;

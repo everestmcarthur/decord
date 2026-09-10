@@ -1,74 +1,74 @@
-// Module ID: 16323
-// Function ID: 16324
-// Name: areHomeDrawerGuildTypingStatesEqual
-// Dependencies: [4201, 1961, 1957, 11969, 558, 16320, 16321, 504, 11, 2]
+// Module ID: 16354
+// Function ID: 16355
+// Name: useHomeDrawerGuildTyping
+// Dependencies: [4214, 1961, 1957, 11995, 558, 16351, 16352, 504, 11, 2]
 // Exports: useHomeDrawerGuildTyping
 
-// Module 16323 (areHomeDrawerGuildTypingStatesEqual)
-import shallowEqual from "shallowEqual" /* 558 */;
-import closure_3 from "storeThread" /* 4201 */;
-import { isThread } from "createChannelRecord" /* 1961 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import closure_6 from "handleTypingStart" /* 11969 */;
+// Module 16354 (useHomeDrawerGuildTyping)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4214 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import TypingStore from "TypingStore" /* 11995 */;
 
-require = arg1;
+const require = globalThis.__r;
+
+require = fn;
 function areHomeDrawerGuildTypingStatesEqual(typingChannelId, typingChannelId2) {
   let result = typingChannelId.typingChannelId === typingChannelId2.typingChannelId && typingChannelId.typingChannelName === typingChannelId2.typingChannelName;
   if (result) {
-    result = shallowEqual.areArraysShallowEqual(typingChannelId.typingUserIds, typingChannelId2.typingUserIds);
-    obj = shallowEqual;
+    result = discord_common_shallowEqual.areArraysShallowEqual(typingChannelId.typingUserIds, typingChannelId2.typingUserIds);
   }
   return result;
 }
-let obj = { typingChannelId: "Array", typingChannelName: "options", typingUserIds: true };
-obj[2] = [];
-let result = require("set").fileFinishedImporting("modules/home_drawer/native/useHomeDrawerGuildTyping.tsx");
+const isThread = fn(1961).isThread;
+let closure_7 = { typingChannelId: "Array", typingChannelName: "PX_16", typingUserIds: [] };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/home_drawer/native/useHomeDrawerGuildTyping.tsx");
 
 export const useHomeDrawerGuildTyping = function useHomeDrawerGuildTyping(id) {
-  const _require = id;
-  const isHomeDrawerChannelMuted = _require(isHomeDrawerChannelInChannelList[5]).useIsHomeDrawerChannelMuted();
-  obj = _require(isHomeDrawerChannelInChannelList[5]);
-  isHomeDrawerChannelInChannelList = _require(isHomeDrawerChannelInChannelList[6]).useIsHomeDrawerChannelInChannelList();
-  const obj2 = _require(isHomeDrawerChannelInChannelList[6]);
-  const items = [closure_6, closure_5, closure_3];
+  _require = id;
+  const isHomeDrawerChannelMuted = require("isHomeDrawerChannelMuted").useIsHomeDrawerChannelMuted();
+  const obj = require("isHomeDrawerChannelMuted");
+  isHomeDrawerChannelInChannelList = require("isHomeDrawerChannelInChannelList").useIsHomeDrawerChannelInChannelList();
+  let obj2 = require("isHomeDrawerChannelInChannelList");
+  const items = [TypingStore, ChannelStore, JoinedThreadsStore];
   const items1 = [id, isHomeDrawerChannelMuted, isHomeDrawerChannelInChannelList];
-  return _require(isHomeDrawerChannelInChannelList[7]).useStateFromStores(items, () => {
-    const typingUsersByGuild = closure_1_6.getTypingUsersByGuild(closure_0);
-    obj = isHomeDrawerChannelMuted(isHomeDrawerChannelInChannelList[8]);
-    const keys = obj.keys(typingUsersByGuild);
-    const found = keys.find((id) => {
-      const basicChannel = closure_1_5.getBasicChannel(id);
+  return require("initialize").useStateFromStores(items, () => {
+    const typingUsersByGuild = TypingStore.getTypingUsersByGuild(closure_0);
+    const keys = SnowflakeUtilsDefault.keys(typingUsersByGuild);
+    const found = keys.find((item) => {
+      basicChannel = basicChannel.getBasicChannel(item);
       let tmp2 = null != basicChannel;
       if (tmp2) {
-        tmp2 = !callback(basicChannel);
+        tmp2 = !isHomeDrawerChannelMuted(basicChannel);
       }
       if (tmp2) {
-        let tmp5 = closure_1_4(basicChannel.type);
+        let tmp5 = isThread(basicChannel.type);
         if (tmp5) {
-          tmp5 = !closure_1_3.hasJoined(id);
+          tmp5 = !JoinedThreadsStore.hasJoined(item);
         }
         let tmp7 = !tmp5;
         if (!tmp5) {
-          tmp7 = callback2(basicChannel);
+          tmp7 = isHomeDrawerChannelInChannelList(basicChannel);
         }
         tmp2 = tmp7;
       }
       return tmp2;
     });
     if (null == found) {
-      obj = closure_1_7;
+      let obj2 = closure_7;
     } else {
-      obj = { typingChannelId: null, typingChannelName: null, typingUserIds: null };
-      obj[0] = found;
-      const channel = closure_1_5.getChannel(found);
+      obj2 = { typingChannelId: found, typingChannelName: null, typingUserIds: null };
+      const channel = ChannelStore.getChannel(found);
       let name;
       if (channel != null) {
         name = channel.name;
       }
-      obj[1] = name;
+      obj2.typingChannelName = name;
       const _Object = Object;
-      obj[2] = Object.keys(typingUsersByGuild[found]);
+      obj2.typingUserIds = Object.keys(typingUsersByGuild[found]);
     }
-    return obj;
+    return obj2;
   }, items1, areHomeDrawerGuildTypingStatesEqual);
 };

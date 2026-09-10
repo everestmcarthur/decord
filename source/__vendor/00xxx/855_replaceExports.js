@@ -2,10 +2,12 @@
 // Function ID: 856
 // Name: replaceExports
 // Dependencies: []
+// Exports: replaceExports
 
 // Module 855 (replaceExports)
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.replaceExports = function replaceExports(arg0, arg1, arg2) {
+
+export const replaceExports = function replaceExports(arg0, arg1, arg2) {
   if (typeof arg0[arg1] === "function") {
     try {
       arg0[arg1] = arg2;
@@ -14,15 +16,13 @@ arg5.replaceExports = function replaceExports(arg0, arg1, arg2) {
           arg0.default = arg2;
         } catch (err) {
           const _Object2 = Object;
-          let obj = { value: null, writable: true, configurable: true, enumerable: true };
-          obj[0] = tmp;
-          Object.defineProperty(tmp2, "default", obj);
+          const obj2 = { value: tmp, writable: true, configurable: true, enumerable: true };
+          Object.defineProperty(tmp2, "default", obj2);
         }
       }
     } catch (err) {
       const _Object = Object;
-      obj = { value: null, writable: true, configurable: true, enumerable: true };
-      obj[0] = tmp;
+      const obj = { value: tmp, writable: true, configurable: true, enumerable: true };
       Object.defineProperty(tmp2, tmp3, obj);
     }
   }

@@ -1,33 +1,33 @@
-// Module ID: 9821
-// Function ID: 9822
+// Module ID: 9848
+// Function ID: 9849
 // Name: FormHeader
-// Dependencies: [19, 1085, 21, 4560, 5524, 576, 1178, 2]
+// Dependencies: [19, 1085, 21, 4574, 5538, 576, 1178, 2]
 // Exports: default
 
-// Module 9821 (FormHeader)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 1178 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importDefaultResult from "createTextStyle" /* 5524 */;
+// Module 9848 (FormHeader)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import noop from "module_19" /* 19 */;
+import TextStyles from "TextStyles" /* 5538 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { fieldHeader: null };
-createCacheKey = {};
-let merged = Object.assign(importDefaultResult(require("sum").Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.TEXT_SUBTLE, 12, { uppercase: true }));
-createCacheKey.paddingBottom = 8;
-createCacheKey[0] = createCacheKey;
-let closure_3 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/FormHeader.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+const obj2 = { fieldHeader: null };
+const obj3 = {};
+let merged = Object.assign(TextStyles(fn(1085).Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.TEXT_SUBTLE, 12, { uppercase: true }));
+obj3.paddingBottom = 8;
+obj2.fieldHeader = obj3;
+let closure_3 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/FormHeader.tsx");
 
 export default function FormHeader(children) {
-  const merged = Object.assign(children, Object.create(null));
+  const merged = Object.assign(children, Object.assign({ children: 0 }));
   const obj = {};
   const merged1 = Object.assign(merged);
-  const items = [callback().fieldHeader, merged.style];
+  const items = [closure_3().fieldHeader, merged.style];
   obj.style = items;
   obj.children = children.children;
-  return jsx(Button.LegacyText, {});
+  return jsx(native.LegacyText, {});
 };

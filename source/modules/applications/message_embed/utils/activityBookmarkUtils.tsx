@@ -1,35 +1,34 @@
-// Module ID: 7692
-// Function ID: 7693
-// Name: extractActivityBookmarkParams
+// Module ID: 7706
+// Function ID: 7707
+// Name: activityBookmarkUtils
 // Dependencies: [1365, 2]
 // Exports: extractActivityBookmarkParams
 
-// Module 7692 (extractActivityBookmarkParams)
-import set from "set" /* 2 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1365 */;
+// Module 7706 (activityBookmarkUtils)
+import URLUtilsDefault from "URLUtils" /* 1365 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/applications/message_embed/utils/activityBookmarkUtils.tsx");
+const result = size.fileFinishedImporting("modules/applications/message_embed/utils/activityBookmarkUtils.tsx");
 
 export const extractActivityBookmarkParams = function extractActivityBookmarkParams(url) {
-  let obj = isDiscordProxiedAssetUrlDefault;
-  const toURLSafeResult = obj.toURLSafe(url);
-  let value;
+  const toURLSafeResult = URLUtilsDefault.toURLSafe(url);
+  value = undefined;
   if (toURLSafeResult != null) {
     const searchParams = toURLSafeResult.searchParams;
     value = searchParams.get("referrer_id");
   }
-  obj = { referrerId: value, customId: null, linkId: null };
-  value = undefined;
+  const obj2 = { referrerId: value, customId: null, linkId: null };
+  let value3;
   if (toURLSafeResult != null) {
     const searchParams2 = toURLSafeResult.searchParams;
-    value = searchParams2.get("custom_id");
+    value3 = searchParams2.get("custom_id");
   }
-  obj[1] = value;
-  let value1;
+  obj2.customId = value3;
+  let value4;
   if (toURLSafeResult != null) {
     const searchParams3 = toURLSafeResult.searchParams;
-    value1 = searchParams3.get("link_id");
+    value4 = searchParams3.get("link_id");
   }
-  obj[2] = value1;
-  return obj;
+  obj2.linkId = value4;
+  return obj2;
 };

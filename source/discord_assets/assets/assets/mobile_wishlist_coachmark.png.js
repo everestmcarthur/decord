@@ -1,12 +1,11 @@
-// Module ID: 13134
-// Function ID: 13135
-// Name: metadata
+// Module ID: 13160
+// Function ID: 13161
 // Dependencies: [2]
 
-// Module 13134 (metadata)
-import set from "set" /* 2 */;
+// Module 13160
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/1979309f7455b06e0bc1e8f5da89de9934155a0a9a74bfff5b680c82fb45d53f.png";
 export const metadata = { fileBytes: 11034 };

@@ -1,47 +1,48 @@
-// Module ID: 13476
-// Function ID: 13477
-// Name: Header
-// Dependencies: [19, 17, 21, 4560, 4495, 5587, 1114, 4411, 13401, 13477, 4556, 2]
+// Module ID: 13499
+// Function ID: 13500
+// Name: premium/Header
+// Dependencies: [19, 17, 21, 4574, 4509, 5601, 1114, 4425, 13424, 13500, 4570, 2]
 // Exports: default
 
-// Module 13476 (Header)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import useThemeDefault from "useTheme" /* 4495 */;
-import Text from "Text" /* 4556 */;
-import preloadDefault from "preload" /* 5587 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13499 (premium/Header)
+import util from "util" /* 1114 */;
+import useThemeDefault from "useTheme" /* 4509 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ container: { flexDirection: "column", alignItems: "center" }, headerText: { marginTop: 16, marginBottom: 24 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/Header.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let closure_6 = createStyles.createStyles({ container: { flexDirection: "column", alignItems: "center" }, headerText: { marginTop: 16, marginBottom: 24 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/premium/native/Header.tsx");
 
 export default function Header(style) {
-  const tmp = callback();
-  let obj = { style: items, children: null };
-  items = [tmp.container, style.style];
-  obj = { accessible: true, accessibilityLabel: null, accessibilityRole: "header", source: null };
+  const tmp = closure_6();
+  const obj = { style: null, children: null };
+  const items = [tmp.container, style.style];
+  obj.style = items;
+  const obj2 = { accessible: true, accessibilityLabel: null, accessibilityRole: "header", source: null };
   const tmp4 = useThemeDefault();
-  const tmp5 = closure_5;
+  const tmp5 = hasOwnProperty;
   const tmp6 = View;
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t.lpNrPu);
-  const tmp8 = preloadDefault;
+  const intl = util.intl;
+  obj2.accessibilityLabel = intl.string(util.t.lpNrPu);
+  const tmp8 = FastImageDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(13401);
+    let tmp2Result = tmp2(13424);
   } else {
-    tmp2Result = tmp2(13477);
+    tmp2Result = tmp2(13500);
   }
-  obj[3] = tmp2Result;
-  const items1 = [closure_4(tmp8, obj), ];
-  obj = { style: tmp.headerText, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
+  obj2.source = tmp2Result;
+  const items1 = [React4(tmp8, obj2), ];
+  const obj4 = { style: tmp.headerText, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
   const intl2 = tmp9(1114).intl;
-  obj[3] = intl2.string(getSystemLocale.t.SD5MJW);
-  items1[1] = closure_4(Text.Text, obj);
-  obj[1] = items1;
+  obj4.children = intl2.string(util.t.SD5MJW);
+  items1[1] = React4(Text_Text.Text, obj4);
+  obj.children = items1;
   return tmp5(tmp6, obj);
 };

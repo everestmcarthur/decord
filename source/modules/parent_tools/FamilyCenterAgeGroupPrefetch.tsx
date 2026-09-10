@@ -1,27 +1,27 @@
-// Module ID: 15487
-// Function ID: 15488
-// Name: prefetchFamilyCenterAgeGroupWhen
-// Dependencies: [7537, 7539, 2]
+// Module ID: 15517
+// Function ID: 15518
+// Name: FamilyCenterAgeGroupPrefetch
+// Dependencies: [7551, 7553, 2]
 // Exports: prefetchFamilyCenterAgeGroupWhen
 
-// Module 15487 (prefetchFamilyCenterAgeGroupWhen)
-import maybeFetchCollectiblesForInvoicesDefault from "maybeFetchCollectiblesForInvoices" /* 7539 */;
-import closure_2 from "freshTeenActivityWithMap" /* 7537 */;
+// Module 15517 (FamilyCenterAgeGroupPrefetch)
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7553 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7551 */;
 
-const result = require("set").fileFinishedImporting("modules/parent_tools/FamilyCenterAgeGroupPrefetch.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterAgeGroupPrefetch.tsx");
 
 export const prefetchFamilyCenterAgeGroupWhen = function prefetchFamilyCenterAgeGroupWhen(isFamilyCenterV3Enabled) {
   let tmp = isFamilyCenterV3Enabled;
   if (isFamilyCenterV3Enabled) {
-    tmp = null == closure_2.getAgeGroup();
+    tmp = null == FamilyCenterStore.getAgeGroup();
   }
   if (tmp) {
-    if (!closure_2.isLoading()) {
+    if (!FamilyCenterStore.isLoading()) {
       if (obj.canRefetch()) {
-        maybeFetchCollectiblesForInvoicesDefault.initialPageLoad();
-        const obj2 = maybeFetchCollectiblesForInvoicesDefault;
+        FamilyCenterActionCreatorsDefault.initialPageLoad();
       }
     }
-    obj = closure_2;
+    obj = FamilyCenterStore;
   }
 };

@@ -1,16 +1,18 @@
-// Module ID: 4236
-// Function ID: 4237
-// Dependencies: [4237, 1461, 2]
+// Module ID: 4249
+// Function ID: 4250
+// Name: core/CodeSplittingUtils
+// Dependencies: [4250, 1461, 2]
 
-// Module 4236
-import set from "set" /* 2 */;
-import awaitOnlineDefault from "awaitOnline" /* 1461 */;
-import loaderMaker from "loaderMaker" /* 4237 */;
+// Module 4249 (core/CodeSplittingUtils)
+import NetworkUtilsDefault from "NetworkUtils" /* 1461 */;
+import CodeSplittingUtils from "CodeSplittingUtils" /* 4250 */;
+import size from "module_2" /* 2 */;
 
-loaderMaker.setAwaitOnline(awaitOnlineDefault.awaitOnline);
-const result = set.fileFinishedImporting("modules/core/CodeSplittingUtils.tsx");
-for (const key10026 in require("loaderMaker")) {
-  let tmp4 = key10026;
-  arg5[key10026] = require("loaderMaker")[key10026];
+const require = globalThis.__r;
+
+CodeSplittingUtils.setAwaitOnline(NetworkUtilsDefault.awaitOnline);
+const result = size.fileFinishedImporting("modules/core/CodeSplittingUtils.tsx");
+for (const key10026 in require("CodeSplittingUtils")) {
+  arg5[key10026] = require("CodeSplittingUtils")[key10026];
   continue;
 }

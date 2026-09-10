@@ -1,40 +1,38 @@
-// Module ID: 17188
-// Function ID: 17189
-// Name: AnimatedButtonWrapper
-// Dependencies: [19, 17, 12277, 21, 4560, 576, 4296, 17098, 1115, 4974, 4561, 2]
+// Module ID: 17219
+// Function ID: 17220
+// Name: VoicePanelAnimatedButtonWrapper
+// Dependencies: [19, 17, 12303, 21, 4574, 576, 4310, 17129, 1115, 4988, 4575, 2]
 // Exports: default
 
-// Module 17188 (AnimatedButtonWrapper)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { MODE_CHANGE_PHYSICS } from "VoicePanelModes" /* 12277 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importDefaultResult from "module_4296" /* 4296 */;
+// Module 17219 (VoicePanelAnimatedButtonWrapper)
+import nativeDefault from "native" /* 576 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import noop from "module_19" /* 19 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
 
-const require = arg1;
-createCacheKey = { pressableWrapper: null };
-createCacheKey = { justifyContent: "center", alignItems: "center", borderRadius: ThemesDefault.modules.button.BORDER_RADIUS_LG };
-createCacheKey[0] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-let closure_7 = importDefaultResult.createAnimatedComponent(require("get ActivityIndicator").Pressable);
+require = fn;
+const MODE_CHANGE_PHYSICS = fn(12303).MODE_CHANGE_PHYSICS;
+let jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { pressableWrapper: { justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.modules.button.BORDER_RADIUS_LG } };
+let closure_6 = createStyles.createStyles(obj2);
+let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(17).Pressable);
 let closure_8 = { code: "function VoicePanelAnimatedButtonWrapperTsx1(values){const{offsetFromCenter,withSpring,MODE_CHANGE_PHYSICS,withTiming}=this.__closure;offsetFromCenter.set(values.windowWidth/2-values.targetGlobalOriginX-values.targetWidth/2);return{initialValues:{originX:values.targetOriginX+offsetFromCenter.get(),opacity:0,transform:[{scale:0.5}]},animations:{originX:withSpring(values.targetOriginX,MODE_CHANGE_PHYSICS),opacity:withTiming(1,{duration:100}),transform:[{scale:withSpring(1,MODE_CHANGE_PHYSICS)}]}};}" };
 let closure_9 = { code: "function VoicePanelAnimatedButtonWrapperTsx2(values){const{withSpring,offsetFromCenter,MODE_CHANGE_PHYSICS,withTiming}=this.__closure;return{initialValues:{originX:values.currentOriginX,opacity:1,transform:[{scale:1}]},animations:{originX:withSpring(values.currentOriginX+offsetFromCenter.get(),MODE_CHANGE_PHYSICS),opacity:withTiming(0,{duration:100}),transform:[{scale:withSpring(0.5,MODE_CHANGE_PHYSICS)}]}};}" };
-let result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelAnimatedButtonWrapper.tsx");
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelAnimatedButtonWrapper.tsx");
 
 export default function AnimatedButtonWrapper(onPressOut) {
   ({ props, onPressIn } = onPressOut);
   onPressOut = onPressOut.onPressOut;
   const style = onPressOut.style;
-  let pressed = onPressOut.pressed;
-  pressed = undefined;
+  let pressed;
   closure_4 = undefined;
   jsx = undefined;
   let width;
   let height;
   let sharedValue;
   ({ onPress, onLongPress, accessibilityLabel, accessibilityHint, children, disabled } = onPressOut);
-  let obj = onPressIn(style[6]);
   if (pressed == null) {
     pressed = obj.useSharedValue(false);
   }
@@ -47,97 +45,96 @@ export default function AnimatedButtonWrapper(onPressOut) {
     let fn = onPressIn;
     if (onPressIn == null) {
       fn = () => {
-        closure_4.lock();
-        const result = store.set(true);
+        closure_1_4.lock();
+        const result = pressed.set(true);
       };
     }
     const obj = { onPressIn: fn, onPressOut: null };
     let fn2 = onPressOut;
     if (onPressOut == null) {
       fn2 = () => {
-        closure_4.unlock();
-        const result = store.set(false);
+        closure_1_4.unlock();
+        const result = pressed.set(false);
       };
     }
-    obj[1] = fn2;
+    obj.onPressOut = fn2;
     return obj;
   }, items);
   width = props.width;
   height = props.height;
+  obj = onPressIn(style[6]);
   sharedValue = onPressIn(style[6]).useSharedValue(0);
   let items1 = [sharedValue];
   const items2 = [sharedValue];
   const memo1 = pressed.useMemo(() => {
-    let obj = onPressIn(style[8]);
     if (!obj.isAndroid()) {
       const fn = function t(windowWidth) {
-        const result = store.set(windowWidth.windowWidth / 2 - windowWidth.targetGlobalOriginX - windowWidth.targetWidth / 2);
-        let obj = { initialValues: null, animations: null };
-        obj = { originX: windowWidth.targetOriginX + store.get(), opacity: 0, transform: items };
-        items = [{ scale: 0.5 }];
-        obj[0] = obj;
-        obj = { originX: closure_1_0(closure_1_2[9]).withSpring(windowWidth.targetOriginX, closure_1_4), opacity: null, transform: null };
-        const obj4 = closure_1_0(closure_1_2[9]);
-        obj[1] = closure_1_0(closure_1_2[10]).withTiming(1, { duration: 100 });
-        obj1 = { scale: null };
-        const obj5 = closure_1_0(closure_1_2[10]);
-        obj1[0] = closure_1_0(closure_1_2[9]).withSpring(1, closure_1_4);
-        const items1 = [obj1];
-        obj[2] = items1;
-        obj[1] = obj;
+        const result = __initData.set(windowWidth.windowWidth / 2 - windowWidth.targetGlobalOriginX - windowWidth.targetWidth / 2);
+        const obj = { initialValues: null, animations: null };
+        const obj2 = { originX: windowWidth.targetOriginX + __initData.get(), opacity: 0, transform: null };
+        const items = [{ scale: 0.5 }];
+        obj2.transform = items;
+        obj.initialValues = obj2;
+        const obj3 = { originX: onPressIn(style[9]).withSpring(windowWidth.targetOriginX, closure_4), opacity: null, transform: null };
+        const obj4 = onPressIn(style[9]);
+        obj3.opacity = onPressIn(style[10]).withTiming(1, { duration: 100 });
+        const obj6 = { scale: null };
+        const obj5 = onPressIn(style[10]);
+        obj6.scale = onPressIn(style[9]).withSpring(1, closure_4);
+        const items1 = [obj6];
+        obj3.transform = items1;
+        obj.animations = obj3;
         return obj;
       };
-      obj = { offsetFromCenter: null, withSpring: null, MODE_CHANGE_PHYSICS: null, withTiming: null };
-      obj[0] = sharedValue;
-      obj[1] = tmp(tmp2[9]).withSpring;
-      obj[2] = closure_4;
-      obj[3] = tmp(tmp2[10]).withTiming;
-      fn.__closure = obj;
+      let obj2 = { offsetFromCenter: sharedValue, withSpring: tmp(4988).withSpring, MODE_CHANGE_PHYSICS, withTiming: tmp(4575).withTiming };
+      fn.__closure = obj2;
       fn.__workletHash = 16238937246135;
-      fn.__initData = sharedValue;
+      fn.__initData = __initData;
       return fn;
     }
+    obj = PlatformUtils;
   }, items1);
   const items3 = [style, tmp4.pressableWrapper, width, height];
   const memo2 = pressed.useMemo(() => {
-    let obj = onPressIn(style[8]);
     if (!obj.isAndroid()) {
       const fn = function t(currentOriginX) {
-        obj = { initialValues: obj, animations: null };
-        obj = { originX: currentOriginX.currentOriginX, opacity: 1, transform: items };
-        items = [{ scale: 1 }];
-        obj = { originX: closure_1_0(closure_1_2[9]).withSpring(currentOriginX.currentOriginX + closure_8.get(), closure_1_4), opacity: null, transform: null };
-        const obj4 = closure_1_0(closure_1_2[9]);
-        obj[1] = closure_1_0(closure_1_2[10]).withTiming(0, { duration: 100 });
-        obj1 = { scale: null };
-        const obj5 = closure_1_0(closure_1_2[10]);
-        obj1[0] = closure_1_0(closure_1_2[9]).withSpring(0.5, closure_1_4);
-        const items1 = [obj1];
-        obj[2] = items1;
-        obj[1] = obj;
+        const obj = { initialValues: null, animations: null };
+        const obj2 = { originX: currentOriginX.currentOriginX, opacity: 1, transform: null };
+        const items = [{ scale: 1 }];
+        obj2.transform = items;
+        obj.initialValues = obj2;
+        const obj3 = { originX: onPressIn(style[9]).withSpring(currentOriginX.currentOriginX + __initData.get(), closure_4), opacity: null, transform: null };
+        const obj4 = onPressIn(style[9]);
+        obj3.opacity = onPressIn(style[10]).withTiming(0, { duration: 100 });
+        const obj6 = { scale: null };
+        const obj5 = onPressIn(style[10]);
+        obj6.scale = onPressIn(style[9]).withSpring(0.5, closure_4);
+        const items1 = [obj6];
+        obj3.transform = items1;
+        obj.animations = obj3;
         return obj;
       };
-      obj = { withSpring: null, offsetFromCenter: null, MODE_CHANGE_PHYSICS: null, withTiming: null };
-      obj[0] = tmp(tmp2[9]).withSpring;
-      obj[1] = sharedValue;
-      obj[2] = closure_4;
-      obj[3] = tmp(tmp2[10]).withTiming;
-      fn.__closure = obj;
+      let obj2 = { withSpring: tmp(4988).withSpring, offsetFromCenter: sharedValue, MODE_CHANGE_PHYSICS, withTiming: tmp(4575).withTiming };
+      fn.__closure = obj2;
       fn.__workletHash = 17504057367727;
-      fn.__initData = closure_1_9;
+      fn.__initData = __initData2;
       return fn;
     }
+    obj = PlatformUtils;
   }, items2);
-  obj = { entering: memo1, exiting: memo2, onPress, onLongPress, disabled };
+  let obj2 = { entering: memo1, exiting: memo2, onPress, onLongPress, disabled };
   const memo3 = pressed.useMemo(() => {
-    const items = [pressableWrapper.pressableWrapper, { width, height }, style];
+    const items = [pressableWrapper.pressableWrapper, , ];
+    const size = { width, height };
+    items[1] = size;
+    items[2] = style;
     return items;
   }, items3);
   const merged = Object.assign(memo);
-  obj.accessibilityRole = "button";
-  obj.accessibilityLabel = accessibilityLabel;
-  obj.accessibilityHint = accessibilityHint;
-  obj.style = memo3;
-  obj.children = children;
+  obj2.accessibilityRole = "button";
+  obj2.accessibilityLabel = accessibilityLabel;
+  obj2.accessibilityHint = accessibilityHint;
+  obj2.style = memo3;
+  obj2.children = children;
   return <height entering={memo1} exiting={memo2} onPress={onPress} onLongPress={onLongPress} disabled={disabled} />;
 };

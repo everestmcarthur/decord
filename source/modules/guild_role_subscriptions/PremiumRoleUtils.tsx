@@ -1,13 +1,13 @@
-// Module ID: 4190
-// Function ID: 4191
-// Name: isSubscriptionRole
+// Module ID: 4203
+// Function ID: 4204
+// Name: PremiumRoleUtils
 // Dependencies: [2]
 // Exports: isSubscriptionRole, isSubscriptionRoleAvailableForPurchase
 
-// Module 4190 (isSubscriptionRole)
-import set from "set" /* 2 */;
+// Module 4203 (PremiumRoleUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/PremiumRoleUtils.tsx");
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/PremiumRoleUtils.tsx");
 
 export const isSubscriptionRole = function isSubscriptionRole(role) {
   let prop;
@@ -19,10 +19,10 @@ export const isSubscriptionRole = function isSubscriptionRole(role) {
   }
   return null != prop;
 };
-export const isSubscriptionRoleAvailableForPurchase = function isSubscriptionRoleAvailableForPurchase(tags) {
+export const isSubscriptionRoleAvailableForPurchase = function isSubscriptionRoleAvailableForPurchase(role) {
   let prop;
-  if (tags != null) {
-    tags = tags.tags;
+  if (role != null) {
+    const tags = role.tags;
     if (tags != null) {
       prop = tags.available_for_purchase;
     }

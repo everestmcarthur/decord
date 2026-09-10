@@ -1,36 +1,35 @@
-// Module ID: 14086
-// Function ID: 14087
-// Name: getUpdatedOptions
+// Module ID: 14109
+// Function ID: 14110
+// Name: ErrorCommonUtils
 // Dependencies: [573, 509, 2]
 // Exports: getUpdatedOptions
 
-// Module 14086 (getUpdatedOptions)
-import set from "set" /* 2 */;
-import add from "add" /* 509 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 14109 (ErrorCommonUtils)
+import LastFewActions from "LastFewActions" /* 509 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("utils/ErrorCommonUtils.tsx");
+const result = size.fileFinishedImporting("utils/ErrorCommonUtils.tsx");
 
 export const getUpdatedOptions = function getUpdatedOptions(extra) {
-  let obj = {};
+  const obj = {};
   const merged = Object.assign(extra);
   extra = undefined;
   if (extra != null) {
     extra = extra.extra;
   }
-  obj = {};
   const merged1 = Object.assign(extra);
-  if (null != dispatcherDefault._currentDispatchActionType) {
-    obj = { currentAction: null };
-    obj[0] = dispatcherDefault._currentDispatchActionType;
-    obj1 = obj;
+  if (null != DispatcherDefault._currentDispatchActionType) {
+    const obj3 = { currentAction: DispatcherDefault._currentDispatchActionType };
+    let obj4 = obj3;
   } else {
-    obj1 = {};
+    obj4 = {};
   }
-  const obj2 = {};
-  const merged2 = Object.assign(obj1);
-  obj2.lastFewActions = add.serialize();
-  const merged3 = Object.assign(obj2);
-  obj.extra = obj;
+  const obj5 = {};
+  const merged2 = Object.assign(obj4);
+  const serializer = LastFewActions;
+  obj5.lastFewActions = serializer.serialize();
+  const merged3 = Object.assign(obj5);
+  obj.extra = {};
   return obj;
 };

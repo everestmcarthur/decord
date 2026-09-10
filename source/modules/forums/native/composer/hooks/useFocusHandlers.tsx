@@ -1,26 +1,27 @@
-// Module ID: 10264
-// Function ID: 10265
-// Name: PostComposerInputs
+// Module ID: 10291
+// Function ID: 10292
+// Name: useFocusHandlers
 // Dependencies: [32, 19, 2]
 // Exports: useFocusHandlers
 
-// Module 10264 (PostComposerInputs)
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "noop" /* 19 */;
+// Module 10291 (useFocusHandlers)
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const obj = { TITLE: 0, [0]: "TITLE", CONTENT: 1, [1]: "CONTENT" };
-const result = require("set").fileFinishedImporting("modules/forums/native/composer/hooks/useFocusHandlers.tsx");
+const PostComposerInputs = { TITLE: 0, [0]: "TITLE", CONTENT: 1, [1]: "CONTENT" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/composer/hooks/useFocusHandlers.tsx");
 
-export const PostComposerInputs = obj;
+export { PostComposerInputs };
 export const useFocusHandlers = function useFocusHandlers(arg0) {
-  ({ titleInput: closure_0, contentInput: closure_1 } = arg0);
-  let first;
-  const tmp = callback(React.useState(first.TITLE), 2);
-  first = tmp[0];
+  ({ titleInput: _slicedToArray, contentInput: noop } = arg0);
+  let focusedInput;
+  const tmp = _slicedToArray(noop.useState(focusedInput.TITLE), 2);
+  focusedInput = tmp[0];
   return {
     setFocusedInput: tmp[1],
     focusLastInput() {
-      if (first.TITLE === first) {
+      if (obj.TITLE === first) {
         const current2 = ref.current;
         if (current2 != null) {
           current2.focus();
@@ -33,7 +34,7 @@ export const useFocusHandlers = function useFocusHandlers(arg0) {
       }
     },
     blurLastInput() {
-      if (first.TITLE === first) {
+      if (obj.TITLE === first) {
         const current2 = ref.current;
         if (current2 != null) {
           current2.blur();
@@ -45,6 +46,6 @@ export const useFocusHandlers = function useFocusHandlers(arg0) {
         }
       }
     },
-    focusedInput: first
+    focusedInput
   };
 };

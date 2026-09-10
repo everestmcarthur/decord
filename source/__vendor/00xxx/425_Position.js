@@ -4,7 +4,7 @@
 // Dependencies: [426]
 
 // Module 425 (Position)
-import oneArgumentPoolerDefault from "oneArgumentPooler" /* 426 */;
+import oneArgumentPooler from "oneArgumentPooler" /* 426 */;
 
 class Position {
   constructor(arg0, arg1) {
@@ -14,6 +14,6 @@ class Position {
     return;
   }
 }
-oneArgumentPoolerDefault.addPoolingTo(Position, oneArgumentPoolerDefault.twoArgumentPooler);
+oneArgumentPooler.addPoolingTo(Position, oneArgumentPooler.twoArgumentPooler);
 
 export default Position;

@@ -1,16 +1,16 @@
-// Module ID: 17716
-// Function ID: 17717
+// Module ID: 17749
+// Function ID: 17750
 // Name: useIsCreatorMonetizationRequestRejected
-// Dependencies: [17685, 1114, 2]
+// Dependencies: [17718, 1114, 2]
 // Exports: default
 
-// Module 17716 (useIsCreatorMonetizationRequestRejected)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import CreatorMonetizationApplicationState from "CreatorMonetizationApplicationState" /* 17685 */;
+// Module 17749 (useIsCreatorMonetizationRequestRejected)
+import util from "util" /* 1114 */;
+import CreatorMonetizationEligibilityConstants from "CreatorMonetizationEligibilityConstants" /* 17718 */;
+import size from "module_2" /* 2 */;
 
-let closure_2 = CreatorMonetizationApplicationState.CreatorMonetizationApplicationState;
-const result = set.fileFinishedImporting("modules/creator_monetization_eligibility/useIsCreatorMonetizationRequestRejected.tsx");
+const constants = CreatorMonetizationEligibilityConstants.CreatorMonetizationApplicationState;
+const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/useIsCreatorMonetizationRequestRejected.tsx");
 
 export default function useIsCreatorMonetizationRequestRejected(latestRequest) {
   let state;
@@ -20,7 +20,7 @@ export default function useIsCreatorMonetizationRequestRejected(latestRequest) {
       state = latestRequest.state;
     }
   }
-  let obj = { isApplicationRejected: state === constants.REJECTED, requestCooldownDuration: null };
+  const obj = { isApplicationRejected: state === constants.REJECTED, requestCooldownDuration: null };
   let can_reapply_at;
   if (latestRequest != null) {
     const rejection = latestRequest.rejection;
@@ -41,40 +41,39 @@ export default function useIsCreatorMonetizationRequestRejected(latestRequest) {
         const rounded = Math.round((parsed - timestamp) / 60000);
         let num2 = 43200;
         if (rounded >= 43200) {
-          const intl5 = getSystemLocale.intl;
-          obj = { months: null };
+          const intl5 = util.intl;
+          const obj2 = { months: null };
           const _Math5 = roundResult.Math;
           num2 = rounded / num2;
           roundResult = _Math5.round(num2);
-          obj[0] = roundResult;
-          let formatToPlainStringResult = intl5.formatToPlainString(getSystemLocale.t.kridzK, obj);
+          obj2.months = roundResult;
+          let formatToPlainStringResult = intl5.formatToPlainString(util.t.kridzK, obj2);
         } else if (rounded >= 10080) {
-          const intl4 = getSystemLocale.intl;
-          obj = { weeks: null };
+          const intl4 = util.intl;
+          const obj3 = { weeks: null };
           const _Math4 = Math;
-          obj[0] = Math.round(rounded / 10080);
-          formatToPlainStringResult = intl4.formatToPlainString(getSystemLocale.t.EmoBD2, obj);
+          obj3.weeks = Math.round(rounded / 10080);
+          formatToPlainStringResult = intl4.formatToPlainString(util.t.EmoBD2, obj3);
         } else if (rounded >= 1440) {
-          const intl3 = getSystemLocale.intl;
-          obj1 = { days: null };
+          const intl3 = util.intl;
+          const obj4 = { days: null };
           const _Math3 = Math;
-          obj1[0] = Math.round(rounded / 1440);
-          formatToPlainStringResult = intl3.formatToPlainString(getSystemLocale.t["k2UNz+"], obj1);
+          obj4.days = Math.round(rounded / 1440);
+          formatToPlainStringResult = intl3.formatToPlainString(util.t["k2UNz+"], obj4);
         } else if (rounded >= 60) {
-          const intl2 = getSystemLocale.intl;
-          const obj2 = { hours: null };
+          const intl2 = util.intl;
+          const obj5 = { hours: null };
           const _Math2 = Math;
-          obj2[0] = Math.round(rounded / 60);
-          formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale.t.xCjYxK, obj2);
+          obj5.hours = Math.round(rounded / 60);
+          formatToPlainStringResult = intl2.formatToPlainString(util.t.xCjYxK, obj5);
         } else {
-          const intl = getSystemLocale.intl;
-          const obj3 = { minutes: null };
-          obj3[0] = rounded;
-          formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t.iXLF9W, obj3);
+          const intl = util.intl;
+          const obj6 = { minutes: rounded };
+          formatToPlainStringResult = intl.formatToPlainString(util.t.iXLF9W, obj6);
         }
       }
     }
   }
-  obj[1] = undefined;
+  obj.requestCooldownDuration = undefined;
   return obj;
 };

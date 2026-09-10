@@ -1,77 +1,77 @@
-// Module ID: 13389
-// Function ID: 13390
-// Name: openBuyNitroPerkDetails
-// Dependencies: [19, 17, 21, 4560, 13362, 10235, 1114, 4973, 576, 13390, 13391, 7182, 4527, 2]
+// Module ID: 13412
+// Function ID: 13413
+// Name: BuyNitroPerkDetails
+// Dependencies: [19, 17, 21, 4574, 13385, 10262, 1114, 4987, 576, 13413, 13414, 7196, 4541, 2]
 // Exports: openBuyNitroPerkDetails
 
-// Module 13389 (openBuyNitroPerkDetails)
-import ThemesDefault from "Themes" /* 576 */;
-import ACTION_SHEET_HEIGHT_HALF from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7182 */;
-import PremiumTypes from "PremiumTypes" /* 13362 */;
-import BuyNitroPurchaseButtonDefault from "BuyNitroPurchaseButton" /* 13391 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 13412 (BuyNitroPerkDetails)
+import nativeDefault from "native" /* 576 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4541 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
+import useBuyNitroPlanSelection from "useBuyNitroPlanSelection" /* 13385 */;
+import BuyNitroPurchaseButtonDefault from "BuyNitroPurchaseButton" /* 13414 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ jsx: c4, jsxs: c5 } = jsxProd);
+const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
+
+require = fn;
+const Image = fn(17).Image;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const BuyNitroPerkDetailsActionSheet = "BuyNitroPerkDetailsActionSheet";
-let closure_7 = createCacheKey.createStyles({ illustration: { width: "100%", height: 180 } });
-let closure_8 = importAllResult.memo((perk) => {
+const createStyles = fn(4574);
+let closure_7 = createStyles.createStyles({ illustration: { width: "100%", height: 180 } });
+let closure_8 = noop.memo((perk) => {
   perk = perk.perk;
   ({ selectedTier, selectedProductId, analyticsLocations, applicationId, onPaymentSuccess, onPaymentDismiss } = perk);
-  let obj = PremiumTypes;
-  const buyNitroPlanSelection = obj.useBuyNitroPlanSelection({ tier: selectedTier, productId: selectedProductId });
+  const tmp = closure_7();
+  const buyNitroPlanSelection = useBuyNitroPlanSelection.useBuyNitroPlanSelection({ tier: selectedTier, productId: selectedProductId });
   const detail = perk.detail;
-  let tmp6Result = null;
+  let tmp6Result2 = null;
   if (null != detail) {
-    obj = { title: null, description: null, illustration: null, actions: null };
-    obj[0] = perk.label;
-    const intl = tmp2(1114).intl;
-    obj[1] = intl.string(detail.description);
-    obj = { source: null, style: null, resizeMode: "contain" };
-    obj[0] = detail.image;
-    obj[1] = tmp.illustration;
-    obj[2] = callback(Image, obj);
-    obj1 = { spacing: null, children: null };
-    obj1[0] = ThemesDefault.space.PX_12;
-    tmp6Result = null != buyNitroPlanSelection.selection.item;
+    const obj2 = { title: perk.label, description: null, illustration: null, actions: null };
+    if (typeof detail.description === "string") {
+      let description = detail.description;
+    } else {
+      const intl = tmp2(1114).intl;
+      description = intl.string(detail.description);
+    }
+    obj2.description = description;
+    const obj3 = { source: detail.image, style: tmp.illustration, resizeMode: "contain" };
+    obj2.illustration = React4(Image, obj3);
+    const obj4 = { spacing: nativeDefault.space.PX_12, children: null };
+    let tmp6Result = null != buyNitroPlanSelection.selection.item;
     if (tmp6Result) {
-      const obj2 = { planSelection: null, item: null, centered: true };
-      obj2[0] = buyNitroPlanSelection;
-      obj2[1] = buyNitroPlanSelection.selection.item;
-      tmp6Result = tmp6(tmp9(13390), obj2);
+      const obj5 = { planSelection: buyNitroPlanSelection, item: buyNitroPlanSelection.selection.item, centered: true };
+      tmp6Result = tmp6(tmp9(13413), obj5);
     }
     const items = [tmp6Result, ];
-    const obj3 = { planSelection: null, location: null, sourceAnalyticsLocations: null, applicationId: null, onHostSheetClose: null, onPaymentSuccess: null, onPaymentDismiss: null };
-    obj3[0] = buyNitroPlanSelection;
-    obj3[1] = QUICK_SWITCHERDefault.PREMIUM_MARKETING_PERK_CARD;
-    obj3[2] = analyticsLocations;
-    obj3[3] = applicationId;
-    obj3[4] = function onHostSheetClose() {
-      return callback(table[12]).hideActionSheet(closure_6);
+    const obj6 = {
+      planSelection: buyNitroPlanSelection,
+      location: AnalyticsLocationDefault.PREMIUM_MARKETING_PERK_CARD,
+      sourceAnalyticsLocations: analyticsLocations,
+      applicationId,
+      onHostSheetClose() {
+          return ActionSheetActionCreatorsDefault.hideActionSheet(BuyNitroPerkDetailsActionSheet);
+        },
+      onPaymentSuccess,
+      onPaymentDismiss
     };
-    obj3[5] = onPaymentSuccess;
-    obj3[6] = onPaymentDismiss;
-    items[1] = callback(BuyNitroPurchaseButtonDefault, obj3);
-    obj1[1] = items;
-    obj[3] = closure_5(tmp2(4973).Stack, obj1);
-    tmp6Result = tmp6(tmp2(10235).PromoSheet, obj);
-    const tmp8 = closure_5;
+    items[1] = React4(BuyNitroPurchaseButtonDefault, obj6);
+    obj4.children = items;
+    obj2.actions = hasOwnProperty(tmp2(4987).Stack, obj4);
+    tmp6Result2 = tmp6(tmp2(10262).PromoSheet, obj2);
     const tmp9Result = BuyNitroPurchaseButtonDefault;
   }
-  return tmp6Result;
+  return tmp6Result2;
 });
-const result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroPerkDetails.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroPerkDetails.tsx");
 
 export const openBuyNitroPerkDetails = function openBuyNitroPerkDetails(perk, arg1) {
-  let obj = ACTION_SHEET_HEIGHT_HALF;
-  obj = { content: null, key: null };
-  obj = { perk };
+  const obj2 = { content: null, key: null };
   const merged = Object.assign(arg1);
-  obj[0] = callback(closure_8, obj);
-  obj[1] = BuyNitroPerkDetailsActionSheet;
-  obj.showActionSheet(obj);
+  obj2.content = React4(closure_8, { perk });
+  obj2.key = BuyNitroPerkDetailsActionSheet;
+  ActionSheetActionCreators.showActionSheet(obj2);
 };

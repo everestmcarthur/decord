@@ -1,17 +1,17 @@
-// Module ID: 7870
-// Function ID: 7871
+// Module ID: 7884
+// Function ID: 7885
 // Name: PressableNavigatorModalIcon
-// Dependencies: [21, 7866, 7863, 7867, 7871, 1114, 2]
+// Dependencies: [21, 7880, 7877, 7881, 7885, 1114, 2]
 // Exports: default
 
-// Module 7870 (PressableNavigatorModalIcon)
-import set from "set" /* 2 */;
+// Module 7884 (PressableNavigatorModalIcon)
 import jsxProd from "jsxProd" /* 21 */;
-import GenericHeaderTitle from "GenericHeaderTitle" /* 7863 */;
-import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 7866 */;
+import HeaderShared from "HeaderShared" /* 7877 */;
+import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 7880 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorModalIcon.tsx");
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorModalIcon.tsx");
 
 export default function PressableNavigatorModalIcon(onPress) {
   let goBack = onPress.onPress;
@@ -22,7 +22,7 @@ export default function PressableNavigatorModalIcon(onPress) {
   if (str === undefined) {
     str = "back";
   }
-  let obj = { source: importDefault(tmp6 ? 7867 : 7871), onPress: goBack, accessibilityLabel: null };
+  const obj = { source: importDefault("back" === str ? 7881 : 7885), onPress: goBack, accessibilityLabel: null };
   const intl = tmp5(1114).intl;
   const string = intl.string;
   const t = tmp5(1114).t;
@@ -31,7 +31,6 @@ export default function PressableNavigatorModalIcon(onPress) {
   } else {
     stringResult = string(t.cpT0Cq);
   }
-  obj = { isModal: true, children: tmp(GenericHeaderTitle.HeaderIconButton, obj) };
-  obj[2] = stringResult;
-  return jsx(PressableNavigatorButtonWrapperDefault, { isModal: true, children: tmp(GenericHeaderTitle.HeaderIconButton, obj) });
+  obj.accessibilityLabel = stringResult;
+  return <tmp4 isModal>{jsx(HeaderShared.HeaderIconButton, { source: importDefault("back" === str ? 7881 : 7885), onPress: goBack, accessibilityLabel: null })}</tmp4>;
 };

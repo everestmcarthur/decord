@@ -1,18 +1,17 @@
-// Module ID: 15753
-// Function ID: 15754
+// Module ID: 15783
+// Function ID: 15784
 // Name: useDesignSystemsSettingPredicate
-// Dependencies: [14845, 10993, 2]
+// Dependencies: [14871, 11020, 2]
 // Exports: useDesignSystemsSettingPredicate
 
-// Module 15753 (useDesignSystemsSettingPredicate)
-import set from "set" /* 2 */;
-import useStaffOrDeveloperSettingPredicate from "useStaffOrDeveloperSettingPredicate" /* 14845 */;
+// Module 15783 (useDesignSystemsSettingPredicate)
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14871 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/user_settings/design_system/native/useDesignSystemsSettingPredicate.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/design_system/native/useDesignSystemsSettingPredicate.tsx");
 
 export const useDesignSystemsSettingPredicate = function useDesignSystemsSettingPredicate() {
-  let staffOrDeveloperSettingPredicate = useStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
-  const obj = useStaffOrDeveloperSettingPredicate;
+  let staffOrDeveloperSettingPredicate = useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
   if (!staffOrDeveloperSettingPredicate) {
     staffOrDeveloperSettingPredicate = obj2.usePlaygroundAccessExperiment("design_systems_settings");
   }

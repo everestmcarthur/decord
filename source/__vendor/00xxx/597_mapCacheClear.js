@@ -5,15 +5,16 @@
 
 // Module 597 (mapCacheClear)
 import Hash from "Hash" /* 598 */;
-import getNative from "getNative" /* 611 */;
+import _mod611 from "module_611" /* 611 */;
+import ListCache from "ListCache" /* 612 */;
 
 
 export default function mapCacheClear() {
   const obj = { hash: new Hash(), map: null, string: null };
-  let tmp4 = getNative || tmp(612);
-  tmp4 = new tmp4();
-  obj[1] = tmp4;
   const tmp3 = new Hash();
-  obj[2] = new Hash();
+  const tmp4 = _mod611 || ListCache;
+  obj.map = new _mod611 || ListCache();
+  const tmp42 = new _mod611 || ListCache();
+  obj.string = new Hash();
   { size: 0 }.__data__ = obj;
 };

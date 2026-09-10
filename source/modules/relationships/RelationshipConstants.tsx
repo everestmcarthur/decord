@@ -1,12 +1,12 @@
-// Module ID: 9048
-// Function ID: 9049
-// Name: ClearFriendRequestFilters
+// Module ID: 9075
+// Function ID: 9076
+// Name: RelationshipConstants
 // Dependencies: [2]
 
-// Module 9048 (ClearFriendRequestFilters)
-import set from "set" /* 2 */;
+// Module 9075 (RelationshipConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/relationships/RelationshipConstants.tsx");
+const result = size.fileFinishedImporting("modules/relationships/RelationshipConstants.tsx");
 
 export const ClearFriendRequestFilters = { SPAM: 1, [1]: "SPAM", IGNORED: 2, [2]: "IGNORED" };
 export const UserRemediationAction = { GOTO_IGNORE: "GOTO_IGNORE", GOTO_BLOCK: "GOTO_BLOCK", EXPLORE_FEATURE_GUILD: "EXPLORE_FEATURE_GUILD", DISMISS_IGNORE: "DISMISS_IGNORE", DISMISS_BLOCK: "DISMISS_BLOCK", CANCEL_IGNORE: "CANCEL_IGNORE", CANCEL_BLOCK: "CANCEL_BLOCK" };

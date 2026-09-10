@@ -1,22 +1,18 @@
-// Module ID: 9918
-// Function ID: 9919
-// Name: updateStageMusicMuted
+// Module ID: 9945
+// Function ID: 9946
+// Name: StageMusicActionCreators
 // Dependencies: [573, 2]
 // Exports: updateStageMusicMuted, updateStageMusicShouldPlay
 
-// Module 9918 (updateStageMusicMuted)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 9945 (StageMusicActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/stage_channels/StageMusicActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/stage_channels/StageMusicActionCreators.tsx");
 
 export const updateStageMusicMuted = function updateStageMusicMuted(muted) {
-  let obj = dispatcherDefault;
-  obj = { type: "STAGE_MUSIC_MUTE", muted };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "STAGE_MUSIC_MUTE", muted });
 };
 export const updateStageMusicShouldPlay = function updateStageMusicShouldPlay(play) {
-  let obj = dispatcherDefault;
-  obj = { type: "STAGE_MUSIC_PLAY", play };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "STAGE_MUSIC_PLAY", play });
 };

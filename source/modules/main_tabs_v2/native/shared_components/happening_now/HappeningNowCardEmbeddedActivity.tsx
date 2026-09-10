@@ -1,31 +1,36 @@
-// Module ID: 16088
-// Function ID: 16089
+// Module ID: 16118
+// Function ID: 16119
 // Name: HappeningNowCardEmbeddedActivity
-// Dependencies: [32, 19, 17, 1371, 15297, 1074, 21, 4560, 576, 563, 16089, 7168, 1242, 7182, 9541, 1896, 16061, 4296, 8773, 1250, 16072, 15298, 5106, 5587, 16085, 2]
+// Dependencies: [32, 19, 17, 1371, 15326, 1074, 21, 4574, 576, 563, 16119, 7182, 1242, 7196, 9568, 1896, 16091, 4310, 8801, 1250, 16102, 15327, 5120, 5601, 16115, 2]
 // Exports: default
 
-// Module 16088 (HappeningNowCardEmbeddedActivity)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "mergeGuildAvatar" /* 1371 */;
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 15297 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16118 (HappeningNowCardEmbeddedActivity)
+import nativeDefault from "native" /* 576 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-({ HAPPENING_NOW_CONTENT_HEIGHT, HappeningNowCardTrackingType: error } = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
-({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { content: { flexShrink: 1, gap: 2 }, cardImage: { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: 12 }, activityBackground: null, cardTitle: null };
-createCacheKey = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { marginTop: 2 };
-let closure_11 = createCacheKey.createStyles(createCacheKey);
-let closure_12 = { code: "function HappeningNowCardEmbeddedActivityTsx1(){const{viewableCardKeys,cardKey}=this.__closure;return viewableCardKeys.get().find(function(key){return key===cardKey;})!=null;}" };
-let closure_13 = { code: "function HappeningNowCardEmbeddedActivityTsx2(isViewable,previous){const{runOnJS,setHasViewed}=this.__closure;if(!isViewable||isViewable===previous)return;runOnJS(setHasViewed)(true);}" };
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardEmbeddedActivity.tsx");
+require = fn;
+const View = fn(17).View;
+const HappeningNowConstants = fn(15326);
+({ HAPPENING_NOW_CONTENT_HEIGHT, HappeningNowCardTrackingType: closure_7 } = HappeningNowConstants);
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { content: { flexShrink: 1, gap: 2 }, cardImage: { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: 12 }, activityBackground: null, cardTitle: null };
+let size = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.activityBackground = size;
+obj2.cardTitle = { marginTop: 2 };
+let closure_11 = createStyles.createStyles(obj2);
+const __initData = { code: "function HappeningNowCardEmbeddedActivityTsx1(){const{viewableCardKeys,cardKey}=this.__closure;return viewableCardKeys.get().find(function(key){return key===cardKey;})!=null;}" };
+const __initData2 = { code: "function HappeningNowCardEmbeddedActivityTsx2(isViewable,previous){const{runOnJS,setHasViewed}=this.__closure;if(!isViewable||isViewable===previous)return;runOnJS(setHasViewed)(true);}" };
+size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardEmbeddedActivity.tsx");
 
 export default function HappeningNowCardEmbeddedActivity(guildId) {
   guildId = guildId.guildId;
@@ -38,22 +43,19 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
   if (flag === undefined) {
     flag = false;
   }
-  let channelId;
   let first;
   let context;
-  closure_8 = undefined;
-  let callback;
-  closure_10 = undefined;
-  let tmp = callback2();
-  let obj = guildId(activity[9]);
+  closure_9 = undefined;
+  let ref2;
+  let tmp = closure_11();
   let items = [first];
   let items1 = [activity];
-  const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
+  const stateFromStoresArray = guildId(activity[9]).useStateFromStoresArray(items, () => {
     const items = [];
     if (null != activity) {
       const userIds = activity.userIds;
-      const item = userIds.forEach((arg0) => {
-        const user = closure_1_6.getUser(arg0);
+      const item = userIds.forEach((item) => {
+        const user = first.getUser(item);
         if (null != user) {
           items.push(user);
         }
@@ -61,10 +63,11 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
     }
     return items;
   }, items1);
-  obj1 = guildId(activity[10]);
-  channelId = voiceState.channelId;
-  const result = obj1.formatVoiceActivityTitle(stateFromStoresArray, guildId);
+  let obj = guildId(activity[9]);
+  const channelId = voiceState.channelId;
+  const result = guildId(activity[10]).formatVoiceActivityTitle(stateFromStoresArray, guildId);
   let applicationId;
+  let obj2 = guildId(activity[10]);
   if (activity != null) {
     applicationId = activity.applicationId;
   }
@@ -73,7 +76,6 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
   if (first != null) {
     const iconURL = first.getIconURL(64);
   }
-  let obj3 = cardKey;
   const items3 = [activity, , , , , ];
   let id;
   if (first != null) {
@@ -84,58 +86,56 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
   items3[3] = guildId;
   items3[4] = index;
   items3[5] = userId;
-  callback = cardKey.useCallback(() => {
-    let obj = index(activity[12]);
-    obj = { order: index, guild_id: guildId, type: context.EMBEDDED_ACTIVITY_CARD, location_stack: null, application_id: null, activity_session_id: null, destination_channel_id: null, highlighted_user_ids: null };
-    const items = [index(activity[13]).HAPPENING_NOW_EMBEDDED_ACTIVITY];
-    obj[3] = items;
+  const callback = cardKey.useCallback(() => {
+    const obj2 = { order: index, guild_id: guildId, type: constants.EMBEDDED_ACTIVITY_CARD, location_stack: null, application_id: null, activity_session_id: null, destination_channel_id: null, highlighted_user_ids: null };
+    const items = [AnalyticsLocationDefault.HAPPENING_NOW_EMBEDDED_ACTIVITY];
+    obj2.location_stack = items;
     let id;
     if (first != null) {
       id = first.id;
     }
-    obj[4] = id;
+    obj2.application_id = id;
     let compositeInstanceId;
     if (activity != null) {
       compositeInstanceId = activity.compositeInstanceId;
     }
-    obj[5] = compositeInstanceId;
-    obj[6] = channelId;
+    obj2.activity_session_id = compositeInstanceId;
+    obj2.destination_channel_id = channelId;
     const items1 = [userId];
-    obj[7] = items1;
-    obj.track(ref.ACTIVITY_CARD_CLICKED, obj);
-    guildId(activity[15])(activity[14], activity.paths).then((arg0) => {
-      if (null != closure_5) {
+    obj2.highlighted_user_ids = items1;
+    AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj2);
+    asyncRequireImpl(9568, dependencyMap.paths).then((result) => {
+      if (null != channelId) {
         tmp(tmp2, true);
       }
     });
   }, items3);
-  context = obj3.useContext(tmp2(tmp3[16]).ViewableHappeningNowCardKeysContext);
-  closure_8 = obj3.useRef(cardKey);
-  let value = context.get();
-  const tmp8Result = userId(obj3.useState(null != value.find((arg0) => arg0 === cardKey)), 2);
-  callback = tmp13;
-  closure_10 = obj3.useRef(context);
-  const effect = obj3.useEffect(() => {
+  context = obj4.useContext(tmp2(tmp3[16]).ViewableHappeningNowCardKeysContext);
+  cardKey.useRef(cardKey);
+  value = context.get();
+  const tmp8Result = userId(cardKey.useState(null != value.find((item) => item === cardKey)), 2);
+  closure_9 = tmp13;
+  ref2 = obj4.useRef(context);
+  const effect = obj4.useEffect(() => {
     closure_10.current = context;
   });
   const items4 = [cardKey];
-  const effect1 = obj3.useEffect(() => {
+  const effect1 = obj4.useEffect(() => {
     if (cardKey !== ref.current) {
       ref.current = cardKey;
       const current = ref2.current;
-      const value = current.get();
-      callback(null != value.find((arg0) => arg0 === closure_4));
+      value = current.get();
+      closure_9(null != value.find((item) => item === cardKey));
     }
   }, items4);
   const tmp6 = index(activity[11]);
-  const tmp8 = userId;
   const fn = function b() {
-    const value = context.get();
-    return null != value.find((arg0) => arg0 === closure_4);
+    value = context.get();
+    return null != value.find((item) => item === cardKey);
   };
   fn.__closure = { viewableCardKeys: context, cardKey };
   fn.__workletHash = 3043999664691;
-  fn.__initData = closure_12;
+  fn.__initData = __initData;
   class T {
     constructor(arg0, arg1) {
       tmp = guildId;
@@ -144,9 +144,9 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
         tmp = guildId !== arg1;
       }
       if (tmp) {
-        tmp3 = guildId;
-        tmp4 = activity;
-        obj = guildId(activity[17]);
+        tmp3 = closure_0;
+        tmp4 = closure_2;
+        obj = closure_0(closure_2[17]);
         tmp5 = closure_9;
         flag = true;
         tmp6 = obj.runOnJS(closure_9)(true);
@@ -154,86 +154,70 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
       return;
     }
   }
-  obj = { runOnJS: tmp2(tmp3[17]).runOnJS, setHasViewed: tmp13 };
-  T.__closure = obj;
+  const tmp2Result = guildId(activity[17]);
+  T.__closure = { runOnJS: guildId(activity[17]).runOnJS, setHasViewed: tmp8Result[1] };
   T.__workletHash = 17292462926115;
-  T.__initData = closure_13;
-  const animatedReaction = guildId(activity[17]).useAnimatedReaction(fn, T);
-  let tmp5Result = tmp5(tmp3[18]);
+  T.__initData = __initData2;
+  const animatedReaction = tmp2Result.useAnimatedReaction(fn, T);
+  const obj3 = { runOnJS: guildId(activity[17]).runOnJS, setHasViewed: tmp8Result[1] };
   if (tmp8Result[0]) {
-    obj = { type: null, name: null, properties: null };
-    obj[0] = tmp2(tmp3[19]).ImpressionTypes.VIEW;
-    obj[1] = tmp2(tmp3[19]).ImpressionNames.EMBEDDED_ACTIVITY_HAPPENING_NOW;
-    obj1 = { user_id: null, guild_id: null, application_id: null, activity_session_id: null };
-    obj1[0] = userId;
-    obj1[1] = guildId;
+    const obj5 = { type: tmp2(tmp3[19]).ImpressionTypes.VIEW, name: tmp2(tmp3[19]).ImpressionNames.EMBEDDED_ACTIVITY_HAPPENING_NOW, properties: null };
+    const obj6 = { user_id: userId, guild_id: guildId, application_id: null, activity_session_id: null };
     let id1;
     if (first != null) {
       id1 = first.id;
     }
-    obj1[2] = id1;
+    obj6.application_id = id1;
     let compositeInstanceId;
     if (activity != null) {
       compositeInstanceId = activity.compositeInstanceId;
     }
-    obj1[3] = compositeInstanceId;
-    obj[2] = obj1;
-    let obj2 = obj;
+    obj6.activity_session_id = compositeInstanceId;
+    obj5.properties = obj6;
+    let obj7 = obj5;
   } else {
-    obj2 = {};
+    obj7 = {};
   }
-  tmp5Result(obj2);
+  index(activity[18])(obj7);
   if (0 === stateFromStoresArray.length) {
-    obj3 = { panelVariant: null };
-    obj3[0] = flag;
-    let tmp29Result = callback(tmp2(tmp3[20]).HappeningNowCardPlaceholder, obj3);
+    const obj8 = { panelVariant: flag };
+    let tmp29Result = closure_9(tmp2(tmp3[20]).HappeningNowCardPlaceholder, obj8);
   } else {
-    const obj4 = { onPress: null, width: null, IconComponent: null, panelVariant: null, children: null };
-    obj4[0] = callback;
+    const obj9 = { onPress: callback, width: null, IconComponent: null, panelVariant: null, children: null };
     let str = "medium";
-    tmp5Result = tmp5(tmp3[21]);
     if (fullwidth) {
       str = "full";
     }
-    obj4[1] = str;
-    obj4[2] = tmp2(tmp3[22]).AppsIcon;
-    obj4[3] = flag;
+    obj9.width = str;
+    obj9.IconComponent = tmp2(tmp3[22]).AppsIcon;
+    obj9.panelVariant = flag;
     let tmp21 = null != iconURL;
     if (tmp21) {
-      const obj5 = { style: null, children: null };
-      obj5[0] = tmp.cardImage;
-      const obj6 = { source: null, style: null };
-      const obj7 = { uri: null };
-      obj7[0] = iconURL;
-      obj6[0] = obj7;
-      obj6[1] = tmp.activityBackground;
-      obj5[1] = callback(tmp5(tmp3[23]), obj6);
-      tmp21 = callback(channelId, obj5);
+      const obj10 = { style: tmp.cardImage, children: null };
+      const obj11 = { source: null, style: null };
+      const obj12 = { uri: iconURL };
+      obj11.source = obj12;
+      obj11.style = tmp.activityBackground;
+      obj10.children = closure_9(tmp5(tmp3[23]), obj11);
+      tmp21 = closure_9(channelId, obj10);
     }
     const items5 = [tmp21, ];
-    const obj8 = { style: null, children: null };
-    obj8[0] = tmp.content;
-    const obj9 = { users: null, userLimit: 3, guildId: null };
-    obj9[0] = stateFromStoresArray;
-    obj9[2] = guildId;
-    const items6 = [callback(tmp2(tmp3[24]).HappeningNowAvatarStack, obj9), , ];
-    const obj10 = { lineClamp: 1, style: null, children: null };
-    obj10[1] = tmp.cardTitle;
-    obj10[2] = result;
-    items6[1] = callback(tmp2(tmp3[21]).HappeningNowCardHeader, obj10);
+    const obj13 = { style: tmp.content, children: null };
+    const obj14 = { users: stateFromStoresArray, userLimit: 3, guildId };
+    const items6 = [closure_9(tmp2(tmp3[24]).HappeningNowAvatarStack, obj14), , ];
+    const obj15 = { lineClamp: 1, style: tmp.cardTitle, children: result };
+    items6[1] = closure_9(tmp2(tmp3[21]).HappeningNowCardHeader, obj15);
     let name;
     if (first != null) {
       name = first.name;
     }
-    const obj11 = { children: null };
-    obj11[0] = name;
-    items6[2] = callback(tmp2(tmp3[21]).HappeningNowCardSubtitle, obj11);
-    obj8[1] = items6;
-    items5[1] = closure_10(channelId, obj8);
-    obj4[4] = items5;
-    tmp29Result = tmp29(tmp5Result, obj4);
-    const tmp24 = channelId;
-    const tmp25 = callback;
+    const obj16 = { children: name };
+    items6[2] = closure_9(tmp2(tmp3[21]).HappeningNowCardSubtitle, obj16);
+    obj13.children = items6;
+    items5[1] = ref2(channelId, obj13);
+    obj9.children = items5;
+    tmp29Result = tmp29(tmp5(tmp3[21]), obj9);
+    const tmp5Result2 = tmp5(tmp3[21]);
   }
   return tmp29Result;
 };

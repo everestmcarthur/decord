@@ -1,20 +1,20 @@
-// Module ID: 9027
-// Function ID: 9028
-// Name: handleFeaturedOrDeveloperFetchSuccess
+// Module ID: 9054
+// Function ID: 9055
+// Name: ApplicationAssetsV2Store
 // Dependencies: [12, 504, 573, 2]
 
-// Module 9027 (handleFeaturedOrDeveloperFetchSuccess)
+// Module 9054 (ApplicationAssetsV2Store)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
-const require = arg1;
+const require = fn;
 function handleFeaturedOrDeveloperFetchSuccess(configs) {
   const values = Object.values(configs.configs);
-  const _require = false;
+  _require = false;
   const flatResult = values.flat();
-  const entries = Object.entries(_require(12).groupBy(flatResult, (application_id) => application_id.application_id));
-  const mapped = entries.map((arg0) => {
-    [tmp, obj] = arg0;
+  const entries = Object.entries(require("module_12").groupBy(flatResult, (application_id) => application_id.application_id));
+  const mapped = entries.map((item) => {
+    [tmp, obj] = item;
     const items = [
       tmp,
       obj.flatMap((resolved_assets) => {
@@ -24,7 +24,7 @@ function handleFeaturedOrDeveloperFetchSuccess(configs) {
         }
         return resolved_assets;
       }).filter((updated_at) => {
-        const value = closure_1_2.get(closure_0);
+        value = map.get(closure_1_0);
         let tmp2;
         if (value != null) {
           tmp2 = value[updated_at.key];
@@ -42,19 +42,19 @@ function handleFeaturedOrDeveloperFetchSuccess(configs) {
     ];
     return items;
   });
-  const found = mapped.filter((arg0) => {
-    [, arr] = arg0;
+  const found = mapped.filter((item) => {
+    [, arr] = item;
     return arr.length > 0;
   });
-  const item = found.forEach((arg0) => {
-    [tmp, arr] = arg0;
+  const item = found.forEach((item) => {
+    [tmp, arr] = item;
     c0 = true;
-    const merged = Object.assign(closure_1_2.get(tmp));
+    const merged = Object.assign(map.get(tmp));
     const merged1 = Object.assign(Object.fromEntries(arr.map((key) => {
       const items = [key.key, key];
       return items;
     })));
-    return closure_1_2.set(tmp, {});
+    return map.set(tmp, {});
   });
   return _require;
 }
@@ -66,15 +66,15 @@ ApplicationAssetsV2Store.prototype["getAssets"] = function getAssets(arg0) {
   return map.get(arg0);
 };
 ApplicationAssetsV2Store.displayName = "ApplicationAssetsV2Store";
-const applicationAssetsV2Store = new ApplicationAssetsV2Store(dispatcherDefault, {
+const applicationAssetsV2Store = new ApplicationAssetsV2Store(DispatcherDefault, {
   LOGOUT: function handleLogout() {
     map.clear();
   },
   APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS: function handleFetchSuccess(configs) {
-    const _require = false;
-    const entries = Object.entries(_require(12).groupBy(configs.configs, (application_id) => application_id.application_id));
-    const mapped = entries.map((arg0) => {
-      [tmp, obj] = arg0;
+    _require = false;
+    const entries = Object.entries(require("module_12").groupBy(configs.configs, (application_id) => application_id.application_id));
+    const mapped = entries.map((item) => {
+      [tmp, obj] = item;
       const items = [
         tmp,
         obj.flatMap((resolved_assets) => {
@@ -84,7 +84,7 @@ const applicationAssetsV2Store = new ApplicationAssetsV2Store(dispatcherDefault,
           }
           return resolved_assets;
         }).filter((updated_at) => {
-          const value = closure_1_2.get(closure_0);
+          value = map.get(closure_1_0);
           let tmp2;
           if (value != null) {
             tmp2 = value[updated_at.key];
@@ -102,25 +102,26 @@ const applicationAssetsV2Store = new ApplicationAssetsV2Store(dispatcherDefault,
       ];
       return items;
     });
-    const found = mapped.filter((arg0) => {
-      [, arr] = arg0;
+    const found = mapped.filter((item) => {
+      [, arr] = item;
       return arr.length > 0;
     });
-    const item = found.forEach((arg0) => {
-      [tmp, arr] = arg0;
+    const item = found.forEach((item) => {
+      [tmp, arr] = item;
       c0 = true;
-      const merged = Object.assign(closure_1_2.get(tmp));
+      const merged = Object.assign(map.get(tmp));
       const merged1 = Object.assign(Object.fromEntries(arr.map((key) => {
         const items = [key.key, key];
         return items;
       })));
-      return closure_1_2.set(tmp, {});
+      return map.set(tmp, {});
     });
     return _require;
   },
   APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS: handleFeaturedOrDeveloperFetchSuccess,
   APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS: handleFeaturedOrDeveloperFetchSuccess
 });
-const result = require("set").fileFinishedImporting("modules/application_assets_v2/ApplicationAssetsV2Store.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/application_assets_v2/ApplicationAssetsV2Store.tsx");
 
 export default applicationAssetsV2Store;

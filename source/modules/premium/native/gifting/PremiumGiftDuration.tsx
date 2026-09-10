@@ -1,46 +1,44 @@
-// Module ID: 11050
-// Function ID: 11051
-// Name: PremiumGiftDurationButton
-// Dependencies: [19, 17, 1373, 21, 4560, 576, 10704, 5605, 8600, 10756, 4277, 4556, 1114, 2]
+// Module ID: 11077
+// Function ID: 11078
+// Name: PremiumGiftDuration
+// Dependencies: [19, 17, 1373, 21, 4574, 576, 10731, 5619, 8628, 10783, 4292, 4570, 1114, 2]
 // Exports: default
 
-// Module 11050 (PremiumGiftDurationButton)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import GuildFeatures from "GuildFeatures" /* 1373 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11077 (PremiumGiftDuration)
+import nativeDefault from "native" /* 576 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4292 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import NativeGiftContext from "NativeGiftContext" /* 10731 */;
+import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10783 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = fn;
 function PremiumGiftDurationButton(arg0) {
   ({ selected, planInterval } = arg0);
-  let setPlanInterval;
-  let obj = planInterval(10704);
-  const nativeGiftContext = obj.useNativeGiftContext();
-  setPlanInterval = nativeGiftContext.setPlanInterval;
-  const tmp4 = callback3();
+  const nativeGiftContext = NativeGiftContext.useNativeGiftContext();
+  const setPlanInterval = nativeGiftContext.setPlanInterval;
+  const tmp4 = closure_9();
   if (selected) {
-    let RowButton = tmp(5605).TableRow;
+    let RowButton = tmp(5619).TableRow;
   } else {
-    RowButton = tmp(8600).RowButton;
+    RowButton = tmp(8628).RowButton;
   }
   let combined = null;
   if (planInterval === SubscriptionIntervalTypes.YEAR) {
     const _HermesInternal = HermesInternal;
-    combined = "" + closure_4 + "%";
+    combined = "" + React4 + "%";
   }
   const tmp5 = SubscriptionIntervalTypes;
-  const tmp9 = setPlanInterval(10756)(nativeGiftContext.premiumType, planInterval);
-  const radioA11yNative = planInterval(4277).useRadioA11yNative({ selected });
+  const tmp9 = usePremiumProductPricingStringDefault(nativeGiftContext.premiumType, planInterval);
+  const radioA11yNative = useA11yRolesNative.useRadioA11yNative({ selected });
   items = [tmp4.container, ];
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   if (selected) {
     selected = tmp4.containerSelected;
   }
-  obj = { style: items, children: null };
+  const obj2 = { style: items, children: null };
   items[1] = selected;
-  obj = { style: tmp4.labelContainer, children: null };
+  const obj3 = { style: tmp4.labelContainer, children: null };
   if (planInterval === tmp5.MONTH) {
     const intl2 = tmp(1114).intl;
     let stringResult = intl2.string(tmp(1114).t.Mh9bTt);
@@ -48,27 +46,24 @@ function PremiumGiftDurationButton(arg0) {
     const intl = tmp(1114).intl;
     stringResult = intl.string(tmp(1114).t.DRgqMo);
   }
-  const items1 = [closure_6(planInterval(4556).Text, { variant: "text-md/semibold", children: stringResult }), ];
+  const items1 = [timestampProducer(Text_Text.Text, { variant: "text-md/semibold", children: stringResult }), ];
   let tmp11Result = null != combined;
   if (tmp11Result) {
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp4.labelPromo;
-    const obj2 = { variant: "text-md/bold", color: "text-overlay-light", children: null };
+    const obj4 = { style: tmp4.labelPromo, children: null };
+    const obj5 = { variant: "text-md/bold", color: "text-overlay-light", children: null };
     const intl3 = tmp(1114).intl;
-    const obj3 = { discount: null };
-    obj3[0] = combined;
-    obj2[2] = intl3.formatToPlainString(tmp(1114).t.IAybsG, obj3).toUpperCase();
-    obj1[1] = tmp11(tmp(4556).Text, obj2);
-    tmp11Result = tmp11(tmp12, obj1);
-    const str3 = intl3.formatToPlainString(tmp(1114).t.IAybsG, obj3);
+    const obj6 = { discount: combined };
+    obj5.children = intl3.formatToPlainString(tmp(1114).t.IAybsG, obj6).toUpperCase();
+    obj4.children = tmp11(tmp(4570).Text, obj5);
+    tmp11Result = tmp11(tmp12, obj4);
+    const str3 = intl3.formatToPlainString(tmp(1114).t.IAybsG, obj6);
   }
-  const tmp13 = closure_7;
-  const tmpResult = planInterval(4277);
+  const tmpResult = useA11yRolesNative;
   items1[1] = tmp11Result;
-  obj[1] = items1;
-  obj[1] = closure_6(RowButton, {
-    label: closure_7(View, obj),
-    trailing: closure_6(planInterval(4556).Text, { variant: "text-md/semibold", children: tmp9 }),
+  obj3.children = items1;
+  obj2.children = timestampProducer(RowButton, {
+    label: React5(View, obj3),
+    trailing: timestampProducer(Text_Text.Text, { variant: "text-md/semibold", children: tmp9 }),
     onPress() {
       setPlanInterval(planInterval);
     },
@@ -78,40 +73,42 @@ function PremiumGiftDurationButton(arg0) {
     start: true,
     end: true
   });
-  return closure_6(View, obj);
+  return timestampProducer(View, obj2);
 }
-noopAll;
-({ PREMIUM_YEARLY_DISCOUNT_PERCENT: c4, SubscriptionIntervalTypes } = GuildFeatures);
-({ jsx: closure_6, jsxs: error } = jsxProd);
+const View = fn(17).View;
+const PremiumConstants = fn(1373);
+({ PREMIUM_YEARLY_DISCOUNT_PERCENT: closure_4, SubscriptionIntervalTypes } = PremiumConstants);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let items = [, ];
 ({ YEAR: arr[0], MONTH: arr[1] } = SubscriptionIntervalTypes);
-createCacheKey = { container: null, containerSelected: null, labelContainer: null, labelPromo: null };
-createCacheKey = { marginTop: ThemesDefault.space.PX_8 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.lg, borderWidth: 2 };
-createCacheKey[2] = { flexDirection: "row" };
-let obj1 = { borderColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.lg, borderWidth: 2 };
-createCacheKey[3] = { marginStart: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.STATUS_POSITIVE_BACKGROUND, paddingHorizontal: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.round };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { durationContainer: null, durationTitle: null };
-let obj2 = { marginStart: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.STATUS_POSITIVE_BACKGROUND, paddingHorizontal: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.round };
-obj3[0] = { marginHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey = { marginTop: ThemesDefault.space.PX_24 };
-obj3[1] = createCacheKey;
-let closure_11 = createCacheKey.createStyles(obj3);
-const obj4 = { marginHorizontal: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftDuration.tsx");
+let createStyles = fn(4574);
+let obj2 = { container: { marginTop: nativeDefault.space.PX_8 }, containerSelected: null, labelContainer: null, labelPromo: null };
+let obj3 = { marginTop: nativeDefault.space.PX_8 };
+obj2.containerSelected = { borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.lg, borderWidth: 2 };
+obj2.labelContainer = { flexDirection: "row" };
+let obj4 = { borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.lg, borderWidth: 2 };
+obj2.labelPromo = { marginStart: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND, paddingHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.round };
+let closure_9 = createStyles.createStyles(obj2);
+createStyles = fn(4574);
+const obj7 = { durationContainer: null, durationTitle: null };
+let obj5 = { marginStart: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND, paddingHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.round };
+obj7.durationContainer = { marginHorizontal: nativeDefault.space.PX_16 };
+const obj8 = { marginHorizontal: nativeDefault.space.PX_16 };
+obj7.durationTitle = { marginTop: nativeDefault.space.PX_24 };
+let closure_11 = createStyles.createStyles(obj7);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftDuration.tsx");
 
 export default function PremiumGiftDuration() {
-  const tmp = callback4();
-  let obj = planInterval(10704);
-  planInterval = obj.useNativeGiftContext().planInterval;
-  obj = { style: tmp.durationContainer, children: null };
-  obj = { style: tmp.durationTitle, variant: "text-sm/semibold", children: null };
+  const tmp = closure_11();
+  planInterval = planInterval(10731).useNativeGiftContext().planInterval;
+  const obj2 = { style: tmp.durationContainer, children: null };
+  const obj3 = { style: tmp.durationTitle, variant: "text-sm/semibold", children: null };
   const intl = planInterval(1114).intl;
-  obj[2] = intl.string(planInterval(1114).t["8XT6Nf"]);
-  items = [callback(planInterval(4556).Text, obj), ];
-  items[1] = items.map((planInterval) => closure_1_6(closure_1_10, { selected: planInterval === planInterval, planInterval }, arg1));
-  obj[1] = items;
-  return callback2(View, obj);
+  obj3.children = intl.string(planInterval(1114).t["8XT6Nf"]);
+  items = [closure_6(planInterval(4570).Text, obj3), ];
+  items[1] = items.map((planInterval, index) => timestampProducer(PremiumGiftDurationButton, { selected: planInterval === planInterval, planInterval }, index));
+  obj2.children = items;
+  return closure_7(View, obj2);
 };

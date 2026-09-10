@@ -1,19 +1,22 @@
-// Module ID: 11304
-// Function ID: 11305
-// Name: clearTimeoutTimer
-// Dependencies: [1074, 7602, 7607, 1242, 11305, 2]
+// Module ID: 11331
+// Function ID: 11332
+// Name: QuestBarRenderDelayTracker
+// Dependencies: [1074, 7616, 7621, 1242, 11332, 2]
 
-// Module 11304 (clearTimeoutTimer)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import setDefault from "set" /* 7602 */;
-import set2 from "set" /* 7607 */;
-import _modDef11305 from "module_11305" /* 11305 */;
+// Module 11331 (QuestBarRenderDelayTracker)
+import Constants from "Constants" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 7616 */;
+import MetricEvents from "MetricEvents" /* 7621 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 11332 */;
+import size from "module_2" /* 2 */;
 
-const AnalyticEvents = ME.AnalyticEvents;
+const AnalyticEvents = Constants.AnalyticEvents;
 let c4 = 30000;
 class QuestBarRenderDelayTracker {
+  constructor() {
+    return Object.assign({ startTime: null, questId: null, timeoutTimer: null });
+  }
 }
 const prototype = QuestBarRenderDelayTracker.prototype;
 prototype["clearTimeoutTimer"] = function clearTimeoutTimer() {
@@ -24,23 +27,17 @@ prototype["clearTimeoutTimer"] = function clearTimeoutTimer() {
     self.timeoutTimer = null;
   }
 };
-prototype["sendMetric"] = function sendMetric(arg0, arg1, arg2) {
+prototype["sendMetric"] = function sendMetric(quest_id, timeout, duration) {
   if (Math.random() <= 0.1) {
-    let obj = setDefault;
-    obj = { name: null, tags: null };
-    obj[0] = set2.MetricEvents.QUEST_BAR_RENDER_DELAY;
+    const obj2 = { name: MetricEvents.MetricEvents.QUEST_BAR_RENDER_DELAY, tags: null };
     const _HermesInternal = HermesInternal;
-    const items = ["quest_id:" + arg0, ];
+    const items = ["quest_id:" + quest_id, ];
     const _HermesInternal2 = HermesInternal;
-    items[1] = "timeout:" + arg1;
-    obj[1] = items;
-    obj.distribution(obj, arg2);
-    obj = { quest_id: null, timeout: null, duration: null };
-    obj[0] = arg0;
-    obj[1] = arg1;
-    obj[2] = arg2;
-    expandEventPropertiesDefault.track(AnalyticEvents.QUEST_BAR_RENDER_DELAY, obj);
-    const obj3 = expandEventPropertiesDefault;
+    items[1] = "timeout:" + timeout;
+    obj2.tags = items;
+    MonitoringAgentDefault.distribution(obj2, duration);
+    const obj4 = { quest_id, timeout, duration };
+    AnalyticsUtilsDefault.track(AnalyticEvents.QUEST_BAR_RENDER_DELAY, obj4);
   }
 };
 prototype["startTracking"] = function startTracking(questId) {
@@ -74,7 +71,7 @@ prototype["stopTracking"] = function stopTracking(arg0) {
         const _Math2 = Math;
         self.sendMetric(arg0, flag, Math.min(rounded, c4));
       }
-      obj = _modDef11305;
+      obj = DiscordAppStateDefault;
     }
   }
 };
@@ -83,6 +80,6 @@ prototype["clearTracking"] = function clearTracking() {
   this.startTime = null;
   this.questId = null;
 };
-const result = set.fileFinishedImporting("modules/quests/QuestBarRenderDelayTracker.tsx");
+const result = size.fileFinishedImporting("modules/quests/QuestBarRenderDelayTracker.tsx");
 
-export default Object.create(QuestBarRenderDelayTracker.prototype);
+export default Object.assign({ startTime: null, questId: null, timeoutTimer: null });

@@ -1,37 +1,40 @@
-// Module ID: 12766
-// Function ID: 12767
-// Name: useReportToModChannelFiltersStore
-// Dependencies: [560, 4430, 1249, 7707, 2]
+// Module ID: 12792
+// Function ID: 12793
+// Name: ReportToModChannelStore
+// Dependencies: [560, 4444, 1249, 7721, 2]
 // Exports: useShouldShowResolvedFlagsForChannel
 
-// Module 12766 (useReportToModChannelFiltersStore)
-import set from "set" /* 2 */;
-import keys from "keys" /* 560 */;
-import createJSONStorage from "createJSONStorage" /* 4430 */;
+// Module 12792 (ReportToModChannelStore)
+import module_560 from "module_560" /* 560 */;
+import "module_4444";
+import module_4444 from "module_4444" /* 4444 */;
+import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 let obj = { name: "report-to-mod-channel-storage", storage: null };
-obj[1] = createJSONStorage.createJSONStorage(() => importDefault(7707));
-obj = keys.create(createJSONStorage.persist((arg0, arg1) => {
+obj.storage = module_4444.createJSONStorage(() => require("LocalStorageWrapper"));
+let obj2 = module_560.create(module_4444.persist((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
   return {
     channelShowResolvedFlags: {},
     setShowResolvedFlags(arg0, arg1) {
-      const callback = arg0;
+      closure_0 = arg0;
       closure_1 = arg1;
-      return callback(closure_1_2[2]).batchUpdates(() => {
-        callback((channelShowResolvedFlags) => {
-          obj = { channelShowResolvedFlags: null };
-          obj = {};
+      return closure_0(dependencyMap[2]).batchUpdates(() => {
+        closure_0((channelShowResolvedFlags) => {
+          const obj = { channelShowResolvedFlags: null };
+          obj2 = {};
           const merged = Object.assign(channelShowResolvedFlags.channelShowResolvedFlags);
-          obj[closure_0] = closure_1;
-          obj[0] = obj;
+          obj2[closure_1_0] = closure_1_1;
+          obj.channelShowResolvedFlags = obj2;
           return obj;
         });
       });
     },
     getShowResolvedFlags(arg0) {
-      let flag = callback2().channelShowResolvedFlags[arg0];
+      let flag = closure_1().channelShowResolvedFlags[arg0];
       if (flag == null) {
         flag = true;
       }
@@ -39,27 +42,31 @@ obj = keys.create(createJSONStorage.persist((arg0, arg1) => {
     }
   };
 }, obj));
-const result = set.fileFinishedImporting("modules/report_to_mod/ReportToModChannelStore.tsx");
+const result = size.fileFinishedImporting("modules/report_to_mod/ReportToModChannelStore.tsx");
 
-export const useReportToModChannelFiltersStore = obj;
+export const useReportToModChannelFiltersStore = obj2;
 export const useShouldShowResolvedFlagsForChannel = function useShouldShowResolvedFlagsForChannel(arg0) {
   closure_0 = arg0;
-  obj = obj();
+  const obj = obj2();
   if (null == arg0) {
-    obj = { showResolvedFlags: true, setShowResolvedFlags: null };
-    obj[1] = function setShowResolvedFlags() {
+    obj2 = {
+      showResolvedFlags: true,
+      setShowResolvedFlags() {
 
+        }
     };
+    let obj3 = obj2;
   } else {
     let flag = obj.getShowResolvedFlags(arg0);
     if (flag == null) {
       flag = true;
     }
-    obj = { showResolvedFlags: null, setShowResolvedFlags: null };
-    obj[0] = flag;
-    obj[1] = function setShowResolvedFlags(arg0) {
-      return obj.setShowResolvedFlags(closure_0, arg0);
+    obj3 = {
+      showResolvedFlags: flag,
+      setShowResolvedFlags(arg0) {
+          return obj.setShowResolvedFlags(closure_0, arg0);
+        }
     };
   }
-  return obj;
+  return obj3;
 };

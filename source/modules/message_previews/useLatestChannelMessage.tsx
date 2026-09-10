@@ -1,16 +1,18 @@
-// Module ID: 15321
-// Function ID: 15322
+// Module ID: 15350
+// Function ID: 15351
 // Name: useLatestChannelMessage
-// Dependencies: [32, 19, 13722, 504, 15322, 2]
+// Dependencies: [32, 19, 13745, 504, 15351, 2]
 // Exports: default
 
-// Module 15321 (useLatestChannelMessage)
-import closure_3 from "_slicedToArray" /* 32 */;
-import { useEffect } from "noop" /* 19 */;
-import closure_5 from "initialize" /* 13722 */;
+// Module 15350 (useLatestChannelMessage)
+import MessagePreviewManagerDefault from "MessagePreviewManager" /* 15351 */;
+import _slicedToArray from "module_32" /* 32 */;
+import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 13745 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/message_previews/useLatestChannelMessage.tsx");
+const require = fn;
+const useEffect = fn(19).useEffect;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/message_previews/useLatestChannelMessage.tsx");
 
 export default function useLatestChannelMessage(arg0) {
   let flag = arg1;
@@ -19,19 +21,19 @@ export default function useLatestChannelMessage(arg0) {
   }
   c1 = undefined;
   id = undefined;
-  let callback;
+  _slicedToArray = undefined;
   ({ guild_id: c1, id } = arg0);
-  let items = [closure_5];
-  const tmp = callback(flag(id[3]).useStateFromStoresArray(items, () => {
+  let items = [MessagePreviewStore];
+  const tmp = _slicedToArray(flag(id[3]).useStateFromStoresArray(items, () => {
     if (flag) {
       const items = [null, true];
       let items1 = items;
     } else {
-      items1 = [closure_1_5.message(c1, id), closure_1_5.isLatest(c1, id)];
+      items1 = [MessagePreviewStore.message(c1, id), MessagePreviewStore.isLatest(c1, id)];
     }
     return items1;
   }), 2);
-  callback = tmp2;
+  _slicedToArray = tmp2;
   let items1 = [id, tmp[1]];
   useEffect(() => {
     let tmp2 = null == id;
@@ -39,8 +41,7 @@ export default function useLatestChannelMessage(arg0) {
       tmp2 = closure_3;
     }
     if (!tmp2) {
-      _undefined(id[4]).addWant(id);
-      const obj = _undefined(id[4]);
+      MessagePreviewManagerDefault.addWant(id);
     }
   }, items1);
   return tmp[0];

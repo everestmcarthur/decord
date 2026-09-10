@@ -1,123 +1,122 @@
-// Module ID: 17517
-// Function ID: 17518
+// Module ID: 17548
+// Function ID: 17549
 // Name: Overview
-// Dependencies: [19, 17, 1951, 1371, 1074, 21, 4560, 576, 2024, 504, 6592, 1483, 4972, 4975, 1114, 17292, 1272, 6984, 1484, 4556, 15538, 2]
+// Dependencies: [19, 17, 1951, 1371, 1074, 21, 4574, 576, 2024, 504, 6606, 1483, 4986, 4989, 1114, 17323, 1272, 6998, 1484, 4570, 15568, 2]
 // Exports: default
 
-// Module 17517 (Overview)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleRequiredAction" /* 1951 */;
-import closure_6 from "mergeGuildAvatar" /* 1371 */;
-import ME from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importDefaultResult from "combined" /* 2024 */;
+// Module 17548 (Overview)
+import nativeDefault from "native" /* 576 */;
+import noop from "module_19" /* 19 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 1951 */;
+import UserStore from "UserStore" /* 1371 */;
+import HelpdeskUtils from "HelpdeskUtils" /* 2024 */;
 
-const require = arg1;
-({ Endpoints: error, VerificationModalScenes: closure_8, VerificationTypes: c9, HelpdeskArticles } = ME);
-({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { container: null, containerInner: null, title: null, body: null, blocks: null, verificationType: null, button: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, padding: 20, justifyContent: "center", alignItems: "center" };
-createCacheKey[2] = { marginTop: 20, fontSize: 17, textAlign: "center", color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-let obj1 = { marginTop: 20, fontSize: 17, textAlign: "center", color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-createCacheKey[3] = { marginTop: 4, marginBottom: 20, fontSize: 14, textAlign: "center", color: ThemesDefault.unsafe_rawColors.PRIMARY_400 };
-createCacheKey[4] = { width: "60%", justifyContent: "center" };
-createCacheKey[5] = { marginBottom: 20 };
-createCacheKey[6] = { marginBottom: 20, marginHorizontal: 20, alignSelf: "center" };
-let closure_13 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { marginTop: 4, marginBottom: 20, fontSize: 14, textAlign: "center", color: ThemesDefault.unsafe_rawColors.PRIMARY_400 };
-const articleURL = importDefaultResult.getArticleURL(HelpdeskArticles.VERIFICATION_FAQ);
-const result = require("set").fileFinishedImporting("modules/verification/native/components/Overview.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const View = fn(17).View;
+const Constants = fn(1074);
+({ Endpoints: closure_7, VerificationModalScenes: closure_8, VerificationTypes: closure_9, HelpdeskArticles } = Constants);
+const jsxProd = fn(21);
+({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, containerInner: { flex: 1, padding: 20, justifyContent: "center", alignItems: "center" }, title: null, body: null, blocks: null, verificationType: null, button: null };
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj2.title = { marginTop: 20, fontSize: 17, textAlign: "center", color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+let obj4 = { marginTop: 20, fontSize: 17, textAlign: "center", color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+obj2.body = { marginTop: 4, marginBottom: 20, fontSize: 14, textAlign: "center", color: nativeDefault.unsafe_rawColors.PRIMARY_400 };
+obj2.blocks = { width: "60%", justifyContent: "center" };
+obj2.verificationType = { marginBottom: 20 };
+obj2.button = { marginBottom: 20, marginHorizontal: 20, alignSelf: "center" };
+let closure_13 = createStyles.createStyles(obj2);
+const helpCenterURL = HelpdeskUtils.getArticleURL(HelpdeskArticles.VERIFICATION_FAQ);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/verification/native/components/Overview.tsx");
 
 export default function Overview() {
-  const tmp = callback3();
-  const _require = tmp;
-  let obj = _require(navigation[9]);
-  const items = [closure_5];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  const tmp = closure_13();
+  _require = tmp;
+  const items = [UserRequiredActionStore];
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
     action = action.getAction();
     return stateFromStores(navigation[10]).getVerificationTypes(action);
   }, [], stateFromStores(navigation[10]).areVerificationTypesEqual);
-  obj1 = _require(navigation[11]);
-  navigation = obj1.useNavigation();
-  stateFromStores(navigation[12])(_require(navigation[12]).BackPressHandler.minimize);
+  let obj = require("initialize");
+  navigation = require("useNavigation").useNavigation();
+  let obj2 = require("useNavigation");
+  stateFromStores(navigation[12])(require("useBackPressHandler").BackPressHandler.minimize);
   const items1 = [navigation, stateFromStores, tmp.verificationType];
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.containerInner, children: null };
-  const callback = React.useCallback(() => closure_1_10(closure_1_11, {
-    children: stateFromStores.map((arg0) => {
-      const verificationType = arg0;
-      if (arg0 === closure_1_9.CAPTCHA) {
+  let obj3 = { style: tmp.container, children: null };
+  let obj4 = { style: tmp.containerInner, children: null };
+  const callback = noop.useCallback(() => closure_2_10(closure_2_11, {
+    children: stateFromStores.map((item) => {
+      if (item === constants.CAPTCHA) {
         let obj = { text: null, onPress: null, grow: true };
-        const intl = closure_1_0(closure_1_2[14]).intl;
-        obj[0] = intl.string(closure_1_0(closure_1_2[14]).t["3413d0"]);
-        obj[1] = function onPress() {
-          let obj = callback(table[15]);
-          callback(table[15]).showCaptcha().then((captcha_key) => {
-            const HTTP = callback(table[16]).HTTP;
-            obj = { url: constants.CAPTCHA, body: obj, oldFormErrors: true, rejectWithError: true };
-            obj = { captcha_key };
-            HTTP.post(obj);
+        const intl = closure_1_0(navigation[14]).intl;
+        obj.text = intl.string(closure_1_0(navigation[14]).t["3413d0"]);
+        obj.onPress = function onPress() {
+          const obj = closure_1_1(dependencyMap[15]);
+          closure_1_1(dependencyMap[15]).showCaptcha().then((captcha_key) => {
+            const HTTP = item(dependencyMap[16]).HTTP;
+            const request = { url: constants.CAPTCHA, body: { captcha_key }, oldFormErrors: true, rejectWithError: true };
+            HTTP.post(request);
           });
         };
-        let tmp4 = closure_1_10(closure_1_0(closure_1_2[13]).Button, obj, arg0);
+        let tmp4 = closure_1_10(closure_1_0(navigation[13]).Button, obj, item);
       } else {
-        obj = { style: null, children: null };
-        obj[0] = verificationType.verificationType;
-        obj = { text: null, onPress: null, grow: true };
-        obj[0] = closure_1_1(closure_1_2[10]).getButtonTitle(arg0);
-        obj[1] = function onPress() {
-          let tmp4 = closure_0 !== closure_2_9.EMAIL_OR_PHONE;
-          if (tmp4) {
-            tmp4 = tmp2 !== tmp3.EMAIL;
-          }
-          if (tmp4) {
-            tmp4 = tmp2 !== tmp3.REVERIFY_EMAIL;
-          }
-          if (tmp4) {
-            const StackActions = closure_2_0(closure_2_2[18]).StackActions;
-            closure_1_2.dispatch(StackActions.push(closure_2_8.ADD_PHONE));
-          } else {
-            closure_2_0(closure_2_2[17]).accountDetailsInit();
-            const currentUser = closure_2_6.getCurrentUser();
-            let email;
-            if (currentUser != null) {
-              email = currentUser.email;
-            }
-            const obj = closure_2_0(closure_2_2[17]);
-          }
+        const obj2 = { style: item.verificationType, children: null };
+        const obj3 = {
+          text: stateFromStores(navigation[10]).getButtonTitle(item),
+          onPress() {
+              let tmp4 = item !== constants2.EMAIL_OR_PHONE;
+              if (tmp4) {
+                tmp4 = tmp2 !== tmp3.EMAIL;
+              }
+              if (tmp4) {
+                tmp4 = tmp2 !== tmp3.REVERIFY_EMAIL;
+              }
+              if (tmp4) {
+                const StackActions = item(navigation[18]).StackActions;
+                closure_2_2.dispatch(StackActions.push(constants.ADD_PHONE));
+              } else {
+                item(navigation[17]).accountDetailsInit();
+                currentUser = currentUser.getCurrentUser();
+                let email;
+                if (currentUser != null) {
+                  email = currentUser.email;
+                }
+                const obj = item(navigation[17]);
+              }
+            },
+          grow: true
         };
-        obj[1] = closure_1_10(closure_1_0(closure_1_2[13]).Button, obj);
-        tmp4 = closure_1_10(closure_1_4, obj, arg0);
-        const obj4 = closure_1_1(closure_1_2[10]);
+        obj2.children = closure_1_10(closure_1_0(navigation[13]).Button, obj3);
+        tmp4 = closure_1_10(closure_1_4, obj2, item);
+        const obj4 = stateFromStores(navigation[10]);
       }
       return tmp4;
     })
   }), items1);
-  obj1 = { variant: "heading-lg/semibold", style: tmp.title, accessibilityRole: "header", children: null };
-  let intl = _require(navigation[14]).intl;
-  obj1[3] = intl.string(_require(navigation[14]).t.Iz0kDg);
-  const items2 = [callback(_require(navigation[19]).Text, obj1), , ];
-  const obj2 = { variant: "text-sm/medium", style: tmp.body, children: null };
-  const intl2 = _require(navigation[14]).intl;
-  obj2[2] = intl2.format(_require(navigation[14]).t["0rqMV5"], { helpCenterURL: closure_14 });
-  items2[1] = callback(_require(navigation[19]).Text, obj2);
-  const obj3 = { helpCenterURL: closure_14 };
+  const obj5 = { variant: "heading-lg/semibold", style: tmp.title, accessibilityRole: "header", children: null };
+  let intl = require("util").intl;
+  obj5.children = intl.string(require("util").t.Iz0kDg);
+  const items2 = [closure_10(require("Text/Text").Text, obj5), , ];
+  const obj6 = { variant: "text-sm/medium", style: tmp.body, children: null };
+  const intl2 = require("util").intl;
+  obj6.children = intl2.format(require("util").t["0rqMV5"], { helpCenterURL });
+  items2[1] = closure_10(require("Text/Text").Text, obj6);
+  const obj7 = { helpCenterURL };
   let tmp4 = stateFromStores(navigation[12]);
-  items2[2] = callback(View, { style: tmp.blocks, children: callback() });
-  obj[1] = items2;
-  const items3 = [callback2(View, obj), ];
-  const obj5 = { style: tmp.button, accessibilityRole: "link", children: null };
-  const obj6 = { variant: "secondary", text: null, onPress: null };
-  const intl3 = _require(navigation[14]).intl;
-  obj6[1] = intl3.string(_require(navigation[14]).t["Yl/Riu"]);
-  obj6[2] = _require(navigation[20]).emailSupport;
-  obj5[2] = callback(_require(navigation[13]).Button, obj6);
-  items3[1] = callback(View, obj5);
-  obj[1] = items3;
-  return callback2(View, obj);
+  items2[2] = closure_10(View, { style: tmp.blocks, children: callback() });
+  obj4.children = items2;
+  const items3 = [closure_12(View, obj4), ];
+  const obj9 = { style: tmp.button, accessibilityRole: "link", children: null };
+  const obj10 = { variant: "secondary", text: null, onPress: null };
+  const intl3 = require("util").intl;
+  obj10.text = intl3.string(require("util").t["Yl/Riu"]);
+  obj10.onPress = require("SupportUtils").emailSupport;
+  obj9.children = closure_10(require("components/Button/Button").Button, obj10);
+  items3[1] = closure_10(View, obj9);
+  obj3.children = items3;
+  return closure_12(View, obj3);
 };

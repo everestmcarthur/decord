@@ -1,55 +1,54 @@
-// Module ID: 8937
-// Function ID: 8938
-// Name: applicationWidgetStaticFieldConfigSchema
-// Dependencies: [8938, 8936, 8935, 9014, 2]
+// Module ID: 8964
+// Function ID: 8965
+// Name: schemas
+// Dependencies: [8965, 8963, 8962, 9041, 2]
 
-// Module 8937 (applicationWidgetStaticFieldConfigSchema)
-import set from "set" /* 2 */;
-import ApplicationWidgetFieldPresentationType from "ApplicationWidgetFieldPresentationType" /* 8935 */;
-import ApplicationWidgetFieldValueType from "ApplicationWidgetFieldValueType" /* 8936 */;
-import _mod8938 from "module_8938" /* 8938 */;
-import ApplicationWidgetConfigSurface from "ApplicationWidgetConfigSurface" /* 9014 */;
+// Module 8964 (schemas)
+import ApplicationWidgetFieldPresentationType from "ApplicationWidgetFieldPresentationType" /* 8962 */;
+import ApplicationWidgetFieldValueType from "ApplicationWidgetFieldValueType" /* 8963 */;
+import _mod8965 from "module_8965" /* 8965 */;
+import ApplicationWidgetConfigSurface from "ApplicationWidgetConfigSurface" /* 9041 */;
+import size from "module_2" /* 2 */;
 
-const z = _mod8938.z;
-let obj = { value_type: null, presentation_type: null, value: null };
-const z2 = _mod8938.z;
-obj[0] = z2.enum(ApplicationWidgetFieldValueType.ApplicationWidgetFieldValueType);
-const z3 = _mod8938.z;
-obj[1] = z3.enum(ApplicationWidgetFieldPresentationType.ApplicationWidgetFieldPresentationType);
-const z4 = _mod8938.z;
-obj[2] = z4.string();
-let objectResult = z.object(obj);
-const z5 = _mod8938.z;
-obj = { value_type: null, presentation_type: null, value: null, fallback: null };
-const z6 = _mod8938.z;
-obj[0] = z6.enum(ApplicationWidgetFieldValueType.ApplicationWidgetFieldValueType);
-const z7 = _mod8938.z;
-obj[1] = z7.enum(ApplicationWidgetFieldPresentationType.ApplicationWidgetFieldPresentationType);
-const z8 = _mod8938.z;
-obj[2] = z8.string();
-obj[3] = objectResult.nullish();
-objectResult = z5.object(obj);
-const z9 = _mod8938.z;
-obj = { fields: null };
-const z10 = _mod8938.z;
-const z11 = _mod8938.z;
-obj[0] = z10.partialRecord(z11.string(), objectResult);
-const objectResult1 = z9.object(obj);
-const z12 = _mod8938.z;
-const obj1 = { layout: null, components: null };
-const z13 = _mod8938.z;
-obj1[0] = z13.string();
-const z14 = _mod8938.z;
-const z15 = _mod8938.z;
-obj1[1] = z14.partialRecord(z15.string(), objectResult1);
-const objectResult2 = z12.object(obj1);
-const z16 = _mod8938.z;
-const z17 = _mod8938.z;
-const partialRecordResult = z16.partialRecord(z17.enum(ApplicationWidgetConfigSurface.ApplicationWidgetConfigSurface), objectResult2);
-const result = set.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/schemas.tsx");
+const z = _mod8965.z;
+const obj = { value_type: null, presentation_type: null, value: null };
+const z2 = _mod8965.z;
+obj.value_type = z2.enum(ApplicationWidgetFieldValueType.ApplicationWidgetFieldValueType);
+const z3 = _mod8965.z;
+obj.presentation_type = z3.enum(ApplicationWidgetFieldPresentationType.ApplicationWidgetFieldPresentationType);
+const z4 = _mod8965.z;
+obj.value = z4.string();
+const objectResult = z.object(obj);
+const z5 = _mod8965.z;
+const obj2 = { value_type: null, presentation_type: null, value: null, fallback: null };
+const z6 = _mod8965.z;
+obj2.value_type = z6.enum(ApplicationWidgetFieldValueType.ApplicationWidgetFieldValueType);
+const z7 = _mod8965.z;
+obj2.presentation_type = z7.enum(ApplicationWidgetFieldPresentationType.ApplicationWidgetFieldPresentationType);
+const z8 = _mod8965.z;
+obj2.value = z8.string();
+obj2.fallback = objectResult.nullish();
+const objectResult4 = z5.object(obj2);
+const z9 = _mod8965.z;
+const obj3 = { fields: null };
+const z10 = _mod8965.z;
+const z11 = _mod8965.z;
+obj3.fields = z10.partialRecord(z11.string(), objectResult4);
+const objectResult5 = z9.object(obj3);
+const z12 = _mod8965.z;
+const obj4 = { layout: null, components: null };
+const z13 = _mod8965.z;
+obj4.layout = z13.string();
+const z14 = _mod8965.z;
+const z15 = _mod8965.z;
+obj4.components = z14.partialRecord(z15.string(), objectResult5);
+const objectResult6 = z12.object(obj4);
+const z16 = _mod8965.z;
+const z17 = _mod8965.z;
+const result = size.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/schemas.tsx");
 
 export const applicationWidgetStaticFieldConfigSchema = objectResult;
-export const applicationWidgetFieldConfigSchema = objectResult;
-export const applicationWidgetComponentConfigSchema = objectResult1;
-export const applicationWidgetSurfaceConfigSchema = objectResult2;
-export const applicationWidgetSurfaceConfigsSchema = partialRecordResult;
+export const applicationWidgetFieldConfigSchema = objectResult4;
+export const applicationWidgetComponentConfigSchema = objectResult5;
+export const applicationWidgetSurfaceConfigSchema = objectResult6;
+export const applicationWidgetSurfaceConfigsSchema = z16.partialRecord(z17.enum(ApplicationWidgetConfigSurface.ApplicationWidgetConfigSurface), objectResult6);

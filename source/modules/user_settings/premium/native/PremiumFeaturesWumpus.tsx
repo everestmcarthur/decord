@@ -1,58 +1,56 @@
-// Module ID: 9389
-// Function ID: 9390
+// Module ID: 9416
+// Function ID: 9417
 // Name: PremiumFeaturesWumpus
-// Dependencies: [19, 1373, 21, 4560, 6945, 9390, 9391, 9392, 9393, 9394, 9395, 5587, 2]
+// Dependencies: [19, 1373, 21, 4574, 6959, 9417, 9418, 9419, 9420, 9421, 9422, 5601, 2]
 // Exports: default
 
-// Module 9389 (PremiumFeaturesWumpus)
-import closure_2 from "noop" /* 19 */;
-import { PremiumTypes } from "GuildFeatures" /* 1373 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9416 (PremiumFeaturesWumpus)
+import _modDef9417 from "module_9417" /* 9417 */;
+import _modDef9422 from "module_9422" /* 9422 */;
+import noop from "module_19" /* 19 */;
 
-({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
+const PremiumTypes = fn(1373).PremiumTypes;
+const jsxProd = fn(21);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { clouds: { position: "absolute", top: 0, right: 0 }, wumpus: { position: "absolute", top: 22, right: 22, height: 90 }, wumpusLeft: null };
+const obj3 = { transform: null };
 let items = [{ scaleX: -1 }];
-let closure_7 = createCacheKey.createStyles({ clouds: { position: "absolute", top: 0, right: 0 }, wumpus: { position: "absolute", top: 22, right: 22, height: 90 }, wumpusLeft: { transform: items } });
-const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesWumpus.tsx");
+obj3.transform = items;
+obj2.wumpusLeft = obj3;
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesWumpus.tsx");
 
 export default function PremiumFeaturesWumpus(premiumType) {
   premiumType = premiumType.premiumType;
-  dependencyMap = undefined;
-  const tmp = callback2();
-  const tmp2 = premiumType(6945)();
+  const tmp = closure_7();
+  const tmp2 = premiumType(6959)();
   dependencyMap = tmp2;
   const items = [premiumType, tmp2];
-  const memo = React.useMemo(() => {
-    if (premiumType === closure_1_3.TIER_0) {
-      let obj = { wumpusImageSource: null, cloudsImageSource: null };
-      obj[0] = premiumType(table[5]);
-      obj[1] = premiumType(table ? table[6] : table[7]);
-      const tmp7 = premiumType;
+  const memo = noop.useMemo(() => {
+    if (premiumType === PremiumTypes.TIER_0) {
+      const obj2 = { wumpusImageSource: _modDef9417, cloudsImageSource: importDefault(closure_1 ? 9418 : 9419) };
     } else {
-      if (table) {
-        let tmp4 = tmp3[8];
-        let tmp5 = tmp3;
+      if (closure_1) {
+        let tmp4 = 9420;
       } else {
-        tmp4 = tmp3[9];
-        tmp5 = tmp3;
+        tmp4 = 9421;
       }
-      obj = { wumpusImageSource: null, cloudsImageSource: null };
-      obj[0] = premiumType(tmp5[10]);
-      obj[1] = premiumType(tmp4);
+      const obj = { wumpusImageSource: _modDef9422, cloudsImageSource: importDefault(tmp4) };
       return obj;
     }
   }, items);
   ({ wumpusImageSource, cloudsImageSource } = memo);
-  let obj = { style: tmp.clouds, resizeMode: "contain", source: cloudsImageSource };
-  const items1 = [callback(premiumType(5587), obj), ];
+  const items1 = [closure_4(premiumType(5601), { style: tmp.clouds, resizeMode: "contain", source: cloudsImageSource }), ];
   const items2 = [tmp.wumpus, ];
   let wumpusLeft = premiumType === PremiumTypes.TIER_0;
   if (wumpusLeft) {
     wumpusLeft = tmp.wumpusLeft;
   }
-  obj = { children: null };
+  let obj2 = { children: null };
   items2[1] = wumpusLeft;
-  items1[1] = callback(premiumType(5587), { style: items2, resizeMode: "contain", source: wumpusImageSource });
-  obj[0] = items1;
-  return closure_6(closure_5, obj);
+  items1[1] = closure_4(premiumType(5601), { style: items2, resizeMode: "contain", source: wumpusImageSource });
+  obj2.children = items1;
+  return closure_6(closure_5, obj2);
 };

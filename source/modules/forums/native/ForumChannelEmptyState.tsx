@@ -1,68 +1,68 @@
-// Module ID: 12770
-// Function ID: 12771
-// Dependencies: [19, 17, 21, 4560, 4411, 1611, 12771, 12772, 4556, 1114, 2]
+// Module ID: 12796
+// Function ID: 12797
+// Name: ForumChannelEmptyState
+// Dependencies: [19, 17, 21, 4574, 4425, 1611, 12797, 12798, 4570, 1114, 2]
 
-// Module 12770
+// Module 12796 (ForumChannelEmptyState)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
-import Text from "Text" /* 4556 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+import shared from "shared" /* 4425 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ View: c3, Image: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ container: { flex: 1, alignSelf: "stretch", justifyContent: "center", alignItems: "center" }, image: { width: 120, height: 80 }, title: { textAlign: "center", marginTop: 16, marginHorizontal: 20 }, subtext: { textAlign: "center", marginTop: 4, marginHorizontal: 20 } });
-const memoResult = importAllResult.memo((topViewHeight) => {
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, Image: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let closure_7 = createStyles.createStyles({ container: { flex: 1, alignSelf: "stretch", justifyContent: "center", alignItems: "center" }, image: { width: 120, height: 80 }, title: { textAlign: "center", marginTop: 16, marginHorizontal: 20 }, subtext: { textAlign: "center", marginTop: 4, marginHorizontal: 20 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/ForumChannelEmptyState.tsx");
+
+export default noop.memo((topViewHeight) => {
   let num = topViewHeight.topViewHeight;
   if (num === undefined) {
     num = 0;
   }
   const tagFilter = topViewHeight.tagFilter;
-  const tmp = callback();
-  let obj = AccessibilityAnnouncer;
+  const tmp = closure_7();
   const rect = useSafeAreaInsetsDefault();
-  obj = { style: items, children: null };
-  items = [tmp.container, { marginBottom: rect.bottom + rect.top + num }];
-  let obj2 = AccessibilityAnnouncer;
-  if (obj2.isThemeLight(obj.useThemeContext().theme)) {
-    let tmp4Result = tmp4(12771);
+  const obj2 = { style: null, children: null };
+  const items = [tmp.container, { marginBottom: rect.bottom + rect.top + num }];
+  obj2.style = items;
+  const obj = shared;
+  const tmp6 = timestampProducer;
+  const tmp7 = React3;
+  const tmp9 = React4;
+  if (obj3.isThemeLight(obj.useThemeContext().theme)) {
+    let tmp4Result = tmp4(12797);
   } else {
-    tmp4Result = tmp4(12772);
+    tmp4Result = tmp4(12798);
   }
-  obj = { source: tmp4Result, style: tmp.image };
-  const items1 = [closure_5(closure_4, obj), , ];
-  obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  const items1 = [hasOwnProperty(tmp9, { source: tmp4Result, style: tmp.image }), , ];
+  const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = tmp2(1114).intl;
   if (tagFilter.size > 0) {
-    obj2 = { numTags: null };
-    obj2[0] = tagFilter.size;
-    let formatToPlainStringResult = intl.formatToPlainString(tmp2(1114).t.lvPci0, obj2);
+    const obj6 = { numTags: tagFilter.size };
+    let formatToPlainStringResult = intl.formatToPlainString(tmp2(1114).t.lvPci0, obj6);
   } else {
     formatToPlainStringResult = intl.string(tmp2(1114).t.PwTMG0);
   }
-  obj1[4] = formatToPlainStringResult;
-  items1[1] = closure_5(Text.Text, obj1);
-  const obj3 = { style: tmp.subtext, variant: "text-sm/medium", color: "text-default", children: null };
+  obj5.children = formatToPlainStringResult;
+  items1[1] = hasOwnProperty(Text_Text.Text, obj5);
+  const obj7 = { style: tmp.subtext, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = tmp2(1114).intl;
   const formatToPlainString = intl2.formatToPlainString;
   const t = tmp2(1114).t;
   if (tagFilter.size > 0) {
-    const obj4 = { numTags: null };
-    obj4[0] = tagFilter.size;
-    let formatToPlainStringResult1 = formatToPlainString(t.AAeye1, obj4);
+    const obj8 = { numTags: tagFilter.size };
+    let formatToPlainStringResult1 = formatToPlainString(t.AAeye1, obj8);
   } else {
-    const obj5 = { channelName: null };
-    obj5[0] = topViewHeight.channelName;
-    formatToPlainStringResult1 = formatToPlainString(t.YtsXFD, obj5);
+    const obj9 = { channelName: topViewHeight.channelName };
+    formatToPlainStringResult1 = formatToPlainString(t.YtsXFD, obj9);
   }
-  obj3[3] = formatToPlainStringResult1;
-  items1[2] = closure_5(Text.Text, obj3);
-  obj[1] = items1;
-  return closure_6(closure_3, obj);
+  obj7.children = formatToPlainStringResult1;
+  items1[2] = hasOwnProperty(Text_Text.Text, obj7);
+  obj2.children = items1;
+  return tmp6(tmp7, obj2);
 });
-const result = require("set").fileFinishedImporting("modules/forums/native/ForumChannelEmptyState.tsx");
-
-export default memoResult;

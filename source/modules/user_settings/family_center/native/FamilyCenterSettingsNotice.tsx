@@ -1,43 +1,32 @@
-// Module ID: 14819
-// Function ID: 14820
-// Name: FamilyCenterSettingsParentalControlsNotice
-// Dependencies: [19, 8399, 21, 8650, 14690, 2396, 7587, 4573, 2]
+// Module ID: 14845
+// Function ID: 14846
+// Name: FamilyCenterSettingsNotice
+// Dependencies: [19, 8427, 21, 8678, 14716, 2396, 7601, 4587, 2]
 // Exports: default
 
-// Module 14819 (FamilyCenterSettingsParentalControlsNotice)
-import noopAll from "noop" /* 19 */;
-import messagesProxyDefault from "messagesProxy" /* 2396 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14690 */;
-import { SafetySettingsNoticeType } from "SafetyToastType" /* 8399 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 14845 (FamilyCenterSettingsNotice)
+import _modDef2396 from "module_2396" /* 2396 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4587 */;
+import LayerActionCreators from "LayerActionCreators" /* 7601 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14716 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx");
+require = fn;
+const SafetySettingsNoticeType = fn(8427).SafetySettingsNoticeType;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx");
 
 export default function FamilyCenterSettingsParentalControlsNotice() {
-  let obj = activeLinkUserIds(8650);
-  activeLinkUserIds = obj.useActiveLinkUserIds();
-  obj = {
-    label: messagesProxyDefault.i284fU,
-    noticeType: SafetySettingsNoticeType.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE,
-    labelHook() {
-      let obj = activeLinkUserIds(closure_1_2[6]);
-      obj.popLayer();
-      obj = { recipientIds: activeLinkUserIds };
-      closure_1_1(closure_1_2[7]).openPrivateChannel(obj);
-    },
-    count: activeLinkUserIds.length
+  activeLinkUserIds = activeLinkUserIds(8678).useActiveLinkUserIds();
+  const obj2 = { label: null, noticeType: null, labelHook: null, count: null };
+  let obj = activeLinkUserIds(8678);
+  obj2.label = _modDef2396.i284fU;
+  obj2.noticeType = SafetySettingsNoticeType.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE;
+  obj2.labelHook = function labelHook() {
+    LayerActionCreators.popLayer();
+    ChannelActionCreatorsDefault.openPrivateChannel({ recipientIds: activeLinkUserIds });
   };
-  return jsx(SafetySettingsNoticeDefault, {
-    label: messagesProxyDefault.i284fU,
-    noticeType: SafetySettingsNoticeType.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE,
-    labelHook() {
-      let obj = activeLinkUserIds(closure_1_2[6]);
-      obj.popLayer();
-      obj = { recipientIds: activeLinkUserIds };
-      closure_1_1(closure_1_2[7]).openPrivateChannel(obj);
-    },
-    count: activeLinkUserIds.length
-  });
+  obj2.count = activeLinkUserIds.length;
+  return jsx(SafetySettingsNoticeDefault, { label: null, noticeType: null, labelHook: null, count: null });
 };

@@ -1,48 +1,49 @@
-// Module ID: 10022
-// Function ID: 10023
+// Module ID: 10049
+// Function ID: 10050
 // Name: useMuteAwareLocalVolume
-// Dependencies: [19, 1908, 504, 9094, 2]
+// Dependencies: [19, 1908, 504, 9121, 2]
 // Exports: default
 
-// Module 10022 (useMuteAwareLocalVolume)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "_detectH265HardwareDecode" /* 1908 */;
+// Module 10049 (useMuteAwareLocalVolume)
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9121 */;
+import noop from "module_19" /* 19 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/media_engine/useMuteAwareLocalVolume.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_engine/useMuteAwareLocalVolume.tsx");
 
 export default function useMuteAwareLocalVolume(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   closure_1 = arg1;
-  let obj = {
-    effectiveVolume: _require(504).useStateFromStores(items, () => {
-      let num = 0;
-      if (null != closure_0) {
-        num = 0;
-        if (!closure_1_4.isLocalMute(tmp, closure_1)) {
-          num = obj.getLocalVolume(tmp, tmp2);
-        }
-        obj = closure_1_4;
-        tmp2 = closure_1;
+  let obj = { effectiveVolume: null, handleVolumeChange: null };
+  const items = [MediaEngineStore];
+  obj.effectiveVolume = require("initialize").useStateFromStores(items, () => {
+    let num = 0;
+    if (null != closure_0) {
+      num = 0;
+      if (!MediaEngineStore.isLocalMute(tmp, closure_1)) {
+        num = obj.getLocalVolume(tmp, tmp2);
       }
-      return num;
-    }),
-    handleVolumeChange: React.useCallback((arg0) => {
-      if (null != closure_0) {
-        let isLocalMuteResult = arg0 > 0;
-        if (isLocalMuteResult) {
-          isLocalMuteResult = closure_1_4.isLocalMute(tmp, callback);
-        }
-        if (isLocalMuteResult) {
-          callback(closure_1_2[3]).toggleLocalMute(tmp, callback);
-          const obj = callback(closure_1_2[3]);
-        }
-        callback(closure_1_2[3]).setLocalVolume(tmp, arg0, callback);
-        const obj2 = callback(closure_1_2[3]);
+      obj = MediaEngineStore;
+      tmp2 = closure_1;
+    }
+    return num;
+  });
+  const items1 = [arg0, arg1];
+  obj.handleVolumeChange = noop.useCallback((arg0) => {
+    if (null != closure_0) {
+      let isLocalMuteResult = arg0 > 0;
+      if (isLocalMuteResult) {
+        isLocalMuteResult = MediaEngineStore.isLocalMute(tmp, closure_1);
       }
-    }, items1)
-  };
-  items = [closure_4];
-  items1 = [arg0, arg1];
+      if (isLocalMuteResult) {
+        AudioActionCreatorsDefault.toggleLocalMute(tmp, closure_1);
+      }
+      AudioActionCreatorsDefault.setLocalVolume(tmp, arg0, closure_1);
+    }
+  }, items1);
   return obj;
 };

@@ -1,38 +1,38 @@
-// Module ID: 15867
-// Function ID: 15868
-// Name: route
-// Dependencies: [19, 1074, 14858, 14861, 11473, 1114, 9217, 15868, 2]
+// Module ID: 15897
+// Function ID: 15898
+// Name: DataAndPrivacySetting
+// Dependencies: [19, 1074, 14884, 14887, 11500, 1114, 9244, 15898, 2]
 
-// Module 15867 (route)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_2 from "noop" /* 19 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15897 (DataAndPrivacySetting)
+import util from "util" /* 1114 */;
+import ConsentActionCreators from "ConsentActionCreators" /* 14884 */;
+import RequestYourDataSetting from "RequestYourDataSetting" /* 14887 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const SettingBuilders = fn(11500);
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.OAuOHD);
+    const intl = util.intl;
+    return intl.string(util.t.OAuOHD);
   },
   parent: null,
-  IconComponent: require("ShieldLockIcon").ShieldLockIcon,
-  screen: createToggle,
+  IconComponent: fn(9244).ShieldLockIcon,
+  screen: {
+    route: fn(1074).UserSettingsSections.DATA_AND_PRIVACY,
+    getComponent() {
+      return require("DataAndPrivacyScreen").default;
+    }
+  },
   usePreNavigationAction() {
-    return React.useCallback(() => {
-      const consents = callback(14858).fetchConsents();
-      const obj = callback(14858);
-      const harvestStatus = callback(14861).fetchHarvestStatus();
+    return noop.useCallback(() => {
+      const consents = ConsentActionCreators.fetchConsents();
+      const harvestStatus = RequestYourDataSetting.fetchHarvestStatus();
       return true;
     }, []);
   }
-};
-createToggle = {
-  route: require("ME").UserSettingsSections.DATA_AND_PRIVACY,
-  getComponent() {
-    return require(15868) /* DataAndPrivacySettings */.default;
-  }
-};
-createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DataAndPrivacySetting.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DataAndPrivacySetting.tsx");
 
-export default createToggle;
+export default route;

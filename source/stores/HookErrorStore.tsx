@@ -1,24 +1,24 @@
-// Module ID: 4608
-// Function ID: 4609
-// Name: getHookError
+// Module ID: 4622
+// Function ID: 4623
+// Name: HookErrorStore
 // Dependencies: [1074, 504, 573, 2]
 
-// Module 4608 (getHookError)
-import set from "set" /* 2 */;
+// Module 4622 (HookErrorStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import ME from "ME" /* 1074 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const MediaEngineHookTypes = ME.MediaEngineHookTypes;
+const MediaEngineHookTypes = Constants.MediaEngineHookTypes;
 let closure_1 = {};
 const Store = initializeDefault.Store;
 class HookErrorStore extends Store {
 }
 HookErrorStore.prototype["getHookError"] = function getHookError(SOUND) {
-  return table[SOUND];
+  return closure_1[SOUND];
 };
 HookErrorStore.displayName = "HookErrorStore";
-const hookErrorStore = new HookErrorStore(dispatcherDefault, {
+const hookErrorStore = new HookErrorStore(DispatcherDefault, {
   MEDIA_ENGINE_SET_GO_LIVE_SOURCE: function handleSetGoLiveSource() {
     closure_1 = {};
   },
@@ -29,6 +29,6 @@ const hookErrorStore = new HookErrorStore(dispatcherDefault, {
     closure_1[MediaEngineHookTypes.SOUND] = { errorMessage: errorMessage.errorMessage, errorCode: errorMessage.errorCode };
   }
 });
-const result = set.fileFinishedImporting("stores/HookErrorStore.tsx");
+const result = size.fileFinishedImporting("stores/HookErrorStore.tsx");
 
 export default hookErrorStore;

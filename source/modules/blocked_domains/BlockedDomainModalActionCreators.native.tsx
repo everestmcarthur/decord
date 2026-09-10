@@ -1,18 +1,17 @@
-// Module ID: 12952
-// Function ID: 12953
-// Dependencies: [4527, 12953, 1896, 2]
+// Module ID: 12978
+// Function ID: 12979
+// Name: BlockedDomainModalActionCreators
+// Dependencies: [4541, 12979, 1896, 2]
 
-// Module 12952
-import set from "set" /* 2 */;
+// Module 12978 (BlockedDomainModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/blocked_domains/BlockedDomainModalActionCreators.native.tsx");
+const result = size.fileFinishedImporting("modules/blocked_domains/BlockedDomainModalActionCreators.native.tsx");
 
 export default {
   show(url) {
-    let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-    obj = { url };
-    obj.openLazy(asyncRequireImpl(12953, dependencyMap.paths), "blocked-domain", obj);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12979, dependencyMap.paths), "blocked-domain", { url });
   }
 };

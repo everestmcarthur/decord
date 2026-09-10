@@ -1,17 +1,17 @@
-// Module ID: 7139
-// Function ID: 7140
+// Module ID: 7153
+// Function ID: 7154
 // Name: FormLabel
-// Dependencies: [19, 21, 4556, 2]
+// Dependencies: [19, 21, 4570, 2]
 // Exports: default
 
-// Module 7139 (FormLabel)
-import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4556 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 7153 (FormLabel)
+import Text_Text from "Text/Text" /* 4570 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/void/Form/native/FormLabel.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/Form/native/FormLabel.tsx");
 
 export default function FormLabel(children) {
   let lineClamp = children.numberOfLines;
@@ -22,5 +22,5 @@ export default function FormLabel(children) {
   if (color === undefined) {
     color = "mobile-text-heading-primary";
   }
-  return jsx(Text.Text, { variant: "heading-md/semibold", color, lineClamp, style, maxFontSizeMultiplier: 2, accessible, children: children.text });
+  return jsx(Text_Text.Text, { variant: "heading-md/semibold", color, lineClamp, style, maxFontSizeMultiplier: 2, accessible, children: children.text });
 };

@@ -1,39 +1,40 @@
-// Module ID: 8616
-// Function ID: 8617
+// Module ID: 8644
+// Function ID: 8645
 // Name: CardSection
-// Dependencies: [19, 17, 1074, 21, 4560, 5524, 576, 8617, 2]
+// Dependencies: [19, 17, 1074, 21, 4574, 5538, 576, 8645, 2]
 // Exports: default
 
-// Module 8616 (CardSection)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import _modDef8617 from "module_8617" /* 8617 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importDefaultResult from "createTextStyle" /* 5524 */;
+// Module 8644 (CardSection)
+import nativeDefault from "native" /* 576 */;
+import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8645 */;
+import noop from "module_19" /* 19 */;
+import TextStyles from "TextStyles" /* 5538 */;
 
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { container: { paddingTop: 16, paddingHorizontal: 16 }, title: importDefaultResult(require("ME").Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.TEXT_SUBTLE, 12, { uppercase: true, marginBottom: 6 }), card: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-createCacheKey[2] = createCacheKey;
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("design/void/CardSection/native/CardSection.tsx");
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { paddingTop: 16, paddingHorizontal: 16 }, title: null, card: null };
+obj2.title = TextStyles(fn(1074).Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.TEXT_SUBTLE, 12, { uppercase: true, marginBottom: 6 });
+obj2.card = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+let closure_5 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/CardSection/native/CardSection.tsx");
 
 export default function CardSection(arg0) {
   ({ title, children, headerComponent } = arg0);
   ({ titleStyle, cardStyle, style, accessibilityRole, accessibilityLabel } = arg0);
-  const tmp = callback2();
-  let obj = { style: items, accessibilityRole, accessibilityLabel, children: null };
-  items = [tmp.container, style];
+  const tmp = closure_5();
+  const obj = { style: null, accessibilityRole, accessibilityLabel, children: null };
+  const items = [tmp.container, style];
+  obj.style = items;
   let tmp4 = null;
   if (null != title) {
-    obj = { style: null, accessibilityRole: "header", children: null };
+    const obj2 = { style: null, accessibilityRole: "header", children: null };
     const items1 = [tmp.title, titleStyle];
-    obj[0] = items1;
-    obj[2] = title;
-    tmp4 = callback(_modDef8617, obj);
+    obj2.style = items1;
+    obj2.children = title;
+    tmp4 = React3(LegacyText_LegacyTextDefault, obj2);
   }
   const items2 = [tmp4, , ];
   let tmp8 = null;
@@ -43,13 +44,13 @@ export default function CardSection(arg0) {
   items2[1] = tmp8;
   let tmp9 = null;
   if (null != children) {
-    obj = { style: null, children: null };
+    const obj3 = { style: null, children: null };
     const items3 = [tmp.card, cardStyle];
-    obj[0] = items3;
-    obj[1] = children;
-    tmp9 = callback(tmp3, obj);
+    obj3.style = items3;
+    obj3.children = children;
+    tmp9 = React3(tmp3, obj3);
   }
   items2[2] = tmp9;
-  obj[3] = items2;
-  return closure_4(View, obj);
+  obj.children = items2;
+  return React4(View, obj);
 };

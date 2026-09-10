@@ -1,46 +1,61 @@
-// Module ID: 9081
-// Function ID: 9082
-// Name: MultiSelect
-// Dependencies: [19, 17, 21, 4560, 576, 5687, 5604, 2]
+// Module ID: 9108
+// Function ID: 9109
+// Name: InAppReportsMultiSelect
+// Dependencies: [19, 17, 21, 4574, 576, 5701, 5618, 2]
 // Exports: default
 
-// Module 9081 (MultiSelect)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9108 (InAppReportsMultiSelect)
+import nativeDefault from "native" /* 576 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 5618 */;
+import TableRowGroup from "TableRowGroup" /* 5701 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { container: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsMultiSelect.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_16 } };
+let closure_4 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsMultiSelect.tsx");
 
 export default function MultiSelect(arg0) {
   ({ element, onPress: require, state: dependencyMap } = arg0);
   if (null != element) {
     if ("checkbox" === element.type) {
       const data = element.data;
-      let obj = { style: null, children: null };
-      obj[0] = tmp.container;
-      obj = { hasIcons: false, children: null };
-      obj[1] = data.map((arg0) => {
-        [tmp, tmp2, tmp3] = arg0;
-        return closure_1_3(closure_1_0(closure_1_1[6]).TableCheckboxRow, {
-          label: tmp2,
-          subLabel: tmp3,
-          onPress() {
-            return closure_1_0(closure_0, closure_1);
-          },
-          checked: tmp in closure_1
-        }, tmp);
+      const obj = { style: tmp.container, children: null };
+      const obj2 = {
+        hasIcons: false,
+        children: data.map((item) => {
+              [tmp, tmp2, tmp3] = item;
+              return jsx(TableCheckboxRow.TableCheckboxRow, {
+                label: tmp2,
+                subLabel: tmp3,
+                onPress() {
+                  return require(closure_1_0, closure_1_1);
+                },
+                checked: tmp in closure_1
+              }, tmp);
+            })
+      };
+      obj.children = jsx(TableRowGroup.TableRowGroup, {
+        hasIcons: false,
+        children: data.map((item) => {
+              [tmp, tmp2, tmp3] = item;
+              return jsx(TableCheckboxRow.TableCheckboxRow, {
+                label: tmp2,
+                subLabel: tmp3,
+                onPress() {
+                  return require(closure_1_0, closure_1_1);
+                },
+                checked: tmp in closure_1
+              }, tmp);
+            })
       });
-      obj[1] = jsx(TableRowGroupTitle.TableRowGroup, { hasIcons: false, children: null });
-      return <View hasIcons={false}>{null}</View>;
+      return <View style={tmp.container}>{null}</View>;
     }
   }
   return null;

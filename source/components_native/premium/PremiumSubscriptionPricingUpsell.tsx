@@ -1,75 +1,69 @@
-// Module ID: 13541
-// Function ID: 13542
-// Name: PricingSubheadingCopy
-// Dependencies: [32, 19, 17, 2025, 1371, 4223, 4224, 7237, 1074, 1373, 21, 4560, 504, 4218, 13421, 573, 7419, 7240, 4556, 1115, 7235, 7234, 1114, 1880, 2]
+// Module ID: 13564
+// Function ID: 13565
+// Name: PremiumSubscriptionPricingUpsell
+// Dependencies: [32, 19, 17, 2025, 1371, 4236, 4237, 7251, 1074, 1373, 21, 4574, 504, 4231, 13444, 573, 7433, 7254, 4570, 1115, 7249, 7248, 1114, 1880, 2]
 // Exports: default
 
-// Module 13541 (PricingSubheadingCopy)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import getSubscriptionPlansLoaded from "getSubscriptionPlansLoaded" /* 13421 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "_getSystemLocale" /* 2025 */;
-import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import closure_8 from "addSubscriptionPlan" /* 4223 */;
-import closure_9 from "reset" /* 4224 */;
-import closure_10 from "updateProduct" /* 7237 */;
-import { CurrencyCodes } from "ME" /* 1074 */;
-import GuildFeatures from "GuildFeatures" /* 1373 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13564 (PremiumSubscriptionPricingUpsell)
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 13444 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import LocaleStore from "LocaleStore" /* 2025 */;
+import UserStore from "UserStore" /* 1371 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4236 */;
+import SubscriptionStore from "SubscriptionStore" /* 4237 */;
+import IAPStore from "IAPStore" /* 7251 */;
 
-require = arg1;
+require = fn;
 function PricingSubheadingCopy() {
-  let tmp = callback3();
-  const _require = tmp;
-  let obj = _require(str3[12]);
-  let items = [closure_7];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  obj1 = importDefault(str3[13]);
-  const hasBoostDiscountResult = obj1.hasBoostDiscount(stateFromStores);
-  let obj2 = _require(str3[12]);
-  const items1 = [closure_6];
-  const stateFromStores1 = obj2.useStateFromStores(items1, () => locale.locale);
-  let obj3 = _require(str3[14]);
-  const subscriptionPlansLoaded = obj3.useSubscriptionPlansLoaded();
-  let obj4 = _require(str3[12]);
-  const items2 = [closure_9];
-  importDefault = obj4.useStateFromStores(items2, () => premiumTypeSubscription.getPremiumTypeSubscription());
-  let obj5 = _require(str3[12]);
-  const items3 = [closure_8];
-  let stateFromStores2 = obj5.useStateFromStores(items3, () => {
-    let value;
+  let tmp = closure_21();
+  _require = tmp;
+  let items = [UserStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
+  let obj = require("initialize");
+  const hasBoostDiscountResult = require("PremiumUtils").hasBoostDiscount(stateFromStores);
+  const obj2 = require("PremiumUtils");
+  const items1 = [LocaleStore];
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => locale.locale);
+  const obj3 = require("initialize");
+  const subscriptionPlansLoaded = require("useSubscriptionPlansLoaded").useSubscriptionPlansLoaded();
+  const obj4 = require("useSubscriptionPlansLoaded");
+  const items2 = [SubscriptionStore];
+  importDefault = require("initialize").useStateFromStores(items2, () => premiumTypeSubscription.getPremiumTypeSubscription());
+  const obj5 = require("initialize");
+  const items3 = [SubscriptionPlanStore];
+  let stateFromStores2 = require("initialize").useStateFromStores(items3, () => {
+    value = undefined;
     if (null != closure_1) {
-      value = closure_1_8.get(tmp.planId);
+      value = SubscriptionPlanStore.get(tmp.planId);
     }
     return value;
   });
-  const effect = React.useEffect(() => {
-    if (!store.isReady()) {
-      callback(str3[15]).wait(() => callback(table[16]).loadProducts());
-      const obj = callback(str3[15]);
+  const effect = noop.useEffect(() => {
+    if (!IAPStore.isReady()) {
+      closure_1(str3[15]).wait(() => closure_1_1(str3[16]).loadProducts());
+      const obj = closure_1(str3[15]);
     }
   }, []);
-  let obj6 = _require(str3[12]);
-  let obj7 = closure_10;
-  const items4 = [closure_10];
-  [tmp12, tmp13, tmp14, tmp15, tmp16] = str2(obj6.useStateFromStoresArray(items4, () => {
-    const items = [store.getProduct(lib(str3[17]).ProductIds.PREMIUM_GUILD_1_MONTHLY), store.getProduct(lib(str3[17]).ProductIds.PREMIUM_TIER_2_MONTHLY), store.getProduct(lib(str3[17]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_MONTHLY), store.getProduct(lib(str3[17]).ProductIds.PREMIUM_TIER_2_YEARLY), store.getProduct(lib(str3[17]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_YEARLY)];
+  const obj6 = require("initialize");
+  const items4 = [IAPStore];
+  const obj7 = require("initialize");
+  const obj8 = IAPStore;
+  [tmp12, tmp13, tmp14, tmp15, tmp16] = str2(require("initialize").useStateFromStoresArray(items4, () => {
+    const items = [IAPStore.getProduct(closure_0(str3[17]).ProductIds.PREMIUM_GUILD_1_MONTHLY), IAPStore.getProduct(closure_0(str3[17]).ProductIds.PREMIUM_TIER_2_MONTHLY), IAPStore.getProduct(closure_0(str3[17]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_MONTHLY), IAPStore.getProduct(closure_0(str3[17]).ProductIds.PREMIUM_TIER_2_YEARLY), IAPStore.getProduct(closure_0(str3[17]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_YEARLY)];
     return items;
   }), 5);
   if (stateFromStores2 == null) {
-    stateFromStores2 = table[constants.PREMIUM_MONTH_GUILD];
+    stateFromStores2 = closure_13[constants.PREMIUM_MONTH_GUILD];
   }
   ({ interval, intervalCount } = stateFromStores2);
   if (subscriptionPlansLoaded) {
-    if (obj7.isReady()) {
+    if (obj8.isReady()) {
       if (null != tmp12) {
         if (tmp12 != null) {
           const formatted = tmp12.currencyCode.toLowerCase();
-          const str = tmp12.currencyCode;
         }
         if (tmp12 != null) {
           const price = tmp12.price;
@@ -110,81 +104,71 @@ function PricingSubheadingCopy() {
             tmp22 = price;
           }
         }
-        let tmp2Result = tmp2(tmp3[19]);
+        const tmp2Result = tmp2(tmp3[19]);
         let result = diff1;
         if (tmp25) {
-          tmp2Result = tmp2(tmp3[20]);
-          result = tmp2Result.convertToMajorCurrencyUnits(diff1, CurrencyCodes.USD);
+          result = tmp2(tmp3[20]).convertToMajorCurrencyUnits(diff1, CurrencyCodes.USD);
+          const tmp2Result10 = tmp2(tmp3[20]);
         }
-        tmp25 = tmp2Result.isAndroid() && null != diff1;
-        const tmp2Result1 = tmp2(tmp3[19]);
+        tmp25 = tmp2(tmp3[19]).isAndroid() && null != diff1;
+        const tmp2Result11 = tmp2(tmp3[19]);
         let result1 = tmp22;
         if (tmp28) {
           result1 = tmp2(tmp3[20]).convertToMajorCurrencyUnits(tmp22, CurrencyCodes.USD);
-          const tmp2Result2 = tmp2(tmp3[20]);
+          const tmp2Result12 = tmp2(tmp3[20]);
         }
         str2 = "...";
         str3 = "...";
         if (null != result) {
-          const tmp2Result3 = tmp2(tmp3[21]);
-          str3 = tmp2Result3.formatRate(tmp2(tmp3[21]).formatPrice(result, formatted, { convertToMajorUnits: false }), interval, intervalCount);
-          const tmp2Result4 = tmp2(tmp3[21]);
+          const tmp2Result13 = tmp2(tmp3[21]);
+          str3 = tmp2Result13.formatRate(tmp2(tmp3[21]).formatPrice(result, formatted, { convertToMajorUnits: false }), interval, intervalCount);
+          const tmp2Result14 = tmp2(tmp3[21]);
         }
         if (null != result1) {
-          const tmp2Result5 = tmp2(tmp3[21]);
-          str2 = tmp2Result5.formatRate(tmp2(tmp3[21]).formatPrice(result1, formatted, { convertToMajorUnits: false }), interval, intervalCount);
-          const tmp2Result6 = tmp2(tmp3[21]);
+          const tmp2Result15 = tmp2(tmp3[21]);
+          str2 = tmp2Result15.formatRate(tmp2(tmp3[21]).formatPrice(result1, formatted, { convertToMajorUnits: false }), interval, intervalCount);
+          const tmp2Result16 = tmp2(tmp3[21]);
         }
         if (result !== result1) {
-          obj = { style: null, accessibilityLabel: null, variant: "text-md/medium", children: null };
-          obj[0] = tmp.cardText;
+          const obj9 = { style: tmp.cardText, accessibilityLabel: null, variant: "text-md/medium", children: null };
           const intl2 = tmp2(tmp3[22]).intl;
-          obj = { price: null, originalPrice: null };
-          obj[0] = str3;
-          obj[1] = str2;
-          obj[1] = intl2.formatToPlainString(tmp2(tmp3[22]).t.lEIwDw, obj);
+          const obj10 = { price: str3, originalPrice: str2 };
+          obj9.accessibilityLabel = intl2.formatToPlainString(tmp2(tmp3[22]).t.lEIwDw, obj10);
           const intl3 = tmp2(tmp3[22]).intl;
-          obj1 = { price: null, originalPrice: null, originalPriceHook: null };
-          obj1[0] = str3;
-          obj1[1] = str2;
-          obj1[2] = function originalPriceHook(arg0, arg1) {
-            let tmp = null;
-            if (str3 !== str2) {
-              const obj = { style: null, variant: "text-sm/medium", color: "text-muted", children: null };
-              obj[0] = lib.originalPrice;
-              obj[3] = arg0;
-              tmp = closure_1_18(lib(str3[18]).Text, obj, arg1);
-            }
-            return tmp;
+          const obj11 = {
+            price: str3,
+            originalPrice: str2,
+            originalPriceHook(children, arg1) {
+                      let tmp = null;
+                      if (str3 !== str2) {
+                        const obj = { style: closure_0.originalPrice, variant: "text-sm/medium", color: "text-muted", children };
+                        tmp = collapsedCategories(Text_Text.Text, obj, arg1);
+                      }
+                      return tmp;
+                    }
           };
-          obj[3] = intl3.format(tmp2(tmp3[22]).t.eRSsbf, obj1);
-          obj2 = obj;
+          obj9.children = intl3.format(tmp2(tmp3[22]).t.eRSsbf, obj11);
+          let obj12 = obj9;
         } else {
-          obj2 = { style: null, variant: "text-md/medium", children: null };
-          obj2[0] = tmp.cardText;
+          obj12 = { style: tmp.cardText, variant: "text-md/medium", children: null };
           const intl = tmp2(tmp3[22]).intl;
-          obj3 = { price: null };
-          obj3[0] = str3;
-          obj2[2] = intl.format(tmp2(tmp3[22]).t.Mmf63F, obj3);
+          const obj13 = { price: str3 };
+          obj12.children = intl.format(tmp2(tmp3[22]).t.Mmf63F, obj13);
         }
-        const tmp31Result = callback(tmp2(tmp3[18]).Text, obj2);
-        let tmp5Result = tmp5(tmp3[13]);
+        const tmp31Result = closure_18(tmp2(tmp3[18]).Text, obj12);
+        tmp28 = tmp2(tmp3[19]).isAndroid() && null != tmp22;
         if (tmp5Result.hasFreeBoosts(stateFromStores)) {
           if (hasBoostDiscountResult) {
-            tmp5Result = tmp5(tmp3[13]);
-            if (tmp5Result.isPremium(stateFromStores, closure_14.TIER_2)) {
-              obj4 = { children: null };
-              obj5 = { style: null, variant: "text-md/medium", children: null };
-              obj5[0] = tmp.cardText;
+            if (tmp5Result3.isPremium(stateFromStores, closure_14.TIER_2)) {
+              const obj14 = { children: null };
+              const obj15 = { style: tmp.cardText, variant: "text-md/medium", children: null };
               const intl5 = tmp2(tmp3[22]).intl;
-              obj6 = { freeSubscriptionCount: null, discountPercent: null };
-              obj6[0] = closure_16;
-              obj6[1] = tmp2(tmp3[23]).formatPercent(stateFromStores1, closure_17 / 100);
-              obj5[2] = intl5.format(tmp2(tmp3[22]).t["ZikTt+"], obj6);
-              const items5 = [tmp31(tmp2(tmp3[18]).Text, obj5), tmp31Result];
-              obj4[0] = items5;
-              let tmp34 = callback2(closure_19, obj4);
-              const tmp2Result7 = tmp2(tmp3[23]);
+              const obj16 = { freeSubscriptionCount, discountPercent: tmp2(tmp3[23]).formatPercent(stateFromStores1, closure_17 / 100) };
+              obj15.children = intl5.format(tmp2(tmp3[22]).t["ZikTt+"], obj16);
+              const items5 = [tmp31(tmp2(tmp3[18]).Text, obj15), tmp31Result];
+              obj14.children = items5;
+              let tmp34 = closure_20(closure_19, obj14);
+              const tmp2Result17 = tmp2(tmp3[23]);
             }
             return tmp34;
           }
@@ -192,46 +176,49 @@ function PricingSubheadingCopy() {
         tmp34 = tmp31Result;
         if (hasBoostDiscountResult) {
           tmp34 = tmp31Result;
-          if (tmp5Result1.isPremium(stateFromStores, closure_14.TIER_1)) {
-            obj7 = { children: null };
-            const obj8 = { style: null, variant: "text-md/medium", children: null };
-            obj8[0] = tmp.cardText;
+          if (tmp5Result4.isPremium(stateFromStores, closure_14.TIER_1)) {
+            const obj17 = { children: null };
+            const obj18 = { style: tmp.cardText, variant: "text-md/medium", children: null };
             const intl4 = tmp2(tmp3[22]).intl;
-            const obj9 = { discountPercent: null };
-            obj9[0] = tmp2(tmp3[23]).formatPercent(stateFromStores1, closure_17 / 100);
-            obj8[2] = intl4.format(tmp2(tmp3[22]).t.XVMAKU, obj9);
-            const items6 = [tmp31(tmp2(tmp3[18]).Text, obj8), tmp31Result];
-            obj7[0] = items6;
-            tmp34 = callback2(closure_19, obj7);
-            const tmp2Result8 = tmp2(tmp3[23]);
+            const obj19 = { discountPercent: tmp2(tmp3[23]).formatPercent(stateFromStores1, closure_17 / 100) };
+            obj18.children = intl4.format(tmp2(tmp3[22]).t.XVMAKU, obj19);
+            const items6 = [tmp31(tmp2(tmp3[18]).Text, obj18), tmp31Result];
+            obj17.children = items6;
+            tmp34 = closure_20(closure_19, obj17);
+            const tmp2Result18 = tmp2(tmp3[23]);
           }
-          tmp5Result1 = tmp5(tmp3[13]);
+          tmp5Result4 = tmp5(tmp3[13]);
         }
-        tmp28 = tmp2(tmp3[19]).isAndroid() && null != tmp22;
+        tmp5Result = tmp5(tmp3[13]);
       }
     }
   }
-  return callback(_require(str3[18]).Text, { style: tmp.cardText, variant: "text-md/medium", children: "..." });
+  return closure_18(require("Text/Text").Text, { style: tmp.cardText, variant: "text-md/medium", children: "..." });
 }
-({ SubscriptionPlans: closure_12, SubscriptionPlanInfo: map1, PremiumTypes: closure_14, SubscriptionIntervalTypes: closure_15, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_16, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_17 } = GuildFeatures);
+const View = fn(17).View;
+const CurrencyCodes = fn(1074).CurrencyCodes;
+const PremiumConstants = fn(1373);
+({ SubscriptionPlans: closure_12, SubscriptionPlanInfo: map1, PremiumTypes: closure_14, SubscriptionIntervalTypes: closure_15, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_16, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_17 } = PremiumConstants);
+const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-let closure_21 = createCacheKey.createStyles({ title: { marginTop: 16 }, pricingSection: { alignItems: "center" }, originalPrice: { textDecorationLine: "line-through" }, cardText: { lineHeight: 20, marginTop: 8, textAlign: "center" } });
-let result = require("set").fileFinishedImporting("components_native/premium/PremiumSubscriptionPricingUpsell.tsx");
+const createStyles = fn(4574);
+let closure_21 = createStyles.createStyles({ title: { marginTop: 16 }, pricingSection: { alignItems: "center" }, originalPrice: { textDecorationLine: "line-through" }, cardText: { lineHeight: 20, marginTop: 8, textAlign: "center" } });
+const size = fn(2);
+let result = size.fileFinishedImporting("components_native/premium/PremiumSubscriptionPricingUpsell.tsx");
 
 export default function PremiumSubscriptionPricingUpsell() {
-  const tmp = callback3();
-  let obj = getSubscriptionPlansLoaded;
-  obj = { style: tmp.pricingSection, children: null };
-  const subscriptionPlansLoaded = obj.useSubscriptionPlansLoaded();
-  obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale.intl;
-  obj[4] = intl.string(getSystemLocale.t["3x1PFE"]);
-  const items = [callback(Text.Text, obj), ];
+  const tmp = closure_21();
+  const obj2 = { style: tmp.pricingSection, children: null };
+  const subscriptionPlansLoaded = useSubscriptionPlansLoaded.useSubscriptionPlansLoaded();
+  const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  const intl = util.intl;
+  obj3.children = intl.string(util.t["3x1PFE"]);
+  const items = [collapsedCategories(Text_Text.Text, obj3), ];
   let tmp5Result = null;
   if (subscriptionPlansLoaded) {
-    tmp5Result = callback(PricingSubheadingCopy, {});
+    tmp5Result = collapsedCategories(PricingSubheadingCopy, {});
   }
   items[1] = tmp5Result;
-  obj[1] = items;
-  return closure_20(View, obj);
+  obj2.children = items;
+  return closure_1_20(View, obj2);
 };

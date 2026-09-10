@@ -1,264 +1,250 @@
-// Module ID: 12390
-// Function ID: 12391
-// Name: AutocompleteLabel
-// Dependencies: [19, 17, 1979, 4209, 1371, 1074, 10268, 21, 4560, 576, 8598, 504, 4404, 1178, 9808, 5605, 5614, 1114, 8124, 5028, 4713, 4556, 5587, 12391, 10392, 5123, 10181, 12, 5022, 1924, 1925, 8568, 2]
+// Module ID: 12416
+// Function ID: 12417
+// Name: Autocomplete
+// Dependencies: [19, 17, 1979, 4222, 1371, 1074, 10295, 21, 4574, 576, 8626, 504, 4418, 1178, 9835, 5619, 5628, 1114, 8150, 5042, 4727, 4570, 5601, 12417, 10419, 5137, 10208, 12, 5036, 1924, 1925, 8596, 2]
 
-// Module 12390 (AutocompleteLabel)
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 1178 */;
+// Module 12416 (Autocomplete)
+import _modDef12 from "module_12" /* 12 */;
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
 import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 1924 */;
-import isNullOrEmpty from "isNullOrEmpty" /* 1925 */;
-import Text from "Text" /* 4556 */;
-import computeChannelName from "computeChannelName" /* 4713 */;
-import TIMESTAMP_FORMATS from "TIMESTAMP_FORMATS" /* 5022 */;
-import getChannelIcon from "getChannelIcon" /* 5028 */;
-import PressableBase from "PressableBase" /* 5123 */;
-import preloadDefault from "preload" /* 5587 */;
-import TableRowInner from "TableRowInner" /* 5605 */;
-import TableRowTrailingText from "TableRowTrailingText" /* 5614 */;
-import registerAssetDefault from "registerAsset" /* 8124 */;
-import Form from "Form" /* 8598 */;
-import StickerDefault from "Sticker" /* 10181 */;
-import useStickerPackCategories from "useStickerPackCategories" /* 10392 */;
-import ChannelAutocompleteEmojiUpsellDefault from "ChannelAutocompleteEmojiUpsell" /* 12391 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "createGuildRecordFromRust" /* 1979 */;
-import closure_6 from "markAllUserIdListsStale" /* 4209 */;
-import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import ME from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import useChannelName from "useChannelName" /* 4727 */;
+import TimestampUtils from "TimestampUtils" /* 5036 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5042 */;
+import Pressables from "Pressables" /* 5137 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import TableRow from "TableRow" /* 5619 */;
+import TableRowTrailingText from "TableRowTrailingText" /* 5628 */;
+import _modDef8150 from "module_8150" /* 8150 */;
+import Form from "Form" /* 8626 */;
+import StickerDefault from "Sticker" /* 10208 */;
+import StickersHooks from "StickersHooks" /* 10419 */;
+import ChannelAutocompleteEmojiUpsellDefault from "ChannelAutocompleteEmojiUpsell" /* 12417 */;
+import noop from "module_19" /* 19 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+require = fn;
 function AutocompleteLabel(text) {
-  const tmp = callback3();
-  return callback(Form.FormRow.Label, { style: callback3().leading, text: text.text });
+  const tmp = closure_11();
+  return React7(Form.FormRow.Label, { style: closure_11().leading, text: text.text });
 }
-({ ChannelTypes: closure_8, Fonts } = ME);
-({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { row: null, leading: null, trailing: null, username: null, emoji: null, emojiImage: null, emojiText: null, stickerContainer: null, commandChoiceLoadingContainer: null, commandChoiceLoadingItem: null, autocompleteIcon: null, gameIcon: null, labelRow: null };
-createCacheKey = { height: require("AUTOCOMPLETE_ROW_HEIGHT").AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { fontSize: 16, color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, fontFamily: Fonts.PRIMARY_SEMIBOLD };
-let obj1 = { fontSize: 16, color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, fontFamily: Fonts.PRIMARY_SEMIBOLD };
-createCacheKey[2] = { fontSize: 14, color: ThemesDefault.colors.TEXT_MUTED };
-const obj2 = { fontSize: 14, color: ThemesDefault.colors.TEXT_MUTED };
-createCacheKey[3] = { color: ThemesDefault.unsafe_rawColors.PRIMARY_400 };
-createCacheKey[4] = { width: 32, height: 32 };
-createCacheKey[5] = { resizeMode: "contain" };
-let obj3 = { color: ThemesDefault.unsafe_rawColors.PRIMARY_400 };
-createCacheKey[6] = { lineHeight: 32, fontSize: 27, textAlign: "center", color: ThemesDefault.colors.TEXT_DEFAULT };
-const obj4 = { lineHeight: 32, fontSize: 27, textAlign: "center", color: ThemesDefault.colors.TEXT_DEFAULT };
-createCacheKey[7] = { width: 56, height: 56, marginHorizontal: 4, justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[8] = { flex: 1, justifyContent: "center" };
-const obj5 = { width: 56, height: 56, marginHorizontal: 4, justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[9] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: 16, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
-createCacheKey[10] = { opacity: 0.6 };
-const obj6 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: 16, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
-createCacheKey[11] = { width: 32, height: 32, borderRadius: ThemesDefault.radii.sm };
-const obj7 = { width: 32, height: 32, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[12] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
-let closure_11 = createCacheKey.createStyles(createCacheKey);
-const obj8 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
-const obj9 = {
+const View = fn(17).View;
+const Constants = fn(1074);
+({ ChannelTypes: closure_8, Fonts } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { row: { height: fn(10295).AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, leading: null, trailing: null, username: null, emoji: null, emojiImage: null, emojiText: null, stickerContainer: null, commandChoiceLoadingContainer: null, commandChoiceLoadingItem: null, autocompleteIcon: null, gameIcon: null, labelRow: null };
+let obj3 = { height: fn(10295).AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj2.leading = { fontSize: 16, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, fontFamily: Fonts.PRIMARY_SEMIBOLD };
+let obj4 = { fontSize: 16, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, fontFamily: Fonts.PRIMARY_SEMIBOLD };
+obj2.trailing = { fontSize: 14, color: nativeDefault.colors.TEXT_MUTED };
+let obj5 = { fontSize: 14, color: nativeDefault.colors.TEXT_MUTED };
+obj2.username = { color: nativeDefault.unsafe_rawColors.PRIMARY_400 };
+obj2.emoji = { width: 32, height: 32 };
+obj2.emojiImage = { resizeMode: "contain" };
+const obj6 = { color: nativeDefault.unsafe_rawColors.PRIMARY_400 };
+obj2.emojiText = { lineHeight: 32, fontSize: 27, textAlign: "center", color: nativeDefault.colors.TEXT_DEFAULT };
+let size = { width: 56, height: 56, marginHorizontal: 4, justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: nativeDefault.radii.sm };
+obj2.stickerContainer = size;
+obj2.commandChoiceLoadingContainer = { flex: 1, justifyContent: "center" };
+const obj7 = { lineHeight: 32, fontSize: 27, textAlign: "center", color: nativeDefault.colors.TEXT_DEFAULT };
+obj2.commandChoiceLoadingItem = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, height: 16, borderRadius: nativeDefault.radii.lg, alignSelf: "flex-start" };
+obj2.autocompleteIcon = { opacity: 0.6 };
+const size1 = { width: 32, height: 32, borderRadius: nativeDefault.radii.sm };
+obj2.gameIcon = size1;
+const obj8 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, height: 16, borderRadius: nativeDefault.radii.lg, alignSelf: "flex-start" };
+obj2.labelRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+let closure_11 = createStyles.createStyles(obj2);
+size = fn(2);
+let result = size.fileFinishedImporting("modules/autocompleter/native/Autocomplete.tsx");
+
+export default {
   User(user) {
     user = user.user;
     ({ nick, guildId } = user);
     ({ status, onPress } = user);
-    const tmp = callback3();
-    let obj = user(504);
-    const items = [closure_6];
-    const stateFromStores = obj.useStateFromStores(items, () => {
+    const tmp = closure_11();
+    const items = [RelationshipStore];
+    const stateFromStores = user(504).useStateFromStores(items, () => {
       let nickname = null;
       if (null == guildId) {
-        nickname = closure_1_6.getNickname(user.id);
+        nickname = RelationshipStore.getNickname(user.id);
       }
       return nickname;
     });
-    obj = { DEPRECATED_style: tmp.row, onPress, accessibilityRole: "menuitem", label: null, leading: null, trailing: null };
+    const obj2 = { DEPRECATED_style: tmp.row, onPress, accessibilityRole: "menuitem", label: null, leading: null, trailing: null };
     if (nick == null) {
       nick = stateFromStores;
     }
     if (nick == null) {
-      nick = guildId(4404).getName(user);
-      const obj3 = guildId(4404);
+      nick = guildId(4418).getName(user);
+      const obj3 = guildId(4418);
     }
-    obj[3] = closure_9(AutocompleteLabel, { text: nick });
-    obj = { status, user, size: tmp2(1178).AvatarSizes.SMALL, guildId, autoStatusCutout: true };
-    obj[4] = closure_9(user(1178).Avatar, obj);
+    obj2.label = closure_9(AutocompleteLabel, { text: nick });
+    const obj = user(504);
+    obj2.leading = closure_9(user(1178).Avatar, { status, user, size: user(1178).AvatarSizes.SMALL, guildId, autoStatusCutout: true });
+    const obj5 = { user, usernameStyle: null, discriminatorStyle: tmp.trailing };
     const items1 = [, ];
     ({ trailing: arr2[0], username: arr2[1] } = tmp);
-    obj[5] = closure_9(guildId(9808), { user, usernameStyle: items1, discriminatorStyle: tmp.trailing });
-    return closure_9(user(8598).FormRow, obj);
+    obj5.usernameStyle = items1;
+    obj2.trailing = closure_9(guildId(9835), obj5);
+    return closure_9(user(8626).FormRow, obj2);
   },
   Global(arg0) {
     ({ text, badge } = arg0);
     ({ description, onPress } = arg0);
-    let obj = { onPress, accessibilityRole: "menuitem", label: null, trailing: null };
+    const obj = { onPress, accessibilityRole: "menuitem", label: null, trailing: null };
     if (null != badge) {
-      obj = { style: null, children: null };
-      obj[0] = tmp.labelRow;
-      obj = { text: null };
-      obj[0] = text;
-      const items = [tmp2(AutocompleteLabel, obj), badge];
-      obj[1] = items;
-      let tmp2Result = callback2(View, obj);
+      const obj2 = { style: tmp.labelRow, children: null };
+      const obj3 = { text };
+      const items = [tmp2(AutocompleteLabel, obj3), badge];
+      obj2.children = items;
+      let tmp2Result = closure_1_10(View, obj2);
     } else {
-      obj1 = { text: null };
-      obj1[0] = text;
-      tmp2Result = tmp2(AutocompleteLabel, obj1);
+      const obj4 = { text };
+      tmp2Result = tmp2(AutocompleteLabel, obj4);
     }
-    obj[2] = tmp2Result;
-    obj[3] = closure_9(TableRowTrailingText.TableRowTrailingText, { text: description });
-    return closure_9(TableRowInner.TableRow, obj);
+    obj.label = tmp2Result;
+    obj.trailing = React7(TableRowTrailingText.TableRowTrailingText, { text: description });
+    return React7(TableRow.TableRow, obj);
   },
   Role(colorString) {
     colorString = colorString.colorString;
     ({ onPress, showDescription, name } = colorString);
-    let obj = { onPress, accessibilityRole: "menuitem", label: null, trailing: null };
-    const items = [callback3().leading, ];
+    const obj = { onPress, accessibilityRole: "menuitem", label: null, trailing: null };
+    const items = [closure_11().leading, ];
     let tmp5;
     if (null != colorString) {
-      obj = { color: null };
-      obj[0] = colorString;
-      tmp5 = obj;
+      const obj2 = { color: colorString };
+      tmp5 = obj2;
     }
-    obj = { style: items, text: "@" + name };
+    const tmp = closure_11();
     items[1] = tmp5;
-    obj[2] = closure_9(Form.FormRow.Label, obj);
+    obj.label = React7(Form.FormRow.Label, { style: items, text: "@" + name });
     let str = "";
     if (showDescription) {
       const intl = tmp3(1114).intl;
       str = intl.string(tmp3(1114).t.HrUmDH);
     }
-    obj[3] = closure_9(TableRowTrailingText.TableRowTrailingText, { text: str });
-    return closure_9(TableRowInner.TableRow, obj);
+    obj.trailing = React7(TableRowTrailingText.TableRowTrailingText, { text: str });
+    return React7(TableRow.TableRow, obj);
   },
   Channel(onPress) {
     ({ channel, category } = onPress);
-    const tmp = callback3();
+    const tmp = closure_11();
     if (channel.type === constants.GUILD_CATEGORY) {
-      let channelIconWithGuild = registerAssetDefault;
+      let channelIconWithGuild = _modDef8150;
     } else {
-      let obj = getChannelIcon;
-      channelIconWithGuild = obj.getChannelIconWithGuild(channel, tmp2);
+      channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, tmp2);
     }
-    obj = { source: channelIconWithGuild, style: tmp.autocompleteIcon };
-    const tmp9 = callback(Button.Icon, obj);
-    const channelName = computeChannelName.computeChannelName(channel, closure_7, closure_6);
-    obj = { onPress: onPress.onPress, accessibilityRole: "menuitem", leading: tmp9, label: callback(AutocompleteLabel, { text: channelName }), trailing: null };
-    obj1 = { style: tmp.trailing, variant: "text-sm/medium", color: "text-muted", children: null };
+    const obj2 = { source: channelIconWithGuild, style: tmp.autocompleteIcon };
+    const tmp9 = React7(native.Icon, { source: channelIconWithGuild, style: tmp.autocompleteIcon });
+    const channelName = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
+    const obj4 = { onPress: onPress.onPress, accessibilityRole: "menuitem", leading: tmp9, label: React7(AutocompleteLabel, { text: channelName }), trailing: null };
+    const obj5 = { style: tmp.trailing, variant: "text-sm/medium", color: "text-muted", children: null };
     let name = null != category;
     if (name) {
       name = category.name;
     }
-    obj1[3] = name;
-    obj[4] = callback(Text.Text, obj1);
-    return callback(Form.FormRow, obj);
+    obj5.children = name;
+    obj4.trailing = React7(Text_Text.Text, obj5);
+    return React7(Form.FormRow, obj4);
   },
   Emoji(url) {
     url = url.url;
     ({ name, surrogates, onPress } = url);
-    const tmp = callback3();
+    const tmp = closure_11();
     if ("" !== url) {
-      let obj = { style: null, source: null };
+      const obj2 = { style: null, source: null };
       const items = [, ];
       ({ emoji: arr2[0], emojiImage: arr2[1] } = tmp);
-      obj[0] = items;
-      obj = { uri: null };
-      obj[0] = url;
-      obj[1] = obj;
-      let tmp5 = callback(preloadDefault, obj);
-      let tmp2 = callback;
+      obj2.style = items;
+      const obj3 = { uri: url };
+      obj2.source = obj3;
+      let tmp5 = React7(FastImageDefault, obj2);
+      let tmp2 = React7;
     } else {
-      tmp2 = callback;
-      obj = { style: null, allowFontScaling: false, children: null };
+      tmp2 = React7;
+      const obj = { style: null, allowFontScaling: false, children: null };
       const items1 = [, ];
       ({ emoji: arr[0], emojiText: arr[1] } = tmp);
-      obj[0] = items1;
-      obj[2] = surrogates;
-      tmp5 = callback(Button.LegacyText, obj);
+      obj.style = items1;
+      obj.children = surrogates;
+      tmp5 = React7(native.LegacyText, obj);
     }
-    obj1 = { onPress, accessibilityRole: "menuitem", leading: tmp5, label: tmp2(AutocompleteLabel, { text: ":" + name + ":" }) };
-    return tmp2(Form.FormRow, obj1);
+    const obj4 = { onPress, accessibilityRole: "menuitem", leading: tmp5, label: tmp2(AutocompleteLabel, { text: ":" + name + ":" }) };
+    return tmp2(Form.FormRow, obj4);
   },
   EmojiPremiumUpsell(arg0) {
     ({ results, onPress } = arg0);
-    return callback(Form.FormRow, { onPress, accessibilityRole: "menuitem", label: callback(ChannelAutocompleteEmojiUpsellDefault, { results }) });
+    return React7(Form.FormRow, { onPress, accessibilityRole: "menuitem", label: React7(ChannelAutocompleteEmojiUpsellDefault, { results }) });
   },
   Choice(arg0) {
     ({ choice, onPress } = arg0);
-    let obj = { onPress, accessibilityRole: "menuitem", label: null };
-    obj = { text: choice.displayName };
-    obj[2] = callback(AutocompleteLabel, obj);
-    return callback(Form.FormRow, obj);
+    const obj = { onPress, accessibilityRole: "menuitem", label: React7(AutocompleteLabel, { text: choice.displayName }) };
+    return React7(Form.FormRow, obj);
   },
   ChoiceLoading() {
-    const tmp = callback3();
-    const memo = React.useMemo(() => callback(table[27]).random(100, 300), []);
-    let obj = { DEPRECATED_style: tmp.row, leading: null };
-    obj = { style: tmp.commandChoiceLoadingContainer, children: callback(View, { style: items }) };
-    items = [tmp.commandChoiceLoadingItem, { width: memo }];
-    obj[1] = callback(View, obj);
-    return callback(Form.FormRow, obj);
+    const tmp = closure_11();
+    const memo = noop.useMemo(() => _modDef12.random(100, 300), []);
+    const obj = { DEPRECATED_style: tmp.row, leading: null };
+    const obj2 = { style: tmp.commandChoiceLoadingContainer, children: null };
+    const obj3 = { style: null };
+    const items = [tmp.commandChoiceLoadingItem, { width: memo }];
+    obj3.style = items;
+    obj2.children = React7(View, obj3);
+    obj.leading = React7(View, obj2);
+    return React7(Form.FormRow, obj);
   },
   Sticker(arg0) {
     ({ sticker, onPress, onLongPress, isInteracting } = arg0);
-    let obj = useStickerPackCategories;
-    const shouldAnimateSticker = obj.useShouldAnimateSticker(isInteracting);
-    obj = { accessibilityRole: "menuitem", style: callback3().stickerContainer, onPress, onLongPress, pointerEvents: "box-only", children: callback(StickerDefault, { sticker, size: 40, animated: shouldAnimateSticker }) };
-    return callback(PressableBase.PressableOpacity, obj);
+    const tmp = closure_11();
+    const shouldAnimateSticker = StickersHooks.useShouldAnimateSticker(isInteracting);
+    return React7(Pressables.PressableOpacity, { accessibilityRole: "menuitem", style: tmp.stickerContainer, onPress, onLongPress, pointerEvents: "box-only", children: React7(StickerDefault, { sticker, size: 40, animated: shouldAnimateSticker }) });
   },
   Label(text) {
-    return callback(Form.FormRow, { label: callback(AutocompleteLabel, { text: text.label }) });
+    return React7(Form.FormRow, { label: React7(AutocompleteLabel, { text: text.label }) });
   },
   Game(game) {
     game = game.game;
-    const tmp = callback3();
+    const tmp = closure_11();
     const tmp4 = getGameMediaRefURLDefault(game.id, game.icon, { size: 32 });
-    let obj = isNullOrEmpty;
     if (obj.isNullOrEmpty(tmp4)) {
-      obj = { size: "sm", style: null };
-      obj[1] = tmp.gameIcon;
-      let tmp6Result = tmp6(tmp5(8568).UnknownGameIcon, obj);
+      const obj2 = { size: "sm", style: tmp.gameIcon };
+      let tmp6Result = tmp6(tmp5(8596).UnknownGameIcon, obj2);
       let tmp8 = tmp6;
     } else {
-      obj = { style: null, source: null };
-      obj[0] = tmp.gameIcon;
-      obj1 = { uri: null };
-      obj1[0] = tmp4;
-      obj[1] = obj1;
-      tmp6Result = tmp6(preloadDefault, obj);
+      const obj3 = { style: tmp.gameIcon, source: null };
+      const obj4 = { uri: tmp4 };
+      obj3.source = obj4;
+      tmp6Result = tmp6(FastImageDefault, obj3);
       tmp8 = tmp6;
     }
-    return tmp8(Form.FormRow, { onPress: game.onPress, accessibilityRole: "menuitem", leading: tmp6Result, label: tmp8(AutocompleteLabel, obj3) });
+    const obj5 = { onPress: game.onPress, accessibilityRole: "menuitem", leading: tmp6Result, label: tmp8(AutocompleteLabel, { text: game.name }) };
+    return tmp8(Form.FormRow, obj5);
   },
   Timestamp(description) {
     let str = description.description;
     ({ mention, onPress } = description);
-    let obj = TIMESTAMP_FORMATS;
-    const result = obj.formatTimestampMention(mention);
+    const result = TimestampUtils.formatTimestampMention(mention);
     let tmp5Result = null;
     if (null != result) {
-      obj = { onPress: null, accessibilityRole: "menuitem", label: null, trailing: null };
-      obj[0] = onPress;
-      obj = { text: null };
-      obj[0] = result.formatted;
-      obj[2] = callback(AutocompleteLabel, obj);
+      const obj2 = { onPress, accessibilityRole: "menuitem", label: null, trailing: null };
+      const obj3 = { text: result.formatted };
+      obj2.label = React7(AutocompleteLabel, obj3);
       if (str == null) {
         str = "";
       }
-      obj1 = { text: null };
-      obj1[0] = str;
-      obj[3] = callback(tmp(5614).TableRowTrailingText, obj1);
-      tmp5Result = tmp5(tmp(5605).TableRow, obj);
+      const obj4 = { text: str };
+      obj2.trailing = React7(tmp(5628).TableRowTrailingText, obj4);
+      tmp5Result = tmp5(tmp(5619).TableRow, obj2);
     }
     return tmp5Result;
   }
 };
-let result = require("set").fileFinishedImporting("modules/autocompleter/native/Autocomplete.tsx");
-
-export default obj9;
 export const AUTOCOMPLETE_STICKER_NODE_SIZE = 56;
 export const AUTOCOMPLETE_STICKER_NODE_MARGIN = 4;

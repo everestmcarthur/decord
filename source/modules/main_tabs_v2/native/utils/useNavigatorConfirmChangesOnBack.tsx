@@ -1,45 +1,50 @@
-// Module ID: 10926
-// Function ID: 10927
+// Module ID: 10953
+// Function ID: 10954
 // Name: useNavigatorConfirmChangesOnBack
-// Dependencies: [19, 17, 1074, 10927, 10928, 2]
+// Dependencies: [19, 17, 1074, 10954, 10955, 2]
 // Exports: default
 
-// Module 10926 (useNavigatorConfirmChangesOnBack)
-import closure_2 from "noop" /* 19 */;
-import { Keyboard } from "get ActivityIndicator" /* 17 */;
-import { NOOP } from "ME" /* 1074 */;
+// Module 10953 (useNavigatorConfirmChangesOnBack)
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/utils/useNavigatorConfirmChangesOnBack.tsx");
+const Keyboard = fn(17).Keyboard;
+const NOOP = fn(1074).NOOP;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/useNavigatorConfirmChangesOnBack.tsx");
 
 export default function useNavigatorConfirmChangesOnBack() {
-  const ref = React.useRef(null);
-  dependencyMap = React.useRef(false);
-  obj = { onGoBack: ref(10927)(obj).onGoBack, ref };
-  obj = {
-    onBeforeGoBack(preventable) {
-      if (preventable.preventable) {
-        let current = ref2.current;
-        if (!current) {
-          const current2 = ref.current;
-          let hasUnsavedChangesResult;
-          if (current2 != null) {
-            hasUnsavedChangesResult = current2.hasUnsavedChanges();
+  const ref = noop.useRef(null);
+  dependencyMap = noop.useRef(false);
+  let obj = {
+    onGoBack: ref(10954)({
+      onBeforeGoBack(navigation) {
+        if (navigation.preventable) {
+          let current = ref2.current;
+          if (!current) {
+            const current2 = ref.current;
+            let hasUnsavedChangesResult;
+            if (current2 != null) {
+              hasUnsavedChangesResult = current2.hasUnsavedChanges();
+            }
+            current = true !== hasUnsavedChangesResult;
           }
-          current = true !== hasUnsavedChangesResult;
-        }
-        if (!current) {
-          preventable.preventDefault();
-          closure_1_3.dismiss();
-          const obj = { hasEdits: true, resetPending: null, onConfirm: null };
-          obj[1] = closure_1_4;
-          obj[2] = function onConfirm() {
-            closure_1_1.current = true;
-            preventable.goBack();
-          };
-          ref(ref2[4])(obj);
+          if (!current) {
+            navigation.preventDefault();
+            Keyboard.dismiss();
+            const obj = {
+              hasEdits: true,
+              resetPending,
+              onConfirm() {
+                    closure_1.current = true;
+                    navigation.goBack();
+                  }
+            };
+            ref(ref2[4])(obj);
+          }
         }
       }
-    }
+    }).onGoBack,
+    ref
   };
   return obj;
 };

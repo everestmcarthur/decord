@@ -1,12 +1,11 @@
-// Module ID: 11788
-// Function ID: 11789
-// Name: metadata
+// Module ID: 11814
+// Function ID: 11815
 // Dependencies: [2]
 
-// Module 11788 (metadata)
-import set from "set" /* 2 */;
+// Module 11814
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/orbs/quest_reward_mobile_idle_dark.png.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/orbs/quest_reward_mobile_idle_dark.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/0092f23efd20181c0ce3ce7f19a03b91e8b4e97b8478ea3538e7c04925e34df4.png";
 export const metadata = { fileBytes: 316850 };

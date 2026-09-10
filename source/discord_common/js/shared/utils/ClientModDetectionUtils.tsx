@@ -1,13 +1,13 @@
 // Module ID: 1339
 // Function ID: 1340
-// Name: usesClientMods
+// Name: ClientModDetectionUtils
 // Dependencies: [2]
 // Exports: usesClientMods
 
-// Module 1339 (usesClientMods)
-import set from "set" /* 2 */;
+// Module 1339 (ClientModDetectionUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/utils/ClientModDetectionUtils.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/utils/ClientModDetectionUtils.tsx");
 
 export function usesClientMods() {
   return false;

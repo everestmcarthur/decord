@@ -1,41 +1,66 @@
-// Module ID: 14531
-// Function ID: 14532
-// Name: importDefaultResult1
-// Dependencies: [1957, 2012, 1979, 1908, 4199, 4583, 4209, 5419, 1371, 4579, 9985, 1074, 14532, 14533, 14534, 14535, 6992, 13790, 14536, 14537, 8628, 1114, 14538, 9996, 7756, 4713, 5442, 1242, 4740, 1898, 2]
+// Module ID: 14556
+// Function ID: 14557
+// Name: MobileVoiceOverlayLifecycleManager
+// Dependencies: [1957, 2012, 1979, 1908, 4212, 4597, 4222, 5433, 1371, 4593, 10012, 1074, 14557, 14558, 14559, 14560, 7006, 13813, 14561, 14562, 8656, 1114, 14563, 10023, 7770, 4727, 5456, 1242, 4754, 1898, 2]
 
-// Module 14531 (importDefaultResult1)
-import initializeDefault from "initialize" /* 1898 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 2012 */;
-import closure_5 from "createGuildRecordFromRust" /* 1979 */;
-import importDefaultResult from "_detectH265HardwareDecode" /* 1908 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4199 */;
-import importDefaultResult1 from "createRTCConnection" /* 4583 */;
-import closure_9 from "markAllUserIdListsStale" /* 4209 */;
-import closure_10 from "anyoneHasFlagInContext" /* 5419 */;
-import closure_11 from "mergeGuildAvatar" /* 1371 */;
-import importDefaultResult2 from "updateVoiceState" /* 4579 */;
-import closure_13 from "getUserAgnosticState" /* 9985 */;
-import ME from "ME" /* 1074 */;
-import registerAsset from "registerAsset" /* 14532 */;
-import { intl, intl as intl2, intl as intl3, intl as intl4, intl as intl5, intl as intl6, intl as intl7, intl as intl8, intl as intl9, intl as intl10, intl as intl11 } from "getSystemLocale" /* 1114 */;
+// Module 14556 (MobileVoiceOverlayLifecycleManager)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import useChannelName from "useChannelName" /* 4727 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4754 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5456 */;
+import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 7770 */;
+import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 10023 */;
+import NativeMobileVoiceOverlayModuleDefault from "NativeMobileVoiceOverlayModule" /* 14563 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
+import SpeakingStore from "SpeakingStore" /* 5433 */;
+import UserStore from "UserStore" /* 1371 */;
+import VoiceStateStore from "VoiceStateStore" /* 4593 */;
+import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 10012 */;
+import LifecycleManager from "LifecycleManager" /* 1898 */;
 
-const require = arg1;
-({ AnalyticEvents: closure_14, Permissions: closure_15 } = ME);
-let items = [importDefaultResult2, importDefaultResult1, importDefaultResult];
-let closure_17 = { DISABLED: 0, [0]: "DISABLED", NOT_SHOWING: 1, [1]: "NOT_SHOWING", WAITING_FOR_SERVICE: 2, [2]: "WAITING_FOR_SERVICE", SHOWING: 3, [3]: "SHOWING" };
+require = fn;
+const GUILD_VOCAL_CHANNELS_KEY = fn(2012).GUILD_VOCAL_CHANNELS_KEY;
+const Constants = fn(1074);
+({ AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
+fn(14557);
+fn(14558);
+fn(14559);
+fn(14560);
+fn(7006);
+fn(13813);
+fn(14561);
+fn(14562);
+const registerAsset = fn(8656);
+let items = [VoiceStateStore, RTCConnectionStore, MediaEngineStore];
+const constants3 = { DISABLED: 0, [0]: "DISABLED", NOT_SHOWING: 1, [1]: "NOT_SHOWING", WAITING_FOR_SERVICE: 2, [2]: "WAITING_FOR_SERVICE", SHOWING: 3, [3]: "SHOWING" };
 let obj = { useSpeaker: null, mute: null, disconnectFromVoice: null, getInvite: null, switchChannels: null, openDiscord: null, inviteLinkCopied: null, channelSelect: null, closeWindow: null, searchChannels: null, noResults: null };
-obj[0] = intl.string(require("getSystemLocale").t.CVxXDM);
-obj[1] = intl2.string(require("getSystemLocale").t.w4m945);
-obj[2] = intl3.string(require("getSystemLocale").t["/lEZpt"]);
-obj[3] = intl4.string(require("getSystemLocale").t.JYzIWe);
-obj[4] = intl5.string(require("getSystemLocale").t.zJvWqU);
-obj[5] = intl6.string(require("getSystemLocale").t["G/Ez6p"]);
-obj[6] = intl7.string(require("getSystemLocale").t.OhctG7);
-obj[7] = intl8.string(require("getSystemLocale").t.r2ptsz);
-obj[8] = intl9.string(require("getSystemLocale").t.gaifwY);
-obj[9] = intl10.string(require("getSystemLocale").t.wM7uRI);
-obj[10] = intl11.string(require("getSystemLocale").t.wk3qsA);
+const intl = fn(1114).intl;
+obj.useSpeaker = intl.string(fn(1114).t.CVxXDM);
+const intl2 = fn(1114).intl;
+obj.mute = intl2.string(fn(1114).t.w4m945);
+const intl3 = fn(1114).intl;
+obj.disconnectFromVoice = intl3.string(fn(1114).t["/lEZpt"]);
+const intl4 = fn(1114).intl;
+obj.getInvite = intl4.string(fn(1114).t.JYzIWe);
+const intl5 = fn(1114).intl;
+obj.switchChannels = intl5.string(fn(1114).t.zJvWqU);
+const intl6 = fn(1114).intl;
+obj.openDiscord = intl6.string(fn(1114).t["G/Ez6p"]);
+const intl7 = fn(1114).intl;
+obj.inviteLinkCopied = intl7.string(fn(1114).t.OhctG7);
+const intl8 = fn(1114).intl;
+obj.channelSelect = intl8.string(fn(1114).t.r2ptsz);
+const intl9 = fn(1114).intl;
+obj.closeWindow = intl9.string(fn(1114).t.gaifwY);
+const intl10 = fn(1114).intl;
+obj.searchChannels = intl10.string(fn(1114).t.wM7uRI);
+const intl11 = fn(1114).intl;
+obj.noResults = intl11.string(fn(1114).t.wk3qsA);
 class MobileVoiceOverlayManager {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -47,14 +72,14 @@ class MobileVoiceOverlayManager {
     obj.layoutTrashedSubscription = null;
     obj.channelQueryUpdateSubscription = null;
     obj.handleMobileVoiceOverlayStoreUpdate = function handleMobileVoiceOverlayStoreUpdate() {
-      if (closure_1_13.getEnabled()) {
+      if (MobileVoiceOverlayStore.getEnabled()) {
         obj.handleOverlayEnable();
       } else {
         const result = obj.unsubscribeFromVoiceStateStoreUpdates();
         const result1 = obj.unsubscribeFromNativeEvents();
-        obj.overlayState = closure_1_17.DISABLED;
+        obj.overlayState = constants.DISABLED;
         if (obj.isOverlayShowing()) {
-          const obj2 = closure_1_1(closure_1_2[22]);
+          const obj2 = NativeMobileVoiceOverlayModuleDefault;
           if (obj2 != null) {
             obj2.hideOverlay();
           }
@@ -62,57 +87,57 @@ class MobileVoiceOverlayManager {
       }
     };
     obj.handleOverlayEnable = function handleOverlayEnable() {
-      obj = closure_1_1(closure_1_2[22]);
+      obj = NativeMobileVoiceOverlayModuleDefault;
       if (obj != null) {
         const enableOverlayResult = obj.enableOverlay();
-        obj.enableOverlay().then((arg0) => {
-          if (arg0) {
-            const result = closure_0.subscribeToVoiceStateStoreUpdates();
-            const result1 = closure_0.subscribeToNativeEvents();
-            closure_0.overlayState = closure_1_17.NOT_SHOWING;
+        obj.enableOverlay().then((result) => {
+          if (result) {
+            result = obj.subscribeToVoiceStateStoreUpdates();
+            const result1 = obj.subscribeToNativeEvents();
+            obj.overlayState = constants.NOT_SHOWING;
           } else {
-            closure_1_1(closure_1_2[23]).setEnabled(false);
-            closure_0.overlayState = closure_1_17.DISABLED;
-            obj = closure_1_1(closure_1_2[23]);
+            MobileVoiceOverlayActionCreatorsDefault.setEnabled(false);
+            obj.overlayState = constants.DISABLED;
+            obj = MobileVoiceOverlayActionCreatorsDefault;
           }
         }).catch(() => {
-          closure_1_1(closure_1_2[23]).setEnabled(false);
-          closure_0.overlayState = closure_1_17.DISABLED;
+          MobileVoiceOverlayActionCreatorsDefault.setEnabled(false);
+          obj.overlayState = constants.DISABLED;
         });
-        const nextPromise = obj.enableOverlay().then((arg0) => {
-          if (arg0) {
-            const result = closure_0.subscribeToVoiceStateStoreUpdates();
-            const result1 = closure_0.subscribeToNativeEvents();
-            closure_0.overlayState = closure_1_17.NOT_SHOWING;
+        const nextPromise = obj.enableOverlay().then((result) => {
+          if (result) {
+            result = obj.subscribeToVoiceStateStoreUpdates();
+            const result1 = obj.subscribeToNativeEvents();
+            obj.overlayState = constants.NOT_SHOWING;
           } else {
-            closure_1_1(closure_1_2[23]).setEnabled(false);
-            closure_0.overlayState = closure_1_17.DISABLED;
-            obj = closure_1_1(closure_1_2[23]);
+            MobileVoiceOverlayActionCreatorsDefault.setEnabled(false);
+            obj.overlayState = constants.DISABLED;
+            obj = MobileVoiceOverlayActionCreatorsDefault;
           }
         });
       }
     };
     obj.subscribeToVoiceStateStoreUpdates = function subscribeToVoiceStateStoreUpdates() {
       if (!obj.isSubscribedToVoiceStateStoreUpdates()) {
-        const item = closure_1_16.forEach((addChangeListener) => {
+        const item = items.forEach((addChangeListener) => {
           addChangeListener.addChangeListener(obj.handleOverlayUIStoreUpdate);
         });
       }
     };
     obj.unsubscribeFromVoiceStateStoreUpdates = function unsubscribeFromVoiceStateStoreUpdates() {
       if (obj.isSubscribedToVoiceStateStoreUpdates()) {
-        const item = closure_1_16.forEach((removeChangeListener) => {
+        const item = items.forEach((removeChangeListener) => {
           removeChangeListener.removeChangeListener(obj.handleOverlayUIStoreUpdate);
         });
       }
     };
     obj.isSubscribedToVoiceStateStoreUpdates = function isSubscribedToVoiceStateStoreUpdates() {
-      return null != closure_1_16.find((_changeCallbacks) => _changeCallbacks._changeCallbacks.has(obj.handleOverlayUIStoreUpdate));
+      return null != items.find((_changeCallbacks) => _changeCallbacks._changeCallbacks.has(obj.handleOverlayUIStoreUpdate));
     };
     obj.subscribeToNativeEvents = function subscribeToNativeEvents() {
-      obj = closure_1_1(closure_1_2[22]);
+      obj = NativeMobileVoiceOverlayModuleDefault;
       obj.layoutTrashedSubscription = obj.onLayoutTrashed(obj.handleLayoutTrashed);
-      obj.channelQueryUpdateSubscription = closure_1_1(closure_1_2[22]).onChannelQueryUpdate(obj.handleChannelQueryUpdate);
+      obj.channelQueryUpdateSubscription = NativeMobileVoiceOverlayModuleDefault.onChannelQueryUpdate(obj.handleChannelQueryUpdate);
     };
     obj.unsubscribeFromNativeEvents = function unsubscribeFromNativeEvents() {
       const layoutTrashedSubscription = obj.layoutTrashedSubscription;
@@ -125,7 +150,7 @@ class MobileVoiceOverlayManager {
       }
     };
     obj.handleOverlayUIStoreUpdate = function handleOverlayUIStoreUpdate() {
-      if (obj.overlayState !== closure_1_17.DISABLED) {
+      if (obj.overlayState !== constants.DISABLED) {
         const currentVoiceChannelId = obj.getVoiceConnectedGuildAndChannel().currentVoiceChannelId;
         if (currentVoiceChannelId !== obj.currentVoiceChannelId) {
           obj.currentVoiceChannelId = currentVoiceChannelId;
@@ -136,11 +161,11 @@ class MobileVoiceOverlayManager {
             const overlayState = obj.overlayState;
             if (tmp.WAITING_FOR_SERVICE !== overlayState) {
               if (tmp.NOT_SHOWING === overlayState) {
-                const result = closure_1_1(closure_1_2[24]).isForegroundServiceRunning((arg0) => {
+                const result = ForegroundServiceManagerDefault.isForegroundServiceRunning((arg0) => {
                   if (arg0) {
                     obj.showOverlay();
                   } else {
-                    obj.overlayState = closure_1_17.NOT_SHOWING;
+                    obj.overlayState = constants.NOT_SHOWING;
                   }
                 });
                 obj.overlayState = tmp.WAITING_FOR_SERVICE;
@@ -158,7 +183,7 @@ class MobileVoiceOverlayManager {
       }
     };
     obj.updateOverlayUI = function updateOverlayUI() {
-      const currentUser = closure_1_11.getCurrentUser();
+      const currentUser = UserStore.getCurrentUser();
       let id;
       if (currentUser != null) {
         id = currentUser.id;
@@ -166,29 +191,25 @@ class MobileVoiceOverlayManager {
       if (null != id) {
         const voiceConnectedGuildAndChannel = obj.getVoiceConnectedGuildAndChannel();
         ({ currentGuildId, currentVoiceChannelId } = voiceConnectedGuildAndChannel);
-        const channel = closure_1_3.getChannel(currentVoiceChannelId);
+        const channel = ChannelStore.getChannel(currentVoiceChannelId);
         if (null != currentVoiceChannelId) {
           if (null != channel) {
             const overlayUser = obj4.getOverlayUser(id);
             if (null != overlayUser) {
               const _Object = Object;
-              const keys = Object.keys(closure_1_12.getVoiceStatesForChannel(currentVoiceChannelId));
+              const keys = Object.keys(VoiceStateStore.getVoiceStatesForChannel(currentVoiceChannelId));
               let tmp10 = null;
               if (overlayUser.speaking) {
                 tmp10 = overlayUser;
               } else {
                 for (const item10014 of keys) {
-                  let tmp5 = obj;
-                  let tmp6 = obj;
                   let overlayUser1 = obj.getOverlayUser(item10014);
-                  let tmp8 = overlayUser1;
-                  let speaking;
+                  speaking = undefined;
                   if (overlayUser1 != null) {
                     speaking = overlayUser1.speaking;
                   }
                   if (speaking) {
                     tmp10 = overlayUser1;
-                    let tmp11 = obj;
                     obj.return();
                     break;
                   }
@@ -207,48 +228,31 @@ class MobileVoiceOverlayManager {
               while (iter !== undefined) {
                 let tmp19 = nextResult;
                 if (nextResult !== id) {
-                  let tmp20 = nextResult;
-                  let tmp21 = tmp10;
                   let userId;
                   if (tmp10 != null) {
                     userId = tmp10.userId;
                   }
                   if (tmp19 !== userId) {
-                    let tmp23 = obj;
-                    let tmp24 = obj;
-                    let tmp25 = nextResult;
                     let overlayUser2 = obj.getOverlayUser(tmp19);
                     if (null != overlayUser2) {
-                      let tmp28 = overlayUser2;
-                      let arr = items.push(tmp27);
+                      let arr2 = items.push(tmp27);
                       if (items.length >= 3) {
-                        let tmp30 = iter;
                         iter.return();
                         break;
                       }
                       let tmp31 = obj;
                       let obj2 = obj;
-                      let tmp32 = closure_1_17;
-                      if (obj.overlayState !== closure_1_17.SHOWING) {
-                        let tmp33 = tmp31;
+                      if (obj.overlayState !== constants.SHOWING) {
                         let str = "";
                         let result = obj2.refreshChannelSelectorResults("");
                       }
-                      let tmp35 = tmp31;
                       obj2.currentVoiceChannelId = currentVoiceChannelId;
-                      let tmp36 = closure_1_1;
-                      let tmp37 = closure_1_2;
-                      let obj3 = closure_1_1(closure_1_2[22]);
+                      let obj3 = NativeMobileVoiceOverlayModuleDefault;
                       if (obj3 != null) {
-                        obj = { users: null, channelName: null, guildName: null, guildId: null, channelId: null, extraUsers: null, deafened: null, muted: null, connectionQuality: null, canGenerateInvite: null, channelSelectorResults: null };
-                        obj[0] = items;
-                        let tmp51 = obj;
-                        let obj6 = obj(tmp37[25]);
-                        let tmp52 = closure_1_11;
-                        let tmp53 = closure_1_9;
-                        obj[1] = obj6.computeChannelName(channel, closure_1_11, closure_1_9);
-                        let tmp54 = closure_1_5;
-                        let guild = closure_1_5.getGuild(currentGuildId);
+                        let obj5 = { users: items, channelName: null, guildName: null, guildId: null, channelId: null, extraUsers: null, deafened: null, muted: null, connectionQuality: null, canGenerateInvite: null, channelSelectorResults: null };
+                        let obj6 = useChannelName;
+                        obj5.channelName = obj6.computeChannelName(channel, UserStore, RelationshipStore);
+                        let guild = GuildStore.getGuild(currentGuildId);
                         let str2;
                         if (guild != null) {
                           str2 = guild.name;
@@ -256,20 +260,16 @@ class MobileVoiceOverlayManager {
                         if (str2 == null) {
                           str2 = "";
                         }
-                        obj[2] = str2;
-                        obj[3] = currentGuildId;
-                        obj[4] = currentVoiceChannelId;
-                        obj[5] = keys.length - items.length;
-                        let tmp38 = closure_1_6;
-                        obj[6] = closure_1_6.isSelfDeaf();
-                        obj[7] = closure_1_6.isSelfMute();
-                        let tmp39 = closure_1_8;
-                        obj[8] = closure_1_8.getQuality();
-                        let tmp40 = closure_1_7;
-                        let tmp41 = closure_1_15;
-                        obj[9] = closure_1_7.can(closure_1_15.CREATE_INSTANT_INVITE, channel);
-                        obj[10] = tmp31.channelSelectorResults;
-                        let setDataResult = obj3.setData(obj);
+                        obj5.guildName = str2;
+                        obj5.guildId = currentGuildId;
+                        obj5.channelId = currentVoiceChannelId;
+                        obj5.extraUsers = keys.length - items.length;
+                        obj5.deafened = MediaEngineStore.isSelfDeaf();
+                        obj5.muted = MediaEngineStore.isSelfMute();
+                        obj5.connectionQuality = RTCConnectionStore.getQuality();
+                        obj5.canGenerateInvite = PermissionStore.can(constants2.CREATE_INSTANT_INVITE, channel);
+                        obj5.channelSelectorResults = tmp31.channelSelectorResults;
+                        let setDataResult = obj3.setData(obj5);
                       }
                     }
                   }
@@ -280,43 +280,40 @@ class MobileVoiceOverlayManager {
           }
         }
         obj4 = obj;
-        const tmp43 = obj;
       }
     };
     obj.getVoiceConnectedGuildAndChannel = function getVoiceConnectedGuildAndChannel() {
-      obj = guildId;
       guildId = guildId.getGuildId();
       if (guildId == null) {
         guildId = null;
       }
-      obj = { currentGuildId: guildId, currentVoiceChannelId: null };
-      let channelId = obj.getChannelId();
+      const obj2 = { currentGuildId: guildId, currentVoiceChannelId: null };
+      let channelId = guildId.getChannelId();
       if (channelId == null) {
         channelId = null;
       }
-      obj[1] = channelId;
-      return obj;
+      obj2.currentVoiceChannelId = channelId;
+      return obj2;
     };
     obj.refreshChannelSelectorResults = function refreshChannelSelectorResults(query) {
       let currentGuildId = null;
       if (0 === query.length) {
         currentGuildId = obj.getVoiceConnectedGuildAndChannel().currentGuildId;
       }
-      obj = closure_1_1(closure_1_2[26]);
-      obj = {
+      obj = AutocompleteUtilsDefault;
+      obj.channelSelectorResults = obj.queryChannels({
         query,
         guildId: currentGuildId,
         limit: 15,
         fuzzy: true,
         filter(id) {
-          return id.id !== lib.currentVoiceChannelId && !id.isGuildStageVoice();
+          return id.id !== obj.currentVoiceChannelId && !id.isGuildStageVoice();
         },
-        type: closure_1_4,
+        type: GUILD_VOCAL_CHANNELS_KEY,
         allowEmptyQueries: true
-      };
-      obj.channelSelectorResults = obj.queryChannels(obj).map((record) => {
+      }).map((record) => {
         record = record.record;
-        obj = { channelId: record.id, guildId: record.guild_id, channelName: lib(table[25]).computeChannelName(record, closure_11, closure_9), guildName: null, categoryName: null };
+        obj = { channelId: record.id, guildId: record.guild_id, channelName: closure_1_0(dependencyMap[25]).computeChannelName(record, user, closure_1_9), guildName: null, categoryName: null };
         guild = guild.getGuild(record.guild_id);
         let str;
         if (guild != null) {
@@ -325,58 +322,53 @@ class MobileVoiceOverlayManager {
         if (str == null) {
           str = "";
         }
-        obj[3] = str;
+        obj.guildName = str;
         channel = channel.getChannel(record.parent_id);
         let str2 = "";
         if (null != channel) {
-          str2 = lib(table[25]).computeChannelName(channel, closure_11, closure_9);
-          const tmpResult = lib(table[25]);
+          str2 = closure_1_0(dependencyMap[25]).computeChannelName(channel, user, closure_1_9);
+          const tmpResult = closure_1_0(dependencyMap[25]);
         }
-        obj[4] = str2;
+        obj.categoryName = str2;
         return obj;
       });
     };
-    obj.showOverlay = function showOverlay(closure_1_18) {
+    obj.showOverlay = function showOverlay() {
       const voiceConnectedGuildAndChannel = obj.getVoiceConnectedGuildAndChannel();
-      const channel = closure_1_3.getChannel(voiceConnectedGuildAndChannel.currentVoiceChannelId);
-      const rTCConnectionId = closure_1_8.getRTCConnectionId();
-      obj = { type: "voice", rtc_connection_id: rTCConnectionId };
-      const obj2 = closure_1_1(closure_1_2[27]);
-      const merged = Object.assign(obj(closure_1_2[28]).collectChannelAnalyticsMetadata(channel));
-      const obj4 = obj(closure_1_2[28]);
-      const merged1 = Object.assign(obj(closure_1_2[28]).collectGuildAnalyticsMetadata(voiceConnectedGuildAndChannel.currentGuildId));
-      obj2.track(closure_1_14.MOBILE_OVERLAY_OPENED, obj);
-      const obj6 = closure_1_1(closure_1_2[22]);
+      const channel = ChannelStore.getChannel(voiceConnectedGuildAndChannel.currentVoiceChannelId);
+      const rTCConnectionId = RTCConnectionStore.getRTCConnectionId();
+      const obj2 = AnalyticsUtilsDefault;
+      const obj3 = { type: "voice", rtc_connection_id: rTCConnectionId };
+      const merged = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(channel));
+      const merged1 = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(voiceConnectedGuildAndChannel.currentGuildId));
+      obj2.track(constants.MOBILE_OVERLAY_OPENED, obj3);
+      const obj6 = NativeMobileVoiceOverlayModuleDefault;
       if (obj6 != null) {
-        obj6.showOverlay(closure_1_18);
+        obj6.showOverlay(obj);
       }
       obj.updateOverlayUI();
-      obj.overlayState = closure_1_17.SHOWING;
+      obj.overlayState = constants.SHOWING;
     };
     obj.hideOverlay = function hideOverlay() {
-      const rTCConnectionId = closure_1_8.getRTCConnectionId();
-      obj = closure_1_1(closure_1_2[27]);
-      obj.track(closure_1_14.MOBILE_OVERLAY_CLOSED, { type: "voice", rtc_connection_id: rTCConnectionId });
-      closure_1_1(closure_1_2[27]).track(closure_1_14.MOBILE_OVERLAY_CLOSED, {});
-      const obj3 = closure_1_1(closure_1_2[22]);
+      const rTCConnectionId = RTCConnectionStore.getRTCConnectionId();
+      obj = AnalyticsUtilsDefault;
+      obj.track(constants.MOBILE_OVERLAY_CLOSED, { type: "voice", rtc_connection_id: rTCConnectionId });
+      AnalyticsUtilsDefault.track(constants.MOBILE_OVERLAY_CLOSED, {});
+      const obj3 = NativeMobileVoiceOverlayModuleDefault;
       if (obj3 != null) {
         obj3.hideOverlay();
       }
-      obj.overlayState = closure_1_17.NOT_SHOWING;
+      obj.overlayState = constants.NOT_SHOWING;
     };
     obj.isOverlayShowing = function isOverlayShowing() {
-      return obj.overlayState === closure_1_17.SHOWING || obj.overlayState === tmp.WAITING_FOR_SERVICE;
+      return obj.overlayState === constants.SHOWING || obj.overlayState === tmp.WAITING_FOR_SERVICE;
     };
     obj.getOverlayUser = function getOverlayUser(id) {
       user = user.getUser(id);
       if (null == user) {
         return null;
       } else {
-        obj = { userId: null, avatar: null, speaking: null, discriminator: null };
-        obj[0] = id;
-        obj[1] = user.avatar;
-        obj[2] = speaking.isSpeaking(id);
-        obj[3] = user.discriminator;
+        obj = { userId: id, avatar: user.avatar, speaking: speaking.isSpeaking(id), discriminator: user.discriminator };
         return obj;
       }
     };
@@ -394,18 +386,17 @@ class MobileVoiceOverlayManager {
 const prototype = MobileVoiceOverlayManager.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
-  if (closure_13.getEnabled()) {
+  if (MobileVoiceOverlayStore.getEnabled()) {
     self.handleOverlayEnable();
   }
-  closure_13.addChangeListener(self.handleMobileVoiceOverlayStoreUpdate);
+  MobileVoiceOverlayStore.addChangeListener(self.handleMobileVoiceOverlayStoreUpdate);
 };
 prototype["terminate"] = function terminate() {
-  closure_13.removeChangeListener(this.handleMobileVoiceOverlayStoreUpdate);
+  MobileVoiceOverlayStore.removeChangeListener(this.handleMobileVoiceOverlayStoreUpdate);
   const result = this.unsubscribeFromVoiceStateStoreUpdates();
   const result1 = this.unsubscribeFromNativeEvents();
 };
 let closure_19 = new MobileVoiceOverlayManager();
-initializeDefault;
 class MobileVoiceOverlayLifecycleManager extends tmp15 {
 }
 const prototype2 = MobileVoiceOverlayLifecycleManager.prototype;
@@ -416,6 +407,7 @@ prototype2["_terminate"] = function _terminate() {
   closure_19.terminate();
 };
 const mobileVoiceOverlayLifecycleManager = new MobileVoiceOverlayLifecycleManager();
-let result = require("set").fileFinishedImporting("modules/voice_overlay/native/MobileVoiceOverlayLifecycleManager.android.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/voice_overlay/native/MobileVoiceOverlayLifecycleManager.android.tsx");
 
 export default mobileVoiceOverlayLifecycleManager;

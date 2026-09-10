@@ -1,15 +1,17 @@
-// Module ID: 10928
-// Function ID: 10929
+// Module ID: 10955
+// Function ID: 10956
 // Name: maybeShowDiscardChangesAlert
-// Dependencies: [4905, 1114, 2]
+// Dependencies: [4919, 1114, 2]
 // Exports: default, showDiscardChangesAlert
 
-// Module 10928 (maybeShowDiscardChangesAlert)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import _modDef4905 from "module_4905" /* 4905 */;
+// Module 10955 (maybeShowDiscardChangesAlert)
+import util from "util" /* 1114 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4919 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/user_settings/profiles/native/maybeShowDiscardChangesAlert.tsx");
+const require = globalThis.__r;
+
+const result = size.fileFinishedImporting("modules/user_settings/profiles/native/maybeShowDiscardChangesAlert.tsx");
 
 export default function maybeShowDiscardChangesAlert(onHasEdits) {
   ({ resetPending: require, onConfirm } = onHasEdits);
@@ -18,24 +20,24 @@ export default function maybeShowDiscardChangesAlert(onHasEdits) {
     if (onHasEdits != null) {
       onHasEdits();
     }
-    let obj = onConfirm(4905);
-    obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null };
-    const intl = getSystemLocale.intl;
-    obj[0] = intl.string(getSystemLocale.t.pvRCSu);
-    const intl2 = getSystemLocale.intl;
-    obj[1] = intl2.string(getSystemLocale.t.DRi46S);
-    const intl3 = getSystemLocale.intl;
-    obj[2] = intl3.string(getSystemLocale.t["6GQDFu"]);
-    const intl4 = getSystemLocale.intl;
-    obj[3] = intl4.string(getSystemLocale.t.DmDzZB);
-    obj[4] = function onConfirm() {
-      callback();
+    const obj2 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null };
+    const intl = util.intl;
+    obj2.title = intl.string(util.t.pvRCSu);
+    const intl2 = util.intl;
+    obj2.body = intl2.string(util.t.DRi46S);
+    const intl3 = util.intl;
+    obj2.confirmText = intl3.string(util.t["6GQDFu"]);
+    const intl4 = util.intl;
+    obj2.cancelText = intl4.string(util.t.DmDzZB);
+    obj2.onConfirm = function onConfirm() {
+      require();
       onConfirm();
     };
-    obj[5] = function onCancel() {
-      onConfirm(table[0]).close();
+    obj2.onCancel = function onCancel() {
+      onConfirm(dependencyMap[0]).close();
     };
-    let showResult = obj.show(obj);
+    let showResult = onConfirm(4919).show(obj2);
+    const obj = onConfirm(4919);
   } else {
     showResult = onConfirm();
   }
@@ -43,17 +45,16 @@ export default function maybeShowDiscardChangesAlert(onHasEdits) {
 };
 export const showDiscardChangesAlert = function showDiscardChangesAlert(arg0) {
   ({ onConfirm, onCancel } = arg0);
-  let obj = _modDef4905;
-  obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.pvRCSu);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(getSystemLocale.t.DRi46S);
-  const intl3 = getSystemLocale.intl;
-  obj[2] = intl3.string(getSystemLocale.t["6GQDFu"]);
-  const intl4 = getSystemLocale.intl;
-  obj[3] = intl4.string(getSystemLocale.t.DmDzZB);
-  obj[4] = onConfirm;
-  obj[5] = onCancel;
-  return obj.show(obj);
+  const obj2 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null };
+  const intl = util.intl;
+  obj2.title = intl.string(util.t.pvRCSu);
+  const intl2 = util.intl;
+  obj2.body = intl2.string(util.t.DRi46S);
+  const intl3 = util.intl;
+  obj2.confirmText = intl3.string(util.t["6GQDFu"]);
+  const intl4 = util.intl;
+  obj2.cancelText = intl4.string(util.t.DmDzZB);
+  obj2.onConfirm = onConfirm;
+  obj2.onCancel = onCancel;
+  return actions_AlertActionCreatorsDefault.show(obj2);
 };

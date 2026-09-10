@@ -1,108 +1,49 @@
-// Module ID: 16563
-// Function ID: 16564
+// Module ID: 16594
+// Function ID: 16595
 // Name: OnboardingHomeResourcesSheet
-// Dependencies: [19, 16561, 21, 4262, 576, 16562, 12288, 4527, 7198, 7200, 1396, 5587, 2]
+// Dependencies: [19, 16592, 21, 4275, 576, 16593, 12314, 4541, 7211, 7213, 1396, 5601, 2]
 // Exports: default
 
-// Module 16563 (OnboardingHomeResourcesSheet)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 16562 */;
-import { ONBOARDING_HOME_RESOURCES_SHEET_KEY as closure_3 } from "ONBOARDING_HOME_RESOURCES_SHEET_KEY" /* 16561 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16594 (OnboardingHomeResourcesSheet)
+import nativeDefault from "native" /* 576 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12314 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 16593 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/native/OnboardingHomeResourcesSheet.tsx");
+require = fn;
+let closure_3 = fn(16592).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
+const jsx = fn(21).jsx;
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_onboarding_home/native/OnboardingHomeResourcesSheet.tsx");
 
 export default function OnboardingHomeResourcesSheet(guildId) {
   guildId = guildId.guildId;
-  importDefault = undefined;
-  let obj = guildId(4262);
-  importDefault = obj.useToken(ThemesDefault.modules.mobile.TABLE_ROW_ICON_SIZE);
-  obj = { children: null };
-  obj = {
+  importDefault = guildId(4275).useToken(nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE);
+  let obj = guildId(4275);
+  let obj2 = { children: null };
+  const arr = useResourceChannelsDefault(guildId);
+  obj2.children = jsx(guildId(7213).ActionSheetRow.Group, {
     hasIcons: true,
     children: useResourceChannelsDefault(guildId).map((label) => {
-      closure_0 = label;
-      let obj = callback(closure_1_2[10]);
-      const resourceChannelIconURL = obj.getResourceChannelIconURL(label);
-      obj = { label: label.title, icon: null, onPress: null, arrow: true };
+      const resourceChannelIconURL = height(dependencyMap[10]).getResourceChannelIconURL(label);
+      const obj2 = { label: label.title, icon: null, onPress: null, arrow: true };
       let tmp4Result;
       if (null != resourceChannelIconURL) {
-        obj = { style: null, source: null };
-        obj1 = { width: null, height: null };
-        obj1[0] = callback;
-        obj1[1] = callback;
-        obj[0] = obj1;
-        const obj2 = { uri: null };
-        obj2[0] = resourceChannelIconURL;
-        obj[1] = obj2;
-        tmp4Result = tmp4(callback(tmp2[11]), obj);
+        const obj3 = { style: null, source: null };
+        const size = { width: height, height };
+        obj3.style = size;
+        const obj4 = { uri: resourceChannelIconURL };
+        obj3.source = obj4;
+        tmp4Result = tmp4(height(tmp2[11]), obj3);
       }
-      obj[1] = tmp4Result;
-      obj[2] = function onPress() {
-        const homeResourceChannel = guildId(closure_2_2[6]).selectHomeResourceChannel(label, label.channelId);
-        const obj = guildId(closure_2_2[6]);
-        callback(closure_2_2[7]).hideActionSheet(closure_2_3);
+      obj2.icon = tmp4Result;
+      obj2.onPress = function onPress() {
+        const homeResourceChannel = GuildOnboardingHomeActionCreators.selectHomeResourceChannel(guildId, label.channelId);
+        ActionSheetActionCreatorsDefault.hideActionSheet(closure_3);
       };
-      return closure_1_4(guildId(closure_1_2[9]).ActionSheetRow, obj, label.channelId);
-    })
-  };
-  obj[0] = jsx(guildId(7200).ActionSheetRow.Group, {
-    hasIcons: true,
-    children: useResourceChannelsDefault(guildId).map((label) => {
-      closure_0 = label;
-      let obj = callback(closure_1_2[10]);
-      const resourceChannelIconURL = obj.getResourceChannelIconURL(label);
-      obj = { label: label.title, icon: null, onPress: null, arrow: true };
-      let tmp4Result;
-      if (null != resourceChannelIconURL) {
-        obj = { style: null, source: null };
-        obj1 = { width: null, height: null };
-        obj1[0] = callback;
-        obj1[1] = callback;
-        obj[0] = obj1;
-        const obj2 = { uri: null };
-        obj2[0] = resourceChannelIconURL;
-        obj[1] = obj2;
-        tmp4Result = tmp4(callback(tmp2[11]), obj);
-      }
-      obj[1] = tmp4Result;
-      obj[2] = function onPress() {
-        const homeResourceChannel = guildId(closure_2_2[6]).selectHomeResourceChannel(label, label.channelId);
-        const obj = guildId(closure_2_2[6]);
-        callback(closure_2_2[7]).hideActionSheet(closure_2_3);
-      };
-      return closure_1_4(guildId(closure_1_2[9]).ActionSheetRow, obj, label.channelId);
+      return jsx(guildId(dependencyMap[9]).ActionSheetRow, { label: label.title, icon: null, onPress: null, arrow: true }, label.channelId);
     })
   });
-  return jsx(guildId(7198).ActionSheet, {
-    hasIcons: true,
-    children: useResourceChannelsDefault(guildId).map((label) => {
-      closure_0 = label;
-      let obj = callback(closure_1_2[10]);
-      const resourceChannelIconURL = obj.getResourceChannelIconURL(label);
-      obj = { label: label.title, icon: null, onPress: null, arrow: true };
-      let tmp4Result;
-      if (null != resourceChannelIconURL) {
-        obj = { style: null, source: null };
-        obj1 = { width: null, height: null };
-        obj1[0] = callback;
-        obj1[1] = callback;
-        obj[0] = obj1;
-        const obj2 = { uri: null };
-        obj2[0] = resourceChannelIconURL;
-        obj[1] = obj2;
-        tmp4Result = tmp4(callback(tmp2[11]), obj);
-      }
-      obj[1] = tmp4Result;
-      obj[2] = function onPress() {
-        const homeResourceChannel = guildId(closure_2_2[6]).selectHomeResourceChannel(label, label.channelId);
-        const obj = guildId(closure_2_2[6]);
-        callback(closure_2_2[7]).hideActionSheet(closure_2_3);
-      };
-      return closure_1_4(guildId(closure_1_2[9]).ActionSheetRow, obj, label.channelId);
-    })
-  });
+  return jsx(guildId(7211).ActionSheet, { children: null });
 };

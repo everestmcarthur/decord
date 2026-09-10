@@ -1,29 +1,30 @@
-// Module ID: 13827
-// Function ID: 13828
-// Name: updateVoiceStates
-// Dependencies: [1908, 4579, 4584, 4585, 12, 2]
+// Module ID: 13850
+// Function ID: 13851
+// Name: VoiceStateAnalytics
+// Dependencies: [1908, 4593, 4598, 4599, 12, 2]
 
-// Module 13827 (updateVoiceStates)
-import apply from "apply" /* 12 */;
-import closure_2 from "_detectH265HardwareDecode" /* 1908 */;
-import closure_3 from "updateVoiceState" /* 4579 */;
-import closure_4 from "getVoiceStatesForGuild" /* 4584 */;
-import { SpeakingFlags } from "DesktopSources" /* 4585 */;
+// Module 13850 (VoiceStateAnalytics)
+import _mod12 from "module_12" /* 12 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import VoiceStateStore from "VoiceStateStore" /* 4593 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4598 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("lib/VoiceStateAnalytics.tsx");
+require = fn;
+const SpeakingFlags = fn(4599).SpeakingFlags;
+const size = fn(2);
+const result = size.fileFinishedImporting("lib/VoiceStateAnalytics.tsx");
 class VoiceStateAnalytics {
   constructor(arg0, arg1) {
-    obj = Object.create(new.target.prototype);
+    merged = Object.assign({ maxVoiceStateCount: 1, totalParticipants: null, speaking: null, maxListenerCount: 0, totalListeners: null, maxSpeakerCount: 0, totalSpeakers: null });
     set = new Set();
-    obj[1] = set;
-    obj[2] = SpeakingFlags.NONE;
+    merged[1] = set;
+    merged[2] = SpeakingFlags.NONE;
     set1 = new Set();
-    obj[4] = set1;
-    obj[6] = {};
-    obj.userId = global;
-    setChannelIdResult = obj.setChannelId(arg1);
-    return obj;
+    merged[4] = set1;
+    merged[6] = {};
+    merged.userId = global;
+    setChannelIdResult = merged.setChannelId(fn);
+    return merged;
   }
 }
 const prototype = VoiceStateAnalytics.prototype;
@@ -33,7 +34,7 @@ prototype["updateVoiceStates"] = function updateVoiceStates(userId, channelId) {
     const totalParticipants = self.totalParticipants;
     totalParticipants.add(userId);
     const _Math = Math;
-    self.maxVoiceStateCount = Math.max(closure_4.countVoiceStatesForChannel(channelId), self.maxVoiceStateCount);
+    self.maxVoiceStateCount = Math.max(SortedVoiceStateStore.countVoiceStatesForChannel(channelId), self.maxVoiceStateCount);
   } else {
     if (tmp2) {
       self.totalSpeakers[userId] = SpeakingFlags.NONE;
@@ -49,32 +50,31 @@ prototype["getStats"] = function getStats() {
   return { max_voice_state_count: this.maxVoiceStateCount, total_voice_state_count: this.totalParticipants.size, max_listener_count: this.maxListenerCount, total_listener_count: this.totalListeners.size, max_speaker_count: this.maxSpeakerCount, total_speaker_count: Object.keys(this.totalSpeakers).length };
 };
 prototype["getUserVoiceSettingsStats"] = function getUserVoiceSettingsStats(arg0) {
-  settings = settings.getSettings(arg0);
+  const settings = MediaEngineStore.getSettings(arg0);
   const set = new Set(Object.keys(settings.localMutes));
   const set1 = new Set(Object.keys(settings.localVolumes));
   set1.delete(this.userId);
   set.delete(this.userId);
   const obj = { num_local_voice_user_mutes: null, num_local_voice_volumes: null };
-  let arr = Array.from(set);
-  obj[0] = apply.intersection(arr, Array.from(this.totalParticipants)).length;
-  const obj4 = apply;
-  arr = Array.from(set1);
-  obj[1] = apply.intersection(arr, Array.from(this.totalParticipants)).length;
+  const obj4 = _mod12;
+  obj.num_local_voice_user_mutes = obj4.intersection(Array.from(set), Array.from(this.totalParticipants)).length;
+  const arr = Array.from(set);
+  const obj5 = _mod12;
+  obj.num_local_voice_volumes = obj5.intersection(Array.from(set1), Array.from(this.totalParticipants)).length;
   return obj;
 };
 prototype["setSpeaking"] = function setSpeaking(userId, speaking) {
-  let self = this;
-  self = this;
+  const self = this;
   if (speaking !== SpeakingFlags.NONE) {
-    const voiceStateForChannel = store.getVoiceStateForChannel(self.channelId, userId);
+    const voiceStateForChannel = VoiceStateStore.getVoiceStateForChannel(self.channelId, userId);
     if (null != voiceStateForChannel) {
       if (!voiceStateForChannel.selfMute) {
         if (!voiceStateForChannel.mute) {
           self.totalSpeakers[userId] = speaking;
           const _Object = Object;
-          let values = Object.values(self.totalSpeakers);
+          const values = Object.values(self.totalSpeakers);
           const _Math = Math;
-          self.maxSpeakerCount = Math.max(self.maxSpeakerCount, values.filter((arg0) => arg0 !== constants.NONE).length);
+          self.maxSpeakerCount = Math.max(self.maxSpeakerCount, values.filter((item) => item !== constants.NONE).length);
         }
       }
     }
@@ -85,8 +85,8 @@ prototype["setSpeaking"] = function setSpeaking(userId, speaking) {
     if (speaking !== self.speaking) {
       if (speaking !== tmp.NONE) {
         const _Object2 = Object;
-        values = Object.values(store.getVoiceStatesForChannel(self.channelId));
-        const found = values.filter((selfDeaf) => {
+        const values2 = Object.values(VoiceStateStore.getVoiceStatesForChannel(self.channelId));
+        const found = values2.filter((selfDeaf) => {
           selfDeaf = selfDeaf.selfDeaf;
           let tmp = !selfDeaf;
           if (!selfDeaf) {
@@ -106,8 +106,7 @@ prototype["setSpeaking"] = function setSpeaking(userId, speaking) {
   }
 };
 prototype["setChannelId"] = function setChannelId(channelId) {
-  let self = this;
-  self = this;
+  const self = this;
   if (channelId !== this.channelId) {
     self.channelId = channelId;
     const _Set = Set;
@@ -115,10 +114,10 @@ prototype["setChannelId"] = function setChannelId(channelId) {
     const set = new Set(items);
     self.totalParticipants = set;
     const _Object = Object;
-    const keys = Object.keys(store.getVoiceStatesForChannel(self.channelId));
-    const item = keys.forEach((arg0) => {
+    const keys = Object.keys(VoiceStateStore.getVoiceStatesForChannel(self.channelId));
+    const item = keys.forEach((item) => {
       const totalParticipants = self.totalParticipants;
-      return totalParticipants.add(arg0);
+      return totalParticipants.add(item);
     });
     self.maxVoiceStateCount = keys.length;
     self.speaking = SpeakingFlags.NONE;

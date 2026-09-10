@@ -1,25 +1,28 @@
-// Module ID: 13262
-// Function ID: 13263
+// Module ID: 13285
+// Function ID: 13286
 // Name: useCanSearchForumPostsByChannelId
-// Dependencies: [1957, 4199, 1074, 504, 2]
+// Dependencies: [1957, 4212, 1074, 504, 2]
 // Exports: useCanSearchForumPostsByChannelId
 
-// Module 13262 (useCanSearchForumPostsByChannelId)
-import closure_2 from "ensureGuildLoaded" /* 1957 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4199 */;
-import { Permissions } from "ME" /* 1074 */;
+// Module 13285 (useCanSearchForumPostsByChannelId)
+import ChannelStore from "ChannelStore" /* 1957 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/forums/native/hooks/useCanSearchForumPostsByChannelId.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const Permissions = fn(1074).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/hooks/useCanSearchForumPostsByChannelId.tsx");
 
 export const useCanSearchForumPostsByChannelId = function useCanSearchForumPostsByChannelId(channelId) {
-  const _require = channelId;
-  const items = [closure_2, closure_3];
-  return _require(504).useStateFromStores(items, () => {
-    const channel = closure_1_2.getChannel(closure_0);
+  _require = channelId;
+  const items = [ChannelStore, PermissionStore];
+  return require("initialize").useStateFromStores(items, () => {
+    const channel = ChannelStore.getChannel(closure_0);
     let canResult = null != channel;
     if (canResult) {
-      canResult = closure_1_3.can(closure_1_4.READ_MESSAGE_HISTORY, channel);
+      canResult = PermissionStore.can(Permissions.READ_MESSAGE_HISTORY, channel);
     }
     return canResult;
   });

@@ -1,26 +1,26 @@
-// Module ID: 8845
-// Function ID: 8846
+// Module ID: 8872
+// Function ID: 8873
 // Name: HeartOutlineIcon
-// Dependencies: [19, 21, 576, 4261, 8846, 2]
+// Dependencies: [19, 21, 576, 4274, 8873, 2]
 // Exports: HeartOutlineIcon
 
-// Module 8845 (HeartOutlineIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 8846 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 8872 (HeartOutlineIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod8873 from "module_8873" /* 8873 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/HeartOutlineIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/HeartOutlineIcon.tsx");
 
 export const HeartOutlineIcon = function HeartOutlineIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8873, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

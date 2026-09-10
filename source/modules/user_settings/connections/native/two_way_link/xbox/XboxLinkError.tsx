@@ -1,32 +1,31 @@
-// Module ID: 9451
-// Function ID: 9452
-// Name: XboxLinkDiscordError
-// Dependencies: [19, 9224, 21, 1483, 9271, 9272, 1114, 2]
+// Module ID: 9478
+// Function ID: 9479
+// Name: XboxLinkError
+// Dependencies: [19, 9251, 21, 1483, 9298, 9299, 1114, 2]
 // Exports: default
 
-// Module 9451 (XboxLinkDiscordError)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 9478 (XboxLinkError)
+import util from "util" /* 1114 */;
 import useNavigation from "useNavigation" /* 1483 */;
-import useConnectRetry from "useConnectRetry" /* 9271 */;
-import TwoWayLinkError from "TwoWayLinkError" /* 9272 */;
-import { XboxLinkModalScenes } from "XboxLinkModalScenes" /* 9224 */;
-import { jsx } from "jsxProd" /* 21 */;
+import useConnectRetry from "useConnectRetry" /* 9298 */;
+import TwoWayLinkError from "TwoWayLinkError" /* 9299 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkError.tsx");
+require = fn;
+const XboxLinkModalScenes = fn(9251).XboxLinkModalScenes;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkError.tsx");
 
 export default function XboxLinkDiscordError(onClose) {
-  let obj = useNavigation;
-  const navigation = obj.useNavigation();
+  const navigation = useNavigation.useNavigation();
   const connectRetry = useConnectRetry.useConnectRetry(navigation, XboxLinkModalScenes.PRE_CONNECT);
-  obj = { title: null, body: null, onClose: null, onRetry: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.INwPCV);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(getSystemLocale.t.GyXRRz);
-  obj[2] = onClose.onClose;
-  obj[3] = connectRetry;
+  const obj3 = { title: null, body: null, onClose: null, onRetry: null };
+  const intl = util.intl;
+  obj3.title = intl.string(util.t.INwPCV);
+  const intl2 = util.intl;
+  obj3.body = intl2.string(util.t.GyXRRz);
+  obj3.onClose = onClose.onClose;
+  obj3.onRetry = connectRetry;
   return jsx(TwoWayLinkError.TwoWayLinkError, { title: null, body: null, onClose: null, onRetry: null });
 };

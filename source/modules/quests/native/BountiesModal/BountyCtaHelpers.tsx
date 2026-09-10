@@ -1,19 +1,19 @@
-// Module ID: 15043
-// Function ID: 15044
-// Name: getBountyCtaInfo
+// Module ID: 15070
+// Function ID: 15071
+// Name: BountyCtaHelpers
 // Dependencies: [1114, 2]
 // Exports: getBountyCtaInfo
 
-// Module 15043 (getBountyCtaInfo)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 15070 (BountyCtaHelpers)
+import util from "util" /* 1114 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/quests/native/BountiesModal/BountyCtaHelpers.tsx");
+const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountyCtaHelpers.tsx");
 
 export const getBountyCtaInfo = function getBountyCtaInfo(bounty) {
   const obj = { label: bounty.productName, subtext: bounty.cta.buttonLabel, buttonLabel: null, iconImageUri: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.LLLLPD);
-  obj[3] = bounty.productIcon;
+  const intl = util.intl;
+  obj.buttonLabel = intl.string(util.t.LLLLPD);
+  obj.iconImageUri = bounty.productIcon;
   return obj;
 };

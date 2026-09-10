@@ -1,19 +1,20 @@
-// Module ID: 15019
-// Function ID: 15020
-// Name: BountyVideoEndMode
-// Dependencies: [32, 19, 5444, 11525, 2]
+// Module ID: 15046
+// Function ID: 15047
+// Name: useBountiesModalTiming
+// Dependencies: [32, 19, 5458, 11552, 2]
 // Exports: useBountiesModalTiming
 
-// Module 15019 (BountyVideoEndMode)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 5444 */;
+// Module 15046 (useBountiesModalTiming)
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let obj = { END_CARD: "END_CARD", END_CARD_WITH_CTA: "END_CARD_WITH_CTA", LOOP: "LOOP", APP_STORE_LOOP: "APP_STORE_LOOP" };
-let result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesModalTiming.tsx");
+const require = fn;
+const QuestsExperimentLocations = fn(5458).QuestsExperimentLocations;
+const BountyVideoEndMode = { END_CARD: "END_CARD", END_CARD_WITH_CTA: "END_CARD_WITH_CTA", LOOP: "LOOP", APP_STORE_LOOP: "APP_STORE_LOOP" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesModalTiming.tsx");
 
-export const BountyVideoEndMode = obj;
+export { BountyVideoEndMode };
 export const useBountiesModalTiming = function useBountiesModalTiming(endMode) {
   endMode = endMode.endMode;
   const rewardDurationMs = endMode.rewardDurationMs;
@@ -41,12 +42,6 @@ export const useBountiesModalTiming = function useBountiesModalTiming(endMode) {
   c13 = undefined;
   c14 = undefined;
   c15 = undefined;
-  closure_16 = undefined;
-  closure_17 = undefined;
-  closure_18 = undefined;
-  closure_19 = undefined;
-  closure_20 = undefined;
-  obj = onVideoProgress;
   let tmp = null != num3;
   if (tmp) {
     tmp = num >= num3 - 1;
@@ -59,33 +54,33 @@ export const useBountiesModalTiming = function useBountiesModalTiming(endMode) {
   }
   [tmp5, c11] = onRewardEarned(onVideoProgress.useState(tmp), 2);
   const tmp4 = onRewardEarned(onVideoProgress.useState(tmp), 2);
-  [tmp7, c12] = onRewardEarned(obj.useState(() => {
+  [tmp7, c12] = onRewardEarned(onVideoProgress.useState(() => {
     num = 0;
     if (null != num3) {
       num = num / tmp;
     }
     return num;
   }), 2);
-  const tmp6 = onRewardEarned(obj.useState(() => {
+  const tmp6 = onRewardEarned(onVideoProgress.useState(() => {
     num = 0;
     if (null != num3) {
       num = num / tmp;
     }
     return num;
   }), 2);
-  [tmp9, c13] = onRewardEarned(obj.useState(null), 2);
-  let tmp8 = onRewardEarned(obj.useState(null), 2);
-  [tmp11, c14] = onRewardEarned(obj.useState(num2), 2);
-  const tmp10 = onRewardEarned(obj.useState(num2), 2);
-  [tmp13, c15] = onRewardEarned(obj.useState(num3), 2);
-  closure_16 = obj.useRef(isCompleted);
-  closure_17 = obj.useRef(num2);
+  [tmp9, c13] = onRewardEarned(onVideoProgress.useState(null), 2);
+  let tmp8 = onRewardEarned(onVideoProgress.useState(null), 2);
+  [tmp11, c14] = onRewardEarned(onVideoProgress.useState(num2), 2);
+  const tmp10 = onRewardEarned(onVideoProgress.useState(num2), 2);
+  [tmp13, c15] = onRewardEarned(onVideoProgress.useState(num3), 2);
+  onVideoProgress.useRef(isCompleted);
+  onVideoProgress.useRef(num2);
   if (num3 == null) {
     num3 = 0;
   }
-  closure_18 = obj.useRef(num3);
-  closure_19 = obj.useRef(0);
-  closure_20 = obj.useRef(num);
+  onVideoProgress.useRef(num3);
+  onVideoProgress.useRef(0);
+  onVideoProgress.useRef(num);
   const items = [onVideoProgress, onRewardEarned, rewardDurationMs];
   const items1 = [endMode, onVideoEnd, onVideoLooped, onRewardEarned];
   const callback = obj.useCallback((progress) => {
@@ -112,8 +107,8 @@ export const useBountiesModalTiming = function useBountiesModalTiming(endMode) {
   const items2 = [playerRef];
   const callback1 = obj.useCallback(() => {
     onVideoEnd(ref2.current, ref3.current, ref5.current);
-    if (endMode !== onVideoLooped.LOOP) {
-      if (tmp3 !== onVideoLooped.APP_STORE_LOOP) {
+    if (endMode !== obj.LOOP) {
+      if (tmp3 !== obj.APP_STORE_LOOP) {
         _undefined(true);
       }
       if (!ref.current) {
@@ -167,7 +162,7 @@ export const useBountiesModalTiming = function useBountiesModalTiming(endMode) {
       }
     }
   }
-  const tmp12 = onRewardEarned(obj.useState(num3), 2);
+  const tmp12 = onRewardEarned(onVideoProgress.useState(num3), 2);
   let tmp23 = tmp5;
   if (tmp5) {
     tmp23 = endMode !== onVideoLooped.END_CARD_WITH_CTA;
@@ -178,6 +173,6 @@ export const useBountiesModalTiming = function useBountiesModalTiming(endMode) {
   if (isCompleted) {
     isCompleted = !tmp23;
   }
-  obj = { isCtaVisible: isCompleted, isEndCardVisible: tmp5, handleVideoEnd: callback1, handleVideoProgress: callback, handleVideoPaused: callback4, handleVideoResumed: callback5, handleReplay: callback2, showEndCard: callback3, rewardRemainingSeconds: num5, rewardTotalSeconds: result1, normalizedProgress: tmp9, maxVideoProgressSeconds: tmp11, videoDuration: tmp13 };
-  return obj;
+  const obj3 = { isCtaVisible: isCompleted, isEndCardVisible: tmp5, handleVideoEnd: callback1, handleVideoProgress: callback, handleVideoPaused: callback4, handleVideoResumed: callback5, handleReplay: callback2, showEndCard: callback3, rewardRemainingSeconds: num5, rewardTotalSeconds: result1, normalizedProgress: tmp9, maxVideoProgressSeconds: tmp11, videoDuration: tmp13 };
+  return obj3;
 };

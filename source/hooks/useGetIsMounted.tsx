@@ -1,18 +1,19 @@
-// Module ID: 8249
-// Function ID: 8250
+// Module ID: 8275
+// Function ID: 8276
 // Name: useGetIsMounted
 // Dependencies: [19, 2]
 // Exports: default
 
-// Module 8249 (useGetIsMounted)
-import closure_0 from "noop" /* 19 */;
+// Module 8275 (useGetIsMounted)
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("hooks/useGetIsMounted.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("hooks/useGetIsMounted.tsx");
 
 export default function useGetIsMounted() {
-  React = React.useRef(true);
-  const effect = React.useEffect(() => () => {
-    closure_0.current = false;
+  noop.useRef(true);
+  const effect = noop.useEffect(() => () => {
+    ref.current = false;
   }, []);
-  return React.useCallback(() => ref.current, []);
+  return noop.useCallback(() => ref.current, []);
 };

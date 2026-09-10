@@ -1,35 +1,33 @@
-// Module ID: 16438
-// Function ID: 16439
+// Module ID: 16469
+// Function ID: 16470
 // Name: ForYouReadSectionHeader
-// Dependencies: [19, 17, 21, 4560, 576, 4556, 1114, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 4570, 1114, 2]
 // Exports: ForYouReadSectionHeader
 
-// Module 16438 (ForYouReadSectionHeader)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16469 (ForYouReadSectionHeader)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ View: obj1, StyleSheet } = get_ActivityIndicator);
-createCacheKey = { container: null, textHeader: null };
-createCacheKey = { borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE, marginVertical: 8, paddingHorizontal: 24 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { color: ThemesDefault.colors.TEXT_SUBTLE, marginTop: 20 };
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-obj1 = { color: ThemesDefault.colors.TEXT_SUBTLE, marginTop: 20 };
-const result = require("set").fileFinishedImporting("modules/notification_center/native/ForYouReadSectionHeader.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c2, StyleSheet } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { container: { borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 8, paddingHorizontal: 24 }, textHeader: null };
+const obj3 = { borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 8, paddingHorizontal: 24 };
+obj2.textHeader = { color: nativeDefault.colors.TEXT_SUBTLE, marginTop: 20 };
+let closure_4 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notification_center/native/ForYouReadSectionHeader.tsx");
 
 export const ForYouReadSectionHeader = function ForYouReadSectionHeader() {
-  const tmp = callback();
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.textHeader, variant: "text-sm/semibold", children: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.hftC1K);
-  obj[1] = jsx(Text.Text, { style: tmp.textHeader, variant: "text-sm/semibold", children: null });
-  return <closure_2 style={tmp.textHeader} variant="text-sm/semibold">{null}</closure_2>;
+  const tmp = closure_4();
+  const obj = { style: tmp.container, children: null };
+  const obj2 = { style: tmp.textHeader, variant: "text-sm/semibold", children: null };
+  const intl = util.intl;
+  obj2.children = intl.string(util.t.hftC1K);
+  obj.children = jsx(Text_Text.Text, { style: tmp.textHeader, variant: "text-sm/semibold", children: null });
+  return <React2 style={tmp.container}>{null}</React2>;
 };

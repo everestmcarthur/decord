@@ -1,48 +1,46 @@
-// Module ID: 15561
-// Function ID: 15562
-// Dependencies: [15560, 4539, 11473, 1114, 15562, 1935, 2]
+// Module ID: 15591
+// Function ID: 15592
+// Name: DeviceInfoSetting
+// Dependencies: [15590, 4553, 11500, 1114, 15592, 1935, 2]
 
-// Module 15561
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4539 */;
-import getClientInfo from "getClientInfo" /* 15560 */;
-import MobilePhoneSettingsIcon from "MobilePhoneSettingsIcon" /* 15562 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15591 (DeviceInfoSetting)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import DeviceUtils from "DeviceUtils" /* 4553 */;
+import CopyClientInfoSetting from "CopyClientInfoSetting" /* 15590 */;
+import MobilePhoneSettingsIcon from "MobilePhoneSettingsIcon" /* 15592 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
 let obj = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["+ynK0W"]);
+    const intl = util.intl;
+    return intl.string(util.t["+ynK0W"]);
   },
   parent: null,
   IconComponent: MobilePhoneSettingsIcon.MobilePhoneSettingsIcon,
   useTrailing: function useDeviceInfo() {
-    const obj = getClientInfo;
-    const clientInfoString = obj.getClientInfoString(DCDDeviceManager.getDeviceInfo());
-    const obj2 = DCDDeviceManager;
-    const obj3 = getClientInfo;
-    return "" + clientInfoString + " (" + obj3.getClientInfoString(DCDDeviceManager.getSystemVersion()) + ")";
+    const obj = CopyClientInfoSetting;
+    const clientInfoString = obj.getClientInfoString(DeviceUtils.getDeviceInfo());
+    const obj3 = CopyClientInfoSetting;
+    return "" + clientInfoString + " (" + obj3.getClientInfoString(DeviceUtils.getSystemVersion()) + ")";
   },
-  usePredicate: explicitContentFromProto.DeveloperMode.useSetting
+  usePredicate: UserSettings.DeveloperMode.useSetting
 };
-const createStaticResult = createToggle.createStatic({
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DeviceInfoSetting.tsx");
+
+export default SettingBuilders.createStatic({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["+ynK0W"]);
+    const intl = util.intl;
+    return intl.string(util.t["+ynK0W"]);
   },
   parent: null,
   IconComponent: MobilePhoneSettingsIcon.MobilePhoneSettingsIcon,
   useTrailing: function useDeviceInfo() {
-    const obj = getClientInfo;
-    const clientInfoString = obj.getClientInfoString(DCDDeviceManager.getDeviceInfo());
-    const obj2 = DCDDeviceManager;
-    const obj3 = getClientInfo;
-    return "" + clientInfoString + " (" + obj3.getClientInfoString(DCDDeviceManager.getSystemVersion()) + ")";
+    const obj = CopyClientInfoSetting;
+    const clientInfoString = obj.getClientInfoString(DeviceUtils.getDeviceInfo());
+    const obj3 = CopyClientInfoSetting;
+    return "" + clientInfoString + " (" + obj3.getClientInfoString(DeviceUtils.getSystemVersion()) + ")";
   },
-  usePredicate: explicitContentFromProto.DeveloperMode.useSetting
+  usePredicate: UserSettings.DeveloperMode.useSetting
 });
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/DeviceInfoSetting.tsx");
-
-export default createStaticResult;

@@ -1,26 +1,24 @@
-// Module ID: 10982
-// Function ID: 10983
+// Module ID: 11009
+// Function ID: 11010
 // Name: showSearchableDestinationListModal
-// Dependencies: [4425, 4763, 1115, 6945, 2]
+// Dependencies: [4439, 4777, 1115, 6959, 2]
 // Exports: default
 
-// Module 10982 (showSearchableDestinationListModal)
-import set from "set" /* 2 */;
-import getBestActiveInput from "getBestActiveInput" /* 4425 */;
-import _modDef4763 from "module_4763" /* 4763 */;
-import useIsWindowLarge from "useIsWindowLarge" /* 6945 */;
+// Module 11009 (showSearchableDestinationListModal)
+import ChatInputUtils from "ChatInputUtils" /* 4439 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/share/native/showSearchableDestinationListModal.tsx");
+const useIsWindowLarge = tmp(6959);
+const result = size.fileFinishedImporting("modules/share/native/showSearchableDestinationListModal.tsx");
 
-export default function showSearchableDestinationListModal(closure_1_1, closure_0, c3) {
-  let obj = getBestActiveInput;
-  obj.dismissKeyboard();
-  const obj2 = _modDef4763;
-  const tmp = require;
+export default function showSearchableDestinationListModal(promise, merged, c3) {
+  ChatInputUtils.dismissKeyboard();
+  const obj2 = ModalActionCreatorsDefault;
   if (!obj3.isIOS()) {
-    obj = { presentation: "modal" };
+    const obj4 = { presentation: "modal" };
   } else {
     const tmpResult = useIsWindowLarge;
   }
-  return obj2.pushLazy(closure_1_1, closure_0, c3, obj);
+  return obj2.pushLazy(promise, merged, c3, obj4);
 };

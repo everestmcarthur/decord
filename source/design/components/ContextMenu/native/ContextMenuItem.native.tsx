@@ -1,46 +1,50 @@
-// Module ID: 14169
-// Function ID: 14170
+// Module ID: 14194
+// Function ID: 14195
 // Name: ContextMenuItem
-// Dependencies: [19, 17, 21, 4296, 4560, 8673, 576, 8672, 4974, 4978, 4977, 4556, 2]
+// Dependencies: [19, 17, 21, 4310, 4574, 8701, 576, 8700, 4988, 4992, 4991, 4570, 2]
 // Exports: ContextMenuItem
 
-// Module 14169 (ContextMenuItem)
-import ThemesDefault from "Themes" /* 576 */;
-import CONTEXT_MENU_LONG_PRESS_DURATION_MS from "CONTEXT_MENU_LONG_PRESS_DURATION_MS" /* 8673 */;
-import closure_3 from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importDefaultResult from "module_4296" /* 4296 */;
+// Module 14194 (ContextMenuItem)
+import nativeDefault from "native" /* 576 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4310 */;
+import spring from "spring" /* 4988 */;
+import springPresets from "springPresets" /* 4992 */;
+import ContextMenuState from "ContextMenuState" /* 8700 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 8701 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = importDefaultResult.createAnimatedComponent(require("get ActivityIndicator").Pressable);
-let closure_7 = createCacheKey.createStyles((arg0) => {
-  let obj = { container: null, containerRefresh: null, roundedTop: null, roundedBottom: null, border: null, pressed: null, icon: null, label: null, trailingIndicator: null };
-  obj = { padding: CONTEXT_MENU_LONG_PRESS_DURATION_MS.CONTEXT_MENU_ITEM_PADDING, minHeight: CONTEXT_MENU_LONG_PRESS_DURATION_MS.CONTEXT_MENU_ITEM_BASE_HEIGHT, flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 8 };
-  obj[0] = obj;
-  obj[1] = { justifyContent: "flex-start" };
-  obj = { borderTopLeftRadius: ThemesDefault.radii.lg, borderTopRightRadius: ThemesDefault.radii.lg };
-  obj[2] = obj;
-  obj[3] = { borderBottomLeftRadius: ThemesDefault.radii.lg, borderBottomRightRadius: ThemesDefault.radii.lg };
-  obj1 = { borderBottomLeftRadius: ThemesDefault.radii.lg, borderBottomRightRadius: ThemesDefault.radii.lg };
-  obj[4] = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
-  const obj2 = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
-  obj[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+const ReanimatedRexport = ReanimatedRexport2;
+
+require = fn;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(17).Pressable);
+const createStyles = fn(4574);
+let closure_7 = createStyles.createStyles((arg0) => {
+  const obj = { container: { padding: ContextMenuConstants.CONTEXT_MENU_ITEM_PADDING, minHeight: ContextMenuConstants.CONTEXT_MENU_ITEM_BASE_HEIGHT, flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 8 }, containerRefresh: { justifyContent: "flex-start" }, roundedTop: null, roundedBottom: null, border: null, pressed: null, icon: null, label: null, trailingIndicator: null };
+  const obj2 = { padding: ContextMenuConstants.CONTEXT_MENU_ITEM_PADDING, minHeight: ContextMenuConstants.CONTEXT_MENU_ITEM_BASE_HEIGHT, flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 8 };
+  obj.roundedTop = { borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg };
+  const obj3 = { borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg };
+  obj.roundedBottom = { borderBottomLeftRadius: nativeDefault.radii.lg, borderBottomRightRadius: nativeDefault.radii.lg };
+  const obj4 = { borderBottomLeftRadius: nativeDefault.radii.lg, borderBottomRightRadius: nativeDefault.radii.lg };
+  obj.border = { borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
+  const obj5 = { borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
+  obj.pressed = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
   if ("destructive" === arg0) {
     let TEXT_STRONG = tmp2(576).colors.TEXT_FEEDBACK_CRITICAL;
   } else {
     TEXT_STRONG = tmp2(576).colors.TEXT_STRONG;
   }
-  obj[6] = { width: 20, height: 20, tintColor: TEXT_STRONG };
-  obj[7] = { flexShrink: 1 };
-  obj[8] = { marginLeft: "auto" };
+  obj.icon = { width: 20, height: 20, tintColor: TEXT_STRONG };
+  obj.label = { flexShrink: 1 };
+  obj.trailingIndicator = { marginLeft: "auto" };
   return obj;
 });
-let closure_8 = { code: "function ContextMenuItemNativeTsx1(){const{pan}=this.__closure;return pan.get();}" };
-let closure_9 = { code: "function ContextMenuItemNativeTsx2(_current,previous){const{measure,ref,index,INDEX_BOUNDS_OFFSET,itemMeasurements,INDEX_BOUNDS_PAGE_X_OFFSET,INDEX_BOUNDS_PAGE_Y_OFFSET,INDEX_BOUNDS_WIDTH_OFFSET,INDEX_BOUNDS_HEIGHT_OFFSET}=this.__closure;if(previous==null||_current===previous)return;const measurements=measure(ref);if(measurements!=null){const{pageX:pageX,pageY:pageY,width:width,height:height}=measurements;const offset=index*INDEX_BOUNDS_OFFSET;itemMeasurements.get()[offset+INDEX_BOUNDS_PAGE_X_OFFSET]=pageX;itemMeasurements.get()[offset+INDEX_BOUNDS_PAGE_Y_OFFSET]=pageY;itemMeasurements.get()[offset+INDEX_BOUNDS_WIDTH_OFFSET]=width;itemMeasurements.get()[offset+INDEX_BOUNDS_HEIGHT_OFFSET]=height;}}" };
-let closure_10 = { code: "function ContextMenuItemNativeTsx3(){const{activeIndex,index,pressed,withSpring,backgroundColor,SUBTLE_SPRING}=this.__closure;const isActive=activeIndex.get()===index||pressed.get()===1;return{backgroundColor:withSpring(isActive?backgroundColor:'transparent',SUBTLE_SPRING,'animate-always')};}" };
-let result = require("set").fileFinishedImporting("design/components/ContextMenu/native/ContextMenuItem.native.tsx");
+const __initData = { code: "function ContextMenuItemNativeTsx1(){const{pan}=this.__closure;return pan.get();}" };
+const __initData2 = { code: "function ContextMenuItemNativeTsx2(_current,previous){const{measure,ref,index,INDEX_BOUNDS_OFFSET,itemMeasurements,INDEX_BOUNDS_PAGE_X_OFFSET,INDEX_BOUNDS_PAGE_Y_OFFSET,INDEX_BOUNDS_WIDTH_OFFSET,INDEX_BOUNDS_HEIGHT_OFFSET}=this.__closure;if(previous==null||_current===previous)return;const measurements=measure(ref);if(measurements!=null){const{pageX:pageX,pageY:pageY,width:width,height:height}=measurements;const offset=index*INDEX_BOUNDS_OFFSET;itemMeasurements.get()[offset+INDEX_BOUNDS_PAGE_X_OFFSET]=pageX;itemMeasurements.get()[offset+INDEX_BOUNDS_PAGE_Y_OFFSET]=pageY;itemMeasurements.get()[offset+INDEX_BOUNDS_WIDTH_OFFSET]=width;itemMeasurements.get()[offset+INDEX_BOUNDS_HEIGHT_OFFSET]=height;}}" };
+const __initData3 = { code: "function ContextMenuItemNativeTsx3(){const{activeIndex,index,pressed,withSpring,backgroundColor,SUBTLE_SPRING}=this.__closure;const isActive=activeIndex.get()===index||pressed.get()===1;return{backgroundColor:withSpring(isActive?backgroundColor:'transparent',SUBTLE_SPRING,'animate-always')};}" };
+const size = fn(2);
+let result = size.fileFinishedImporting("design/components/ContextMenu/native/ContextMenuItem.native.tsx");
 
 export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
   ({ IconComponent, trailingIndicator, iconSource, start, end, index } = accessibilityRole);
@@ -53,21 +57,17 @@ export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
   if (str === undefined) {
     str = "button";
   }
-  let animatedRef;
   let pan;
-  let itemMeasurements;
-  let activeIndex;
-  let sharedValue;
   let backgroundColor;
-  let obj = index(pan[3]);
-  animatedRef = obj.useAnimatedRef();
-  const tmp4 = callback(variant);
+  const animatedRef = index(pan[3]).useAnimatedRef();
+  const tmp4 = closure_7(variant);
   pan = state.pan;
-  itemMeasurements = state.itemMeasurements;
-  activeIndex = state.activeIndex;
-  obj1 = index(pan[3]);
-  sharedValue = obj1.useSharedValue(0);
-  let obj2 = index(pan[3]);
+  const itemMeasurements = state.itemMeasurements;
+  const activeIndex = state.activeIndex;
+  let obj = index(pan[3]);
+  let tmp = index;
+  const sharedValue = index(pan[3]).useSharedValue(0);
+  const obj2 = index(pan[3]);
   class U {
     constructor() {
       return pan.get();
@@ -75,34 +75,33 @@ export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
   }
   U.__closure = { pan };
   U.__workletHash = 11852115418144;
-  U.__initData = closure_8;
+  U.__initData = __initData;
   const fn = function p(arg0, arg1) {
     if (null != arg1) {
       if (arg0 !== arg1) {
-        const measureResult = index(pan[3]).measure(animatedRef);
+        const measureResult = ReanimatedRexport2.measure(animatedRef);
         if (null != measureResult) {
           ({ pageX, pageY, width, height } = measureResult);
-          const result = index * tmp2(tmp3[7]).INDEX_BOUNDS_OFFSET;
-          let value = itemMeasurements.get();
-          value[result + tmp2(tmp3[7]).INDEX_BOUNDS_PAGE_X_OFFSET] = pageX;
+          const result = index * tmp2(8700).INDEX_BOUNDS_OFFSET;
           value = itemMeasurements.get();
-          value[result + tmp2(tmp3[7]).INDEX_BOUNDS_PAGE_Y_OFFSET] = pageY;
-          const value1 = itemMeasurements.get();
-          value1[result + tmp2(tmp3[7]).INDEX_BOUNDS_WIDTH_OFFSET] = width;
-          const value2 = itemMeasurements.get();
-          value2[result + tmp2(tmp3[7]).INDEX_BOUNDS_HEIGHT_OFFSET] = height;
+          value[result + tmp2(8700).INDEX_BOUNDS_PAGE_X_OFFSET] = pageX;
+          const value4 = itemMeasurements.get();
+          value4[result + tmp2(8700).INDEX_BOUNDS_PAGE_Y_OFFSET] = pageY;
+          const value5 = itemMeasurements.get();
+          value5[result + tmp2(8700).INDEX_BOUNDS_WIDTH_OFFSET] = width;
+          const value6 = itemMeasurements.get();
+          value6[result + tmp2(8700).INDEX_BOUNDS_HEIGHT_OFFSET] = height;
         }
-        const obj = index(pan[3]);
       }
     }
   };
-  obj = { measure: index(pan[3]).measure, ref: animatedRef, index, INDEX_BOUNDS_OFFSET: index(pan[7]).INDEX_BOUNDS_OFFSET, itemMeasurements, INDEX_BOUNDS_PAGE_X_OFFSET: index(pan[7]).INDEX_BOUNDS_PAGE_X_OFFSET, INDEX_BOUNDS_PAGE_Y_OFFSET: index(pan[7]).INDEX_BOUNDS_PAGE_Y_OFFSET, INDEX_BOUNDS_WIDTH_OFFSET: index(pan[7]).INDEX_BOUNDS_WIDTH_OFFSET, INDEX_BOUNDS_HEIGHT_OFFSET: index(pan[7]).INDEX_BOUNDS_HEIGHT_OFFSET };
-  fn.__closure = obj;
+  const obj3 = index(pan[3]);
+  fn.__closure = { measure: index(pan[3]).measure, ref: animatedRef, index, INDEX_BOUNDS_OFFSET: index(pan[7]).INDEX_BOUNDS_OFFSET, itemMeasurements, INDEX_BOUNDS_PAGE_X_OFFSET: index(pan[7]).INDEX_BOUNDS_PAGE_X_OFFSET, INDEX_BOUNDS_PAGE_Y_OFFSET: index(pan[7]).INDEX_BOUNDS_PAGE_Y_OFFSET, INDEX_BOUNDS_WIDTH_OFFSET: index(pan[7]).INDEX_BOUNDS_WIDTH_OFFSET, INDEX_BOUNDS_HEIGHT_OFFSET: index(pan[7]).INDEX_BOUNDS_HEIGHT_OFFSET };
   fn.__workletHash = 9571959267234;
-  fn.__initData = closure_9;
-  const animatedReaction = obj2.useAnimatedReaction(U, fn);
+  fn.__initData = __initData2;
+  const animatedReaction = obj3.useAnimatedReaction(U, fn);
   backgroundColor = tmp4.pressed.backgroundColor;
-  let obj4 = index(pan[3]);
+  const obj4 = { measure: index(pan[3]).measure, ref: animatedRef, index, INDEX_BOUNDS_OFFSET: index(pan[7]).INDEX_BOUNDS_OFFSET, itemMeasurements, INDEX_BOUNDS_PAGE_X_OFFSET: index(pan[7]).INDEX_BOUNDS_PAGE_X_OFFSET, INDEX_BOUNDS_PAGE_Y_OFFSET: index(pan[7]).INDEX_BOUNDS_PAGE_Y_OFFSET, INDEX_BOUNDS_WIDTH_OFFSET: index(pan[7]).INDEX_BOUNDS_WIDTH_OFFSET, INDEX_BOUNDS_HEIGHT_OFFSET: index(pan[7]).INDEX_BOUNDS_HEIGHT_OFFSET };
   class P {
     constructor() {
       tmp = activeIndex.get() === index;
@@ -111,52 +110,48 @@ export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
         num = 1;
         tmp = 1 === closure_5.get();
       }
-      tmp3 = index;
-      tmp4 = pan;
-      obj = index(pan[8]);
+      tmp3 = closure_0;
+      tmp4 = closure_2;
+      obj = closure_0(closure_2[8]);
       str = "transparent";
       if (tmp) {
         str = backgroundColor;
       }
-      obj = { backgroundColor: obj.withSpring(str, tmp3(tmp4[9]).SUBTLE_SPRING, "animate-always") };
-      return obj;
+      obj1 = { backgroundColor: obj.withSpring(str, tmp3(tmp4[9]).SUBTLE_SPRING, "animate-always") };
+      return obj1;
     }
   }
-  obj = { activeIndex, index, pressed: sharedValue, withSpring: index(pan[8]).withSpring, backgroundColor, SUBTLE_SPRING: index(pan[9]).SUBTLE_SPRING };
-  P.__closure = obj;
+  const obj5 = index(pan[3]);
+  P.__closure = { activeIndex, index, pressed: sharedValue, withSpring: index(pan[8]).withSpring, backgroundColor, SUBTLE_SPRING: index(pan[9]).SUBTLE_SPRING };
   P.__workletHash = 624481847983;
-  P.__initData = closure_10;
-  const animatedStyle = obj4.useAnimatedStyle(P);
+  P.__initData = __initData3;
+  const animatedStyle = obj5.useAnimatedStyle(P);
   if (null != IconComponent) {
-    obj1 = { size: "sm", color: null };
-    obj1[1] = tmp4.icon.tintColor;
-    let tmp8 = activeIndex(IconComponent, obj1);
+    const obj7 = { size: "sm", color: tmp4.icon.tintColor };
+    let tmp8 = activeIndex(IconComponent, obj7);
   } else {
     tmp8 = null;
     if (null != iconSource) {
-      obj2 = { source: null, style: null };
-      obj2[0] = iconSource;
-      obj2[1] = tmp4.icon;
-      tmp8 = activeIndex(animatedRef(tmp2[10]), obj2);
+      const obj8 = { source: iconSource, style: tmp4.icon };
+      tmp8 = activeIndex(animatedRef(tmp2[10]), obj8);
     }
   }
   let tmp12 = null;
   if (null != trailingIndicator) {
-    const obj3 = { size: "sm", color: null };
-    obj3[1] = tmp4.icon.tintColor;
-    tmp12 = activeIndex(trailingIndicator, obj3);
+    const obj9 = { size: "sm", color: tmp4.icon.tintColor };
+    tmp12 = activeIndex(trailingIndicator, obj9);
   }
   const items = [index, itemMeasurements];
   const items1 = [activeIndex, index];
-  callback = itemMeasurements.useCallback((nativeEvent) => {
+  const callback = itemMeasurements.useCallback((nativeEvent) => {
     ({ height, width } = nativeEvent.nativeEvent.layout);
     if (0 !== height) {
       if (0 !== width) {
-        const result = index * index(pan[7]).INDEX_BOUNDS_OFFSET;
-        let value = itemMeasurements.get();
-        value[result + index(pan[7]).INDEX_BOUNDS_HEIGHT_OFFSET] = height;
+        const result = index * ContextMenuState.INDEX_BOUNDS_OFFSET;
         value = itemMeasurements.get();
-        value[result + index(pan[7]).INDEX_BOUNDS_WIDTH_OFFSET] = width;
+        value[result + ContextMenuState.INDEX_BOUNDS_HEIGHT_OFFSET] = height;
+        value2 = itemMeasurements.get();
+        value2[result + ContextMenuState.INDEX_BOUNDS_WIDTH_OFFSET] = width;
       }
     }
   }, items);
@@ -164,7 +159,7 @@ export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
   const callback1 = itemMeasurements.useCallback(() => {
     const result = activeIndex.set(index);
   }, items1);
-  obj4 = { ref: animatedRef, style: null, onLayout: null, onPressIn: null, onPressOut: null, onPress: null, accessibilityRole: null, children: null };
+  const obj10 = { ref: animatedRef, style: null, onLayout: null, onPressIn: null, onPressOut: null, onPress: null, accessibilityRole: null, children: null };
   const items3 = [, , , , , ];
   ({ container: arr4[0], containerRefresh: arr4[1] } = tmp4);
   let border = !end;
@@ -187,29 +182,27 @@ export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
   }
   items3[4] = end;
   items3[5] = animatedStyle;
-  obj4[1] = items3;
-  obj4[2] = callback;
-  obj4[3] = callback1;
-  obj4[4] = callback2;
-  obj4[5] = onPress;
-  obj4[6] = str;
+  obj10.style = items3;
+  obj10.onLayout = callback;
+  obj10.onPressIn = callback1;
+  obj10.onPressOut = callback2;
+  obj10.onPress = onPress;
+  obj10.accessibilityRole = str;
   const items4 = [activeIndex(animatedRef(pan[3]).View, { children: tmp8 }), , ];
-  const obj5 = { animated: true, variant: "text-md/medium", style: tmp4.label, color: null, children: null };
+  const obj11 = { animated: true, variant: "text-md/medium", style: tmp4.label, color: null, children: null };
   let str2 = "text-strong";
   if ("destructive" === variant) {
     str2 = "text-feedback-critical";
   }
-  obj5[3] = str2;
-  obj5[4] = label;
-  items4[1] = activeIndex(index(pan[11]).Text, obj5);
+  obj11.color = str2;
+  obj11.children = label;
+  items4[1] = activeIndex(tmp(pan[11]).Text, obj11);
   let tmp19Result = null != tmp12;
   if (tmp19Result) {
-    const obj6 = { style: null, children: null };
-    obj6[0] = tmp4.trailingIndicator;
-    obj6[1] = tmp12;
-    tmp19Result = tmp19(animatedRef(tmp2[3]).View, obj6);
+    const obj12 = { style: tmp4.trailingIndicator, children: tmp12 };
+    tmp19Result = tmp19(animatedRef(tmp2[3]).View, obj12);
   }
   items4[2] = tmp19Result;
-  obj4[7] = items4;
-  return sharedValue(backgroundColor, obj4);
+  obj10.children = items4;
+  return sharedValue(backgroundColor, obj10);
 };

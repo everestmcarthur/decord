@@ -1,12 +1,12 @@
-// Module ID: 16718
-// Function ID: 16719
-// Name: MAX_MESSAGE_SEARCH_RESULTS_OFFSET
+// Module ID: 16755
+// Function ID: 16756
+// Name: Search
 // Dependencies: [2]
 
-// Module 16718 (MAX_MESSAGE_SEARCH_RESULTS_OFFSET)
-import set from "set" /* 2 */;
+// Module 16755 (Search)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/Search.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/Search.tsx");
 
 export const MAX_MESSAGE_SEARCH_RESULTS_OFFSET = 9975;
 export const SEARCH_PARTIAL_NAME_MATCH_MIN_QUERY_LENGTH = 3;

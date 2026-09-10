@@ -1,25 +1,22 @@
 // Module ID: 1183
 // Function ID: 1184
-// Name: handleThemeChange
-// Dependencies: [1184, 1185, 1221, 1186, 1084, 1074, 1220, 1227, 14087, 504, 1940, 573, 2]
+// Name: ThemeStore
+// Dependencies: [1184, 1185, 1221, 1186, 1084, 1074, 1220, 1227, 14110, 504, 1940, 573, 2]
 
-// Module 1183 (handleThemeChange)
+// Module 1183 (ThemeStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 import getSystemThemeDefault from "getSystemTheme" /* 1220 */;
 import resolveThemeDefault from "resolveTheme" /* 1227 */;
-import updateUserGuildSettings from "updateUserGuildSettings" /* 1940 */;
-import updateBackgroundColorDefault from "updateBackgroundColor" /* 14087 */;
-import closure_3 from "initialize" /* 1184 */;
-import closure_4 from "CHANNEL_SIDEBAR_WIDTH" /* 1185 */;
-import closure_5 from "handleConnectionClosedOrResumed" /* 1221 */;
-import SystemThemeState from "SystemThemeState" /* 1186 */;
-import { UserSettingsDelay } from "MAX_FAVORITES" /* 1084 */;
-import { ThemeTypes } from "ME" /* 1074 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 1940 */;
+import updateBackgroundColorDefault from "updateBackgroundColor" /* 14110 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1184 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 
-require = arg1;
+require = fn;
 function handleThemeChange() {
-  const tmp3 = resolveThemeDefault(closure_12, THEME_PREFERENCES_MOBILE, c15);
+  const tmp3 = resolveThemeDefault(systemTheme, obj, c15);
   let flag = tmp3 !== closure_13;
   if (flag) {
     closure_13 = tmp3;
@@ -28,13 +25,17 @@ function handleThemeChange() {
   }
   return flag;
 }
-({ SystemTheme: closure_6, THEME_PREFERENCES_WEB_REFRESH, THEME_PREFERENCES_MOBILE } = SystemThemeState);
+const ThemeConstants = fn(1186);
+({ SystemTheme: metroRequire, THEME_PREFERENCES_WEB_REFRESH, THEME_PREFERENCES_MOBILE } = ThemeConstants);
+const UserSettingsDelay = fn(1084).UserSettingsDelay;
+const ThemeTypes = fn(1074).ThemeTypes;
 let obj = { UNSET: 0, [0]: "UNSET", SET: 1, [1]: "SET" };
-const UNSET = obj.UNSET;
+let SET = obj.UNSET;
+obj = THEME_PREFERENCES_MOBILE;
 let tmp3 = getSystemThemeDefault();
-let closure_12 = tmp3;
-let closure_13 = THEME_PREFERENCES_MOBILE[tmp3];
-let closure_14 = {};
+let systemTheme = tmp3;
+let closure_13 = obj[tmp3];
+let syncedClientThemes = {};
 let c15 = false;
 const PersistedStore = initializeDefault.PersistedStore;
 class ThemeStore extends PersistedStore {
@@ -46,41 +47,39 @@ prototype["initialize"] = function initialize(theme) {
     theme = theme.theme;
   }
   if (null != theme) {
-    const SET = obj.SET;
-    theme = theme.theme;
-    updateBackgroundColorDefault(theme);
-    if (null != theme.preferences) {
-      const preferences = theme.preferences;
-    }
+    SET = obj.SET;
+    const theme2 = theme.theme;
+    updateBackgroundColorDefault(theme2);
     if (null != theme.syncedClientThemes) {
-      const syncedClientThemes = theme.syncedClientThemes;
+      syncedClientThemes = theme.syncedClientThemes;
     }
     if (null != theme.syncedThemesEnabled) {
-      const syncedThemesEnabled = theme.syncedThemesEnabled;
+      syncedThemesEnabled = theme.syncedThemesEnabled;
     }
   }
-  this.waitFor(closure_4, closure_3, closure_5);
+  this.waitFor(UnsyncedUserSettingsStore, SelectivelySyncedUserSettingsStore, UserSettingsProtoStore);
 };
 prototype["getState"] = function getState() {
-  return { theme: this.theme, preferences: THEME_PREFERENCES_MOBILE, syncedClientThemes: closure_14, syncedThemesEnabled: c15, status: UNSET };
+  obj = { theme: this.theme, preferences: obj, syncedClientThemes, syncedThemesEnabled, status: SET };
+  return obj;
 };
 Object.defineProperty(prototype, "theme", {
-  get: function theme(arg0, items) {
+  get: function theme() {
     return closure_13;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "systemTheme", {
   get: function systemTheme() {
-    return closure_12;
+    return systemTheme;
   },
   set: undefined
 });
-prototype["themePreferenceForSystemTheme"] = function themePreferenceForSystemTheme(closure_0) {
-  return THEME_PREFERENCES_MOBILE[closure_0];
+prototype["themePreferenceForSystemTheme"] = function themePreferenceForSystemTheme(systemTheme) {
+  return obj[systemTheme];
 };
 prototype["getSyncedClientTheme"] = function getSyncedClientTheme(systemTheme) {
-  return dependencyMap[systemTheme];
+  return syncedClientThemes[systemTheme];
 };
 prototype["isSameAsDeviceThemeEnabled"] = function isSameAsDeviceThemeEnabled() {
   return c15;
@@ -105,10 +104,10 @@ const items = [
       if (preferences.preferences[constants.DARK] === ThemeTypes.DARK) {
         obj = {};
         const merged = Object.assign(preferences);
-        obj = {};
+        const obj2 = {};
         const merged1 = Object.assign(preferences.preferences);
-        obj[tmp2.DARK] = tmp3.DARKER;
-        obj.preferences = obj;
+        obj2[tmp2.DARK] = tmp3.DARKER;
+        obj.preferences = obj2;
         tmp = obj;
       }
     }
@@ -116,27 +115,27 @@ const items = [
   }
 ];
 ThemeStore.migrations = items;
-obj = {
+const themeStore = new ThemeStore(DispatcherDefault, {
   CACHE_LOADED: handleThemeChange,
   CONNECTION_OPEN: function handleConnectionOpen() {
-    if (darkSidebar.darkSidebar) {
-      const appearance = settings.settings.appearance;
-      darkSidebar = undefined;
+    if (UnsyncedUserSettingsStore.darkSidebar) {
+      const appearance = UserSettingsProtoStore.settings.appearance;
+      let darkSidebar;
       if (appearance != null) {
         darkSidebar = appearance.darkSidebar;
       }
       if (!darkSidebar) {
-        const PreloadedUserSettingsActionCreators = updateUserGuildSettings.PreloadedUserSettingsActionCreators;
-        PreloadedUserSettingsActionCreators.updateAsync("appearance", (arg0) => {
+        const PreloadedUserSettingsActionCreators = UserSettingsProtoActionCreators.PreloadedUserSettingsActionCreators;
+        PreloadedUserSettingsActionCreators.updateAsync("appearance", async (arg0) => {
           arg0.darkSidebar = true;
         }, UserSettingsDelay.INFREQUENT_USER_ACTION);
       }
-      dispatcherDefault.wait(() => {
-        callback(table[11]).dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { darkSidebar: false } });
+      obj = DispatcherDefault;
+      obj.wait(() => {
+        DispatcherDefault.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { darkSidebar: false } });
       });
-      obj = dispatcherDefault;
     }
-    const tmp13 = resolveThemeDefault(closure_12, THEME_PREFERENCES_MOBILE, c15);
+    const tmp13 = resolveThemeDefault(systemTheme, obj, c15);
     let flag = tmp13 !== closure_13;
     if (flag) {
       closure_13 = tmp13;
@@ -151,11 +150,11 @@ obj = {
     isSwitchingAccount = isSwitchingAccount.isSwitchingAccount;
     let tmp = !isSwitchingAccount;
     if (!isSwitchingAccount) {
-      const tmp7 = resolveThemeDefault(closure_12, THEME_PREFERENCES_MOBILE, c15);
+      const tmp7 = resolveThemeDefault(systemTheme, obj, c15);
       let flag = tmp7 !== closure_13;
       if (flag) {
         closure_13 = tmp7;
-        tmp2(14087)(closure_13);
+        tmp2(14110)(closure_13);
         flag = true;
       }
       tmp = flag;
@@ -165,7 +164,7 @@ obj = {
   },
   OVERLAY_INITIALIZE: handleThemeChange,
   SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: function handleSelectivelySyncedUserSettingsUpdate() {
-    const tmp3 = resolveThemeDefault(closure_12, THEME_PREFERENCES_MOBILE, c15);
+    const tmp3 = resolveThemeDefault(systemTheme, obj, c15);
     let flag = tmp3 !== closure_13;
     if (flag) {
       closure_13 = tmp3;
@@ -179,7 +178,7 @@ obj = {
   RESET_PREVIEW_CLIENT_THEME: handleThemeChange,
   SYSTEM_THEME_CHANGE: function handleSystemThemeChange(systemTheme) {
     systemTheme = systemTheme.systemTheme;
-    const tmp3 = resolveThemeDefault(systemTheme, THEME_PREFERENCES_MOBILE, c15);
+    const tmp3 = resolveThemeDefault(systemTheme, obj, c15);
     let flag = tmp3 !== closure_13;
     if (flag) {
       closure_13 = tmp3;
@@ -192,7 +191,7 @@ obj = {
     obj = {};
     const merged = Object.assign(obj);
     const merged1 = Object.assign(preferences.preferences);
-    const tmp5 = resolveThemeDefault(closure_12, obj, c15);
+    const tmp5 = resolveThemeDefault(systemTheme, obj, c15);
     let flag = tmp5 !== closure_13;
     if (flag) {
       closure_13 = tmp5;
@@ -203,8 +202,9 @@ obj = {
   },
   UPDATE_SYNCED_CLIENT_THEME: function handleUpdateSyncedClientTheme(systemTheme) {
     obj = {};
-    const merged = Object.assign(obj);
+    const merged = Object.assign(closure_14);
     obj[systemTheme.systemTheme] = systemTheme.clientTheme;
+    closure_14 = obj;
     return true;
   },
   SET_SAME_AS_DEVICE_THEME_ENABLED: function handleSetSameAsDeviceThemeEnabled(enabled) {
@@ -218,17 +218,17 @@ obj = {
   CLEAR_SYNCED_CLIENT_THEMES: function handleClearSyncedClientThemes() {
     let tmp = c15;
     if (!c15) {
-      tmp = null != dependencyMap[constants.LIGHT];
+      tmp = null != syncedClientThemes[constants.LIGHT];
     }
     if (!tmp) {
-      tmp = null != dependencyMap[constants.DARK];
+      tmp = null != syncedClientThemes[constants.DARK];
     }
-    dependencyMap = {};
+    syncedClientThemes = {};
     c15 = false;
     return tmp;
   },
   SET_THEME_OVERRIDE: function handleSetThemeOverride(arg0) {
-    const tmp3 = resolveThemeDefault(closure_12, THEME_PREFERENCES_MOBILE, c15);
+    const tmp3 = resolveThemeDefault(systemTheme, obj, c15);
     let flag = tmp3 !== closure_13;
     if (flag) {
       closure_13 = tmp3;
@@ -238,7 +238,7 @@ obj = {
     return flag;
   },
   CLEAR_THEME_OVERRIDE: function handleClearThemeOverride() {
-    const tmp3 = resolveThemeDefault(closure_12, THEME_PREFERENCES_MOBILE, c15);
+    const tmp3 = resolveThemeDefault(systemTheme, obj, c15);
     let flag = tmp3 !== closure_13;
     if (flag) {
       closure_13 = tmp3;
@@ -248,7 +248,7 @@ obj = {
     return flag;
   },
   REFRESH_THEME: function handleRefresh() {
-    const tmp3 = resolveThemeDefault(closure_12, THEME_PREFERENCES_MOBILE, c15);
+    const tmp3 = resolveThemeDefault(systemTheme, obj, c15);
     let flag = tmp3 !== closure_13;
     if (flag) {
       closure_13 = tmp3;
@@ -257,8 +257,8 @@ obj = {
     }
     return flag;
   }
-};
-const themeStore = new ThemeStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/user_settings/ThemeStore.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/ThemeStore.tsx");
 
 export default themeStore;

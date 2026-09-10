@@ -1,12 +1,11 @@
-// Module ID: 9234
-// Function ID: 9235
-// Name: metadata
+// Module ID: 9261
+// Function ID: 9262
 // Dependencies: [2]
 
-// Module 9234 (metadata)
-import set from "set" /* 2 */;
+// Module 9261
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/connections/xbox_discord_link.png.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/connections/xbox_discord_link.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/abb7826c12c091e08c0ad121b2a6ab48fce6ffd2123f1219b8ef58399908f3ff.png";
 export const metadata = { fileBytes: 238593 };

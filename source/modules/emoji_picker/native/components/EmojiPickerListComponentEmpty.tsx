@@ -1,48 +1,51 @@
-// Module ID: 10321
-// Function ID: 10322
-// Dependencies: [19, 17, 21, 4560, 576, 10322, 10326, 6627, 1178, 1114, 2]
+// Module ID: 10348
+// Function ID: 10349
+// Name: EmojiPickerListComponentEmpty
+// Dependencies: [19, 17, 21, 4574, 576, 10349, 10353, 6641, 1178, 1114, 2]
 
-// Module 10321
-import ThemesDefault from "Themes" /* 576 */;
-import importAllResult from "noop" /* 19 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10348 (EmojiPickerListComponentEmpty)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import SearchEmpty from "SearchEmpty" /* 10349 */;
+import useModalDismissGuardRefreshControl from "useModalDismissGuardRefreshControl" /* 10353 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let obj = { emptyStateContainer: { padding: 0, flex: 1 }, emptyStateBody: null, emptyStateImage: null };
-obj = { color: ThemesDefault.colors.TEXT_SUBTLE };
-obj[1] = obj;
-createCacheKey = { marginBottom: ThemesDefault.space.PX_8, marginTop: 0 };
-obj[2] = createCacheKey;
-let closure_5 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function EmojiPickerListComponentEmpty(insetBottom) {
+require = fn;
+const ScrollView = fn(17).ScrollView;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj = { emptyStateContainer: { padding: 0, flex: 1 }, emptyStateBody: { color: nativeDefault.colors.TEXT_SUBTLE }, emptyStateImage: null };
+let obj3 = { color: nativeDefault.colors.TEXT_SUBTLE };
+obj.emptyStateImage = { marginBottom: nativeDefault.space.PX_8, marginTop: 0 };
+let closure_5 = createStyles.createStyles(obj);
+const obj4 = { marginBottom: nativeDefault.space.PX_8, marginTop: 0 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListComponentEmpty.tsx");
+
+export default noop.memo(function EmojiPickerListComponentEmpty(insetBottom) {
   ({ inActionSheet, insetTop } = insetBottom);
   insetBottom = insetBottom.insetBottom;
   const items = [insetBottom, insetTop];
-  const memo = importAllResult.useMemo(() => ({ marginBottom: insetBottom, marginTop: insetTop, flex: 1 }), items);
-  let obj = insetTop(insetBottom[5]);
-  const searchEmptySource = obj.useSearchEmptySource();
-  const tmp = callback();
-  const modalDismissGuardRefreshControl = insetTop(insetBottom[6]).useModalDismissGuardRefreshControl();
+  const memo = noop.useMemo(() => ({ marginBottom: insetBottom, marginTop: insetTop, flex: 1 }), items);
+  const tmp = closure_5();
+  const searchEmptySource = SearchEmpty.useSearchEmptySource();
+  const modalDismissGuardRefreshControl = useModalDismissGuardRefreshControl.useModalDismissGuardRefreshControl();
   if (inActionSheet) {
-    let BottomSheetScrollView = tmp3(tmp4[7]).BottomSheetScrollView;
+    let BottomSheetScrollView = tmp3(6641).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = ScrollView;
   }
-  obj = { contentContainerStyle: memo, keyboardShouldPersistTaps: "always", refreshControl: null, children: null };
+  const obj3 = { contentContainerStyle: memo, keyboardShouldPersistTaps: "always", refreshControl: null, children: null };
   let tmp8;
   if (inActionSheet) {
     tmp8 = modalDismissGuardRefreshControl;
   }
-  obj[2] = tmp8;
-  obj = { source: searchEmptySource, body: null, bodyStyle: null, containerStyle: null, imageStyle: null };
-  const intl = tmp3(tmp4[9]).intl;
-  obj[1] = intl.string(insetTop(insetBottom[9]).t.IxxiKF);
-  ({ emptyStateBody: obj4[2], emptyStateContainer: obj4[3], emptyStateImage: obj4[4] } = tmp);
-  obj[3] = jsx(insetTop(insetBottom[8]).RefreshEmptyState, { source: searchEmptySource, body: null, bodyStyle: null, containerStyle: null, imageStyle: null });
-  return <BottomSheetScrollView source={searchEmptySource} body={null} bodyStyle={null} containerStyle={null} imageStyle={null} />;
+  obj3.refreshControl = tmp8;
+  const obj6 = { source: searchEmptySource, body: null, bodyStyle: null, containerStyle: null, imageStyle: null };
+  const intl = tmp3(1114).intl;
+  obj6.body = intl.string(util.t.IxxiKF);
+  ({ emptyStateBody: obj4.bodyStyle, emptyStateContainer: obj4.containerStyle, emptyStateImage: obj4.imageStyle } = tmp);
+  obj3.children = jsx(native.RefreshEmptyState, { source: searchEmptySource, body: null, bodyStyle: null, containerStyle: null, imageStyle: null });
+  return <BottomSheetScrollView contentContainerStyle={memo} keyboardShouldPersistTaps="always" refreshControl={null}>{null}</BottomSheetScrollView>;
 });
-const result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListComponentEmpty.tsx");
-
-export default memoResult;

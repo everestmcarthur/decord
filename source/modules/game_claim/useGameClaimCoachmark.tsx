@@ -1,27 +1,29 @@
-// Module ID: 16264
-// Function ID: 16265
-// Name: useCanShowGameClaimCoachmark
-// Dependencies: [4199, 1074, 16265, 504, 16195, 2]
+// Module ID: 16294
+// Function ID: 16295
+// Name: useGameClaimCoachmark
+// Dependencies: [4212, 1074, 16295, 504, 16225, 2]
 // Exports: useCanShowGameClaimCoachmark
 
-// Module 16264 (useCanShowGameClaimCoachmark)
-import closure_2 from "getUncachedChannelPermissions" /* 4199 */;
-import { Permissions } from "ME" /* 1074 */;
+// Module 16294 (useGameClaimCoachmark)
+import PermissionStore from "PermissionStore" /* 4212 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/game_claim/useGameClaimCoachmark.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const Permissions = fn(1074).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_claim/useGameClaimCoachmark.tsx");
 
 export const useCanShowGameClaimCoachmark = function useCanShowGameClaimCoachmark(id) {
-  const _require = id;
-  let gameClaimCoachmarkEnabled = _require(16265).useGameClaimCoachmarkEnabled(id, "useCanShowGameClaimCoachmark");
-  const obj = _require(16265);
-  const tmp = _require;
-  const items = [closure_2];
+  _require = id;
+  let gameClaimCoachmarkEnabled = require("GameClaimCoachmarkExperiment").useGameClaimCoachmarkEnabled(id, "useCanShowGameClaimCoachmark");
+  const obj = require("GameClaimCoachmarkExperiment");
+  const items = [PermissionStore];
   const items1 = [id];
   if (gameClaimCoachmarkEnabled) {
-    gameClaimCoachmarkEnabled = obj2.useStateFromStores(items, () => closure_1_2.canWithPartialContext(closure_1_3.ADMINISTRATOR, { guildId: closure_0 }), items1);
+    gameClaimCoachmarkEnabled = obj2.useStateFromStores(items, () => PermissionStore.canWithPartialContext(Permissions.ADMINISTRATOR, { guildId }), items1);
   }
-  obj2 = _require(504);
+  obj2 = require("initialize");
   if (gameClaimCoachmarkEnabled) {
     gameClaimCoachmarkEnabled = tmpResult.useHasUnclaimedGames(id, gameClaimCoachmarkEnabled);
   }

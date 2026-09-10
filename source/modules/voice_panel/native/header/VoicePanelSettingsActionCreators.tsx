@@ -1,23 +1,21 @@
-// Module ID: 17112
-// Function ID: 17113
-// Name: VOICE_PANEL_SETTINGS_ACTION_SHEET_KEY
-// Dependencies: [4527, 17113, 1896, 2]
+// Module ID: 17143
+// Function ID: 17144
+// Name: VoicePanelSettingsActionCreators
+// Dependencies: [4541, 17144, 1896, 2]
 // Exports: closeVoicePanelSettingsActionSheet, openVoicePanelSettingsActionSheet
 
-// Module 17112 (VOICE_PANEL_SETTINGS_ACTION_SHEET_KEY)
-import set from "set" /* 2 */;
+// Module 17143 (VoicePanelSettingsActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import size from "module_2" /* 2 */;
 
 const VoicePanelSettingsActionSheet = "VoicePanelSettingsActionSheet";
-const result = set.fileFinishedImporting("modules/voice_panel/native/header/VoicePanelSettingsActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/voice_panel/native/header/VoicePanelSettingsActionCreators.tsx");
 
 export const VOICE_PANEL_SETTINGS_ACTION_SHEET_KEY = "VoicePanelSettingsActionSheet";
 export const closeVoicePanelSettingsActionSheet = function closeVoicePanelSettingsActionSheet() {
-  ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet(VoicePanelSettingsActionSheet);
+  ActionSheetActionCreatorsDefault.hideActionSheet(VoicePanelSettingsActionSheet);
 };
 export const openVoicePanelSettingsActionSheet = function openVoicePanelSettingsActionSheet(guildId, channelId) {
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = { guildId, channelId };
-  obj.openLazy(asyncRequireImpl(17113, dependencyMap.paths), VoicePanelSettingsActionSheet, obj);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17144, dependencyMap.paths), VoicePanelSettingsActionSheet, { guildId, channelId });
 };

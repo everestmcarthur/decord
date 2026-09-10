@@ -1,40 +1,41 @@
-// Module ID: 8591
-// Function ID: 8592
+// Module ID: 8619
+// Function ID: 8620
 // Name: ManualReviewFallbackAlertModal
-// Dependencies: [19, 21, 4910, 1114, 2978, 4910, 8592, 2]
+// Dependencies: [19, 21, 4924, 1114, 2978, 4924, 8620, 2]
 // Exports: default
 
-// Module 8591 (ManualReviewFallbackAlertModal)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 2978 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4910 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 8619 (ManualReviewFallbackAlertModal)
+import util from "util" /* 1114 */;
+import _modDef2978 from "module_2978" /* 2978 */;
+import AlertModal from "AlertModal" /* 4924 */;
+import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8620 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/age_assurance/native/ManualReviewFallbackAlertModal.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/age_assurance/native/ManualReviewFallbackAlertModal.tsx");
 
 export default function ManualReviewFallbackAlertModal() {
-  let obj = { title: null, content: null, actions: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(messagesProxyDefault["+c5sxg"]);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(messagesProxyDefault["RFLH++"]);
-  obj = { children: null };
-  obj = { text: null };
-  const intl3 = getSystemLocale.intl;
-  obj[0] = intl3.string(getSystemLocale.t["NX+WJN"]);
-  const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "got-it"), ];
-  obj1 = { variant: "secondary", text: null, onPress: null };
-  const intl4 = getSystemLocale.intl;
-  obj1[1] = intl4.string(messagesProxyDefault.Z61nkt);
-  obj1[2] = function onPress() {
-    return callback(table[6]).handleManualReviewCta();
+  const obj = { title: null, content: null, actions: null };
+  const intl = util.intl;
+  obj.title = intl.string(_modDef2978["+c5sxg"]);
+  const intl2 = util.intl;
+  obj.content = intl2.string(_modDef2978["RFLH++"]);
+  const obj2 = { children: null };
+  const obj3 = { text: null };
+  const intl3 = util.intl;
+  obj3.text = intl3.string(util.t["NX+WJN"]);
+  const items = [React3(AlertModal.AlertActionButton, obj3, "got-it"), ];
+  const obj4 = { variant: "secondary", text: null, onPress: null };
+  const intl4 = util.intl;
+  obj4.text = intl4.string(_modDef2978.Z61nkt);
+  obj4.onPress = function onPress() {
+    return ManualReviewActionCreators.handleManualReviewCta();
   };
-  items[1] = callback(getAlertModalItemKey.AlertActionButton, obj1, "request-manual-review");
-  obj[0] = items;
-  obj[2] = callback2(getAlertModalItemKey.AlertActions, obj);
-  return callback(getAlertModalItemKey.AlertModal, obj);
+  items[1] = React3(AlertModal.AlertActionButton, obj4, "request-manual-review");
+  obj2.children = items;
+  obj.actions = React4(AlertModal.AlertActions, obj2);
+  return React3(AlertModal.AlertModal, obj);
 };

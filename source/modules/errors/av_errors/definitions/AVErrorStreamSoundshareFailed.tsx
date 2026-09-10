@@ -1,32 +1,31 @@
-// Module ID: 17845
-// Function ID: 17846
-// Name: AVErrorStreamSoundshareFailedDefinition
-// Dependencies: [4582, 4608, 1074, 9115, 17837, 4612, 2]
+// Module ID: 17878
+// Function ID: 17879
+// Name: AVErrorStreamSoundshareFailed
+// Dependencies: [4596, 4622, 1074, 9142, 17870, 4626, 2]
 
-// Module 17845 (AVErrorStreamSoundshareFailedDefinition)
-import isStreamKey from "isStreamKey" /* 4612 */;
-import mapped from "mapped" /* 9115 */;
-import getVoiceChannelErrorContext from "getVoiceChannelErrorContext" /* 17837 */;
-import closure_2 from "reset" /* 4582 */;
-import closure_3 from "getHookError" /* 4608 */;
-import { MediaEngineHookTypes } from "ME" /* 1074 */;
+// Module 17878 (AVErrorStreamSoundshareFailed)
+import StreamKeyUtils from "StreamKeyUtils" /* 4626 */;
+import AVError from "AVError" /* 9142 */;
+import AVErrorContext from "AVErrorContext" /* 17870 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4596 */;
+import HookErrorStore from "HookErrorStore" /* 4622 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamSoundshareFailed.tsx");
+require = fn;
+const MediaEngineHookTypes = fn(1074).MediaEngineHookTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamSoundshareFailed.tsx");
 
 export const AVErrorStreamSoundshareFailedDefinition = {
   getActiveErrors() {
-    currentUserActiveStream = currentUserActiveStream.getCurrentUserActiveStream();
+    const currentUserActiveStream = ApplicationStreamingStore.getCurrentUserActiveStream();
     let tmp2;
     if (null != currentUserActiveStream) {
-      if (null != hookError.getHookError(MediaEngineHookTypes.SOUND)) {
-        const obj = { type: null };
-        obj[0] = mapped.AVError.STREAM_SOUNDSHARE_FAILED;
-        const obj2 = getVoiceChannelErrorContext;
-        const merged = Object.assign(obj2.getStreamErrorContext(isStreamKey.encodeStreamKey(currentUserActiveStream)));
+      if (null != HookErrorStore.getHookError(MediaEngineHookTypes.SOUND)) {
+        const obj = { type: AVError.AVError.STREAM_SOUNDSHARE_FAILED };
+        const obj2 = AVErrorContext;
+        const merged = Object.assign(obj2.getStreamErrorContext(StreamKeyUtils.encodeStreamKey(currentUserActiveStream)));
         const items = [obj];
         tmp2 = items;
-        const obj3 = isStreamKey;
       }
     }
     return tmp2;

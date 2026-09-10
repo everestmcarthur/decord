@@ -1,20 +1,23 @@
-// Module ID: 9674
-// Function ID: 9675
+// Module ID: 9701
+// Function ID: 9702
 // Name: useEventException
-// Dependencies: [7526, 504, 2]
+// Dependencies: [7540, 504, 2]
 // Exports: default, getEventException
 
-// Module 9674 (useEventException)
-import closure_2 from "scheduledEventSort" /* 7526 */;
+// Module 9701 (useEventException)
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7540 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useEventException.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/useEventException.tsx");
 
 export default function useEventException(arg0, arg1) {
-  let _require = arg1;
-  const items = [closure_2];
-  const stateFromStoresArray = _require(504).useStateFromStoresArray(items, () => {
-    const guildScheduledEvent = closure_1_2.getGuildScheduledEvent(closure_0);
+  _require = arg1;
+  const items = [GuildScheduledEventStore];
+  const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
+    const guildScheduledEvent = GuildScheduledEventStore.getGuildScheduledEvent(closure_0);
     let prop;
     if (guildScheduledEvent != null) {
       prop = guildScheduledEvent.guild_scheduled_event_exceptions;
@@ -32,7 +35,7 @@ export default function useEventException(arg0, arg1) {
   return found;
 };
 export const getEventException = function getEventException(recurrenceId, eventId) {
-  guildScheduledEvent = guildScheduledEvent.getGuildScheduledEvent(eventId);
+  const guildScheduledEvent = GuildScheduledEventStore.getGuildScheduledEvent(eventId);
   let prop;
   if (guildScheduledEvent != null) {
     prop = guildScheduledEvent.guild_scheduled_event_exceptions;

@@ -1,17 +1,19 @@
-// Module ID: 11759
-// Function ID: 11760
-// Name: result
+// Module ID: 11785
+// Function ID: 11786
+// Name: isInviteActive
 // Dependencies: [1090, 11, 2]
 // Exports: default
 
-// Module 11759 (result)
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import setDefault from "set" /* 1090 */;
+// Module 11785 (isInviteActive)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import DurationsDefault from "Durations" /* 1090 */;
 
-const result = 2 * setDefault.Millis.HOUR;
-const result1 = require("set").fileFinishedImporting("modules/activities/utils/isInviteActive.tsx");
+const result = 2 * DurationsDefault.Millis.HOUR;
+let c2 = result;
+const size = fn(2);
+const result1 = size.fileFinishedImporting("modules/activities/utils/isInviteActive.tsx");
 
-export default function isInviteActive(party, activity) {
+export default function isInviteActive(party, activity, arg2) {
   if (null == party) {
     return false;
   } else {
@@ -29,9 +31,8 @@ export default function isInviteActive(party, activity) {
       tmp2 = id !== party_id;
     }
     const _Date = Date;
-    const sum = DISCORD_EPOCHDefault.extractTimestamp(activity.id) + closure_2;
+    const sum = SnowflakeUtilsDefault.extractTimestamp(activity.id) + result;
     let tmp10 = null != party.application_id;
-    const obj = DISCORD_EPOCHDefault;
     if (tmp10) {
       tmp10 = party.application_id !== arg2;
     }

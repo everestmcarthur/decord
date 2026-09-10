@@ -1,25 +1,29 @@
-// Module ID: 15875
-// Function ID: 15876
+// Module ID: 15905
+// Function ID: 15906
 // Name: useAuthorizedSlayerApplications
-// Dependencies: [19, 7107, 504, 11537, 7170, 2]
+// Dependencies: [19, 7121, 504, 11563, 7184, 2]
 // Exports: default
 
-// Module 15875 (useAuthorizedSlayerApplications)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "recomputeFromAppTokens" /* 7107 */;
-import { FetchState } from "recomputeFromAppTokens" /* 7107 */;
+// Module 15905 (useAuthorizedSlayerApplications)
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7184 */;
+import noop from "module_19" /* 19 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7121 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/authorized_apps/useAuthorizedSlayerApplications.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const FetchState = fn(7121).FetchState;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/authorized_apps/useAuthorizedSlayerApplications.tsx");
 
 export default function useAuthorizedSlayerApplications(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   closure_1 = arg1;
-  let items = [closure_4];
-  const stateFromStores = _require(stateFromStores1[2]).useStateFromStores(items, () => fetchState.getFetchState());
-  let obj = _require(stateFromStores1[2]);
-  const items1 = [closure_4];
-  stateFromStores1 = _require(stateFromStores1[2]).useStateFromStores(items1, () => {
+  let items = [AuthorizedAppsStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => fetchState.getFetchState());
+  let obj = require("initialize");
+  const items1 = [AuthorizedAppsStore];
+  stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
     if (closure_0) {
       let newestTokensForNonChildrenApplications = obj.getNewestTokensForNonChildrenApplications();
     } else {
@@ -29,19 +33,18 @@ export default function useAuthorizedSlayerApplications(arg0, arg1) {
   });
   const items2 = [stateFromStores1];
   const items3 = [arg1];
-  const slayerSdkApplications = React.useMemo(() => {
+  const slayerSdkApplications = noop.useMemo(() => {
     if (null == stateFromStores1) {
       let items = [];
     } else {
-      const found = stateFromStores1.filter((application) => callback(table[3]).isSocialLayerSDKAuthorization(application.application, application.scopes));
+      const found = stateFromStores1.filter((application) => closure_1_0(stateFromStores1[3]).isSocialLayerSDKAuthorization(application.application, application.scopes));
       items = found.map((application) => application.application);
     }
     return items;
   }, items2);
-  const effect = React.useEffect(() => {
-    if (!callback) {
-      const response = callback(stateFromStores1[4]).fetch();
-      const obj = callback(stateFromStores1[4]);
+  const effect = noop.useEffect(() => {
+    if (!closure_1) {
+      const response = AuthorizedAppsActionCreatorsDefault.fetch();
     }
   }, items3);
   let showLoadingIndicator = stateFromStores !== FetchState.FETCHED;

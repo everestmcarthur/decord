@@ -1,11 +1,11 @@
-// Module ID: 7708
-// Function ID: 7709
+// Module ID: 7722
+// Function ID: 7723
 // Name: QuestRewardTypes
 // Dependencies: [2]
 
-// Module 7708 (QuestRewardTypes)
-import set from "set" /* 2 */;
+// Module 7722 (QuestRewardTypes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx");
 
 export const QuestRewardTypes = { REWARD_CODE: 1, [1]: "REWARD_CODE", IN_GAME: 2, [2]: "IN_GAME", COLLECTIBLE: 3, [3]: "COLLECTIBLE", VIRTUAL_CURRENCY: 4, [4]: "VIRTUAL_CURRENCY", FRACTIONAL_PREMIUM: 5, [5]: "FRACTIONAL_PREMIUM" };

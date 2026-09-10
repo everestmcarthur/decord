@@ -1,57 +1,55 @@
-// Module ID: 8001
-// Function ID: 8002
-// Name: pickHelloSticker
-// Dependencies: [1371, 8002, 1074, 11, 7456, 1242, 2]
+// Module ID: 8015
+// Function ID: 8016
+// Name: WelcomeCTAUtils
+// Dependencies: [1371, 8016, 1074, 11, 7470, 1242, 2]
 // Exports: handleWelcomeCtaClicked, pickHelloSticker, pickWelcomeSticker
 
-// Module 8001 (pickHelloSticker)
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import trackInviteDefault from "trackInvite" /* 7456 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
-import { WELCOME_STICKERS } from "items" /* 8002 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
+// Module 8015 (WelcomeCTAUtils)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7470 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const result = require("set").fileFinishedImporting("modules/welcome_cta/WelcomeCTAUtils.tsx");
+const WELCOME_STICKERS = fn(8016).WELCOME_STICKERS;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/welcome_cta/WelcomeCTAUtils.tsx");
 
 export const pickHelloSticker = function pickHelloSticker() {
-  const currentUser = authStore.getCurrentUser();
+  const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
   let num = 0;
   if (null != id) {
-    num = DISCORD_EPOCHDefault.extractTimestamp(id);
-    const obj = DISCORD_EPOCHDefault;
+    num = SnowflakeUtilsDefault.extractTimestamp(id);
   }
   return WELCOME_STICKERS[num % WELCOME_STICKERS.length];
 };
 export const pickWelcomeSticker = function pickWelcomeSticker(id) {
-  const currentUser = authStore.getCurrentUser();
+  const currentUser = UserStore.getCurrentUser();
   id = undefined;
   if (currentUser != null) {
     id = currentUser.id;
   }
   let num = 0;
   if (null != id) {
-    num = DISCORD_EPOCHDefault.extractTimestamp(id);
-    const obj = DISCORD_EPOCHDefault;
+    num = SnowflakeUtilsDefault.extractTimestamp(id);
   }
-  const obj2 = DISCORD_EPOCHDefault;
+  const obj2 = SnowflakeUtilsDefault;
   return WELCOME_STICKERS[(num + obj2.extractTimestamp(obj2, id)) % WELCOME_STICKERS.length];
 };
 export const handleWelcomeCtaClicked = function handleWelcomeCtaClicked(messageChannel, message, stickerId) {
-  let obj = trackInviteDefault;
-  obj = { channel: messageChannel, message, shouldMention: true, showMentionToggle: true };
-  obj.sendGreetMessage(messageChannel.id, stickerId, trackInviteDefault.getSendMessageOptionsForReply(obj));
-  const obj2 = trackInviteDefault;
-  obj = { is_reply: true, sticker_id: stickerId, target_user: message.author.id, sender: null };
-  const currentUser = authStore.getCurrentUser();
+  const obj = MessageActionCreatorsDefault;
+  obj.sendGreetMessage(messageChannel.id, stickerId, MessageActionCreatorsDefault.getSendMessageOptionsForReply({ channel: messageChannel, message, shouldMention: true, showMentionToggle: true }));
+  const obj3 = { channel: messageChannel, message, shouldMention: true, showMentionToggle: true };
+  const obj5 = { is_reply: true, sticker_id: stickerId, target_user: message.author.id, sender: null };
+  const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
-  obj[3] = id;
-  expandEventPropertiesDefault.track(AnalyticEvents.WELCOME_CTA_CLICKED, obj);
+  obj5.sender = id;
+  AnalyticsUtilsDefault.track(AnalyticEvents.WELCOME_CTA_CLICKED, obj5);
 };

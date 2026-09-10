@@ -1,48 +1,45 @@
-// Module ID: 13361
-// Function ID: 13362
-// Name: set
+// Module ID: 13384
+// Function ID: 13385
+// Name: useBuyNitroTrialAndPriceOverrides
 // Dependencies: [560, 2]
 // Exports: applyBuyNitroOrderPriceOverride, markBuyNitroTrialUnavailable, resetBuyNitroTrialAndPriceOverrides, useBuyNitroOrderPriceOverrides, useBuyNitroTrialUnavailableTiers
 
-// Module 13361 (set)
-import keys from "keys" /* 560 */;
-import set from "set" /* 2 */;
+// Module 13384 (useBuyNitroTrialAndPriceOverrides)
+import module_560 from "module_560" /* 560 */;
+import size from "module_2" /* 2 */;
 
-let obj = { trialUnavailableTiers: null, orderPriceOverrides: null };
+const obj = { trialUnavailableTiers: new Set(), orderPriceOverrides: null };
 let set = new Set();
-obj[0] = set;
-obj[1] = new Map();
-let closure_1 = keys.create(() => obj);
-const result = set.fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroTrialAndPriceOverrides.tsx");
+obj.orderPriceOverrides = new Map();
+let closure_1 = module_560.create(() => obj);
+const result = size.fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroTrialAndPriceOverrides.tsx");
 
 export const useBuyNitroTrialUnavailableTiers = function useBuyNitroTrialUnavailableTiers() {
-  return store((trialUnavailableTiers) => trialUnavailableTiers.trialUnavailableTiers);
+  return closure_1((trialUnavailableTiers) => trialUnavailableTiers.trialUnavailableTiers);
 };
 export const useBuyNitroOrderPriceOverrides = function useBuyNitroOrderPriceOverrides() {
-  return store((orderPriceOverrides) => orderPriceOverrides.orderPriceOverrides);
+  return closure_1((orderPriceOverrides) => orderPriceOverrides.orderPriceOverrides);
 };
 export const markBuyNitroTrialUnavailable = function markBuyNitroTrialUnavailable(premiumTier) {
-  obj = store;
-  const trialUnavailableTiers = store.getState().trialUnavailableTiers;
+  const trialUnavailableTiers = closure_1.getState().trialUnavailableTiers;
   if (!trialUnavailableTiers.has(premiumTier)) {
-    obj = { trialUnavailableTiers: null };
+    const obj2 = { trialUnavailableTiers: null };
     const _Set = Set;
     const set = new Set(trialUnavailableTiers);
-    obj[0] = set.add(premiumTier);
-    obj.setState(obj);
+    obj2.trialUnavailableTiers = set.add(premiumTier);
+    closure_1.setState(obj2);
   }
 };
 export const applyBuyNitroOrderPriceOverride = function applyBuyNitroOrderPriceOverride(productId, arg1) {
-  obj = store;
-  const orderPriceOverrides = store.getState().orderPriceOverrides;
+  const orderPriceOverrides = closure_1.getState().orderPriceOverrides;
   if (orderPriceOverrides.get(productId) !== arg1) {
-    obj = { orderPriceOverrides: null };
+    const obj2 = { orderPriceOverrides: null };
     const _Map = Map;
     const map = new Map(orderPriceOverrides);
-    obj[0] = map.set(productId, arg1);
-    obj.setState(obj);
+    obj2.orderPriceOverrides = map.set(productId, arg1);
+    closure_1.setState(obj2);
   }
 };
 export const resetBuyNitroTrialAndPriceOverrides = function resetBuyNitroTrialAndPriceOverrides() {
-  store.setState(obj);
+  closure_1.setState(obj);
 };

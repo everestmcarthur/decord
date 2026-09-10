@@ -1,23 +1,24 @@
-// Module ID: 13174
-// Function ID: 13175
+// Module ID: 13197
+// Function ID: 13198
 // Name: useCollectibleListLayout
 // Dependencies: [32, 19, 2]
 // Exports: default
 
-// Module 13174 (useCollectibleListLayout)
-import closure_0 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+// Module 13197 (useCollectibleListLayout)
+import _slicedToArray from "module_32" /* 32 */;
 
-({ useCallback: closure_1, useState: obj1 } = noop);
-const result = require("set").fileFinishedImporting("modules/collectibles/native/useCollectibleListLayout.tsx");
+const noop = fn(19);
+({ useCallback: closure_1, useState: c2 } = noop);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/useCollectibleListLayout.tsx");
 
 export default function useCollectibleListLayout() {
-  const tmp = callback(callback3(0), 2);
-  callback = tmp[1];
+  const tmp = _slicedToArray(React2(0), 2);
+  closure_0 = tmp[1];
   return {
     size: tmp[0],
-    onLayout: callback2((nativeEvent) => {
-      callback((nativeEvent.nativeEvent.layout.width - 64) / 3);
+    onLayout: framebus((nativeEvent) => {
+      closure_0((nativeEvent.nativeEvent.layout.width - 64) / 3);
     }, [])
   };
 };

@@ -1,17 +1,17 @@
-// Module ID: 14770
-// Function ID: 14771
+// Module ID: 14796
+// Function ID: 14797
 // Name: SettingsAccountStandingScreen
-// Dependencies: [21, 14771, 2]
+// Dependencies: [21, 14797, 2]
 // Exports: default
 
-// Module 14770 (SettingsAccountStandingScreen)
-import set from "set" /* 2 */;
+// Module 14796 (SettingsAccountStandingScreen)
 import jsxProd from "jsxProd" /* 21 */;
-import handleLogInClickDefault from "handleLogInClick" /* 14771 */;
+import SafetyHubPageDefault from "SafetyHubPage" /* 14797 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("modules/user_settings/standing/native/SettingsAccountStandingScreen.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/standing/native/SettingsAccountStandingScreen.tsx");
 
 export default function SettingsAccountStandingScreen() {
-  return jsx(handleLogInClickDefault, { visible: true });
+  return jsx(SafetyHubPageDefault, { visible: true });
 };

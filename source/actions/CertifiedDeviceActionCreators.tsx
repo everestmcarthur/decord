@@ -1,17 +1,15 @@
-// Module ID: 14473
-// Function ID: 14474
-// Name: setCertifiedDevices
+// Module ID: 14498
+// Function ID: 14499
+// Name: CertifiedDeviceActionCreators
 // Dependencies: [573, 2]
 // Exports: setCertifiedDevices
 
-// Module 14473 (setCertifiedDevices)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 14498 (CertifiedDeviceActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("actions/CertifiedDeviceActionCreators.tsx");
+const result = size.fileFinishedImporting("actions/CertifiedDeviceActionCreators.tsx");
 
 export const setCertifiedDevices = function setCertifiedDevices(id, devices) {
-  let obj = dispatcherDefault;
-  obj = { type: "CERTIFIED_DEVICES_SET", applicationId: id, devices };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "CERTIFIED_DEVICES_SET", applicationId: id, devices });
 };

@@ -1,15 +1,15 @@
-// Module ID: 17330
-// Function ID: 17331
-// Name: getAppMajorVersion
+// Module ID: 17361
+// Function ID: 17362
+// Name: AppInfoUtils
 // Dependencies: [1364, 2]
 // Exports: getAppMajorVersion
 
-// Module 17330 (getAppMajorVersion)
-import set from "set" /* 2 */;
-import getConstants from "getConstants" /* 1364 */;
+// Module 17361 (AppInfoUtils)
+import ClientInfoUtils from "ClientInfoUtils" /* 1364 */;
+import size from "module_2" /* 2 */;
 
-const constants = getConstants.getConstants();
-const result = set.fileFinishedImporting("utils/native/AppInfoUtils.tsx");
+const constants = ClientInfoUtils.getConstants();
+const result = size.fileFinishedImporting("utils/native/AppInfoUtils.tsx");
 
 export const getAppMajorVersion = function getAppMajorVersion() {
   if (undefined === closure_0) {

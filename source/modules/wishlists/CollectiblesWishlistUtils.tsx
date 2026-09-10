@@ -1,15 +1,15 @@
-// Module ID: 8774
-// Function ID: 8775
-// Name: getProductNameAndTypeFromSku
-// Dependencies: [1889, 1114, 7554, 2]
+// Module ID: 8802
+// Function ID: 8803
+// Name: CollectiblesWishlistUtils
+// Dependencies: [1889, 1114, 7568, 2]
 // Exports: getProductNameAndTypeFromSku, isWishlistableCollectiblesProduct
 
-// Module 8774 (getProductNameAndTypeFromSku)
-import set from "set" /* 2 */;
+// Module 8802 (CollectiblesWishlistUtils)
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 7554 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7568 */;
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("modules/wishlists/CollectiblesWishlistUtils.tsx");
+let result = size.fileFinishedImporting("modules/wishlists/CollectiblesWishlistUtils.tsx");
 
 export const getProductNameAndTypeFromSku = function getProductNameAndTypeFromSku(sku) {
   ({ name, tenantMetadata } = sku);
@@ -22,27 +22,24 @@ export const getProductNameAndTypeFromSku = function getProductNameAndTypeFromSk
   }
   if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
     const intl2 = tmp2(1114).intl;
-    let obj = { product: null };
-    obj[0] = name;
-    let formatToPlainStringResult = intl2.formatToPlainString(tmp2(1114).t.lvBzLi, obj);
+    const obj2 = { product: name };
+    let formatToPlainStringResult = intl2.formatToPlainString(tmp2(1114).t.lvBzLi, obj2);
   } else if (tmp2(1889).CollectiblesItemType.PROFILE_EFFECT === type) {
     const intl = tmp2(1114).intl;
-    obj = { product: null };
-    obj[0] = name;
+    const obj = { product: name };
     formatToPlainStringResult = intl.formatToPlainString(tmp2(1114).t.eR7moP, obj);
   } else {
     formatToPlainStringResult = name;
     if (tmp2(1889).CollectiblesItemType.NAMEPLATE === type) {
       const intl3 = tmp2(1114).intl;
-      obj = { product: null };
-      obj[0] = name;
-      formatToPlainStringResult = intl3.formatToPlainString(tmp2(1114).t.YFOwHj, obj);
+      const obj3 = { product: name };
+      formatToPlainStringResult = intl3.formatToPlainString(tmp2(1114).t.YFOwHj, obj3);
     }
   }
   return formatToPlainStringResult;
 };
 export const isWishlistableCollectiblesProduct = function isWishlistableCollectiblesProduct(selectedProduct) {
-  const result = getItemRecordsFromPurchases.isPremiumCollectiblesProduct(selectedProduct);
+  const result = CollectiblesUtils.isPremiumCollectiblesProduct(selectedProduct);
   let tmp4 = !result;
   if (!result) {
     tmp4 = selectedProduct.type !== CollectiblesItemType.CollectiblesItemType.EXTERNAL_SKU;

@@ -1,39 +1,36 @@
-// Module ID: 8931
-// Function ID: 8932
+// Module ID: 8958
+// Function ID: 8959
 // Name: resolvedValuesFromUserApplicationIdentityProfile
-// Dependencies: [2, 8932, 8933, 8934, 8937, 9015, 9016]
+// Dependencies: [2, 8959, 8960, 8961, 8964, 9042, 9043]
 
-// Module 8931 (resolvedValuesFromUserApplicationIdentityProfile)
-import set from "set" /* 2 */;
-import isVisualUnfurledMedia from "isVisualUnfurledMedia" /* 9016 */;
-import isVisualUnfurledMediaDefault from "isVisualUnfurledMedia" /* 9016 */;
+// Module 8958 (resolvedValuesFromUserApplicationIdentityProfile)
+import discord_common_resolvedValuesFromUserApplicationIdentityProfile from "discord_common/resolvedValuesFromUserApplicationIdentityProfile" /* 9043 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/index.tsx");
-for (const key10018 in require("toAsciiDigits")) {
-  let tmp3 = key10018;
-  arg5[key10018] = require("toAsciiDigits")[key10018];
+const require = globalThis.__r;
+const discord_common_resolvedValuesFromUserApplicationIdentityProfileDefault = discord_common_resolvedValuesFromUserApplicationIdentityProfile;
+
+const result = size.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/index.tsx");
+for (const key10018 in require("createCompactNumberFormat")) {
+  arg5[key10018] = require("createCompactNumberFormat")[key10018];
   continue;
 }
-for (const key10022 in require("resolveTextComponentValues")) {
-  let tmp4 = key10022;
-  arg5[key10022] = require("resolveTextComponentValues")[key10022];
+for (const key10022 in require("resolvedDisplayField")) {
+  arg5[key10022] = require("resolvedDisplayField")[key10022];
   continue;
 }
-for (const key10026 in require("resolveFieldValue")) {
-  let tmp5 = key10026;
-  arg5[key10026] = require("resolveFieldValue")[key10026];
+for (const key10026 in require("resolvedValues")) {
+  arg5[key10026] = require("resolvedValues")[key10026];
   continue;
 }
-for (const key10030 in require("applicationWidgetStaticFieldConfigSchema")) {
-  let tmp6 = key10030;
-  arg5[key10030] = require("applicationWidgetStaticFieldConfigSchema")[key10030];
+for (const key10030 in require("schemas")) {
+  arg5[key10030] = require("schemas")[key10030];
   continue;
 }
-for (const key10034 in require("set")) {
-  let tmp7 = key10034;
-  arg5[key10034] = require("set")[key10034];
+for (const key10034 in require("types")) {
+  arg5[key10034] = require("types")[key10034];
   continue;
 }
 
-export const resolvedValuesFromUserApplicationIdentityProfile = isVisualUnfurledMediaDefault;
-export const UnfurledMediaLoadingState = isVisualUnfurledMedia.UnfurledMediaLoadingState;
+export const resolvedValuesFromUserApplicationIdentityProfile = discord_common_resolvedValuesFromUserApplicationIdentityProfileDefault;
+export const UnfurledMediaLoadingState = discord_common_resolvedValuesFromUserApplicationIdentityProfile.UnfurledMediaLoadingState;

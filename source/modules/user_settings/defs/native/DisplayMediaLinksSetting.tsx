@@ -1,33 +1,24 @@
-// Module ID: 15463
-// Function ID: 15464
-// Name: toggle
-// Dependencies: [7975, 11473, 1114, 1935, 2]
+// Module ID: 15492
+// Function ID: 15493
+// Name: DisplayMediaLinksSetting
+// Dependencies: [7989, 11500, 1114, 1935, 2]
 
-// Module 15463 (toggle)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15492 (DisplayMediaLinksSetting)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-const toggle = createToggle.createToggle({
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.U47N1p);
+    const intl = util.intl;
+    return intl.string(util.t.U47N1p);
   },
-  parent: MobileUserSettings.MobileUserSettings.CHAT,
-  useValue: explicitContentFromProto.InlineEmbedMedia.useSetting,
-  onValueChange: explicitContentFromProto.InlineEmbedMedia.updateSetting
+  parent: SettingsConstants.MobileUserSettings.CHAT,
+  useValue: UserSettings.InlineEmbedMedia.useSetting,
+  onValueChange: UserSettings.InlineEmbedMedia.updateSetting
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.U47N1p);
-  },
-  parent: MobileUserSettings.MobileUserSettings.CHAT,
-  useValue: explicitContentFromProto.InlineEmbedMedia.useSetting,
-  onValueChange: explicitContentFromProto.InlineEmbedMedia.updateSetting
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/DisplayMediaLinksSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DisplayMediaLinksSetting.tsx");
 
 export default toggle;

@@ -1,68 +1,63 @@
-// Module ID: 5620
-// Function ID: 5621
-// Name: BaseIdentityVerificationField
-// Dependencies: [19, 17, 21, 4560, 576, 4556, 1114, 4511, 4975, 4384, 5621, 4763, 7042, 1896, 7045, 7081, 6960, 2]
+// Module ID: 5634
+// Function ID: 5635
+// Name: IdentityVerificationField
+// Dependencies: [19, 17, 21, 4574, 576, 4570, 1114, 4525, 4989, 4398, 5635, 4777, 7056, 1896, 7059, 7095, 6974, 2]
 // Exports: default
 
-// Module 5620 (BaseIdentityVerificationField)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4384 */;
-import Text from "Text" /* 4556 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 5634 (IdentityVerificationField)
+import nativeDefault from "native" /* 576 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4398 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+const require = globalThis.__r;
+
+require = fn;
 function BaseIdentityVerificationField(icon) {
   icon = icon.icon;
   ({ label, passesVerification, onPress } = icon);
-  const tmp = callback2();
-  let obj = { style: tmp.container, children: null };
+  const tmp = closure_6();
+  const obj = { style: tmp.container, children: null };
   let tmp4 = null;
   if (null != icon) {
-    obj = { style: null };
-    obj[0] = tmp.icon;
-    tmp4 = callback(icon, obj);
+    const obj2 = { style: tmp.icon };
+    tmp4 = React4(icon, obj2);
   }
   const items = [tmp4, , ];
+  const obj3 = { style: null, variant: "text-md/medium", color: "mobile-text-heading-primary", children: label };
   const items1 = [tmp.label];
-  items[1] = callback(Text.Text, { style: items1, variant: "text-md/medium", color: "mobile-text-heading-primary", children: label });
+  obj3.style = items1;
+  items[1] = React4(Text_Text.Text, obj3);
   if (passesVerification) {
-    obj = { style: null, accessible: true, accessibilityLabel: null, children: null };
-    obj[0] = tmp.verifiedContainer;
+    const obj4 = { style: tmp.verifiedContainer, accessible: true, accessibilityLabel: null, children: null };
     const intl2 = tmp7(1114).intl;
-    obj[2] = intl2.string(tmp7(1114).t.g62IJl);
-    obj[3] = tmp6(tmp7(4511).CheckmarkLargeIcon, { color: "status-positive" });
-    obj1 = obj;
+    obj4.accessibilityLabel = intl2.string(tmp7(1114).t.g62IJl);
+    obj4.children = tmp6(tmp7(4525).CheckmarkLargeIcon, { color: "status-positive" });
+    let obj5 = obj4;
   } else {
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.ctaButton;
-    const obj2 = { variant: "primary", size: "sm", grow: true, text: null, onPress: null };
+    obj5 = { style: tmp.ctaButton, children: null };
+    const obj6 = { variant: "primary", size: "sm", grow: true, text: null, onPress: null };
     const intl = tmp7(1114).intl;
-    obj2[3] = intl.string(tmp7(1114).t["13ofGu"]);
-    obj2[4] = onPress;
-    obj1[1] = tmp6(tmp7(4975).Button, obj2);
+    obj6.text = intl.string(tmp7(1114).t["13ofGu"]);
+    obj6.onPress = onPress;
+    obj5.children = tmp6(tmp7(4989).Button, obj6);
   }
-  items[2] = callback(View, obj1);
-  obj[1] = items;
-  return closure_5(View, obj);
+  items[2] = React4(View, obj5);
+  obj.children = items;
+  return hasOwnProperty(View, obj);
 }
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: null, icon: null, label: null, verifiedContainer: null, ctaButton: null };
-createCacheKey = { padding: 8, marginTop: 8, borderRadius: ThemesDefault.radii.sm, height: 48, flexDirection: "row", alignItems: "center", justifyContent: "space-between", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginLeft: 4, marginRight: 8 };
-createCacheKey[2] = { flex: 1, marginLeft: 4, lineHeight: 20 };
-createCacheKey[3] = { paddingVertical: 7, paddingHorizontal: 4, flexDirection: "row", alignItems: "center" };
-createCacheKey[4] = { flexGrow: 0, alignSelf: "center", paddingHorizontal: 16 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/IdentityVerificationField.tsx");
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { padding: 8, marginTop: 8, borderRadius: nativeDefault.radii.sm, height: 48, flexDirection: "row", alignItems: "center", justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, icon: { marginLeft: 4, marginRight: 8 }, label: { flex: 1, marginLeft: 4, lineHeight: 20 }, verifiedContainer: { paddingVertical: 7, paddingHorizontal: 4, flexDirection: "row", alignItems: "center" }, ctaButton: { flexGrow: 0, alignSelf: "center", paddingHorizontal: 16 } };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/IdentityVerificationField.tsx");
 
 export default function IdentityVerificationField(arg0) {
   ({ platform, passesVerification } = arg0);
-  if (MAX_RESULTS_PER_PAGE.UserVerificationFieldPlatforms.EMAIL === platform) {
+  if (MemberVerificationTypes.UserVerificationFieldPlatforms.EMAIL === platform) {
     const intl3 = tmp(1114).intl;
     const string2 = intl3.string;
     let INsLgA = tmp(1114).t;
@@ -73,7 +68,7 @@ export default function IdentityVerificationField(arg0) {
       string2Result = string2(INsLgA.c6EUJI);
     }
   } else {
-    if (tmp(4384).UserVerificationFieldPlatforms.PHONE === platform) {
+    if (tmp(4398).UserVerificationFieldPlatforms.PHONE === platform) {
       const intl2 = tmp(1114).intl;
       const string = intl2.string;
       const t = tmp(1114).t;
@@ -87,31 +82,28 @@ export default function IdentityVerificationField(arg0) {
       const intl = tmp(1114).intl;
       stringResult1 = intl.string(tmp(1114).t.mhv8BM);
     }
-    if (tmp(4384).UserVerificationFieldPlatforms.EMAIL === platform) {
-      let EnvelopeIcon = tmp(7081).EnvelopeIcon;
-    } else if (tmp(4384).UserVerificationFieldPlatforms.PHONE === platform) {
-      EnvelopeIcon = tmp(6960).MobilePhoneIcon;
+    if (tmp(4398).UserVerificationFieldPlatforms.EMAIL === platform) {
+      let EnvelopeIcon = tmp(7095).EnvelopeIcon;
+    } else if (tmp(4398).UserVerificationFieldPlatforms.PHONE === platform) {
+      EnvelopeIcon = tmp(6974).MobilePhoneIcon;
     } else {
-      EnvelopeIcon = tmp(7081).EnvelopeIcon;
+      EnvelopeIcon = tmp(7095).EnvelopeIcon;
     }
-    if (tmp(4384).UserVerificationFieldPlatforms.EMAIL === platform) {
+    if (tmp(4398).UserVerificationFieldPlatforms.EMAIL === platform) {
       let fn = () => {
-        callback2(paths[10]).open();
+        require("EmailVerificationModalActionCreators").open();
       };
     } else {
-      fn = tmp(4384).UserVerificationFieldPlatforms.PHONE === platform ? (() => {
-        let obj = callback2(paths[11]);
-        obj = { reason: callback(paths[14]).ChangePhoneReason.GUILD_PHONE_REQUIRED };
-        obj.pushLazy(callback(paths[13])(paths[12], paths.paths), obj);
+      fn = tmp(4398).UserVerificationFieldPlatforms.PHONE === platform ? (() => {
+        const obj2 = { reason: null };
+        const obj = require("ModalActionCreators");
+        obj2.reason = require("PhoneActionCreators").ChangePhoneReason.GUILD_PHONE_REQUIRED;
+        obj.pushLazy(require("asyncRequireImpl")(paths[12], paths.paths), obj2);
       }) : (() => {
 
       });
     }
-    let obj = { label: null, icon: null, passesVerification: null, onPress: null };
-    obj[0] = stringResult1;
-    obj[1] = EnvelopeIcon;
-    obj[2] = passesVerification;
-    obj[3] = fn;
-    return callback(BaseIdentityVerificationField, obj);
+    let obj = { label: stringResult1, icon: EnvelopeIcon, passesVerification, onPress: fn };
+    return React4(BaseIdentityVerificationField, obj);
   }
 };

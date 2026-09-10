@@ -1,34 +1,39 @@
-// Module ID: 10243
-// Function ID: 10244
-// Name: hasOfferedFavoritesGuildOnboarding
-// Dependencies: [32, 19, 1949, 1960, 1074, 560, 1943, 10229, 504, 10244, 7388, 2]
+// Module ID: 10270
+// Function ID: 10271
+// Name: FavoritesGuildIntroPopover
+// Dependencies: [32, 19, 1949, 1960, 1074, 560, 1943, 10256, 504, 10271, 7402, 2]
 // Exports: hasOfferedFavoritesGuildOnboarding, isFavoritesIntroPopoverShown, resetHasOfferedFavoritesGuildOnboarding, useFavoritesIntroPopover, useIsFavoritesIntroPopoverShown
 
-// Module 10243 (hasOfferedFavoritesGuildOnboarding)
-import DismissibleContent from "DismissibleContent" /* 1943 */;
-import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10244 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import withContent from "withContent" /* 1949 */;
-import closure_7 from "withContent" /* 1949 */;
-import closure_8 from "initializeFromUserSettings" /* 1960 */;
-import { NOOP } from "ME" /* 1074 */;
-import keys from "keys" /* 560 */;
+// Module 10270 (FavoritesGuildIntroPopover)
+import dismissible_content from "dismissible_content" /* 1943 */;
+import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10271 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import DismissibleContentShownStateStore_mod from "DismissibleContentShownStateStore" /* 1949 */;
+import FavoriteStore from "FavoriteStore" /* 1960 */;
 
-require = arg1;
-let c4 = importAllResult;
-({ isContentShown: c5, useIsContentShown: closure_6 } = withContent);
-let closure_10 = keys.create(() => ({ shouldShowPopover: false, markPopoverAsDismissed: NOOP }));
+const require = globalThis.__r;
+
+require = fn;
+let DismissibleContentShownStateStore = fn(1949);
+({ isContentShown: hasOwnProperty, useIsContentShown: metroRequire } = DismissibleContentShownStateStore);
+let DismissibleContentShownStateStore = DismissibleContentShownStateStore_mod;
+const NOOP = fn(1074).NOOP;
+const module_560 = fn(560);
+let closure_10 = module_560.create(() => ({ shouldShowPopover: false, markPopoverAsDismissed: NOOP }));
 let c11 = false;
-const memoResult = importAllResult.memo(function FavoritesGuildIntroPopover() {
-  const favoritesAccess = _require(10229).useFavoritesAccess("FavoritesGuildIntroPopover");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/onboarding/FavoritesGuildIntroPopover.tsx");
+
+export default noop.memo(function FavoritesGuildIntroPopover() {
+  const favoritesAccess = require("FavoritesHooks").useFavoritesAccess("FavoritesGuildIntroPopover");
   ({ hasAccess, isFreemium } = favoritesAccess);
-  const obj = _require(10229);
-  const items = [closure_8];
-  const stateFromStores = _require(504).useStateFromStores(items, () => false === obj.favoriteGuildVisibleSetting);
-  const obj2 = _require(504);
+  const obj = require("FavoritesHooks");
+  const items = [FavoriteStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => false === FavoriteStore.favoriteGuildVisibleSetting);
+  const obj2 = require("initialize");
   const tmp5 = useCanShowFavoritesGuildOnboardingDefault();
-  _require(7388);
+  require("useSelectedDismissibleContent");
   if (hasAccess) {
     if (isFreemium) {
       if (!stateFromStores) {
@@ -36,7 +41,7 @@ const memoResult = importAllResult.memo(function FavoritesGuildIntroPopover() {
           if (tmp6) {
             let items1 = [tmp(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO];
           }
-          const tmp10 = callback(tmp8(items1), 2);
+          const tmp10 = _slicedToArray(tmp8(items1), 2);
           _require = tmp11;
           if (tmp10[0] === tmp(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) {
             const items2 = [tmp(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
@@ -44,19 +49,19 @@ const memoResult = importAllResult.memo(function FavoritesGuildIntroPopover() {
           } else {
             items3 = [];
           }
-          const tmp12 = callback(tmp(7388).useSelectedDismissibleContent(items3, undefined, true), 1)[0] === tmp(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
+          const tmp12 = _slicedToArray(tmp(7402).useSelectedDismissibleContent(items3, undefined, true), 1)[0] === tmp(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
           importDefault = tmp12;
           const items4 = [tmp12];
-          const effect = importAllResult.useEffect(() => {
+          const effect = noop.useEffect(() => {
             if (closure_1) {
               c11 = true;
             }
           }, items4);
           const items5 = [tmp12, tmp10[1]];
-          const layoutEffect = importAllResult.useLayoutEffect(() => {
-            closure_1_10.setState({ shouldShowPopover: closure_1, markPopoverAsDismissed: closure_0 });
+          const layoutEffect = noop.useLayoutEffect(() => {
+            state.setState({ shouldShowPopover, markPopoverAsDismissed });
           }, items5);
-          const layoutEffect1 = importAllResult.useLayoutEffect(() => () => state.setState({ shouldShowPopover: false, markPopoverAsDismissed: closure_9 }), []);
+          const layoutEffect1 = noop.useLayoutEffect(() => () => state.setState({ shouldShowPopover: false, markPopoverAsDismissed }), []);
           return null;
         }
       }
@@ -64,9 +69,6 @@ const memoResult = importAllResult.memo(function FavoritesGuildIntroPopover() {
   }
   items1 = [];
 });
-const result = require("set").fileFinishedImporting("modules/favorites/onboarding/FavoritesGuildIntroPopover.tsx");
-
-export default memoResult;
 export function hasOfferedFavoritesGuildOnboarding() {
   return c11;
 }
@@ -74,11 +76,11 @@ export function resetHasOfferedFavoritesGuildOnboarding() {
   c11 = false;
 }
 export const useFavoritesIntroPopover = function useFavoritesIntroPopover() {
-  return { shouldShowPopover: callback5((shouldShowPopover) => shouldShowPopover.shouldShowPopover), markPopoverAsDismissed: callback5((markPopoverAsDismissed) => markPopoverAsDismissed.markPopoverAsDismissed) };
+  return { shouldShowPopover: closure_10((shouldShowPopover) => shouldShowPopover.shouldShowPopover), markPopoverAsDismissed: closure_10((markPopoverAsDismissed) => markPopoverAsDismissed.markPopoverAsDismissed) };
 };
-export const isFavoritesIntroPopoverShown = function isFavoritesIntroPopoverShown(hasAccess, isFreemium, arg2) {
-  return callback2(DismissibleContent.DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) && callback2(DismissibleContent.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM);
+export const isFavoritesIntroPopoverShown = function isFavoritesIntroPopoverShown() {
+  return hasOwnProperty(dismissible_content.DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) && hasOwnProperty(dismissible_content.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM);
 };
 export const useIsFavoritesIntroPopoverShown = function useIsFavoritesIntroPopoverShown() {
-  return callback3(DismissibleContent.DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) && callback3(DismissibleContent.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM);
+  return timestampProducer(dismissible_content.DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) && timestampProducer(dismissible_content.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM);
 };

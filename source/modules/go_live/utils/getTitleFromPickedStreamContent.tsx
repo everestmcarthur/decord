@@ -1,14 +1,14 @@
-// Module ID: 13832
-// Function ID: 13833
+// Module ID: 13855
+// Function ID: 13856
 // Name: getTitleFromPickedStreamContent
 // Dependencies: [1114, 2]
 // Exports: default
 
-// Module 13832 (getTitleFromPickedStreamContent)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 13855 (getTitleFromPickedStreamContent)
+import util from "util" /* 1114 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/go_live/utils/getTitleFromPickedStreamContent.tsx");
+const result = size.fileFinishedImporting("modules/go_live/utils/getTitleFromPickedStreamContent.tsx");
 
 export default function getTitleFromPickedStreamContent(windows) {
   if (windows.windows.length > 0) {
@@ -22,8 +22,8 @@ export default function getTitleFromPickedStreamContent(windows) {
   } else {
     joined = null;
     if (windows.displays.length > 0) {
-      const intl = getSystemLocale.intl;
-      joined = intl.string(getSystemLocale.t.R4wpLN);
+      const intl = util.intl;
+      joined = intl.string(util.t.R4wpLN);
     }
   }
   return joined;

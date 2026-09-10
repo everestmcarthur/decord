@@ -1,22 +1,19 @@
-// Module ID: 17547
-// Function ID: 17548
-// Name: getRuleDefaultActionsFromConfig
-// Dependencies: [11867, 2]
+// Module ID: 17578
+// Function ID: 17579
+// Name: AutomodActionUtils
+// Dependencies: [11893, 2]
 // Exports: getDefaultActions, getRuleDefaultActionsFromConfig, isActionBlockMessage, isActionFlagToChannel, isActionQuarantineUser, isActionUserCommunicationDisabled
 
-// Module 17547 (getRuleDefaultActionsFromConfig)
-import set from "set" /* 2 */;
-import AutomodEventType from "AutomodEventType" /* 11867 */;
+// Module 17578 (AutomodActionUtils)
+import Constants from "Constants" /* 11893 */;
+import size from "module_2" /* 2 */;
 
-let AutomodActionType = AutomodEventType.AutomodActionType;
-const result = set.fileFinishedImporting("modules/guild_automod/AutomodActionUtils.tsx");
+const AutomodActionType = Constants.AutomodActionType;
+const result = size.fileFinishedImporting("modules/guild_automod/AutomodActionUtils.tsx");
 
 export const getRuleDefaultActionsFromConfig = function getRuleDefaultActionsFromConfig(defaultActionTypes) {
-  let obj = { type: AutomodActionType.BLOCK_MESSAGE, metadata: { customMessage: "Array" } };
-  obj = { type: AutomodActionType.FLAG_TO_CHANNEL, metadata: { channelId: "Array" } };
-  obj = { type: AutomodActionType.USER_COMMUNICATION_DISABLED, metadata: { durationSeconds: 60 } };
-  AutomodActionType = { [closure_0.BLOCK_MESSAGE]: obj, [closure_0.FLAG_TO_CHANNEL]: obj, [closure_0.USER_COMMUNICATION_DISABLED]: obj, [closure_0.QUARANTINE_USER]: { type: AutomodActionType.QUARANTINE_USER, metadata: {} } };
-  return Array.from(defaultActionTypes.defaultActionTypes).map((arg0) => table[arg0]);
+  closure_0 = { [closure_1_0.BLOCK_MESSAGE]: { type: AutomodActionType.BLOCK_MESSAGE, metadata: { customMessage: "disabled" } }, [closure_1_0.FLAG_TO_CHANNEL]: { type: AutomodActionType.FLAG_TO_CHANNEL, metadata: { channelId: "disabled" } }, [closure_1_0.USER_COMMUNICATION_DISABLED]: { type: AutomodActionType.USER_COMMUNICATION_DISABLED, metadata: { durationSeconds: 60 } }, [closure_1_0.QUARANTINE_USER]: { type: AutomodActionType.QUARANTINE_USER, metadata: {} } };
+  return Array.from(defaultActionTypes.defaultActionTypes).map((item) => closure_0[item]);
 };
 export const isActionFlagToChannel = function isActionFlagToChannel(type) {
   return type.type === AutomodActionType.FLAG_TO_CHANNEL;
@@ -31,8 +28,5 @@ export const isActionQuarantineUser = function isActionQuarantineUser(type) {
   return type.type === AutomodActionType.QUARANTINE_USER;
 };
 export const getDefaultActions = function getDefaultActions() {
-  let obj = { type: AutomodActionType.BLOCK_MESSAGE, metadata: { customMessage: "Array" } };
-  obj = { type: AutomodActionType.FLAG_TO_CHANNEL, metadata: { channelId: "Array" } };
-  obj = { type: AutomodActionType.USER_COMMUNICATION_DISABLED, metadata: { durationSeconds: 60 } };
-  return { [closure_0.BLOCK_MESSAGE]: obj, [closure_0.FLAG_TO_CHANNEL]: obj, [closure_0.USER_COMMUNICATION_DISABLED]: obj, [closure_0.QUARANTINE_USER]: { type: AutomodActionType.QUARANTINE_USER, metadata: {} } };
+  return { [closure_1_0.BLOCK_MESSAGE]: { type: AutomodActionType.BLOCK_MESSAGE, metadata: { customMessage: "disabled" } }, [closure_1_0.FLAG_TO_CHANNEL]: { type: AutomodActionType.FLAG_TO_CHANNEL, metadata: { channelId: "disabled" } }, [closure_1_0.USER_COMMUNICATION_DISABLED]: { type: AutomodActionType.USER_COMMUNICATION_DISABLED, metadata: { durationSeconds: 60 } }, [closure_1_0.QUARANTINE_USER]: { type: AutomodActionType.QUARANTINE_USER, metadata: {} } };
 };

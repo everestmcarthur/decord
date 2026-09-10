@@ -2,8 +2,10 @@
 // Function ID: 1532
 // Name: Group
 // Dependencies: []
+// Exports: Group
 
 // Module 1531 (Group)
-arg5.Group = function Group(arg0) {
+
+export function Group(arg0) {
   return null;
-};
+}

@@ -1,24 +1,26 @@
-// Module ID: 6606
-// Function ID: 6607
+// Module ID: 6620
+// Function ID: 6621
 // Name: TextInput
-// Dependencies: [109, 19, 21, 4278, 6607, 6613, 6608, 2]
+// Dependencies: [109, 19, 21, 4293, 6621, 6627, 6622, 2]
 
-// Module 6606 (TextInput)
-import useFieldLabelA11yNative from "useFieldLabelA11yNative" /* 4278 */;
-import Input from "Input" /* 6607 */;
-import getRequiredFieldA11yName from "getRequiredFieldA11yName" /* 6608 */;
-import TextField from "TextField" /* 6613 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+// Module 6620 (TextInput)
+import useFieldLabelA11yNative from "useFieldLabelA11yNative" /* 4293 */;
+import Input from "Input" /* 6621 */;
+import getRequiredFieldA11yName from "getRequiredFieldA11yName" /* 6622 */;
+import TextField from "TextField" /* 6627 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 let closure_2 = ["labelId", "accessibilityLabel"];
-const forwardRefResult = importAllResult.forwardRef((status, ref) => {
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/TextInput/native/TextInput.native.tsx");
+
+export const TextInput = noop.forwardRef((status, ref) => {
   status = status.status;
   ({ errorMessage, required } = status);
-  let obj = useFieldLabelA11yNative;
-  const fieldLabelA11yNative = obj.useFieldLabelA11yNative(status);
+  const fieldLabelA11yNative = useFieldLabelA11yNative.useFieldLabelA11yNative(status);
   const accessibilityLabel = fieldLabelA11yNative.accessibilityLabel;
   if (status == null) {
     let str;
@@ -27,22 +29,19 @@ const forwardRefResult = importAllResult.forwardRef((status, ref) => {
     }
     status = str;
   }
-  obj = {};
+  const obj2 = {};
   const merged = Object.assign(status);
-  obj.labelId = fieldLabelA11yNative.labelId;
-  obj = { ref };
+  obj2.labelId = fieldLabelA11yNative.labelId;
+  const obj3 = { ref };
   const merged1 = Object.assign(status);
-  obj.status = status;
-  const merged2 = Object.assign(callback(fieldLabelA11yNative, closure_2));
-  const tmp4 = callback(fieldLabelA11yNative, closure_2);
+  obj3.status = status;
+  const merged2 = Object.assign(_objectWithoutProperties(fieldLabelA11yNative, closure_2));
+  const tmp4 = _objectWithoutProperties(fieldLabelA11yNative, closure_2);
   let requiredFieldA11yName = getRequiredFieldA11yName.getRequiredFieldA11yName(accessibilityLabel, required);
   if (requiredFieldA11yName == null) {
     requiredFieldA11yName = accessibilityLabel;
   }
-  obj.accessibilityLabel = requiredFieldA11yName;
-  obj.children = jsx(TextField.TextField, { ref });
-  return jsx(Input.Input, { ref });
+  obj3.accessibilityLabel = requiredFieldA11yName;
+  obj2.children = jsx(TextField.TextField, { ref });
+  return jsx(Input.Input, {});
 });
-const result = require("set").fileFinishedImporting("design/components/TextInput/native/TextInput.native.tsx");
-
-export const TextInput = forwardRefResult;

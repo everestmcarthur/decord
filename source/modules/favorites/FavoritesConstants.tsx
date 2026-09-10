@@ -1,16 +1,15 @@
 // Module ID: 1970
 // Function ID: 1971
-// Name: date
+// Name: FavoritesConstants
 // Dependencies: [1971, 2]
 
-// Module 1970 (date)
-import set from "set" /* 2 */;
-import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1971 */;
+// Module 1970 (FavoritesConstants)
+import GuildRecordUtils from "GuildRecordUtils" /* 1971 */;
+import size from "module_2" /* 2 */;
 
 const obj = { id: "373", name: "Favorites", description: "The place for all your favorite channels!", joinedAt: new Date(), maxMembers: 500000 };
-const result = fromGuildPropertiesWithAdditionalFields.constructFromPartialGuildRecord(obj);
-const date = new Date();
-const result1 = set.fileFinishedImporting("modules/favorites/FavoritesConstants.tsx");
+const result = GuildRecordUtils.constructFromPartialGuildRecord(obj);
+const result1 = size.fileFinishedImporting("modules/favorites/FavoritesConstants.tsx");
 
 export const FAVORITES_RAW_GUILD_ID = "373";
 export const FAVORITES_GUILD_RECORD = result;

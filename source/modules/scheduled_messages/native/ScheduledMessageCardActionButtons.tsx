@@ -1,71 +1,74 @@
-// Module ID: 12222
-// Function ID: 12223
+// Module ID: 12248
+// Function ID: 12249
 // Name: ScheduledMessageCardActionButtons
-// Dependencies: [21, 1114, 4505, 12215, 10255, 4523, 6616, 8671, 8097, 8678, 2]
+// Dependencies: [21, 1114, 4519, 12241, 10282, 4537, 6630, 8699, 8113, 8706, 2]
 // Exports: default
 
-// Module 12222 (ScheduledMessageCardActionButtons)
-import set from "set" /* 2 */;
+// Module 12248 (ScheduledMessageCardActionButtons)
 import jsxProd from "jsxProd" /* 21 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import SendMessageIcon from "SendMessageIcon" /* 4505 */;
-import ClockIcon from "ClockIcon" /* 4523 */;
-import CircleXIcon from "CircleXIcon" /* 6616 */;
-import ContextMenu from "ContextMenu" /* 8671 */;
-import PencilIcon from "PencilIcon" /* 10255 */;
+import util from "util" /* 1114 */;
+import SendMessageIcon from "SendMessageIcon" /* 4519 */;
+import ClockIcon from "ClockIcon" /* 4537 */;
+import CircleXIcon from "CircleXIcon" /* 6630 */;
+import IconButton from "IconButton" /* 8113 */;
+import ContextMenu from "ContextMenu" /* 8699 */;
+import _modDef8706 from "module_8706" /* 8706 */;
+import PencilIcon from "PencilIcon" /* 10282 */;
+import ScheduledMessagesUtils from "ScheduledMessagesUtils" /* 12241 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessageCardActionButtons.tsx");
+const result = size.fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessageCardActionButtons.tsx");
 
 export default function ScheduledMessageCardActionButtons(arg0) {
   ({ scheduledMessage: require, isPendingRemoval: importDefault } = arg0);
   let obj = { label: null, IconComponent: null, action: null };
-  let intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.JLba51);
-  obj[1] = SendMessageIcon.SendMessageIcon;
-  obj[2] = function action() {
-    return closure_1_0(closure_1_2[3]).sendScheduledMessageNow(closure_0.scheduledMessageId);
+  let intl = util.intl;
+  obj.label = intl.string(util.t.JLba51);
+  obj.IconComponent = SendMessageIcon.SendMessageIcon;
+  obj.action = function action() {
+    return ScheduledMessagesUtils.sendScheduledMessageNow(closure_1_0.scheduledMessageId);
   };
   const items = [obj, , , ];
-  obj = { label: null, IconComponent: null, action: null };
-  const intl2 = getSystemLocale.intl;
-  obj[0] = intl2.string(getSystemLocale.t.ZXE1s4);
-  obj[1] = PencilIcon.PencilIcon;
-  obj[2] = function action() {
-    return closure_1_0(closure_1_2[3]).openScheduledMessageEditContentModal(closure_0);
+  const obj2 = { label: null, IconComponent: null, action: null };
+  const intl2 = util.intl;
+  obj2.label = intl2.string(util.t.ZXE1s4);
+  obj2.IconComponent = PencilIcon.PencilIcon;
+  obj2.action = function action() {
+    return ScheduledMessagesUtils.openScheduledMessageEditContentModal(closure_1_0);
   };
-  items[1] = obj;
-  obj = { label: null, IconComponent: null, action: null };
-  const intl3 = getSystemLocale.intl;
-  obj[0] = intl3.string(getSystemLocale.t.SBcdAN);
-  obj[1] = ClockIcon.ClockIcon;
-  obj[2] = function action() {
-    return closure_1_0(closure_1_2[3]).openRescheduleMessageActionSheet(closure_0.scheduledMessageId, closure_0.sendAtTimestamp, closure_0.createArgs.channelId);
+  items[1] = obj2;
+  const obj3 = { label: null, IconComponent: null, action: null };
+  const intl3 = util.intl;
+  obj3.label = intl3.string(util.t.SBcdAN);
+  obj3.IconComponent = ClockIcon.ClockIcon;
+  obj3.action = function action() {
+    return ScheduledMessagesUtils.openRescheduleMessageActionSheet(closure_1_0.scheduledMessageId, closure_1_0.sendAtTimestamp, closure_1_0.createArgs.channelId);
   };
-  items[2] = obj;
-  obj1 = { label: null, IconComponent: null, action: null, variant: "destructive" };
-  const intl4 = getSystemLocale.intl;
-  obj1[0] = intl4.string(getSystemLocale.t.O3sL8F);
-  obj1[1] = CircleXIcon.CircleXIcon;
-  obj1[2] = function action() {
-    return closure_1_0(closure_1_2[3]).cancelScheduledMessage(closure_0.scheduledMessageId);
+  items[2] = obj3;
+  const obj4 = { label: null, IconComponent: null, action: null, variant: "destructive" };
+  const intl4 = util.intl;
+  obj4.label = intl4.string(util.t.O3sL8F);
+  obj4.IconComponent = CircleXIcon.CircleXIcon;
+  obj4.action = function action() {
+    return ScheduledMessagesUtils.cancelScheduledMessage(closure_1_0.scheduledMessageId);
   };
-  items[3] = obj1;
+  items[3] = obj4;
   return jsx(ContextMenu.ContextMenu, {
     items,
     keyboardShouldPersistTaps: "handled",
     triggerOnTap: true,
     children(ref) {
-      const merged = Object.assign(ref, Object.create(null));
+      const merged = Object.assign(ref, Object.assign({ ref: 0 }));
       const obj = { ref: ref.ref };
       const merged1 = Object.assign(merged);
       obj.variant = "secondary";
-      const intl = closure_1_0(closure_1_2[1]).intl;
-      obj.accessibilityLabel = intl.string(closure_1_0(closure_1_2[1]).t.sHmiIC);
+      const intl = util.intl;
+      obj.accessibilityLabel = intl.string(util.t.sHmiIC);
       obj.size = "sm";
-      obj.disabled = closure_1;
-      obj.icon = closure_1_1(closure_1_2[9]);
-      return closure_1_3(closure_1_0(closure_1_2[8]).IconButton, obj);
+      obj.disabled = disabled;
+      obj.icon = _modDef8706;
+      return jsx(IconButton.IconButton, { ref: ref.ref });
     }
   });
 };

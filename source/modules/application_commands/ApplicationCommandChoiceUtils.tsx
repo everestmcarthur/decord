@@ -1,25 +1,26 @@
-// Module ID: 9419
-// Function ID: 9420
-// Name: toChoiceBooleanValue
-// Dependencies: [7779, 4999, 2]
+// Module ID: 9446
+// Function ID: 9447
+// Name: ApplicationCommandChoiceUtils
+// Dependencies: [7793, 5013, 2]
 // Exports: findAutocompleteChoiceNumberValue, findAutocompleteChoiceStringValue, findChoiceNumberValue, findChoiceStringValue, toChoiceBooleanValue
 
-// Module 9419 (toChoiceBooleanValue)
-import closure_0 from "handleInit" /* 7779 */;
-import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 4999 */;
+// Module 9446 (ApplicationCommandChoiceUtils)
+import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7793 */;
 
-({ FALSE_OPTION_NAME: closure_1, TRUE_OPTION_NAME: obj1 } = TRUE_OPTION_NAME);
-const result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandChoiceUtils.tsx");
+const ApplicationCommandConstants = fn(5013);
+({ FALSE_OPTION_NAME: closure_1, TRUE_OPTION_NAME: c2 } = ApplicationCommandConstants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandChoiceUtils.tsx");
 
 export const toChoiceBooleanValue = function toChoiceBooleanValue(trimmed) {
   const formatted = trimmed.toLowerCase();
-  const tmp2 = formatted === closure_2.toLowerCase();
+  const tmp2 = formatted === React2.toLowerCase();
   const formatted1 = trimmed.toLowerCase();
   return tmp2;
 };
-export const findChoiceStringValue = function findChoiceStringValue(choices, closure_27) {
-  closure_0 = closure_27;
-  let value;
+export const findChoiceStringValue = function findChoiceStringValue(choices, surrogate) {
+  closure_0 = surrogate;
+  value = undefined;
   if (choices != null) {
     const iter = choices.find((displayName) => displayName.displayName === closure_0);
     if (iter != null) {
@@ -30,7 +31,7 @@ export const findChoiceStringValue = function findChoiceStringValue(choices, clo
 };
 export const findChoiceNumberValue = function findChoiceNumberValue(choices, trimmed) {
   closure_0 = trimmed;
-  let value;
+  value = undefined;
   if (choices != null) {
     const iter = choices.find((displayName) => displayName.displayName === closure_0);
     if (iter != null) {
@@ -39,10 +40,10 @@ export const findChoiceNumberValue = function findChoiceNumberValue(choices, tri
   }
   return typeof value === "number" ? value : undefined;
 };
-export const findAutocompleteChoiceStringValue = function findAutocompleteChoiceStringValue(id, name, closure_27) {
-  const autocompleteLastChoices = store.getAutocompleteLastChoices(id, name);
-  store = closure_27;
-  let value;
+export const findAutocompleteChoiceStringValue = function findAutocompleteChoiceStringValue(id, name, surrogate) {
+  const autocompleteLastChoices = ApplicationCommandAutocompleteStore.getAutocompleteLastChoices(id, name);
+  closure_0 = surrogate;
+  value = undefined;
   if (autocompleteLastChoices != null) {
     const iter = autocompleteLastChoices.find((displayName) => displayName.displayName === closure_0);
     if (iter != null) {
@@ -56,9 +57,9 @@ export const findAutocompleteChoiceStringValue = function findAutocompleteChoice
   return tmp2;
 };
 export const findAutocompleteChoiceNumberValue = function findAutocompleteChoiceNumberValue(id, name, trimmed) {
-  const autocompleteLastChoices = store.getAutocompleteLastChoices(id, name);
-  store = trimmed;
-  let value;
+  const autocompleteLastChoices = ApplicationCommandAutocompleteStore.getAutocompleteLastChoices(id, name);
+  closure_0 = trimmed;
+  value = undefined;
   if (autocompleteLastChoices != null) {
     const iter = autocompleteLastChoices.find((displayName) => displayName.displayName === closure_0);
     if (iter != null) {

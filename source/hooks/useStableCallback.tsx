@@ -1,12 +1,12 @@
-// Module ID: 6964
-// Function ID: 6965
-// Name: set
-// Dependencies: [2, 6965]
+// Module ID: 6978
+// Function ID: 6979
+// Name: useStableCallback
+// Dependencies: [2, 6979]
 
-// Module 6964 (set)
-import set from "set" /* 2 */;
-import useStableCallbackDefault from "useStableCallback" /* 6965 */;
+// Module 6978 (useStableCallback)
+import hooks_useStableCallbackDefault from "hooks/useStableCallback" /* 6979 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("hooks/useStableCallback.tsx");
+const result = size.fileFinishedImporting("hooks/useStableCallback.tsx");
 
-export default useStableCallbackDefault;
+export default hooks_useStableCallbackDefault;

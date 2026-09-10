@@ -1,74 +1,66 @@
-// Module ID: 14811
-// Function ID: 14812
+// Module ID: 14837
+// Function ID: 14838
 // Name: IgnoredUsersList
-// Dependencies: [19, 17, 4209, 21, 4560, 576, 7162, 7182, 1178, 14805, 1114, 7123, 4556, 5687, 14812, 504, 2]
+// Dependencies: [19, 17, 4222, 21, 4574, 576, 7176, 7196, 1178, 14831, 1114, 7137, 4570, 5701, 14838, 504, 2]
 // Exports: default
 
-// Module 14811 (IgnoredUsersList)
-import noopAll from "noop" /* 19 */;
+// Module 14837 (IgnoredUsersList)
 import initialize from "initialize" /* 504 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import Text from "Text" /* 4556 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
-import context from "context" /* 7162 */;
-import contextDefault from "context" /* 7162 */;
-import getBlockedSource from "getBlockedSource" /* 14805 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "markAllUserIdListsStale" /* 4209 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import TableRowGroup from "TableRowGroup" /* 5701 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7137 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7176 */;
+import Blocked from "Blocked" /* 14831 */;
+import IgnoredUserRowDefault from "IgnoredUserRow" /* 14838 */;
+import noop from "module_19" /* 19 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
 
-require = arg1;
+const useAnalyticsLocationsDefault = useAnalyticsLocations;
+
+require = fn;
 function IgnoredUsersList(userIds) {
   userIds = userIds.userIds;
-  const tmp = callback3();
-  contextDefault;
+  const tmp = closure_7();
+  useAnalyticsLocationsDefault;
   if (0 === userIds.length) {
-    let obj = { Illustration: null, body: null };
-    obj[0] = getBlockedSource.Blocked;
-    const intl = getSystemLocale.intl;
-    obj[1] = intl.string(getSystemLocale.t.PYrWFW);
-    let tmp7 = callback(Button.EmptyState, obj);
+    const obj = { Illustration: Blocked.Blocked, body: null };
+    const intl = util.intl;
+    obj.body = intl.string(util.t.PYrWFW);
+    let tmp7 = hasOwnProperty(native.EmptyState, obj);
   } else {
-    obj = { value: null, children: null };
-    obj[0] = tmp4;
-    obj = { bottom: true, style: null, children: null };
-    obj[1] = tmp.list;
-    obj1 = { children: null };
-    const obj2 = { style: null, variant: "text-sm/semibold", color: "text-default", children: null };
-    obj2[0] = tmp.sectionLabelStyle;
-    const intl2 = getSystemLocale.intl;
-    const obj3 = { numberOfIgnoredUsers: null };
-    obj3[0] = userIds.length;
-    obj2[3] = intl2.formatToPlainString(getSystemLocale.t.iNKUhU, obj3);
-    const items = [callback(Text.Text, obj2), ];
-    const obj4 = { hasIcons: true, children: null };
-    obj4[1] = userIds.map((userId) => callback2(callback(table[14]), { userId }, userId));
-    const intl3 = getSystemLocale.intl;
-    items[1] = callback(TableRowGroupTitle.TableRowGroup, obj4, intl3.string(getSystemLocale.t["93ZDWE"]));
-    obj1[0] = items;
-    obj[2] = callback2(ScrollView, obj1);
-    obj[1] = callback(SafeAreaPaddingView.SafeAreaPaddingView, obj);
-    tmp7 = callback(context.AnalyticsLocationProvider, obj);
+    const obj2 = { value: tmp4, children: null };
+    const obj3 = { bottom: true, style: tmp.list, children: null };
+    const obj4 = { children: null };
+    const obj5 = { style: tmp.sectionLabelStyle, variant: "text-sm/semibold", color: "text-default", children: null };
+    const intl2 = util.intl;
+    const obj6 = { numberOfIgnoredUsers: userIds.length };
+    obj5.children = intl2.formatToPlainString(util.t.iNKUhU, obj6);
+    const items = [hasOwnProperty(Text_Text.Text, obj5), ];
+    const obj7 = { hasIcons: true, children: userIds.map((userId) => closure_1_5(IgnoredUserRowDefault, { userId }, userId)) };
+    const intl3 = util.intl;
+    items[1] = hasOwnProperty(TableRowGroup.TableRowGroup, obj7, intl3.string(util.t["93ZDWE"]));
+    obj4.children = items;
+    obj3.children = timestampProducer(ScrollView, obj4);
+    obj2.children = hasOwnProperty(common_SafeAreaView.SafeAreaPaddingView, obj3);
+    tmp7 = hasOwnProperty(useAnalyticsLocations.AnalyticsLocationProvider, obj2);
   }
   return tmp7;
 }
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { list: null, sectionLabelStyle: null };
-createCacheKey = { marginTop: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_8 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/native/IgnoredUsersList.tsx");
+const ScrollView = fn(17).ScrollView;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { list: { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 }, sectionLabelStyle: null };
+let obj3 = { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.sectionLabelStyle = { marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_8 };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/IgnoredUsersList.tsx");
 
 export default function ConnectedIgnoredUsersList() {
-  let obj = initialize;
-  const items = [closure_4];
-  obj = { userIds: obj.useStateFromStoresArray(items, () => ignoredIDs.getIgnoredIDs()) };
-  return callback(IgnoredUsersList, obj);
+  const items = [RelationshipStore];
+  return hasOwnProperty(IgnoredUsersList, { userIds: initialize.useStateFromStoresArray(items, () => ignoredIDs.getIgnoredIDs()) });
 };

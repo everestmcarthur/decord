@@ -1,17 +1,17 @@
-// Module ID: 6113
-// Function ID: 6114
+// Module ID: 6127
+// Function ID: 6128
 // Name: GemLevel2SpotIllustration
-// Dependencies: [21, 5587, 6114, 2]
+// Dependencies: [21, 5601, 6128, 2]
 // Exports: GemLevel2SpotIllustration
 
-// Module 6113 (GemLevel2SpotIllustration)
-import set from "set" /* 2 */;
+// Module 6127 (GemLevel2SpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 6114 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6128 from "module_6128" /* 6128 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GemLevel2SpotIllustration.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/GemLevel2SpotIllustration.native.tsx");
 
 export const GemLevel2SpotIllustration = function GemLevel2SpotIllustration(width) {
   let num = width.width;
@@ -27,14 +27,14 @@ export const GemLevel2SpotIllustration = function GemLevel2SpotIllustration(widt
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
-  obj = { width: num * num3, height: num2 * num3 };
-  const items = [obj];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { width: num * num3, height: num2 * num3 });
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef6128 };
+  obj.source = obj2;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

@@ -1,24 +1,26 @@
-// Module ID: 9747
-// Function ID: 9748
+// Module ID: 9774
+// Function ID: 9775
 // Name: AppChannelApplicationSelector
-// Dependencies: [19, 21, 9748, 1114, 5687, 5605, 9750, 4527, 9751, 1896, 9751, 2]
+// Dependencies: [19, 21, 9775, 1114, 5701, 5619, 9777, 4541, 9778, 1896, 9778, 2]
 // Exports: default
 
-// Module 9747 (AppChannelApplicationSelector)
-import noopAll from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 9774 (AppChannelApplicationSelector)
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import AppChannelApplicationActionSheet from "AppChannelApplicationActionSheet" /* 9778 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/app_channels/native/AppChannelApplicationSelector.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_channels/native/AppChannelApplicationSelector.tsx");
 
 export default function AppChannelApplicationSelector(guildId) {
   guildId = guildId.guildId;
   const channelId = guildId.channelId;
   const selectedApplicationId = guildId.selectedApplicationId;
   ({ onChange: jsx, disabled } = guildId);
-  let obj = guildId(selectedApplicationId[2]);
-  const appChannelApplicationOptions = obj.useAppChannelApplicationOptions(guildId, channelId, selectedApplicationId, disabled);
+  const appChannelApplicationOptions = guildId(selectedApplicationId[2]).useAppChannelApplicationOptions(guildId, channelId, selectedApplicationId, disabled);
   ({ selectedApplication, hasNoApplications } = appChannelApplicationOptions);
   if (null != selectedApplication) {
     let name = selectedApplication.name;
@@ -32,31 +34,29 @@ export default function AppChannelApplicationSelector(guildId) {
       name = string(t.F2FMFR);
     }
   }
-  obj = { title: null, description: null, hasIcons: true, children: null };
+  const obj2 = { title: null, description: null, hasIcons: true, children: null };
   const intl2 = tmp(tmp2[3]).intl;
-  obj[0] = intl2.string(guildId(selectedApplicationId[3]).t.oYTLIL);
-  obj[1] = guildId.description;
-  obj = { label: name, accessibilityLabel: null, icon: null, onPress: null, arrow: null, disabled: null };
+  obj2.title = intl2.string(guildId(selectedApplicationId[3]).t.oYTLIL);
+  obj2.description = guildId.description;
+  const obj3 = { label: name, accessibilityLabel: null, icon: null, onPress: null, arrow: null, disabled: null };
   const intl3 = tmp(tmp2[3]).intl;
-  obj[1] = "" + intl3.string(guildId(selectedApplicationId[3]).t.oYTLIL) + " " + name;
+  obj3.accessibilityLabel = "" + intl3.string(guildId(selectedApplicationId[3]).t.oYTLIL) + " " + name;
   let tmp5Result = null;
   if (null != selectedApplication) {
-    obj1 = { application: null };
-    obj1[0] = selectedApplication;
-    tmp5Result = tmp5(channelId(tmp2[6]), obj1);
+    const obj4 = { application: selectedApplication };
+    tmp5Result = tmp5(channelId(tmp2[6]), obj4);
   }
-  obj[2] = tmp5Result;
+  obj3.icon = tmp5Result;
   let fn;
   if (true !== disabled && !hasNoApplications) {
     fn = () => {
-      let obj = channelId(selectedApplicationId[7]);
-      obj = { guildId, channelId, selectedApplicationId, onChange: closure_3 };
-      obj.openLazy(guildId(selectedApplicationId[9])(selectedApplicationId[8], selectedApplicationId.paths), guildId(selectedApplicationId[10]).APP_CHANNEL_APPLICATION_ACTION_SHEET_KEY, obj);
+      const obj = ActionSheetActionCreatorsDefault;
+      obj.openLazy(asyncRequireImpl(9778, dependencyMap.paths), AppChannelApplicationActionSheet.APP_CHANNEL_APPLICATION_ACTION_SHEET_KEY, { guildId, channelId, selectedApplicationId, onChange });
     };
   }
-  obj[3] = fn;
-  obj[4] = true !== disabled && !hasNoApplications;
-  obj[5] = !(true !== disabled && !hasNoApplications);
-  obj[3] = jsx(guildId(selectedApplicationId[5]).TableRow, { label: name, accessibilityLabel: null, icon: null, onPress: null, arrow: null, disabled: null });
-  return jsx(guildId(selectedApplicationId[4]).TableRowGroup, { label: name, accessibilityLabel: null, icon: null, onPress: null, arrow: null, disabled: null });
+  obj3.onPress = fn;
+  obj3.arrow = true !== disabled && !hasNoApplications;
+  obj3.disabled = !(true !== disabled && !hasNoApplications);
+  obj2.children = jsx(guildId(selectedApplicationId[5]).TableRow, { label: name, accessibilityLabel: null, icon: null, onPress: null, arrow: null, disabled: null });
+  return jsx(guildId(selectedApplicationId[4]).TableRowGroup, { title: null, description: null, hasIcons: true, children: null });
 };

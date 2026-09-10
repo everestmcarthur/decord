@@ -1,26 +1,26 @@
-// Module ID: 15495
-// Function ID: 15496
-// Name: toggle
-// Dependencies: [15483, 7975, 1115, 15485, 11473, 1114, 2]
+// Module ID: 15525
+// Function ID: 15526
+// Name: AndroidNotificationLightsSetting
+// Dependencies: [15513, 7989, 1115, 15515, 11500, 1114, 2]
 
-// Module 15495 (toggle)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import set2 from "set" /* 1115 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import hasAndroidNotificationChannels from "hasAndroidNotificationChannels" /* 15485 */;
-import _initializeAndroidNotificationSettingsStore from "_initializeAndroidNotificationSettingsStore" /* 15483 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15525 (AndroidNotificationLightsSetting)
+import util from "util" /* 1114 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15513 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-({ useAndroidNotificationLightsEnabled: obj1, setAndroidNotificationLightsEnabled } = _initializeAndroidNotificationSettingsStore);
-const toggle = createToggle.createToggle({
+const SettingsNotificationUtils = tmp2(15515);
+({ useAndroidNotificationLightsEnabled: c2, setAndroidNotificationLightsEnabled } = AndroidNotificationSettingsStore);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.E3xHUp);
+    const intl = util.intl;
+    return intl.string(util.t.E3xHUp);
   },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
+  parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
   useValue: function useAndroidNotificationLightsSettingValue() {
-    let flag = callback();
+    let flag = React2();
     if (flag == null) {
       flag = false;
     }
@@ -28,13 +28,12 @@ const toggle = createToggle.createToggle({
   },
   onValueChange: setAndroidNotificationLightsEnabled,
   usePredicate: function useHasAndroidNotificationLightsSetting() {
-    const tmp = callback();
-    const tmp2 = require;
-    const isIOSResult = set2.isIOS();
+    const tmp = React2();
+    const isIOSResult = PlatformUtils.isIOS();
     let tmp5 = !isIOSResult;
     if (!isIOSResult) {
-      tmp5 = !hasAndroidNotificationChannels.hasAndroidNotificationChannels();
-      const tmp2Result = hasAndroidNotificationChannels;
+      tmp5 = !SettingsNotificationUtils.hasAndroidNotificationChannels();
+      const tmp2Result = SettingsNotificationUtils;
     }
     if (tmp5) {
       tmp5 = null != tmp;
@@ -42,35 +41,6 @@ const toggle = createToggle.createToggle({
     return tmp5;
   }
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.E3xHUp);
-  },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: function useAndroidNotificationLightsSettingValue() {
-    let flag = callback();
-    if (flag == null) {
-      flag = false;
-    }
-    return flag;
-  },
-  onValueChange: setAndroidNotificationLightsEnabled,
-  usePredicate: function useHasAndroidNotificationLightsSetting() {
-    const tmp = callback();
-    const tmp2 = require;
-    const isIOSResult = set2.isIOS();
-    let tmp5 = !isIOSResult;
-    if (!isIOSResult) {
-      tmp5 = !hasAndroidNotificationChannels.hasAndroidNotificationChannels();
-      const tmp2Result = hasAndroidNotificationChannels;
-    }
-    if (tmp5) {
-      tmp5 = null != tmp;
-    }
-    return tmp5;
-  }
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AndroidNotificationLightsSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AndroidNotificationLightsSetting.tsx");
 
 export default toggle;

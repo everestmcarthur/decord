@@ -1,17 +1,17 @@
-// Module ID: 8797
-// Function ID: 8798
+// Module ID: 8826
+// Function ID: 8827
 // Name: useSlayerStorefrontDevApplicationIdOverride
-// Dependencies: [8798, 2]
+// Dependencies: [8827, 2]
 // Exports: useSlayerStorefrontDevApplicationIdOverride
 
-// Module 8797 (useSlayerStorefrontDevApplicationIdOverride)
-import set from "set" /* 2 */;
-import useSlayerStorefrontDevOverrideStore from "useSlayerStorefrontDevOverrideStore" /* 8798 */;
+// Module 8826 (useSlayerStorefrontDevApplicationIdOverride)
+import useSlayerStorefrontDevOverrideStore from "useSlayerStorefrontDevOverrideStore" /* 8827 */;
+import size from "module_2" /* 2 */;
 
 let closure_0 = useSlayerStorefrontDevOverrideStore.useSlayerStorefrontDevOverrideStore;
-const result = set.fileFinishedImporting("modules/slayer_storefront/hooks/useSlayerStorefrontDevApplicationIdOverride.tsx");
+const result = size.fileFinishedImporting("modules/slayer_storefront/hooks/useSlayerStorefrontDevApplicationIdOverride.tsx");
 
 export const useSlayerStorefrontDevApplicationIdOverride = function useSlayerStorefrontDevApplicationIdOverride() {
-  const tmp = callback((overrideApplicationId) => overrideApplicationId.overrideApplicationId);
+  const tmp = closure_0((overrideApplicationId) => overrideApplicationId.overrideApplicationId);
   return tmp;
 };

@@ -1,190 +1,170 @@
-// Module ID: 17454
-// Function ID: 17455
+// Module ID: 17485
+// Function ID: 17486
 // Name: RedesignAddAvatarModal
-// Dependencies: [5, 32, 19, 17, 8160, 1074, 21, 4560, 576, 1611, 504, 14596, 17439, 8169, 8248, 5138, 8164, 8166, 4556, 1114, 17448, 4975, 17436, 2]
+// Dependencies: [5, 32, 19, 17, 8186, 1074, 21, 4574, 576, 1611, 504, 14621, 17470, 8195, 8274, 5152, 8190, 8192, 4570, 1114, 17479, 4989, 17467, 2]
 // Exports: default
 
-// Module 17454 (RedesignAddAvatarModal)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "handleFormOpen" /* 8160 */;
-import { UPLOAD_MEDIUM_SIZE } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17485 (RedesignAddAvatarModal)
+import nativeDefault from "native" /* 576 */;
+import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 17467 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8186 */;
 
-const require = arg1;
-({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { container: null, contentContainer: null, growContainer: null, headerContainer: null, buttonContainer: null, title: null, subtitle: null, errorContainer: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexGrow: 2, alignItems: "center" };
-createCacheKey[2] = { flexGrow: 2, minHeight: ThemesDefault.space.PX_24 };
-createCacheKey[3] = { display: "flex", alignItems: "center" };
-createCacheKey[4] = { width: "100%" };
-let obj1 = { flexGrow: 2, minHeight: ThemesDefault.space.PX_24 };
-createCacheKey[5] = { marginBottom: ThemesDefault.space.PX_8, textAlign: "center" };
-createCacheKey[6] = { textAlign: "center" };
-let obj2 = { marginBottom: ThemesDefault.space.PX_8, textAlign: "center" };
-createCacheKey[7] = { alignSelf: "center", paddingTop: ThemesDefault.space.PX_24 };
-let closure_12 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { alignSelf: "center", paddingTop: ThemesDefault.space.PX_24 };
-let result = require("set").fileFinishedImporting("modules/avatar/native/components/RedesignAddAvatarModal.tsx");
+const require = globalThis.__r;
+
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+const UPLOAD_MEDIUM_SIZE = fn(1074).UPLOAD_MEDIUM_SIZE;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, contentContainer: { flexGrow: 2, alignItems: "center" }, growContainer: null, headerContainer: null, buttonContainer: null, title: null, subtitle: null, errorContainer: null };
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj2.growContainer = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };
+obj2.headerContainer = { display: "flex", alignItems: "center" };
+obj2.buttonContainer = { width: "100%" };
+let obj4 = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };
+obj2.title = { marginBottom: nativeDefault.space.PX_8, textAlign: "center" };
+obj2.subtitle = { textAlign: "center" };
+let obj5 = { marginBottom: nativeDefault.space.PX_8, textAlign: "center" };
+obj2.errorContainer = { alignSelf: "center", paddingTop: nativeDefault.space.PX_24 };
+let closure_12 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/avatar/native/components/RedesignAddAvatarModal.tsx");
 
 export default function RedesignAddAvatarModal(route) {
   const onComplete = route.route.params.onComplete;
   importDefault = undefined;
-  let first;
-  closure_3 = undefined;
   let pendingImage;
-  function _handleSelectAvatar() {
-    const self = this;
-    const tmp = callback(function*() {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+  noop = async function _handleSelectAvatar(arg0, value) {
+    if (c3 === 2) {
+      c3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        try {
-          v0 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              c1 = tmp5;
-              let base64 = tmp2;
-              base64 = undefined;
-              c1 = undefined;
-              pendingImage(false);
-              obj1 = { size: null };
-              obj1[0] = closure_1_9;
-              dependencyMap = 1;
-              v0 = 1;
-              let obj2 = { value: null, done: false };
-              obj2[0] = closure_1_0(5138).openImagePicker(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            let obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            base64 = arg1.base64;
-            if (null == base64) {
-              pendingImage = undefined;
-              if (null != closure_1_0) {
-                obj = closure_1_0(14596);
-                const obj4 = { imageUri: null, description: null };
-                obj4[0] = base64;
-                obj2 = closure_1_0(8169);
-                obj4[1] = obj2.generateAvatarDescription();
-                pendingImage = obj.createPendingImage(obj4);
-              }
-              obj3 = closure_1_0(8164);
-              let obj5 = { avatar: null };
-              obj5[0] = pendingImage;
-              obj3.setPendingChanges(obj5);
-              obj5 = closure_1_0(8166);
-              let str = "set";
-              if (null == pendingImage) {
-                str = "remove";
-              }
-              const result = obj5.announcePendingAvatarChange(str);
-              v0(undefined);
-              v0 = 3;
-            }
-            pendingImage(true);
-          }
-        } catch (tmp42) {
-          v0 = tmp;
-          throw tmp42;
-        }
+        return { value: "HermesInternal", done: null };
       }
-    });
-    closure_5 = tmp;
-    const apply = tmp.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
-      applyArgumentsResult = apply(self, arguments);
+      try {
+        c3 = 2;
+        if (0 === dependencyMap) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else {
+            closure_1 = tmp5;
+            let base64;
+            closure_128_1 = undefined;
+            importDefault(false);
+            const obj7 = { size };
+            dependencyMap = 1;
+            c3 = 1;
+            const obj9 = { value: tmp2(5152).openImagePicker(obj7), done: false };
+            return obj9;
+          }
+        } else if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj10 = { value, done: true };
+          return obj10;
+        } else {
+          base64 = value.base64;
+          if (null == base64) {
+            pendingImage = undefined;
+            if (null != base64) {
+              const obj11 = { imageUri: base64, description: null };
+              const obj = tmp2(14621);
+              obj11.description = tmp2(8195).generateAvatarDescription();
+              pendingImage = obj.createPendingImage(obj11);
+              const obj3 = tmp2(8195);
+            }
+            closure_128_1 = pendingImage;
+            const obj12 = { avatar: closure_128_1 };
+            tmp2(8190).setPendingChanges(obj12);
+            const obj4 = tmp2(8190);
+            let str = "set";
+            if (null == closure_128_1) {
+              str = "remove";
+            }
+            const result = tmp2(8192).announcePendingAvatarChange(str);
+            closure_129_3(undefined);
+            c3 = 3;
+            const obj6 = tmp2(8192);
+          }
+          closure_129_1(true);
+        }
+      } catch (tmp42) {
+        c3 = tmp;
+        throw tmp42;
+      }
     }
-    return applyArgumentsResult;
-  }
-  let tmp = callback3();
-  [tmp3, c1] = pendingImage(_handleSelectAvatar.useState(false), 2);
-  const tmp4 = pendingImage(_handleSelectAvatar.useState(), 2);
-  first = tmp4[0];
+  };
+  const tmp = closure_12();
+  [tmp3, c1] = pendingImage(noop.useState(false), 2);
+  const tmp4 = pendingImage(noop.useState(), 2);
+  const selectedAvatar = tmp4[0];
   closure_3 = tmp6;
-  let obj = onComplete(first[10]);
-  const items = [closure_8];
+  const tmp2 = pendingImage(noop.useState(false), 2);
+  const items = [UserProfileSettingsStore];
   pendingImage = undefined;
-  const stateFromStores = obj.useStateFromStores(items, () => pendingChanges.getPendingChanges().pendingAvatar);
-  if (null != first) {
-    let tmp9Result = tmp9(tmp8[11]);
-    obj = { imageUri: null, description: null };
-    obj[0] = tmp9(tmp8[12]).DEFAULT_AVATARS[first];
-    tmp9Result = tmp9(tmp8[13]);
-    obj[1] = tmp9Result.generateAvatarDescription();
-    pendingImage = tmp9Result.createPendingImage(obj);
+  const stateFromStores = onComplete(selectedAvatar[10]).useStateFromStores(items, () => pendingChanges.getPendingChanges().pendingAvatar);
+  if (null != selectedAvatar) {
+    let obj2 = { imageUri: tmp9(tmp8[12]).DEFAULT_AVATARS[selectedAvatar], description: null };
+    const tmp9Result = tmp9(tmp8[11]);
+    obj2.description = tmp9(tmp8[13]).generateAvatarDescription();
+    pendingImage = tmp9Result.createPendingImage(obj2);
+    const tmp9Result3 = tmp9(tmp8[13]);
   }
   if (pendingImage == null) {
     pendingImage = stateFromStores;
   }
-  const tmp2 = pendingImage(_handleSelectAvatar.useState(false), 2);
+  let obj = onComplete(selectedAvatar[10]);
   let imageUri;
   if (pendingImage != null) {
     imageUri = pendingImage.imageUri;
   }
-  obj = { style: tmp.container, alwaysBounceVertical: false, contentContainerStyle: null, children: null };
+  let obj3 = { style: tmp.container, alwaysBounceVertical: false, contentContainerStyle: null, children: null };
   const items1 = [tmp.contentContainer, ];
-  obj1 = { paddingBottom: null, paddingHorizontal: null };
-  const tmp9Result1 = onComplete(first[14]);
-  obj1[0] = importDefault(first[9])().bottom + importDefault(first[8]).space.PX_16;
-  obj1[1] = importDefault(first[8]).space.PX_16;
-  items1[1] = obj1;
-  obj[2] = items1;
-  let obj2 = { style: tmp.headerContainer, children: null };
-  let obj3 = { children: null };
-  let obj4 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  let obj4 = { paddingBottom: null, paddingHorizontal: null };
+  const tmp9Result4 = onComplete(selectedAvatar[14]);
+  obj4.paddingBottom = require("useSafeAreaInsets")().bottom + require("native").space.PX_16;
+  obj4.paddingHorizontal = require("native").space.PX_16;
+  items1[1] = obj4;
+  obj3.contentContainerStyle = items1;
+  let obj5 = { style: tmp.headerContainer, children: null };
+  let obj6 = { children: null };
+  let obj7 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = tmp9(tmp8[19]).intl;
-  obj4[4] = intl.string(onComplete(first[19]).t.XQRWvR);
-  const items2 = [callback(onComplete(first[18]).Text, obj4), ];
-  let obj5 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
+  obj7.children = intl.string(onComplete(selectedAvatar[19]).t.XQRWvR);
+  const items2 = [closure_10(onComplete(selectedAvatar[18]).Text, obj7), ];
+  const obj8 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = tmp9(tmp8[19]).intl;
-  obj5[3] = intl2.string(onComplete(first[19]).t.fH9TLT);
-  items2[1] = callback(onComplete(first[18]).Text, obj5);
-  obj3[0] = items2;
-  const items3 = [callback2(closure_6, obj3), , ];
-  const memoizedImageSourceResult = onComplete(first[14]).memoizedImageSource(imageUri);
+  obj8.children = intl2.string(onComplete(selectedAvatar[19]).t.fH9TLT);
+  items2[1] = closure_10(onComplete(selectedAvatar[18]).Text, obj8);
+  obj6.children = items2;
+  const items3 = [closure_11(closure_6, obj6), , ];
+  const memoizedImageSourceResult = onComplete(selectedAvatar[14]).memoizedImageSource(imageUri);
   const tmp15 = closure_7;
-  items3[1] = callback(importDefault(first[20]), {
-    avatarSource: onComplete(first[14]).memoizedImageSource(imageUri),
+  items3[1] = closure_10(require("TouchableUploadAvatar"), {
+    avatarSource: onComplete(selectedAvatar[14]).memoizedImageSource(imageUri),
     showPendingAvatar: null != pendingImage,
     onSelectAvatar: function handleSelectAvatar() {
       const self = this;
-      const apply = _handleSelectAvatar.apply;
+      const apply = closure_5.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -193,33 +173,33 @@ export default function RedesignAddAvatarModal(route) {
       return applyArgumentsResult;
     }
   });
-  const obj7 = { style: tmp.errorContainer, children: null };
+  let obj10 = { style: tmp.errorContainer, children: null };
   if (tmp17Result) {
-    const obj8 = { variant: "text-sm/medium", color: "text-feedback-critical", children: null };
+    let obj11 = { variant: "text-sm/medium", color: "text-feedback-critical", children: null };
     const intl3 = tmp9(tmp8[19]).intl;
-    obj8[2] = intl3.string(tmp9(tmp8[19]).t.XyLlVm);
-    tmp17Result = tmp17(tmp9(tmp8[18]).Text, obj8);
+    obj11.children = intl3.string(tmp9(tmp8[19]).t.XyLlVm);
+    tmp17Result = tmp17(tmp9(tmp8[18]).Text, obj11);
   }
-  obj7[1] = tmp17Result;
-  items3[2] = callback(closure_6, obj7);
-  obj2[1] = items3;
-  const items4 = [callback2(closure_6, obj2), callback(importDefault(first[12]), { onAvatarSelect: tmp4[1], selectedAvatar: first }), callback(closure_6, { style: tmp.growContainer }), ];
-  const obj10 = { style: tmp.buttonContainer, children: null };
-  const obj11 = { variant: "primary", size: "lg", text: null, onPress: null, disabled: null };
+  obj10.children = tmp17Result;
+  items3[2] = closure_10(closure_6, obj10);
+  obj5.children = items3;
+  const items4 = [closure_11(closure_6, obj5), closure_10(require("PresetAvatarSelect"), { onAvatarSelect: tmp4[1], selectedAvatar }), closure_10(closure_6, { style: tmp.growContainer }), ];
+  const obj13 = { style: tmp.buttonContainer, children: null };
+  const obj14 = { variant: "primary", size: "lg", text: null, onPress: null, disabled: null };
   const intl4 = tmp9(tmp8[19]).intl;
-  obj11[2] = intl4.string(onComplete(first[19]).t.PDTjLN);
-  obj11[3] = function onPress() {
+  obj14.text = intl4.string(onComplete(selectedAvatar[19]).t.PDTjLN);
+  obj14.onPress = function onPress() {
     let fn = onComplete;
     if (null == onComplete) {
       fn = () => {
 
       };
     }
-    return onComplete(first[22]).handlePressNext(pendingImage, first, fn);
+    return AddAvatarModalActionCreators.handlePressNext(pendingImage, first, fn);
   };
-  obj11[4] = null == pendingImage;
-  obj10[1] = callback(onComplete(first[21]).Button, obj11);
-  items4[3] = callback(closure_6, obj10);
-  obj[3] = items4;
-  return callback2(tmp15, obj);
+  obj14.disabled = null == pendingImage;
+  obj13.children = closure_10(onComplete(selectedAvatar[21]).Button, obj14);
+  items4[3] = closure_10(closure_6, obj13);
+  obj3.children = items4;
+  return closure_11(tmp15, obj3);
 };

@@ -1,20 +1,21 @@
-// Module ID: 17664
-// Function ID: 17665
-// Dependencies: [4763, 17665, 1896, 2]
+// Module ID: 17697
+// Function ID: 17698
+// Name: EnableCommunityModalActionCreators
+// Dependencies: [4777, 17698, 1896, 2]
 
-// Module 17664
-import set from "set" /* 2 */;
+// Module 17697 (EnableCommunityModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import _modDef4763 from "module_4763" /* 4763 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import size from "module_2" /* 2 */;
 
 const ENABLED_COMMUNITY_MODAL_KEY = "ENABLED_COMMUNITY_MODAL_KEY";
-const result = set.fileFinishedImporting("modules/public_guilds/native/EnableCommunityModalActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/public_guilds/native/EnableCommunityModalActionCreators.tsx");
 
 export default {
   open() {
-    _modDef4763.pushLazy(asyncRequireImpl(17665, dependencyMap.paths), undefined, ENABLED_COMMUNITY_MODAL_KEY);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17698, dependencyMap.paths), undefined, ENABLED_COMMUNITY_MODAL_KEY);
   },
   close() {
-    _modDef4763.popWithKey(ENABLED_COMMUNITY_MODAL_KEY);
+    ModalActionCreatorsDefault.popWithKey(ENABLED_COMMUNITY_MODAL_KEY);
   }
 };

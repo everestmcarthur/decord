@@ -1,25 +1,24 @@
-// Module ID: 13079
-// Function ID: 13080
-// Name: apexExperiment
-// Dependencies: [1433, 13080, 13081, 2]
+// Module ID: 13105
+// Function ID: 13106
+// Name: PrivateProfilesExperiment
+// Dependencies: [1433, 13106, 13107, 2]
 // Exports: getIsInPrivateProfilesExperiment, useIsInPrivateProfilesExperiment
 
-// Module 13079 (apexExperiment)
-import set from "set" /* 2 */;
-import apexExperiment2 from "apexExperiment" /* 13080 */;
-import apexExperiment3 from "apexExperiment" /* 13081 */;
+// Module 13105 (PrivateProfilesExperiment)
+import PrivateProfilesStrictExperiment from "PrivateProfilesStrictExperiment" /* 13106 */;
+import PrivateProfilesStrictGbExperiment from "PrivateProfilesStrictGbExperiment" /* 13107 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-02-private-profiles", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
-const result = set.fileFinishedImporting("modules/user_profile/PrivateProfilesExperiment.tsx");
+const result = size.fileFinishedImporting("modules/user_profile/PrivateProfilesExperiment.tsx");
 
 export const PrivateProfilesExperiment = apexExperiment;
 export const useIsInPrivateProfilesExperiment = function useIsInPrivateProfilesExperiment(UserProfilePrivacyNotice) {
   let enabled = apexExperiment.useConfig({ location: UserProfilePrivacyNotice }).enabled;
-  const isInPrivateProfilesStrictExperiment = apexExperiment2.useIsInPrivateProfilesStrictExperiment(UserProfilePrivacyNotice);
+  const isInPrivateProfilesStrictExperiment = PrivateProfilesStrictExperiment.useIsInPrivateProfilesStrictExperiment(UserProfilePrivacyNotice);
   const obj = { location: UserProfilePrivacyNotice };
-  const obj2 = apexExperiment2;
-  const isInPrivateProfilesStrictGbExperiment = apexExperiment3.useIsInPrivateProfilesStrictGbExperiment(UserProfilePrivacyNotice);
+  const isInPrivateProfilesStrictGbExperiment = PrivateProfilesStrictGbExperiment.useIsInPrivateProfilesStrictGbExperiment(UserProfilePrivacyNotice);
   if (!enabled) {
     enabled = isInPrivateProfilesStrictExperiment;
   }
@@ -31,12 +30,10 @@ export const useIsInPrivateProfilesExperiment = function useIsInPrivateProfilesE
 export const getIsInPrivateProfilesExperiment = function getIsInPrivateProfilesExperiment(ProfilePrivacySetting) {
   let enabled = apexExperiment.getConfig({ location: ProfilePrivacySetting }).enabled;
   if (!enabled) {
-    enabled = apexExperiment2.getIsInPrivateProfilesStrictExperiment(ProfilePrivacySetting);
-    const obj2 = apexExperiment2;
+    enabled = PrivateProfilesStrictExperiment.getIsInPrivateProfilesStrictExperiment(ProfilePrivacySetting);
   }
   if (!enabled) {
-    enabled = apexExperiment3.getIsInPrivateProfilesStrictGbExperiment(ProfilePrivacySetting);
-    const obj3 = apexExperiment3;
+    enabled = PrivateProfilesStrictGbExperiment.getIsInPrivateProfilesStrictGbExperiment(ProfilePrivacySetting);
   }
   return enabled;
 };

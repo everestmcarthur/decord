@@ -1,16 +1,16 @@
-// Module ID: 12449
-// Function ID: 12450
-// Name: set
-// Dependencies: [12423, 2]
+// Module ID: 12475
+// Function ID: 12476
+// Name: useIsStricterMessageRequests
+// Dependencies: [12449, 2]
 // Exports: default
 
-// Module 12449 (set)
-import set2 from "set" /* 12423 */;
-import set from "set" /* 2 */;
+// Module 12475 (useIsStricterMessageRequests)
+import RegionalTeenUtils from "RegionalTeenUtils" /* 12449 */;
+import size from "module_2" /* 2 */;
 
-let set = new Set(["GB"]);
-const result = set.fileFinishedImporting("modules/message_request/hooks/useIsStricterMessageRequests.tsx");
+const set = new Set(["GB"]);
+const result = size.fileFinishedImporting("modules/message_request/hooks/useIsStricterMessageRequests.tsx");
 
 export default function useIsStricterMessageRequests() {
-  return set2.useIsTeenInCountrySet(set);
+  return RegionalTeenUtils.useIsTeenInCountrySet(set);
 };

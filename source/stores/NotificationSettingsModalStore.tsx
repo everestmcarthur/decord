@@ -1,24 +1,24 @@
-// Module ID: 17509
-// Function ID: 17510
-// Name: FormStates
-// Dependencies: [1961, 7111, 2012, 4480, 1979, 4741, 1074, 504, 7112, 573, 2]
+// Module ID: 17540
+// Function ID: 17541
+// Name: NotificationSettingsModalStore
+// Dependencies: [1961, 7125, 2012, 4494, 1979, 4755, 1074, 504, 7126, 573, 2]
 
-// Module 17509 (FormStates)
-import set from "set" /* 2 */;
+// Module 17540 (NotificationSettingsModalStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import createChannelRecord from "createChannelRecord" /* 1961 */;
-import getFlattenedChannelListDefault from "getFlattenedChannelList" /* 7112 */;
-import closure_4 from "setIndex" /* 7111 */;
-import closure_5 from "comparator" /* 2012 */;
-import closure_6 from "handleInviteData" /* 4480 */;
-import closure_7 from "createGuildRecordFromRust" /* 1979 */;
-import closure_8 from "updateUserGuildSettingsInternal" /* 4741 */;
-import ME from "ME" /* 1074 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import ChannelRecord from "ChannelRecord" /* 1961 */;
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 7126 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7125 */;
+import GuildChannelStore from "GuildChannelStore" /* 2012 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4494 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4755 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-let closure_3 = createChannelRecord.isGuildSelectableChannelType;
-const FormStates = ME.FormStates;
-const ChannelTypes = ME.ChannelTypes;
+let closure_3 = ChannelRecord.isGuildSelectableChannelType;
+const FormStates = Constants.FormStates;
+const ChannelTypes = Constants.ChannelTypes;
 let CLOSED = FormStates.CLOSED;
 const Store = initializeDefault.Store;
 class NotificationSettingsModalStore extends Store {
@@ -26,30 +26,30 @@ class NotificationSettingsModalStore extends Store {
 const prototype = NotificationSettingsModalStore.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
-  this.waitFor(closure_4, closure_5, closure_6, closure_7, closure_8);
-  const items = [closure_8, closure_5, closure_7];
+  this.waitFor(GuildCategoryStore, GuildChannelStore, GuildMemberCountStore, GuildStore, UserGuildSettingsStore);
+  const items = [UserGuildSettingsStore, GuildChannelStore, GuildStore];
   this.syncWith(items, () => self.isOpen());
 };
 prototype["isOpen"] = function isOpen() {
   return CLOSED !== FormStates.CLOSED;
 };
 prototype["getProps"] = function getProps() {
-  categories = categories.getCategories(closure_2);
+  const categories = GuildCategoryStore.getCategories(guildId);
   return {
-    guildId: closure_2,
+    guildId,
     categories,
-    guild: guild.getGuild(closure_2),
-    memberCount: memberCount.getMemberCount(closure_2),
-    suppressEveryone: store.isSuppressEveryoneEnabled(closure_2),
-    suppressRoles: store.isSuppressRolesEnabled(closure_2),
-    mobilePush: store.isMobilePushEnabled(closure_2),
-    muted: store.isMuted(closure_2),
-    muteConfig: store.getMuteConfig(closure_2),
-    messageNotifications: store.getMessageNotifications(closure_2),
-    channelOverrides: store.getChannelOverrides(closure_2),
-    channels: getFlattenedChannelListDefault(categories._categories, categories, (channel) => {
+    guild: GuildStore.getGuild(guildId),
+    memberCount: GuildMemberCountStore.getMemberCount(guildId),
+    suppressEveryone: UserGuildSettingsStore.isSuppressEveryoneEnabled(guildId),
+    suppressRoles: UserGuildSettingsStore.isSuppressRolesEnabled(guildId),
+    mobilePush: UserGuildSettingsStore.isMobilePushEnabled(guildId),
+    muted: UserGuildSettingsStore.isMuted(guildId),
+    muteConfig: UserGuildSettingsStore.getMuteConfig(guildId),
+    messageNotifications: UserGuildSettingsStore.getMessageNotifications(guildId),
+    channelOverrides: UserGuildSettingsStore.getChannelOverrides(guildId),
+    channels: getFlattedChannelListDefault(categories._categories, categories, (channel) => {
       const type = channel.channel.type;
-      let tmp = callback(type);
+      let tmp = closure_1_3(type);
       if (!tmp) {
         tmp = type === constants.GUILD_CATEGORY;
       }
@@ -58,9 +58,9 @@ prototype["getProps"] = function getProps() {
   };
 };
 NotificationSettingsModalStore.displayName = "NotificationSettingsModalStore";
-const notificationSettingsModalStore = new NotificationSettingsModalStore(dispatcherDefault, {
+const notificationSettingsModalStore = new NotificationSettingsModalStore(DispatcherDefault, {
   NOTIFICATION_SETTINGS_MODAL_OPEN: function handleFormOpen(guildId) {
-    const OPEN = FormStates.OPEN;
+    CLOSED = FormStates.OPEN;
     guildId = guildId.guildId;
   },
   NOTIFICATION_SETTINGS_MODAL_CLOSE: function handleFormClose() {
@@ -68,6 +68,6 @@ const notificationSettingsModalStore = new NotificationSettingsModalStore(dispat
     c2 = null;
   }
 });
-const result = set.fileFinishedImporting("stores/NotificationSettingsModalStore.tsx");
+const result = size.fileFinishedImporting("stores/NotificationSettingsModalStore.tsx");
 
 export default notificationSettingsModalStore;

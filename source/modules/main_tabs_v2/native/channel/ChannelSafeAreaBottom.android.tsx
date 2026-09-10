@@ -1,18 +1,19 @@
-// Module ID: 12646
-// Function ID: 12647
-// Dependencies: [11355, 12647, 12648, 2]
+// Module ID: 12672
+// Function ID: 12673
+// Name: ChannelSafeAreaBottom
+// Dependencies: [11382, 12673, 12674, 2]
 
-// Module 12646
-import set from "set" /* 2 */;
-import _modDef12647 from "module_12647" /* 12647 */;
-import _modDef12648 from "module_12648" /* 12648 */;
-import apexExperiment from "apexExperiment" /* 11355 */;
+// Module 12672 (ChannelSafeAreaBottom)
+import ChannelSafeAreaBottomNoopDefault from "ChannelSafeAreaBottomNoop" /* 12673 */;
+import ChannelSafeAreaBottomAnimatedDefault from "ChannelSafeAreaBottomAnimated" /* 12674 */;
+import AnimatedKeyboardExperiment from "AnimatedKeyboardExperiment" /* 11382 */;
+import size from "module_2" /* 2 */;
 
-if (apexExperiment.isAnimatedAndroidKeyboard()) {
-  let importDefaultResult = _modDef12647;
+if (AnimatedKeyboardExperiment.isAnimatedAndroidKeyboard()) {
+  let importDefaultResult = ChannelSafeAreaBottomNoopDefault;
 } else {
-  importDefaultResult = _modDef12648;
+  importDefaultResult = ChannelSafeAreaBottomAnimatedDefault;
 }
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelSafeAreaBottom.android.tsx");
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelSafeAreaBottom.android.tsx");
 
 export default importDefaultResult;

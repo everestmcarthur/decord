@@ -1,92 +1,76 @@
-// Module ID: 13489
-// Function ID: 13490
-// Name: BetaPill
-// Dependencies: [17, 7432, 21, 4560, 576, 4556, 1114, 13490, 1178, 4987, 4409, 9386, 2]
+// Module ID: 13512
+// Function ID: 13513
+// Name: PremiumGroupFeaturesTableCard
+// Dependencies: [17, 7446, 21, 4574, 576, 4570, 1114, 13513, 1178, 5001, 4423, 9413, 2]
 // Exports: default
 
-// Module 13489 (BetaPill)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import hexToRgba from "hexToRgba" /* 4409 */;
-import Text from "Text" /* 4556 */;
-import items3 from "items" /* 7432 */;
-import usePremiumGroupFeaturesTableCardTextDefault from "usePremiumGroupFeaturesTableCardText" /* 13490 */;
+// Module 13512 (PremiumGroupFeaturesTableCard)
+import _mod17 from "module_17" /* 17 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import ColorUtils from "ColorUtils" /* 4423 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import ColorConstants from "ColorConstants" /* 7446 */;
+import usePremiumGroupFeaturesTableCardTextDefault from "usePremiumGroupFeaturesTableCardText" /* 13513 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import createStyles from "createStyles" /* 4574 */;
+import size from "module_2" /* 2 */;
 
 class BetaPill {
   constructor() {
     tmp = closure_7();
     obj = { style: tmp.betaPill, children: null };
-    obj = { variant: "text-xs/bold", style: tmp.betaText, children: null };
-    intl = require("getSystemLocale").intl;
-    obj[2] = intl.string(require("getSystemLocale").t.oW0eUd);
-    obj[1] = jsx(require("Text").Text, obj);
+    obj1 = { variant: "text-xs/bold", style: tmp.betaText, children: null };
+    intl = closure_0(closure_2[6]).intl;
+    obj1.children = intl.string(closure_0(closure_2[6]).t.oW0eUd);
+    obj.children = jsx(closure_0(closure_2[5]).Text, obj1);
     return jsx(View, obj);
   }
 }
-const View = get_ActivityIndicator.View;
-const Gradients = items3.Gradients;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let obj = { premiumGroupCard: null, headerContainer: null, betaPill: null, betaText: null, title: null, description: null };
-obj = { padding: 16, borderRadius: ThemesDefault.radii.sm - 2, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", alignItems: "flex-start" };
-obj[0] = obj;
-obj[1] = { display: "flex", flexDirection: "row", alignItems: "center", gap: 8, marginBottom: 4 };
-obj[2] = { backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", paddingHorizontal: 8, paddingBottom: 2 };
-let obj1 = { backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", paddingHorizontal: 8, paddingBottom: 2 };
-obj[3] = { color: ThemesDefault.colors.BLACK, textAlign: "center", textTransform: "uppercase" };
-let obj2 = { color: ThemesDefault.colors.BLACK, textAlign: "center", textTransform: "uppercase" };
-obj[4] = { color: ThemesDefault.colors.TEXT_DEFAULT, marginBottom: 16 };
-const obj3 = { color: ThemesDefault.colors.TEXT_DEFAULT, marginBottom: 16 };
-obj[5] = { color: ThemesDefault.colors.TEXT_DEFAULT };
-let closure_7 = createCacheKey.createStyles(obj);
-let obj4 = { color: ThemesDefault.colors.TEXT_DEFAULT };
-const result = set.fileFinishedImporting("modules/premium/premium_group/native/PremiumGroupFeaturesTableCard.tsx");
+const View = _mod17.View;
+const Gradients = ColorConstants.Gradients;
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+let obj = { premiumGroupCard: { padding: 16, borderRadius: nativeDefault.radii.sm - 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", alignItems: "flex-start" }, headerContainer: { display: "flex", flexDirection: "row", alignItems: "center", gap: 8, marginBottom: 4 }, betaPill: null, betaText: null, title: null, description: null };
+let obj2 = { padding: 16, borderRadius: nativeDefault.radii.sm - 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", alignItems: "flex-start" };
+obj.betaPill = { backgroundColor: nativeDefault.colors.WHITE, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center", paddingHorizontal: 8, paddingBottom: 2 };
+let obj3 = { backgroundColor: nativeDefault.colors.WHITE, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center", paddingHorizontal: 8, paddingBottom: 2 };
+obj.betaText = { color: nativeDefault.colors.BLACK, textAlign: "center", textTransform: "uppercase" };
+let obj4 = { color: nativeDefault.colors.BLACK, textAlign: "center", textTransform: "uppercase" };
+obj.title = { color: nativeDefault.colors.TEXT_DEFAULT, marginBottom: 16 };
+const obj5 = { color: nativeDefault.colors.TEXT_DEFAULT, marginBottom: 16 };
+obj.description = { color: nativeDefault.colors.TEXT_DEFAULT };
+const React5 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/premium/premium_group/native/PremiumGroupFeaturesTableCard.tsx");
 
 export default function PremiumGroupFeaturesTableCard(arg0) {
   ({ style, premiumGroupRole } = arg0);
-  const tmp = callback3();
+  const tmp = closure_7();
   const tmp4 = usePremiumGroupFeaturesTableCardTextDefault(premiumGroupRole, false);
   if (null == tmp4) {
     return null;
   } else {
     ({ subheaderString, bodyString } = tmp4);
-    let obj = { borderWidth: 2, direction: null, colors: null, borderRadius: null, style: null, children: null };
-    obj[1] = Button.GradientBorder.Direction.HORIZONTAL;
-    obj[2] = Gradients.PREMIUM_TIER_2;
-    obj[3] = tmp2(576).radii.sm;
-    obj[4] = style;
-    obj = { start: null, end: null, colors: null, locations: null, style: null, children: null };
-    obj[0] = { x: 0, y: 0 };
-    obj[1] = { x: 1, y: 0 };
-    let obj2 = hexToRgba;
-    const items = [obj2.hexWithOpacity("#8547C6", 0.15), , ];
-    const tmp2Result = tmp2(4987);
-    items[1] = hexToRgba.hexWithOpacity("#B845C1", 0.15);
-    const obj4 = hexToRgba;
-    items[2] = hexToRgba.hexWithOpacity("#AB5D8A", 0.15);
-    obj[2] = items;
-    obj[3] = [0, 0.4996, 0.9593];
-    obj[4] = tmp.premiumGroupCard;
-    obj = { style: null, children: null };
-    obj[0] = tmp.headerContainer;
-    const items1 = [callback(tmp2(9386), { width: 181, height: 16 }), callback(BetaPill, {})];
-    obj[1] = items1;
-    const items2 = [callback2(View, obj), , ];
-    obj1 = { variant: "text-sm/normal", style: null, children: null };
-    obj1[1] = tmp.title;
-    obj1[2] = subheaderString;
-    items2[1] = callback(Text.Text, obj1);
-    obj2 = { variant: "text-sm/normal", style: null, children: null };
-    obj2[1] = tmp.description;
-    obj2[2] = bodyString;
-    items2[2] = callback(Text.Text, obj2);
-    obj[5] = items2;
-    obj[5] = callback2(tmp2Result, obj);
-    return callback(Button.GradientBorder, obj);
+    const obj = { borderWidth: 2, direction: native.GradientBorder.Direction.HORIZONTAL, colors: Gradients.PREMIUM_TIER_2, borderRadius: tmp2(576).radii.sm, style, children: null };
+    const obj2 = { start: { x: 0, y: 0 }, end: { x: 1, y: 0 }, colors: null, locations: null, style: null, children: null };
+    const tmp2Result = tmp2(5001);
+    const items = [ColorUtils.hexWithOpacity("#8547C6", 0.15), , ];
+    items[1] = ColorUtils.hexWithOpacity("#B845C1", 0.15);
+    items[2] = ColorUtils.hexWithOpacity("#AB5D8A", 0.15);
+    obj2.colors = items;
+    obj2.locations = [0, 0.4996, 0.9593];
+    obj2.style = tmp.premiumGroupCard;
+    const obj6 = { style: tmp.headerContainer, children: null };
+    const items1 = [hasOwnProperty(tmp2(9413), { width: 181, height: 16 }), hasOwnProperty(BetaPill, {})];
+    obj6.children = items1;
+    const items2 = [timestampProducer(View, obj6), , ];
+    const obj7 = { variant: "text-sm/normal", style: tmp.title, children: subheaderString };
+    items2[1] = hasOwnProperty(Text_Text.Text, obj7);
+    const obj8 = { variant: "text-sm/normal", style: tmp.description, children: bodyString };
+    items2[2] = hasOwnProperty(Text_Text.Text, obj8);
+    obj2.children = items2;
+    obj.children = timestampProducer(tmp2Result, obj2);
+    return hasOwnProperty(native.GradientBorder, obj);
   }
 };
 export { BetaPill };

@@ -1,50 +1,53 @@
-// Module ID: 11671
-// Function ID: 11672
-// Name: useIsReportToModEnabled
-// Dependencies: [19, 1979, 4781, 504, 7266, 7290, 7276, 7456, 8181, 2]
+// Module ID: 11697
+// Function ID: 11698
+// Name: useReportToModHooks
+// Dependencies: [19, 1979, 4795, 504, 7280, 7304, 7290, 7470, 8207, 2]
 // Exports: loadOriginalAuthorFromSnapshot, useIsModeratorReportOrPostChannel, useIsModeratorReportPostChannel, useIsReportToModEnabled, useLoadReportedMessage, useReportToModChannelId
 
-// Module 11671 (useIsReportToModEnabled)
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import canReportMessageToMods from "canReportMessageToMods" /* 7276 */;
-import _fetchProfile from "_fetchProfile" /* 8181 */;
-import closure_4 from "createGuildRecordFromRust" /* 1979 */;
-import closure_5 from "reinjectEphemerals" /* 4781 */;
+// Module 11697 (useReportToModHooks)
+import _mod19 from "module_19" /* 19 */;
+import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7280 */;
+import ReportToModUtils from "ReportToModUtils" /* 7290 */;
+import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 7304 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7470 */;
+import UserActionCreators from "UserActionCreators" /* 8207 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import MessageStore from "MessageStore" /* 4795 */;
+import size from "module_2" /* 2 */;
 
-const useEffect = noop.useEffect;
-const result = set.fileFinishedImporting("modules/report_to_mod/hooks/useReportToModHooks.tsx");
+const require = globalThis.__r;
+
+const useEffect = _mod19.useEffect;
+const result = size.fileFinishedImporting("modules/report_to_mod/hooks/useReportToModHooks.tsx");
 
 export const useIsReportToModEnabled = function useIsReportToModEnabled(arg0) {
-  const _require = arg0;
-  const items = [closure_4];
-  return _require(504).useStateFromStores(items, () => {
+  _require = arg0;
+  const items = [GuildStore];
+  return require("initialize").useStateFromStores(items, () => {
     if (null == closure_0) {
       return false;
     } else {
-      const guild = closure_1_4.getGuild(tmp);
+      const guild = GuildStore.getGuild(tmp);
       let tmp4 = null != guild;
       if (tmp4) {
-        tmp4 = closure_1_1(closure_1_2[4])(guild) && null != closure_1_1(closure_1_2[5])(guild);
-        const tmp5 = closure_1_1;
-        const tmp6 = closure_1_2;
-        const tmp7 = closure_1_1(closure_1_2[4])(guild) && null != closure_1_1(closure_1_2[5])(guild);
+        tmp4 = getGuildModeratorReportingEnabledDefault(guild) && null != getGuildModeratorReportChannelIdDefault(guild);
+        const tmp7 = getGuildModeratorReportingEnabledDefault(guild) && null != getGuildModeratorReportChannelIdDefault(guild);
       }
       return tmp4;
     }
   });
 };
 export const useReportToModChannelId = function useReportToModChannelId(arg0) {
-  const _require = arg0;
-  const items = [closure_4];
-  return _require(504).useStateFromStores(items, () => {
+  _require = arg0;
+  const items = [GuildStore];
+  return require("initialize").useStateFromStores(items, () => {
     let guild = null;
     if (null != closure_0) {
-      guild = closure_1_4.getGuild(tmp);
+      guild = GuildStore.getGuild(tmp);
     }
     let tmp4 = null;
     if (null != guild) {
-      let tmp7 = closure_1_1(closure_1_2[5])(guild);
+      let tmp7 = getGuildModeratorReportChannelIdDefault(guild);
       if (tmp7 == null) {
         tmp7 = null;
       }
@@ -54,18 +57,18 @@ export const useReportToModChannelId = function useReportToModChannelId(arg0) {
   });
 };
 export const useIsModeratorReportOrPostChannel = function useIsModeratorReportOrPostChannel(isModeratorReportChannel) {
-  return canReportMessageToMods.isModeratorReportOrPostChannel(isModeratorReportChannel);
+  return ReportToModUtils.isModeratorReportOrPostChannel(isModeratorReportChannel);
 };
 export const useIsModeratorReportPostChannel = function useIsModeratorReportPostChannel(isModeratorReportChannel) {
-  return canReportMessageToMods.isModeratorReportPostChannel(isModeratorReportChannel);
+  return ReportToModUtils.isModeratorReportPostChannel(isModeratorReportChannel);
 };
 export const useLoadReportedMessage = function useLoadReportedMessage(messageReference) {
   messageReference = messageReference.messageReference;
-  const items = [closure_5];
+  const items = [MessageStore];
   const stateFromStores = messageReference(504).useStateFromStores(items, () => {
     let message = null;
     if (null != messageReference) {
-      message = closure_1_5.getMessage(tmp.channel_id, tmp.message_id);
+      message = MessageStore.getMessage(tmp.channel_id, tmp.message_id);
     }
     return message;
   });
@@ -76,13 +79,10 @@ export const useLoadReportedMessage = function useLoadReportedMessage(messageRef
       tmp = null != messageReference;
     }
     if (tmp) {
-      let obj = stateFromStores(closure_1_2[7]);
-      obj = { channelId: null, jump: null, limit: 10 };
-      obj[0] = messageReference.channel_id;
-      obj = { messageId: null };
-      obj[0] = messageReference.message_id;
-      obj[1] = obj;
-      const messages = obj.fetchMessages(obj);
+      const obj2 = { channelId: messageReference.channel_id, jump: null, limit: 10 };
+      const obj3 = { messageId: messageReference.message_id };
+      obj2.jump = obj3;
+      const messages = MessageActionCreatorsDefault.fetchMessages(obj2);
     }
   }, items1);
 };
@@ -98,7 +98,6 @@ export const loadOriginalAuthorFromSnapshot = function loadOriginalAuthorFromSna
     }
   }
   if (null != reported_user_id) {
-    const user = _fetchProfile.getUser(reported_user_id);
-    const obj = _fetchProfile;
+    const user = UserActionCreators.getUser(reported_user_id);
   }
 };

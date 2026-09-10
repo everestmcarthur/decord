@@ -1,12 +1,12 @@
-// Module ID: 13741
-// Function ID: 13742
-// Name: GdmWarningMedium
+// Module ID: 13764
+// Function ID: 13765
+// Name: SharedSpaceWarningConstants
 // Dependencies: [2]
 
-// Module 13741 (GdmWarningMedium)
-import set from "set" /* 2 */;
+// Module 13764 (SharedSpaceWarningConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/shared_space_warnings/SharedSpaceWarningConstants.tsx");
+const result = size.fileFinishedImporting("modules/shared_space_warnings/SharedSpaceWarningConstants.tsx");
 
 export const GdmWarningMedium = { BANNER: "BANNER", MODAL: "MODAL", ACTION_SHEET: "ACTION_SHEET" };
 export const BlockWarningEngagements = { CLICK_TO_STAY: "click_to_stay", CLICK_TO_LEAVE: "click_to_leave", CLICK_TO_JOIN: "click_to_join", DISMISS: "dismiss" };

@@ -1,25 +1,27 @@
-// Module ID: 14678
-// Function ID: 14679
+// Module ID: 14704
+// Function ID: 14705
 // Name: useAnnounceError
-// Dependencies: [19, 4272, 2]
+// Dependencies: [19, 4285, 2]
 // Exports: useAnnounceError
 
-// Module 14678 (useAnnounceError)
-import closure_2 from "noop" /* 19 */;
+// Module 14704 (useAnnounceError)
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4285 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/webauthn/native/useAnnounceError.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/webauthn/native/useAnnounceError.tsx");
 
 export const useAnnounceError = function useAnnounceError(arg0) {
   closure_0 = arg0;
   const items = [arg0];
-  const effect = React.useEffect(() => {
-    let tmp2 = null != callback;
+  const effect = noop.useEffect(() => {
+    let tmp2 = null != closure_0;
     if (tmp2) {
       tmp2 = "" !== tmp;
     }
     if (tmp2) {
-      const AccessibilityAnnouncer = callback(closure_1_1[1]).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
       AccessibilityAnnouncer.announce(tmp);
     }
   }, items);

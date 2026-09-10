@@ -1,12 +1,12 @@
-// Module ID: 9909
-// Function ID: 9910
-// Name: Soundpacks
+// Module ID: 9936
+// Function ID: 9937
+// Name: Constants
 // Dependencies: [2]
 
-// Module 9909 (Soundpacks)
-import set from "set" /* 2 */;
+// Module 9936 (Constants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/soundpacks/Constants.tsx");
+const result = size.fileFinishedImporting("modules/soundpacks/Constants.tsx");
 
 export const Soundpacks = { CLASSIC: "classic", RETRO: "retro", BUBBLE: "bop", DUCKY: "ducky", LOFI: "lofi", ASMR: "asmr", DISCODO: "discodo", HALLOWEEN: "halloween", WINTER_HOLIDAY: "winter_holiday" };
 export const CUSTOM_NOTIFICATION_SOUNDS_DISCODO_STORAGE_KEY = "custom_notification_sounds_discodo";

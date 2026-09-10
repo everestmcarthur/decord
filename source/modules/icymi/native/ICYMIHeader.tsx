@@ -1,39 +1,37 @@
-// Module ID: 16521
-// Function ID: 16522
+// Module ID: 16552
+// Function ID: 16553
 // Name: ICYMIHeader
-// Dependencies: [19, 17, 21, 16455, 576, 4556, 1114, 2]
+// Dependencies: [19, 17, 21, 16486, 576, 4570, 1114, 2]
 // Exports: default
 
-// Module 16521 (ICYMIHeader)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 16455 */;
+// Module 16552 (ICYMIHeader)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createICYMIStyles = fn(16486);
 let closure_7 = createICYMIStyles.createICYMIStyles((margin) => {
-  obj = { text: obj, separator: null };
-  obj = { flexDirection: "row", justifyContent: "space-between", marginHorizontal: margin.margin };
-  obj = { height: 1, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginBottom: ThemesDefault.space.PX_16 };
-  obj[1] = obj;
+  const obj = { text: { flexDirection: "row", justifyContent: "space-between", marginHorizontal: margin.margin }, separator: null };
+  const size = { height: 1, width: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginBottom: nativeDefault.space.PX_16 };
+  obj.separator = size;
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/icymi/native/ICYMIHeader.tsx");
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/icymi/native/ICYMIHeader.tsx");
 
 export default function ICYMIHeader() {
-  const tmp = callback3();
-  let obj = { children: null };
-  obj = { style: tmp.separator };
-  const items = [callback(View, obj), ];
-  obj = { style: tmp.text, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.string(getSystemLocale.t["jnXV/V"]);
-  items[1] = callback(Text.Text, obj);
-  obj[0] = items;
-  return callback2(closure_5, obj);
+  const tmp = closure_7();
+  const obj = { children: null };
+  const items = [React4(View, { style: tmp.separator }), ];
+  const obj3 = { style: tmp.text, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
+  const intl = util.intl;
+  obj3.children = intl.string(util.t["jnXV/V"]);
+  items[1] = React4(Text_Text.Text, obj3);
+  obj.children = items;
+  return timestampProducer(hasOwnProperty, obj);
 };

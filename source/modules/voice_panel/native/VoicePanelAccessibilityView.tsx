@@ -1,18 +1,18 @@
-// Module ID: 17100
-// Function ID: 17101
+// Module ID: 17131
+// Function ID: 17132
 // Name: VoicePanelAccessibilityView
-// Dependencies: [19, 17091, 21, 4959, 17095, 2]
+// Dependencies: [19, 17122, 21, 4973, 17126, 2]
 // Exports: default
 
-// Module 17100 (VoicePanelAccessibilityView)
-import context from "context" /* 17095 */;
-import { VoicePanelPIPModes } from "VoicePanelPIPModes" /* 17091 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+// Module 17131 (VoicePanelAccessibilityView)
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let closure_4 = importAllResult.memo(require("AccessibilityView").AccessibilityViewAnimated);
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/VoicePanelAccessibilityView.tsx");
+const require = fn;
+const VoicePanelPIPModes = fn(17122).VoicePanelPIPModes;
+const jsx = fn(21).jsx;
+let closure_4 = noop.memo(fn(4973).AccessibilityViewAnimated);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/VoicePanelAccessibilityView.tsx");
 
 export default function VoicePanelAccessibilityView(pointerEvents) {
   let str = pointerEvents.pointerEvents;
@@ -21,14 +21,13 @@ export default function VoicePanelAccessibilityView(pointerEvents) {
   }
   let accessibilityViewIsModal = pointerEvents.accessibilityViewIsModal;
   ({ nativeID, onAccessibilityEscape } = pointerEvents);
-  const merged = Object.assign(pointerEvents, Object.create(null));
-  let obj = context;
-  obj = { style: pointerEvents.style, pointerEvents: str, nativeID, accessibilityViewIsModal: null, onAccessibilityEscape: null };
+  const merged = Object.assign(pointerEvents, Object.assign({ style: 0, pointerEvents: 0, nativeID: 0, accessibilityViewIsModal: 0, onAccessibilityEscape: 0 }));
+  const obj2 = { style: pointerEvents.style, pointerEvents: str, nativeID, accessibilityViewIsModal: null, onAccessibilityEscape: null };
   if (accessibilityViewIsModal) {
     accessibilityViewIsModal = obj.usePIPState().mode !== VoicePanelPIPModes.IN_APP;
   }
-  obj[3] = accessibilityViewIsModal;
-  obj[4] = onAccessibilityEscape;
+  obj2.accessibilityViewIsModal = accessibilityViewIsModal;
+  obj2.onAccessibilityEscape = onAccessibilityEscape;
   const merged1 = Object.assign(merged);
   return <closure_4 style={arg0.style} pointerEvents={str} nativeID={nativeID} accessibilityViewIsModal={null} onAccessibilityEscape={null} />;
 };

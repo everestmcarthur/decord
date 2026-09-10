@@ -1,46 +1,48 @@
-// Module ID: 16920
-// Function ID: 16921
-// Name: render
-// Dependencies: [19, 13755, 21, 16921, 1114, 16922, 16923, 4994, 2]
+// Module ID: 16957
+// Function ID: 16958
+// Name: Suppressed
+// Dependencies: [19, 13778, 21, 16958, 1114, 16959, 16960, 5008, 2]
 
-// Module 16920 (render)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import registerAssetDefault from "registerAsset" /* 16922 */;
-import registerAssetDefault2 from "registerAsset" /* 16923 */;
-import closure_3 from "initialize" /* 13755 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+// Module 16957 (Suppressed)
+import util from "util" /* 1114 */;
+import PermissionActionCreatorsDefault from "PermissionActionCreators" /* 16958 */;
+import _modDef16959 from "module_16959" /* 16959 */;
+import _modDef16960 from "module_16960" /* 16960 */;
+import noop from "module_19" /* 19 */;
+import PermissionSpeakStore from "PermissionSpeakStore" /* 13778 */;
 
-require = arg1;
-const Component = importAllResult.Component;
+require = fn;
+const jsx = fn(21).jsx;
+const Component = noop.Component;
 class Suppressed extends Component {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     applyArgumentsResult.close = function close() {
-      callback(table[3]).clearSuppressWarning();
+      PermissionActionCreatorsDefault.clearSuppressWarning();
     };
     return applyArgumentsResult;
   }
 }
 Suppressed.prototype["render"] = function render() {
-  const intl = getSystemLocale.intl;
+  const intl = util.intl;
   const string = intl.string;
-  const t = getSystemLocale.t;
+  const t = util.t;
   if (isAFKChannelResult) {
     let stringResult = string(t.KuYcnU);
     const intl3 = tmp2(1114).intl;
     let stringResult1 = intl3.string(tmp2(1114).t["RaFZ3+"]);
-    let tmp7 = registerAssetDefault;
+    let tmp7 = _modDef16959;
     let tmp6 = importDefault;
   } else {
     stringResult = string(t.FJSZVM);
     const intl2 = tmp2(1114).intl;
     stringResult1 = intl2.string(tmp2(1114).t.etJjgW);
     tmp6 = importDefault;
-    tmp7 = registerAssetDefault2;
+    tmp7 = _modDef16960;
   }
-  return jsx(tmp6(4994), { title: stringResult, body: stringResult1, iconSource: tmp7, onConfirm: this.close });
+  return jsx(tmp6(5008), { title: stringResult, body: stringResult1, iconSource: tmp7, onConfirm: this.close });
 };
-const result = require("set").fileFinishedImporting("components_native/warnings/Suppressed.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/warnings/Suppressed.tsx");
 
 export default Suppressed;

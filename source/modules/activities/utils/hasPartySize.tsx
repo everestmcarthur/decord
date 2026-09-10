@@ -1,13 +1,13 @@
-// Module ID: 11761
-// Function ID: 11762
+// Module ID: 11787
+// Function ID: 11788
 // Name: hasPartySize
 // Dependencies: [2]
 // Exports: hasPartySize
 
-// Module 11761 (hasPartySize)
-import set from "set" /* 2 */;
+// Module 11787 (hasPartySize)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/activities/utils/hasPartySize.tsx");
+const result = size.fileFinishedImporting("modules/activities/utils/hasPartySize.tsx");
 
 export const hasPartySize = function hasPartySize(partySize) {
   return partySize.partySize > -1 && partySize.maxPartySize > -1;

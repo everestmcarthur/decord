@@ -1,135 +1,133 @@
-// Module ID: 12472
-// Function ID: 12473
-// Name: ChatBeginningRowIcon
-// Dependencies: [32, 5, 19, 17, 4552, 1956, 7277, 9069, 7107, 7621, 1961, 1975, 1957, 2012, 2021, 1979, 4199, 4209, 4741, 1371, 1074, 1964, 11598, 12473, 12447, 11387, 21, 4560, 576, 5071, 1114, 5073, 5105, 5106, 5078, 5080, 4962, 4556, 4255, 4262, 5123, 11613, 1178, 12474, 8630, 10255, 504, 4404, 7961, 4713, 9743, 7275, 7272, 10632, 4495, 4550, 12475, 12476, 38, 11, 12478, 4258, 9068, 5138, 12482, 5812, 9825, 6232, 2024, 12593, 12596, 8634, 4573, 4975, 12600, 4906, 12601, 7170, 9520, 1242, 9065, 7949, 7119, 7114, 4259, 4527, 12603, 1896, 7162, 12604, 8187, 8179, 7190, 12605, 8191, 7342, 4763, 12622, 5584, 9047, 10875, 12624, 11388, 12631, 8600, 11595, 8378, 4380, 1943, 11607, 11599, 11596, 11597, 11603, 8667, 10037, 7221, 10915, 4503, 12635, 12639, 2]
+// Module ID: 12498
+// Function ID: 12499
+// Name: ChatBeginningRow
+// Dependencies: [32, 5, 19, 17, 4566, 1956, 7291, 9096, 7121, 7635, 1961, 1975, 1957, 2012, 2021, 1979, 4212, 4222, 4755, 1371, 1074, 1964, 11624, 12499, 12473, 11414, 21, 4574, 576, 5085, 1114, 5087, 5119, 5120, 5092, 5094, 4976, 4570, 4268, 4275, 5137, 11639, 1178, 12500, 8658, 10282, 504, 4418, 7975, 4727, 9770, 7289, 7286, 10659, 4509, 4564, 12501, 12502, 38, 11, 12504, 4271, 9095, 5152, 12508, 5826, 9852, 6246, 2024, 12619, 12622, 8662, 4587, 4989, 12626, 4920, 12627, 7184, 9547, 1242, 9092, 7963, 7133, 7128, 4272, 4541, 12629, 1896, 7176, 12630, 8213, 8205, 7203, 12631, 8217, 7356, 4777, 12648, 5598, 9074, 10902, 12650, 11415, 12657, 8628, 11621, 8406, 4394, 1943, 11633, 11625, 11622, 11623, 11629, 8695, 10064, 7235, 10942, 4517, 12661, 12665, 2]
 // Exports: default
 
-// Module 12472 (ChatBeginningRowIcon)
+// Module 12498 (ChatBeginningRow)
 import initialize from "initialize" /* 504 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import map from "map" /* 4262 */;
-import useThemeDefault from "useTheme" /* 4495 */;
-import computeChannelNameDefault from "computeChannelName" /* 4713 */;
-import ChatIcon from "ChatIcon" /* 5071 */;
-import ThreadIcon from "ThreadIcon" /* 5073 */;
-import RowButtonWrapper from "RowButtonWrapper" /* 8600 */;
-import registerAssetDefault from "registerAsset" /* 12474 */;
-import ChannelAccessInfoDefault from "ChannelAccessInfo" /* 12475 */;
-import registerAssetDefault2 from "registerAsset" /* 12600 */;
-import PortalAccessibilityWorkaroundViewDefault from "PortalAccessibilityWorkaroundView" /* 12639 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import closure_9 from "participantFromServer" /* 1956 */;
-import closure_10 from "handleLoadThreadsSuccess" /* 7277 */;
-import closure_11 from "handleFormInit" /* 9069 */;
-import closure_12 from "recomputeFromAppTokens" /* 7107 */;
-import { FetchState } from "recomputeFromAppTokens" /* 7107 */;
-import closure_14 from "createUserWidgetFromServer" /* 7621 */;
-import { THREAD_CHANNEL_TYPES } from "createChannelRecord" /* 1961 */;
-import { isGuildOwner } from "GuildNSFWContentLevel" /* 1975 */;
-import closure_17 from "ensureGuildLoaded" /* 1957 */;
-import closure_18 from "comparator" /* 2012 */;
-import closure_19 from "trackCommunicationDisabled" /* 2021 */;
-import closure_20 from "createGuildRecordFromRust" /* 1979 */;
-import closure_21 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_22 from "markAllUserIdListsStale" /* 4209 */;
-import closure_23 from "updateUserGuildSettingsInternal" /* 4741 */;
-import closure_24 from "mergeGuildAvatar" /* 1371 */;
-import ME from "ME" /* 1074 */;
-import { ChannelFlags } from "set" /* 1964 */;
-import { MAX_GROUP_DM_NITRO_PARTICIPANTS as closure_39 } from "MAX_GROUP_DM_NITRO_PARTICIPANTS" /* 11598 */;
-import Steps from "Steps" /* 12473 */;
-import { MOBILE_MESSAGE_REQUESTS_MODAL_KEY as closure_42 } from "MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL" /* 12447 */;
-import { BLOCK_CONFIRMATION_ACTION_SHEET_KEY as closure_43 } from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY" /* 11387 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import dismissible_content from "dismissible_content" /* 1943 */;
+import LinkingDefault from "Linking" /* 4268 */;
+import ToastUtils from "ToastUtils" /* 4271 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
+import useToken from "useToken" /* 4275 */;
+import UserUtilsDefault from "UserUtils" /* 4418 */;
+import useThemeDefault from "useTheme" /* 4509 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4564 */;
+import useChannelNameDefault from "useChannelName" /* 4727 */;
+import useAlertStore from "useAlertStore" /* 4920 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import ChatIcon from "ChatIcon" /* 5085 */;
+import ThreadIcon from "ThreadIcon" /* 5087 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7128 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7184 */;
+import ClipboardUtils from "ClipboardUtils" /* 7203 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7975 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8205 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8213 */;
+import RowButton from "RowButton" /* 8628 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8658 */;
+import ReportModals from "ReportModals" /* 8662 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9852 */;
+import openGroupDMAddMembers from "openGroupDMAddMembers" /* 11621 */;
+import showChatGDMUpsellActionSheetDefault from "showChatGDMUpsellActionSheet" /* 11633 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11639 */;
+import _modDef12500 from "module_12500" /* 12500 */;
+import _modDef12626 from "module_12626" /* 12626 */;
+import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 12627 */;
+import PortalAccessibilityWorkaroundViewDefault from "PortalAccessibilityWorkaroundView" /* 12665 */;
+import _slicedToArray from "module_32" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7291 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9096 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7121 */;
+import UserProfileStore from "UserProfileStore" /* 7635 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildChannelStore from "GuildChannelStore" /* 2012 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4755 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+const openGroupDMAddMembersDefault = openGroupDMAddMembers;
+
+const ChannelAccessInfoDefault = tmp(12501);
+require = fn;
 function ChatBeginningRowIcon(arg0) {
   ({ isPrivate, isNSFW } = arg0);
   ({ isThread, isForumPost, channelType } = arg0);
   if (isForumPost) {
-    let obj = { IconComponent: null, label: null };
-    obj[0] = ChatIcon.ChatIcon;
-    obj[1] = getSystemLocale.t.Y4REmB;
+    const obj2 = { IconComponent: ChatIcon.ChatIcon, label: util.t.Y4REmB };
     let tmp4 = require;
-    let tmp5 = obj;
+    let tmp5 = obj2;
   } else if (isThread) {
-    obj = { IconComponent: null, label: null };
-    obj[0] = ThreadIcon.ThreadIcon;
-    obj[1] = getSystemLocale.t["7Xm5QI"];
+    const obj3 = { IconComponent: ThreadIcon.ThreadIcon, label: util.t["7Xm5QI"] };
     tmp4 = require;
-    tmp5 = obj;
-  } else if (channelType === constants.GUILD_APP) {
+    tmp5 = obj3;
+  } else if (channelType === constants4.GUILD_APP) {
     if (isPrivate) {
-      let AppsIcon = tmp6(5105).AppsLockIcon;
-      let tmp8 = tmp7;
+      let AppsIcon = tmp6(5119).AppsLockIcon;
       let tmp9 = tmp6;
     } else {
-      AppsIcon = tmp6(5106).AppsIcon;
-      tmp8 = tmp7;
+      AppsIcon = tmp6(5120).AppsIcon;
       tmp9 = tmp6;
     }
-    obj = { IconComponent: null, label: null };
-    obj[0] = AppsIcon;
-    obj[1] = tmp9(1114).t.ZkcrC2;
+    const obj = { IconComponent: AppsIcon, label: tmp9(1114).t.ZkcrC2 };
   } else {
-    obj1 = { IconComponent: null, label: null };
+    const obj4 = { IconComponent: null, label: null };
     if (isPrivate) {
-      obj1[0] = tmp17(5078).TextLockIcon;
-      obj1[1] = tmp17(1114).t.GK18KJ;
+      obj4.IconComponent = tmp17(5092).TextLockIcon;
+      obj4.label = tmp17(1114).t.GK18KJ;
       tmp4 = tmp17;
-      tmp5 = obj1;
+      tmp5 = obj4;
     } else {
-      obj1[0] = tmp17(5080).TextIcon;
-      obj1[1] = tmp17(1114).t.GK18KJ;
+      obj4.IconComponent = tmp17(5094).TextIcon;
+      obj4.label = tmp17(1114).t.GK18KJ;
       tmp4 = tmp17;
-      tmp5 = obj1;
+      tmp5 = obj4;
     }
   }
-  const obj2 = { style: callback3().iconContainer, children: null };
-  const obj3 = { size: "lg", color: "icon-strong", accessibilityLabel: null };
+  const obj5 = { style: closure_47().iconContainer, children: null };
+  const obj6 = { size: "lg", color: "icon-strong", accessibilityLabel: null };
   ({ IconComponent, label } = tmp5);
   const intl = tmp4(1114).intl;
-  obj3[2] = intl.string(label);
-  obj2[1] = callback2(IconComponent, obj3);
-  return callback2(closure_7, obj2);
+  obj6.accessibilityLabel = intl.string(label);
+  obj5.children = closure_1_44(IconComponent, obj6);
+  return closure_1_44(React5, obj5);
 }
 function ChatBeginningRowHeader(arg0) {
   ({ subtitle, isForumPost, isGameInvitesPost, subtitleLink } = arg0);
   ({ title, isPrivate, isThread, isNSFW, channelType } = arg0);
-  const tmp = callback3();
-  let obj = subtitleLink(4962);
-  const tmp4 = null != subtitleLink && obj.useIsScreenReaderEnabled();
+  const tmp = closure_47();
+  const tmp4 = null != subtitleLink && subtitleLink(4976).useIsScreenReaderEnabled();
   let tmp5Result = !isGameInvitesPost;
   if (!isGameInvitesPost) {
-    obj = { isNSFW: null, isPrivate: null, isThread: null, isForumPost: null, channelType: null };
-    obj[0] = isNSFW;
-    obj[1] = isPrivate;
-    obj[2] = isThread;
-    obj[3] = isForumPost;
-    obj[4] = channelType;
-    const items = [callback2(ChatBeginningRowIcon, obj), ];
+    const obj2 = { isNSFW, isPrivate, isThread, isForumPost, channelType };
+    const items = [closure_44(ChatBeginningRowIcon, obj2), ];
     const items1 = [tmp.title, ];
     let num = 8;
     if (isForumPost) {
       num = 0;
     }
-    obj = { children: null };
-    obj1 = { style: null, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-    const obj2 = { marginBottom: null };
-    obj2[0] = num;
-    items1[1] = obj2;
-    obj1[0] = items1;
-    obj1[4] = title;
-    items[1] = callback2(tmp2(4556).Text, obj1);
-    obj[0] = items;
-    tmp5Result = tmp5(tmp6, obj);
-    const tmp8 = callback2;
+    const obj3 = { children: null };
+    const obj4 = { style: null, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+    const obj5 = { marginBottom: num };
+    items1[1] = obj5;
+    obj4.style = items1;
+    obj4.children = title;
+    items[1] = closure_44(tmp2(4570).Text, obj4);
+    obj3.children = items;
+    tmp5Result = tmp5(tmp6, obj3);
   }
   const children = [tmp5Result, ];
   let tmp11Result = null != subtitle;
@@ -138,17 +136,15 @@ function ChatBeginningRowHeader(arg0) {
     if (tmp4) {
       str = "link";
     }
-    const obj3 = { accessibilityRole: null, onPress: null, style: null, variant: "text-md/medium", color: "text-default", children: null };
-    obj3[0] = str;
+    const obj6 = { accessibilityRole: str, onPress: null, style: null, variant: "text-md/medium", color: "text-default", children: null };
     let fn;
     if (tmp4) {
-      fn = () => closure_1_1(closure_1_2[38]).openURL(subtitleLink);
+      fn = () => LinkingDefault.openURL(subtitleLink);
     }
-    obj3[1] = fn;
-    obj3[2] = tmp.subtitle;
-    obj3[5] = subtitle;
-    tmp11Result = callback2(tmp2(4556).Text, obj3);
-    const tmp11 = callback2;
+    obj6.onPress = fn;
+    obj6.style = tmp.subtitle;
+    obj6.children = subtitle;
+    tmp11Result = closure_44(tmp2(4570).Text, obj6);
   }
   children[1] = tmp11Result;
   return closure_46(closure_45, { children });
@@ -156,87 +152,87 @@ function ChatBeginningRowHeader(arg0) {
 function LinkManageButtons(arg0) {
   ({ canEdit, isPrivate, channel: require } = arg0);
   ({ canManageRoles, theme } = arg0);
-  const tmp = callback3();
-  let obj = map;
-  const token = obj.useToken(ThemesDefault.colors.TEXT_LINK, theme);
-  obj = { style: tmp.ctaContainer, children: null };
+  const tmp = closure_47();
+  const token = useToken.useToken(nativeDefault.colors.TEXT_LINK, theme);
+  const obj2 = { style: tmp.ctaContainer, children: null };
   if (isPrivate) {
     isPrivate = canManageRoles;
   }
   if (isPrivate) {
-    obj = { accessibilityRole: "button", onPress: null, style: null, children: null };
-    obj[1] = function onPress() {
-      return closure_1_0(closure_1_2[41]).openAddMembersActionSheet(closure_0);
+    const obj3 = {
+      accessibilityRole: "button",
+      onPress() {
+          return channel_permissions_ChannelPermissionsUtils.openAddMembersActionSheet(id);
+        },
+      style: null,
+      children: null
     };
     const items = [, ];
     ({ ctaButton: arr[0], subtitle: arr[1] } = tmp);
-    obj[2] = items;
-    obj1 = { source: null, size: null, color: null };
-    obj1[0] = registerAssetDefault;
-    obj1[1] = tmp2(1178).IconSizes.REFRESH_SMALL_16;
-    obj1[2] = token;
-    const items1 = [callback2(tmp2(1178).Icon, obj1), ];
-    const obj2 = { style: null, variant: "text-sm/medium", color: "text-link", children: null };
+    obj3.style = items;
+    const obj4 = { source: _modDef12500, size: tmp2(1178).IconSizes.REFRESH_SMALL_16, color: token };
+    const items1 = [closure_44(tmp2(1178).Icon, obj4), ];
+    const obj5 = { style: null, variant: "text-sm/medium", color: "text-link", children: null };
     const items2 = [, ];
     ({ ctaLabel: arr3[0], ctaAddRoles: arr3[1] } = tmp);
-    obj2[0] = items2;
+    obj5.style = items2;
     const intl = tmp2(1114).intl;
-    obj2[3] = intl.string(tmp2(1114).t.dMJ3Y6);
-    items1[1] = callback2(tmp2(4556).Text, obj2);
-    obj[3] = items1;
-    isPrivate = tmp6(tmp2(5123).PressableOpacity, obj);
+    obj5.children = intl.string(tmp2(1114).t.dMJ3Y6);
+    items1[1] = closure_44(tmp2(4570).Text, obj5);
+    obj3.children = items1;
+    isPrivate = tmp6(tmp2(5137).PressableOpacity, obj3);
   }
   const items3 = [isPrivate, ];
   if (canEdit) {
-    const obj3 = { accessibilityRole: "button", onPress: null, style: null, children: null };
-    obj3[1] = function onPress() {
-      closure_1_1(closure_1_2[44]).setSection(closure_1_28.OVERVIEW);
-      const obj = closure_1_1(closure_1_2[44]);
-      closure_1_1(closure_1_2[44]).open(id.id);
+    const obj6 = {
+      accessibilityRole: "button",
+      onPress() {
+          ChannelSettingsActionCreatorsDefault.setSection(constants3.OVERVIEW);
+          ChannelSettingsActionCreatorsDefault.open(id.id);
+        },
+      style: null,
+      children: null
     };
     const items4 = [, ];
     ({ ctaButton: arr5[0], subtitle: arr5[1] } = tmp);
-    obj3[2] = items4;
-    const obj4 = { size: "xs", color: null };
-    obj4[1] = token;
-    const items5 = [callback2(tmp2(10255).PencilIcon, obj4), ];
-    const obj5 = { style: null, variant: "text-sm/medium", color: "text-link", children: null };
+    obj6.style = items4;
+    const obj7 = { size: "xs", color: token };
+    const items5 = [closure_44(tmp2(10282).PencilIcon, obj7), ];
+    const obj8 = { style: null, variant: "text-sm/medium", color: "text-link", children: null };
     const items6 = [tmp.ctaLabel];
-    obj5[0] = items6;
+    obj8.style = items6;
     const intl2 = tmp2(1114).intl;
-    obj5[3] = intl2.string(tmp2(1114).t.GE1Tlo);
-    items5[1] = callback2(tmp2(4556).Text, obj5);
-    obj3[3] = items5;
-    canEdit = tmp6(tmp2(5123).PressableOpacity, obj3);
+    obj8.children = intl2.string(tmp2(1114).t.GE1Tlo);
+    items5[1] = closure_44(tmp2(4570).Text, obj8);
+    obj6.children = items5;
+    canEdit = tmp6(tmp2(5137).PressableOpacity, obj6);
   }
   items3[1] = canEdit;
-  obj[1] = items3;
-  return closure_46(closure_7, obj);
+  obj2.children = items3;
+  return closure_46(closure_7, obj2);
 }
 function ThreadOwner(arg0) {
   ({ userId: require, guildId } = arg0);
-  let obj = initialize;
-  const items = [closure_24];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_24.getUser(closure_0));
-  obj1 = initialize;
-  const items1 = [closure_19];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => {
+  const tmp = closure_47();
+  const items = [UserStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => UserStore.getUser(_require));
+  const items1 = [GuildMemberStore];
+  const stateFromStores1 = initialize.useStateFromStores(items1, () => {
     let member = null;
-    if (null != closure_0) {
-      member = closure_1_19.getMember(guildId, tmp);
+    if (null != _require) {
+      member = GuildMemberStore.getMember(guildId, tmp);
     }
     return member;
   });
-  let obj2 = initialize;
-  const items2 = [closure_8];
-  const stateFromStores2 = obj2.useStateFromStores(items2, () => roleStyle.roleStyle);
+  const items2 = [AccessibilityStore];
+  const stateFromStores2 = initialize.useStateFromStores(items2, () => roleStyle.roleStyle);
   let str;
   if (stateFromStores1 != null) {
     str = stateFromStores1.nick;
   }
   if (str == null) {
-    let obj3 = guildId(4404);
-    str = obj3.getName(stateFromStores);
+    str = guildId(4418).getName(stateFromStores);
+    const obj4 = guildId(4418);
   }
   if (str == null) {
     str = "???";
@@ -255,156 +251,131 @@ function ThreadOwner(arg0) {
   if (colorStrings == null) {
     colorStrings = null;
   }
-  let tmp2Result = tmp2(7961);
-  const processColorStringsArray = tmp2Result.useProcessColorStringsArray(colorStrings);
-  tmp2Result = tmp2(7961);
+  const processColorStringsArray = enhanced_role_colors_EnhancedRoleColorUtils.useProcessColorStringsArray(colorStrings);
+  enhanced_role_colors_EnhancedRoleColorUtils;
   if (stateFromStores != null) {
     const id = stateFromStores.id;
   }
   if ("username" === stateFromStores2) {
     let tmp16;
     if (null != colorString) {
-      obj = { color: null };
-      obj[0] = colorString;
-      tmp16 = obj;
+      const obj5 = { color: colorString };
+      tmp16 = obj5;
     }
     let tmp18;
     if (tmp12) {
       tmp18 = processColorStringsArray;
     }
-    obj = { gradientColors: null, style: null, variant: "text-md/semibold", color: "text-default", children: null };
-    obj[0] = tmp18;
-    obj[1] = tmp16;
-    obj[4] = str;
-    return callback2(tmp2(4556).Text, obj);
+    const obj6 = { gradientColors: tmp18, style: tmp16, variant: "text-md/semibold", color: "text-default", children: str };
+    return closure_44(tmp2(4570).Text, obj6);
   } else {
     let tmp13 = "dot" === stateFromStores2;
     if (tmp13) {
       tmp13 = null != colorString;
     }
     if (tmp13) {
-      obj1 = { color: null, colors: null, containerStyles: null };
-      obj1[0] = colorString;
-      obj1[1] = colorStrings;
-      obj1[2] = tmp.threadCreatorRoleDot;
-      tmp13 = callback2(tmp2(1178).RoleDot, obj1);
+      const obj7 = { color: colorString, colors: colorStrings, containerStyles: tmp.threadCreatorRoleDot };
+      tmp13 = closure_44(tmp2(1178).RoleDot, obj7);
     }
-    obj2 = { children: null };
+    const obj8 = { children: null };
     const items3 = [tmp13, ];
-    obj3 = { variant: "text-md/semibold", color: "text-default", children: null };
-    obj3[2] = str;
-    items3[1] = callback2(tmp2(4556).Text, obj3);
-    obj2[0] = items3;
-    return closure_46(closure_45, obj2);
+    const obj9 = { variant: "text-md/semibold", color: "text-default", children: str };
+    items3[1] = closure_44(tmp2(4570).Text, obj9);
+    obj8.children = items3;
+    return closure_46(closure_45, obj8);
   }
-  tmp = callback3();
+  const tmp2Result = enhanced_role_colors_EnhancedRoleColorUtils;
 }
 function ChatBeginningRowThread(channel) {
   channel = channel.channel;
-  const tmp = callback3();
-  let obj = channel(9743);
-  const result = obj.isPrivateGuildChannel(channel);
-  obj1 = channel(7275);
-  const appliedTags = obj1.useAppliedTags(channel);
-  let obj2 = channel(7272);
-  const isGameInvitesPost = obj2.useIsGameInvitesPost(channel);
+  const tmp = closure_47();
+  const tmp3 = useChannelNameDefault(channel);
+  const result = channel(9770).isPrivateGuildChannel(channel);
+  const obj = channel(9770);
+  const appliedTags = channel(7289).useAppliedTags(channel);
+  const obj2 = channel(7289);
+  const isGameInvitesPost = channel(7286).useIsGameInvitesPost(channel);
   channel(504);
-  [][0] = closure_10;
+  [][0] = ForumPostMessagesStore;
   let tmp10Result = null;
   if (null != channel.threadMetadata) {
-    obj = { isNSFW: null, title: null, isPrivate: null, isThread: true, isForumPost: null, isGameInvitesPost: null };
-    obj[0] = channel.isNSFW();
-    obj[1] = tmp3;
-    obj[2] = result;
-    obj[4] = channel.isForumPost();
-    obj[5] = isGameInvitesPost;
-    const items = [callback2(ChatBeginningRowHeader, obj), , , ];
+    const obj4 = { isNSFW: channel.isNSFW(), title: tmp3, isPrivate: result, isThread: true, isForumPost: channel.isForumPost(), isGameInvitesPost };
+    const items = [closure_44(ChatBeginningRowHeader, obj4), , , ];
     let tmp12Result = null;
     if (channel.isForumPost()) {
       tmp12Result = null;
       if (appliedTags.length > 0) {
-        obj = { style: null, children: null };
-        obj[0] = tmp.tagContainer;
-        obj[1] = appliedTags.map((id) => callback(channel(table[53]).AppliedForumTagPill, { tag: id }, id.id));
-        tmp12Result = tmp12(closure_7, obj);
+        const obj5 = { style: tmp.tagContainer, children: appliedTags.map((tag) => closure_1_44(channel(dependencyMap[53]).AppliedForumTagPill, { tag }, tag.id)) };
+        tmp12Result = tmp12(closure_7, obj5);
       }
     }
     items[1] = tmp12Result;
     const isForumPostResult = channel.isForumPost();
-    tmp12Result = !isForumPostResult;
+    let tmp12Result3 = !isForumPostResult;
     if (!isForumPostResult) {
-      obj1 = { style: null, variant: "text-md/medium", color: "text-default", children: null };
-      obj1[0] = tmp.threadDetails;
+      const obj6 = { style: tmp.threadDetails, variant: "text-md/medium", color: "text-default", children: null };
       const intl = tmp4(1114).intl;
-      obj2 = { usernameHook: null };
-      obj2[0] = function usernameHook(arg0, arg1) {
-        return closure_1_44(closure_1_51, { userId: channel.ownerId, guildId: channel.guild_id }, arg1);
+      const obj7 = {
+        usernameHook(arg0, arg1) {
+              return closure_2_44(ThreadOwner, { userId: channel.ownerId, guildId: channel.guild_id }, arg1);
+            }
       };
-      obj1[3] = intl.format(tmp4(1114).t.imPXd5, obj2);
-      tmp12Result = tmp12(tmp4(4556).Text, obj1);
+      obj6.children = intl.format(tmp4(1114).t.imPXd5, obj7);
+      tmp12Result3 = tmp12(tmp4(4570).Text, obj6);
     }
-    items[2] = tmp12Result;
-    let tmp12Result1 = null;
+    items[2] = tmp12Result3;
+    let tmp12Result4 = null;
     if (channel.isForumPost()) {
-      tmp12Result1 = null;
+      tmp12Result4 = null;
       if (null == tmp8) {
-        const obj3 = { style: null, variant: "text-md/medium", color: "text-default", children: null };
-        obj3[0] = tmp.threadDetails;
+        const obj8 = { style: tmp.threadDetails, variant: "text-md/medium", color: "text-default", children: null };
         const intl2 = tmp4(1114).intl;
-        obj3[3] = intl2.string(tmp4(1114).t.mE3KJN);
-        tmp12Result1 = tmp12(tmp4(4556).Text, obj3);
+        obj8.children = intl2.string(tmp4(1114).t.mE3KJN);
+        tmp12Result4 = tmp12(tmp4(4570).Text, obj8);
       }
     }
-    const obj4 = { children: null };
-    items[3] = tmp12Result1;
-    obj4[0] = items;
-    tmp10Result = closure_46(closure_45, obj4);
-    const tmp10 = closure_46;
-    const tmp11 = closure_45;
+    const obj9 = { children: null };
+    items[3] = tmp12Result4;
+    obj9.children = items;
+    tmp10Result = closure_46(closure_45, obj9);
   }
   return tmp10Result;
 }
 function ChatBeginningRowGuildNonDefaultChannel(channel) {
   channel = channel.channel;
-  const tmp3 = computeChannelNameDefault(channel, true);
-  const canResult = closure_21.can(constants3.MANAGE_CHANNELS, channel);
-  const tmp = importDefault;
-  const tmp4 = computeChannelNameDefault(channel, false);
-  const canResult1 = closure_21.can(constants3.MANAGE_ROLES, channel);
-  let obj = channel(9743);
-  const result = obj.isPrivateGuildChannel(channel);
-  const canResult2 = closure_21.can(constants3.READ_MESSAGE_HISTORY, channel);
+  const tmp3 = useChannelNameDefault(channel, true);
+  const canResult = PermissionStore.can(constants7.MANAGE_CHANNELS, channel);
+  const tmp4 = useChannelNameDefault(channel, false);
+  const canResult1 = PermissionStore.can(constants7.MANAGE_ROLES, channel);
+  const canResult2 = PermissionStore.can(constants7.READ_MESSAGE_HISTORY, channel);
+  const result = channel(9770).isPrivateGuildChannel(channel);
+  const obj = channel(9770);
   const intl = channel(1114).intl;
   const tmp10 = useThemeDefault();
   const intl2 = channel(1114).intl;
   if (result) {
-    obj = { channelName: null, topicHook: null };
-    obj[0] = tmp3;
-    obj[1] = function topicHook() {
-      let obj = closure_1_1(closure_1_2[55]);
-      obj = { channelId: channel.id };
-      return obj.parseTopic(channel.topic, true, obj);
+    const obj2 = {
+      channelName: tmp3,
+      topicHook() {
+          return MarkupUtilsDefault.parseTopic(channel.topic, true, { channelId: channel.id });
+        }
     };
-    let formatResult = intl2.format(tmp8(1114).t.QuwqjG, obj);
+    let formatResult = intl2.format(tmp8(1114).t.QuwqjG, obj2);
   } else if (canResult2) {
-    obj = { channelName: null };
-    obj[0] = tmp3;
-    formatResult = intl2.formatToPlainString(tmp8(1114).t.JHKUGB, obj);
+    const obj3 = { channelName: tmp3 };
+    formatResult = intl2.formatToPlainString(tmp8(1114).t.JHKUGB, obj3);
   } else {
-    obj1 = { channelName: null };
-    obj1[0] = tmp4;
-    formatResult = intl2.format(tmp8(1114).t.hPVEQG, obj1);
+    const obj4 = { channelName: tmp4 };
+    formatResult = intl2.format(tmp8(1114).t.hPVEQG, obj4);
   }
   const formatToPlainStringResult = intl.formatToPlainString(channel(1114).t.q0tgLe, { channelName: tmp3 });
-  const children = [callback2(ChatBeginningRowHeader, { title: intl.formatToPlainString(channel(1114).t.q0tgLe, { channelName: tmp3 }), subtitle: formatResult, isPrivate: result, channelType: channel.type }), callback2(LinkManageButtons, { canManageRoles: canResult1, canEdit: canResult, isPrivate: result, channel, theme: tmp10 }), ];
+  const children = [closure_44(ChatBeginningRowHeader, { title: intl.formatToPlainString(channel(1114).t.q0tgLe, { channelName: tmp3 }), subtitle: formatResult, isPrivate: result, channelType: channel.type }), closure_44(LinkManageButtons, { canManageRoles: canResult1, canEdit: canResult, isPrivate: result, channel, theme: tmp10 }), ];
   let tmp15Result = null;
   if (result) {
     tmp15Result = null;
     if (canResult) {
-      const obj3 = { channel: null, guild: null };
-      obj3[0] = channel;
-      obj3[1] = channel.guild;
-      tmp15Result = callback2(ChannelAccessInfoDefault, obj3);
+      const obj6 = { channel, guild: channel.guild };
+      tmp15Result = closure_44(ChannelAccessInfoDefault, obj6);
     }
   }
   children[2] = tmp15Result;
@@ -413,46 +384,40 @@ function ChatBeginningRowGuildNonDefaultChannel(channel) {
 function ChatBeginningRowGuild(guild) {
   guild = guild.guild;
   const channel = guild.channel;
-  let obj = guild(504);
-  const items = [closure_18];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_18.getDefaultChannel(guild.id));
-  if (closure_21.can(constants3.READ_MESSAGE_HISTORY, channel)) {
+  const items = [GuildChannelStore];
+  const stateFromStores = guild(504).useStateFromStores(items, () => GuildChannelStore.getDefaultChannel(guild.id));
+  if (PermissionStore.can(constants7.READ_MESSAGE_HISTORY, channel)) {
     let id;
     if (stateFromStores != null) {
       id = stateFromStores.id;
     }
     if (id === channel.id) {
-      obj = { guild: null, channel: null };
-      obj[0] = guild;
-      obj[1] = channel;
-      let tmp4 = callback2(ChatBeginningRowGuildDefaultChannel, obj);
+      const obj2 = { guild, channel };
+      let tmp4 = closure_44(ChatBeginningRowGuildDefaultChannel, obj2);
     }
     return tmp4;
   }
-  tmp4 = callback2(ChatBeginningRowGuildNonDefaultChannel, { guild, channel });
+  tmp4 = closure_44(ChatBeginningRowGuildNonDefaultChannel, { guild, channel });
 }
 function DMSpamButton(channel) {
   channel = channel.channel;
   const user = channel.user;
-  let message;
-  let obj = channel(12596);
-  const dMMessageToReport = obj.useDMMessageToReport(channel, user.id, true === user.bot);
-  message = dMMessageToReport.message;
+  const dMMessageToReport = channel(12622).useDMMessageToReport(channel, user.id, true === user.bot);
+  const message = dMMessageToReport.message;
   if (!channel.showingSpamBanner) {
     if (dMMessageToReport.isReportable) {
-      obj = { size: "sm", variant: "destructive", text: null, disabled: null, onPress: null };
+      const obj2 = { size: "sm", variant: "destructive", text: null, disabled: null, onPress: null };
       const intl = tmp(1114).intl;
-      obj[2] = intl.string(tmp(1114).t.HHZmDn);
-      obj[3] = null == message;
-      obj[4] = function handleShowReportModal() {
+      obj2.text = intl.string(tmp(1114).t.HHZmDn);
+      obj2.disabled = null == message;
+      obj2.onPress = function handleShowReportModal() {
         if (null != message) {
-          const result = channel(closure_1_2[71]).showReportModalForFirstDM(tmp, () => {
-            closure_1_1(closure_1_2[72]).closePrivateChannel(id.id, true);
+          const result = ReportModals.showReportModalForFirstDM(tmp, () => {
+            message(dependencyMap[72]).closePrivateChannel(id.id, true);
           });
-          const obj = channel(closure_1_2[71]);
         }
       };
-      return callback2(tmp(4975).Button, obj);
+      return closure_44(tmp(4989).Button, obj2);
     }
   }
   return null;
@@ -460,65 +425,70 @@ function DMSpamButton(channel) {
 function ManageAppButton(application) {
   application = application.application;
   ({ channel: importDefault, oauth2Token: dependencyMap } = application);
-  closure_3 = undefined;
-  let obj = application(504);
-  const items = [closure_9];
-  closure_3 = obj.useStateFromStores(items, () => selfEmbeddedActivities.getSelfEmbeddedActivities());
+  const tmp = closure_47();
+  const items = [EmbeddedActivitiesStore];
+  closure_3 = application(504).useStateFromStores(items, () => selfEmbeddedActivities.getSelfEmbeddedActivities());
   let tmp4 = null;
   if (application.user.bot) {
     tmp4 = null;
     if (null != application) {
-      obj = { size: "sm", variant: "secondary", text: null, icon: null, onPress: null };
+      let obj2 = { size: "sm", variant: "secondary", text: null, icon: null, onPress: null };
       const intl = tmp2(1114).intl;
-      obj[2] = intl.string(tmp2(1114).t["5S3sQF"]);
-      obj = { size: null, source: null, style: null };
-      obj[0] = tmp2(1178).Icon.Sizes.SMALL;
-      obj[1] = registerAssetDefault2;
-      obj[2] = tmp.appDMButtonIcon;
-      obj[3] = callback2(tmp2(1178).Icon, obj);
-      obj[4] = function onPress() {
-        let obj = application(closure_1_2[75]);
-        obj = {
+      obj2.text = intl.string(tmp2(1114).t["5S3sQF"]);
+      const obj3 = { size: tmp2(1178).Icon.Sizes.SMALL, source: _modDef12626, style: tmp.appDMButtonIcon };
+      obj2.icon = closure_44(tmp2(1178).Icon, obj3);
+      obj2.onPress = function onPress() {
+        useAlertStore.openAlert("confirm-delete-authed-app", closure_2_44(UserSettingsAuthedAppDeleteWarningModalDefault, {
           application,
           scopes: scopes.scopes,
           onDelete() {
-            let obj = closure_1_1(closure_1_2[77]);
-            obj.delete(id2.id);
-            const value = closure_3.get(id.id);
+            require("AuthorizedAppsActionCreators").delete(id2.id);
+            value = closure_1_3.get(id.id);
+            const obj = require("AuthorizedAppsActionCreators");
+            const tmp2 = id;
             let _location;
             if (value != null) {
               _location = value.location;
             }
-            obj = { location: _location, applicationId: id.id };
-            closure_1_1(closure_1_2[78]).leaveActivity(obj);
+            require("EmbeddedActivitiesNativeManager").leaveActivity({ location: _location, applicationId: tmp2.id });
+          }
+        }));
+        const obj2 = {
+          application,
+          scopes: scopes.scopes,
+          onDelete() {
+            require("AuthorizedAppsActionCreators").delete(id2.id);
+            value = closure_1_3.get(id.id);
+            const obj = require("AuthorizedAppsActionCreators");
+            const tmp2 = id;
+            let _location;
+            if (value != null) {
+              _location = value.location;
+            }
+            require("EmbeddedActivitiesNativeManager").leaveActivity({ location: _location, applicationId: tmp2.id });
           }
         };
-        obj.openAlert("confirm-delete-authed-app", closure_1_44(closure_1_1(closure_1_2[76]), obj));
-        obj = { application_id: application.id, channel_id: closure_1.id, channel_type: closure_1.type };
-        closure_1_1(closure_1_2[79]).track(closure_1_25.APP_MANAGE_CTA_CLICKED, obj);
+        AnalyticsUtilsDefault.track(constants.APP_MANAGE_CTA_CLICKED, { application_id: application.id, channel_id: closure_1_1.id, channel_type: closure_1_1.type });
       };
-      tmp4 = callback2(tmp2(4975).Button, obj);
+      tmp4 = closure_44(tmp2(4989).Button, obj2);
     }
   }
   return tmp4;
 }
 function MuteAppButton(channel) {
   channel = channel.channel;
-  closure_1 = undefined;
   let stateFromStores;
-  const tmp = callback3();
-  closure_1 = tmp;
-  let obj = channel(stateFromStores[46]);
-  const items = [closure_23];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_23.isChannelMuted(null, channel.id));
+  const tmp = closure_47();
+  importDefault = tmp;
+  const items = [UserGuildSettingsStore];
+  stateFromStores = channel(stateFromStores[46]).useStateFromStores(items, () => UserGuildSettingsStore.isChannelMuted(null, channel.id));
   let tmp6Result = null;
   if (channel.user.bot) {
     let str = "destructive";
     if (stateFromStores) {
       str = "secondary";
     }
-    obj = { size: "sm", variant: null, text: null, icon: null, onPress: null };
-    obj[1] = str;
+    let obj2 = { size: "sm", variant: str, text: null, icon: null, onPress: null };
     let intl = tmp2(tmp3[30]).intl;
     const string = intl.string;
     const t = tmp2(tmp3[30]).t;
@@ -527,71 +497,61 @@ function MuteAppButton(channel) {
     } else {
       stringResult = string(t.w4m945);
     }
-    obj[2] = stringResult;
-    obj = { size: null, source: null, color: null, style: null };
-    obj[0] = tmp2(tmp3[42]).Icon.Sizes.SMALL;
-    obj[1] = closure_1(stateFromStores ? tmp3[80] : tmp3[81]);
+    obj2.text = stringResult;
+    const obj3 = { size: tmp2(tmp3[42]).Icon.Sizes.SMALL, source: importDefault(stateFromStores ? tmp3[80] : tmp3[81]), color: null, style: null };
     let WHITE;
     if (!stateFromStores) {
       WHITE = tmp8(tmp3[28]).unsafe_rawColors.WHITE;
     }
-    obj[2] = WHITE;
-    obj[3] = tmp.appDMButtonIcon;
-    obj[3] = closure_44(tmp2(tmp3[42]).Icon, obj);
-    obj[4] = function onPress() {
+    obj3.color = WHITE;
+    obj3.style = tmp.appDMButtonIcon;
+    obj2.icon = closure_44(tmp2(tmp3[42]).Icon, obj3);
+    obj2.onPress = function onPress() {
       if (stateFromStores) {
-        let tmpResult = tmp(tmp2[82]);
-        const result = tmpResult.updateChannelOverrideSettings(null, channel.id, { muted: false }, channel(stateFromStores[83]).NotificationLabels.Unmuted);
+        const tmpResult = tmp(7133);
+        const result = tmpResult.updateChannelOverrideSettings(null, channel.id, { muted: false }, NotificationSettingsUtils.NotificationLabels.Unmuted);
         let obj = { key: "NOTIFICATIONS_UNMUTED", content: null, icon: null };
-        const intl = channel(stateFromStores[30]).intl;
-        obj[1] = intl.string(channel(stateFromStores[30]).t["/6kulz"]);
-        obj[2] = function icon() {
-          let obj = { style: closure_1.unmutedNotificationContainer, children: null };
-          obj = { source: closure_1_1(closure_1_2[81]), color: closure_1_1(closure_1_2[28]).unsafe_rawColors.WHITE, style: closure_1.unmutedNotification };
-          obj[1] = closure_1_44(closure_1_0(closure_1_2[42]).Icon, obj);
-          return closure_1_44(closure_1_7, obj);
+        const intl = util.intl;
+        obj.content = intl.string(util.t["/6kulz"]);
+        obj.icon = function icon() {
+          const obj = { style: closure_1_1.unmutedNotificationContainer, children: closure_2_44(channel(stateFromStores[42]).Icon, { source: closure_1(stateFromStores[81]), color: closure_1(stateFromStores[28]).unsafe_rawColors.WHITE, style: closure_1_1.unmutedNotification }) };
+          return closure_2_44(closure_2_7, obj);
         };
-        callback(stateFromStores[84]).open(obj);
-        const obj4 = callback(stateFromStores[84]);
+        ToastActionCreatorsDefault.open(obj);
       } else {
-        tmpResult = tmp(tmp2[85]);
-        obj = { channel: null };
-        obj[0] = channel;
-        tmpResult.openLazy(channel(stateFromStores[87])(stateFromStores[86], stateFromStores.paths), "MessageNotificationChannelActionSheet", obj);
+        const obj2 = { channel };
+        tmp(4541).openLazy(asyncRequireImpl(12629, dependencyMap.paths), "MessageNotificationChannelActionSheet", obj2);
+        const tmpResult2 = tmp(4541);
       }
     };
-    tmp6Result = tmp6(tmp2(tmp3[73]).Button, obj);
+    tmp6Result = tmp6(tmp2(tmp3[73]).Button, obj2);
   }
   return tmp6Result;
 }
 function ChatBeginningRowDMGuard(arg0) {
-  const _require = arg0;
-  let obj = _require(504);
-  const items = [closure_24];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  _require = arg0;
+  const items = [UserStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
     channel = channel.channel;
-    return closure_1_24.getUser(channel.getRecipientId());
+    return UserStore.getUser(channel.getRecipientId());
   });
   let tmp2 = null;
   if (null != stateFromStores) {
-    obj = {};
+    const obj2 = {};
     const merged = Object.assign(arg0);
-    obj.user = stateFromStores;
-    tmp2 = callback2(ChatBeginningRowDM, obj);
+    obj2.user = stateFromStores;
+    tmp2 = closure_44(ChatBeginningRowDM, obj2);
   }
   return tmp2;
 }
 function ChatBeginningRowDM(channel) {
   channel = channel.channel;
   const user = channel.user;
-  dependencyMap = undefined;
-  let analyticsLocations;
-  closure_4 = undefined;
   authorizedAppsFetchState = undefined;
   let userTag;
-  const tmp = callback3();
+  const tmp = closure_47();
   dependencyMap = tmp;
-  analyticsLocations = user(7162)().analyticsLocations;
+  const analyticsLocations = user(7176)().analyticsLocations;
   let id;
   if (user != null) {
     id = user.id;
@@ -599,39 +559,37 @@ function ChatBeginningRowDM(channel) {
   if (id == null) {
     id = closure_30;
   }
-  let tmp4Result = user(12604)(id);
-  closure_4 = tmp4Result;
-  let obj = channel(504);
-  let items = [closure_12];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    let obj = closure_1_12;
-    let id;
+  let tmp4Result = user(12630)(id);
+  id = tmp4Result;
+  const tmp4 = user(12630);
+  let items = [AuthorizedAppsStore];
+  const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => {
+    id = undefined;
     if (id != null) {
       id = id.id;
     }
-    obj = { authorizedAppToken: closure_1_12.getNewestTokenForApplication(id), authorizedAppsFetchState: obj.getFetchState() };
-    return obj;
+    return { authorizedAppToken: AuthorizedAppsStore.getNewestTokenForApplication(id), authorizedAppsFetchState: AuthorizedAppsStore.getFetchState() };
   });
   ({ authorizedAppToken, authorizedAppsFetchState } = stateFromStoresObject);
-  obj1 = channel(504);
-  let items1 = [closure_14];
+  let obj = channel(504);
+  let items1 = [UserProfileStore];
   let items2 = [user];
-  let stateFromStores = obj1.useStateFromStores(items1, () => {
+  let stateFromStores = channel(504).useStateFromStores(items1, () => {
     let mutualGuilds = null;
     if (null != user) {
-      mutualGuilds = closure_1_14.getMutualGuilds(tmp.id);
+      mutualGuilds = UserProfileStore.getMutualGuilds(tmp.id);
     }
     return mutualGuilds;
   }, items2);
   let items3 = [user, channel];
-  const tmp4 = user(12604);
+  let obj2 = channel(504);
   const effect = authorizedAppsFetchState.useEffect(() => {
     let guild_id;
     ({ id, getAvatarURL } = user);
     if (channel != null) {
       guild_id = channel.guild_id;
     }
-    user(closure_2[90])(id, getAvatarURL(guild_id, 80), { withMutualGuilds: true, dispatchWait: true });
+    maybeFetchUserProfileDefault(id, getAvatarURL(guild_id, 80), { withMutualGuilds: true, dispatchWait: true });
   }, items3);
   let bot;
   if (user != null) {
@@ -644,84 +602,68 @@ function ChatBeginningRowDM(channel) {
       bot = user.bot;
     }
     if (bot) {
-      bot = authorizedAppsFetchState === closure_1_13.NOT_FETCHED;
+      bot = authorizedAppsFetchState === FetchState.NOT_FETCHED;
     }
     if (bot) {
-      const response = user(closure_2[77]).fetch();
-      const obj = user(closure_2[77]);
+      const response = AuthorizedAppsActionCreatorsDefault.fetch();
     }
   }, items4);
   if (null == user) {
     return null;
   } else {
-    let tmp2Result = tmp2(4404);
-    userTag = tmp2Result.getUserTag(user, { decoration: "never", identifiable: "always" });
-    tmp2Result = tmp2(4404);
-    const name = tmp2Result.getName(user);
+    userTag = tmp2(4418).getUserTag(user, { decoration: "never", identifiable: "always" });
+    const tmp2Result = tmp2(4418);
+    const name = tmp2(4418).getName(user);
     let intl6 = tmp7(1114).intl;
     let stringResult = intl6.string(tmp7(1114).t.Rzvnig);
     if (!isSystemDMResult) {
       let intl = tmp7(1114).intl;
-      obj = { username: null };
-      obj[0] = name;
-      stringResult = intl.formatToPlainString(tmp7(1114).t.Q56TRC, obj);
+      let obj3 = { username: name };
+      stringResult = intl.formatToPlainString(tmp7(1114).t.Q56TRC, obj3);
     }
     function handleCopyUserTag() {
-      channel(closure_2[92]).copy(userTag);
-      const obj = channel(closure_2[92]);
-      const result = channel(closure_2[61]).presentUsernameCopied();
+      ClipboardUtils.copy(userTag);
+      const result = ToastUtils.presentUsernameCopied();
     }
-    obj = { channel: null, user: null, showingSpamBanner: null };
-    obj[0] = channel;
-    obj[1] = user;
-    obj[2] = channel.showingSpamBanner;
-    const tmp17 = callback2(DMSpamButton, obj);
-    obj1 = { accessibilityRole: "button", onPress: null, accessibilityLabel: null, children: null };
-    obj1[1] = function handleOpenProfile() {
-      user(closure_2[91])({ userId: user.id, channelId: channel.id, sourceAnalyticsLocations: analyticsLocations });
+    let obj4 = { channel, user, showingSpamBanner: channel.showingSpamBanner };
+    const tmp17 = closure_44(DMSpamButton, obj4);
+    let obj5 = {
+      accessibilityRole: "button",
+      onPress: function handleOpenProfile() {
+          showUserProfileActionSheetDefault({ userId: user.id, channelId: channel.id, sourceAnalyticsLocations: analyticsLocations });
+        },
+      accessibilityLabel: null,
+      children: null
     };
     let intl2 = tmp7(1114).intl;
-    obj1[2] = intl2.string(tmp7(1114).t.iXAna6);
-    let obj2 = { style: null, user: null, guildId: null, size: null, avatarDecoration: null };
-    obj2[0] = tmp.avatar;
-    obj2[1] = user;
-    obj2[2] = channel.guild_id;
-    obj2[3] = tmp7(1178).AvatarSizes.XXLARGE;
-    obj2[4] = user.avatarDecoration;
-    obj1[3] = callback2(tmp7(1178).Avatar, obj2);
-    const items5 = [callback2(tmp7(5123).PressableOpacity, obj1), , , , , , ];
-    let obj3 = { accessibilityRole: "button", onPress: null, accessibilityHint: null, children: null };
-    obj3[1] = handleCopyUserTag;
+    obj5.accessibilityLabel = intl2.string(tmp7(1114).t.iXAna6);
+    let obj6 = { style: tmp.avatar, user, guildId: channel.guild_id, size: tmp7(1178).AvatarSizes.XXLARGE, avatarDecoration: user.avatarDecoration };
+    obj5.children = closure_44(tmp7(1178).Avatar, obj6);
+    const items5 = [closure_44(tmp7(5137).PressableOpacity, obj5), , , , , , ];
+    let obj7 = { accessibilityRole: "button", onPress: handleCopyUserTag, accessibilityHint: null, children: null };
     let intl3 = tmp7(1114).intl;
-    obj3[2] = intl3.string(tmp7(1114).t.y5MwJy);
-    let obj4 = { variant: "heading-xxl/extrabold", color: "mobile-text-heading-primary", children: null };
-    obj4[2] = name;
-    obj3[3] = callback2(tmp7(4556).Text, obj4);
-    items5[1] = callback2(tmp7(5123).PressableOpacity, obj3);
+    obj7.accessibilityHint = intl3.string(tmp7(1114).t.y5MwJy);
+    let obj8 = { variant: "heading-xxl/extrabold", color: "mobile-text-heading-primary", children: name };
+    obj7.children = closure_44(tmp7(4570).Text, obj8);
+    items5[1] = closure_44(tmp7(5137).PressableOpacity, obj7);
     let tmp15Result = null;
     if (!user.isProvisional) {
-      let obj5 = { accessibilityRole: "button", onPress: null, accessibilityHint: null, children: null };
-      obj5[1] = handleCopyUserTag;
+      let obj9 = { accessibilityRole: "button", onPress: handleCopyUserTag, accessibilityHint: null, children: null };
       let intl4 = tmp7(1114).intl;
-      obj5[2] = intl4.string(tmp7(1114).t.y5MwJy);
-      let obj6 = { variant: "heading-lg/medium", color: "text-default", children: null };
-      obj6[2] = userTag;
-      obj5[3] = tmp15(tmp7(4556).Text, obj6);
-      tmp15Result = tmp15(tmp7(5123).PressableOpacity, obj5);
+      obj9.accessibilityHint = intl4.string(tmp7(1114).t.y5MwJy);
+      const obj10 = { variant: "heading-lg/medium", color: "text-default", children: userTag };
+      obj9.children = tmp15(tmp7(4570).Text, obj10);
+      tmp15Result = tmp15(tmp7(5137).PressableOpacity, obj9);
     }
     items5[2] = tmp15Result;
-    let obj7 = { style: null, variant: "text-md/medium", color: "text-default", children: null };
-    obj7[0] = tmp.dmBeginningMessage;
-    obj7[3] = stringResult;
-    items5[3] = callback2(tmp7(4556).Text, obj7);
-    tmp15Result = null;
+    let obj11 = { style: tmp.dmBeginningMessage, variant: "text-md/medium", color: "text-default", children: stringResult };
+    items5[3] = closure_44(tmp7(4570).Text, obj11);
+    let tmp15Result2 = null;
     if (user.isProvisional) {
-      let obj8 = { style: null, userId: null, iconSize: 14 };
-      obj8[0] = tmp.provisionalAccountExplainer;
-      obj8[1] = user.id;
-      tmp15Result = tmp15(tmp7(12631).ChatProvisionalAccountExplainerCard, obj8);
+      let obj12 = { style: tmp.provisionalAccountExplainer, userId: user.id, iconSize: 14 };
+      tmp15Result2 = tmp15(tmp7(12657).ChatProvisionalAccountExplainerCard, obj12);
     }
-    items5[4] = tmp15Result;
+    items5[4] = tmp15Result2;
     let tmp18Result;
     if (null != stateFromStores) {
       if (stateFromStores.length >= 1) {
@@ -731,137 +673,115 @@ function ChatBeginningRowDM(channel) {
         }
         function handleOpenMutualGuilds() {
           if (null != user) {
-            let obj = user(closure_2[85]);
-            obj = { user: null, onPressMutualGuild: null };
-            obj[0] = tmp;
-            obj[1] = function onPressMutualGuild(arg0) {
-              const result = callback(8191).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
-              const obj = callback(8191);
-              callback(7342).transitionToGuild(arg0);
-              const obj2 = callback(7342);
-              callback2(4527).hideActionSheet();
-              const obj3 = callback2(4527);
-              callback2(4763).popWithKey(closure_42);
+            let obj2 = {
+              user: tmp,
+              onPressMutualGuild(arg0) {
+                  const result = channel(8217).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
+                  const obj = channel(8217);
+                  channel(7356).transitionToGuild(arg0);
+                  const obj2 = channel(7356);
+                  user(4541).hideActionSheet();
+                  const obj3 = user(4541);
+                  user(4777).popWithKey(closure_1_42);
+                }
             };
-            obj.openLazy(channel(closure_2[87])(closure_2[93], closure_2.paths), "MutualGuildsActionSheet", obj);
+            ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12631, dependencyMap.paths), "MutualGuildsActionSheet", obj2);
           }
         }
         const substr = stateFromStores.slice(0, num2);
-        let obj9 = { accessibilityRole: "button", onPress: null, style: null, children: null };
-        obj9[1] = handleOpenMutualGuilds;
-        obj9[2] = tmp.mutualGuildsContainer;
-        let obj10 = { size: null, names: null, totalCount: null, children: null };
-        obj10[0] = tmp7(5584).GuildIconSizes.SMALL;
-        obj10[1] = substr.map((guild) => guild.guild.name);
-        obj10[2] = stateFromStores.length;
-        obj10[3] = substr.map((guild) => {
-          guild = guild.guild;
-          const obj = { guild, size: channel(closure_2[98]).GuildIconSizes.SMALL };
-          return callback(user(closure_2[98]), obj, guild.id);
-        });
-        const items6 = [tmp15(tmp7(12622).GuildIconPile, obj10), ];
-        let obj11 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
-        obj11[0] = tmp.mutualGuildsLabel;
+        let obj13 = { accessibilityRole: "button", onPress: handleOpenMutualGuilds, style: tmp.mutualGuildsContainer, children: null };
+        let obj14 = {
+          size: tmp7(5598).GuildIconSizes.SMALL,
+          names: substr.map((guild) => guild.guild.name),
+          totalCount: stateFromStores.length,
+          children: substr.map((guild) => {
+                  guild = guild.guild;
+                  const obj = { guild, size: channel(dependencyMap[98]).GuildIconSizes.SMALL };
+                  return closure_1_44(user(dependencyMap[98]), obj, guild.id);
+                })
+        };
+        const items6 = [tmp15(tmp7(12648).GuildIconPile, obj14), ];
+        let obj15 = { style: tmp.mutualGuildsLabel, variant: "text-sm/medium", color: "text-default", children: null };
         let intl5 = tmp7(1114).intl;
-        const obj12 = { count: null };
-        obj12[0] = stateFromStores.length;
-        obj11[3] = intl5.format(tmp7(1114).t.eE3oep, obj12);
-        items6[1] = tmp15(tmp7(4556).Text, obj11);
-        obj9[3] = items6;
-        tmp18Result = tmp18(tmp7(5123).PressableOpacity, obj9);
+        const obj16 = { count: stateFromStores.length };
+        obj15.children = intl5.format(tmp7(1114).t.eE3oep, obj16);
+        items6[1] = tmp15(tmp7(4570).Text, obj15);
+        obj13.children = items6;
+        tmp18Result = tmp18(tmp7(5137).PressableOpacity, obj13);
       }
     }
     items5[5] = tmp18Result;
-    const obj13 = { style: null, children: null };
-    obj13[0] = tmp.dmButtonRow;
+    const obj17 = { style: tmp.dmButtonRow, children: null };
     if (user.isNonUserBot()) {
-      const obj14 = { children: null };
-      obj13[1] = null;
-      items5[6] = tmp15(tmp23, obj13);
-      obj14[0] = items5;
-      return tmp18(tmp19, obj14);
+      const obj18 = { children: null };
+      obj17.children = null;
+      items5[6] = tmp15(tmp23, obj17);
+      obj18.children = items5;
+      return tmp18(tmp19, obj18);
     } else if (user.bot) {
-      tmp18Result = null;
+      let tmp18Result3 = null;
       if (null != authorizedAppToken) {
-        tmp18Result = null;
+        tmp18Result3 = null;
         if (null != tmp4Result) {
-          const obj15 = { children: null };
-          const obj16 = { channel: null, user: null };
-          obj16[0] = channel;
-          obj16[1] = user;
-          const items7 = [tmp15(MuteAppButton, obj16), ];
-          const obj17 = { user: null, application: null, channel: null, oauth2Token: null };
-          obj17[0] = user;
-          obj17[1] = tmp4Result;
-          obj17[2] = channel;
-          obj17[3] = authorizedAppToken;
-          items7[1] = tmp15(ManageAppButton, obj17);
-          obj15[0] = items7;
-          tmp18Result = tmp18(tmp19, obj15);
+          const obj19 = { children: null };
+          const obj20 = { channel, user };
+          const items7 = [tmp15(MuteAppButton, obj20), ];
+          const obj21 = { user, application: tmp4Result, channel, oauth2Token: authorizedAppToken };
+          items7[1] = tmp15(ManageAppButton, obj21);
+          obj19.children = items7;
+          tmp18Result3 = tmp18(tmp19, obj19);
         }
       }
-      const obj18 = { children: null };
-      const items8 = [tmp18Result, tmp17];
-      obj18[0] = items8;
-      let tmp18Result1 = tmp18(tmp19, obj18);
+      const obj22 = { children: null };
+      const items8 = [tmp18Result3, tmp17];
+      obj22.children = items8;
+      let tmp18Result4 = tmp18(tmp19, obj22);
     } else {
-      const obj19 = { reportButton: null };
-      obj19[0] = tmp17;
-      tmp18Result1 = tmp15(function RelationshipButtons(reportButton) {
+      const obj23 = { reportButton: tmp17 };
+      tmp18Result4 = tmp15(function RelationshipButtons(reportButton) {
         reportButton = reportButton.reportButton;
         function handleBlock() {
-          let obj = closure_1_1(closure_1_2[85]);
-          obj = { userId: user.id, channelId: id.id };
-          obj.openLazy(closure_1_0(closure_1_2[87])(closure_1_2[102], closure_1_2.paths), closure_1_43, obj);
+          user(paths[85]).openLazy(channel(paths[87])(paths[102], paths.paths), closure_2_43, { userId: user.id, channelId: id.id });
         }
-        let obj = channel(closure_2[46]);
-        const items = [closure_1_22];
-        const stateFromStores = obj.useStateFromStores(items, () => closure_1_22.getRelationshipType(user.id));
-        obj = { text: null, size: "sm", variant: "secondary", onPress: null };
-        const Button = channel(closure_2[73]).Button;
-        const intl = channel(closure_2[30]).intl;
-        obj[0] = intl.string(channel(closure_2[30]).t.l4Emac);
-        obj[3] = handleBlock;
-        if (stateFromStores === closure_1_35.PENDING_INCOMING) {
-          obj = { style: null, children: null };
-          obj[0] = closure_2.pendingIncoming;
-          obj1 = { variant: "text-sm/normal", color: "text-default", children: null };
-          const intl5 = tmp(tmp2[30]).intl;
-          const obj2 = { username: null };
-          let obj9 = user(tmp2[47]);
-          obj2[0] = obj9.getName(user);
-          obj1[2] = intl5.format(tmp(tmp2[30]).t.uIomXw, obj2);
-          const items1 = [tmp4(tmp(tmp2[37]).Text, obj1), ];
-          const obj3 = { style: null, children: null };
-          obj3[0] = closure_2.pendingIncomingButtons;
-          const obj4 = { text: null, size: "sm", variant: "active", onPress: null };
-          const intl6 = tmp(tmp2[30]).intl;
-          obj4[0] = intl6.string(tmp(tmp2[30]).t["+WbSn5"]);
-          obj4[3] = function handleAcceptFriend() {
-            let obj = closure_1_1(closure_1_2[100]);
-            obj = { userId: user.id, location: closure_1_26.DM_CHANNEL };
-            const result = obj.maybeConfirmFriendRequestAccept(obj);
+        const items = [RelationshipStore];
+        const stateFromStores = initialize.useStateFromStores(items, () => relationshipType.getRelationshipType(user.id));
+        let obj2 = { text: null, size: "sm", variant: "secondary", onPress: null };
+        const Button = components_Button_Button.Button;
+        const intl = util.intl;
+        obj2.text = intl.string(util.t.l4Emac);
+        obj2.onPress = handleBlock;
+        if (stateFromStores === constants8.PENDING_INCOMING) {
+          const obj3 = { style: paths.pendingIncoming, children: null };
+          const obj4 = { variant: "text-sm/normal", color: "text-default", children: null };
+          const intl5 = tmp(1114).intl;
+          const obj5 = { username: UserUtilsDefault.getName(user) };
+          obj4.children = intl5.format(tmp(1114).t.uIomXw, obj5);
+          const items1 = [tmp4(tmp(4570).Text, obj4), ];
+          const obj6 = { style: paths.pendingIncomingButtons, children: null };
+          const obj7 = { text: null, size: "sm", variant: "active", onPress: null };
+          const intl6 = tmp(1114).intl;
+          obj7.text = intl6.string(tmp(1114).t["+WbSn5"]);
+          obj7.onPress = function handleAcceptFriend() {
+            const result = user(paths[100]).maybeConfirmFriendRequestAccept({ userId: user.id, location: constants.DM_CHANNEL });
           };
-          const items2 = [tmp4(tmp(tmp2[73]).Button, obj4), , , ];
-          const obj5 = { text: null, size: "sm", variant: "secondary", onPress: null };
-          const intl7 = tmp(tmp2[30]).intl;
-          obj5[0] = intl7.string(tmp(tmp2[30]).t.rQSndv);
-          obj5[3] = function handleIgnoreFriendRequest() {
-            let obj = closure_1_1(closure_1_2[99]);
-            obj = { location: closure_1_26.DM_CHANNEL };
-            obj.cancelFriendRequest(user.id, obj);
+          const items2 = [tmp4(tmp(4989).Button, obj7), , , ];
+          const obj8 = { text: null, size: "sm", variant: "secondary", onPress: null };
+          const intl7 = tmp(1114).intl;
+          obj8.text = intl7.string(tmp(1114).t.rQSndv);
+          obj8.onPress = function handleIgnoreFriendRequest() {
+            user(paths[99]).cancelFriendRequest(user.id, { location: constants.DM_CHANNEL });
           };
-          items2[1] = tmp4(tmp(tmp2[73]).Button, obj5);
-          const obj6 = { text: null, size: "sm", variant: "secondary", onPress: null };
-          const intl8 = tmp(tmp2[30]).intl;
-          obj6[0] = intl8.string(tmp(tmp2[30]).t.l4Emac);
-          obj6[3] = handleBlock;
-          items2[2] = tmp4(tmp(tmp2[73]).Button, obj6);
+          items2[1] = tmp4(tmp(4989).Button, obj8);
+          const obj9 = { text: null, size: "sm", variant: "secondary", onPress: null };
+          const intl8 = tmp(1114).intl;
+          obj9.text = intl8.string(tmp(1114).t.l4Emac);
+          obj9.onPress = handleBlock;
+          items2[2] = tmp4(tmp(4989).Button, obj9);
           items2[3] = reportButton;
-          obj3[1] = items2;
-          items1[1] = closure_1_46(closure_1_7, obj3);
-          obj[1] = items1;
-          return closure_1_46(closure_1_7, obj);
+          obj6.children = items2;
+          items1[1] = closure_2_46(React5, obj6);
+          obj3.children = items1;
+          return closure_2_46(React5, obj3);
         } else {
           if (tmp6.NONE === stateFromStores) {
             let bot;
@@ -871,108 +791,98 @@ function ChatBeginningRowDM(channel) {
             let tmp4Result = null;
             if (!bot) {
               function handleAddFriend() {
-                let obj = closure_1_1(closure_1_2[99]);
-                obj = { userId: user.id, context: obj };
-                obj = { location: closure_1_26.DM_CHANNEL };
-                obj.addRelationship(obj);
+                const obj2 = { userId: user.id, context: { location: constants.DM_CHANNEL } };
+                user(paths[99]).addRelationship(obj2);
               }
-              const obj7 = { text: null, size: "sm", variant: "active", onPress: null };
-              const intl4 = tmp(tmp2[30]).intl;
-              obj7[0] = intl4.string(tmp(tmp2[30]).t["PMsq/b"]);
-              obj7[3] = handleAddFriend;
-              tmp4Result = tmp4(tmp(tmp2[73]).Button, obj7);
+              const obj11 = { text: null, size: "sm", variant: "active", onPress: null };
+              const intl4 = tmp(1114).intl;
+              obj11.text = intl4.string(tmp(1114).t["PMsq/b"]);
+              obj11.onPress = handleAddFriend;
+              tmp4Result = tmp4(tmp(4989).Button, obj11);
             }
+            let tmp4Result2 = tmp4Result;
           } else if (tmp6.FRIEND === stateFromStores) {
             function handleRemoveFriend() {
-              let obj = closure_1_0(closure_1_2[101]);
-              obj = {
-                userDisplayName: closure_1_1(closure_1_2[47]).getName(closure_1),
-                onConfirm() {
-                  let obj = closure_1_1(closure_1_2[99]);
-                  obj = { location: closure_1_26.DM_CHANNEL };
-                  obj.removeFriend(id.id, obj);
-                }
+              const obj2 = { userDisplayName: null, onConfirm: null };
+              const obj = channel(paths[101]);
+              obj2.userDisplayName = user(paths[47]).getName(closure_1_1);
+              obj2.onConfirm = function onConfirm() {
+                user(paths[99]).removeFriend(id.id, { location: constants.DM_CHANNEL });
               };
-              obj.confirmRemoveFriend(obj);
+              obj.confirmRemoveFriend(obj2);
             }
-            const obj8 = { text: null, size: "sm", variant: "secondary", onPress: null };
-            const intl3 = tmp(tmp2[30]).intl;
-            obj8[0] = intl3.string(tmp(tmp2[30]).t.cvSt1J);
-            obj8[3] = handleRemoveFriend;
-            tmp4Result = tmp4(tmp(tmp2[73]).Button, obj8);
+            const obj12 = { text: null, size: "sm", variant: "secondary", onPress: null };
+            const intl3 = tmp(1114).intl;
+            obj12.text = intl3.string(tmp(1114).t.cvSt1J);
+            obj12.onPress = handleRemoveFriend;
+            tmp4Result2 = tmp4(tmp(4989).Button, obj12);
           } else if (tmp6.BLOCKED === stateFromStores) {
             function handleUnblock() {
-              let obj = closure_1_1(closure_1_2[99]);
-              obj = { location: closure_1_26.DM_CHANNEL };
-              obj.unblockUser(user.id, obj);
+              user(paths[99]).unblockUser(user.id, { location: constants.DM_CHANNEL });
             }
-            obj9 = { text: null, size: "sm", variant: "secondary", onPress: null };
-            const intl2 = tmp(tmp2[30]).intl;
-            obj9[0] = intl2.string(tmp(tmp2[30]).t.XyHpKH);
-            obj9[3] = handleUnblock;
-            tmp4Result = tmp4(tmp(tmp2[73]).Button, obj9);
+            const obj13 = { text: null, size: "sm", variant: "secondary", onPress: null };
+            const intl2 = tmp(1114).intl;
+            obj13.text = intl2.string(tmp(1114).t.XyHpKH);
+            obj13.onPress = handleUnblock;
+            tmp4Result2 = tmp4(tmp(4989).Button, obj13);
           } else {
-            tmp4Result = null;
+            tmp4Result2 = null;
             if (tmp6.PENDING_OUTGOING === stateFromStores) {
-              const obj10 = { text: null, size: "sm", variant: "active", disabled: true, onPress: "padding" };
-              const intl9 = tmp(tmp2[30]).intl;
-              obj10[0] = intl9.string(tmp(tmp2[30]).t.xMH6vD);
-              tmp4Result = tmp4(tmp(tmp2[73]).Button, obj10);
+              const obj14 = { text: null, size: "sm", variant: "active", disabled: true, onPress: "accessible" };
+              const intl9 = tmp(1114).intl;
+              obj14.text = intl9.string(tmp(1114).t.xMH6vD);
+              tmp4Result2 = tmp4(tmp(4989).Button, obj14);
             }
           }
-          const items3 = [tmp4Result, , ];
+          const items3 = [tmp4Result2, , ];
           let tmp11 = null;
           if (stateFromStores !== tmp6.BLOCKED) {
             tmp11 = tmp5;
           }
-          const obj11 = { children: null };
+          const obj15 = { children: null };
           items3[1] = tmp11;
           items3[2] = reportButton;
-          obj11[0] = items3;
-          return closure_1_46(closure_1_45, obj11);
+          obj15.children = items3;
+          return closure_2_46(closure_2_45, obj15);
         }
-      }, obj19);
+      }, obj23);
     }
     tmp23 = closure_7;
+    const tmp2Result2 = tmp2(4418);
   }
 }
 function ChatBeginningRowButton(style) {
-  let obj = { style: style.style, children: null };
+  const obj = { style: style.style, children: closure_1_44(RowButton.RowButton, { onPress, icon: closure_1_44(RowButton.RowButton.Icon, { IconComponent, variant: iconVariant }), label: title, subLabel: subtitle, trailing }) };
   ({ title, subtitle, IconComponent, iconVariant, onPress, trailing } = style);
-  obj = { onPress, icon: callback2(RowButtonWrapper.RowButton.Icon, { IconComponent, variant: iconVariant }), label: title, subLabel: subtitle, trailing };
-  obj[1] = callback2(RowButtonWrapper.RowButton, obj);
-  return callback2(closure_7, obj);
+  return closure_1_44(React5, obj);
 }
 function ChatBeginningRowGroupDM(channel) {
   channel = channel.channel;
   let first;
-  dependencyMap = undefined;
-  let callback;
+  let onClick;
   let callback1;
-  const tmp = callback3();
-  const arr = first(4713)(channel);
-  const tmp4 = callback(React.useState(false), 2);
+  const tmp = closure_47();
+  const arr = first(4727)(channel);
+  const tmp4 = onClick(noop.useState(false), 2);
   first = tmp4[0];
   dependencyMap = tmp6;
-  let obj = channel(504);
-  const items = [closure_22];
-  const stateFromStores = obj.useStateFromStores(items, () => relationshipCount.getRelationshipCount() > 0);
+  const items = [RelationshipStore];
+  const stateFromStores = channel(504).useStateFromStores(items, () => relationshipCount.getRelationshipCount() > 0);
   const items1 = [channel];
-  callback = React.useCallback(() => {
-    first(11595)(channel.id, closure_1_27.CHANNEL_TEXT_AREA);
+  onClick = noop.useCallback(() => {
+    openGroupDMAddMembersDefault(channel.id, constants2.CHANNEL_TEXT_AREA);
   }, items1);
   const items2 = [channel, first, tmp4[1]];
-  callback1 = React.useCallback(callback1(function*() {
+  callback1 = noop.useCallback(callback1(function*(arg0, value) {
     if (c3 === 2) {
       c3 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -982,82 +892,73 @@ function ChatBeginningRowGroupDM(channel) {
         if (0 === dependencyMap) {
           if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            closure_1 = tmp2;
-            closure_0 = tmp5;
-            closure_0 = undefined;
-            if (closure_1_1) {
+            closure_128_0 = undefined;
+            if (first) {
               c3 = 3;
             } else {
               dependencyMap(true);
-              let obj2 = closure_1_1(8378);
               dependencyMap = 1;
               c3 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj2.mobileCreateInvite(closure_1_0, closure_1_33.GROUP_DM);
-              return obj1;
+              const obj5 = { value: tmp2(8406).mobileCreateInvite(channel, constants.GROUP_DM), done: false };
+              return obj5;
             }
           }
         } else if (arg0 === 1) {
           c3 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 !== 2) {
-          closure_0 = arg1;
-          if (null != closure_0) {
-            obj = closure_1_0(9825);
-            obj.handleCopy(closure_0, closure_0, closure_1_33.GROUP_DM, false);
+          closure_128_0 = value;
+          if (null != closure_128_0) {
+            const obj = tmp5(9852);
+            obj.handleCopy(closure_128_0, closure_129_0, constants.GROUP_DM, false);
           }
-          dependencyMap(false);
+          closure_129_2(false);
         }
         c3 = 3;
-        obj2 = { value: null, done: true };
-        obj2[0] = arg1;
-        return obj2;
+        const obj6 = { value, done: true };
+        return obj6;
       } catch (tmp27) {
         c3 = tmp;
         throw tmp27;
       }
     }
   }), items2);
-  const items3 = [channel.id, callback];
+  const items3 = [channel.id, onClick];
   const items4 = [callback1];
-  const callback2 = React.useCallback(() => {
-    let obj = channel(11595);
-    const groupDMAddMembersAction = obj.getGroupDMAddMembersAction(channel.id, closure_1_27.CHANNEL_TEXT_AREA);
+  const callback2 = noop.useCallback(() => {
+    const groupDMAddMembersAction = openGroupDMAddMembers.getGroupDMAddMembersAction(channel.id, constants2.CHANNEL_TEXT_AREA);
     if ("open" === groupDMAddMembersAction) {
-      let tmpResult = tmp(4380);
       if (tmpResult.UNSAFE_isDismissibleContentDismissed(tmp(1943).DismissibleContent.GDM_INVITE_REMINDER)) {
-        callback();
+        onClick();
       } else {
-        obj = { onClick: null };
-        obj[0] = callback;
-        first(11607)(obj);
+        const obj2 = { onClick };
+        showChatGDMUpsellActionSheetDefault(obj2);
       }
+      tmpResult = tmp(4394);
     } else {
-      tmpResult = tmp(11595);
-      const result = tmpResult.showGroupDMAddMembersRoadblock(groupDMAddMembersAction, closure_1_27.CHANNEL_TEXT_AREA);
+      const result = tmp(11621).showGroupDMAddMembersRoadblock(groupDMAddMembersAction, constants2.CHANNEL_TEXT_AREA);
+      const tmpResult2 = tmp(11621);
     }
   }, items3);
-  callback3 = React.useCallback(() => {
-    let obj = channel(4380);
-    if (obj.UNSAFE_isDismissibleContentDismissed(channel(1943).DismissibleContent.GDM_INVITE_REMINDER)) {
+  const callback3 = noop.useCallback(() => {
+    if (obj.UNSAFE_isDismissibleContentDismissed(dismissible_content.DismissibleContent.GDM_INVITE_REMINDER)) {
       callback1();
     } else {
-      obj = { onClick: null };
-      obj[0] = callback1;
-      first(11607)(obj);
+      const obj2 = { onClick: callback1 };
+      showChatGDMUpsellActionSheetDefault(obj2);
     }
   }, items4);
-  obj1 = first(11599);
-  obj = { location: GroupDMChatBeginning };
-  let obj3 = channel(11596);
-  const groupDMNitroAudience = obj3.useGroupDMNitroAudience();
+  let obj = channel(504);
+  let obj2 = first(11625);
+  const obj3 = { location: GroupDMChatBeginning };
+  const tmp13 = GroupDMChatBeginning;
+  const groupDMNitroAudience = channel(11622).useGroupDMNitroAudience();
   const recipients = channel.recipients;
   let num;
   if (recipients != null) {
@@ -1068,27 +969,28 @@ function ChatBeginningRowGroupDM(channel) {
   }
   const sum = num + 1;
   let enabled = stateFromStores;
+  let obj4 = channel(11622);
   if (stateFromStores) {
-    enabled = tmp7(11596).isGroupDMNitroUpsellAudience(groupDMNitroAudience);
-    const tmp7Result = tmp7(11596);
+    enabled = tmp7(11622).isGroupDMNitroUpsellAudience(groupDMNitroAudience);
+    const tmp7Result = tmp7(11622);
   }
   if (enabled) {
-    enabled = obj1.useConfig(obj).enabled;
+    enabled = obj2.useConfig(obj3).enabled;
   }
   if (enabled) {
     enabled = sum >= tmp16;
   }
-  obj = { audience: groupDMNitroAudience, location: GroupDMChatBeginning, acquisitionStrategy: null };
-  let tmp2Result = tmp2(11603);
-  obj[2] = channel(11596).GroupDMNitroAcquisitionStrategy.MARKETING;
-  const tmp13 = GroupDMChatBeginning;
-  tmp16 = first(11597)({ useNitroCapExperiment: true });
-  obj1 = { style: tmp.centerHeader, children: null };
-  let obj2 = { style: tmp.avatarRedesign, channel, size: null, accessible: false };
-  tmp2Result = tmp2(10915);
-  obj2[2] = channel(1178).AvatarSizes.XXLARGE;
-  const items5 = [callback2(tmp2Result, obj2), , , ];
-  obj3 = { style: tmp.dmTitle, variant: null, color: "mobile-text-heading-primary", children: null };
+  let obj5 = { audience: groupDMNitroAudience, location: tmp13, acquisitionStrategy: null };
+  tmp16 = first(11623)({ useNitroCapExperiment: true });
+  obj5.acquisitionStrategy = channel(11622).GroupDMNitroAcquisitionStrategy.MARKETING;
+  const tmp2Result = first(11629);
+  let obj6 = { style: tmp.centerHeader, children: null };
+  const obj7 = { style: tmp.avatarRedesign, channel, size: null, accessible: false };
+  const tmp20 = closure_7;
+  const tmp2ResultResult = first(11629)(obj5);
+  obj7.size = channel(1178).AvatarSizes.XXLARGE;
+  const items5 = [closure_44(first(10942), obj7), , , ];
+  const obj8 = { style: tmp.dmTitle, variant: null, color: "mobile-text-heading-primary", children: null };
   let str = "heading-xxl/extrabold";
   if (null != arr) {
     str = "heading-xxl/extrabold";
@@ -1096,45 +998,37 @@ function ChatBeginningRowGroupDM(channel) {
       str = "heading-lg/extrabold";
     }
   }
-  const tmp23 = channel.id === channel(7221).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
-  obj3[1] = str;
-  obj3[3] = arr;
-  items5[1] = callback2(channel(4556).Text, obj3);
-  const obj4 = { style: tmp.gdmText, variant: "text-md/medium", color: "text-default", children: null };
+  const tmp23 = channel.id === channel(7235).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+  obj8.variant = str;
+  obj8.children = arr;
+  items5[1] = closure_44(channel(4570).Text, obj8);
+  const obj9 = { style: tmp.gdmText, variant: "text-md/medium", color: "text-default", children: null };
   const intl = tmp7(1114).intl;
   if (tmp23) {
-    const obj5 = { name: null };
-    obj5[0] = arr;
-    let formatResult = intl.format(tmp7(1114).t.MFwcqO, obj5);
+    const obj10 = { name: arr };
+    let formatResult = intl.format(tmp7(1114).t.MFwcqO, obj10);
   } else {
     formatResult = intl.string(tmp7(1114).t["0Q7uk0"]);
   }
-  obj4[3] = formatResult;
-  items5[2] = callback2(channel(4556).Text, obj4);
+  obj9.children = formatResult;
+  items5[2] = closure_44(channel(4570).Text, obj9);
   let tmp19Result = null;
   if (!tmp23) {
     if (enabled) {
-      const obj6 = { style: null, onPress: null, IconComponent: null, iconVariant: "default", title: null, subtitle: null };
-      obj6[0] = tmp.gdmInviteFriends;
-      obj6[1] = tmp2ResultResult;
-      obj6[2] = tmp7(8667).NitroWheelIcon;
+      const obj11 = { style: tmp.gdmInviteFriends, onPress: tmp2ResultResult, IconComponent: tmp7(8695).NitroWheelIcon, iconVariant: "default", title: null, subtitle: null };
       const intl3 = tmp7(1114).intl;
-      obj6[4] = intl3.string(tmp7(1114).t["LR+Ptf"]);
+      obj11.title = intl3.string(tmp7(1114).t["LR+Ptf"]);
       const intl4 = tmp7(1114).intl;
-      const obj7 = { number: null };
-      obj7[0] = closure_39;
-      obj6[5] = intl4.formatToPlainString(tmp7(1114).t["8o8Zk5"], obj7);
-      let tmp21Result = tmp21(ChatBeginningRowButton, obj6);
+      const obj12 = { number };
+      obj11.subtitle = intl4.formatToPlainString(tmp7(1114).t["8o8Zk5"], obj12);
+      let tmp21Result = tmp21(ChatBeginningRowButton, obj11);
     } else {
       tmp21Result = null;
       if (stateFromStores) {
-        const obj8 = { style: null, onPress: null, IconComponent: null, iconVariant: "default", title: null };
-        obj8[0] = tmp.gdmInviteFriends;
-        obj8[1] = callback2;
-        obj8[2] = tmp7(10037).GroupPlusIcon;
+        const obj13 = { style: tmp.gdmInviteFriends, onPress: callback2, IconComponent: tmp7(10064).GroupPlusIcon, iconVariant: "default", title: null };
         const intl2 = tmp7(1114).intl;
-        obj8[4] = intl2.string(tmp7(1114).t["LR+Ptf"]);
-        tmp21Result = tmp21(ChatBeginningRowButton, obj8);
+        obj13.title = intl2.string(tmp7(1114).t["LR+Ptf"]);
+        tmp21Result = tmp21(ChatBeginningRowButton, obj13);
       }
     }
     const items6 = [tmp21Result, , ];
@@ -1143,232 +1037,229 @@ function ChatBeginningRowGroupDM(channel) {
     if (!stateFromStores) {
       prop = tmp.gdmShareInviteLinkNoRelationships;
     }
-    const obj9 = { style: null, onPress: null, IconComponent: null, title: null, subtitle: null, trailing: null };
+    const obj14 = { style: null, onPress: null, IconComponent: null, title: null, subtitle: null, trailing: null };
     items7[1] = prop;
-    obj9[0] = items7;
-    obj9[1] = callback3;
-    obj9[2] = tmp7(4503).LinkIcon;
+    obj14.style = items7;
+    obj14.onPress = callback3;
+    obj14.IconComponent = tmp7(4517).LinkIcon;
     const intl5 = tmp7(1114).intl;
-    obj9[3] = intl5.string(tmp7(1114).t["3XVNyt"]);
+    obj14.title = intl5.string(tmp7(1114).t["3XVNyt"]);
     const intl6 = tmp7(1114).intl;
-    obj9[4] = intl6.string(tmp7(1114).t.qa9CQu);
-    tmp21Result = null;
+    obj14.subtitle = intl6.string(tmp7(1114).t.qa9CQu);
+    let tmp21Result3 = null;
     if (first) {
-      tmp21Result = tmp21(closure_6, {});
+      tmp21Result3 = tmp21(closure_6, {});
     }
-    obj9[5] = tmp21Result;
-    items6[1] = tmp21(ChatBeginningRowButton, obj9);
-    let tmp21Result1 = null;
+    obj14.trailing = tmp21Result3;
+    items6[1] = tmp21(ChatBeginningRowButton, obj14);
+    let tmp21Result4 = null;
     if (channel.hasFlag(ChannelFlags.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)) {
-      const obj10 = { channelId: null };
-      obj10[0] = channel.id;
-      tmp21Result1 = tmp21(tmp2(12635), obj10);
+      const obj15 = { channelId: channel.id };
+      tmp21Result4 = tmp21(tmp2(12661), obj15);
     }
-    const obj11 = { children: null };
-    items6[2] = tmp21Result1;
-    obj11[0] = items6;
-    tmp19Result = tmp19(closure_45, obj11);
-    const tmp26 = closure_45;
-    const tmp31 = ChatBeginningRowButton;
+    const obj16 = { children: null };
+    items6[2] = tmp21Result4;
+    obj16.children = items6;
+    tmp19Result = tmp19(closure_45, obj16);
   }
   items5[3] = tmp19Result;
-  obj1[1] = items5;
-  return closure_46(closure_7, obj1);
+  obj6.children = items5;
+  return closure_46(tmp20, obj6);
 }
-({ ActivityIndicator: closure_6, View: error } = get_ActivityIndicator);
-({ AnalyticEvents: closure_25, AnalyticsPages: closure_26, AnalyticsSections: closure_27, ChannelSettingsSections: closure_28, ChannelTypes: closure_29, EMPTY_STRING_SNOWFLAKE_ID: closure_30, GuildSettingsSections: closure_31, HelpdeskArticles: closure_32, InstantInviteSources: closure_33, Permissions: closure_34, RelationshipTypes: closure_35, UPLOAD_MEDIUM_SIZE: closure_36, WELCOME_OLD_GUILD_AGE_THRESHOLD: closure_37 } = ME);
-({ AnalyticsActions: closure_40, AnalyticsSetupTypes: closure_41 } = Steps);
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
+const FetchState = fn(7121).FetchState;
+const THREAD_CHANNEL_TYPES = fn(1961).THREAD_CHANNEL_TYPES;
+const isGuildOwner = fn(1975).isGuildOwner;
+const Constants = fn(1074);
+({ AnalyticEvents: closure_25, AnalyticsPages: closure_26, AnalyticsSections: closure_27, ChannelSettingsSections: closure_28, ChannelTypes: closure_29, EMPTY_STRING_SNOWFLAKE_ID: closure_30, GuildSettingsSections: items, HelpdeskArticles: closure_32, InstantInviteSources: closure_33, Permissions: closure_34, RelationshipTypes: closure_35, UPLOAD_MEDIUM_SIZE: closure_36, WELCOME_OLD_GUILD_AGE_THRESHOLD: closure_37 } = Constants);
+const ChannelFlags = fn(1964).ChannelFlags;
+const number = fn(11624).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const GuildProgressConstants = fn(12499);
+({ AnalyticsActions: closure_40, AnalyticsSetupTypes: closure_41 } = GuildProgressConstants);
+let closure_42 = fn(12473).MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
+let closure_43 = fn(11414).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+const jsxProd = fn(21);
 ({ jsx: closure_44, Fragment: closure_45, jsxs: closure_46 } = jsxProd);
-createCacheKey = { container: { position: "absolute", width: "100%" }, contentWrapper: { paddingVertical: 8, paddingHorizontal: 12 }, title: { marginTop: 16 }, subtitle: { marginBottom: 16, lineHeight: 20 }, gdmInviteFriends: null, gdmShareInviteLink: null, gdmShareInviteLinkNoRelationships: null, ctaLabel: null, ctaContainer: null, ctaButton: null, ctaAddRoles: null, avatar: null, avatarRedesign: null, centerHeader: null, gdmText: null, dmTitle: null, dmBeginningMessage: null, provisionalAccountExplainer: null, mutualGuildsLabel: null, mutualGuildsContainer: null, iconContainer: null, threadDetails: null, threadCreatorRoleDot: null, tagContainer: null, unmutedNotificationContainer: null, unmutedNotification: null, dmButtonRow: null, pendingIncoming: null, pendingIncomingButtons: null, appDMButtonIcon: null, formCtaIcon: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.lg, marginTop: 16, width: "100%" };
-createCacheKey[4] = createCacheKey;
-createCacheKey[5] = { borderRadius: ThemesDefault.radii.lg, marginTop: 8, width: "100%" };
-createCacheKey[6] = { marginTop: 16 };
-createCacheKey[7] = { marginLeft: 8 };
-createCacheKey[8] = { flexDirection: "row", flexWrap: "wrap" };
-createCacheKey[9] = { flexDirection: "row", alignItems: "center" };
-createCacheKey[10] = { paddingRight: 24 };
-createCacheKey[11] = { marginBottom: 16 };
-createCacheKey[12] = { marginBottom: 16 };
-createCacheKey[13] = { paddingHorizontal: 8, alignItems: "center" };
-createCacheKey[14] = { textAlign: "center" };
-createCacheKey[15] = { marginBottom: 8, textAlign: "center" };
-createCacheKey[16] = { marginTop: 8 };
-createCacheKey[17] = { marginTop: 12 };
-createCacheKey[18] = { marginTop: 8, marginLeft: 8, height: 26 };
-createCacheKey[19] = { flexDirection: "row", alignItems: "center", marginTop: 6 };
-let obj1 = { borderRadius: ThemesDefault.radii.lg, marginTop: 8, width: "100%" };
-createCacheKey[20] = { width: 64, height: 64, borderRadius: ThemesDefault.radii.xxl, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, justifyContent: "center", alignItems: "center" };
-createCacheKey[21] = { lineHeight: 20 };
-createCacheKey[22] = { paddingRight: 4, paddingTop: 2 };
-createCacheKey[23] = { marginTop: 8, display: "flex", flexDirection: "row", flexWrap: "wrap", rowGap: 4 };
-let obj2 = { width: 64, height: 64, borderRadius: ThemesDefault.radii.xxl, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, justifyContent: "center", alignItems: "center" };
-createCacheKey[24] = { borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.STATUS_POSITIVE, height: 24, width: 24, padding: 4, alignContent: "center" };
-createCacheKey[25] = { width: 16, height: 16 };
-createCacheKey[26] = { marginTop: 16, flexDirection: "row", flexWrap: "wrap", alignItems: "center", gap: 8 };
-createCacheKey[27] = { flexDirection: "column", gap: 8 };
-createCacheKey[28] = { flexDirection: "row", flexWrap: "wrap", gap: 8 };
-createCacheKey[29] = { marginRight: 2 };
-createCacheKey[30] = { width: 32, height: 32 };
-let closure_47 = createCacheKey.createStyles(createCacheKey);
+const createStyles = fn(4574);
+let obj2 = { container: { position: "absolute", width: "100%" }, contentWrapper: { paddingVertical: 8, paddingHorizontal: 12 }, title: { marginTop: 16 }, subtitle: { marginBottom: 16, lineHeight: 20 }, gdmInviteFriends: { borderRadius: nativeDefault.radii.lg, marginTop: 16, width: "100%" }, gdmShareInviteLink: null, gdmShareInviteLinkNoRelationships: null, ctaLabel: null, ctaContainer: null, ctaButton: null, ctaAddRoles: null, avatar: null, avatarRedesign: null, centerHeader: null, gdmText: null, dmTitle: null, dmBeginningMessage: null, provisionalAccountExplainer: null, mutualGuildsLabel: null, mutualGuildsContainer: null, iconContainer: null, threadDetails: null, threadCreatorRoleDot: null, tagContainer: null, unmutedNotificationContainer: null, unmutedNotification: null, dmButtonRow: null, pendingIncoming: null, pendingIncomingButtons: null, appDMButtonIcon: null, formCtaIcon: null };
+let obj3 = { borderRadius: nativeDefault.radii.lg, marginTop: 16, width: "100%" };
+obj2.gdmShareInviteLink = { borderRadius: nativeDefault.radii.lg, marginTop: 8, width: "100%" };
+obj2.gdmShareInviteLinkNoRelationships = { marginTop: 16 };
+obj2.ctaLabel = { marginLeft: 8 };
+obj2.ctaContainer = { flexDirection: "row", flexWrap: "wrap" };
+obj2.ctaButton = { flexDirection: "row", alignItems: "center" };
+obj2.ctaAddRoles = { paddingRight: 24 };
+obj2.avatar = { marginBottom: 16 };
+obj2.avatarRedesign = { marginBottom: 16 };
+obj2.centerHeader = { paddingHorizontal: 8, alignItems: "center" };
+obj2.gdmText = { textAlign: "center" };
+obj2.dmTitle = { marginBottom: 8, textAlign: "center" };
+obj2.dmBeginningMessage = { marginTop: 8 };
+obj2.provisionalAccountExplainer = { marginTop: 12 };
+obj2.mutualGuildsLabel = { marginTop: 8, marginLeft: 8, height: 26 };
+obj2.mutualGuildsContainer = { flexDirection: "row", alignItems: "center", marginTop: 6 };
+let size = { width: 64, height: 64, borderRadius: nativeDefault.radii.xxl, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, justifyContent: "center", alignItems: "center" };
+obj2.iconContainer = size;
+obj2.threadDetails = { lineHeight: 20 };
+obj2.threadCreatorRoleDot = { paddingRight: 4, paddingTop: 2 };
+obj2.tagContainer = { marginTop: 8, display: "flex", flexDirection: "row", flexWrap: "wrap", rowGap: 4 };
+const size1 = { borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.STATUS_POSITIVE, height: 24, width: 24, padding: 4, alignContent: "center" };
+obj2.unmutedNotificationContainer = size1;
+obj2.unmutedNotification = { width: 16, height: 16 };
+obj2.dmButtonRow = { marginTop: 16, flexDirection: "row", flexWrap: "wrap", alignItems: "center", gap: 8 };
+obj2.pendingIncoming = { flexDirection: "column", gap: 8 };
+obj2.pendingIncomingButtons = { flexDirection: "row", flexWrap: "wrap", gap: 8 };
+obj2.appDMButtonIcon = { marginRight: 2 };
+obj2.formCtaIcon = { width: 32, height: 32 };
+let closure_47 = createStyles.createStyles(obj2);
 function ChatBeginningRowGuildDefaultChannel(guild) {
   guild = guild.guild;
   const channel = guild.channel;
-  let id;
-  let stateFromStoresObject;
-  id = guild.id;
-  let tmp = callback3();
-  let obj = guild(id[57]);
-  const completedStates = obj.useCompletedStates(guild);
+  const id = guild.id;
+  const tmp = closure_47();
+  const completedStates = guild(id[57]).useCompletedStates(guild);
   ({ guildPopulated, guildPersonalized } = completedStates);
-  obj1 = guild(id[57]);
-  const permissions = obj1.usePermissions(channel, guild);
+  let obj = guild(id[57]);
+  const permissions = guild(id[57]).usePermissions(channel, guild);
   ({ canInvite, canManageGuild } = permissions);
-  let obj2 = guild(id[46]);
-  const items = [closure_24];
-  const stateFromStores = obj2.useStateFromStores(items, () => currentUser.getCurrentUser());
+  let obj2 = guild(id[57]);
+  const items = [UserStore];
+  const stateFromStores = guild(id[46]).useStateFromStores(items, () => currentUser.getCurrentUser());
   channel(id[58])(null != stateFromStores, "ChatBeginningRowGuildDefaultChannel: currentUser cannot be undefined");
-  let obj3 = channel(id[59]);
+  let obj3 = guild(id[46]);
   const tmp9 = isGuildOwner(guild, stateFromStores);
-  const extractTimestampResult = obj3.extractTimestamp(guild.id);
-  let obj4 = guild(id[50]);
-  let result = obj4.isPrivateGuildChannel(channel);
-  let obj5 = guild(id[60]);
-  const isEligibleForGuildProgress = obj5.useIsEligibleForGuildProgress(guild);
-  let obj6 = guild(id[46]);
-  const items1 = [closure_11];
-  stateFromStoresObject = obj6.useStateFromStoresObject(items1, () => errors.getErrors());
+  let obj4 = channel(id[59]);
+  const extractTimestampResult = channel(id[59]).extractTimestamp(guild.id);
+  const tmp11 = channel(id[59]).extractTimestamp(guild.id) < Date.now() - closure_37;
+  let result = guild(id[50]).isPrivateGuildChannel(channel);
+  let obj5 = guild(id[50]);
+  const isEligibleForGuildProgress = guild(id[60]).useIsEligibleForGuildProgress(guild);
+  let obj6 = guild(id[60]);
+  const items1 = [GuildSettingsStore];
+  const stateFromStoresObject = guild(id[46]).useStateFromStoresObject(items1, () => errors.getErrors());
   const items2 = [stateFromStoresObject.message];
-  const layoutEffect = React.useLayoutEffect(() => {
+  const layoutEffect = noop.useLayoutEffect(() => {
     if (null != stateFromStoresObject.message) {
-      guild(id[61]).presentError(tmp.message);
-      const obj = guild(id[61]);
+      ToastUtils.presentError(tmp.message);
     }
   }, items2);
   if (canManageGuild) {
-    function _addServerIcon() {
-      const self = this;
-      const tmp = _addServerIcon(function*() {
-        if (c3 === 2) {
-          c3 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp4 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
+    closure_4 = async function _addServerIcon(arg0, value) {
+      if (c3 === 2) {
+        c3 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          try {
-            c3 = 2;
-            if (0 === dependencyMap) {
-              if (arg0 === 1) {
-                c3 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c3 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                closure_1 = tmp5;
-                let base64 = tmp2;
-                base64 = undefined;
-                closure_1_1(9068).init(dependencyMap);
-                const obj7 = closure_1_1(9068);
-                obj1 = { size: null };
-                obj1[0] = closure_1_36;
-                dependencyMap = 1;
-                c3 = 1;
-                const obj2 = { value: null, done: false };
-                obj2[0] = closure_1_1(5138).openImagePicker(obj1);
-                return obj2;
-              }
-            } else if (arg0 === 1) {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c3 = 2;
+          if (0 === dependencyMap) {
+            if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              const obj3 = { value: null, done: true };
-              obj3[0] = arg1;
-              return obj3;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
-              base64 = arg1.base64;
-              if (null != base64) {
-                obj = closure_1_1(9068);
-                obj.updateIcon(dependencyMap, base64);
-                obj1 = closure_1_1(9068);
-                obj1.open(dependencyMap, closure_1_31.LANDING);
-              }
-              c3 = 3;
-              return { value: "HermesInternal", done: null };
+              closure_0 = tmp2;
+              let base64;
+              tmp5(9095).init(id);
+              const obj7 = tmp5(9095);
+              const obj5 = { size };
+              dependencyMap = 1;
+              c3 = 1;
+              const obj6 = { value: tmp5(5152).openImagePicker(obj5), done: false };
+              return obj6;
             }
-          } catch (tmp18) {
-            c3 = tmp;
-            throw tmp18;
+          } else if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj9 = { value, done: true };
+            return obj9;
+          } else {
+            base64 = value.base64;
+            if (null != base64) {
+              tmp5(9095).updateIcon(closure_129_2, base64);
+              const obj = tmp5(9095);
+              tmp5(9095).open(closure_129_2, constants.LANDING);
+              const obj2 = tmp5(9095);
+            }
+            c3 = 3;
+            return { value: "HermesInternal", done: null };
           }
+        } catch (tmp18) {
+          c3 = tmp;
+          throw tmp18;
         }
-      });
-      closure_4 = tmp;
-      const apply = tmp.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
       }
-      return applyArgumentsResult;
-    }
-    obj = { onPress: null, source: null, iconStyle: null, title: null, isCompleted: null, analyticsSetupType: null, analyticsAction: null };
-    obj[0] = function addServerIcon() {
-      const self = this;
-      const apply = _addServerIcon.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
     };
-    obj = { uri: null };
-    let tmp7Result = tmp7(tmp3[64]);
-    obj[0] = tmp7(tmp3[65]);
-    obj[1] = obj;
-    obj[2] = tmp.formCtaIcon;
+    const obj8 = {
+      onPress: function addServerIcon() {
+          const self = this;
+          const apply = closure_4.apply;
+          if (typeof apply === "unknown") {
+            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+          } else {
+            applyArgumentsResult = apply(self, arguments);
+          }
+          return applyArgumentsResult;
+        },
+      source: null,
+      iconStyle: null,
+      title: null,
+      isCompleted: null,
+      analyticsSetupType: null,
+      analyticsAction: null
+    };
+    let obj9 = { uri: tmp7(tmp3[65]) };
+    obj8.source = obj9;
+    obj8.iconStyle = tmp.formCtaIcon;
     const intl = tmp2(tmp3[30]).intl;
-    obj[3] = intl.string(tmp2(tmp3[30]).t["Yhi9/N"]);
-    obj[4] = guildPersonalized;
-    obj[5] = constants5.CHANNEL_WELCOME;
-    obj[6] = constants4.PERSONALIZE_SERVER;
-    const tmp17 = callback2(tmp7Result, obj);
+    obj8.title = intl.string(tmp2(tmp3[30]).t["Yhi9/N"]);
+    obj8.isCompleted = guildPersonalized;
+    obj8.analyticsSetupType = constants10.CHANNEL_WELCOME;
+    obj8.analyticsAction = constants9.PERSONALIZE_SERVER;
+    const tmp17 = closure_44(tmp7(tmp3[64]), obj8);
+    const tmp7Result = tmp7(tmp3[64]);
   }
   if (canInvite) {
-    obj1 = { onPress: null, source: null, iconStyle: null, title: null, isCompleted: null, analyticsSetupType: null, analyticsAction: null };
-    obj1[0] = function inviteFriends() {
-      if (null != guild.vanityURLCode) {
-        const result = guild(id[66]).showVanityUrlInviteActionSheet(tmp, channel, closure_1_33.WELCOME_MESSAGE);
-        const obj3 = guild(id[66]);
-      } else {
-        let obj = guild(id[66]);
-        obj = { source: null };
-        obj[0] = closure_1_33.WELCOME_MESSAGE;
-        const result1 = obj.showInstantInviteActionSheet(channel, obj);
-      }
+    const obj10 = {
+      onPress: function inviteFriends() {
+          if (null != guild.vanityURLCode) {
+            const result = instant_invite_InstantInviteUtils.showVanityUrlInviteActionSheet(tmp, channel, constants6.WELCOME_MESSAGE);
+          } else {
+            const obj2 = { source: constants6.WELCOME_MESSAGE };
+            const result1 = instant_invite_InstantInviteUtils.showInstantInviteActionSheet(channel, obj2);
+          }
+        },
+      source: null,
+      iconStyle: null,
+      title: null,
+      isCompleted: null,
+      analyticsSetupType: null,
+      analyticsAction: null
     };
-    obj2 = { uri: null };
-    tmp7Result = tmp7(tmp3[64]);
-    obj2[0] = tmp7(tmp3[67]);
-    obj1[1] = obj2;
-    obj1[2] = tmp.formCtaIcon;
+    const obj11 = { uri: tmp7(tmp3[67]) };
+    obj10.source = obj11;
+    obj10.iconStyle = tmp.formCtaIcon;
     const intl2 = tmp2(tmp3[30]).intl;
-    obj1[3] = intl2.string(tmp2(tmp3[30]).t.q9n0Ta);
-    obj1[4] = guildPopulated;
-    obj1[5] = constants5.CHANNEL_WELCOME;
-    obj1[6] = constants4.INVITE;
-    const tmp22 = callback2(tmp7Result, obj1);
+    obj10.title = intl2.string(tmp2(tmp3[30]).t.q9n0Ta);
+    obj10.isCompleted = guildPopulated;
+    obj10.analyticsSetupType = constants10.CHANNEL_WELCOME;
+    obj10.analyticsAction = constants9.INVITE;
+    const tmp22 = closure_44(tmp7(tmp3[64]), obj10);
+    const tmp7Result3 = tmp7(tmp3[64]);
   }
   const intl3 = tmp2(tmp3[30]).intl;
   const string = intl3.string;
@@ -1385,69 +1276,66 @@ function ChatBeginningRowGuildDefaultChannel(guild) {
     tmp28 = null != tmp22 || null != tmp17;
     const tmp29 = null != tmp22 || null != tmp17;
   }
-  tmp11 = obj3.extractTimestamp(guild.id) < Date.now() - closure_37;
-  const tmp15 = React;
-  const combined = "" + channel(id[68]).getArticleURL(constants2.GUILD_GETTING_STARTED) + "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm";
+  let obj7 = guild(id[46]);
+  const tmp15 = noop;
+  const combined = "" + channel(id[68]).getArticleURL(constants5.GUILD_GETTING_STARTED) + "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm";
   const items3 = [stringResult, ];
   let tmp31Result = null;
   if (tmp28) {
-    obj3 = { children: null };
+    const obj12 = { children: null };
     const intl4 = tmp2(tmp3[30]).intl;
-    obj4 = { guideURL: null };
-    obj4[0] = combined;
-    const items4 = [" ", intl4.format(tmp2(tmp3[30]).t.UOtD32, obj4)];
-    obj3[0] = items4;
-    tmp31Result = tmp31(tmp32, obj3);
+    const obj13 = { guideURL: combined };
+    const items4 = [" ", intl4.format(tmp2(tmp3[30]).t.UOtD32, obj13)];
+    obj12.children = items4;
+    tmp31Result = tmp31(tmp32, obj12);
   }
   items3[1] = tmp31Result;
-  obj5 = { title: null, subtitle: null, isPrivate: null, subtitleLink: null };
-  tmp31Result = tmp31(tmp32, { children: items3 });
+  const obj14 = { title: null, subtitle: null, isPrivate: null, subtitleLink: null };
+  const tmp7Result4 = channel(id[68]);
   const intl5 = tmp2(tmp3[30]).intl;
-  obj6 = { guildName: guild.name };
-  obj5[0] = intl5.formatToPlainString(guild(id[30]).t["j59F/c"], obj6);
-  obj5[1] = tmp31Result;
-  obj5[2] = result;
+  obj14.title = intl5.formatToPlainString(guild(id[30]).t["j59F/c"], { guildName: guild.name });
+  obj14.subtitle = closure_46(closure_45, { children: items3 });
+  obj14.isPrivate = result;
   let tmp37;
   if (tmp28) {
     tmp37 = combined;
   }
-  obj5[3] = tmp37;
-  const children = [callback2(ChatBeginningRowHeader, obj5), ];
+  obj14.subtitleLink = tmp37;
+  const children = [closure_44(ChatBeginningRowHeader, obj14), ];
   if (isEligibleForGuildProgress) {
-    let obj7 = { guild: null };
-    obj7[0] = guild;
-    let tmp31Result1 = tmp35(tmp7(tmp3[69]), obj7);
+    const obj16 = { guild };
+    let tmp31Result3 = tmp35(tmp7(tmp3[69]), obj16);
   } else {
-    const obj8 = { children: null };
+    const obj17 = { children: null };
     const items6 = [tmp22, tmp17];
-    obj8[0] = items6;
-    tmp31Result1 = tmp31(tmp32, obj8);
+    obj17.children = items6;
+    tmp31Result3 = tmp31(tmp32, obj17);
   }
-  children[1] = tmp31Result1;
+  children[1] = tmp31Result3;
   return closure_46(tmp15.Fragment, { children });
 }
 const GroupDMChatBeginning = "GroupDMChatBeginning";
-let obj3 = { borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.STATUS_POSITIVE, height: 24, width: 24, padding: 4, alignContent: "center" };
-let result = require("set").fileFinishedImporting("components_native/chat/ChatBeginningRow.tsx");
+size = fn(2);
+let result = size.fileFinishedImporting("components_native/chat/ChatBeginningRow.tsx");
 
 export default function ChatBeginningRow(channelId) {
   channelId = channelId.channelId;
   ({ guildId: importDefault, shouldRender } = channelId);
   dependencyMap = undefined;
-  let tmp = callback3();
-  let obj = channelId(504);
-  const items = [closure_17];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_17.getChannel(channelId));
-  let obj2 = channelId(504);
-  const items1 = [closure_20];
-  const stateFromStores1 = obj2.useStateFromStores(items1, () => closure_1_20.getGuild(closure_1));
-  let obj3 = React;
-  [tmp5, c2] = callback(React.useState(undefined), 2);
+  let tmp = closure_47();
+  const items = [ChannelStore];
+  const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  const obj = channelId(504);
+  const items1 = [GuildStore];
+  const stateFromStores1 = channelId(504).useStateFromStores(items1, () => GuildStore.getGuild(importDefault));
+  const obj3 = channelId(504);
+  const obj4 = noop;
+  [tmp5, c2] = noop.useState(undefined);
   if (shouldRender) {
     shouldRender = null != stateFromStores;
   }
   if (!shouldRender) {
-    callback = obj3.useCallback((nativeEvent) => {
+    const callback = obj4.useCallback((nativeEvent) => {
       const height = nativeEvent.nativeEvent.layout.height;
       _undefined((arg0) => {
         let tmp = arg0;
@@ -1464,41 +1352,28 @@ export default function ChatBeginningRow(channelId) {
     if (null != null) {
       num = tmp5;
     }
-    obj = { style: null, children: null };
-    obj = { height: null };
-    obj[0] = num;
-    items2[1] = obj;
-    obj[0] = items2;
+    const obj2 = { style: null, children: null };
+    const obj5 = { height: num };
+    items2[1] = obj5;
+    obj2.style = items2;
     let tmp19Result = null != null;
     if (tmp19Result) {
-      obj1 = { style: null, onLayout: null, children: null };
-      obj1[0] = tmp.contentWrapper;
-      obj1[1] = callback;
-      obj1[2] = null;
-      tmp19Result = tmp19(closure_7, obj1, channelId);
+      const obj6 = { style: tmp.contentWrapper, onLayout: callback, children: null };
+      tmp19Result = tmp19(closure_7, obj6, channelId);
     }
-    obj[1] = tmp19Result;
-    return callback2(PortalAccessibilityWorkaroundViewDefault, obj);
+    obj2.children = tmp19Result;
+    return closure_44(PortalAccessibilityWorkaroundViewDefault, obj2);
   } else if (THREAD_CHANNEL_TYPES.has(stateFromStores.type)) {
-    obj2 = { channel: null };
-    obj2[0] = stateFromStores;
-    let tmp8 = callback2(ChatBeginningRowThread, obj2);
+    const obj7 = { channel: stateFromStores };
+    let tmp8 = closure_44(ChatBeginningRowThread, obj7);
   } else if (stateFromStores.isDM()) {
-    obj3 = { channel: null, showingSpamBanner: null };
-    obj3[0] = stateFromStores;
-    obj3[1] = channelId.showingSpamBanner;
-    tmp8 = callback2(ChatBeginningRowDMGuard, obj3);
+    const obj8 = { channel: stateFromStores, showingSpamBanner: channelId.showingSpamBanner };
+    tmp8 = closure_44(ChatBeginningRowDMGuard, obj8);
   } else if (stateFromStores.isGroupDM()) {
-    const obj4 = { channel: null };
-    obj4[0] = stateFromStores;
-    tmp8 = callback2(ChatBeginningRowGroupDM, obj4);
-  } else {
-    tmp8 = null;
-    if (null != stateFromStores1) {
-      const obj5 = { guild: null, channel: null };
-      obj5[0] = stateFromStores1;
-      obj5[1] = stateFromStores;
-      tmp8 = callback2(ChatBeginningRowGuild, obj5);
-    }
+    const obj9 = { channel: stateFromStores };
+    tmp8 = closure_44(ChatBeginningRowGroupDM, obj9);
+  } else if (null != stateFromStores1) {
+    const obj10 = { guild: stateFromStores1, channel: stateFromStores };
+    tmp8 = closure_44(ChatBeginningRowGuild, obj10);
   }
 };

@@ -1,25 +1,26 @@
-// Module ID: 17943
-// Function ID: 17944
-// Name: promise
-// Dependencies: [17, 17935, 8378, 7759, 2]
+// Module ID: 17976
+// Function ID: 17977
+// Name: GenerateInvite
+// Dependencies: [17, 17968, 8406, 7773, 2]
 
-// Module 17943 (promise)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 17976 (GenerateInvite)
+import _mod17 from "module_17" /* 17 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8406 */;
+import size from "module_2" /* 2 */;
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-const result = set.fileFinishedImporting("modules/headless_tasks/android/GenerateInvite.tsx");
+const NativeModules = _mod17.NativeModules;
+const result = size.fileFinishedImporting("modules/headless_tasks/android/GenerateInvite.tsx");
 
 export default (channelId) => {
   channelId = channelId.channelId;
   return new Promise((arg0) => {
     closure_0 = arg0;
-    channelId(closure_1_1[1]).awaitStorage(() => {
-      const invite = channelId(closure_2_1[2]).createInvite(closure_0, {}, "Mobile Voice Overlay");
+    channelId(17968).awaitStorage(() => {
+      const invite = InstantInviteActionCreatorsDefault.createInvite(channelId, {}, "Mobile Voice Overlay");
       invite.then((code) => {
-        const RNCClipboard = closure_2_2.RNCClipboard;
-        RNCClipboard.setString(callback(closure_2_1[3])(code.code));
-        callback(true);
+        RNCClipboard = RNCClipboard.RNCClipboard;
+        RNCClipboard.setString(channelId(7773)(code.code));
+        closure_1_0(true);
       });
     });
   });

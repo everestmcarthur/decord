@@ -1,16 +1,16 @@
-// Module ID: 5122
-// Function ID: 5123
-// Name: INVISIBLE_CHAR_REGEX
+// Module ID: 5136
+// Function ID: 5137
+// Name: MarkupInvisibleUnicode
 // Dependencies: [2]
 // Exports: stripLeadingInvisibleUnicode
 
-// Module 5122 (INVISIBLE_CHAR_REGEX)
-import set from "set" /* 2 */;
+// Module 5136 (MarkupInvisibleUnicode)
+import size from "module_2" /* 2 */;
 
 const re0 = /^[\u200B-\u200D\uFEFF\u180E\u061C]+/;
-const result = set.fileFinishedImporting("modules/markup/MarkupInvisibleUnicode.tsx");
+const result = size.fileFinishedImporting("modules/markup/MarkupInvisibleUnicode.tsx");
 
 export const INVISIBLE_CHAR_REGEX = /^[\u200B-\u200D\uFEFF\u180E\u061C]/;
-export const stripLeadingInvisibleUnicode = function stripLeadingInvisibleUnicode(str) {
-  return str.replace(closure_0, "");
+export const stripLeadingInvisibleUnicode = function stripLeadingInvisibleUnicode(value) {
+  return value.replace(re0, "");
 };

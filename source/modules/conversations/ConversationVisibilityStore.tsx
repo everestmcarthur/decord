@@ -1,13 +1,13 @@
-// Module ID: 7597
-// Function ID: 7598
-// Name: initialize
+// Module ID: 7611
+// Function ID: 7612
+// Name: ConversationVisibilityStore
 // Dependencies: [504, 573, 2]
 
-// Module 7597 (initialize)
+// Module 7611 (ConversationVisibilityStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
-let c0 = true;
+const highlightingEnabled = true;
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class ConversationVisibilityStore extends DeviceSettingsStore {
 }
@@ -20,23 +20,25 @@ prototype["initialize"] = function initialize(highlightingEnabled) {
   if (flag == null) {
     flag = true;
   }
+  closure_0 = flag;
 };
 prototype["isHighlightingEnabled"] = function isHighlightingEnabled() {
-  return c0;
+  return closure_0;
 };
 prototype["getState"] = function getState() {
-  return { highlightingEnabled: c0 };
+  return { highlightingEnabled };
 };
 prototype["getUserAgnosticState"] = function getUserAgnosticState() {
-  return { highlightingEnabled: c0 };
+  return { highlightingEnabled };
 };
 ConversationVisibilityStore.displayName = "ConversationVisibilityStore";
 ConversationVisibilityStore.persistKey = "ConversationVisibilityStore";
-const conversationVisibilityStore = new ConversationVisibilityStore(dispatcherDefault, {
+const conversationVisibilityStore = new ConversationVisibilityStore(DispatcherDefault, {
   CONVERSATIONS_TOGGLE_HIGHLIGHTING: function handleToggleHighlighting() {
     closure_0 = !closure_0;
   }
 });
-const result = require("set").fileFinishedImporting("modules/conversations/ConversationVisibilityStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/conversations/ConversationVisibilityStore.tsx");
 
 export default conversationVisibilityStore;

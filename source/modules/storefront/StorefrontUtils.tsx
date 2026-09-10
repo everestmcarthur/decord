@@ -1,21 +1,24 @@
-// Module ID: 7231
-// Function ID: 7232
-// Name: useSKUPrice
-// Dependencies: [19, 2025, 1371, 7232, 1074, 1373, 12, 7233, 1116, 1384, 504, 7226, 7234, 4218, 7241, 2]
+// Module ID: 7245
+// Function ID: 7246
+// Name: StorefrontUtils
+// Dependencies: [19, 2025, 1371, 7246, 1074, 1373, 12, 7247, 1116, 1384, 504, 7240, 7248, 4231, 7255, 2]
 // Exports: isSlayerSkuAvailableOnThisPlatform, transformPriceSetAssignmentToStorefrontPurchaseType, transformStorefrontPricesServer, useFormatSKUPrice, useFormattedSKUPrice, useSKUOrbPrice
 
-// Module 7231 (useSKUPrice)
-import applyDefault from "apply" /* 12 */;
-import StorefrontPromotionRewardType from "StorefrontPromotionRewardType" /* 7233 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 7234 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "_getSystemLocale" /* 2025 */;
-import closure_5 from "mergeGuildAvatar" /* 1371 */;
-import closure_6 from "resetStoreState" /* 7232 */;
-import ME from "ME" /* 1074 */;
-import { PremiumTypes } from "GuildFeatures" /* 1373 */;
+// Module 7245 (StorefrontUtils)
+import _modDef12 from "module_12" /* 12 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4231 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7240 */;
+import StorefrontTypes from "StorefrontTypes" /* 7247 */;
+import PriceUtils from "PriceUtils" /* 7248 */;
+import OrbCheckoutUtils from "OrbCheckoutUtils" /* 7255 */;
+import noop from "module_19" /* 19 */;
+import LocaleStore from "LocaleStore" /* 2025 */;
+import UserStore from "UserStore" /* 1371 */;
+import SKUPricesStore from "SKUPricesStore" /* 7246 */;
 
-require = arg1;
+const require = globalThis.__r;
+
+require = fn;
 function useSKUPrice(sku) {
   sku = sku.sku;
   let DEFAULT = sku.priceSetAssignmentPurchaseType;
@@ -24,12 +27,10 @@ function useSKUPrice(sku) {
   }
   let userPrice;
   let pricesForPurchaseType;
-  let purchaseType;
-  let storeHasPrice;
   let stateFromStoresArray;
-  let stateFromStores1;
-  userPrice = false;
-  pricesForPurchaseType = undefined;
+  closure_129_0 = sku;
+  closure_129_1 = DEFAULT;
+  closure_129_2 = false;
   const items = [stateFromStoresArray];
   const stateFromStores = sku(userPrice[10]).useStateFromStores(items, () => {
     let id;
@@ -39,33 +40,29 @@ function useSKUPrice(sku) {
     if (id == null) {
       id = null;
     }
-    return closure_1_6.getPricesForSkuId(id);
+    return SKUPricesStore.getPricesForSkuId(id);
   });
-  pricesForPurchaseType = stateFromStores;
+  closure_129_3 = stateFromStores;
   const items1 = [sku, stateFromStores, DEFAULT, false];
   const memo = pricesForPurchaseType.useMemo(() => {
     if (null == userPrice) {
-      let SELF_PURCHASE = sku(storeHasPrice[7]).StorefrontPurchaseType.SELF_PURCHASE;
-      let tmp3 = storeHasPrice;
-      let tmp4 = sku;
-    } else if (closure_1_8.DEFAULT === tmp) {
-      SELF_PURCHASE = sku(storeHasPrice[7]).StorefrontPurchaseType.SELF_PURCHASE;
-      tmp3 = storeHasPrice;
-      tmp4 = sku;
+      let SELF_PURCHASE = StorefrontTypes.StorefrontPurchaseType.SELF_PURCHASE;
+      let tmp4 = require;
+    } else if (constants.DEFAULT === tmp) {
+      SELF_PURCHASE = StorefrontTypes.StorefrontPurchaseType.SELF_PURCHASE;
+      tmp4 = require;
     } else if (tmp14.GIFT === tmp) {
-      SELF_PURCHASE = sku(storeHasPrice[7]).StorefrontPurchaseType.GIFT;
-      tmp3 = storeHasPrice;
-      tmp4 = sku;
+      SELF_PURCHASE = StorefrontTypes.StorefrontPurchaseType.GIFT;
+      tmp4 = require;
     } else {
-      tmp3 = storeHasPrice;
-      SELF_PURCHASE = sku(storeHasPrice[7]).StorefrontPurchaseType.SELF_PURCHASE;
-      tmp4 = sku;
+      SELF_PURCHASE = StorefrontTypes.StorefrontPurchaseType.SELF_PURCHASE;
+      tmp4 = require;
     }
     if (null != sku) {
       if (null != stateFromStores1) {
         let tmp12 = tmp11[SELF_PURCHASE];
         if (tmp12 == null) {
-          tmp12 = tmp11[tmp4(undefined, tmp3[7]).StorefrontPurchaseType.SELF_PURCHASE];
+          tmp12 = tmp11[tmp4(undefined, 7247).StorefrontPurchaseType.SELF_PURCHASE];
         }
         let found;
         if (tmp12 != null) {
@@ -73,35 +70,30 @@ function useSKUPrice(sku) {
           if (userPrice != null) {
             found = userPrice.find((currency) => {
               currency = currency.currency;
-              const DISCORD_ORB = closure_1_7.DISCORD_ORB;
-              return closure_2 ? currency === DISCORD_ORB : currency !== DISCORD_ORB;
+              const DISCORD_ORB = constants.DISCORD_ORB;
+              return storeHasPrice ? currency === DISCORD_ORB : currency !== DISCORD_ORB;
             });
           }
         }
-        let obj = { userPrice: null, pricesForPurchaseType: null, purchaseType: null, storeHasPrice: true };
-        obj[0] = found;
-        obj[1] = tmp12;
-        obj[2] = SELF_PURCHASE;
+        const obj = { userPrice: found, pricesForPurchaseType: tmp12, purchaseType: SELF_PURCHASE, storeHasPrice: true };
         return obj;
       }
     }
-    obj = { userPrice: "r", pricesForPurchaseType: "w", purchaseType: -1533303325, storeHasPrice: 822296673 };
-    obj[2] = SELF_PURCHASE;
-    obj[3] = null != stateFromStores1;
-    return obj;
+    const obj2 = { userPrice: "r", pricesForPurchaseType: "w", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores1 };
+    return obj2;
   }, items1);
   userPrice = memo.userPrice;
   pricesForPurchaseType = memo.pricesForPurchaseType;
-  purchaseType = memo.purchaseType;
-  storeHasPrice = memo.storeHasPrice;
-  let obj = sku(userPrice[10]);
+  const purchaseType = memo.purchaseType;
+  const storeHasPrice = memo.storeHasPrice;
+  const obj = sku(userPrice[10]);
   const items2 = [stateFromStoresArray];
   stateFromStoresArray = sku(userPrice[10]).useStateFromStoresArray(items2, () => {
     let id;
     if (sku != null) {
       id = sku.id;
     }
-    let rewardsForSkuId = stateFromStoresArray.getRewardsForSkuId(id);
+    let rewardsForSkuId = SKUPricesStore.getRewardsForSkuId(id);
     if (rewardsForSkuId == null) {
       rewardsForSkuId = [];
     }
@@ -109,7 +101,7 @@ function useSKUPrice(sku) {
   });
   let obj2 = sku(userPrice[10]);
   const items3 = [storeHasPrice];
-  stateFromStores1 = sku(userPrice[10]).useStateFromStores(items3, () => storeHasPrice.getCurrentUser());
+  const stateFromStores1 = sku(userPrice[10]).useStateFromStores(items3, () => storeHasPrice.getCurrentUser());
   const items4 = [sku, DEFAULT, , , , , , ];
   let premiumType;
   if (stateFromStores1 != null) {
@@ -122,16 +114,15 @@ function useSKUPrice(sku) {
   items4[6] = purchaseType;
   items4[7] = stateFromStoresArray;
   return pricesForPurchaseType.useMemo(() => {
-    let obj = sku;
     if (null == sku) {
       return { normalPrice: null, discountedPrice: null, discountPercent: null, userPrice: null };
     } else if (storeHasPrice) {
-      const found = stateFromStoresArray.find((arg0) => {
-        if (null == arg0[closure_4]) {
+      const found = stateFromStoresArray.find((item) => {
+        if (null == item[purchaseType]) {
           return false;
         } else {
           const type = tmp.type;
-          if (closure_1_0(closure_1_2[7]).StorefrontPromotionRewardType.DISCOUNT === type) {
+          if (sku(userPrice[7]).StorefrontPromotionRewardType.DISCOUNT === type) {
             return true;
           } else {
             if (tmp2(tmp3[7]).StorefrontPromotionRewardType.FIXED_PRICE !== type) {
@@ -165,8 +156,8 @@ function useSKUPrice(sku) {
       if (null != tmp9) {
         let found1;
         if (pricesForPurchaseType != null) {
-          if (pricesForPurchaseType.prices[closure_1_9.BASE] != null) {
-            const arr = tmp16[sku(undefined, userPrice[7]).StorefrontPriceVariant.NORMAL];
+          if (pricesForPurchaseType.prices[constants2.BASE] != null) {
+            const arr = tmp16[StorefrontTypes.StorefrontPriceVariant.NORMAL];
             if (arr != null) {
               found1 = arr.find((currency) => currency.currency !== constants.DISCORD_ORB);
             }
@@ -179,20 +170,16 @@ function useSKUPrice(sku) {
       if (tmp13 == null) {
         tmp13 = null;
       }
-      obj = { normalPrice: null, discountedPrice: null, discountPercent: null, userPrice: null };
-      obj[0] = tmp13;
-      obj[1] = tmp11;
-      obj[2] = amount;
+      const obj3 = { normalPrice: tmp13, discountedPrice: tmp11, discountPercent: amount, userPrice: null };
       let tmp19 = userPrice;
       if (userPrice == null) {
         tmp19 = null;
       }
-      obj[3] = tmp19;
-      return obj;
+      obj3.userPrice = tmp19;
+      return obj3;
     } else {
-      if (obj.productLine === closure_1_11.SOCIAL_LAYER_GAME_ITEM) {
-        let price = sku(userPrice[11]).getPrice(obj, DEFAULT);
-        const obj2 = sku(userPrice[11]);
+      if (obj.productLine === constants4.SOCIAL_LAYER_GAME_ITEM) {
+        let price = SlayerStorefrontUtils.getPrice(obj, DEFAULT);
       } else {
         let premiumType;
         if (stateFromStores1 != null) {
@@ -203,70 +190,66 @@ function useSKUPrice(sku) {
       if (price == null) {
         price = null;
       }
-      obj = { normalPrice: null, discountedPrice: null, discountPercent: null, userPrice: null };
-      obj[0] = price;
-      obj[3] = price;
-      return obj;
+      const obj4 = { normalPrice: price, discountedPrice: null, discountPercent: null, userPrice: price };
+      return obj4;
     }
   }, items4);
 }
-function formatSKUPrice(arg0, arg1) {
+function formatSKUPrice(arg0, stateFromStores) {
   ({ normalPrice, discountedPrice, discountPercent, userPrice } = arg0);
   let formatPriceResult = null;
   if (null != normalPrice) {
-    let obj = formatSingleCurrencyPrice;
-    formatPriceResult = obj.formatPrice(normalPrice.amount, normalPrice.currency);
+    formatPriceResult = PriceUtils.formatPrice(normalPrice.amount, normalPrice.currency);
   }
-  obj = { normalPrice: formatPriceResult, discountedPrice: null, discountPercent: null, userPrice: null };
+  const obj2 = { normalPrice: formatPriceResult, discountedPrice: null, discountPercent: null, userPrice: null };
   let formatPriceResult1 = null;
   if (null != discountedPrice) {
-    formatPriceResult1 = formatSingleCurrencyPrice.formatPrice(discountedPrice.amount, discountedPrice.currency);
-    const obj3 = formatSingleCurrencyPrice;
+    formatPriceResult1 = PriceUtils.formatPrice(discountedPrice.amount, discountedPrice.currency);
   }
-  obj[1] = formatPriceResult1;
+  obj2.discountedPrice = formatPriceResult1;
   let formatPercentResult = null;
   if (null != discountPercent) {
-    formatPercentResult = formatSingleCurrencyPrice.formatPercent(arg1, -discountPercent / 100);
-    const obj4 = formatSingleCurrencyPrice;
+    formatPercentResult = PriceUtils.formatPercent(stateFromStores, -discountPercent / 100);
   }
-  obj[2] = formatPercentResult;
+  obj2.discountPercent = formatPercentResult;
   let formatPriceResult2 = null;
   if (null != userPrice) {
-    formatPriceResult2 = formatSingleCurrencyPrice.formatPrice(userPrice.amount, userPrice.currency);
-    const obj5 = formatSingleCurrencyPrice;
+    formatPriceResult2 = PriceUtils.formatPrice(userPrice.amount, userPrice.currency);
   }
-  obj[3] = formatPriceResult2;
-  return obj;
+  obj2.userPrice = formatPriceResult2;
+  return obj2;
 }
-({ CurrencyCodes: error, PriceSetAssignmentPurchaseTypes: closure_8, PriceTypes: c9, SKUFlags: c10, SKUProductLines: unpackModuleId } = ME);
-const result = require("set").fileFinishedImporting("modules/storefront/StorefrontUtils.tsx");
+const Constants = fn(1074);
+({ CurrencyCodes: closure_7, PriceSetAssignmentPurchaseTypes: closure_8, PriceTypes: closure_9, SKUFlags: c10, SKUProductLines: closure_11 } = Constants);
+const PremiumTypes = fn(1373).PremiumTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/storefront/StorefrontUtils.tsx");
 
 export const transformStorefrontPricesServer = function transformStorefrontPricesServer(storefront_pricing) {
-  let obj = { skuPriceMap: applyDefault.mapValues(storefront_pricing.sku_price_map, (pricingResultId) => ({ pricingResultId: pricingResultId.pricing_result_id, storefrontPromotionIds: pricingResultId.storefront_promotion_ids, rewardResultIds: pricingResultId.reward_result_ids })), pricingResultIdMap: null, rewardResultIdMap: null };
-  const obj2 = applyDefault;
-  obj[1] = applyDefault.mapValues(storefront_pricing.pricing_result_id_map, (arg0) => callback(12).mapValues(arg0, (user_price) => {
-    const obj = { userPrice: user_price.map((currency) => ({ currency: currency.currency, amount: currency.amount })), prices: callback(table[6]).mapValues(user_price.prices, (arg0) => callback(table[6]).mapValues(arg0, (arr) => arr.map(() => { ... }))) };
+  let obj = { skuPriceMap: _modDef12.mapValues(storefront_pricing.sku_price_map, (pricingResultId) => ({ pricingResultId: pricingResultId.pricing_result_id, storefrontPromotionIds: pricingResultId.storefront_promotion_ids, rewardResultIds: pricingResultId.reward_result_ids })), pricingResultIdMap: null, rewardResultIdMap: null };
+  obj.pricingResultIdMap = _modDef12.mapValues(storefront_pricing.pricing_result_id_map, (arg0) => _modDef12.mapValues(arg0, (user_price) => {
+    const obj = { userPrice: null, prices: closure_1_1(dependencyMap[6]).mapValues(user_price.prices, (arg0) => closure_1_1(closure_1_2[6]).mapValues(arg0, (arr) => arr.map(() => { ... }))) };
     user_price = user_price.user_price;
+    obj.userPrice = user_price.map((currency) => ({ currency: currency.currency, amount: currency.amount }));
     return obj;
   }));
-  const obj3 = applyDefault;
-  obj[2] = applyDefault.mapValues(storefront_pricing.reward_result_id_map, (arg0) => callback(12).mapValues(arg0, (type) => ({ type: type.type, amount: type.amount })));
+  obj.rewardResultIdMap = _modDef12.mapValues(storefront_pricing.reward_result_id_map, (arg0) => _modDef12.mapValues(arg0, (type) => ({ type: type.type, amount: type.amount })));
   return obj;
 };
 export const transformPriceSetAssignmentToStorefrontPurchaseType = function transformPriceSetAssignmentToStorefrontPurchaseType(arg0) {
   if (null == arg0) {
-    return StorefrontPromotionRewardType.StorefrontPurchaseType.SELF_PURCHASE;
+    return StorefrontTypes.StorefrontPurchaseType.SELF_PURCHASE;
   } else if (constants.DEFAULT === arg0) {
-    return StorefrontPromotionRewardType.StorefrontPurchaseType.SELF_PURCHASE;
+    return StorefrontTypes.StorefrontPurchaseType.SELF_PURCHASE;
   } else if (tmp9.GIFT === arg0) {
-    return StorefrontPromotionRewardType.StorefrontPurchaseType.GIFT;
+    return StorefrontTypes.StorefrontPurchaseType.GIFT;
   } else {
-    return StorefrontPromotionRewardType.StorefrontPurchaseType.SELF_PURCHASE;
+    return StorefrontTypes.StorefrontPurchaseType.SELF_PURCHASE;
   }
 };
 export const isSlayerSkuAvailableOnThisPlatform = function isSlayerSkuAvailableOnThisPlatform(sku) {
   if (null != sku) {
-    if (sku.productLine === constants3.SOCIAL_LAYER_GAME_ITEM) {
+    if (sku.productLine === constants4.SOCIAL_LAYER_GAME_ITEM) {
       let num;
       if (sku != null) {
         num = sku.flags;
@@ -275,16 +258,16 @@ export const isSlayerSkuAvailableOnThisPlatform = function isSlayerSkuAvailableO
         num = 0;
       }
       if (obj.isIOS()) {
-        let tmpResult = tmp(1384);
-        let hasFlagResult = tmpResult.hasFlag(num, constants2.AVAILABLE_ON_IOS);
+        let hasFlagResult = tmp(1384).hasFlag(num, constants3.AVAILABLE_ON_IOS);
+        const tmpResult = tmp(1384);
       } else {
-        tmpResult = tmp(1116);
-        const isAndroidResult = tmpResult.isAndroid();
+        const isAndroidResult = tmp(1116).isAndroid();
         hasFlagResult = !isAndroidResult;
         if (isAndroidResult) {
-          hasFlagResult = tmp(1384).hasFlag(num, constants2.AVAILABLE_ON_ANDROID);
-          const tmpResult1 = tmp(1384);
+          hasFlagResult = tmp(1384).hasFlag(num, constants3.AVAILABLE_ON_ANDROID);
+          const tmpResult4 = tmp(1384);
         }
+        const tmpResult3 = tmp(1116);
       }
       return hasFlagResult;
     }
@@ -298,19 +281,18 @@ export const useFormattedSKUPrice = function useFormattedSKUPrice(sku) {
     DEFAULT = constants.DEFAULT;
   }
   const tmp2 = useSKUPrice({ sku: sku.sku, priceSetAssignmentPurchaseType: DEFAULT });
-  const _require = tmp2;
-  let stateFromStores;
-  const items = [closure_4];
-  stateFromStores = _require(504).useStateFromStores(items, () => locale.locale);
+  _require = tmp2;
+  const items = [LocaleStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => locale.locale);
   const items1 = [tmp2, stateFromStores];
-  return React.useMemo(() => closure_1_14(closure_0, stateFromStores), items1);
+  return noop.useMemo(() => formatSKUPrice(closure_0, stateFromStores), items1);
 };
 export const useFormatSKUPrice = function useFormatSKUPrice(arg0) {
-  const _require = arg0;
-  const items = [closure_4];
-  const stateFromStores = _require(504).useStateFromStores(items, () => locale.locale);
+  _require = arg0;
+  const items = [LocaleStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => locale.locale);
   const items1 = [arg0, stateFromStores];
-  return React.useMemo(() => closure_1_14(closure_0, stateFromStores), items1);
+  return noop.useMemo(() => formatSKUPrice(closure_0, stateFromStores), items1);
 };
 export { formatSKUPrice };
 export const useSKUOrbPrice = function useSKUOrbPrice(sku) {
@@ -319,14 +301,12 @@ export const useSKUOrbPrice = function useSKUOrbPrice(sku) {
   if (DEFAULT === undefined) {
     DEFAULT = constants.DEFAULT;
   }
-  let userPrice;
   let storeHasPrice;
   let stateFromStores1;
-  let memo1;
-  userPrice = DEFAULT;
-  storeHasPrice = true;
-  stateFromStores1 = undefined;
-  const items = [closure_6];
+  closure_129_0 = sku;
+  closure_129_1 = DEFAULT;
+  closure_129_2 = true;
+  const items = [SKUPricesStore];
   const stateFromStores = sku(storeHasPrice[10]).useStateFromStores(items, () => {
     let id;
     if (sku != null) {
@@ -335,33 +315,29 @@ export const useSKUOrbPrice = function useSKUOrbPrice(sku) {
     if (id == null) {
       id = null;
     }
-    return closure_1_6.getPricesForSkuId(id);
+    return SKUPricesStore.getPricesForSkuId(id);
   });
-  stateFromStores1 = stateFromStores;
+  closure_129_3 = stateFromStores;
   const items1 = [sku, stateFromStores, DEFAULT, true];
   const memo = stateFromStores1.useMemo(() => {
     if (null == userPrice) {
-      let SELF_PURCHASE = sku(storeHasPrice[7]).StorefrontPurchaseType.SELF_PURCHASE;
-      let tmp3 = storeHasPrice;
-      let tmp4 = sku;
-    } else if (closure_1_8.DEFAULT === tmp) {
-      SELF_PURCHASE = sku(storeHasPrice[7]).StorefrontPurchaseType.SELF_PURCHASE;
-      tmp3 = storeHasPrice;
-      tmp4 = sku;
+      let SELF_PURCHASE = StorefrontTypes.StorefrontPurchaseType.SELF_PURCHASE;
+      let tmp4 = require;
+    } else if (constants.DEFAULT === tmp) {
+      SELF_PURCHASE = StorefrontTypes.StorefrontPurchaseType.SELF_PURCHASE;
+      tmp4 = require;
     } else if (tmp14.GIFT === tmp) {
-      SELF_PURCHASE = sku(storeHasPrice[7]).StorefrontPurchaseType.GIFT;
-      tmp3 = storeHasPrice;
-      tmp4 = sku;
+      SELF_PURCHASE = StorefrontTypes.StorefrontPurchaseType.GIFT;
+      tmp4 = require;
     } else {
-      tmp3 = storeHasPrice;
-      SELF_PURCHASE = sku(storeHasPrice[7]).StorefrontPurchaseType.SELF_PURCHASE;
-      tmp4 = sku;
+      SELF_PURCHASE = StorefrontTypes.StorefrontPurchaseType.SELF_PURCHASE;
+      tmp4 = require;
     }
     if (null != sku) {
       if (null != stateFromStores1) {
         let tmp12 = tmp11[SELF_PURCHASE];
         if (tmp12 == null) {
-          tmp12 = tmp11[tmp4(undefined, tmp3[7]).StorefrontPurchaseType.SELF_PURCHASE];
+          tmp12 = tmp11[tmp4(undefined, 7247).StorefrontPurchaseType.SELF_PURCHASE];
         }
         let found;
         if (tmp12 != null) {
@@ -369,30 +345,25 @@ export const useSKUOrbPrice = function useSKUOrbPrice(sku) {
           if (userPrice != null) {
             found = userPrice.find((currency) => {
               currency = currency.currency;
-              const DISCORD_ORB = closure_1_7.DISCORD_ORB;
-              return closure_2 ? currency === DISCORD_ORB : currency !== DISCORD_ORB;
+              const DISCORD_ORB = constants.DISCORD_ORB;
+              return storeHasPrice ? currency === DISCORD_ORB : currency !== DISCORD_ORB;
             });
           }
         }
-        let obj = { userPrice: null, pricesForPurchaseType: null, purchaseType: null, storeHasPrice: true };
-        obj[0] = found;
-        obj[1] = tmp12;
-        obj[2] = SELF_PURCHASE;
+        const obj = { userPrice: found, pricesForPurchaseType: tmp12, purchaseType: SELF_PURCHASE, storeHasPrice: true };
         return obj;
       }
     }
-    obj = { userPrice: "r", pricesForPurchaseType: "w", purchaseType: -1533303325, storeHasPrice: 822296673 };
-    obj[2] = SELF_PURCHASE;
-    obj[3] = null != stateFromStores1;
-    return obj;
+    const obj2 = { userPrice: "r", pricesForPurchaseType: "w", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores1 };
+    return obj2;
   }, items1);
-  userPrice = memo.userPrice;
+  let userPrice = memo.userPrice;
   storeHasPrice = memo.storeHasPrice;
   let obj = sku(storeHasPrice[10]);
-  const items2 = [closure_5];
+  const items2 = [UserStore];
   stateFromStores1 = sku(storeHasPrice[10]).useStateFromStores(items2, () => currentUser.getCurrentUser());
   const items3 = [stateFromStores1];
-  memo1 = stateFromStores1.useMemo(() => userPrice(storeHasPrice[13]).isPremium(stateFromStores1, closure_1_12.TIER_2), items3);
+  const memo1 = stateFromStores1.useMemo(() => PremiumUtilsDefault.isPremium(stateFromStores1, PremiumTypes.TIER_2), items3);
   const items4 = [sku, memo1, storeHasPrice, userPrice];
   return stateFromStores1.useMemo(() => {
     if (null == sku) {
@@ -404,13 +375,12 @@ export const useSKUOrbPrice = function useSKUOrbPrice(sku) {
       }
       return tmp8;
     } else {
-      let obj = sku(storeHasPrice[14]);
-      const orbPriceFromPrices = obj.getOrbPriceFromPrices(tmp.prices, memo1);
+      const orbPriceFromPrices = OrbCheckoutUtils.getOrbPriceFromPrices(tmp.prices, memo1);
       let tmp7 = null;
       if (null != orbPriceFromPrices) {
-        obj = { amount: null, currency: null };
-        ({ amount: obj2[0], currency: obj2[1] } = orbPriceFromPrices);
-        tmp7 = obj;
+        ({ amount: obj2.amount, currency: obj2.currency } = orbPriceFromPrices);
+        tmp7 = { amount: null, currency: null };
+        const obj3 = { amount: null, currency: null };
       }
       return tmp7;
     }

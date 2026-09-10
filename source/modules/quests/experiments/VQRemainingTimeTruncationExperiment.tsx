@@ -1,15 +1,17 @@
-// Module ID: 11519
-// Function ID: 11520
-// Name: apexExperiment
+// Module ID: 11546
+// Function ID: 11547
+// Name: VQRemainingTimeTruncationExperiment
 // Dependencies: [1433, 2]
 
-// Module 11519 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 11546 (VQRemainingTimeTruncationExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null, 2: { truncateMoreThanSeconds: 30 } };
-obj[2] = { truncateMoreThanSeconds: 60 };
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-08-vq-remaining-time-truncation", kind: "user", defaultConfig: { truncateMoreThanSeconds: null }, variations: obj });
-const result = set.fileFinishedImporting("modules/quests/experiments/VQRemainingTimeTruncationExperiment.tsx");
+const obj = { name: "2026-08-vq-remaining-time-truncation", kind: "user", defaultConfig: { truncateMoreThanSeconds: null }, variations: null };
+const obj2 = { 1: null, 2: { truncateMoreThanSeconds: 30 } };
+obj2[2] = { truncateMoreThanSeconds: 60 };
+obj.variations = obj2;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/quests/experiments/VQRemainingTimeTruncationExperiment.tsx");
 
 export default apexExperiment;

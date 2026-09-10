@@ -1,88 +1,87 @@
-// Module ID: 11735
-// Function ID: 11736
+// Module ID: 11761
+// Function ID: 11762
 // Name: EmojiRow
-// Dependencies: [19, 17, 7151, 21, 4560, 4527, 4528, 7764, 4211, 7456, 11128, 4262, 576, 11736, 11737, 11259, 11738, 7182, 2]
+// Dependencies: [19, 17, 7165, 21, 4574, 4541, 4542, 7778, 4224, 7470, 11155, 4275, 576, 11762, 11763, 11286, 11764, 7196, 2]
 // Exports: default
 
-// Module 11735 (EmojiRow)
-import noopAll from "noop" /* 19 */;
-import map from "map" /* 4262 */;
-import useEmojisForReactionRow from "useEmojisForReactionRow" /* 11736 */;
-import EmojiPickerRowButton from "EmojiPickerRowButton" /* 11737 */;
-import DoubleTapEmojiEditNudgeInner from "DoubleTapEmojiEditNudgeInner" /* 11738 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 7151 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11761 (EmojiRow)
+import ReactionUtils from "ReactionUtils" /* 4224 */;
+import useToken from "useToken" /* 4275 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import HapticUtils from "HapticUtils" /* 4542 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7470 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 7778 */;
+import DoubleTapReminderToast from "DoubleTapReminderToast" /* 11155 */;
+import reactions_ReactionUtils from "reactions/ReactionUtils" /* 11286 */;
+import useEmojisForReactionRow from "useEmojisForReactionRow" /* 11762 */;
+import EmojiReactionRowButton from "EmojiReactionRowButton" /* 11763 */;
+import DoubleTapEmojiEditNudge from "DoubleTapEmojiEditNudge" /* 11764 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ emojiRowContainer: { flexDirection: "column", justifyContent: "center", alignItems: "center" }, emojiRow: { height: 52, alignSelf: "stretch", flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginTop: 0, marginBottom: 0 } });
-let result = require("set").fileFinishedImporting("modules/action_sheet/native/components/EmojiRow.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const View = fn(17).View;
+const ACTION_SHEET_MAX_WIDTH = fn(7165).ACTION_SHEET_MAX_WIDTH;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let closure_7 = createStyles.createStyles({ emojiRowContainer: { flexDirection: "column", justifyContent: "center", alignItems: "center" }, emojiRow: { height: 52, alignSelf: "stretch", flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginTop: 0, marginBottom: 0 } });
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/action_sheet/native/components/EmojiRow.tsx");
 
 export default function EmojiRow(arg0) {
   ({ message: require, channel } = arg0);
-  dependencyMap = undefined;
-  closure_3 = undefined;
-  closure_4 = undefined;
-  let token;
-  let obj = map;
-  dependencyMap = obj.useToken(channel(576).modules.mobile.EMOJI_ROW_EMOJI_SIZE);
-  obj1 = map;
-  closure_3 = obj1.useToken(channel(576).modules.mobile.EMOJI_ROW_EMOJI_FONT_SIZE);
-  let obj2 = map;
-  closure_4 = obj2.useToken(channel(576).modules.mobile.EMOJI_ROW_EMOJI_LINE_HEIGHT);
-  token = map.useToken(channel(576).modules.mobile.EMOJI_ROW_EMOJI_CONTAINER_SIZE);
-  let obj4 = map;
-  const token1 = map.useToken(channel(576).modules.mobile.EMOJI_ROW_EMOJI_MIN_SPACING);
-  const obj5 = map;
-  const emojisForReactionRow = useEmojisForReactionRow.useEmojisForReactionRow(channel, closure_4, token + token1);
-  const tmp3 = callback2();
-  obj = { style: tmp3.emojiRowContainer, children: null };
-  obj = { style: tmp3.emojiRow, children: null };
+  dependencyMap = useToken.useToken(channel(576).modules.mobile.EMOJI_ROW_EMOJI_SIZE);
+  const emojiFontSize = useToken.useToken(channel(576).modules.mobile.EMOJI_ROW_EMOJI_FONT_SIZE);
+  const emojiLineHeight = useToken.useToken(channel(576).modules.mobile.EMOJI_ROW_EMOJI_LINE_HEIGHT);
+  const token = useToken.useToken(channel(576).modules.mobile.EMOJI_ROW_EMOJI_CONTAINER_SIZE);
+  const token1 = useToken.useToken(channel(576).modules.mobile.EMOJI_ROW_EMOJI_MIN_SPACING);
+  const emojisForReactionRow = useEmojisForReactionRow.useEmojisForReactionRow(channel, emojiLineHeight, token + token1);
+  const tmp3 = closure_7();
+  let obj7 = { style: tmp3.emojiRowContainer, children: null };
+  const obj8 = { style: tmp3.emojiRow, children: null };
   const items = [
-    emojisForReactionRow.map((emoji) => {
+    emojisForReactionRow.map((emoji, index) => {
       closure_0 = emoji;
-      return token(closure_1_0(11737).EmojiReactionRowButton, {
+      return token(require("EmojiReactionRowButton").EmojiReactionRowButton, {
         emoji,
         onPress() {
-          let obj = channel(table[5]);
-          obj.hideActionSheet();
+          ActionSheetActionCreatorsDefault.hideActionSheet();
           if (null != closure_0) {
-            const result = closure_2_0(tmp4[6]).triggerHapticFeedback(closure_2_0(tmp4[6]).HapticFeedbackTypes.IMPACT_LIGHT);
-            const obj2 = closure_2_0(tmp4[6]);
+            const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_LIGHT);
             ({ channel_id, id } = tmp);
-            const obj3 = closure_2_0(tmp4[7]);
-            obj3.addReaction(channel_id, id, closure_2_0(tmp4[8]).toReactionEmoji(tmp2));
-            const obj4 = closure_2_0(tmp4[8]);
-            obj = { channelId: null, messageId: null };
-            ({ channel_id: obj6[0], id: obj6[1] } = tmp);
-            channel(tmp4[9]).focusMessage(obj);
-            const tmp3Result = channel(tmp4[9]);
-            const result1 = closure_2_0(tmp4[10]).maybeShowDoubleTapReminderToast(tmp2);
-            const obj7 = closure_2_0(tmp4[10]);
+            const obj3 = ReactionActionCreators;
+            obj3.addReaction(channel_id, id, ReactionUtils.toReactionEmoji(tmp2));
+            ({ channel_id: obj6.channelId, id: obj6.messageId } = tmp);
+            MessageActionCreatorsDefault.focusMessage({ channelId: null, messageId: null });
+            const obj5 = { channelId: null, messageId: null };
+            const tmp3Result = MessageActionCreatorsDefault;
+            const result1 = DoubleTapReminderToast.maybeShowDoubleTapReminderToast(tmp2);
           }
         },
-        emojiSize: dependencyMap,
-        emojiFontSize: closure_3,
-        emojiLineHeight: closure_4,
+        emojiSize,
+        emojiFontSize,
+        emojiLineHeight,
         emojiContainerSize: token
-      }, closure_1_0(11737).getEmojiKey(emoji, arg1));
+      }, require("EmojiReactionRowButton").getEmojiKey(emoji, index));
     }),
-
+    token(EmojiReactionRowButton.EmojiPickerRowButton, {
+      emojiContainerSize: token,
+      onPress() {
+        return reactions_ReactionUtils.handleAddNewReactions(channel, id.id, ReactionActionCreators.ReactionLocations.MESSAGE);
+      }
+    })
   ];
-  obj1 = {
+  obj8.children = items;
+  const items1 = [closure_6(emojiFontSize, obj8), ];
+  const obj9 = {
     emojiContainerSize: token,
     onPress() {
-      return closure_1_0(11259).handleAddNewReactions(channel, id.id, closure_1_0(7764).ReactionLocations.MESSAGE);
+      return reactions_ReactionUtils.handleAddNewReactions(channel, id.id, ReactionActionCreators.ReactionLocations.MESSAGE);
     }
   };
-  items[1] = token(EmojiPickerRowButton.EmojiPickerRowButton, obj1);
-  obj[1] = items;
-  const items1 = [callback(closure_3, obj), ];
-  obj2 = { location: channel(7182).MESSAGE_LONG_PRESS_MENU };
-  items1[1] = token(DoubleTapEmojiEditNudgeInner.DoubleTapEmojiEditNudge, obj2);
-  obj[1] = items1;
-  return callback(closure_3, obj);
+  items1[1] = token(DoubleTapEmojiEditNudge.DoubleTapEmojiEditNudge, { location: channel(7196).MESSAGE_LONG_PRESS_MENU });
+  obj7.children = items1;
+  return closure_6(emojiFontSize, obj7);
 };

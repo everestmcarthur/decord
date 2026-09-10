@@ -1,19 +1,20 @@
-// Module ID: 16525
-// Function ID: 16526
-// Name: jsx
-// Dependencies: [19, 8290, 21, 5589, 4923, 2]
+// Module ID: 16556
+// Function ID: 16557
+// Name: AppFreezer
+// Dependencies: [19, 8318, 21, 5603, 4937, 2]
 // Exports: default
 
-// Module 16525 (jsx)
-import noopAll from "noop" /* 19 */;
-import setDefault from "set" /* 5589 */;
-import closure_2 from "module_8290" /* 8290 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16556 (AppFreezer)
+import Suspender from "Suspender" /* 4937 */;
+import NativeViewDefault from "NativeView" /* 5603 */;
+import noop from "module_19" /* 19 */;
+import AppFreezeStore from "AppFreezeStore" /* 8318 */;
 
-const require = arg1;
-noopAll;
-let closure_4 = jsx(setDefault, { style: { flex: 1 } });
-const result = require("set").fileFinishedImporting("modules/panels/morphable/native/AppFreezer.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const NativeView = jsx(NativeViewDefault, { style: { flex: 1 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/panels/morphable/native/AppFreezer.tsx");
 
 export default function AppFreezer(children) {
   let flag = children.manualFreeze;
@@ -22,13 +23,13 @@ export default function AppFreezer(children) {
   }
   let placeholder = children.placeholder;
   if (placeholder === undefined) {
-    placeholder = closure_4;
+    placeholder = NativeView;
   }
   let lockKeys = children.lockKeys;
-  let freeze = callback((lockKeys) => {
+  let freeze = AppFreezeStore((lockKeys) => {
     lockKeys = lockKeys.lockKeys;
     if (null != lockKeys) {
-      let someResult = lockKeys.some((arg0) => lockKeys.has(arg0));
+      let someResult = lockKeys.some((item) => lockKeys.has(item));
     } else {
       someResult = lockKeys.size > 0;
     }
@@ -37,5 +38,5 @@ export default function AppFreezer(children) {
   if (!freeze) {
     freeze = flag;
   }
-  return jsx(lockKeys(4923).Freeze, { freeze, placeholder, children: children.children });
+  return jsx(Suspender.Freeze, { freeze, placeholder, children: children.children });
 };

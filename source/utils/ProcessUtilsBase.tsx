@@ -1,12 +1,12 @@
 // Module ID: 1360
 // Function ID: 1361
-// Name: ElectronProcessType
+// Name: ProcessUtilsBase
 // Dependencies: [2]
 
-// Module 1360 (ElectronProcessType)
-import set from "set" /* 2 */;
+// Module 1360 (ProcessUtilsBase)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("utils/ProcessUtilsBase.tsx");
+const result = size.fileFinishedImporting("utils/ProcessUtilsBase.tsx");
 class ProcessUtils {
 }
 const prototype = ProcessUtils.prototype;

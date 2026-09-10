@@ -1,38 +1,32 @@
 // Module ID: 3767
 // Function ID: 3768
-// Dependencies: [2035, 2036]
+// Dependencies: [2033]
 
 // Module 3767
-import buildMatchFn from "buildMatchFn" /* 2035 */;
-import buildMatchPatternFn from "buildMatchPatternFn" /* 2036 */;
+import module_2033 from "module_2033" /* 2033 */;
 
-if (!buildMatchFn) {
-  let obj = { default: null };
-  obj[0] = buildMatchFn;
+if (!module_2033) {
+  const obj2 = { default: module_2033 };
+  let obj = obj2;
 } else {
-  obj = buildMatchFn;
+  obj = module_2033;
 }
-if (!buildMatchPatternFn) {
-  obj = { default: null };
-  obj[0] = buildMatchPatternFn;
-  let obj2 = obj;
-} else {
-  obj2 = buildMatchPatternFn;
-}
-obj2 = {
-  matchPattern: /^(\d+)?/i,
-  parsePattern: /\d+/i,
-  valueCallback(joined) {
-    return parseInt(joined, 10);
-  }
+const date = {
+  ordinalNumber(arg0, arg1) {
+    return String(arg0);
+  },
+  era: obj.default({ values: { narrow: ["p.n.e.", "n.e."], abbreviated: ["p.n.e.", "n.e."], wide: ["przed nasz\u0105 er\u0105", "naszej ery"] }, defaultWidth: "wide" }),
+  quarter: obj.default({
+    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["I kw.", "II kw.", "III kw.", "IV kw."], wide: ["I kwarta\u0142", "II kwarta\u0142", "III kwarta\u0142", "IV kwarta\u0142"] },
+    defaultWidth: "wide",
+    argumentCallback(arg0) {
+      return arg0 - 1;
+    }
+  }),
+  month: obj.default({ values: { narrow: ["S", "L", "M", "K", "M", "C", "L", "S", "W", "P", "L", "G"], abbreviated: ["sty", "lut", "mar", "kwi", "maj", "cze", "lip", "sie", "wrz", "pa\u017A", "lis", "gru"], wide: ["stycze\u0144", "luty", "marzec", "kwiecie\u0144", "maj", "czerwiec", "lipiec", "sierpie\u0144", "wrzesie\u0144", "pa\u017Adziernik", "listopad", "grudzie\u0144"] }, defaultWidth: "wide", formattingValues: { narrow: ["s", "l", "m", "k", "m", "c", "l", "s", "w", "p", "l", "g"], abbreviated: ["sty", "lut", "mar", "kwi", "maj", "cze", "lip", "sie", "wrz", "pa\u017A", "lis", "gru"], wide: ["stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia", "wrze\u015Bnia", "pa\u017Adziernika", "listopada", "grudnia"] }, defaultFormattingWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["N", "P", "W", "\u015A", "C", "P", "S"], short: ["nie", "pon", "wto", "\u015Bro", "czw", "pi\u0105", "sob"], abbreviated: ["niedz.", "pon.", "wt.", "\u015Br.", "czw.", "pt.", "sob."], wide: ["niedziela", "poniedzia\u0142ek", "wtorek", "\u015Broda", "czwartek", "pi\u0105tek", "sobota"] }, defaultWidth: "wide", formattingValues: { narrow: ["n", "p", "w", "\u015B", "c", "p", "s"], short: ["nie", "pon", "wto", "\u015Bro", "czw", "pi\u0105", "sob"], abbreviated: ["niedz.", "pon.", "wt.", "\u015Br.", "czw.", "pt.", "sob."], wide: ["niedziela", "poniedzia\u0142ek", "wtorek", "\u015Broda", "czwartek", "pi\u0105tek", "sobota"] }, defaultFormattingWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "a", pm: "p", midnight: "p\u00F3\u0142n.", noon: "po\u0142", morning: "rano", afternoon: "popo\u0142.", evening: "wiecz.", night: "noc" }, abbreviated: { am: "AM", pm: "PM", midnight: "p\u00F3\u0142noc", noon: "po\u0142udnie", morning: "rano", afternoon: "popo\u0142udnie", evening: "wiecz\u00F3r", night: "noc" }, wide: { am: "AM", pm: "PM", midnight: "p\u00F3\u0142noc", noon: "po\u0142udnie", morning: "rano", afternoon: "popo\u0142udnie", evening: "wiecz\u00F3r", night: "noc" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "a", pm: "p", midnight: "o p\u00F3\u0142n.", noon: "w po\u0142.", morning: "rano", afternoon: "po po\u0142.", evening: "wiecz.", night: "w nocy" }, abbreviated: { am: "AM", pm: "PM", midnight: "o p\u00F3\u0142nocy", noon: "w po\u0142udnie", morning: "rano", afternoon: "po po\u0142udniu", evening: "wieczorem", night: "w nocy" }, wide: { am: "AM", pm: "PM", midnight: "o p\u00F3\u0142nocy", noon: "w po\u0142udnie", morning: "rano", afternoon: "po po\u0142udniu", evening: "wieczorem", night: "w nocy" } }, defaultFormattingWidth: "wide" })
 };
-const items = [/^ÎC/i, /^DC/i];
-const items1 = [/^(Înainte de Cristos|Înaintea erei noastre)/i, /^(După Cristos|Era noastră)/i];
-const items2 = [/1/i, /2/i, /3/i, /4/i];
-const items3 = [/^i/i, /^f/i, /^m/i, /^a/i, /^m/i, /^i/i, /^i/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i];
-const items4 = [/^ia/i, /^f/i, /^mar/i, /^ap/i, /^mai/i, /^iun/i, /^iul/i, /^au/i, /^s/i, /^o/i, /^n/i, /^d/i];
-const items5 = [/^d/i, /^l/i, /^m/i, /^m/i, /^j/i, /^v/i, /^s/i];
-const items6 = [/^d/i, /^l/i, /^ma/i, /^mi/i, /^j/i, /^v/i, /^s/i];
 
-export default { ordinalNumber: obj2.default(obj2), era: obj.default({ matchPatterns: obj3, defaultMatchWidth: "wide", parsePatterns: { any: items, wide: items1 }, defaultParseWidth: "any" }), quarter: obj.default(obj4), month: obj.default({ matchPatterns: obj6, defaultMatchWidth: "wide", parsePatterns: { narrow: items3, any: items4 }, defaultParseWidth: "any" }), day: obj.default({ matchPatterns: obj7, defaultMatchWidth: "wide", parsePatterns: { narrow: items5, any: items6 }, defaultParseWidth: "any" }), dayPeriod: obj.default({ matchPatterns: obj8, defaultMatchWidth: "any", parsePatterns: { any: obj9 }, defaultParseWidth: "any" }) };
+export default date;
 export default exports.default;

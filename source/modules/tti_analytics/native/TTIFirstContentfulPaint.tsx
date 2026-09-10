@@ -1,31 +1,34 @@
-// Module ID: 11901
-// Function ID: 11902
+// Module ID: 11927
+// Function ID: 11928
 // Name: TTIFirstContentfulPaint
-// Dependencies: [19, 21, 4418, 9, 7667, 11902, 2]
+// Dependencies: [19, 21, 4432, 9, 7681, 11928, 2]
 // Exports: TTIFirstContentfulPaint
 
-// Module 11901 (TTIFirstContentfulPaint)
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 11927 (TTIFirstContentfulPaint)
+import TTITrackerDefault from "TTITracker" /* 9 */;
+import RootNavigationRef from "RootNavigationRef" /* 4432 */;
+import PostTTIScheduler from "PostTTIScheduler" /* 7681 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/tti_analytics/native/TTIFirstContentfulPaint.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/tti_analytics/native/TTIFirstContentfulPaint.tsx");
 
 export const TTIFirstContentfulPaint = function TTIFirstContentfulPaint(checkFocusedScreen) {
   checkFocusedScreen = checkFocusedScreen.checkFocusedScreen;
   const items = [checkFocusedScreen];
-  const onMeasurement = React.useCallback((nativeEvent) => {
+  const onMeasurement = noop.useCallback((nativeEvent) => {
     if (null != checkFocusedScreen) {
-      const rootNavigationRef = checkFocusedScreen(closure_1_2[2]).getRootNavigationRef();
+      const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
       let currentRoute;
       if (rootNavigationRef != null) {
         currentRoute = rootNavigationRef.getCurrentRoute();
       }
-      const obj = checkFocusedScreen(closure_1_2[2]);
     }
-    const firstContentfulPaint = closure_1_1(closure_1_2[3]).firstContentfulPaint;
+    const firstContentfulPaint = TTITrackerDefault.firstContentfulPaint;
     firstContentfulPaint.record(nativeEvent.nativeEvent.timestamp);
-    checkFocusedScreen(closure_1_2[4]).notifyAboutTTI();
+    PostTTIScheduler.notifyAboutTTI();
   }, items);
-  return jsx(checkFocusedScreen(11902).TTIMeasurementView, { onMeasurement });
+  return jsx(checkFocusedScreen(11928).TTIMeasurementView, { onMeasurement });
 };

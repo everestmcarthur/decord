@@ -1,14 +1,14 @@
-// Module ID: 17414
-// Function ID: 17415
-// Name: enforcing
+// Module ID: 17445
+// Function ID: 17446
+// Name: NativeJankStatsModule
 // Dependencies: [17, 2]
 
-// Module 17414 (enforcing)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 17445 (NativeJankStatsModule)
+import _mod17 from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
 
-const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 const enforcing = TurboModuleRegistry.getEnforcing("NativeJankStatsModule");
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeJankStatsModule.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeJankStatsModule.tsx");
 
 export default enforcing;

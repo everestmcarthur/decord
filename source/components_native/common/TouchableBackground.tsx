@@ -1,42 +1,41 @@
-// Module ID: 12384
-// Function ID: 12385
+// Module ID: 12410
+// Function ID: 12411
 // Name: TouchableBackground
-// Dependencies: [32, 19, 17, 21, 4560, 576, 2]
+// Dependencies: [32, 19, 17, 21, 4574, 576, 2]
 // Exports: default
 
-// Module 12384 (TouchableBackground)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12410 (TouchableBackground)
+import nativeDefault from "native" /* 576 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-({ View: obj1, Pressable: c3 } = get_ActivityIndicator);
-createCacheKey = { default: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
-createCacheKey[0] = createCacheKey;
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("components_native/common/TouchableBackground.tsx");
+get_ActivityIndicator = fn(17);
+({ View: c2, Pressable: c3 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { default: { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE } };
+let closure_5 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/common/TouchableBackground.tsx");
 
 export default function TouchableBackground(onPressOut) {
   ({ activeBackgroundColor, onPressIn } = onPressOut);
   onPressOut = onPressOut.onPressOut;
   ({ pressableStyle, style, children } = onPressOut);
-  const merged = Object.assign(onPressOut, Object.create(null));
+  const merged = Object.assign(onPressOut, Object.assign({ activeBackgroundColor: 0, pressableStyle: 0, style: 0, children: 0, onPressIn: 0, onPressOut: 0 }));
   c2 = undefined;
-  const tmp2 = callback();
-  [tmp4, c2] = onPressIn(onPressOut.useState(false), 2);
+  const tmp2 = closure_5();
+  [tmp4, c2] = noop.useState(false);
   const items = [onPressIn];
   const items1 = [onPressOut];
-  callback = onPressOut.useCallback((arg0) => {
+  const callback = noop.useCallback((arg0) => {
     _undefined(true);
     if (onPressIn != null) {
       tmp2(arg0);
     }
   }, items);
-  let obj = { accessibilityRole: "button", style: pressableStyle };
-  const callback1 = onPressOut.useCallback((arg0) => {
+  const obj = { accessibilityRole: "button", style: pressableStyle };
+  const callback1 = noop.useCallback((arg0) => {
     if (onPressOut != null) {
       tmp(arg0);
     }
@@ -50,10 +49,9 @@ export default function TouchableBackground(onPressOut) {
     if (activeBackgroundColor == null) {
       activeBackgroundColor = tmp2.default.backgroundColor;
     }
-    obj = { backgroundColor: null };
-    obj[0] = activeBackgroundColor;
+    const obj2 = { backgroundColor: activeBackgroundColor };
   }
   items2[1] = tmp4;
-  obj.children = <c2 style={items2}>{children}</c2>;
-  return <closure_3 accessibilityRole="button" style={pressableStyle} />;
+  obj.children = <React2 style={items2}>{children}</React2>;
+  return <React3 accessibilityRole="button" style={pressableStyle} />;
 };

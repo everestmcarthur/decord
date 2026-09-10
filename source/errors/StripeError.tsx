@@ -1,31 +1,29 @@
-// Module ID: 4463
-// Function ID: 4464
-// Name: prototype
-// Dependencies: [4240, 2]
+// Module ID: 4477
+// Function ID: 4478
+// Name: StripeError
+// Dependencies: [4253, 2]
 
-// Module 4463 (prototype)
-import setDefault from "set" /* 4240 */;
+// Module 4477 (StripeError)
+import BillingError from "BillingError" /* 4253 */;
 
-setDefault;
 const prototype = function StripeError(error) {
   error = error.error;
   if (null != error.param) {
-    let obj = { body: null };
-    obj = {};
+    const obj = { body: null };
+    const obj2 = {};
     ({ param, message } = error);
     const items = [message];
-    obj[param] = items;
-    obj[0] = obj;
-    tmp = new tmp(obj, message, param, items);
-    // ThrowIfThisInitialized (0x7c)
+    obj2[param] = items;
+    obj.body = obj2;
+    let tmp8 = new tmp(obj, message, param, items);
   } else {
-    tmp = new tmp(error.message, tmp3, tmp2, error);
-    // ThrowIfThisInitialized (0x7c)
+    tmp8 = new tmp(error.message, tmp3, tmp2, error);
   }
-  return tmp;
+  return tmp8;
 }.prototype;
 class prototype extends tmp2 {
 }
-const result = require("set").fileFinishedImporting("errors/StripeError.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("errors/StripeError.tsx");
 
 export default prototype;

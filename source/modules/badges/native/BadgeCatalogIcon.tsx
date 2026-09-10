@@ -1,26 +1,26 @@
-// Module ID: 11195
-// Function ID: 11196
+// Module ID: 11222
+// Function ID: 11223
 // Name: BadgeCatalogIcon
-// Dependencies: [32, 19, 17, 21, 11196, 5587, 8456, 2]
+// Dependencies: [32, 19, 17, 21, 11223, 5601, 8484, 2]
 // Exports: default
 
-// Module 11195 (BadgeCatalogIcon)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 11222 (BadgeCatalogIcon)
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+const require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
 const re7 = /\.svg(?:[?#]|$)/i;
-const result = require("set").fileFinishedImporting("modules/badges/native/BadgeCatalogIcon.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/badges/native/BadgeCatalogIcon.tsx");
 
 export default function BadgeCatalogIcon(style) {
   ({ badge, size } = style);
-  let complex_icon_animated_url;
   let isMatch;
   dependencyMap = undefined;
-  let callback;
-  complex_icon_animated_url = badge.simple_icon_url;
+  _slicedToArray = undefined;
+  let complex_icon_animated_url = badge.simple_icon_url;
   if (complex_icon_animated_url == null) {
     complex_icon_animated_url = badge.complex_icon_static_url;
   }
@@ -31,11 +31,11 @@ export default function BadgeCatalogIcon(style) {
   if (isMatch) {
     isMatch = regex.test(complex_icon_animated_url);
   }
-  [tmp4, c2] = callback(React.useState(null), 2);
-  const tmp5 = callback(React.useState(null), 2);
-  callback = tmp5[1];
+  [tmp4, c2] = noop.useState(null);
+  const tmp5 = _slicedToArray(noop.useState(null), 2);
+  _slicedToArray = tmp5[1];
   const items = [complex_icon_animated_url, isMatch];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (null != abortController) {
       if (isMatch) {
         if (null == obj.getCachedSvgXml(tmp)) {
@@ -43,12 +43,10 @@ export default function BadgeCatalogIcon(style) {
           abortController = new AbortController();
           const svgXml = tmp3(tmp4[4]).loadSvgXml(tmp, abortController.signal);
           const tmp3Result = tmp3(tmp4[4]);
-          svgXml.then((arg0) => {
+          svgXml.then((xml) => {
             if (!abortController.signal.aborted) {
-              const obj = { url: null, xml: null };
-              obj[0] = abortController;
-              obj[1] = arg0;
-              closure_1_2(obj);
+              const obj = { url: complex_icon_animated_url, xml };
+              c2(obj);
             }
           }).catch(() => {
 
@@ -64,9 +62,8 @@ export default function BadgeCatalogIcon(style) {
   [][0] = complex_icon_animated_url;
   const items1 = [{ width: size, height: size }, style.style];
   if (null == complex_icon_animated_url) {
-    let obj = { style: null, "aria-hidden": true };
-    obj[0] = items1;
-    return <View style={null} aria-hidden />;
+    const obj2 = { style: items1, "aria-hidden": true };
+    return <View style={items1} aria-hidden />;
   } else if (isMatch) {
     let url;
     if (tmp4 != null) {
@@ -75,41 +72,32 @@ export default function BadgeCatalogIcon(style) {
     if (url === complex_icon_animated_url) {
       let xml = tmp4.xml;
     } else {
-      let obj5 = complex_icon_animated_url(11196);
-      xml = obj5.getCachedSvgXml(complex_icon_animated_url);
+      xml = complex_icon_animated_url(11223).getCachedSvgXml(complex_icon_animated_url);
+      const obj6 = complex_icon_animated_url(11223);
     }
-    obj = { style: null, "aria-hidden": true, children: null };
-    obj[0] = items1;
+    const obj3 = { style: items1, "aria-hidden": true, children: null };
     let tmp15Result = null;
     if (null != xml) {
-      obj1 = { xml: null, width: null, height: null };
-      obj1[0] = xml;
-      obj1[1] = size;
-      obj1[2] = size;
-      tmp15Result = tmp15(complex_icon_animated_url(8456).SvgXml, obj1);
+      const size1 = { xml, width: size, height: size };
+      tmp15Result = tmp15(complex_icon_animated_url(8484).SvgXml, size1);
     }
-    obj[2] = tmp15Result;
-    return <View style={null} aria-hidden>{null}</View>;
+    obj3.children = tmp15Result;
+    return <View style={items1} aria-hidden>{null}</View>;
   } else {
     if (tmp5[0] === complex_icon_animated_url) {
-      const obj2 = { style: null, "aria-hidden": true };
-      obj2[0] = items1;
-      obj = obj2;
+      const obj4 = { style: items1, "aria-hidden": true };
+      let obj = obj4;
     } else {
-      obj = { style: null, "aria-hidden": true, children: null };
-      obj[0] = items1;
-      const obj3 = { source: null, style: null, onError: null };
-      const obj4 = { uri: null };
-      obj4[0] = complex_icon_animated_url;
-      obj3[0] = obj4;
-      obj5 = { width: null, height: null };
-      obj5[0] = size;
-      obj5[1] = size;
-      obj3[1] = obj5;
-      obj3[2] = tmp7;
-      obj[2] = tmp8(isMatch(5587), obj3);
+      obj = { style: items1, "aria-hidden": true, children: null };
+      const obj5 = { source: null, style: null, onError: null };
+      const obj7 = { uri: complex_icon_animated_url };
+      obj5.source = obj7;
+      const size2 = { width: size, height: size };
+      obj5.style = size2;
+      obj5.onError = tmp7;
+      obj.children = tmp8(isMatch(5601), obj5);
     }
     return <View {...obj} />;
   }
-  let tmp3 = callback(React.useState(null), 2);
+  let tmp3 = _slicedToArray(noop.useState(null), 2);
 };

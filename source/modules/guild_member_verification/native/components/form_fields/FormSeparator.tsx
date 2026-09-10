@@ -1,27 +1,25 @@
-// Module ID: 5595
-// Function ID: 5596
-// Name: FormSeparator
-// Dependencies: [19, 17, 21, 4560, 576, 2]
+// Module ID: 5609
+// Function ID: 5610
+// Name: form_fields/FormSeparator
+// Dependencies: [19, 17, 21, 4574, 576, 2]
 // Exports: default
 
-// Module 5595 (FormSeparator)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 5609 (form_fields/FormSeparator)
+import nativeDefault from "native" /* 576 */;
+import noop from "module_19" /* 19 */;
 
-noopAll;
-createCacheKey = { separator: null };
-createCacheKey = { borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, marginVertical: 12 };
-createCacheKey[0] = createCacheKey;
-let closure_2 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/FormSeparator.tsx");
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+const obj2 = { separator: { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, marginVertical: 12 } };
+let closure_2 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/FormSeparator.tsx");
 
 export default function FormSeparator(style) {
   const obj = {};
   const merged = Object.assign(style);
-  const items = [callback().separator, style.style];
+  const items = [closure_2().separator, style.style];
   obj.style = items;
   return <View />;
 };

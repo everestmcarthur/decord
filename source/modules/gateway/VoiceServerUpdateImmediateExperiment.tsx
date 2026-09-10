@@ -1,13 +1,13 @@
-// Module ID: 13648
-// Function ID: 13649
-// Name: isVoiceServerUpdateImmediateEnabled
+// Module ID: 13671
+// Function ID: 13672
+// Name: VoiceServerUpdateImmediateExperiment
 // Dependencies: [2]
 // Exports: isVoiceServerUpdateImmediateEnabled
 
-// Module 13648 (isVoiceServerUpdateImmediateEnabled)
-import set from "set" /* 2 */;
+// Module 13671 (VoiceServerUpdateImmediateExperiment)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/gateway/VoiceServerUpdateImmediateExperiment.tsx");
+const result = size.fileFinishedImporting("modules/gateway/VoiceServerUpdateImmediateExperiment.tsx");
 
 export function isVoiceServerUpdateImmediateEnabled(GatewaySocketDispatcher) {
   return false;

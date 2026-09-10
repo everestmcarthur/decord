@@ -1,49 +1,45 @@
-// Module ID: 11823
-// Function ID: 11824
+// Module ID: 11849
+// Function ID: 11850
 // Name: MessageGameIconActionSheet
-// Dependencies: [19, 17, 4788, 1074, 21, 4560, 1115, 576, 504, 7150, 1178, 4556, 1114, 2024, 2]
+// Dependencies: [19, 17, 4802, 1074, 21, 4574, 1115, 576, 504, 7164, 1178, 4570, 1114, 2024, 2]
 // Exports: default
 
-// Module 11823 (MessageGameIconActionSheet)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import combinedDefault from "combined" /* 2024 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "addApplication" /* 4788 */;
-import { HelpdeskArticles } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import set from "set" /* 1115 */;
+// Module 11849 (MessageGameIconActionSheet)
+import nativeDefault from "native" /* 576 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
+import noop from "module_19" /* 19 */;
+import ApplicationStore from "ApplicationStore" /* 4802 */;
 
-const require = arg1;
-noopAll;
-({ jsx: closure_6, jsxs: error } = jsxProd);
+const require = fn;
+const View = fn(17).View;
+const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+const PlatformUtils = fn(1115);
 let num = 0;
-if (set.isAndroid()) {
+if (PlatformUtils.isAndroid()) {
   num = 16;
 }
-createCacheKey = { contentWrapper: { paddingHorizontal: 24, paddingTop: 8, paddingBottom: num }, gameDescriptionWrapper: { flexDirection: "column", justifyContent: "flex-start", flex: 1 }, gameIcon: null, gameDescriptionWrapperOuter: null, timestamp: null };
-createCacheKey = { width: 56, height: 56, marginRight: 8, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { flexDirection: "row" };
-createCacheKey[4] = { marginBottom: 4 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = set.fileFinishedImporting("modules/messages/native/MessageGameIconActionSheet.tsx");
+let obj3 = { contentWrapper: { paddingHorizontal: 24, paddingTop: 8, paddingBottom: num }, gameDescriptionWrapper: { flexDirection: "column", justifyContent: "flex-start", flex: 1 }, gameIcon: null, gameDescriptionWrapperOuter: null, timestamp: null };
+let size = { width: 56, height: 56, marginRight: 8, borderRadius: nativeDefault.radii.sm };
+obj3.gameIcon = size;
+obj3.gameDescriptionWrapperOuter = { flexDirection: "row" };
+obj3.timestamp = { marginBottom: 4 };
+let closure_8 = createStyles.createStyles(obj3);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/native/MessageGameIconActionSheet.tsx");
 
 export default function MessageGameIconActionSheet(applicationId) {
   applicationId = applicationId.applicationId;
-  const tmp = callback();
-  let obj = applicationId(504);
-  const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getApplication(applicationId));
+  const tmp = closure_8();
+  const items = [ApplicationStore];
+  const stateFromStores = applicationId(504).useStateFromStores(items, () => ApplicationStore.getApplication(applicationId));
   let tmp5Result = null;
   if (null != stateFromStores) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.contentWrapper;
-    obj = { style: null, children: null };
-    obj[0] = tmp.gameDescriptionWrapperOuter;
-    obj1 = { style: null, resizeMode: "contain", source: null, disableColor: true };
-    obj1[0] = tmp.gameIcon;
+    const obj2 = { style: tmp.contentWrapper, children: null };
+    const obj3 = { style: tmp.gameDescriptionWrapperOuter, children: null };
+    const obj4 = { style: tmp.gameIcon, resizeMode: "contain", source: null, disableColor: true };
     let str;
     if (stateFromStores != null) {
       str = stateFromStores.getIconURL(56);
@@ -51,35 +47,28 @@ export default function MessageGameIconActionSheet(applicationId) {
     if (str == null) {
       str = "";
     }
-    const obj2 = { startExpanded: true, children: null };
-    const obj3 = { uri: null };
-    obj3[0] = str;
-    obj1[2] = obj3;
-    const items1 = [closure_6(tmp2(1178).Icon, obj1), ];
-    const obj4 = { style: null, children: null };
-    obj4[0] = tmp.gameDescriptionWrapper;
-    const obj5 = { style: null, variant: "text-xs/medium", color: "text-muted", children: null };
-    obj5[0] = tmp.timestamp;
-    obj5[3] = applicationId.messageTimestamp;
-    const items2 = [closure_6(tmp2(4556).Text, obj5), ];
-    const obj6 = { variant: "text-sm/medium", children: null };
+    const obj5 = { startExpanded: true, children: null };
+    const obj6 = { uri: str };
+    obj4.source = obj6;
+    const items1 = [closure_6(tmp2(1178).Icon, obj4), ];
+    const obj7 = { style: tmp.gameDescriptionWrapper, children: null };
+    const obj8 = { style: tmp.timestamp, variant: "text-xs/medium", color: "text-muted", children: applicationId.messageTimestamp };
+    const items2 = [closure_6(tmp2(4570).Text, obj8), ];
+    const obj9 = { variant: "text-sm/medium", children: null };
     const intl = tmp2(1114).intl;
-    const obj7 = { applicationName: null };
-    obj7[0] = stateFromStores.name;
-    const items3 = [intl.format(tmp2(1114).t.J3s8JP, obj7), " ", ];
+    const obj10 = { applicationName: stateFromStores.name };
+    const items3 = [intl.format(tmp2(1114).t.J3s8JP, obj10), " ", ];
     const intl2 = tmp2(1114).intl;
-    const obj8 = { helpdeskArticle: null };
-    obj8[0] = combinedDefault.getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS);
-    items3[2] = intl2.format(tmp2(1114).t.BPDKoA, obj8);
-    obj6[1] = items3;
-    items2[1] = closure_7(tmp2(4556).Text, obj6);
-    obj4[1] = items2;
-    items1[1] = closure_7(View, obj4);
-    obj[1] = items1;
-    obj[1] = closure_7(View, obj);
-    obj2[1] = closure_6(View, obj);
-    tmp5Result = tmp5(tmp2(7150).BottomSheet, obj2);
-    const obj13 = combinedDefault;
+    const obj11 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS) };
+    items3[2] = intl2.format(tmp2(1114).t.BPDKoA, obj11);
+    obj9.children = items3;
+    items2[1] = closure_7(tmp2(4570).Text, obj9);
+    obj7.children = items2;
+    items1[1] = closure_7(View, obj7);
+    obj3.children = items1;
+    obj2.children = closure_7(View, obj3);
+    obj5.children = closure_6(View, obj2);
+    tmp5Result = tmp5(tmp2(7164).BottomSheet, obj5);
   }
   return tmp5Result;
 };

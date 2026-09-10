@@ -1,12 +1,11 @@
-// Module ID: 6410
-// Function ID: 6411
-// Name: metadata
+// Module ID: 6424
+// Function ID: 6425
 // Dependencies: [2]
 
-// Module 6410 (metadata)
-import set from "set" /* 2 */;
+// Module 6424
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ServerBannerDefaultExample-2x.png.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ServerBannerDefaultExample-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/c73065e53e3d4f56a487b1287b595f038ecc15df549fb139294943a8beb410ee.png";
 export const metadata = { fileBytes: 133863 };

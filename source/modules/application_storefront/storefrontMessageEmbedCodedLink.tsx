@@ -1,16 +1,17 @@
-// Module ID: 7691
-// Function ID: 7692
-// Name: makeStorefrontSKUCodedLink
+// Module ID: 7705
+// Function ID: 7706
+// Name: storefrontMessageEmbedCodedLink
 // Dependencies: [32, 2]
 // Exports: makeStorefrontSKUCodedLink, parseStorefrontSkuCodedLink
 
-// Module 7691 (makeStorefrontSKUCodedLink)
-import closure_0 from "_slicedToArray" /* 32 */;
+// Module 7705 (storefrontMessageEmbedCodedLink)
+import _slicedToArray from "module_32" /* 32 */;
 
-const result = require("set").fileFinishedImporting("modules/application_storefront/storefrontMessageEmbedCodedLink.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/application_storefront/storefrontMessageEmbedCodedLink.tsx");
 
-export const makeStorefrontSKUCodedLink = function makeStorefrontSKUCodedLink(formatted, formatted2) {
-  return "" + formatted + ":" + formatted2;
+export const makeStorefrontSKUCodedLink = function makeStorefrontSKUCodedLink(match7, match72) {
+  return "" + match7 + ":" + match72;
 };
 export const parseStorefrontSkuCodedLink = function parseStorefrontSkuCodedLink(code) {
   const parts = code.split(":");
@@ -18,7 +19,7 @@ export const parseStorefrontSkuCodedLink = function parseStorefrontSkuCodedLink(
     return null;
   } else {
     const obj = { applicationId: null, skuId: null };
-    [obj[0], obj[1]] = callback(parts, 2);
+    [obj.applicationId, obj.skuId] = parts;
     return obj;
   }
 };

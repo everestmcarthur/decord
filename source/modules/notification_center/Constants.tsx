@@ -1,12 +1,12 @@
-// Module ID: 16429
-// Function ID: 16430
-// Name: PROFILE_BACKGROUND
+// Module ID: 16460
+// Function ID: 16461
+// Name: Constants
 // Dependencies: [2]
 
-// Module 16429 (PROFILE_BACKGROUND)
-import set from "set" /* 2 */;
+// Module 16460 (Constants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/notification_center/Constants.tsx");
+const result = size.fileFinishedImporting("modules/notification_center/Constants.tsx");
 
 export const PROFILE_BACKGROUND = "#83DDC5";
 export const FRIEND_BACKGROUND = "#F47FFF";

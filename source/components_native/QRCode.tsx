@@ -1,100 +1,93 @@
-// Module ID: 9869
-// Function ID: 9870
-// Name: frozen
-// Dependencies: [109, 19, 17, 21, 4560, 576, 4271, 9870, 4965, 9884, 8245, 2]
+// Module ID: 9896
+// Function ID: 9897
+// Name: components_native/QRCode
+// Dependencies: [109, 19, 17, 21, 4574, 576, 4284, 9897, 4979, 9911, 8271, 2]
 
-// Module 9869 (frozen)
-import ThemesDefault from "Themes" /* 576 */;
-import isBlurDisabledDefault from "isBlurDisabled" /* 4965 */;
-import _modDef8245 from "module_8245" /* 8245 */;
-import QRCodeDefault from "QRCode" /* 9870 */;
-import registerAsset from "registerAsset" /* 9884 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9896 (components_native/QRCode)
+import nativeDefault from "native" /* 576 */;
+import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8271 */;
+import QRCodeDefault from "QRCode" /* 9897 */;
+import _mod9911 from "module_9911" /* 9911 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+const VisualEffectViewDefault = tmp7(4979);
+require = fn;
 let closure_3 = ["style", "text", "blur", "accessibilityLabel"];
-({ View: c5, Image: closure_6, StyleSheet: error } = get_ActivityIndicator);
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { qrCode: null, qrCodeContainer: null, qrCodeOverlay: null, "size-40": null, "size-60": null };
-createCacheKey = { display: "flex", alignSelf: "flex-start", padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.xs };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { display: "flex", alignSelf: "flex-start", alignItems: "center", justifyContent: "center", position: "relative" };
-createCacheKey[2] = { display: "flex", alignItems: "center", justifyContent: "center" };
-createCacheKey[3] = { width: 40, height: 40 };
-createCacheKey[4] = { width: 60, height: 60 };
-let closure_10 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
-let obj1 = { SIZE_40: "SIZE_40", SIZE_60: "SIZE_60" };
-const frozen = Object.freeze({ [obj1.SIZE_40]: "size-40", [obj1.SIZE_60]: "size-60" });
-const PureComponent = importAllResult.PureComponent;
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, Image: metroRequire, StyleSheet: closure_7 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { qrCode: { display: "flex", alignSelf: "flex-start", padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.xs }, qrCodeContainer: { display: "flex", alignSelf: "flex-start", alignItems: "center", justifyContent: "center", position: "relative" }, qrCodeOverlay: { display: "flex", alignItems: "center", justifyContent: "center" }, "size-40": { width: 40, height: 40 }, "size-60": { width: 60, height: 60 } };
+let closure_10 = createStyles.createLegacyClassComponentStyles(obj2);
+let obj4 = { SIZE_40: "SIZE_40", SIZE_60: "SIZE_60" };
+const frozen = Object.freeze({ [obj4.SIZE_40]: "size-40", [obj4.SIZE_60]: "size-60" });
+const PureComponent = noop.PureComponent;
 class QRCode extends PureComponent {
 }
 QRCode.prototype["render"] = function render() {
   const props = this.props;
   const accessibilityLabel = props.accessibilityLabel;
   ({ style, text, blur } = props);
-  const tmp2 = callback(props, closure_3);
-  let obj = { accessible: null != accessibilityLabel, accessibilityRole: "image", accessibilityLabel, style: items, children: null };
+  const tmp2 = _objectWithoutProperties(props, closure_3);
+  const obj = { accessible: null != accessibilityLabel, accessibilityRole: "image", accessibilityLabel, style: null, children: null };
   let tmp3Result = null;
-  items = [callback3(this.context).qrCode, { backgroundColor: tmp2.bgColor }, style];
-  obj = { style: obj, children: null };
-  obj = { position: "relative", width: tmp2.size, height: tmp2.size };
-  obj1 = { value: text, level: "M" };
-  const tmp = callback3(this.context);
-  const tmp6 = closure_9;
-  const tmp7 = importDefault;
+  const items = [closure_10(this.context).qrCode, { backgroundColor: tmp2.bgColor }, style];
+  obj.style = items;
+  const obj2 = { style: { position: "relative", width: tmp2.size, height: tmp2.size }, children: null };
+  const obj3 = { value: text, level: "M" };
+  const tmp = closure_10(this.context);
+  const tmp6 = React7;
   const merged = Object.assign(tmp2);
-  const items1 = [callback2(QRCodeDefault, obj1), ];
+  const items1 = [React6(QRCodeDefault, obj3), ];
   if (blur) {
-    const obj2 = { style: null, blurTheme: "dark" };
-    obj2[0] = closure_7.absoluteFill;
-    tmp3Result = tmp3(isBlurDisabledDefault, obj2);
+    obj4 = { style: React5.absoluteFill, blurTheme: "dark" };
+    tmp3Result = tmp3(VisualEffectViewDefault, obj4);
   }
   items1[1] = tmp3Result;
-  obj[1] = items1;
-  obj[4] = tmp6(closure_5, obj);
-  return callback2(closure_5, obj);
+  obj2.children = items1;
+  obj.children = tmp6(hasOwnProperty, obj2);
+  return React6(hasOwnProperty, obj);
 };
-QRCode.contextType = require("ManaContext").ThemeContext;
+QRCode.contextType = fn(4284).ThemeContext;
 QRCode.defaultProps = { size: 128, bgColor: "#ffffff", fgColor: "#000000" };
-const PureComponent2 = importAllResult.PureComponent;
+const PureComponent2 = noop.PureComponent;
 class QRCodeWithOverlay extends PureComponent2 {
 }
 QRCodeWithOverlay.prototype["render"] = function render() {
-  const tmp = callback3(this.context);
+  const tmp = closure_10(this.context);
   const props = this.props;
   let SIZE_40 = props.overlaySize;
   if (SIZE_40 == null) {
-    SIZE_40 = obj1.SIZE_40;
+    SIZE_40 = obj4.SIZE_40;
   }
-  let obj = { style: tmp.qrCodeContainer, children: null };
-  obj = {};
+  const obj = { style: tmp.qrCodeContainer, children: null };
+  const obj2 = {};
   const merged = Object.assign(this.props);
-  obj.blur = false;
-  const items = [callback2(QRCode, obj), , ];
-  obj = { style: items1, children: null };
-  items1 = [tmp.qrCodeOverlay, closure_7.absoluteFill];
-  obj1 = { style: tmp[frozen[SIZE_40]], source: registerAsset };
-  obj[1] = callback2(closure_6, obj1);
-  items[1] = callback2(closure_5, obj);
+  obj2.blur = false;
+  const items = [React6(QRCode, obj2), , ];
+  const obj3 = { style: null, children: null };
+  const items1 = [tmp.qrCodeOverlay, React5.absoluteFill];
+  obj3.style = items1;
+  obj4 = { style: tmp[frozen[SIZE_40]], source: _mod9911 };
+  obj3.children = React6(timestampProducer, obj4);
+  items[1] = React6(hasOwnProperty, obj3);
   let tmp6Result = null;
   if (props.blur) {
-    const obj2 = { style: null };
-    obj2[0] = closure_7.absoluteFill;
-    tmp6Result = callback2(_modDef8245, obj2);
+    const obj5 = { style: React5.absoluteFill };
+    tmp6Result = React6(VisualEffectViewThemedDefault, obj5);
   }
   items[2] = tmp6Result;
-  obj[1] = items;
-  return closure_9(closure_5, obj);
+  obj.children = items;
+  return React7(hasOwnProperty, obj);
 };
-QRCodeWithOverlay.contextType = require("ManaContext").ThemeContext;
+QRCodeWithOverlay.contextType = fn(4284).ThemeContext;
 QRCodeWithOverlay.defaultProps = { size: 144, bgColor: "#ffffff", fgColor: "#000000" };
-const result = require("set").fileFinishedImporting("components_native/QRCode.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/QRCode.tsx");
 
 export default QRCode;
-export const QRCodeOverlaySizes = obj1;
+export const QRCodeOverlaySizes = obj4;
 export const QR_CODE_OVERLAY_SIZE_MAP = frozen;
 export { QRCodeWithOverlay };

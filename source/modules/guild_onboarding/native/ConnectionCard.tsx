@@ -1,34 +1,28 @@
-// Module ID: 7160
-// Function ID: 7161
+// Module ID: 7174
+// Function ID: 7175
 // Name: ConnectionCard
-// Dependencies: [19, 7101, 21, 7161, 7178, 2]
+// Dependencies: [19, 7115, 21, 7175, 7192, 2]
 // Exports: default
 
-// Module 7160 (ConnectionCard)
-import noopAll from "noop" /* 19 */;
-import ApplicationConnectionCardDefault from "ApplicationConnectionCard" /* 7161 */;
-import ProviderConnectionCardDefault from "ProviderConnectionCard" /* 7178 */;
-import { OnboardingConnectionType } from "serverPromptToClientPrompt" /* 7101 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 7174 (ConnectionCard)
+import ApplicationConnectionCardDefault from "ApplicationConnectionCard" /* 7175 */;
+import ProviderConnectionCardDefault from "ProviderConnectionCard" /* 7192 */;
+import noop from "module_19" /* 19 */;
 
-noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_onboarding/native/ConnectionCard.tsx");
+const OnboardingConnectionType = fn(7115).OnboardingConnectionType;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_onboarding/native/ConnectionCard.tsx");
 
 export default function ConnectionCard(arg0) {
   ({ connection, guildId, location: _location } = arg0);
   const connection_type = connection.connection_type;
   if (OnboardingConnectionType.APPLICATION === connection_type) {
-    let obj = { connection: null, guildId: null, location: null };
-    obj[0] = connection;
-    obj[1] = guildId;
-    obj[2] = _location;
-    return jsx(ApplicationConnectionCardDefault, { connection: null, guildId: null, location: null });
+    const obj2 = { connection, guildId, location: _location };
+    return jsx(ApplicationConnectionCardDefault, { connection, guildId, location: _location });
   } else if (tmp.PROVIDER_CONNECTED_ACCOUNT === connection_type) {
-    obj = { connection: null, guildId: null, location: null };
-    obj[0] = connection;
-    obj[1] = guildId;
-    obj[2] = _location;
-    return jsx(ProviderConnectionCardDefault, { connection: null, guildId: null, location: null });
+    const obj = { connection, guildId, location: _location };
+    return jsx(ProviderConnectionCardDefault, { connection, guildId, location: _location });
   } else {
     const connection_type2 = connection.connection_type;
     return null;

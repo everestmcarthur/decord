@@ -1,26 +1,26 @@
-// Module ID: 10389
-// Function ID: 10390
+// Module ID: 10416
+// Function ID: 10417
 // Name: AnalyticsIcon
-// Dependencies: [19, 21, 576, 4261, 10390, 2]
+// Dependencies: [19, 21, 576, 4274, 10417, 2]
 // Exports: AnalyticsIcon
 
-// Module 10389 (AnalyticsIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 10390 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 10416 (AnalyticsIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod10417 from "module_10417" /* 10417 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/AnalyticsIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/AnalyticsIcon.tsx");
 
 export const AnalyticsIcon = function AnalyticsIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10417, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,14 +1,16 @@
-// Module ID: 12351
-// Function ID: 12352
-// Dependencies: [12344, 12352, 573, 12, 7782, 12355, 1940, 2]
+// Module ID: 12377
+// Function ID: 12378
+// Name: SearchActionCreators
+// Dependencies: [12370, 12378, 573, 12, 7796, 12381, 1940, 2]
 
-// Module 12351
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import updateUserGuildSettings from "updateUserGuildSettings" /* 1940 */;
-import createRequestPayloadDefault from "createRequestPayload" /* 12352 */;
+// Module 12377 (SearchActionCreators)
+import _modDef12 from "module_12" /* 12 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 1940 */;
+import SearchTabsFetchManagerDefault from "SearchTabsFetchManager" /* 12378 */;
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("modules/search/SearchActionCreators.tsx");
+const DispatcherDefault = tmp10(573);
+let result = size.fileFinishedImporting("modules/search/SearchActionCreators.tsx");
 
 export default {
   fetchTabMessages(searchContext) {
@@ -17,98 +19,86 @@ export default {
     let guildIdFromSearchContext;
     let mapped;
     ({ pagination, trackExactTotalHits, getLimit, searchMode } = searchContext);
-    let obj = searchContext(12344);
-    obj1 = searchContext(12344);
-    const searchQueryFromTokens = obj1.getSearchQueryFromTokens(obj.tokenizeQuery(searchQueryString));
+    let obj = searchContext(12370);
+    const tokenizeQueryResult = searchContext(12370).tokenizeQuery(searchQueryString);
+    const searchQueryFromTokens = searchContext(12370).getSearchQueryFromTokens(tokenizeQueryResult);
     if (Array.isArray(searchQueryFromTokens.pinned)) {
       const pinned = searchQueryFromTokens.pinned;
-      searchQueryFromTokens.pinned = pinned.some((arg0) => true === arg0);
+      searchQueryFromTokens.pinned = pinned.some((item) => true === item);
     }
-    let tmpResult = tmp(12344);
-    const result = tmpResult.searchModeToSearchQueryParams(searchMode);
-    obj = {};
+    let obj2 = searchContext(12370);
+    const result = searchContext(12370).searchModeToSearchQueryParams(searchMode);
+    let obj3 = {};
     const merged = Object.assign(searchQueryFromTokens);
     const merged1 = Object.assign(result);
-    tmpResult = tmp(12344);
-    guildIdFromSearchContext = tmpResult.getGuildIdFromSearchContext(searchContext);
+    const tmpResult = searchContext(12370);
+    guildIdFromSearchContext = searchContext(12370).getGuildIdFromSearchContext(searchContext);
     if (null != guildIdFromSearchContext) {
-      tmp(12344).setIncludeNSFW(obj, guildIdFromSearchContext);
-      const tmpResult1 = tmp(12344);
+      tmp(12370).setIncludeNSFW(obj3, guildIdFromSearchContext);
+      const tmpResult5 = tmp(12370);
     }
-    const tmp10 = importDefault;
-    const tokenizeQueryResult = obj.tokenizeQuery(searchQueryString);
-    obj = { id: null, searchContext: null, searchQuery: null, searchTabs: null, getLimit: null, pagination: null, trackExactTotalHits: null };
-    const obj7 = createRequestPayloadDefault;
-    obj[0] = searchContext(12344).getSearchContextId(searchContext);
-    obj[1] = searchContext;
-    obj[2] = obj;
-    obj[3] = searchTabs;
-    obj[4] = getLimit;
-    obj[5] = pagination;
-    obj[6] = trackExactTotalHits;
-    obj1 = obj7.create(obj);
+    const tmpResult4 = searchContext(12370);
+    const obj4 = { id: null, searchContext: null, searchQuery: null, searchTabs: null, getLimit: null, pagination: null, trackExactTotalHits: null };
+    const obj7 = SearchTabsFetchManagerDefault;
+    obj4.id = searchContext(12370).getSearchContextId(searchContext);
+    obj4.searchContext = searchContext;
+    obj4.searchQuery = obj3;
+    obj4.searchTabs = searchTabs;
+    obj4.getLimit = getLimit;
+    obj4.pagination = pagination;
+    obj4.trackExactTotalHits = trackExactTotalHits;
+    const tmpResult6 = searchContext(12370);
     if (onFetchStart != null) {
-      let obj2 = { searchContext: null, searchQueryString: null, searchQuery: null };
-      obj2[0] = searchContext;
-      obj2[1] = searchQueryString;
-      obj2[2] = obj;
-      onFetchStart(obj2);
+      const obj6 = { searchContext, searchQueryString, searchQuery: obj3 };
+      onFetchStart(obj6);
     }
-    mapped = searchTabs.map((arg0) => callback(arg0));
-    const tmpResult2 = searchContext(12344);
-    dispatcherDefault.dispatch({ type: "SEARCH_MESSAGES_START", ids: mapped });
-    const response = obj1.fetch((body) => {
+    mapped = searchTabs.map((item) => importDefault(item));
+    const obj5 = obj7.create(obj4);
+    DispatcherDefault.dispatch({ type: "SEARCH_MESSAGES_START", ids: mapped });
+    const response = obj5.fetch((body) => {
       body = body.body;
       const entries = Object.entries(body.tabs);
-      let obj = closure_1_1(closure_1_2[2]);
-      obj = {
+      let obj = DispatcherDefault;
+      obj.dispatch({
         type: "SEARCH_MESSAGES_SUCCESS",
         guildId: guildIdFromSearchContext,
-        data: entries.map((arg0) => {
-          [tmp, tmp2] = arg0;
+        data: entries.map((item) => {
+          [tmp, tmp2] = item;
           const cursor = tmp2.cursor;
-          const obj = { id: closure_1_1(tmp), analyticsId: body.analytics_id, totalResults: tmp2.total_results, cursor: null, messages: null, channels: null, threads: null, members: null, doingHistoricalIndex: null, documentsIndexed: null };
+          const obj = { id: closure_2_1(tmp), analyticsId: body.analytics_id, totalResults: tmp2.total_results, cursor: null, messages: null, channels: null, threads: null, members: null, doingHistoricalIndex: null, documentsIndexed: null };
           if (null == cursor) {
             let tmp6 = cursor;
           } else {
             tmp6 = null;
-            const obj2 = closure_2_1(closure_2_2[3]);
           }
-          obj[3] = tmp6;
-          ({ messages: obj[4], channels } = tmp2);
+          obj.cursor = tmp6;
+          ({ messages: obj.messages, channels } = tmp2);
           if (channels == null) {
             channels = [];
           }
-          obj[5] = channels;
+          obj.channels = channels;
           let threads = tmp2.threads;
           if (threads == null) {
             threads = [];
           }
-          obj[6] = threads;
+          obj.threads = threads;
           let members = tmp2.members;
           if (members == null) {
             members = [];
           }
-          obj[7] = members.map((arg0) => callback(table[4])(arg0));
-          ({ doing_deep_historical_index: obj[8], documents_indexed: obj[9] } = body);
+          obj.members = members.map((item) => closure_1_1(closure_1_2[4])(item));
+          ({ doing_deep_historical_index: obj.doingHistoricalIndex, documents_indexed: obj.documentsIndexed } = body);
           return obj;
         })
-      };
-      obj.dispatch(obj);
+      });
       if (closure_2 != null) {
-        obj = { searchContext: null, tabEntries: null };
-        obj[0] = body;
-        obj[1] = entries;
-        tmp2(obj);
+        const obj3 = { searchContext: body, tabEntries: entries };
+        tmp2(obj3);
       }
     }, () => {
-      let obj = closure_1_1(closure_1_2[2]);
-      obj = { type: "SEARCH_MESSAGES_INDEXING", ids: mapped };
-      obj.dispatch(obj);
+      DispatcherDefault.dispatch({ type: "SEARCH_MESSAGES_INDEXING", ids: mapped });
     }, (error) => {
-      let obj = closure_1_1(closure_1_2[2]);
-      obj = { type: "SEARCH_MESSAGES_FAILURE", ids: mapped, error };
-      obj.dispatch(obj);
+      DispatcherDefault.dispatch({ type: "SEARCH_MESSAGES_FAILURE", ids: mapped, error });
     });
     return true;
   },
@@ -117,97 +107,93 @@ export default {
     let guildIdFromSearchContext;
     let searchContextId;
     ({ pagination, searchMode, searchEverywhere } = arg0);
-    let obj = guildIdFromSearchContext(12344);
-    obj = {};
-    let obj2 = guildIdFromSearchContext(12344);
-    const merged = Object.assign(obj2.getSearchQueryFromTokens(obj.tokenizeQuery(searchQueryString)));
-    const tokenizeQueryResult = obj.tokenizeQuery(searchQueryString);
-    const merged1 = Object.assign(guildIdFromSearchContext(12344).searchModeToSearchQueryParams(searchMode));
-    obj.offset = pagination.offset;
-    const obj4 = guildIdFromSearchContext(12344);
-    guildIdFromSearchContext = guildIdFromSearchContext(12344).getGuildIdFromSearchContext(searchContext);
+    let obj2 = {};
+    const obj = guildIdFromSearchContext(12370);
+    const tokenizeQueryResult = guildIdFromSearchContext(12370).tokenizeQuery(searchQueryString);
+    const merged = Object.assign(guildIdFromSearchContext(12370).getSearchQueryFromTokens(tokenizeQueryResult));
+    let obj3 = guildIdFromSearchContext(12370);
+    const merged1 = Object.assign(guildIdFromSearchContext(12370).searchModeToSearchQueryParams(searchMode));
+    obj2.offset = pagination.offset;
+    const obj4 = guildIdFromSearchContext(12370);
+    guildIdFromSearchContext = guildIdFromSearchContext(12370).getGuildIdFromSearchContext(searchContext);
     if (null != guildIdFromSearchContext) {
-      let tmpResult = tmp(12344);
-      tmpResult.setIncludeNSFW(obj, guildIdFromSearchContext);
+      tmp(12370).setIncludeNSFW(obj2, guildIdFromSearchContext);
+      const tmpResult = tmp(12370);
     }
     if (searchEverywhere) {
-      obj.search_everywhere = true;
+      obj2.search_everywhere = true;
     }
-    tmpResult = tmp(12344);
-    searchContextId = tmpResult.getSearchContextId(searchContext);
-    const obj5 = guildIdFromSearchContext(12344);
+    const obj5 = guildIdFromSearchContext(12370);
+    searchContextId = guildIdFromSearchContext(12370).getSearchContextId(searchContext);
     const tmp9 = searchContextId;
-    obj = { id: searchContextId, searchType: searchContext.type, searchQuery: obj };
-    const obj8 = searchContextId(12355);
+    const tmpResult2 = guildIdFromSearchContext(12370);
+    const obj6 = { id: searchContextId, searchType: searchContext.type, searchQuery: obj2 };
+    const obj8 = searchContextId(12381);
     if (onFetchStart != null) {
-      obj2 = { searchContext: null, searchQueryString: null, searchQuery: null };
-      obj2[0] = searchContext;
-      obj2[1] = searchQueryString;
-      obj2[2] = obj;
-      onFetchStart(obj2);
+      const obj9 = { searchContext, searchQueryString, searchQuery: obj2 };
+      onFetchStart(obj9);
     }
-    obj1 = searchContextId(12355).create(obj);
+    const obj7 = searchContextId(12381).create({ id: searchContextId, searchType: searchContext.type, searchQuery: obj2 });
+    const obj10 = { type: "SEARCH_MESSAGES_START", ids: null };
     let items = [searchContextId];
-    tmp9(573).dispatch({ type: "SEARCH_MESSAGES_START", ids: items });
-    const response = obj1.fetch((analyticsId) => {
-      let obj = searchContextId(closure_1_2[2]);
-      obj = { type: "SEARCH_MESSAGES_SUCCESS", guildId: guildIdFromSearchContext, data: null };
-      obj = { id: searchContextId, analyticsId: analyticsId.body.analytics_id, totalResults: analyticsId.body.total_results, messages: analyticsId.body.messages, threads: null, members: null, doingHistoricalIndex: null, documentsIndexed: null, channels: null, cursor: null };
+    obj10.ids = items;
+    tmp9(573).dispatch(obj10);
+    const response = obj7.fetch((analyticsId) => {
+      const obj2 = { type: "SEARCH_MESSAGES_SUCCESS", guildId: guildIdFromSearchContext, data: null };
+      const obj3 = { id: searchContextId, analyticsId: analyticsId.body.analytics_id, totalResults: analyticsId.body.total_results, messages: analyticsId.body.messages, threads: null, members: null, doingHistoricalIndex: null, documentsIndexed: null, channels: null, cursor: null };
       let threads = analyticsId.body.threads;
       if (threads == null) {
         threads = [];
       }
-      obj[4] = threads;
+      obj3.threads = threads;
       let members = analyticsId.body.members;
       if (members == null) {
         members = [];
       }
-      obj[5] = members.map((arg0) => callback(table[4])(arg0));
-      obj[6] = analyticsId.body.doing_deep_historical_index;
-      obj[7] = analyticsId.body.documents_indexed;
+      obj3.members = members.map((item) => searchContextId(closure_1_2[4])(item));
+      obj3.doingHistoricalIndex = analyticsId.body.doing_deep_historical_index;
+      obj3.documentsIndexed = analyticsId.body.documents_indexed;
       let channels = analyticsId.body.channels;
       if (channels == null) {
         channels = [];
       }
-      obj[8] = channels;
-      const items = [obj];
-      obj[2] = items;
-      obj.dispatch(obj);
+      obj3.channels = channels;
+      const items = [obj3];
+      obj2.data = items;
+      DispatcherDefault.dispatch(obj2);
     }, () => {
+      const obj2 = { type: "SEARCH_MESSAGES_INDEXING", ids: null };
       const items = [searchContextId];
-      searchContextId(closure_1_2[2]).dispatch({ type: "SEARCH_MESSAGES_INDEXING", ids: items });
+      obj2.ids = items;
+      DispatcherDefault.dispatch(obj2);
     }, (error) => {
-      let obj = searchContextId(closure_1_2[2]);
-      obj = { type: "SEARCH_MESSAGES_FAILURE", ids: items, error };
-      items = [searchContextId];
-      obj.dispatch(obj);
+      const obj2 = { type: "SEARCH_MESSAGES_FAILURE", ids: null, error };
+      const items = [searchContextId];
+      obj2.ids = items;
+      DispatcherDefault.dispatch(obj2);
     });
   },
   clearSearchRecentMessages() {
-    dispatcherDefault.dispatch({ type: "SEARCH_RECENT_MESSAGES_CLEAR" });
+    DispatcherDefault.dispatch({ type: "SEARCH_RECENT_MESSAGES_CLEAR" });
   },
   clearAllSearchMesssages() {
-    dispatcherDefault.dispatch({ type: "SEARCH_MESSAGES_CLEAR_ALL" });
+    DispatcherDefault.dispatch({ type: "SEARCH_MESSAGES_CLEAR_ALL" });
   },
   clearSearchMessages(id) {
-    let obj = dispatcherDefault;
-    obj = { type: "SEARCH_MESSAGES_CLEAR", id };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "SEARCH_MESSAGES_CLEAR", id });
   },
   initializeAutocomplete(channelDetailsSearchContext) {
-    let obj = dispatcherDefault;
-    obj = { type: "SEARCH_AUTOCOMPLETE_INITIALIZE", searchContext: channelDetailsSearchContext };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "SEARCH_AUTOCOMPLETE_INITIALIZE", searchContext: channelDetailsSearchContext });
   },
   updateAutocompleteQuery(arg0) {
     ({ queryString, searchContext, tokens, cursorScope } = arg0);
     if (queryString.trim().length > 0) {
-      const FrecencyUserSettingsActionCreators = updateUserGuildSettings.FrecencyUserSettingsActionCreators;
+      const FrecencyUserSettingsActionCreators = UserSettingsProtoActionCreators.FrecencyUserSettingsActionCreators;
       const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
     }
-    dispatcherDefault.dispatch({ type: "SEARCH_AUTOCOMPLETE_QUERY_UPDATE", searchContext, tokens, cursorScope });
+    DispatcherDefault.dispatch({ type: "SEARCH_AUTOCOMPLETE_QUERY_UPDATE", searchContext, tokens, cursorScope });
   },
   markSearchTokensRefreshed() {
-    dispatcherDefault.dispatch({ type: "SEARCH_TOKENS_REFRESHED" });
+    DispatcherDefault.dispatch({ type: "SEARCH_TOKENS_REFRESHED" });
   }
 };

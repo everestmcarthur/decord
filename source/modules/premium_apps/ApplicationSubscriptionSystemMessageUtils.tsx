@@ -1,30 +1,25 @@
-// Module ID: 7995
-// Function ID: 7996
-// Name: getApplicationSubscriptionSystemMessageASTContent
+// Module ID: 8009
+// Function ID: 8010
+// Name: ApplicationSubscriptionSystemMessageUtils
 // Dependencies: [1114, 2]
 // Exports: getApplicationSubscriptionSystemMessageASTContent
 
-// Module 7995 (getApplicationSubscriptionSystemMessageASTContent)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 8009 (ApplicationSubscriptionSystemMessageUtils)
+import util from "util" /* 1114 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/premium_apps/ApplicationSubscriptionSystemMessageUtils.tsx");
+const result = size.fileFinishedImporting("modules/premium_apps/ApplicationSubscriptionSystemMessageUtils.tsx");
 
 export const getApplicationSubscriptionSystemMessageASTContent = function getApplicationSubscriptionSystemMessageASTContent(arg0) {
   ({ application, username, usernameOnClick } = arg0);
   if (null != application) {
-    const intl2 = getSystemLocale.intl;
-    let obj = { username: null, applicationName: null, usernameOnClick: null };
-    obj[0] = username;
-    obj[1] = application.name;
-    obj[2] = usernameOnClick;
-    let formatToPartsResult = intl2.formatToParts(getSystemLocale.t.Tes5Ou, obj);
+    const intl2 = util.intl;
+    const obj2 = { username, applicationName: application.name, usernameOnClick };
+    let formatToPartsResult = intl2.formatToParts(util.t.Tes5Ou, obj2);
   } else {
-    const intl = getSystemLocale.intl;
-    obj = { username: null, usernameOnClick: null };
-    obj[0] = username;
-    obj[1] = usernameOnClick;
-    formatToPartsResult = intl.formatToParts(getSystemLocale.t.PUJtgi, obj);
+    const intl = util.intl;
+    const obj = { username, usernameOnClick };
+    formatToPartsResult = intl.formatToParts(util.t.PUJtgi, obj);
   }
   return formatToPartsResult;
 };

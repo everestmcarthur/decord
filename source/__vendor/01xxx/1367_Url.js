@@ -2,13 +2,14 @@
 // Function ID: 1368
 // Name: Url
 // Dependencies: [1275, 1368]
+// Exports: format, parse, resolve, resolveObject
 
 // Module 1367 (Url)
 import _mod1275 from "module_1275" /* 1275 */;
 import decode from "decode" /* 1368 */;
 
 require = arg1;
-const dependencyMap = arg6;
+let dependencyMap = arg6;
 class Url {
   constructor() {
     return;
@@ -48,8 +49,8 @@ class Url {
       if (!arg2) {
         num2 = 1;
         if (1 === str4.split("#").length) {
-          tmp79 = closure_5;
-          match = closure_5.exec(str5);
+          tmp79 = re5;
+          match = re5.exec(str5);
           if (match) {
             self.path = str5;
             self.href = str5;
@@ -59,12 +60,12 @@ class Url {
               if (arg1) {
                 tmp4 = closure_0;
                 tmp5 = closure_1;
-                obj2 = require("module_1275");
+                obj2 = closure_0(closure_1[0]);
                 str8 = self.search;
-                parsed = obj2.parse(require("module_1"));
+                parsed = obj2.parse(str8.substr(1));
               } else {
                 str7 = self.search;
-                parsed = require("module_1");
+                parsed = str7.substr(1);
               }
               self.query = parsed;
             } else {
@@ -78,8 +79,8 @@ class Url {
           }
         }
       }
-      tmp6 = closure_3;
-      match1 = closure_3.exec(str5);
+      tmp6 = re3;
+      match1 = re3.exec(str5);
       str9 = str5;
       tmp9 = match1;
       if (match1) {
@@ -131,7 +132,7 @@ class Url {
             }
             substr1 = substr7;
             if (-1 !== lastIndexOfResult) {
-              substr = require("module_0");
+              substr = substr7.slice(0, lastIndexOfResult);
               substr1 = substr7.slice(lastIndexOfResult + 1);
               tmp27 = globalThis;
               _decodeURIComponent = decodeURIComponent;
@@ -163,7 +164,7 @@ class Url {
             if (-1 === num10) {
               num10 = substr1.length;
             }
-            self.host = require("module_0");
+            self.host = substr1.slice(0, num10);
             substr2 = substr1.slice(num10);
             parseHostResult = self.parseHost();
             self.hostname = self.hostname || "";
@@ -188,8 +189,8 @@ class Url {
                   str19 = parts1[num12];
                   tmp38 = num12;
                   if (str19) {
-                    tmp39 = closure_9;
-                    if (!str19.match(closure_9)) {
+                    tmp39 = re9;
+                    if (!str19.match(re9)) {
                       length2 = str19.length;
                       num13 = 0;
                       str20 = "";
@@ -208,8 +209,8 @@ class Url {
                           str21 = text;
                         } while (num13 < length2);
                       }
-                      tmp43 = closure_9;
-                      if (!str21.match(closure_9)) {
+                      tmp43 = re9;
+                      if (!str21.match(re9)) {
                         break;
                       }
                     }
@@ -217,13 +218,13 @@ class Url {
                   num12 = num12 + 1;
                   tmp37 = substr2;
                 }
-                substr3 = require("module_0");
+                substr3 = parts1.slice(0, num12);
                 substr4 = parts1.slice(num12 + 1);
-                tmp44 = closure_10;
-                match2 = str19.match(closure_10);
+                tmp44 = re10;
+                match2 = str19.match(re10);
                 if (match2) {
-                  arr = require("decode");
-                  arr1 = substr4.unshift(match2[2]);
+                  arr1 = substr3.push(match2[1]);
+                  arr11 = substr4.unshift(match2[2]);
                 }
                 text1 = substr2;
                 if (substr4.length) {
@@ -246,7 +247,7 @@ class Url {
             if (!tmp36) {
               tmp49 = closure_0;
               tmp50 = closure_1;
-              obj3 = require("decode");
+              obj3 = closure_0(closure_1[1]);
               self.hostname = obj3.toASCII(self.hostname);
             }
             str26 = "";
@@ -262,7 +263,7 @@ class Url {
             if (tmp36) {
               str29 = self.hostname;
               num15 = 2;
-              self.hostname = require("module_1");
+              self.hostname = str29.substr(1, self.hostname.length - 2);
               text2 = tmp37;
               if ("/" !== tmp37[0]) {
                 text2 = `/${tmp37}`;
@@ -315,7 +316,7 @@ class Url {
         substr5 = arr8;
         if (-1 !== index3) {
           self.hash = arr8.substr(index3);
-          substr5 = require("module_0");
+          substr5 = arr8.slice(0, index3);
         }
         index4 = substr5.indexOf("?");
         tmp65 = substr5;
@@ -326,10 +327,10 @@ class Url {
           if (arg1) {
             tmp67 = closure_0;
             tmp68 = closure_1;
-            obj5 = require("module_1275");
+            obj5 = closure_0(closure_1[0]);
             self.query = obj5.parse(self.query);
           }
-          substr6 = require("module_0");
+          substr6 = substr5.slice(0, index4);
         } else {
           substr6 = substr5;
           if (arg1) {
@@ -357,7 +358,7 @@ class Url {
       }
       num3 = 2;
       str11 = "//";
-      tmp12 = "//" === require("module_0");
+      tmp12 = "//" === str9.substr(0, 2);
       tmp13 = !tmp12;
       if (tmp12) {
         tmp14 = tmp9;
@@ -370,7 +371,7 @@ class Url {
       tmp11 = tmp12;
       substr7 = str9;
       if (!tmp13) {
-        substr7 = require("module_2");
+        substr7 = str9.substr(2);
         flag = true;
         self.slashes = true;
         tmp11 = tmp12;
@@ -398,10 +399,10 @@ class Url {
     } else {
       flag = false;
       if (self.hostname) {
-        hostname = self.hostname;
+        hostname1 = self.hostname;
         str7 = ":";
         num = -1;
-        if (-1 === hostname.indexOf(":")) {
+        if (-1 === hostname1.indexOf(":")) {
           hostname = self.hostname;
         } else {
           str8 = "[";
@@ -426,7 +427,7 @@ class Url {
     if (length) {
       tmp7 = closure_0;
       tmp8 = closure_1;
-      obj = require("module_1275");
+      obj = closure_0(closure_1[0]);
       str10 = obj.stringify(self.query, { arrayFormat: "repeat", addQueryPrefix: false });
     }
     str11 = self.search;
@@ -445,7 +446,7 @@ class Url {
     if (str4) {
       num2 = -1;
       str13 = ":";
-      tmp10 = ":" !== require("module_4294967295");
+      tmp10 = ":" !== str4.substr(-1);
     }
     text3 = str4;
     if (tmp10) {
@@ -459,7 +460,7 @@ class Url {
         if (str6) {
           num4 = 0;
           str20 = "#";
-          tmp15 = "#" !== require("module_0");
+          tmp15 = "#" !== str6.charAt(0);
         }
         text4 = str6;
         if (tmp15) {
@@ -470,7 +471,7 @@ class Url {
         if (str11) {
           num5 = 0;
           str22 = "?";
-          tmp17 = "?" !== require("module_0");
+          tmp17 = "?" !== str11.charAt(0);
         }
         str23 = str11;
         if (tmp17) {
@@ -500,7 +501,7 @@ class Url {
     if (str5) {
       num3 = 0;
       str18 = "/";
-      tmp13 = "/" !== require("module_0");
+      tmp13 = "/" !== str5.charAt(0);
     }
     text5 = `//${str17}`;
     str16 = text5;
@@ -521,17 +522,17 @@ class Url {
       tmp2Result = tmp2(tmp5);
       return tmp2Result.format();
     }
-    obj = Object.create(Url.prototype);
-    obj = { protocol: null, slashes: null, auth: null, host: null, port: null, hostname: null, hash: null, search: null, query: null, pathname: null, path: null, href: null };
-    parsed = obj.parse(arg0, false, true);
-    tmp5 = obj;
+    obj1 = Object.create(Url.prototype);
+    url = { protocol: null, slashes: null, auth: null, host: null, port: null, hostname: null, hash: null, search: null, query: null, pathname: null, path: null, href: null };
+    parsed = url.parse(arg0, false, true);
+    tmp5 = url;
     return;
   }
   resolveObject(arg0) {
     url = arg0;
     if (typeof arg0 === "string") {
       tmp49 = Url;
-      obj = Object.create(Url.prototype);
+      obj1 = Object.create(Url.prototype);
       obj = {};
       tmp51 = null;
       obj.protocol = null;
@@ -551,7 +552,7 @@ class Url {
       parsed = obj.parse(arg0, false, true);
       url = obj;
     }
-    obj1 = Object.create(Url.prototype);
+    obj2 = Object.create(Url.prototype);
     url2 = { protocol: null, slashes: null, auth: null, host: null, port: null, hostname: null, hash: null, search: null, query: null, pathname: null, path: null, href: null };
     keys = Object.keys(this);
     num = 0;
@@ -603,13 +604,13 @@ class Url {
                 str36 = "/";
                 parts = str35.split("/");
                 if (parts.length) {
-                  arr = parts.shift();
-                  url.host = arr;
-                  if (!arr) {
+                  arr1 = parts.shift();
+                  url.host = arr1;
+                  if (!arr1) {
                     while (parts.length) {
-                      arr1 = parts.shift();
-                      url.host = arr1;
-                      if (arr1) {
+                      arr13 = parts.shift();
+                      url.host = arr13;
+                      if (arr13) {
                         break;
                       }
                     }
@@ -622,11 +623,11 @@ class Url {
                   url.hostname = "";
                 }
                 if ("" !== parts[0]) {
-                  arr2 = parts.unshift("");
+                  arr14 = parts.unshift("");
                 }
                 num7 = 2;
                 if (parts.length < 2) {
-                  arr3 = parts.unshift("");
+                  arr15 = parts.unshift("");
                 }
                 url2.pathname = parts.join("/");
               }
@@ -666,7 +667,7 @@ class Url {
       if (pathname) {
         str3 = url2.pathname;
         str4 = "/";
-        pathname = "/" === require("module_0");
+        pathname = "/" === str3.charAt(0);
       }
       host = url.host;
       if (!host) {
@@ -674,7 +675,7 @@ class Url {
         if (pathname2) {
           str5 = url.pathname;
           str6 = "/";
-          pathname2 = "/" === require("module_0");
+          pathname2 = "/" === str5.charAt(0);
         }
         host = pathname2;
       }
@@ -686,23 +687,23 @@ class Url {
         tmp8 = url2.host && url.pathname;
         tmp7 = tmp8;
       }
-      pathname = url2.pathname;
-      if (pathname) {
+      pathname1 = url2.pathname;
+      if (pathname1) {
         str7 = url2.pathname;
         str8 = "/";
-        pathname = str7.split("/");
-      }
-      if (!pathname) {
-        pathname = [];
-      }
-      pathname1 = url.pathname;
-      if (pathname1) {
-        str9 = url.pathname;
-        str10 = "/";
-        pathname1 = str9.split("/");
+        pathname1 = str7.split("/");
       }
       if (!pathname1) {
         pathname1 = [];
+      }
+      pathname3 = url.pathname;
+      if (pathname3) {
+        str9 = url.pathname;
+        str10 = "/";
+        pathname3 = str9.split("/");
+      }
+      if (!pathname3) {
+        pathname3 = [];
       }
       protocol = url2.protocol;
       if (protocol) {
@@ -714,17 +715,17 @@ class Url {
         url2.hostname = "";
         url2.port = null;
         if (url2.host) {
-          if ("" === pathname[0]) {
-            pathname[0] = url2.host;
+          if ("" === pathname1[0]) {
+            pathname1[0] = url2.host;
           } else {
-            arr4 = pathname.unshift(url2.host);
+            arr16 = pathname1.unshift(url2.host);
           }
         }
         url2.host = "";
         if (!url.protocol) {
           tmp13 = tmp7;
           if (tmp7) {
-            tmp14 = "" === pathname1[0] || "" === pathname[0];
+            tmp14 = "" === pathname3[0] || "" === pathname1[0];
             tmp13 = tmp14;
           }
           tmp10 = tmp13;
@@ -733,10 +734,10 @@ class Url {
           url.port = null;
           if (!url.host) {
             url.host = null;
-          } else if ("" !== pathname1[0]) {
-            arr5 = pathname1.unshift(url.host);
+          } else if ("" !== pathname3[0]) {
+            arr17 = pathname3.unshift(url.host);
           }
-          pathname1[0] = url.host;
+          pathname3[0] = url.host;
         }
       }
       if (host) {
@@ -751,30 +752,30 @@ class Url {
             }
             url2.hostname = hostname;
             ({ search: url2.search, query: url2.query } = url);
-            tmp17 = pathname1;
+            tmp17 = pathname3;
           }
           hostname = url.hostname;
         }
         host3 = url.host;
       } else {
-        if (pathname1.length) {
-          items = pathname;
-          if (!pathname) {
+        if (pathname3.length) {
+          items = pathname1;
+          if (!pathname1) {
             items = [];
           }
-          arr6 = items.pop();
-          combined = items.concat(pathname1);
+          arr18 = items.pop();
+          combined = items.concat(pathname3);
           ({ search: url2.search, query: url2.query } = url);
         } else {
-          combined = pathname;
+          combined = pathname1;
           if (null != url.search) {
             if (protocol) {
-              url2.host = pathname.shift();
+              url2.host = pathname1.shift();
               ({ host: url2.hostname, host: host2 } = url2);
               if (host2) {
-                host = url2.host;
+                host1 = url2.host;
                 str11 = "@";
-                host2 = host.indexOf("@") > 0;
+                host2 = host1.indexOf("@") > 0;
               }
               parts1 = host2;
               if (parts1) {
@@ -807,7 +808,7 @@ class Url {
         }
         if (combined.length) {
           num3 = -1;
-          first = require("module_4294967295")[0];
+          first = combined.slice(-1)[0];
           tmp19 = url2.host || url.host || combined.length > 1;
           if (tmp19) {
             str17 = ".";
@@ -852,7 +853,7 @@ class Url {
               diff = num5 - 1;
               if (num5) {
                 do {
-                  arr7 = combined.unshift("..");
+                  arr19 = combined.unshift("..");
                   tmp30 = diff;
                   diff = diff - 1;
                 } while (tmp30);
@@ -868,20 +869,20 @@ class Url {
             if (first1) {
               str21 = combined[0];
               str22 = "/";
-              first1 = "/" === require("module_0");
+              first1 = "/" === str21.charAt(0);
             }
             tmp31 = first1;
           }
           if (!tmp31) {
-            arr8 = combined.unshift("");
+            arr20 = combined.unshift("");
           }
           if (tmp19) {
             str23 = "/";
             str24 = combined.join("/");
-            tmp19 = "/" !== require("module_4294967295");
+            tmp19 = "/" !== str24.substr(-1);
           }
           if (tmp19) {
-            arr9 = combined.push("");
+            arr21 = combined.push("");
           }
           tmp35 = "" === combined[0];
           if (!tmp35) {
@@ -889,7 +890,7 @@ class Url {
             if (first2) {
               str25 = combined[0];
               str26 = "/";
-              first2 = "/" === require("module_0");
+              first2 = "/" === str25.charAt(0);
             }
             tmp35 = first2;
           }
@@ -905,9 +906,9 @@ class Url {
             url2.hostname = str27;
             ({ hostname: url2.host, host: host4 } = url2);
             if (host4) {
-              host1 = url2.host;
+              host5 = url2.host;
               str29 = "@";
-              host4 = host1.indexOf("@") > 0;
+              host4 = host5.indexOf("@") > 0;
             }
             parts2 = host4;
             if (parts2) {
@@ -929,7 +930,7 @@ class Url {
             tmp10 = !tmp35;
           }
           if (tmp10) {
-            arr10 = combined.unshift("");
+            arr22 = combined.unshift("");
           }
           if (combined.length > 0) {
             str32 = "/";
@@ -972,17 +973,17 @@ class Url {
   parseHost() {
     self = this;
     str = this.host;
-    match = closure_4.exec(str);
+    match = re4.exec(str);
     substr = str;
     if (match) {
       str2 = match[0];
       str3 = ":";
       if (":" !== str2) {
         num = 1;
-        self.port = require("module_1");
+        self.port = str2.substr(1);
       }
       num2 = 0;
-      substr = require("module_0");
+      substr = str.substr(0, str.length - str2.length);
     }
     if (substr) {
       self.hostname = substr;
@@ -997,14 +998,14 @@ let items = ["{", "}", "|", "\\", "^", "`"];
 const items1 = ["'"];
 let combined = items1.concat(items.concat(["<", ">", "\"", "`", " ", "\r", "\n", "\t"]));
 const items2 = ["%", "/", "?", ";", "#"];
-let closure_7 = items2.concat(combined);
-let closure_8 = ["/", "?", "#"];
+const React5 = items2.concat(combined);
+const React6 = ["/", "?", "#"];
 const re9 = /^[+a-z0-9A-Z_-]{0,63}$/;
 const re10 = /^([+a-z0-9A-Z_-]{0,63})(.*)$/;
 let closure_11 = { javascript: true, "javascript:": true };
-let closure_12 = { javascript: true, "javascript:": true };
-let closure_13 = { http: true, https: true, ftp: true, gopher: true, file: true, "http:": true, "https:": true, "ftp:": true, "gopher:": true, "file:": true };
-arg5.parse = function urlParse(obj) {
+dependencyMap = { javascript: true, "javascript:": true };
+
+export const parse = function urlParse(obj, arg1, arg2) {
   if (obj) {
     if (typeof obj === "object") {
       if (obj instanceof Url) {
@@ -1012,24 +1013,24 @@ arg5.parse = function urlParse(obj) {
       }
     }
   }
-  obj = Object.create(Url.prototype);
-  obj = { protocol: null, slashes: null, auth: null, host: null, port: null, hostname: null, hash: null, search: null, query: null, pathname: null, path: null, href: null };
-  const parsed = obj.parse(obj, arg1, arg2);
-  return obj;
+  Object.create(Url.prototype);
+  const url = { protocol: null, slashes: null, auth: null, host: null, port: null, hostname: null, hash: null, search: null, query: null, pathname: null, path: null, href: null };
+  const parsed = url.parse(obj, arg1, arg2);
+  return url;
 };
-arg5.resolve = function urlResolve(obj) {
+export const resolve = function urlResolve(obj, arg1) {
   if (obj) {
     if (typeof obj === "object") {
       let obj2 = obj;
     }
     return obj2.resolve(arg1);
   }
-  obj = Object.create(Url.prototype);
-  obj = { protocol: null, slashes: null, auth: null, host: null, port: null, hostname: null, hash: null, search: null, query: null, pathname: null, path: null, href: null };
-  const parsed = obj.parse(obj, false, true);
-  obj2 = obj;
+  Object.create(Url.prototype);
+  const url = { protocol: null, slashes: null, auth: null, host: null, port: null, hostname: null, hash: null, search: null, query: null, pathname: null, path: null, href: null };
+  const parsed = url.parse(obj, false, true);
+  obj2 = url;
 };
-arg5.resolveObject = function urlResolveObject(obj) {
+export const resolveObject = function urlResolveObject(obj, arg1) {
   let object = arg1;
   if (obj) {
     if (obj) {
@@ -1038,14 +1039,14 @@ arg5.resolveObject = function urlResolveObject(obj) {
       }
       object = obj2.resolveObject(arg1);
     }
-    obj = Object.create(Url.prototype);
+    Object.create(Url.prototype);
     obj = { protocol: null, slashes: null, auth: null, host: null, port: null, hostname: null, hash: null, search: null, query: null, pathname: null, path: null, href: null };
     const parsed = obj.parse(obj, false, true);
     obj2 = obj;
   }
   return object;
 };
-arg5.format = function urlFormat(str) {
+export const format = function urlFormat(str) {
   let obj = str;
   if (typeof str === "string") {
     if (str) {
@@ -1054,10 +1055,10 @@ arg5.format = function urlFormat(str) {
       }
       obj = tmp5;
     }
-    obj = Object.create(Url.prototype);
-    obj = { protocol: null, slashes: null, auth: null, host: null, port: null, hostname: null, hash: null, search: null, query: null, pathname: null, path: null, href: null };
-    const parsed = obj.parse(str, undefined, undefined);
-    tmp5 = obj;
+    Object.create(Url.prototype);
+    const obj4 = { protocol: null, slashes: null, auth: null, host: null, port: null, hostname: null, hash: null, search: null, query: null, pathname: null, path: null, href: null };
+    const parsed = obj4.parse(str, undefined, undefined);
+    tmp5 = obj4;
   }
   if (obj instanceof Url) {
     let formatResult = obj.format();
@@ -1068,4 +1069,4 @@ arg5.format = function urlFormat(str) {
   }
   return formatResult;
 };
-arg5.Url = Url;
+export { Url };

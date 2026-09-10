@@ -1,27 +1,28 @@
-// Module ID: 17113
-// Function ID: 17114
-// Dependencies: [19, 21, 4560, 7150, 6627, 7123, 17114, 2]
+// Module ID: 17144
+// Function ID: 17145
+// Name: VoicePanelSettingsActionSheet
+// Dependencies: [19, 21, 4574, 7164, 6641, 7137, 17145, 2]
 
-// Module 17113
-import BottomSheetModal from "BottomSheetModal" /* 6627 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
-import Background from "Background" /* 7150 */;
-import VoicePanelSettingsOverviewHeaderDefault from "VoicePanelSettingsOverviewHeader" /* 17114 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 17144 (VoicePanelSettingsActionSheet)
+import BottomSheetModal from "BottomSheetModal" /* 6641 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7137 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7164 */;
+import VoicePanelSettingsOverviewDefault from "VoicePanelSettingsOverview" /* 17145 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let closure_4 = createCacheKey.createStyles({ wrapper: { gap: 24 } });
-const memoResult = importAllResult.memo(function VoicePanelSettingsActionSheet(arg0) {
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_4 = createStyles.createStyles({ wrapper: { gap: 24 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/header/VoicePanelSettingsActionSheet.tsx");
+
+export default noop.memo(function VoicePanelSettingsActionSheet(arg0) {
   ({ guildId, channelId } = arg0);
-  let obj = { startExpanded: true, scrollable: true, children: null };
-  obj = { children: null };
-  obj = { bottom: true, style: callback().wrapper, children: jsx(VoicePanelSettingsOverviewHeaderDefault, { guildId, channelId }) };
-  obj[0] = jsx(SafeAreaPaddingView.SafeAreaPaddingView, { bottom: true, style: callback().wrapper, children: jsx(VoicePanelSettingsOverviewHeaderDefault, { guildId, channelId }) });
-  obj[2] = jsx(BottomSheetModal.BottomSheetScrollView, { bottom: true, style: callback().wrapper, children: jsx(VoicePanelSettingsOverviewHeaderDefault, { guildId, channelId }) });
-  return jsx(Background.BottomSheet, { bottom: true, style: callback().wrapper, children: jsx(VoicePanelSettingsOverviewHeaderDefault, { guildId, channelId }) });
+  const obj = { startExpanded: true, scrollable: true, children: null };
+  const obj2 = { children: null };
+  const tmp = closure_4();
+  obj2.children = jsx(common_SafeAreaView.SafeAreaPaddingView, { bottom: true, style: closure_4().wrapper, children: jsx(VoicePanelSettingsOverviewDefault, { guildId, channelId }) });
+  obj.children = jsx(BottomSheetModal.BottomSheetScrollView, { children: null });
+  return jsx(Sheet_BottomSheet.BottomSheet, { startExpanded: true, scrollable: true, children: null });
 });
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/header/VoicePanelSettingsActionSheet.tsx");
-
-export default memoResult;

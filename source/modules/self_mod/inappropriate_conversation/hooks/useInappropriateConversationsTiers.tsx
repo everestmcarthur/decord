@@ -1,25 +1,24 @@
-// Module ID: 10972
-// Function ID: 10973
+// Module ID: 10999
+// Function ID: 11000
 // Name: useInappropriateConversationsTiers
-// Dependencies: [1371, 10920, 10973, 504, 10974, 2]
+// Dependencies: [1371, 10947, 11000, 504, 11001, 2]
 // Exports: useInappropriateConversationsTiers
 
-// Module 10972 (useInappropriateConversationsTiers)
+// Module 10999 (useInappropriateConversationsTiers)
 import initialize from "initialize" /* 504 */;
-import InappropriateConversationExperiment from "InappropriateConversationExperiment" /* 10973 */;
-import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 10974 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
-import { SafetyWarningTypes } from "handleConnectionOpen" /* 10920 */;
+import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 11000 */;
+import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 11001 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationsTiers.tsx");
+require = fn;
+const SafetyWarningTypes = fn(10947).SafetyWarningTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationsTiers.tsx");
 
 export const useInappropriateConversationsTiers = function useInappropriateConversationsTiers(channel) {
-  let obj = InappropriateConversationExperiment;
-  const isEligibleForInappropriateConversationWarning = obj.useIsEligibleForInappropriateConversationWarning({ location: "context-menu-item" });
-  const items = [closure_2];
+  const isEligibleForInappropriateConversationWarning = SelfModInappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning({ location: "context-menu-item" });
+  const items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj2 = initialize;
   const inappropriateConversationBannerForChannel = useInappropriateConversationBannerForChannel.useInappropriateConversationBannerForChannel(channel.id, "context-menu-item");
   let isStaffResult;
   if (stateFromStores != null) {
@@ -35,15 +34,13 @@ export const useInappropriateConversationsTiers = function useInappropriateConve
         if (inappropriateConversationBannerForChannel != null) {
           type = inappropriateConversationBannerForChannel.type;
         }
-        obj = { isTier1: null, isTier2: null };
-        obj[0] = type === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1;
+        const obj3 = { isTier1: type === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1, isTier2: null };
         let type1;
         if (inappropriateConversationBannerForChannel != null) {
           type1 = inappropriateConversationBannerForChannel.type;
         }
-        obj[1] = type1 === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2;
-        tmp4 = obj;
-        const tmp6 = SafetyWarningTypes;
+        obj3.isTier2 = type1 === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2;
+        tmp4 = obj3;
       }
     }
   }

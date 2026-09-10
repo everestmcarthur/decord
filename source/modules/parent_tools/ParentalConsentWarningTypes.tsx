@@ -1,12 +1,12 @@
-// Module ID: 14871
-// Function ID: 14872
-// Name: frozen
+// Module ID: 14897
+// Function ID: 14898
+// Name: ParentalConsentWarningTypes
 // Dependencies: [2]
 
-// Module 14871 (frozen)
-import set from "set" /* 2 */;
+// Module 14897 (ParentalConsentWarningTypes)
+import size from "module_2" /* 2 */;
 
 const frozen = Object.freeze({ BANNER: "banner", MODAL: "modal" });
-const result = set.fileFinishedImporting("modules/parent_tools/ParentalConsentWarningTypes.tsx");
+const result = size.fileFinishedImporting("modules/parent_tools/ParentalConsentWarningTypes.tsx");
 
 export const ParentalConsentWarningSurface = frozen;

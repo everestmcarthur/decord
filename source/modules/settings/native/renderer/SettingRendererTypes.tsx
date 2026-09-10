@@ -1,11 +1,11 @@
-// Module ID: 15409
-// Function ID: 15410
-// Name: SettingsBadgeType
+// Module ID: 15438
+// Function ID: 15439
+// Name: SettingRendererTypes
 // Dependencies: [2]
 
-// Module 15409 (SettingsBadgeType)
-import set from "set" /* 2 */;
+// Module 15438 (SettingRendererTypes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/settings/native/renderer/SettingRendererTypes.tsx");
+const result = size.fileFinishedImporting("modules/settings/native/renderer/SettingRendererTypes.tsx");
 
 export const SettingsBadgeType = { BETA: 0, [0]: "BETA" };

@@ -7,15 +7,14 @@
 import _arrayLikeToArray from "_arrayLikeToArray" /* 36 */;
 
 
-export default function _unsupportedIterableToArray(str) {
+export default function _unsupportedIterableToArray(str, arg1) {
   if (str) {
     if (typeof str === "string") {
       return _arrayLikeToArray(str, arg1);
     } else {
       const toString = {}.toString;
       const call = toString.call;
-      let arr = typeof call === "unknown" ? toString() : call(str);
-      const substr = arr.slice(8, -1);
+      const substr = typeof call === "unknown" ? toString() : call(str).slice(8, -1);
       let name = substr;
       if (tmp3) {
         name = str.constructor.name;
@@ -23,15 +22,16 @@ export default function _unsupportedIterableToArray(str) {
       if ("Map" !== name) {
         if ("Set" !== name) {
           if ("Arguments" === name) {
-            arr = _arrayLikeToArray(str, arg1);
+            let arr2 = _arrayLikeToArray(str, arg1);
           } else {
             const obj = /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/;
           }
         }
-        return arr;
+        return arr2;
       }
       const _Array = Array;
-      arr = Array.from(str);
+      arr2 = Array.from(str);
+      const arr = typeof call === "unknown" ? toString() : call(str);
       tmp3 = "Object" === substr && str.constructor;
     }
   }

@@ -1,75 +1,64 @@
-// Module ID: 14494
-// Function ID: 14495
-// Name: items
-// Dependencies: [32, 4209, 1371, 4465, 1074, 14479, 8339, 1086, 9559, 9564, 2]
+// Module ID: 14519
+// Function ID: 14520
+// Name: relationships
+// Dependencies: [32, 4222, 1371, 4479, 1074, 14504, 8367, 1086, 9586, 9591, 2]
 
-// Module 14494 (items)
-import fromStringAll from "fromString" /* 1086 */;
-import prototypeDefault from "prototype" /* 9559 */;
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 9564 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "markAllUserIdListsStale" /* 4209 */;
-import closure_6 from "mergeGuildAvatar" /* 1371 */;
-import ME from "ME" /* 1074 */;
-import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 14479 */;
+// Module 14519 (relationships)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
+import RPCErrorDefault from "RPCError" /* 9586 */;
+import RPCHelpers from "RPCHelpers" /* 9591 */;
+import _slicedToArray from "module_32" /* 32 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-({ ApplicationFlags: error, RelationshipTypes: closure_8, RPCCommands, RPCErrors: c9 } = ME);
+require = fn;
+const Constants = fn(1074);
+({ ApplicationFlags: closure_7, RelationshipTypes: closure_8, RPCCommands, RPCErrors: closure_9 } = Constants);
 let obj = {};
-obj = { scope: null, handler: null };
-obj = {};
-let items = [require("set").OAuth2Scopes.RELATIONSHIPS_READ];
-obj[require("RPC_SCOPE_CONFIG").RPC_SCOPE_CONFIG.ANY] = items;
-obj[0] = obj;
-obj[1] = function handler(socket) {
-  let obj = fromStringAll;
+const CONTEXT_MENU_ICON_NAMES = fn(14504);
+let obj3 = { scope: null, handler: null };
+let obj4 = {};
+let items = [fn(8367).OAuth2Scopes.RELATIONSHIPS_READ];
+obj4[fn(4479).RPC_SCOPE_CONFIG.ANY] = items;
+obj3.scope = obj4;
+obj3.handler = function handler(socket) {
+  const deserializer = BigFlagUtilsAll;
   let num = socket.socket.application.flags;
   if (num == null) {
     num = 0;
   }
-  const obj2 = fromStringAll;
-  const tmp = importAll;
-  const deserializeResult = fromStringAll.deserialize(num);
-  if (obj.has(deserializeResult, tmpResult.deserialize(constants.DISABLE_RELATIONSHIPS_ACCESS))) {
-    obj = { errorCode: null };
-    obj[0] = constants3.INVALID_PERMISSIONS;
-    const tmp34 = new prototypeDefault(obj, "Missing Permissions");
+  const obj = BigFlagUtilsAll;
+  const deserializer2 = BigFlagUtilsAll;
+  if (obj.has(deserializeResult, deserializer2.deserialize(constants.DISABLE_RELATIONSHIPS_ACCESS))) {
+    const obj2 = { errorCode: constants3.INVALID_PERMISSIONS };
+    const tmp34 = new RPCErrorDefault(obj2, "Missing Permissions");
     throw tmp34;
   } else {
     const items = [];
-    mutableRelationships = mutableRelationships.getMutableRelationships();
+    const mutableRelationships = RelationshipStore.getMutableRelationships();
     const entries = mutableRelationships.entries();
     const tmp8 = entries[Symbol.iterator]();
     while (tmp8 !== undefined) {
-      let tmp12 = callback;
-      let tmp13 = callback(tmp10, 2);
+      let tmp13 = _slicedToArray(tmp10, 2);
       [tmp14, tmp15] = tmp13;
-      let tmp17 = constants2;
       if (tmp15 !== constants2.NONE) {
-        let tmp18 = user;
-        let tmp19 = tmp14;
-        user = user.getUser(tmp14);
+        let user = UserStore.getUser(tmp14);
         if (null != user) {
-          let tmp22 = require;
-          let tmp23 = dependencyMap;
-          let tmp24 = dependencyMap;
-          let obj5 = recurseReplaceContentTree;
-          let tmp25 = tmp15;
-          let tmp26 = user;
-          let result = obj5.transformBaseRelationship(tmp16, tmp21);
-          let obj6 = recurseReplaceContentTree;
-          let arr = items.push(obj6.transformApplicationRelationship(result, socket.socket.application.id));
+          let obj3 = RPCHelpers;
+          let result = obj3.transformBaseRelationship(tmp16, tmp21);
+          let obj4 = RPCHelpers;
+          let arr = items.push(obj4.transformApplicationRelationship(result, socket.socket.application.id));
         }
       }
       continue;
     }
-    obj = { relationships: null };
-    obj[0] = items;
-    return obj;
+    const obj5 = { relationships: items };
+    return obj5;
   }
-  tmpResult = fromStringAll;
+  deserializeResult = deserializer.deserialize(num);
 };
-obj[RPCCommands.GET_RELATIONSHIPS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_RELATIONSHIPS, obj);
-let result = require("set").fileFinishedImporting("modules/rpc/server/commands/relationships.tsx");
+obj[RPCCommands.GET_RELATIONSHIPS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_RELATIONSHIPS, obj3);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/rpc/server/commands/relationships.tsx");
 
 export default obj;

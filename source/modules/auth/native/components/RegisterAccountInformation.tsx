@@ -1,207 +1,187 @@
-// Module ID: 15971
-// Function ID: 15972
+// Module ID: 16001
+// Function ID: 16002
 // Name: RegisterAccountInformation
-// Dependencies: [5, 32, 19, 17, 6595, 4544, 8744, 15949, 15950, 1074, 21, 4560, 576, 4296, 6944, 15946, 504, 15972, 15974, 15957, 1114, 15965, 15948, 15964, 6972, 15975, 15976, 4975, 6941, 5578, 2]
+// Dependencies: [5, 32, 19, 17, 6609, 4558, 8772, 15979, 15980, 1074, 21, 4574, 576, 4310, 6958, 15976, 504, 16002, 16004, 15987, 1114, 15995, 15978, 15994, 6986, 16005, 16006, 4989, 6955, 5592, 2]
 // Exports: default
 
-// Module 15971 (RegisterAccountInformation)
-import ThemesDefault from "Themes" /* 576 */;
-import _modDef4296 from "module_4296" /* 4296 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 6944 */;
-import useInitialRegistrationStepDefault from "useInitialRegistrationStep" /* 15964 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "hasConsented" /* 6595 */;
-import closure_9 from "updateInvite" /* 4544 */;
-import closure_10 from "getDisplayedInviteCode" /* 8744 */;
-import useRegistrationUIStore from "useRegistrationUIStore" /* 15949 */;
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15950 */;
-import { AuthStates } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import { LinearTransition, Easing } from "module_4296" /* 4296 */;
+// Module 16001 (RegisterAccountInformation)
+import nativeDefault from "native" /* 576 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4310 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 6958 */;
+import AuthFormViewDefault from "AuthFormView" /* 6986 */;
+import useInitialRegistrationStepDefault from "useInitialRegistrationStep" /* 15994 */;
+import useAuthFlowBackHandlerDefault from "useAuthFlowBackHandler" /* 15995 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import ConsentStore from "ConsentStore" /* 6609 */;
+import InviteStore from "InviteStore" /* 4558 */;
+import DisplayedInviteStore from "DisplayedInviteStore" /* 8772 */;
 
-const require = arg1;
-({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
-({ setRegistrationErrors: unpackModuleId, updateRegistrationOptions: closure_12, useRegistrationUIStore: map1 } = useRegistrationUIStore);
-({ RegisterTransitionSteps: closure_14, RegistrationTransitionActionTypes: closure_15 } = RegistrationTransitionActionTypes);
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+const RegistrationUIStore = fn(15979);
+({ setRegistrationErrors: closure_11, updateRegistrationOptions: closure_12, useRegistrationUIStore: map1 } = RegistrationUIStore);
+const RegistrationConstants = fn(15980);
+({ RegisterTransitionSteps: closure_14, RegistrationTransitionActionTypes: closure_15 } = RegistrationConstants);
+const AuthStates = fn(1074).AuthStates;
+const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-let closure_19 = createCacheKey.createStyles((arg0) => {
-  let obj = { container: null, password: null, button: null, errors: null, page: null };
-  obj = { marginTop: ThemesDefault.space.PX_24 };
-  obj[0] = obj;
-  obj[1] = { marginTop: 24 };
+const createStyles = fn(4574);
+let closure_19 = createStyles.createStyles((arg0) => {
+  const obj = { container: { marginTop: nativeDefault.space.PX_24 }, password: { marginTop: 24 }, button: null, errors: null, page: null };
   let num = 50;
   if (arg0) {
     num = 0;
   }
-  obj[2] = { marginTop: 24, marginBottom: num };
-  obj[3] = { marginTop: 4 };
-  obj[4] = { flex: 1 };
+  obj.button = { marginTop: 24, marginBottom: num };
+  obj.errors = { marginTop: 4 };
+  obj.page = { flex: 1 };
   return obj;
 });
-createCacheKey = { layout: null };
-createCacheKey[0] = require("module_300");
-const easingResult = LinearTransition.easing(Easing.inOut(require("module_4296").Easing.quad));
-let result = require("set").fileFinishedImporting("modules/auth/native/components/RegisterAccountInformation.tsx");
+let obj2 = { layout: null };
+const LinearTransition = fn(4310).LinearTransition;
+const Easing = fn(4310).Easing;
+obj2.layout = LinearTransition.easing(Easing.inOut(fn(4310).Easing.quad)).duration(300);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/auth/native/components/RegisterAccountInformation.tsx");
 
 export default function RegisterAccountInformation() {
-  function _handleSubmit() {
-    const self = this;
-    const tmp = ref(function*() {
-      if (v02 === 2) {
-        v02 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+  closure_9 = async function _handleSubmit(arg0, value) {
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        obj2 = { value, done: true };
+        return obj2;
       } else {
-        try {
-          v02 = 2;
-          if (0 === v0) {
-            if (arg0 === 1) {
-              v02 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v02 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let callback = tmp3;
-              let obj2 = tmp7;
-              obj2 = undefined;
-              callback = undefined;
-              obj1 = { step: null, actionType: null };
-              obj1[0] = closure_1_14.ACCOUNT_INFORMATION;
-              obj1[1] = closure_1_15.SUBMITTED;
-              closure_1_0(obj1);
-              obj2 = {};
-              const tmp61 = closure_1_6();
-              if (null != tmp61) {
-                obj2.username = tmp61;
-              }
-              closure_1_1(true);
-              c3 = 1;
-              v0 = 2;
-              v02 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = v0();
-              return obj3;
-            }
-          } else if (1 === tmp7) {
-            c3 = 0;
-            closure_1_1(false);
-            throw closure_2;
-          } else if (arg0 === 1) {
-            v02 = 3;
-            throw arg1;
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            c3 = 0;
-            callback(false);
-            v02 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
+            c5 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            callback = arg1;
-            if (null != callback) {
-              obj2.password = callback;
+            closure_1 = tmp3;
+            closure_0 = tmp7;
+            closure_128_0 = undefined;
+            closure_128_1 = undefined;
+            const obj4 = { step: constants.ACCOUNT_INFORMATION, actionType: constants2.SUBMITTED };
+            context(obj4);
+            const obj5 = {};
+            closure_128_0 = obj5;
+            const tmp60 = timestampProducer();
+            if (null != tmp60) {
+              obj5.username = tmp60;
             }
-            c3 = 0;
-            callback(false);
-            const _Object = Object;
-            if (Object.keys(obj2).length > 0) {
-              closure_1_11(obj2);
-              obj = { step: null, actionType: null, details: null };
-              obj[0] = closure_1_14.ACCOUNT_INFORMATION;
-              obj[1] = closure_1_15.INPUT_ERROR;
-              const _Object2 = Object;
-              obj[2] = Object.keys(obj2);
-              obj2(obj);
-              v02 = 3;
-              const obj5 = { value: null, done: true };
-              obj5[0] = undefined;
-              return obj5;
-            } else {
-              closure_1_12(closure_7);
-              v02(closure_8);
-              v02 = 3;
-              return { value: "HermesInternal", done: null };
-            }
+            importDefault(true);
+            c3 = 1;
+            c4 = 2;
+            c5 = 1;
+            obj6 = { value: _slicedToArray(), done: false };
+            return obj6;
           }
-        } catch (tmp44) {
-          closure_2 = tmp44;
-          if (tmp4 === c3) {
-            v02 = tmp2;
-            throw tmp44;
+        } else if (1 === tmp7) {
+          c3 = 0;
+          closure_129_1(false);
+          throw closure_2;
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 0;
+          closure_129_1(false);
+          c5 = 3;
+          const obj7 = { value, done: true };
+          return obj7;
+        } else {
+          closure_128_1 = value;
+          if (null != closure_128_1) {
+            closure_128_0.password = closure_128_1;
+          }
+          c3 = 0;
+          closure_129_1(false);
+          const _Object = Object;
+          if (Object.keys(closure_128_0).length > 0) {
+            closure_1_11(closure_128_0);
+            const obj = { step: constants.ACCOUNT_INFORMATION, actionType: constants2.INPUT_ERROR, details: null };
+            const _Object2 = Object;
+            obj.details = Object.keys(closure_128_0);
+            closure_129_0(obj);
+            c5 = 3;
+            const obj8 = { value: undefined, done: true };
+            return obj8;
           } else {
-            v0 = tmp;
+            closure_1_12(closure_129_7);
+            closure_129_5(closure_129_8);
+            c5 = 3;
+            return { value: "HermesInternal", done: null };
           }
+        }
+      } catch (tmp44) {
+        closure_2 = tmp44;
+        if (tmp4 === c3) {
+          c5 = tmp2;
+          throw tmp44;
+        } else {
+          c4 = tmp;
         }
       }
-    });
-    closure_9 = tmp;
-    const apply = tmp.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
     }
-    return applyArgumentsResult;
-  }
+  };
   const tmp3 = useWideAuthViewDefault();
-  const tmp4 = callback4(tmp3);
-  let obj = React;
-  context = React.useContext(context(15946).TrackRegistrationContext);
-  let tmp8 = callback2((submitting) => submitting.submitting);
-  const tmp7 = callback2((registrationOptions) => registrationOptions.registrationOptions);
-  [tmp10, importDefault] = callback(React.useState(false), 2);
-  const tmp11 = callback2((errors) => errors.errors);
-  obj1 = context(504);
-  const items = [closure_10];
-  dependencyMap = obj1.useStateFromStores(items, () => displayedInviteCode.getDisplayedInviteCode());
-  let obj2 = context(504);
-  const items1 = [_handleSubmit];
-  const stateFromStores = obj2.useStateFromStores(items1, () => {
+  const tmp4 = closure_19(tmp3);
+  context = noop.useContext(context(15976).TrackRegistrationContext);
+  let tmp8 = closure_13((submitting) => submitting.submitting);
+  const tmp7 = closure_13((registrationOptions) => registrationOptions.registrationOptions);
+  [tmp10, importDefault] = noop.useState(false);
+  const tmp11 = closure_13((errors) => errors.errors);
+  obj2 = context(504);
+  const items = [DisplayedInviteStore];
+  dependencyMap = obj2.useStateFromStores(items, () => displayedInviteCode.getDisplayedInviteCode());
+  const tmp9 = _slicedToArray(noop.useState(false), 2);
+  const items1 = [closure_9];
+  const stateFromStores = context(504).useStateFromStores(items1, () => {
     let invite = null;
     if (null != closure_2) {
-      invite = _handleSubmit.getInvite(tmp);
+      invite = InviteStore.getInvite(tmp);
     }
     return invite;
   });
-  const ref = React.useRef(null);
-  let obj3 = context(15972);
-  const passwordRegistrationStep = obj3.usePasswordRegistrationStep();
-  ({ password, validatePassword: closure_4, setPassword, passwordScore, preventSubmitPassword } = passwordRegistrationStep);
-  let obj4 = context(15974);
-  const usernameRegistrationStep = obj4.useUsernameRegistrationStep(AuthStates.REGISTER_ACCOUNT_INFORMATION);
-  ({ transitionToNextStepOrSubmit: closure_5, username, preventSubmitUsername, validateUsername: closure_6 } = usernameRegistrationStep);
-  obj = {};
+  const ref = noop.useRef(null);
+  let obj3 = context(504);
+  const passwordRegistrationStep = context(16002).usePasswordRegistrationStep();
+  ({ password, validatePassword: _slicedToArray, setPassword, passwordScore, preventSubmitPassword } = passwordRegistrationStep);
+  let obj4 = context(16002);
+  const usernameRegistrationStep = context(16004).useUsernameRegistrationStep(AuthStates.REGISTER_ACCOUNT_INFORMATION);
+  ({ transitionToNextStepOrSubmit: noop, username, preventSubmitUsername, validateUsername: closure_6 } = usernameRegistrationStep);
+  let obj6 = {};
   ({ usernameStatus, setUsername } = usernameRegistrationStep);
   const merged = Object.assign(tmp7);
-  obj.username = username;
-  obj.password = password;
+  obj6.username = username;
+  obj6.password = password;
   let code;
   if (stateFromStores != null) {
     code = stateFromStores.code;
   }
-  obj.invite = code;
-  let tmp5Result = tmp5(504);
-  const items2 = [result];
-  const stateFromStores1 = tmp5Result.useStateFromStores(items2, () => authenticationConsentRequired.getAuthenticationConsentRequired());
-  tmp5Result = tmp5(15957);
-  obj = { isConsentRequired: true === stateFromStores1 };
-  result = tmp5Result.hasAllRegistrationFieldsCompleted(obj, obj);
+  obj6.invite = code;
+  let obj5 = context(16004);
+  const items2 = [ConsentStore];
+  const stateFromStores1 = context(504).useStateFromStores(items2, () => result.getAuthenticationConsentRequired());
+  const tmp5Result = context(504);
+  const result = context(15987).hasAllRegistrationFieldsCompleted(obj6, { isConsentRequired: true === stateFromStores1 });
+  ConsentStore = result;
   const intl = tmp5(1114).intl;
   const string = intl.string;
   const t = tmp5(1114).t;
@@ -212,7 +192,7 @@ export default function RegisterAccountInformation() {
   }
   function handleSubmit() {
     const self = this;
-    const apply = _handleSubmit.apply;
+    const apply = closure_9.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -220,70 +200,67 @@ export default function RegisterAccountInformation() {
     }
     return applyArgumentsResult;
   }
-  let tmpResult = tmp(15965);
-  const tmp9 = callback(React.useState(false), 2);
-  tmpResult(context(15948).getPreviousRegistrationTransitionStep(AuthStates.REGISTER_ACCOUNT_INFORMATION));
+  let obj7 = { isConsentRequired: true === stateFromStores1 };
+  const tmp5Result3 = context(15987);
+  const tmpResult = useAuthFlowBackHandlerDefault;
+  tmpResult(context(15978).getPreviousRegistrationTransitionStep(AuthStates.REGISTER_ACCOUNT_INFORMATION));
   useInitialRegistrationStepDefault(AuthStates.REGISTER_ACCOUNT_INFORMATION);
   const items3 = [context];
   const effect = obj.useEffect(() => {
-    context({ step: closure_1_14.ACCOUNT_INFORMATION, actionType: closure_1_15.VIEWED });
+    context({ step: constants.ACCOUNT_INFORMATION, actionType: constants2.VIEWED });
   }, items3);
-  callback = obj.useCallback(() => {
+  const callback = obj.useCallback(() => {
     const current = ref.current;
     if (current != null) {
       current.focus();
     }
   }, []);
-  obj1 = { headerText: null, children: null };
-  tmpResult = tmp(6972);
+  let obj8 = { headerText: null, children: null };
+  const tmp5Result4 = context(15978);
   const intl2 = tmp5(1114).intl;
-  obj1[0] = intl2.string(context(1114).t.jec90v);
-  obj2 = { contentContainerStyle: { flexGrow: 1 }, keyboardShouldPersistTaps: "handled", children: null };
-  obj3 = { style: tmp4.container, children: callback3(tmp5(15975).RegisterUsernameInput, { username, setUsername, onSubmitEditing: callback, usernameStatus, submitBehavior: "submit", autoFocus: true }) };
-  const items4 = [callback3(closure_6, obj3), , ];
-  obj4 = { style: tmp4.password };
-  const merged1 = Object.assign(createCacheKey);
-  let obj5 = { ref, password, onPasswordChange: setPassword, onSubmitEditing: handleSubmit, passwordScore, returnKeyType: null };
+  obj8.headerText = intl2.string(context(1114).t.jec90v);
+  const obj9 = { contentContainerStyle: { flexGrow: 1 }, keyboardShouldPersistTaps: "handled", children: null };
+  const tmpResult2 = AuthFormViewDefault;
+  const items4 = [closure_17(closure_6, { style: tmp4.container, children: closure_17(context(16005).RegisterUsernameInput, { username, setUsername, onSubmitEditing: callback, usernameStatus, submitBehavior: "submit", autoFocus: true }) }), , ];
+  const obj11 = { style: tmp4.password };
+  const merged1 = Object.assign(obj2);
+  const obj12 = { ref, password, onPasswordChange: setPassword, onSubmitEditing: handleSubmit, passwordScore, returnKeyType: null };
   let str = "next";
   if (result) {
     str = "done";
   }
-  obj5[5] = str;
-  obj4.children = callback3(context(15976).RegisterPasswordInput, obj5);
-  items4[1] = callback3(_modDef4296.View, obj4);
-  const obj6 = { style: tmp4.button };
-  const merged2 = Object.assign(createCacheKey);
+  obj12.returnKeyType = str;
+  obj11.children = closure_17(context(16006).RegisterPasswordInput, obj12);
+  items4[1] = closure_17(ReanimatedRexportDefault.View, obj11);
+  const obj13 = { style: tmp4.button };
+  const merged2 = Object.assign(obj2);
   if (!tmp8) {
     tmp8 = tmp10;
   }
-  const obj7 = { size: "lg", loading: tmp8, text: stringResult, onPress: handleSubmit, disabled: null };
+  const obj14 = { size: "lg", loading: tmp8, text: stringResult, onPress: handleSubmit, disabled: null };
   if (!preventSubmitUsername) {
     preventSubmitUsername = preventSubmitPassword;
   }
-  obj7[4] = preventSubmitUsername;
-  const items5 = [callback3(context(4975).Button, obj7), ];
+  obj14.disabled = preventSubmitUsername;
+  const items5 = [closure_17(context(4989).Button, obj14), ];
   let tmp27Result = null;
   if (null != tmp11.message) {
     tmp27Result = null;
     if ("" !== tmp11.message) {
-      const obj8 = { style: null, children: null };
-      obj8[0] = tmp4.errors;
-      obj8[1] = tmp11.message;
-      tmp27Result = tmp27(tmp(6941), obj8);
+      const obj15 = { style: tmp4.errors, children: tmp11.message };
+      tmp27Result = tmp27(tmp(6955), obj15);
     }
   }
   items5[1] = tmp27Result;
-  obj6.children = items5;
-  items4[2] = closure_18(_modDef4296.View, obj6);
-  obj2[2] = items4;
-  obj1[1] = closure_18(obj, obj2);
-  tmp27Result = tmp27(tmpResult, obj1);
-  let tmp27Result1 = tmp27Result;
+  obj13.children = items5;
+  items4[2] = closure_18(ReanimatedRexportDefault.View, obj13);
+  obj9.children = items4;
+  obj8.children = closure_18(obj6, obj9);
+  const tmp27Result3 = closure_17(tmpResult2, obj8);
+  let tmp27Result4 = tmp27Result3;
   if (!tmp3) {
-    const obj9 = { style: null, children: null };
-    obj9[0] = tmp4.page;
-    obj9[1] = tmp27Result;
-    tmp27Result1 = tmp27(tmp(5578), obj9);
+    const obj16 = { style: tmp4.page, children: tmp27Result3 };
+    tmp27Result4 = tmp27(tmp(5592), obj16);
   }
-  return tmp27Result1;
+  return tmp27Result4;
 };

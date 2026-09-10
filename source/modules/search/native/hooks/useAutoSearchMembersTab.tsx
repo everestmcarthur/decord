@@ -1,31 +1,32 @@
-// Module ID: 16724
-// Function ID: 16725
+// Module ID: 16761
+// Function ID: 16762
 // Name: useAutoSearchMembersTab
-// Dependencies: [19, 12343, 12357, 1074, 12, 12344, 12365, 12342, 2]
+// Dependencies: [19, 12369, 12383, 1074, 12, 12370, 12391, 12368, 2]
 // Exports: useAutoSearchMembersTab
 
-// Module 16724 (useAutoSearchMembersTab)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "prototype" /* 12343 */;
-import { SEARCH_TEXT_INPUT_DEBOUNCE_TIME as closure_5 } from "SEARCH_TEXT_INPUT_DEBOUNCE_TIME" /* 12357 */;
-import { SearchTypes } from "ME" /* 1074 */;
+// Module 16761 (useAutoSearchMembersTab)
+import _mod12 from "module_12" /* 12 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12368 */;
+import noop from "module_19" /* 19 */;
+import SearchQueryStore from "SearchQueryStore" /* 12369 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/search/native/hooks/useAutoSearchMembersTab.tsx");
+require = fn;
+let closure_5 = fn(12383).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
+const SearchTypes = fn(1074).SearchTypes;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/search/native/hooks/useAutoSearchMembersTab.tsx");
 
 export const useAutoSearchMembersTab = function useAutoSearchMembersTab(searchContext, arg1) {
   closure_0 = searchContext;
   closure_1 = arg1;
   const items = [arg1, searchContext];
-  const effect = React.useEffect(() => {
-    if (!callback) {
-      let obj = searchContext(closure_1_2[4]);
-      const debounceResult = searchContext(closure_1_2[4]).debounce((arg0) => {
-        let obj = closure_1_4;
-        if (!closure_1_4.isAutocompleteVisible(closure_0)) {
-          const guildIdFromSearchContext = closure_1_0(closure_1_2[5]).getGuildIdFromSearchContext(tmp);
+  const effect = noop.useEffect(() => {
+    if (!closure_1) {
+      const debounceResult = _mod12.debounce((searchQueryString) => {
+        if (!autocompleteVisible.isAutocompleteVisible(searchContext)) {
+          const guildIdFromSearchContext = closure_0(12370).getGuildIdFromSearchContext(tmp);
           if (null != guildIdFromSearchContext) {
-            const channelIds = obj.getChannelIds(tmp);
+            const channelIds = autocompleteVisible.getChannelIds(tmp);
             let tmp8 = null;
             if (0 !== channelIds.size) {
               let first = null;
@@ -35,28 +36,23 @@ export const useAutoSearchMembersTab = function useAutoSearchMembersTab(searchCo
               }
               tmp8 = first;
             }
-            obj = { searchContext: null, searchQueryString: null, guildId: null, channelId: null, threadId: null };
-            obj[0] = tmp;
-            obj[1] = arg0;
-            obj[2] = guildIdFromSearchContext;
-            obj[3] = tmp8;
+            const obj4 = { searchContext: tmp, searchQueryString, guildId: guildIdFromSearchContext, channelId: tmp8, threadId: null };
             let tmp12 = null;
-            if (tmp.type === closure_1_6.THREAD) {
+            if (tmp.type === constants.THREAD) {
               tmp12 = tmp8;
             }
-            obj[4] = tmp12;
-            closure_1_1(tmp3[6]).searchGuildMemberTab(obj);
-            const obj3 = closure_1_1(tmp3[6]);
+            obj4.threadId = tmp12;
+            closure_1(12391).searchGuildMemberTab(obj4);
+            const obj3 = closure_1(12391);
           }
-          const obj2 = closure_1_0(closure_1_2[5]);
-          tmp3 = closure_1_2;
+          const obj2 = closure_0(12370);
         }
-      }, closure_1_5);
-      return callback(closure_1_2[7]).subscribeTextInputValue(searchContext, debounceResult);
+      }, closure_5);
+      return SearchPlatformUtilsDefault.subscribeTextInputValue(closure_0, debounceResult);
     }
   }, items);
   const items1 = [searchContext];
-  const effect1 = React.useEffect(() => () => {
-    const result = closure_1_1(closure_1_2[6]).cleanupGuildMemberTab(closure_0);
+  const effect1 = noop.useEffect(() => () => {
+    const result = closure_1(12391).cleanupGuildMemberTab(searchContext);
   }, items1);
 };

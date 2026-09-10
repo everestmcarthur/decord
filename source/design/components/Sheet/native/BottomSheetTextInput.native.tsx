@@ -1,26 +1,30 @@
-// Module ID: 9761
-// Function ID: 9762
+// Module ID: 9788
+// Function ID: 9789
 // Name: BottomSheetTextInput
-// Dependencies: [19, 21, 6626, 6624, 9762, 2]
+// Dependencies: [19, 21, 6640, 6638, 9789, 2]
 // Exports: BottomSheetTextInput
 
-// Module 9761 (BottomSheetTextInput)
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 9788 (BottomSheetTextInput)
+import NativeTextInput from "NativeTextInput" /* 6638 */;
+import useBottomSheetKeyboardHandlingDefault from "useBottomSheetKeyboardHandling" /* 6640 */;
+import TextInput_TextInputDefault from "TextInput/TextInput" /* 9789 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("design/components/Sheet/native/BottomSheetTextInput.native.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Sheet/native/BottomSheetTextInput.native.tsx");
 
 export const BottomSheetTextInput = function BottomSheetTextInput(ref) {
   ref = ref.ref;
   ({ onFocus, onBlur } = ref);
   ref = undefined;
-  const merged = Object.assign(ref, Object.create(null));
-  ref = React.useRef(null);
-  ({ onFocus: onFocus2, onBlur: onBlur2 } = ref(6626)({ onFocus, onBlur }));
-  let obj = ref(6624);
-  const keyboardBlurring = obj.useKeyboardBlurring(ref);
-  obj = {
+  const merged = Object.assign(ref, Object.assign({ onFocus: 0, onBlur: 0, ref: 0 }));
+  ref = noop.useRef(null);
+  ({ onFocus: onFocus2, onBlur: onBlur2 } = useBottomSheetKeyboardHandlingDefault({ onFocus, onBlur }));
+  const tmp3 = useBottomSheetKeyboardHandlingDefault({ onFocus, onBlur });
+  const keyboardBlurring = NativeTextInput.useKeyboardBlurring(ref);
+  const obj2 = {
     ref(current) {
       ref.current = current;
       if (typeof ref === "function") {
@@ -32,9 +36,8 @@ export const BottomSheetTextInput = function BottomSheetTextInput(ref) {
     onFocus: onFocus2,
     onBlur: onBlur2
   };
-  const tmp3 = ref(6626)({ onFocus, onBlur });
   const merged1 = Object.assign(merged);
-  return jsx(ref(9762), {
+  return jsx(TextInput_TextInputDefault, {
     ref(current) {
       ref.current = current;
       if (typeof ref === "function") {

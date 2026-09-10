@@ -2,6 +2,7 @@
 // Function ID: 1193
 // Name: UnknownFieldHandler
 // Dependencies: []
+// Exports: mergeBinaryOptions
 
 // Module 1192 (UnknownFieldHandler)
 UnknownFieldHandler.UnknownFieldHandler = undefined;
@@ -15,22 +16,24 @@ if (!UnknownFieldHandler) {
 }
 UnknownFieldHandler.symbol = Symbol.for("protobuf-ts/unknown");
 UnknownFieldHandler.onRead = (arg0, arg1, no, wireType, data) => {
-  if (typeof is !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  let isArray = arg1;
-  if (arg1) {
-    const _Array = Array;
-    isArray = Array.isArray(arg1[UnknownFieldHandler.symbol]);
-  }
-  const symbol = UnknownFieldHandler.symbol;
-  if (isArray) {
-    let items = arg1[symbol];
+  if (typeof is === "function") {
+    let isArray = arg1;
+    if (arg1) {
+      const _Array = Array;
+      isArray = Array.isArray(arg1[UnknownFieldHandler.symbol]);
+    }
+    const symbol = UnknownFieldHandler.symbol;
+    if (isArray) {
+      let items = arg1[symbol];
+    } else {
+      items = [];
+      arg1[symbol] = items;
+    }
+    const obj = { no, wireType, data };
+    items.push(obj);
   } else {
-    items = [];
-    arg1[symbol] = items;
+    throw new TypeError("Trying to call a non-function");
   }
-  items.push({ no, wireType, data });
 };
 UnknownFieldHandler.onWrite = (arg0, arg1, tag) => {
   for (const item10009 of listResult) {
@@ -40,22 +43,24 @@ UnknownFieldHandler.onWrite = (arg0, arg1, tag) => {
   }
 };
 UnknownFieldHandler.list = (arg0, arg1) => {
-  if (typeof is !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  let isArray = arg0;
-  if (arg0) {
-    const _Array = Array;
-    isArray = Array.isArray(arg0[UnknownFieldHandler.symbol]);
-  }
-  if (isArray) {
-    let found = arr;
-    if (arg1) {
-      found = arr.filter((no) => no.no == closure_0);
+  closure_0 = arg1;
+  if (typeof is === "function") {
+    let isArray = arg0;
+    if (arg0) {
+      const _Array = Array;
+      isArray = Array.isArray(arg0[UnknownFieldHandler.symbol]);
     }
-    return found;
+    if (isArray) {
+      let found = arr;
+      if (arg1) {
+        found = arr.filter((no) => no.no == closure_0);
+      }
+      return found;
+    } else {
+      return [];
+    }
   } else {
-    return [];
+    throw new TypeError("Trying to call a non-function");
   }
 };
 UnknownFieldHandler.last = (arg0, arg1) => UnknownFieldHandler.list(arg0, arg1).slice(-1)[0];
@@ -67,9 +72,9 @@ UnknownFieldHandler.mergeBinaryOptions = function mergeBinaryOptions(arg0, arg1)
 };
 let WireType = UnknownFieldHandler.WireType;
 if (!WireType) {
-  obj = {};
-  UnknownFieldHandler.WireType = obj;
-  WireType = obj;
+  const obj2 = {};
+  UnknownFieldHandler.WireType = obj2;
+  WireType = obj2;
 }
 WireType.Varint = 0;
 WireType[0] = "Varint";

@@ -1,105 +1,91 @@
-// Module ID: 4233
-// Function ID: 4234
-// Name: _createGatewayCheckoutContext
-// Dependencies: [5, 1085, 4234, 1232, 1272, 4240, 2]
+// Module ID: 4246
+// Function ID: 4247
+// Name: BillingUtils
+// Dependencies: [5, 1085, 4247, 1232, 1272, 4253, 2]
 // Exports: calculateStandardizedUnits, captureBillingException, captureBillingMessage, createGatewayCheckoutContext, getLocalizedDisplayMonth, isExpectedHttpClientError
 
-// Module 4233 (_createGatewayCheckoutContext)
-import _modDef1232 from "module_1232" /* 1232 */;
-import sendRequest from "sendRequest" /* 1272 */;
-import setDefault from "set" /* 4240 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { PaymentGateways } from "sum" /* 1085 */;
+// Module 4246 (BillingUtils)
+import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import BraintreeUtils from "BraintreeUtils" /* 4247 */;
+import BillingErrorDefault from "BillingError" /* 4253 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-require = arg1;
-function _createGatewayCheckoutContext() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c3 = 0;
-    return (function*(arg0) {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+require = fn;
+let closure_5 = async function _createGatewayCheckoutContext(arg0) {
+  let paymentGateway = arg0;
+  c2 = 0;
+  c3 = 0;
+  return (async (arg0, value) => {
+    if (c3 === 2) {
+      c3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
-        try {
-          c3 = 2;
-          if (0 === table) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_1 = tmp2;
-              closure_1 = undefined;
-              let obj2 = null;
-              if (null != obj2) {
-                if (obj2.paymentGateway === closure_1_4.BRAINTREE) {
-                  obj1 = callback(table[2]);
-                  table = 1;
-                  c3 = 1;
-                  obj1 = { value: null, done: false };
-                  obj1[0] = obj1.collectDeviceData();
-                  return obj1;
-                }
-              }
-              c3 = 3;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            closure_1 = arg1;
-            if (null != closure_1) {
-              obj2 = { braintree_device_data: null };
-              obj2[0] = closure_1;
-            }
-          }
-          c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } catch (tmp14) {
-          c3 = tmp;
-          throw tmp14;
-        }
+        return { value: "HermesInternal", done: null };
       }
-    })();
-  });
-  closure_5 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-const result = require("set").fileFinishedImporting("utils/BillingUtils.tsx");
+    } else {
+      try {
+        c3 = 2;
+        if (0 === c2) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_1 = tmp2;
+            closure_129_1 = undefined;
+            closure_129_0 = null;
+            if (null != paymentGateway) {
+              if (paymentGateway.paymentGateway === constants.BRAINTREE) {
+                c2 = 1;
+                c3 = 1;
+                const obj5 = { value: BraintreeUtils.collectDeviceData(), done: false };
+                return obj5;
+              }
+            }
+            c3 = 3;
+          }
+        } else if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          closure_129_1 = value;
+          if (null != closure_129_1) {
+            const obj6 = { braintree_device_data: closure_129_1 };
+            closure_129_0 = obj6;
+          }
+        }
+        c3 = 3;
+        const obj = { value, done: true };
+        return obj;
+      } catch (tmp14) {
+        c3 = tmp;
+        throw tmp14;
+      }
+    }
+  })();
+};
+const PaymentGateways = fn(1085).PaymentGateways;
+const size = fn(2);
+const result = size.fileFinishedImporting("utils/BillingUtils.tsx");
 
 export const getLocalizedDisplayMonth = function getLocalizedDisplayMonth(arg0, arg1) {
   const date = new Date();
   date.setMonth(arg0 - 1);
   return date.toLocaleString(arg1, { month: "short" });
 };
-export const createGatewayCheckoutContext = function createGatewayCheckoutContext(paymentSource) {
+export const createGatewayCheckoutContext = function createGatewayCheckoutContext() {
   const self = this;
-  const apply = _createGatewayCheckoutContext.apply;
+  const apply = closure_5.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -108,21 +94,20 @@ export const createGatewayCheckoutContext = function createGatewayCheckoutContex
   return applyArgumentsResult;
 };
 export const captureBillingException = function captureBillingException(error, tags) {
-  let obj = _modDef1232;
-  obj = {};
+  const obj2 = {};
   const merged = Object.assign(tags);
   tags = undefined;
   if (tags != null) {
     tags = tags.tags;
   }
-  obj = {};
+  const obj3 = {};
   const merged1 = Object.assign(tags);
-  obj.app_context = "billing";
-  obj.tags = obj;
-  obj.captureException(error, obj);
+  obj3.app_context = "billing";
+  obj2.tags = obj3;
+  SentryUtilsDefault.captureException(error, obj2);
 };
 export const isExpectedHttpClientError = function isExpectedHttpClientError(status) {
-  let tmp2 = status instanceof sendRequest.HTTPResponseError;
+  let tmp2 = status instanceof HTTPUtils.HTTPResponseError;
   if (tmp2) {
     tmp2 = status.status >= 400;
   }
@@ -130,7 +115,7 @@ export const isExpectedHttpClientError = function isExpectedHttpClientError(stat
     tmp2 = status.status < 500;
   }
   if (!tmp2) {
-    let tmp4 = status instanceof setDefault;
+    let tmp4 = status instanceof BillingErrorDefault;
     if (tmp4) {
       tmp4 = null != status.status;
     }
@@ -145,18 +130,17 @@ export const isExpectedHttpClientError = function isExpectedHttpClientError(stat
   return tmp2;
 };
 export const captureBillingMessage = function captureBillingMessage(arg0, tags) {
-  let obj = _modDef1232;
-  obj = {};
+  const obj2 = {};
   const merged = Object.assign(tags);
   tags = undefined;
   if (tags != null) {
     tags = tags.tags;
   }
-  obj = {};
+  const obj3 = {};
   const merged1 = Object.assign(tags);
-  obj.app_context = "billing";
-  obj.tags = obj;
-  obj.captureMessage(arg0, obj);
+  obj3.app_context = "billing";
+  obj2.tags = obj3;
+  SentryUtilsDefault.captureMessage(arg0, obj2);
 };
 export function calculateStandardizedUnits(billingPeriod, billingPeriod2) {
   let tmp = "P1M" === billingPeriod;

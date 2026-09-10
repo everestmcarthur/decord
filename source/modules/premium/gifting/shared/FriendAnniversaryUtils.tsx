@@ -1,14 +1,14 @@
-// Module ID: 8079
-// Function ID: 8080
-// Name: FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS
-// Dependencies: [3796, 2]
+// Module ID: 8094
+// Function ID: 8095
+// Name: FriendAnniversaryUtils
+// Dependencies: [3809, 2]
 // Exports: categorizeFriendAnniversariesByAffinity, isFriendAnniversary, pruneTimestampMap, yearsSince
 
-// Module 8079 (FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS)
-import set from "set" /* 2 */;
-import _mod3796 from "module_3796" /* 3796 */;
+// Module 8094 (FriendAnniversaryUtils)
+import _mod3809 from "module_3809" /* 3809 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/premium/gifting/shared/FriendAnniversaryUtils.tsx");
+const result = size.fileFinishedImporting("modules/premium/gifting/shared/FriendAnniversaryUtils.tsx");
 
 export const FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS = 7;
 export const isFriendAnniversary = function isFriendAnniversary(date) {
@@ -18,17 +18,14 @@ export const isFriendAnniversary = function isFriendAnniversary(date) {
   const obj2 = items[Symbol.iterator]();
   while (obj2 !== undefined) {
     let tmp3 = require;
-    let tmp4 = dependencyMap;
-    let obj3 = _mod3796;
+    let obj3 = _mod3809;
     let setYearResult = obj3.setYear(date, fullYear + tmp2);
     let tmp6 = setYearResult;
-    let obj4 = _mod3796;
+    let obj4 = _mod3809;
     if (!obj4.isSameDay(setYearResult, date)) {
       let _Math = Math;
-      let tmp3Result = tmp3(3796);
-      let tmp7 = setYearResult;
+      let tmp3Result = tmp3(3809);
       if (Math.abs(tmp3Result.differenceInDays(date, tmp6)) <= 7) {
-        let tmp8 = obj2;
         obj2.return();
         let flag = true;
         return true;
@@ -39,45 +36,40 @@ export const isFriendAnniversary = function isFriendAnniversary(date) {
   return false;
 };
 export const yearsSince = function yearsSince(friendsSince) {
-  const obj = _mod3796;
+  const obj = _mod3809;
   return Math.round(obj.differenceInMonths(new Date(), friendsSince) / 12);
 };
-export const categorizeFriendAnniversariesByAffinity = function categorizeFriendAnniversariesByAffinity(closure_11, arg1, flag) {
+export const categorizeFriendAnniversariesByAffinity = function categorizeFriendAnniversariesByAffinity(arr, fn, flag) {
   const highestAffinity = new Set();
   const highAffinity = new Set();
   if (flag) {
     const _Math = Math;
-    const substr = closure_11.slice(0, Math.ceil(closure_11.length / 2));
-    const item = substr.forEach((arg0) => {
-      highestAffinity.add(arg0);
+    const substr = arr.slice(0, Math.ceil(arr.length / 2));
+    const item = substr.forEach((item) => {
+      highestAffinity.add(item);
     });
-    const item1 = closure_11.forEach((arg0) => {
-      highAffinity.add(arg0);
+    const item1 = arr.forEach((item) => {
+      highAffinity.add(item);
     });
   } else {
-    const iter = closure_11[Symbol.iterator]();
+    const iter = arr[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp6 = nextResult;
-      let tmp7 = arg1(nextResult);
+      let tmp7 = fn(nextResult);
       let tmp8 = tmp7;
       let tmp9 = null != tmp7;
       if (tmp9) {
-        let tmp10 = tmp7;
         tmp9 = tmp8 > 0.7;
       }
       if (tmp9) {
-        let tmp11 = nextResult;
         let addResult = highestAffinity.add(tmp6);
       }
-      let tmp13 = tmp7;
       let tmp14 = null != tmp8;
       if (tmp14) {
-        let tmp15 = tmp7;
         tmp14 = tmp8 > 0.5;
       }
       if (tmp14) {
-        let tmp16 = nextResult;
         let addResult1 = highAffinity.add(tmp6);
       }
       continue;
@@ -88,7 +80,6 @@ export const categorizeFriendAnniversariesByAffinity = function categorizeFriend
 export const pruneTimestampMap = function pruneTimestampMap(messageGiftIntentLastShownMap, currentTime, arg2) {
   const obj = {};
   for (const key10006 in arg0) {
-    let tmp = key10006;
     let tmp2 = arg0[key10006];
     if (arg1 - tmp2 > arg2) {
       continue;

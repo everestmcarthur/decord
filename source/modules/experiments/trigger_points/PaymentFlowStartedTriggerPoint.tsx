@@ -1,19 +1,19 @@
-// Module ID: 10813
-// Function ID: 10814
-// Name: commonTriggerPointConfiguration
-// Dependencies: [4477, 1074, 10814, 1242, 2]
+// Module ID: 10840
+// Function ID: 10841
+// Name: PaymentFlowStartedTriggerPoint
+// Dependencies: [4491, 1074, 10841, 1242, 2]
 // Exports: trackPaymentFlowStartedAnalyticsAndCTP
 
-// Module 10813 (commonTriggerPointConfiguration)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4477 */;
-import registeredExperimentIds from "registeredExperimentIds" /* 10814 */;
+// Module 10840 (PaymentFlowStartedTriggerPoint)
+import Constants from "Constants" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import ExperimentConstants from "ExperimentConstants" /* 4491 */;
+import Helpers from "Helpers" /* 10841 */;
+import size from "module_2" /* 2 */;
 
-const AnalyticEvents = ME.AnalyticEvents;
-const commonTriggerPointConfiguration = new registeredExperimentIds.CommonTriggerPointConfiguration([], ExperimentBuckets.CommonTriggerPoints.PAYMENT_FLOW_STARTED, { location: "payment flow started" });
-const result = set.fileFinishedImporting("modules/experiments/trigger_points/PaymentFlowStartedTriggerPoint.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const commonTriggerPointConfiguration = new Helpers.CommonTriggerPointConfiguration([], ExperimentConstants.CommonTriggerPoints.PAYMENT_FLOW_STARTED, { location: "payment flow started" });
+const result = size.fileFinishedImporting("modules/experiments/trigger_points/PaymentFlowStartedTriggerPoint.tsx");
 
 export const PaymentFlowStartedTriggerPoint = commonTriggerPointConfiguration;
 export const trackPaymentFlowStartedAnalyticsAndCTP = function trackPaymentFlowStartedAnalyticsAndCTP(basePurchaseAnalytics) {
@@ -21,6 +21,6 @@ export const trackPaymentFlowStartedAnalyticsAndCTP = function trackPaymentFlowS
   if (arg1 === undefined) {
     obj = {};
   }
-  expandEventPropertiesDefault.track(AnalyticEvents.PAYMENT_FLOW_STARTED, basePurchaseAnalytics, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.PAYMENT_FLOW_STARTED, basePurchaseAnalytics, obj);
   commonTriggerPointConfiguration.trigger();
 };

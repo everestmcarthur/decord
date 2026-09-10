@@ -1,26 +1,26 @@
-// Module ID: 14561
-// Function ID: 14562
+// Module ID: 14586
+// Function ID: 14587
 // Name: getChannelDetailsFromRoute
-// Dependencies: [4417, 2]
+// Dependencies: [4431, 2]
 // Exports: default
 
-// Module 14561 (getChannelDetailsFromRoute)
-import set from "set" /* 2 */;
-import coerceMainRoute from "coerceMainRoute" /* 4417 */;
+// Module 14586 (getChannelDetailsFromRoute)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4431 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/getChannelDetailsFromRoute.tsx");
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/getChannelDetailsFromRoute.tsx");
 
 export default function getChannelDetailsFromRoute(currentRoute) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
-  const coerceChannelRouteResult = coerceMainRoute.coerceChannelRoute(currentRoute);
+  const coerceChannelRouteResult = NavigationRouteUtils.coerceChannelRoute(currentRoute);
   if (null != coerceChannelRouteResult) {
     const items = [coerceChannelRouteResult.params.guildId, coerceChannelRouteResult.params.channelId];
     return items;
   } else if (flag) {
-    const coerceGuildsRouteResult = coerceMainRoute.coerceGuildsRoute(currentRoute);
+    const coerceGuildsRouteResult = NavigationRouteUtils.coerceGuildsRoute(currentRoute);
     if (null != coerceGuildsRouteResult) {
       const params = coerceGuildsRouteResult.params;
       let guildId;
@@ -43,6 +43,4 @@ export default function getChannelDetailsFromRoute(currentRoute) {
     const items3 = [undefined, undefined];
     return items3;
   }
-  const obj = coerceMainRoute;
-  const tmp = require;
 };

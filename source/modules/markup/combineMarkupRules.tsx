@@ -1,39 +1,30 @@
-// Module ID: 4997
-// Function ID: 4998
+// Module ID: 5011
+// Function ID: 5012
 // Name: combineMarkupRules
 // Dependencies: [2]
 // Exports: default
 
-// Module 4997 (combineMarkupRules)
-import set from "set" /* 2 */;
+// Module 5011 (combineMarkupRules)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/markup/combineMarkupRules.tsx");
+const result = size.fileFinishedImporting("modules/markup/combineMarkupRules.tsx");
 
-export default function combineMarkupRules(arg0) {
-  let obj = {};
-  const iter = arg0[Symbol.iterator]();
+export default function combineMarkupRules(items) {
+  const obj = {};
+  const iter = items[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
-    let tmp3 = nextResult;
     for (const key10012 in nextResult) {
-      let tmp15 = key10012;
       let tmp16 = key10012;
-      obj = {};
+      let obj2 = {};
       if (key10012 in obj) {
-        let tmp9 = tmp15;
-        let tmp10 = obj;
         let merged = Object.assign(obj[tmp16]);
-        let tmp12 = nextResult;
-        let tmp13 = obj;
         let merged1 = Object.assign(tmp2[tmp16]);
-        let tmp8 = obj;
+        let tmp8 = obj2;
       } else {
-        let tmp4 = nextResult;
-        let tmp5 = tmp15;
-        let tmp6 = obj;
         let merged2 = Object.assign(tmp2[tmp16]);
-        tmp8 = obj;
+        tmp8 = obj2;
       }
       obj[key10012] = tmp8;
       continue;

@@ -1,17 +1,19 @@
-// Module ID: 6975
-// Function ID: 6976
+// Module ID: 6989
+// Function ID: 6990
 // Name: BackgroundImage
-// Dependencies: [19, 17, 21, 4495, 4411, 6976, 6977, 2]
+// Dependencies: [19, 17, 21, 4509, 4425, 6990, 6991, 2]
 // Exports: default
 
-// Module 6975 (BackgroundImage)
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 6989 (BackgroundImage)
+import shared from "shared" /* 4425 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ Image: c4, View: c5, StyleSheet: closure_6 } = get_ActivityIndicator);
-const result = require("set").fileFinishedImporting("modules/auth/native/components/atoms/BackgroundImage.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: closure_4, View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/native/components/atoms/BackgroundImage.tsx");
 
 export default function BackgroundImage(backgroundImageSource) {
   backgroundImageSource = backgroundImageSource.backgroundImageSource;
@@ -19,30 +21,28 @@ export default function BackgroundImage(backgroundImageSource) {
   if (flag === undefined) {
     flag = false;
   }
-  dependencyMap = undefined;
-  const tmp = flag(4495)();
+  const tmp = flag(4509)();
   dependencyMap = tmp;
   let items = [backgroundImageSource, flag, tmp];
   let obj = { style: absoluteFill.absoluteFill, children: null };
-  obj = {};
-  const merged = Object.assign(React.useMemo(() => {
-    const items = [closure_1_6.absoluteFill, ];
+  const merged = Object.assign(noop.useMemo(() => {
+    const items = [timestampProducer.absoluteFill, ];
     const obj = { style: items, source: null };
     items[1] = flag ? { width: "100%", height: "100%" } : { width: "100%" };
     if (null != backgroundImageSource) {
-      obj[1] = backgroundImageSource;
+      obj.source = backgroundImageSource;
       return obj;
     } else {
-      let tmp2 = table;
-      if (obj2.isThemeDark(table)) {
-        tmp2 = tmp2[5];
+      let tmp2 = dependencyMap;
+      if (obj2.isThemeDark(closure_2)) {
+        tmp2 = 6990;
         let tmp4Result = tmp4(tmp2);
       } else {
-        tmp4Result = tmp4(tmp2[6]);
+        tmp4Result = tmp4(6991);
       }
-      obj2 = backgroundImageSource(table[4]);
+      obj2 = shared;
     }
   }, items));
-  obj[1] = <closure_4 />;
-  return <closure_5 />;
+  obj.children = <closure_4 />;
+  return <closure_5 style={closure_6.absoluteFill}>{null}</closure_5>;
 };

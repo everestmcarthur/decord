@@ -1,37 +1,37 @@
-// Module ID: 15311
-// Function ID: 15312
-// Name: toggle
-// Dependencies: [4379, 1184, 1183, 1221, 7975, 1074, 504, 1114, 15312, 9363, 11473, 2]
+// Module ID: 15340
+// Function ID: 15341
+// Name: SyncThemeSetting
+// Dependencies: [4393, 1184, 1183, 1221, 7989, 1074, 504, 1114, 15341, 9390, 11500, 2]
 
-// Module 15311 (toggle)
+// Module 15340 (SyncThemeSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import saveGuildFoldersDefault from "saveGuildFolders" /* 9363 */;
-import track from "track" /* 15312 */;
-import closure_3 from "reset" /* 4379 */;
-import closure_4 from "initialize" /* 1184 */;
-import closure_5 from "handleThemeChange" /* 1183 */;
-import closure_6 from "handleConnectionClosedOrResumed" /* 1221 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import createToggle from "createToggle" /* 11473 */;
+import util from "util" /* 1114 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9390 */;
+import actions_AnalyticsTrackingActionCreators from "actions/AnalyticsTrackingActionCreators" /* 15341 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4393 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1184 */;
+import ThemeStore from "ThemeStore" /* 1183 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const SettingBuilders = fn(11500);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["3340dY"]);
+    const intl = util.intl;
+    return intl.string(util.t["3340dY"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
+  parent: fn(7989).MobileUserSettings.APPEARANCE,
   useIsDisabled: function useSyncThemeDisabled() {
-    const items = [closure_5];
+    const items = [ThemeStore];
     return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   },
   useValue: function useSyncThemeAcrossClientsValue() {
-    const items = [closure_4];
-    return initialize.useStateFromStores(items, () => false !== closure_4.shouldSync("appearance"));
+    const items = [SelectivelySyncedUserSettingsStore];
+    return initialize.useStateFromStores(items, () => false !== SelectivelySyncedUserSettingsStore.shouldSync("appearance"));
   },
   onValueChange: function onSyncThemeAcrossClientsValueChange(is_sync_enabled) {
-    gradientPreset = gradientPreset.gradientPreset;
+    const gradientPreset = ClientThemesBackgroundStore.gradientPreset;
     let id;
     if (gradientPreset != null) {
       id = gradientPreset.id;
@@ -39,7 +39,7 @@ createToggle = {
     if (id == null) {
       id = null;
     }
-    const appearance = settings.settings.appearance;
+    const appearance = UserSettingsProtoStore.settings.appearance;
     let prop;
     if (appearance != null) {
       const clientThemeSettings = appearance.clientThemeSettings;
@@ -47,17 +47,17 @@ createToggle = {
         prop = clientThemeSettings.customUserThemeSettings;
       }
     }
-    let obj = track;
-    obj = { is_sync_enabled, base_theme: theme.theme, client_theme: id, has_custom_theme: null != prop };
-    obj.track(AnalyticEvents.SYNC_ACROSS_CLIENTS_TOGGLED, obj);
-    const result = saveGuildFoldersDefault.setShouldSyncAppearanceSettings(is_sync_enabled);
+    actions_AnalyticsTrackingActionCreators.track(AnalyticEvents.SYNC_ACROSS_CLIENTS_TOGGLED, { is_sync_enabled, base_theme: ThemeStore.theme, client_theme: id, has_custom_theme: null != prop });
+    const obj2 = { is_sync_enabled, base_theme: ThemeStore.theme, client_theme: id, has_custom_theme: null != prop };
+    const tmp3 = null != prop;
+    const result = UserSettingsActionCreatorsDefault.setShouldSyncAppearanceSettings(is_sync_enabled);
   },
   useDescription: function useSyncThemeAcrossClientsDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.CRtkeH).trim();
+    const intl = util.intl;
+    return intl.string(util.t.CRtkeH).trim();
   }
-};
-createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SyncThemeSetting.tsx");
+});
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/SyncThemeSetting.tsx");
 
-export default createToggle;
+export default toggle;

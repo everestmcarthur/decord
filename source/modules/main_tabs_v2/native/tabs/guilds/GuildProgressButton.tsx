@@ -1,55 +1,52 @@
-// Module ID: 16200
-// Function ID: 16201
+// Module ID: 16230
+// Function ID: 16231
 // Name: GuildProgressButton
-// Dependencies: [19, 21, 12191, 576, 10124, 12478, 12481, 8600, 16201, 1114, 12594, 2]
+// Dependencies: [19, 21, 12217, 576, 10151, 12504, 12507, 8628, 16231, 1114, 12620, 2]
 // Exports: default, getScaledGuildProgressButtonHeight
 
-// Module 16200 (GuildProgressButton)
-import ThemesDefault from "Themes" /* 576 */;
-import map from "map" /* 10124 */;
-import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 12191 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16230 (GuildProgressButton)
+import nativeDefault from "native" /* 576 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10151 */;
+import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12217 */;
+import GuildProgressUtils from "GuildProgressUtils" /* 12504 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12507 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/GuildProgressButton.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/GuildProgressButton.tsx");
 
 export default function GuildProgressButton(guild) {
   guild = guild.guild;
-  let completed;
-  let obj = guild(12478);
-  const guildProgressStep = obj.useGuildProgressStep(guild);
-  completed = guildProgressStep.completed;
+  const guildProgressStep = guild(12504).useGuildProgressStep(guild);
+  const completed = guildProgressStep.completed;
   const items = [completed, guild.id];
   ({ percentComplete, subtitle } = guildProgressStep);
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (completed) {
-      const result = completed(closure_1_2[6]).markCompletedProgressSeen(guild.id);
-      const obj = completed(closure_1_2[6]);
+      const result = GuildProgressActionCreatorsDefault.markCompletedProgressSeen(guild.id);
     }
   }, items);
   const items1 = [guild, completed];
-  const callback = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     if (!completed) {
-      const progress = completed(closure_1_2[6]).createProgress(guild.id);
-      const obj = completed(closure_1_2[6]);
+      const progress = GuildProgressActionCreatorsDefault.createProgress(guild.id);
     }
-    guild(closure_1_2[5]).openActionSheet(guild);
+    GuildProgressUtils.openActionSheet(guild);
   }, items1);
-  obj = { icon: null, label: null, subLabel: null, onPress: null, trailing: null };
-  obj = { source: completed(16201) };
-  obj[0] = jsx(guild(8600).RowButton.Icon, { source: completed(16201) });
+  const obj2 = { icon: null, label: null, subLabel: null, onPress: null, trailing: null };
+  let obj = guild(12504);
+  obj2.icon = jsx(guild(8628).RowButton.Icon, { source: completed(16231) });
   const intl = guild(1114).intl;
-  obj[1] = intl.string(guild(1114).t.o3HK3d);
-  obj[2] = subtitle;
-  obj[3] = callback;
-  obj[4] = jsx(completed(12594), { percent: percentComplete });
-  return jsx(guild(8600).RowButton, { source: completed(16201) });
+  obj2.label = intl.string(guild(1114).t.o3HK3d);
+  obj2.subLabel = subtitle;
+  obj2.onPress = callback;
+  obj2.trailing = jsx(completed(12620), { percent: percentComplete });
+  return jsx(guild(8628).RowButton, { icon: null, label: null, subLabel: null, onPress: null, trailing: null });
 };
 export const getScaledGuildProgressButtonHeight = function getScaledGuildProgressButtonHeight(fontScale) {
-  const refreshToken = useIsMobileVisualRefreshExperimentEnabled.resolveRefreshToken(ThemesDefault.modules.mobile.TABLE_ROW_PADDING);
-  const obj = useIsMobileVisualRefreshExperimentEnabled;
-  const sum = refreshToken + map.scaleTextLineHeight("text-md/semibold", fontScale);
-  const obj2 = map;
-  return sum + 2 * map.scaleTextLineHeight("text-xs/medium", fontScale) + refreshToken;
+  const refreshToken = MobileVisualRefreshExperiment.resolveRefreshToken(nativeDefault.modules.mobile.TABLE_ROW_PADDING);
+  const sum = refreshToken + useScaledTextLineHeight.scaleTextLineHeight("text-md/semibold", fontScale);
+  return sum + 2 * useScaledTextLineHeight.scaleTextLineHeight("text-xs/medium", fontScale) + refreshToken;
 };

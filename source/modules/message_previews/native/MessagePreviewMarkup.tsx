@@ -1,29 +1,27 @@
-// Module ID: 10121
-// Function ID: 10122
-// Name: getOrParseMessagePreviewMarkupAST
-// Dependencies: [4997, 4998, 10122, 4257, 4550, 7879, 1437, 2]
+// Module ID: 10148
+// Function ID: 10149
+// Name: MessagePreviewMarkup
+// Dependencies: [5011, 5012, 10149, 4270, 4564, 7893, 1437, 2]
 // Exports: getMessagePreviewASTParser, renderASTToReact, renderMessagePreviewMarkup
 
-// Module 10121 (getOrParseMessagePreviewMarkupAST)
+// Module 10148 (MessagePreviewMarkup)
 import privDefault from "priv" /* 1437 */;
-import tDefault from "t" /* 4257 */;
-import get_defaultRulesDefault from "get defaultRules" /* 4550 */;
-import combineMarkupRulesDefault from "combineMarkupRules" /* 4997 */;
-import parseLinkDefault from "parseLink" /* 4998 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7879 */;
-import defaultReactFnDefault from "defaultReactFn" /* 10122 */;
+import _modDef4270 from "module_4270" /* 4270 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4564 */;
+import combineMarkupRulesDefault from "combineMarkupRules" /* 5011 */;
+import MarkupRulesDefault from "MarkupRules" /* 5012 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7893 */;
+import MarkupMessagePreviewReactRulesDefault from "MarkupMessagePreviewReactRules" /* 10149 */;
 
-require = arg1;
+require = fn;
 function getOrParseMessagePreviewMarkupAST(arg0) {
   ({ content, layout, color, initialParserState, postProcessor, fontScale, maxFontSizeMultiplier } = arg0);
-  const value = closure_3.get(content);
+  value = closure_3.get(content);
   if (null != value) {
     return value;
   } else {
-    const items = [parseLinkDefault.RULES, defaultReactFnDefault(layout, color, fontScale, maxFontSizeMultiplier)];
-    const tmp11 = combineMarkupRulesDefault;
+    const items = [MarkupRulesDefault.RULES, MarkupMessagePreviewReactRulesDefault(layout, color, fontScale, maxFontSizeMultiplier)];
     const tmp11Result = combineMarkupRulesDefault(items);
-    const obj3 = get_defaultRulesDefault;
     let startsWithResult = content.startsWith("```");
     let tmp3;
     if (!startsWithResult) {
@@ -34,7 +32,7 @@ function getOrParseMessagePreviewMarkupAST(arg0) {
     if (startsWithResult) {
       tmp3 = content;
     }
-    const astParserForResultResult = get_defaultRulesDefault.astParserFor(tmp11Result)(tmp3, true, initialParserState, postProcessor);
+    const astParserForResultResult = MarkupUtilsDefault.astParserFor(tmp11Result)(tmp3, true, initialParserState, postProcessor);
     const result = obj.set(content, astParserForResultResult);
     return astParserForResultResult;
   }
@@ -42,22 +40,21 @@ function getOrParseMessagePreviewMarkupAST(arg0) {
 }
 const tmp2 = new privDefault({ max: 2000 });
 let closure_3 = tmp2;
-let result = require("set").fileFinishedImporting("modules/message_previews/native/MessagePreviewMarkup.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/message_previews/native/MessagePreviewMarkup.tsx");
 
 export const renderASTToReact = function renderASTToReact(layout) {
   ({ tree, initialParserState, color, fontScale, maxFontSizeMultiplier } = layout);
-  const items = [parseLinkDefault.RULES, defaultReactFnDefault(layout.layout, color, fontScale, maxFontSizeMultiplier)];
-  const tmp = combineMarkupRulesDefault;
+  const items = [MarkupRulesDefault.RULES, MarkupMessagePreviewReactRulesDefault(layout.layout, color, fontScale, maxFontSizeMultiplier)];
   const tmpResult = combineMarkupRulesDefault(items);
-  const obj = tDefault;
-  return obj.reactFor(tDefault.ruleOutput(tmpResult, "react"))(tree, initialParserState);
+  const obj = _modDef4270;
+  return obj.reactFor(_modDef4270.ruleOutput(tmpResult, "react"))(tree, initialParserState);
 };
 export const getMessagePreviewASTParser = function getMessagePreviewASTParser(layout) {
   ({ color, fontScale, maxFontSizeMultiplier } = layout);
-  const items = [parseLinkDefault.RULES, defaultReactFnDefault(layout.layout, color, fontScale, maxFontSizeMultiplier)];
-  const tmp = combineMarkupRulesDefault;
+  const items = [MarkupRulesDefault.RULES, MarkupMessagePreviewReactRulesDefault(layout.layout, color, fontScale, maxFontSizeMultiplier)];
   const tmpResult = combineMarkupRulesDefault(items);
-  return get_defaultRulesDefault.astParserFor(tmpResult);
+  return MarkupUtilsDefault.astParserFor(tmpResult);
 };
 export const renderMessagePreviewMarkup = function renderMessagePreviewMarkup(fontScale) {
   ({ content, muted, layout } = fontScale);
@@ -77,30 +74,17 @@ export const renderMessagePreviewMarkup = function renderMessagePreviewMarkup(fo
   if ("" === content) {
     return null;
   } else {
-    let obj = { allowLinks: true, allowDevLinks: false, allowEmojiLinks: false, allowGameMentions: false, mentionChannels: null, soundboardSounds: null, formatInline: true, noStyleAndInteraction: true, allowHeading: true, allowList: true, disableAutoBlockNewlines: true, previewLinkTarget: false, disableAnimatedEmoji: null, unknownUserMentionPlaceholder: true, guildId: null, channelId: null, muted: null };
-    obj[4] = [];
-    obj[5] = [];
-    obj[12] = disableAnimatedEmoji;
-    obj[14] = guildId;
-    obj[15] = channelId;
+    const obj4 = { allowLinks: true, allowDevLinks: false, allowEmojiLinks: false, allowGameMentions: false, mentionChannels: [], soundboardSounds: [], formatInline: true, noStyleAndInteraction: true, allowHeading: true, allowList: true, disableAutoBlockNewlines: true, previewLinkTarget: false, disableAnimatedEmoji, unknownUserMentionPlaceholder: true, guildId, channelId, muted: null };
     if (muted == null) {
       muted = false;
     }
-    obj[16] = muted;
-    obj = { content: null, layout: null, color: null, initialParserState: null, fontScale: null, maxFontSizeMultiplier: null, postProcessor: null };
-    obj[0] = content;
-    obj[1] = layout;
-    obj[2] = color;
-    obj[3] = obj;
-    obj[4] = num;
-    obj[5] = maxFontSizeMultiplier;
-    obj[6] = postProcessor;
+    obj4.muted = muted;
+    const obj = { content, layout, color, initialParserState: obj4, fontScale: num, maxFontSizeMultiplier, postProcessor };
     const tmp4 = getOrParseMessagePreviewMarkupAST(obj);
-    const items = [parseLinkDefault.RULES, defaultReactFnDefault(layout, color, num, maxFontSizeMultiplier)];
-    const tmp7 = combineMarkupRulesDefault;
+    const items = [MarkupRulesDefault.RULES, MarkupMessagePreviewReactRulesDefault(layout, color, num, maxFontSizeMultiplier)];
     const tmp7Result = combineMarkupRulesDefault(items);
-    const obj2 = tDefault;
-    return obj2.reactFor(tDefault.ruleOutput(tmp7Result, "react"))(tmp4, obj);
+    const obj2 = _modDef4270;
+    return obj2.reactFor(_modDef4270.ruleOutput(tmp7Result, "react"))(tmp4, obj4);
   }
 };
 export const messagePreviewASTCache = tmp2;

@@ -1,20 +1,26 @@
-// Module ID: 10231
-// Function ID: 10232
-// Name: useFavoritesGuildConfig
+// Module ID: 10258
+// Function ID: 10259
+// Name: FavoritesGuildExperiment
 // Dependencies: [1433, 2]
 // Exports: getFavoritesGuildConfig, useFavoritesGuildConfig
 
-// Module 10231 (useFavoritesGuildConfig)
-import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 10258 (FavoritesGuildExperiment)
+import ApexExperiment_mod from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-let obj = { 1: null, 2: { enabled: true } };
-obj[2] = { enabled: true };
-let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-01-favorites-server", kind: "user", defaultConfig: { enabled: false }, variations: obj });
-obj = { 1: null };
-obj[1] = { enabled: true };
-let closure_1 = ApexExperiment.createApexExperiment({ name: "2026-08-favorites-server", kind: "user", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/favorites/FavoritesGuildExperiment.tsx");
+let ApexExperiment = ApexExperiment_mod;
+const obj = { name: "2026-01-favorites-server", kind: "user", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null, 2: { enabled: true } };
+obj2[2] = { enabled: true };
+obj.variations = obj2;
+let closure_0 = ApexExperiment.createApexExperiment(obj);
+let ApexExperiment = ApexExperiment_mod;
+const obj3 = { name: "2026-08-favorites-server", kind: "user", defaultConfig: { enabled: false }, variations: null };
+const obj4 = { 1: null };
+obj4[1] = { enabled: true };
+obj3.variations = obj4;
+let closure_1 = ApexExperiment.createApexExperiment(obj3);
+const result = size.fileFinishedImporting("modules/favorites/FavoritesGuildExperiment.tsx");
 
 export const useFavoritesGuildConfig = function useFavoritesGuildConfig(location) {
   const _location = location.location;

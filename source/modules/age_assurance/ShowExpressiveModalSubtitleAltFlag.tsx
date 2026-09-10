@@ -1,41 +1,40 @@
-// Module ID: 8451
-// Function ID: 8452
-// Name: useShouldShowExpressiveModalSubtitleAlt
-// Dependencies: [8430, 1433, 8418, 504, 2]
+// Module ID: 8479
+// Function ID: 8480
+// Name: ShowExpressiveModalSubtitleAltFlag
+// Dependencies: [8458, 1433, 8446, 504, 2]
 // Exports: shouldShowExpressiveModalSubtitleAlt, useShouldShowExpressiveModalSubtitleAlt
 
-// Module 8451 (useShouldShowExpressiveModalSubtitleAlt)
+// Module 8479 (ShowExpressiveModalSubtitleAltFlag)
 import initialize from "initialize" /* 504 */;
-import parseMessageEmbedForProps from "parseMessageEmbedForProps" /* 8418 */;
-import closure_2 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8430 */;
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 8446 */;
+import SafetyHubStore from "SafetyHubStore" /* 8458 */;
 
-require = arg1;
-ApexExperiment = { 1: null };
-ApexExperiment[1] = { enabled: true };
-let closure_3 = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-08-show-expressive-modal-subtitle-alt", defaultConfig: { enabled: false }, variations: ApexExperiment });
-const result = require("set").fileFinishedImporting("modules/age_assurance/ShowExpressiveModalSubtitleAltFlag.tsx");
+require = fn;
+const ApexExperiment = fn(1433);
+let obj2 = { kind: "user", name: "2026-08-show-expressive-modal-subtitle-alt", defaultConfig: { enabled: false }, variations: null };
+const obj3 = { 1: null };
+obj3[1] = { enabled: true };
+obj2.variations = obj3;
+let closure_3 = ApexExperiment.createApexExperiment(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/age_assurance/ShowExpressiveModalSubtitleAltFlag.tsx");
 
 export const useShouldShowExpressiveModalSubtitleAlt = function useShouldShowExpressiveModalSubtitleAlt(age_verification_expressive_v2_modal) {
-  let obj = parseMessageEmbedForProps;
-  const isSuspendedUser = obj.useIsSuspendedUser();
-  const items = [closure_2];
-  obj = { location: age_verification_expressive_v2_modal };
+  const isSuspendedUser = SafetyHubUtils.useIsSuspendedUser();
+  const items = [SafetyHubStore];
   const stateFromStores = initialize.useStateFromStores(items, () => showExpressiveModalSubtitleAlt.getShowExpressiveModalSubtitleAlt());
-  let enabled = closure_3.useConfig(obj).enabled;
+  let enabled = closure_3.useConfig({ location: age_verification_expressive_v2_modal }).enabled;
   if (isSuspendedUser) {
     enabled = stateFromStores;
   }
   return enabled;
 };
-export const shouldShowExpressiveModalSubtitleAlt = function shouldShowExpressiveModalSubtitleAlt(arg0) {
-  let obj = parseMessageEmbedForProps;
+export const shouldShowExpressiveModalSubtitleAlt = function shouldShowExpressiveModalSubtitleAlt(location) {
   if (obj.isCurrentUserSuspended()) {
-    let enabled = showExpressiveModalSubtitleAlt.getShowExpressiveModalSubtitleAlt();
+    let enabled = SafetyHubStore.getShowExpressiveModalSubtitleAlt();
   } else {
-    obj = { location: null };
-    obj[0] = arg0;
-    enabled = closure_3.getConfig(obj).enabled;
+    const obj2 = { location };
+    enabled = closure_3.getConfig(obj2).enabled;
   }
   return enabled;
 };

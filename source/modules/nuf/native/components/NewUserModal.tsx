@@ -1,78 +1,73 @@
-// Module ID: 17452
-// Function ID: 17453
+// Module ID: 17483
+// Function ID: 17484
 // Name: NewUserModal
-// Dependencies: [32, 19, 17, 21, 7913, 4560, 576, 17453, 1896, 4906, 7000, 17450, 4763, 17451, 5630, 1115, 16002, 17454, 12700, 12689, 17455, 17457, 2]
+// Dependencies: [32, 19, 17, 21, 7927, 4574, 576, 17484, 1896, 4920, 7014, 17481, 4777, 17482, 5644, 1115, 16032, 17485, 12726, 12715, 17486, 17488, 2]
 // Exports: default
 
-// Module 17452 (NewUserModal)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 7913 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17483 (NewUserModal)
+import nativeDefault from "native" /* 576 */;
+import NewUserUtils from "NewUserUtils" /* 17481 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createNativeStackNavigator.createNativeStackNavigator();
-createNativeStackNavigator = { header: null };
-createNativeStackNavigator = { borderBottomWidth: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" };
-createNativeStackNavigator[0] = createNativeStackNavigator;
-let closure_9 = createCacheKey.createStyles(createNativeStackNavigator);
-const result = require("set").fileFinishedImporting("modules/nuf/native/components/NewUserModal.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const NativeModules = fn(17).NativeModules;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const NativeStackNavigator = fn(7927);
+const Navigator = NativeStackNavigator.createNativeStackNavigator();
+const createStyles = fn(4574);
+let obj3 = { header: { borderBottomWidth: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" } };
+let closure_9 = createStyles.createStyles(obj3);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/nuf/native/components/NewUserModal.tsx");
 
 export default function NewUserModal(arg0) {
   ({ initialRouteName, initialOnboardingStepIndex } = arg0);
-  let _require;
-  let first;
-  dependencyMap = undefined;
   let first1;
-  let React;
-  closure_5 = undefined;
-  let callback;
-  callback = undefined;
-  _require = callback2();
-  const tmp = first1(React.useState(initialOnboardingStepIndex), 2);
-  first = tmp[0];
+  noop = undefined;
+  _require = closure_9();
+  const tmp = first1(noop.useState(initialOnboardingStepIndex), 2);
+  const first = tmp[0];
   dependencyMap = tmp[1];
-  const tmp3 = first1(React.useState(initialOnboardingStepIndex), 2);
+  const tmp3 = first1(noop.useState(initialOnboardingStepIndex), 2);
   first1 = tmp3[0];
-  React = tmp3[1];
-  closure_5 = React.useRef(null);
-  let obj = _require(7000);
-  callback = obj.useAccessibilityNativeStackOptions();
+  noop = tmp3[1];
+  let MinimizeApp = noop.useRef(null);
+  closure_6 = require("Navigator").useAccessibilityNativeStackOptions();
   const items = [first1, first];
-  callback = React.useCallback((flag) => {
+  const onComplete = noop.useCallback((flag) => {
     if (flag == null) {
       flag = false;
     }
-    const nextOnboardingStep = lib(17450).getNextOnboardingStep(flag, first1, first);
+    const nextOnboardingStep = NewUserUtils.getNextOnboardingStep(flag, first1, first);
     nextOnboardingStep.then((onboardingStepIndex) => {
       onboardingStepIndex = onboardingStepIndex.onboardingStepIndex;
       ({ lastShownStepIndex, continueNavigation } = onboardingStepIndex);
-      callback(onboardingStepIndex);
-      callback2(lastShownStepIndex);
+      dependencyMap(onboardingStepIndex);
+      closure_1_4(lastShownStepIndex);
       if (continueNavigation) {
         if (null != ref.current) {
-          closure_1_0(closure_1_2[11]).continueToNextStep(onboardingStepIndex, tmp3.current);
-          const obj2 = closure_1_0(closure_1_2[11]);
+          closure_0(17481).continueToNextStep(onboardingStepIndex, tmp3.current);
+          const obj2 = closure_0(17481);
         }
       }
-      closure_1_1(closure_1_2[12]).popWithKey(closure_1_0(closure_1_2[13]).NEW_USER_MODAL_KEY);
+      first(4777).popWithKey(closure_0(17482).NEW_USER_MODAL_KEY);
     });
   }, items);
-  obj1 = _require(5630);
-  obj1.useNavigatorBackPressHandler(() => {
+  let obj = require("Navigator");
+  require("useNavigatorBackPressHandler").useNavigatorBackPressHandler(() => {
     MinimizeApp = MinimizeApp.MinimizeApp;
     MinimizeApp.minimizeApp();
     return true;
   });
-  obj = {
+  const obj3 = {
     screenOptions(navigation) {
       closure_5.current = navigation.navigation;
       const obj = {
-        headerStyle: lib.header,
+        headerStyle: closure_0.header,
         headerShadowVisible: false,
         title: "",
         headerLeft() {
@@ -90,7 +85,7 @@ export default function NewUserModal(arg0) {
       if (obj2.isAndroid()) {
         str = "transparentModal";
       }
-      obj[6] = str;
+      obj.presentation = str;
       const merged = Object.assign(closure_6);
       return obj;
     },
@@ -100,65 +95,64 @@ export default function NewUserModal(arg0) {
   if (initialRouteName == null) {
     initialRouteName = "choose-avatar";
   }
-  obj[1] = initialRouteName;
-  obj = {
-    name: "enable-notification",
-    getComponent() {
-      return lib(16002).RedesignNotificationScreen;
-    },
-    initialParams: { onComplete: callback }
-  };
-  const items1 = [callback(Navigator.Screen, obj), , , , ];
-  obj1 = {
-    name: "choose-avatar",
-    getComponent() {
-      return lib(17454).default;
-    },
-    options() {
-      return {
-        headerRight(arg0) {
-          let obj = {};
-          const merged = Object.assign(arg0);
-          obj.onPress = function onPress() {
-            closure_0 = closure_7;
-            let obj = closure_1_0(closure_1_2[9]);
-            obj = {
-              onConfirm() {
-                return callback(true);
-              }
+  obj3.initialRouteName = initialRouteName;
+  const items1 = [
+    closure_6(Navigator.Screen, {
+      name: "enable-notification",
+      getComponent() {
+        return closure_0(16032).RedesignNotificationScreen;
+      },
+      initialParams: { onComplete }
+    }),
+    closure_6(Navigator.Screen, {
+      name: "choose-avatar",
+      getComponent() {
+        return closure_0(17485).default;
+      },
+      options() {
+        return {
+          headerRight(arg0) {
+            const obj = {};
+            const merged = Object.assign(arg0);
+            obj.onPress = function onPress() {
+              closure_0 = closure_1_7;
+              const lazyResult = React.lazy(() => closure_0(paths[8])(paths[7], paths.paths));
+              closure_2_0(4920).openAlert("skip-avatar-upload", closure_2_6(lazyResult, {
+                onConfirm() {
+                  return closure_0(true);
+                }
+              }));
             };
-            obj.openAlert("skip-avatar-upload", closure_1_6(closure_1_4.lazy(() => callback(paths[8])(paths[7], paths.paths)), obj));
-          };
-          return closure_1_6(closure_1_1(closure_1_2[18]), obj);
-        }
-      };
-    },
-    initialParams: { onComplete: callback }
-  };
-  items1[1] = callback(Navigator.Screen, obj1);
-  items1[2] = callback(Navigator.Screen, {
-    name: "contact-sync",
-    options: { headerShown: false },
-    getComponent() {
-      return lib(12689).ContactSyncOnboardingModal;
-    },
-    initialParams: { onComplete: callback }
-  });
-  items1[3] = callback(Navigator.Screen, {
-    name: "discoverability",
-    options: { headerShown: false },
-    getComponent() {
-      return lib(17455).default;
-    },
-    initialParams: { onComplete: callback }
-  });
-  items1[4] = callback(Navigator.Screen, {
-    name: "connect-guardian",
-    getComponent() {
-      return lib(17457).default;
-    },
-    initialParams: { onComplete: callback }
-  });
-  obj[2] = items1;
-  return callback(Navigator.Navigator, obj);
+            return closure_6(first(12726), obj);
+          }
+        };
+      },
+      initialParams: { onComplete }
+    }),
+    closure_6(Navigator.Screen, {
+      name: "contact-sync",
+      options: { headerShown: false },
+      getComponent() {
+        return closure_0(12715).ContactSyncOnboardingModal;
+      },
+      initialParams: { onComplete }
+    }),
+    closure_6(Navigator.Screen, {
+      name: "discoverability",
+      options: { headerShown: false },
+      getComponent() {
+        return closure_0(17486).default;
+      },
+      initialParams: { onComplete }
+    }),
+    closure_6(Navigator.Screen, {
+      name: "connect-guardian",
+      getComponent() {
+        return closure_0(17488).default;
+      },
+      initialParams: { onComplete }
+    })
+  ];
+  obj3.children = items1;
+  return onComplete(Navigator.Navigator, obj3);
 };

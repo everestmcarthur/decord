@@ -1,17 +1,19 @@
 // Module ID: 1976
 // Function ID: 1977
-// Name: apexExperiment
+// Name: ServerNSFWLevelExperiment
 // Dependencies: [1433, 2]
 // Exports: isServerNSFWLevelEnabled
 
-// Module 1976 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 1976 (ServerNSFWLevelExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null };
-obj[1] = { enabled: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2025-09-server-nsfw-level", kind: "user", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/age_gate/ServerNSFWLevelExperiment.tsx");
+const obj = { name: "2025-09-server-nsfw-level", kind: "user", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj.variations = obj2;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/age_gate/ServerNSFWLevelExperiment.tsx");
 
 export const ServerNSFWLevelExperiment = apexExperiment;
 export const isServerNSFWLevelEnabled = function isServerNSFWLevelEnabled(guild_record) {

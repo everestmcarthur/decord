@@ -1,106 +1,97 @@
-// Module ID: 16466
-// Function ID: 16467
-// Dependencies: [5, 1074, 8350, 1272, 573, 4259, 1114, 2]
+// Module ID: 16497
+// Function ID: 16498
+// Name: NativeICYMIActionCreators
+// Dependencies: [5, 1074, 8378, 1272, 573, 4272, 1114, 2]
 
-// Module 16466
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 1074 */;
+// Module 16497 (NativeICYMIActionCreators)
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/icymi/native/NativeICYMIActionCreators.tsx");
+const require = fn;
+const Endpoints = fn(1074).Endpoints;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/icymi/native/NativeICYMIActionCreators.tsx");
 
 export default {
   customScoreGuild(arg0) {
     ({ guildId: require, channelScores: importDefault, guildScore: dependencyMap } = arg0);
-    return callback(function*() {
+    return (async (arg0, value) => {
       if (constants === 2) {
         constants = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
       } else {
         try {
           constants = 2;
-          if (0 === v0) {
+          if (0 === v2) {
             if (arg0 === 1) {
               constants = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               constants = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
-              closure_0 = tmp3;
               if (obj13.icymiEnabled("customScores")) {
                 c3 = 1;
-                const HTTP = closure_1_0(closure_1_2[3]).HTTP;
-                obj1 = { url: null, body: null, rejectWithError: true };
-                obj1[0] = constants.GRAVITY_CUSTOM_GUILD_SCORES;
-                const obj2 = { guild_id: null, channel_scores: null, guild_score: null };
-                obj2[0] = closure_1_0;
+                const HTTP = tmp3(tmp23[3]).HTTP;
+                const request = { url: constants.GRAVITY_CUSTOM_GUILD_SCORES, body: null, rejectWithError: true };
+                const obj5 = { guild_id, channel_scores: null, guild_score: null };
                 let mapped;
-                if (v0 != null) {
-                  mapped = v0.map((channelId) => ({ channel_id: channelId.channelId, score: channelId.score }));
+                if (importDefault != null) {
+                  mapped = importDefault.map((channelId) => ({ channel_id: channelId.channelId, score: channelId.score }));
                 }
-                obj2[1] = mapped;
-                obj2[2] = closure_1_2;
-                obj1[1] = obj2;
-                v0 = 2;
+                obj5.channel_scores = mapped;
+                obj5.guild_score = guild_score;
+                request.body = obj5;
+                v2 = 2;
                 constants = 1;
-                const obj3 = { value: null, done: false };
-                obj3[0] = HTTP.put(obj1);
-                return obj3;
+                const obj6 = { value: HTTP.put(request), done: false };
+                return obj6;
               }
-              obj13 = closure_1_0(closure_1_2[2]);
+              obj13 = tmp3(tmp23[2]);
             }
           } else {
             if (1 === tmp7) {
               c3 = 0;
-              obj1 = v0(closure_1_2[5]);
-              const obj4 = { key: "GravityGuildScore", content: null };
-              const intl = closure_1_0(closure_1_2[6]).intl;
-              obj4[1] = intl.string(closure_1_0(closure_1_2[6]).t.CG4Hks);
-              obj1.open(obj4);
+              const obj7 = { key: "GravityGuildScore", content: null };
+              const intl = tmp3(tmp23[6]).intl;
+              obj7.content = intl.string(tmp3(tmp23[6]).t.CG4Hks);
+              v2(tmp23[5]).open(obj7);
+              const obj2 = v2(tmp23[5]);
             } else if (arg0 === 1) {
               constants = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 !== 2) {
-              const obj5 = { type: "ICYMI_CUSTOM_SCORES_UPDATED", guildId: null, channelScores: null, guildScore: null };
-              obj5[1] = closure_0;
-              obj5[2] = v0;
-              obj5[3] = closure_2;
-              v0(closure_1_2[4]).dispatch(obj5);
-              const obj9 = v0(closure_1_2[4]);
-              const obj6 = { key: "GravityGuildScore", content: null };
-              const intl2 = closure_1_0(closure_1_2[6]).intl;
-              obj6[1] = intl2.string(closure_1_0(closure_1_2[6]).t.OMdbs1);
-              v0(closure_1_2[5]).open(obj6);
+              const obj8 = { type: "ICYMI_CUSTOM_SCORES_UPDATED", guildId: closure_128_0, channelScores: closure_128_1, guildScore: closure_128_2 };
+              v2(tmp23[4]).dispatch(obj8);
+              const obj9 = v2(tmp23[4]);
+              const obj10 = { key: "GravityGuildScore", content: null };
+              const intl2 = tmp3(tmp23[6]).intl;
+              obj10.content = intl2.string(tmp3(tmp23[6]).t.OMdbs1);
+              v2(tmp23[5]).open(obj10);
               c3 = 0;
-              const obj11 = v0(closure_1_2[5]);
+              const obj11 = v2(tmp23[5]);
             }
             c3 = 0;
             constants = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            const obj = { value, done: true };
             return obj;
           }
           constants = 3;
         } catch (tmp23) {
-          closure_2 = tmp23;
           if (tmp4 === c3) {
             constants = tmp2;
             throw tmp23;
           } else {
-            v0 = tmp;
+            v2 = tmp;
           }
         }
       }

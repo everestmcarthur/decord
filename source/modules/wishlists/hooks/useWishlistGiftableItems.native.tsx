@@ -1,23 +1,23 @@
-// Module ID: 8799
-// Function ID: 8800
-// Name: set
+// Module ID: 8828
+// Function ID: 8829
+// Name: useWishlistGiftableItems
 // Dependencies: [19, 1074, 2]
 // Exports: useWishlistGiftableItems
 
-// Module 8799 (set)
-import closure_0 from "noop" /* 19 */;
-import set from "set" /* 2 */;
+// Module 8828 (useWishlistGiftableItems)
+import noop from "module_19" /* 19 */;
 
 let items = [, , ];
-({ COLLECTIBLES: arr[0], PREMIUM: arr[1], SOCIAL_LAYER_GAME_ITEM: arr[2] } = require("ME").SKUProductLines);
-let set = new Set(items);
-const result = set.fileFinishedImporting("modules/wishlists/hooks/useWishlistGiftableItems.native.tsx");
+({ COLLECTIBLES: arr[0], PREMIUM: arr[1], SOCIAL_LAYER_GAME_ITEM: arr[2] } = fn(1074).SKUProductLines);
+const set = new Set(items);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/wishlists/hooks/useWishlistGiftableItems.native.tsx");
 
 export const GIFTABLE_PRODUCT_LINES = set;
 export const useWishlistGiftableItems = function useWishlistGiftableItems(wishlist) {
-  const React = wishlist;
+  noop = wishlist;
   let items = [wishlist];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     let found;
     if (wishlist != null) {
       const items = wishlist.items;

@@ -1,49 +1,44 @@
-// Module ID: 4494
-// Function ID: 4495
+// Module ID: 4508
+// Function ID: 4509
 // Name: useCustomThemeDisplaySettings
 // Dependencies: [32, 1228, 504, 1229, 2]
 // Exports: useCustomThemeDisplaySettings
 
-// Module 4494 (useCustomThemeDisplaySettings)
+// Module 4508 (useCustomThemeDisplaySettings)
 import initialize from "initialize" /* 504 */;
-import getThemeForColor from "getThemeForColor" /* 1229 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "reset" /* 1228 */;
+import _slicedToArray from "module_32" /* 32 */;
+import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1228 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/client_themes/native/useCustomThemeDisplaySettings.tsx");
+const ClientThemesUtils = tmp(1229);
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/client_themes/native/useCustomThemeDisplaySettings.tsx");
 
-export const useCustomThemeDisplaySettings = function useCustomThemeDisplaySettings(base_theme) {
-  let obj = initialize;
-  let items = [closure_3];
-  [tmp4, tmp5, tmp6] = callback(obj.useStateFromStoresArray(items, () => {
-    const items = [store.getCustomTheme(), store.getBaseTheme(), store.getPreviewTheme()];
+export const useCustomThemeDisplaySettings = function useCustomThemeDisplaySettings(stateFromStores) {
+  let items = [CustomThemeMobileStore];
+  [tmp4, tmp5, tmp6] = initialize.useStateFromStoresArray(items, () => {
+    const items = [CustomThemeMobileStore.getCustomTheme(), CustomThemeMobileStore.getBaseTheme(), CustomThemeMobileStore.getPreviewTheme()];
     return items;
-  }), 3);
+  });
   if (undefined !== tmp6) {
     return tmp6;
   } else {
     if (undefined !== tmp4) {
       if (undefined !== tmp5) {
-        obj = { baseTheme: null, customTheme: null };
-        obj[0] = tmp5;
-        obj[1] = tmp4;
-        return obj;
+        const obj3 = { baseTheme: tmp5, customTheme: tmp4 };
+        return obj3;
       }
     }
-    if (null != base_theme) {
-      obj = { colors: null, gradientAngle: null, baseMix: null, gradientColorStops: null };
-      ({ colors: obj2[0], gradient_angle: obj2[1], base_mix: obj2[2] } = base_theme);
-      obj[3] = [];
-      obj1 = { baseTheme: null, customTheme: null };
-      obj1[0] = getThemeForColor.getCustomThemeBaseTheme(base_theme.base_theme);
-      obj1[1] = obj;
-      return obj1;
+    if (null != stateFromStores) {
+      const obj4 = { colors: null, gradientAngle: null, baseMix: null, gradientColorStops: null };
+      ({ colors: obj2.colors, gradient_angle: obj2.gradientAngle, base_mix: obj2.baseMix } = stateFromStores);
+      obj4.gradientColorStops = [];
+      const obj5 = { baseTheme: ClientThemesUtils.getCustomThemeBaseTheme(stateFromStores.base_theme), customTheme: obj4 };
+      return obj5;
     }
   }
-  const tmp = require;
-  const tmp3 = callback(obj.useStateFromStoresArray(items, () => {
-    const items = [store.getCustomTheme(), store.getBaseTheme(), store.getPreviewTheme()];
+  const tmp3 = _slicedToArray(initialize.useStateFromStoresArray(items, () => {
+    const items = [CustomThemeMobileStore.getCustomTheme(), CustomThemeMobileStore.getBaseTheme(), CustomThemeMobileStore.getPreviewTheme()];
     return items;
   }), 3);
 };

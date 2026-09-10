@@ -1,59 +1,56 @@
-// Module ID: 13898
-// Function ID: 13899
+// Module ID: 13921
+// Function ID: 13922
 // Name: useFilteredGuilds
-// Dependencies: [19, 1979, 5438, 1371, 504, 38, 2]
+// Dependencies: [19, 1979, 5452, 1371, 504, 38, 2]
 // Exports: default
 
-// Module 13898 (useFilteredGuilds)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createGuildRecordFromRust" /* 1979 */;
-import closure_5 from "insertUnsortedGuilds" /* 5438 */;
-import closure_6 from "mergeGuildAvatar" /* 1371 */;
+// Module 13921 (useFilteredGuilds)
+import noop from "module_19" /* 19 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import SortedGuildStore from "SortedGuildStore" /* 5452 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_settings_picker/useFilteredGuilds.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings_picker/useFilteredGuilds.tsx");
 
 export default function useFilteredGuilds(isGuildIncluded) {
   isGuildIncluded = isGuildIncluded.isGuildIncluded;
   const selectedGuildId = isGuildIncluded.selectedGuildId;
-  let stateFromStores;
   let stateFromStores1;
-  let stateFromStores2;
-  let obj = isGuildIncluded(stateFromStores1[4]);
-  let items = [closure_5];
-  stateFromStores = obj.useStateFromStores(items, () => flattenedGuildIds.getFlattenedGuildIds());
-  const items1 = [closure_4];
+  let items = [SortedGuildStore];
+  const stateFromStores = isGuildIncluded(stateFromStores1[4]).useStateFromStores(items, () => flattenedGuildIds.getFlattenedGuildIds());
+  const obj = isGuildIncluded(stateFromStores1[4]);
+  const items1 = [GuildStore];
   stateFromStores1 = isGuildIncluded(stateFromStores1[4]).useStateFromStores(items1, () => guilds.getGuilds());
   const obj2 = isGuildIncluded(stateFromStores1[4]);
-  const items2 = [closure_6];
-  stateFromStores2 = isGuildIncluded(stateFromStores1[4]).useStateFromStores(items2, () => currentUser.getCurrentUser());
-  obj = {
-    options: stateFromStores2.useMemo(() => {
-      if (null == stateFromStores2) {
-        let items = [];
+  const items2 = [UserStore];
+  const stateFromStores2 = isGuildIncluded(stateFromStores1[4]).useStateFromStores(items2, () => currentUser.getCurrentUser());
+  const obj4 = { options: null, selectedGuild: null };
+  const items3 = [stateFromStores, stateFromStores1, stateFromStores2, isGuildIncluded];
+  obj4.options = stateFromStores2.useMemo(() => {
+    if (null == stateFromStores2) {
+      let items = [];
+    } else {
+      if (null == isGuildIncluded) {
+        let found = stateFromStores;
       } else {
-        if (null == isGuildIncluded) {
-          let found = stateFromStores;
-        } else {
-          found = stateFromStores.filter((arg0) => {
-            closure_1_1(closure_1_2[5])(null != dependencyMap[arg0], "guild should not be null");
-            return callback(dependencyMap[arg0], closure_3);
-          });
-        }
-        items = found.map((id) => {
-          closure_1_1(closure_1_2[5])(null != dependencyMap[id], "guild should not be null");
-          return { id, label: dependencyMap[id].name, value: dependencyMap[id].id };
+        found = stateFromStores.filter((item) => {
+          stateFromStores(stateFromStores1[5])(null != dependencyMap[item], "guild should not be null");
+          return isGuildIncluded(dependencyMap[item], stateFromStores2);
         });
       }
-      return items;
-    }, items3),
-    selectedGuild: null
-  };
-  items3 = [stateFromStores, stateFromStores1, stateFromStores2, isGuildIncluded];
+      items = found.map((id) => {
+        stateFromStores(stateFromStores1[5])(null != dependencyMap[id], "guild should not be null");
+        return { id, label: dependencyMap[id].name, value: dependencyMap[id].id };
+      });
+    }
+    return items;
+  }, items3);
   let tmp4;
   if (null != selectedGuildId) {
     tmp4 = stateFromStores1[selectedGuildId];
   }
-  obj[1] = tmp4;
-  return obj;
+  obj4.selectedGuild = tmp4;
+  return obj4;
 };

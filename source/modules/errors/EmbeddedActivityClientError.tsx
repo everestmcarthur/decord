@@ -1,12 +1,12 @@
-// Module ID: 9533
-// Function ID: 9534
-// Name: prototype
+// Module ID: 9559
+// Function ID: 9560
+// Name: EmbeddedActivityClientError
 // Dependencies: [2]
 
-// Module 9533 (prototype)
-import set from "set" /* 2 */;
+// Module 9559 (EmbeddedActivityClientError)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/errors/EmbeddedActivityClientError.tsx");
+const result = size.fileFinishedImporting("modules/errors/EmbeddedActivityClientError.tsx");
 const prototype = function EmbeddedActivityClientError(reason, detailCode) {
   const obj = Object.create(new.target.prototype);
   obj.reason = reason;

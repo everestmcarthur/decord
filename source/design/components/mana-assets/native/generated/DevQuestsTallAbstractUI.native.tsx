@@ -1,17 +1,17 @@
-// Module ID: 5895
-// Function ID: 5896
+// Module ID: 5909
+// Function ID: 5910
 // Name: DevQuestsTallAbstractUI
-// Dependencies: [21, 5587, 5896, 2]
+// Dependencies: [21, 5601, 5910, 2]
 // Exports: DevQuestsTallAbstractUI
 
-// Module 5895 (DevQuestsTallAbstractUI)
-import set from "set" /* 2 */;
+// Module 5909 (DevQuestsTallAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 5896 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5910 from "module_5910" /* 5910 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/DevQuestsTallAbstractUI.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/DevQuestsTallAbstractUI.native.tsx");
 
 export const DevQuestsTallAbstractUI = function DevQuestsTallAbstractUI(width) {
   let num = width.width;
@@ -27,14 +27,14 @@ export const DevQuestsTallAbstractUI = function DevQuestsTallAbstractUI(width) {
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
-  obj = { width: num * num3, height: num2 * num3 };
-  const items = [obj];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { width: num * num3, height: num2 * num3 });
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef5910 };
+  obj.source = obj2;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

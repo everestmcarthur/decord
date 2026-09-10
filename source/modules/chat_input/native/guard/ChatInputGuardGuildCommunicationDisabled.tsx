@@ -1,21 +1,24 @@
-// Module ID: 12465
-// Function ID: 12466
-// Dependencies: [19, 2023, 21, 12466, 12452, 11858, 1114, 2]
+// Module ID: 12491
+// Function ID: 12492
+// Name: ChatInputGuardGuildCommunicationDisabled
+// Dependencies: [19, 2023, 21, 12492, 12478, 11884, 1114, 2]
 
-// Module 12465
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import ClockWarningIcon from "ClockWarningIcon" /* 11858 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12452 */;
-import useCommunicationDisabledCountdownCleanup from "useCommunicationDisabledCountdownCleanup" /* 12466 */;
-import { GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK as closure_3 } from "getFriendlyDurationString" /* 2023 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+// Module 12491 (ChatInputGuardGuildCommunicationDisabled)
+import util from "util" /* 1114 */;
+import ClockWarningIcon from "ClockWarningIcon" /* 11884 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12478 */;
+import useCommunicationDisabledCountdownCleanup from "useCommunicationDisabledCountdownCleanup" /* 12492 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const memoResult = importAllResult.memo(function CommunicationDisabledNoticeForGuild(guildMember) {
+require = fn;
+const link = fn(2023).GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardGuildCommunicationDisabled.tsx");
+
+export default noop.memo(function CommunicationDisabledNoticeForGuild(guildMember) {
   guildMember = guildMember.guildMember;
-  let obj = useCommunicationDisabledCountdownCleanup;
-  const communicationDisabledCountdownCleanup = obj.useCommunicationDisabledCountdownCleanup(guildMember);
+  const communicationDisabledCountdownCleanup = useCommunicationDisabledCountdownCleanup.useCommunicationDisabledCountdownCleanup(guildMember);
   const communicationDisabledUntil = guildMember.communicationDisabledUntil;
   if (null == communicationDisabledUntil) {
     const _Date2 = Date;
@@ -24,15 +27,12 @@ const memoResult = importAllResult.memo(function CommunicationDisabledNoticeForG
     const _Date = Date;
     date = new Date(communicationDisabledUntil);
   }
-  obj = { type: "simple-action", icon: jsx(ClockWarningIcon.ClockWarningIcon, {}), message: null, subtext: null, countdown: null };
+  const obj2 = { type: "simple-action", icon: null, message: null, subtext: null, countdown: null };
+  obj2.icon = jsx(ClockWarningIcon.ClockWarningIcon, {});
   const intl = tmp(1114).intl;
-  obj[2] = intl.string(getSystemLocale.t.VSpdzK);
+  obj2.message = intl.string(util.t.VSpdzK);
   const intl2 = tmp(1114).intl;
-  obj = { link: closure_3 };
-  obj[3] = intl2.format(getSystemLocale.t["4ZwD5G"], obj);
-  obj[4] = date;
-  return jsx(ChatInputGuardDefault, { link: closure_3 });
+  obj2.subtext = intl2.format(util.t["4ZwD5G"], { link });
+  obj2.countdown = date;
+  return jsx(ChatInputGuardDefault, { type: "simple-action", icon: null, message: null, subtext: null, countdown: null });
 });
-const result = require("set").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardGuildCommunicationDisabled.tsx");
-
-export default memoResult;

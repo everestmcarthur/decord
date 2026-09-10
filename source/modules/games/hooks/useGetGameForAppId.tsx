@@ -1,21 +1,24 @@
-// Module ID: 9186
-// Function ID: 9187
+// Module ID: 9213
+// Function ID: 9214
 // Name: useGetGameForAppId
-// Dependencies: [19, 1916, 7168, 7309, 1369, 504, 2]
+// Dependencies: [19, 1916, 7182, 7323, 1369, 504, 2]
 // Exports: default, useGetGamesForAppIds
 
-// Module 9186 (useGetGameForAppId)
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7168 */;
-import importDefaultResult1 from "importDefaultResult1" /* 7309 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createGamesFromMessage" /* 1916 */;
+// Module 9213 (useGetGameForAppId)
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7182 */;
+import useGame from "useGame" /* 7323 */;
+import noop from "module_19" /* 19 */;
+import GameStore from "GameStore" /* 1916 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/games/hooks/useGetGameForAppId.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/games/hooks/useGetGameForAppId.tsx");
 
 export default function useGetGameForAppId(applicationId) {
-  let obj = useGetOrFetchApplications;
-  const getOrFetchApplication = obj.useGetOrFetchApplication(applicationId);
+  const getOrFetchApplication = useGetOrFetchApplications.useGetOrFetchApplication(applicationId);
   let canonicalGameId;
   if (getOrFetchApplication != null) {
     canonicalGameId = getOrFetchApplication.getCanonicalGameId();
@@ -23,30 +26,30 @@ export default function useGetGameForAppId(applicationId) {
   if (canonicalGameId == null) {
     canonicalGameId = null;
   }
-  const game = importDefaultResult1.useGame(canonicalGameId);
+  const game = useGame.useGame(canonicalGameId);
   let data = game.data;
-  obj = { gameId: canonicalGameId, gameRecord: null, isLoading: null };
+  const obj2 = { gameId: canonicalGameId, gameRecord: null, isLoading: null };
   if (data == null) {
     data = null;
   }
-  obj[1] = data;
-  obj[2] = null != applicationId && null == getOrFetchApplication || game.isLoading;
-  return obj;
+  obj2.gameRecord = data;
+  obj2.isLoading = null != applicationId && null == getOrFetchApplication || game.isLoading;
+  return obj2;
 };
 export const useGetGamesForAppIds = function useGetGamesForAppIds(stateFromStoresArray) {
-  const tmp = memo(7168)(stateFromStoresArray);
-  const _require = tmp;
+  const tmp = memo(7182)(stateFromStoresArray);
+  _require = tmp;
   const items = [tmp];
-  memo = React.useMemo(() => {
-    const found = lib.filter(lib(closure_1_2[4]).isNotNullish);
+  memo = noop.useMemo(() => {
+    const found = closure_0.filter(GlobalUtils.isNotNullish);
     const mapped = found.map((getCanonicalGameId) => getCanonicalGameId.getCanonicalGameId());
-    return mapped.filter(lib(closure_1_2[4]).isNotNullish);
+    return mapped.filter(GlobalUtils.isNotNullish);
   }, items);
-  const games = _require(7309).useGames(memo);
-  const obj = _require(7309);
-  const items1 = [closure_4];
-  return _require(504).useStateFromStoresArray(items1, () => {
-    const mapped = memo.map((closure_0) => game.getGame(closure_0));
-    return mapped.filter(lib(closure_1_2[4]).isNotNullish);
+  const games = require("useGame").useGames(memo);
+  const obj = require("useGame");
+  const items1 = [GameStore];
+  return require("initialize").useStateFromStoresArray(items1, () => {
+    const mapped = memo.map((item) => game.getGame(item));
+    return mapped.filter(GlobalUtils.isNotNullish);
   });
 };

@@ -1,63 +1,58 @@
-// Module ID: 13186
-// Function ID: 13187
-// Name: createVoiceChannelBadge
-// Dependencies: [17, 1957, 4199, 4579, 1074, 13187, 5028, 4771, 2]
+// Module ID: 13209
+// Function ID: 13210
+// Name: VoiceChannelBadge
+// Dependencies: [17, 1957, 4212, 4593, 1074, 13210, 5042, 4785, 2]
 // Exports: createVoiceChannelBadge
 
-// Module 13186 (createVoiceChannelBadge)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 1074 */;
-import experiment from "experiment" /* 13187 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_5 from "updateVoiceState" /* 4579 */;
+// Module 13209 (VoiceChannelBadge)
+import _mod17 from "module_17" /* 17 */;
+import Constants from "Constants" /* 1074 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
+import VoiceStateStore from "VoiceStateStore" /* 4593 */;
+import size from "module_2" /* 2 */;
 
-const Image = get_ActivityIndicator.Image;
-const Permissions = ME.Permissions;
-let result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/VoiceChannelBadge.tsx");
+const Image = _mod17.Image;
+const Permissions = Constants.Permissions;
+let result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/VoiceChannelBadge.tsx");
 
-export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guildId) {
-  let obj = experiment;
+export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guildId1) {
+  const guildId = guildId1;
   if (obj.getVoiceChannelBadgeExperiment({ guildId, location: "VoiceChannelBadgeNative" }).enabled) {
-    if (null != guildId) {
-      discoverableVoiceState = discoverableVoiceState.getDiscoverableVoiceState(guildId, id);
+    if (null != guildId1) {
+      const discoverableVoiceState = VoiceStateStore.getDiscoverableVoiceState(guildId1, id);
       if (null != discoverableVoiceState) {
         let channelId;
         if (discoverableVoiceState != null) {
           channelId = discoverableVoiceState.channelId;
         }
-        channel = channel.getChannel(channelId);
+        const channel = ChannelStore.getChannel(channelId);
         if (null != channel) {
-          let tmpResult = tmp(5028);
-          const assetSource = Image.resolveAssetSource(tmpResult.getChannelIcon(channel));
+          const assetSource = Image.resolveAssetSource(tmp(5042).getChannelIcon(channel));
           let uri;
           if (assetSource != null) {
             uri = assetSource.uri;
           }
           if (null != uri) {
-            tmpResult = tmp(4771);
-            let result = tmpResult.shouldAgeVerifyForAgeGate();
+            let result = tmp(4785).shouldAgeVerifyForAgeGate();
             if (result) {
-              result = tmp(4771).shouldShowAgeGateForChannelId(channel.id);
-              const tmpResult1 = tmp(4771);
+              result = tmp(4785).shouldShowAgeGateForChannelId(channel.id);
+              const tmpResult4 = tmp(4785);
             }
             let isPrivateResult = channel.isPrivate();
             if (!isPrivateResult) {
-              isPrivateResult = closure_4.can(Permissions.VIEW_CHANNEL, channel) && closure_4.can(Permissions.CONNECT, channel);
-              const obj4 = closure_4;
-              const tmp8 = Permissions;
-              const tmp9 = closure_4.can(Permissions.VIEW_CHANNEL, channel) && closure_4.can(Permissions.CONNECT, channel);
+              isPrivateResult = PermissionStore.can(Permissions.VIEW_CHANNEL, channel) && PermissionStore.can(Permissions.CONNECT, channel);
+              const tmp9 = PermissionStore.can(Permissions.VIEW_CHANNEL, channel) && PermissionStore.can(Permissions.CONNECT, channel);
             }
             if (!result) {
               if (isPrivateResult) {
-                obj = { channelId: null, channelIconUrl: null };
-                obj[0] = channel.id;
-                obj[1] = uri;
-                return obj;
+                const obj2 = { channelId: channel.id, channelIconUrl: uri };
+                return obj2;
               }
             }
+            const tmpResult3 = tmp(4785);
           }
+          const tmpResult = tmp(5042);
         }
       }
     }

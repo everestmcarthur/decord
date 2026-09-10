@@ -1,166 +1,165 @@
-// Module ID: 16811
-// Function ID: 16812
-// Name: styles
-// Dependencies: [19, 17, 1074, 7878, 21, 4560, 576, 16812, 1114, 10148, 16719, 16821, 16822, 16824, 16831, 16832, 16841, 16844, 16853, 16855, 16856, 16857, 16858, 16859, 2]
+// Module ID: 16848
+// Function ID: 16849
+// Name: ChannelSettingsModal
+// Dependencies: [19, 17, 1074, 7892, 21, 4574, 576, 16849, 1114, 10175, 16756, 16858, 16859, 16861, 16868, 16869, 16878, 16881, 16890, 16892, 16893, 16894, 16895, 16896, 2]
 // Exports: getChannelSettingsScreens
 
-// Module 16811 (styles)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 1074 */;
-import { SearchTabs } from "MessageEmbedTypes" /* 7878 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16848 (ChannelSettingsModal)
+import nativeDefault from "native" /* 576 */;
+import ChannelSettingsNotificationsDefault from "ChannelSettingsNotifications" /* 10175 */;
+import messages_PinsScreenDefault from "messages/PinsScreen" /* 16756 */;
+import ChannelSettingsOverviewDefault from "ChannelSettingsOverview" /* 16849 */;
+import MessagePreviewDefault from "MessagePreview" /* 16858 */;
+import EasyChannelPermissionSettingsDefault from "EasyChannelPermissionSettings" /* 16861 */;
+import ChannelSettingsPermissionsListDefault from "ChannelSettingsPermissionsList" /* 16868 */;
+import ChannelSettingsPermissionsOverridesDefault from "ChannelSettingsPermissionsOverrides" /* 16869 */;
+import ChannelSettingsIntegrationsOverviewDefault from "ChannelSettingsIntegrationsOverview" /* 16878 */;
+import IntegrationsSettingsWebhooksOverviewDefault from "IntegrationsSettingsWebhooksOverview" /* 16881 */;
+import ChannelSettingsChangeCategoryDefault from "ChannelSettingsChangeCategory" /* 16893 */;
+import ChannelSettingsChangeRTCRegionDefault from "ChannelSettingsChangeRTCRegion" /* 16894 */;
+import ChannelSettingsEditForumTagDefault from "ChannelSettingsEditForumTag" /* 16895 */;
+import ChannelSettingsChangeDefaultForumLayoutDefault from "ChannelSettingsChangeDefaultForumLayout" /* 16896 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ ChannelSettingsSections: c4, SearchTypes: c5, WebhookTypes: closure_6 } = ME);
-createCacheKey = { container: null, pinsScreen: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-const result = require("set").fileFinishedImporting("components_native/channel_settings/ChannelSettingsModal.tsx");
+const require = globalThis.__r;
 
-export const useChannelSettingsScreensStyles = createCacheKey;
-export const getChannelSettingsScreens = function getChannelSettingsScreens(channelId, arg1, channelSettingsScreensStyles) {
-  const _require = channelId;
-  closure_1 = arg1;
+const require = fn;
+const View = fn(17).View;
+const Constants = fn(1074);
+({ ChannelSettingsSections: closure_4, SearchTypes: hasOwnProperty, WebhookTypes: metroRequire } = Constants);
+const SearchTabs = fn(7892).SearchTabs;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, pinsScreen: null };
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+obj2.pinsScreen = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+const styles = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsModal.tsx");
+
+export const useChannelSettingsScreensStyles = styles;
+export const getChannelSettingsScreens = function getChannelSettingsScreens(channelId, guildId, channelSettingsScreensStyles) {
+  _require = channelId;
   dependencyMap = channelSettingsScreensStyles;
-  obj = { [closure_4.OVERVIEW]: obj };
-  obj = {
-    render(autoFocusElement) {
-      const obj = { channelId: closure_0, autoFocusElement: null };
-      autoFocusElement = undefined;
-      if (autoFocusElement != null) {
-        autoFocusElement = autoFocusElement.autoFocusElement;
-      }
-      obj[1] = autoFocusElement;
-      return closure_1_8(callback(pinsScreen[7]), obj);
-    }
+  let obj = { [closure_4.OVERVIEW]: obj2 };
+  const obj3 = { title: null, render: null };
+  const intl = require("util").intl;
+  obj3.title = intl.string(require("util").t.h850Ss);
+  obj3.render = function render() {
+    return jsx(ChannelSettingsNotificationsDefault, { channelId });
   };
-  obj = { title: null, render: null };
-  const intl = _require(1114).intl;
-  obj[0] = intl.string(_require(1114).t.h850Ss);
-  obj[1] = function render() {
-    return closure_1_8(callback(pinsScreen[9]), { channelId: closure_0 });
+  obj[constants.NOTIFICATIONS] = obj3;
+  const obj4 = { title: null, render: null };
+  const intl2 = require("util").intl;
+  obj4.title = intl2.string(require("util").t["mp1N/2"]);
+  obj4.render = function render() {
+    const obj2 = { style: pinsScreen.pinsScreen, children: jsx(messages_PinsScreenDefault, { searchContext: { type: constants2.GUILD_CHANNEL, guildId, channelId }, tab: SearchTabs.PINS, isFocused: true }) };
+    return <View style={pinsScreen.pinsScreen}>{jsx(messages_PinsScreenDefault, { searchContext: { type: constants2.GUILD_CHANNEL, guildId, channelId }, tab: SearchTabs.PINS, isFocused: true })}</View>;
   };
-  obj[constants.NOTIFICATIONS] = obj;
-  obj1 = { title: null, render: null };
-  const intl2 = _require(1114).intl;
-  obj1[0] = intl2.string(_require(1114).t["mp1N/2"]);
-  obj1[1] = function render() {
-    let obj = { type: closure_1_5.GUILD_CHANNEL, guildId: callback, channelId: closure_0 };
-    obj = { style: pinsScreen.pinsScreen, children: closure_1_8(callback(pinsScreen[10]), obj) };
-    obj = { searchContext: obj, tab: closure_1_7.PINS, isFocused: true };
-    return closure_1_8(closure_1_3, obj);
-  };
-  obj[constants.PINNED_MESSAGES] = obj1;
+  obj[constants.PINNED_MESSAGES] = obj4;
   obj[constants.PINNED_CHAT] = {
     postponeRender: true,
     render() {
-      return closure_1_8(callback(pinsScreen[11]), { channelId: closure_0 });
+      return jsx(MessagePreviewDefault, { channelId });
     }
   };
-  const obj2 = { title: null, postponeRender: true, render: null };
-  const intl3 = _require(1114).intl;
-  obj2[0] = intl3.string(_require(1114).t.ngRFjZ);
-  obj2[2] = function render() {
-    return callback2(callback(pinsScreen[12]), {});
+  const obj5 = { title: null, postponeRender: true, render: null };
+  const intl3 = require("util").intl;
+  obj5.title = intl3.string(require("util").t.ngRFjZ);
+  obj5.render = function render() {
+    return jsx(guildId(pinsScreen[12]), {});
   };
-  obj[constants.INSTANT_INVITES] = obj2;
-  const obj3 = { title: null, render: null };
-  const intl4 = _require(1114).intl;
-  obj3[0] = intl4.string(_require(1114).t.xrmhRX);
-  obj3[1] = function render(arg0) {
+  obj[constants.INSTANT_INVITES] = obj5;
+  const obj6 = { title: null, render: null };
+  const intl4 = require("util").intl;
+  obj6.title = intl4.string(require("util").t.xrmhRX);
+  obj6.render = function render(arg0) {
     const obj = {};
     const merged = Object.assign(arg0);
-    obj.channelId = closure_0;
-    return closure_1_8(callback(pinsScreen[13]), obj);
+    obj.channelId = channelId;
+    return jsx(EasyChannelPermissionSettingsDefault, {});
   };
-  obj[constants.PERMISSIONS] = obj3;
-  const obj4 = { title: null, postponeRender: true, render: null };
-  const intl5 = _require(1114).intl;
-  obj4[0] = intl5.string(_require(1114).t.vPHdP5);
-  obj4[2] = function render(arg0) {
+  obj[constants.PERMISSIONS] = obj6;
+  const obj7 = { title: null, postponeRender: true, render: null };
+  const intl5 = require("util").intl;
+  obj7.title = intl5.string(require("util").t.vPHdP5);
+  obj7.render = function render(arg0) {
     const merged = Object.assign(arg0);
-    return closure_1_8(callback(pinsScreen[14]), { channelId: closure_0 });
+    return jsx(ChannelSettingsPermissionsListDefault, { channelId });
   };
-  obj[constants.NEW_PERMISSION] = obj4;
-  const obj5 = { title: null, render: null };
-  const intl6 = _require(1114).intl;
-  obj5[0] = intl6.string(_require(1114).t.D4p9TR);
-  obj5[1] = function render(arg0) {
-    const merged = Object.assign(arg0);
-    return closure_1_8(callback(pinsScreen[15]), { channelId: closure_0 });
-  };
-  obj[constants.PERMISSION_OVERRIDES] = obj5;
-  const obj6 = { title: null, render: null };
-  const intl7 = _require(1114).intl;
-  obj6[0] = intl7.string(_require(1114).t.CIsNZw);
-  obj6[1] = function render(arg0) {
-    const merged = Object.assign(arg0);
-    return closure_1_8(callback(pinsScreen[16]), { channelId: closure_0 });
-  };
-  obj[constants.INTEGRATIONS] = obj6;
-  const obj7 = { title: null, render: null };
-  const intl8 = _require(1114).intl;
-  obj7[0] = intl8.string(_require(1114).t.jp25Id);
-  obj7[1] = function render() {
-    return closure_1_8(callback(pinsScreen[17]), { channelId: closure_0, webhookType: closure_1_6.INCOMING });
-  };
-  obj[constants.WEBHOOKS] = obj7;
+  obj[constants.NEW_PERMISSION] = obj7;
   const obj8 = { title: null, render: null };
-  const intl9 = _require(1114).intl;
-  obj8[0] = intl9.string(_require(1114).t["6SE3L3"]);
-  obj8[1] = function render(arg0) {
+  const intl6 = require("util").intl;
+  obj8.title = intl6.string(require("util").t.D4p9TR);
+  obj8.render = function render(arg0) {
     const merged = Object.assign(arg0);
-    return callback2(callback(pinsScreen[18]), {});
+    return jsx(ChannelSettingsPermissionsOverridesDefault, { channelId });
   };
-  obj[constants.EDIT_WEBHOOK] = obj8;
+  obj[constants.PERMISSION_OVERRIDES] = obj8;
   const obj9 = { title: null, render: null };
-  const intl10 = _require(1114).intl;
-  obj9[0] = intl10.string(_require(1114).t.OJknhi);
-  obj9[1] = function render(arg0) {
+  const intl7 = require("util").intl;
+  obj9.title = intl7.string(require("util").t.CIsNZw);
+  obj9.render = function render(arg0) {
     const merged = Object.assign(arg0);
-    return callback2(callback(pinsScreen[19]), {});
+    return jsx(ChannelSettingsIntegrationsOverviewDefault, { channelId });
   };
-  obj[constants.EDIT_LINKED_LOBBY] = obj9;
+  obj[constants.INTEGRATIONS] = obj9;
   const obj10 = { title: null, render: null };
-  const intl11 = _require(1114).intl;
-  obj10[0] = intl11.string(_require(1114).t.OrV60r);
-  obj10[1] = function render() {
-    return closure_1_8(callback(pinsScreen[17]), { channelId: closure_0, webhookType: closure_1_6.CHANNEL_FOLLOWER });
+  const intl8 = require("util").intl;
+  obj10.title = intl8.string(require("util").t.jp25Id);
+  obj10.render = function render() {
+    return jsx(IntegrationsSettingsWebhooksOverviewDefault, { channelId, webhookType: constants3.INCOMING });
   };
-  obj[constants.CHANNELS_FOLLOWED] = obj10;
+  obj[constants.WEBHOOKS] = obj10;
   const obj11 = { title: null, render: null };
-  const intl12 = _require(1114).intl;
-  obj11[0] = intl12.string(_require(1114).t["+caQHK"]);
-  obj11[1] = function render() {
-    return closure_1_8(callback(pinsScreen[20]), { channelId: closure_0 });
+  const intl9 = require("util").intl;
+  obj11.title = intl9.string(require("util").t["6SE3L3"]);
+  obj11.render = function render(arg0) {
+    const merged = Object.assign(arg0);
+    return jsx(guildId(pinsScreen[18]), {});
   };
-  obj[constants.CHANGE_CATEGORY] = obj11;
+  obj[constants.EDIT_WEBHOOK] = obj11;
   const obj12 = { title: null, render: null };
-  const intl13 = _require(1114).intl;
-  obj12[0] = intl13.string(_require(1114).t["Ms8bX+"]);
-  obj12[1] = function render() {
-    return closure_1_8(callback(pinsScreen[21]), { channelId: closure_0 });
+  const intl10 = require("util").intl;
+  obj12.title = intl10.string(require("util").t.OJknhi);
+  obj12.render = function render(arg0) {
+    const merged = Object.assign(arg0);
+    return jsx(guildId(pinsScreen[19]), {});
   };
-  obj[constants.CHANGE_RTC_REGION] = obj12;
+  obj[constants.EDIT_LINKED_LOBBY] = obj12;
+  const obj13 = { title: null, render: null };
+  const intl11 = require("util").intl;
+  obj13.title = intl11.string(require("util").t.OrV60r);
+  obj13.render = function render() {
+    return jsx(IntegrationsSettingsWebhooksOverviewDefault, { channelId, webhookType: constants3.CHANNEL_FOLLOWER });
+  };
+  obj[constants.CHANNELS_FOLLOWED] = obj13;
+  const obj14 = { title: null, render: null };
+  const intl12 = require("util").intl;
+  obj14.title = intl12.string(require("util").t["+caQHK"]);
+  obj14.render = function render() {
+    return jsx(ChannelSettingsChangeCategoryDefault, { channelId });
+  };
+  obj[constants.CHANGE_CATEGORY] = obj14;
+  const obj15 = { title: null, render: null };
+  const intl13 = require("util").intl;
+  obj15.title = intl13.string(require("util").t["Ms8bX+"]);
+  obj15.render = function render() {
+    return jsx(ChannelSettingsChangeRTCRegionDefault, { channelId });
+  };
+  obj[constants.CHANGE_RTC_REGION] = obj15;
   obj[constants.EDIT_FORUM_TAG] = {
     render(arg0) {
       const merged = Object.assign(arg0);
-      return closure_1_8(callback(pinsScreen[22]), { channelId: closure_0 });
+      return jsx(ChannelSettingsEditForumTagDefault, { channelId });
     }
   };
-  const obj13 = { title: null, render: null };
-  const intl14 = _require(1114).intl;
-  obj13[0] = intl14.string(_require(1114).t["kQvoC/"]);
-  obj13[1] = function render() {
-    return closure_1_8(callback(pinsScreen[23]), { channelId: closure_0 });
+  const obj16 = { title: null, render: null };
+  const intl14 = require("util").intl;
+  obj16.title = intl14.string(require("util").t["kQvoC/"]);
+  obj16.render = function render() {
+    return jsx(ChannelSettingsChangeDefaultForumLayoutDefault, { channelId });
   };
-  obj[constants.DEFAULT_FORUM_LAYOUT] = obj13;
+  obj[constants.DEFAULT_FORUM_LAYOUT] = obj16;
   return obj;
 };

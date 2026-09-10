@@ -1,72 +1,71 @@
-// Module ID: 9548
-// Function ID: 9549
-// Name: ConfirmActivityGateContent
-// Dependencies: [19, 17, 1920, 21, 4560, 9549, 4556, 1114, 4975, 4255, 4904, 2]
+// Module ID: 9575
+// Function ID: 9576
+// Name: confirmExternalAppLaunchAlert
+// Dependencies: [19, 17, 1920, 21, 4574, 9576, 4570, 1114, 4989, 4268, 4918, 2]
 // Exports: confirmExternalAppLaunchAlert
 
-// Module 9548 (ConfirmActivityGateContent)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import setDefault from "set" /* 4904 */;
-import Button from "Button" /* 4975 */;
-import registerAssetDefault from "registerAsset" /* 9549 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { PRIVATE_APPS_HELP_ARTICLE } from "items3" /* 1920 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9575 (confirmExternalAppLaunchAlert)
+import util from "util" /* 1114 */;
+import LinkingDefault from "Linking" /* 4268 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import _modDef9576 from "module_9576" /* 9576 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function ConfirmActivityGateContent(activityName) {
-  const tmp = callback3();
-  let obj = { style: tmp.alertContainer, children: null };
-  obj = { source: registerAssetDefault, style: tmp.announcementBirb };
-  const items = [callback(closure_3, obj), , , ];
-  obj = { style: tmp.alertEyebrowText, variant: "eyebrow", children: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t["06YebE"]);
-  items[1] = callback(Text.Text, obj);
-  obj1 = { style: tmp.alertTitleText, variant: "heading-lg/bold", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj1[2] = intl2.format(getSystemLocale.t["Z/eMDT"], { activityName: activityName.application.name });
-  items[2] = callback(Text.Text, obj1);
-  const obj3 = { style: tmp.alertSubtitleText, variant: "text-sm/normal", children: null };
-  const intl3 = getSystemLocale.intl;
-  obj3[2] = intl3.string(getSystemLocale.t.z81WwD);
-  items[3] = callback(Text.Text, obj3);
-  obj[1] = items;
-  return callback2(closure_4, obj);
+  const tmp = closure_8();
+  const obj = { style: tmp.alertContainer, children: null };
+  const items = [timestampProducer(React3, { source: _modDef9576, style: tmp.announcementBirb }), , , ];
+  const obj3 = { style: tmp.alertEyebrowText, variant: "eyebrow", children: null };
+  const intl = util.intl;
+  obj3.children = intl.string(util.t["06YebE"]);
+  items[1] = timestampProducer(Text_Text.Text, obj3);
+  const obj4 = { style: tmp.alertTitleText, variant: "heading-lg/bold", children: null };
+  const intl2 = util.intl;
+  obj4.children = intl2.format(util.t["Z/eMDT"], { activityName: activityName.application.name });
+  items[2] = timestampProducer(Text_Text.Text, obj4);
+  const obj6 = { style: tmp.alertSubtitleText, variant: "text-sm/normal", children: null };
+  const intl3 = util.intl;
+  obj6.children = intl3.string(util.t.z81WwD);
+  items[3] = timestampProducer(Text_Text.Text, obj6);
+  obj.children = items;
+  return React5(React4, obj);
 }
 function LinkButton() {
-  let obj = { style: callback3().linkWrapper, children: null };
-  obj = {
+  const obj = { style: closure_8().linkWrapper, children: null };
+  const obj2 = {
     variant: "secondary",
     size: "sm",
     onPress() {
-      callback(table[9]).openURL(closure_5);
+      LinkingDefault.openURL(PRIVATE_APPS_HELP_ARTICLE);
     },
     text: null
   };
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.string(getSystemLocale.t.E0gf5l);
-  obj[1] = callback(Button.Button, obj);
-  return callback(closure_4, obj);
+  const intl = util.intl;
+  obj2.text = intl.string(util.t.E0gf5l);
+  obj.children = timestampProducer(components_Button_Button.Button, obj2);
+  return timestampProducer(React4, obj);
 }
-noopAll;
-({ Image: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ alertContainer: { display: "flex", alignItems: "center", padding: 8 }, alertEyebrowText: { marginTop: 40, textAlign: "center" }, alertTitleText: { marginTop: 16, textAlign: "center" }, alertSubtitleText: { marginTop: 16, textAlign: "center" }, announcementBirb: { width: 90, height: 100, position: "absolute", top: -66 }, linkWrapper: { marginTop: 8 } });
-const result = require("set").fileFinishedImporting("modules/activities/confirmExternalAppLaunchAlert.native.tsx");
+get_ActivityIndicator = fn(17);
+({ Image: c3, View: closure_4 } = get_ActivityIndicator);
+const PRIVATE_APPS_HELP_ARTICLE = fn(1920).PRIVATE_APPS_HELP_ARTICLE;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let closure_8 = createStyles.createStyles({ alertContainer: { display: "flex", alignItems: "center", padding: 8 }, alertEyebrowText: { marginTop: 40, textAlign: "center" }, alertTitleText: { marginTop: 16, textAlign: "center" }, alertSubtitleText: { marginTop: 16, textAlign: "center" }, announcementBirb: { width: 90, height: 100, position: "absolute", top: -66 }, linkWrapper: { marginTop: 8 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/confirmExternalAppLaunchAlert.native.tsx");
 
 export const confirmExternalAppLaunchAlert = function confirmExternalAppLaunchAlert(arg0) {
   ({ application, onConfirm, onCancel } = arg0);
-  let obj = setDefault;
-  obj = { title: "", children: callback(ConfirmActivityGateContent, { application }), onConfirm, confirmText: null, onCancel: null, cancelText: null, footer: null };
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.string(getSystemLocale.t["3PatSz"]);
-  obj[4] = onCancel;
-  const intl2 = getSystemLocale.intl;
-  obj[5] = intl2.string(getSystemLocale.t["ETE/oC"]);
-  obj[6] = callback(LinkButton, {});
-  return Promise.resolve(obj.show(obj));
+  const obj2 = { title: "", children: timestampProducer(ConfirmActivityGateContent, { application }), onConfirm, confirmText: null, onCancel: null, cancelText: null, footer: null };
+  const intl = util.intl;
+  obj2.confirmText = intl.string(util.t["3PatSz"]);
+  obj2.onCancel = onCancel;
+  const intl2 = util.intl;
+  obj2.cancelText = intl2.string(util.t["ETE/oC"]);
+  obj2.footer = timestampProducer(LinkButton, {});
+  return Promise.resolve(AlertActionCreatorsDefault.show(obj2));
 };

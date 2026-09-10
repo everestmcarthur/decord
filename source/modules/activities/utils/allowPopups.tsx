@@ -1,15 +1,15 @@
-// Module ID: 9655
-// Function ID: 9656
+// Module ID: 9682
+// Function ID: 9683
 // Name: allowPopups
 // Dependencies: [1920, 2]
 // Exports: allowPopups
 
-// Module 9655 (allowPopups)
-import set from "set" /* 2 */;
-import items3 from "items3" /* 1920 */;
+// Module 9682 (allowPopups)
+import Constants from "Constants" /* 1920 */;
+import size from "module_2" /* 2 */;
 
-let closure_0 = items3.APPLICATIONS_WITH_ALLOWED_POPUPS;
-const result = set.fileFinishedImporting("modules/activities/utils/allowPopups.tsx");
+Constants.APPLICATIONS_WITH_ALLOWED_POPUPS;
+const result = size.fileFinishedImporting("modules/activities/utils/allowPopups.tsx");
 
 export const allowPopups = function allowPopups(application) {
   let prop = application;

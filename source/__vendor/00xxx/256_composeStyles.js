@@ -2,9 +2,11 @@
 // Function ID: 257
 // Name: composeStyles
 // Dependencies: []
+// Exports: default
 
 // Module 256 (composeStyles)
-arg5.default = function composeStyles(arg0, arg1) {
+
+export default function composeStyles(arg0, arg1) {
   let tmp = arg1;
   if (null != arg0) {
     let tmp2 = arg0;

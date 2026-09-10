@@ -1,21 +1,21 @@
-// Module ID: 14142
-// Function ID: 14143
-// Name: items
-// Dependencies: [19, 21, 9953, 14143, 2]
+// Module ID: 14165
+// Function ID: 14166
+// Name: YouTabLottie
+// Dependencies: [19, 21, 9980, 14166, 2]
 
-// Module 14142 (items)
-import LottieIcon from "LottieIcon" /* 9953 */;
-import registerAsset from "registerAsset" /* 14143 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+// Module 14165 (YouTabLottie)
+import LottieIcon from "LottieIcon" /* 9980 */;
+import _mod14166 from "module_14166" /* 14166 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let closure_3 = ["I"];
+require = fn;
+const jsx = fn(21).jsx;
+const layers = ["I"];
 const items = [{ name: "all", start: 0, duration: 67 }];
-const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
-  const merged = Object.assign(arg0);
-  return jsx(LottieIcon.LottieIcon, { dotLottie: registerAsset, animation: "all", ref, layers: closure_3, markers: items });
-});
-const result = require("set").fileFinishedImporting("design/components/LottieIcon/native/generated/YouTabLottie.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/LottieIcon/native/generated/YouTabLottie.tsx");
 
-export const YouTabLottie = forwardRefResult;
+export const YouTabLottie = noop.forwardRef((arg0, ref) => {
+  const merged = Object.assign(arg0);
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod14166, animation: "all", ref, layers, markers: items });
+});

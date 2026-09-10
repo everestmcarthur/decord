@@ -1,15 +1,15 @@
-// Module ID: 14559
-// Function ID: 14560
-// Name: __INTERNAL_VIEW_CONFIG
+// Module ID: 14584
+// Function ID: 14585
+// Name: DiscordGestureHandlerRootViewNativeComponent
 // Dependencies: [65, 2]
 
-// Module 14559 (__INTERNAL_VIEW_CONFIG)
-import set from "set" /* 2 */;
-import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
+// Module 14584 (DiscordGestureHandlerRootViewNativeComponent)
+import module_65 from "module_65" /* 65 */;
+import size from "module_2" /* 2 */;
 
-const obj = { uiViewClassName: "DiscordGestureHandlerRootView", validAttributes: {} };
-const value = setRuntimeConfigProvider.get("DiscordGestureHandlerRootView", () => obj);
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/DiscordGestureHandlerRootViewNativeComponent.tsx");
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "DiscordGestureHandlerRootView", validAttributes: {} };
+const value = module_65.get("DiscordGestureHandlerRootView", () => obj);
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/DiscordGestureHandlerRootViewNativeComponent.tsx");
 
 export default value;
-export const __INTERNAL_VIEW_CONFIG = obj;
+export { __INTERNAL_VIEW_CONFIG };

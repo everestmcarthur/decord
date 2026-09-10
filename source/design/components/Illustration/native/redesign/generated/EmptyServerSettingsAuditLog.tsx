@@ -1,66 +1,64 @@
-// Module ID: 17559
-// Function ID: 17560
-// Name: getEmptyServerSettingsAuditLogSource
-// Dependencies: [19, 17, 21, 8233, 17560, 17561, 17562, 4411, 2]
+// Module ID: 17590
+// Function ID: 17591
+// Name: EmptyServerSettingsAuditLog
+// Dependencies: [19, 17, 21, 8259, 17591, 17592, 17593, 4425, 2]
 // Exports: EmptyServerSettingsAuditLog, getEmptyServerSettingsAuditLogSource, useEmptyServerSettingsAuditLogSource
 
-// Module 17559 (getEmptyServerSettingsAuditLogSource)
-import noopAll from "noop" /* 19 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
-import getIllustrationSource from "getIllustrationSource" /* 8233 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 17590 (EmptyServerSettingsAuditLog)
+import shared from "shared" /* 4425 */;
+import _mod8259 from "module_8259" /* 8259 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/EmptyServerSettingsAuditLog.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/EmptyServerSettingsAuditLog.tsx");
 
 export const getEmptyServerSettingsAuditLogSource = function getEmptyServerSettingsAuditLogSource(theme) {
-  let obj = getIllustrationSource;
-  obj = {
+  return _mod8259.getIllustrationSource(theme, {
     dark() {
-      return callback(17560);
+      return require("module_17591");
     },
     darker() {
-      return callback(17561);
+      return require("module_17592");
     },
     light() {
-      return callback(17562);
+      return require("module_17593");
     }
-  };
-  return obj.getIllustrationSource(theme, obj);
+  });
 };
 export const useEmptyServerSettingsAuditLogSource = function useEmptyServerSettingsAuditLogSource() {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = shared;
+  return _mod8259.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return callback(17560);
+      return require("module_17591");
     },
     darker() {
-      return callback(17561);
+      return require("module_17592");
     },
     light() {
-      return callback(17562);
+      return require("module_17593");
     }
-  };
-  return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  });
 };
 export const EmptyServerSettingsAuditLog = function EmptyServerSettingsAuditLog(arg0) {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = shared;
+  const obj4 = {};
+  const illustrationSource = _mod8259.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return callback(17560);
+      return require("module_17591");
     },
     darker() {
-      return callback(17561);
+      return require("module_17592");
     },
     light() {
-      return callback(17562);
+      return require("module_17593");
     }
-  };
-  obj = {};
-  const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  });
   const merged = Object.assign(arg0);
-  obj.source = illustrationSource;
+  obj4.source = illustrationSource;
   return <Image />;
 };

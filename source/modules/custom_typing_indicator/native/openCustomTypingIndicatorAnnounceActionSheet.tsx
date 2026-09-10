@@ -1,23 +1,21 @@
-// Module ID: 11972
-// Function ID: 11973
+// Module ID: 11998
+// Function ID: 11999
 // Name: openCustomTypingIndicatorAnnounceActionSheet
-// Dependencies: [4527, 11973, 1896, 2]
+// Dependencies: [4541, 11999, 1896, 2]
 // Exports: openCustomTypingIndicatorAnnounceActionSheet
 
-// Module 11972 (openCustomTypingIndicatorAnnounceActionSheet)
-import set from "set" /* 2 */;
+// Module 11998 (openCustomTypingIndicatorAnnounceActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import size from "module_2" /* 2 */;
 
 const CustomTypingIndicatorAnnounceActionSheet = "CustomTypingIndicatorAnnounceActionSheet";
-const result = set.fileFinishedImporting("modules/custom_typing_indicator/native/openCustomTypingIndicatorAnnounceActionSheet.tsx");
+const result = size.fileFinishedImporting("modules/custom_typing_indicator/native/openCustomTypingIndicatorAnnounceActionSheet.tsx");
 
 export const openCustomTypingIndicatorAnnounceActionSheet = function openCustomTypingIndicatorAnnounceActionSheet() {
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11999, dependencyMap.paths), CustomTypingIndicatorAnnounceActionSheet, {
     markAsDismissed() {
-      return callback(table[0]).hideActionSheet(closure_3);
+      return ActionSheetActionCreatorsDefault.hideActionSheet(CustomTypingIndicatorAnnounceActionSheet);
     }
-  };
-  obj.openLazy(asyncRequireImpl(11973, dependencyMap.paths), CustomTypingIndicatorAnnounceActionSheet, obj);
+  });
 };

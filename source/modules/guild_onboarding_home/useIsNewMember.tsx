@@ -1,25 +1,28 @@
-// Module ID: 7223
-// Function ID: 7224
+// Module ID: 7237
+// Function ID: 7238
 // Name: useIsNewMember
-// Dependencies: [2014, 2021, 4187, 1384, 1090, 504, 2]
+// Dependencies: [2014, 2021, 4200, 1384, 1090, 504, 2]
 // Exports: default, getIsNewMember
 
-// Module 7223 (useIsNewMember)
-import setDefault from "set" /* 1090 */;
-import hasFlag from "hasFlag" /* 1384 */;
-import closure_3 from "initialize" /* 2014 */;
-import closure_4 from "trackCommunicationDisabled" /* 2021 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4187 */;
+// Module 7237 (useIsNewMember)
+import DurationsDefault from "Durations" /* 1090 */;
+import FlagUtils from "FlagUtils" /* 1384 */;
+import ImpersonateStore from "ImpersonateStore" /* 2014 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/useIsNewMember.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const GuildMemberFlags = fn(4200).GuildMemberFlags;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_onboarding_home/useIsNewMember.tsx");
 
 export default function useIsNewMember(arg0) {
-  const _require = arg0;
-  const items = [closure_4, closure_3];
-  return _require(504).useStateFromStores(items, () => {
+  _require = arg0;
+  const items = [GuildMemberStore, ImpersonateStore];
+  return require("initialize").useStateFromStores(items, () => {
     let flag = true;
-    if (!closure_1_3.isFullServerPreview(callback)) {
+    if (!ImpersonateStore.isFullServerPreview(closure_0)) {
       const selfMember = obj.getSelfMember(tmp);
       flag = false;
       if (null != selfMember) {
@@ -30,17 +33,15 @@ export default function useIsNewMember(arg0) {
           if (num == null) {
             num = 0;
           }
-          const hasFlagResult = callback(closure_1_2[3]).hasFlag(num, closure_1_5.COMPLETED_HOME_ACTIONS);
+          const hasFlagResult = FlagUtils.hasFlag(num, GuildMemberFlags.COMPLETED_HOME_ACTIONS);
           let tmp9 = !hasFlagResult;
           if (!hasFlagResult) {
             const _Date = Date;
             const timestamp = Date.now();
             const diff = timestamp - selfMemberJoinedAt.getTime();
-            tmp9 = diff < closure_1_1(tmp6[4]).Millis.WEEK;
+            tmp9 = diff < DurationsDefault.Millis.WEEK;
           }
           tmp4 = tmp9;
-          const obj3 = callback(closure_1_2[3]);
-          tmp6 = closure_1_2;
         }
         flag = tmp4;
       }
@@ -48,29 +49,28 @@ export default function useIsNewMember(arg0) {
     return flag;
   });
 };
-export const getIsNewMember = function getIsNewMember(closure_0) {
+export const getIsNewMember = function getIsNewMember(id) {
   let flag = true;
-  if (!fullServerPreview.isFullServerPreview(closure_0)) {
-    const selfMember = obj.getSelfMember(closure_0);
+  if (!ImpersonateStore.isFullServerPreview(id)) {
+    const selfMember = obj.getSelfMember(id);
     flag = false;
     if (null != selfMember) {
-      const selfMemberJoinedAt = obj.getSelfMemberJoinedAt(closure_0);
+      const selfMemberJoinedAt = obj.getSelfMemberJoinedAt(id);
       let tmp3 = null != selfMemberJoinedAt;
       if (tmp3) {
         let num = selfMember.flags;
         if (num == null) {
           num = 0;
         }
-        const hasFlagResult = hasFlag.hasFlag(num, GuildMemberFlags.COMPLETED_HOME_ACTIONS);
+        const hasFlagResult = FlagUtils.hasFlag(num, GuildMemberFlags.COMPLETED_HOME_ACTIONS);
         let tmp8 = !hasFlagResult;
         if (!hasFlagResult) {
           const _Date = Date;
           const timestamp = Date.now();
           const diff = timestamp - selfMemberJoinedAt.getTime();
-          tmp8 = diff < setDefault.Millis.WEEK;
+          tmp8 = diff < DurationsDefault.Millis.WEEK;
         }
         tmp3 = tmp8;
-        const obj3 = hasFlag;
       }
       flag = tmp3;
     }

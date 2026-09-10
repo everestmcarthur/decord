@@ -1,73 +1,72 @@
-// Module ID: 14183
-// Function ID: 14184
+// Module ID: 14208
+// Function ID: 14209
 // Name: CarouselPagination
-// Dependencies: [19, 17, 21, 4560, 576, 4296, 4561, 14123, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 4310, 4575, 14146, 2]
 // Exports: default
 
-// Module 14183 (CarouselPagination)
-import ThemesDefault from "Themes" /* 576 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 14208 (CarouselPagination)
+import nativeDefault from "native" /* 576 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import timing from "timing" /* 4575 */;
+import Easing from "Easing" /* 14146 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let obj = { container: null, dot: null };
-obj = { position: "relative", top: -16, marginBottom: -16, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_20, paddingVertical: ThemesDefault.space.PX_32 };
-obj[0] = obj;
-createCacheKey = { width: 8, height: 8, borderRadius: ThemesDefault.radii.xs, marginHorizontal: 4, backgroundColor: ThemesDefault.colors.ICON_STRONG };
-obj[1] = createCacheKey;
-let closure_5 = createCacheKey.createStyles(obj);
-let closure_6 = { code: "function CarouselPaginationTsx1(){const{withTiming,active,STANDARD_EASING}=this.__closure;return withTiming(active?1:0,{duration:250,easing:STANDARD_EASING},'animate-always');}" };
-let closure_7 = { code: "function CarouselPaginationTsx2(){const{interpolate,progress,interpolateColor,backgroundColor,brand500}=this.__closure;return{width:interpolate(progress.get(),[0,1],[8,16]),backgroundColor:interpolateColor(progress.get(),[0,1],[backgroundColor,brand500]),opacity:interpolate(progress.get(),[0,1],[0.3,1])};}" };
-let closure_8 = importAllResult.memo((active) => {
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj = { container: { position: "relative", top: -16, marginBottom: -16, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_20, paddingVertical: nativeDefault.space.PX_32 }, dot: null };
+let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.xs, marginHorizontal: 4, backgroundColor: nativeDefault.colors.ICON_STRONG };
+obj.dot = size;
+let closure_5 = createStyles.createStyles(obj);
+const __initData = { code: "function CarouselPaginationTsx1(){const{withTiming,active,STANDARD_EASING}=this.__closure;return withTiming(active?1:0,{duration:250,easing:STANDARD_EASING},'animate-always');}" };
+const __initData2 = { code: "function CarouselPaginationTsx2(){const{interpolate,progress,interpolateColor,backgroundColor,brand500}=this.__closure;return{width:interpolate(progress.get(),[0,1],[8,16]),backgroundColor:interpolateColor(progress.get(),[0,1],[backgroundColor,brand500]),opacity:interpolate(progress.get(),[0,1],[0.3,1])};}" };
+let closure_8 = noop.memo((active) => {
   active = active.active;
-  let derivedValue;
   let BRAND_500;
-  let backgroundColor;
-  const tmp = callback();
-  let obj = active(BRAND_500[5]);
+  let tmp = closure_5();
   const fn = function o() {
-    let obj = active(BRAND_500[6]);
     let num = 0;
     if (active) {
       num = 1;
     }
-    obj = { duration: 250, easing: active(BRAND_500[7]).STANDARD_EASING };
-    return obj.withTiming(num, obj, "animate-always");
+    const obj = timing;
+    return obj.withTiming(num, { duration: 250, easing: Easing.STANDARD_EASING }, "animate-always");
   };
-  obj = { withTiming: active(BRAND_500[6]).withTiming, active, STANDARD_EASING: active(BRAND_500[7]).STANDARD_EASING };
-  fn.__closure = obj;
+  let obj = active(BRAND_500[5]);
+  fn.__closure = { withTiming: active(BRAND_500[6]).withTiming, active, STANDARD_EASING: active(BRAND_500[7]).STANDARD_EASING };
   fn.__workletHash = 5885711729227;
-  fn.__initData = closure_6;
-  derivedValue = obj.useDerivedValue(fn);
+  fn.__initData = __initData;
+  const derivedValue = obj.useDerivedValue(fn);
   BRAND_500 = derivedValue(BRAND_500[4]).unsafe_rawColors.BRAND_500;
-  backgroundColor = tmp.dot.backgroundColor;
+  const backgroundColor = tmp.dot.backgroundColor;
+  let obj2 = { withTiming: active(BRAND_500[6]).withTiming, active, STANDARD_EASING: active(BRAND_500[7]).STANDARD_EASING };
   const fn2 = function u() {
-    const obj = { width: active(BRAND_500[5]).interpolate(derivedValue.get(), [0, 1], [8, 16]), backgroundColor: null, opacity: null };
-    const obj2 = active(BRAND_500[5]);
+    const obj = { width: ReanimatedRexport.interpolate(derivedValue.get(), [0, 1], [8, 16]), backgroundColor: null, opacity: null };
     const items = [backgroundColor, BRAND_500];
-    obj[1] = active(BRAND_500[5]).interpolateColor(derivedValue.get(), [0, 1], items);
-    const obj3 = active(BRAND_500[5]);
-    obj[2] = active(BRAND_500[5]).interpolate(derivedValue.get(), [0, 1], [0.3, 1]);
+    obj.backgroundColor = ReanimatedRexport.interpolateColor(derivedValue.get(), [0, 1], items);
+    obj.opacity = ReanimatedRexport.interpolate(derivedValue.get(), [0, 1], [0.3, 1]);
     return obj;
   };
-  obj = { interpolate: active(BRAND_500[5]).interpolate, progress: derivedValue, interpolateColor: active(BRAND_500[5]).interpolateColor, backgroundColor, brand500: BRAND_500 };
-  fn2.__closure = obj;
+  let obj3 = active(BRAND_500[5]);
+  fn2.__closure = { interpolate: active(BRAND_500[5]).interpolate, progress: derivedValue, interpolateColor: active(BRAND_500[5]).interpolateColor, backgroundColor, brand500: BRAND_500 };
   fn2.__workletHash = 7804335337011;
-  fn2.__initData = closure_7;
-  const animatedStyle = active(BRAND_500[5]).useAnimatedStyle(fn2);
-  const style = [tmp.dot, animatedStyle];
-  return jsx(derivedValue(BRAND_500[5]).View, { style });
+  fn2.__initData = __initData2;
+  const animatedStyle = obj3.useAnimatedStyle(fn2);
+  const obj5 = { style: null };
+  let items = [tmp.dot, animatedStyle];
+  obj5.style = items;
+  return jsx(derivedValue(BRAND_500[5]).View, { style: null });
 });
-const result = require("set").fileFinishedImporting("design/void/CarouselPagination/native/CarouselPagination.tsx");
+size = fn(2);
+const result = size.fileFinishedImporting("design/void/CarouselPagination/native/CarouselPagination.tsx");
 
 export default function CarouselPagination(currentIndex) {
   currentIndex = currentIndex.currentIndex;
   ({ numberOfItems, containerStyle } = currentIndex);
   const obj = { style: null, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
-  const items = [callback().container, containerStyle];
-  obj[0] = items;
-  obj[4] = Array.from({ length: numberOfItems }, (arg0, arg1) => closure_1_4(closure_1_8, { active: arg1 === currentIndex }, arg1));
+  const items = [closure_5().container, containerStyle];
+  obj.style = items;
+  obj.children = Array.from({ length: numberOfItems }, (arg0, arg1) => <closure_8 key={arg1} active={arg1 === currentIndex} />);
   return <View style={null} accessible={false} accessibilityElementsHidden importantForAccessibility="no-hide-descendants">{null}</View>;
 };

@@ -1,25 +1,24 @@
-// Module ID: 10073
-// Function ID: 10074
-// Dependencies: [19, 17, 21, 1477, 10074, 2]
+// Module ID: 10100
+// Function ID: 10101
+// Name: BlankAudienceTile
+// Dependencies: [19, 17, 21, 1477, 10101, 2]
 
-// Module 10073
+// Module 10100 (BlankAudienceTile)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
-import RaisedHandIcon from "RaisedHandIcon" /* 10074 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import AudienceTile from "AudienceTile" /* 10101 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const memoResult = importAllResult.memo(() => {
-  let obj = RaisedHandIcon;
-  const audienceTileStyles = obj.useAudienceTileStyles();
-  obj = { style: null };
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/BlankAudienceTile.tsx");
+
+export default noop.memo(() => {
+  const audienceTileStyles = AudienceTile.useAudienceTileStyles();
+  const obj3 = { style: null };
   const items = [audienceTileStyles.container, ];
-  obj = { width: RaisedHandIcon.getTileWidthStyle(useWindowDimensionsDefault().width) };
-  items[1] = obj;
-  obj[0] = items;
-  return <View width={RaisedHandIcon.getTileWidthStyle(useWindowDimensionsDefault().width)} />;
+  items[1] = { width: AudienceTile.getTileWidthStyle(useWindowDimensionsDefault().width) };
+  obj3.style = items;
+  return <View style={null} />;
 });
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/BlankAudienceTile.tsx");
-
-export default memoResult;

@@ -1,33 +1,31 @@
-// Module ID: 15411
-// Function ID: 15412
-// Name: toggle
-// Dependencies: [4552, 7975, 11473, 1114, 504, 14440, 2]
+// Module ID: 15440
+// Function ID: 15441
+// Name: YouBarNameplateAccessibilitySetting
+// Dependencies: [4566, 7989, 11500, 1114, 504, 14465, 2]
 
-// Module 15411 (toggle)
+// Module 15440 (YouBarNameplateAccessibilitySetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import setFontSize from "setFontSize" /* 14440 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import createToggle from "createToggle" /* 11473 */;
+import util from "util" /* 1114 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14465 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const SettingBuilders = fn(11500);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.EEms8K);
+    const intl = util.intl;
+    return intl.string(util.t.EEms8K);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7989).MobileUserSettings.ACCESSIBILITY,
   useValue() {
-    const items = [closure_2];
-    return initialize.useStateFromStores(items, () => obj.animateYouBarNameplate);
+    const items = [AccessibilityStore];
+    return initialize.useStateFromStores(items, () => AccessibilityStore.animateYouBarNameplate);
   },
   onValueChange(animateNameplate) {
-    let obj = setFontSize;
-    obj = { animateNameplate };
-    return obj.setYouBarAnimations(obj);
+    return AccessibilityActionCreators.setYouBarAnimations({ animateNameplate });
   }
-};
-createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/YouBarNameplateAccessibilitySetting.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/YouBarNameplateAccessibilitySetting.tsx");
 
-export default createToggle;
+export default toggle;

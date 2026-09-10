@@ -1,30 +1,30 @@
-// Module ID: 17854
-// Function ID: 17855
-// Name: AVErrorCameraSendLowFPSDefinition
-// Dependencies: [502, 1908, 4583, 1090, 17840, 9115, 17837, 2]
+// Module ID: 17887
+// Function ID: 17888
+// Name: AVErrorCameraSendLowFPS
+// Dependencies: [502, 1908, 4597, 1090, 17873, 9142, 17870, 2]
 
-// Module 17854 (AVErrorCameraSendLowFPSDefinition)
-import setDefault from "set" /* 1090 */;
-import getReportInboundErrors from "getReportInboundErrors" /* 17840 */;
-import closure_2 from "fetchFingerprint" /* 502 */;
-import closure_3 from "_detectH265HardwareDecode" /* 1908 */;
-import closure_4 from "createRTCConnection" /* 4583 */;
+// Module 17887 (AVErrorCameraSendLowFPS)
+import DurationsDefault from "Durations" /* 1090 */;
+import AVErrorUtils from "AVErrorUtils" /* 17873 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
 
-require = arg1;
-let closure_5 = 20 * setDefault.Millis.SECOND;
-const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorCameraSendLowFPS.tsx");
+require = fn;
+let closure_5 = 20 * DurationsDefault.Millis.SECOND;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorCameraSendLowFPS.tsx");
 
 export const AVErrorCameraSendLowFPSDefinition = {
   getActiveErrors() {
-    let obj = rTCConnection;
-    rTCConnection = rTCConnection.getRTCConnection();
+    const rTCConnection = RTCConnectionStore.getRTCConnection();
     if (null == rTCConnection) {
       return null;
     } else {
       const mediaEngineConnectionId = rTCConnection.getMediaEngineConnectionId();
       if (null == mediaEngineConnectionId) {
         return null;
-      } else if (videoEnabled.isVideoEnabled()) {
+      } else if (MediaEngineStore.isVideoEnabled()) {
         const lastNonZeroRemoteVideoSinkWantsTime = obj.getLastNonZeroRemoteVideoSinkWantsTime();
         if (null != lastNonZeroRemoteVideoSinkWantsTime) {
           const _performance = performance;
@@ -33,16 +33,14 @@ export const AVErrorCameraSendLowFPSDefinition = {
           }
         }
         if (rTCConnection.hasActiveRemoteWants()) {
-          const accumulatedStatsWithMinDatapoints = getReportInboundErrors.getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, id.getId());
+          const accumulatedStatsWithMinDatapoints = AVErrorUtils.getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, AuthenticationStore.getId());
           let tmp7 = null;
           if (null != accumulatedStatsWithMinDatapoints) {
             if (accumulatedStatsWithMinDatapoints.short.frameRate < 10) {
-              obj = { type: null, userId: null };
-              obj[0] = tmp4(9115).AVError.CAMERA_SEND_LOW_FPS;
-              obj[1] = id.getId();
-              const merged = Object.assign(tmp4(17837).getVoiceChannelErrorContext());
-              const items = [obj];
-              const tmp4Result = tmp4(17837);
+              const obj2 = { type: tmp4(9142).AVError.CAMERA_SEND_LOW_FPS, userId: AuthenticationStore.getId() };
+              const merged = Object.assign(tmp4(17870).getVoiceChannelErrorContext());
+              const items = [obj2];
+              const tmp4Result = tmp4(17870);
               const tmp8 = items;
             }
             tmp7 = tmp8;
@@ -55,6 +53,7 @@ export const AVErrorCameraSendLowFPSDefinition = {
         return null;
       }
     }
+    obj = RTCConnectionStore;
   },
   makeErrorContextKey(mediaSessionId) {
     return "" + mediaSessionId.mediaSessionId;

@@ -1,15 +1,15 @@
-// Module ID: 9738
-// Function ID: 9739
-// Name: useGuildEligibleForMediaChannels
+// Module ID: 9765
+// Function ID: 9766
+// Name: MediaChannelExperimentUtils
 // Dependencies: [1074, 2]
 // Exports: useGuildEligibleForMediaChannels
 
-// Module 9738 (useGuildEligibleForMediaChannels)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 9765 (MediaChannelExperimentUtils)
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const GuildFeatures = ME.GuildFeatures;
-const result = set.fileFinishedImporting("modules/media_channel/MediaChannelExperimentUtils.tsx");
+const GuildFeatures = Constants.GuildFeatures;
+const result = size.fileFinishedImporting("modules/media_channel/MediaChannelExperimentUtils.tsx");
 
 export const useGuildEligibleForMediaChannels = function useGuildEligibleForMediaChannels(stateFromStores) {
   let id;

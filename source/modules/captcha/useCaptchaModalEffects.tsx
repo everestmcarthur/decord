@@ -1,41 +1,41 @@
-// Module ID: 17291
-// Function ID: 17292
+// Module ID: 17322
+// Function ID: 17323
 // Name: useCaptchaModalEffects
-// Dependencies: [19, 1074, 4992, 11282, 1242, 2]
+// Dependencies: [19, 1074, 5006, 11309, 1242, 2]
 // Exports: default
 
-// Module 17291 (useCaptchaModalEffects)
-import closure_3 from "noop" /* 19 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
+// Module 17322 (useCaptchaModalEffects)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/captcha/useCaptchaModalEffects.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/captcha/useCaptchaModalEffects.tsx");
 
 export default function useCaptchaModalEffects(arg0) {
   ({ onReject: require, analyticsType } = arg0);
   if (analyticsType === undefined) {
     analyticsType = "Guild Join Captcha";
   }
-  dependencyMap = undefined;
-  dependencyMap = React.useRef(true);
-  analyticsType(4992)(() => () => {
+  dependencyMap = noop.useRef(true);
+  analyticsType(5006)(() => () => {
     if (ref.current) {
-      if (closure_0 != null) {
-        tmp(closure_1_0(closure_1_2[3]).CaptchaError.CANCEL);
+      if (closure_1_0 != null) {
+        tmp(require("SharedCaptchaUtils").CaptchaError.CANCEL);
       }
     }
   });
   const items = [analyticsType];
-  const effect = React.useEffect(() => {
-    let obj = analyticsType(table[4]);
-    obj = { type: analyticsType };
-    obj.track(closure_1_4.OPEN_MODAL, obj);
+  const effect = noop.useEffect(() => {
+    AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type: analyticsType });
     return () => {
       if (ref.current) {
-        let obj = closure_1_1(closure_1_2[4]);
-        obj = { type: null };
-        obj[0] = closure_1;
-        obj.track(closure_1_4.MODAL_DISMISSED, obj);
+        const obj2 = { type };
+        analyticsType(ref[4]).track(constants.MODAL_DISMISSED, obj2);
+        const obj = analyticsType(ref[4]);
       }
     };
   }, items);

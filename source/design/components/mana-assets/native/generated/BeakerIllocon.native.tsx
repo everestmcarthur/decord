@@ -1,17 +1,17 @@
-// Module ID: 5791
-// Function ID: 5792
+// Module ID: 5805
+// Function ID: 5806
 // Name: BeakerIllocon
-// Dependencies: [21, 5587, 5792, 2]
+// Dependencies: [21, 5601, 5806, 2]
 // Exports: BeakerIllocon
 
-// Module 5791 (BeakerIllocon)
-import set from "set" /* 2 */;
+// Module 5805 (BeakerIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 5792 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5806 from "module_5806" /* 5806 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/BeakerIllocon.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BeakerIllocon.native.tsx");
 
 export const BeakerIllocon = function BeakerIllocon(size) {
   let num = size.size;
@@ -19,13 +19,13 @@ export const BeakerIllocon = function BeakerIllocon(size) {
   if (num === undefined) {
     num = 64;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef5806 };
+  obj.source = obj2;
   const items = [{ width: num, height: num }];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { uri: metadataDefault });
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

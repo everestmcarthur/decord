@@ -1,22 +1,24 @@
-// Module ID: 13087
-// Function ID: 13088
+// Module ID: 13113
+// Function ID: 13114
 // Name: useUserProfileApplicationRoleConnections
-// Dependencies: [19, 7621, 504, 2]
+// Dependencies: [19, 7635, 504, 2]
 // Exports: default
 
-// Module 13087 (useUserProfileApplicationRoleConnections)
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import closure_3 from "createUserWidgetFromServer" /* 7621 */;
+// Module 13113 (useUserProfileApplicationRoleConnections)
+import _mod19 from "module_19" /* 19 */;
+import UserProfileStore from "UserProfileStore" /* 7635 */;
+import size from "module_2" /* 2 */;
 
-const useMemo = noop.useMemo;
+const require = globalThis.__r;
+
+const useMemo = _mod19.useMemo;
 let closure_4 = [];
-const result = set.fileFinishedImporting("modules/user_profile/hooks/useUserProfileApplicationRoleConnections.tsx");
+const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserProfileApplicationRoleConnections.tsx");
 
 export default function useUserProfileApplicationRoleConnections(arg0) {
-  const _require = arg0;
-  const items = [closure_3];
-  stateFromStores = _require(stateFromStores[2]).useStateFromStores(items, () => closure_1_3.getUserProfile(closure_0));
+  _require = arg0;
+  const items = [UserProfileStore];
+  stateFromStores = require("initialize").useStateFromStores(items, () => UserProfileStore.getUserProfile(closure_0));
   let prop;
   if (stateFromStores != null) {
     prop = stateFromStores.applicationRoleConnections;
@@ -27,6 +29,6 @@ export default function useUserProfileApplicationRoleConnections(arg0) {
     if (stateFromStores != null) {
       prop = tmp.applicationRoleConnections;
     }
-    return null == prop ? closure_1_4 : stateFromStores.applicationRoleConnections;
+    return null == prop ? closure_4 : stateFromStores.applicationRoleConnections;
   }, items1);
 };

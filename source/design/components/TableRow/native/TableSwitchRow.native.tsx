@@ -1,24 +1,25 @@
-// Module ID: 7201
-// Function ID: 7202
+// Module ID: 7214
+// Function ID: 7215
 // Name: TableSwitchRow
-// Dependencies: [32, 19, 17, 21, 4560, 1115, 4264, 5605, 4556, 7202, 2]
+// Dependencies: [32, 19, 17, 21, 4574, 1115, 4277, 5619, 4570, 7215, 2]
 // Exports: TableSwitchRow
 
-// Module 7201 (TableSwitchRow)
-import set from "set" /* 1115 */;
-import getNodeText from "getNodeText" /* 4264 */;
-import TableRowInner from "TableRowInner" /* 5605 */;
-import FormSwitch from "FormSwitch" /* 7202 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 7214 (TableSwitchRow)
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import native from "native" /* 4277 */;
+import TableRow from "TableRow" /* 5619 */;
+import FormSwitch from "FormSwitch" /* 7215 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles(() => ({ labelWithTrailing: { flexDirection: "row", alignItems: "center", gap: 8 } }));
-const result = require("set").fileFinishedImporting("design/components/TableRow/native/TableSwitchRow.native.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let closure_7 = createStyles.createStyles(() => ({ labelWithTrailing: { flexDirection: "row", alignItems: "center", gap: 8 } }));
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/TableRow/native/TableSwitchRow.native.tsx");
 
 export const TableSwitchRow = function TableSwitchRow(value) {
   value = value.value;
@@ -28,77 +29,69 @@ export const TableSwitchRow = function TableSwitchRow(value) {
     disabled = false;
   }
   const variant = value.variant;
-  const merged = Object.assign(value, Object.create(null));
-  let callback;
-  let obj = set;
-  const tmp2 = callback2();
-  obj1 = getNodeText;
-  const nodeText = obj1.getNodeText(label);
-  const isAndroidResult = obj.isAndroid();
-  const nodeText1 = getNodeText.getNodeText(subLabel);
-  const tmp8 = callback(React.useState(value), 2);
-  callback = tmp8[1];
+  const merged = Object.assign(value, Object.assign({ value: 0, onValueChange: 0, label: 0, subLabel: 0, trailing: 0, disabled: 0, accessibilityHint: 0, variant: 0 }));
+  const tmp2 = closure_7();
+  const isAndroidResult = PlatformUtils.isAndroid();
+  const nodeText = native.getNodeText(label);
+  const nodeText1 = native.getNodeText(subLabel);
+  const tmp8 = _slicedToArray(noop.useState(value), 2);
+  closure_2 = tmp8[1];
   const items = [value];
-  const effect = React.useEffect(() => {
-    callback(closure_0);
+  const effect = noop.useEffect(() => {
+    closure_2(value);
   }, items);
-  obj = {};
+  const obj5 = {};
   const merged1 = Object.assign(merged);
-  obj.variant = variant;
-  obj.arrow = false;
+  obj5.variant = variant;
+  obj5.arrow = false;
   let tmp15Result = label;
   if (null != trailing) {
-    obj = { style: null, children: null };
-    obj[0] = tmp2.labelWithTrailing;
+    const obj6 = { style: tmp2.labelWithTrailing, children: null };
     let tmp10Result = label;
-    if (!React.isValidElement(label)) {
+    if (!noop.isValidElement(label)) {
       let str = "mobile-text-heading-primary";
       if ("danger" === variant) {
         str = "text-feedback-critical";
       }
-      obj1 = { variant: "text-md/semibold", color: null, includeFontPadding: true, children: null };
-      obj1[1] = str;
-      obj1[3] = label;
-      tmp10Result = tmp10(tmp3(4556).Text, obj1);
+      const obj7 = { variant: "text-md/semibold", color: str, includeFontPadding: true, children: label };
+      tmp10Result = tmp10(tmp3(4570).Text, obj7);
     }
     const items1 = [tmp10Result, trailing];
-    obj[1] = items1;
-    tmp15Result = closure_6(View, obj);
-    const tmp15 = closure_6;
-    const tmp16 = View;
+    obj6.children = items1;
+    tmp15Result = timestampProducer(View, obj6);
   }
-  obj.label = tmp15Result;
-  obj.subLabel = subLabel;
-  obj.disabled = disabled;
-  obj.accessibilityState = { disabled, checked: tmp8[0] };
-  obj.accessible = true;
-  obj.accessibilityRole = "switch";
+  obj5.label = tmp15Result;
+  obj5.subLabel = subLabel;
+  obj5.disabled = disabled;
+  obj5.accessibilityState = { disabled, checked: tmp8[0] };
+  obj5.accessible = true;
+  obj5.accessibilityRole = "switch";
   let str3 = nodeText1;
   if (nodeText1 == null) {
     str3 = "";
   }
   function handleOnPress() {
     let tmpResult;
-    if (closure_1 != null) {
-      tmpResult = tmp(!closure_0);
+    if (dependencyMap != null) {
+      tmpResult = tmp(!value);
     }
     return tmpResult;
   }
-  obj.accessibilityLabel = "" + nodeText + ", " + str3;
-  obj.accessibilityHint = value.accessibilityHint;
+  obj5.accessibilityLabel = "" + nodeText + ", " + str3;
+  obj5.accessibilityHint = value.accessibilityHint;
   let tmp14;
   if (isAndroidResult) {
     tmp14 = handleOnPress;
   }
-  obj.onPress = tmp14;
-  obj.onAccessibilityTap = function onAccessibilityTap() {
-    callback(!closure_0);
+  obj5.onPress = tmp14;
+  obj5.onAccessibilityTap = function onAccessibilityTap() {
+    closure_2(!value);
     const timerId = setTimeout(() => {
-      if (closure_1 != null) {
-        tmp(!closure_0);
+      if (closure_1_1 != null) {
+        tmp(!closure_1_0);
       }
     });
   };
-  obj.trailing = closure_5(FormSwitch.FormSwitch, { "aria-hidden": true, value, onValueChange: handleOnPress, disabled });
-  return closure_5(TableRowInner.TableRow, obj);
+  obj5.trailing = hasOwnProperty(FormSwitch.FormSwitch, { "aria-hidden": true, value, onValueChange: handleOnPress, disabled });
+  return hasOwnProperty(TableRow.TableRow, obj5);
 };

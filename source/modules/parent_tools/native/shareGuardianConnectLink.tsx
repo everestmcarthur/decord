@@ -1,27 +1,27 @@
-// Module ID: 14881
-// Function ID: 14882
+// Module ID: 14907
+// Function ID: 14908
 // Name: shareGuardianConnectLink
-// Dependencies: [7538, 8361, 1114, 2396, 2]
+// Dependencies: [7552, 8389, 1114, 2396, 2]
 // Exports: shareGuardianConnectLink
 
-// Module 14881 (shareGuardianConnectLink)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 2396 */;
-import items from "items" /* 7538 */;
-import showShareActionSheet from "showShareActionSheet" /* 8361 */;
+// Module 14907 (shareGuardianConnectLink)
+import util from "util" /* 1114 */;
+import _modDef2396 from "module_2396" /* 2396 */;
+import FamilyCenterConstants from "FamilyCenterConstants" /* 7552 */;
+import showShareActionSheet from "showShareActionSheet" /* 8389 */;
+import size from "module_2" /* 2 */;
 
-let closure_3 = items.FAMILY_CENTER_REQUEST_QR_CODE_URL;
-const result = set.fileFinishedImporting("modules/parent_tools/native/shareGuardianConnectLink.tsx");
+let closure_3 = FamilyCenterConstants.FAMILY_CENTER_REQUEST_QR_CODE_URL;
+const result = size.fileFinishedImporting("modules/parent_tools/native/shareGuardianConnectLink.tsx");
 
-export const shareGuardianConnectLink = function shareGuardianConnectLink(globalName, linkCode) {
-  let username = globalName.globalName;
+export const shareGuardianConnectLink = function shareGuardianConnectLink(stateFromStores, linkCode) {
+  let username = stateFromStores.globalName;
   if (username == null) {
-    username = globalName.username;
+    username = stateFromStores.username;
   }
-  let obj = showShareActionSheet;
-  obj = { message: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.formatToPlainString(messagesProxyDefault.lVD5Nd, { username, url: callback(globalName.id, linkCode) });
-  obj.showShareActionSheet(obj, "Family Center Connect Guardian");
+  const tmp = closure_3(stateFromStores.id, linkCode);
+  const obj2 = { message: null };
+  const intl = util.intl;
+  obj2.message = intl.formatToPlainString(_modDef2396.lVD5Nd, { username, url: tmp });
+  showShareActionSheet.showShareActionSheet(obj2, "Family Center Connect Guardian");
 };

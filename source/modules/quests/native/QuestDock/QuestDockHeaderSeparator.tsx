@@ -1,21 +1,22 @@
-// Module ID: 15198
-// Function ID: 15199
-// Dependencies: [19, 17, 21, 4560, 576, 2]
+// Module ID: 15225
+// Function ID: 15226
+// Name: QuestDockHeaderSeparator
+// Dependencies: [19, 17, 21, 4574, 576, 2]
 
-// Module 15198
-import ThemesDefault from "Themes" /* 576 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 15225 (QuestDockHeaderSeparator)
+import nativeDefault from "native" /* 576 */;
+import noop from "module_19" /* 19 */;
 
-let obj = { separator: null };
-obj = { backgroundColor: ThemesDefault.colors.TEXT_DEFAULT, opacity: 0.2, height: 18, width: 1.5 };
-obj[0] = obj;
-let closure_2 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function QuestDockHeaderSeparator() {
-  return <View style={callback().separator} />;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+const obj = { separator: null };
+let size = { backgroundColor: nativeDefault.colors.TEXT_DEFAULT, opacity: 0.2, height: 18, width: 1.5 };
+obj.separator = size;
+let closure_2 = createStyles.createStyles(obj);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockHeaderSeparator.tsx");
+
+export default noop.memo(function QuestDockHeaderSeparator() {
+  return <View style={closure_2().separator} />;
 });
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockHeaderSeparator.tsx");
-
-export default memoResult;

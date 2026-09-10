@@ -1,14 +1,14 @@
-// Module ID: 17827
-// Function ID: 17828
-// Name: fetchForwardReferencedGuilds
-// Dependencies: [1074, 17828, 7118, 17426, 2]
+// Module ID: 17860
+// Function ID: 17861
+// Name: ForwardGuildBreadcrumbManager
+// Dependencies: [1074, 17861, 7132, 17457, 2]
 
-// Module 17827 (fetchForwardReferencedGuilds)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import initializeDefault from "initialize" /* 7118 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 17426 */;
-import _fetchBasicGuild from "_fetchBasicGuild" /* 17828 */;
+// Module 17860 (ForwardGuildBreadcrumbManager)
+import Constants from "Constants" /* 1074 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 17457 */;
+import BasicGuildActionCreators from "BasicGuildActionCreators" /* 17861 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
+import size from "module_2" /* 2 */;
 
 function fetchForwardReferencedGuilds(message_reference) {
   message_reference = message_reference.message_reference;
@@ -19,24 +19,20 @@ function fetchForwardReferencedGuilds(message_reference) {
   if (type === MessageReferenceTypes.FORWARD) {
     const guild_id = message_reference.message_reference.guild_id;
     if (null != guild_id) {
-      const basicGuild = _fetchBasicGuild.fetchBasicGuild(guild_id);
-      const obj = _fetchBasicGuild;
+      const basicGuild = BasicGuildActionCreators.fetchBasicGuild(guild_id);
     }
   }
 }
-const MessageReferenceTypes = ME.MessageReferenceTypes;
-initializeDefault;
+const MessageReferenceTypes = Constants.MessageReferenceTypes;
 class ForwardGuildBreadcrumbManager extends tmp6 {
   constructor() {
     tmp3 = new ForwardGuildBreadcrumbManager(tmp2, tmp, new.target);
-    // ThrowIfThisInitialized (0x7c)
-    tmp4 = require("setupLoadFromMessageManagerHandlers")(tmp3, fetchForwardReferencedGuilds);
+    tmp4 = closure_1(closure_2[3])(tmp3, fetchForwardReferencedGuilds);
     return tmp3;
   }
 }
-tmp = new tmp(tmp4, tmp3, tmp2, Object, defineProperty, ForwardGuildBreadcrumbManager, importDefault);
-// ThrowIfThisInitialized (0x7c)
-setupLoadFromMessageManagerHandlersDefault(tmp, fetchForwardReferencedGuilds);
-const result = set.fileFinishedImporting("modules/forwarding/ForwardGuildBreadcrumbManager.tsx");
+const tmp5 = new tmp(tmp4, tmp3, tmp2, Object, defineProperty, ForwardGuildBreadcrumbManager, importDefault);
+setupLoadFromMessageManagerHandlersDefault(tmp5, fetchForwardReferencedGuilds);
+const result = size.fileFinishedImporting("modules/forwarding/ForwardGuildBreadcrumbManager.tsx");
 
-export default tmp;
+export default tmp5;

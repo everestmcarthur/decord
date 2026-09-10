@@ -5,29 +5,30 @@
 // Exports: instrumentLangGraph, instrumentStateGraphCompile
 
 // Module 845 (instrumentLangGraph)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import SPAN_STATUS_ERROR from "SPAN_STATUS_ERROR" /* 705 */;
+import captureCheckIn from "captureCheckIn" /* 734 */;
+import ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE from "ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE" /* 823 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const instrumentLangGraph = function instrumentLangGraph(compile) {
-  let obj = arg1;
+export const instrumentLangGraph = function instrumentLangGraph(compile, arg1) {
   if (!arg1) {
-    obj = {};
+    let obj = {};
   }
   compile = compile.compile;
-  obj = {
+  let proxy = new Proxy(compile.bind(compile), {
     apply(arg0, arg1, arg2) {
       closure_0 = arg0;
       closure_1 = arg1;
-      closure_2 = arg2;
-      obj = obj(closure_1_1[1]);
-      obj = { op: "gen_ai.create_agent", name: "create_agent", attributes: null };
-      obj = {};
-      obj[obj(closure_1_1[2]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = obj(closure_1_1[3]).LANGGRAPH_ORIGIN;
-      obj[obj(closure_1_1[2]).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "gen_ai.create_agent";
-      obj[obj(closure_1_1[4]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = "create_agent";
-      obj[2] = obj;
-      return obj.startSpan(obj, (setAttribute) => {
+      obj = obj(731);
+      let obj2 = { op: "gen_ai.create_agent", name: "create_agent", attributes: null };
+      let obj3 = {};
+      obj3[obj(704).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = obj(846).LANGGRAPH_ORIGIN;
+      obj3[obj(704).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "gen_ai.create_agent";
+      obj3[obj(823).GEN_AI_OPERATION_NAME_ATTRIBUTE] = "create_agent";
+      obj2.attributes = obj3;
+      return obj.startSpan(obj2, (setAttribute) => {
         try {
           let _Reflect = Reflect;
           let applyResult = Reflect.apply(closure_0, closure_1, length);
@@ -44,7 +45,7 @@ export const instrumentLangGraph = function instrumentLangGraph(compile) {
             name = typeof tmp7.name === "string";
           }
           if (name) {
-            let attr = setAttribute.setAttribute(obj(closure_2_1[4]).GEN_AI_AGENT_NAME_ATTRIBUTE, tmp7.name);
+            let attr = setAttribute.setAttribute(ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_AGENT_NAME_ATTRIBUTE, tmp7.name);
             let _HermesInternal = HermesInternal;
             setAttribute.updateName("create_agent " + tmp7.name);
           }
@@ -53,44 +54,38 @@ export const instrumentLangGraph = function instrumentLangGraph(compile) {
             invoke = typeof obj3 === "function";
           }
           if (invoke) {
-            applyResult.invoke = (function instrumentCompiledGraphInvoke(arg0, applyResult, arg2, closure_0) {
-              closure_0 = applyResult;
-              closure_1 = arg2;
-              closure_2 = closure_0;
+            applyResult.invoke = (function instrumentCompiledGraphInvoke(arg0, applyResult, arg2, arg3) {
+              dependencyMap = arg2;
+              closure_2 = arg3;
               const proxy = new Proxy(arg0, {
                 apply(arg0, arg1, arg2) {
                   applyResult = arg0;
                   dependencyMap = arg1;
-                  const callback = arg2;
-                  obj = applyResult(731);
-                  obj = { op: "gen_ai.invoke_agent", name: "invoke_agent", attributes: null };
-                  obj = {};
-                  obj[applyResult(704).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = applyResult(846).LANGGRAPH_ORIGIN;
-                  obj[applyResult(704).SEMANTIC_ATTRIBUTE_SENTRY_OP] = applyResult(823).GEN_AI_INVOKE_AGENT_OPERATION_ATTRIBUTE;
-                  obj[applyResult(823).GEN_AI_OPERATION_NAME_ATTRIBUTE] = "invoke_agent";
-                  obj[2] = obj;
-                  applyResult = undefined;
-                  applyResult = callback(/* F125891 */ function() { ... });
-                  return obj.startSpan(obj, () => { ... });
+                  closure_2 = arg2;
+                  let obj2 = { op: "gen_ai.invoke_agent", name: "invoke_agent", attributes: null };
+                  let obj3 = {};
+                  obj3[applyResult(704).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = applyResult(846).LANGGRAPH_ORIGIN;
+                  obj3[applyResult(704).SEMANTIC_ATTRIBUTE_SENTRY_OP] = applyResult(823).GEN_AI_INVOKE_AGENT_OPERATION_ATTRIBUTE;
+                  obj3[applyResult(823).GEN_AI_OPERATION_NAME_ATTRIBUTE] = "invoke_agent";
+                  obj2.attributes = obj3;
+                  applyResult = closure_2(/* F126086 */ function() { ... });
+                  return applyResult(731).startSpan(obj2, () => { ... });
                 }
               });
               return proxy;
-            })(obj3.bind(applyResult), applyResult, tmp7, closure_0);
+            })(obj3.bind(applyResult), applyResult, tmp7, obj);
           }
           return applyResult;
         } catch (tmp23) {
-          obj = { code: null, message: "internal_error" };
-          obj[0] = obj(closure_2_1[5]).SPAN_STATUS_ERROR;
-          obj.setStatus(obj);
-          obj = { mechanism: null };
-          obj[0] = { handled: false, type: "auto.ai.langgraph.error" };
-          obj(closure_2_1[6]).captureException(tmp23, obj);
+          let obj2 = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: "internal_error" };
+          obj.setStatus(obj2);
+          let obj4 = { mechanism: { handled: false, type: "auto.ai.langgraph.error" } };
+          captureCheckIn.captureException(tmp23, obj4);
           throw tmp23;
         }
       });
     }
-  };
-  let proxy = new Proxy(compile.bind(compile), obj);
+  });
   compile.compile = proxy;
   return compile;
 };
@@ -100,15 +95,14 @@ export const instrumentStateGraphCompile = function instrumentStateGraphCompile(
     apply(arg0, arg1, arg2) {
       closure_0 = arg0;
       closure_1 = arg1;
-      closure_2 = arg2;
-      obj = obj(closure_1_1[1]);
-      obj = { op: "gen_ai.create_agent", name: "create_agent", attributes: null };
-      obj = {};
-      obj[obj(closure_1_1[2]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = obj(closure_1_1[3]).LANGGRAPH_ORIGIN;
-      obj[obj(closure_1_1[2]).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "gen_ai.create_agent";
-      obj[obj(closure_1_1[4]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = "create_agent";
-      obj[2] = obj;
-      return obj.startSpan(obj, (setAttribute) => {
+      obj = obj(731);
+      let obj2 = { op: "gen_ai.create_agent", name: "create_agent", attributes: null };
+      let obj3 = {};
+      obj3[obj(704).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = obj(846).LANGGRAPH_ORIGIN;
+      obj3[obj(704).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "gen_ai.create_agent";
+      obj3[obj(823).GEN_AI_OPERATION_NAME_ATTRIBUTE] = "create_agent";
+      obj2.attributes = obj3;
+      return obj.startSpan(obj2, (setAttribute) => {
         try {
           let _Reflect = Reflect;
           let applyResult = Reflect.apply(closure_0, closure_1, length);
@@ -125,7 +119,7 @@ export const instrumentStateGraphCompile = function instrumentStateGraphCompile(
             name = typeof tmp7.name === "string";
           }
           if (name) {
-            let attr = setAttribute.setAttribute(obj(closure_2_1[4]).GEN_AI_AGENT_NAME_ATTRIBUTE, tmp7.name);
+            let attr = setAttribute.setAttribute(ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_AGENT_NAME_ATTRIBUTE, tmp7.name);
             let _HermesInternal = HermesInternal;
             setAttribute.updateName("create_agent " + tmp7.name);
           }
@@ -134,38 +128,33 @@ export const instrumentStateGraphCompile = function instrumentStateGraphCompile(
             invoke = typeof obj3 === "function";
           }
           if (invoke) {
-            applyResult.invoke = (function instrumentCompiledGraphInvoke(arg0, applyResult, arg2, closure_0) {
-              closure_0 = applyResult;
-              closure_1 = arg2;
-              closure_2 = closure_0;
+            applyResult.invoke = (function instrumentCompiledGraphInvoke(arg0, applyResult, arg2, arg3) {
+              dependencyMap = arg2;
+              closure_2 = arg3;
               const proxy = new Proxy(arg0, {
                 apply(arg0, arg1, arg2) {
                   applyResult = arg0;
                   dependencyMap = arg1;
-                  const callback = arg2;
-                  obj = applyResult(731);
-                  obj = { op: "gen_ai.invoke_agent", name: "invoke_agent", attributes: null };
-                  obj = {};
-                  obj[applyResult(704).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = applyResult(846).LANGGRAPH_ORIGIN;
-                  obj[applyResult(704).SEMANTIC_ATTRIBUTE_SENTRY_OP] = applyResult(823).GEN_AI_INVOKE_AGENT_OPERATION_ATTRIBUTE;
-                  obj[applyResult(823).GEN_AI_OPERATION_NAME_ATTRIBUTE] = "invoke_agent";
-                  obj[2] = obj;
-                  applyResult = undefined;
-                  applyResult = callback(/* F125891 */ function() { ... });
-                  return obj.startSpan(obj, () => { ... });
+                  closure_2 = arg2;
+                  let obj2 = { op: "gen_ai.invoke_agent", name: "invoke_agent", attributes: null };
+                  let obj3 = {};
+                  obj3[applyResult(704).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = applyResult(846).LANGGRAPH_ORIGIN;
+                  obj3[applyResult(704).SEMANTIC_ATTRIBUTE_SENTRY_OP] = applyResult(823).GEN_AI_INVOKE_AGENT_OPERATION_ATTRIBUTE;
+                  obj3[applyResult(823).GEN_AI_OPERATION_NAME_ATTRIBUTE] = "invoke_agent";
+                  obj2.attributes = obj3;
+                  applyResult = closure_2(/* F126086 */ function() { ... });
+                  return applyResult(731).startSpan(obj2, () => { ... });
                 }
               });
               return proxy;
-            })(obj3.bind(applyResult), applyResult, tmp7, closure_0);
+            })(obj3.bind(applyResult), applyResult, tmp7, obj);
           }
           return applyResult;
         } catch (tmp23) {
-          obj = { code: null, message: "internal_error" };
-          obj[0] = obj(closure_2_1[5]).SPAN_STATUS_ERROR;
-          obj.setStatus(obj);
-          obj = { mechanism: null };
-          obj[0] = { handled: false, type: "auto.ai.langgraph.error" };
-          obj(closure_2_1[6]).captureException(tmp23, obj);
+          let obj2 = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: "internal_error" };
+          obj.setStatus(obj2);
+          let obj4 = { mechanism: { handled: false, type: "auto.ai.langgraph.error" } };
+          captureCheckIn.captureException(tmp23, obj4);
           throw tmp23;
         }
       });

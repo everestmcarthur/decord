@@ -1,23 +1,23 @@
-// Module ID: 15244
-// Function ID: 15245
+// Module ID: 15273
+// Function ID: 15274
 // Name: useEmojiByIdOrName
-// Dependencies: [5459, 504, 2]
+// Dependencies: [5473, 504, 2]
 // Exports: default, useEmojiByIdOrName
 
-// Module 15244 (useEmojiByIdOrName)
-import closure_2 from "getEmojiToGroupId" /* 5459 */;
+// Module 15273 (useEmojiByIdOrName)
+import EmojiStore from "EmojiStore" /* 5473 */;
 
-const require = arg1;
+const require = fn;
 function useEmojiByIdOrName(guildId, emojiId) {
-  const _require = guildId;
+  _require = guildId;
   dependencyMap = emojiId;
-  const items = [closure_2];
+  const items = [EmojiStore];
   const items1 = [guildId, emojiId];
-  return _require(504).useStateFromStores(items, () => {
+  return require("initialize").useStateFromStores(items, () => {
     if (null == closure_1) {
       return null;
     } else {
-      const disambiguatedEmojiContext = closure_1_2.getDisambiguatedEmojiContext(closure_0);
+      const disambiguatedEmojiContext = EmojiStore.getDisambiguatedEmojiContext(closure_0);
       let byId = disambiguatedEmojiContext.getById(tmp);
       if (byId == null) {
         byId = disambiguatedEmojiContext.getByName(tmp);
@@ -26,7 +26,8 @@ function useEmojiByIdOrName(guildId, emojiId) {
     }
   }, items1);
 }
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useEmojiByIdOrName.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useEmojiByIdOrName.tsx");
 
 export default useEmojiByIdOrName;
 export { useEmojiByIdOrName };

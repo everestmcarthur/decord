@@ -1,99 +1,82 @@
-// Module ID: 14683
-// Function ID: 14684
-// Dependencies: [13750, 1074, 1272, 573, 2]
+// Module ID: 14709
+// Function ID: 14710
+// Name: MFAActionCreators
+// Dependencies: [13773, 1074, 1272, 573, 2]
 
-// Module 14683
-import dispatcherDefault from "dispatcher" /* 573 */;
-import sendRequest from "sendRequest" /* 1272 */;
-import closure_3 from "getVerificationKey" /* 13750 */;
-import { Endpoints } from "ME" /* 1074 */;
+// Module 14709 (MFAActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import MFAStore from "MFAStore" /* 13773 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("actions/MFAActionCreators.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const Endpoints = fn(1074).Endpoints;
+const size = fn(2);
+const result = size.fileFinishedImporting("actions/MFAActionCreators.tsx");
 
 export default {
   enable(arg0) {
     ({ code, secret } = arg0);
-    const HTTP = sendRequest.HTTP;
-    let obj = { url: Endpoints.MFA_TOTP_ENABLE, body: { code, secret }, oldFormErrors: true, rejectWithError: sendRequest.rejectWithMigratedError() };
-    const obj2 = sendRequest;
-    return HTTP.post(obj).then((body) => {
-      let obj = callback(table[3]);
-      obj = { type: "MFA_ENABLE_SUCCESS", token: body.body.token, codes: body.body.backup_codes };
-      return obj.dispatch(obj);
-    });
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: Endpoints.MFA_TOTP_ENABLE, body: { code, secret }, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    return HTTP.post(request).then((body) => DispatcherDefault.dispatch({ type: "MFA_ENABLE_SUCCESS", token: body.body.token, codes: body.body.backup_codes }));
   },
   disable() {
-    const HTTP = sendRequest.HTTP;
-    const obj = { url: Endpoints.MFA_TOTP_DISABLE, oldFormErrors: true, rejectWithError: sendRequest.rejectWithMigratedError() };
-    const obj2 = sendRequest;
-    HTTP.post(obj).then((token) => callback(table[3]).dispatch({ type: "MFA_DISABLE_SUCCESS", token: token.body.token }));
+    const HTTP = HTTPUtils.HTTP;
+    const obj = { url: Endpoints.MFA_TOTP_DISABLE, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    HTTP.post(obj).then((token) => DispatcherDefault.dispatch({ type: "MFA_DISABLE_SUCCESS", token: token.body.token }));
   },
   enableSMS() {
-    let obj = dispatcherDefault;
-    obj.dispatch({ type: "MFA_SMS_TOGGLE" });
-    const HTTP = sendRequest.HTTP;
-    obj = { url: Endpoints.MFA_SMS_ENABLE, oldFormErrors: true, rejectWithError: sendRequest.rejectWithMigratedError() };
-    const obj3 = sendRequest;
-    return HTTP.post(obj).then((arg0) => {
-      callback(573).dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" });
-      return arg0;
+    DispatcherDefault.dispatch({ type: "MFA_SMS_TOGGLE" });
+    const HTTP = HTTPUtils.HTTP;
+    const obj2 = { url: Endpoints.MFA_SMS_ENABLE, oldFormErrors: true, rejectWithError: null };
+    obj2.rejectWithError = HTTPUtils.rejectWithMigratedError();
+    return HTTP.post(obj2).then((result) => {
+      DispatcherDefault.dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" });
+      return result;
     }, (arg0) => {
-      callback(573).dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" });
+      DispatcherDefault.dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" });
       throw arg0;
     });
   },
   disableSMS(password) {
-    let obj = dispatcherDefault;
-    obj.dispatch({ type: "MFA_SMS_TOGGLE" });
-    const HTTP = sendRequest.HTTP;
-    obj = { url: Endpoints.MFA_SMS_DISABLE, body: obj, oldFormErrors: true, rejectWithError: null };
-    obj = { password };
-    obj[3] = sendRequest.rejectWithMigratedError();
-    const obj4 = sendRequest;
-    return HTTP.post(obj).then((arg0) => {
-      callback(573).dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" });
-      return arg0;
+    DispatcherDefault.dispatch({ type: "MFA_SMS_TOGGLE" });
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: Endpoints.MFA_SMS_DISABLE, body: { password }, oldFormErrors: true, rejectWithError: null };
+    const obj2 = { password };
+    request.rejectWithError = HTTPUtils.rejectWithMigratedError();
+    return HTTP.post(request).then((result) => {
+      DispatcherDefault.dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" });
+      return result;
     }, (arg0) => {
-      callback(573).dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" });
+      DispatcherDefault.dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" });
       throw arg0;
     });
   },
   sendMFABackupCodesVerificationKeyEmail(password) {
-    const HTTP = sendRequest.HTTP;
-    obj = { url: Endpoints.MFA_SEND_VERIFICATION_KEY, body: obj, oldFormErrors: true, rejectWithError: null };
-    obj = { password };
-    obj[3] = sendRequest.rejectWithMigratedError();
-    const obj3 = sendRequest;
-    return HTTP.post(obj).then((body) => {
-      let nonces = callback(table[3]);
-      nonces = { viewNonce: body.body.nonce, regenerateNonce: body.body.regenerate_nonce };
-      return nonces.dispatch({ type: "MFA_SEND_VERIFICATION_KEY", nonces });
-    }, (arg0) => {
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: Endpoints.MFA_SEND_VERIFICATION_KEY, body: { password }, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const obj = { password };
+    return HTTP.post(request).then((viewNonce) => DispatcherDefault.dispatch({ type: "MFA_SEND_VERIFICATION_KEY", nonces: { viewNonce: viewNonce.body.nonce, regenerateNonce: viewNonce.body.regenerate_nonce } }), (arg0) => {
       throw arg0;
     });
   },
   confirmViewBackupCodes(verificationKey, regenerate) {
-    const _require = verificationKey;
-    nonces = nonces.getNonces();
+    _require = verificationKey;
+    const nonces = MFAStore.getNonces();
     let regenerateNonce = nonces.viewNonce;
     if (regenerate) {
       regenerateNonce = nonces.regenerateNonce;
     }
-    const HTTP = _require(1272).HTTP;
-    obj = { url: Endpoints.MFA_CODES_VERIFICATION, body: obj, oldFormErrors: true, rejectWithError: null };
-    obj = { key: verificationKey, nonce: regenerateNonce, regenerate };
-    obj[3] = _require(1272).rejectWithMigratedError();
-    const obj3 = _require(1272);
-    return HTTP.post(obj).then((body) => {
-      let obj = closure_1_1(closure_1_2[3]);
-      obj = { type: "MFA_VIEW_BACKUP_CODES", codes: body.body.backup_codes, key: closure_0 };
-      return obj.dispatch(obj);
-    }, (arg0) => {
+    const HTTP = require("HTTPUtils").HTTP;
+    const request = { url: Endpoints.MFA_CODES_VERIFICATION, body: { key: verificationKey, nonce: regenerateNonce, regenerate }, oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
+    const obj2 = require("HTTPUtils");
+    return HTTP.post(request).then((body) => DispatcherDefault.dispatch({ type: "MFA_VIEW_BACKUP_CODES", codes: body.body.backup_codes, key }), (arg0) => {
       throw arg0;
     });
   },
   clearBackupCodes() {
-    dispatcherDefault.dispatch({ type: "MFA_CLEAR_BACKUP_CODES" });
+    DispatcherDefault.dispatch({ type: "MFA_CLEAR_BACKUP_CODES" });
   }
 };

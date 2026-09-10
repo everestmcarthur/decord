@@ -1,38 +1,33 @@
 // Module ID: 14313
 // Function ID: 14314
-// Dependencies: [14314, 14325, 14327, 14330, 14333, 14334]
+// Dependencies: [14228, 14314]
+// Exports: getSupportedNumberingSystems
 
 // Module 14313
-import withoutSetter from "withoutSetter" /* 14314 */;
-import all from "all" /* 14325 */;
+const require = globalThis.__r;
 
-let closure_3 = withoutSetter("toPrimitive");
+const require = arg1;
+const dependencyMap = arg6;
 
-export default (arg0, arg1) => {
-  if (all(arg0)) {
-    if (!tmp(14327)(arg0)) {
-      let str = arg1;
-      const tmp4 = tmp(14330)(arg0, closure_3);
-      if (tmp4) {
-        if (undefined === str) {
-          str = "default";
-        }
-        const tmp5 = tmp(14333)(tmp4, arg0, str);
-        if (tmp(14325)(tmp5)) {
-          if (!tmp(14327)(tmp5)) {
-            const tmp9 = new TypeError("Can't convert object to primitive value");
-            throw tmp9;
-          }
-        }
-        return tmp5;
-      } else {
-        let str2 = str;
-        if (undefined === str) {
-          str2 = "number";
-        }
-        return tmp(14334)(arg0, str2);
-      }
+export const getSupportedNumberingSystems = function getSupportedNumberingSystems(locale) {
+  _require = locale;
+  const numberingSystemNames = require("numberingSystemNames").numberingSystemNames;
+  return numberingSystemNames.filter((item) => (function isSupportedNumberingSystem(item, arg1) {
+    let str = arg1;
+    if (undefined === arg1) {
+      str = "en";
     }
-  }
-  return arg0;
+    try {
+      const concat = "".concat;
+      const combined = "".concat(str, "-u-nu-");
+      const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(combined.concat(item));
+      if (memoizedNumberFormat.resolvedOptions().numberingSystem !== item) {
+        if ("123" === memoizedNumberFormat.format(123)) {
+          return false;
+        }
+      }
+      return true;
+    } catch (err) {
+    }
+  })(item, closure_0));
 };

@@ -1,15 +1,15 @@
-// Module ID: 9016
-// Function ID: 9017
-// Name: isVisualUnfurledMedia
-// Dependencies: [32, 8934, 9017, 2]
+// Module ID: 9043
+// Function ID: 9044
+// Name: discord_common/resolvedValuesFromUserApplicationIdentityProfile
+// Dependencies: [32, 8961, 9044, 2]
 // Exports: default
 
-// Module 9016 (isVisualUnfurledMedia)
-import resolveFieldValue from "resolveFieldValue" /* 8934 */;
-import ProfileDataDynamicType from "ProfileDataDynamicType" /* 9017 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+// Module 9043 (discord_common/resolvedValuesFromUserApplicationIdentityProfile)
+import resolvedValues from "resolvedValues" /* 8961 */;
+import ProfileDataDynamicType from "ProfileDataDynamicType" /* 9044 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
+require = fn;
 function isVisualUnfurledMedia(value) {
   let tmp = null != value.width;
   if (tmp) {
@@ -29,7 +29,7 @@ function resolvedValuesFromPrimary(data) {
   if (data != null) {
     primary = data.primary;
   }
-  let obj = {};
+  const obj = {};
   if (null == primary) {
     return obj;
   } else {
@@ -37,56 +37,32 @@ function resolvedValuesFromPrimary(data) {
     const entries = Object.entries(primary);
     const tmp29 = entries[Symbol.iterator]();
     while (tmp29 !== undefined) {
-      let tmp5 = callback;
-      let tmp6 = callback(tmp3, 2);
+      let tmp6 = _slicedToArray(tmp3, 2);
       [tmp7, tmp8] = tmp6;
       let tmp9 = tmp8;
       if (typeof tmp8 === "string") {
-        let tmp22 = tmp7;
-        obj = { type: null, value: null };
-        let tmp23 = require;
-        let tmp24 = dependencyMap;
-        obj[0] = resolveFieldValue.ResolvedValueType.STRING;
-        let tmp25 = tmp8;
-        obj[1] = tmp9;
-        obj[tmp7] = obj;
-      } else {
-        let tmp30 = tmp8;
-        if (typeof tmp9 === "number") {
-          let tmp18 = tmp7;
-          obj = { type: null, value: null };
-          let tmp19 = require;
-          let tmp20 = dependencyMap;
-          obj[0] = resolveFieldValue.ResolvedValueType.NUMBER;
-          let tmp21 = tmp8;
-          obj[1] = tmp9;
-          obj[tmp7] = obj;
-        } else {
-          let tmp31 = tmp8;
-          if (typeof tmp9 === "object") {
-            let tmp32 = tmp8;
-            if ("url" in tmp9) {
-              let tmp10 = tmp8;
-              if ("proxy_url" in tmp9) {
-                let tmp11 = tmp8;
-                if ("loading_state" in tmp9) {
-                  let tmp12 = isVisualUnfurledMedia;
-                  let tmp13 = tmp8;
-                  if (isVisualUnfurledMedia(tmp9)) {
-                    let tmp14 = tmp7;
-                    obj1 = { type: null, media: null };
-                    let tmp15 = require;
-                    let tmp16 = dependencyMap;
-                    obj1[0] = resolveFieldValue.ResolvedValueType.MEDIA;
-                    let obj2 = { url: null, width: null, height: null };
-                    let tmp17 = tmp8;
-                    ({ proxy_url: obj3[0], width: obj3[1], height: obj3[2] } = tmp9);
-                    obj1[1] = obj2;
-                    obj[tmp7] = obj1;
-                  }
-                  continue;
-                }
+        let obj2 = { type: null, value: null };
+        obj2.type = resolvedValues.ResolvedValueType.STRING;
+        obj2.value = tmp9;
+        obj[tmp7] = obj2;
+      } else if (typeof tmp9 === "number") {
+        let obj4 = { type: null, value: null };
+        obj4.type = resolvedValues.ResolvedValueType.NUMBER;
+        obj4.value = tmp9;
+        obj[tmp7] = obj4;
+      } else if (typeof tmp9 === "object") {
+        if ("url" in tmp9) {
+          if ("proxy_url" in tmp9) {
+            if ("loading_state" in tmp9) {
+              if (isVisualUnfurledMedia(tmp9)) {
+                let obj5 = { type: null, media: null };
+                obj5.type = resolvedValues.ResolvedValueType.MEDIA;
+                let size = { url: null, width: null, height: null };
+                ({ proxy_url: obj3.url, width: obj3.width, height: obj3.height } = tmp9);
+                obj5.media = size;
+                obj[tmp7] = obj5;
               }
+              continue;
             }
           }
         }
@@ -102,7 +78,7 @@ function resolvedValuesFromDynamic(data) {
   if (data != null) {
     dynamic = data.dynamic;
   }
-  let obj = {};
+  const obj = {};
   if (null == dynamic) {
     return obj;
   } else {
@@ -111,64 +87,43 @@ function resolvedValuesFromDynamic(data) {
     while (iter2 !== undefined) {
       let iter = nextResult;
       let tmp5 = require;
-      let tmp6 = dependencyMap;
       if (nextResult.type === ProfileDataDynamicType.ProfileDataDynamicType.STRING) {
-        let tmp9 = nextResult;
-        obj = { type: null, value: null };
-        obj[0] = tmp5(8934).ResolvedValueType.STRING;
-        obj[1] = iter.value;
-        obj[iter.name] = obj;
-      } else {
-        let tmp11 = nextResult;
-        if (iter.type === tmp5(9017).ProfileDataDynamicType.NUMBER) {
-          let tmp8 = nextResult;
-          obj = { type: null, value: null };
-          obj[0] = tmp5(8934).ResolvedValueType.NUMBER;
-          obj[1] = iter.value;
-          obj[iter.name] = obj;
-        } else {
-          let tmp12 = nextResult;
-          if (iter.type === tmp5(9017).ProfileDataDynamicType.MEDIA) {
-            let tmp13 = isVisualUnfurledMedia;
-            let tmp14 = nextResult;
-            if (isVisualUnfurledMedia(iter.value)) {
-              let tmp7 = nextResult;
-              obj1 = { type: null, media: null };
-              obj1[0] = tmp5(8934).ResolvedValueType.MEDIA;
-              let obj2 = { url: null, width: null, height: null };
-              obj2[0] = iter.value.proxy_url;
-              obj2[1] = iter.value.width;
-              obj2[2] = iter.value.height;
-              obj1[1] = obj2;
-              obj[iter.name] = obj1;
-            }
-            continue;
-          }
+        let obj2 = { type: tmp5(8961).ResolvedValueType.STRING, value: iter.value };
+        obj[iter.name] = obj2;
+      } else if (iter.type === tmp5(9044).ProfileDataDynamicType.NUMBER) {
+        let obj3 = { type: tmp5(8961).ResolvedValueType.NUMBER, value: iter.value };
+        obj[iter.name] = obj3;
+      } else if (iter.type === tmp5(9044).ProfileDataDynamicType.MEDIA) {
+        if (isVisualUnfurledMedia(iter.value)) {
+          let obj4 = { type: tmp5(8961).ResolvedValueType.MEDIA, media: null };
+          let size = { url: iter.value.proxy_url, width: iter.value.width, height: iter.value.height };
+          obj4.media = size;
+          obj[iter.name] = obj4;
         }
+        continue;
       }
       continue;
     }
     return obj;
   }
 }
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/resolvedValuesFromUserApplicationIdentityProfile.tsx");
+let size = fn(2);
+const result = size.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/resolvedValuesFromUserApplicationIdentityProfile.tsx");
 
 export default function resolvedValuesFromUserApplicationIdentityProfile(profile) {
   if (null == profile) {
-    let obj = {};
+    let obj2 = {};
   } else {
-    obj = {};
+    const obj3 = {};
     if (null != profile.username) {
-      obj = { type: null, value: null };
-      obj[0] = resolveFieldValue.ResolvedValueType.STRING;
-      obj[1] = profile.username;
-      obj.username = obj;
+      const obj = { type: resolvedValues.ResolvedValueType.STRING, value: profile.username };
+      obj3.username = obj;
     }
-    obj = {};
-    const merged = Object.assign(obj);
+    obj2 = {};
+    const merged = Object.assign(obj3);
     const merged1 = Object.assign(resolvedValuesFromPrimary(profile));
     const merged2 = Object.assign(resolvedValuesFromDynamic(profile));
   }
-  return obj;
+  return obj2;
 };
 export const UnfurledMediaLoadingState = { UNKNOWN: 0, [0]: "UNKNOWN", LOADING: 1, [1]: "LOADING", LOADED_SUCCESS: 2, [2]: "LOADED_SUCCESS", LOADED_NOT_FOUND: 3, [3]: "LOADED_NOT_FOUND" };

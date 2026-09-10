@@ -1,25 +1,26 @@
-// Module ID: 11549
-// Function ID: 11550
+// Module ID: 11575
+// Function ID: 11576
 // Name: isAlertOrActionSheetOpen
-// Dependencies: [4251, 11550, 4906, 2]
+// Dependencies: [4264, 11576, 4920, 2]
 // Exports: isAlertOrActionSheetOpen
 
-// Module 11549 (isAlertOrActionSheetOpen)
-import useAlertStore2 from "useAlertStore" /* 4906 */;
-import closure_2 from "setContent" /* 4251 */;
-import closure_3 from "getAlert" /* 11550 */;
+// Module 11575 (isAlertOrActionSheetOpen)
+import useAlertStore2 from "useAlertStore" /* 4920 */;
+import ActionSheetStore from "ActionSheetStore" /* 4264 */;
+import AlertStore from "AlertStore" /* 11576 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("components_native/chat/isAlertOrActionSheetOpen.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/chat/isAlertOrActionSheetOpen.tsx");
 
 export const isAlertOrActionSheetOpen = function isAlertOrActionSheetOpen(selectedChannelId) {
   let obj = arg1;
   if (arg1 === undefined) {
-    obj = closure_2;
+    obj = ActionSheetStore;
   }
   let obj2 = arg2;
   if (arg2 === undefined) {
-    obj2 = closure_3;
+    obj2 = AlertStore;
   }
   let tmp = null != obj.getContent();
   const useAlertStore = useAlertStore2.useAlertStore;

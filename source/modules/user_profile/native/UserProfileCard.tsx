@@ -1,76 +1,72 @@
-// Module ID: 7207
-// Function ID: 7208
+// Module ID: 7221
+// Function ID: 7222
 // Name: UserProfileCard
-// Dependencies: [19, 17, 7208, 21, 4560, 576, 5123, 4556, 7209, 2]
+// Dependencies: [19, 17, 7222, 21, 4574, 576, 5137, 4570, 7223, 2]
 // Exports: UserProfileCardRows, UserProfileFormRow, default
 
-// Module 7207 (UserProfileCard)
-import ThemesDefault from "Themes" /* 576 */;
-import Text from "Text" /* 4556 */;
-import PressableBase from "PressableBase" /* 5123 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7209 */;
-import closure_2 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 7208 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 7221 (UserProfileCard)
+import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Pressables from "Pressables" /* 5137 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7223 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ CARD_ROWS_COLUMN_GAP, CARD_ROWS_ICON_SIZE, CARD_ROWS_ICON_SIZE_VARIANT: c4 } = ARBITRARY_LARGE_OFFSET);
-({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
-createCacheKey = { title: null, titleContent: null, text: null, row: null, rowLabel: null, rowLabelText: null, rowSublabel: null };
-createCacheKey = { marginBottom: ThemesDefault.space.PX_12, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
-createCacheKey[2] = { flexShrink: 1 };
-createCacheKey[3] = { flexDirection: "column", paddingVertical: 20 };
-createCacheKey[4] = { flexDirection: "row", alignItems: "center", columnGap: CARD_ROWS_COLUMN_GAP };
-createCacheKey[5] = { flex: 1, lineHeight: CARD_ROWS_ICON_SIZE };
-createCacheKey[6] = { marginHorizontal: CARD_ROWS_ICON_SIZE + CARD_ROWS_COLUMN_GAP };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flex: 1, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileCard.tsx");
+require = fn;
+const View = fn(17).View;
+const Constants = fn(7222);
+({ CARD_ROWS_COLUMN_GAP, CARD_ROWS_ICON_SIZE, CARD_ROWS_ICON_SIZE_VARIANT: closure_4 } = Constants);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { title: { marginBottom: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, titleContent: null, text: null, row: null, rowLabel: null, rowLabelText: null, rowSublabel: null };
+let obj3 = { marginBottom: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+obj2.titleContent = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+obj2.text = { flexShrink: 1 };
+obj2.row = { flexDirection: "column", paddingVertical: 20 };
+obj2.rowLabel = { flexDirection: "row", alignItems: "center", columnGap: CARD_ROWS_COLUMN_GAP };
+obj2.rowLabelText = { flex: 1, lineHeight: CARD_ROWS_ICON_SIZE };
+obj2.rowSublabel = { marginHorizontal: CARD_ROWS_ICON_SIZE + CARD_ROWS_COLUMN_GAP };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileCard.tsx");
 
 export default function UserProfileCard(arg0) {
   ({ title, trailingAction } = arg0);
   ({ titleLeadingIcon, titleIcon, titleStyle, children, style } = arg0);
-  const merged = Object.assign(arg0, Object.create(null));
-  const tmp2 = callback2();
-  let obj = { style };
+  const merged = Object.assign(arg0, Object.assign({ title: 0, titleLeadingIcon: 0, titleIcon: 0, titleStyle: 0, trailingAction: 0, children: 0, style: 0 }));
+  const tmp2 = closure_8();
+  const obj = { style };
   const merged1 = Object.assign(merged);
-  let tmp3Result = null != title || null != trailingAction;
-  if (tmp3Result) {
-    obj = { style: null, children: null };
+  let tmp3Result2 = null != title || null != trailingAction;
+  if (tmp3Result2) {
+    const obj2 = { style: null, children: null };
     const items = [tmp2.title, titleStyle];
-    obj[0] = items;
-    tmp3Result = null != title;
+    obj2.style = items;
+    let tmp3Result = null != title;
     if (tmp3Result) {
-      obj = { style: null, children: null };
-      obj[0] = tmp2.titleContent;
+      const obj3 = { style: tmp2.titleContent, children: null };
       const items1 = [titleLeadingIcon, , ];
-      obj1 = { style: null, accessibilityRole: "header", variant: "text-sm/medium", color: "text-strong", lineClamp: 1, children: null };
-      obj1[0] = tmp2.text;
-      obj1[5] = title;
-      items1[1] = callback(Text.Text, obj1);
+      const obj4 = { style: tmp2.text, accessibilityRole: "header", variant: "text-sm/medium", color: "text-strong", lineClamp: 1, children: title };
+      items1[1] = hasOwnProperty(Text_Text.Text, obj4);
       items1[2] = titleIcon;
-      obj[1] = items1;
-      tmp3Result = tmp3(tmp4, obj);
+      obj3.children = items1;
+      tmp3Result = tmp3(tmp4, obj3);
     }
     const items2 = [tmp3Result, trailingAction];
-    obj[1] = items2;
-    tmp3Result = tmp3(tmp4, obj);
+    obj2.children = items2;
+    tmp3Result2 = tmp3(tmp4, obj2);
   }
-  const items3 = [tmp3Result, children];
+  const items3 = [tmp3Result2, children];
   obj.children = items3;
-  return closure_6(View, obj);
+  return timestampProducer(View, obj);
 };
 export const UserProfileFormRow = function UserProfileFormRow(arg0) {
   ({ label, sublabel, hint, isDestructive, labelColor, arrow } = arg0);
   ({ icon, disabled, onPress } = arg0);
-  if (tmp6Result === undefined) {
-    tmp6Result = false;
+  if (tmp6Result3 === undefined) {
+    tmp6Result3 = false;
   }
-  const tmp = callback2();
+  const tmp = closure_8();
   let str;
   if (isDestructive) {
     str = "text-feedback-critical";
@@ -79,40 +75,37 @@ export const UserProfileFormRow = function UserProfileFormRow(arg0) {
   if (isDestructive) {
     str2 = "text-feedback-critical";
   }
-  let obj = { style: tmp.row, accessibilityRole: "button", accessibilityLabel: label, disabled, onPress, children: null };
-  obj = { style: tmp.rowLabel, children: null };
-  obj = { size: closure_4, color: str };
-  const items = [callback(icon, obj), , , ];
+  const obj = { style: tmp.row, accessibilityRole: "button", accessibilityLabel: label, disabled, onPress, children: null };
+  const obj2 = { style: tmp.rowLabel, children: null };
+  const items = [hasOwnProperty(icon, { size, color: str }), , , ];
   if (labelColor == null) {
     labelColor = str2;
   }
-  items[1] = callback(Text.Text, { variant: "text-md/semibold", color: labelColor, style: tmp.rowLabelText, children: label });
-  tmp6Result = null != hint;
+  items[1] = hasOwnProperty(Text_Text.Text, { variant: "text-md/semibold", color: labelColor, style: tmp.rowLabelText, children: label });
+  let tmp6Result = null != hint;
   if (tmp6Result) {
-    const obj2 = { size: null, color: null };
-    obj2[0] = closure_4;
-    obj2[1] = str;
-    tmp6Result = tmp6(hint, obj2);
+    const obj5 = { size, color: str };
+    tmp6Result = tmp6(hint, obj5);
   }
   items[2] = tmp6Result;
-  if (tmp6Result) {
-    tmp6Result = tmp6(ChevronSmallRightIcon.ChevronSmallRightIcon, { size: "sm" });
+  if (tmp6Result3) {
+    tmp6Result3 = tmp6(ChevronSmallRightIcon.ChevronSmallRightIcon, { size: "sm" });
   }
-  items[3] = tmp6Result;
-  obj[1] = items;
-  const items1 = [closure_6(View, obj), ];
-  let tmp6Result1 = null != sublabel;
-  if (tmp6Result1) {
-    const obj3 = { style: null, children: null };
-    obj3[0] = tmp.rowSublabel;
-    obj3[1] = sublabel;
-    tmp6Result1 = tmp6(tmp5, obj3);
+  items[3] = tmp6Result3;
+  obj2.children = items;
+  const items1 = [timestampProducer(View, obj2), ];
+  let tmp6Result4 = null != sublabel;
+  if (tmp6Result4) {
+    const obj6 = { style: tmp.rowSublabel, children: sublabel };
+    tmp6Result4 = tmp6(tmp5, obj6);
   }
-  items1[1] = tmp6Result1;
-  obj[5] = items1;
-  return closure_6(PressableBase.PressableOpacity, obj);
+  items1[1] = tmp6Result4;
+  obj.children = items1;
+  return timestampProducer(Pressables.PressableOpacity, obj);
 };
 export const UserProfileCardRows = function UserProfileCardRows(children) {
-  const Children = React.Children;
-  return callback(closure_7, { children: Children.map(children.children, (children) => callback(React.Fragment, { children }, arg1)) });
+  const obj = { children: null };
+  const Children = noop.Children;
+  obj.children = Children.map(children.children, (children, arg1) => closure_1_5(React.Fragment, { children }, arg1));
+  return hasOwnProperty(React5, obj);
 };

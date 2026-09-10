@@ -1,61 +1,60 @@
-// Module ID: 14814
-// Function ID: 14815
+// Module ID: 14840
+// Function ID: 14841
 // Name: handleDisableAccount
-// Dependencies: [1979, 1371, 1114, 6984, 14799, 4904, 2]
+// Dependencies: [1979, 1371, 1114, 6998, 14825, 4918, 2]
 // Exports: default
 
-// Module 14814 (handleDisableAccount)
-import setDefault from "set" /* 4904 */;
-import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 14799 */;
-import closure_3 from "createGuildRecordFromRust" /* 1979 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
+// Module 14840 (handleDisableAccount)
+import util from "util" /* 1114 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
+import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 14825 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/account/native/handleDisableAccount.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/account/native/handleDisableAccount.tsx");
 
 export default function handleDisableAccount() {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = false;
   }
-  currentUser = currentUser.getCurrentUser();
+  const currentUser = UserStore.getCurrentUser();
   let someResult = null != currentUser;
   if (someResult) {
-    guildsArray = guildsArray.getGuildsArray();
+    const guildsArray = GuildStore.getGuildsArray();
     someResult = guildsArray.some((ownerId) => ownerId.ownerId === currentUser.id);
   }
-  const intl = currentUser(1114).intl;
+  const intl = util.intl;
   const string = intl.string;
-  const t = currentUser(1114).t;
+  const t = util.t;
   if (someResult) {
     const intl4 = tmp4(1114).intl;
     const stringResult = string(t.vJiTOL);
     const stringResult1 = intl4.string(tmp4(1114).t.UyVVan);
-    let obj = { title: null, body: null };
-    obj[0] = stringResult;
-    obj[1] = stringResult1;
-    setDefault.show(obj);
-    const obj3 = setDefault;
+    const obj = { title: stringResult, body: stringResult1 };
+    AlertActionCreatorsDefault.show(obj);
   } else {
     const formatted = string(t["CIGa+7"]).toUpperCase();
-    obj = { onSubmit: null, title: null, placeholder: null, closeOnSuccess: true };
+    const obj2 = { onSubmit: null, title: null, placeholder: null, closeOnSuccess: true };
     if (flag) {
-      obj[0] = function onSubmit(password) {
-        return currentUser(6984).disableAccount(password, true);
+      obj2.onSubmit = function onSubmit(password) {
+        return currentUser(6998).disableAccount(password, true);
       };
       const intl3 = tmp4(1114).intl;
-      obj[1] = intl3.string(tmp4(1114).t["8lQ2rR"]).toUpperCase();
-      obj[2] = formatted;
-      let tmp8 = obj;
+      obj2.title = intl3.string(tmp4(1114).t["8lQ2rR"]).toUpperCase();
+      obj2.placeholder = formatted;
+      let tmp8 = obj2;
       const str3 = intl3.string(tmp4(1114).t["8lQ2rR"]);
     } else {
-      obj[0] = function onSubmit(password) {
-        return currentUser(6984).disableAccount(password, false);
+      obj2.onSubmit = function onSubmit(password) {
+        return currentUser(6998).disableAccount(password, false);
       };
       const intl2 = tmp4(1114).intl;
-      obj[1] = intl2.string(tmp4(1114).t.jf5GGb).toUpperCase();
-      obj[2] = formatted;
-      tmp8 = obj;
+      obj2.title = intl2.string(tmp4(1114).t.jf5GGb).toUpperCase();
+      obj2.placeholder = formatted;
+      tmp8 = obj2;
       const str2 = intl2.string(tmp4(1114).t.jf5GGb);
     }
     showUserSettingsInputAlertDefault(tmp8);

@@ -1,14 +1,13 @@
-// Module ID: 9560
-// Function ID: 9561
-// Name: prototype
+// Module ID: 9587
+// Function ID: 9588
+// Name: shared/RPCError
 // Dependencies: [2]
 
-// Module 9560 (prototype)
-import set from "set" /* 2 */;
+// Module 9587 (shared/RPCError)
+import size from "module_2" /* 2 */;
 
 const prototype = function RPCError(arg0, message) {
   const tmp = new prototype(message, new.target, new.target, arg0);
-  // ThrowIfThisInitialized (0x7c)
   if ("closeCode" in arg0) {
     ({ closeCode: tmp.code, closeCode: tmp.closeCode } = arg0);
   } else {
@@ -20,6 +19,6 @@ const prototype = function RPCError(arg0, message) {
 }.prototype;
 class prototype extends Error {
 }
-const result = set.fileFinishedImporting("../discord_common/js/shared/lib/RPCError.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/lib/RPCError.tsx");
 
 export const RPCError = prototype;

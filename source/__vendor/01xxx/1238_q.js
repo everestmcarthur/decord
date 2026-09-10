@@ -21,12 +21,9 @@ const fn = function q(arg0) {
   let num2 = 0;
   while (true) {
     let tmp2 = num2 < arr.length;
-    let tmp3 = num;
-    let tmp4 = num2;
-    let tmp5 = arr;
     if (!tmp2) {
       let _String = String;
-      arr = items.push(fromCharCode.apply(null, uint16Array.subarray(0, num)));
+      let arr2 = items.push(fromCharCode.apply(null, uint16Array.subarray(0, num)));
       if (!tmp2) {
         break;
       } else {
@@ -116,7 +113,7 @@ class m {
       num = 1;
       num2 = 32;
       num3 = 7;
-      bound = require("module_32");
+      bound = Math.max(32, length + (length >>> 1) + 7);
       _Uint8Array = Uint8Array;
       num4 = 3;
       tmp3 = new.target;
@@ -251,9 +248,9 @@ class m {
         }
       }
       if (arr2.slice) {
-        substr = require("module_0");
+        substr = arr2.slice(0, num32);
       } else {
-        substr = require("module_0");
+        substr = arr2.subarray(0, num32);
       }
       return substr;
     }
@@ -325,27 +322,27 @@ if (typeof Buffer !== "function") {
         str = "Failed to decode: the 'stream' option is unsupported.";
         throw Error("Failed to decode: the 'stream' option is unsupported.");
       } else {
-        _Uint8Array2 = arg0;
+        _Uint8Array21 = arg0;
         _Uint8Array = Uint8Array;
         tmp2 = arg0;
         if (arg0 instanceof Uint8Array) {
           tmp10 = t;
-          return t(_Uint8Array2);
+          return t(_Uint8Array21);
         } else {
           _ArrayBuffer = ArrayBuffer;
           _Uint8Array2 = Uint8Array;
-          if (_Uint8Array2.buffer instanceof ArrayBuffer) {
+          if (_Uint8Array21.buffer instanceof ArrayBuffer) {
             tmp7 = new.target;
             tmp8 = new.target;
-            _Uint8Array2 = new _Uint8Array2(_Uint8Array2.buffer);
-            _Uint8Array21 = _Uint8Array2;
+            _Uint8Array21 = new _Uint8Array2(_Uint8Array21.buffer);
+            _Uint8Array22 = _Uint8Array21;
           } else {
             tmp3 = new.target;
             tmp4 = new.target;
-            tmp5 = _Uint8Array2;
-            _Uint8Array21 = new _Uint8Array2(_Uint8Array2);
+            tmp5 = _Uint8Array21;
+            _Uint8Array22 = new _Uint8Array2(_Uint8Array21);
           }
-          tmp9 = _Uint8Array21;
+          tmp9 = _Uint8Array22;
         }
       }
       return;
@@ -372,7 +369,7 @@ if (typeof Buffer !== "function") {
         num = 1;
         num2 = 32;
         num3 = 7;
-        bound = require("module_32");
+        bound = Math.max(32, length + (length >>> 1) + 7);
         _Uint8Array = Uint8Array;
         num4 = 3;
         tmp3 = new.target;
@@ -507,9 +504,9 @@ if (typeof Buffer !== "function") {
           }
         }
         if (arr2.slice) {
-          substr = require("module_0");
+          substr = arr2.slice(0, num32);
         } else {
-          substr = require("module_0");
+          substr = arr2.subarray(0, num32);
         }
         return substr;
       }

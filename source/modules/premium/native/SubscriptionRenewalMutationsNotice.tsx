@@ -1,54 +1,49 @@
-// Module ID: 13348
-// Function ID: 13349
+// Module ID: 13371
+// Function ID: 13372
 // Name: SubscriptionRenewalMutationsNotice
-// Dependencies: [19, 17, 4219, 21, 4560, 576, 5441, 1178, 1114, 4218, 2]
+// Dependencies: [19, 17, 4232, 21, 4574, 576, 5455, 1178, 1114, 4231, 2]
 // Exports: default
 
-// Module 13348 (SubscriptionRenewalMutationsNotice)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4218 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4218 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { isNoneSubscription } from "createFromServer" /* 4219 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13371 (SubscriptionRenewalMutationsNotice)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import PremiumUtils from "PremiumUtils" /* 4231 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: null, icon: null, text: null };
-createCacheKey = { padding: 10, marginVertical: 5, marginHorizontal: 15, borderRadius: ThemesDefault.radii.xs, display: "flex", flexDirection: "row", justifyContent: "center", backgroundColor: require("result").DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { alignSelf: "center", marginLeft: 15, color: require("result").DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
-let obj1 = { alignSelf: "center", marginLeft: 15, color: require("result").DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
-createCacheKey[2] = { paddingLeft: 10, marginRight: 15, color: require("result").DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const obj2 = { paddingLeft: 10, marginRight: 15, color: require("result").DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
-const result = require("set").fileFinishedImporting("modules/premium/native/SubscriptionRenewalMutationsNotice.tsx");
+const PremiumUtilsDefault = PremiumUtils;
+
+require = fn;
+const View = fn(17).View;
+const isNoneSubscription = fn(4232).isNoneSubscription;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+const obj2 = { container: { padding: 10, marginVertical: 5, marginHorizontal: 15, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", justifyContent: "center", backgroundColor: fn(5455).DARK_PRIMARY_630_LIGHT_PRIMARY_230 }, icon: null, text: null };
+let obj3 = { padding: 10, marginVertical: 5, marginHorizontal: 15, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", justifyContent: "center", backgroundColor: fn(5455).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
+obj2.icon = { alignSelf: "center", marginLeft: 15, color: fn(5455).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
+let obj4 = { alignSelf: "center", marginLeft: 15, color: fn(5455).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
+obj2.text = { paddingLeft: 10, marginRight: 15, color: fn(5455).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/SubscriptionRenewalMutationsNotice.tsx");
 
 export default function SubscriptionRenewalMutationsNotice(arg0) {
   ({ subscription, renewalMutations } = arg0);
-  const tmp = callback2();
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.icon };
-  const items = [callback(Button.WarningCircle, obj), ];
-  obj = { style: tmp.text, children: null };
-  const intl = getSystemLocale.intl;
+  const tmp = closure_7();
+  const obj = { style: tmp.container, children: null };
+  const items = [hasOwnProperty(native.WarningCircle, { style: tmp.icon }), ];
+  const obj3 = { style: tmp.text, children: null };
+  const intl = util.intl;
   if (!subscription.hasExternalPlanChange) {
     if (!isNoneSubscription(renewalMutations.planId)) {
-      let displayName = getPremiumPlanItemDefault.getDisplayName(renewalMutations.planId);
-      const obj4 = getPremiumPlanItemDefault;
+      let displayName = PremiumUtilsDefault.getDisplayName(renewalMutations.planId);
     }
-    obj1 = { planName: null, date: null };
-    obj1[0] = displayName;
-    obj1[1] = subscription.currentPeriodEnd;
-    obj[1] = intl.format(tmp7, obj1);
-    items[1] = callback(Button.LegacyText, obj);
-    obj[1] = items;
-    return closure_6(View, obj);
+    const obj5 = { planName: displayName, date: subscription.currentPeriodEnd };
+    obj3.children = intl.format(tmp7, obj5);
+    items[1] = hasOwnProperty(native.LegacyText, obj3);
+    obj.children = items;
+    return timestampProducer(View, obj);
   }
-  displayName = getPremiumPlanItem.getExternalPlanDisplayName(renewalMutations);
+  displayName = PremiumUtils.getExternalPlanDisplayName(renewalMutations);
 };

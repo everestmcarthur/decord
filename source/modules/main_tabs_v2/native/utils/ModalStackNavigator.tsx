@@ -1,61 +1,70 @@
-// Module ID: 10929
-// Function ID: 10930
-// Dependencies: [19, 21, 7913, 7000, 7863, 10930, 1115, 2]
+// Module ID: 10956
+// Function ID: 10957
+// Name: ModalStackNavigator
+// Dependencies: [19, 21, 7927, 7014, 7877, 10957, 1115, 2]
 
-// Module 10929
-import NavigationStack from "NavigationStack" /* 7000 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 7913 */;
-import importAllResult from "noop" /* 19 */;
+// Module 10956 (ModalStackNavigator)
+import Navigator from "Navigator" /* 7014 */;
+import HeaderShared from "HeaderShared" /* 7877 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10957 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let closure_4 = createNativeStackNavigator.createNativeStackNavigator();
-const memoResult = importAllResult.memo(function ModalStackNavigator(children) {
+require = fn;
+const jsx = fn(21).jsx;
+const NativeStackNavigator = fn(7927);
+let closure_4 = NativeStackNavigator.createNativeStackNavigator();
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/ModalStackNavigator.tsx");
+
+export default noop.memo(function ModalStackNavigator(children) {
   ({ screenKey, title: require, titleIcon: importDefault } = children);
-  dependencyMap = undefined;
-  let obj = NavigationStack;
-  dependencyMap = obj.useAccessibilityNativeStackOptions();
-  obj = {
+  dependencyMap = Navigator.useAccessibilityNativeStackOptions();
+  const obj2 = {
     initialRouteName: screenKey,
     screenOptions(navigation) {
       const obj = {
         headerTitle(children) {
-          const merged = Object.assign(children, Object.create(null));
+          const merged = Object.assign(children, Object.assign({ children: 0 }));
           const merged1 = Object.assign(merged);
-          return closure_1_3(closure_1_0(closure_1_2[4]).GenericHeaderTitle, { title: children.children, icon: closure_1 });
+          return jsx(title(closure_2[4]).GenericHeaderTitle, { title: children.children, icon });
         },
-        headerLeft: closure_1_0(7863).getRenderModalCloseImage(navigation.navigation),
+        headerLeft: HeaderShared.getRenderModalCloseImage(navigation.navigation),
         headerTitleAlign: "center"
       };
-      let merged = Object.assign(dependencyMap);
-      let merged1 = Object.assign(closure_1_1(10930)());
+      let merged = Object.assign(closure_2);
+      let merged1 = Object.assign(getNavigationModalPresentationDefault());
       return obj;
     },
-    children: <closure_4.Screen {...obj} />
-  };
-  obj = {
-    name: screenKey,
-    children: children.render,
-    options() {
-      const obj = { title: closure_0, orientation: null };
+    children: <closure_4.Screen name={screenKey} options={function options() {
+      const obj = { title, orientation: null };
       let str;
       if (obj2.isIOS()) {
         str = "portrait";
       }
-      obj[1] = str;
+      obj.orientation = str;
       return obj;
-    }
+    }}>{arg0.render}</closure_4.Screen>
   };
-  return <closure_4.Navigator name={screenKey} options={function options() {
-    const obj = { title: closure_0, orientation: null };
+  return <closure_4.Navigator initialRouteName={screenKey} screenOptions={function screenOptions(navigation) {
+    const obj = {
+      headerTitle(children) {
+        const merged = Object.assign(children, Object.assign({ children: 0 }));
+        const merged1 = Object.assign(merged);
+        return jsx(title(closure_2[4]).GenericHeaderTitle, { title: children.children, icon });
+      },
+      headerLeft: HeaderShared.getRenderModalCloseImage(navigation.navigation),
+      headerTitleAlign: "center"
+    };
+    let merged = Object.assign(closure_2);
+    let merged1 = Object.assign(getNavigationModalPresentationDefault());
+    return obj;
+  }}><closure_4.Screen name={screenKey} options={function options() {
+    const obj = { title, orientation: null };
     let str;
     if (obj2.isIOS()) {
       str = "portrait";
     }
-    obj[1] = str;
+    obj.orientation = str;
     return obj;
-  }}>{arg0.render}</closure_4.Navigator>;
+  }}>{arg0.render}</closure_4.Screen></closure_4.Navigator>;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/utils/ModalStackNavigator.tsx");
-
-export default memoResult;

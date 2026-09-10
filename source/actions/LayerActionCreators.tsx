@@ -1,23 +1,21 @@
-// Module ID: 7587
-// Function ID: 7588
-// Name: pushLayer
+// Module ID: 7601
+// Function ID: 7602
+// Name: LayerActionCreators
 // Dependencies: [573, 2]
 // Exports: popAllLayers, popLayer, pushLayer
 
-// Module 7587 (pushLayer)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 7601 (LayerActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("actions/LayerActionCreators.tsx");
+const result = size.fileFinishedImporting("actions/LayerActionCreators.tsx");
 
 export const pushLayer = function pushLayer(component) {
-  let obj = dispatcherDefault;
-  obj = { type: "LAYER_PUSH", component };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "LAYER_PUSH", component });
 };
 export const popLayer = function popLayer() {
-  dispatcherDefault.dispatch({ type: "LAYER_POP" });
+  DispatcherDefault.dispatch({ type: "LAYER_POP" });
 };
 export const popAllLayers = function popAllLayers() {
-  dispatcherDefault.dispatch({ type: "LAYER_POP_ALL" });
+  DispatcherDefault.dispatch({ type: "LAYER_POP_ALL" });
 };

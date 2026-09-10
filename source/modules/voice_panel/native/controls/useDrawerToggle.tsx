@@ -1,56 +1,58 @@
-// Module ID: 17173
-// Function ID: 17174
+// Module ID: 17204
+// Function ID: 17205
 // Name: useDrawerToggle
-// Dependencies: [19, 12275, 12276, 4296, 8265, 17174, 1114, 2]
+// Dependencies: [19, 12301, 12302, 4310, 8295, 17205, 1114, 2]
 // Exports: default
 
-// Module 17173 (useDrawerToggle)
-import closure_3 from "noop" /* 19 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 12275 */;
+// Module 17204 (useDrawerToggle)
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17205 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let closure_5 = { code: "function useDrawerToggleTsx1(){const{controlsSpecs,VoicePanelControlsModes}=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.DRAWER;}" };
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/useDrawerToggle.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const VoicePanelControlsModes = fn(12301).VoicePanelControlsModes;
+const __initData = { code: "function useDrawerToggleTsx1(){const{controlsSpecs,VoicePanelControlsModes}=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.DRAWER;}" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/controls/useDrawerToggle.tsx");
 
 export default function useDrawerToggle(arg0) {
-  const _require = arg0;
+  _require = arg0;
   const context = dismissPanel.useContext(controlsSpecs(connected[2]));
   controlsSpecs = context.controlsSpecs;
   connected = context.connected;
   dismissPanel = context.dismissPanel;
-  let obj = _require(connected[3]);
   const fn = function l() {
-    return controlsSpecs.get().mode === closure_1_4.DRAWER;
+    return controlsSpecs.get().mode === VoicePanelControlsModes.DRAWER;
   };
-  obj = { controlsSpecs, VoicePanelControlsModes };
-  fn.__closure = obj;
+  fn.__closure = { controlsSpecs, VoicePanelControlsModes };
   fn.__workletHash = 900483810235;
-  fn.__initData = closure_5;
-  const derivedValue = obj.useDerivedValue(fn);
+  fn.__initData = __initData;
+  const derivedValue = require("ReanimatedRexport").useDerivedValue(fn);
   const tmp3 = controlsSpecs(connected[4])(derivedValue);
   const items = [arg0, dismissPanel, connected, controlsSpecs];
   const callback = dismissPanel.useCallback(() => {
-    if (controlsSpecs.get().mode === closure_1_4.DRAWER) {
+    if (controlsSpecs.get().mode === VoicePanelControlsModes.DRAWER) {
       dismissPanel();
     } else {
-      const value = connected.get();
-      const VoicePanelTabAnalyticsSources = callback(connected[5]).VoicePanelTabAnalyticsSources;
-      const obj = { tab: "settings", source: null };
-      obj[1] = value ? VoicePanelTabAnalyticsSources.CONNECTED_BUTTON : VoicePanelTabAnalyticsSources.PREJOIN_BUTTON;
-      callback(obj);
-      const tmp = callback;
+      value = connected.get();
+      const VoicePanelTabAnalyticsSources = trackVoicePanelTabOpened.VoicePanelTabAnalyticsSources;
+      const obj = { tab: "settings", source: value ? VoicePanelTabAnalyticsSources.CONNECTED_BUTTON : VoicePanelTabAnalyticsSources.PREJOIN_BUTTON };
+      closure_0(obj);
     }
   }, items);
-  obj = { isDrawerOpen: tmp3, handlePress: callback, accessibilityLabel: null, ariaHidden: null };
-  const intl = _require(connected[6]).intl;
+  const obj3 = { isDrawerOpen: tmp3, handlePress: callback, accessibilityLabel: null, ariaHidden: null };
+  let obj = require("ReanimatedRexport");
+  const obj2 = { controlsSpecs, VoicePanelControlsModes };
+  const intl = require("util").intl;
   const string = intl.string;
-  const t = _require(connected[6]).t;
+  const t = require("util").t;
   if (tmp3) {
     let stringResult = string(t["awDmr/"]);
   } else {
     stringResult = string(t.OXW7dL);
   }
-  obj[2] = stringResult;
-  obj[3] = !controlsSpecs(connected[4])(connected);
-  return obj;
+  obj3.accessibilityLabel = stringResult;
+  obj3.ariaHidden = !controlsSpecs(connected[4])(connected);
+  return obj3;
 };

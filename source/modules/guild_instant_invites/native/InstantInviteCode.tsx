@@ -1,88 +1,87 @@
-// Module ID: 10946
-// Function ID: 10947
-// Name: InstantInviteDetails
-// Dependencies: [19, 17, 1961, 4209, 1371, 21, 4560, 576, 5028, 5080, 4973, 4556, 4713, 4523, 1114, 10935, 2]
+// Module ID: 10973
+// Function ID: 10974
+// Name: InstantInviteCode
+// Dependencies: [19, 17, 1961, 4222, 1371, 21, 4574, 576, 5042, 5094, 4987, 4570, 4727, 4537, 1114, 10962, 2]
 // Exports: default
 
-// Module 10946 (InstantInviteDetails)
-import ThemesDefault from "Themes" /* 576 */;
-import Text from "Text" /* 4556 */;
-import computeChannelName from "computeChannelName" /* 4713 */;
-import Stack from "Stack" /* 4973 */;
-import getChannelIcon from "getChannelIcon" /* 5028 */;
-import componentDidMountDefault from "componentDidMount" /* 10935 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { createChannelRecordFromInvite as closure_5 } from "createChannelRecord" /* 1961 */;
-import closure_6 from "markAllUserIdListsStale" /* 4209 */;
-import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10973 (InstantInviteCode)
+import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import useChannelName from "useChannelName" /* 4727 */;
+import Stack_Stack from "Stack/Stack" /* 4987 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5042 */;
+import CountDownDefault from "CountDown" /* 10962 */;
+import noop from "module_19" /* 19 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+require = fn;
 class InstantInviteDetails {
   constructor(arg0) {
     ({ channel, expiresAt } = global);
     tmp = closure_10();
     tmp2 = closure_0;
     tmp3 = closure_2;
-    obj = require("getChannelIcon");
+    obj = closure_0(closure_2[8]);
     TextIcon = obj.getSimpleChannelIconComponent(channel);
     if (TextIcon == null) {
-      TextIcon = require("TextIcon").TextIcon;
+      TextIcon = tmp2(tmp3[9]).TextIcon;
     }
     tmp4 = jsxs;
-    obj = { direction: "horizontal", align: "center", children: null };
+    obj1 = { direction: "horizontal", align: "center", children: null };
     tmp5 = jsx;
     items = [, ];
     items[0] = jsx(TextIcon, { color: "icon-subtle", size: "xs" });
-    obj1 = { variant: "text-md/semibold", color: "text-subtle", style: tmp.channel, lineClamp: 1, children: null };
-    tmp2Result = require("computeChannelName");
-    obj1[4] = tmp2Result.computeChannelName(channel, closure_7, closure_6, false);
-    items[1] = jsx(require("Text").Text, obj1);
-    obj[2] = items;
+    obj8 = { variant: "text-md/semibold", color: "text-subtle", style: tmp.channel, lineClamp: 1, children: null };
+    tmp2Result = tmp2(tmp3[12]);
+    obj8.children = tmp2Result.computeChannelName(channel, closure_7, closure_6, false);
+    items[1] = jsx(tmp2(tmp3[11]).Text, obj8);
+    obj1.children = items;
     items1 = [, ];
-    items1[0] = jsxs(require("Stack").Stack, obj);
+    items1[0] = jsxs(tmp2(tmp3[10]).Stack, obj1);
     tmp4Result = null != expiresAt;
     if (tmp4Result) {
-      obj2 = { direction: "horizontal", align: "center", children: null };
+      obj9 = { direction: "horizontal", align: "center", children: null };
       items2 = [, , ];
-      items2[0] = tmp5(require("ClockIcon").ClockIcon, { size: "xs", color: "icon-subtle" });
-      obj3 = { variant: "text-md/semibold", color: "text-subtle", children: null };
-      intl = require("getSystemLocale").intl;
-      obj3[2] = intl.string(require("getSystemLocale").t.aTABYx);
-      items2[1] = tmp5(require("Text").Text, obj3);
+      items2[0] = tmp5(tmp2(tmp3[13]).ClockIcon, { size: "xs", color: "icon-subtle" });
+      obj10 = { variant: "text-md/semibold", color: "text-subtle", children: null };
+      intl = tmp2(tmp3[14]).intl;
+      obj10.children = intl.string(tmp2(tmp3[14]).t.aTABYx);
+      items2[1] = tmp5(tmp2(tmp3[11]).Text, obj10);
       tmp7 = closure_1;
-      obj4 = { style: null, deadline: null };
-      obj4[0] = tmp.time;
-      obj4[1] = expiresAt;
-      items2[2] = tmp5(require("componentDidMount"), obj4);
-      obj2[2] = items2;
-      tmp4Result = tmp4(require("Stack").Stack, obj2);
+      obj11 = { style: null, deadline: null };
+      obj11.style = tmp.time;
+      obj11.deadline = expiresAt;
+      items2[2] = tmp5(closure_1(tmp3[15]), obj11);
+      obj9.children = items2;
+      tmp4Result = tmp4(tmp2(tmp3[10]).Stack, obj9);
     }
     items1[1] = tmp4Result;
-    return tmp4(require("Stack").Stack, { children: items1 });
+    return tmp4(tmp2(tmp3[10]).Stack, { children: items1 });
   }
 }
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { flex: { flex: 1 }, channel: { flex: 0 }, time: null };
-createCacheKey = { color: ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE };
-createCacheKey[2] = createCacheKey;
-let closure_10 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteCode.tsx");
+const View = fn(17).View;
+let closure_5 = fn(1961).createChannelRecordFromInvite;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { flex: { flex: 1 }, channel: { flex: 0 }, time: { color: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE } };
+let closure_10 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteCode.tsx");
 
 export default function InstantInviteCode(invite) {
   invite = invite.invite;
   const items = [invite.channel];
-  let obj = { style: callback3().flex, children: null };
-  const memo = React.useMemo(() => closure_1_5(invite.channel), items);
-  obj = { children: null };
-  obj = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
-  const items1 = [callback(invite(4556).Text, obj), ];
-  const tmp = callback3();
-  items1[1] = callback(InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
-  obj[0] = items1;
-  obj[1] = callback2(invite(4973).Stack, obj);
-  return callback(View, obj);
+  const obj = { style: closure_10().flex, children: null };
+  const memo = noop.useMemo(() => closure_5(invite.channel), items);
+  const obj2 = { children: null };
+  const items1 = [closure_8(invite(4570).Text, { variant: "text-lg/bold", tabularNumbers: true, children: invite.code }), ];
+  const obj3 = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
+  const tmp = closure_10();
+  items1[1] = closure_8(InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
+  obj2.children = items1;
+  obj.children = closure_9(invite(4987).Stack, obj2);
+  return closure_8(View, obj);
 };
 export { InstantInviteDetails };

@@ -1,52 +1,48 @@
-// Module ID: 14875
-// Function ID: 14876
+// Module ID: 14901
+// Function ID: 14902
 // Name: FamilyCenterActivityPage
-// Dependencies: [19, 17, 21, 4560, 576, 8650, 7123, 14876, 14878, 14888, 11923, 14892, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 8678, 7137, 14902, 14904, 14914, 11949, 14918, 2]
 // Exports: default
 
-// Module 14875 (FamilyCenterActivityPage)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
-import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 8650 */;
-import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 14876 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14901 (FamilyCenterActivityPage)
+import nativeDefault from "native" /* 576 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7137 */;
+import useUserLinks from "useUserLinks" /* 8678 */;
+import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 14902 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ View: c3, ScrollView: c4 } = get_ActivityIndicator);
-({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { scrollView: { flex: 1 }, dataConfirmation: null, container: null };
-createCacheKey = { marginTop: ThemesDefault.space.PX_8 };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityPage.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { scrollView: { flex: 1 }, dataConfirmation: { marginTop: nativeDefault.space.PX_8 }, container: null };
+let obj3 = { marginTop: nativeDefault.space.PX_8 };
+obj2.container = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityPage.tsx");
 
 export default function FamilyCenterActivityPage() {
-  const tmp = callback2();
-  let obj = useUserIdsForLinkStatus;
-  obj = { style: tmp.scrollView, children: null };
-  const activeLinkUserIds = obj.useActiveLinkUserIds();
-  obj = { style: tmp.container, children: null };
-  const items = [callback(FamilyCenterParentalConsentNoticeDefault, {}), ];
+  const tmp = closure_8();
+  const obj2 = { style: tmp.scrollView, children: null };
+  const activeLinkUserIds = useUserLinks.useActiveLinkUserIds();
+  const obj3 = { style: tmp.container, children: null };
+  const items = [hasOwnProperty(FamilyCenterParentalConsentNoticeDefault, {}), ];
   if (0 === activeLinkUserIds.length) {
-    obj1 = { children: null };
-    const items1 = [tmp3(tmp7(14878), {}), tmp3(tmp7(14888), {}), ];
-    const obj2 = { style: null, children: null };
-    obj2[0] = tmp.dataConfirmation;
-    obj2[1] = tmp3(tmp7(11923), {});
-    items1[2] = tmp3(tmp6, obj2);
-    obj1[0] = items1;
-    let tmp3Result = tmp5(closure_6, obj1);
+    const obj4 = { children: null };
+    const items1 = [tmp3(tmp7(14904), {}), tmp3(tmp7(14914), {}), ];
+    const obj5 = { style: tmp.dataConfirmation, children: tmp3(tmp7(11949), {}) };
+    items1[2] = tmp3(tmp6, obj5);
+    obj4.children = items1;
+    let tmp3Result = tmp5(timestampProducer, obj4);
   } else {
-    tmp3Result = tmp3(tmp7(14892), {});
+    tmp3Result = tmp3(tmp7(14918), {});
   }
+  const tmp4 = React4;
   items[1] = tmp3Result;
-  obj[1] = items;
-  obj[1] = callback(SafeAreaPaddingView.SafeAreaPaddingView, { bottom: true, children: closure_7(closure_3, obj) });
-  return callback(closure_4, obj);
+  obj3.children = items;
+  obj2.children = hasOwnProperty(common_SafeAreaView.SafeAreaPaddingView, { bottom: true, children: React5(React3, obj3) });
+  return hasOwnProperty(tmp4, obj2);
 };

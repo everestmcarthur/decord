@@ -1,18 +1,18 @@
-// Module ID: 10086
-// Function ID: 10087
-// Name: DesktopNotificationTypes
+// Module ID: 10113
+// Function ID: 10114
+// Name: NotificationSettingsStore
 // Dependencies: [1074, 1115, 504, 573, 2]
 
-// Module 10086 (DesktopNotificationTypes)
-import set from "set" /* 2 */;
+// Module 10113 (NotificationSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import set2 from "set" /* 1115 */;
-import ME from "ME" /* 1074 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const DesktopNotificationTypes = ME.DesktopNotificationTypes;
-({ NotificationPermissionTypes: c3, TTSNotificationTypes } = ME);
-let obj = { desktopType: set2.isPlatformEmbedded ? DesktopNotificationTypes.ALL : DesktopNotificationTypes.NEVER, disableAllSounds: false, disabledSounds: [], ttsType: TTSNotificationTypes.NEVER, disableUnreadBadge: false, taskbarFlash: true, notifyMessagesInSelectedChannel: false, screenDowntimeReminder: true };
+const DesktopNotificationTypes = Constants.DesktopNotificationTypes;
+({ NotificationPermissionTypes: c3, TTSNotificationTypes } = Constants);
+let obj = { desktopType: PlatformUtils.isPlatformEmbedded ? DesktopNotificationTypes.ALL : DesktopNotificationTypes.NEVER, disableAllSounds: false, disabledSounds: [], ttsType: TTSNotificationTypes.NEVER, disableUnreadBadge: false, taskbarFlash: true, notifyMessagesInSelectedChannel: false, screenDowntimeReminder: true };
 function handleSetDesktopType(desktopType) {
   obj.desktopType = desktopType.desktopType;
 }
@@ -83,12 +83,12 @@ const items = [
     if (null != obj.desktopType) {
       return obj;
     } else {
-      obj.desktopType = set2.isPlatformEmbedded ? DesktopNotificationTypes.ALL : DesktopNotificationTypes.NEVER;
+      obj.desktopType = PlatformUtils.isPlatformEmbedded ? DesktopNotificationTypes.ALL : DesktopNotificationTypes.NEVER;
     }
   }
 ];
 NotificationSettingsStore.migrations = items;
-obj = {
+const notificationSettingsStore = new NotificationSettingsStore(DispatcherDefault, {
   NOTIFICATIONS_SET_DESKTOP_TYPE: handleSetDesktopType,
   NOTIFICATIONS_SET_TTS_TYPE: function handleSetTTSType(ttsType) {
     obj.ttsType = ttsType.ttsType;
@@ -119,8 +119,7 @@ obj = {
   NOTIFICATIONS_SET_SCREEN_DOWNTIME_REMINDER: function handleSetScreenDowntimeReminder(screenDowntimeReminder) {
     obj.screenDowntimeReminder = screenDowntimeReminder.screenDowntimeReminder;
   }
-};
-const notificationSettingsStore = new NotificationSettingsStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("stores/NotificationSettingsStore.tsx");
+});
+const result = size.fileFinishedImporting("stores/NotificationSettingsStore.tsx");
 
 export default notificationSettingsStore;

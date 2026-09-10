@@ -1,26 +1,25 @@
-// Module ID: 4403
-// Function ID: 4404
-// Name: useDcfNewUserCooldown
+// Module ID: 4417
+// Function ID: 4418
+// Name: DcfNewUserCooldownExperiment
 // Dependencies: [1433, 1090, 2]
 // Exports: getDcfNewUserCooldown, useDcfNewUserCooldown
 
-// Module 4403 (useDcfNewUserCooldown)
-import set from "set" /* 2 */;
-import setDefault from "set" /* 1090 */;
+// Module 4417 (DcfNewUserCooldownExperiment)
+import DurationsDefault from "Durations" /* 1090 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-let obj = { name: "2026-08-dcf-new-user-cooldown", kind: "user", defaultConfig: null, variations: null };
-obj = { newUserCooldownMs: setDefault.Millis.DAY };
-obj[2] = obj;
-const obj1 = { 1: null, 2: { newUserCooldownMs: 2 * setDefault.Millis.DAY }, 3: null };
-const obj2 = { newUserCooldownMs: 2 * setDefault.Millis.DAY };
-obj1[2] = { newUserCooldownMs: 3 * setDefault.Millis.DAY };
-const obj3 = { newUserCooldownMs: 3 * setDefault.Millis.DAY };
-obj1[3] = { newUserCooldownMs: 7 * setDefault.Millis.DAY };
-obj[3] = obj1;
+const obj = { name: "2026-08-dcf-new-user-cooldown", kind: "user", defaultConfig: { newUserCooldownMs: DurationsDefault.Millis.DAY }, variations: null };
+const obj3 = { 1: null, 2: null, 3: null };
+const obj2 = { newUserCooldownMs: DurationsDefault.Millis.DAY };
+obj3[1] = { newUserCooldownMs: 2 * DurationsDefault.Millis.DAY };
+const obj4 = { newUserCooldownMs: 2 * DurationsDefault.Millis.DAY };
+obj3[2] = { newUserCooldownMs: 3 * DurationsDefault.Millis.DAY };
+const obj5 = { newUserCooldownMs: 3 * DurationsDefault.Millis.DAY };
+obj3[3] = { newUserCooldownMs: 7 * DurationsDefault.Millis.DAY };
+obj.variations = obj3;
 let closure_0 = ApexExperiment.createApexExperiment(obj);
-const obj4 = { newUserCooldownMs: 7 * setDefault.Millis.DAY };
-const result = set.fileFinishedImporting("modules/dismissible_content/DcfNewUserCooldownExperiment.tsx");
+const result = size.fileFinishedImporting("modules/dismissible_content/DcfNewUserCooldownExperiment.tsx");
 
 export const useDcfNewUserCooldown = function useDcfNewUserCooldown() {
   return closure_0.useConfig({ location: "useDcfNewUserCooldown" }).newUserCooldownMs;

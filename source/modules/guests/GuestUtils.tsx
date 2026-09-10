@@ -1,14 +1,15 @@
-// Module ID: 11316
-// Function ID: 11317
-// Dependencies: [4187, 1384, 8392, 2]
+// Module ID: 11343
+// Function ID: 11344
+// Name: GuestUtils
+// Dependencies: [4200, 1384, 8420, 2]
 
-// Module 11316
-import set from "set" /* 2 */;
-import hasFlag from "hasFlag" /* 1384 */;
-import GuildMemberFlags2 from "GuildMemberFlags" /* 4187 */;
+// Module 11343 (GuestUtils)
+import FlagUtils from "FlagUtils" /* 1384 */;
+import GuildMemberConstants from "GuildMemberConstants" /* 4200 */;
+import size from "module_2" /* 2 */;
 
-const GuildMemberFlags = GuildMemberFlags2.GuildMemberFlags;
-const result = set.fileFinishedImporting("modules/guests/GuestUtils.tsx");
+const GuildMemberFlags = GuildMemberConstants.GuildMemberFlags;
+const result = size.fileFinishedImporting("modules/guests/GuestUtils.tsx");
 
 export default {
   canAcceptInvite(items, guild) {
@@ -24,18 +25,17 @@ export default {
       if (num == null) {
         num = 0;
       }
-      const hasFlagResult = hasFlag.hasFlag(num, GuildMemberFlags.IS_GUEST);
+      const hasFlagResult = FlagUtils.hasFlag(num, GuildMemberFlags.IS_GUEST);
       let hasFlagResult1 = !hasFlagResult;
       if (hasFlagResult) {
         let num2 = guild.flags;
         if (num2 == null) {
           num2 = 0;
         }
-        hasFlagResult1 = tmp2(1384).hasFlag(num2, tmp2(8392).GuildInviteFlags.IS_GUEST_INVITE);
+        hasFlagResult1 = tmp2(1384).hasFlag(num2, tmp2(8420).GuildInviteFlags.IS_GUEST_INVITE);
         const tmp2Result = tmp2(1384);
       }
       tmp = hasFlagResult1;
-      const obj2 = hasFlag;
     }
     return tmp;
   }

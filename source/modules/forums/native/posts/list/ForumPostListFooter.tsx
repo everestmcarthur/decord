@@ -1,70 +1,59 @@
-// Module ID: 12029
-// Function ID: 12030
+// Module ID: 12055
+// Function ID: 12056
 // Name: ForumPostListFooter
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 11970, 7272, 12022, 12030, 12023, 11419, 2]
+// Dependencies: [19, 17, 1074, 21, 4574, 576, 11996, 7286, 12048, 12056, 12049, 11446, 2]
 // Exports: default
 
-// Module 12029 (ForumPostListFooter)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME from "GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME" /* 7272 */;
-import MaxForumPostReactions from "MaxForumPostReactions" /* 11419 */;
-import useTypingUserIds from "useTypingUserIds" /* 11970 */;
-import num2Default from "num2" /* 12022 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { AnalyticsObjects } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12055 (ForumPostListFooter)
+import nativeDefault from "native" /* 576 */;
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7286 */;
+import useTypingUsersIds from "useTypingUsersIds" /* 11996 */;
+import ForumPostMessageCountDefault from "ForumPostMessageCount" /* 12048 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { footer: { display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "flex-start" }, dot: null };
-createCacheKey = { height: 4, width: 4, borderRadius: 2, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginHorizontal: 8 };
-createCacheKey[1] = createCacheKey;
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/forums/native/posts/list/ForumPostListFooter.tsx");
+const ForumPostReactions = tmp2(11446);
+require = fn;
+const View = fn(17).View;
+const AnalyticsObjects = fn(1074).AnalyticsObjects;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+const obj2 = { footer: { display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "flex-start" }, dot: null };
+let size = { height: 4, width: 4, borderRadius: 2, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginHorizontal: 8 };
+obj2.dot = size;
+let closure_8 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/posts/list/ForumPostListFooter.tsx");
 
 export default function ForumPostListFooter(parentChannel) {
   ({ thread, firstMessage, hasUnreads } = parentChannel);
-  const tmp = callback2();
-  let obj = useTypingUserIds;
-  const typingUserIds = obj.useTypingUserIds(thread.id);
+  const tmp = closure_8();
+  const typingUserIds = useTypingUsersIds.useTypingUserIds(thread.id);
   let tmp6Result = typingUserIds.length > 0;
-  obj1 = GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME;
-  let isGameInvitesPost = obj1.useIsGameInvitesPost(thread);
-  obj = { style: tmp.footer, children: null };
-  const items = [callback(num2Default, { thread, hasUnreads }), , , ];
+  let isGameInvitesPost = GameInvitesChannelUtils.useIsGameInvitesPost(thread);
+  const obj3 = { style: tmp.footer, children: null };
+  const items = [hasOwnProperty(ForumPostMessageCountDefault, { thread, hasUnreads }), , , ];
   if (isGameInvitesPost) {
-    obj = { channel: null };
-    obj[0] = thread;
-    isGameInvitesPost = tmp8(tmp9(12030), obj);
+    const obj4 = { channel: thread };
+    isGameInvitesPost = tmp8(tmp9(12056), obj4);
   }
   items[1] = isGameInvitesPost;
   if (tmp6Result) {
-    obj1 = { children: null };
-    const obj2 = { style: null };
-    obj2[0] = tmp.dot;
-    const items1 = [tmp8(tmp7, obj2), ];
-    const obj3 = { thread: null, typingUserIds: null, hasUnreads: null };
-    obj3[0] = thread;
-    obj3[1] = typingUserIds;
-    obj3[2] = hasUnreads;
-    items1[1] = tmp8(tmp9(12023), obj3);
-    obj1[0] = items1;
-    tmp6Result = tmp6(closure_6, obj1);
+    const obj5 = { children: null };
+    const obj6 = { style: tmp.dot };
+    const items1 = [tmp8(tmp7, obj6), ];
+    const obj7 = { thread, typingUserIds, hasUnreads };
+    items1[1] = tmp8(tmp9(12049), obj7);
+    obj5.children = items1;
+    tmp6Result = tmp6(timestampProducer, obj5);
   }
   items[2] = tmp6Result;
   let tmp8Result = null != firstMessage;
   if (tmp8Result) {
-    const obj4 = { thread: null, firstMessage: null, parentChannel: null, locationAnalyticsObject: null };
-    obj4[0] = thread;
-    obj4[1] = firstMessage;
-    obj4[2] = parentChannel.parentChannel;
-    obj4[3] = AnalyticsObjects.FORUM_LIST_ITEM_FOOTER;
-    tmp8Result = tmp8(MaxForumPostReactions.MostCommonForumPostReaction, obj4);
+    const obj8 = { thread, firstMessage, parentChannel: parentChannel.parentChannel, locationAnalyticsObject: AnalyticsObjects.FORUM_LIST_ITEM_FOOTER };
+    tmp8Result = tmp8(ForumPostReactions.MostCommonForumPostReaction, obj8);
   }
   items[3] = tmp8Result;
-  obj[1] = items;
-  return closure_7(View, obj);
+  obj3.children = items;
+  return React5(View, obj3);
 };

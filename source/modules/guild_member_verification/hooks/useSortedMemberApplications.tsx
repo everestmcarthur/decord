@@ -1,37 +1,37 @@
-// Module ID: 16586
-// Function ID: 16587
+// Module ID: 16617
+// Function ID: 16618
 // Name: useSortedMemberApplications
-// Dependencies: [19, 5542, 504, 4384, 2]
+// Dependencies: [19, 5556, 504, 4398, 2]
 // Exports: useSortedMemberApplications
 
-// Module 16586 (useSortedMemberApplications)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "updateSubmittedGuildJoinRequestTotal" /* 5542 */;
+// Module 16617 (useSortedMemberApplications)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4398 */;
+import noop from "module_19" /* 19 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5556 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/useSortedMemberApplications.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_member_verification/hooks/useSortedMemberApplications.tsx");
 
 export const useSortedMemberApplications = function useSortedMemberApplications(guildId) {
   guildId = guildId.guildId;
   const applicationStatus = guildId.applicationStatus;
   const sortOrder = guildId.sortOrder;
   let stateFromStores;
-  let obj = guildId(applicationStatus[2]);
   let items = [stateFromStores];
   const items1 = [applicationStatus, guildId];
-  stateFromStores = obj.useStateFromStores(items, () => stateFromStores.getRequests(guildId, applicationStatus), items1);
-  obj = {
-    guildJoinRequests: sortOrder.useMemo(() => {
-      if (sortOrder === guildId(applicationStatus[3]).GuildJoinRequestSortOrders.TIMESTAMP_DESC) {
-        const items = [];
-        HermesBuiltin.arraySpread(stateFromStores, 0);
-        let reversed = items.reverse();
-      } else {
-        reversed = stateFromStores;
-      }
-      return reversed;
-    }, items2)
-  };
-  items2 = [sortOrder, stateFromStores];
-  return obj;
+  stateFromStores = guildId(applicationStatus[2]).useStateFromStores(items, () => GuildJoinRequestStore.getRequests(guildId, applicationStatus), items1);
+  const obj2 = { guildJoinRequests: null };
+  const items2 = [sortOrder, stateFromStores];
+  obj2.guildJoinRequests = sortOrder.useMemo(() => {
+    if (sortOrder === MemberVerificationTypes.GuildJoinRequestSortOrders.TIMESTAMP_DESC) {
+      const items = [];
+      HermesBuiltin.arraySpread(stateFromStores, 0);
+      let reversed = items.reverse();
+    } else {
+      reversed = stateFromStores;
+    }
+    return reversed;
+  }, items2);
+  return obj2;
 };

@@ -1,27 +1,42 @@
-// Module ID: 17472
-// Function ID: 17473
-// Name: _terminate
-// Dependencies: [5, 2025, 1371, 4224, 10670, 1373, 1074, 1085, 7118, 13357, 4218, 13471, 2]
+// Module ID: 17503
+// Function ID: 17504
+// Name: PromotionsManager
+// Dependencies: [5, 2025, 1371, 4237, 10697, 1373, 1074, 1085, 7132, 13380, 4231, 13494, 2]
 
-// Module 17472 (_terminate)
-import initializeDefault from "initialize" /* 7118 */;
-import fetchActivePromotions from "fetchActivePromotions" /* 13357 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_getSystemLocale" /* 2025 */;
-import closure_5 from "mergeGuildAvatar" /* 1371 */;
-import closure_6 from "reset" /* 4224 */;
-import closure_7 from "createEmptyPromotionsByType" /* 10670 */;
-import { PremiumTypes } from "GuildFeatures" /* 1373 */;
-import { EntitlementTypes } from "ME" /* 1074 */;
-import { SubscriptionTypes } from "sum" /* 1085 */;
+// Module 17503 (PromotionsManager)
+import PremiumUtilsDefault from "PremiumUtils" /* 4231 */;
+import PromotionsActionCreators from "PromotionsActionCreators" /* 13380 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import LocaleStore from "LocaleStore" /* 2025 */;
+import UserStore from "UserStore" /* 1371 */;
+import SubscriptionStore from "SubscriptionStore" /* 4237 */;
+import PromotionsStore from "PromotionsStore" /* 10697 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
-require = arg1;
-initializeDefault;
+require = fn;
+const PremiumTypes = fn(1373).PremiumTypes;
+const EntitlementTypes = fn(1074).EntitlementTypes;
+const SubscriptionTypes = fn(1085).SubscriptionTypes;
 class PromotionsManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    obj = { POST_CONNECTION_OPEN: onPostConnectionOpen.bind(applyArgumentsResult), EXPERIMENTS_FETCH_SUCCESS: onPostConnectionOpen2.bind(applyArgumentsResult), IAP_PURCHASE_PRODUCT_SUCCESS: onMobilePurchaseSuccess.bind(applyArgumentsResult), GPLAY_PURCHASE_VERIFIED: onMobilePurchaseSuccess2.bind(applyArgumentsResult), BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS: onOfferUpdated.bind(applyArgumentsResult), BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS: onOfferUpdated2.bind(applyArgumentsResult), BILLING_REFERRAL_RESOLVE_SUCCESS: onOfferUpdated3.bind(applyArgumentsResult), VIRTUAL_CURRENCY_REDEEM_SUCCESS: onVCRedeemed.bind(applyArgumentsResult) };
-    ({ onPostConnectionOpen, onPostConnectionOpen: onPostConnectionOpen2, onMobilePurchaseSuccess, onMobilePurchaseSuccess: onMobilePurchaseSuccess2, onOfferUpdated, onOfferUpdated: onOfferUpdated2, onOfferUpdated: onOfferUpdated3, onVCRedeemed } = applyArgumentsResult);
+    obj = { POST_CONNECTION_OPEN: null, EXPERIMENTS_FETCH_SUCCESS: null, IAP_PURCHASE_PRODUCT_SUCCESS: null, GPLAY_PURCHASE_VERIFIED: null, BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS: null, BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS: null, BILLING_REFERRAL_RESOLVE_SUCCESS: null, VIRTUAL_CURRENCY_REDEEM_SUCCESS: null };
+    onPostConnectionOpen = applyArgumentsResult.onPostConnectionOpen;
+    obj.POST_CONNECTION_OPEN = onPostConnectionOpen.bind(applyArgumentsResult);
+    onPostConnectionOpen2 = applyArgumentsResult.onPostConnectionOpen;
+    obj.EXPERIMENTS_FETCH_SUCCESS = onPostConnectionOpen2.bind(applyArgumentsResult);
+    onMobilePurchaseSuccess = applyArgumentsResult.onMobilePurchaseSuccess;
+    obj.IAP_PURCHASE_PRODUCT_SUCCESS = onMobilePurchaseSuccess.bind(applyArgumentsResult);
+    onMobilePurchaseSuccess2 = applyArgumentsResult.onMobilePurchaseSuccess;
+    obj.GPLAY_PURCHASE_VERIFIED = onMobilePurchaseSuccess2.bind(applyArgumentsResult);
+    onOfferUpdated = applyArgumentsResult.onOfferUpdated;
+    obj.BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS = onOfferUpdated.bind(applyArgumentsResult);
+    onOfferUpdated2 = applyArgumentsResult.onOfferUpdated;
+    obj.BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS = onOfferUpdated2.bind(applyArgumentsResult);
+    onOfferUpdated3 = applyArgumentsResult.onOfferUpdated;
+    obj.BILLING_REFERRAL_RESOLVE_SUCCESS = onOfferUpdated3.bind(applyArgumentsResult);
+    onVCRedeemed = applyArgumentsResult.onVCRedeemed;
+    obj.VIRTUAL_CURRENCY_REDEEM_SUCCESS = onVCRedeemed.bind(applyArgumentsResult);
     applyArgumentsResult.actions = obj;
     map = new Map();
     onLocaleChanged = applyArgumentsResult.onLocaleChanged;
@@ -32,58 +47,53 @@ class PromotionsManager extends tmp2 {
     applyArgumentsResult.stores = result1.set(closure_7, onPromotionsFetchSettled.bind(applyArgumentsResult));
     applyArgumentsResult.lastSubscriptionStateSignature = null;
     applyArgumentsResult.hasPendingSubscriptionRefetch = false;
-    applyArgumentsResult.maybeFetchBogoPromotion = closure_3(function*() {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
+    applyArgumentsResult.maybeFetchBogoPromotion = closure_3(async (arg0, value) => {
+      if (c0 === 2) {
+        c0 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
       } else {
         try {
-          v0 = 2;
-          if (0 === v02) {
+          c0 = 2;
+          if (0 === c1) {
             if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
+              c0 = 3;
+              throw value;
             } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+              c0 = 3;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
-              const currentUser = closure_1_5.getCurrentUser();
-              if (!obj6.isPremiumExactly(currentUser, closure_1_8.TIER_2)) {
-                obj1 = v0(tmp15[11]);
-                v02 = 1;
-                v0 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = obj1.maybeFetchActiveBogoPromotion();
-                return obj1;
+              currentUser = currentUser.getCurrentUser();
+              if (!obj6.isPremiumExactly(currentUser, TIER_2.TIER_2)) {
+                c1 = 1;
+                c0 = 1;
+                const obj5 = { value: require("PremiumBogoPromotionUtilsCommon").maybeFetchActiveBogoPromotion(), done: false };
+                return obj5;
               }
-              obj6 = v02(closure_1_2[10]);
-              tmp15 = closure_1_2;
+              obj6 = PremiumUtilsDefault;
+              tmp14 = dependencyMap;
             }
           } else if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
+            c0 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            c0 = 3;
+            const obj = { value, done: true };
             return obj;
           }
-          v0 = 3;
+          c0 = 3;
           return { value: "HermesInternal", done: null };
         } catch (tmp6) {
-          v0 = tmp;
+          c0 = tmp;
           throw tmp6;
         }
       }
@@ -97,83 +107,77 @@ prototype["_terminate"] = function _terminate() {
   this.lastSubscriptionStateSignature = null;
 };
 prototype["onLocaleChanged"] = function onLocaleChanged() {
-  let tmp = null != closure_7.lastFetchedActivePromotions;
+  let tmp = null != PromotionsStore.lastFetchedActivePromotions;
   if (tmp) {
-    tmp = closure_7.lastFetchedActivePromotionsLocale !== locale.locale;
+    tmp = PromotionsStore.lastFetchedActivePromotionsLocale !== LocaleStore.locale;
   }
   if (tmp) {
-    const result = fetchActivePromotions.maybeFetchActivePromotions(false);
-    const obj = fetchActivePromotions;
+    const result = PromotionsActionCreators.maybeFetchActivePromotions(false);
   }
 };
 prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
   const self = this;
-  return callback(function*() {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
+  return (async (arg0, value) => {
+    if (v3 === 2) {
+      v3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        v0 = 2;
+        v3 = 2;
         if (0 === c1) {
           if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
+            v3 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            v3 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            obj1 = v0(closure_1_2[9]);
-            const result = obj1.maybeFetchActivePromotions();
+            const result = v3(dependencyMap[9]).maybeFetchActivePromotions();
             c1 = 1;
-            v0 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = v0.maybeFetchBogoPromotion();
-            return obj1;
+            v3 = 1;
+            const obj5 = { value: self.maybeFetchBogoPromotion(), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
-          v0 = 3;
-          throw arg1;
+          v3 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          v0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          v3 = 3;
+          const obj = { value, done: true };
           return obj;
         } else {
-          v0 = 3;
+          v3 = 3;
           return { value: "HermesInternal", done: null };
         }
       } catch (tmp9) {
-        v0 = tmp;
+        v3 = tmp;
         throw tmp9;
       }
     }
   })();
 };
 prototype["onSubscriptionStateChanged"] = function onSubscriptionStateChanged() {
-  subscriptions = subscriptions.getSubscriptions(false);
+  const subscriptions = SubscriptionStore.getSubscriptions(false);
   let str = "";
   if (null != subscriptions) {
     const _Object = Object;
     const values = Object.values(subscriptions);
     const found = values.filter((type) => type.type === constants.PREMIUM);
-    let mapped = found.map((items) => {
-      items = items.items;
+    let mapped = found.map((id) => {
+      const items = id.items;
       const mapped = items.map((planId) => planId.planId);
       const sorted = mapped.sort();
-      return "" + items.id + ":" + items.type + ":" + items.status + ":" + sorted.join("|");
+      return "" + id.id + ":" + id.type + ":" + id.status + ":" + sorted.join("|");
     });
     let sorted = mapped.sort();
     str = sorted.join(",");
@@ -182,38 +186,36 @@ prototype["onSubscriptionStateChanged"] = function onSubscriptionStateChanged() 
   if (str !== this.lastSubscriptionStateSignature) {
     self.lastSubscriptionStateSignature = str;
     if (!tmp3) {
-      if (closure_7.isFetchingActivePromotions) {
+      if (PromotionsStore.isFetchingActivePromotions) {
         self.hasPendingSubscriptionRefetch = true;
       } else {
-        const result = fetchActivePromotions.maybeFetchActivePromotions(false);
-        const obj3 = fetchActivePromotions;
+        const result = PromotionsActionCreators.maybeFetchActivePromotions(false);
       }
     }
   }
 };
 prototype["onPromotionsFetchSettled"] = function onPromotionsFetchSettled() {
   if (this.hasPendingSubscriptionRefetch) {
-    if (!closure_7.isFetchingActivePromotions) {
+    if (!PromotionsStore.isFetchingActivePromotions) {
       tmp.hasPendingSubscriptionRefetch = false;
-      const result = fetchActivePromotions.maybeFetchActivePromotions(false);
-      const obj = fetchActivePromotions;
+      const result = PromotionsActionCreators.maybeFetchActivePromotions(false);
     }
   }
 };
 prototype["onMobilePurchaseSuccess"] = function onMobilePurchaseSuccess() {
-  const result = fetchActivePromotions.maybeFetchActivePromotions(false);
+  const result = PromotionsActionCreators.maybeFetchActivePromotions(false);
 };
 prototype["onOfferUpdated"] = function onOfferUpdated() {
-  const result = fetchActivePromotions.maybeFetchActivePromotions(false);
+  const result = PromotionsActionCreators.maybeFetchActivePromotions(false);
 };
 prototype["onVCRedeemed"] = function onVCRedeemed(entitlements) {
   entitlements = entitlements.entitlements;
   if (entitlements.some((type) => type.type === constants.FRACTIONAL_REDEMPTION)) {
-    const result = fetchActivePromotions.maybeFetchActivePromotions(false);
-    const obj = fetchActivePromotions;
+    const result = PromotionsActionCreators.maybeFetchActivePromotions(false);
   }
 };
 const promotionsManager = new PromotionsManager();
-let result = require("set").fileFinishedImporting("modules/premium/promotions/PromotionsManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/promotions/PromotionsManager.tsx");
 
 export default promotionsManager;

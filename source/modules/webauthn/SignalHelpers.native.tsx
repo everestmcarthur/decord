@@ -1,146 +1,128 @@
-// Module ID: 6598
-// Function ID: 6599
-// Name: signalAllAcceptedCredentials
-// Dependencies: [5, 17, 3, 6599, 2]
+// Module ID: 6612
+// Function ID: 6613
+// Name: SignalHelpers
+// Dependencies: [5, 17, 3, 6613, 2]
 
-// Module 6598 (signalAllAcceptedCredentials)
-import timestampDefault from "timestamp" /* 3 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
+// Module 6612 (SignalHelpers)
+import LoggerDefault from "Logger" /* 3 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
-let closure_4 = new timestampDefault("SignalHelpers.native");
+const require = fn;
+const NativeModules = fn(17).NativeModules;
+let closure_4 = new LoggerDefault("SignalHelpers.native");
 const prototype = function SignalHelpers() {
   return Object.create(new.target.prototype);
 }.prototype;
-prototype["signalAllAcceptedCredentials"] = function signalAllAcceptedCredentials(c0, id, found) {
-  closure_0 = c0;
+prototype["signalAllAcceptedCredentials"] = function signalAllAcceptedCredentials(credentials, id) {
+  closure_0 = credentials;
   closure_1 = id;
-  return callback(function*() {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
+  return (async (arg0, value) => {
+    if (credentials === 2) {
+      credentials = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        v0 = 2;
-        if (0 === table) {
+        credentials = 2;
+        if (0 === c1) {
           if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
+            credentials = 3;
+            throw value;
           } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else if (undefined !== closure_1_3.DCDSecurityKeyManager.signalAllAcceptedCredentials) {
-            obj1 = v0(table[3]);
-            const result = obj1.encodeUserIdForWebAuthn(table);
-            const mapped = v0.map((cred_id) => cred_id.cred_id);
-            const found = mapped.filter((arg0) => "" !== arg0);
-            obj1 = { rpId: null, encodedId: null, allAcceptedCredentialIds: null, credentials: null };
-            obj1[0] = closure_1_5;
-            obj1[1] = result;
-            obj1[2] = found;
-            obj1[3] = v0;
-            closure_1_4.info("signalAllAcceptedCredentials", obj1);
-            const DCDSecurityKeyManager = tmp20.DCDSecurityKeyManager;
-            const result1 = DCDSecurityKeyManager.signalAllAcceptedCredentials(closure_1_5, result, found);
-            table = 1;
-            v0 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = result1.catch(closure_1_4.warn);
-            return obj2;
+            credentials = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else if (undefined !== NativeModules.DCDSecurityKeyManager.signalAllAcceptedCredentials) {
+            const result = credentials(c1[3]).encodeUserIdForWebAuthn(closure_1);
+            const mapped = credentials.map((cred_id) => cred_id.cred_id);
+            const found = mapped.filter((item) => "" !== item);
+            const obj5 = { rpId, encodedId: result, allAcceptedCredentialIds: found, credentials };
+            logger.info("signalAllAcceptedCredentials", obj5);
+            const DCDSecurityKeyManager = tmp19.DCDSecurityKeyManager;
+            const result1 = DCDSecurityKeyManager.signalAllAcceptedCredentials(rpId, result, found);
+            c1 = 1;
+            credentials = 1;
+            const obj6 = { value: result1.catch(logger.warn), done: false };
+            return obj6;
           }
         } else if (arg0 === 1) {
-          v0 = 3;
-          throw arg1;
+          credentials = 3;
+          throw value;
         } else if (arg0 === 2) {
-          v0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          credentials = 3;
+          const obj = { value, done: true };
           return obj;
         }
-        v0 = 3;
+        credentials = 3;
         return { value: "HermesInternal", done: null };
       } catch (tmp14) {
-        v0 = tmp;
+        credentials = tmp;
         throw tmp14;
       }
     }
   })();
 };
-prototype["signalCurrentUserDetails"] = function signalCurrentUserDetails(c0, result, username, username2) {
-  closure_0 = c0;
-  return callback(function*() {
+prototype["signalCurrentUserDetails"] = function signalCurrentUserDetails(user) {
+  closure_0 = user;
+  return (async (arg0, value) => {
     if (c2 === 2) {
       c2 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
         c2 = 2;
-        if (0 === obj) {
+        if (0 === c3) {
           if (arg0 === 1) {
             c2 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else if (undefined !== obj.DCDSecurityKeyManager.signalCurrentUserDetails) {
-            obj1 = closure_1_0(closure_1_1[3]);
-            const result = obj1.encodeUserIdForWebAuthn(closure_1_0.id);
-            const email = closure_1_0.email;
-            let global_name = email;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else if (undefined !== c3.DCDSecurityKeyManager.signalCurrentUserDetails) {
+            const result = username(global_name[3]).encodeUserIdForWebAuthn(username.id);
+            const email = username.email;
+            global_name = email;
             if (email == null) {
               global_name = tmp7.global_name;
             }
-            let username = global_name;
+            username = global_name;
             if (global_name == null) {
               username = tmp7.username;
             }
             username = tmp7.username;
-            obj1 = { rpId: null, encodedId: null, name: null, displayName: null };
-            obj1[0] = closure_1_5;
-            obj1[1] = result;
-            obj1[2] = username;
-            obj1[3] = username;
-            closure_1_4.info("signalCurrentUserDetails", obj1);
-            const DCDSecurityKeyManager = tmp26.DCDSecurityKeyManager;
-            const result1 = DCDSecurityKeyManager.signalCurrentUserDetails(closure_1_5, result, username, username);
-            obj = 1;
+            const obj5 = { rpId, encodedId: result, name: username, displayName: username };
+            logger.info("signalCurrentUserDetails", obj5);
+            const DCDSecurityKeyManager = tmp25.DCDSecurityKeyManager;
+            const result1 = DCDSecurityKeyManager.signalCurrentUserDetails(rpId, result, username, username);
+            c3 = 1;
             c2 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = result1.catch(closure_1_4.warn);
-            return obj2;
+            const obj6 = { value: result1.catch(logger.warn), done: false };
+            return obj6;
           }
         } else if (arg0 === 1) {
           c2 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          const obj = { value, done: true };
           return obj;
         }
         c2 = 3;
@@ -152,19 +134,18 @@ prototype["signalCurrentUserDetails"] = function signalCurrentUserDetails(c0, re
     }
   })();
 };
-prototype["signalUnknownCredential"] = function signalUnknownCredential(c0, cred_id) {
-  closure_0 = c0;
-  return callback(function*() {
+prototype["signalUnknownCredential"] = function signalUnknownCredential(credential) {
+  closure_0 = credential;
+  return (async (arg0, value) => {
     if (c0 === 2) {
       c0 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -174,41 +155,37 @@ prototype["signalUnknownCredential"] = function signalUnknownCredential(c0, cred
         if (0 === c1) {
           if (arg0 === 1) {
             c0 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            let _catch = closure_1_3;
-            if (undefined !== closure_1_3.DCDSecurityKeyManager.signalUnknownCredential) {
-              obj1 = c0;
-              if (typeof c0 === "string") {
+            let _catch = NativeModules;
+            if (undefined !== NativeModules.DCDSecurityKeyManager.signalUnknownCredential) {
+              let obj4 = closure_0;
+              if (typeof closure_0 === "string") {
                 const _JSON = JSON;
-                let cred_id = JSON.parse(obj1).id;
+                let cred_id = JSON.parse(obj4).id;
               } else {
-                cred_id = obj1.cred_id;
+                cred_id = obj4.cred_id;
               }
-              obj1 = { rpId: null, credentialId: null };
-              obj1[0] = closure_1_5;
-              obj1[1] = cred_id;
-              closure_1_4.info("signalUnknownCredential", obj1);
+              obj4 = { rpId, credentialId: cred_id };
+              logger.info("signalUnknownCredential", obj4);
               const DCDSecurityKeyManager = _catch.DCDSecurityKeyManager;
-              const result = DCDSecurityKeyManager.signalUnknownCredential(closure_1_5, cred_id);
+              const result = DCDSecurityKeyManager.signalUnknownCredential(rpId, cred_id);
               _catch = result.catch;
-              _catch(closure_1_4.warn);
+              _catch(logger.warn);
               c1 = 1;
               c0 = 1;
             }
           }
         } else if (arg0 === 1) {
           c0 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          const obj = { value, done: true };
           return obj;
         }
         c0 = 3;
@@ -220,7 +197,7 @@ prototype["signalUnknownCredential"] = function signalUnknownCredential(c0, cred
     }
   })();
 };
-const tmp2 = new timestampDefault("SignalHelpers.native");
-let result = require("set").fileFinishedImporting("modules/webauthn/SignalHelpers.native.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/webauthn/SignalHelpers.native.tsx");
 
 export default prototype;

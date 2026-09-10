@@ -1,17 +1,19 @@
-// Module ID: 16732
-// Function ID: 16733
-// Name: MoreButton
-// Dependencies: [19, 21, 10918, 7866, 7863, 1114, 9805, 2]
+// Module ID: 16769
+// Function ID: 16770
+// Name: ChannelDetailsMoreButton
+// Dependencies: [19, 21, 10945, 7880, 7877, 1114, 9832, 2]
 // Exports: default
 
-// Module 16732 (MoreButton)
-import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 7866 */;
-import registerAssetDefault from "registerAsset" /* 9805 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16769 (ChannelDetailsMoreButton)
+import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 7880 */;
+import _modDef9832 from "module_9832" /* 9832 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10945 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsMoreButton.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsMoreButton.tsx");
 
 export default function MoreButton(channel) {
   channel = channel.channel;
@@ -19,15 +21,14 @@ export default function MoreButton(channel) {
   let tmp2 = null;
   if (null != channel) {
     if (channel.isDM()) {
-      let obj = { children: null };
-      obj = { accessibilityLabel: null, source: null, onPress: null };
+      const obj = { children: null };
+      let obj2 = { accessibilityLabel: null, source: null, onPress: null };
       const intl = channel(1114).intl;
-      obj[0] = intl.string(channel(1114).t["UKOtz+"]);
-      obj[1] = registerAssetDefault;
-      obj[2] = tmp;
-      obj[0] = jsx(channel(7863).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
-      tmp2 = jsx(PressableNavigatorButtonWrapperDefault, { accessibilityLabel: null, source: null, onPress: null });
-      const tmp6 = PressableNavigatorButtonWrapperDefault;
+      obj2.accessibilityLabel = intl.string(channel(1114).t["UKOtz+"]);
+      obj2.source = _modDef9832;
+      obj2.onPress = tmp;
+      obj.children = jsx(channel(7877).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
+      tmp2 = jsx(PressableNavigatorButtonWrapperDefault, { children: null });
     } else {
       tmp2 = null;
     }

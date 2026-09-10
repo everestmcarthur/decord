@@ -1,15 +1,17 @@
-// Module ID: 9169
-// Function ID: 9170
+// Module ID: 9196
+// Function ID: 9197
 // Name: useSecureFramesUserVerifiedKeysCount
-// Dependencies: [19, 9139, 9140, 504, 2]
+// Dependencies: [19, 9166, 9167, 504, 2]
 // Exports: useSecureFramesUserVerifiedKeysCount
 
-// Module 9169 (useSecureFramesUserVerifiedKeysCount)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "initialize" /* 9139 */;
+// Module 9196 (useSecureFramesUserVerifiedKeysCount)
+import _mod9167 from "module_9167" /* 9167 */;
+import noop from "module_19" /* 19 */;
+import VerifiedKeyStore from "VerifiedKeyStore" /* 9166 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/rtc/hooks/useSecureFramesUserVerifiedKeysCount.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rtc/hooks/useSecureFramesUserVerifiedKeysCount.tsx");
 
 export const useSecureFramesUserVerifiedKeysCount = function useSecureFramesUserVerifiedKeysCount(userId) {
   userId = userId.userId;
@@ -22,18 +24,18 @@ export const useSecureFramesUserVerifiedKeysCount = function useSecureFramesUser
     } else {
       const _Uint8Array = Uint8Array;
       const uint8Array = new Uint8Array(tmp);
-      return userId(keyToOmit[2]).serializeKey(uint8Array);
+      return _mod9167.serializeKey(uint8Array);
     }
   }, items);
-  const items1 = [closure_3];
+  const items1 = [VerifiedKeyStore];
   const items2 = [memo, userId];
   return userId(keyToOmit[3]).useStateFromStores(items1, () => {
-    const userVerifiedKeys = closure_1_3.getUserVerifiedKeys(userId);
+    const userVerifiedKeys = VerifiedKeyStore.getUserVerifiedKeys(userId);
     let num = 0;
     if (null != userVerifiedKeys) {
       const _Object = Object;
       const keys = Object.keys(userVerifiedKeys);
-      num = keys.filter((arg0) => arg0 !== closure_2).length;
+      num = keys.filter((item) => item !== memo).length;
     }
     return num;
   }, items2);

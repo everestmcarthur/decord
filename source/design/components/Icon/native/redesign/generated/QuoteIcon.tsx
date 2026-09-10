@@ -1,26 +1,26 @@
-// Module ID: 8926
-// Function ID: 8927
+// Module ID: 8953
+// Function ID: 8954
 // Name: QuoteIcon
-// Dependencies: [19, 21, 576, 4261, 8927, 2]
+// Dependencies: [19, 21, 576, 4274, 8954, 2]
 // Exports: QuoteIcon
 
-// Module 8926 (QuoteIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 8927 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 8953 (QuoteIcon)
+import nativeDefault from "native" /* 576 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod8954 from "module_8954" /* 8954 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/QuoteIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/QuoteIcon.tsx");
 
 export const QuoteIcon = function QuoteIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8954, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

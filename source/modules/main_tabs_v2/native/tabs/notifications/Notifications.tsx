@@ -1,35 +1,31 @@
-// Module ID: 16404
-// Function ID: 16405
-// Name: goBack
-// Dependencies: [19, 17, 11089, 1954, 21, 4560, 576, 4418, 6945, 7855, 16405, 7123, 5123, 1114, 16406, 4556, 16407, 7860, 16409, 7162, 7182, 7475, 5630, 7156, 16413, 16414, 11901, 4413, 1611, 16017, 5125, 4271, 2]
+// Module ID: 16435
+// Function ID: 16436
+// Name: notifications/Notifications
+// Dependencies: [19, 17, 11116, 1954, 21, 4574, 576, 4432, 6959, 7869, 16436, 7137, 5137, 1114, 16437, 4570, 16438, 7874, 16440, 7176, 7196, 7489, 5644, 7170, 16444, 16445, 11927, 4427, 1611, 16047, 5139, 4284, 2]
 // Exports: ThemedNotificationsModal
 
-// Module 16404 (goBack)
-import ThemesDefault from "Themes" /* 576 */;
+// Module 16435 (notifications/Notifications)
+import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import getGuildThemeNameDefault from "getGuildThemeName" /* 4413 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;
-import getMixedGradientColorDefault from "getMixedGradientColor" /* 5125 */;
-import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 5630 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 6945 */;
-import Layer from "Layer" /* 7156 */;
-import context from "context" /* 7162 */;
-import contextDefault from "context" /* 7162 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7182 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11901 */;
-import CoachmarkImgDefault from "CoachmarkImg" /* 16405 */;
-import NotificationCenterBannerImplDefault from "NotificationCenterBannerImpl" /* 16413 */;
-import YouBarNavigatorScreens2 from "YouBarNavigatorScreens" /* 16414 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { YouBarNavigatorScreens } from "MODE_CHANGE_PHYSICS" /* 11089 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import native from "native" /* 4284 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4427 */;
+import RootNavigationRef from "RootNavigationRef" /* 4432 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5139 */;
+import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 5644 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 6959 */;
+import LayerScope from "LayerScope" /* 7170 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7176 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11927 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 16047 */;
+import useForLaterCoachmarkDefault from "useForLaterCoachmark" /* 16436 */;
+import NotificationCenterPermissionNudgeDefault from "NotificationCenterPermissionNudge" /* 16444 */;
+import NotificationCenterForYou from "NotificationCenterForYou" /* 16445 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function goBack() {
-  const navigation = getRootNavigationRef.getRootNavigationRef();
+  const navigation = RootNavigationRef.getRootNavigationRef();
   if (null != navigation) {
     if (navigation.canGoBack()) {
       navigation.goBack();
@@ -49,10 +45,10 @@ class Notifications {
       flag2 = false;
     }
     tmp = closure_10();
-    tmp2 = require("context");
-    layoutEffect = closure_3.useLayoutEffect(() => callback(7475).trackAppUIViewed(), []);
+    tmp2 = closure_1(closure_2[19]);
+    layoutEffect = closure_3.useLayoutEffect(() => require("TTIAnalyticsUtils").trackAppUIViewed(), []);
     callback = closure_3.useCallback(() => {
-      const navigation = callback(4418).getRootNavigationRef();
+      const navigation = require("RootNavigationRef").getRootNavigationRef();
       if (null != navigation) {
         if (navigation.canGoBack()) {
           navigation.goBack();
@@ -62,30 +58,31 @@ class Notifications {
       }
       return true;
     }, []);
-    obj = require("useNavigatorBackPressHandler");
+    obj = closure_0(closure_2[22]);
     navigatorBackPressHandler = obj.useNavigatorBackPressHandler(callback);
-    obj = { zIndex: 1, children: null };
-    obj1 = { value: tmp2(require("QUICK_SWITCHER").NOTIFICATIONS).analyticsLocations, children: null };
-    obj2 = { style: items, children: null };
+    obj1 = { zIndex: 1, children: null };
+    obj5 = { value: tmp2(closure_1(closure_2[20]).NOTIFICATIONS).analyticsLocations, children: null };
+    obj6 = { style: null, children: null };
     items = [, ];
     items[0] = tmp.container;
     items[1] = global.style;
+    obj6.style = items;
     items1 = [, , , ];
     items1[0] = jsx(closure_12, { nestedInLaunchPad: flag, inNestedNavigator: flag2 });
-    items1[1] = jsx(require("NotificationCenterBannerImpl"), {});
-    items1[2] = jsx(require("YouBarNavigatorScreens").NotificationCenterForYou, { nestedInLaunchPad: flag });
-    items1[3] = jsx(require("TTIFirstContentfulPaint").TTIFirstContentfulPaint, { label: "notifications" });
-    obj2[1] = items1;
-    obj1[1] = jsxs(View, obj2);
-    obj[1] = jsx(require("context").AnalyticsLocationProvider, obj1);
-    return jsx(require("Layer").LayerScope, obj);
+    items1[1] = jsx(closure_1(closure_2[24]), {});
+    items1[2] = jsx(closure_0(closure_2[25]).NotificationCenterForYou, { nestedInLaunchPad: flag });
+    items1[3] = jsx(closure_0(closure_2[26]).TTIFirstContentfulPaint, { label: "notifications" });
+    obj6.children = items1;
+    obj5.children = jsxs(View, obj6);
+    obj1.children = jsx(closure_0(closure_2[19]).AnalyticsLocationProvider, obj5);
+    return jsx(closure_0(closure_2[23]).LayerScope, obj1);
   }
 }
 class ThemedNotifications {
   constructor(arg0) {
-    tmp = require("getGuildThemeName")();
-    top = require("useSafeAreaInsets")().top;
-    tmp2 = require("useIsWindowLarge")();
+    tmp = closure_1(closure_2[27])();
+    top = closure_1(closure_2[28])().top;
+    tmp2 = closure_1(closure_2[8])();
     closure_1 = tmp2;
     tmp3 = closure_10();
     closure_2 = tmp3;
@@ -96,8 +93,7 @@ class ThemedNotifications {
     memo = closure_3.useMemo(() => {
       if (closure_1) {
         const items = [tmp.containerOuterTablet, ];
-        const obj = { paddingTop: null };
-        obj[0] = top;
+        const obj = { paddingTop: top };
         items[1] = obj;
         let containerOuter = items;
       } else {
@@ -105,16 +101,16 @@ class ThemedNotifications {
       }
       return containerOuter;
     }, items);
-    obj = require("trackTabPressed");
+    obj = closure_0(closure_2[29]);
     trackTabPerformance = obj.useTrackTabPerformance(YouBarNavigatorScreens.NOTIFICATIONS);
-    obj = { style: memo, children: null };
+    obj1 = { style: memo, children: null };
     tmp8 = jsx;
     tmp6 = jsxs;
     tmp7 = View;
     items1 = [, ];
-    items1[0] = jsx(require("getMixedGradientColor"), { absolute: true });
-    obj1 = { gradient: tmp, children: null };
-    obj2 = {};
+    items1[0] = jsx(closure_1(closure_2[30]), { absolute: true });
+    obj5 = { gradient: tmp, children: null };
+    obj6 = {};
     tmp9 = Notifications;
     merged = Object.assign(global);
     route = global.route;
@@ -125,98 +121,96 @@ class ThemedNotifications {
         inNestedNavigator = params.inNestedNavigator;
       }
     }
-    obj2.inNestedNavigator = inNestedNavigator;
-    obj1[1] = tmp8(tmp9, obj2);
-    items1[1] = tmp8(require("ManaContext").ThemeContextProvider, obj1);
-    obj[1] = items1;
-    return tmp6(tmp7, obj);
+    obj6.inNestedNavigator = inNestedNavigator;
+    obj5.children = tmp8(tmp9, obj6);
+    items1[1] = tmp8(closure_0(closure_2[31]).ThemeContextProvider, obj5);
+    obj1.children = items1;
+    return tmp6(tmp7, obj1);
   }
 }
-let c3 = importAllResult;
-({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
-let obj = { containerOuter: { flex: 1 }, containerOuterTablet: null, container: null, headerTitle: null, actionButtons: null, headerClose: null, headerText: null, headerBorder: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: ThemesDefault.space.PX_8, flex: 1 };
-obj[1] = obj;
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm, flexGrow: 1 };
-obj[2] = createCacheKey;
-obj[3] = { height: 56, marginHorizontal: 16, flexDirection: "row", alignItems: "center" };
-obj[4] = { flexDirection: "row", gap: 12 };
-obj[5] = { marginRight: ThemesDefault.space.PX_16, height: ThemesDefault.space.PX_32, width: ThemesDefault.space.PX_32, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.lg };
-obj[6] = { flex: 1, marginTop: 2 };
-let obj2 = { marginRight: ThemesDefault.space.PX_16, height: ThemesDefault.space.PX_32, width: ThemesDefault.space.PX_32, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.lg };
-obj[7] = { left: 0, bottom: 0, height: 1, width: "100%", position: "absolute", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-let closure_10 = createCacheKey.createStyles(obj);
-let closure_12 = importAllResult.memo(function HeaderInner(nestedInLaunchPad) {
+const View = fn(17).View;
+const YouBarNavigatorScreens = fn(11116).YouBarNavigatorScreens;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsxProd = fn(21);
+({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4574);
+let obj = { containerOuter: { flex: 1 }, containerOuterTablet: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: nativeDefault.space.PX_8, flex: 1 }, container: null, headerTitle: null, actionButtons: null, headerClose: null, headerText: null, headerBorder: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: nativeDefault.space.PX_8, flex: 1 };
+obj.container = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm, flexGrow: 1 };
+obj.headerTitle = { height: 56, marginHorizontal: 16, flexDirection: "row", alignItems: "center" };
+obj.actionButtons = { flexDirection: "row", gap: 12 };
+let size = { marginRight: nativeDefault.space.PX_16, height: nativeDefault.space.PX_32, width: nativeDefault.space.PX_32, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.lg };
+obj.headerClose = size;
+obj.headerText = { flex: 1, marginTop: 2 };
+const size1 = { left: 0, bottom: 0, height: 1, width: "100%", position: "absolute", backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+obj.headerBorder = size1;
+let closure_10 = createStyles.createStyles(obj);
+let closure_12 = noop.memo(function HeaderInner(nestedInLaunchPad) {
   nestedInLaunchPad = nestedInLaunchPad.nestedInLaunchPad;
-  let _require;
-  const tmp = callback3();
-  let obj = _require(7855);
-  const isForLaterExperimentOn = obj.useIsForLaterExperimentOn("NativeNotifications");
-  const ref = importAllResult.useRef(null);
-  const tmp8 = CoachmarkImgDefault(ref);
+  _require = undefined;
+  const tmp = closure_10();
+  const tmp4 = useIsWindowLargeDefault();
+  const isForLaterExperimentOn = require("ForLaterExperiment").useIsForLaterExperimentOn("NativeNotifications");
+  const ref = noop.useRef(null);
+  const tmp8 = useForLaterCoachmarkDefault(ref);
   _require = tmp8;
   const items = [tmp8];
-  const callback = importAllResult.useCallback(() => callback(closure_1_6.TAKE_ACTION), items);
+  const callback = noop.useCallback(() => closure_0(ContentDismissActionType.TAKE_ACTION), items);
   let tmp13 = !nestedInLaunchPad;
   if (!nestedInLaunchPad) {
     tmp13 = !tmp4;
   }
-  obj = { top: tmp13, children: null };
-  let tmp10Result = null;
+  const obj2 = { top: tmp13, children: null };
+  let tmp10Result2 = null;
   if (!nestedInLaunchPad) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.headerTitle;
-    obj1 = { style: null, accessibilityLabel: null, onPress: null, children: null };
-    obj1[0] = tmp.headerClose;
+    const obj3 = { style: tmp.headerTitle, children: null };
+    const obj4 = { style: tmp.headerClose, accessibilityLabel: null, onPress: null, children: null };
     const intl = tmp5(1114).intl;
-    obj1[1] = intl.string(tmp5(1114).t["13/7kX"]);
-    obj1[2] = goBack;
-    obj1[3] = tmp12(tmp5(16406).LeftBackIconWithBadge, {});
-    const items1 = [tmp12(tmp5(5123).PressableOpacity, obj1), , ];
-    const obj2 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", style: null, maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
-    obj2[2] = tmp.headerText;
+    obj4.accessibilityLabel = intl.string(tmp5(1114).t["13/7kX"]);
+    obj4.onPress = goBack;
+    obj4.children = tmp12(tmp5(16437).LeftBackIconWithBadge, {});
+    const items1 = [tmp12(tmp5(5137).PressableOpacity, obj4), , ];
+    const obj5 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", style: tmp.headerText, maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
     const intl2 = tmp5(1114).intl;
-    obj2[5] = intl2.string(tmp5(1114).t.HcoRu0);
-    items1[1] = tmp12(tmp5(4556).Text, obj2);
-    const obj3 = { style: null, children: null };
-    obj3[0] = tmp.actionButtons;
-    tmp10Result = null;
+    obj5.children = intl2.string(tmp5(1114).t.HcoRu0);
+    items1[1] = tmp12(tmp5(4570).Text, obj5);
+    const obj6 = { style: tmp.actionButtons, children: null };
+    let tmp10Result = null;
     if (isForLaterExperimentOn) {
-      const obj4 = { children: null };
-      const obj5 = { ref: null, type: null, onOpen: null };
-      obj5[0] = ref;
-      let tmp2Result = tmp2(16407);
-      obj5[1] = tmp5(7860).SavedMessageSortTypes.BOOKMARK;
-      obj5[2] = callback;
-      const items2 = [tmp12(tmp2Result, obj5), ];
-      const obj6 = { type: null, onOpen: null };
-      tmp2Result = tmp2(16407);
-      obj6[0] = tmp5(7860).SavedMessageSortTypes.REMINDER;
-      obj6[1] = callback;
-      items2[1] = tmp12(tmp2Result, obj6);
-      obj4[0] = items2;
-      tmp10Result = tmp10(closure_8, obj4);
+      const obj7 = { children: null };
+      const obj8 = { ref, type: tmp5(7874).SavedMessageSortTypes.BOOKMARK, onOpen: callback };
+      const items2 = [tmp12(tmp2(16438), obj8), ];
+      const obj9 = { type: null, onOpen: null };
+      const tmp2Result = tmp2(16438);
+      obj9.type = tmp5(7874).SavedMessageSortTypes.REMINDER;
+      obj9.onOpen = callback;
+      items2[1] = tmp12(tmp2(16438), obj9);
+      obj7.children = items2;
+      tmp10Result = tmp10(closure_8, obj7);
+      const tmp2Result2 = tmp2(16438);
     }
-    const items3 = [tmp10Result, tmp12(tmp2(16409), {})];
-    obj3[1] = items3;
-    items1[2] = tmp10(tmp11, obj3);
-    obj[1] = items1;
-    tmp10Result = tmp10(tmp11, obj);
+    const items3 = [tmp10Result, tmp12(tmp2(16440), {})];
+    obj6.children = items3;
+    items1[2] = tmp10(tmp11, obj6);
+    obj3.children = items1;
+    tmp10Result2 = tmp10(tmp11, obj3);
   }
-  const obj7 = { children: null };
-  obj[1] = tmp10Result;
-  const items4 = [closure_7(_require(7123).SafeAreaPaddingView, obj), ];
+  const obj10 = { children: null };
+  obj2.children = tmp10Result2;
+  const items4 = [closure_7(require("common/SafeAreaView").SafeAreaPaddingView, obj2), ];
+  const obj11 = { style: null };
   const items5 = [tmp.headerBorder];
-  items4[1] = closure_7(View, { style: items5 });
-  obj7[0] = items4;
-  return closure_9(View, obj7);
+  obj11.style = items5;
+  items4[1] = closure_7(View, obj11);
+  obj10.children = items4;
+  return closure_9(View, obj10);
 });
-let obj3 = { left: 0, bottom: 0, height: 1, width: "100%", position: "absolute", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/notifications/Notifications.tsx");
+size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/notifications/Notifications.tsx");
 
 export default Notifications;
 export { goBack };
 export { ThemedNotifications };
 export const ThemedNotificationsModal = function ThemedNotificationsModal() {
-  return callback(ThemedNotifications, { inNestedNavigator: true });
+  return React5(ThemedNotifications, { inNestedNavigator: true });
 };

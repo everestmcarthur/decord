@@ -1,43 +1,42 @@
-// Module ID: 15157
-// Function ID: 15158
+// Module ID: 15184
+// Function ID: 15185
 // Name: VideoQuestTranscriptActionSheet
-// Dependencies: [19, 17, 7705, 21, 4560, 576, 1611, 11290, 11281, 7198, 7149, 1114, 6627, 4973, 4556, 2]
+// Dependencies: [19, 17, 7719, 21, 4574, 576, 1611, 11317, 11308, 7211, 7163, 1114, 6641, 4987, 4570, 2]
 // Exports: default
 
-// Module 15157 (VideoQuestTranscriptActionSheet)
-import ThemesDefault from "Themes" /* 576 */;
+// Module 15184 (VideoQuestTranscriptActionSheet)
+import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import closure_3 from "noop" /* 19 */;
-import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
-import _toPropertyKey from "_toPropertyKey" /* 7705 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import QuestActionCreators from "QuestActionCreators" /* 11308 */;
+import AssetUtils from "AssetUtils" /* 11317 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ FetchStatus: c5, useVideoQuestUIStore: closure_6 } = _toPropertyKey);
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { content: null, loadingSpinner: null };
-createCacheKey = { paddingBottom: ThemesDefault.space.PX_8 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { height: 100 };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestTranscriptActionSheet.tsx");
+require = fn;
+const ActivityIndicator = fn(17).ActivityIndicator;
+const VideoQuestUIStore = fn(7719);
+({ FetchStatus: hasOwnProperty, useVideoQuestUIStore: metroRequire } = VideoQuestUIStore);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { content: { paddingBottom: nativeDefault.space.PX_8 }, loadingSpinner: { height: 100 } };
+let closure_9 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestTranscriptActionSheet.tsx");
 
 export default function VideoQuestTranscriptActionSheet(quest) {
   quest = quest.quest;
-  importDefault = undefined;
-  const tmp = callback3();
-  const tmp2 = callback((transcript) => transcript.transcript);
+  const tmp = closure_9();
+  const tmp2 = closure_6((transcript) => transcript.transcript);
   importDefault = tmp2;
   let items = [quest, tmp2];
-  const effect = React.useEffect(() => {
-    const questAsset = quest(closure_1_2[7]).getQuestAsset(quest, quest(closure_1_2[7]).QuestAssetType.VIDEO_PLAYER_TRANSCRIPT, undefined, true);
+  const effect = noop.useEffect(() => {
+    const questAsset = AssetUtils.getQuestAsset(quest, AssetUtils.QuestAssetType.VIDEO_PLAYER_TRANSCRIPT, undefined, true);
     let tmp6 = null == closure_1 || tmp5.questId !== tmp3.id;
     if (!tmp6) {
-      tmp6 = tmp5.fetchStatus === closure_1_5.NONE;
+      tmp6 = tmp5.fetchStatus === constants.NONE;
     }
     if (!tmp6) {
-      let tmp9 = tmp5.fetchStatus === closure_1_5.SUCCESS;
+      let tmp9 = tmp5.fetchStatus === constants.SUCCESS;
       if (tmp9) {
         let url;
         if (questAsset != null) {
@@ -48,8 +47,8 @@ export default function VideoQuestTranscriptActionSheet(quest) {
       tmp6 = tmp9;
     }
     if (tmp6) {
-      const videoTranscript = quest(closure_1_2[8]).fetchVideoTranscript(tmp3, true);
-      const tmpResult = quest(closure_1_2[8]);
+      const videoTranscript = QuestActionCreators.fetchVideoTranscript(tmp3, true);
+      const tmpResult = QuestActionCreators;
     }
   }, items);
   let text;
@@ -57,7 +56,7 @@ export default function VideoQuestTranscriptActionSheet(quest) {
     text = tmp2.text;
   }
   const items1 = [text];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     let text;
     if (closure_1 != null) {
       text = tmp.text;
@@ -66,32 +65,30 @@ export default function VideoQuestTranscriptActionSheet(quest) {
       let items = [];
     } else {
       const parts = tmp.text.split("\n");
-      const mapped = parts.map((str) => str.trim());
-      items = mapped.filter((arg0) => arg0.length > 0);
-      const str = tmp.text;
+      const mapped = parts.map((item) => item.trim());
+      items = mapped.filter((item) => item.length > 0);
     }
     return items;
   }, items1);
-  let obj = { scrollable: true, header: null, children: null };
-  obj = { title: null };
+  const obj = { scrollable: true, header: null, children: null };
+  const obj2 = { title: null };
   const intl = quest(1114).intl;
-  obj[0] = intl.string(quest(1114).t["1YS80z"]);
-  obj[1] = callback2(quest(7149).BottomSheetTitleHeader, obj);
-  obj = { contentContainerStyle: { paddingBottom: useSafeAreaInsetsDefault().bottom }, children: null };
-  obj1 = { spacing: 16, style: tmp.content, children: null };
+  obj2.title = intl.string(quest(1114).t["1YS80z"]);
+  obj.header = closure_7(quest(7163).BottomSheetTitleHeader, obj2);
+  const obj3 = { contentContainerStyle: { paddingBottom: useSafeAreaInsetsDefault().bottom }, children: null };
+  const obj4 = { spacing: 16, style: tmp.content, children: null };
   let fetchStatus;
   if (tmp2 != null) {
     fetchStatus = tmp2.fetchStatus;
   }
   let tmp7Result = fetchStatus === constants.FETCHING;
   if (tmp7Result) {
-    const obj2 = { style: null, size: "large" };
-    obj2[0] = tmp.loadingSpinner;
-    tmp7Result = tmp7(ActivityIndicator, obj2);
+    const obj5 = { style: tmp.loadingSpinner, size: "large" };
+    tmp7Result = tmp7(ActivityIndicator, obj5);
   }
-  const items2 = [tmp7Result, memo.length > 0 && memo.map((children) => callback(quest(table[14]).Text, { variant: "heading-md/normal", color: "text-muted", children }, arg1))];
-  obj1[2] = items2;
-  obj[1] = closure_8(quest(4973).Stack, obj1);
-  obj[2] = callback2(quest(6627).BottomSheetScrollView, obj);
-  return callback2(quest(7198).ActionSheet, obj);
+  const items2 = [tmp7Result, memo.length > 0 && memo.map((children, index) => closure_1_7(quest(dependencyMap[14]).Text, { variant: "heading-md/normal", color: "text-muted", children }, index))];
+  obj4.children = items2;
+  obj3.children = closure_8(quest(4987).Stack, obj4);
+  obj.children = closure_7(quest(6641).BottomSheetScrollView, obj3);
+  return closure_7(quest(7211).ActionSheet, obj);
 };

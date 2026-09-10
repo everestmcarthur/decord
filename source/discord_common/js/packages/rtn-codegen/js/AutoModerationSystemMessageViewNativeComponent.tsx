@@ -1,15 +1,15 @@
-// Module ID: 8658
-// Function ID: 8659
-// Name: __INTERNAL_VIEW_CONFIG
+// Module ID: 8686
+// Function ID: 8687
+// Name: AutoModerationSystemMessageViewNativeComponent
 // Dependencies: [65, 2]
 
-// Module 8658 (__INTERNAL_VIEW_CONFIG)
-import set from "set" /* 2 */;
-import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
+// Module 8686 (AutoModerationSystemMessageViewNativeComponent)
+import module_65 from "module_65" /* 65 */;
+import size from "module_2" /* 2 */;
 
-const obj = { uiViewClassName: "DCDAutoModerationSystemMessageView", validAttributes: { row: true } };
-const value = setRuntimeConfigProvider.get("DCDAutoModerationSystemMessageView", () => obj);
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/AutoModerationSystemMessageViewNativeComponent.tsx");
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "DCDAutoModerationSystemMessageView", validAttributes: { row: true } };
+const value = module_65.get("DCDAutoModerationSystemMessageView", () => obj);
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/AutoModerationSystemMessageViewNativeComponent.tsx");
 
 export default value;
-export const __INTERNAL_VIEW_CONFIG = obj;
+export { __INTERNAL_VIEW_CONFIG };

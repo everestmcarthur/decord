@@ -2,8 +2,10 @@
 // Function ID: 704
 // Name: dateTimestampInSeconds
 // Dependencies: [696, 686]
+// Exports: browserPerformanceTimeOrigin, timestampInSeconds
 
 // Module 703 (dateTimestampInSeconds)
+import _mod686 from "module_686" /* 686 */;
 import safeDateNow from "safeDateNow" /* 696 */;
 
 require = arg1;
@@ -12,21 +14,21 @@ function dateTimestampInSeconds() {
   return safeDateNow.safeDateNow() / 1000;
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-let c4 = null;
-arg5.browserPerformanceTimeOrigin = function browserPerformanceTimeOrigin() {
+let timeOrigin = null;
+
+export const browserPerformanceTimeOrigin = function browserPerformanceTimeOrigin() {
   let tmp = timeOrigin;
   if (null === timeOrigin) {
-    _performance = _performance(686).GLOBAL_OBJ.performance;
+    const _performance = _mod686.GLOBAL_OBJ.performance;
     let now;
     if (_performance != null) {
       now = _performance.now;
     }
     let tmp3;
     if (now) {
-      let tmp7Result = tmp7(696);
-      const result = tmp7Result.withRandomSafeContext(() => _performance.now());
-      tmp7Result = tmp7(696);
-      const safeDateNowResult = tmp7Result.safeDateNow();
+      const result = tmp7(696).withRandomSafeContext(() => _performance.now());
+      const tmp7Result = tmp7(696);
+      const safeDateNowResult = tmp7(696).safeDateNow();
       timeOrigin = _performance.timeOrigin;
       if (typeof timeOrigin !== "number") {
         const timing = _performance.timing;
@@ -44,14 +46,15 @@ arg5.browserPerformanceTimeOrigin = function browserPerformanceTimeOrigin() {
         const _Math = Math;
         tmp3 = timeOrigin;
       }
+      const tmp7Result2 = tmp7(696);
     }
     timeOrigin = tmp3;
     tmp = tmp3;
   }
   return tmp;
 };
-arg5.dateTimestampInSeconds = dateTimestampInSeconds;
-arg5.timestampInSeconds = function timestampInSeconds() {
+export { dateTimestampInSeconds };
+export const timestampInSeconds = function timestampInSeconds() {
   if (fn != null) {
     return tmp();
   } else {
@@ -64,6 +67,6 @@ arg5.timestampInSeconds = function timestampInSeconds() {
       fn = dateTimestampInSeconds;
     }
     timeOrigin = timeOrigin.timeOrigin;
-    fn = () => (timeOrigin + timeOrigin(timeOrigin[0]).withRandomSafeContext(() => closure_0.now())) / 1000;
+    fn = () => (timeOrigin + safeDateNow.withRandomSafeContext(() => timeOrigin.now())) / 1000;
   }
 };

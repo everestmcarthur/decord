@@ -1,32 +1,30 @@
-// Module ID: 12996
-// Function ID: 12997
+// Module ID: 13022
+// Function ID: 13023
 // Name: openUserContextMenuCommands
-// Dependencies: [8191, 4527, 4417, 1894, 2]
+// Dependencies: [8217, 4541, 4431, 1894, 2]
 // Exports: default
 
-// Module 12996 (openUserContextMenuCommands)
-import set from "set" /* 2 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
+// Module 13022 (openUserContextMenuCommands)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8217 */;
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("modules/user_profile/native/openUserContextMenuCommands.tsx");
+let result = size.fileFinishedImporting("modules/user_profile/native/openUserContextMenuCommands.tsx");
 
 export default function openUserContextMenuCommands(analyticsLocations) {
   analyticsLocations = analyticsLocations.analyticsLocations;
   ({ userId, selectedChannel, showUserProfile } = analyticsLocations);
-  let obj = analyticsLocations(8191);
-  const result = obj.trackUserProfileAction({ action: "PRESS_VIEW_APP_COMMANDS", analyticsLocations });
-  ACTION_SHEET_HEIGHT_HALFDefault.hideAllActionSheets();
-  const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = {
+  const result = analyticsLocations(8217).trackUserProfileAction({ action: "PRESS_VIEW_APP_COMMANDS", analyticsLocations });
+  const obj = analyticsLocations(8217);
+  ActionSheetActionCreatorsDefault.hideAllActionSheets();
+  const obj3 = analyticsLocations(4431);
+  const result1 = obj3.navigateToContextMenuCommands({
     channel: selectedChannel,
     commandType: analyticsLocations(1894).ApplicationCommandType.USER,
     commandTargetId: userId,
     onClose: showUserProfile,
     onPressAppCommand() {
-      let obj = analyticsLocations(closure_1_2[0]);
-      obj = { action: "PRESS_APP_COMMAND", analyticsLocations };
-      return obj.trackUserProfileAction(obj);
+      return UserProfileAnalyticsUtils.trackUserProfileAction({ action: "PRESS_APP_COMMAND", analyticsLocations });
     }
-  };
-  const result1 = analyticsLocations(4417).navigateToContextMenuCommands(obj);
+  });
 };

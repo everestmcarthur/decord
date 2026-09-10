@@ -1,31 +1,34 @@
-// Module ID: 15415
-// Function ID: 15416
-// Name: slider
-// Dependencies: [19, 4552, 7975, 21, 14440, 15315, 11209, 11473, 1114, 1178, 2]
+// Module ID: 15444
+// Function ID: 15445
+// Name: ContrastModeSetting
+// Dependencies: [19, 4566, 7989, 21, 14465, 15344, 11236, 11500, 1114, 1178, 2]
 
-// Module 15415 (slider)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15444 (ContrastModeSetting)
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 11236 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14465 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 15344 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const jsx = fn(21).jsx;
+const SettingBuilders = fn(11500);
+const slider = SettingBuilders.createSlider({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["TYyfO/"]);
+    const intl = util.intl;
+    return intl.string(util.t["TYyfO/"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7989).MobileUserSettings.ACCESSIBILITY,
   useTrailing() {
-    return jsx(Button.BetaTag, { size: Button.BetaSizes.SMALL });
+    return jsx(native.BetaTag, { size: native.BetaSizes.SMALL });
   },
   useProps: function useContrastSettingProps() {
-    return React.useMemo(() => ({ value: contrast.contrast, onSlidingComplete: callback(14440).setContrast, minimumValue: 0, maximumValue: 2, step: 0.1, startIcon: callback2(callback(15315).CircleMinusIcon, {}), endIcon: callback2(callback(11209).CirclePlusIcon, {}) }), []);
+    return noop.useMemo(() => ({ value: contrast.contrast, onSlidingComplete: AccessibilityActionCreators.setContrast, minimumValue: 0, maximumValue: 2, step: 0.1, startIcon: jsx(CircleMinusIcon.CircleMinusIcon, {}), endIcon: jsx(CirclePlusIcon.CirclePlusIcon, {}) }), []);
   }
-};
-createToggle = createToggle.createSlider(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ContrastModeSetting.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ContrastModeSetting.tsx");
 
-export default createToggle;
+export default slider;

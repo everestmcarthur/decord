@@ -1,34 +1,30 @@
-// Module ID: 4431
-// Function ID: 4432
-// Name: PortalKeyboardState
-// Dependencies: [19, 21, 4417, 1115, 4432, 2]
+// Module ID: 4445
+// Function ID: 4446
+// Name: PortalKeyboard
+// Dependencies: [19, 21, 4431, 1115, 4446, 2]
 // Exports: PortalKeyboard, PortalKeyboardHost
 
-// Module 4431 (PortalKeyboardState)
-import noopAll from "noop" /* 19 */;
-import coerceMainRoute from "coerceMainRoute" /* 4417 */;
-import Portal from "Portal" /* 4432 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 4445 (PortalKeyboard)
+import Portal from "Portal" /* 4446 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
+require = fn;
+const jsx = fn(21).jsx;
 let c3 = "default";
 const modal = "modal";
-const result = require("set").fileFinishedImporting("modules/keyboard/native/PortalKeyboard.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/keyboard/native/PortalKeyboard.tsx");
 
 export const PortalKeyboardState = { EMPTY: "empty", REQUEST_OPEN: "request_open", OPENING: "opening", OPEN: "open", REQUEST_CLOSE: "request_close", CLOSING: "closing", CLOSED: "closed" };
 export const PORTAL_HOST_NAME_DEFAULT = "default";
 export const PORTAL_HOST_NAME_MODAL = "modal";
 export const PortalKeyboard = function PortalKeyboard(children) {
-  let obj = coerceMainRoute;
   if (obj.useIsModalOpen()) {
     if (tmpResult.isIOS()) {
       let tmp3 = modal;
     }
-    obj = { hostName: null, children: null };
-    obj[0] = tmp3;
-    obj[1] = children.children;
-    return jsx(tmp(4432).Portal, { hostName: null, children: null });
+    const obj2 = { hostName: tmp3, children: children.children };
+    return jsx(tmp(4446).Portal, { hostName: tmp3, children: children.children });
   }
   tmp3 = c3;
 };

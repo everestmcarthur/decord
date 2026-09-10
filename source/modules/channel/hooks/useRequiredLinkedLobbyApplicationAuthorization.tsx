@@ -1,19 +1,22 @@
-// Module ID: 12440
-// Function ID: 12441
+// Module ID: 12466
+// Function ID: 12467
 // Name: useRequiredLinkedLobbyApplicationAuthorization
-// Dependencies: [19, 4788, 7107, 504, 7170, 7163, 2]
+// Dependencies: [19, 4802, 7121, 504, 7184, 7177, 2]
 // Exports: default
 
-// Module 12440 (useRequiredLinkedLobbyApplicationAuthorization)
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import recomputeFromAppTokens from "recomputeFromAppTokens" /* 7107 */;
-import closure_4 from "addApplication" /* 4788 */;
-import closure_5 from "recomputeFromAppTokens" /* 7107 */;
+// Module 12466 (useRequiredLinkedLobbyApplicationAuthorization)
+import _mod19 from "module_19" /* 19 */;
+import AuthorizedAppsStore2 from "AuthorizedAppsStore" /* 7121 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7177 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7184 */;
+import ApplicationStore from "ApplicationStore" /* 4802 */;
+import size from "module_2" /* 2 */;
 
-const useEffect = noop.useEffect;
-const FetchState = recomputeFromAppTokens.FetchState;
-const result = set.fileFinishedImporting("modules/channel/hooks/useRequiredLinkedLobbyApplicationAuthorization.tsx");
+const AuthorizedAppsStore = AuthorizedAppsStore2;
+
+const useEffect = _mod19.useEffect;
+const FetchState = AuthorizedAppsStore2.FetchState;
+const result = size.fileFinishedImporting("modules/channel/hooks/useRequiredLinkedLobbyApplicationAuthorization.tsx");
 
 export default function useRequiredLinkedLobbyApplicationAuthorization(require_application_authorization) {
   let prop;
@@ -24,40 +27,39 @@ export default function useRequiredLinkedLobbyApplicationAuthorization(require_a
   if (prop) {
     application_id = require_application_authorization.application_id;
   }
-  let obj = application_id(stateFromStores[3]);
-  let items = [closure_5];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ authorizationsFetchState: closure_1_5.getFetchState(), applicationOAuth2Token: closure_1_5.getNewestTokenForApplication(application_id) }));
+  let items = [AuthorizedAppsStore];
+  const stateFromStoresObject = application_id(stateFromStores[3]).useStateFromStoresObject(items, () => ({ authorizationsFetchState: AuthorizedAppsStore.getFetchState(), applicationOAuth2Token: AuthorizedAppsStore.getNewestTokenForApplication(application_id) }));
   const authorizationsFetchState = stateFromStoresObject.authorizationsFetchState;
   const applicationOAuth2Token = stateFromStoresObject.applicationOAuth2Token;
-  const items1 = [closure_4];
-  stateFromStores = application_id(stateFromStores[3]).useStateFromStores(items1, () => closure_1_4.getApplication(application_id));
+  let obj = application_id(stateFromStores[3]);
+  const items1 = [ApplicationStore];
+  stateFromStores = application_id(stateFromStores[3]).useStateFromStores(items1, () => ApplicationStore.getApplication(application_id));
   const obj2 = application_id(stateFromStores[3]);
-  const items2 = [closure_4];
+  const items2 = [ApplicationStore];
   let stateFromStores1 = application_id(stateFromStores[3]).useStateFromStores(items2, () => {
     let parentId;
     if (stateFromStores != null) {
       parentId = stateFromStores.parentId;
     }
-    return closure_1_4.getApplication(parentId);
+    return ApplicationStore.getApplication(parentId);
   });
   const obj3 = application_id(stateFromStores[3]);
-  const items3 = [closure_5];
+  const items3 = [AuthorizedAppsStore];
   const items4 = [authorizationsFetchState, application_id];
   const stateFromStores2 = application_id(stateFromStores[3]).useStateFromStores(items3, () => {
     let parentId;
     if (stateFromStores != null) {
       parentId = stateFromStores.parentId;
     }
-    return closure_1_5.getNewestTokenForApplication(parentId);
+    return AuthorizedAppsStore.getNewestTokenForApplication(parentId);
   });
   stateFromStores1(() => {
     let tmp = null != application_id;
     if (tmp) {
-      tmp = authorizationsFetchState === closure_1_6.NOT_FETCHED;
+      tmp = authorizationsFetchState === FetchState.NOT_FETCHED;
     }
     if (tmp) {
-      const response = authorizationsFetchState(stateFromStores[4]).fetch();
-      const obj = authorizationsFetchState(stateFromStores[4]);
+      const response = AuthorizedAppsActionCreatorsDefault.fetch();
     }
   }, items4);
   const items5 = [application_id, applicationOAuth2Token, authorizationsFetchState, stateFromStores];
@@ -67,12 +69,11 @@ export default function useRequiredLinkedLobbyApplicationAuthorization(require_a
       tmp2 = null == stateFromStores;
     }
     if (tmp2) {
-      tmp2 = authorizationsFetchState === closure_1_6.FETCHED;
+      tmp2 = authorizationsFetchState === FetchState.FETCHED;
     }
     if (tmp2) {
       const items = [application_id];
-      const applications = authorizationsFetchState(stateFromStores[5]).fetchApplications(items, false);
-      const obj = authorizationsFetchState(stateFromStores[5]);
+      const applications = ApplicationActionCreatorsDefault.fetchApplications(items, false);
     }
   }, items5);
   const items6 = [stateFromStores, authorizationsFetchState, stateFromStores1];
@@ -82,12 +83,11 @@ export default function useRequiredLinkedLobbyApplicationAuthorization(require_a
       tmp2 = null == stateFromStores1;
     }
     if (tmp2) {
-      tmp2 = authorizationsFetchState === closure_1_6.FETCHED;
+      tmp2 = authorizationsFetchState === FetchState.FETCHED;
     }
     if (tmp2) {
       const items = [tmp.parentId];
-      const applications = authorizationsFetchState(stateFromStores[5]).fetchApplications(items, false);
-      const obj = authorizationsFetchState(stateFromStores[5]);
+      const applications = ApplicationActionCreatorsDefault.fetchApplications(items, false);
     }
   }, items6);
   let tmp10 = null != stateFromStores;
@@ -107,7 +107,7 @@ export default function useRequiredLinkedLobbyApplicationAuthorization(require_a
     tmp14 = authorizationsFetchState !== FetchState.FETCHED || null == stateFromStores || !tmp10;
     const tmp16 = authorizationsFetchState !== FetchState.FETCHED || null == stateFromStores || !tmp10;
   }
-  obj = { showLinkedLobbyApplicationLoadingIndicator: tmp14, requiredLinkedLobbyApplication: null, shouldRelaunchLinkedLobbyApplication: null };
+  const obj5 = { showLinkedLobbyApplicationLoadingIndicator: tmp14, requiredLinkedLobbyApplication: null, shouldRelaunchLinkedLobbyApplication: null };
   let tmp17 = null;
   if (null == applicationOAuth2Token && null != stateFromStores && tmp10) {
     let tmp18 = stateFromStores;
@@ -119,7 +119,7 @@ export default function useRequiredLinkedLobbyApplicationAuthorization(require_a
     }
     tmp17 = tmp18;
   }
-  obj[1] = tmp17;
-  obj[2] = tmp13;
-  return obj;
+  obj5.requiredLinkedLobbyApplication = tmp17;
+  obj5.shouldRelaunchLinkedLobbyApplication = tmp13;
+  return obj5;
 };

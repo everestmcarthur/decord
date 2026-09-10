@@ -1,31 +1,34 @@
-// Module ID: 13683
-// Function ID: 13684
-// Name: b64ToDeclarativeSettingsProto
-// Dependencies: [13684, 1223, 13685, 504, 2]
+// Module ID: 13706
+// Function ID: 13707
+// Name: settings/NotifSettingsUtils
+// Dependencies: [13707, 1223, 13708, 504, 2]
 // Exports: b64ToDeclarativeSettingsProto, useNotifSettingRadioValue, useNotifSettingToggleValue, useNotifSettingValue
 
-// Module 13683 (b64ToDeclarativeSettingsProto)
-import b64ToProto from "b64ToProto" /* 1223 */;
-import create from "create" /* 13685 */;
-import closure_2 from "initialize" /* 13684 */;
+// Module 13706 (settings/NotifSettingsUtils)
+import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1223 */;
+import notification_settings from "notification_settings" /* 13708 */;
+import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 13707 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/notifications/settings/NotifSettingsUtils.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notifications/settings/NotifSettingsUtils.tsx");
 
 export const b64ToDeclarativeSettingsProto = function b64ToDeclarativeSettingsProto(declarative_settings_proto) {
-  return b64ToProto.b64ToProto(create.DeclarativeSettings, declarative_settings_proto);
+  return user_settings_UserSettingsUtils.b64ToProto(notification_settings.DeclarativeSettings, declarative_settings_proto);
 };
 export const useNotifSettingValue = function useNotifSettingValue(arg0) {
-  const _require = arg0;
-  const items = [closure_2];
+  _require = arg0;
+  const items = [NotifSettingsProtoStore];
   const items1 = [arg0];
-  return _require(504).useStateFromStores(items, () => closure_1_2.getSetting(closure_0), items1);
+  return require("initialize").useStateFromStores(items, () => NotifSettingsProtoStore.getSetting(closure_0), items1);
 };
 export const useNotifSettingToggleValue = function useNotifSettingToggleValue(GAMING_DEFAULT) {
-  const _require = GAMING_DEFAULT;
-  const items = [closure_2];
+  _require = GAMING_DEFAULT;
+  const items = [NotifSettingsProtoStore];
   const items1 = [GAMING_DEFAULT];
-  const stateFromStores = _require(504).useStateFromStores(items, () => closure_1_2.getSetting(closure_0), items1);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => NotifSettingsProtoStore.getSetting(closure_0), items1);
   let flag;
   if (stateFromStores != null) {
     flag = stateFromStores.toggle;
@@ -36,10 +39,10 @@ export const useNotifSettingToggleValue = function useNotifSettingToggleValue(GA
   return flag;
 };
 export const useNotifSettingRadioValue = function useNotifSettingRadioValue(arg0) {
-  const _require = arg0;
-  const items = [closure_2];
+  _require = arg0;
+  const items = [NotifSettingsProtoStore];
   const items1 = [arg0];
-  const stateFromStores = _require(504).useStateFromStores(items, () => closure_1_2.getSetting(closure_0), items1);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => NotifSettingsProtoStore.getSetting(closure_0), items1);
   let num;
   if (stateFromStores != null) {
     num = stateFromStores.radio;

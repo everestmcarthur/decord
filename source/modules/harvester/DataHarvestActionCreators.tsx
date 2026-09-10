@@ -1,43 +1,36 @@
-// Module ID: 14866
-// Function ID: 14867
-// Name: getDataHarvestStatus
-// Dependencies: [1074, 573, 1272, 6984, 2]
+// Module ID: 14892
+// Function ID: 14893
+// Name: DataHarvestActionCreators
+// Dependencies: [1074, 573, 1272, 6998, 2]
 // Exports: getDataHarvestStatus, requestDataHarvest
 
-// Module 14866 (getDataHarvestStatus)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import ME from "ME" /* 1074 */;
-import sendRequest from "sendRequest" /* 1272 */;
-import saveProfileAndAccountRequest from "saveProfileAndAccountRequest" /* 6984 */;
+// Module 14892 (DataHarvestActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 1074 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 6998 */;
+import size from "module_2" /* 2 */;
 
-const Endpoints = ME.Endpoints;
-const result = set.fileFinishedImporting("modules/harvester/DataHarvestActionCreators.tsx");
+const Endpoints = Constants.Endpoints;
+const result = size.fileFinishedImporting("modules/harvester/DataHarvestActionCreators.tsx");
 
 export const getDataHarvestStatus = function getDataHarvestStatus() {
-  let obj = dispatcherDefault;
-  obj.dispatch({ type: "LOAD_DATA_HARVEST_TYPE_START" });
-  const HTTP = sendRequest.HTTP;
-  obj = { url: Endpoints.USER_HARVEST, oldFormErrors: true, rejectWithError: false };
-  const value = HTTP.get(obj);
+  DispatcherDefault.dispatch({ type: "LOAD_DATA_HARVEST_TYPE_START" });
+  const HTTP = HTTPUtils.HTTP;
+  value = HTTP.get({ url: Endpoints.USER_HARVEST, oldFormErrors: true, rejectWithError: false });
+  const obj2 = { url: Endpoints.USER_HARVEST, oldFormErrors: true, rejectWithError: false };
   return value.then((body) => {
-    let obj = callback(573);
-    obj = { type: "UPDATE_DATA_HARVEST_TYPE", harvestType: body.body };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "UPDATE_DATA_HARVEST_TYPE", harvestType: body.body });
   }).catch((error) => {
-    let obj = callback(573);
-    obj = { type: "LOAD_DATA_HARVEST_TYPE_FAILURE", error };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "LOAD_DATA_HARVEST_TYPE_FAILURE", error });
   });
 };
 export const requestDataHarvest = function requestDataHarvest(mapped) {
-  const harvest = saveProfileAndAccountRequest.requestHarvest(mapped);
+  const harvest = UserSettingsAccountActionCreators.requestHarvest(mapped);
   return harvest.then((body) => {
     if (tmp) {
-      let obj = callback(table[1]);
-      obj = { type: "UPDATE_DATA_HARVEST_TYPE", harvestType: null };
-      obj[1] = body.body;
-      obj.dispatch(obj);
+      const obj2 = { type: "UPDATE_DATA_HARVEST_TYPE", harvestType: body.body };
+      DispatcherDefault.dispatch(obj2);
     }
     return body;
   });

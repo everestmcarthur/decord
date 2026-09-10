@@ -1,37 +1,37 @@
-// Module ID: 11691
-// Function ID: 11692
+// Module ID: 11717
+// Function ID: 11718
 // Name: ForwardStaffToNonStaffWarningModal
-// Dependencies: [21, 4910, 1114, 2]
+// Dependencies: [21, 4924, 1114, 2]
 // Exports: default
 
-// Module 11691 (ForwardStaffToNonStaffWarningModal)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4910 */;
+// Module 11717 (ForwardStaffToNonStaffWarningModal)
+import util from "util" /* 1114 */;
+import AlertModal from "AlertModal" /* 4924 */;
 import jsxProd from "jsxProd" /* 21 */;
+import size from "module_2" /* 2 */;
 
-({ jsx: obj1, Fragment: c3, jsxs: c4 } = jsxProd);
-const result = set.fileFinishedImporting("modules/forwarding/native/ForwardStaffToNonStaffWarningModal.tsx");
+({ jsx: c2, Fragment: c3, jsxs: closure_4 } = jsxProd);
+const result = size.fileFinishedImporting("modules/forwarding/native/ForwardStaffToNonStaffWarningModal.tsx");
 
 export default function ForwardStaffToNonStaffWarningModal(arg0) {
   ({ onConfirm, onBack } = arg0);
-  let obj = { title: null, content: null, actions: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.YrV3I9);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(getSystemLocale.t.MXSMtl);
-  obj = { children: null };
-  obj = { text: null, onPress: null };
-  const intl3 = getSystemLocale.intl;
-  obj[0] = intl3.string(getSystemLocale.t.X7eUJq);
-  obj[1] = onConfirm;
-  const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "confirm"), ];
-  obj1 = { variant: "secondary", text: null, onPress: null };
-  const intl4 = getSystemLocale.intl;
-  obj1[1] = intl4.string(getSystemLocale.t["13/7kX"]);
-  obj1[2] = onBack;
-  items[1] = callback(getAlertModalItemKey.AlertActionButton, obj1, "back");
-  obj[0] = items;
-  obj[2] = callback2(closure_3, obj);
-  return callback(getAlertModalItemKey.AlertModal, obj);
+  const obj = { title: null, content: null, actions: null };
+  const intl = util.intl;
+  obj.title = intl.string(util.t.YrV3I9);
+  const intl2 = util.intl;
+  obj.content = intl2.string(util.t.MXSMtl);
+  const obj2 = { children: null };
+  const obj3 = { text: null, onPress: null };
+  const intl3 = util.intl;
+  obj3.text = intl3.string(util.t.X7eUJq);
+  obj3.onPress = onConfirm;
+  const items = [React2(AlertModal.AlertActionButton, obj3, "confirm"), ];
+  const obj4 = { variant: "secondary", text: null, onPress: null };
+  const intl4 = util.intl;
+  obj4.text = intl4.string(util.t["13/7kX"]);
+  obj4.onPress = onBack;
+  items[1] = React2(AlertModal.AlertActionButton, obj4, "back");
+  obj2.children = items;
+  obj.actions = React4(React3, obj2);
+  return React2(AlertModal.AlertModal, obj);
 };

@@ -1,106 +1,103 @@
-// Module ID: 16007
-// Function ID: 16008
-// Name: convertPortraitToLandscapeScreens
-// Dependencies: [4418, 4417, 1488, 1256, 2]
+// Module ID: 16037
+// Function ID: 16038
+// Name: PanelsNavigationUtils
+// Dependencies: [4432, 4431, 1488, 1256, 2]
 // Exports: convertLandscapeToPortraitScreens, convertPortraitToLandscapeScreens
 
-// Module 16007 (convertPortraitToLandscapeScreens)
-import set from "set" /* 2 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;
+// Module 16037 (PanelsNavigationUtils)
+import RootNavigationRef from "RootNavigationRef" /* 4432 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/panels/PanelsNavigationUtils.tsx");
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/PanelsNavigationUtils.tsx");
 
 export const convertPortraitToLandscapeScreens = function convertPortraitToLandscapeScreens() {
-  let obj = getRootNavigationRef;
-  const store = obj.getRootNavigationRef();
+  const store = RootNavigationRef.getRootNavigationRef();
   if (null != store) {
-    let state = store.getState();
-    if (null != state) {
-      let tmpResult = tmp(4417);
-      const coerceMainRouteResult = tmpResult.coerceMainRoute(state.routes[0]);
+    const state1 = store.getState();
+    if (null != state1) {
+      const coerceMainRouteResult = tmp(4431).coerceMainRoute(state1.routes[0]);
       if (null != coerceMainRouteResult) {
         const state2 = coerceMainRouteResult.state;
         if (null != state2) {
           if (0 !== state2.index) {
-            tmpResult = tmp(4417);
-            if (null != tmpResult.coerceChannelRoute(state2.routes[1])) {
-              const coerceTabsRouteResult = tmp(4417).coerceTabsRoute(state2.routes[0]);
+            if (null != tmpResult4.coerceChannelRoute(state2.routes[1])) {
+              const coerceTabsRouteResult = tmp(4431).coerceTabsRoute(state2.routes[0]);
               if (null != coerceTabsRouteResult) {
                 const state3 = coerceTabsRouteResult.state;
                 let tmp4;
                 if (state3 != null) {
-                  state = coerceTabsRouteResult.state;
+                  const state = coerceTabsRouteResult.state;
                   let index;
                   if (state != null) {
                     index = state.index;
                   }
                   tmp4 = state3.routes[index];
                 }
-                if (null != tmpResult2.coerceGuildsRoute(tmp4)) {
-                  obj = {};
+                if (null != tmpResult6.coerceGuildsRoute(tmp4)) {
+                  const obj2 = {};
                   const merged = Object.assign(state2);
-                  obj.index = state2.index - 1;
+                  obj2.index = state2.index - 1;
                   const items = [state2.routes[0]];
                   const routes = state2.routes;
                   HermesBuiltin.arraySpread(routes.slice(2), 1);
-                  obj.routes = items;
-                  const routes1 = state.routes;
+                  obj2.routes = items;
+                  const routes1 = state1.routes;
                   const substr = routes1.slice(1);
-                  obj = {};
+                  const obj3 = {};
                   const merged1 = Object.assign(coerceMainRouteResult);
-                  obj.state = obj;
-                  const items1 = [obj];
+                  obj3.state = obj2;
+                  const items1 = [obj3];
                   HermesBuiltin.arraySpread(substr, 1);
                   const CommonActions = tmp(1488).CommonActions;
-                  obj1 = {};
-                  const merged2 = Object.assign(state);
-                  obj1.routes = items1;
-                  obj1.index = items1.length - 1;
-                  store.dispatch(CommonActions.reset(obj1));
+                  const obj4 = {};
+                  const merged2 = Object.assign(state1);
+                  obj4.routes = items1;
+                  obj4.index = items1.length - 1;
+                  store.dispatch(CommonActions.reset(obj4));
                 }
-                tmpResult2 = tmp(4417);
+                tmpResult6 = tmp(4431);
               }
-              const tmpResult1 = tmp(4417);
+              const tmpResult5 = tmp(4431);
             }
+            tmpResult4 = tmp(4431);
           }
         }
       }
+      const tmpResult = tmp(4431);
     }
   }
 };
 export const convertLandscapeToPortraitScreens = function convertLandscapeToPortraitScreens() {
-  let obj = getRootNavigationRef;
-  const store = obj.getRootNavigationRef();
+  const store = RootNavigationRef.getRootNavigationRef();
   if (null != store) {
-    let state = store.getState();
-    if (null != state) {
-      let tmpResult = tmp(4417);
-      const coerceMainRouteResult = tmpResult.coerceMainRoute(state.routes[0]);
+    const state1 = store.getState();
+    if (null != state1) {
+      const coerceMainRouteResult = tmp(4431).coerceMainRoute(state1.routes[0]);
       if (null != coerceMainRouteResult) {
         const state2 = coerceMainRouteResult.state;
         if (null != state2) {
-          if (0 === state.index) {
+          if (0 === state1.index) {
             if (0 !== state2.index) {
-              tmpResult = tmp(4417);
+              const tmpResult5 = tmp(4431);
             }
           }
-          const coerceTabsRouteResult = tmp(4417).coerceTabsRoute(state2.routes[0]);
+          const coerceTabsRouteResult = tmp(4431).coerceTabsRoute(state2.routes[0]);
           if (null != coerceTabsRouteResult) {
             const state3 = coerceTabsRouteResult.state;
             let tmp5;
             if (state3 != null) {
-              state = coerceTabsRouteResult.state;
+              const state = coerceTabsRouteResult.state;
               let index;
               if (state != null) {
                 index = state.index;
               }
               tmp5 = state3.routes[index];
             }
-            const coerceGuildsRouteResult = tmp(4417).coerceGuildsRoute(tmp5);
+            const coerceGuildsRouteResult = tmp(4431).coerceGuildsRoute(tmp5);
             if (null != coerceGuildsRouteResult) {
-              obj = {};
+              const obj2 = {};
               const merged = Object.assign(state2);
-              obj.index = state2.index + 1;
+              obj2.index = state2.index + 1;
               const items = [state2.routes[0], ];
               const params3 = coerceGuildsRouteResult.params;
               let channelId;
@@ -110,47 +107,46 @@ export const convertLandscapeToPortraitScreens = function convertLandscapeToPort
               if (channelId == null) {
                 const _HermesInternal = HermesInternal;
                 channelId = "channel-" + tmp(1256).v4();
-                const tmpResult3 = tmp(1256);
+                const tmpResult8 = tmp(1256);
               }
-              obj = { name: "channel", key: null, params: null };
-              obj[1] = channelId;
+              const obj3 = { name: "channel", key: channelId, params: null };
               const params = coerceGuildsRouteResult.params;
               let channelId1;
               if (params != null) {
                 channelId1 = params.channelId;
               }
-              obj1 = { channelId: null, guildId: null };
-              obj1[0] = channelId1;
+              const obj4 = { channelId: channelId1, guildId: null };
               const params2 = coerceGuildsRouteResult.params;
               let guildId;
               if (params2 != null) {
                 guildId = params2.guildId;
               }
-              obj1[1] = guildId;
-              obj[2] = obj1;
-              items[1] = obj;
+              obj4.guildId = guildId;
+              obj3.params = obj4;
+              items[1] = obj3;
               const routes = state2.routes;
               HermesBuiltin.arraySpread(routes.slice(1), 2);
-              obj.routes = items;
-              const routes1 = state.routes;
+              obj2.routes = items;
+              const routes1 = state1.routes;
               const substr = routes1.slice(1);
-              const obj2 = {};
+              const obj5 = {};
               const merged1 = Object.assign(coerceMainRouteResult);
-              obj2.state = obj;
-              const items1 = [obj2];
+              obj5.state = obj2;
+              const items1 = [obj5];
               HermesBuiltin.arraySpread(substr, 1);
               const CommonActions = tmp(1488).CommonActions;
-              const obj3 = {};
-              const merged2 = Object.assign(state);
-              obj3.routes = items1;
-              obj3.index = items1.length - 1;
-              store.dispatch(CommonActions.reset(obj3));
+              const obj6 = {};
+              const merged2 = Object.assign(state1);
+              obj6.routes = items1;
+              obj6.index = items1.length - 1;
+              store.dispatch(CommonActions.reset(obj6));
             }
-            const tmpResult2 = tmp(4417);
+            const tmpResult7 = tmp(4431);
           }
-          const tmpResult1 = tmp(4417);
+          const tmpResult6 = tmp(4431);
         }
       }
+      const tmpResult = tmp(4431);
     }
   }
 };

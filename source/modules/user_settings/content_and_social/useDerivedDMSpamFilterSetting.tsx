@@ -1,32 +1,32 @@
-// Module ID: 14842
-// Function ID: 14843
-// Name: useDerivedDmSpamFilterSettingValue
-// Dependencies: [1371, 1937, 1935, 504, 5423, 7299, 1187, 2]
+// Module ID: 14868
+// Function ID: 14869
+// Name: useDerivedDMSpamFilterSetting
+// Dependencies: [1371, 1937, 1935, 504, 5437, 7313, 1187, 2]
 // Exports: useDerivedDmSpamFilterSettingValue
 
-// Module 14842 (useDerivedDmSpamFilterSettingValue)
+// Module 14868 (useDerivedDMSpamFilterSetting)
 import initialize from "initialize" /* 504 */;
-import create from "create" /* 1187 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import isFeatureAgeGated from "isFeatureAgeGated" /* 5423 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 7299 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
-import { ExplicitContentFilterToDmSpamFilterV2 as closure_3 } from "items" /* 1937 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5437 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 7313 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/useDerivedDMSpamFilterSetting.tsx");
+require = fn;
+let closure_3 = fn(1937).ExplicitContentFilterToDmSpamFilterV2;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/content_and_social/useDerivedDMSpamFilterSetting.tsx");
 
 export const useDerivedDmSpamFilterSettingValue = function useDerivedDmSpamFilterSettingValue() {
   let DmSpamFilterV2 = dependencyMap;
-  const DmSpamFilterV22 = explicitContentFromProto.DmSpamFilterV2;
+  const DmSpamFilterV22 = UserSettings.DmSpamFilterV2;
   const setting = DmSpamFilterV22.useSetting();
-  const ExplicitContentFilter = explicitContentFromProto.ExplicitContentFilter;
+  const ExplicitContentFilter = UserSettings.ExplicitContentFilter;
   const setting1 = ExplicitContentFilter.useSetting();
-  const items = [closure_2];
+  const items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj = initialize;
-  const isSettingTeenByDefault = isFeatureAgeGated.useIsSettingTeenByDefault(SettingsDefaultFeature.SettingsDefaultFeature.SPAM_FILTERS);
-  if (setting !== create.DmSpamFilterV2.DEFAULT_UNSET) {
+  const isSettingTeenByDefault = RegionalFeatureConfigUtils.useIsSettingTeenByDefault(SettingsDefaultFeature.SettingsDefaultFeature.SPAM_FILTERS);
+  if (setting !== preloaded_user_settings.DmSpamFilterV2.DEFAULT_UNSET) {
     return setting;
   } else {
     let nsfwAllowed;

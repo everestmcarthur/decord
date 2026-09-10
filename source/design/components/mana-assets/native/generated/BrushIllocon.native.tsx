@@ -1,17 +1,17 @@
-// Module ID: 5811
-// Function ID: 5812
+// Module ID: 5825
+// Function ID: 5826
 // Name: BrushIllocon
-// Dependencies: [21, 5587, 5812, 2]
+// Dependencies: [21, 5601, 5826, 2]
 // Exports: BrushIllocon
 
-// Module 5811 (BrushIllocon)
-import set from "set" /* 2 */;
+// Module 5825 (BrushIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 5812 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5826 from "module_5826" /* 5826 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/BrushIllocon.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BrushIllocon.native.tsx");
 
 export const BrushIllocon = function BrushIllocon(size) {
   let num = size.size;
@@ -19,13 +19,13 @@ export const BrushIllocon = function BrushIllocon(size) {
   if (num === undefined) {
     num = 64;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef5826 };
+  obj.source = obj2;
   const items = [{ width: num, height: num }];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { uri: metadataDefault });
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

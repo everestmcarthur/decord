@@ -1,23 +1,23 @@
-// Module ID: 7196
-// Function ID: 7197
-// Name: showSimpleActionSheet
-// Dependencies: [4527, 7197, 1896, 2]
+// Module ID: 7209
+// Function ID: 7210
+// Name: Sheet/showSimpleActionSheet
+// Dependencies: [4541, 7210, 1896, 2]
 // Exports: showSimpleActionSheet
 
-// Module 7196 (showSimpleActionSheet)
-import set from "set" /* 2 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
+// Module 7209 (Sheet/showSimpleActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("design/components/Sheet/native/showSimpleActionSheet.native.tsx");
+const result = size.fileFinishedImporting("design/components/Sheet/native/showSimpleActionSheet.native.tsx");
 
 export const showSimpleActionSheet = function showSimpleActionSheet(key) {
   key = key.key;
-  const merged = Object.assign(key, Object.create(null));
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = {};
+  const merged = Object.assign(key, Object.assign({ key: 0, stackingBehavior: 0 }));
+  const obj = ActionSheetActionCreatorsDefault;
+  const obj2 = {};
   const merged1 = Object.assign(merged);
-  obj.hideActionSheet = function hideActionSheet() {
-    closure_1_1(closure_1_2[0]).hideActionSheet(key);
+  obj2.hideActionSheet = function hideActionSheet() {
+    ActionSheetActionCreatorsDefault.hideActionSheet(key);
   };
-  obj.openLazy(key(1896)(7197, dependencyMap.paths), key, obj, key.stackingBehavior);
+  obj.openLazy(key(1896)(7210, dependencyMap.paths), key, obj2, key.stackingBehavior);
 };

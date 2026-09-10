@@ -1,82 +1,84 @@
-// Module ID: 15724
-// Function ID: 15725
-// Name: ActionSheetSelector
-// Dependencies: [32, 19, 17, 21, 4560, 576, 12952, 12950, 4763, 15725, 1896, 4527, 7150, 7149, 5687, 5605, 8593, 4511, 4973, 5607, 4556, 2]
+// Module ID: 15754
+// Function ID: 15755
+// Name: DevToolsActionSheetsScreen
+// Dependencies: [32, 19, 17, 21, 4574, 576, 12978, 12976, 4777, 15755, 1896, 4541, 7164, 7163, 5701, 5619, 8621, 4525, 4987, 5621, 4570, 2]
 // Exports: default
 
-// Module 15724 (ActionSheetSelector)
-import ThemesDefault from "Themes" /* 576 */;
+// Module 15754 (DevToolsActionSheetsScreen)
+import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import _modDef4763 from "module_4763" /* 4763 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 7149 */;
-import Background from "Background" /* 7150 */;
-import _modDef12950 from "module_12950" /* 12950 */;
-import _modDef12952 from "module_12952" /* 12952 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4525 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import TableRow from "TableRow" /* 5619 */;
+import TableRowGroup from "TableRowGroup" /* 5701 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7163 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7164 */;
+import WarningIcon from "WarningIcon" /* 8621 */;
+import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 12976 */;
+import BlockedDomainModalActionCreatorsDefault from "BlockedDomainModalActionCreators" /* 12978 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function ActionSheetSelector(arg0) {
   ({ selectedType: require, onSelect } = arg0);
-  dependencyMap = undefined;
   items = [onSelect];
-  dependencyMap = React.useCallback((type) => {
-    onSelect(4527).hideActionSheet("action-sheet-selector");
+  dependencyMap = noop.useCallback((type) => {
+    ActionSheetActionCreatorsDefault.hideActionSheet("action-sheet-selector");
     onSelect(type.type);
     type.show();
   }, items);
-  let obj = { header: null, children: null };
-  obj = { title: "Select Action Sheet", subtitle: "" + items.length + " options" };
-  obj[0] = callback2(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj);
-  obj = { style: { paddingHorizontal: onSelect(576).space.PX_12 }, children: null };
-  obj1 = { paddingHorizontal: onSelect(576).space.PX_12 };
-  obj[1] = callback2(TableRowGroupTitle.TableRowGroup, {
+  let obj = { header: closure_7(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: "Select Action Sheet", subtitle: "" + items.length + " options" }), children: null };
+  const obj3 = { style: null, children: null };
+  const obj2 = { title: "Select Action Sheet", subtitle: "" + items.length + " options" };
+  obj3.style = { paddingHorizontal: onSelect(576).space.PX_12 };
+  const obj4 = { paddingHorizontal: onSelect(576).space.PX_12 };
+  obj3.children = closure_7(TableRowGroup.TableRowGroup, {
     hasIcons: true,
-    children: items.map((type) => {
+    children: items.map((type, index) => {
       closure_0 = type;
       const obj = {
-        icon: closure_1_7(closure_1_0(8593).WarningIcon, { size: "md" }),
+        icon: closure_1_7(WarningIcon.WarningIcon, { size: "md" }),
         label: null,
         subLabel: null,
         onPress() {
-          return closure_1_2(closure_0);
+          return closure_2(closure_0);
         },
         trailing: null,
         start: null,
         end: null
       };
-      ({ label: obj[1], description: obj[2] } = type);
+      ({ label: obj.label, description: obj.subLabel } = type);
       let tmpResult;
       if (closure_0 === type.type) {
-        tmpResult = tmp(closure_1_0(4511).CheckmarkLargeIcon, { size: "md", color: "text-feedback-positive" });
+        tmpResult = tmp(CheckmarkLargeIcon.CheckmarkLargeIcon, { size: "md", color: "text-feedback-positive" });
       }
-      obj[4] = tmpResult;
-      obj[5] = 0 === arg1;
-      obj[6] = arg1 === closure_1_10.length - 1;
-      return closure_1_7(closure_1_0(5605).TableRow, obj, type.type);
+      obj.trailing = tmpResult;
+      obj.start = 0 === index;
+      obj.end = index === length.length - 1;
+      return closure_1_7(TableRow.TableRow, obj, type.type);
     })
   });
-  obj[1] = callback2(closure_5, obj);
-  return callback2(Background.BottomSheet, obj);
+  obj.children = closure_7(closure_5, obj3);
+  return closure_7(Sheet_BottomSheet.BottomSheet, obj);
 }
-({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { wrap: null, contentContainer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1, paddingHorizontal: ThemesDefault.space.PX_12 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingVertical: ThemesDefault.space.PX_16 };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1, paddingHorizontal: nativeDefault.space.PX_12 }, contentContainer: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1, paddingHorizontal: nativeDefault.space.PX_12 };
+obj2.contentContainer = { paddingVertical: nativeDefault.space.PX_16 };
+let closure_9 = createStyles.createStyles(obj2);
 let items = [
   {
     type: "blocked-domain",
     label: "Blocked Domain",
     description: "Shows a warning for potentially malicious domains",
     show() {
-      return _modDef12952.show("https://example-phishing-site.com/malicious-page");
+      return BlockedDomainModalActionCreatorsDefault.show("https://example-phishing-site.com/malicious-page");
     }
   },
   {
@@ -84,7 +86,7 @@ let items = [
     label: "Suspicious Download",
     description: "Warns users about potentially dangerous file downloads",
     show() {
-      return _modDef12950.show("https://suspicious-file.com/dangerous-file.exe");
+      return SuspiciousDownloadModalActionCreatorsDefault.show("https://suspicious-file.com/dangerous-file.exe");
     }
   },
   {
@@ -92,40 +94,29 @@ let items = [
     label: "Inappropriate Conversation",
     description: "Shows safety warning for inappropriate conversations",
     show() {
-      return _modDef4763.pushLazy(asyncRequireImpl(15725, dependencyMap.paths), { warningId: "test-warning-123", warningType: "inappropriate_conversation", senderId: "123456789", channelId: "987654321" }, "INAPPROPRIATE_CONVERSATION_TAKEOVER_MODAL");
+      return ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15755, dependencyMap.paths), { warningId: "test-warning-123", warningType: "inappropriate_conversation", senderId: "123456789", channelId: "987654321" }, "INAPPROPRIATE_CONVERSATION_TAKEOVER_MODAL");
     }
   }
 ];
-let obj1 = { paddingVertical: ThemesDefault.space.PX_16 };
-const obj2 = {
-  type: "blocked-domain",
-  label: "Blocked Domain",
-  description: "Shows a warning for potentially malicious domains",
-  show() {
-    return _modDef12952.show("https://example-phishing-site.com/malicious-page");
-  }
-};
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsActionSheetsScreen.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsActionSheetsScreen.tsx");
 
 export default function DevToolsActionSheetsScreen() {
-  const tmp = callback4();
-  const tmp2 = callback(React.useState("blocked-domain"), 2);
-  const first = tmp2[0];
-  closure_1 = tmp2[1];
+  const tmp = closure_9();
+  [selectedType, onSelect] = noop.useState("blocked-domain");
   const found = items.find((type) => type.type === first);
-  items = [first];
-  let obj = { style: tmp.wrap, contentContainerStyle: tmp.contentContainer, children: null };
-  callback = React.useCallback(() => {
-    let obj = callback(closure_1_2[11]);
-    obj = { default: closure_1_11 };
-    obj = { selectedType: first, onSelect: callback };
-    obj.openLazy(Promise.resolve(obj), "action-sheet-selector", obj);
+  items = [selectedType];
+  const obj = { style: tmp.wrap, contentContainerStyle: tmp.contentContainer, children: null };
+  const callback = noop.useCallback(() => {
+    ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: ActionSheetSelector }), "action-sheet-selector", { selectedType, onSelect });
   }, items);
-  obj = { spacing: 16, children: null };
-  obj = { children: null };
-  const items1 = [callback2(first(4556).Text, { variant: "heading-lg/medium", children: "Action Sheets" }), callback2(first(5687).TableRowGroup, { description: "Tap an option to launch the action sheet immediately", hasIcons: false, children: callback2(first(5605).TableRow, obj2) })];
-  obj[0] = items1;
-  obj[1] = callback3(first(5607).Card, obj);
-  obj[2] = callback2(first(4973).Stack, obj);
-  return callback2(closure_6, obj);
+  const obj2 = { spacing: 16, children: null };
+  const obj3 = { children: null };
+  const items1 = [closure_7(selectedType(4570).Text, { variant: "heading-lg/medium", children: "Action Sheets" }), ];
+  const obj4 = { description: "Tap an option to launch the action sheet immediately", hasIcons: false, children: closure_7(selectedType(5619).TableRow, { label: found.label, subLabel: found.description, arrow: true, onPress: callback }) };
+  items1[1] = closure_7(selectedType(5701).TableRowGroup, obj4);
+  obj3.children = items1;
+  obj2.children = closure_8(selectedType(5621).Card, obj3);
+  obj.children = closure_7(selectedType(4987).Stack, obj2);
+  return closure_7(closure_6, obj);
 };

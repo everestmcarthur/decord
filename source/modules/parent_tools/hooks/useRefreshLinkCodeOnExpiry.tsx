@@ -1,29 +1,30 @@
-// Module ID: 14880
-// Function ID: 14881
+// Module ID: 14906
+// Function ID: 14907
 // Name: useRefreshLinkCodeOnExpiry
-// Dependencies: [19, 6964, 2]
+// Dependencies: [19, 6978, 2]
 // Exports: default
 
-// Module 14880 (useRefreshLinkCodeOnExpiry)
-import setDefault from "set" /* 6964 */;
-import closure_2 from "noop" /* 19 */;
+// Module 14906 (useRefreshLinkCodeOnExpiry)
+import useStableCallbackDefault from "useStableCallback" /* 6978 */;
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useRefreshLinkCodeOnExpiry.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useRefreshLinkCodeOnExpiry.tsx");
 
 export default function useRefreshLinkCodeOnExpiry(arg0, arg1) {
-  importDefault = arg0;
-  const tmp = setDefault(arg1);
-  dependencyMap = tmp;
+  closure_0 = arg0;
+  const tmp = useStableCallbackDefault(arg1);
+  closure_1 = tmp;
   const items = [arg0, tmp];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (null != timeout) {
       const _Date = Date;
       const diff = tmp - Date.now();
       if (diff <= 0) {
-        callback();
+        closure_1();
       } else {
         const _setTimeout = setTimeout;
-        timeout = setTimeout(callback, diff);
+        timeout = setTimeout(closure_1, diff);
         return () => clearTimeout(closure_0);
       }
     }

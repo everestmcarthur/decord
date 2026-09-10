@@ -1,66 +1,64 @@
-// Module ID: 17660
-// Function ID: 17661
-// Name: getIntroHeaderSource
-// Dependencies: [19, 17, 21, 8233, 17661, 17662, 17663, 4411, 2]
+// Module ID: 17693
+// Function ID: 17694
+// Name: IntroHeader
+// Dependencies: [19, 17, 21, 8259, 17694, 17695, 17696, 4425, 2]
 // Exports: IntroHeader, getIntroHeaderSource, useIntroHeaderSource
 
-// Module 17660 (getIntroHeaderSource)
-import noopAll from "noop" /* 19 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
-import getIllustrationSource from "getIllustrationSource" /* 8233 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 17693 (IntroHeader)
+import shared from "shared" /* 4425 */;
+import _mod8259 from "module_8259" /* 8259 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/IntroHeader.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/IntroHeader.tsx");
 
 export const getIntroHeaderSource = function getIntroHeaderSource(theme) {
-  let obj = getIllustrationSource;
-  obj = {
+  return _mod8259.getIllustrationSource(theme, {
     dark() {
-      return callback(17661);
+      return require("module_17694");
     },
     darker() {
-      return callback(17662);
+      return require("module_17695");
     },
     light() {
-      return callback(17663);
+      return require("module_17696");
     }
-  };
-  return obj.getIllustrationSource(theme, obj);
+  });
 };
 export const useIntroHeaderSource = function useIntroHeaderSource() {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = shared;
+  return _mod8259.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return callback(17661);
+      return require("module_17694");
     },
     darker() {
-      return callback(17662);
+      return require("module_17695");
     },
     light() {
-      return callback(17663);
+      return require("module_17696");
     }
-  };
-  return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  });
 };
 export const IntroHeader = function IntroHeader(arg0) {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = shared;
+  const obj4 = {};
+  const illustrationSource = _mod8259.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return callback(17661);
+      return require("module_17694");
     },
     darker() {
-      return callback(17662);
+      return require("module_17695");
     },
     light() {
-      return callback(17663);
+      return require("module_17696");
     }
-  };
-  obj = {};
-  const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  });
   const merged = Object.assign(arg0);
-  obj.source = illustrationSource;
+  obj4.source = illustrationSource;
   return <Image />;
 };

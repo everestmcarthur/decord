@@ -1,14 +1,15 @@
-// Module ID: 7057
-// Function ID: 7058
+// Module ID: 7071
+// Function ID: 7072
 // Name: useFastestListComputedStyles
 // Dependencies: [19, 17, 2]
 // Exports: default
 
-// Module 7057 (useFastestListComputedStyles)
-import closure_0 from "noop" /* 19 */;
-import { StyleSheet } from "get ActivityIndicator" /* 17 */;
+// Module 7071 (useFastestListComputedStyles)
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/fastest_list/useFastestListComputedStyles.android.tsx");
+const StyleSheet = fn(17).StyleSheet;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/fastest_list/useFastestListComputedStyles.android.tsx");
 
 export default function useFastestListComputedStyles(style) {
   style = style.style;
@@ -20,11 +21,11 @@ export default function useFastestListComputedStyles(style) {
         obj = { flex: 1 };
       }
       const items = [obj];
-      obj = items;
+      let obj2 = items;
     } else {
-      obj = { flex: 1 };
+      obj2 = { flex: 1 };
     }
-    const flattenResult = closure_1_1.flatten(obj);
+    const flattenResult = StyleSheet.flatten(obj2);
     let num;
     if (flattenResult != null) {
       num = flattenResult.marginStart;
@@ -141,15 +142,12 @@ export default function useFastestListComputedStyles(style) {
         }
         if (typeof num3 === "number") {
           if (typeof num4 === "number") {
-            obj = { style: null, marginEnd: null, marginStart: null };
-            obj[0] = flattenResult;
-            obj[1] = num3 + num4;
-            obj[2] = num + num2;
-            return obj;
+            const obj3 = { style: flattenResult, marginEnd: num3 + num4, marginStart: num + num2 };
+            return obj3;
           }
         }
         const _Error = Error;
-        error = new Error("FastestList: paddingStart and paddingEnd must be numbers.");
+        const error = new Error("FastestList: paddingStart and paddingEnd must be numbers.");
         throw error;
       }
     }

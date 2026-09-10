@@ -1,45 +1,52 @@
-// Module ID: 8686
-// Function ID: 8687
-// Name: GetButton
-// Dependencies: [32, 19, 17, 8687, 21, 4560, 576, 4975, 1114, 8170, 8688, 4255, 8691, 7309, 5111, 4296, 8692, 4561, 8693, 8698, 4527, 8715, 7150, 6627, 8716, 8718, 8906, 7154, 2]
+// Module ID: 8714
+// Function ID: 8715
+// Name: GameProfileScreen
+// Dependencies: [32, 19, 17, 8715, 21, 4574, 576, 4989, 1114, 8196, 8716, 4268, 8719, 7323, 5125, 4310, 8720, 4575, 8721, 8726, 4541, 8743, 7164, 6641, 8744, 8746, 8933, 7168, 2]
 // Exports: default
 
-// Module 8686 (GetButton)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 4975 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "getSimilarGames" /* 8687 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 8714 (GameProfileScreen)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4541 */;
+import timing from "timing" /* 4575 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8719 */;
+import getGameProfileStoreWebsiteDataDefault from "getGameProfileStoreWebsiteData" /* 8726 */;
+import GameProfileStoreLinksActionSheet from "GameProfileStoreLinksActionSheet" /* 8743 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import GameProfileStore from "GameProfileStore" /* 8715 */;
 
-require = arg1;
+const GameProfileStoreLinksActionSheetDefault = GameProfileStoreLinksActionSheet;
+
+require = fn;
 function GetButton(onPress) {
   const obj = { variant: "primary", size: "sm", text: null, onPress: null, accessibilityLabel: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.l8JeHg);
-  obj[3] = onPress.onPress;
-  const intl2 = getSystemLocale.intl;
-  obj[4] = intl2.string(getSystemLocale.t.Vsxqmz);
-  return callback(Button.Button, obj);
+  const intl = util.intl;
+  obj.text = intl.string(util.t.l8JeHg);
+  obj.onPress = onPress.onPress;
+  const intl2 = util.intl;
+  obj.accessibilityLabel = intl2.string(util.t.Vsxqmz);
+  return React6(components_Button_Button.Button, obj);
 }
-({ View: c5, ActivityIndicator: closure_6 } = get_ActivityIndicator);
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { loadingContainer: null, scrollView: null, stickyHeader: null };
-createCacheKey = { flex: 1, justifyContent: "center", alignItems: "center", minHeight: 300, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-createCacheKey[2] = { position: "absolute", top: 0, left: 0, right: 0 };
-let closure_10 = createCacheKey.createStyles(createCacheKey);
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, ActivityIndicator: metroRequire } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { loadingContainer: { flex: 1, justifyContent: "center", alignItems: "center", minHeight: 300, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, scrollView: null, stickyHeader: null };
+let obj3 = { flex: 1, justifyContent: "center", alignItems: "center", minHeight: 300, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+obj2.scrollView = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+obj2.stickyHeader = { position: "absolute", top: 0, left: 0, right: 0 };
+let closure_10 = createStyles.createStyles(obj2);
 let closure_12 = { code: "function GameProfileScreenTsx1(){const{heroHeaderHeight,scrollY,STICKY_HEADER_HEIGHT}=this.__closure;return heroHeaderHeight.get()>0&&scrollY.get()>=heroHeaderHeight.get()-STICKY_HEADER_HEIGHT;}" };
 let closure_13 = { code: "function GameProfileScreenTsx2(isVisible,wasVisible){const{stickyHeaderVisible,withTiming}=this.__closure;if(isVisible!==wasVisible){stickyHeaderVisible.set(withTiming(isVisible?1:0,{duration:150}));}}" };
 let closure_14 = { code: "function GameProfileScreenTsx3(){const{interpolate,stickyHeaderVisible,STICKY_HEADER_HEIGHT}=this.__closure;return{transform:[{translateY:interpolate(stickyHeaderVisible.get(),[0,1],[-1*STICKY_HEADER_HEIGHT,0])}]};}" };
 let closure_15 = { code: "function GameProfileScreenTsx4(){const{scrollY,storeLinksSectionBottomY,STICKY_HEADER_HEIGHT}=this.__closure;return scrollY.get()>storeLinksSectionBottomY.get()-STICKY_HEADER_HEIGHT;}" };
-let closure_16 = { code: "function GameProfileScreenTsx5(shouldShow,prevShouldShow){const{runOnJS,setShowGetButton}=this.__closure;if(shouldShow!==prevShouldShow){runOnJS(setShowGetButton)(shouldShow);}}" };
-let obj1 = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-let result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileScreen.tsx");
+let __initData = { code: "function GameProfileScreenTsx5(shouldShow,prevShouldShow){const{runOnJS,setShowGetButton}=this.__closure;if(shouldShow!==prevShouldShow){runOnJS(setShowGetButton)(shouldShow);}}" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileScreen.tsx");
 
 export default function GameProfileScreen(gameId) {
   gameId = gameId.gameId;
@@ -49,57 +56,47 @@ export default function GameProfileScreen(gameId) {
   if (num === undefined) {
     num = 0;
   }
-  let React;
-  let first;
-  let ref;
-  let ref1;
-  let first1;
-  let name;
   let sharedValue;
-  closure_11 = undefined;
   let sharedValue1;
   let sharedValue2;
   let sharedValue3;
   let first2;
-  closure_16 = undefined;
+  __initData = undefined;
   let gameProfileStoreWebsites;
   let memo;
-  closure_19 = undefined;
-  closure_20 = undefined;
   let callback2;
   let callback3;
   let tmp = sharedValue();
+  const bottomSheetRef1 = gameId(sourceUserId[9]).useBottomSheetRef();
+  ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef1);
   let obj = gameId(sourceUserId[9]);
-  bottomSheetRef = obj.useBottomSheetRef();
-  ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef);
   const tmp6Result = source(sourceUserId[10])(source(sourceUserId[11]).openURL);
-  React = tmp6Result;
-  obj1 = React;
-  first = num(React.useState(() => gameId(sourceUserId[12]).generateViewId()), 1)[0];
-  ref = React.useRef(null);
-  ref1 = React.useRef(0);
-  let obj2 = gameId(sourceUserId[13]);
-  const game = obj2.useGame(gameId);
-  ({ data, isLoading } = game);
+  noop = tmp6Result;
+  const viewId = num(noop.useState(() => gameId(sourceUserId[12]).generateViewId()), 1)[0];
+  let ref = noop.useRef(null);
+  const ref1 = noop.useRef(0);
   const tmp6 = source(sourceUserId[10]);
   const tmp8 = num;
-  const tmp14 = num(React.useState(null), 2);
-  first1 = tmp14[0];
-  name = undefined;
+  const game = gameId(sourceUserId[13]).useGame(gameId);
+  ({ data, isLoading } = game);
+  let obj3 = gameId(sourceUserId[13]);
+  const tmp14 = num(noop.useState(null), 2);
+  const first1 = tmp14[0];
+  let name;
   if (data != null) {
     name = data.name;
   }
-  let tmp2Result = tmp2(tmp3[15]);
-  sharedValue = tmp2Result.useSharedValue(0);
+  let tmp13 = source(sourceUserId[14])(data);
+  sharedValue = gameId(sourceUserId[15]).useSharedValue(0);
   let items = [sharedValue];
-  const callback = obj1.useCallback((nativeEvent) => {
+  const callback = obj2.useCallback((nativeEvent) => {
     const y = nativeEvent.nativeEvent.contentOffset.y;
     const result = sharedValue.set(y);
     ref1.current = y;
   }, items);
-  closure_11 = obj1.useRef(false);
+  ref = obj2.useRef(false);
   const items1 = [num];
-  const callback1 = obj1.useCallback(() => {
+  const callback1 = obj2.useCallback(() => {
     let tmp2 = num > 0;
     if (tmp2) {
       tmp2 = !ref.current;
@@ -108,23 +105,22 @@ export default function GameProfileScreen(gameId) {
       ref.current = true;
       const current = ref.current;
       if (current != null) {
-        const obj = { y: null, animated: false };
-        obj[0] = num;
+        const obj = { y: num, animated: false };
         current.scrollTo(obj);
       }
     }
   }, items1);
   let id;
-  let tmp5Result = tmp5(tmp3[16]);
+  const tmp2Result = gameId(sourceUserId[15]);
   if (data != null) {
     id = data.id;
   }
-  tmp5Result({ gameId: id, scrollOffsetRef: ref1 });
-  tmp2Result = tmp2(tmp3[15]);
-  sharedValue1 = tmp2Result.useSharedValue(0);
-  let tmp13 = source(sourceUserId[14])(data);
+  source(sourceUserId[16])({ gameId: id, scrollOffsetRef: ref1 });
+  const tmp5Result = source(sourceUserId[16]);
+  sharedValue1 = gameId(sourceUserId[15]).useSharedValue(0);
+  const tmp2Result8 = gameId(sourceUserId[15]);
   sharedValue2 = gameId(sourceUserId[15]).useSharedValue(0);
-  const tmp2Result1 = gameId(sourceUserId[15]);
+  const tmp2Result9 = gameId(sourceUserId[15]);
   class U {
     constructor() {
       obj = closure_12;
@@ -147,34 +143,33 @@ export default function GameProfileScreen(gameId) {
       if (arg0) {
         num = 1;
       }
-      const result = sharedValue2.set(gameId(sourceUserId[17]).withTiming(num, { duration: 150 }));
-      const obj = gameId(sourceUserId[17]);
+      const result = sharedValue2.set(timing.withTiming(num, { duration: 150 }));
     }
   };
-  obj = { stickyHeaderVisible: sharedValue2, withTiming: tmp2(tmp3[17]).withTiming };
-  fn.__closure = obj;
+  const tmp2Result10 = gameId(sourceUserId[15]);
+  fn.__closure = { stickyHeaderVisible: sharedValue2, withTiming: gameId(sourceUserId[17]).withTiming };
   fn.__workletHash = 3161097061646;
   fn.__initData = sharedValue2;
-  const animatedReaction = gameId(sourceUserId[15]).useAnimatedReaction(U, fn);
-  const tmp2Result2 = gameId(sourceUserId[15]);
+  const animatedReaction = tmp2Result10.useAnimatedReaction(U, fn);
+  const obj4 = { stickyHeaderVisible: sharedValue2, withTiming: gameId(sourceUserId[17]).withTiming };
   const fn2 = function q() {
-    let obj = { transform: null };
-    obj = { translateY: gameId(sourceUserId[15]).interpolate(sharedValue2.get(), [0, 1], [-56, 0]) };
-    const items = [obj];
-    obj[0] = items;
+    const obj = { transform: null };
+    const obj2 = { translateY: ReanimatedRexport.interpolate(sharedValue2.get(), [0, 1], [-56, 0]) };
+    const items = [obj2];
+    obj.transform = items;
     return obj;
   };
-  obj = { interpolate: tmp2(tmp3[15]).interpolate, stickyHeaderVisible: sharedValue2, STICKY_HEADER_HEIGHT: 56 };
-  fn2.__closure = obj;
+  const tmp2Result11 = gameId(sourceUserId[15]);
+  fn2.__closure = { interpolate: gameId(sourceUserId[15]).interpolate, stickyHeaderVisible: sharedValue2, STICKY_HEADER_HEIGHT: 56 };
   fn2.__workletHash = 16452163547712;
   fn2.__initData = sharedValue3;
-  const animatedStyle = gameId(sourceUserId[15]).useAnimatedStyle(fn2);
-  const tmp2Result3 = gameId(sourceUserId[15]);
+  const animatedStyle = tmp2Result11.useAnimatedStyle(fn2);
+  const obj5 = { interpolate: gameId(sourceUserId[15]).interpolate, stickyHeaderVisible: sharedValue2, STICKY_HEADER_HEIGHT: 56 };
   sharedValue3 = gameId(sourceUserId[15]).useSharedValue(Infinity);
-  const tmp8Result = tmp8(obj1.useState(false), 2);
+  const tmp8Result = tmp8(noop.useState(false), 2);
   first2 = tmp8Result[0];
-  closure_16 = tmp30;
-  const tmp2Result4 = gameId(sourceUserId[15]);
+  __initData = tmp30;
+  const tmp2Result12 = gameId(sourceUserId[15]);
   class X {
     constructor() {
       value = closure_10.get();
@@ -187,173 +182,159 @@ export default function GameProfileScreen(gameId) {
   class Q {
     constructor(arg0, arg1) {
       if (gameId !== arg1) {
-        tmp = gameId;
-        tmp2 = sourceUserId;
-        obj = gameId(sourceUserId[15]);
+        tmp = closure_0;
+        tmp2 = closure_2;
+        obj = closure_0(closure_2[15]);
         tmp3 = closure_16;
         tmp4 = obj.runOnJS(closure_16)(gameId);
       }
       return;
     }
   }
-  obj1 = { runOnJS: tmp2(tmp3[15]).runOnJS, setShowGetButton: tmp30 };
-  Q.__closure = obj1;
+  const tmp2Result13 = gameId(sourceUserId[15]);
+  Q.__closure = { runOnJS: gameId(sourceUserId[15]).runOnJS, setShowGetButton: tmp8Result[1] };
   Q.__workletHash = 15045914286853;
-  Q.__initData = closure_16;
-  const animatedReaction1 = gameId(sourceUserId[15]).useAnimatedReaction(X, Q);
-  const tmp2Result5 = gameId(sourceUserId[15]);
+  Q.__initData = __initData;
+  const animatedReaction1 = tmp2Result13.useAnimatedReaction(X, Q);
+  const obj6 = { runOnJS: gameId(sourceUserId[15]).runOnJS, setShowGetButton: tmp8Result[1] };
   gameProfileStoreWebsites = gameId(sourceUserId[18]).useGameProfileStoreWebsites(data);
   const items2 = [gameProfileStoreWebsites];
-  memo = obj1.useMemo(() => {
-    const mapped = gameProfileStoreWebsites.map(source(sourceUserId[19]));
-    return mapped.filter((arg0) => null != arg0);
+  memo = obj2.useMemo(() => {
+    const mapped = gameProfileStoreWebsites.map(getGameProfileStoreWebsiteDataDefault);
+    return mapped.filter((item) => null != item);
   }, items2);
-  closure_19 = obj1.useRef(undefined);
-  closure_20 = obj1.useRef(null);
+  noop.useRef(undefined);
+  noop.useRef(null);
   const items3 = [name];
-  const effect = obj1.useEffect(() => {
+  const effect = obj2.useEffect(() => {
     closure_19.current = name;
   }, items3);
   const items4 = [first1];
-  const effect1 = obj1.useEffect(() => {
+  const effect1 = obj2.useEffect(() => {
     closure_20.current = first1;
   }, items4);
-  const items5 = [gameId, first, source];
-  callback2 = obj1.useCallback((action, similarGameId) => {
-    let obj = gameId(sourceUserId[12]);
-    const guildIdAndVerifiedFromInvite = obj.getGuildIdAndVerifiedFromInvite(ref3.current);
+  const items5 = [gameId, viewId, source];
+  callback2 = obj2.useCallback((action, similarGameId) => {
+    const guildIdAndVerifiedFromInvite = GameProfileAnalyticUtils.getGuildIdAndVerifiedFromInvite(ref3.current);
     ({ guildId, isVerified } = guildIdAndVerifiedFromInvite);
     let str = ref2.current;
     if (str == null) {
       str = "";
     }
-    obj = { gameName: str, gameId, action, similarGameId, viewId: first, guildId, isVerified, source };
-    const result = gameId(sourceUserId[12]).trackGameProfileAction(obj);
+    const result = GameProfileAnalyticUtils.trackGameProfileAction({ gameName: str, gameId, action, similarGameId, viewId, guildId, isVerified, source });
   }, items5);
   const items6 = [memo, callback2, tmp6Result];
-  callback3 = obj1.useCallback(() => {
+  callback3 = obj2.useCallback(() => {
     if (1 === memo.length) {
-      first = num(arr, 1)[0];
+      const first = _slicedToArray(arr, 1)[0];
       callback2(first.action);
-      callback(first.url);
+      closure_4(first.url);
     } else if (arr.length > 1) {
-      let obj = { key: null, content: null, stackingBehavior: "stack" };
-      obj[0] = gameId(sourceUserId[21]).ACTION_SHEET_KEY;
+      const obj3 = { key: GameProfileStoreLinksActionSheet.ACTION_SHEET_KEY, content: null, stackingBehavior: "stack" };
       let str = ref2.current;
-      const obj2 = gameId(sourceUserId[20]);
-      const tmp11 = first1;
+      const obj2 = ActionSheetActionCreators;
+      const tmp11 = React6;
       if (str == null) {
         str = "";
       }
-      obj = { gameName: null, websiteButtons: null, trackAction: null };
-      obj[0] = str;
-      obj[1] = arr;
-      obj[2] = callback2;
-      obj[1] = tmp11(source(sourceUserId[21]), obj);
-      obj2.showActionSheet(obj);
-      const tmp13 = source(sourceUserId[21]);
+      const obj = { gameName: str, websiteButtons: arr, trackAction: callback2 };
+      obj3.content = tmp11(GameProfileStoreLinksActionSheetDefault, obj);
+      obj2.showActionSheet(obj3);
     }
   }, items6);
-  const items7 = [gameId, source, sourceUserId, first];
-  const effect2 = obj1.useEffect(() => {
-    let obj = gameId(sourceUserId[12]);
-    obj = { source, viewId: first, gameId, gameName: null, authorId: null, profileType: null };
+  const items7 = [gameId, source, sourceUserId, viewId];
+  const effect2 = obj2.useEffect(() => {
+    const obj2 = { source, viewId, gameId, gameName: null, authorId: null, profileType: null };
     let str = ref2.current;
     if (str == null) {
       str = "";
     }
-    obj[3] = str;
-    obj[4] = sourceUserId;
-    obj[5] = gameId(sourceUserId[12]).GameProfileTypes.FullProfile;
-    obj.trackGameProfileOpen(obj);
+    obj2.gameName = str;
+    obj2.authorId = sourceUserId;
+    obj2.profileType = GameProfileAnalyticUtils.GameProfileTypes.FullProfile;
+    GameProfileAnalyticUtils.trackGameProfileOpen(obj2);
   }, items7);
-  const items8 = [gameId, source, sourceUserId, first];
-  const effect3 = obj1.useEffect(() => () => {
-    let obj = closure_1_0(closure_1_2[12]);
-    const guildIdAndVerifiedFromInvite = obj.getGuildIdAndVerifiedFromInvite(ref2.current);
+  const items8 = [gameId, source, sourceUserId, viewId];
+  const effect3 = obj2.useEffect(() => () => {
+    const guildIdAndVerifiedFromInvite = gameId(sourceUserId[12]).getGuildIdAndVerifiedFromInvite(ref2.current);
     ({ guildId, isVerified } = guildIdAndVerifiedFromInvite);
-    obj = { viewId: closure_5, gameId: closure_0, gameName: null, playedFriendIds: null, playedFriendsData: null, similarGames: null, guildId: null, isVerified: null };
+    const obj = gameId(sourceUserId[12]);
+    const obj3 = { viewId, gameId, gameName: null, playedFriendIds: null, playedFriendsData: null, similarGames: null, guildId: null, isVerified: null };
     let str = ref.current;
     if (str == null) {
       str = "";
     }
-    obj[2] = str;
-    obj[3] = [];
-    obj[4] = [];
-    let similarGames = closure_1_7.getSimilarGames(closure_0);
+    obj3.gameName = str;
+    obj3.playedFriendIds = [];
+    obj3.playedFriendsData = [];
+    let similarGames = ref1.getSimilarGames(gameId);
     if (similarGames == null) {
       similarGames = [];
     }
-    obj[5] = similarGames;
-    obj[6] = guildId;
-    obj[7] = isVerified;
-    const result = closure_1_0(closure_1_2[12]).trackGameProfileClose(obj);
+    obj3.similarGames = similarGames;
+    obj3.guildId = guildId;
+    obj3.isVerified = isVerified;
+    const result = gameId(sourceUserId[12]).trackGameProfileClose(obj3);
   }, items8);
   const items9 = [sharedValue1];
   const items10 = [sharedValue3];
-  const callback4 = obj1.useCallback((arg0) => {
+  const callback4 = obj2.useCallback((arg0) => {
     const result = sharedValue1.set(arg0);
   }, items9);
   const items11 = [memo, first2, callback3];
-  const callback5 = obj1.useCallback((arg0) => {
+  const callback5 = obj2.useCallback((arg0) => {
     const result = sharedValue3.set(arg0);
   }, items10);
-  const memo1 = obj1.useMemo(() => {
+  const memo1 = obj2.useMemo(() => {
     let fn;
     if (memo.length > 0) {
       if (first2) {
-        fn = () => closure_1_8(closure_1_11, { onPress: closure_22 });
+        fn = () => first1(closure_11, { onPress });
       }
     }
     return fn;
   }, items11);
-  obj2 = { ref: bottomSheetRef, startExpanded: true, scrollable: true, handleDisabled: true, onExpand: callback1, children: null };
+  const obj7 = { ref: bottomSheetRef, startExpanded: true, scrollable: true, handleDisabled: true, onExpand: callback1, children: null };
   if (!isLoading) {
     if (null != data) {
       let tmp46 = first1;
-      const obj3 = { ref: null, style: null, onScroll: null, children: null };
-      obj3[0] = ref;
-      obj3[1] = tmp.scrollView;
-      obj3[2] = callback;
-      const obj4 = { obscured: null, children: null };
-      obj4[0] = tmp13;
-      tmp5Result = tmp5(tmp3[24]);
-      const obj5 = { game: null, invite: null, viewId: null, source: null, trackAction: null, onGuildInviteResolved: null, closeModal: null, scrollY: null, websiteButtons: null, onStoreLinksMeasured: null, onHeaderHeightMeasured: null, scrollOffsetRef: null };
-      obj5[0] = data;
-      obj5[1] = first1;
-      obj5[2] = first;
-      obj5[3] = source;
-      obj5[4] = callback2;
-      obj5[5] = tmp14[1];
-      obj5[6] = function closeModal() {
-        return source(sourceUserId[20]).hideAllActionSheets();
+      const obj8 = { ref, style: tmp.scrollView, onScroll: callback, children: null };
+      const obj9 = { obscured: tmp13, children: null };
+      const obj10 = {
+        game: data,
+        invite: first1,
+        viewId,
+        source,
+        trackAction: callback2,
+        onGuildInviteResolved: tmp14[1],
+        closeModal() {
+              return source(sourceUserId[20]).hideAllActionSheets();
+            },
+        scrollY: sharedValue,
+        websiteButtons: memo,
+        onStoreLinksMeasured: callback5,
+        onHeaderHeightMeasured: callback4,
+        scrollOffsetRef: ref1
       };
-      obj5[7] = sharedValue;
-      obj5[8] = memo;
-      obj5[9] = callback5;
-      obj5[10] = callback4;
-      obj5[11] = ref1;
-      obj4[1] = first1(tmp5(tmp3[25]), obj5);
-      obj3[3] = first1(tmp5Result, obj4);
-      let tmp45 = first1(tmp2(tmp3[23]).BottomSheetScrollView, obj3);
+      obj9.children = first1(tmp5(tmp3[25]), obj10);
+      obj8.children = first1(tmp5(tmp3[24]), obj9);
+      let tmp45 = first1(tmp2(tmp3[23]).BottomSheetScrollView, obj8);
+      const tmp5Result2 = tmp5(tmp3[24]);
     }
     const items12 = [tmp45, , ];
-    const obj6 = { style: null, pointerEvents: "box-none", children: null };
+    const obj11 = { style: null, pointerEvents: "box-none", children: null };
     const items13 = [tmp.stickyHeader, animatedStyle];
-    obj6[0] = items13;
-    const obj7 = { game: null, headerRight: null };
-    obj7[0] = data;
-    obj7[1] = memo1;
-    obj6[2] = tmp46(tmp5(tmp3[26]), obj7);
-    items12[1] = tmp46(tmp5(tmp3[15]).View, obj6);
-    const obj8 = { variant: "overlay", onPress: null };
-    obj8[1] = bottomSheetClose;
-    items12[2] = tmp46(tmp2(tmp3[27]).ActionSheetHeaderBar, obj8);
-    obj2[5] = items12;
-    return tmp43(tmp44, obj2);
+    obj11.style = items13;
+    const obj12 = { game: data, headerRight: memo1 };
+    obj11.children = tmp46(tmp5(tmp3[26]), obj12);
+    items12[1] = tmp46(tmp5(tmp3[15]).View, obj11);
+    const obj13 = { variant: "overlay", onPress: bottomSheetClose };
+    items12[2] = tmp46(tmp2(tmp3[27]).ActionSheetHeaderBar, obj13);
+    obj7.children = items12;
+    return tmp43(tmp44, obj7);
   }
-  const tmp2Result6 = gameId(sourceUserId[18]);
+  const tmp2Result14 = gameId(sourceUserId[18]);
   tmp43 = name;
-  tmp45 = first1(first, { style: tmp.loadingContainer, children: first1(ref, { animating: true, size: "large" }) });
+  tmp45 = first1(viewId, { style: tmp.loadingContainer, children: first1(ref, { animating: true, size: "large" }) });
   tmp46 = first1;
 };

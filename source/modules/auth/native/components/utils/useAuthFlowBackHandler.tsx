@@ -1,21 +1,24 @@
-// Module ID: 15965
-// Function ID: 15966
+// Module ID: 15995
+// Function ID: 15996
 // Name: useAuthFlowBackHandler
-// Dependencies: [19, 15950, 15946, 5630, 2]
+// Dependencies: [19, 15980, 15976, 5644, 2]
 // Exports: default
 
-// Module 15965 (useAuthFlowBackHandler)
-import closure_2 from "noop" /* 19 */;
-import { RegistrationTransitionActionTypes as closure_3 } from "RegistrationTransitionActionTypes" /* 15950 */;
+// Module 15995 (useAuthFlowBackHandler)
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/auth/native/components/utils/useAuthFlowBackHandler.tsx");
+const require = globalThis.__r;
 
-export default function useAuthFlowBackHandler(arg0) {
-  const _require = arg0;
-  dependencyMap = React.useContext(_require(15946).TrackRegistrationContext);
-  _require(5630).useNavigatorBackPressHandler(() => {
-    callback({ step: closure_0, actionType: closure_1_3.VIEWED });
+const require = fn;
+let closure_3 = fn(15980).RegistrationTransitionActionTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/native/components/utils/useAuthFlowBackHandler.tsx");
+
+export default function useAuthFlowBackHandler(step) {
+  _require = step;
+  dependencyMap = noop.useContext(require("Auth").TrackRegistrationContext);
+  require("useNavigatorBackPressHandler").useNavigatorBackPressHandler(() => {
+    closure_1({ step, actionType: constants.VIEWED });
     return false;
   });
 };

@@ -1,16 +1,17 @@
-// Module ID: 7962
-// Function ID: 7963
+// Module ID: 7976
+// Function ID: 7977
 // Name: formatUsernameOnClick
-// Dependencies: [1371, 7961, 7963, 2]
+// Dependencies: [1371, 7975, 7977, 2]
 // Exports: default
 
-// Module 7962 (formatUsernameOnClick)
-import processColorStrings from "processColorStrings" /* 7961 */;
-import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 7963 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
+// Module 7976 (formatUsernameOnClick)
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7975 */;
+import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 7977 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/formatUsernameOnClick.tsx");
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/formatUsernameOnClick.tsx");
 
 export default function formatUsernameOnClick(arg0) {
   ({ userId, message, author, roleStyle, messageChannelId } = arg0);
@@ -18,34 +19,33 @@ export default function formatUsernameOnClick(arg0) {
   if (userId == null) {
     userId = message.author.id;
   }
-  let obj = processColorStrings;
-  const result = obj.isNativeMessageEligibleForEnhancedRoleColors(guildId, userId);
-  user = user.getUser(userId);
+  const result = enhanced_role_colors_EnhancedRoleColorUtils.isNativeMessageEligibleForEnhancedRoleColors(guildId, userId);
+  let user = UserStore.getUser(userId);
   if (user == null) {
-    author = null;
+    let author1 = null;
     if (userId === message.author.id) {
-      author = message.author;
+      author1 = message.author;
     }
-    user = author;
+    user = author1;
   }
-  obj = { action: "bindUserMenu", userId, linkColor: null, roleColor: null, roleColors: null, shouldShowRoleDot: null, messageChannelId: null, medium: true, fontId: null };
+  const obj2 = { action: "bindUserMenu", userId, linkColor: null, roleColor: null, roleColors: null, shouldShowRoleDot: null, messageChannelId: null, medium: true, fontId: null };
   let tmp7 = null;
   const displayNameFontIdForMobileUser = createDisplayNameStylesMobile.getDisplayNameFontIdForMobileUser(user, guildId);
   if ("username" === roleStyle) {
     tmp7 = colorString;
   }
-  obj[2] = tmp7;
-  obj[3] = colorString;
+  obj2.linkColor = tmp7;
+  obj2.roleColor = colorString;
   let colorStrings = null;
   if (result) {
     colorStrings = author.colorStrings;
   }
-  obj[4] = colorStrings;
-  obj[5] = "dot" === roleStyle && null != colorString;
+  obj2.roleColors = colorStrings;
+  obj2.shouldShowRoleDot = "dot" === roleStyle && null != colorString;
   if (messageChannelId == null) {
     messageChannelId = message.channel_id;
   }
-  obj[6] = messageChannelId;
-  obj[8] = displayNameFontIdForMobileUser;
-  return obj;
+  obj2.messageChannelId = messageChannelId;
+  obj2.fontId = displayNameFontIdForMobileUser;
+  return obj2;
 };

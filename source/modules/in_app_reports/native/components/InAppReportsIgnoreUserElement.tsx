@@ -1,33 +1,35 @@
-// Module ID: 9046
-// Function ID: 9047
-// Name: IgnoreUserElement
-// Dependencies: [19, 1957, 4209, 1074, 21, 504, 4712, 4740, 9047, 9056, 1114, 6968, 2]
+// Module ID: 9073
+// Function ID: 9074
+// Name: InAppReportsIgnoreUserElement
+// Dependencies: [19, 1957, 4222, 1074, 21, 504, 4726, 4754, 9074, 9083, 1114, 6982, 2]
 // Exports: default
 
-// Module 9046 (IgnoreUserElement)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "markAllUserIdListsStale" /* 4209 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 9073 (InAppReportsIgnoreUserElement)
+import NicknameUtilsDefault from "NicknameUtils" /* 4726 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4754 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9074 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsIgnoreUserElement.tsx");
+const require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsIgnoreUserElement.tsx");
 
 export default function IgnoreUserElement(user) {
   user = user.user;
   const channelId = user.channelId;
   const reportId = user.reportId;
-  let stateFromStores;
-  let obj = user(reportId[5]);
-  const items = [closure_5];
+  const items = [RelationshipStore];
   const items1 = [user];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ isIgnored: closure_1_5.isIgnored(user.id), isBlocked: closure_1_5.isBlocked(user.id) }), items1);
+  const stateFromStoresObject = user(reportId[5]).useStateFromStoresObject(items, () => ({ isIgnored: RelationshipStore.isIgnored(user.id), isBlocked: RelationshipStore.isBlocked(user.id) }), items1);
   ({ isIgnored, isBlocked } = stateFromStoresObject);
-  obj1 = user(reportId[5]);
-  const items2 = [closure_4];
+  let obj = user(reportId[5]);
+  const items2 = [ChannelStore];
   const items3 = [channelId];
-  stateFromStores = obj1.useStateFromStores(items2, () => closure_1_4.getChannel(channelId), items3);
+  const stateFromStores = user(reportId[5]).useStateFromStores(items2, () => ChannelStore.getChannel(channelId), items3);
   const items4 = [stateFromStores, user];
   const memo = stateFromStores.useMemo(() => {
     let guild_id;
@@ -38,29 +40,27 @@ export default function IgnoreUserElement(user) {
     if (stateFromStores != null) {
       id = tmp.id;
     }
-    return channelId(reportId[6]).getName(guild_id, id, user);
+    return NicknameUtilsDefault.getName(guild_id, id, user);
   }, items4);
   const items5 = [user, reportId, channelId];
   let tmp8Result = null;
   if (null != user) {
-    obj = { title: null, disabledTitle: null, description: null, disabled: null, onPress: null, icon: null };
+    const obj3 = { title: null, disabledTitle: null, description: null, disabled: null, onPress: null, icon: null };
     const intl = tmp(tmp2[10]).intl;
-    obj = { username: null };
-    obj[0] = memo;
-    obj[0] = intl.formatToPlainString(tmp(tmp2[10]).t.U3yyFs, obj);
+    const obj4 = { username: memo };
+    obj3.title = intl.formatToPlainString(tmp(tmp2[10]).t.U3yyFs, obj4);
     const intl2 = tmp(tmp2[10]).intl;
-    obj1 = { username: null };
-    obj1[0] = memo;
-    obj[1] = intl2.formatToPlainString(tmp(tmp2[10]).t["264qVM"], obj1);
+    const obj5 = { username: memo };
+    obj3.disabledTitle = intl2.formatToPlainString(tmp(tmp2[10]).t["264qVM"], obj5);
     const intl3 = tmp(tmp2[10]).intl;
-    obj[2] = intl3.string(tmp(tmp2[10]).t.naWE6W);
+    obj3.description = intl3.string(tmp(tmp2[10]).t.naWE6W);
     if (!isIgnored) {
       isIgnored = isBlocked;
     }
-    obj[3] = isIgnored;
-    obj[4] = tmp6;
-    obj[5] = jsx(tmp(tmp2[11]).EyeSlashIcon, {});
-    tmp8Result = tmp8(channelId(tmp2[9]), obj);
+    obj3.disabled = isIgnored;
+    obj3.onPress = tmp6;
+    obj3.icon = jsx(tmp(tmp2[11]).EyeSlashIcon, {});
+    tmp8Result = tmp8(channelId(tmp2[9]), obj3);
     const tmp10 = channelId(tmp2[9]);
   }
   return tmp8Result;

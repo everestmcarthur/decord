@@ -1,35 +1,36 @@
-// Module ID: 17357
-// Function ID: 17358
-// Name: closeActionSheet
-// Dependencies: [32, 19, 17, 11631, 21, 4560, 576, 4527, 12, 8272, 4992, 4763, 11653, 1896, 1114, 4556, 11635, 5604, 5687, 5605, 4975, 1611, 7150, 7149, 7199, 6627, 2]
+// Module ID: 17388
+// Function ID: 17389
+// Name: FeedbackActionSheetV2
+// Dependencies: [32, 19, 17, 11657, 21, 4574, 576, 4541, 12, 8300, 5006, 4777, 11679, 1896, 1114, 4570, 11661, 5618, 5701, 5619, 4989, 1611, 7164, 7163, 7212, 6641, 2]
 // Exports: default
 
-// Module 17357 (closeActionSheet)
-import applyDefault from "apply" /* 12 */;
-import ThemesDefault from "Themes" /* 576 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4992 */;
-import usePreviousDefault from "usePrevious" /* 8272 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { FeedbackRating } from "FeedbackRating" /* 11631 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17388 (FeedbackActionSheetV2)
+import _modDef12 from "module_12" /* 12 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import useMountEffectDefault from "useMountEffect" /* 5006 */;
+import usePreviousDefault from "usePrevious" /* 8300 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = fn;
 function closeActionSheet() {
-  ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
+  ActionSheetActionCreatorsDefault.hideActionSheet();
 }
-({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: null, ratingsBody: null, problemsList: null };
-createCacheKey = { padding: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { textAlign: "center" };
-createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_16 };
-let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { marginBottom: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/feedback/native/FeedbackActionSheetV2.tsx");
+const View = fn(17).View;
+const FeedbackRating = fn(11657).FeedbackRating;
+const jsxProd = fn(21);
+({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { padding: nativeDefault.space.PX_16 }, ratingsBody: { textAlign: "center" }, problemsList: null };
+let obj3 = { padding: nativeDefault.space.PX_16 };
+obj2.problemsList = { marginBottom: nativeDefault.space.PX_16 };
+let closure_10 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/feedback/native/FeedbackActionSheetV2.tsx");
 
 export default function FeedbackActionSheetV2(optionsTree) {
   ({ headerLabel, ratingBody, hideDontShowAgainCheckbox, initialRating } = optionsTree);
@@ -38,113 +39,99 @@ export default function FeedbackActionSheetV2(optionsTree) {
     initialRating = null;
   }
   optionsTree = optionsTree.optionsTree;
-  ({ onMount: importDefault, trackOpen: dependencyMap, trackReport: closure_3 } = optionsTree);
+  ({ onMount: importDefault, trackOpen: dependencyMap, trackReport: _slicedToArray } = optionsTree);
   let ref;
-  closure_5 = undefined;
-  let first;
-  let callback2;
-  let first1;
-  let callback3;
-  let first2;
-  closure_11 = undefined;
-  let first4;
+  first = undefined;
+  closure_7 = undefined;
+  first1 = undefined;
+  closure_9 = undefined;
+  first2 = undefined;
+  onPress = undefined;
+  first4 = undefined;
   closure_13 = undefined;
-  let first5;
+  first5 = undefined;
   closure_15 = undefined;
   c16 = undefined;
   c17 = undefined;
   closure_18 = undefined;
   closure_19 = undefined;
   let tmp = first2();
-  let obj = ref;
   ref = ref.useRef(null);
   const tmp5 = usePreviousDefault(optionsTree);
   closure_5 = tmp5;
-  obj1 = applyDefault;
-  const tmp7 = callback(ref.useState(obj1.shuffle(optionsTree.map((problemOptions) => {
+  [first, closure_7] = ref.useState(_modDef12.shuffle(optionsTree.map((problemOptions) => {
     const obj = {};
     const merged = Object.assign(problemOptions);
-    const obj2 = callback(table[8]);
+    const obj2 = closure_1_1(dependencyMap[8]);
     let freeformConfig = problemOptions.freeformConfig;
     if (freeformConfig == null) {
       freeformConfig = [];
     }
-    obj.problemOptions = callback(table[8]).shuffle(problemOptions.problemOptions).concat(freeformConfig);
+    obj.problemOptions = closure_1_1(dependencyMap[8]).shuffle(problemOptions.problemOptions).concat(freeformConfig);
     return obj;
-  }))), 2);
-  first = tmp7[0];
-  callback2 = tmp7[1];
+  })));
   const items = [optionsTree, tmp5];
   const effect = ref.useEffect(() => {
     if (!obj.isEqual(closure_5, optionsTree)) {
-      callback2(closure_1_1(closure_1_2[8]).shuffle(optionsTree.map((problemOptions) => {
+      closure_7(_modDef12.shuffle(optionsTree.map((problemOptions) => {
         const obj = {};
         const merged = Object.assign(problemOptions);
-        const obj2 = callback(table[8]);
+        const obj2 = closure_1_1(dependencyMap[8]);
         let freeformConfig = problemOptions.freeformConfig;
         if (freeformConfig == null) {
           freeformConfig = [];
         }
-        obj.problemOptions = callback(table[8]).shuffle(problemOptions.problemOptions).concat(freeformConfig);
+        obj.problemOptions = closure_1_1(dependencyMap[8]).shuffle(problemOptions.problemOptions).concat(freeformConfig);
         return obj;
       })));
-      const tmpResult = closure_1_1(closure_1_2[8]);
+      const tmpResult = _modDef12;
     }
   }, items);
-  const tmp9 = callback(ref.useState(false), 2);
-  first1 = tmp9[0];
-  callback3 = tmp9[1];
-  let tmp11 = callback(ref.useState(initialRating), 2);
-  first2 = tmp11[0];
-  closure_11 = tmp11[1];
+  [first1, closure_9] = ref.useState(false);
+  [first2, onPress] = ref.useState(initialRating);
   let first3 = null;
   if (1 === first.length) {
     first3 = first[0];
   }
-  let tmp6Result = tmp6(ref.useState(first3), 2);
-  first4 = tmp6Result[0];
-  closure_13 = tmp6Result[1];
-  tmp6Result = tmp6(obj.useState(null), 2);
-  first5 = tmp6Result[0];
-  closure_15 = tmp6Result[1];
-  [c16, c17] = callback(obj.useState(false), 2);
-  useMountLayoutEffectDefault(() => {
-    if (closure_1 != null) {
+  [first4, closure_13] = ref.useState(first3);
+  [first5, closure_15] = ref.useState(null);
+  [c16, c17] = ref.useState(false);
+  useMountEffectDefault(() => {
+    if (importDefault != null) {
       tmp();
     }
-    callback();
+    dependencyMap();
   });
-  let obj2 = optionsTree(4992);
-  const unmountEffect = obj2.useUnmountEffect(() => {
+  const tmp6Result4 = _slicedToArray(ref.useState(false), 2);
+  const unmountEffect = optionsTree(5006).useUnmountEffect(() => {
     if (c16) {
-      let obj = { rating: null, category: null, reason: null, dontShowAgain: null };
-      obj[0] = first2;
-      let value;
-      const obj2 = closure_1_1(closure_1_2[11]);
+      const obj3 = { rating: first2, category: null, reason: null, dontShowAgain: null };
+      value = undefined;
+      const obj2 = ModalActionCreatorsDefault;
       if (first4 != null) {
         value = iter.value;
       }
-      obj = { result: null, trackReport: null, titleLabel: null, descriptionLabel: null, hideHelpdeskLink: null };
-      obj[1] = value;
-      obj[2] = first5;
-      obj[3] = first1;
-      obj[0] = obj;
-      obj[1] = function trackReport(rating) {
+      const obj4 = { result: null, trackReport: null, titleLabel: null, descriptionLabel: null, hideHelpdeskLink: null };
+      obj3.category = value;
+      obj3.reason = first5;
+      obj3.dontShowAgain = first1;
+      obj4.result = obj3;
+      obj4.trackReport = function trackReport(rating) {
         const obj = { rating: rating.rating, category: rating.category, reason: rating.reason, dontShowAgain: rating.dontShowAgain, feedback: null };
         let str = rating.feedback;
         if (str == null) {
           str = "";
         }
-        obj[4] = str;
-        closure_3(obj);
+        obj.feedback = str;
+        closure_1_3(obj);
       };
       let problemsHeader;
       if (first4 != null) {
         problemsHeader = iter.problemsHeader;
       }
-      obj[2] = problemsHeader;
-      const intl = tmp10(tmp9[14]).intl;
-      obj[3] = intl.string(optionsTree(closure_1_2[14]).t.h95hcn);
+      obj4.titleLabel = problemsHeader;
+      const intl = tmp10(1114).intl;
+      obj4.descriptionLabel = intl.string(util.t.h95hcn);
       let hideHelpdeskLink;
       if (first4 != null) {
         const freeformConfig = iter.freeformConfig;
@@ -152,34 +139,31 @@ export default function FeedbackActionSheetV2(optionsTree) {
           hideHelpdeskLink = freeformConfig.hideHelpdeskLink;
         }
       }
-      obj[4] = hideHelpdeskLink;
-      obj2.pushLazy(optionsTree(closure_1_2[13])(closure_1_2[12], closure_1_2.paths), obj);
-      const tmp11 = optionsTree(closure_1_2[13])(closure_1_2[12], closure_1_2.paths);
+      obj4.hideHelpdeskLink = hideHelpdeskLink;
+      obj2.pushLazy(asyncRequireImpl(11679, dependencyMap.paths), obj4);
+      const tmp11 = asyncRequireImpl(11679, dependencyMap.paths);
     } else {
-      obj = { rating: null, category: null, reason: null, dontShowAgain: null, feedback: "" };
-      obj[0] = first2;
-      value = undefined;
+      let obj = { rating: first2, category: null, reason: null, dontShowAgain: null, feedback: "" };
+      value2 = undefined;
       if (first4 != null) {
-        value = first4.value;
+        value2 = first4.value;
       }
-      if (value == null) {
-        value = null;
+      if (value2 == null) {
+        value2 = null;
       }
-      obj[1] = value;
-      obj[2] = first5;
-      obj[3] = first1;
-      closure_3(obj);
-      const tmp = closure_3;
+      obj.category = value2;
+      obj.reason = first5;
+      obj.dontShowAgain = first1;
+      _slicedToArray(obj);
     }
   });
-  callback = obj.useCallback((arg0) => {
-    callback4(arg0);
-    if (arg0 === first.GOOD) {
-      callback5(null);
-      callback6(null);
+  const callback = obj.useCallback((arg0) => {
+    closure_11(arg0);
+    if (arg0 === FeedbackRating.GOOD) {
+      closure_13(null);
+      closure_15(null);
       _undefined(false);
-      closure_1_1(closure_1_2[7]).hideActionSheet();
-      const obj = closure_1_1(closure_1_2[7]);
+      ActionSheetActionCreatorsDefault.hideActionSheet();
     } else {
       const current = ref.current;
       if (current != null) {
@@ -188,8 +172,8 @@ export default function FeedbackActionSheetV2(optionsTree) {
     }
   }, []);
   closure_18 = obj.useCallback((arg0) => {
-    callback5(arg0);
-    callback6(null);
+    closure_13(arg0);
+    closure_15(null);
     const current = ref.current;
     if (current != null) {
       current.expandActionSheet();
@@ -197,7 +181,7 @@ export default function FeedbackActionSheetV2(optionsTree) {
   }, []);
   const items1 = [first4];
   closure_19 = obj.useCallback((value) => {
-    callback6(value);
+    closure_15(value);
     if (null != first4) {
       if (null != value) {
         value = undefined;
@@ -207,7 +191,7 @@ export default function FeedbackActionSheetV2(optionsTree) {
         if (value === value.value) {
           _undefined(true);
         }
-        closure_1_1(closure_1_2[7]).hideActionSheet();
+        ActionSheetActionCreatorsDefault.hideActionSheet();
       }
     }
     _undefined(false);
@@ -215,101 +199,93 @@ export default function FeedbackActionSheetV2(optionsTree) {
   if (null == first2) {
     let tmp35 = null;
     if (null != ratingBody) {
-      obj = { style: null, variant: "text-md/medium", color: "text-default", children: null };
-      obj[0] = tmp.ratingsBody;
-      obj[3] = ratingBody;
-      tmp35 = callback2(tmp20(4556).Text, obj);
+      let obj4 = { style: tmp.ratingsBody, variant: "text-md/medium", color: "text-default", children: ratingBody };
+      tmp35 = closure_7(tmp20(4570).Text, obj4);
     }
     const items2 = [tmp35, , ];
-    obj = { ratingOptions: null, selectedRating: null, onChangeRating: null };
-    obj[0] = ratingOptions;
-    obj[1] = first2;
-    obj[2] = callback;
-    items2[1] = callback2(tmp3(11635), obj);
+    const obj5 = { ratingOptions, selectedRating: first2, onChangeRating: callback };
+    items2[1] = closure_7(tmp3(11661), obj5);
     let tmp37Result = null;
     if (!hideDontShowAgainCheckbox) {
-      obj1 = { start: true, end: true, checked: null, label: null, onPress: null };
-      obj1[2] = first1;
+      const obj6 = { start: true, end: true, checked: first1, label: null, onPress: null };
       const intl3 = tmp20(1114).intl;
-      obj1[3] = intl3.string(tmp20(1114).t["5E9SB9"]);
-      obj1[4] = function onPress() {
-        return callback3(!first1);
+      obj6.label = intl3.string(tmp20(1114).t["5E9SB9"]);
+      obj6.onPress = function onPress() {
+        return closure_9(!first1);
       };
-      tmp37Result = tmp37(tmp20(5604).TableCheckboxRow, obj1);
+      tmp37Result = tmp37(tmp20(5618).TableCheckboxRow, obj6);
     }
-    obj2 = { children: null };
+    const obj7 = { children: null };
     items2[2] = tmp37Result;
-    obj2[0] = items2;
-    let tmp33Result = callback3(first1, obj2);
+    obj7.children = items2;
+    let tmp33Result = closure_9(first1, obj7);
     let problemsHeader = headerLabel;
-    const tmp33 = callback3;
-    const tmp34 = first1;
-    tmp37 = callback2;
+    tmp37 = closure_7;
   } else {
     if (first2 !== first.GOOD) {
       if (null == first4) {
-        const obj3 = { children: null };
-        const obj4 = { style: null, children: null };
-        obj4[0] = tmp.problemsList;
-        const obj5 = { hasIcons: false, children: null };
-        obj5[1] = first.map((label) => {
-          closure_0 = label;
-          return callback2(optionsTree(closure_1_2[19]).TableRow, {
-            label: label.label,
-            labelLineClamp: 2,
-            onPress() {
-              return closure_1_18(closure_0);
-            }
-          }, arg1);
-        });
-        obj4[1] = callback2(tmp20(5687).TableRowGroup, obj5);
-        const items3 = [callback2(closure_5, obj4), ];
-        const obj6 = { variant: "secondary", size: "sm", text: null, onPress: null };
-        const intl2 = tmp20(1114).intl;
-        obj6[2] = intl2.string(tmp20(1114).t["13/7kX"]);
-        obj6[3] = function onPress() {
-          return callback4(null);
+        const obj8 = { children: null };
+        const obj9 = { style: tmp.problemsList, children: null };
+        const obj10 = {
+          hasIcons: false,
+          children: first.map((label, index) => {
+                  closure_0 = label;
+                  return closure_7(optionsTree(5619).TableRow, {
+                    label: label.label,
+                    labelLineClamp: 2,
+                    onPress() {
+                      return closure_18(closure_0);
+                    }
+                  }, index);
+                })
         };
-        items3[1] = callback2(tmp20(4975).Button, obj6);
-        obj3[0] = items3;
-        tmp33Result = callback3(first1, obj3);
+        obj9.children = closure_7(tmp20(5701).TableRowGroup, obj10);
+        const items3 = [closure_7(closure_5, obj9), ];
+        const obj11 = { variant: "secondary", size: "sm", text: null, onPress: null };
+        const intl2 = tmp20(1114).intl;
+        obj11.text = intl2.string(tmp20(1114).t["13/7kX"]);
+        obj11.onPress = function onPress() {
+          return closure_11(null);
+        };
+        items3[1] = closure_7(tmp20(4989).Button, obj11);
+        obj8.children = items3;
+        tmp33Result = closure_9(first1, obj8);
         problemsHeader = categoriesHeader;
       }
     }
     problemsHeader = headerLabel;
     if (tmp23) {
       problemsHeader = first4.problemsHeader;
-      const obj7 = { children: null };
-      const obj8 = { style: null, children: null };
-      obj8[0] = tmp.problemsList;
-      const obj9 = { hasIcons: false, children: null };
+      const obj12 = { children: null };
+      const obj13 = { style: tmp.problemsList, children: null };
+      const obj14 = { hasIcons: false, children: null };
       const problemOptions = first4.problemOptions;
-      obj9[1] = problemOptions.map((label) => {
+      obj14.children = problemOptions.map((label, index) => {
         closure_0 = label;
-        return callback2(optionsTree(closure_1_2[19]).TableRow, {
+        return closure_7(optionsTree(5619).TableRow, {
           label: label.label,
           labelLineClamp: 2,
           onPress() {
-            return closure_1_19(closure_0);
+            return closure_19(closure_0);
           }
-        }, arg1);
+        }, index);
       });
-      obj8[1] = callback2(tmp20(5687).TableRowGroup, obj9);
-      const items4 = [callback2(closure_5, obj8), ];
-      const obj10 = { variant: "secondary", size: "sm", text: null, onPress: null };
+      obj13.children = closure_7(tmp20(5701).TableRowGroup, obj14);
+      const items4 = [closure_7(closure_5, obj13), ];
+      const obj15 = { variant: "secondary", size: "sm", text: null, onPress: null };
       let intl = tmp20(1114).intl;
-      obj10[2] = intl.string(tmp20(1114).t["13/7kX"]);
-      obj10[3] = function onPress() {
+      obj15.text = intl.string(tmp20(1114).t["13/7kX"]);
+      obj15.onPress = function onPress() {
         if (1 === first.length) {
-          let tmp3 = callback4(null);
+          let tmp3 = closure_11(null);
         } else {
-          tmp3 = callback5(null);
+          tmp3 = closure_13(null);
         }
         return tmp3;
       };
-      items4[1] = callback2(tmp20(4975).Button, obj10);
-      obj7[0] = items4;
-      tmp33Result = callback3(first1, obj7);
+      items4[1] = closure_7(tmp20(4989).Button, obj15);
+      obj12.children = items4;
+      tmp33Result = closure_9(first1, obj12);
     }
     tmp23 = null != first4 && null == first5;
   }
@@ -319,22 +295,23 @@ export default function FeedbackActionSheetV2(optionsTree) {
     num = 0;
   }
   const sum = 232 + num + bottom;
-  const obj11 = { scrollable: true, ref, startHeight: sum, maxHeight: null, header: null, children: null };
+  const obj16 = { scrollable: true, ref, startHeight: sum, maxHeight: null, header: null, children: null };
   let tmp41;
   if (null == first2) {
     tmp41 = sum;
   }
-  obj11[3] = tmp41;
-  const obj12 = { title: problemsHeader, trailing: null };
+  obj16.maxHeight = tmp41;
+  const obj17 = { title: problemsHeader, trailing: null };
   let tmp40Result = null;
   if (showHeaderCloseButton) {
-    const obj13 = { onPress: null };
-    obj13[0] = closure_11;
-    tmp40Result = tmp40(tmp20(7199).ActionSheetCloseButton, obj13);
+    const obj18 = { onPress };
+    tmp40Result = tmp40(tmp20(7212).ActionSheetCloseButton, obj18);
   }
-  obj12[1] = tmp40Result;
-  obj11[4] = callback2(optionsTree(7149).BottomSheetTitleHeader, obj12);
+  obj17.trailing = tmp40Result;
+  obj16.header = closure_7(optionsTree(7163).BottomSheetTitleHeader, obj17);
+  const obj19 = { contentContainerStyle: null, children: tmp33Result };
   const items5 = [tmp.container, { paddingBottom: tmp.container.padding + bottom }];
-  obj11[5] = callback2(optionsTree(6627).BottomSheetScrollView, { contentContainerStyle: items5, children: tmp33Result });
-  return callback2(optionsTree(7150).BottomSheet, obj11);
+  obj19.contentContainerStyle = items5;
+  obj16.children = closure_7(optionsTree(6641).BottomSheetScrollView, obj19);
+  return closure_7(optionsTree(7164).BottomSheet, obj16);
 };

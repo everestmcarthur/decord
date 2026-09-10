@@ -1,13 +1,13 @@
-// Module ID: 16330
-// Function ID: 16331
+// Module ID: 16361
+// Function ID: 16362
 // Name: isGuildsBarGuildDataEqual
 // Dependencies: [2]
 // Exports: default
 
-// Module 16330 (isGuildsBarGuildDataEqual)
-import set from "set" /* 2 */;
+// Module 16361 (isGuildsBarGuildDataEqual)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guilds_bar/native/utils/isGuildsBarGuildDataEqual.tsx");
+const result = size.fileFinishedImporting("modules/guilds_bar/native/utils/isGuildsBarGuildDataEqual.tsx");
 
 export default function isGuildsBarGuildDataEqual(icon, icon2) {
   return icon.icon === icon2.icon && icon.guildName === icon2.guildName;

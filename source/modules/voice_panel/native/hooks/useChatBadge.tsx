@@ -1,23 +1,26 @@
-// Module ID: 17133
-// Function ID: 17134
+// Module ID: 17164
+// Function ID: 17165
 // Name: useChatBadge
-// Dependencies: [4575, 504, 2]
+// Dependencies: [4589, 504, 2]
 // Exports: default
 
-// Module 17133 (useChatBadge)
-import closure_2 from "generateOldThreadCutoff" /* 4575 */;
+// Module 17164 (useChatBadge)
+import ReadStateStore from "ReadStateStore" /* 4589 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useChatBadge.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useChatBadge.tsx");
 
 export default function useChatBadge(arg0) {
-  const _require = arg0;
-  const items = [closure_2];
-  return _require(504).useStateFromStores(items, () => {
+  _require = arg0;
+  const items = [ReadStateStore];
+  return require("initialize").useStateFromStores(items, () => {
     let str = "mention";
-    if (closure_1_2.getMentionCount(closure_0) <= 0) {
+    if (ReadStateStore.getMentionCount(closure_0) <= 0) {
       let str2 = null;
-      if (closure_1_2.hasUnread(closure_0)) {
+      if (ReadStateStore.hasUnread(closure_0)) {
         str2 = "unread";
       }
       str = str2;

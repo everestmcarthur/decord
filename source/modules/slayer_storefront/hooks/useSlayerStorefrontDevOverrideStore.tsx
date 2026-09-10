@@ -1,22 +1,24 @@
-// Module ID: 8798
-// Function ID: 8799
+// Module ID: 8827
+// Function ID: 8828
 // Name: useSlayerStorefrontDevOverrideStore
 // Dependencies: [560, 2]
 
-// Module 8798 (useSlayerStorefrontDevOverrideStore)
-import set from "set" /* 2 */;
-import keys from "keys" /* 560 */;
+// Module 8827 (useSlayerStorefrontDevOverrideStore)
+import module_560 from "module_560" /* 560 */;
+import size from "module_2" /* 2 */;
 
-const tmp2 = keys.create()((arg0) => {
+const result = size.fileFinishedImporting("modules/slayer_storefront/hooks/useSlayerStorefrontDevOverrideStore.tsx");
+
+export const useSlayerStorefrontDevOverrideStore = module_560.create()((arg0) => {
   closure_0 = arg0;
   return {
     overrideApplicationId: null,
     setOverrideApplicationId(overrideApplicationId) {
-      return callback({ overrideApplicationId });
+      return closure_0({ overrideApplicationId });
     },
     showSelfActivity: false,
     setShowSelfActivity(showSelfActivity) {
-      return callback({ showSelfActivity });
+      return closure_0({ showSelfActivity });
     },
     recommendationApplicationIds: null,
     setRecommendationApplicationIds(str) {
@@ -28,22 +30,19 @@ const tmp2 = keys.create()((arg0) => {
     },
     overrideNitroEligibilityForSocialLayerStorefront: false,
     setOverrideNitroEligibilityForSocialLayerStorefront(overrideNitroEligibilityForSocialLayerStorefront) {
-      return callback({ overrideNitroEligibilityForSocialLayerStorefront });
+      return closure_0({ overrideNitroEligibilityForSocialLayerStorefront });
     },
     isNitroEligibleForSocialLayerStorefront: false,
     setIsNitroEligibleForSocialLayerStorefront(isNitroEligibleForSocialLayerStorefront) {
-      return callback({ isNitroEligibleForSocialLayerStorefront });
+      return closure_0({ isNitroEligibleForSocialLayerStorefront });
     },
     overrideCurrentPremiumPlanId: false,
     setOverrideCurrentPremiumPlanId(overrideCurrentPremiumPlanId) {
-      return callback({ overrideCurrentPremiumPlanId });
+      return closure_0({ overrideCurrentPremiumPlanId });
     },
     currentPremiumPlanId: null,
     setCurrentPremiumPlanId(currentPremiumPlanId) {
-      return callback({ currentPremiumPlanId });
+      return closure_0({ currentPremiumPlanId });
     }
   };
 });
-const result = set.fileFinishedImporting("modules/slayer_storefront/hooks/useSlayerStorefrontDevOverrideStore.tsx");
-
-export const useSlayerStorefrontDevOverrideStore = tmp2;

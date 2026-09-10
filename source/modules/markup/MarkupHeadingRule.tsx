@@ -1,16 +1,17 @@
-// Module ID: 5024
-// Function ID: 5025
-// Name: match
-// Dependencies: [4257, 2]
+// Module ID: 5038
+// Function ID: 5039
+// Name: MarkupHeadingRule
+// Dependencies: [4270, 2]
 
-// Module 5024 (match)
-import t from "t" /* 4257 */;
-import tDefault from "t" /* 4257 */;
+// Module 5038 (MarkupHeadingRule)
+import _mod4270 from "module_4270" /* 4270 */;
 
-require = arg1;
+const _modDef4270 = _mod4270;
+
+require = fn;
 const re2 = /\n$/;
 let obj = {};
-const merged = Object.assign(tDefault.defaultRules.heading);
+const merged = Object.assign(_modDef4270.defaultRules.heading);
 obj.requiredFirstCharacters = [" ", "#"];
 obj.match = function match(arg0, allowHeading, str) {
   let tmp = null;
@@ -20,11 +21,11 @@ obj.match = function match(arg0, allowHeading, str) {
         tmp = null;
       }
     }
-    tmp = t.anyScopeRegex(/^ *(#{1,3})(?:\s+)((?!\s*#{1,3}\s)[^\n]+?)#*\s*(?:\n|$)/)(arg0, allowHeading, str);
-    const obj = t;
+    tmp = _mod4270.anyScopeRegex(/^ *(#{1,3})(?:\s+)((?!\s*#{1,3}\s)[^\n]+?)#*\s*(?:\n|$)/)(arg0, allowHeading, str);
   }
   return tmp;
 };
-const result = require("set").fileFinishedImporting("modules/markup/MarkupHeadingRule.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/markup/MarkupHeadingRule.tsx");
 
 export default obj;

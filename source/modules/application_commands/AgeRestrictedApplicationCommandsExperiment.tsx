@@ -1,14 +1,16 @@
-// Module ID: 9412
-// Function ID: 9413
-// Name: getUnitId
+// Module ID: 9439
+// Function ID: 9440
+// Name: AgeRestrictedApplicationCommandsExperiment
 // Dependencies: [1434, 2]
 
-// Module 9412 (getUnitId)
-import getUnitIdDefault from "getUnitId" /* 1434 */;
+// Module 9439 (AgeRestrictedApplicationCommandsExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
 
-const obj = { 1: null };
-obj[1] = { enabled: true };
-const tmp2 = getUnitIdDefault({ kind: "user", name: "2026-05-age-restricted-application-commands", defaultConfig: { enabled: false }, variations: obj });
-const result = require("set").fileFinishedImporting("modules/application_commands/AgeRestrictedApplicationCommandsExperiment.tsx");
+const obj = { kind: "user", name: "2026-05-age-restricted-application-commands", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj.variations = obj2;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/application_commands/AgeRestrictedApplicationCommandsExperiment.tsx");
 
-export default tmp2;
+export default apex_ApexExperimentDefault(obj);

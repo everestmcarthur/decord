@@ -1,40 +1,40 @@
-// Module ID: 8907
-// Function ID: 8908
-// Name: TwinButtons
-// Dependencies: [8908, 2, 8909, 8910, 8911, 8912, 8913, 8915, 8601, 8602, 5609, 8916]
+// Module ID: 8934
+// Function ID: 8935
+// Name: native
+// Dependencies: [8935, 2, 8936, 8937, 8938, 8939, 8940, 8942, 8629, 8630, 5623, 8943]
 
-// Module 8907 (TwinButtons)
-import set from "set" /* 2 */;
-import AnimatedPressableHighlight from "AnimatedPressableHighlight" /* 5609 */;
-import BackgroundBlurView from "BackgroundBlurView" /* 8601 */;
-import BlurTheme from "BlurTheme" /* 8602 */;
-import PX_4 from "PX_4" /* 8908 */;
-import TwinButtons from "TwinButtons" /* 8909 */;
-import HeaderButton from "HeaderButton" /* 8910 */;
-import InputButton from "InputButton" /* 8911 */;
-import PressableScale from "PressableScale" /* 8912 */;
-import CollapsableButton from "CollapsableButton" /* 8913 */;
-import useCollapsibleFloatingActionButtonState from "useCollapsibleFloatingActionButtonState" /* 8915 */;
-import ActionSheetDragHandle from "ActionSheetDragHandle" /* 8916 */;
+// Module 8934 (native)
+import AnimatedPressableHighlight from "AnimatedPressableHighlight" /* 5623 */;
+import BackgroundBlurView from "BackgroundBlurView" /* 8629 */;
+import BackgroundBlurFill from "BackgroundBlurFill" /* 8630 */;
+import ActionSheetDragHandleConstants from "ActionSheetDragHandleConstants" /* 8935 */;
+import TwinButtons from "TwinButtons" /* 8936 */;
+import Button_HeaderButton from "Button/HeaderButton" /* 8937 */;
+import InputButton from "InputButton" /* 8938 */;
+import PressableScale from "PressableScale" /* 8939 */;
+import CollapsibleFloatingActionButton from "CollapsibleFloatingActionButton" /* 8940 */;
+import CollapsibleFloatingActionButtonState from "CollapsibleFloatingActionButtonState" /* 8942 */;
+import ActionSheetDragHandle from "ActionSheetDragHandle" /* 8943 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("design/components/experimental/native.tsx");
+const result = size.fileFinishedImporting("design/components/experimental/native.tsx");
 
 export const TwinButtons = TwinButtons.TwinButtons;
-export const HeaderButton = HeaderButton.HeaderButton;
-export const HeaderButtonProps = HeaderButton.HeaderButtonProps;
+export const HeaderButton = Button_HeaderButton.HeaderButton;
+export const HeaderButtonProps = Button_HeaderButton.HeaderButtonProps;
 export const InputButton = InputButton.InputButton;
 export const InputButtonProps = InputButton.InputButtonProps;
 export const PressableScale = PressableScale.PressableScale;
 export const PressableScaleProps = PressableScale.PressableScaleProps;
-export const CollapsibleFloatingActionButton = CollapsableButton.CollapsibleFloatingActionButton;
-export const CollapsibleFloatingActionButtonProps = CollapsableButton.CollapsibleFloatingActionButtonProps;
-export const useCollapsibleFloatingActionButtonState = useCollapsibleFloatingActionButtonState.useCollapsibleFloatingActionButtonState;
-export const useCollapsibleFloatingActionButtonScroll = useCollapsibleFloatingActionButtonState.useCollapsibleFloatingActionButtonScroll;
+export const CollapsibleFloatingActionButton = CollapsibleFloatingActionButton.CollapsibleFloatingActionButton;
+export const CollapsibleFloatingActionButtonProps = CollapsibleFloatingActionButton.CollapsibleFloatingActionButtonProps;
+export const useCollapsibleFloatingActionButtonState = CollapsibleFloatingActionButtonState.useCollapsibleFloatingActionButtonState;
+export const useCollapsibleFloatingActionButtonScroll = CollapsibleFloatingActionButtonState.useCollapsibleFloatingActionButtonScroll;
 export const BackgroundBlurView = BackgroundBlurView.BackgroundBlurView;
-export const BackgroundBlurFill = BlurTheme.BackgroundBlurFill;
-export const BackgroundBlurFillAnimated = BlurTheme.BackgroundBlurFillAnimated;
-export const BlurTheme = BlurTheme.BlurTheme;
-export const BlurStyle = BlurTheme.BlurStyle;
+export const BackgroundBlurFill = BackgroundBlurFill.BackgroundBlurFill;
+export const BackgroundBlurFillAnimated = BackgroundBlurFill.BackgroundBlurFillAnimated;
+export const BlurTheme = BackgroundBlurFill.BlurTheme;
+export const BlurStyle = BackgroundBlurFill.BlurStyle;
 export const AnimatedPressableHighlight = AnimatedPressableHighlight.AnimatedPressableHighlight;
 export const ActionSheetDragHandle = ActionSheetDragHandle.ActionSheetDragHandle;
-export const ACTION_SHEET_DRAG_HANDLE_HEIGHT = PX_4.DRAG_HANDLE_HEIGHT;
+export const ACTION_SHEET_DRAG_HANDLE_HEIGHT = ActionSheetDragHandleConstants.DRAG_HANDLE_HEIGHT;

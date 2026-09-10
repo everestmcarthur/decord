@@ -1,37 +1,35 @@
-// Module ID: 12556
-// Function ID: 12557
+// Module ID: 12582
+// Function ID: 12583
 // Name: GuildPowerupsSectionHeader
-// Dependencies: [17, 21, 4560, 576, 8095, 4556, 2]
+// Dependencies: [17, 21, 4574, 576, 8111, 4570, 2]
 // Exports: default
 
-// Module 12556 (GuildPowerupsSectionHeader)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Text from "Text" /* 4556 */;
-import apexExperiment from "apexExperiment" /* 8095 */;
+// Module 12582 (GuildPowerupsSectionHeader)
+import _mod17 from "module_17" /* 17 */;
+import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 8111 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import createStyles from "createStyles" /* 4574 */;
+import size from "module_2" /* 2 */;
 
-const View = get_ActivityIndicator.View;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-let obj = { headerContainer: null };
-obj = { padding: ThemesDefault.space.PX_16 };
-obj[0] = obj;
-let closure_5 = createCacheKey.createStyles(obj);
-const result = set.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsSectionHeader.tsx");
+const View = _mod17.View;
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const obj = { headerContainer: { padding: nativeDefault.space.PX_16 } };
+let closure_5 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsSectionHeader.tsx");
 
 export default function GuildPowerupsSectionHeader(arg0) {
   ({ title, description } = arg0);
-  let obj = apexExperiment;
-  obj = { style: callback2().headerContainer, children: null };
-  const manaTypeConsolidationExperiment = obj.useManaTypeConsolidationExperiment("GuildPowerupsSectionHeader");
-  const items = [callback(Text.Text, { variant: "heading-lg/semibold", accessibilityRole: "header", children: title }), ];
+  const tmp = closure_5();
+  const obj2 = { style: tmp.headerContainer, children: null };
+  const manaTypeConsolidationExperiment = ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("GuildPowerupsSectionHeader");
+  const items = [React3(Text_Text.Text, { variant: "heading-lg/semibold", accessibilityRole: "header", children: title }), ];
   let str = "text-md/normal";
   if (manaTypeConsolidationExperiment) {
     str = "experimental/body-sm/normal";
   }
-  items[1] = callback(Text.Text, { variant: str, children: description });
-  obj[1] = items;
-  return closure_4(View, obj);
+  items[1] = React3(Text_Text.Text, { variant: str, children: description });
+  obj2.children = items;
+  return React4(View, obj2);
 };

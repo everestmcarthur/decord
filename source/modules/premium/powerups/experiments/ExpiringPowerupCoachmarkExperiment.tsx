@@ -1,15 +1,16 @@
-// Module ID: 12511
-// Function ID: 12512
-// Name: useExpiringPowerupCoachmarkEnabled
+// Module ID: 12537
+// Function ID: 12538
+// Name: ExpiringPowerupCoachmarkExperiment
 // Dependencies: [1434, 2]
 // Exports: useExpiringPowerupCoachmarkEnabled
 
-// Module 12511 (useExpiringPowerupCoachmarkEnabled)
-import getUnitIdDefault from "getUnitId" /* 1434 */;
+// Module 12537 (ExpiringPowerupCoachmarkExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
 
-const tmp2 = getUnitIdDefault({ name: "2026-02-expiring-powerup-coachmark", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
+const tmp2 = apex_ApexExperimentDefault({ name: "2026-02-expiring-powerup-coachmark", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 let closure_0 = tmp2;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/experiments/ExpiringPowerupCoachmarkExperiment.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/experiments/ExpiringPowerupCoachmarkExperiment.tsx");
 
 export default tmp2;
 export const useExpiringPowerupCoachmarkEnabled = function useExpiringPowerupCoachmarkEnabled(useFeaturedExpiringPowerup) {

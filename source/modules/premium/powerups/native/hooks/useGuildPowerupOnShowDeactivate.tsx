@@ -1,25 +1,23 @@
-// Module ID: 12543
-// Function ID: 12544
+// Module ID: 12569
+// Function ID: 12570
 // Name: useGuildPowerupOnShowDeactivate
-// Dependencies: [19, 21, 12544, 1896, 4906, 2]
+// Dependencies: [19, 21, 12570, 1896, 4920, 2]
 // Exports: default
 
-// Module 12543 (useGuildPowerupOnShowDeactivate)
+// Module 12569 (useGuildPowerupOnShowDeactivate)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import useAlertStore from "useAlertStore" /* 4920 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let closure_4 = importAllResult.lazy(() => asyncRequireImpl(12544, dependencyMap.paths));
-const result = require("set").fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnShowDeactivate.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+let closure_4 = noop.lazy(() => asyncRequireImpl(12570, dependencyMap.paths));
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnShowDeactivate.tsx");
 
-export default function useGuildPowerupOnShowDeactivate(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  const items = [arg0, arg1];
-  return importAllResult.useCallback(() => {
-    let obj = callback(table[4]);
-    obj = { guildId: callback, powerup: table };
-    obj.openAlert("guild-powerups-deactivate-alert", closure_1_3(closure_1_4, obj));
+export default function useGuildPowerupOnShowDeactivate(guildId, powerup) {
+  const items = [guildId, powerup];
+  return noop.useCallback(() => {
+    useAlertStore.openAlert("guild-powerups-deactivate-alert", <closure_4 guildId={guildId} powerup={powerup} />);
   }, items);
 };

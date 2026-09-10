@@ -1,29 +1,31 @@
-// Module ID: 12173
-// Function ID: 12174
+// Module ID: 12199
+// Function ID: 12200
 // Name: useAnimationDelayedAutoFocus
-// Dependencies: [19, 12166, 2]
+// Dependencies: [19, 12192, 2]
 // Exports: useAnimationDelayedAutoFocus
 
-// Module 12173 (useAnimationDelayedAutoFocus)
-import closure_2 from "noop" /* 19 */;
+// Module 12199 (useAnimationDelayedAutoFocus)
+import useAwaitAnimationComplete from "useAwaitAnimationComplete" /* 12192 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/hooks/useAnimationDelayedAutoFocus.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/useAnimationDelayedAutoFocus.tsx");
 
 export const useAnimationDelayedAutoFocus = function useAnimationDelayedAutoFocus(autoFocus, onPress) {
-  const _require = autoFocus;
-  dependencyMap = onPress;
-  const awaitAnimationCompletion = _require(12166).useAwaitAnimationCompletion();
-  closure_3 = awaitAnimationCompletion.useRef(false);
+  closure_0 = autoFocus;
+  closure_1 = onPress;
+  const awaitAnimationCompletion = useAwaitAnimationComplete.useAwaitAnimationCompletion();
+  noop.useRef(false);
   const items = [autoFocus, onPress, awaitAnimationCompletion];
-  const effect = awaitAnimationCompletion.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let tmp = closure_0;
     if (closure_0) {
       tmp = !ref.current;
     }
     if (tmp) {
       awaitAnimationCompletion(() => {
-        callback();
+        onPress();
       });
     }
     ref.current = true;

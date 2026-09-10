@@ -4,7 +4,8 @@
 // Dependencies: [692, 697, 752]
 
 // Module 791 (flattenIssue)
-import isMatchingPattern from "isMatchingPattern" /* 697 */;
+import _mod692 from "module_692" /* 692 */;
+import _mod697 from "module_697" /* 697 */;
 import setupIntegration from "setupIntegration" /* 752 */;
 
 function flattenIssue(path) {
@@ -34,10 +35,10 @@ function flattenIssue(path) {
   return obj;
 }
 function flattenIssuePath(arr) {
-  const mapped = arr.map((num) => {
+  const mapped = arr.map((item) => {
     let str = "<array>";
-    if (typeof num !== "number") {
-      str = num;
+    if (typeof item !== "number") {
+      str = item;
     }
     return str;
   });
@@ -46,16 +47,14 @@ function flattenIssuePath(arr) {
 function formatIssueMessage(issues) {
   const set = new Set();
   while (tmp !== undefined) {
-    let tmp3 = flattenIssuePath;
     let arr = flattenIssuePath(tmp2.path);
     if (arr.length > 0) {
-      let tmp5 = arr;
       let addResult = set.add(tmp4);
     }
     continue;
   }
-  arr = Array.from(set);
-  if (0 === arr.length) {
+  const arr2 = Array.from(set);
+  if (0 === arr2.length) {
     let str4 = "variable";
     if (issues.issues.length > 0) {
       const first = issues.issues[0];
@@ -75,7 +74,7 @@ function formatIssueMessage(issues) {
     return "Failed to validate " + str4;
   } else {
     const _HermesInternal = HermesInternal;
-    return "Failed to validate keys: " + isMatchingPattern.truncate(arr.join(", "), 100);
+    return "Failed to validate keys: " + _mod697.truncate(arr2.join(", "), 100);
   }
   tmp = issues.issues[Symbol.iterator]();
 }
@@ -92,7 +91,7 @@ function applyZodErrorsToEvent(arg0, arg1, exception, originalException) {
   if (values) {
     if (originalException.originalException) {
       if ((function originalExceptionIsZodError(originalException) {
-        let isErrorResult = callback(table[0]).isError(originalException);
+        let isErrorResult = _mod692.isError(originalException);
         if (isErrorResult) {
           isErrorResult = "ZodError" === originalException.name;
         }
@@ -117,34 +116,33 @@ function applyZodErrorsToEvent(arg0, arg1, exception, originalException) {
                 originalException.attachments = [];
               }
               const attachments = originalException.attachments;
-              let obj = { filename: "zod_issues.json", data: null };
+              const obj = { filename: "zod_issues.json", data: null };
               const _JSON = JSON;
-              obj = { issues: null };
-              obj[0] = mapped;
-              obj[1] = JSON.stringify(obj);
+              const obj2 = { issues: mapped };
+              obj.data = JSON.stringify(obj2);
               attachments.push(obj);
             }
-            obj = {};
-            const merged = Object.assign(exception);
-            obj1 = {};
-            const merged1 = Object.assign(exception.exception);
-            const obj2 = {};
-            const merged2 = Object.assign(exception.exception.values[0]);
-            obj2.value = formatIssueMessage(originalException.originalException);
-            const items = [obj2];
-            values = exception.exception.values;
-            HermesBuiltin.arraySpread(values.slice(1), 1);
-            obj1.values = items;
-            obj.exception = obj1;
             const obj3 = {};
-            const merged3 = Object.assign(exception.extra);
-            obj3["zoderror.issues"] = mapped.slice(0, arg0);
-            obj.extra = obj3;
-            return obj;
-          } catch (error) {
+            const merged = Object.assign(exception);
             const obj4 = {};
-            const merged4 = Object.assign(tmp);
+            const merged1 = Object.assign(exception.exception);
             const obj5 = {};
+            const merged2 = Object.assign(exception.exception.values[0]);
+            obj5.value = formatIssueMessage(originalException.originalException);
+            const items = [obj5];
+            const values2 = exception.exception.values;
+            HermesBuiltin.arraySpread(values2.slice(1), 1);
+            obj4.values = items;
+            obj3.exception = obj4;
+            const obj6 = {};
+            const merged3 = Object.assign(exception.extra);
+            obj6["zoderror.issues"] = mapped.slice(0, arg0);
+            obj3.extra = obj6;
+            return obj3;
+          } catch (error) {
+            const obj7 = {};
+            const merged4 = Object.assign(tmp);
+            const obj8 = {};
             const merged5 = Object.assign(tmp.extra);
             const _Error = Error;
             let str = "unknown";
@@ -152,11 +150,10 @@ function applyZodErrorsToEvent(arg0, arg1, exception, originalException) {
               const _HermesInternal = HermesInternal;
               str = "" + error.name + ": " + error.message + "\n" + error.stack;
             }
-            const obj6 = { message: "an exception was thrown while processing ZodError within applyZodErrorsToEvent()", error: null };
-            obj6[1] = str;
-            obj5["zoderrors sentry integration parse error"] = obj6;
-            obj4.extra = obj5;
-            return obj4;
+            const obj9 = { message: "an exception was thrown while processing ZodError within applyZodErrorsToEvent()", error: str };
+            obj8["zoderrors sentry integration parse error"] = obj9;
+            obj7.extra = obj8;
+            return obj7;
           }
         }
       }
@@ -175,16 +172,14 @@ export const zodErrorsIntegration = setupIntegration.defineIntegration(() => {
   if (arg0 === undefined) {
     obj = {};
   }
-  let num;
-  num = obj.limit;
+  let num = obj.limit;
   if (num == null) {
     num = 10;
   }
-  obj = {
+  return {
     name: "ZodErrors",
     processEvent(arg0, arg1) {
-      return closure_1_5(num, obj.saveZodIssuesAsAttachment, arg0, arg1);
+      return applyZodErrorsToEvent(num, obj.saveZodIssuesAsAttachment, arg0, arg1);
     }
   };
-  return obj;
 });

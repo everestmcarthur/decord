@@ -1,51 +1,47 @@
-// Module ID: 16580
-// Function ID: 16581
-// Name: memoResult1
-// Dependencies: [19, 17, 5542, 21, 4560, 576, 4404, 4556, 16581, 1396, 5605, 1178, 1611, 16586, 4384, 16587, 504, 1114, 8879, 8232, 7040, 2]
+// Module ID: 16611
+// Function ID: 16612
+// Name: GuildSettingsModalMemberApplications
+// Dependencies: [19, 17, 5556, 21, 4574, 576, 4418, 4570, 16612, 1396, 5619, 1178, 1611, 16617, 4398, 16618, 504, 1114, 8906, 8258, 7054, 2]
 
-// Module 16580 (memoResult1)
-import ThemesDefault from "Themes" /* 576 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
-import nameFromUserDefault from "nameFromUser" /* 4404 */;
-import Text from "Text" /* 4556 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "updateSubmittedGuildJoinRequestTotal" /* 5542 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16611 (GuildSettingsModalMemberApplications)
+import nativeDefault from "native" /* 576 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4398 */;
+import UserUtilsDefault from "UserUtils" /* 4418 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 16612 */;
+import noop from "module_19" /* 19 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5556 */;
 
-require = arg1;
-let c3 = importAllResult;
-({ ActivityIndicator: c4, View: c5 } = get_ActivityIndicator);
-({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
-let obj = { containerInner: null, spinnerContainer: null, footerSpinner: null, spinner: null };
-obj = { paddingHorizontal: ThemesDefault.space.PX_12, flex: 1, marginTop: 16 };
-obj[0] = obj;
-obj[1] = { padding: 32 };
-obj[2] = { paddingVertical: 16 };
-createCacheKey = { color: ThemesDefault.colors.TEXT_BRAND };
-obj[3] = createCacheKey;
-let closure_10 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo((user) => {
+const require = globalThis.__r;
+
+require = fn;
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+const createStyles = fn(4574);
+let obj = { containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1, marginTop: 16 }, spinnerContainer: { padding: 32 }, footerSpinner: { paddingVertical: 16 }, spinner: null };
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, flex: 1, marginTop: 16 };
+obj.spinner = { color: nativeDefault.colors.TEXT_BRAND };
+let closure_10 = createStyles.createStyles(obj);
+const memoResult = noop.memo((user) => {
   user = user.user;
-  let obj = nameFromUserDefault;
-  const globalName = obj.getGlobalName(user);
+  const globalName = UserUtilsDefault.getGlobalName(user);
   let username = globalName;
   if (globalName == null) {
     username = user.username;
   }
-  const children = [closure_7(Text.Text, { variant: "text-md/semibold", children: username }), ];
+  const children = [React5(Text_Text.Text, { variant: "text-md/semibold", children: username }), ];
   let tmp5Result = null != globalName;
   if (tmp5Result) {
-    obj = { variant: "text-xs/medium", children: null };
-    obj[1] = user.username;
-    tmp5Result = tmp5(Text.Text, obj);
+    const obj2 = { variant: "text-xs/medium", children: user.username };
+    tmp5Result = tmp5(Text_Text.Text, obj2);
   }
   children[1] = tmp5Result;
-  return closure_8(closure_5, { children });
+  return React6(hasOwnProperty, { children });
 });
-const unpackModuleId = memoResult;
-let closure_12 = importAllResult.memo((joinRequest) => {
+let closure_12 = noop.memo((joinRequest) => {
   joinRequest = joinRequest.joinRequest;
   [][0] = joinRequest;
   ({ start, end } = joinRequest);
@@ -58,65 +54,59 @@ let closure_12 = importAllResult.memo((joinRequest) => {
     } else {
       let userAvatarSource = null;
       if (null != user) {
-        let obj = getAvatarURLDefault;
-        userAvatarSource = obj.getUserAvatarSource(user);
+        userAvatarSource = AvatarUtilsDefault.getUserAvatarSource(user);
       }
-      obj = { arrow: true, icon: null, label: null, onPress: null, start: null, end: null };
-      obj = { source: null, size: null };
-      obj[0] = userAvatarSource;
-      obj[1] = joinRequest(1178).AvatarSizes.SMALL;
-      obj[1] = callback(joinRequest(1178).Avatar, obj);
-      obj1 = { user: null };
-      obj1[0] = user;
-      obj[2] = callback(closure_11, obj1);
-      obj[3] = tmp;
-      obj[4] = start;
-      obj[5] = end;
-      return callback(joinRequest(5605).TableRow, obj);
+      const obj2 = { arrow: true, icon: null, label: null, onPress: null, start: null, end: null };
+      const obj3 = { source: userAvatarSource, size: joinRequest(1178).AvatarSizes.SMALL };
+      obj2.icon = closure_7(joinRequest(1178).Avatar, obj3);
+      const obj4 = { user };
+      obj2.label = closure_7(closure_11, obj4);
+      obj2.onPress = tmp;
+      obj2.start = start;
+      obj2.end = end;
+      return closure_7(joinRequest(5619).TableRow, obj2);
     }
   }
 });
-const memoResult1 = importAllResult.memo(function GuildSettingsModalMemberApplications(arg0) {
+let obj4 = { color: nativeDefault.colors.TEXT_BRAND };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMemberApplications.tsx");
+
+export default noop.memo(function GuildSettingsModalMemberApplications(arg0) {
   ({ guildId, applicationStatus } = arg0);
-  importDefault = undefined;
   let guildJoinRequests;
-  let fetchNextPage;
-  let stateFromStores;
-  let callback;
-  let tmp = callback2();
+  let tmp = closure_10();
   importDefault = tmp;
   let obj = applicationStatus(guildJoinRequests[13]);
-  obj = { guildId, applicationStatus, sortOrder: applicationStatus(guildJoinRequests[14]).GuildJoinRequestSortOrders.TIMESTAMP_DESC };
-  guildJoinRequests = obj.useSortedMemberApplications(obj).guildJoinRequests;
-  let obj2 = applicationStatus(guildJoinRequests[15]);
-  fetchNextPage = obj2.usePaginatedMemberApplications({ guildId, guildJoinRequests }).fetchNextPage;
-  let obj3 = applicationStatus(guildJoinRequests[16]);
-  const items = [closure_6];
-  stateFromStores = obj3.useStateFromStores(items, () => fetching.isFetching());
+  const tmp2 = importDefault;
+  guildJoinRequests = obj.useSortedMemberApplications({ guildId, applicationStatus, sortOrder: applicationStatus(guildJoinRequests[14]).GuildJoinRequestSortOrders.TIMESTAMP_DESC }).guildJoinRequests;
+  let obj2 = { guildId, applicationStatus, sortOrder: applicationStatus(guildJoinRequests[14]).GuildJoinRequestSortOrders.TIMESTAMP_DESC };
+  const fetchNextPage = applicationStatus(guildJoinRequests[15]).usePaginatedMemberApplications({ guildId, guildJoinRequests }).fetchNextPage;
+  const obj3 = applicationStatus(guildJoinRequests[15]);
+  const items = [GuildJoinRequestStore];
+  const stateFromStores = applicationStatus(guildJoinRequests[16]).useStateFromStores(items, () => fetching.isFetching());
   const items1 = [applicationStatus, fetchNextPage];
-  callback = fetchNextPage.useCallback(() => {
-    fetchNextPage(applicationStatus(guildJoinRequests[14]).GuildJoinRequestSortOrders.TIMESTAMP_DESC, applicationStatus);
+  const onEndReached = fetchNextPage.useCallback(() => {
+    fetchNextPage(MemberVerificationTypes.GuildJoinRequestSortOrders.TIMESTAMP_DESC, applicationStatus);
   }, items1);
-  const items2 = [callback, guildJoinRequests.length];
+  const items2 = [onEndReached, guildJoinRequests.length];
   const effect = fetchNextPage.useEffect(() => {
     if (0 === guildJoinRequests.length) {
       callback();
     }
   }, items2);
   const items3 = [guildJoinRequests.length];
-  const callback1 = fetchNextPage.useCallback((index) => {
-    index = index.index;
-    return closure_1_7(closure_1_12, { joinRequest: index.item, start: 0 === index, end: index === guildJoinRequests.length - 1 });
+  const callback1 = fetchNextPage.useCallback((joinRequest) => {
+    const index = joinRequest.index;
+    return React5(closure_12, { joinRequest: joinRequest.item, start: 0 === index, end: index === guildJoinRequests.length - 1 });
   }, items3);
-  callback2 = fetchNextPage.useCallback((joinRequestId) => joinRequestId.joinRequestId, []);
+  const callback2 = fetchNextPage.useCallback((joinRequestId) => joinRequestId.joinRequestId, []);
   if (stateFromStores) {
     if (0 === guildJoinRequests.length) {
-      obj = { style: null, children: null };
-      obj[0] = tmp.spinnerContainer;
-      obj1 = { size: "large", color: null };
-      obj1[1] = tmp.spinner.color;
-      obj[1] = callback(stateFromStores, obj1);
-      return callback(callback, obj);
+      const obj5 = { style: tmp.spinnerContainer, children: null };
+      const obj6 = { size: "large", color: tmp.spinner.color };
+      obj5.children = closure_7(stateFromStores, obj6);
+      return closure_7(onEndReached, obj5);
     }
   }
   if (applicationStatus(guildJoinRequests[14]).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
@@ -129,42 +119,31 @@ const memoResult1 = importAllResult.memo(function GuildSettingsModalMemberApplic
     const intl3 = tmp4(tmp3[17]).intl;
     stringResult = intl3.string(tmp4(tmp3[17]).t["7YSJ6f"]);
   }
-  obj2 = { style: tmp.containerInner, children: null };
+  const obj7 = { style: tmp.containerInner, children: null };
   if (0 !== guildJoinRequests.length) {
-    obj3 = { keyExtractor: null, data: null, renderItem: null, contentContainerStyle: null, onEndReached: null, ListFooterComponent: null };
-    obj3[0] = callback2;
-    obj3[1] = guildJoinRequests;
-    obj3[2] = callback1;
-    const obj4 = { paddingBottom: null };
-    obj4[0] = importDefault(guildJoinRequests[12])().bottom + importDefault(tmp3[5]).space.PX_16;
-    obj3[3] = obj4;
-    obj3[4] = callback;
-    obj3[5] = function ListFooterComponent() {
+    const obj8 = { keyExtractor: callback2, data: guildJoinRequests, renderItem: callback1, contentContainerStyle: null, onEndReached: null, ListFooterComponent: null };
+    const obj9 = { paddingBottom: require("useSafeAreaInsets")().bottom + tmp2(tmp3[5]).space.PX_16 };
+    obj8.contentContainerStyle = obj9;
+    obj8.onEndReached = onEndReached;
+    obj8.ListFooterComponent = function ListFooterComponent() {
       let tmp = null;
       if (stateFromStores) {
-        let obj = { style: null, children: null };
-        obj[0] = closure_1.footerSpinner;
-        obj = { size: "small", color: null };
-        obj[1] = closure_1.spinner.color;
-        obj[1] = closure_1_7(stateFromStores, obj);
-        tmp = closure_1_7(callback, obj);
+        const obj = { style: closure_1.footerSpinner, children: null };
+        const obj2 = { size: "small", color: closure_1.spinner.color };
+        obj.children = React5(React4, obj2);
+        tmp = React5(hasOwnProperty, obj);
       }
       return tmp;
     };
-    let tmp13Result = tmp13(tmp4(tmp3[18]).FlashList, obj3);
+    let tmp13Result = tmp13(tmp4(tmp3[18]).FlashList, obj8);
   } else {
-    const obj5 = { Illustration: null, body: null };
-    obj5[0] = tmp4(tmp3[19]).NoResults;
-    obj5[1] = stringResult;
-    tmp13Result = tmp13(tmp4(tmp3[11]).EmptyState, obj5);
+    const obj10 = { Illustration: tmp4(tmp3[19]).NoResults, body: stringResult };
+    tmp13Result = tmp13(tmp4(tmp3[11]).EmptyState, obj10);
   }
-  const obj6 = { children: null };
-  obj2[1] = tmp13Result;
-  const items4 = [callback(callback, obj2), callback(applicationStatus(guildJoinRequests[20]).NavScrim, {})];
-  obj6[0] = items4;
-  return closure_8(closure_9, obj6);
+  const obj11 = { children: null };
+  obj7.children = tmp13Result;
+  const items4 = [closure_7(onEndReached, obj7), closure_7(applicationStatus(guildJoinRequests[20]).NavScrim, {})];
+  obj11.children = items4;
+  return closure_8(closure_9, obj11);
 });
-const result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMemberApplications.tsx");
-
-export default memoResult1;
 export const MemberApplicationUser = memoResult;

@@ -1,45 +1,46 @@
-// Module ID: 16613
-// Function ID: 16614
+// Module ID: 16645
+// Function ID: 16646
 // Name: VibegrationsSettingsRequestCard
-// Dependencies: [19, 17, 16592, 21, 4560, 576, 504, 4527, 16614, 4556, 1114, 3547, 4975, 2]
+// Dependencies: [19, 17, 16623, 21, 4574, 576, 504, 4541, 16646, 4570, 1114, 3560, 4989, 2]
 // Exports: default
 
-// Module 16613 (VibegrationsSettingsRequestCard)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "rejectPendingPublish" /* 16592 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16645 (VibegrationsSettingsRequestCard)
+import nativeDefault from "native" /* 576 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4541 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import VibegrationsSettingsSheet from "VibegrationsSettingsSheet" /* 16646 */;
+import noop from "module_19" /* 19 */;
+import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 16623 */;
 
-const require = arg1;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { card: null, chips: null, chip: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.md, padding: ThemesDefault.space.PX_12, marginTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_8 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_4 };
-let obj1 = { flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_4 };
-createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.round, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.round, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4 };
-const result = require("set").fileFinishedImporting("modules/vibegrations/native/VibegrationsSettingsRequestCard.tsx");
+const VibegrationsSettingsSheetDefault = VibegrationsSettingsSheet;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, chips: null, chip: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
+obj2.chips = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_4 };
+let obj4 = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_4 };
+obj2.chip = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.round, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4 };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/vibegrations/native/VibegrationsSettingsRequestCard.tsx");
 
 export default function VibegrationsSettingsRequestCard(projectId) {
   projectId = projectId.projectId;
   const request = projectId.request;
-  dependencyMap = undefined;
-  let React;
-  const tmp = callback2();
+  const tmp = closure_8();
   dependencyMap = tmp;
-  let obj = projectId(504);
-  const items = [closure_5];
-  React = obj.useStateFromStores(items, () => closure_1_5.getSettings(projectId));
+  const items = [VibegrationsConnectionStore];
+  noop = projectId(504).useStateFromStores(items, () => VibegrationsConnectionStore.getSettings(projectId));
   let keys = request.keys;
   if (keys == null) {
     keys = [];
   }
-  const mapped = keys.map((arg0) => {
-    closure_0 = arg0;
+  const mapped = keys.map((item) => {
+    closure_0 = item;
     let found;
     if (schema != null) {
       schema = schema.schema;
@@ -47,46 +48,42 @@ export default function VibegrationsSettingsRequestCard(projectId) {
     }
     return found;
   });
-  let found = mapped.filter((arg0) => null != arg0);
+  let found = mapped.filter((item) => null != item);
   const items1 = [projectId, request];
-  obj = { style: tmp.card, children: null };
-  const callback = React.useCallback(() => {
-    let obj = projectId(chip[7]);
-    obj = { content: closure_1_6(request(chip[8]), obj), key: projectId(chip[8]).VIBEGRATIONS_SETTINGS_SHEET_KEY };
-    obj = { projectId, scopeKeys: request.keys, note: request.note, notifyAgent: true };
-    obj.showActionSheet(obj);
+  let obj2 = { style: tmp.card, children: null };
+  const callback = noop.useCallback(() => {
+    const obj2 = { content: timestampProducer(VibegrationsSettingsSheetDefault, { projectId, scopeKeys: request.keys, note: request.note, notifyAgent: true, isPreview: true }), key: VibegrationsSettingsSheet.VIBEGRATIONS_SETTINGS_SHEET_KEY };
+    ActionSheetActionCreators.showActionSheet(obj2);
   }, items1);
-  obj = { variant: "text-xs/semibold", color: "text-muted", children: null };
+  const obj3 = { variant: "text-xs/semibold", color: "text-muted", children: null };
   const intl = tmp2(1114).intl;
-  obj[2] = intl.string(request(3547).wgDhiQ);
-  const items2 = [callback(projectId(4556).Text, obj), , , ];
+  obj3.children = intl.string(request(3560).wgDhiQ);
+  const items2 = [closure_6(projectId(4570).Text, obj3), , , ];
   if (null != request.note) {
     if ("" !== request.note) {
       let note = request.note;
     }
-    obj1 = { variant: "text-sm/normal", color: "text-default", children: null };
-    obj1[2] = note;
-    items2[1] = tmp7(tmp9, obj1);
+    const obj4 = { variant: "text-sm/normal", color: "text-default", children: note };
+    items2[1] = tmp7(tmp9, obj4);
     let tmp7Result = null;
     if (found.length > 0) {
-      const obj2 = { style: null, children: null };
-      obj2[0] = tmp.chips;
-      obj2[1] = found.map((children) => {
-        obj = { style: chip.chip, children: closure_1_6(projectId(chip[9]).Text, obj) };
-        obj = { variant: "text-xs/medium", color: "text-default", children: children.label };
-        return closure_1_6(closure_1_4, obj, children.key);
-      });
-      tmp7Result = tmp7(tmp6, obj2);
+      const obj5 = {
+        style: tmp.chips,
+        children: found.map((children) => {
+              const obj = { style: chip.chip, children: timestampProducer(Text_Text.Text, { variant: "text-xs/medium", color: "text-default", children: children.label }) };
+              return timestampProducer(View, obj, children.key);
+            })
+      };
+      tmp7Result = tmp7(tmp6, obj5);
     }
     items2[2] = tmp7Result;
-    const obj3 = { variant: "secondary", size: "sm", onPress: null, text: null };
-    obj3[2] = callback;
+    const obj6 = { variant: "secondary", size: "sm", onPress: callback, text: null };
     const intl3 = tmp2(1114).intl;
-    obj3[3] = intl3.string(tmp8(3547)["KO2xN+"]);
-    items2[3] = tmp7(tmp2(4975).Button, obj3);
-    obj[1] = items2;
-    return closure_7(tmp6, obj);
+    obj6.text = intl3.string(tmp8(3560)["KO2xN+"]);
+    items2[3] = tmp7(tmp2(4989).Button, obj6);
+    obj2.children = items2;
+    return closure_7(tmp6, obj2);
   }
   const intl2 = tmp2(1114).intl;
-  note = intl2.string(tmp8(3547)["V+DBhs"]);
+  note = intl2.string(tmp8(3560)["V+DBhs"]);
 };

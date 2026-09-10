@@ -1,24 +1,28 @@
-// Module ID: 15048
-// Function ID: 15049
+// Module ID: 15075
+// Function ID: 15076
 // Name: BountiesModalEndedCtaButtons
-// Dependencies: [21, 4560, 576, 11491, 4296, 4561, 4564, 15043, 4975, 11501, 5451, 5449, 7728, 1114, 2]
+// Dependencies: [21, 4574, 576, 11518, 4310, 4575, 4578, 15070, 4989, 11528, 5465, 5463, 7742, 1114, 2]
 // Exports: default
 
-// Module 15048 (BountiesModalEndedCtaButtons)
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 576 */;
+// Module 15075 (BountiesModalEndedCtaButtons)
+import nativeDefault from "native" /* 576 */;
+import timing from "timing" /* 4575 */;
+import timingPresets from "timingPresets" /* 4578 */;
+import QuestContent from "QuestContent" /* 5463 */;
+import AdCreativeType from "AdCreativeType" /* 5465 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7742 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 11528 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import createStyles from "createStyles" /* 4574 */;
+import size from "module_2" /* 2 */;
 
-({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = createCacheKey.createStyles(() => {
-  let obj = { container: null };
-  obj = { gap: ThemesDefault.space.PX_8 };
-  obj[0] = obj;
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+let closure_5 = createStyles.createStyles(() => {
+  const obj = { container: { gap: nativeDefault.space.PX_8 } };
   return obj;
 });
-let closure_6 = { code: "function BountiesModalEndedCtaButtonsTsx1(){const{withTiming,visible,timingStandard}=this.__closure;return{opacity:withTiming(visible?1:0,timingStandard)};}" };
-let result = set.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalEndedCtaButtons.tsx");
+const __initData = { code: "function BountiesModalEndedCtaButtonsTsx1(){const{withTiming,visible,timingStandard}=this.__closure;return{opacity:withTiming(visible?1:0,timingStandard)};}" };
+let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalEndedCtaButtons.tsx");
 
 export default function BountiesModalEndedCtaButtons(bounty) {
   bounty = bounty.bounty;
@@ -31,53 +35,51 @@ export default function BountiesModalEndedCtaButtons(bounty) {
   if (flag === undefined) {
     flag = false;
   }
-  let callback;
-  let obj = bounty(11491);
-  callback = obj.useGetQuestImpressionId();
-  obj1 = bounty(4296);
+  let tmp = closure_5();
+  closure_3 = bounty(11518).useGetQuestImpressionId();
+  let obj = bounty(11518);
   const fn = function y() {
-    let obj = bounty(closure_1_2[5]);
     let num = 0;
     if (visible) {
       num = 1;
     }
-    obj = { opacity: obj.withTiming(num, bounty(closure_1_2[6]).timingStandard) };
-    return obj;
+    return { opacity: timing.withTiming(num, timingPresets.timingStandard) };
   };
-  obj = { withTiming: bounty(4561).withTiming, visible, timingStandard: bounty(4564).timingStandard };
-  fn.__closure = obj;
+  let obj2 = bounty(4310);
+  fn.__closure = { withTiming: bounty(4575).withTiming, visible, timingStandard: bounty(4578).timingStandard };
   fn.__workletHash = 11417131685254;
-  fn.__initData = closure_6;
-  const animatedStyle = obj1.useAnimatedStyle(fn);
-  bounty(15043);
+  fn.__initData = __initData;
+  const animatedStyle = obj2.useAnimatedStyle(fn);
+  bounty(15070);
   if (visible) {
-    obj = { style: null, children: null };
+    const obj4 = { style: null, children: null };
     const items = [tmp.container, animatedStyle];
-    obj[0] = items;
-    obj1 = { variant: "primary-overlay", text: null, size: "lg", disabled: null, onPress: null };
-    obj1[1] = tmp6.buttonLabel;
-    obj1[3] = flag;
-    obj1[4] = function onPress() {
-      let obj = bounty(closure_1_2[9]);
-      obj = { adContentId: bounty.id, adCreativeType: bounty(closure_1_2[10]).AdCreativeType.BOUNTY, cta: bounty.cta };
-      obj = { content: bounty(closure_1_2[11]).QuestContent.VIDEO_MODAL_END_CARD, ctaContent: bounty(closure_1_2[12]).QuestContentCTA.OPEN_GAME_LINK, impressionId: callback(), sourceQuestContent: closure_2 };
-      const result = obj.openAdGameLinkDirectly(obj, obj);
+    obj4.style = items;
+    const obj5 = {
+      variant: "primary-overlay",
+      text: tmp6.buttonLabel,
+      size: "lg",
+      disabled: flag,
+      onPress() {
+          const obj = QuestPlatformUtils;
+          const obj2 = { adContentId: bounty.id, adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, cta: bounty.cta };
+          const result = obj.openAdGameLinkDirectly(obj2, { content: QuestContent.QuestContent.VIDEO_MODAL_END_CARD, ctaContent: AnalyticsTypes.QuestContentCTA.OPEN_GAME_LINK, impressionId: closure_3(), sourceQuestContent });
+        }
     };
-    const items1 = [callback(tmp2(4975).Button, obj1), ];
+    const items1 = [closure_3(tmp2(4989).Button, obj5), ];
     let tmp9Result = null;
     if (showCloseButton) {
-      const obj2 = { variant: "secondary-overlay", text: null, size: "lg", disabled: null, onPress: null };
+      const obj6 = { variant: "secondary-overlay", text: null, size: "lg", disabled: null, onPress: null };
       const intl = tmp2(1114).intl;
-      obj2[1] = intl.string(tmp2(1114).t.cpT0Cq);
-      obj2[3] = flag;
-      obj2[4] = bounty.onClose;
-      tmp9Result = tmp9(tmp2(4975).Button, obj2);
+      obj6.text = intl.string(tmp2(1114).t.cpT0Cq);
+      obj6.disabled = flag;
+      obj6.onPress = bounty.onClose;
+      tmp9Result = tmp9(tmp2(4989).Button, obj6);
     }
     items1[1] = tmp9Result;
-    obj[1] = items1;
-    visible = closure_4(visible(4296).View, obj);
-    const tmp7 = closure_4;
-    tmp9 = callback;
+    obj4.children = items1;
+    visible = closure_4(visible(4310).View, obj4);
+    tmp9 = closure_3;
   }
   return visible;
 };

@@ -1,11 +1,11 @@
-// Module ID: 11714
-// Function ID: 11715
+// Module ID: 11740
+// Function ID: 11741
 // Name: SavedMessageSources
 // Dependencies: [2]
 
-// Module 11714 (SavedMessageSources)
-import set from "set" /* 2 */;
+// Module 11740 (SavedMessageSources)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/saved_messages/SavedMessageSources.tsx");
+const result = size.fileFinishedImporting("modules/saved_messages/SavedMessageSources.tsx");
 
 export const SavedMessageSources = { REACTION_BUTTON: "reaction_button", CONTEXT_MENU: "context_menu", LONG_PRESS_ACTION_SHEET: "long_press_action_sheet", MESSAGE_TOOLBAR: "message_toolbar", FOR_LATER_LIST: "for_later_list", NOTIFICATIONS_INBOX: "notifications_inbox" };

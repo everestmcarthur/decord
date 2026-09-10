@@ -1,17 +1,17 @@
-// Module ID: 13626
-// Function ID: 13627
-// Name: componentDidMount
-// Dependencies: [109, 19, 17, 21, 5530, 2]
+// Module ID: 13649
+// Function ID: 13650
+// Name: SequencedLottieAnimationView
+// Dependencies: [109, 19, 17, 21, 5544, 2]
 
-// Module 13626 (componentDidMount)
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 5530 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+// Module 13649 (SequencedLottieAnimationView)
+import _modDef5544 from "module_5544" /* 5544 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "module_19" /* 19 */;
 
 let closure_2 = ["source", "style"];
-const PureComponent = importAllResult.PureComponent;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const PureComponent = noop.PureComponent;
 class SequencedLottieAnimationView extends PureComponent {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -26,7 +26,7 @@ class SequencedLottieAnimationView extends PureComponent {
       }
     };
     applyArgumentsResult.handleSetRef = function handleSetRef(animationRef) {
-      closure_0.animationRef = animationRef;
+      applyArgumentsResult.animationRef = animationRef;
     };
     return applyArgumentsResult;
   }
@@ -68,21 +68,23 @@ prototype["render"] = function render() {
   }
   let tmp4;
   if (undefined !== json) {
-    let obj = { aspectRatio: null };
-    obj[0] = source.w / source.h;
+    const obj = { aspectRatio: source.w / source.h };
     tmp4 = obj;
   }
-  obj = { style: items, children: null };
-  items = [tmp4, style];
-  obj = { source, style: items1 };
-  items1 = [tmp4, style];
-  const tmp = callback(props, closure_2);
+  const obj2 = { style: null, children: null };
+  const items = [tmp4, style];
+  obj2.style = items;
+  const obj5 = { source, style: null };
+  const items1 = [tmp4, style];
+  obj5.style = items1;
+  const tmp = _objectWithoutProperties(props, closure_2);
   const merged = Object.assign(tmp);
   ({ handleSetRef: obj3.ref, handleComplete: obj3.onAnimationFinish } = this);
-  obj[1] = jsx(_isNativeReflectConstructDefault, { source, style: items1 });
-  return <View source={source} style={items1} />;
+  obj2.children = jsx(_modDef5544, { source, style: null });
+  return <View style={null}>{null}</View>;
 };
 SequencedLottieAnimationView.defaultProps = { autoPlay: true };
-const result = require("set").fileFinishedImporting("components_native/common/SequencedLottieAnimationView.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/common/SequencedLottieAnimationView.tsx");
 
 export default SequencedLottieAnimationView;

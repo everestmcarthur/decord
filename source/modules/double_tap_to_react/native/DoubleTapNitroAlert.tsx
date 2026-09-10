@@ -1,57 +1,55 @@
-// Module ID: 7974
-// Function ID: 7975
+// Module ID: 7988
+// Function ID: 7989
 // Name: DoubleTapNitroAlert
-// Dependencies: [19, 17, 7969, 1074, 7975, 21, 4560, 7382, 4906, 4910, 6610, 1114, 2]
+// Dependencies: [19, 17, 7983, 1074, 7989, 21, 4574, 7396, 4920, 4924, 6624, 1114, 2]
 // Exports: default
 
-// Module 7974 (DoubleTapNitroAlert)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4910 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 6610 */;
-import closure_2 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { NITRO_UPSELL_ALERT_KEY } from "NITRO_UPSELL_ALERT_KEY" /* 7969 */;
-import { UserSettingsSections } from "ME" /* 1074 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 7975 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 7988 (DoubleTapNitroAlert)
+import util from "util" /* 1114 */;
+import AlertModal from "AlertModal" /* 4924 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6624 */;
+import openUserSettings from "openUserSettings" /* 7396 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles({ icon: { alignItems: "center", justifyContent: "center" } });
-const result = require("set").fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapNitroAlert.tsx");
+require = fn;
+const View = fn(17).View;
+const NITRO_UPSELL_ALERT_KEY = fn(7983).NITRO_UPSELL_ALERT_KEY;
+const UserSettingsSections = fn(1074).UserSettingsSections;
+const MobileUserSettings = fn(7989).MobileUserSettings;
+const jsxProd = fn(21);
+({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4574);
+let closure_10 = createStyles.createStyles({ icon: { alignItems: "center", justifyContent: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapNitroAlert.tsx");
 
 export default function DoubleTapNitroAlert(emojiName) {
-  const callback = React.useCallback(() => {
-    let obj = callback(7382);
-    obj = { screen: constants.TEXT, params: obj };
-    obj = { initialSetting: constants2.DOUBLE_TAP_EMOJI };
-    obj.openUserSettings(obj);
+  const callback = noop.useCallback(() => {
+    const obj2 = { screen: constants.TEXT, params: { initialSetting: constants2.DOUBLE_TAP_EMOJI } };
+    openUserSettings.openUserSettings(obj2);
   }, []);
-  const callback1 = React.useCallback(() => {
-    let obj = callback(7382);
-    obj = { screen: constants.PREMIUM };
-    obj.openUserSettings(obj, () => {
-      callback(table[8]).dismissAlert(closure_4);
+  const callback1 = noop.useCallback(() => {
+    openUserSettings.openUserSettings({ screen: constants.PREMIUM }, () => {
+      closure_1_0(dependencyMap[8]).dismissAlert(closure_1_4);
     });
   }, []);
-  let obj = { header: null, title: null, content: null, actions: null };
-  obj = { style: callback3().icon, children: callback(CircleErrorIcon.CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }) };
-  obj[0] = callback(View, obj);
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t.HRAWfC);
-  const intl2 = getSystemLocale.intl;
-  obj[2] = intl2.format(getSystemLocale.t["3u/Je4"], { emojiName: emojiName.emojiName, onRenewNitro: callback1 });
-  obj = { children: null };
-  obj1 = { onPress: callback, text: null };
-  const intl3 = getSystemLocale.intl;
-  obj1[1] = intl3.string(getSystemLocale.t.LIIHRy);
-  const items = [callback(getAlertModalItemKey.AlertActionButton, obj1, "confirm"), ];
-  const obj2 = { variant: "secondary", text: null };
-  const intl4 = getSystemLocale.intl;
-  obj2[1] = intl4.string(getSystemLocale.t["Nr6v2+"]);
-  items[1] = callback(getAlertModalItemKey.AlertActionButton, obj2, "cancel");
-  obj[0] = items;
-  obj[3] = callback2(closure_8, obj);
-  return callback(getAlertModalItemKey.AlertModal, obj);
+  const obj = { header: null, title: null, content: null, actions: null };
+  const tmp = closure_10();
+  obj.header = React5(View, { style: closure_10().icon, children: React5(CircleErrorIcon.CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }) });
+  const intl = util.intl;
+  obj.title = intl.string(util.t.HRAWfC);
+  const intl2 = util.intl;
+  obj.content = intl2.format(util.t["3u/Je4"], { emojiName: emojiName.emojiName, onRenewNitro: callback1 });
+  const obj3 = { children: null };
+  const obj4 = { onPress: callback, text: null };
+  const intl3 = util.intl;
+  obj4.text = intl3.string(util.t.LIIHRy);
+  const items = [React5(AlertModal.AlertActionButton, obj4, "confirm"), ];
+  const obj5 = { variant: "secondary", text: null };
+  const intl4 = util.intl;
+  obj5.text = intl4.string(util.t["Nr6v2+"]);
+  items[1] = React5(AlertModal.AlertActionButton, obj5, "cancel");
+  obj3.children = items;
+  obj.actions = React7(React6, obj3);
+  return React5(AlertModal.AlertModal, obj);
 };

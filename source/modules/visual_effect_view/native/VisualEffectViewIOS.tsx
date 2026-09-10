@@ -1,20 +1,19 @@
-// Module ID: 4967
-// Function ID: 4968
-// Name: BLUR_EFFECT_NAMES
-// Dependencies: [4539, 4968, 4969, 2]
+// Module ID: 4981
+// Function ID: 4982
+// Name: VisualEffectViewIOS
+// Dependencies: [4553, 4982, 4983, 2]
 
-// Module 4967 (BLUR_EFFECT_NAMES)
-import set from "set" /* 2 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 4969 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4539 */;
-import importDefaultResult from "map" /* 4968 */;
+// Module 4981 (VisualEffectViewIOS)
+import VisualEffectViewNativeComponentDefault from "VisualEffectViewNativeComponent" /* 4983 */;
+import DeviceUtils from "DeviceUtils" /* 4553 */;
+import requireNativeComponentOrDefault from "requireNativeComponentOrDefault" /* 4982 */;
+import size from "module_2" /* 2 */;
 
 const obj = { componentName: "DCDVisualEffectView", componentFoundInstance: null };
-const tmp2 = DCDDeviceManager.getSystemVersionMajor() >= 13;
-obj[1] = __INTERNAL_VIEW_CONFIGDefault;
-const importDefaultResultResult = importDefaultResult(obj);
-const result = set.fileFinishedImporting("modules/visual_effect_view/native/VisualEffectViewIOS.tsx");
+obj.componentFoundInstance = VisualEffectViewNativeComponentDefault;
+const tmp2 = DeviceUtils.getSystemVersionMajor() >= 13;
+const result = size.fileFinishedImporting("modules/visual_effect_view/native/VisualEffectViewIOS.tsx");
 
-export default importDefaultResultResult;
+export default requireNativeComponentOrDefault(obj);
 export const BLUR_EFFECT_NAMES = ["UIBlurEffectStyleLight", "UIBlurEffectStyleExtraLight", "UIBlurEffectStyleDark", "UIBlurEffectStyleSystemUltraThinMaterialLight", "UIBlurEffectStyleSystemUltraThinMaterialDark", "UIBlurEffectStyleSystemThinMaterialLight", "UIBlurEffectStyleSystemThinMaterialDark", "UIBlurEffectStyleSystemMaterialLight", "UIBlurEffectStyleSystemMaterialDark", "UIBlurEffectStyleSystemThickMaterialLight", "UIBlurEffectStyleSystemThickMaterialDark", "UIBlurEffectStyleSystemChromeMaterialLight", "UIBlurEffectStyleSystemChromeMaterialDark"];
 export const MODERN_IOS_BLURS_EFFECTS_AVAILABLE = tmp2;

@@ -5,55 +5,44 @@
 // Exports: observe, registerObserver, unobserveAll, unregisterObserver
 
 // Module 269 (notifyMutationObservers)
-import isEnabledAll from "isEnabled" /* 46 */;
-import getInstanceHandle from "getInstanceHandle" /* 136 */;
+import _modAll46 from "module_46" /* 46 */;
+import _mod136 from "module_136" /* 136 */;
 import warnOnceDefault from "warnOnce" /* 165 */;
 import NativeMutationObserverCxxDefault from "NativeMutationObserverCxx" /* 271 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import { createMutationRecord } from "MutationRecord" /* 270 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
+require = fn;
 function notifyMutationObservers() {
-  isEnabledAll.beginEvent("MutationObserverManager.notifyMutationObservers");
+  _modAll46.beginEvent("MutationObserverManager.notifyMutationObservers");
   try {
     (function doNotifyMutationObservers() {
-      if (null == callback(table[2])) {
-        callback4();
+      if (null == NativeMutationObserverCxxDefault) {
+        warnNoNativeMutationObserver();
       } else {
         const takeRecordsResult = tmp(tmp2[2]).takeRecords();
         const _Map = Map;
         map = new Map();
         for (const item10013 of takeRecordsResult) {
           let tmp4 = item10013;
-          let value = map.get(item10013.mutationObserverId);
+          value = map.get(item10013.mutationObserverId);
           let arr = value;
           if (null == value) {
             let items = [];
             arr = items;
-            let tmp6 = item10013;
             let result = map.set(tmp4.mutationObserverId, items);
           }
-          let tmp8 = arr;
-          let tmp9 = callback3;
-          let tmp10 = item10013;
-          arr = arr.push(callback3(tmp4));
+          let arr2 = arr.push(createMutationRecord(tmp4));
           continue;
         }
         const obj = map[Symbol.iterator]();
         while (obj !== undefined) {
-          let tmp16 = callback2;
-          let tmp17 = callback2(tmp14, 2);
+          let tmp17 = _slicedToArray(tmp14, 2);
           let tmp18 = tmp17[1];
-          let tmp19 = closure_8;
-          value = closure_8.get(tmp17[0]);
-          let tmp21 = value;
-          if (value) {
-            let tmp23 = value;
+          value2 = closure_1_8.get(tmp17[0]);
+          let tmp21 = value2;
+          if (value2) {
             ({ observer, callback } = tmp21);
-            let tmp24 = callback;
             let call = callback.call;
-            let tmp25 = observer;
-            let tmp26 = tmp18;
             if (typeof call === "unknown") {
               let callbackResult = callback(tmp18, observer);
             } else {
@@ -61,15 +50,14 @@ function notifyMutationObservers() {
             }
             continue;
           } else {
-            let tmp22 = obj;
             obj.return();
           }
         }
       }
-      tmp = callback;
-      tmp2 = table;
+      tmp = importDefault;
+      tmp2 = dependencyMap;
     })();
-    isEnabledAll.endEvent();
+    _modAll46.endEvent();
   } catch (tmp9) {
     tmp3(tmp[5]).endEvent();
     throw tmp9;
@@ -78,7 +66,8 @@ function notifyMutationObservers() {
 function warnNoNativeMutationObserver() {
   warnOnceDefault("missing-native-mutation-observer", "Missing native implementation of MutationObserver");
 }
-let c6 = 1;
+const createMutationRecord = fn(270).createMutationRecord;
+let closure_6 = 1;
 let c7 = false;
 let map = new Map();
 
@@ -105,20 +94,16 @@ export const observe = function observe(mutationObserverId) {
   ({ target, subtree } = mutationObserverId);
   if (null != NativeMutationObserverCxxDefault) {
     if (null != map.get(mutationObserverId)) {
-      let obj = getInstanceHandle;
-      const nativeNodeReference = obj.getNativeNodeReference(target);
+      const nativeNodeReference = _mod136.getNativeNodeReference(target);
       if (null != nativeNodeReference) {
         if (!c7) {
-          let tmpResult = tmp(271);
-          tmpResult.connect(notifyMutationObservers, tmp7(114).getPublicInstanceFromInternalInstanceHandle);
+          tmp(271).connect(notifyMutationObservers, tmp7(114).getPublicInstanceFromInternalInstanceHandle);
           c7 = true;
+          const tmpResult = tmp(271);
         }
-        tmpResult = tmp(271);
-        obj = { mutationObserverId: null, targetShadowNode: null, subtree: null };
-        obj[0] = mutationObserverId;
-        obj[1] = nativeNodeReference;
-        obj[2] = subtree;
-        tmpResult.observe(obj);
+        const obj2 = { mutationObserverId, targetShadowNode: nativeNodeReference, subtree };
+        tmp(271).observe(obj2);
+        const tmpResult2 = tmp(271);
       }
       tmp7 = require;
     } else {

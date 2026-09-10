@@ -1,27 +1,29 @@
-// Module ID: 13672
-// Function ID: 13673
-// Name: getCachedPrivateChannelObfuscation
-// Dependencies: [1433, 2, 13673]
+// Module ID: 13695
+// Function ID: 13696
+// Name: PrivateChannelHidingExperiment
+// Dependencies: [1433, 2, 13696]
 // Exports: isChannelMetadataIntegrityCheckEnabled, isChannelMetadataObfuscationEnabled, useIsChannelMetadataObfuscationEnabled
 
-// Module 13672 (getCachedPrivateChannelObfuscation)
-import set from "set" /* 2 */;
-import PRIVATE_CHANNEL_OBFUSCATION_KEY from "PRIVATE_CHANNEL_OBFUSCATION_KEY" /* 13673 */;
+// Module 13695 (PrivateChannelHidingExperiment)
+import PrivateChannelHidingExperimentCache from "PrivateChannelHidingExperimentCache" /* 13696 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null, 2: { enableObfuscation: true, enableIntegrityCheck: false }, 3: { enableObfuscation: true, enableIntegrityCheck: true } };
-obj[3] = { enableObfuscation: false, enableIntegrityCheck: false };
-let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-02-private-channel-hiding", kind: "user", defaultConfig: { enableObfuscation: false, enableIntegrityCheck: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/gateway/PrivateChannelHidingExperiment.tsx");
+const obj = { name: "2026-02-private-channel-hiding", kind: "user", defaultConfig: { enableObfuscation: false, enableIntegrityCheck: false }, variations: null };
+const obj2 = { 1: null, 2: { enableObfuscation: true, enableIntegrityCheck: false }, 3: { enableObfuscation: true, enableIntegrityCheck: true } };
+obj2[3] = { enableObfuscation: false, enableIntegrityCheck: false };
+obj.variations = obj2;
+let closure_0 = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/gateway/PrivateChannelHidingExperiment.tsx");
 
-export const getCachedPrivateChannelObfuscation = PRIVATE_CHANNEL_OBFUSCATION_KEY.getCachedPrivateChannelObfuscation;
-export const PRIVATE_CHANNEL_OBFUSCATION_KEY = PRIVATE_CHANNEL_OBFUSCATION_KEY.PRIVATE_CHANNEL_OBFUSCATION_KEY;
+export const getCachedPrivateChannelObfuscation = PrivateChannelHidingExperimentCache.getCachedPrivateChannelObfuscation;
+export const PRIVATE_CHANNEL_OBFUSCATION_KEY = PrivateChannelHidingExperimentCache.PRIVATE_CHANNEL_OBFUSCATION_KEY;
 export const isChannelMetadataObfuscationEnabled = function isChannelMetadataObfuscationEnabled(GatewaySocket) {
-  return store.getConfig({ location: GatewaySocket }).enableObfuscation;
+  return closure_0.getConfig({ location: GatewaySocket }).enableObfuscation;
 };
 export const useIsChannelMetadataObfuscationEnabled = function useIsChannelMetadataObfuscationEnabled(App) {
-  return store.useConfig({ location: App }).enableObfuscation;
+  return closure_0.useConfig({ location: App }).enableObfuscation;
 };
 export const isChannelMetadataIntegrityCheckEnabled = function isChannelMetadataIntegrityCheckEnabled(scheduleIntegrityCheck) {
-  return store.getConfig({ location: scheduleIntegrityCheck }).enableIntegrityCheck;
+  return closure_0.getConfig({ location: scheduleIntegrityCheck }).enableIntegrityCheck;
 };

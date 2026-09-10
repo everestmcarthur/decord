@@ -1,15 +1,15 @@
-// Module ID: 7873
-// Function ID: 7874
+// Module ID: 7887
+// Function ID: 7888
 // Name: useIsUsingClientTheme
-// Dependencies: [7874, 2]
+// Dependencies: [7888, 2]
 // Exports: default
 
-// Module 7873 (useIsUsingClientTheme)
-import set from "set" /* 2 */;
-import useActiveThemeType from "useActiveThemeType" /* 7874 */;
+// Module 7887 (useIsUsingClientTheme)
+import useActiveTheme from "useActiveTheme" /* 7888 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/client_themes/native/useIsUsingClientTheme.tsx");
+const result = size.fileFinishedImporting("modules/client_themes/native/useIsUsingClientTheme.tsx");
 
 export default function useIsUsingClientTheme() {
-  return useActiveThemeType.useIsClientThemeOrCustomThemeActive();
+  return useActiveTheme.useIsClientThemeOrCustomThemeActive();
 };

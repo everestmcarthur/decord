@@ -1,58 +1,57 @@
-// Module ID: 9712
-// Function ID: 9713
+// Module ID: 9739
+// Function ID: 9740
 // Name: EditGuildEventModalNavbar
-// Dependencies: [32, 19, 17, 21, 4560, 9709, 1369, 7123, 4556, 1114, 7377, 6992, 2]
+// Dependencies: [32, 19, 17, 21, 4574, 9736, 1369, 7137, 4570, 1114, 7391, 7006, 2]
 // Exports: default
 
-// Module 9712 (EditGuildEventModalNavbar)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import registerAssetDefault from "registerAsset" /* 6992 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
-import HeaderActionButton from "HeaderActionButton" /* 7377 */;
-import EditGuildEventScreens from "EditGuildEventScreens" /* 9709 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9739 (EditGuildEventModalNavbar)
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import _modDef7006 from "module_7006" /* 7006 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7137 */;
+import HeaderActionButton from "HeaderActionButton" /* 7391 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 9736 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ header: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: 4, paddingVertical: 8 }, headerTitle: { lineHeight: 28, textTransform: "uppercase" }, buttonContainer: { width: 60 }, rightButton: { marginLeft: 12 } });
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventModalNavbar.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let closure_7 = createStyles.createStyles({ header: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: 4, paddingVertical: 8 }, headerTitle: { lineHeight: 28, textTransform: "uppercase" }, buttonContainer: { width: 60 }, rightButton: { marginLeft: 12 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventModalNavbar.tsx");
 
 export default function EditGuildEventModalNavbar(screen) {
   screen = screen.screen;
-  const tmp = callback4();
-  if (EditGuildEventScreens.EditGuildEventScreens.CHANNEL_SELECTOR === screen) {
+  const tmp = closure_7();
+  if (EditGuildEventUtils.EditGuildEventScreens.CHANNEL_SELECTOR === screen) {
     let items = [1, 3];
-  } else if (tmp2(9709).EditGuildEventScreens.DETAILS === screen) {
+  } else if (tmp2(9736).EditGuildEventScreens.DETAILS === screen) {
     items = [2, 3];
-  } else if (tmp2(9709).EditGuildEventScreens.PREVIEW === screen) {
+  } else if (tmp2(9736).EditGuildEventScreens.PREVIEW === screen) {
     items = [3, 3];
   } else {
     tmp2(1369).assertNever(screen);
     const tmp2Result = tmp2(1369);
   }
-  [tmp6, tmp7] = callback(items, 2);
-  let obj = { top: true, style: tmp.header, children: null };
-  obj = { style: tmp.buttonContainer };
-  const items1 = [callback2(View, obj), , ];
-  obj1 = { style: tmp.headerTitle, variant: "text-xs/bold", color: "text-default", children: null };
+  [tmp6, tmp7] = items;
+  const obj = { top: true, style: tmp.header, children: null };
+  const items1 = [hasOwnProperty(View, { style: tmp.buttonContainer }), , ];
+  const obj3 = { style: tmp.headerTitle, variant: "text-xs/bold", color: "text-default", children: null };
   const intl = tmp2(1114).intl;
-  obj1[3] = intl.format(getSystemLocale.t["42HaFY"], { step: tmp6, total: tmp7 });
-  items1[1] = callback2(Text.Text, obj1);
-  const obj2 = { style: tmp.buttonContainer, children: null };
-  const obj3 = { accessibilityLabel: null, onPress: null, source: null, style: null };
+  obj3.children = intl.format(util.t["42HaFY"], { step: tmp6, total: tmp7 });
+  items1[1] = hasOwnProperty(Text_Text.Text, obj3);
+  const obj4 = { style: tmp.buttonContainer, children: null };
+  const obj5 = { accessibilityLabel: null, onPress: null, source: null, style: null };
   const intl2 = tmp2(1114).intl;
-  obj3[0] = intl2.string(getSystemLocale.t.cpT0Cq);
-  obj3[1] = screen.onClose;
-  obj3[2] = registerAssetDefault;
-  obj3[3] = tmp.rightButton;
-  obj2[1] = callback2(HeaderActionButton.HeaderActionButton, obj3);
-  items1[2] = callback2(View, obj2);
-  obj[2] = items1;
-  return callback3(SafeAreaPaddingView.SafeAreaPaddingView, obj);
+  obj5.accessibilityLabel = intl2.string(util.t.cpT0Cq);
+  obj5.onPress = screen.onClose;
+  obj5.source = _modDef7006;
+  obj5.style = tmp.rightButton;
+  obj4.children = hasOwnProperty(HeaderActionButton.HeaderActionButton, obj5);
+  items1[2] = hasOwnProperty(View, obj4);
+  obj.children = items1;
+  return timestampProducer(common_SafeAreaView.SafeAreaPaddingView, obj);
 };

@@ -1,15 +1,15 @@
-// Module ID: 17127
-// Function ID: 17128
+// Module ID: 17158
+// Function ID: 17159
 // Name: activityPlatformToConnectedAccountType
 // Dependencies: [1074, 2]
 // Exports: default
 
-// Module 17127 (activityPlatformToConnectedAccountType)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 17158 (activityPlatformToConnectedAccountType)
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-({ ActivityGamePlatforms: c0, PlatformTypes: closure_1 } = ME);
-const result = set.fileFinishedImporting("modules/game_console/activityPlatformToConnectedAccountType.tsx");
+({ ActivityGamePlatforms: closure_0, PlatformTypes: closure_1 } = Constants);
+const result = size.fileFinishedImporting("modules/game_console/activityPlatformToConnectedAccountType.tsx");
 
 export default function activityPlatformToConnectedAccountType(arg0) {
   if (PS4.PS4 !== arg0) {

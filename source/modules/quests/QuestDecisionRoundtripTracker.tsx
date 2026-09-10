@@ -1,43 +1,39 @@
-// Module ID: 11286
-// Function ID: 11287
-// Name: trackRoundtrip
-// Dependencies: [7700, 4609, 1074, 5451, 7701, 7459, 1242, 7677, 7462, 2]
+// Module ID: 11313
+// Function ID: 11314
+// Name: QuestDecisionRoundtripTracker
+// Dependencies: [7714, 4623, 1074, 5465, 7715, 7473, 1242, 7691, 7476, 2]
 
-// Module 11286 (trackRoundtrip)
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import AdCreativeType from "AdCreativeType" /* 5451 */;
-import receiveNetworkInfoformation from "receiveNetworkInfoformation" /* 7459 */;
-import isForegrounded from "isForegrounded" /* 7462 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7677 */;
-import result2 from "result" /* 7701 */;
-import closure_3 from "map" /* 7700 */;
-import closure_4 from "handleConnectionInfoChange" /* 4609 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import set from "set" /* 2 */;
+// Module 11313 (QuestDecisionRoundtripTracker)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AdCreativeType from "AdCreativeType" /* 5465 */;
+import NetStats from "NetStats" /* 7473 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7691 */;
+import AdDecisionUtils from "AdDecisionUtils" /* 7715 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 7714 */;
+import NetworkStore from "NetworkStore" /* 4623 */;
 
-require = arg1;
+require = fn;
 function trackRoundtrip(apiResponseTimestamp, transition_case, fetched_at) {
   if (Math.random() <= 0.1) {
     let diff = null;
     if (null != apiResponseTimestamp.apiResponseTimestamp) {
       diff = apiResponseTimestamp.apiResponseTimestamp - apiResponseTimestamp.initialSendTimestamp;
     }
-    let obj = receiveNetworkInfoformation;
-    const signalStrength = obj.getSignalStrength();
-    obj = {};
+    const signalStrength = NetStats.getSignalStrength();
+    const tmp2 = require;
+    const obj4 = {};
     const merged = Object.assign(getDeviceMetadataDefault());
     ({ endpoint: obj3.endpoint, wasSuccessful: obj3.was_successful } = apiResponseTimestamp);
-    obj.api_latency_ms = diff;
-    obj.mobile_network_type = type.getType();
+    obj4.api_latency_ms = diff;
+    obj4.mobile_network_type = NetworkStore.getType();
     let tmp10 = null != signalStrength;
     if (tmp10) {
-      obj = { mobile_signal_strength_level: null };
-      obj[0] = signalStrength;
-      tmp10 = obj;
+      const obj5 = { mobile_signal_strength_level: signalStrength };
+      tmp10 = obj5;
     }
     const merged1 = Object.assign(tmp10);
     ({ callerSource: obj3.caller_source, adRequestId: obj3.ad_request_id } = apiResponseTimestamp);
-    obj.fetched_at = fetched_at;
+    obj4.fetched_at = fetched_at;
     const previousAdDecision = apiResponseTimestamp.previousAdDecision;
     let decision_id;
     if (previousAdDecision != null) {
@@ -49,7 +45,7 @@ function trackRoundtrip(apiResponseTimestamp, transition_case, fetched_at) {
     if (decision_id == null) {
       decision_id = null;
     }
-    obj.previous_ad_request_id = decision_id;
+    obj4.previous_ad_request_id = decision_id;
     const previousAdDecision2 = apiResponseTimestamp.previousAdDecision;
     let fetchedAt;
     if (previousAdDecision2 != null) {
@@ -58,48 +54,47 @@ function trackRoundtrip(apiResponseTimestamp, transition_case, fetched_at) {
     if (fetchedAt == null) {
       fetchedAt = null;
     }
-    obj.previous_fetched_at = fetchedAt;
-    obj.transition_case = transition_case;
-    const obj2 = expandEventPropertiesDefault;
-    const tmp2 = require;
-    obj.is_foregrounded = isForegrounded.isForegrounded();
-    obj2.track(AnalyticEvents.QUEST_DECISION_ROUNDTRIP, obj);
-    const tmp2Result = isForegrounded;
+    obj4.previous_fetched_at = fetchedAt;
+    obj4.transition_case = transition_case;
+    const obj2 = AnalyticsUtilsDefault;
+    obj4.is_foregrounded = tmp2(7476).isForegrounded();
+    obj2.track(AnalyticEvents.QUEST_DECISION_ROUNDTRIP, obj4);
+    const tmp2Result = tmp2(7476);
   }
 }
+const AnalyticEvents = fn(1074).AnalyticEvents;
 class QuestDecisionRoundtripTracker {
   constructor() {
-    obj = Object.create(new.target.prototype);
+    merged = Object.assign({ pendingRequests: null });
     map = new Map();
-    obj[0] = map;
-    return obj;
+    merged[0] = map;
+    return merged;
   }
 }
 const prototype = QuestDecisionRoundtripTracker.prototype;
-prototype["recordQuestRequestAttempt"] = function recordQuestRequestAttempt(endpoint, closure_1, closure_0) {
+prototype["recordQuestRequestAttempt"] = function recordQuestRequestAttempt(endpoint, callerSource, arg2) {
   const self = this;
   closure_0 = endpoint;
-  let tmp = closure_0;
-  if (closure_0 === undefined) {
+  let tmp = arg2;
+  if (arg2 === undefined) {
     tmp = null;
   }
   let tmp2 = null;
   if (null != tmp) {
-    const deliveryAdDecisionByPlacement = obj.deliveryAdDecisionByPlacement;
-    let value = deliveryAdDecisionByPlacement.get(tmp);
+    const deliveryAdDecisionByPlacement = AdDeliveryStore.deliveryAdDecisionByPlacement;
+    value = deliveryAdDecisionByPlacement.get(tmp);
     if (value == null) {
       value = null;
     }
     tmp2 = value;
   }
-  obj = { initialSendTimestamp: Date.now(), endpoint, apiResponseTimestamp: null, wasSuccessful: false, callerSource: closure_1, adRequestId: null, previousAdDecision: tmp2, placement: tmp };
   let pendingRequests = this.pendingRequests;
-  const result = pendingRequests.set(endpoint, obj);
+  const result = pendingRequests.set(endpoint, { initialSendTimestamp: Date.now(), endpoint, apiResponseTimestamp: null, wasSuccessful: false, callerSource, adRequestId: null, previousAdDecision: tmp2, placement: tmp });
   const timerId = setTimeout(() => {
     const pendingRequests = self.pendingRequests;
-    const value = pendingRequests.get(closure_0);
+    value = pendingRequests.get(closure_0);
     if (null != value) {
-      closure_1_6(value, "timeout", null);
+      trackRoundtrip(value, "timeout", null);
       const pendingRequests2 = self.pendingRequests;
       pendingRequests2.delete(closure_0);
     }
@@ -119,21 +114,18 @@ prototype["recordQuestRequestApiResponse"] = function recordQuestRequestApiRespo
     currentFetchedAt = null;
   }
   const pendingRequests = this.pendingRequests;
-  const value = pendingRequests.get(arg0);
+  value = pendingRequests.get(arg0);
   let tmp5 = null;
   if (null != value) {
     let tmp7 = null;
     if (null !== currentFetchedAt) {
-      let obj = { creative: null, fetchedAt: null, ttlMillis: 0, adDecisionData: null };
-      obj[0] = currentCreative;
-      obj[1] = currentFetchedAt;
+      const obj = { creative: currentCreative, fetchedAt: currentFetchedAt, ttlMillis: 0, adDecisionData: null };
       let tmp6;
       if (tmp5 != adRequestId) {
-        obj = { decision_id: null };
-        obj[0] = adRequestId;
-        tmp6 = obj;
+        const obj2 = { decision_id: adRequestId };
+        tmp6 = obj2;
       }
-      obj[3] = tmp6;
+      obj.adDecisionData = tmp6;
       tmp7 = obj;
     }
     const previousAdDecision = value.previousAdDecision;
@@ -145,8 +137,8 @@ prototype["recordQuestRequestApiResponse"] = function recordQuestRequestApiRespo
         let str4 = "quest";
         if (AdCreativeType.AdCreativeType.QUEST !== type) {
           str4 = "bounty";
-          if (tmp8(5451).AdCreativeType.BOUNTY !== type) {
-            if (tmp8(5451).AdCreativeType.QUEST_HOME_HERO === type) {
+          if (tmp8(5465).AdCreativeType.BOUNTY !== type) {
+            if (tmp8(5465).AdCreativeType.QUEST_HOME_HERO === type) {
               str4 = "quest_home_hero";
             }
           }
@@ -163,8 +155,8 @@ prototype["recordQuestRequestApiResponse"] = function recordQuestRequestApiRespo
         let str7 = "quest";
         if (AdCreativeType.AdCreativeType.QUEST !== type2) {
           str7 = "bounty";
-          if (tmp10(5451).AdCreativeType.BOUNTY !== type2) {
-            if (tmp10(5451).AdCreativeType.QUEST_HOME_HERO === type2) {
+          if (tmp10(5465).AdCreativeType.BOUNTY !== type2) {
+            if (tmp10(5465).AdCreativeType.QUEST_HOME_HERO === type2) {
               str7 = "quest_home_hero";
             }
           }
@@ -178,9 +170,7 @@ prototype["recordQuestRequestApiResponse"] = function recordQuestRequestApiRespo
       if (previousAdDecision != tmp5) {
         creative = previousAdDecision.creative;
       }
-      const deliveredAdCreativeId = result2.getDeliveredAdCreativeId(creative);
-      const obj3 = result2;
-      const tmp14 = require;
+      const deliveredAdCreativeId = AdDecisionUtils.getDeliveredAdCreativeId(creative);
       let creative1;
       if (tmp7 != tmp5) {
         creative1 = tmp7.creative;
@@ -192,23 +182,24 @@ prototype["recordQuestRequestApiResponse"] = function recordQuestRequestApiRespo
         const _HermesInternal2 = HermesInternal;
         combined = "different_" + str2;
       }
-      tmp14Result = result2;
+      tmp14Result = AdDecisionUtils;
     }
     const _HermesInternal = HermesInternal;
-    obj = {};
+    const obj4 = {};
     const combined1 = "" + str2 + "_to_" + str5;
     const merged = Object.assign(value);
     const _Date = Date;
-    obj.apiResponseTimestamp = Date.now();
-    obj.wasSuccessful = adRequestId.wasSuccessful;
-    obj.adRequestId = adRequestId;
-    tmp5 = trackRoundtrip(obj, combined1, currentFetchedAt);
+    obj4.apiResponseTimestamp = Date.now();
+    obj4.wasSuccessful = adRequestId.wasSuccessful;
+    obj4.adRequestId = adRequestId;
+    tmp5 = trackRoundtrip(obj4, combined1, currentFetchedAt);
     const pendingRequests2 = this.pendingRequests;
     pendingRequests2.delete(arg0);
   }
 };
-let set = Object.create(QuestDecisionRoundtripTracker.prototype);
-set[0] = new Map();
-let result = set.fileFinishedImporting("modules/quests/QuestDecisionRoundtripTracker.tsx");
+let merged = Object.assign({ pendingRequests: null });
+merged[0] = new Map();
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/quests/QuestDecisionRoundtripTracker.tsx");
 
-export default set;
+export default merged;

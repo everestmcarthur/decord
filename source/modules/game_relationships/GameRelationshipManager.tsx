@@ -1,15 +1,14 @@
-// Module ID: 14548
-// Function ID: 14549
-// Name: _initialize
-// Dependencies: [7658, 1074, 1898, 573, 7163, 2]
+// Module ID: 14573
+// Function ID: 14574
+// Name: GameRelationshipManager
+// Dependencies: [7672, 1074, 1898, 573, 7177, 2]
 
-// Module 14548 (_initialize)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import initializeDefault from "initialize" /* 1898 */;
-import closure_2 from "recountRelationshipTypes" /* 7658 */;
-import { RelationshipTypes } from "ME" /* 1074 */;
+// Module 14573 (GameRelationshipManager)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7672 */;
+import LifecycleManager from "LifecycleManager" /* 1898 */;
 
-initializeDefault;
+const RelationshipTypes = fn(1074).RelationshipTypes;
 class GameRelationshipManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -18,26 +17,27 @@ class GameRelationshipManager extends tmp2 {
       const set = new Set();
       const values = gameRelationships.values();
       const item = values.forEach((type) => {
-        if (type.type === closure_1_3.PENDING_INCOMING) {
+        if (type.type === constants.PENDING_INCOMING) {
           set.add(type.applicationId);
         }
       });
-      const applications = set(table[4]).fetchApplications(Array.from(set));
+      const applications = set(closure_1[4]).fetchApplications(Array.from(set));
     };
     return applyArgumentsResult;
   }
 }
 const prototype = GameRelationshipManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const subscription = dispatcherDefault.subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
+  const subscription = DispatcherDefault.subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
 };
 prototype["_terminate"] = function _terminate() {
-  dispatcherDefault.unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
+  DispatcherDefault.unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
 };
 prototype["destroy"] = function destroy() {
-  dispatcherDefault.unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
+  DispatcherDefault.unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
 };
 const gameRelationshipManager = new GameRelationshipManager();
-const result = require("set").fileFinishedImporting("modules/game_relationships/GameRelationshipManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_relationships/GameRelationshipManager.tsx");
 
 export default gameRelationshipManager;

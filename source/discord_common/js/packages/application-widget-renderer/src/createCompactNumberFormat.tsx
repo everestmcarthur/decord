@@ -1,20 +1,18 @@
-// Module ID: 8932
-// Function ID: 8933
-// Name: toAsciiDigits
+// Module ID: 8959
+// Function ID: 8960
+// Name: createCompactNumberFormat
 // Dependencies: [2]
 // Exports: createCompactNumberFormat
 
-// Module 8932 (toAsciiDigits)
-import set from "set" /* 2 */;
+// Module 8959 (createCompactNumberFormat)
+import size from "module_2" /* 2 */;
 
 function toAsciiDigits(arg0, get) {
   let str = "";
   const iter = arg0[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp2 = nextResult;
-    let tmp3 = str;
-    let value = get.get(nextResult);
+    value = get.get(nextResult);
     if (value == null) {
       value = nextResult;
     }
@@ -23,7 +21,7 @@ function toAsciiDigits(arg0, get) {
   }
   return str;
 }
-let result = set.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/createCompactNumberFormat.tsx");
+let result = size.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/createCompactNumberFormat.tsx");
 
 export const createCompactNumberFormat = function createCompactNumberFormat(stateFromStores) {
   const numberFormat = new Intl.NumberFormat(stateFromStores, { useGrouping: false });
@@ -58,8 +56,6 @@ export const createCompactNumberFormat = function createCompactNumberFormat(stat
             if (10 ** rounded > absolute) {
               do {
                 let diff = tmp5 - 1;
-                let num2 = 10;
-                let tmp3 = diff;
                 tmp5 = diff;
                 tmp6 = diff;
                 tmp4 = 10 ** diff;
@@ -70,7 +66,6 @@ export const createCompactNumberFormat = function createCompactNumberFormat(stat
             if (10 ** (tmp6 + 1) <= absolute) {
               do {
                 let sum = tmp7 + 1;
-                let num5 = 10;
                 tmp7 = sum;
                 tmp8 = sum;
                 tmp10 = 10 ** (sum + 1);
@@ -80,28 +75,22 @@ export const createCompactNumberFormat = function createCompactNumberFormat(stat
           }
           let num7 = 1;
           if (num >= 0) {
-            let value = map1.get(num);
+            value = map1.get(num);
             if (undefined === value) {
               const tmp16 = (function parseCoefficient(numberFormat1, map) {
                 let str = "";
                 const iter = numberFormat1[Symbol.iterator]();
                 const nextResult = iter.next();
-                for (; iter !== undefined; str = str + callback(iter2.value, map)) {
+                for (; iter !== undefined; str = str + map(iter2.value, map)) {
                   iter2 = nextResult;
                   if ("integer" !== nextResult.type) {
-                    let tmp2 = nextResult;
                     if ("fraction" !== iter2.type) {
-                      let tmp3 = nextResult;
                       if ("decimal" === iter2.type) {
-                        let tmp4 = str;
                         str = `.`;
                       }
                     }
                     continue;
                   }
-                  let tmp5 = str;
-                  let tmp6 = callback;
-                  let tmp7 = nextResult;
                 }
                 return Number(str);
               })(numberFormat1.formatToParts(10 ** num), map);
@@ -128,8 +117,6 @@ export const createCompactNumberFormat = function createCompactNumberFormat(stat
             if (10 ** rounded1 > absolute1) {
               do {
                 let diff1 = tmp23 - 1;
-                let num11 = 10;
-                let tmp21 = diff1;
                 tmp23 = diff1;
                 tmp24 = diff1;
                 tmp22 = 10 ** diff1;
@@ -140,7 +127,6 @@ export const createCompactNumberFormat = function createCompactNumberFormat(stat
             if (10 ** (tmp24 + 1) <= absolute1) {
               do {
                 let sum1 = tmp25 + 1;
-                let num13 = 10;
                 tmp25 = sum1;
                 tmp26 = sum1;
                 tmp28 = 10 ** (sum1 + 1);

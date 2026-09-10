@@ -1,19 +1,18 @@
-// Module ID: 4970
-// Function ID: 4971
-// Name: MODERN_ANDROID_BLURRING_AVAILABLE
-// Dependencies: [4539, 4968, 4969, 2]
+// Module ID: 4984
+// Function ID: 4985
+// Name: VisualEffectViewAndroid
+// Dependencies: [4553, 4982, 4983, 2]
 
-// Module 4970 (MODERN_ANDROID_BLURRING_AVAILABLE)
-import set from "set" /* 2 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 4969 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4539 */;
-import importDefaultResult from "map" /* 4968 */;
+// Module 4984 (VisualEffectViewAndroid)
+import VisualEffectViewNativeComponentDefault from "VisualEffectViewNativeComponent" /* 4983 */;
+import DeviceUtils from "DeviceUtils" /* 4553 */;
+import requireNativeComponentOrDefault from "requireNativeComponentOrDefault" /* 4982 */;
+import size from "module_2" /* 2 */;
 
 const obj = { componentName: "DCDVisualEffectView", componentFoundInstance: null };
-const tmp2 = DCDDeviceManager.getSystemVersionMajor() >= 31;
-obj[1] = __INTERNAL_VIEW_CONFIGDefault;
-const importDefaultResultResult = importDefaultResult(obj);
-const result = set.fileFinishedImporting("modules/visual_effect_view/native/VisualEffectViewAndroid.tsx");
+obj.componentFoundInstance = VisualEffectViewNativeComponentDefault;
+const tmp2 = DeviceUtils.getSystemVersionMajor() >= 31;
+const result = size.fileFinishedImporting("modules/visual_effect_view/native/VisualEffectViewAndroid.tsx");
 
-export default importDefaultResultResult;
+export default requireNativeComponentOrDefault(obj);
 export const MODERN_ANDROID_BLURRING_AVAILABLE = tmp2;

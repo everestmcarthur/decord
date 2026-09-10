@@ -1,76 +1,73 @@
-// Module ID: 10388
-// Function ID: 10389
+// Module ID: 10415
+// Function ID: 10416
 // Name: GIFPickerCategoryView
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 1114, 9764, 5587, 10389, 10240, 4556, 2]
+// Dependencies: [19, 17, 1074, 21, 4574, 576, 1114, 9791, 5601, 10416, 10267, 4570, 2]
 // Exports: default
 
-// Module 10388 (GIFPickerCategoryView)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10415 (GIFPickerCategoryView)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import useAccessibilityPressDefault from "useAccessibilityPress" /* 9791 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ StyleSheet, View: c4, TouchableOpacity: c5 } = get_ActivityIndicator);
-require("ME").GIFPickerResultTypes;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, gifImage: null, gifOverlay: null, categoryName: null, categoryNameIcon: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.xs, flex: 1 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderRadius: ThemesDefault.radii.xs, flex: 1 };
-const obj2 = {};
+require = fn;
+get_ActivityIndicator = fn(17);
+({ StyleSheet, View: closure_4, TouchableOpacity: hasOwnProperty } = get_ActivityIndicator);
+fn(1074).GIFPickerResultTypes;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, flex: 1 }, gifImage: null, gifOverlay: null, categoryName: null, categoryNameIcon: null };
+const obj3 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, flex: 1 };
+obj2.gifImage = { borderRadius: nativeDefault.radii.xs, flex: 1 };
+let obj5 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-obj2.backgroundColor = ThemesDefault.unsafe_rawColors.BLACK;
-obj2.borderRadius = ThemesDefault.radii.xs;
-obj2.opacity = 0.6;
-createCacheKey[2] = obj2;
-let obj3 = {};
+obj5.backgroundColor = nativeDefault.unsafe_rawColors.BLACK;
+obj5.borderRadius = nativeDefault.radii.xs;
+obj5.opacity = 0.6;
+obj2.gifOverlay = obj5;
+let obj6 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
-obj3.margin = ThemesDefault.space.PX_8;
-obj3.justifyContent = "center";
-obj3.flexDirection = "row";
-obj3.alignItems = "center";
-createCacheKey[3] = obj3;
-const obj1 = { borderRadius: ThemesDefault.radii.xs, flex: 1 };
-createCacheKey[4] = { marginRight: ThemesDefault.space.PX_4 };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { marginRight: ThemesDefault.space.PX_4 };
-const result = require("set").fileFinishedImporting("modules/gif_picker/native/GIFPickerCategoryView.tsx");
+obj6.margin = nativeDefault.space.PX_8;
+obj6.justifyContent = "center";
+obj6.flexDirection = "row";
+obj6.alignItems = "center";
+obj2.categoryName = obj6;
+const obj4 = { borderRadius: nativeDefault.radii.xs, flex: 1 };
+obj2.categoryNameIcon = { marginRight: nativeDefault.space.PX_4 };
+let closure_9 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerCategoryView.tsx");
 
 export default function GIFPickerCategoryView(onSelectCategory) {
   onSelectCategory = onSelectCategory.onSelectCategory;
   const item = onSelectCategory.item;
-  const tmp = callback2();
+  const tmp = closure_9();
   const items = [onSelectCategory, item];
-  const callback = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     onSelectCategory(item.type, item.name);
   }, items);
-  const intl = onSelectCategory(1114).intl;
-  let obj = { categoryName: item.name };
-  const formatToPlainStringResult = intl.formatToPlainString(onSelectCategory(1114).t["j+63pw"], obj);
-  obj = { style: tmp.container, onPress: callback, accessible: true, accessibilityRole: "button", accessibilityLabel: formatToPlainStringResult };
-  const merged = Object.assign(item(9764)(callback, formatToPlainStringResult));
-  obj = { style: tmp.gifImage, source: obj1 };
-  const items1 = [callback(item(5587), obj), callback(closure_4, { style: tmp.gifOverlay }), ];
-  const obj3 = { style: tmp.categoryName, accessible: false, children: null };
+  const intl = util.intl;
+  const formatToPlainStringResult = intl.formatToPlainString(util.t["j+63pw"], { categoryName: item.name });
+  const obj2 = { style: tmp.container, onPress: callback, accessible: true, accessibilityRole: "button", accessibilityLabel: formatToPlainStringResult };
+  const merged = Object.assign(useAccessibilityPressDefault(callback, formatToPlainStringResult));
+  const items1 = [React5(FastImageDefault, { style: tmp.gifImage, source: { uri: item.src } }), React5(React4, { style: tmp.gifOverlay }), ];
+  const obj5 = { style: tmp.categoryName, accessible: false, children: null };
   if (item.type === GIFPickerResultTypes.TRENDING_GIFS) {
-    const obj4 = { size: "sm", style: null, color: null };
-    obj4[1] = tmp.categoryNameIcon;
-    obj4[2] = tmp6(576).colors.WHITE;
-    let tmp10Result = tmp10(tmp3(10389).AnalyticsIcon, obj4);
+    const obj6 = { size: "sm", style: tmp.categoryNameIcon, color: tmp6(576).colors.WHITE };
+    let tmp10Result = tmp10(tmp3(10416).AnalyticsIcon, obj6);
   } else {
     tmp10Result = null;
     if (item.type === tmp12.FAVORITES) {
-      const obj5 = { size: "sm", style: null, color: null };
-      obj5[1] = tmp.categoryNameIcon;
-      obj5[2] = tmp6(576).colors.WHITE;
-      tmp10Result = tmp10(tmp3(10240).StarIcon, obj5);
+      const obj7 = { size: "sm", style: tmp.categoryNameIcon, color: tmp6(576).colors.WHITE };
+      tmp10Result = tmp10(tmp3(10267).StarIcon, obj7);
     }
   }
-  const items2 = [tmp10Result, callback(onSelectCategory(4556).Text, { variant: "text-sm/semibold", color: "text-overlay-light", maxFontSizeMultiplier: 2, accessible: false, children: item.name })];
-  obj3[2] = items2;
-  items1[2] = closure_8(closure_4, obj3);
-  obj.children = items1;
-  return closure_8(closure_5, obj);
+  const items2 = [tmp10Result, React5(Text_Text.Text, { variant: "text-sm/semibold", color: "text-overlay-light", maxFontSizeMultiplier: 2, accessible: false, children: item.name })];
+  obj5.children = items2;
+  items1[2] = React6(React4, obj5);
+  obj2.children = items1;
+  return React6(hasOwnProperty, obj2);
 };

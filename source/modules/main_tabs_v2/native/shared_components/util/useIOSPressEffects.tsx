@@ -1,58 +1,62 @@
-// Module ID: 5610
-// Function ID: 5611
-// Name: SPRING_CONFIG
-// Dependencies: [19, 1477, 4296, 1115, 4974, 2]
+// Module ID: 5624
+// Function ID: 5625
+// Name: useIOSPressEffects
+// Dependencies: [19, 1477, 4310, 1115, 4988, 2]
 // Exports: useIOSPressEffects
 
-// Module 5610 (SPRING_CONFIG)
-import closure_3 from "noop" /* 19 */;
+// Module 5624 (useIOSPressEffects)
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import spring from "spring" /* 4988 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let obj = { overshootClamping: true, damping: 35, stiffness: 450, mass: 0.5, restDisplacementThreshold: 0.001 };
-let closure_5 = { code: "function useIOSPressEffectsTsx1(){const{withSpring,interpolate,sharedPressState,sharedWidthScale,SPRING_CONFIG,withOpacity}=this.__closure;const scale=withSpring(interpolate(sharedPressState.get(),[0,1],[1,sharedWidthScale.get()]),SPRING_CONFIG);if(withOpacity){return{transform:[{scale:scale}],opacity:withSpring(interpolate(sharedPressState.get(),[0,1],[1,0.5]),SPRING_CONFIG)};}else{return{transform:[{scale:scale}]};}}" };
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/util/useIOSPressEffects.tsx");
+const require = globalThis.__r;
 
-export const SPRING_CONFIG = obj;
+require = fn;
+const SPRING_CONFIG = { overshootClamping: true, damping: 35, stiffness: 450, mass: 0.5, restDisplacementThreshold: 0.001 };
+const __initData = { code: "function useIOSPressEffectsTsx1(){const{withSpring,interpolate,sharedPressState,sharedWidthScale,SPRING_CONFIG,withOpacity}=this.__closure;const scale=withSpring(interpolate(sharedPressState.get(),[0,1],[1,sharedWidthScale.get()]),SPRING_CONFIG);if(withOpacity){return{transform:[{scale:scale}],opacity:withSpring(interpolate(sharedPressState.get(),[0,1],[1,0.5]),SPRING_CONFIG)};}else{return{transform:[{scale:scale}]};}}" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/util/useIOSPressEffects.tsx");
+
+export { SPRING_CONFIG };
 export const useIOSPressEffects = function useIOSPressEffects(arg0) {
-  const _require = arg0;
+  _require = arg0;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
   let width;
-  let sharedValue;
-  let sharedValue1;
   width = flag(width[1])().width;
-  obj = _require(width[2]);
-  sharedValue = obj.useSharedValue(1 - arg0 / width);
+  const sharedValue = require("ReanimatedRexport").useSharedValue(1 - arg0 / width);
   let items = [width, arg0, sharedValue];
   const effect = sharedValue.useEffect(() => {
     const result = sharedValue.set(1 - closure_0 / width);
   }, items);
-  sharedValue1 = _require(width[2]).useSharedValue(0);
+  let obj = require("ReanimatedRexport");
+  const sharedValue1 = require("ReanimatedRexport").useSharedValue(0);
   let items1 = [sharedValue1];
   let items2 = [sharedValue1];
   const callback = sharedValue.useCallback(() => {
-    let isIOSResult = callback(width[3]).isIOS();
+    let isIOSResult = PlatformUtils.isIOS();
     if (isIOSResult) {
       isIOSResult = sharedValue1.set(1);
     }
     return isIOSResult;
   }, items1);
   const callback1 = sharedValue.useCallback(() => {
-    let isIOSResult = callback(width[3]).isIOS();
+    let isIOSResult = PlatformUtils.isIOS();
     if (isIOSResult) {
       isIOSResult = sharedValue1.set(0);
     }
     return isIOSResult;
   }, items2);
-  let obj2 = _require(width[2]);
+  const obj2 = require("ReanimatedRexport");
   class S {
     constructor() {
       tmp = closure_0;
-      tmp2 = width;
-      obj = closure_0(width[4]);
-      obj2 = closure_0(width[2]);
+      tmp2 = closure_2;
+      obj = closure_0(closure_2[4]);
+      obj2 = closure_0(closure_2[2]);
       obj3 = closure_4;
       value = closure_4.get();
       items = [1];
@@ -60,31 +64,31 @@ export const useIOSPressEffects = function useIOSPressEffects(arg0) {
       tmp4 = closure_4;
       withSpringResult = obj.withSpring(obj2.interpolate(value, [0, 1], items), closure_4);
       if (c1) {
-        obj = { transform: null, opacity: null };
-        obj1 = { scale: null };
-        obj1[0] = withSpringResult;
+        obj1 = { transform: null, opacity: null };
+        obj10 = { scale: null };
+        obj10.scale = withSpringResult;
         items1 = [];
-        items1[0] = obj1;
-        obj[0] = items1;
+        items1[0] = obj10;
+        obj1.transform = items1;
         tmpResult = tmp(tmp2[4]);
         tmpResult1 = tmp(tmp2[2]);
-        obj[1] = tmpResult.withSpring(tmpResult1.interpolate(obj3.get(), [0, 1], [1, 0.5]), tmp4);
-        obj2 = obj;
+        obj1.opacity = tmpResult.withSpring(tmpResult1.interpolate(obj3.get(), [0, 1], [1, 0.5]), tmp4);
+        obj11 = obj1;
       } else {
-        obj2 = { transform: null };
-        obj3 = { scale: null };
-        obj3[0] = withSpringResult;
+        obj11 = { transform: null };
+        obj12 = { scale: null };
+        obj12.scale = withSpringResult;
         items2 = [];
-        items2[0] = obj3;
-        obj2[0] = items2;
+        items2[0] = obj12;
+        obj11.transform = items2;
       }
-      return obj2;
+      return obj11;
     }
   }
-  obj = { withSpring: _require(width[4]).withSpring, interpolate: _require(width[2]).interpolate, sharedPressState: sharedValue1, sharedWidthScale: sharedValue, SPRING_CONFIG: sharedValue1, withOpacity: flag };
-  S.__closure = obj;
+  const obj3 = require("ReanimatedRexport");
+  S.__closure = { withSpring: require("spring").withSpring, interpolate: require("ReanimatedRexport").interpolate, sharedPressState: sharedValue1, sharedWidthScale: sharedValue, SPRING_CONFIG: sharedValue1, withOpacity: flag };
   S.__workletHash = 1305898392151;
-  S.__initData = closure_5;
-  obj = { sharedPressState: sharedValue1, onPressOut: callback1, onPressIn: callback, pressableStyles: _require(width[2]).useAnimatedStyle(S) };
-  return obj;
+  S.__initData = __initData;
+  let obj4 = { withSpring: require("spring").withSpring, interpolate: require("ReanimatedRexport").interpolate, sharedPressState: sharedValue1, sharedWidthScale: sharedValue, SPRING_CONFIG: sharedValue1, withOpacity: flag };
+  return { sharedPressState: sharedValue1, onPressOut: callback1, onPressIn: callback, pressableStyles: obj3.useAnimatedStyle(S) };
 };

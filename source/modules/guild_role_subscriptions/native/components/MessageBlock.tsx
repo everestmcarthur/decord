@@ -1,55 +1,50 @@
-// Module ID: 12228
-// Function ID: 12229
+// Module ID: 12254
+// Function ID: 12255
 // Name: MessageBlock
-// Dependencies: [19, 17, 21, 576, 4560, 1178, 2]
+// Dependencies: [19, 17, 21, 576, 4574, 1178, 2]
 // Exports: default
 
-// Module 12228 (MessageBlock)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 1178 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12254 (MessageBlock)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-let obj = { RED: 0, [0]: "RED", YELLOW: 1, [1]: "YELLOW" };
-let closure_6 = createCacheKey.createStyles((arg0) => {
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const MessageBlockColors = { RED: 0, [0]: "RED", YELLOW: 1, [1]: "YELLOW" };
+const createStyles = fn(4574);
+let closure_6 = createStyles.createStyles((arg0) => {
   if (obj.RED === arg0) {
-    obj = { backgroundColor: null, borderColor: null };
-    obj[0] = ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL;
-    obj[1] = ThemesDefault.colors.BORDER_FEEDBACK_CRITICAL;
+    obj = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, borderColor: nativeDefault.colors.BORDER_FEEDBACK_CRITICAL };
     let tmp2 = obj;
   } else if (tmp.YELLOW === arg0) {
-    obj = { backgroundColor: null, borderColor: null };
-    obj[0] = ThemesDefault.colors.BACKGROUND_FEEDBACK_WARNING;
-    obj[1] = ThemesDefault.colors.STATUS_WARNING;
-    tmp2 = obj;
+    const obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, borderColor: nativeDefault.colors.STATUS_WARNING };
+    tmp2 = obj2;
   }
-  obj = { container: null, text: null };
-  obj1 = {};
+  const obj3 = { container: null, text: null };
+  const obj4 = {};
   const merged = Object.assign(tmp2);
-  obj1.alignItems = "center";
-  obj1.borderRadius = ThemesDefault.radii.xs;
-  obj1.borderWidth = 1;
-  obj1.padding = 8;
-  obj1.width = "100%";
-  obj[0] = obj1;
+  obj4.alignItems = "center";
+  obj4.borderRadius = nativeDefault.radii.xs;
+  obj4.borderWidth = 1;
+  obj4.padding = 8;
+  obj4.width = "100%";
+  obj3.container = obj4;
   if (obj.RED === arg0) {
     let TEXT_FEEDBACK_WARNING = tmp6(576).colors.TEXT_FEEDBACK_CRITICAL;
   } else if (tmp.YELLOW === arg0) {
     TEXT_FEEDBACK_WARNING = tmp6(576).colors.TEXT_FEEDBACK_WARNING;
   }
-  obj[1] = { textAlign: "center", color: TEXT_FEEDBACK_WARNING };
-  return obj;
+  obj3.text = { textAlign: "center", color: TEXT_FEEDBACK_WARNING };
+  return obj3;
 });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/MessageBlock.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/MessageBlock.tsx");
 
 export default function MessageBlock(children) {
-  const tmp = callback(children.color);
-  obj = { style: tmp.container, children: jsx(Button.LegacyText, obj) };
-  obj = { style: tmp.text, children: children.children };
-  return <View style={tmp.text}>{arg0.children}</View>;
+  const tmp = closure_6(children.color);
+  const obj = { style: tmp.container, children: jsx(native.LegacyText, { style: tmp.text, children: children.children }) };
+  return <View style={tmp.container}>{jsx(native.LegacyText, { style: tmp.text, children: arg0.children })}</View>;
 };
-export const MessageBlockColors = obj;
+export { MessageBlockColors };

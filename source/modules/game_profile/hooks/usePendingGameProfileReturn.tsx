@@ -1,26 +1,27 @@
-// Module ID: 12439
-// Function ID: 12440
+// Module ID: 12465
+// Function ID: 12466
 // Name: usePendingGameProfileReturn
-// Dependencies: [19, 1916, 8687, 1074, 504, 8685, 8691, 2]
+// Dependencies: [19, 1916, 8715, 1074, 504, 8713, 8719, 2]
 // Exports: default
 
-// Module 12439 (usePendingGameProfileReturn)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createGamesFromMessage" /* 1916 */;
-import closure_5 from "getSimilarGames" /* 8687 */;
-import { AVATAR_SIZE } from "ME" /* 1074 */;
+// Module 12465 (usePendingGameProfileReturn)
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8713 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8719 */;
+import noop from "module_19" /* 19 */;
+import GameStore from "GameStore" /* 1916 */;
+import GameProfileStore from "GameProfileStore" /* 8715 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/game_profile/hooks/usePendingGameProfileReturn.tsx");
+require = fn;
+const AVATAR_SIZE = fn(1074).AVATAR_SIZE;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_profile/hooks/usePendingGameProfileReturn.tsx");
 
 export default function usePendingGameProfileReturn(channelId) {
   channelId = channelId.channelId;
-  let stateFromStores;
   let stateFromStores1;
-  let obj = channelId(stateFromStores1[4]);
-  const items = [closure_5];
-  stateFromStores = obj.useStateFromStores(items, () => {
-    const pendingReturn = closure_1_5.getPendingReturn();
+  const items = [GameProfileStore];
+  const stateFromStores = channelId(stateFromStores1[4]).useStateFromStores(items, () => {
+    const pendingReturn = GameProfileStore.getPendingReturn();
     let tmp2 = null;
     if (null != pendingReturn) {
       tmp2 = null;
@@ -31,17 +32,14 @@ export default function usePendingGameProfileReturn(channelId) {
     return tmp2;
   });
   const items1 = [stateFromStores];
-  const callback = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     if (null != stateFromStores) {
-      let obj = stateFromStores(stateFromStores1[5]);
-      obj = { gameId: null, source: null, initialScrollOffset: null };
-      obj[0] = tmp.gameId;
-      obj[1] = channelId(stateFromStores1[6]).GameProfileSources.AnnouncementChannelReturn;
-      obj[2] = tmp.initialScrollOffset;
-      obj.returnToGameProfile(obj);
+      const obj2 = { gameId: tmp.gameId, source: GameProfileAnalyticUtils.GameProfileSources.AnnouncementChannelReturn, initialScrollOffset: tmp.initialScrollOffset };
+      GameProfileActionCreatorsDefault.returnToGameProfile(obj2);
     }
   }, items1);
-  const items2 = [closure_4];
+  let obj = channelId(stateFromStores1[4]);
+  const items2 = [GameStore];
   stateFromStores1 = channelId(stateFromStores1[4]).useStateFromStores(items2, () => {
     let gameId;
     if (stateFromStores != null) {
@@ -49,7 +47,7 @@ export default function usePendingGameProfileReturn(channelId) {
     }
     let game = null;
     if (null != gameId) {
-      game = closure_1_4.getGame(tmp.gameId);
+      game = GameStore.getGame(tmp.gameId);
     }
     return game;
   });
@@ -58,12 +56,12 @@ export default function usePendingGameProfileReturn(channelId) {
     id = stateFromStores1.id;
   }
   const items3 = [id];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let id;
     if (stateFromStores1 != null) {
       id = stateFromStores1.id;
     }
-    return null != id ? (() => closure_1_1(closure_1_2[5]).clearGameProfilePendingReturn(id.id)) : undefined;
+    return null != id ? (() => stateFromStores(stateFromStores1[5]).clearGameProfilePendingReturn(id.id)) : undefined;
   }, items3);
   if (stateFromStores1 != null) {
     const name = stateFromStores1.name;
@@ -74,12 +72,8 @@ export default function usePendingGameProfileReturn(channelId) {
       if (stateFromStores1 != null) {
         iconURL = stateFromStores1.getIconURL(AVATAR_SIZE);
       }
-      obj = { gameId: null, gameName: null, gameIconUrl: null, onReturnToGameProfile: null };
-      obj[0] = stateFromStores1.id;
-      obj[1] = name;
-      obj[2] = iconURL;
-      obj[3] = callback;
-      return obj;
+      const obj3 = { gameId: stateFromStores1.id, gameName: name, gameIconUrl: iconURL, onReturnToGameProfile: callback };
+      return obj3;
     }
   }
   return null;

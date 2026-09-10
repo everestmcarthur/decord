@@ -1,18 +1,20 @@
-// Module ID: 5275
-// Function ID: 5276
-// Name: isIOSPushNotificationRawPayloadFixExperimentEnabled
+// Module ID: 5289
+// Function ID: 5290
+// Name: IOSPushNotificationRawPayloadFixExperiment
 // Dependencies: [1433, 2]
 // Exports: isIOSPushNotificationRawPayloadFixExperimentEnabled
 
-// Module 5275 (isIOSPushNotificationRawPayloadFixExperimentEnabled)
-import set from "set" /* 2 */;
+// Module 5289 (IOSPushNotificationRawPayloadFixExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null };
-obj[1] = { enabled: true };
-let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-01-ios-push-notif-json-fix", kind: "user", defaultConfig: { enabled: false }, variations: obj });
-let c1 = null;
-const result = set.fileFinishedImporting("modules/notifications/IOSPushNotificationRawPayloadFixExperiment.tsx");
+const obj = { name: "2026-01-ios-push-notif-json-fix", kind: "user", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj.variations = obj2;
+const config = ApexExperiment.createApexExperiment(obj);
+let enabled = null;
+const result = size.fileFinishedImporting("modules/notifications/IOSPushNotificationRawPayloadFixExperiment.tsx");
 
 export const isIOSPushNotificationRawPayloadFixExperimentEnabled = function isIOSPushNotificationRawPayloadFixExperimentEnabled() {
   if (null == enabled) {

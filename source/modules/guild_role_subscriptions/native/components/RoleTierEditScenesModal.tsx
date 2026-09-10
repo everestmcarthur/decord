@@ -1,75 +1,77 @@
-// Module ID: 17745
-// Function ID: 17746
-// Name: orderify
-// Dependencies: [32, 19, 17732, 15208, 21, 4560, 38, 7377, 6992, 1114, 17746, 17731, 17747, 17767, 17770, 17772, 1611, 4763, 5598, 7000, 17774, 2]
+// Module ID: 17778
+// Function ID: 17779
+// Name: RoleTierEditScenesModal
+// Dependencies: [32, 19, 17765, 15237, 21, 4574, 38, 7391, 7006, 1114, 17779, 17764, 17780, 17800, 17803, 17805, 1611, 4777, 5612, 7014, 17807, 2]
 // Exports: default
 
-// Module 17745 (orderify)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import usePriceTiers from "usePriceTiers" /* 17732 */;
-import { GuildRoleSubscriptionsTierScenes as closure_7 } from "MAX_SUBSCRIPTION_TIERS" /* 15208 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17778 (RoleTierEditScenesModal)
+import _modDef38 from "module_38" /* 38 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-function orderify(str) {
+const require = globalThis.__r;
+
+const require = fn;
+function orderify(scene, arg1) {
   const sum = arg1 + 1;
-  if (typeof str === "string") {
-    let obj = { stepNumber: null, scene: null };
-    obj[0] = sum;
-    obj[1] = str;
+  if (typeof scene === "string") {
+    const obj = { stepNumber: sum, scene };
+    let obj2 = obj;
   } else {
-    obj = {};
-    const merged = Object.assign(str);
-    obj.stepNumber = sum;
+    obj2 = {};
+    const merged = Object.assign(scene);
+    obj2.stepNumber = sum;
   }
-  return obj;
+  return obj2;
 }
-({ useCurrentTierEditScene: c5, useResetTierEditState: closure_6 } = usePriceTiers);
-({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
-let closure_11 = createCacheKey.createStyles({ stepsIndicator: { position: "absolute", alignSelf: "center", height: 48 } });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/RoleTierEditScenesModal.tsx");
+const RoleTierEditStore = fn(17765);
+({ useCurrentTierEditScene: hasOwnProperty, useResetTierEditState: metroRequire } = RoleTierEditStore);
+let closure_7 = fn(15237).GuildRoleSubscriptionsTierScenes;
+const jsxProd = fn(21);
+({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4574);
+let closure_11 = createStyles.createStyles({ stepsIndicator: { position: "absolute", alignSelf: "center", height: 48 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/RoleTierEditScenesModal.tsx");
 
 export default function RoleTierEditScenesModal(modalKey) {
-  const _require = modalKey;
+  _require = modalKey;
   function handleClose(arg0) {
 
   }
   modalKey = modalKey.modalKey;
   const steps = modalKey.steps;
   const onClose = modalKey.onClose;
-  let tmp = callback4();
-  [closure_4, closure_5] = onClose(callback(), 2);
-  callback2 = callback2();
-  let tmp3 = onClose(React.useState(0), 2);
+  let tmp = closure_11();
+  [noop, closure_5] = onClose(closure_5(), 2);
+  closure_6 = closure_6();
+  let tmp3 = onClose(noop.useState(0), 2);
   closure_7 = tmp3[1];
   let items = [modalKey];
-  const callback3 = React.useCallback(() => {
-    modalKey(steps[17]).popWithKey(modalKey);
+  closure_8 = noop.useCallback(() => {
+    ModalActionCreatorsDefault.popWithKey(modalKey);
   }, items);
   let items1 = [steps];
-  const memo = React.useMemo(() => steps.map((str) => {
-    let scene = str;
-    if (typeof str !== "string") {
-      scene = str.scene;
+  const memo = noop.useMemo(() => steps.map((scene) => {
+    if (typeof scene !== "string") {
+      scene = scene.scene;
     }
     return scene;
   }), items1);
-  const tmp2 = onClose(callback(), 2);
+  const tmp2 = onClose(closure_5(), 2);
   let obj = { children: null };
   ({ screens, initialStack } = modalKey(steps[18])(() => {
     let sum;
     ({ steps, stepScreenPropsMap } = DETAILS);
     let obj = {};
-    let merged = Object.assign(DETAILS, Object.create(null));
-    const mapped = steps.map(closure_1_12);
+    let merged = Object.assign(DETAILS, Object.assign({ steps: 0, stepScreenPropsMap: 0 }));
+    const mapped = steps.map(orderify);
     let num = 0;
     if (0 < steps.length) {
       do {
         sum = num + 1;
         let tmp6 = mapped[sum];
-        let tmp7 = num;
         let scene;
         if (tmp6 != null) {
           scene = tmp6.scene;
@@ -77,115 +79,53 @@ export default function RoleTierEditScenesModal(modalKey) {
         if (scene == null) {
           scene = null;
         }
-        obj = {};
-        let tmp9 = obj;
+        let obj2 = {};
         let merged1 = Object.assign(mapped[num]);
-        obj.nextStep = scene;
-        obj.stepsCount = tmp4;
-        obj[mapped[num].scene] = obj;
+        obj2.nextStep = scene;
+        obj2.stepsCount = tmp4;
+        obj[mapped[num].scene] = obj2;
         num = sum;
       } while (sum < steps.length);
     }
-    DETAILS = obj;
-    closure_1 = merged;
-    obj = {
+    const obj3 = {
       fullscreen: true,
       headerTitle() {
         return null;
       }
     };
-    obj1 = {};
-    let merged2 = Object.assign(obj);
-    DETAILS = lib.GATING;
-    closure_1 = tmp;
-    obj1.headerRight = () => {
-      const obj = {
-        source: callback(closure_1_2[8]),
-        onPress() {
-          if (closure_3 != null) {
-            tmp2(tmp);
-          }
-          callback2();
-          callback();
-        },
-        accessibilityLabel: null
-      };
-      const intl = DETAILS(closure_1_2[9]).intl;
-      obj[2] = intl.string(DETAILS(closure_1_2[9]).t.cpT0Cq);
-      return closure_1_8(DETAILS(closure_1_2[7]).HeaderActionButton, obj);
-    };
-    if (null == stepScreenPropsMap) {
-      let obj2 = {};
-    } else {
-      obj2 = stepScreenPropsMap[tmp13];
-      if (obj2 == null) {
-        obj2 = {};
-      }
-    }
-    const obj3 = {};
-    let merged3 = Object.assign(obj2);
-    obj1.render = function render() {
-      const GATING = closure_1_7.GATING;
-      callback(closure_1_2[6])(null != DETAILS[GATING], "Props not provided in screen map for scene " + GATING);
-      const getRuntimeProps = tmp2.getRuntimeProps;
-      let runtimeProps;
-      if (getRuntimeProps != null) {
-        runtimeProps = getRuntimeProps();
-      }
-      if (runtimeProps == null) {
-        runtimeProps = {};
-      }
-      let obj = {};
-      const merged = Object.assign(callback);
-      const merged1 = Object.assign(tmp2);
-      const merged2 = Object.assign(runtimeProps);
-      let extraProps = tmp2.extraProps;
-      if (extraProps == null) {
-        extraProps = [];
-      }
-      const merged3 = Object.assign(extraProps);
-      obj = {};
-      const tmp = callback;
-      const tmp3 = callback;
-      const tmp4 = closure_1_2;
-      const tmp5 = callback(closure_1_2[6]);
-      const tmp6 = null != DETAILS[GATING];
-      const merged4 = Object.assign(obj);
-      return closure_1_8(callback(closure_1_2[10]), obj);
-    };
-    obj3[lib.GATING] = obj1;
     const obj4 = {};
-    let merged4 = Object.assign(obj);
-    DETAILS = tmp11.GROUP;
+    let merged2 = Object.assign(obj3);
+    DETAILS = constants.GATING;
     closure_1 = tmp;
     obj4.headerRight = () => {
       const obj = {
-        source: callback(closure_1_2[8]),
+        source: modalKey(steps[8]),
         onPress() {
-          if (closure_3 != null) {
+          if (closure_129_3 != null) {
             tmp2(tmp);
           }
-          callback2();
-          callback();
+          closure_129_8();
+          closure_129_6();
         },
         accessibilityLabel: null
       };
-      const intl = DETAILS(closure_1_2[9]).intl;
-      obj[2] = intl.string(DETAILS(closure_1_2[9]).t.cpT0Cq);
-      return closure_1_8(DETAILS(closure_1_2[7]).HeaderActionButton, obj);
+      const intl = DETAILS(steps[9]).intl;
+      obj.accessibilityLabel = intl.string(DETAILS(steps[9]).t.cpT0Cq);
+      return closure_8(DETAILS(steps[7]).HeaderActionButton, obj);
     };
     if (null == stepScreenPropsMap) {
       let obj5 = {};
     } else {
-      obj5 = stepScreenPropsMap[tmp16];
+      obj5 = stepScreenPropsMap[tmp13];
       if (obj5 == null) {
         obj5 = {};
       }
     }
-    const merged5 = Object.assign(obj5);
+    const obj6 = {};
+    let merged3 = Object.assign(obj5);
     obj4.render = function render() {
-      const GROUP = closure_1_7.GROUP;
-      callback(closure_1_2[6])(null != DETAILS[GROUP], "Props not provided in screen map for scene " + GROUP);
+      const GATING = constants.GATING;
+      modalKey(steps[6])(null != DETAILS[GATING], "Props not provided in screen map for scene " + GATING);
       const getRuntimeProps = tmp2.getRuntimeProps;
       let runtimeProps;
       if (getRuntimeProps != null) {
@@ -194,8 +134,7 @@ export default function RoleTierEditScenesModal(modalKey) {
       if (runtimeProps == null) {
         runtimeProps = {};
       }
-      let obj = {};
-      const merged = Object.assign(callback);
+      const merged = Object.assign(closure_1);
       const merged1 = Object.assign(tmp2);
       const merged2 = Object.assign(runtimeProps);
       let extraProps = tmp2.extraProps;
@@ -203,48 +142,102 @@ export default function RoleTierEditScenesModal(modalKey) {
         extraProps = [];
       }
       const merged3 = Object.assign(extraProps);
-      obj = {};
-      const tmp = callback;
-      const tmp3 = callback;
-      const tmp4 = closure_1_2;
-      const tmp5 = callback(closure_1_2[6]);
+      const obj = {};
+      const obj2 = {};
+      const tmp5 = modalKey(steps[6]);
+      const tmp6 = null != DETAILS[GATING];
+      const merged4 = Object.assign(obj);
+      return closure_8(modalKey(steps[10]), obj2);
+    };
+    obj6[constants.GATING] = obj4;
+    const obj7 = {};
+    let merged4 = Object.assign(obj3);
+    DETAILS = tmp11.GROUP;
+    closure_1 = tmp;
+    obj7.headerRight = () => {
+      const obj = {
+        source: modalKey(steps[8]),
+        onPress() {
+          if (closure_129_3 != null) {
+            tmp2(tmp);
+          }
+          closure_129_8();
+          closure_129_6();
+        },
+        accessibilityLabel: null
+      };
+      const intl = DETAILS(steps[9]).intl;
+      obj.accessibilityLabel = intl.string(DETAILS(steps[9]).t.cpT0Cq);
+      return closure_8(DETAILS(steps[7]).HeaderActionButton, obj);
+    };
+    if (null == stepScreenPropsMap) {
+      let obj8 = {};
+    } else {
+      obj8 = stepScreenPropsMap[tmp16];
+      if (obj8 == null) {
+        obj8 = {};
+      }
+    }
+    const merged5 = Object.assign(obj8);
+    obj7.render = function render() {
+      const GROUP = constants.GROUP;
+      modalKey(steps[6])(null != DETAILS[GROUP], "Props not provided in screen map for scene " + GROUP);
+      const getRuntimeProps = tmp2.getRuntimeProps;
+      let runtimeProps;
+      if (getRuntimeProps != null) {
+        runtimeProps = getRuntimeProps();
+      }
+      if (runtimeProps == null) {
+        runtimeProps = {};
+      }
+      const merged = Object.assign(closure_1);
+      const merged1 = Object.assign(tmp2);
+      const merged2 = Object.assign(runtimeProps);
+      let extraProps = tmp2.extraProps;
+      if (extraProps == null) {
+        extraProps = [];
+      }
+      const merged3 = Object.assign(extraProps);
+      const obj = {};
+      const obj2 = {};
+      const tmp5 = modalKey(steps[6]);
       const tmp6 = null != DETAILS[GROUP];
       const merged4 = Object.assign(obj);
-      return closure_1_8(callback(closure_1_2[11]), obj);
+      return closure_8(modalKey(steps[11]), obj2);
     };
-    obj3[lib.GROUP] = obj4;
-    const obj6 = {};
-    const merged6 = Object.assign(obj);
+    obj6[constants.GROUP] = obj7;
+    const obj9 = {};
+    const merged6 = Object.assign(obj3);
     DETAILS = tmp11.CHANNEL_BENEFITS;
     closure_1 = tmp;
-    obj6.headerRight = () => {
+    obj9.headerRight = () => {
       const obj = {
-        source: callback(closure_1_2[8]),
+        source: modalKey(steps[8]),
         onPress() {
-          if (closure_3 != null) {
+          if (closure_129_3 != null) {
             tmp2(tmp);
           }
-          callback2();
-          callback();
+          closure_129_8();
+          closure_129_6();
         },
         accessibilityLabel: null
       };
-      const intl = DETAILS(closure_1_2[9]).intl;
-      obj[2] = intl.string(DETAILS(closure_1_2[9]).t.cpT0Cq);
-      return closure_1_8(DETAILS(closure_1_2[7]).HeaderActionButton, obj);
+      const intl = DETAILS(steps[9]).intl;
+      obj.accessibilityLabel = intl.string(DETAILS(steps[9]).t.cpT0Cq);
+      return closure_8(DETAILS(steps[7]).HeaderActionButton, obj);
     };
     if (null == stepScreenPropsMap) {
-      let obj7 = {};
+      let obj10 = {};
     } else {
-      obj7 = stepScreenPropsMap[tmp19];
-      if (obj7 == null) {
-        obj7 = {};
+      obj10 = stepScreenPropsMap[tmp19];
+      if (obj10 == null) {
+        obj10 = {};
       }
     }
-    const merged7 = Object.assign(obj7);
-    obj6.render = function render() {
-      const CHANNEL_BENEFITS = closure_1_7.CHANNEL_BENEFITS;
-      callback(closure_1_2[6])(null != DETAILS[CHANNEL_BENEFITS], "Props not provided in screen map for scene " + CHANNEL_BENEFITS);
+    const merged7 = Object.assign(obj10);
+    obj9.render = function render() {
+      const CHANNEL_BENEFITS = constants.CHANNEL_BENEFITS;
+      modalKey(steps[6])(null != DETAILS[CHANNEL_BENEFITS], "Props not provided in screen map for scene " + CHANNEL_BENEFITS);
       const getRuntimeProps = tmp2.getRuntimeProps;
       let runtimeProps;
       if (getRuntimeProps != null) {
@@ -253,8 +246,7 @@ export default function RoleTierEditScenesModal(modalKey) {
       if (runtimeProps == null) {
         runtimeProps = {};
       }
-      let obj = {};
-      const merged = Object.assign(callback);
+      const merged = Object.assign(closure_1);
       const merged1 = Object.assign(tmp2);
       const merged2 = Object.assign(runtimeProps);
       let extraProps = tmp2.extraProps;
@@ -262,43 +254,42 @@ export default function RoleTierEditScenesModal(modalKey) {
         extraProps = [];
       }
       const merged3 = Object.assign(extraProps);
-      obj = {};
-      const merged4 = Object.assign(obj);
-      return closure_1_8(DETAILS(closure_1_2[12]).GuildRoleSubscriptionTierChannelBenefitsModal, obj);
+      const merged4 = Object.assign({});
+      return closure_8(DETAILS(steps[12]).GuildRoleSubscriptionTierChannelBenefitsModal, {});
     };
-    obj3[lib.CHANNEL_BENEFITS] = obj6;
-    const obj8 = {};
-    const merged8 = Object.assign(obj);
+    obj6[constants.CHANNEL_BENEFITS] = obj9;
+    const obj11 = {};
+    const merged8 = Object.assign(obj3);
     DETAILS = tmp11.INTANGIBLE_BENEFITS;
     closure_1 = tmp;
-    obj8.headerRight = () => {
+    obj11.headerRight = () => {
       const obj = {
-        source: callback(closure_1_2[8]),
+        source: modalKey(steps[8]),
         onPress() {
-          if (closure_3 != null) {
+          if (closure_129_3 != null) {
             tmp2(tmp);
           }
-          callback2();
-          callback();
+          closure_129_8();
+          closure_129_6();
         },
         accessibilityLabel: null
       };
-      const intl = DETAILS(closure_1_2[9]).intl;
-      obj[2] = intl.string(DETAILS(closure_1_2[9]).t.cpT0Cq);
-      return closure_1_8(DETAILS(closure_1_2[7]).HeaderActionButton, obj);
+      const intl = DETAILS(steps[9]).intl;
+      obj.accessibilityLabel = intl.string(DETAILS(steps[9]).t.cpT0Cq);
+      return closure_8(DETAILS(steps[7]).HeaderActionButton, obj);
     };
     if (null == stepScreenPropsMap) {
-      let obj9 = {};
+      let obj12 = {};
     } else {
-      obj9 = stepScreenPropsMap[tmp22];
-      if (obj9 == null) {
-        obj9 = {};
+      obj12 = stepScreenPropsMap[tmp22];
+      if (obj12 == null) {
+        obj12 = {};
       }
     }
-    const merged9 = Object.assign(obj9);
-    obj8.render = function render() {
-      const INTANGIBLE_BENEFITS = closure_1_7.INTANGIBLE_BENEFITS;
-      callback(closure_1_2[6])(null != DETAILS[INTANGIBLE_BENEFITS], "Props not provided in screen map for scene " + INTANGIBLE_BENEFITS);
+    const merged9 = Object.assign(obj12);
+    obj11.render = function render() {
+      const INTANGIBLE_BENEFITS = constants.INTANGIBLE_BENEFITS;
+      modalKey(steps[6])(null != DETAILS[INTANGIBLE_BENEFITS], "Props not provided in screen map for scene " + INTANGIBLE_BENEFITS);
       const getRuntimeProps = tmp2.getRuntimeProps;
       let runtimeProps;
       if (getRuntimeProps != null) {
@@ -307,8 +298,7 @@ export default function RoleTierEditScenesModal(modalKey) {
       if (runtimeProps == null) {
         runtimeProps = {};
       }
-      let obj = {};
-      const merged = Object.assign(callback);
+      const merged = Object.assign(closure_1);
       const merged1 = Object.assign(tmp2);
       const merged2 = Object.assign(runtimeProps);
       let extraProps = tmp2.extraProps;
@@ -316,43 +306,42 @@ export default function RoleTierEditScenesModal(modalKey) {
         extraProps = [];
       }
       const merged3 = Object.assign(extraProps);
-      obj = {};
-      const merged4 = Object.assign(obj);
-      return closure_1_8(DETAILS(closure_1_2[12]).GuildRoleSubscriptionTierIntangibleBenefitsModal, obj);
+      const merged4 = Object.assign({});
+      return closure_8(DETAILS(steps[12]).GuildRoleSubscriptionTierIntangibleBenefitsModal, {});
     };
-    obj3[lib.INTANGIBLE_BENEFITS] = obj8;
-    const obj10 = {};
-    const merged10 = Object.assign(obj);
+    obj6[constants.INTANGIBLE_BENEFITS] = obj11;
+    const obj13 = {};
+    const merged10 = Object.assign(obj3);
     DETAILS = tmp11.CONFIRMATION;
     closure_1 = tmp;
-    obj10.headerRight = () => {
+    obj13.headerRight = () => {
       const obj = {
-        source: callback(closure_1_2[8]),
+        source: modalKey(steps[8]),
         onPress() {
-          if (closure_3 != null) {
+          if (closure_129_3 != null) {
             tmp2(tmp);
           }
-          callback2();
-          callback();
+          closure_129_8();
+          closure_129_6();
         },
         accessibilityLabel: null
       };
-      const intl = DETAILS(closure_1_2[9]).intl;
-      obj[2] = intl.string(DETAILS(closure_1_2[9]).t.cpT0Cq);
-      return closure_1_8(DETAILS(closure_1_2[7]).HeaderActionButton, obj);
+      const intl = DETAILS(steps[9]).intl;
+      obj.accessibilityLabel = intl.string(DETAILS(steps[9]).t.cpT0Cq);
+      return closure_8(DETAILS(steps[7]).HeaderActionButton, obj);
     };
     if (null == stepScreenPropsMap) {
-      let obj11 = {};
+      let obj14 = {};
     } else {
-      obj11 = stepScreenPropsMap[tmp25];
-      if (obj11 == null) {
-        obj11 = {};
+      obj14 = stepScreenPropsMap[tmp25];
+      if (obj14 == null) {
+        obj14 = {};
       }
     }
-    const merged11 = Object.assign(obj11);
-    obj10.render = function render() {
-      const CONFIRMATION = closure_1_7.CONFIRMATION;
-      callback(closure_1_2[6])(null != DETAILS[CONFIRMATION], "Props not provided in screen map for scene " + CONFIRMATION);
+    const merged11 = Object.assign(obj14);
+    obj13.render = function render() {
+      const CONFIRMATION = constants.CONFIRMATION;
+      modalKey(steps[6])(null != DETAILS[CONFIRMATION], "Props not provided in screen map for scene " + CONFIRMATION);
       const getRuntimeProps = tmp2.getRuntimeProps;
       let runtimeProps;
       if (getRuntimeProps != null) {
@@ -361,8 +350,7 @@ export default function RoleTierEditScenesModal(modalKey) {
       if (runtimeProps == null) {
         runtimeProps = {};
       }
-      let obj = {};
-      const merged = Object.assign(callback);
+      const merged = Object.assign(closure_1);
       const merged1 = Object.assign(tmp2);
       const merged2 = Object.assign(runtimeProps);
       let extraProps = tmp2.extraProps;
@@ -370,48 +358,46 @@ export default function RoleTierEditScenesModal(modalKey) {
         extraProps = [];
       }
       const merged3 = Object.assign(extraProps);
-      obj = {};
-      const tmp = callback;
-      const tmp3 = callback;
-      const tmp4 = closure_1_2;
-      const tmp5 = callback(closure_1_2[6]);
+      const obj = {};
+      const obj2 = {};
+      const tmp5 = modalKey(steps[6]);
       const tmp6 = null != DETAILS[CONFIRMATION];
       const merged4 = Object.assign(obj);
-      return closure_1_8(callback(closure_1_2[13]), obj);
+      return closure_8(modalKey(steps[13]), obj2);
     };
-    obj3[lib.CONFIRMATION] = obj10;
-    const obj12 = {};
-    const merged12 = Object.assign(obj);
+    obj6[constants.CONFIRMATION] = obj13;
+    const obj15 = {};
+    const merged12 = Object.assign(obj3);
     DETAILS = tmp11.DESIGN;
     closure_1 = tmp;
-    obj12.headerRight = () => {
+    obj15.headerRight = () => {
       const obj = {
-        source: callback(closure_1_2[8]),
+        source: modalKey(steps[8]),
         onPress() {
-          if (closure_3 != null) {
+          if (closure_129_3 != null) {
             tmp2(tmp);
           }
-          callback2();
-          callback();
+          closure_129_8();
+          closure_129_6();
         },
         accessibilityLabel: null
       };
-      const intl = DETAILS(closure_1_2[9]).intl;
-      obj[2] = intl.string(DETAILS(closure_1_2[9]).t.cpT0Cq);
-      return closure_1_8(DETAILS(closure_1_2[7]).HeaderActionButton, obj);
+      const intl = DETAILS(steps[9]).intl;
+      obj.accessibilityLabel = intl.string(DETAILS(steps[9]).t.cpT0Cq);
+      return closure_8(DETAILS(steps[7]).HeaderActionButton, obj);
     };
     if (null == stepScreenPropsMap) {
-      let obj13 = {};
+      let obj16 = {};
     } else {
-      obj13 = stepScreenPropsMap[tmp28];
-      if (obj13 == null) {
-        obj13 = {};
+      obj16 = stepScreenPropsMap[tmp28];
+      if (obj16 == null) {
+        obj16 = {};
       }
     }
-    const merged13 = Object.assign(obj13);
-    obj12.render = function render() {
-      const DESIGN = closure_1_7.DESIGN;
-      callback(closure_1_2[6])(null != DETAILS[DESIGN], "Props not provided in screen map for scene " + DESIGN);
+    const merged13 = Object.assign(obj16);
+    obj15.render = function render() {
+      const DESIGN = constants.DESIGN;
+      modalKey(steps[6])(null != DETAILS[DESIGN], "Props not provided in screen map for scene " + DESIGN);
       const getRuntimeProps = tmp2.getRuntimeProps;
       let runtimeProps;
       if (getRuntimeProps != null) {
@@ -420,8 +406,7 @@ export default function RoleTierEditScenesModal(modalKey) {
       if (runtimeProps == null) {
         runtimeProps = {};
       }
-      let obj = {};
-      const merged = Object.assign(callback);
+      const merged = Object.assign(closure_1);
       const merged1 = Object.assign(tmp2);
       const merged2 = Object.assign(runtimeProps);
       let extraProps = tmp2.extraProps;
@@ -429,49 +414,47 @@ export default function RoleTierEditScenesModal(modalKey) {
         extraProps = [];
       }
       const merged3 = Object.assign(extraProps);
-      obj = {};
-      const tmp = callback;
-      const tmp3 = callback;
-      const tmp4 = closure_1_2;
-      const tmp5 = callback(closure_1_2[6]);
+      const obj = {};
+      const obj2 = {};
+      const tmp5 = modalKey(steps[6]);
       const tmp6 = null != DETAILS[DESIGN];
       const merged4 = Object.assign(obj);
-      return closure_1_8(callback(closure_1_2[14]), obj);
+      return closure_8(modalKey(steps[14]), obj2);
     };
-    obj3[lib.DESIGN] = obj12;
-    const obj14 = {};
-    const merged14 = Object.assign(obj);
+    obj6[constants.DESIGN] = obj15;
+    const obj17 = {};
+    const merged14 = Object.assign(obj3);
     DETAILS = tmp11.DETAILS;
     closure_1 = tmp;
-    obj14.headerRight = () => {
+    obj17.headerRight = () => {
       const obj = {
-        source: callback(closure_1_2[8]),
+        source: modalKey(steps[8]),
         onPress() {
-          if (closure_3 != null) {
+          if (closure_129_3 != null) {
             tmp2(tmp);
           }
-          callback2();
-          callback();
+          closure_129_8();
+          closure_129_6();
         },
         accessibilityLabel: null
       };
-      const intl = DETAILS(closure_1_2[9]).intl;
-      obj[2] = intl.string(DETAILS(closure_1_2[9]).t.cpT0Cq);
-      return closure_1_8(DETAILS(closure_1_2[7]).HeaderActionButton, obj);
+      const intl = DETAILS(steps[9]).intl;
+      obj.accessibilityLabel = intl.string(DETAILS(steps[9]).t.cpT0Cq);
+      return closure_8(DETAILS(steps[7]).HeaderActionButton, obj);
     };
     if (null == stepScreenPropsMap) {
-      let obj15 = {};
+      let obj18 = {};
     } else {
-      obj15 = stepScreenPropsMap[tmp31];
-      if (obj15 == null) {
-        obj15 = {};
+      obj18 = stepScreenPropsMap[tmp31];
+      if (obj18 == null) {
+        obj18 = {};
       }
     }
-    const obj16 = { screens: null, initialStack: null };
-    const merged15 = Object.assign(obj15);
-    obj14.render = function render() {
-      DETAILS = closure_1_7.DETAILS;
-      callback(closure_1_2[6])(null != DETAILS[DETAILS], "Props not provided in screen map for scene " + DETAILS);
+    const obj19 = { screens: null, initialStack: null };
+    const merged15 = Object.assign(obj18);
+    obj17.render = function render() {
+      DETAILS = constants.DETAILS;
+      modalKey(steps[6])(null != DETAILS[DETAILS], "Props not provided in screen map for scene " + DETAILS);
       const getRuntimeProps = tmp2.getRuntimeProps;
       let runtimeProps;
       if (getRuntimeProps != null) {
@@ -480,8 +463,7 @@ export default function RoleTierEditScenesModal(modalKey) {
       if (runtimeProps == null) {
         runtimeProps = {};
       }
-      let obj = {};
-      const merged = Object.assign(callback);
+      const merged = Object.assign(closure_1);
       const merged1 = Object.assign(tmp2);
       const merged2 = Object.assign(runtimeProps);
       let extraProps = tmp2.extraProps;
@@ -489,34 +471,29 @@ export default function RoleTierEditScenesModal(modalKey) {
         extraProps = [];
       }
       const merged3 = Object.assign(extraProps);
-      obj = {};
-      const tmp = callback;
-      const tmp3 = callback;
-      const tmp4 = closure_1_2;
-      const tmp5 = callback(closure_1_2[6]);
+      const obj = {};
+      const obj2 = {};
+      const tmp5 = modalKey(steps[6]);
       const tmp6 = null != DETAILS[DETAILS];
       const merged4 = Object.assign(obj);
-      return closure_1_8(callback(closure_1_2[15]), obj);
+      return closure_8(modalKey(steps[15]), obj2);
     };
-    obj3[lib.DETAILS] = obj14;
-    obj16[0] = obj3;
-    let arr = memo;
-    modalKey(steps[6])(memo.length > 0, "At least one step must be provided to RoleTierEditScenesModal");
-    if (null == closure_4) {
-      const obj17 = { name: null };
-      obj17[0] = arr[0];
-      const items = [obj17];
+    obj6[constants.DETAILS] = obj17;
+    obj19.screens = obj6;
+    _modDef38(memo.length > 0, "At least one step must be provided to RoleTierEditScenesModal");
+    if (null == noop) {
+      const obj20 = { name: arr[0] };
+      const items = [obj20];
       let tmp35 = items;
     } else {
       const items1 = [];
       let num2 = 0;
       tmp35 = items1;
       if (0 < arr.length) {
-        const obj18 = { name: null };
-        obj18[0] = arr[num2];
-        arr = items1.push(obj18);
+        const obj21 = { name: arr[num2] };
+        items1.push(obj21);
         tmp35 = items1;
-        while (arr[num2] !== closure_4) {
+        while (arr[num2] !== noop) {
           num2 = num2 + 1;
           tmp35 = items1;
           if (num2 < arr.length) {
@@ -528,30 +505,31 @@ export default function RoleTierEditScenesModal(modalKey) {
         }
       }
     }
-    obj16[1] = tmp35;
-    return obj16;
+    obj19.initialStack = tmp35;
+    return obj19;
   }));
-  obj = {
+  let obj2 = {
     screens,
     initialRouteStack: initialStack,
-    onWillFocus(route) {
-      const name = route.route.name;
+    onWillFocus(onDidFocus) {
+      const name = onDidFocus.route.name;
       if (null != name) {
-        callback(name);
-        const findIndexResult = memo.findIndex((arg0) => arg0 === name);
+        closure_1_5(name);
+        const findIndexResult = memo.findIndex((item) => item === name);
         if (findIndexResult >= 0) {
-          lib(findIndexResult);
+          closure_7(findIndexResult);
         }
       }
     },
     headerBackTitle: null
   };
-  let intl = _require(steps[9]).intl;
-  obj[3] = intl.string(_require(steps[9]).t["13/7kX"]);
-  const items2 = [callback3(_require(steps[19]).Navigator, obj), ];
-  obj = { style: items3, current: tmp3[0] + 1, total: memo.length };
-  items3 = [tmp.stepsIndicator, { top: modalKey(steps[16])().top }];
-  items2[1] = callback3(modalKey(steps[20]), obj);
-  obj[0] = items2;
+  let intl = require("util").intl;
+  obj2.headerBackTitle = intl.string(require("util").t["13/7kX"]);
+  const items2 = [closure_8(require("Navigator").Navigator, obj2), ];
+  let obj3 = { style: null, current: tmp3[0] + 1, total: memo.length };
+  const items3 = [tmp.stepsIndicator, { top: modalKey(steps[16])().top }];
+  obj3.style = items3;
+  items2[1] = closure_8(modalKey(steps[20]), obj3);
+  obj.children = items2;
   return memo(handleClose, obj);
 };

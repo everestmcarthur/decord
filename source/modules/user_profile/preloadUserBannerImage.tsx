@@ -1,17 +1,17 @@
-// Module ID: 8188
-// Function ID: 8189
+// Module ID: 8214
+// Function ID: 8215
 // Name: preloadUserBannerImage
 // Dependencies: [1396, 1935, 2]
 // Exports: default
 
-// Module 8188 (preloadUserBannerImage)
-import set from "set" /* 2 */;
-import getAvatarURL from "getAvatarURL" /* 1396 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+// Module 8214 (preloadUserBannerImage)
+import AvatarUtils from "AvatarUtils" /* 1396 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/user_profile/preloadUserBannerImage.tsx");
+const result = size.fileFinishedImporting("modules/user_profile/preloadUserBannerImage.tsx");
 
-export default function preloadUserBannerImage(user) {
+export default function preloadUserBannerImage(user, guildId) {
   if (typeof globalThis.Image !== "undefined") {
     user = user.user;
     let id;
@@ -20,7 +20,7 @@ export default function preloadUserBannerImage(user) {
     }
     if (null != id) {
       if ("" !== id) {
-        let tmp3 = null != arg1;
+        let tmp3 = null != guildId;
         if (tmp3) {
           const guild_member_profile = user.guild_member_profile;
           let banner;
@@ -31,14 +31,10 @@ export default function preloadUserBannerImage(user) {
         }
         let guildMemberBannerURL;
         if (tmp3) {
-          let obj = getAvatarURL;
-          obj = { id: null, guildId: null, banner: null, canAnimate: null, size: 600 };
-          obj[0] = id;
-          obj[1] = arg1;
-          obj[2] = user.guild_member_profile.banner;
-          const GifAutoPlay = explicitContentFromProto.GifAutoPlay;
-          obj[3] = GifAutoPlay.getSetting();
-          guildMemberBannerURL = obj.getGuildMemberBannerURL(obj);
+          const obj2 = { id, guildId, banner: user.guild_member_profile.banner, canAnimate: null, size: 600 };
+          const GifAutoPlay = UserSettings.GifAutoPlay;
+          obj2.canAnimate = GifAutoPlay.getSetting();
+          guildMemberBannerURL = AvatarUtils.getGuildMemberBannerURL(obj2);
         }
         let banner1;
         if (user != null) {
@@ -48,13 +44,10 @@ export default function preloadUserBannerImage(user) {
           }
         }
         if (null != banner1) {
-          obj = { id: null, banner: null, canAnimate: null, size: 600 };
-          obj[0] = id;
-          obj[1] = user.user_profile.banner;
-          const GifAutoPlay2 = explicitContentFromProto.GifAutoPlay;
-          obj[2] = GifAutoPlay2.getSetting();
-          guildMemberBannerURL = getAvatarURL.getUserBannerURL(obj);
-          const obj3 = getAvatarURL;
+          const obj4 = { id, banner: user.user_profile.banner, canAnimate: null, size: 600 };
+          const GifAutoPlay2 = UserSettings.GifAutoPlay;
+          obj4.canAnimate = GifAutoPlay2.getSetting();
+          guildMemberBannerURL = AvatarUtils.getUserBannerURL(obj4);
         }
         if (null != guildMemberBannerURL) {
           const image = new globalThis.Image();

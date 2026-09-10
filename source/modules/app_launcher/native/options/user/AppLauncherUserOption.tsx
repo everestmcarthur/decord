@@ -1,40 +1,53 @@
-// Module ID: 12188
-// Function ID: 12189
+// Module ID: 12214
+// Function ID: 12215
 // Name: AppLauncherUserOption
-// Dependencies: [32, 19, 4552, 21, 4560, 576, 504, 12180, 1874, 4527, 12189, 1896, 12189, 1178, 12183, 10922, 12186, 4556, 2]
+// Dependencies: [32, 19, 4566, 21, 4574, 576, 504, 12206, 1874, 4541, 12215, 1896, 12215, 1178, 12209, 10949, 12212, 4570, 2]
 // Exports: default
 
-// Module 12188 (AppLauncherUserOption)
-import ThemesDefault from "Themes" /* 576 */;
-import AppLauncherSelectOptionFormRowDefault from "AppLauncherSelectOptionFormRow" /* 12180 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12214 (AppLauncherUserOption)
+import nativeDefault from "native" /* 576 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import AppLauncherSelectOptionFormRowDefault from "AppLauncherSelectOptionFormRow" /* 12206 */;
+import AppLauncherUserListActionSheet from "AppLauncherUserListActionSheet" /* 12215 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-const require = arg1;
-createCacheKey = { iconWrapper: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
-createCacheKey[0] = createCacheKey;
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/app_launcher/native/options/user/AppLauncherUserOption.tsx");
+require = fn;
+let jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { iconWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE } };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/app_launcher/native/options/user/AppLauncherUserOption.tsx");
 
 export default function AppLauncherUserOption(option) {
   option = option.option;
-  ({ initialValue: importDefault, onUserPress: dependencyMap, onActionSheetDismiss: closure_3, channel } = option);
+  ({ initialValue: importDefault, onUserPress: dependencyMap, onActionSheetDismiss: _slicedToArray, channel } = option);
   const onPress = option.onPress;
-  c6 = undefined;
-  let callback2;
+  jsx = undefined;
+  c7 = undefined;
   ({ style, autoFocus, hasError } = option);
   const guild_id = channel.guild_id;
-  let obj = option(504);
+  const tmp = c7();
   const items = [onPress];
-  const stateFromStores = obj.useStateFromStores(items, () => onPress.useReducedMotion);
-  const tmp = callback2();
-  [tmp6, c6] = callback(channel.useState(() => {
+  const stateFromStores = option(504).useStateFromStores(items, () => onPress.useReducedMotion);
+  let obj = option(504);
+  [tmp6, c6] = channel.useState(() => {
     let userId = null;
-    if (null != closure_1) {
+    if (null != importDefault) {
+      userId = null;
+      if ("userMention" === tmp.type) {
+        userId = tmp.userId;
+      }
+    }
+    return userId;
+  });
+  const tmp5 = _slicedToArray(channel.useState(() => {
+    let userId = null;
+    if (null != importDefault) {
       userId = null;
       if ("userMention" === tmp.type) {
         userId = tmp.userId;
@@ -42,77 +55,56 @@ export default function AppLauncherUserOption(option) {
     }
     return userId;
   }), 2);
-  const tmp5 = callback(channel.useState(() => {
-    let userId = null;
-    if (null != closure_1) {
-      userId = null;
-      if ("userMention" === tmp.type) {
-        userId = tmp.userId;
-      }
-    }
-    return userId;
-  }), 2);
-  [tmp8, c7] = callback(channel.useState(null), 2);
-  obj = { style, option, hasError, selected: null, onPress: null, leading: null, selectedItemName: null, autoFocus: null };
+  [tmp8, c7] = channel.useState(null);
+  let obj2 = { style, option, hasError, selected: null, onPress: null, leading: null, selectedItemName: null, autoFocus: null };
   let tmp12 = null != tmp8;
-  const tmp7 = callback(channel.useState(null), 2);
+  const tmp7 = _slicedToArray(channel.useState(null), 2);
   if (!tmp12) {
     tmp12 = null != tmp6;
   }
-  obj[3] = tmp12;
-  obj[4] = function onPress() {
+  obj2.selected = tmp12;
+  obj2.onPress = function onPress() {
     if (onPress != null) {
       tmp();
     }
-    let obj = option(closure_1_2[8]);
-    const result = obj.dismissGlobalKeyboard();
-    const obj2 = closure_1_1(closure_1_2[9]);
-    obj = {
+    const result = KeyboardManagerUtils.dismissGlobalKeyboard();
+    const obj2 = ActionSheetActionCreatorsDefault;
+    obj2.openLazy(asyncRequireImpl(12215, dependencyMap.paths), AppLauncherUserListActionSheet.APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY, {
       option,
       channel,
       onUserPress(user) {
         user = user.user;
         if (typeof user === "string") {
-          callback2(user);
+          closure_1_6(user);
         } else {
-          callback2(user.id);
-          callback3(user);
+          closure_1_6(user.id);
+          closure_1_7(user);
         }
-        callback({ user });
+        closure_1_2({ user });
       },
-      onActionSheetDismiss: closure_3
-    };
-    obj2.openLazy(option(closure_1_2[11])(closure_1_2[10], closure_1_2.paths), option(closure_1_2[12]).APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY, obj);
+      onActionSheetDismiss
+    });
   };
   if (null != tmp8) {
-    obj = { user: null, guildId: null, animate: null, size: null };
-    obj[0] = tmp8;
-    obj[1] = guild_id;
-    obj[2] = !stateFromStores;
-    obj[3] = tmp2(1178).AvatarSizes.REFRESH_MEDIUM_32;
-    let tmp9Result = tmp9(tmp2(1178).Avatar, obj);
+    const obj3 = { user: tmp8, guildId: guild_id, animate: !stateFromStores, size: tmp2(1178).AvatarSizes.REFRESH_MEDIUM_32 };
+    let tmp9Result = tmp9(tmp2(1178).Avatar, obj3);
   } else {
-    obj1 = { icon: null, wrapperStyle: null };
-    obj1[0] = tmp9(tmp2(10922).UserCircleIcon, { size: "sm", color: "interactive-text-default" });
-    obj1[1] = tmp.iconWrapper;
-    tmp9Result = tmp9(tmp10(12183), obj1);
-    const tmp10Result = tmp10(12183);
+    const obj4 = { icon: tmp9(tmp2(10949).UserCircleIcon, { size: "sm", color: "interactive-text-default" }), wrapperStyle: tmp.iconWrapper };
+    tmp9Result = tmp9(tmp10(12209), obj4);
+    const tmp10Result = tmp10(12209);
   }
-  obj[5] = tmp9Result;
+  obj2.leading = tmp9Result;
   if (null != tmp8) {
-    let obj2 = { guildId: null, user: null };
-    obj2[0] = guild_id;
-    obj2[1] = tmp8;
-    tmp9Result = tmp9(tmp10(12186), obj2);
+    const obj5 = { guildId: guild_id, user: tmp8 };
+    let tmp9Result2 = tmp9(tmp10(12212), obj5);
   } else {
-    tmp9Result = null;
+    tmp9Result2 = null;
     if (null != tmp6) {
-      const obj3 = { variant: "text-md/medium", color: "text-default", children: null };
-      obj3[2] = tmp6;
-      tmp9Result = tmp9(tmp2(4556).Text, obj3);
+      const obj6 = { variant: "text-md/medium", color: "text-default", children: tmp6 };
+      tmp9Result2 = tmp9(tmp2(4570).Text, obj6);
     }
   }
-  obj[6] = tmp9Result;
-  obj[7] = autoFocus;
-  return c6(AppLauncherSelectOptionFormRowDefault, obj);
+  obj2.selectedItemName = tmp9Result2;
+  obj2.autoFocus = autoFocus;
+  return jsx(AppLauncherSelectOptionFormRowDefault, obj2);
 };

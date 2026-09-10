@@ -1,24 +1,24 @@
-// Module ID: 10892
-// Function ID: 10893
+// Module ID: 10919
+// Function ID: 10920
 // Name: PresenceActivityStatus
-// Dependencies: [19, 1074, 21, 7739, 9228, 5106, 9916, 10888, 10893, 10887, 10890, 2]
+// Dependencies: [19, 1074, 21, 7753, 9255, 5120, 9943, 10915, 10920, 10914, 10917, 2]
 // Exports: default
 
-// Module 10892 (PresenceActivityStatus)
-import noopAll from "noop" /* 19 */;
-import AppsIcon2 from "AppsIcon" /* 5106 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7739 */;
-import GameControllerIcon from "GameControllerIcon" /* 9228 */;
-import MusicIcon from "MusicIcon" /* 9916 */;
-import TvIcon from "TvIcon" /* 10888 */;
-import getActivityStatusTextDefault from "getActivityStatusText" /* 10893 */;
-import { ActivityTypes } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 10919 (PresenceActivityStatus)
+import AppsIcon2 from "AppsIcon" /* 5120 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7753 */;
+import GameControllerIcon from "GameControllerIcon" /* 9255 */;
+import MusicIcon from "MusicIcon" /* 9943 */;
+import TvIcon from "TvIcon" /* 10915 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 10920 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/activity_status/native/PresenceActivityStatus.tsx");
+require = fn;
+const ActivityTypes = fn(1074).ActivityTypes;
+const jsxProd = fn(21);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activity_status/native/PresenceActivityStatus.tsx");
 
 export default function PresenceActivityStatus(hideText) {
   ({ activity, hideIcon } = hideText);
@@ -57,20 +57,15 @@ export default function PresenceActivityStatus(hideText) {
     tmp12 = null != AppsIcon;
   }
   if (tmp12) {
-    let obj = { icon: null, style: null };
-    obj[0] = AppsIcon;
-    obj[1] = iconStyle;
-    tmp12 = callback(tmp(10887), obj);
+    const obj = { icon: AppsIcon, style: iconStyle };
+    tmp12 = React4(tmp(10914), obj);
   }
   const children = [tmp12, ];
   let tmp15 = !flag;
   if (!flag) {
-    obj = { style: null, maxFontSizeMultiplier: null, children: null };
-    obj[0] = textStyle;
-    obj[1] = maxFontSizeMultiplier;
-    obj[2] = getActivityStatusTextDefault(activity, true).text;
-    tmp15 = callback(tmp(10890), obj);
+    const obj2 = { style: textStyle, maxFontSizeMultiplier, children: getActivityStatusTextDefault(activity, true).text };
+    tmp15 = React4(tmp(10917), obj2);
   }
   children[1] = tmp15;
-  return closure_6(closure_5, { children });
+  return timestampProducer(hasOwnProperty, { children });
 };

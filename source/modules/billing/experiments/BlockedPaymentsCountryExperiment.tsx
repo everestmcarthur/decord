@@ -1,21 +1,25 @@
-// Module ID: 7417
-// Function ID: 7418
-// Name: useBlockedPaymentsConfig
-// Dependencies: [4474, 1433, 7418, 2]
+// Module ID: 7431
+// Function ID: 7432
+// Name: BlockedPaymentsCountryExperiment
+// Dependencies: [4488, 1433, 7432, 2]
 // Exports: getIsPaymentsBlocked, useBlockedPaymentsConfig, useIsPaymentsBlocked
 
-// Module 7417 (useBlockedPaymentsConfig)
-import set from "set" /* 2 */;
-import useGeoForUserDefault from "useGeoForUser" /* 7418 */;
-import createExperiment from "createExperiment" /* 4474 */;
+// Module 7431 (BlockedPaymentsCountryExperiment)
+import useGeoForUserDefault from "useGeoForUser" /* 7432 */;
+import createExperiment from "module_4488" /* 4488 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
+const obj = { kind: "user", id: "2022-03_block_russian_purchases", label: "Block purchases based on country", defaultConfig: { paymentsBlocked: false }, treatments: null };
 const items = [{ id: 1, label: "Payments Blocked", config: { paymentsBlocked: true } }];
-let closure_2 = createExperiment.createExperiment({ kind: "user", id: "2022-03_block_russian_purchases", label: "Block purchases based on country", defaultConfig: { paymentsBlocked: false }, treatments: items });
-const obj = { 1: null };
-obj[1] = { enabled: true };
-let closure_3 = ApexExperiment.createApexExperiment({ name: "2026-03-block-purchases", kind: "user", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/billing/experiments/BlockedPaymentsCountryExperiment.tsx");
+obj.treatments = items;
+let closure_2 = createExperiment.createExperiment(obj);
+const obj2 = { name: "2026-03-block-purchases", kind: "user", defaultConfig: { enabled: false }, variations: null };
+const obj3 = { 1: null };
+obj3[1] = { enabled: true };
+obj2.variations = obj3;
+let closure_3 = ApexExperiment.createApexExperiment(obj2);
+const result = size.fileFinishedImporting("modules/billing/experiments/BlockedPaymentsCountryExperiment.tsx");
 
 export const useBlockedPaymentsConfig = function useBlockedPaymentsConfig() {
   let enabled = closure_2.useExperiment({ location: "c519a9_1" }, { autoTrackExposure: false }).paymentsBlocked;

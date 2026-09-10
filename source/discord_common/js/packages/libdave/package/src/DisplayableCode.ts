@@ -1,18 +1,18 @@
-// Module ID: 9142
-// Function ID: 9143
-// Name: generateDisplayableCode
+// Module ID: 9169
+// Function ID: 9170
+// Name: DisplayableCode
 // Dependencies: [2]
 // Exports: generateDisplayableCode
 
-// Module 9142 (generateDisplayableCode)
-import set from "set" /* 2 */;
+// Module 9169 (DisplayableCode)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/libdave/package/src/DisplayableCode.ts");
+const result = size.fileFinishedImporting("../discord_common/js/packages/libdave/package/src/DisplayableCode.ts");
 
 export const generateDisplayableCode = function generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize) {
   if (toByteArrayResult.byteLength < desiredLength) {
     const _Error4 = Error;
-    error = new Error("data.byteLength must be greater than or equal to desiredLength");
+    const error = new Error("data.byteLength must be greater than or equal to desiredLength");
     throw error;
   } else if (desiredLength % chunkSize != 0) {
     const _Error3 = Error;
@@ -32,14 +32,10 @@ export const generateDisplayableCode = function generateDisplayableCode(toByteAr
       while (true) {
         let _BigInt = BigInt;
         let BigIntResult = BigInt(0);
-        let tmp2 = num;
-        let tmp3 = str2;
         let tmp4 = BigIntResult;
         let diff = chunkSize;
         if (chunkSize > 0) {
           let tmp6 = toByteArrayResult[num + (chunkSize - diff)];
-          let tmp7 = diff;
-          let tmp8 = BigIntResult;
           while (undefined !== tmp6) {
             let _BigInt2 = BigInt;
             let tmp9 = BigIntResult << 8n;
@@ -53,12 +49,11 @@ export const generateDisplayableCode = function generateDisplayableCode(toByteAr
           let str4 = "Out of bounds access from data array";
           let tmp11 = new.target;
           let error3 = new Error("Out of bounds access from data array");
-          let tmp13 = error3;
           throw error3;
         }
         let str = tmp4 % tmp32;
-        str = str.toString();
-        str2 = str2 + str.padStart(chunkSize, "0");
+        let str1 = str.toString();
+        str2 = str2 + str1.padStart(chunkSize, "0");
         num = num + chunkSize;
         str3 = str2;
       }

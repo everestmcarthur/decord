@@ -1,26 +1,22 @@
-// Module ID: 9699
-// Function ID: 9700
-// Name: dispatcher
+// Module ID: 9726
+// Function ID: 9727
+// Name: TooltipActionCreators
 // Dependencies: [573, 2]
 
-// Module 9699 (dispatcher)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 9726 (TooltipActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/tooltip/TooltipActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/tooltip/TooltipActionCreators.tsx");
 
 export default {
   acknowledgeTooltip(GIF_PICKER_TOOLTIP) {
-    let obj = dispatcherDefault;
-    obj = { type: "TOOLTIP_ACKNOWLEDGE", tooltip: GIF_PICKER_TOOLTIP };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "TOOLTIP_ACKNOWLEDGE", tooltip: GIF_PICKER_TOOLTIP });
   },
-  attemptToShowTooltip(closure_0, flag) {
+  attemptToShowTooltip(tooltip, flag) {
     if (flag === undefined) {
       flag = false;
     }
-    let obj = dispatcherDefault;
-    obj = { type: "TOOLTIP_SHOW_ATTEMPT", tooltip: closure_0, ignoreMaxShownLimit: flag };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "TOOLTIP_SHOW_ATTEMPT", tooltip, ignoreMaxShownLimit: flag });
   }
 };

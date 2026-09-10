@@ -1,34 +1,32 @@
-// Module ID: 16182
-// Function ID: 16183
+// Module ID: 16212
+// Function ID: 16213
 // Name: ServerPreviewPill
-// Dependencies: [19, 17, 21, 4560, 576, 4556, 1114, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 4570, 1114, 2]
 // Exports: default
 
-// Module 16182 (ServerPreviewPill)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16212 (ServerPreviewPill)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { pill: null, text: null };
-createCacheKey = { paddingHorizontal: 10, paddingVertical: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.WHITE };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { color: ThemesDefault.colors.BLACK, textTransform: "uppercase", letterSpacing: 0.5 };
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { color: ThemesDefault.colors.BLACK, textTransform: "uppercase", letterSpacing: 0.5 };
-const result = require("set").fileFinishedImporting("modules/lurker_mode/native/ServerPreviewPill.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { pill: { paddingHorizontal: 10, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.WHITE }, text: null };
+const obj3 = { paddingHorizontal: 10, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.WHITE };
+obj2.text = { color: nativeDefault.colors.BLACK, textTransform: "uppercase", letterSpacing: 0.5 };
+let closure_4 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/lurker_mode/native/ServerPreviewPill.tsx");
 
 export default function ServerPreviewPill() {
-  const tmp = callback();
-  let obj = { style: tmp.pill, accessibilityRole: "text", children: null };
-  obj = { variant: "text-xs/bold", style: tmp.text, children: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.KNhFgD);
-  obj[2] = jsx(Text.Text, { variant: "text-xs/bold", style: tmp.text, children: null });
-  return <View variant="text-xs/bold" style={tmp.text}>{null}</View>;
+  const tmp = closure_4();
+  const obj = { style: tmp.pill, accessibilityRole: "text", children: null };
+  const obj2 = { variant: "text-xs/bold", style: tmp.text, children: null };
+  const intl = util.intl;
+  obj2.children = intl.string(util.t.KNhFgD);
+  obj.children = jsx(Text_Text.Text, { variant: "text-xs/bold", style: tmp.text, children: null });
+  return <View style={tmp.pill} accessibilityRole="text">{null}</View>;
 };

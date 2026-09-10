@@ -1,17 +1,18 @@
-// Module ID: 7271
-// Function ID: 7272
+// Module ID: 7285
+// Function ID: 7286
 // Name: useIsRemote
-// Dependencies: [4577, 504, 2]
+// Dependencies: [4591, 504, 2]
 // Exports: default
 
-// Module 7271 (useIsRemote)
+// Module 7285 (useIsRemote)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "set" /* 4577 */;
+import GameConsoleStore from "GameConsoleStore" /* 4591 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/game_console/hooks/useIsRemote.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_console/hooks/useIsRemote.tsx");
 
 export default function useIsRemote() {
-  const items = [closure_2];
+  const items = [GameConsoleStore];
   return initialize.useStateFromStores(items, () => null != remoteSessionId.getRemoteSessionId() || null != remoteSessionId.getAwaitingRemoteSessionInfo());
 };

@@ -1,53 +1,45 @@
-// Module ID: 17506
-// Function ID: 17507
-// Name: updateVoiceSettings
-// Dependencies: [502, 13998, 1957, 2011, 13999, 1074, 573, 7118, 2]
+// Module ID: 17537
+// Function ID: 17538
+// Name: VoiceChannelSettingsManager
+// Dependencies: [502, 14021, 1957, 2011, 14022, 1074, 573, 7132, 2]
 
-// Module 17506 (updateVoiceSettings)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import initializeDefault from "initialize" /* 7118 */;
-import closure_2 from "fetchFingerprint" /* 502 */;
-import closure_3 from "bitrate" /* 13998 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "handleConnectionOpen" /* 2011 */;
-import closure_6 from "mode" /* 13999 */;
-import { VideoQualityMode } from "ME" /* 1074 */;
+// Module 17537 (VoiceChannelSettingsManager)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import BitRateStore from "BitRateStore" /* 14021 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import VideoQualityModeStore from "VideoQualityModeStore" /* 14022 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
 function updateVoiceSettings() {
-  let obj = store2;
-  const voiceChannelId = store2.getVoiceChannelId();
+  const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
   if (null != voiceChannelId) {
-    const channel = store.getChannel(voiceChannelId);
+    const channel = ChannelStore.getChannel(voiceChannelId);
     if (tmp5) {
-      obj = { type: "SET_CHANNEL_BITRATE", bitrate: null };
-      obj[1] = channel.bitrate;
-      dispatcherDefault.dispatch(obj);
-      const obj2 = dispatcherDefault;
+      const obj3 = { type: "SET_CHANNEL_BITRATE", bitrate: channel.bitrate };
+      DispatcherDefault.dispatch(obj3);
     }
     tmp5 = null != channel && tmp2 !== channel.bitrate;
   }
-  const voiceChannelId1 = obj.getVoiceChannelId();
+  const voiceChannelId1 = SelectedChannelStore.getVoiceChannelId();
   if (null != voiceChannelId1) {
-    const channel1 = store.getChannel(voiceChannelId1);
+    const channel1 = ChannelStore.getChannel(voiceChannelId1);
     if (null != channel1) {
       let AUTO = channel1.videoQualityMode;
       if (AUTO == null) {
         AUTO = VideoQualityMode.AUTO;
       }
       if (tmp10 !== AUTO) {
-        obj = { type: "SET_CHANNEL_VIDEO_QUALITY_MODE", mode: null };
-        obj[1] = AUTO;
-        dispatcherDefault.dispatch(obj);
-        const obj4 = dispatcherDefault;
+        const obj5 = { type: "SET_CHANNEL_VIDEO_QUALITY_MODE", mode: AUTO };
+        DispatcherDefault.dispatch(obj5);
       }
     }
   }
 }
 function handleChannelUpdates(arg0) {
   while (tmp !== undefined) {
-    let tmp3 = store2;
-    if (store2.getVoiceChannelId() === tmp2.id) {
-      let tmp4 = updateVoiceSettings;
+    if (SelectedChannelStore.getVoiceChannelId() === tmp2.id) {
       let tmp5 = updateVoiceSettings();
     }
     continue;
@@ -57,19 +49,20 @@ function handleVoiceStateUpdates(voiceStates) {
   voiceStates = voiceStates.voiceStates;
   const item = voiceStates.forEach((sessionId) => {
     if (sessionId.getSessionId() === sessionId.sessionId) {
-      callback();
+      updateVoiceSettings();
     }
   });
 }
-initializeDefault;
-let prototype = function VoiceChannelSettingsManager() {
+const VideoQualityMode = fn(1074).VideoQualityMode;
+const prototype = function VoiceChannelSettingsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { CHANNEL_UPDATES: handleChannelUpdates, VOICE_STATE_UPDATES: handleVoiceStateUpdates };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {
 }
-prototype = new prototype();
-const result = require("set").fileFinishedImporting("stores/VoiceChannelSettingsManager.tsx");
+const prototype1 = new prototype();
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/VoiceChannelSettingsManager.tsx");
 
-export default prototype;
+export default prototype1;

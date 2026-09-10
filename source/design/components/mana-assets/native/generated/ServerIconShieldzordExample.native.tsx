@@ -1,17 +1,17 @@
-// Module ID: 6433
-// Function ID: 6434
+// Module ID: 6447
+// Function ID: 6448
 // Name: ServerIconShieldzordExample
-// Dependencies: [21, 5587, 6434, 2]
+// Dependencies: [21, 5601, 6448, 2]
 // Exports: ServerIconShieldzordExample
 
-// Module 6433 (ServerIconShieldzordExample)
-import set from "set" /* 2 */;
+// Module 6447 (ServerIconShieldzordExample)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 6434 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6448 from "module_6448" /* 6448 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ServerIconShieldzordExample.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ServerIconShieldzordExample.native.tsx");
 
 export const ServerIconShieldzordExample = function ServerIconShieldzordExample(width) {
   let num = width.width;
@@ -27,14 +27,14 @@ export const ServerIconShieldzordExample = function ServerIconShieldzordExample(
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
-  obj = { width: num * num3, height: num2 * num3 };
-  const items = [obj];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { width: num * num3, height: num2 * num3 });
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef6448 };
+  obj.source = obj2;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

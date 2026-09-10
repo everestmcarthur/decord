@@ -1,28 +1,28 @@
-// Module ID: 15767
-// Function ID: 15768
-// Name: route
-// Dependencies: [7975, 1074, 11473, 15768, 2]
+// Module ID: 15797
+// Function ID: 15798
+// Name: DesignSystemsExperimentalButtonsSetting
+// Dependencies: [7989, 1074, 11500, 15798, 2]
 
-// Module 15767 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15797 (DesignSystemsExperimentalButtonsSetting)
+import Constants from "Constants" /* 1074 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const require = globalThis.__r;
+
+const route = SettingBuilders.createRoute({
   useTitle() {
     return "Experimental Buttons";
   },
-  parent: MobileUserSettings.MobileUserSettings.DESIGN_SYSTEMS,
-  screen: obj
-};
-obj = {
-  route: ME.UserSettingsSections.DESIGN_SYSTEM_EXPERIMENTAL_BUTTONS,
-  getComponent() {
-    return require(15768) /* UserSettingsDesignSystemExperimentalButtons */.default;
+  parent: SettingsConstants.MobileUserSettings.DESIGN_SYSTEMS,
+  screen: {
+    route: Constants.UserSettingsSections.DESIGN_SYSTEM_EXPERIMENTAL_BUTTONS,
+    getComponent() {
+      return require("UserSettingsDesignSystemExperimentalButtons").default;
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemsExperimentalButtonsSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemsExperimentalButtonsSetting.tsx");
 
 export default route;

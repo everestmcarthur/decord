@@ -1,22 +1,23 @@
-// Module ID: 13723
-// Function ID: 13724
-// Name: isLatest
-// Dependencies: [4210, 4575, 4783, 11, 2]
+// Module ID: 13746
+// Function ID: 13747
+// Name: PreviewData
+// Dependencies: [4223, 4589, 4797, 11, 2]
 
-// Module 13723 (isLatest)
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4783 */;
-import closure_3 from "hasFlag" /* 4210 */;
-import closure_4 from "generateOldThreadCutoff" /* 4575 */;
+// Module 13746 (PreviewData)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4797 */;
+import MessageRecord from "MessageRecord" /* 4223 */;
+import ReadStateStore from "ReadStateStore" /* 4589 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/message_previews/PreviewData.tsx");
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/message_previews/PreviewData.tsx");
 class PreviewData {
   constructor() {
-    obj = Object.create(new.target.prototype);
+    merged = Object.assign({ localNeeded: true, messages: null });
     map = new Map();
-    obj[1] = map;
-    return obj;
+    merged[1] = map;
+    return merged;
   }
 }
 const prototype = PreviewData.prototype;
@@ -40,9 +41,9 @@ prototype["messageGeneration"] = function messageGeneration(arg0, generation) {
     generation = merged.generation;
   }
 };
-prototype["messageId"] = function messageId(channelType, arg1) {
+prototype["messageId"] = function messageId(dependencyMap) {
   const messages = this.messages;
-  const value = messages.get(channelType);
+  value = messages.get(dependencyMap);
   let id;
   if (value != null) {
     const message = value.message;
@@ -57,14 +58,13 @@ prototype["messageId"] = function messageId(channelType, arg1) {
 };
 prototype["messageRecord"] = function messageRecord(arg0) {
   const messages = this.messages;
-  const value = messages.get(arg0);
+  value = messages.get(arg0);
   let tmp2 = null == value || null == value.message;
   if (!tmp2) {
-    tmp2 = value.message instanceof closure_3;
+    tmp2 = value.message instanceof MessageRecord;
   }
   if (!tmp2) {
-    value.message = createMinimalMessageRecord.createMessageRecord(value.message);
-    const obj = createMinimalMessageRecord;
+    value.message = MessageRecordUtils.createMessageRecord(value.message);
   }
   let message;
   if (value != null) {
@@ -83,11 +83,11 @@ prototype["put"] = function put(arg0, message, generation) {
   const messages = this.messages;
   const result = messages.set(arg0, { message, generation });
 };
-prototype["putNew"] = function putNew(channelId, first, c6) {
+prototype["putNew"] = function putNew(channelId, first1, c6) {
   const self = this;
   const messages = this.messages;
-  const value = messages.get(channelId);
-  let tmp2 = null != first;
+  value = messages.get(channelId);
+  let tmp2 = null != first1;
   if (tmp2) {
     let id;
     if (value != null) {
@@ -98,13 +98,12 @@ prototype["putNew"] = function putNew(channelId, first, c6) {
     }
     let tmp4 = null == id;
     if (!tmp4) {
-      tmp4 = DISCORD_EPOCHDefault.compare(first.id, id) > 0;
-      const obj = DISCORD_EPOCHDefault;
+      tmp4 = SnowflakeUtilsDefault.compare(first1.id, id) > 0;
     }
     tmp2 = tmp4;
   }
   if (tmp2) {
-    self.put(channelId, first, c6);
+    self.put(channelId, first1, c6);
   }
 };
 prototype["putMany"] = function putMany(arg0, arg1) {
@@ -131,18 +130,18 @@ prototype["update"] = function update(id) {
         }
       }
       if (id === id.id) {
-        let obj = createMinimalMessageRecord;
+        const obj = MessageRecordUtils;
         if (tmp3) {
           let updateMessageRecordResult = obj.updateMessageRecord(merged.message, id);
         } else {
           updateMessageRecordResult = obj.updateServerMessage(merged.message, id);
         }
         const messages = self.messages;
-        obj = {};
+        const obj2 = {};
         merged = Object.assign(merged);
-        obj.message = updateMessageRecordResult;
-        self = messages.set(channel_id, obj);
-        tmp3 = merged.message instanceof closure_3;
+        obj2.message = updateMessageRecordResult;
+        self = messages.set(channel_id, obj2);
+        tmp3 = merged.message instanceof MessageRecord;
       }
     }
   }

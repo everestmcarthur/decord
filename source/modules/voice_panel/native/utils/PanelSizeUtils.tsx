@@ -1,14 +1,14 @@
-// Module ID: 17083
-// Function ID: 17084
-// Name: VOICE_PANEL_DRAWER_MAX_WIDTH
-// Dependencies: [12277, 2]
+// Module ID: 17114
+// Function ID: 17115
+// Name: PanelSizeUtils
+// Dependencies: [12303, 2]
 // Exports: getMaxPanelWidth, getPanelX
 
-// Module 17083 (VOICE_PANEL_DRAWER_MAX_WIDTH)
-import set from "set" /* 2 */;
-import VoicePanelModes from "VoicePanelModes" /* 12277 */;
+// Module 17114 (PanelSizeUtils)
+import VoicePanelConstants from "VoicePanelConstants" /* 12303 */;
+import size from "module_2" /* 2 */;
 
-const VOICE_PANEL_DRAWER_MAX_WIDTH = VoicePanelModes.VOICE_PANEL_DRAWER_MAX_WIDTH;
+const VOICE_PANEL_DRAWER_MAX_WIDTH = VoicePanelConstants.VOICE_PANEL_DRAWER_MAX_WIDTH;
 function getMaxPanelWidth(windowWidth) {
   windowWidth = windowWidth.windowWidth;
   let bound = windowWidth;
@@ -27,7 +27,7 @@ function getPanelX(width, maxPanelWidth) {
 getPanelX.__closure = {};
 getPanelX.__workletHash = 6050807520832;
 getPanelX.__initData = { code: "function getPanelX_PanelSizeUtilsTsx2(windowWidth,width){return(windowWidth-width)/2;}" };
-const result = set.fileFinishedImporting("modules/voice_panel/native/utils/PanelSizeUtils.tsx");
+const result = size.fileFinishedImporting("modules/voice_panel/native/utils/PanelSizeUtils.tsx");
 
 export { getMaxPanelWidth };
 export { getPanelX };

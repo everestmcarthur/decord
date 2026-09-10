@@ -1,21 +1,21 @@
-// Module ID: 7826
-// Function ID: 7827
+// Module ID: 7840
+// Function ID: 7841
 // Name: BurstReactionAnimation
-// Dependencies: [19, 4552, 21, 4560, 7784, 504, 7827, 5529, 2]
+// Dependencies: [19, 4566, 21, 4574, 7798, 504, 7841, 5543, 2]
 // Exports: default
 
-// Module 7826 (BurstReactionAnimation)
-import noopAll from "noop" /* 19 */;
+// Module 7840 (BurstReactionAnimation)
 import initialize from "initialize" /* 504 */;
-import _generateAnimationSource from "_generateAnimationSource" /* 7784 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 7798 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
-require = arg1;
-noopAll;
-let closure_5 = createCacheKey.createStyles({ content: { width: "100%" } });
-const result = require("set").fileFinishedImporting("modules/messages/native/burst_reactions/BurstReactionAnimation.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_5 = createStyles.createStyles({ content: { width: "100%" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/native/burst_reactions/BurstReactionAnimation.tsx");
 
 export default function BurstReactionAnimation(arg0) {
   ({ onComplete, withFadeOut } = arg0);
@@ -23,32 +23,29 @@ export default function BurstReactionAnimation(arg0) {
   if (withFadeOut === undefined) {
     withFadeOut = true;
   }
-  const merged = Object.assign(arg0, Object.create(null));
-  let obj = _generateAnimationSource;
-  const burstReactionAnimationSource = obj.useBurstReactionAnimationSource({ emoji, messageId, channelId, isFullscreen });
+  const merged = Object.assign(arg0, Object.assign({ channelId: 0, messageId: 0, emoji: 0, isFullscreen: 0, onComplete: 0, withFadeOut: 0 }));
+  const tmp2 = closure_5();
+  const burstReactionAnimationSource = burst_reactions_BurstReactionEffectUtils.useBurstReactionAnimationSource({ emoji, messageId, channelId, isFullscreen });
   initialize;
-  [][0] = closure_3;
+  [][0] = AccessibilityStore;
   if (null == burstReactionAnimationSource) {
     return null;
   } else {
     if (withFadeOut) {
-      obj = { onComplete: null };
-      obj[0] = onComplete;
+      const obj2 = { onComplete };
+      let obj3 = obj2;
     } else {
-      obj = { onAnimationFinish: null };
-      obj[0] = onComplete;
+      obj3 = { onAnimationFinish: onComplete };
     }
-    obj1 = { style: null, loop: false, speed: null };
-    obj1[0] = tmp2.content;
+    const obj4 = { style: tmp2.content, loop: false, speed: null };
     let num = 1.2;
     if (tmp6) {
       num = 0.5;
     }
-    obj1[2] = num;
+    obj4.speed = num;
     const merged1 = Object.assign(merged);
-    const merged2 = Object.assign(obj);
-    obj1.source = burstReactionAnimationSource;
-    return jsx(importDefault(withFadeOut ? 7827 : 5529), { style: null, loop: false, speed: null });
+    const merged2 = Object.assign(obj3);
+    obj4.source = burstReactionAnimationSource;
+    return jsx(importDefault(withFadeOut ? 7841 : 5543), { style: tmp2.content, loop: false, speed: null });
   }
-  tmp2 = callback();
 };

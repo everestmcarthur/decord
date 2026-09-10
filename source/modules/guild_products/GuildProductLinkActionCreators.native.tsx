@@ -1,22 +1,21 @@
-// Module ID: 12948
-// Function ID: 12949
-// Name: openGuildProductLink
-// Dependencies: [4905, 1114, 2]
+// Module ID: 12974
+// Function ID: 12975
+// Name: GuildProductLinkActionCreators
+// Dependencies: [4919, 1114, 2]
 // Exports: openGuildProductLink
 
-// Module 12948 (openGuildProductLink)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import _modDef4905 from "module_4905" /* 4905 */;
+// Module 12974 (GuildProductLinkActionCreators)
+import util from "util" /* 1114 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4919 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_products/GuildProductLinkActionCreators.native.tsx");
+const result = size.fileFinishedImporting("modules/guild_products/GuildProductLinkActionCreators.native.tsx");
 
-export const openGuildProductLink = function openGuildProductLink(closure_0, closure_1) {
-  let obj = _modDef4905;
-  obj = { body: null, confirmText: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["mYlo/T"]);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(getSystemLocale.t.BddRzS);
-  obj.show(obj);
+export const openGuildProductLink = function openGuildProductLink() {
+  const obj2 = { body: null, confirmText: null };
+  const intl = util.intl;
+  obj2.body = intl.string(util.t["mYlo/T"]);
+  const intl2 = util.intl;
+  obj2.confirmText = intl2.string(util.t.BddRzS);
+  actions_AlertActionCreatorsDefault.show(obj2);
 };

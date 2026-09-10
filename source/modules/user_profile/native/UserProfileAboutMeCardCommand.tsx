@@ -1,30 +1,38 @@
-// Module ID: 11216
-// Function ID: 11217
-// Dependencies: [19, 1074, 21, 4560, 576, 4556, 4425, 11217, 1242, 4740, 4527, 11222, 7521, 7523, 2]
+// Module ID: 11243
+// Function ID: 11244
+// Name: UserProfileAboutMeCardCommand
+// Dependencies: [19, 1074, 21, 4574, 576, 4570, 4439, 11244, 1242, 4754, 4541, 11249, 7535, 7537, 2]
 
-// Module 11216
-import ThemesDefault from "Themes" /* 576 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import { jsxs } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 11243 (UserProfileAboutMeCardCommand)
+import nativeDefault from "native" /* 576 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4754 */;
+import MarkupReactCommandRule from "MarkupReactCommandRule" /* 11244 */;
+import navigateToLastChannelDefault from "navigateToLastChannel" /* 11249 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let obj = { commandClickable: null };
-obj = { color: ThemesDefault.colors.MENTION_FOREGROUND, backgroundColor: ThemesDefault.colors.MENTION_BACKGROUND, marginEnd: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_12 };
-obj[0] = obj;
-let closure_5 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function UserProfileAboutMeCardCommand(channel) {
+const require = globalThis.__r;
+
+require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsxs = fn(21).jsxs;
+const createStyles = fn(4574);
+let obj = { commandClickable: { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, marginEnd: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_12 } };
+let closure_5 = createStyles.createStyles(obj);
+let obj3 = { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, marginEnd: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_12 };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileAboutMeCardCommand.tsx");
+
+export default noop.memo(function UserProfileAboutMeCardCommand(channel) {
   ({ application: require, command } = channel);
   channel = channel.channel;
-  const tmp = callback();
-  const items = ["/", command.displayName];
-  return jsxs(require(channel[5]).Text, {
+  let obj = {
     variant: "text-md/bold",
     onPress() {
-      let obj = closure_1_0(channel[6]);
-      const bestActiveInput = obj.getBestActiveInput();
-      obj = { channelId: channel.id, currentText: null, commandId: null, commandName: null, onOpenCustomKeyboard: null, onSetCommand: null };
+      const bestActiveInput = require("ChatInputUtils").getBestActiveInput();
+      let obj = require("ChatInputUtils");
+      let obj2 = { channelId: channel.id, currentText: null, commandId: null, commandName: null, onOpenCustomKeyboard: null, onSetCommand: null };
       let str;
       if (bestActiveInput != null) {
         str = bestActiveInput.getText();
@@ -32,58 +40,115 @@ const memoResult = importAllResult.memo(function UserProfileAboutMeCardCommand(c
       if (str == null) {
         str = "";
       }
-      obj[1] = str;
-      ({ id: obj4[2], displayName: obj4[3] } = command);
-      obj[4] = function onOpenCustomKeyboard(arg0) {
+      obj2.currentText = str;
+      ({ id: obj4.commandId, displayName: obj4.commandName } = command);
+      obj2.onOpenCustomKeyboard = function onOpenCustomKeyboard(arg0) {
         let openCustomKeyboardResult;
         if (bestActiveInput != null) {
           openCustomKeyboardResult = bestActiveInput.openCustomKeyboard(arg0);
         }
         return openCustomKeyboardResult;
       };
-      obj[5] = function onSetCommand() {
-        let obj = command(channel[8]);
+      obj2.onSetCommand = function onSetCommand() {
         let id;
-        if (bestActiveInput != null) {
+        if (closure_2_0 != null) {
           id = tmp3.id;
         }
-        obj = { application_id: id, command_id: closure_1_1.id, guild_id: closure_1_2.getGuildId() };
-        const merged = Object.assign(closure_2_0(channel[9]).collectChannelAnalyticsMetadata(closure_1_2));
-        obj.track(closure_2_3.POPULAR_APPLICATION_COMMAND_CLICKED, obj);
-        const obj3 = closure_2_0(channel[9]);
-        const tmp5 = closure_1_1;
-        const tmp6 = closure_1_2;
-        command(channel[10]).hideAllActionSheets();
-        command(channel[11])();
+        const obj = AnalyticsUtilsDefault;
+        const obj2 = { application_id: id, command_id: command.id, guild_id: channel.getGuildId() };
+        const tmp5 = command;
+        const tmp6 = channel;
+        const merged = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(channel));
+        obj.track(AnalyticEvents.POPULAR_APPLICATION_COMMAND_CLICKED, obj2);
+        ActionSheetActionCreatorsDefault.hideAllActionSheets();
+        navigateToLastChannelDefault();
         if (bestActiveInput != null) {
           obj5.openSystemKeyboard();
         }
         if (bestActiveInput != null) {
           const applicationCommandManager = obj5.getApplicationCommandManager();
           if (applicationCommandManager != null) {
-            obj = { channelId: null, command: null, section: null, location: null };
-            obj[0] = tmp6.id;
-            obj[1] = tmp5;
+            const obj4 = { channelId: tmp6.id, command: tmp5, section: null, location: null };
             let applicationCommandSection = null;
             if (null != tmp3) {
-              applicationCommandSection = tmp7(tmp2[12]).getApplicationCommandSection(tmp3);
-              const tmp7Result = tmp7(tmp2[12]);
+              applicationCommandSection = tmp7(7535).getApplicationCommandSection(tmp3);
+              const tmp7Result = tmp7(7535);
             }
-            obj[2] = applicationCommandSection;
-            obj[3] = tmp7(tmp2[13]).ApplicationCommandTriggerLocations.POPULAR_COMMANDS;
-            applicationCommandManager.setCommand(obj);
+            obj4.section = applicationCommandSection;
+            obj4.location = tmp7(7537).ApplicationCommandTriggerLocations.POPULAR_COMMANDS;
+            applicationCommandManager.setCommand(obj4);
           }
         }
       };
-      const result = closure_1_0(channel[7]).handleTapCommandMention(obj);
+      const result = require("MarkupReactCommandRule").handleTapCommandMention(obj2);
     },
     onLongPress() {
-      return closure_1_0(channel[7]).handleLongPressCommandMention(command.displayName, command.id);
+      return MarkupReactCommandRule.handleLongPressCommandMention(command.displayName, command.id);
     },
-    style: callback().commandClickable,
-    children: items
+    style: closure_5().commandClickable,
+    children: null
+  };
+  const items = ["/", command.displayName];
+  obj.children = items;
+  return jsxs(require("Text/Text").Text, {
+    variant: "text-md/bold",
+    onPress() {
+      const bestActiveInput = require("ChatInputUtils").getBestActiveInput();
+      let obj = require("ChatInputUtils");
+      let obj2 = { channelId: channel.id, currentText: null, commandId: null, commandName: null, onOpenCustomKeyboard: null, onSetCommand: null };
+      let str;
+      if (bestActiveInput != null) {
+        str = bestActiveInput.getText();
+      }
+      if (str == null) {
+        str = "";
+      }
+      obj2.currentText = str;
+      ({ id: obj4.commandId, displayName: obj4.commandName } = command);
+      obj2.onOpenCustomKeyboard = function onOpenCustomKeyboard(arg0) {
+        let openCustomKeyboardResult;
+        if (bestActiveInput != null) {
+          openCustomKeyboardResult = bestActiveInput.openCustomKeyboard(arg0);
+        }
+        return openCustomKeyboardResult;
+      };
+      obj2.onSetCommand = function onSetCommand() {
+        let id;
+        if (closure_2_0 != null) {
+          id = tmp3.id;
+        }
+        const obj = AnalyticsUtilsDefault;
+        const obj2 = { application_id: id, command_id: command.id, guild_id: channel.getGuildId() };
+        const tmp5 = command;
+        const tmp6 = channel;
+        const merged = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(channel));
+        obj.track(AnalyticEvents.POPULAR_APPLICATION_COMMAND_CLICKED, obj2);
+        ActionSheetActionCreatorsDefault.hideAllActionSheets();
+        navigateToLastChannelDefault();
+        if (bestActiveInput != null) {
+          obj5.openSystemKeyboard();
+        }
+        if (bestActiveInput != null) {
+          const applicationCommandManager = obj5.getApplicationCommandManager();
+          if (applicationCommandManager != null) {
+            const obj4 = { channelId: tmp6.id, command: tmp5, section: null, location: null };
+            let applicationCommandSection = null;
+            if (null != tmp3) {
+              applicationCommandSection = tmp7(7535).getApplicationCommandSection(tmp3);
+              const tmp7Result = tmp7(7535);
+            }
+            obj4.section = applicationCommandSection;
+            obj4.location = tmp7(7537).ApplicationCommandTriggerLocations.POPULAR_COMMANDS;
+            applicationCommandManager.setCommand(obj4);
+          }
+        }
+      };
+      const result = require("MarkupReactCommandRule").handleTapCommandMention(obj2);
+    },
+    onLongPress() {
+      return MarkupReactCommandRule.handleLongPressCommandMention(command.displayName, command.id);
+    },
+    style: closure_5().commandClickable,
+    children: null
   });
 });
-let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileAboutMeCardCommand.tsx");
-
-export default memoResult;

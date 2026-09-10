@@ -1,17 +1,16 @@
-// Module ID: 5282
-// Function ID: 5283
-// Name: toString
+// Module ID: 5296
+// Function ID: 5297
+// Name: ConnectedAccountRecord
 // Dependencies: [1386, 2]
 
-// Module 5282 (toString)
-import toJSDefault from "toJS" /* 1386 */;
+// Module 5296 (ConnectedAccountRecord)
+import Record from "Record" /* 1386 */;
 
-toJSDefault;
-const result = require("set").fileFinishedImporting("records/ConnectedAccountRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("records/ConnectedAccountRecord.tsx");
 class ConnectedAccountRecord extends tmp2 {
   constructor(arg0) {
     tmp = new ConnectedAccountRecord(new.target, new.target, global, ConnectedAccountRecord);
-    // ThrowIfThisInitialized (0x7c)
     ({ id: tmp.id, type: tmp.type, name: tmp.name } = global);
     tmp.revoked = global.revoked || false;
     tmp.integrations = global.integrations || [];

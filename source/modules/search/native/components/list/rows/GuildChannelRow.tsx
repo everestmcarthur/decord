@@ -1,58 +1,56 @@
-// Module ID: 16662
-// Function ID: 16663
-// Name: GuildChannelLabel
-// Dependencies: [19, 17, 7878, 21, 4560, 576, 4713, 16663, 5028, 16665, 16655, 2]
+// Module ID: 16694
+// Function ID: 16695
+// Name: GuildChannelRow
+// Dependencies: [19, 17, 7892, 21, 4574, 576, 4727, 16695, 5042, 16697, 16687, 2]
 
-// Module 16662 (GuildChannelLabel)
-import ThemesDefault from "Themes" /* 576 */;
-import computeChannelNameDefault from "computeChannelName" /* 4713 */;
-import getChannelIcon from "getChannelIcon" /* 5028 */;
-import SearchListRow from "SearchListRow" /* 16655 */;
-import ChannelContentComponent from "ChannelContentComponent" /* 16663 */;
-import LaunchpadChannelIcon from "LaunchpadChannelIcon" /* 16665 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { CHANNEL_LIST_SEARCH_LAYOUT as closure_5 } from "MessageEmbedTypes" /* 7878 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 16694 (GuildChannelRow)
+import nativeDefault from "native" /* 576 */;
+import useChannelNameDefault from "useChannelName" /* 4727 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5042 */;
+import SearchListRow from "SearchListRow" /* 16687 */;
+import ChannelContent from "ChannelContent" /* 16695 */;
+import renderChannelItem from "renderChannelItem" /* 16697 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function GuildChannelLabel(channel) {
   channel = channel.channel;
-  let obj = { style: callback().content, children: null };
-  const tmp = callback();
-  const tmp2 = computeChannelNameDefault(channel);
-  obj = { channel, layout: closure_5, name: tmp2 };
-  obj[1] = ChannelContentComponent.renderChannelContent(obj);
-  return <closure_4 channel={channel} layout={closure_5} name={tmp2} />;
+  const obj = { style: closure_7().content, children: null };
+  const tmp = closure_7();
+  const tmp2 = useChannelNameDefault(channel);
+  obj.children = ChannelContent.renderChannelContent({ channel, layout, name: tmp2 });
+  return <React4 style={closure_7().content}>{null}</React4>;
 }
-({ Image: c3, View: c4 } = get_ActivityIndicator);
+get_ActivityIndicator = fn(17);
+({ Image: c3, View: closure_4 } = get_ActivityIndicator);
+const layout = fn(7892).CHANNEL_LIST_SEARCH_LAYOUT;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
 let obj = { container: { paddingVertical: 10 }, content: { flexDirection: "row", alignItems: "center" }, iconContainer: { marginRight: 0 }, simpleIcon: null };
-obj = { width: 20, height: 20, marginRight: 8, tintColor: ThemesDefault.colors.TEXT_MUTED };
-obj[3] = obj;
-let closure_7 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function GuildChannelRow(channel) {
+let size = { width: 20, height: 20, marginRight: 8, tintColor: nativeDefault.colors.TEXT_MUTED };
+obj.simpleIcon = size;
+let closure_7 = createStyles.createStyles(obj);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/list/rows/GuildChannelRow.tsx");
+
+export default noop.memo(function GuildChannelRow(channel) {
   channel = channel.channel;
   ({ subtitle, trailing, extras, onPress, voiceStates } = channel);
-  const merged = Object.assign(channel, Object.create(null));
-  const tmp2 = callback();
-  let obj = LaunchpadChannelIcon;
-  const channelAccessibilityProps = obj.getChannelAccessibilityProps({ channel, unread: false, mentionCount: 0, voiceStates });
-  obj = { style: tmp2.simpleIcon, source: getChannelIcon.getSimpleChannelIcon(channel) };
-  const obj3 = getChannelIcon;
-  obj = {};
+  const merged = Object.assign(channel, Object.assign({ channel: 0, subtitle: 0, trailing: 0, extras: 0, onPress: 0, voiceStates: 0 }));
+  const tmp2 = closure_7();
+  const channelAccessibilityProps = renderChannelItem.getChannelAccessibilityProps({ channel, unread: false, mentionCount: 0, voiceStates });
+  const obj2 = { style: tmp2.simpleIcon, source: null };
+  obj2.source = utils_ChannelUtils.getSimpleChannelIcon(channel);
+  const obj6 = {};
   const merged1 = Object.assign(channelAccessibilityProps);
   const merged2 = Object.assign(merged);
   ({ container: obj4.containerStyle, iconContainer: obj4.iconContainerStyle } = tmp2);
-  obj.icon = <closure_3 />;
-  obj.iconWidth = 32;
-  obj.label = <GuildChannelLabel channel={channel} />;
-  obj.subLabel = subtitle;
-  obj.onPress = onPress;
-  obj.trailing = trailing;
-  obj.extras = extras;
+  obj6.icon = <React3 style={tmp2.simpleIcon} source={null} />;
+  obj6.iconWidth = 32;
+  obj6.label = <GuildChannelLabel channel={channel} />;
+  obj6.subLabel = subtitle;
+  obj6.onPress = onPress;
+  obj6.trailing = trailing;
+  obj6.extras = extras;
   return jsx(SearchListRow.SearchListRow, {});
 });
-const result = require("set").fileFinishedImporting("modules/search/native/components/list/rows/GuildChannelRow.tsx");
-
-export default memoResult;

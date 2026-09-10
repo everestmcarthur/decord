@@ -1,20 +1,22 @@
-// Module ID: 14555
-// Function ID: 14556
-// Name: USE_ALT_GATEWAY_KEY
-// Dependencies: [1433, 2, 14556]
+// Module ID: 14580
+// Function ID: 14581
+// Name: GatewayAltEndpointExperiment
+// Dependencies: [1433, 2, 14581]
 // Exports: useShouldUseAltGateway
 
-// Module 14555 (USE_ALT_GATEWAY_KEY)
-import set from "set" /* 2 */;
-import USE_ALT_GATEWAY_KEY from "USE_ALT_GATEWAY_KEY" /* 14556 */;
+// Module 14580 (GatewayAltEndpointExperiment)
+import GatewayAltEndpointCache from "GatewayAltEndpointCache" /* 14581 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null, 2: { enableAltGateway: false } };
-obj[2] = { enableAltGateway: true };
-let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-07-aws-gateway", kind: "user", defaultConfig: { enableAltGateway: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/gateway/GatewayAltEndpointExperiment.tsx");
+const obj = { name: "2026-07-aws-gateway", kind: "user", defaultConfig: { enableAltGateway: false }, variations: null };
+const obj2 = { 1: null, 2: { enableAltGateway: false } };
+obj2[2] = { enableAltGateway: true };
+obj.variations = obj2;
+let closure_0 = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/gateway/GatewayAltEndpointExperiment.tsx");
 
-export const USE_ALT_GATEWAY_KEY = USE_ALT_GATEWAY_KEY.USE_ALT_GATEWAY_KEY;
+export const USE_ALT_GATEWAY_KEY = GatewayAltEndpointCache.USE_ALT_GATEWAY_KEY;
 export const useShouldUseAltGateway = function useShouldUseAltGateway(App) {
   return closure_0.useConfig({ location: App }).enableAltGateway;
 };

@@ -1,15 +1,16 @@
-// Module ID: 9183
-// Function ID: 9184
-// Name: useIsVoiceChannelGamesExperimentEnabled
+// Module ID: 9210
+// Function ID: 9211
+// Name: VoiceChannelGamesExperiment
 // Dependencies: [1434, 2]
 // Exports: default
 
-// Module 9183 (useIsVoiceChannelGamesExperimentEnabled)
-import getUnitIdDefault from "getUnitId" /* 1434 */;
+// Module 9210 (VoiceChannelGamesExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
 
-const tmp2 = getUnitIdDefault({ kind: "user", name: "2026-08-mobile-voice-channel-games", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
+const tmp2 = apex_ApexExperimentDefault({ kind: "user", name: "2026-08-mobile-voice-channel-games", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 let closure_0 = tmp2;
-const result = require("set").fileFinishedImporting("modules/voice_panel/experiments/VoiceChannelGamesExperiment.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/experiments/VoiceChannelGamesExperiment.tsx");
 
 export default function useIsVoiceChannelGamesExperimentEnabled(location) {
   return closure_0.useConfig({ location }).enabled;

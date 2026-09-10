@@ -1,15 +1,17 @@
-// Module ID: 9611
-// Function ID: 9612
+// Module ID: 9638
+// Function ID: 9639
 // Name: useVideoSpinnerTimer
-// Dependencies: [32, 19, 9612, 2]
+// Dependencies: [32, 19, 9639, 2]
 // Exports: default
 
-// Module 9611 (useVideoSpinnerTimer)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+// Module 9638 (useVideoSpinnerTimer)
+import VideoSpinnerTimer from "VideoSpinnerTimer" /* 9639 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/video_calls/useVideoSpinnerTimer.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/useVideoSpinnerTimer.tsx");
 
 export default function useVideoSpinnerTimer(userId) {
   ({ location: require, videoSpinnerContext } = userId);
@@ -20,9 +22,8 @@ export default function useVideoSpinnerTimer(userId) {
   if (flag === undefined) {
     flag = false;
   }
-  let first;
-  first = userId(streamId.useState(() => {
-    const videoSpinnerTimer = new closure_1_0(videoSpinnerContext[2]).VideoSpinnerTimer(closure_0);
+  const first = userId(streamId.useState(() => {
+    const videoSpinnerTimer = new VideoSpinnerTimer.VideoSpinnerTimer(closure_1_0);
     return videoSpinnerTimer;
   }), 1)[0];
   const items = [loading, flag, streamId, first, videoSpinnerContext, userId];

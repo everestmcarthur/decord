@@ -1,28 +1,37 @@
-// Module ID: 17076
-// Function ID: 17077
+// Module ID: 17107
+// Function ID: 17108
 // Name: useSoundboardSoundLock
-// Dependencies: [19, 1371, 5014, 504, 7344, 4218, 17077, 7850, 7853, 4259, 10075, 1114, 2]
+// Dependencies: [19, 1371, 5028, 504, 7358, 4231, 17108, 7864, 7867, 4272, 10102, 1114, 2]
 // Exports: useSoundboardSoundLock
 
-// Module 17076 (useSoundboardSoundLock)
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4218 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME" /* 5014 */;
+// Module 17107 (useSoundboardSoundLock)
+import util from "util" /* 1114 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4231 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 7864 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7867 */;
+import _modDef10102 from "module_10102" /* 10102 */;
+import SoundboardSoundPreviewMenuExperiment2 from "SoundboardSoundPreviewMenuExperiment" /* 17108 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/soundboard/native/utils/useSoundboardSoundLock.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const DEFAULT_SOUND_GUILD_ID = fn(5028).DEFAULT_SOUND_GUILD_ID;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/soundboard/native/utils/useSoundboardSoundLock.tsx");
 
 export const useSoundboardSoundLock = function useSoundboardSoundLock(sound, channel) {
-  const _require = sound;
+  _require = sound;
   let BARTXV = dependencyMap;
-  let obj = _require(504);
-  const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const result = _require(7344).canUseSoundboardSound(stateFromStores, sound, channel);
-  const obj2 = _require(7344);
+  const items = [UserStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
+  let obj = require("initialize");
+  const result = require("SoundboardUtils").canUseSoundboardSound(stateFromStores, sound, channel);
+  let obj2 = require("SoundboardUtils");
   const tmp4 = !result;
-  const result1 = getPremiumPlanItemDefault.canUseSoundboardEverywhere(stateFromStores);
+  const result1 = PremiumUtilsDefault.canUseSoundboardEverywhere(stateFromStores);
   let tmp6 = !result1;
   if (!result1) {
     tmp6 = sound.guildId !== channel.guild_id;
@@ -33,11 +42,8 @@ export const useSoundboardSoundLock = function useSoundboardSoundLock(sound, cha
   importDefault = tmp6;
   const items1 = [tmp6, sound.available];
   if (result) {
-    obj = { isLocked: null, lockedAccessibilityHint: null, onLockedPress: null };
-    obj[0] = tmp4;
-    obj[1] = undefined;
-    obj[2] = tmp8;
-    return obj;
+    const obj4 = { isLocked: tmp4, lockedAccessibilityHint: undefined, onLockedPress: tmp8 };
+    return obj4;
   } else if (tmp6) {
     const intl2 = tmp(1114).intl;
     BARTXV = tmp(1114).t.BARTXV;

@@ -1,49 +1,49 @@
-// Module ID: 14627
-// Function ID: 14628
+// Module ID: 14652
+// Function ID: 14653
 // Name: EditProfileThemeActionSheet
-// Dependencies: [19, 21, 4560, 576, 7198, 7149, 1114, 1178, 5687, 5605, 4527, 2]
+// Dependencies: [19, 21, 4574, 576, 7211, 7163, 1114, 1178, 5701, 5619, 4541, 2]
 // Exports: default
 
-// Module 14627 (EditProfileThemeActionSheet)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14652 (EditProfileThemeActionSheet)
+import nativeDefault from "native" /* 576 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { nitroWheel: null, titleWrapper: null, titleContainer: null };
-createCacheKey = { tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, marginLeft: 4, width: 20, height: 20 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 0 };
-createCacheKey[2] = { justifyContent: "flex-start" };
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_settings/profiles/native/EditProfileThemeActionSheet.tsx");
+const require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4574);
+const obj2 = { nitroWheel: null, titleWrapper: null, titleContainer: null };
+let size = { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, marginLeft: 4, width: 20, height: 20 };
+obj2.nitroWheel = size;
+obj2.titleWrapper = { flex: 0 };
+obj2.titleContainer = { justifyContent: "flex-start" };
+let closure_5 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/profiles/native/EditProfileThemeActionSheet.tsx");
 
 export default function EditProfileThemeActionSheet(onResetTheme) {
   onResetTheme = onResetTheme.onResetTheme;
-  const tmp = callback3();
-  let obj = { children: null };
-  obj = { title: null, trailing: null, titleWrapperStyle: null, titleContainerStyle: null };
+  const tmp = closure_5();
+  const obj = { children: null };
+  const obj3 = { title: null, trailing: null, titleWrapperStyle: null, titleContainerStyle: null };
   const intl = onResetTheme(1114).intl;
-  obj[0] = intl.string(onResetTheme(1114).t.DMeO2X);
-  obj = { style: tmp.nitroWheel };
-  obj[1] = callback(onResetTheme(1178).NitroWheel, obj);
-  ({ titleWrapper: obj2[2], titleContainer: obj2[3] } = tmp);
-  const items = [callback(onResetTheme(7149).BottomSheetTitleHeader, obj), ];
-  obj1 = { hasIcons: false, children: null };
-  const obj2 = { label: null, subLabel: null, onPress: null };
+  obj3.title = intl.string(onResetTheme(1114).t.DMeO2X);
+  obj3.trailing = closure_3(onResetTheme(1178).NitroWheel, { style: tmp.nitroWheel });
+  ({ titleWrapper: obj2.titleWrapperStyle, titleContainer: obj2.titleContainerStyle } = tmp);
+  const items = [closure_3(onResetTheme(7163).BottomSheetTitleHeader, obj3), ];
+  const obj5 = { hasIcons: false, children: null };
+  const obj9 = { label: null, subLabel: null, onPress: null };
   const intl2 = onResetTheme(1114).intl;
-  obj2[0] = intl2.string(onResetTheme(1114).t["L+GmoR"]);
+  obj9.label = intl2.string(onResetTheme(1114).t["L+GmoR"]);
   const intl3 = onResetTheme(1114).intl;
-  obj2[1] = intl3.string(onResetTheme(1114).t.MA9iNr);
-  obj2[2] = function onPress() {
+  obj9.subLabel = intl3.string(onResetTheme(1114).t.MA9iNr);
+  obj9.onPress = function onPress() {
     onResetTheme();
-    closure_1_1(closure_1_2[10]).hideActionSheet();
+    ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  obj1[1] = callback(onResetTheme(5605).TableRow, obj2);
-  items[1] = callback(onResetTheme(5687).TableRowGroup, obj1);
-  obj[0] = items;
-  return callback2(onResetTheme(7198).ActionSheet, obj);
+  obj5.children = closure_3(onResetTheme(5619).TableRow, obj9);
+  items[1] = closure_3(onResetTheme(5701).TableRowGroup, obj5);
+  obj.children = items;
+  return closure_4(onResetTheme(7211).ActionSheet, obj);
 };

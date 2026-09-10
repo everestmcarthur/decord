@@ -1,22 +1,25 @@
-// Module ID: 11558
-// Function ID: 11559
+// Module ID: 11584
+// Function ID: 11585
 // Name: useSortedOnboardingPrompts
-// Dependencies: [19, 7100, 563, 2]
+// Dependencies: [19, 7114, 563, 2]
 // Exports: default
 
-// Module 11558 (useSortedOnboardingPrompts)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleUpdate" /* 7100 */;
+// Module 11584 (useSortedOnboardingPrompts)
+import noop from "module_19" /* 19 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7114 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_onboarding/useSortedOnboardingPrompts.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_onboarding/useSortedOnboardingPrompts.tsx");
 
 export default function useSortedOnboardingPrompts(arg0) {
-  const _require = arg0;
-  let items = [closure_3];
-  stateFromStoresArray = _require(stateFromStoresArray[2]).useStateFromStoresArray(items, () => closure_1_3.getEnabledOnboardingPrompts(closure_0));
+  _require = arg0;
+  let items = [GuildOnboardingPromptsStore];
+  stateFromStoresArray = require("useStateFromStores").useStateFromStoresArray(items, () => GuildOnboardingPromptsStore.getEnabledOnboardingPrompts(closure_0));
   let items1 = [stateFromStoresArray];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     let arr5;
     const items = [];
     const items1 = [];
@@ -30,20 +33,18 @@ export default function useSortedOnboardingPrompts(arg0) {
       do {
         arr5 = stateFromStoresArray;
         let tmp2 = stateFromStoresArray[num];
-        let tmp3 = num;
-        let tmp4 = num2;
         if (tmp2.isNew) {
           let arr = items.push(tmp2);
           let sum = num2;
         } else if (tmp2.hasNewAnswers) {
-          arr = items1.push(tmp2);
+          let arr2 = items1.push(tmp2);
           let options = tmp2.options;
           sum = num2 + options.filter((isUnseen) => isUnseen.isUnseen).length;
         } else if (tmp2.inOnboarding) {
-          let arr1 = items3.push(tmp2);
+          let arr3 = items3.push(tmp2);
           sum = num2;
         } else {
-          let arr2 = items2.push(tmp2);
+          let arr4 = items2.push(tmp2);
           sum = num2;
         }
         num = num + 1;

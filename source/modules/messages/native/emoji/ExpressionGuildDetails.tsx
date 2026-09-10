@@ -1,34 +1,34 @@
-// Module ID: 10347
-// Function ID: 10348
+// Module ID: 10374
+// Function ID: 10375
 // Name: ExpressionGuildDetails
-// Dependencies: [19, 17, 5585, 21, 4560, 576, 5584, 1396, 5587, 4556, 1114, 5123, 10346, 5590, 1178, 2]
+// Dependencies: [19, 17, 5599, 21, 4574, 576, 5598, 1396, 5601, 4570, 1114, 5137, 10373, 5604, 1178, 2]
 
-// Module 10347 (ExpressionGuildDetails)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;
-import preloadDefault from "preload" /* 5587 */;
-import getGuildBadgeSourceDefault from "getGuildBadgeSource" /* 5590 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { ExpressionSourceGuildRecord as closure_4 } from "getEmojiSourceData" /* 5585 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10374 (ExpressionGuildDetails)
+import nativeDefault from "native" /* 576 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import GuildIconDefault from "GuildIcon" /* 5598 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import guild_GuildUtils from "guild/GuildUtils" /* 10373 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { guildDetailsContainer: { flexDirection: "column" }, guildDetailsContent: { flexDirection: "row", marginTop: 8, alignItems: "center" }, guildIcon: null, guildNameAndOnlineMembers: null, guildNameWrapper: null, guildPartnerIcon: null, guildDescriptionSection: null, dotSeparator: null, joinGuildButton: null };
-createCacheKey = { width: 40, height: 40, borderRadius: ThemesDefault.radii.sm, marginRight: 12 };
-createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { flexDirection: "column" };
-createCacheKey[4] = { flexDirection: "row", alignItems: "center", marginRight: 32 };
-createCacheKey[5] = { marginRight: 8 };
-createCacheKey[6] = { flexDirection: "row", alignItems: "center", marginTop: 4 };
-createCacheKey[7] = { width: 4, height: 4, borderRadius: ThemesDefault.radii.xs, marginRight: 8, marginLeft: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-let obj1 = { width: 4, height: 4, borderRadius: ThemesDefault.radii.xs, marginRight: 8, marginLeft: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-createCacheKey[8] = { borderRadius: ThemesDefault.radii.sm, borderColor: ThemesDefault.colors.BORDER_STRONG, borderWidth: 1, paddingHorizontal: 4, paddingBottom: 2 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
+const GuildBadgeDefault = tmp8(5604);
+require = fn;
+const View = fn(17).View;
+const React4 = fn(5599).ExpressionSourceGuildRecord;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { guildDetailsContainer: { flexDirection: "column" }, guildDetailsContent: { flexDirection: "row", marginTop: 8, alignItems: "center" }, guildIcon: null, guildNameAndOnlineMembers: null, guildNameWrapper: null, guildPartnerIcon: null, guildDescriptionSection: null, dotSeparator: null, joinGuildButton: null };
+let size = { width: 40, height: 40, borderRadius: nativeDefault.radii.sm, marginRight: 12 };
+obj2.guildIcon = size;
+obj2.guildNameAndOnlineMembers = { flexDirection: "column" };
+obj2.guildNameWrapper = { flexDirection: "row", alignItems: "center", marginRight: 32 };
+obj2.guildPartnerIcon = { marginRight: 8 };
+obj2.guildDescriptionSection = { flexDirection: "row", alignItems: "center", marginTop: 4 };
+const size1 = { width: 4, height: 4, borderRadius: nativeDefault.radii.xs, marginRight: 8, marginLeft: 8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+obj2.dotSeparator = size1;
+obj2.joinGuildButton = { borderRadius: nativeDefault.radii.sm, borderColor: nativeDefault.colors.BORDER_STRONG, borderWidth: 1, paddingHorizontal: 4, paddingBottom: 2 };
+const React6 = createStyles.createStyles(obj2);
 class ExpressionGuildDetails {
   constructor(arg0) {
     guild = global.guild;
@@ -41,113 +41,113 @@ class ExpressionGuildDetails {
       if (!hasJoinedGuild) {
         tmp3 = closure_1;
         stringResult = closure_2;
-        obj2 = require("getAvatarURL");
-        obj = { id: null, icon: null, canAnimate: true, size: 32 };
-        ({ id: obj3[0], icon: obj3[1] } = guild);
+        obj2 = closure_1(closure_2[7]);
+        obj1 = { id: null, icon: null, canAnimate: true, size: 32 };
+        ({ id: obj3.id, icon: obj3.icon } = guild);
         tmp6 = jsx;
-        guildIconSource = obj2.getGuildIconSource(obj);
-        obj1 = { style: null, source: null };
-        obj1[0] = tmp.guildIcon;
-        obj1[1] = guildIconSource;
-        tmp7 = jsx(require("preload"), obj1);
+        guildIconSource = obj2.getGuildIconSource(obj1);
+        obj22 = { style: null, source: null };
+        obj22.style = tmp.guildIcon;
+        obj22.source = guildIconSource;
+        tmp7 = jsx(closure_1(closure_2[8]), obj22);
         tmp8 = closure_1;
         tmp9 = jsx;
       }
       tmp11 = jsxs;
       tmp12 = View;
-      obj2 = { style: null, children: null };
-      obj2[0] = tmp.guildDetailsContainer;
+      obj23 = { style: null, children: null };
+      obj23.style = tmp.guildDetailsContainer;
       tmp13 = guild;
-      obj3 = { variant: "eyebrow", color: "text-default", children: null };
-      obj3[2] = title;
+      obj24 = { variant: "eyebrow", color: "text-default", children: null };
+      obj24.children = title;
       items = [, ];
-      items[0] = tmp9(require("Text").Text, obj3);
-      obj4 = { style: null, children: null };
-      obj4[0] = tmp.guildDetailsContent;
+      items[0] = tmp9(guild(stringResult[9]).Text, obj24);
+      obj25 = { style: null, children: null };
+      obj25.style = tmp.guildDetailsContent;
       items1 = [, ];
       items1[0] = tmp7;
-      obj5 = { style: null, children: null };
-      obj5[0] = tmp.guildNameAndOnlineMembers;
-      obj6 = { style: null, children: null };
-      obj6[0] = tmp.guildNameWrapper;
-      obj7 = { guild: null, style: null, size: null, disableColor: true };
-      obj7[0] = guild;
-      obj7[1] = tmp.guildPartnerIcon;
-      tmp8Result = require("getGuildBadgeSource");
-      obj7[2] = require("Button").Icon.Sizes.REFRESH_SMALL_16;
+      obj26 = { style: null, children: null };
+      obj26.style = tmp.guildNameAndOnlineMembers;
+      obj27 = { style: null, children: null };
+      obj27.style = tmp.guildNameWrapper;
+      obj28 = { guild: null, style: null, size: null, disableColor: true };
+      obj28.guild = guild;
+      obj28.style = tmp.guildPartnerIcon;
+      tmp8Result = tmp8(stringResult[13]);
+      obj28.size = guild(stringResult[14]).Icon.Sizes.REFRESH_SMALL_16;
       items2 = [, ];
-      items2[0] = tmp9(tmp8Result, obj7);
-      obj8 = { variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
-      obj8[2] = guild.name;
-      items2[1] = tmp9(require("Text").Text, obj8);
-      obj6[1] = items2;
+      items2[0] = tmp9(tmp8Result, obj28);
+      obj29 = { variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
+      obj29.children = guild.name;
+      items2[1] = tmp9(guild(stringResult[9]).Text, obj29);
+      obj27.children = items2;
       items3 = [, ];
-      items3[0] = jsxs(View, obj6);
-      obj9 = { style: null, children: null };
-      obj9[0] = tmp.guildDescriptionSection;
+      items3[0] = jsxs(View, obj27);
+      obj30 = { style: null, children: null };
+      obj30.style = tmp.guildDescriptionSection;
       if (isDiscoverableResult) {
         tmp15 = null;
         if (null != fromGuildType.presenceCount) {
           tmp16 = Fragment;
-          obj10 = { variant: "text-xs/medium", color: "text-default", children: null };
-          intl2 = require("getSystemLocale").intl;
-          obj11 = { membersOnline: null };
-          obj11[0] = fromGuildType.presenceCount;
-          obj10[2] = intl2.format(require("getSystemLocale").t["LC+S+m"], obj11);
+          obj31 = { variant: "text-xs/medium", color: "text-default", children: null };
+          intl2 = tmp13(stringResult[10]).intl;
+          obj32 = { membersOnline: null };
+          obj32.membersOnline = fromGuildType.presenceCount;
+          obj31.children = intl2.format(tmp13(stringResult[10]).t["LC+S+m"], obj32);
           items4 = [, , ];
-          items4[0] = tmp9(require("Text").Text, obj10);
-          obj12 = { style: null };
-          obj12[0] = tmp.dotSeparator;
-          items4[1] = tmp9(tmp12, obj12);
+          items4[0] = tmp9(tmp13(stringResult[9]).Text, obj31);
+          obj33 = { style: null };
+          obj33.style = tmp.dotSeparator;
+          items4[1] = tmp9(tmp12, obj33);
           if (!hasJoinedGuild) {
             if (!showingJoinGuildCta) {
-              obj13 = { style: null, onPress: null, children: null };
-              obj13[0] = tmp.joinGuildButton;
-              obj13[1] = function onPress() {
-                return guild(closure_1_2[12]).handleJoinGuild(guild.id);
+              obj34 = { style: null, onPress: null, children: null };
+              obj34.style = tmp.joinGuildButton;
+              obj34.onPress = function onPress() {
+                return guild_GuildUtils.handleJoinGuild(guild.id);
               };
-              obj14 = { variant: "text-xs/medium", color: "text-default", children: null };
-              intl3 = require("getSystemLocale").intl;
-              obj14[2] = intl3.string(require("getSystemLocale").t.riu2R5);
-              obj13[2] = tmp9(require("Text").Text, obj14);
-              tmp9Result = tmp9(require("PressableBase").PressableOpacity, obj13);
+              obj35 = { variant: "text-xs/medium", color: "text-default", children: null };
+              intl3 = tmp13(stringResult[10]).intl;
+              obj35.children = intl3.string(tmp13(stringResult[10]).t.riu2R5);
+              obj34.children = tmp9(tmp13(stringResult[9]).Text, obj35);
+              tmp9Result = tmp9(tmp13(stringResult[11]).PressableOpacity, obj34);
             }
-            obj15 = { children: null };
+            obj36 = { children: null };
             items4[2] = tmp9Result;
-            obj15[0] = items4;
-            tmp11Result = tmp11(tmp16, obj15);
+            obj36.children = items4;
+            tmp11Result = tmp11(tmp16, obj36);
           }
-          obj16 = { variant: "text-xs/medium", color: "text-default", children: null };
-          intl4 = require("getSystemLocale").intl;
-          stringResult = intl4.string(require("getSystemLocale").t.inyJqO);
-          obj16[2] = stringResult;
-          tmp9Result = tmp9(require("Text").Text, obj16);
+          obj37 = { variant: "text-xs/medium", color: "text-default", children: null };
+          intl4 = tmp13(stringResult[10]).intl;
+          stringResult = intl4.string(tmp13(stringResult[10]).t.inyJqO);
+          obj37.children = stringResult;
+          tmp9Result = tmp9(tmp13(stringResult[9]).Text, obj37);
         }
       }
-      obj17 = { variant: "text-xs/medium", color: "text-default", children: null };
-      intl = require("getSystemLocale").intl;
-      obj17[2] = intl.string(require("getSystemLocale").t.H29mx4);
-      obj9[1] = tmp9(require("Text").Text, obj17);
-      items3[1] = tmp9(tmp12, obj9);
-      obj5[1] = items3;
-      items1[1] = tmp11(tmp12, obj5);
-      obj4[1] = items1;
-      items[1] = tmp11(tmp12, obj4);
-      obj2[1] = items;
-      return tmp11(tmp12, obj2);
+      obj38 = { variant: "text-xs/medium", color: "text-default", children: null };
+      intl = tmp13(stringResult[10]).intl;
+      obj38.children = intl.string(tmp13(stringResult[10]).t.H29mx4);
+      obj30.children = tmp9(tmp13(stringResult[9]).Text, obj38);
+      items3[1] = tmp9(tmp12, obj30);
+      obj26.children = items3;
+      items1[1] = tmp11(tmp12, obj26);
+      obj25.children = items1;
+      items[1] = tmp11(tmp12, obj25);
+      obj23.children = items;
+      return tmp11(tmp12, obj23);
     }
-    obj18 = { style: tmp.guildIcon, guild: fromGuildType, size: null, animate: true };
-    tmp10 = require("GuildIconSizes");
-    obj18[2] = require("GuildIconSizes").GuildIconSizes.XLARGE;
-    tmp7 = jsx(tmp10, obj18);
+    obj39 = { style: tmp.guildIcon, guild: fromGuildType, size: null, animate: true };
+    tmp10 = closure_1(closure_2[6]);
+    obj39.size = guild(closure_2[6]).GuildIconSizes.XLARGE;
+    tmp7 = jsx(tmp10, obj39);
     tmp8 = closure_1;
     stringResult = closure_2;
     tmp9 = jsx;
     return;
   }
 }
-let obj2 = { borderRadius: ThemesDefault.radii.sm, borderColor: ThemesDefault.colors.BORDER_STRONG, borderWidth: 1, paddingHorizontal: 4, paddingBottom: 2 };
-const result = require("set").fileFinishedImporting("modules/messages/native/emoji/ExpressionGuildDetails.tsx");
+size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/native/emoji/ExpressionGuildDetails.tsx");
 
 export default ExpressionGuildDetails;
 export { ExpressionGuildDetails };

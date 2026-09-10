@@ -1,204 +1,209 @@
-// Module ID: 9828
-// Function ID: 9829
-// Name: get label
-// Dependencies: [1957, 2012, 4199, 1074, 1114, 9779, 504, 2]
+// Module ID: 9855
+// Function ID: 9856
+// Name: utils/InstantInviteUtils
+// Dependencies: [1957, 2012, 4212, 1074, 1114, 9806, 504, 2]
 // Exports: getInviteChannelId, shouldRenderInvite, useShouldShowInviteInActionBar
 
-// Module 9828 (get label)
-import closure_2 from "ensureGuildLoaded" /* 1957 */;
-import comparator from "comparator" /* 2012 */;
-import closure_5 from "comparator" /* 2012 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4199 */;
-import { Permissions } from "ME" /* 1074 */;
+// Module 9855 (utils/InstantInviteUtils)
+import util from "util" /* 1114 */;
+import canViewInviteModal from "canViewInviteModal" /* 9806 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 2012 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
 
-let f49302 = arg1;
-let f49303 = dependencyMap;
-({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: c4 } = comparator);
-f49302 = () => {
-  const intl = f49302(f49303[4]).intl;
-  return intl.string(f49302(f49303[4]).t.PqEzn8);
+const require = globalThis.__r;
+
+require = fn;
+let GuildChannelStore = fn(2012);
+({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: closure_4 } = GuildChannelStore);
+let GuildChannelStore = GuildChannelStore_mod;
+const Permissions = fn(1074).Permissions;
+let closure_129_0 = () => {
+  const intl = util.intl;
+  return intl.string(util.t.PqEzn8);
 };
-f49303 = () => {
-  const intl = f49302(f49303[4]).intl;
-  return intl.string(f49302(f49303[4]).t["5u4A6V"]);
+let closure_129_1 = () => {
+  const intl = util.intl;
+  return intl.string(util.t["5u4A6V"]);
 };
 let obj = { value: 0 };
-Object.defineProperty(obj, "label", { get: () => f49302(), set: undefined });
-Object.defineProperty(obj, "descriptiveLabel", { get: () => f49303(), set: undefined });
-const fn = () => {
-  const intl = f49302(f49303[4]).intl;
-  return intl.formatToPlainString(f49302(f49303[4]).t["k2UNz+"], { days: 7 });
+Object.defineProperty(obj, "label", { get: () => require(), set: undefined });
+Object.defineProperty(obj, "descriptiveLabel", { get: () => dependencyMap(), set: undefined });
+fn = () => {
+  const intl = util.intl;
+  return intl.formatToPlainString(util.t["k2UNz+"], { days: 7 });
 };
-f49302 = fn;
-f49303 = fn;
-obj = { value: 604800 };
-Object.defineProperty(obj, "label", { get: () => f49302(), set: undefined });
-Object.defineProperty(obj, "descriptiveLabel", { get: () => f49303(), set: undefined });
+let closure_130_0 = fn;
+let closure_130_1 = fn;
+let obj2 = { value: 604800 };
+Object.defineProperty(obj2, "label", { get: () => require(), set: undefined });
+Object.defineProperty(obj2, "descriptiveLabel", { get: () => dependencyMap(), set: undefined });
 const fn2 = () => {
-  const intl = f49302(f49303[4]).intl;
-  return intl.formatToPlainString(f49302(f49303[4]).t["k2UNz+"], { days: 14 });
+  const intl = util.intl;
+  return intl.formatToPlainString(util.t["k2UNz+"], { days: 14 });
 };
-f49302 = fn2;
-f49303 = fn2;
-obj = { value: 1209600 };
-Object.defineProperty(obj, "label", { get: () => f49302(), set: undefined });
-Object.defineProperty(obj, "descriptiveLabel", { get: () => f49303(), set: undefined });
+let closure_131_0 = fn2;
+let closure_131_1 = fn2;
+const obj3 = { value: 1209600 };
+Object.defineProperty(obj3, "label", { get: () => require(), set: undefined });
+Object.defineProperty(obj3, "descriptiveLabel", { get: () => dependencyMap(), set: undefined });
 const fn3 = () => {
-  const intl = f49302(f49303[4]).intl;
-  return intl.formatToPlainString(f49302(f49303[4]).t["k2UNz+"], { days: 30 });
+  const intl = util.intl;
+  return intl.formatToPlainString(util.t["k2UNz+"], { days: 30 });
 };
-f49302 = fn3;
-f49303 = fn3;
-const obj1 = { value: 2592000 };
-Object.defineProperty(obj1, "label", { get: () => f49302(), set: undefined });
-Object.defineProperty(obj1, "descriptiveLabel", { get: () => f49303(), set: undefined });
+let closure_132_0 = fn3;
+let closure_132_1 = fn3;
+const obj4 = { value: 2592000 };
+Object.defineProperty(obj4, "label", { get: () => require(), set: undefined });
+Object.defineProperty(obj4, "descriptiveLabel", { get: () => dependencyMap(), set: undefined });
 const fn4 = () => {
-  const intl = f49302(f49303[4]).intl;
-  return intl.formatToPlainString(f49302(f49303[4]).t["k2UNz+"], { days: 60 });
+  const intl = util.intl;
+  return intl.formatToPlainString(util.t["k2UNz+"], { days: 60 });
 };
-f49302 = fn4;
-f49303 = fn4;
-let obj2 = { value: 5184000 };
-Object.defineProperty(obj2, "label", { get: () => f49302(), set: undefined });
-Object.defineProperty(obj2, "descriptiveLabel", { get: () => f49303(), set: undefined });
+let closure_133_0 = fn4;
+let closure_133_1 = fn4;
+const obj5 = { value: 5184000 };
+Object.defineProperty(obj5, "label", { get: () => require(), set: undefined });
+Object.defineProperty(obj5, "descriptiveLabel", { get: () => dependencyMap(), set: undefined });
 const fn5 = () => {
-  const intl = f49302(f49303[4]).intl;
-  return intl.formatToPlainString(f49302(f49303[4]).t["k2UNz+"], { days: 1 });
+  const intl = util.intl;
+  return intl.formatToPlainString(util.t["k2UNz+"], { days: 1 });
 };
-f49302 = fn5;
-f49303 = fn5;
-const obj3 = { value: 86400 };
-Object.defineProperty(obj3, "label", { get: () => f49302(), set: undefined });
-Object.defineProperty(obj3, "descriptiveLabel", { get: () => f49303(), set: undefined });
+let closure_134_0 = fn5;
+let closure_134_1 = fn5;
+const obj6 = { value: 86400 };
+Object.defineProperty(obj6, "label", { get: () => require(), set: undefined });
+Object.defineProperty(obj6, "descriptiveLabel", { get: () => dependencyMap(), set: undefined });
 const fn6 = () => {
-  const intl = f49302(f49303[4]).intl;
-  return intl.formatToPlainString(f49302(f49303[4]).t.xCjYxK, { hours: 12 });
+  const intl = util.intl;
+  return intl.formatToPlainString(util.t.xCjYxK, { hours: 12 });
 };
-f49302 = fn6;
-f49303 = fn6;
-const obj4 = { value: 43200 };
-Object.defineProperty(obj4, "label", { get: () => f49302(), set: undefined });
-Object.defineProperty(obj4, "descriptiveLabel", { get: () => f49303(), set: undefined });
+let closure_135_0 = fn6;
+let closure_135_1 = fn6;
+const obj7 = { value: 43200 };
+Object.defineProperty(obj7, "label", { get: () => require(), set: undefined });
+Object.defineProperty(obj7, "descriptiveLabel", { get: () => dependencyMap(), set: undefined });
 const fn7 = () => {
-  const intl = f49302(f49303[4]).intl;
-  return intl.formatToPlainString(f49302(f49303[4]).t.xCjYxK, { hours: 6 });
+  const intl = util.intl;
+  return intl.formatToPlainString(util.t.xCjYxK, { hours: 6 });
 };
-f49302 = fn7;
-f49303 = fn7;
-const obj5 = { value: 21600 };
-Object.defineProperty(obj5, "label", { get: () => f49302(), set: undefined });
-Object.defineProperty(obj5, "descriptiveLabel", { get: () => f49303(), set: undefined });
+let closure_136_0 = fn7;
+let closure_136_1 = fn7;
+const obj8 = { value: 21600 };
+Object.defineProperty(obj8, "label", { get: () => require(), set: undefined });
+Object.defineProperty(obj8, "descriptiveLabel", { get: () => dependencyMap(), set: undefined });
 const fn8 = () => {
-  const intl = f49302(f49303[4]).intl;
-  return intl.formatToPlainString(f49302(f49303[4]).t.xCjYxK, { hours: 8 });
+  const intl = util.intl;
+  return intl.formatToPlainString(util.t.xCjYxK, { hours: 8 });
 };
-f49302 = fn8;
-f49303 = fn8;
-const obj6 = { value: 28800 };
-Object.defineProperty(obj6, "label", { get: () => f49302(), set: undefined });
-Object.defineProperty(obj6, "descriptiveLabel", { get: () => f49303(), set: undefined });
+let closure_137_0 = fn8;
+let closure_137_1 = fn8;
+const obj9 = { value: 28800 };
+Object.defineProperty(obj9, "label", { get: () => require(), set: undefined });
+Object.defineProperty(obj9, "descriptiveLabel", { get: () => dependencyMap(), set: undefined });
 const fn9 = () => {
-  const intl = f49302(f49303[4]).intl;
-  return intl.formatToPlainString(f49302(f49303[4]).t.xCjYxK, { hours: 1 });
+  const intl = util.intl;
+  return intl.formatToPlainString(util.t.xCjYxK, { hours: 1 });
 };
-f49302 = fn9;
-f49303 = fn9;
-const obj7 = { value: 3600 };
-Object.defineProperty(obj7, "label", { get: () => f49302(), set: undefined });
-Object.defineProperty(obj7, "descriptiveLabel", { get: () => f49303(), set: undefined });
-f49302 = () => {
-  const intl = f49302(f49303[4]).intl;
-  return intl.formatToPlainString(f49302(f49303[4]).t.opVZ9q, { mins: 30 });
+let closure_138_0 = fn9;
+let closure_138_1 = fn9;
+const obj10 = { value: 3600 };
+Object.defineProperty(obj10, "label", { get: () => require(), set: undefined });
+Object.defineProperty(obj10, "descriptiveLabel", { get: () => dependencyMap(), set: undefined });
+let closure_139_0 = () => {
+  const intl = util.intl;
+  return intl.formatToPlainString(util.t.opVZ9q, { mins: 30 });
 };
-f49303 = () => {
-  const intl = f49302(f49303[4]).intl;
-  return intl.formatToPlainString(f49302(f49303[4]).t.iXLF9W, { minutes: 30 });
+let closure_139_1 = () => {
+  const intl = util.intl;
+  return intl.formatToPlainString(util.t.iXLF9W, { minutes: 30 });
 };
-const obj8 = { value: 1800 };
-Object.defineProperty(obj8, "label", { get: () => f49302(), set: undefined });
-Object.defineProperty(obj8, "descriptiveLabel", { get: () => f49303(), set: undefined });
-let items = [obj, obj2, obj1, obj, obj, obj3, obj4, obj5, obj7, obj8];
-f49302 = () => {
-  const intl = f49302(f49303[4]).intl;
-  return intl.formatToPlainString(f49302(f49303[4]).t["r/IcuP"], { maxUses: 0 });
+const obj11 = { value: 1800 };
+Object.defineProperty(obj11, "label", { get: () => require(), set: undefined });
+Object.defineProperty(obj11, "descriptiveLabel", { get: () => dependencyMap(), set: undefined });
+let items = [obj, obj5, obj4, obj3, obj2, obj6, obj7, obj8, obj10, obj11];
+let closure_140_0 = () => {
+  const intl = util.intl;
+  return intl.formatToPlainString(util.t["r/IcuP"], { maxUses: 0 });
 };
-f49303 = () => {
-  const intl = f49302(f49303[4]).intl;
-  return intl.formatToPlainString(f49302(f49303[4]).t.gPl14C, { maxUses: 0 });
+let closure_140_1 = () => {
+  const intl = util.intl;
+  return intl.formatToPlainString(util.t.gPl14C, { maxUses: 0 });
 };
-const obj9 = { value: 0 };
-Object.defineProperty(obj9, "label", { get: () => f49302(), set: undefined });
-Object.defineProperty(obj9, "descriptiveLabel", { get: () => f49303(), set: undefined });
-f49302 = () => "1";
-f49303 = () => {
-  const intl = f49302(f49303[4]).intl;
-  return intl.formatToPlainString(f49302(f49303[4]).t.gPl14C, { maxUses: 1 });
+const obj12 = { value: 0 };
+Object.defineProperty(obj12, "label", { get: () => require(), set: undefined });
+Object.defineProperty(obj12, "descriptiveLabel", { get: () => dependencyMap(), set: undefined });
+let closure_141_0 = () => "1";
+let closure_141_1 = () => {
+  const intl = util.intl;
+  return intl.formatToPlainString(util.t.gPl14C, { maxUses: 1 });
 };
-const obj10 = { value: 1 };
-Object.defineProperty(obj10, "label", { get: () => f49302(), set: undefined });
-Object.defineProperty(obj10, "descriptiveLabel", { get: () => f49303(), set: undefined });
-f49302 = () => "5";
-f49303 = () => {
-  const intl = f49302(f49303[4]).intl;
-  return intl.formatToPlainString(f49302(f49303[4]).t.gPl14C, { maxUses: 5 });
+const obj13 = { value: 1 };
+Object.defineProperty(obj13, "label", { get: () => require(), set: undefined });
+Object.defineProperty(obj13, "descriptiveLabel", { get: () => dependencyMap(), set: undefined });
+let closure_142_0 = () => "5";
+let closure_142_1 = () => {
+  const intl = util.intl;
+  return intl.formatToPlainString(util.t.gPl14C, { maxUses: 5 });
 };
-const obj11 = { value: 5 };
-Object.defineProperty(obj11, "label", { get: () => f49302(), set: undefined });
-Object.defineProperty(obj11, "descriptiveLabel", { get: () => f49303(), set: undefined });
-f49302 = () => "10";
-f49303 = () => {
-  const intl = f49302(f49303[4]).intl;
-  return intl.formatToPlainString(f49302(f49303[4]).t.gPl14C, { maxUses: 10 });
+const obj14 = { value: 5 };
+Object.defineProperty(obj14, "label", { get: () => require(), set: undefined });
+Object.defineProperty(obj14, "descriptiveLabel", { get: () => dependencyMap(), set: undefined });
+let closure_143_0 = () => "10";
+let closure_143_1 = () => {
+  const intl = util.intl;
+  return intl.formatToPlainString(util.t.gPl14C, { maxUses: 10 });
 };
-const obj12 = { value: 10 };
-Object.defineProperty(obj12, "label", { get: () => f49302(), set: undefined });
-Object.defineProperty(obj12, "descriptiveLabel", { get: () => f49303(), set: undefined });
-f49302 = () => "25";
-f49303 = () => {
-  const intl = f49302(f49303[4]).intl;
-  return intl.formatToPlainString(f49302(f49303[4]).t.gPl14C, { maxUses: 25 });
+const obj15 = { value: 10 };
+Object.defineProperty(obj15, "label", { get: () => require(), set: undefined });
+Object.defineProperty(obj15, "descriptiveLabel", { get: () => dependencyMap(), set: undefined });
+let closure_144_0 = () => "25";
+let closure_144_1 = () => {
+  const intl = util.intl;
+  return intl.formatToPlainString(util.t.gPl14C, { maxUses: 25 });
 };
-const obj13 = { value: 25 };
-Object.defineProperty(obj13, "label", { get: () => f49302(), set: undefined });
-Object.defineProperty(obj13, "descriptiveLabel", { get: () => f49303(), set: undefined });
-f49302 = () => "50";
-f49303 = () => {
-  const intl = f49302(f49303[4]).intl;
-  return intl.formatToPlainString(f49302(f49303[4]).t.gPl14C, { maxUses: 50 });
+const obj16 = { value: 25 };
+Object.defineProperty(obj16, "label", { get: () => require(), set: undefined });
+Object.defineProperty(obj16, "descriptiveLabel", { get: () => dependencyMap(), set: undefined });
+let closure_145_0 = () => "50";
+let closure_145_1 = () => {
+  const intl = util.intl;
+  return intl.formatToPlainString(util.t.gPl14C, { maxUses: 50 });
 };
-const obj14 = { value: 50 };
-Object.defineProperty(obj14, "label", { get: () => f49302(), set: undefined });
-Object.defineProperty(obj14, "descriptiveLabel", { get: () => f49303(), set: undefined });
-f49302 = () => "100";
-f49303 = () => {
-  const intl = f49302(f49303[4]).intl;
-  return intl.formatToPlainString(f49302(f49303[4]).t.gPl14C, { maxUses: 100 });
+const obj17 = { value: 50 };
+Object.defineProperty(obj17, "label", { get: () => require(), set: undefined });
+Object.defineProperty(obj17, "descriptiveLabel", { get: () => dependencyMap(), set: undefined });
+let closure_146_0 = () => "100";
+let closure_146_1 = () => {
+  const intl = util.intl;
+  return intl.formatToPlainString(util.t.gPl14C, { maxUses: 100 });
 };
-const obj15 = { value: 100 };
-Object.defineProperty(obj15, "label", { get: () => f49302(), set: undefined });
-Object.defineProperty(obj15, "descriptiveLabel", { get: () => f49303(), set: undefined });
-let items1 = [obj9, obj10, obj11, obj12, obj13, obj14, obj15];
-let result = require("set").fileFinishedImporting("utils/native/InstantInviteUtils.tsx");
+const obj18 = { value: 100 };
+Object.defineProperty(obj18, "label", { get: () => require(), set: undefined });
+Object.defineProperty(obj18, "descriptiveLabel", { get: () => dependencyMap(), set: undefined });
+let items1 = [obj12, obj13, obj14, obj15, obj16, obj17, obj18];
+const size = fn(2);
+let result = size.fileFinishedImporting("utils/native/InstantInviteUtils.tsx");
 
 export const INVITE_OPTIONS_FOREVER = obj;
-export const INVITE_OPTIONS_7_DAYS = obj;
-export const INVITE_OPTIONS_14_DAYS = obj;
-export const INVITE_OPTIONS_30_DAYS = obj1;
-export const INVITE_OPTIONS_60_DAYS = obj2;
-export const INVITE_OPTIONS_1_DAY = obj3;
-export const INVITE_OPTIONS_12_HOURS = obj4;
-export const INVITE_OPTIONS_6_HOURS = obj5;
-export const INVITE_OPTIONS_8_HOURS = obj6;
-export const INVITE_OPTIONS_1_HOUR = obj7;
-export const INVITE_OPTIONS_30_MINUTES = obj8;
+export const INVITE_OPTIONS_7_DAYS = obj2;
+export const INVITE_OPTIONS_14_DAYS = obj3;
+export const INVITE_OPTIONS_30_DAYS = obj4;
+export const INVITE_OPTIONS_60_DAYS = obj5;
+export const INVITE_OPTIONS_1_DAY = obj6;
+export const INVITE_OPTIONS_12_HOURS = obj7;
+export const INVITE_OPTIONS_6_HOURS = obj8;
+export const INVITE_OPTIONS_8_HOURS = obj9;
+export const INVITE_OPTIONS_1_HOUR = obj10;
+export const INVITE_OPTIONS_30_MINUTES = obj11;
 export const MAX_AGE_OPTIONS = items;
-export const INVITE_OPTIONS_UNLIMITED = obj9;
-export const INVITE_OPTIONS_ONCE = obj10;
-export const INVITE_OPTIONS_5_TIMES = obj11;
-export const INVITE_OPTIONS_10_TIMES = obj12;
-export const INVITE_OPTIONS_25_TIMES = obj13;
-export const INVITE_OPTIONS_50_TIMES = obj14;
-export const INVITE_OPTIONS_100_TIMES = obj15;
+export const INVITE_OPTIONS_UNLIMITED = obj12;
+export const INVITE_OPTIONS_ONCE = obj13;
+export const INVITE_OPTIONS_5_TIMES = obj14;
+export const INVITE_OPTIONS_10_TIMES = obj15;
+export const INVITE_OPTIONS_25_TIMES = obj16;
+export const INVITE_OPTIONS_50_TIMES = obj17;
+export const INVITE_OPTIONS_100_TIMES = obj18;
 export const MAX_USES_OPTIONS = items1;
 export const getInviteChannelId = function getInviteChannelId(channelId, stateFromStores) {
   if (null == stateFromStores) {
@@ -206,13 +211,12 @@ export const getInviteChannelId = function getInviteChannelId(channelId, stateFr
   } else {
     let id = null;
     if (null != channelId) {
-      const obj = { channelId: null };
-      obj[0] = channelId;
-      const result = closure_6.canWithPartialContext(Permissions.CREATE_INSTANT_INVITE, obj);
-      const combined = stateFromStores[closure_3].concat(stateFromStores[closure_4]);
-      const found = combined.find((channel) => closure_6.can(constants.CREATE_INSTANT_INVITE, channel.channel));
+      const obj = { channelId };
+      const result = PermissionStore.canWithPartialContext(Permissions.CREATE_INSTANT_INVITE, obj);
+      const combined = stateFromStores[React3].concat(stateFromStores[React4]);
+      const found = combined.find((channel) => PermissionStore.can(constants.CREATE_INSTANT_INVITE, channel.channel));
       if (result) {
-        channel = channel.getChannel(channelId);
+        const channel = ChannelStore.getChannel(channelId);
         let isThreadResult;
         if (channel != null) {
           isThreadResult = channel.isThread();
@@ -231,7 +235,6 @@ export const getInviteChannelId = function getInviteChannelId(channelId, stateFr
           id = found.channel.id;
         }
       }
-      const obj2 = stateFromStores[closure_3];
     }
     return id;
   }
@@ -243,50 +246,45 @@ export const shouldRenderInvite = function shouldRenderInvite(channels, guild) {
   }
   let tmp2 = null == vanityURLCode;
   if (!tmp2) {
-    tmp2 = !f49302(f49303[5]).canViewInviteModal(closure_6, guild);
-    const obj = f49302(f49303[5]);
+    tmp2 = !canViewInviteModal.canViewInviteModal(PermissionStore, guild);
   }
   let tmp6 = !tmp2;
   if (tmp2) {
     let tmp8 = null != channels;
     if (tmp8) {
-      let tmp10 = null != channels[closure_3].find((channel) => closure_6.can(constants.CREATE_INSTANT_INVITE, channel.channel));
+      let tmp10 = null != channels[React3].find((channel) => PermissionStore.can(constants.CREATE_INSTANT_INVITE, channel.channel));
       if (!tmp10) {
-        tmp10 = null != channels[closure_4].find((channel) => closure_6.can(constants.CREATE_INSTANT_INVITE, channel.channel));
-        const arr2 = channels[closure_4];
+        tmp10 = null != channels[React4].find((channel) => PermissionStore.can(constants.CREATE_INSTANT_INVITE, channel.channel));
       }
       tmp8 = tmp10;
-      const arr = channels[closure_3];
     }
     tmp6 = tmp8;
   }
   return tmp6;
 };
 export const useShouldShowInviteInActionBar = function useShouldShowInviteInActionBar(id) {
-  const callback = id;
-  const items = [closure_5];
+  _require = id;
+  const items = [GuildChannelStore];
   const items1 = [id.id];
-  const stateFromStoresObject = callback(f49303[6]).useStateFromStoresObject(items, () => closure_1_5.getChannels(id.id), items1);
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => GuildChannelStore.getChannels(id.id), items1);
   let vanityURLCode;
   if (id != null) {
     vanityURLCode = id.vanityURLCode;
   }
   let tmp5 = null == vanityURLCode;
   if (!tmp5) {
-    tmp5 = !callback(f49303[5]).canViewInviteModal(closure_6, id);
-    const tmpResult = callback(f49303[5]);
+    tmp5 = !require("canViewInviteModal").canViewInviteModal(PermissionStore, id);
+    const tmpResult = require("canViewInviteModal");
   }
   let tmp7 = !tmp5;
   if (tmp5) {
     let tmp8 = null == stateFromStoresObject;
     if (!tmp8) {
-      let tmp10 = null != stateFromStoresObject[closure_3].find((channel) => closure_6.can(constants.CREATE_INSTANT_INVITE, channel.channel));
+      let tmp10 = null != stateFromStoresObject[closure_3].find((channel) => PermissionStore.can(constants.CREATE_INSTANT_INVITE, channel.channel));
       if (!tmp10) {
-        tmp10 = null != stateFromStoresObject[closure_4].find((channel) => closure_6.can(constants.CREATE_INSTANT_INVITE, channel.channel));
-        const arr4 = stateFromStoresObject[closure_4];
+        tmp10 = null != stateFromStoresObject[closure_4].find((channel) => PermissionStore.can(constants.CREATE_INSTANT_INVITE, channel.channel));
       }
       tmp8 = tmp10;
-      const arr3 = stateFromStoresObject[closure_3];
     }
     tmp7 = tmp8;
   }

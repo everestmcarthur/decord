@@ -1,40 +1,45 @@
-// Module ID: 9495
-// Function ID: 9496
+// Module ID: 9522
+// Function ID: 9523
 // Name: usePipVideoOrStream
-// Dependencies: [1956, 4576, 9496, 4582, 502, 1957, 1908, 4583, 4581, 504, 4612, 4417, 9471, 2]
+// Dependencies: [1956, 4590, 9523, 4596, 502, 1957, 1908, 4597, 4595, 504, 4626, 4431, 9498, 2]
 // Exports: default, useHasPipParticipant
 
-// Module 9495 (usePipVideoOrStream)
-import closure_3 from "participantFromServer" /* 1956 */;
-import closure_4 from "getParticipants" /* 4576 */;
-import closure_5 from "updateSpeaker" /* 9496 */;
-import closure_6 from "reset" /* 4582 */;
-import closure_7 from "fetchFingerprint" /* 502 */;
-import closure_8 from "ensureGuildLoaded" /* 1957 */;
-import closure_9 from "_detectH265HardwareDecode" /* 1908 */;
-import closure_10 from "createRTCConnection" /* 4583 */;
-import ParticipantTypes from "ParticipantTypes" /* 4581 */;
+// Module 9522 (usePipVideoOrStream)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4431 */;
+import ChannelCallModalDefault from "ChannelCallModal" /* 9498 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4590 */;
+import VideoSpeakerStore from "VideoSpeakerStore" /* 9523 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4596 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
 
-const require = arg1;
-({ isStreamParticipant: unpackModuleId, isUserParticipant: closure_12, ParticipantTypes: map1 } = ParticipantTypes);
-const result = require("set").fileFinishedImporting("modules/video_calls/native/usePipVideoOrStream.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const CallConstants = fn(4595);
+({ isStreamParticipant: closure_11, isUserParticipant: closure_12, ParticipantTypes: map1 } = CallConstants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/usePipVideoOrStream.tsx");
 
 export default function usePipVideoOrStream(arg0) {
-  const _require = arg0;
-  const items = [closure_4, closure_5, closure_6];
+  _require = arg0;
+  const items = [ChannelRTCStore, VideoSpeakerStore, ApplicationStreamingStore];
   const items1 = [arg0];
-  return _require(504).useStateFromStores(items, () => {
-    if (null != c0) {
-      let videoParticipants = closure_1_4.getVideoParticipants(tmp);
+  return require("initialize").useStateFromStores(items, () => {
+    if (null != isActivityViewFocused) {
+      let videoParticipants = ChannelRTCStore.getVideoParticipants(tmp);
     } else {
       videoParticipants = [];
     }
     let selectedParticipant = null;
-    if (null != c0) {
-      selectedParticipant = closure_1_4.getSelectedParticipant(tmp);
+    if (null != isActivityViewFocused) {
+      selectedParticipant = ChannelRTCStore.getSelectedParticipant(tmp);
     }
     const found = videoParticipants.find((type) => type.type === constants.USER && !type.localVideoDisabled);
-    if (null != c0) {
+    if (null != isActivityViewFocused) {
       let videoParticipants1 = obj2.getVideoParticipants(tmp);
     } else {
       videoParticipants1 = [];
@@ -43,7 +48,7 @@ export default function usePipVideoOrStream(arg0) {
     const found1 = videoParticipants1.find((id) => {
       let tmp = id.id !== id.getId();
       if (tmp) {
-        const tmp3 = callback(id);
+        const tmp3 = closure_1_12(id);
         let localVideoDisabled = !tmp3;
         if (tmp3) {
           localVideoDisabled = id.localVideoDisabled;
@@ -52,36 +57,36 @@ export default function usePipVideoOrStream(arg0) {
       }
       return tmp;
     });
-    if (null != c0) {
-      participant = obj2.getParticipant(tmp, closure_1_5.getSpeaker(tmp));
+    if (null != isActivityViewFocused) {
+      participant = obj2.getParticipant(tmp, VideoSpeakerStore.getSpeaker(tmp));
     }
     if (participant == null) {
       participant = found1;
     }
     let tmp8 = participant;
-    if (closure_1_12(participant)) {
+    if (closure_2_12(participant)) {
       let tmp9 = null;
       if (!participant.localVideoDisabled) {
         tmp9 = participant;
       }
       tmp8 = tmp9;
     }
-    if (null != c0) {
-      let allActiveStreamsForChannel = closure_1_6.getAllActiveStreamsForChannel(tmp);
+    if (null != isActivityViewFocused) {
+      let allActiveStreamsForChannel = ApplicationStreamingStore.getAllActiveStreamsForChannel(tmp);
     } else {
       allActiveStreamsForChannel = [];
     }
     c0 = tmp8;
     let tmp11 = tmp8;
-    if (closure_1_11(tmp8)) {
+    if (closure_2_11(tmp8)) {
       if (allActiveStreamsForChannel.filter((streamType) => {
-        let obj = _undefined(closure_1_2[10]);
-        obj = { streamType: streamType.streamType, guildId: streamType.guildId, channelId: streamType.channelId, ownerId: streamType.ownerId };
-        let id;
+        id = undefined;
+        const obj = isActivityViewFocused(stateFromStores1[10]);
+        const obj2 = { streamType: streamType.streamType, guildId: streamType.guildId, channelId: streamType.channelId, ownerId: streamType.ownerId };
         if (_undefined != null) {
           id = _undefined.id;
         }
-        return obj.encodeStreamKey(obj) === id;
+        return isActivityViewFocused(stateFromStores1[10]).encodeStreamKey({ streamType: streamType.streamType, guildId: streamType.guildId, channelId: streamType.channelId, ownerId: streamType.ownerId }) === id;
       }).length <= 0) {
         c0 = undefined;
       }
@@ -110,8 +115,7 @@ export default function usePipVideoOrStream(arg0) {
       isModalOpenResult = tmp12.id === id1;
     }
     if (isModalOpenResult) {
-      isModalOpenResult = stateFromStores(stateFromStores1[11]).isModalOpen(stateFromStores(stateFromStores1[12]));
-      const obj3 = stateFromStores(stateFromStores1[11]);
+      isModalOpenResult = NavigationRouteUtils.isModalOpen(ChannelCallModalDefault);
     }
     if (isModalOpenResult) {
       tmp12 = found;
@@ -119,7 +123,7 @@ export default function usePipVideoOrStream(arg0) {
     let tmp19 = null;
     if (null != tmp12) {
       tmp19 = null;
-      if (tmp12.type !== closure_1_13.ACTIVITY) {
+      if (tmp12.type !== constants.ACTIVITY) {
         tmp19 = null;
         if (null != tmp12.streamId) {
           tmp19 = tmp12;
@@ -131,27 +135,25 @@ export default function usePipVideoOrStream(arg0) {
 };
 export const useHasPipParticipant = function useHasPipParticipant(isActivityViewFocused) {
   isActivityViewFocused = isActivityViewFocused.isActivityViewFocused;
-  let stateFromStores = isActivityViewFocused;
-  stateFromStores = undefined;
   let stateFromStores1;
-  const items = [closure_10];
-  stateFromStores = stateFromStores(stateFromStores1[9]).useStateFromStores(items, () => channelId.getChannelId());
-  stateFromStores = tmp4;
-  let tmpResult = tmp(tmp2[9]);
-  const items1 = [closure_4, closure_5, closure_6];
+  const items = [RTCConnectionStore];
+  const stateFromStores = isActivityViewFocused(stateFromStores1[9]).useStateFromStores(items, () => channelId.getChannelId());
+  closure_129_0 = tmp4;
+  let obj = isActivityViewFocused(stateFromStores1[9]);
+  const items1 = [ChannelRTCStore, VideoSpeakerStore, ApplicationStreamingStore];
   const items2 = [stateFromStores];
-  stateFromStores1 = tmpResult.useStateFromStores(items1, () => {
-    if (null != c0) {
-      let videoParticipants = closure_1_4.getVideoParticipants(tmp);
+  stateFromStores1 = isActivityViewFocused(stateFromStores1[9]).useStateFromStores(items1, () => {
+    if (null != isActivityViewFocused) {
+      let videoParticipants = ChannelRTCStore.getVideoParticipants(tmp);
     } else {
       videoParticipants = [];
     }
     let selectedParticipant = null;
-    if (null != c0) {
-      selectedParticipant = closure_1_4.getSelectedParticipant(tmp);
+    if (null != isActivityViewFocused) {
+      selectedParticipant = ChannelRTCStore.getSelectedParticipant(tmp);
     }
     const found = videoParticipants.find((type) => type.type === constants.USER && !type.localVideoDisabled);
-    if (null != c0) {
+    if (null != isActivityViewFocused) {
       let videoParticipants1 = obj2.getVideoParticipants(tmp);
     } else {
       videoParticipants1 = [];
@@ -160,7 +162,7 @@ export const useHasPipParticipant = function useHasPipParticipant(isActivityView
     const found1 = videoParticipants1.find((id) => {
       let tmp = id.id !== id.getId();
       if (tmp) {
-        const tmp3 = callback(id);
+        const tmp3 = closure_1_12(id);
         let localVideoDisabled = !tmp3;
         if (tmp3) {
           localVideoDisabled = id.localVideoDisabled;
@@ -169,36 +171,36 @@ export const useHasPipParticipant = function useHasPipParticipant(isActivityView
       }
       return tmp;
     });
-    if (null != c0) {
-      participant = obj2.getParticipant(tmp, closure_1_5.getSpeaker(tmp));
+    if (null != isActivityViewFocused) {
+      participant = obj2.getParticipant(tmp, VideoSpeakerStore.getSpeaker(tmp));
     }
     if (participant == null) {
       participant = found1;
     }
     let tmp8 = participant;
-    if (closure_1_12(participant)) {
+    if (closure_2_12(participant)) {
       let tmp9 = null;
       if (!participant.localVideoDisabled) {
         tmp9 = participant;
       }
       tmp8 = tmp9;
     }
-    if (null != c0) {
-      let allActiveStreamsForChannel = closure_1_6.getAllActiveStreamsForChannel(tmp);
+    if (null != isActivityViewFocused) {
+      let allActiveStreamsForChannel = ApplicationStreamingStore.getAllActiveStreamsForChannel(tmp);
     } else {
       allActiveStreamsForChannel = [];
     }
     c0 = tmp8;
     let tmp11 = tmp8;
-    if (closure_1_11(tmp8)) {
+    if (closure_2_11(tmp8)) {
       if (allActiveStreamsForChannel.filter((streamType) => {
-        let obj = _undefined(closure_1_2[10]);
-        obj = { streamType: streamType.streamType, guildId: streamType.guildId, channelId: streamType.channelId, ownerId: streamType.ownerId };
-        let id;
+        id = undefined;
+        const obj = isActivityViewFocused(stateFromStores1[10]);
+        const obj2 = { streamType: streamType.streamType, guildId: streamType.guildId, channelId: streamType.channelId, ownerId: streamType.ownerId };
         if (_undefined != null) {
           id = _undefined.id;
         }
-        return obj.encodeStreamKey(obj) === id;
+        return isActivityViewFocused(stateFromStores1[10]).encodeStreamKey({ streamType: streamType.streamType, guildId: streamType.guildId, channelId: streamType.channelId, ownerId: streamType.ownerId }) === id;
       }).length <= 0) {
         c0 = undefined;
       }
@@ -227,8 +229,7 @@ export const useHasPipParticipant = function useHasPipParticipant(isActivityView
       isModalOpenResult = tmp12.id === id1;
     }
     if (isModalOpenResult) {
-      isModalOpenResult = stateFromStores(stateFromStores1[11]).isModalOpen(stateFromStores(stateFromStores1[12]));
-      const obj3 = stateFromStores(stateFromStores1[11]);
+      isModalOpenResult = NavigationRouteUtils.isModalOpen(ChannelCallModalDefault);
     }
     if (isModalOpenResult) {
       tmp12 = found;
@@ -236,7 +237,7 @@ export const useHasPipParticipant = function useHasPipParticipant(isActivityView
     let tmp19 = null;
     if (null != tmp12) {
       tmp19 = null;
-      if (tmp12.type !== closure_1_13.ACTIVITY) {
+      if (tmp12.type !== constants.ACTIVITY) {
         tmp19 = null;
         if (null != tmp12.streamId) {
           tmp19 = tmp12;
@@ -245,21 +246,21 @@ export const useHasPipParticipant = function useHasPipParticipant(isActivityView
     }
     return tmp19;
   }, items2);
-  tmpResult = tmp(tmp2[9]);
-  const items3 = [closure_8, closure_3, closure_9];
+  const tmpResult = isActivityViewFocused(stateFromStores1[9]);
+  const items3 = [ChannelStore, EmbeddedActivitiesStore, MediaEngineStore];
   const items4 = [stateFromStores, stateFromStores1, isActivityViewFocused];
-  return tmpResult.useStateFromStores(items3, () => {
-    if (null == closure_1_8.getChannel(stateFromStores)) {
+  return isActivityViewFocused(stateFromStores1[9]).useStateFromStores(items3, () => {
+    if (null == ChannelStore.getChannel(stateFromStores)) {
       return false;
     } else {
       let isLocalVideoDisabledResult = null != stateFromStores1;
-      const currentEmbeddedActivity = closure_1_3.getCurrentEmbeddedActivity();
+      const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
       if (isLocalVideoDisabledResult) {
-        isLocalVideoDisabledResult = closure_1_9.isLocalVideoDisabled(tmp3.id);
+        isLocalVideoDisabledResult = MediaEngineStore.isLocalVideoDisabled(tmp3.id);
       }
       let tmp6 = null != currentEmbeddedActivity;
       if (tmp6) {
-        tmp6 = !stateFromStores;
+        tmp6 = !isActivityViewFocused;
       }
       if (!tmp6) {
         tmp6 = null != tmp3 && null != tmp3.streamId && !isLocalVideoDisabledResult;

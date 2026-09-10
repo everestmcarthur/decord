@@ -1,30 +1,27 @@
-// Module ID: 12131
-// Function ID: 12132
-// Name: AppLauncherApplicationViewScreenInner
-// Dependencies: [19, 17, 9295, 1482, 4999, 21, 4560, 11220, 12132, 9294, 1609, 12133, 7168, 4296, 12134, 2]
+// Module ID: 12157
+// Function ID: 12158
+// Name: AppLauncherApplicationViewScreen
+// Dependencies: [19, 17, 9322, 1482, 5013, 21, 4574, 11247, 12158, 9321, 1609, 12159, 7182, 4310, 12160, 2]
 // Exports: default
 
-// Module 12131 (AppLauncherApplicationViewScreenInner)
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getIndexKey" /* 9295 */;
-import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1482 */;
-import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 4999 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12157 (AppLauncherApplicationViewScreen)
+import KeyboardTypes from "KeyboardTypes" /* 1609 */;
+import AppLauncherContext from "AppLauncherContext" /* 11247 */;
+import noop from "module_19" /* 19 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9322 */;
 
-const require = arg1;
+const require = globalThis.__r;
+
+require = fn;
 function AppLauncherApplicationViewScreenInner(application) {
   application = application.application;
   ({ initiallyExpanded, expandBottomSheet } = application);
   let bottomSheetExpandReasonRef;
-  let chatInputRef;
-  closure_4 = undefined;
   initiallyExpanded = undefined;
   ({ context, lockableScrollableContentOffsetY, installOnDemand, sectionName, onPressBack, onActivityItemSelected, entrypoint, onCommandExecuted } = application);
   const requiredAppLauncherContext = application(bottomSheetExpandReasonRef[7]).useRequiredAppLauncherContext();
   bottomSheetExpandReasonRef = requiredAppLauncherContext.bottomSheetExpandReasonRef;
-  chatInputRef = requiredAppLauncherContext.chatInputRef;
+  const chatInputRef = requiredAppLauncherContext.chatInputRef;
   const tmp5 = expandBottomSheet(bottomSheetExpandReasonRef[8])();
   closure_4 = tmp5;
   if (initiallyExpanded == null) {
@@ -35,8 +32,7 @@ function AppLauncherApplicationViewScreenInner(application) {
   const items1 = [tmp5, initiallyExpanded, expandBottomSheet, bottomSheetExpandReasonRef];
   const onAauth2Cancel = chatInputRef.useCallback(() => {
     const current = chatInputRef.current;
-    obj = { type: application(bottomSheetExpandReasonRef[10]).KeyboardTypes.APP_LAUNCHER, context: obj };
-    obj = { initialRouteName: closure_1_7.APPLICATION_VIEW, application };
+    const obj = { type: KeyboardTypes.KeyboardTypes.APP_LAUNCHER, context: { initialRouteName: constants.APPLICATION_VIEW, application } };
     current.openCustomKeyboard(obj);
   }, items);
   const effect = chatInputRef.useEffect(() => {
@@ -45,7 +41,7 @@ function AppLauncherApplicationViewScreenInner(application) {
       tmp = closure_4;
     }
     if (tmp) {
-      bottomSheetExpandReasonRef.current = application(bottomSheetExpandReasonRef[7]).AppLauncherBottomSheetExpandReason.APP_VIEW;
+      bottomSheetExpandReasonRef.current = AppLauncherContext.AppLauncherBottomSheetExpandReason.APP_VIEW;
       if (expandBottomSheet != null) {
         expandBottomSheet();
       }
@@ -53,10 +49,16 @@ function AppLauncherApplicationViewScreenInner(application) {
   }, items1);
   return jsx(expandBottomSheet(bottomSheetExpandReasonRef[11]), { application, context, lockableScrollableContentOffsetY, installOnDemand, sectionName, onPressBack, onActivityItemSelected, entrypoint, onCommandExecuted, onAauth2Cancel });
 }
-({ ActivityIndicator: c4, View: c5 } = get_ActivityIndicator);
-({ AppLauncherRouteName: error, SCREEN_BACKGROUND_COLOR } = APP_LAUNCHER_BUILT_IN_SECTION_ICON);
-let closure_10 = createCacheKey.createStyles({ container: { backgroundColor: SCREEN_BACKGROUND_COLOR, flex: 1 } });
-let result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/application_view/AppLauncherApplicationViewScreen.tsx");
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const AppLauncherNativeConstants = fn(1482);
+({ AppLauncherRouteName: closure_7, SCREEN_BACKGROUND_COLOR } = AppLauncherNativeConstants);
+const BuiltInSectionId = fn(5013).BuiltInSectionId;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_10 = createStyles.createStyles({ container: { backgroundColor: SCREEN_BACKGROUND_COLOR, flex: 1 } });
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/app_launcher/native/screens/application_view/AppLauncherApplicationViewScreen.tsx");
 
 export default function AppLauncherApplicationViewScreen(route) {
   const params = route.route.params;
@@ -65,26 +67,25 @@ export default function AppLauncherApplicationViewScreen(route) {
   const navigation = route.navigation;
   c4 = undefined;
   c5 = undefined;
-  let id;
   ({ applicationId, initiallyExpanded, sectionName, expandBottomSheet, onCommandExecuted } = params);
-  let obj = require(installOnDemand[7]);
-  const requiredAppLauncherContext = obj.useRequiredAppLauncherContext();
+  const requiredAppLauncherContext = require("AppLauncherContext").useRequiredAppLauncherContext();
   ({ chatInputRef: c4, keyboardCloseReasonRef: c5 } = requiredAppLauncherContext);
   ({ entrypoint, onActivityItemSelected } = requiredAppLauncherContext);
-  id = undefined;
+  let id;
+  const obj = require("AppLauncherContext");
   if (application != null) {
     id = application.id;
   }
   if (id == null) {
     id = applicationId;
   }
-  let tmpResult = tmp(tmp2[12]);
+  const tmp4 = closure_10();
   let tmp7 = null;
   if (id !== BuiltInSectionId.BUILT_IN) {
     tmp7 = id;
   }
-  const getOrFetchApplication = tmpResult.useGetOrFetchApplication(tmp7);
-  if (id === BuiltInSectionId.BUILT_IN) {
+  const getOrFetchApplication = require("useGetOrFetchApplications").useGetOrFetchApplication(tmp7);
+  if (id === tmp6.BUILT_IN) {
     let FAKE_BUILT_IN_APP = tmp(tmp2[9]).FAKE_BUILT_IN_APP;
   } else {
     FAKE_BUILT_IN_APP = getOrFetchApplication;
@@ -92,9 +93,10 @@ export default function AppLauncherApplicationViewScreen(route) {
       FAKE_BUILT_IN_APP = application;
     }
   }
-  tmpResult = tmp(tmp2[13]);
+  tmp6 = BuiltInSectionId;
+  const tmpResult = require("useGetOrFetchApplications");
   const items = [id, context, installOnDemand];
-  const sharedValue = tmpResult.useSharedValue(0);
+  const sharedValue = require("ReanimatedRexport").useSharedValue(0);
   const effect = navigation.useEffect(() => {
     let tmp2 = null != id;
     if (tmp2) {
@@ -104,46 +106,45 @@ export default function AppLauncherApplicationViewScreen(route) {
       tmp2 = installOnDemand;
     }
     if (tmp2) {
-      const result = id.queryInstallOnDemandApp(id, context.channel.id);
+      const result = ApplicationCommandIndexStore.queryInstallOnDemandApp(id, context.channel.id);
     }
   }, items);
-  obj = { style: callback().container, children: null };
+  const obj2 = { style: tmp4.container, children: null };
   if (null != FAKE_BUILT_IN_APP) {
-    obj = { context: null, application: null, lockableScrollableContentOffsetY: null, initiallyExpanded: null, installOnDemand: null, sectionName: null, onPressBack: null, onActivityItemSelected: null, entrypoint: null, expandBottomSheet: null, onCommandExecuted: null };
-    obj[0] = context;
-    obj[1] = FAKE_BUILT_IN_APP;
-    obj[2] = sharedValue;
-    obj[3] = initiallyExpanded;
-    obj[4] = installOnDemand;
-    obj[5] = sectionName;
-    obj[6] = function onPressBack() {
-      if (closure_0 != null) {
-        tmp();
-      }
-      let arr = navigation;
-      if (navigation.canGoBack()) {
-        arr = arr.pop();
-      } else {
-        c5.current = closure_1_0(installOnDemand[7]).AppLauncherKeyboardCloseReason.BACK;
-        const current = _undefined.current;
-        if (current != null) {
-          current.closeCustomKeyboard();
-        }
-      }
+    const obj3 = {
+      context,
+      application: FAKE_BUILT_IN_APP,
+      lockableScrollableContentOffsetY: sharedValue,
+      initiallyExpanded,
+      installOnDemand,
+      sectionName,
+      onPressBack() {
+          if (closure_1_0 != null) {
+            tmp();
+          }
+          if (navigation.canGoBack()) {
+            navigation.pop();
+          } else {
+            c5.current = AppLauncherContext.AppLauncherKeyboardCloseReason.BACK;
+            const current = _undefined.current;
+            if (current != null) {
+              current.closeCustomKeyboard();
+            }
+          }
+        },
+      onActivityItemSelected,
+      entrypoint,
+      expandBottomSheet,
+      onCommandExecuted
     };
-    obj[7] = onActivityItemSelected;
-    obj[8] = entrypoint;
-    obj[9] = expandBottomSheet;
-    obj[10] = onCommandExecuted;
-    let tmp11Result = tmp11(AppLauncherApplicationViewScreenInner, obj);
+    let tmp11Result = tmp11(AppLauncherApplicationViewScreenInner, obj3);
   } else {
-    obj1 = { style: null, children: null };
-    const obj2 = { paddingTop: null };
-    obj2[0] = tmp(tmp2[14]).EXPANDED_HEADER_HEIGHT;
-    obj1[0] = obj2;
-    obj1[1] = tmp11(c4, {});
-    tmp11Result = tmp11(tmp12, obj1);
+    const obj4 = { style: null, children: null };
+    const obj5 = { paddingTop: tmp(tmp2[14]).EXPANDED_HEADER_HEIGHT };
+    obj4.style = obj5;
+    obj4.children = tmp11(c4, {});
+    tmp11Result = tmp11(tmp12, obj4);
   }
-  obj[1] = tmp11Result;
-  return <c5 style={callback().container}>{null}</c5>;
+  obj2.children = tmp11Result;
+  return <c5 style={tmp4.container}>{null}</c5>;
 };

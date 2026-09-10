@@ -1,78 +1,51 @@
-// Module ID: 15490
-// Function ID: 15491
-// Name: onChange
-// Dependencies: [7975, 4211, 1935, 1114, 1187, 11473, 2]
+// Module ID: 15520
+// Function ID: 15521
+// Name: ReactionNotificationsSettings
+// Dependencies: [7989, 4224, 1935, 1114, 1187, 11500, 2]
 // Exports: onChange
 
-// Module 15490 (onChange)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import create from "create" /* 1187 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import MAX_REACTIONS from "MAX_REACTIONS" /* 4211 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15520 (ReactionNotificationsSettings)
+import util from "util" /* 1114 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import ReactionUtils from "ReactionUtils" /* 4224 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
 function onChange(arg0) {
-  const obj = MAX_REACTIONS;
-  const ReactionNotifications = explicitContentFromProto.ReactionNotifications;
+  const obj = ReactionUtils;
+  const ReactionNotifications = UserSettings.ReactionNotifications;
   const result = obj.updateReactionNotificationsSetting(Number(arg0), ReactionNotifications.getSetting());
 }
-const radio = createToggle.createRadio({
+const radio = SettingBuilders.createRadio({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Rq0NFs);
+    const intl = util.intl;
+    return intl.string(util.t.Rq0NFs);
   },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: explicitContentFromProto.ReactionNotifications.useSetting,
+  parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
+  useValue: UserSettings.ReactionNotifications.useSetting,
   onValueChange: onChange,
   useOptions() {
-    let obj = { label: null, value: null };
-    const intl = getSystemLocale.intl;
-    obj[0] = intl.string(getSystemLocale.t["9x/RtT"]);
-    obj[1] = create.ReactionNotificationType.NOTIFICATIONS_ENABLED;
+    const obj = { label: null, value: null };
+    const intl = util.intl;
+    obj.label = intl.string(util.t["9x/RtT"]);
+    obj.value = preloaded_user_settings.ReactionNotificationType.NOTIFICATIONS_ENABLED;
     const items = [obj, , ];
-    obj = { label: null, value: null };
-    const intl2 = getSystemLocale.intl;
-    obj[0] = intl2.string(getSystemLocale.t.fJAbQd);
-    obj[1] = create.ReactionNotificationType.ONLY_DMS;
-    items[1] = obj;
-    obj = { label: null, value: null };
-    const intl3 = getSystemLocale.intl;
-    obj[0] = intl3.string(getSystemLocale.t["xu+UDU"]);
-    obj[1] = create.ReactionNotificationType.NOTIFICATIONS_DISABLED;
-    items[2] = obj;
+    const obj2 = { label: null, value: null };
+    const intl2 = util.intl;
+    obj2.label = intl2.string(util.t.fJAbQd);
+    obj2.value = preloaded_user_settings.ReactionNotificationType.ONLY_DMS;
+    items[1] = obj2;
+    const obj3 = { label: null, value: null };
+    const intl3 = util.intl;
+    obj3.label = intl3.string(util.t["xu+UDU"]);
+    obj3.value = preloaded_user_settings.ReactionNotificationType.NOTIFICATIONS_DISABLED;
+    items[2] = obj3;
     return items;
   }
 });
-let obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Rq0NFs);
-  },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: explicitContentFromProto.ReactionNotifications.useSetting,
-  onValueChange: onChange,
-  useOptions() {
-    let obj = { label: null, value: null };
-    const intl = getSystemLocale.intl;
-    obj[0] = intl.string(getSystemLocale.t["9x/RtT"]);
-    obj[1] = create.ReactionNotificationType.NOTIFICATIONS_ENABLED;
-    const items = [obj, , ];
-    obj = { label: null, value: null };
-    const intl2 = getSystemLocale.intl;
-    obj[0] = intl2.string(getSystemLocale.t.fJAbQd);
-    obj[1] = create.ReactionNotificationType.ONLY_DMS;
-    items[1] = obj;
-    obj = { label: null, value: null };
-    const intl3 = getSystemLocale.intl;
-    obj[0] = intl3.string(getSystemLocale.t["xu+UDU"]);
-    obj[1] = create.ReactionNotificationType.NOTIFICATIONS_DISABLED;
-    items[2] = obj;
-    return items;
-  }
-};
-let result = set.fileFinishedImporting("modules/user_settings/defs/native/ReactionNotificationsSettings.tsx");
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/ReactionNotificationsSettings.tsx");
 
 export default radio;
 export { onChange };

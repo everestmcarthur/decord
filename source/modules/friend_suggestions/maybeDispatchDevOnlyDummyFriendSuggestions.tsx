@@ -1,13 +1,14 @@
-// Module ID: 7664
-// Function ID: 7665
+// Module ID: 7678
+// Function ID: 7679
 // Name: maybeDispatchDevOnlyDummyFriendSuggestions
 // Dependencies: [1371, 2]
 // Exports: default
 
-// Module 7664 (maybeDispatchDevOnlyDummyFriendSuggestions)
-import closure_0 from "mergeGuildAvatar" /* 1371 */;
+// Module 7678 (maybeDispatchDevOnlyDummyFriendSuggestions)
+import UserStore from "UserStore" /* 1371 */;
 
-const result = require("set").fileFinishedImporting("modules/friend_suggestions/maybeDispatchDevOnlyDummyFriendSuggestions.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/friend_suggestions/maybeDispatchDevOnlyDummyFriendSuggestions.tsx");
 
 export default function maybeDispatchDevOnlyDummyFriendSuggestions() {
   let MAX_VALUE = arg0;
@@ -15,5 +16,5 @@ export default function maybeDispatchDevOnlyDummyFriendSuggestions() {
     const _Number = Number;
     MAX_VALUE = Number.MAX_VALUE;
   }
-  const bound = Math.min(Object.values(users.getUsers()).length, MAX_VALUE);
+  const bound = Math.min(Object.values(UserStore.getUsers()).length, MAX_VALUE);
 };

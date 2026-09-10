@@ -1,20 +1,20 @@
 // Module ID: 1874
 // Function ID: 1875
-// Name: dismissGlobalKeyboard
+// Name: KeyboardManagerUtils
 // Dependencies: [17, 1115, 1875, 2]
 // Exports: clearCurrentFocusAndDismissKeyboard, dismissGlobalKeyboard, onKeyboardChanged
 
-// Module 1874 (dismissGlobalKeyboard)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import enforcingDefault from "enforcing" /* 1875 */;
+// Module 1874 (KeyboardManagerUtils)
+import _mod17 from "module_17" /* 17 */;
+import NativeKeyboardModuleDefault from "NativeKeyboardModule" /* 1875 */;
+import size from "module_2" /* 2 */;
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-let result = set.fileFinishedImporting("utils/native/KeyboardManagerUtils.tsx");
+const NativeModules = _mod17.NativeModules;
+let result = size.fileFinishedImporting("utils/native/KeyboardManagerUtils.tsx");
 
 export const dismissGlobalKeyboard = function dismissGlobalKeyboard() {
   if (obj.isAndroid()) {
-    const obj2 = enforcingDefault;
+    const obj2 = NativeKeyboardModuleDefault;
     if (obj2 != null) {
       const result = obj2.dismissGlobalKeyboard();
     }
@@ -25,7 +25,7 @@ export const dismissGlobalKeyboard = function dismissGlobalKeyboard() {
 };
 export const clearCurrentFocusAndDismissKeyboard = function clearCurrentFocusAndDismissKeyboard() {
   if (obj.isAndroid()) {
-    const obj2 = enforcingDefault;
+    const obj2 = NativeKeyboardModuleDefault;
     if (obj2 != null) {
       const result = obj2.clearCurrentFocusAndDismissKeyboard();
     }
@@ -33,7 +33,7 @@ export const clearCurrentFocusAndDismissKeyboard = function clearCurrentFocusAnd
 };
 export const onKeyboardChanged = function onKeyboardChanged(open) {
   if (obj.isAndroid()) {
-    const obj2 = enforcingDefault;
+    const obj2 = NativeKeyboardModuleDefault;
     if (obj2 != null) {
       obj2.onKeyboardChanged(open);
     }

@@ -1,19 +1,15 @@
-// Module ID: 7172
-// Function ID: 7173
+// Module ID: 7186
+// Function ID: 7187
 // Name: GameIcon
-// Dependencies: [19, 17, 1373, 21, 4560, 576, 7173, 7174, 7175, 7176, 2]
+// Dependencies: [19, 17, 1373, 21, 4574, 576, 7187, 7188, 7189, 7190, 2]
 
-// Module 7172 (GameIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import registerAssetDefault from "registerAsset" /* 7173 */;
-import registerAssetDefault2 from "registerAsset" /* 7174 */;
-import registerAssetDefault3 from "registerAsset" /* 7175 */;
-import registerAssetDefault4 from "registerAsset" /* 7176 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { PremiumSubscriptionSKUs } from "GuildFeatures" /* 1373 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 7186 (GameIcon)
+import nativeDefault from "native" /* 576 */;
+import _modDef7187 from "module_7187" /* 7187 */;
+import _modDef7188 from "module_7188" /* 7188 */;
+import _modDef7189 from "module_7189" /* 7189 */;
+import _modDef7190 from "module_7190" /* 7190 */;
+import noop from "module_19" /* 19 */;
 
 class GameIcon {
   constructor(arg0) {
@@ -23,7 +19,7 @@ class GameIcon {
       size = closure_6.NORMAL;
     }
     tmp2 = closure_8();
-    obj = { [closure_6.NORMAL]: tmp2.normal, [closure_6.SMALL]: tmp2.small, [closure_6.SIZE_24]: tmp2.size24, [closure_6.LARGE]: tmp2.large };
+    obj = { [closure_1_6.NORMAL]: tmp2.normal, [closure_1_6.SMALL]: tmp2.small, [closure_1_6.SIZE_24]: tmp2.size24, [closure_1_6.LARGE]: tmp2.large };
     items = [, , ];
     items[0] = tmp2.gameIcon;
     items[1] = obj[size];
@@ -35,74 +31,78 @@ class GameIcon {
           tmp13 = closure_7;
           iconURL = game.getIconURL(closure_7[size]);
           if (null != iconURL) {
-            obj = { uri: null };
-            obj[0] = iconURL;
-            tmp12 = obj;
+            obj1 = { uri: null };
+            obj1.uri = iconURL;
+            tmp12 = obj1;
           }
         }
       }
       if (null == tmp12) {
         tmp15 = closure_0;
         tmp16 = closure_1;
-        tmp12 = require("registerAsset");
-        arr = items.push(tmp2.placeholder);
+        tmp12 = closure_0(closure_1[9]);
+        arr1 = items.push(tmp2.placeholder);
       }
       tmp18 = jsx;
       tmp19 = View;
-      obj1 = { style: null, children: null };
+      obj5 = { style: null, children: null };
       items1 = [, ];
       items1[0] = items;
       items1[1] = tmp2.entityWrapper;
-      obj1[0] = items1;
+      obj5.style = items1;
       tmp20 = Image;
-      obj2 = { style: null, source: null };
-      obj2[0] = obj[size];
-      obj2[1] = tmp12;
-      obj1[1] = jsx(Image, obj2);
-      return jsx(View, obj1);
+      obj6 = { style: null, source: null };
+      obj6.style = obj[size];
+      obj6.source = tmp12;
+      obj5.children = jsx(Image, obj6);
+      return jsx(View, obj5);
     } else {
       tmp3 = PremiumSubscriptionSKUs;
       if (PremiumSubscriptionSKUs.TIER_0 === skuId) {
         tmp9 = closure_0;
         tmp10 = closure_1;
-        tmp4 = require("registerAsset");
+        tmp4 = closure_0(closure_1[6]);
         tmp11 = tmp4;
       } else if (tmp3.TIER_1 !== skuId) {
         if (tmp3.TIER_2 === skuId) {
           tmp5 = closure_0;
           tmp6 = closure_1;
-          tmp4 = require("registerAsset");
+          tmp4 = closure_0(closure_1[8]);
         } else {
           tmp4 = null;
         }
       }
       tmp7 = closure_0;
       tmp8 = closure_1;
-      tmp4 = require("registerAsset");
+      tmp4 = closure_0(closure_1[7]);
     }
     return;
   }
 }
-noopAll;
-({ Image: obj1, View: c3 } = get_ActivityIndicator);
-let obj = { SIZE_24: "size_24", SMALL: "small", NORMAL: "normal", LARGE: "large" };
-obj = { [obj.SIZE_24]: 24, [obj.SMALL]: 32, [obj.NORMAL]: 48, [obj.LARGE]: 80 };
-obj = { gameIcon: { justifyContent: "center", alignItems: "center" }, size24: { width: obj.size_24, height: obj.size_24, borderRadius: ThemesDefault.radii.sm }, small: null, normal: null, large: null, placeholder: null, entityWrapper: null };
-createCacheKey = { width: obj.small, height: obj.small, borderRadius: ThemesDefault.radii.sm };
-obj[2] = createCacheKey;
-obj1 = { width: obj.size_24, height: obj.size_24, borderRadius: ThemesDefault.radii.sm };
-obj[3] = { width: obj.normal, height: obj.normal, borderRadius: ThemesDefault.radii.lg };
-const obj3 = { width: obj.normal, height: obj.normal, borderRadius: ThemesDefault.radii.lg };
-obj[4] = { width: obj.large, height: obj.large, borderRadius: ThemesDefault.radii.sm };
-const obj4 = { width: obj.large, height: obj.large, borderRadius: ThemesDefault.radii.sm };
-obj[5] = { borderRadius: ThemesDefault.radii.none, tintColor: ThemesDefault.colors.ICON_MUTED };
-const obj5 = { borderRadius: ThemesDefault.radii.none, tintColor: ThemesDefault.colors.ICON_MUTED };
-obj[6] = { borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden" };
-let closure_8 = createCacheKey.createStyles(obj);
-GameIcon.Sizes = obj;
-const obj6 = { borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden" };
-const result = require("set").fileFinishedImporting("modules/game_detection/native/GameIcon.tsx");
+get_ActivityIndicator = fn(17);
+({ Image: c2, View: c3 } = get_ActivityIndicator);
+const PremiumSubscriptionSKUs = fn(1373).PremiumSubscriptionSKUs;
+const jsx = fn(21).jsx;
+const GameIconSizes = { SIZE_24: "size_24", SMALL: "small", NORMAL: "normal", LARGE: "large" };
+let obj2 = { [GameIconSizes.SIZE_24]: 24, [GameIconSizes.SMALL]: 32, [GameIconSizes.NORMAL]: 48, [GameIconSizes.LARGE]: 80 };
+const createStyles = fn(4574);
+let obj4 = { gameIcon: { justifyContent: "center", alignItems: "center" }, size24: null, small: null, normal: null, large: null, placeholder: null, entityWrapper: null };
+let size = { width: obj2.size_24, height: obj2.size_24, borderRadius: nativeDefault.radii.sm };
+obj4.size24 = size;
+const size1 = { width: obj2.small, height: obj2.small, borderRadius: nativeDefault.radii.sm };
+obj4.small = size1;
+const size2 = { width: obj2.normal, height: obj2.normal, borderRadius: nativeDefault.radii.lg };
+obj4.normal = size2;
+const size3 = { width: obj2.large, height: obj2.large, borderRadius: nativeDefault.radii.sm };
+obj4.large = size3;
+obj4.placeholder = { borderRadius: nativeDefault.radii.none, tintColor: nativeDefault.colors.ICON_MUTED };
+const obj5 = { borderRadius: nativeDefault.radii.none, tintColor: nativeDefault.colors.ICON_MUTED };
+obj4.entityWrapper = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden" };
+const React6 = createStyles.createStyles(obj4);
+GameIcon.Sizes = GameIconSizes;
+size = fn(2);
+const result = size.fileFinishedImporting("modules/game_detection/native/GameIcon.tsx");
 
 export default GameIcon;
-export const GameIconSizes = obj;
-export const GameIconImageSize = obj;
+export { GameIconSizes };
+export const GameIconImageSize = obj2;

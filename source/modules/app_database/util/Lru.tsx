@@ -1,10 +1,10 @@
-// Module ID: 7481
-// Function ID: 7482
-// Name: length
+// Module ID: 7495
+// Function ID: 7496
+// Name: Lru
 // Dependencies: [2]
 
-// Module 7481 (length)
-import set from "set" /* 2 */;
+// Module 7495 (Lru)
+import size from "module_2" /* 2 */;
 
 class Lru {
   constructor(arg0) {
@@ -22,12 +22,13 @@ Object.defineProperty(prototype, "length", {
   },
   set: undefined
 });
-const get = function capacity() {
-  return this.limit;
-};
-Object.defineProperty(prototype, "capacity", { get, set: undefined });
-// ToPropertyKey (0xa4)
-prototype[get] = function() {
+Object.defineProperty(prototype, "capacity", {
+  get: function capacity() {
+    return this.limit;
+  },
+  set: undefined
+});
+prototype[Symbol.iterator] = function() {
   const items = this.items;
   return items.entries();
 };
@@ -44,9 +45,9 @@ prototype["values"] = function values() {
   return items.values();
 };
 prototype["ordered"] = function ordered() {
-  let items = this.items;
-  items = [...items.values()];
-  return items.reverse();
+  const items = this.items;
+  const items1 = [...items.values()];
+  return items1.reverse();
 };
 prototype["clear"] = function clear() {
   const items = this.items;
@@ -62,17 +63,17 @@ prototype["get"] = function get(arg0) {
 };
 prototype["put"] = function put(arg0, arg1) {
   const self = this;
-  let items = this.items;
+  const items = this.items;
   items.delete(arg0);
   const items2 = this.items;
   const result = items2.set(arg0, arg1);
   if (this.items.size > this.limit) {
     const oldestKeyResult = self.oldestKey();
     ({ items: items3, items: items4 } = self);
-    const value = items3.get(oldestKeyResult);
+    value = items3.get(oldestKeyResult);
     items4.delete(oldestKeyResult);
-    items = [oldestKeyResult, value];
-    return items;
+    const items1 = [oldestKeyResult, value];
+    return items1;
   }
 };
 prototype["delete"] = function delete(arg0) {
@@ -83,6 +84,6 @@ prototype["oldestKey"] = function oldestKey() {
   const items = this.items;
   return items.keys().next().value;
 };
-let result = set.fileFinishedImporting("modules/app_database/util/Lru.tsx");
+let result = size.fileFinishedImporting("modules/app_database/util/Lru.tsx");
 
 export { Lru };

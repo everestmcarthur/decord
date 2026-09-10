@@ -1,12 +1,13 @@
-// Module ID: 7152
-// Function ID: 7153
-// Name: context
+// Module ID: 7166
+// Function ID: 7167
+// Name: ActionSheetContext
 // Dependencies: [19, 2]
 
-// Module 7152 (context)
-import importAllResult from "noop" /* 19 */;
+// Module 7166 (ActionSheetContext)
+import noop from "module_19" /* 19 */;
 
-const context = importAllResult.createContext(null);
-const result = require("set").fileFinishedImporting("modules/action_sheet/native/ActionSheetContext.tsx");
+const context = noop.createContext(null);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/action_sheet/native/ActionSheetContext.tsx");
 
 export default context;

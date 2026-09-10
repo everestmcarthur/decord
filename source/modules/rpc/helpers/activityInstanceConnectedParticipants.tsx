@@ -1,93 +1,92 @@
-// Module ID: 14467
-// Function ID: 14468
+// Module ID: 14492
+// Function ID: 14493
 // Name: activityInstanceConnectedParticipants
-// Dependencies: [1956, 1371, 4465, 4189, 4712, 9565, 1369, 12, 2]
+// Dependencies: [1956, 1371, 4479, 4202, 4726, 9592, 1369, 12, 2]
 // Exports: activityInstanceConnectedParticipants
 
-// Module 14467 (activityInstanceConnectedParticipants)
-import closure_3 from "participantFromServer" /* 1956 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4465 */;
+// Module 14492 (activityInstanceConnectedParticipants)
+import transformUserDefault from "transformUser" /* 9592 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-let obj = { [RPC_SCOPE_CONFIG.RPC_SCOPE_CONFIG.ANY]: items };
-items = [RPC_SCOPE_CONFIG.RPC_AUTHENTICATED_SCOPE];
-obj = {
-  scope: obj,
-  handler() {
-    return (arg0) => {
-      let callback;
-      let callback2;
-      ({ prevState, dispatch } = arg0);
-      currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
-      if (null == currentEmbeddedActivity) {
-        let obj = { participants: null };
-        obj[0] = [];
-      } else {
-        callback = callback(4189).getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
-        const obj4 = callback(4189);
-        callback2 = callback(4189).getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
-        obj = { participants: null };
-        const _Array = Array;
-        const obj5 = callback(4189);
-        obj[0] = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
-          const user = closure_1_4.getUser(arg0);
-          if (null != user) {
-            let obj = callback(closure_1_2[4]);
-            const nickname = obj.getNickname(callback, callback2, user);
-            obj = {};
-            const merged = Object.assign(callback2(closure_1_2[5])(user));
-            obj.nickname = nickname;
-            return obj;
-          }
-        }).filter(callback(1369).isNotNullish);
-        const arr = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
-          const user = closure_1_4.getUser(arg0);
-          if (null != user) {
-            let obj = callback(closure_1_2[4]);
-            const nickname = obj.getNickname(callback, callback2, user);
-            obj = {};
-            const merged = Object.assign(callback2(closure_1_2[5])(user));
-            obj.nickname = nickname;
-            return obj;
-          }
-        });
-      }
-      if (!obj3.isEqual(obj, prevState)) {
-        dispatch(obj);
-      }
-      return obj;
-    };
-  }
-};
-const result = require("set").fileFinishedImporting("modules/rpc/helpers/activityInstanceConnectedParticipants.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const Constants = fn(4479);
+let obj = { [Constants.RPC_SCOPE_CONFIG.ANY]: items };
+items = [Constants.RPC_AUTHENTICATED_SCOPE];
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rpc/helpers/activityInstanceConnectedParticipants.tsx");
 
 export const activityInstanceConnectedParticipants = function activityInstanceConnectedParticipants() {
-  currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
+  const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
   if (null == currentEmbeddedActivity) {
-    let obj = { participants: null };
-    obj[0] = [];
+    const obj = { participants: [] };
     return obj;
   } else {
-    _require = _require(4189).getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
-    const obj2 = _require(4189);
-    const embeddedActivityLocationChannelId = _require(4189).getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
-    obj = { participants: null };
+    _require = require("embeddedActivityLocationUtils").getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
+    const obj2 = require("embeddedActivityLocationUtils");
+    const embeddedActivityLocationChannelId = require("embeddedActivityLocationUtils").getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
+    const obj4 = { participants: null };
     const _Array = Array;
-    const obj3 = _require(4189);
-    obj[0] = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
-      const user = closure_1_4.getUser(arg0);
+    const obj3 = require("embeddedActivityLocationUtils");
+    obj4.participants = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
+      user = user.getUser(arg0);
       if (null != user) {
-        let obj = callback(closure_1_2[4]);
-        const nickname = obj.getNickname(callback, callback2, user);
-        obj = {};
-        const merged = Object.assign(callback2(closure_1_2[5])(user));
-        obj.nickname = nickname;
-        return obj;
+        const nickname = require("NicknameUtils").getNickname(closure_0, closure_1, user);
+        const obj2 = {};
+        const merged = Object.assign(transformUserDefault(user));
+        obj2.nickname = nickname;
+        return obj2;
       }
-    }).filter(_require(1369).isNotNullish);
-    return obj;
+    }).filter(require("GlobalUtils").isNotNullish);
+    return obj4;
   }
 };
 export const activityInstanceConnectedParticipantsScope = obj;
-export const activityInstanceConnectedParticipantsUpdateEvent = obj;
+export const activityInstanceConnectedParticipantsUpdateEvent = {
+  scope: obj,
+  handler() {
+    return (arg0) => {
+      let embeddedActivityLocationGuildId;
+      let embeddedActivityLocationChannelId;
+      ({ prevState, dispatch } = arg0);
+      currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
+      if (null == currentEmbeddedActivity) {
+        const obj = { participants: [] };
+        let obj2 = obj;
+      } else {
+        embeddedActivityLocationGuildId = embeddedActivityLocationGuildId(4202).getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
+        const obj4 = embeddedActivityLocationGuildId(4202);
+        embeddedActivityLocationChannelId = embeddedActivityLocationGuildId(4202).getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
+        obj2 = { participants: null };
+        const _Array = Array;
+        const obj5 = embeddedActivityLocationGuildId(4202);
+        obj2.participants = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
+          user = user.getUser(arg0);
+          if (null != user) {
+            const nickname = require("NicknameUtils").getNickname(closure_0, closure_1, user);
+            const obj2 = {};
+            const merged = Object.assign(transformUserDefault(user));
+            obj2.nickname = nickname;
+            return obj2;
+          }
+        }).filter(embeddedActivityLocationGuildId(1369).isNotNullish);
+        const arr = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
+          user = user.getUser(arg0);
+          if (null != user) {
+            const nickname = require("NicknameUtils").getNickname(closure_0, closure_1, user);
+            const obj2 = {};
+            const merged = Object.assign(transformUserDefault(user));
+            obj2.nickname = nickname;
+            return obj2;
+          }
+        });
+      }
+      if (!obj3.isEqual(obj2, prevState)) {
+        dispatch(obj2);
+      }
+      return obj2;
+    };
+  }
+};

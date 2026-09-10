@@ -1,100 +1,100 @@
-// Module ID: 14930
-// Function ID: 14931
-// Name: FamilyCenterModalCancelScreen
-// Dependencies: [19, 17, 21, 4560, 576, 8651, 4763, 4258, 1114, 11921, 38, 8421, 8422, 14925, 6992, 4556, 2396, 14895, 11931, 5433, 4975, 5624, 11933, 2]
+// Module ID: 14956
+// Function ID: 14957
+// Name: FamilyCenterModalCancel
+// Dependencies: [19, 17, 21, 4574, 576, 8679, 4777, 4271, 1114, 11947, 38, 8449, 8450, 14951, 7006, 4570, 2396, 14921, 11957, 5447, 4989, 5638, 11959, 2]
 // Exports: default
 
-// Module 14930 (FamilyCenterModalCancelScreen)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14956 (FamilyCenterModalCancel)
+import nativeDefault from "native" /* 576 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import NavigatorHeader from "NavigatorHeader" /* 5638 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = fn;
 function FamilyCenterModalCancelScreen(otherUser) {
   otherUser = otherUser.otherUser;
   let cancelLinkRequest;
-  const tmp = callback3();
-  const callback = React.useCallback(() => {
-    let arr = cancelLinkRequest(4763);
-    arr = arr.pop();
+  const tmp = closure_7();
+  const callback = noop.useCallback(() => {
+    cancelLinkRequest(4777).pop();
   }, []);
-  const callback1 = React.useCallback(() => {
+  const callback1 = noop.useCallback(() => {
     const intl = otherUser(1114).intl;
-    otherUser(4258).presentFailedToast(intl.string(otherUser(1114).t.R0RpRX));
+    otherUser(4271).presentFailedToast(intl.string(otherUser(1114).t.R0RpRX));
   }, []);
-  let obj = otherUser(11921);
-  const familyCenterActions = obj.useFamilyCenterActions({ onSuccess: callback, onError: callback1 });
+  const tmp2 = cancelLinkRequest(8679)();
+  const familyCenterActions = otherUser(11947).useFamilyCenterActions({ onSuccess: callback, onError: callback1 });
   cancelLinkRequest = familyCenterActions.cancelLinkRequest;
   const isCancelLoading = familyCenterActions.isCancelLoading;
   const items = [cancelLinkRequest, otherUser.id];
-  const callback2 = React.useCallback(() => {
+  const callback2 = noop.useCallback(() => {
     cancelLinkRequest(otherUser.id);
   }, items);
-  cancelLinkRequest(38)(cancelLinkRequest(8651)(), "FamilyCenterCancelModal should only be rendered for parents.");
-  obj = { children: null };
-  obj = { children: null };
-  obj1 = { style: tmp.header, children: null };
-  const obj2 = { otherUser, iconSrc: null };
-  const tmp2 = cancelLinkRequest(8651)();
-  obj2[1] = cancelLinkRequest(6992);
-  const items1 = [callback(cancelLinkRequest(14925), obj2), , ];
-  const obj3 = { style: tmp.headerText, variant: "text-lg/bold", children: null };
+  cancelLinkRequest(38)(tmp2, "FamilyCenterCancelModal should only be rendered for parents.");
+  const obj2 = { children: null };
+  const obj3 = { children: null };
+  const obj4 = { style: tmp.header, children: null };
+  const obj5 = { otherUser, iconSrc: null };
+  const obj = otherUser(11947);
+  obj5.iconSrc = cancelLinkRequest(7006);
+  const items1 = [closure_5(cancelLinkRequest(14951), obj5), , ];
+  const obj6 = { style: tmp.headerText, variant: "text-lg/bold", children: null };
   let intl = otherUser(1114).intl;
-  obj3[2] = intl.string(cancelLinkRequest(2396).HynllX);
-  items1[1] = callback(otherUser(4556).Text, obj3);
-  items1[2] = callback(cancelLinkRequest(14895), { user: otherUser });
-  obj1[1] = items1;
-  obj[0] = callback2(View, obj1);
-  const items2 = [callback(otherUser(8422).ModalContent, obj), ];
-  const obj4 = { children: null };
-  const obj5 = { children: null };
-  const obj6 = { variant: "destructive", disabled: isCancelLoading, loading: isCancelLoading, text: null, onPress: null };
+  obj6.children = intl.string(cancelLinkRequest(2396).HynllX);
+  items1[1] = closure_5(otherUser(4570).Text, obj6);
+  items1[2] = closure_5(cancelLinkRequest(14921), { user: otherUser });
+  obj4.children = items1;
+  obj3.children = closure_6(View, obj4);
+  const items2 = [closure_5(otherUser(8450).ModalContent, obj3), ];
+  const obj7 = { children: null };
+  const obj8 = { children: null };
+  const obj9 = { variant: "destructive", disabled: isCancelLoading, loading: isCancelLoading, text: null, onPress: null };
   const intl2 = otherUser(1114).intl;
-  obj6[3] = intl2.string(cancelLinkRequest(2396).mK40bk);
-  obj6[4] = callback2;
-  const items3 = [callback(otherUser(4975).Button, obj6), ];
-  const obj7 = { variant: "tertiary", text: null, onPress: null };
+  obj9.text = intl2.string(cancelLinkRequest(2396).mK40bk);
+  obj9.onPress = callback2;
+  const items3 = [closure_5(otherUser(4989).Button, obj9), ];
+  const obj10 = { variant: "tertiary", text: null, onPress: null };
   const intl3 = otherUser(1114).intl;
-  obj7[1] = intl3.string(cancelLinkRequest(2396).czincX);
-  obj7[2] = cancelLinkRequest(4763).pop;
-  items3[1] = callback(otherUser(4975).Button, obj7);
-  obj5[0] = items3;
-  obj4[0] = callback2(otherUser(5433).ButtonGroup, obj5);
-  items2[1] = callback(otherUser(11931).ModalFooter, obj4);
-  obj[0] = items2;
-  return callback2(otherUser(8421).ModalScreen, obj);
+  obj10.text = intl3.string(cancelLinkRequest(2396).czincX);
+  obj10.onPress = cancelLinkRequest(4777).pop;
+  items3[1] = closure_5(otherUser(4989).Button, obj10);
+  obj8.children = items3;
+  obj7.children = closure_6(otherUser(5447).ButtonGroup, obj8);
+  items2[1] = closure_5(otherUser(11957).ModalFooter, obj7);
+  obj2.children = items2;
+  return closure_6(otherUser(8449).ModalScreen, obj2);
 }
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { header: null, headerText: null };
-createCacheKey = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterModalCancel.tsx");
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { header: { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: nativeDefault.space.PX_16 }, headerText: null };
+let obj3 = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: nativeDefault.space.PX_16 };
+obj2.headerText = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_4 };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterModalCancel.tsx");
 
 export default function FamilyCenterModalCancel(otherUser) {
   otherUser = otherUser.otherUser;
   const items = [otherUser];
-  const memo = React.useMemo(() => {
-    let obj = { CANCEL: null };
-    obj = {
+  const memo = noop.useMemo(() => {
+    const obj = { CANCEL: null };
+    const obj2 = {
       headerShown: true,
-      headerLeft: otherUser(closure_1_2[21]).getHeaderCloseButton(closure_1_1(closure_1_2[6]).pop),
+      headerLeft: NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop),
       headerTitle() {
         return null;
       },
       render() {
-        return closure_1_5(closure_1_8, { otherUser: closure_0 });
+        return closure_2_5(FamilyCenterModalCancelScreen, { otherUser });
       }
     };
-    obj[0] = obj;
+    obj.CANCEL = obj2;
     return obj;
   }, items);
   let obj = { initialRouteName: "CANCEL", screens: memo, headerBackTitle: null };
   const intl = otherUser(1114).intl;
-  obj[2] = intl.string(otherUser(1114).t["13/7kX"]);
-  return callback(otherUser(11933).Modal, obj);
+  obj.headerBackTitle = intl.string(otherUser(1114).t["13/7kX"]);
+  return closure_5(otherUser(11959).Modal, obj);
 };

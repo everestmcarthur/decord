@@ -1,33 +1,27 @@
-// Module ID: 14127
-// Function ID: 14128
-// Name: generateBoxShadowStyle
+// Module ID: 14150
+// Function ID: 14151
+// Name: Shadows
 // Dependencies: [1115, 2]
 // Exports: generateBoxShadowStyle
 
-// Module 14127 (generateBoxShadowStyle)
-import set from "set" /* 2 */;
-import set2 from "set" /* 1115 */;
+// Module 14150 (Shadows)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("design/void/Shadows/native/Shadows.tsx");
+const result = size.fileFinishedImporting("design/void/Shadows/native/Shadows.tsx");
 
 export const generateBoxShadowStyle = (arg0) => {
   ({ xOffset, yOffset, shadowColorIos, shadowOpacity, shadowRadius, elevation, shadowColorAndroid } = arg0);
-  let obj = set2;
   if (obj.isAndroid()) {
-    obj = { elevation: null, shadowColor: null };
-    obj[0] = elevation;
-    obj[1] = shadowColorAndroid;
+    const obj2 = { elevation, shadowColor: shadowColorAndroid };
+    let obj3 = obj2;
   } else {
-    obj = { shadowColor: null, shadowOffset: null, shadowOpacity: null, shadowRadius: null };
-    obj[0] = shadowColorIos;
-    obj1 = { width: null, height: null };
-    obj1[0] = xOffset;
-    obj1[1] = yOffset;
-    obj[1] = obj1;
-    obj[2] = shadowOpacity;
-    obj[3] = shadowRadius;
+    obj3 = { shadowColor: shadowColorIos, shadowOffset: null, shadowOpacity: null, shadowRadius: null };
+    const size = { width: xOffset, height: yOffset };
+    obj3.shadowOffset = size;
+    obj3.shadowOpacity = shadowOpacity;
+    obj3.shadowRadius = shadowRadius;
   }
-  return obj;
+  return obj3;
 };
 export const EIGHT_DP_ELEVATION_SHADOW_PARAMS = { xOffset: 0, yOffset: 4, shadowColorIos: "#000000", shadowOpacity: 0.3, shadowRadius: 4.65, elevation: 8, shadowColorAndroid: "#000000" };
 export const FOUR_DP_ELEVATION_SHADOW_PARAMS = { xOffset: 0, yOffset: 2, shadowColorIos: "#000000", shadowOpacity: 0.23, shadowRadius: 2.62, elevation: 4, shadowColorAndroid: "#000000" };

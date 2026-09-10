@@ -1,141 +1,132 @@
-// Module ID: 17548
-// Function ID: 17549
+// Module ID: 17579
+// Function ID: 17580
 // Name: GuildSettingsModalAuditLogFilter
-// Dependencies: [32, 19, 17, 1371, 17539, 1074, 21, 4560, 576, 1114, 4404, 17541, 1611, 1483, 5517, 17549, 10947, 5689, 5605, 1178, 10034, 17550, 7050, 8232, 8879, 7040, 2]
+// Dependencies: [32, 19, 17, 1371, 17570, 1074, 21, 4574, 576, 1114, 4418, 17572, 1611, 1483, 5531, 17580, 10974, 5703, 5619, 1178, 10061, 17581, 7064, 8258, 8906, 7054, 2]
 // Exports: createAuditLogFilterActionData, createAuditLogFilterUserData, default
 
-// Module 17548 (GuildSettingsModalAuditLogFilter)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "mergeGuildAvatar" /* 1371 */;
-import closure_7 from "AuditLogActions" /* 17539 */;
-import { AuditLogFilterTypes } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17579 (GuildSettingsModalAuditLogFilter)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import UserUtilsDefault from "UserUtils" /* 4418 */;
+import AuditLogUtils from "AuditLogUtils" /* 17572 */;
+import AuditLogActionCreators from "AuditLogActionCreators" /* 17580 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 17570 */;
 
-const require = arg1;
-({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { searchBar: null, allUsersIconContainer: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { height: 30, width: 30, alignItems: "center" };
-let closure_12 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_settings/audit_log/native/GuildSettingsModalAuditLogFilter.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const View = fn(17).View;
+const AuditLogFilterTypes = fn(1074).AuditLogFilterTypes;
+const jsxProd = fn(21);
+({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { searchBar: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_16 }, allUsersIconContainer: { height: 30, width: 30, alignItems: "center" } };
+let closure_12 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/audit_log/native/GuildSettingsModalAuditLogFilter.tsx");
 
 export default function GuildSettingsModalAuditLogFilter(data) {
   data = data.data;
   const filterType = data.filterType;
   const guildId = data.guildId;
-  let callback;
-  let navigation;
-  let first;
-  data = undefined;
-  callback = undefined;
-  let tmp = callback2();
-  callback = tmp;
-  let obj = data(guildId[13]);
-  navigation = obj.useNavigation();
-  const tmp6 = callback(navigation.useState(""), 2);
-  first = tmp6[0];
+  let tmp = closure_12();
+  _slicedToArray = tmp;
+  const navigation = data(guildId[13]).useNavigation();
+  const tmp6 = _slicedToArray(navigation.useState(""), 2);
+  const first = tmp6[0];
   const items = [first, data];
   const memo = navigation.useMemo(() => ({
     data: data.filter((label) => {
-      const formatted = closure_5.toLowerCase();
-      return closure_1_1(closure_1_2[14])(formatted, label.label.toLowerCase());
+      const formatted = first.toLowerCase();
+      return filterType(guildId[14])(formatted, label.label.toLowerCase());
     }),
     keyExtractor(value) {
       if (null != value.value) {
-        let str = value.value.toString();
-        const str2 = value.value;
+        let str1 = value.value.toString();
       } else {
-        str = value.index;
-        str = str.toString();
+        str1 = value.index.toString();
       }
-      return str;
+      return str1;
     }
   }), items);
-  data = memo.data;
+  const data1 = memo.data;
   const items1 = [filterType, navigation];
   const effect = navigation.useEffect(() => {
-    if (closure_1_8.USER === filterType) {
-      const intl3 = data(guildId[9]).intl;
-      let stringResult = intl3.string(data(guildId[9]).t["hxnY/q"]);
+    if (AuditLogFilterTypes.USER === filterType) {
+      const intl3 = util.intl;
+      let stringResult = intl3.string(util.t["hxnY/q"]);
     } else if (tmp3.ACTION === tmp2) {
-      const intl2 = data(guildId[9]).intl;
-      stringResult = intl2.string(data(guildId[9]).t.rautds);
+      const intl2 = util.intl;
+      stringResult = intl2.string(util.t.rautds);
     } else {
-      const intl = data(guildId[9]).intl;
-      stringResult = intl.string(data(guildId[9]).t.pEasFX);
+      const intl = util.intl;
+      stringResult = intl.string(util.t.pEasFX);
     }
     navigation.setOptions({ headerTitle: stringResult });
   }, items1);
   const items2 = [filterType, guildId, navigation];
-  callback = navigation.useCallback((arg0, arg1) => {
+  const callback = navigation.useCallback((arg0, navigation) => {
     if (arg0) {
-      let tmp = arg1;
-      if (filterType === closure_1_8.USER) {
+      let tmp = navigation;
+      if (filterType === AuditLogFilterTypes.USER) {
         let id = null;
         if (null != tmp) {
           id = tmp.id;
         }
-        data(guildId[15]).filterByUserId(id, guildId);
-        const obj2 = data(guildId[15]);
+        AuditLogActionCreators.filterByUserId(id, guildId);
       } else if (tmp2 === tmp3.ACTION) {
-        data(guildId[15]).filterByAction(tmp, guildId);
-        const obj = data(guildId[15]);
+        AuditLogActionCreators.filterByAction(tmp, guildId);
       }
       tmp = navigation;
       navigation.pop();
     }
   }, items2);
-  const items3 = [filterType, guildId, callback, data.length, tmp.allUsersIconContainer];
-  obj = { style: tmp.searchBar, children: null };
+  const items3 = [filterType, guildId, callback, data1.length, tmp.allUsersIconContainer];
+  let obj2 = { style: tmp.searchBar, children: null };
   const callback1 = navigation.useCallback((item) => {
-    const value = iter.value;
+    value = iter.value;
     data = value;
     const selected = iter.selected;
     const index = item.index;
-    if (selected === closure_1_8.USER) {
+    if (selected === constants.USER) {
       if (null !== value) {
-        let obj = { start: null, end: null, userId: null, guildId: null, onPress: null, trailing: null };
-        obj[0] = 0 === index;
-        obj[1] = index === data.length - 1;
-        obj[2] = value.id;
-        obj[3] = guildId;
-        obj[4] = function onPress() {
-          return closure_1_7(!selected, closure_0);
+        const obj2 = {
+          start: 0 === index,
+          end: index === data1.length - 1,
+          userId: value.id,
+          guildId,
+          onPress() {
+                return callback(!selected, value);
+              },
+          trailing: null
         };
-        obj = { selected: null };
-        obj[0] = selected;
-        obj[5] = closure_1_9(data(guildId[17]).FormRadio, obj);
-        let tmp4Result = closure_1_9(filterType(guildId[16]), obj);
+        const obj3 = { selected };
+        obj2.trailing = closure_1_9(data(guildId[17]).FormRadio, obj3);
+        let tmp4Result2 = closure_1_9(filterType(guildId[16]), obj2);
         const tmp16 = filterType(guildId[16]);
       }
-      return tmp4Result;
+      return tmp4Result2;
     }
-    obj = { start: 0 === index, end: index === data.length - 1, icon: null, label: null, onPress: null, trailing: null };
-    if (selected === closure_1_8.USER) {
-      obj1 = { style: null, children: null };
-      obj1[0] = obj.allUsersIconContainer;
-      const obj2 = { size: null, source: null };
-      obj2[0] = tmp5(tmp6[19]).Icon.Sizes.MEDIUM;
-      obj2[1] = filterType(tmp6[20]);
-      obj1[1] = tmp4(tmp5(tmp6[19]).Icon, obj2);
-      tmp4Result = tmp4(first, obj1);
+    const obj = { start: 0 === index, end: index === data1.length - 1, icon: null, label: null, onPress: null, trailing: null };
+    if (selected === constants.USER) {
+      const obj4 = { style: closure_3.allUsersIconContainer, children: null };
+      const obj5 = { size: tmp5(tmp6[19]).Icon.Sizes.MEDIUM, source: filterType(tmp6[20]) };
+      obj4.children = tmp4(tmp5(tmp6[19]).Icon, obj5);
+      let tmp4Result = tmp4(first, obj4);
     } else {
-      const obj3 = { action: null };
-      obj3[0] = value;
-      tmp4Result = tmp4(filterType(tmp6[21]), obj3);
+      const obj6 = { action: value };
+      tmp4Result = tmp4(filterType(tmp6[21]), obj6);
     }
-    obj[2] = tmp4Result;
-    obj[3] = item.item.label;
-    obj[4] = function onPress() {
-      return closure_1_7(!selected, closure_0);
+    obj.icon = tmp4Result;
+    obj.label = item.item.label;
+    obj.onPress = function onPress() {
+      return callback(!selected, value);
     };
-    obj[5] = closure_1_9(data(guildId[17]).FormRadio, { selected });
-    tmp4Result = tmp4(data(guildId[18]).TableRow, obj);
+    obj.trailing = closure_1_9(data(guildId[17]).FormRadio, { selected });
+    tmp4Result2 = tmp4(data(guildId[18]).TableRow, obj);
   }, items3);
   if (filterType === AuditLogFilterTypes.USER) {
     let intl3 = tmp4(tmp3[9]).intl;
@@ -147,77 +138,62 @@ export default function GuildSettingsModalAuditLogFilter(data) {
     let intl = tmp4(tmp3[9]).intl;
     stringResult = intl.string(tmp4(tmp3[9]).t["5h0QOP"]);
   }
-  obj[1] = closure_9(data(guildId[22]).SearchField, { size: "md", placeholder: stringResult, onChange: tmp6[1] });
-  const items4 = [closure_9(first, obj), , ];
-  if (0 === data.length) {
-    obj = { body: null, title: null, Illustration: null };
+  obj2.children = closure_9(data(guildId[22]).SearchField, { size: "md", placeholder: stringResult, onChange: tmp6[1] });
+  const items4 = [closure_9(first, obj2), , ];
+  if (0 === data1.length) {
+    let obj3 = { body: null, title: null, Illustration: null };
     const intl4 = tmp4(tmp3[9]).intl;
-    obj[0] = intl4.string(tmp4(tmp3[9]).t.V6nAfF);
+    obj3.body = intl4.string(tmp4(tmp3[9]).t.V6nAfF);
     const intl5 = tmp4(tmp3[9]).intl;
-    obj[1] = intl5.formatToPlainString(tmp4(tmp3[9]).t.ZGVL3g, { count: 0 });
-    obj[2] = tmp4(tmp3[23]).NoResults;
-    let tmp14Result = tmp14(tmp4(tmp3[19]).EmptyState, obj);
+    obj3.title = intl5.formatToPlainString(tmp4(tmp3[9]).t.ZGVL3g, { count: 0 });
+    obj3.Illustration = tmp4(tmp3[23]).NoResults;
+    let tmp14Result = tmp14(tmp4(tmp3[19]).EmptyState, obj3);
   } else {
-    obj1 = { keyExtractor: null, renderItem: null, data: null, contentContainerStyle: null };
-    obj1[0] = memo.keyExtractor;
-    obj1[1] = callback1;
-    obj1[2] = data;
-    let obj2 = { paddingHorizontal: null, paddingBottom: null };
-    obj2[0] = filterType(tmp3[8]).space.PX_12;
-    obj2[1] = filterType(guildId[12])().bottom;
-    obj1[3] = obj2;
-    tmp14Result = tmp14(tmp4(tmp3[24]).FlashList, obj1);
+    let obj4 = { keyExtractor: memo.keyExtractor, renderItem: callback1, data: data1, contentContainerStyle: null };
+    let obj5 = { paddingHorizontal: filterType(tmp3[8]).space.PX_12, paddingBottom: filterType(guildId[12])().bottom };
+    obj4.contentContainerStyle = obj5;
+    tmp14Result = tmp14(tmp4(tmp3[24]).FlashList, obj4);
   }
-  let obj3 = { children: null };
+  let obj6 = { children: null };
   items4[1] = tmp14Result;
   items4[2] = closure_9(data(guildId[25]).NavScrim, {});
-  obj3[0] = items4;
-  return closure_11(closure_10, obj3);
+  obj6.children = items4;
+  return closure_11(closure_10, obj6);
 };
 export const createAuditLogFilterUserData = function createAuditLogFilterUserData(arg0) {
-  const _require = arg0;
+  _require = arg0;
   const items = [];
   let obj = { label: null, value: null, selected: null, index: 0 };
-  const intl = _require(set[9]).intl;
-  obj[0] = intl.string(_require(set[9]).t.ZRFdsL);
-  obj[2] = null == arg0;
+  const intl = require("util").intl;
+  obj.label = intl.string(require("util").t.ZRFdsL);
+  obj.selected = null == arg0;
   items.push(obj);
   set = new Set();
-  const logs = closure_7.logs;
+  const logs = GuildSettingsAuditLogStore.logs;
   const item = logs.forEach((userId) => {
     userId = userId.userId;
     if (null != userId) {
-      const user = closure_1_6.getUser(userId);
+      const user = UserStore.getUser(userId);
       if (!tmp) {
         obj3.add(userId);
-        const obj = { label: null, value: null, selected: null, index: null };
-        obj[0] = items(set[10]).getUserTag(user);
-        obj[1] = user;
-        obj[2] = user.id === closure_0;
-        obj[3] = items.length;
+        const obj = { label: UserUtilsDefault.getUserTag(user), value: user, selected: user.id === closure_0, index: items.length };
         items.push(obj);
-        const obj2 = items(set[10]);
       }
       obj3 = set;
       tmp = set.has(userId) || null == user;
     }
   });
-  const userIds = closure_7.userIds;
-  const item1 = userIds.forEach((arg0) => {
-    if (null != arg0) {
-      const user = closure_1_6.getUser(arg0);
+  const userIds = GuildSettingsAuditLogStore.userIds;
+  const item1 = userIds.forEach((item) => {
+    if (null != item) {
+      const user = UserStore.getUser(item);
       if (!tmp) {
-        obj3.add(arg0);
-        const obj = { label: null, value: null, selected: null, index: null };
-        obj[0] = items(set[10]).getUserTag(user);
-        obj[1] = user;
-        obj[2] = user.id === closure_0;
-        obj[3] = items.length;
+        obj3.add(item);
+        const obj = { label: UserUtilsDefault.getUserTag(user), value: user, selected: user.id === closure_0, index: items.length };
         items.push(obj);
-        const obj2 = items(set[10]);
       }
       obj3 = set;
-      tmp = set.has(arg0) || null == user;
+      tmp = set.has(item) || null == user;
     }
   });
   const sorted = items.sort((selected, selected2) => {
@@ -233,10 +209,9 @@ export const createAuditLogFilterUserData = function createAuditLogFilterUserDat
   });
   return items;
 };
-export const createAuditLogFilterActionData = function createAuditLogFilterActionData(closure_4) {
-  const _require = closure_4;
-  const obj = _require(17541);
-  const mapped = _require(17541).ACTION_FILTER_ITEMS().map((label, index) => ({ label: label.label, value: label.value, selected: closure_0 === label.value, index }));
+export const createAuditLogFilterActionData = function createAuditLogFilterActionData(arg0) {
+  closure_0 = arg0;
+  const mapped = AuditLogUtils.ACTION_FILTER_ITEMS().map((label, index) => ({ label: label.label, value: label.value, selected: closure_0 === label.value, index }));
   return mapped.sort((selected, selected2) => {
     let num = -1;
     if (!selected.selected) {

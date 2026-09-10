@@ -1,46 +1,45 @@
-// Module ID: 15231
-// Function ID: 15232
-// Name: AllChannelAccessOptions
+// Module ID: 15260
+// Function ID: 15261
+// Name: GuildRoleSubscriptionEditStore
 // Dependencies: [560, 1249, 2]
 
-// Module 15231 (AllChannelAccessOptions)
-import set from "set" /* 2 */;
-import keys from "keys" /* 560 */;
+// Module 15260 (GuildRoleSubscriptionEditStore)
+import module_560 from "module_560" /* 560 */;
+import size from "module_2" /* 2 */;
 
-let obj = keys.create((arg0) => {
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/edit_state/GuildRoleSubscriptionEditStore.tsx");
+
+export const AllChannelAccessOptions = { ALL_CHANNELS_ACCESS: 0, [0]: "ALL_CHANNELS_ACCESS", SOME_CHANNELS_ACCESS: 1, [1]: "SOME_CHANNELS_ACCESS" };
+export const useEditStateStore = module_560.create((arg0) => {
   closure_0 = arg0;
   return {
     listings: {},
     setListing(arg0, arg1) {
-      const callback = arg0;
+      closure_0 = arg0;
       closure_1 = arg1;
-      return callback(closure_1_1[1]).batchUpdates(() => callback((listings) => {
-        let obj = { listings: null };
-        obj = {};
+      return closure_0(1249).batchUpdates(() => closure_0((listings) => {
+        const obj = { listings: null };
+        const obj2 = {};
         const merged = Object.assign(listings.listings);
-        obj[closure_0] = callback(listings.listings[closure_0]);
-        obj[0] = obj;
+        obj2[closure_1_0] = closure_1_1(listings.listings[closure_1_0]);
+        obj.listings = obj2;
         return obj;
       }));
     },
     editStateIdsForGroup: {},
     setEditStateIdsForGroup(arg0, arg1) {
-      const callback = arg0;
+      closure_0 = arg0;
       closure_1 = arg1;
-      return callback(closure_1_1[1]).batchUpdates(() => {
-        callback((editStateIdsForGroup) => {
-          let obj = { editStateIdsForGroup: null };
-          obj = {};
+      return closure_0(1249).batchUpdates(() => {
+        closure_0((editStateIdsForGroup) => {
+          const obj = { editStateIdsForGroup: null };
+          const obj2 = {};
           const merged = Object.assign(editStateIdsForGroup.editStateIdsForGroup);
-          obj[closure_0] = callback(editStateIdsForGroup.editStateIdsForGroup[closure_0]);
-          obj[0] = obj;
+          obj2[closure_1_0] = closure_1_1(editStateIdsForGroup.editStateIdsForGroup[closure_1_0]);
+          obj.editStateIdsForGroup = obj2;
           return obj;
         });
       });
     }
   };
 });
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/edit_state/GuildRoleSubscriptionEditStore.tsx");
-
-export const AllChannelAccessOptions = { ALL_CHANNELS_ACCESS: 0, [0]: "ALL_CHANNELS_ACCESS", SOME_CHANNELS_ACCESS: 1, [1]: "SOME_CHANNELS_ACCESS" };
-export const useEditStateStore = obj;

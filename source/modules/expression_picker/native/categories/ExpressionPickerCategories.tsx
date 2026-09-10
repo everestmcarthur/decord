@@ -1,32 +1,33 @@
-// Module ID: 10364
-// Function ID: 10365
+// Module ID: 10391
+// Function ID: 10392
 // Name: ExpressionPickerCategories
-// Dependencies: [19, 17, 21, 4560, 576, 4432, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 4446, 2]
 // Exports: default
 
-// Module 10364 (ExpressionPickerCategories)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Portal from "Portal" /* 4432 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10391 (ExpressionPickerCategories)
+import nativeDefault from "native" /* 576 */;
+import Portal from "Portal" /* 4446 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { container: null, containerRefresh: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, paddingHorizontal: ThemesDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
-const result = require("set").fileFinishedImporting("modules/expression_picker/native/categories/ExpressionPickerCategories.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingHorizontal: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" }, containerRefresh: null };
+const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingHorizontal: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
+obj2.containerRefresh = { borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
+let closure_4 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/expression_picker/native/categories/ExpressionPickerCategories.tsx");
 
 export default function ExpressionPickerCategories(arg0) {
   ({ children, portalHostName, style } = arg0);
-  const tmp = callback();
+  const obj = { hostName: portalHostName, children: null };
+  const obj2 = { style: null, children };
   const items = [, , ];
-  ({ container: arr[0], containerRefresh: arr[1] } = tmp);
+  ({ container: arr[0], containerRefresh: arr[1] } = closure_4());
   items[2] = style;
-  return jsx(Portal.Portal, { hostName: portalHostName, children: <View style={items}>{children}</View> });
+  obj2.style = items;
+  obj.children = <View style={null}>{children}</View>;
+  return jsx(Portal.Portal, { hostName: portalHostName, children: null });
 };

@@ -1,15 +1,15 @@
-// Module ID: 12933
-// Function ID: 12934
-// Name: openStageChannelAudienceNoticeModal
-// Dependencies: [8394, 2]
+// Module ID: 12959
+// Function ID: 12960
+// Name: StageChannelAlertActionCreators
+// Dependencies: [8422, 2]
 // Exports: openStageChannelAudienceNoticeModal
 
-// Module 12933 (openStageChannelAudienceNoticeModal)
-import set from "set" /* 2 */;
-import openStageChannelSettingsAll from "openStageChannelSettings" /* 8394 */;
+// Module 12959 (StageChannelAlertActionCreators)
+import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras" /* 8422 */;
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("modules/stage_channels/StageChannelAlertActionCreators.tsx");
+let result = size.fileFinishedImporting("modules/stage_channels/StageChannelAlertActionCreators.tsx");
 
 export const openStageChannelAudienceNoticeModal = function openStageChannelAudienceNoticeModal(arg0) {
-  const result = openStageChannelSettingsAll.openStageChannelAudienceNoticeModal(arg0);
+  const result = StageChannelActionCreatorExtrasAll.openStageChannelAudienceNoticeModal(arg0);
 };

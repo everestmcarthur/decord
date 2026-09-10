@@ -1,12 +1,12 @@
-// Module ID: 7758
-// Function ID: 7759
-// Name: ServiceNotificationPriority
+// Module ID: 7772
+// Function ID: 7773
+// Name: ForegroundServiceManagerTypes
 // Dependencies: [2]
 
-// Module 7758 (ServiceNotificationPriority)
-import set from "set" /* 2 */;
+// Module 7772 (ForegroundServiceManagerTypes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/foreground_service/mobile/ForegroundServiceManagerTypes.tsx");
+const result = size.fileFinishedImporting("modules/foreground_service/mobile/ForegroundServiceManagerTypes.tsx");
 
 export const ServiceNotificationPriority = { HIGH: 0, [0]: "HIGH", MEDIUM: 1, [1]: "MEDIUM", LOW: 2, [2]: "LOW" };
 export const ServiceNotificationType = { FILE_UPLOAD: 0, [0]: "FILE_UPLOAD", VOICE_CALL: 1, [1]: "VOICE_CALL", SCREEN_SHARE: 2, [2]: "SCREEN_SHARE" };

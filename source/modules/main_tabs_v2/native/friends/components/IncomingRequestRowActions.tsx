@@ -1,24 +1,28 @@
-// Module ID: 16773
-// Function ID: 16774
+// Module ID: 16810
+// Function ID: 16811
 // Name: IncomingRequestRowActions
-// Dependencies: [19, 17, 21, 4560, 4296, 4561, 16047, 4973, 8097, 14926, 9571, 4975, 1114, 4556, 2]
+// Dependencies: [19, 17, 21, 4574, 4310, 4575, 16077, 4987, 8113, 14952, 9598, 4989, 1114, 4570, 2]
 // Exports: IncomingRequestRowActions
 
-// Module 16773 (IncomingRequestRowActions)
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16810 (IncomingRequestRowActions)
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import timing from "timing" /* 4575 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16077 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ container: { flexDirection: "row" } });
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let closure_7 = createStyles.createStyles({ container: { flexDirection: "row" } });
 let closure_8 = { code: "function IncomingRequestRowActionsTsx1(){const{animate,pressed,withTiming}=this.__closure;return{position:'absolute',right:0,flexDirection:'row',opacity:!animate?!pressed.get()?1:0:withTiming(!pressed.get()?1:0,{duration:150}),pointerEvents:!pressed.get()?'auto':'none'};}" };
 let closure_9 = { code: "function IncomingRequestRowActionsTsx2(){const{buttonWidth,buttonOffsetX,pressed,animate,withTiming}=this.__closure;const width=buttonWidth.get();const offset=buttonOffsetX.get();const scaleX=!pressed.get()?0.5:1;const translateX=!pressed.get()?width-offset:0;return{transform:[{translateX:!animate?translateX:withTiming(translateX)},{scaleX:!animate?scaleX:withTiming(scaleX)}],opacity:!animate?!pressed.get()?0:1:withTiming(!pressed.get()?0:1),pointerEvents:!pressed.get()?'none':'auto'};}" };
-let closure_10 = { code: "function IncomingRequestRowActionsTsx3(){const{waveWidth,waveHeight}=this.__closure;return{transform:[{translateX:waveWidth.get()/2},{translateY:waveHeight.get()/2}]};}" };
-let closure_11 = { code: "function IncomingRequestRowActionsTsx4(){const{withDelay,withRepeat,withTiming,pressed,Easing,waveWidth,waveHeight}=this.__closure;return{transform:[{rotateZ:withDelay(450,withRepeat(withTiming(pressed.get()?'8deg':'-2deg',{duration:150,easing:Easing.inOut(Easing.quad)}),4,true))},{translateX:-waveWidth.get()/2},{translateY:-waveHeight.get()/2}]};}" };
-let closure_12 = { code: "function IncomingRequestRowActionsTsx5(){const{pressed}=this.__closure;return{pointerEvents:!pressed.get()?'none':'none'};}" };
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/IncomingRequestRowActions.tsx");
+const __initData = { code: "function IncomingRequestRowActionsTsx3(){const{waveWidth,waveHeight}=this.__closure;return{transform:[{translateX:waveWidth.get()/2},{translateY:waveHeight.get()/2}]};}" };
+const __initData2 = { code: "function IncomingRequestRowActionsTsx4(){const{withDelay,withRepeat,withTiming,pressed,Easing,waveWidth,waveHeight}=this.__closure;return{transform:[{rotateZ:withDelay(450,withRepeat(withTiming(pressed.get()?'8deg':'-2deg',{duration:150,easing:Easing.inOut(Easing.quad)}),4,true))},{translateX:-waveWidth.get()/2},{translateY:-waveHeight.get()/2}]};}" };
+const __initData3 = { code: "function IncomingRequestRowActionsTsx5(){const{pressed}=this.__closure;return{pointerEvents:!pressed.get()?'none':'none'};}" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/IncomingRequestRowActions.tsx");
 
 export const IncomingRequestRowActions = function IncomingRequestRowActions(user) {
   user = user.user;
@@ -27,26 +31,24 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
   const onAcceptIncomingRequest = user.onAcceptIncomingRequest;
   const onDeclineIncomingRequest = user.onDeclineIncomingRequest;
   const animate = user.animate;
-  let sharedValue;
   let sharedValue1;
-  let sharedValue2;
-  let sharedValue3;
   ({ acceptRequestAccessibilityLabel, ignoreRequestAccessibilityLabel } = user);
+  const tmp = sharedValue1();
+  const tmp2 = user;
+  const sharedValue = user(pressed[4]).useSharedValue(0);
   let obj = user(pressed[4]);
-  sharedValue = obj.useSharedValue(0);
-  obj1 = user(pressed[4]);
-  sharedValue1 = obj1.useSharedValue(-1);
+  sharedValue1 = user(pressed[4]).useSharedValue(-1);
   let obj2 = user(pressed[4]);
-  sharedValue2 = obj2.useSharedValue(-1);
+  const sharedValue2 = user(pressed[4]).useSharedValue(-1);
   let obj3 = user(pressed[4]);
-  sharedValue3 = obj3.useSharedValue(-1);
+  const sharedValue3 = user(pressed[4]).useSharedValue(-1);
   let obj4 = user(pressed[4]);
   class E {
     constructor() {
       if (animate) {
-        tmp = user;
-        tmp2 = pressed;
-        obj2 = user(pressed[5]);
+        tmp = closure_0;
+        tmp2 = closure_2;
+        obj2 = closure_0(closure_2[5]);
         tmp3 = pressed;
         num2 = 1;
         if (pressed.get()) {
@@ -61,121 +63,115 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
           num = 0;
         }
       }
-      obj = { position: "absolute", right: 0, flexDirection: "row", opacity: num, pointerEvents: null };
+      obj1 = { position: "absolute", right: 0, flexDirection: "row", opacity: num, pointerEvents: null };
       str = "auto";
       if (obj.get()) {
         str = "none";
       }
-      obj[4] = str;
-      return obj;
+      obj1.pointerEvents = str;
+      return obj1;
     }
   }
-  obj = { animate, pressed, withTiming: user(pressed[5]).withTiming };
-  E.__closure = obj;
+  let obj5 = user(pressed[4]);
+  E.__closure = { animate, pressed, withTiming: user(pressed[5]).withTiming };
   E.__workletHash = 1291516991185;
   E.__initData = sharedValue2;
-  const animatedStyle = obj4.useAnimatedStyle(E);
-  let obj6 = user(pressed[4]);
+  const animatedStyle = obj5.useAnimatedStyle(E);
+  let obj6 = { animate, pressed, withTiming: user(pressed[5]).withTiming };
   const fn = function q() {
-    let value = sharedValue1.get();
-    let obj = pressed;
-    value = sharedValue.get();
+    value = sharedValue1.get();
+    value2 = sharedValue.get();
     let num = 0.5;
     if (pressed.get()) {
       num = 1;
     }
     let num2 = 0;
-    if (!obj.get()) {
-      num2 = value - value;
+    if (!pressed.get()) {
+      num2 = value - value2;
     }
     let withTimingResult = num2;
     if (animate) {
-      withTimingResult = user(pressed[5]).withTiming(num2);
-      const obj2 = user(pressed[5]);
+      withTimingResult = timing.withTiming(num2);
     }
     const items = [{ translateX: withTimingResult }, ];
     let withTimingResult1 = num;
     if (animate) {
-      withTimingResult1 = user(pressed[5]).withTiming(num);
-      const obj3 = user(pressed[5]);
+      withTimingResult1 = timing.withTiming(num);
     }
-    obj = { transform: items, opacity: null, pointerEvents: null };
+    const obj4 = { transform: items, opacity: null, pointerEvents: null };
     items[1] = { scaleX: withTimingResult1 };
     if (animate) {
       let num4 = 0;
       if (obj.get()) {
         num4 = 1;
       }
-      let num3 = user(pressed[5]).withTiming(num4);
-      const obj5 = user(pressed[5]);
+      let num3 = timing.withTiming(num4);
     } else {
       num3 = 0;
       if (obj.get()) {
         num3 = 1;
       }
     }
-    obj[1] = num3;
+    obj4.opacity = num3;
     let str = "none";
-    if (obj.get()) {
+    if (pressed.get()) {
       str = "auto";
     }
-    obj[2] = str;
-    return obj;
+    obj4.pointerEvents = str;
+    return obj4;
   };
-  obj = { buttonWidth: sharedValue1, buttonOffsetX: sharedValue, pressed, animate, withTiming: user(pressed[5]).withTiming };
-  fn.__closure = obj;
+  let obj7 = user(pressed[4]);
+  fn.__closure = { buttonWidth: sharedValue1, buttonOffsetX: sharedValue, pressed, animate, withTiming: user(pressed[5]).withTiming };
   fn.__workletHash = 2207673076655;
   fn.__initData = sharedValue3;
-  const animatedStyle1 = obj6.useAnimatedStyle(fn);
-  let obj8 = user(pressed[4]);
+  const animatedStyle1 = obj7.useAnimatedStyle(fn);
+  const obj8 = { buttonWidth: sharedValue1, buttonOffsetX: sharedValue, pressed, animate, withTiming: user(pressed[5]).withTiming };
   const fn2 = function x() {
-    let obj = { transform: null };
-    obj = { translateX: sharedValue2.get() / 2 };
-    const items = [obj, ];
-    obj = { translateY: sharedValue3.get() / 2 };
-    items[1] = obj;
-    obj[0] = items;
+    const obj = { transform: null };
+    const items = [{ translateX: sharedValue2.get() / 2 }, ];
+    const obj2 = { translateX: sharedValue2.get() / 2 };
+    items[1] = { translateY: sharedValue3.get() / 2 };
+    obj.transform = items;
     return obj;
   };
   fn2.__closure = { waveWidth: sharedValue2, waveHeight: sharedValue3 };
   fn2.__workletHash = 4308223742756;
-  fn2.__initData = closure_10;
-  const animatedStyle2 = obj8.useAnimatedStyle(fn2);
-  let obj9 = user(pressed[4]);
+  fn2.__initData = __initData;
+  const animatedStyle2 = user(pressed[4]).useAnimatedStyle(fn2);
+  const obj9 = user(pressed[4]);
   class A {
     constructor() {
-      tmp = user;
-      tmp2 = pressed;
-      obj = user(pressed[4]);
-      obj2 = user(pressed[4]);
-      obj3 = user(pressed[5]);
+      tmp = closure_0;
+      tmp2 = closure_2;
+      obj = closure_0(closure_2[4]);
+      obj2 = closure_0(closure_2[4]);
+      obj3 = closure_0(closure_2[5]);
       str = "-2deg";
       if (pressed.get()) {
         str = "8deg";
       }
-      obj = { transform: null };
-      obj1 = { rotateZ: null };
-      obj2 = { duration: 150, easing: null };
+      obj1 = { transform: null };
+      obj9 = { rotateZ: null };
+      obj10 = { duration: 150, easing: null };
       Easing = tmp(tmp2[4]).Easing;
-      obj2[1] = Easing.inOut(tmp(tmp2[4]).Easing.quad);
-      obj1[0] = obj.withDelay(450, obj2.withRepeat(obj3.withTiming(str, obj2), 4, true));
+      obj10.easing = Easing.inOut(tmp(tmp2[4]).Easing.quad);
+      obj9.rotateZ = obj.withDelay(450, obj2.withRepeat(obj3.withTiming(str, obj10), 4, true));
       items = [, , ];
-      items[0] = obj1;
-      obj3 = { translateX: -closure_8.get() / 2 };
-      items[1] = obj3;
-      obj4 = { translateY: -closure_9.get() / 2 };
-      items[2] = obj4;
-      obj[0] = items;
-      return obj;
+      items[0] = obj9;
+      obj11 = { translateX: -closure_8.get() / 2 };
+      items[1] = obj11;
+      obj12 = { translateY: -closure_9.get() / 2 };
+      items[2] = obj12;
+      obj1.transform = items;
+      return obj1;
     }
   }
-  obj1 = { withDelay: user(pressed[4]).withDelay, withRepeat: user(pressed[4]).withRepeat, withTiming: user(pressed[5]).withTiming, pressed, Easing: user(pressed[4]).Easing, waveWidth: sharedValue2, waveHeight: sharedValue3 };
-  A.__closure = obj1;
+  const obj10 = user(pressed[4]);
+  A.__closure = { withDelay: user(pressed[4]).withDelay, withRepeat: user(pressed[4]).withRepeat, withTiming: user(pressed[5]).withTiming, pressed, Easing: user(pressed[4]).Easing, waveWidth: sharedValue2, waveHeight: sharedValue3 };
   A.__workletHash = 6870822621980;
-  A.__initData = closure_11;
-  const animatedStyle3 = obj9.useAnimatedStyle(A);
-  const tmp = sharedValue1();
-  const tmp2 = user;
+  A.__initData = __initData2;
+  const animatedStyle3 = obj10.useAnimatedStyle(A);
+  const obj11 = { withDelay: user(pressed[4]).withDelay, withRepeat: user(pressed[4]).withRepeat, withTiming: user(pressed[5]).withTiming, pressed, Easing: user(pressed[4]).Easing, waveWidth: sharedValue2, waveHeight: sharedValue3 };
   class X {
     constructor() {
       value = pressed.get();
@@ -184,67 +180,63 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
   }
   X.__closure = { pressed };
   X.__workletHash = 5804402563280;
-  X.__initData = closure_12;
+  X.__initData = __initData3;
   const animatedProps = user(pressed[4]).useAnimatedProps(X);
   let items = [applicationId, onAcceptIncomingRequest, pressed, user];
   const items1 = [applicationId, onDeclineIncomingRequest, user];
   const callback = onAcceptIncomingRequest.useCallback(() => {
     const result = pressed.set(true);
-    let obj = user(pressed[6]);
-    obj = { userId: user.id, applicationId };
-    const result1 = obj.acceptIncomingRequest(obj);
+    const result1 = AddFriendsScreenUtils.acceptIncomingRequest({ userId: user.id, applicationId });
     onAcceptIncomingRequest(user.id, applicationId);
   }, items);
   const items2 = [user];
   const callback1 = onAcceptIncomingRequest.useCallback(() => {
     onDeclineIncomingRequest(user.id, applicationId);
-    let obj = user(pressed[6]);
-    obj = { userId: user.id, applicationId };
-    const result = obj.dismissIncomingRequest(obj);
+    const result = AddFriendsScreenUtils.dismissIncomingRequest({ userId: user.id, applicationId });
   }, items1);
-  obj2 = { style: tmp.container, children: null };
+  const obj13 = { style: tmp.container, children: null };
   const callback2 = onAcceptIncomingRequest.useCallback(() => {
-    user(pressed[6]).sendWave(user.id, true, "Incoming Friend Request");
+    AddFriendsScreenUtils.sendWave(user.id, true, "Incoming Friend Request");
   }, items2);
-  obj3 = {
+  const obj14 = {
     onLayout(nativeEvent) {
       const result = sharedValue.set(nativeEvent.nativeEvent.layout.width);
     },
     style: animatedStyle,
     children: null
   };
-  obj4 = { direction: "horizontal", spacing: 8, children: null };
+  const obj15 = { direction: "horizontal", spacing: 8, children: null };
   const obj12 = user(pressed[4]);
   const tmp16 = sharedValue;
   const tmp17 = onDeclineIncomingRequest;
   const tmp19 = applicationId;
   const items3 = [animate(user(pressed[8]).IconButton, { size: "sm", variant: "tertiary", icon: applicationId(pressed[9]), onPress: callback1, accessibilityLabel: ignoreRequestAccessibilityLabel, maxFontSizeMultiplier: 2 }), ];
-  obj6 = { size: "sm", variant: "active", icon: applicationId(pressed[10]), onPress: callback, accessibilityLabel: acceptRequestAccessibilityLabel, maxFontSizeMultiplier: 2 };
-  items3[1] = animate(user(pressed[8]).IconButton, obj6);
-  obj4[2] = items3;
-  obj3[2] = sharedValue(user(pressed[7]).Stack, obj4);
-  const items4 = [animate(applicationId(pressed[4]).View, obj3), ];
-  const obj7 = {
+  const obj16 = { size: "sm", variant: "tertiary", icon: applicationId(pressed[9]), onPress: callback1, accessibilityLabel: ignoreRequestAccessibilityLabel, maxFontSizeMultiplier: 2 };
+  items3[1] = animate(user(pressed[8]).IconButton, { size: "sm", variant: "active", icon: applicationId(pressed[10]), onPress: callback, accessibilityLabel: acceptRequestAccessibilityLabel, maxFontSizeMultiplier: 2 });
+  obj15.children = items3;
+  obj14.children = sharedValue(user(pressed[7]).Stack, obj15);
+  const items4 = [animate(applicationId(pressed[4]).View, obj14), ];
+  const obj18 = {
     style: animatedStyle1,
     onLayout(nativeEvent) {
       const result = sharedValue1.set(nativeEvent.nativeEvent.layout.width);
     }
   };
   const merged = Object.assign(animatedProps);
-  obj8 = { size: "sm", variant: "secondary", text: null, icon: null, onPress: null };
+  const obj19 = { size: "sm", variant: "secondary", text: null, icon: null, onPress: null };
   const intl = user(pressed[12]).intl;
-  obj8[2] = intl.string(user(pressed[12]).t.n8nU4W);
+  obj19.text = intl.string(user(pressed[12]).t.n8nU4W);
   let tmp21 = null;
   if (animate) {
     tmp21 = animatedStyle2;
   }
-  obj9 = { style: tmp21, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
+  const obj20 = { style: tmp21, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   let tmp22 = null;
   if (animate) {
     tmp22 = animatedStyle3;
   }
-  let obj5 = { size: "sm", variant: "tertiary", icon: applicationId(pressed[9]), onPress: callback1, accessibilityLabel: ignoreRequestAccessibilityLabel, maxFontSizeMultiplier: 2 };
-  obj9[3] = animate(tmp19(pressed[4]).View, {
+  const obj17 = { size: "sm", variant: "active", icon: applicationId(pressed[10]), onPress: callback, accessibilityLabel: acceptRequestAccessibilityLabel, maxFontSizeMultiplier: 2 };
+  obj20.children = animate(tmp19(pressed[4]).View, {
     style: tmp22,
     onLayout(nativeEvent) {
       const result = sharedValue2.set(nativeEvent.nativeEvent.layout.width);
@@ -252,10 +244,10 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
     },
     children: animate(tmp2(pressed[13]).Text, { maxFontSizeMultiplier: 2, variant: "text-sm/normal", children: "\u{1F44B}" })
   });
-  obj8[3] = animate(applicationId(pressed[4]).View, obj9);
-  obj8[4] = callback2;
-  obj7.children = animate(user(pressed[11]).Button, obj8);
-  items4[1] = animate(applicationId(pressed[4]).View, obj7);
-  obj2[1] = items4;
-  return tmp16(tmp17, obj2);
+  obj19.icon = animate(applicationId(pressed[4]).View, obj20);
+  obj19.onPress = callback2;
+  obj18.children = animate(user(pressed[11]).Button, obj19);
+  items4[1] = animate(applicationId(pressed[4]).View, obj18);
+  obj13.children = items4;
+  return tmp16(tmp17, obj13);
 };

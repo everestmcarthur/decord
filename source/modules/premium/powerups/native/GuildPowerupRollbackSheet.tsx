@@ -1,19 +1,19 @@
-// Module ID: 12519
-// Function ID: 12520
+// Module ID: 12545
+// Function ID: 12546
 // Name: GuildPowerupRollbackSheet
-// Dependencies: [21, 10235, 4975, 2]
+// Dependencies: [21, 10262, 4989, 2]
 // Exports: default
 
-// Module 12519 (GuildPowerupRollbackSheet)
-import set from "set" /* 2 */;
+// Module 12545 (GuildPowerupRollbackSheet)
 import jsxProd from "jsxProd" /* 21 */;
-import Button from "Button" /* 4975 */;
-import PromoSheet from "PromoSheet" /* 10235 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import PromoSheet from "PromoSheet" /* 10262 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupRollbackSheet.tsx");
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupRollbackSheet.tsx");
 
 export default function GuildPowerupRollbackSheet(arg0) {
   ({ header, body, ctaText, onCtaPress, onDismiss } = arg0);
-  return jsx(PromoSheet.PromoSheet, { title: header, description: body, onDismiss, actions: jsx(Button.Button, { variant: "primary", text: ctaText, onPress: onCtaPress }) });
+  return jsx(PromoSheet.PromoSheet, { title: header, description: body, onDismiss, actions: jsx(components_Button_Button.Button, { variant: "primary", text: ctaText, onPress: onCtaPress }) });
 };

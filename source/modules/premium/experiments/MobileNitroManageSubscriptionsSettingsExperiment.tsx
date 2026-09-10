@@ -1,17 +1,19 @@
-// Module ID: 13418
-// Function ID: 13419
-// Name: apexExperiment
+// Module ID: 13441
+// Function ID: 13442
+// Name: MobileNitroManageSubscriptionsSettingsExperiment
 // Dependencies: [1433, 2]
 // Exports: getMobileNitroManageSubscriptionsSettingsExperiment, useMobileNitroManageSubscriptionsSettingsExperiment
 
-// Module 13418 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 13441 (MobileNitroManageSubscriptionsSettingsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null };
-obj[1] = { enabled: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-06-macaron", kind: "user", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/premium/experiments/MobileNitroManageSubscriptionsSettingsExperiment.tsx");
+const obj = { name: "2026-06-macaron", kind: "user", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj.variations = obj2;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/premium/experiments/MobileNitroManageSubscriptionsSettingsExperiment.tsx");
 
 export default apexExperiment;
 export const useMobileNitroManageSubscriptionsSettingsExperiment = function useMobileNitroManageSubscriptionsSettingsExperiment(location) {

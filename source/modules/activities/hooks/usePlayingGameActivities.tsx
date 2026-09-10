@@ -1,39 +1,42 @@
-// Module ID: 9184
-// Function ID: 9185
+// Module ID: 9211
+// Function ID: 9212
 // Name: usePlayingGameActivities
-// Dependencies: [19, 502, 4600, 5279, 504, 9185, 2]
+// Dependencies: [19, 502, 4614, 5293, 504, 9212, 2]
 // Exports: default
 
-// Module 9184 (usePlayingGameActivities)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "fetchFingerprint" /* 502 */;
-import closure_5 from "sortActivity" /* 4600 */;
-import closure_6 from "filterPlayingActivities" /* 5279 */;
+// Module 9211 (usePlayingGameActivities)
+import isPlayingGameActivityDefault from "isPlayingGameActivity" /* 9212 */;
+import noop from "module_19" /* 19 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import PresenceStore from "PresenceStore" /* 4614 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5293 */;
 
-const require = arg1;
+const require = globalThis.__r;
+
+const require = fn;
 let closure_7 = [];
-const result = require("set").fileFinishedImporting("modules/activities/hooks/usePlayingGameActivities.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/hooks/usePlayingGameActivities.tsx");
 
 export default function usePlayingGameActivities(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   closure_1 = arg1;
   let flag = arg2;
   if (arg2 === undefined) {
     flag = true;
   }
-  let stateFromStores;
-  const items = [closure_6, closure_5, closure_4];
-  stateFromStores = _require(flag[4]).useStateFromStores(items, () => {
+  const items = [SelfPresenceStore, PresenceStore, AuthenticationStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
     if (flag) {
-      if (closure_1_4.getId() === closure_0) {
-        let activities = closure_1_6.getActivities();
+      if (AuthenticationStore.getId() === closure_0) {
+        let activities = SelfPresenceStore.getActivities();
       } else {
-        activities = closure_1_5.getActivities(tmp2, closure_1);
+        activities = PresenceStore.getActivities(tmp2, closure_1);
       }
     } else {
-      return closure_1_7;
+      return closure_7;
     }
   });
   const items1 = [stateFromStores];
-  return stateFromStores.useMemo(() => stateFromStores.filter(callback(flag[5])), items1);
+  return stateFromStores.useMemo(() => stateFromStores.filter(isPlayingGameActivityDefault), items1);
 };

@@ -1,17 +1,17 @@
-// Module ID: 8231
-// Function ID: 8232
-// Name: shouldDisableUserPresenceInChannel
+// Module ID: 8257
+// Function ID: 8258
+// Name: ApplicationPresenceUtils
 // Dependencies: [1957, 2]
 // Exports: shouldDisableUserPresenceInChannel
 
-// Module 8231 (shouldDisableUserPresenceInChannel)
-import closure_0 from "ensureGuildLoaded" /* 1957 */;
+// Module 8257 (ApplicationPresenceUtils)
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-const result = require("set").fileFinishedImporting("modules/applications/ApplicationPresenceUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/applications/ApplicationPresenceUtils.tsx");
 
 export const shouldDisableUserPresenceInChannel = function shouldDisableUserPresenceInChannel(bot, channelId) {
-  let channel = bot;
-  channel = channel.getChannel(channelId);
+  const channel = ChannelStore.getChannel(channelId);
   let tmp = null != channel && bot.bot && channel.isPrivate();
   if (tmp) {
     const rawRecipients = channel.rawRecipients;

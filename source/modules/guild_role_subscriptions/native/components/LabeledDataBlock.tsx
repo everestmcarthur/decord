@@ -1,62 +1,53 @@
-// Module ID: 15223
-// Function ID: 15224
+// Module ID: 15252
+// Function ID: 15253
 // Name: LabeledDataBlock
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 5524, 4556, 5123, 1178, 2]
+// Dependencies: [19, 17, 1074, 21, 4574, 576, 5538, 4570, 5137, 1178, 2]
 // Exports: default
 
-// Module 15223 (LabeledDataBlock)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Text from "Text" /* 4556 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importDefaultResult from "createTextStyle" /* 5524 */;
+// Module 15252 (LabeledDataBlock)
+import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import noop from "module_19" /* 19 */;
+import TextStyles from "TextStyles" /* 5538 */;
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { container: null, title: null, data: null, titleSection: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: ThemesDefault.radii.sm, flexBasis: "auto", flexGrow: 1, padding: 16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginRight: 4 };
-const merged = Object.assign(importDefaultResult(require("ME").Fonts.PRIMARY_MEDIUM, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
-createCacheKey[2] = {};
-createCacheKey[3] = { flexDirection: "row", alignItems: "center", marginBottom: 16 };
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-let obj1 = {};
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/LabeledDataBlock.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: nativeDefault.radii.sm, flexBasis: "auto", flexGrow: 1, padding: 16 }, title: { marginRight: 4 }, data: null, titleSection: null };
+const merged = Object.assign(TextStyles(fn(1074).Fonts.PRIMARY_MEDIUM, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
+obj2.data = {};
+obj2.titleSection = { flexDirection: "row", alignItems: "center", marginBottom: 16 };
+let closure_5 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/LabeledDataBlock.tsx");
 
 export default function LabeledDataBlock(arg0) {
   ({ children, icon } = arg0);
   ({ title, style, onPressIcon } = arg0);
-  const tmp = callback2();
-  let obj = { style: items, children: null };
-  items = [tmp.container, style];
-  obj = { style: tmp.titleSection, children: null };
-  obj = { style: tmp.title, accessibilityRole: "header", variant: "text-sm/medium", color: "interactive-text-default", children: title };
-  const items1 = [callback(Text.Text, obj), ];
+  const tmp = closure_5();
+  const obj = { style: null, children: null };
+  const items = [tmp.container, style];
+  obj.style = items;
+  const obj2 = { style: tmp.titleSection, children: null };
+  const items1 = [React3(Text_Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "text-sm/medium", color: "interactive-text-default", children: title }), ];
   let tmp4Result = null != icon;
   if (tmp4Result) {
-    obj1 = { accessibilityRole: "button", onPress: null, children: null };
-    obj1[1] = onPressIcon;
-    const obj2 = { size: null, source: null };
-    obj2[0] = tmp5(1178).Icon.Sizes.SMALL;
-    obj2[1] = icon;
-    obj1[2] = tmp4(tmp5(1178).Icon, obj2);
-    tmp4Result = tmp4(tmp5(5123).PressableOpacity, obj1);
+    const obj4 = { accessibilityRole: "button", onPress: onPressIcon, children: null };
+    const obj5 = { size: tmp5(1178).Icon.Sizes.SMALL, source: icon };
+    obj4.children = tmp4(tmp5(1178).Icon, obj5);
+    tmp4Result = tmp4(tmp5(5137).PressableOpacity, obj4);
   }
   items1[1] = tmp4Result;
-  obj[1] = items1;
-  const items2 = [closure_4(View, obj), ];
-  tmp4Result = children;
+  obj2.children = items1;
+  const items2 = [React4(View, obj2), ];
+  let tmp4Result2 = children;
   if (typeof children === "string") {
-    const obj3 = { style: null, children: null };
-    obj3[0] = tmp.data;
-    obj3[1] = children;
-    tmp4Result = tmp4(tmp5(1178).LegacyText, obj3);
+    const obj6 = { style: tmp.data, children };
+    tmp4Result2 = tmp4(tmp5(1178).LegacyText, obj6);
   }
-  items2[1] = tmp4Result;
-  obj[1] = items2;
-  return closure_4(View, obj);
+  items2[1] = tmp4Result2;
+  obj.children = items2;
+  return React4(View, obj);
 };

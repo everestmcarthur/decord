@@ -1,18 +1,18 @@
-// Module ID: 4791
-// Function ID: 4792
-// Name: messageAttachmentToUnfurledMediaItem
-// Dependencies: [1074, 1384, 1894, 4710, 1365, 2]
+// Module ID: 4805
+// Function ID: 4806
+// Name: MediaTypes
+// Dependencies: [1074, 1384, 1894, 4724, 1365, 2]
 // Exports: embedMediaToMediaItem, getMediaItemDisplayUrl, getUnfurledMediaItemType, isVisualUnfurledMediaItem, messageAttachmentToMediaItem, toContentScanMetadata, toUnfurledMediaItem
 
-// Module 4791 (messageAttachmentToUnfurledMediaItem)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1365 */;
-import hasFlag from "hasFlag" /* 1384 */;
-import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4710 */;
+// Module 4805 (MediaTypes)
+import Constants from "Constants" /* 1074 */;
+import URLUtilsDefault from "URLUtils" /* 1365 */;
+import FlagUtils from "FlagUtils" /* 1384 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 4724 */;
+import size from "module_2" /* 2 */;
 
 function messageAttachmentToUnfurledMediaItem(flags) {
-  obj = hasFlag;
+  const obj = FlagUtils;
   let num = flags.flags;
   if (num == null) {
     num = 0;
@@ -27,46 +27,44 @@ function messageAttachmentToUnfurledMediaItem(flags) {
   }
   let num4 = 0;
   if (tmpResult.hasFlag(num3, MessageAttachmentFlags.IS_ANIMATED)) {
-    num4 = obj.IS_ANIMATED | 0;
+    num4 = obj2.IS_ANIMATED | 0;
   }
-  obj = { url: flags.url, proxyUrl: flags.proxy_url, height: flags.height, width: flags.width, contentType: flags.content_type, originalContentType: flags.original_content_type, placeholder: flags.placeholder, placeholderVersion: flags.placeholder_version, loadingState: tmp(1894).UnfurledMediaLoadingState.LOADED_SUCCESS, contentScanMetadata: null, flags: null };
+  const size = { url: flags.url, proxyUrl: flags.proxy_url, height: flags.height, width: flags.width, contentType: flags.content_type, originalContentType: flags.original_content_type, placeholder: flags.placeholder, placeholderVersion: flags.placeholder_version, loadingState: tmp(1894).UnfurledMediaLoadingState.LOADED_SUCCESS, contentScanMetadata: null, flags: null };
   let tmp6;
   if (null != flags.content_scan_version) {
-    obj = { version: null, flags: null };
-    obj[0] = flags.content_scan_version;
-    obj[1] = num2;
-    tmp6 = obj;
+    obj2 = { version: flags.content_scan_version, flags: num2 };
+    tmp6 = obj2;
   }
-  obj[9] = tmp6;
-  obj[10] = num4;
-  return obj;
+  size.contentScanMetadata = tmp6;
+  size.flags = num4;
+  return size;
 }
-const MessageAttachmentFlags = ME.MessageAttachmentFlags;
-let obj = { EXPLICIT: 1, [1]: "EXPLICIT", GORE: 2, [2]: "GORE", SELF_HARM: 4, [4]: "SELF_HARM" };
-obj = { IS_ANIMATED: 1, [1]: "IS_ANIMATED" };
-const result = set.fileFinishedImporting("modules/media/MediaTypes.tsx");
+const MessageAttachmentFlags = Constants.MessageAttachmentFlags;
+const ContentScanFlags = { EXPLICIT: 1, [1]: "EXPLICIT", GORE: 2, [2]: "GORE", SELF_HARM: 4, [4]: "SELF_HARM" };
+let obj2 = { IS_ANIMATED: 1, [1]: "IS_ANIMATED" };
+const result = size.fileFinishedImporting("modules/media/MediaTypes.tsx");
 
-export const ContentScanFlags = obj;
+export { ContentScanFlags };
 export const ImageEncoder = { NATIVE: "native", JPEGLI: "jpegli", JPEG_IOS: "jpeg_ios", PASSTHROUGH: "passthrough" };
 export const toContentScanMetadata = function toContentScanMetadata(version) {
   return { version: version.version, flags: version.flags };
 };
-export const UnfurledMediaItemFlags = obj;
+export const UnfurledMediaItemFlags = obj2;
 export const toUnfurledMediaItem = function toUnfurledMediaItem(media) {
-  obj = { url: media.url, proxyUrl: media.proxy_url, height: media.height, width: media.width, placeholder: media.placeholder, placeholderVersion: media.placeholder_version, contentType: media.content_type, originalContentType: media.original_content_type, loadingState: media.loading_state, contentScanMetadata: null, flags: null };
+  const size = { url: media.url, proxyUrl: media.proxy_url, height: media.height, width: media.width, placeholder: media.placeholder, placeholderVersion: media.placeholder_version, contentType: media.content_type, originalContentType: media.original_content_type, loadingState: media.loading_state, contentScanMetadata: null, flags: null };
   let tmp;
   if (null != media.content_scan_metadata) {
-    obj = { version: null, flags: null };
-    ({ version: obj2[0], flags: obj2[1] } = media.content_scan_metadata);
-    tmp = obj;
+    ({ version: obj2.version, flags: obj2.flags } = media.content_scan_metadata);
+    tmp = { version: null, flags: null };
+    const obj = { version: null, flags: null };
   }
-  obj[9] = tmp;
+  size.contentScanMetadata = tmp;
   let num = media.flags;
   if (num == null) {
     num = 0;
   }
-  obj[10] = num;
-  return obj;
+  size.flags = num;
+  return size;
 };
 export { messageAttachmentToUnfurledMediaItem };
 export const getUnfurledMediaItemType = function getUnfurledMediaItemType(contentType) {
@@ -80,16 +78,16 @@ export const getUnfurledMediaItemType = function getUnfurledMediaItemType(conten
         if (null != obj3.toURLSafe(contentType.proxyUrl)) {
           str3 = "VIDEO";
         }
-        obj3 = isDiscordProxiedAssetUrlDefault;
+        obj3 = URLUtilsDefault;
       }
     }
     str = str3;
-    tmpResult = urlMatchesFileExtension;
+    tmpResult = MediaFormatTesters;
   }
   return str;
 };
 export const messageAttachmentToMediaItem = function messageAttachmentToMediaItem(found2, tmp2Result) {
-  obj = {};
+  const obj = {};
   const merged = Object.assign(messageAttachmentToUnfurledMediaItem(found2));
   let str = "IMAGE";
   if (!obj2.isImageFile(found2.filename)) {
@@ -98,17 +96,16 @@ export const messageAttachmentToMediaItem = function messageAttachmentToMediaIte
       str2 = "VIDEO";
     }
     str = str2;
-    tmp2Result = urlMatchesFileExtension;
+    tmp2Result = MediaFormatTesters;
   }
   obj.type = str;
   obj.alt = found2.description;
-  obj = { message: tmp2Result, identifier: obj };
-  obj = { type: "attachment", attachmentId: found2.id, filename: found2.filename, title: found2.title, size: found2.size };
-  obj.sourceMetadata = obj;
+  obj.sourceMetadata = { message: tmp2Result, identifier: { type: "attachment", attachmentId: found2.id, filename: found2.filename, title: found2.title, size: found2.size } };
   return obj;
 };
 export const embedMediaToMediaItem = function embedMediaToMediaItem(thumbnail, sourceMetadata, IMAGE) {
-  return { type: IMAGE, url: thumbnail.url, proxyUrl: thumbnail.proxyURL, width: thumbnail.width, height: thumbnail.height, placeholder: thumbnail.placeholder, placeholderVersion: thumbnail.placeholderVersion, sourceMetadata, contentType: thumbnail.contentType };
+  const size = { type: IMAGE, url: thumbnail.url, proxyUrl: thumbnail.proxyURL, width: thumbnail.width, height: thumbnail.height, placeholder: thumbnail.placeholder, placeholderVersion: thumbnail.placeholderVersion, sourceMetadata, contentType: thumbnail.contentType };
+  return size;
 };
 export const isVisualUnfurledMediaItem = function isVisualUnfurledMediaItem(width) {
   let tmp = null != width.width;
@@ -129,14 +126,14 @@ export const getMediaItemDisplayUrl = function getMediaItemDisplayUrl(type) {
   } else {
     if ("VIDEO" === type.type) {
       if (null != type.proxyUrl) {
-        let str = isDiscordProxiedAssetUrlDefault.toURLSafe(type.proxyUrl);
-        str = null;
+        const str = URLUtilsDefault.toURLSafe(type.proxyUrl);
+        let str1 = null;
         if (null != str) {
           const searchParams = str.searchParams;
           searchParams.append("format", "webp");
-          str = str.toString();
+          str1 = str.toString();
         }
-        return str;
+        return str1;
       }
     }
     let proxyUrl = type.proxyUrl;

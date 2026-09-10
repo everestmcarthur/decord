@@ -1,29 +1,25 @@
-// Module ID: 16506
-// Function ID: 16507
-// Name: sendMessageWithEmbed
-// Dependencies: [7682, 7456, 2]
+// Module ID: 16537
+// Function ID: 16538
+// Name: reactionUtils
+// Dependencies: [7696, 7470, 2]
 // Exports: sendMessageWithEmbed, sendMessageWithoutContentInventoryEntry
 
-// Module 16506 (sendMessageWithEmbed)
-import set from "set" /* 2 */;
-import trackInviteDefault from "trackInvite" /* 7456 */;
-import rebuildDefault from "rebuild" /* 7682 */;
+// Module 16537 (reactionUtils)
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7470 */;
+import MessageParserDefault from "MessageParser" /* 7696 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/content_inventory/reactionUtils.tsx");
+const result = size.fileFinishedImporting("modules/content_inventory/reactionUtils.tsx");
 
 export const sendMessageWithEmbed = function sendMessageWithEmbed(channel) {
   channel = channel.channel;
   ({ content, entry, whenReady, doNotNotifyOnError, location: _location } = channel);
-  let obj = rebuildDefault;
-  const parsed = obj.parse(channel, content);
-  obj = { contentInventoryEntry: { unverified_content: entry }, doNotNotifyOnError, location: _location };
-  return trackInviteDefault.sendMessage(channel.id, parsed, whenReady, obj);
+  const parsed = MessageParserDefault.parse(channel, content);
+  return MessageActionCreatorsDefault.sendMessage(channel.id, parsed, whenReady, { contentInventoryEntry: { unverified_content: entry }, doNotNotifyOnError, location: _location });
 };
 export const sendMessageWithoutContentInventoryEntry = function sendMessageWithoutContentInventoryEntry(channel) {
   channel = channel.channel;
   ({ content, whenReady, doNotNotifyOnError, location: _location } = channel);
-  let obj = rebuildDefault;
-  const parsed = obj.parse(channel, content);
-  obj = { doNotNotifyOnError, location: _location };
-  return trackInviteDefault.sendMessage(channel.id, parsed, whenReady, obj);
+  const parsed = MessageParserDefault.parse(channel, content);
+  return MessageActionCreatorsDefault.sendMessage(channel.id, parsed, whenReady, { doNotNotifyOnError, location: _location });
 };

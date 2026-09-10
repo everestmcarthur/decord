@@ -1,15 +1,15 @@
-// Module ID: 8345
-// Function ID: 8346
-// Name: initialize
-// Dependencies: [1979, 8346, 504, 573, 2]
+// Module ID: 8373
+// Function ID: 8374
+// Name: GuildAffinitiesStore
+// Dependencies: [1979, 8374, 504, 573, 2]
 
-// Module 8345 (initialize)
+// Module 8373 (GuildAffinitiesStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import fetchGuildAffinities from "fetchGuildAffinities" /* 8346 */;
-import closure_2 from "createGuildRecordFromRust" /* 1979 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import GuildAffinitiesActionCreators from "GuildAffinitiesActionCreators" /* 8374 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-require = arg1;
+require = fn;
 let closure_3 = { guildAffinitiesByGuildId: {}, guildAffinities: [], lastFetched: 0 };
 const PersistedStore = initializeDefault.PersistedStore;
 class GuildAffinitiesStore extends PersistedStore {
@@ -19,7 +19,7 @@ prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
     closure_3 = arg0;
   }
-  this.waitFor(closure_2);
+  this.waitFor(GuildStore);
 };
 prototype["getState"] = function getState() {
   return closure_3;
@@ -41,11 +41,10 @@ Object.defineProperty(prototype, "hasRequestResolved", {
 });
 GuildAffinitiesStore.displayName = "GuildAffinitiesStore";
 GuildAffinitiesStore.persistKey = "GuildAffinitiesStore";
-const guildAffinitiesStore = new GuildAffinitiesStore(dispatcherDefault, {
+const guildAffinitiesStore = new GuildAffinitiesStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     if (Date.now() - closure_3.lastFetched > 86400000) {
-      const guildAffinities = fetchGuildAffinities.fetchGuildAffinities();
-      const obj = fetchGuildAffinities;
+      const guildAffinities = GuildAffinitiesActionCreators.fetchGuildAffinities();
     }
     return false;
   },
@@ -57,8 +56,8 @@ const guildAffinitiesStore = new GuildAffinitiesStore(dispatcherDefault, {
     const item = guildAffinities.forEach((guild_id, index) => {
       guild_id = guild_id.guild_id;
       const obj = { score: guild_id.affinity, guildId: guild_id, index };
-      closure_3.guildAffinitiesByGuildId[guild_id] = obj;
-      const guildAffinities = closure_3.guildAffinities;
+      closure_1_3.guildAffinitiesByGuildId[guild_id] = obj;
+      const guildAffinities = closure_1_3.guildAffinities;
       guildAffinities.push(obj);
     });
   },
@@ -66,6 +65,7 @@ const guildAffinitiesStore = new GuildAffinitiesStore(dispatcherDefault, {
     closure_3 = { guildAffinitiesByGuildId: {}, guildAffinities: [], lastFetched: 0 };
   }
 });
-const result = require("set").fileFinishedImporting("stores/GuildAffinitiesStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/GuildAffinitiesStore.tsx");
 
 export default guildAffinitiesStore;

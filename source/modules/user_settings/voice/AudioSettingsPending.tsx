@@ -1,17 +1,18 @@
-// Module ID: 14074
-// Function ID: 14075
-// Name: getPendingAudioSettings
+// Module ID: 14097
+// Function ID: 14098
+// Name: AudioSettingsPending
 // Dependencies: [32, 2]
 // Exports: drainPendingAudioSettings, getPendingAudioSettings, updatePendingSettings
 
-// Module 14074 (getPendingAudioSettings)
-import closure_0 from "_slicedToArray" /* 32 */;
+// Module 14097 (AudioSettingsPending)
+import _slicedToArray from "module_32" /* 32 */;
 
-let closure_1 = {};
-const result = require("set").fileFinishedImporting("modules/user_settings/voice/AudioSettingsPending.tsx");
+let dependencyMap = {};
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/voice/AudioSettingsPending.tsx");
 
-export const getPendingAudioSettings = function getPendingAudioSettings(closure_0, closure_0) {
-  return dependencyMap["" + closure_0 + ":" + closure_0];
+export const getPendingAudioSettings = function getPendingAudioSettings(STREAM, arg1) {
+  return dependencyMap["" + STREAM + ":" + arg1];
 };
 export const updatePendingSettings = function updatePendingSettings(context, userId, arg2) {
   const combined = "" + context + ":" + userId;
@@ -19,17 +20,14 @@ export const updatePendingSettings = function updatePendingSettings(context, use
   const merged1 = Object.assign(arg2);
   dependencyMap[combined] = {};
 };
-export const drainPendingAudioSettings = function drainPendingAudioSettings(arg0) {
+export const drainPendingAudioSettings = function drainPendingAudioSettings(fn) {
   for (const key10006 in closure_1) {
-    let tmp = key10006;
-    let tmp2 = callback;
-    let tmp3 = callback(key10006.split(":"), 2);
+    let tmp3 = _slicedToArray(key10006.split(":"), 2);
     let items = [, ];
     [arr[0], arr[1]] = tmp3;
-    let tmp4 = callback(items, 2);
-    let tmp5 = dependencyMap;
+    let tmp4 = _slicedToArray(items, 2);
     let tmp6 = arg0(tmp4[0], tmp4[1], dependencyMap[key10006]);
     continue;
   }
-  const dependencyMap = {};
+  dependencyMap = {};
 };

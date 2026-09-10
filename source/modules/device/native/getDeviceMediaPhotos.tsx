@@ -1,50 +1,41 @@
-// Module ID: 10650
-// Function ID: 10651
+// Module ID: 10677
+// Function ID: 10678
 // Name: getDeviceMediaPhotos
-// Dependencies: [17, 3, 1232, 1115, 10651, 2]
+// Dependencies: [17, 3, 1232, 1115, 10678, 2]
 // Exports: default
 
-// Module 10650 (getDeviceMediaPhotos)
-import set from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set2 from "set" /* 1115 */;
-import get_ActivityIndicatorDefault from "get ActivityIndicator" /* 10651 */;
+// Module 10677 (getDeviceMediaPhotos)
+import LoggerDefault from "Logger" /* 3 */;
+import _mod17 from "module_17" /* 17 */;
+import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import DCDPhotosDefault from "DCDPhotos" /* 10678 */;
+import size from "module_2" /* 2 */;
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-let closure_4 = new timestampDefault("DeviceMedia.tsx");
-const tmp2 = new timestampDefault("DeviceMedia.tsx");
-const result = set.fileFinishedImporting("modules/device/native/getDeviceMediaPhotos.tsx");
+const NativeModules = _mod17.NativeModules;
+let closure_4 = new LoggerDefault("DeviceMedia.tsx");
+const result = size.fileFinishedImporting("modules/device/native/getDeviceMediaPhotos.tsx");
 
 export default function getDeviceMediaPhotos(arg0) {
   ({ batchSize, extensions, onFetched, onError } = arg0);
   ({ endCursor, lastAssetIndex, lastNodeImageUri } = arg0);
   if (onError === undefined) {
-    onError = function u(arg0) {
-      logger.log("CameraRollUtils -- Failed to get photos with error " + arg0);
-      callback(table[2]).captureException(arg0, { tags: { source: "DEVICE_MEDIA" } });
+    onError = function u(error) {
+      logger.log("CameraRollUtils -- Failed to get photos with error " + error);
+      SentryUtilsDefault.captureException(error, { tags: { source: "DEVICE_MEDIA" } });
     };
   }
-  let obj = set2;
   if (obj.isIOS()) {
-    const obj3 = get_ActivityIndicatorDefault;
+    const obj3 = DCDPhotosDefault;
     if (obj3 != null) {
-      obj = { first: null, groupTypes: "Recents", assetType: "All", after: null, extensions: null };
-      obj[0] = batchSize;
-      obj[3] = endCursor;
-      obj[4] = extensions;
-      const photos = obj3.getPhotos(obj);
+      const obj2 = { first: batchSize, groupTypes: "Recents", assetType: "All", after: endCursor, extensions };
+      const photos = obj3.getPhotos(obj2);
       photos.then(onFetched).catch(onError);
       const nextPromise = photos.then(onFetched);
     }
   } else {
     const CameraRollUtils = NativeModules.CameraRollUtils;
-    obj = { first: null, assetType: "All", after: null, offset: null, extensions: null };
-    obj[0] = batchSize;
-    obj[2] = lastNodeImageUri;
-    obj[3] = lastAssetIndex;
-    obj[4] = extensions;
-    const photos1 = CameraRollUtils.getPhotos(obj);
+    const obj4 = { first: batchSize, assetType: "All", after: lastNodeImageUri, offset: lastAssetIndex, extensions };
+    const photos1 = CameraRollUtils.getPhotos(obj4);
     photos1.then(onFetched).catch(onError);
     const nextPromise1 = photos1.then(onFetched);
   }

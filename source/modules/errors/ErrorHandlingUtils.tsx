@@ -1,19 +1,19 @@
-// Module ID: 7339
-// Function ID: 7340
-// Name: items
+// Module ID: 7353
+// Function ID: 7354
+// Name: ErrorHandlingUtils
 // Dependencies: [1074, 1232, 2]
 // Exports: captureOrIgnoreApiError
 
-// Module 7339 (items)
-import ME from "ME" /* 1074 */;
-import _modDef1232 from "module_1232" /* 1232 */;
-import set from "set" /* 2 */;
+// Module 7353 (ErrorHandlingUtils)
+import Constants from "Constants" /* 1074 */;
+import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import size from "module_2" /* 2 */;
 
 const items = [, , ];
-({ UNAUTHORIZED: arr[0], EMAIL_VERIFICATION_REQUIRED: arr[1], USER_BANNED: arr[2] } = ME.AbortCodes);
-let set = new Set([500, 502, 503, 504]);
+({ UNAUTHORIZED: arr[0], EMAIL_VERIFICATION_REQUIRED: arr[1], USER_BANNED: arr[2] } = Constants.AbortCodes);
+const set = new Set([500, 502, 503, 504]);
 const set1 = new Set([401, 403, 405, 409, 429]);
-const result = set.fileFinishedImporting("modules/errors/ErrorHandlingUtils.tsx");
+const result = size.fileFinishedImporting("modules/errors/ErrorHandlingUtils.tsx");
 
 export const captureOrIgnoreApiError = function captureOrIgnoreApiError(aPIError) {
   let tmp = null == aPIError;
@@ -72,7 +72,6 @@ export const captureOrIgnoreApiError = function captureOrIgnoreApiError(aPIError
     tmp = flag;
   }
   if (!tmp) {
-    _modDef1232.captureException(aPIError);
-    const obj = _modDef1232;
+    SentryUtilsDefault.captureException(aPIError);
   }
 };

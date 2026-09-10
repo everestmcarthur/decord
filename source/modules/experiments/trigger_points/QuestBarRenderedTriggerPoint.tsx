@@ -1,14 +1,14 @@
-// Module ID: 15192
-// Function ID: 15193
-// Name: commonTriggerPointConfiguration
-// Dependencies: [4477, 10814, 2]
+// Module ID: 15219
+// Function ID: 15220
+// Name: QuestBarRenderedTriggerPoint
+// Dependencies: [4491, 10841, 2]
 
-// Module 15192 (commonTriggerPointConfiguration)
-import set from "set" /* 2 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4477 */;
-import registeredExperimentIds from "registeredExperimentIds" /* 10814 */;
+// Module 15219 (QuestBarRenderedTriggerPoint)
+import ExperimentConstants from "ExperimentConstants" /* 4491 */;
+import Helpers from "Helpers" /* 10841 */;
+import size from "module_2" /* 2 */;
 
-const commonTriggerPointConfiguration = new registeredExperimentIds.CommonTriggerPointConfiguration([], ExperimentBuckets.CommonTriggerPoints.QUEST_BAR_RENDERED, { location: "quest bar rendered" });
-const result = set.fileFinishedImporting("modules/experiments/trigger_points/QuestBarRenderedTriggerPoint.tsx");
+const commonTriggerPointConfiguration = new Helpers.CommonTriggerPointConfiguration([], ExperimentConstants.CommonTriggerPoints.QUEST_BAR_RENDERED, { location: "quest bar rendered" });
+const result = size.fileFinishedImporting("modules/experiments/trigger_points/QuestBarRenderedTriggerPoint.tsx");
 
 export const QuestBarRenderedTriggerPoint = commonTriggerPointConfiguration;

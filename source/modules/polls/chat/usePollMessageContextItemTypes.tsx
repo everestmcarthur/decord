@@ -1,21 +1,22 @@
-// Module ID: 11668
-// Function ID: 11669
+// Module ID: 11694
+// Function ID: 11695
 // Name: usePollMessageContextItemTypes
 // Dependencies: [502, 504, 2]
 // Exports: default
 
-// Module 11668 (usePollMessageContextItemTypes)
+// Module 11694 (usePollMessageContextItemTypes)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "fetchFingerprint" /* 502 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-require = arg1;
-let obj = { END_EARLY: 0, [0]: "END_EARLY" };
+require = fn;
+const PollMessageContextItemTypes = { END_EARLY: 0, [0]: "END_EARLY" };
 let closure_4 = [];
-const result = require("set").fileFinishedImporting("modules/polls/chat/usePollMessageContextItemTypes.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/polls/chat/usePollMessageContextItemTypes.tsx");
 
 export default function usePollMessageContextItemTypes(poll) {
-  obj = initialize;
-  const items = [closure_2];
+  const obj = initialize;
+  const items = [AuthenticationStore];
   poll = poll.poll;
   const stateFromStores = obj.useStateFromStores(items, () => id.getId());
   if (poll.isPoll()) {
@@ -36,4 +37,4 @@ export default function usePollMessageContextItemTypes(poll) {
   }
   return closure_4;
 };
-export const PollMessageContextItemTypes = obj;
+export { PollMessageContextItemTypes };

@@ -1,68 +1,64 @@
-// Module ID: 10172
-// Function ID: 10173
+// Module ID: 10199
+// Function ID: 10200
 // Name: NotificationSettingsMessageUnreadActionSheet
-// Dependencies: [19, 17, 4742, 21, 4560, 576, 7150, 10169, 4556, 1114, 5685, 5688, 2]
+// Dependencies: [19, 17, 4756, 21, 4574, 576, 7164, 10196, 4570, 1114, 5699, 5702, 2]
 // Exports: default
 
-// Module 10172 (NotificationSettingsMessageUnreadActionSheet)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import context from "context" /* 5685 */;
-import TableRadioRow from "TableRadioRow" /* 5688 */;
-import Background from "Background" /* 7150 */;
-import NotificationSettingsMockChannelsDefault from "NotificationSettingsMockChannels" /* 10169 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4742 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10199 (NotificationSettingsMessageUnreadActionSheet)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import TableRadioGroup from "TableRadioGroup" /* 5699 */;
+import TableRadioRow from "TableRadioRow" /* 5702 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7164 */;
+import NotificationSettingsMockChannelsDefault from "NotificationSettingsMockChannels" /* 10196 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { sheet: null, header: null, content: null, form: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { padding: 24, paddingTop: 0 };
-createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, padding: 16 };
-createCacheKey[3] = { marginTop: 8, marginBottom: 16 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, padding: 16 };
-const result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageUnreadActionSheet.tsx");
+require = fn;
+const View = fn(17).View;
+const UnreadSetting = fn(4756).UnreadSetting;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { sheet: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, header: { padding: 24, paddingTop: 0 }, content: null, form: null };
+const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+obj2.content = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, padding: 16 };
+obj2.form = { marginTop: 8, marginBottom: 16 };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageUnreadActionSheet.tsx");
 
 export default function NotificationSettingsMessageUnreadActionSheet(defaultValue) {
-  const tmp = callback3();
-  let obj = { startExpanded: true, backgroundStyles: tmp.sheet, children: null };
-  obj = { style: tmp.header, children: callback(NotificationSettingsMockChannelsDefault, obj) };
-  obj = { unreadSetting: defaultValue.value };
-  const items = [callback(View, obj), ];
-  obj1 = { style: tmp.content, children: null };
-  const obj2 = { variant: "text-sm/semibold", children: null };
-  const intl = getSystemLocale.intl;
-  obj2[1] = intl.string(getSystemLocale.t.Tqd1Af);
-  const items1 = [callback(Text.Text, obj2), , ];
-  const obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj3[2] = intl2.string(getSystemLocale.t.RpQgm5);
-  items1[1] = callback(Text.Text, obj3);
-  const obj4 = { style: tmp.form, children: null };
-  const obj5 = { defaultValue: defaultValue.value, onChange: defaultValue.onChange, hasIcons: false, children: null };
-  const obj6 = { label: null, value: null };
-  const intl3 = getSystemLocale.intl;
-  obj6[0] = intl3.string(getSystemLocale.t["HVah/3"]);
-  obj6[1] = UnreadSetting.ALL_MESSAGES;
-  const items2 = [callback(TableRadioRow.TableRadioRow, obj6), ];
-  const obj7 = { subLabel: defaultValue.disabledMentionOnlyWithReason, disabled: null != defaultValue.disabledMentionOnlyWithReason, label: null, value: null };
-  const intl4 = getSystemLocale.intl;
-  obj7[2] = intl4.string(getSystemLocale.t["tu+ZWJ"]);
-  obj7[3] = UnreadSetting.ONLY_MENTIONS;
-  items2[1] = callback(TableRadioRow.TableRadioRow, obj7);
-  obj5[3] = items2;
-  obj4[1] = callback2(context.TableRadioGroup, obj5);
-  items1[2] = callback(View, obj4);
-  obj1[1] = items1;
-  items[1] = callback2(View, obj1);
-  obj[2] = items;
-  return callback2(Background.BottomSheet, obj);
+  const tmp = closure_7();
+  const obj = { startExpanded: true, backgroundStyles: tmp.sheet, children: null };
+  const obj2 = { style: tmp.header, children: hasOwnProperty(NotificationSettingsMockChannelsDefault, { unreadSetting: defaultValue.value }) };
+  const items = [hasOwnProperty(View, obj2), ];
+  const obj4 = { style: tmp.content, children: null };
+  const obj5 = { variant: "text-sm/semibold", children: null };
+  const intl = util.intl;
+  obj5.children = intl.string(util.t.Tqd1Af);
+  const items1 = [hasOwnProperty(Text_Text.Text, obj5), , ];
+  const obj6 = { variant: "text-xs/medium", color: "text-muted", children: null };
+  const intl2 = util.intl;
+  obj6.children = intl2.string(util.t.RpQgm5);
+  items1[1] = hasOwnProperty(Text_Text.Text, obj6);
+  const obj7 = { style: tmp.form, children: null };
+  const obj8 = { defaultValue: defaultValue.value, onChange: defaultValue.onChange, hasIcons: false, children: null };
+  const obj9 = { label: null, value: null };
+  const intl3 = util.intl;
+  obj9.label = intl3.string(util.t["HVah/3"]);
+  obj9.value = UnreadSetting.ALL_MESSAGES;
+  const items2 = [hasOwnProperty(TableRadioRow.TableRadioRow, obj9), ];
+  const obj10 = { subLabel: defaultValue.disabledMentionOnlyWithReason, disabled: null != defaultValue.disabledMentionOnlyWithReason, label: null, value: null };
+  const intl4 = util.intl;
+  obj10.label = intl4.string(util.t["tu+ZWJ"]);
+  obj10.value = UnreadSetting.ONLY_MENTIONS;
+  items2[1] = hasOwnProperty(TableRadioRow.TableRadioRow, obj10);
+  obj8.children = items2;
+  obj7.children = timestampProducer(TableRadioGroup.TableRadioGroup, obj8);
+  items1[2] = hasOwnProperty(View, obj7);
+  obj4.children = items1;
+  items[1] = timestampProducer(View, obj4);
+  obj.children = items;
+  return timestampProducer(Sheet_BottomSheet.BottomSheet, obj);
 };

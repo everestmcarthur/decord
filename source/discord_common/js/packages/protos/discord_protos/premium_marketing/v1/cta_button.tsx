@@ -1,17 +1,17 @@
-// Module ID: 10677
-// Function ID: 10678
-// Name: create
-// Dependencies: [32, 1188, 10675, 1218, 2]
+// Module ID: 10704
+// Function ID: 10705
+// Name: cta_button
+// Dependencies: [32, 1188, 10702, 1218, 2]
 
-// Module 10677 (create)
+// Module 10704 (cta_button)
 import _mod1188 from "module_1188" /* 1188 */;
-import defineProperty from "defineProperty" /* 1218 */;
-import create from "create" /* 10675 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType } from "module_1188" /* 1188 */;
+import wrappers from "wrappers" /* 1218 */;
+import localized_string from "localized_string" /* 10702 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
-let obj = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", OPEN_MARKETING_PAGE: 1, [1]: "OPEN_MARKETING_PAGE", OPEN_TIER_2_PAYMENT_MODAL: 2, [2]: "OPEN_TIER_2_PAYMENT_MODAL", OPEN_TIER_1_PAYMENT_MODAL: 3, [3]: "OPEN_TIER_1_PAYMENT_MODAL", OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER: 4, [4]: "OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER", OPEN_PLAN_SELECTION_MODAL: 5, [5]: "OPEN_PLAN_SELECTION_MODAL", OPEN_PREMIUM_GROUP_PAYMENT_MODAL: 6, [6]: "OPEN_PREMIUM_GROUP_PAYMENT_MODAL", OPEN_SOCIAL_LAYER_STOREFRONT: 7, [7]: "OPEN_SOCIAL_LAYER_STOREFRONT", OPEN_GUILD_BOOST_CHECKOUT: 8, [8]: "OPEN_GUILD_BOOST_CHECKOUT" };
+require = fn;
+const ButtonAction = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", OPEN_MARKETING_PAGE: 1, [1]: "OPEN_MARKETING_PAGE", OPEN_TIER_2_PAYMENT_MODAL: 2, [2]: "OPEN_TIER_2_PAYMENT_MODAL", OPEN_TIER_1_PAYMENT_MODAL: 3, [3]: "OPEN_TIER_1_PAYMENT_MODAL", OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER: 4, [4]: "OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER", OPEN_PLAN_SELECTION_MODAL: 5, [5]: "OPEN_PLAN_SELECTION_MODAL", OPEN_PREMIUM_GROUP_PAYMENT_MODAL: 6, [6]: "OPEN_PREMIUM_GROUP_PAYMENT_MODAL", OPEN_SOCIAL_LAYER_STOREFRONT: 7, [7]: "OPEN_SOCIAL_LAYER_STOREFRONT", OPEN_GUILD_BOOST_CHECKOUT: 8, [8]: "OPEN_GUILD_BOOST_CHECKOUT" };
+const MessageType = fn(1188).MessageType;
 class CTAButton$Type extends MessageType {
   constructor() {
     items = [, , , , ];
@@ -21,7 +21,7 @@ class CTAButton$Type extends MessageType {
       name: "button_action",
       kind: "enum",
       T() {
-            const items = ["discord_protos.premium_marketing.v1.ButtonAction", closure_3, "BUTTON_ACTION_"];
+            const items = ["discord_protos.premium_marketing.v1.ButtonAction", ButtonAction, "BUTTON_ACTION_"];
             return items;
           }
     };
@@ -29,47 +29,44 @@ class CTAButton$Type extends MessageType {
     obj = { no: 4, name: "copy_localized", kind: "message", T: null };
     class T {
       constructor() {
-        return require("create").LocalizedString;
+        return closure_1_0(closure_1_1[2]).LocalizedString;
       }
     }
-    obj[3] = T;
+    obj.T = T;
     items[3] = obj;
     items[4] = {
       no: 5,
       name: "navigable_storefront_application_id",
       kind: "message",
       T() {
-            return callback(1218).UInt64Value;
+            return require("wrappers").UInt64Value;
           }
     };
-    tmp = new tmp("discord_protos.premium_marketing.v1.CTAButton", items, T);
-    // ThrowIfThisInitialized (0x7c)
-    return tmp;
+    tmp1 = new tmp("discord_protos.premium_marketing.v1.CTAButton", items, T);
+    return tmp1;
   }
 }
-let prototype = CTAButton$Type.prototype;
+const prototype = CTAButton$Type.prototype;
 prototype["create"] = function create(arr) {
-  obj = { copy: "", buttonAction: 0, deeplinkSection: "" };
+  const obj = { copy: "", buttonAction: 0, deeplinkSection: "" };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
     const result = _mod1188.reflectionMergePartial(this, obj, arr);
     const tmpResult = _mod1188;
   }
   return obj;
 };
-prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
-  obj = arg3;
+  let obj = arg3;
   if (arg3 == null) {
     obj = self.create();
   }
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         obj.copy = pos.string();
@@ -78,20 +75,10 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (3 === tmp5) {
         obj.deeplinkSection = pos.string();
       } else if (4 === tmp5) {
-        let tmp27 = require;
-        let tmp28 = dependencyMap;
-        let LocalizedString = create.LocalizedString;
-        let tmp29 = LocalizedString;
-        let tmp30 = pos;
-        let tmp31 = readUnknownField;
+        let LocalizedString = localized_string.LocalizedString;
         obj.copyLocalized = LocalizedString.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.copyLocalized);
       } else if (5 === tmp5) {
-        let tmp22 = require;
-        let tmp23 = dependencyMap;
-        let UInt64Value = defineProperty.UInt64Value;
-        let tmp24 = UInt64Value;
-        let tmp25 = pos;
-        let tmp26 = readUnknownField;
+        let UInt64Value = wrappers.UInt64Value;
         obj.navigableStorefrontApplicationId = UInt64Value.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.navigableStorefrontApplicationId);
       } else {
         let onRead = readUnknownField.readUnknownField;
@@ -102,25 +89,16 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -143,13 +121,13 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(copy, tag, write
     const tagResult2 = tag.tag(3, _mod1188.WireType.LengthDelimited);
   }
   if (copy.copyLocalized) {
-    const LocalizedString = create.LocalizedString;
+    const LocalizedString = localized_string.LocalizedString;
     const tagResult3 = tag.tag(4, _mod1188.WireType.LengthDelimited);
     const joined = LocalizedString.internalBinaryWrite(copy.copyLocalized, tag.tag(4, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(copy.copyLocalized, tag.tag(4, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (copy.navigableStorefrontApplicationId) {
-    const UInt64Value = defineProperty.UInt64Value;
+    const UInt64Value = wrappers.UInt64Value;
     const tagResult4 = tag.tag(5, _mod1188.WireType.LengthDelimited);
     const joined1 = UInt64Value.internalBinaryWrite(copy.navigableStorefrontApplicationId, tag.tag(5, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = UInt64Value.internalBinaryWrite(copy.navigableStorefrontApplicationId, tag.tag(5, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -171,7 +149,7 @@ let items = [
     name: "button_action",
     kind: "enum",
     T() {
-      const items = ["discord_protos.premium_marketing.v1.ButtonAction", closure_3, "BUTTON_ACTION_"];
+      const items = ["discord_protos.premium_marketing.v1.ButtonAction", ButtonAction, "BUTTON_ACTION_"];
       return items;
     }
   },
@@ -179,25 +157,25 @@ let items = [
 ,
 
 ];
-obj = { no: 4, name: "copy_localized", kind: "message", T: null };
+const obj2 = { no: 4, name: "copy_localized", kind: "message", T: null };
 class T {
   constructor() {
-    return require("create").LocalizedString;
+    return closure_1_0(closure_1_1[2]).LocalizedString;
   }
 }
-obj[3] = T;
-items[3] = obj;
+obj2.T = T;
+items[3] = obj2;
 items[4] = {
   no: 5,
   name: "navigable_storefront_application_id",
   kind: "message",
   T() {
-    return callback(1218).UInt64Value;
+    return require("wrappers").UInt64Value;
   }
 };
-prototype = new prototype("discord_protos.premium_marketing.v1.CTAButton", items, tmp, T, CTAButton$Type, prototype, items, arg1, dependencyMap);
-// ThrowIfThisInitialized (0x7c)
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/cta_button.tsx");
+const prototype1 = new prototype("discord_protos.premium_marketing.v1.CTAButton", items, tmp, T, CTAButton$Type, prototype, items, fn, dependencyMap);
+const size = fn(2);
+let result = size.fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/cta_button.tsx");
 
-export const ButtonAction = obj;
-export const CTAButton = prototype;
+export { ButtonAction };
+export const CTAButton = prototype1;

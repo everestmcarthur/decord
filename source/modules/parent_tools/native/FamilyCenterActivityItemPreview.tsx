@@ -1,68 +1,57 @@
-// Module ID: 14906
-// Function ID: 14907
-// Name: AvatarDecorationPreviewImage
-// Dependencies: [19, 17, 8222, 21, 4560, 14905, 576, 8824, 8201, 8827, 12142, 9380, 8667, 1889, 1886, 2]
+// Module ID: 14932
+// Function ID: 14933
+// Name: FamilyCenterActivityItemPreview
+// Dependencies: [19, 17, 8248, 21, 4574, 14931, 576, 8853, 8227, 8856, 12168, 9407, 8695, 1889, 1886, 2]
 // Exports: default
 
-// Module 14906 (AvatarDecorationPreviewImage)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
+// Module 14932 (FamilyCenterActivityItemPreview)
+import nativeDefault from "native" /* 576 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import useMaybeFetchProfileFrameDefault from "useMaybeFetchProfileFrame" /* 8201 */;
-import getNameplateAssets from "getNameplateAssets" /* 8824 */;
-import ShopIcon from "ShopIcon" /* 12142 */;
-import getCollectibleTypeName from "getCollectibleTypeName" /* 14905 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { PROFILE_FRAME_ASPECT_RATIO as closure_5 } from "PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO" /* 8222 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import useMaybeFetchProfileFrameDefault from "useMaybeFetchProfileFrame" /* 8227 */;
+import NameplateUtils from "NameplateUtils" /* 8853 */;
+import ShopIcon from "ShopIcon" /* 12168 */;
+import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 14931 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function AvatarDecorationPreviewImage(arg0) {
   ({ product, styles } = arg0);
-  let obj = getCollectibleTypeName;
-  const avatarDecorationPreviewUrl = obj.getAvatarDecorationPreviewUrl(product);
+  const avatarDecorationPreviewUrl = FamilyCenterActivityPurchaseRowUtils.getAvatarDecorationPreviewUrl(product);
   let tmp2 = null;
   if (null != avatarDecorationPreviewUrl) {
-    obj = { source: null, style: null, fadeDuration: 0 };
-    obj = { uri: null };
-    obj[0] = avatarDecorationPreviewUrl;
-    obj[0] = obj;
-    obj[1] = styles.avatarDecorationPreview;
-    tmp2 = <closure_4 uri={null} />;
+    const obj2 = { source: null, style: null, fadeDuration: 0 };
+    const obj3 = { uri: avatarDecorationPreviewUrl };
+    obj2.source = obj3;
+    obj2.style = styles.avatarDecorationPreview;
+    tmp2 = <React4 source={null} style={null} fadeDuration={0} />;
   }
   return tmp2;
 }
 function NameplatePreviewImage(styles) {
   styles = styles.styles;
-  let obj = getNameplateAssets;
-  const staticImageUrl = obj.getNameplateAssets(styles.nameplateData).staticImageUrl;
+  const staticImageUrl = NameplateUtils.getNameplateAssets(styles.nameplateData).staticImageUrl;
   let tmp = null;
   if (null != staticImageUrl) {
-    obj = { style: null, children: null };
-    obj[0] = styles.nameplateContainer;
-    obj = { source: null, style: null, resizeMode: "cover", fadeDuration: 0 };
-    obj1 = { uri: null };
-    obj1[0] = staticImageUrl;
-    obj[0] = obj1;
-    obj[1] = styles.nameplatePreview;
-    obj[1] = <closure_4 source={null} style={null} resizeMode="cover" fadeDuration={0} />;
-    tmp = <closure_3 source={null} style={null} resizeMode="cover" fadeDuration={0} />;
+    const obj2 = { style: styles.nameplateContainer, children: null };
+    const obj3 = { source: null, style: null, resizeMode: "cover", fadeDuration: 0 };
+    const obj4 = { uri: staticImageUrl };
+    obj3.source = obj4;
+    obj3.style = styles.nameplatePreview;
+    obj2.children = <React4 source={null} style={null} resizeMode="cover" fadeDuration={0} />;
+    tmp = <React3 style={styles.nameplateContainer}>{null}</React3>;
   }
   return tmp;
 }
 function ProfileEffectPreviewImage(arg0) {
   ({ product, styles } = arg0);
-  let obj = getCollectibleTypeName;
-  const profileEffectPreviewUrl = obj.getProfileEffectPreviewUrl(product);
+  const profileEffectPreviewUrl = FamilyCenterActivityPurchaseRowUtils.getProfileEffectPreviewUrl(product);
   let tmp2 = null;
   if (null != profileEffectPreviewUrl) {
-    obj = { source: null, style: null, fadeDuration: 0 };
-    obj = { uri: null };
-    obj[0] = profileEffectPreviewUrl;
-    obj[0] = obj;
-    obj[1] = styles.avatarDecorationPreview;
-    tmp2 = <closure_4 uri={null} />;
+    const obj2 = { source: null, style: null, fadeDuration: 0 };
+    const obj3 = { uri: profileEffectPreviewUrl };
+    obj2.source = obj3;
+    obj2.style = styles.avatarDecorationPreview;
+    tmp2 = <React4 source={null} style={null} fadeDuration={0} />;
   }
   return tmp2;
 }
@@ -71,119 +60,98 @@ function ProfileFramePreviewImage(arg0) {
   const tmp3 = useMaybeFetchProfileFrameDefault(product.skuId, "FamilyCenterActivityItemPreview");
   let tmp4 = null;
   if (null != tmp3) {
-    let obj = { style: null, children: null };
-    obj[0] = styles.profileFrameContainer;
-    obj = { profileFrame: null, previewWidth: null, previewHeight: null, profileBackgroundColor: null };
-    obj[0] = tmp3;
-    obj[1] = getCollectibleTypeName.PREVIEW_SIZE * closure_5;
-    obj[2] = getCollectibleTypeName.PREVIEW_SIZE;
-    obj[3] = tmp(576).colors.BACKGROUND_BASE_LOW;
-    obj[1] = jsx(tmp(8827), { profileFrame: null, previewWidth: null, previewHeight: null, profileBackgroundColor: null });
-    tmp4 = <closure_3 profileFrame={null} previewWidth={null} previewHeight={null} profileBackgroundColor={null} />;
-    const tmpResult = tmp(8827);
+    const obj = { style: styles.profileFrameContainer, children: null };
+    const obj2 = { profileFrame: tmp3, previewWidth: FamilyCenterActivityPurchaseRowUtils.PREVIEW_SIZE * closure_5, previewHeight: FamilyCenterActivityPurchaseRowUtils.PREVIEW_SIZE, profileBackgroundColor: tmp(576).colors.BACKGROUND_BASE_LOW };
+    obj.children = jsx(tmp(8856), { profileFrame: tmp3, previewWidth: FamilyCenterActivityPurchaseRowUtils.PREVIEW_SIZE * closure_5, previewHeight: FamilyCenterActivityPurchaseRowUtils.PREVIEW_SIZE, profileBackgroundColor: tmp(576).colors.BACKGROUND_BASE_LOW });
+    tmp4 = <React3 style={styles.profileFrameContainer}>{null}</React3>;
+    const tmpResult = tmp(8856);
   }
   return tmp4;
 }
 function SubscriptionPreview(arg0) {
   ({ subscriptionPlanId, styles } = arg0);
   if (null == subscriptionPlanId) {
-    let obj = { style: null, children: null };
-    obj[0] = styles.purchasePlaceholder;
-    obj = { size: "custom", style: null };
-    obj[1] = { width: 20, height: 20 };
-    obj[1] = jsx(ShopIcon.ShopIcon, { size: "custom", style: null });
-    return <closure_3 size="custom" style={null} />;
+    const obj2 = { style: styles.purchasePlaceholder, children: null };
+    const obj3 = { size: "custom", style: { width: 20, height: 20 } };
+    obj2.children = jsx(ShopIcon.ShopIcon, { size: "custom", style: { width: 20, height: 20 } });
+    return <React3 style={styles.purchasePlaceholder}>{null}</React3>;
   } else {
-    obj1 = { style: null, children: null };
-    obj1[0] = styles.purchasePlaceholder;
+    const obj5 = { style: styles.purchasePlaceholder, children: null };
     if (obj4.isGuildBoostSubscription(subscriptionPlanId)) {
-      let NitroWheelIcon = tmp5(9380).BoostGemIcon;
+      let NitroWheelIcon = tmp5(9407).BoostGemIcon;
     } else {
-      NitroWheelIcon = tmp5(8667).NitroWheelIcon;
+      NitroWheelIcon = tmp5(8695).NitroWheelIcon;
     }
-    obj = { size: "custom", style: null };
-    obj[1] = { width: 20, height: 20 };
-    obj1[1] = <NitroWheelIcon size="custom" style={null} />;
-    return <closure_3 style={null}>{null}</closure_3>;
+    const obj = { size: "custom", style: { width: 20, height: 20 } };
+    obj5.children = <NitroWheelIcon size="custom" style={{ width: 20, height: 20 }} />;
+    return <React3 style={styles.purchasePlaceholder}>{null}</React3>;
   }
 }
 function CollectiblePreview(arg0) {
   ({ product, styles } = arg0);
   if (null == product) {
-    let obj = { style: null, children: null };
-    obj[0] = styles.purchasePlaceholder;
-    obj = { size: "custom", style: null };
-    obj[1] = { width: 20, height: 20 };
-    obj[1] = jsx(ShopIcon.ShopIcon, { size: "custom", style: null });
-    return <closure_3 size="custom" style={null} />;
+    const obj2 = { style: styles.purchasePlaceholder, children: null };
+    const obj3 = { size: "custom", style: { width: 20, height: 20 } };
+    obj2.children = jsx(ShopIcon.ShopIcon, { size: "custom", style: { width: 20, height: 20 } });
+    return <React3 style={styles.purchasePlaceholder}>{null}</React3>;
   } else {
     const type = product.type;
     if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
-      obj1 = { product: null, styles: null };
-      obj1[0] = product;
-      obj1[1] = styles;
-      return <AvatarDecorationPreviewImage product={null} styles={null} />;
+      const obj4 = { product, styles };
+      return <AvatarDecorationPreviewImage product={product} styles={styles} />;
     } else if (tmp17(1889).CollectiblesItemType.NAMEPLATE === type) {
       const nameplateDataFromProductRecord = tmp17(1886).getNameplateDataFromProductRecord(product);
       let tmp8 = null;
       if (null != nameplateDataFromProductRecord) {
-        const obj2 = { nameplateData: null, styles: null };
-        obj2[0] = nameplateDataFromProductRecord;
-        obj2[1] = styles;
-        tmp8 = <NameplatePreviewImage nameplateData={null} styles={null} />;
+        const obj5 = { nameplateData: nameplateDataFromProductRecord, styles };
+        tmp8 = <NameplatePreviewImage nameplateData={nameplateDataFromProductRecord} styles={styles} />;
       }
       return tmp8;
     } else if (tmp17(1889).CollectiblesItemType.PROFILE_EFFECT === type) {
-      const obj3 = { product: null, styles: null };
-      obj3[0] = product;
-      obj3[1] = styles;
-      return <ProfileEffectPreviewImage product={null} styles={null} />;
+      const obj6 = { product, styles };
+      return <ProfileEffectPreviewImage product={product} styles={styles} />;
     } else if (tmp17(1889).CollectiblesItemType.PROFILE_FRAME === type) {
-      const obj4 = { product: null, styles: null };
-      obj4[0] = product;
-      obj4[1] = styles;
-      return <ProfileFramePreviewImage product={null} styles={null} />;
+      const obj7 = { product, styles };
+      return <ProfileFramePreviewImage product={product} styles={styles} />;
     } else {
-      obj = { style: null, children: null };
-      obj[0] = styles.purchasePlaceholder;
-      const obj5 = { size: "custom", style: null };
-      obj5[1] = { width: 20, height: 20 };
-      obj[1] = jsx(tmp17(12142).ShopIcon, { size: "custom", style: null });
-      return <closure_3 style={null}>{null}</closure_3>;
+      const obj = { style: styles.purchasePlaceholder, children: null };
+      const obj8 = { size: "custom", style: { width: 20, height: 20 } };
+      obj.children = jsx(tmp17(12168).ShopIcon, { size: "custom", style: { width: 20, height: 20 } });
+      return <React3 style={styles.purchasePlaceholder}>{null}</React3>;
     }
   }
 }
-noopAll;
-({ View: c3, Image: c4 } = get_ActivityIndicator);
-createCacheKey = { purchasePlaceholder: null, avatarDecorationPreview: null, nameplateContainer: null, nameplatePreview: null, profileFrameContainer: null };
-createCacheKey = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", alignItems: "center", justifyContent: "center", marginRight: 12 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, marginRight: 12 };
-let obj1 = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, marginRight: 12 };
-createCacheKey[2] = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, marginRight: 12, borderRadius: ThemesDefault.radii.xs, overflow: "hidden", position: "relative" };
-let obj2 = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, marginRight: 12, borderRadius: ThemesDefault.radii.xs, overflow: "hidden", position: "relative" };
-createCacheKey[3] = { position: "absolute", right: 0, width: require("getCollectibleTypeName").PREVIEW_SIZE * require("getCollectibleTypeName").NAMEPLATE_ASPECT_RATIO, height: require("getCollectibleTypeName").PREVIEW_SIZE };
-let obj3 = { position: "absolute", right: 0, width: require("getCollectibleTypeName").PREVIEW_SIZE * require("getCollectibleTypeName").NAMEPLATE_ASPECT_RATIO, height: require("getCollectibleTypeName").PREVIEW_SIZE };
-createCacheKey[4] = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, marginRight: 12, alignItems: "center", justifyContent: "center" };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, marginRight: 12, alignItems: "center", justifyContent: "center" };
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityItemPreview.tsx");
+get_ActivityIndicator = fn(17);
+({ View: c3, Image: closure_4 } = get_ActivityIndicator);
+let closure_5 = fn(8248).PROFILE_FRAME_ASPECT_RATIO;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { purchasePlaceholder: null, avatarDecorationPreview: null, nameplateContainer: null, nameplatePreview: null, profileFrameContainer: null };
+let size = { width: fn(14931).PREVIEW_SIZE, height: fn(14931).PREVIEW_SIZE, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", alignItems: "center", justifyContent: "center", marginRight: 12 };
+obj2.purchasePlaceholder = size;
+const size1 = { width: fn(14931).PREVIEW_SIZE, height: fn(14931).PREVIEW_SIZE, marginRight: 12 };
+obj2.avatarDecorationPreview = size1;
+const size2 = { width: fn(14931).PREVIEW_SIZE, height: fn(14931).PREVIEW_SIZE, marginRight: 12, borderRadius: nativeDefault.radii.xs, overflow: "hidden", position: "relative" };
+obj2.nameplateContainer = size2;
+const size3 = { position: "absolute", right: 0, width: fn(14931).PREVIEW_SIZE * fn(14931).NAMEPLATE_ASPECT_RATIO, height: fn(14931).PREVIEW_SIZE };
+obj2.nameplatePreview = size3;
+const size4 = { width: fn(14931).PREVIEW_SIZE, height: fn(14931).PREVIEW_SIZE, marginRight: 12, alignItems: "center", justifyContent: "center" };
+obj2.profileFrameContainer = size4;
+let closure_7 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityItemPreview.tsx");
 
 export default function FamilyCenterActivityItemPreview(arg0) {
   ({ displayName, product, isSubscription, subscriptionPlanId } = arg0);
-  const tmp = callback();
-  let obj = { accessible: true, accessibilityLabel: displayName, children: null };
+  const tmp = closure_7();
+  const obj = { accessible: true, accessibilityLabel: displayName, children: null };
   if (isSubscription) {
-    obj = { subscriptionPlanId: null, styles: null };
-    obj[0] = subscriptionPlanId;
-    obj[1] = tmp;
-    let tmp2Result = tmp2(SubscriptionPreview, obj);
+    const obj2 = { subscriptionPlanId, styles: tmp };
+    let tmp2Result = tmp2(SubscriptionPreview, obj2);
   } else {
-    obj = { product: null, styles: null };
-    obj[0] = product;
-    obj[1] = tmp;
-    tmp2Result = tmp2(CollectiblePreview, obj);
+    const obj3 = { product, styles: tmp };
+    tmp2Result = tmp2(CollectiblePreview, obj3);
   }
-  obj[2] = tmp2Result;
-  return <closure_3 accessible accessibilityLabel={displayName}>{null}</closure_3>;
+  obj.children = tmp2Result;
+  return <React3 accessible accessibilityLabel={displayName}>{null}</React3>;
 };

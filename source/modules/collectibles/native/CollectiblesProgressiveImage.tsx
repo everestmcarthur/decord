@@ -1,41 +1,42 @@
-// Module ID: 15849
-// Function ID: 15850
+// Module ID: 15879
+// Function ID: 15880
 // Name: CollectiblesProgressiveImage
-// Dependencies: [19, 17, 21, 4296, 4561, 2]
+// Dependencies: [19, 17, 21, 4310, 4575, 2]
 // Exports: CollectiblesProgressiveImage
 
-// Module 15849 (CollectiblesProgressiveImage)
-import noopAll from "noop" /* 19 */;
-import _modDef4296 from "module_4296" /* 4296 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 15879 (CollectiblesProgressiveImage)
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import timing from "timing" /* 4575 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ View: c3, StyleSheet: c4 } = get_ActivityIndicator);
-let result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesProgressiveImage.tsx");
+const ReanimatedRexportDefault = ReanimatedRexport;
+
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesProgressiveImage.tsx");
 
 export const CollectiblesProgressiveImage = function CollectiblesProgressiveImage(arg0) {
   ({ source, style } = arg0);
   let sharedValue;
-  const merged = Object.assign(arg0, Object.create(null));
-  let obj = sharedValue(4296);
-  sharedValue = obj.useSharedValue(0);
-  obj = { style, children: null };
-  obj = {};
+  const merged = Object.assign(arg0, Object.assign({ source: 0, style: 0 }));
+  sharedValue = sharedValue(4310).useSharedValue(0);
+  let obj2 = { style, children: null };
+  const obj3 = {};
   const merged1 = Object.assign(merged);
-  obj.source = source;
-  obj1 = {};
+  obj3.source = source;
+  const obj4 = {};
   const merged2 = Object.assign(absoluteFillObject.absoluteFillObject);
-  obj1.opacity = sharedValue;
-  obj.style = obj1;
-  obj.onLoad = function onLoad() {
-    let obj = sharedValue(closure_1_2[4]);
-    obj = { duration: 500, easing: null };
-    const Easing = sharedValue(closure_1_2[3]).Easing;
-    obj[1] = Easing.inOut(sharedValue(closure_1_2[3]).Easing.ease);
-    const result = sharedValue.set(obj.withTiming(1, obj));
+  obj4.opacity = sharedValue;
+  obj3.style = obj4;
+  obj3.onLoad = function onLoad() {
+    const obj2 = { duration: 500, easing: null };
+    const Easing = ReanimatedRexport.Easing;
+    obj2.easing = Easing.inOut(ReanimatedRexport.Easing.ease);
+    const result = sharedValue.set(timing.withTiming(1, obj2));
   };
-  obj[1] = jsx(_modDef4296.Image, {});
-  return <closure_3 />;
+  obj2.children = jsx(ReanimatedRexportDefault.Image, {});
+  return <closure_3 style={style}>{null}</closure_3>;
 };

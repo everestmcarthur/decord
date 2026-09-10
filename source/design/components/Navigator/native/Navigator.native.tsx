@@ -1,20 +1,21 @@
-// Module ID: 7000
-// Function ID: 7001
-// Name: NavigationStack
-// Dependencies: [32, 19, 17, 21, 4560, 576, 7001, 5624, 4262, 7002, 1611, 1114, 12, 7035, 1484, 4495, 7041, 1233, 2]
+// Module ID: 7014
+// Function ID: 7015
+// Name: Navigator
+// Dependencies: [32, 19, 17, 21, 4574, 576, 7015, 5638, 4275, 7016, 1611, 1114, 12, 7049, 1484, 4509, 7055, 1233, 2]
 // Exports: Navigator, useAccessibilityNativeStackOptions, useNavigatorScreens
 
-// Module 7000 (NavigationStack)
-import ThemesDefault from "Themes" /* 576 */;
-import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1484 */;
-import useNavigationTheme from "useNavigationTheme" /* 7041 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 7014 (Navigator)
+import nativeDefault from "native" /* 576 */;
+import SentryInitUtils from "SentryInitUtils" /* 1233 */;
+import Link from "Link" /* 1484 */;
+import NavigatorHeader from "NavigatorHeader" /* 5638 */;
+import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade" /* 7015 */;
+import NavigatorScreen from "NavigatorScreen" /* 7049 */;
+import useNavigationTheme from "useNavigationTheme" /* 7055 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function NavigationStack(screens) {
   screens = screens.screens;
   const onWillFocus = screens.onWillFocus;
@@ -33,35 +34,28 @@ function NavigationStack(screens) {
   const headerBackTitle = screens.headerBackTitle;
   const hideTitle = screens.hideTitle;
   const disableHeaderAnimation = screens.disableHeaderAnimation;
-  closure_18 = undefined;
-  let styles;
-  let token;
-  let navigatorShouldCrossfade;
-  let first;
-  let top;
-  closure_24 = undefined;
   ({ initialRouteName, detachInactiveScreens } = screens);
   const tmp = cardShadowEnabled();
   closure_18 = tmp;
+  const styles = screens(onDidFocus[7]).useStyles();
   let obj = screens(onDidFocus[7]);
-  styles = obj.useStyles();
-  token = screens(onDidFocus[8]).useToken(onWillFocus(onDidFocus[5]).colors.NAVIGATOR_HEADER_TINT);
-  const obj2 = screens(onDidFocus[8]);
-  navigatorShouldCrossfade = screens(onDidFocus[6]).useNavigatorShouldCrossfade();
-  first = gestureResponseDistance(gestureDirection.useState(() => screens(onDidFocus[9]).createStackNavigator()), 1)[0];
-  top = onWillFocus(onDidFocus[10])().top;
+  const token = screens(onDidFocus[8]).useToken(onWillFocus(onDidFocus[5]).colors.NAVIGATOR_HEADER_TINT);
+  let obj2 = screens(onDidFocus[8]);
+  const navigatorShouldCrossfade = screens(onDidFocus[6]).useNavigatorShouldCrossfade();
+  const first = gestureResponseDistance(gestureDirection.useState(() => screens(onDidFocus[9]).createStackNavigator()), 1)[0];
+  const top = onWillFocus(onDidFocus[10])().top;
   let items = [onWillFocus, onDidFocus];
-  closure_24 = gestureDirection.useCallback((arg0) => {
+  const listeners = gestureDirection.useCallback((arg0) => {
     closure_0 = arg0;
     return {
       focus() {
-        if (closure_1_1 != null) {
+        if (onWillFocus != null) {
           tmp(closure_0);
         }
       },
       transitionEnd(data) {
         if (!data.data.closing) {
-          if (closure_1_2 != null) {
+          if (onDidFocus != null) {
             tmp(closure_0);
           }
         }
@@ -87,7 +81,7 @@ function NavigationStack(screens) {
   items1[19] = headerStatusBarHeight;
   items1[20] = top;
   items1[21] = disableHeaderAnimation;
-  obj = {
+  const obj4 = {
     detachInactiveScreens,
     initialRouteName,
     screenOptions: gestureDirection.useCallback((navigation) => {
@@ -104,129 +98,134 @@ function NavigationStack(screens) {
       if (navigatorShouldCrossfade) {
         str = "screen";
       }
-      let obj = { headerMode: str, headerStyle: items, headerTintColor: token, headerTitleStyle: styles.headerTitle, headerBackTitleStyle: styles.headerBackTitleStyle, headerTitleAllowFontScaling: false, headerBackImage: screens(onDidFocus[7]).renderBackImage, headerBackButtonDisplayMode: "minimal", headerTitleContainerStyle: items1, headerLeftContainerStyle: items2, headerRightContainerStyle: items3, headerTitle: null, gestureDirection: null, gestureResponseDistance: null, cardOverlayEnabled: null, cardShadowEnabled: null, cardStyle: null, headerBackTitle: null, headerTitleAlign: null, headerStatusBarHeight: null, cardStyleInterpolator: null, headerStyleInterpolator: null };
-      items = [closure_18.navbar, headerStyle];
-      items1 = [{ maxWidth: "60%", alignItems: "center" }, headerTitleContainerStyle];
-      items2 = [closure_18.headerLeftContainerStyle, headerLeftContainerStyle];
-      items3 = [closure_18.headerRightContainerStyle, headerRightContainerStyle];
+      let obj = { headerMode: str, headerStyle: null, headerTintColor: token, headerTitleStyle: styles.headerTitle, headerBackTitleStyle: styles.headerBackTitleStyle, headerTitleAllowFontScaling: false, headerBackImage: NavigatorHeader.renderBackImage, headerBackButtonDisplayMode: "minimal", headerTitleContainerStyle: null, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerTitle: null, gestureDirection: null, gestureResponseDistance: null, cardOverlayEnabled: null, cardShadowEnabled: null, cardStyle: null, headerBackTitle: null, headerTitleAlign: null, headerStatusBarHeight: null, cardStyleInterpolator: null, headerStyleInterpolator: null };
+      const items = [closure_18.navbar, headerStyle];
+      obj.headerStyle = items;
+      const items1 = [{ maxWidth: "60%", alignItems: "center" }, headerTitleContainerStyle];
+      obj.headerTitleContainerStyle = items1;
+      const items2 = [closure_18.headerLeftContainerStyle, headerLeftContainerStyle];
+      obj.headerLeftContainerStyle = items2;
+      const items3 = [closure_18.headerRightContainerStyle, headerRightContainerStyle];
+      obj.headerRightContainerStyle = items3;
       let fn;
       if (hideTitle) {
         fn = () => {
 
         };
       }
-      obj[11] = fn;
-      obj[12] = gestureDirection;
-      obj[13] = gestureResponseDistance;
-      obj[14] = cardOverlayEnabled;
-      obj[15] = cardShadowEnabled;
-      obj[16] = cardStyle;
+      obj.headerTitle = fn;
+      obj.gestureDirection = gestureDirection;
+      obj.gestureResponseDistance = gestureResponseDistance;
+      obj.cardOverlayEnabled = cardOverlayEnabled;
+      obj.cardShadowEnabled = cardShadowEnabled;
+      obj.cardStyle = cardStyle;
       let tmp5 = headerBackTitle;
       if (headerBackTitle == null) {
         let stringResult;
         if (1 === routes.length) {
-          const intl = tmp3(tmp4[11]).intl;
-          stringResult = intl.string(tmp3(tmp4[11]).t["13/7kX"]);
+          const intl = tmp3(1114).intl;
+          stringResult = intl.string(tmp3(1114).t["13/7kX"]);
         }
         tmp5 = stringResult;
       }
-      obj[17] = tmp5;
+      obj.headerBackTitle = tmp5;
       let str2 = headerTitleAlign;
       if (headerTitleAlign == null) {
         str2 = "center";
       }
-      obj[18] = str2;
+      obj.headerTitleAlign = str2;
       let tmp7 = headerStatusBarHeight;
       if (null == headerStatusBarHeight) {
         tmp7 = top;
       }
-      obj[19] = tmp7;
+      obj.headerStatusBarHeight = tmp7;
       if (navigatorShouldCrossfade) {
         let fn2 = (current) => {
-          let obj = { cardStyle: null };
-          obj = { opacity: progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1] }) };
-          progress = current.current.progress;
-          obj[0] = obj;
+          const obj = { cardStyle: null };
+          const obj2 = { opacity: null };
+          const progress = current.current.progress;
+          obj2.opacity = progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1] });
+          obj.cardStyle = obj2;
           return obj;
         };
       } else {
-        fn2 = tmp3(tmp4[9]).CardStyleInterpolators.forHorizontalIOS;
+        fn2 = tmp3(7016).CardStyleInterpolators.forHorizontalIOS;
       }
-      obj[20] = fn2;
+      obj.cardStyleInterpolator = fn2;
       if (disableHeaderAnimation) {
-        let fn3 = tmp3(tmp4[9]).HeaderStyleInterpolators.forNoAnimation;
+        let fn3 = tmp3(7016).HeaderStyleInterpolators.forNoAnimation;
       } else if (tmp2) {
-        fn3 = tmp3(tmp4[9]).HeaderStyleInterpolators.forFade;
+        fn3 = tmp3(7016).HeaderStyleInterpolators.forFade;
       } else {
         fn3 = (arg0) => {
           ({ current, next, layouts, direction } = arg0);
-          const HeaderStyleInterpolators = callback(table[9]).HeaderStyleInterpolators;
+          const HeaderStyleInterpolators = screens(onDidFocus[9]).HeaderStyleInterpolators;
           const forUIKitResult = HeaderStyleInterpolators.forUIKit({ current, next, layouts, direction });
           forUIKitResult.leftButtonStyle.transform = forUIKitResult.titleStyle.transform;
           forUIKitResult.rightButtonStyle.transform = forUIKitResult.titleStyle.transform;
           return forUIKitResult;
         };
       }
-      obj[21] = fn3;
+      obj.headerStyleInterpolator = fn3;
       return obj;
     }, items1),
     children: null
   };
   const obj3 = screens(onDidFocus[6]);
   const keys = onWillFocus(onDidFocus[12]).keys(screens);
-  obj[3] = keys.map((name) => {
-    let obj = {};
-    let merged = Object.assign(obj[name]);
-    let fullscreen = obj.fullscreen;
+  obj4.children = keys.map((name) => {
+    const options = {};
+    let merged = Object.assign(options[name]);
+    let fullscreen = options.fullscreen;
     if (!fullscreen) {
-      fullscreen = null != obj.customNavbar;
+      fullscreen = null != options.customNavbar;
     }
     if (hideTitle) {
-      obj.headerTitle = () => {
+      options.headerTitle = () => {
 
       };
     }
     if (fullscreen) {
-      obj.headerTransparent = true;
-      obj.headerMode = "float";
-      const items = [obj.headerStyle, { backgroundColor: "transparent" }];
-      obj.headerStyle = items;
+      options.headerTransparent = true;
+      options.headerMode = "float";
+      const items = [options.headerStyle, { backgroundColor: "transparent" }];
+      options.headerStyle = items;
     }
-    obj = {
+    return cardOverlayEnabled(first.Screen, {
       name,
-      initialParams: obj.initialParams,
-      listeners: closure_24,
-      options: obj,
+      initialParams: options.initialParams,
+      listeners,
+      options,
       children(arg0) {
-        obj = { screen: obj };
+        screen = { screen };
         const merged = Object.assign(arg0);
-        obj.viewStyle = closure_1_10;
-        return cardOverlayEnabled(screens(onDidFocus[13]).NavigatorScreen, obj);
+        screen.viewStyle = viewStyle;
+        return jsx(NavigatorScreen.NavigatorScreen, { screen });
       }
-    };
-    return cardOverlayEnabled(first.Screen, obj, name);
+    }, name);
   });
-  return cardOverlayEnabled(first.Navigator, obj);
+  return cardOverlayEnabled(first.Navigator, obj4);
 }
 function WrappedNavigationStack(arg0) {
   ({ initialRouteStack: require, initialRouteState, navigationTheme } = arg0);
   ({ initialRouteName, onStateChange } = arg0);
-  const merged = Object.assign(arg0, Object.create(null));
-  let navigationContainerRef;
-  let obj = createStandardNavigationFactories;
-  navigationContainerRef = obj.createNavigationContainerRef();
-  const first = callback(React.useState(() => {
+  const merged = Object.assign(arg0, Object.assign({ initialRouteName: 0, initialRouteStack: 0, initialRouteState: 0, onStateChange: 0, navigationTheme: 0 }));
+  const navigationContainerRef = Link.createNavigationContainerRef();
+  const first = _slicedToArray(noop.useState(() => {
     let tmp2;
-    if (null != closure_0) {
-      const obj = { routes: null };
-      obj[0] = tmp;
+    if (null != require) {
+      const obj = { routes: tmp };
       tmp2 = obj;
     }
     return tmp2;
   }), 1)[0];
-  obj1 = useNavigationTheme;
-  navigationTheme = obj1.useNavigationTheme(navigationContainerRef(4495)());
-  obj = { ref: navigationContainerRef, theme: navigationTheme, initialState: null, onReady: null, onStateChange: null, children: null };
+  const tmp4 = navigationContainerRef(4509)();
+  let navigationTheme1 = useNavigationTheme.useNavigationTheme(tmp4);
+  const obj3 = { ref: navigationContainerRef, theme: null, initialState: null, onReady: null, onStateChange: null, children: null };
+  if (null != navigationTheme) {
+    navigationTheme1 = navigationTheme;
+  }
+  obj3.theme = navigationTheme1;
   if (null == initialRouteState) {
     let tmp7;
     if (null != first) {
@@ -234,39 +233,41 @@ function WrappedNavigationStack(arg0) {
     }
     initialRouteState = tmp7;
   }
-  obj = { children: null };
-  obj[2] = initialRouteState;
-  obj[3] = function onReady() {
-    const routingInstrumentation = closure_1_0(closure_1_2[17]).routingInstrumentation;
+  const obj4 = { children: null };
+  obj3.initialState = initialRouteState;
+  obj3.onReady = function onReady() {
+    const routingInstrumentation = SentryInitUtils.routingInstrumentation;
     const result = routingInstrumentation.registerNavigationContainer(navigationContainerRef);
   };
-  obj[4] = onStateChange;
-  obj1 = { initialRouteName };
+  obj3.onStateChange = onStateChange;
   const merged1 = Object.assign(merged);
-  obj[5] = <NavigationStack initialRouteName={initialRouteName} />;
-  obj[0] = jsx(createStandardNavigationFactories.NavigationContainer, { children: null });
-  return jsx(createStandardNavigationFactories.NavigationIndependentTree, { children: null });
+  obj3.children = <NavigationStack initialRouteName={initialRouteName} />;
+  obj4.children = jsx(Link.NavigationContainer, { ref: navigationContainerRef, theme: null, initialState: null, onReady: null, onStateChange: null, children: null });
+  return jsx(Link.NavigationIndependentTree, { children: null });
 }
-({ StyleSheet, View: c5 } = get_ActivityIndicator);
-createCacheKey = { container: null, navbar: null, headerLeftContainerStyle: null, headerRightContainerStyle: null };
-createCacheKey = {};
+get_ActivityIndicator = fn(17);
+({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { container: null, navbar: null, headerLeftContainerStyle: null, headerRightContainerStyle: null };
+let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-createCacheKey.backgroundColor = ThemesDefault.colors.BACKGROUND_BASE_LOW;
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderBottomWidth: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, shadowColor: "transparent" };
-createCacheKey[2] = { paddingLeft: 16, marginRight: -16 };
-createCacheKey[3] = { paddingRight: 16, marginLeft: -16 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderBottomWidth: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, shadowColor: "transparent" };
-let result = require("set").fileFinishedImporting("design/components/Navigator/native/Navigator.native.tsx");
+obj3.backgroundColor = nativeDefault.colors.BACKGROUND_BASE_LOW;
+obj2.container = obj3;
+obj2.navbar = { borderBottomWidth: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, shadowColor: "transparent" };
+obj2.headerLeftContainerStyle = { paddingLeft: 16, marginRight: -16 };
+obj2.headerRightContainerStyle = { paddingRight: 16, marginLeft: -16 };
+let closure_7 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("design/components/Navigator/native/Navigator.native.tsx");
 
 export const useNavigatorScreens = function useNavigatorScreens(getNextRenewalDateLabel, items) {
-  return React.useMemo(getNextRenewalDateLabel, items);
+  return noop.useMemo(getNextRenewalDateLabel, items);
 };
 export const useAccessibilityNativeStackOptions = function useAccessibilityNativeStackOptions() {
-  navigatorShouldCrossfade = navigatorShouldCrossfade(7001).useNavigatorShouldCrossfade();
+  const navigatorShouldCrossfade = useNavigatorShouldCrossfade.useNavigatorShouldCrossfade();
   const items = [navigatorShouldCrossfade];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     let obj;
     if (navigatorShouldCrossfade) {
       obj = { animation: "fade" };
@@ -279,12 +280,11 @@ export const Navigator = function Navigator(useContainer) {
   if (flag === undefined) {
     flag = true;
   }
-  const merged = Object.assign(useContainer, Object.create(null));
-  let obj = { style: null, children: null };
-  const items = [callback2().container, useContainer.containerStyle];
-  obj[0] = items;
-  obj = {};
+  const merged = Object.assign(useContainer, Object.assign({ useContainer: 0, containerStyle: 0 }));
+  const obj = { style: null, children: null };
+  const items = [closure_7().container, useContainer.containerStyle];
+  obj.style = items;
   const merged1 = Object.assign(merged);
-  obj[1] = jsx(flag ? WrappedNavigationStack : NavigationStack, {});
-  return <closure_5 />;
+  obj.children = jsx(flag ? WrappedNavigationStack : NavigationStack, {});
+  return <hasOwnProperty style={null}>{null}</hasOwnProperty>;
 };

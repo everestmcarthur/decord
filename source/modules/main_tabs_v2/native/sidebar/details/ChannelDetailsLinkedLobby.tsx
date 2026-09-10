@@ -1,78 +1,74 @@
-// Module ID: 16734
-// Function ID: 16735
+// Module ID: 16771
+// Function ID: 16772
 // Name: ChannelDetailsLinkedLobby
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 7168, 4556, 1114, 2024, 2]
+// Dependencies: [19, 17, 1074, 21, 4574, 576, 7182, 4570, 1114, 2024, 2]
 // Exports: default
 
-// Module 16734 (ChannelDetailsLinkedLobby)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import combinedDefault from "combined" /* 2024 */;
-import Text2 from "Text" /* 4556 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7168 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { HelpdeskArticles } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16771 (ChannelDetailsLinkedLobby)
+import nativeDefault from "native" /* 576 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7182 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ Fragment: c5, jsxs: closure_6, jsx: error } = jsxProd);
-createCacheKey = { container: { alignItems: "center" }, divider: null };
-createCacheKey = { height: 1, width: 48, marginTop: 12, backgroundColor: ThemesDefault.colors.BORDER_STRONG };
-createCacheKey[1] = createCacheKey;
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsLinkedLobby.tsx");
+const util = BPDKoA(1114);
+const Text_Text = BPDKoA(4570);
+require = fn;
+const View = fn(17).View;
+const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const jsxProd = fn(21);
+({ Fragment: hasOwnProperty, jsxs: metroRequire, jsx: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { alignItems: "center" }, divider: null };
+let size = { height: 1, width: 48, marginTop: 12, backgroundColor: nativeDefault.colors.BORDER_STRONG };
+obj2.divider = size;
+let closure_8 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsLinkedLobby.tsx");
 
 export default function ChannelDetailsLinkedLobby(channel) {
   channel = channel.channel;
-  let divider = callback();
+  let divider = closure_8();
   let BPDKoA = require;
   let getArticleURL = dependencyMap;
-  let obj = useGetOrFetchApplications;
   const linkedLobby = channel.linkedLobby;
   let application_id;
   if (linkedLobby != null) {
     application_id = linkedLobby.application_id;
   }
-  let intl = obj.useGetOrFetchApplication(application_id);
+  let intl = useGetOrFetchApplications.useGetOrFetchApplication(application_id);
   if (null == channel.linkedLobby) {
     return null;
   } else {
-    obj = { style: null, children: null };
+    const obj2 = { style: null, children: null };
     const items = [divider.container, channel.containerStyle];
-    obj[0] = items;
-    let Text = Text2.Text;
+    obj2.style = items;
+    let Text = Text_Text.Text;
     if (null != intl) {
-      const intl3 = getSystemLocale.intl;
-      obj = { applicationName: null };
-      obj[0] = intl.name;
-      let formatResult = intl3.format(getSystemLocale.t.SgxMJs, obj);
+      const intl3 = util.intl;
+      const obj3 = { applicationName: intl.name };
+      let formatResult = intl3.format(util.t.SgxMJs, obj3);
     } else {
-      const intl2 = getSystemLocale.intl;
-      formatResult = intl2.string(getSystemLocale.t.yQqVss);
+      const intl2 = util.intl;
+      formatResult = intl2.string(util.t.yQqVss);
     }
-    obj1 = { variant: "text-sm/normal", color: "text-default", children: null };
-    const obj2 = { children: null };
+    const obj4 = { variant: "text-sm/normal", color: "text-default", children: null };
+    const obj5 = { children: null };
     const items1 = [formatResult, "  \u2022  ", ];
-    intl = getSystemLocale.intl;
-    BPDKoA = getSystemLocale.t.BPDKoA;
-    const obj3 = { helpdeskArticle: null };
-    getArticleURL = combinedDefault.getArticleURL;
-    obj3[0] = getArticleURL(HelpdeskArticles.LINKED_LOBBIES);
-    items1[2] = intl.format(BPDKoA, obj3);
-    obj2[0] = items1;
-    obj1[2] = closure_6(closure_5, obj2);
-    const items2 = [closure_7(Text, obj1), ];
-    const obj4 = { style: null };
+    intl = util.intl;
+    BPDKoA = util.t.BPDKoA;
+    const obj6 = { helpdeskArticle: null };
+    getArticleURL = HelpdeskUtilsDefault.getArticleURL;
+    obj6.helpdeskArticle = getArticleURL(HelpdeskArticles.LINKED_LOBBIES);
+    items1[2] = intl.format(BPDKoA, obj6);
+    obj5.children = items1;
+    obj4.children = timestampProducer(hasOwnProperty, obj5);
+    const items2 = [React5(Text, obj4), ];
+    const obj7 = { style: null };
     divider = divider.divider;
-    obj4[0] = divider;
-    Text = tmp4(tmp3, obj4);
+    obj7.style = divider;
+    Text = tmp4(tmp3, obj7);
     items2[1] = Text;
-    obj[1] = items2;
-    closure_6(View, obj);
-    const tmp5 = closure_5;
-    const tmp8 = combinedDefault;
+    obj2.children = items2;
+    timestampProducer(View, obj2);
   }
 };

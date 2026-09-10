@@ -1,104 +1,101 @@
-// Module ID: 9972
-// Function ID: 9973
+// Module ID: 9999
+// Function ID: 10000
 // Name: usePremiumFeatureUpsellGetNitro
-// Dependencies: [32, 19, 4224, 7450, 1373, 1074, 7162, 7422, 4884, 8062, 4258, 1114, 4425, 2]
+// Dependencies: [32, 19, 4237, 7464, 1373, 1074, 7176, 7436, 4898, 8077, 4271, 1114, 4439, 2]
 // Exports: default
 
-// Module 9972 (usePremiumFeatureUpsellGetNitro)
-import contextDefault from "context" /* 7162 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import closure_6 from "reset" /* 4224 */;
-import closure_7 from "emitChanges" /* 7450 */;
-import { PremiumTypes } from "GuildFeatures" /* 1373 */;
-import { AnalyticsObjectTypes } from "ME" /* 1074 */;
+// Module 9999 (usePremiumFeatureUpsellGetNitro)
+import ChatInputUtils from "ChatInputUtils" /* 4439 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 4898 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7176 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7436 */;
+import UserOfferActionCreators from "UserOfferActionCreators" /* 8077 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import SubscriptionStore from "SubscriptionStore" /* 4237 */;
+import UserOfferStore from "UserOfferStore" /* 7464 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/premium/roadblocks/native/hooks/usePremiumFeatureUpsellGetNitro.tsx");
+require = fn;
+const PremiumTypes = fn(1373).PremiumTypes;
+const AnalyticsObjectTypes = fn(1074).AnalyticsObjectTypes;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/roadblocks/native/hooks/usePremiumFeatureUpsellGetNitro.tsx");
 
-export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, arg2, arg3) {
+export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, page, arg3) {
   closure_0 = arg0;
   importDefault = arg1;
-  closure_2 = arg2;
   dependencyMap = arg3;
   let items = arg4;
   if (arg4 === undefined) {
     items = [];
   }
-  let callback;
+  _slicedToArray = undefined;
   let analyticsLocations;
-  closure_6 = undefined;
-  let onPress;
-  const loading = callback(analyticsLocations.useState(false), 2);
-  callback = loading[1];
-  analyticsLocations = contextDefault(items).analyticsLocations;
-  closure_6 = analyticsLocations.useRef(0);
-  const items1 = [arg2, analyticsLocations, arg1, arg0, arg3];
-  onPress = analyticsLocations.useCallback(() => {
-    const premiumTypeSubscription = ref.getPremiumTypeSubscription(false);
-    const result = ref.hasFetchedSubscriptions();
+  const loading = _slicedToArray(analyticsLocations.useState(false), 2);
+  _slicedToArray = loading[1];
+  analyticsLocations = useAnalyticsLocationsDefault(items).analyticsLocations;
+  analyticsLocations.useRef(0);
+  const items1 = [page, analyticsLocations, arg1, arg0, arg3];
+  const onPress = analyticsLocations.useCallback(() => {
+    const premiumTypeSubscription = SubscriptionStore.getPremiumTypeSubscription(false);
+    const result = SubscriptionStore.hasFetchedSubscriptions();
     let tmp3 = null == premiumTypeSubscription;
     if (!tmp3) {
       const _Object = Object;
       tmp3 = 0 === Object.keys(premiumTypeSubscription).length;
     }
-    let obj = onPress;
-    const isFetchingOfferResult = obj.isFetchingOffer();
+    const isFetchingOfferResult = UserOfferStore.isFetchingOffer();
     if (result) {
       if (tmp3) {
         if (tmp5) {
-          obj = { analyticsLocation: null, analyticsLocations: null, premiumType: null };
-          obj = { page: null, objectType: null };
-          obj[0] = closure_2;
-          obj[1] = closure_1_9.BUY;
-          obj[0] = obj;
-          obj[1] = analyticsLocations;
-          obj[2] = callback ? closure_1_8.TIER_0 : closure_1_8.TIER_2;
-          callback2(7422)(obj, dependencyMap);
+          const obj5 = { analyticsLocation: null, analyticsLocations: null, premiumType: null };
+          const obj6 = { page, objectType: AnalyticsObjectTypes.BUY };
+          obj5.analyticsLocation = obj6;
+          obj5.analyticsLocations = analyticsLocations;
+          obj5.premiumType = closure_0 ? PremiumTypes.TIER_0 : PremiumTypes.TIER_2;
+          openPremiumPlanSelectionActionSheetDefault(obj5, dependencyMap);
         }
       }
     }
     if (!result) {
       if (ref.current < 5) {
-        callback3(true);
+        closure_4(true);
         if (result) {
           let resolved = Promise.resolve();
         } else {
-          resolved = callback(4884).fetchSubscriptions();
-          const obj2 = callback(4884);
+          resolved = actions_BillingActionCreators.fetchSubscriptions();
         }
         const items = [resolved, ];
         if (isFetchingOfferResult) {
           let resolved1 = Promise.resolve();
         } else {
-          resolved1 = callback(8062).fetchUserOffer("usePremiumFeatureUpsellGetNitro");
-          const obj3 = callback(8062);
+          resolved1 = UserOfferActionCreators.fetchUserOffer("usePremiumFeatureUpsellGetNitro");
         }
         items[1] = resolved1;
         const allPromises = Promise.all(items);
         const nextPromise = Promise.all(items).then(() => {
           ref.current = ref.current + 1;
-          callback4();
+          onPress();
         });
         Promise.all(items).then(() => {
           ref.current = ref.current + 1;
-          callback4();
+          onPress();
         }).catch(() => {
-          const intl = callback(1114).intl;
-          callback2(4258).presentFailedToast(intl.string(callback(1114).t.R0RpRX));
-        }).finally(() => callback3(false));
+          const intl = closure_1_0(1114).intl;
+          page(4271).presentFailedToast(intl.string(closure_1_0(1114).t.R0RpRX));
+        }).finally(() => closure_1_4(false));
         const catchPromise = Promise.all(items).then(() => {
           ref.current = ref.current + 1;
-          callback4();
+          onPress();
         }).catch(() => {
-          const intl = callback(1114).intl;
-          callback2(4258).presentFailedToast(intl.string(callback(1114).t.R0RpRX));
+          const intl = closure_1_0(1114).intl;
+          page(4271).presentFailedToast(intl.string(closure_1_0(1114).t.R0RpRX));
         });
       }
     }
-    callback2();
-    tmp5 = onPress.hasFetchedOffer() && !obj.hasAnyUnexpiredOffer();
-    const bestActiveInput = callback(4425).getBestActiveInput();
+    closure_1();
+    tmp5 = UserOfferStore.hasFetchedOffer() && !UserOfferStore.hasAnyUnexpiredOffer();
+    const bestActiveInput = ChatInputUtils.getBestActiveInput();
     if (bestActiveInput != null) {
       bestActiveInput.closeCustomKeyboard();
     }

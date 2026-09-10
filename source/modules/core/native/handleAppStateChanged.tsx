@@ -1,54 +1,52 @@
-// Module ID: 17903
-// Function ID: 17904
+// Module ID: 17936
+// Function ID: 17937
 // Name: handleAppStateChanged
-// Dependencies: [502, 1895, 1074, 3, 10, 573, 4583, 17902, 7475, 4408, 9, 1242, 2]
+// Dependencies: [502, 1895, 1074, 3, 10, 573, 4597, 17935, 7489, 4422, 9, 1242, 2]
 // Exports: default
 
-// Module 17903 (handleAppStateChanged)
-import timestampDefault from "timestamp" /* 3 */;
-import isTracingDefault from "isTracing" /* 10 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import setSystemTheme from "setSystemTheme" /* 4408 */;
-import createRTCConnection from "createRTCConnection" /* 4583 */;
-import getDeviceMetadata from "getDeviceMetadata" /* 7475 */;
-import closure_3 from "fetchFingerprint" /* 502 */;
-import closure_4 from "getState" /* 1895 */;
-import ME from "ME" /* 1074 */;
+// Module 17936 (handleAppStateChanged)
+import LoggerDefault from "Logger" /* 3 */;
+import TTITrackerDefault from "TTITracker" /* 9 */;
+import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 4422 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7489 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import AppStateStore from "AppStateStore" /* 1895 */;
 
-require = arg1;
-({ AnalyticEvents: c5, AppStates: closure_6 } = ME);
-let closure_7 = new timestampDefault("index.native.tsx");
-const tmp3 = new timestampDefault("index.native.tsx");
-let result = require("set").fileFinishedImporting("modules/core/native/handleAppStateChanged.tsx");
+require = fn;
+const Constants = fn(1074);
+({ AnalyticEvents: hasOwnProperty, AppStates: metroRequire } = Constants);
+let closure_7 = new LoggerDefault("index.native.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/core/native/handleAppStateChanged.tsx");
 
 export default function handleAppStateChanged(state) {
-  state = state.getState();
-  let obj = isTracingDefault;
-  obj.markAndLog(closure_7, "\u{1F3C3}", "AppState changing from " + state + " to " + state);
-  obj = { type: "APP_STATE_UPDATE", state };
-  dispatcherDefault.dispatch(obj);
+  state = AppStateStore.getState();
+  AppStartPerformanceDefault.markAndLog(closure_7, "\u{1F3C3}", "AppState changing from " + state + " to " + state);
+  DispatcherDefault.dispatch({ type: "APP_STATE_UPDATE", state });
   let isAuthenticatedResult = state === constants2.BACKGROUND && state === tmp6.ACTIVE;
   if (isAuthenticatedResult) {
-    isAuthenticatedResult = authenticated.isAuthenticated();
+    isAuthenticatedResult = AuthenticationStore.isAuthenticated();
   }
   if (isAuthenticatedResult) {
-    isAuthenticatedResult = createRTCConnection.default.isDisconnected();
-    const _default = createRTCConnection.default;
+    isAuthenticatedResult = RTCConnectionStore.default.isDisconnected();
+    const _default = RTCConnectionStore.default;
   }
   if (isAuthenticatedResult) {
-    let tmp2Result = tmp2(17902);
-    tmp2Result.deferUpdate();
+    tmp2(17935).deferUpdate();
+    const tmp2Result = tmp2(17935);
   }
   if (state === constants2.ACTIVE) {
-    getDeviceMetadata.trackAppOpened("launcher");
-    const obj5 = getDeviceMetadata;
-    const result = setSystemTheme.setSystemThemeIfNeeded();
-    const obj6 = setSystemTheme;
+    TTIAnalyticsUtils.trackAppOpened("launcher");
+    const result = ThemeActionCreators.setSystemThemeIfNeeded();
   }
-  tmp2Result = tmp2(9);
-  tmp2Result.appStateChanged(state);
+  const obj3 = { type: "APP_STATE_UPDATE", state };
+  const tmp8 = state === constants2.ACTIVE && state !== constants2.ACTIVE;
+  TTITrackerDefault.appStateChanged(state);
   if (tmp8) {
     tmp2(1242).track(constants.APP_BACKGROUND, {});
-    const tmp2Result1 = tmp2(1242);
+    const tmp2Result4 = tmp2(1242);
   }
 };

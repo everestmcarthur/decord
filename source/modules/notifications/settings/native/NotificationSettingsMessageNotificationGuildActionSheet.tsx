@@ -1,48 +1,53 @@
-// Module ID: 10165
-// Function ID: 10166
+// Module ID: 10192
+// Function ID: 10193
 // Name: NotificationSettingsMessageNotificationGuildActionSheet
-// Dependencies: [19, 4741, 1074, 4742, 1084, 21, 10160, 10166, 1114, 10155, 7119, 7114, 2]
+// Dependencies: [19, 4755, 1074, 4756, 1084, 21, 10187, 10193, 1114, 10182, 7133, 7128, 2]
 // Exports: default
 
-// Module 10165 (NotificationSettingsMessageNotificationGuildActionSheet)
-import noopAll from "noop" /* 19 */;
-import closure_3 from "updateUserGuildSettingsInternal" /* 4741 */;
-import { UserNotificationSettings } from "ME" /* 1074 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4742 */;
-import { GuildNotificationSettingsFlags as closure_6 } from "MAX_FAVORITES" /* 1084 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 10192 (NotificationSettingsMessageNotificationGuildActionSheet)
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7128 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7133 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10182 */;
+import noop from "module_19" /* 19 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4755 */;
 
-const require = arg1;
-noopAll;
-let result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageNotificationGuildActionSheet.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const UserNotificationSettings = fn(1074).UserNotificationSettings;
+const UnreadSetting = fn(4756).UnreadSetting;
+let closure_6 = fn(1084).GuildNotificationSettingsFlags;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageNotificationGuildActionSheet.tsx");
 
 export default function NotificationSettingsMessageNotificationGuildActionSheet(guildId) {
-  const _require = guildId;
-  let obj = _require(10160);
-  const guildPresetSettings = obj.useGuildPresetSettings(guildId.guildId);
+  _require = guildId;
+  const guildPresetSettings = require("notificationSettingsGuildFlagUtils").useGuildPresetSettings(guildId.guildId);
   const unread = guildPresetSettings.unread;
   const notification = guildPresetSettings.notification;
-  obj = { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null };
+  let obj2 = { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null };
   let stringResult;
+  let obj = require("notificationSettingsGuildFlagUtils");
+  const tmp4 = jsx;
   if (notification !== UserNotificationSettings.ALL_MESSAGES) {
     if (unread !== UnreadSetting.ALL_MESSAGES) {
       const intl = tmp(1114).intl;
       stringResult = intl.string(tmp(1114).t.eP8yWU);
     }
   }
-  obj[2] = stringResult;
-  obj[3] = function onChange(message_notifications) {
+  obj2.allMessagesSubLabel = stringResult;
+  obj2.onChange = function onChange(message_notifications) {
     const obj = { message_notifications };
-    let tmp = message_notifications === closure_1_4.ALL_MESSAGES;
+    let tmp = message_notifications === UserNotificationSettings.ALL_MESSAGES;
     if (tmp) {
-      tmp = unread !== closure_1_5.ALL_MESSAGES;
+      tmp = unread !== UnreadSetting.ALL_MESSAGES;
     }
     if (tmp) {
-      obj.flags = guildId(closure_1_2[9]).withGuildUnreadFlags(closure_1_3.getGuildFlags(guildId.guildId), closure_1_6.UNREADS_ALL_MESSAGES);
-      const obj2 = guildId(closure_1_2[9]);
+      obj.flags = notificationSettingsFlagUtils.withGuildUnreadFlags(UserGuildSettingsStore.getGuildFlags(guildId.guildId), constants.UNREADS_ALL_MESSAGES);
     }
-    const NotificationLabel = guildId(closure_1_2[11]).NotificationLabel;
-    const result = unread(closure_1_2[10]).updateGuildNotificationSettings(guildId.guildId, obj, NotificationLabel.notifications(message_notifications));
+    const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
+    const result = NotificationSettingsModalActionCreatorsDefault.updateGuildNotificationSettings(guildId.guildId, obj, NotificationLabel.notifications(message_notifications));
   };
-  return jsx(unread(10166), { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null });
+  return tmp4(unread(10193), obj2);
 };

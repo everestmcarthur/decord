@@ -1,79 +1,72 @@
-// Module ID: 12026
-// Function ID: 12027
+// Module ID: 12052
+// Function ID: 12053
 // Name: ForumPostListBody
-// Dependencies: [19, 17, 7273, 21, 4560, 7272, 12019, 12009, 12018, 12020, 12027, 12013, 2]
+// Dependencies: [19, 17, 7287, 21, 4574, 7286, 12045, 12035, 12044, 12046, 12053, 12039, 2]
 // Exports: default
 
-// Module 12026 (ForumPostListBody)
-import noopAll from "noop" /* 19 */;
-import GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME from "GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME" /* 7272 */;
-import ForumPostUsername from "ForumPostUsername" /* 12009 */;
-import ForumPostTimestampDefault from "ForumPostTimestamp" /* 12018 */;
-import ForumPostNewTagDefault from "ForumPostNewTag" /* 12019 */;
-import ForumPostMessageContentDefault from "ForumPostMessageContent" /* 12027 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { ForumTimestampFormats } from "FORUM_GUIDELINES_ACTION_SHEET" /* 7273 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12052 (ForumPostListBody)
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7286 */;
+import ForumPostUsername from "ForumPostUsername" /* 12035 */;
+import ForumPostTimestampDefault from "ForumPostTimestamp" /* 12044 */;
+import ForumPostNewTagDefault from "ForumPostNewTag" /* 12045 */;
+import ForumPostMessageContentDefault from "ForumPostMessageContent" /* 12053 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ body: { display: "flex", flexDirection: "row", alignItems: "flex-start" }, contentContainer: { flex: 1 }, thumbnailContainer: { marginLeft: 12 }, details: { flexDirection: "row", alignItems: "center", marginBottom: 6 }, newTagContainer: { marginEnd: 8 } });
-const result = require("set").fileFinishedImporting("modules/forums/native/posts/list/ForumPostListBody.tsx");
+require = fn;
+const View = fn(17).View;
+const ForumTimestampFormats = fn(7287).ForumTimestampFormats;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
+let closure_7 = createStyles.createStyles({ body: { display: "flex", flexDirection: "row", alignItems: "flex-start" }, contentContainer: { flex: 1 }, thumbnailContainer: { marginLeft: 12 }, details: { flexDirection: "row", alignItems: "center", marginBottom: 6 }, newTagContainer: { marginEnd: 8 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/posts/list/ForumPostListBody.tsx");
 
 export default function ForumPostListBody(arg0) {
   ({ thread, firstMessage, hasUnreads, isNew, media } = arg0);
   ({ containerStyle, firstMessageLoaded, messageContent, isEmbed, isLocalDeviceMedia, senderModifier } = arg0);
-  const tmp = callback2();
-  let obj = GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME;
-  const isGameInvitesPost = obj.useIsGameInvitesPost(thread);
-  obj = { style: items, children: null };
-  items = [tmp.body, containerStyle];
-  obj = { style: tmp.contentContainer, children: null };
-  obj1 = { style: tmp.details, children: null };
+  const tmp = closure_7();
+  const isGameInvitesPost = GameInvitesChannelUtils.useIsGameInvitesPost(thread);
+  const obj2 = { style: null, children: null };
+  const items = [tmp.body, containerStyle];
+  obj2.style = items;
+  const obj3 = { style: tmp.contentContainer, children: null };
+  const obj4 = { style: tmp.details, children: null };
   if (isNew) {
-    const obj2 = { containerStyle: null };
-    obj2[0] = tmp.newTagContainer;
-    isNew = callback(ForumPostNewTagDefault, obj2);
+    const obj5 = { containerStyle: tmp.newTagContainer };
+    isNew = hasOwnProperty(ForumPostNewTagDefault, obj5);
   }
-  const items1 = [isNew, callback(ForumPostUsername.ForumPostAuthor, { thread, hasUnreads }), callback(ForumPostTimestampDefault, { thread, hasUnreads, format: ForumTimestampFormats.POSTED_DURATION_AGO })];
-  obj1[1] = items1;
-  const items2 = [closure_6(View, obj1), , ];
+  const items1 = [isNew, hasOwnProperty(ForumPostUsername.ForumPostAuthor, { thread, hasUnreads }), hasOwnProperty(ForumPostTimestampDefault, { thread, hasUnreads, format: ForumTimestampFormats.POSTED_DURATION_AGO })];
+  obj4.children = items1;
+  const items2 = [timestampProducer(View, obj4), , ];
   let tmp9Result = !isGameInvitesPost;
   if (!isGameInvitesPost) {
-    const obj4 = { title: null, lineClamp: 2, ellipsizeMode: "tail", hasUnreads: null };
-    obj4[0] = thread.name;
-    obj4[3] = hasUnreads;
-    tmp9Result = tmp9(tmp10(12020), obj4);
+    const obj7 = { title: thread.name, lineClamp: 2, ellipsizeMode: "tail", hasUnreads };
+    tmp9Result = tmp9(tmp10(12046), obj7);
   }
   items2[1] = tmp9Result;
-  items2[2] = callback(ForumPostMessageContentDefault, { messageContent, message: firstMessage, isMessageDeleted: false, messageLoaded: firstMessageLoaded, hasUnreads, senderModifier });
-  obj[1] = items2;
-  const items3 = [closure_6(View, obj), ];
+  items2[2] = hasOwnProperty(ForumPostMessageContentDefault, { messageContent, message: firstMessage, isMessageDeleted: false, messageLoaded: firstMessageLoaded, hasUnreads, senderModifier });
+  obj3.children = items2;
+  const items3 = [timestampProducer(View, obj3), ];
   let blocked;
   if (firstMessage != null) {
     blocked = firstMessage.blocked;
   }
-  tmp9Result = null;
+  let tmp9Result2 = null;
   if (!blocked) {
-    tmp9Result = null;
+    tmp9Result2 = null;
     if (null != media) {
-      const obj5 = { channel: null, media: null, isEmbed: null, isLocalDeviceMedia: null, firstMessageId: null, containerStyle: null };
-      obj5[0] = thread;
-      obj5[1] = media;
-      obj5[2] = isEmbed;
-      obj5[3] = isLocalDeviceMedia;
+      const obj8 = { channel: thread, media, isEmbed, isLocalDeviceMedia, firstMessageId: null, containerStyle: null };
       let id;
       if (firstMessage != null) {
         id = firstMessage.id;
       }
-      obj5[4] = id;
-      obj5[5] = tmp.thumbnailContainer;
-      tmp9Result = tmp9(tmp2(12013).ForumPostMediaThumbnail, obj5);
+      obj8.firstMessageId = id;
+      obj8.containerStyle = tmp.thumbnailContainer;
+      tmp9Result2 = tmp9(tmp2(12039).ForumPostMediaThumbnail, obj8);
     }
   }
-  items3[1] = tmp9Result;
-  obj[1] = items3;
-  return closure_6(View, obj);
+  items3[1] = tmp9Result2;
+  obj2.children = items3;
+  return timestampProducer(View, obj2);
 };

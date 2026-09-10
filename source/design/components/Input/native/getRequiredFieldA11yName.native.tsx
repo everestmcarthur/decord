@@ -1,23 +1,23 @@
-// Module ID: 6608
-// Function ID: 6609
+// Module ID: 6622
+// Function ID: 6623
 // Name: getRequiredFieldA11yName
 // Dependencies: [1114, 2]
 // Exports: getRequiredFieldA11yName
 
-// Module 6608 (getRequiredFieldA11yName)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 6622 (getRequiredFieldA11yName)
+import util from "util" /* 1114 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("design/components/Input/native/getRequiredFieldA11yName.native.tsx");
+const result = size.fileFinishedImporting("design/components/Input/native/getRequiredFieldA11yName.native.tsx");
 
 export const getRequiredFieldA11yName = function getRequiredFieldA11yName(accessibilityLabel, required) {
   let combined;
   if (null != accessibilityLabel) {
     if ("" !== accessibilityLabel) {
       if (true === required) {
-        const intl = getSystemLocale.intl;
+        const intl = util.intl;
         const _HermesInternal = HermesInternal;
-        combined = "" + accessibilityLabel + " (" + intl.string(getSystemLocale.t.EkokLy) + ")";
+        combined = "" + accessibilityLabel + " (" + intl.string(util.t.EkokLy) + ")";
       }
     }
   }

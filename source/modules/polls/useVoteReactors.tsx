@@ -1,25 +1,26 @@
-// Module ID: 11728
-// Function ID: 11729
+// Module ID: 11754
+// Function ID: 11755
 // Name: useVoteReactors
-// Dependencies: [7762, 1074, 504, 7763, 1332, 2]
+// Dependencies: [7776, 1074, 504, 7777, 1332, 2]
 // Exports: default
 
-// Module 11728 (useVoteReactors)
-import closure_3 from "reactionKey" /* 7762 */;
-import { DEFAULT_NUM_REACTION_USERS as closure_4 } from "ME" /* 1074 */;
+// Module 11754 (useVoteReactors)
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7777 */;
+import MessageReactionsStore from "MessageReactionsStore" /* 7776 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/polls/useVoteReactors.tsx");
+require = fn;
+let closure_4 = fn(1074).DEFAULT_NUM_REACTION_USERS;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/polls/useVoteReactors.tsx");
 
 export default function useVoteReactors(channelId) {
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
   const reaction = channelId.reaction;
-  let obj = channelId(reaction[2]);
-  let items = [closure_3];
+  let items = [MessageReactionsStore];
   const items1 = [channelId, messageId, reaction.emoji];
-  const stateFromStores = obj.useStateFromStores(items, () => {
-    const reactions = closure_1_3.getReactions(channelId, messageId, reaction.emoji, closure_1_4, channelId(reaction[3]).ReactionTypes.VOTE);
+  const stateFromStores = channelId(reaction[2]).useStateFromStores(items, () => {
+    const reactions = MessageReactionsStore.getReactions(channelId, messageId, reaction.emoji, closure_4, MessageReactionsTypes.ReactionTypes.VOTE);
     let items;
     if (reactions != null) {
       items = reactions.values();
@@ -29,7 +30,7 @@ export default function useVoteReactors(channelId) {
     }
     return Array.from(items);
   }, items1, messageId(reaction[4]));
-  obj = { reactors: stateFromStores, hasMore: null };
+  const obj2 = { reactors: stateFromStores, hasMore: null };
   const count_details = reaction.count_details;
   let num;
   if (count_details != null) {
@@ -38,6 +39,6 @@ export default function useVoteReactors(channelId) {
   if (num == null) {
     num = 0;
   }
-  obj[1] = num > stateFromStores.length;
-  return obj;
+  obj2.hasMore = num > stateFromStores.length;
+  return obj2;
 };

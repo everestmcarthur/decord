@@ -1,43 +1,39 @@
-// Module ID: 11272
-// Function ID: 11273
+// Module ID: 11299
+// Function ID: 11300
 // Name: MessagePreviewReactions
-// Dependencies: [19, 7596, 8360, 21, 504, 7162, 7182, 11261, 2]
+// Dependencies: [19, 7610, 8388, 21, 504, 7176, 7196, 11288, 2]
 // Exports: default
 
-// Module 11272 (MessagePreviewReactions)
-import noopAll from "noop" /* 19 */;
-import closure_3 from "removePendingListFetch" /* 7596 */;
-import closure_4 from "messages" /* 8360 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 11299 (MessagePreviewReactions)
+import noop from "module_19" /* 19 */;
+import ConversationsStore from "ConversationsStore" /* 7610 */;
+import MessagePreviewStore from "MessagePreviewStore" /* 8388 */;
 
-const require = arg1;
-noopAll;
+const require = fn;
+const jsx = fn(21).jsx;
 let closure_6 = [];
-const result = require("set").fileFinishedImporting("modules/reactions/native/MessagePreviewReactions.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/reactions/native/MessagePreviewReactions.tsx");
 
 export default function MessagePreviewReactions(emoji) {
   ({ channelId, messageId } = emoji);
-  let obj = channelId(504);
-  const items = [closure_4, closure_3];
+  const items = [MessagePreviewStore, ConversationsStore];
   const items1 = [channelId, messageId];
-  const stateFromStores = obj.useStateFromStores(items, () => {
-    let message = closure_1_4.getMessage(messageId);
+  const stateFromStores = channelId(504).useStateFromStores(items, () => {
+    let message = MessagePreviewStore.getMessage(messageId);
     if (message == null) {
-      message = closure_1_3.getMessage(channelId, messageId);
+      message = ConversationsStore.getMessage(channelId, messageId);
     }
-    return null != message ? message.reactions : closure_1_6;
+    return null != message ? message.reactions : closure_6;
   }, items1);
-  obj = { value: messageId(7162)(messageId(7182).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null };
+  const obj = channelId(504);
+  const obj2 = { value: messageId(7176)(messageId(7196).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null };
   if (stateFromStores.length > 0) {
-    obj = { channelId: null, messageId: null, emoji: null, reactions: null };
-    obj[0] = channelId;
-    obj[1] = messageId;
-    obj[2] = emoji.emoji;
-    obj[3] = stateFromStores;
-    let tmp4Result = tmp4(tmp(11261).MessageReactionsContent, obj);
+    const obj3 = { channelId, messageId, emoji: emoji.emoji, reactions: stateFromStores };
+    let tmp4Result = tmp4(tmp(11288).MessageReactionsContent, obj3);
   } else {
-    tmp4Result = tmp4(tmp(11261).MessageReactionsEmpty, {});
+    tmp4Result = tmp4(tmp(11288).MessageReactionsEmpty, {});
   }
-  obj[1] = tmp4Result;
-  return jsx(channelId(7162).AnalyticsLocationProvider, { value: messageId(7162)(messageId(7182).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null });
+  obj2.children = tmp4Result;
+  return jsx(channelId(7176).AnalyticsLocationProvider, { value: messageId(7176)(messageId(7196).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null });
 };

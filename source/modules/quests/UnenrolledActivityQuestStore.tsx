@@ -1,19 +1,16 @@
-// Module ID: 17035
-// Function ID: 17036
-// Name: set
+// Module ID: 17066
+// Function ID: 17067
+// Name: UnenrolledActivityQuestStore
 // Dependencies: [11, 504, 573, 2]
 
-// Module 17035 (set)
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+// Module 17066 (UnenrolledActivityQuestStore)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import set from "set" /* 2 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
+new Set();
 let set = new Set();
-let set1 = set;
-let c3 = false;
-set1 = new Set();
-c3 = false;
+let autoEnroll = false;
 const PersistedStore = initializeDefault.PersistedStore;
 class UnenrolledActivityQuestStore extends PersistedStore {
 }
@@ -26,7 +23,7 @@ prototype["initialize"] = function initialize(dismissedQuestIds) {
   if (dismissedQuestIds == null) {
     dismissedQuestIds = [];
   }
-  const set = new Set(dismissedQuestIds);
+  set = new Set(dismissedQuestIds);
   let flag;
   if (dismissedQuestIds != null) {
     flag = dismissedQuestIds.autoEnroll;
@@ -34,32 +31,35 @@ prototype["initialize"] = function initialize(dismissedQuestIds) {
   if (flag == null) {
     flag = false;
   }
+  autoEnroll = flag;
 };
 prototype["getState"] = function getState() {
-  const items = [...set1];
-  return { dismissedQuestIds: items, autoEnroll: c3 };
+  const obj = { dismissedQuestIds: null, autoEnroll };
+  const items = [...set];
+  obj.dismissedQuestIds = items;
+  return obj;
 };
 prototype["isDismissed"] = function isDismissed(arg0) {
   let hasItem = null != arg0;
   if (hasItem) {
-    hasItem = set1.has(arg0);
+    hasItem = set.has(arg0);
   }
   return hasItem;
 };
 prototype["getDismissedQuestIds"] = function getDismissedQuestIds() {
-  return set1;
+  return set;
 };
 UnenrolledActivityQuestStore.displayName = "UnenrolledActivityQuestStore";
 UnenrolledActivityQuestStore.persistKey = "UnenrolledActivityQuestStore";
-const unenrolledActivityQuestStore = new UnenrolledActivityQuestStore(dispatcherDefault, {
+const unenrolledActivityQuestStore = new UnenrolledActivityQuestStore(DispatcherDefault, {
   UNENROLLED_ACTIVITY_QUEST_DISMISS: function handleDismissUnenrolledActivityQuest(questId) {
     if (set.size >= 20) {
       const _Array = Array;
-      const sorted = Array.from(set).sort(DISCORD_EPOCHDefault.compare);
+      const sorted = Array.from(set).sort(SnowflakeUtilsDefault.compare);
       const _Math = Math;
       const substr = sorted.slice(Math.floor(10));
       const _Set = Set;
-      set = new Set(substr.map((arg0) => arg0.toString()));
+      set = new Set(substr.map((item) => item.toString()));
       const arr = Array.from(set);
     }
     set.add(questId.questId);
@@ -70,6 +70,7 @@ const unenrolledActivityQuestStore = new UnenrolledActivityQuestStore(dispatcher
     return true;
   }
 });
-const result = set.fileFinishedImporting("modules/quests/UnenrolledActivityQuestStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/UnenrolledActivityQuestStore.tsx");
 
 export default unenrolledActivityQuestStore;

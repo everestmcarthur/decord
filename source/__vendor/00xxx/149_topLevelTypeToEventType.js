@@ -2,14 +2,16 @@
 // Function ID: 150
 // Name: topLevelTypeToEventType
 // Dependencies: [66]
+// Exports: getEventTypePropName, topLevelTypeToEventType
 
 // Module 149 (topLevelTypeToEventType)
-import map from "map" /* 66 */;
+import customBubblingEventTypes from "customBubblingEventTypes" /* 66 */;
 
 require = arg1;
 const dependencyMap = arg6;
 let closure_2 = {};
-arg5.topLevelTypeToEventType = function topLevelTypeToEventType(str) {
+
+export const topLevelTypeToEventType = function topLevelTypeToEventType(str) {
   const charCodeAtResult = str.charCodeAt(3);
   let formatted = str;
   if (str.startsWith("top")) {
@@ -24,12 +26,11 @@ arg5.topLevelTypeToEventType = function topLevelTypeToEventType(str) {
   }
   return formatted;
 };
-arg5.getEventTypePropName = function getEventTypePropName(arg0, arg1) {
-  if (undefined !== table[arg0]) {
+export const getEventTypePropName = function getEventTypePropName(arg0, arg1) {
+  if (undefined !== closure_2[arg0]) {
     return arg1 ? tmp3.captured : tmp3.bubbled;
   } else {
-    for (const key10005 in map.customBubblingEventTypes) {
-      let tmp22 = key10005;
+    for (const key10005 in customBubblingEventTypes.customBubblingEventTypes) {
       let charCodeAtResult = key10005.charCodeAt(3);
       let formatted = key10005;
       if (key10005.startsWith("top")) {
@@ -45,45 +46,39 @@ arg5.getEventTypePropName = function getEventTypePropName(arg0, arg1) {
       if (formatted !== arg0) {
         continue;
       } else {
-        let tmp5 = require;
-        let tmp6 = dependencyMap;
-        let phasedRegistrationNames = map.customBubblingEventTypes[key10005].phasedRegistrationNames;
+        let phasedRegistrationNames = customBubblingEventTypes.customBubblingEventTypes[key10005].phasedRegistrationNames;
         if (null == phasedRegistrationNames) {
           continue;
         } else {
-          let bubbled = phasedRegistrationNames.bubbled;
-          if (bubbled == null) {
-            bubbled = null;
+          let bubbled1 = phasedRegistrationNames.bubbled;
+          if (bubbled1 == null) {
+            bubbled1 = null;
           }
-          let obj = { bubbled: null, captured: null };
-          obj[0] = bubbled;
+          let obj2 = { bubbled: bubbled1, captured: null };
           let captured = phasedRegistrationNames.captured;
           if (captured == null) {
             captured = null;
           }
-          obj[1] = captured;
+          obj2.captured = captured;
         }
-        let tmp17 = null;
-        if (null == obj) {
+        if (null == obj2) {
           return null;
         } else {
-          tmp2[arg0] = obj;
+          tmp2[arg0] = obj2;
           if (arg1) {
-            bubbled = obj.captured;
+            let bubbled = obj2.captured;
           } else {
-            bubbled = obj.bubbled;
+            bubbled = obj2.bubbled;
           }
-          let tmp18 = bubbled;
         }
       }
       continue;
     }
-    obj = null;
+    obj2 = null;
     const keys = Object.keys();
     if (keys !== undefined) {
-      obj = null;
+      obj2 = null;
       while (keys[tmp] !== undefined) {
-        let tmp24 = arr;
         let charCodeAtResult1 = arr.charCodeAt(3);
         let formatted1 = arr;
         if (arr.startsWith("top")) {
@@ -99,14 +94,12 @@ arg5.getEventTypePropName = function getEventTypePropName(arg0, arg1) {
         if (formatted1 !== arg0) {
           continue;
         } else {
-          let tmp14 = require;
-          let tmp15 = dependencyMap;
-          let tmp16 = map.customDirectEventTypes[arr];
+          let tmp16 = customBubblingEventTypes.customDirectEventTypes[arr];
           if (null == tmp16.registrationName) {
             continue;
           } else {
-            obj = { bubbled: null, captured: null };
-            obj[0] = tmp16.registrationName;
+            let obj = { bubbled: tmp16.registrationName, captured: null };
+            obj2 = obj;
             break;
           }
           break;

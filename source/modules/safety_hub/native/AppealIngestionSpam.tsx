@@ -1,29 +1,27 @@
-// Module ID: 11913
-// Function ID: 11914
+// Module ID: 11939
+// Function ID: 11940
 // Name: AppealIngestionSpam
-// Dependencies: [19, 17, 21, 4560, 11891, 7123, 1178, 2]
+// Dependencies: [19, 17, 21, 4574, 11917, 7137, 1178, 2]
 // Exports: default
 
-// Module 11913 (AppealIngestionSpam)
-import noopAll from "noop" /* 19 */;
-import Button from "Button" /* 1178 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
-import AppealIngestionModal from "AppealIngestionModal" /* 11891 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11939 (AppealIngestionSpam)
+import native from "native" /* 1178 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7137 */;
+import AppealIngestionModal from "AppealIngestionModal" /* 11917 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-let closure_4 = createCacheKey.createStyles({ container: { flex: 1, alignItems: "center", justifyContent: "center" } });
-const result = require("set").fileFinishedImporting("modules/safety_hub/native/AppealIngestionSpam.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_4 = createStyles.createStyles({ container: { flex: 1, alignItems: "center", justifyContent: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionSpam.tsx");
 
 export default function AppealIngestionSpam() {
-  const tmp = callback();
-  let obj = { children: null };
-  obj = { style: tmp.container, children: null };
-  obj = { bottom: true, style: tmp.container, children: jsx(Button.LegacyText, { children: "TODO - SPAM" }) };
-  obj[1] = jsx(SafeAreaPaddingView.SafeAreaPaddingView, { bottom: true, style: tmp.container, children: jsx(Button.LegacyText, { children: "TODO - SPAM" }) });
-  obj[0] = <View bottom style={tmp.container}>{jsx(Button.LegacyText, { children: "TODO - SPAM" })}</View>;
-  return jsx(AppealIngestionModal.AppealIngestionModalScreen, { bottom: true, style: tmp.container, children: jsx(Button.LegacyText, { children: "TODO - SPAM" }) });
+  const tmp = closure_4();
+  const obj = { children: null };
+  const obj2 = { style: tmp.container, children: jsx(common_SafeAreaView.SafeAreaPaddingView, { bottom: true, style: tmp.container, children: jsx(native.LegacyText, { children: "TODO - SPAM" }) }) };
+  obj.children = <View style={tmp.container}>{jsx(common_SafeAreaView.SafeAreaPaddingView, { bottom: true, style: tmp.container, children: jsx(native.LegacyText, { children: "TODO - SPAM" }) })}</View>;
+  return jsx(AppealIngestionModal.AppealIngestionModalScreen, { children: null });
 };

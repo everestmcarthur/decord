@@ -1,29 +1,28 @@
-// Module ID: 13393
-// Function ID: 13394
+// Module ID: 13416
+// Function ID: 13417
 // Name: BuyNitroPurchaseButtonLegalDisclaimer
-// Dependencies: [19, 1074, 21, 4560, 576, 1114, 1115, 4218, 2024, 4556, 2]
+// Dependencies: [19, 1074, 21, 4574, 576, 1114, 1115, 4231, 2024, 4570, 2]
 // Exports: default
 
-// Module 13393 (BuyNitroPurchaseButtonLegalDisclaimer)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import set from "set" /* 1115 */;
-import combinedDefault from "combined" /* 2024 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4218 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4218 */;
-import ME from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13416 (BuyNitroPurchaseButtonLegalDisclaimer)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
+import PremiumUtils from "PremiumUtils" /* 4231 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ HelpdeskArticles: c3, MarketingURLs: c4 } = ME);
-createCacheKey = { disclaimer: null };
-createCacheKey = { marginTop: ThemesDefault.space.PX_12, textAlign: "center" };
-createCacheKey[0] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/purchase_button/BuyNitroPurchaseButtonLegalDisclaimer.tsx");
+const PremiumUtilsDefault = PremiumUtils;
+
+require = fn;
+const Constants = fn(1074);
+({ HelpdeskArticles: c3, MarketingURLs: closure_4 } = Constants);
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { disclaimer: { marginTop: nativeDefault.space.PX_12, textAlign: "center" } };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium_marketing/native/components/purchase_button/BuyNitroPurchaseButtonLegalDisclaimer.tsx");
 
 export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
   ({ item, ctaText } = arg0);
@@ -35,49 +34,39 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
   if (null == interval) {
     return null;
   } else {
-    const intl = getSystemLocale.intl;
+    const intl = util.intl;
     const format = intl.format;
     if (!isTrial) {
       if (isDiscounted) {
-        let obj = { buttonText: null, interval: null, cancelSubscriptionArticle: null, paidServiceTermsArticle: null };
-        obj[0] = ctaText;
-        obj[1] = getPremiumPlanItemDefault.formatInterval(item.interval);
-        const obj5 = getPremiumPlanItemDefault;
-        obj[2] = combinedDefault.getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
-        const obj6 = combinedDefault;
-        obj[3] = combinedDefault.getArticleURL(constants.PAID_TERMS);
+        const obj = { buttonText: ctaText, interval: PremiumUtilsDefault.formatInterval(item.interval), cancelSubscriptionArticle: null, paidServiceTermsArticle: null };
+        obj.cancelSubscriptionArticle = HelpdeskUtilsDefault.getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
+        obj.paidServiceTermsArticle = HelpdeskUtilsDefault.getArticleURL(constants.PAID_TERMS);
         let formatResult = format(tmp3(1114).t["3uC7vj"], obj);
         let tmp10 = tmp3;
-        const obj7 = combinedDefault;
       } else {
-        let tmp3Result = tmp3(1115);
-        let t = tmp3(1114).t;
-        obj = { paidURL: null, interval: null, ctaText: null };
-        obj[0] = constants2.PAID_TERMS;
-        const isAndroidResult = tmp3Result.isAndroid();
-        tmp3Result = tmp3(4218);
-        obj[1] = tmp3Result.getIntervalStringAsNoun(item.interval);
-        obj[2] = ctaText;
-        formatResult = format(tmp3Result.isAndroid() ? t.COObWR : t["7wpqfj"], obj);
+        const tmp3Result = tmp3(1115);
+        const t = tmp3(1114).t;
+        const obj2 = { paidURL: constants2.PAID_TERMS, interval: null, ctaText: null };
+        const isAndroidResult = tmp3(1115).isAndroid();
+        const tmp6 = tmp3(1115).isAndroid() ? t.COObWR : t["7wpqfj"];
+        obj2.interval = tmp3(4231).getIntervalStringAsNoun(item.interval);
+        obj2.ctaText = ctaText;
+        formatResult = format(tmp6, obj2);
         tmp10 = tmp3;
-        const tmp6 = tmp3Result.isAndroid() ? t.COObWR : t["7wpqfj"];
+        const tmp3Result4 = tmp3(4231);
       }
-      obj1 = { style: null, variant: "text-xxs/medium", children: null };
-      obj1[0] = tmp.disclaimer;
-      obj1[2] = formatResult;
-      jsx(tmp10(4556).Text, { style: null, variant: "text-xxs/medium", children: null });
+      const obj3 = { style: tmp.disclaimer, variant: "text-xxs/medium", children: formatResult };
+      jsx(tmp10(4570).Text, { style: tmp.disclaimer, variant: "text-xxs/medium", children: formatResult });
     }
-    const tmp3Result1 = set;
-    t = tmp3(1114).t;
-    const isAndroidResult1 = set.isAndroid();
-    t = { paidURL: null, interval: null, cancelURL: null };
-    t[0] = constants2.PAID_TERMS;
-    const tmp14 = set.isAndroid() ? t.tINI9V : t.ZWXtAj;
-    t[1] = getPremiumPlanItem.getIntervalStringAsNoun(item.interval);
-    const tmp3Result2 = getPremiumPlanItem;
-    item = combinedDefault.getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
-    t[2] = item;
-    format(tmp14, t);
-    const obj11 = combinedDefault;
+    const tmp3Result5 = PlatformUtils;
+    tmp3(1114).t;
+    const isAndroidResult1 = PlatformUtils.isAndroid();
+    const t1 = { paidURL: constants2.PAID_TERMS, interval: null, cancelURL: null };
+    const tmp14 = PlatformUtils.isAndroid() ? t1.tINI9V : t1.ZWXtAj;
+    t1.interval = PremiumUtils.getIntervalStringAsNoun(item.interval);
+    const tmp3Result6 = PremiumUtils;
+    item = HelpdeskUtilsDefault.getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
+    t1.cancelURL = item;
+    format(tmp14, t1);
   }
 };

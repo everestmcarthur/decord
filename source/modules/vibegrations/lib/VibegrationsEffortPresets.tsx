@@ -1,78 +1,79 @@
-// Module ID: 16602
-// Function ID: 16603
-// Name: items
-// Dependencies: [1114, 3547, 16603, 2]
+// Module ID: 16634
+// Function ID: 16635
+// Name: VibegrationsEffortPresets
+// Dependencies: [1114, 3560, 16635, 2]
 // Exports: describeVibegrationsModelSettings, matchVibegrationsEffortPreset, vibegrationsPresetTier, vibegrationsSettingsForTier
 
-// Module 16602 (items)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 3547 */;
+// Module 16634 (VibegrationsEffortPresets)
+import util from "util" /* 1114 */;
+import _modDef3560 from "module_3560" /* 3560 */;
+import VibegrationsModelLabels from "VibegrationsModelLabels" /* 16635 */;
+import size from "module_2" /* 2 */;
 
-let obj = {
-  model: "gpt-5.6-luna",
-  thinking: "high",
-  fast: true,
-  summary() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.Mo0a1m);
-  }
-};
 const items = [
-  obj,
+  {
+    model: "gpt-5.6-luna",
+    thinking: "high",
+    fast: true,
+    summary() {
+      const intl = util.intl;
+      return intl.string(_modDef3560.Mo0a1m);
+    }
+  },
   {
     model: "gpt-5.6-sol",
     thinking: "high",
     summary() {
-      const intl = getSystemLocale.intl;
-      return intl.string(messagesProxyDefault.dkt78K);
+      const intl = util.intl;
+      return intl.string(_modDef3560.dkt78K);
     }
   },
   {
     model: "gpt-6-astra",
     thinking: "medium",
     summary() {
-      const intl = getSystemLocale.intl;
-      return intl.string(messagesProxyDefault.Ly6zYL);
+      const intl = util.intl;
+      return intl.string(_modDef3560.Ly6zYL);
     }
   }
 ];
 let tmp2 = items[1];
 if (tmp2 == null) {
-  obj = { model: "gpt-5.6-sol", thinking: "high", summary: null };
-  obj[2] = function summary() {
-    return "";
+  const obj2 = {
+    model: "gpt-5.6-sol",
+    thinking: "high",
+    summary() {
+        return "";
+      }
   };
-  tmp2 = obj;
+  tmp2 = obj2;
 }
-obj = { model: tmp2.model, thinking: tmp2.thinking };
+const obj3 = { model: tmp2.model, thinking: tmp2.thinking };
 function vibegrationsPresetTier(model) {
   const merged = Object.assign(true === model.fast ? { fast: true } : {});
   return { model: model.model, thinking: model.thinking };
 }
 function vibegrationsSettingsForTier(arg0) {
-  let obj = { main: null, subagent: null };
-  obj = {};
+  const obj = { main: null, subagent: null };
   const merged = Object.assign(arg0);
-  obj[0] = obj;
-  obj = {};
+  obj.main = {};
   const merged1 = Object.assign(arg0);
-  obj[1] = obj;
+  obj.subagent = {};
   return obj;
 }
 let merged = Object.assign(true === tmp2.fast ? { fast: true } : {});
-const obj1 = { main: null, subagent: null };
-let merged1 = Object.assign(obj);
-obj1[0] = {};
-const merged2 = Object.assign(obj);
-obj1[1] = {};
-const result = set.fileFinishedImporting("modules/vibegrations/lib/VibegrationsEffortPresets.tsx");
+const obj4 = { main: null, subagent: null };
+let merged1 = Object.assign(obj3);
+obj4.main = {};
+const merged2 = Object.assign(obj3);
+obj4.subagent = {};
+const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsEffortPresets.tsx");
 
 export const VIBEGRATIONS_EFFORT_PRESETS = items;
 export { vibegrationsPresetTier };
-export const VIBEGRATIONS_DEFAULT_MODEL_SETTINGS = obj1;
+export const VIBEGRATIONS_DEFAULT_MODEL_SETTINGS = obj4;
 export const matchVibegrationsEffortPreset = function matchVibegrationsEffortPreset(arg0, arg1) {
-  closure_0 = arg0;
+  let main = arg0;
   closure_1 = arg1;
   return items.findIndex((model) => {
     main = main.main;
@@ -137,16 +138,16 @@ export const describeVibegrationsModelSettings = function describeVibegrationsMo
   if (label == null) {
     label = model;
   }
-  let tmp5 = model(16603).THINKING_LABELS[thinking];
+  let tmp5 = VibegrationsModelLabels.THINKING_LABELS[thinking];
   if (tmp5 == null) {
     tmp5 = thinking;
   }
   const combined = "" + label + " \u00B7 " + tmp5;
   let combined1 = combined;
   if (true === fast) {
-    const intl = model(1114).intl;
+    const intl = util.intl;
     const _HermesInternal = HermesInternal;
-    combined1 = "" + combined + " \u00B7 " + intl.string(messagesProxyDefault.qOoAsd);
+    combined1 = "" + combined + " \u00B7 " + intl.string(_modDef3560.qOoAsd);
   }
   return combined1;
 };

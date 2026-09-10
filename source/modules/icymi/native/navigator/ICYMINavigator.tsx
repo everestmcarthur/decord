@@ -1,22 +1,23 @@
-// Module ID: 16452
-// Function ID: 16453
+// Module ID: 16483
+// Function ID: 16484
 // Name: ICYMINavigator
-// Dependencies: [21, 7913, 7000, 16453, 16404, 2]
+// Dependencies: [21, 7927, 7014, 16484, 16435, 2]
 // Exports: default
 
-// Module 16452 (ICYMINavigator)
-import set from "set" /* 2 */;
+// Module 16483 (ICYMINavigator)
 import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 7913 */;
+import NativeStackNavigator from "NativeStackNavigator" /* 7927 */;
+import size from "module_2" /* 2 */;
 
-({ jsx: obj1, jsxs: c3 } = jsxProd);
-let closure_4 = createNativeStackNavigator.createNativeStackNavigator();
-const result = set.fileFinishedImporting("modules/icymi/native/navigator/ICYMINavigator.tsx");
+const require = globalThis.__r;
+
+({ jsx: c2, jsxs: c3 } = jsxProd);
+let closure_4 = NativeStackNavigator.createNativeStackNavigator();
+const result = size.fileFinishedImporting("modules/icymi/native/navigator/ICYMINavigator.tsx");
 
 export default function ICYMINavigator() {
-  let obj = _require(7000);
-  _require = obj.useAccessibilityNativeStackOptions();
-  obj = {
+  _require = require("Navigator").useAccessibilityNativeStackOptions();
+  const obj2 = {
     screenOptions() {
       const merged = Object.assign(closure_0);
       return { headerShown: false, fullScreenGestureEnabled: true };
@@ -24,21 +25,20 @@ export default function ICYMINavigator() {
     initialRouteName: "icymi-screen",
     children: null
   };
-  obj = {
-    name: "icymi-screen",
-    getComponent() {
-      return callback(16453).ICYMITab;
-    }
-  };
   const items = [
-    callback(closure_4.Screen, obj),
-    callback(closure_4.Screen, {
+    closure_2(closure_4.Screen, {
+      name: "icymi-screen",
+      getComponent() {
+        return closure_0(16484).ICYMITab;
+      }
+    }),
+    closure_2(closure_4.Screen, {
       name: "notifications-screen",
       getComponent() {
-        return callback(16404).ThemedNotificationsModal;
+        return closure_0(16435).ThemedNotificationsModal;
       }
     })
   ];
-  obj[2] = items;
-  return callback2(closure_4.Navigator, obj);
+  obj2.children = items;
+  return closure_3(closure_4.Navigator, obj2);
 };

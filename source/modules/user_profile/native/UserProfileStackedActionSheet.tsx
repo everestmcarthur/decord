@@ -1,81 +1,79 @@
-// Module ID: 11156
-// Function ID: 11157
+// Module ID: 11183
+// Function ID: 11184
 // Name: UserProfileStackedActionSheet
-// Dependencies: [19, 17, 21, 4560, 576, 1611, 6627, 8598, 1115, 7150, 5123, 1114, 5628, 4556, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 1611, 6641, 8626, 1115, 7164, 5137, 1114, 5642, 4570, 2]
 // Exports: UserProfileStackedActionSheetList, UserProfileStackedActionSheetSectionList, default
 
-// Module 11156 (UserProfileStackedActionSheet)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Text from "Text" /* 4556 */;
-import Background from "Background" /* 7150 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11183 (UserProfileStackedActionSheet)
+import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7164 */;
+import Form from "Form" /* 8626 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { header: null, headerSpacer: null, list: null, contentContainer: null, divider: null };
-createCacheKey = { flexDirection: "row", marginHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { width: ThemesDefault.space.PX_24, height: ThemesDefault.space.PX_24 };
-createCacheKey[2] = { flex: 1 };
-let obj1 = { width: ThemesDefault.space.PX_24, height: ThemesDefault.space.PX_24 };
-createCacheKey[3] = { marginHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[4] = { marginLeft: 64 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const obj2 = { marginHorizontal: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileStackedActionSheet.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { header: { flexDirection: "row", marginHorizontal: nativeDefault.space.PX_16 }, headerSpacer: null, list: null, contentContainer: null, divider: null };
+let size = { width: nativeDefault.space.PX_24, height: nativeDefault.space.PX_24 };
+obj2.headerSpacer = size;
+obj2.list = { flex: 1 };
+let obj3 = { flexDirection: "row", marginHorizontal: nativeDefault.space.PX_16 };
+obj2.contentContainer = { marginHorizontal: nativeDefault.space.PX_16 };
+obj2.divider = { marginLeft: 64 };
+let closure_6 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileStackedActionSheet.tsx");
 
 export default function UserProfileStackedActionSheet(onBack) {
   onBack = onBack.onBack;
   ({ title, children } = onBack);
-  const merged = Object.assign(onBack, Object.create(null));
-  const tmp2 = callback2();
-  let tmp4Result = null != onBack;
-  let obj = {};
+  const merged = Object.assign(onBack, Object.assign({ title: 0, children: 0, onBack: 0 }));
+  const tmp2 = closure_6();
+  let tmp4Result2 = null != onBack;
+  const obj = {};
   const merged1 = Object.assign(merged);
   const items = [tmp2.header, ];
   let str = "center";
-  if (tmp4Result) {
+  if (tmp4Result2) {
     str = "space-between";
   }
-  obj = { style: items, children: null };
+  const obj2 = { style: items, children: null };
   items[1] = { justifyContent: str };
-  if (tmp4Result) {
-    obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
+  let tmp4Result = tmp4Result2;
+  if (tmp4Result2) {
+    const obj3 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
     const intl = tmp5(1114).intl;
-    obj[1] = intl.string(tmp5(1114).t["13/7kX"]);
-    obj[2] = onBack;
-    obj[3] = tmp4(tmp5(5628).ArrowLargeLeftIcon, { size: "md" });
-    tmp4Result = tmp4(tmp5(5123).PressableOpacity, obj);
+    obj3.accessibilityLabel = intl.string(tmp5(1114).t["13/7kX"]);
+    obj3.onPress = onBack;
+    obj3.children = tmp4(tmp5(5642).ArrowLargeLeftIcon, { size: "md" });
+    tmp4Result = tmp4(tmp5(5137).PressableOpacity, obj3);
   }
-  const items1 = [tmp4Result, closure_4(Text.Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: title }), ];
-  if (tmp4Result) {
-    obj1 = { style: null };
-    obj1[0] = tmp2.headerSpacer;
-    tmp4Result = tmp4(tmp9, obj1);
+  const items1 = [tmp4Result, React4(Text_Text.Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: title }), ];
+  if (tmp4Result2) {
+    const obj4 = { style: tmp2.headerSpacer };
+    tmp4Result2 = tmp4(tmp9, obj4);
   }
-  items1[2] = tmp4Result;
-  obj[1] = items1;
-  obj.header = closure_5(View, obj);
+  items1[2] = tmp4Result2;
+  obj2.children = items1;
+  obj.header = hasOwnProperty(View, obj2);
   obj.children = children;
-  return closure_4(Background.BottomSheet, obj);
+  return React4(Sheet_BottomSheet.BottomSheet, obj);
 };
 export const UserProfileStackedActionSheetList = function UserProfileStackedActionSheetList(data) {
   data = data.data;
   const renderItem = data.renderItem;
-  dependencyMap = undefined;
-  const merged = Object.assign(data, Object.create(null));
-  const tmp2 = callback2();
+  const merged = Object.assign(data, Object.assign({ data: 0, contentContainerStyle: 0, renderItem: 0 }));
+  const tmp2 = closure_6();
   dependencyMap = tmp2;
   const obj = {};
   const merged1 = Object.assign(merged);
   obj.data = data;
   obj.style = tmp2.list;
   obj.ItemSeparatorComponent = function ItemSeparatorComponent() {
-    return closure_1_4(data(divider[7]).FormDivider, { style: divider.divider });
+    return React4(Form.FormDivider, { style: divider.divider });
   };
   const items = [tmp2.contentContainer, , ];
   let num = 0;
@@ -89,13 +87,12 @@ export const UserProfileStackedActionSheetList = function UserProfileStackedActi
     index = index.index;
     return renderItem({ item: index.item, index, start: 0 === index, end: index === data.length - 1 });
   };
-  return closure_4(data(6627).BottomSheetFlatList, obj);
+  return closure_4(data(6641).BottomSheetFlatList, obj);
 };
 export const UserProfileStackedActionSheetSectionList = function UserProfileStackedActionSheetSectionList(renderItem) {
   renderItem = renderItem.renderItem;
-  closure_1 = undefined;
-  const merged = Object.assign(renderItem, Object.create(null));
-  closure_1 = callback2();
+  const merged = Object.assign(renderItem, Object.assign({ contentContainerStyle: 0, renderItem: 0 }));
+  const divider = closure_6();
   const obj = {};
   const merged1 = Object.assign(merged);
   obj.contentContainerStyle = renderItem.contentContainerStyle;
@@ -104,7 +101,7 @@ export const UserProfileStackedActionSheetSectionList = function UserProfileStac
     return renderItem({ item: index.item, start: 0 === index, end: index === index.section.data.length - 1 });
   };
   obj.ItemSeparatorComponent = function ItemSeparatorComponent() {
-    return closure_1_4(renderItem(closure_1_2[7]).FormDivider, { style: divider.divider });
+    return React4(Form.FormDivider, { style: divider.divider });
   };
-  return callback(renderItem(6627).BottomSheetSectionList, obj);
+  return closure_4(renderItem(6641).BottomSheetSectionList, obj);
 };

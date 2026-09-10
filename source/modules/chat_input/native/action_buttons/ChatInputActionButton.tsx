@@ -1,41 +1,42 @@
-// Module ID: 12243
-// Function ID: 12244
-// Dependencies: [19, 17, 21, 4560, 576, 4262, 5123, 2]
+// Module ID: 12269
+// Function ID: 12270
+// Name: ChatInputActionButton
+// Dependencies: [19, 17, 21, 4574, 576, 4275, 5137, 2]
 
-// Module 12243
-import ThemesDefault from "Themes" /* 576 */;
-import map from "map" /* 4262 */;
-import PressableBase from "PressableBase" /* 5123 */;
-import importAllResult from "noop" /* 19 */;
-import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12269 (ChatInputActionButton)
+import nativeDefault from "native" /* 576 */;
+import useToken from "useToken" /* 4275 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let closure_5 = createCacheKey.createStyles((height, marginHorizontal) => {
-  let obj = { actionButton: null, actionButtonIcon: null, actionButtonIconActive: null, actionButtonIconDisabled: null };
-  obj = { borderRadius: ThemesDefault.radii.sm, height, width: height, marginHorizontal, flexShrink: 0, flexDirection: "row", alignItems: "center", justifyContent: "center" };
-  obj[0] = obj;
-  obj = { tintColor: ThemesDefault.colors.CHAT_INPUT_ACTION_BUTTON_ICON_DEFAULT_TINT, width: ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_ICON_PIXEL_SIZE, height: ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_ICON_PIXEL_SIZE };
-  obj[1] = obj;
-  obj[2] = { tintColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_PRESSED_TEXT };
-  obj1 = { tintColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_PRESSED_TEXT };
-  obj[3] = { tintColor: ThemesDefault.colors.ICON_MUTED };
+const Pressables = tmp(5137);
+require = fn;
+const StyleSheet = fn(17).StyleSheet;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let closure_5 = createStyles.createStyles((height, marginHorizontal) => {
+  const obj = { actionButton: null, actionButtonIcon: null, actionButtonIconActive: null, actionButtonIconDisabled: null };
+  const size = { borderRadius: nativeDefault.radii.sm, height, width: height, marginHorizontal, flexShrink: 0, flexDirection: "row", alignItems: "center", justifyContent: "center" };
+  obj.actionButton = size;
+  const size1 = { tintColor: nativeDefault.colors.CHAT_INPUT_ACTION_BUTTON_ICON_DEFAULT_TINT, width: nativeDefault.modules.mobile.CHAT_INPUT_ACTION_ICON_PIXEL_SIZE, height: nativeDefault.modules.mobile.CHAT_INPUT_ACTION_ICON_PIXEL_SIZE };
+  obj.actionButtonIcon = size1;
+  obj.actionButtonIconActive = { tintColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_PRESSED_TEXT };
+  const obj2 = { tintColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_PRESSED_TEXT };
+  obj.actionButtonIconDisabled = { tintColor: nativeDefault.colors.ICON_MUTED };
   return obj;
 });
-const memoResult = importAllResult.memo(importAllResult.forwardRef((active, ref) => {
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/chat_input/native/action_buttons/ChatInputActionButton.tsx");
+
+export default noop.memo(noop.forwardRef((active, ref) => {
   let flag = active.active;
   if (flag === undefined) {
     flag = false;
   }
   ({ style, disabled, accessibilityState, activeStyle, activeIconStyle, onPress, accessible, accessibilityLabel, accessibilityHint, accessibilityActions, onAccessibilityAction, IconComponent } = active);
-  let obj = map;
-  const token = obj.useToken(ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
-  const token1 = map.useToken(ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
-  const obj2 = map;
-  const tmp = require;
-  const token2 = map.useToken(ThemesDefault.modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
-  const tmp6 = callback(token, token1);
+  const token = useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
+  const token1 = useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
+  const token2 = useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
+  const tmp6 = closure_5(token, token1);
   const flattenResult = StyleSheet.flatten(style);
   let height;
   if (flattenResult != null) {
@@ -46,7 +47,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((active, ref)
     tmp9 = height;
   }
   const bound = Math.max(0, (token2 - tmp9) / 2);
-  obj = { ref, style: null, hitSlop: null, disabled: null, accessible: null, accessibilityRole: "button", accessibilityState: null, accessibilityLabel: null, accessibilityHint: null, accessibilityActions: null, onAccessibilityAction: null, onPress: null, children: null };
+  const obj4 = { ref, style: null, hitSlop: null, disabled: null, accessible: null, accessibilityRole: "button", accessibilityState: null, accessibilityLabel: null, accessibilityHint: null, accessibilityActions: null, onAccessibilityAction: null, onPress: null, children: null };
   const items = [tmp6.actionButton, style, ];
   let tmp12 = flag;
   if (flag) {
@@ -56,22 +57,21 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((active, ref)
     tmp12 = activeStyle;
   }
   items[2] = tmp12;
-  obj[1] = items;
+  obj4.style = items;
   let tmp13;
   if (bound > 0) {
     tmp13 = bound;
   }
-  obj[2] = tmp13;
-  obj[3] = disabled;
-  obj[4] = accessible;
-  obj = { disabled };
+  obj4.hitSlop = tmp13;
+  obj4.disabled = disabled;
+  obj4.accessible = accessible;
   const merged = Object.assign(accessibilityState);
-  obj[6] = obj;
-  obj[7] = accessibilityLabel;
-  obj[8] = accessibilityHint;
-  obj[9] = accessibilityActions;
-  obj[10] = onAccessibilityAction;
-  obj[11] = onPress;
+  obj4.accessibilityState = { disabled };
+  obj4.accessibilityLabel = accessibilityLabel;
+  obj4.accessibilityHint = accessibilityHint;
+  obj4.accessibilityActions = accessibilityActions;
+  obj4.onAccessibilityAction = onAccessibilityAction;
+  obj4.onPress = onPress;
   const items1 = [tmp6.actionButtonIcon, , , ];
   let actionButtonIconActive = flag;
   if (flag) {
@@ -86,9 +86,6 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((active, ref)
     disabled = tmp6.actionButtonIconDisabled;
   }
   items1[3] = disabled;
-  obj[12] = <IconComponent size="custom" style={items1} />;
-  return jsx(PressableBase.PressableOpacity, { disabled });
+  obj4.children = <IconComponent size="custom" style={items1} />;
+  return jsx(Pressables.PressableOpacity, { ref, style: null, hitSlop: null, disabled: null, accessible: null, accessibilityRole: "button", accessibilityState: null, accessibilityLabel: null, accessibilityHint: null, accessibilityActions: null, onAccessibilityAction: null, onPress: null, children: null });
 }));
-const result = require("set").fileFinishedImporting("modules/chat_input/native/action_buttons/ChatInputActionButton.tsx");
-
-export default memoResult;

@@ -1,24 +1,25 @@
-// Module ID: 17836
-// Function ID: 17837
-// Name: AVErrorNoAudioInputDetectedDefinition
-// Dependencies: [1957, 1908, 4583, 1074, 9115, 17837, 2]
+// Module ID: 17869
+// Function ID: 17870
+// Name: AVErrorNoAudioInputDetected
+// Dependencies: [1957, 1908, 4597, 1074, 9142, 17870, 2]
 
-// Module 17836 (AVErrorNoAudioInputDetectedDefinition)
-import mapped from "mapped" /* 9115 */;
-import getVoiceChannelErrorContext from "getVoiceChannelErrorContext" /* 17837 */;
-import closure_2 from "ensureGuildLoaded" /* 1957 */;
-import closure_3 from "_detectH265HardwareDecode" /* 1908 */;
-import closure_4 from "createRTCConnection" /* 4583 */;
-import ME from "ME" /* 1074 */;
+// Module 17869 (AVErrorNoAudioInputDetected)
+import AVError from "AVError" /* 9142 */;
+import AVErrorContext from "AVErrorContext" /* 17870 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
 
-require = arg1;
-({ InputModes: c5, RTCConnectionStates: closure_6 } = ME);
-const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorNoAudioInputDetected.tsx");
+require = fn;
+const Constants = fn(1074);
+({ InputModes: hasOwnProperty, RTCConnectionStates: metroRequire } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorNoAudioInputDetected.tsx");
 
 export const AVErrorNoAudioInputDetectedDefinition = {
   getActiveErrors(voiceState) {
     voiceState = voiceState.voiceState;
-    channel = channel.getChannel(voiceState.voiceChannelId);
+    const channel = ChannelStore.getChannel(voiceState.voiceChannelId);
     let isGuildStageVoiceResult;
     if (channel != null) {
       isGuildStageVoiceResult = channel.isGuildStageVoice();
@@ -31,17 +32,16 @@ export const AVErrorNoAudioInputDetectedDefinition = {
       isGuildStageVoiceResult = suppress;
     }
     if (null != channel) {
-      if (null != mediaSessionId.getMediaSessionId()) {
-        if (!inputDetectedThisConnection.getInputDetectedThisConnection()) {
-          if (mediaSessionId.getState() === constants2.RTC_CONNECTED) {
+      if (null != RTCConnectionStore.getMediaSessionId()) {
+        if (!MediaEngineStore.getInputDetectedThisConnection()) {
+          if (RTCConnectionStore.getState() === constants2.RTC_CONNECTED) {
             if (obj5.getSettings().mode === constants.VOICE_ACTIVITY) {
               if (obj5.getSettings().silenceWarning) {
                 if (false === obj5.getInputDetected()) {
                   if (!isGuildStageVoiceResult) {
                     if (!obj5.isSelfMute()) {
-                      const obj = { type: null };
-                      obj[0] = mapped.AVError.NO_AUDIO_INPUT_DETECTED;
-                      const merged = Object.assign(getVoiceChannelErrorContext.getVoiceChannelErrorContext());
+                      const obj = { type: AVError.AVError.NO_AUDIO_INPUT_DETECTED };
+                      const merged = Object.assign(AVErrorContext.getVoiceChannelErrorContext());
                       const items = [obj];
                       return items;
                     }

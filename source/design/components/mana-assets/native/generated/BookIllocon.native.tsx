@@ -1,17 +1,17 @@
-// Module ID: 5799
-// Function ID: 5800
+// Module ID: 5813
+// Function ID: 5814
 // Name: BookIllocon
-// Dependencies: [21, 5587, 5800, 2]
+// Dependencies: [21, 5601, 5814, 2]
 // Exports: BookIllocon
 
-// Module 5799 (BookIllocon)
-import set from "set" /* 2 */;
+// Module 5813 (BookIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 5800 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5814 from "module_5814" /* 5814 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/BookIllocon.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BookIllocon.native.tsx");
 
 export const BookIllocon = function BookIllocon(size) {
   let num = size.size;
@@ -19,13 +19,13 @@ export const BookIllocon = function BookIllocon(size) {
   if (num === undefined) {
     num = 64;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef5814 };
+  obj.source = obj2;
   const items = [{ width: num, height: num }];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { uri: metadataDefault });
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

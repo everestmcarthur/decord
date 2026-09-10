@@ -1,49 +1,50 @@
-// Module ID: 12112
-// Function ID: 12113
+// Module ID: 12138
+// Function ID: 12139
 // Name: ExpandableList
-// Dependencies: [32, 19, 17, 21, 4560, 8272, 4296, 4561, 4564, 5605, 1114, 4556, 2]
+// Dependencies: [32, 19, 17, 21, 4574, 8300, 4310, 4575, 4578, 5619, 1114, 4570, 2]
 // Exports: default
 
-// Module 12112 (ExpandableList)
-import _modDef4296 from "module_4296" /* 4296 */;
-import usePreviousDefault from "usePrevious" /* 8272 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12138 (ExpandableList)
+import timing from "timing" /* 4575 */;
+import timingPresets from "timingPresets" /* 4578 */;
+import usePreviousDefault from "usePrevious" /* 8300 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
-let closure_9 = createCacheKey.createStyles({ animatedListContainer: { overflow: "hidden" }, expandCTALabelContainer: { alignItems: "center" } });
+const ReanimatedRexportDefault = tmp4(4310);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+const createStyles = fn(4574);
+let closure_9 = createStyles.createStyles({ animatedListContainer: { overflow: "hidden" }, expandCTALabelContainer: { alignItems: "center" } });
 let closure_10 = { code: "function ExpandableListTsx1(){const{expanded,collapsedListHeight,remainingListHeight}=this.__closure;if(expanded&&collapsedListHeight.get()!==0&&remainingListHeight.get()!==0){return collapsedListHeight.get()+remainingListHeight.get();}return collapsedListHeight.get();}" };
 let closure_11 = { code: "function ExpandableListTsx2(){const{collapsedListHeight,withTiming,containerHeight,timingStandard}=this.__closure;if(collapsedListHeight.get()!==0){return{height:withTiming(containerHeight.get(),timingStandard)};}else{return{};}}" };
-let result = require("set").fileFinishedImporting("modules/app_launcher/native/base_components/ExpandableList.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/app_launcher/native/base_components/ExpandableList.tsx");
 
-export default function ExpandableList(items) {
-  items = items.items;
+export default function ExpandableList(onExpand) {
+  const items = onExpand.items;
   let memo1 = items;
-  const onExpand = items.onExpand;
+  onExpand = onExpand.onExpand;
   importDefault = onExpand;
-  ({ onExpandCTAPress: dependencyMap, expandedOverride } = items);
-  ({ showsExpandCTAOverride, disableExpanding: closure_4, title } = items);
-  let first;
+  ({ onExpandCTAPress: dependencyMap, expandedOverride } = onExpand);
+  ({ showsExpandCTAOverride, disableExpanding: noop, title } = onExpand);
   closure_6 = undefined;
-  first = undefined;
+  let first;
   let bound;
   let sharedValue;
   let sharedValue1;
   let derivedValue;
   let tmp = sharedValue();
-  let obj = React;
   let flag = expandedOverride;
   if (expandedOverride == null) {
     flag = false;
   }
-  const tmp2 = expandedOverride(React.useState(flag), 2);
+  const tmp2 = expandedOverride(noop.useState(flag), 2);
   first = tmp2[0];
   closure_6 = tmp2[1];
-  let obj7 = dependencyMap;
+  let obj14 = dependencyMap;
   let tmp5 = usePreviousDefault(first);
   if (tmp5 == null) {
     tmp5 = first;
@@ -60,18 +61,17 @@ export default function ExpandableList(items) {
   const items2 = [expandedOverride];
   const effect1 = obj.useEffect(() => {
     if (undefined !== expandedOverride) {
-      callback(tmp);
+      closure_6(tmp);
     }
   }, items2);
   bound = Math.min(4, items.length);
   if (null == showsExpandCTAOverride) {
     showsExpandCTAOverride = items.length > bound;
   }
-  let obj2 = memo1(4296);
-  sharedValue = obj2.useSharedValue(0);
-  let obj3 = memo1(4296);
-  sharedValue1 = obj3.useSharedValue(0);
-  let obj4 = memo1(4296);
+  sharedValue = memo1(4310).useSharedValue(0);
+  let obj3 = memo1(4310);
+  sharedValue1 = memo1(4310).useSharedValue(0);
+  const obj4 = memo1(4310);
   class C {
     constructor() {
       if (closure_5) {
@@ -93,36 +93,38 @@ export default function ExpandableList(items) {
   C.__closure = { expanded: first, collapsedListHeight: sharedValue, remainingListHeight: sharedValue1 };
   C.__workletHash = 17033418452229;
   C.__initData = sharedValue1;
-  derivedValue = obj4.useDerivedValue(C);
+  derivedValue = memo1(4310).useDerivedValue(C);
   const items3 = [items, bound];
   const memo = obj.useMemo(() => memo1.slice(0, bound), items3);
   const items4 = [items, bound];
   memo1 = obj.useMemo(() => memo1.slice(bound, memo1.length), items4);
-  let obj5 = memo1(4296);
+  const obj5 = memo1(4310);
   class A {
     constructor() {
       if (0 !== closure_9.get()) {
-        obj = { height: null };
+        obj1 = { height: null };
         tmp = closure_0;
-        tmp2 = onExpandCTAPress;
-        obj3 = closure_0(onExpandCTAPress[7]);
+        tmp2 = closure_2;
+        obj3 = closure_0(closure_2[7]);
         tmp3 = closure_11;
         value = closure_11.get();
-        obj[0] = obj3.withTiming(value, closure_0(onExpandCTAPress[8]).timingStandard);
+        obj1.height = obj3.withTiming(value, closure_0(closure_2[8]).timingStandard);
+        obj = obj1;
       } else {
         obj = {};
       }
       return obj;
     }
   }
-  obj = { collapsedListHeight: sharedValue, withTiming: memo1(4561).withTiming, containerHeight: derivedValue, timingStandard: memo1(4564).timingStandard };
-  A.__closure = obj;
+  const obj6 = memo1(4310);
+  A.__closure = { collapsedListHeight: sharedValue, withTiming: memo1(4575).withTiming, containerHeight: derivedValue, timingStandard: memo1(4578).timingStandard };
   A.__workletHash = 2086836441465;
   A.__initData = derivedValue;
-  const animatedStyle = obj5.useAnimatedStyle(A);
-  obj = { style: items5, children: null };
-  items5 = [tmp.animatedListContainer, animatedStyle];
-  obj1 = {
+  const animatedStyle = obj6.useAnimatedStyle(A);
+  const obj7 = { style: null, children: null };
+  const items5 = [tmp.animatedListContainer, animatedStyle];
+  obj7.style = items5;
+  const obj8 = {
     onLayout(nativeEvent) {
       const result = sharedValue.set(nativeEvent.nativeEvent.layout.height);
     },
@@ -134,81 +136,78 @@ export default function ExpandableList(items) {
   }
   memo1 = memo;
   importDefault = tmp18;
-  obj1[1] = memo.map((arg0, arg1) => {
+  obj8.children = memo.map((fn, index) => {
     let isLastRow = closure_1;
     if (isLastRow) {
-      isLastRow = arg1 === memo1.length - 1;
+      isLastRow = index === memo1.length - 1;
     }
-    return arg0({ isLastRow });
+    return fn({ isLastRow });
   });
-  const items6 = [closure_6(first, obj1), ];
+  const items6 = [closure_6(first, obj8), ];
   let tmp16Result = memo1.length > 0;
   if (tmp16Result) {
-    obj2 = { onLayout: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
-    obj2[0] = function onLayout(nativeEvent) {
-      const result = sharedValue1.set(nativeEvent.nativeEvent.layout.height);
+    const obj9 = {
+      onLayout(nativeEvent) {
+          const result = sharedValue1.set(nativeEvent.nativeEvent.layout.height);
+        },
+      accessibilityElementsHidden: !first,
+      importantForAccessibility: "no-hide-descendants",
+      children: null
     };
-    obj2[1] = !first;
-    obj2[2] = "no-hide-descendants";
     importDefault = !showsExpandCTAOverride;
-    obj2[3] = memo1.map((arg0, arg1) => {
+    obj9.children = memo1.map((fn, index) => {
       let isLastRow = closure_1;
       if (isLastRow) {
-        isLastRow = arg1 === memo1.length - 1;
+        isLastRow = index === memo1.length - 1;
       }
-      return arg0({ isLastRow });
+      return fn({ isLastRow });
     });
-    tmp16Result = tmp16(tmp17, obj2);
+    tmp16Result = tmp16(tmp17, obj9);
   }
   items6[1] = tmp16Result;
-  obj[1] = items6;
-  const items7 = [first(_modDef4296.View, obj), ];
+  obj7.children = items6;
+  const items7 = [first(ReanimatedRexportDefault.View, obj7), ];
   if (!showsExpandCTAOverride) {
-    obj3 = { children: null };
+    const obj10 = { children: null };
     items7[1] = showsExpandCTAOverride;
-    obj3[0] = items7;
-    return tmp14(bound, obj3);
+    obj10.children = items7;
+    return tmp14(bound, obj10);
   } else {
     if (first) {
       const intl2 = tmp9(1114).intl;
       let stringResult = intl2.string(tmp9(1114).t.nPGLFQ);
     } else if (null != title) {
       const intl = tmp9(1114).intl;
-      obj4 = { title: null };
-      obj4[0] = title;
-      stringResult = intl.formatToPlainString(tmp9(1114).t["bj/2kV"], obj4);
+      const obj11 = { title };
+      stringResult = intl.formatToPlainString(tmp9(1114).t["bj/2kV"], obj11);
     }
-    obj5 = { accessibilityLabel: null, label: null, onPress: null, end: true };
-    obj5[0] = stringResult;
-    let obj6 = { style: null, children: null };
-    obj6[0] = tmp.expandCTALabelContainer;
+    let obj12 = { accessibilityLabel: stringResult, label: null, onPress: null, end: true };
+    let obj13 = { style: tmp.expandCTALabelContainer, children: null };
     const intl3 = tmp9(1114).intl;
     if (first) {
       let stringResult1 = intl3.string(tmp9(1114).t.nPGLFQ);
     } else {
       stringResult1 = intl3.format(tmp9(1114).t.gVw57p, {});
     }
-    obj7 = { children: null };
-    const obj8 = { color: "text-brand", variant: "text-md/semibold", children: null };
-    obj8[2] = stringResult1;
-    obj6[1] = tmp16(tmp9(4556).Text, obj8);
-    obj6 = tmp16(tmp17, obj6);
-    obj5[1] = obj6;
-    obj5[2] = function onPress() {
-      let tmp = true !== closure_4;
+    obj14 = { children: null };
+    const obj15 = { color: "text-brand", variant: "text-md/semibold", children: stringResult1 };
+    obj13.children = tmp16(tmp9(4570).Text, obj15);
+    obj13 = tmp16(tmp17, obj13);
+    obj12.label = obj13;
+    obj12.onPress = function onPress() {
+      let tmp = true !== noop;
       if (tmp) {
         tmp = !first;
       }
-      callback(tmp);
-      if (closure_2 != null) {
-        const obj = { expanded: null };
-        obj[0] = tmp;
+      closure_6(tmp);
+      if (dependencyMap != null) {
+        const obj = { expanded: tmp };
         tmp4(obj);
       }
     };
-    obj5 = tmp16(tmp9(5605).TableRow, obj5);
-    obj7[0] = obj5;
-    tmp16Result = tmp16(tmp17, obj7);
+    obj12 = tmp16(tmp9(5619).TableRow, obj12);
+    obj14.children = obj12;
+    tmp16(tmp17, obj14);
   }
 };
 export const COLLAPSED_LIST_ITEM_MAX = 4;

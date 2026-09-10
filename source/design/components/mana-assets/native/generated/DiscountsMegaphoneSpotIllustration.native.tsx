@@ -1,17 +1,17 @@
-// Module ID: 5917
-// Function ID: 5918
+// Module ID: 5931
+// Function ID: 5932
 // Name: DiscountsMegaphoneSpotIllustration
-// Dependencies: [21, 5587, 5918, 2]
+// Dependencies: [21, 5601, 5932, 2]
 // Exports: DiscountsMegaphoneSpotIllustration
 
-// Module 5917 (DiscountsMegaphoneSpotIllustration)
-import set from "set" /* 2 */;
+// Module 5931 (DiscountsMegaphoneSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 5918 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5932 from "module_5932" /* 5932 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/DiscountsMegaphoneSpotIllustration.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/DiscountsMegaphoneSpotIllustration.native.tsx");
 
 export const DiscountsMegaphoneSpotIllustration = function DiscountsMegaphoneSpotIllustration(width) {
   let num = width.width;
@@ -27,14 +27,14 @@ export const DiscountsMegaphoneSpotIllustration = function DiscountsMegaphoneSpo
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
-  obj = { width: num * num3, height: num2 * num3 };
-  const items = [obj];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { width: num * num3, height: num2 * num3 });
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef5932 };
+  obj.source = obj2;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

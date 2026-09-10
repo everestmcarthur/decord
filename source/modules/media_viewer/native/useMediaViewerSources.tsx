@@ -1,63 +1,54 @@
-// Module ID: 8262
-// Function ID: 8263
-// Name: zustandStore
-// Dependencies: [4429, 8263, 2]
-// Exports: removeSpoiler, setMediaViewerSources, toggleSpoiler
+// Module ID: 8288
+// Function ID: 8289
+// Name: useMediaViewerSources
+// Dependencies: [4443, 2]
+// Exports: removeSpoiler, setMediaViewerSources, toggleSpoiler, updateMediaViewerSources
 
-// Module 8262 (zustandStore)
-import set2 from "set" /* 2 */;
-import defaultStatesAreEqual from "defaultStatesAreEqual" /* 4429 */;
+// Module 8288 (useMediaViewerSources)
+import ZustandStore from "ZustandStore" /* 4443 */;
+import size from "module_2" /* 2 */;
 
-const zustandStore = defaultStatesAreEqual.createZustandStore(() => {
-  const obj = { sources: [], spoilerIndexes: new Set() };
+const zustandStore = ZustandStore.createZustandStore(() => {
+  const obj = { sources: [], userRevealedIndexes: new Set() };
   return obj;
 });
-const result = set2.fileFinishedImporting("modules/media_viewer/native/useMediaViewerSources.tsx");
+const result = size.fileFinishedImporting("modules/media_viewer/native/useMediaViewerSources.tsx");
 
 export const MediaViewerSourcesStore = zustandStore;
-export const setMediaViewerSources = function setMediaViewerSources(arg0) {
-  ({ sources, initialIndex } = arg0);
+export const setMediaViewerSources = function setMediaViewerSources(sources) {
+  let initialIndex = sources.initialIndex;
   if (initialIndex === undefined) {
     initialIndex = null;
   }
-  let set;
-  const items = [];
-  set = new Set();
-  const item = sources.forEach((closure_1) => {
-    const flattenSourceResult = initialIndex(items[1]).flattenSource(closure_1);
-    let tmp2 = null != flattenSourceResult;
-    if (tmp2) {
-      tmp2 = flattenSourceResult.spoiler || flattenSourceResult.obscure;
-      const tmp3 = flattenSourceResult.spoiler || flattenSourceResult.obscure;
-    }
-    if (tmp2) {
-      tmp2 = initialIndex !== arg1;
-    }
-    if (tmp2) {
-      set.add(arg1);
-    }
-    items.push(closure_1);
-  });
-  set.setState({ sources: items, spoilerIndexes: set });
+  if (null != initialIndex) {
+    const _Set2 = Set;
+    const items = [initialIndex];
+    let set = new Set(items);
+  } else {
+    const _Set = Set;
+    set = new Set();
+  }
+  zustandStore.setState({ sources: sources.sources, userRevealedIndexes: set });
+};
+export const updateMediaViewerSources = function updateMediaViewerSources(items) {
+  zustandStore.setState({ sources: items });
 };
 export const removeSpoiler = function removeSpoiler(index) {
-  let obj = zustandStore;
-  const field = zustandStore.getField("spoilerIndexes");
-  if (field.has(index)) {
+  const field = zustandStore.getField("userRevealedIndexes");
+  if (!field.has(index)) {
     const _Set = Set;
     const set = new Set(field);
-    set.delete(index);
-    obj = { spoilerIndexes: null };
-    obj[0] = set;
-    obj.setState(obj);
+    set.add(index);
+    const obj2 = { userRevealedIndexes: set };
+    zustandStore.setState(obj2);
   }
 };
 export const toggleSpoiler = function toggleSpoiler(index) {
-  const set = new Set(zustandStore.getField("spoilerIndexes"));
+  const set = new Set(zustandStore.getField("userRevealedIndexes"));
   if (set.has(index)) {
     set.delete(index);
   } else {
     set.add(index);
   }
-  zustandStore.setState({ spoilerIndexes: set });
+  zustandStore.setState({ userRevealedIndexes: set });
 };

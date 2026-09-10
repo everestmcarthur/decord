@@ -1,37 +1,31 @@
-// Module ID: 8003
-// Function ID: 8004
-// Name: createUserPremiumGuildSubscriptionSystemMessage
-// Dependencies: [8004, 7960, 7962, 1114, 7964, 2]
+// Module ID: 8017
+// Function ID: 8018
+// Name: UserPremiumGuildSubscriptionSystemMessage
+// Dependencies: [8018, 7974, 7976, 1114, 7978, 2]
 // Exports: createUserPremiumGuildSubscriptionSystemMessage
 
-// Module 8003 (createUserPremiumGuildSubscriptionSystemMessage)
-import set from "set" /* 2 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7960 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7962 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7964 */;
-import getNumSubscriptionsPurchasedFromSystemMessageDefault from "getNumSubscriptionsPurchasedFromSystemMessage" /* 8004 */;
+// Module 8017 (UserPremiumGuildSubscriptionSystemMessage)
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7974 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7976 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7978 */;
+import getNumSubscriptionsPurchasedFromSystemMessageDefault from "getNumSubscriptionsPurchasedFromSystemMessage" /* 8018 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/UserPremiumGuildSubscriptionSystemMessage.tsx");
+const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/UserPremiumGuildSubscriptionSystemMessage.tsx");
 
 export const createUserPremiumGuildSubscriptionSystemMessage = function createUserPremiumGuildSubscriptionSystemMessage(roleStyle) {
   const message = roleStyle.message;
   const tmp3 = getNumSubscriptionsPurchasedFromSystemMessageDefault(message);
-  let obj = getMessageAuthorWithProcessedColor;
-  const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
+  const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   const tmp6 = formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
   if (tmp3 > 1) {
     const intl2 = tmp4(1114).intl;
-    obj = { username: null, usernameOnClick: null, numSubscriptions: null };
-    obj[0] = messageAuthorWithProcessedColor.nick;
-    obj[1] = tmp6;
-    obj[2] = tmp3;
-    let formatToPartsResult = intl2.formatToParts(tmp4(1114).t.rbj006, obj);
+    const obj2 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp6, numSubscriptions: tmp3 };
+    let formatToPartsResult = intl2.formatToParts(tmp4(1114).t.rbj006, obj2);
   } else {
     const intl = tmp4(1114).intl;
-    obj = { username: null, usernameOnClick: null };
-    obj[0] = messageAuthorWithProcessedColor.nick;
-    obj[1] = tmp6;
-    formatToPartsResult = intl.formatToParts(tmp4(1114).t.ihxM9x, obj);
+    const obj3 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp6 };
+    formatToPartsResult = intl.formatToParts(tmp4(1114).t.ihxM9x, obj3);
   }
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return { content: formatToPartsResult };

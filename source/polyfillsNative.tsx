@@ -1,17 +1,18 @@
-// Module ID: 14296
-// Function ID: 14297
-// Dependencies: [3, 14297, 14367, 14385, 14388, 14391, 1253, 1238, 2]
+// Module ID: 14321
+// Function ID: 14322
+// Name: polyfillsNative
+// Dependencies: [3, 14322, 14392, 14410, 14413, 14416, 1253, 1238, 2]
 
-// Module 14296
-import set from "set" /* 2 */;
+// Module 14321 (polyfillsNative)
 import q from "q" /* 1238 */;
 import Buffer from "Buffer" /* 1253 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 14391 */;
-import timestamp from "timestamp" /* 3 */;
-import module_14297 from "module_14297" /* 14297 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 14367 */;
-import _typeof from "_typeof" /* 14385 */;
-import GetOption from "GetOption" /* 14388 */;
+import _mod14416 from "module_14416" /* 14416 */;
+import Logger from "Logger" /* 3 */;
+import module_14322 from "module_14322" /* 14322 */;
+import get_ActivityIndicator from "module_14392" /* 14392 */;
+import _typeof from "module_14410" /* 14410 */;
+import GetOption from "module_14413" /* 14413 */;
+import size from "module_2" /* 2 */;
 
 if (typeof process === "undefined") {
   const _window3 = window;
@@ -25,7 +26,7 @@ if (!global.self) {
   global.self = global;
 }
 if (null == window.crypto) {
-  const _module5 = _isNativeReflectConstruct;
+  const _module5 = _mod14416;
   const _window = window;
   window.crypto = global.crypto;
 }
@@ -50,4 +51,4 @@ if (tmp7) {
 if (!tmp7) {
   const _module6 = q;
 }
-const result = set.fileFinishedImporting("polyfillsNative.tsx");
+const result = size.fileFinishedImporting("polyfillsNative.tsx");

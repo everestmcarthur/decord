@@ -1,31 +1,34 @@
-// Module ID: 11214
-// Function ID: 11215
+// Module ID: 11241
+// Function ID: 11242
 // Name: useFriendsSinceDate
-// Dependencies: [2025, 4209, 1074, 563, 5407, 2]
+// Dependencies: [2025, 4222, 1074, 563, 5421, 2]
 // Exports: useFriendsSinceDate
 
-// Module 11214 (useFriendsSinceDate)
-import closure_2 from "_getSystemLocale" /* 2025 */;
-import closure_3 from "markAllUserIdListsStale" /* 4209 */;
-import { RelationshipTypes } from "ME" /* 1074 */;
+// Module 11241 (useFriendsSinceDate)
+import LocaleStore from "LocaleStore" /* 2025 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useFriendsSinceDate.tsx");
+const require = globalThis.__r;
+
+const require = fn;
+const RelationshipTypes = fn(1074).RelationshipTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/hooks/useFriendsSinceDate.tsx");
 
 export const useFriendsSinceDate = function useFriendsSinceDate(userId) {
-  const _require = userId;
-  const items = [closure_2];
-  const stateFromStores = _require(563).useStateFromStores(items, () => locale.locale);
-  const obj = _require(563);
-  const items1 = [closure_3];
+  _require = userId;
+  const items = [LocaleStore];
+  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => locale.locale);
+  const obj = require("useStateFromStores");
+  const items1 = [RelationshipStore];
   const items2 = [userId];
-  const stateFromStores1 = _require(563).useStateFromStores(items1, () => {
+  const stateFromStores1 = require("useStateFromStores").useStateFromStores(items1, () => {
     let since = null;
-    if (closure_1_3.getRelationshipType(closure_0) === closure_1_4.FRIEND) {
-      since = closure_1_3.getSince(closure_0);
+    if (RelationshipStore.getRelationshipType(closure_0) === RelationshipTypes.FRIEND) {
+      since = RelationshipStore.getSince(closure_0);
     }
     return since;
   }, items2);
-  const obj2 = _require(563);
-  return _require(5407).getCreatedAtDate(stateFromStores1, stateFromStores);
+  const obj2 = require("useStateFromStores");
+  return require("ConnectionsUtils").getCreatedAtDate(stateFromStores1, stateFromStores);
 };

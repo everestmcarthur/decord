@@ -1,43 +1,41 @@
-// Module ID: 17882
-// Function ID: 17883
+// Module ID: 17915
+// Function ID: 17916
 // Name: UpdateAppScreen
-// Dependencies: [17, 21, 4560, 576, 4556, 1114, 2690, 4975, 2]
+// Dependencies: [17, 21, 4574, 576, 4570, 1114, 2690, 4989, 2]
 // Exports: default
 
-// Module 17882 (UpdateAppScreen)
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 2690 */;
-import Text from "Text" /* 4556 */;
-import Button from "Button" /* 4975 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 17915 (UpdateAppScreen)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import _modDef2690 from "module_2690" /* 2690 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import createStyles from "createStyles" /* 4574 */;
+import size from "module_2" /* 2 */;
 
-({ NativeModules: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let obj = { container: null, buttonContainer: null };
-obj = { flexDirection: "column", justifyContent: "center", gap: ThemesDefault.space.PX_8 };
-obj[0] = obj;
-obj[1] = { marginTop: ThemesDefault.space.PX_8 };
-let closure_7 = createCacheKey.createStyles(obj);
-let obj1 = { marginTop: ThemesDefault.space.PX_8 };
-const result = set.fileFinishedImporting("modules/safety_flows/native/UpdateAppScreen.tsx");
+({ NativeModules: c3, View: closure_4 } = get_ActivityIndicator);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+let obj = { container: { flexDirection: "column", justifyContent: "center", gap: nativeDefault.space.PX_8 }, buttonContainer: null };
+let obj2 = { flexDirection: "column", justifyContent: "center", gap: nativeDefault.space.PX_8 };
+obj.buttonContainer = { marginTop: nativeDefault.space.PX_8 };
+let closure_7 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/safety_flows/native/UpdateAppScreen.tsx");
 
 export default function UpdateAppScreen() {
-  const tmp = callback3();
-  let obj = { style: tmp.container, children: null };
-  obj = { variant: "heading-lg/semibold", children: null };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(messagesProxyDefault.yxqMCD);
-  const items = [callback(Text.Text, obj), , ];
-  obj = { variant: "text-md/normal", color: "text-muted", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj[2] = intl2.string(messagesProxyDefault.VBZJJg);
-  items[1] = callback(Text.Text, obj);
-  obj1 = { style: tmp.buttonContainer, children: null };
-  const obj2 = {
+  const tmp = closure_7();
+  const obj = { style: tmp.container, children: null };
+  const obj2 = { variant: "heading-lg/semibold", children: null };
+  const intl = util.intl;
+  obj2.children = intl.string(_modDef2690.yxqMCD);
+  const items = [hasOwnProperty(Text_Text.Text, obj2), , ];
+  const obj3 = { variant: "text-md/normal", color: "text-muted", children: null };
+  const intl2 = util.intl;
+  obj3.children = intl2.string(_modDef2690.VBZJJg);
+  items[1] = hasOwnProperty(Text_Text.Text, obj3);
+  const obj4 = { style: tmp.buttonContainer, children: null };
+  const obj5 = {
     onPress() {
       BundleUpdaterManager = BundleUpdaterManager.BundleUpdaterManager;
       BundleUpdaterManager.reload();
@@ -46,10 +44,10 @@ export default function UpdateAppScreen() {
     variant: "primary",
     size: "md"
   };
-  const intl3 = getSystemLocale.intl;
-  obj2[1] = intl3.string(messagesProxyDefault.o4D6fm);
-  obj1[1] = callback(Button.Button, obj2);
-  items[2] = callback(closure_4, obj1);
-  obj[1] = items;
-  return callback2(closure_4, obj);
+  const intl3 = util.intl;
+  obj5.text = intl3.string(_modDef2690.o4D6fm);
+  obj4.children = hasOwnProperty(components_Button_Button.Button, obj5);
+  items[2] = hasOwnProperty(React4, obj4);
+  obj.children = items;
+  return timestampProducer(React4, obj);
 };

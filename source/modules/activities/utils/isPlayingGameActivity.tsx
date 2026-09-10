@@ -1,18 +1,18 @@
-// Module ID: 9185
-// Function ID: 9186
+// Module ID: 9212
+// Function ID: 9213
 // Name: isPlayingGameActivity
-// Dependencies: [1920, 1074, 7739, 2]
+// Dependencies: [1920, 1074, 7753, 2]
 // Exports: default
 
-// Module 9185 (isPlayingGameActivity)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import items3 from "items3" /* 1920 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7739 */;
+// Module 9212 (isPlayingGameActivity)
+import Constants from "Constants" /* 1074 */;
+import Constants2 from "Constants" /* 1920 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7753 */;
+import size from "module_2" /* 2 */;
 
-let closure_2 = items3.XBOX_ACTIVITY_APPLICATION_ID;
-const ActivityTypes = ME.ActivityTypes;
-const result = set.fileFinishedImporting("modules/activities/utils/isPlayingGameActivity.tsx");
+let closure_2 = Constants2.XBOX_ACTIVITY_APPLICATION_ID;
+const ActivityTypes = Constants.ActivityTypes;
+const result = size.fileFinishedImporting("modules/activities/utils/isPlayingGameActivity.tsx");
 
 export default function isPlayingGameActivity(application_id) {
   let tmp = null != application_id;

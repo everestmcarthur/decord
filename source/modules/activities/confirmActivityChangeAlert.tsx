@@ -1,35 +1,35 @@
-// Module ID: 9545
-// Function ID: 9546
-// Name: confirmActivityChangeModal
-// Dependencies: [4209, 1371, 4713, 4904, 1114, 1925, 2]
+// Module ID: 9572
+// Function ID: 9573
+// Name: confirmActivityChangeAlert
+// Dependencies: [4222, 1371, 4727, 4918, 1114, 1925, 2]
 // Exports: default
 
-// Module 9545 (confirmActivityChangeModal)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import computeChannelName from "computeChannelName" /* 4713 */;
-import setDefault from "set" /* 4904 */;
-import closure_3 from "markAllUserIdListsStale" /* 4209 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
+// Module 9572 (confirmActivityChangeAlert)
+import util from "util" /* 1114 */;
+import useChannelName from "useChannelName" /* 4727 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/confirmActivityChangeAlert.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/confirmActivityChangeAlert.tsx");
 
-export default function confirmActivityChangeModal(name, channel) {
+export default function confirmActivityChangeModal(name, channel, onConfirm, onCancel) {
   let str = "";
   if (null != channel) {
-    let obj = computeChannelName;
-    str = obj.computeChannelName(channel, closure_4, closure_3);
+    str = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
   }
-  obj = { title: null, cancelText: null, confirmText: null, onConfirm: null, onCancel: null, body: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.XkIWkk);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(getSystemLocale.t["ETE/oC"]);
-  const intl3 = getSystemLocale.intl;
-  obj[2] = intl3.string(getSystemLocale.t["cY+Oob"]);
-  obj[3] = arg2;
-  obj[4] = arg3;
-  const intl4 = getSystemLocale.intl;
+  const obj3 = { title: null, cancelText: null, confirmText: null, onConfirm: null, onCancel: null, body: null };
+  const intl = util.intl;
+  obj3.title = intl.string(util.t.XkIWkk);
+  const intl2 = util.intl;
+  obj3.cancelText = intl2.string(util.t["ETE/oC"]);
+  const intl3 = util.intl;
+  obj3.confirmText = intl3.string(util.t["cY+Oob"]);
+  obj3.onConfirm = onConfirm;
+  obj3.onCancel = onCancel;
+  const intl4 = util.intl;
   name = undefined;
   if (name != null) {
     name = name.name;
@@ -38,13 +38,13 @@ export default function confirmActivityChangeModal(name, channel) {
     const intl5 = tmp6(1114).intl;
     name = intl5.string(tmp6(1114).t.G99XFs);
   }
-  obj = { currentApplicationName: name, currentApplicationChannelName: null };
-  const obj2 = setDefault;
+  const obj4 = { currentApplicationName: name, currentApplicationChannelName: null };
+  const obj2 = AlertActionCreatorsDefault;
   if (tmp6Result.isNullOrEmpty(str)) {
     const intl6 = tmp6(1114).intl;
     str = intl6.string(tmp6(1114).t.OGUjmt);
   }
-  obj[1] = str;
-  obj[5] = intl4.format(getSystemLocale.t["5/Xort"], obj);
-  obj2.show(obj);
+  obj4.currentApplicationChannelName = str;
+  obj3.body = intl4.format(util.t["5/Xort"], obj4);
+  obj2.show(obj3);
 };

@@ -1,19 +1,19 @@
-// Module ID: 11439
-// Function ID: 11440
+// Module ID: 11466
+// Function ID: 11467
 // Name: BlockedPaymentsCountryActionSheet
-// Dependencies: [19, 21, 7150, 11440, 2]
+// Dependencies: [19, 21, 7164, 11467, 2]
 // Exports: default
 
-// Module 11439 (BlockedPaymentsCountryActionSheet)
-import noopAll from "noop" /* 19 */;
-import Background from "Background" /* 7150 */;
-import BlockedPaymentsCountryDisplayDefault from "BlockedPaymentsCountryDisplay" /* 11440 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 11466 (BlockedPaymentsCountryActionSheet)
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7164 */;
+import BlockedPaymentsCountryDisplayDefault from "BlockedPaymentsCountryDisplay" /* 11467 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/billing/native/BlockedPaymentsCountryActionSheet.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/billing/native/BlockedPaymentsCountryActionSheet.tsx");
 
 export default function BlockedPaymentsCountryActionSheet() {
-  return jsx(Background.BottomSheet, { children: jsx(BlockedPaymentsCountryDisplayDefault, {}) });
+  return jsx(Sheet_BottomSheet.BottomSheet, { children: jsx(BlockedPaymentsCountryDisplayDefault, {}) });
 };

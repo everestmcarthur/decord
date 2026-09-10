@@ -1,33 +1,31 @@
-// Module ID: 15469
-// Function ID: 15470
-// Name: toggle
-// Dependencies: [1185, 7975, 504, 9363, 11473, 1114, 2]
+// Module ID: 15498
+// Function ID: 15499
+// Name: SaveCameraUploadsToDeviceSetting
+// Dependencies: [1185, 7989, 504, 9390, 11500, 1114, 2]
 
-// Module 15469 (toggle)
+// Module 15498 (SaveCameraUploadsToDeviceSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import saveGuildFoldersDefault from "saveGuildFolders" /* 9363 */;
-import closure_3 from "CHANNEL_SIDEBAR_WIDTH" /* 1185 */;
-import createToggle from "createToggle" /* 11473 */;
+import util from "util" /* 1114 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9390 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const SettingBuilders = fn(11500);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["99tBAC"]);
+    const intl = util.intl;
+    return intl.string(util.t["99tBAC"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.CHAT,
+  parent: fn(7989).MobileUserSettings.CHAT,
   useValue: function useSaveCameraUploadsToDeviceValue() {
-    const items = [closure_3];
-    return initialize.useStateFromStores(items, () => obj.saveCameraUploadsToDevice);
+    const items = [UnsyncedUserSettingsStore];
+    return initialize.useStateFromStores(items, () => UnsyncedUserSettingsStore.saveCameraUploadsToDevice);
   },
   onValueChange: function onSaveCameraUploadsToDeviceValueChange(saveCameraUploadsToDevice) {
-    let obj = saveGuildFoldersDefault;
-    obj = { saveCameraUploadsToDevice };
-    const result = obj.updatedUnsyncedSettings(obj);
+    const result = UserSettingsActionCreatorsDefault.updatedUnsyncedSettings({ saveCameraUploadsToDevice });
   }
-};
-createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SaveCameraUploadsToDeviceSetting.tsx");
+});
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/SaveCameraUploadsToDeviceSetting.tsx");
 
-export default createToggle;
+export default toggle;

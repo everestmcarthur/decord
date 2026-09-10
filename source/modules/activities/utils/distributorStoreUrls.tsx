@@ -1,16 +1,16 @@
-// Module ID: 8690
-// Function ID: 8691
-// Name: XBOX_DISCORD_OCID
+// Module ID: 8718
+// Function ID: 8719
+// Name: distributorStoreUrls
 // Dependencies: [2]
 // Exports: buildXboxGamePassStoreDeepLinkUrl, buildXboxGamePassStoreUrl
 
-// Module 8690 (XBOX_DISCORD_OCID)
-import set from "set" /* 2 */;
+// Module 8718 (distributorStoreUrls)
+import size from "module_2" /* 2 */;
 
 const discord7937464 = "discord7937464";
 let c1 = "www.xbox.com";
 const msxbox = "msxbox";
-const result = set.fileFinishedImporting("modules/activities/utils/distributorStoreUrls.tsx");
+const result = size.fileFinishedImporting("modules/activities/utils/distributorStoreUrls.tsx");
 
 export const XBOX_DISCORD_OCID = "discord7937464";
 export const XBOX_GAME_PASS_STORE_HOSTNAME = "www.xbox.com";

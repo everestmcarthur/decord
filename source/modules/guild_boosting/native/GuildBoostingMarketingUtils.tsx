@@ -1,39 +1,39 @@
-// Module ID: 12531
-// Function ID: 12532
-// Name: getIconForPerk
-// Dependencies: [4454, 8762, 12532, 10386, 12534, 12536, 9376, 9757, 11704, 10240, 5097, 10119, 2]
+// Module ID: 12557
+// Function ID: 12558
+// Name: GuildBoostingMarketingUtils
+// Dependencies: [4468, 8790, 12558, 10413, 12560, 12562, 9403, 9784, 11730, 10267, 5111, 10146, 2]
 // Exports: getIconForPerk
 
-// Module 12531 (getIconForPerk)
-import set from "set" /* 2 */;
-import getGuildTierFromGuild from "getGuildTierFromGuild" /* 4454 */;
+// Module 12557 (GuildBoostingMarketingUtils)
+import GuildBoostingUtils from "GuildBoostingUtils" /* 4468 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_boosting/native/GuildBoostingMarketingUtils.tsx");
+const result = size.fileFinishedImporting("modules/guild_boosting/native/GuildBoostingMarketingUtils.tsx");
 
 export const getIconForPerk = function getIconForPerk(perkIcon) {
-  if (getGuildTierFromGuild.PerkIcons.EMOJI === perkIcon) {
-    return tmp(8762).ReactionIcon;
-  } else if (tmp(4454).PerkIcons.SOUNDBOARD === perkIcon) {
-    return tmp(12532).SoundboardIcon;
-  } else if (tmp(4454).PerkIcons.ANIMATED === perkIcon) {
-    return tmp(10386).GifIcon;
-  } else if (tmp(4454).PerkIcons.AUDIO === perkIcon) {
-    return tmp(12534).HeadphonesIcon;
-  } else if (tmp(4454).PerkIcons.STREAM === perkIcon) {
-    return tmp(12536).ScreenArrowIcon;
-  } else if (tmp(4454).PerkIcons.UPLOAD === perkIcon) {
-    return tmp(9376).UploadIcon;
-  } else if (tmp(4454).PerkIcons.CUSTOM_ROLE_ICON === perkIcon) {
-    return tmp(9757).ShieldUserIcon;
-  } else if (tmp(4454).PerkIcons.CUSTOMIZATION === perkIcon) {
-    return tmp(11704).ImagesIcon;
-  } else if (tmp(4454).PerkIcons.VANITY === perkIcon) {
-    return tmp(10240).StarIcon;
-  } else if (tmp(4454).PerkIcons.STAGE_VIDEO === perkIcon) {
-    return tmp(5097).StageIcon;
-  } else if (tmp(4454).PerkIcons.STICKER === perkIcon) {
-    return tmp(10119).StickerIcon;
+  if (GuildBoostingUtils.PerkIcons.EMOJI === perkIcon) {
+    return tmp(8790).ReactionIcon;
+  } else if (tmp(4468).PerkIcons.SOUNDBOARD === perkIcon) {
+    return tmp(12558).SoundboardIcon;
+  } else if (tmp(4468).PerkIcons.ANIMATED === perkIcon) {
+    return tmp(10413).GifIcon;
+  } else if (tmp(4468).PerkIcons.AUDIO === perkIcon) {
+    return tmp(12560).HeadphonesIcon;
+  } else if (tmp(4468).PerkIcons.STREAM === perkIcon) {
+    return tmp(12562).ScreenArrowIcon;
+  } else if (tmp(4468).PerkIcons.UPLOAD === perkIcon) {
+    return tmp(9403).UploadIcon;
+  } else if (tmp(4468).PerkIcons.CUSTOM_ROLE_ICON === perkIcon) {
+    return tmp(9784).ShieldUserIcon;
+  } else if (tmp(4468).PerkIcons.CUSTOMIZATION === perkIcon) {
+    return tmp(11730).ImagesIcon;
+  } else if (tmp(4468).PerkIcons.VANITY === perkIcon) {
+    return tmp(10267).StarIcon;
+  } else if (tmp(4468).PerkIcons.STAGE_VIDEO === perkIcon) {
+    return tmp(5111).StageIcon;
+  } else if (tmp(4468).PerkIcons.STICKER === perkIcon) {
+    return tmp(10146).StickerIcon;
   } else {
-    return tmp(8762).ReactionIcon;
+    return tmp(8790).ReactionIcon;
   }
 };

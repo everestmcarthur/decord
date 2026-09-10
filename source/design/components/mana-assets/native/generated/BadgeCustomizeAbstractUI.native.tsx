@@ -1,17 +1,17 @@
-// Module ID: 5783
-// Function ID: 5784
+// Module ID: 5797
+// Function ID: 5798
 // Name: BadgeCustomizeAbstractUI
-// Dependencies: [21, 5587, 5784, 2]
+// Dependencies: [21, 5601, 5798, 2]
 // Exports: BadgeCustomizeAbstractUI
 
-// Module 5783 (BadgeCustomizeAbstractUI)
-import set from "set" /* 2 */;
+// Module 5797 (BadgeCustomizeAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 5784 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5798 from "module_5798" /* 5798 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/BadgeCustomizeAbstractUI.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BadgeCustomizeAbstractUI.native.tsx");
 
 export const BadgeCustomizeAbstractUI = function BadgeCustomizeAbstractUI(width) {
   let num = width.width;
@@ -27,14 +27,14 @@ export const BadgeCustomizeAbstractUI = function BadgeCustomizeAbstractUI(width)
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
-  obj = { width: num * num3, height: num2 * num3 };
-  const items = [obj];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { width: num * num3, height: num2 * num3 });
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef5798 };
+  obj.source = obj2;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

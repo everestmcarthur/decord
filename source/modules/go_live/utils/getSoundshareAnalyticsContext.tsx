@@ -1,13 +1,14 @@
-// Module ID: 4695
-// Function ID: 4696
+// Module ID: 4709
+// Function ID: 4710
 // Name: getSoundshareAnalyticsContext
 // Dependencies: [1915, 2]
 // Exports: default
 
-// Module 4695 (getSoundshareAnalyticsContext)
-import closure_0 from "initialize" /* 1915 */;
+// Module 4709 (getSoundshareAnalyticsContext)
+import RunningGameStore from "RunningGameStore" /* 1915 */;
 
-const result = require("set").fileFinishedImporting("modules/go_live/utils/getSoundshareAnalyticsContext.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/go_live/utils/getSoundshareAnalyticsContext.tsx");
 
 export default function getSoundshareAnalyticsContext(sourcePid) {
   if (null == sourcePid) {
@@ -17,7 +18,7 @@ export default function getSoundshareAnalyticsContext(sourcePid) {
     let tmp;
     let tmp2;
     if (null != sourcePid) {
-      gameForPID = gameForPID.getGameForPID(sourcePid);
+      const gameForPID = RunningGameStore.getGameForPID(sourcePid);
       let name;
       if (gameForPID != null) {
         name = gameForPID.name;
@@ -29,10 +30,7 @@ export default function getSoundshareAnalyticsContext(sourcePid) {
       tmp = id;
       tmp2 = name;
     }
-    const obj = { soundshare_session: null, share_game_name: null, share_game_id: null };
-    obj[0] = sourcePid.soundshareSession;
-    obj[1] = tmp2;
-    obj[2] = tmp;
+    const obj = { soundshare_session: sourcePid.soundshareSession, share_game_name: tmp2, share_game_id: tmp };
     return obj;
   }
 };

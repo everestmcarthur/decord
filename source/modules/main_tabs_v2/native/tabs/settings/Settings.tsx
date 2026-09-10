@@ -1,64 +1,73 @@
-// Module ID: 16905
-// Function ID: 16906
+// Module ID: 16942
+// Function ID: 16943
 // Name: Settings
-// Dependencies: [19, 17, 21, 4560, 576, 16787, 1611, 6945, 4539, 4296, 16906, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 16824, 1611, 6959, 4553, 4310, 16943, 2]
 // Exports: default
 
-// Module 16905 (Settings)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16942 (Settings)
+import nativeDefault from "native" /* 576 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4310 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 6959 */;
+import profileModalTransition from "profileModalTransition" /* 16824 */;
+import SettingsNavigatorDefault from "SettingsNavigator" /* 16943 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-createCacheKey = { containerOuter: { flex: 1, overflow: "hidden" }, containerOuterTablet: null, container: null, containerTablet: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.md, flex: 1 };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { flex: 1 };
-createCacheKey[3] = { borderRadius: ThemesDefault.radii.md, overflow: "hidden", flex: 1 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { borderRadius: ThemesDefault.radii.md, overflow: "hidden", flex: 1 };
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/settings/Settings.tsx");
+const DeviceUtils = tmp(4553);
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { containerOuter: { flex: 1, overflow: "hidden" }, containerOuterTablet: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, flex: 1 }, container: { flex: 1 }, containerTablet: null };
+const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, flex: 1 };
+obj2.containerTablet = { borderRadius: nativeDefault.radii.md, overflow: "hidden", flex: 1 };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/settings/Settings.tsx");
 
 export default function Settings() {
-  let obj = top(right[5]);
-  const reportProfileModalTransition = obj.useReportProfileModalTransition();
-  const rect = left(right[6])();
-  top = rect.top;
-  left = rect.left;
-  right = rect.right;
-  let tmp5 = left(right[7])();
+  const reportProfileModalTransition = profileModalTransition.useReportProfileModalTransition();
+  const rect = useSafeAreaInsetsDefault();
+  const top = rect.top;
+  const left = rect.left;
+  const right = rect.right;
+  let tmp5 = useIsWindowLargeDefault();
   if (tmp5) {
-    tmp5 = !top(tmp2[8]).isIpadOS();
-    const tmpResult = top(tmp2[8]);
+    tmp5 = !DeviceUtils.isIpadOS();
+    const tmpResult = DeviceUtils;
   }
-  const React = tmp5;
-  const tmp6 = callback();
+  closure_3 = tmp5;
+  const tmp6 = closure_6();
   closure_4 = tmp6;
   let items = [tmp6, tmp5, top, left, right];
-  obj = {
-    style: React.useMemo(() => {
+  let obj2 = {
+    style: noop.useMemo(() => {
       if (closure_3) {
         const items = [tmp.containerOuterTablet, ];
-        let obj = { paddingTop: null, paddingLeft: null, paddingRight: null };
-        obj[0] = top;
-        obj[1] = left;
-        obj[2] = right;
-        items[1] = obj;
+        const obj2 = { paddingTop: top, paddingLeft: left, paddingRight: right };
+        items[1] = obj2;
         let items1 = items;
       } else {
         items1 = [tmp.containerOuter, ];
-        obj = { paddingLeft: null, paddingRight: null };
-        obj[0] = left;
-        obj[1] = right;
+        const obj = { paddingLeft: left, paddingRight: right };
         items1[1] = obj;
       }
       return items1;
     }, items),
     children: null
   };
-  obj = { style: tmp5 ? tmp6.containerTablet : tmp6.container, children: tmp7(tmp4(tmp2[10]), {}) };
-  obj[1] = jsx(left(right[9]).View, { style: tmp5 ? tmp6.containerTablet : tmp6.container, children: tmp7(tmp4(tmp2[10]), {}) });
-  return <closure_4 style={tmp5 ? tmp6.containerTablet : tmp6.container}>{tmp7(tmp4(tmp2[10]), {})}</closure_4>;
+  obj2.children = jsx(ReanimatedRexportDefault.View, { style: tmp5 ? tmp6.containerTablet : tmp6.container, children: jsx(SettingsNavigatorDefault, {}) });
+  return <tmp8 style={noop.useMemo(() => {
+    if (closure_3) {
+      const items = [tmp.containerOuterTablet, ];
+      const obj2 = { paddingTop: top, paddingLeft: left, paddingRight: right };
+      items[1] = obj2;
+      let items1 = items;
+    } else {
+      items1 = [tmp.containerOuter, ];
+      const obj = { paddingLeft: left, paddingRight: right };
+      items1[1] = obj;
+    }
+    return items1;
+  }, items)}>{null}</tmp8>;
 };

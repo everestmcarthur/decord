@@ -1,53 +1,49 @@
-// Module ID: 14475
-// Function ID: 14476
-// Dependencies: [4465, 1074, 9562, 9559, 573, 2]
+// Module ID: 14500
+// Function ID: 14501
+// Name: commands/config
+// Dependencies: [4479, 1074, 9589, 9586, 573, 2]
 
-// Module 14475
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import prototypeDefault from "prototype" /* 9559 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9562 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4465 */;
-import ME from "ME" /* 1074 */;
+// Module 14500 (commands/config)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import RPCErrorDefault from "RPCError" /* 9586 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9589 */;
+import Constants_mod from "Constants" /* 4479 */;
+import Constants_mod from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-({ TransportTypes: obj1, RPC_AUTHENTICATED_SCOPE } = RPC_SCOPE_CONFIG);
-const RPCErrors = ME.RPCErrors;
-const result = set.fileFinishedImporting("modules/rpc/server/commands/config.tsx");
+let Constants = Constants_mod;
+({ TransportTypes: c2, RPC_AUTHENTICATED_SCOPE } = Constants);
+let Constants = Constants_mod;
+const RPCErrors = Constants.RPCErrors;
+const result = size.fileFinishedImporting("modules/rpc/server/commands/config.tsx");
 
 export default {
-  [ME.RPCCommands.SET_CONFIG]: {
+  [Constants.RPCCommands.SET_CONFIG]: {
     scope: RPC_AUTHENTICATED_SCOPE,
     validation(boolean) {
-      let obj = createRpcJoiSchemaObjectDefault(boolean);
-      obj = { use_interactive_pip: boolean.boolean() };
-      return obj.required().keys(obj);
+      const obj = createRpcJoiSchemaObjectDefault(boolean);
+      const requiredResult = createRpcJoiSchemaObjectDefault(boolean).required();
+      return requiredResult.keys({ use_interactive_pip: boolean.boolean() });
     },
     handler(socket) {
       socket = socket.socket;
       const use_interactive_pip = socket.args.use_interactive_pip;
       if (socket.transport !== constants.POST_MESSAGE) {
-        let obj = { errorCode: null };
-        obj[0] = RPCErrors.INVALID_COMMAND;
+        const obj2 = { errorCode: RPCErrors.INVALID_COMMAND };
         const _HermesInternal = HermesInternal;
-        let tmp15 = prototypeDefault;
-        tmp15 = new tmp15(obj, "command not available from \"" + socket.transport + " transport");
-        throw tmp15;
+        const tmp152 = new RPCErrorDefault(obj2, "command not available from \"" + socket.transport + " transport");
+        throw tmp152;
       } else if (null == socket.application.id) {
-        obj = { errorCode: null };
-        obj[0] = RPCErrors.INVALID_COMMAND;
-        const tmp11 = new prototypeDefault(obj, "invalid application");
+        const obj3 = { errorCode: RPCErrors.INVALID_COMMAND };
+        const tmp11 = new RPCErrorDefault(obj3, "invalid application");
         throw tmp11;
       } else {
-        obj = dispatcherDefault;
-        obj1 = { type: "EMBEDDED_ACTIVITY_SET_CONFIG", applicationId: null, config: null };
-        obj1[1] = socket.application.id;
-        const obj2 = { useInteractivePIP: null };
-        obj2[0] = use_interactive_pip;
-        obj1[2] = obj2;
-        obj.dispatch(obj1);
-        const obj3 = { use_interactive_pip: null };
-        obj3[0] = use_interactive_pip;
-        return Promise.resolve(obj3);
+        const obj4 = { type: "EMBEDDED_ACTIVITY_SET_CONFIG", applicationId: socket.application.id, config: null };
+        const obj5 = { useInteractivePIP: use_interactive_pip };
+        obj4.config = obj5;
+        DispatcherDefault.dispatch(obj4);
+        const obj6 = { use_interactive_pip };
+        return Promise.resolve(obj6);
       }
     }
   }

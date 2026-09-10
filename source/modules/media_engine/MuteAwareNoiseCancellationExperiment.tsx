@@ -1,15 +1,15 @@
-// Module ID: 14005
-// Function ID: 14006
-// Name: getMuteAwareNoiseCancellationConfig
+// Module ID: 14028
+// Function ID: 14029
+// Name: MuteAwareNoiseCancellationExperiment
 // Dependencies: [1433, 2]
 // Exports: getMuteAwareNoiseCancellationConfig
 
-// Module 14005 (getMuteAwareNoiseCancellationConfig)
-import set from "set" /* 2 */;
+// Module 14028 (MuteAwareNoiseCancellationExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-let closure_0 = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-08-mute-aware-noise-cancellation", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
-const result = set.fileFinishedImporting("modules/media_engine/MuteAwareNoiseCancellationExperiment.tsx");
+const config = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-08-mute-aware-noise-cancellation", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
+const result = size.fileFinishedImporting("modules/media_engine/MuteAwareNoiseCancellationExperiment.tsx");
 
 export const getMuteAwareNoiseCancellationConfig = function getMuteAwareNoiseCancellationConfig(location) {
   return config.getConfig({ location: location.location });

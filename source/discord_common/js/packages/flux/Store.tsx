@@ -1,36 +1,30 @@
 // Module ID: 506
 // Function ID: 507
-// Name: initialize
+// Name: Store
 // Dependencies: [507, 508, 10, 38, 2]
 
-// Module 506 (initialize)
-import set from "set" /* 2 */;
-import isTracingDefault from "isTracing" /* 10 */;
-import loggerDefault from "logger" /* 508 */;
+// Module 506 (Store)
+import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
+import _modDef38 from "module_38" /* 38 */;
+import flux_EmitterDefault from "flux/Emitter" /* 508 */;
+import size from "module_2" /* 2 */;
 
-let closure_4 = [];
+const React4 = [];
 let c5 = false;
-const promise = new Promise((arg0) => {
-  closure_0 = arg0;
-  c3 = function t() {
-    callback();
-    c3 = null;
-  };
-});
-let result = set.fileFinishedImporting("../discord_common/js/packages/flux/Store.tsx");
+let result = size.fileFinishedImporting("../discord_common/js/packages/flux/Store.tsx");
 class Store {
   constructor(arg0, arg1, arg2) {
     obj = require;
-    obj = Object.create(new.target.prototype);
-    closure_0 = obj;
-    changeListeners = new require("has").ChangeListeners();
-    obj._changeCallbacks = changeListeners;
-    changeListeners1 = new require("has").ChangeListeners();
-    obj._reactChangeCallbacks = changeListeners1;
-    obj._syncWiths = [];
-    obj._isInitialized = false;
-    obj.doEmitChanges = function doEmitChanges(closure_0) {
-      let hasAnyResult = obj._changeCallbacks.hasAny();
+    obj1 = Object.create(new.target.prototype);
+    closure_0 = obj1;
+    changeListeners = new closure_0(closure_2[0]).ChangeListeners();
+    obj1._changeCallbacks = changeListeners;
+    changeListeners1 = new closure_0(closure_2[0]).ChangeListeners();
+    obj1._reactChangeCallbacks = changeListeners1;
+    obj1._syncWiths = [];
+    obj1._isInitialized = false;
+    obj1.doEmitChanges = function doEmitChanges(arg0) {
+      let hasAnyResult = obj2._changeCallbacks.hasAny();
       if (!hasAnyResult) {
         hasAnyResult = obj._reactChangeCallbacks.hasAny();
         const _reactChangeCallbacks = obj._reactChangeCallbacks;
@@ -39,65 +33,64 @@ class Store {
         hasAnyResult = obj._syncWiths.length > 0;
       }
       if (hasAnyResult) {
-        closure_1_1(closure_1_2[1]).markChanged(obj);
-        const obj2 = closure_1_1(closure_1_2[1]);
-        const tmp2 = closure_1_1;
-        const tmp3 = closure_1_2;
-        let isPaused = closure_1_1(closure_1_2[1]).getIsPaused();
+        obj2 = flux_EmitterDefault;
+        obj2.markChanged(obj);
+        let isPaused = flux_EmitterDefault.getIsPaused();
         if (isPaused) {
           isPaused = null != obj._mustEmitChanges;
         }
         if (isPaused) {
-          isPaused = obj._mustEmitChanges(closure_0);
+          isPaused = obj._mustEmitChanges(arg0);
         }
         if (isPaused) {
-          tmp2(tmp3[1]).resume(false);
-          const tmp2Result = tmp2(tmp3[1]);
+          tmp2(508).resume(false);
+          const tmp2Result = tmp2(508);
         }
-        const obj3 = closure_1_1(closure_1_2[1]);
+        tmp2 = importDefault;
       }
     };
-    obj.addChangeListener = obj._changeCallbacks.add;
-    obj.removeChangeListener = obj._changeCallbacks.remove;
-    obj.addConditionalChangeListener = obj._changeCallbacks.addConditional;
-    obj.removeAllConditionalChangeListeners = obj._changeCallbacks.removeAllConditional;
-    obj.addReactChangeListener = obj._reactChangeCallbacks.add;
-    obj.removeReactChangeListener = obj._reactChangeCallbacks.remove;
-    obj._dispatcher = global;
-    _dispatcher = obj._dispatcher;
-    obj._dispatchToken = _dispatcher.createToken();
+    obj1.addChangeListener = obj1._changeCallbacks.add;
+    obj1.removeChangeListener = obj1._changeCallbacks.remove;
+    obj1.addConditionalChangeListener = obj1._changeCallbacks.addConditional;
+    obj1.removeAllConditionalChangeListeners = obj1._changeCallbacks.removeAllConditional;
+    obj1.addReactChangeListener = obj1._reactChangeCallbacks.add;
+    obj1.removeReactChangeListener = obj1._reactChangeCallbacks.remove;
+    obj1._dispatcher = global;
+    _dispatcher = obj1._dispatcher;
+    obj1._dispatchToken = _dispatcher.createToken();
     if (require == null) {
       obj = {};
     }
-    result = obj.registerActionHandlers(obj, importDefault);
-    arr = closure_4.push(obj);
+    result = obj1.registerActionHandlers(obj, importDefault);
+    arr = closure_4.push(obj1);
     if (c5) {
-      initializeIfNeededResult = obj.initializeIfNeeded();
+      initializeIfNeededResult = obj1.initializeIfNeeded();
     }
-    return obj;
+    return obj1;
   }
 }
 const prototype = Store.prototype;
 Store["initialize"] = function initialize() {
   c5 = true;
-  const item = arr.forEach((initializeIfNeeded) => initializeIfNeeded.initializeIfNeeded());
+  const item = closure_4.forEach((initializeIfNeeded) => initializeIfNeeded.initializeIfNeeded());
   if (null != c3) {
-    if (typeof c3 !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (typeof c3 === "function") {
+      closure_131_0();
+      c3 = null;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    require();
-    c3 = null;
   }
 };
 Store["destroy"] = function destroy() {
   closure_4.length = 0;
-  loggerDefault.destroy();
+  flux_EmitterDefault.destroy();
 };
 Store["getAll"] = function getAll() {
   return closure_4;
 };
 Store["removeAllConditionalListeners"] = function removeAllConditionalListeners() {
-  const item = arr.forEach((_changeCallbacks) => {
+  const item = closure_4.forEach((_changeCallbacks) => {
     _changeCallbacks._changeCallbacks.removeAllConditional();
   });
 };
@@ -122,37 +115,35 @@ prototype["initializeIfNeeded"] = function initializeIfNeeded() {
     const _Date2 = Date;
     const diff = Date.now() - timestamp;
     if (diff > 5) {
-      isTracingDefault.mark("\u{1F9A5}", `${self.getName()}.initialize()`, diff);
-      const obj = isTracingDefault;
+      AppStartPerformanceDefault.mark("\u{1F9A5}", `${self.getName()}.initialize()`, diff);
     }
   }
 };
 prototype["initialize"] = function initialize() {
 
 };
-prototype["syncWith"] = function syncWith(items, handleUserSettingsProtoStoreChange) {
+prototype["syncWith"] = function syncWith(items, handleUserSettingsProtoStoreChange, arg2) {
   const self = this;
   let wrapper = handleUserSettingsProtoStoreChange;
   let num = arg2;
   items = [...items];
   this.waitFor.apply(items);
   if (null != arg2) {
-    c2 = 0;
+    closure_2 = 0;
     wrapper = function wrapper() {
       if (changeSentinel !== obj.getChangeSentinel()) {
-        changeSentinel = wrapper(_null[1]).getChangeSentinel();
+        changeSentinel = flux_EmitterDefault.getChangeSentinel();
         if (false !== wrapper()) {
           self.emitChange();
         }
-        const tmpResult = wrapper(_null[1]);
+        const tmpResult = flux_EmitterDefault;
       }
     };
     closure_0 = wrapper;
     if (num == null) {
       num = 0;
     }
-    closure_0 = num;
-    c2 = null;
+    closure_2 = null;
     closure_0 = 0 === num ? (() => {
       clearImmediate(immediate);
       immediate = setImmediate(wrapper);
@@ -161,7 +152,7 @@ prototype["syncWith"] = function syncWith(items, handleUserSettingsProtoStoreCha
         const _setTimeout = setTimeout;
         timeout = setTimeout(() => {
           try {
-            callback();
+            wrapper();
             c2 = null;
           } catch (tmp4) {
             c2 = null;
@@ -181,21 +172,21 @@ prototype["syncWith"] = function syncWith(items, handleUserSettingsProtoStoreCha
 prototype["waitFor"] = function waitFor() {
   const self = this;
   const items = [...arguments];
-  const mapped = items.map((_dispatcher) => {
+  const mapped = items.map((_dispatcher, index) => {
     let dispatchToken = null;
-    closure_1_1(closure_1_2[3])(null != _dispatcher, "Store.waitFor(...) called with null Store at index " + arg1 + " for store " + self.getName());
+    _modDef38(null != _dispatcher, "Store.waitFor(...) called with null Store at index " + index + " for store " + self.getName());
     if (null != _dispatcher._dispatcher) {
-      closure_1_1(closure_1_2[3])(_dispatcher._dispatcher === self._dispatcher, "Stores belong to two separate dispatchers.");
+      _modDef38(_dispatcher._dispatcher === self._dispatcher, "Stores belong to two separate dispatchers.");
       dispatchToken = _dispatcher.getDispatchToken();
     }
     return dispatchToken;
   });
   const _dispatcher = this._dispatcher;
   let dispatchToken = this.getDispatchToken();
-  _dispatcher.addDependencies(dispatchToken, mapped.filter((arg0) => null != arg0));
+  _dispatcher.addDependencies(dispatchToken, mapped.filter((item) => null != item));
 };
 prototype["emitChange"] = function emitChange() {
-  loggerDefault.markChanged(this);
+  flux_EmitterDefault.markChanged(this);
 };
 prototype["getDispatchToken"] = function getDispatchToken() {
   return this._dispatchToken;
@@ -209,6 +200,12 @@ prototype["mustEmitChanges"] = function mustEmitChanges(arg0) {
   }
   this._mustEmitChanges = fn;
 };
-Store.initialized = promise;
+Store.initialized = new Promise((arg0) => {
+  closure_0 = arg0;
+  function t() {
+    closure_0();
+    c3 = null;
+  }
+});
 
 export { Store };

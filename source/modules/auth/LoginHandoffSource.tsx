@@ -1,24 +1,24 @@
-// Module ID: 7320
-// Function ID: 7321
+// Module ID: 7334
+// Function ID: 7335
 // Name: LoginHandoffSource
-// Dependencies: [1964, 1084, 4714, 5454, 2]
+// Dependencies: [1964, 1084, 4728, 5468, 2]
 // Exports: getLoginHandoffSourceFromRedirectTo
 
-// Module 7320 (LoginHandoffSource)
-import set from "set" /* 2 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 1084 */;
-import set2 from "set" /* 1964 */;
-import ME from "ME" /* 4714 */;
+// Module 7334 (LoginHandoffSource)
+import UserSettingsConstants from "UserSettingsConstants" /* 1084 */;
+import ChannelConstants from "ChannelConstants" /* 1964 */;
+import LinkUtils from "LinkUtils" /* 4728 */;
+import size from "module_2" /* 2 */;
 
-const StaticChannelRoute = set2.StaticChannelRoute;
-const UserSettingsPath = MAX_FAVORITES.UserSettingsPath;
-let obj = { ROLE_SUBSCRIPTION: "role_subscription", ROLE_SUBSCRIPTION_SETTING: "role_subscription_setting" };
-const result = set.fileFinishedImporting("modules/auth/LoginHandoffSource.tsx");
+const StaticChannelRoute = ChannelConstants.StaticChannelRoute;
+const UserSettingsPath = UserSettingsConstants.UserSettingsPath;
+const LoginHandoffSource = { ROLE_SUBSCRIPTION: "role_subscription", ROLE_SUBSCRIPTION_SETTING: "role_subscription_setting" };
+const result = size.fileFinishedImporting("modules/auth/LoginHandoffSource.tsx");
 
-export const LoginHandoffSource = obj;
-export const getLoginHandoffSourceFromRedirectTo = function getLoginHandoffSourceFromRedirectTo(closure_0) {
-  const str = decodeURIComponent(closure_0);
-  obj = ME;
+export { LoginHandoffSource };
+export const getLoginHandoffSourceFromRedirectTo = function getLoginHandoffSourceFromRedirectTo(arg0) {
+  const str = decodeURIComponent(arg0);
+  const obj = LinkUtils;
   const tryParseChannelPathResult = obj.tryParseChannelPath(str);
   if (null != tryParseChannelPathResult) {
     if (tryParseChannelPathResult.channelId === StaticChannelRoute.ROLE_SUBSCRIPTIONS) {

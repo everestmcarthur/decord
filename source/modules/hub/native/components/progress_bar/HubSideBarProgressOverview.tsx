@@ -1,52 +1,60 @@
-// Module ID: 16216
-// Function ID: 16217
-// Name: HubSidebarProgressOverview
-// Dependencies: [19, 9836, 21, 12673, 1114, 12478, 13978, 4527, 12677, 1896, 2]
+// Module ID: 16246
+// Function ID: 16247
+// Name: HubSideBarProgressOverview
+// Dependencies: [19, 9863, 21, 12699, 1114, 12504, 14001, 4541, 12703, 1896, 2]
 // Exports: default
 
-// Module 16216 (HubSidebarProgressOverview)
-import noopAll from "noop" /* 19 */;
-import items from "items" /* 9836 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16246 (HubSideBarProgressOverview)
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ HUB_PROGRESS_ACTION_SHEET_ID: c3, HUB_PROGRESS_NUM_TOTAL_STEPS: c4 } = items);
-const result = require("set").fileFinishedImporting("modules/hub/native/components/progress_bar/HubSideBarProgressOverview.tsx");
+require = fn;
+const HubProgressBarConstants = fn(9863);
+({ HUB_PROGRESS_ACTION_SHEET_ID: c3, HUB_PROGRESS_NUM_TOTAL_STEPS: closure_4 } = HubProgressBarConstants);
+const jsx = fn(21).jsx;
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/hub/native/components/progress_bar/HubSideBarProgressOverview.tsx");
 
 export default function HubSidebarProgressOverview(guild) {
   guild = guild.guild;
-  let obj = guild(12673);
-  const hubProgressBarCompletedSteps = obj.useHubProgressBarCompletedSteps(guild);
-  const nextHubProgressStep = guild(12673).getNextHubProgressStep(hubProgressBarCompletedSteps);
+  const hubProgressBarCompletedSteps = guild(12699).useHubProgressBarCompletedSteps(guild);
+  const obj = guild(12699);
+  const nextHubProgressStep = guild(12699).getNextHubProgressStep(hubProgressBarCompletedSteps);
   if (null == nextHubProgressStep) {
     return null;
   } else {
     const size = hubProgressBarCompletedSteps.size;
-    const hubProgressTitleForStep = tmp(12673).getHubProgressTitleForStep(nextHubProgressStep);
+    const hubProgressTitleForStep = tmp(12699).getHubProgressTitleForStep(nextHubProgressStep);
     if (size < closure_4) {
       const intl2 = tmp(1114).intl;
-      obj = { number: null, total: null };
+      const obj3 = { number: null, total: null };
       const _HermesInternal = HermesInternal;
-      obj[0] = "" + size;
-      obj[1] = tmp11;
-      let formatToPlainStringResult = intl2.formatToPlainString(tmp(1114).t["9j7xDu"], obj);
+      obj3.number = "" + size;
+      obj3.total = tmp11;
+      let formatToPlainStringResult = intl2.formatToPlainString(tmp(1114).t["9j7xDu"], obj3);
     } else {
       const intl = tmp(1114).intl;
       formatToPlainStringResult = intl.string(tmp(1114).t["+Gyklt"]);
     }
     const _Math = Math;
-    const bound = Math.max(tmp(12478).MIN_PROGRESS_PERCENT, 100 * size / tmp11);
-    obj = { onPress: null, title: null, subtitle: null, percentComplete: null };
-    obj[0] = function onPress() {
-      let obj = closure_1_1(closure_1_2[7]);
-      obj = { guild, analyticsSource: "Channels Sidebar" };
-      obj.openLazy(guild(closure_1_2[9])(closure_1_2[8], closure_1_2.paths), closure_1_3, obj);
+    const bound = Math.max(tmp(12504).MIN_PROGRESS_PERCENT, 100 * size / tmp11);
+    const obj4 = {
+      onPress() {
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12703, dependencyMap.paths), React3, { guild, analyticsSource: "Channels Sidebar" });
+        },
+      title: hubProgressTitleForStep,
+      subtitle: formatToPlainStringResult,
+      percentComplete: bound
     };
-    obj[1] = hubProgressTitleForStep;
-    obj[2] = formatToPlainStringResult;
-    obj[3] = bound;
-    return jsx(tmp(13978).GuildProgressOverviewView, { onPress: null, title: null, subtitle: null, percentComplete: null });
+    return jsx(tmp(14001).GuildProgressOverviewView, {
+      onPress() {
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12703, dependencyMap.paths), React3, { guild, analyticsSource: "Channels Sidebar" });
+        },
+      title: hubProgressTitleForStep,
+      subtitle: formatToPlainStringResult,
+      percentComplete: bound
+    });
   }
-  const obj2 = guild(12673);
+  const obj2 = guild(12699);
 };

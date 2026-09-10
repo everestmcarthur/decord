@@ -1,13 +1,14 @@
-// Module ID: 14659
-// Function ID: 14660
-// Name: hasFetchedCredentials
+// Module ID: 14685
+// Function ID: 14686
+// Name: WebAuthnStore
 // Dependencies: [1894, 504, 573, 2]
 
-// Module 14659 (hasFetchedCredentials)
+// Module 14685 (WebAuthnStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Server from "Server" /* 1894 */;
 
-const require = arg1;
+require = fn;
 let c2 = false;
 let closure_3 = [];
 let c4 = false;
@@ -31,7 +32,7 @@ prototype["hasPendingRegisterTrigger"] = function hasPendingRegisterTrigger() {
   return c4;
 };
 WebAuthnStore.displayName = "WebAuthnStore";
-const webAuthnStore = new WebAuthnStore(dispatcherDefault, {
+const webAuthnStore = new WebAuthnStore(DispatcherDefault, {
   LOGOUT: function handleReset() {
     closure_3 = [];
     c2 = false;
@@ -40,7 +41,8 @@ const webAuthnStore = new WebAuthnStore(dispatcherDefault, {
   MFA_WEBAUTHN_CREDENTIALS_LOADED: function handleWebAuthnCredentialsLoaded(credentials) {
     credentials = credentials.credentials;
     let flag = false;
-    if (credentials !== credentials) {
+    if (closure_3 !== credentials) {
+      closure_3 = credentials;
       flag = true;
     }
     if (!c2) {
@@ -51,11 +53,12 @@ const webAuthnStore = new WebAuthnStore(dispatcherDefault, {
   },
   AUTHENTICATOR_CREATE: function handleAuthenticatorCreate(credential) {
     credential = credential.credential;
-    if (credential.type === credential(1894).AuthenticatorType.WEBAUTHN) {
-      const tmp2 = undefined === items.find((id) => id.id === credential.id);
+    if (credential.type === Server.AuthenticatorType.WEBAUTHN) {
+      const tmp2 = undefined === closure_3.find((id) => id.id === credential.id);
       if (tmp2) {
-        items = [];
-        items[HermesBuiltin.arraySpread(items, 0)] = credential;
+        const items = [];
+        items[HermesBuiltin.arraySpread(closure_3, 0)] = credential;
+        closure_3 = items;
       }
       let flag = tmp2;
     } else {
@@ -66,7 +69,7 @@ const webAuthnStore = new WebAuthnStore(dispatcherDefault, {
   },
   AUTHENTICATOR_UPDATE: function handleAuthenticatorUpdate(credential) {
     credential = credential.credential;
-    if (credential.type !== credential(1894).AuthenticatorType.WEBAUTHN) {
+    if (credential.type !== Server.AuthenticatorType.WEBAUTHN) {
       const type = credential.type;
       return false;
     } else {
@@ -81,7 +84,7 @@ const webAuthnStore = new WebAuthnStore(dispatcherDefault, {
   },
   AUTHENTICATOR_DELETE: function handleAuthenticatorDelete(credential) {
     credential = credential.credential;
-    if (credential.type !== credential(1894).AuthenticatorType.WEBAUTHN) {
+    if (credential.type !== Server.AuthenticatorType.WEBAUTHN) {
       const type = credential.type;
       return false;
     } else {
@@ -103,6 +106,7 @@ const webAuthnStore = new WebAuthnStore(dispatcherDefault, {
     }
   }
 });
-const result = require("set").fileFinishedImporting("modules/webauthn/WebAuthnStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/webauthn/WebAuthnStore.tsx");
 
 export default webAuthnStore;

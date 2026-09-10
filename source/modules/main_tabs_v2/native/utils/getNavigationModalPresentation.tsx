@@ -1,16 +1,18 @@
-// Module ID: 10930
-// Function ID: 10931
+// Module ID: 10957
+// Function ID: 10958
 // Name: getNavigationModalPresentation
-// Dependencies: [1115, 6945, 4539, 8332, 2]
+// Dependencies: [1115, 6959, 4553, 8360, 2]
 // Exports: default
 
-// Module 10930 (getNavigationModalPresentation)
-import DCDDeviceManager from "DCDDeviceManager" /* 4539 */;
-import useIsWindowLarge from "useIsWindowLarge" /* 6945 */;
-import handleOrientationChange from "handleOrientationChange" /* 8332 */;
-import set from "set" /* 1115 */;
+// Module 10957 (getNavigationModalPresentation)
+import DeviceUtils from "DeviceUtils" /* 4553 */;
+import useIsWindowLarge from "useIsWindowLarge" /* 6959 */;
+import DeviceOrientation from "DeviceOrientation" /* 8360 */;
+import PlatformUtils_mod from "PlatformUtils" /* 1115 */;
+import size from "module_2" /* 2 */;
 
-if (set.isAndroid()) {
+let PlatformUtils = PlatformUtils_mod;
+if (PlatformUtils.isAndroid()) {
   const _module1 = useIsWindowLarge;
   let str2 = "modal";
   if (_module1.getIsWindowLarge()) {
@@ -18,15 +20,16 @@ if (set.isAndroid()) {
   }
   let str = str2;
 } else {
-  const _module2 = DCDDeviceManager;
+  const _module2 = DeviceUtils;
   str = "modal";
   if (_module2.isIpadOS()) {
     str = "fullScreenModal";
   }
 }
 let obj = { presentation: str, lockOrientation: null };
-obj[1] = !set.isAndroid();
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/utils/getNavigationModalPresentation.tsx");
+let PlatformUtils = PlatformUtils_mod;
+obj.lockOrientation = !PlatformUtils.isAndroid();
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/getNavigationModalPresentation.tsx");
 
 export default function getNavigationModalPresentation() {
   let tmp = arg0;
@@ -48,21 +51,20 @@ export default function getNavigationModalPresentation() {
   obj = { presentation, orientation: null };
   let tmp4;
   if (lockOrientation) {
-    const orientationLock = handleOrientationChange.getOrientationLock();
+    const orientationLock = DeviceOrientation.getOrientationLock();
     let str2 = "landscape";
     let str4 = "landscape";
     if ("LANDSCAPE" !== orientationLock) {
       if (null != orientationLock) {
         str2 = "portrait";
       } else {
-        const orientation = tmp5(8332).getOrientation();
-        const tmp5Result = tmp5(8332);
+        const orientation = tmp5(8360).getOrientation();
+        const tmp5Result = tmp5(8360);
       }
       str4 = str2;
     }
     tmp4 = str4;
-    const obj2 = handleOrientationChange;
   }
-  obj[1] = tmp4;
+  obj.orientation = tmp4;
   return obj;
 };

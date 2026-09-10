@@ -1,23 +1,19 @@
-// Module ID: 12750
-// Function ID: 12751
-// Name: setNewUser
+// Module ID: 12776
+// Function ID: 12777
+// Name: nuf/NUFActionCreators
 // Dependencies: [573, 2]
 // Exports: setNewUser, setNewUserFlowCompleted
 
-// Module 12750 (setNewUser)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 12776 (nuf/NUFActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/nuf/NUFActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/nuf/NUFActionCreators.tsx");
 
 export const setNewUser = function setNewUser(ORGANIC_REGISTERED) {
   importDefault = ORGANIC_REGISTERED;
-  dispatcherDefault.wait(() => {
-    let obj = ORGANIC_REGISTERED(closure_1_1[0]);
-    obj = { type: "NUF_NEW_USER", newUserType: ORGANIC_REGISTERED };
-    return obj.dispatch(obj);
-  });
+  DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "NUF_NEW_USER", newUserType }));
 };
 export const setNewUserFlowCompleted = function setNewUserFlowCompleted() {
-  dispatcherDefault.wait(() => callback(table[0]).dispatch({ type: "NUF_COMPLETE" }));
+  DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "NUF_COMPLETE" }));
 };

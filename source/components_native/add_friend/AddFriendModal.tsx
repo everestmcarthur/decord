@@ -1,64 +1,63 @@
-// Module ID: 13856
-// Function ID: 13857
-// Name: AddFriendModalScene
-// Dependencies: [32, 19, 17, 1371, 1074, 12682, 21, 4560, 5524, 576, 12684, 4992, 1242, 1115, 1486, 4763, 4404, 1114, 8361, 7377, 13857, 5624, 4556, 13858, 13860, 1611, 7000, 2]
+// Module ID: 13879
+// Function ID: 13880
+// Name: AddFriendModal
+// Dependencies: [32, 19, 17, 1371, 1074, 12708, 21, 4574, 5538, 576, 12710, 5006, 1242, 1115, 1486, 4777, 4418, 1114, 8389, 7391, 13880, 5638, 4570, 13881, 13883, 1611, 7014, 2]
 // Exports: default
 
-// Module 13856 (AddFriendModalScene)
-import ThemesDefault from "Themes" /* 576 */;
+// Module 13879 (AddFriendModal)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import ME from "ME" /* 1074 */;
-import { ContactPermissions } from "ContactSyncLandingPage" /* 12682 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importDefaultResult from "createTextStyle" /* 5524 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import NavigatorHeader from "NavigatorHeader" /* 5638 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12710 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
+import TextStyles from "TextStyles" /* 5538 */;
 
-const require = arg1;
+const require = globalThis.__r;
+
+require = fn;
 function AddFriendModalScene(onSkip) {
   onSkip = onSkip.onSkip;
   const sourceMetadata = onSkip.sourceMetadata;
   let contactSyncAccount;
-  let callback;
+  _slicedToArray = undefined;
   let navigation;
-  callback = undefined;
-  let callback1;
-  let tmp = callback3();
+  let tmp = closure_12();
+  contactSyncAccount = onSkip(contactSyncAccount[10]).useContactSyncAccount();
   let obj = onSkip(contactSyncAccount[10]);
-  contactSyncAccount = obj.useContactSyncAccount();
-  obj1 = onSkip(contactSyncAccount[10]);
-  [tmp5, c3] = callback(navigation.useState(!obj1.isContactSyncEnabled(contactSyncAccount)), 2);
+  let tmp2 = contactSyncAccount;
+  let obj2 = onSkip(contactSyncAccount[10]);
+  [tmp5, c3] = navigation.useState(!onSkip(contactSyncAccount[10]).isContactSyncEnabled(contactSyncAccount));
   sourceMetadata(contactSyncAccount[11])(() => {
-    sourceMetadata(contactSyncAccount[12]).track(closure_1_8.FRIEND_ADD_VIEWED, sourceMetadata);
-    let obj = sourceMetadata(contactSyncAccount[12]);
-    const result = onSkip(contactSyncAccount[10]).checkContactPermissions();
-    result.then((arg0) => {
-      const obj = closure_1_0(closure_1_2[13]);
-      const tmp = closure_1_9;
-      const tmp2 = closure_1_0;
-      const tmp3 = closure_1_2;
-      let tmp5 = arg0 === closure_1_9.NOT_DETERMINED || closure_1_0(closure_1_2[13]).isAndroid() && arg0 === closure_1_9.UNAUTHORIZED;
+    AnalyticsUtilsDefault.track(constants.FRIEND_ADD_VIEWED, sourceMetadata);
+    const result = ContactSyncUtils.checkContactPermissions();
+    result.then((result) => {
+      const obj = onSkip(contactSyncAccount[13]);
+      const tmp2 = onSkip;
+      const tmp3 = contactSyncAccount;
+      let tmp5 = result === constants2.NOT_DETERMINED || onSkip(contactSyncAccount[13]).isAndroid() && result === constants2.UNAUTHORIZED;
       if (!tmp5) {
-        tmp5 = !tmp2(tmp3[10]).isContactSyncEnabled(closure_2);
+        tmp5 = !tmp2(tmp3[10]).isContactSyncEnabled(closure_1_2);
         const tmp2Result = tmp2(tmp3[10]);
       }
-      callback(tmp5);
+      closure_1_3(tmp5);
     });
   });
-  let obj2 = onSkip(contactSyncAccount[14]);
-  navigation = obj2.useNavigation();
+  const tmp4 = _slicedToArray(navigation.useState(!onSkip(contactSyncAccount[10]).isContactSyncEnabled(contactSyncAccount)), 2);
+  const tmp6 = sourceMetadata;
+  navigation = onSkip(contactSyncAccount[14]).useNavigation();
   const items = [onSkip];
-  callback = navigation.useCallback(() => {
+  const callback = navigation.useCallback(() => {
     if (onSkip != null) {
       tmp();
     }
-    let arr = sourceMetadata(contactSyncAccount[15]);
-    arr = arr.pop();
+    ModalActionCreatorsDefault.pop();
   }, items);
-  callback1 = navigation.useCallback(() => {
+  const callback1 = navigation.useCallback(() => {
     currentUser = currentUser.getCurrentUser();
     let userTag;
     if (null != currentUser) {
@@ -75,76 +74,79 @@ function AddFriendModalScene(onSkip) {
   const layoutEffect = navigation.useLayoutEffect(() => {
     let obj = {
       headerRight() {
-        const obj = { source: closure_1_1(closure_1_2[20]), onPress: closure_6, accessibilityLabel: null };
-        const intl = closure_1_0(closure_1_2[17]).intl;
-        obj[2] = intl.string(closure_1_0(closure_1_2[17]).t.RDE0Sc);
-        return closure_1_10(closure_1_0(closure_1_2[19]).HeaderActionButton, obj);
+        const obj = { source: sourceMetadata(contactSyncAccount[20]), onPress, accessibilityLabel: null };
+        const intl = onSkip(contactSyncAccount[17]).intl;
+        obj.accessibilityLabel = intl.string(onSkip(contactSyncAccount[17]).t.RDE0Sc);
+        return closure_2_10(onSkip(contactSyncAccount[19]).HeaderActionButton, obj);
       },
-      headerLeft: onSkip(contactSyncAccount[21]).getHeaderCloseButton(callback)
+      headerLeft: NavigatorHeader.getHeaderCloseButton(callback)
     };
     navigation.setOptions(obj);
   }, items1);
-  obj = { style: tmp.headerText, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const obj4 = { style: tmp.headerText, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   let intl = onSkip(contactSyncAccount[17]).intl;
-  obj[4] = intl.string(onSkip(contactSyncAccount[17]).t.GWMTSE);
-  const items2 = [callback2(onSkip(contactSyncAccount[22]).Text, obj), , , ];
-  obj = { style: tmp.subheaderText, variant: "text-sm/medium", color: "text-default", children: null };
+  obj4.children = intl.string(onSkip(contactSyncAccount[17]).t.GWMTSE);
+  const items2 = [closure_10(onSkip(contactSyncAccount[22]).Text, obj4), , , ];
+  const obj5 = { style: tmp.subheaderText, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = onSkip(contactSyncAccount[17]).intl;
-  obj[3] = intl2.string(onSkip(contactSyncAccount[17]).t["Rn/sLl"]);
-  items2[1] = callback2(onSkip(contactSyncAccount[22]).Text, obj);
-  obj1 = { style: tmp.input, autoFocusInput: false };
-  items2[2] = callback2(sourceMetadata(contactSyncAccount[23]), obj1);
-  obj2 = { style: tmp.otherOptionsContainer, children: null };
-  const obj3 = { accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
+  obj5.children = intl2.string(onSkip(contactSyncAccount[17]).t["Rn/sLl"]);
+  items2[1] = closure_10(onSkip(contactSyncAccount[22]).Text, obj5);
+  items2[2] = closure_10(sourceMetadata(contactSyncAccount[23]), { style: tmp.input, autoFocusInput: false });
+  const obj7 = { style: tmp.otherOptionsContainer, children: null };
+  const obj8 = { accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
   const intl3 = onSkip(contactSyncAccount[17]).intl;
-  obj3[3] = intl3.string(onSkip(contactSyncAccount[17]).t.dukg0Z);
-  const items3 = [callback2(onSkip(contactSyncAccount[22]).Text, obj3), ];
+  obj8.children = intl3.string(onSkip(contactSyncAccount[17]).t.dukg0Z);
+  const items3 = [closure_10(onSkip(contactSyncAccount[22]).Text, obj8), ];
   let tmp14Result = null;
   if (tmp5) {
-    const obj4 = { style: null, location: "Add Friend Modal" };
-    obj4[0] = tmp.rowContainer;
-    tmp14Result = callback2(sourceMetadata(contactSyncAccount[24]), obj4);
+    const obj9 = { style: tmp.rowContainer, location: "Add Friend Modal" };
+    tmp14Result = closure_10(tmp6(tmp2[24]), obj9);
   }
-  const obj5 = { keyboardShouldPersistTaps: "handled", children: null };
+  const obj10 = { keyboardShouldPersistTaps: "handled", children: null };
   items3[1] = tmp14Result;
-  obj2[1] = items3;
-  items2[3] = closure_11(callback, obj2);
-  obj5[1] = items2;
-  return closure_11(callback1, obj5);
+  obj7.children = items3;
+  items2[3] = closure_11(callback, obj7);
+  obj10.children = items2;
+  return closure_11(callback1, obj10);
 }
-({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
-({ AnalyticEvents: closure_8, Fonts } = ME);
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { headerText: null, subheaderText: null, input: null, otherOptionsContainer: null, rowContainer: null };
-createCacheKey = {};
-let merged = Object.assign(importDefaultResult(Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
-createCacheKey.marginTop = 32;
-createCacheKey.marginHorizontal = 16;
-createCacheKey.textAlign = "center";
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { lineHeight: 18, marginVertical: 8, marginHorizontal: 16, textAlign: "center" };
-createCacheKey[2] = { marginTop: 16 };
-createCacheKey[3] = { marginTop: 16, paddingHorizontal: 16 };
-createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, marginTop: 8 };
-let closure_12 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, marginTop: 8 };
-let result = require("set").fileFinishedImporting("components_native/add_friend/AddFriendModal.tsx");
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+const Constants = fn(1074);
+({ AnalyticEvents: closure_8, Fonts } = Constants);
+const ContactPermissions = fn(12708).ContactPermissions;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { headerText: null, subheaderText: null, input: null, otherOptionsContainer: null, rowContainer: null };
+const obj3 = {};
+let merged = Object.assign(TextStyles(Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
+obj3.marginTop = 32;
+obj3.marginHorizontal = 16;
+obj3.textAlign = "center";
+obj2.headerText = obj3;
+obj2.subheaderText = { lineHeight: 18, marginVertical: 8, marginHorizontal: 16, textAlign: "center" };
+obj2.input = { marginTop: 16 };
+obj2.otherOptionsContainer = { marginTop: 16, paddingHorizontal: 16 };
+obj2.rowContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginTop: 8 };
+let closure_12 = createStyles.createStyles(obj2);
+const size = fn(2);
+let result = size.fileFinishedImporting("components_native/add_friend/AddFriendModal.tsx");
 
-export default function AddFriendModal(arg0) {
-  const _require = arg0;
-  const items = [arg0];
-  const screens = React.useMemo(() => {
-    let obj = { ADD_FRIEND: null };
-    obj = { ignoreKeyboard: true, title: null, initialParams: null, render: null };
-    const intl = callback(closure_1_2[17]).intl;
-    obj[1] = intl.string(callback(closure_1_2[17]).t.w5uwoI);
-    obj[2] = callback;
-    obj[3] = function render(arg0) {
+export default function AddFriendModal(initialParams) {
+  _require = initialParams;
+  const items = [initialParams];
+  const screens = noop.useMemo(() => {
+    const obj = { ADD_FRIEND: null };
+    const obj2 = { ignoreKeyboard: true, title: null, initialParams: null, render: null };
+    const intl = util.intl;
+    obj2.title = intl.string(util.t.w5uwoI);
+    obj2.initialParams = initialParams;
+    obj2.render = function render(arg0) {
       const merged = Object.assign(arg0);
-      return callback(closure_13, {});
+      return closure_1_10(closure_1_13, {});
     };
-    obj[0] = obj;
+    obj.ADD_FRIEND = obj2;
     return obj;
   }, items);
-  return callback2(_require(7000).Navigator, { screens, initialRouteName: "ADD_FRIEND", headerStatusBarHeight: useSafeAreaInsetsDefault().top });
+  return closure_10(require("Navigator").Navigator, { screens, initialRouteName: "ADD_FRIEND", headerStatusBarHeight: useSafeAreaInsetsDefault().top });
 };

@@ -1,17 +1,15 @@
-// Module ID: 7675
-// Function ID: 7676
-// Name: ttiRecorded
+// Module ID: 7689
+// Function ID: 7690
+// Name: PerformanceAnalyticsActionCreators
 // Dependencies: [573, 2]
 // Exports: ttiRecorded
 
-// Module 7675 (ttiRecorded)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 7689 (PerformanceAnalyticsActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/tti_analytics/native/PerformanceAnalyticsActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/tti_analytics/native/PerformanceAnalyticsActionCreators.tsx");
 
-export const ttiRecorded = function ttiRecorded(closure_5) {
-  let obj = dispatcherDefault;
-  obj = { type: "TTI_RECORDED", tti: closure_5 };
-  obj.dispatch(obj);
+export const ttiRecorded = function ttiRecorded(tti) {
+  DispatcherDefault.dispatch({ type: "TTI_RECORDED", tti });
 };

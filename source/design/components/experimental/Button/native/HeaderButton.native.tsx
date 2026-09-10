@@ -1,15 +1,13 @@
-// Module ID: 8910
-// Function ID: 8911
-// Name: HeaderButton
-// Dependencies: [19, 21, 4980, 4556, 4560, 4976, 2]
+// Module ID: 8937
+// Function ID: 8938
+// Name: Button/HeaderButton
+// Dependencies: [19, 21, 4994, 4570, 4574, 4990, 2]
 
-// Module 8910 (HeaderButton)
-import noopAll from "noop" /* 19 */;
-import CollapsingText from "CollapsingText" /* 4976 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 8937 (Button/HeaderButton)
+import BaseTextButton from "BaseTextButton" /* 4990 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 class HeaderButton {
   constructor(arg0) {
     tmp = closure_4();
@@ -19,16 +17,17 @@ class HeaderButton {
     obj.size = "sm";
     obj.textVariant = c3;
     obj.variant = "secondary-overlay";
-    return jsx(require("CollapsingText").BaseTextButton, obj);
+    return jsx(closure_0(closure_1[5]).BaseTextButton, obj);
   }
 }
-noopAll;
-let c3 = "heading-md/bold";
-const diff = require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT - 2 * require("MINIMUM_HIT_AREA").BUTTON_BORDER_WIDTH;
-const diff1 = diff - require("Text").TextStyleSheet["heading-md/bold"].lineHeight;
-createCacheKey = { paddingVertical: diff1 / 2 };
-let closure_4 = createCacheKey.createStyles({ pill: createCacheKey });
-HeaderButton.Icon = require("CollapsingText").BaseTextButton.Icon;
-const result = require("set").fileFinishedImporting("design/components/experimental/Button/native/HeaderButton.native.tsx");
+const jsx = fn(21).jsx;
+const React3 = "heading-md/bold";
+const diff = fn(4994).SMALL_BUTTON_HEIGHT - 2 * fn(4994).BUTTON_BORDER_WIDTH;
+const diff1 = diff - fn(4570).TextStyleSheet["heading-md/bold"].lineHeight;
+const createStyles = fn(4574);
+const React4 = createStyles.createStyles({ pill: { paddingVertical: diff1 / 2 } });
+HeaderButton.Icon = fn(4990).BaseTextButton.Icon;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/experimental/Button/native/HeaderButton.native.tsx");
 
 export { HeaderButton };

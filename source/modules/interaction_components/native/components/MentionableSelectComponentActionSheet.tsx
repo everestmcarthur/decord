@@ -1,149 +1,128 @@
-// Module ID: 11828
-// Function ID: 11829
+// Module ID: 11854
+// Function ID: 11855
 // Name: MentionableSelectComponentActionSheet
-// Dependencies: [19, 17, 2015, 1979, 4600, 1371, 1074, 21, 4560, 576, 7127, 8120, 11829, 4792, 1178, 7187, 7188, 9757, 11827, 9808, 4556, 11830, 1114, 2]
+// Dependencies: [19, 17, 2015, 1979, 4614, 1371, 1074, 21, 4574, 576, 7141, 8146, 11855, 4806, 1178, 7201, 7219, 9784, 11853, 9835, 4570, 11856, 1114, 2]
 // Exports: default
 
-// Module 11828 (MentionableSelectComponentActionSheet)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "createGuildRoleRecordFromRust" /* 2015 */;
-import closure_6 from "createGuildRecordFromRust" /* 1979 */;
-import closure_7 from "sortActivity" /* 4600 */;
-import closure_8 from "mergeGuildAvatar" /* 1371 */;
-import ME from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11854 (MentionableSelectComponentActionSheet)
+import nativeDefault from "native" /* 576 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 4806 */;
+import RoleIconDefault from "RoleIcon" /* 7219 */;
+import SearchableSelectActionComponentUtils from "SearchableSelectActionComponentUtils" /* 8146 */;
+import DiscordTagDefault from "DiscordTag" /* 9835 */;
+import noop from "module_19" /* 19 */;
+import GuildRoleStore from "GuildRoleStore" /* 2015 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import PresenceStore from "PresenceStore" /* 4614 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-({ Fonts, DEFAULT_ROLE_COLOR_HEX: c9 } = ME);
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { name: null, discriminator: null, roleCountContainer: null, roleCountText: null };
-createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12, lineHeight: 16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { color: ThemesDefault.colors.TEXT_MUTED, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12 };
-createCacheKey[2] = { display: "flex", flexDirection: "row", flexGrow: 1, alignItems: "center", justifyContent: "flex-end", marginRight: 12 };
-createCacheKey[3] = { paddingRight: 4 };
-let closure_12 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { color: ThemesDefault.colors.TEXT_MUTED, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12 };
-const result = require("set").fileFinishedImporting("modules/interaction_components/native/components/MentionableSelectComponentActionSheet.tsx");
+require = fn;
+const View = fn(17).View;
+const Constants = fn(1074);
+({ Fonts, DEFAULT_ROLE_COLOR_HEX: closure_9 } = Constants);
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { name: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12, lineHeight: 16 }, discriminator: null, roleCountContainer: null, roleCountText: null };
+let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12, lineHeight: 16 };
+obj2.discriminator = { color: nativeDefault.colors.TEXT_MUTED, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12 };
+obj2.roleCountContainer = { display: "flex", flexDirection: "row", flexGrow: 1, alignItems: "center", justifyContent: "flex-end", marginRight: 12 };
+obj2.roleCountText = { paddingRight: 4 };
+let closure_12 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/interaction_components/native/components/MentionableSelectComponentActionSheet.tsx");
 
 export default function MentionableSelectComponentActionSheet(selectionActionComponent) {
   selectionActionComponent = selectionActionComponent.selectionActionComponent;
   const channelId = selectionActionComponent.channelId;
   const guildId = selectionActionComponent.guildId;
-  let React;
-  let guild;
   closure_5 = undefined;
   ({ labelComponent, containerId, onSubmit, allowEmpty } = selectionActionComponent);
-  React = callback2();
-  guild = guild.getGuild(guildId);
+  noop = closure_12();
+  const guild = GuildStore.getGuild(guildId);
   let id;
   if (guild != null) {
     id = guild.id;
   }
   closure_5 = channelId(guildId[10])(id, selectionActionComponent(tmp3[11]).MIN_REREQUEST_TIME);
   let items = [selectionActionComponent, channelId];
-  const callback = React.useCallback((arg0) => selectionActionComponent(guildId[11]).queryMentionables(selectionActionComponent.type, arg0, channelId), items);
+  const callback = noop.useCallback((query) => SearchableSelectActionComponentUtils.queryMentionables(selectionActionComponent.type, query, channelId), items);
   let tmp7 = channelId(guildId[12])({ selectActionComponent: selectionActionComponent, containerId, guildId, queryOptions: callback, onSubmit });
   const selectedOptions = tmp7.selectedOptions;
   const items1 = [guild, guildId];
   ({ options, isSelected, onPressOptionItem, submitSelection, setQuery } = tmp7);
-  const callback1 = React.useCallback((type) => {
-    if (type.type === selectionActionComponent(guildId[13]).SelectOptionType.USER) {
-      const user = closure_1_8.getUser(type.value);
+  const callback1 = noop.useCallback((type) => {
+    if (type.type === InteractionComponentTypes.SelectOptionType.USER) {
+      user = UserStore.getUser(type.value);
       if (null == user) {
         return null;
       } else {
-        const isMobileOnlineResult = closure_1_7.isMobileOnline(user.id);
-        const status = closure_1_7.getStatus(user.id);
-        let obj = { user: null, isMobileOnline: null, isVROnline: null, status: null, guildId: null, size: null };
-        obj[0] = user;
-        obj[1] = isMobileOnlineResult;
-        obj[2] = closure_1_7.isVROnline(user.id);
-        obj[3] = status;
-        obj[4] = guildId;
-        obj[5] = tmp(tmp2[14]).AvatarSizes.XSMALL;
-        return closure_1_10(tmp(tmp2[14]).Avatar, obj);
+        const isMobileOnlineResult = PresenceStore.isMobileOnline(user.id);
+        const status = PresenceStore.getStatus(user.id);
+        const obj = { user, isMobileOnline: isMobileOnlineResult, isVROnline: PresenceStore.isVROnline(user.id), status, guildId, size: tmp(1178).AvatarSizes.XSMALL };
+        return closure_2_10(tmp(1178).Avatar, obj);
       }
-    } else if (type.type === tmp(tmp2[13]).SelectOptionType.ROLE) {
+    } else if (type.type === tmp(4806).SelectOptionType.ROLE) {
       if (null != guild) {
-        const role = store.getRole(tmp3.id, type.value);
+        const role = GuildRoleStore.getRole(tmp3.id, type.value);
       }
       if (null != guild) {
         if (null != role) {
-          let tmpResult = tmp(tmp2[15]);
           if (tmpResult.canGuildUseRoleIcons(tmp3, role)) {
-            tmpResult = tmp(tmp2[15]);
-            let roleIconData = tmpResult.getRoleIconData(role);
-            if (roleIconData == null) {
-              roleIconData = {};
+            const roleIconData = tmp(7201).getRoleIconData(role);
+            if (null != roleIconData) {
+              const obj2 = { src: null, unicodeEmoji: null, size: 24, name: null };
+              ({ customIconSrc: obj3.src, unicodeEmoji: obj3.unicodeEmoji } = roleIconData);
+              obj2.name = role.name;
+              return closure_2_10(RoleIconDefault, obj2);
             }
-            ({ customIconSrc, unicodeEmoji } = roleIconData);
-            let tmp7;
-            if (null != customIconSrc) {
-              obj = { uri: null };
-              obj[0] = customIconSrc;
-              tmp7 = obj;
-            }
-            obj1 = { source: null, unicodeEmoji: null, size: 24, name: null };
-            obj1[0] = tmp7;
-            obj1[1] = unicodeEmoji;
-            obj1[3] = role.name;
-            return closure_1_10(channelId(tmp2[16]), obj1);
+            const tmpResult2 = tmp(7201);
           }
           let colorString;
           if (role != null) {
             colorString = role.colorString;
           }
           if (colorString == null) {
-            colorString = closure_1_9;
+            colorString = React7;
           }
-          const obj2 = { color: null };
-          obj2[0] = colorString;
-          return closure_1_10(tmp(tmp2[17]).ShieldUserIcon, obj2);
+          const obj4 = { color: colorString };
+          return closure_2_10(tmp(9784).ShieldUserIcon, obj4);
         }
       }
       return null;
     }
   }, items1);
-  return callback(channelId(guildId[18]), {
+  return closure_10(channelId(guildId[18]), {
     onPressOptionItem,
     renderIcon: callback1,
     renderDescription(type) {
-      if (type.type === selectionActionComponent(guildId[13]).SelectOptionType.USER) {
-        const user = closure_1_8.getUser(type.value);
-        const obj = { user: null, usernameStyle: null, discriminatorStyle: null, nicknameStyle: null };
-        obj[0] = user;
-        ({ name: obj[1], discriminator: obj[2], name: obj[3] } = closure_3);
-        return closure_1_10(channelId(tmp[19]), obj);
+      if (type.type === InteractionComponentTypes.SelectOptionType.USER) {
+        user = UserStore.getUser(type.value);
+        const obj = { user, usernameStyle: null, discriminatorStyle: null, nicknameStyle: null };
+        ({ name: obj.usernameStyle, discriminator: obj.discriminatorStyle, name: obj.nicknameStyle } = closure_3);
+        return closure_2_10(DiscordTagDefault, obj);
       }
-      tmp = guildId;
     },
-    renderOptionSuffix(item) {
-      if (item.type === selectionActionComponent(guildId[13]).SelectOptionType.ROLE) {
+    renderOptionSuffix(type) {
+      if (type.type === InteractionComponentTypes.SelectOptionType.ROLE) {
         let role;
         if (null != guild) {
-          role = store.getRole(tmp3.id, item.value);
+          role = GuildRoleStore.getRole(tmp3.id, type.value);
         }
         let tmp7 = null;
         if (null != role) {
           let tmp9;
-          if (store != null) {
+          if (closure_5 != null) {
             tmp9 = tmp8[role.id];
           }
           tmp7 = tmp9;
         }
         if (null != tmp7) {
-          let obj = { style: null, children: null };
-          obj[0] = closure_3.roleCountContainer;
-          obj = { style: null, variant: "text-sm/medium", color: "interactive-text-default", children: null };
-          obj[0] = closure_3.roleCountText;
-          obj[3] = tmp7;
-          const items = [closure_1_10(tmp(tmp2[20]).Text, obj), closure_1_10(tmp(tmp2[21]).UserIcon, { size: "xs" })];
-          obj[1] = items;
-          return closure_1_11(guild, obj);
+          const obj = { style: closure_3.roleCountContainer, children: null };
+          const obj2 = { style: closure_3.roleCountText, variant: "text-sm/medium", color: "interactive-text-default", children: tmp7 };
+          const items = [closure_2_10(tmp(4570).Text, obj2), closure_2_10(tmp(11856).UserIcon, { size: "xs" })];
+          obj.children = items;
+          return closure_2_11(View, obj);
         }
       }
     },
@@ -166,29 +145,26 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
         const formatToPlainString = intl2.formatToPlainString;
         const t = tmp(tmp2[22]).t;
         if (bot) {
-          let obj = { username: null, discriminator: null };
-          obj[0] = type.label;
+          const obj2 = { username: type.label, discriminator: null };
           let discriminator;
           if (user != null) {
             discriminator = user.discriminator;
           }
-          obj[1] = discriminator;
-          let formatToPlainStringResult = formatToPlainString(t["zogo/8"], obj);
+          obj2.discriminator = discriminator;
+          let formatToPlainStringResult = formatToPlainString(t["zogo/8"], obj2);
         } else {
-          obj = { username: null, discriminator: null };
-          obj[0] = type.label;
+          const obj3 = { username: type.label, discriminator: null };
           let discriminator1;
           if (user != null) {
             discriminator1 = user.discriminator;
           }
-          obj[1] = discriminator1;
-          formatToPlainStringResult = formatToPlainString(t.AydQ7a, obj);
+          obj3.discriminator = discriminator1;
+          formatToPlainStringResult = formatToPlainString(t.AydQ7a, obj3);
         }
         return formatToPlainStringResult;
       } else if (type.type === tmp(tmp2[13]).SelectOptionType.ROLE) {
         const intl = tmp(tmp2[22]).intl;
-        obj = { roleName: null };
-        obj[0] = type.label;
+        const obj = { roleName: type.label };
         return intl.formatToPlainString(tmp(tmp2[22]).t.F6ejkk, obj);
       }
     },

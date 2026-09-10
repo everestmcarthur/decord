@@ -1,43 +1,43 @@
-// Module ID: 14125
-// Function ID: 14126
+// Module ID: 14148
+// Function ID: 14149
 // Name: LiveTag
-// Dependencies: [19, 17, 21, 4560, 576, 1115, 4556, 1114, 2]
+// Dependencies: [19, 17, 21, 4574, 576, 1115, 4570, 1114, 2]
 // Exports: default
 
-// Module 14125 (LiveTag)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import set from "set" /* 1115 */;
+// Module 14148 (LiveTag)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { tag: null, tagText: null };
-createCacheKey = { paddingHorizontal: 6, paddingVertical: 2, borderRadius: ThemesDefault.radii.round, overflow: "hidden", justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.unsafe_rawColors.RED_400 };
-createCacheKey[0] = createCacheKey;
-const obj1 = { textAlign: "center", color: ThemesDefault.unsafe_rawColors.WHITE, marginTop: null };
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { tag: { paddingHorizontal: 6, paddingVertical: 2, borderRadius: nativeDefault.radii.round, overflow: "hidden", justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.unsafe_rawColors.RED_400 }, tagText: null };
+const obj4 = { textAlign: "center", color: nativeDefault.unsafe_rawColors.WHITE, marginTop: null };
+const PlatformUtils = fn(1115);
 let num = 0;
-if (set.isAndroid()) {
+if (PlatformUtils.isAndroid()) {
   num = -2;
 }
-obj1[2] = num;
-createCacheKey[1] = obj1;
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = set.fileFinishedImporting("design/void/LiveTag/native/LiveTag.tsx");
+obj4.marginTop = num;
+obj2.tagText = obj4;
+let closure_4 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/LiveTag/native/LiveTag.tsx");
 
 export default function LiveTag(arg0) {
   ({ style, textStyle, allowFontScaling } = arg0);
-  const tmp = callback();
-  let obj = { style: items, children: null };
-  items = [tmp.tag, style];
-  obj = { variant: "text-xs/bold", style: items1, lineClamp: 1, allowFontScaling, children: null };
-  items1 = [tmp.tagText, textStyle];
-  const intl = getSystemLocale.intl;
-  obj[4] = intl.string(getSystemLocale.t.dI3q4h).toUpperCase();
-  obj[1] = jsx(Text.Text, { variant: "text-xs/bold", style: items1, lineClamp: 1, allowFontScaling, children: null });
-  return <View variant="text-xs/bold" style={items1} lineClamp={1} allowFontScaling={allowFontScaling}>{null}</View>;
+  const tmp = closure_4();
+  const obj = { style: null, children: null };
+  const items = [tmp.tag, style];
+  obj.style = items;
+  const obj2 = { variant: "text-xs/bold", style: null, lineClamp: 1, allowFontScaling, children: null };
+  const items1 = [tmp.tagText, textStyle];
+  obj2.style = items1;
+  const intl = util.intl;
+  obj2.children = intl.string(util.t.dI3q4h).toUpperCase();
+  obj.children = jsx(Text_Text.Text, { variant: "text-xs/bold", style: null, lineClamp: 1, allowFontScaling, children: null });
+  return <View style={null}>{null}</View>;
 };

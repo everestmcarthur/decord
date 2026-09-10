@@ -1,11 +1,11 @@
-// Module ID: 17898
-// Function ID: 17899
-// Name: DeeplinkSource
+// Module ID: 17931
+// Function ID: 17932
+// Name: DeepLinkTypes
 // Dependencies: [2]
 
-// Module 17898 (DeeplinkSource)
-import set from "set" /* 2 */;
+// Module 17931 (DeepLinkTypes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/deep_link/DeepLinkTypes.tsx");
+const result = size.fileFinishedImporting("modules/deep_link/DeepLinkTypes.tsx");
 
 export const DeeplinkSource = { Firebase: "firebase", OS: "os", Iterable: "iterable", AppsFlyer: "appsflyer", AppsFlyerDeferred: "appsflyer_deferred", ReactNativeLinking: "react_native_linking" };

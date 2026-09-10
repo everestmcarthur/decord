@@ -1,29 +1,31 @@
-// Module ID: 5623
-// Function ID: 5624
-// Name: ChangeEmailFields
+// Module ID: 5637
+// Function ID: 5638
+// Name: ChangeEmailStore
 // Dependencies: [560, 1249, 2]
 // Exports: resetChangeEmailStore, setChangeEmailError, setEmailToken, useChangeEmailError
 
-// Module 5623 (ChangeEmailFields)
-import set from "set" /* 2 */;
-import batchUpdates from "batchUpdates" /* 1249 */;
-import keys from "keys" /* 560 */;
+// Module 5637 (ChangeEmailStore)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import module_560 from "module_560" /* 560 */;
+import size from "module_2" /* 2 */;
+
+const require = globalThis.__r;
 
 let closure_2 = { errors: null, emailToken: null };
-let obj = keys.create(() => closure_2);
-const result = set.fileFinishedImporting("modules/verification/ChangeEmailStore.tsx");
+const useChangeEmailStore = module_560.create(() => closure_2);
+const result = size.fileFinishedImporting("modules/verification/ChangeEmailStore.tsx");
 
 export const ChangeEmailFields = { EMAIL: "email", EMAIL_TOKEN: "email_token", PASSWORD: "password" };
-export const useChangeEmailStore = obj;
+export { useChangeEmailStore };
 export const setChangeEmailError = function setChangeEmailError(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   dependencyMap = arg1;
-  _require(1249).batchUpdates(() => closure_1_3.setState((errors) => {
-    obj = { errors: null };
-    obj = {};
+  require("ReactBatchUpdates").batchUpdates(() => state.setState((errors) => {
+    const obj = { errors: null };
+    const obj2 = {};
     const merged = Object.assign(errors.errors);
-    obj[closure_0] = closure_1;
-    obj[0] = obj;
+    obj2[closure_1_0] = closure_1_1;
+    obj.errors = obj2;
     return obj;
   }));
 };
@@ -40,22 +42,25 @@ export const useChangeEmailError = function useChangeEmailError(arg0) {
     }),
     (arg0) => {
       closure_1 = arg0;
-      callback(closure_1_1[1]).batchUpdates(() => closure_1_3.setState((errors) => {
-        obj = { errors: null };
-        obj = {};
+      ReactBatchUpdates.batchUpdates(() => state.setState((errors) => {
+        const obj = { errors: null };
+        const obj2 = {};
         const merged = Object.assign(errors.errors);
-        obj[closure_0] = closure_1;
-        obj[0] = obj;
+        obj2[closure_1_0] = closure_1_1;
+        obj.errors = obj2;
         return obj;
       }));
     }
   ];
   return items;
 };
-export const setEmailToken = function setEmailToken(arg0) {
-  const _require = arg0;
-  _require(1249).batchUpdates(() => closure_1_3.setState({ emailToken: closure_0 }));
+export const setEmailToken = function setEmailToken(emailToken) {
+  _require = emailToken;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    const obj = { emailToken };
+    return obj.setState(obj);
+  });
 };
 export const resetChangeEmailStore = function resetChangeEmailStore() {
-  batchUpdates.batchUpdates(() => state.setState(closure_2, true));
+  ReactBatchUpdates.batchUpdates(() => state.setState(closure_1_2, true));
 };

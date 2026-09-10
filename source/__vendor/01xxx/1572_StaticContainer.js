@@ -4,10 +4,10 @@
 // Dependencies: [19]
 
 // Module 1572 (StaticContainer)
-import noopAll from "noop" /* 19 */;
+import noop from "module_19" /* 19 */;
 
 
-export const StaticContainer = noopAll.memo(function StaticContainer(children) {
+export const StaticContainer = noop.memo(function StaticContainer(children) {
   return children.children;
 }, (arg0, arg1) => {
   const keys = Object.keys(arg0);
@@ -19,9 +19,7 @@ export const StaticContainer = noopAll.memo(function StaticContainer(children) {
     while (iter !== undefined) {
       let tmp5 = nextResult;
       if ("children" !== nextResult) {
-        let tmp6 = nextResult;
         if (arg0[tmp5] !== arg1[tmp5]) {
-          let tmp7 = iter;
           iter.return();
           let flag = false;
           return false;

@@ -1,52 +1,52 @@
-// Module ID: 10178
-// Function ID: 10179
+// Module ID: 10205
+// Function ID: 10206
 // Name: NotificationProgress
-// Dependencies: [32, 19, 17, 21, 4560, 576, 4296, 2]
+// Dependencies: [32, 19, 17, 21, 4574, 576, 4310, 2]
 // Exports: default
 
-// Module 10178 (NotificationProgress)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10205 (NotificationProgress)
+import nativeDefault from "native" /* 576 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-createCacheKey = { progress: null, progressContainerBottom: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, height: 4 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { width: "100%", position: "absolute", bottom: -1 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let closure_8 = { code: "function NotificationProgressTsx1(){const{percent,width}=this.__closure;const percentRemaining=(typeof percent==='number'?percent:percent.get())/100;return{transform:[{translateX:-width+width*percentRemaining}]};}" };
-const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/NotificationProgress.tsx");
+const ReanimatedRexportDefault = ReanimatedRexport;
+
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4574);
+let obj2 = { progress: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, height: 4 }, progressContainerBottom: { width: "100%", position: "absolute", bottom: -1 } };
+let closure_7 = createStyles.createStyles(obj2);
+const __initData = { code: "function NotificationProgressTsx1(){const{percent,width}=this.__closure;const percentRemaining=(typeof percent==='number'?percent:percent.get())/100;return{transform:[{translateX:-width+width*percentRemaining}]};}" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_notifications/native/NotificationProgress.tsx");
 
 export default function NotificationProgress(percent) {
   percent = percent.percent;
-  const tmp = callback2();
-  let first;
-  dependencyMap = undefined;
-  const tmp2 = callback(React.useState(0), 2);
-  first = tmp2[0];
-  dependencyMap = tmp2[1];
-  callback = React.useCallback((nativeEvent) => callback(nativeEvent.nativeEvent.layout.width), []);
-  let obj = percent(4296);
+  const tmp = closure_7();
+  width = undefined;
+  closure_2 = undefined;
+  [width, closure_2] = noop.useState(0);
+  const callback = noop.useCallback((nativeEvent) => closure_2(nativeEvent.nativeEvent.layout.width), []);
   const fn = function s() {
-    let obj = percent;
-    let value = percent;
+    value = percent;
     if (typeof percent !== "number") {
-      value = obj.get();
+      value = percent.get();
     }
-    obj = { translateX: first * (value / 100) - first };
-    const transform = [obj];
-    return { transform };
+    const obj2 = { transform: null };
+    const items = [{ translateX: first * (value / 100) - first }];
+    obj2.transform = items;
+    return obj2;
   };
-  fn.__closure = { percent, width: first };
+  fn.__closure = { percent, width };
   fn.__workletHash = 14879761869068;
-  fn.__initData = closure_8;
-  obj = { onLayout: callback, style: tmp.progressContainerBottom, children: null };
-  const animatedStyle = obj.useAnimatedStyle(fn);
-  const items = [tmp.progress, animatedStyle];
-  obj[2] = jsx(first(4296).View, { style: items });
+  fn.__initData = __initData;
+  let obj2 = { onLayout: callback, style: tmp.progressContainerBottom, children: null };
+  const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
+  const obj3 = { style: null };
+  let items = [tmp.progress, animatedStyle];
+  obj3.style = items;
+  obj2.children = jsx(ReanimatedRexportDefault.View, { style: null });
   return <View onLayout={callback} style={tmp.progressContainerBottom}>{null}</View>;
 };

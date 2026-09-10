@@ -1,12 +1,12 @@
-// Module ID: 7646
-// Function ID: 7647
+// Module ID: 7660
+// Function ID: 7661
 // Name: actions
 // Dependencies: [2]
 
-// Module 7646 (actions)
-import set from "set" /* 2 */;
+// Module 7660 (actions)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/app_database/system/AppDatabaseManager.Entry.tsx");
+const result = size.fileFinishedImporting("modules/app_database/system/AppDatabaseManager.Entry.tsx");
 class Entry {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);

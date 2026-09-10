@@ -1,21 +1,20 @@
-// Module ID: 9104
-// Function ID: 9105
-// Name: prototype
+// Module ID: 9131
+// Function ID: 9132
+// Name: VideoFilterImageError
 // Dependencies: [1272, 1114, 2]
 
-// Module 9104 (prototype)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import sendRequest from "sendRequest" /* 1272 */;
+// Module 9131 (VideoFilterImageError)
+import util from "util" /* 1114 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import size from "module_2" /* 2 */;
 
-let closure_2 = { ASSET_SIZE: "BINARY_TYPE_MAX_SIZE" };
-let closure_3 = { ASSET: "asset" };
-const V8APIError = sendRequest.V8APIError;
+const constants = { ASSET_SIZE: "BINARY_TYPE_MAX_SIZE" };
+const constants2 = { ASSET: "asset" };
+const V8APIError = HTTPUtils.V8APIError;
 const prototype = function VideoFilterImageError(arg0, arg1) {
-  const intl = getSystemLocale.intl;
-  tmp3 = new tmp3(arg0, arg1, intl.string(getSystemLocale.t.Mt8yDB), new.target, tmp3, tmp2, intl, require, new.target, tmp);
-  // ThrowIfThisInitialized (0x7c)
-  const fieldErrors = tmp3.getFieldErrors(constants2.ASSET);
+  const intl = util.intl;
+  const tmp32 = new tmp3(arg0, arg1, intl.string(util.t.Mt8yDB), new.target, tmp3, tmp2, intl, require, new.target, tmp);
+  const fieldErrors = tmp32.getFieldErrors(constants2.ASSET);
   let tmp7 = null != fieldErrors;
   if (tmp7) {
     const first = fieldErrors[0];
@@ -27,12 +26,12 @@ const prototype = function VideoFilterImageError(arg0, arg1) {
   }
   if (tmp7) {
     const intl2 = tmp4(1114).intl;
-    tmp3.message = intl2.string(tmp4(1114).t.mrlScX);
+    tmp32.message = intl2.string(tmp4(1114).t.mrlScX);
   }
-  return tmp3;
+  return tmp32;
 }.prototype;
 class prototype extends V8APIError {
 }
-const result = set.fileFinishedImporting("modules/video_backgrounds/VideoFilterImageError.tsx");
+const result = size.fileFinishedImporting("modules/video_backgrounds/VideoFilterImageError.tsx");
 
 export default prototype;

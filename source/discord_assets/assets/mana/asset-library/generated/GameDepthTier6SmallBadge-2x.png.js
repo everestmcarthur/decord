@@ -1,12 +1,11 @@
-// Module ID: 6036
-// Function ID: 6037
-// Name: vanityUrl
+// Module ID: 6050
+// Function ID: 6051
 // Dependencies: [2]
 
-// Module 6036 (vanityUrl)
-import set from "set" /* 2 */;
+// Module 6050
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GameDepthTier6SmallBadge-2x.png.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GameDepthTier6SmallBadge-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/7d0522a3c06ac298b5f67ce221759506b3a033a50e93cfb58a48e0cb0611d6d9.png";
 export const vanityUrl = "https://cdn.discordapp.com/assets/mana/asset-library/generated/GameDepthTier6SmallBadge-2x.png";

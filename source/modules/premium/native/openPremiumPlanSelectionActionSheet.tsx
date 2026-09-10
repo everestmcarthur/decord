@@ -1,22 +1,21 @@
-// Module ID: 7422
-// Function ID: 7423
+// Module ID: 7436
+// Function ID: 7437
 // Name: openPremiumPlanSelectionActionSheet
-// Dependencies: [1373, 4527, 7423, 1896, 2]
+// Dependencies: [1373, 4541, 7437, 1896, 2]
 // Exports: default
 
-// Module 7422 (openPremiumPlanSelectionActionSheet)
-import set from "set" /* 2 */;
-import GuildFeatures from "GuildFeatures" /* 1373 */;
+// Module 7436 (openPremiumPlanSelectionActionSheet)
+import PremiumConstants from "PremiumConstants" /* 1373 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import size from "module_2" /* 2 */;
 
-let closure_3 = GuildFeatures.PREMIUM_PLAN_SELECTION_ACTION_SHEET_KEY;
-const result = set.fileFinishedImporting("modules/premium/native/openPremiumPlanSelectionActionSheet.tsx");
+let closure_3 = PremiumConstants.PREMIUM_PLAN_SELECTION_ACTION_SHEET_KEY;
+const result = size.fileFinishedImporting("modules/premium/native/openPremiumPlanSelectionActionSheet.tsx");
 
 export default function openPremiumPlanSelectionActionSheet(arg0, arg1) {
   if (null == arg1) {
-    ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
-    const obj = ACTION_SHEET_HEIGHT_HALFDefault;
+    ActionSheetActionCreatorsDefault.hideActionSheet();
   }
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(7423, dependencyMap.paths), closure_3, arg0, arg1);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7437, dependencyMap.paths), closure_3, arg0, arg1);
 };

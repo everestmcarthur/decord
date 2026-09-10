@@ -1,45 +1,42 @@
-// Module ID: 12374
-// Function ID: 12375
-// Name: SEARCH_BAR_HEIGHT
-// Dependencies: [19, 17, 21, 4560, 576, 7051, 4556, 1114, 2]
+// Module ID: 12400
+// Function ID: 12401
+// Name: SearchButton
+// Dependencies: [19, 17, 21, 4574, 576, 7065, 4570, 1114, 2]
 // Exports: SearchButtonContent
 
-// Module 12374 (SEARCH_BAR_HEIGHT)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7051 */;
-import { Pressable } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12400 (SearchButton)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7065 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { searchButton: null, roundedCorners: null, roundedCornersAlt: null, text: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, height: 40, alignItems: "center", flexDirection: "row", paddingHorizontal: 12 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderRadius: 20 };
-createCacheKey[2] = { borderRadius: ThemesDefault.radii.round };
-createCacheKey[3] = { marginLeft: 8 };
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { borderRadius: ThemesDefault.radii.round };
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/SearchButton.tsx");
+require = fn;
+const Pressable = fn(17).Pressable;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { searchButton: { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, height: 40, alignItems: "center", flexDirection: "row", paddingHorizontal: 12 }, roundedCorners: { borderRadius: 20 }, roundedCornersAlt: null, text: null };
+const obj3 = { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, height: 40, alignItems: "center", flexDirection: "row", paddingHorizontal: 12 };
+obj2.roundedCornersAlt = { borderRadius: nativeDefault.radii.round };
+obj2.text = { marginLeft: 8 };
+let closure_5 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/SearchButton.tsx");
 
 export const SEARCH_BAR_HEIGHT = 40;
 export const SearchButtonContent = function SearchButtonContent(panelVariant) {
-  const merged = Object.assign(panelVariant, Object.create(null));
-  const tmp2 = callback2();
-  let obj = {};
+  const merged = Object.assign(panelVariant, Object.assign({ panelVariant: 0 }));
+  const tmp2 = closure_5();
+  const obj = {};
   const merged1 = Object.assign(merged);
   const items = [tmp2.searchButton, panelVariant.panelVariant ? tmp2.roundedCornersAlt : tmp2.roundedCorners, merged.style];
   obj.style = items;
-  const items1 = [callback(MagnifyingGlassIcon.MagnifyingGlassIcon, { size: "xs" }), ];
-  obj = { variant: "text-sm/medium", color: "text-muted", style: tmp2.text, maxFontSizeMultiplier: 2, children: null };
-  const intl = getSystemLocale.intl;
-  obj[4] = intl.string(getSystemLocale.t["5h0QOP"]);
-  items1[1] = callback(Text.Text, obj);
+  const items1 = [React3(MagnifyingGlassIcon.MagnifyingGlassIcon, { size: "xs" }), ];
+  const obj2 = { variant: "text-sm/medium", color: "text-muted", style: tmp2.text, maxFontSizeMultiplier: 2, children: null };
+  const intl = util.intl;
+  obj2.children = intl.string(util.t["5h0QOP"]);
+  items1[1] = React3(Text_Text.Text, obj2);
   obj.children = items1;
-  return closure_4(Pressable, obj);
+  return React4(Pressable, obj);
 };

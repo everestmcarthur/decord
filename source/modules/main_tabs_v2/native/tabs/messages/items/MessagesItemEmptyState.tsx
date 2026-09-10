@@ -1,71 +1,68 @@
-// Module ID: 16098
-// Function ID: 16099
-// Name: MESSAGES_ITEM_EMPTY_STATE_HEIGHT
-// Dependencies: [19, 17, 21, 4560, 576, 4418, 16057, 4556, 1114, 4975, 2]
+// Module ID: 16128
+// Function ID: 16129
+// Name: MessagesItemEmptyState
+// Dependencies: [19, 17, 21, 4574, 576, 4432, 16087, 4570, 1114, 4989, 2]
 
-// Module 16098 (MESSAGES_ITEM_EMPTY_STATE_HEIGHT)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import Button from "Button" /* 4975 */;
-import registerAssetDefault from "registerAsset" /* 16057 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16128 (MessagesItemEmptyState)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import RootNavigationRef from "RootNavigationRef" /* 4432 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import _modDef16087 from "module_16087" /* 16087 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let c3 = importAllResult;
-({ Image: c4, View: c5 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let obj = { container: null, containerImage: null, image: null, body: null, title: null };
-obj = { padding: ThemesDefault.space.PX_16, flex: 1, height: 325 };
-obj[0] = obj;
-createCacheKey = { marginBottom: ThemesDefault.space.PX_16, flexShrink: 1, flexGrow: 1 };
-obj[1] = createCacheKey;
-obj[2] = { height: "100%", width: "100%" };
-obj[3] = { marginBottom: ThemesDefault.space.PX_16, marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
-obj[4] = { textAlign: "center" };
-let closure_8 = createCacheKey.createStyles(obj);
-let obj2 = { marginBottom: ThemesDefault.space.PX_16, marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
-const memoResult = importAllResult.memo(function MessagesItemEmptyState() {
-  const tmp = callback3();
-  let obj = { style: tmp.container, collapsable: false, children: null };
-  obj = { style: tmp.containerImage, children: null };
-  obj = { resizeMode: "contain", source: null, style: null };
-  const callback = importAllResult.useCallback(() => {
-    let obj = callback(table[5]);
-    const rootNavigationRef = obj.getRootNavigationRef();
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj = { container: { padding: nativeDefault.space.PX_16, flex: 1, height: 325 }, containerImage: null, image: null, body: null, title: null };
+let obj3 = { padding: nativeDefault.space.PX_16, flex: 1, height: 325 };
+obj.containerImage = { marginBottom: nativeDefault.space.PX_16, flexShrink: 1, flexGrow: 1 };
+obj.image = { height: "100%", width: "100%" };
+let obj4 = { marginBottom: nativeDefault.space.PX_16, flexShrink: 1, flexGrow: 1 };
+obj.body = { marginBottom: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_8, textAlign: "center" };
+obj.title = { textAlign: "center" };
+let closure_8 = createStyles.createStyles(obj);
+let obj5 = { marginBottom: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_8, textAlign: "center" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemEmptyState.tsx");
+
+export default noop.memo(function MessagesItemEmptyState() {
+  const tmp = closure_8();
+  const obj = { style: tmp.container, collapsable: false, children: null };
+  let obj2 = { style: tmp.containerImage, children: null };
+  const obj3 = { resizeMode: "contain", source: null, style: null };
+  const callback = noop.useCallback(() => {
+    const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     if (rootNavigationRef != null) {
       const current = rootNavigationRef.current;
       if (current != null) {
-        obj = { screen: "add-friends", params: null };
-        obj[1] = { sourcePage: "Messages Empty State", presentation: "card" };
-        current.navigate("friends", obj);
+        const obj2 = { screen: "add-friends", params: { sourcePage: "Messages Empty State", presentation: "card" } };
+        current.navigate("friends", obj2);
       }
     }
   }, []);
-  obj[1] = registerAssetDefault;
-  obj[2] = tmp.image;
-  obj[1] = callback(closure_4, obj);
-  const items = [callback(closure_5, obj), , , ];
-  obj1 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", style: tmp.title, maxFontSizeMultiplier: 2, children: null };
-  const intl = getSystemLocale.intl;
-  obj1[4] = intl.string(getSystemLocale.t["8JZof8"]);
-  items[1] = callback(Text.Heading, obj1);
-  const obj2 = { color: "text-default", variant: "text-md/medium", style: tmp.body, maxFontSizeMultiplier: 2, children: null };
-  const intl2 = getSystemLocale.intl;
-  obj2[4] = intl2.string(getSystemLocale.t["qm+H7x"]);
-  items[2] = callback(Text.Text, obj2);
-  const obj3 = { text: null, onPress: null, size: "lg" };
-  const intl3 = getSystemLocale.intl;
-  obj3[0] = intl3.string(getSystemLocale.t.zIJnA6);
-  obj3[1] = callback;
-  items[3] = callback(Button.Button, obj3);
-  obj[2] = items;
-  return callback2(closure_5, obj);
+  obj3.source = _modDef16087;
+  obj3.style = tmp.image;
+  obj2.children = timestampProducer(React4, obj3);
+  const items = [timestampProducer(hasOwnProperty, obj2), , , ];
+  const obj4 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", style: tmp.title, maxFontSizeMultiplier: 2, children: null };
+  const intl = util.intl;
+  obj4.children = intl.string(util.t["8JZof8"]);
+  items[1] = timestampProducer(Text_Text.Heading, obj4);
+  const obj5 = { color: "text-default", variant: "text-md/medium", style: tmp.body, maxFontSizeMultiplier: 2, children: null };
+  const intl2 = util.intl;
+  obj5.children = intl2.string(util.t["qm+H7x"]);
+  items[2] = timestampProducer(Text_Text.Text, obj5);
+  const obj6 = { text: null, onPress: null, size: "lg" };
+  const intl3 = util.intl;
+  obj6.text = intl3.string(util.t.zIJnA6);
+  obj6.onPress = callback;
+  items[3] = timestampProducer(components_Button_Button.Button, obj6);
+  obj.children = items;
+  return React5(hasOwnProperty, obj);
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemEmptyState.tsx");
-
-export default memoResult;
 export const MESSAGES_ITEM_EMPTY_STATE_HEIGHT = 325;

@@ -1,45 +1,48 @@
-// Module ID: 10948
-// Function ID: 10949
-// Name: useInviteActions
-// Dependencies: [5, 1957, 1371, 1074, 1114, 10942, 10949, 8361, 7759, 7190, 4258, 9825, 8378, 4259, 2]
+// Module ID: 10975
+// Function ID: 10976
+// Name: guild_instant_invites/InstantInviteUtils
+// Dependencies: [5, 1957, 1371, 1074, 1114, 10969, 10976, 8389, 7773, 7203, 4271, 9852, 8406, 4272, 2]
 // Exports: useInviteActions
 
-// Module 10948 (useInviteActions)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "mergeGuildAvatar" /* 1371 */;
-import { InstantInviteSources } from "ME" /* 1074 */;
+// Module 10975 (guild_instant_invites/InstantInviteUtils)
+import ToastUtils from "ToastUtils" /* 4271 */;
+import getInviteURLDefault from "getInviteURL" /* 7773 */;
+import _modDef10976 from "module_10976" /* 10976 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteUtils.tsx");
+require = fn;
+const InstantInviteSources = fn(1074).InstantInviteSources;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteUtils.tsx");
 
 export const useInviteActions = function useInviteActions(invite) {
   invite = invite.invite;
   const onInviteRevoked = invite.onInviteRevoked;
   dependencyMap = undefined;
-  let callback;
-  channel = channel.getChannel(invite.channel.id);
+  asyncGeneratorStep = undefined;
+  const channel = ChannelStore.getChannel(invite.channel.id);
   let isPrivateResult;
   if (channel != null) {
     isPrivateResult = channel.isPrivate();
   }
-  callback = isPrivateResult;
-  let obj = { label: null, iconSource: null, action: null };
+  asyncGeneratorStep = isPrivateResult;
+  const obj = { label: null, iconSource: null, action: null };
   let intl = invite(1114).intl;
-  obj[0] = intl.string(invite(1114).t.RDE0Sc);
-  obj[1] = onInviteRevoked(10942).share;
-  obj[2] = function action() {
-    onInviteRevoked(10949)(() => {
-      let obj = closure_1_0(closure_1_2[7]);
+  obj.label = intl.string(invite(1114).t.RDE0Sc);
+  obj.iconSource = onInviteRevoked(10969).share;
+  obj.action = function action() {
+    _modDef10976(() => {
       let tmp4;
-      if (!closure_3) {
-        tmp4 = closure_1_1(tmp2[8])(closure_0.code);
+      if (!closure_1_3) {
+        tmp4 = onInviteRevoked(tmp2[8])(closure_1_0.code);
       }
-      obj = { url: tmp4, message: null };
+      const obj2 = { url: tmp4, message: null };
       let formatToPlainStringResult;
-      if (closure_3) {
+      if (closure_1_3) {
         const intl = tmp(tmp2[4]).intl;
-        const currentUser = closure_1_5.getCurrentUser();
+        currentUser = currentUser.getCurrentUser();
         let str;
         if (currentUser != null) {
           str = currentUser.username;
@@ -47,65 +50,59 @@ export const useInviteActions = function useInviteActions(invite) {
         if (str == null) {
           str = "";
         }
-        obj = { username: null, link: null };
-        obj[0] = str;
-        obj[1] = closure_1_1(tmp2[8])(closure_0.code);
-        formatToPlainStringResult = intl.formatToPlainString(tmp(tmp2[4]).t["+zWvOQ"], obj);
+        const obj3 = { username: str, link: onInviteRevoked(tmp2[8])(closure_1_0.code) };
+        formatToPlainStringResult = intl.formatToPlainString(tmp(tmp2[4]).t["+zWvOQ"], obj3);
       }
-      obj[1] = formatToPlainStringResult;
+      obj2.message = formatToPlainStringResult;
       let str2 = "Guild Instant Invite";
-      if (closure_3) {
-        str2 = closure_1_6.GROUP_DM;
+      if (closure_1_3) {
+        str2 = constants.GROUP_DM;
       }
-      return obj.showShareActionSheet(obj, str2);
+      return invite(closure_2[7]).showShareActionSheet(obj2, str2);
     });
   };
   const items = [obj, , ];
-  obj = { label: null, iconSource: null, action: null };
+  let obj2 = { label: null, iconSource: null, action: null };
   const intl2 = invite(1114).intl;
-  obj[0] = intl2.string(invite(1114).t.OpuAlK);
-  obj[1] = onInviteRevoked(10942).copy;
-  obj[2] = function action() {
+  obj2.label = intl2.string(invite(1114).t.OpuAlK);
+  obj2.iconSource = onInviteRevoked(10969).copy;
+  obj2.action = function action() {
     if (c3) {
-      let tmpResult = tmp(9825);
-      tmpResult.handleCopy(invite.code, invite.channel, closure_1_6.GROUP_DM, false);
+      const tmpResult = tmp(9852);
+      tmpResult.handleCopy(invite.code, invite.channel, InstantInviteSources.GROUP_DM, false);
     } else {
-      tmpResult = tmp(7190);
-      tmpResult.copy(onInviteRevoked(7759)(invite.code));
-      const result = invite(4258).presentCopiedToClipboard();
-      const obj2 = invite(4258);
+      tmp(7203).copy(getInviteURLDefault(invite.code));
+      const tmpResult2 = tmp(7203);
+      const result = ToastUtils.presentCopiedToClipboard();
     }
   };
-  items[1] = obj;
-  obj1 = { label: null, iconSource: null, variant: "destructive", action: null };
+  items[1] = obj2;
+  let obj3 = { label: null, iconSource: null, variant: "destructive", action: null };
   const intl3 = invite(1114).intl;
-  obj1[0] = intl3.string(invite(1114).t.v6Yazx);
-  obj1[1] = onInviteRevoked(10942).revoke;
-  dependencyMap = callback(function*() {
-    closure_0 = tmp3;
-    c3 = 1;
-    yield v0(closure_1_2[12]).revokeInvite(closure_1_0);
+  obj3.label = intl3.string(invite(1114).t.v6Yazx);
+  obj3.iconSource = onInviteRevoked(10969).revoke;
+  dependencyMap = asyncGeneratorStep(async () => {
+    await v2(tmp24[12]).revokeInvite(invite);
     if (1 === tmp7) {
       c3 = 0;
-      obj1 = v0(closure_1_2[13]);
-      const obj2 = { key: "ERROR_ANOTHER_TRY", content: null };
-      const intl = closure_1_0(closure_1_2[4]).intl;
-      obj2[1] = intl.string(closure_1_0(closure_1_2[4]).t.CKsXk3);
-      obj1.open(obj2);
+      const obj7 = { key: "ERROR_ANOTHER_TRY", content: null };
+      const intl = tmp3(tmp24[4]).intl;
+      obj7.content = intl.string(tmp3(tmp24[4]).t.CKsXk3);
+      v2(tmp24[13]).open(obj7);
       c4 = 3;
+      v2(tmp24[13]);
     } else if (arg0 === 1) {
       c4 = 3;
       throw arg1;
     } else if (arg0 !== 2) {
-      if (v0 != null) {
-        tmp9(closure_0);
+      if (closure_128_1 != null) {
+        tmp9(closure_128_0);
       }
       c3 = 0;
     }
-    c3 = 0;
     return arg1;
   });
-  obj1[3] = function() {
+  obj3.action = function() {
     const self = this;
     const apply = closure_2.apply;
     if (typeof apply === "unknown") {
@@ -115,6 +112,6 @@ export const useInviteActions = function useInviteActions(invite) {
     }
     return applyArgumentsResult;
   };
-  items[2] = obj1;
+  items[2] = obj3;
   return items;
 };

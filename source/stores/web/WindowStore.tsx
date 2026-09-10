@@ -1,19 +1,18 @@
-// Module ID: 13836
-// Function ID: 13837
-// Name: map
-// Dependencies: [38, 504, 5555, 573, 1242, 1896, 2]
+// Module ID: 13859
+// Function ID: 13860
+// Name: WindowStore
+// Dependencies: [38, 504, 5569, 573, 1242, 1896, 2]
 
-// Module 13836 (map)
+// Module 13859 (WindowStore)
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import getWindowId from "getWindowId" /* 5555 */;
-import set from "set" /* 2 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import WindowIdUtils from "WindowIdUtils" /* 5569 */;
 
-require = arg1;
+require = fn;
 let c3 = null;
 const map = new Map();
-let set = new Set();
+const set = new Set();
 const Store = initializeDefault.Store;
 class WindowStore extends Store {
 }
@@ -21,15 +20,13 @@ const prototype = WindowStore.prototype;
 prototype["isFocused"] = function isFocused() {
   let mainWindowId = arg0;
   if (arg0 === undefined) {
-    let obj = getWindowId;
-    mainWindowId = obj.getMainWindowId();
+    mainWindowId = WindowIdUtils.getMainWindowId();
   }
-  let value = map.get(mainWindowId);
+  value = map.get(mainWindowId);
   if (null == value) {
     const hasItem = set.has(mainWindowId);
-    obj = { isElementFullscreen: false, focused: false, windowSize: null, visible: false };
-    obj[2] = { width: 0, height: 0 };
-    value = obj;
+    const obj2 = { isElementFullscreen: false, focused: false, windowSize: { width: 0, height: 0 }, visible: false };
+    value = obj2;
   }
   return value.focused;
 };
@@ -39,26 +36,24 @@ prototype["isAppFocused"] = function isAppFocused() {
 prototype["isVisible"] = function isVisible() {
   let mainWindowId = arg0;
   if (arg0 === undefined) {
-    let obj = getWindowId;
-    mainWindowId = obj.getMainWindowId();
+    mainWindowId = WindowIdUtils.getMainWindowId();
   }
-  let value = map.get(mainWindowId);
+  value = map.get(mainWindowId);
   if (null == value) {
     const hasItem = set.has(mainWindowId);
-    obj = { isElementFullscreen: false, focused: false, windowSize: null, visible: false };
-    obj[2] = { width: 0, height: 0 };
-    value = obj;
+    const obj2 = { isElementFullscreen: false, focused: false, windowSize: { width: 0, height: 0 }, visible: false };
+    value = obj2;
   }
   return value.visible;
 };
 prototype["getFocusedWindowId"] = function getFocusedWindowId() {
-  c0 = null;
-  const item = map.forEach((focused) => {
+  closure_0 = null;
+  const item = map.forEach((focused, index) => {
     if (focused.focused) {
-      closure_0 = arg1;
+      closure_0 = index;
     }
   });
-  return c0;
+  return closure_0;
 };
 prototype["getLastFocusedWindowId"] = function getLastFocusedWindowId() {
   return c3;
@@ -66,108 +61,96 @@ prototype["getLastFocusedWindowId"] = function getLastFocusedWindowId() {
 prototype["isElementFullScreen"] = function isElementFullScreen() {
   let mainWindowId = arg0;
   if (arg0 === undefined) {
-    let obj = getWindowId;
-    mainWindowId = obj.getMainWindowId();
+    mainWindowId = WindowIdUtils.getMainWindowId();
   }
-  let value = map.get(mainWindowId);
+  value = map.get(mainWindowId);
   if (null == value) {
     const hasItem = set.has(mainWindowId);
-    obj = { isElementFullscreen: false, focused: false, windowSize: null, visible: false };
-    obj[2] = { width: 0, height: 0 };
-    value = obj;
+    const obj2 = { isElementFullscreen: false, focused: false, windowSize: { width: 0, height: 0 }, visible: false };
+    value = obj2;
   }
   return value.isElementFullscreen;
 };
 prototype["windowSize"] = function windowSize() {
   let mainWindowId = arg0;
   if (arg0 === undefined) {
-    let obj = getWindowId;
-    mainWindowId = obj.getMainWindowId();
+    mainWindowId = WindowIdUtils.getMainWindowId();
   }
-  let value = map.get(mainWindowId);
+  value = map.get(mainWindowId);
   if (null == value) {
     const hasItem = set.has(mainWindowId);
-    obj = { isElementFullscreen: false, focused: false, windowSize: null, visible: false };
-    obj[2] = { width: 0, height: 0 };
-    value = obj;
+    const obj2 = { isElementFullscreen: false, focused: false, windowSize: { width: 0, height: 0 }, visible: false };
+    value = obj2;
   }
   return value.windowSize;
 };
 WindowStore.displayName = "WindowStore";
-const windowStore = new WindowStore(dispatcherDefault, {
-  WINDOW_INIT: function handleWindowInit(isElementFullscreen) {
-    _modDef38(!map.has(isElementFullscreen.windowId), "Window initialized multiple times");
-    const focused = isElementFullscreen.focused;
-    obj = { windowSize: obj, isElementFullscreen: isElementFullscreen.isElementFullscreen, focused, visible: isElementFullscreen.visible };
-    obj = { width: isElementFullscreen.width, height: isElementFullscreen.height };
-    const result = map.set(isElementFullscreen.windowId, obj);
+const windowStore = new WindowStore(DispatcherDefault, {
+  WINDOW_INIT: function handleWindowInit(width) {
+    _modDef38(!map.has(width.windowId), "Window initialized multiple times");
+    const focused = width.focused;
+    const result = map.set(width.windowId, { windowSize: { width: width.width, height: width.height }, isElementFullscreen: width.isElementFullscreen, focused, visible: width.visible });
     if (focused) {
-      const windowId = isElementFullscreen.windowId;
+      const windowId = width.windowId;
     }
     return true;
   },
   WINDOW_FULLSCREEN_CHANGE: function handleWindowFullscreenChange(windowId) {
     windowId = windowId.windowId;
-    let obj = map;
-    let value = map.get(windowId);
+    value = map.get(windowId);
     if (null == value) {
       const hasItem = set.has(windowId);
-      obj = { isElementFullscreen: false, focused: false, windowSize: null, visible: false };
-      obj[2] = { width: 0, height: 0 };
-      value = obj;
+      const obj2 = { isElementFullscreen: false, focused: false, windowSize: { width: 0, height: 0 }, visible: false };
+      value = obj2;
     }
     let flag = value.isElementFullscreen !== windowId.isElementFullscreen;
     if (flag) {
-      obj = {};
+      const obj3 = {};
       const merged = Object.assign(value);
-      obj.isElementFullscreen = windowId.isElementFullscreen;
-      const result = obj.set(windowId.windowId, obj);
+      obj3.isElementFullscreen = windowId.isElementFullscreen;
+      const result = map.set(windowId.windowId, obj3);
       flag = true;
     }
     return flag;
   },
   WINDOW_FOCUS: function handleWindowFocus(windowId) {
     windowId = windowId.windowId;
-    let obj = map;
-    let value = map.get(windowId);
+    value = map.get(windowId);
     if (null == value) {
       const hasItem = set.has(windowId);
-      obj = { isElementFullscreen: false, focused: false, windowSize: null, visible: false };
-      obj[2] = { width: 0, height: 0 };
-      value = obj;
+      const obj2 = { isElementFullscreen: false, focused: false, windowSize: { width: 0, height: 0 }, visible: false };
+      value = obj2;
     }
     let flag = value.focused !== windowId.focused;
     if (flag) {
       if (windowId.focused) {
-        windowId = windowId.windowId;
+        const windowId2 = windowId.windowId;
       }
-      obj = {};
+      const obj3 = {};
       const merged = Object.assign(value);
-      obj.focused = windowId.focused;
-      const result = obj.set(windowId.windowId, obj);
+      obj3.focused = windowId.focused;
+      const result = map.set(windowId.windowId, obj3);
       flag = true;
     }
     return flag;
   },
   WINDOW_RESIZED: function handleWindowResize(windowId) {
     windowId = windowId.windowId;
-    let obj = map;
-    let value = map.get(windowId);
+    value = map.get(windowId);
     if (null == value) {
       const hasItem = set.has(windowId);
-      obj = { isElementFullscreen: false, focused: false, windowSize: null, visible: false };
-      obj[2] = { width: 0, height: 0 };
-      value = obj;
+      const obj2 = { isElementFullscreen: false, focused: false, windowSize: { width: 0, height: 0 }, visible: false };
+      value = obj2;
     }
     let flag = value.windowSize.width !== windowId.width || value.windowSize.height !== windowId.height;
     if (flag) {
-      obj = {};
+      const obj3 = {};
       const merged = Object.assign(value);
-      ({ width: obj4[0], height: obj4[1] } = windowId);
-      obj.windowSize = { width: null, height: null };
-      const result = obj.set(windowId.windowId, obj);
+      const size = { width: null, height: null };
+      ({ width: obj4.width, height: obj4.height } = windowId);
+      obj3.windowSize = size;
+      const result = map.set(windowId.windowId, obj3);
       flag = true;
-      obj1 = { width: null, height: null };
     }
     return flag;
   },
@@ -181,30 +164,29 @@ const windowStore = new WindowStore(dispatcherDefault, {
   },
   WINDOW_VISIBILITY_CHANGE: function handleWindowVisibilityChange(windowId) {
     windowId = windowId.windowId;
-    let obj = map;
-    let value = map.get(windowId);
+    value = map.get(windowId);
     if (null == value) {
       const hasItem = set.has(windowId);
-      obj = { isElementFullscreen: false, focused: false, windowSize: null, visible: false };
-      obj[2] = { width: 0, height: 0 };
-      value = obj;
+      const obj2 = { isElementFullscreen: false, focused: false, windowSize: { width: 0, height: 0 }, visible: false };
+      value = obj2;
     }
     let flag = value.visible !== windowId.visible;
     if (flag) {
-      obj = {};
+      const obj3 = {};
       const merged = Object.assign(value);
-      obj.visible = windowId.visible;
-      const result = obj.set(windowId.windowId, obj);
+      obj3.visible = windowId.visible;
+      const result = map.set(windowId.windowId, obj3);
       flag = true;
     }
     return flag;
   }
 });
-require("expandEventProperties").then((addExtraAnalyticsDecorator) => {
+fn(1896)(1242, dependencyMap.paths).then((addExtraAnalyticsDecorator) => {
   const result = addExtraAnalyticsDecorator.addExtraAnalyticsDecorator(() => {
 
   });
 });
-let result = set.fileFinishedImporting("stores/web/WindowStore.tsx");
+let size = fn(2);
+let result = size.fileFinishedImporting("stores/web/WindowStore.tsx");
 
 export default windowStore;

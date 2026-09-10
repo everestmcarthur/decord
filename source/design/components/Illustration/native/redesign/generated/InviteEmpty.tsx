@@ -1,66 +1,64 @@
-// Module ID: 17650
-// Function ID: 17651
-// Name: getInviteEmptySource
-// Dependencies: [19, 17, 21, 8233, 10955, 17651, 10954, 4411, 2]
+// Module ID: 17683
+// Function ID: 17684
+// Name: InviteEmpty
+// Dependencies: [19, 17, 21, 8259, 10982, 17684, 10981, 4425, 2]
 // Exports: InviteEmpty, getInviteEmptySource, useInviteEmptySource
 
-// Module 17650 (getInviteEmptySource)
-import noopAll from "noop" /* 19 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
-import getIllustrationSource from "getIllustrationSource" /* 8233 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 17683 (InviteEmpty)
+import shared from "shared" /* 4425 */;
+import _mod8259 from "module_8259" /* 8259 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/InviteEmpty.tsx");
+const require = globalThis.__r;
+
+require = fn;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/InviteEmpty.tsx");
 
 export const getInviteEmptySource = function getInviteEmptySource(theme) {
-  let obj = getIllustrationSource;
-  obj = {
+  return _mod8259.getIllustrationSource(theme, {
     dark() {
-      return callback(10955);
+      return require("module_10982");
     },
     darker() {
-      return callback(17651);
+      return require("module_17684");
     },
     light() {
-      return callback(10954);
+      return require("module_10981");
     }
-  };
-  return obj.getIllustrationSource(theme, obj);
+  });
 };
 export const useInviteEmptySource = function useInviteEmptySource() {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = shared;
+  return _mod8259.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return callback(10955);
+      return require("module_10982");
     },
     darker() {
-      return callback(17651);
+      return require("module_17684");
     },
     light() {
-      return callback(10954);
+      return require("module_10981");
     }
-  };
-  return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  });
 };
 export const InviteEmpty = function InviteEmpty(arg0) {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = shared;
+  const obj4 = {};
+  const illustrationSource = _mod8259.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return callback(10955);
+      return require("module_10982");
     },
     darker() {
-      return callback(17651);
+      return require("module_17684");
     },
     light() {
-      return callback(10954);
+      return require("module_10981");
     }
-  };
-  obj = {};
-  const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  });
   const merged = Object.assign(arg0);
-  obj.source = illustrationSource;
+  obj4.source = illustrationSource;
   return <Image />;
 };

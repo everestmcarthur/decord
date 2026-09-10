@@ -1,27 +1,21 @@
-// Module ID: 7899
-// Function ID: 7900
-// Name: markAnalyticsFeedItemSeen
+// Module ID: 7913
+// Function ID: 7914
+// Name: AnalyticsFeedItemSeenActionCreators
 // Dependencies: [573, 2]
 // Exports: flushAnalyticsFeedItems, markAnalyticsFeedItemSeen, markAnalyticsFeedItemUnseen
 
-// Module 7899 (markAnalyticsFeedItemSeen)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 7913 (AnalyticsFeedItemSeenActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("utils/AnalyticsFeedItemSeenActionCreators.tsx");
+const result = size.fileFinishedImporting("utils/AnalyticsFeedItemSeenActionCreators.tsx");
 
 export const markAnalyticsFeedItemSeen = function markAnalyticsFeedItemSeen(forumPostSeenManagerId, feedItemId, timestampMillis) {
-  let obj = dispatcherDefault;
-  obj = { type: "ANALYTICS_FEED_ITEM_SEEN", id: forumPostSeenManagerId, feedItemId, timestampMillis };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "ANALYTICS_FEED_ITEM_SEEN", id: forumPostSeenManagerId, feedItemId, timestampMillis });
 };
 export const markAnalyticsFeedItemUnseen = function markAnalyticsFeedItemUnseen(forumPostSeenManagerId, feedItemId, timestampMillis) {
-  let obj = dispatcherDefault;
-  obj = { type: "ANALYTICS_FEED_ITEM_UNSEEN", id: forumPostSeenManagerId, feedItemId, timestampMillis };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "ANALYTICS_FEED_ITEM_UNSEEN", id: forumPostSeenManagerId, feedItemId, timestampMillis });
 };
 export const flushAnalyticsFeedItems = function flushAnalyticsFeedItems(forumPostSeenManagerId, IMMEDIATE_WITH_COOLDOWN) {
-  let obj = dispatcherDefault;
-  obj = { type: "ANALYTICS_FEED_FLUSH", id: forumPostSeenManagerId, force: IMMEDIATE_WITH_COOLDOWN };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "ANALYTICS_FEED_FLUSH", id: forumPostSeenManagerId, force: IMMEDIATE_WITH_COOLDOWN });
 };

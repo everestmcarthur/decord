@@ -1,28 +1,28 @@
-// Module ID: 15779
-// Function ID: 15780
-// Name: route
-// Dependencies: [7975, 1074, 11473, 15780, 2]
+// Module ID: 15809
+// Function ID: 15810
+// Name: DesignSystemsContextMenuSetting
+// Dependencies: [7989, 1074, 11500, 15810, 2]
 
-// Module 15779 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15809 (DesignSystemsContextMenuSetting)
+import Constants from "Constants" /* 1074 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const require = globalThis.__r;
+
+const route = SettingBuilders.createRoute({
   useTitle() {
     return "Context Menu";
   },
-  parent: MobileUserSettings.MobileUserSettings.DESIGN_SYSTEMS,
-  screen: obj
-};
-obj = {
-  route: ME.UserSettingsSections.DESIGN_SYSTEM_CONTEXT_MENU,
-  getComponent() {
-    return require(15780) /* DemoContextMenu */.default;
+  parent: SettingsConstants.MobileUserSettings.DESIGN_SYSTEMS,
+  screen: {
+    route: Constants.UserSettingsSections.DESIGN_SYSTEM_CONTEXT_MENU,
+    getComponent() {
+      return require("UserSettingsDesignSystemContextMenu").default;
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemsContextMenuSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemsContextMenuSetting.tsx");
 
 export default route;

@@ -1,21 +1,19 @@
-// Module ID: 10992
-// Function ID: 10993
-// Name: dispatcher
+// Module ID: 11019
+// Function ID: 11020
+// Name: DimensionActionCreators
 // Dependencies: [573, 2]
 
-// Module 10992 (dispatcher)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 11019 (DimensionActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("actions/DimensionActionCreators.tsx");
+let result = size.fileFinishedImporting("actions/DimensionActionCreators.tsx");
 
 export default {
-  updateChannelDimensions(id, eventTimestamp, scrollTop, scrollHeight, offsetHeight, arg5) {
-    let obj = dispatcherDefault;
-    obj = { type: "UPDATE_CHANNEL_DIMENSIONS", channelId: id, timestamp: eventTimestamp, scrollTop, scrollHeight, offsetHeight };
-    obj.dispatch(obj);
-    if (arg5 != null) {
-      arg5();
+  updateChannelDimensions(id, eventTimestamp, scrollTop, scrollHeight, offsetHeight, fn) {
+    DispatcherDefault.dispatch({ type: "UPDATE_CHANNEL_DIMENSIONS", channelId: id, timestamp: eventTimestamp, scrollTop, scrollHeight, offsetHeight });
+    if (fn != null) {
+      fn();
     }
   },
   updateChannelListScroll(guildId, scrollTop) {
@@ -23,26 +21,18 @@ export default {
     if (arg2 === undefined) {
       items = [];
     }
-    let obj = dispatcherDefault;
-    obj = { type: "UPDATE_CHANNEL_LIST_DIMENSIONS", guildId, scrollTop, channelIds: items };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "UPDATE_CHANNEL_LIST_DIMENSIONS", guildId, scrollTop, channelIds: items });
   },
-  channelListScrollTo(closure_12, dMFromUserId) {
-    let obj = dispatcherDefault;
-    obj = { type: "UPDATE_CHANNEL_LIST_DIMENSIONS", guildId: closure_12, scrollTo: dMFromUserId, channelIds: [] };
-    obj.dispatch(obj);
+  channelListScrollTo(guildId, dMFromUserId) {
+    DispatcherDefault.dispatch({ type: "UPDATE_CHANNEL_LIST_DIMENSIONS", guildId, scrollTo: dMFromUserId, channelIds: [] });
   },
   clearChannelListScrollTo(guildId) {
-    let obj = dispatcherDefault;
-    obj = { type: "UPDATE_CHANNEL_LIST_DIMENSIONS", guildId, scrollTo: null, channelIds: [] };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "UPDATE_CHANNEL_LIST_DIMENSIONS", guildId, scrollTo: null, channelIds: [] });
   },
-  clearChannelDimensions(channelId) {
-    const result = this.updateChannelDimensions(channelId, Date.now(), null, null, null, arg1);
+  clearChannelDimensions(channelId, fn) {
+    const result = this.updateChannelDimensions(channelId, Date.now(), null, null, null, fn);
   },
   updateGuildListScrollTo(scrollTop) {
-    let obj = dispatcherDefault;
-    obj = { type: "UPDATE_GUILD_LIST_DIMENSIONS", scrollTop };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "UPDATE_GUILD_LIST_DIMENSIONS", scrollTop });
   }
 };

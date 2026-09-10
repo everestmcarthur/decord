@@ -2,8 +2,10 @@
 // Function ID: 1531
 // Name: Screen
 // Dependencies: []
+// Exports: Screen
 
 // Module 1530 (Screen)
-arg5.Screen = function Screen(arg0) {
+
+export function Screen(arg0) {
   return null;
-};
+}

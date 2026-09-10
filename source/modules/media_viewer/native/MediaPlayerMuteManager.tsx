@@ -1,24 +1,27 @@
-// Module ID: 8271
-// Function ID: 8272
-// Name: nativeEventEmitter
+// Module ID: 8291
+// Function ID: 8292
+// Name: MediaPlayerMuteManager
 // Dependencies: [17, 560, 1249, 2]
 
-// Module 8271 (nativeEventEmitter)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import keys from "keys" /* 560 */;
+// Module 8291 (MediaPlayerMuteManager)
+import get_ActivityIndicator from "module_17" /* 17 */;
+import module_560 from "module_560" /* 560 */;
+import size from "module_2" /* 2 */;
 
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);
-const obj = keys.create(() => ({ isMuted: false }));
+const useMediaPlayerMutedStore = module_560.create(() => ({ isMuted: false }));
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.MediaPlayerManager);
 class MediaPlayerMuteManager {
+  constructor() {
+    return Object.assign({ muteSubscription: "disabled" });
+  }
 }
 const prototype = MediaPlayerMuteManager.prototype;
 prototype["initialize"] = function initialize() {
   this.muteSubscription = nativeEventEmitter.addListener("MediaPlayerMuteStateChanged", (isMuted) => {
     isMuted = isMuted.isMuted;
-    isMuted(table[2]).batchUpdates(() => {
-      closure_1_2.setState({ isMuted });
+    isMuted(closure_1[2]).batchUpdates(() => {
+      state.setState({ isMuted });
     });
   });
 };
@@ -28,7 +31,7 @@ prototype["terminate"] = function terminate() {
     muteSubscription.remove();
   }
 };
-const result = set.fileFinishedImporting("modules/media_viewer/native/MediaPlayerMuteManager.tsx");
+const result = size.fileFinishedImporting("modules/media_viewer/native/MediaPlayerMuteManager.tsx");
 
-export default Object.create(MediaPlayerMuteManager.prototype);
-export const useMediaPlayerMutedStore = obj;
+export default Object.assign({ muteSubscription: "disabled" });
+export { useMediaPlayerMutedStore };

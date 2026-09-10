@@ -1,98 +1,88 @@
-// Module ID: 14918
-// Function ID: 14919
-// Name: FamilyCenterAcceptedLinkRow
-// Dependencies: [19, 17, 7538, 21, 4560, 576, 8651, 8650, 11924, 1114, 2396, 4556, 14919, 14921, 5123, 4763, 14924, 1896, 1178, 14926, 2]
+// Module ID: 14944
+// Function ID: 14945
+// Name: FamilyCenterAcceptedLinks
+// Dependencies: [19, 17, 7552, 21, 4574, 576, 8679, 8678, 11950, 1114, 2396, 4570, 14945, 14947, 5137, 4777, 14950, 1896, 1178, 14952, 2]
 // Exports: default
 
-// Module 14918 (FamilyCenterAcceptedLinkRow)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import messagesProxyDefault from "messagesProxy" /* 2396 */;
-import Text from "Text" /* 4556 */;
-import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 8650 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8651 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11924 */;
-import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow" /* 14921 */;
-import registerAssetDefault from "registerAsset" /* 14926 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import items from "items" /* 7538 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14944 (FamilyCenterAcceptedLinks)
+import nativeDefault from "native" /* 576 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import _modDef2396 from "module_2396" /* 2396 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import useUserLinks from "useUserLinks" /* 8678 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8679 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 11950 */;
+import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow" /* 14947 */;
+import _modDef14952 from "module_14952" /* 14952 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function FamilyCenterAcceptedLinkRow(otherUser) {
-  let str = otherUser.otherUser;
+  const str = otherUser.otherUser;
   let tmp4Result = null;
   if (undefined !== str) {
-    let obj = { otherUser: null, actions: null };
-    obj[0] = str;
+    const obj2 = { otherUser: str, actions: null };
     const intl = str(1114).intl;
-    str = undefined;
+    let str1;
     if (str != null) {
-      str = str.toString();
+      str1 = str.toString();
     }
-    obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
-    obj = { name: null };
-    obj[0] = str;
-    obj[1] = intl.formatToPlainString(messagesProxyDefault.T7DUoU, obj);
-    obj[2] = function onPress() {
-      let obj = closure_1_1(closure_1_2[15]);
-      obj = { otherUser: str };
-      obj.pushLazy(str(closure_1_2[17])(closure_1_2[16], closure_1_2.paths), obj);
+    const obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
+    const obj3 = { name: str1 };
+    obj.accessibilityLabel = intl.formatToPlainString(_modDef2396.T7DUoU, obj3);
+    obj.onPress = function onPress() {
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14950, dependencyMap.paths), { otherUser: str });
     };
-    obj[3] = tmp.actionButton;
-    obj1 = { size: null, disableColor: true, source: null };
-    obj1[0] = str(1178).Icon.Sizes.SMALL;
-    obj1[2] = registerAssetDefault;
-    obj[4] = closure_6(str(1178).Icon, obj1);
-    obj[1] = closure_6(str(5123).PressableOpacity, obj);
-    tmp4Result = tmp4(FamilyCenterLinkRowDefault, obj);
-    const tmp5 = importDefault;
-    const tmp7 = FamilyCenterLinkRowDefault;
+    obj.style = tmp.actionButton;
+    const obj4 = { size: str(1178).Icon.Sizes.SMALL, disableColor: true, source: _modDef14952 };
+    obj.children = closure_6(str(1178).Icon, obj4);
+    obj2.actions = closure_6(str(5137).PressableOpacity, obj);
+    tmp4Result = tmp4(FamilyCenterLinkRowDefault, obj2);
   }
   return tmp4Result;
 }
-noopAll;
-({ MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: c4, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: c5 } = items);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: { marginTop: 24 }, content: null, empty: null, header: null };
-createCacheKey = { display: "flex", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.md };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { padding: 20, alignSelf: "center" };
-createCacheKey[3] = { marginBottom: 10 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { actionButton: { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", height: 32, width: 32 } };
-let closure_9 = createCacheKey.createStyles(obj1);
-let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", height: 32, width: 32 };
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterAcceptedLinks.tsx");
+const View = fn(17).View;
+const FamilyCenterConstants = fn(7552);
+({ MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: closure_4, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: hasOwnProperty } = FamilyCenterConstants);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+let createStyles = fn(4574);
+let obj2 = { container: { marginTop: 24 }, content: { display: "flex", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.md }, empty: { padding: 20, alignSelf: "center" }, header: { marginBottom: 10 } };
+let closure_8 = createStyles.createStyles(obj2);
+createStyles = fn(4574);
+let obj5 = { actionButton: null };
+let size = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center", height: 32, width: 32 };
+obj5.actionButton = size;
+let closure_9 = createStyles.createStyles(obj5);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterAcceptedLinks.tsx");
 
 export default function FamilyCenterAcceptedLinks() {
-  const tmp = callback2();
-  let obj = useUserIdsForLinkStatus;
-  const activeLinkUsers = obj.useActiveLinkUsers();
-  obj = { count: activeLinkUsers.length, max: useIsInAdultAgeGroupDefault() ? closure_4 : closure_5 };
+  const tmp = closure_8();
   const tmp4 = useIsInAdultAgeGroupDefault();
+  const activeLinkUsers = useUserLinks.useActiveLinkUsers();
+  const obj2 = { count: activeLinkUsers.length, max: tmp4 ? React4 : hasOwnProperty };
   const intl = tmp5(1114).intl;
   const tmp5Result = useAgeSpecificText;
   const intl2 = tmp5(1114).intl;
-  obj = { style: tmp.container, children: null };
-  const ageSpecificText = tmp5Result.useAgeSpecificText(intl.formatToPlainString(messagesProxyDefault["+tnO34"], obj), intl2.formatToPlainString(tmp2(2396)["pu6/U0"], obj));
-  const items = [callback(Text.Text, { style: tmp.header, variant: "eyebrow", color: "text-default", children: ageSpecificText }), ];
-  const obj2 = { style: tmp.content, children: null };
+  const obj3 = { style: tmp.container, children: null };
+  const ageSpecificText = tmp5Result.useAgeSpecificText(intl.formatToPlainString(_modDef2396["+tnO34"], obj2), intl2.formatToPlainString(tmp2(2396)["pu6/U0"], obj2));
+  const items = [timestampProducer(Text_Text.Text, { style: tmp.header, variant: "eyebrow", color: "text-default", children: ageSpecificText }), ];
+  const obj5 = { style: tmp.content, children: null };
   if (0 === activeLinkUsers.length) {
-    const obj3 = { style: null, children: null };
-    obj3[0] = tmp.empty;
-    const obj4 = { text: null };
+    const obj6 = { style: tmp.empty, children: null };
+    const obj7 = { text: null };
     const intl3 = tmp5(1114).intl;
-    obj4[0] = intl3.string(tmp2(2396).C4ScLD);
-    obj3[1] = tmp10(tmp2(14919), obj4);
-    let mapped = tmp10(tmp9, obj3);
-    const tmp2Result = tmp2(14919);
+    obj7.text = intl3.string(tmp2(2396).C4ScLD);
+    obj6.children = tmp10(tmp2(14945), obj7);
+    let mapped = tmp10(tmp9, obj6);
+    const tmp2Result = tmp2(14945);
   } else {
-    mapped = activeLinkUsers.map((id) => callback(closure_10, { otherUser: id }, "accepted-" + id.id));
+    mapped = activeLinkUsers.map((otherUser) => closure_1_6(FamilyCenterAcceptedLinkRow, { otherUser }, "accepted-" + otherUser.id));
   }
-  obj2[1] = mapped;
-  items[1] = callback(View, obj2);
-  obj[1] = items;
-  return closure_7(View, obj);
+  obj5.children = mapped;
+  items[1] = timestampProducer(View, obj5);
+  obj3.children = items;
+  return React5(View, obj3);
 };

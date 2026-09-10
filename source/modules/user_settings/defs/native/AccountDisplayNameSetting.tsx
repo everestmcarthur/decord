@@ -1,23 +1,23 @@
-// Module ID: 14715
-// Function ID: 14716
-// Name: route
-// Dependencies: [1371, 7975, 1074, 504, 11473, 1114, 14589, 2]
+// Module ID: 14741
+// Function ID: 14742
+// Name: AccountDisplayNameSetting
+// Dependencies: [1371, 7989, 1074, 504, 11500, 1114, 14614, 2]
 
-// Module 14715 (route)
+// Module 14741 (AccountDisplayNameSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
-import createToggle from "createToggle" /* 11473 */;
+import util from "util" /* 1114 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const SettingBuilders = fn(11500);
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["9AjdkD"]);
+    const intl = util.intl;
+    return intl.string(util.t["9AjdkD"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
+  parent: fn(7989).MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountDisplayNameSettingTrailing() {
-    const items = [closure_2];
+    const items = [UserStore];
     return initialize.useStateFromStores(items, () => {
       currentUser = currentUser.getCurrentUser();
       let globalName;
@@ -27,15 +27,14 @@ createToggle = {
       return globalName;
     });
   },
-  screen: createToggle
-};
-createToggle = {
-  route: require("ME").UserSettingsSections.PROFILE_CUSTOMIZATION,
-  getComponent() {
-    return require(14589) /* ProfileCustomizationSubsection */.default;
+  screen: {
+    route: fn(1074).UserSettingsSections.PROFILE_CUSTOMIZATION,
+    getComponent() {
+      return require("ProfileCustomizationSettingScreen").default;
+    }
   }
-};
-createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountDisplayNameSetting.tsx");
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountDisplayNameSetting.tsx");
 
-export default createToggle;
+export default route;

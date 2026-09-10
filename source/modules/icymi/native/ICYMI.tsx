@@ -1,174 +1,185 @@
-// Module ID: 16453
-// Function ID: 16454
-// Name: SettingsButton
-// Dependencies: [32, 19, 17, 4552, 502, 1979, 8347, 8335, 16454, 1954, 21, 4560, 576, 16455, 8097, 15002, 8351, 4527, 16457, 1896, 4515, 16468, 4556, 1114, 6945, 7123, 5125, 4378, 5123, 16404, 16406, 5680, 8350, 1477, 1611, 1484, 7475, 504, 16394, 16488, 16491, 7389, 1943, 16478, 1483, 8348, 7859, 7860, 15094, 1094, 16492, 16498, 16503, 16516, 16517, 16518, 16519, 16520, 16521, 16522, 16523, 7872, 16524, 8879, 1115, 11901, 4413, 16525, 16456, 4271, 2]
+// Module ID: 16484
+// Function ID: 16485
+// Name: ICYMI
+// Dependencies: [32, 19, 17, 4566, 502, 1979, 8375, 8363, 16485, 1954, 21, 4574, 576, 16486, 8113, 15028, 8379, 4541, 16488, 1896, 4529, 16499, 4570, 1114, 6959, 7137, 5139, 4392, 5137, 16435, 16437, 5694, 8378, 1477, 1611, 1484, 7489, 504, 16425, 16519, 16522, 7403, 1943, 16509, 1483, 8376, 7873, 7874, 15121, 1094, 16523, 16529, 16534, 16547, 16548, 16549, 16550, 16551, 16552, 16553, 16554, 7886, 16555, 8906, 1115, 11927, 4427, 16556, 16487, 4284, 2]
 // Exports: ICYMITab
 
-// Module 16453 (SettingsButton)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 16484 (ICYMI)
+import nativeDefault from "native" /* 576 */;
+import ChannelTypes from "ChannelTypes" /* 1094 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import getGradientColorByPercentage from "getGradientColorByPercentage" /* 4378 */;
-import getGuildThemeNameDefault from "getGuildThemeName" /* 4413 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4515 */;
-import PressableBase from "PressableBase" /* 5123 */;
-import getMixedGradientColorDefault from "getMixedGradientColor" /* 5125 */;
-import XSmallIcon from "XSmallIcon" /* 5680 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 6945 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
-import IconButton from "IconButton" /* 8097 */;
-import generateHydrationId from "generateHydrationId" /* 8350 */;
-import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 15002 */;
-import goBack from "goBack" /* 16404 */;
-import IconWithBadge from "IconWithBadge" /* 16406 */;
-import jsxDefault from "jsx" /* 16525 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import closure_8 from "fetchFingerprint" /* 502 */;
-import closure_9 from "createGuildRecordFromRust" /* 1979 */;
-import closure_10 from "initialize" /* 8347 */;
-import closure_11 from "filterStaffGuild" /* 8335 */;
-import { NUM_GUILDS_EXTENDED_ONBOARDING as closure_12 } from "NUM_GUILDS_EXTENDED_ONBOARDING" /* 16454 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import createICYMIStyles from "createICYMIStyles" /* 16455 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4392 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4427 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4529 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5139 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 6959 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7137 */;
+import IconButton from "IconButton" /* 8113 */;
+import ICYMITypes from "ICYMITypes" /* 8376 */;
+import ICYMIUtils from "ICYMIUtils" /* 8378 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8379 */;
+import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 15028 */;
+import NativeICYMIUtils from "NativeICYMIUtils" /* 16499 */;
+import AnnouncementMessageRowDefault from "AnnouncementMessageRow" /* 16523 */;
+import ICYMIMessageRowDefault from "ICYMIMessageRow" /* 16529 */;
+import ContentInventoryEntryRowDefault from "ContentInventoryEntryRow" /* 16534 */;
+import ICYMILoading from "ICYMILoading" /* 16547 */;
+import ICYMIBottomLoading from "ICYMIBottomLoading" /* 16548 */;
+import CaughtUpRowDefault from "CaughtUpRow" /* 16549 */;
+import ICYMIGuildEventRowDefault from "ICYMIGuildEventRow" /* 16550 */;
+import ICYMIServerRecommendationRow from "ICYMIServerRecommendationRow" /* 16551 */;
+import ICYMIHeaderDefault from "ICYMIHeader" /* 16552 */;
+import ICYMIForumThreadRow from "ICYMIForumThreadRow" /* 16553 */;
+import CardHeightMeasurer from "CardHeightMeasurer" /* 16554 */;
+import AppFreezerDefault from "AppFreezer" /* 16556 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import ICYMIFiltersStore from "ICYMIFiltersStore" /* 8375 */;
+import ICYMIStore from "ICYMIStore" /* 8363 */;
 
-require = arg1;
+const require = globalThis.__r;
+
+const util = LeftBackIconWithBadge(1114);
+const Pressables = LeftBackIconWithBadge(5137);
+const XSmallIcon = LeftBackIconWithBadge(5694);
+const notifications_Notifications = LeftBackIconWithBadge(16435);
+const BackIconWithBadge = LeftBackIconWithBadge(16437);
+require = fn;
 function SettingsButton() {
-  return callback(IconButton.IconButton, {
+  return closure_1_14(IconButton.IconButton, {
     accessibilityLabel: "button",
     variant: "tertiary",
     size: "sm",
-    icon: callback(FiltersHorizontalIcon.FiltersHorizontalIcon, { size: "sm" }),
+    icon: closure_1_14(FiltersHorizontalIcon.FiltersHorizontalIcon, { size: "sm" }),
     onPress() {
-      callback2(paths[16]).itemInteracted("filters_button", "filters_button", "press_info_button");
-      const obj = callback2(paths[16]);
-      callback2(paths[16]).feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "settings_button", actionIntentType: "open", actionDestinationType: null } });
-      const obj2 = callback2(paths[16]);
-      callback2(paths[17]).openLazy(callback(paths[19])(paths[18], paths.paths), "ICYMISettingsActionSheet", {});
+      require("ICYMIActionCreators").itemInteracted("filters_button", "filters_button", "press_info_button");
+      const obj = require("ICYMIActionCreators");
+      require("ICYMIActionCreators").feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "settings_button", actionIntentType: "open", actionDestinationType: null } });
+      const obj2 = require("ICYMIActionCreators");
+      require("ActionSheetActionCreators").openLazy(require("asyncRequireImpl")(paths[18], paths.paths), "ICYMISettingsActionSheet", {});
     }
   });
 }
 function InfoButton() {
-  return callback(IconButton.IconButton, {
+  return closure_1_14(IconButton.IconButton, {
     accessibilityLabel: "button",
     variant: "tertiary",
     size: "sm",
-    icon: callback(CircleInformationIcon.CircleInformationIcon, { size: "sm" }),
+    icon: closure_1_14(CircleInformationIcon.CircleInformationIcon, { size: "sm" }),
     onPress() {
-      callback2(8351).itemInteracted("info_button", "info_button", "press_info_button");
-      const obj = callback2(8351);
-      callback2(8351).feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "info_button", actionIntentType: "open", actionDestinationType: null } });
-      const obj2 = callback2(8351);
-      callback(16468).pushICYMIInfoModal({ extendedOnboarding: true });
+      ICYMIActionCreatorsDefault.itemInteracted("info_button", "info_button", "press_info_button");
+      ICYMIActionCreatorsDefault.feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "info_button", actionIntentType: "open", actionDestinationType: null } });
+      require("NativeICYMIUtils").pushICYMIInfoModal({ extendedOnboarding: true });
     }
   });
 }
 function ICYMIHeaderTextWrapper() {
-  const tmp = callback3();
-  return callback(closure_5, {
-    style: callback3().headerText,
-    children: importAllResult.useMemo(() => {
-      let obj = { children: null };
-      obj = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
-      const intl = callback(1114).intl;
-      obj[4] = intl.string(callback(1114).t.SY4sdZ);
-      const items = [callback2(callback(4556).Text, obj), ];
-      obj = { color: "text-brand", variant: "text-xs/bold", style: { marginTop: 4 }, children: null };
-      const intl2 = callback(1114).intl;
-      obj[3] = intl2.string(callback(1114).t.Ac2OZA);
-      items[1] = callback2(callback(4556).Text, obj);
-      obj[0] = items;
-      return callback3(closure_15, obj);
+  const tmp = closure_18();
+  return closure_1_14(hasOwnProperty, {
+    style: closure_18().headerText,
+    children: noop.useMemo(() => {
+      const obj = { children: null };
+      const obj2 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
+      const intl = require("util").intl;
+      obj2.children = intl.string(require("util").t.SY4sdZ);
+      const items = [closure_1_14(require("Text/Text").Text, obj2), ];
+      const obj3 = { color: "text-brand", variant: "text-xs/bold", style: { marginTop: 4 }, children: null };
+      const intl2 = require("util").intl;
+      obj3.children = intl2.string(require("util").t.Ac2OZA);
+      items[1] = closure_1_14(require("Text/Text").Text, obj3);
+      obj.children = items;
+      return closure_1_16(closure_1_15, obj);
     }, [])
   });
 }
 function handleEndReached() {
-  generateHydrationId.hydrateNextPage();
+  ICYMIUtils.hydrateNextPage();
 }
 function ICYMI(inNestedNavigator) {
   let isFocused;
   let stateFromStores;
   visibleItemIds = undefined;
-  let endVisible;
   handleOnRefresh = undefined;
-  let first;
-  closure_6 = undefined;
   let stateFromStores2;
-  let ref;
   let ref1;
   let stateFromStores3;
   closure_11 = undefined;
-  const tmp = callback3();
+  const tmp = closure_18();
   ({ height, width } = stateFromStores(visibleItemIds[33])());
-  let obj = isFocused(visibleItemIds[35]);
-  isFocused = obj.useIsFocused();
+  const tmp3 = stateFromStores(visibleItemIds[33])();
+  isFocused = isFocused(visibleItemIds[35]).useIsFocused();
   const layoutEffect = handleOnRefresh.useLayoutEffect(() => {
     isFocused(visibleItemIds[36]).trackAppUIViewed();
   });
-  obj1 = isFocused(visibleItemIds[37]);
+  let obj = isFocused(visibleItemIds[35]);
   const items = [stateFromStores2];
-  stateFromStores = obj1.useStateFromStores(items, () => stateFromStores2.useReducedMotion);
+  stateFromStores = isFocused(visibleItemIds[37]).useStateFromStores(items, () => stateFromStores2.useReducedMotion);
   let obj2 = isFocused(visibleItemIds[37]);
   const items1 = [closure_11];
-  const stateFromStores1 = obj2.useStateFromStores(items1, () => lib.notificationItem(), []);
+  const stateFromStores1 = isFocused(visibleItemIds[37]).useStateFromStores(items1, () => closure_11.notificationItem(), []);
   const items2 = [isFocused];
   const effect = handleOnRefresh.useEffect(() => {
-    stateFromStores(visibleItemIds[16]).setTabFocused(isFocused);
+    ICYMIActionCreatorsDefault.setTabFocused(isFocused);
   }, items2);
-  let obj3 = isFocused(visibleItemIds[39]);
-  const sharedICYMILogic = obj3.useSharedICYMILogic({ showDot: stateFromStores(visibleItemIds[38])().showDot, notificationItem: stateFromStores1 });
+  let obj3 = isFocused(visibleItemIds[37]);
+  const sharedICYMILogic = isFocused(visibleItemIds[39]).useSharedICYMILogic({ showDot: stateFromStores(visibleItemIds[38])().showDot, notificationItem: stateFromStores1 });
   ({ loading, visibleItemIds } = sharedICYMILogic);
-  endVisible = sharedICYMILogic.endVisible;
+  const endVisible = sharedICYMILogic.endVisible;
   ({ isRefreshing, handleOnRefresh } = sharedICYMILogic);
   ({ data, version, stickyHeaderIndices, viewabilityConfigCallbackPairs } = sharedICYMILogic);
-  let obj4 = isFocused(visibleItemIds[40]);
-  const iCYMIEmptyLoadingAnalytics = obj4.useICYMIEmptyLoadingAnalytics(loading, isFocused);
-  let obj5 = isFocused(visibleItemIds[41]);
+  let obj4 = isFocused(visibleItemIds[39]);
+  const iCYMIEmptyLoadingAnalytics = isFocused(visibleItemIds[40]).useICYMIEmptyLoadingAnalytics(loading, isFocused);
+  let obj5 = isFocused(visibleItemIds[40]);
   const items3 = [isFocused(visibleItemIds[42]).DismissibleContent.ICYMI_ALPHA_UPSELL];
-  const tmp12 = endVisible(obj5.useGetDismissibleContent(items3), 2);
-  first = tmp12[0];
+  const tmp12 = endVisible(isFocused(visibleItemIds[41]).useGetDismissibleContent(items3), 2);
+  const first = tmp12[0];
   closure_6 = tmp14;
-  const tmp3 = stateFromStores(visibleItemIds[33])();
+  let obj6 = isFocused(visibleItemIds[41]);
   const items4 = [ref1];
   stateFromStores2 = isFocused(visibleItemIds[37]).useStateFromStores(items4, () => ref1.getGuildCount());
   const items5 = [first, tmp12[1], stateFromStores2];
   const effect1 = handleOnRefresh.useEffect(() => {
     if (null != first) {
-      let obj = isFocused(visibleItemIds[21]);
-      obj = { extendedOnboarding: null };
-      obj[0] = stateFromStores2 <= closure_1_12;
-      obj.pushICYMIInfoModal(obj);
-      callback(closure_1_13.USER_DISMISS);
+      const obj2 = { extendedOnboarding: stateFromStores2 <= closure_12 };
+      NativeICYMIUtils.pushICYMIInfoModal(obj2);
+      closure_6(ContentDismissActionType.USER_DISMISS);
     }
   }, items5);
   const items6 = [endVisible];
   const effect2 = handleOnRefresh.useEffect(() => {
     let hasOpenedEnoughTimesResult = endVisible;
     if (endVisible) {
-      hasOpenedEnoughTimesResult = lib.hasOpenedEnoughTimes();
+      hasOpenedEnoughTimesResult = ICYMIStore.hasOpenedEnoughTimes();
     }
     if (hasOpenedEnoughTimesResult) {
-      stateFromStores(visibleItemIds[17]).openLazy(isFocused(visibleItemIds[19])(visibleItemIds[43], visibleItemIds.paths), "ICYMIFeedbackSheet", {});
-      const obj = stateFromStores(visibleItemIds[17]);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16509, dependencyMap.paths), "ICYMIFeedbackSheet", {});
     }
   }, items6);
-  ref = handleOnRefresh.useRef(null);
-  obj = {
+  const ref = handleOnRefresh.useRef(null);
+  ref1 = handleOnRefresh.useRef({
     scrollToTop() {
       const current = ref.current;
       if (current != null) {
-        const obj = { offset: 0, animated: null };
-        obj[1] = !stateFromStores;
+        const obj = { offset: 0, animated: !stateFromStores };
+        current.scrollToOffset(obj);
+      }
+    }
+  });
+  let obj7 = isFocused(visibleItemIds[37]);
+  const obj8 = {
+    scrollToTop() {
+      const current = ref.current;
+      if (current != null) {
+        const obj = { offset: 0, animated: !stateFromStores };
         current.scrollToOffset(obj);
       }
     }
   };
-  ref1 = handleOnRefresh.useRef(obj);
-  const obj7 = isFocused(visibleItemIds[37]);
   const scrollToTop = isFocused(visibleItemIds[35]).useScrollToTop(ref1);
   const obj9 = isFocused(visibleItemIds[35]);
   const items7 = [stateFromStores3];
@@ -176,21 +187,22 @@ function ICYMI(inNestedNavigator) {
   const obj10 = isFocused(visibleItemIds[37]);
   const items8 = [stateFromStores3, isFocused(visibleItemIds[44]).useNavigation(), stateFromStores];
   const effect3 = handleOnRefresh.useEffect(() => {
-    if (stateFromStores3 === isFocused(visibleItemIds[45]).GravityICYMIDoubleTapBehavior.DEFAULT) {
-      let obj = { scrollToTop: null };
-      obj[0] = function scrollToTop() {
-        const current = ref.current;
-        if (current != null) {
-          const obj = { offset: 0, animated: null };
-          obj[1] = !closure_1;
-          current.scrollToOffset(obj);
-        }
+    if (stateFromStores3 === ICYMITypes.GravityICYMIDoubleTapBehavior.DEFAULT) {
+      const obj2 = {
+        scrollToTop() {
+            const current = ref.current;
+            if (current != null) {
+              const obj = { offset: 0, animated: !stateFromStores };
+              current.scrollToOffset(obj);
+            }
+          }
       };
-      ref1.current = obj;
+      ref1.current = obj2;
     } else {
-      obj = { scrollToTop: null };
-      obj[0] = function scrollToTop() {
-        callback(7859).showForLaterModal(callback(7860).SavedMessageSortTypes.BOOKMARK);
+      let obj = {
+        scrollToTop() {
+            isFocused(7873).showForLaterModal(isFocused(7874).SavedMessageSortTypes.BOOKMARK);
+          }
       };
       ref1.current = obj;
     }
@@ -199,8 +211,7 @@ function ICYMI(inNestedNavigator) {
   closure_11 = handleOnRefresh.useCallback(() => {
     const current = ref.current;
     if (current != null) {
-      const obj = { offset: 0, animated: null };
-      obj[1] = !stateFromStores;
+      const obj = { offset: 0, animated: !stateFromStores };
       current.scrollToOffset(obj);
     }
   }, items9);
@@ -211,57 +222,39 @@ function ICYMI(inNestedNavigator) {
     item = item.item;
     const kind = item.data.kind;
     if ("message" === kind) {
-      if (item.channelType === isFocused(visibleItemIds[49]).ChannelTypes.GUILD_ANNOUNCEMENT) {
-        let obj = { unread: null, message: null, visible: null };
-        obj[0] = item.unread;
-        obj[1] = item.data.message;
-        obj[2] = null != visibleItemIds.find((item) => item.item.id === item.id);
-        let tmp41 = closure_1_14(stateFromStores(visibleItemIds[50]), obj);
-        const tmp45 = stateFromStores(visibleItemIds[50]);
+      if (item.channelType === ChannelTypes.ChannelTypes.GUILD_ANNOUNCEMENT) {
+        const obj2 = { unread: item.unread, message: item.data.message, visible: null != visibleItemIds.find((item) => item.item.id === item.id) };
+        let tmp41 = closure_2_14(AnnouncementMessageRowDefault, obj2);
       } else {
-        obj = { message: null, messageContext: null, visible: null };
-        obj[0] = item.data.message;
-        obj[1] = item.data.messageContext;
-        obj[2] = null != visibleItemIds.find((item) => item.item.id === item.id);
-        tmp41 = closure_1_14(stateFromStores(visibleItemIds[51]), obj);
-        const tmp38 = stateFromStores(visibleItemIds[51]);
+        const obj3 = { message: item.data.message, messageContext: item.data.messageContext, visible: null != visibleItemIds.find((item) => item.item.id === item.id) };
+        tmp41 = closure_2_14(ICYMIMessageRowDefault, obj3);
       }
     } else {
       if ("contentInventory" === kind) {
-        obj1 = { visible: null, content: null };
-        obj1[0] = null != visibleItemIds.find((item) => item.item.id === item.id);
-        obj1[1] = item.data.content;
-        let tmp7 = closure_1_14(stateFromStores(visibleItemIds[52]), obj1);
-        const tmp30 = stateFromStores(visibleItemIds[52]);
+        const obj4 = { visible: null != visibleItemIds.find((item) => item.item.id === item.id), content: item.data.content };
+        let tmp7 = closure_2_14(ContentInventoryEntryRowDefault, obj4);
       } else if ("loading" === kind) {
-        return closure_1_14(isFocused(visibleItemIds[53]).ICYMILoading, {});
+        return closure_2_14(ICYMILoading.ICYMILoading, {});
       } else if ("bottomLoading" === kind) {
-        return closure_1_14(isFocused(visibleItemIds[54]).ICYMIBottomLoading, {});
+        return closure_2_14(ICYMIBottomLoading.ICYMIBottomLoading, {});
       } else if ("end" === kind) {
-        const obj2 = { visible: null };
-        obj2[0] = endVisible;
-        return closure_1_14(stateFromStores(visibleItemIds[55]), obj2);
+        const obj5 = { visible: endVisible };
+        return closure_2_14(CaughtUpRowDefault, obj5);
       } else if ("guildEvent" === kind) {
-        const obj3 = { eventId: null };
-        obj3[0] = item.data.eventId;
-        tmp7 = closure_1_14(stateFromStores(visibleItemIds[56]), obj3);
+        const obj6 = { eventId: item.data.eventId };
+        tmp7 = closure_2_14(ICYMIGuildEventRowDefault, obj6);
       } else if ("recommendedGuilds" === kind) {
-        tmp7 = closure_1_14(isFocused(visibleItemIds[57]).ICYMIServerRecommendationRow, {});
+        tmp7 = closure_2_14(ICYMIServerRecommendationRow.ICYMIServerRecommendationRow, {});
       } else if ("icymiHeader" === kind) {
-        return closure_1_14(stateFromStores(visibleItemIds[58]), {});
+        return closure_2_14(ICYMIHeaderDefault, {});
       } else if ("forumThread" === kind) {
-        obj = { message: null, channel: null, visible: null };
-        obj[0] = item.data.message;
-        obj[1] = item.data.threadChannel;
-        obj[2] = null != visibleItemIds.find((item) => item.item.id === item.id);
-        tmp7 = closure_1_14(isFocused(visibleItemIds[59]).ICYMIForumThreadRow, obj);
+        const obj = { message: item.data.message, channel: item.data.threadChannel, visible: null != visibleItemIds.find((item) => item.item.id === item.id) };
+        tmp7 = closure_2_14(ICYMIForumThreadRow.ICYMIForumThreadRow, obj);
       } else {
         return null;
       }
-      const obj4 = { itemId: null, children: null };
-      obj4[0] = item.id;
-      obj4[1] = tmp7;
-      return closure_1_14(isFocused(visibleItemIds[60]).CardHeightMeasurer, obj4);
+      const obj7 = { itemId: item.id, children: tmp7 };
+      return closure_2_14(CardHeightMeasurer.CardHeightMeasurer, obj7);
     }
   }, items10);
   const memo = handleOnRefresh.useMemo(() => ({ backgroundColor: "transparent" }), []);
@@ -269,153 +262,166 @@ function ICYMI(inNestedNavigator) {
   const clientThemesOverride = isFocused(visibleItemIds[61]).useClientThemesOverride();
   const obj13 = isFocused(visibleItemIds[61]);
   const items11 = [closure_11];
-  obj = { style: items12, children: null };
-  items12 = [, ];
+  const obj15 = { style: null, children: null };
+  const items12 = [, ];
   ({ containerInPanels: arr13[0], containerBackground: arr13[1] } = tmp);
-  const stateFromStores4 = isFocused(visibleItemIds[37]).useStateFromStores(items11, () => lib.hasNewContent(), []);
-  const items13 = [callback(closure_22, { inNestedNavigator: inNestedNavigator.inNestedNavigator }), ];
-  obj1 = { style: items14, children: null };
-  items14 = [tmp.flashListWrapper, , ];
-  obj2 = { height: height - stateFromStores(visibleItemIds[34])().top - 32 - 24 - mobileQuestDockHeight, width, marginHorizontal: "auto" };
-  items14[1] = obj2;
+  obj15.style = items12;
+  const stateFromStores4 = isFocused(visibleItemIds[37]).useStateFromStores(items11, () => closure_11.hasNewContent(), []);
+  const items13 = [closure_14(closure_22, { inNestedNavigator: inNestedNavigator.inNestedNavigator }), ];
+  const obj16 = { style: null, children: null };
+  const items14 = [tmp.flashListWrapper, , ];
+  const size = { height: height - stateFromStores(visibleItemIds[34])().top - 32 - 24 - mobileQuestDockHeight, width, marginHorizontal: "auto" };
+  items14[1] = size;
   items14[2] = clientThemesOverride;
-  obj3 = {
-    onPress() {
-      stateFromStores(visibleItemIds[16]).itemInteracted("refresh_button", "refresh_button", "press_refresh_button");
-      const obj = stateFromStores(visibleItemIds[16]);
-      stateFromStores(visibleItemIds[16]).feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "new_content_pill", actionIntentType: "refresh", actionDestinationType: null } });
-      handleOnRefresh();
-      lib();
-    },
-    isRefreshing
-  };
-  const items15 = [callback(stateFromStores(visibleItemIds[62]), obj3), , ];
-  obj4 = { ref, scrollEnabled: !loading, extraData: { endVisible }, contentContainerStyle: memo, accessibilityLabel: null, data: null, refreshing: null, refreshControl: null, onEndReachedThreshold: 3, onEndReached: null, keyExtractor: null, renderItem: null, getItemType: null, drawDistance: 100, stickyHeaderIndices: null, viewabilityConfigCallbackPairs: null };
+  obj16.style = items14;
+  const items15 = [
+    closure_14(stateFromStores(visibleItemIds[62]), {
+      onPress() {
+        ICYMIActionCreatorsDefault.itemInteracted("refresh_button", "refresh_button", "press_refresh_button");
+        ICYMIActionCreatorsDefault.feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "new_content_pill", actionIntentType: "refresh", actionDestinationType: null } });
+        handleOnRefresh();
+        closure_11();
+      },
+      isRefreshing
+    }),
+  ,
+
+  ];
+  const obj18 = { ref, scrollEnabled: !loading, extraData: { endVisible }, contentContainerStyle: memo, accessibilityLabel: null, data: null, refreshing: null, refreshControl: null, onEndReachedThreshold: 3, onEndReached: null, keyExtractor: null, renderItem: null, getItemType: null, drawDistance: 100, stickyHeaderIndices: null, viewabilityConfigCallbackPairs: null };
   const intl = isFocused(visibleItemIds[23]).intl;
-  obj4[4] = intl.string(isFocused(visibleItemIds[23]).t.OIgYlQ);
-  obj4[5] = data;
-  obj4[6] = isRefreshing;
-  obj5 = { onRefresh: handleOnRefresh, refreshing: isRefreshing, tintColor: tmp.refreshing.color, style: null };
+  obj18.accessibilityLabel = intl.string(isFocused(visibleItemIds[23]).t.OIgYlQ);
+  obj18.data = data;
+  obj18.refreshing = isRefreshing;
+  const obj19 = { onRefresh: handleOnRefresh, refreshing: isRefreshing, tintColor: tmp.refreshing.color, style: null };
   let num = 1;
   let num2 = 1;
   if (stateFromStores4) {
     num2 = 0;
   }
-  obj5[3] = { opacity: num2 };
-  obj4[7] = callback(closure_6, obj5);
-  obj4[9] = handleEndReached;
-  obj4[10] = keyExtractor;
-  obj4[11] = callback;
-  obj4[12] = isFocused(visibleItemIds[32]).itemToType;
+  obj19.style = { opacity: num2 };
+  obj18.refreshControl = closure_14(closure_6, obj19);
+  obj18.onEndReached = handleEndReached;
+  obj18.keyExtractor = keyExtractor;
+  obj18.renderItem = callback;
+  obj18.getItemType = isFocused(visibleItemIds[32]).itemToType;
   const obj14 = isFocused(visibleItemIds[37]);
-  const tmp31 = closure_6;
+  const obj17 = {
+    onPress() {
+      ICYMIActionCreatorsDefault.itemInteracted("refresh_button", "refresh_button", "press_refresh_button");
+      ICYMIActionCreatorsDefault.feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "new_content_pill", actionIntentType: "refresh", actionDestinationType: null } });
+      handleOnRefresh();
+      closure_11();
+    },
+    isRefreshing
+  };
   isFocused(visibleItemIds[64]).isAndroid();
-  obj4[14] = stickyHeaderIndices;
-  obj4[15] = viewabilityConfigCallbackPairs;
+  obj18.stickyHeaderIndices = stickyHeaderIndices;
+  obj18.viewabilityConfigCallbackPairs = viewabilityConfigCallbackPairs;
   if (!loading) {
     num = version;
   }
-  items15[1] = callback(isFocused(visibleItemIds[63]).FlashList, obj4, "Version-" + num);
-  items15[2] = callback(isFocused(visibleItemIds[65]).TTIFirstContentfulPaint, { label: "icymi" });
-  obj1[1] = items15;
-  items13[1] = closure_16(first, obj1);
-  obj[1] = items13;
-  return closure_16(first, obj);
+  items15[1] = closure_14(isFocused(visibleItemIds[63]).FlashList, obj18, "Version-" + num);
+  items15[2] = closure_14(isFocused(visibleItemIds[65]).TTIFirstContentfulPaint, { label: "icymi" });
+  obj16.children = items15;
+  items13[1] = closure_16(first, obj16);
+  obj15.children = items13;
+  return closure_16(first, obj15);
 }
 function keyExtractor(id) {
   return id.id;
 }
-let c4 = importAllResult;
-({ View: c5, RefreshControl: closure_6 } = get_ActivityIndicator);
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, RefreshControl: metroRequire } = get_ActivityIndicator);
+let closure_12 = fn(16485).NUM_GUILDS_EXTENDED_ONBOARDING;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-let closure_17 = createCacheKey.createStyles((paddingTop) => {
-  let obj = { containerOuterTablet: null };
-  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: ThemesDefault.space.PX_8, overflow: "hidden", flex: 1, paddingTop };
-  obj[0] = obj;
+const createStyles = fn(4574);
+let closure_17 = createStyles.createStyles((paddingTop) => {
+  const obj = { containerOuterTablet: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: nativeDefault.space.PX_8, overflow: "hidden", flex: 1, paddingTop } };
   return obj;
 });
+const createICYMIStyles = fn(16486);
 let closure_18 = createICYMIStyles.createICYMIStyles((margin) => {
-  let obj = { container: { flex: 1, flexShrink: 1, flexGrow: 1 }, containerInPanels: null, containerBackground: null, flashListWrapper: null, refreshing: null, header: null, headerLeft: null, headerClose: null, headerTitle: null, headerText: null, headerActions: null, notificationBadge: null, loading: null, headerBorder: null };
-  obj = { flex: 1, flexShrink: 1, flexGrow: 1, overflow: "hidden", borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm };
-  obj[1] = obj;
-  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-  obj[2] = obj;
-  obj[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, minHeight: 2, flex: 1 };
-  obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, minHeight: 2, flex: 1 };
-  obj[4] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-  const obj2 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-  obj[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, position: "relative", overflow: "hidden", width: "100%" };
-  obj[6] = { flexDirection: "row", alignItems: "center" };
-  const obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, position: "relative", overflow: "hidden", width: "100%" };
-  obj[7] = { marginRight: ThemesDefault.space.PX_16, height: ThemesDefault.space.PX_32, width: ThemesDefault.space.PX_32, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.lg };
-  obj[8] = { height: 56, marginHorizontal: margin.margin, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
-  obj[9] = { flexDirection: "row", alignItems: "center", gap: 4 };
-  const obj4 = { marginRight: ThemesDefault.space.PX_16, height: ThemesDefault.space.PX_32, width: ThemesDefault.space.PX_32, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.lg };
-  const obj5 = { height: 56, marginHorizontal: margin.margin, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
-  obj[10] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
-  const obj6 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
-  obj[11] = { height: 18, width: 18, borderRadius: ThemesDefault.radii.round };
-  const obj7 = { height: 18, width: 18, borderRadius: ThemesDefault.radii.round };
-  obj[12] = { flex: 1, justifyContent: "center", paddingTop: ThemesDefault.space.PX_96 };
-  const obj8 = { flex: 1, justifyContent: "center", paddingTop: ThemesDefault.space.PX_96 };
-  obj[13] = { position: "absolute", bottom: 0, left: 0, right: 0, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, height: 1 };
+  const obj = { container: { flex: 1, flexShrink: 1, flexGrow: 1 }, containerInPanels: { flex: 1, flexShrink: 1, flexGrow: 1, overflow: "hidden", borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm }, containerBackground: null, flashListWrapper: null, refreshing: null, header: null, headerLeft: null, headerClose: null, headerTitle: null, headerText: null, headerActions: null, notificationBadge: null, loading: null, headerBorder: null };
+  const obj2 = { flex: 1, flexShrink: 1, flexGrow: 1, overflow: "hidden", borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
+  obj.containerBackground = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+  const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+  obj.flashListWrapper = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, minHeight: 2, flex: 1 };
+  const obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, minHeight: 2, flex: 1 };
+  obj.refreshing = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+  const obj5 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+  obj.header = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, position: "relative", overflow: "hidden", width: "100%" };
+  obj.headerLeft = { flexDirection: "row", alignItems: "center" };
+  const size = { marginRight: nativeDefault.space.PX_16, height: nativeDefault.space.PX_32, width: nativeDefault.space.PX_32, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.lg };
+  obj.headerClose = size;
+  obj.headerTitle = { height: 56, marginHorizontal: margin.margin, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
+  obj.headerText = { flexDirection: "row", alignItems: "center", gap: 4 };
+  const obj6 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, position: "relative", overflow: "hidden", width: "100%" };
+  const obj7 = { height: 56, marginHorizontal: margin.margin, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
+  obj.headerActions = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
+  const size1 = { height: 18, width: 18, borderRadius: nativeDefault.radii.round };
+  obj.notificationBadge = size1;
+  const obj8 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
+  obj.loading = { flex: 1, justifyContent: "center", paddingTop: nativeDefault.space.PX_96 };
+  const rect = { position: "absolute", bottom: 0, left: 0, right: 0, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, height: 1 };
+  obj.headerBorder = rect;
   return obj;
 });
-let closure_22 = importAllResult.memo((inNestedNavigator) => {
+let closure_22 = noop.memo((inNestedNavigator) => {
   inNestedNavigator = inNestedNavigator.inNestedNavigator;
-  const tmp = callback3();
+  const tmp = closure_18();
   let obj = dependencyMap;
   const tmp2 = useIsWindowLargeDefault();
   let LeftBackIconWithBadge = require;
-  obj = { top: !tmp2, style: tmp.header, children: null };
-  obj = { absolute: true, wide: true, tall: true, mix: true, mixAmount: null };
-  obj1 = { dark: getGradientColorByPercentage.OverlayOpacity.LEVEL_7, light: getGradientColorByPercentage.OverlayOpacity.LEVEL_8 };
-  obj[4] = obj1;
-  const items = [callback(getMixedGradientColorDefault, obj), , ];
-  const obj2 = { style: tmp.headerTitle, children: null };
-  const obj3 = { style: tmp.headerLeft, children: null };
+  const obj2 = { top: !tmp2, style: tmp.header, children: null };
+  const obj3 = { absolute: true, wide: true, tall: true, mix: true, mixAmount: null };
+  const obj4 = { dark: client_themes_ClientThemesUtils.OverlayOpacity.LEVEL_7, light: client_themes_ClientThemesUtils.OverlayOpacity.LEVEL_8 };
+  obj3.mixAmount = obj4;
+  const items = [closure_1_14(ThemedGradientDefault, obj3), , ];
+  const obj5 = { style: tmp.headerTitle, children: null };
+  const obj6 = { style: tmp.headerLeft, children: null };
   if (!tmp2) {
     if (!inNestedNavigator) {
       const items1 = [null, tmp4(ICYMIHeaderTextWrapper, {})];
-      obj3[1] = items1;
-      const items2 = [tmp3(tmp6, obj3), ];
-      const obj4 = { style: null, children: null };
-      obj4[0] = tmp.headerActions;
+      obj6.children = items1;
+      const items2 = [tmp3(tmp6, obj6), ];
+      const obj7 = { style: tmp.headerActions, children: null };
       const items3 = [tmp4(InfoButton, {}), tmp4(SettingsButton, {})];
-      obj4[1] = items3;
-      items2[1] = tmp3(tmp6, obj4);
-      obj2[1] = items2;
-      items[1] = tmp3(tmp6, obj2);
-      const obj5 = { style: null };
-      obj5[0] = tmp.headerBorder;
-      items[2] = tmp4(tmp6, obj5);
-      obj[2] = items;
-      return tmp3(SafeAreaPaddingView.SafeAreaPaddingView, obj);
+      obj7.children = items3;
+      items2[1] = tmp3(tmp6, obj7);
+      obj5.children = items2;
+      items[1] = tmp3(tmp6, obj5);
+      const obj8 = { style: tmp.headerBorder };
+      items[2] = tmp4(tmp6, obj8);
+      obj2.children = items;
+      return tmp3(common_SafeAreaView.SafeAreaPaddingView, obj2);
     }
   }
-  const obj6 = { style: tmp.headerClose, accessibilityLabel: null, onPress: null, children: null };
-  const intl = getSystemLocale.intl;
-  obj6[1] = intl.string(getSystemLocale.t["13/7kX"]);
-  obj6[2] = goBack.goBack;
+  const obj9 = { style: tmp.headerClose, accessibilityLabel: null, onPress: null, children: null };
+  const intl = util.intl;
+  obj9.accessibilityLabel = intl.string(util.t["13/7kX"]);
+  obj9.onPress = notifications_Notifications.goBack;
   if (inNestedNavigator) {
-    LeftBackIconWithBadge = IconWithBadge.LeftBackIconWithBadge;
+    LeftBackIconWithBadge = BackIconWithBadge.LeftBackIconWithBadge;
     obj = { includeNotificationsCount: true };
     let tmp4Result = tmp4(LeftBackIconWithBadge, obj);
   } else {
     tmp4Result = tmp4(XSmallIcon.XSmallIcon, { color: "interactive-text-default" });
   }
-  obj6[3] = tmp4Result;
-  tmp4Result = tmp4(PressableBase.PressableOpacity, obj6);
+  obj9.children = tmp4Result;
+  closure_1_14(Pressables.PressableOpacity, obj9);
 });
-const result = require("set").fileFinishedImporting("modules/icymi/native/ICYMI.tsx");
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/icymi/native/ICYMI.tsx");
 
 export const ICYMITab = function ICYMITab(route) {
   route = route.route;
-  let _require;
+  _require = undefined;
   importDefault = undefined;
-  let obj = _require(504);
-  const items = [closure_8];
-  const stateFromStores = obj.useStateFromStores(items, () => id.getId());
+  const tmp3 = useColorThemeBackgroundDefault();
+  const items = [AuthenticationStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => id.getId());
   const tmp6 = useIsWindowLargeDefault();
   _require = tmp6;
   let inNestedNavigator;
@@ -425,35 +431,34 @@ export const ICYMITab = function ICYMITab(route) {
       inNestedNavigator = params.inNestedNavigator;
     }
   }
-  const tmp8 = callback2(useSafeAreaInsetsDefault().top);
+  const tmp8 = closure_17(useSafeAreaInsetsDefault().top);
   importDefault = tmp8;
   const items1 = [tmp6, tmp8.containerOuterTablet];
-  const memo = importAllResult.useMemo(() => {
-    let containerOuterTablet;
+  const memo = noop.useMemo(() => {
+    containerOuterTablet = undefined;
     if (closure_0) {
       containerOuterTablet = containerOuterTablet.containerOuterTablet;
     }
     return containerOuterTablet;
   }, items1);
-  const tmp11 = tmp6 ? closure_5 : importAllResult.Fragment;
-  const tmp3 = getGuildThemeNameDefault();
-  const tmp9 = importAllResult;
+  const obj = require("initialize");
+  const tmp11 = tmp6 ? closure_5 : noop.Fragment;
   if (tmp6) {
-    obj = { style: null };
-    obj[0] = memo;
+    const obj2 = { style: memo };
+    let obj3 = obj2;
   } else {
-    obj = {};
+    obj3 = {};
   }
-  obj1 = { children: null };
-  const obj2 = { children: null };
-  const obj3 = {};
-  const merged = Object.assign(obj);
-  const items2 = [closure_14(getMixedGradientColorDefault, { absolute: true }), ];
+  const obj4 = { children: null };
+  const obj5 = { children: null };
+  const obj6 = {};
+  const merged = Object.assign(obj3);
+  const items2 = [closure_14(ThemedGradientDefault, { absolute: true }), ];
   const tmp14 = closure_16;
-  const tmpResult = jsxDefault;
-  items2[1] = closure_14(_require(4271).ThemeContextProvider, { gradient: tmp3, children: closure_14(ICYMI, { inNestedNavigator }, "" + stateFromStores) });
-  obj3.children = items2;
-  obj2[0] = tmp14(tmp11, obj3);
-  obj1[0] = closure_14(_require(16456).ICYMIContextProvider, obj2);
-  return closure_14(tmpResult, obj1);
+  const tmpResult = AppFreezerDefault;
+  items2[1] = closure_14(require("native").ThemeContextProvider, { gradient: tmp3, children: closure_14(ICYMI, { inNestedNavigator }, "" + stateFromStores) });
+  obj6.children = items2;
+  obj5.children = tmp14(tmp11, obj6);
+  obj4.children = closure_14(require("ICYMIContext").ICYMIContextProvider, obj5);
+  return closure_14(tmpResult, obj4);
 };

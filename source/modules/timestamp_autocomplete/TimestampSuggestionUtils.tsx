@@ -1,32 +1,31 @@
-// Module ID: 10430
-// Function ID: 10431
-// Name: items
-// Dependencies: [32, 2025, 4153, 10431, 1114, 2]
+// Module ID: 10457
+// Function ID: 10458
+// Name: TimestampSuggestionUtils
+// Dependencies: [32, 2025, 4166, 10458, 1114, 2]
 // Exports: preloadTimestampParser, queryTimestampSuggestions
 
-// Module 10430 (items)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import hooksDefault from "hooks" /* 4153 */;
-import _mod10431 from "module_10431" /* 10431 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "_getSystemLocale" /* 2025 */;
-import set from "set" /* 2 */;
+// Module 10457 (TimestampSuggestionUtils)
+import util from "util" /* 1114 */;
+import _modDef4166 from "module_4166" /* 4166 */;
+import _mod10458 from "module_10458" /* 10458 */;
+import _slicedToArray from "module_32" /* 32 */;
+import LocaleStore from "LocaleStore" /* 2025 */;
 
-require = arg1;
+require = fn;
 let items = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm", "ha", "h a", "H", "LT", "LTS"];
-let items1 = [hooksDefault.ISO_8601];
+let items1 = [_modDef4166.ISO_8601];
 const items2 = [...items];
-let set = new Set(items2);
-HermesBuiltin.arraySpread(set, 1);
-let result = set.fileFinishedImporting("modules/timestamp_autocomplete/TimestampSuggestionUtils.tsx");
+HermesBuiltin.arraySpread(new Set(items2), 1);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/timestamp_autocomplete/TimestampSuggestionUtils.tsx");
 
 export const preloadTimestampParser = function preloadTimestampParser() {
-  _mod10431;
+  _mod10458;
 };
 export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0, cloneResult1) {
   let obj = cloneResult1;
   if (cloneResult1 === undefined) {
-    obj = hooksDefault();
+    obj = _modDef4166();
   }
   if ("" === arg0) {
     let parsed;
@@ -37,12 +36,12 @@ export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0
       items = [undefined];
       parsed = items;
     }
-    const first = callback(parsed, 1)[0];
-    let start;
+    const first = _slicedToArray(parsed, 1)[0];
+    let start1;
     if (first != null) {
-      start = first.start;
+      start1 = first.start;
     }
-    let tmp14 = null != start;
+    let tmp14 = null != start1;
     if (tmp14) {
       let end;
       if (first != null) {
@@ -53,16 +52,16 @@ export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0
     if (tmp14) {
       tmp14 = first.text === arg0;
     }
-    obj1 = hooksDefault;
+    const obj2 = _modDef4166;
     if (tmp14) {
-      start = first.start;
-      let invalidResult = obj1(start.date());
+      const start = first.start;
+      let invalidResult = obj2(start.date());
       let tmp20 = tmp16;
     } else if (tmp3) {
-      invalidResult = obj1.invalid();
+      invalidResult = obj2.invalid();
       tmp20 = tmp16;
     } else {
-      invalidResult = obj1(arg0, items1, true);
+      invalidResult = obj2(arg0, items1, true);
       tmp20 = tmp16;
     }
     let str6 = invalidResult.creationData().format;
@@ -74,14 +73,14 @@ export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0
     items1 = [];
     if (cloneResult.isValid()) {
       if (tmp14) {
-        let obj4 = cloneResult;
+        let obj5 = cloneResult;
         if (tmp14) {
           const start2 = first.start;
-          obj4 = cloneResult;
+          obj5 = cloneResult;
           if (!start2.isCertain("hour")) {
             const _Math = Math;
             const result = Math.round(cloneResult.valueOf() / 900000) * 900000;
-            obj4 = tmp20(4153)(result);
+            obj5 = tmp20(4166)(result);
           }
         }
         if (tmp14) {
@@ -117,137 +116,113 @@ export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0
         } else if (str6 != null) {
           isCertainResult3 = str6.includes("s");
         }
-        let str = obj4.unix().toString();
+        const str1 = obj5.unix().toString();
         let str19 = "s";
         if (isCertainResult3) {
           str19 = "S";
         }
         if (!hasItem) {
           if (!isCertainResult) {
-            obj = { timestamp: null, format: null };
-            obj[0] = str;
+            const obj3 = { timestamp: str1, format: null };
             let str20 = "t";
             if (isCertainResult3) {
               str20 = "T";
             }
-            obj = { mention: null, description: null };
-            obj[1] = str20;
-            obj[0] = obj;
-            const intl = getSystemLocale.intl;
-            obj[1] = intl.string(getSystemLocale.t.yHv4oJ);
-            items1.push(obj);
+            const obj4 = { mention: null, description: null };
+            obj3.format = str20;
+            obj4.mention = obj3;
+            const intl = util.intl;
+            obj4.description = intl.string(util.t.yHv4oJ);
+            items1.push(obj4);
             items1.push({});
-            obj1 = { periodType: "day", previousName: null, currentName: null, nextName: null };
-            obj1[1] = getSystemLocale.t.ZdDLO0;
-            obj1[2] = getSystemLocale.t.mbs4NX;
-            obj1[3] = getSystemLocale.t["EqnX/z"];
+            let obj6 = { periodType: "day", previousName: util.t.ZdDLO0, currentName: util.t.mbs4NX, nextName: util.t["EqnX/z"] };
           }
-          if (null == obj1) {
-            let obj2 = {};
+          if (null == obj6) {
+            let obj7 = {};
           } else {
             cloneResult1 = obj.clone();
-            cloneResult1.subtract(1, obj1.periodType);
-            const cloneResult2 = obj4.clone();
-            cloneResult2.add(1, obj1.periodType);
-            if (obj4.isSame(obj, obj1.periodType)) {
-              const intl4 = getSystemLocale.intl;
-              const stringResult = intl4.string(obj1.currentName);
+            cloneResult1.subtract(1, obj6.periodType);
+            const cloneResult2 = obj5.clone();
+            cloneResult2.add(1, obj6.periodType);
+            if (obj5.isSame(obj, obj6.periodType)) {
+              const intl4 = util.intl;
+              const stringResult = intl4.string(obj6.currentName);
               let stringResult2 = stringResult;
-              if (obj4.isSameOrBefore(obj)) {
+              if (obj5.isSameOrBefore(obj)) {
                 const intl5 = tmp39(1114).intl;
-                let stringResult1 = intl5.string(obj1.nextName);
+                let stringResult1 = intl5.string(obj6.nextName);
                 stringResult2 = stringResult;
               }
               tmp39 = require;
-            } else if (obj4.isSame(cloneResult1, obj1.periodType)) {
-              const intl2 = getSystemLocale.intl;
-              stringResult2 = intl2.string(obj1.previousName);
-              const intl3 = getSystemLocale.intl;
-              stringResult1 = intl3.string(obj1.currentName);
+            } else if (obj5.isSame(cloneResult1, obj6.periodType)) {
+              const intl2 = util.intl;
+              stringResult2 = intl2.string(obj6.previousName);
+              const intl3 = util.intl;
+              stringResult1 = intl3.string(obj6.currentName);
             }
-            let str1;
+            let str31;
             if (null != stringResult1) {
-              str1 = cloneResult2.unix().toString();
+              str31 = cloneResult2.unix().toString();
               const str21 = cloneResult2.unix();
             }
-            obj2 = { adjustedTimestamp: null, adjustedDescription: null, unadjustedDescription: null };
-            obj2[0] = str1;
-            obj2[1] = stringResult1;
-            obj2[2] = stringResult2;
+            obj7 = { adjustedTimestamp: str31, adjustedDescription: stringResult1, unadjustedDescription: stringResult2 };
           }
-          ({ adjustedTimestamp, unadjustedDescription } = obj2);
+          ({ adjustedTimestamp, unadjustedDescription } = obj7);
           if (null != adjustedTimestamp) {
-            const obj3 = { mention: null, description: null };
-            obj4 = { timestamp: null, format: null };
-            obj4[0] = adjustedTimestamp;
-            obj4[1] = str19;
-            obj3[0] = obj4;
-            obj3[1] = tmp42;
-            items1.push(obj3);
-            const obj5 = { mention: null };
-            const obj6 = { timestamp: null, format: "f" };
-            obj6[0] = adjustedTimestamp;
-            obj5[0] = obj6;
-            items1.push(obj5);
-            const obj7 = { mention: null };
-            const obj8 = { timestamp: null, format: "F" };
-            obj8[0] = adjustedTimestamp;
-            obj7[0] = obj8;
-            items1.push(obj7);
-            const obj9 = { mention: null };
-            const obj10 = { timestamp: null, format: "R" };
-            obj10[0] = adjustedTimestamp;
-            obj9[0] = obj10;
-            items1.push(obj9);
+            const obj8 = { mention: null, description: null };
+            const obj9 = { timestamp: adjustedTimestamp, format: str19 };
+            obj8.mention = obj9;
+            obj8.description = tmp42;
+            items1.push(obj8);
+            const obj10 = { mention: null };
+            const obj11 = { timestamp: adjustedTimestamp, format: "f" };
+            obj10.mention = obj11;
+            items1.push(obj10);
+            const obj12 = { mention: null };
+            const obj13 = { timestamp: adjustedTimestamp, format: "F" };
+            obj12.mention = obj13;
+            items1.push(obj12);
+            const obj14 = { mention: null };
+            const obj15 = { timestamp: adjustedTimestamp, format: "R" };
+            obj14.mention = obj15;
+            items1.push(obj14);
             items1.push({});
           }
-          const obj11 = { mention: null, description: null };
-          const obj12 = { timestamp: null, format: null };
-          obj12[0] = str;
-          obj12[1] = str19;
-          obj11[0] = obj12;
-          obj11[1] = unadjustedDescription;
-          items1.push(obj11);
-          const obj13 = { mention: null };
-          const obj14 = { timestamp: null, format: "f" };
-          obj14[0] = str;
-          obj13[0] = obj14;
-          items1.push(obj13);
-          const obj15 = { mention: null };
-          const obj16 = { timestamp: null, format: "F" };
-          obj16[0] = str;
-          obj15[0] = obj16;
-          items1.push(obj15);
-          const obj17 = { mention: null };
-          const obj18 = { timestamp: null, format: "R" };
-          obj18[0] = str;
-          obj17[0] = obj18;
-          items1.push(obj17);
+          const obj16 = { mention: null, description: null };
+          const obj17 = { timestamp: str1, format: str19 };
+          obj16.mention = obj17;
+          obj16.description = unadjustedDescription;
+          items1.push(obj16);
+          const obj18 = { mention: null };
+          const obj19 = { timestamp: str1, format: "f" };
+          obj18.mention = obj19;
+          items1.push(obj18);
+          const obj20 = { mention: null };
+          const obj21 = { timestamp: str1, format: "F" };
+          obj20.mention = obj21;
+          items1.push(obj20);
+          const obj22 = { mention: null };
+          const obj23 = { timestamp: str1, format: "R" };
+          obj22.mention = obj23;
+          items1.push(obj22);
         }
         if (isCertainResult) {
           if (!hasItem) {
-            const obj19 = { periodType: "week", previousName: null, currentName: null, nextName: null };
-            obj19[1] = getSystemLocale.t["4uTwgO"];
-            obj19[2] = getSystemLocale.t["6YiNaP"];
-            obj19[3] = getSystemLocale.t.HE4jqH;
-            obj1 = obj19;
+            const obj24 = { periodType: "week", previousName: util.t["4uTwgO"], currentName: util.t["6YiNaP"], nextName: util.t.HE4jqH };
+            obj6 = obj24;
           }
         }
         if (!isCertainResult2) {
-          const obj20 = { periodType: "year", previousName: null, currentName: null, nextName: null };
-          obj20[1] = getSystemLocale.t.R7VMEE;
-          obj20[2] = getSystemLocale.t["U8lK/J"];
-          obj20[3] = getSystemLocale.t.OppVVE;
-          obj1 = obj20;
+          const obj25 = { periodType: "year", previousName: util.t.R7VMEE, currentName: util.t["U8lK/J"], nextName: util.t.OppVVE };
+          obj6 = obj25;
         }
-        const str18 = obj4.unix();
+        const str18 = obj5.unix();
       }
     }
     return items1;
   } else {
-    const tmp6 = _mod10431;
-    locale = locale.locale;
-    str = "en-US";
+    const tmp6 = _mod10458;
+    locale = LocaleStore.locale;
     if ("en-US" === locale) {
       let en = tmp6.en;
     } else if ("en-GB" === locale) {

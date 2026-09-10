@@ -1,23 +1,27 @@
-// Module ID: 14977
-// Function ID: 14978
-// Name: ClipsSettingsScreen
-// Dependencies: [19, 7975, 21, 11473, 14692, 2]
+// Module ID: 15003
+// Function ID: 15004
+// Name: SettingsClipsScreen
+// Dependencies: [19, 7989, 21, 11500, 14718, 2]
 // Exports: default
 
-// Module 14977 (ClipsSettingsScreen)
-import _modDef14692 from "module_14692" /* 14692 */;
-import closure_3 from "noop" /* 19 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 7975 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 15003 (SettingsClipsScreen)
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import SettingLayoutDefault from "SettingLayout" /* 14718 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/clips/native/SettingsClipsScreen.tsx");
+require = fn;
+const MobileUserSettings = fn(7989).MobileUserSettings;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/clips/native/SettingsClipsScreen.tsx");
 
 export default function ClipsSettingsScreen() {
-  const node = React.useMemo(() => {
+  const node = noop.useMemo(() => {
+    const obj = { settings: null };
     const items = [constants.CLIPS_OPT_OUT_OF_VOICE_RECORDING];
-    const sections = [{ settings: items }];
-    return callback(table[3]).createList({ sections });
+    obj.settings = items;
+    const sections = [obj];
+    return SettingBuilders.createList({ sections });
   }, []);
-  return jsx(_modDef14692, { node });
+  return jsx(SettingLayoutDefault, { node });
 };

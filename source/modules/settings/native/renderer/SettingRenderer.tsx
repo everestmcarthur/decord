@@ -1,31 +1,40 @@
-// Module ID: 14695
-// Function ID: 14696
-// Name: GuildSelectDefaultIcon
-// Dependencies: [32, 109, 19, 17, 2025, 14694, 1979, 11474, 21, 4560, 576, 1178, 5605, 1483, 14696, 504, 1114, 10823, 5584, 14698, 14699, 7201, 4279, 5685, 5688, 7190, 4258, 9991, 4528, 4529, 5607, 4973, 4556, 1880, 1115, 14181, 5123, 4975, 4262, 6997, 1874, 2]
+// Module ID: 14721
+// Function ID: 14722
+// Name: SettingRenderer
+// Dependencies: [32, 109, 19, 17, 2025, 14720, 1979, 11501, 21, 4574, 576, 1178, 5619, 1483, 14722, 504, 1114, 10850, 5598, 14724, 14725, 7214, 4294, 5699, 5702, 7203, 4271, 10018, 4542, 4543, 5621, 4987, 4570, 1880, 1115, 14206, 5137, 4989, 4275, 7011, 1874, 2]
 // Exports: renderSettingItem, renderSettingSearchResultItem, renderSettingSearchResultPlaceholderItem
 
-// Module 14695 (GuildSelectDefaultIcon)
-import ThemesDefault from "Themes" /* 576 */;
-import map from "map" /* 4262 */;
-import Text from "Text" /* 4556 */;
-import TableRowInner from "TableRowInner" /* 5605 */;
-import context2 from "context" /* 5685 */;
-import VolumeSliderDefault from "VolumeSlider" /* 9991 */;
-import ClydeIcon from "ClydeIcon" /* 10823 */;
-import useHighlightSettingItem from "useHighlightSettingItem" /* 14698 */;
-import _modDef14699 from "module_14699" /* 14699 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "_objectWithoutProperties" /* 109 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_9 from "_getSystemLocale" /* 2025 */;
-import closure_10 from "zustandStore" /* 14694 */;
-import closure_11 from "createGuildRecordFromRust" /* 1979 */;
-import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 11474 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14721 (SettingRenderer)
+import nativeDefault from "native" /* 576 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
+import ToastUtils from "ToastUtils" /* 4271 */;
+import useToken from "useToken" /* 4275 */;
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4294 */;
+import HapticUtils from "HapticUtils" /* 4542 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4543 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import GuildIcon from "GuildIcon" /* 5598 */;
+import TableRow from "TableRow" /* 5619 */;
+import TableRadioRow from "TableRadioRow" /* 5702 */;
+import Tracking from "Tracking" /* 7011 */;
+import ClipboardUtils from "ClipboardUtils" /* 7203 */;
+import TableSwitchRow from "TableSwitchRow" /* 7214 */;
+import VolumeSliderDefault from "VolumeSlider" /* 10018 */;
+import ClydeIcon from "ClydeIcon" /* 10850 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 14722 */;
+import useHighlightSettingItem from "useHighlightSettingItem" /* 14724 */;
+import SettingListItemHighlightDefault from "SettingListItemHighlight" /* 14725 */;
+import _slicedToArray from "module_32" /* 32 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "module_19" /* 19 */;
+import LocaleStore from "LocaleStore" /* 2025 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14720 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-require = arg1;
+const GuildIconDefault = GuildIcon;
+
+const TableRadioGroup = tmp2(5699);
+require = fn;
 class GuildSelectDefaultIcon {
   constructor(arg0) {
     str = global.size;
@@ -38,51 +47,47 @@ class GuildSelectDefaultIcon {
       num = 24;
     }
     obj = { style: null, children: null };
-    obj = {};
+    obj1 = {};
     merged = Object.assign(tmp.defaultIcon);
-    obj.width = num;
-    obj.height = num;
-    obj.borderRadius = num / 3;
-    obj[0] = obj;
-    obj[1] = jsx(require("ClydeIcon").ClydeIcon, { color: "white", size: str });
+    obj1.width = num;
+    obj1.height = num;
+    obj1.borderRadius = num / 3;
+    obj.style = obj1;
+    obj.children = jsx(closure_0(closure_2[17]).ClydeIcon, { color: "white", size: str });
     return jsx(View, obj);
   }
 }
 function ForceSwitchIcons(children) {
-  let context;
-  context = importAllResult.useContext(context(4279).AccessibilityPreferencesContext);
+  const context = noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext);
   const items = [context];
-  const value = importAllResult.useMemo(() => {
+  value = noop.useMemo(() => {
     const obj = {};
     const merged = Object.assign(context);
     obj.switchIconsEnabled = true;
     return obj;
   }, items);
-  return callback3(context(4279).AccessibilityPreferencesContext.Provider, { value, children: children.children });
+  return closure_1_14(AccessibilityPreferencesContext.AccessibilityPreferencesContext.Provider, { value, children: children.children });
 }
 function SettingSearchResultBreadcrumbs(breadcrumbs) {
   breadcrumbs = breadcrumbs.breadcrumbs;
   let tmp = null;
   if (0 !== breadcrumbs.length) {
-    const obj = { variant: "text-xs/medium", color: "text-muted", children: null };
-    obj[2] = breadcrumbs.join(" \u2192 ");
-    tmp = callback3(Text.Text, obj);
+    const obj = { variant: "text-xs/medium", color: "text-muted", children: breadcrumbs.join(" \u2192 ") };
+    tmp = closure_1_14(Text_Text.Text, obj);
   }
   return tmp;
 }
 function SettingSearchResultIcon(IconComponent) {
   IconComponent = IconComponent.IconComponent;
-  map;
+  useToken;
   if (null == IconComponent) {
-    let obj = { style: null };
-    obj = { width: null };
-    obj[0] = tmp4;
-    obj[0] = obj;
-    let tmp6 = callback3(View, obj);
+    const obj2 = { style: null };
+    const obj3 = { width: tmp4 };
+    obj2.style = obj3;
+    let tmp6 = closure_1_14(View, obj2);
   } else {
-    obj = { IconComponent: null };
-    obj[0] = IconComponent;
-    tmp6 = callback3(TableRowInner.TableRow.Icon, obj);
+    const obj = { IconComponent };
+    tmp6 = closure_1_14(TableRow.TableRow.Icon, obj);
   }
   return tmp6;
 }
@@ -91,75 +96,61 @@ function RouteSettingSearchResult(setting) {
   setting = setting.setting;
   const index = setting.index;
   const total = setting.total;
-  let stackNavigation;
-  let screen;
-  let preNavigationAction;
   ({ IconComponent, breadcrumbs } = setting);
-  let obj = title(index[13]);
-  stackNavigation = obj.useStackNavigation();
-  screen = settingData.screen;
+  const stackNavigation = title(index[13]).useStackNavigation();
+  const screen = settingData.screen;
   const usePreNavigationAction = settingData.usePreNavigationAction;
-  preNavigationAction = undefined;
+  let preNavigationAction;
   if (usePreNavigationAction != null) {
     preNavigationAction = usePreNavigationAction();
   }
   const items = [preNavigationAction, index, stackNavigation, screen, setting, title, total];
-  const callback = importAllResult.useCallback(() => {
-    let obj = { selected: setting };
-    closure_1_10.setState(obj);
-    obj = { setting, title, route: screen.route, searchResultPosition: index, numSearchResults: total };
-    const result = title(index[39]).trackSettingSearchResultPress(obj);
-    const obj2 = title(index[39]);
-    obj = { navigation: stackNavigation, screen, preNavigationAction };
-    const result1 = title(index[14]).onRouteSettingOnPress(obj);
+  const callback = noop.useCallback(() => {
+    UserSettingSearchStore.setState({ selected: setting });
+    const result = Tracking.trackSettingSearchResultPress({ setting, title, route: screen.route, searchResultPosition: index, numSearchResults: total });
+    const obj = { selected: setting };
+    const obj3 = { setting, title, route: screen.route, searchResultPosition: index, numSearchResults: total };
+    const result1 = SettingRendererUtils.onRouteSettingOnPress({ navigation: stackNavigation, screen, preNavigationAction });
   }, items);
-  obj = { label: title, onPress: callback, arrow: true, icon: callback3(SettingSearchResultIcon, { IconComponent }), subLabel: callback3(SettingSearchResultBreadcrumbs, { breadcrumbs }), start: 0 === index, end: index === total - 1 };
-  return callback3(title(index[12]).TableRow, obj);
+  let obj = title(index[13]);
+  const tmp = title;
+  const tmp2 = index;
+  return closure_14(tmp(tmp2[12]).TableRow, { label: title, onPress: callback, arrow: true, icon: closure_14(SettingSearchResultIcon, { IconComponent }), subLabel: closure_14(SettingSearchResultBreadcrumbs, { breadcrumbs }), start: 0 === index, end: index === total - 1 });
 }
 function PressableSettingSearchResult(setting) {
   ({ settingData, title } = setting);
   setting = setting.setting;
   const index = setting.index;
   const total = setting.total;
-  let onPress;
-  onPress = settingData.onPress;
+  const onPress = settingData.onPress;
   const items = [setting, title, index, total, onPress];
   ({ IconComponent, breadcrumbs } = setting);
-  const callback = importAllResult.useCallback(() => {
-    let obj = title(index[39]);
-    obj = { setting, title, searchResultPosition: index, numSearchResults: total };
-    const result = obj.trackSettingSearchResultPress(obj);
-    const result1 = title(index[40]).dismissGlobalKeyboard();
+  const callback = noop.useCallback(() => {
+    const result = Tracking.trackSettingSearchResultPress({ setting, title, searchResultPosition: index, numSearchResults: total });
+    const obj2 = { setting, title, searchResultPosition: index, numSearchResults: total };
+    const result1 = KeyboardManagerUtils.dismissGlobalKeyboard();
     onPress();
   }, items);
-  return callback3(title(index[12]).TableRow, { label: title, onPress: callback, icon: callback3(SettingSearchResultIcon, { IconComponent }), subLabel: callback3(SettingSearchResultBreadcrumbs, { breadcrumbs }), start: 0 === index, end: index === total - 1, arrow: settingData.withArrow });
+  return closure_14(title(index[12]).TableRow, { label: title, onPress: callback, icon: closure_14(SettingSearchResultIcon, { IconComponent }), subLabel: closure_14(SettingSearchResultBreadcrumbs, { breadcrumbs }), start: 0 === index, end: index === total - 1, arrow: settingData.withArrow });
 }
 function StaticSettingSearchResult(title) {
   title = title.title;
   const setting = title.setting;
   const index = title.index;
   const total = title.total;
-  let trailing;
   const useTrailing = title.settingData.useTrailing;
-  trailing = undefined;
+  let trailing;
   ({ IconComponent, breadcrumbs } = title);
   if (useTrailing != null) {
     trailing = useTrailing();
   }
   const items = [index, setting, trailing, title, total];
-  const callback = importAllResult.useCallback(() => {
+  const callback = noop.useCallback(() => {
     if (null != trailing) {
-      let obj = title(index[39]);
-      obj = { setting: null, title: null, searchResultPosition: null, numSearchResults: null };
-      obj[0] = setting;
-      obj[1] = title;
-      obj[2] = index;
-      obj[3] = total;
-      const result = obj.trackSettingSearchResultPress(obj);
-      title(index[25]).copy(tmp);
-      const obj3 = title(index[25]);
-      const result1 = title(index[26]).presentCopiedToClipboard();
-      const obj4 = title(index[26]);
+      const obj2 = { setting, title, searchResultPosition: index, numSearchResults: total };
+      const result = Tracking.trackSettingSearchResultPress(obj2);
+      ClipboardUtils.copy(tmp);
+      const result1 = ToastUtils.presentCopiedToClipboard();
     }
   }, items);
   let obj = { label: title, onPress: null, icon: null, subLabel: null, trailing: null, start: null, end: null };
@@ -167,54 +158,52 @@ function StaticSettingSearchResult(title) {
   if (null != trailing) {
     tmp6 = callback;
   }
-  obj[1] = tmp6;
-  obj[2] = closure_14(SettingSearchResultIcon, { IconComponent });
-  obj[3] = closure_14(SettingSearchResultBreadcrumbs, { breadcrumbs });
+  obj.onPress = tmp6;
+  obj.icon = closure_14(SettingSearchResultIcon, { IconComponent });
+  obj.subLabel = closure_14(SettingSearchResultBreadcrumbs, { breadcrumbs });
   let tmp3Result = null;
   if (null != trailing) {
-    obj = { text: null };
-    obj[0] = trailing;
-    tmp3Result = tmp3(title(index[12]).TableRow.TrailingText, obj);
+    let obj2 = { text: trailing };
+    tmp3Result = tmp3(title(index[12]).TableRow.TrailingText, obj2);
   }
-  obj[4] = tmp3Result;
-  obj[5] = 0 === index;
-  obj[6] = index === total - 1;
+  obj.trailing = tmp3Result;
+  obj.start = 0 === index;
+  obj.end = index === total - 1;
   return closure_14(title(index[12]).TableRow, obj);
 }
 function SettingSearchResultPlaceholder(arg0) {
   ({ start, end } = arg0);
-  const tmp = callback5();
-  let obj = { start, end, label: null, icon: null };
-  const items = [tmp.placeholderUsername, callback(importAllResult.useState(() => ({ width: `${10 + 80 * Math.random() | 0}%` })), 1)[0]];
-  obj[2] = callback3(View, { style: items });
-  obj = { style: tmp.placeholderAvatar };
-  obj[3] = callback3(View, obj);
-  return callback3(TableRowInner.TableRow, obj);
+  const tmp = closure_17();
+  const obj = { start, end, label: null, icon: null };
+  const obj2 = { style: null };
+  const items = [tmp.placeholderUsername, _slicedToArray(noop.useState(() => ({ width: `${10 + 80 * Math.random() | 0}%` })), 1)[0]];
+  obj2.style = items;
+  obj.label = closure_1_14(View, obj2);
+  obj.icon = closure_1_14(View, { style: tmp.placeholderAvatar });
+  return closure_1_14(TableRow.TableRow, obj);
 }
 let closure_3 = ["onSlidingComplete", "step", "startIcon", "endIcon", "minimumValue", "maximumValue", "valueLabel", "defaultValue", "onValueChange"];
 let closure_4 = ["settingData"];
-let error = importAllResult;
-({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_12, NodeType: map1 } = GUILD_SELECT_ALL_SERVERS_OPTION_ID);
+const View = fn(17).View;
+const SettingRendererConstants = fn(11501);
+({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_12, NodeType: map1 } = SettingRendererConstants);
+const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-let obj = { slider: null, sliderTitle: null, radioSettingHighlight: null, defaultIcon: null, placeholderAvatar: null, placeholderUsername: null };
-obj = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_8 };
-obj[0] = obj;
-obj[1] = { flexDirection: "row", justifyContent: "space-between" };
-obj[2] = { top: 26 };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center" };
-obj[3] = createCacheKey;
-obj[4] = { width: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.REFRESH_MEDIUM_32], height: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.REFRESH_MEDIUM_32], borderRadius: ThemesDefault.radii.xl, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-let obj2 = { width: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.REFRESH_MEDIUM_32], height: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.REFRESH_MEDIUM_32], borderRadius: ThemesDefault.radii.xl, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-obj[5] = { height: 20, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-let closure_17 = createCacheKey.createStyles(obj);
-let closure_18 = importAllResult.memo((arg0) => {
+const createStyles = fn(4574);
+let obj = { slider: { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_8 }, sliderTitle: { flexDirection: "row", justifyContent: "space-between" }, radioSettingHighlight: { top: 26 }, defaultIcon: null, placeholderAvatar: null, placeholderUsername: null };
+let obj3 = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_8 };
+obj.defaultIcon = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center" };
+let size = { width: fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.REFRESH_MEDIUM_32], height: fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.REFRESH_MEDIUM_32], borderRadius: nativeDefault.radii.xl, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+obj.placeholderAvatar = size;
+let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center" };
+obj.placeholderUsername = { height: 20, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+let closure_17 = createStyles.createStyles(obj);
+let closure_18 = noop.memo((arg0) => {
   ({ useTrailing, usePreNavigationAction, screen } = arg0);
   ({ useDescription, useIsDisabled, IconComponent } = arg0);
-  let stackNavigation;
   let preNavigationAction;
   ({ useTitle, variant, start, end } = arg0);
-  let obj = screen(preNavigationAction[13]);
-  stackNavigation = obj.useStackNavigation();
+  const stackNavigation = screen(preNavigationAction[13]).useStackNavigation();
   preNavigationAction = undefined;
   const title = useTitle();
   if (usePreNavigationAction != null) {
@@ -233,50 +222,45 @@ let closure_18 = importAllResult.memo((arg0) => {
     trailing = useTrailing();
   }
   const items = [stackNavigation, screen, preNavigationAction];
-  const callback = importAllResult.useCallback(() => {
-    let obj = screen(preNavigationAction[14]);
-    obj = { navigation: stackNavigation, screen, preNavigationAction };
-    const result = obj.onRouteSettingOnPress(obj);
+  const callback = noop.useCallback(() => {
+    const result = SettingRendererUtils.onRouteSettingOnPress({ navigation: stackNavigation, screen, preNavigationAction });
   }, items);
-  obj = { label: title, subLabel: description, disabled: isDisabled, arrow: true, variant, icon: null, trailing: null, onPress: null, start: null, end: null };
+  const obj2 = { label: title, subLabel: description, disabled: isDisabled, arrow: true, variant, icon: null, trailing: null, onPress: null, start: null, end: null };
   let tmp10Result = null;
   if (null != IconComponent) {
-    obj = { IconComponent: null };
-    obj[0] = IconComponent;
-    tmp10Result = tmp10(tmp(tmp2[12]).TableRow.Icon, obj);
+    const obj3 = { IconComponent };
+    tmp10Result = tmp10(tmp(tmp2[12]).TableRow.Icon, obj3);
   }
-  obj[5] = tmp10Result;
+  obj2.icon = tmp10Result;
   let tmp12 = null;
   if (null != trailing) {
     let tmp13;
     if (null != trailing) {
-      tmp10Result = trailing;
+      let tmp10Result2 = trailing;
       if (typeof trailing === "string") {
-        obj1 = { text: null };
-        obj1[0] = trailing;
-        tmp10Result = tmp10(tmp(tmp2[12]).TableRow.TrailingText, obj1);
+        const obj4 = { text: trailing };
+        tmp10Result2 = tmp10(tmp(tmp2[12]).TableRow.TrailingText, obj4);
       }
-      tmp13 = tmp10Result;
+      tmp13 = tmp10Result2;
     }
     tmp12 = tmp13;
   }
-  obj[6] = tmp12;
-  obj[7] = callback;
-  obj[8] = start;
-  obj[9] = end;
-  return closure_14(screen(preNavigationAction[12]).TableRow, obj);
+  obj2.trailing = tmp12;
+  obj2.onPress = callback;
+  obj2.start = start;
+  obj2.end = end;
+  return closure_14(screen(preNavigationAction[12]).TableRow, obj2);
 });
-let closure_20 = importAllResult.memo((useSelectedGuildId) => {
-  const merged = Object.assign(useSelectedGuildId, Object.create(null));
-  let selectedGuildId;
-  closure_1 = undefined;
+let closure_20 = noop.memo((useSelectedGuildId) => {
+  const merged = Object.assign(useSelectedGuildId, Object.assign({ useSelectedGuildId: 0 }));
   dependencyMap = undefined;
-  selectedGuildId = useSelectedGuildId.useSelectedGuildId();
+  const selectedGuildId = useSelectedGuildId.useSelectedGuildId();
+  const items = [GuildStore];
+  closure_1 = selectedGuildId(504).useStateFromStores(items, () => GuildStore.getGuild(selectedGuildId));
+  closure_129_0 = selectedGuildId;
   let obj = selectedGuildId(504);
-  const items = [closure_11];
-  closure_1 = obj.useStateFromStores(items, () => closure_1_11.getGuild(selectedGuildId));
-  const items1 = [closure_11];
-  const stateFromStores = selectedGuildId(504).useStateFromStores(items1, () => closure_1_11.getGuild(selectedGuildId));
+  const items1 = [GuildStore];
+  const stateFromStores = selectedGuildId(504).useStateFromStores(items1, () => GuildStore.getGuild(selectedGuildId));
   if (selectedGuildId === closure_12) {
     const intl2 = tmp3(1114).intl;
     let stringResult = intl2.string(tmp3(1114).t.OMVg25);
@@ -293,31 +277,27 @@ let closure_20 = importAllResult.memo((useSelectedGuildId) => {
   dependencyMap = stringResult;
   const items2 = [stringResult];
   const obj2 = selectedGuildId(504);
-  obj = {};
-  const callback = importAllResult.useCallback(() => c2, items2);
+  const obj3 = {};
+  const callback = noop.useCallback(() => c2, items2);
   const merged1 = Object.assign(merged);
-  obj.type = constants.PRESSABLE;
-  obj.useTitle = callback;
-  obj.withArrow = true;
-  obj.IconComponent = importAllResult.memo(() => {
-    if (null == callback) {
-      let tmp7 = closure_1_14(closure_1_19, {});
+  obj3.type = constants.PRESSABLE;
+  obj3.useTitle = callback;
+  obj3.withArrow = true;
+  obj3.IconComponent = noop.memo(() => {
+    if (null == closure_1) {
+      let tmp7 = closure_2_14(GuildSelectDefaultIcon, {});
     } else {
-      const obj = { size: null, guild: null };
-      obj[0] = selectedGuildId(_undefined[18]).GuildIconSizes.SMALL_32;
-      obj[1] = tmp;
-      tmp7 = closure_1_14(callback(_undefined[18]), obj);
-      const tmp5 = callback(_undefined[18]);
+      const obj = { size: GuildIcon.GuildIconSizes.SMALL_32, guild: tmp };
+      tmp7 = closure_2_14(GuildIconDefault, obj);
     }
     return tmp7;
   });
-  return callback3(closure_21, obj);
+  return closure_14(closure_21, obj3);
 });
-let closure_21 = importAllResult.memo((arg0) => {
+let closure_21 = noop.memo((arg0) => {
   ({ useDescription, useIsDisabled, useTrailing, variant, start, end, IconComponent } = arg0);
   ({ setting, onPress, useTitle, withArrow } = arg0);
-  let obj = useHighlightSettingItem;
-  let highlightSettingItem = obj.useHighlightSettingItem(setting);
+  let highlightSettingItem = useHighlightSettingItem.useHighlightSettingItem(setting);
   let description;
   const title = useTitle();
   if (useDescription != null) {
@@ -331,48 +311,42 @@ let closure_21 = importAllResult.memo((arg0) => {
   if (useTrailing != null) {
     trailing = useTrailing();
   }
-  obj = { label: title, subLabel: description, arrow: withArrow, variant, icon: null, onPress: null, disabled: null, trailing: null, start: null, end: null };
+  const obj2 = { label: title, subLabel: description, arrow: withArrow, variant, icon: null, onPress: null, disabled: null, trailing: null, start: null, end: null };
   let tmp10Result = null;
   if (null != IconComponent) {
-    obj = { IconComponent: null, variant: null };
-    obj[0] = IconComponent;
-    obj[1] = variant;
-    tmp10Result = tmp10(tmp(5605).TableRow.Icon, obj);
+    const obj3 = { IconComponent, variant };
+    tmp10Result = tmp10(tmp(5619).TableRow.Icon, obj3);
   }
-  obj[4] = tmp10Result;
-  obj[5] = onPress;
-  obj[6] = isDisabled;
+  obj2.icon = tmp10Result;
+  obj2.onPress = onPress;
+  obj2.disabled = isDisabled;
   let tmp12;
   if (null != trailing) {
-    tmp10Result = trailing;
+    let tmp10Result2 = trailing;
     if (typeof trailing === "string") {
-      obj1 = { text: null };
-      obj1[0] = trailing;
-      tmp10Result = tmp10(tmp(5605).TableRow.TrailingText, obj1);
+      const obj4 = { text: trailing };
+      tmp10Result2 = tmp10(tmp(5619).TableRow.TrailingText, obj4);
     }
-    tmp12 = tmp10Result;
+    tmp12 = tmp10Result2;
   }
-  obj[7] = tmp12;
-  obj[8] = start;
-  obj[9] = end;
-  const children = [closure_14(TableRowInner.TableRow, obj), ];
+  obj2.trailing = tmp12;
+  obj2.start = start;
+  obj2.end = end;
+  const children = [closure_1_14(TableRow.TableRow, obj2), ];
   if (highlightSettingItem) {
-    const obj2 = { start: null, end: null };
-    obj2[0] = start;
-    obj2[1] = end;
-    highlightSettingItem = tmp10(_modDef14699, obj2);
+    const obj5 = { start, end };
+    highlightSettingItem = tmp10(SettingListItemHighlightDefault, obj5);
   }
   children[1] = highlightSettingItem;
-  return closure_16(closure_15, { children });
+  return value2(__initData, { children });
 });
-let closure_22 = importAllResult.memo((arg0) => {
+let closure_22 = noop.memo((arg0) => {
   ({ useDescription, useIsDisabled, variant, start, end, IconComponent } = arg0);
   ({ setting, onValueChange, useTitle, useValue, hasIcon } = arg0);
-  let obj = useHighlightSettingItem;
-  let highlightSettingItem = obj.useHighlightSettingItem(setting);
+  let highlightSettingItem = useHighlightSettingItem.useHighlightSettingItem(setting);
   const title = useTitle();
   let description;
-  const value = useValue();
+  value = useValue();
   if (useDescription != null) {
     description = useDescription();
   }
@@ -380,80 +354,78 @@ let closure_22 = importAllResult.memo((arg0) => {
   if (useIsDisabled != null) {
     isDisabled = useIsDisabled();
   }
-  obj = { label: title, subLabel: description, icon: null, value: null, variant: null, disabled: null, onValueChange: null, start: null, end: null };
+  const obj2 = { label: title, subLabel: description, icon: null, value: null, variant: null, disabled: null, onValueChange: null, start: null, end: null };
   let tmp8Result = null;
   if (null != IconComponent) {
-    obj = { IconComponent: null, variant: null };
-    obj[0] = IconComponent;
-    obj[1] = variant;
-    tmp8Result = tmp8(tmp(5605).TableRow.Icon, obj);
+    const obj3 = { IconComponent, variant };
+    tmp8Result = tmp8(tmp(5619).TableRow.Icon, obj3);
   }
-  obj[2] = tmp8Result;
-  obj[3] = value;
-  obj[4] = variant;
-  obj[5] = isDisabled;
-  obj[6] = onValueChange;
-  obj[7] = start;
-  obj[8] = end;
-  tmp8Result = tmp8(tmp(7201).TableSwitchRow, obj);
-  let tmp8Result1 = tmp8Result;
+  obj2.icon = tmp8Result;
+  obj2.value = value;
+  obj2.variant = variant;
+  obj2.disabled = isDisabled;
+  obj2.onValueChange = onValueChange;
+  obj2.start = start;
+  obj2.end = end;
+  const tmp8Result3 = closure_1_14(TableSwitchRow.TableSwitchRow, obj2);
+  let tmp8Result4 = tmp8Result3;
   if (true === hasIcon) {
-    obj1 = { children: null };
-    obj1[0] = tmp8Result;
-    tmp8Result1 = tmp8(ForceSwitchIcons, obj1);
+    const obj4 = { children: tmp8Result3 };
+    tmp8Result4 = tmp8(ForceSwitchIcons, obj4);
   }
-  const children = [tmp8Result1, ];
+  const children = [tmp8Result4, ];
   if (highlightSettingItem) {
-    const obj2 = { start: null, end: null };
-    obj2[0] = start;
-    obj2[1] = end;
-    highlightSettingItem = tmp8(_modDef14699, obj2);
+    const obj5 = { start, end };
+    highlightSettingItem = tmp8(SettingListItemHighlightDefault, obj5);
   }
   children[1] = highlightSettingItem;
-  return closure_16(closure_15, { children });
+  return value2(__initData, { children });
 });
-let closure_24 = importAllResult.memo((arg0) => {
+let closure_24 = noop.memo((arg0) => {
   ({ setting, useTitle, useValue, useOptions, onValueChange } = arg0);
-  let obj = useHighlightSettingItem;
-  let highlightSettingItem = obj.useHighlightSettingItem(setting);
+  const tmp = closure_17();
+  let highlightSettingItem = useHighlightSettingItem.useHighlightSettingItem(setting);
   const title = useTitle();
-  const value = useValue();
+  value = useValue();
   const options = useOptions();
   let combined = value;
   if (typeof value === "number") {
     let _HermesInternal = HermesInternal;
     combined = "" + value;
   }
-  obj = {
-    title,
-    defaultValue: combined,
-    onChange: onValueChange,
-    hasIcons: false,
-    children: options.map((label) => {
-      if (typeof label.value === "number") {
-        const _HermesInternal = HermesInternal;
-        let combined = "" + label.value;
-      } else {
-        combined = label.value;
-      }
-      return callback2(callback(table[24]).TableRadioRow, { value: combined, label: label.label, subLabel: label.subLabel, disabled: label.disabled }, label.value);
-    })
-  };
-  const children = [callback3(context2.TableRadioGroup, obj, combined), ];
+  const tmp10 = closure_1_14;
+  const tmp8 = value2;
+  const tmp9 = __initData;
+  const children = [
+    closure_1_14(TableRadioGroup.TableRadioGroup, {
+      title,
+      defaultValue: combined,
+      onChange: onValueChange,
+      hasIcons: false,
+      children: options.map((label) => {
+        if (typeof label.value === "number") {
+          const _HermesInternal = HermesInternal;
+          let combined = "" + label.value;
+        } else {
+          combined = label.value;
+        }
+        return closure_1_14(TableRadioRow.TableRadioRow, { value: combined, label: label.label, subLabel: label.subLabel, disabled: label.disabled }, label.value);
+      })
+    }, combined),
+
+  ];
   if (highlightSettingItem) {
-    obj = { start: true, end: true, style: null };
-    obj[2] = tmp.radioSettingHighlight;
-    highlightSettingItem = callback3(_modDef14699, obj);
+    const obj3 = { start: true, end: true, style: tmp.radioSettingHighlight };
+    highlightSettingItem = tmp10(SettingListItemHighlightDefault, obj3);
   }
   children[1] = highlightSettingItem;
-  return closure_16(closure_15, { children });
+  return tmp8(tmp9, { children });
 });
-let closure_25 = importAllResult.memo((arg0) => {
+let closure_25 = noop.memo((arg0) => {
   ({ variant, useTrailing, useIsDisabled, useDescription, start, end, IconComponent } = arg0);
   let trailing;
   ({ setting, useTitle } = arg0);
-  let obj = trailing(14698);
-  let highlightSettingItem = obj.useHighlightSettingItem(setting);
+  let highlightSettingItem = trailing(14724).useHighlightSettingItem(setting);
   trailing = undefined;
   const title = useTitle();
   if (useTrailing != null) {
@@ -468,82 +440,73 @@ let closure_25 = importAllResult.memo((arg0) => {
     isDisabled = useIsDisabled();
   }
   const items = [trailing];
-  const callback = importAllResult.useCallback(() => {
+  const callback = noop.useCallback(() => {
     if (null != trailing) {
-      trailing(closure_1_2[25]).copy(tmp);
-      const obj = trailing(closure_1_2[25]);
-      const result = trailing(closure_1_2[26]).presentCopiedToClipboard();
-      const obj2 = trailing(closure_1_2[26]);
+      ClipboardUtils.copy(tmp);
+      const result = ToastUtils.presentCopiedToClipboard();
     }
   }, items);
-  obj = { label: title, subLabel: description, onPress: null, variant: null, disabled: null, icon: null, trailing: null, start: null, end: null };
+  let obj2 = { label: title, subLabel: description, onPress: null, variant: null, disabled: null, icon: null, trailing: null, start: null, end: null };
   let tmp12 = null;
   if (null != trailing) {
     tmp12 = callback;
   }
-  obj[2] = tmp12;
-  obj[3] = variant;
-  obj[4] = isDisabled;
+  obj2.onPress = tmp12;
+  obj2.variant = variant;
+  obj2.disabled = isDisabled;
   let tmp11Result = null;
   if (null != IconComponent) {
-    obj = { IconComponent: null, variant: null };
-    obj[0] = IconComponent;
-    obj[1] = variant;
-    tmp11Result = tmp11(tmp(5605).TableRow.Icon, obj);
+    const obj3 = { IconComponent, variant };
+    tmp11Result = tmp11(tmp(5619).TableRow.Icon, obj3);
   }
-  obj[5] = tmp11Result;
-  tmp11Result = null;
+  obj2.icon = tmp11Result;
+  let tmp11Result2 = null;
   if (null != trailing) {
-    obj1 = { text: null };
-    obj1[0] = trailing;
-    tmp11Result = tmp11(tmp(5605).TableRow.TrailingText, obj1);
+    const obj4 = { text: trailing };
+    tmp11Result2 = tmp11(tmp(5619).TableRow.TrailingText, obj4);
   }
-  obj[6] = tmp11Result;
-  obj[7] = start;
-  obj[8] = end;
-  const children = [closure_14(trailing(5605).TableRow, obj), ];
+  obj2.trailing = tmp11Result2;
+  obj2.start = start;
+  obj2.end = end;
+  const children = [closure_14(trailing(5619).TableRow, obj2), ];
   if (highlightSettingItem) {
-    let obj2 = { start: null, end: null };
-    obj2[0] = start;
-    obj2[1] = end;
-    highlightSettingItem = tmp11(_modDef14699, obj2);
+    const obj5 = { start, end };
+    highlightSettingItem = tmp11(SettingListItemHighlightDefault, obj5);
   }
   children[1] = highlightSettingItem;
   return closure_16(closure_15, { children });
 });
-let closure_26 = importAllResult.memo((arg0) => {
+let closure_26 = noop.memo((arg0) => {
   ({ useValue, start, end } = arg0);
   ({ setting, useTitle, onValueChange, maximum } = arg0);
-  let obj = useHighlightSettingItem;
-  let highlightSettingItem = obj.useHighlightSettingItem(setting);
+  let highlightSettingItem = useHighlightSettingItem.useHighlightSettingItem(setting);
   const title = useTitle();
-  let value;
+  value = undefined;
   if (useValue != null) {
     value = useValue();
   }
-  obj = { label: title, start, end, subLabel: null };
-  obj = { style: callback5().slider, children: callback3(VolumeSliderDefault, { value, maxVolume: maximum, onValueChange, accessibilityLabel: title }) };
-  obj[3] = callback3(View, obj);
-  const children = [callback3(TableRowInner.TableRow, obj), ];
+  const obj2 = { label: title, start, end, subLabel: null };
+  const tmp4 = closure_17();
+  const tmp7 = value2;
+  const tmp8 = __initData;
+  const tmp9 = closure_1_14;
+  obj2.subLabel = closure_1_14(View, { style: closure_17().slider, children: closure_1_14(VolumeSliderDefault, { value, maxVolume: maximum, onValueChange, accessibilityLabel: title }) });
+  const children = [closure_1_14(TableRow.TableRow, obj2), ];
   if (highlightSettingItem) {
-    obj1 = { start: null, end: null };
-    obj1[0] = start;
-    obj1[1] = end;
-    highlightSettingItem = callback3(_modDef14699, obj1);
+    const obj4 = { start, end };
+    highlightSettingItem = tmp9(SettingListItemHighlightDefault, obj4);
   }
   children[1] = highlightSettingItem;
-  return closure_16(closure_15, { children });
+  return tmp7(tmp8, { children });
 });
-let closure_27 = importAllResult.memo((useTrailing) => {
+let closure_27 = noop.memo((useTrailing) => {
   useTrailing = useTrailing.useTrailing;
-  let onSlidingComplete;
-  let num;
   let num2;
   let num4;
   let num3;
   let onValueChange;
-  let callback2;
-  let first;
+  _objectWithoutProperties = undefined;
+  value = undefined;
   closure_8 = undefined;
   c9 = undefined;
   let callback1;
@@ -551,9 +514,9 @@ let closure_27 = importAllResult.memo((useTrailing) => {
   ({ start, end, useProps } = useTrailing);
   const title = useTrailing.useTitle();
   const props = useProps();
-  onSlidingComplete = props.onSlidingComplete;
+  const onSlidingComplete = props.onSlidingComplete;
   const step = props.step;
-  num = 0.1;
+  let num = 0.1;
   if (undefined !== step) {
     num = step;
   }
@@ -574,201 +537,198 @@ let closure_27 = importAllResult.memo((useTrailing) => {
     num3 = defaultValue;
   }
   onValueChange = props.onValueChange;
-  const tmp3 = callback2(props, num4);
-  callback2 = tmp3;
-  const tmp4 = callback5();
-  let obj = onSlidingComplete(num2[15]);
+  const tmp3 = _objectWithoutProperties(props, num4);
+  _objectWithoutProperties = tmp3;
+  const tmp4 = closure_17();
   const items = [c9];
-  const stateFromStores = obj.useStateFromStores(items, () => _undefined.locale);
-  const tmp8 = onValueChange(first.useState(() => {
+  const stateFromStores = onSlidingComplete(num2[15]).useStateFromStores(items, () => _undefined.locale);
+  const tmp8 = onValueChange(value.useState(() => {
     value = value.value;
     if (value == null) {
       value = num3;
     }
     return value;
   }), 2);
-  first = tmp8[0];
+  value = tmp8[0];
   closure_8 = tmp8[1];
-  [tmp11, c9] = onValueChange(first.useState(false), 2);
+  const obj = onSlidingComplete(num2[15]);
+  [tmp11, c9] = onValueChange(value.useState(false), 2);
   const items1 = [onValueChange];
-  const callback = first.useCallback(() => {
+  const callback = value.useCallback(() => {
     _undefined(true);
   }, []);
-  callback1 = first.useCallback((arg0) => {
-    callback(arg0);
+  callback1 = value.useCallback((arg0) => {
+    closure_8(arg0);
     if (onValueChange != null) {
       onValueChange(arg0);
     }
   }, items1);
   const items2 = [onSlidingComplete];
   const items3 = [callback1, onSlidingComplete];
-  callback2 = first.useCallback((arg0) => {
+  const callback2 = value.useCallback((arg0) => {
     _undefined(false);
     if (onSlidingComplete != null) {
       tmp2(arg0);
     }
   }, items2);
-  callback3 = first.useCallback((arg0) => {
+  callback3 = value.useCallback((arg0) => {
     callback1(arg0);
     if (onSlidingComplete != null) {
       onSlidingComplete(arg0);
     }
   }, items3);
   const items4 = [num3, callback3];
-  const items5 = [callback3, num4, num, first];
-  const callback4 = first.useCallback(() => callback3(num3), items4);
-  const items6 = [callback3, num2, num, first];
-  callback5 = first.useCallback(() => {
+  const items5 = [callback3, num4, num, value];
+  const callback4 = value.useCallback(() => callback3(num3), items4);
+  const items6 = [callback3, num2, num, value];
+  const callback5 = value.useCallback(() => {
     callback3(Math.min(num4, first + num));
-    const result = onSlidingComplete(num2[28]).triggerHapticFeedback(num(num2[29]).IMPACT_LIGHT);
+    const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
   }, items5);
   let trailing;
-  const callback6 = first.useCallback(() => {
+  const callback6 = value.useCallback(() => {
     callback3(Math.max(num2, first - num));
-    const result = onSlidingComplete(num2[28]).triggerHapticFeedback(num(num2[29]).IMPACT_LIGHT);
+    const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
   }, items6);
   if (useTrailing != null) {
     trailing = useTrailing();
   }
-  obj = { start, end, shadow: "none", border: "none", children: null };
-  obj = { style: tmp4.sliderTitle, children: null };
-  const items7 = [callback3(onSlidingComplete(num2[32]).Text, { variant: "text-md/semibold", children: title }), trailing];
-  obj[1] = items7;
-  const items8 = [callback4(closure_8, obj), ];
-  let tmp20Result = null != first;
+  const obj2 = { start, end, shadow: "none", border: "none", children: null };
+  const obj3 = { style: tmp4.sliderTitle, children: null };
+  const items7 = [closure_14(onSlidingComplete(num2[32]).Text, { variant: "text-md/semibold", children: title }), trailing];
+  obj3.children = items7;
+  const items8 = [closure_16(closure_8, obj3), ];
+  let tmp20Result = null != value;
   if (tmp20Result) {
     if (formatPercentResult == null) {
-      let tmp5Result = tmp5(tmp6[33]);
-      formatPercentResult = tmp5Result.formatPercent(stateFromStores, first);
+      formatPercentResult = tmp5(tmp6[33]).formatPercent(stateFromStores, value);
+      const tmp5Result = tmp5(tmp6[33]);
     }
-    obj1 = { variant: "text-sm/medium", color: "text-muted", children: null };
-    obj1[2] = formatPercentResult;
-    tmp20Result = tmp20(tmp5(tmp6[32]).Text, obj1);
+    const obj4 = { variant: "text-sm/medium", color: "text-muted", children: formatPercentResult };
+    tmp20Result = tmp20(tmp5(tmp6[32]).Text, obj4);
   }
   items8[1] = tmp20Result;
-  const items9 = [callback4(onSlidingComplete(num2[31]).Stack, { direction: "horizontal", justify: "space-between", children: items8 }), , ];
-  tmp5Result = tmp5(tmp6[34]);
+  const items9 = [closure_16(onSlidingComplete(num2[31]).Stack, { direction: "horizontal", justify: "space-between", children: items8 }), , ];
+  const tmp10 = onValueChange(value.useState(false), 2);
+  const tmp22 = closure_8;
   let slider;
-  if (tmp5Result.isAndroid()) {
+  if (tmp5Result2.isAndroid()) {
     slider = tmp4.slider;
   }
-  const obj2 = { style: slider, children: null };
-  const obj3 = {};
+  const obj5 = { style: slider, children: null };
+  const obj6 = {};
   const merged = Object.assign(tmp3);
-  obj3.accessibilityLabel = title;
-  obj3.step = num;
-  obj3.onValueChange = callback1;
-  obj3.value = first;
-  obj3.minimumValue = num2;
-  obj3.maximumValue = num4;
-  obj3.onSlidingStart = callback;
-  obj3.onSlidingComplete = callback2;
-  obj3.startIcon = callback3(onSlidingComplete(num2[36]).PressableOpacity, { accessible: false, onPress: callback6, children: startIcon });
-  obj3.endIcon = callback3(onSlidingComplete(num2[36]).PressableOpacity, { accessible: false, onPress: callback5, children: endIcon });
-  obj2[1] = callback3(onSlidingComplete(num2[35]).Slider, obj3);
-  items9[1] = callback3(closure_8, obj2);
+  obj6.accessibilityLabel = title;
+  obj6.step = num;
+  obj6.onValueChange = callback1;
+  obj6.value = value;
+  obj6.minimumValue = num2;
+  obj6.maximumValue = num4;
+  obj6.onSlidingStart = callback;
+  obj6.onSlidingComplete = callback2;
+  obj6.startIcon = closure_14(onSlidingComplete(num2[36]).PressableOpacity, { accessible: false, onPress: callback6, children: startIcon });
+  obj6.endIcon = closure_14(onSlidingComplete(num2[36]).PressableOpacity, { accessible: false, onPress: callback5, children: endIcon });
+  obj5.children = closure_14(onSlidingComplete(num2[35]).Slider, obj6);
+  items9[1] = closure_14(tmp22, obj5);
   let tmp26 = !tmp11;
   if (!tmp11) {
-    tmp26 = first === num3;
+    tmp26 = value === num3;
   }
-  const obj4 = { children: null };
-  const obj5 = { disabled: tmp26, variant: "secondary", text: null, onPress: null };
+  const obj7 = { children: null };
+  const obj8 = { disabled: tmp26, variant: "secondary", text: null, onPress: null };
   const intl = tmp5(tmp6[16]).intl;
-  obj5[2] = intl.string(onSlidingComplete(num2[16]).t["3b//lO"]);
-  obj5[3] = callback4;
-  items9[2] = callback3(onSlidingComplete(num2[37]).Button, obj5);
-  obj4[0] = items9;
-  obj[4] = callback4(onSlidingComplete(num2[31]).Stack, obj4);
-  return callback3(onSlidingComplete(num2[30]).Card, obj);
+  obj8.text = intl.string(onSlidingComplete(num2[16]).t["3b//lO"]);
+  obj8.onPress = callback4;
+  items9[2] = closure_14(onSlidingComplete(num2[37]).Button, obj8);
+  obj7.children = items9;
+  obj2.children = closure_16(onSlidingComplete(num2[31]).Stack, obj7);
+  return closure_14(onSlidingComplete(num2[30]).Card, obj2);
 });
-let obj3 = { height: 20, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-let result = require("set").fileFinishedImporting("modules/settings/native/renderer/SettingRenderer.tsx");
+size = fn(2);
+let result = size.fileFinishedImporting("modules/settings/native/renderer/SettingRenderer.tsx");
 
 export { GuildSelectDefaultIcon };
 export const renderSettingItem = function renderSettingItem(item) {
   ({ setting, settingData, start, end } = item);
   const type = settingData.type;
   if (constants.GUILD_SELECTOR === type) {
-    let obj = {};
-    const merged = Object.assign(settingData);
-    obj.setting = setting;
-    obj.start = start;
-    obj.end = end;
-    return callback3(closure_20, obj);
-  } else if (tmp.ROUTE === type) {
-    obj = {};
-    const merged1 = Object.assign(settingData);
-    obj.start = start;
-    obj.end = end;
-    return callback3(closure_18, obj);
-  } else if (tmp.PRESSABLE === type) {
-    obj1 = {};
-    const merged2 = Object.assign(settingData);
-    obj1.start = start;
-    obj1.end = end;
-    obj1.setting = setting;
-    return callback3(closure_21, obj1);
-  } else if (tmp.TOGGLE === type) {
     const obj2 = {};
-    const merged3 = Object.assign(settingData);
+    const merged = Object.assign(settingData);
+    obj2.setting = setting;
     obj2.start = start;
     obj2.end = end;
-    obj2.setting = setting;
-    return callback3(closure_22, obj2);
-  } else if (tmp.STATIC === type) {
+    return closure_1_14(closure_20, obj2);
+  } else if (tmp.ROUTE === type) {
     const obj3 = {};
-    const merged4 = Object.assign(settingData);
+    const merged1 = Object.assign(settingData);
     obj3.start = start;
     obj3.end = end;
-    obj3.setting = setting;
-    return callback3(closure_25, obj3);
-  } else if (tmp.VOLUME_SLIDER === type) {
+    return closure_1_14(closure_18, obj3);
+  } else if (tmp.PRESSABLE === type) {
     const obj4 = {};
-    const merged5 = Object.assign(settingData);
+    const merged2 = Object.assign(settingData);
     obj4.start = start;
     obj4.end = end;
     obj4.setting = setting;
-    return callback3(closure_26, obj4);
-  } else if (tmp.RADIO === type) {
+    return closure_1_14(closure_21, obj4);
+  } else if (tmp.TOGGLE === type) {
     const obj5 = {};
-    const merged6 = Object.assign(settingData);
+    const merged3 = Object.assign(settingData);
+    obj5.start = start;
+    obj5.end = end;
     obj5.setting = setting;
-    return callback3(closure_24, obj5);
+    return closure_1_14(closure_22, obj5);
+  } else if (tmp.STATIC === type) {
+    const obj6 = {};
+    const merged4 = Object.assign(settingData);
+    obj6.start = start;
+    obj6.end = end;
+    obj6.setting = setting;
+    return closure_1_14(closure_25, obj6);
+  } else if (tmp.VOLUME_SLIDER === type) {
+    const obj7 = {};
+    const merged5 = Object.assign(settingData);
+    obj7.start = start;
+    obj7.end = end;
+    obj7.setting = setting;
+    return closure_1_14(closure_26, obj7);
+  } else if (tmp.RADIO === type) {
+    const obj8 = {};
+    const merged6 = Object.assign(settingData);
+    obj8.setting = setting;
+    return closure_1_14(closure_24, obj8);
   } else if (tmp.SLIDER === type) {
-    obj = {};
+    const obj = {};
     const merged7 = Object.assign(settingData);
     obj.start = start;
     obj.end = end;
     obj.setting = setting;
-    return callback3(closure_27, obj);
+    return closure_1_14(closure_27, obj);
   }
 };
-export const renderSettingSearchResultItem = function renderSettingSearchResultItem(item) {
-  const settingData = item.settingData;
-  const tmp = callback2(item, closure_4);
+export const renderSettingSearchResultItem = function renderSettingSearchResultItem(settingData) {
+  settingData = settingData.settingData;
+  const tmp = _objectWithoutProperties(settingData, closure_4);
   const type = settingData.type;
   if (constants.ROUTE === type) {
-    let obj = { settingData: null };
-    obj[0] = settingData;
+    const obj2 = { settingData };
     const merged = Object.assign(tmp);
-    return callback3(RouteSettingSearchResult, obj);
+    return closure_1_14(RouteSettingSearchResult, obj2);
   } else if (tmp2.PRESSABLE === type) {
-    obj = { settingData: null };
-    obj[0] = settingData;
+    const obj3 = { settingData };
     const merged1 = Object.assign(tmp);
-    return callback3(PressableSettingSearchResult, obj);
+    return closure_1_14(PressableSettingSearchResult, obj3);
   } else if (tmp2.STATIC === type) {
-    obj = { settingData: null };
-    obj[0] = settingData;
+    const obj = { settingData };
     const merged2 = Object.assign(tmp);
-    return callback3(StaticSettingSearchResult, obj);
+    return closure_1_14(StaticSettingSearchResult, obj);
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    error = new Error("[SettingRenderer] Found unsupported renderer type for setting: " + item.setting);
+    const error = new Error("[SettingRenderer] Found unsupported renderer type for setting: " + settingData.setting);
     throw error;
   }
 };
-export const renderSettingSearchResultPlaceholderItem = function renderSettingSearchResultPlaceholderItem(item) {
-  return callback3(SettingSearchResultPlaceholder, { start: item.start, end: item.end });
+export const renderSettingSearchResultPlaceholderItem = function renderSettingSearchResultPlaceholderItem(start) {
+  return closure_1_14(SettingSearchResultPlaceholder, { start: start.start, end: start.end });
 };

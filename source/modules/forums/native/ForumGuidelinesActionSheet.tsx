@@ -1,57 +1,57 @@
-// Module ID: 10272
-// Function ID: 10273
+// Module ID: 10299
+// Function ID: 10300
 // Name: ForumGuidelinesActionSheet
-// Dependencies: [32, 19, 17, 7273, 21, 4560, 576, 7885, 1611, 10273, 1115, 10274, 4527, 7123, 4976, 1114, 4387, 4714, 8630, 7150, 6627, 5123, 4556, 10255, 8407, 5075, 4550, 10272, 1896, 2]
+// Dependencies: [32, 19, 17, 7287, 21, 4574, 576, 7899, 1611, 10300, 1115, 10301, 4541, 7137, 4990, 1114, 4401, 4728, 8658, 7164, 6641, 5137, 4570, 10282, 8435, 5089, 4564, 10299, 1896, 2]
 // Exports: default, openForumGuidelinesActionSheet
 
-// Module 10272 (ForumGuidelinesActionSheet)
-import ThemesDefault from "Themes" /* 576 */;
+// Module 10299 (ForumGuidelinesActionSheet)
+import nativeDefault from "native" /* 576 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { FORUM_GUIDELINES_ACTION_SHEET as closure_6 } from "FORUM_GUIDELINES_ACTION_SHEET" /* 7273 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import LinkUtils from "LinkUtils" /* 4728 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8658 */;
+import ForumGuidelinesManagerDefault from "ForumGuidelinesManager" /* 10301 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
-createCacheKey = { scrollContainer: { paddingHorizontal: 16 }, header: { alignItems: "center", paddingTop: 20, paddingBottom: 24 }, headerTitle: { marginTop: 8 }, guidelinesContainer: null, footer: null, buttonWrapper: null, buttonPill: null, floatingButtonContainer: null, editButton: null, editText: null, editIcon: null };
-createCacheKey = { padding: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[3] = createCacheKey;
-createCacheKey[4] = { paddingBottom: 16 };
-createCacheKey[5] = { marginHorizontal: 16 };
-createCacheKey[6] = { borderRadius: ThemesDefault.radii.sm };
-let obj1 = { borderRadius: ThemesDefault.radii.sm };
-createCacheKey[7] = { marginTop: 16, position: "absolute", left: 16, right: 16, shadowColor: ThemesDefault.colors.BLACK, shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.25, shadowRadius: 4, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[8] = { display: "flex", flexDirection: "row", alignItems: "center", position: "absolute", top: 12, right: 0 };
-createCacheKey[9] = { marginRight: 4 };
-let obj2 = { marginTop: 16, position: "absolute", left: 16, right: 16, shadowColor: ThemesDefault.colors.BLACK, shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.25, shadowRadius: 4, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[10] = { color: ThemesDefault.colors.TEXT_BRAND };
-let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { color: ThemesDefault.colors.TEXT_BRAND };
-const result = require("set").fileFinishedImporting("modules/forums/native/ForumGuidelinesActionSheet.tsx");
+require = fn;
+const View = fn(17).View;
+let closure_6 = fn(7287).FORUM_GUIDELINES_ACTION_SHEET;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { scrollContainer: { paddingHorizontal: 16 }, header: { alignItems: "center", paddingTop: 20, paddingBottom: 24 }, headerTitle: { marginTop: 8 }, guidelinesContainer: { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm }, footer: { paddingBottom: 16 }, buttonWrapper: { marginHorizontal: 16 }, buttonPill: null, floatingButtonContainer: null, editButton: null, editText: null, editIcon: null };
+let obj3 = { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm };
+obj2.buttonPill = { borderRadius: nativeDefault.radii.sm };
+const rect = { marginTop: 16, position: "absolute", left: 16, right: 16, shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.25, shadowRadius: 4, borderRadius: nativeDefault.radii.sm };
+obj2.floatingButtonContainer = rect;
+obj2.editButton = { display: "flex", flexDirection: "row", alignItems: "center", position: "absolute", top: 12, right: 0 };
+obj2.editText = { marginRight: 4 };
+const obj4 = { borderRadius: nativeDefault.radii.sm };
+obj2.editIcon = { color: nativeDefault.colors.TEXT_BRAND };
+let closure_10 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/ForumGuidelinesActionSheet.tsx");
 
 export default function ForumGuidelinesActionSheet(channel) {
   channel = channel.channel;
   const onPress = channel.onPress;
   let bottom;
   let first;
-  let React;
+  noop = undefined;
   closure_5 = undefined;
   let pathname;
-  let callback;
-  const tmp = callback2();
-  let obj = channel(bottom[7]);
-  const canManageChannel = obj.useCanManageChannel(channel);
+  let ref;
+  const tmp = closure_10();
+  const canManageChannel = channel(bottom[7]).useCanManageChannel(channel);
   bottom = onPress(bottom[8])().bottom;
-  obj1 = React;
-  const tmp6 = first(React.useState(), 2);
+  const tmp6 = first(noop.useState(), 2);
   first = tmp6[0];
-  React = tmp6[1];
+  noop = tmp6[1];
   const items = [bottom, first];
-  const memo = React.useMemo(() => {
+  let obj = channel(bottom[7]);
+  const memo = noop.useMemo(() => {
     let sum;
     if (null != first) {
       let num = 0;
@@ -59,7 +59,7 @@ export default function ForumGuidelinesActionSheet(channel) {
         num = bottom;
       }
       sum = 72 + num + tmp + bottom;
-      obj = channel(bottom[10]);
+      obj = PlatformUtils;
     }
     return sum;
   }, items);
@@ -77,32 +77,31 @@ export default function ForumGuidelinesActionSheet(channel) {
     if (onPress != null) {
       tmp();
     }
-    onPress(bottom[12]).hideActionSheet(pathname);
+    ActionSheetActionCreatorsDefault.hideActionSheet(closure_6);
   }
   const items1 = [first];
   const items2 = [channel.id];
-  callback = obj1.useCallback((arg0, arg1) => {
+  const callback = obj2.useCallback((arg0, arg1) => {
     if (arg1 !== first) {
-      callback(arg1);
+      closure_4(arg1);
     }
   }, items1);
-  const effect = obj1.useEffect(() => {
-    onPress(bottom[11]).markAsSeen(channel.id);
+  const effect = obj2.useEffect(() => {
+    ForumGuidelinesManagerDefault.markAsSeen(channel.id);
   }, items2);
   let tmp14 = !tmp21Result;
   if (!tmp21Result) {
-    obj = { bottom: true, style: null, children: null };
-    obj[1] = tmp.footer;
-    obj = { grow: true, text: null, onPress: null, style: null, pillStyle: null };
+    const obj3 = { bottom: true, style: tmp.footer, children: null };
+    const obj5 = { grow: true, text: null, onPress: null, style: null, pillStyle: null };
     const intl = tmp2(tmp3[15]).intl;
-    obj[1] = intl.string(tmp2(tmp3[15]).t["NX+WJN"]);
-    obj[2] = handlePress;
-    ({ buttonWrapper: obj4[3], buttonPill: obj4[4] } = tmp);
-    obj[2] = callback(tmp2(tmp3[14]).BaseTextButton, obj);
-    tmp14 = callback(tmp2(tmp3[13]).SafeAreaPaddingView, obj);
+    obj5.text = intl.string(tmp2(tmp3[15]).t["NX+WJN"]);
+    obj5.onPress = handlePress;
+    ({ buttonWrapper: obj4.style, buttonPill: obj4.pillStyle } = tmp);
+    obj3.children = ref(tmp2(tmp3[14]).BaseTextButton, obj5);
+    tmp14 = ref(tmp2(tmp3[13]).SafeAreaPaddingView, obj3);
   }
   const items3 = [bottom, tmp21Result];
-  const memo1 = obj1.useMemo(() => {
+  const memo1 = obj2.useMemo(() => {
     let num = 0;
     if (closure_5) {
       num = bottom + 40 + 32;
@@ -111,86 +110,82 @@ export default function ForumGuidelinesActionSheet(channel) {
   }, items3);
   const tmp8 = onPress(bottom[9])();
   pathname = channel(bottom[16]).useLocation().pathname;
-  callback = obj1.useRef(true);
+  ref = obj2.useRef(true);
   const items4 = [pathname, channel.id];
-  const effect1 = obj1.useEffect(() => {
-    const tryParseChannelPathResult = channel(bottom[17]).tryParseChannelPath(pathname);
+  const effect1 = obj2.useEffect(() => {
+    const tryParseChannelPathResult = LinkUtils.tryParseChannelPath(pathname);
     if (!ref.current) {
       if (null != tryParseChannelPathResult) {
         if (tryParseChannelPathResult.channelId !== channel.id) {
-          onPress(bottom[12]).hideActionSheet(pathname);
-          const obj2 = onPress(bottom[12]);
+          ActionSheetActionCreatorsDefault.hideActionSheet(closure_6);
         }
       }
     }
     ref.current = false;
   }, items4);
   const items5 = [channel.id];
-  const callback1 = obj1.useCallback(() => {
-    onPress(bottom[12]).hideActionSheet(pathname);
-    const obj = onPress(bottom[12]);
-    onPress(bottom[18]).open(channel.id);
+  const callback1 = obj2.useCallback(() => {
+    ActionSheetActionCreatorsDefault.hideActionSheet(closure_6);
+    ChannelSettingsActionCreatorsDefault.open(channel.id);
   }, items5);
-  obj1 = { scrollable: true, contentHeight: tmp11, footer: tmp14, onDismiss: channel.onClose, children: null };
-  let obj2 = { style: tmp.scrollContainer, scrollIndicatorInsets: { bottom }, contentContainerStyle: { paddingBottom: memo1 }, onContentSizeChange: callback, children: null };
-  const obj3 = { style: tmp.header, children: null };
+  const obj6 = { scrollable: true, contentHeight: tmp11, footer: tmp14, onDismiss: channel.onClose, children: null };
+  const obj7 = { style: tmp.scrollContainer, scrollIndicatorInsets: { bottom }, contentContainerStyle: { paddingBottom: memo1 }, onContentSizeChange: callback, children: null };
+  const obj8 = { style: tmp.header, children: null };
   let tmp19Result = canManageChannel;
   if (canManageChannel) {
-    const obj4 = { accessibilityLabel: null, accessibilityRole: "button", style: null, onPress: null, children: null };
+    const obj9 = { accessibilityLabel: null, accessibilityRole: "button", style: null, onPress: null, children: null };
     const intl2 = tmp2(tmp3[15]).intl;
-    obj4[0] = intl2.string(tmp2(tmp3[15]).t.bt75uw);
-    obj4[2] = tmp.editButton;
-    obj4[3] = callback1;
-    const obj5 = { style: null, variant: "text-sm/medium", color: "text-brand", children: null };
-    obj5[0] = tmp.editText;
+    obj9.accessibilityLabel = intl2.string(tmp2(tmp3[15]).t.bt75uw);
+    obj9.style = tmp.editButton;
+    obj9.onPress = callback1;
+    const obj10 = { style: tmp.editText, variant: "text-sm/medium", color: "text-brand", children: null };
     const intl3 = tmp2(tmp3[15]).intl;
-    obj5[3] = intl3.string(tmp2(tmp3[15]).t.bt75uw);
-    const items6 = [tmp21(tmp2(tmp3[22]).Text, obj5), ];
-    const obj6 = { color: null, size: "xs" };
-    obj6[0] = tmp.editIcon.color;
-    items6[1] = tmp21(tmp2(tmp3[23]).PencilIcon, obj6);
-    obj4[4] = items6;
-    tmp19Result = tmp19(tmp2(tmp3[21]).PressableOpacity, obj4);
+    obj10.children = intl3.string(tmp2(tmp3[15]).t.bt75uw);
+    const items6 = [tmp21(tmp2(tmp3[22]).Text, obj10), ];
+    const obj11 = { color: tmp.editIcon.color, size: "xs" };
+    items6[1] = tmp21(tmp2(tmp3[23]).PencilIcon, obj11);
+    obj9.children = items6;
+    tmp19Result = tmp19(tmp2(tmp3[21]).PressableOpacity, obj9);
   }
   const items7 = [tmp19Result, , ];
-  const obj7 = { IconComponent: null };
-  let tmp5Result = tmp5(tmp3[24]);
-  obj7[0] = channel(bottom[25]).BookCheckIcon;
-  items7[1] = callback(tmp5Result, obj7);
-  const obj8 = { style: tmp.headerTitle, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const obj12 = { IconComponent: null };
+  const tmp20 = closure_9;
+  const tmp2Result = channel(bottom[16]);
+  obj12.IconComponent = channel(bottom[25]).BookCheckIcon;
+  items7[1] = ref(onPress(bottom[24]), obj12);
+  const obj13 = { style: tmp.headerTitle, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl4 = tmp2(tmp3[15]).intl;
-  obj8[3] = intl4.string(channel(bottom[15]).t["4d4T4l"]);
-  items7[2] = callback(channel(bottom[22]).Text, obj8);
-  obj3[1] = items7;
-  const items8 = [closure_8(closure_5, obj3), ];
-  const obj9 = { style: tmp.guidelinesContainer, children: null };
-  const obj10 = { variant: "text-md/medium", color: "text-default", children: null };
-  tmp5Result = tmp5(tmp3[26]);
-  obj10[2] = tmp5Result.parseForumPostGuidelines(channel.topic, true, { channelId: channel.id, allowHeading: true, allowList: true, allowLinks: true });
-  obj9[1] = callback(channel(bottom[22]).Text, obj10);
-  items8[1] = callback(closure_5, obj9);
-  obj2[4] = items8;
-  obj1[4] = closure_8(channel(bottom[20]).BottomSheetScrollView, obj2);
-  const children = [callback(channel(bottom[19]).BottomSheet, obj1), ];
+  obj13.children = intl4.string(channel(bottom[15]).t["4d4T4l"]);
+  items7[2] = ref(channel(bottom[22]).Text, obj13);
+  obj8.children = items7;
+  const items8 = [closure_8(closure_5, obj8), ];
+  const obj14 = { style: tmp.guidelinesContainer, children: null };
+  const obj15 = { variant: "text-md/medium", color: "text-default", children: null };
+  const tmp5Result = onPress(bottom[24]);
+  obj15.children = onPress(bottom[26]).parseForumPostGuidelines(channel.topic, true, { channelId: channel.id, allowHeading: true, allowList: true, allowLinks: true });
+  obj14.children = ref(channel(bottom[22]).Text, obj15);
+  items8[1] = ref(closure_5, obj14);
+  obj7.children = items8;
+  obj6.children = closure_8(channel(bottom[20]).BottomSheetScrollView, obj7);
+  const children = [ref(channel(bottom[19]).BottomSheet, obj6), ];
   if (tmp21Result) {
-    const obj12 = { grow: true, style: null, pillStyle: null, text: null, onPress: null };
+    const obj17 = { grow: true, style: null, pillStyle: null, text: null, onPress: null };
     const items10 = [tmp.floatingButtonContainer, ];
-    const obj13 = { bottom: null };
-    obj13[0] = bottom + 16;
-    items10[1] = obj13;
-    obj12[1] = items10;
-    obj12[2] = tmp.buttonPill;
+    const obj18 = { bottom: bottom + 16 };
+    items10[1] = obj18;
+    obj17.style = items10;
+    obj17.pillStyle = tmp.buttonPill;
     const intl5 = tmp2(tmp3[15]).intl;
-    obj12[3] = intl5.string(tmp2(tmp3[15]).t["NX+WJN"]);
-    obj12[4] = handlePress;
-    tmp21Result = tmp21(tmp2(tmp3[14]).BaseTextButton, obj12);
+    obj17.text = intl5.string(tmp2(tmp3[15]).t["NX+WJN"]);
+    obj17.onPress = handlePress;
+    tmp21Result = tmp21(tmp2(tmp3[14]).BaseTextButton, obj17);
   }
   children[1] = tmp21Result;
-  return closure_8(closure_9, { children });
+  return closure_8(tmp20, { children });
 };
 export const openForumGuidelinesActionSheet = function openForumGuidelinesActionSheet(arg0) {
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = {};
+  const obj = ActionSheetActionCreatorsDefault;
+  const obj2 = {};
   const merged = Object.assign(arg0);
-  obj.openLazy(asyncRequireImpl(10272, dependencyMap.paths), closure_6, obj);
+  obj.openLazy(asyncRequireImpl(10299, dependencyMap.paths), closure_6, obj2);
 };

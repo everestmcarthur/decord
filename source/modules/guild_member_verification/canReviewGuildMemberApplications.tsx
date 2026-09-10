@@ -1,46 +1,49 @@
-// Module ID: 7264
-// Function ID: 7265
+// Module ID: 7278
+// Function ID: 7279
 // Name: canReviewGuildMemberApplications
-// Dependencies: [1979, 4199, 1074, 504, 5058, 2]
+// Dependencies: [1979, 4212, 1074, 504, 5072, 2]
 // Exports: canReviewGuildMemberApplications, useCanReviewGuildMemberApplications
 
-// Module 7264 (canReviewGuildMemberApplications)
-import closure_2 from "createGuildRecordFromRust" /* 1979 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4199 */;
-import ME from "ME" /* 1074 */;
+// Module 7278 (canReviewGuildMemberApplications)
+import GuildStore from "GuildStore" /* 1979 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
 
-const require = arg1;
-({ GuildFeatures: c4, Permissions: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/canReviewGuildMemberApplications.tsx");
+const require = globalThis.__r;
 
-export const canReviewGuildMemberApplications = function canReviewGuildMemberApplications(c0) {
-  guild = guild.getGuild(c0);
+const require = fn;
+const Constants = fn(1074);
+({ GuildFeatures: closure_4, Permissions: hasOwnProperty } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_member_verification/canReviewGuildMemberApplications.tsx");
+
+export const canReviewGuildMemberApplications = function canReviewGuildMemberApplications(arg0) {
+  const guild = GuildStore.getGuild(arg0);
   let tmp2 = null != guild;
   if (tmp2) {
     const features = guild.features;
     let hasItem = features.has(constants.MEMBER_VERIFICATION_MANUAL_APPROVAL);
     if (hasItem) {
-      hasItem = closure_3.can(constants2.KICK_MEMBERS, guild);
+      hasItem = PermissionStore.can(constants2.KICK_MEMBERS, guild);
     }
     tmp2 = hasItem;
   }
   return tmp2;
 };
 export const useCanReviewGuildMemberApplications = function useCanReviewGuildMemberApplications(guildId) {
-  const _require = guildId;
-  const items = [closure_2];
-  const stateFromStores = _require(504).useStateFromStores(items, () => closure_1_2.getGuild(closure_0));
+  _require = guildId;
+  const items = [GuildStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
   let hasItem = null != stateFromStores;
   if (hasItem) {
     const features = stateFromStores.features;
     hasItem = features.has(constants.MEMBER_VERIFICATION_MANUAL_APPROVAL);
   }
   if (hasItem) {
-    hasItem = closure_3.can(constants2.KICK_MEMBERS, stateFromStores);
+    hasItem = PermissionStore.can(constants2.KICK_MEMBERS, stateFromStores);
   }
   if (hasItem) {
-    hasItem = _require(5058).guildHasVerificationGate(stateFromStores);
-    const tmpResult = _require(5058);
+    hasItem = require("MemberVerificationUtils").guildHasVerificationGate(stateFromStores);
+    const tmpResult = require("MemberVerificationUtils");
   }
   return hasItem;
 };

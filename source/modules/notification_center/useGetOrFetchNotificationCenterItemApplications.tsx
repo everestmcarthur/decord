@@ -1,27 +1,27 @@
-// Module ID: 16418
-// Function ID: 16419
-// Name: set
-// Dependencies: [19, 7640, 7168, 2]
+// Module ID: 16449
+// Function ID: 16450
+// Name: useGetOrFetchNotificationCenterItemApplications
+// Dependencies: [19, 7654, 7182, 2]
 // Exports: useGetOrFetchNotificationCenterItemsApplications
 
-// Module 16418 (set)
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7168 */;
-import closure_2 from "noop" /* 19 */;
-import set from "set" /* 2 */;
+// Module 16449 (useGetOrFetchNotificationCenterItemApplications)
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7182 */;
+import noop from "module_19" /* 19 */;
 
-let items = [require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS, require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED, require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS, require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED];
+let items = [fn(7654).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS, fn(7654).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED, fn(7654).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS, fn(7654).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED];
 let set = new Set(items);
-const result = set.fileFinishedImporting("modules/notification_center/useGetOrFetchNotificationCenterItemApplications.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notification_center/useGetOrFetchNotificationCenterItemApplications.tsx");
 
 export const useGetOrFetchNotificationCenterItemsApplications = function useGetOrFetchNotificationCenterItemsApplications(stateFromStores1) {
   importDefault = stateFromStores1;
   let items = [stateFromStores1];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     set = new Set();
     const items = [];
-    const item = set.forEach((applicationId) => {
+    const item = stateFromStores1.forEach((applicationId) => {
       applicationId = applicationId.applicationId;
-      if (closure_1_3.has(applicationId.type)) {
+      if (set.has(applicationId.type)) {
         let hasItem = null == applicationId;
         if (!hasItem) {
           hasItem = set.has(applicationId);

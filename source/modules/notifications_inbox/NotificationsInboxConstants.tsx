@@ -1,63 +1,62 @@
-// Module ID: 8161
-// Function ID: 8162
-// Name: ANALYTICS_NAME
+// Module ID: 8187
+// Function ID: 8188
+// Name: NotificationsInboxConstants
 // Dependencies: [1074, 1090, 1114, 1971, 2]
 // Exports: getFilterMap, getNotificationsInboxGuild
 
-// Module 8161 (ANALYTICS_NAME)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import setDefault from "set" /* 1090 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 8187 (NotificationsInboxConstants)
+import Constants from "Constants" /* 1074 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import util from "util" /* 1114 */;
+import size from "module_2" /* 2 */;
 
-const NOTIFICATIONS_INBOX = ME.NOTIFICATIONS_INBOX;
+const NOTIFICATIONS_INBOX = Constants.NOTIFICATIONS_INBOX;
 let obj = { UNREAD: "UNREAD", TODAY: "TODAY", YESTERDAY: "YESTERDAY", OLDER: "OLDER" };
-obj = { ALL: "all", MENTIONS: "mentions", BOOKMARKS: "bookmarks" };
-obj = {};
-obj[obj.UNREAD] = getSystemLocale.t.sRUdB8;
-obj[obj.TODAY] = getSystemLocale.t.F4jZQs;
-obj[obj.YESTERDAY] = getSystemLocale.t.gnv4pE;
-obj[obj.OLDER] = getSystemLocale.t.exrPZv;
-const result = set.fileFinishedImporting("modules/notifications_inbox/NotificationsInboxConstants.tsx");
+const obj2 = { ALL: "all", MENTIONS: "mentions", BOOKMARKS: "bookmarks" };
+const obj3 = {};
+obj3[obj.UNREAD] = util.t.sRUdB8;
+obj3[obj.TODAY] = util.t.F4jZQs;
+obj3[obj.YESTERDAY] = util.t.gnv4pE;
+obj3[obj.OLDER] = util.t.exrPZv;
+const result = size.fileFinishedImporting("modules/notifications_inbox/NotificationsInboxConstants.tsx");
 
 export const ANALYTICS_NAME = "Notifications Inbox";
 export const NOTIFICATIONS_INBOX_RAW_GUILD_ID = "notifications_inbox_guild_id";
 export const GUILD_HEADER_HEIGHT = 88;
-export const INBOX_MESSAGE_AGE_THRESHOLD = setDefault.Millis.WEEK;
+export const INBOX_MESSAGE_AGE_THRESHOLD = DurationsDefault.Millis.WEEK;
 export const MAX_MESSAGES_PER_CHANNEL = 50;
 export const MAX_UNREAD_MESSAGES_PER_CHANNEL = 10;
 export const NOTIFICATIONS_INBOX_FEATURE = "notifications-inbox";
 export const getNotificationsInboxGuild = function getNotificationsInboxGuild(arg0) {
-  if (arg0 === obj.BOOKMARKS) {
-    const intl3 = getSystemLocale.intl;
-    let stringResult = intl3.string(getSystemLocale.t["2pAkDA"]);
+  if (arg0 === obj2.BOOKMARKS) {
+    const intl3 = util.intl;
+    let stringResult = intl3.string(util.t["2pAkDA"]);
     let tmp2 = require;
   } else if (arg0 === tmp.MENTIONS) {
-    const intl2 = getSystemLocale.intl;
-    stringResult = intl2.string(getSystemLocale.t.jbV6MM);
+    const intl2 = util.intl;
+    stringResult = intl2.string(util.t.jbV6MM);
     tmp2 = require;
   } else {
     tmp2 = require;
-    const intl = getSystemLocale.intl;
-    stringResult = intl.string(getSystemLocale.t.HcoRu0);
+    const intl = util.intl;
+    stringResult = intl.string(util.t.HcoRu0);
   }
-  obj = { id: NOTIFICATIONS_INBOX, name: stringResult, description: "", icon: "Array", features: "row" };
-  obj[4] = [];
+  const obj = { id: NOTIFICATIONS_INBOX, name: stringResult, description: "", icon: "Array", features: [] };
   return tmp2(1971).fromGuildBasic(obj);
 };
 export const MessageCategory = obj;
-export const InboxFilters = obj;
+export const InboxFilters = obj2;
 export const InboxReadState = { READ: "READ", UNREAD: "UNREAD" };
 export const InboxMessageType = { ALL_MESSAGES_CHANNEL: "ALL_MESSAGES_CHANNEL", MENTION: "MENTION", BOOKMARK: "BOOKMARK" };
-export const MESSAGE_CATEGORY_DISPLAY_MAP = obj;
+export const MESSAGE_CATEGORY_DISPLAY_MAP = obj3;
 export const getFilterMap = function getFilterMap() {
-  obj = {};
-  const intl = getSystemLocale.intl;
-  obj[obj.ALL] = intl.string(getSystemLocale.t.iWyjNt);
-  const intl2 = getSystemLocale.intl;
-  obj[obj.MENTIONS] = intl2.string(getSystemLocale.t.jbV6MM);
-  const intl3 = getSystemLocale.intl;
-  obj[obj.BOOKMARKS] = intl3.string(getSystemLocale.t["+rlGYW"]);
+  const obj = {};
+  const intl = util.intl;
+  obj[obj2.ALL] = intl.string(util.t.iWyjNt);
+  const intl2 = util.intl;
+  obj[obj2.MENTIONS] = intl2.string(util.t.jbV6MM);
+  const intl3 = util.intl;
+  obj[obj2.BOOKMARKS] = intl3.string(util.t["+rlGYW"]);
   return obj;
 };
 export const ChannelLoadState = { UNLOADED: "unloaded", LOADED: "loaded", LOADED_UNREAD: "loadedUnread" };

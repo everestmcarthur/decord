@@ -1,21 +1,22 @@
-// Module ID: 9588
-// Function ID: 9589
-// Name: useCanCurrentUserSpeakInChannel
-// Dependencies: [502, 504, 4707, 2]
+// Module ID: 9615
+// Function ID: 9616
+// Name: useCanSpeakInChannel
+// Dependencies: [502, 504, 4721, 2]
 // Exports: default
 
-// Module 9588 (useCanCurrentUserSpeakInChannel)
+// Module 9615 (useCanSpeakInChannel)
 import initialize from "initialize" /* 504 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4707 */;
-import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState" /* 4707 */;
-import closure_3 from "fetchFingerprint" /* 502 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4721 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/stage_channels/useCanSpeakInChannel.tsx");
+const useAudienceRequestToSpeakStateDefault = useAudienceRequestToSpeakState;
+
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/useCanSpeakInChannel.tsx");
 
 export default function useCanCurrentUserSpeakInChannel(arg0) {
-  const items = [closure_3];
+  const items = [AuthenticationStore];
   const stateFromStores = initialize.useStateFromStores(items, () => id.getId());
-  const obj = initialize;
   return useAudienceRequestToSpeakStateDefault(stateFromStores, arg0) === useAudienceRequestToSpeakState.RequestToSpeakStates.ON_STAGE;
 };

@@ -1,17 +1,17 @@
-// Module ID: 5903
-// Function ID: 5904
+// Module ID: 5917
+// Function ID: 5918
 // Name: DiamondIllocon
-// Dependencies: [21, 5587, 5904, 2]
+// Dependencies: [21, 5601, 5918, 2]
 // Exports: DiamondIllocon
 
-// Module 5903 (DiamondIllocon)
-import set from "set" /* 2 */;
+// Module 5917 (DiamondIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 5904 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5918 from "module_5918" /* 5918 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/DiamondIllocon.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/DiamondIllocon.native.tsx");
 
 export const DiamondIllocon = function DiamondIllocon(size) {
   let num = size.size;
@@ -19,13 +19,13 @@ export const DiamondIllocon = function DiamondIllocon(size) {
   if (num === undefined) {
     num = 64;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef5918 };
+  obj.source = obj2;
   const items = [{ width: num, height: num }];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { uri: metadataDefault });
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

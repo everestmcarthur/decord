@@ -1,22 +1,22 @@
-// Module ID: 9959
-// Function ID: 9960
-// Dependencies: [4607, 1434, 2]
+// Module ID: 9986
+// Function ID: 9987
+// Name: GoLiveVideoPresetResolutionExperiment
+// Dependencies: [4621, 1434, 2]
 
-// Module 9959
-import set from "set" /* 2 */;
-import RESOLUTION_720 from "RESOLUTION_720" /* 4607 */;
-import importDefaultResult from "getUnitId" /* 1434 */;
+// Module 9986 (GoLiveVideoPresetResolutionExperiment)
+import StreamSettingsConstants from "StreamSettingsConstants" /* 4621 */;
+import ApexExperiment from "apex/ApexExperiment" /* 1434 */;
+import size from "module_2" /* 2 */;
 
-const ApplicationStreamResolutions = RESOLUTION_720.ApplicationStreamResolutions;
-let obj = { videoPresetResolutionMax: ApplicationStreamResolutions.RESOLUTION_1440 };
-obj = { name: "2026-02-go-live-video-preset-resolution", kind: "user", defaultConfig: obj, variations: null };
-obj = { 1: null };
-const obj1 = {};
+const ApplicationStreamResolutions = StreamSettingsConstants.ApplicationStreamResolutions;
+const obj = { videoPresetResolutionMax: ApplicationStreamResolutions.RESOLUTION_1440 };
+const obj2 = { name: "2026-02-go-live-video-preset-resolution", kind: "user", defaultConfig: obj, variations: null };
+const obj3 = { 1: null };
+const obj4 = {};
 const merged = Object.assign(obj);
-obj1.videoPresetResolutionMax = ApplicationStreamResolutions.RESOLUTION_1080;
-obj[1] = obj1;
-obj[3] = obj;
-const importDefaultResultResult = importDefaultResult(obj);
-const result = set.fileFinishedImporting("modules/go_live/GoLiveVideoPresetResolutionExperiment.tsx");
+obj4.videoPresetResolutionMax = ApplicationStreamResolutions.RESOLUTION_1080;
+obj3[1] = obj4;
+obj2.variations = obj3;
+const result = size.fileFinishedImporting("modules/go_live/GoLiveVideoPresetResolutionExperiment.tsx");
 
-export default importDefaultResultResult;
+export default ApexExperiment(obj2);

@@ -1,23 +1,22 @@
-// Module ID: 5128
-// Function ID: 5129
-// Name: cancel
-// Dependencies: [568, 5129, 12, 5134, 1256, 2]
+// Module ID: 5142
+// Function ID: 5143
+// Name: Upload
+// Dependencies: [568, 5143, 12, 5148, 1256, 2]
 // Exports: isResolvedUpload
 
-// Module 5128 (cancel)
-import set from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
-import EventEmitter2 from "EventEmitter" /* 568 */;
+// Module 5142 (Upload)
+import _modDef12 from "module_12" /* 12 */;
+import _mod568 from "module_568" /* 568 */;
 import v1 from "v1" /* 1256 */;
-import items from "items" /* 5129 */;
-import getUploadFileSizeSumAll from "getUploadFileSizeSum" /* 5134 */;
+import UploadUtils from "UploadUtils" /* 5143 */;
+import FileUtilsAll from "FileUtils" /* 5148 */;
+import size from "module_2" /* 2 */;
 
-let obj = { REACT_NATIVE: 0, [0]: "REACT_NATIVE", WEB: 1, [1]: "WEB" };
-const EventEmitter = EventEmitter2.EventEmitter;
+const UploadPlatform = { REACT_NATIVE: 0, [0]: "REACT_NATIVE", WEB: 1, [1]: "WEB" };
+const EventEmitter = _mod568.EventEmitter;
 class Upload extends EventEmitter {
   constructor(arg0) {
     tmp5 = new Upload(tmp4, tmp3, tmp2, tmp);
-    // ThrowIfThisInitialized (0x7c)
     tmp5.allowOptimization = true;
     tmp5.item = global;
     if (global.platform === closure_4.REACT_NATIVE) {
@@ -29,10 +28,10 @@ class Upload extends EventEmitter {
       tmp5.id = uri;
       tmp11 = closure_0;
       tmp12 = closure_3;
-      obj3 = require("items");
-      obj = { uri: null, overrideFilename: null, overrideType: null };
-      ({ uri: obj4[0], filename: obj4[1], mimeType: obj4[2] } = global);
-      file = obj3.getFile(obj);
+      obj3 = closure_0(closure_3[1]);
+      obj1 = { uri: null, overrideFilename: null, overrideType: null };
+      ({ uri: obj4.uri, filename: obj4.overrideFilename, mimeType: obj4.overrideType } = global);
+      file = obj3.getFile(obj1);
       ({ filename: tmp5.filename, isImage: tmp5.isImage, isVideo: tmp5.isVideo, type: tmp5.mimeType } = file);
       ({ origin: tmp5.origin, durationSecs: tmp5.durationSecs, waveform: tmp5.waveform } = global);
       tmp9 = closure_3;
@@ -42,14 +41,14 @@ class Upload extends EventEmitter {
       if (id == null) {
         tmp6 = closure_1;
         tmp7 = closure_3;
-        obj = require("apply");
+        obj = closure_1(closure_3[2]);
         str = "upload";
         id = obj.uniqueId("upload");
       }
       tmp5.id = id;
       tmp8 = closure_2;
       tmp9 = closure_3;
-      obj2 = require("getUploadFileSizeSum");
+      obj2 = closure_2(closure_3[3]);
       tmp5.classification = obj2.classifyFile(global.file);
       str2 = "image";
       tmp5.isImage = "image" === tmp5.classification;
@@ -60,7 +59,7 @@ class Upload extends EventEmitter {
       tmp5.origin = global.origin;
     }
     ({ isThumbnail: tmp5.isThumbnail, clip: tmp5.clip } = global);
-    obj5 = require("v1");
+    obj5 = closure_0(tmp9[4]);
     tmp5.uniqueId = obj5.v4();
     tmp5.spoiler = false;
     tmp5.description = null;
@@ -74,10 +73,10 @@ prototype["cancel"] = function cancel() {
 prototype["resetState"] = function resetState() {
   return this;
 };
-const result = set.fileFinishedImporting("lib/uploader/Upload.tsx");
+const result = size.fileFinishedImporting("lib/uploader/Upload.tsx");
 
 export default Upload;
-export const UploadPlatform = obj;
+export { UploadPlatform };
 export const isResolvedUpload = function isResolvedUpload(file) {
   return undefined !== file.isVideo && undefined !== file.isImage;
 };

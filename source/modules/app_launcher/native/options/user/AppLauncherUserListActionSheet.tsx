@@ -1,44 +1,55 @@
-// Module ID: 12189
-// Function ID: 12190
-// Name: EmptyStateWithSnowflakeQuery
-// Dependencies: [19, 1482, 21, 4560, 4527, 7521, 1178, 12172, 1114, 12170, 12190, 11593, 12171, 5605, 2]
+// Module ID: 12215
+// Function ID: 12216
+// Name: AppLauncherUserListActionSheet
+// Dependencies: [19, 1482, 21, 4574, 4541, 7535, 1178, 12198, 1114, 12196, 12216, 11619, 12197, 5619, 2]
 // Exports: default
 
-// Module 12189 (EmptyStateWithSnowflakeQuery)
-import closure_3 from "noop" /* 19 */;
-import { DEFAULT_CONTENT_PADDING } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1482 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12215 (AppLauncherUserListActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import TableRow from "TableRow" /* 5619 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = fn;
 function EmptyStateWithSnowflakeQuery(onPressRow) {
   onPressRow = onPressRow.onPressRow;
-  const tmp = callback();
+  const obj = {
+    contentContainerStyle: closure_6().emptyState,
+    data: null,
+    renderItem(label) {
+      return jsx(TableRow.TableRow, { label: label.item, start: true, end: true, onPress: onPressRow });
+    },
+    keyboardShouldPersistTaps: "always",
+    keyboardDismissMode: "on-drag"
+  };
   const items = [onPressRow.query];
-  return jsx(onPressRow(12171).AppLauncherList, {
-    contentContainerStyle: callback().emptyState,
-    data: items,
-    renderItem(item) {
-      return closure_1_4(onPressRow(closure_1_2[13]).TableRow, { label: item.item, start: true, end: true, onPress: onPressRow });
+  obj.data = items;
+  return jsx(onPressRow(12197).AppLauncherList, {
+    contentContainerStyle: closure_6().emptyState,
+    data: null,
+    renderItem(label) {
+      return jsx(TableRow.TableRow, { label: label.item, start: true, end: true, onPress: onPressRow });
     },
     keyboardShouldPersistTaps: "always",
     keyboardDismissMode: "on-drag"
   });
 }
+const DEFAULT_CONTENT_PADDING = fn(1482).DEFAULT_CONTENT_PADDING;
+const jsx = fn(21).jsx;
 const AppLauncherUserListActionSheet = "AppLauncherUserListActionSheet";
-let closure_6 = createCacheKey.createStyles({ emptyState: { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingTop: DEFAULT_CONTENT_PADDING, flex: 1 } });
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/options/user/AppLauncherUserListActionSheet.tsx");
+const createStyles = fn(4574);
+let closure_6 = createStyles.createStyles({ emptyState: { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingTop: DEFAULT_CONTENT_PADDING, flex: 1 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/options/user/AppLauncherUserListActionSheet.tsx");
 
 export default function AppLauncherUserListActionSheet(onUserPress) {
   onUserPress = onUserPress.onUserPress;
   const onActionSheetDismiss = onUserPress.onActionSheetDismiss;
   const channel = onUserPress.channel;
-  let callback;
   let callback1;
   const id = channel.id;
   const items = [onActionSheetDismiss];
-  callback = callback1.useCallback(() => {
-    onActionSheetDismiss(callback[4]).hideActionSheet(closure_1_5);
+  const callback = callback1.useCallback(() => {
+    ActionSheetActionCreatorsDefault.hideActionSheet(AppLauncherUserListActionSheet);
     onActionSheetDismiss();
   }, items);
   const items1 = [callback, onUserPress];
@@ -47,44 +58,35 @@ export default function AppLauncherUserListActionSheet(onUserPress) {
     callback();
   }, items1);
   const items2 = [callback1];
-  const callback2 = callback1.useCallback((text) => {
-    closure_0 = text;
-    let obj = onUserPress(callback[5]);
-    if (obj.isSnowflake(text)) {
-      obj = { query: null, onPressRow: null };
-      obj[0] = text;
-      obj[1] = function onPressRow(arg0) {
-        return closure_1_3({ user: closure_0 });
+  const callback2 = callback1.useCallback((query) => {
+    const user = query;
+    if (obj.isSnowflake(query)) {
+      const obj2 = {
+        query,
+        onPressRow() {
+            return callback1({ user });
+          }
       };
-      let tmp3Result = tmp3(closure_1_7, obj);
+      let tmp3Result = tmp3(EmptyStateWithSnowflakeQuery, obj2);
     } else {
-      obj = { style: null, lightSource: null, darkSource: null, title: null, body: null };
-      obj[0] = { paddingTop: 80 };
-      obj[1] = onActionSheetDismiss(tmp2[7]);
-      obj[2] = onActionSheetDismiss(tmp2[7]);
+      const obj3 = { style: { paddingTop: 80 }, lightSource: onActionSheetDismiss(tmp2[7]), darkSource: onActionSheetDismiss(tmp2[7]), title: null, body: null };
       const intl = tmp(tmp2[8]).intl;
-      obj[3] = intl.string(tmp(tmp2[8]).t.vYocDz);
+      obj3.title = intl.string(tmp(tmp2[8]).t.vYocDz);
       const intl2 = tmp(tmp2[8]).intl;
-      obj[4] = intl2.string(tmp(tmp2[8]).t.V6nAfF);
-      tmp3Result = tmp3(tmp(tmp2[6]).EmptyState, obj);
+      obj3.body = intl2.string(tmp(tmp2[8]).t.V6nAfF);
+      tmp3Result = tmp3(tmp(tmp2[6]).EmptyState, obj3);
     }
     return tmp3Result;
   }, items2);
-  let obj = { onDismiss: onActionSheetDismiss, option: onUserPress.option, contentContainerStyles: { paddingHorizontal: 0 }, children: null };
+  const obj = { onDismiss: onActionSheetDismiss, option: onUserPress.option, contentContainerStyles: { paddingHorizontal: 0 }, children: null };
   if (channel.isPrivate()) {
-    obj = { channelId: null, disableStickySections: true, hideTitle: true, headerShown: false, inActionSheet: true, onUserPress: null, opensUserProfileOnUserPress: false };
-    obj[0] = id;
-    obj[5] = callback1;
-    let tmp4Result = tmp4(tmp6(tmp5[10]), obj);
+    let obj2 = { channelId: id, disableStickySections: true, hideTitle: true, headerShown: false, inActionSheet: true, onUserPress: callback1, opensUserProfileOnUserPress: false };
+    let tmp4Result = tmp4(tmp6(tmp5[10]), obj2);
   } else {
-    obj = { channelId: null, guildId: null, searchable: true, searchableEmptyState: null, headerShown: false, opensUserProfileOnUserPress: false, onUserPress: null, inActionSheet: true, disableThemedGradient: true };
-    obj[0] = id;
-    obj[1] = channel.guild_id;
-    obj[3] = callback2;
-    obj[6] = callback1;
-    tmp4Result = tmp4(tmp6(tmp5[11]), obj);
+    let obj3 = { channelId: id, guildId: channel.guild_id, searchable: true, searchableEmptyState: callback2, headerShown: false, opensUserProfileOnUserPress: false, onUserPress: callback1, inActionSheet: true, disableThemedGradient: true };
+    tmp4Result = tmp4(tmp6(tmp5[11]), obj3);
   }
-  obj[3] = tmp4Result;
+  obj.children = tmp4Result;
   return jsx(onUserPress(callback[9]).AppLauncherCommandOptionActionSheet, { onDismiss: onActionSheetDismiss, option: onUserPress.option, contentContainerStyles: { paddingHorizontal: 0 }, children: null });
 };
 export const APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY = "AppLauncherUserListActionSheet";

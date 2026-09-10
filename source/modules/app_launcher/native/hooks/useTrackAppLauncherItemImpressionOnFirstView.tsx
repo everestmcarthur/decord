@@ -1,49 +1,41 @@
-// Module ID: 12105
-// Function ID: 12106
+// Module ID: 12131
+// Function ID: 12132
 // Name: useTrackAppLauncherItemImpressionOnFirstView
-// Dependencies: [19, 11220, 1484, 8773, 1250, 2]
+// Dependencies: [19, 11247, 1484, 8801, 1250, 2]
 // Exports: useTrackAppLauncherItemImpressionOnFirstView
 
-// Module 12105 (useTrackAppLauncherItemImpressionOnFirstView)
-import closure_2 from "noop" /* 19 */;
+// Module 12131 (useTrackAppLauncherItemImpressionOnFirstView)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import useTrackImpression from "useTrackImpression" /* 8801 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/hooks/useTrackAppLauncherItemImpressionOnFirstView.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/useTrackAppLauncherItemImpressionOnFirstView.tsx");
 
 export const useTrackAppLauncherItemImpressionOnFirstView = function useTrackAppLauncherItemImpressionOnFirstView() {
-  let obj = entrypoint(11220);
-  entrypoint = obj.useAppLauncherContext().entrypoint;
-  dependencyMap = React.useRef(new Set());
+  entrypoint = entrypoint(11247).useAppLauncherContext().entrypoint;
+  let obj = entrypoint(11247);
+  dependencyMap = noop.useRef(new Set());
   const set = new Set();
-  const focusEffect = entrypoint(1484).useFocusEffect(React.useCallback(() => {
+  const focusEffect = entrypoint(1484).useFocusEffect(noop.useCallback(() => {
     const current = ref.current;
     current.clear();
   }, []));
-  obj = {
-    trackAppLauncherItemImpressionOnFirstView: React.useCallback((itemKey) => {
-      itemKey = itemKey.itemKey;
-      const current = ref.current;
-      ({ sectionName, sectionPosition, sectionOverallPosition, applicationId, commandId, applicationFlags } = itemKey);
-      if (!current.has(itemKey)) {
-        const current2 = ref.current;
-        current2.add(itemKey);
-        let obj = entrypoint(ref[3]);
-        obj = { type: null, name: null, properties: null };
-        obj[0] = entrypoint(ref[4]).ImpressionTypes.VIEW;
-        obj[1] = entrypoint(ref[4]).ImpressionNames.APP_LAUNCHER_ITEM;
-        obj = { source: null, section_name: null, section_position: null, section_overall_position: null, application_id: null, command_id: null, application_flags: null };
-        obj[0] = entrypoint;
-        obj[1] = sectionName;
-        obj[2] = sectionPosition;
-        obj[3] = sectionOverallPosition;
-        obj[4] = applicationId;
-        obj[5] = commandId;
-        obj[6] = applicationFlags;
-        obj[2] = obj;
-        obj.trackImpression(obj);
-      }
-    }, items)
-  };
-  items = [entrypoint];
-  return obj;
+  let obj3 = { trackAppLauncherItemImpressionOnFirstView: null };
+  const items = [entrypoint];
+  obj3.trackAppLauncherItemImpressionOnFirstView = noop.useCallback((itemKey) => {
+    itemKey = itemKey.itemKey;
+    const current = ref.current;
+    ({ sectionName, sectionPosition, sectionOverallPosition, applicationId, commandId, applicationFlags } = itemKey);
+    if (!current.has(itemKey)) {
+      const current2 = ref.current;
+      current2.add(itemKey);
+      const obj2 = { type: discord_common_AnalyticsUtils.ImpressionTypes.VIEW, name: discord_common_AnalyticsUtils.ImpressionNames.APP_LAUNCHER_ITEM, properties: null };
+      const obj3 = { source: entrypoint, section_name: sectionName, section_position: sectionPosition, section_overall_position: sectionOverallPosition, application_id: applicationId, command_id: commandId, application_flags: applicationFlags };
+      obj2.properties = obj3;
+      useTrackImpression.trackImpression(obj2);
+    }
+  }, items);
+  return obj3;
 };

@@ -1,31 +1,30 @@
-// Module ID: 12613
-// Function ID: 12614
+// Module ID: 12639
+// Function ID: 12640
 // Name: getMutualFriendsLabel
 // Dependencies: [1114, 2]
 // Exports: default
 
-// Module 12613 (getMutualFriendsLabel)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 12639 (getMutualFriendsLabel)
+import util from "util" /* 1114 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/user_profile/utils/getMutualFriendsLabel.tsx");
+const result = size.fileFinishedImporting("modules/user_profile/utils/getMutualFriendsLabel.tsx");
 
 export default function getMutualFriendsLabel(arg0) {
   let str = arg0;
   if (undefined === arg0) {
-    const intl3 = getSystemLocale.intl;
-    let stringResult = intl3.string(getSystemLocale.t["0mTJ3j"]);
+    const intl3 = util.intl;
+    let stringResult = intl3.string(util.t["0mTJ3j"]);
   } else if (0 === str) {
-    const intl2 = getSystemLocale.intl;
-    stringResult = intl2.string(getSystemLocale.t.n9g3ay);
+    const intl2 = util.intl;
+    stringResult = intl2.string(util.t.n9g3ay);
   } else {
-    const intl = getSystemLocale.intl;
+    const intl = util.intl;
     if (str == null) {
       str = "";
     }
-    const obj = { count: null };
-    obj[0] = str;
-    stringResult = intl.formatToPlainString(getSystemLocale.t["5s9jl+"], obj);
+    const obj = { count: str };
+    stringResult = intl.formatToPlainString(util.t["5s9jl+"], obj);
   }
   return stringResult;
 };

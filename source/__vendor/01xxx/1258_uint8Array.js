@@ -2,10 +2,12 @@
 // Function ID: 1259
 // Name: uint8Array
 // Dependencies: []
+// Exports: default
 
 // Module 1258 (uint8Array)
 const uint8Array = new Uint8Array(16);
-arg5.default = function rng() {
+
+export default function rng() {
   let tmp = getRandomValues;
   if (!getRandomValues) {
     const _crypto = crypto;
@@ -22,7 +24,7 @@ arg5.default = function rng() {
     tmp = getRandomValues;
     if (!getRandomValues) {
       const _Error = Error;
-      error = new Error("crypto.getRandomValues() not supported. See https://github.com/uuidjs/uuid#getrandomvalues-not-supported");
+      const error = new Error("crypto.getRandomValues() not supported. See https://github.com/uuidjs/uuid#getrandomvalues-not-supported");
       throw error;
     }
   }

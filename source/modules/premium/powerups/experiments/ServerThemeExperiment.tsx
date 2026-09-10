@@ -1,31 +1,30 @@
-// Module ID: 4489
-// Function ID: 4490
-// Name: experiment
-// Dependencies: [1074, 4474, 4490, 2]
+// Module ID: 4503
+// Function ID: 4504
+// Name: ServerThemeExperiment
+// Dependencies: [1074, 4488, 4504, 2]
 // Exports: getServerThemeEnabled, useServerThemeEnabled
 
-// Module 4489 (experiment)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import apexExperiment from "apexExperiment" /* 4490 */;
-import createExperiment from "createExperiment" /* 4474 */;
+// Module 4503 (ServerThemeExperiment)
+import Constants from "Constants" /* 1074 */;
+import ServerThemeApexShadowExperiment2 from "ServerThemeApexShadowExperiment" /* 4504 */;
+import createExperiment from "module_4488" /* 4488 */;
+import size from "module_2" /* 2 */;
 
-const EMPTY_STRING_SNOWFLAKE_ID = ME.EMPTY_STRING_SNOWFLAKE_ID;
+const EMPTY_STRING_SNOWFLAKE_ID = Constants.EMPTY_STRING_SNOWFLAKE_ID;
+const obj = { kind: "guild", id: "2026-04_server_theme", label: "Server Theme", defaultConfig: { enabled: false, inExperiment: false, gatesApex: false }, treatments: null };
 const items = [{ id: 0, label: "Control", config: { enabled: false, inExperiment: true, gatesApex: false } }, { id: 1, label: "Enable Server Theme", config: { enabled: true, inExperiment: true, gatesApex: false } }];
-let experiment = createExperiment.createExperiment({ kind: "guild", id: "2026-04_server_theme", label: "Server Theme", defaultConfig: { enabled: false, inExperiment: false, gatesApex: false }, treatments: items });
-const result = set.fileFinishedImporting("modules/premium/powerups/experiments/ServerThemeExperiment.tsx");
+obj.treatments = items;
+let experiment = createExperiment.createExperiment(obj);
+const result = size.fileFinishedImporting("modules/premium/powerups/experiments/ServerThemeExperiment.tsx");
 
 export const ServerThemeExperiment = experiment;
 export const getServerThemeEnabled = function getServerThemeEnabled(guildId, GuildPowerupsConstants) {
-  let obj = { guildId, location: GuildPowerupsConstants };
-  const currentConfig = experiment.getCurrentConfig(obj, { autoTrackExposure: false });
+  const currentConfig = experiment.getCurrentConfig({ guildId, location: GuildPowerupsConstants }, { autoTrackExposure: false });
   let enabled = currentConfig.enabled;
   if (null != guildId) {
-    const ServerThemeApexShadowExperiment = apexExperiment.ServerThemeApexShadowExperiment;
-    obj = { guildId: null, location: null };
-    obj[0] = guildId;
-    obj[1] = GuildPowerupsConstants;
-    let config = ServerThemeApexShadowExperiment.getConfig(obj);
+    const ServerThemeApexShadowExperiment = ServerThemeApexShadowExperiment2.ServerThemeApexShadowExperiment;
+    const obj2 = { guildId, location: GuildPowerupsConstants };
+    let config = ServerThemeApexShadowExperiment.getConfig(obj2);
   } else {
     config = { enabled: false, gatesApex: false };
   }
@@ -36,16 +35,14 @@ export const getServerThemeEnabled = function getServerThemeEnabled(guildId, Gui
   return enabled;
 };
 export const useServerThemeEnabled = function useServerThemeEnabled(guildId, useGuildPowerupNewPerkMarketingVersion) {
-  let obj = { guildId, location: useGuildPowerupNewPerkMarketingVersion };
-  experiment = experiment.useExperiment(obj, { autoTrackExposure: false });
+  experiment = experiment.useExperiment({ guildId, location: useGuildPowerupNewPerkMarketingVersion }, { autoTrackExposure: false });
   let enabled = experiment.enabled;
-  const ServerThemeApexShadowExperiment = apexExperiment.ServerThemeApexShadowExperiment;
+  const ServerThemeApexShadowExperiment = ServerThemeApexShadowExperiment2.ServerThemeApexShadowExperiment;
   let tmp2 = guildId;
   if (guildId == null) {
     tmp2 = EMPTY_STRING_SNOWFLAKE_ID;
   }
-  obj = { guildId: tmp2, location: useGuildPowerupNewPerkMarketingVersion };
-  const config = ServerThemeApexShadowExperiment.useConfig(obj);
+  const config = ServerThemeApexShadowExperiment.useConfig({ guildId: tmp2, location: useGuildPowerupNewPerkMarketingVersion });
   if (!experiment.inExperiment) {
     let tmp6 = null != guildId;
     if (tmp6) {

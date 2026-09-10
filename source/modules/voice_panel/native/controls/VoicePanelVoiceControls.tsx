@@ -1,167 +1,154 @@
-// Module ID: 17212
-// Function ID: 17213
-// Name: NOOP
-// Dependencies: [19, 17, 1957, 12275, 21, 4560, 576, 4296, 12276, 17040, 9587, 1935, 17104, 9987, 13796, 4973, 5687, 17213, 1114, 9997, 504, 12107, 4962, 6655, 1608, 5589, 7123, 12285, 2]
+// Module ID: 17243
+// Function ID: 17244
+// Name: VoicePanelVoiceControls
+// Dependencies: [19, 17, 1957, 12301, 21, 4574, 576, 4310, 12302, 17071, 9614, 1935, 17135, 10014, 13819, 4987, 5701, 17244, 1114, 10024, 504, 12133, 4976, 6669, 1608, 5603, 7137, 12311, 2]
 
-// Module 17212 (NOOP)
-import ThemesDefault from "Themes" /* 576 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 9587 */;
-import apexExperimentDefault from "apexExperiment" /* 9987 */;
-import dismissPanelDefault from "dismissPanel" /* 12276 */;
-import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 13796 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17040 */;
-import apexExperimentDefault2 from "apexExperiment" /* 17104 */;
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import { CONTROLS_DRAWER_HEADER_EXPANDED_SIZE } from "VoicePanelControlsModes" /* 12275 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importDefaultResult from "module_4296" /* 4296 */;
+// Module 17243 (VoicePanelVoiceControls)
+import nativeDefault from "native" /* 576 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6669 */;
+import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 9614 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 10014 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12302 */;
+import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 13819 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17071 */;
+import MobileGoLiveEntrypointExperimentDefault from "MobileGoLiveEntrypointExperiment" /* 17135 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
 
-require = arg1;
+require = fn;
 function NOOP() {
 
 }
-let c3 = importAllResult;
-({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
-let obj = { scrollView: null, scrollViewScreenReader: null, blurRegion: null };
-obj = { flex: 1, paddingHorizontal: ThemesDefault.space.PX_16 };
-obj[0] = obj;
-createCacheKey = { flex: 1, paddingHorizontal: ThemesDefault.space.PX_16, marginTop: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
-obj[1] = createCacheKey;
-obj[2] = { height: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
-let closure_8 = createCacheKey.createStyles(obj);
-let closure_9 = importDefaultResult.createAnimatedComponent(require("get ActivityIndicator").ScrollView);
-let closure_10 = importAllResult.memo((arg0) => {
+const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(12301).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj = { scrollView: { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 }, scrollViewScreenReader: null, blurRegion: null };
+const obj3 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 };
+obj.scrollViewScreenReader = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16, marginTop: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
+obj.blurRegion = { height: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
+let closure_8 = createStyles.createStyles(obj);
+let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(17).ScrollView);
+let closure_10 = noop.memo((arg0) => {
   ({ channel, openTab } = arg0);
-  const channelId = importAllResult.useContext(dismissPanelDefault).channelId;
+  const channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
   const tmp2 = useIsConnectedToVoiceChannelDefault(channelId);
-  let obj = getEmbeddedActivityLaunchability;
-  const embeddedActivityLaunchability = obj.useEmbeddedActivityLaunchability(channelId);
-  const DeveloperMode = explicitContentFromProto.DeveloperMode;
+  const embeddedActivityLaunchability = getEmbeddedActivityLaunchability.useEmbeddedActivityLaunchability(channelId);
+  const DeveloperMode = UserSettings.DeveloperMode;
   const setting = DeveloperMode.useSetting();
-  obj1 = apexExperimentDefault2;
-  const treatment = obj1.useConfig({ location: "VoicePanelVoiceControls" }).treatment;
-  let obj2 = apexExperimentDefault;
-  let nonContextualStreamOutputPresent = obj2.useConfig({ location: "VoicePanelVoiceControls" }).nonContextualStreamOutputPresent;
+  const treatment = MobileGoLiveEntrypointExperimentDefault.useConfig({ location: "VoicePanelVoiceControls" }).treatment;
+  let nonContextualStreamOutputPresent = MobileAudioOutputExperimentDefault.useConfig({ location: "VoicePanelVoiceControls" }).nonContextualStreamOutputPresent;
   const tmp6 = useSelectedActiveStreamDefault(channel);
   if (!tmp2) {
     const items = [tmp2, , , , , , ];
-    obj = { channel: null, connected: null };
-    obj[0] = channel;
-    obj[1] = tmp2;
-    items[1] = callback(tmp3(17213).GameConsoles, obj);
+    const obj4 = { channel, connected: tmp2 };
+    items[1] = hasOwnProperty(tmp3(17244).GameConsoles, obj4);
     if (nonContextualStreamOutputPresent) {
-      nonContextualStreamOutputPresent = tmp12(tmp3(17213).StreamVolumeItem, {});
+      nonContextualStreamOutputPresent = tmp12(tmp3(17244).StreamVolumeItem, {});
     }
     items[2] = nonContextualStreamOutputPresent;
-    obj = { title: null, hasIcons: true, children: null };
+    const obj5 = { title: null, hasIcons: true, children: null };
     const intl = tmp3(1114).intl;
-    obj[0] = intl.string(tmp3(1114).t.NiTd0e);
-    const items1 = [callback(tmp3(17213).DeafenSwitch, {}), , , , ];
-    obj1 = { channel: null, connected: null };
-    obj1[0] = channel;
-    obj1[1] = tmp2;
-    items1[1] = callback(tmp3(17213).AudioRouteButton, obj1);
-    obj2 = { channelId: null };
-    obj2[0] = channelId;
-    items1[2] = callback(tmp3(17213).HideNonVideoParticipants, obj2);
-    items1[3] = callback(tmp3(17213).HideSelfVideo, {});
+    obj5.title = intl.string(tmp3(1114).t.NiTd0e);
+    const items1 = [hasOwnProperty(tmp3(17244).DeafenSwitch, {}), , , , ];
+    const obj6 = { channel, connected: tmp2 };
+    items1[1] = hasOwnProperty(tmp3(17244).AudioRouteButton, obj6);
+    const obj7 = { channelId };
+    items1[2] = hasOwnProperty(tmp3(17244).HideNonVideoParticipants, obj7);
+    items1[3] = hasOwnProperty(tmp3(17244).HideSelfVideo, {});
     let tmp12Result = tmp2;
     if (tmp2) {
-      const obj3 = { channel: null, connected: null };
-      obj3[0] = channel;
-      obj3[1] = tmp2;
-      tmp12Result = tmp12(tmp3(17213).InviteButton, obj3);
+      const obj8 = { channel, connected: tmp2 };
+      tmp12Result = tmp12(tmp3(17244).InviteButton, obj8);
     }
     items1[4] = tmp12Result;
-    obj[2] = items1;
-    items[3] = tmp7(tmp3(5687).TableRowGroup, obj);
-    items[4] = callback(tmp3(9997).VoiceProcessingOptions, {});
-    const obj4 = { guildId: null };
-    obj4[0] = channel.guild_id;
-    const items2 = [callback(tmp3(17213).VoiceSettingsButton, obj4), ];
-    tmp12Result = null != tmp6;
-    if (tmp12Result) {
-      const obj5 = { stream: null };
-      obj5[0] = tmp6;
-      tmp12Result = tmp12(tmp3(17213).ReportStreamIssueButton, obj5);
+    obj5.children = items1;
+    items[3] = tmp7(tmp3(5701).TableRowGroup, obj5);
+    items[4] = hasOwnProperty(tmp3(10024).VoiceProcessingOptions, {});
+    const obj9 = { guildId: channel.guild_id };
+    const items2 = [hasOwnProperty(tmp3(17244).VoiceSettingsButton, obj9), ];
+    let tmp12Result2 = null != tmp6;
+    if (tmp12Result2) {
+      const obj10 = { stream: tmp6 };
+      tmp12Result2 = tmp12(tmp3(17244).ReportStreamIssueButton, obj10);
     }
-    const obj6 = { hasIcons: true, children: null };
-    items2[1] = tmp12Result;
-    obj6[1] = items2;
-    items[5] = tmp7(tmp3(5687).TableRowGroup, obj6);
+    const obj11 = { hasIcons: true, children: null };
+    items2[1] = tmp12Result2;
+    obj11.children = items2;
+    items[5] = tmp7(tmp3(5701).TableRowGroup, obj11);
     let tmp7Result = null;
     if (tmp2) {
       tmp7Result = null;
       if (setting) {
         tmp7Result = null;
-        if (embeddedActivityLaunchability === tmp3(9587).EmbeddedActivityLaunchability.CAN_LAUNCH) {
-          const obj7 = { title: null, hasIcons: true, children: null };
+        if (embeddedActivityLaunchability === tmp3(9614).EmbeddedActivityLaunchability.CAN_LAUNCH) {
+          const obj12 = { title: null, hasIcons: true, children: null };
           const intl2 = tmp3(1114).intl;
-          obj7[0] = intl2.string(tmp3(1114).t.J6rqB7);
-          const items3 = [tmp12(tmp3(17213).LeaveActivitiesButton, {}), tmp12(tmp3(17213).ShareActivityLogsButton, {}), tmp12(tmp3(17213).ToggleShowActivitiesDebugOverlay, {})];
-          obj7[2] = items3;
-          tmp7Result = tmp7(tmp3(5687).TableRowGroup, obj7);
+          obj12.title = intl2.string(tmp3(1114).t.J6rqB7);
+          const items3 = [tmp12(tmp3(17244).LeaveActivitiesButton, {}), tmp12(tmp3(17244).ShareActivityLogsButton, {}), tmp12(tmp3(17244).ToggleShowActivitiesDebugOverlay, {})];
+          obj12.children = items3;
+          tmp7Result = tmp7(tmp3(5701).TableRowGroup, obj12);
         }
       }
     }
-    const obj8 = { spacing: 24, children: null };
+    const obj13 = { spacing: 24, children: null };
     items[6] = tmp7Result;
-    obj8[1] = items;
-    return tmp7(tmp8, obj8);
+    obj13.children = items;
+    return tmp7(tmp8, obj13);
   } else {
-    const obj9 = { openTab: null };
-    obj9[0] = openTab;
-    const items4 = [callback(tmp3(17213).ActivitiesButton, obj9), ];
-    if (tmp3(17104).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT === treatment) {
-      const obj10 = { openTab: null };
-      obj10[0] = openTab;
-      let tmp9Result = tmp9(tmp3(17213).ChatButton, obj10);
-      const obj11 = { hasIcons: true, children: null };
+    const obj14 = { openTab };
+    const items4 = [hasOwnProperty(tmp3(17244).ActivitiesButton, obj14), ];
+    if (tmp3(17135).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT === treatment) {
+      const obj15 = { openTab };
+      let tmp9Result = tmp9(tmp3(17244).ChatButton, obj15);
+      const obj16 = { hasIcons: true, children: null };
       items4[1] = tmp9Result;
-      obj11[1] = items4;
-      tmp7Result = tmp7(tmp3(5687).TableRowGroup, obj11);
-    } else if (tmp3(17104).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD !== treatment) {
-      const obj12 = { channel: null };
-      obj12[0] = channel;
-      tmp9Result = tmp9(tmp3(17213).ScreenshareButton, obj12);
+      obj16.children = items4;
+      tmp7(tmp3(5701).TableRowGroup, obj16);
+    } else if (tmp3(17135).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD !== treatment) {
+      const obj17 = { channel };
+      tmp9Result = tmp9(tmp3(17244).ScreenshareButton, obj17);
     }
-    const obj13 = { channel: null };
-    obj13[0] = channel;
-    tmp9Result = tmp9(tmp3(17213).SoundboardButton, obj13);
+    const obj18 = { channel };
+    tmp9Result = tmp9(tmp3(17244).SoundboardButton, obj18);
   }
 });
-let closure_12 = { top: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
-let closure_13 = { code: "function VoicePanelVoiceControlsTsx1({offset:offset}){const{isScrolled}=this.__closure;isScrolled.set(offset>0);}" };
-const memoResult = importAllResult.memo(function VoicePanelVoiceControls(isVisible) {
+const scrollIndicatorInsets = { top: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
+const __initData = { code: "function VoicePanelVoiceControlsTsx1({offset:offset}){const{isScrolled}=this.__closure;isScrolled.set(offset>0);}" };
+let obj4 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16, marginTop: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelVoiceControls.tsx");
+
+export default noop.memo(function VoicePanelVoiceControls(isVisible) {
   isVisible = isVisible.isVisible;
   let channelId;
   let sharedValue;
   let gestureRef;
   let scrollerRef;
-  let tmp = callback2();
+  let tmp = closure_8();
   channelId = gestureRef.useContext(channelId(sharedValue[8])).channelId;
-  let obj = isVisible(sharedValue[20]);
   const items = [scrollerRef];
-  const stateFromStores = obj.useStateFromStores(items, () => scrollerRef.getChannel(channelId));
-  obj1 = isVisible(sharedValue[7]);
-  sharedValue = obj1.useSharedValue(false);
+  const stateFromStores = isVisible(sharedValue[20]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  const obj = isVisible(sharedValue[20]);
+  const tmp4 = isVisible;
+  sharedValue = isVisible(sharedValue[7]).useSharedValue(false);
   const fn = function s(offset) {
     const result = sharedValue.set(offset.offset > 0);
   };
   fn.__closure = { isScrolled: sharedValue };
   fn.__workletHash = 16758626276795;
-  fn.__initData = closure_13;
+  fn.__initData = __initData;
   const items1 = [sharedValue];
   const callback = gestureRef.useCallback(fn, items1);
   const tmp8 = gestureRef.useContext(isVisible(sharedValue[21]).ControlsGestureScrollLock)({ onScrollHandlerWorkletized: callback });
   gestureRef = tmp8.gestureRef;
   scrollerRef = tmp8.scrollerRef;
   ({ onScroll, animatedProps } = tmp8);
-  let obj2 = isVisible(sharedValue[22]);
-  const isScreenReaderEnabled = obj2.useIsScreenReaderEnabled();
+  const obj2 = isVisible(sharedValue[7]);
+  const isScreenReaderEnabled = isVisible(sharedValue[22]).useIsScreenReaderEnabled();
   const items2 = [isVisible, scrollerRef];
   const effect = gestureRef.useEffect(() => {
     let tmp = isVisible;
@@ -177,46 +164,38 @@ const memoResult = importAllResult.memo(function VoicePanelVoiceControls(isVisib
   }, items2);
   const items3 = [gestureRef];
   const memo = gestureRef.useMemo(() => {
-    const Gesture = isVisible(sharedValue[23]).Gesture;
+    const Gesture = LegacyBaseButton.Gesture;
     const NativeResult = Gesture.Native();
-    const enabledResult = NativeResult.enabled(!isVisible(sharedValue[24]).isMetaQuest());
+    const enabledResult = NativeResult.enabled(!MetaQuestUtils.isMetaQuest());
     let result = enabledResult;
     if (null != gestureRef) {
       result = enabledResult.simultaneousWithExternalGesture(tmp);
     }
     return result;
   }, items3);
-  obj = { gesture: memo, children: null };
-  obj = { style: isScreenReaderEnabled ? tmp.scrollViewScreenReader : tmp.scrollView, ref: scrollerRef, onScroll, animatedProps, onMomentumScrollEnd: NOOP, scrollEventThrottle: 8.333333333333334, scrollIndicatorInsets: closure_12, children: null };
+  const obj4 = { gesture: memo, children: null };
+  const obj5 = { style: isScreenReaderEnabled ? tmp.scrollViewScreenReader : tmp.scrollView, ref: scrollerRef, onScroll, animatedProps, onMomentumScrollEnd: NOOP, scrollEventThrottle: 8.333333333333334, scrollIndicatorInsets, children: null };
   let tmp14Result = !isScreenReaderEnabled;
   if (!isScreenReaderEnabled) {
-    obj1 = { style: null };
-    obj1[0] = tmp.blurRegion;
-    tmp14Result = tmp14(tmp2(tmp3[25]), obj1);
+    const obj6 = { style: tmp.blurRegion };
+    tmp14Result = tmp14(tmp2(tmp3[25]), obj6);
   }
   const items4 = [tmp14Result, , ];
-  tmp14Result = null != stateFromStores;
-  if (tmp14Result) {
-    obj2 = { channel: null, openTab: null };
-    obj2[0] = stateFromStores;
-    obj2[1] = isVisible.openTab;
-    tmp14Result = tmp14(closure_10, obj2);
+  let tmp14Result3 = null != stateFromStores;
+  if (tmp14Result3) {
+    const obj7 = { channel: stateFromStores, openTab: isVisible.openTab };
+    tmp14Result3 = tmp14(closure_10, obj7);
   }
-  items4[1] = tmp14Result;
-  items4[2] = closure_5(isVisible(sharedValue[26]).SafeAreaPaddingView, { bottom: true });
-  obj[7] = items4;
-  obj[1] = closure_6(closure_9, obj);
-  const children = [closure_5(isVisible(sharedValue[23]).GestureDetector, obj), ];
-  let tmp14Result1 = !isScreenReaderEnabled;
+  items4[1] = tmp14Result3;
+  items4[2] = closure_5(tmp4(sharedValue[26]).SafeAreaPaddingView, { bottom: true });
+  obj5.children = items4;
+  obj4.children = closure_6(closure_9, obj5);
+  const children = [closure_5(isVisible(sharedValue[23]).GestureDetector, obj4), ];
+  let tmp14Result4 = !isScreenReaderEnabled;
   if (!isScreenReaderEnabled) {
-    const obj3 = { shown: null, style: null };
-    obj3[0] = sharedValue;
-    obj3[1] = tmp.blurRegion;
-    tmp14Result1 = tmp14(tmp2(tmp3[27]), obj3);
+    const obj8 = { shown: sharedValue, style: tmp.blurRegion };
+    tmp14Result4 = tmp14(tmp2(tmp3[27]), obj8);
   }
-  children[1] = tmp14Result1;
+  children[1] = tmp14Result4;
   return closure_6(closure_7, { children });
 });
-let result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelVoiceControls.tsx");
-
-export default memoResult;

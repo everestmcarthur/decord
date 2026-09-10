@@ -1,40 +1,38 @@
-// Module ID: 12692
-// Function ID: 12693
+// Module ID: 12718
+// Function ID: 12719
 // Name: NewUserPermissionsOnboarding
-// Dependencies: [19, 17, 21, 4560, 5682, 576, 4556, 4975, 1114, 2]
+// Dependencies: [19, 17, 21, 4574, 5696, 576, 4570, 4989, 1114, 2]
 // Exports: default
 
-// Module 12692 (NewUserPermissionsOnboarding)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import Button from "Button" /* 4975 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12718 (NewUserPermissionsOnboarding)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ View: obj1, ScrollView: c3 } = get_ActivityIndicator);
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { scrollContainer: { minHeight: "100%" }, container: { flexGrow: 1, alignItems: "center", justifyContent: "center" }, alertContainer: null, alert: null, alertContent: null, alertTitle: null, alertSubtitle: null, buttonWrapper: null, primaryButtonContainer: null, trailing: null };
-createCacheKey = { paddingTop: 80 + require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT };
-createCacheKey[2] = createCacheKey;
-const merged = Object.assign(ThemesDefault.shadows.SHADOW_HIGH);
-createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.xl, borderWidth: 1, borderColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE, alignItems: "center", maxWidth: 290 };
-createCacheKey[4] = { paddingVertical: 24, paddingHorizontal: 24, alignItems: "center" };
-createCacheKey[5] = { paddingBottom: 8, textAlign: "center" };
-obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.xl, borderWidth: 1, borderColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE, alignItems: "center", maxWidth: 290 };
-createCacheKey[6] = { paddingBottom: ThemesDefault.space.PX_16, textAlign: "center" };
-createCacheKey[7] = { flexDirection: "row" };
-let obj2 = { paddingBottom: ThemesDefault.space.PX_16, textAlign: "center" };
-createCacheKey[8] = { marginBottom: ThemesDefault.space.PX_12 };
-const obj3 = { marginBottom: ThemesDefault.space.PX_12 };
-createCacheKey[9] = { flexGrow: 0, padding: ThemesDefault.space.PX_16 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const obj4 = { flexGrow: 0, padding: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/nuf/native/components/NewUserPermissionsOnboarding.android.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c2, ScrollView: c3 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { scrollContainer: { minHeight: "100%" }, container: { flexGrow: 1, alignItems: "center", justifyContent: "center" }, alertContainer: { paddingTop: 80 + fn(5696).NAV_BAR_HEIGHT }, alert: null, alertContent: null, alertTitle: null, alertSubtitle: null, buttonWrapper: null, primaryButtonContainer: null, trailing: null };
+let obj3 = { paddingTop: 80 + fn(5696).NAV_BAR_HEIGHT };
+const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
+obj2.alert = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.xl, borderWidth: 1, borderColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE, alignItems: "center", maxWidth: 290 };
+obj2.alertContent = { paddingVertical: 24, paddingHorizontal: 24, alignItems: "center" };
+obj2.alertTitle = { paddingBottom: 8, textAlign: "center" };
+let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.xl, borderWidth: 1, borderColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE, alignItems: "center", maxWidth: 290 };
+obj2.alertSubtitle = { paddingBottom: nativeDefault.space.PX_16, textAlign: "center" };
+obj2.buttonWrapper = { flexDirection: "row" };
+let obj5 = { paddingBottom: nativeDefault.space.PX_16, textAlign: "center" };
+obj2.primaryButtonContainer = { marginBottom: nativeDefault.space.PX_12 };
+const obj6 = { marginBottom: nativeDefault.space.PX_12 };
+obj2.trailing = { flexGrow: 0, padding: nativeDefault.space.PX_16 };
+let closure_6 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/nuf/native/components/NewUserPermissionsOnboarding.android.tsx");
 
 export default function NewUserPermissionsOnboarding(showSkip) {
   let flag = showSkip.showSkip;
@@ -43,47 +41,46 @@ export default function NewUserPermissionsOnboarding(showSkip) {
     flag = true;
   }
   ({ onAllow, onDontAllow } = showSkip);
-  const tmp = callback2();
-  let obj = { contentContainerStyle: tmp.scrollContainer, children: null };
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.alertContainer, children: null };
+  const tmp = closure_6();
+  const obj = { contentContainerStyle: tmp.scrollContainer, children: null };
+  const obj2 = { style: tmp.container, children: null };
+  const obj3 = { style: tmp.alertContainer, children: null };
   const items = [header, ];
-  obj1 = { style: tmp.alert, children: null };
-  const obj2 = { style: tmp.alertContent, children: null };
-  const items1 = [callback(Text.Text, { style: tmp.alertTitle, variant: "heading-lg/bold", color: "text-default", children: title }), callback(Text.Text, { style: tmp.alertSubtitle, variant: "text-sm/medium", color: "text-default", children: subtitle }), , ];
+  const obj4 = { style: tmp.alert, children: null };
+  const obj5 = { style: tmp.alertContent, children: null };
+  const items1 = [React4(Text_Text.Text, { style: tmp.alertTitle, variant: "heading-lg/bold", color: "text-default", children: title }), React4(Text_Text.Text, { style: tmp.alertSubtitle, variant: "text-sm/medium", color: "text-default", children: subtitle }), , ];
   const items2 = [tmp.buttonWrapper, ];
   let primaryButtonContainer = flag;
   if (flag) {
     primaryButtonContainer = tmp.primaryButtonContainer;
   }
-  const obj5 = { style: items2, children: null };
+  const obj8 = { style: items2, children: null };
   items2[1] = primaryButtonContainer;
-  const obj6 = { variant: "primary", size: "md", text: null, onPress: null, loading: null, grow: true };
+  const obj9 = { variant: "primary", size: "md", text: null, onPress: null, loading: null, grow: true };
   const intl = tmp6(1114).intl;
-  obj6[2] = intl.string(getSystemLocale.t["2nYlT2"]);
-  obj6[3] = onAllow;
-  obj6[4] = loading;
-  obj5[1] = callback(Button.Button, obj6);
-  items1[2] = callback(closure_2, obj5);
+  obj9.text = intl.string(util.t["2nYlT2"]);
+  obj9.onPress = onAllow;
+  obj9.loading = loading;
+  obj8.children = React4(components_Button_Button.Button, obj9);
+  items1[2] = React4(React2, obj8);
   if (flag) {
-    const obj7 = { style: null, children: null };
-    obj7[0] = tmp.buttonWrapper;
-    const obj8 = { variant: "secondary", text: null, onPress: null, grow: true };
+    const obj10 = { style: tmp.buttonWrapper, children: null };
+    const obj11 = { variant: "secondary", text: null, onPress: null, grow: true };
     const intl2 = tmp6(1114).intl;
-    obj8[1] = intl2.string(tmp6(1114).t["5Wxrcd"]);
-    obj8[2] = onDontAllow;
-    obj7[1] = tmp4(tmp6(4975).Button, obj8);
-    flag = tmp4(tmp5, obj7);
+    obj11.text = intl2.string(tmp6(1114).t["5Wxrcd"]);
+    obj11.onPress = onDontAllow;
+    obj10.children = tmp4(tmp6(4989).Button, obj11);
+    flag = tmp4(tmp5, obj10);
   }
-  const obj9 = { children: null };
+  const obj12 = { children: null };
   items1[3] = flag;
-  obj2[1] = items1;
-  obj1[1] = closure_5(closure_2, obj2);
-  items[1] = callback(closure_2, obj1);
-  obj9[0] = items;
-  obj[1] = closure_5(closure_2, obj9);
-  obj[1] = callback(closure_2, obj);
-  const items3 = [callback(closure_2, obj), callback(closure_2, { style: tmp.trailing, children: trailing })];
-  obj[1] = items3;
-  return closure_5(closure_3, obj);
+  obj5.children = items1;
+  obj4.children = hasOwnProperty(React2, obj5);
+  items[1] = React4(React2, obj4);
+  obj12.children = items;
+  obj3.children = hasOwnProperty(React2, obj12);
+  obj2.children = React4(React2, obj3);
+  const items3 = [React4(React2, obj2), React4(React2, { style: tmp.trailing, children: trailing })];
+  obj.children = items3;
+  return hasOwnProperty(React3, obj);
 };

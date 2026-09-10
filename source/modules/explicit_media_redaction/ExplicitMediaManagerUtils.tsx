@@ -1,13 +1,13 @@
-// Module ID: 7611
-// Function ID: 7612
-// Name: hasAttachmentsEmbedsComponentsOrSnapshots
+// Module ID: 7625
+// Function ID: 7626
+// Name: ExplicitMediaManagerUtils
 // Dependencies: [2]
 // Exports: hasAttachmentsEmbedsComponentsOrSnapshots
 
-// Module 7611 (hasAttachmentsEmbedsComponentsOrSnapshots)
-import set from "set" /* 2 */;
+// Module 7625 (ExplicitMediaManagerUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaManagerUtils.tsx");
+const result = size.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaManagerUtils.tsx");
 
 export const hasAttachmentsEmbedsComponentsOrSnapshots = function hasAttachmentsEmbedsComponentsOrSnapshots(message) {
   if (null == message) {

@@ -1,16 +1,16 @@
-// Module ID: 9246
-// Function ID: 9247
-// Name: create
+// Module ID: 9273
+// Function ID: 9274
+// Name: applications
 // Dependencies: [32, 1188, 1217, 2]
 
-// Module 9246 (create)
+// Module 9273 (applications)
 import _mod1188 from "module_1188" /* 1188 */;
-import now from "now" /* 1217 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType, MessageType as MessageType2, MessageType as MessageType3 } from "module_1188" /* 1188 */;
+import timestamp from "timestamp" /* 1217 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
-let obj = { UNSPECIFIED_DISCLOSURE: 0, [0]: "UNSPECIFIED_DISCLOSURE", IP_LOCATION: 1, [1]: "IP_LOCATION", DISPLAYS_ADVERTISEMENTS: 2, [2]: "DISPLAYS_ADVERTISEMENTS", PARTNER_SDK_DATA_SHARING_MESSAGE: 3, [3]: "PARTNER_SDK_DATA_SHARING_MESSAGE" };
+require = fn;
+const ApplicationDisclosureType = { UNSPECIFIED_DISCLOSURE: 0, [0]: "UNSPECIFIED_DISCLOSURE", IP_LOCATION: 1, [1]: "IP_LOCATION", DISPLAYS_ADVERTISEMENTS: 2, [2]: "DISPLAYS_ADVERTISEMENTS", PARTNER_SDK_DATA_SHARING_MESSAGE: 3, [3]: "PARTNER_SDK_DATA_SHARING_MESSAGE" };
+const MessageType = fn(1188).MessageType;
 class ApplicationUserRoleConnection$Type extends MessageType {
   constructor() {
     items = [, , , ];
@@ -18,34 +18,31 @@ class ApplicationUserRoleConnection$Type extends MessageType {
     items[1] = { no: 2, name: "platform_name", kind: "scalar", T: 9 };
     items[2] = { no: 3, name: "platform_username", kind: "scalar", T: 9 };
     items[3] = { no: 4, name: "version", kind: "scalar", T: 6 };
-    tmp = new tmp("discord_protos.discord_kkv_store_value_models.v1.ApplicationUserRoleConnection", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
-    return tmp;
+    tmp1 = new tmp("discord_protos.discord_kkv_store_value_models.v1.ApplicationUserRoleConnection", items, new.target);
+    return tmp1;
   }
 }
 const prototype = ApplicationUserRoleConnection$Type.prototype;
 prototype["create"] = function create(arr) {
-  obj = { metadata: {}, platformName: "", platformUsername: "", version: "0" };
+  const obj = { metadata: {}, platformName: "", platformUsername: "", version: "0" };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
     const result = _mod1188.reflectionMergePartial(this, obj, arr);
     const tmpResult = _mod1188;
   }
   return obj;
 };
-prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
-  obj = arg3;
+  let obj = arg3;
   if (arg3 == null) {
     obj = self.create();
   }
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         let binaryReadMap1Result = self.binaryReadMap1(obj.metadata, pos, readUnknownField);
@@ -65,25 +62,16 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -98,10 +86,8 @@ prototype["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
   let str2;
   if (pos.pos < sum) {
     while (true) {
-      let tmp4 = callback;
-      let tmp5 = callback(pos.tag(), 2);
+      let tmp5 = _slicedToArray(pos.tag(), 2);
       [tmp6, r10019] = tmp5;
-      let tmp7 = tmp2;
       let stringResult = tmp3;
       if (1 === tmp6) {
         stringResult = pos.string();
@@ -117,7 +103,7 @@ prototype["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
       str2 = stringResult;
     }
     const _globalThis = globalThis;
-    error = new Error("unknown map entry field for field discord_protos.discord_kkv_store_value_models.v1.ApplicationUserRoleConnection.metadata");
+    const error = new Error("unknown map entry field for field discord_protos.discord_kkv_store_value_models.v1.ApplicationUserRoleConnection.metadata");
     throw error;
   }
   if (str2 == null) {
@@ -133,8 +119,6 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(metadata, tag, w
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp3 = require;
-    let tmp4 = dependencyMap;
     let tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
     let tagResult1 = forkResult.tag(1, _mod1188.WireType.LengthDelimited);
@@ -168,7 +152,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(metadata, tag, w
 };
 let items = [{ no: 1, name: "metadata", kind: "map", K: 9, V: { kind: "scalar", T: 9 } }, { no: 2, name: "platform_name", kind: "scalar", T: 9 }, { no: 3, name: "platform_username", kind: "scalar", T: 9 }, { no: 4, name: "version", kind: "scalar", T: 6 }];
 const tmp6 = new "binaryReadMap1"("discord_protos.discord_kkv_store_value_models.v1.ApplicationUserRoleConnection", items, tmp4, tmp3, "create", "internalBinaryRead", tmp2, "internalBinaryWrite", tmp, ApplicationUserRoleConnection$Type);
-// ThrowIfThisInitialized (0x7c)
+const MessageType2 = fn(1188).MessageType;
 class AcknowledgedApplicationDisclosure$Type extends MessageType2 {
   constructor() {
     obj = {
@@ -176,7 +160,7 @@ class AcknowledgedApplicationDisclosure$Type extends MessageType2 {
       name: "disclosure_type",
       kind: "enum",
       T() {
-            const items = ["discord_protos.discord_kkv_store_value_models.v1.ApplicationDisclosureType", closure_3];
+            const items = ["discord_protos.discord_kkv_store_value_models.v1.ApplicationDisclosureType", ApplicationDisclosureType];
             return items;
           }
     };
@@ -187,47 +171,39 @@ class AcknowledgedApplicationDisclosure$Type extends MessageType2 {
       name: "acked_at",
       kind: "message",
       T() {
-            return callback(table[2]).Timestamp;
+            return timestamp.Timestamp;
           }
     };
-    tmp = new tmp("discord_protos.discord_kkv_store_value_models.v1.AcknowledgedApplicationDisclosure", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
-    return tmp;
+    tmp1 = new tmp("discord_protos.discord_kkv_store_value_models.v1.AcknowledgedApplicationDisclosure", items, new.target);
+    return tmp1;
   }
 }
 const prototype2 = AcknowledgedApplicationDisclosure$Type.prototype;
 prototype2["create"] = function create(arr) {
-  obj = { disclosureType: 0 };
+  const obj = { disclosureType: 0 };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
     const result = _mod1188.reflectionMergePartial(this, obj, arr);
     const tmpResult = _mod1188;
   }
   return obj;
 };
-prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
-  obj = arg3;
+  let obj = arg3;
   if (arg3 == null) {
     obj = self.create();
   }
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         obj.disclosureType = pos.int32();
       } else if (2 === tmp5) {
-        let tmp22 = require;
-        let tmp23 = dependencyMap;
-        let Timestamp = now.Timestamp;
-        let tmp24 = Timestamp;
-        let tmp25 = pos;
-        let tmp26 = readUnknownField;
+        let Timestamp = timestamp.Timestamp;
         obj.ackedAt = Timestamp.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.ackedAt);
       } else {
         let onRead = readUnknownField.readUnknownField;
@@ -238,25 +214,16 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -271,7 +238,7 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(disclosureType,
     const tagResult = tag.tag(1, _mod1188.WireType.Varint);
   }
   if (disclosureType.ackedAt) {
-    const Timestamp = now.Timestamp;
+    const Timestamp = timestamp.Timestamp;
     const tagResult1 = tag.tag(2, _mod1188.WireType.LengthDelimited);
     const joined = Timestamp.internalBinaryWrite(disclosureType.ackedAt, tag.tag(2, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = Timestamp.internalBinaryWrite(disclosureType.ackedAt, tag.tag(2, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -286,29 +253,28 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(disclosureType,
   }
   return tag;
 };
-obj = {
-  no: 1,
-  name: "disclosure_type",
-  kind: "enum",
-  T() {
-    const items = ["discord_protos.discord_kkv_store_value_models.v1.ApplicationDisclosureType", closure_3];
-    return items;
-  }
-};
 const items1 = [
-  obj,
+  {
+    no: 1,
+    name: "disclosure_type",
+    kind: "enum",
+    T() {
+      const items = ["discord_protos.discord_kkv_store_value_models.v1.ApplicationDisclosureType", ApplicationDisclosureType];
+      return items;
+    }
+  },
   {
     no: 2,
     name: "acked_at",
     kind: "message",
     T() {
-      return callback(table[2]).Timestamp;
+      return timestamp.Timestamp;
     }
   }
 ];
-tmp2 = new tmp2("discord_protos.discord_kkv_store_value_models.v1.AcknowledgedApplicationDisclosure", items1, tmp4, AcknowledgedApplicationDisclosure$Type, "create", "internalBinaryRead", tmp2, "internalBinaryWrite", items1, undefined, arg1, dependencyMap, obj, new.target, tmp6, new.target);
-// ThrowIfThisInitialized (0x7c)
-let closure_4 = tmp2;
+let tmp22 = new tmp2("discord_protos.discord_kkv_store_value_models.v1.AcknowledgedApplicationDisclosure", items1, tmp4, AcknowledgedApplicationDisclosure$Type, "create", "internalBinaryRead", tmp2, "internalBinaryWrite", items1, undefined, fn, dependencyMap, ApplicationDisclosureType, new.target, tmp6, new.target);
+let closure_4 = tmp22;
+const MessageType3 = fn(1188).MessageType;
 class AcknowledgedApplicationDisclosures$Type extends MessageType3 {
   constructor() {
     obj = {
@@ -317,43 +283,39 @@ class AcknowledgedApplicationDisclosures$Type extends MessageType3 {
       kind: "message",
       repeat: 1,
       T() {
-            return closure_4;
+            return closure_1_4;
           }
     };
     items = [];
     items[0] = obj;
-    tmp = new tmp("discord_protos.discord_kkv_store_value_models.v1.AcknowledgedApplicationDisclosures", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
-    return tmp;
+    tmp1 = new tmp("discord_protos.discord_kkv_store_value_models.v1.AcknowledgedApplicationDisclosures", items, new.target);
+    return tmp1;
   }
 }
 const prototype3 = AcknowledgedApplicationDisclosures$Type.prototype;
 prototype3["create"] = function create(arr) {
-  obj = { ackedDisclosures: [] };
+  const obj = { ackedDisclosures: [] };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
     const result = _mod1188.reflectionMergePartial(this, obj, arr);
     const tmpResult = _mod1188;
   }
   return obj;
 };
-prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
-  obj = arg3;
+  let obj = arg3;
   if (arg3 == null) {
     obj = self.create();
   }
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         let ackedDisclosures = obj.ackedDisclosures;
-        let tmp22 = closure_4;
         let arr = ackedDisclosures.push(closure_4.internalBinaryRead(pos, pos.uint32(), readUnknownField));
       } else {
         let onRead = readUnknownField.readUnknownField;
@@ -364,25 +326,16 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -396,9 +349,6 @@ prototype3["internalBinaryWrite"] = function internalBinaryWrite(ackedDisclosure
   let num = 0;
   if (0 < ackedDisclosures.ackedDisclosures.length) {
     do {
-      let tmp = closure_4;
-      let tmp2 = require;
-      let tmp3 = dependencyMap;
       let tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
       let internalBinaryWriteResult = closure_4.internalBinaryWrite(ackedDisclosures.ackedDisclosures[num], tagResult.fork(), writeUnknownFields);
       let joined = internalBinaryWriteResult.join();
@@ -416,21 +366,21 @@ prototype3["internalBinaryWrite"] = function internalBinaryWrite(ackedDisclosure
   }
   return tag;
 };
-obj = {
-  no: 1,
-  name: "acked_disclosures",
-  kind: "message",
-  repeat: 1,
-  T() {
-    return closure_4;
+const items2 = [
+  {
+    no: 1,
+    name: "acked_disclosures",
+    kind: "message",
+    repeat: 1,
+    T() {
+      return closure_1_4;
+    }
   }
-};
-const items2 = [obj];
-// ThrowIfThisInitialized (0x7c)
-let tmp8 = new "internalBinaryWrite"("discord_protos.discord_kkv_store_value_models.v1.AcknowledgedApplicationDisclosures", items2, tmp4, AcknowledgedApplicationDisclosure$Type, "create", "internalBinaryRead", AcknowledgedApplicationDisclosures$Type, "internalBinaryWrite", items2, undefined, arg1, dependencyMap, obj);
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/discord_kkv_store_value_models/v1/applications.tsx");
+];
+const size = fn(2);
+let result = size.fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/discord_kkv_store_value_models/v1/applications.tsx");
 
-export const ApplicationDisclosureType = obj;
+export { ApplicationDisclosureType };
 export const ApplicationUserRoleConnection = tmp6;
-export const AcknowledgedApplicationDisclosure = tmp2;
-export const AcknowledgedApplicationDisclosures = tmp8;
+export const AcknowledgedApplicationDisclosure = tmp22;
+export const AcknowledgedApplicationDisclosures = new "internalBinaryWrite"("discord_protos.discord_kkv_store_value_models.v1.AcknowledgedApplicationDisclosures", items2, tmp4, AcknowledgedApplicationDisclosure$Type, "create", "internalBinaryRead", AcknowledgedApplicationDisclosures$Type, "internalBinaryWrite", items2, undefined, fn, dependencyMap, ApplicationDisclosureType);

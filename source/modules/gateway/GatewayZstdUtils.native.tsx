@@ -1,21 +1,20 @@
-// Module ID: 13652
-// Function ID: 13653
-// Name: supportsZstd
-// Dependencies: [17, 1115, 13653, 2]
+// Module ID: 13675
+// Function ID: 13676
+// Name: GatewayZstdUtils
+// Dependencies: [17, 1115, 13676, 2]
 // Exports: createZstdContextWeb, supportsZstd
 
-// Module 13652 (supportsZstd)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import enforcingDefault from "enforcing" /* 13653 */;
+// Module 13675 (GatewayZstdUtils)
+import _mod17 from "module_17" /* 17 */;
+import NativeCompressionModuleDefault from "NativeCompressionModule" /* 13676 */;
+import size from "module_2" /* 2 */;
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-const result = set.fileFinishedImporting("modules/gateway/GatewayZstdUtils.native.tsx");
+const NativeModules = _mod17.NativeModules;
+const result = size.fileFinishedImporting("modules/gateway/GatewayZstdUtils.native.tsx");
 
 export const supportsZstd = function supportsZstd() {
   if (obj.isAndroid()) {
-    let flag = enforcingDefault.getConstants().supportsZstd;
-    const obj2 = enforcingDefault;
+    let flag = NativeCompressionModuleDefault.getConstants().supportsZstd;
   } else {
     const DCDCompressionManager = NativeModules.DCDCompressionManager;
     flag = undefined;
@@ -29,6 +28,6 @@ export const supportsZstd = function supportsZstd() {
   return flag;
 };
 export const createZstdContextWeb = function createZstdContextWeb() {
-  error = new Error("Attempting to use createZstdContextWeb in a native context. Use MobileGatewayCompressionHandler instead.");
+  const error = new Error("Attempting to use createZstdContextWeb in a native context. Use MobileGatewayCompressionHandler instead.");
   throw error;
 };

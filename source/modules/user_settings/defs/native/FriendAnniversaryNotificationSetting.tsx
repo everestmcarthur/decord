@@ -1,49 +1,33 @@
-// Module ID: 15501
-// Function ID: 15502
-// Name: toggle
-// Dependencies: [7975, 11473, 1114, 1935, 15502, 8081, 2]
+// Module ID: 15531
+// Function ID: 15532
+// Name: FriendAnniversaryNotificationSetting
+// Dependencies: [7989, 11500, 1114, 1935, 15532, 8096, 2]
 
-// Module 15501 (toggle)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import apexExperimentDefault from "apexExperiment" /* 8081 */;
-import onFriendAnniversaryNotificationSettingsChanged from "onFriendAnniversaryNotificationSettingsChanged" /* 15502 */;
-import createToggle from "createToggle" /* 11473 */;
+// Module 15531 (FriendAnniversaryNotificationSetting)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import MobileFriendAnniversaryExperimentDefault from "MobileFriendAnniversaryExperiment" /* 8096 */;
+import FriendAnniversaryNotificationUtils from "FriendAnniversaryNotificationUtils" /* 15532 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import size from "module_2" /* 2 */;
 
-const toggle = createToggle.createToggle({
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.BVO96v);
+    const intl = util.intl;
+    return intl.string(util.t.BVO96v);
   },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: explicitContentFromProto.EnableFriendAnniversaryNotifications.useSetting,
+  parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
+  useValue: UserSettings.EnableFriendAnniversaryNotifications.useSetting,
   useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["00TNo7"]);
+    const intl = util.intl;
+    return intl.string(util.t["00TNo7"]);
   },
-  onValueChange: onFriendAnniversaryNotificationSettingsChanged.onFriendAnniversaryNotificationSettingsChanged,
+  onValueChange: FriendAnniversaryNotificationUtils.onFriendAnniversaryNotificationSettingsChanged,
   usePredicate() {
-    return apexExperimentDefault.useConfig({ location: "FriendAnniversaryNotificationSetting" }).enabled;
+    return MobileFriendAnniversaryExperimentDefault.useConfig({ location: "FriendAnniversaryNotificationSetting" }).enabled;
   }
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.BVO96v);
-  },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: explicitContentFromProto.EnableFriendAnniversaryNotifications.useSetting,
-  useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["00TNo7"]);
-  },
-  onValueChange: onFriendAnniversaryNotificationSettingsChanged.onFriendAnniversaryNotificationSettingsChanged,
-  usePredicate() {
-    return apexExperimentDefault.useConfig({ location: "FriendAnniversaryNotificationSetting" }).enabled;
-  }
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/FriendAnniversaryNotificationSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/FriendAnniversaryNotificationSetting.tsx");
 
 export default toggle;

@@ -1,37 +1,46 @@
 // Module ID: 3695
 // Function ID: 3696
-// Dependencies: [2035, 2036]
+// Dependencies: [2028, 2031, 2032, 2034, 3696]
 
 // Module 3695
-import buildMatchFn from "buildMatchFn" /* 2035 */;
-import buildMatchPatternFn from "buildMatchPatternFn" /* 2036 */;
+import module_2028 from "module_2028" /* 2028 */;
+import module_2031 from "module_2031" /* 2031 */;
+import date_mod from "module_2032" /* 2032 */;
+import date_mod from "module_2034" /* 2034 */;
+import module_3696 from "module_3696" /* 3696 */;
 
-if (!buildMatchFn) {
-  let obj = { default: null };
-  obj[0] = buildMatchFn;
+if (!module_2028) {
+  const obj = { default: module_2028 };
+  let tmp3 = obj;
 } else {
-  obj = buildMatchFn;
+  tmp3 = module_2028;
 }
-if (!buildMatchPatternFn) {
-  obj = { default: null };
-  obj[0] = buildMatchPatternFn;
-  let obj2 = obj;
+if (!module_2031) {
+  const obj2 = { default: module_2031 };
+  let tmp5 = obj2;
 } else {
-  obj2 = buildMatchPatternFn;
+  tmp5 = module_2031;
 }
-obj2 = {
-  matchPattern: /^(\d+)(\.)/i,
-  parsePattern: /\d+/i,
-  valueCallback(joined) {
-    return parseInt(joined, 10);
-  }
-};
-const items = [/^e/i, /^j/i];
-const items1 = [/1/i, /2/i, /3/i, /4/i];
-const items2 = [/^t/i, /^h/i, /^m/i, /^h/i, /^t/i, /^k/i, /^h/i, /^e/i, /^s/i, /^l/i, /^m/i, /^j/i];
-const items3 = [/^ta/i, /^hel/i, /^maa/i, /^hu/i, /^to/i, /^k/i, /^hei/i, /^e/i, /^s/i, /^l/i, /^mar/i, /^j/i];
-const items4 = [/^s/i, /^m/i, /^t/i, /^k/i, /^t/i, /^p/i, /^l/i];
-const items5 = [/^s/i, /^m/i, /^ti/i, /^k/i, /^to/i, /^p/i, /^l/i];
+let date = date_mod;
+if (!date) {
+  const obj3 = { default: date };
+  let tmp7 = obj3;
+} else {
+  tmp7 = date;
+}
+let date = date_mod;
+if (!date) {
+  const obj4 = { default: date };
+  let tmp9 = obj4;
+} else {
+  tmp9 = date;
+}
+if (!module_3696) {
+  const obj5 = { default: module_3696 };
+  let tmp11 = obj5;
+} else {
+  tmp11 = module_3696;
+}
 
-export default { ordinalNumber: obj2.default(obj2), era: obj.default({ matchPatterns: obj3, defaultMatchWidth: "wide", parsePatterns: { any: items }, defaultParseWidth: "any" }), quarter: obj.default(obj4), month: obj.default({ matchPatterns: obj6, defaultMatchWidth: "wide", parsePatterns: { narrow: items2, any: items3 }, defaultParseWidth: "any" }), day: obj.default({ matchPatterns: obj7, defaultMatchWidth: "wide", parsePatterns: { narrow: items4, any: items5 }, defaultParseWidth: "any" }), dayPeriod: obj.default({ matchPatterns: obj8, defaultMatchWidth: "any", parsePatterns: { any: obj9 }, defaultParseWidth: "any" }) };
+export default { code: "en-GB", formatDistance: tmp3.default, formatLong: tmp11.default, formatRelative: tmp5.default, localize: tmp7.default, match: tmp9.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
 export default exports.default;

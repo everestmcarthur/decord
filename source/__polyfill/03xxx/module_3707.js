@@ -1,38 +1,34 @@
 // Module ID: 3707
 // Function ID: 3708
-// Dependencies: [2035, 2036]
+// Dependencies: [2033]
 
 // Module 3707
-import buildMatchFn from "buildMatchFn" /* 2035 */;
-import buildMatchPatternFn from "buildMatchPatternFn" /* 2036 */;
+import module_2033 from "module_2033" /* 2033 */;
 
-if (!buildMatchFn) {
-  let obj = { default: null };
-  obj[0] = buildMatchFn;
+if (!module_2033) {
+  const obj2 = { default: module_2033 };
+  let obj = obj2;
 } else {
-  obj = buildMatchFn;
+  obj = module_2033;
 }
-if (!buildMatchPatternFn) {
-  obj = { default: null };
-  obj[0] = buildMatchPatternFn;
-  let obj2 = obj;
-} else {
-  obj2 = buildMatchPatternFn;
-}
-obj2 = {
-  matchPattern: /^(\d+)\./i,
-  parsePattern: /\d+/i,
-  valueCallback(joined) {
-    return parseInt(joined, 10);
-  }
+const obj3 = { narrow: ["T", "H", "M", "H", "T", "K", "H", "E", "S", "L", "M", "J"], abbreviated: ["tammi", "helmi", "maalis", "huhti", "touko", "kes\u00E4", "hein\u00E4", "elo", "syys", "loka", "marras", "joulu"], wide: ["tammikuu", "helmikuu", "maaliskuu", "huhtikuu", "toukokuu", "kes\u00E4kuu", "hein\u00E4kuu", "elokuu", "syyskuu", "lokakuu", "marraskuu", "joulukuu"] };
+const obj5 = { narrow: ["S", "M", "T", "K", "T", "P", "L"], short: ["su", "ma", "ti", "ke", "to", "pe", "la"], abbreviated: ["sunn.", "maan.", "tiis.", "kesk.", "torst.", "perj.", "la"], wide: ["sunnuntai", "maanantai", "tiistai", "keskiviikko", "torstai", "perjantai", "lauantai"] };
+const date = {
+  ordinalNumber(arg0, arg1) {
+    return Number(arg0) + ".";
+  },
+  era: obj.default({ values: { narrow: ["eaa.", "jaa."], abbreviated: ["eaa.", "jaa."], wide: ["ennen ajanlaskun alkua", "j\u00E4lkeen ajanlaskun alun"] }, defaultWidth: "wide" }),
+  quarter: obj.default({
+    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["Q1", "Q2", "Q3", "Q4"], wide: ["1. kvartaali", "2. kvartaali", "3. kvartaali", "4. kvartaali"] },
+    defaultWidth: "wide",
+    argumentCallback(arg0) {
+      return arg0 - 1;
+    }
+  }),
+  month: obj.default({ values: obj3, defaultWidth: "wide", formattingValues: { narrow: obj3.narrow, abbreviated: obj3.abbreviated, wide: ["tammikuuta", "helmikuuta", "maaliskuuta", "huhtikuuta", "toukokuuta", "kes\u00E4kuuta", "hein\u00E4kuuta", "elokuuta", "syyskuuta", "lokakuuta", "marraskuuta", "joulukuuta"] }, defaultFormattingWidth: "wide" }),
+  day: obj.default({ values: obj5, defaultWidth: "wide", formattingValues: { narrow: obj5.narrow, short: obj5.short, abbreviated: obj5.abbreviated, wide: ["sunnuntaina", "maanantaina", "tiistaina", "keskiviikkona", "torstaina", "perjantaina", "lauantaina"] }, defaultFormattingWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "ap", pm: "ip", midnight: "keskiy\u00F6", noon: "keskip\u00E4iv\u00E4", morning: "ap", afternoon: "ip", evening: "illalla", night: "y\u00F6ll\u00E4" }, abbreviated: { am: "ap", pm: "ip", midnight: "keskiy\u00F6", noon: "keskip\u00E4iv\u00E4", morning: "ap", afternoon: "ip", evening: "illalla", night: "y\u00F6ll\u00E4" }, wide: { am: "ap", pm: "ip", midnight: "keskiy\u00F6ll\u00E4", noon: "keskip\u00E4iv\u00E4ll\u00E4", morning: "aamup\u00E4iv\u00E4ll\u00E4", afternoon: "iltap\u00E4iv\u00E4ll\u00E4", evening: "illalla", night: "y\u00F6ll\u00E4" } }, defaultWidth: "wide" })
 };
-const items = [/^pr/i, /^(po|nova)/i];
-const items1 = [/1/i, /2/i, /3/i, /4/i];
-const items2 = [/1/i, /2/i, /3/i, /4/i, /5/i, /6/i, /7/i, /8/i, /9/i, /10/i, /11/i, /12/i];
-const items3 = [/^sij/i, /^velj/i, /^(ožu|ozu)/i, /^tra/i, /^svi/i, /^lip/i, /^srp/i, /^kol/i, /^ruj/i, /^lis/i, /^stu/i, /^pro/i];
-const items4 = [/^sij/i, /^velj/i, /^(ožu|ozu)/i, /^tra/i, /^svi/i, /^lip/i, /^srp/i, /^kol/i, /^ruj/i, /^lis/i, /^stu/i, /^pro/i];
-const items5 = [/^s/i, /^m/i, /^t/i, /^w/i, /^t/i, /^f/i, /^s/i];
-const items6 = [/^su/i, /^m/i, /^tu/i, /^w/i, /^th/i, /^f/i, /^sa/i];
 
-export default { ordinalNumber: obj2.default(obj2), era: obj.default({ matchPatterns: obj3, defaultMatchWidth: "wide", parsePatterns: { any: items }, defaultParseWidth: "any" }), quarter: obj.default(obj4), month: obj.default({ matchPatterns: obj6, defaultMatchWidth: "wide", parsePatterns: { narrow: items2, abbreviated: items3, wide: items4 }, defaultParseWidth: "wide" }), day: obj.default({ matchPatterns: obj7, defaultMatchWidth: "wide", parsePatterns: { narrow: items5, any: items6 }, defaultParseWidth: "any" }), dayPeriod: obj.default({ matchPatterns: obj8, defaultMatchWidth: "any", parsePatterns: { any: obj9 }, defaultParseWidth: "any" }) };
+export default date;
 export default exports.default;

@@ -1,17 +1,17 @@
-// Module ID: 6203
-// Function ID: 6204
+// Module ID: 6217
+// Function ID: 6218
 // Name: HighFiveSpotIllustration
-// Dependencies: [21, 5587, 6204, 2]
+// Dependencies: [21, 5601, 6218, 2]
 // Exports: HighFiveSpotIllustration
 
-// Module 6203 (HighFiveSpotIllustration)
-import set from "set" /* 2 */;
+// Module 6217 (HighFiveSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 6204 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6218 from "module_6218" /* 6218 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/HighFiveSpotIllustration.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/HighFiveSpotIllustration.native.tsx");
 
 export const HighFiveSpotIllustration = function HighFiveSpotIllustration(width) {
   let num = width.width;
@@ -27,14 +27,14 @@ export const HighFiveSpotIllustration = function HighFiveSpotIllustration(width)
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
-  obj = { width: num * num3, height: num2 * num3 };
-  const items = [obj];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { width: num * num3, height: num2 * num3 });
+  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const obj2 = { uri: _modDef6218 };
+  obj.source = obj2;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
 };

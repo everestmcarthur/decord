@@ -1,32 +1,26 @@
-// Module ID: 13166
-// Function ID: 13167
+// Module ID: 13189
+// Function ID: 13190
 // Name: useCanGiftProduct
-// Dependencies: [8178, 7554, 7553, 4218, 1889, 4231, 2]
+// Dependencies: [8204, 7568, 7567, 4231, 1889, 4244, 2]
 // Exports: useCanGiftProduct
 
-// Module 13166 (useCanGiftProduct)
-import set from "set" /* 2 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4218 */;
-import getProductOrbPrice from "getProductOrbPrice" /* 7553 */;
-import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 7554 */;
-import useCurrentUser from "useCurrentUser" /* 8178 */;
+// Module 13189 (useCanGiftProduct)
+import PremiumUtilsDefault from "PremiumUtils" /* 4231 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7567 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7568 */;
+import useCurrentUser from "useCurrentUser" /* 8204 */;
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("modules/collectibles/hooks/useCanGiftProduct.tsx");
+let result = size.fileFinishedImporting("modules/collectibles/hooks/useCanGiftProduct.tsx");
 
 export const useCanGiftProduct = function useCanGiftProduct(product) {
   const currentUser = useCurrentUser.useCurrentUser();
-  const obj = useCurrentUser;
-  let result = getItemRecordsFromPurchases.isPremiumCollectiblesProduct(product);
-  const obj2 = getItemRecordsFromPurchases;
-  const result1 = getItemRecordsFromPurchases.isFreeCollectiblesProduct(product);
-  const obj3 = getItemRecordsFromPurchases;
-  const result2 = getProductOrbPrice.isOrbsExclusiveProduct(product);
-  const obj4 = getProductOrbPrice;
-  const obj5 = getPremiumPlanItemDefault;
-  const canUseShopDiscountsResult = getPremiumPlanItemDefault.canUseShopDiscounts(currentUser);
-  const defaultPriceSetAssignmentPurchaseType = getItemRecordsFromPurchases.getDefaultPriceSetAssignmentPurchaseType(canUseShopDiscountsResult);
-  const obj6 = getItemRecordsFromPurchases;
-  const result3 = getItemRecordsFromPurchases.extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
+  let result = CollectiblesUtils.isPremiumCollectiblesProduct(product);
+  const result1 = CollectiblesUtils.isFreeCollectiblesProduct(product);
+  const result2 = CollectiblesProductUtils.isOrbsExclusiveProduct(product);
+  const canUseShopDiscountsResult = PremiumUtilsDefault.canUseShopDiscounts(currentUser);
+  const defaultPriceSetAssignmentPurchaseType = CollectiblesUtils.getDefaultPriceSetAssignmentPurchaseType(canUseShopDiscountsResult);
+  const result3 = CollectiblesUtils.extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
   if (!result) {
     result = result1;
   }
@@ -37,16 +31,16 @@ export const useCanGiftProduct = function useCanGiftProduct(product) {
     result = product.type === tmp(1889).CollectiblesItemType.EXTERNAL_SKU;
   }
   if (!result) {
-    let tmpResult = tmp(7554);
     let currency;
     if (result3 != null) {
       currency = result3.currency;
     }
-    result = tmpResult.shouldHideGiftingForCurrency(currency);
+    result = tmp(7568).shouldHideGiftingForCurrency(currency);
+    const tmpResult = tmp(7568);
   }
   if (!result) {
-    tmpResult = tmp(4231);
-    result = !tmpResult.isCollectibleGiftingSupported();
+    result = !tmp(4244).isCollectibleGiftingSupported();
+    const tmpResult2 = tmp(4244);
   }
   return !result;
 };

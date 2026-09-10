@@ -1,66 +1,69 @@
-// Module ID: 17788
-// Function ID: 17789
+// Module ID: 17821
+// Function ID: 17822
 // Name: GuildRoleSubscriptionTierTemplateBasicInfo
-// Dependencies: [19, 17, 1373, 1085, 21, 4560, 576, 5587, 1178, 4556, 1114, 7234, 15234, 4976, 2]
+// Dependencies: [19, 17, 1373, 1085, 21, 4574, 576, 5601, 1178, 4570, 1114, 7248, 15263, 4990, 2]
 // Exports: GuildRoleSubscriptionTierTemplateBasicInfo
 
-// Module 17788 (GuildRoleSubscriptionTierTemplateBasicInfo)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import preloadDefault from "preload" /* 5587 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { SubscriptionIntervalTypes } from "GuildFeatures" /* 1373 */;
-import { CurrencyCodes } from "sum" /* 1085 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17821 (GuildRoleSubscriptionTierTemplateBasicInfo)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import BaseTextButton from "BaseTextButton" /* 4990 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import PriceUtils from "PriceUtils" /* 7248 */;
+import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 15263 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: { paddingBottom: 24 }, header: { flexDirection: "row" }, image: null, templateCTAButton: null };
-createCacheKey = { width: 48, height: 48, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { borderRadius: ThemesDefault.radii.sm };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderRadius: ThemesDefault.radii.sm };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateBasicInfo.tsx");
+require = fn;
+const View = fn(17).View;
+const SubscriptionIntervalTypes = fn(1373).SubscriptionIntervalTypes;
+const CurrencyCodes = fn(1085).CurrencyCodes;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4574);
+let obj2 = { container: { paddingBottom: 24 }, header: { flexDirection: "row" }, image: null, templateCTAButton: null };
+let size = { width: 48, height: 48, borderRadius: nativeDefault.radii.sm };
+obj2.image = size;
+obj2.templateCTAButton = { borderRadius: nativeDefault.radii.sm };
+let closure_8 = createStyles.createStyles(obj2);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateBasicInfo.tsx");
 
 export const GuildRoleSubscriptionTierTemplateBasicInfo = function GuildRoleSubscriptionTierTemplateBasicInfo(template) {
   template = template.template;
   ({ handleSelectTemplateInPreview: importDefault, closeActionSheet: dependencyMap, descriptionTextProps } = template);
   ({ subscriptionPlanTextStyle, descriptionTextStyle } = template);
-  const tmp = callback3();
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.header, children: null };
+  const tmp = closure_8();
+  const obj = { style: tmp.container, children: null };
+  const obj2 = { style: tmp.header, children: null };
   ({ image, name, price_tier, description } = template.listings[0]);
-  obj = { source: { uri: image }, style: tmp.image };
-  const items = [callback(preloadDefault, obj), callback(template(1178).Spacer, { size: 16 }), ];
-  obj1 = { style: { flexShrink: 1 }, children: null };
-  const items1 = [callback(template(4556).Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", style: { flexWrap: "wrap" }, children: name }), callback(template(1178).Spacer, { size: 4 }), ];
-  const obj2 = { variant: "heading-md/medium", style: subscriptionPlanTextStyle, children: null };
-  const intl = template(1114).intl;
-  const obj3 = { price: null, interval: null };
-  let obj6 = template(7234);
-  obj3[0] = obj6.formatPrice(price_tier, CurrencyCodes.USD);
-  obj3[1] = template(15234).formatPlanInterval({ interval: SubscriptionIntervalTypes.MONTH, interval_count: 1 });
-  obj2[2] = intl.format(template(1114).t.CgmBaG, obj3);
-  items1[2] = callback(template(4556).Text, obj2);
-  obj1[1] = items1;
-  items[2] = callback2(View, obj1);
-  obj[1] = items;
-  const items2 = [callback2(View, obj), , ];
-  const obj5 = { variant: "text-sm/normal", style: descriptionTextStyle };
+  const items = [timestampProducer(FastImageDefault, { source: { uri: image }, style: tmp.image }), timestampProducer(native.Spacer, { size: 16 }), ];
+  const obj4 = { style: { flexShrink: 1 }, children: null };
+  const items1 = [timestampProducer(Text_Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", style: { flexWrap: "wrap" }, children: name }), timestampProducer(native.Spacer, { size: 4 }), ];
+  const obj5 = { variant: "heading-md/medium", style: subscriptionPlanTextStyle, children: null };
+  const intl = util.intl;
+  const obj6 = { price: PriceUtils.formatPrice(price_tier, CurrencyCodes.USD), interval: null };
+  const obj3 = { source: { uri: image }, style: tmp.image };
+  obj6.interval = GuildRoleSubscriptionTypeUtils.formatPlanInterval({ interval: SubscriptionIntervalTypes.MONTH, interval_count: 1 });
+  obj5.children = intl.format(util.t.CgmBaG, obj6);
+  items1[2] = timestampProducer(Text_Text.Text, obj5);
+  obj4.children = items1;
+  items[2] = React5(View, obj4);
+  obj2.children = items;
+  const items2 = [React5(View, obj2), , ];
+  const obj10 = { variant: "text-sm/normal", style: descriptionTextStyle };
   const merged = Object.assign(descriptionTextProps);
-  obj5.children = description;
-  items2[1] = callback(template(4556).Text, obj5);
-  obj6 = { text: null, pillStyle: null, onPress: null, grow: true };
-  const intl2 = template(1114).intl;
-  obj6[0] = intl2.string(template(1114).t["1W7mCt"]);
-  obj6[1] = tmp.templateCTAButton;
-  obj6[2] = function onPress() {
-    return callback(template, closure_2);
+  obj10.children = description;
+  items2[1] = timestampProducer(Text_Text.Text, obj10);
+  const obj11 = { text: null, pillStyle: null, onPress: null, grow: true };
+  const intl2 = util.intl;
+  obj11.text = intl2.string(util.t["1W7mCt"]);
+  obj11.pillStyle = tmp.templateCTAButton;
+  obj11.onPress = function onPress() {
+    return importDefault(template, dependencyMap);
   };
-  items2[2] = callback(template(4976).BaseTextButton, obj6);
-  obj[1] = items2;
-  return callback2(View, obj);
+  items2[2] = timestampProducer(BaseTextButton.BaseTextButton, obj11);
+  obj.children = items2;
+  return React5(View, obj);
 };
